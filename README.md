@@ -1,1 +1,1 @@
-### See https://github.com/Plailect/Guide/wiki
+### Ver https://github.com/HenryLeonheart/Guide_Portuguese/wiki
