@@ -1,1 +1,1 @@
-### See https://github.com/Plailect/Guide/wiki
+### Voir https://github.com/Ginkyway/Guide/wiki/Accueil
