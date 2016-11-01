@@ -36,9 +36,8 @@ During this process, we also setup programs such as the following:
 
 * [`aeskeydb.bin`](torrents/aeskeydb.torrent) - <code class="highlighterrouge"><a href="magnet:?xt=urn:btih:18b3a17f78e2376e05feaa150749d9fd689b25dc"><i class="fa fa-magnet" aria-hidden="true"></i></a></code>
 * [`data_input_v3.zip`](torrents/data_input_v3.torrent) - <code class="highlighterrouge"><a href="magnet:?xt=urn:btih:a1195c9f7ab650fa7c7bf020b51fc19ea8d9440c"><i class="fa fa-magnet" aria-hidden="true"></i></a></code>
-* [`fbi-2.4.2-injectable.zip`](torrents/fbi-2.4.2-injectable.torrent) - <code class="highlighterrouge"><a href="magnet:?xt=urn:btih:f978b4cf5eda72823240b9c649f3fd2940a9f525"><i class="fa fa-magnet" aria-hidden="true"></i></a></code>
 * The release of SafeA9LHInstaller corresponding to your device:
-  + New 3DS Compatible [Release](https://github.com/AuroraWright/SafeA9LHInstaller/releases/tag/v2.5.1)
+  + New 3DS Compatible [Release](https://github.com/AuroraWright/SafeA9LHInstaller/releases/latest)
   + Old 3DS or 2DS Compatible [Release](https://github.com/AuroraWright/SafeA9LHInstaller/releases/tag/v2.0.3)
 * The latest release of [arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest)
 * The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
@@ -71,18 +70,18 @@ If you think your SD card may be corrupted, backup every file on your SD card to
 4. **Copy _the contents of_ the `starter.zip` to the root of your SD card**
   + This will include a brand new `3ds` folder to replace the one you just deleted
 5. Copy _the contents of_ the SafeA9LHInstaller zip to the root of your SD card
-6. Copy the `a9lh` folder from `data_input_v3.zip` to the root of your SD Card
+6. Copy the `a9lh` folder from `data_input_v3.zip` to the root of your SD card
 7. Copy _the contents of_ the arm9loaderhax release zip to `a9lh` folder on your SD card
 9. Copy `hblauncher_loader.cia` from the hblauncher_loader zip to the `/cias/` folder on your SD card
 10. Copy `lumaupdater.cia` from the Luma3DS Updater zip to the `/cias/` folder on your SD card
 11. Copy `FBI.cia` from the FBI zip to the `/cias/` folder on your SD card
-12. **Copy `arm9loaderhax.bin` from the Luma3DS zip to the root of your SD card, overwrite existing files**
-13. Create a folder named `luma` on the root of your SD card
-14. Create a folder named `payloads` in the `luma` folder on your SD card
-15. Copy `Hourglass9.bin` from the Hourglass9 zip to the `/luma/payloads/` folder on your SD card and rename `Hourglass9.bin` to `start_Hourglass9.bin`
-16. Copy `aeskeydb.bin` to the `/files9/` folder on your SD card
-17. Copy `DspDump.3dsx` to the `/3ds/` folder on your SD card
-18. Copy _the contents of_ `fbi-2.4.2-injectable.zip` to the `/files9/` folder on your SD card
+12. Copy `3ds` from the FBI zip to the root of your SD card
+13. **Copy `arm9loaderhax.bin` from the Luma3DS zip to the root of your SD card, overwrite existing files**
+14. Create a folder named `luma` on the root of your SD card
+15. Create a folder named `payloads` in the `luma` folder on your SD card
+16. Copy `Hourglass9.bin` from the Hourglass9 zip to the `/luma/payloads/` folder on your SD card and rename `Hourglass9.bin` to `start_Hourglass9.bin`
+17. Copy `aeskeydb.bin` to the `/files9/` folder on your SD card
+18. Copy `DspDump.3dsx` to the `/3ds/` folder on your SD card
 19. Clear Home Menu's extdata by navigating to the following folder on your SD card: `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/`
     + EUR Region: Delete `00000098`
     + JPN Region: Delete `00000082`
@@ -126,53 +125,49 @@ If you think your SD card may be corrupted, backup every file on your SD card to
   + **"Show GBA boot screen in patched AGB_FIRM"**
     + This may cause crashes for some injected GBA Virtual Consoles
     + If some games do not work properly, disable this option and try again
-3. If you are using a **New 3DS**, you should *also* enable the following:
+3. If you are using a **New 3DS**, you may *also* enable the following:
   + **"New 3DS CPU" to "Clock+L2(x)"**
     + This will increase the framerate of many games, but may cause instability in others
     + If some games do not work properly, disable this option and try again
 4. Press Start to save and reboot
   + If it freezes, hold the power button until it shuts down, then continue with the instructions
   + If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_a9lh)   
-4. **If, before following this guide, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand).**
-10. Update your 3DS again by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
+5. **If, before following this guide, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand).**
+6. **If you are returning here from moving an EmuNAND and already have FBI (or an equivelant CIA installer) do only steps 8-13 of the next section.**
+
+##### Section IV - Finalizing setup
+
+1. **If you are on Old 3DS or 2DS, do the following.**
+  + Open Hourglass9 from arm9loaderhax by holding (Start) on boot
+  + Go to "SysNAND Backup/Restore"
+  + Choose "SysNAND Restore (Keep A9LH)"
+  + Restore from `NANDmin.bin`
+  + Press (Start) to reboot.
+    + **If you are on Old 3DS or 2DS and do not have a backup [follow 9.2.0 ctrtransfer](9.2.0-ctrtransfer) before you continue.**
+2. Launch the browser, then open the browser settings.
+3. Scroll to the bottom and Initialize Savedata. (it also may be called Clear All Save Data)
+4. Navigate to `http://yls8.mtheall.com/3dsbrowserhax_auto.php`
+    + You can also load the page by scanning the following QR code (press (L + R) on the home menu, then tap the QR icon on the bottom screen)     
+![browserhax_auto](https://yls8.mtheall.com/3dsbrowserhax_auto_qrcode.png)
+    + If you get an error, [follow this troubleshooting guide](troubleshooting#ts_browser)
+5. Your console should load the homebrew menu
+6. Open "DSP Dump"
+7. Press (Start) when prompted to exit back to the homebrew launcher.
+8. Open "FBI"
+9. Select "SD"
+10. Select "cias"
+11. Navigate to `FBI.cia` and press (A) to install
+12. Navigate to `hblauncher_loader.cia` and press (A) to install
+13. Navigate to `lumaupdater.cia` and press (A) to install
+  + If you returned from moving an EmuNAND to SysNAND, exit FBI or your CIA installer and skip to step 16.
+14. Press (B) Twice to return to the FBI menu, and then press (Start) to exit back to the homebrew launcher.
+15. Press (Start) and then (A) to reboot.
+16. Update your 3DS to the latest firmware by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
   + **Yes this is safe, stop asking about it.**
   + If this gives you an error, set your DNS settings to "auto"
-  + If this still gives you an error, restore your NAND backup before updating
-    + Copy `NANDmin.bin` to the `/files9/` folder on your SD card
-    + If your backup is of a version between 4.0.0 and 4.5.0, put [`firmware.bin`](https://plailect.github.io/Guide/torrents/o3ds_firmware.torrent) - <code class="highlighterrouge"><a href="magnet:?xt=urn:btih:0323ffe6f1df5986517baef2211a3e98634e34ec"><i class="fa fa-magnet" aria-hidden="true"></i></a></code> in `/luma/` (delete this file after updating your 3DS)
-    + Open Hourglass9 from arm9loaderhax by holding (Start) on boot
-    + Go to "SysNAND Backup/Restore"
-    + Restore from `NANDmin.bin`
-    + Press (Start) to reboot
-  + If you don't have your NAND backup or it doesn't work, [follow 9.2.0 ctrtransfer](9.2.0-ctrtransfer) before updating
-
-##### Section IV - Injecting FBI
-
-1. Open Hourglass9 from arm9loaderhax by holding (Start) on boot
-2. Go to "SysNAND Backup/Restore", then select the "Health&Safety Dump" option to dump Health & Safety to `hs.app` **(you can use Up and Down / Left and Right to change the name)**
-3. Press (B), then select the "Health&Safety Inject" option
-8. Select the FBI injectable `.app` for your region
-4. Press (A) and confirm to inject
-9. Press (Start) to reboot
-10. If you still launch to the stock Health & Safety app and have downgraded with Gateway in the past, [follow this troubleshooting guide](troubleshooting#gw_fbi)
-
-##### Section V - Finalizing setup
-
-2. Open Health and Safety (which is now FBI)
-3. Select "SD"
-4. Select "cias"
-5. Navigate to `FBI.cia` and press (A) to install
-6. Navigate to `hblauncher_loader.cia` and press (A) to install
-7. Navigate to `lumaupdater.cia` and press (A) to install
-8. Exit with the home button
-9. Launch the Homebrew Launcher from the home menu
-10. Select "DSP Dump"
-11. Press (Start) when prompted to exit
-12. Reboot while holding Start to launch Hourglass9
-13. Go to "SysNAND Backup/Restore", then select "Health&Safety Inject"
-14. Select `hs.app` (the original one that doesn't contain FBI), then press (A) and confirm to inject
-15. Press (Start) on the main menu to reboot!
-16. **If DSi / DS functionality has broken (such as DS carts or DSiWare no longer working), [follow this troubleshooting guide](troubleshooting#twl_broken)**
+  + If you still get an error, [follow 9.2.0 ctrtransfer](9.2.0-ctrtransfer) and then repeat this section from Step 2 onward.
+  + If you returned from moving an EmuNAND to SysNAND and are getting an error updating, it's possible you made a modification to your EmuNAND that is preventing the update, you will need to undo that modification yourself in order to update.
+17. **If DSi / DS functionality has broken (such as DS carts or DSiWare no longer working), [follow this troubleshooting guide](troubleshooting#twl_broken)**
 
 ___
 
