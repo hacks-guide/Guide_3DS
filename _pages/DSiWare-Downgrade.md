@@ -52,7 +52,6 @@ System Transfers can only be performed once a week.
 * The latest release of [3DSident](https://github.com/joel16/3DSident/releases/latest)
 * The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest)
 * The latest release of [dgTool](https://github.com/Plailect/dgTool/releases/latest)
-* The latest version of [Universal Inject Generator](https://github.com/d0k3/Universal-Inject-Generator/archive/master.zip)
 * The Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
 * The NFIRM zip corresponding to the device and version of **3DS #2**:
   + [New 3DS 11.0.0 to 10.4.0](torrents/11.0.0_to_10.4.0_n3ds.torrent) - <code class="highlighterrouge"><a href="magnet:?xt=urn:btih:2d13a5ea1570f911bd5c6423e0c30e51d548837a"><i class="fa fa-magnet" aria-hidden="true"></i></a></code>
