@@ -159,7 +159,7 @@ If you think your SD card may be corrupted, backup every file on your SD card to
 11. Navigate to `FBI.cia` and press (A) to install
 12. Navigate to `hblauncher_loader.cia` and press (A) to install
 13. Navigate to `lumaupdater.cia` and press (A) to install
-  + If you returned from moving an EmuNAND to SysNAND, skip to step 17.
+  + If you returned from moving an EmuNAND to SysNAND, exit FBI or your CIA installer and skip to step 17.
 14. Press (B) Twice to return to the FBI menu, and then press (Start) to exit back to the homebrew launcher.
 15. Press (Start) and then (A) to reboot.
 17. Update your 3DS to the latest firmware by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
