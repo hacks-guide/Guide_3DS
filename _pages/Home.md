@@ -8,23 +8,23 @@ header:
   cta_label: "Get Started"
   cta_url: "/get-started"
   caption:
-excerpt: 'A complete guide to 3DS custom firmware, <br /> from stock to arm9loaderhax.<br />'
+excerpt: 'Una guia completa de 3DS Custom Firmware, <br /> de fabrica hasta arm9loaderhax.<br />'
 ---
 
-**This guide needs *your* help to seed [these](https://github.com/Plailect/Guide/archive/master.zip) ([rss](https://plailect.github.io/Guide/rss.xml)) torrents!**
+**Esta guia necesita *TU* ayuda para sembrar [estos](https://github.com/Plailect/Guide/archive/master.zip) ([rss](https://plailect.github.io/Guide/rss.xml)) torrents!**
 {: .notice--info}
 
-**To use the [torrent](https://en.wikipedia.org/wiki/Torrent_file) files in this guide, you will need a torrent client like [Transmission](https://sourceforge.net/projects/trqtw/files/latest/download)**
+**Para usar los archivos [torrent](https://en.wikipedia.org/wiki/Torrent_file) de esta guia, necesitarás un cliente torrent como [Transmission](https://sourceforge.net/projects/trqtw/files/latest/download)**
 {: .notice--info}
 
-**Read all of the introductory pages before proceeding.**
+**Lea todas las paginas introductorias antes de comenzar**
 {: .notice--warning}
 
-## What is Homebrew?
+## Qué es Homebrew?
 
-[**Homebrew**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) usually refers to software that is not authorized by Nintendo. It allows you to run homebrew games, tools like save editing and backup, and emulators for various older systems.
+[**Homebrew**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) se refiere usualmente a software que no es autorizado por Nintendo. Permite correr jHomebrew, herramientas como quemadores y editores de partidas y emuladores para sistemas antiguos.
 
-In most cases, running homebrew on your console is 100% free using just the Internet Browser. There are also various other exploits in commercial games to get homebrew running.
+En la mayoría de casos, running homebrew on your console is 100% free using just the Internet Browser. There are also various other exploits in commercial games to get homebrew running.
 
 ## What is Custom Firmware?
 
