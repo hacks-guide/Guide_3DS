@@ -22,13 +22,13 @@ excerpt: 'Una guia completa de 3DS Custom Firmware, <br /> de fabrica hasta arm9
 
 ## Qué es Homebrew?
 
-[**Homebrew**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) se refiere usualmente a software que no es autorizado por Nintendo. Permite correr jHomebrew, herramientas como quemadores y editores de partidas y emuladores para sistemas antiguos.
+[**Homebrew**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) se refiere usualmente a software que no es autorizado por Nintendo. Permite correr Homebrew, herramientas como quemadores y editores de partidas, y emuladores para sistemas antiguos.
 
-En la mayoría de casos, running homebrew on your console is 100% free using just the Internet Browser. There are also various other exploits in commercial games to get homebrew running.
+En la mayoría de casos, correr Homebrew es 100% gratuito utilizando el Explorador de Internet. Tambien hay diferentes vulnerabilidades en juegos comerciales para correr Homebrew.
 
-## What is Custom Firmware?
+## Que es Custom Firmware?
 
-**Custom Firmware** ("CFW") enables you to use more advanced hacks that userland homebrew can't easily do. For instance, signature patches let you install unsigned titles that appear right on your HOME Menu.
+**Custom Firmware** ("CFW") permite usar hacks mas avanzados que homebrew en modo usuario no puede hacer facilmente. For instance, signature patches let you install unsigned titles that appear right on your HOME Menu.
 
 CFW can be easily set up on any console that is on 9.2.0-20 or lower. Other versions can be downgraded, most for free or with just an exploit game.
 
