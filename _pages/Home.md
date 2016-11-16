@@ -11,7 +11,7 @@ header:
 excerpt: 'Una guia completa de 3DS Custom Firmware, <br /> de fabrica hasta arm9loaderhax.<br />'
 ---
 
-**Esta guia necesita *TU* ayuda para sembrar [estos](https://github.com/Plailect/Guide/archive/master.zip) ([rss](https://plailect.github.io/Guide/rss.xml)) torrents!**
+**Esta guia necesita de *TU* ayuda para sembrar [estos](https://github.com/Plailect/Guide/archive/master.zip) ([rss](https://plailect.github.io/Guide/rss.xml)) torrents!**
 {: .notice--info}
 
 **Para usar los archivos [torrent](https://en.wikipedia.org/wiki/Torrent_file) de esta guia, necesitarás un cliente torrent como [Transmission](https://sourceforge.net/projects/trqtw/files/latest/download)**
@@ -28,27 +28,26 @@ En la mayoría de casos, correr Homebrew es 100% gratuito utilizando el Explorad
 
 ## Que es Custom Firmware?
 
-**Custom Firmware** ("CFW") permite usar hacks mas avanzados que homebrew en modo usuario no puede hacer facilmente. For instance, signature patches let you install unsigned titles that appear right on your HOME Menu.
+**Custom Firmware** ("CFW") permite usar hacks mas avanzados que homebrew en modo usuario no puede hacer facilmente. Por ejemplo, los parches de firmas te permites instalar titulos sin firmar que aparecen un el menu HOME de la consola.
 
-CFW can be easily set up on any console that is on 9.2.0-20 or lower. Other versions can be downgraded, most for free or with just an exploit game.
+CFW puede ser instalado en cualquier consola que es 9.2.0-20 o inferior. OTras versiones pueden ser bajadas(downgrade), la mayoria de forma grauita o con un juego vulnerable.
 
-## What does this guide install?
+## Que instala esta guía?
 
-This guide has the end goal of taking a completely unmodified 3DS from stock
-firmware to arm9loaderhax powered Custom Firmware. On some versions, it utilizes homebrew as a jumping off point, but Custom Firmware is still the goal.
+Esta guia tiene la finalidad de tomar una consola sin modificar desde estado de fabrica hasta Custom Firmware cargado por arm9loaderhax. En algunas versions, utiliza homebrew como punto de inicio, pero Custom Firmware es la meta final.
 
-Arm9loaderhax is the newest and best method of launching Custom Firmware that gives us nearly full control of the system only milliseconds into boot, which is similar to the effect of BootMii for the Wii.
+Arm9loaderhax es el mejor y mas nuevo metodo de lanzar CFW el cual nos da casi total control del sistema en cuestion de milisegundos de iniciar la consola, lo cual es parecido a lo logra BootMii en la consola Wii.
 
 The benefits of arm9loaderhax over other Custom Firmware launch methods are numerous, and as such it is recommended to use this guide over any other that relies on outdated software (such as menuhax or rxTools).
 
-## What can I do with Custom Firmware?
+## Que puedo hacer con Custom Firmware?
 
-+ Play all game cards and eShop games, regardless of region
-+ Customize your HOME Menu with user-created [themes](https://3dsthem.es/) and [badges](https://badges.3dsthem.es/)
-+ Use "ROM hacks" for games that you own
-+ Take gameplay and application screenshots
-+ [Backup, edit, and restore](https://gbatemp.net/threads/release-jks-savemanager-homebrew-cia-save-manager.413143/) saves for many games
-+ Play games for older systems with various emulators, using RetroArch or other standalone emulators. (Works best with a New Nintendo 3DS)
++ Jugar cualquier juego (sea cartucho o digital), sin importar la región
++ Personalizar tu menu HOME con [temas creados por usuarios](https://3dsthem.es/) y [parches](https://badges.3dsthem.es/)
++ Usar "ROM hacks" para juegos que tienes
++ Capturar gameplay y capturas de pantallas
++ [Respaldar, editar, and restaurar](https://gbatemp.net/threads/release-jks-savemanager-homebrew-cia-save-manager.413143/) partidas para varios juegos
++ Jugar juegos para sistemas mas antiguos, usando RetroArch u otros emuladores individuales. (Works best with a New Nintendo 3DS)
 + Install homebrew titles to your system, and have them appear on your HOME Menu
 + Dump your game cards to a format you can install, and play them without needing the card
 + New 3DS only: stream live gameplay to your PC wirelessly with NTR CFW
