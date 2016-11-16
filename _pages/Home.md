@@ -25,12 +25,12 @@ excerpt: 'Una guia completa de 3DS Custom Firmware, <br /> de fabrica hasta arm9
 [**Homebrew**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) se refiere usualmente a software que no es autorizado por Nintendo. Permite correr Homebrew, herramientas como quemadores y editores de partidas, y emuladores para sistemas antiguos.
 
 En la mayoría de casos, correr Homebrew es 100% gratuito utilizando el Explorador de Internet. Tambien hay diferentes vulnerabilidades en juegos comerciales para correr Homebrew.
-
+ 
 ## Que es Custom Firmware?
 
 **Custom Firmware** ("CFW") permite usar hacks mas avanzados que homebrew en modo usuario no puede hacer facilmente. Por ejemplo, los parches de firmas te permites instalar titulos sin firmar que aparecen un el menu HOME de la consola.
 
-CFW puede ser instalado en cualquier consola que es 9.2.0-20 o inferior. OTras versiones pueden ser bajadas(downgrade), la mayoria de forma grauita o con un juego vulnerable.
+CFW puede ser instalado en cualquier consola que es 9.2.0-20 o inferior. Otras versiones pueden ser bajadas(downgrade), la mayoria de forma grauita o con un juego vulnerable.
 
 ## Que instala esta guía?
 
@@ -48,20 +48,20 @@ The benefits of arm9loaderhax over other Custom Firmware launch methods are nume
 + Capturar gameplay y capturas de pantallas
 + [Respaldar, editar, and restaurar](https://gbatemp.net/threads/release-jks-savemanager-homebrew-cia-save-manager.413143/) partidas para varios juegos
 + Jugar juegos para sistemas mas antiguos, usando RetroArch u otros emuladores individuales. (Works best with a New Nintendo 3DS)
-+ Install homebrew titles to your system, and have them appear on your HOME Menu
-+ Dump your game cards to a format you can install, and play them without needing the card
-+ New 3DS only: stream live gameplay to your PC wirelessly with NTR CFW
-+ Run many old Nintendo DS flash carts that were blocked long ago or never worked on Nintendo 3DS
-+ Safely update to the latest system version without fear of losing access to homebrew
++ Instalar titulos homebrew en tu sistema, y hacerlos aparecer en el menu HOME
++ Extrae tus juegos en cartucho a un formato el cual puedes instalar, y poder jugar sin usar el cartucho
++ Solo New 3DS: transmite gameplay en vivo a tu PC de forma inalambrica con NTR CFW
++ Utiliza varias flashcards de Nintendo DS que fueron bloqueadas hace tiempo o nunca funcionario en Nintendo 3DS
++ Actualiza de forma segura a la ultima version disponible sin mideo de perder acceso a Homebrew 
 
-## What do I need to know before starting?
+## Qué necesito antes de empezar?
 
-+ **Before beginning the guide, you must know the risks of 3DS hacking: EVERY time you modify your system, there is always the potential for an UNRECOVERABLE brick. They're rare, but still a possibility so make sure you follow ALL directions EXACTLY.**
-+ If you have already hacked your 3DS before to get an EmuNAND setup, and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, you should follow all instructions and restore your existing EmuNAND when prompted once you reach [Installing arm9loaderhax](installing-arm9loaderhax).
-+ This guide will work on New 3DS, Old 3DS, and 2DS in all regions on firmware 11.2.0 or below *(except CHN / TWN on both New 3DS and Old 3DS, and KOR New 3DS)*.
-+ If everything goes according to plan, you will lose no data and end up with everything that you started with (games, NNID, saves, etc will be preserved).
-+ A large part of this guide is lengthy NAND dumps and downgrades, so the entire process can take *several* hours thanks to the 3DS's slow processor.
-+ **Keep the device plugged in and charged throughout the entire process to avoid data loss or damage from an unexpected power-off!**
-+ Your SD card should be [MBR, not GPT](http://www.howtogeek.com/245610/) (the SD card that comes with the device will be MBR by default).
-+ If you need to format a brand new SD card, you can use [`guiformat`](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) and set to an Allocation Unit Size of 32K.
-+ The 2DS is essentially identical to the Old 3DS in terms of software, and that any steps which say "Old 3DS" also apply to 2DS.
++ **Antes de comenzar la guia, debes conocer los riesgos de hackear 3DS: CADA vez que modificas tu sitema, siempre esta el potencial de un brick INRECUPERABLE. Son poco comunes, pero aun esta la posibilidad así que asegurate de seguir todas las instrucciones.**
++ **Si ya has hackeado tu 3DS antes para conseguir una configuracion de EmuNAND, y quisiseras transferir los contenidos de tu EmuNAND a tu nueva configuracion de SysNAND CFW, deberías seguir todas las instrucciones y restaurar tu existente EmuNAND cuando indicado una vez llegues a [Instalar arm9loaderhax](installing-arm9loaderhax).
++ Esta guía funcionará en NEW 3DS, Vieja 3DS and 2DS en cualquier region en version 11.2.0 u inferior *(excepto CHN / TWN en New 3DS y Old 3DS, y KOR New 3DS)*.
++ Si todo va con respecto al plan, no perderás datos y terminarás con todo lo que empezaste (juegos, NNID, partidas, etc será preservado).
++ Gran parte de esta guía consta de largos respaldos de NAND y bajadas(downgrades), así que el proceso puede tomar *varias* gracias al lento procesador del 3DS.
++ **Manten el dispositivo cargado y conectado durante todo el proceso para evitar pérdida de datos o daño de un inesperado corte de energía!**
++ Tu tarjeta SD debería ser [MBR, y no GPT](http://www.howtogeek.com/245610/) (la tarjeta SD que viene con el dispositivo será MBR de fábrica).
++ Si necesitas formatear una tarjeta SD nueva, puedes usar [`guiformat`](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) y configurar el Tamaño de Unidad de Locacion (Allocation Unit Size) a 32K.
++ La 2DS es esencialmente identica a la Vieja 3DS en términos de software, y cualquier paso que diga "Vieja 3DS" también aplican para las 2DS.
