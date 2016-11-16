@@ -38,7 +38,7 @@ Esta guia tiene la finalidad de tomar una consola sin modificar desde estado de 
 
 Arm9loaderhax es el mejor y mas nuevo metodo de lanzar CFW el cual nos da casi total control del sistema en cuestion de milisegundos de iniciar la consola, lo cual es parecido a lo logra BootMii en la consola Wii.
 
-The benefits of arm9loaderhax over other Custom Firmware launch methods are numerous, and as such it is recommended to use this guide over any other that relies on outdated software (such as menuhax or rxTools).
+Los beneficios de arm9loaderhax sobre otros metodos de inicio de CFW son numerosos, y por eso se recomienda el uso de esta guía sobre cualquier otra que utiliza software desactualizado (como menuhax y rxTools).
 
 ## Que puedo hacer con Custom Firmware?
 
