@@ -5,7 +5,7 @@ header:
   overlay_color: "#5e616c"
   overlay_image: home-page-feature.jpg
   overlay_filter: 0.5
-  cta_label: "Get Started"
+  cta_label: "Vamos a comenzar"
   cta_url: "/get-started"
   caption:
 excerpt: 'Una guia completa de 3DS Custom Firmware, <br /> de fabrica hasta arm9loaderhax.<br />'
