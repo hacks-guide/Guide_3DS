@@ -44,7 +44,7 @@ Estos pasos también actualizarán las cargas (payloads) y la clave de la base d
 7. Copiar la carpeta `a9lh` de `data_input_v3.zip` a la raíz de la tarjeta SD.
 7. Copiar _el contenido de_ el arm9loaderhax zip a la carpeta `a9lh` de la tarjeta SD
 8. Copiar `arm9loaderhax.bin` de el Luma3DS zip a la raíz de la tarjeta SD, sobrescriba los archivos existentes.
-9. Reinsert your SD card into your 3DS
+9. Reinserte la tarjeta SD en la 3DS.
 
 ##### Parte II - Actualización de Payload
 
