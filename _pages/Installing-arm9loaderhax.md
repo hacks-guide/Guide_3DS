@@ -136,7 +136,8 @@ If, before following this guide, you already had an EmuNAND setup and would like
 {: .notice--info}
 
 1. **If you are an Old 3DS or 2DS user who has done [2.1.0 ctrtransfer](2.1.0-ctrtransfer), do the following:**
-  + Copy `NANDmin.bin` to the `/files9/` folder on your SD card
+
++ Copy `NANDmin.bin` to the `/files9/` folder on your SD card
   + Open Hourglass9 from arm9loaderhax by holding (Start) on boot
   + Go to "SysNAND Backup/Restore"
   + Restore from `NANDmin.bin`
@@ -154,6 +155,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
 
 
 ##### Section V - Injecting FBI
+
 
 1. Open Hourglass9 from arm9loaderhax by holding (Start) on boot
 2. Go to "SysNAND Backup/Restore", then select the "Health&Safety Dump" option to dump Health & Safety to `hs.app` **(you can use Up and Down / Left and Right to change the name)**
@@ -198,6 +200,10 @@ If, before following this guide, you already had an EmuNAND setup and would like
 
 This section is only needed for devices that did a ctrtransfer earlier and had to back up their tickets.
 {: .notice--info}
+
+If you have no tickets to restore, skip this section.  
+{: .notice--info} 
+
 
 1. Open FBI
 2. Select "SD"
