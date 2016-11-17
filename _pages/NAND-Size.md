@@ -1,21 +1,21 @@
 ---
-title: "NAND Size"
+title: "Tamaño de la NAND"
 permalink: /nand-size.html
 ---
 
 Un respaldo válido de NAND debería de tener alguno de los siguientes tamaños en muchos casos.
 {: .notice--primary}
 
-Occasionally, you will get a backup with a different size than one of these listed. It is fine for a backup to be larger than expected, just ensure that it is never *smaller* than the sizes listed.
+Ocasionalmente, se obtendrá un respaldo con un tamaño diferente que alguno de los anteriores. Está bien que un respaldo sea más grande de lo esperado, solamente se debe estar seguro de que no es más pequeño que los anteriores.  
 {: .notice--info}
 
-Note that a *min size* NAND will always be the smallest possible size for the purpose of saving space, and may not match the size of other NAND backups from your device. This is fine, just make sure that it matches one of the sizes on this page.
+Nótese que un *tamaño mínimo* de NAND siempre será lo más pequeño posible con el propósito de ahorrar espacio en memoria, y talvez no tenga el mismo tamaño que otros respaldos de NAND backups del dispositivo. Esto está bien, solo hay que estar seguros de que es igual que alguno de los tamaños que se mencionan en esta página.
 {: .notice--info}
 
-The brand name refers to the manufacturer of the NAND chip in your device, **not** your SD card.
+El nombre de la NAND  hace referencia al manufacturante del chip de la NAND del dispositivo, **NO** de su tarjeta SD.
 {: .notice--warning}
 
-**Your backup should match one of the sizes on this page; if it does not, you should delete it and make a new one!**
+**Su respaldo debería de ser igual a alguno de los que se mencionan en este sitio; Si no es así, debe eliminarlo y hacer uno de nuevo.**
 {: .notice--danger}
 
 ## 2DS:    
@@ -32,7 +32,7 @@ The brand name refers to the manufacturer of the NAND chip in your device, **not
     + Samsung NAND:    
       1.300.234.240 bytes = 1.21 GiB    
 
-## Old 3DS:    
+## Vieja 3DS:    
 
     + Toshiba NAND:     
       988.807.168 bytes = 943 MiB    
@@ -40,7 +40,7 @@ The brand name refers to the manufacturer of the NAND chip in your device, **not
     + Samsung NAND:    
       1.000.341.504 bytes = 954 MiB    
 
-## New 3DS:    
+## Nueva 3DS:    
 
     + Toshiba NAND:    
       1.979.711.488 bytes = 1.84 GiB    
