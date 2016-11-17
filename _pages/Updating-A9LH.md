@@ -5,16 +5,16 @@ permalink: /updating-a9lh.html
 
 ### Última actualización: 3 Nov 2016
 
-La actual instalación de arm9loaderhax consiste en cargas útlies de archivos instalados en las particiones NFIRM^ del chip NAND del dispositivo, el cual es adherido a la tarjeta madre por sí mismo. Estas cargas son extrañamente actualizadas y su único próposito es el de iniciar `arm9loaderhax.bin` desde la tarjeta SD, la cuál es, en esté caso, Luma3DS.
+La actual instalación de arm9loaderhax consiste en cargas payloads instalados en las particiones NFIRM^ del chip NAND del dispositivo, el cual es adherido a la tarjeta madre por sí mismo. Estos playloads son raramente actualizadas y su único próposito es el de iniciar `arm9loaderhax.bin` desde la tarjeta SD, la cuál es, en esté caso, Luma3DS.
 {: .notice}
 
 Si no sabe que versión de arm9loaderhax tiene, solo instale la última versión con estos pasos. Si posee la últma versión y la vuelve a instalar esto no tendra ningún efecto.
 {: .notice--info}
 
-Si tiene algún PIN en Luma, Debe obligatoriamente apagarlo temporalmente para seguir estos pasos. Puede reactivar el PIN despues de la actualización.
+Si tiene algún PIN en Luma, Debe obligatoriamente apagarlo tdmporalmente para seguir estos pasos. Puede reactivar el PIN despues de la actualización.
 {: .notice--info}
 
-Si está usando una carga (payload) que no inicia su propia pantalla (tal como Bootanim9), necesitará renombrarla de la siguiente manera `arm9loaderhax_si.bin` en lugar de `arm9loaderhax.bin`.
+Si está usando una carga (payload) que no inicializa por si misma la pantalla (tal como Bootanim9), necesitará renombrarla de la siguiente manera `arm9loaderhax_si.bin` en lugar de `arm9loaderhax.bin`.
 {: .notice--info}
 
 Estos pasos también actualizarán las cargas (payloads) y la clave de la base de datos AES (AES key database).  
