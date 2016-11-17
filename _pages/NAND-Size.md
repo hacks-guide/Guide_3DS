@@ -15,7 +15,7 @@ Nótese que un *tamaño mínimo* de NAND siempre será lo más pequeño posible 
 El nombre de la NAND  hace referencia al manufacturante del chip de la NAND del dispositivo, **NO** de su tarjeta SD.
 {: .notice--warning}
 
-**Su respaldo debería de ser igual que alguno de los que se mecionan en este sitio; Si no es así, Debería de eliminarlo y hacer uno de nuevo.**
+**Su respaldo debería de ser igual a alguno de los que se mencionan en este sitio; Si no es así, debe eliminarlo y hacer uno de nuevo.**
 {: .notice--danger}
 
 ## 2DS:    
