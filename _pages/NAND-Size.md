@@ -3,7 +3,7 @@ title: "NAND Size"
 permalink: /nand-size.html
 ---
 
-A valid NAND backup should be one of the following sizes in most situations.
+Un respaldo válido de NAND debería de tener alguno de los siguientes tamaños en muchos casos.
 {: .notice--primary}
 
 Occasionally, you will get a backup with a different size than one of these listed. It is fine for a backup to be larger than expected, just ensure that it is never *smaller* than the sizes listed.
