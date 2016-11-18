@@ -3,7 +3,7 @@ title: "Get Started (New 3DS)"
 permalink: /get-started-(new-3ds).html
 ---
 
-Click the image of your device region to take you to the appropriate page.
+Haz click en la imagen correspondiente a tu region para llevarte a la página correspondiente.
 {: .notice--primary}
 
 | EUR | JPN | USA |
