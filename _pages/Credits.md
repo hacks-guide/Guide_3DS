@@ -1,12 +1,12 @@
 ---
-title: "Credits"
+title: "Créditos"
 permalink: /credits.html
 ---
 
-**Special thanks to all of [#Cakey on Freenode](http://webchat.freenode.net/?channels=%23Cakey) for being awesome!**
+**Muchísimas gracias a todos de [#Cakey en Freenode](http://webchat.freenode.net/?channels=%23Cakey) por ser grandiosos!**
 {: .notice--primary}
 
-If I forgot you here, contact me and I'll add your name.
+Si te olvidé, contactame y agregaré tu nombre.
 {: .notice}
 
 + AHP_Person
@@ -65,3 +65,5 @@ If I forgot you here, contact me and I'll add your name.
 + xy2_
 + yellows8
 + yifan_lu
++ rikumax25 (traducción)
++ doriandrex (traducción)
