@@ -3,30 +3,29 @@ title: "Get Started (New 3DS - JPN)"
 permalink: /get-started-(new-3ds-jpn).html
 ---
 
-Select the appropriate page for your version from the chart below.
+Selecciona la pagina apropiada para tu version en la tabla de abajo.
 {: .notice--primary}
 
 {% capture notice-1 %}
-The first two columns of the chart refer to the last number of your version (which corresponds to the browser version installed to the system). If the version is -0 then you do not have a browser, while any number above -0 indicates a browser is installed.
+Las primeras dos columnas de la tabla se refieren al numero de version (las cuales corresponden a la version de navegador instalada en la consola). Si la versión es -0 entonces no tienes un navegador, mientras que cualquier número superior a -0 indica que el navegador está instalado.
 
-The "from" and "to" fields are inclusive. This means that, for example, the "from 9.0.0 to 9.2.0" row includes 9.0.0, 9.1.0, and 9.2.0.
+El "desde" y "hasta" campos son inclusivos. Esto significa que, por ejemplo, la columna "desde 9.0.0 hasta 9.2.0" incluye 9.0.0, 9.1.0, y 9.2.0.
 
-In the case of "5.0.0-0U" for example, you would follow the "No Browser" column and 5.0.0 to 5.1.0 row because the system is on the a system version in that range and has no browser installed.
+En el caso de "5.0.0-0U" por ejemplo, debes seguir la columna "Sin Navegador" y la fila "5.0.0 hasta 5.1.0" porque el sistema esta en una versión de ese rango y no tiene el navegador instalado..
 {% endcapture %}
 
 <div class="notice--info">{{ notice-1 | markdownify }}</div>
 
-For all versions you can [Cart Update](cart-update) to a higher version in the same column to follow its instructions instead.
+Para todas las versiones puedes [Actualizar cartucho](cart-update) a una versión más alta en la misma columna para seguir estas instrucciones.
 {: .notice--warning}
 
-If you updated with a game cart containing the version 9.9.0 or above *(meaning that you have a version on 9.9.0 or above, but your browser is on -25 or lower, such as 10.2.0-24)*, your browser was removed and you will need to use the "No Browser" column.
-{: .notice--warning}
+Si has actualizado con un cartucho que contenía la version 9.9.0 o superior *(significando que tienes una versión 9.9.0 o superior, pero tu navegador esta en -25 u inferior, como 10.2.0-24)*, tu navegador fue eliminado y tendrás que usar la columna "Sin Navegador".
 
-The device version can be found at the bottom right of the top screen of the System Settings.
+La  versión del dispositivo puede ser encontrada en la esquina inferior derecha de la pantalla supeior de Configuración del Sistema.
 {: .notice--success}
 
-| From | To | No Browser | Browser |
+| De | Hasta | Sin Navegador | Navegador |
 |:-:|:-:|:-:|:-:|
-| 8.1.0 | 8.1.0 | [NTR and Cubic Ninja](ntr-and-cubic-ninja) | [Homebrew Launcher (Browser)](homebrew-launcher-(browser)) |
-| 9.0.0 | 10.7.0 | [Homebrew Launcher (No Browser)](homebrew-launcher-(no-browser)) | [Homebrew Launcher (Browser)](homebrew-launcher-(browser)) |
+| 8.1.0 | 8.1.0 | [NTR y Cubic Ninja](ntr-and-cubic-ninja) | [Homebrew Launcher (Navegador)](homebrew-launcher-(browser)) |
+| 9.0.0 | 10.7.0 | [Homebrew Launcher (Sin Navegador)](homebrew-launcher-(no-browser)) | [Homebrew Launcher (Navegador)](homebrew-launcher-(browser)) |
 | 11.0.0 | 11.2.0 | [NFIRM Downgrade](nfirm-downgrade) | [NFIRM Downgrade](nfirm-downgrade) |
