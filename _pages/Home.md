@@ -28,9 +28,9 @@ En la mayoría de casos, correr Homebrew es 100% gratuito utilizando solamente e
  
 ## ¿Qué es Custom Firmware?
 
-**Custom Firmware** ("CFW") te permite utilizar hacks más avanzados que un homebrew en modo de usuario no podría hacer tan fácilmente. Por ejemplo, los parches de firmas te permiten instalar títulos no-firmados y hacerlos aparecer justo en el menú HOME de la consola.
+**Custom Firmware** ("CFW") te permite utilizar hacks más avanzados que un homebrew en modo de usuario no puede ejecutar tan fácilmente. Por ejemplo, los parches de firmas te permiten instalar títulos no-firmados y hacerlos aparecer justo en el menú HOME de la consola.
 
-CFW puede ser instalado en cualquier consola que esté en la versión 9.2.0-20 o inferior. Las demás versiones pueden ser reducidas a una versión anterior, normalmente de forma gratiuta o comprando un juego vulnerable.
+CFW puede ser instalado en cualquier consola que esté en la versión 9.2.0-20 o inferior. Las demás versiones pueden ser reducidas a una versión anterior, normalmente de forma gratuita o comprando un juego vulnerable.
 
 ## ¿Qué instala esta guía?
 
