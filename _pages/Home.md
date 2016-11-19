@@ -56,7 +56,7 @@ Los beneficios de arm9loaderhax sobre otros métodos de lanzamiento de CFW son n
 
 ## ¿Qué necesito antes de comenzar?
 
-+ **Antes de iniciar la guía, debes conocer los riesgos de hackear un 3DS: CADA vez que modificas tu sitema, siempre existe la posibilidad de un brick IRRECUPERABLE. Son realmente poco comunes, pero es posible así que asegúrate de seguir TODAS las instrucciones AL PIE DE LA LETRA.**
++ **Antes de iniciar la guía, debes conocer los riesgos de hackear una 3DS: CADA vez que modificas tu sitema, siempre existe la posibilidad de un brick IRRECUPERABLE. Son realmente poco comunes, pero es posible así que asegúrate de seguir TODAS las instrucciones AL PIE DE LA LETRA.**
 + **Si ya antes has hackeado tu 3DS para conseguir una configuración de EmuNAND, y quisieras transferir los contenidos de tu EmuNAND a tu nueva configuración de SysNAND CFW, deberás seguir todas las instrucciones y restaurar tu existente EmuNAND cuando la guía lo indique una vez que llegues a la sección [Instalar arm9loaderhax](installing-arm9loaderhax).
 + Esta guía funcionará en New 3DS, Vieja 3DS y 2DS en cualquier región en una versión 11.2.0 u inferior *(excepto CHN / TWN en New 3DS y Vieja 3DS, y KOR en New 3DS)*.
 + Si todo sale de acuerdo al plan, no perderás los datos y terminarás con todo lo que empezaste (serán preservados juegos, NNID, partidas, etc).
