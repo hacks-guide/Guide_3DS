@@ -71,8 +71,8 @@ During this process, we also setup programs such as the following:
 4. **Copy _the contents of_ the `starter.zip` to the root of your SD card**
   + This will include a brand new `3ds` folder to replace the one you just deleted
 5. Copy _the contents of_ the SafeA9LHInstaller zip to the root of your SD card
-6. Copy the `a9lh` folder from `data_input_v3.zip` to the root of your SD Card
-7. Copy _the contents of_ the arm9loaderhax release zip to `a9lh` folder on your SD card
+6. **Copy the `a9lh` folder from `data_input_v3.zip` to the root of your SD Card**
+7. **Copy _the contents of_ the arm9loaderhax release zip to `a9lh` folder on your SD card**
 9. Copy `hblauncher_loader.cia` from the hblauncher_loader zip to the `/cias/` folder on your SD card
 10. Copy `lumaupdater.cia` from the Luma3DS Updater zip to the `/cias/` folder on your SD card
 11. Copy `FBI.cia` from the FBI zip to the `/cias/` folder on your SD card
@@ -135,19 +135,19 @@ During this process, we also setup programs such as the following:
 If, before following this guide, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand) instead of doing the first step in this section.
 {: .notice--info}
 
-1. **If you are an Old 3DS or 2DS user who has done [2.1.0 ctrtransfer](2.1.0-ctrtransfer), do the following:**
+1. If you are an Old 3DS or 2DS user who has done [2.1.0 ctrtransfer](2.1.0-ctrtransfer), restore `NANDmin.bin`:
   + Copy `NANDmin.bin` to the `/files9/` folder on your SD card
   + Open Hourglass9 from arm9loaderhax by holding (Start) on boot
   + Go to "SysNAND Backup/Restore"
   + Restore from `NANDmin.bin`
   + Press (Start) to reboot
   + If you get a black screen, [follow 9.2.0 ctrtransfer](9.2.0-ctrtransfer)
-1. If your backup is of a version between 3.0.0 and 4.5.0, do the following
+1. If your backup is of a version between 3.0.0 and 4.5.0, manually download the required firmware:
   + Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) and rename it to `firmware.bin`
   + Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
   + Copy `firmware.bin` and `cetk` to the `/luma/` folder on your SD card
   + Delete both of these files after updating your 3DS
-2. Update your 3DS again by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
+2. Regardless of whether or not you did either of the above two steps, update your 3DS by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
   + Yes this is safe, stop asking about it.
   + If this gives you an error, set your DNS settings to "auto"
   + If this still gives you an error and your NAND is below 9.2.0, [follow 9.2.0 ctrtransfer](9.2.0-ctrtransfer)
