@@ -49,7 +49,7 @@ Los beneficios de arm9loaderhax sobre otros métodos de lanzamiento de CFW son n
 + [Respaldar, editar, and restaurar](https://gbatemp.net/threads/release-jks-savemanager-homebrew-cia-save-manager.413143/) partidas para varios juegos
 + Jugar juegos de sistemas más antiguos, usando RetroArch u otros emuladores individuales. (Funciona mejor con un New Nintendo 3DS)
 + Instalar títulos homebrew en tu sistema, y hacerlos aparecer en el menú HOME
-+ Extraer tus juegos en cartucho a un formato el cual puedes instalar, y juega con ellos sin necesitar el cartucho
++ Extraer tus juegos desde un cartucho a un formato el cual puedes instalar, y jugar con ellos sin necesitad del cartucho
 + Solo New 3DS: transmite gameplay en vivo a tu PC de forma inalámbrica con NTR CFW
 + Utiliza varias flashcards de Nintendo DS que fueron bloqueadas hace tiempo o nunca funcionarion en Nintendo 3DS
 + Actualiza de forma segura a la última versión del sistema disponible sin miedo a perder el acceso a Homebrew 
