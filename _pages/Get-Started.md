@@ -3,19 +3,19 @@ title: "Vamos a comenzar"
 permalink: /get-started.html
 ---
 
-Los colores en los dispositivos puede que varíe, pero note la posición de los botones y características de cada dispositivo para asegurar que escoga la correcta.
+Es posible que los colores de los dispositivos en la imagen sean diferentes, pero presta atención a la posición de los botones y a las características de cada dispositivo para asegurar que estás eligiendo el correcto.
 {: .notice}
 
-Presione la imagen de su dispositivo para ir a la página apropiada.
+Da clic la imagen de tu dispositivo para ir a la página apropiada.
 {: .notice--primary}
 
-Diferentes modelos de dispositivos, versiones, y regione requerirán de diferentes pasos para lo gara la finalidad de arm9loaderhax CFW. La siguiente serie de páginas le ayudarán donde inciar para su dispositivo.
+Diferentes modelos de dispositivos, versiones, y regiones requerirán de diferentes pasos para alcanzar la meta final de arm9loaderhax CFW. La siguiente serie de páginas te ayudarán a encontrar dónde inciar con tu dispositivo.
 {: .notice--info}
 
-Si ya has hackeado tu 3DS antes con una configuracion de CWF basada en EmuNAND, solo sigue las instrucciones mietras estás en sysNAND. Tus datos serán transferidos desde la EmuNAND a tu nueva instalación de A9LH al final de la guía.
+Si ya antes has hackeado tu 3DS con una configuración de CWF basada en EmuNAND, solo sigue las instrucciones mientras estás en SysNAND. Tus datos serán transferidos desde la EmuNAND a tu nueva instalación de A9LH al final de la guía.
 {: .notice--info}
 
-Antes de empezar, quizás quieras revisar por errores en tu tarjeta SD usando [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), o [F3X (Mac)](f3x-(mac))!
+Antes de empezar, quizás quieras revisar si tu tarjeta SD tiene errores utilizando [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), o [F3X (Mac)](f3x-(mac))!
 {: .notice--warning}
 
 | New 3DS | Vieja 3DS o 2DS |

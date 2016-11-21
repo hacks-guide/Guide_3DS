@@ -3,19 +3,19 @@ title: "Tamaño de la NAND"
 permalink: /nand-size.html
 ---
 
-Un respaldo válido de NAND debería de tener alguno de los siguientes tamaños en muchos casos.
+Un respaldo válido de la NAND debería tener alguno de los siguientes tamaños en la mayoría de los casos.
 {: .notice--primary}
 
-Ocasionalmente, se obtendrá un respaldo con un tamaño diferente que alguno de los anteriores. Está bien que un respaldo sea más grande de lo esperado, solamente se debe estar seguro de que no es más pequeño que los anteriores.  
+Ocasionalmente, se obtendrá un respaldo con un tamaño diferente a alguno de los listados aquí. Está bien que un respaldo sea más grande de lo esperado, solamente debes estar seguro que no es más pequeño que los tamaños de esta lista.  
 {: .notice--info}
 
-Nótese que un *tamaño mínimo* de NAND siempre será lo más pequeño posible con el propósito de ahorrar espacio en memoria, y talvez no tenga el mismo tamaño que otros respaldos de NAND backups del dispositivo. Esto está bien, solo hay que estar seguros de que es igual que alguno de los tamaños que se mencionan en esta página.
+Nótese que un *tamaño mínimo* de NAND siempre será lo más pequeño posible con el propósito de ahorrar espacio en memoria, y tal vez no tenga el mismo tamaño que otros respaldos de la NAND de tu dispositivo. Esto está bien, solo debemos estar seguros que coincide con alguno de los tamaños que se mencionan en esta página.
 {: .notice--info}
 
-El nombre de la NAND  hace referencia al manufacturante del chip de la NAND del dispositivo, **NO** de su tarjeta SD.
+El nombre de la marca hace referencia al fabricador del chip de la NAND del dispositivo, **NO** al de tu tarjeta SD.
 {: .notice--warning}
 
-**Su respaldo debería de ser igual a alguno de los que se mencionan en este sitio; Si no es así, debe eliminarlo y hacer uno de nuevo.**
+**Tu respaldo debería coincidir con alguno de los que se mencionan en este página; Si no es así, debes eliminarlo y crear uno nuevo.**
 {: .notice--danger}
 
 ## 2DS:    
