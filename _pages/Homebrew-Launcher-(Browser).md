@@ -1,44 +1,44 @@
 ---
-title: "Homebrew Launcher (Browser)"
+title: "Homebrew Launcher (Navegador)"
 permalink: /homebrew-launcher-(browser).html
 ---
 
-The Homebrew Launcher has many different entrypoints, or methods of launching. The most common is browserhax, which launches the Homebrew Launcher using nothing more than the included browser.
+áEl Homebew Launcher tiene diferentes maneras de ser lanzado o "puntos de entrada". El mas común se conoce como "browserhax", el cual ejecuta el Homebrew Launcher utilizando nada más que el navegador incluido en la consola.
 {: .notice--info}
 
-**Browserhax will work for EUR / JPN / USA / KOR regions ONLY!**
+r**Browserhax funcionará SOLO para las regiones EUR / JPN / USA / KOR**
 {: .notice--warning}
 
-#### What you need
+#### Lo necesario
 
 + [`config.zip`](images/config.zip)
-+ The [ropbin](https://smealum.github.io/3ds/#otherapp) matching your 3DS's version
-+ The Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
-+ An internet connection setup on your 3DS
++ El [ropbin](https://smealum.github.io/3ds/#otherapp) correspondiente a la versión de tu 3DS
++ El [Kit Inicial Homebrew](http://smealum.github.io/ninjhax2/starter.zip)
++ Una conección a internet preparada en la consola
 
-#### Instructions
+#### Instrucciones
 
-##### Section I -  Prep work
+##### Sección I -  Trabajo preliminar
 
-1. Copy the contents of `starter.zip` to the root of your SD card
-2. Copy the contents of `config.zip` to the `/3ds/menuhax_manager/` folder on your SD card
-3. Create a folder named `menuhax` on the root of your SD card if it does not already exist
-4. Rename the ropbin to `menuhaxmanager_input_payload.bin`
-5. Copy `menuhaxmanager_input_payload.bin` to the `/menuhax/` folder on your SD card
-4. Reinsert your SD card into your 3DS
+1. Copia los contenidos de `starter.zip` a la raíz de tu tarjeta SD
+2. Copia los contenidos de `config.zip` a la ubicación `/3ds/menuhax_manager/` de tu tarjeta SD
+3. Crea una carpeta llamada `menuhax` en la raíz de tu tarjeta SD si todavía no existe
+4. Renombra el ropbin a `menuhaxmanager_input_payload.bin`
+5. Copia `menuhaxmanager_input_payload.bin` a la carpeta `/menuhax/` de tu tarjeta SD
+4. Reinserta tuntarjeta SD en la 3DS
 
-##### Section II -  Version check bypass
+##### Sección II -  Evitar revisión de versión
 
-**This section is only needed for versions from 9.9.0 to 10.6.0**
+**Esta sección solo es necesaria para las versiones 9.9.0 hasta 10.6.0**
 
-2. Open the theme menu, change your theme to any other theme, then switch back. This will initialize the theme data and is required
-3. Launch the Settings application
-4. Change the date to `January 1, 2000`
-5. Change the time to `00:00`
-6. Launch the browser, then open the browser settings as fast as possible
-7. Scroll to the bottom and Initialize Savedata (it also may be called Clear All Save Data) as fast as possible
+2. Abre el menú de temas, cambia tu tema a cualquier otro, y vuelve a poner el que tenías antes. Esto creará los datos de temas necesarios
+3. Ve a Configuración de la Consola
+4. Cambia la fecha a `Enero 1, 2000`
+5. Cambia la hora a `00:00`
+6. Inicia el navegador, y abre las configuraciones del navegador lo más rápido posible
+7. Ve al final y haz click en "Borrar datos guardados" Initialize Savedata lo más rápido posible
 
-##### Section III -  Bookmark browserhax
+##### Sección III -  Marcador browserhax
 
 **This section is only needed for New 3DS on version 10.7.0**
 
