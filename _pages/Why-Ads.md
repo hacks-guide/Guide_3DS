@@ -1,6 +1,7 @@
 ---
 title: "Porqué anuncios?"
 permalink: /why-ads.html
+layout: single-no-ads
 ---
 
 Este proyecto es el resultado de cientos de cientos de horas de trabajo constante.

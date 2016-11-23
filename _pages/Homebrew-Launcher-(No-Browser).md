@@ -6,7 +6,7 @@ permalink: /homebrew-launcher-(no-browser).html
 The Homebrew Launcher has many different entrypoints, or methods of launching. The most common is browserhax, but for devices that can't use it, this page has many alternative options.
 {: .notice}
 
-If you do not already own any of these games and do not have another 3DS that can access the Homebrew Launcher, the cheapest option is to buy a "Nintendo Selects" copy of [Ocarina of Time 3D](https://amzn.to/2fkaKdp) (ensure you get the correct cartridge for your region) and a [Powersaves](http://amzn.to/2fb3VY7) (compatible with all regions), then use oot3dhax from the chart below.
+If you do not already own any of these games and do not have another 3DS that can access the Homebrew Launcher, the cheapest option is to buy a "Nintendo Selects" copy of [Ocarina of Time 3D](https://amzn.to/2fkaKdp) (ensure you get the correct cartridge for your region) and a [Powersaves](https://amzn.to/2fb3VY7) (compatible with all regions), then use oot3dhax from the chart below.
 {: .notice--info}
 
 Note that if you are on 11.2.0 and have NFIRM downgraded, all 11.1.0 compatible exploits will also be compatible with your 11.2.0 NFIRM downgraded system.
@@ -40,7 +40,7 @@ amzn_assoc_ad_mode = "manual";
 amzn_assoc_ad_type = "smart";
 amzn_assoc_marketplace = "amazon";
 amzn_assoc_region = "US";
-amzn_assoc_title = "3DS Homebrew Launcher";
+amzn_assoc_title = "";
 amzn_assoc_linkid = "718ad647bc3d1b8f8c44b3a1f34bc235";
 amzn_assoc_search_bar = "false";
 amzn_assoc_asins = "B01AC3ZDCE,B00DD0B1R0,B00YC7DZP4,B00IVJ1M7M,B008YYSBR8,B004SG211I,B00KI2OZ9M,B00K848IH0";

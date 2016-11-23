@@ -29,7 +29,7 @@ function updateNav() {
     if($btn.hasClass('hidden')) {
       $btn.removeClass('hidden');
     }
-    
+
   // The visible list is not overflowing
   } else {
 
