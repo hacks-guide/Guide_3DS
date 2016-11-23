@@ -17,6 +17,9 @@ If you have a PIN set on Luma, you must temporarily turn it off to do these step
 If you are using a payload that does not init the screen on its own (such as Bootanim9), you will need to rename it to `arm9loaderhax_si.bin` instead of `arm9loaderhax.bin`
 {: .notice--info}
 
+Once arm9loaderhax has already been installed, New 3DSs can use `data_input_v3`. Only the initial New 3DS install needs `data_input_v4`.
+{: .notice--info}
+
 These steps will also update your various payloads and the AES key database.
 {: .notice--success}
 
