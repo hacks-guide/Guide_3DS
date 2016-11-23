@@ -249,15 +249,14 @@ You can remove your NAND backups from `/files9/` as long as you still have them 
 {% capture notice-7 %}
 **You can remove any extra files and folders from the root of the SD card that are *not* in the following list:**
 
-| **Files and folders to keep on your SD card:** |
-|:----------------------------------------------:|
-| `3ds` |
-| `files9` |
-| `hblauncherloader` |
-| `luma` |
-| `Nintendo 3DS` |
-| `arm9loaderhax.bin` |
-| `boot.3dsx` |
+    + 3ds
+    + files9
+    + hblauncherloader
+    + luma
+    + Nintendo 3DS
+    + arm9loaderhax.bin
+    + boot.3dsx
+
 {% endcapture %}
 
 <div class="notice--info">{{ notice-7 | markdownify }}</div>
