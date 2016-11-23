@@ -1,6 +1,7 @@
 ---
 title: "Why Ads?"
 permalink: /why-ads.html
+layout: single-no-ads
 ---
 
 This project is the culmination of hundreds upon hundreds of hours of constant work.

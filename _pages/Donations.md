@@ -1,6 +1,7 @@
 ---
 title: "Donations"
 permalink: /donations.html
+layout: single-no-ads
 ---
 
 ## If you appreciate this guide, I accept donations.
