@@ -17,7 +17,7 @@ If you have a PIN set on Luma, you must temporarily turn it off to do these step
 If you are using a payload that does not init the screen on its own (such as Bootanim9), you will need to rename it to `arm9loaderhax_si.bin` instead of `arm9loaderhax.bin`
 {: .notice--info}
 
-Once arm9loaderhax has already been installed, New 3DSs can use `data_input_v3`. Only the initial New 3DS install needs `data_input_v4`.
+Once arm9loaderhax has already been installed, Old 3DSs can use `data_input_v4`. Only the initial Old 3DS install needs `data_input_v3` to be compatible with an old SafeA9LHInstaller version that can be launched with the browser. The versions only refer to revisions of the zip to be compatible with different installer versions, and are *not* the same thing as updating a9lh itself (the payload files).
 {: .notice--info}
 
 These steps will also update your various payloads and the AES key database.
@@ -26,7 +26,7 @@ These steps will also update your various payloads and the AES key database.
 #### What you need
 
 * [`aeskeydb.bin`](torrents/aeskeydb.torrent) - <code class="highlighterrouge"><a href="magnet:?xt=urn:btih:18b3a17f78e2376e05feaa150749d9fd689b25dc"><i class="fa fa-magnet" aria-hidden="true"></i></a></code>
-* [`data_input_v3.zip`](torrents/data_input_v3.torrent) - <code class="highlighterrouge"><a href="magnet:?xt=urn:btih:a1195c9f7ab650fa7c7bf020b51fc19ea8d9440c"><i class="fa fa-magnet" aria-hidden="true"></i></a></code>
+* [`data_input_v4.zip`](torrents/data_input_v4.torrent) - <code class="highlighterrouge"><a href="magnet:?xt=urn:btih:00f03ff69b5961307303d5e4778a2f65a528bf2d"><i class="fa fa-magnet" aria-hidden="true"></i></a></code>
 * The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
 * The latest release of [arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest)
 * The latest release of [SafeA9LHInstaller](https://github.com/AuroraWright/SafeA9LHInstaller/releases/latest)
