@@ -45,10 +45,10 @@ System Transfers can only be performed once a week.
   + **The source 3DS**: the 3DS running some kind of custom firmware (arm9loaderhax or some form of EmuNAND/EmuNAND) *on the latest version*
   + **The target 3DS**: the 3DS on stock firmware *between 11.0.0 and 11.2.0*
 * Purchase one of the following exploitable DSiWare games (a pirated copy of the game will **not** work) on **the source 3DS**
-  + **Fieldrunners**: Works for **USA + EUR** (game has been pulled in EUR region and was never released for JPN)
-  + **Legends of Exidia**: Works for **USA + EUR + JPN** (game has been pulled in JPN region)
-  + **Guitar Rock Tour**: Works for **USA + EUR** (game has been pulled in all regions)    
-  + **The Legend of Zelda: Four Swords**: Works for **USA + EUR** (game has been pulled in all regions)    
+  + **Fieldrunners**: *(game has been pulled in all regions)*
+  + **Legends of Exidia**: Works for **USA + EUR** *(game has been pulled in JPN region)*
+  + **Guitar Rock Tour**: *(game has been pulled in all regions)*    
+  + **The Legend of Zelda: Four Swords**: *(game has been pulled in all regions)*    
 * The latest release of [3ds_dsiwarehax_installer](https://github.com/yellows8/3ds_dsiwarehax_installer/releases)
 * The latest release of [3DSident](https://github.com/joel16/3DSident/releases/latest)
 * The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest)
