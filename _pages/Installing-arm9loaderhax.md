@@ -28,6 +28,7 @@ In this case, we use Luma3DS by [AuroraWright](https://github.com/AuroraWright/)
 Once arm9loaderhax is installed and Luma3DS is setup with the correct options, we then restore our previous backup.
 
 During this process, we also setup programs such as the following:    
+
 +  **FBI** *(installs CIA formatted games and applications)*
 +  **Luma3DS Updater** *(updates our CFW installation easily)*
 +  **Hourglass9** *(multipurpose tool which can do NAND and cartridge functions)*
