@@ -23,7 +23,7 @@ These steps will also update your various payloads and the AES key database.
 #### What you need
 
 * [`aeskeydb.bin`](torrents/aeskeydb.torrent) - <code class="highlighterrouge"><a href="magnet:?xt=urn:btih:18b3a17f78e2376e05feaa150749d9fd689b25dc"><i class="fa fa-magnet" aria-hidden="true"></i></a></code>
-* [`data_input_v3.zip`](torrents/data_input_v3.torrent) - <code class="highlighterrouge"><a href="magnet:?xt=urn:btih:a1195c9f7ab650fa7c7bf020b51fc19ea8d9440c"><i class="fa fa-magnet" aria-hidden="true"></i></a></code>
+* [`data_input_v4.zip`](torrents/data_input_v4.torrent) - <code class="highlighterrouge"><a href="magnet:?xt=urn:btih:00f03ff69b5961307303d5e4778a2f65a528bf2d"><i class="fa fa-magnet" aria-hidden="true"></i></a></code>
 * The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
 * The latest release of [arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest)
 * The latest release of [SafeA9LHInstaller](https://github.com/AuroraWright/SafeA9LHInstaller/releases/latest)
@@ -41,7 +41,7 @@ These steps will also update your various payloads and the AES key database.
 3. Copy `Hourglass9.bin` from the Hourglass9 zip to the `/luma/payloads/` folder on your SD card and rename `Hourglass9.bin` to `start_Hourglass9.bin`
 5. Copy `arm9loaderhax.bin` from the SafeA9LHInstaller zip to the `/luma/payloads` folder on your SD card
 6. Rename `arm9loaderhax.bin` in `/luma/payloads` to `down_safea9lhinstaller.bin`
-7. Copy the `a9lh` folder from `data_input_v3.zip` to the root of your SD Card
+7. Copy the `a9lh` folder from `data_input_v4.zip` to the root of your SD Card
 7. Copy _the contents of_ the arm9loaderhax zip to `a9lh` folder on your SD card
 8. Copy `arm9loaderhax.bin` from the Luma3DS zip to the root of your SD card, overwrite existing files
 9. Reinsert your SD card into your 3DS
