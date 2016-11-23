@@ -35,8 +35,10 @@ During this process, we also setup programs such as the following:
 #### What you need
 
 * [`aeskeydb.bin`](torrents/aeskeydb.torrent) - <code class="highlighterrouge"><a href="magnet:?xt=urn:btih:18b3a17f78e2376e05feaa150749d9fd689b25dc"><i class="fa fa-magnet" aria-hidden="true"></i></a></code>
-* [`data_input_v4.zip`](torrents/data_input_v4.torrent) - <code class="highlighterrouge"><a href="magnet:?xt=urn:btih:00f03ff69b5961307303d5e4778a2f65a528bf2d"><i class="fa fa-magnet" aria-hidden="true"></i></a></code>
 * [`fbi-2.4.2-injectable.zip`](torrents/fbi-2.4.2-injectable.torrent) - <code class="highlighterrouge"><a href="magnet:?xt=urn:btih:f978b4cf5eda72823240b9c649f3fd2940a9f525"><i class="fa fa-magnet" aria-hidden="true"></i></a></code>
+* The data_input zip corresponding to your device:
+  + New 3DS compatible [`data_input_v4.zip`](torrents/data_input_v4.torrent) - <code class="highlighterrouge"><a href="magnet:?xt=urn:btih:00f03ff69b5961307303d5e4778a2f65a528bf2d"><i class="fa fa-magnet" aria-hidden="true"></i></a></code>
+  + Old 3DS or 2DS Compatible [`data_input_v3.zip`](torrents/data_input_v3.torrent) - <code class="highlighterrouge"><a href="magnet:?xt=urn:btih:a1195c9f7ab650fa7c7bf020b51fc19ea8d9440c"><i class="fa fa-magnet" aria-hidden="true"></i></a></code>
 * The release of SafeA9LHInstaller corresponding to your device:
   + New 3DS Compatible [Release](https://github.com/AuroraWright/SafeA9LHInstaller/releases/latest)
   + Old 3DS or 2DS Compatible [Release](https://github.com/AuroraWright/SafeA9LHInstaller/releases/tag/v2.0.3)
@@ -71,11 +73,12 @@ During this process, we also setup programs such as the following:
 4. **Copy _the contents of_ the `starter.zip` to the root of your SD card**
   + This will include a brand new `3ds` folder to replace the one you just deleted
 5. Copy _the contents of_ the SafeA9LHInstaller zip to the root of your SD card
-6. **Copy the `a9lh` folder from `data_input_v4.zip` to the root of your SD Card**
+6. **Copy the `a9lh` folder from the data_input zip to the root of your SD Card**
 7. **Copy _the contents of_ the arm9loaderhax release zip to `a9lh` folder on your SD card**
 9. Copy `hblauncher_loader.cia` from the hblauncher_loader zip to the `/cias/` folder on your SD card
 10. Copy `lumaupdater.cia` from the Luma3DS Updater zip to the `/cias/` folder on your SD card
 11. Copy `FBI.cia` from the FBI zip to the `/cias/` folder on your SD card
+12. **Copy `arm9loaderhax.bin` from the Luma3DS zip to the root of your SD card, overwrite existing files**
 13. Create a folder named `luma` on the root of your SD card
 14. Create a folder named `payloads` in the `luma` folder on your SD card
 15. Copy `Hourglass9.bin` from the Hourglass9 zip to the `/luma/payloads/` folder on your SD card and rename `Hourglass9.bin` to `start_Hourglass9.bin`
@@ -114,8 +117,6 @@ During this process, we also setup programs such as the following:
 
 ##### Section III - Configuring Luma3DS
 
-1. **Copy `arm9loaderhax.bin` from the Luma3DS zip to the root of your SD card, overwrite existing files**
-2. Reinsert your SD card into your 3DS
 1. Hold select on boot to enter the Luma3DS menu
   + Make sure to start holding the button before pressing power
   + If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_a9lh)   
