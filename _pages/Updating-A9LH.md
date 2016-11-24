@@ -17,7 +17,10 @@ Si tiene algún PIN en Luma, Debe obligatoriamente apagarlo tdmporalmente para s
 Si está usando una carga (payload) que no inicializa por si misma la pantalla (tal como Bootanim9), necesitará renombrarla de la siguiente manera `arm9loaderhax_si.bin` en lugar de `arm9loaderhax.bin`.
 {: .notice--info}
 
-Estos pasos también actualizarán las cargas (payloads) y la clave de la base de datos AES (AES key database).  
+Estos pasos también actualizarán las cargas (payloads) y la clave de la base de datos AES (AES key database). 
+{: .notice--info}
+
+Once arm9loaderhax has already been installed, Old 3DSs can use `data_input_v4`. Only the initial Old 3DS install needs `data_input_v3` to be compatible with an old SafeA9LHInstaller version that can be launched with the browser. The versions only refer to revisions of the zip to be compatible with different installer versions, and are *not* the same thing as updating a9lh itself (the payload files).
 {: .notice--success}
 
 #### ¿Qué se necesita?
