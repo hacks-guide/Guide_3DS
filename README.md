@@ -1,1 +1,1 @@
-### See https://plailect.github.io/Guide/
+### See https://3ds.guide/
