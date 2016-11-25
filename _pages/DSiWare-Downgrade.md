@@ -126,7 +126,7 @@ System Transfers can only be performed once a week.
   + **Legends of Exidia**: After pressing (A) or (Start) at the two title screens, select the first save slot and press continue
   + **Guitar Rock Tour**: Scroll down and go to High-Scores -> Drums -> Easy    
   + **The Legend of Zelda: Four Swords**: Just start the game
-  + If your game has an error about `boot.nds`, **then the exploit has been successful**
+  + If your game has an error about `boot.nds` or a white screen, **then the exploit has been successful**
   + If your game behaves normally and does not give you this error, then you should stop and figure out what went wrong
   + If you get a black screen, [follow this troubleshooting guide](troubleshooting#twl_broken)
 
@@ -220,9 +220,10 @@ System Transfers can only be performed once a week.
 3. Copy the contents of the NFIRM zip to the `dgTool` folder on the root of **the target 3DS**'s SD card
 3. Launch your DSiWare game on **the target 3DS**
 4. Launch dgTool using your DSiWare game
-  + Fieldrunners: Touch the 'Scores' button at the main menu
-  + Legends of Exidia: After pressing (A) or (Start) at the two title screens, select the first save slot and press continue
-  + Guitar Rock Tour: Scroll down and go to High-Scores -> Drums -> Easy
+  + **Fieldrunners**: Touch the 'Scores' button at the main menu
+  + **Legends of Exidia**: After pressing (A) or (Start) at the two title screens, select the first save slot and press continue
+  + **Guitar Rock Tour**: Scroll down and go to High-Scores -> Drums -> Easy
+  + **The Legend of Zelda: Four Swords**: Just start the game
   + If your game does not have the hacked save file installed, [follow this troubleshooting guide](troubleshooting#ts_dsiware)
 5. Select "Dump f0f1" to backup **the target 3DS**'s NFIRM
 6. Make note of the NFIRM backup's location
@@ -235,10 +236,11 @@ System Transfers can only be performed once a week.
 **Do NOT downgrade with dgTool on a device that already has arm9loaderhax installed or you will BRICK!**
 
 1. Launch your DSiWare game on **the target 3DS**
-2. Launch dgTool using your DSiWare game
-  + Fieldrunners: Touch the 'Scores' button at the main menu
-  + Legends of Exidia: After pressing (A) or (Start) at the two title screens, select the first save slot and press continue
-  + Guitar Rock Tour: Scroll down and go to High-Scores -> Drums -> Easy
+4. Launch dgTool using your DSiWare game
+  + **Fieldrunners**: Touch the 'Scores' button at the main menu
+  + **Legends of Exidia**: After pressing (A) or (Start) at the two title screens, select the first save slot and press continue
+  + **Guitar Rock Tour**: Scroll down and go to High-Scores -> Drums -> Easy
+  + **The Legend of Zelda: Four Swords**: Just start the game
 3. Select "Downgrade FIRM to 10.4" and confirm to flash the 10.4.0 NFIRM bin to **the target 3DS**
 4. Exit dgTool
   + You may have to force power off by holding the power button
