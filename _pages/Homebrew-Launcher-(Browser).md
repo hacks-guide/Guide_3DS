@@ -44,7 +44,7 @@ The Homebrew Launcher has many different entrypoints, or methods of launching. T
 
 1. Launch the browser
 2. Select the bookmarks menu star at the bottom left of the bottom screen
-3. Edit the first bookmark to instead be the URL `http://plail.ueuo.com/3dsbrowserhax_auto.php`
+3. Edit the first bookmark to instead be the URL `https://nin.3ds.guide/3dsbrowserhax_auto.php`
 4. Press "Done", then go back to the home menu
 5. Select the home menu options at the top left of the bottom screen
 6. Scroll down and turn off "Wireless Communication / NFC"
@@ -58,9 +58,9 @@ The Homebrew Launcher has many different entrypoints, or methods of launching. T
 
 ##### Section IV -  browserhax
 
-8. Navigate to `http://plail.ueuo.com/3dsbrowserhax_auto.php`
+8. Navigate to `https://nin.3ds.guide/3dsbrowserhax_auto.php`
     + You can also load the page by scanning the following QR code (press (L + R) on the home menu, then tap the QR icon on the bottom screen)     
-![browserhax_auto](http://plail.ueuo.com/3dsbrowserhax_auto_qrcode.png)
+![browserhax_auto](https://nin.3ds.guide/3dsbrowserhax_auto_qrcode.png)
     + If you get an error, [follow this troubleshooting guide](troubleshooting#ts_browser)
 9. Your console should load the homebrew menu
 
