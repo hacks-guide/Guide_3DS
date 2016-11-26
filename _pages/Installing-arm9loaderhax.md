@@ -114,7 +114,7 @@ During this process, we also setup programs such as the following:
     + If you get a glitched screen, [follow this troubleshooting guide](troubleshooting#ts_safe_a9lh_screen)
   + Press (Select) to Full Install
   + The installer will now install arm9loaderhax on your device (this is very fast)
-  + Shut down your console (if you have to forcibly power it off, [please report this bug!](https://github.com/AuroraWright/SafeA9LHInstaller/issues))
+  + Shut down your console (if you have to forcibly power it off, [please report this bug!](https://github.com/AuroraWright/SafeA9LHInstaller/issues) and include all `a9lh` and `SafeA9LHInstaller` files in the report)
 
 ##### Section III - Configuring Luma3DS
 
