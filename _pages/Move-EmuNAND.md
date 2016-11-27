@@ -39,6 +39,7 @@ You will LOSE your GBA VC and DSiWare saves!
 18. Enter the prompted button combination to confirm
 19. Hold (R) and press (B) at the same time to eject your SD card
 16. Put your SD card in your computer, then copy all your files back into it
+  + Ensure you replace the `arm9loaderhax.bin` file on the SD card with the one from your backup
 18. Reinsert your SD card into your 3DS
 19. Press (A) to remount your SD card
 20. Press (Start) to reboot!
