@@ -38,23 +38,11 @@ The Homebrew Launcher has many different entrypoints, or methods of launching. T
 6. Launch the browser, then open the browser settings as fast as possible
 7. Scroll to the bottom and Initialize Savedata (it also may be called Clear All Save Data) as fast as possible
 
-##### Section III -  Bookmark browserhax
+##### Section III -  Block conntest.nintendowifi.net
 
-**This section is only needed for New 3DS on version 10.7.0**
+**This section is only needed for New 3DS on version 10.7.0 and 11.0.0**
 
-1. Launch the browser
-2. Select the bookmarks menu star at the bottom left of the bottom screen
-3. Edit the first bookmark to instead be the URL `http://nin.3ds.guide/3dsbrowserhax_auto.php`
-4. Press "Done", then go back to the home menu
-5. Select the home menu options at the top left of the bottom screen
-6. Scroll down and turn off "Wireless Communication / NFC"
-7. Use the power button to turn off your 3DS
-8. Turn on your 3DS
-9. Use the home menu options to turn back on "Wireless Communication / NFC"
-10. Launch the browser as fast as possible, then launch your bookmark
-11. This may take several tries; if you get the prompt to update your 3DS, restart at the step to turn off "Wireless Communication / NFC"
-12. Your console should load the homebrew menu
-13. Skip Section IV -  browserhax
+1.See [this](https://github.com/Plailect/Guide/issues/684)
 
 ##### Section IV -  browserhax
 

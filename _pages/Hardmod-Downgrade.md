@@ -59,5 +59,8 @@ This will work on New 3DS, Old 3DS, and 2DS.
 Your version number will *not* have changed in the settings.
 {: .notice--info}
 
-Continue to [Homebrew Launcher (No Browser)](homebrew-launcher-(no-browser)).
+If you are above the version 11.0.0, continue to [Homebrew Launcher (No Browser)](homebrew-launcher-(no-browser)).
+{: .notice--primary}
+
+If you are on the version 11.0.0, continue to [Homebrew Launcher (Browser)](homebrew-launcher-(browser)).
 {: .notice--primary}
