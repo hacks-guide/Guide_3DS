@@ -124,7 +124,7 @@ During this process, we also setup programs such as the following:
   + If you boot to SafeA9LHInstaller, [follow this troubleshooting guide](troubleshooting#ts_safe_a9lh)
 2. Use the (A) button and the D-Pad to turn on the following:    
   + **"Autoboot SysNAND"**
-  + **"Use SysNAND FIRM if booting with R (A9LH)"**
+  + **"Use SysNAND FIRM if booting with R"**
   + **"Show NAND or user string in System Settings"**
 3. If you are using a **New 3DS**, you should *also* enable the following:
   + **"New 3DS CPU" to "Clock+L2(x)"**

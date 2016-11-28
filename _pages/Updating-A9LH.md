@@ -62,7 +62,7 @@ These steps will also update your various payloads and the AES key database.
 15. Reinsert your SD card into your 3DS and boot holding (Select)
 16. Use the (A) button and the D-Pad to turn on the following:    
   + **"Autoboot SysNAND"**
-  + **"Use SysNAND FIRM if booting with R (A9LH)"**
+  + **"Use SysNAND FIRM if booting with R"**
   + **"Show NAND or user string in System Settings"**
 3. If you are using a **New 3DS**, you should *also* enable the following:
   + **"New 3DS CPU" to "Clock+L2(x)"**

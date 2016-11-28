@@ -86,8 +86,8 @@ System Transfers can only be performed once a week.
   + **The Legend of Zelda: Four Swords USA Region**: `4b513945`    
 4. Reinsert **the source 3DS**'s SD card
 4. On **the source 3DS**, hold Start on boot to launch Hourglass9
-5. Go to SysNAND Options, then SysNAND Backup/Restore, then backup **(min size)** SysNAND to `NAND.bin`
-7. Copy `NAND.bin` and `NAND.bin.sha` from the `/files9/` folder on your SD card to a safe location; make backups in multiple locations; this backup will save you from a brick if anything goes wrong in the future **(Your backup should match one of the sizes on [this](nand-size) page; if it does not, you should delete it and make a new one!)**
+5. Go to SysNAND Options, then SysNAND Backup/Restore, then backup **(min size)** SysNAND to `NANDmin.bin`
+7. Copy `NANDmin.bin` and `NANDmin.bin.sha` from the `/files9/` folder on your SD card to a safe location; make backups in multiple locations; this backup will save you from a brick if anything goes wrong in the future **(Your backup should match one of the sizes on [this](nand-size) page; if it does not, you should delete it and make a new one!)**
 6. Press (Select) on the main menu to eject **the source 3DS**'s SD card, then put it in your computer
 7. Put **the target 3DS**'s SD card into your computer
 8. **Backup every file on both 3DS's SD cards to two separate folders on your computer (keep track of which is which)!**
@@ -211,7 +211,7 @@ System Transfers can only be performed once a week.
     + Do the rest of the sections and then the full guide on **the target 3DS**, then wait one week, then System Transfer from **the target 3DS** back to **the source 3DS** *(remember you cannot transfer back from a New 3DS to an Old 3DS)*
     + Call Nintendo and tell them you no longer have access to the device that your NNID is linked to (which is **the target 3DS** in this case), and would like it linked to a different device (which is **the source 3DS** in this case)
 3. Reboot **the source 3DS** while holding Start to launch Hourglass9
-4. Go to SysNAND Backup/Restore and restore SysNAND from `NAND.bin`
+4. Go to SysNAND Backup/Restore and restore SysNAND from `NANDmin.bin`
 
 ##### Section VII - Backing up the target 3DS's NFIRM
 

@@ -22,12 +22,12 @@ You will LOSE your GBA VC and DSiWare saves!
 1. Copy `GodMode9.bin` from the GodMode9 zip to the `/luma/payloads` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads` to `up_GodMode9.bin`
 2. Reinsert your SD card into your 3DS
 3. Open Hourglass9 from arm9loaderhax by holding (Start) on boot
-4. Go to "EmuNAND Backup/Restore", then select the "EmuNAND Backup" option to backup your EmuNAND to `NAND_emu.bin`
+4. Go to "EmuNAND Backup/Restore", then select the "EmuNAND Backup" option to backup your EmuNAND to `NANDmin_emu.bin`
 5. Press (B) to get back to the main menu
-6. Go to "SysNAND Backup/Restore", then select the "SysNAND Restore (keep a9lh)" option to restore your SysNAND from `NAND_emu.bin`
+6. Go to "SysNAND Backup/Restore", then select the "SysNAND Restore (keep a9lh)" option to restore your SysNAND from `NANDmin_emu.bin`
 7. Press (Select) to eject your SD card
-8. Put your SD card in your computer, then copy `NAND_emu.bin` and `NAND_emu.bin.sha` from the `/files9/` folder on your SD card to a safe location; make backups in multiple locations; this backup will save you from a brick if anything goes wrong in the future **(Your backup should match one of the sizes on [this](nand-size) page; if it does not, you should delete it and make a new one!)**
-9. Delete `NAND_emu.bin` from the `/files9/` folder on your SD card after copying it
+8. Put your SD card in your computer, then copy `NANDmin_emu.bin` and `NANDmin_emu.bin.sha` from the `/files9/` folder on your SD card to a safe location; make backups in multiple locations; this backup will save you from a brick if anything goes wrong in the future **(Your backup should match one of the sizes on [this](nand-size) page; if it does not, you should delete it and make a new one!)**
+9. Delete `NANDmin_emu.bin` from the `/files9/` folder on your SD card after copying it
 10. **Backup every file on your SD card to a folder on your computer, all files will be deleted in the next step**
 11. Reinsert your SD card into your 3DS
 12. Press (Start) to reboot while holding (Up) to open GodMode9
