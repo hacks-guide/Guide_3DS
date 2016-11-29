@@ -85,14 +85,14 @@ System Transfers can only be performed once a week.
   + **The Legend of Zelda: Four Swords EUR Region**: `4b513956`   
   + **The Legend of Zelda: Four Swords USA Region**: `4b513945`    
 4. Reinsert **the source 3DS**'s SD card
-4. On **the source 3DS**, hold Start on boot to launch Hourglass9
-5. Go to SysNAND Options, then SysNAND Backup/Restore, then backup **(min size)** SysNAND to `NANDmin.bin`
-7. Copy `NANDmin.bin` and `NANDmin.bin.sha` from the `/files9/` folder on your SD card to a safe location; make backups in multiple locations; this backup will save you from a brick if anything goes wrong in the future **(Your backup should match one of the sizes on [this](nand-size) page; if it does not, you should delete it and make a new one!)**
-6. Press (Select) on the main menu to eject **the source 3DS**'s SD card, then put it in your computer
-7. Put **the target 3DS**'s SD card into your computer
-8. **Backup every file on both 3DS's SD cards to two separate folders on your computer (keep track of which is which)!**
-9. Reinsert each SD card back into their corresponding 3DS
-10. Press (Start) to reboot
+5. On **the source 3DS**, hold Start on boot to launch Hourglass9
+6. Go to SysNAND Options, then SysNAND Backup/Restore, then backup **(min size)** SysNAND to `NANDmin.bin`
+7. Press (Select) on the main menu to eject **the source 3DS**'s SD card, then put it in your computer
+8. Copy `NANDmin.bin` and `NANDmin.bin.sha` from the `/files9/` folder on your SD card to a safe location; make backups in multiple locations; this backup will save you from a brick if anything goes wrong in the future **(Your backup should match one of the sizes on [this](nand-size) page; if it does not, you should delete it and make a new one!)**
+9. Put **the target 3DS**'s SD card into your computer
+10. **Backup every file on both 3DS's SD cards to two separate folders on your computer (keep track of which is which)!**
+11. Reinsert each SD card back into their corresponding 3DS
+12. Press (Start) to reboot
 
 ##### Section II - Installing the save
 
