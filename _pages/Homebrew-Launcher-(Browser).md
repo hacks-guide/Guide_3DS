@@ -38,29 +38,18 @@ r**Browserhax funcionará SOLO para las regiones EUR / JPN / USA / KOR**
 6. Inicia el navegador, y abre las configuraciones del navegador lo más rápido posible
 7. Ve al final y haz click en "Borrar datos guardados" Initialize Savedata lo más rápido posible
 
-##### Sección III -  Marcador browserhax
+<<<<<<< HEAD
+##### Sección III -  Bloquear conntest.nintendowifi.net
 
-**This section is only needed for New 3DS on version 10.7.0**
+**This section is only needed for New 3DS on version 10.7.0 y 11.0.0**
 
-1. Launch the browser
-2. Select the bookmarks menu star at the bottom left of the bottom screen
-3. Edit the first bookmark to instead be the URL `http://plail.ueuo.com/3dsbrowserhax_auto.php`
-4. Press "Done", then go back to the home menu
-5. Select the home menu options at the top left of the bottom screen
-6. Scroll down and turn off "Wireless Communication / NFC"
-7. Use the power button to turn off your 3DS
-8. Turn on your 3DS
-9. Use the home menu options to turn back on "Wireless Communication / NFC"
-10. Launch the browser as fast as possible, then launch your bookmark
-11. This may take several tries; if you get the prompt to update your 3DS, restart at the step to turn off "Wireless Communication / NFC"
-12. Your console should load the homebrew menu
-13. Skip Section IV -  browserhax
+1. Leer [esto](https://github.com/Plailect/Guide/issues/684)
 
 ##### Section IV -  browserhax
 
-8. Navigate to `http://plail.ueuo.com/3dsbrowserhax_auto.php`
+8. Navigate to `http://yls8.mtheall.com/3dsbrowserhax_auto.php`
     + You can also load the page by scanning the following QR code (press (L + R) on the home menu, then tap the QR icon on the bottom screen)     
-![browserhax_auto](http://plail.ueuo.com/3dsbrowserhax_auto_qrcode.png)
+![browserhax_auto](http://yls8.mtheall.com/3dsbrowserhax_auto_qrcode.png)
     + If you get an error, [follow this troubleshooting guide](troubleshooting#ts_browser)
 9. Your console should load the homebrew menu
 

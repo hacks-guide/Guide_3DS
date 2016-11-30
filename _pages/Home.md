@@ -14,8 +14,7 @@ excerpt: 'Una guía completa para 3DS Custom Firmware, <br /> desde estado de f�
 **Esta guía necesita de *TU* ayuda para sembrar [estos](https://github.com/Plailect/Guide/archive/master.zip) ([rss](https://plailect.github.io/Guide/rss.xml)) torrents!**
 {: .notice--info}
 
-**Para usar los archivos [torrent](https://en.wikipedia.org/wiki/Torrent_file) de esta guía, necesitarás un cliente torrent como [Transmission](https://sourceforge.net/projects/trqtw/files/latest/download)**
-{: .notice--info}
+**Para usar los archivos [torrent](https://en.wikipedia.org/wiki/Torrent_file) de esta guía, necesitarás un cliente torrent como [Deluge](http://dev.deluge-torrent.org/wiki/Download)**
 
 **Lee todas las páginas introductorias antes de comenzar**
 {: .notice--warning}

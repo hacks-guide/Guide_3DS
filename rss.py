@@ -10,7 +10,7 @@ import bencodepy
 
 dir = os.path.join(os.getcwd(), "torrents")
 rss = os.path.join(os.getcwd(), "rss.xml")
-gio = "https://plailect.github.io/Guide/torrents"
+gio = "https://3ds.guide/torrents"
 
 with open(rss, "w") as xml:
     xml.write("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n")
