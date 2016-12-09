@@ -18,7 +18,7 @@ This page is for Mac users only. If you are not on Mac, check out the [H2testw (
 
 #### Instructions
 
-1. Unzip the F3X zip file
+1. Unzip the F3X `.zip` file
 2. Insert your SD card into your computer
 2. Run the F3X app
 4. Select your SD card

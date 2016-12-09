@@ -18,7 +18,7 @@ This page is for Windows users only. If you are not on windows, check out the [F
 
 #### Instructions
 
-1. Copy `h2tsetw.exe` from the h2testw zip to your desktop
+1. Copy `h2tsetw.exe` from the h2testw `.zip` to your desktop
 2. Insert your SD card into your computer
 3. Run `h2tsetw.exe`
 4. Select "English"

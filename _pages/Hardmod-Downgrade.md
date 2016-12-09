@@ -23,7 +23,7 @@ This will work on New 3DS, Old 3DS, and 2DS.
 * Your NAND image extracted using your [hardmod](https://gbatemp.net/threads/414498/)
 * The latest version of [autofirm](https://github.com/Plailect/autofirm/archive/master.zip)
 * The latest release of [3DSident](https://github.com/joel16/3DSident/releases/latest)
-* The NFIRM zip corresponding to your device and version:
+* The NFIRM `.zip` corresponding to your device and version:
   + [New 3DS 11.0.0 to 10.4.0](torrents/11.0.0_to_10.4.0_n3ds.torrent) - <code class="highlighterrouge"><a href="magnet:?xt=urn:btih:2d13a5ea1570f911bd5c6423e0c30e51d548837a&dn=11.0.0%5Fto%5F10.4.0%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce"><i class="fa fa-magnet" aria-hidden="true"></i></a></code>
   + [Old 3DS 11.0.0 to 10.4.0](torrents/11.0.0_to_10.4.0_o3ds.torrent) - <code class="highlighterrouge"><a href="magnet:?xt=urn:btih:72393bbd99bc285db84a9cabf39d9b3200058d6a&dn=11.0.0%5Fto%5F10.4.0%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce"><i class="fa fa-magnet" aria-hidden="true"></i></a></code>     
   ~    
@@ -37,9 +37,9 @@ This will work on New 3DS, Old 3DS, and 2DS.
 
 ##### Section I - NAND modification
 
-1. Extract the autofirm zip to a folder called `autofirm`
+1. Extract the autofirm `.zip` to a folder called `autofirm`
 2. Place a copy of your NAND backup (named `nand.bin`) in `/autofirm/` folder
-3. Copy the contents of the NFIRM zip to the `/autofirm/source/firmwares/` folder
+3. Copy the contents of the NFIRM `.zip` to the `/autofirm/source/firmwares/` folder
 4. Run `autofirm.bat` and select which device and version the NAND backup is for
 5. Wait while the script runs
 6. If everything worked, then your original NAND will have been renamed to `backup_nand.bin` and you will have a modified `nand.bin` containing the 10.4.0 NATIVE_FIRM
@@ -47,7 +47,7 @@ This will work on New 3DS, Old 3DS, and 2DS.
 
 ##### Section II - Exploit verification
 
-1. Copy and merge the `3ds` folder from the 3DSident zip to your device's SD card
+1. Copy and merge the `3ds` folder from the 3DSident `.zip` to your device's SD card
 2. Reinsert your SD card into your 3DS
 3. Use [Homebrew Launcher (No Browser)](homebrew-launcher-(no-browser)) to launch the homebrew launcher on the device
 4. Launch 3DSident
@@ -59,8 +59,8 @@ This will work on New 3DS, Old 3DS, and 2DS.
 Your version number will *not* have changed in the settings.
 {: .notice--info}
 
-If you are above the version 11.0.0, continue to [Homebrew Launcher (No Browser)](homebrew-launcher-(no-browser)).
+If you are on the version 11.0.0 (but your device is not of the JPN region), continue to [Homebrew Launcher (Browser)](homebrew-launcher-(browser)).
 {: .notice--primary}
 
-If you are on the version 11.0.0, continue to [Homebrew Launcher (Browser)](homebrew-launcher-(browser)).
+Otherwise, continue to [Homebrew Launcher (No Browser)](homebrew-launcher-(no-browser)).
 {: .notice--primary}

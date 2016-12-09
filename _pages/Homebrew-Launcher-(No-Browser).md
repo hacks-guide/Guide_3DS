@@ -32,6 +32,7 @@ Note that if you are on 11.2.0 and have NFIRM downgraded, all 11.1.0 compatible 
 | <sub>[smilehax](https://plutooo.github.io/smilehax/) | <sub>[*SmileBASIC*](https://www.nintendo.com/games/detail/eYURHNjVdfyrnA3OJGfmlMYIrJUzgOcv) | <sub>eShop | <sub>New, Old, 2DS | <sub>JPN, USA | <sub>3.3.1 | <sub>9.0.0-X up to and including 11.0.0-X |
 | <sub>[stickerhax](https://github.com/yellows8/stickerhax) | <sub>[*Paper Mario: Sticker Star*](https://amzn.to/2f6aDx8), <br> Another 3DS which already has the Homebrew Launcher | <sub>eShop, Cart | <sub>New, Old, 2DS | <sub>EUR, JPN, KOR, USA | <sub>All | <sub>9.0.0-X up to and including 11.2.0-X |
 | <sub>[Ninjhax 2](http://smealum.github.io/ninjhax2/) | <sub>[*Cubic Ninja*](https://amzn.to/2eRI1by) | <sub>eShop, Cart | <sub>New, Old, 2DS | <sub>EUR, JPN, USA | <sub>All | <sub>9.0.0-X up to and including 11.2.0-X |
+| <sub>[GenHax](https://github.com/svanheulen/genhax_proxy_installer) | <sub>[*Monster Hunter X*](http://amzn.to/2gsk6Tk) | <sub>eShop | <sub>New | <sub>JPN | <sub>All | <sub>9.9.0-X up to and including 11.2.0-X |
 
 <script type="text/javascript">
 amzn_assoc_placement = "adunit0";

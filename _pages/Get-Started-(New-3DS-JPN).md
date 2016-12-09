@@ -26,6 +26,7 @@ La  versión del dispositivo puede ser encontrada en la esquina inferior derecha
 
 | De | Hasta | Sin Navegador | Navegador |
 |:-:|:-:|:-:|:-:|
-| 8.1.0 | 8.1.0 | [NTR y Cubic Ninja](ntr-and-cubic-ninja) | [Homebrew Launcher (Navegador)](homebrew-launcher-(browser)) |
-| 9.0.0 | 10.7.0 | [Homebrew Launcher (Sin Navegador)](homebrew-launcher-(no-browser)) | [Homebrew Launcher (Navegador)](homebrew-launcher-(browser)) |
+| 8.1.0 | 8.1.0 | [NTR and Cubic Ninja](ntr-and-cubic-ninja) | [Homebrew Launcher (Browser)](homebrew-launcher-(browser)) |
+| 9.0.0 | 10.6.0 | [Homebrew Launcher (No Browser)](homebrew-launcher-(no-browser)) | [Homebrew Launcher (Browser)](homebrew-launcher-(browser)) |
+| 10.7.0 | 10.7.0 | [Homebrew Launcher (No Browser)](homebrew-launcher-(no-browser)) | [Homebrew Launcher (No Browser)](homebrew-launcher-(no-browser)) |
 | 11.0.0 | 11.2.0 | [NFIRM Downgrade](nfirm-downgrade) | [NFIRM Downgrade](nfirm-downgrade) |

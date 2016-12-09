@@ -11,21 +11,35 @@ r**Browserhax funcionará SOLO para las regiones EUR / JPN / USA / KOR**
 
 #### Lo necesario
 
+<<<<<<< HEAD
 + [`config.zip`](images/config.zip)
 + El [ropbin](https://smealum.github.io/3ds/#otherapp) correspondiente a la versión de tu 3DS
 + El [Kit Inicial Homebrew](http://smealum.github.io/ninjhax2/starter.zip)
 + Una conección a internet preparada en la consola
 
 #### Instrucciones
+=======
++ The Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
++ An internet connection setup on your 3DS
+
+{::comment}
++ [`config.zip`](images/config.zip)
++ The [ropbin](https://smealum.github.io/3ds/#otherapp) matching your 3DS's version
+{:/comment}
+
+#### Instructions
 
 ##### Sección I -  Trabajo preliminar
 
 1. Copia los contenidos de `starter.zip` a la raíz de tu tarjeta SD
+4. Reinserta tu tarjeta SD en la 3DS
+
+{:/comment}
 2. Copia los contenidos de `config.zip` a la ubicación `/3ds/menuhax_manager/` de tu tarjeta SD
 3. Crea una carpeta llamada `menuhax` en la raíz de tu tarjeta SD si todavía no existe
 4. Renombra el ropbin a `menuhaxmanager_input_payload.bin`
 5. Copia `menuhaxmanager_input_payload.bin` a la carpeta `/menuhax/` de tu tarjeta SD
-4. Reinserta tuntarjeta SD en la 3DS
+{:/comment}
 
 ##### Sección II -  Evitar revisión de versión
 
@@ -42,15 +56,40 @@ r**Browserhax funcionará SOLO para las regiones EUR / JPN / USA / KOR**
 
 **Esta seccion solo en necesaria para 3DS en versiones 10.7.0 y 11.0.0**
 
+<<<<<<< HEAD
 1. Leer [esto](https://github.com/Plailect/Guide/issues/684)
+=======
+**This section does not work for JPN regions**
+
+{::comment}
+1.See [this](https://github.com/Plailect/Guide/issues/684)
+{:/comment}
+
+1. If you haven't already, set up an internet connection in the 3DS first without blocking the site.
+2. Shut down your 3DS.
+3. Download the [ropbin](https://smealum.github.io/3ds/#otherapp) matching your 3DS's version.
+4. Rename the file to `browserhax_hblauncher_ropbin_payload.bin` and copy it to the root of your SD card.
+4. Add firewall rule **to your router**:
+    + The exact steps to block or blacklist a website depend on your router manufacturer.
+    + Please keep in mind that you must block **from the router**. Using Windows Firewall (or any other local firewall) will not work.
+    + Block this website `conntest.nintendowifi.net` or block all TCP and UDP request from this IP adress `69.25.139.140`
+5. Boot 3DS
+6. Continue at Section IV
+>>>>>>> refs/remotes/Plailect/master
 
 ##### Section IV -  browserhax
 
 8. Ingresa a `http://yls8.mtheall.com/3dsbrowserhax_auto.php`
     + Tambien puedes ingresar escaneando el siguiente codigo QR (presiona (L + R) en el menu HOME, y luego haz click en el icono de codigo QR en la parte inferior)     
 ![browserhax_auto](http://yls8.mtheall.com/3dsbrowserhax_auto_qrcode.png)
+<<<<<<< HEAD
     + Si tienes problemas, [sigue esta guía para resolverlo](troubleshooting#ts_browser)
 9. Tu consola deberpia abrir el menu homebrew
+=======
+    + If you get an error, [follow this troubleshooting guide](troubleshooting#ts_browser)
+9. Your console should load the homebrew menu
+    + If you had blocked conntest.nintendowifi.net (or the IP adress) in Section III, unblock it after loading into the homebrew menu.
+>>>>>>> refs/remotes/Plailect/master
 
 ##### Sección V -  menuhax
 

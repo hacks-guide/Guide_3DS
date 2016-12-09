@@ -18,7 +18,7 @@ This page is for Linux users only. If you are not on Linux, check out the [H2tes
 
 #### Instructions
 
-1. Unzip the f3 zip file
+1. Unzip the f3 `.zip` file
 2. `cd` into the f3 directory
 3. Run `make` to compile F3
 4. Insert your SD card into your computer

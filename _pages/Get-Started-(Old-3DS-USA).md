@@ -28,7 +28,7 @@ La  versión del dispositivo puede ser encontrada en la esquina inferior derecha
 |:-:|:-:|:-:|:-:|
 | 1.0.0 | 1.1.0 | [Actualizar cartucho](cart-update) | [Actualizar cartucho](cart-update) |
 | 2.1.0 | 2.1.0 | [Actualizar cartucho](cart-update) | [Instalar arm9loaderhax](installing-arm9loaderhax)|
-| 2.2.0 | 3.0.0 | [Actualizar cartucho](cart-update)  | [Actualizar cartucho](cart-update) |
+| 2.2.0 | 3.1.0 | [Actualizar cartucho](cart-update)  | [Actualizar cartucho](cart-update) |
 | 4.0.0 | 4.5.0 | [Decrypt9 (MSET)](decrypt9-(mset)) | [Decrypt9 (Navegador)](decrypt9-(browser)) |
 | 5.0.0 | 5.1.0 | [Actualizar cartucho](cart-update) | [Decrypt9 (Navegador)](decrypt9-(browser)) |
 | 6.0.0 | 6.3.0 | [Decrypt9 (MSET)](decrypt9-(mset)) | [Decrypt9 (Navegador)](decrypt9-(browser)) |

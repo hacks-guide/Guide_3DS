@@ -1,6 +1,7 @@
 ---
 layout: splash
 permalink: /
+title: "Guide"
 header:
   overlay_color: "#5e616c"
   overlay_image: images/home-page-feature.jpg
@@ -11,7 +12,15 @@ header:
 excerpt: 'Una guía completa para 3DS Custom Firmware, <br /> desde estado de fábrica hasta arm9loaderhax.<br />'
 ---
 
+{% capture notice-home %}
+**This guide is for retail (consumer purchased; not from the Nintendo Developer Program) consoles _only_!    
+If you have a developer ("PANDA" or "SNAKE") console, check out [devGuide](https://dev.3ds.guide)**
+{% endcapture %}
+
+<div class="notice--danger">{{ notice-home | markdownify }}</div>
+
 **Esta guía necesita de *TU* ayuda para sembrar [estos](https://github.com/Plailect/Guide/archive/master.zip) ([rss](https://plailect.github.io/Guide/rss.xml)) torrents!**
+
 {: .notice--info}
 
 **Para usar los archivos [torrent](https://en.wikipedia.org/wiki/Torrent_file) de esta guía, necesitarás un cliente torrent como [Deluge](http://dev.deluge-torrent.org/wiki/Download)**

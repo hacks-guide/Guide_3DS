@@ -50,7 +50,7 @@ If you are unable to boot your 3DS, please look for the section relevant to you,
 
 #### Instructions
 
-1. Copy `GodMode9.bin` from the GodMode9 zip to the `/luma/payloads` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads` to `up_GodMode9.bin`
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads` to `up_GodMode9.bin`
 6. Boot holding (Up) to reboot into arm9loaderhax GodMode9
 14. Navigate to `SYSNAND CTRNAND` -> `data` -> (32 Character ID) -> `sysdata` -> `00010038`
 15. Hold down the (R) trigger, then press X on `00000000` to rename this file
@@ -69,7 +69,7 @@ This is caused by Gateway implementing a very shoddy downgrade method, which lea
 
 #### Instructions
 
-1. Copy `GodMode9.bin` from the GodMode9 zip to the `/luma/payloads` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads` to `up_GodMode9.bin`
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads` to `up_GodMode9.bin`
 2. Reinsert your SD card into your 3DS
 5. Open GodMode9 from arm9loaderhax by holding (Up) during boot     
 2. Navigate to `SYSNAND CTRNAND` -> `title` -> `00040010`
@@ -105,7 +105,7 @@ Browser based exploits (such as browserhax or 2xrsa) are often unstable and cras
 You copied the wrong `arm9loaderhax.bin` file to your SD card (you were only supposed to copy the `3ds` folder and `SafeA9LHInstaller.dat` file from the SafeA9LHInstaller zip)    
 
 1. Use the correct `arm9loaderhax.bin`
-    1. Copy `arm9loaderhax.bin` from the Luma3DS zip to the root of your SD card
+    1. Copy `arm9loaderhax.bin` from the Luma3DS `.zip` to the root of your SD card
     2. Reboot holding select and continue
 
 ## <a name="ts_safe_a9lh_screen" />SafeA9LHInstaller shows a glitched screen
@@ -196,13 +196,11 @@ This is because you selected the wrong version in the steelhax installer.
     4. Press (A). Your 3DS should power off; this means arm9loaderhax is working and something else is broken; your device is **not** bricked.
 8. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version (v6.2.3 or higher, at the least)
 9. If your NAND is of a version between 3.0.0 and 4.5.0, do the following:
-    + Download [Luma 3DS v6.3.1](https://github.com/AuroraWright/Luma3DS/releases/tag/v6.3.1)
-    + Copy `arm9loaderhax.bin` from the Luma3DS v6.3.1 zip to the root of your SD card, overwrite existing files
+    + Ensure that you are using the latest Luma3DS version (v6.6 or higher, at the least)
     + Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) and rename it to `firmware.bin`
     + Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
     + Copy `firmware.bin` and `cetk` to the `/luma/` folder on your SD card
     + Delete both of these files after updating your 3DS
-    + Replace the old v6.3.1 Luma3DS `arm9loaderhax.bin` with the latest version after updating your 3DS
 9. Try following [9.2.0 ctrtransfer](9.2.0-ctrtransfer)
 10. Ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [3DS Hacking on Discord](https://discord.gg/MWxPgEp).
 
