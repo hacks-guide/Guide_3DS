@@ -38,26 +38,25 @@ r**Browserhax funcionará SOLO para las regiones EUR / JPN / USA / KOR**
 6. Inicia el navegador, y abre las configuraciones del navegador lo más rápido posible
 7. Ve al final y haz click en "Borrar datos guardados" Initialize Savedata lo más rápido posible
 
-<<<<<<< HEAD
 ##### Sección III -  Bloquear conntest.nintendowifi.net
 
-**This section is only needed for New 3DS on version 10.7.0 y 11.0.0**
+**Esta seccion solo en necesaria para 3DS en versiones 10.7.0 y 11.0.0**
 
 1. Leer [esto](https://github.com/Plailect/Guide/issues/684)
 
 ##### Section IV -  browserhax
 
-8. Navigate to `http://yls8.mtheall.com/3dsbrowserhax_auto.php`
-    + You can also load the page by scanning the following QR code (press (L + R) on the home menu, then tap the QR icon on the bottom screen)     
+8. Ingresa a `http://yls8.mtheall.com/3dsbrowserhax_auto.php`
+    + Tambien puedes ingresar escaneando el siguiente codigo QR (presiona (L + R) en el menu HOME, y luego haz click en el icono de codigo QR en la parte inferior)     
 ![browserhax_auto](http://yls8.mtheall.com/3dsbrowserhax_auto_qrcode.png)
-    + If you get an error, [follow this troubleshooting guide](troubleshooting#ts_browser)
-9. Your console should load the homebrew menu
+    + Si tienes problemas, [sigue esta guía para resolverlo](troubleshooting#ts_browser)
+9. Tu consola deberpia abrir el menu homebrew
 
-##### Section V -  menuhax
+##### Sección V -  menuhax
 
-10. Open the menuhax_manager application
-11. Press (A) to install, it may show some errors but that's fine as long as it shows "Install finished successfully" towards the end
-    + If you are prompted to "override the detected system version," press (B) to decline
+10. Abre la aplicación menuhax_manager
+11. Presiona (A) para instalar, talvez muestre algunos errores, pero ignoralos mientras muestre el mensaje "Install finished successfully" cerca del final
+    + Si se te pide a sobreescribir la versión de sistema detectada("override the detected system version") presiona (B) para rechazar
 12. Go back to the main menuhax_manager menu, then select "Configure menuhax"
 13. Press (A) to continue, then select "Type1"
 14. Hold (Down) on the D-Pad, then tap the touch screen; this is the recommended button to use for launching menuhax in this guide because it does not interfere with any other functions of tools we will be using
