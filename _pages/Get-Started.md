@@ -1,23 +1,23 @@
 ---
-title: "Get Started"
+title: "Vamos a comenzar"
 permalink: /get-started.html
 ---
 
-The colors of the devices in the image may vary, but note the button placement and features of each device carefully to ensure you select the correct one.
+Es posible que los colores de los dispositivos en la imagen sean diferentes, pero presta atención a la posición de los botones y a las características de cada dispositivo para asegurar que estás eligiendo el correcto.
 {: .notice}
 
-Click the image of your device to take you to the appropriate page.
+Da clic la imagen de tu dispositivo para ir a la página apropiada.
 {: .notice--primary}
 
-Different device models, versions, and regions will require different steps to achieve the end goal of arm9loaderhax Custom Firmware. The following series of pages will help you find where to start for your device.
+Diferentes modelos de dispositivos, versiones, y regiones requerirán de diferentes pasos para alcanzar la meta final de arm9loaderhax CFW. La siguiente serie de páginas te ayudarán a encontrar dónde inciar con tu dispositivo.
 {: .notice--info}
 
-If you have already hacked your 3DS before and have an EmuNAND based CFW setup, just follow all instructions while on SysNAND. Your data will be transfered from EmuNAND to your new A9LH install at the end.
+Si ya antes has hackeado tu 3DS con una configuración de CWF basada en EmuNAND, solo sigue las instrucciones mientras estás en SysNAND. Tus datos serán transferidos desde la EmuNAND a tu nueva instalación de A9LH al final de la guía.
 {: .notice--info}
 
-Before starting, you may want to check your SD card for errors using [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), or [F3X (Mac)](f3x-(mac))!
+Antes de empezar, quizás quieras revisar si tu tarjeta SD tiene errores utilizando [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), o [F3X (Mac)](f3x-(mac))!
 {: .notice--warning}
 
-| New 3DS | Old 3DS or 2DS |
+| New 3DS | Vieja 3DS o 2DS |
 |:-:|:-:|
-| [![New 3DS](images/new3ds.png)](get-started-(new-3ds)) <br><br> [![New 3DS XL](images/new3dsxl.png)](get-started-(new-3ds)) | [![Old 3DS](images/old3ds.png)](get-started-(old-3ds)) &nbsp;&nbsp; [![Old 3DS XL](images/old3dsxl.png)](get-started-(old-3ds)) <br><br> [![2DS](images/2ds.png)](get-started-(old-3ds)) |
+| [![New 3DS](images/new3ds.png)](get-started-(new-3ds)) <br><br> [![New 3DS XL](images/new3dsxl.png)](get-started-(new-3ds)) | [![Vieja 3DS](images/old3ds.png)](get-started-(old-3ds)) &nbsp;&nbsp; [![Vieja 3DS XL](images/old3dsxl.png)](get-started-(old-3ds)) <br><br> [![2DS](images/2ds.png)](get-started-(old-3ds)) |

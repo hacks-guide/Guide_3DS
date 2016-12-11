@@ -1,16 +1,17 @@
 ---
-title: "Why Ads?"
+title: "Porqué anuncios?"
 permalink: /why-ads.html
 layout: single-no-ads
 ---
 
-This project is the culmination of hundreds upon hundreds of hours of constant work.
+Este proyecto es el resultado de cientos de cientos de horas de trabajo constante.
 
-I maintain this guide, for free, and ensure it is always up to date. Because of this effort, I feel that it is fair for me to attempt to gain a meager income from my work (I receive next to no donations anymore).
+Yo 
+I mantengo esta guía, de forma gratuita, y me aseguro de que siempre este al día. Por este esfuerzo, Siento que es favorable para mi tratar de sacar una escasa ganancia por mi trabajo (Ya que casi no recibo donaciones).
 
-This site costs you nothing to use, and all that I display are non-intrusive ads. If you still have a problem with this, feel free to block these ads.
+El sitio no les cuesta nada usarlo, y todo los anuncios que se muestran no reciben gran relevancia. Si tiene algún problema con esto, es libre de bloquear esta publicidad.
 
-If you do block ads, I would like to also remind you of the [Donations](donations) page, but once again that is optional too.
+Si bloquea los anuncios, me gustaria recordarle sobre el sitio de [Donaciones](donations), pero pero una vez más esto solo es algo opcional.
 
-Thanks,<br>
+Gracias,<br>
 Plailect
