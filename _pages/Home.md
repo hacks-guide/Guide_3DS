@@ -1,6 +1,7 @@
 ---
 layout: splash
 permalink: /
+title: "Guide"
 header:
   overlay_color: "#5e616c"
   overlay_image: images/home-page-feature.jpg
@@ -21,7 +22,7 @@ If you have a developer ("PANDA" or "SNAKE") console, check out [devGuide](https
 **This guide needs *your* help to seed [these](https://github.com/Plailect/Guide/archive/master.zip) ([rss](https://3ds.guide/rss.xml)) torrents!**
 {: .notice--info}
 
-**To use the [torrent](https://en.wikipedia.org/wiki/Torrent_file) files in this guide, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download)**
+**To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links in this guide, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download)**
 {: .notice--info}
 
 **Read all of the introductory pages before proceeding.**

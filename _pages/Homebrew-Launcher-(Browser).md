@@ -50,9 +50,8 @@ The Homebrew Launcher has many different entrypoints, or methods of launching. T
 
 **This section does not work for JPN regions**
 
-{::comment}
-1.See [this](https://github.com/Plailect/Guide/issues/684)
-{:/comment}
+See [this](https://github.com/Plailect/Guide/issues/684)
+{: .notice--info}
 
 1. If you haven't already, set up an internet connection in the 3DS first without blocking the site.
 2. Shut down your 3DS.

@@ -18,7 +18,7 @@ This page is for Mac users only. If you are not on Mac, check out the [H2testw (
 
 #### Instructions
 
-1. Unzip the F3X zip file
+1. Unzip the F3X `.zip` file
 2. Insert your SD card into your computer
 2. Run the F3X app
 4. Select your SD card
@@ -31,5 +31,5 @@ If the test shows the result `Success! Your card is ok!` your SD card is good an
 If the test shows any other results, your SD card may be corrupted or damaged and you may have to replace it!
 {: .notice--danger}
 
-Return to [Get Started](Get-Started)
+Return to [Get Started](get-started)
 {: .notice--primary}

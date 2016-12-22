@@ -16,7 +16,7 @@ If you have already hacked your 3DS before and have a EmuNAND based CFW setup, t
 #### Instructions
 
 1. Create a folder named `files9` on the root of your SD card if it does not already exist
-2. Copy `Launcher.dat` and `Decrypt9WIP.dat` from the Decrypt9WIP zip to the root of your SD card
+2. Copy `Launcher.dat` and `Decrypt9WIP.dat` from the Decrypt9WIP `.zip` to the root of your SD card
 3. Reinsert your SD card into your 3DS
 4. Open the browser and go to one of the following URLs on your 3DS
     + `https://dukesrg.github.io/?Decrypt9WIP.dat`
