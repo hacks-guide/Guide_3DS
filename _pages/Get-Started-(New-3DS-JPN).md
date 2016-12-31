@@ -27,6 +27,6 @@ The device version can be found at the bottom right of the top screen of the Sys
 
 | From | To | No Browser | Browser |
 |:-:|:-:|:-:|:-:|
-| 8.1.0 | 8.1.0 | [NTR and Cubic Ninja](ntr-and-cubic-ninja) | [Homebrew Launcher (Browser)](homebrew-launcher-(browser)) |
+| 8.1.0 | 8.1.0 | [NTR and Cubic Ninja](ntr-and-cubic-ninja) | [NTR and Cubic Ninja](ntr-and-cubic-ninja) |
 | 9.0.0 | 10.7.0 | [Homebrew Launcher (SoundHax)](homebrew-launcher-(soundhax)) | [Homebrew Launcher (SoundHax)](homebrew-launcher-(soundhax)) |
 | 11.0.0 | 11.2.0 | [NFIRM Downgrade](nfirm-downgrade) | [NFIRM Downgrade](nfirm-downgrade) |
