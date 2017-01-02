@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html %}
+{% endif %}
+
+<div id="main" role="main">
+
+  <article class="splash" itemscope itemtype="http://schema.org/CreativeWork">
+
+    {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
+    {% if page.modified %}<meta itemprop="dateModified" content="{{ page.modified | date: "%B %d, %Y" }}">{% endif %}
+
+    <section class="page__content" itemprop="text">
+      {{ content }}
+    </section>
+  </article>
+
+  <center>
+
+  <div class ="notice--info"><b>For support, ask for help at <a href="https://www.reddit.com/r/3dshacks/wiki/irc">#3dshacks on Rizon IRC</a> or <a href="https://discord.gg/MWxPgEp">3DS Hacking on Discord</a>.<br>If you appreciate this guide, I accept <a href="donations">Donations</a> through both Bitcoin and PayPal.</b></div>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- Guide -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-6670011780914577"
+       data-ad-slot="2889110246"
+       data-ad-format="auto"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+  </center>
+
+</div>
