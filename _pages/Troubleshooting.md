@@ -50,7 +50,7 @@ If you are unable to boot your 3DS, please look for the section relevant to you,
 
 #### Instructions
 
-1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads` to `up_GodMode9.bin`
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `up_GodMode9.bin`
 6. Boot holding (Up) to reboot into arm9loaderhax GodMode9
 14. Navigate to `SYSNAND CTRNAND` -> `data` -> (32 Character ID) -> `sysdata` -> `00010038`
 15. Hold down the (R) trigger, then press X on `00000000` to rename this file
@@ -69,7 +69,7 @@ This is caused by Gateway implementing a very shoddy downgrade method, which lea
 
 #### Instructions
 
-1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads` to `up_GodMode9.bin`
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `up_GodMode9.bin`
 2. Reinsert your SD card into your 3DS
 5. Open GodMode9 from arm9loaderhax by holding (Up) during boot     
 2. Navigate to `SYSNAND CTRNAND` -> `title` -> `00040010`
@@ -159,9 +159,7 @@ This is because you selected the wrong version in the steelhax installer.
         + EUR Region: Delete `00000098`
         + JPN Region: Delete `00000082`
         + USA Region: Delete `0000008f`
-        + CHN Region: Delete `000000A1`
         + KOR Region: Delete `000000A9`
-        + TWN Region: Delete `000000B1`
 1. Try booting without any cartridges inserted (including flashcarts)
 2. If you have a hardmod and a NAND backup, flash the backup back to SysNAND.
 3. Try booting into recovery mode and updating your system.    
@@ -181,21 +179,14 @@ This is because you selected the wrong version in the steelhax installer.
     1. Delete `/luma/config.bin` from your SD card
     2. Set your options when it boots
 3. Test booting Hourglass9
-    1. On Luma3DS, hold Start on boot
+    1. On Luma3DS, hold (Start) on boot
 4. Try deleting home menu's extdata
     1. Clear Home Menu's extdata by navigating to the following folder on your SD card: `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/`
         + EUR Region: Delete `00000098`
         + JPN Region: Delete `00000082`
         + USA Region: Delete `0000008f`
-        + CHN Region: Delete `000000A1`
         + KOR Region: Delete `000000A9`
-        + TWN Region: Delete `000000B1`
 5. Try booting without any cartridges inserted (including flashcarts)
-7. Try [this test payload](https://mega.nz/#!YxMiGDhB!VZLv2XPSqFFzEhf4kGMXAdQtSpIGvnp2vu2W1j4o7cc/) .
-    1. Rename `/arm9loaderhax.bin`, if it exists, to something else.
-    2. Place the `arm9loaderhax.bin` from the archive linked above in your SD root.
-    3. Insert your SD card into your 3DS and power on.
-    4. Press (A). Your 3DS should power off; this means arm9loaderhax is working and something else is broken; your device is **not** bricked.
 8. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version (v6.2.3 or higher, at the least)
 9. If your NAND is of a version between 3.0.0 and 4.5.0, do the following:
     + Ensure that you are using the latest Luma3DS version (v6.6 or higher, at the least)

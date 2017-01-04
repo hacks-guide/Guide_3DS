@@ -11,8 +11,7 @@ If you have already hacked your 3DS before and have a EmuNAND based CFW setup, t
 
 #### What you need
 
-* DS flashcard that works on your 3DS version
-* The latest release of [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/)
+{% include addfiles.html %}
 
 #### Instructions
 
@@ -23,8 +22,8 @@ If you have already hacked your 3DS before and have a EmuNAND based CFW setup, t
 5. Start your DS flashcard from your 3DS
 6. Boot `Decrypt9.nds` using your flashcart
 7. Select the correct option for your system version
-    + 4.X.X -> "4.x Decrypt9WIP"
-    + 6.X.X -> "6.x Decrypt9WIP"
+  + 4.X.X -> "4.x Decrypt9WIP"
+  + 6.X.X -> "6.x Decrypt9WIP"
 8. Reboot the system, then go to System Settings, then "Other Settings", then "Profile", then "Nintendo DS Profile"
 9. If the exploit was successful, you will have booted into Decrypt9
 

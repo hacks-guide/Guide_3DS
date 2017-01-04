@@ -14,12 +14,11 @@ You will LOSE your GBA VC and DSiWare saves!
 
 #### What you need
 
-* An existing EmuNAND
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+{% include addfiles.html %} 
 
 #### Instructions
 
-1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads` to `up_GodMode9.bin`
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `up_GodMode9.bin`
 2. Reinsert your SD card into your 3DS
 3. Open Hourglass9 from arm9loaderhax by holding (Start) on boot
 4. Go to "EmuNAND Backup/Restore", then select the "EmuNAND Backup" option to backup your EmuNAND to `NANDmin_emu.bin`

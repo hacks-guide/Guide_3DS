@@ -6,14 +6,13 @@ permalink: /homebrew-launcher-(soundhax).html
 The Homebrew Launcher has many different entrypoints, or methods of launching.
 {: .notice}
 
-SoundHax is compatible with versions 9.0.0 through 11.2.0 in the EUR, JPN, and USA regions *(more regions coming soon)*.
+SoundHax is compatible with versions 9.0.0 through 11.2.0 in the EUR, JPN, KOR, and USA regions.
 {: .notice--info}
 
 #### What you need
 
-+ The Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
-+ The latest release of [SoundHax](http://soundhax.com/) *(for your device and region)*
-+ The [otherapp payload](https://smealum.github.io/3ds/#otherapp) *(for your version and region)*
+{% include addfiles.html %}
+
 
 #### Instructions
 
@@ -27,8 +26,5 @@ SoundHax is compatible with versions 9.0.0 through 11.2.0 in the EUR, JPN, and U
 6. Play the SoundHax `.m4a`
 7. Your console should load the homebrew menu
 
-If you are above the version 9.2.0, continue to [9.2.0 Downgrade](9.2.0-downgrade)
-{: .notice--primary}
-
-If you are on the version 9.2.0 or below, continue to [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher))
+Continue to [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher))
 {: .notice--primary}

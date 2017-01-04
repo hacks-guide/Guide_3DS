@@ -14,7 +14,7 @@ Note that if you are on 11.2.0 and have NFIRM downgraded, all 11.1.0 compatible 
 
 #### What you need
 
-+ The Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
+{% include addfiles.html %}  
 
 #### Instructions
 

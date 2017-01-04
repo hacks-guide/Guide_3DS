@@ -80,6 +80,7 @@ This backup can only be used on this NAND. If you format your 3DS or restore ano
 8. Press (Start) to open the homebrew launcher exit menu
 9. Press (A) to exit
 
+
 ##### Section IV - Backing up NFIRM
 
 3. Launch your DSiWare game
@@ -128,5 +129,5 @@ This backup can only be used on this NAND. If you format your 3DS or restore ano
 Your version number will *not* have changed in the settings.
 {: .notice--info}
 
-Continue to [9.2.0 Downgrade](9.2.0-downgrade)
+Continue to [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher))
 {: .notice--primary}

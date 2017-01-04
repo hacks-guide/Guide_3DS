@@ -6,7 +6,7 @@ permalink: /dsiware-downgrade-(save-injection-and-second-3ds).html
 **They are only useful if you already own "Fieldrunners", "Legends of Exidia", "Guitar Rock Tour", or "The Legend of Zelda: Four Swords (Anniversary Edition)" on the source 3DS. Each game has been pulled from the eShop; you must have already gotten them.**
 {: .notice--primary}
 
-If you are between versions 11.0.0 and 11.2.0, you must follow this guide to downgrade your NATIVE_FIRM using DSiWare and a second 3DS which has already has a Custom Firmware installed on it in order to dump and restore your NAND.
+If you are between versions 11.0.0 and 11.2.0, you can follow this guide to downgrade your NATIVE_FIRM using DSiWare and a second 3DS which has already has a Custom Firmware installed on it in order to dump and restore your NAND.
 {: .notice}
 
 If you are below 11.2.0 on either device, then you should do the ctr-httpwn steps (when prompted) on each device under 11.2.0 to allow you to System Transfer with them.
@@ -36,6 +36,9 @@ This exploit requires you to [System Transfer](http://en-americas-support.ninten
 Both systems MUST be from the same region.
 {: .notice--warning}
 
+**The _target 3DS_ will have all of its data erased!**
+{: .notice--danger}
+
 The source 3DS's NNID will be stuck on the target 3DS unless you either system transfer back or call Nintendo! (details in the instructions)
 {: .notice--danger}
 
@@ -46,7 +49,7 @@ System Transfers can only be performed once a week.
 
 * Two 3DS systems
   + **The source 3DS**: the 3DS running some kind of custom firmware (arm9loaderhax or some form of EmuNAND/RedNAND) *on the latest version*
-  + **The target 3DS**: the 3DS on stock firmware *between 11.0.0 and 11.2.0*
+  + **The target 3DS**: the 3DS on stock firmware *(between 11.0.0 and 11.2.0)*
 * Already own (and install) one of the following exploitable DSiWare games (a pirated copy of the game will **not** work) on **the source 3DS**
   + **Fieldrunners**
   + **Legends of Exidia**
@@ -239,10 +242,10 @@ This backup can only be used on this NAND. If you format your 3DS or restore ano
 5. Verify that the following:
   + **Kernel version**: 2.50-11
   + **FIRM version**: 2.50-11
-  + If either of these do not display the versions above, something has gone wrong and you should try again from the beginning
+  + If either of these do not display the versions above, make sure you used the correct NFIRM zip and try flashing NFIRM again
 
 **The target 3DS**'s version number will *not* have changed in the settings.
 {: .notice--info}
 
-Continue to [9.2.0 Downgrade](9.2.0-downgrade)
+Continue to [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher))
 {: .notice--primary}

@@ -3,7 +3,7 @@ title: "DSiWare Downgrade (App Injection and Second 3DS)"
 permalink: /dsiware-downgrade-(app-injection-and-second-3ds).html
 ---
 
-If you are between versions 11.0.0 and 11.2.0, you must follow this guide to downgrade your NATIVE_FIRM using DSiWare and a second 3DS which has already has a Custom Firmware installed on it in order to dump and restore your NAND.
+If you are between versions 11.0.0 and 11.2.0, you can follow this guide to downgrade your NATIVE_FIRM using DSiWare and a second 3DS which has already has a Custom Firmware installed on it in order to dump and restore your NAND.
 {: .notice}
 
 If you are below 11.2.0 on either device, then you should do the ctr-httpwn steps (when prompted) on each device under 11.2.0 to allow you to System Transfer with them.
@@ -33,6 +33,9 @@ This exploit requires you to [System Transfer](http://en-americas-support.ninten
 Both systems MUST be from the same region.
 {: .notice--warning}
 
+**The _target 3DS_ will have all of its data erased!**
+{: .notice--danger}
+
 The source 3DS's NNID will be stuck on the target 3DS unless you either system transfer back or call Nintendo! (details in the instructions)
 {: .notice--danger}
 
@@ -43,7 +46,7 @@ System Transfers can only be performed once a week.
 
 * Two 3DS systems
   + **The source 3DS**: the 3DS running some kind of custom firmware (arm9loaderhax or some form of EmuNAND/RedNAND) *on the latest version*
-  + **The target 3DS**: the 3DS on stock firmware *between 11.0.0 and 11.2.0*
+  + **The target 3DS**: the 3DS on stock firmware *(between 11.0.0 and 11.2.0)*
 * Purchase (or already own) and install a compatible DSiWare game from the eShop on **the source 3DS**
   + A pirated copy of the game will **not** work
   + For a list of compatible games, see the [DSiWare List](dsiware-list) page
@@ -54,7 +57,6 @@ System Transfers can only be performed once a week.
   + [`DSiWare_jpn_4swordshax_injection.zip`](magnet:?xt=urn:btih:1bcc90c93da91c9876671f6218084207def90db9&dn=DSiWare_jpn_4swordshax_injection.zip&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce)
 * The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * The latest release of [3DSident](https://github.com/joel16/3DSident/releases/latest)
-* The latest release of [TinyFormat](https://github.com/javimadgit/TinyFormat/releases)
 * The latest release of [dgTool](https://github.com/Plailect/dgTool/releases/latest)
 * The Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
 * The NFIRM `.zip` corresponding to the device and version of **the target 3DS**
@@ -77,7 +79,7 @@ Use a [save manager](https://github.com/J-D-K/JKSM/releases/latest) to backup an
 {: .notice--warning}
 
 1. Create a folder named `files9` on the root of **the source 3DS**'s SD card if it does not already exist
-2. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads` folder on **the source 3DS**'s' SD card and rename `GodMode9.bin` in `/luma/payloads` to `up_GodMode9.bin`
+2. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on **the source 3DS**'s' SD card and rename `GodMode9.bin` in `/luma/payloads/` to `up_GodMode9.bin`
 3. Copy the `.app` from DSiWare injection `.zip` to the root of **the source 3DS**'s SD card
 4. Copy `savedata` folder from DSiWare injection `.zip` to the root of **the source 3DS**'s SD card
 4. Reinsert **the source 3DS**'s SD card
@@ -235,10 +237,10 @@ This backup can only be used on this NAND. If you format your 3DS or restore ano
 5. Verify that the following:
   + **Kernel version**: 2.50-11
   + **FIRM version**: 2.50-11
-  + If either of these do not display the versions above, something has gone wrong and you should try again from the beginning
+  + If either of these do not display the versions above, make sure you used the correct NFIRM zip and try flashing NFIRM again
 
 **The target 3DS**'s version number will *not* have changed in the settings.
 {: .notice--info}
 
-Continue to [9.2.0 Downgrade](9.2.0-downgrade)
+Continue to [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher))
 {: .notice--primary}
