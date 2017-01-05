@@ -75,7 +75,7 @@ function getCustomLabel(pages, title)
 	for(var g = 0; g < pages.length; g++) //see if there is a custom label
 	{
 		labels = pages[g].getElementsByTagName("label");
-		name = pages[g].getElementsByTagName("name");
+		name = pages[g].getElementsByTagName("name").childNodes[0].nodeValue;
 		if(labels.length > 0 && name == title)
 		{
 			label = labels[0].childNodes[0].nodeValue;
