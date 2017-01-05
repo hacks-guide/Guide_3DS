@@ -74,11 +74,11 @@ function getCustomLabel(pages, title)
 	var label = "";
 	for(var g = 0; g < pages.length; g++) //see if there is a custom label
 	{
+		var name = pages[g].getElementsByTagName("name")[0].childNodes[0].nodeValue;
 		labels = pages[g].getElementsByTagName("label");		
-		if(labels.length > 0)
+		if(labels.length > 0 && name == title)
 		{
-			name = labels[0].childNodes[0].nodeValue;
-			if(name == title) label = labels[0].childNodes[0].nodeValue;
+			label = labels[0].childNodes[0].nodeValue;
 			//break; //make sure it works first, then uncomment this (not sure if it will break out of both or just the current one - only want to break from the current one)
 		}
 	}
