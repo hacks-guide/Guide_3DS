@@ -77,7 +77,7 @@ function getCustomLabel(pages, title)
 		labels = pages[g].getElementsByTagName("label");		
 		if(labels.length > 0)
 		{
-			name = labels[0].getElementsByTagName("name").childNodes[0].nodeValue;
+			name = labels[0].childNodes[0].nodeValue;
 			if(name == title) label = labels[0].childNodes[0].nodeValue;
 			//break; //make sure it works first, then uncomment this (not sure if it will break out of both or just the current one - only want to break from the current one)
 		}
