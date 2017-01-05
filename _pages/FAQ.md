@@ -4,7 +4,7 @@ permalink: /faq.html
 ---
 
 <a name="faq_latestfw" />**Q:** *I am on the latest system version, is my device hackable?*    
-**A:** Yes, but only by [downgrading its NFIRM](nfirm-downgrade) (see [this](https://www.reddit.com/r/3dshacks/comments/4iry4s/)).
+**A:** Yes, 11.2 is hackable using the [Homebrew Launcher (SoundHax)](https://3ds.guide/homebrew-launcher-(soundhax)) method
 
 <a name="faq_updatecfw" />**Q:** *How do I update Luma3DS?*    
 **A:** Use Luma3DS Updater

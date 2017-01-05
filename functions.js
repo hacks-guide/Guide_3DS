@@ -69,6 +69,64 @@ function compare(a,b)
   return 0;
 }
 
+function getCustomLabel(pages, title)
+{
+	var label = "";
+	for(var g = 0; g < pages.length; g++) //see if there is a custom label
+	{
+		labels = pages[g].getElementsByTagName("label");
+		name = pages[g].getElementsByTagName("name");
+		if(labels.length > 0 && name == title)
+		{
+			label = labels[0].childNodes[0].nodeValue;
+			//break; //make sure it works first, then uncomment this (not sure if it will break out of both or just the current one - only want to break from the current one)
+		}
+	}
+	return label;
+}
+
+function getLabel(file)
+{
+	var label = file.getElementsByTagName("label")[0].childNodes[0].nodeValue;
+	label = replaceAll(label, "\n", "");
+	label = replaceAll(label, "\r", "");
+	label = replaceAll(label, "\t", "");
+	return label;
+}
+
+function getLinks(file)
+{
+	var links = file.getElementsByTagName("link")[0].childNodes[0].nodeValue.split("|");
+	for(var b = 0; b < links.length; b++)
+	{
+		links[b] = replaceAll(links[b], "\n", "");
+		links[b] = replaceAll(links[b], "\r", "");
+		links[b] = replaceAll(links[b], "\t", "");
+	}
+	return links;
+}
+
+function willContinue(file, title)
+{
+	var label = label = getLabel(file);//just for debugging
+	var notins = file.getElementsByTagName("notin");
+	if(notins.length > 0)
+	{
+		if(notins[0].parentNode == file)
+		{
+			var notin = notins[0].childNodes[0].nodeValue;
+			notin = replaceAll(notin, "\n", "");
+			notin = replaceAll(notin, "\r", "");
+			notin = replaceAll(notin, "\t", "");
+			if(notin == title)
+			{
+				return true;
+			}
+		}
+	}
+	return false;
+}
+
 function assembleList(arr, title)
 {
 	if(arr.length == 0)
@@ -78,21 +136,16 @@ function assembleList(arr, title)
 	var stuff = "<ul>";
 	for(var i = 0; i < arr.length; i++)
 	{
-		var pages = arr[i].getElementsByTagName("page");
-		var label = "";
-		for(var g = 0; g < pages.length; g++) //see if there is a custom label
+		if(willContinue(arr[i], title))
 		{
-			labels = pages[g].getElementsByTagName("label");
-			if(labels.length > 0)
-			{
-				label = labels[0].childNodes[0].nodeValue;
-				//break; //make sure it works first, then uncomment this (not sure if it will break out of both or just the current one - only want to break from the current one)
-			}
+			continue;
 		}
-		if(label == "") label = arr[i].getElementsByTagName("label")[0].childNodes[0].nodeValue; //if there is no custom label
-		label = replaceAll(label, "\n", "");
-		label = replaceAll(label, "\r", "");
-		label = replaceAll(label, "\t", "");
+		
+		var label = getCustomLabel(arr[i].getElementsByTagName("page"), title);
+		if(label == "") //no custom label
+		{
+			label = getLabel(arr[i]);
+		}
 		if(label == "~")
 		{
 			stuff += "<li style='list-style-type:none'>";
@@ -101,16 +154,16 @@ function assembleList(arr, title)
 		}
 		else
 		{
-			var link = arr[i].getElementsByTagName("link")[0].childNodes[0].nodeValue;
-			link = replaceAll(link, "\n", "");
-			link = replaceAll(link, "\r", "");
-			link = replaceAll(link, "\t", "");
-			label = replaceAll(label, "linkhere", link);
-		
+			var links = getLinks(arr[i]);
+			for(var c = 0; c < links.length; c++)
+			{
+				label = label.replace("linkhere", links[c]);
+			}
+
 			stuff += "<li>";
 			stuff += label;
 			morefiles = arr[i].getElementsByTagName("file");
-			stuff += assembleList(morefiles);
+			stuff += assembleList(morefiles, title);
 			stuff += "</li>";
 		}
 	}
