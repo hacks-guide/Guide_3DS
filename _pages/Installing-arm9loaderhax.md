@@ -132,6 +132,7 @@ If you backed up your NAND as part of [DSiWare Downgrade (Save Injection)](dsiwa
 1. If you have done [2.1.0 ctrtransfer](2.1.0-ctrtransfer), restore `NANDmin.bin`:
   + Open Hourglass9 from arm9loaderhax by holding (Start) on boot
   + Go to "SysNAND Backup/Restore"
+  + Go to "SysNAND Backup (keep A9LH)"
   + Restore from `NANDmin.bin`
   + Press (Start) to reboot
   + If you get a black screen, [follow 9.2.0 ctrtransfer](9.2.0-ctrtransfer)
