@@ -8,8 +8,7 @@ Due to a bug, safehax currently requires a functioning cartridge of some kind (3
 
 #### What you need
 
-* The latest release of [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/latest/)
-* The latest fork of [safehax+fasthax](https://gbatemp.net/attachments/safehax-fasthax-cb6a1bc-zip.73592/)
+{% include addfiles.html %}
 
 #### Instructions
 

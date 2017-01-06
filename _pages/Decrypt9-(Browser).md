@@ -11,7 +11,7 @@ If you have already hacked your 3DS before and have a EmuNAND based CFW setup, t
 
 #### What you need
 
-* The latest release of [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/)
+{% include addfiles.html %}
 
 #### Instructions
 
