@@ -1,6 +1,6 @@
 * * *
 
-title: "Donations" permalink: /donations.html layout: single-no-ads lang: en ref: donations
+title: "Donations" permalink: /donations.html layout: single-no-ads ref: donations
 
 * * *
 
