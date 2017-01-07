@@ -1,6 +1,6 @@
 * * *
 
-title: "DSiWare List" permalink: /dsiware-list.html lang: en ref: dsiware-list
+title: "DSiWare List" permalink: /dsiware-list.html ref: dsiware-list
 
 * * *
 
