@@ -8,9 +8,9 @@ Ce projet est l'aboutissement de centaines sur centaines d'heures de travail con
 
 Je maintiens ce guide, gratuitement, et m'assure qu'il est toujours à jour. En raison de cet effort, je pense qu'il est juste pour moi de tenter d’obtenir un maigre revenu de mon travail (Je ne reçois presque plus de dons).
 
-This site costs you nothing to use, and all that I display are non-intrusive ads. If you still have a problem with this, feel free to block these ads.
+Ce site ne coûte rien à utiliser, et les seules pubs affichées sont non-intrusives. Si vous avez quand même un problème avec cela, n’hésitez pas à les bloquer.
 
-If you do block ads, I would like to also remind you of the [Donations](donations) page, but once again that is optional too.
+Si vous les bloquez, j'aimerais vous rappeler de la page de [Dons](donations) mais une fois de plus ceci est en option.
 
-Thanks,  
+Merci,  
 Plailect
