@@ -6,34 +6,34 @@ title: "Liste des DSiWare" permalink: /liste-dsiware.html lang: fr ref: liste-ds
 
 Ci-dessous est une liste de tous les jeux compatibles avec le [Downgrade avec DSiWare (Injection de .app et seconde 3DS)](dsiware-downgrade-(app-injection-and-second-3ds)), générée par un script automatisé. {: .notice--primary}
 
-Cette liste est sectionée par région, dans l'ordre USA, EUR, JPN. {: .notice--info}
+Cette liste est découpée par région, dans l'ordre USA, EUR, JPN. {: .notice--info}
 
 Chaque section est triée par ordre de prix croissant. {: .notice--info}
 
 Les QR Codes peuvent être scannés en appuyant sur (L + R) dans le menu HOME, puis en touchant l'icône QR sur l'écrant tactile. {: .notice--info}
 
-Certaines tailles sont requises car le DSiWare injecté et sa sauvegarde hackée ne doivent pas modifier leur taille respective pour pouvoir être transférée correctement, donc le DSiWare "hôte" doit être assez large pour contenir le DSiWare hacké. {: .notice--info}
+Certaines tailles sont requises car le DSiWare injecté et sa sauvegarde hackée ne doivent pas modifier leur taille respective pour pouvoir être transférés correctement, donc le DSiWare "hôte" doit être assez large pour contenir le DSiWare hacké. {: .notice--info}
 
 {% capture notice-list %}
 
-    Les DSiWare compatibles doivent satisfaire les exigences de taille qui suivent:
+    Les jeux DSiWare compatibles doivent satisfaire les exigences de taille qui suivent:
     
     + DSiWare USA
-      + Utilisent sudokuhax
-      + Taille du `.app` >= 3,457,024 octets
-      + Taille du `public.sav` >= 67,584 octets
+      + Utilise sudokuhax
+      + Taille du `.app` >= 3 457 024 octets
+      + Taille du `public.sav` >= 67 584 octets
     
     + DSiWare EUR
-      + Utilisent  exidiahax (temporairement)
-      + Taille du `.app` >= 9,628,672 octets
-      + Taille du `public.sav` >= 113,908 octets
-      + Taille du `public.sav` <= 131,072 octets
+      + Utilise  exidiahax (temporairement)
+      + Taille du `.app` >= 9 628 672 octets
+      + Taille du `public.sav` >= 113 908 octets
+      + Taille du `public.sav` <= 131 072 octets
       + Si le `public.sav` n'est pas plus petit ou égal à 128Kio, exidia ne va pas charger la sauvegarde
     
     + JPN DSiWare
-      + Utilisent 4swordshax (temporairement)
-      + Taille du `.app` >= 14,131,200 octets
-      + Taille `public.sav` == 16,384 octets
+      + Utilise 4swordshax (temporairement)
+      + Taille du `.app` >= 14 131 200 octets
+      + Taille `public.sav` == 16 384 octets
       + Si le`public.sav` ne pèse pas exactement 16Kio, 4swords le supprimera
     
 
