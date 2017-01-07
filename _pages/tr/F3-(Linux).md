@@ -1,6 +1,6 @@
 * * *
 
-title: "F3 (Linux)" permalink: /f3-(linux).html lang: en ref: f3-(linux)
+title: "F3 (Linux)" permalink: /f3-(linux).html ref: f3-(linux)
 
 * * *
 
