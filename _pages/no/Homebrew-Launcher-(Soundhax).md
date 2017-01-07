@@ -1,6 +1,6 @@
 * * *
 
-title: "Homebrew Launcher (SoundHax)" permalink: /homebrew-launcher-(soundhax).html lang: en ref: homebrew-launcher-(soundhax)
+title: "Homebrew Launcher (SoundHax)" permalink: /homebrew-launcher-(soundhax).html ref: homebrew-launcher-(soundhax)
 
 * * *
 
