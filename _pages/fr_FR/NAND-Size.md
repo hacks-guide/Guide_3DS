@@ -4,9 +4,9 @@ title: "NAND Size" permalink: /nand-size.html lang: en_US ref: nand-size
 
 * * *
 
-Un backup correct de la NAND devrait être d'une des tailles suivantes dans la plupart des situations. {: .notice--primary}
+Un backup correct de la NAND devrait être d'une des tailles suivantes dans la plupart des cas. {: .notice--primary}
 
-Parfois, vous aurez un backup avec une taille différente que celles listées. Ce n'est pas un problème si un backup est plus large que prévu, mais assurez-vous qu'il ne soit pas *plus petit* que les tailles listées. {: .notice--info}
+Parfois, vous aurez un backup avec une taille différente de celles listées. Ce n'est pas un problème si un backup est plus large que prévu, mais assurez-vous qu'il ne soit pas *plus petit* que les tailles listées. {: .notice--info}
 
 Notez qu'une NAND *min size* aura toujours la plus petite taille pour économiser de l'espace disque, et peut ne pas correspondre à la taille de vos autres backup de la NAND de cette console. Ce n'est pas un problème, mais assurez-vous qu'il correspond à l'une des tailles sur cette page. {: .notice--info}
 
