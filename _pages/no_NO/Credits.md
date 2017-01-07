@@ -4,9 +4,9 @@ title: "Credits" permalink: /credits.html lang: en_US ref: credits
 
 * * *
 
-**Special thanks to all of [#Cakey on Freenode](http://webchat.freenode.net/?channels=%23Cakey) for being awesome!** {: .notice--primary}
+**En spesiell takk til alle på [#Cakey på Freenode](http://webchat.freenode.net/?channels=%23Cakey) for å være fantastisk!** {: .notice--primary}
 
-If I forgot you here, contact me and I'll add your name. {: .notice}
+Hvis jeg glemte deg, ta kontakt så skal jeg legge deg til. {: .notice}
 
 + AHP_Person
 + Al3x_10m
