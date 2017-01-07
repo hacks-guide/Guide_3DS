@@ -1,6 +1,6 @@
 * * *
 
-title: "Get Started" permalink: /get-started.html lang: en ref: get-started
+title: "Get Started" permalink: /get-started.html ref: get-started
 
 * * *
 
