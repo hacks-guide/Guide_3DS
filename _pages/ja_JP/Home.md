@@ -31,19 +31,19 @@ CFWは11.2.0-35 (最新) 以下の3DSで簡単に導入できます。他のバ�
 
 ## このガイドは何をインストールしますか？
 
-このガイドでは、未改造の3DSを通常のファームウェアからarm9loaderhax搭載のカスタムファームウェアに変更することを最終目標としています。 いくつかのバージョンでは、Homebrewを出発点として利用していますが、最終的にカスタムファームウェアを導入します。
+このガイドでは、未改造の3DSを通常のファームウェアからarm9loaderhax搭載のカスタムファームウェアに変更することを最終目標としています。 一部のバージョンではHomebrewを出発点として利用していますが、最終的にはカスタムファームウェアを導入します。
 
 Arm9loaderhaxは、WiiにおけるBootMiiと似た、起動からわずか数ミリ秒のシステムをほぼ完全に制御できる、カスタムファームウェアを起動する最新かつ最良の方法です。
 
 他のカスタムファームウェアの起動方法に比べてarm9loaderhaxのメリットは数多くあり、古いバージョンのソフトウェア ( menuhaxやrxToolsなど) に依存する方法よりもこのガイドを使用することをお勧めします。
 
-## What can I do with Custom Firmware?
+## カスタムファームウェアで何ができますか？
 
-+ Play all game cards and eShop games, regardless of region
-+ Customize your HOME Menu with user-created [themes](https://3dsthem.es/) and [badges](https://badges.3dsthem.es/)
-+ Use "ROM hacks" for games that you own
-+ Take gameplay and application screenshots
-+ [Backup, edit, and restore](https://gbatemp.net/threads/release-jks-savemanager-homebrew-cia-save-manager.413143/) saves for many games
++ リージョンに関係なく、すべてのゲームカードとeShopゲームを遊ぶ
++ [テーマ](https://3dsthem.es/)や[バッジ](https://badges.3dsthem.es/)でHOMEメニューをカスタマイズ
++ 自分が所有するゲームに「ROMハック」を使用する
++ ゲームプレイやアプリケーションのスクリーンショットを撮る
++ ゲームのセーブデータを[バックアップ、編集、リストア](https://gbatemp.net/threads/release-jks-savemanager-homebrew-cia-save-manager.413143/)
 + Play games for older systems with various emulators, using RetroArch or other standalone emulators. (Works best with a New Nintendo 3DS)
 + Install homebrew titles to your system, and have them appear on your HOME Menu
 + Dump your game cards to a format you can install, and play them without needing the card
