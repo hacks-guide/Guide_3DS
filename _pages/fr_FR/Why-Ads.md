@@ -4,9 +4,9 @@ title: "Why Ads?" permalink: /why-ads.html layout: single-no-ads lang: en_US ref
 
 * * *
 
-This project is the culmination of hundreds upon hundreds of hours of constant work.
+Ce projet est l'aboutissement de centaines sur centaines d'heures de travail constant.
 
-I maintain this guide, for free, and ensure it is always up to date. Because of this effort, I feel that it is fair for me to attempt to gain a meager income from my work (I receive next to no donations anymore).
+Je maintiens ce guide, gratuitement, et m'assure qu'il est toujours à jour. En raison de cet effort, je pense qu'il est juste pour moi de tenter d’obtenir un maigre revenu de mon travail (Je ne reçois presque plus de dons).
 
 This site costs you nothing to use, and all that I display are non-intrusive ads. If you still have a problem with this, feel free to block these ads.
 
