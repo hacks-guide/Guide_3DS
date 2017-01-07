@@ -4,15 +4,15 @@ title: "Decrypt9 (Browser)" permalink: /decrypt9-(browser).html lang: en_US ref:
 
 * * *
 
-The first thing this guide will do is get you running Decrypt9, which is a multipurpose toolkit that will allow us to install the version 2.1.0, which contains a vulnerability that is needed for further exploitation of the system. {: .notice}
+Das Ziel dieses Guides ist es, Decrypt9 zu starten. Decrypt9 ist ein Multifunktionstool welches es erlaubt die Firmwareversion 2.1.0 zu installieren. In dieser existiert eine Vulnerabilität (Schwachstelle) die für die weiteren Exploits ausgenutzt wird. {: .notice}
 
-If you have already hacked your 3DS before and have a EmuNAND based CFW setup, this guide deals exclusively with SysNAND and you should follow all instructions from within or applying to SysNAND. Note that the terms EmuNAND and RedNAND refer to slightly different implementations of [the same concept](http://3dbrew.org/wiki/NAND_Redirection). {: .notice--info}
+Falls du deine Konsole bereits gehackt hast und bisher einen CFW verwendet hast, die auf einem EmuNAND basiert, bedenke: Dieser Guide ist für den SysNAND verfasst und sämtliche Schritte müssen vom SysNAND bzw. am SysNAND ausgeführt werden. Hinweis: Die Begriffe EmuNAND und RedNAND (REDirectedNAND =umgeleiteter NAND) verweisen auf einander ähnliche Ausführungen [ desselben Konzepts ](http://3dbrew.org/wiki/NAND_Redirection). {: .notice--info}
 
-#### What you need
+#### Was du benötigst
 
-* The latest release of [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/)
+* Die aktuellste Version von [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/)
 
-#### Instructions
+#### Arbeitsschritte
 
   1. Create a folder named `files9` on the root of your SD card if it does not already exist
   2. Copy `Launcher.dat` and `Decrypt9WIP.dat` from the Decrypt9WIP `.zip` to the root of your SD card
