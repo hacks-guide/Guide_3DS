@@ -16,35 +16,31 @@ Le nom fait référence au fabricant de la puce NAND dans votre console, **pas**
 
 ## 2DS:
 
-    + Toshiba NAND:     
-      988.807.168 bytes = 943 MiB    
-    
-    + Toshiba NAND:    
-      1.979.711.488 bytes = 1.84 GiB    
-    
-    + Samsung NAND:    
-      1.000.341.504 bytes = 954 MiB    
-    
-    + Samsung NAND:    
-      1.300.234.240 bytes = 1.21 GiB    
+    + NAND Toshiba :     
+      988.807.168 octets = 943 Mio    
+    + NAND Toshiba:    
+      1.979.711.488 octets = 1.84 Gio    
+    + NAND Samsung:    
+      1.000.341.504 octets = 954 Mio      
+    + NAND Samsung:    
+      1.300.234.240 octets = 1.21 Gio    
     
 
 ## Old 3DS:
 
-    + Toshiba NAND:     
-      988.807.168 bytes = 943 MiB    
-    
-    + Samsung NAND:    
-      1.000.341.504 bytes = 954 MiB    
+    + NAND Toshiba :     
+      988.807.168 octets = 943 Mio   
+    + NAND Samsung:    
+      1.000.341.504 octets = 954 Mio    
     
 
 ## New 3DS:
 
-    + Toshiba NAND:    
-      1.979.711.488 bytes = 1.84 GiB    
+    + NAND Toshiba:    
+      1.979.711.488 octets = 1.84 Gio    
     
-    + Samsung NAND:    
-      1.300.234.240 bytes = 1.21 GiB    
+    + NAND Samsung:    
+      1.300.234.240 octets = 1.21 Gio    
     
-    + Samsung NAND:
-      1.954.545.664 bytes = 1.82 GiB
+    + NAND Samsung :
+      1.954.545.664 octets = 1.82 Gio
