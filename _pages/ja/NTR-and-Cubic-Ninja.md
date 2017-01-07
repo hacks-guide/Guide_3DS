@@ -1,6 +1,6 @@
 * * *
 
-title: "NTR and Cubic Ninja" permalink: /ntr-and-cubic-ninja.html lang: en ref: ntr-and-cubic-ninja
+title: "NTR and Cubic Ninja" permalink: /ntr-and-cubic-ninja.html ref: ntr-and-cubic-ninja
 
 * * *
 
