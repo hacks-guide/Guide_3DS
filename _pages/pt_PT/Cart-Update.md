@@ -4,7 +4,7 @@ title: "Cart Update" permalink: /cart-update.html lang: en_US ref: cart-update
 
 * * *
 
-All game carts contain a copy of the required system version to play it, allowing anyone on a lower version to use the cartridge to update to that version (even without an internet connection). {: .notice--info}
+Todos os cartões de jogo contêm uma cópia da versão de sistema mínima para poder jogar o jogo, permitindo assim a uma pessoa que se encontre numa versão inferior usar o cartão de jogo para atualizar o seu sistema (sem precisar de ligação à Internet). {: .notice--info}
 
 Cart Updates will only deliver updates to core features, such as the System Settings, Home Menu, Nintendo 3DS Sound, etc. Cart Updates will not deliver updates to Network features, such as System Transfer, Internet Browser, StreetPass Mii Plaza or eShop. {: .notice--info}
 
