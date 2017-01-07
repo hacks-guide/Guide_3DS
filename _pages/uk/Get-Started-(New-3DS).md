@@ -1,6 +1,6 @@
 * * *
 
-title: "Get Started (New 3DS)" permalink: /get-started-(new-3ds).html lang: en ref: get-started-(new-3ds)
+title: "Get Started (New 3DS)" permalink: /get-started-(new-3ds).html ref: get-started-(new-3ds)
 
 * * *
 
