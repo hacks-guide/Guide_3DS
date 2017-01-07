@@ -1,6 +1,6 @@
 * * *
 
-title: "Hardmod Downgrade" permalink: /hardmod-downgrade.html lang: en ref: hardmod-downgrade
+title: "Hardmod Downgrade" permalink: /hardmod-downgrade.html ref: hardmod-downgrade
 
 * * *
 
