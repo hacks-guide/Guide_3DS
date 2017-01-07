@@ -4,7 +4,7 @@ title: "FAQ" permalink: /faq.html lang: en_US ref: faq
 
 * * *
 
-<a name="faq_latestfw" />**Q:***Je suis sur la dernière version du système, mon appareil est-il piraté ?*  
+<a name="faq_latestfw" />**Q:***Je suis sur la dernière version du système, ma console est-t-elle piraté ?*  
 **A:** Oui, 11.2 est piraté en utilisant la methode de Homebrew Launcher (Soundhax)</a>
 
 <a name="faq_updatecfw" />**Q:***Comment puis-je mettre à jour Luma3DS ?*  
