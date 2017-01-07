@@ -40,7 +40,7 @@ If you are unable to boot your 3DS, please look for the section relevant to you,
   5. Velg "Install and delete all CIAs"
   6. Avslutt med på hjem-knappen
 
-## <a name="rm_nnid" />Removing an NNID without formatting the device
+## <a name="rm_nnid" />Fjerne en NNID uten å formatere enheten
 
 #### Det du trenger
 
@@ -154,7 +154,7 @@ This is because you selected the wrong version in the steelhax installer.
 
   1. Try booting with your SD card out, and then reinserting it after booting. 
       1. Power off your 3DS by holding down the power button.
-      2. Take out the SD card.
+      2. Ta ut SD-kortet.
       3. Power on the 3DS.
       4. When the home menu appears, reinsert your SD card.
       5. If this worked, you should Clear Home Menu's extdata by navigating to the following folder on your SD card: `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/` 
@@ -178,7 +178,7 @@ This is because you selected the wrong version in the steelhax installer.
   1. Ensure you have a working payload. 
       1. Check for the existence of `arm9loaderhax.bin` in the root of your SD card.
   2. Try resetting Luma's config and fix options 
-      1. Delete `/luma/config.bin` from your SD card
+      1. Slett `/luma/config.bin` fra SD-kortet
       2. Set your options when it boots
   3. Test booting Hourglass9 
       1. On Luma3DS, hold (Start) on boot
@@ -192,9 +192,9 @@ This is because you selected the wrong version in the steelhax installer.
   6. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version (v6.2.3 or higher, at the least)
   7. If your NAND is of a version between 3.0.0 and 4.5.0, do the following: 
     * Ensure that you are using the latest Luma3DS version (v6.6 or higher, at the least)
-    * Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) and rename it to `firmware.bin`
-    * Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
-    * Copy `firmware.bin` and `cetk` to the `/luma/` folder on your SD card
+    * Last ned [denne filen](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) og endre navnet til `firmware.bin`
+    * Last ned [denne filen](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
+    * Kopier `firmware.bin` og `cetk` til mappen, `/luma/` på SD-kortet
     * Delete both of these files after updating your 3DS
   8. Try following [9.2.0 ctrtransfer](9.2.0-ctrtransfer)
   9. Ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [3DS Hacking on Discord](https://discord.gg/MWxPgEp).
