@@ -18,33 +18,33 @@ title: "Get Started (Old 3DS)" permalink: /get-started-(old-3ds).html lang: en_U
 
 バージョン9.9.0以上を含むゲームカートリッジで更新した場合 *(本体FWのバージョンが9.9.0以上で、ブラウザのバージョンが25以下(10.2.0-24Jなど)であれば該当します)* ブラウザーが削除されたため、[ブラウザーなし]列を使用する必要があります。 {: .notice--warning}
 
-The device version can be found at the bottom right of the top screen of the System Settings. {: .notice--success}
+本体FWのバージョンは、本体設定のトップ画面の右下に表示されます。 {: .notice--success}
 
 <table>
   <thead>
     <tr>
       <th style="text-align: center">From</th>
       <th style="text-align: center">To</th>
-      <th style="text-align: center">No Browser</th>
-      <th style="text-align: center">Browser</th>
+      <th style="text-align: center">ブラウザーなし</th>
+      <th style="text-align: center">ブラウザーあり</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align: center">1.0.0</td>
       <td style="text-align: center">1.1.0</td>
-      <td style="text-align: center" colspan="2"><a href="cart-update">Cart Update</a></td>
+      <td style="text-align: center" colspan="2"><a href="cart-update">カートリッジでの更新</a></td>
     </tr>
     <tr>
       <td style="text-align: center">2.1.0</td>
       <td style="text-align: center">2.1.0</td>
-      <td style="text-align: center"><a href="cart-update">Cart Update</a></td>
-      <td style="text-align: center"><a href="installing-arm9loaderhax">Installing arm9loaderhax</a></td>
+      <td style="text-align: center"><a href="cart-update">カートリッジでの更新</a></td>
+      <td style="text-align: center"><a href="installing-arm9loaderhax">arm9loaderhaxのインストール</a></td>
     </tr>
     <tr>
       <td style="text-align: center">2.2.0</td>
       <td style="text-align: center">3.1.0</td>
-      <td style="text-align: center" colspan="2"><a href="cart-update">Cart Update</a></td>
+      <td style="text-align: center" colspan="2"><a href="cart-update">カートリッジでの更新</a></td>
     </tr>
     <tr>
       <td style="text-align: center">4.0.0</td>
@@ -55,7 +55,7 @@ The device version can be found at the bottom right of the top screen of the Sys
     <tr>
       <td style="text-align: center">5.0.0</td>
       <td style="text-align: center">5.1.0</td>
-      <td style="text-align: center"><a href="cart-update">Cart Update</a></td>
+      <td style="text-align: center"><a href="cart-update">カートリッジでの更新</a></td>
       <td style="text-align: center"><a href="decrypt9-(browser)">Decrypt9 (Browser)</a></td>
     </tr>
     <tr>
@@ -67,7 +67,7 @@ The device version can be found at the bottom right of the top screen of the Sys
     <tr>
       <td style="text-align: center">7.0.0</td>
       <td style="text-align: center">8.1.0</td>
-      <td style="text-align: center"><a href="cart-update">Cart Update</a></td>
+      <td style="text-align: center"><a href="cart-update">カートリッジでの更新</a></td>
       <td style="text-align: center"><a href="decrypt9-(browser)">Decrypt9 (Browser)</a></td>
     </tr>
     <tr>
