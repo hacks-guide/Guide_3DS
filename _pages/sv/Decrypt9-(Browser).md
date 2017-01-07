@@ -1,6 +1,6 @@
 * * *
 
-title: "Decrypt9 (Browser)" permalink: /decrypt9-(browser).html lang: en ref: decrypt9-(browser)
+title: "Decrypt9 (Browser)" permalink: /decrypt9-(browser).html ref: decrypt9-(browser)
 
 * * *
 
