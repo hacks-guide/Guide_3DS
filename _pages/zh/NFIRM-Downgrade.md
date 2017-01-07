@@ -1,6 +1,6 @@
 * * *
 
-title: "NFIRM Downgrade" permalink: /nfirm-downgrade.html redirect_from: "/dsiware-downgrade" lang: en ref: nfirm-downgrade
+title: "NFIRM Downgrade" permalink: /nfirm-downgrade.html redirect_from: "/dsiware-downgrade" ref: nfirm-downgrade
 
 * * *
 
