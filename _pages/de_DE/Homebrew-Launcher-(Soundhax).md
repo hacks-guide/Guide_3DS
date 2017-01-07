@@ -6,7 +6,7 @@ title: "Homebrew Launcher (SoundHax)" permalink: /homebrew-launcher-(soundhax).h
 
 Der Homebrew-Launcher hat viele verschiedene Einstiegspunkte, beziehungsweise Möglichkeiten, ihn zu starten. {: .notice}
 
-SoundHax ist kompatibel mit den Versionen 9.0.0 bis 11.2.0 in den Regionen EUR, JPN, KOR, und USA. Deutsche 3DS sind normalerweise in der EUR-Region. {: .notice--info}
+SoundHax ist kompatibel mit den Versionen 9.0.0 bis 11.2.0 in den Regionen EUR, JPN, KOR, und USA. Deutsche 3DS sind in der EUR-Region. {: .notice--info}
 
 #### Was du brauchst
 
