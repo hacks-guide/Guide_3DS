@@ -23,11 +23,11 @@ Wenn du eine Entwicklerkonsole ("PANDA" oder "SNAKE") hast, nutze den [devGuide]
 
 In den meisten Fällen kannst du Homebrew auf deiner Konsole komplett kostenlos nutzen, mit Hilfe der Nintendo 3DS Sound-App. Es gibt aber auch verschiedene andere Exploits, beispielsweise im Browser oder in kommerziellen Spielen, die für Homebrew genutzt werden können.
 
-## What is Custom Firmware?
+## Was ist Custom Firmware?
 
-**Custom Firmware** ("CFW") enables you to use more advanced hacks that userland homebrew can't easily do. For instance, signature patches let you install unsigned titles that appear right on your HOME Menu.
+**Custom Firmware** ("CFW", deutsch etwa "Selbsterstelles Betriebssystem (des 3DS)) erlaubt dir, komplexere Hacks zu nutzen, die reine Userland-Homebrew nicht nutzen kann. Zum Beispiel lassen dich Signatur-Patches unsignitierte Titel installieren, die dann direkt im HOME Menu auftauchen.
 
-CFW can be easily set up on any console that is on 11.2.0 (latest) or lower. Other versions can have their firmware downgraded.
+CFW kann einfach auf jeder Konsole eingerichtet werden, die auf der Firmware 11.2.0 (neueste) oder tiefer ist. Andere Versionen können auf eine passende Version downgegraded werden.
 
 ## What does this guide install?
 
