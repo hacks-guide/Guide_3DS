@@ -1,6 +1,6 @@
 * * *
 
-title: "Cart Update" permalink: /cart-update.html lang: en ref: cart-update
+title: "Cart Update" permalink: /cart-update.html ref: cart-update
 
 * * *
 
