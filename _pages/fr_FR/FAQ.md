@@ -22,29 +22,29 @@ title: "FAQ" permalink: /faq.html lang: en_US ref: faq
 <a name="faq_risky" />**Q :** *À quelle point le hack de ma console est-il risqué ?*   
 **A:** Les bricks sont *à priori* impossible à moins que vous ignoriez/contourniez les différentes étapes de vérifications.
 
-<a name="faq_homebrew" />**Q:** *Can I run awesome homebrew and emulators with this?*  
-**A:** Yes! Custom Firmware not only enables the Homebrew Launcher, but it also will give you hacks on all versions, which means you keep it forever, even with updates.
+<a name="faq_homebrew" />**Q :** *Puis-je exécuter des homebrew et des émulateurs avec ceci ?*   
+**A:** Oui ! Un Custom Firmware permet non seulement d'utiliser l'Homebrew Launcher, mais également vous donnera accès aux hacks sur toutes les versions, ce qui signifie que vous le garderais pour toujours, même avec des mises à jour.
 
-<a name="faq_regionfree" />**Q:** *Can I use this to play games from other regions?*  
-**A:** Luma3DS supports Region Free patches, which enables users to install games from any region without any extra modification or steps.
+<a name="faq_regionfree" />**Q :** *Puis-je utiliser cela pour jouer à des jeux d’autres régions ?*   
+**A:** Luma3DS prend en charge les patchs Region Free, qui permettent aux utilisateurs d’installer des jeux de toutes les régions sans aucune modification supplémentaire.
 
-<a name="faq_updates" />**Q:** *Is it safe to update CFW SysNAND?*  
-**A:** Yes. This is safe, stop asking about it.
+<a name="faq_updates" />**Q :** *Est-il sûre de mettre à jour le CFW SysNAND ?*   
+**A:** Oui, c’est sûre. Arrêtez de demander.
 
-<a name="faq_support" />**Q:** *Where should I go for support?*  
-**A:** For support, ask for help at #3dshacks on Rizon IRC</a> or 3DS Hacking on Discord</a>.
+<a name="faq_support" />**Q :** *Où dois-je aller pour obtenir de l'aide ?*   
+**A:** Pour le support, demander de l’aide sur #3dshacks sur Rizon IRC</a> ou sur 3DS Hacking sur Discord</a>.
 
-<a name="faq_le4gbsd" />**Q:** *Can I do this with a 4GB (or smaller) SD card?*  
-**A:** Thanks to the new CTRNAND method, yes!
+<a name="faq_le4gbsd" />**Q :** *Puis-je faire suivre le guide avec une carte SD de 4 Go (ou moins) ?*   
+**A:** Grâce à la nouvelle méthode CTRNAND, oui !
 
-<a name="faq_ge128gbsd" />**Q:** *Can I use a 128 GB (or larger) SD card?*  
-**A:** Yes, but some users have reported slowdowns when using such large sizes. Note that you cannot format the card with exFAT; you need to format it with FAT32.
+<a name="faq_ge128gbsd" />**Q :** *Puis-je utiliser une carte SD 128Go (ou plus) ?*   
+**A:** Oui, mais certains utilisateurs ont signalé des ralentissements lors de l’utilisation de ces grandes tailles. Notez que vous ne pouvez pas formater la carte en exFAT ; vous devez la formater en FAT32.
 
-<a name="faq_movesd" />**Q:** *How do I move to a new SD card at the end of this?*  
-**A:** Just copy all the files to the new SD card.
+<a name="faq_movesd" />**Q :** *Comment puis-je déplacer mes fichiers sur une nouvelle carte SD à la fin de ce guide ?*   
+**A:** Il suffit de copier tous les fichiers sur la nouvelle carte SD.
 
-<a name="faq_NNID" />**Q:** *Can I keep my NNID?*  
-**A:** If you start with an NNID and follow every step, you will end up keeping your NNID at the end.
+<a name="faq_NNID" />**Q :** *Puis-je garder mon NNID ?*   
+**A:** Si vous commencez avec un NNID et suivez toutes les étapes, vous garderez votre NNID à la fin.
 
 <a name="faq_systransfer" />**Q:** *What about System Transfers?*  
 **A:** Once you have completed the guide, you can system transfer to and from an arm9loaderhax'd 3DS or 2DS exactly like you would a regular stock console or EmuNAND (you will lose any non-legitimate games/themes/DLC in the transfer; saves will stay even for games that are lost).
