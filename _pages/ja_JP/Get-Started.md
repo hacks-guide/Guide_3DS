@@ -4,13 +4,13 @@ title: "Get Started" permalink: /get-started.html lang: en_US ref: get-started
 
 * * *
 
-The colors of the devices in the image may vary, but note the button placement and features of each device carefully to ensure you select the correct one. {: .notice}
+画像の3DSの色はさまざまですが、正しい機種を選択するために各機種のボタン配置や機能に注意してください。 {: .notice}
 
-Click the image of your device to take you to the appropriate page. {: .notice--primary}
+お使いの3DSの画像をクリックすると、適切なページに移動します。 {: .notice--primary}
 
-Different device models, versions, and regions will require different steps to achieve the end goal of arm9loaderhax Custom Firmware. The following series of pages will help you find where to start for your device. {: .notice--info}
+異なる機種、本体FWのバージョン、リージョンによって、それぞれ違った手順を使用します。 次の一連のページで、お使いの3DSのための方法を見つけることができます。 {: .notice--info}
 
-If you have already hacked your 3DS before and have an EmuNAND based CFW setup, just follow all instructions while on SysNAND. Your data will be transfered from EmuNAND to your new A9LH install at the end. {: .notice--info}
+既に3DSにEmuNANDを導入していて、以前のEmuNANDの内容を新しいSysNAND CFWに移行したい場合、あなたは全ての指示に従い、SysNAND上で作業を行ってください。 ガイドの最後で、あなたのデータはEmuNANDから新しいA9LH環境に転送されます。 {: .notice--info}
 
 Before starting, you may want to check your SD card for errors using [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), or [F3X (Mac)](f3x-(mac))! {: .notice--warning}
 
