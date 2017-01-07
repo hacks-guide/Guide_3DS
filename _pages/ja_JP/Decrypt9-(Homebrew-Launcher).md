@@ -15,11 +15,11 @@ title: "Decrypt9 (Homebrew Launcher)" permalink: /decrypt9-(homebrew-launcher).h
 
   1. SDカード直下に `files9` フォルダが存在しない場合は作成
   2. safehax+fasthax`.zip`の中身をSDカード直下にコピー。統合・上書きしてOK
-  3. Copy `Decrypt9WIP.bin` from the Decrypt9WIP `.zip` to the root of your SD card and rename `Decrypt9WIP.bin` to `arm9.bin`
-  4. Reinsert your SD card into your 3DS
-  5. Enter the homebrew launcher
-  6. Launch safehax
-  7. If the exploit was successful, you will have booted into Decrypt9
+  3. `Decrypt9WIP.bin`を Decrypt9WIP`.zip`から取り出してSDカードにコピーし、ファイル名を `Decrypt9WIP.bin`から`arm9.bin`に変更
+  4. SDカードを3DSに戻す
+  5. Homebrew Launcherを呼び出す
+  6. safehaxを選択して起動
+  7. 成功すれば、Decrypt9が起動します
 
-Continue to [2.1.0 ctrtransfer](2.1.0-ctrtransfer)  
+[2.1.0 ctrtransfer](2.1.0-ctrtransfer)に続く  
 {: .notice--primary}
