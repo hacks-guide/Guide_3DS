@@ -16,24 +16,24 @@ title: "Get Started (New 3DS)" permalink: /get-started-(new-3ds).html lang: en_U
 
 すべてのバージョンにおいて、パッケージ版3DSゲームなどの[カートリッジでの更新](cart-update)で新しいバージョンに更新してから表に従うこともできます (ブラウザーのバージョンは更新されません) 。 {: .notice--warning}
 
-If you updated with a game cart containing the version 9.9.0 or above *(meaning that you have a version on 9.9.0 or above, but your browser is on -25 or lower, such as 10.2.0-24)*, your browser was removed and you will need to use the "No Browser" column. {: .notice--warning}
+バージョン9.9.0以上を含むゲームカートリッジで更新した場合*(本体FWのバージョンが9.9.0以上で、ブラウザのバージョンが25以下(10.2.0-24Jなど)であれば該当します)*、ブラウザーが削除されたため、[ブラウザーなし]列を使用する必要があります。 {: .notice--warning}
 
-The device version can be found at the bottom right of the top screen of the System Settings. {: .notice--success}
+本体FWのバージョンは、本体設定のトップ画面の右下に表示されます。 {: .notice--success}
 
 <table>
   <thead>
     <tr>
       <th style="text-align: center">From</th>
       <th style="text-align: center">To</th>
-      <th style="text-align: center">No Browser</th>
-      <th style="text-align: center">Browser</th>
+      <th style="text-align: center">ブラウザーなし</th>
+      <th style="text-align: center">ブラウザーあり</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align: center">8.1.0</td>
       <td style="text-align: center">8.1.0</td>
-      <td style="text-align: center" colspan="2"><a href="ntr-and-cubic-ninja">NTR and Cubic Ninja</a></td>
+      <td style="text-align: center" colspan="2"><a href="ntr-and-cubic-ninja">NTR CFWとCubic Ninjaによる9.2.0へのアップデート</a></td>
     </tr>
     <tr>
       <td style="text-align: center">9.0.0</td>
