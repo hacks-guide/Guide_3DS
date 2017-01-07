@@ -1,0 +1,25 @@
+---
+title: "Começar"
+permalink: /get-started.html
+lang: pt_BR
+ref: get-started
+---
+
+As cores dos dispositivos nas imagens podem variar, verifique o posicionamento dos botões e as características de cada dispositivo com cuidado para ter certeza de que você selecione o modelo correto.
+{: .notice}
+
+Clique na imagem do seu dispositivo para ir até a página apropriada.
+{: .notice--primary}
+
+Diferentes modelos de dispositivos, versões e regiões exigirão diferentes etapas para atingir o objetivo final do arm9loaderhax Custom Firmware. As seguintes páginas irão ajudá-lo a encontrar por onde começar de acordo com o seu dispositivo.
+{: .notice--info}
+
+Se você já hackeou seu 3DS antes e tem uma instalação de CFW que faz uso de um EmuNAND, basta seguir todas as instruções no SysNAND. Seus dados serão transferidos do EmuNAND para a nova instalação do A9LH no final.
+{: .notice--info}
+
+Antes de iniciar, você pode querer verificar se o seu cartão SD possui erros utilizando [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), ou [F3X (Mac)](f3x-(mac))!
+{: .notice--warning}
+
+| New 3DS | Old 3DS ou 2DS |
+|:-:|:-:|
+| [![New 3DS](images/new3ds.png)](get-started-(new-3ds)) <br><br> [![New 3DS XL](images/new3dsxl.png)](get-started-(new-3ds)) | [![Old 3DS](images/old3ds.png)](get-started-(old-3ds)) &nbsp;&nbsp; [![Old 3DS XL](images/old3dsxl.png)](get-started-(old-3ds)) <br><br> [![2DS](images/2ds.png)](get-started-(old-3ds)) |
