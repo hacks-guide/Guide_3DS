@@ -1,6 +1,6 @@
 * * *
 
-title: "FAQ" permalink: /faq.html lang: en ref: faq
+title: "FAQ" permalink: /faq.html ref: faq
 
 * * *
 
