@@ -12,7 +12,7 @@ Chaque section est triée par ordre de prix croissant. {: .notice--info}
 
 Les QR Codes peuvent être scannés en appuyant sur (L + R) dans le menu HOME, puis en touchant l'icône QR sur l'écrant tactile. {: .notice--info}
 
-The size requirements are because the injected DSiWare and its hacked save must not modify their respective file sizes in order to system transfer properly, meaning that the donor DSiWare must be large enough to fit the hacked DSiWare. {: .notice--info}
+Certaines tailles sont requises car le DSiWare injecté et sa sauvegarde hackée ne doivent pas modifier leur taille respective pour pouvoir être transférée correctement, donc le DSiWare "hôte" doit être assez large pour contenir le DSiWare hacké. {: .notice--info}
 
 {% capture notice-list %}
 
@@ -115,14 +115,14 @@ The size requirements are because the injected DSiWare and its hacked save must 
 |       101 Pinball World       | 4,99 € |      4B494950      |    EUR    | ![qrcode](images/qrcodes/000480044B494950.png) |
 |      101 MiniGolf World       | 4,99 € |      4B584950      |    EUR    | ![qrcode](images/qrcodes/000480044B584950.png) |
 
-|                       | Price | 8 Character ID | Region(s) |                    QR Code                     |
-|:---------------------:|:-----:|:--------------:|:---------:|:----------------------------------------------:|
-|   タッチで漫才! メガミの笑壺DL    | 500円  |    4B394C4A    |    JPN    | ![qrcode](images/qrcodes/000480044B394C4A.png) |
-|        練熟漢字中学生        | 800円  |    4B4A384A    |    JPN    | ![qrcode](images/qrcodes/000480044B4A384A.png) |
-|        教えてダーリン        | 800円  |    4B4F534A    |    JPN    | ![qrcode](images/qrcodes/000480044B4F534A.png) |
-|    高校英単語基本400語マスター    | 800円  |    4B454B4A    |    JPN    | ![qrcode](images/qrcodes/000480044B454B4A.png) |
-|    中学英単語基本400語マスター    | 800円  |    4B45544A    |    JPN    | ![qrcode](images/qrcodes/000480044B45544A.png) |
-|   愛してイルカ ～愛されてイルカ～    | 800円  |    4B49524A    |    JPN    | ![qrcode](images/qrcodes/000480044B49524A.png) |
-| ARC STYLE: ジュラシックワールド | 820円  |    4B4C444A    |    JPN    | ![qrcode](images/qrcodes/000480044B4C444A.png) |
-|      ゴー!ゴー!ココポロ       | 820円  |    4B33474A    |    JPN    | ![qrcode](images/qrcodes/000480044B33474A.png) |
-|       X-RETURNS       | 823円  |    4B44584A    |    JPN    | ![qrcode](images/qrcodes/000480044B44584A.png) |
+|                       | Prix | ID de 8 caractères | Région(s) |                    QR Code                     |
+|:---------------------:|:----:|:------------------:|:---------:|:----------------------------------------------:|
+|   タッチで漫才! メガミの笑壺DL    | 500円 |      4B394C4A      |    JPN    | ![qrcode](images/qrcodes/000480044B394C4A.png) |
+|        練熟漢字中学生        | 800円 |      4B4A384A      |    JPN    | ![qrcode](images/qrcodes/000480044B4A384A.png) |
+|        教えてダーリン        | 800円 |      4B4F534A      |    JPN    | ![qrcode](images/qrcodes/000480044B4F534A.png) |
+|    高校英単語基本400語マスター    | 800円 |      4B454B4A      |    JPN    | ![qrcode](images/qrcodes/000480044B454B4A.png) |
+|    中学英単語基本400語マスター    | 800円 |      4B45544A      |    JPN    | ![qrcode](images/qrcodes/000480044B45544A.png) |
+|   愛してイルカ ～愛されてイルカ～    | 800円 |      4B49524A      |    JPN    | ![qrcode](images/qrcodes/000480044B49524A.png) |
+| ARC STYLE: ジュラシックワールド | 820円 |      4B4C444A      |    JPN    | ![qrcode](images/qrcodes/000480044B4C444A.png) |
+|      ゴー!ゴー!ココポロ       | 820円 |      4B33474A      |    JPN    | ![qrcode](images/qrcodes/000480044B33474A.png) |
+|       X-RETURNS       | 823円 |      4B44584A      |    JPN    | ![qrcode](images/qrcodes/000480044B44584A.png) |
