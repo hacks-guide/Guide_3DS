@@ -4,7 +4,7 @@ title: "DSiWare Downgrade (Save Injection)" permalink: /dsiware-downgrade-(save-
 
 * * *
 
-If you are on version 11.0.0 or 11.1.0, you must follow this guide to downgrade your NATIVE_FIRM using DSiWare {: .notice}
+Se estiver na versão 11.0.0 ou 11.1.0, tem de seguir este guia para fazer o downgrade da sua NATIVE_FIRM usando DSiWare {: .notice}
 
 This takes advantage of an oversight which allows DSiWare titles to read and write anywhere in NAND. {: .notice--info}
 
