@@ -1,6 +1,6 @@
 * * *
 
-title: "Why Ads?" permalink: /why-ads.html layout: single-no-ads lang: en ref: why-ads
+title: "Why Ads?" permalink: /why-ads.html layout: single-no-ads ref: why-ads
 
 * * *
 
