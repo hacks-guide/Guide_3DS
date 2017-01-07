@@ -60,4 +60,4 @@ Arm9loaderhaxは、WiiにおけるBootMiiと似た、起動からわずか数ミ
 + **予期しない電源オフによるデータの損失や損傷を避けるため、作業全体を通してデバイスのプラグを差し込んだままにしておいてください！**
 + SDカードは [MBR (GPTではなく)](http://www.howtogeek.com/245610/)でフォーマットされている必要があります (3DSに付属のSDカードはデフォルトでMBRです) 。
 + SDカードをフォーマットする必要がある場合は、[`guiformat`](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm)を使用することができます。
-+ + 2DSはソフトウェア面ではOld 3DSと本質的に同じであり、"Old 3DS"で行うステップは2DSにも適用されます。
++ 2DSはソフトウェア面ではOld 3DSと本質的に同じであり、"Old 3DS"で行うステップは2DSにも適用されます。
