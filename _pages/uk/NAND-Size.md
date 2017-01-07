@@ -1,6 +1,6 @@
 * * *
 
-title: "NAND Size" permalink: /nand-size.html lang: en ref: nand-size
+title: "NAND Size" permalink: /nand-size.html ref: nand-size
 
 * * *
 
