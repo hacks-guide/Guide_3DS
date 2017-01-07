@@ -6,19 +6,20 @@ from stock to arm9loaderhax.
 
 * * *
 
-{% capture notice-home %} **Este guia é para aparelhos de varejo (comprados por consumidores; não pelo Nintendo Developer Program) _apenas_! Se você possui um aparelho de desenvolvedor ("PANDA" ou "SNAKE"), cheque o \[devGuide\](https://dev.3ds.guide)** {% endcapture %}
+{% capture notice-home %} **Este guia é para aparelhos de varejo (comprados por consumidores; não pelo Nintendo Developer Program) *apenas*!  
+Se você possui um aparelho de desenvolvedor ("PANDA" ou "SNAKE"), cheque o [devGuide](https://dev.3ds.guide)** {% endcapture %}
 
-<div class="notice--danger">{{ notice-home | markdownify }}</div>
+<div class="notice--danger">{ notice-home | markdownify }</div>
 
-**Este guia precisa da *sua* ajuda para semear \[estes\](https://3ds.guide/rss.xml) torrents!** {: .notice--info}
+**Este guia precisa da *sua* ajuda para semear [estes](https://3ds.guide/rss.xml) torrents!** {: .notice--info}
 
-**Para usar os links \[magnet\](https://pt.wikipedia.org/wiki/Magnet-Link) neste guia, você precisará de um cliente de torrents como o \[Deluge\](http://dev.deluge-torrent.org/wiki/Download)** {: .notice--info}
+**Para usar os links [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) deste guia, você precisará de um cliente de torrents como o [Deluge](http://dev.deluge-torrent.org/wiki/Download)** {: .notice--info}
 
 **Leia todas as páginas introdutórias antes de prosseguir.** {: .notice--warning}
 
 ## O que é homebrew?
 
-O termo \[**Homebrew**\](https://pt.wikipedia.org/wiki/Homebrew) geralmente se se refere ao software que não é autorizado pela Nintendo. Ele permite você rodar jogos homebrew , ferramentas como backup e edição de saves, e emuladores de vários sistemas antigos.
+O termo [**Homebrew**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) geralmente se se refere ao software que não é autorizado pela Nintendo. Ele permite você rodar jogos homebrew , ferramentas como backup e edição de saves, e emuladores de vários sistemas antigos.
 
 Na maioria dos casos, rodar homebrew no seu console é 100% gratuito usando apenas o aplicativo Ninntendo 3DS Sound. Existem também vários outros exploits em jogos comerciais e no navegador do 3DS que permitem a execução de homebrew.
 
