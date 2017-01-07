@@ -7,8 +7,8 @@ title: "FAQ" permalink: /faq.html lang: en_US ref: faq
 <a name="faq_latestfw" />**Q:** *I am on the latest system version, is my device hackable?*  
 **A:** Yes, 11.2 is hackable using the Homebrew Launcher (SoundHax)</a> method
 
-<a name="faq_updatecfw" />**Q:** *How do I update Luma3DS?*  
-**A:** Use Luma3DS Updater
+<a name="faq_updatecfw" />**Q:** *Hvordan oppdaterer jeg Luma3DS?*  
+**A:** Bruk Luma3DS Updater
 
 <a name="faq_gatewaysky" />**Q:** *I heard about this thing I have to pay for (Gateway, Sky3DS, etc), is that something I need?*  
 **A:** No. arm9loaderhax is a superior method of loading hax that runs early in boot and opens up the opportunity for things such as true custom firmware.
