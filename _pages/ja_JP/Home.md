@@ -21,21 +21,21 @@ from stock to arm9loaderhax.
 
 [**Homebrew**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) は通常、任天堂が許可していないソフトウェアを指します。 自作ゲーム、セーブデータ改造やバックアップ、さまざまな古いゲームのエミュレータなどのソフトウェアを実行できます。
 
-In most cases, running homebrew on your console is 100% free using just the Nintendo 3DS Sound app. There are also various other exploits in commercial games and the browser to get homebrew running.
+ほとんどの場合、「ニンテンドー3DSサウンド」の脆弱性を使用するだけで、つまり100％無料で3DSでHomebrewを実行することができます。 他にも、ゲームやインターネットブラウザなどに、Homebrewを起動するための脆弱性は多く存在します。
 
-## What is Custom Firmware?
+## カスタムファームウェアとは
 
-**Custom Firmware** ("CFW") enables you to use more advanced hacks that userland homebrew can't easily do. For instance, signature patches let you install unsigned titles that appear right on your HOME Menu.
+**カスタムファームウェア** ("CFW") は、Homebrewのみでは実現し難い高度なハックを可能にします。 例えば「署名回避パッチ」は、署名のない、許可されていないソフトをHOMEメニューにインストールできます。
 
-CFW can be easily set up on any console that is on 11.2.0 (latest) or lower. Other versions can have their firmware downgraded.
+CFWは11.2.0-35 (最新) 以下の3DSで簡単に導入できます。他のバージョンでは、ファームウェアをダウングレードすることができます。
 
-## What does this guide install?
+## このガイドは何をインストールしますか？
 
-This guide has the end goal of taking a completely unmodified 3DS from stock firmware to arm9loaderhax powered Custom Firmware. On some versions, it utilizes homebrew as a stepping off point, but Custom Firmware is still the goal.
+このガイドでは、未改造の3DSを通常のファームウェアからarm9loaderhax搭載のカスタムファームウェアに変更することを最終目標としています。 いくつかのバージョンでは、Homebrewを出発点として利用していますが、最終的にカスタムファームウェアを導入します。
 
-Arm9loaderhax is the newest and best method of launching Custom Firmware that gives us nearly full control of the system only milliseconds into boot, which is similar to the effect of BootMii for the Wii.
+Arm9loaderhaxは、WiiにおけるBootMiiと似た、起動からわずか数ミリ秒のシステムをほぼ完全に制御できる、カスタムファームウェアを起動する最新かつ最良の方法です。
 
-The benefits of arm9loaderhax over other Custom Firmware launch methods are numerous, and as such it is recommended to use this guide over any other that relies on outdated software (such as menuhax or rxTools).
+他のカスタムファームウェアの起動方法に比べてarm9loaderhaxのメリットは数多くあり、古いバージョンのソフトウェア ( menuhaxやrxToolsなど) に依存する方法よりもこのガイドを使用することをお勧めします。
 
 ## What can I do with Custom Firmware?
 
