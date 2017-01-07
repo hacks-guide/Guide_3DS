@@ -1,6 +1,6 @@
 * * *
 
-title: "Decrypt9 (MSET)" permalink: /decrypt9-(mset).html lang: en ref: decrypt9-(mset)
+title: "Decrypt9 (MSET)" permalink: /decrypt9-(mset).html ref: decrypt9-(mset)
 
 * * *
 
