@@ -1,6 +1,6 @@
 * * *
 
-title: "F3X (Mac)" permalink: /f3x-(mac).html lang: en ref: f3x-(mac)
+title: "F3X (Mac)" permalink: /f3x-(mac).html ref: f3x-(mac)
 
 * * *
 
