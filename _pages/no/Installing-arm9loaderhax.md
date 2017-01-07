@@ -1,6 +1,6 @@
 * * *
 
-title: "Installing arm9loaderhax" permalink: /installing-arm9loaderhax.html lang: en ref: installing-arm9loaderhax
+title: "Installing arm9loaderhax" permalink: /installing-arm9loaderhax.html ref: installing-arm9loaderhax
 
 * * *
 
