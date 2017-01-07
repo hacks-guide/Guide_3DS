@@ -1,6 +1,6 @@
 * * *
 
-title: "DSiWare Downgrade (Save Injection and Second 3DS)" permalink: /dsiware-downgrade-(save-injection-and-second-3ds).html lang: en ref: dsiware-downgrade-(save-injection-and-second-3ds)
+title: "DSiWare Downgrade (Save Injection and Second 3DS)" permalink: /dsiware-downgrade-(save-injection-and-second-3ds).html ref: dsiware-downgrade-(save-injection-and-second-3ds)
 
 * * *
 
