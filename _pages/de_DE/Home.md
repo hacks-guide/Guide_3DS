@@ -29,7 +29,7 @@ In den meisten Fällen kannst du Homebrew auf deiner Konsole komplett kostenlos 
 
 CFW kann einfach auf jeder Konsole eingerichtet werden, die auf der Firmware 11.2.0 (neueste) oder tiefer ist. Andere Versionen können auf eine passende Version downgegraded werden.
 
-## What does this guide install?
+## Was installiert dieser Guide?
 
 This guide has the end goal of taking a completely unmodified 3DS from stock firmware to arm9loaderhax powered Custom Firmware. On some versions, it utilizes homebrew as a stepping off point, but Custom Firmware is still the goal.
 
