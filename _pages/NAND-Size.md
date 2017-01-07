@@ -18,7 +18,9 @@ The brand name refers to the manufacturer of the NAND chip in your device, **not
 **Your backup should match one of the sizes on this page; if it does not, you should delete it and make a new one!**
 {: .notice--danger}
 
-## 2DS:    
+## 2DS:  
+
+Hola
 
     + Toshiba NAND:     
       988.807.168 bytes = 943 MiB    
