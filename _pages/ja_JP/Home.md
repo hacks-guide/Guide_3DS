@@ -6,20 +6,20 @@ from stock to arm9loaderhax.
 
 * * *
 
-{% capture notice-home %} **This guide is for retail (consumer purchased; not from the Nintendo Developer Program) consoles *only*!  
-If you have a developer ("PANDA" or "SNAKE") console, check out [devGuide](https://dev.3ds.guide)** {% endcapture %}
+{% capture notice-home %} **このガイドは、一般に販売されている3DS (Nintendo Developer Programで配布されるものではない)*専用* です！  
+開発ハードウェア ("PANDA"や"SNAKE") を使用している場合、[devGuide](https://dev.3ds.guide)をご覧ください** {% endcapture %}
 
 <div class="notice--danger">{{ notice-home | markdownify }}</div>
 
-**This guide needs *your* help to seed [these](https://3ds.guide/rss.xml) torrents!** {: .notice--info}
+**このガイドでは、[これらのTorrent](https://3ds.guide/rss.xml) *をシードしていただける方*を必要としています！** {: .notice--info}
 
-**To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links in this guide, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download)** {: .notice--info}
+**このガイドの[マグネットリンク](https://en.wikipedia.org/wiki/Magnet_URI_scheme)を使用するには、[Deluge](http://dev.deluge-torrent.org/wiki/Download)のようなTorrentクライアントが必要です！** {: .notice--info}
 
-**Read all of the introductory pages before proceeding.** {: .notice--warning}
+**実践する前に、紹介されているすべてのページをお読みください。** {: .notice--warning}
 
-## What is Homebrew?
+## Homebrewとは
 
-[**Homebrew**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) usually refers to software that is not authorized by Nintendo. It allows you to run homebrew games, tools like save editing and backup, and emulators for various older systems.
+[**Homebrew**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) は通常、任天堂が許可していないソフトウェアを指します。 自作ゲーム、セーブデータ改造やバックアップ、さまざまな古いゲームのエミュレータなどのソフトウェアを実行できます。
 
 In most cases, running homebrew on your console is 100% free using just the Nintendo 3DS Sound app. There are also various other exploits in commercial games and the browser to get homebrew running.
 
