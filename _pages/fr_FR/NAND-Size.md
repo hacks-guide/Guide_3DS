@@ -12,34 +12,34 @@ Notez qu'une NAND *min size* aura toujours la plus petite taille pour économise
 
 Le nom fait référence au fabricant de la puce NAND dans votre console, **pas** votre carte SD. {: .notice--warning}
 
-**La taille de votre backup doit correspondre à une des tailles sur cette page; Si ce n'est pas le case, vous devez le supprimer en en faire un nouveau!** {: .notice--danger}
+**La taille de votre backup doit correspondre à une des tailles sur cette page. Si ce n'est pas le cas, vous devez le supprimer en en faire un nouveau !** {: .notice--danger}
 
-## 2DS:
+## 2DS :
 
     + NAND Toshiba :     
       988.807.168 octets = 943 Mio    
-    + NAND Toshiba:    
+    + NAND Toshiba :    
       1.979.711.488 octets = 1.84 Gio    
-    + NAND Samsung:    
+    + NAND Samsung :    
       1.000.341.504 octets = 954 Mio      
-    + NAND Samsung:    
+    + NAND Samsung :    
       1.300.234.240 octets = 1.21 Gio    
     
 
-## Old 3DS:
+## Old 3DS :
 
     + NAND Toshiba :     
       988.807.168 octets = 943 Mio   
-    + NAND Samsung:    
+    + NAND Samsung :    
       1.000.341.504 octets = 954 Mio    
     
 
-## New 3DS:
+## New 3DS :
 
-    + NAND Toshiba:    
+    + NAND Toshiba :    
       1.979.711.488 octets = 1.84 Gio    
     
-    + NAND Samsung:    
+    + NAND Samsung :    
       1.300.234.240 octets = 1.21 Gio    
     
     + NAND Samsung :
