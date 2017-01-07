@@ -1,6 +1,6 @@
 * * *
 
-title: "DSiWare Downgrade (App Injection and Second 3DS)" permalink: /dsiware-downgrade-(app-injection-and-second-3ds).html lang: en ref: dsiware-downgrade-(app-injection-and-second-3ds)
+title: "DSiWare Downgrade (App Injection and Second 3DS)" permalink: /dsiware-downgrade-(app-injection-and-second-3ds).html ref: dsiware-downgrade-(app-injection-and-second-3ds)
 
 * * *
 
