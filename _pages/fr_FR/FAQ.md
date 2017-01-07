@@ -13,14 +13,14 @@ title: "FAQ" permalink: /faq.html lang: en_US ref: faq
 <a name="faq_gatewaysky" />**Q:***J'ai entendu parler de ces systèmes payants (Gateway, Sky3DS, etc.), en ai-je besoin ? *  
 **A:** Non. arm9loaderhax est une méthode supérieure de chargement hax qui s’exécute au démarrage et permet d'exécuter des choses comme un custom firmware.
 
-<a name="faq_gatewaysaves" />**Q:** *How do I move saves from an existing Gateway setup to device installed games?*  
-**A:** See this</a>
+<a name="faq_gatewaysaves" />**Q :** *Comment puis-je déplacer des sauvegardes d’un Gateway vers les jeux installés sur la console ?*   
+**A:** Voir ce lien</a>
 
-<a name="faq_need" />**Q:** *What do I need to do this guide?*  
-**A:** This guide can be completely done with free software and (if you have no browser) a compatible game
+<a name="faq_need" />**Q :** *De quoi ai-je besoin pour suivre ce guide ?*   
+**A:** Ce guide peut être entièrement fait avec des logiciels gratuits et (si vous n’avez pas de navigateur) un jeu compatible
 
-<a name="faq_risky" />**Q:** *How risky is hacking my console?*  
-**A:** Bricks are now *basically* impossible unless you ignore/circumvent all safety checks.
+<a name="faq_risky" />**Q :** *À quelle point le hack de ma console est-il risqué ?*   
+**A:** Les bricks sont *à priori* impossible à moins que vous ignoriez/contourniez les différentes étapes de vérifications.
 
 <a name="faq_homebrew" />**Q:** *Can I run awesome homebrew and emulators with this?*  
 **A:** Yes! Custom Firmware not only enables the Homebrew Launcher, but it also will give you hacks on all versions, which means you keep it forever, even with updates.
