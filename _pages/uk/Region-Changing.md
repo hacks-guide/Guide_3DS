@@ -1,6 +1,6 @@
 * * *
 
-title: "Region Changing" permalink: /region-changing.html lang: en ref: region-changing
+title: "Region Changing" permalink: /region-changing.html ref: region-changing
 
 * * *
 
