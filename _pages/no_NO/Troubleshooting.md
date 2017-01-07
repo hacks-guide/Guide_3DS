@@ -33,11 +33,11 @@ If you are unable to boot your 3DS, please look for the section relevant to you,
 
 ##### Section II - Installing titles
 
-  1. Open FBI
-  2. Select "SD"
-  3. Select "cias"
-  4. Select "\<current directory>"
-  5. Select "Install and delete all CIAs"
+  1. Åpne FBI
+  2. Velg "SD"
+  3. Velg "cias"
+  4. Velg "\<current directory>"
+  5. Velg "Install and delete all CIAs"
   6. Exit with the home button
 
 ## <a name="rm_nnid" />Removing an NNID without formatting the device
