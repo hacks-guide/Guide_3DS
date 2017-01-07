@@ -28,11 +28,11 @@ title: "FAQ" permalink: /faq.html lang: en_US ref: faq
 <a name="faq_regionfree" />**Q:** *Can I use this to play games from other regions?*  
 **A:** Luma3DS supports Region Free patches, which enables users to install games from any region without any extra modification or steps.
 
-<a name="faq_updates" />**Q:** *Is it safe to update CFW SysNAND?*  
-**A:** Yes. This is safe, stop asking about it.
+<a name="faq_updates" />**Q:** *Er det trygt å oppdatere CFW SysNAND?*  
+**A:** Ja. Dette er trygt, slutt å spørre om det.
 
-<a name="faq_support" />**Q:** *Where should I go for support?*  
-**A:** For support, ask for help at #3dshacks on Rizon IRC</a> or 3DS Hacking on Discord</a>.
+<a name="faq_support" />**Q:** *Hvor bør jeg gå for brukerstøtte?*  
+**A:** For støtte, spør om hjelp på #3dshacks på Rizon IRC</a> eller 3DS Hacking på Discord</a>.
 
 <a name="faq_le4gbsd" />**Q:** *Can I do this with a 4GB (or smaller) SD card?*  
 **A:** Thanks to the new CTRNAND method, yes!
