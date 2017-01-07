@@ -40,8 +40,8 @@ title: "FAQ" permalink: /faq.html lang: en_US ref: faq
 <a name="faq_ge128gbsd" />**Q:** *Can I use a 128 GB (or larger) SD card?*  
 **A:** Yes, but some users have reported slowdowns when using such large sizes. Note that you cannot format the card with exFAT; you need to format it with FAT32.
 
-<a name="faq_movesd" />**Q:** *How do I move to a new SD card at the end of this?*  
-**A:** Just copy all the files to the new SD card.
+<a name="faq_movesd" />**Q:** *Hvordan bytter jeg til et nytt SD-kort når dette er over?*  
+**A:** Bare kopier alle filene til det nye SD-kortet.
 
 <a name="faq_NNID" />**Q:** *Can I keep my NNID?*  
 **A:** If you start with an NNID and follow every step, you will end up keeping your NNID at the end.
@@ -49,8 +49,8 @@ title: "FAQ" permalink: /faq.html lang: en_US ref: faq
 <a name="faq_systransfer" />**Q:** *What about System Transfers?*  
 **A:** Once you have completed the guide, you can system transfer to and from an arm9loaderhax'd 3DS or 2DS exactly like you would a regular stock console or EmuNAND (you will lose any non-legitimate games/themes/DLC in the transfer; saves will stay even for games that are lost).
 
-<a name="faq_nopc" />**Q:** *Can I do this without a computer (e.g. an Android phone)?*  
-**A:** All you need is the ability to put files on an SD card!
+<a name="faq_nopc" />**Q:** *Kan jeg gjøre dette uten datamaskin (eks. en Android-telefon)?*  
+**A:** Alt du trenger, er muligheten til å legge filer på et SD-kort!
 
 <a name="faq_problem" />**Q:** *Help! Something bad happened and now I cannot boot...*  
 **A:** Please look at the troubleshooting guide</a>.
