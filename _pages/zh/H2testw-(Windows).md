@@ -1,6 +1,6 @@
 * * *
 
-title: "H2testw (Windows)" permalink: /h2testw-(windows).html lang: en ref: h2testw-(windows)
+title: "H2testw (Windows)" permalink: /h2testw-(windows).html ref: h2testw-(windows)
 
 * * *
 
