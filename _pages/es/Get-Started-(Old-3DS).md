@@ -1,6 +1,6 @@
 * * *
 
-title: "Get Started (Old 3DS)" permalink: /get-started-(old-3ds).html lang: en ref: get-started-(old-3ds)
+title: "Get Started (Old 3DS)" permalink: /get-started-(old-3ds).html ref: get-started-(old-3ds)
 
 * * *
 
