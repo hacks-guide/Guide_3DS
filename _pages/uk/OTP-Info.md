@@ -1,6 +1,6 @@
 * * *
 
-title: "OTP Info" permalink: /otp-info.html lang: en ref: otp-info
+title: "OTP Info" permalink: /otp-info.html ref: otp-info
 
 * * *
 
