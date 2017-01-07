@@ -1,6 +1,6 @@
 * * *
 
-title: "Credits" permalink: /credits.html lang: en ref: credits
+title: "Credits" permalink: /credits.html ref: credits
 
 * * *
 
