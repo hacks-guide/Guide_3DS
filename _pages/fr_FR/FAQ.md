@@ -10,8 +10,8 @@ title: "FAQ" permalink: /faq.html lang: en_US ref: faq
 <a name="faq_updatecfw" />**Q:***Comment puis-je mettre à jour Luma3DS ?*  
 **A:** Utilizer Luma3DS Updater
 
-<a name="faq_gatewaysky" />**Q:** *I heard about this thing I have to pay for (Gateway, Sky3DS, etc), is that something I need?*  
-**A:** No. arm9loaderhax is a superior method of loading hax that runs early in boot and opens up the opportunity for things such as true custom firmware.
+<a name="faq_gatewaysky" />**Q:***J'ai entendu parler de cette chose que je dois payer (Gateway, Sky3DS, etc.), qui est quelque chose que j'ai besoin ? *  
+**A:** No. arm9loaderhax est une méthode supérieure de chargement hax qui s’exécute au démarrage et il ouvre la possibilité pour des choses comme le vrai firmware personnalisé.
 
 <a name="faq_gatewaysaves" />**Q:** *How do I move saves from an existing Gateway setup to device installed games?*  
 **A:** See this</a>
