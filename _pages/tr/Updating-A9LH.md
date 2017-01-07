@@ -1,6 +1,6 @@
 * * *
 
-title: "Updating A9LH" permalink: /updating-a9lh.html lang: en ref: updating-a9lh
+title: "Updating A9LH" permalink: /updating-a9lh.html ref: updating-a9lh
 
 * * *
 
