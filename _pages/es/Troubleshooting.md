@@ -1,6 +1,6 @@
 * * *
 
-title: "Troubleshooting" permalink: /troubleshooting.html lang: en ref: troubleshooting
+title: "Troubleshooting" permalink: /troubleshooting.html ref: troubleshooting
 
 * * *
 
