@@ -1,6 +1,6 @@
 * * *
 
-title: "Decrypt9 (Homebrew Launcher)" permalink: /decrypt9-(homebrew-launcher).html lang: en ref: decrypt9-(homebrew-launcher)
+title: "Decrypt9 (Homebrew Launcher)" permalink: /decrypt9-(homebrew-launcher).html ref: decrypt9-(homebrew-launcher)
 
 * * *
 
