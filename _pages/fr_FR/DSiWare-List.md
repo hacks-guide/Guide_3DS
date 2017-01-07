@@ -41,7 +41,7 @@ The size requirements are because the injected DSiWare and its hacked save must 
 
 <div class="notice">{{ notice-list | markdownify }}</div>
 
-|                                                 | Prix  | ID en 8 caractères | Région(s) |                    QR Code                     |
+|                                                 | Prix  | ID de 8 caractères | Région(s) |                    QR Code                     |
 |:-----------------------------------------------:|:-----:|:------------------:|:---------:|:----------------------------------------------:|
 |                Faceez! Monsters                 | $1.99 |      4B464D45      |    USA    | ![qrcode](images/qrcodes/000480044B464D45.png) |
 |                     Faceez                      | $1.99 |      4B465A45      |    USA    | ![qrcode](images/qrcodes/000480044B465A45.png) |
@@ -104,16 +104,16 @@ The size requirements are because the injected DSiWare and its hacked save must 
 |                Rytmik Retrobits                 | $7.99 |      4B595245      |    USA    | ![qrcode](images/qrcodes/000480044B595245.png) |
 |              Rhythm Core Alpha 2™               | $9.99 |      4B593445      |    USA    | ![qrcode](images/qrcodes/000480044B593445.png) |
 
-|                               | Price  | 8 Character ID | Region(s) |                    QR Code                     |
-|:-----------------------------:|:------:|:--------------:|:---------:|:----------------------------------------------:|
-|        Jagged Alliance        | 4,99 € |    4B4A4750    |    EUR    | ![qrcode](images/qrcodes/000480044B4A4750.png) |
-| 1001 Crystal Mazes Collection | 4,99 € |    4B4F4B50    |    EUR    | ![qrcode](images/qrcodes/000480044B4F4B50.png) |
-|       101 Dolphin Pets        | 4,99 € |    4B345A50    |    EUR    | ![qrcode](images/qrcodes/000480044B345A50.png) |
-|       Soul of Darkness        | 4,99 € |    4B534B56    |    EUR    | ![qrcode](images/qrcodes/000480044B534B56.png) |
-|          Super Swap!          | 4,99 € |    4B345750    |    EUR    | ![qrcode](images/qrcodes/000480044B345750.png) |
-|        101 Shark Pets         | 4,99 € |    4B345950    |    EUR    | ![qrcode](images/qrcodes/000480044B345950.png) |
-|       101 Pinball World       | 4,99 € |    4B494950    |    EUR    | ![qrcode](images/qrcodes/000480044B494950.png) |
-|      101 MiniGolf World       | 4,99 € |    4B584950    |    EUR    | ![qrcode](images/qrcodes/000480044B584950.png) |
+|                               |  Prix  | ID de 8 caractères | Région(s) |                    QR Code                     |
+|:-----------------------------:|:------:|:------------------:|:---------:|:----------------------------------------------:|
+|        Jagged Alliance        | 4,99 € |      4B4A4750      |    EUR    | ![qrcode](images/qrcodes/000480044B4A4750.png) |
+| 1001 Crystal Mazes Collection | 4,99 € |      4B4F4B50      |    EUR    | ![qrcode](images/qrcodes/000480044B4F4B50.png) |
+|       101 Dolphin Pets        | 4,99 € |      4B345A50      |    EUR    | ![qrcode](images/qrcodes/000480044B345A50.png) |
+|       Soul of Darkness        | 4,99 € |      4B534B56      |    EUR    | ![qrcode](images/qrcodes/000480044B534B56.png) |
+|          Super Swap!          | 4,99 € |      4B345750      |    EUR    | ![qrcode](images/qrcodes/000480044B345750.png) |
+|        101 Shark Pets         | 4,99 € |      4B345950      |    EUR    | ![qrcode](images/qrcodes/000480044B345950.png) |
+|       101 Pinball World       | 4,99 € |      4B494950      |    EUR    | ![qrcode](images/qrcodes/000480044B494950.png) |
+|      101 MiniGolf World       | 4,99 € |      4B584950      |    EUR    | ![qrcode](images/qrcodes/000480044B584950.png) |
 
 |                       | Price | 8 Character ID | Region(s) |                    QR Code                     |
 |:---------------------:|:-----:|:--------------:|:---------:|:----------------------------------------------:|
