@@ -1,6 +1,6 @@
 * * *
 
-title: "DSiWare Downgrade (Save Injection)" permalink: /dsiware-downgrade-(save-injection).html lang: en ref: dsiware-downgrade-(save-injection)
+title: "DSiWare Downgrade (Save Injection)" permalink: /dsiware-downgrade-(save-injection).html ref: dsiware-downgrade-(save-injection)
 
 * * *
 
