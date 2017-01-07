@@ -54,10 +54,10 @@ Arm9loaderhaxは、WiiにおけるBootMiiと似た、起動からわずか数ミ
 ## 始める前に知っておくべきことは何ですか？
 
 + **ガイドを始める前に、3DSを改造するリスクを知っていなければなりません。システムを変更を加える度に、回復不能な文鎮となる可能性が発生します。 文鎮化はまれですが可能性はあります、必ずすべての指示に従ってください。**
-+ If you have already hacked your 3DS before to get an EmuNAND setup, and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, you should follow all instructions and restore your existing EmuNAND when prompted once you reach [Installing arm9loaderhax](installing-arm9loaderhax).
-+ This guide will work on New 3DS, Old 3DS, and 2DS in all regions on firmware 11.2.0 or below *(except CHN / TWN)*.
-+ If everything goes according to plan, you will lose no data and end up with everything that you started with (games, NNID, saves, etc will be preserved).
-+ **Keep the device plugged in and charged throughout the entire process to avoid data loss or damage from an unexpected power-off!**
-+ Your SD card should be [MBR, not GPT](http://www.howtogeek.com/245610/) (the SD card that comes with the device will be MBR by default).
-+ If you need to format a brand new SD card, you can use [`guiformat`](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) and set to an Allocation Unit Size of 32K.
-+ The 2DS is essentially identical to the Old 3DS in terms of software, and that any steps which say "Old 3DS" also apply to 2DS.
++ 既にEmuNANDが3DSに導入されていて、以前のEmuNANDの内容を新しいSysNAND CFWに移行したい場合、あなたは全ての指示に従ってください。そして[Installing arm9loaderhax](installing-arm9loaderhax)のページで、既存のEmuNANDをSysNANDにリストアするよう促す小窓が表示されます。
++ このガイドでは、ファームウェア11.2.0以下で、全てのリージョン*(CHN / TWNを除く)*のNew 3DS、旧3DS、および2DS上で動作します。
++ すべてが計画通りに進めば、データは全く失われず、あなたが作業の前に使用していたすべてのもの (ゲーム、NNID、セーブなど) が保持されます。
++ **予期しない電源オフによるデータの損失や損傷を避けるため、作業全体を通してデバイスのプラグを差し込んだままにしておいてください！**
++ SDカードは [MBR (GPTではなく)](http://www.howtogeek.com/245610/)でフォーマットされている必要があります (3DSに付属のSDカードはデフォルトでMBRです) 。
++ SDカードをフォーマットする必要がある場合は、[`guiformat`](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm)を使用することができます。
++ + 2DSはソフトウェア面ではOld 3DSと本質的に同じであり、"Old 3DS"で行うステップは2DSにも適用されます。
