@@ -12,12 +12,12 @@ title: "Get Started" permalink: /get-started.html lang: en_US ref: get-started
 
 既に3DSにEmuNANDを導入していて、以前のEmuNANDの内容を新しいSysNAND CFWに移行したい場合、あなたは全ての指示に従い、SysNAND上で作業を行ってください。 ガイドの最後で、あなたのデータはEmuNANDから新しいA9LH環境に転送されます。 {: .notice--info}
 
-Before starting, you may want to check your SD card for errors using [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), or [F3X (Mac)](f3x-(mac))! {: .notice--warning}
+作業を開始する前に、[H2testw (Windows)](h2testw-(windows))、[F3 (Linux)](f3-(linux))、[F3X (Mac)](f3x-(mac))を使用してSDカードのエラーをチェックできます！ {: .notice--warning}
 
-|                                                         New 3DS                                                          |                                                                                    Old 3DS or 2DS                                                                                     |
+|                                                         New 3DS                                                          |                                                                                     Old 3DS / 2DS                                                                                     |
 |:------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | [![New 3DS](images/new3ds.png)](get-started-(new-3ds))   
   
-[![New 3DS XL](images/new3dsxl.png)](get-started-(new-3ds)) | [![Old 3DS](images/old3ds.png)](get-started-(old-3ds)) &nbsp;&nbsp; [![Old 3DS XL](images/old3dsxl.png)](get-started-(old-3ds))   
+[![New 3DS LL](images/new3dsxl.png)](get-started-(new-3ds)) | [![Old 3DS](images/old3ds.png)](get-started-(old-3ds)) &nbsp;&nbsp; [![Old 3DS LL](images/old3dsxl.png)](get-started-(old-3ds))   
   
 [![2DS](images/2ds.png)](get-started-(old-3ds)) |
