@@ -44,7 +44,7 @@ If you are unable to boot your 3DS, please look for the section relevant to you,
 
 #### Det du trenger
 
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/)
+* Siste utgave av [GodMode9](https://github.com/d0k3/GodMode9/releases/)
 
 #### Instruksjoner
 
@@ -64,7 +64,7 @@ This is caused by Gateway implementing a very shoddy downgrade method, which lea
 
 #### Det du trenger
 
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/)
+* Siste utgave av [GodMode9](https://github.com/d0k3/GodMode9/releases/)
 
 #### Instruksjoner
 
@@ -148,7 +148,7 @@ This is because you selected the wrong version in the steelhax installer.
   1. Make sure you do not have any folder named "Decrypt9" on **the root** of your SD card
   2. Try checking your SD card for errors using [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), or [F3X (Mac)](f3x-(mac))
   3. Try backing up your SD card files, then formatting it and copying them back
-  4. Try a different SD card
+  4. Prøv et annet SD-kort
 
 ## <a name="ts_sys_down" />Black screen on SysNAND boot
 
