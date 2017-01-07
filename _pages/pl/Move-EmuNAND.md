@@ -1,6 +1,6 @@
 * * *
 
-title: "Move EmuNAND" permalink: /move-emunand.html lang: en ref: move-emunand
+title: "Move EmuNAND" permalink: /move-emunand.html ref: move-emunand
 
 * * *
 
