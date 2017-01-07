@@ -44,16 +44,16 @@ Arm9loaderhaxは、WiiにおけるBootMiiと似た、起動からわずか数ミ
 + 自分が所有するゲームに「ROMハック」を使用する
 + ゲームプレイやアプリケーションのスクリーンショットを撮る
 + ゲームのセーブデータを[バックアップ、編集、リストア](https://gbatemp.net/threads/release-jks-savemanager-homebrew-cia-save-manager.413143/)
-+ Play games for older systems with various emulators, using RetroArch or other standalone emulators. (Works best with a New Nintendo 3DS)
-+ Install homebrew titles to your system, and have them appear on your HOME Menu
-+ Dump your game cards to a format you can install, and play them without needing the card
-+ New 3DS only: stream live gameplay to your PC wirelessly with NTR CFW
-+ Run many old Nintendo DS flash carts that were blocked long ago or never worked on Nintendo 3DS
-+ Safely update to the latest system version without fear of losing access to homebrew
++ RetroArchまたは他のエミュレータを使用して、古いハード用のゲームを遊ぶ (Newニンテンドー3DSで快適に動作)
++ 3DSにHomebrewタイトルをインストールし、HOMEメニューに表示させる
++ ゲームカードを吸い出してインストールし、カートリッジ (カセット) を必要とせずに起動
++ New 3DSのみ: NTR CFWを使い、ゲーム映像をPCに無線ストリーミングして表示
++ 本体更新によって使えなくなった、または3DSで使えた試しのない、昔のDSマジコンを起動
++ Homebrewソフトへのアクセスが失われることなく、安全に最新のシステムバージョンに更新
 
-## What do I need to know before starting?
+## 始める前に知っておくべきことは何ですか？
 
-+ **Before beginning the guide, you must know the risks of 3DS hacking: EVERY time you modify your system, there is always the potential for an UNRECOVERABLE brick. They're rare, but still a possibility so make sure you follow ALL directions EXACTLY.**
++ **ガイドを始める前に、3DSを改造するリスクを知っていなければなりません。システムを変更を加える度に、回復不能な文鎮となる可能性が発生します。 文鎮化はまれですが可能性はあります、必ずすべての指示に従ってください。**
 + If you have already hacked your 3DS before to get an EmuNAND setup, and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, you should follow all instructions and restore your existing EmuNAND when prompted once you reach [Installing arm9loaderhax](installing-arm9loaderhax).
 + This guide will work on New 3DS, Old 3DS, and 2DS in all regions on firmware 11.2.0 or below *(except CHN / TWN)*.
 + If everything goes according to plan, you will lose no data and end up with everything that you started with (games, NNID, saves, etc will be preserved).
