@@ -6,7 +6,7 @@ title: "F3X (Mac)" permalink: /f3x-(mac).html lang: en_US ref: f3x-(mac)
 
 Esta página irá guiá-lo pelo processo de verificar o seu cartão SD por erros usando o programa F3X. {: .notice}
 
-Depending on the size of your SD card and the speed of your computer, this process can take up to several hours! {: .notice--info}
+Dependendo do tamanho do seu cartão SD e da velocidade do seu computador, este processo pode levar algumas horas! {: .notice--info}
 
 This page is for Mac users only. If you are not on Mac, check out the [H2testw (windows)](h2testw-(windows)) or [F3 (Linux)](f3-(linux)) pages. {: .notice--info}
 
