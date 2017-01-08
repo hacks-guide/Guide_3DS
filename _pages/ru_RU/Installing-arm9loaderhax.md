@@ -201,7 +201,7 @@ arm9loaderhax.bin, используемый в этом гайде - испол�
 
 Можно удалить бекап из папки `/files9/`, коль уж вы сохранили его в надежном месте. {: .notice--info}
 
-{% capture notice-7 %} **You can remove any extra files and folders from the root of the SD card that are *not* in the following list:**
+{% capture notice-7 %} **Можно удалить ненужные файлы и папки из карты памяти. Важно *оставить* файлы, указанные ниже:**
 
     + 3ds
     + files9
@@ -214,10 +214,10 @@ arm9loaderhax.bin, используемый в этом гайде - испол�
 
 {% endcapture %}
 
-<div class="notice--info">{{ notice-7 | markdownify }}</div>
+<div class="notice--info">{ notice-7 | markdownify }</div>
 
-For information on changing your device to another region, check out the [Region Changing](region-changing) page. {: .notice--success}
+Если вы хотите сменить регион вашего устройства, вам сюда - [Смена региона](region-changing). {: .notice--success}
 
-For information on keeping your A9LH installation up to date, check out the [Updating A9LH](updating-a9lh) page. {: .notice--success}
+Для того, чтобы держать свой a9lh в актуальном состоянии, следуйте этой инструкции - [Обновление A9LH](updating-a9lh). {: .notice--success}
 
-For information on using Luma3DS's various features, check out [its wiki](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage). {: .notice--success}
++ Рекомендую ознакомиться с различными фишками, которые умеет Luma3DS [в официальной wiki](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage). {: .notice--success}
