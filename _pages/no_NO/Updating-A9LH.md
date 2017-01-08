@@ -33,34 +33,34 @@ These steps will also update your various payloads and the AES key database. {: 
 
 ##### Section I - Prep work
 
-  1. Delete any existing `aeskeydb.bin` from the root of your SD card
-  2. Delete the `a9lh` folder from the root of your SD card if it exists
-  3. Copy `aeskeydb.bin` to the `/files9/` folder on your SD card
-  4. Copy `Hourglass9.bin` from the Hourglass9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `Hourglass9.bin` to `start_Hourglass9.bin`
-  5. Copy `arm9loaderhax.bin` from the SafeA9LHInstaller `.zip` to the `/luma/payloads/` folder on your SD card
-  6. Rename `arm9loaderhax.bin` in `/luma/payloads/` to `down_safea9lhinstaller.bin`
-  7. Copy the `a9lh` folder from `data_input_v4.zip` to the root of your SD Card
-  8. Copy *the contents of* the arm9loaderhax `.zip` to `a9lh` folder on your SD card
-  9. Copy `arm9loaderhax.bin` from the Luma3DS `.zip` to the root of your SD card, overwrite existing files
- 10. Reinsert your SD card into your 3DS
+  1. Slett alle eksisterende `aeskeydb.bin` fra roten av SD-kortet
+  2. Slett `a9lh` mappen fra roten av SD-kortet
+  3. Kopier `aeskeydb.bin` til `/files9/` mappen på SD-kortet
+  4. Kopier `Hourglass9.bin` fra Hourglass9 `.zip` til `/luma/payloads/` mappen på SD-kortet, og endre navnet på `Hourglass9.bin` til `start_Hourglass9.bin`
+  5. Kopier `arm9loaderhax.bin` fra SafeA9LHInstaller `.zip` til `/luma/payloads/` mappen på SD-kortet
+  6. Endre navnet på filen `arm9loaderhax.bin` i `/luma/payloads/` til `down_safea9lhinstaller.bin`
+  7. Kopier `a9lh` mappen fra `data_input_v4.zip` til roten av SD-kortet
+  8. Kopier *innholdet av* arm9loaderhax `.zip` til `a9lh` mappen på SD-kortet
+  9. Kopier `arm9loaderhax.bin` fra Luma3DS `.zip` til roten av SD-kortet, og erstatter eksisterende filer
+ 10. Sett inn SD-kortet i konsollen
 
 ##### Section II - Payload update
 
-  1. Boot the device while holding D-Pad down
+  1. Hold (Ned)-knappen og start konsollen
   2. Trykk (Select) for å oppdatere arm9loaderhax
-  3. Power off the device and put your SD card back in your computer
+  3. Slå av enheten, og sett inn SD-kortet i datamaskinen
   4. Slett `a9lh` mappen i fra roten av SD-kortet
   5. Slett `down_safea9lhinstaller.bin` fra `/luma/payloads/`
 
 ##### Section III - Configuring Luma3DS
 
-  1. Reinsert your SD card into your 3DS and boot holding (Select)
-  2. Use the (A) button and the D-Pad to turn on the following:  
+  1. Sett SD-kortet inn i konsollen, hold (Select) og slå konsollen på
+  2. Bruk (A)-knappen og piltastene for å aktivere følgende:  
     * **"Autoboot SysNAND"**
     * **"Use SysNAND FIRM if booting with R"**
     * **"Show NAND or user string in System Settings"**
   3. Hvis du bruker en **New 3DS**, bør du *også* aktivere følgende: 
-    * **"New 3DS CPU" to "Clock+L2(x)"**
+    * **"New 3DS CPU" til "Clock+L2(x)"**
     * Dette vil øke ytelsen i mange spill, men kan også skape ustabilitet i andre
     * Hvis noen spill ikke fungerer som de skal, deaktiver dette alternativet å prøv igjen
   4. Trykk (Start) for å lagre og starte på nytt
@@ -69,7 +69,7 @@ These steps will also update your various payloads and the AES key database. {: 
 
   1. Åpne FBI
   2. Velg "SD"
-  3. Navigate to `arm9loaderhax.bin`, then press (A) on it and select the "Copy" option
+  3. Gå til `arm9loaderhax.bin`, deretter trykk (A) og velg "Copy"
   4. Gå tilbake til hovedmenyen for FBI med (B)
   5. Velg "CTR NAND"
   6. Velg "\<current directory>"
@@ -77,7 +77,7 @@ These steps will also update your various payloads and the AES key database. {: 
   8. Avslutt med hjem-knappen
   9. Skru av konsollen, og ta ut SD-kortet
  10. Hold (Select), og start konsollen uten SD-kortet 
-    * Booting the device at least once with the SD card removed will allow you to configure the CTRNAND based luma installation
+    * Å starte konsollen minst en gang uten SD-kortet, lar deg konfigurere den CTRNAND-baserte Luma installasjonen
  11. Bruk (A)-knappen og piltastene for å aktivere følgende:  
     * **"Show NAND or user string in System Settings"**
  12. Hvis du bruker en **New 3DS**, bør du *også* aktivere følgende: 
