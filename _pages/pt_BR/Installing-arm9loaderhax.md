@@ -6,7 +6,7 @@ title: "Installing arm9loaderhax" permalink: /installing-arm9loaderhax.html lang
 
 O passo final deste guia é instalar o arm9loaderhax e configurar o Luma3DS para correr em apenas alguns milisegundos, quando liga a consola. Para isso, vamos utilizar o SafeA9LHInstaller, pelo [AuroraWright](https://github.com/AuroraWright/). {: .notice}
 
-This will install [AuroraWright's Fork](https://github.com/AuroraWright/arm9loaderhax) of arm9loaderhax. {: .notice--info}
+Isto irá instalar o [Fork de AuroraWright](https://github.com/AuroraWright/arm9loaderhax) do arm9loaderhax. {: .notice--info}
 
 We will also setup the ability to launch payloads from arm9loaderhax, giving us the ability to unbrick our SysNAND from situations that would normally brick us by restoring from backup. {: .notice--info}
 
@@ -118,7 +118,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
 
   1. Open Hourglass9 from arm9loaderhax by holding (Start) on boot
   2. Go to "SysNAND Backup/Restore"
-  3. Restore from `NANDmin.bin`
+  3. Go to "SysNAND Restore (keep a9lh)" and restore from `NANDmin.bin`
   4. Press (Start) to reboot 
     * If you get a black screen, [follow 9.2.0 ctrtransfer](9.2.0-ctrtransfer)
   5. If your backup was of a version between 3.0.0 and 4.5.0, your console will not boot until you manually download the required firmware: 
