@@ -31,7 +31,7 @@ These steps will also update your various payloads and the AES key database. {: 
 
 **For all of these instructions, OVERWRITE any existing files on your SD card.**
 
-##### Section I - Prep work
+##### Seksjon I - Forarbeid
 
   1. Slett alle eksisterende `aeskeydb.bin` fra roten av SD-kortet
   2. Slett `a9lh` mappen fra roten av SD-kortet
@@ -44,7 +44,7 @@ These steps will also update your various payloads and the AES key database. {: 
   9. Kopier `arm9loaderhax.bin` fra Luma3DS `.zip` til roten av SD-kortet, og erstatter eksisterende filer
  10. Sett inn SD-kortet i konsollen
 
-##### Section II - Payload update
+##### Seksjon II - Oppdatering av nyttelast "Payload"
 
   1. Hold (Ned)-knappen og start konsollen
   2. Trykk (Select) for å oppdatere arm9loaderhax
@@ -52,7 +52,7 @@ These steps will also update your various payloads and the AES key database. {: 
   4. Slett `a9lh` mappen i fra roten av SD-kortet
   5. Slett `down_safea9lhinstaller.bin` fra `/luma/payloads/`
 
-##### Section III - Configuring Luma3DS
+##### Seksjon III - Konfigurering av Luma3DS
 
   1. Sett SD-kortet inn i konsollen, hold (Select) og slå konsollen på
   2. Bruk (A)-knappen og piltastene for å aktivere følgende:  
@@ -65,7 +65,7 @@ These steps will also update your various payloads and the AES key database. {: 
     * Hvis noen spill ikke fungerer som de skal, deaktiver dette alternativet å prøv igjen
   4. Trykk (Start) for å lagre og starte på nytt
 
-##### Section IV - CTRNAND Luma3DS
+##### Seksjon IV - CTRNAND Luma3DS
 
   1. Åpne FBI
   2. Velg "SD"
