@@ -23,17 +23,17 @@ The device version can be found at the bottom right of the top screen of the Sys
 <table>
   <thead>
     <tr>
-      <th style="text-align: center">From</th>
-      <th style="text-align: center">To</th>
-      <th style="text-align: center">No Browser</th>
-      <th style="text-align: center">Browser</th>
+      <th style="text-align: center">De</th>
+      <th style="text-align: center">À</th>
+      <th style="text-align: center">Aucun navigateur</th>
+      <th style="text-align: center">Navigateur</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align: center">8.1.0</td>
       <td style="text-align: center">8.1.0</td>
-      <td style="text-align: center" colspan="2"><a href="ntr-and-cubic-ninja">NTR and Cubic Ninja</a></td>
+      <td style="text-align: center" colspan="2"><a href="ntr-and-cubic-ninja">NTR et Cubic Ninja</a></td>
     </tr>
     <tr>
       <td style="text-align: center">9.0.0</td>
