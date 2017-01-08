@@ -25,13 +25,13 @@ title: "NTR and Cubic Ninja" permalink: /ntr-and-cubic-ninja.html lang: en_US re
 ##### Часть I - Подготовка
 
   1. Установите WAMP в папку по умолчанию
-  2. Copy the contents of `3ds-private-update-server.zip` to `C:\wamp\www` (overwrite existing files)
-  3. Copy `update.php` to `C:\wamp\www` (overwrite existing files)
-  4. Copy the `updates` folder from the 9.2.0 downgrade `.zip` to `C:\wamp\www`
-  5. Move `node.exe` to `C:\wamp\www\updates`
-  6. Move `C:\wamp\www\CdnCiaUnpack.js` to `C:\wamp\www\updates`
-  7. In the `C:\wamp\www\updates` directory, drag `CdnCiaUnpack.js` onto `node.exe` to create `GetSystemUpdate.partial.xml`
-  8. Move `node.exe` and `CdnCiaUnpack.js` back to `C:\wamp\www`
+  2. Скопируйте содержимое `3ds-private-update-server.zip` в папку `C:\wamp\www` (соглашайтесь на замену)
+  3. Скопируйте `update.php` в `C:\wamp\www` (соглашайтесь на замену)
+  4. Скопируйте папку `updates` из `.zip`-архива с пакетом обновления 9.2.0 в папку `C:\wamp\www`
+  5. Переместите `node.exe` в папку `C:\wamp\www\updates`
+  6. Переместите `C:\wamp\www\CdnCiaUnpack.js` в папку `C:\wamp\www\updates`
+  7. В папке `C:\wamp\www\updates` перетащите файл `CdnCiaUnpack.js` на `node.exe`, чтобы создать `GetSystemUpdate.partial.xml`
+  8. Переместите `node.exe` и `CdnCiaUnpack.js` обратно в папку `C:\wamp\www`
   9. Copy `GetSystemUpdate.partial.xml` to `C:\wamp\www` (so that a copy of it exists in both `C:\wamp\www\updates` and `C:\wamp\www`)
  10. Click the WAMP icon in your system tray, then click "Put Online"
  11. Use the command "ipconfig" in CMD to get your computer's IPv4 Address, you will need it soon
