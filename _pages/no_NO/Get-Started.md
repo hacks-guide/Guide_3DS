@@ -12,7 +12,7 @@ Different device models, versions, and regions will require different steps to a
 
 If you have already hacked your 3DS before and have an EmuNAND based CFW setup, just follow all instructions while on SysNAND. Your data will be transfered from EmuNAND to your new A9LH install at the end. {: .notice--info}
 
-Before starting, you may want to check your SD card for errors using [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), or [F3X (Mac)](f3x-(mac))! {: .notice--warning}
+Før du starter, kan du sjekke SD-kortet for feil ved hjelp av [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), eller [F3X (Mac)](f3x-(mac))! {: .notice--warning}
 
 |                                                         New 3DS                                                          |                                                                                   Old 3DS eller 2DS                                                                                   |
 |:------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
