@@ -4,7 +4,7 @@ title: "Get Started (Old 3DS)" permalink: /get-started-(old-3ds).html lang: en_U
 
 * * *
 
-Select the appropriate page for your version from the chart below. {: .notice--primary}
+Selecciona la pagina apropiada para tu version en la tabla de abajo. {: .notice--primary}
 
 {% capture notice-1 %} The first two columns of the chart refer to the last number of your version (which corresponds to the browser version installed to the system). If the version is -0 then you do not have a browser, while any number above -0 indicates a browser is installed.
 
