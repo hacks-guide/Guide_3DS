@@ -16,7 +16,7 @@ SoundHax é compatível com as versões 9.0.0 até à 11.2.0 nas regiões EUR, J
 
 #### Instruções
 
-  1. Copy *the contents of* the `starter.zip` to the root of your SD card
+  1. Copies *os conteúdos do* ficheiro `starter.zip` para a raíz do seu cartão SD
   2. Copy the SoundHax `.m4a` to the root of your SD card
   3. Copy the otherapp payload to the root of your SD card and rename it to `otherapp.bin`
   4. Reinsert your SD card into your 3DS
