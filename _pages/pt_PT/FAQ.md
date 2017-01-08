@@ -4,8 +4,8 @@ title: "FAQ" permalink: /faq.html lang: en_US ref: faq
 
 * * *
 
-<a name="faq_latestfw" />**Q:** *I am on the latest system version, is my device hackable?*  
-**A:** Yes, 11.2 is hackable using the Homebrew Launcher (SoundHax)</a> method
+<a name="faq_latestfw" />**P:***A minha consola está na última versão, é possível hackear?*  
+**R:**Sim, a versão 11.2 é hackeável ao utilizar o método Homebrew Launcher (SoundHax)</a>
 
 <a name="faq_updatecfw" />**Q:** *How do I update Luma3DS?*  
 **A:** Use Luma3DS Updater
