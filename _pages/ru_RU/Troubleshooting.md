@@ -173,33 +173,33 @@ title: "Troubleshooting" permalink: /troubleshooting.html lang: en_US ref: troub
       4. Зайдя в режим восстановления, обновите свою 3DS.
   5. Может быть брик. За поддержкой обращайтесь на [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) или на [3DS Hacking on Discord](https://discord.gg/MWxPgEp).
 
-## <a name="ts_sys_a9lh" />Black screen on SysNAND boot after installing arm9loaderhax
+## <a name="ts_sys_a9lh" />Черный экран при загрузке SysNAND после установки a9lh
 
-  1. Ensure you have a working payload. 
-      1. Check for the existence of `arm9loaderhax.bin` in the root of your SD card.
-  2. Try resetting Luma's config and fix options 
-      1. Delete `/luma/config.bin` from your SD card
-      2. Set your options when it boots
-  3. Test booting Hourglass9 
-      1. On Luma3DS, hold (Start) on boot
-  4. Try deleting home menu's extdata 
-      1. Clear Home Menu's extdata by navigating to the following folder on your SD card: `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/` 
-        * EUR Region: Delete `00000098`
-        * JPN Region: Delete `00000082`
-        * USA Region: Delete `0000008f`
-        * KOR Region: Delete `000000A9`
-  5. Try booting without any cartridges inserted (including flashcarts)
-  6. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version (v6.2.3 or higher, at the least)
-  7. If your NAND is of a version between 3.0.0 and 4.5.0, do the following: 
-    * Ensure that you are using the latest Luma3DS version (v6.6 or higher, at the least)
-    * Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) and rename it to `firmware.bin`
-    * Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
-    * Copy `firmware.bin` and `cetk` to the `/luma/` folder on your SD card
-    * Delete both of these files after updating your 3DS
-  8. Try following [9.2.0 ctrtransfer](9.2.0-ctrtransfer)
-  9. Ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [3DS Hacking on Discord](https://discord.gg/MWxPgEp).
+  1. Убедитесь, что у вас установлен рабочий загрузчик 
+      1. Проверьте, есть ли в корне КП файл `arm9loaderhax.bin`. Если нет, скопируйте его из архива с Luma3DS.
+  2. Попробуйте сбросить настройки Luma 
+      1. Удалите файл `/luma/config.bin` с карты памяти приставки;
+      2. Заново настройте Luma после запуска.
+  3. Проверьте, грузится ли Hourglass9 
+      1. Выключите приставку, зажмите (START) и включите.
+  4. Попробуйте отчистить данные Домашнего экрана 
+      1. Удалите папку, соответствующую вашей системе и региону, в папке `/Nintendo 3DS/(32-х значный ID)/(32-х значный ID)/extdata/00000000/` 
+        * EUR регион: Удалите `00000098`
+        * JPN регион: Удалите `00000082`
+        * USA регион: Удалите `0000008f`
+        * KOR регион: Удалите `000000A9`
+  5. Попробуйте загрузиться без картриджа (совсем).
+  6. Если вы даунгрейдились через Gateway, то убедитесь, что у вас установлена самая последняя версия Luma3DS (не ниже, чем 6.2.3).
+  7. Если версия вашего NAND между 3.0.0 и 4.5.0, проделайте следующие действия: 
+    * Убедитесь, что используете самую свежую версию Luma 3DS (6.6, или выше)
+    * Скачайте [этот файл](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) и переименуйте его в `firmware.bin`;
+    * Скачайте [этот файл](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk);
+    * Скопируйте `firmware.bin` и `cetk` в папку `/luma/` на карте памяти;
+    * После обновления прошивки на 3DS удалите оба этих файла.
+  8. Попробуйте выполнить [9.2.0 ctrtransfer](9.2.0-ctrtransfer).
+  9. Попросите помощи на [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) или в [3DS Hacking on Discord](https://discord.gg/MWxPgEp).
 
-## <a name="ts_sys_blue" />Blue screen on boot (bootrom error)
+## <a name="ts_sys_blue" />Голубой экран при загрузке (bootrom error)
 
-  1. Your 3DS is bricked
-  2. You will need to get a [hardmod](https://gbatemp.net/threads/414498/) or repair / replace the device
+  1. У вас брик.
+  2. Восстановиться может помочь [хардмод](https://gbatemp.net/threads/414498/) или ремонт / замена устройства.
