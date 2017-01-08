@@ -69,36 +69,36 @@ NNID из исходной 3DS будет находится в целевой 3
 
   1. Создайте папку `files9` в корне карты памяти **исходной 3DS**, если таковой не имеется.
   2. Скопируйте `GodMode9.bin` из `zip-архива` GodMode9 в папку `/luma/payloads/` в корне КП **исходной 3DS** и переименуйте `GodMode9.bin` в `up_GodMode9.bin`.
-  3. Copy the `.app` from DSiWare injection `.zip` to the root of **the source 3DS**'s SD card
-  4. Copy `savedata` folder from DSiWare injection `.zip` to the root of **the source 3DS**'s SD card
-  5. Reinsert **the source 3DS**'s SD card
-  6. On **the source 3DS**, hold Start on boot to launch Hourglass9
-  7. Go to SysNAND Options, then SysNAND Backup/Restore, then backup **(min size)** SysNAND to `NANDmin.bin`
-  8. Press (Select) on the main menu to eject **the source 3DS**'s SD card, then put it in your computer
-  9. Copy `NANDmin.bin` and `NANDmin.bin.sha` from the `/files9/` folder on your SD card to a safe location 
-  * Make backups in multiple locations
-  * This backup will save you from a brick if anything goes wrong in the future
-  * **Your backup should match one of the sizes on [this](nand-size) page; if it does not, you should delete it and make a new one!**
- 10. Put **the target 3DS**'s SD card into your computer
- 11. **Backup every file on both 3DS's SD cards to two separate folders on your computer (keep track of which is which)!**
- 12. Reinsert each SD card back into their corresponding 3DS
- 13. Press (Start) to reboot
+  3. Скопируйте `.app` из `zip-архива` с эксплойтом для инжекта, соответствующего региону консоли в корень КП **исходной 3DS**.
+  4. Скопируйте папку `savedata` из `zip-архива` с файлами для инжекта DSiWare в корень КП **исходной 3DS**.
+  5. Вставьте карту памяти в **исходную 3DS**.
+  6. На **исходной 3DS** удерживайте (START) во время загрузки приставки, чтобы попасть в Hourglass9.
+  7. Перейдите в SysNAND Options, SysNAND Backup/Restore, затем сделайте бекап **(min size)** SysNAND в `NANDmin.bin`.
+  8. Нажмите (SELECT) в главном меню, чтобы извлечь КП из **исходной 3DS**, а затем вставьте ее в ПК.
+  9. Скопируйте `NANDmin.bin` и `NANDmin.bin.sha` из папки `/files9/` на карте памяти в надежное место 
+  * Сделайте копии в нескольких местах или в облачном хранилище;
+  * Этот бекап может спасти вам консоль, если что-то пойдет не так;
+  * **Убедитесь, что размер вашего бекапа соответствует размеру указанному на [этой](nand-size) странице; если это не так, удалите бекап и создайте его заново!**
+ 10. Вставьте карту памяти из **целевой 3DS** в компьютер.
+ 11. **Сохраните файлы с обеих карт памяти в разные папки на компьютере (назовите папки таким образом, чтобы понимать какие файлы откуда)!**
+ 12. Верните обе карты памяти на места (не перепутайте).
+ 13. Нажмите (START) для перезагрузки.
 
-##### Section II - Backup DSiWare
+##### Часть II - Резервное копирование DsiWare
 
-After completing the entire guide, you can use this backup to restore your DSiWare saves by deleting the DSiWare from your System Memory and copying it from your SD Card. {: .notice--info}
+После того, как вы окончите выполнение инструкций, созданная в этой части резервная копия может быть использована для восстановления сохранений DSiWare-игр. Удалите DSiWare-игры из системной памяти и восстановите их же из карты памяти. {: .notice--info}
 
-This backup can only be used on this NAND. If you format your 3DS or restore another NAND (specifically if `movable.sed` is ever modified), it will become unusable. {: .notice--info}
+Сделанный бекап может быть использован только на том NAND, на котором был создан. Если вы отформатируете 3DS, или восстановите другой NAND, (особенно если `movable.sed` был изменен), резервная копия станет бесполезной. {: .notice--info}
 
-  1. Go to System Settings, then "Data Management", then "DSiWare" on **the source 3DS**
-  2. Copy any DSiWare games that are already on the SD Card back to the System Memory
-  3. Copy the DSiWare game you intend to use to the SD Card
-  4. Exit System Settings
+  1. Перейдите в "Системные настройки" (System Settings), "Управление данными" (Data Management), "DSiWare" на **исходной 3DS**.
+  2. Скопируйте все DSiWare-игры , которые уже есть на КП в системную память.
+  3. Скопируйте DSiWare-игру, которую планируете использовать, на карту памяти.
+  4. Покиньте системное меню.
 
-##### Section III - Injecting the game and save
+##### Часть III - Установка сохранения
 
-  1. Open GodMode9 from arm9loaderhax by holding (Up) during boot
-  2. Navigate to `SDCARD`
+  1. Запустите GodMode9 из под arm9loaderhax, удерживая (ВВЕРХ) во время загрузки.
+  2. Выберите пункт `SDCARD`.
   3. Press (Y) on the DSiWare injection `.app` to copy it
   4. Press (B) to go back to the main menu
   5. Navigate to `SYSNAND TWLN` -> `title` -> `00030004` -> `(8 Character ID)` 
