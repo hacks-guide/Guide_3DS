@@ -6,18 +6,18 @@ from stock to arm9loaderhax.
 
 * * *
 
-{% capture notice-home %} **This guide is for retail (consumer purchased; not from the Nintendo Developer Program) consoles *only*!  
-If you have a developer ("PANDA" or "SNAKE") console, check out [devGuide](https://dev.3ds.guide)** {% endcapture %}
+{% capture notice-home %} **Это руководство применимо *только* для консолей, продающихся в рознице.  
+Приставки, выдававшиеся по программе разработчиков Nintendo невозможно прошить по этому гайду. Воспользуйтесь [этой инструкцией](https://dev.3ds.guide), если у вас версия для разработчиков ("PANDA" или "SNAKE").** {% endcapture %}
 
-<div class="notice--danger">{{ notice-home | markdownify }}</div>
+<div class="notice--danger">{ notice-home | markdownify }</div>
 
-**This guide needs *your* help to seed [these](https://3ds.guide/rss.xml) torrents!** {: .notice--info}
+**Гайду необходима *ваша* помощь. Пожалуйста помогите просидировать [эти](https://3ds.guide/rss.xml) файлы!** {: .notice--info}
 
-**To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links in this guide, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download)** {: .notice--info}
+**Для использования [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme)-ссылок нужен torrent-клиент. Рекомендуемый клиент - [Deluge](http://dev.deluge-torrent.org/wiki/Download)** {: .notice--info}
 
-**Read all of the introductory pages before proceeding.** {: .notice--warning}
+**Перед началом работ следует прочитать инструкцию полностью, чтобы осознать весь фронт работ.** {: .notice--warning}
 
-## What is Homebrew?
+## Что такое Homebrew?
 
 [**Homebrew**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) usually refers to software that is not authorized by Nintendo. It allows you to run homebrew games, tools like save editing and backup, and emulators for various older systems.
 
