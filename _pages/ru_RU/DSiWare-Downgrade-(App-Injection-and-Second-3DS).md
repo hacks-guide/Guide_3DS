@@ -204,24 +204,24 @@ NNID из исходной 3DS будет находится в целевой 3
 
 **НЕ понижайте прошивку с помощью dgTool на приставках с установленным arm9loaderhax. Это гарантированно приведет к брику!**
 
-  1. Launch your DSiWare game on **the target 3DS**
-  2. Launch dgTool by starting your DSiWare game
-  3. Select "Downgrade FIRM to 10.4" and confirm to flash the 10.4.0 NFIRM bin to **the target 3DS**
-  4. Exit dgTool 
-  * You may have to force power off by holding the power button
-  5. Reboot
+  1. Запустите установленную DSiWare игру на **целевой 3DS**.
+  2. Запустите dgTool, используя установленную DSiWare-игру.
+  3. Выберите "Downgrade FIRM to 10.4" и подтвердите установку файлов прошивки 10.4.0 в **целевую 3DS**.
+  4. Закройте dgTool 
+  * При необходимости выключите приставку, удерживая кнопку питания.
+  5. Перезагрузите приставку.
 
-##### Section IX - Exploit verification
+##### Часть IX - Проверка эксплойта
 
-  1. Copy and merge the `3ds` folder from the 3DSident `.zip` to **the target 3DS**'s SD card
-  2. Reinsert your SD card into **the target 3DS**
-  3. Launch the homebrew launcher on **the target 3DS** using your entrypoint
-  4. Launch 3DSident
-  5. Verify that the following: 
+  1. Скопируйте и объедините папку `3ds` из `zip-архива` 3DSident в корень карты памяти **целевой 3DS**.
+  2. Верните карту памяти назад в **целевую 3DS**.
+  3. Запустите Homebrew launcher на **целевой 3DS** используя удобную для вас точку входа.
+  4. Запустите 3DSident.
+  5. Убедитесь, что в программе следующие значения совпадают: 
   * **Kernel version**: 2.50-11
   * **FIRM version**: 2.50-11
-  * If either of these do not display the versions above, make sure you used the correct NFIRM zip and try flashing NFIRM again
+  * Если у вас отображаются другие значения, значит вы где-то допустили ошибку. Проделайте все с самого начала. В первую очередь убедитесь, что использовали верные архивы с NFIRM. Попробуйте прошить NFIRM повторно.
 
-**The target 3DS**'s version number will *not* have changed in the settings. {: .notice--info}
+Версия прошивки, указанная в настройках **целевой 3DS** *не* изменится. {: .notice--info}
 
-Continue to [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher)) {: .notice--primary}
+Переходите к запуску [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher)).
