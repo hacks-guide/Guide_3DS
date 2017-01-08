@@ -17,7 +17,7 @@ Esta página é apenas para utilizadores de Windows. Se não tiver Windows, veja
 #### Instruções
 
   1. Copie o ficheiro `h2testw.exe` do h2testw `.zip` para o seu ambiente de trabalho
-  2. Insert your SD card into your computer
+  2. Insira o seu cartão SD no computador
   3. Run `h2tsetw.exe`
   4. Selecione "English"
   5. Click "Select target"
