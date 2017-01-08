@@ -11,8 +11,8 @@ SoundHax is compatible with versions 9.0.0 through 11.2.0 in the EUR, JPN, KOR, 
 #### Ce dont vous aurez besoin
 
 + La dernière version du [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
-+ The latest release of [SoundHax](http://soundhax.com/) *(for your device and region)*
-+ The [otherapp payload](https://smealum.github.io/3ds/#otherapp) *(for your version and region)*
++ La dernière version de [SoundHax](http://soundhax.com/) *(correspondant à votre console et région)*
++ Le [payload otherapp](https://smealum.github.io/3ds/#otherapp) *(correspondant à votre console et région)*
 
 #### Instructions
 
