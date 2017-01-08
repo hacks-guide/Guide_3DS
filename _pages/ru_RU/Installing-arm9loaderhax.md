@@ -120,17 +120,17 @@ arm9loaderhax.bin, используемый в этом гайде - испол�
   2. Перейдите в "SysNAND Backup/Restore".
   3. Восстановитесь из `NANDmin.bin`.
   4. Нажмите (START) для перезагрузки 
-    * If you get a black screen, [follow 9.2.0 ctrtransfer](9.2.0-ctrtransfer)
-  5. If your backup was of a version between 3.0.0 and 4.5.0, your console will not boot until you manually download the required firmware: 
-    * Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) and rename it to `firmware.bin`
-    * Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
-    * Copy `firmware.bin` and `cetk` to the `/luma/` folder on your SD card
-    * Delete both of these files after updating your 3DS
-  6. Update your 3DS by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update" 
-    * Updates while using A9LH + Luma (what you have) are safe, stop asking about it
-    * The warning about never updating a New 3DS from 2.1.0 does not apply after restoring your NAND backup.
-    * If this gives you an error, set your DNS settings to "auto"
-    * If this still gives you an error and your NAND is below 9.2.0, [follow 9.2.0 ctrtransfer](9.2.0-ctrtransfer)
+    * Если после запуска экран черный, то выполняйте инструкции из раздела [9.2.0 ctrtransfer](9.2.0-ctrtransfer).
+  5. Если ваш бекап был сделан на прошивках от 3.0.0 до 4.5.0, консоль не запустится до тех пор, пока вы вручную не выкачаете нужные файлы прошивки: 
+    * Скачайте [этот файл](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) и переименуйте его в `firmware.bin`;
+    * Скачайте [этот файл](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk);
+    * Скопируйте `firmware.bin` и `cetk` в папку `/luma/` на карте памяти;
+    * После обновления прошивки на 3DS удалите оба этих файла.
+  6. Обновите прошивку 3DS, вне зависимости от того делали ли вы это давно, или всего шаг назад. Для этого зайдите в Системные настройки, "Прочие настройки" (Other Settings), листайте вправо до тех пор, пока не дойдете до предпоследнего пункта - Обновление ("System Update"). 
+    * Да, это безопасно. Обновление при установленной связке A9LH + Luma безопасно. Прекращайте переспрашивать;
+    * Предупреждение о том, что нельзя обновлять прошивку на New 3DS будучи на прошивке с версией 2.1.0, не действует после восстановления бекапа;
+    * Если выскочит ошибка, поставьте в настройках подключения, в настройках DNS "Получить DNS автоматически" в положение "Да";
+    * Если выскакивает ошибка и версия вашей прошивки ниже 9.2.0, [выполните 9.2.0 ctrtransfer](9.2.0-ctrtransfer);
 
 ##### Section V - Injecting FBI
 
