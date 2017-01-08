@@ -25,7 +25,7 @@ title: "FAQ" permalink: /faq.html lang: en_US ref: faq
 <a name="faq_homebrew" />**F:** *Kann ich coole Homebrews und Emulatoren damit abspielen?*  
 **A:** Ja! Custom Firmware aktiviert nicht nur den Homebrew Launcher, sondern gibt dir auch Hacks auf allen Versionen. Das heißt, dass du sie für immer behalten kannst, selbst wenn du updatest.
 
-<a name="faq_regionfree" />**Q:***Kann ich Spiele aus anderen Regionen hiermit spielen?*  
+<a name="faq_regionfree" />**F:***Kann ich Spiele aus anderen Regionen hiermit spielen?*  
 **A:** Luma3DS besitzt "Region Free Patches", welche dir erlauben, ohne weitere Umstände, Spiele zu installieren, welche aus anderen Regionen kommen.
 
 <a name="faq_updates" />**F:** *Ist es sicher CFW SysNAND zu updaten?*  
@@ -46,8 +46,8 @@ title: "FAQ" permalink: /faq.html lang: en_US ref: faq
 <a name="faq_NNID" />**F:** *Behalte ich meine NNID?*  
 **A:** Wenn du mit einer NNID startest und jeden Schritt befolgst, wirst du am Ende deine NNID behalten.
 
-<a name="faq_systransfer" />**Q:** *What about System Transfers?*  
-**A:** Once you have completed the guide, you can system transfer to and from an arm9loaderhax'd 3DS or 2DS exactly like you would a regular stock console or EmuNAND (you will lose any non-legitimate games/themes/DLC in the transfer; saves will stay even for games that are lost).
+<a name="faq_systransfer" />**F:** * Was ist mit System Transfers?*  
+**A:** Sobald du die Anleitung abgeschlossen hast, kannst du dein System von und zu arm9loaderhax'd 3DS oder 2DS transfieren, wie du es mit einer regulären Konsole oder EmuNAND machen würdest (beachte, dass du alle unlegitimen Spiele/Themen/DLC in dem Transfer verlieren wirst; Speicherstände werden selbst für Spiele, welche verloren gegangen sind, erhalten bleiben).
 
 <a name="faq_nopc" />**F:** *Kann ich das hier auch ohne einen Computer machen (zum Beispiel mit einem Android Smartphone)?*  
 **A:** Alles was du brauchst ist eine Möglichkeit Dateien auf eine SD Karte zu speichern!
