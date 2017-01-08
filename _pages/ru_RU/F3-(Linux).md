@@ -4,25 +4,25 @@ title: "F3 (Linux)" permalink: /f3-(linux).html lang: en_US ref: f3-(linux)
 
 * * *
 
-This page will walk you through the process of checking your SD card for errors using F3. {: .notice}
+В этом разделе рассказывается о том, как проверить карту памяти на ошибки под с помощью F3. {: .notice}
 
-Depending on the size of your SD card and the speed of your computer, this process can take up to several hours! {: .notice--info}
+В зависимости от размера Вашей SD-карты и скорости Вашего компьютера этот процесс может занять до нескольких часов! {: .notice--info}
 
-This page is for Linux users only. If you are not on Linux, check out the [H2testw (windows)](h2testw-(windows)) or [F3X (mac)](f3x-(mac)) pages. {: .notice--info}
+Этот раздел предназначен для пользователей Linux. Если у Вас не Linux, воспользуйтесь инструкциями для [H2testw (windows)](h2testw-(windows)) или [F3X (Mac)](f3x-(mac)). {: .notice--info}
 
-#### What you need
+#### Что понадобится
 
-* The latest version of [F3](https://github.com/AltraMayor/f3/archive/v6.0.zip)
+* Последняя версия [F3](https://github.com/AltraMayor/f3/archive/v6.0.zip)
 
-#### Instructions
+#### Инструкция
 
-  1. Unzip the f3 `.zip` file
-  2. `cd` into the f3 directory
-  3. Run `make` to compile F3
-  4. Insert your SD card into your computer
-  5. Mount your SD card
-  6. Run `./f3write <your sd card mount point>`
-  7. Wait until the process is complete. See below for an example output.
+  1. Разархивируйте `.zip`-архив c F3
+  2. Перейдите в каталог с f3 командой `cd` из терминала
+  3. Запустите сборку F3 командой `make`
+  4. Вставьте SD-карту в компьютер
+  5. Примонтируйте карту памяти
+  6. Введите команду `./f3write <your sd card mount point>`
+  7. Дождитесь окончания проверки. Ниже приведён пример выходных данных программы:
     
         $ ./f3write /media/michel/6135-3363/
         Free space: 29.71 GB
@@ -33,9 +33,9 @@ This page is for Linux users only. If you are not on Linux, check out the [H2tes
         Average Writing speed: 4.90 MB/s
         
 
-  8. Run `./f3read <your sd card mount point>`
+  8. Введите команду `./f3read <your sd card mount point>`
 
-  9. Wait until the process is complete. See below for an example output.
+  9. Дождитесь окончания проверки. Ниже приведён пример выходных данных программы:
     
         $ ./f3read /media/michel/6135-3363/
                           SECTORS      ok/corrupted/changed/overwritten
