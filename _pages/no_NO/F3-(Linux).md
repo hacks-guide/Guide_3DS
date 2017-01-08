@@ -51,8 +51,8 @@ Denne siden er for Linux-brukere. Hvis du ikke bruker Linux, sjekk ut disse side
         Average Reading speed: 9.42 MB/s
         
 
-If the test shows the result `Data LOST: 0.00 Byte (0 sectors)` your SD card is good and you can delete all `.h2w` files on the SD card {: .notice--success}
+Hvis testen viser resultatet `DATA LOST: 0.00 Byte (0 sectors)` er SD-kortet klart og du kan så slette alle `.h2w` filene på SD kortet {: .notice--success}
 
-If the test shows any other results, your SD card may be corrupted or damaged and you may have to replace it! {: .notice--danger}
+Hvis testen viser noe annet resultat kan det hende SD-kortet er korrupt eller skadet og du må kanskje bytte det!{: .notice--danger}
 
 Gå tilbake til [Kom i Gang](get-started) {: .notice--primary}
