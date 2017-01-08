@@ -75,8 +75,8 @@ These steps will also update your various payloads and the AES key database. {: 
   6. Velg "\<current directory>"
   7. Velg alternativet "Paste", for å lime inn, og trykk (A) for å bekrefte
   8. Avslutt med hjem-knappen
-  9. Power off your 3DS and remove the SD card
- 10. Boot with the SD card removed while holding (Select) 
+  9. Skru av konsollen, og ta ut SD-kortet
+ 10. Hold (Select), og start konsollen uten SD-kortet 
     * Booting the device at least once with the SD card removed will allow you to configure the CTRNAND based luma installation
  11. Bruk (A)-knappen og piltastene for å aktivere følgende:  
     * **"Show NAND or user string in System Settings"**
