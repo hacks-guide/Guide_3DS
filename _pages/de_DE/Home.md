@@ -31,11 +31,11 @@ CFW kann einfach auf jeder Konsole eingerichtet werden, die auf der Firmware 11.
 
 ## Was installiert dieser Guide?
 
-This guide has the end goal of taking a completely unmodified 3DS from stock firmware to arm9loaderhax powered Custom Firmware. On some versions, it utilizes homebrew as a stepping off point, but Custom Firmware is still the goal.
+Dieser Guide wird auf einem komplett unmodifiziertem 3DS aus dem Laden eine arm9loaderhax gestützte Custom Firmware installieren. Auf manchen Systemversionen wird zwischenzeitlich Homebrew benötigt, aber das Endziel bleibt Custom Firmware.
 
-Arm9loaderhax is the newest and best method of launching Custom Firmware that gives us nearly full control of the system only milliseconds into boot, which is similar to the effect of BootMii for the Wii.
+Arm9Loaderhax ist die aktuellste und beste Methode um CustomFirmware zu starten. Es gibt und annähernd komplette Kontrolle über das System nur Millisekunden nachdem der Startknopf gedrückt wurde. Der Effekt ist ähnlich wie der von BootMii für die Nintendo Wii.
 
-The benefits of arm9loaderhax over other Custom Firmware launch methods are numerous, and as such it is recommended to use this guide over any other that relies on outdated software (such as menuhax or rxTools).
+Die Vorteile von arm9loaderhax über andere Methoden, Custom Firmware zu starten, sind zahlreich. Deshalb ist es empfohlen, diesen Guide, und nicht andere, welche auf veralteter Software (zum Beispiel Menuhax oder rxTools) basieren, zu nutzen.
 
 ## Was kann ich alles mit einer Custom Firmware anstellen?
 
