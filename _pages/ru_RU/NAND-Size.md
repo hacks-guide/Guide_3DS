@@ -12,39 +12,39 @@ title: "NAND Size" permalink: /nand-size.html lang: en_US ref: nand-size
 
 Названия в таблице - это **не** названия, написанные на SD-карте,а название фирмы производителя NAND-чипа. {: .notice--warning}
 
-**Your backup should match one of the sizes on this page; if it does not, you should delete it and make a new one!** {: .notice--danger}
+**Ваш бекап должен соответствовать указанным размерам; если это не так, то удалите его и сделайте новый!** {: .notice--danger}
 
 ## 2DS:
 
     + Toshiba NAND:     
-      988.807.168 bytes = 943 MiB    
+      988.807.168 байт = 943 МБ   
     
     + Toshiba NAND:    
-      1.979.711.488 bytes = 1.84 GiB    
+      1.979.711.488 байт = 1.84 ГБ    
     
     + Samsung NAND:    
-      1.000.341.504 bytes = 954 MiB    
+      1.000.341.504 байт = 954 МБ    
     
     + Samsung NAND:    
-      1.300.234.240 bytes = 1.21 GiB    
+      1.300.234.240 байт = 1.21 ГБ    
     
 
 ## Old 3DS:
 
     + Toshiba NAND:     
-      988.807.168 bytes = 943 MiB    
+      988.807.168 байт = 943 МБ
     
     + Samsung NAND:    
-      1.000.341.504 bytes = 954 MiB    
+      1.000.341.504 байт = 954 МБ    
     
 
 ## New 3DS:
 
     + Toshiba NAND:    
-      1.979.711.488 bytes = 1.84 GiB    
+      1.979.711.488 байт = 1.84 ГБ
     
     + Samsung NAND:    
-      1.300.234.240 bytes = 1.21 GiB    
+      1.300.234.240 байт = 1.21 ГБ
     
     + Samsung NAND:
-      1.954.545.664 bytes = 1.82 GiB
+      1.954.545.664 байт = 1.82 ГБ
