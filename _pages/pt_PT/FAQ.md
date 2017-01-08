@@ -22,8 +22,8 @@ title: "FAQ" permalink: /faq.html lang: en_US ref: faq
 <a name="faq_risky" />**P:***Quão arriscado é hackear a minha consola?*  
 **R:**Bricks agora são *basicamente* impossíveis, a menos que ignore/contorne todas as verificações de segurança.
 
-<a name="faq_homebrew" />**Q:** *Can I run awesome homebrew and emulators with this?*  
-**A:** Yes! Custom Firmware not only enables the Homebrew Launcher, but it also will give you hacks on all versions, which means you keep it forever, even with updates.
+<a name="faq_homebrew" />**P:***Posso correr homebrew e emuladores fantásticos com isto?*  
+**R:**Sim! Custom Firmware not only enables the Homebrew Launcher, but it also will give you hacks on all versions, which means you keep it forever, even with updates.
 
 <a name="faq_regionfree" />**Q:** *Can I use this to play games from other regions?*  
 **A:** Luma3DS supports Region Free patches, which enables users to install games from any region without any extra modification or steps.
