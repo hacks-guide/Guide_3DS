@@ -14,11 +14,11 @@ Verrà anche configurato il lancio facoltativo dei payload dall'arm9loaderhax, p
 
 #### Panoramica
 
-In this section, we will go through the process that all the other steps have led up to: actually installing arm9loaderhax.
+In questa sezione svolgeremo il processo per il quale ci siamo preparati grazie agli altri passaggi: l'installazione di Arm9loaderhax.
 
-This is nearly the best possible kind of device exploit because it is permanently installable into the NAND firm partitions, and runs before most of the OS loads, allowing it to not only work on *all* versions once installed, but also protect itself and recover from most situations that would brick a non-A9LH 3DS such as a nonfunctional home menu or bad title install.
+Questo tipo di exploit è quasi il migliore che possa esistere in quanto è permanentemente installabile nelle partizioni firm della NAND, e viene lanciato prima del completamento del normale avvio dell'OS permettendo non solo di funzionare su *tutte* le versioni di sistema una volta installato, ma è in grado di ripristinare la console da brick normalmente irrecuperabili in un 3DS non-A9LH, quali un menu HOME non funzionante o un'installazione di un title corrotto.
 
-The file `arm9loaderhax.bin` is what is launched by arm9loaderhax itself after it finishes loading off of NAND, and can be any valid arm9 payload. This file can be replaced at any time, although Luma3DS allows for the launch of other arm9 payloads by holding buttons on boot.
+Il file `arm9loaderhax.bin` viene lanciato al termine del caricamento dalla NAND dell'arm9loaderhax stesso, e può essere un qualunque payload arm9 valido. Questo file può venir sostituito in qualunque momento, tuttavia Luma3DS permette il lancio di diversi payload arm9 con la pressione di determinati tasti durante l'avvio della console.
 
 In this case, we use Luma3DS by [AuroraWright](https://github.com/AuroraWright/) to boot a patched SysNAND directly, allowing us to completely bypass the need for any kind of EmuNAND, vastly simplifying the usage of a hacked 3DS in addition to saving SD card space.
 
