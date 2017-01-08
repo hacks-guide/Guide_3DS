@@ -8,9 +8,9 @@ OTP er en 0x100 byte region av tilsynelatende tilfeldig data mot adressen 0x1001
 
 Før versjon 3.0.0-X har 0x10012000-regionen (OTP) vært ubeskyttet og kunne bli dumpet av en angriper med tilstrekkelig tillatelser (arm9 kodeutførelse).
 
-After version 3.0.0-X, Nintendo switched to locking this region using the register CFG_SYSPROT9, which also locks the bootloader and is set extremely early in boot, long before we are able to gain code execution. This register can be set exactly once, and cannot be switched off until the unit is fully powered off, and therefore it is impossible to dump the full OTP without a version below 3.0.0-X.
+Etter versjon 3.0.0-X byttet Nintendo til å låse denne regionen med register CFG_SYSPROT9, noe som også låser bootloaderen, å er satt veldig tidlig i oppstarten av konsollen lenge før vi har tilgang til kodeutførelse. Registeret kan bare bli angitt én gang og kan ikke slås av før konsollen er fullstendig avslått, det er derfor ikke mulig å dumpe hele OTP uten en versjon tidligere en 3.0.0-X.
 
-There is, however, a method to dump the hash of the OTP on version 9.6.0-X. Because Kernel9Loader does not clear the SHA_HASH register after it has been used, dumping the SHA_HASH will give the hash of the OTP which was handed over to Kernel9 from Kernel9Loader. In addition, there is a long standing vulnerability where an MCU reboot caused by the i2c will not clear RAM like it's supposed to.
+Det er imidlertid en metode for å dumpe "hashen" av OTP på versjon 9.6.0-X. Because Kernel9Loader does not clear the SHA_HASH register after it has been used, dumping the SHA_HASH will give the hash of the OTP which was handed over to Kernel9 from Kernel9Loader. In addition, there is a long standing vulnerability where an MCU reboot caused by the i2c will not clear RAM like it's supposed to.
 
 This allows for a hardware based attack where arbitrary data is written to nand_sector96+0x10 in a SysNAND backup and flashed to the device. Afterwards we wire the i2c to MCU reboot on our command, write a payload (which will write 0x1000A040 - 0x1000A060 to a file on the SD card) to arm9 memory somewhere, fill all memory with a NOP sled followed by a JMP instruction pointing to the payload. We can then MCU reboot repeatedly (incrementing nand_sector96+0x10 by 1 each time) until the Kernel9Loader jumps to the payload by random chance.
 
