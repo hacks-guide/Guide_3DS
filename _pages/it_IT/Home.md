@@ -6,24 +6,24 @@ from stock to arm9loaderhax.
 
 * * *
 
-{% capture notice-home %} **This guide is for retail (consumer purchased; not from the Nintendo Developer Program) consoles *only*!  
-If you have a developer ("PANDA" or "SNAKE") console, check out [devGuide](https://dev.3ds.guide)** {% endcapture %}
+{% capture notice-home %} **Questa guida è riservata *solamente* alle console retail (cioè acquistate in negozio, e non va seguita con le console del Nintendo Developer Program)!  
+Se hai una console developer ("PANDA" o "SNAKE"), segui la [devGuide](https://dev.3ds.guide)** {% endcapture %}
 
-<div class="notice--danger">{{ notice-home | markdownify }}</div>
+<div class="notice--danger">{ notice-home | markdownify }</div>
 
-**This guide needs *your* help to seed [these](https://3ds.guide/rss.xml) torrents!** {: .notice--info}
+**La guida ha bisogno di *te* per il seed di [questi](https://3ds.guide/rss.xml) torrent!** {: .notice--info}
 
-**To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links in this guide, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download)** {: .notice--info}
+**Per usare i link [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) presenti nella guida, ti occorre un client torrent come [Deluge](http://dev.deluge-torrent.org/wiki/Download)** {: .notice--info}
 
-**Read all of the introductory pages before proceeding.** {: .notice--warning}
+**Assicurati di aver letto tutte le pagine introduttive prima di proseguire.** {: .notice--warning}
 
-## What is Homebrew?
+## Cosa vuol dire Homebrew?
 
-[**Homebrew**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) usually refers to software that is not authorized by Nintendo. It allows you to run homebrew games, tools like save editing and backup, and emulators for various older systems.
+Con [**Homebrew**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) di solito si fa riferimento a software non autorizzato da Nintendo. Un homebrew di solito permette di avviare ad esempio giochi amatoriali, programmi di save editing e di backup, ed emulatori di diverse piattaforme ormai obsolete.
 
-In most cases, running homebrew on your console is 100% free using just the Nintendo 3DS Sound app. There are also various other exploits in commercial games and the browser to get homebrew running.
+Nella maggior parte dei casi, l'avvio di homebrew sulla tua console è gratis al 100% grazie all'utilizzo dell'applicazione Sound Nintendo 3DS. È comunque possibile avviare degli homebrew grazie ad altri exploit basati su giochi commerciali e sul browser internet di sistema.
 
-## What is Custom Firmware?
+## Cosa vuol dire Custom Firmware?
 
 **Custom Firmware** ("CFW") enables you to use more advanced hacks that userland homebrew can't easily do. For instance, signature patches let you install unsigned titles that appear right on your HOME Menu.
 
