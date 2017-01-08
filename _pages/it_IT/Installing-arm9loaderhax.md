@@ -150,12 +150,12 @@ Se, prima di seguire questa guida, avevi già un'installazione EmuNAND presente 
   4. Seleziona il file `FBI.cia` e premi (A) per installarlo
   5. Seleziona il file `hblauncher_loader.cia` e premi (A) per installarlo
   6. Seleziona il file `lumaupdater.cia` e premi (A) per installarlo
-  7. Ritorna alla cartella della tua SD premendo (B)
-  8. Seleziona il file `arm9loaderhax.bin`, quindi premi (A) su di esso e seleziona l'opzione "Copy"
-  9. Ritorna al menù principale di FBI premendo (B)
+  7. Ritorna alla cartella SD premendo (B)
+  8. Seleziona il file `arm9loaderhax.bin`, quindi premi (A) e seleziona l'opzione "Copy"
+  9. Ritorna al menu principale di FBI premendo (B)
  10. Seleziona "CTR NAND"
- 11. Select "\<current directory>"
- 12. Select the "Paste" option, then press (A) to confirm
+ 11. Seleziona "\<current directory>"
+ 12. Seleziona l'opzione "Paste", quindi premi (A) per confermare la scelta
  13. Exit with the home button
  14. Launch the Homebrew Launcher from the home menu
  15. Select "DSP Dump"
@@ -186,22 +186,22 @@ Verranno quindi aggiornati solamente i file di Luma3DS nella scheda SD. Se avvii
 <div class="notice--info">{ notice-10 | markdownify }</div>
 
 {% capture notice-6 %}  
-You will now boot a Custom Firmware based SysNAND by default.  
-You can now hold (Select) on boot to launch the Luma3DS configuration menu.  
-You can now hold (Start) on boot to launch Hourglass9, an arm9loaderhax safe multipurpose NAND and cartridge tool.  
+D'ora in poi verrà avviata per default una SysNAND basata su Custom Firmware.  
+D'ora in poi potrai premere (Select) all'avvio per lanciare il menu di configurazione di Luma3DS.  
+D'ora in poi potrai premere (Start) all'avvio per lanciare Hourglass9, un'applicazione per l'arm9loaderhax multifunzione per gestire la NAND e le cartucce di gioco.  
 {% endcapture %}
 
-<div class="notice--info">{{ notice-6 | markdownify }}</div>
+<div class="notice--info">{ notice-6 | markdownify }</div>
 
-You can update your arm9loaderhax installation in the future by following the instructions on the [Updating A9LH](updating-a9lh) page. {: .notice--info}
+D'ora in poi potrai aggiornare l'installazione dell'arm9loaderhax seguendo le istruzioni indicate nella pagina [Aggiornare A9LH](updating-a9lh). {: .notice--info}
 
-To use [NTR CFW](https://github.com/44670/BootNTR/), get `ntr.bin` from the appropriate `.zip` on [this](https://github.com/44670/BootNTR/releases) page and copy it to the root of your SD card, then install `BootNTR.cia` from [this](https://github.com/astronautlevel2/BootNTR/releases/latest) page. {: .notice--info}
+Per usare l'[NTR CFW](https://github.com/44670/BootNTR/), recupera il file `ntr.bin` dal file `.zip` appropriato da [questa](https://github.com/44670/BootNTR/releases) pagina, copialo nella root della tua scheda SD, poi installa `BootNTR.cia` da [questa](https://github.com/astronautlevel2/BootNTR/releases/latest) pagina. {: .notice--info}
 
-Keep your `NANDmin.bin` file, it can be restored by Hourglass9 to save you from a brick in the future. {: .notice--info}
+Conserva il file `NANDmin.bin`, potrà essere ripristinato tramite Hourglass9 per salvarti da un potenziale futuro brick. {: .notice--info}
 
-You can remove your NAND backups from `/files9/` as long as you still have them backed up to a safe location. {: .notice--info}
+Puoi rimuovere i backup della NAND dalla cartella `/files9/` fintantoché li conservi in un'altra posizione sicura. {: .notice--info}
 
-{% capture notice-7 %} **You can remove any extra files and folders from the root of the SD card that are *not* in the following list:**
+{% capture notice-7 %} **Puoi rimuovere tutti i file e cartelle ora inutili dalla root della scheda SD che *non* sono presenti nella seguente lista:**
 
     + 3ds
     + files9
@@ -214,10 +214,10 @@ You can remove your NAND backups from `/files9/` as long as you still have them 
 
 {% endcapture %}
 
-<div class="notice--info">{{ notice-7 | markdownify }}</div>
+<div class="notice--info">{ notice-7 | markdownify }</div>
 
-For information on changing your device to another region, check out the [Region Changing](region-changing) page. {: .notice--success}
+Per informazioni su come cambiare la regionalità della tua console, leggi la pagina [Cambiare Regione](region-changing). {: .notice--success}
 
-For information on keeping your A9LH installation up to date, check out the [Updating A9LH](updating-a9lh) page. {: .notice--success}
+Per informazioni su come aggiornare l'installazione dell'A9LH, leggi la pagina [Aggiornare A9LH](updating-a9lh). {: .notice--success}
 
-For information on using Luma3DS's various features, check out [its wiki](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage). {: .notice--success}
+Per informazioni sulle varie caratteristiche di Luma3DS, leggi [la sua pagina wiki](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage). {: .notice--success}
