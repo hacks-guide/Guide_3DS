@@ -4,7 +4,7 @@ title: "Decrypt9 (Browser)" permalink: /decrypt9-(browser).html lang: en_US ref:
 
 * * *
 
-The first thing this guide will do is get you running Decrypt9, which is a multipurpose toolkit that will allow us to install the version 2.1.0, which contains a vulnerability that is needed for further exploitation of the system. {: .notice}
+La prima cosa che questa guida ti permetterà di fare è avviare Decrypt9, un programma multifunzione che ci permetterà di installare la versione 2.1.0, che contiene una vulnerabilità che è necessaria per modificare ulteriormente il dispositivo. {: .notice}
 
 If you have already hacked your 3DS before and have a EmuNAND based CFW setup, this guide deals exclusively with SysNAND and you should follow all instructions from within or applying to SysNAND. Note that the terms EmuNAND and RedNAND refer to slightly different implementations of [the same concept](http://3dbrew.org/wiki/NAND_Redirection). {: .notice--info}
 
