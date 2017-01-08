@@ -4,14 +4,14 @@ title: "Decrypt9 (MSET)" permalink: /decrypt9-(mset).html lang: en_US ref: decry
 
 * * *
 
-The first thing this guide will do is get you running Decrypt9, which is a multipurpose toolkit that will allow us to install the version 2.1.0, which contains a vulnerability that is needed for further exploitation of the system. {: .notice}
+La première chose que ce guide va faire est de vous obtenez l''exécution Decrypt9, qui est un outil qui nous permettra d'installer la version 2.1.0, qui contient une vulnérabilité qui est nécessaire pour poursuivre l'exploitation du système. {: .notice}
 
-If you have already hacked your 3DS before and have a EmuNAND based CFW setup, this guide deals exclusively with SysNAND and you should follow all instructions from within or applying to SysNAND. Note that the terms EmuNAND and RedNAND refer to slightly different implementations of [the same concept](http://3dbrew.org/wiki/NAND_Redirection). {: .notice--info}
+Si vous avez déjà une installation RedNAND, ce guide concerne exclusivement SysNAND et vous devez suivre toutes les instructions dans SysNAND ou par rapport à SysNAND. Notez que les termes EmuNAND et RedNAND font référence à des implémentations légèrement différentes [du même concept](http://3dbrew.org/wiki/NAND_Redirection). {: .notice--info}
 
-#### What you need
+#### Ce dont vous aurez besoin
 
-* DS flashcard that works on your 3DS version
-* The latest release of [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/)
+* Un linker DS fonctionnant sur votre version 3DS
+* La dernière version de [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/)
 
 #### Instructions
 
