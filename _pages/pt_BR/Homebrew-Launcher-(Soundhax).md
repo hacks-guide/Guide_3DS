@@ -4,11 +4,11 @@ title: "Homebrew Launcher (SoundHax)" permalink: /homebrew-launcher-(soundhax).h
 
 * * *
 
-The Homebrew Launcher has many different entrypoints, or methods of launching. {: .notice}
+Há muitas maneiras e pontos de entrada (entrypoints) para aceder ao Homebrew Launcher. {: .notice}
 
-SoundHax is compatible with versions 9.0.0 through 11.2.0 in the EUR, JPN, KOR, and USA regions. {: .notice--info}
+SoundHax é compatível com as versões 9.0.0 até à 11.2.0 nas regiões EUR, JPN, KOR e USA. {: .notice--info}
 
-#### What you need
+#### O que precisa
 
 + The Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
 + The latest release of [SoundHax](http://soundhax.com/) *(for your device and region)*
