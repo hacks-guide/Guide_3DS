@@ -4,7 +4,7 @@ title: "NAND Size" permalink: /nand-size.html lang: en_US ref: nand-size
 
 * * *
 
-A valid NAND backup should be one of the following sizes in most situations. {: .notice--primary}
+Для большинства случаев, NAND должен быть одного из нижеуказанных размеров. {: .notice--primary}
 
 Occasionally, you will get a backup with a different size than one of these listed. It is fine for a backup to be larger than expected, just ensure that it is never *smaller* than the sizes listed. {: .notice--info}
 
