@@ -59,7 +59,7 @@ These steps will also update your various payloads and the AES key database. {: 
     * **"Autoboot SysNAND"**
     * **"Use SysNAND FIRM if booting with R"**
     * **"Show NAND or user string in System Settings"**
-  3. If you are using a **New 3DS**, you should *also* enable the following: 
+  3. Hvis du bruker en **New 3DS**, bør du *også* aktivere følgende: 
     * **"New 3DS CPU" to "Clock+L2(x)"**
     * Dette vil øke ytelsen i mange spill, men kan også skape ustabilitet i andre
     * Hvis noen spill ikke fungerer som de skal, deaktiver dette alternativet å prøv igjen
@@ -70,7 +70,7 @@ These steps will also update your various payloads and the AES key database. {: 
   1. Åpne FBI
   2. Velg "SD"
   3. Navigate to `arm9loaderhax.bin`, then press (A) on it and select the "Copy" option
-  4. Return to the FBI main menu with (B)
+  4. Gå tilbake til hovedmenyen for FBI med (B)
   5. Velg "CTR NAND"
   6. Velg "\<current directory>"
   7. Velg alternativet "Paste", for å lime inn, og trykk (A) for å bekrefte
@@ -78,10 +78,10 @@ These steps will also update your various payloads and the AES key database. {: 
   9. Power off your 3DS and remove the SD card
  10. Boot with the SD card removed while holding (Select) 
     * Booting the device at least once with the SD card removed will allow you to configure the CTRNAND based luma installation
- 11. Use the (A) button and the D-Pad to turn on the following:  
+ 11. Bruk (A)-knappen og piltastene for å aktivere følgende:  
     * **"Show NAND or user string in System Settings"**
- 12. Hvis du bruker en **New 3DS**, bør du *også* aktiver følgende: 
-    * **"New 3DS CPU" to "Clock+L2(x)"**
+ 12. Hvis du bruker en **New 3DS**, bør du *også* aktivere følgende: 
+    * **"New 3DS CPU" til "Clock+L2(x)"**
     * Dette vil øke ytelsen i mange spill, men kan også skape ustabilitet i andre
     * Hvis noen spill ikke fungerer som de skal, deaktiver dette alternativet å prøv igjen
- 13. Reinsert your SD card, then press Start to save and reboot!
+ 13. Sett inn SD-kortet, og trykk (Start) for å lagre og starte på nytt!
