@@ -14,7 +14,7 @@ Verrà anche configurato il lancio facoltativo dei payload dall'arm9loaderhax, p
 
 #### Panoramica
 
-In questa sezione svolgeremo il processo per il quale ci siamo preparati grazie agli altri passaggi: l'installazione di Arm9loaderhax.
+In questa sezione svolgeremo il processo per il quale ci siamo preparati grazie agli altri passaggi: l'installazione dell'Arm9loaderhax.
 
 Questo tipo di exploit è quasi il migliore che possa esistere in quanto è permanentemente installabile nelle partizioni firm della NAND, e viene lanciato prima del completamento del normale avvio dell'OS permettendo non solo di funzionare su *tutte* le versioni di sistema una volta installato, ma è in grado di ripristinare la console da brick normalmente irrecuperabili in un 3DS non-A9LH, quali un menu HOME non funzionante o un'installazione di un title corrotto.
 
@@ -107,7 +107,7 @@ Durante la guida verranno anche configurati i seguenti programmi:
   3. Se stai usando un **New 3DS**, dovresti abilitare *anche* la seguente opzione: 
     * **"New 3DS CPU" a "Clock+L2(x)"**
     * Questa opzione aumenterà il framerate in molti giochi, ma può rendere instabili altri
-    * Se alcuni giochi non funzionano come dovrebbero, disabilita questa opzione
+    * Se alcuni giochi non dovessero più funzionare correttamente, disabilita questa opzione
   4. Premi (Start) per salvare e riavviare il 3DS 
     * Se ottieni uno schermo nero, prosegui comunque con la prossima sezione 
     * Se ottieni l'errore "Failed to mount CTRNAND", prosegui comunque con la prossima sezione 
@@ -156,23 +156,23 @@ Se, prima di seguire questa guida, avevi già un'installazione EmuNAND presente 
  10. Seleziona "CTR NAND"
  11. Seleziona "\<current directory>"
  12. Seleziona l'opzione "Paste", quindi premi (A) per confermare la scelta
- 13. Exit with the home button
- 14. Launch the Homebrew Launcher from the home menu
- 15. Select "DSP Dump"
- 16. Press (Start) when prompted to exit
- 17. Reboot while holding Start to launch Hourglass9
- 18. Go to "SysNAND Backup/Restore", then select "Health&Safety Inject"
- 19. Select `hs.app` (the original one that doesn't contain FBI), then press (A) and confirm to inject
- 20. Press (Select) on the main menu to eject your SD card
- 21. Press (Start) to reboot with the SD card removed 
-    * Booting the device at least once with the SD card removed will allow you to configure the CTRNAND based luma installation
- 22. Use the (A) button and the D-Pad to turn on the following:  
+ 13. Esci premento il pulsante HOME
+ 14. Avvia l'Homebrew Launcher dal menu HOME
+ 15. Seleziona "DSP Dump"
+ 16. Premi (Start) per uscire quando richiesto
+ 17. Riavvia la console tenendo premuto (Start) per avviare Hourglass9
+ 18. Seleziona "SysNAND Backup/Restore", poi seleziona "Health&Safety Inject"
+ 19. Seleziona `hs.app` (il file originale, che non contiene FBI), poi premi (A) per confermare la sostituzione
+ 20. Premi (Select) nel main menu per rimuovere la scheda SD
+ 21. Rimuovi la scheda SD, quindi premi (Start) per riavviare la console 
+    * Il riavvio della console con la scheda SD rimossa permette la configurazione dell'installazione CTRNAND di Luma
+ 22. Usa il pulsante (A) e il D-Pad per abilitare le seguenti opzioni:  
     * **"Show NAND or user string in System Settings"**
- 23. If you are using a **New 3DS**, you should *also* enable the following: 
-    * **"New 3DS CPU" to "Clock+L2(x)"**
-    * This will increase the framerate of many games, but may cause instability in others
-    * If some games do not work properly, disable this option and try again
- 24. Reinsert your SD card, then press Start to save and reboot!
+ 23. Se stai usando un **New 3DS**, dovresti abilitare *anche* la seguente opzione: 
+    * **"New 3DS CPU" a "Clock+L2(x)"**
+    * Questa opzione aumenterà il framerate in molti giochi, ma può rendere instabili altri
+    * Se alcuni giochi non dovessero più funzionare correttamente, disabilita questa opzione
+ 24. Reinserisci la scheda SD, quindi premi (Start) per salvare e riavviare la console!
 
 * * *
 
