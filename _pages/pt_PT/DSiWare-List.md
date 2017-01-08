@@ -8,7 +8,7 @@ Esta é uma lista de todos os jogos compatíveis com as instruções [Downgrade 
 
 Esta lista está seccionada pelas regiões, por ordem, USA, EUR e JPN. {: .notice--info}
 
-Each section is sorted by ascending price. {: .notice--info}
+Cada secção está ordenada por preço ascendente. {: .notice--info}
 
 QR Codes can be scanned by pressing (L + R) on the home menu, then tapping the QR icon on the bottom screen. {: .notice--info}
 
