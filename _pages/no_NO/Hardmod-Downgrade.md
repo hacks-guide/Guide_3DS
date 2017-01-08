@@ -8,7 +8,7 @@ An excellent guide to getting a hardmod can be found [here](https://gbatemp.net/
 
 This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws). {: .notice--info}
 
-This will work on New 3DS, Old 3DS, and 2DS. {: .notice--success}
+Dette vil fungere med New 3DS, Old 3DS, og 2DS. {: .notice--success}
 
 #### Det du trenger
 
@@ -40,8 +40,8 @@ This will work on New 3DS, Old 3DS, and 2DS. {: .notice--success}
 
 ##### Section II - Exploit verification
 
-  1. Copy and merge the `3ds` folder from the 3DSident `.zip` to your device's SD card
-  2. Reinsert your SD card into your 3DS
+  1. Kopier, og sammenslå `3ds` mappen fra 3DSident `.zip` til SD-kortet
+  2. Sett inn SD-kortet i konsollen
   3. Use [Homebrew Launcher (SoundHax)](homebrew-launcher-(soundhax)) to launch the homebrew launcher on the device
   4. Kjør 3DSident
   5. Kontroller at følgende: 
