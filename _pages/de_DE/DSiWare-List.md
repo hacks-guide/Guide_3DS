@@ -104,25 +104,25 @@ The size requirements are because the injected DSiWare and its hacked save must 
 |                Rytmik Retrobits                 | $7.99 |   4B595245   |    USA     | ![qrcode](images/qrcodes/000480044B595245.png) |
 |              Rhythm Core Alpha 2™               | $9.99 |   4B593445   |    USA     | ![qrcode](images/qrcodes/000480044B593445.png) |
 
-|                               | Price  | 8 Character ID | Region(s) |                    QR Code                     |
-|:-----------------------------:|:------:|:--------------:|:---------:|:----------------------------------------------:|
-|        Jagged Alliance        | 4,99 € |    4B4A4750    |    EUR    | ![qrcode](images/qrcodes/000480044B4A4750.png) |
-| 1001 Crystal Mazes Collection | 4,99 € |    4B4F4B50    |    EUR    | ![qrcode](images/qrcodes/000480044B4F4B50.png) |
-|       101 Dolphin Pets        | 4,99 € |    4B345A50    |    EUR    | ![qrcode](images/qrcodes/000480044B345A50.png) |
-|       Soul of Darkness        | 4,99 € |    4B534B56    |    EUR    | ![qrcode](images/qrcodes/000480044B534B56.png) |
-|          Super Swap!          | 4,99 € |    4B345750    |    EUR    | ![qrcode](images/qrcodes/000480044B345750.png) |
-|        101 Shark Pets         | 4,99 € |    4B345950    |    EUR    | ![qrcode](images/qrcodes/000480044B345950.png) |
-|       101 Pinball World       | 4,99 € |    4B494950    |    EUR    | ![qrcode](images/qrcodes/000480044B494950.png) |
-|      101 MiniGolf World       | 4,99 € |    4B584950    |    EUR    | ![qrcode](images/qrcodes/000480044B584950.png) |
+|                               | Preis  | 8 Zeichen ID | Region(en) |                    QR Code                     |
+|:-----------------------------:|:------:|:------------:|:----------:|:----------------------------------------------:|
+|        Jagged Alliance        | 4,99 € |   4B4A4750   |    EUR     | ![qrcode](images/qrcodes/000480044B4A4750.png) |
+| 1001 Crystal Mazes Collection | 4,99 € |   4B4F4B50   |    EUR     | ![qrcode](images/qrcodes/000480044B4F4B50.png) |
+|       101 Dolphin Pets        | 4,99 € |   4B345A50   |    EUR     | ![qrcode](images/qrcodes/000480044B345A50.png) |
+|       Soul of Darkness        | 4,99 € |   4B534B56   |    EUR     | ![qrcode](images/qrcodes/000480044B534B56.png) |
+|          Super Swap!          | 4,99 € |   4B345750   |    EUR     | ![qrcode](images/qrcodes/000480044B345750.png) |
+|        101 Shark Pets         | 4,99 € |   4B345950   |    EUR     | ![qrcode](images/qrcodes/000480044B345950.png) |
+|       101 Pinball World       | 4,99 € |   4B494950   |    EUR     | ![qrcode](images/qrcodes/000480044B494950.png) |
+|      101 MiniGolf World       | 4,99 € |   4B584950   |    EUR     | ![qrcode](images/qrcodes/000480044B584950.png) |
 
-|                       | Price | 8 Character ID | Region(s) |                    QR Code                     |
-|:---------------------:|:-----:|:--------------:|:---------:|:----------------------------------------------:|
-|   タッチで漫才! メガミの笑壺DL    | 500円  |    4B394C4A    |    JPN    | ![qrcode](images/qrcodes/000480044B394C4A.png) |
-|        練熟漢字中学生        | 800円  |    4B4A384A    |    JPN    | ![qrcode](images/qrcodes/000480044B4A384A.png) |
-|        教えてダーリン        | 800円  |    4B4F534A    |    JPN    | ![qrcode](images/qrcodes/000480044B4F534A.png) |
-|    高校英単語基本400語マスター    | 800円  |    4B454B4A    |    JPN    | ![qrcode](images/qrcodes/000480044B454B4A.png) |
-|    中学英単語基本400語マスター    | 800円  |    4B45544A    |    JPN    | ![qrcode](images/qrcodes/000480044B45544A.png) |
-|   愛してイルカ ～愛されてイルカ～    | 800円  |    4B49524A    |    JPN    | ![qrcode](images/qrcodes/000480044B49524A.png) |
-| ARC STYLE: ジュラシックワールド | 820円  |    4B4C444A    |    JPN    | ![qrcode](images/qrcodes/000480044B4C444A.png) |
-|      ゴー!ゴー!ココポロ       | 820円  |    4B33474A    |    JPN    | ![qrcode](images/qrcodes/000480044B33474A.png) |
-|       X-RETURNS       | 823円  |    4B44584A    |    JPN    | ![qrcode](images/qrcodes/000480044B44584A.png) |
+|                       | Preis | 8 Zeichen ID | Region(en) |                    QR Code                     |
+|:---------------------:|:-----:|:------------:|:----------:|:----------------------------------------------:|
+|   タッチで漫才! メガミの笑壺DL    | 500円  |   4B394C4A   |    JPN     | ![qrcode](images/qrcodes/000480044B394C4A.png) |
+|        練熟漢字中学生        | 800円  |   4B4A384A   |    JPN     | ![qrcode](images/qrcodes/000480044B4A384A.png) |
+|        教えてダーリン        | 800円  |   4B4F534A   |    JPN     | ![qrcode](images/qrcodes/000480044B4F534A.png) |
+|    高校英単語基本400語マスター    | 800円  |   4B454B4A   |    JPN     | ![qrcode](images/qrcodes/000480044B454B4A.png) |
+|    中学英単語基本400語マスター    | 800円  |   4B45544A   |    JPN     | ![qrcode](images/qrcodes/000480044B45544A.png) |
+|   愛してイルカ ～愛されてイルカ～    | 800円  |   4B49524A   |    JPN     | ![qrcode](images/qrcodes/000480044B49524A.png) |
+| ARC STYLE: ジュラシックワールド | 820円  |   4B4C444A   |    JPN     | ![qrcode](images/qrcodes/000480044B4C444A.png) |
+|      ゴー!ゴー!ココポロ       | 820円  |   4B33474A   |    JPN     | ![qrcode](images/qrcodes/000480044B33474A.png) |
+|       X-RETURNS       | 823円  |   4B44584A   |    JPN     | ![qrcode](images/qrcodes/000480044B44584A.png) |
