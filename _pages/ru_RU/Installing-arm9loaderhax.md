@@ -195,11 +195,11 @@ arm9loaderhax.bin, используемый в этом гайде - испол�
 
 Для обновления A9LH, следуйте инструкциям из раздела [обновление A9LH](updating-a9lh). {: .notice--info}
 
-To use [NTR CFW](https://github.com/44670/BootNTR/), get `ntr.bin` from the appropriate `.zip` on [this](https://github.com/44670/BootNTR/releases) page and copy it to the root of your SD card, then install `BootNTR.cia` from [this](https://github.com/astronautlevel2/BootNTR/releases/latest) page. {: .notice--info}
+Для использования [NTR CFW](https://github.com/44670/BootNTR/), положите `ntr.bin`, находящийся в `zip-архиве` на [этой странице](https://github.com/44670/BootNTR/releases), в корень карты памяти. Затем установите `<a href="https://github.com/astronautlevel2/BootNTR/releases/latest">BootNTR.cia</a>` {: .notice--info}
 
-Keep your `NANDmin.bin` file, it can be restored by Hourglass9 to save you from a brick in the future. {: .notice--info}
+После всех настроек и манипуляций рекомендую сделать бекап через Hourglass9 (SysNAND Backup/Restore, SysNAND Backup). Получившийся файл `NANDmin.bin` сохраните в надежном месте. В случае чего, он может спасти вам консоль. {: .notice--info}
 
-You can remove your NAND backups from `/files9/` as long as you still have them backed up to a safe location. {: .notice--info}
+Можно удалить бекап из папки `/files9/`, коль уж вы сохранили его в надежном месте. {: .notice--info}
 
 {% capture notice-7 %} **You can remove any extra files and folders from the root of the SD card that are *not* in the following list:**
 
