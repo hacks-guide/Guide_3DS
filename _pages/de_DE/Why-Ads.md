@@ -10,7 +10,7 @@ I maintain this guide, for free, and ensure it is always up to date. Because of 
 
 This site costs you nothing to use, and all that I display are non-intrusive ads. If you still have a problem with this, feel free to block these ads.
 
-If you do block ads, I would like to also remind you of the [Donations](donations) page, but once again that is optional too.
+Solltest du dennoch Werbung blockieren, würde ich dich gerne an die [Spenden](donations) Seite erinnern, aber das ist ebenfalls optional.
 
 Danke,  
 Plailect
