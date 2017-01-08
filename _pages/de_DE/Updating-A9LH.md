@@ -61,22 +61,22 @@ Die folgenden Schritte werden zudem einige payloads und die AES Key Database akt
     * **"Show NAND or user string in System Settings"**
   3. Wenn du einen **New 3DS** nutzt, solltest du *auch* das Folgende aktivieren: 
     * **"New 3DS CPU" to "Clock+L2(x)"**
-    * This will increase the framerate of many games, but may cause instability in others
-    * If some games do not work properly, disable this option and try again
-  4. Press Start to save and reboot
+    * Dies sorgt in vielen Spielen für eine bessere Framerate, kann aber auch in einigen zu Instabilität führen
+    * Wenn ein Spiel nicht richtig funktioniert, deaktiviere diese Funktion und versuche es nochmal
+  4. Drücke (Start) um zu speichern und neu zu starten
 
-##### Sektion IV - CTRNAND Luma3DS
+##### Abschnitt IV - CTRNAND Luma3DS
 
   1. Öffne FBI
   2. Wähle "SD" aus
-  3. Navigiere zu `arm9loaderhax.bin`, danach drücke (A) auf der Datei und wähle "Copy" aus
+  3. Navigiere zu `arm9loaderhax.bin`, drücke (A) auf der Datei und wähle "Copy" aus
   4. Gehe zum FBI Hauptmenu zurück mit (B)
   5. Wähle "CTR NAND" aus
-  6. Wähle "\ aus<current directory>"
+  6. Wähle "\<current directory>"
   7. Wähle die "Paste" Option aus, dann drücke (A) zum bestätigen
   8. Schließe mit der Home-Taste
-  9. Power off your 3DS and remove the SD card
- 10. Boot with the SD card removed while holding (Select) 
+  9. Schalte deinen 3DS aus und entferne die SD-Karte
+ 10. Starte mit der entfernten SD-Karte und halte dabei (Select) gedrückt 
     * Booting the device at least once with the SD card removed will allow you to configure the CTRNAND based luma installation
  11. Use the (A) button and the D-Pad to turn on the following:  
     * **"Show NAND or user string in System Settings"**
