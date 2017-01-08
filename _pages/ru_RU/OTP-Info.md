@@ -4,11 +4,11 @@ title: "OTP Info" permalink: /otp-info.html lang: en_US ref: otp-info
 
 * * *
 
-OTP - это 0x100-байтовая область, вероятно, случайных данных, расположенная по адресу 0x10012000. Судя по всему, уникальные ключи приставки генерируются именно в этой области, однако, как именно это происходит, до сих пор точно не известно. The region is likely the console unique data store which is decrypted by the bootrom, but we don't know how that is done until somebody dumps the full protected bootrom. It is unknown at this time if anyone has successfully dumped the protected bootrom.
+OTP - это 0x100-байтовая область, вероятно, случайных данных, расположенная по адресу 0x10012000. Судя по всему, уникальные ключи приставки генерируются именно в этой области, однако, как именно это происходит, до сих пор точно не известно. Скорее всего, эта область содержит уникальные для каждой данные и может быть расшифрована только бутромом, но мы не знаем, как это происходит, пока кто-то не достанет полностью защищённый бутром. На данный момент не известно ни о единой успешной попытке сдампить защищённый бутром.
 
-Prior to version 3.0.0-X, the 0x10012000-region (the OTP) was left unprotected and could be dumped by an attacker with sufficient permissions (arm9 code execution).
+До версии 3.0.0-X, область 0x10012000 (OTP) не была защищена и злоумышленник мог сдампить ее, получив права на запуск программного кода на уровне ARM9.
 
-After version 3.0.0-X, Nintendo switched to locking this region using the register CFG_SYSPROT9, which also locks the bootloader and is set extremely early in boot, long before we are able to gain code execution. This register can be set exactly once, and cannot be switched off until the unit is fully powered off, and therefore it is impossible to dump the full OTP without a version below 3.0.0-X.
+После версии 3.0.0-X, Nintendo стали блокировать эту область с помощью регистра CFG_SYSPROT9, который объявляется на очень раннем этапе загрузки, блокируя загрузчик задолго до того, как мы можем получить возможность выполнять код. This register can be set exactly once, and cannot be switched off until the unit is fully powered off, and therefore it is impossible to dump the full OTP without a version below 3.0.0-X.
 
 There is, however, a method to dump the hash of the OTP on version 9.6.0-X. Because Kernel9Loader does not clear the SHA_HASH register after it has been used, dumping the SHA_HASH will give the hash of the OTP which was handed over to Kernel9 from Kernel9Loader. In addition, there is a long standing vulnerability where an MCU reboot caused by the i2c will not clear RAM like it's supposed to.
 
