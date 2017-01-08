@@ -4,11 +4,11 @@ title: "H2testw (Windows)" permalink: /h2testw-(windows).html lang: en_US ref: h
 
 * * *
 
-This page will walk you through the process of checking your SD card for errors using h2testw. {: .notice}
+Esta página irá guiá-lo pelo processo de verificar o seu cartão SD por erros usando o programa h2testw. {: .notice}
 
-Depending on the size of your SD card and the speed of your computer, this process can take up to several hours! {: .notice--info}
+Dependendo do tamanho do seu cartão SD e da velocidade do seu computador, este processo pode levar algumas horas! {: .notice--info}
 
-This page is for Windows users only. If you are not on windows, check out the [F3 (linux)](f3-(linux)) or [F3X (mac)](f3x-(mac)) pages. {: .notice--info}
+Esta página é apenas para utilizadores de Windows. Se não tiver Windows, veja as páginas para [F3 (linux)](f3-(linux)) ou [F3X (mac)](f3x-(mac)). {: .notice--info}
 
 #### What you need
 
