@@ -12,8 +12,8 @@ Irá PERDER todos os saves de GBA VC e DsiWare! {: .notice--danger}
 
 #### O que precisa
 
-* An existing EmuNAND
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* Uma EmuNAND já existente
+* A última versão do [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 
 #### Instructions
 
