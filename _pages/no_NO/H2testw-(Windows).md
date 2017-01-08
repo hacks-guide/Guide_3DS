@@ -6,9 +6,9 @@ title: "H2testw (Windows)" permalink: /h2testw-(windows).html lang: en_US ref: h
 
 Denne siden vil gå gjennom prosessen for å sjekke SD-kortet etter feil ved hjelp av h2testw. {: .notice}
 
-Depending on the size of your SD card and the speed of your computer, this process can take up to several hours! {: .notice--info}
+Avhengig av størrelsen på SD-kortet og hastigheten på datamaskinen din, kan denne prosessen ta opptil flere timer! {: .notice--info}
 
-This page is for Windows users only. If you are not on windows, check out the [F3 (linux)](f3-(linux)) or [F3X (mac)](f3x-(mac)) pages. {: .notice--info}
+Denne siden er for Windows-brukere. Hvis du ikke bruker Windows, sjekk ut disse sidene; [F3 (linux)](f3-(linux)) or [F3X (mac)](f3x-(mac)) pages. {: .notice--info}
 
 #### Det du trenger
 
@@ -16,15 +16,15 @@ This page is for Windows users only. If you are not on windows, check out the [F
 
 #### Instruksjoner
 
-  1. Copy `h2testw.exe` from the h2testw `.zip` to your desktop
-  2. Insert your SD card into your computer
+  1. Kopier `h2testw.exe` fra h2testw `.zip` til skrivebordet
+  2. Sett inn SD-kortet i datamaskinen din
   3. Kjør `h2tsetw.exe`
-  4. Select "English"
-  5. Click "Select target"
-  6. Select your SD card's drive letter
-  7. Ensure "all available space" is selected
-  8. Click "Write + Verify"
-  9. Wait until the process is completed
+  4. Velg "Engelsk"
+  5. Klikk "Select target"
+  6. Velg stasjonsbokstaven til SD-kortet
+  7. Kontroller at "all available space" er valgt
+  8. Klikk "Write + Verify"
+  9. Vent til prosessen er ferdig
 
 If the test shows the result `Test finished without errors`, your SD card is good and you can delete all `.h2w` files on the SD card {: .notice--success}
 
