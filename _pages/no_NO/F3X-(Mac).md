@@ -4,11 +4,11 @@ title: "F3X (Mac)" permalink: /f3x-(mac).html lang: en_US ref: f3x-(mac)
 
 * * *
 
-This page will walk you through the process of checking your SD card for errors using F3X. {: .notice}
+Denne siden vil gå gjennom prosessen for å sjekke SD-kortet etter feil ved hjelp av F3X. {: .notice}
 
 Depending on the size of your SD card and the speed of your computer, this process can take up to several hours! {: .notice--info}
 
-This page is for Mac users only. If you are not on Mac, check out the [H2testw (windows)](h2testw-(windows)) or [F3 (Linux)](f3-(linux)) pages. {: .notice--info}
+Denne siden er for Mac-brukere. Hvis du ikke bruker Mac, sjekk ut sidene; [H2testw (windows)](h2testw-(windows)) eller [F3 (Linux)](f3-(linux)) {: .notice--info}
 
 #### Det du trenger
 
@@ -27,4 +27,4 @@ If the test shows the result `Success! Your card is ok!` your SD card is good an
 
 If the test shows any other results, your SD card may be corrupted or damaged and you may have to replace it! {: .notice--danger}
 
-Return to [Get Started](get-started) {: .notice--primary}
+Gå tilbake til [Kom i Gang](get-started){: .notice--primary}
