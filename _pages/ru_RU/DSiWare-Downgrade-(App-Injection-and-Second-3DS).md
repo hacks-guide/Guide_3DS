@@ -115,35 +115,35 @@ NNID из исходной 3DS будет находится в целевой 3
  14. Нажмите (A) на `public.sav`.
  15. Выберите "Mount as FAT image" 
   * Если вы не видите такого пункта, убедитесь, что вы запускаете свежую версию GodMode9.
-  * If you still do not see this option, please [report this bug](https://github.com/d0k3/GodMode9/issues)
- 16. This will have moved you back to the main menu
- 17. Navigate to `SDCARD`
- 18. Press (Y) on the file(s) in the `savedata` folder to copy them 
-  * If there is a `savedata` folder inside of the `savedata` folder, it is not by mistake. You should copy the second `savedata` folder, not the files inside of that.
- 19. Press (B) to go back to the main menu
- 20. Navigate to `FAT IMAGE`
- 21. Use the (X) button to delete everything inside of `FAT IMAGE`
- 22. Press (Y) to paste a copy of **the contents of** the `savedata` folder to `FAT IMAGE`
- 23. Select "Copy path(s)"
- 24. Press (A) to unlock image writing, then input the key combo given
- 25. Press (Start) to reboot
- 26. Launch your DSiWare game on **the source 3DS**
- 27. Tap the screen or press any button to start the game and test if the save is functional 
-  * If you are using the EUR files (**Legends of Exidia**), after pressing (A) or (Start) at the two title screens, select the first save slot and press continue
-  * If your game has an error about `boot.nds` or a white screen, **then the exploit has been successful**
-  * If your game has an error about corrupted or inaccessible save data, confirm that you copied **the contents of** the `savedata` folder and not the `savedata` folder itself
-  * If your game behaves normally and does not give you an error about `boot.nds` or a white screen, then you should stop and figure out what went wrong
-  * If you get a black screen, [follow this troubleshooting guide](troubleshooting#twl_broken)
-  * If the game is missing from **the target 3DS** or has an error about corrupted or inaccessible save data, [follow this troubleshooting guide](troubleshooting#ts_dsiware)
+  * Если вы не видите этой опции, [напишите об этом репорт](https://github.com/d0k3/GodMode9/issues).
+ 16. Вы попадете в главное меню.
+ 17. Перейдите в `SDCARD`.
+ 18. Нажмите (Y) на файле(ах) в папке `savedata,` чтобы скопировать их. 
+  * Если в папке `savedata` уже есть папка `savedata` , не считайте это ошибкой! В таком случае копируйте вложенную папку `savedata`, а не файлы в ней.
+ 19. Нажмите (B), чтобы вернуться в главное меню программы.
+ 20. Перейдите в `FAT IMAGE`.
+ 21. C помощью кнопки (X) удалите все содержимое папки `FAT IMAGE`.
+ 22. Нажмите (Y), чтобы вставить **содержимое** папки `savedata`.
+ 23. Выберите "Copy path(s)".
+ 24. Нажмите (A), чтобы разрешить запись в SysNAND и введите указанную комбинацию кнопок.
+ 25. Нажмите (START) для перезагрузки.
+ 26. Запустите DSiWare-игру на **исходной 3DS**.
+ 27. Проверьте, работает ли импортированное сохранение, нажав на экран, либо на какую-либо кнопку 
+  * Если вы используете файлы для региона EUR (**Legends of Exidia**), после нажатия (A), либо (START) на двух первых экранах, выберите первый слот и нажмите "continue";
+  * Если игра падает с ошибкой, касающейся `boot.nds`, либо просто выскакиевает белый экран, **значит эксплойт работает и все в порядке**!
+  * Если игра жалуется на поврежденный или неверный сейв (corrupted or inaccessible), убедитесь, что скопировали именно **содержимое** папки `savedata`, а не саму папку.
+  * Если игра работает нормально безо всяких ошибок, значит вы где-то допустили оплошность и неверно установили файл сохранения. 
+  * Если выскакивает черный экран, обратитесь к разделу с [проблемами и их решениями](troubleshooting#twl_broken).
+  * Если игра пропала из **целевой 3DS**, либо выскакивает ошибка сообщающая о повреждении, либо недоступности файла сохранения, [обратитесь к части с проблемами и их решениями](troubleshooting#ts_dsiware).
 
-##### Section IV - ctr-httpwn
+##### Часть IV - ctr-httpwn
 
-**This section is only required if *the target 3DS* is under 11.2.0.**
+**Эта часть нужна только в том случае, если прошивка *целевой 3DS* ниже, чем 11.2.0. **
 
-**This will allow you to system transfer on versions other than the latest.**
+**Эта часть позволит провести перенос системы, даже в том случае, если ваша прошивка ниже последней.**
 
-  1. Copy and merge the `3ds` folder from the ctr-httpwn `.zip` to **the target 3DS**'s SD card
-  2. Reinsert your SD card into **the target 3DS**
+  1. Скопируйте и объедините папку `3ds` из `zip-архива` ctr-httpwn в корень карты памяти **целевой 3DS**.
+  2. Верните карту памяти назад в **целевую 3DS**.
   3. Launch the homebrew launcher on the device using [Homebrew Launcher (No Browser)](homebrew-launcher-(no-browser)) 
   * **New 3DSs on versions 10.7.0 and 11.0.0 can use [Homebrew Launcher (Browser)](homebrew-launcher-(browser)) instead**
   * **Ensure menuhax is not installed, or you won't be able to return to Home Menu from the homebrew launcher**
