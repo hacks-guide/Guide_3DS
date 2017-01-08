@@ -8,7 +8,7 @@ Um guia excelente para fazer um hardmod pode ser encontrado [aqui](https://gbate
 
 Isto é uma implementação, que funciona correntemente, do exploit "partições FIRM known-plaintext", explicado [aqui](https://www.3dbrew.org/wiki/3DS_System_Flaws). {: .notice--info}
 
-This will work on New 3DS, Old 3DS, and 2DS. {: .notice--success}
+Isto funciona para todas as consolas (New 3DS, Old 3DS e 2DS).
 
 #### What you need
 
