@@ -8,7 +8,7 @@ Há muitas maneiras e pontos de entrada (entrypoints) para aceder ao Homebrew La
 
 SoundHax é compatível com as versões 9.0.0 até à 11.2.0 nas regiões EUR, JPN, KOR e USA. {: .notice--info}
 
-#### What you need
+#### O que precisa
 
 + The Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
 + The latest release of [SoundHax](http://soundhax.com/) *(for your device and region)*
