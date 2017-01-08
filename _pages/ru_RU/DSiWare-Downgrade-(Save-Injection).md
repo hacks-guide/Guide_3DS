@@ -80,44 +80,44 @@ title: "DSiWare Downgrade (Save Injection)" permalink: /dsiware-downgrade-(save-
   2. Запустите dgTool, используя установленную DSiWare-игру. 
   * **Fieldrunners**: коснитесь кнопки 'Scores' в главном меню;
   * **Legends of Exidia**: после того, как нажмёте (A) или (Start) и пропустите два игровых экрана, выберите первый слот сохранения и нажмите "Continue".
-  * **Guitar Rock Tour**: Scroll down and go to High-Scores -> Drums -> Easy
-  * **The Legend of Zelda: Four Swords (Anniversary Edition)**: Just start the game
-  * If your game does not have the hacked save file installed, restart from the beginning
-  3. Select "Dump f0f1" to backup your NFIRM 
-  * This will take a while
-  4. Make note of the NFIRM backup's location
-  5. Exit dgTool 
-  * You may have to force power off by holding the power button
-  6. Put your SD card in your computer, then copy `F0F1_N3DS.bin` or `F0F1_O3DS.bin` (depending on your device) to a safe location 
-  * Make backups in multiple locations
-  * This backup will save you from a brick if anything goes wrong in the future
+  * **Guitar Rock Tour**: листайте вниз и перейдите в High-Scores -> Drums -> Easy.
+  * **The Legend of Zelda: Four Swords (Anniversary Edition)**: Просто начните игру.
+  * Если у игры нет установленного хакнутого сохранения, начните инструкцию с начала.
+  3. Выберите "Dump f0f1", чтобы сделать бекап NFIRM 3DS 
+  * Процесс не быстрый, ожидайте.
+  4. Запомните место положения бекапа NFIRM.
+  5. Закройте dgTool 
+  * При необходимости выключите приставку, удерживая кнопку питания.
+  6. Вставьте КП в компьютер; скопируйте `F0F1_N3DS.bin` или `F0F1_O3DS.bin` (зависит от вашей модели) в надежное место 
+  * Сделайте копии в нескольких местах или в облачном хранилище;
+  * Этот бекап может спасти вам консоль, если что-то пойдет не так.
 
-##### Section V - Flashing NFIRM
+##### Часть V - Прошивка целевой 3DS
 
-**Never downgrade with dgTool on a device that already has arm9loaderhax installed or you will BRICK!** {: .notice--danger}
+**НЕ понижайте прошивку с помощью dgTool на приставках с установленным arm9loaderhax. Это гарантированно приведет к брику!** {: .notice--danger}
 
-  1. Launch your DSiWare game on
-  2. Launch dgTool using your DSiWare game 
-  * **Fieldrunners**: Touch the 'Scores' button at the main menu
-  * **Legends of Exidia**: After pressing (A) or (Start) at the two title screens, select the first save slot and press continue
-  * **Guitar Rock Tour**: Scroll down and go to High-Scores -> Drums -> Easy
-  * **The Legend of Zelda: Four Swords (Anniversary Edition)**: Just start the game
-  3. Select "Downgrade FIRM to 10.4" and confirm to flash the 10.4.0 NFIRM bin
-  4. Exit dgTool 
-  * You may have to force power off by holding the power button
-  5. Reboot
+  1. Запустите установленную DSiWare-игру.
+  2. Запустите dgTool, используя установленную DSiWare-игру 
+  * **Fieldrunners**: коснитесь кнопки 'Scores' в главном меню;
+  * **Legends of Exidia**: после того, как нажмёте (A) или (Start) и пропустите два игровых экрана, выберите первый слот сохранения и нажмите "Continue";
+  * **Guitar Rock Tour**: листайте вниз и перейдите в High-Scores -> Drums -> Easy;
+  * **The Legend of Zelda: Four Swords (Anniversary Edition)**: Просто начните игру.
+  3. Выберите "Downgrade FIRM to 10.4" и подтвердите установку файлов прошивки 10.4.0 в целевую 3DS.
+  4. Закройте dgTool 
+  * При необходимости выключите приставку, удерживая кнопку питания.
+  5. Перезагрузите приставку.
 
-##### Section VI - Exploit verification
+##### Часть IX - Проверка эксплойта
 
-  1. Reinsert your SD card into your 3DS
-  2. Launch the homebrew launcher on using your entrypoint
-  3. Launch 3DSident
-  4. Verify that the following: 
+  1. Вставьте карту памяти в приставку.
+  2. Запустите Homebrew launcher, используя удобную для вас точку входа.
+  3. Запустите 3DSident.
+  4. Убедитесь, что в программе следующие значения совпадают: 
   * **Kernel version**: 2.50-11
   * **FIRM version**: 2.50-11
-  * If either of these do not display the versions above, make sure you used the correct NFIRM zip and try flashing NFIRM again
-  5. Press any button to exit back to the Homebrew Launcher
+  * Если у вас отображаются другие значения, значит вы где-то допустили ошибку. Проделайте все с самого начала. В первую очередь убедитесь, что использовали верные архивы с NFIRM. Попробуйте прошить NFIRM повторно.
+  5. Нажмите любую кнопку, чтобы вернуться в Homebrew Launcher.
 
-Your version number will *not* have changed in the settings. {: .notice--info}
+Версия прошивки, указанная в настройках *не* изменится. {: .notice--info}
 
-Continue to [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher)) {: .notice--primary}
+Переходите к запуску [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher))
