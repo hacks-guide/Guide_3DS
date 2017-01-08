@@ -19,7 +19,7 @@ title: "Decrypt9 (Homebrew Launcher)" permalink: /decrypt9-(homebrew-launcher).h
   4. Επανατοποθετήστε την κάρτα SD στο 3DS
   5. Εκκινήστε το Homebrew Launcher
   6. Εκκινήστε το safehax
-  7. If the exploit was successful, you will have booted into Decrypt9
+  7. Εάν το exploit πραγματοποιήθηκε επιτυχώς, θα έχετε εκκινήσει στο Decrypt9
 
-Continue to [2.1.0 ctrtransfer](2.1.0-ctrtransfer)  
+Συνέχεια στο [2.1.0 ctrtransfer](2.1.0-ctrtransfer)  
 {: .notice--primary}
