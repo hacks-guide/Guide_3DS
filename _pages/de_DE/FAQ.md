@@ -23,7 +23,7 @@ title: "FAQ" permalink: /faq.html lang: en_US ref: faq
 **A:** Bricks sind mittlerweile *quasi* unmöglich, außer du missachtest oder umgehst alle Sicherheitschecks.
 
 <a name="faq_homebrew" />**F:** *Kann ich coole Homebrews und Emulatoren damit abspielen?*  
-**A:** Ja! Custom Firmware not only enables the Homebrew Launcher, but it also will give you hacks on all versions, which means you keep it forever, even with updates.
+**A:** Ja! Custom Firmware aktiviert nicht nur den Homebrew Launcher, sondern gibt dir auch Hacks auf allen Versionen. Das heißt, dass du sie für immer behalten kannst, selbst wenn du updatest.
 
 <a name="faq_regionfree" />**Q:***Kann ich Spiele aus anderen Regionen hiermit spielen?*  
 **A:** Luma3DS besitzt "Region Free Patches", welche dir erlauben, ohne weitere Umstände, Spiele zu installieren, welche aus anderen Regionen kommen.
@@ -37,8 +37,8 @@ title: "FAQ" permalink: /faq.html lang: en_US ref: faq
 <a name="faq_le4gbsd" />**F:** *Kann ich dies mit einer 4GB (oder kleineren) SD Karte machen?*  
 **A:** Ja, dank der neuen CTRNAND Methode!
 
-<a name="faq_ge128gbsd" />**Q:** *Can I use a 128 GB (or larger) SD card?*  
-**A:** Yes, but some users have reported slowdowns when using such large sizes. Note that you cannot format the card with exFAT; you need to format it with FAT32.
+<a name="faq_ge128gbsd" />**F:** *Kann ich eine 128GB (oder größer) SD Karte benutzen?*  
+**A:** Ja, aber einige Benutzer haben berichtet, dass es bei solchen Größen zu Verlangsamungen kommen kann. Vermerke, dass du deine SD Karte nicht mit exFAT formartieren kannst; du musst sie mit FAT32 formatieren.
 
 <a name="faq_movesd" />**F:** *Wie kann ich eine neue SD Karte nutzen nach alle dem?*  
 **A:** Kopier einfach alle Dateien auf deine neue SD Karte.
