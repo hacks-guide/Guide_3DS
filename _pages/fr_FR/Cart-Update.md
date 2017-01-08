@@ -6,15 +6,15 @@ title: "Cart Update" permalink: /cart-update.html lang: en_US ref: cart-update
 
 Chaque cartouche contient une copie du firmware nécessaire pour y jouer, permettant à n'importe qui sur une version inférieure de mettre à jour vers cette version (même sans connexion Internet). {: .notice--info}
 
-Mettre à jour avec une cartouche installera seulement les programmes de base, tels que « Paramètres de la console », le menu Home, « Studio Son », etc. Cart Updates will not deliver updates to Network features, such as System Transfer, Internet Browser, StreetPass Mii Plaza or eShop. {: .notice--info}
+Mettre à jour avec une cartouche installera seulement les programmes de base, tels que « Paramètres de la console », le menu Home, « Studio Son », etc. Les mise à jour avec cartouche n'installeront pas les mise à jour des fonctionnalités réseaux, telles que « Transfert de données », « Navigateur Internet », « Place Mii StreetPass », ou « eShop ». {: .notice--info}
 
-This means that a cart update will NOT install a browser if you do not already have one. This will **only** update the actual system version *(for example, 2.1.0-0 -> 6.0.0-0)*. The last number *(the -0)* will **not** change. {: .notice--warning}
+Cela signifie qu'une mise à jour avec cartouche n'installera PAS un navigateur Internet si il n'y en a pas déjà un. Cela mettra à jour **uniquement** la version système *(par exemple, 2.1.0-0 -> 6.0.0-0)*. Le dernier numéro *(le -0)* **ne changera pas**. {: .notice--warning}
 
-**Updating with a game cart containing the version 9.9.0 or above will remove your browser!** {: .notice--danger}
+**Mettre à jour avec une cartouche contenant une version supérieure ou égale à 9.9.0 retirera votre navigateur !** {: .notice--danger}
 
-#### What you need
+#### Ce dont vous aurez besoin
 
-* A game cart that [contains the version](http://www.3dsdb.com/) specified in the chart
+* Une cartouche qui [contient une version](http://www.3dsdb.com/) spécifiée dans le tableau
 
 #### Instructions
 
