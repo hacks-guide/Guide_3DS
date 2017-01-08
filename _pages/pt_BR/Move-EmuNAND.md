@@ -6,7 +6,7 @@ title: "Move EmuNAND" permalink: /move-emunand.html lang: en_US ref: move-emunan
 
 Esta é uma secção extra para ensinar a mover o conteúdo duma EmuNAND antiga para a sua nova CFW SysNAND, e depois remover a antiga partição EmuNAND. Note que os termos EmuNAND e RedNAND referem-se a implementações ligeiramente diferentes [do mesmo conceito](http://3dbrew.org/wiki/NAND_Redirection). {: .notice--info}
 
-You will LOSE your GBA VC and DSiWare saves! {: .notice--danger}
+Irá PERDER todos os saves de GBA VC e DsiWare! {: .notice--danger}
 
 **You MUST have already installed arm9loaderhax + Luma3DS to use this.** {: .notice--danger}
 
