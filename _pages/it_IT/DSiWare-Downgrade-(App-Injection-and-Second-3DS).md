@@ -4,11 +4,11 @@ title: "DSiWare Downgrade (App Injection and Second 3DS)" permalink: /dsiware-do
 
 * * *
 
-If you are between versions 11.0.0 and 11.2.0, you can follow this guide to downgrade your NATIVE_FIRM using DSiWare and a second 3DS which has already has a Custom Firmware installed on it in order to dump and restore your NAND. {: .notice}
+Se siete tra le versioni 11.0.0 e 11.2.0, potete seguire questa guida al downgrade del vostro NATIVE_FIRM tramite l'utilizzo di giochi DSiWare e di un secondo 3DS che possiede già un Custom Firmware, che servirà per poter eseguire dump e restore del vostro NAND. {: .notice}
 
-If you are below 11.2.0 on either device, then you should do the ctr-httpwn steps (when prompted) on each device under 11.2.0 to allow you to System Transfer with them. {: .notice--info}
+Se siete ad una versione inferiore alla 11.2.0 su una delle due console, dovrete seguire i passaggi ctr-httpwn (quando richiesto) in modo da per effettuare il trasferimento tra i due sistemi{: .notice--info}
 
-This takes advantage of an oversight which allows DSiWare titles to read and write anywhere in NAND. {: .notice--info}
+Questa guida si basa su di una svista da parte della Nintendo che permette ai giochi DSiWare di leggere e scrivere sulla NAND.{: .notice--info}
 
 This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws). {: .notice--info}
 
