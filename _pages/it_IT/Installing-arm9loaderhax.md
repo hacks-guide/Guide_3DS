@@ -58,9 +58,9 @@ Durante la guida verranno anche configurati i seguenti programmi:
 
 <div class="notice--danger">{ notice-5 | markdownify }</div>
 
-  1. **If it exists, copy the `/files9/` folder on your SD card to a safe location on your computer and back it up to multiple locations (such as online file storage); the files inside could save you from total data loss if you break your system**
-  2. Create a folder named `cias` on the root of your SD card if it does not already exist
-  3. **Delete the `a9lh` folder from the root of your SD card if it exists** 
+  1. **Se esiste, copia la cartella `/files9/` dalla tua scheda SD in una posizione sicura sul tuo computer e in ulteriori locazioni (come un archivio online); i file al suo interno potrebbero salvarti dalla perdita di tutti i tuoi dati nel caso qualcosa vada storto**
+  2. Se assente, crea una nuova cartella rinominandola `cias` nella root della tua scheda SD
+  3. **Se presente, elimina la cartella `a9lh` dalla root della tua scheda SD** 
     * **If you accidentally install arm9loaderhax using another device's `OTP.bin`, you will BRICK!**
   4. Delete the `3ds` folder from the root of your SD card if it exists
   5. **Copy *the contents of* the `starter.zip` to the root of your SD card** 
