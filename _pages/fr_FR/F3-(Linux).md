@@ -4,11 +4,11 @@ title: "F3 (Linux)" permalink: /f3-(linux).html lang: en_US ref: f3-(linux)
 
 * * *
 
-This page will walk you through the process of checking your SD card for errors using F3. {: .notice}
+Cette page va vous guider durant le processus de vérification de votre carte SD pour détecter les erreurs en utilisant F3.{: .notice}
 
-Depending on the size of your SD card and the speed of your computer, this process can take up to several hours! {: .notice--info}
+Dépendant de la taille de votre carte SD et de la vitesse de votre ordinateur, ce processus peut prendre plusieurs heures!{: .notice--info}
 
-This page is for Linux users only. If you are not on Linux, check out the [H2testw (windows)](h2testw-(windows)) or [F3X (mac)](f3x-(mac)) pages. {: .notice--info}
+Cette page s'adresse uniquement au utilisateur de Linux seulement. Si vous n'êtes pas sous Linux, jetez un oeil sur les pages [H2testw (windows)](h2testw-(windows)) ou [F3X (mac)](f3x-(mac)).{: .notice--info}
 
 #### What you need
 
