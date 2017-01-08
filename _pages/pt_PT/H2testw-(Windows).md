@@ -8,7 +8,7 @@ Esta página irá guiá-lo pelo processo de verificar o seu cartão SD por erros
 
 Dependendo do tamanho do seu cartão SD e da velocidade do seu computador, este processo pode levar algumas horas! {: .notice--info}
 
-This page is for Windows users only. If you are not on windows, check out the [F3 (linux)](f3-(linux)) or [F3X (mac)](f3x-(mac)) pages. {: .notice--info}
+Esta página é apenas para utilizadores de Windows. Se não tiver Windows, veja as páginas para [F3 (linux)](f3-(linux)) ou [F3X (mac)](f3x-(mac)). {: .notice--info}
 
 #### What you need
 
