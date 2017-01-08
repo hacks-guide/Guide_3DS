@@ -6,42 +6,42 @@ title: "DSiWare List" permalink: /dsiware-list.html lang: en_US ref: dsiware-lis
 
 Это список совместимых [DSiWare-игр для Понижения прошивки при помощи DSiWare (Инжект приложения с помощью второй 3DS)](dsiware-downgrade-(app-injection-and-second-3ds)), составленный с помощью автоматического скрипта. {: .notice--primary}
 
-The list is sectioned off by region in the order USA, EUR, JPN. {: .notice--info}
+Список отсортирован по регионам в следующем порядке: USA, EUR, JPN. {: .notice--info}
 
-Each section is sorted by ascending price. {: .notice--info}
+Каждая часть отсортирована по возрастанию цены. {: .notice--info}
 
-QR Codes can be scanned by pressing (L + R) on the home menu, then tapping the QR icon on the bottom screen. {: .notice--info}
+QR-коды можно отсканировать, нажав (L + R) на домашнем экране и выбрав иконку QR на нижнем экране приставки. {: .notice--info}
 
-The size requirements are because the injected DSiWare and its hacked save must not modify their respective file sizes in order to system transfer properly, meaning that the donor DSiWare must be large enough to fit the hacked DSiWare. {: .notice--info}
+Требования необходимого размера связаны с условием, что измененная игра и ее сохранение не должны измениться в размере, иначе Перенос данных не пройдет корректно, означая, что донорская DSiWare-игра должна быть достаточно большой, чтобы вместить взломанную DSiWare-игру. {: .notice--info}
 
 {% capture notice-list %}
 
-    Compatible DSiWare games must meet specific size requirements, which are as follows:
+    Совместимые DSiWare-игры должны соответствовать следующим требованиям:
     
     + USA DSiWare
-      + Uses sudokuhax
-      + `.app` size of >= 3,457,024 bytes
-      + `public.sav` size of >= 67,584 bytes
+      + При использовании sudokuhax
+      + Размер `.app` >= 3,457,024 байт
+      + Размер `public.sav` >= 67,584 байт
     
     + EUR DSiWare
-      + Uses exidiahax (temporarily)
-      + `.app` size of >= 9,628,672 bytes
-      + `public.sav` size of >= 113,908 bytes
-      + `public.sav` size of <= 131,072 bytes
-      + If `public.sav` is not less than or equal to 128KB, exidia will not load the save
+      + При использовании exidiahax (временно)
+      + Размер `.app` >= 9,628,672 байт
+      + Размер `public.sav` >= 113,908 байт
+      + Размер `public.sav` <= 131,072 байт
+      + Если размер `public.sav` не меньше, или равен 128 KБ, exidia не загрузит сохранение
     
     + JPN DSiWare
-      + Uses 4swordshax (temporarily)
-      + `.app` size of >= 14,131,200 bytes
-      + `public.sav` size of == 16,384 bytes
-      + If `public.sav` is not exactly 16KB, 4swords will delete it
+      + При использовании 4swordshax (временно)
+      + Размер `.app` >= 14,131,200 байт
+      + Размер `public.sav` == 16,384 байт
+      + Если размер `public.sav` не равен точно 16 KБ, 4swords удалит его
     
 
 {% endcapture %}
 
 <div class="notice">{{ notice-list | markdownify }}</div>
 
-|                                                 | Price | 8 Character ID | Region(s) |                    QR Code                     |
+|                                                 | Цена  | 8-мизначный ID | Регион(ы) |                     QR-код                     |
 |:-----------------------------------------------:|:-----:|:--------------:|:---------:|:----------------------------------------------:|
 |                Faceez! Monsters                 | $1.99 |    4B464D45    |    USA    | ![qrcode](images/qrcodes/000480044B464D45.png) |
 |                     Faceez                      | $1.99 |    4B465A45    |    USA    | ![qrcode](images/qrcodes/000480044B465A45.png) |
