@@ -24,12 +24,12 @@ If you are unable to boot your 3DS, please look for the section relevant to you,
 
 ##### Section I - Prep work
 
-  1. Create a folder named `cias` on the root of your SD card if it does not already exist
-  2. Copy `TWL Version Data - v0.cia` to the `/cias/` folder on your SD card
-  3. Copy `DS Download Play - v1024.cia` to the `/cias/` folder on your SD card
-  4. Copy `DS Internet - v2048.cia` to the `/cias/` folder on your SD card
-  5. Copy `Nintendo DS Cart Whitelist - v11264.cia` to the `/cias/` folder on your SD card
-  6. Copy either `New_3DS TWL_FIRM - v9936.cia` or `Old_3DS TWL_FIRM - v8817.cia` to the `/cias/` folder on your SD card
+  1. Opprett en mappe kalt `cias` på roten av SD-kortet hvis den ikke allerede er der
+  2. Kopier `TWL Version Data - v0.cia` til `/cias/` mappen på SD-kortet
+  3. Kopier `DS Download Play - v1024.cia` til `/cias/` mappen på SD-kortet
+  4. Kopier `DS Internet - v2048.cia` til `/cias/` mappen på SD-kortet
+  5. Kopier `Nintendo DS Cart Whitelist - v11264.cia` til`/cias/` mappen på SD-kortet
+  6. Kopier enten `New_3DS TWL_FIRM - v9936.cia` eller `Old_3DS TWL_FIRM - v8817.cia` til `/cias/` mappen på SD-kortet
 
 ##### Seksjon II - Installere titler
 
@@ -48,7 +48,7 @@ If you are unable to boot your 3DS, please look for the section relevant to you,
 
 #### Instruksjoner
 
-  1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `up_GodMode9.bin`
+  1. Kopier `GodMode9.bin` fra filen GodMode9 `.zip` til `/luma/payloads/` mappen på SD-kortet og endre navnet på filen `GodMode9.bin` i `/luma/payloads/` til `up_GodMode9.bin`
   2. Boot holding (Up) to reboot into arm9loaderhax GodMode9
   3. Navigate to `SYSNAND CTRNAND` -> `data` -> (32 Character ID) -> `sysdata` -> `00010038`
   4. Hold down the (R) trigger, then press X on `00000000` to rename this file
@@ -56,7 +56,7 @@ If you are unable to boot your 3DS, please look for the section relevant to you,
   6. Trykk (A) for å lagre endringene
   7. Press (A) to unlock SysNAND writing, then input the key combo given
   8. Navigate back to the Main Menu
-  9. Press Start to reboot
+  9. Trykk (Start) for omstart
 
 ## <a name="gw_fbi" />Cannot inject H&S on Gateway downgraded device
 
@@ -70,7 +70,7 @@ This is caused by Gateway implementing a very shoddy downgrade method, which lea
 
   1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `up_GodMode9.bin`
   2. Reinsert your SD card into your 3DS
-  3. Open GodMode9 from arm9loaderhax by holding (Up) during boot 
+  3. Åpne GodMode9 fra arm9loaderhax ved å holde (Opp) under oppstart 
   4. Navigate to `SYSNAND CTRNAND` -> `title` -> `00040010`
   5. Navigate to the folder for your device and region: 
     * **Old 3DS EUR**: `00022300` -> `content`
@@ -80,8 +80,8 @@ This is caused by Gateway implementing a very shoddy downgrade method, which lea
     * **New 3DS JPN**: `20020300` -> `content`
     * **New 3DS USA**: `20021300` -> `content`
   6. Notice that there are two sets of app and tmd files, one set with uppercase extensions (`.TMD` and `.APP`), and one set with lowercase extensions (`.tmd` and `.app`)
-  7. While holding the (R) trigger, press (Y) to create a new directory
-  8. Press (A) to confirm the name `newdir` (it doesn't matter what it's called)
+  7. Mens du holder (R), trykk (Y) for å lage en ny mappe
+  8. Trykk (A) for å bekrefte navnet `newdir` (det spiller ingen rolle hva den heter)
   9. Press (A) to unlock SysNAND writing, then input the key combo given
  10. Press the (L) trigger on each of the uppercase extension files (`.TMD` and `.APP`) to mark them
  11. Trykk (Y) kopiere filene
@@ -106,7 +106,7 @@ Browser based exploits (such as browserhax or 2xrsa) are often unstable and cras
 You copied the wrong `arm9loaderhax.bin` file to your SD card (you were only supposed to copy the `3ds` folder and `SafeA9LHInstaller.dat` file from the SafeA9LHInstaller zip)
 
   1. Use the correct `arm9loaderhax.bin` 
-      1. Copy `arm9loaderhax.bin` from the Luma3DS `.zip` to the root of your SD card
+      1. Kopier `arm9loaderhax.bin` fra Luma3DS `.zip` til roten av SD-kortet
       2. Reboot holding select and continue
 
 ## <a name="ts_safe_a9lh_screen" />SafeA9LHInstaller shows a glitched screen
