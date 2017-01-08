@@ -52,14 +52,14 @@ Die folgenden Schritte werden zudem einige payloads und die AES Key Database akt
   4. Lösche den `a9lh` Ordner aus dem Hauptverzteichnis deiner SD-Karte
   5. Lösche `down_safea9lhinstaller.bin` aus `/luma/payloads/`
 
-##### Abschnitt III - Konfiguration von Luma3DS
+##### Abschnitt III - Luma3DS konfigurieren
 
-  1. Reinsert your SD card into your 3DS and boot holding (Select)
-  2. Use the (A) button and the D-Pad to turn on the following:  
+  1. Stecke die SD-Karte in den 3DS und halte (Select) beim starten gedrückt
+  2. Nutze den (A) Knopf und das Steuerkreuz um folgende Funktionen zu aktivieren:  
     * **"Autoboot SysNAND"**
-    * **"Use SysNAND FIRM if booting with R"**
+    * **Use SysNAND FIRM if booting with R"**
     * **"Show NAND or user string in System Settings"**
-  3. If you are using a **New 3DS**, you should *also* enable the following: 
+  3. Wenn du einen **New 3DS** nutzt, solltest du *auch* das Folgende aktivieren: 
     * **"New 3DS CPU" to "Clock+L2(x)"**
     * This will increase the framerate of many games, but may cause instability in others
     * If some games do not work properly, disable this option and try again
