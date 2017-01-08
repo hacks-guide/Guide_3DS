@@ -4,7 +4,7 @@ title: "Decrypt9 (MSET)" permalink: /decrypt9-(mset).html lang: en_US ref: decry
 
 * * *
 
-La première chose que ce guide va faire est de vous obtenez l''exécution Decrypt9, qui est un outil qui nous permettra d'installer la version 2.1.0, qui contient une vulnérabilité qui est nécessaire pour poursuivre l'exploitation du système. {: .notice}
+La première chose que ce guide va faire est de vous faire exécuter Decrypt9, qui est un outil qui nous permettra d'installer la version 2.1.0, qui contient une vulnérabilité qui est nécessaire pour poursuivre l'exploitation du système. {: .notice}
 
 Si vous avez déjà une installation RedNAND, ce guide concerne exclusivement SysNAND et vous devez suivre toutes les instructions dans SysNAND ou par rapport à SysNAND. Notez que les termes EmuNAND et RedNAND font référence à des implémentations légèrement différentes [du même concept](http://3dbrew.org/wiki/NAND_Redirection). {: .notice--info}
 
