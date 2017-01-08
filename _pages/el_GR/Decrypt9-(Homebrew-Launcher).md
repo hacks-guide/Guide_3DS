@@ -13,12 +13,12 @@ title: "Decrypt9 (Homebrew Launcher)" permalink: /decrypt9-(homebrew-launcher).h
 
 #### Οδηγείες
 
-  1. Create a folder named `files9` on the root of your SD card if it does not already exist
-  2. Copy and merge the contents of the safehax+fasthax `.zip` to root of your SD card, overwrite existing files
-  3. Copy `Decrypt9WIP.bin` from the Decrypt9WIP `.zip` to the root of your SD card and rename `Decrypt9WIP.bin` to `arm9.bin`
-  4. Reinsert your SD card into your 3DS
-  5. Enter the homebrew launcher
-  6. Launch safehax
+  1. Δημιουργήστε έναν φάκελο με το όνομα `files9` στην ρίζα της κάρτας SD σε περίπτωση που δεν υπάρχει ίδη
+  2. Αντιγράψτε τα περιεχόμενα του safehax+fasthax`.zip` στην ρίζα της κάρτας SD, αντικαθιστώντας τα ήδη υπάρχοντα αρχεία
+  3. Αντιγράψτε το `Decrypt9WIP.bin` από το Decrypt9WIP `.zip` στην ρίζα της κάρτας SD και μετονομάστε το `Decrypt9WIP.bin` σε `arm9.bin`
+  4. Επανατοποθετήστε την κάρτα SD στο 3DS
+  5. Εκκινήστε το Homebrew Launcher
+  6. Εκκινήστε το safehax
   7. If the exploit was successful, you will have booted into Decrypt9
 
 Continue to [2.1.0 ctrtransfer](2.1.0-ctrtransfer)  
