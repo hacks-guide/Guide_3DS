@@ -4,11 +4,11 @@ title: "DSiWare Downgrade (Save Injection)" permalink: /dsiware-downgrade-(save-
 
 * * *
 
-If you are on version 11.0.0 or 11.1.0, you must follow this guide to downgrade your NATIVE_FIRM using DSiWare {: .notice}
+Falls du auf Version 11.0.0 oder 11.1.0 bist, musst du dieser Anleitung folgen um dein NATIVE_FIRM mit einem DSiWare-Spiel zu downgraden. {: .notice}
 
-This takes advantage of an oversight which allows DSiWare titles to read and write anywhere in NAND. {: .notice--info}
+Dies nutzt einen Fehler aus, welcher es DSiWare-Spielen erlaubt überall im NAND zu lesen und zu schreiben. {: .notice--info}
 
-Be prepared to wait 20 minutes (New 3DS) to an hour (Old 3DS). Slowhax (waithax) is named so for a reason. {: .notice--info}
+Stell dich darauf ein 20 Minuten (New 3DS) bis zu einer Stunde (Old 3DS) zu warten. Slowhax (waithax) wurde aus diesem Grund so benannt. {: .notice--info}
 
 This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws). {: .notice--info}
 
