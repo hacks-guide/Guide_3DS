@@ -4,26 +4,26 @@ title: "Homebrew Launcher (SoundHax)" permalink: /homebrew-launcher-(soundhax).h
 
 * * *
 
-The Homebrew Launcher has many different entrypoints, or methods of launching. {: .notice}
+Существует много различных точек входа в Homebrew Launcher. {: .notice}
 
-SoundHax is compatible with versions 9.0.0 through 11.2.0 in the EUR, JPN, KOR, and USA regions. {: .notice--info}
+SoundHax совместим с приставками с прошивками от 9.0.0 до 11.2.0 включительно, следующих регионов: EUR, JPN, USA и KOR. {: .notice--info}
 
-#### What you need
+#### Что нужно:
 
 + The Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
-+ The latest release of [SoundHax](http://soundhax.com/) *(for your device and region)*
-+ The [otherapp payload](https://smealum.github.io/3ds/#otherapp) *(for your version and region)*
++ Свежая версия [SoundHax](http://soundhax.com/)*(для вашей версии системного ПО и региона)*
++ [otherapp payload](https://smealum.github.io/3ds/#otherapp)* (для вашей версии системного ПО и региона)*
 
-#### Instructions
+#### Что делать:
 
-  1. Copy *the contents of* the `starter.zip` to the root of your SD card
-  2. Copy the SoundHax `.m4a` to the root of your SD card
-  3. Copy the otherapp payload to the root of your SD card and rename it to `otherapp.bin`
-  4. Reinsert your SD card into your 3DS
-  5. Launch Nintendo 3DS Sound
-  6. Go through all of the bird tips, then close the app normally and reopen it 
-    + Launching SoundHax immediately would cause these tips to appear on every launch of the Nintendo 3DS Sound until this is done
-  7. Play the SoundHax `.m4a`
-  8. Your console should load the homebrew menu
+  1. Скопируйте *содержимое* архива `starter.zip` в корень SD-карты.
+  2. Скопируйте `.m4a` от SoundHax в корень вашей карты памяти.
+  3. Скопируйте otherapp payload в корень вашей карты памяти и переименуйте его в `otherapp.bin`.
+  4. Вставьте карту памяти в 3DS.
+  5. Запустите приложение Звук Nintendo 3DS (Nintendo 3DS Sound).
+  6. Пролистайте все сообщения говорящего попугая, закройте приложение и запустите снова. 
+    + Если начать использование Soundhax сразу, без закрытия, то птичка будет появляться при каждом запуске программы.
+  7. Запустите скачанный `.m4a`.
+  8. На приставке запустится homebrew menu.
 
-Continue to [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher)) {: .notice--primary}
+Переходите к запуску [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher)) {: .notice--primary}
