@@ -77,11 +77,11 @@ Die folgenden Schritte werden zudem einige payloads und die AES Key Database akt
   8. Schließe mit der Home-Taste
   9. Schalte deinen 3DS aus und entferne die SD-Karte
  10. Starte mit der entfernten SD-Karte und halte dabei (Select) gedrückt 
-    * Booting the device at least once with the SD card removed will allow you to configure the CTRNAND based luma installation
- 11. Use the (A) button and the D-Pad to turn on the following:  
+    * Die Konsole ohne die SD-Karte zu starten erlaubt es dir die CTRNAND basierende Luma Installation zu nutzen und zu konfigurieren
+ 11. Nutze den (A) Knopf und das Steuerkreuz um folgende Funktionen zu aktivieren:  
     * **"Show NAND or user string in System Settings"**
- 12. If you are using a **New 3DS**, you should *also* enable the following: 
+ 12. Wenn du einen **New 3DS** nutzt, solltest du *auch* das Folgende aktivieren: 
     * **"New 3DS CPU" to "Clock+L2(x)"**
-    * This will increase the framerate of many games, but may cause instability in others
-    * If some games do not work properly, disable this option and try again
- 13. Reinsert your SD card, then press Start to save and reboot!
+    * Dies sorgt in vielen Spielen für eine bessere Framerate, kann aber auch in einigen zu Instabilität führen
+    * Wenn ein Spiel nicht richtig funktioniert, deaktiviere diese Funktion und versuche es nochmal
+ 13. Stecke die SD-Karte wieder in den 3DS und drücke (Start) um zu speichern und neu zu starten
