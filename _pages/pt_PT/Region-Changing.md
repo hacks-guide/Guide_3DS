@@ -10,7 +10,7 @@ Esta é uma secção extra para mudar a região da sua consola com arm9loaderhax
 
 Este processo irá desvincular o seu NNID do sistema, uma vez que não será mais compatível com ele. Os NNID's estão bloqueados à região do dispositivo que os criou, e não podem ser transferidos entre regiões sem [um processo muito avançado e complexo](https://gist.githubusercontent.com/yifanlu/e80db121d38aceb8cca0e03cefd5853b/raw/3c4dd89869156ca0f945a2791e699acfdb32b510/gistfile1.txt). {: .notice--warning}
 
-After this process, only **New 3DSs which have never accessed the eShop before** and **any Old 3DSs** will be able to access the eShop after creating a new NNID on their new region. Region changed New 3DSs that have already accessed the eShop on their original region cannot create a new NNID and access the eShop on their new region! {: .notice--warning}
+Depois deste processo, apenas **New 3DSs que nunca acederam à eShop antes** e **quaisquer Old 3DSs** poderão aceder à eShop depois de criar uma nova NNID na nova região. Region changed New 3DSs that have already accessed the eShop on their original region cannot create a new NNID and access the eShop on their new region! {: .notice--warning}
 
 Note that occasionally the eShop will inexplicably still not work for devices that it should work for. This is entirely to do with Nintendo's servers, and I really do not have any control over it. {: .notice--warning}
 
