@@ -68,7 +68,7 @@ NNID из исходной 3DS будет находится в целевой 3
 
   1. Создайте папку `files9` в корне карты памяти **исходной 3DS**, если таковой не имеется.
   2. **Используйте [save manager](https://github.com/J-D-K/JKSM/releases/latest) для того, чтобы сделать резервные копии всех важных сейвов на целевой 3DS (приставка будет отформатирована)!**
-  3. Copy the relevant `public.sav` from the `/dsiware/(8 Character ID)/` folder in the 3ds_dsiwarehax_installer `.zip` to the root of **the source 3DS**'s SD card 
+  3. Скопируйте `public.sav` из папки `/dsiware/(8-значный ID)/` находящегося в архиве `.zip` to the root of **the source 3DS**'s SD card 
   * **Fieldrunners USA Region**: `4b464445`
   * **Fieldrunners EUR Region**: `4b464456`
   * **Legends of Exidia USA Region**: `4b4c4545`
