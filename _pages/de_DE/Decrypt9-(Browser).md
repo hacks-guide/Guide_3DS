@@ -14,16 +14,16 @@ Falls du deine Konsole bereits gehackt hast und bisher einen CFW verwendet hast,
 
 #### Arbeitsschritte
 
-  1. Create a folder named `files9` on the root of your SD card if it does not already exist
+  1. Erstelle einen `files9` Ordner auf dem Root deiner SD Karte falls dieser noch nicht existiert
   2. Kopiere die Datei `Launcher.dat` und `Decrypt9WIP.dat` aus der Decrypt9WIP `.zip` in das Rootverzeichnis deiner SD Karte
-  3. Reinsert your SD card into your 3DS
-  4. Open the browser and go to one of the following URLs on your 3DS 
+  3. Lege die SD Karte wieder in deinen 3DS ein
+  4. Öffne deinen Internetbrowser auf dem 3DS und öffne eine der folgenden Seiten: 
     * `https://dukesrg.github.io/?Decrypt9WIP.dat`
     * `http://go.gateway-3ds.com/`
     * `http://www.reboot.ms/3ds/load.html?Launcher.dat`
     * `http://dukesrg.dynu.net/3ds/rop?GW17567.dat&Launcher.dat`
-    * Make sure to try each URL if the first one doesn't work (some versions cannot use the first one, and some versions cannot use the last three)
-    * If you get an error, [follow this troubleshooting guide](troubleshooting#ts_browser)
-  5. If the exploit was successful, you will have booted into Decrypt9
+    * Stelle sicher, dass du jede URL probierst falls die erste nicht funktioniert (manche Versionen können die erste nicht benutzen und manche Versionen können die letzten drei nicht benutzen)
+    * Falls du eine Fehlermeldung bekommst, [folge dieser Anleitung zur Fehlerbehebung](troubleshooting#ts_browser)
+  5. Wenn alles funktioniert hat, wirst du dich nun in Decrypt9 befinden.
 
 Weiter zu [2.1.0 ctrtransfer](2.1.0-ctrtransfer) {: .notice--primary}
