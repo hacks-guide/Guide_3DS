@@ -111,13 +111,13 @@ Diese Sicherheitskopie kann nur auf dieser NAND benutzt werden. Falls du deinen 
 
   1. Lege deine SD Karte wieder in deinen 3DS ein
   2. Starte den Homebrew Launcher mit deinem bevorzugten Eintrittspunkt
-  3. Launch 3DSident
-  4. Verify that the following: 
-  * **Kernel version**: 2.50-11
-  * **FIRM version**: 2.50-11
-  * If either of these do not display the versions above, make sure you used the correct NFIRM zip and try flashing NFIRM again
-  5. Press any button to exit back to the Homebrew Launcher
+  3. Starte 3DSident
+  4. Bestätige folgendes: 
+  * **Kernel Version**: 2.50-11
+  * **FIRM Version**:2.50-11
+  * Falls eins dieser beiden nicht die obige Version anzeigt, stelle sicher, dass du die korrekte NFIRM zip benutzt hast und flashe NFIRM erneut
+  5. Drücken irgendeinen Knopf um zum Homebrew Launcher zurückzukehren
 
-Your version number will *not* have changed in the settings. {: .notice--info}
+Deine Versionsnummer wird sich *nicht* verändert haben. {: .notice--info}
 
-Continue to [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher)) {: .notice--primary}
+Fahre mit [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher)) fort {: .notice--primary}
