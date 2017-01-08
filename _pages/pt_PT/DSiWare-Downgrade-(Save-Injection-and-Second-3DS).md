@@ -4,7 +4,7 @@ title: "DSiWare Downgrade (Save Injection and Second 3DS)" permalink: /dsiware-d
 
 * * *
 
-**Estas instruções só são úteis se já possui o jogo "Fieldrunners", "Legends of Exidia", "Guitar Rock Tour", ou "The Legend of Zelda: Four Swords (Anniversary Edition)" na 3DS de origem. Each game has been pulled from the eShop; you must have already gotten them.** {: .notice--primary}
+**Estas instruções só são úteis se já possui o jogo "Fieldrunners", "Legends of Exidia", "Guitar Rock Tour", ou "The Legend of Zelda: Four Swords (Anniversary Edition)" na 3DS de origem. Cada um destes jogos foram retirados da eShop; logo, precisa de já os ter na consola.** {: .notice--primary}
 
 If you are between versions 11.0.0 and 11.2.0, you can follow this guide to downgrade your NATIVE_FIRM using DSiWare and a second 3DS which has already has a Custom Firmware installed on it in order to dump and restore your NAND. {: .notice}
 
