@@ -6,7 +6,7 @@ title: "Why Ads?" permalink: /why-ads.html layout: single-no-ads lang: en_US ref
 
 Questo progetto è il risultato di centinaia e centinaia di ore di lavoro.
 
-Mantengo questa guida, gratuitamente, e mi assicuro che sia sempre aggiornata. Because of this effort, I feel that it is fair for me to attempt to gain a meager income from my work (I receive next to no donations anymore).
+Mantengo questa guida, gratuitamente, e mi assicuro che rimanga sempre aggiornata. Per questo, mi sembra più che giusto cercare di ottenere una minima gratificazione per il mio lavoro (ormai non ricevo quasi più donazioni).
 
 Usare questo sito non ti costa nulla, e tutto ciò che mostro sono pubblicità non intrusive. Ma se hai ancora problemi con questo, sentiti libero di bloccare queste pubblicità.
 
