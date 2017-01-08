@@ -4,15 +4,15 @@ title: "Installing arm9loaderhax" permalink: /installing-arm9loaderhax.html lang
 
 * * *
 
-The final Step of this guide is to install arm9loaderhax and setup Luma3DS to run just milliseconds into the boot. This is accomplished by using SafeA9LHInstaller by [AuroraWright](https://github.com/AuroraWright/). {: .notice}
+L'ultimo passo di questa guida consiste nell'installare l'arm9loaderhax e nel setup di Luma3DS perché si avvii un istante dopo l'accensione della console. Verrà utilizzato il SafeA9LHInstaller di [AuroraWright](https://github.com/AuroraWright/). {: .notice}
 
-This will install [AuroraWright's Fork](https://github.com/AuroraWright/arm9loaderhax) of arm9loaderhax. {: .notice--info}
+Verrà installata la [fork di AuroraWright](https://github.com/AuroraWright/arm9loaderhax) dell'arm9loaderhax. {: .notice--info}
 
-We will also setup the ability to launch payloads from arm9loaderhax, giving us the ability to unbrick our SysNAND from situations that would normally brick us by restoring from backup. {: .notice--info}
+Verrà anche configurato il lancio facoltativo dei payload dall'arm9loaderhax, per permettere l'unbrick della SysNAND in situazioni che brickerebbero la console con il normale ripristino del backup. {: .notice--info}
 
-**You cannot use another console's OTP or you will brick GUARANTEED.** {: .notice--danger}
+**Non puoi usare il file OTP di un'altra console, altrimenti la tua VERRÀ BRICKATA.** {: .notice--danger}
 
-#### Overview of steps
+#### Panoramica
 
 In this section, we will go through the process that all the other steps have led up to: actually installing arm9loaderhax.
 
