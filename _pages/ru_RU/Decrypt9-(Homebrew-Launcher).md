@@ -4,22 +4,25 @@ title: "Decrypt9 (Homebrew Launcher)" permalink: /decrypt9-(homebrew-launcher).h
 
 * * *
 
-Из-за странного бага, safehax для работы требует рабочий картридж, вставленный в приставку (от 3DS, NDS, флеш-картридж - все равно). В качестве альтернативного решения, всем пользователям прошивки 9.2.0 или ниже, рекомендуется скопировать `Decrypt9WIP.3dsx` в папку `/3ds/` и запустить его из HBL вообще безо всяких хаков. {: .notice--info}
-
 #### Что нужно:
 
 * Свежая версия [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/latest/).
-* Свежий форк [safehax+fasthax](https://gbatemp.net/attachments/safehax-fasthax-cb6a1bc-zip.73592/).
+* The latest release of [safehax](https://github.com/TiniVi/safehax/releases/latest)
+* The latest release of [fasthax](https://github.com/nedwill/fasthax/releases/latest)
 
 #### Что делать:
 
   1. Создайте папку `files9` в корне карты памяти.
-  2. Скопируйте с заменой содержимое `zip-архива` с safehax+fasthax в корень карты памяти.
-  3. Скопируйте `Decrypt9WIP.bin` из `zip-архива` с Decrypt9WIP в корень карты памяти и переименуйте `Decrypt9WIP.bin` в `arm9.bin`.
-  4. Вставьте карту памяти в приставку.
-  5. Запустите Homebrew launcher.
-  6. Запустите safehax.
-  7. Если эксплойт сработал верно, запустится Decrypt9.
+  2. Copy `safehax.3dsx` to the `/3ds/` folder on your SD card
+  3. Copy `fasthax.3dsx` to the `/3ds/` folder on your SD card
+  4. Copy `Decrypt9WIP.bin` from the Decrypt9WIP `.zip` to the root of your SD card and rename `Decrypt9WIP.bin` to `safehaxpayload.bin`
+  5. Reinsert your SD card into your 3DS
+  6. Enter the homebrew launcher
+  7. Launch fasthax
+  8. Once it has completed, press (Start) to exit back to the homebrew launcher 
+    * This may take several tries
+  9. Launch safehax
+ 10. If the exploit was successful, you will have booted into Decrypt9
 
-Переходите к [2.1.0 ctrtransfer](2.1.0-ctrtransfer)  
+Continue to [2.1.0 ctrtransfer](2.1.0-ctrtransfer)  
 {: .notice--primary}
