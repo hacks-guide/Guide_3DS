@@ -23,22 +23,22 @@ title: "FAQ" permalink: /faq.html lang: en_US ref: faq
 **A:** Полное окирпичивание *попросту* невозможно, если не игнорировать/пропускать все предписания по безопасности.
 
 <a name="faq_homebrew" />**Q:** *Смогу ли я с этим запускать замечательные хоумбрю-приложения и эмуляторы?*  
-**A:** Да! Custom Firmware not only enables the Homebrew Launcher, but it also will give you hacks on all versions, which means you keep it forever, even with updates.
+**A:** Да! Кастомная прошивка не только поддерживает Homebrew Launcher, но и также остаётся на консоли даже после обновлений.
 
-<a name="faq_regionfree" />**Q:** *Can I use this to play games from other regions?*  
-**A:** Luma3DS supports Region Free patches, which enables users to install games from any region without any extra modification or steps.
+<a name="faq_regionfree" />**Q:** *Могу ли я с этим запускать игры из других регионов?*  
+**A:** Luma3DS поддерживает Region Free-патчи, которые позволяют устанавливать игры из других регионов без дополнительных модификаций или других действий со стороны пользователя.
 
-<a name="faq_updates" />**Q:** *Is it safe to update CFW SysNAND?*  
-**A:** Yes. This is safe, stop asking about it.
+<a name="faq_updates" />**Q:** *Безопасно ли обновлять SysNAND на девайсе с кастомной прошивкой (CFW)?*  
+**A:** Да, это безопасно, хватит об этом спрашивать.
 
-<a name="faq_support" />**Q:** *Where should I go for support?*  
-**A:** For support, ask for help at #3dshacks on Rizon IRC</a> or 3DS Hacking on Discord</a>.
+<a name="faq_support" />**Q:** *Куда мне обратиться за поддержкой?*  
+**A:** Помощи можно попросить на канале #3dshacks в сети Rizon IRC</a> или на сервере 3DS Hacking в Discord</a> (англ.).
 
-<a name="faq_le4gbsd" />**Q:** *Can I do this with a 4GB (or smaller) SD card?*  
-**A:** Thanks to the new CTRNAND method, yes!
+<a name="faq_le4gbsd" />**Q:** *Достаточно ли SD-карты на 4 ГБ (или меньше)?*  
+**A:** Благодаря новому CTRNAND-методу, да!
 
-<a name="faq_ge128gbsd" />**Q:** *Can I use a 128 GB (or larger) SD card?*  
-**A:** Yes, but some users have reported slowdowns when using such large sizes. Note that you cannot format the card with exFAT; you need to format it with FAT32.
+<a name="faq_ge128gbsd" />**Q:** *Можно ли использовать SD-карты на 128 ГБ (или больше)?*  
+**A:** Да, однако некоторые пользователи сообщали о замедлении работы с картами таких больших объёмов. Note that you cannot format the card with exFAT; you need to format it with FAT32.
 
 <a name="faq_movesd" />**Q:** *How do I move to a new SD card at the end of this?*  
 **A:** Just copy all the files to the new SD card.
