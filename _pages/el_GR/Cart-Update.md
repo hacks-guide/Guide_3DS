@@ -6,9 +6,9 @@ title: "Cart Update" permalink: /cart-update.html lang: en_US ref: cart-update
 
 Όλες οι κασέτες παιχνιδιών περιέχουν ένα αντίγραφο της έκδοσης συστήματος που απαιτείται για να παίξει, επιτρέποντας στον καθένα που βρίσκεται σε μία χαμηλότερη έκδοση να αναβαθμίσει στην απαιτούμενη την έκδοση (ακόμα και χωρίς σύνδεση στο διαδίκτυο). {: .notice--info}
 
-Οι αναβαθμίσεις από Κασέτες θα αναβαθμίσουν μόνο θεμελιώδη χαρακτηριστικά, όπως οι Ρυθμίσεις Συστήματος, το Home Menu, το Nintendo 3DS Sound, κλπ. Cart Updates will not deliver updates to Network features, such as System Transfer, Internet Browser, StreetPass Mii Plaza or eShop. {: .notice--info}
+Οι αναβαθμίσεις από Κασέτες θα αναβαθμίσουν μόνο θεμελιώδη χαρακτηριστικά, όπως οι Ρυθμίσεις Συστήματος, το Home Menu, το Nintendo 3DS Sound, κλπ. Οι αναβαθμίσεις από κασέτες δεν θα ενημερώσουν λειτουργίες δικτύου, όπως η Μεταφορά Συστήματος, το πρόγραμμα περιήγησης, το StreetPass Mii Plaza ή το eShop. {: .notice--info}
 
-This means that a cart update will NOT install a browser if you do not already have one. This will **only** update the actual system version *(for example, 2.1.0-0 -> 6.0.0-0)*. The last number *(the -0)* will **not** change. {: .notice--warning}
+Αυτό σημαίνει πως η αναβάθμιση από κασέτα ΔΕΝ θα εγκαταστήσει πρόγραμμα περιήγησης, εάν δεν έχετε ήδη ένα. Θα αναβαθμίσει **μόνο** την έκδοση του συστήματος *(για παράδειγμα, 2.1.0-0 -> 6.0.0-0)*. The last number *(the -0)* will **not** change. {: .notice--warning}
 
 **Updating with a game cart containing the version 9.9.0 or above will remove your browser!** {: .notice--danger}
 
