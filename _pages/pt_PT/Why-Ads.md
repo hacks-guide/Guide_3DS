@@ -10,7 +10,7 @@ Este projeto é o culminar de centenas após centenas de horas de trabalho const
 
 Eu mantenho este guia completamente de graça, e asseguro-me de que está sempre atualizado. Por causa deste esforço, eu sinto que é justo tentar obter algum rendimento pelo meu trabalho (Eu praticamente já não recebo doações).
 
-This site costs you nothing to use, and all that I display are non-intrusive ads. If you still have a problem with this, feel free to block these ads.
+Este site não lhe custa nada para utilizar, e tudo o que mostro são anúncios não-intrusivos. Se ainda tiver um problema com isto, sinta-se livre para bloquear estes anúncios.
 
 If you do block ads, I would like to also remind you of the [Donations](donations) page, but once again that is optional too.
 
