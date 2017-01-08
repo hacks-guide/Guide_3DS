@@ -12,7 +12,7 @@ Esta página é apenas para utilizadores de Windows. Se não tiver Windows, veja
 
 #### O que precisa
 
-* The latest version of [h2testw](http://www.heise.de/ct/Redaktion/bo/downloads/h2testw_1.4.zip)
+* A última versão do [h2testw](http://www.heise.de/ct/Redaktion/bo/downloads/h2testw_1.4.zip)
 
 #### Instructions
 
