@@ -63,12 +63,12 @@ NNID из исходной 3DS будет находится в целевой 3
 
 #### Что делать:
 
-##### Section I - Prep Work
+##### Часть I - Подготовка
 
-Use a [save manager](https://github.com/J-D-K/JKSM/releases/latest) to backup any saves you care about on the target 3DS (it will be formatted!) {: .notice--warning}
+Используйте [save manager](https://github.com/J-D-K/JKSM/releases/latest)для того, чтобы сделать резервные копии всех важных сейвов на целевой 3DS (приставка будет отформатирована)! {: .notice--warning}
 
-  1. Create a folder named `files9` on the root of **the source 3DS**'s SD card if it does not already exist
-  2. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on **the source 3DS**'s' SD card and rename `GodMode9.bin` in `/luma/payloads/` to `up_GodMode9.bin`
+  1. Создайте папку `files9` в корне карты памяти **исходной 3DS**, если таковой не имеется.
+  2. Скопируйте `GodMode9.bin` из `zip-архива` GodMode9 в папку `/luma/payloads/` в корне КП **исходной 3DS** и переименуйте `GodMode9.bin` в `up_GodMode9.bin`.
   3. Copy the `.app` from DSiWare injection `.zip` to the root of **the source 3DS**'s SD card
   4. Copy `savedata` folder from DSiWare injection `.zip` to the root of **the source 3DS**'s SD card
   5. Reinsert **the source 3DS**'s SD card
