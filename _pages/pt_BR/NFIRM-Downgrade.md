@@ -4,9 +4,9 @@ title: "NFIRM Downgrade" permalink: /nfirm-downgrade.html redirect_from: "/dsiwa
 
 * * *
 
-If you are between 11.0.0 and 11.2.0, you must follow this guide to downgrade your NFIRM using one of the methods at the bottom of this page to directly dump and restore your NAND. {: .notice--info}
+Se estiver entre as versões 11.0.0 e 11.2.0, deverá seguir este guia para fazer o downgrade da sua NFIRM ao usar um dos métodos no fundo desta página para extrair e restaurar diretamente a sua NAND. {: .notice--info}
 
-All of these are working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws). {: .notice--info}
+Todos estes métodos são implementações, que funcionam correntemente, do exploit "partições FIRM known-plaintext", explicado [aqui](https://www.3dbrew.org/wiki/3DS_System_Flaws). {: .notice--info}
 
 This will work on New 3DS, Old 3DS, and 2DS (although the DSiWare methods have some restrictions). {: .notice--success}
 
