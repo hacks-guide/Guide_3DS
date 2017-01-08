@@ -10,7 +10,7 @@ Dependendo do tamanho do seu cartão SD e da velocidade do seu computador, este 
 
 Esta página é apenas para utilizadores de Mac. Se não tiver Mac, veja as páginas para [H2testw (windows)](h2testw-(windows)) ou [F3 (Linux)](f3-(linux)). {: .notice--info}
 
-#### What you need
+#### O que precisa
 
 * The latest release of [F3X](https://github.com/insidegui/F3X/releases)
 
