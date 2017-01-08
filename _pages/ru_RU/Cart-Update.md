@@ -4,22 +4,22 @@ title: "Cart Update" permalink: /cart-update.html lang: en_US ref: cart-update
 
 * * *
 
-All game carts contain a copy of the required system version to play it, allowing anyone on a lower version to use the cartridge to update to that version (even without an internet connection). {: .notice--info}
+Все картриджи содержат в себе обновление системы до версии, которая необходима для того, чтобы игра работала. То есть, если игра на картридже требует систему версии 9.9.0, а у вас в приставке 4.5.0, то с помощью картриджа можно будет подняться до необходимой версии даже без интернета. {: .notice--info}
 
-Cart Updates will only deliver updates to core features, such as the System Settings, Home Menu, Nintendo 3DS Sound, etc. Cart Updates will not deliver updates to Network features, such as System Transfer, Internet Browser, StreetPass Mii Plaza or eShop. {: .notice--info}
+Обновление с помощью картриджа обновляет только базовые функции приставки, например Системные настройки, Домашний экран, Nintendo 3DS Sound, итп. Сетевые функции, такие как Перенос системы, Браузер, Площадь StreetPass Mii, eShop. {: .notice--info}
 
-This means that a cart update will NOT install a browser if you do not already have one. This will **only** update the actual system version *(for example, 2.1.0-0 -> 6.0.0-0)*. The last number *(the -0)* will **not** change. {: .notice--warning}
+Это значит, что обновление с помощью картриджа не затронет браузер, будь таковой установлен, и не установит его, если такового нет. Будет произведено **лишь обновление системных файлов** до версии на картридже (*например, 2.1.0-0 -> 6.0.0-0*). Последнее число в версии прошивки *(the -0)* **не** изменится! {: .notice--warning}
 
-**Updating with a game cart containing the version 9.9.0 or above will remove your browser!** {: .notice--danger}
+**Обновление с помощью картриджа, содержащего прошивку версии 9.9.0 или выше, удалит ваш браузер!** {: .notice--danger}
 
-#### What you need
+#### Что нужно:
 
-* A game cart that [contains the version](http://www.3dsdb.com/) specified in the chart
+* Картридж, [содержащий версию прошивки](http://www.3dsdb.com/), указанную в таблице.
 
-#### Instructions
+#### Что делать:
 
-  1. Boot your 3DS into recovery mode by holding L+R+A+UP while powering on
-  2. Decline the update and reboot
-  3. Put the game in the system
-  4. Attempt to launch the game
-  5. Update when prompted
+  1. Загрузите 3DS в режим восстановления. Для этого выключите консоль, зажмите одновременно (L)+(R)+(A)+(ВВЕРХ), не отпуская включите консоль и держите, пока приставка не загрузится.
+  2. Откажитесь от обновления и перезагрузите приставку в обычный режим.
+  3. Вставьте игру в приставку.
+  4. Запустите игру.
+  5. Согласитесь с обновлением при запуске игры.
