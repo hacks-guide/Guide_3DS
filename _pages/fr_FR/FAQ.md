@@ -23,7 +23,7 @@ title: "FAQ" permalink: /faq.html lang: en_US ref: faq
 **A:** Les bricks sont *à priori* impossible à moins que vous ignoriez/contourniez les différentes étapes de vérifications.
 
 <a name="faq_homebrew" />**Q :** *Puis-je exécuter des homebrew et des émulateurs avec ceci ?*   
-**A:** Oui ! Un Custom Firmware permet non seulement d'utiliser l'Homebrew Launcher, mais également vous donnera accès aux hacks sur toutes les versions, ce qui signifie que vous le garderais pour toujours, même avec des mises à jour.
+**A:** Oui ! Un Custom Firmware permet non seulement d'utiliser l'Homebrew Launcher, mais également vous donnera accès aux hacks sur toutes les versions, ce qui signifie que vous le garderez pour toujours, même avec des mises à jour.
 
 <a name="faq_regionfree" />**Q :** *Puis-je utiliser cela pour jouer à des jeux d’autres régions ?*   
 **A:** Luma3DS prend en charge les patchs Region Free, qui permettent aux utilisateurs d’installer des jeux de toutes les régions sans aucune modification supplémentaire.
@@ -46,11 +46,11 @@ title: "FAQ" permalink: /faq.html lang: en_US ref: faq
 <a name="faq_NNID" />**Q :** *Puis-je garder mon NNID ?*   
 **A:** Si vous commencez avec un NNID et suivez toutes les étapes, vous garderez votre NNID à la fin.
 
-<a name="faq_systransfer" />**Q:** *What about System Transfers?*  
-**A:** Once you have completed the guide, you can system transfer to and from an arm9loaderhax'd 3DS or 2DS exactly like you would a regular stock console or EmuNAND (you will lose any non-legitimate games/themes/DLC in the transfer; saves will stay even for games that are lost).
+<a name="faq_systransfer" />**Q :** *Et à propos du transfert système ?*   
+**A:** Une fois que vous avez terminé le guide, vous pouvez faire un transfert système vers et depuis une 3DS ou 2DS avec arm9loaderhax exactement comme vous le feriez avec une console normal ou EmuNAND (vous perdrez tous jeux/thèmes/DLC non légitimes pendant le transfert ; toutes les sauvegardes seront cependant conservées, y comprit pour les jeux supprimés).
 
-<a name="faq_nopc" />**Q:** *Can I do this without a computer (e.g. an Android phone)?*  
-**A:** All you need is the ability to put files on an SD card!
+<a name="faq_nopc" />**Q :** *Puis-je suivre le guide sans ordinateur (par exemple un téléphone Android) ?*   
+**A:** Tout ce dont vous avez besoin est de pouvoir mettre des fichiers sur une carte SD !
 
-<a name="faq_problem" />**Q:** *Help! Something bad happened and now I cannot boot...*  
-**A:** Please look at the troubleshooting guide</a>.
+<a name="faq_problem" />**Q :** *À l'aide ! Quelque chose s’est mal passé et je ne peux plus démarrer...*   
+**A:** Veuillez consulter le guide de dépannage</a>.
