@@ -92,34 +92,34 @@ arm9loaderhax.bin, используемый в этом гайде - испол�
     * Нажмите (SELECT) для установки.
     * Сейчас установщик поставит arm9loaderhax на вашу консоль (буквально секунда).
     * Нажмите любую кнопку, чтобы выключить приставку. При необходимости, выключите консоль долгим нажатием на кнопку включения. 
-    * Copy your console specific `OTP.bin` from the `/a9lh/` folder on your SD card to a safe location on your computer and back it up to multiple locations (such as online file storage), then reinsert your SD card into your 3DS
+    * Достаньте карту памяти из приставки и вставьте ее в ПК. Скопируйте файл `OTP.bin` из папки `/a9lh/` на карте памяти в надежное место (лучше сделать не одну копию и на разных носителях, а так же в облаке) и верните карту обратно в консоль.
 
-##### Section III - Configuring Luma3DS
+##### Часть III - Настройка Luma3DS
 
-  1. Hold select on boot to enter the Luma3DS menu 
-    * Make sure to start holding the button before pressing power
-    * If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_a9lh) 
-    * If you boot to SafeA9LHInstaller, [follow this troubleshooting guide](troubleshooting#ts_safe_a9lh)
-  2. Use the (A) button and the D-Pad to turn on the following:  
+  1. Зажмите (SELECT) и включите приставку, чтобы попасть в меню настройки Luma3DS. 
+    * Важно зажать кнопку до того, как включать приставку;
+    * Если после запуска экран черный, то следуйте рекомендациям из [раздела с помощью](troubleshooting#ts_sys_a9lh); 
+    * Если после загрузки запускается SafeA9LHInstaller, то следуйте рекомендациям из [раздела с помощью](troubleshooting#ts_safe_a9lh).
+  2. С помощью кнопки (А) отметьте следующие пункты:  
     * **"Autoboot SysNAND"**
     * **"Use SysNAND FIRM if booting with R"**
     * **"Show NAND or user string in System Settings"**
-  3. If you are using a **New 3DS**, you should *also* enable the following: 
+  3. Если у вас **New 3DS **так же *отметьте* следующие пункты: 
     * **"New 3DS CPU" to "Clock+L2(x)"**
-    * This will increase the framerate of many games, but may cause instability in others
-    * If some games do not work properly, disable this option and try again
-  4. Press Start to save and reboot 
-    * If you get a black screen, just continue to the next section 
-    * If you get a "Failed to mount CTRNAND" error, just continue to the next section 
+    * Это увеличит частоту кадров в некоторых играх;
+    * Если какие-то игры работают некорректно, отключите эту опцию.
+  4. Нажмите (START), чтобы сохранить настройки и перезагрузиться. 
+    * Если после запуска экран черный, проследуйте к следующей части; 
+    * Если выскакивает ошибка "Failed to mount CTRNAND", проследуйте к следующей части. 
 
-##### Section IV - Restoring the System
+##### Часть IV - Восстановление исходной 3DS
 
-If, before following this guide, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand) instead of doing the first four steps in this section. {: .notice--info}
+Если вы начинали гайд со взломанной приставкой с EmuNAND, то самое время заняться [переносом EmuNAND в SysNAND](move-emunand), вместо выполнения этой части. {: .notice--info}
 
-  1. Open Hourglass9 from arm9loaderhax by holding (Start) on boot
-  2. Go to "SysNAND Backup/Restore"
-  3. Restore from `NANDmin.bin`
-  4. Press (Start) to reboot 
+  1. Запустите Hourglass9 из под arm9loaderhax, удерживая кнопку (START) при запуске приставки.
+  2. Перейдите в "SysNAND Backup/Restore".
+  3. Восстановитесь из `NANDmin.bin`.
+  4. Нажмите (START) для перезагрузки 
     * If you get a black screen, [follow 9.2.0 ctrtransfer](9.2.0-ctrtransfer)
   5. If your backup was of a version between 3.0.0 and 4.5.0, your console will not boot until you manually download the required firmware: 
     * Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) and rename it to `firmware.bin`
