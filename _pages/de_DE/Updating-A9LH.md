@@ -65,16 +65,16 @@ Die folgenden Schritte werden zudem einige payloads und die AES Key Database akt
     * If some games do not work properly, disable this option and try again
   4. Press Start to save and reboot
 
-##### Section IV - CTRNAND Luma3DS
+##### Sektion IV - CTRNAND Luma3DS
 
-  1. Open FBI
-  2. Select "SD"
-  3. Navigate to `arm9loaderhax.bin`, then press (A) on it and select the "Copy" option
-  4. Return to the FBI main menu with (B)
-  5. Select "CTR NAND"
-  6. Select "\<current directory>"
-  7. Select the "Paste" option, then press (A) to confirm
-  8. Exit with the home button
+  1. Öffne FBI
+  2. Wähle "SD" aus
+  3. Navigiere zu `arm9loaderhax.bin`, danach drücke (A) auf der Datei und wähle "Copy" aus
+  4. Gehe zum FBI Hauptmenu zurück mit (B)
+  5. Wähle "CTR NAND" aus
+  6. Wähle "\ aus<current directory>"
+  7. Wähle die "Paste" Option aus, dann drücke (A) zum bestätigen
+  8. Schließe mit der Home-Taste
   9. Power off your 3DS and remove the SD card
  10. Boot with the SD card removed while holding (Select) 
     * Booting the device at least once with the SD card removed will allow you to configure the CTRNAND based luma installation
