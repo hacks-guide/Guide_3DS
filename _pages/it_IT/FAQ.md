@@ -13,17 +13,17 @@ title: "FAQ" permalink: /faq.html lang: en_US ref: faq
 <a name="faq_gatewaysky" />**Q:** *Ho sentito parlare di questa cosa che dovrei comprare (Gateaway, Sky3Ds, ecc), mi serve?*  
 **A:** No. arm9loaderhax è una modifica migliore che parte prima ancora dell'avvio del sistema e dà il via libera a cose come un vero custom firmware.
 
-<a name="faq_gatewaysaves" />**Q:** *How do I move saves from an existing Gateway setup to device installed games?*  
-**A:** See this</a>
+<a name="faq_gatewaysaves" />**Q:** *Come posso spostare i salvataggi da una cartuccia Gateaway a i giochi installati sul mio dispositivo?*  
+**A:** Vedi qui</a>
 
-<a name="faq_need" />**Q:** *What do I need to do this guide?*  
-**A:** This guide can be completely done with free software and (if you have no browser) a compatible game
+<a name="faq_need" />**Q:** *Di cosa ho bisogno per completare la guida?*  
+**A:** Questa guida può essere completata utilizzando software gratuiti e (se non hai un browser) una cartuccia compatibile
 
-<a name="faq_risky" />**Q:** *How risky is hacking my console?*  
-**A:** Bricks are now *basically* impossible unless you ignore/circumvent all safety checks.
+<a name="faq_risky" />**Q:** *Corro dei rischi durante la modifica della console?*  
+**A:** I brick sono *praticamente* impossibili a meno che non si ignorano/eludono tutti i controlli di sicurezza.
 
-<a name="faq_homebrew" />**Q:** *Can I run awesome homebrew and emulators with this?*  
-**A:** Yes! Custom Firmware not only enables the Homebrew Launcher, but it also will give you hacks on all versions, which means you keep it forever, even with updates.
+<a name="faq_homebrew" />**Q:** *Con questa modifica, posso far partire i fantastici programmi homebrew e gli emulatori?*  
+**A:** Si! Il Custom Firmware non solo ti dà accesso all'Homebrew Launcher, ma ti lascia le modifiche su tutte le versioni, il che significa che lo terrai per sempre, anche dopo gli aggiornamenti.
 
 <a name="faq_regionfree" />**Q:** *Can I use this to play games from other regions?*  
 **A:** Luma3DS supports Region Free patches, which enables users to install games from any region without any extra modification or steps.
