@@ -4,15 +4,15 @@ title: "F3X (Mac)" permalink: /f3x-(mac).html lang: en_US ref: f3x-(mac)
 
 * * *
 
-This page will walk you through the process of checking your SD card for errors using F3X. {: .notice}
+Cette page vous guidera à travers le processus de vérification de votre carte SD pour les erreurs en utilisant F3X. {: .notice}
 
-Depending on the size of your SD card and the speed of your computer, this process can take up to several hours! {: .notice--info}
+Selon la taille de votre carte SD et la vitesse de votre ordinateur, ce processus peut prendre jusqu'à plusieurs heures! {: .notice--info}
 
-This page is for Mac users only. If you are not on Mac, check out the [H2testw (windows)](h2testw-(windows)) or [F3 (Linux)](f3-(linux)) pages. {: .notice--info}
+Cette page est réservée aux utilisateurs de Mac. Si vous n'êtes pas sur Mac, consultez [H2testw (windows)](h2testw-(windows)) ou[ F3 (Linux)](f3-(linux)). {: .notice--info}
 
-#### What you need
+#### Ce dont vous aurez besoin
 
-* The latest release of [F3X](https://github.com/insidegui/F3X/releases)
+* La dernière version de [F3X](https://github.com/insidegui/F3X/releases)
 
 #### Instructions
 
