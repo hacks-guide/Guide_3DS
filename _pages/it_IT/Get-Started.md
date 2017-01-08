@@ -4,15 +4,15 @@ title: "Get Started" permalink: /get-started.html lang: en_US ref: get-started
 
 * * *
 
-The colors of the devices in the image may vary, but note the button placement and features of each device carefully to ensure you select the correct one. {: .notice}
+I colori dei dispositivi nell'immagine potrebbero variare, ma controlla bene la posizione dei pulsanti e le funzioni del tuo dispositivo per assicurarti di scegliere quello corretto.{: .notice}
 
-Click the image of your device to take you to the appropriate page. {: .notice--primary}
+Clicka sull'immagine del tuo dispositivo per andare alla pagina successiva.{: .notice--primary}
 
-Different device models, versions, and regions will require different steps to achieve the end goal of arm9loaderhax Custom Firmware. The following series of pages will help you find where to start for your device. {: .notice--info}
+Modelli, versioni e regioni del dispositivo differenti richiedono passaggi differenti per raggiungere l'installazione completa del Custom Firmware arm9loaderhax. Le seguenti pagine ti aiuteranno a capire da dove iniziare per modificare il tuo dispositivo. {: .notice--info}
 
-If you have already hacked your 3DS before and have an EmuNAND based CFW setup, just follow all instructions while on SysNAND. Your data will be transfered from EmuNAND to your new A9LH install at the end. {: .notice--info}
+Se hai già modificato il tuo 3DS in passato e hai un CFW basato su una EmuNAND, segui tutti i passaggi mentre sei in SysNAND. I tuoi dati saranno trasferiti dalla tua EmuNAND alla SysNAND con A9LH alla fine della guida. {: .notice--info}
 
-Before starting, you may want to check your SD card for errors using [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), or [F3X (Mac)](f3x-(mac))! {: .notice--warning}
+Prima di iniziare, controlla che non vi siano errori nella tua scheda SD utilizzando [H2Testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), o [F3X (Mac)](f3x-(mac))! {: .notice--warning}
 
 |                                                         New 3DS                                                          |                                                                                    Old 3DS or 2DS                                                                                     |
 |:------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
