@@ -14,10 +14,10 @@ Esta página é apenas para utilizadores de Windows. Se não tiver Windows, veja
 
 * A última versão do [h2testw](http://www.heise.de/ct/Redaktion/bo/downloads/h2testw_1.4.zip)
 
-#### Instructions
+#### Instruções
 
-  1. Copy `h2testw.exe` from the h2testw `.zip` to your desktop
-  2. Insert your SD card into your computer
+  1. Copie o ficheiro `h2testw.exe` do h2testw `.zip` para o seu ambiente de trabalho
+  2. Insira o seu cartão SD no computador
   3. Run `h2tsetw.exe`
   4. Selecione "English"
   5. Click "Select target"
