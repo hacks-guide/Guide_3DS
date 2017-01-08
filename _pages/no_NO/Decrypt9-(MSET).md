@@ -8,12 +8,12 @@ The first thing this guide will do is get you running Decrypt9, which is a multi
 
 If you have already hacked your 3DS before and have a EmuNAND based CFW setup, this guide deals exclusively with SysNAND and you should follow all instructions from within or applying to SysNAND. Note that the terms EmuNAND and RedNAND refer to slightly different implementations of [the same concept](http://3dbrew.org/wiki/NAND_Redirection). {: .notice--info}
 
-#### What you need
+#### Det du trenger
 
 * DS flashcard that works on your 3DS version
-* The latest release of [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/)
+* Siste utgave av [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/)
 
-#### Instructions
+#### Instruksjoner
 
   1. Create a folder named `files9` on the root of your SD card if it does not already exist
   2. Copy `Launcher.dat` and `Decrypt9WIP.dat` from the Decrypt9WIP `.zip` to the root of your SD card
@@ -27,4 +27,4 @@ If you have already hacked your 3DS before and have a EmuNAND based CFW setup, t
   8. Reboot the system, then go to System Settings, then "Other Settings", then "Profile", then "Nintendo DS Profile"
   9. If the exploit was successful, you will have booted into Decrypt9
 
-Continue to [2.1.0 ctrtransfer](2.1.0-ctrtransfer). {: .notice--primary}
+Fortsett til [2.1.0 ctrtransfer](2.1.0-ctrtransfer). {: .notice--primary}
