@@ -10,7 +10,7 @@ Ocasionalmente, poderá ter uma cópia com um tamanho diferente dos aqui listado
 
 Note que uma cópia NAND *min size* (tamano mínimo) irá ser sempre do tamanho mais pequeno para assim poupar espaço, e pode não corresponder ao tamanho de outras cópias NAND do seu dispositivo. Não há problema, apenas assegure-se que o seu tamanho corresponde a um tamanho desta página. {: .notice--info}
 
-The brand name refers to the manufacturer of the NAND chip in your device, **not** your SD card. {: .notice--warning}
+O nome de marca refere-se ao fabricante do chip NAND do seu dispositivo, **não** do seu cartão SD. {: .notice--warning}
 
 **Your backup should match one of the sizes on this page; if it does not, you should delete it and make a new one!** {: .notice--danger}
 
