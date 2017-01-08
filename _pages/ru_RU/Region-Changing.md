@@ -4,7 +4,7 @@ title: "Region Changing" permalink: /region-changing.html lang: en_US ref: regio
 
 * * *
 
-This is add-on section for region changing your arm9loaderhax CFW SysNAND. This is done by installing the 9.2.0 ctrtransfer image for the region you want to switch to and modifying your SecureInfo_A file. {: .notice--primary}
+Эта дополнительная секция рассказывает о смене региона на вашей приставке с arm9loaderhax CFW SysNAND. This is done by installing the 9.2.0 ctrtransfer image for the region you want to switch to and modifying your SecureInfo_A file. {: .notice--primary}
 
 **Region changing is almost completely unnecessary since Luma3DS supports out of region games and individual [title region emulation](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage).** {: .notice--info}
 
