@@ -10,7 +10,7 @@ Selecione a página apropriada para a sua versão no gráfico abaixo. {: .notice
 
 Os campos "desde" e "até" são inclusivos. Isto significa que, por exemplo, a linha "desde 9.0.0 até 9.2.0" incluí as versões 9.0.0, 9.1.0 e 9.2.0.
 
-In the case of "5.0.0-0U" for example, you would follow the "No Browser" column and 5.0.0 to 5.1.0 row because the system is on the a system version in that range and has no browser installed. {% endcapture %}
+No caso de "5.0.0-0U", por exemplo, teria de seguir a coluna "Sem Browser" e a linha 5.0.0 e 5.1.0, pois o sistema está numa versão que se encontra dentro do especificado e não tem nenhum browser instalado. {% endcapture %}
 
 <div class="notice--info">{{ notice-1 | markdownify }}</div>
 
