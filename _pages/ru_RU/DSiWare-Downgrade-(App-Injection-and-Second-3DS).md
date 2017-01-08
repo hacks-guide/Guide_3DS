@@ -179,30 +179,30 @@ NNID из исходной 3DS будет находится в целевой 3
 ##### Часть VI - Восстановление исходной 3DS
 
   1. На **исходной 3DS**, завершите первоначальную настройку.
-  2. Do one of the following + Do the rest of the sections and then the full guide on **the target 3DS**, then wait one week, then System Transfer from **the target 3DS** back to **the source 3DS** *(remember you cannot transfer back from a New 3DS to an Old 3DS)* + Call Nintendo and tell them you no longer have access to the device that your NNID is linked to (which is **the target 3DS** in this case), and would like it linked to a different device (which is **the source 3DS** in this case) + You can also just [remove the NNID](https://3ds.guide/troubleshooting#rm_nnid) from **the source 3DS** if you'd prefer it remain on **the target 3DS**
-  3. Reboot **the source 3DS** while holding Start to launch Hourglass9
-  4. Go to SysNAND Backup/Restore and restore SysNAND from `NANDmin.bin`
+  2. Выполните одно из следующих действий: + Продолжайте выполнять оставшуюся часть инструкции для **целевой 3DS**, а затем подождите неделю и выполните перенос данных уже с **целевой 3DS** на **исходную** *(помните, что вы не можете перенести данные с New 3DS на Old 3DS)*; + Позвоните в Nintendo и скажите им, что у вас больше нет доступа к устройству, к которому привязан ваш NNID (в нашем случае, это уже **целевая 3DS**) и вы бы хотели привязать аккаунт к новому устройству (в нашем случае, это **исходная 3DS**); + Можете просто [удалить NNID](https://3ds.guide/troubleshooting#rm_nnid) из **исходной 3DS**, чтобы оставить его на **целевой 3DS**.
+  3. Перезагрузите **исходную 3DS**, удерживайте (START) во время загрузки устройства, чтобы запустить Hourglass9.
+  4. Перейдите в SysNAND Backup/Restore восстановите SysNAND из файла `NANDmin.bin`.
 
-##### Section VII - Backing up the target 3DS's NFIRM
+##### Часть VII - Резервное копирование прошивки целевой 3DS
 
-  1. Copy the dgTool `boot.nds` to the root of **the target 3DS**'s SD card
-  2. Create a folder named `dgTool` on the root of **the target 3DS**'s SD card if it does not already exist
-  3. Copy the contents of the NFIRM `.zip` to the `dgTool` folder on the root of **the target 3DS**'s SD card
-  4. Launch your DSiWare game on **the target 3DS**
-  5. Launch dgTool by starting your DSiWare game 
-  * If the game does not launch dgTool, [follow this troubleshooting guide](troubleshooting#ts_dsiware)
-  6. Select "Dump f0f1" to backup **the target 3DS**'s NFIRM 
-  * This will take a while
-  7. Make note of the NFIRM backup's location
-  8. Exit dgTool 
-  * You may have to force power off by holding the power button
-  9. Put your SD card in your computer, then copy `F0F1_N3DS.bin` or `F0F1_O3DS.bin` (depending on your device) to a safe location 
-  * Make backups in multiple locations
-  * This backup will save you from a brick if anything goes wrong in the future
+  1. Скопируйте `boot.nds` от dgTools в корень карты памяти **целевой 3DS**.
+  2. Создайте папку `dgTool` в корне карты памяти **целевой 3DS**, если таковой там нет.
+  3. Скопируйте содержимое `zip-архива` с NFIRM (11.y.y_to_10.4.0_x3ds.zip) в папку `dgTool` в корне **целевой 3DS**.
+  4. Верните карту памяти в **целевую 3DS**.
+  5. Запустите установленную DSiWare игру на целевой 3DS, чтобы войти в dgTool 
+  * Если игра не запускает dgTool, или игры нет, [следуйте инструкциям из части с проблемами и их решениями](troubleshooting#ts_dsiware).
+  6. Выберите "Dump f0f1", чтобы сделать для **целевой 3DS**резервную копию NFIRM 
+  * Процесс не быстрый, ожидайте.
+  7. Запомните место положения бекапа NFIRM.
+  8. Закройте dgTool 
+  * При необходимости выключите приставку, удерживая кнопку питания.
+  9. Вставьте КП в компьютер; скопируйте `F0F1_N3DS.bin` или `F0F1_O3DS.bin` (зависит от вашей модели) в надежное место. 
+  * Сделайте копии в нескольких местах или в облачном хранилище;
+  * Этот бекап может спасти вам консоль, если что-то пойдет не так.
 
-##### Section VIII - Flashing the target 3DS's NFIRM
+##### Часть VIII - Прошивка целевой 3DS
 
-**Never downgrade with dgTool on a device that already has arm9loaderhax installed or you will BRICK!**
+**НЕ понижайте прошивку с помощью dgTool на приставках с установленным arm9loaderhax. Это гарантированно приведет к брику!**
 
   1. Launch your DSiWare game on **the target 3DS**
   2. Launch dgTool by starting your DSiWare game
