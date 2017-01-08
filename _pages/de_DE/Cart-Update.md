@@ -14,11 +14,11 @@ Das heißt, dass ein Kartenupdate KEINEN Browser installiert, wenn du keinen has
 
 #### Was du benötigst:
 
-* A game cart that [contains the version](http://www.3dsdb.com/) specified in the chart
+* Ein Spiel auf einer Cartridge, welches [die Version, wie in der Tabelle angegeben, enthält](http://www.3dsdb.com/)
 
 #### Anleitung:
 
-  1. Boot your 3DS into recovery mode by holding L+R+A+UP while powering on
+  1. Starte deinen 3DS in den Recover-Modus indem du L, R, A und Steuerkreuz nach oben während dem Start hältst.
   2. Lehne das Update ab und starte den 3DS neu.
   3. Stecke das Spiel in den 3DS.
   4. Versuche das Spiel zu starten.
