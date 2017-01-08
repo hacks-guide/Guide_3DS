@@ -6,15 +6,15 @@ title: "Decrypt9 (Homebrew Launcher)" permalink: /decrypt9-(homebrew-launcher).h
 
 #### Was du benötigst:
 
-* Die letzte Version von [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/latest/)
-* The latest release of [safehax](https://github.com/TiniVi/safehax/releases/latest)
-* The latest release of [fasthax](https://github.com/nedwill/fasthax/releases/latest)
+* Die aktuellste Version von [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/latest/)
+* Die aktuellste Version von [safehax](https://github.com/TiniVi/safehax/releases/latest)
+* Die aktuellste Version von [fasthax](https://github.com/nedwill/fasthax/releases/latest)
 
 #### Anleitung:
 
-  1. Erstelle einen Ordner namens `files9` auf dem Hauptordner deiner SD-Karte wenn er nicht schon existiert.
-  2. Copy `safehax.3dsx` to the `/3ds/` folder on your SD card
-  3. Copy `fasthax.3dsx` to the `/3ds/` folder on your SD card
+  1. Erstelle einen Ordner mit dem Namen `files9` im Hauptverzeichnis deiner SD-Karte wenn er noch nicht existiert
+  2. Kopiere `safehax.3dsx` in den `/3ds/` Ordner auf deiner SD-Karte
+  3. Kopiere `fasthax.3dsx` in den `/3ds/` Ordner auf deiner SD-Karte
   4. Copy `Decrypt9WIP.bin` from the Decrypt9WIP `.zip` to the root of your SD card and rename `Decrypt9WIP.bin` to `safehaxpayload.bin`
   5. Reinsert your SD card into your 3DS
   6. Enter the homebrew launcher
