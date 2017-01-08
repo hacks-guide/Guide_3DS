@@ -4,14 +4,14 @@ title: "NFIRM Downgrade" permalink: /nfirm-downgrade.html redirect_from: "/dsiwa
 
 * * *
 
-If you are between 11.0.0 and 11.2.0, you must follow this guide to downgrade your NFIRM using one of the methods at the bottom of this page to directly dump and restore your NAND. {: .notice--info}
+Wenn du zwischen Firmware-Version 11.0.0 und 11.2.0 bist, musst du diesem Guide folgen, um deine NFIRM mit Hilfe einer der Methoden am Ende dieser Seite downzugraden, um deinen NAND direkt zu dumpen und wiederherzustellen. {: .notice--info}
 
-All of these are working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws). {: .notice--info}
+Die Methoden sind funktionierende Implementationen des "FIRM partitions known-well plaintext"-Exploits, welcher [hier](https://www.3dbrew.org/wiki/3DS_System_Flaws) im Detail beschrieben. {: .notice--info}
 
-This will work on New 3DS, Old 3DS, and 2DS (although the DSiWare methods have some restrictions). {: .notice--success}
+Sie funktionieren auf dem New 3DS, Old 3DS, und dem 2DS (wobei die DSiWare-Methoden einige Einschränkungen haben). {: .notice--success}
 
 * * *
 
-+ Use [this](hardmod-downgrade) link to downgrade your NFIRM with a [hardmod](https://gbatemp.net/threads/414498/)
-+ Use [this](dsiware-downgrade-(save-injection)) link to downgrade your NFIRM with DSiWare and one of four listed games *(11.0.0 through 11.1.0 only)*
-+ Use [this](dsiware-downgrade-(app-injection-and-second-3ds)) link to downgrade your NFIRM with DSiWare and a second 3DS (which already has CFW)
++ Nutze [diesen Link](hardmod-downgrade) um deine NFIRM mit einer [Hardmod](https://gbatemp.net/threads/414498/) downzugraden
++ Nutze [diesen Link](dsiware-downgrade-(save-injection)) um deine NFIRM mit DSiWare und einer der vier Spiele auf der Liste downzugraden *(Nur 11.0.0 bis 11.1.0)*
++ Nutze [diesen Link](dsiware-downgrade-(app-injection-and-second-3ds)) um deine NFIRM mit DSiWare und einem zweiten 3DS (der bereits CFW besitzt) downzugraden
