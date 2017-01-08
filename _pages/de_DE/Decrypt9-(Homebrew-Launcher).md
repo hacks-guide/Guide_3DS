@@ -17,9 +17,9 @@ Aufgrund eines Fehlers benötigt Safehax aktuell ein funktiorendes Spielemodul (
   2. Kopiere die Inhalte der safehax+fasthax `.zip` in den Hauptordner deiner SD-Karte und überschriebe existierende Dateien.
   3. Kopiere `Decrypt9WIP.bin` aus der Decrypt9WIP `.zip` in den Hauptordner deiner SD-Karte und nenne `Decrypt9WIP.bin` in `arm9.bin` um.
   4. Lege deine SD-Karte nun wieder in deinen 3DS.
-  5. Enter the homebrew launcher
-  6. Launch safehax
-  7. If the exploit was successful, you will have booted into Decrypt9
+  5. Starte Homebrew auf deinem 3DS.
+  6. Öffne Safehax.
+  7. Wenn alles funktioniert hat, solltest du dich nun in Decrypt9 befinden.
 
-Continue to [2.1.0 ctrtransfer](2.1.0-ctrtransfer)  
+Weiter zu [2.1.0 ctrtransfer](2.1.0-ctrtransfer)  
 {: .notice--primary}
