@@ -8,7 +8,7 @@ Els colors dels dispositius que apareixen en la imatge poden variar, però heu d
 
 Fes clic a la imatge del teu dispositiu per portar-te a la pàgina corresponent. {: .notice--primary}
 
-Les diferents versions, models i regions dels dispositius requeriran de passos diferents per aconseguir l'objectiu final d'instal·lar arm9loaderhax Custom Firmware. La següent sèrie de pàgines t'ajudarà a trobar on començar per al teu dispositiu. {: .notice--info}
+Les diferents versions, models i regions dels dispositius requeriran de passos diferents per aconseguir l'objectiu final d'instal·lar Custom Firmware amb arm9loaderhax. La següent sèrie de pàgines t'ajudarà a trobar on començar per al teu dispositiu. {: .notice--info}
 
 Si ja havies modificat la teva 3DS amb anterioritat i tens una instal·lació de CFW amb EmuNAND, simplement segueix totes les instruccions mentre et trobes en SysNAND. Les dades seran transferides de EmuNAND a A9LH al final de la seva instal·lació. {: .notice--info}
 
