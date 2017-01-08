@@ -49,8 +49,8 @@ title: "FAQ" permalink: /faq.html lang: en_US ref: faq
 <a name="faq_systransfer" />**Q:** *Per quanto riguarda i trasferimenti di sistema?*  
 **A:** Appena avrai completato la guida, potrai effettuare un trasferimento di sistema a e da una console 3DS o 2DS con arm9loaderhax esattamente come faresti con una normale console o con una EmuNAND (perderai tutti i tuoi giochi/temi/DLC non legittimi durante il trasferimento; i salvataggi rimarranno anche per i giochi che hai perso).
 
-<a name="faq_nopc" />**Q:** *Can I do this without a computer (e.g. an Android phone)?*  
-**A:** All you need is the ability to put files on an SD card!
+<a name="faq_nopc" />**Q:** *Posso completare la guida senza un computer (es. un telefono Android)?*  
+**A:** Tutto ciò di cui hai bisogno è la possibilità di mettere dei file sulla scheda SD!
 
-<a name="faq_problem" />**Q:** *Help! Something bad happened and now I cannot boot...*  
-**A:** Please look at the troubleshooting guide</a>.
+<a name="faq_problem" />**Q:** *Aiuto! È successo qualcosa e ora la console non si accende...*  
+**A:** Leggi questa guida per la risoluzione del tuo problema</a>.
