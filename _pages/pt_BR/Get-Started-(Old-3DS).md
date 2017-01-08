@@ -8,7 +8,7 @@ Selecione a página apropriada para a sua versão no gráfico abaixo. {: .notice
 
 {% capture notice-1 %} As duas primeiras colunas do gráfico referem-se ao último número que aparece na sua versão (que corresponde à versão do browser instalada no sistema). Se a versão for -0 então não tem browser, enquanto que qualquer número acima de -0 indica que tem um browser instalado.
 
-The "from" and "to" fields are inclusive. This means that, for example, the "from 9.0.0 to 9.2.0" row includes 9.0.0, 9.1.0, and 9.2.0.
+Os campos "desde" e "até" são inclusivos. Isto significa que, por exemplo, a linha "desde 9.0.0 até 9.2.0" incluí as versões 9.0.0, 9.1.0 e 9.2.0.
 
 In the case of "5.0.0-0U" for example, you would follow the "No Browser" column and 5.0.0 to 5.1.0 row because the system is on the a system version in that range and has no browser installed. {% endcapture %}
 
