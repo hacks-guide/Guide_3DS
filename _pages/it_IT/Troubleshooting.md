@@ -137,52 +137,52 @@ Capita perché hai selezionato la versione sbagliata nell'installer di steelhax.
   3. Se il gioco non è disponibile nel **3DS di destinazione**, collega il NNID con cui hai comprato il gioco al **3DS di destinazione** e riscaricalo 
     * Potresti dover prima eliminare il gioco da "Gestione dati" in "Impostazioni della Console"
     * Se il **3DS di destinazione** non è all'ultima versione di sistema, potresti dover avviare ctr-httpwn per accedere all'eShop
-  4. On **the source 3DS**, do the the save (and `.app` if you are using the `.app` page) injection steps
-  5. On **the source 3DS**, go to System Settings, "Data Management", "DSiWare", then copy your DSiWare game to your SD card
-  6. Either put **the source 3DS**'s SD card in **the target 3DS**, or rename the `Nintendo 3DS` on **the target 3DS**'s SD card and copy the `Nintendo 3DS` folder from **the source 3DS**'s SD card to **the target 3DS**'s SD card
-  7. On **the target 3DS**, go to System Settings, "Data Management", "DSiWare", then copy your DSiWare game to the system
-  8. Return your SD cards to normal, then continue with the DSiWare Downgrade
+  4. Nel **3DS di partenza** esegui i passaggi del'inject del salvataggio (e del `.app` se stai seguendo la pagina relativa)
+  5. Nel **3DS di partenza**, vai su Impostazioni della Console, "Gestione dati", "DSiWare", quindi copia il tuo gioco DSiWare nella scheda SD
+  6. O inserisci la scheda SD del **3DS di partenza** nel **3DS di destinazione**, O rinomina la cartella `Nintendo 3DS` della scheda SD del **3DS di destinazione** e poi copia la cartella `Nintendo 3DS` dalla scheda SD del **3DS di partenza** nella scheda SD del **3DS di destinazione**
+  7. Nel **3DS di destinazione**, vai su Impostazioni della Console, "Gestione dati", "DSiWare", quindi copia il tuo gioco DSiWare nella console
+  8. Ripristina lo stato iniziale delle schede SD, quindi prosegui con il DSiWare Downgrade
 
-## <a name="ts_d9_backup" />Decrypt9 o Hourglass9 non riesce a ripristinare/trovare il mio backup della NAND
+## <a name="ts_d9_backup" />Decrypt9 o Hourglass9 non riesce a ripristinare / trovare il mio backup della NAND
 
-  1. Assicurati che non hai nessuna cartella chiamata "Decrypt9" nella **root** della tua scheda SD
-  2. Prova a controllare se ci sono errori nella tua scheda SD utilizzando [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), o [F3X (Mac)](f3x-(mac))
-  3. Prova a salvare i file della tua scheda SD, quindi formattarla e poi copiare il file di nuovo sulla scheda
+  1. Assicurati di non avere alcuna cartella chiamata "Decrypt9" nella **root** della tua scheda SD
+  2. Prova a controllare la presenza di errori nella tua scheda SD utilizzando [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), o [F3X (Mac)](f3x-(mac))
+  3. Prova a salvare i file della tua scheda SD, quindi formattala e poi copia i file di nuovo sulla scheda
   4. Prova ad usare un'altra scheda SD
 
 ## <a name="ts_sys_down" />Schermo nero all'avvio della SysNAND
 
-  1. Prova ad accendere senza la scheda SD nella console, e poi reinserisci la scheda dopo l'avvio. 
+  1. Prova ad accendere la console senza la scheda SD inserita, poi reinserisci la scheda dopo l'avvio. 
       1. Spegni il 3DS tenendo premuto il pulsante d'accensione.
       2. Rimuovi la scheda SD.
       3. Accendi il 3DS.
       4. Se appare il menu HOME, reinserisci la scheda SD.
-      5. Se ciò ha funzionato, dovresti pulire la extdata del menu HOME navigando fino alla seguente cartella sulla tua scheda SD: `/Nintendo 3DS/(ID di 32 caratteri)/(ID di 32 caratteri)/extdata/00000000/` 
+      5. Se ciò ha funzionato, dovresti eliminare gli extdata del menu HOME navigando fino alla seguente cartella sulla tua scheda SD: `/Nintendo 3DS/(ID di 32 caratteri)/(ID di 32 caratteri)/extdata/00000000/` 
         * Regione EUR: Cancella `00000098`
         * Regione JPN: Cancella `00000082`
         * Regione USA: Cancella `0000008f`
         * Regione KOR: Cancella `000000A9`
-  2. Prova ad accendere senza nessuna cartuccia nella console (flashcard incluse)
-  3. Se hai una hardmod e un salvataggio della NAND, inietta il salvataggio nella SysNAND.
-  4. Prova ad avviare la modalità di ripristino e quindi aggiorna il tuo dispositivo.  
+  2. Prova ad accendere la console senza cartucce (flashcard incluse)
+  3. Se hai un'hardmod e un salvataggio della NAND, inietta il salvataggio nella SysNAND.
+  4. Prova ad avviare la modalità di ripristino, quindi aggiorna la console.  
     *Probabilmente non funzionerà su un Old 3DS downgradato alla 2.1.0*  
     **Questo processo BRICKERÀ un New 3DS downgradato alla 2.1.0** 
       1. Spegni il tuo 3DS tenendo premuto il pulsante di accensione.
       2. Tieni premuto L+R+A+Su.
       3. Accendi il 3DS.
-      4. If you enter safe mode, update your 3DS *only if you have an entrypoint for the latest FW version and it is possible to downgrade from it* and attempt the downgrade again.
-  5. Your 3DS may be bricked. For support, ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [3DS Hacking on Discord](https://discord.gg/MWxPgEp).
+      4. Se sei entrato nella modalità di ripristino, aggiorna il tuo 3DS *solo se hai un punto di accesso per l'ultima versione del firmware ed è quindi possibile riprovare il downgrade*, e riprova a svolgere il downgrade.
+  5. Il tuo 3DS potrebbe essere brickato. Per il supporto, chiedi pure su [#3dshacks su Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) o sul server [3DS Hacking di Discord](https://discord.gg/MWxPgEp).
 
-## <a name="ts_sys_a9lh" />Black screen on SysNAND boot after installing arm9loaderhax
+## <a name="ts_sys_a9lh" />Schermo nero all'avvio della SysNAND dopo aver installato arm9loaderhax
 
-  1. Ensure you have a working payload. 
-      1. Check for the existence of `arm9loaderhax.bin` in the root of your SD card.
-  2. Try resetting Luma's config and fix options 
-      1. Delete `/luma/config.bin` from your SD card
-      2. Set your options when it boots
-  3. Test booting Hourglass9 
-      1. On Luma3DS, hold (Start) on boot
-  4. Try deleting home menu's extdata 
+  1. Assicurati che il payload funzioni. 
+      1. Verifica l'esistenza del file `arm9loaderhax.bin` nella root della tua scheda SD.
+  2. Prova a cancellare la configurazione e le opzioni di Luma 
+      1. Cancella `/luma/config.bin` dalla tua scheda SD
+      2. Imposta le opzioni all'avvio
+  3. Prova ad avviare Hourglass9 
+      1. Usando Luma3DS, tieni premuto (Start) all'avvio
+  4. Prova a cancellare l'extdata del menu HOME 
       1. Clear Home Menu's extdata by navigating to the following folder on your SD card: `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/` 
         * EUR Region: Delete `00000098`
         * JPN Region: Delete `00000082`
