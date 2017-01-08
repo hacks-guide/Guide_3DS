@@ -11,7 +11,7 @@ title: "FAQ" permalink: /faq.html lang: en_US ref: faq
 **A:** Nutz den Luma3DS Updater
 
 <a name="faq_gatewaysky" />**F:** *Ich habe über dieses Ding gehört was ich bezahlen muss (Gateway, Sky3DS und so weiter), brauche ich das?*  
-**A:** Nein. arm9loaderhax ist eine bessere Methode hax zu laden, welche sehr früh beim Booten gestartet wird und uns Möglichkeiten für Sachen wie echte Custom Firmwares ermöglichen.
+**A:** Nein. Arm9loaderhax ist eine bessere Methode hax zu laden, welche sehr früh beim Booten gestartet wird und uns Möglichkeiten für Sachen wie echte Custom Firmwares ermöglichen.
 
 <a name="faq_gatewaysaves" />**F:** *Wie bewege ich Speicherdateien von einem existierendem Gateway setup zu der Konsole?*  
 **A:** Schau dir das</a> an
