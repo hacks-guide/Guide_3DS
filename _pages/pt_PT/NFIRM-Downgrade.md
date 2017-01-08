@@ -8,7 +8,7 @@ Se estiver entre as versões 11.0.0 e 11.2.0, deverá seguir este guia para faze
 
 Todos estes métodos são implementações, que funcionam correntemente, do exploit "partições FIRM known-plaintext", explicado [aqui](https://www.3dbrew.org/wiki/3DS_System_Flaws). {: .notice--info}
 
-This will work on New 3DS, Old 3DS, and 2DS (although the DSiWare methods have some restrictions). {: .notice--success}
+Isto funciona em todas as consolas (New 3DS, Old 3DS e 2DS, embora os métodos por DSiWare tenham algumas restrições). {: .notice--success}
 
 * * *
 
