@@ -8,27 +8,27 @@ title: "Installing arm9loaderhax" permalink: /installing-arm9loaderhax.html lang
 
 Для установки arm9loaderhax будем использовать [форк AuroraWright](https://github.com/AuroraWright/arm9loaderhax).
 
-We will also setup the ability to launch payloads from arm9loaderhax, giving us the ability to unbrick our SysNAND from situations that would normally brick us by restoring from backup. {: .notice--info}
+Так же настроим запуск пейлоадеров (загрузчиков) из под arm9loaderhax, благодаря чему будем иметь возможность восстановить SysNAND консоли из бекапа практически в любой момент. {: .notice--info}
 
-**You cannot use another console's OTP or you will brick GUARANTEED.** {: .notice--danger}
+**НЕЛЬЗЯ использовать чужой OTP. Брик гарантирован!** {: .notice--danger}
 
-#### Overview of steps
+#### Что будем делать?
 
-In this section, we will go through the process that all the other steps have led up to: actually installing arm9loaderhax.
+В этом разделе мы будем шаг за шагом продвигаться к цели - установке arm9loaderhax.
 
-This is nearly the best possible kind of device exploit because it is permanently installable into the NAND firm partitions, and runs before most of the OS loads, allowing it to not only work on *all* versions once installed, but also protect itself and recover from most situations that would brick a non-A9LH 3DS such as a nonfunctional home menu or bad title install.
+Можно уверенно заявить, что arm9loaderhax - наилучший из возможных типов эксплойтов. Все потому, что он устанавливается непосредственно в раздел NAND firm и запускается ДО запуска операционной системы приставки. Кроме прочего, a9lh работает с *любой* прошивкой и, благодаря тому, что запускается до ОС, в большинстве ситуаций, удалить его случайно не выйдет. А еще этот эксплойт позволяет запускать различного рода загрузчики, которые помогут восстановить консоль даже из тех состояний, которые в обычном случае привели бы вас в сервисный центр. 
 
-The file `arm9loaderhax.bin` is what is launched by arm9loaderhax itself after it finishes loading off of NAND, and can be any valid arm9 payload. This file can be replaced at any time, although Luma3DS allows for the launch of other arm9 payloads by holding buttons on boot.
+Файл под названием `arm9loaderhax.bin` - исполняемый файл, написанный под arm9, который запускает arm9loaderhax до загрузки системы. Заменив этот файл любым корректным arm9-приложением, мы инициализируем запуск этого приложения. К слову, luma3DS делает запуск загрузчиков гораздо удобнее. Ничего не нужно заменять или переименовывать. Достаточно зажать кнопку при старте системы, присвоенную выбранному загрузчику.
 
-In this case, we use Luma3DS by [AuroraWright](https://github.com/AuroraWright/) to boot a patched SysNAND directly, allowing us to completely bypass the need for any kind of EmuNAND, vastly simplifying the usage of a hacked 3DS in addition to saving SD card space.
+arm9loaderhax.bin, используемый в этом гайде - исполняемый файл самой Luma3DS от [AuroraWright](https://github.com/AuroraWright/), после того как он загружается, он патчит SysNAND напрямую. Таким образом мы загружаем систему сразу в кастомную прошивку без необходимости EmuNAND. 
 
-Once arm9loaderhax is installed and Luma3DS is setup with the correct options, we then restore our previous backup.
+После того, как мы установим arm9loaderhax и настроем Luma3DS, мы восстановим бекап прошивки, сделанный ранее. У нас будет консоль с arm9loaderhax и прошивкой, софтом и сейвами, с которыми приставка была ДО взлома.
 
-During this process, we also setup programs such as the following:
+В процессе мы установим и настроем следующие программы:
 
-* **FBI** *(installs CIA formatted games and applications)*
-* **Luma3DS Updater** *(updates our CFW installation easily)*
-* **Hourglass9** *(multipurpose tool which can do NAND and cartridge functions)*
+* **FBI** *(устанавливает игры и программы в формате CIA)*
+* **Luma3DS Updater** *(программа для упрощения обновления нашей кастомной прошивки)*
+* **Hourglass9** *(многоцелевая утилита, выполняющие различные функции, связанные с NAND и картриджами)*
 
 #### What you need
 
