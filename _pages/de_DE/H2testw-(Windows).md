@@ -4,24 +4,24 @@ title: "H2testw (Windows)" permalink: /h2testw-(windows).html lang: en_US ref: h
 
 * * *
 
-This page will walk you through the process of checking your SD card for errors using h2testw. {: .notice}
+Diese Seite wird dir zeigen, wie du deine SD Karte mit h2testw auf Fehler überprüfen kannst. {: .notice}
 
-Depending on the size of your SD card and the speed of your computer, this process can take up to several hours! {: .notice--info}
+Je nach Größe deiner SD Karte und der Schnelligkeit deines Computers, kann dieser Prozess bis zu mehrere Stunden dauern! {: .notice--info}
 
-This page is for Windows users only. If you are not on windows, check out the [F3 (linux)](f3-(linux)) or [F3X (mac)](f3x-(mac)) pages. {: .notice--info}
+Diese Seite ist nur für Benutzer von Windows. Falls du Windows nicht benutzt, besuche die Seiten für [F3 (linux)](f3-(linux)) oder [F3X (mac)](f3x-(mac)). {: .notice--info}
 
-#### What you need
+#### Was du brauchst
 
-* The latest version of [h2testw](http://www.heise.de/ct/Redaktion/bo/downloads/h2testw_1.4.zip)
+* Die neueste Version von [h2testw](http://www.heise.de/ct/Redaktion/bo/downloads/h2testw_1.4.zip)
 
-#### Instructions
+#### Anleitung
 
-  1. Copy `h2testw.exe` from the h2testw `.zip` to your desktop
-  2. Insert your SD card into your computer
-  3. Run `h2tsetw.exe`
-  4. Select "English"
-  5. Click "Select target"
-  6. Select your SD card's drive letter
+  1. Kopiere `h2testw.exe` aus der h2testw`.zip` auf dein Desktop
+  2. Lege deine SD Karte in deinen Computer ein
+  3. Starte `h2tsetw.exe`
+  4. Wähle "Deutsch"
+  5. Klicke "Ziel wählen"
+  6. Wähle den Buchstaben deiner SD Karte
   7. Ensure "all available space" is selected
   8. Click "Write + Verify"
   9. Wait until the process is completed
