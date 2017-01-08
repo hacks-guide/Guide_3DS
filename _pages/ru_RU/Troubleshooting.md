@@ -50,43 +50,43 @@ title: "Troubleshooting" permalink: /troubleshooting.html lang: en_US ref: troub
 
   1. Скопируйте `GodMode9.bin` из `.zip`-архива GodMode9 в папку `/luma/payloads/` в корне SD-карты и переименуйте `GodMode9.bin` в папке `/luma/payloads/` в `up_GodMode9.bin`.
   2. Перезагрузите приставку, удерживая (ВВЕРХ), чтобы запустить GodMode9.
-  3. Navigate to `SYSNAND CTRNAND` -> `data` -> (32 Character ID) -> `sysdata` -> `00010038`
-  4. Hold down the (R) trigger, then press X on `00000000` to rename this file
-  5. Press Up once to change the name to `10000000`
-  6. Press (A) to save changes
-  7. Press (A) to unlock SysNAND writing, then input the key combo given
-  8. Navigate back to the Main Menu
-  9. Press Start to reboot
+  3. Перейдите в `SYSNAND CTRNAND` -> `data` -> (32-х-значный ID) -> `sysdata` -> `00010038`.
+  4. Нажмите (X), удерживая (R) на файле `00000000`, чтобы переименовать его.
+  5. Нажмите (ВВЕРХ), чтобы переименовать файл в `10000000`.
+  6. Нажмите (A), чтобы сохранить изменения.
+  7. Нажмите (A), чтобы разрешить запись в SysNAND и введите указанную комбинацию кнопок.
+  8. Вернитесь в главное меню.
+  9. Нажмите (START) для перезагрузки.
 
-## <a name="gw_fbi" />Cannot inject H&S on Gateway downgraded device
+## <a name="gw_fbi" />Не выходит сделать инжект в Health & Safety после даунгрейда с помощью Gateway. 
 
-This is caused by Gateway implementing a very shoddy downgrade method, which leaves two versions of each app on the system. One of them is unused, but it confuses Decrypt9, causing it to inject into the wrong one.
+Проблема часто встречается у тех, кто даунгрейдил при помощи Gateway. Суть в том, что метод даунгрейда гейта очень несовершенен. В ходе этой процедуры все системные приложения дублируются. Хоть они и не мешают работе, Decrypt9 спотыкается и не может понять в какой из H&S ему делать инжект, а в какой нет.
 
-#### What you need
+#### Что нужно:
 
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/)
+* Свежая версия [GodMode9](https://github.com/d0k3/GodMode9/releases/)
 
-#### Instructions
+#### Что делать:
 
-  1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `up_GodMode9.bin`
-  2. Reinsert your SD card into your 3DS
-  3. Open GodMode9 from arm9loaderhax by holding (Up) during boot 
-  4. Navigate to `SYSNAND CTRNAND` -> `title` -> `00040010`
-  5. Navigate to the folder for your device and region: 
+  1. Скопируйте `GodMode9.bin` из `.zip`-архива GodMode9 в папку `/luma/payloads/` в корне SD-карты и переименуйте `GodMode9.bin` в папке `/luma/payloads/` в `up_GodMode9.bin`.
+  2. Вставьте карту памяти в 3DS.
+  3. Запустите GodMode9 из под arm9loaderhax, удерживая (ВВЕРХ) во время загрузки. 
+  4. Перейдите в `SYSNAND CTRNAND` -> `title` -> `00040010`.
+  5. Перейдите в папку, соответствующую вашей приставке и региону: 
     * **Old 3DS EUR**: `00022300` -> `content`
     * **Old 3DS JPN**: `00020300` -> `content`
     * **Old 3DS USA**: `00021300` -> `content`
     * **New 3DS EUR**: `20022300` -> `content`
     * **New 3DS JPN**: `20020300` -> `content`
     * **New 3DS USA**: `20021300` -> `content`
-  6. Notice that there are two sets of app and tmd files, one set with uppercase extensions (`.TMD` and `.APP`), and one set with lowercase extensions (`.tmd` and `.app`)
-  7. While holding the (R) trigger, press (Y) to create a new directory
-  8. Press (A) to confirm the name `newdir` (it doesn't matter what it's called)
-  9. Press (A) to unlock SysNAND writing, then input the key combo given
- 10. Press the (L) trigger on each of the uppercase extension files (`.TMD` and `.APP`) to mark them
- 11. Press (Y) to copy the files
- 12. Navigate to `newdir`
- 13. Press (Y) to paste the files
+  6. Видите, здесь два типа *.app и *.tmd файлов? Первые написаны в капсе (`.TMD` и `.APP`), а вторые - нет (`.tmd` и ``app`).
+  7. Удерживая (R), нажмите (Y), чтобы создать новую папку.
+  8. Нажмите (А), чтобы подтвердить название новой папки - `newdir` (нам без разницы как она будет называться). 
+  9. Нажмите (A), чтобы разрешить запись в SysNAND и введите указанную комбинацию кнопок.
+ 10. На каждом файле, разрешение которого написано в капсе (`.TMD` и `.APP`), нажмите (L), чтобы отметить его.
+ 11. Нажмите (Y), чтобы скопировать эти файлы.
+ 12. Перейдите в `newdir`.
+ 13. Нажмите (Y), чтобы переместить выбранные ранее файлы.
  14. Select "Move path(s)"
  15. The uppercase extension files will have been moved to the `newdir` directory
  16. Press (Start) to reboot
