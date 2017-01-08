@@ -4,17 +4,17 @@ title: "Region Changing" permalink: /region-changing.html lang: en_US ref: regio
 
 * * *
 
-Эта дополнительная секция рассказывает о смене региона на вашей приставке с arm9loaderhax CFW SysNAND. This is done by installing the 9.2.0 ctrtransfer image for the region you want to switch to and modifying your SecureInfo_A file. {: .notice--primary}
+Эта дополнительная секция рассказывает о смене региона на вашей приставке с arm9loaderhax CFW SysNAND. Смысл в том, чтобы установить образ 9.2.0 ctrtransfer для того региона, на который вы хотите сменить текущий и внести изменения в файл SecureInfo_A. {: .notice--primary}
 
-**Region changing is almost completely unnecessary since Luma3DS supports out of region games and individual [title region emulation](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage).** {: .notice--info}
+**Смена региона практически бесполезна с тех пор, как в luma3DS добавили поддержку эмуляции [региона для отдельных игр](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage).** (англ.) {: .notice--info}
 
-This process will unlink your NNID from the system, since it will no longer be compatible with it. NNID's are locked to the region of the device that created them, and cannot be transferred between regions without [a very complex and advanced process](https://gist.githubusercontent.com/yifanlu/e80db121d38aceb8cca0e03cefd5853b/raw/3c4dd89869156ca0f945a2791e699acfdb32b510/gistfile1.txt). {: .notice--warning}
+Этот процесс отсоединит NNID от приставки, поскольку он больше не будет совместим с вашей консолью из-за того, что она поменяет регион. NNID привязан к конкретному устройству и к его региону, поэтому совершенно не возможно переносить NNID между приставками с разными регионами без применения [комплексных и сложных решений](https://gist.githubusercontent.com/yifanlu/e80db121d38aceb8cca0e03cefd5853b/raw/3c4dd89869156ca0f945a2791e699acfdb32b510/gistfile1.txt). {: .notice--warning}
 
-After this process, only **New 3DSs which have never accessed the eShop before** and **any Old 3DSs** will be able to access the eShop after creating a new NNID on their new region. Region changed New 3DSs that have already accessed the eShop on their original region cannot create a new NNID and access the eShop on their new region! {: .notice--warning}
+После этого только **New 3DS, которая никогда до этого не была привязана к eShop** и **любая Old 3DS** смогут подключиться к eShop и использовать все его возможности уже в новом регионе. New 3DS, которые сменили регион и уже подключались к eShop на оригинальном регионе, не смогут создать NNID и подключаться к eShop на новых регионах! {: .notice--warning}
 
-Note that occasionally the eShop will inexplicably still not work for devices that it should work for. This is entirely to do with Nintendo's servers, and I really do not have any control over it. {: .notice--warning}
+Бывает, что eShop не работает там, где он, казалось бы, должен работать. Такое поведение объясняется особенностями работы серверов Nintendo, на которые я, увы, влияния не имею. {: .notice--warning}
 
-Region changing using ctrtransfer (which this method uses) seems to cause reboot patches to break. The cause for this is unknown, but for now Old 3DS users will be unable to play extended memory mode games (such as Monster Hunter, Super Smash Bros, and Pokémon Sun / Moon). {: .notice--warning}
+Смена региона при помощи ctrtransfer (что используется в этом методе) по какой-то причине ломает reboot-патч. The cause for this is unknown, but for now Old 3DS users will be unable to play extended memory mode games (such as Monster Hunter, Super Smash Bros, and Pokémon Sun / Moon). {: .notice--warning}
 
 **You MUST have already installed arm9loaderhax + Luma3DS to use this.** {: .notice--danger}
 
