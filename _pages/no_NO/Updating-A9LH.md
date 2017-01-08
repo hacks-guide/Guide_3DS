@@ -4,7 +4,7 @@ title: "Updating A9LH" permalink: /updating-a9lh.html lang: en_US ref: updating-
 
 * * *
 
-### Last Update: 3 Nov 2016
+### Siste oppdatering: 3. Nov 2016
 
 The actual installation of arm9loaderhax itself consists of payload files installed into the NFIRM partitions on your device's NAND chip, which is soldered to the motherboard itself. These payloads are updated rarely and only really serve the purpose of launching `arm9loaderhax.bin` from the SD Card, which is, in our case, Luma3DS. {: .notice}
 
@@ -47,10 +47,10 @@ These steps will also update your various payloads and the AES key database. {: 
 ##### Section II - Payload update
 
   1. Boot the device while holding D-Pad down
-  2. Press (Select) to update arm9loaderhax
+  2. Trykk (Select) for å oppdatere arm9loaderhax
   3. Power off the device and put your SD card back in your computer
-  4. Delete the `a9lh` folder from the root of your SD card
-  5. Delete `down_safea9lhinstaller.bin` from `/luma/payloads/`
+  4. Slett `a9lh` mappen i fra roten av SD-kortet
+  5. Slett `down_safea9lhinstaller.bin` fra `/luma/payloads/`
 
 ##### Section III - Configuring Luma3DS
 
@@ -61,9 +61,9 @@ These steps will also update your various payloads and the AES key database. {: 
     * **"Show NAND or user string in System Settings"**
   3. If you are using a **New 3DS**, you should *also* enable the following: 
     * **"New 3DS CPU" to "Clock+L2(x)"**
-    * This will increase the framerate of many games, but may cause instability in others
-    * If some games do not work properly, disable this option and try again
-  4. Press Start to save and reboot
+    * Dette vil øke ytelsen i mange spill, men kan også skape ustabilitet i andre
+    * Hvis noen spill ikke fungerer som de skal, deaktiver dette alternativet å prøv igjen
+  4. Trykk (Start) for å lagre og starte på nytt
 
 ##### Section IV - CTRNAND Luma3DS
 
@@ -71,17 +71,17 @@ These steps will also update your various payloads and the AES key database. {: 
   2. Velg "SD"
   3. Navigate to `arm9loaderhax.bin`, then press (A) on it and select the "Copy" option
   4. Return to the FBI main menu with (B)
-  5. Select "CTR NAND"
+  5. Velg "CTR NAND"
   6. Velg "\<current directory>"
-  7. Select the "Paste" option, then press (A) to confirm
+  7. Velg alternativet "Paste", for å lime inn, og trykk (A) for å bekrefte
   8. Avslutt med hjem-knappen
   9. Power off your 3DS and remove the SD card
  10. Boot with the SD card removed while holding (Select) 
     * Booting the device at least once with the SD card removed will allow you to configure the CTRNAND based luma installation
  11. Use the (A) button and the D-Pad to turn on the following:  
     * **"Show NAND or user string in System Settings"**
- 12. If you are using a **New 3DS**, you should *also* enable the following: 
+ 12. Hvis du bruker en **New 3DS**, bør du *også* aktiver følgende: 
     * **"New 3DS CPU" to "Clock+L2(x)"**
-    * This will increase the framerate of many games, but may cause instability in others
-    * If some games do not work properly, disable this option and try again
+    * Dette vil øke ytelsen i mange spill, men kan også skape ustabilitet i andre
+    * Hvis noen spill ikke fungerer som de skal, deaktiver dette alternativet å prøv igjen
  13. Reinsert your SD card, then press Start to save and reboot!
