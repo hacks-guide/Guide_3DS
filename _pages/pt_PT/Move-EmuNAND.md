@@ -8,7 +8,7 @@ Esta é uma secção extra para ensinar a mover o conteúdo duma EmuNAND antiga 
 
 Irá PERDER todos os saves de GBA VC e DsiWare! {: .notice--danger}
 
-**You MUST have already installed arm9loaderhax + Luma3DS to use this.** {: .notice--danger}
+**Tem de JÁ TER instalado arm9loaderhax + Luma3DS para usar isto.** {: .notice--danger}
 
 #### What you need
 
