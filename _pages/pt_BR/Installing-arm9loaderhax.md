@@ -8,7 +8,7 @@ O passo final deste guia é instalar o arm9loaderhax e configurar o Luma3DS para
 
 Isto irá instalar o [Fork de AuroraWright](https://github.com/AuroraWright/arm9loaderhax) do arm9loaderhax. {: .notice--info}
 
-We will also setup the ability to launch payloads from arm9loaderhax, giving us the ability to unbrick our SysNAND from situations that would normally brick us by restoring from backup. {: .notice--info}
+Também iremos configurar a capacidade de arrancar payloads a partir do arm9loaderhax, dando-nos assim a habilidade de "desbrickar" a nossa SysNAND em situações que normalmente "brickavam" ao restaurar uma cópia. {: .notice--info}
 
 **You cannot use another console's OTP or you will brick GUARANTEED.** {: .notice--danger}
 
