@@ -10,7 +10,7 @@ Clique na imagem do seu dispositivo para ir à página apropriada a si. {: .noti
 
 Modelos, versões e regiões diferentes exigem passos diferentes para chegar ao objetivo de arm9loaderhax Custom Firmware. A seguinte série de páginas irá ajudá-lo a perceber como começar para o seu dispositivo. {: .notice--info}
 
-If you have already hacked your 3DS before and have an EmuNAND based CFW setup, just follow all instructions while on SysNAND. Your data will be transfered from EmuNAND to your new A9LH install at the end. {: .notice--info}
+Se já tiver hackeado a sua 3DS antes e tiver um sistema baseado em EmuNAND CFW, siga todas as instruções na SysNAND. Os dados da sua EmuNAND serão transferidos para o seu novo sistema A9LH no fim. {: .notice--info}
 
 Before starting, you may want to check your SD card for errors using [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), or [F3X (Mac)](f3x-(mac))! {: .notice--warning}
 
