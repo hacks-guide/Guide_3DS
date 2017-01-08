@@ -87,50 +87,50 @@ title: "Troubleshooting" permalink: /troubleshooting.html lang: en_US ref: troub
  11. Нажмите (Y), чтобы скопировать эти файлы.
  12. Перейдите в `newdir`.
  13. Нажмите (Y), чтобы переместить выбранные ранее файлы.
- 14. Select "Move path(s)"
- 15. The uppercase extension files will have been moved to the `newdir` directory
- 16. Press (Start) to reboot
- 17. Return to [Installing arm9loaderhax](installing-arm9loaderhax) and retry the FBI injection
- 18. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then return to [Installing arm9loaderhax](installing-arm9loaderhax) and retry the FBI injection
+ 14. Выберите "Move path(s)".
+ 15. Теперь файлы с капсом переместились в папку `newdir`.
+ 16. Нажмите (START) для перезагрузки
+ 17. Вернитесь к [установке A9LH](installing-arm9loaderhax) и попробуйте инжект FBI еще раз. 
+ 18. Если снова не получилось, то верните капснутые файлы назад в папку `content` и повторите операцию перемещения файлов в папку `newdir`, уже с файлами без капса (<0>.tmd</0> и <0>.app</0>), а затем вернитесь к [установке A9LH](installing-arm9loaderhax) и попробуйте инжект FBI еще раз. 
 
-## <a name="ts_browser" />A browser based exploit is not working
+## <a name="ts_browser" />Почему не работает эксплойт, использующий браузер?
 
-Browser based exploits (such as browserhax or 2xrsa) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps
+Эксплойты, базирующиеся на браузере (browserhax или 2xrsa, например) очень нестабильные и частенько крашатся, но иногда всего этого можно избежать, следуя рекомендациям, описанным ниже:
 
-  1. Open the browser, then open the browser settings 
-      1. Scroll to the bottom and Initialize Savedata (it also may be called Clear All Save Data)
-      2. Try the exploit again
+  1. Откройте браузер, затем настройки браузера (settings): 
+      1. Пролистайте в самый низ и выберите "Удалить сохр. данные" (Initialize Savedata/Clear All Save Data).
+      2. Попробуй запустить эксплойт еще раз.
 
-## <a name="ts_safe_a9lh" />System boots directly SafeA9LHInstaller
+## <a name="ts_safe_a9lh" />Приставка грузится в SafeA9LHInstaller
 
-You copied the wrong `arm9loaderhax.bin` file to your SD card (you were only supposed to copy the `3ds` folder and `SafeA9LHInstaller.dat` file from the SafeA9LHInstaller zip)
+Вы просто скопировали не верный `arm9loaderhax.bin` на карту памяти.
 
-  1. Use the correct `arm9loaderhax.bin` 
-      1. Copy `arm9loaderhax.bin` from the Luma3DS `.zip` to the root of your SD card
-      2. Reboot holding select and continue
+  1. Используйте верный `arm9loaderhax.bin:` 
+      1. Скопируйте `arm9loaderhax.bin` из `zip-архива` Luma3DS в корень своей карты памяти;
+      2. Выключите приставку, зажмите (SELECT) и включите.
 
-## <a name="ts_safe_a9lh_screen" />SafeA9LHInstaller shows a glitched screen
+## <a name="ts_safe_a9lh_screen" />SafeA9LHInstaller показывает корявый экран
 
-This happens occasionally, but the reason is unknown. The buttons will still work, but the screen will be glitched looking
+Такое часто бывает непонятно почему. Кнопки все равно работают.
 
-  1. Follow instructions as normal 
-      1. Press (Select) and arm9loaderhax will be installed
-      2. The console will reboot 
-        * If the console does not reboot, wait 10 seconds, then power off your 3DS by holding down the power button
+  1. Просто следуйте инструкции как ни в чем не бывало: 
+      1. Нажимайте (SELECT) до тех пор, пока консоль не выключится;
+      2. Приставка выключится 
+        * Если приставка не выключается, секунд через 10 просто отключите долгим нажатием кнопки включения.
 
-## <a name="ts_steelhax" />After System Transfering steelhax, it crashes to a black screen on *the target 3DS*
+## <a name="ts_steelhax" />После Переноса данных (System Transfering) steelhax на *целевой 3DS* крашится черным экраном
 
-This is because you selected the wrong version in the steelhax installer.
+Все потому, что выбрана неверная версия в steelhax installer.
 
-  1. Download the [otherapp payload](https://smealum.github.io/3ds/#otherapp) corresponding to **the target 3DS's** version 
-    * Ignore the NFIRM being downgraded
-    * Use the version displayed in settings
-  2. Rename the otherapp payload to `steelhax_payload.bin`
-  3. Copy it `steelhax_payload.bin` to the root of **the target 3DS's** SD Card 
-    * Overwrite any existing files
-  4. Hold (B) while launching **Steel Diver: Sub Wars**
+  1. Скачайте [otherapp payload](https://smealum.github.io/3ds/#otherapp) соответствующий **целевой 3DS.** 
+    * Не той версии, на которую вы будете даунгрейдится;
+    * А той, что сейчас показана в настройках.
+  2. Переименуйте otherapp payload в `steelhax_payload.bin`.
+  3. Скопируйте `steelhax_payload.bin` в корень карты памяти **целевой 3DS.** 
+    * Согласитесь на перезапись.
+  4. Удерживайте (В) во время запуска **Steel Diver: Sub Wars**.
 
-## <a name="ts_dsiware" />After doing the DSiWare Downgrade, my hacked DSiWare does not work
+## <a name="ts_dsiware" />После DSiWare-даунгрейда, взломанная игра не работает
 
   1. Reboot **the source 3DS** while holding Start to launch Hourglass9
   2. Go to SysNAND Backup/Restore and restore SysNAND from `NANDmin.bin` (the one made before the system transfer)
