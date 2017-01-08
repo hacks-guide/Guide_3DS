@@ -4,71 +4,71 @@ title: "Get Started (Old 3DS)" permalink: /get-started-(old-3ds).html lang: en_U
 
 * * *
 
-Select the appropriate page for your version from the chart below. {: .notice--primary}
+Выберите подходящую для Вашей версии страницу из таблицы ниже. {: .notice--primary}
 
-{% capture notice-1 %} The first two columns of the chart refer to the last number of your version (which corresponds to the browser version installed to the system). If the version is -0 then you do not have a browser, while any number above -0 indicates a browser is installed.
+{% capture notice-1 %} Первые две колонки таблицы указывают на последний номер версии (который является номером версии установленного в системе браузера). Если номер "-0", то это указывает на отсутствие браузера в системе, тогда как любой номер выше "-0" означает наличие браузера.
 
-The "from" and "to" fields are inclusive. This means that, for example, the "from 9.0.0 to 9.2.0" row includes 9.0.0, 9.1.0, and 9.2.0.
+Поля "Начиная с" и "До" включают в себя диапазон между описанными версиями. Это значит, что ряд "начиная с 9.0.0 до 9.2.0" включает в себя 9.0.0, 9.1.0, и 9.2.0.
 
-In the case of "5.0.0-0U" for example, you would follow the "No Browser" column and 5.0.0 to 5.1.0 row because the system is on the a system version in that range and has no browser installed. {% endcapture %}
+В случае прошивки "5.0.0-0U", например, необходимо выбрать ячейку на пересечении колонки "Без браузера" и ряда "начиная с 5.0.0 до 5.1.0", так как версия системы находится в этом диапазоне и в системе не установлен браузер. {% endcapture %}
 
 <div class="notice--info">{{ notice-1 | markdownify }}</div>
 
-**For all versions you can [Cart Update](cart-update) to a higher version in the same column to follow its instructions instead.** {: .notice--warning}
+**Для всех систем можно использовать [Обновление с Картриджем](cart-update) на более свежую версию в той же колонке, чтобы следовать инструкциям из другого ряда.** {: .notice--warning}
 
-If you updated with a game cart containing the version 9.9.0 or above *(meaning that you have a version on 9.9.0 or above, but your browser is on -25 or lower, such as 10.2.0-24)*, your browser was removed and you will need to use the "No Browser" column. {: .notice--warning}
+Если Вы обновились с помощью игрового картриджа, содержащего версию 9.9.0 или выше *(то есть Ваша версия сейчас 9.9.0 или выше, однако версия браузера -25 или ниже, к примеру 10.2.0-24)*, браузер был удалён из системы и в этом случае следует воспользоваться колонкой "Без браузера". {: .notice--warning}
 
-The device version can be found at the bottom right of the top screen of the System Settings. {: .notice--success}
+Версию устройства можно найти в правом нижнем углу верхнего экрана в Системных настройках. {: .notice--success}
 
 <table>
   <thead>
     <tr>
-      <th style="text-align: center">From</th>
-      <th style="text-align: center">To</th>
-      <th style="text-align: center">No Browser</th>
-      <th style="text-align: center">Browser</th>
+      <th style="text-align: center">Начиная с</th>
+      <th style="text-align: center">До</th>
+      <th style="text-align: center">Без браузера</th>
+      <th style="text-align: center">С браузером</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align: center">1.0.0</td>
       <td style="text-align: center">1.1.0</td>
-      <td style="text-align: center" colspan="2"><a href="cart-update">Cart Update</a></td>
+      <td style="text-align: center" colspan="2"><a href="cart-update">Обновление с Картриджем</a></td>
     </tr>
     <tr>
       <td style="text-align: center">2.1.0</td>
       <td style="text-align: center">2.1.0</td>
-      <td style="text-align: center"><a href="cart-update">Cart Update</a></td>
-      <td style="text-align: center"><a href="installing-arm9loaderhax">Installing arm9loaderhax</a></td>
+      <td style="text-align: center"><a href="cart-update">Обновление с Картриджем</a></td>
+      <td style="text-align: center"><a href="installing-arm9loaderhax">Установка arm9loaderhax</a></td>
     </tr>
     <tr>
       <td style="text-align: center">2.2.0</td>
       <td style="text-align: center">3.1.0</td>
-      <td style="text-align: center" colspan="2"><a href="cart-update">Cart Update</a></td>
+      <td style="text-align: center" colspan="2"><a href="cart-update">Обновление с Картриджем</a></td>
     </tr>
     <tr>
       <td style="text-align: center">4.0.0</td>
       <td style="text-align: center">4.5.0</td>
       <td style="text-align: center"><a href="decrypt9-(mset)">Decrypt9 (MSET)</a></td>
-      <td style="text-align: center"><a href="decrypt9-(browser)">Decrypt9 (Browser)</a></td>
+      <td style="text-align: center"><a href="decrypt9-(browser)">Decrypt9 (Браузер)</a></td>
     </tr>
     <tr>
       <td style="text-align: center">5.0.0</td>
       <td style="text-align: center">5.1.0</td>
-      <td style="text-align: center"><a href="cart-update">Cart Update</a></td>
-      <td style="text-align: center"><a href="decrypt9-(browser)">Decrypt9 (Browser)</a></td>
+      <td style="text-align: center"><a href="cart-update">Обновление с Картриджем</a></td>
+      <td style="text-align: center"><a href="decrypt9-(browser)">Decrypt9 (Браузер)</a></td>
     </tr>
     <tr>
       <td style="text-align: center">6.0.0</td>
       <td style="text-align: center">6.3.0</td>
       <td style="text-align: center"><a href="decrypt9-(mset)">Decrypt9 (MSET)</a></td>
-      <td style="text-align: center"><a href="decrypt9-(browser)">Decrypt9 (Browser)</a></td>
+      <td style="text-align: center"><a href="decrypt9-(browser)">Decrypt9 (Браузер)</a></td>
     </tr>
     <tr>
       <td style="text-align: center">7.0.0</td>
       <td style="text-align: center">8.1.0</td>
-      <td style="text-align: center"><a href="cart-update">Cart Update</a></td>
-      <td style="text-align: center"><a href="decrypt9-(browser)">Decrypt9 (Browser)</a></td>
+      <td style="text-align: center"><a href="cart-update">Обновление с Картриджем</a></td>
+      <td style="text-align: center"><a href="decrypt9-(browser)">Decrypt9 (Браузер)</a></td>
     </tr>
     <tr>
       <td style="text-align: center">9.0.0</td>
