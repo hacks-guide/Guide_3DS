@@ -4,22 +4,22 @@ title: "Decrypt9 (Homebrew Launcher)" permalink: /decrypt9-(homebrew-launcher).h
 
 * * *
 
-Due to a bug, safehax currently requires a functioning cartridge of some kind (3ds, nds, flashcart, etc) to be inserted in order to complete successfully. As a temporary workaround, users less than or equal to 9.2.0 who do not own any cartridges can copy `Decrypt9WIP.3dsx` to `/3ds/` and run it directly without any hax. {: .notice--info}
+Из-за странного бага, safehax для работы требует рабочий картридж, вставленный в приставку (от 3DS, NDS, флеш-картридж - все равно). В качестве альтернативного решения, всем пользователям прошивки 9.2.0 или ниже, рекомендуется скопировать `Decrypt9WIP.3dsx` в папку `/3ds/` и запустить его из HBL вообще безо всяких хаков. {: .notice--info}
 
-#### What you need
+#### Что нужно:
 
-* The latest release of [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/latest/)
-* The latest fork of [safehax+fasthax](https://gbatemp.net/attachments/safehax-fasthax-cb6a1bc-zip.73592/)
+* Свежая версия [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/latest/).
+* Свежий форк [safehax+fasthax](https://gbatemp.net/attachments/safehax-fasthax-cb6a1bc-zip.73592/).
 
-#### Instructions
+#### Что делать:
 
-  1. Create a folder named `files9` on the root of your SD card if it does not already exist
-  2. Copy and merge the contents of the safehax+fasthax `.zip` to root of your SD card, overwrite existing files
-  3. Copy `Decrypt9WIP.bin` from the Decrypt9WIP `.zip` to the root of your SD card and rename `Decrypt9WIP.bin` to `arm9.bin`
-  4. Reinsert your SD card into your 3DS
-  5. Enter the homebrew launcher
-  6. Launch safehax
-  7. If the exploit was successful, you will have booted into Decrypt9
+  1. Создайте папку `files9` в корне карты памяти.
+  2. Скопируйте с заменой содержимое `zip-архива` с safehax+fasthax в корень карты памяти.
+  3. Скопируйте `Decrypt9WIP.bin` из `zip-архива` с Decrypt9WIP в корень карты памяти и переименуйте `Decrypt9WIP.bin` в `arm9.bin`.
+  4. Вставьте карту памяти в приставку.
+  5. Запустите Homebrew launcher.
+  6. Запустите safehax.
+  7. Если эксплойт сработал верно, запустится Decrypt9.
 
-Continue to [2.1.0 ctrtransfer](2.1.0-ctrtransfer)  
+Переходите к [2.1.0 ctrtransfer](2.1.0-ctrtransfer)  
 {: .notice--primary}
