@@ -4,7 +4,7 @@ title: "Decrypt9 (Homebrew Launcher)" permalink: /decrypt9-(homebrew-launcher).h
 
 * * *
 
-Due to a bug, safehax currently requires a functioning cartridge of some kind (3ds, nds, flashcart, etc) to be inserted in order to complete successfully. As a temporary workaround, users less than or equal to 9.2.0 who do not own any cartridges can copy `Decrypt9WIP.3dsx` to `/3ds/` and run it directly without any hax. {: .notice--info}
+Neste momento, por causa de um bug, para o safehax funcionar completamente, é necessário que tenha um cartucho inserido de qualquer tipo (3ds, nds, flashcart, etc). As a temporary workaround, users less than or equal to 9.2.0 who do not own any cartridges can copy `Decrypt9WIP.3dsx` to `/3ds/` and run it directly without any hax. {: .notice--info}
 
 #### What you need
 
