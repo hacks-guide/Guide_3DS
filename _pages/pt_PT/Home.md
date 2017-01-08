@@ -17,9 +17,9 @@ Se tiver uma consola de desenvolvimento ("PANDA" ou "SNAKE"), veja o guia [devGu
 
 **Leia todas as páginas de introdução antes de começar.** {: .notice--warning}
 
-## What is Homebrew?
+## O que é Homebrew?
 
-[**Homebrew**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) usually refers to software that is not authorized by Nintendo. It allows you to run homebrew games, tools like save editing and backup, and emulators for various older systems.
+[**Homebrew**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) refere-se normalmente a software que não é autorizado pela Nintendo. It allows you to run homebrew games, tools like save editing and backup, and emulators for various older systems.
 
 In most cases, running homebrew on your console is 100% free using just the Nintendo 3DS Sound app. There are also various other exploits in commercial games and the browser to get homebrew running.
 
