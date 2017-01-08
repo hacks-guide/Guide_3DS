@@ -22,7 +22,7 @@ Cette page s'adresse uniquement au utilisateur de Linux seulement. Si vous n'êt
   4. Insérez votre carte SD dans votre ordinateur
   5. Montez votre carte SD
   6. Lancez `./f3write <le point de montage de votre carte sd>`
-  7. Attendez que le processus ce complète de lui-même. Ci-dessous, un example de renvoie.
+  7. Attendez que le processus ce complète de lui-même. Ci-dessous, un example de renvoie (en anglais).
     
         $ ./f3write /media/michel/6135-3363/
          Free space: 29.71 GB
@@ -33,9 +33,9 @@ Cette page s'adresse uniquement au utilisateur de Linux seulement. Si vous n'êt
         Average Writing speed: 4.90 MB/s
         
 
-  8. Run `./f3read <your sd card mount point>`
+  8. Lancez `./f3read <le point de montagte de votre carte sd>`
 
-  9. Wait until the process is complete. See below for an example output.
+  9. Attendez que le processus ce complète de lui-même. Ci-dessous, un example de renvoie (en anglais).
     
         $ ./f3read /media/michel/6135-3363/
                           SECTORS      ok/corrupted/changed/overwritten
