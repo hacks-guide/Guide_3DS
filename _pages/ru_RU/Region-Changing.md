@@ -38,7 +38,7 @@ title: "Region Changing" permalink: /region-changing.html lang: en_US ref: regio
 ##### Часть I - Подготовка
 
   1. Скопируйте `GodMode9.bin` из `.zip`-архива GodMode9 в папку `/luma/payloads/` в корне SD-карты и переименуйте `GodMode9.bin` в папке `/luma/payloads/` в `up_GodMode9.bin`
-  2. Copy `Decrypt9WIP.bin` to the `/luma/payloads/` folder on your SD card and rename `Decrypt9WIP.bin` to `x_Decrypt9WIP.bin`
+  2. Скопируйте `Decrypt9WIP.bin` в папку `/luma/payloads/` в корне SD-карты и переименуйте `Decrypt9WIP.bin` в `x_Decrypt9WIP.bin`
   3. Copy the 9.2.0 ctrtransfer image `.bin` and `.bin.sha` from the ctrtransfer `.zip` to the `/files9/` folder on your SD card
   4. Reinsert your SD card into your 3DS
 
