@@ -12,9 +12,9 @@ Os campos "desde" e "até" são inclusivos. Isto significa que, por exemplo, a l
 
 No caso de "5.0.0-0U", por exemplo, teria de seguir a coluna "Sem Browser" e a linha 5.0.0 e 5.1.0, pois o sistema está numa versão que se encontra dentro do especificado e não tem nenhum browser instalado. {% endcapture %}
 
-<div class="notice--info">{{ notice-1 | markdownify }}</div>
+<div class="notice--info">{ notice-1 | markdownify }</div>
 
-For all versions you can [Cart Update](cart-update) to a higher version in the same column to follow its instructions instead. {: .notice--warning}
+Em todas as versões pode fazer a [Atualização por Cartão](cart-update) para uma versão maior na mesma coluna para seguir essas instruções. {: .notice--warning}
 
 If you updated with a game cart containing the version 9.9.0 or above *(meaning that you have a version on 9.9.0 or above, but your browser is on -25 or lower, such as 10.2.0-24)*, your browser was removed and you will need to use the "No Browser" column. {: .notice--warning}
 
