@@ -38,10 +38,10 @@ title: "FAQ" permalink: /faq.html lang: en_US ref: faq
 **A:** Благодаря новому CTRNAND-методу, да!
 
 <a name="faq_ge128gbsd" />**Q:** *Можно ли использовать SD-карты на 128 ГБ (или больше)?*  
-**A:** Да, однако некоторые пользователи сообщали о замедлении работы с картами таких больших объёмов. Note that you cannot format the card with exFAT; you need to format it with FAT32.
+**A:** Да, однако некоторые пользователи сообщали о замедлении работы с картами таких больших объёмов. Note that you cannot format the card with exFAT; you need to format it with FAT32. Стоит уточнить, что нельзя форматировать карту с exFAT; необходимо использовать FAT32.
 
-<a name="faq_movesd" />**Q:** *How do I move to a new SD card at the end of this?*  
-**A:** Just copy all the files to the new SD card.
+<a name="faq_movesd" />**Q:** *Как мне использовать новую SD-карту после прохождения гайда?*  
+**A:** Достаточно просто перенести все файлы со старой SD-карты на новую.
 
 <a name="faq_NNID" />**Q:** *Can I keep my NNID?*  
 **A:** If you start with an NNID and follow every step, you will end up keeping your NNID at the end.
