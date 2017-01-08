@@ -62,11 +62,11 @@ During this process, we also setup programs such as the following:
   2. Create a folder named `cias` on the root of your SD card if it does not already exist
   3. **Delete the `a9lh` folder from the root of your SD card if it exists** 
     * **If you accidentally install arm9loaderhax using another device's `OTP.bin`, you will BRICK!**
-  4. Delete the `3ds` folder from the root of your SD card if it exists
-  5. **Copy *the contents of* the `starter.zip` to the root of your SD card** 
-    * This will include a brand new `3ds` folder to replace the one you just deleted
-  6. Copy *the contents of* the SafeA9LHInstaller `.7z` to the root of your SD card
-  7. **Copy the `a9lh` folder from the data_input `.zip` to the root of your SD Card**
+  4. Slett `3ds` mappen fra roten av SD-kortet
+  5. **Kopier *innholdet av* `starter.zip` til roten av SD-kortet** 
+    * Dette gjelder også den nye `3ds` mappen som erstatter den du nettop slettet
+  6. Kopier *innholdet av* SafeA9LHInstaller `.7z` til roten av SD-kortet
+  7. **Kopier `a9lh` mappen fra data_input `.zip` til roten av SD-kortet**
   8. **Copy *the contents of* the arm9loaderhax release `.7z` to `a9lh` folder on your SD card**
   9. Copy `hblauncher_loader.cia` from the hblauncher_loader `.zip` to the `/cias/` folder on your SD card
  10. Copy `lumaupdater.cia` from the Luma3DS Updater `.zip` to the `/cias/` folder on your SD card
@@ -77,15 +77,15 @@ During this process, we also setup programs such as the following:
  15. Copy `Hourglass9.bin` from the Hourglass9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `Hourglass9.bin` to `start_Hourglass9.bin`
  16. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` to `up_GodMode9.bin`
  17. Copy `aeskeydb.bin` to the `/files9/` folder on your SD card
- 18. Copy `DspDump.3dsx` to the `/3ds/` folder on your SD card
- 19. Copy *the contents of* `fbi-2.4.2-injectable.zip` to the `/files9/` folder on your SD card
+ 18. Kopier `DspDump.3dsx` til `/3ds/` mappen på SD-kortet
+ 19. Kopier *innholdet av* `fbi-2.4.2-injectable.zip` til `/files9/` mappen på SD-kortet
 
 ##### Section II - Installing arm9loaderhax
 
-  1. Reinsert your SD card into your 3DS
+  1. Sett inn SD-kortet i konsollen
   2. Do the steps for installing arm9loaderhax on your device: 
-    * You should be on 2.1.0
-    * Go to `http://dukesrg.github.io/2xrsa.html?arm11.bin` on your 3DS
+    * Konsollen skal være på 2.1.0
+    * Gå til `http://dukesrg.github.io/2xrsa.html?arm11.bin` på konsollen
     * If you get the error "This service is not available in your region", use the System Settings to set your device's country to match the NAND region you installed with 2.1.0 ctrtransfer
     * If you get another error, [follow this troubleshooting guide](troubleshooting#ts_browser)
     * If you get a glitched screen, [follow this troubleshooting guide](troubleshooting#ts_safe_a9lh_screen)
@@ -96,11 +96,11 @@ During this process, we also setup programs such as the following:
 
 ##### Section III - Configuring Luma3DS
 
-  1. Hold select on boot to enter the Luma3DS menu 
+  1. Hold (Select) under oppstart for å åpne Luma3DS menyen 
     * Make sure to start holding the button before pressing power
     * If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_a9lh) 
     * If you boot to SafeA9LHInstaller, [follow this troubleshooting guide](troubleshooting#ts_safe_a9lh)
-  2. Use the (A) button and the D-Pad to turn on the following:  
+  2. Bruk (A)-knappen og piltastene for å aktivere følgende:  
     * **"Autoboot SysNAND"**
     * **"Use SysNAND FIRM if booting with R"**
     * **"Show NAND or user string in System Settings"**
@@ -152,7 +152,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
   6. Navigate to `lumaupdater.cia` and press (A) to install
   7. Return to the SD directory with (B)
   8. Navigate to `arm9loaderhax.bin`, then press (A) on it and select the "Copy" option
-  9. Return to the FBI main menu with (B)
+  9. Gå tilbake til hovedmenyen for FBI med (B)
  10. Velg "CTR NAND"
  11. Velg "\<current directory>"
  12. Velg alternativet "Paste", for å lime inn, og trykk (A) for å bekrefte
@@ -165,14 +165,14 @@ If, before following this guide, you already had an EmuNAND setup and would like
  19. Select `hs.app` (the original one that doesn't contain FBI), then press (A) and confirm to inject
  20. Press (Select) on the main menu to eject your SD card
  21. Press (Start) to reboot with the SD card removed 
-    * Booting the device at least once with the SD card removed will allow you to configure the CTRNAND based luma installation
- 22. Use the (A) button and the D-Pad to turn on the following:  
+    * Å starte konsollen minst en gang uten SD-kortet, lar deg konfigurere den CTRNAND-baserte Luma installasjonen
+ 22. Bruk (A)-knappen og piltastene for å aktivere følgende:  
     * **"Show NAND or user string in System Settings"**
  23. Hvis du bruker en **New 3DS**, bør du *også* aktiver følgende: 
     * **"New 3DS CPU" til "Clock+L2(x)"**
     * Dette vil øke ytelsen i mange spill, men kan også skape ustabilitet i andre
     * Hvis noen spill ikke fungerer som de skal, deaktiver dette alternativet å prøv igjen
- 24. Reinsert your SD card, then press Start to save and reboot!
+ 24. Sett inn SD-kortet, og trykk (Start) for å lagre og starte på nytt!
 
 * * *
 
