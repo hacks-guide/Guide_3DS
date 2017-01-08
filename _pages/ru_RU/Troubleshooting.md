@@ -132,16 +132,16 @@ title: "Troubleshooting" permalink: /troubleshooting.html lang: en_US ref: troub
 
 ## <a name="ts_dsiware" />После DSiWare-даунгрейда, взломанная игра не работает
 
-  1. Reboot **the source 3DS** while holding Start to launch Hourglass9
-  2. Go to SysNAND Backup/Restore and restore SysNAND from `NANDmin.bin` (the one made before the system transfer)
-  3. If you don't see the game at all on **the target 3DS**, link the NNID you bought the game with to **the target 3DS** and redownload it 
-    * You may have to delete the game from "Data Management" in the "System Settings" first
-    * If **the target 3DS** is not the latest version, you may have to run ctr-httpwn to access the eShop
-  4. On **the source 3DS**, do the the save (and `.app` if you are using the `.app` page) injection steps
-  5. On **the source 3DS**, go to System Settings, "Data Management", "DSiWare", then copy your DSiWare game to your SD card
-  6. Either put **the source 3DS**'s SD card in **the target 3DS**, or rename the `Nintendo 3DS` on **the target 3DS**'s SD card and copy the `Nintendo 3DS` folder from **the source 3DS**'s SD card to **the target 3DS**'s SD card
-  7. On **the target 3DS**, go to System Settings, "Data Management", "DSiWare", then copy your DSiWare game to the system
-  8. Return your SD cards to normal, then continue with the DSiWare Downgrade
+  1. Перезагрузите **исходную 3DS**, удерживайте (START) во время загрузки устройства, чтобы запустить Hourglass9.
+  2. Перейдите в SysNAND Backup/Restore и восстановите SysNAND из `NANDmin.bin` (который создавался до переноса системы).
+  3. Если игры нет совсем, **к целевой 3DS **следует присоединить NNID, с которого была куплена игра и на **целевую же 3DS** перекачать игру заново 
+    * Может понадобится удалить игру через "Управление данными" (Data Management) в системных настройках (System Settings);
+    * Если на **целевой 3DS** не самая последняя версия ПО (без нее в eShop не зайти), используйте ctr-httpwn.
+  4. На **исходной 3DS** выполните шаги с инжектом сейва, или `.app`, в зависимости от метода, который вы используете.
+  5. На **исходной 3DS** перейдите в Системные настройки, Управление данными, DSiWare (System Settings, "Data Management", "DSiWare"), а затем скопируйте свою DSiWare игру на карту памяти.
+  6. Поставьте КП от **исходной 3DS** в **целевую 3DS**, или просто переименуйте папку `Nintendo 3DS`на КП в **целевой 3DS** и скопируйте на нее папку `Nintendo 3DS` из КП от **исходной 3DS**.
+  7. На **целевой 3DS** перейдите в Системные настройки, Управление данными, DSiWare (System Settings, "Data Management", "DSiWare") и скопируйте свою DSi игру обратно в систему. 
+  8. Верните карты на свои места (если переименовывали папку, переименуйте обратно) и продолжайте DSiWare-даунгрейд.
 
 ## <a name="ts_d9_backup" />Decrypt9 or Hourglass9 won't restore / can't find my NAND backup
 
