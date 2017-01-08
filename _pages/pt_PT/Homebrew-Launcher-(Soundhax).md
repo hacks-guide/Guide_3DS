@@ -4,7 +4,7 @@ title: "Homebrew Launcher (SoundHax)" permalink: /homebrew-launcher-(soundhax).h
 
 * * *
 
-The Homebrew Launcher has many different entrypoints, or methods of launching. {: .notice}
+Há muitas maneiras e pontos de entrada (entrypoints) para aceder ao Homebrew Launcher. {: .notice}
 
 SoundHax is compatible with versions 9.0.0 through 11.2.0 in the EUR, JPN, KOR, and USA regions. {: .notice--info}
 
