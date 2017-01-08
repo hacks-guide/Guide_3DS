@@ -114,7 +114,7 @@ NNID из исходной 3DS будет находится в целевой 3
  13. Перейдите в `data`.
  14. Нажмите (A) на `public.sav`.
  15. Выберите "Mount as FAT image" 
-  * Если вы не видите такого пункта, убедитесь, что вы запускаете свежую версию GodMode9.
+  * If you do not see this option, ensure you are running the latest GodMode9 release
   * Если вы не видите этой опции, [напишите об этом репорт](https://github.com/d0k3/GodMode9/issues).
  16. Вы попадете в главное меню.
  17. Перейдите в `SDCARD`.
