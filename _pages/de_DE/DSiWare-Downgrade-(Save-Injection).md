@@ -45,28 +45,28 @@ Es werden Sicherheitskopien der Spielstände deiner DSiWare-Spiele erstellt bevo
   3. Kopiere den `4B51394A` Ordner aus der `4B51394A.zip` in den `/3ds/3ds_dsiwarehax_installer/dsiware/` Ordner auf deiner SD Karte.
   4. Kopiere und verbinde den `3ds` Ordner aus der 3DSident `.zip` auf deine SD Karte
   5. Kopiere `waithax.3dsx` in den `/3ds/` Ordner auf deiner SD Karte
-  6. Copy the dgTool `boot.nds` to the root of your SD card
-  7. Create a folder named `dgTool` on the root of your SD card if it does not already exist
-  8. Copy the contents of the NFIRM `.zip` to the `dgTool` folder on the root of your SD card
-  9. Reinsert your SD card into your 3DS
+  6. Kopiere die dgTool `boot.nds` auf den Root deiner SD Karte
+  7. Erstelle einen `dgTool` Ordner auf dem Root deiner SD Karte falls dieser noch nicht existiert
+  8. Kopere die Inhalte der NFIRM`.zip` in den `dgTool` Ordner auf den Root deiner SD Karte
+  9. Lege deine SD Karte wieder in deinen 3DS ein
 
-##### Section II - Backup DSiWare
+##### Sektion II - Sicherheitskopien der DSiWare
 
-After completing the entire guide, you can use this backup to restore your DSiWare saves by deleting the DSiWare from your System Memory and copying it from your SD Card. {: .notice--info}
+Nachdem du die gesamte Anleitung abgeschlossen hast, kannst du diese Sicherheitskopien, um deine DSiWare Speicherstände wiederherzustellen, indem du die DSiWare aus deinem Systemspeicher löschst und sie von deiner SD Karte kopierst. {: .notice--info}
 
-This backup can only be used on this NAND. If you format your 3DS or restore another NAND (specifically if `movable.sed` is ever modified), it will become unusable. {: .notice--info}
+Diese Sicherheitskopie kann nur auf dieser NAND benutzt werden. Falls du deinen 3DS formatierst oder ein anderes NAND wiederherstellst (besonders falls `movable.sed` je verändert wird) wird sie unbrauchbar. {: .notice--info}
 
-  1. Go to System Settings, then "Data Management", then "DSiWare"
-  2. Copy the DSiWare game you intend to use to the SD Card
-  3. Exit System Settings
+  1. Gehe zu Systemeinstellungen, dann "Datenverwaltung", dann "DSiWare"
+  2. Kopiere die DSiWare-Spiele, welche du benutzen möchtest, auf deine SD Karte
+  3. Verlasse die Systemeinstellungen
 
-##### Section III - waithax
+##### Sektion III - waithax
 
-  1. Get into the Homebrew Launcher using your entrypoint
-  2. Launch waithax
-  3. Wait 
-  * On New 3DS, this will take about 20 minutes (due to a bug, this can take the same time as an Old 3DS for some systems)
-  * On Old 3DS, this will take about an hour
+  1. Öffne den Homebrew Launcher mit deinem bevorzugtem Eintrittspunkt
+  2. Starte waithax
+  3. Warte 
+  * Auf dem New 3Ds wird dies ungefähr 20 Minuten dauern (durch einen Fehler kann dies auf manchen Systemen so lange dauern wie bei einem Old 3DS)
+  * Auf dem Old 3DS wird dies ungefähr eine Stunde dauern
   4. Once it's done, press (Start) to exit
   5. Launch 3ds_dsiwarehax_installer
   6. Select the DSiWare game you want to install the exploit on
