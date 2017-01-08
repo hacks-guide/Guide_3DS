@@ -95,10 +95,10 @@ This is caused by Gateway implementing a very shoddy downgrade method, which lea
 
 ## <a name="ts_browser" />Un exploit basé sur le navigateur web ne fonctionne pas
 
-Les exploits basé sur le naviguateur (tel que browserhax ou 2xrsa) sont parfois instable et crash fréquement, mais ils peuvent parfois être réglés en faisant les étapes suivantes
+Les exploits basés sur le naviguateur (tel que browserhax ou 2xrsa) sont parfois instables et crash fréquement, mais ils peuvent parfois être réglés en faisant les étapes suivantes
 
-  1. Ouvrir le navigateur, puis allez dans les paramètres 
-      1. Faites défiler tout en bas et sélectionnez Initialiser les données de sauvegarde (ou Effacer les données de sauvegarde)
+  1. Ouvrez le navigateur, puis ouvrez les paramètres 
+      1. Faites défiler tout en bas et sélectionnez Initialiser données de sauvegarde (ou Effacer données de sauvegarde)
       2. Réessayez l'exploit
 
 ## <a name="ts_safe_a9lh" />Le système démarre directement dans SafeA9LHInstaller
@@ -111,7 +111,7 @@ Vous avez copié le mauvais fichier `arm9loaderhax.bin` sur votre carte SD (vous
 
 ## <a name="ts_safe_a9lh_screen" />SafeA9LHInstaller affiche un écran glitché
 
-Ceci se produira occasionnellement, mais la raison est inconnue. Les boutons fonctionneront malgré tout, mais l'écran sera glitché
+Ceci se produit occasionnellement, mais la raison est inconnue. Les boutons fonctionneront malgré tout, mais l'écran sera glitché
 
   1. Suivez les instructions comme si de rien n'était 
       1. Appuyez sur (Select) et arm9loaderhax sera installé
