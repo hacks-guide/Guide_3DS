@@ -54,10 +54,10 @@ Die Vorteile von arm9loaderhax über andere Methoden, Custom Firmware zu starten
 ## Was benötige ich um anzufangen?
 
 + **Bevor du mit diesem Guide anfängst, musst du die Sachen kennen, die du riskierst: JEDES mal wenn du deinen 3DS modifizierst, gibt es immer das Potenzial dass dein 3DS unwiederruflich gebrickt wird. Sie sind selten, aber es gibt immer eine Möglichkeit, also stelle sicher, dass du ALLE Anweisungen GENAU befolgst.**
-+ If you have already hacked your 3DS before to get an EmuNAND setup, and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, you should follow all instructions and restore your existing EmuNAND when prompted once you reach [Installing arm9loaderhax](installing-arm9loaderhax).
++ Wenn du deinen 3DS schon vorher gehackt hast, um ein EmuNAND Setup zu bekommen, und du willst alle Inhalte von deinem bevorigen EmuNAND zu deiner neuen SysNAND CFW bekommen, solltest du alle Anweisungen befolgen und deinen existierenden EmuNAND wiederherstellen wenn du dazu aufgefordert wirst wenn du [arm9loaderhax Installieren](installing-arm9loaderhax) erreichst.
 + Dieser Guide funktioniert mit New 3DS, Old 3DS und 2DS Systemen aus allen Regionen auf der Firmware 11.2.0 und darunter *(außer CHN / TWN)*.
-+ If everything goes according to plan, you will lose no data and end up with everything that you started with (games, NNID, saves, etc will be preserved).
-+ **Keep the device plugged in and charged throughout the entire process to avoid data loss or damage from an unexpected power-off!**
-+ Your SD card should be [MBR, not GPT](http://www.howtogeek.com/245610/) (the SD card that comes with the device will be MBR by default).
-+ If you need to format a brand new SD card, you can use [`guiformat`](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) and set to an Allocation Unit Size of 32K.
-+ The 2DS is essentially identical to the Old 3DS in terms of software, and that any steps which say "Old 3DS" also apply to 2DS.
++ Wenn alles nach Plan verläuft, solltest du keine Daten verlieren und alles habe, womit du gestartet bist (Spiele, NNID, Speicherstände und alles andere wird erhalten bleiben).
++ **Lass den 3DS am Stromnetz und geladen in dem gesamten Prozess, damit keine Daten verloren gehen oder Schaden durch einen unerwarteten Power-Off entstehen werden!**
++ Deine SD-Karte sollte [MBR, nicht GPT](http://www.howtogeek.com/245610/) sein(Die SD-Karte die mit deinem 3DS gekommen ist ist MBR als Standard).
++ Wenn du eine brandneue SD-Karte formatierst, kannst du [`guiformat`](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) benutzen und die "Allocation Unit Size" auf 32K setzen.
++ Der 2DS ist essenziell identisch zu dem Old 3DS Softwareweise, und alle Schritte die Old 3DS sagen können auch für den 2DS genutzt werden.
