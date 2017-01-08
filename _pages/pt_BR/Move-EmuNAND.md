@@ -10,10 +10,10 @@ Irá PERDER todos os saves de GBA VC e DsiWare! {: .notice--danger}
 
 **Tem de JÁ TER instalado arm9loaderhax + Luma3DS para usar isto.** {: .notice--danger}
 
-#### What you need
+#### O que precisa
 
-* An existing EmuNAND
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* Uma EmuNAND já existente
+* A última versão do [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 
 #### Instructions
 
