@@ -114,7 +114,7 @@ This backup can only be used on this NAND. If you format your 3DS or restore ano
  13. Navigate to `data`
  14. Press (A) on `public.sav`
  15. Select "Mount as FAT image" 
-  * If you do not see this option, ensure you are running the latest GodMode9 commit rather than the latest release
+  * If you do not see this option, ensure you are running the latest GodMode9 release
   * If you still do not see this option, please [report this bug](https://github.com/d0k3/GodMode9/issues)
  16. This will have moved you back to the main menu
  17. Navigate to `SDCARD`
