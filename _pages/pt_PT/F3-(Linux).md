@@ -10,7 +10,7 @@ Dependendo do tamanho do seu cartão SD e da velocidade do seu computador, este 
 
 Esta página é apenas para utilizadores de Linux. Se não tiver Linux, veja as páginas para [H2testw (windows)](h2testw-(windows)) ou [F3X (mac)](f3x-(mac)). {: .notice--info}
 
-#### What you need
+#### O que precisa
 
 * The latest version of [F3](https://github.com/AltraMayor/f3/archive/v6.0.zip)
 
