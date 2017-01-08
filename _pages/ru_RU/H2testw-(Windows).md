@@ -4,11 +4,11 @@ title: "H2testw (Windows)" permalink: /h2testw-(windows).html lang: en_US ref: h
 
 * * *
 
-В этом разделе рассказывается о том, как проверить карту памяти на ошибки под ОС Linux с помощью h2testw. {: .notice}
+В этом разделе рассказывается о том, как проверить карту памяти на ошибки с помощью h2testw. {: .notice}
 
 В зависимости от размера Вашей SD-карты и скорости Вашего компьютера этот процесс может занять до нескольких часов! {: .notice--info}
 
-Этот раздел предназначен для пользователей Windows. Если у вас не Windows, воспользуйтесь инструкциями для [F3 (Linux)](f3-(linux)) или [F3X (Mac)](f3x-(mac)). {: .notice--info}
+Этот раздел предназначен для пользователей Windows. Если у Вас не Windows, воспользуйтесь инструкциями для [F3 (Linux)](f3-(linux)) или [F3X (Mac)](f3x-(mac)). {: .notice--info}
 
 #### Что понадобится
 
@@ -26,8 +26,8 @@ title: "H2testw (Windows)" permalink: /h2testw-(windows).html lang: en_US ref: h
   8. Нажмите "Write + Verify"
   9. Дождитесь окончания проверки
 
-If the test shows the result `Test finished without errors`, your SD card is good and you can delete all `.h2w` files on the SD card {: .notice--success}
+Если в результате тестирования Вы видите `Test finished without errors`, Ваша карта в порядке, и теперь Вы можете удалить все файлы с расширением `.h2w` с Вашей SD-карты {: .notice--success}
 
-If the test shows any other results, your SD card may be corrupted or damaged and you may have to replace it! {: .notice--danger}
+При любых других выходных данных знайте, что Ваша карта может быть повреждена и её следует заменить! {: .notice--danger}
 
-Return to [Get Started](get-started) {: .notice--primary}
+Вернитесь к [началу](get-started) {: .notice--primary}
