@@ -32,12 +32,12 @@ title: "NTR and Cubic Ninja" permalink: /ntr-and-cubic-ninja.html lang: en_US re
   6. Переместите `C:\wamp\www\CdnCiaUnpack.js` в папку `C:\wamp\www\updates`
   7. В папке `C:\wamp\www\updates` перетащите файл `CdnCiaUnpack.js` на `node.exe`, чтобы создать `GetSystemUpdate.partial.xml`
   8. Переместите `node.exe` и `CdnCiaUnpack.js` обратно в папку `C:\wamp\www`
-  9. Copy `GetSystemUpdate.partial.xml` to `C:\wamp\www` (so that a copy of it exists in both `C:\wamp\www\updates` and `C:\wamp\www`)
- 10. Click the WAMP icon in your system tray, then click "Put Online"
- 11. Use the command "ipconfig" in CMD to get your computer's IPv4 Address, you will need it soon
- 12. Copy `ntr.bin` to the root of your SD card
- 13. Create a folder named `files9` on the root of your SD card if it does not already exist
- 14. Copy *the contents of* the `starter.zip` to the root of your SD card
+  9. Скопируйте `GetSystemUpdate.partial.xml` в папку `C:\wamp\www` (таким образом копии этого файла будут находится в папках `C:\wamp\www\updates` и `C:\wamp\www`)
+ 10. Нажмите на иконке WAMP в трее Windows, и выберите пункт "Put Online"
+ 11. Нажмите Win+R, в появившейся строке наберите "cmd", в открывшейся командной строке используйте "ipconfig", чтобы узнать IPv4 адрес Вашего компьютера, он Вам скоро понадобится
+ 12. Скопируйте `ntr.bin` в корень карты памяти
+ 13. Создайте папку `files9` в корне SD-карты, если таковой нет
+ 14. Скопируйте *содержимое* архива `starter.zip` в корень SD-карты
  15. Copy the `Decrypt9WIP` folder from the Decrypt9WIP `.zip` to `/3ds/` on your SD card
  16. Put the SD card back into your 3DS
 
