@@ -6,7 +6,7 @@ title: "Updating A9LH" permalink: /updating-a9lh.html lang: en_US ref: updating-
 
 ### Letztes Update: 3. Nov. 2016
 
-The actual installation of arm9loaderhax itself consists of payload files installed into the NFIRM partitions on your device's NAND chip, which is soldered to the motherboard itself. These payloads are updated rarely and only really serve the purpose of launching `arm9loaderhax.bin` from the SD Card, which is, in our case, Luma3DS. {: .notice}
+Die tatsächliche Installation des arm9loaderhax besteht aus payload Dateien die in die NFIRM Partitionen auf dem NAND Chip deiner Konsole installiert werden. Dieser ist auf der Hauptplatine verlötet. Diese payloads werden selten geupdated und dienen wirklich nur zum starten der `arm9loaderhax.bin` Datei von der SD-Karte. In unserem Fall handelt es sich dabei um Luma3DS. {: .notice}
 
 If you do not know what version of arm9loaderhax you are running, just install the latest version with these steps. Installing the latest version while already on the latest version will have no effect. {: .notice--info}
 
