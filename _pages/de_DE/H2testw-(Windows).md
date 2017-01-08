@@ -22,12 +22,12 @@ Diese Seite ist nur für Benutzer von Windows. Falls du Windows nicht benutzt, b
   4. Wähle "Deutsch"
   5. Klicke "Ziel wählen"
   6. Wähle den Buchstaben deiner SD Karte
-  7. Ensure "all available space" is selected
-  8. Click "Write + Verify"
-  9. Wait until the process is completed
+  7. Stelle sicher, dass "gesamter freier Platz" ausgewählt ist
+  8. Klicke "Schreiben + Prüfen"
+  9. Warte bis der Prozess beendet ist
 
-If the test shows the result `Test finished without errors`, your SD card is good and you can delete all `.h2w` files on the SD card {: .notice--success}
+Falls der Test das Ergebnis `Test ohne Fehler beendet`, dann ist deine SD Karte in Ordnung und du kannst alle `.h2w` Dateien von deiner SD Karte löschen {: .notice--success}
 
-If the test shows any other results, your SD card may be corrupted or damaged and you may have to replace it! {: .notice--danger}
+Falls der Test ein anderes Ergebnis anzeigt, dann ist es möglich, dass deine SD Karte defekt oder beschädigt ist und dass du sie ersetzen solltest. {: .notice--danger}
 
-Return to [Get Started](get-started) {: .notice--primary}
+Kehre zu [Los geht's](get-started) zurück {: .notice--primary}
