@@ -12,7 +12,7 @@ Les diferents versions, models i regions dels dispositius requeriran de passos d
 
 Si ja havies modificat la teva 3DS amb anterioritat i tens una instal·lació de CFW amb EmuNAND, simplement segueix totes les instruccions mentre et trobes en SysNAND. Les dades seran transferides de EmuNAND a A9LH al final de la seva instal·lació. {: .notice--info}
 
-Abans de començar, seria convenient que comprovis que la teva targeta SD està lliure d'errors utilitzant [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), or [F3X (Mac)](f3x-(mac))! {: .notice--warning}
+Abans de començar, seria convenient que comprovis que la teva targeta SD està lliure d'errors utilitzant [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), o [F3X (Mac)](f3x-(mac))! {: .notice--warning}
 
 |                                                         New 3DS                                                          |                                                                                     Old 3DS o 2DS                                                                                     |
 |:------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
