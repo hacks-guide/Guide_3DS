@@ -10,7 +10,7 @@ Jeg opprettholder denne guiden helt gratis, og sørger for at den til en hver ti
 
 Dette nettstedet koster deg ingenting å bruke, og alt jeg viser er ikke-påtrengende annonser. Hvis du uansett har et problem med annonser kan du gjerne blokkere disse likevel.
 
-Skulle du likevel velge å blokkere annonser, vil jeg minne deg på om [donasjoner](donations) siden, igjen dette er også helt valgfritt.
+Skulle du likevel velge å blokkere annonser, vil jeg minne på om [donasjoner](donations) siden, igjen dette er også helt valgfritt.
 
 Tusen takk,  
 Plailect
