@@ -4,7 +4,7 @@ title: "H2testw (Windows)" permalink: /h2testw-(windows).html lang: en_US ref: h
 
 * * *
 
-This page will walk you through the process of checking your SD card for errors using h2testw. {: .notice}
+Esta página irá guiá-lo pelo processo de verificar o seu cartão SD por erros usando o programa h2testw. {: .notice}
 
 Depending on the size of your SD card and the speed of your computer, this process can take up to several hours! {: .notice--info}
 
