@@ -170,8 +170,8 @@ title: "Troubleshooting" permalink: /troubleshooting.html lang: en_US ref: troub
       1. Отключите приставку, зажав кнопку выключения
       2. Удерживайте (L)+(R)+(A)+(ВВЕРХ)
       3. Включите 3DS
-      4. If you enter safe mode, update your 3DS *only if you have an entrypoint for the latest FW version and it is possible to downgrade from it* and attempt the downgrade again.
-  5. Your 3DS may be bricked. For support, ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [3DS Hacking on Discord](https://discord.gg/MWxPgEp).
+      4. Зайдя в режим восстановления, обновите свою 3DS.
+  5. Может быть брик. За поддержкой обращайтесь на [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) или на [3DS Hacking on Discord](https://discord.gg/MWxPgEp).
 
 ## <a name="ts_sys_a9lh" />Black screen on SysNAND boot after installing arm9loaderhax
 
