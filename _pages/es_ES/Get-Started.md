@@ -6,7 +6,7 @@ title: "Get Started" permalink: /get-started.html lang: en_US ref: get-started
 
 Los colores de los dispositivos pueden variar, pero nota que las posiciones de los botones y sus caracteristicas de cada uno para asegurar que escojas el correcto {: .notice}
 
-Click the image of your device to take you to the appropriate page. {: .notice--primary}
+Haga clic en la imagen de tu dispositivo para llevarlo a la pagina adecuada {: .notice--primary}
 
 Different device models, versions, and regions will require different steps to achieve the end goal of arm9loaderhax Custom Firmware. The following series of pages will help you find where to start for your device. {: .notice--info}
 
