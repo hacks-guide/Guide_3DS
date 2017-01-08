@@ -10,22 +10,22 @@ Dépendant de la taille de votre carte SD et de la vitesse de votre ordinateur, 
 
 Cette page s'adresse uniquement au utilisateur de Linux seulement. Si vous n'êtes pas sous Linux, jetez un oeil sur les pages [H2testw (windows)](h2testw-(windows)) ou [F3X (mac)](f3x-(mac)).{: .notice--info}
 
-#### What you need
+#### Ce dont vous aurez besoins
 
-* The latest version of [F3](https://github.com/AltraMayor/f3/archive/v6.0.zip)
+* La toute dernière version de [F3](https://github.com/AltraMayor/f3/archive/v6.0.zip)
 
 #### Instructions
 
-  1. Unzip the f3 `.zip` file
-  2. `cd` into the f3 directory
-  3. Run `make` to compile F3
-  4. Insert your SD card into your computer
-  5. Mount your SD card
-  6. Run `./f3write <your sd card mount point>`
-  7. Wait until the process is complete. See below for an example output.
+  1. Dézippez le fichier `.zip` de F3
+  2. `cd` dans le dossier de f3
+  3. Lancez `make` pour compiler F3
+  4. Insérez votre carte SD dans votre ordinateur
+  5. Montez votre carte SD
+  6. Lancez `./f3write <le point de montage de votre carte sd>`
+  7. Attendez que le processus ce complète de lui-même. Ci-dessous, un example de renvoie.
     
         $ ./f3write /media/michel/6135-3363/
-        Free space: 29.71 GB
+         Free space: 29.71 GB
         Creating file 1.h2w ... OK!
         ...
         Creating file 30.h2w ... OK!
