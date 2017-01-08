@@ -6,7 +6,7 @@ title: "Region Changing" permalink: /region-changing.html lang: en_US ref: regio
 
 Esta é uma secção extra para mudar a região da sua consola com arm9loaderhax e CFW SysNAND. Para isso, instalamos a imagem ctrtransfer 9.2.0 da região que quer mudar e modificamos o seu ficheiro SecureInfo_A. {: .notice--primary}
 
-**Region changing is almost completely unnecessary since Luma3DS supports out of region games and individual [title region emulation](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage).** {: .notice--info}
+**Mudança de Região é quase completamente desnecessário agora, já que o Luma3DS suporta jogos de outra região e [emulação de região para títulos](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage) individualmente.** {: .notice--info}
 
 This process will unlink your NNID from the system, since it will no longer be compatible with it. NNID's are locked to the region of the device that created them, and cannot be transferred between regions without [a very complex and advanced process](https://gist.githubusercontent.com/yifanlu/e80db121d38aceb8cca0e03cefd5853b/raw/3c4dd89869156ca0f945a2791e699acfdb32b510/gistfile1.txt). {: .notice--warning}
 
