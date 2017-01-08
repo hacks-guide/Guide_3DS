@@ -8,7 +8,7 @@ As cores dos dispositivos nesta imagem podem variar. O que tem de prestar atenç
 
 Clique na imagem do seu dispositivo para ir à página apropriada a si. {: .notice--primary}
 
-Different device models, versions, and regions will require different steps to achieve the end goal of arm9loaderhax Custom Firmware. The following series of pages will help you find where to start for your device. {: .notice--info}
+Modelos, versões e regiões diferentes exigem passos diferentes para chegar ao objetivo de arm9loaderhax Custom Firmware. The following series of pages will help you find where to start for your device. {: .notice--info}
 
 If you have already hacked your 3DS before and have an EmuNAND based CFW setup, just follow all instructions while on SysNAND. Your data will be transfered from EmuNAND to your new A9LH install at the end. {: .notice--info}
 
