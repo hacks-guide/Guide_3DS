@@ -21,5 +21,5 @@ A causa di un bug, safehax richiede la presenza di una cartuccia avviabile (3ds,
   6. Avvia safehax
   7. Se l'exploit viene eseguito correttamente, verrà avviato Decrypt9
 
-Continua al [ctrtransfer 2.1.0](2.1.0-ctrtransfer)  
+Prosegui con il [ctrtransfer 2.1.0](2.1.0-ctrtransfer)  
 {: .notice--primary}
