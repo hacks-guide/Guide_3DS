@@ -4,7 +4,7 @@ title: "NTR and Cubic Ninja" permalink: /ntr-and-cubic-ninja.html lang: en_US re
 
 * * *
 
-**NTR Cubic Ninja will work for JPN New 3DS ONLY!** {: .notice--warning}
+**NTR Cubic Ninja só funciona APENAS para consolas New 3DS JPN!** {: .notice--warning}
 
 #### What you need
 
