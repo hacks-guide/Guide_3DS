@@ -143,33 +143,33 @@ title: "Troubleshooting" permalink: /troubleshooting.html lang: en_US ref: troub
   7. На **целевой 3DS** перейдите в Системные настройки, Управление данными, DSiWare (System Settings, "Data Management", "DSiWare") и скопируйте свою DSi игру обратно в систему. 
   8. Верните карты на свои места (если переименовывали папку, переименуйте обратно) и продолжайте DSiWare-даунгрейд.
 
-## <a name="ts_d9_backup" />Decrypt9 or Hourglass9 won't restore / can't find my NAND backup
+## <a name="ts_d9_backup" />Decrypt9 или Hourglass9 не восстанавливают / не видят мой NAND-бекап.
 
-  1. Make sure you do not have any folder named "Decrypt9" on **the root** of your SD card
-  2. Try checking your SD card for errors using [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), or [F3X (Mac)](f3x-(mac))
-  3. Try backing up your SD card files, then formatting it and copying them back
-  4. Try a different SD card
+  1. Убедитесь, что в **корне** КП нет папки "Decrypt9".
+  2. Попробуйте сделать проверку файловой системы карточки с помощью [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), или [F3X (Mac)](f3x-(mac)).
+  3. Сделайте бекап карты памяти и отформатируйте ее, затем верните все файлы на место.
+  4. Попробуйте другую карту памяти.
 
-## <a name="ts_sys_down" />Black screen on SysNAND boot
+## <a name="ts_sys_down" />Черный экран при загрузке SysNAND
 
-  1. Try booting with your SD card out, and then reinserting it after booting. 
-      1. Power off your 3DS by holding down the power button.
-      2. Take out the SD card.
-      3. Power on the 3DS.
-      4. When the home menu appears, reinsert your SD card.
-      5. If this worked, you should Clear Home Menu's extdata by navigating to the following folder on your SD card: `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/` 
-        * EUR Region: Delete `00000098`
-        * JPN Region: Delete `00000082`
-        * USA Region: Delete `0000008f`
-        * KOR Region: Delete `000000A9`
-  2. Try booting without any cartridges inserted (including flashcarts)
-  3. If you have a hardmod and a NAND backup, flash the backup back to SysNAND.
-  4. Try booting into recovery mode and updating your system.  
-    *This probably will not work for an Old 3DS downgraded to 2.1.0*  
-    **This will BRICK a New 3DS downgraded to 2.1.0** 
-      1. Power off your 3DS by holding down the power button.
-      2. Hold L+R+A+Up.
-      3. Power on the 3DS.
+  1. Попробуйте загрузиться без карты памяти, а затем верните ее в консоль. 
+      1. Отключите приставку, зажав кнопку выключения.
+      2. Достаньте КП.
+      3. Включите 3DS.
+      4. Когда появится Домашний экран, вставьте назад КП.
+      5. Если сработало, то следует отчистить данные Домашнего экрана. Для этого удалите папку, соответствующую вашей системе и региону, в папке `/Nintendo 3DS/(32-значный ID)/(32-значный ID)/extdata/00000000/.` 
+        * EUR регион: Удалите `00000098`;
+        * JPN регион: Удалите `00000082`
+        * USA регион: Удалите `0000008f`
+        * KOR регион: Удалите `000000A9`
+  2. Попробуйте загрузиться без картриджа (совсем).
+  3. Если есть хардмод - восстановите бекап наверняка рабочего NAND в SysNAND.
+  4. Загрузитесь в режим восстановления и обновите систему  
+    *Почти наверняка не сработает на 3DS с прошивкой 2.1.0*  
+    **НЕЛЬЗЯ делать на New 3DS с прошивкой 2.1.0 - гарантированный брик** 
+      1. Отключите приставку, зажав кнопку выключения
+      2. Удерживайте (L)+(R)+(A)+(ВВЕРХ)
+      3. Включите 3DS
       4. If you enter safe mode, update your 3DS *only if you have an entrypoint for the latest FW version and it is possible to downgrade from it* and attempt the downgrade again.
   5. Your 3DS may be bricked. For support, ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [3DS Hacking on Discord](https://discord.gg/MWxPgEp).
 
