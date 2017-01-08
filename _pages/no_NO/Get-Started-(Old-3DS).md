@@ -23,10 +23,10 @@ The device version can be found at the bottom right of the top screen of the Sys
 <table>
   <thead>
     <tr>
-      <th style="text-align: center">From</th>
-      <th style="text-align: center">To</th>
-      <th style="text-align: center">No Browser</th>
-      <th style="text-align: center">Browser</th>
+      <th style="text-align: center">Fra</th>
+      <th style="text-align: center">Til</th>
+      <th style="text-align: center">Uten Nettleser</th>
+      <th style="text-align: center">Nettleser</th>
     </tr>
   </thead>
   <tbody>
@@ -39,7 +39,7 @@ The device version can be found at the bottom right of the top screen of the Sys
       <td style="text-align: center">2.1.0</td>
       <td style="text-align: center">2.1.0</td>
       <td style="text-align: center"><a href="cart-update">Cart Update</a></td>
-      <td style="text-align: center"><a href="installing-arm9loaderhax">Installing arm9loaderhax</a></td>
+      <td style="text-align: center"><a href="installing-arm9loaderhax">Installer arm9loaderhax</a></td>
     </tr>
     <tr>
       <td style="text-align: center">2.2.0</td>
@@ -50,25 +50,25 @@ The device version can be found at the bottom right of the top screen of the Sys
       <td style="text-align: center">4.0.0</td>
       <td style="text-align: center">4.5.0</td>
       <td style="text-align: center"><a href="decrypt9-(mset)">Decrypt9 (MSET)</a></td>
-      <td style="text-align: center"><a href="decrypt9-(browser)">Decrypt9 (Browser)</a></td>
+      <td style="text-align: center"><a href="decrypt9-(browser)">Decrypt9 (Nettleser)</a></td>
     </tr>
     <tr>
       <td style="text-align: center">5.0.0</td>
       <td style="text-align: center">5.1.0</td>
       <td style="text-align: center"><a href="cart-update">Cart Update</a></td>
-      <td style="text-align: center"><a href="decrypt9-(browser)">Decrypt9 (Browser)</a></td>
+      <td style="text-align: center"><a href="decrypt9-(browser)">Decrypt9 (Nettleser)</a></td>
     </tr>
     <tr>
       <td style="text-align: center">6.0.0</td>
       <td style="text-align: center">6.3.0</td>
       <td style="text-align: center"><a href="decrypt9-(mset)">Decrypt9 (MSET)</a></td>
-      <td style="text-align: center"><a href="decrypt9-(browser)">Decrypt9 (Browser)</a></td>
+      <td style="text-align: center"><a href="decrypt9-(browser)">Decrypt9 (Nettleser)</a></td>
     </tr>
     <tr>
       <td style="text-align: center">7.0.0</td>
       <td style="text-align: center">8.1.0</td>
       <td style="text-align: center"><a href="cart-update">Cart Update</a></td>
-      <td style="text-align: center"><a href="decrypt9-(browser)">Decrypt9 (Browser)</a></td>
+      <td style="text-align: center"><a href="decrypt9-(browser)">Decrypt9 (Nettleser)</a></td>
     </tr>
     <tr>
       <td style="text-align: center">9.0.0</td>
