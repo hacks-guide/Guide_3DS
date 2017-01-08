@@ -12,7 +12,7 @@ Esta página é apenas para utilizadores de Linux. Se não tiver Linux, veja as 
 
 #### O que precisa
 
-* The latest version of [F3](https://github.com/AltraMayor/f3/archive/v6.0.zip)
+* A última versão do [F3](https://github.com/AltraMayor/f3/archive/v6.0.zip)
 
 #### Instructions
 
