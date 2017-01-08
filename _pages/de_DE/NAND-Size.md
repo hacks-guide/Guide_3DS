@@ -4,15 +4,15 @@ title: "NAND Size" permalink: /nand-size.html lang: en_US ref: nand-size
 
 * * *
 
-A valid NAND backup should be one of the following sizes in most situations. {: .notice--primary}
+Eine korrekte NAND Sicherung sollte in den meisten Situationen eine dieser Größen aufweisen. {: .notice--primary}
 
-Occasionally, you will get a backup with a different size than one of these listed. It is fine for a backup to be larger than expected, just ensure that it is never *smaller* than the sizes listed. {: .notice--info}
+Gelegentlich kann die Größe der Sicherung von den hier gelisteten abweichen. Es ist in Ordnung wenn die Sicherung größer als Gedacht ist, vergewissere dich lediglich, dass sie niemals *kleiner* als die hier gelisteten Größen ist. {: .notice--info}
 
-Note that a *min size* NAND will always be the smallest possible size for the purpose of saving space, and may not match the size of other NAND backups from your device. This is fine, just make sure that it matches one of the sizes on this page. {: .notice--info}
+Beachte das eine NAND Sicherung mit der *mindest Größe* immer die kleinstmögliche Größe aufweist, um Platz zu sparen und eventuell nicht die gleiche Größe hat, wie eine andere Sicherung auf deiner Konsole. Das ist in Ordnung, vergewissere dich jedoch, dass es einer der hier gelisteten Größen entspricht. {: .notice--info}
 
-The brand name refers to the manufacturer of the NAND chip in your device, **not** your SD card. {: .notice--warning}
+Die Markennamen entsprechen den Herstellern der NAND Chips deiner Konsole, **nicht** deiner SD-Karte. {: .notice--warning}
 
-**Your backup should match one of the sizes on this page; if it does not, you should delete it and make a new one!** {: .notice--danger}
+**Deine Sicherung sollte mit einer der Größen auf dieser Seite übereinstimmen; falls nicht, solltest du sie löschen und eine neue machen!** {: .notice--danger}
 
 ## 2DS:
 
