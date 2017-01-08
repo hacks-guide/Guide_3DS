@@ -19,7 +19,7 @@ Das heißt, dass ein Kartenupdate KEINEN Browser installiert, wenn du keinen has
 #### Anleitung:
 
   1. Boot your 3DS into recovery mode by holding L+R+A+UP while powering on
-  2. Decline the update and reboot
-  3. Put the game in the system
-  4. Attempt to launch the game
-  5. Update when prompted
+  2. Lehne das Update ab und starte den 3DS neu.
+  3. Stecke das Spiel in den 3DS.
+  4. Versuche das Spiel zu starten.
+  5. Update, wenn du dazu aufgefordert wirst.
