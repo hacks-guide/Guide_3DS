@@ -16,14 +16,14 @@ title: "FAQ" permalink: /faq.html lang: en_US ref: faq
 <a name="faq_gatewaysaves" />**P:***Como é que eu movo os meus saves de um sistema Gateway para jogos instalados neste sistema?*  
 **R:**Veja isto</a>
 
-<a name="faq_need" />**Q:** *What do I need to do this guide?*  
-**A:** This guide can be completely done with free software and (if you have no browser) a compatible game
+<a name="faq_need" />**P:***O que preciso para seguir este guia?*  
+**R:**Este guia pode ser feito com software grátis e (caso não tenha browser) um jogo compatível
 
-<a name="faq_risky" />**Q:** *How risky is hacking my console?*  
-**A:** Bricks are now *basically* impossible unless you ignore/circumvent all safety checks.
+<a name="faq_risky" />**P:***Quão arriscado é hackear a minha consola?*  
+**R:**Bricks agora são *basicamente* impossíveis, a menos que ignore/contorne todas as verificações de segurança.
 
-<a name="faq_homebrew" />**Q:** *Can I run awesome homebrew and emulators with this?*  
-**A:** Yes! Custom Firmware not only enables the Homebrew Launcher, but it also will give you hacks on all versions, which means you keep it forever, even with updates.
+<a name="faq_homebrew" />**P:***Posso correr homebrew e emuladores fantásticos com isto?*  
+**R:**Sim! Custom Firmware not only enables the Homebrew Launcher, but it also will give you hacks on all versions, which means you keep it forever, even with updates.
 
 <a name="faq_regionfree" />**Q:** *Can I use this to play games from other regions?*  
 **A:** Luma3DS supports Region Free patches, which enables users to install games from any region without any extra modification or steps.
