@@ -4,26 +4,26 @@ title: "Homebrew Launcher (SoundHax)" permalink: /homebrew-launcher-(soundhax).h
 
 * * *
 
-The Homebrew Launcher has many different entrypoints, or methods of launching. {: .notice}
+L'Homebrew Launcher ha numerosi entrypoint, o metodi per essere avviato. {: .notice}
 
-SoundHax is compatible with versions 9.0.0 through 11.2.0 in the EUR, JPN, KOR, and USA regions. {: .notice--info}
+SoundHax è compatibile con le versioni dalla 9.0.0 alla 11.2.0 nelle regioni EUR, JPN, KOR e USA. {: .notice--info}
 
-#### What you need
+#### Requisiti
 
-+ The Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
-+ The latest release of [SoundHax](http://soundhax.com/) *(for your device and region)*
-+ The [otherapp payload](https://smealum.github.io/3ds/#otherapp) *(for your version and region)*
++ L'Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
++ L'ultima versione del [SoundHax](http://soundhax.com/) *(per la tua console e regione)*
++ L'[otherapp payload](https://smealum.github.io/3ds/#otherapp) *(per la tua console e regione)*
 
-#### Instructions
+#### Istruzioni
 
-  1. Copy *the contents of* the `starter.zip` to the root of your SD card
-  2. Copy the SoundHax `.m4a` to the root of your SD card
-  3. Copy the otherapp payload to the root of your SD card and rename it to `otherapp.bin`
-  4. Reinsert your SD card into your 3DS
-  5. Launch Nintendo 3DS Sound
-  6. Go through all of the bird tips, then close the app normally and reopen it 
-    + Launching SoundHax immediately would cause these tips to appear on every launch of the Nintendo 3DS Sound until this is done
-  7. Play the SoundHax `.m4a`
-  8. Your console should load the homebrew menu
+  1. Copia *il contenuto* del file `starter.zip` nella root della tua scheda SD
+  2. Copia il file SoundHax `.m4a` nella root della tua scheda SD
+  3. Copia l'otherapp payload nella root della tua scheda SD e rinominalo in `otherapp.bin`
+  4. Reinserisci la tua scheda SD nel tuo 3DS
+  5. Avvia Sound Nintendo 3DS
+  6. Scorri tutti i consigli proposti, chiudi l'applicazione normalmente, poi riaprila 
+    + Lanciare in questo momento SoundHax farebbe riapparire i consigli al successivo avvio di Sound Nintendo 3DS finché non viene seguita questa procedura
+  7. Avvia il file SoundHax `.m4a`
+  8. La console dovrebbe ora caricare l'homebrew menu
 
 Continue to [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher)) {: .notice--primary}
