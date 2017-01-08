@@ -12,7 +12,7 @@ Eu mantenho este guia completamente de graça, e asseguro-me de que está sempre
 
 Este site não lhe custa nada para utilizar, e tudo o que mostro são anúncios não-intrusivos. Se ainda tiver um problema com isto, sinta-se livre para bloquear estes anúncios.
 
-If you do block ads, I would like to also remind you of the [Donations](donations) page, but once again that is optional too.
+Se bloquear anúncions, gostaria também de relembrar que tenho uma página de [Doações](donations), mas também é opcional.
 
 Thanks,  
 Plailect
