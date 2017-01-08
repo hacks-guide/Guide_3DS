@@ -67,31 +67,31 @@ Durante la guida verranno anche configurati i seguenti programmi:
     * Include una cartella chiamata `3ds` per rimpiazzare quella appena eliminata
   6. Copia *il contenuto* del file `.7z` del SafeA9LHInstaller nella root della tua scheda SD
   7. **Copia la cartella `a9lh` dal file `.zip` di data_input nella root della tua scheda SD**
-  8. **Copy *the contents of* the arm9loaderhax release `.7z` to `a9lh` folder on your SD card**
-  9. Copy `hblauncher_loader.cia` from the hblauncher_loader `.zip` to the `/cias/` folder on your SD card
- 10. Copy `lumaupdater.cia` from the Luma3DS Updater `.zip` to the `/cias/` folder on your SD card
- 11. Copy `FBI.cia` from the FBI `.zip` to the `/cias/` folder on your SD card
- 12. **Copy `arm9loaderhax.bin` from the Luma3DS `.7z` to the root of your SD card, overwrite existing files**
- 13. Create a folder named `luma` on the root of your SD card
- 14. Create a folder named `payloads` in the `luma` folder on your SD card
- 15. Copy `Hourglass9.bin` from the Hourglass9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `Hourglass9.bin` to `start_Hourglass9.bin`
- 16. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` to `up_GodMode9.bin`
- 17. Copy `aeskeydb.bin` to the `/files9/` folder on your SD card
- 18. Copy `DspDump.3dsx` to the `/3ds/` folder on your SD card
- 19. Copy *the contents of* `fbi-2.4.2-injectable.zip` to the `/files9/` folder on your SD card
+  8. **Copia il *contenuto* del file `.7z` dell'arm9loaderhax nella cartella `a9lh` della tua scheda SD**
+  9. Copia il file `hblauncher_loader.cia` dall'archivio hblauncher_loader`.zip` nella cartella `/cias/` della tua scheda SD
+ 10. Copia il file `lumaupdater.cia` dal file `.zip` del Luma3DS Updater nella cartella `/cias/` della tua scheda SD
+ 11. Copia il file `FBI.cia` dal file `.zip` di FBI nella cartella `/cias/` della tua scheda SD
+ 12. **Copia il file `arm9loaderhax.bin` dal file `.7z` di Luma3DS nella root della tua scheda SD, sovrascrivendo eventuali file preesistenti**
+ 13. Crea una cartella chiamata `luma` nella root della tua scheda SD
+ 14. Crea una cartella chiamata `payloads` nella cartella `luma` della tua scheda SD
+ 15. Copia il file `Hourglass9.bin` dal file `.zip` di Hourglass9 nella cartella `/luma/payloads/` della tua scheda SD e rinomina il file `Hourglass9.bin` in `start_Hourglass9.bin`
+ 16. Copia il file `GodMode9.bin` dal file `.zip` di GodMode9 nella cartella `/luma/payloads/` della tua scheda SD e rinomina il file `GodMode9.bin` in `up_GodMode9.bin`
+ 17. Copia il file `aeskeydb.bin` nella cartella `/files9/` della tua scheda SD
+ 18. Copia il file `DspDump.3dsx` nella cartella `/3ds/` della tua scheda SD
+ 19. Copia *il contenuto* del file `fbi-2.4.2-injectable.zip` nella cartella `/files9/` della tua scheda SD
 
-##### Section II - Installing arm9loaderhax
+##### Sezione II - Installazione dell'arm9loaderhax
 
-  1. Reinsert your SD card into your 3DS
-  2. Do the steps for installing arm9loaderhax on your device: 
-    * You should be on 2.1.0
-    * Go to `http://dukesrg.github.io/2xrsa.html?arm11.bin` on your 3DS
-    * If you get the error "This service is not available in your region", use the System Settings to set your device's country to match the NAND region you installed with 2.1.0 ctrtransfer
-    * If you get another error, [follow this troubleshooting guide](troubleshooting#ts_browser)
-    * If you get a glitched screen, [follow this troubleshooting guide](troubleshooting#ts_safe_a9lh_screen)
-    * Press (Select) to Full Install
-    * The installer will now install arm9loaderhax on your device (this is very fast)
-    * Shut down your console, hold the power button until it turns off if necessary
+  1. Reinserisci la tua scheda SD nel tuo 3DS
+  2. Esegui i seguenti passaggi per installare l'arm9loaderhax sulla tua console: 
+    * Dovresti ora essere alla versione 2.1.0
+    * Vai sul sito `http://dukesrg.github.io/2xrsa.html?arm11.bin` usando il browser del tuo 3DS
+    * Se ottieni l'errore "Questo servizio non è disponibile nella tua regione", usa le Impostazioni di Sistema per modificare la nazione del tuo dispositivo in modo che rientri nella regione NAND che hai installato durante il ctrtransfer della 2.1.0
+    * Se ottieni un altro errore, [ segui questa guida per risolvere il problema](troubleshooting#ts_browser)
+    * Se ottieni uno schermo glitchato, [segui questa guida per risolvere il problema](troubleshooting#ts_safe_a9lh_screen)
+    * Premi (Select) per compiere un'installazione completa
+    * Il programma di installazione installerà arm9loaderhax sul tuo dispositivo (questo processo è molto veloce)
+    * Spegni la tua console, tieni premuto il pulsante d'accensione se è necessario
     * Copy your console specific `OTP.bin` from the `/a9lh/` folder on your SD card to a safe location on your computer and back it up to multiple locations (such as online file storage), then reinsert your SD card into your 3DS
 
 ##### Section III - Configuring Luma3DS
