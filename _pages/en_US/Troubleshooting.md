@@ -170,7 +170,7 @@ This is because you selected the wrong version in the steelhax installer.
     1. Power off your 3DS by holding down the power button.
     2. Hold L+R+A+Up.
     3. Power on the 3DS.
-    4. If you enter safe mode, update your 3DS *only if you have an entrypoint for the latest FW version and it is possible to downgrade from it* and attempt the downgrade again.
+    4. If you enter safe mode, update your 3DS.
 4. Your 3DS may be bricked. For support, ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [3DS Hacking on Discord](https://discord.gg/MWxPgEp).
 
 ## <a name="ts_sys_a9lh" />Black screen on SysNAND boot after installing arm9loaderhax
