@@ -10,25 +10,25 @@ Dies nutzt einen Fehler aus, welcher es DSiWare-Spielen erlaubt überall im NAND
 
 Stell dich darauf ein 20 Minuten (New 3DS) bis zu einer Stunde (Old 3DS) zu warten. Slowhax (waithax) wurde aus diesem Grund so benannt. {: .notice--info}
 
-This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws). {: .notice--info}
+Dies ist eine Implementation der "FIRM partitions known-well plaintext", welche momentan funktioniert. Der Exploit wird [hier](https://www.3dbrew.org/wiki/3DS_System_Flaws) im Detail beschrieben. {: .notice--info}
 
-Your DSiWare's save will be backed up before getting replaced by the hacked save. {: .notice--info}
+Es werden Sicherheitskopien der Spielstände deiner DSiWare-Spiele erstellt bevor sie durch die gehackten Speicherstände ersetzt werden. {: .notice--info}
 
-#### What you need
+#### Was du brauchst
 
-* Already own (and install) one of the following exploitable DSiWare games installed on your 3DS *(you must have already installed one; they have all been pulled from the eShop)* 
+* Besitze bereits (und installiere) eines der folgenden DSiWare-Spiele auf deinem 3DS *(du musst eins dieser Spiele bereits installiert haben; sie wurden alle aus dem eShop entfernt)* 
   * **Fieldrunners**
   * **Legends of Exidia**
   * **Guitar Rock Tour** 
   * **The Legend of Zelda: Four Swords (Anniversary Edition)** 
-* An entrypoint from [Homebrew Launcher (SoundHax)](homebrew-launcher-(soundhax)) or [Homebrew Launcher (No Browser)](homebrew-launcher-(no-browser))
+* Einen Eintrittspunkt vom [Homebrew Launcher (SoundHax)](homebrew-launcher-(soundhax)) oder [Homebrew Launcher (No Browser)](homebrew-launcher-(no-browser))
 * [`4B51394A.zip`](images/4B51394A.zip)
-* The latest release of [3ds_dsiwarehax_installer](https://github.com/yellows8/3ds_dsiwarehax_installer/releases/latest)
-* The latest release of [waithax](https://github.com/Mrrraou/waithax/releases/latest)
-* The latest release of [3DSident](https://github.com/joel16/3DSident/releases/latest)
-* The latest release of [dgTool](https://github.com/Plailect/dgTool/releases/latest)
-* The Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
-* The NFIRM `.zip` corresponding to the device and version of **the target 3DS**: 
+* Die neueste Version von [3ds_dsiwarehax_installer](https://github.com/yellows8/3ds_dsiwarehax_installer/releases/latest)
+* Die neueste Version von [waithax](https://github.com/Mrrraou/waithax/releases/latest)
+* Die neueste Version von [3DSident](https://github.com/joel16/3DSident/releases/latest)
+* Die neueste Version von [dgTool](https://github.com/Plailect/dgTool/releases/latest)
+* Das Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
+* Die NFIRM `.zip` welche deinem Gerät und der Version **des Ziel 3DS entspricht**: 
   * [New 3DS 11.0.0](magnet:?xt=urn:btih:2d13a5ea1570f911bd5c6423e0c30e51d548837a&dn=11.0.0%5Fto%5F10.4.0%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
   * [Old 3DS 11.0.0](magnet:?xt=urn:btih:72393bbd99bc285db84a9cabf39d9b3200058d6a&dn=11.0.0%5Fto%5F10.4.0%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)  
     ~ 
