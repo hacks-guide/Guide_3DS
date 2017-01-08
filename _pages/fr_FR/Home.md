@@ -11,9 +11,9 @@ Si vous possédez une console pour développeur ("PANDA" ou "SNAKE"), jetez un c
 
 <div class="notice--danger">{{ notice-home | markdownify }}</div>
 
-**Ce guide a besoins de *votre* aide pour semer [ces](https://3ds.guide/rss.xml) torrents!**{: .notice--info}
+**Ce guide a besoins de *votre* aide pour seeder [ces](https://3ds.guide/rss.xml) torrents!**{: .notice--info}
 
-**To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links in this guide, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download)** {: .notice--info}
+**Pour utiliser les liens [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) dans ce guide, vous aurez besoin d’un client torrent [Deluge](http://dev.deluge-torrent.org/wiki/Download)** {: .notice--info}
 
 **Read all of the introductory pages before proceeding.** {: .notice--warning}
 
