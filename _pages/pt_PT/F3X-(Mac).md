@@ -14,9 +14,9 @@ Esta página é apenas para utilizadores de Mac. Se não tiver Mac, veja as pág
 
 * A última versão do [F3X](https://github.com/insidegui/F3X/releases)
 
-#### Instructions
+#### Instruções
 
-  1. Unzip the F3X `.zip` file
+  1. Extraia o ficheiro F3X `.zip`
   2. Insert your SD card into your computer
   3. Run the F3X app
   4. Select your SD card
