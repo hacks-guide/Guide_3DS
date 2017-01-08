@@ -46,11 +46,11 @@ title: "FAQ" permalink: /faq.html lang: en_US ref: faq
 <a name="faq_NNID" />**Q:** *Можно мне оставить свой NNID?*  
 **A:** Если начать прохождение гайда с NNID и следовать каждому шагу, в конце NNID останется на консоли.
 
-<a name="faq_systransfer" />**Q:** *What about System Transfers?*  
-**A:** Once you have completed the guide, you can system transfer to and from an arm9loaderhax'd 3DS or 2DS exactly like you would a regular stock console or EmuNAND (you will lose any non-legitimate games/themes/DLC in the transfer; saves will stay even for games that are lost).
+<a name="faq_systransfer" />**Q:** *Что насчёт Передачи данных?*  
+**A:** После прохождения гайда, Передача данных возможна в обе стороны для консоли с arm9loaderhax так же, как и для немодифицированной консоли или для консоли с EmuNAND (все нелегальные игры/темы/загружаемый контент будет потерян при передаче, однако сохранения останутся даже для потерянных игр).
 
-<a name="faq_nopc" />**Q:** *Can I do this without a computer (e.g. an Android phone)?*  
-**A:** All you need is the ability to put files on an SD card!
+<a name="faq_nopc" />**Q:** *Можно ли закончить гайд без компьютера (к примеру, с помощью устройства на Android)?*  
+**A:** Всё, что необходимо - возможность помещать файлы на SD-карту!
 
-<a name="faq_problem" />**Q:** *Help! Something bad happened and now I cannot boot...*  
-**A:** Please look at the troubleshooting guide</a>.
+<a name="faq_problem" />**Q:** *Помогите! Что-то случилось и я больше не могу включить консоль...*  
+**A:** Пожалуйста, обратитесь к инструкции по устранению проблем</a>.
