@@ -16,14 +16,14 @@ SoundHax is compatible with versions 9.0.0 through 11.2.0 in the EUR, JPN, KOR, 
 
 #### Instructions
 
-  1. Copy *the contents of* the `starter.zip` to the root of your SD card
-  2. Copy the SoundHax `.m4a` to the root of your SD card
-  3. Copy the otherapp payload to the root of your SD card and rename it to `otherapp.bin`
-  4. Reinsert your SD card into your 3DS
-  5. Launch Nintendo 3DS Sound
+  1. Copiez le *contenu du dossier* `starter.zip` à la racine de votre carte SD
+  2. Copiez SoundHax `.m4a` à la racine de votre carte SD
+  3. Copiez le payload otherapp à la racine de votre carte SD ett renommez-le en `otherapp.bin`
+  4. Ré-insérez votre carte SD dans votre console
+  5. Lancez l'application Son Nintendo 3DS
   6. Go through all of the bird tips, then close the app normally and reopen it 
     + Launching SoundHax immediately would cause these tips to appear on every launch of the Nintendo 3DS Sound until this is done
-  7. Play the SoundHax `.m4a`
-  8. Your console should load the homebrew menu
+  7. Lancez le SoundHax `.m4a`
+  8. Votre console devrait lancer le Homebrew Launcher
 
-Continue to [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher)) {: .notice--primary}
+Continuez vers [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher)) {: .notice--primary}
