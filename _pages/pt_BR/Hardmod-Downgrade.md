@@ -4,7 +4,7 @@ title: "Hardmod Downgrade" permalink: /hardmod-downgrade.html lang: en_US ref: h
 
 * * *
 
-An excellent guide to getting a hardmod can be found [here](https://gbatemp.net/threads/414498/). If you are on a New 3DS, read [this](https://github.com/Plailect/Guide/issues/681) before hardmodding. {: .notice--info}
+Um guia excelente para fazer um hardmod pode ser encontrado [aqui](https://gbatemp.net/threads/414498/). Se tiver uma consola New 3DS, leia [isto](https://github.com/Plailect/Guide/issues/681) antes de fazer o hardmod. {: .notice--info}
 
 This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws). {: .notice--info}
 
@@ -34,9 +34,9 @@ This will work on New 3DS, Old 3DS, and 2DS. {: .notice--success}
   3. Copy the contents of the NFIRM `.zip` to the `/autofirm/source/firmwares/` folder
   4. Run `autofirm.bat` and select which device and version the NAND backup is for
   5. Wait while the script runs
-  6. If everything worked, then your original NAND will have been renamed to `backup_nand.bin` and you will have a modified `nand.bin` containing the 10.4.0 NATIVE_FIRM 
-  * Keep `backup_nand.bin`, it will be used later
-  7. Flash this `nand.bin` to your device with your hardmod
+  6. If everything worked, then your original NAND will have been renamed to `nand.bin` and you will have a modified `nand_patched.bin` containing the 10.4.0 NATIVE_FIRM 
+  * Keep `nand.bin`, it will be used later
+  7. Flash this `nand_patched.bin` to your device with your hardmod
 
 ##### Section II - Exploit verification
 
