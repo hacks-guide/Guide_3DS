@@ -4,24 +4,24 @@ title: "Homebrew Launcher (SoundHax)" permalink: /homebrew-launcher-(soundhax).h
 
 * * *
 
-The Homebrew Launcher has many different entrypoints, or methods of launching. {: .notice}
+El Homebrew Launcher tiene muchos puntos de acceso diferente, o métodos de inicialización. {: .notice}
 
-SoundHax is compatible with versions 9.0.0 through 11.2.0 in the EUR, JPN, KOR, and USA regions. {: .notice--info}
+Soundhax es compatible con versiones 9.0.0 hasta 11.2.0 en las regiones EUR, JPN, KOR Y USA. {: .notice--info}
 
-#### What you need
+#### Lo que necesitas
 
-+ The Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
-+ The latest release of [SoundHax](http://soundhax.com/) *(for your device and region)*
-+ The [otherapp payload](https://smealum.github.io/3ds/#otherapp) *(for your version and region)*
++ El Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
++ La ultima versión de [Soundhax](http://soundhax.com/) *(Para tu dispositivo y región)*
++ El [otherapp payload](https://smealum.github.io/3ds/#otherapp) *(para tu región y versión)*
 
-#### Instructions
+#### Instrucciones
 
-  1. Copy *the contents of* the `starter.zip` to the root of your SD card
-  2. Copy the SoundHax `.m4a` to the root of your SD card
-  3. Copy the otherapp payload to the root of your SD card and rename it to `otherapp.bin`
-  4. Reinsert your SD card into your 3DS
-  5. Launch Nintendo 3DS Sound
-  6. Go through all of the bird tips, then close the app normally and reopen it 
+  1. Copia *los contenidos* del `starter.zip` a la raíz de tu tarjeta SD
+  2. Copia Soundhax`.m4a` a la raíz de tarjeta SD
+  3. Copia el otherapp payload a la raíz de tu tarjeta SD y cambiale el nombre a `otherapp.bin`
+  4. Re-inserta tu tarjeta SD en tu 3DS
+  5. Abre la aplicación de sonido de tu 3DS
+  6. Ve por todos los consejos del pájaro, luego cierra la aplicación y vuélvela a abrir 
     + Launching SoundHax immediately would cause these tips to appear on every launch of the Nintendo 3DS Sound until this is done
   7. Play the SoundHax `.m4a`
   8. Your console should load the homebrew menu
