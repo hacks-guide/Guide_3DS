@@ -8,18 +8,18 @@ title: "Cart Update" permalink: /cart-update.html lang: en_US ref: cart-update
 
 Οι αναβαθμίσεις από Κασέτες θα αναβαθμίσουν μόνο θεμελιώδη χαρακτηριστικά, όπως οι Ρυθμίσεις Συστήματος, το Home Menu, το Nintendo 3DS Sound, κλπ. Οι αναβαθμίσεις από κασέτες δεν θα ενημερώσουν λειτουργίες δικτύου, όπως η Μεταφορά Συστήματος, το πρόγραμμα περιήγησης, το StreetPass Mii Plaza ή το eShop. {: .notice--info}
 
-Αυτό σημαίνει πως η αναβάθμιση από κασέτα ΔΕΝ θα εγκαταστήσει πρόγραμμα περιήγησης, εάν δεν έχετε ήδη ένα. Θα αναβαθμίσει **μόνο** την έκδοση του συστήματος *(για παράδειγμα, 2.1.0-0 -> 6.0.0-0)*. The last number *(the -0)* will **not** change. {: .notice--warning}
+Αυτό σημαίνει πως η αναβάθμιση από κασέτα ΔΕΝ θα εγκαταστήσει πρόγραμμα περιήγησης, εάν δεν έχετε ήδη ένα. Θα αναβαθμίσει **μόνο** την έκδοση του συστήματος *(για παράδειγμα, 2.1.0-0 -> 6.0.0-0)*. Ο τελευταίος αριθμός *(το -0)* **δεν** θα αλλάξει. {: .notice--warning}
 
-**Updating with a game cart containing the version 9.9.0 or above will remove your browser!** {: .notice--danger}
+**Η αναβάθμιση με μία κασέτα παιχνιδιού η οποία περιέχει την έκδοση 9.9.0 και πάνω θα αφαιρέσει το πρόγραμμα περιήγησης!** {: .notice--danger}
 
-#### What you need
+#### Τι χρειάζεστε
 
-* A game cart that [contains the version](http://www.3dsdb.com/) specified in the chart
+* Μία κασέτα παιχνιδιού η οποία [να περιέχει την έκδοση](http://www.3dsdb.com/) η οποία προσδιορίζετε στον πίνακα
 
-#### Instructions
+#### Οδηγείες
 
-  1. Boot your 3DS into recovery mode by holding L+R+A+UP while powering on
-  2. Decline the update and reboot
-  3. Put the game in the system
-  4. Attempt to launch the game
-  5. Update when prompted
+  1. Εκκινήστε το 3DS σε λειτουργία ανάκτησης κρατώντας πατημένα το L+R+A+UP ενώ ενεργοποιήτε την συσκευή
+  2. Αρνηθείτε την ενημέρωση και επανεκκινήστε
+  3. Εισάγετε το παιχνίδι στο σύστημα
+  4. Προσπαθήστε να εκκινήσετε το παιχνίδι
+  5. Ενημερώστε όταν σας ζητηθεί
