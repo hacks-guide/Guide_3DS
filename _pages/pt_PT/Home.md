@@ -13,7 +13,7 @@ Se tiver uma consola de desenvolvimento ("PANDA" ou "SNAKE"), veja o guia [devGu
 
 **Este guia precisa da *sua* ajuda para semear [estes](https://3ds.guide/rss.xml) torrents!** {: .notice--info}
 
-**To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links in this guide, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download)** {: .notice--info}
+**Para usar os links [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) deste guia, precisa de um cliente torrent, como o [Deluge](http://dev.deluge-torrent.org/wiki/Download)** {: .notice--info}
 
 **Read all of the introductory pages before proceeding.** {: .notice--warning}
 
