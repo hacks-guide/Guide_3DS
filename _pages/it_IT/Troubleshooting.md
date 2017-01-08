@@ -105,7 +105,7 @@ Questo tipo di exploit (come browserhax o 2xrsa) è instabile e tende a crashare
 
 Hai copiato il file `arm9loaderhax.bin` sbagliato sulla tua scheda SD (dovevi solamente copiare la cartella `3ds` e il file `SafeA9LHInstaller.dat` dall'archivio zip di SafeA9LHInstaller)
 
-  1. Usa il file `arm9loaderhax.bin corretto` 
+  1. Utilizza il file `arm9loaderhax.bin corretto` 
       1. Copia `arm9loaderhax.bin` dall'archivio `.zip` di Luma3DS sulla root della tua scheda SD
       2. Riavvia tenendo premuto (Select), poi prosegui
 
@@ -118,25 +118,25 @@ A volte succede, ma non ne si conosce la causa. Il pulsanti funzionano comunque,
       2. La console si riavvierà 
         * Se la console non dovesse riavviarsi, aspetta 10 secondi, quindi spegni il tuo 3DS tenendo premuto il pulsante di accensione
 
-## <a name="ts_steelhax" />Dopo aver trasferito steelhax tramite Trasferimento Dati, il *3DS ricevente* crasha mostrando una schermata nera
+## <a name="ts_steelhax" />Dopo aver trasferito steelhax tramite Trasferimento Dati, il *3DS di destinazione * crasha mostrando una schermata nera
 
 Capita perché hai selezionato la versione sbagliata nell'installer di steelhax.
 
-  1. Scarica il [payload otherapp](https://smealum.github.io/3ds/#otherapp) corrispondente alla versione di sistema del **3DS ricevente** 
+  1. Scarica l' [otherapp payload](https://smealum.github.io/3ds/#otherapp) corrispondente alla versione di sistema del **3DS di destinazione** 
     * Ignora il downgrade del NFIRM
     * Utilizza la versione visualizzata nelle impostazioni
-  2. Rename the otherapp payload to `steelhax_payload.bin`
-  3. Copy it `steelhax_payload.bin` to the root of **the target 3DS's** SD Card 
-    * Overwrite any existing files
-  4. Hold (B) while launching **Steel Diver: Sub Wars**
+  2. Rinomina l'otherapp payload in `steelhax_payload.bin`
+  3. Copia il file `steelhax_payload.bin` nella root della scheda SD del **3DS di destinazione** 
+    * Sovrascrivi qualunque file preesistente
+  4. Tieni premuto (B) durante l'avvio di **Steel Diver: Sub Wars**
 
-## <a name="ts_dsiware" />After doing the DSiWare Downgrade, my hacked DSiWare does not work
+## <a name="ts_dsiware" />Dopo aver eseguito il DSiWare Downgrade, il mio DSiWare hackato non funziona
 
-  1. Reboot **the source 3DS** while holding Start to launch Hourglass9
-  2. Go to SysNAND Backup/Restore and restore SysNAND from `NANDmin.bin` (the one made before the system transfer)
-  3. If you don't see the game at all on **the target 3DS**, link the NNID you bought the game with to **the target 3DS** and redownload it 
-    * You may have to delete the game from "Data Management" in the "System Settings" first
-    * If **the target 3DS** is not the latest version, you may have to run ctr-httpwn to access the eShop
+  1. Riavvia il **3DS di partenza** mente tieni premuto (Start) per avviare Hourglass9
+  2. Vai su SysNAND Backup/Restore e ripristina la SysNAND da `NANDmin.bin` (il backup creato prima del trasferimento dati)
+  3. Se il gioco non è disponibile nel **3DS di destinazione**, collega il NNID con cui hai comprato il gioco al **3DS di destinazione** e riscaricalo 
+    * Potresti dover prima eliminare il gioco da "Gestione dati" in "Impostazioni della Console"
+    * Se il **3DS di destinazione** non è all'ultima versione di sistema, potresti dover avviare ctr-httpwn per accedere all'eShop
   4. On **the source 3DS**, do the the save (and `.app` if you are using the `.app` page) injection steps
   5. On **the source 3DS**, go to System Settings, "Data Management", "DSiWare", then copy your DSiWare game to your SD card
   6. Either put **the source 3DS**'s SD card in **the target 3DS**, or rename the `Nintendo 3DS` on **the target 3DS**'s SD card and copy the `Nintendo 3DS` folder from **the source 3DS**'s SD card to **the target 3DS**'s SD card
@@ -147,29 +147,29 @@ Capita perché hai selezionato la versione sbagliata nell'installer di steelhax.
 
   1. Assicurati che non hai nessuna cartella chiamata "Decrypt9" nella **root** della tua scheda SD
   2. Prova a controllare se ci sono errori nella tua scheda SD utilizzando [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), o [F3X (Mac)](f3x-(mac))
-  3. Try backing up your SD card files, then formatting it and copying them back
-  4. Try a different SD card
+  3. Prova a salvare i file della tua scheda SD, quindi formattarla e poi copiare il file di nuovo sulla scheda
+  4. Prova ad usare un'altra scheda SD
 
-## <a name="ts_sys_down" />Black screen on SysNAND boot
+## <a name="ts_sys_down" />Schermo nero all'avvio della SysNAND
 
-  1. Try booting with your SD card out, and then reinserting it after booting. 
-      1. Power off your 3DS by holding down the power button.
-      2. Take out the SD card.
-      3. Power on the 3DS.
-      4. When the home menu appears, reinsert your SD card.
-      5. If this worked, you should Clear Home Menu's extdata by navigating to the following folder on your SD card: `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/` 
-        * EUR Region: Delete `00000098`
-        * JPN Region: Delete `00000082`
-        * USA Region: Delete `0000008f`
-        * KOR Region: Delete `000000A9`
-  2. Try booting without any cartridges inserted (including flashcarts)
-  3. If you have a hardmod and a NAND backup, flash the backup back to SysNAND.
-  4. Try booting into recovery mode and updating your system.  
-    *This probably will not work for an Old 3DS downgraded to 2.1.0*  
-    **This will BRICK a New 3DS downgraded to 2.1.0** 
-      1. Power off your 3DS by holding down the power button.
-      2. Hold L+R+A+Up.
-      3. Power on the 3DS.
+  1. Prova ad accendere senza la scheda SD nella console, e poi reinserisci la scheda dopo l'avvio. 
+      1. Spegni il 3DS tenendo premuto il pulsante d'accensione.
+      2. Rimuovi la scheda SD.
+      3. Accendi il 3DS.
+      4. Se appare il menu HOME, reinserisci la scheda SD.
+      5. Se ciò ha funzionato, dovresti pulire la extdata del menu HOME navigando fino alla seguente cartella sulla tua scheda SD: `/Nintendo 3DS/(ID di 32 caratteri)/(ID di 32 caratteri)/extdata/00000000/` 
+        * Regione EUR: Cancella `00000098`
+        * Regione JPN: Cancella `00000082`
+        * Regione USA: Cancella `0000008f`
+        * Regione KOR: Cancella `000000A9`
+  2. Prova ad accendere senza nessuna cartuccia nella console (flashcard incluse)
+  3. Se hai una hardmod e un salvataggio della NAND, inietta il salvataggio nella SysNAND.
+  4. Prova ad avviare la modalità di ripristino e quindi aggiorna il tuo dispositivo.  
+    *Probabilmente non funzionerà su un Old 3DS downgradato alla 2.1.0*  
+    **Questo processo BRICKERÀ un New 3DS downgradato alla 2.1.0** 
+      1. Spegni il tuo 3DS tenendo premuto il pulsante di accensione.
+      2. Tieni premuto L+R+A+Su.
+      3. Accendi il 3DS.
       4. If you enter safe mode, update your 3DS *only if you have an entrypoint for the latest FW version and it is possible to downgrade from it* and attempt the downgrade again.
   5. Your 3DS may be bricked. For support, ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [3DS Hacking on Discord](https://discord.gg/MWxPgEp).
 
