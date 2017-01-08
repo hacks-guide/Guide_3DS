@@ -4,11 +4,11 @@ title: "Get Started" permalink: /get-started.html lang: en_US ref: get-started
 
 * * *
 
-The colors of the devices in the image may vary, but note the button placement and features of each device carefully to ensure you select the correct one. {: .notice}
+Els colors dels dispositius que apareixen en la imatge poden variar, però heu de tenir en compte la col·locació dels botons i les característiques de cada dispositiu per assegurar-se de que seleccioneu la versió correcta. {: .notice}
 
-Click the image of your device to take you to the appropriate page. {: .notice--primary}
+Fes clic a la imatge del teu dispositiu per portar-te a la pàgina corresponent. {: .notice--primary}
 
-Different device models, versions, and regions will require different steps to achieve the end goal of arm9loaderhax Custom Firmware. The following series of pages will help you find where to start for your device. {: .notice--info}
+Les diferents versions, models i regions dels dispositius requeriran de passos diferents per aconseguir l'objectiu final d'instal·lar arm9loaderhax Custom Firmware. La següent sèrie de pàgines t'ajudarà a trobar on començar per al teu dispositiu. {: .notice--info}
 
 If you have already hacked your 3DS before and have an EmuNAND based CFW setup, just follow all instructions while on SysNAND. Your data will be transfered from EmuNAND to your new A9LH install at the end. {: .notice--info}
 
