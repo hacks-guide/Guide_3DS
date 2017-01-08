@@ -6,7 +6,7 @@ title: "Troubleshooting" permalink: /troubleshooting.html lang: en_US ref: troub
 
 Se não conseguir ligar a sua 3DS, por favor procure a secção relevante ao seu problema, e siga as instruções. Quando uma das soluções funcionar para si, pode continuar o resto do guia (Esta página é relativamente grande. Tente localizar o seu problema usando Ctrl+F) {: .notice--primary}
 
-**If you still cannot solve your issue and need to reach out for help, please paste the contents of all relevant .log files from the root of your SD card into a [Gist](https://gist.github.com/), then come for help prepared with a detailed description of your problem and what you've tried.** {: .notice--info}
+**Se ainda não conseguiu resolver o seu problema e precisa de ajuda, por favor copie os conteúdos relevantes de todos os ficheiros .log na raíz do seu cartão SD para um [Gist](https://gist.github.com/), e depois peça ajuda já preparado com uma descrição detalhada do seu problema e o que já tentou fazer para o resolver.** {: .notice--info}
 
 ## <a name="twl_broken" />DSi / DS functionality is broken after completing the guide
 
