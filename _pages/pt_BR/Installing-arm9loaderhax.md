@@ -10,9 +10,9 @@ Isto irá instalar o [Fork de AuroraWright](https://github.com/AuroraWright/arm9
 
 Também iremos configurar a capacidade de arrancar payloads a partir do arm9loaderhax, dando-nos assim a habilidade de "desbrickar" a nossa SysNAND em situações que normalmente "brickavam" ao restaurar uma cópia. {: .notice--info}
 
-**You cannot use another console's OTP or you will brick GUARANTEED.** {: .notice--danger}
+**Não pode usar o OTP de outra consola, ou irá brickar GARANTIDAMENTE.** {: .notice--danger}
 
-#### Overview of steps
+#### Resumo dos passos
 
 In this section, we will go through the process that all the other steps have led up to: actually installing arm9loaderhax.
 
