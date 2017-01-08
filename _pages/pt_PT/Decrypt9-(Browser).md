@@ -12,9 +12,9 @@ Se já tiver hackeado a sua 3DS antes e tiver um sistema de CFW EmuNAND, este gu
 
 * A última versão do [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/)
 
-#### Instructions
+#### Instruções
 
-  1. Create a folder named `files9` on the root of your SD card if it does not already exist
+  1. Crie uma pasta com o nome `files9` na raíz do seu cartão SD, se ainda não existir
   2. Copy `Launcher.dat` and `Decrypt9WIP.dat` from the Decrypt9WIP `.zip` to the root of your SD card
   3. Reinsert your SD card into your 3DS
   4. Open the browser and go to one of the following URLs on your 3DS 
