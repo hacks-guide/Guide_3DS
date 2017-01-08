@@ -144,41 +144,41 @@ NNID из исходной 3DS будет находится в целевой 3
 
   1. Скопируйте и объедините папку `3ds` из `zip-архива` ctr-httpwn в корень карты памяти **целевой 3DS**.
   2. Верните карту памяти назад в **целевую 3DS**.
-  3. Launch the homebrew launcher on the device using [Homebrew Launcher (No Browser)](homebrew-launcher-(no-browser)) 
-  * **New 3DSs on versions 10.7.0 and 11.0.0 can use [Homebrew Launcher (Browser)](homebrew-launcher-(browser)) instead**
-  * **Ensure menuhax is not installed, or you won't be able to return to Home Menu from the homebrew launcher**
-  4. Launch ctr-httpwn on **the target 3DS**
-  5. Press (A) to continue
-  6. Press (Start) to exit ctr-httpwn
-  7. Press (Start) to open the homebrew launcher exit menu
-  8. Press (X) to Return to Home Menu (no reboot) 
-  * You may get an "Error has occurred" message with the option to continue. This is fine, just hit (A)
-  9. Continue to the next section **without rebooting** 
-  * **the target 3DS** has been temporarily patched to allow network functions (such as System Transfer) without running the latest system version
-  * Keep in mind that exiting the System Settings will reboot the system
-  * If the system is rebooted, you'll have to re-run ctr-httpwn before System Transfer will work
+  3. Запустите Homebrew launcher на устройстве используя способы, описанные в [Homebrew Launcher (не используя браузер)](homebrew-launcher-(no-browser)) 
+  * **На New 3DSs с версией системного ПО 10.7.0 и 11.0.0 можете для этого использовать [Homebrew Launcher (используя браузер)](homebrew-launcher-(browser));**
+  * **Убедитесь, что в системе не установлен menuhax, иначе вы не сможете вернуться на домашний экран из Homebrew launcher.**
+  4. Запустите ctr-httpwn на **целевой 3DS**.
+  5. Нажмите (A), чтобы продолжить.
+  6. Нажмите (START), чтобы выйти из ctr-httpwn.
+  7. Нажмите (START), чтобы открыть меню Homebrew launcher.
+  8. Нажмите (X), чтобы вернуться на домашний экран без перезагрузки 
+  * Может выскочить ошибка "Произошла ошибка" (Error has occurred). Так бывает, просто нажмите (A), чтобы продолжить.
+  9. Переходите к следующей части **без перезагрузки** 
+  * **Целевая 3DS** временно пропатчена для доступа к сетевым функциям без проверки номера установленной прошивки;
+  * Помните, что выход из Системных настроек перезагружает приставку;
+  * Если вы перезагрузили приставку, то следует повторно запустить ctr-httpwn, иначе Перенос системы не будет работать.
 
-##### Section V - System Transfer
+##### Часть V - Перенос системы
 
-  1. **Backup every file on both 3DS's SD cards to two separate folders on your computer (keep track of which is which)!**
-  2. Reinsert each SD card back into their corresponding 3DS
-  3. If **the target 3DS** has a Nintendo Network ID on it, you must format the device using System Settings: 
-  * Go to the last page of "Other Settings" and select "Format System Memory", then follow all instructions
-  4. Read the following: 
-  * Your CFW 3DS = the source 3DS = "Source System"
-  * Your Stock 3DS = the target 3DS = "Target System"
-  * **Move DSiWare titles if prompted!**
-  * Do **NOT** delete the source system's SD card contents if prompted
-  * Make sure neither device's battery dies during the transfer
-  * 2DS/Old 3DS (source) to New 3DS (target) only - if asked which method you wish to use to transfer the SD card data: 
-    * **Do NOT** choose the "Low-Capacity microSD Card Transfer" or minimal option (option 2), it will only transfer tickets and likely will not transfer the DSiWare save.
-    * Fast Method: If you have the ability to move the data from the SD card (source) to the microSD card (target), when prompted use the "PC-Based Transfer" option (option 3).
-    * Slowest Method: If you don't have the ability to move the data on a PC use the **full** "Wireless Transfer" option (option 1).
-  5. Go to [this link](http://en-americas-support.nintendo.com/app/answers/detail/a_id/227/) and follow Nintendo's official instructions for System Transferring from one system to another while keeping in mind what you just read
+  1. **Сохраните файлы с обеих карт памяти в разные папки на компьютере (назовите папки таким образом, чтобы понимать какие файлы откуда)!**
+  2. Верните обе карты памяти на места (не перепутайте).
+  3. Если на **целевой 3DS** есть Nintendo Network ID, отформатируйте приставку, используя Системные настройки: 
+  * Перейдите на последнюю вкладку меню "Прочие настройки" (Other Settings), выберите пункт "Форматировать" (Format System Memory), следуйте инструкциям на экране.
+  4. Прочитайте внимательно: 
+  * Ваша 3DS с CFW = "Исходная система";
+  * Ваша 3DS с официальной прошивкой = "Целевая система";
+  * **Переместите DSiWare по запросу!**
+  * **НЕ** удаляйте содержимое карты памяти на исходной системе, даже по запросу;
+  * Убедитесь, что обе приставки заряжены и батарея не сядет ни у одной из них во время передачи данных;
+  * При запросе на выбор метода переноса данных с карты памяти в случае переноса данных с 2DS/Old 3DS (исходная) на New 3DS (целевая): 
+    * **НЕ** выбирайте "Low-Capacity microSD Card Transfer" (опция 2), при таком варианте перенесутся только тикеты, а DSiWare-игры и, что важно, их сохранения - нет. 
+    * Быстрый способ: Выберите "PC-Based Transfer" (опция 3) и по запросу на экране приставке, скопировать содержимое карты памяти из исходной консоли на карту памяти целевой приставки (если у вас на old3ds\2ds стоит micro SD с переходником, можно просто переставить карту).
+    * Медленный способ: Выберите "Wireless Transfer" (опция 1) для долгого переноса **полного** содержимого карты памяти в целевую приставку по воздуху.
+  5. Перейдите по [этой ссылке](http://en-americas-support.nintendo.com/app/answers/detail/a_id/227/) и следуйте официальным инструкциям от Nintendo, держа в голове то, что вы прочитали чуть выше.
 
-##### Section VI - Restoring the source 3DS
+##### Часть VI - Восстановление исходной 3DS
 
-  1. On **the source 3DS**, complete initial setup
+  1. На **исходной 3DS**, завершите первоначальную настройку.
   2. Do one of the following + Do the rest of the sections and then the full guide on **the target 3DS**, then wait one week, then System Transfer from **the target 3DS** back to **the source 3DS** *(remember you cannot transfer back from a New 3DS to an Old 3DS)* + Call Nintendo and tell them you no longer have access to the device that your NNID is linked to (which is **the target 3DS** in this case), and would like it linked to a different device (which is **the source 3DS** in this case) + You can also just [remove the NNID](https://3ds.guide/troubleshooting#rm_nnid) from **the source 3DS** if you'd prefer it remain on **the target 3DS**
   3. Reboot **the source 3DS** while holding Start to launch Hourglass9
   4. Go to SysNAND Backup/Restore and restore SysNAND from `NANDmin.bin`
