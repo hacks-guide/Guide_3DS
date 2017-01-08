@@ -54,10 +54,10 @@ arm9loaderhax имеет множество преимуществ перед д
 ## Что нужно знать, перед тем, как начать?
 
 + **Перед тем, как начинать прошивку, следует осознать все сопутствующие риски. КАЖДЫЙ раз, модифицируя прошивку консоли, вы рискуете получить НЕВОССТАНОВИМЫЙ брик. Риск хоть и невысок, но он есть. Чем тщательней вы следуете инструкциям, тем ближе к нулю риск убить консоль. Удачи!**
-+ If you have already hacked your 3DS before to get an EmuNAND setup, and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, you should follow all instructions and restore your existing EmuNAND when prompted once you reach [Installing arm9loaderhax](installing-arm9loaderhax).
-+ This guide will work on New 3DS, Old 3DS, and 2DS in all regions on firmware 11.2.0 or below *(except CHN / TWN)*.
-+ If everything goes according to plan, you will lose no data and end up with everything that you started with (games, NNID, saves, etc will be preserved).
-+ **Keep the device plugged in and charged throughout the entire process to avoid data loss or damage from an unexpected power-off!**
-+ Your SD card should be [MBR, not GPT](http://www.howtogeek.com/245610/) (the SD card that comes with the device will be MBR by default).
-+ If you need to format a brand new SD card, you can use [`guiformat`](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) and set to an Allocation Unit Size of 32K.
-+ The 2DS is essentially identical to the Old 3DS in terms of software, and that any steps which say "Old 3DS" also apply to 2DS.
++ Если ваша 3DS уже взломана и у нее есть рабочий и настроенный EmuNAND, и если вы хотите перенести этот EmuNAND со всем содержимым в ваш SysNAND, в новую кастомную прошивку, вам следует следовать всем инструкциям и восстановить бекап EmuNAND, когда вы доберетесь до [установки arm9loaderhax](installing-arm9loaderhax).
++ Инструкция предназначена для New 3DS, Old 3DS и 2DS любых регионов на прошивке 11.2.0 или ниже *(за исключением любых консолей CHN / TWN регионов)*.
++ Если быть внимательным и не торопиться, то все данные на приставке будут сохранены, включая сейвы, игры и даже NNID.
++ **На протяжении всего пути рекомендую держать консоль на зарядке.**
++ Карта памяти должна быть отформатирована в [MBR, а не в GPT](http://www.howtogeek.com/245610/) (большинство КП и так в MBR по-умолчанию, в том числе и комплектная).
++ Если нужно отформатировать новую карту памяти, рекомендуем сделать это с помощью [`guiformat`](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm). Следует установить Allocation Unit Size в 32К.
++ 2DS практически полностью идентична Old 3DS по софту и железу. Все шаги, предназначенные для "Old 3DS" применимы и к 2DS.
