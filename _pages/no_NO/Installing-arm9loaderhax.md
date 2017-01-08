@@ -36,17 +36,17 @@ During this process, we also setup programs such as the following:
 * [`fbi-2.4.2-injectable.zip`](magnet:?xt=urn:btih:f978b4cf5eda72823240b9c649f3fd2940a9f525&dn=fbi-2.4.2-injectable.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 * [`data_input_v3.zip`](magnet:?xt=urn:btih:a1195c9f7ab650fa7c7bf020b51fc19ea8d9440c&dn=data%5Finput%5Fv3.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 * The latest fork of [SafeA9LHInstaller](https://github.com/Plailect/SafeA9LHInstaller/releases/latest) *(the `.7z` file)*
-* The latest release of [arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(the `.7z` file)*
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(the `.7z` file)*
-* The latest release of [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
-* The latest release of [Hourglass9](https://github.com/d0k3/Hourglass9/releases/latest)
-* The latest release of [Luma3DS Updater](https://github.com/Hamcha/lumaupdate/releases/latest)
-* The latest release of [DspDump](https://github.com/Cruel/DspDump/releases/latest)
-* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/)
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* Siste utgave av [arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(`.7z` filen)*
+* Siste utgave av [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z` filen)*
+* Siste utgave av [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
+* Siste utgave av [Hourglass9](https://github.com/d0k3/Hourglass9/releases/latest)
+* Siste utgave av [Luma3DS Updater](https://github.com/Hamcha/lumaupdate/releases/latest)
+* Siste utgave av [DspDump](https://github.com/Cruel/DspDump/releases/latest)
+* Siste utgave av [FBI](https://github.com/Steveice10/FBI/releases/)
+* Siste utgave av [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * The Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
 
-#### Instructions
+#### Instruksjoner
 
 ##### Section I - Prep work
 
@@ -104,10 +104,10 @@ During this process, we also setup programs such as the following:
     * **"Autoboot SysNAND"**
     * **"Use SysNAND FIRM if booting with R"**
     * **"Show NAND or user string in System Settings"**
-  3. If you are using a **New 3DS**, you should *also* enable the following: 
-    * **"New 3DS CPU" to "Clock+L2(x)"**
-    * This will increase the framerate of many games, but may cause instability in others
-    * If some games do not work properly, disable this option and try again
+  3. Hvis du bruker en **New 3DS**, bør du *også* aktiver følgende: 
+    * **"New 3DS CPU" til "Clock+L2(x)"**
+    * Dette vil øke ytelsen i mange spill, men kan også skape ustabilitet i andre
+    * Hvis noen spill ikke fungerer som de skal, deaktiver dette alternativet å prøv igjen
   4. Press Start to save and reboot 
     * If you get a black screen, just continue to the next section 
     * If you get a "Failed to mount CTRNAND" error, just continue to the next section 
@@ -117,14 +117,14 @@ During this process, we also setup programs such as the following:
 If, before following this guide, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand) instead of doing the first four steps in this section. {: .notice--info}
 
   1. Open Hourglass9 from arm9loaderhax by holding (Start) on boot
-  2. Go to "SysNAND Backup/Restore"
+  2. Gå til "SysNAND Backup/Restore"
   3. Restore from `NANDmin.bin`
-  4. Press (Start) to reboot 
+  4. Trykk (Start) for omstart 
     * If you get a black screen, [follow 9.2.0 ctrtransfer](9.2.0-ctrtransfer)
   5. If your backup was of a version between 3.0.0 and 4.5.0, your console will not boot until you manually download the required firmware: 
-    * Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) and rename it to `firmware.bin`
-    * Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
-    * Copy `firmware.bin` and `cetk` to the `/luma/` folder on your SD card
+    * Last ned [denne filen](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) og endre navnet til `firmware.bin`
+    * Last ned [denne filen](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
+    * Kopier `firmware.bin` og `cetk` til mappen, `/luma/` på SD-kortet
     * Delete both of these files after updating your 3DS
   6. Update your 3DS by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update" 
     * Updates while using A9LH + Luma (what you have) are safe, stop asking about it
@@ -145,20 +145,20 @@ If, before following this guide, you already had an EmuNAND setup and would like
 ##### Section VI - Finalizing setup
 
   1. Open Health and Safety (which is now FBI)
-  2. Select "SD"
-  3. Select "cias"
+  2. Velg "SD"
+  3. Velg "cias"
   4. Navigate to `FBI.cia` and press (A) to install
   5. Navigate to `hblauncher_loader.cia` and press (A) to install
   6. Navigate to `lumaupdater.cia` and press (A) to install
   7. Return to the SD directory with (B)
   8. Navigate to `arm9loaderhax.bin`, then press (A) on it and select the "Copy" option
   9. Return to the FBI main menu with (B)
- 10. Select "CTR NAND"
- 11. Select "\<current directory>"
- 12. Select the "Paste" option, then press (A) to confirm
- 13. Exit with the home button
+ 10. Velg "CTR NAND"
+ 11. Velg "\<current directory>"
+ 12. Velg alternativet "Paste", for å lime inn, og trykk (A) for å bekrefte
+ 13. Avslutt med hjem-knappen
  14. Launch the Homebrew Launcher from the home menu
- 15. Select "DSP Dump"
+ 15. Velg "DSP Dump"
  16. Press (Start) when prompted to exit
  17. Reboot while holding Start to launch Hourglass9
  18. Go to "SysNAND Backup/Restore", then select "Health&Safety Inject"
@@ -168,10 +168,10 @@ If, before following this guide, you already had an EmuNAND setup and would like
     * Booting the device at least once with the SD card removed will allow you to configure the CTRNAND based luma installation
  22. Use the (A) button and the D-Pad to turn on the following:  
     * **"Show NAND or user string in System Settings"**
- 23. If you are using a **New 3DS**, you should *also* enable the following: 
-    * **"New 3DS CPU" to "Clock+L2(x)"**
-    * This will increase the framerate of many games, but may cause instability in others
-    * If some games do not work properly, disable this option and try again
+ 23. Hvis du bruker en **New 3DS**, bør du *også* aktiver følgende: 
+    * **"New 3DS CPU" til "Clock+L2(x)"**
+    * Dette vil øke ytelsen i mange spill, men kan også skape ustabilitet i andre
+    * Hvis noen spill ikke fungerer som de skal, deaktiver dette alternativet å prøv igjen
  24. Reinsert your SD card, then press Start to save and reboot!
 
 * * *
