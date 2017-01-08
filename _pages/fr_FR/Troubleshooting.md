@@ -93,30 +93,30 @@ This is caused by Gateway implementing a very shoddy downgrade method, which lea
  17. Return to [Installing arm9loaderhax](installing-arm9loaderhax) and retry the FBI injection
  18. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then return to [Installing arm9loaderhax](installing-arm9loaderhax) and retry the FBI injection
 
-## <a name="ts_browser" />A browser based exploit is not working
+## <a name="ts_browser" />Un exploit basé sur le navigateur web ne fonctionne pas
 
-Browser based exploits (such as browserhax or 2xrsa) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps
+Les exploits basé sur le naviguateur (tel que browserhax ou 2xrsa) sont parfois instable et crash fréquement, mais ils peuvent parfois être réglés en faisant les étapes suivantes
 
-  1. Open the browser, then open the browser settings 
-      1. Scroll to the bottom and Initialize Savedata (it also may be called Clear All Save Data)
-      2. Try the exploit again
+  1. Ouvrir le navigateur, puis allez dans les paramètres 
+      1. Faites défiler tout en bas et sélectionnez Initialiser les données de sauvegarde (ou Effacer les données de sauvegarde)
+      2. Réessayez l'exploit
 
-## <a name="ts_safe_a9lh" />System boots directly SafeA9LHInstaller
+## <a name="ts_safe_a9lh" />Le système démarre directement dans SafeA9LHInstaller
 
-You copied the wrong `arm9loaderhax.bin` file to your SD card (you were only supposed to copy the `3ds` folder and `SafeA9LHInstaller.dat` file from the SafeA9LHInstaller zip)
+Vous avez copié le mauvais fichier `arm9loaderhax.bin` sur votre carte SD (vous auriez dû uniquement copier le dossier `3ds` et le fichier `SafeA9LHInstaller.dat` de l'archive SafeA9LHInstaller.zip)
 
-  1. Use the correct `arm9loaderhax.bin` 
-      1. Copy `arm9loaderhax.bin` from the Luma3DS `.zip` to the root of your SD card
-      2. Reboot holding select and continue
+  1. Utilisez le bon `arm9loaderhax.bin` 
+      1. Copiez `arm9loaderhax.bin` de l'archive Luma3DS`.zip` vers la racine de votre carte SD
+      2. Redémarrez en maintenant Select appuyé et continuez
 
-## <a name="ts_safe_a9lh_screen" />SafeA9LHInstaller shows a glitched screen
+## <a name="ts_safe_a9lh_screen" />SafeA9LHInstaller affiche un écran glitché
 
-This happens occasionally, but the reason is unknown. The buttons will still work, but the screen will be glitched looking
+Ceci se produira occasionnellement, mais la raison est inconnue. Les boutons fonctionneront malgré tout, mais l'écran sera glitché
 
-  1. Follow instructions as normal 
-      1. Press (Select) and arm9loaderhax will be installed
-      2. The console will reboot 
-        * If the console does not reboot, wait 10 seconds, then power off your 3DS by holding down the power button
+  1. Suivez les instructions comme si de rien n'était 
+      1. Appuyez sur (Select) et arm9loaderhax sera installé
+      2. La console redémarrera 
+        * Si la console ne redémarre pas, attendez 10 secondes, puis éteignez votre 3DS en maintenant le bouton power
 
 ## <a name="ts_steelhax" />After System Transfering steelhax, it crashes to a black screen on *the target 3DS*
 
@@ -143,14 +143,14 @@ This is because you selected the wrong version in the steelhax installer.
   7. On **the target 3DS**, go to System Settings, "Data Management", "DSiWare", then copy your DSiWare game to the system
   8. Return your SD cards to normal, then continue with the DSiWare Downgrade
 
-## <a name="ts_d9_backup" />Decrypt9 or Hourglass9 won't restore / can't find my NAND backup
+## <a name="ts_d9_backup" />Decrypt9 ou Hourglass9 ne veulent pas restaurer / ne trouvent pas mon backup de NAND
 
-  1. Make sure you do not have any folder named "Decrypt9" on **the root** of your SD card
-  2. Try checking your SD card for errors using [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), or [F3X (Mac)](f3x-(mac))
-  3. Try backing up your SD card files, then formatting it and copying them back
-  4. Try a different SD card
+  1. Soyez sûr que vous n'avez pas de dossier nommé "Decrypt9" **à la racine** de votre carte SD
+  2. Essayez de vérifier votre carte SD pour trouver des erreurs à l’aide de [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), ou [F3X (Mac)](f3x-(mac))
+  3. Essayez de sauvegarder vos fichiers présent sur la carte SD, formattez-la et remettez-les
+  4. Essayez une carte SD différente
 
-## <a name="ts_sys_down" />Black screen on SysNAND boot
+## <a name="ts_sys_down" />Écran noir au démarrage de la SysNAND
 
   1. Try booting with your SD card out, and then reinserting it after booting. 
       1. Power off your 3DS by holding down the power button.
@@ -173,7 +173,7 @@ This is because you selected the wrong version in the steelhax installer.
       4. If you enter safe mode, update your 3DS *only if you have an entrypoint for the latest FW version and it is possible to downgrade from it* and attempt the downgrade again.
   5. Your 3DS may be bricked. For support, ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [3DS Hacking on Discord](https://discord.gg/MWxPgEp).
 
-## <a name="ts_sys_a9lh" />Black screen on SysNAND boot after installing arm9loaderhax
+## <a name="ts_sys_a9lh" />Écran noir sur SysNAND au démarrage après avoir installé arm9loaderhax
 
   1. Ensure you have a working payload. 
       1. Check for the existence of `arm9loaderhax.bin` in the root of your SD card.
@@ -199,7 +199,7 @@ This is because you selected the wrong version in the steelhax installer.
   8. Try following [9.2.0 ctrtransfer](9.2.0-ctrtransfer)
   9. Ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [3DS Hacking on Discord](https://discord.gg/MWxPgEp).
 
-## <a name="ts_sys_blue" />Blue screen on boot (bootrom error)
+## <a name="ts_sys_blue" />Écran bleu au démarrage (erreur bootrom)
 
-  1. Your 3DS is bricked
-  2. You will need to get a [hardmod](https://gbatemp.net/threads/414498/) or repair / replace the device
+  1. Votre 3DS est brickée
+  2. Vous allez devoir mettre en place un [hardmod](https://gbatemp.net/threads/414498/) ou réparer/changer votre console
