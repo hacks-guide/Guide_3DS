@@ -104,11 +104,11 @@ Durante la guida verranno anche configurati i seguenti programmi:
     * **"Autoboot SysNAND"**
     * **"Use SysNAND FIRM if booting with R"**
     * **"Show NAND or user string in System Settings"**
-  3. Se stai usando un **New 3DS**, dovresti abilitare *anche* queste opzioni: 
+  3. Se stai usando un **New 3DS**, dovresti abilitare *anche* la seguente opzione: 
     * **"New 3DS CPU" a "Clock+L2(x)"**
     * Questa opzione aumenterà il framerate in molti giochi, ma può rendere instabili altri
-    * Se alcuni giochi non funzionano come dovrebbero, disabilità questa opzione
-  4. Premi start per salvare e riavviare il 3DS 
+    * Se alcuni giochi non funzionano come dovrebbero, disabilita questa opzione
+  4. Premi (Start) per salvare e riavviare il 3DS 
     * Se ottieni uno schermo nero, prosegui comunque con la prossima sezione 
     * Se ottieni l'errore "Failed to mount CTRNAND", prosegui comunque con la prossima sezione 
 
@@ -132,13 +132,13 @@ Se, prima di seguire questa guida, avevi già un'installazione EmuNAND presente 
     * Se ottieni un errore, imposta i DNS della connessione di rete in modo che vengano ottenuti automaticamente
     * Se continui ad ottenere un errore e la tua NAND è ad una versione precedente di 9.2.0, segui la guida [ctrtransfer 9.2.0](9.2.0-ctrtransfer)
 
-##### Sezione V - Iniettare FBI
+##### Sezione V - Inject di FBI
 
   1. Apri Hourglass9 dall'arm9loaderhax tenendo premuto (Start) all'avvio
-  2. Seleziona "SysNAND Backup/Restore", poi seleziona "Health&Safety Dump" per creare un backup Health & Safety chiamato `hs.app` **(puoi usare le freccette Su e Giù/Sinistra e Destra per cambiare il nome)**
+  2. Seleziona "SysNAND Backup/Restore", poi seleziona "Health&Safety Dump" per creare un backup dell'applicazione "Informazioni per la salute e sicurezza" chiamato `hs.app` **(puoi eventualmente usare il D-Pad per cambiare il nome)**
   3. Premi (B), quindi seleziona l'opzione "Health&Safety Inject"
-  4. Seleziona il file `.app` iniettabile di FBI della tua regione
-  5. Premi (A) per confermare l'iniezione
+  4. Seleziona il file `.app` dell'FBI iniettabile della tua regione
+  5. Premi (A) per confermare la sostituzione
   6. Premi (Start) per riavviare la console
   7. Se hai ancora l'applicazione "Informazioni per la salute e la sicurezza" di stock e hai usato in passato Gateway per fare un downgrade, [segui questa guida per risolvere il problema](troubleshooting#gw_fbi)
 
@@ -151,9 +151,9 @@ Se, prima di seguire questa guida, avevi già un'installazione EmuNAND presente 
   5. Seleziona il file `hblauncher_loader.cia` e premi (A) per installarlo
   6. Seleziona il file `lumaupdater.cia` e premi (A) per installarlo
   7. Ritorna alla cartella della tua SD premendo (B)
-  8. Navigate to `arm9loaderhax.bin`, then press (A) on it and select the "Copy" option
-  9. Return to the FBI main menu with (B)
- 10. Select "CTR NAND"
+  8. Seleziona il file `arm9loaderhax.bin`, quindi premi (A) su di esso e seleziona l'opzione "Copy"
+  9. Ritorna al menù principale di FBI premendo (B)
+ 10. Seleziona "CTR NAND"
  11. Select "\<current directory>"
  12. Select the "Paste" option, then press (A) to confirm
  13. Exit with the home button
@@ -176,14 +176,14 @@ Se, prima di seguire questa guida, avevi già un'installazione EmuNAND presente 
 
 * * *
 
-If DSi / DS functionality has broken (such as DS carts or DSiWare no longer working), [follow this troubleshooting guide](troubleshooting#twl_broken) {: .notice--warning}
+Se ora i software DSi / DS non funzionano più correttamente (ad esempio le cartucce DS o le applicazioni DSiWare non si avviano più), [segui questa guida per risolvere il problema](troubleshooting#twl_broken) {: .notice--warning}
 
-{% capture notice-10 %} You can now use Luma3DS Updater to update your Luma3DS to the latest version just by opening it and pressing (A).  
-This is not the same thing as a System Update; it just downloads and extracts the newest Luma3DS files. Luma3DS Updater only updates the files located on the SD card.  
-This will only update the Luma3DS files on the SD Card. If you boot the device without an SD card, it will use whatever version you placed in CTR NAND.  
+{% capture notice-10 %} Puoi utilizzare Luma3DS Updater per aggiornare Luma3DS alla versione più recente; basta avviarlo e premere (A).  
+Non è come eseguire un aggiornamento di sistema del 3DS, in quanto si limita a scaricare ed estrarre i file di Luma3DS più recenti. Luma3DS Updater aggiornerà soltanto i file presenti nella scheda SD.  
+Verranno quindi aggiornati solamente i file di Luma3DS nella scheda SD. Se avvii la console senza una scheda SD inserita, verrà utilizzata la versione di sistema installata in CTR NAND.  
 {% endcapture %}
 
-<div class="notice--info">{{ notice-10 | markdownify }}</div>
+<div class="notice--info">{ notice-10 | markdownify }</div>
 
 {% capture notice-6 %}  
 You will now boot a Custom Firmware based SysNAND by default.  
