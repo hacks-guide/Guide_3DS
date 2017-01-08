@@ -29,26 +29,26 @@ title: "Hardmod Downgrade" permalink: /hardmod-downgrade.html lang: en_US ref: h
 
 ##### Часть I - Модификация NAND
 
-  1. Extract the autofirm `.zip` to a folder called `autofirm`
-  2. Place a copy of your NAND backup (named `nand.bin`) in `/autofirm/` folder
-  3. Copy the contents of the NFIRM `.zip` to the `/autofirm/source/firmwares/` folder
-  4. Run `autofirm.bat` and select which device and version the NAND backup is for
-  5. Wait while the script runs
-  6. If everything worked, then your original NAND will have been renamed to `backup_nand.bin` and you will have a modified `nand.bin` containing the 10.4.0 NATIVE_FIRM 
-  * Keep `backup_nand.bin`, it will be used later
-  7. Flash this `nand.bin` to your device with your hardmod
+  1. Извлеките `zip-архив` с autofirm в папку `autofirm`.
+  2. Переименуйте бекап вашего NAND в `nand.bin` и положите его в папку `/autofirm/`.
+  3. Извлеките файлы из `архива` с файлами прошивки в папку `/autofirm/source/firmwares/`.
+  4. Запустите `autofirm.bat` и выберите версию прошивки, соответствующую версии NAND.
+  5. Дождитесь окончания процесса.
+  6. Если все пройдет хорошо, ваш не измененный NAND будет находиться в файле `nand.bin` , а модифицированная версия будет называться `nand_patched.bin.` Именно этот файл будет содержать NATIVE_FIRM от 10.4.0. 
+  * Не удаляйте `nand.bin`, он еще пригодится.
+  7. Прошейте `nand_patched.bin` обратно в ваше устройство, используя хардмод. 
 
-##### Section II - Exploit verification
+##### Часть II - Проверка эксплойта
 
-  1. Copy and merge the `3ds` folder from the 3DSident `.zip` to your device's SD card
-  2. Reinsert your SD card into your 3DS
-  3. Use [Homebrew Launcher (SoundHax)](homebrew-launcher-(soundhax)) to launch the homebrew launcher on the device
-  4. Launch 3DSident
-  5. Verify that the following: 
+  1. Скопируйте папку `3ds` с заменой из `zip-архива` 3DSident в корень КП.
+  2. Вставьте карту памяти в 3DS
+  3. Запустите Homebrew launcher используя [Homebrew Launcher (SoundHax)](homebrew-launcher-(soundhax)).
+  4. Запустите 3DSident.
+  5. Убедитесь, что в программе следующие значения совпадают: 
   * **Kernel version**: 2.50-11
   * **FIRM version**: 2.50-11
-  * If either of these do not display the versions above, something has gone wrong and you should try again from the beginning
+  * Если у вас отображаются другие значения, значит вы где-то допустили ошибку. Проделайте все с самого начала.
 
-Your version number will *not* have changed in the settings. {: .notice--info}
+Версия прошивки, указанная в настройках *не* изменится. {: .notice--info}
 
-Continue to [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher)). {: .notice--primary}
+Переходите к запуску [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher)) {: .notice--primary}
