@@ -10,9 +10,9 @@ Isto é uma implementação, que funciona correntemente, do exploit "partições
 
 Isto funciona para todas as consolas (New 3DS, Old 3DS e 2DS).
 
-#### What you need
+#### O que precisa
 
-* Your NAND image extracted using your [hardmod](https://gbatemp.net/threads/414498/)
+* A sua imagem NAND extraída com um [hardmod](https://gbatemp.net/threads/414498/)
 * The latest version of [autofirm](https://github.com/Plailect/autofirm/archive/master.zip)
 * The latest release of [3DSident](https://github.com/joel16/3DSident/releases/latest)
 * The NFIRM `.zip` corresponding to your device and version: 
