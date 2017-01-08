@@ -16,25 +16,25 @@ Die Dateigrößen Vorraussetzungen existieren, weil die injezierte DSiWare und d
 
 {% capture notice-list %}
 
-    Kompatible DSiWare Spiele müssen eine bestimme Dateigröße einhalten, welche wie folgt lautet:
+    Kompatible DSiWare Spiele müssen bestimme Dateigrößen einhalten, welche wie folgt lauten:
     
     + USA DSiWare
       + Nutzt sudokuhax
-      + `.app` mit einer Größe von >= 3,457,024 bytes
-      + `public.sav` mit einer Größe von >= 67,584 bytes
+      + `.app` ist >= 3,457,024 bytes
+      + `public.sav` ist >= 67,584 bytes
     
     + EUR DSiWare
       + Nutzt exidiahax (temporär)
-      + `.app` mit einer Größe von >= 9,628,672 bytes
-      + `public.sav` mit einer Größe von >= 113,908 bytes
-      + `public.sav` mit einer Größe von <= 131,072 bytes
-      + Wenn `public.sav` nicht kleiner oder gleich 128KB Groß ist, wird exidia diesen Speicherstand nicht laden
+      + `.app` ist >= 9,628,672 bytes
+      + `public.sav` ist >= 113,908 bytes
+      + `public.sav` ist <= 131,072 bytes
+      + Wenn `public.sav` nicht kleiner oder gleich 128KB groß ist, wird Legends of Exidia diesen Speicherstand nicht laden
     
     + JPN DSiWare
       + Nutzt 4swordshax (temporär)
-      + `.app` size of >= 14,131,200 bytes
-      + `public.sav` size of == 16,384 bytes
-      + If `public.sav` is not exactly 16KB, 4swords will delete it
+      + `.app` ist >= 14,131,200 bytes
+      + `public.sav` ist == 16,384 bytes
+      + Wenn `public.sav` nicht genau 16KB groß ist, wird FourSwords es löschen
     
 
 {% endcapture %}
