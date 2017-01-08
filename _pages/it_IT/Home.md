@@ -46,10 +46,10 @@ I benefici dell'uso dell'arm9loaderhax rispetto metodi preesistenti per l'avvio 
 + [Salvare, modificare e ripristinare](https://gbatemp.net/threads/release-jks-savemanager-homebrew-cia-save-manager.413143/) salvataggi per molti giochi
 + Giocare a giochi per vecchie piattaforme usando emulatori, RetroArch o altri emulatori a sé stanti. (Funzionano meglio con un New Nintendo 3DS)
 + Installare titoli homebrew sul tuo sistema e farli apparire sul tuo menu HOME
-+ Creare un backup delle tue cartucce in un formato che permette di giocarle senza cartuccia
-+ Solo per il New 3DS: fare dei live streaming del tuo gameplay sul tuo PC in wireless utilizzando NTR CFW
++ Creare un backup delle tue cartucce di gioco in un formato che permetta di giocare senza cartuccia
++ Solo per il New 3DS: fare dei live streaming sul tuo PC via wireless tramite NTR CFW
 + Utilizzare molte vecchie flashcard per il Nintendo DS che sono state bloccate tempo fa o che non hanno mai funzionato su un Nintendo 3DS
-+ Aggiornare all'ultima versione di sistema in sicurezza senza doversi preoccupare di perdere l'accesso all'homebrew
++ Aggiornare all'ultima versione di sistema in sicurezza senza doversi preoccupare di perdere l'accesso agli homebrew
 
 ## Cosa mi serve sapere prima di cominciare?
 
@@ -58,6 +58,6 @@ I benefici dell'uso dell'arm9loaderhax rispetto metodi preesistenti per l'avvio 
 + Questa guida è applicabile a New 3DS, Old 3DS e 2DS di tutte le regioni e con firmware 11.2.0 o minore *(ad eccezione di CHN / TWN)*.
 + Se tutto va secondi i piani, non perderai alcun dato e manterrai tutto ciò che era installato nella console (per cui giochi, NNID, salvataggi, ecc verranno tutti conservati).
 + **Mantieni la console in carica mentre segui la guida per evitare la perdita di dati o danni derivanti dall'improvviso spegnimento della console!**
-+ Your SD card should be [MBR, not GPT](http://www.howtogeek.com/245610/) (the SD card that comes with the device will be MBR by default).
-+ If you need to format a brand new SD card, you can use [`guiformat`](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) and set to an Allocation Unit Size of 32K.
-+ The 2DS is essentially identical to the Old 3DS in terms of software, and that any steps which say "Old 3DS" also apply to 2DS.
++ La tua scheda SD dovrebbe essere [MBR e non GPT](http://www.howtogeek.com/245610/) (la scheda SD preconfezionata con la console è MBR di default).
++ Se devi formattare una nuova scheda SD, puoi usare [`guiformat`](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) e impostare Allocation Unit Size a 32K.
++ Il 2DS è essenzialmente identico a un Old 3DS in termini di software, per cui tutti i passi che fanno riferimento a un "Old 3DS" si applicano anche ai 2DS.
