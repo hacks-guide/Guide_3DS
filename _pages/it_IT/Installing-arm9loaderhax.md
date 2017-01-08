@@ -61,12 +61,12 @@ Durante la guida verranno anche configurati i seguenti programmi:
   1. **Se esiste, copia la cartella `/files9/` dalla tua scheda SD in una posizione sicura sul tuo computer e in ulteriori locazioni (come un archivio online); i file al suo interno potrebbero salvarti dalla perdita di tutti i tuoi dati nel caso qualcosa vada storto**
   2. Se assente, crea una nuova cartella rinominandola `cias` nella root della tua scheda SD
   3. **Se presente, elimina la cartella `a9lh` dalla root della tua scheda SD** 
-    * **If you accidentally install arm9loaderhax using another device's `OTP.bin`, you will BRICK!**
-  4. Delete the `3ds` folder from the root of your SD card if it exists
-  5. **Copy *the contents of* the `starter.zip` to the root of your SD card** 
-    * This will include a brand new `3ds` folder to replace the one you just deleted
-  6. Copy *the contents of* the SafeA9LHInstaller `.7z` to the root of your SD card
-  7. **Copy the `a9lh` folder from the data_input `.zip` to the root of your SD Card**
+    * **Se dovessi accidentalmente installare l'arm9loaderhax utilizzando il file `OTP.bin` di un altro dispositivo, BRICKERESTI LA CONSOLE!**
+  4. Se presente, elimina la cartella `3ds` dalla root della tua scheda SD
+  5. **Copia *il contenuto* del file `starter.zip` nella root della tua scheda SD** 
+    * Include una cartella chiamata `3ds` per rimpiazzare quella appena eliminata
+  6. Copia *il contenuto* del file `.7z` del SafeA9LHInstaller nella root della tua scheda SD
+  7. **Copia la cartella `a9lh` dal file `.zip` di data_input nella root della tua scheda SD**
   8. **Copy *the contents of* the arm9loaderhax release `.7z` to `a9lh` folder on your SD card**
   9. Copy `hblauncher_loader.cia` from the hblauncher_loader `.zip` to the `/cias/` folder on your SD card
  10. Copy `lumaupdater.cia` from the Luma3DS Updater `.zip` to the `/cias/` folder on your SD card
