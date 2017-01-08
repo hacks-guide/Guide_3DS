@@ -6,7 +6,7 @@ title: "Credits" permalink: /credits.html lang: en_US ref: credits
 
 **Ευχαριστώ ιδιαίτερα όλο το [#Cakey στο Freenode](http://webchat.freenode.net/?channels=%23Cakey) που ήταν υπέροχοι!** {: .notice--primary}
 
-If I forgot you here, contact me and I'll add your name. {: .notice}
+Εάν σας ξέχασα, επικοινωνήστε μαζί μου ώστε να προσθέσω το όνομά σας. {: .notice}
 
 + AHP_Person
 + Al3x_10m
