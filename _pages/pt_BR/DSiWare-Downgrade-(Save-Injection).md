@@ -12,7 +12,7 @@ Prepare-se para esperar entre 20 minutos (New 3DS) a uma hora (Old 3DS). Slowhax
 
 Isto é uma implementação, que funciona correntemente, do exploit "partições FIRM known-plaintext", explicado [aqui](https://www.3dbrew.org/wiki/3DS_System_Flaws). {: .notice--info}
 
-Your DSiWare's save will be backed up before getting replaced by the hacked save. {: .notice--info}
+O seu save DSiWare será copiado antes de ser substituído por um save hackeado. {: .notice--info}
 
 #### What you need
 
