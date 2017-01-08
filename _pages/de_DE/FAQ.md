@@ -25,8 +25,8 @@ title: "FAQ" permalink: /faq.html lang: en_US ref: faq
 <a name="faq_homebrew" />**F:** *Kann ich coole Homebrews und Emulatoren damit abspielen?*  
 **A:** Ja! Custom Firmware not only enables the Homebrew Launcher, but it also will give you hacks on all versions, which means you keep it forever, even with updates.
 
-<a name="faq_regionfree" />**Q:** *Can I use this to play games from other regions?*  
-**A:** Luma3DS supports Region Free patches, which enables users to install games from any region without any extra modification or steps.
+<a name="faq_regionfree" />**Q:***Kann ich Spiele aus anderen Regionen hiermit spielen?*  
+**A:** Luma3DS besitzt "Region Free Patches", welche dir erlauben, ohne weitere Umstände, Spiele zu installieren, welche aus anderen Regionen kommen.
 
 <a name="faq_updates" />**F:** *Ist es sicher CFW SysNAND zu updaten?*  
 **A:** Ja. Das ist sicher. Hört auf danach zu fragen.
