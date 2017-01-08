@@ -10,7 +10,7 @@ title: "Get Started (New 3DS)" permalink: /get-started-(new-3ds).html lang: en_U
 
 Поля "Начиная с" и "До" включают в себя диапазон между описанными версиями. Это значит, что ряд "начиная с 9.0.0 до 9.2.0" включает в себя 9.0.0, 9.1.0, и 9.2.0.
 
-В случае прошивки "5.0.0-0U", например, необходимо выбрать ячейку на пересечении колонки "Без Браузера" и ряда "начиная с 5.0.0 до 5.1.0", так как версия системы находится в этом диапазоне и в системе не установлен браузер. {% endcapture %}
+В случае прошивки "5.0.0-0U", например, необходимо выбрать ячейку на пересечении колонки "Без браузера" и ряда "начиная с 5.0.0 до 5.1.0", так как версия системы находится в этом диапазоне и в системе не установлен браузер. {% endcapture %}
 
 <div class="notice--info">{{ notice-1 | markdownify }}</div>
 
@@ -25,15 +25,15 @@ title: "Get Started (New 3DS)" permalink: /get-started-(new-3ds).html lang: en_U
     <tr>
       <th style="text-align: center">Начиная с</th>
       <th style="text-align: center">До</th>
-      <th style="text-align: center">No Browser</th>
-      <th style="text-align: center">Browser</th>
+      <th style="text-align: center">Без браузера</th>
+      <th style="text-align: center">С браузером</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align: center">8.1.0</td>
       <td style="text-align: center">8.1.0</td>
-      <td style="text-align: center" colspan="2"><a href="ntr-and-cubic-ninja">NTR and Cubic Ninja</a></td>
+      <td style="text-align: center" colspan="2"><a href="ntr-and-cubic-ninja">NTR и Cubic Ninja</a></td>
     </tr>
     <tr>
       <td style="text-align: center">9.0.0</td>
