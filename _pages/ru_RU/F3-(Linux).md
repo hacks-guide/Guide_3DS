@@ -8,7 +8,7 @@ title: "F3 (Linux)" permalink: /f3-(linux).html lang: en_US ref: f3-(linux)
 
 В зависимости от размера Вашей SD-карты и скорости Вашего компьютера этот процесс может занять до нескольких часов! {: .notice--info}
 
-Этот раздел предназначен для пользователей Linux. Если у Вас не Linux, воспользуйтесь инструкциями для [H2testw (windows)](h2testw-(windows)) или [F3X (Mac)](f3x-(mac)). {: .notice--info}
+Этот раздел предназначен для пользователей Linux. Если у Вас не Linux, воспользуйтесь инструкциями для [H2testw (Windows)](h2testw-(windows)) или [F3X (Mac)](f3x-(mac)). {: .notice--info}
 
 #### Что понадобится
 
@@ -51,8 +51,8 @@ title: "F3 (Linux)" permalink: /f3-(linux).html lang: en_US ref: f3-(linux)
         Average Reading speed: 9.42 MB/s
         
 
-If the test shows the result `Data LOST: 0.00 Byte (0 sectors)` your SD card is good and you can delete all `.h2w` files on the SD card {: .notice--success}
+Если в результате тестирования Вы видите `Data LOST: 0.00 Byte (0 sectors)`, Ваша карта в порядке, и теперь Вы можете удалить все файлы с расширением `.h2w` с Вашей SD-карты {: .notice--success}
 
-If the test shows any other results, your SD card may be corrupted or damaged and you may have to replace it! {: .notice--danger}
+При любых других выходных данных знайте, что Ваша карта может быть повреждена и её следует заменить! {: .notice--danger}
 
-Return to [Get Started](get-started) {: .notice--primary}
+Вернитесь к [началу](get-started) {: .notice--primary}
