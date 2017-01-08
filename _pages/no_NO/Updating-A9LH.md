@@ -16,7 +16,7 @@ If you are using a payload that does not init the screen on its own (such as Boo
 
 The versions of data_input only refer to revisions of the `.zip` to be compatible with different installer versions, and are *not* the same thing as updating a9lh itself (the payload files). They make no practical difference beyond the installation process. {: .notice--info}
 
-These steps will also update your various payloads and the AES key database. {: .notice--success}
+Disse trinnene vil også oppdatere dine ulike nyttelastene og AES nøkkel databasen. {: .notice--success}
 
 #### Det du trenger
 
@@ -29,7 +29,7 @@ These steps will also update your various payloads and the AES key database. {: 
 
 #### Instruksjoner
 
-**For all of these instructions, OVERWRITE any existing files on your SD card.**
+**For alle disse instruksjonene OVERSKRIV alle eksisterende filer på SD-kortet.**
 
 ##### Seksjon I - Forarbeid
 
