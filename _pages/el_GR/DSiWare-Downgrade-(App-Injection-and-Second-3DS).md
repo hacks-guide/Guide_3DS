@@ -4,7 +4,7 @@ title: "DSiWare Downgrade (App Injection and Second 3DS)" permalink: /dsiware-do
 
 * * *
 
-If you are between versions 11.0.0 and 11.2.0, you can follow this guide to downgrade your NATIVE_FIRM using DSiWare and a second 3DS which has already has a Custom Firmware installed on it in order to dump and restore your NAND. {: .notice}
+Εάν βρίσκεστε μεταξύ των εκδόσεων 11.0.0 και 11.2.0, μπορείτε να ακολουθήσετε αυτόν τον οδηγό έτσι ώστε να υποβαθμίσετε το NATIVE_FIRM σας χρησιμοποιώντας τίτλους DSiWare και ένα δεύτερο 3DS το οποίο έχει ήδη Custom Firmware εγκατεστημένο, έτσι ώστε να αντιγράψουμε και να επαναφέρουμε το NAND σας. {: .notice}
 
 If you are below 11.2.0 on either device, then you should do the ctr-httpwn steps (when prompted) on each device under 11.2.0 to allow you to System Transfer with them. {: .notice--info}
 
