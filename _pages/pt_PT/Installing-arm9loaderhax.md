@@ -4,7 +4,7 @@ title: "Installing arm9loaderhax" permalink: /installing-arm9loaderhax.html lang
 
 * * *
 
-The final Step of this guide is to install arm9loaderhax and setup Luma3DS to run just milliseconds into the boot. This is accomplished by using SafeA9LHInstaller by [AuroraWright](https://github.com/AuroraWright/). {: .notice}
+O passo final deste guia é instalar o arm9loaderhax e configurar o Luma3DS para correr em apenas alguns milisegundos, quando liga a consola. This is accomplished by using SafeA9LHInstaller by [AuroraWright](https://github.com/AuroraWright/). {: .notice}
 
 This will install [AuroraWright's Fork](https://github.com/AuroraWright/arm9loaderhax) of arm9loaderhax. {: .notice--info}
 
