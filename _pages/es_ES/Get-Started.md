@@ -4,7 +4,7 @@ title: "Get Started" permalink: /get-started.html lang: en_US ref: get-started
 
 * * *
 
-The colors of the devices in the image may vary, but note the button placement and features of each device carefully to ensure you select the correct one. {: .notice}
+Los colores de los dispositivos pueden variar, pero nota que las posiciones de los botones y sus caracteristicas de cada uno para asegurar que escojas el correcto {: .notice}
 
 Click the image of your device to take you to the appropriate page. {: .notice--primary}
 
