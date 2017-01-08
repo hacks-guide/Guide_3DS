@@ -6,7 +6,7 @@ title: "Troubleshooting" permalink: /troubleshooting.html lang: en_US ref: troub
 
 Se non riesci ad avviare il tuo 3DS, controlla la sezione rilevante per il tuo problema e segui le istruzioni indicate. Una volta trovata una soluzione, potrai riprendere con la guida principale (Questa sezione è particolarmente lunga, prova a cercare il tuo problema utilizzando Ctrl+F.) {: .notice--primary}
 
-**Se non riesci comunque a risolvere il tuo problema e hai bisogno di supporto, incolla il contenuto dei file .log relativi al tuo problema o alla parte della guida a cui sei arrivato dalla root della tua scheda SD in [Gist](https://gist.github.com/), poi prima di chiedere aiuto prepara una descrizione dettagliata del tuo problema e cosa hai tentato per risolverlo.** {: .notice--info}
+**Se non riesci comunque a risolvere il tuo problema e hai bisogno di supporto, incolla il contenuto dei file .log relativi al tuo problema o alla parte della guida a cui sei arrivato dalla root della tua scheda SD in [Gist](https://gist.github.com/), poi prima di chiedere aiuto prepara una descrizione dettagliata del tuo problema e di cosa hai tentato per risolverlo.** {: .notice--info}
 
 ## <a name="twl_broken" />Software DS / DSi non funzionante dopo aver completato la guida
 
@@ -93,38 +93,38 @@ Questo problema è causato dalla pessima implementazione da parte di Gateway di 
  17. Ritorna a [Installare l'arm9loaderhax](installing-arm9loaderhax) e ri-esegui la sezione "Inject di FBI"
  18. Se ancora non dovesse funzionare, riporta i file con estensione in uppercase nella cartella `content`, poi muovi i file con estensione in lowercase nella cartella `newdir`, quindi ritorna a [Installare l'arm9loaderhax](installing-arm9loaderhax) e ri-esegui la sezione "Inject di FBI"
 
-## <a name="ts_browser" />A browser based exploit is not working
+## <a name="ts_browser" />Un exploit basato sul browser di sistema non funziona
 
-Browser based exploits (such as browserhax or 2xrsa) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps
+Questo tipo di exploit (come browserhax o 2xrsa) è instabile e tende a crashare piuttosto spesso, ma i problemi potrebbero venire risolti con i seguenti passaggi
 
-  1. Open the browser, then open the browser settings 
-      1. Scroll to the bottom and Initialize Savedata (it also may be called Clear All Save Data)
-      2. Try the exploit again
+  1. Apri il Browser Internet, quindi vai su Impostazioni 
+      1. Clicca il pulsante "Elimina tutti i dati salvati"
+      2. Prova di nuovo ad eseguire l'exploit
 
-## <a name="ts_safe_a9lh" />System boots directly SafeA9LHInstaller
+## <a name="ts_safe_a9lh" />Il sistema si avvia in SafeA9LHInstaller
 
-You copied the wrong `arm9loaderhax.bin` file to your SD card (you were only supposed to copy the `3ds` folder and `SafeA9LHInstaller.dat` file from the SafeA9LHInstaller zip)
+Hai copiato il file `arm9loaderhax.bin` sbagliato sulla tua scheda SD (dovevi solamente copiare la cartella `3ds` e il file `SafeA9LHInstaller.dat` dall'archivio zip di SafeA9LHInstaller)
 
-  1. Use the correct `arm9loaderhax.bin` 
-      1. Copy `arm9loaderhax.bin` from the Luma3DS `.zip` to the root of your SD card
-      2. Reboot holding select and continue
+  1. Usa il file `arm9loaderhax.bin corretto` 
+      1. Copia `arm9loaderhax.bin` dall'archivio `.zip` di Luma3DS sulla root della tua scheda SD
+      2. Riavvia tenendo premuto (Select), poi prosegui
 
-## <a name="ts_safe_a9lh_screen" />SafeA9LHInstaller shows a glitched screen
+## <a name="ts_safe_a9lh_screen" />SafeA9LHInstaller mostra una schermata glitchata
 
-This happens occasionally, but the reason is unknown. The buttons will still work, but the screen will be glitched looking
+A volte succede, ma non ne si conosce la causa. Il pulsanti funzionano comunque, tuttavia lo schermo sarà glitchato
 
-  1. Follow instructions as normal 
-      1. Press (Select) and arm9loaderhax will be installed
-      2. The console will reboot 
-        * If the console does not reboot, wait 10 seconds, then power off your 3DS by holding down the power button
+  1. Segui le istruzioni normalmente 
+      1. Premi (Select) per installare arm9loaderhax
+      2. La console si riavvierà 
+        * Se la console non dovesse riavviarsi, aspetta 10 secondi, quindi spegni il tuo 3DS tenendo premuto il pulsante di accensione
 
-## <a name="ts_steelhax" />After System Transfering steelhax, it crashes to a black screen on *the target 3DS*
+## <a name="ts_steelhax" />Dopo aver trasferito steelhax tramite Trasferimento Dati, il *3DS ricevente* crasha mostrando una schermata nera
 
-This is because you selected the wrong version in the steelhax installer.
+Capita perché hai selezionato la versione sbagliata nell'installer di steelhax.
 
-  1. Download the [otherapp payload](https://smealum.github.io/3ds/#otherapp) corresponding to **the target 3DS's** version 
-    * Ignore the NFIRM being downgraded
-    * Use the version displayed in settings
+  1. Scarica il [payload otherapp](https://smealum.github.io/3ds/#otherapp) corrispondente alla versione di sistema del **3DS ricevente** 
+    * Ignora il downgrade del NFIRM
+    * Utilizza la versione visualizzata nelle impostazioni
   2. Rename the otherapp payload to `steelhax_payload.bin`
   3. Copy it `steelhax_payload.bin` to the root of **the target 3DS's** SD Card 
     * Overwrite any existing files
@@ -143,10 +143,10 @@ This is because you selected the wrong version in the steelhax installer.
   7. On **the target 3DS**, go to System Settings, "Data Management", "DSiWare", then copy your DSiWare game to the system
   8. Return your SD cards to normal, then continue with the DSiWare Downgrade
 
-## <a name="ts_d9_backup" />Decrypt9 or Hourglass9 won't restore / can't find my NAND backup
+## <a name="ts_d9_backup" />Decrypt9 o Hourglass9 non riesce a ripristinare/trovare il mio backup della NAND
 
-  1. Make sure you do not have any folder named "Decrypt9" on **the root** of your SD card
-  2. Try checking your SD card for errors using [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), or [F3X (Mac)](f3x-(mac))
+  1. Assicurati che non hai nessuna cartella chiamata "Decrypt9" nella **root** della tua scheda SD
+  2. Prova a controllare se ci sono errori nella tua scheda SD utilizzando [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), o [F3X (Mac)](f3x-(mac))
   3. Try backing up your SD card files, then formatting it and copying them back
   4. Try a different SD card
 
