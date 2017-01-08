@@ -4,21 +4,21 @@ title: "Get Started (New 3DS)" permalink: /get-started-(new-3ds).html lang: en_U
 
 * * *
 
-Währe die passende Methode für deine Version aus der unteren Tabelle {: .notice--primary}
+Wähle die passende Methode für deine Version aus der unteren Tabelle {: .notice--primary}
 
-{% capture notice-1 %} Die ersten zwei Spalten der Tabelle definieren die letzte Nummer deiner Version (welche passend zu der Browser-Version auf deinem System ist). Wenn die Version mit -0 endet, hast du keinen Browser, während jede Nummer über -0 zeigt, dass du einen Browser installiert hast.
+{% capture notice-1 %} Die ersten zwei Spalten der Tabelle beziehen sich auf die letzte Nummer deiner Firmware (welche in Verbindung mit der Browser-Version deiner Konsole steht). Wenn die Version mit -0 endet, hast du keinen Browser, während jede Nummer über -0 zeigt, dass ein Browser installiert ist.
 
-Die "Von" und "Bis" Felder sind inklusive. Dies bedeutet, dass zum Beispiel die Spalte "von 9.0.0 bis 9.2.0" die Versionen 9.0.0, 9.1.0 und 9.2.0 meint.
+Die "Von" und "Bis" Felder sind einschließlich. Dies bedeutet, dass zum Beispiel die Zeile "von 9.0.0 bis 9.2.0" die Versionen 9.0.0, 9.1.0 und 9.2.0 beinhaltet.
 
-In dem Beispiel von "5.0.0-0U" würdest du "Kein Browser" und die Spalte "5.0.0 bis 5.1.0" folgen da das System auf einer Version ist, die in diesem Bereich ist und keinen Browser hat. {% endcapture %}
+In dem Beispiel von "5.0.0-0U" würdest du "Kein Browser" und "5.0.0 bis 5.1.0" folgen, da das System auf einer Firmware läuft die in diesem Bereich liegt, und keinen Browser hat. {% endcapture %}
 
 <div class="notice--info">{{ notice-1 | markdownify }}</div>
 
-For all versions you can [Cart Update](cart-update) to a higher version in the same column to follow its instructions instead. {: .notice--warning}
+Du kannst jede Firmware mit Hilfe eines [Cart Updates](cart-update) zu einer höheren Firmware updaten, um dessen Anleitung zu folgen. {: .notice--warning}
 
-If you updated with a game cart containing the version 9.9.0 or above *(meaning that you have a version on 9.9.0 or above, but your browser is on -25 or lower, such as 10.2.0-24)*, your browser was removed and you will need to use the "No Browser" column. {: .notice--warning}
+Wenn du mit einer Cartridge auf 9.9.0 oder höher geupdatet hast*(gemeint ist, dass du eine Firmware auf 9.9.0 oder höher besitzt, dein Browser allerdings die Versionsnummer -25 oder niedriger aufweist, sowie 10.2.0-24)*, wurde dein Browser entfernt und du musst mit der "Kein Browser" Anleitung fortfahren. {: .notice--warning}
 
-Die Systemversion kannst du in der unteren rechten Ecke des oberen Bildschirms in der Einstellungen App finden. {: .notice--success}
+Die Firmwareversion kannst du in der unteren rechten Ecke des oberen Bildschirms in den Systemeinstellungen finden. {: .notice--success}
 
 <table>
   <thead>
