@@ -44,20 +44,20 @@ I benefici dell'uso dell'arm9loaderhax rispetto metodi preesistenti per l'avvio 
 + Usare dei "Rom HACK" per i giochi che possiedi
 + Catturare degli screenshot di applicazioni e di giochi
 + [Salvare, modificare e ripristinare](https://gbatemp.net/threads/release-jks-savemanager-homebrew-cia-save-manager.413143/) salvataggi per molti giochi
-+ Giocare a giochi per vecchi sistemi usando vari emulatori, come RetroArch o altri emulatori a sé stanti (Funzionano meglio con un New Nintendo 3DS)
-+ Install homebrew titles to your system, and have them appear on your HOME Menu
-+ Dump your game cards to a format you can install, and play them without needing the card
-+ New 3DS only: stream live gameplay to your PC wirelessly with NTR CFW
-+ Run many old Nintendo DS flash carts that were blocked long ago or never worked on Nintendo 3DS
-+ Safely update to the latest system version without fear of losing access to homebrew
++ Giocare a giochi per vecchie piattaforme usando emulatori, RetroArch o altri emulatori a sé stanti. (Funzionano meglio con un New Nintendo 3DS)
++ Installare titoli homebrew sul tuo sistema e farli apparire sul tuo menu HOME
++ Creare un backup delle tue cartucce in un formato che permette di giocarle senza cartuccia
++ Solo per il New 3DS: fare dei live streaming del tuo gameplay sul tuo PC in wireless utilizzando NTR CFW
++ Utilizzare molte vecchie flashcard per il Nintendo DS che sono state bloccate tempo fa o che non hanno mai funzionato su un Nintendo 3DS
++ Aggiornare all'ultima versione di sistema in sicurezza senza doversi preoccupare di perdere l'accesso all'homebrew
 
-## What do I need to know before starting?
+## Cosa mi serve sapere prima di cominciare?
 
-+ **Before beginning the guide, you must know the risks of 3DS hacking: EVERY time you modify your system, there is always the potential for an UNRECOVERABLE brick. They're rare, but still a possibility so make sure you follow ALL directions EXACTLY.**
-+ If you have already hacked your 3DS before to get an EmuNAND setup, and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, you should follow all instructions and restore your existing EmuNAND when prompted once you reach [Installing arm9loaderhax](installing-arm9loaderhax).
-+ This guide will work on New 3DS, Old 3DS, and 2DS in all regions on firmware 11.2.0 or below *(except CHN / TWN)*.
-+ If everything goes according to plan, you will lose no data and end up with everything that you started with (games, NNID, saves, etc will be preserved).
-+ **Keep the device plugged in and charged throughout the entire process to avoid data loss or damage from an unexpected power-off!**
++ **Prima di seguire la guida, è necessario che tu conosca il rischio dell'hacking di un 3DS: OGNI volta che si modifica il sistema c'è sempre il rischio di un brick IRREVERSIBILE. È raro ma può sempre capitare, quindi assicurati di seguire la guida SOTTO OGNI ASPETTO E ISTRUZIONE.**
++ Se hai già modificato in precedenza il tuo 3DS per configurare un EmuNAND e vorresti spostare il contenuto dell'EmuNAND nel nuovo CFW SysNAND, segui tutte le istruzioni per ripristinare l'EmuNAND una volta arrivato alla sezione [Installare l'arm9loaderhax](installing-arm9loaderhax).
++ Questa guida è applicabile a New 3DS, Old 3DS e 2DS di tutte le regioni e con firmware 11.2.0 o minore *(ad eccezione di CHN / TWN)*.
++ Se tutto va secondi i piani, non perderai alcun dato e manterrai tutto ciò che era installato nella console (per cui giochi, NNID, salvataggi, ecc verranno tutti conservati).
++ **Mantieni la console in carica mentre segui la guida per evitare la perdita di dati o danni derivanti dall'improvviso spegnimento della console!**
 + Your SD card should be [MBR, not GPT](http://www.howtogeek.com/245610/) (the SD card that comes with the device will be MBR by default).
 + If you need to format a brand new SD card, you can use [`guiformat`](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) and set to an Allocation Unit Size of 32K.
 + The 2DS is essentially identical to the Old 3DS in terms of software, and that any steps which say "Old 3DS" also apply to 2DS.
