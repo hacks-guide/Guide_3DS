@@ -67,26 +67,26 @@ Diese Sicherheitskopie kann nur auf dieser NAND benutzt werden. Falls du deinen 
   3. Warte 
   * Auf dem New 3Ds wird dies ungefähr 20 Minuten dauern (durch einen Fehler kann dies auf manchen Systemen so lange dauern wie bei einem Old 3DS)
   * Auf dem Old 3DS wird dies ungefähr eine Stunde dauern
-  4. Once it's done, press (Start) to exit
-  5. Launch 3ds_dsiwarehax_installer
-  6. Select the DSiWare game you want to install the exploit on
-  7. Once it's done, press (A) to exit
-  8. Press (Start) to open the homebrew launcher exit menu
-  9. Press (A) to exit
+  4. Sobald es fertig ist, drücke (Start) um das Menü zu verlassen
+  5. Starte 3ds_dsiwarehax_installer
+  6. Starte das DSiWare-Spiel, auf dem du den Exploit installieren möchtest
+  7. Sobald das erledigt ist, drücke den (A) Knopf um zurückzukehren
+  8. Drücke (Start) um das Menü Verlassen-Menü des Homebrew Launcher zu öffnen
+  9. Drücke (A) zum beenden
 
-##### Section IV - Backing up NFIRM
+##### Sektion IV - Sicherheitskopie der NFIRM erstellen
 
-  1. Launch your DSiWare game
-  2. Launch dgTool using your DSiWare game 
-  * **Fieldrunners**: Touch the 'Scores' button at the main menu
-  * **Legends of Exidia**: After pressing (A) or (Start) at the two title screens, select the first save slot and press continue
-  * **Guitar Rock Tour**: Scroll down and go to High-Scores -> Drums -> Easy
-  * **The Legend of Zelda: Four Swords (Anniversary Edition)**: Just start the game
-  * If your game does not have the hacked save file installed, restart from the beginning
-  3. Select "Dump f0f1" to backup your NFIRM 
-  * This will take a while
-  4. Make note of the NFIRM backup's location
-  5. Exit dgTool 
+  1. Starte dein DSiWare-Spiel
+  2. Starte dgTool durch dein DSiWare-Spiel 
+  * **Fieldrunners**: Berühre den "Ergebnisse" Knopf im Hauptmenü
+  * **Legends of Exidia**: Nachdem du (A) oder (Start) bei den zwei Startbildschirmen gedrückt hast, wähle den ersten Speicherstand und drücke fortfahren
+  * **Guitar Rock Tour**: Scrolle runter und navigier zu Highscores -> Schlagzeug -> Leicht
+  * **The Legend of Zelda: Four Swords (Anniversary Edition)**: Starte einfach das Spiel
+  * Falls dein Spiel nicht den gehackten Speicherstand installiert hat, fang von vorne an
+  3. Wähle "Dump f0f1" um dein NFIRM abzuspeichern 
+  * Dies wird eine Weile dauern
+  4. Notiere dir, wo deine NFIRM Sicherheitskopie gespeichert wurde
+  5. Beende dgTool 
   * You may have to force power off by holding the power button
   6. Put your SD card in your computer, then copy `F0F1_N3DS.bin` or `F0F1_O3DS.bin` (depending on your device) to a safe location 
   * Make backups in multiple locations
