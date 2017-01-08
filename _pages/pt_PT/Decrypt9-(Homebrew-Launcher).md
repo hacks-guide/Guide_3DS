@@ -8,7 +8,7 @@ Neste momento, por causa de um bug, para o safehax funcionar completamente, é n
 
 #### O que precisa
 
-* The latest release of [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/latest/)
+* A última versão do [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/latest/)
 * The latest fork of [safehax+fasthax](https://gbatemp.net/attachments/safehax-fasthax-cb6a1bc-zip.73592/)
 
 #### Instructions
