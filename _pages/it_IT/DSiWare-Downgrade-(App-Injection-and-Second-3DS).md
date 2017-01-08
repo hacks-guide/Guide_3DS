@@ -10,9 +10,9 @@ Se siete ad una versione inferiore alla 11.2.0 su una delle due console, dovrete
 
 Questa guida si basa su di una svista da parte della Nintendo che permette ai giochi DSiWare di leggere e scrivere sulla NAND.{: .notice--info}
 
-This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws). {: .notice--info}
+Utilizzeremo una falla, attualmente funzionante, denominata "FIRM partitions known-plaintext" [qui](https://www.3dbrew.org/wiki/3DS_System_Flaws) i dettagli{: .notice--info}
 
-This guide will assume the CFW 3DS is running arm9loaderhax and was setup with this guide, but will work (with slight modifications such as doing all SysNAND steps on EmuNAND) on systems running an EmuNAND. Note that the terms EmuNAND and RedNAND refer to slightly different implementations of [the same concept](http://3dbrew.org/wiki/NAND_Redirection). {: .notice--info}
+Questa guida dà per scontato che il CFW del 3DS abbia già arm9loaderhax e che la sua installazione sia stata eseguita tramite questa guida, ma può funzionare (eseguendo alcune modifiche, come fare tutti i passaggi SysNAND su EmuNAND) per console che sono attualmente su EmuNAND. Chiariamo che i termini EmuNAND e RedNAND si riferiscono ad un'interpretazione leggermente diversa [dello stesso concetto](http://3dbrew.org/wiki/NAND_Redirection). {: .notice--info}
 
 Your DSiWare's save will be backed up before getting replaced by the hacked save. {: .notice--info}
 
