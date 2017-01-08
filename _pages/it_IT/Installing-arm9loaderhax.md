@@ -4,7 +4,7 @@ title: "Installing arm9loaderhax" permalink: /installing-arm9loaderhax.html lang
 
 * * *
 
-L'ultimo passo di questa guida consiste nell'installare l'arm9loaderhax e nel setup di Luma3DS perché si avvii un istante dopo l'accensione della console. Verrà utilizzato il SafeA9LHInstaller di [AuroraWright](https://github.com/AuroraWright/). {: .notice}
+L'ultimo passo di questa guida consiste nell'installare l'arm9loaderhax e nella configurazione di Luma3DS affinché si avvii un istante dopo l'accensione della console. Verrà utilizzato il SafeA9LHInstaller di [AuroraWright](https://github.com/AuroraWright/). {: .notice}
 
 Verrà installata la [fork di AuroraWright](https://github.com/AuroraWright/arm9loaderhax) dell'arm9loaderhax. {: .notice--info}
 
@@ -20,43 +20,43 @@ Questo tipo di exploit è quasi il migliore che possa esistere in quanto è perm
 
 Il file `arm9loaderhax.bin` viene lanciato al termine del caricamento dalla NAND dell'arm9loaderhax stesso, e può essere un qualunque payload arm9 valido. Questo file può venir sostituito in qualunque momento, tuttavia Luma3DS permette il lancio di diversi payload arm9 con la pressione di determinati tasti durante l'avvio della console.
 
-In this case, we use Luma3DS by [AuroraWright](https://github.com/AuroraWright/) to boot a patched SysNAND directly, allowing us to completely bypass the need for any kind of EmuNAND, vastly simplifying the usage of a hacked 3DS in addition to saving SD card space.
+In questo caso, useremo il Luma3DS di [AuroraWright](https://github.com/AuroraWright/) per avviare direttamente una SysNAND patchata, bypassando del tutto il bisogno di una EmuNAND. Questo semplifica l'uso di un 3DS hackato oltre a risparmiare spazio della scheda SD.
 
-Once arm9loaderhax is installed and Luma3DS is setup with the correct options, we then restore our previous backup.
+Al termine dell'installazione dell'arm9loaderhax, e del setup di Luma3DS con le corrette impostazioni, verrà ripristinato il backup precedentemente creato.
 
-During this process, we also setup programs such as the following:
+Durante la guida verranno anche configurati i seguenti programmi:
 
-* **FBI** *(installs CIA formatted games and applications)*
-* **Luma3DS Updater** *(updates our CFW installation easily)*
-* **Hourglass9** *(multipurpose tool which can do NAND and cartridge functions)*
+* **FBI** *(permette l'installazione di giochi ed applicazioni in formato CIA)*
+* **Luma3DS Updater** *(aggiorna con semplicità il nostro CFW così installato)*
+* **Hourglass9** *(applicazione multifunzione per gestire cartucce di gioco e la NAND)*
 
-#### What you need
+#### Requisiti
 
 * [`aeskeydb.bin`](magnet:?xt=urn:btih:18b3a17f78e2376e05feaa150749d9fd689b25dc&dn=aeskeydb.bin&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 * [`fbi-2.4.2-injectable.zip`](magnet:?xt=urn:btih:f978b4cf5eda72823240b9c649f3fd2940a9f525&dn=fbi-2.4.2-injectable.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 * [`data_input_v3.zip`](magnet:?xt=urn:btih:a1195c9f7ab650fa7c7bf020b51fc19ea8d9440c&dn=data%5Finput%5Fv3.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
-* The latest fork of [SafeA9LHInstaller](https://github.com/Plailect/SafeA9LHInstaller/releases/latest) *(the `.7z` file)*
-* The latest release of [arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(the `.7z` file)*
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(the `.7z` file)*
-* The latest release of [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
-* The latest release of [Hourglass9](https://github.com/d0k3/Hourglass9/releases/latest)
-* The latest release of [Luma3DS Updater](https://github.com/Hamcha/lumaupdate/releases/latest)
-* The latest release of [DspDump](https://github.com/Cruel/DspDump/releases/latest)
-* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/)
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* The Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
+* L'ultima fork del [SafeA9LHInstaller](https://github.com/Plailect/SafeA9LHInstaller/releases/latest) *(il file `.7z`)*
+* L'ultima versione dell'[arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(il file `.7z`)*
+* L'ultima versione di [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(il file `.7z`)*
+* L'ultima versione di [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
+* L'ultima versione di [Hourglass9](https://github.com/d0k3/Hourglass9/releases/latest)
+* L'ultima versione di [Luma3DS Updater](https://github.com/Hamcha/lumaupdate/releases/latest)
+* L'ultima versione di [DspDump](https://github.com/Cruel/DspDump/releases/latest)
+* L'ultima versione di [FBI](https://github.com/Steveice10/FBI/releases/)
+* L'ultima versione di [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* L'Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
 
-#### Instructions
+#### Istruzioni
 
-##### Section I - Prep work
+##### Sezione I - Preparazione
 
-{% capture notice-5 %} **Ensure you are using an SD card that is not corrupted!**
+{% capture notice-5 %} **Assicurati di utilizzare una scheda SD non corrotta!**
 
-**If you use a corrupted SD card without fixing it, you may BRICK!**
+**Se dovessi utilizzare una scheda SD corrotta senza averla prima riparata, potresti BRICKARE la console!**
 
-**If you think your SD card may be corrupted, check your SD card for errors using [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), or [F3X (Mac)](f3x-(mac))!** {% endcapture %}
+**Se ritieni che la tua scheda SD possa essere corrotta, controlla la presenza di errori utilizzando [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), o [F3X (Mac)](f3x-(mac))!** {% endcapture %}
 
-<div class="notice--danger">{{ notice-5 | markdownify }}</div>
+<div class="notice--danger">{ notice-5 | markdownify }</div>
 
   1. **If it exists, copy the `/files9/` folder on your SD card to a safe location on your computer and back it up to multiple locations (such as online file storage); the files inside could save you from total data loss if you break your system**
   2. Create a folder named `cias` on the root of your SD card if it does not already exist
