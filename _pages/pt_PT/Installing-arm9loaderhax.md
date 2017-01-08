@@ -6,7 +6,7 @@ title: "Installing arm9loaderhax" permalink: /installing-arm9loaderhax.html lang
 
 O passo final deste guia é instalar o arm9loaderhax e configurar o Luma3DS para correr em apenas alguns milisegundos, quando liga a consola. Para isso, vamos utilizar o SafeA9LHInstaller, pelo [AuroraWright](https://github.com/AuroraWright/). {: .notice}
 
-This will install [AuroraWright's Fork](https://github.com/AuroraWright/arm9loaderhax) of arm9loaderhax. {: .notice--info}
+Isto irá instalar o [Fork de AuroraWright](https://github.com/AuroraWright/arm9loaderhax) do arm9loaderhax. {: .notice--info}
 
 We will also setup the ability to launch payloads from arm9loaderhax, giving us the ability to unbrick our SysNAND from situations that would normally brick us by restoring from backup. {: .notice--info}
 
