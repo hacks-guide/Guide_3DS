@@ -15,7 +15,7 @@ A causa di un bug, safehax richiede la presenza di una cartuccia avviabile (3ds,
 
   1. Se non esiste, crea una cartella chiamata `files9` nella root della tua scheda SD
   2. Copia il contenuto del file safehax+fasthax `.zip` nella root della tua scheda SD, sovrascrivendo eventuali file preesistenti
-  3. Copia il file `Decrypt9WIP.bin` dal file Decrypt9WIP `.zip` nella root della tua scheda SD e rinomina `Decrypt9WIP.bin` in `arm9.bin`
+  3. Copia il file `Decrypt9WIP.bin` dal file `.zip` del Decrypt9WIP nella root della tua scheda SD e rinomina `Decrypt9WIP.bin` in `arm9.bin`
   4. Reinserisci la tua scheda SD nel tuo 3DS
   5. Avvia l'homebrew launcher
   6. Avvia safehax
