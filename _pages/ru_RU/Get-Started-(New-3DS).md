@@ -4,9 +4,9 @@ title: "Get Started (New 3DS)" permalink: /get-started-(new-3ds).html lang: en_U
 
 * * *
 
-Select the appropriate page for your version from the chart below. {: .notice--primary}
+Выберите подходящую для Вашей версии страницу из таблицы ниже. {: .notice--primary}
 
-{% capture notice-1 %} The first two columns of the chart refer to the last number of your version (which corresponds to the browser version installed to the system). If the version is -0 then you do not have a browser, while any number above -0 indicates a browser is installed.
+{% capture notice-1 %} Первые две колонки таблицы указывают на последний номер версии (который является номером версии установленного в системе браузера). Если номер "-0", то это указывает на отсутствие браузера в системе, тогда как любой номер выше "-0" означает наличие браузера.
 
 The "from" and "to" fields are inclusive. This means that, for example, the "from 9.0.0 to 9.2.0" row includes 9.0.0, 9.1.0, and 9.2.0.
 
