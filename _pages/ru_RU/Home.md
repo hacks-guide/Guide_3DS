@@ -19,41 +19,41 @@ from stock to arm9loaderhax.
 
 ## Что такое Homebrew?
 
-[**Homebrew**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) usually refers to software that is not authorized by Nintendo. It allows you to run homebrew games, tools like save editing and backup, and emulators for various older systems.
+Под словом [**Homebrew**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) обычно подразумевают ПО не авторизованное Nintendo. В качестве примера можно привести эмуляторы консолей предыдущих поколений, различные программы для бекапа и редактирования сохранений, разные самописные игры.
 
-In most cases, running homebrew on your console is 100% free using just the Nintendo 3DS Sound app. There are also various other exploits in commercial games and the browser to get homebrew running.
+В большинстве случаев, запуск хомбрю легален и не требует денежных вложений. Часто достаточно лишь встроенного в прошивку приложения Звуки Nintendo 3DS. Однако, существуют эксплойты, требующие наличия купленной коммерческой игры.
 
-## What is Custom Firmware?
+## Что такое кастомная прошивка (CFW)?
 
-**Custom Firmware** ("CFW") enables you to use more advanced hacks that userland homebrew can't easily do. For instance, signature patches let you install unsigned titles that appear right on your HOME Menu.
+**Кастомная прошивка** ("CFW", "кастом") позволяет пользоваться всеми возможностями приставки и делать вещи не доступные простым пользователям хомбрю. Например, можно устанавливать неподписанное ПО и запускать его прямо с домашнего экрана.
 
-CFW can be easily set up on any console that is on 11.2.0 (latest) or lower. Other versions can have their firmware downgraded.
+Наиболее просто кастом ставится на консоли с прошивкой 11.2.0 и ниже. Остальным же придется сначала понизить прошивку.
 
-## What does this guide install?
+## Так чему же учит этот гайд?
 
-This guide has the end goal of taking a completely unmodified 3DS from stock firmware to arm9loaderhax powered Custom Firmware. On some versions, it utilizes homebrew as a stepping off point, but Custom Firmware is still the goal.
+Конечная цель гайда - установка кастомной прошивки, базирующейся на arm9loaderhax на любую приставку с родной немодифицированной прошивкой. В некоторых случая мы используем хомбрю, как трамплин для достижения конечной цели - CFW.
 
-Arm9loaderhax is the newest and best method of launching Custom Firmware that gives us nearly full control of the system only milliseconds into boot, which is similar to the effect of BootMii for the Wii.
+arm9loaderhax - новейший и наилучший метод запуска кастомной прошивки. Благодаря ему можно получить практически неограниченный доступ к системе, а скорость загрузки будет сравнима с таковой на оригинальной прошивке.
 
-The benefits of arm9loaderhax over other Custom Firmware launch methods are numerous, and as such it is recommended to use this guide over any other that relies on outdated software (such as menuhax or rxTools).
+arm9loaderhax имеет множество преимуществ перед другими методами запуска кастомных прошивок. Рекомендуется использовать именно этот гайд, поскольку он постоянно обновляется и не содержит устаревших программ и методов запуска кастомных прошивок (например, menuhax или rxTools).
 
-## What can I do with Custom Firmware?
+## Что же можно делать на кастомной прошивке?
 
-+ Play all game cards and eShop games, regardless of region
-+ Customize your HOME Menu with user-created [themes](https://3dsthem.es/) and [badges](https://badges.3dsthem.es/)
-+ Use "ROM hacks" for games that you own
-+ Take gameplay and application screenshots
-+ [Backup, edit, and restore](https://gbatemp.net/threads/release-jks-savemanager-homebrew-cia-save-manager.413143/) saves for many games
-+ Play games for older systems with various emulators, using RetroArch or other standalone emulators. (Works best with a New Nintendo 3DS)
-+ Install homebrew titles to your system, and have them appear on your HOME Menu
-+ Dump your game cards to a format you can install, and play them without needing the card
-+ New 3DS only: stream live gameplay to your PC wirelessly with NTR CFW
-+ Run many old Nintendo DS flash carts that were blocked long ago or never worked on Nintendo 3DS
-+ Safely update to the latest system version without fear of losing access to homebrew
++ Играть во все игры, когда-либо выходившие на картриджах, или в цифровом виде вне зависимости от их региона.
++ Настраивать внешний вид домашнего экрана с помощью кастомных [темам](https://3dsthem.es/) и [жетонов](https://badges.3dsthem.es/).
++ Использовать патчи на легально купленных играх, например, любительские переводы и модификации. 
++ Делать скриншоты игр и приложений.
++ [Делать резервные копии, редактировать и восстанавливать](https://gbatemp.net/threads/release-jks-savemanager-homebrew-cia-save-manager.413143/) сохранения игр. 
++ Играть в игры от приставок предыдущих поколений с помощью эмуляторов (на New 3DS производительность выше).
++ Устанавливать хомбрю в память приставки, таким образом, чтобы их было видно на домашнем экране.
++ Дампить игры в формате CIA, который можно установить прямо в систему и играть]не используя картридж. 
++ Только New 3DS: стримить геймплей на компьютер по беспроводной сети с помощью NTR CFW.
++ Играть в игры от DS с помощью картриджей, которые заблокированы на 3DS, или вообще на ней не работали.
++ Безопасно обновляться до актуальных версий прошивок без боязни потерять доступ к хомбрю и кастому.
 
-## What do I need to know before starting?
+## Что нужно знать, перед тем, как начать?
 
-+ **Before beginning the guide, you must know the risks of 3DS hacking: EVERY time you modify your system, there is always the potential for an UNRECOVERABLE brick. They're rare, but still a possibility so make sure you follow ALL directions EXACTLY.**
++ **Перед тем, как начинать прошивку, следует осознать все сопутствующие риски. КАЖДЫЙ раз, модифицируя прошивку консоли, вы рискуете получить НЕВОССТАНОВИМЫЙ брик. Риск хоть и невысок, но он есть. Чем тщательней вы следуете инструкциям, тем ближе к нулю риск убить консоль. Удачи!**
 + If you have already hacked your 3DS before to get an EmuNAND setup, and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, you should follow all instructions and restore your existing EmuNAND when prompted once you reach [Installing arm9loaderhax](installing-arm9loaderhax).
 + This guide will work on New 3DS, Old 3DS, and 2DS in all regions on firmware 11.2.0 or below *(except CHN / TWN)*.
 + If everything goes according to plan, you will lose no data and end up with everything that you started with (games, NNID, saves, etc will be preserved).
