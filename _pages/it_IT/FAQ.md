@@ -4,14 +4,14 @@ title: "FAQ" permalink: /faq.html lang: en_US ref: faq
 
 * * *
 
-<a name="faq_latestfw" />**Q:** *I am on the latest system version, is my device hackable?*  
-**A:** Yes, 11.2 is hackable using the Homebrew Launcher (SoundHax)</a> method
+<a name="faq_latestfw" />**Q:** *Ho l'ultima versione di sistema, posso modificare la mia console?*  
+**A:** Si, la versione 11.2 è modificabile utilizzando Homebrew Launcher (SoundHax)</a>
 
-<a name="faq_updatecfw" />**Q:** *How do I update Luma3DS?*  
-**A:** Use Luma3DS Updater
+<a name="faq_updatecfw" />**Q:** *Come aggiorno Luma3DS?*  
+**A:** Usa Luma3DS Updater
 
-<a name="faq_gatewaysky" />**Q:** *I heard about this thing I have to pay for (Gateway, Sky3DS, etc), is that something I need?*  
-**A:** No. arm9loaderhax is a superior method of loading hax that runs early in boot and opens up the opportunity for things such as true custom firmware.
+<a name="faq_gatewaysky" />**Q:** *Ho sentito parlare di questa cosa che dovrei comprare (Gateaway, Sky3Ds, ecc), mi serve?*  
+**A:** No. arm9loaderhax è una modifica migliore che parte prima ancora dell'avvio del sistema e dà il via libera a cose come un vero custom firmware.
 
 <a name="faq_gatewaysaves" />**Q:** *How do I move saves from an existing Gateway setup to device installed games?*  
 **A:** See this</a>
