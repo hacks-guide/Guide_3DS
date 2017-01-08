@@ -4,7 +4,7 @@ title: "DSiWare List" permalink: /dsiware-list.html lang: en_US ref: dsiware-lis
 
 * * *
 
-Dies ist eine Liste mit allen kompatiblen Spiele für das [DSiWare Downgrade (App Injection mit einem zweiten 3DS)](dsiware-downgrade-(app-injection-and-second-3ds)). Diese Liste wurde automatisiert erstellt. {: .notice--primary}
+Dies ist eine Liste mit allen kompatiblen Spielen für das [DSiWare Downgrade (App Injection mit einem zweiten 3DS)](dsiware-downgrade-(app-injection-and-second-3ds)). Diese Liste wurde automatisiert erstellt. {: .notice--primary}
 
 Diese Sektion ist in folgender Reihenfolge aufgeteilt: USA, EUR, JPN {: .notice--info}
 
