@@ -24,32 +24,32 @@ title: "Troubleshooting" permalink: /troubleshooting.html lang: en_US ref: troub
 
 ##### Часть I - Подготовка
 
-  1. Create a folder named `cias` on the root of your SD card if it does not already exist
-  2. Copy `TWL Version Data - v0.cia` to the `/cias/` folder on your SD card
-  3. Copy `DS Download Play - v1024.cia` to the `/cias/` folder on your SD card
-  4. Copy `DS Internet - v2048.cia` to the `/cias/` folder on your SD card
-  5. Copy `Nintendo DS Cart Whitelist - v11264.cia` to the `/cias/` folder on your SD card
-  6. Copy either `New_3DS TWL_FIRM - v9936.cia` or `Old_3DS TWL_FIRM - v8817.cia` to the `/cias/` folder on your SD card
+  1. Создайте папку `cias` в корне карты памяти.
+  2. Скопируйте `TWL Version Data - v0.cia` в папку `/cias/` вашей карты памяти.
+  3. Скопируйте `DS Download Play - v1024.cia` в папку `/cias/` вашей карты памяти.
+  4. Скопируйте `DS Internet - v2048.cia` в папку `/cias/` вашей карты памяти.
+  5. Скопируйте `Nintendo DS Cart Whitelist - v11264.cia` в папку `/cias/` вашей карты памяти.
+  6. Скопируйте `New_3DS TWL_FIRM - v9936.cia` или `Old_3DS TWL_FIRM - v8817.cia` в папку `/cias/` вашей карты памяти.
 
-##### Section II - Installing titles
+##### Часть II - Установка
 
-  1. Open FBI
-  2. Select "SD"
-  3. Select "cias"
-  4. Select "\<current directory>"
-  5. Select "Install and delete all CIAs"
-  6. Exit with the home button
+  1. Запустите FBI.
+  2. Перейдите в папку "SD".
+  3. Перейдите в папку "cias".
+  4. Выберите "\<current directory>"
+  5. Выберите "Install and delete all CIAs".
+  6. Выйдите из FBI нажатием кнопки (HOME).
 
-## <a name="rm_nnid" />Removing an NNID without formatting the device
+## <a name="rm_nnid" />Удаление NNID без форматирования устройства
 
-#### What you need
+#### Что нужно:
 
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/)
+* Свежая версия [GodMode9](https://github.com/d0k3/GodMode9/releases/)
 
-#### Instructions
+#### Что делать:
 
-  1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `up_GodMode9.bin`
-  2. Boot holding (Up) to reboot into arm9loaderhax GodMode9
+  1. Скопируйте `GodMode9.bin` из `.zip`-архива GodMode9 в папку `/luma/payloads/` в корне SD-карты и переименуйте `GodMode9.bin` в папке `/luma/payloads/` в `up_GodMode9.bin`.
+  2. Перезагрузите приставку, удерживая (ВВЕРХ), чтобы запустить GodMode9.
   3. Navigate to `SYSNAND CTRNAND` -> `data` -> (32 Character ID) -> `sysdata` -> `00010038`
   4. Hold down the (R) trigger, then press X on `00000000` to rename this file
   5. Press Up once to change the name to `10000000`
