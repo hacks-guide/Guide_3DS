@@ -25,29 +25,29 @@ title: "FAQ" permalink: /faq.html lang: en_US ref: faq
 <a name="faq_homebrew" />**Q:** *Con questa modifica, posso far partire i fantastici programmi homebrew e gli emulatori?*  
 **A:** Si! Il Custom Firmware non solo ti dà accesso all'Homebrew Launcher, ma ti lascia le modifiche su tutte le versioni, il che significa che lo terrai per sempre, anche dopo gli aggiornamenti.
 
-<a name="faq_regionfree" />**Q:** *Can I use this to play games from other regions?*  
-**A:** Luma3DS supports Region Free patches, which enables users to install games from any region without any extra modification or steps.
+<a name="faq_regionfree" />**Q:** *Grazie a questo. potrò giocare a giochi che provengono da altre regioni?*  
+**A:** Luma3DS supporta patch Region Free, che permettono agli utenti di installare giochi di altre regioni senza dover svolgere modifiche o passaggi supplementari.
 
-<a name="faq_updates" />**Q:** *Is it safe to update CFW SysNAND?*  
-**A:** Yes. This is safe, stop asking about it.
+<a name="faq_updates" />**Q:** *È sicuro aggiornare una CFW SysNAND?*  
+**A:** Si. È sicuro, basta fare la stessa domanda.
 
-<a name="faq_support" />**Q:** *Where should I go for support?*  
-**A:** For support, ask for help at #3dshacks on Rizon IRC</a> or 3DS Hacking on Discord</a>.
+<a name="faq_support" />**Q:** *Dove posso richiedere supporto?*  
+**A:** Per il supporto, chiedi pure su #3dshacks su Rizon IRC</a> o sul server 3DS Hacking di Discord</a>.
 
-<a name="faq_le4gbsd" />**Q:** *Can I do this with a 4GB (or smaller) SD card?*  
-**A:** Thanks to the new CTRNAND method, yes!
+<a name="faq_le4gbsd" />**Q:** *Posso svolgere questa guida con una scheda SD di 4 GB (o minore)?*  
+**A:** Grazie al nuovo metodo CTRNAND, si!
 
-<a name="faq_ge128gbsd" />**Q:** *Can I use a 128 GB (or larger) SD card?*  
-**A:** Yes, but some users have reported slowdowns when using such large sizes. Note that you cannot format the card with exFAT; you need to format it with FAT32.
+<a name="faq_ge128gbsd" />**Q:** *Posso usare una scheda SD di 128 GB (o maggiore)?*  
+**A:** Si, ma alcuni utenti hanno segnalato dei rallentamenti mentre utilizzavano schede così grandi. Ricorda anche che non puoi formattare la scheda in exFAT; devi formattarla in FAT32.
 
-<a name="faq_movesd" />**Q:** *How do I move to a new SD card at the end of this?*  
-**A:** Just copy all the files to the new SD card.
+<a name="faq_movesd" />**Q:** *Come posso passare la modifica ad una nuova scheda SD?*  
+**A:** Copia semplicemente i file sulla nuova scheda SD.
 
-<a name="faq_NNID" />**Q:** *Can I keep my NNID?*  
-**A:** If you start with an NNID and follow every step, you will end up keeping your NNID at the end.
+<a name="faq_NNID" />**Q:** *Posso rimanere con il mio NNID?*  
+**A:** Se inizi la guida con NNID e segui tutti i passaggi, alla fine ti ritroverei con lo stesso NNID di partenza.
 
-<a name="faq_systransfer" />**Q:** *What about System Transfers?*  
-**A:** Once you have completed the guide, you can system transfer to and from an arm9loaderhax'd 3DS or 2DS exactly like you would a regular stock console or EmuNAND (you will lose any non-legitimate games/themes/DLC in the transfer; saves will stay even for games that are lost).
+<a name="faq_systransfer" />**Q:** *Per quanto riguarda i trasferimenti di sistema?*  
+**A:** Appena avrai completato la guida, potrai effettuare un trasferimento di sistema a e da una console 3DS o 2DS con arm9loaderhax esattamente come faresti con una normale console o con una EmuNAND (perderai tutti i tuoi giochi/temi/DLC non legittimi durante il trasferimento; i salvataggi rimarranno anche per i giochi che hai perso).
 
 <a name="faq_nopc" />**Q:** *Can I do this without a computer (e.g. an Android phone)?*  
 **A:** All you need is the ability to put files on an SD card!
