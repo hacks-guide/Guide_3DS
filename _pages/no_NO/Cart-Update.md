@@ -12,11 +12,11 @@ This means that a cart update will NOT install a browser if you do not already h
 
 **Updating with a game cart containing the version 9.9.0 or above will remove your browser!** {: .notice--danger}
 
-#### What you need
+#### Det du trenger
 
 * A game cart that [contains the version](http://www.3dsdb.com/) specified in the chart
 
-#### Instructions
+#### Instruksjoner
 
   1. Boot your 3DS into recovery mode by holding L+R+A+UP while powering on
   2. Decline the update and reboot
