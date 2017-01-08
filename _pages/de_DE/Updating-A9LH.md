@@ -46,13 +46,13 @@ Die folgenden Schritte werden zudem einige payloads und die AES Key Database akt
 
 ##### Abschnitt II - payload Update
 
-  1. Boot the device while holding D-Pad down
-  2. Press (Select) to update arm9loaderhax
-  3. Power off the device and put your SD card back in your computer
-  4. Delete the `a9lh` folder from the root of your SD card
-  5. Delete `down_safea9lhinstaller.bin` from `/luma/payloads/`
+  1. Starte die Konsole und halte dabei das Steuerkreuz nach unten gedrückt
+  2. Drücke (Select) um arm9loaderhax zu updaten
+  3. Schalte die Konsole aus und stecke die SD-Karte wieder in deinen PC
+  4. Lösche den `a9lh` Ordner aus dem Hauptverzteichnis deiner SD-Karte
+  5. Lösche `down_safea9lhinstaller.bin` aus `/luma/payloads/`
 
-##### Section III - Configuring Luma3DS
+##### Abschnitt III - Konfiguration von Luma3DS
 
   1. Reinsert your SD card into your 3DS and boot holding (Select)
   2. Use the (A) button and the D-Pad to turn on the following:  
