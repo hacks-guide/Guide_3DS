@@ -4,18 +4,18 @@ title: "Hardmod Downgrade" permalink: /hardmod-downgrade.html lang: en_US ref: h
 
 * * *
 
-Einen exzellenten Guide für eine Hardmod gibt es [hier](https://gbatemp.net/threads/414498/) zu finden. Wenn du einen New 3DS nutzt, lese dir vor dem hardmodden [ das hier](https://github.com/Plailect/Guide/issues/681) durch. {: .notice--info}
+Eine exzellente Anleitung für eine Hardmod gibt es [hier](https://gbatemp.net/threads/414498/) zu finden. Wenn du einen New 3DS nutzt, lese dir vor dem hardmodden [ das hier](https://github.com/Plailect/Guide/issues/681) durch. {: .notice--info}
 
-This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws). {: .notice--info}
+Dies ist eine zurzeit funktionierende Implementation des "FIRM partitions known-plaintext" Exploits. Details [hier](https://www.3dbrew.org/wiki/3DS_System_Flaws).{: .notice--info}
 
-This will work on New 3DS, Old 3DS, and 2DS. {: .notice--success}
+Es funktioniert mit dem New 3Ds, Old 3Ds und 2DS. {: .notice--success}
 
-#### What you need
+#### Was du brauchst
 
-* Your NAND image extracted using your [hardmod](https://gbatemp.net/threads/414498/)
-* The latest version of [autofirm](https://github.com/Plailect/autofirm/archive/master.zip)
-* The latest release of [3DSident](https://github.com/joel16/3DSident/releases/latest)
-* The NFIRM `.zip` corresponding to your device and version: 
+* Dein NAND Backup, welches du mit Hilfe der [Hardmod](https://gbatemp.net/threads/414498/) erstellt hast
+* Die aktuellste Version von [autofirm](https://github.com/Plailect/autofirm/archive/master.zip)
+* Die aktuellste Version von [3DSident](https://github.com/joel16/3DSident/releases/latest)
+* Die NFIRM `.zip` entsprechend deiner Konole und Firmware: 
   * [New 3DS 11.0.0](magnet:?xt=urn:btih:2d13a5ea1570f911bd5c6423e0c30e51d548837a&dn=11.0.0%5Fto%5F10.4.0%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
   * [Old 3DS 11.0.0](magnet:?xt=urn:btih:72393bbd99bc285db84a9cabf39d9b3200058d6a&dn=11.0.0%5Fto%5F10.4.0%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)  
     ~ 
@@ -25,30 +25,30 @@ This will work on New 3DS, Old 3DS, and 2DS. {: .notice--success}
   * [New 3DS 11.2.0](magnet:?xt=urn:btih:881388a552a1ce9a963d391bf1a023642270991c&dn=11.2.0%5Fto%5F10.4.0%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce) 
   * [Old 3DS 11.2.0](magnet:?xt=urn:btih:a479e4ee55efbc18c181d426cd77a34815388151&dn=11.2.0%5Fto%5F10.4.0%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce) 
 
-#### Instructions_
+#### Anleitung
 
-##### Section I - NAND modification
+##### Abschnitt I - NAND Modifikation
 
-  1. Extract the autofirm `.zip` to a folder called `autofirm`
-  2. Place a copy of your NAND backup (named `nand.bin`) in `/autofirm/` folder
-  3. Copy the contents of the NFIRM `.zip` to the `/autofirm/source/firmwares/` folder
-  4. Run `autofirm.bat` and select which device and version the NAND backup is for
-  5. Wait while the script runs
-  6. If everything worked, then your original NAND will have been renamed to `nand.bin` and you will have a modified `nand_patched.bin` containing the 10.4.0 NATIVE_FIRM 
-  * Keep `nand.bin`, it will be used later
-  7. Flash this `nand_patched.bin` to your device with your hardmod
+  1. Entpacke die autofirm `.zip` in einen Ordner den du ebenfalls `autofirm` nennst
+  2. Kopiere dein NAND Backup (genannt `nand.bin`) in den `/autofirm/` Ordner
+  3. Kopiere den Inhalt der NFIRM `.zip` in den `/autofirm/source/firmwares/` Ordner
+  4. Führe `autofirm.bat` aus und wähle die Konsole und Firmware des NAND Backups aus
+  5. Warte solange das Script ausgeführt wird
+  6. Wenn alles geklappt hat wird dein original NAND `nand.bin` genannt und die neue modifizierte Version `nand_patched.bin` , welches nun die 10.4.0 NATIVE_NFIRM enthält 
+  * Behalte `nand.bin`, es wird später noch gebraucht
+  7. Beschreibe den NAND deiner Konsole mit `nand_patched.bin` durch Hilfe deiner Hardmod
 
-##### Section II - Exploit verification
+##### Abschnitt II - Überprüfung des Exploits
 
-  1. Copy and merge the `3ds` folder from the 3DSident `.zip` to your device's SD card
-  2. Reinsert your SD card into your 3DS
-  3. Use [Homebrew Launcher (SoundHax)](homebrew-launcher-(soundhax)) to launch the homebrew launcher on the device
-  4. Launch 3DSident
-  5. Verify that the following: 
+  1. Kopiere den `3ds` Ordner aus der 3DSident `.zip` und überschreibe damit den Ordner auf deiner SD-Karte
+  2. Stecke die SD-Karte wieder in den 3DS
+  3. Öffne den Homebrew Launcher mit Hilfe des [Homebrew Launcher (SoundHax)](homebrew-launcher-(soundhax))
+  4. Starte 3DSident
+  5. Überprüfe Folgendes: 
   * **Kernel version**: 2.50-11
   * **FIRM version**: 2.50-11
-  * If either of these do not display the versions above, something has gone wrong and you should try again from the beginning
+  * Wenn einer der beiden Werte nicht die entsprechende Version anzeigt, ist etwas schief gelaufen, und du solltest von Vorn beginnen
 
-Your version number will *not* have changed in the settings. {: .notice--info}
+Deine Firmware Nummer wird sich in den Systemeinstellungen *nicht* verändert haben. {: .notice--info}
 
 Continue to [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher)). {: .notice--primary}
