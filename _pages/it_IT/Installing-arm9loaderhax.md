@@ -118,7 +118,7 @@ Se, prima di seguire questa guida, avevi già un'installazione EmuNAND presente 
 
   1. Apri Hourglass9 dall'arm9loaderhax tenendo premuto (Start) all'avvio
   2. Vai su "SysNAND Backup/Restore"
-  3. Go to "SysNAND Restore (keep a9lh)" and restore from `NANDmin.bin`
+  3. Seleziona "SysNAND Restore (keep a9lh) e ripristina il file `NANDmin.bin`
   4. Premi (Start) per riavviare la console 
     * Se ottieni uno schermo nero, segui la guida [ctrtransfer 9.2.0](9.2.0-ctrtransfer)
   5. Se il tuo backup era di una versione di sistema compresa tra 3.0.0 e 4.5.0, la tua console non si avvierà finché non avrai scaricato manualmente il firmware richiesto: 
