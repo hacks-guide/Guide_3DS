@@ -6,13 +6,13 @@ title: "Updating A9LH" permalink: /updating-a9lh.html lang: en_US ref: updating-
 
 ### Siste oppdatering: 3. Nov 2016
 
-The actual installation of arm9loaderhax itself consists of payload files installed into the NFIRM partitions on your device's NAND chip, which is soldered to the motherboard itself. These payloads are updated rarely and only really serve the purpose of launching `arm9loaderhax.bin` from the SD Card, which is, in our case, Luma3DS. {: .notice}
+Selve installasjonen av arm9loaderhax består av nyttelast filer som blir installert på NFIRM partisjonen av konsollens NAND brikke, som er loddet på selve hovedkortet. Disse nyttelastene oppdateres sjeldent å brukes bare til å starte `arm9loaderhax.bin` fra SD-kortet, som i vårt tilfelle er Luma3DS. {: .notice}
 
-If you do not know what version of arm9loaderhax you are running, just install the latest version with these steps. Installing the latest version while already on the latest version will have no effect. {: .notice--info}
+Hvis du ikke vet hvilke versjon av arm9loaderhax du kjører kan du bare laste ned den nyeste versjonen med disse trinnene. Å installere nyeste versjon mens du allerede bruker nyeste versjon har ingen innvirkninger. {: .notice--info}
 
-If you have a PIN set on Luma, you must temporarily turn it off to do these steps. You can re-enable the PIN after the update. {: .notice--info}
+Hvis du har satt en PIN-kode på Luma må du midlertidig deaktivere den for å følge disse trinnene. Du kan aktivere PIN-koden igjen etter oppdateringen. {: .notice--info}
 
-If you are using a payload that does not init the screen on its own (such as Bootanim9), you will need to rename it to `arm9loaderhax_si.bin` instead of `arm9loaderhax.bin` {: .notice--info}
+Hvis du bruker en nyttelast som ikke slår på skjermen av seg selv (som f.eks. Bootanim9) er det anbefales det på det sterkeste at du endrer navn til `arm9loaderhax_si.bin` i stedet for `arm9loaderhax.bin` {: .notice--info}
 
 The versions of data_input only refer to revisions of the `.zip` to be compatible with different installer versions, and are *not* the same thing as updating a9lh itself (the payload files). They make no practical difference beyond the installation process. {: .notice--info}
 
