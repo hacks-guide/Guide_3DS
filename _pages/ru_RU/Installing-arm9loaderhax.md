@@ -72,26 +72,26 @@ arm9loaderhax.bin, используемый в этом гайде - испол�
  10. Скопируйте `lumaupdater.cia` из `zip-архива` Luma3DS Updater в папку `/cias/` в корне КП.
  11. Скопируйте `FBI.cia` из `zip-архива` FBI в папку `/cias/` в корне КП.
  12. **Скопируйте `arm9loaderhax.bin` из `7z-архива` Luma3DS в корень карты памяти, согласившись на перезапись.**
- 13. Create a folder named `luma` on the root of your SD card
- 14. Create a folder named `payloads` in the `luma` folder on your SD card
- 15. Copy `Hourglass9.bin` from the Hourglass9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `Hourglass9.bin` to `start_Hourglass9.bin`
- 16. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` to `up_GodMode9.bin`
- 17. Copy `aeskeydb.bin` to the `/files9/` folder on your SD card
- 18. Copy `DspDump.3dsx` to the `/3ds/` folder on your SD card
- 19. Copy *the contents of* `fbi-2.4.2-injectable.zip` to the `/files9/` folder on your SD card
+ 13. Создайте папку `luma` в корне карты памяти.
+ 14. Создайте папку `payloads` в папке `luma` в корне карты памяти.
+ 15. Скопируйте `Hourglass9.bin` из `zip-архива` Hourglass9 в папку `/luma/payloads/` в корне КП и переименуйте `Hourglass9.bin` в `start_Hourglass9.bin`.
+ 16. Скопируйте `GodMode9.bin` из `zip-архива` GodMode9 папку `/luma/payloads` в корне КП и переименуйте `GodMode9.bin` в `up_GodMode9.bin`.
+ 17. Скопируйте `aeskeydb.bin` в папку `/files9/` в корне КП.
+ 18. Скопируйте `` DspDump.3dsx` `` в папку `/3ds/` в корне КП.
+ 19. Скопируйте *содержимое* архива `fbi-2.4.2-injectable.zip` в папку `/files9/` в корне КП.
 
-##### Section II - Installing arm9loaderhax
+##### Часть II - Установка arm9loaderhax
 
-  1. Reinsert your SD card into your 3DS
-  2. Do the steps for installing arm9loaderhax on your device: 
-    * You should be on 2.1.0
-    * Go to `http://dukesrg.github.io/2xrsa.html?arm11.bin` on your 3DS
-    * If you get the error "This service is not available in your region", use the System Settings to set your device's country to match the NAND region you installed with 2.1.0 ctrtransfer
-    * If you get another error, [follow this troubleshooting guide](troubleshooting#ts_browser)
-    * If you get a glitched screen, [follow this troubleshooting guide](troubleshooting#ts_safe_a9lh_screen)
-    * Press (Select) to Full Install
-    * The installer will now install arm9loaderhax on your device (this is very fast)
-    * Shut down your console, hold the power button until it turns off if necessary
+  1. Вставьте карту памяти в 3DS.
+  2. Для того, чтобы установить a9lh, следуйте нижеизложенной инструкции: 
+    * Необходимо находиться на прошивке 2.1.0.
+    * Перейдите по ссылке на своей приставке ``https://goo.gl/xUMUJB`` или <0>http://dukesrg.github.io/2xrsa.html?arm11.bin</0>.
+    * Если выскакивает ошибка "This service is not available in your region", поменяйте регион в Системных настройках (System Settings) на соответствующий тому, который был установлен при 2.1.0 ctrtransfer.
+    * При возникновении другой ошибки, обратитесь к разделу [Проблемы и их решения](troubleshooting#ts_browser).
+    * Если экран выглядит некорректно и видны графические артефакты, обратитесь к разделу [Проблемы и их решения](troubleshooting#ts_safe_a9lh_screen).
+    * Нажмите (SELECT) для установки.
+    * Сейчас установщик поставит arm9loaderhax на вашу консоль (буквально секунда).
+    * Нажмите любую кнопку, чтобы выключить приставку. При необходимости, выключите консоль долгим нажатием на кнопку включения. 
     * Copy your console specific `OTP.bin` from the `/a9lh/` folder on your SD card to a safe location on your computer and back it up to multiple locations (such as online file storage), then reinsert your SD card into your 3DS
 
 ##### Section III - Configuring Luma3DS
