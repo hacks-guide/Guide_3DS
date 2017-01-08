@@ -4,14 +4,14 @@ title: "Decrypt9 (Homebrew Launcher)" permalink: /decrypt9-(homebrew-launcher).h
 
 * * *
 
-Due to a bug, safehax currently requires a functioning cartridge of some kind (3ds, nds, flashcart, etc) to be inserted in order to complete successfully. As a temporary workaround, users less than or equal to 9.2.0 who do not own any cartridges can copy `Decrypt9WIP.3dsx` to `/3ds/` and run it directly without any hax. {: .notice--info}
+Λόγο ενός σφάλματος, το safehax απαιτεί μια λειτουργική κασέτα οποιουδήποτε είδους (3DS, NDS, flashcard, κλπ) να βρίσκετε εισηγμένος έτσι ώστε να ολοκληρωθεί επιτυχώς. Ως προσωρινή λύση, χρήστες οι οποίοι βρίσκονται σε έκδοση ίση ή χαμηλότερη του 9.2.0, οι οποίοι δεν κατέχουν καμία κασέτα, μπορούν να αντιγράψουν το `Decrypt9WIP.3dsx` στον φάκελο `/3ds/` και να το τρέξουν απευθείας χωρίς κανένα hax. {: .notice--info}
 
-#### What you need
+#### Τι χρειάζεστε
 
-* The latest release of [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/latest/)
-* The latest fork of [safehax+fasthax](https://gbatemp.net/attachments/safehax-fasthax-cb6a1bc-zip.73592/)
+* Την τελευταία έκδοση του [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/latest/)
+* Την τελευταία έκδοση του [safehax+fasthax](https://gbatemp.net/attachments/safehax-fasthax-cb6a1bc-zip.73592/)
 
-#### Instructions
+#### Οδηγείες
 
   1. Create a folder named `files9` on the root of your SD card if it does not already exist
   2. Copy and merge the contents of the safehax+fasthax `.zip` to root of your SD card, overwrite existing files
