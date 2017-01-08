@@ -8,7 +8,7 @@ Esta página irá guiá-lo pelo processo de verificar o seu cartão SD por erros
 
 Dependendo do tamanho do seu cartão SD e da velocidade do seu computador, este processo pode levar algumas horas! {: .notice--info}
 
-This page is for Mac users only. If you are not on Mac, check out the [H2testw (windows)](h2testw-(windows)) or [F3 (Linux)](f3-(linux)) pages. {: .notice--info}
+Esta página é apenas para utilizadores de Mac. Se não tiver Mac, veja as páginas para [H2testw (windows)](h2testw-(windows)) ou [F3 (Linux)](f3-(linux)). {: .notice--info}
 
 #### What you need
 
