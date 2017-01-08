@@ -60,38 +60,38 @@ Se non riesci ad avviare il tuo 3DS, controlla la sezione rilevante per il tuo p
 
 ## <a name="gw_fbi" />Impossibile iniettare "Informazioni per la salute e sicurezza" su una console downgradata tramite Gateway
 
-This is caused by Gateway implementing a very shoddy downgrade method, which leaves two versions of each app on the system. One of them is unused, but it confuses Decrypt9, causing it to inject into the wrong one.
+Questo problema è causato dalla pessima implementazione da parte di Gateway di una procedura di downgrade, che duplica ogni applicazione installata nel sistema. Una di queste copie rimane inutilizzata, ma è abbastanza per confondere Decrypt9 e impedirgli di modificare l'applicazione corretta.
 
-#### What you need
+#### Requisiti
 
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/)
+* L'ultima versione di [GodMode9](https://github.com/d0k3/GodMode9/releases/)
 
-#### Instructions
+#### Istruzioni
 
-  1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `up_GodMode9.bin`
-  2. Reinsert your SD card into your 3DS
-  3. Open GodMode9 from arm9loaderhax by holding (Up) during boot 
-  4. Navigate to `SYSNAND CTRNAND` -> `title` -> `00040010`
-  5. Navigate to the folder for your device and region: 
+  1. Copia il file `GodMode9.bin` dal file `.zip` di GodMode9 nella cartella `/luma/payloads/` della tua scheda SD e rinomina il file `GodMode9.bin` in `/luma/payloads/` in `up_GodMode9.bin`
+  2. Reinserisci la tua scheda SD nel tuo 3DS
+  3. Apri GodMode9 dall'arm9loaderhax tenendo premuto (Su) all'avvio 
+  4. Naviga fino a `SYSNAND CTRNAND` -> `title` -> `00040010`
+  5. Naviga fino alla cartella corretta per la tua console e per la tua regione: 
     * **Old 3DS EUR**: `00022300` -> `content`
     * **Old 3DS JPN**: `00020300` -> `content`
     * **Old 3DS USA**: `00021300` -> `content`
     * **New 3DS EUR**: `20022300` -> `content`
     * **New 3DS JPN**: `20020300` -> `content`
     * **New 3DS USA**: `20021300` -> `content`
-  6. Notice that there are two sets of app and tmd files, one set with uppercase extensions (`.TMD` and `.APP`), and one set with lowercase extensions (`.tmd` and `.app`)
-  7. While holding the (R) trigger, press (Y) to create a new directory
-  8. Press (A) to confirm the name `newdir` (it doesn't matter what it's called)
-  9. Press (A) to unlock SysNAND writing, then input the key combo given
- 10. Press the (L) trigger on each of the uppercase extension files (`.TMD` and `.APP`) to mark them
- 11. Press (Y) to copy the files
- 12. Navigate to `newdir`
- 13. Press (Y) to paste the files
- 14. Select "Move path(s)"
- 15. The uppercase extension files will have been moved to the `newdir` directory
- 16. Press (Start) to reboot
- 17. Return to [Installing arm9loaderhax](installing-arm9loaderhax) and retry the FBI injection
- 18. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then return to [Installing arm9loaderhax](installing-arm9loaderhax) and retry the FBI injection
+  6. Noterai che ci sono due serie di file app e tmd, una con estensione in uppercase (`.TMD` and `.APP`), e una con estensione in lowercase (`.tmd` and `.app`)
+  7. Tenendo premuto il pulsante (R), premi (Y) per creare una nuova cartella
+  8. Premi (A) per confermare il nome `newdir` (non ha importanza)
+  9. Premi (A) per sbloccare la scrittura della SysNAND, quindi premi i pulsanti richiesti
+ 10. Premi il pulsante (L) su ogni file con estensione in uppercase (`.TMD` and `.APP`) per evidenziarli
+ 11. Premi (Y) per copiare i file
+ 12. Naviga fino a `newdir`
+ 13. Premi (Y) per incollare i file
+ 14. Seleziona "Move path(s)"
+ 15. I file con estensione in uppercase sono ora stati spostati nella cartella `newdir`
+ 16. Premi (Start) per riavviare la console
+ 17. Ritorna a [Installare l'arm9loaderhax](installing-arm9loaderhax) e ri-esegui la sezione "Inject di FBI"
+ 18. Se ancora non dovesse funzionare, riporta i file con estensione in uppercase nella cartella `content`, poi muovi i file con estensione in lowercase nella cartella `newdir`, quindi ritorna a [Installare l'arm9loaderhax](installing-arm9loaderhax) e ri-esegui la sezione "Inject di FBI"
 
 ## <a name="ts_browser" />A browser based exploit is not working
 
