@@ -6,24 +6,25 @@ title: "Decrypt9 (Browser)" permalink: /decrypt9-(browser).html lang: en_US ref:
 
 La prima cosa che questa guida ti permetterà di fare è avviare Decrypt9, un programma multifunzione che ci permetterà di installare la versione 2.1.0, che contiene una vulnerabilità che è necessaria per modificare ulteriormente il dispositivo. {: .notice}
 
-If you have already hacked your 3DS before and have a EmuNAND based CFW setup, this guide deals exclusively with SysNAND and you should follow all instructions from within or applying to SysNAND. Note that the terms EmuNAND and RedNAND refer to slightly different implementations of [the same concept](http://3dbrew.org/wiki/NAND_Redirection). {: .notice--info}
+Se hai già modificato il tuo 3DS in passato e hai un CFW basato su una EmuNAND, questa guida si svolge interamente sulla SysNAND e quindi dovresti svolgere tutto il procedimento su di essa. I termini EmuNAND e RedNAND si riferiscano ad un'interpretazione leggermente diversa dello [stesso concetto](http://3dbrew.org/wiki/NAND_Redirection). {: .notice--info}
 
-#### What you need
+#### Requisiti
 
-* The latest release of [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/)
+* L'ultima release di [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/)
 
-#### Instructions
+#### Istruzioni
 
-  1. Create a folder named `files9` on the root of your SD card if it does not already exist
-  2. Copy `Launcher.dat` and `Decrypt9WIP.dat` from the Decrypt9WIP `.zip` to the root of your SD card
-  3. Reinsert your SD card into your 3DS
-  4. Open the browser and go to one of the following URLs on your 3DS 
+  1. Se non esiste, crea una cartella chiamata `files9` nella root della tua scheda SD
+  2. Copia il file `Launcher.dat` e il file `Decrypt9WIP.dat` dall'archivio `.zip` di Decrypt9WIP nella root della scheda SD
+  3. Reinserisci la tua scheda SD nel tuo 3DS
+  4. Apri il browser e apri uno dei seguenti URL sul tuo 3DS 
     * `https://dukesrg.github.io/?Decrypt9WIP.dat`
     * `http://go.gateway-3ds.com/`
     * `http://www.reboot.ms/3ds/load.html?Launcher.dat`
     * `http://dukesrg.dynu.net/3ds/rop?GW17567.dat&Launcher.dat`
-    * Make sure to try each URL if the first one doesn't work (some versions cannot use the first one, and some versions cannot use the last three)
-    * If you get an error, [follow this troubleshooting guide](troubleshooting#ts_browser)
-  5. If the exploit was successful, you will have booted into Decrypt9
+    * Assicurati di provare ogni URL se il primo non ha funzionato (alcune versioni non riescono a caricare il primo, altre versioni non riescono a caricare i tre restanti)
+    * Se ottieni un errore, [segui questa guida per risolvere il problema](troubleshooting#ts_browser)
+  5. Se l'exploit viene eseguito correttamente, verrà avviato Decrypt9
 
-Continue to [2.1.0 ctrtransfer](2.1.0-ctrtransfer). {: .notice--primary}
+Prosegui con il [ctrtransfer 2.1.0](2.1.0-ctrtransfer)  
+{: .notice--primary}
