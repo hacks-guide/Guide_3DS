@@ -8,7 +8,7 @@ O OTP é uma região de 0x100 bytes de dados aparentemente aleatórios localizad
 
 Antes da versão 3.0.0-X, a região 0x10012000 (o OTP) estava desprotegida e podia ser extraída por um atacante com permissões suficientes (execução de código no arm9).
 
-After version 3.0.0-X, Nintendo switched to locking this region using the register CFG_SYSPROT9, which also locks the bootloader and is set extremely early in boot, long before we are able to gain code execution. This register can be set exactly once, and cannot be switched off until the unit is fully powered off, and therefore it is impossible to dump the full OTP without a version below 3.0.0-X.
+A partir da versão 3.0.0-X, a Nintendo decidiu bloquear esta região ao utilizar o registo CFG_SYSPROT9, que também bloqueia o bootloader, e isto é feito extremamente cedo ao ligar a consola, muito antes de conseguirmos executar código. This register can be set exactly once, and cannot be switched off until the unit is fully powered off, and therefore it is impossible to dump the full OTP without a version below 3.0.0-X.
 
 There is, however, a method to dump the hash of the OTP on version 9.6.0-X. Because Kernel9Loader does not clear the SHA_HASH register after it has been used, dumping the SHA_HASH will give the hash of the OTP which was handed over to Kernel9 from Kernel9Loader. In addition, there is a long standing vulnerability where an MCU reboot caused by the i2c will not clear RAM like it's supposed to.
 
