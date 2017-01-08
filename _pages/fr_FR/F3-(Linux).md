@@ -33,9 +33,9 @@ Cette page s'adresse uniquement aux utilisateurs de Linux. Si vous n'êtes pas s
         Average Writing speed: 4.90 MB/s
         
 
-  8. Lancez `./f3read <le point de montagte de votre carte sd>`
+  8. Lancez `./f3read <le point de montage de votre carte sd>`
 
-  9. Attendez que le processus ce complète de lui-même. Ci-dessous, un example de renvoie (en anglais).
+  9. Attendez que le processus soit terminé. Voir ci-dessous pour un exemple de sortie.
     
         $ ./f3read /media/michel/6135-3363/
                           SECTORS      ok/corrupted/changed/overwritten
@@ -51,8 +51,8 @@ Cette page s'adresse uniquement aux utilisateurs de Linux. Si vous n'êtes pas s
         Average Reading speed: 9.42 MB/s
         
 
-Si le test retourne le résultat (ceci n'est qu'une traduction du résultat,je ne peux pas tester par moi-même) `Perte de donnée: 0.00 Byte (0 Secteurs)` votre carte SD est bonne et vous pouvez supprimer les fichiers `.h2w` sur votre carte SD{: .notice--success}
+Si le test affiche le résultat `Data LOST: 0.00 Byte (0 sectors)` votre carte SD est bonne et vous pouvez supprimer tous les fichiers `.h2w` sur la carte SD {: .notice--success}
 
-Si le test affiche autre chose, votre carte SD pourrait être corrompus ou endommagé et vous serez peut-être dans l'obligation de la remplacer!{: .notice--danger}
+Si le test affiche autre chose, votre carte SD pourrait être corrompue ou endommagée et vous serez peut-être dans l'obligation de la remplacer !{: .notice--danger}
 
 Retournez à la page [Get Started](get-started){: .notice--primary}
