@@ -41,8 +41,8 @@ Die folgenden Schritte werden zudem einige payloads und die AES Key Database akt
   6. Benenne `arm9loaderhax.bin` aus `/luma/payloads/` um in `down_safea9lhinstaller.bin`
   7. Kopiere den `a9lh` Ordner aus der `data_input_v4.zip` in das Hauptverzeichnis deiner SD-Karte
   8. Kopiere *den Inhalt * der arm9loaderhax `.zip` in den `a9lh` Ordner auf deiner SD-Karte
-  9. Copy `arm9loaderhax.bin` from the Luma3DS `.zip` to the root of your SD card, overwrite existing files
- 10. Reinsert your SD card into your 3DS
+  9. Kopiere `arm9loaderhax.bin` aus der Luma3DS `.zip` in das Hauptverzeichnis deiner SD-Karte, und übereschreibe alle vorhandenen Dateien
+ 10. Lege die SD-Karte wieder in deinen 3DS ein
 
 ##### Section II - Payload update
 
