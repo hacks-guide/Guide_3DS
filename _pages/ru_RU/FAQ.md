@@ -11,13 +11,13 @@ title: "FAQ" permalink: /faq.html lang: en_US ref: faq
 **A:** Следует использовать Luma3DS Updater
 
 <a name="faq_gatewaysky" />**Q:** *Я слышал, что в продаже есть такое устройство (Gateway, Sky3DS, и т. д.), мне это необходимо?*  
-**A:** Нет. arm9loaderhax is a superior method of loading hax that runs early in boot and opens up the opportunity for things such as true custom firmware.
+**A:** Нет. arm9loaderhax - это улучшенная реализация загрузочного эксплойта, который запускается в ранних стадиях загрузки консоли и открывает возможность для таких вещей, как полностью кастомные прошивки.
 
-<a name="faq_gatewaysaves" />**Q:** *How do I move saves from an existing Gateway setup to device installed games?*  
-**A:** See this</a>
+<a name="faq_gatewaysaves" />**Q:** *Как мне переместить сохранения с Gateway в игры, установленные на консоли?*  
+**A:** Информация предоставлена здесь</a> (англ.)
 
-<a name="faq_need" />**Q:** *What do I need to do this guide?*  
-**A:** This guide can be completely done with free software and (if you have no browser) a compatible game
+<a name="faq_need" />**Q:** *Что мне необходимо для прохождения этой инструкции?*  
+**A:** Этот гайд полностью выполним с помощью свободного ПО и (если на консоли нет браузера) совместимой игры
 
 <a name="faq_risky" />**Q:** *How risky is hacking my console?*  
 **A:** Bricks are now *basically* impossible unless you ignore/circumvent all safety checks.
