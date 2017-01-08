@@ -4,7 +4,7 @@ title: "Hardmod Downgrade" permalink: /hardmod-downgrade.html lang: en_US ref: h
 
 * * *
 
-An excellent guide to getting a hardmod can be found [here](https://gbatemp.net/threads/414498/). If you are on a New 3DS, read [this](https://github.com/Plailect/Guide/issues/681) before hardmodding. {: .notice--info}
+Um guia excelente para fazer um hardmod pode ser encontrado [aqui](https://gbatemp.net/threads/414498/). If you are on a New 3DS, read [this](https://github.com/Plailect/Guide/issues/681) before hardmodding. {: .notice--info}
 
 This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws). {: .notice--info}
 
