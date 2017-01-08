@@ -6,20 +6,20 @@ title: "Cart Update" permalink: /cart-update.html lang: en_US ref: cart-update
 
 Tutte le cartucce includono al loro interno una copia della versione di sistema richiesta per poterle giocare, permettendo a chiunque si trovi su una vecchia versione di sistema di usare la cartuccia per aggiornare a quella versione (anche senza una connessione ad internet). {: .notice--info}
 
-Cart Updates will only deliver updates to core features, such as the System Settings, Home Menu, Nintendo 3DS Sound, etc. Cart Updates will not deliver updates to Network features, such as System Transfer, Internet Browser, StreetPass Mii Plaza or eShop. {: .notice--info}
+Gli aggiornamenti da cartuccia aggiornano solamente le applicazioni principali del sistema, come le Impostazioni di Sistema, il menu Home, il Nintendo 3DS Sound ecc. Gli aggiornamenti da cartuccia non aggiornano le funzioni che necessitano Internet, come ad esempio il trasferimento di sistema, il Browser Internet, la Piazza Mii di StreetPass o l'eShop. {: .notice--info}
 
-This means that a cart update will NOT install a browser if you do not already have one. This will **only** update the actual system version *(for example, 2.1.0-0 -> 6.0.0-0)*. The last number *(the -0)* will **not** change. {: .notice--warning}
+Ciò significa che un aggiornamento da cartuccia NON installerà un browser se non ne hai già uno. Aggiornerà **solamente** la versione di sistema *(ad esempio, 2.1.0-0 -> 6.0.0-0)*. L'ultimo numero *(-0)* **non** cambierà. {: .notice--warning}
 
-**Updating with a game cart containing the version 9.9.0 or above will remove your browser!** {: .notice--danger}
+**Aggiornare con una cartuccia contenente la versione 9.9.0 o maggiore rimuoverà il tuo browser!**{: .notice--danger}
 
-#### What you need
+#### Requisiti
 
-* A game cart that [contains the version](http://www.3dsdb.com/) specified in the chart
+* Una cartuccia che [contiene la versione](http://www.3dsdb.com/) specificata nella tabella
 
-#### Instructions
+#### Istruzioni
 
-  1. Boot your 3DS into recovery mode by holding L+R+A+UP while powering on
-  2. Decline the update and reboot
-  3. Put the game in the system
-  4. Attempt to launch the game
-  5. Update when prompted
+  1. Avvia il 3DS in modalità di ripristino tenendo premuto L + R + A + Su durante l'accensione
+  2. Rifiuta l'aggiornamento e riavvia il dispostivo
+  3. Metti il gioco nel dispositivo
+  4. Prova ad avviare il gioco
+  5. Aggiorna quando richiesto
