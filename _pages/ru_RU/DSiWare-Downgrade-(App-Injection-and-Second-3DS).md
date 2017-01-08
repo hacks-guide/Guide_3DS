@@ -99,22 +99,22 @@ NNID из исходной 3DS будет находится в целевой 3
 
   1. Запустите GodMode9 из под arm9loaderhax, удерживая (ВВЕРХ) во время загрузки.
   2. Выберите пункт `SDCARD`.
-  3. Press (Y) on the DSiWare injection `.app` to copy it
-  4. Press (B) to go back to the main menu
-  5. Navigate to `SYSNAND TWLN` -> `title` -> `00030004` -> `(8 Character ID)` 
-  * The 8 Character ID will be the one from the [DSiWare List](dsiware-list) page
-  6. Navigate to `content`
-  7. Press (A) on the `.app` file in the folder
-  8. Select "Inject data @offset"
-  9. Press (A) to select the offset `00000000`
- 10. Press (A) to unlock SysNAND writing, then input the key combo given
- 11. Press (B) to go back to the main menu
- 12. Navigate to `SYSNAND TWLN` -> `title` -> `00030004` -> `(8 Character ID)` 
-  * The 8 Character ID will be the one from the [DSiWare List](dsiware-list) page
- 13. Navigate to `data`
- 14. Press (A) on `public.sav`
- 15. Select "Mount as FAT image" 
-  * If you do not see this option, ensure you are running the latest GodMode9 commit rather than the latest release
+  3. Нажмите (Y) на `.app`-файле из архива с файлами для инжекта DSiWare, который вы скопировали на КП ранее.
+  4. Нажмите (B), чтобы вернуться в главное меню
+  5. Перейдите в `SYSNAND TWLN` -> `title` -> `00030004` -> `(8-ми значный ID)` 
+  * 8-ми значный ID берите в [списке совместимых DSiWare-игр](dsiware-list), напротив выбранной вами игры.
+  6. Выберите пункт `content`.
+  7. Нажмите (A) на `.app`-файле, находящемся в этой папке.
+  8. Выберите "Inject data @offset".
+  9. Нажмите (A), чтобы выбрать смещение `00000000`.
+ 10. Нажмите (A), чтобы разрешить запись в SysNAND и введите указанную комбинацию кнопок.
+ 11. Нажмите (B), чтобы вернуться в главное меню программы.
+ 12. Перейдите в `SYSNAND TWLN` -> `title` -> `00030004` -> `(8-ми значный ID)` 
+  * 8-ми значный ID берите в [списке совместимых DSiWare-игр](dsiware-list), напротив выбранной вами игры.
+ 13. Перейдите в `data`.
+ 14. Нажмите (A) на `public.sav`.
+ 15. Выберите "Mount as FAT image" 
+  * Если вы не видите такого пункта, убедитесь, что вы запускаете свежую версию GodMode9.
   * If you still do not see this option, please [report this bug](https://github.com/d0k3/GodMode9/issues)
  16. This will have moved you back to the main menu
  17. Navigate to `SDCARD`
