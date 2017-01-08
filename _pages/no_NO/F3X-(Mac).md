@@ -23,7 +23,7 @@ Denne siden er for Mac-brukere. Hvis du ikke bruker Mac, sjekk ut sidene; [H2tes
   5. Trykk "Start Test"
   6. Vente til prosessen er ferdig.
 
-Hvis testen viser resultatet `Success! Your card is ok!` er SD-kortet ditt bra og du kan slette alle `.h2w` filene på SD kortet {: .notice--success}
+Hvis testen viser resultatet `Success! Your card is ok!` er SD-kortet ditt klart og du kan slette alle `.h2w` filene på SD kortet {: .notice--success}
 
 Hvis testen viser noe annet resultat kan det hende SD-kortet er korrupt eller skadet og du må kanskje bytte det!{: .notice--danger}
 
