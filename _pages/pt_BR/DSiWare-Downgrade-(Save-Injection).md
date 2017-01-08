@@ -14,9 +14,9 @@ Isto é uma implementação, que funciona correntemente, do exploit "partições
 
 O seu save DSiWare será copiado antes de ser substituído por um save hackeado. {: .notice--info}
 
-#### What you need
+#### O que precisa
 
-* Already own (and install) one of the following exploitable DSiWare games installed on your 3DS *(you must have already installed one; they have all been pulled from the eShop)* 
+* Já ter (e instalado) um dos seguintes jogos DSiWare vulneráveis na sua 3DS *(já tem de ter algum destes jogos instalados; eles foram retirados da eShop)* 
   * **Fieldrunners**
   * **Legends of Exidia**
   * **Guitar Rock Tour** 
