@@ -8,13 +8,13 @@ title: "Get Started" permalink: /get-started.html lang: en_US ref: get-started
 
 Нажмите на изображение Вашего устройства, чтобы перейти на соответствующую страницу. {: .notice--primary}
 
-Разные модели, версии, и регионы устройств требуют разные шаги для установки кастомной прошивки с arm9loaderhax. The following series of pages will help you find where to start for your device. {: .notice--info}
+Разные модели, версии, и регионы устройств требуют разные шаги для установки кастомной прошивки с arm9loaderhax. Последующие страницы помогут Вам начать работу над Вашим устройством. {: .notice--info}
 
-If you have already hacked your 3DS before and have an EmuNAND based CFW setup, just follow all instructions while on SysNAND. Your data will be transfered from EmuNAND to your new A9LH install at the end. {: .notice--info}
+Если вы уже взламывали Ваше устройство раньше и использовали EmuNAND для установки CFW, пользуйтесь гайдом, находясь на SysNAND. В конце все Ваши данные будут перенесены с EmuNAND на новую установку с A9LH. {: .notice--info}
 
-Before starting, you may want to check your SD card for errors using [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), or [F3X (Mac)](f3x-(mac))! {: .notice--warning}
+Перед тем, как начать, стоит проверить Вашу SD-карту на ошибки с помощью [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), или [F3X (Mac)](f3x-(mac))! {: .notice--warning}
 
-|                                                         New 3DS                                                          |                                                                                    Old 3DS or 2DS                                                                                     |
+|                                                         New 3DS                                                          |                                                                                    Old 3DS или 2DS                                                                                    |
 |:------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | [![New 3DS](images/new3ds.png)](get-started-(new-3ds))   
   
