@@ -11,20 +11,20 @@ Se hai già modificato il tuo 3DS in passato e hai un CFW basato su una EmuNAND,
 #### Requisiti
 
 * Una flashcard per il Nintendo DS che funziona sulla tua versione del 3DS
-* The latest release of [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/)
+* L'ultima release di [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/)
 
-#### Instructions
+#### Istruzioni
 
-  1. Create a folder named `files9` on the root of your SD card if it does not already exist
-  2. Copy `Launcher.dat` and `Decrypt9WIP.dat` from the Decrypt9WIP `.zip` to the root of your SD card
-  3. Reinsert your SD card into your 3DS
-  4. Put `Decrypt9.nds` from the Decrypt9 `.zip` on your DS flashcard
-  5. Start your DS flashcard from your 3DS
-  6. Boot `Decrypt9.nds` using your flashcart
-  7. Select the correct option for your system version 
+  1. Se non esiste, crea una cartella chiamata `files9` nella root della tua scheda SD
+  2. Copia il file `Launcher.dat` e il file `Decrypt9WIP.dat` dall'archivio `.zip` di Decrypt9WIP nella root della scheda SD
+  3. Reinserisci la tua scheda SD nel tuo 3DS
+  4. Metti il file `Decrypt9.nds` dall'archivio `.zip` di Decrypt9WIP sulla tua flashcard DS
+  5. Avvia la flashcard DS dal tuo 3DS
+  6. Avvia `Decrypt9.nds` dalla flashcard
+  7. Seleziona l'opzione corretta per la tua versione di sistema 
     * 4.X.X -> "4.x Decrypt9WIP"
     * 6.X.X -> "6.x Decrypt9WIP"
-  8. Reboot the system, then go to System Settings, then "Other Settings", then "Profile", then "Nintendo DS Profile"
-  9. If the exploit was successful, you will have booted into Decrypt9
+  8. Riavvia il sistema, poi vai alle "Impostazioni della console", quindi in "Impostazioni Generali", poi in "Profilo" ed infine in "Profilo Nintendo DS"
+  9. Se l'exploit viene eseguito correttamente, verrà avviato Decrypt9
 
-Continue to [2.1.0 ctrtransfer](2.1.0-ctrtransfer). {: .notice--primary}
+Prosegui con il [ctrtransfer 2.1.0](2.1.0-ctrtransfer) {: .notice--primary}
