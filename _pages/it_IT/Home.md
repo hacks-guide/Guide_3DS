@@ -25,26 +25,26 @@ Nella maggior parte dei casi, l'avvio di homebrew sulla tua console è gratis al
 
 ## Cosa vuol dire Custom Firmware?
 
-**Custom Firmware** ("CFW") enables you to use more advanced hacks that userland homebrew can't easily do. For instance, signature patches let you install unsigned titles that appear right on your HOME Menu.
+Un **Custom Firmware** ("CFW") ti permette di utilizzare hack avanzate che un homebrew userland non può (con altrettanta facilità). Ad esempio, le signature patch ti permettono di installare titoli non firmati in modo tale che appaiano nel menu HOME.
 
-CFW can be easily set up on any console that is on 11.2.0 (latest) or lower. Other versions can have their firmware downgraded.
+È possibile installare un CFW su qualunque console con firmware 11.2.0 (l'ultimo) o inferiore. Altre versioni di sistema possono essere downgradate.
 
-## What does this guide install?
+## Cosa viene installato con questa guida?
 
-This guide has the end goal of taking a completely unmodified 3DS from stock firmware to arm9loaderhax powered Custom Firmware. On some versions, it utilizes homebrew as a stepping off point, but Custom Firmware is still the goal.
+Lo scopo di questa guida è di installare in un 3DS stock mai modificato un Custom Firmware basato su arm9loaderhax. In alcune versioni di sistema è necessario utilizzare degli homebrew come punto di partenza, ma il Custom Firmware rimane comunque l'obiettivo finale.
 
-Arm9loaderhax is the newest and best method of launching Custom Firmware that gives us nearly full control of the system only milliseconds into boot, which is similar to the effect of BootMii for the Wii.
+L'Arm9loaderhax è attualmente il più recente e miglior metodo per installare un Custom Firmware in grado di fornirci pieno controllo della console a pochi istanti dal boot, con un effetto simile a quello ottenuto con BootMii su Wii.
 
-The benefits of arm9loaderhax over other Custom Firmware launch methods are numerous, and as such it is recommended to use this guide over any other that relies on outdated software (such as menuhax or rxTools).
+I benefici dell'uso dell'arm9loaderhax rispetto metodi preesistenti per l'avvio di un Custom Firmware sono numerosi, per cui si raccomanda l'uso di questa guida a sostituzione di metodi basati su software ormai datati (come menuhax o rxTools).
 
-## What can I do with Custom Firmware?
+## Cosa posso fare con un Custom Firmware?
 
-+ Play all game cards and eShop games, regardless of region
-+ Customize your HOME Menu with user-created [themes](https://3dsthem.es/) and [badges](https://badges.3dsthem.es/)
-+ Use "ROM hacks" for games that you own
-+ Take gameplay and application screenshots
-+ [Backup, edit, and restore](https://gbatemp.net/threads/release-jks-savemanager-homebrew-cia-save-manager.413143/) saves for many games
-+ Play games for older systems with various emulators, using RetroArch or other standalone emulators. (Works best with a New Nintendo 3DS)
++ Giocare tutte le cartucce e giochi dell'eShop, indipendentemente dalla regionalità
++ Personalizzare il tuo menu Home con [temi](https://3dsthem.es/) e [stemmi](https://badges.3dsthem.es/) creati dagli utenti
++ Usare dei "Rom HACK" per i giochi che possiedi
++ Catturare degli screenshot di applicazioni e di giochi
++ [Salvare, modificare e ripristinare](https://gbatemp.net/threads/release-jks-savemanager-homebrew-cia-save-manager.413143/) salvataggi per molti giochi
++ Giocare a giochi per vecchi sistemi usando vari emulatori, come RetroArch o altri emulatori a sé stanti (Funzionano meglio con un New Nintendo 3DS)
 + Install homebrew titles to your system, and have them appear on your HOME Menu
 + Dump your game cards to a format you can install, and play them without needing the card
 + New 3DS only: stream live gameplay to your PC wirelessly with NTR CFW
