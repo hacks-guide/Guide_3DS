@@ -12,7 +12,7 @@ Os campos "desde" e "até" são inclusivos. Isto significa que, por exemplo, a l
 
 No caso de "5.0.0-0U", por exemplo, teria de seguir a coluna "Sem Browser" e a linha 5.0.0 e 5.1.0, pois o sistema está numa versão que se encontra dentro do especificado e não tem nenhum browser instalado. {% endcapture %}
 
-<div class="notice--info">{{ notice-1 | markdownify }}</div>
+<div class="notice--info">{ notice-1 | markdownify }</div>
 
 **For all versions you can [Cart Update](cart-update) to a higher version in the same column to follow its instructions instead.** {: .notice--warning}
 
