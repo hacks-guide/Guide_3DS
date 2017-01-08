@@ -183,7 +183,7 @@ This is because you selected the wrong version in the steelhax installer.
   3. Test booting Hourglass9 
       1. On Luma3DS, hold (Start) on boot
   4. Try deleting home menu's extdata 
-      1. Clear Home Menu's extdata by navigating to the following folder on your SD card: `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/` 
+      1. Clear Home Menu's extdata by navigating to the following folder on your SD card: `/Nintendo 3DS/( 32-Tegn ID )/( 32-Tegn ID )/extdata/00000000/` 
         * EUR Region: Delete `00000098`
         * JPN Region: Delete `00000082`
         * USA Region: Delete `0000008f`
@@ -197,7 +197,7 @@ This is because you selected the wrong version in the steelhax installer.
     * Kopier `firmware.bin` og `cetk` til mappen, `/luma/` på SD-kortet
     * Delete both of these files after updating your 3DS
   8. Try following [9.2.0 ctrtransfer](9.2.0-ctrtransfer)
-  9. Ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [3DS Hacking on Discord](https://discord.gg/MWxPgEp).
+  9. Spør om hjelp på [#3dshacks på Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) eller [3DS Hacking på Discord](https://discord.gg/MWxPgEp).
 
 ## <a name="ts_sys_blue" />Blue screen on boot (bootrom error)
 
