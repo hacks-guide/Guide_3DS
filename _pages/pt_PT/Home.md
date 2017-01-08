@@ -15,7 +15,7 @@ Se tiver uma consola de desenvolvimento ("PANDA" ou "SNAKE"), veja o guia [devGu
 
 **Para usar os links [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) deste guia, precisa de um cliente torrent, como o [Deluge](http://dev.deluge-torrent.org/wiki/Download)** {: .notice--info}
 
-**Read all of the introductory pages before proceeding.** {: .notice--warning}
+**Leia todas as páginas de introdução antes de começar.** {: .notice--warning}
 
 ## What is Homebrew?
 
