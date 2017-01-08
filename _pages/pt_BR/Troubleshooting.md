@@ -4,7 +4,7 @@ title: "Troubleshooting" permalink: /troubleshooting.html lang: en_US ref: troub
 
 * * *
 
-If you are unable to boot your 3DS, please look for the section relevant to you, and follow the instructions. Once a solution works for you, you can proceed on with the main guide (The section is fairly long, try using Ctrl+F to search for your issue.) {: .notice--primary}
+Se não conseguir ligar a sua 3DS, por favor procure a secção relevante ao seu problema, e siga as instruções. Quando uma das soluções funcionar para si, pode continuar o resto do guia (Esta página é relativamente grande. Tente localizar o seu problema usando Ctrl+F) {: .notice--primary}
 
 **If you still cannot solve your issue and need to reach out for help, please paste the contents of all relevant .log files from the root of your SD card into a [Gist](https://gist.github.com/), then come for help prepared with a detailed description of your problem and what you've tried.** {: .notice--info}
 
