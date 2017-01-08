@@ -4,13 +4,13 @@ title: "Why Ads?" permalink: /why-ads.html layout: single-no-ads lang: en_US ref
 
 * * *
 
-This project is the culmination of hundreds upon hundreds of hours of constant work.
+Questo progetto è il culmine di centinaia e centinaia ore di lavoro costante.
 
-I maintain this guide, for free, and ensure it is always up to date. Because of this effort, I feel that it is fair for me to attempt to gain a meager income from my work (I receive next to no donations anymore).
+Mantengo questa guida, gratuitamente, e mi assicuro che sia sempre aggiornata. Because of this effort, I feel that it is fair for me to attempt to gain a meager income from my work (I receive next to no donations anymore).
 
-This site costs you nothing to use, and all that I display are non-intrusive ads. If you still have a problem with this, feel free to block these ads.
+Usare questo sito non ti costa nulla, e tutto ciò che mostro sono pubblicità non intrusive. Ma se hai ancora problemi con questo, sentiti libero di bloccare queste pubblicità.
 
 If you do block ads, I would like to also remind you of the [Donations](donations) page, but once again that is optional too.
 
-Thanks,  
+Grazie,  
 Plailect
