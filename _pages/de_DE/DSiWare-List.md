@@ -12,26 +12,26 @@ Jede Sektion wurde vom günstigsten zum teuersten Preis sortiert. {: .notice--in
 
 QR Codes können im Home Menü geladen werden. Drücke dafür L+R auf dem Home Menü und tippe das QR Icon auf dem unteren Bildschirm an. {: .notice--info}
 
-The size requirements are because the injected DSiWare and its hacked save must not modify their respective file sizes in order to system transfer properly, meaning that the donor DSiWare must be large enough to fit the hacked DSiWare. {: .notice--info}
+Die Dateigrößen Vorraussetzungen existieren, weil die injezierte DSiWare und der gehackte Speicherstand nicht die Dateigröße verändern darf um vernünftig mit einem System-Transfer übertragen zu werden. {: .notice--info}
 
 {% capture notice-list %}
 
-    Compatible DSiWare games must meet specific size requirements, which are as follows:
+    Kompatible DSiWare Spiele müssen eine bestimme Dateigröße einhalten, welche wie folgt lautet:
     
     + USA DSiWare
-      + Uses sudokuhax
-      + `.app` size of >= 3,457,024 bytes
-      + `public.sav` size of >= 67,584 bytes
+      + Nutzt sudokuhax
+      + `.app` mit einer Größe von >= 3,457,024 bytes
+      + `public.sav` mit einer Größe von >= 67,584 bytes
     
     + EUR DSiWare
-      + Uses exidiahax (temporarily)
-      + `.app` size of >= 9,628,672 bytes
-      + `public.sav` size of >= 113,908 bytes
-      + `public.sav` size of <= 131,072 bytes
-      + If `public.sav` is not less than or equal to 128KB, exidia will not load the save
+      + Nutzt exidiahax (temporär)
+      + `.app` mit einer Größe von >= 9,628,672 bytes
+      + `public.sav` mit einer Größe von >= 113,908 bytes
+      + `public.sav` mit einer Größe von <= 131,072 bytes
+      + Wenn `public.sav` nicht kleiner oder gleich 128KB Groß ist, wird exidia diesen Speicherstand nicht laden
     
     + JPN DSiWare
-      + Uses 4swordshax (temporarily)
+      + Nutzt 4swordshax (temporär)
       + `.app` size of >= 14,131,200 bytes
       + `public.sav` size of == 16,384 bytes
       + If `public.sav` is not exactly 16KB, 4swords will delete it
