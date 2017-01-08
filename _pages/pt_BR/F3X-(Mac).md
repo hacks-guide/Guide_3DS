@@ -12,7 +12,7 @@ Esta página é apenas para utilizadores de Mac. Se não tiver Mac, veja as pág
 
 #### O que precisa
 
-* The latest release of [F3X](https://github.com/insidegui/F3X/releases)
+* A última versão do [F3X](https://github.com/insidegui/F3X/releases)
 
 #### Instructions
 
