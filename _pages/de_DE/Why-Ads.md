@@ -6,9 +6,9 @@ title: "Why Ads?" permalink: /why-ads.html layout: single-no-ads lang: en_US ref
 
 This project is the culmination of hundreds upon hundreds of hours of constant work.
 
-I maintain this guide, for free, and ensure it is always up to date. Because of this effort, I feel that it is fair for me to attempt to gain a meager income from my work (I receive next to no donations anymore).
+Ich halte diese Anleitung immer aufrecht und aktualisiere sie immer; und das kostenlos. Aufgrund dieser Bemühungen, halte ich es für fair, zu versuchen, ein wenig Einkommen für meine Arbeit zu erhalten (Ich erhalte fast keine Spenden mehr).
 
-This site costs you nothing to use, and all that I display are non-intrusive ads. If you still have a problem with this, feel free to block these ads.
+Diese Website ist kostenlos zu benutzen, und die Werbung, die ich auf der Seite einblende ist nicht aufdringlich. Falls du dennoch ein Problem damit hast, kannst du gerne einen Adblocker benutzen.
 
 Solltest du dennoch Werbung blockieren, würde ich dich gerne an die [Spenden](donations) Seite erinnern, aber das ist ebenfalls optional.
 
