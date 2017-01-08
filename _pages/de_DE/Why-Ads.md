@@ -4,7 +4,7 @@ title: "Why Ads?" permalink: /why-ads.html layout: single-no-ads lang: en_US ref
 
 * * *
 
-This project is the culmination of hundreds upon hundreds of hours of constant work.
+Dieses Projekt ist die Zusammenschweißung mehrerer hunderter Stunden an dauernder Arbeit.
 
 Ich halte diese Anleitung immer aufrecht und aktualisiere sie immer; und das kostenlos. Aufgrund dieser Bemühungen, halte ich es für fair, zu versuchen, ein wenig Einkommen für meine Arbeit zu erhalten (Ich erhalte fast keine Spenden mehr).
 
