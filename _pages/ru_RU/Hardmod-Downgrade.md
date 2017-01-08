@@ -34,9 +34,9 @@ title: "Hardmod Downgrade" permalink: /hardmod-downgrade.html lang: en_US ref: h
   3. Извлеките файлы из `архива` с файлами прошивки в папку `/autofirm/source/firmwares/`.
   4. Запустите `autofirm.bat` и выберите версию прошивки, соответствующую версии NAND.
   5. Дождитесь окончания процесса.
-  6. Если все пройдет хорошо, ваш не измененный NAND будет находиться в файле `nand.bin` , а модифицированная версия будет называться `nand_patched.bin.` Именно этот файл будет содержать NATIVE_FIRM от 10.4.0. 
-  * Не удаляйте `nand.bin`, он еще пригодится.
-  7. Прошейте `nand_patched.bin` обратно в ваше устройство, используя хардмод. 
+  6. Если все пройдет хорошо, ваш не измененный NAND будет находиться в файле `nand.bin` , а модифицированная версия будет называться `nand_patched.bin` Именно этот файл будет содержать NATIVE_FIRM от 10.4.0. 
+  * Keep `nand.bin`, it will be used later
+  7. Flash this `nand_patched.bin` to your device with your hardmod
 
 ##### Часть II - Проверка эксплойта
 
