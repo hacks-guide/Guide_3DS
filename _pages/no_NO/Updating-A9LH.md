@@ -14,7 +14,7 @@ Hvis du har satt en PIN-kode på Luma må du midlertidig deaktivere den for å f
 
 Hvis du bruker en nyttelast som ikke slår på skjermen av seg selv (som f.eks. Bootanim9) er det anbefales det på det sterkeste at du endrer navn til `arm9loaderhax_si.bin` i stedet for `arm9loaderhax.bin` {: .notice--info}
 
-The versions of data_input only refer to revisions of the `.zip` to be compatible with different installer versions, and are *not* the same thing as updating a9lh itself (the payload files). They make no practical difference beyond the installation process. {: .notice--info}
+Versjonen av data_input refereres bare til revisjonen av `.zip`-filen for å være kompatibel med andre installasjonversjoner og er *ikke* det samme som å oppdatere a9lh i og for seg selv (nyttelast filene). Utenfor installasjonprosessen spiller det praktisk talt ingen rolle. {: .notice--info}
 
 Disse trinnene vil også oppdatere dine ulike nyttelastene og AES nøkkel databasen. {: .notice--success}
 
