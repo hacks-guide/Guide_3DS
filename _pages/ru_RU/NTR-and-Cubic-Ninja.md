@@ -50,12 +50,12 @@ title: "NTR and Cubic Ninja" permalink: /ntr-and-cubic-ninja.html lang: en_US re
   5. Отсканируйте QR-код, содержащийся в `.zip`-архиве NTR CFW и соответствующий Вашему региону
   6. В домашнем меню нажмите одновременно (X) и (Y), чтобы открыть меню NTR
   7. Включите дебаггер (Enable the debugger) и закройте меню
-  8. Use your router's web page to get your 3DS's IP address (google it if you don't know how, all routers are different)
-  9. Run NTR Debugger on your computer
- 10. Enter the following commands (replace 192.168.1.100 with your 3DS's IP address and 192.168.1.200 with your computer's IP address)  
+  8. Используйте web-интерфейс своего маршрутизатора, чтобы узнать IP-адрес вашей консоли (если не знаете, как это сделать - гуглите, все роутеры разные)
+  9. Запустите NTR Debugger на компьютере
+ 10. Введите указанные команды (замените 192.168.1.100 IP-адресом вашей 3DS, а 192.168.1.200 IP-адресом вашего компьютера)  
  + `connect("192.168.1.100", 8000)` + `write(0x15E424, tuple(map(ord, "http://192.168.1.200/update.php\0")), pid=0x25)` + `write(0x15E0EC, tuple(map(ord, "http://192.168.1.200/update.php\0")), pid=0x25)` + `write(0x15E463, tuple(map(ord, "http://192.168.1.200/update.php\0")), pid=0x25)`
- 11. Update your 3DS by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
+ 11. Обновите вашу 3DS в Системные настройках, выберите "Прочие настройки", пролистайте до конца направо и выберите "Обновление"
 
 * * *
 
-Continue to [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher)) {: .notice--primary}
+Переходите к запуску [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher)) {: .notice--primary}
