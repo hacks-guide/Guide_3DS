@@ -4,7 +4,7 @@ title: "Donations" permalink: /donations.html layout: single-no-ads lang: en_US 
 
 * * *
 
-## If you appreciate this guide, I accept donations.
+## Если вам помог или просто понравился этот гайд, то милости прошу донатить.
 
 {: .text-center} {: .notice--success}
 
