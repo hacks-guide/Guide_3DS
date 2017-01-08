@@ -11,7 +11,7 @@ title: "FAQ" permalink: /faq.html lang: en_US ref: faq
 **A:** Следует использовать Luma3DS Updater
 
 <a name="faq_gatewaysky" />**Q:** *Я слышал, что в продаже есть такое устройство (Gateway, Sky3DS, и т. д.), мне это необходимо?*  
-**A:** Нет. arm9loaderhax - это улучшенная реализация загрузочного эксплойта, который запускается в ранних стадиях загрузки консоли и открывает возможность для таких вещей, как полностью кастомные прошивки.
+**A:** Нет. arm9loaderhax - это прогрессивный метод взлома, который запускается в ранних стадиях загрузки консоли и открывает возможность для таких вещей, как полностью кастомные прошивки.
 
 <a name="faq_gatewaysaves" />**Q:** *Как мне переместить сохранения с Gateway в игры, установленные на консоли?*  
 **A:** Информация предоставлена здесь</a> (англ.)
@@ -43,8 +43,8 @@ title: "FAQ" permalink: /faq.html lang: en_US ref: faq
 <a name="faq_movesd" />**Q:** *Как мне использовать новую SD-карту после прохождения гайда?*  
 **A:** Достаточно просто перенести все файлы со старой SD-карты на новую.
 
-<a name="faq_NNID" />**Q:** *Can I keep my NNID?*  
-**A:** If you start with an NNID and follow every step, you will end up keeping your NNID at the end.
+<a name="faq_NNID" />**Q:** *Можно мне оставить свой NNID?*  
+**A:** Если начать прохождение гайда с NNID и следовать каждому шагу, в конце NNID останется на консоли.
 
 <a name="faq_systransfer" />**Q:** *What about System Transfers?*  
 **A:** Once you have completed the guide, you can system transfer to and from an arm9loaderhax'd 3DS or 2DS exactly like you would a regular stock console or EmuNAND (you will lose any non-legitimate games/themes/DLC in the transfer; saves will stay even for games that are lost).
