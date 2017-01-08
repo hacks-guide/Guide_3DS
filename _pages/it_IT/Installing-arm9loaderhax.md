@@ -86,38 +86,38 @@ Durante la guida verranno anche configurati i seguenti programmi:
   2. Esegui i seguenti passaggi per installare l'arm9loaderhax sulla tua console: 
     * Dovresti ora essere alla versione 2.1.0
     * Vai sul sito `http://dukesrg.github.io/2xrsa.html?arm11.bin` usando il browser del tuo 3DS
-    * Se ottieni l'errore "Questo servizio non è disponibile nella tua regione", usa le Impostazioni di Sistema per modificare la nazione del tuo dispositivo in modo che rientri nella regione NAND che hai installato durante il ctrtransfer della 2.1.0
-    * Se ottieni un altro errore, [ segui questa guida per risolvere il problema](troubleshooting#ts_browser)
-    * Se ottieni uno schermo glitchato, [segui questa guida per risolvere il problema](troubleshooting#ts_safe_a9lh_screen)
-    * Premi (Select) per compiere un'installazione completa
-    * Il programma di installazione installerà arm9loaderhax sul tuo dispositivo (questo processo è molto veloce)
+    * Se ottieni l'errore "Questo servizio non è disponibile nella tua regione", usa le Impostazioni della Console per impostare la nazione della tua console in modo che corrisponda alla regione della NAND installata durante il ctrtransfer 2.1.0
+    * Se ottieni un altro errore, [segui questa guida per risolvere il problema](troubleshooting#ts_browser)
+    * Se ottieni uno schermo visivamente corrotto, [segui questa guida per risolvere il problema](troubleshooting#ts_safe_a9lh_screen)
+    * Premi (Select) per selezionare Full Install
+    * Il programma di installazione installerà l'arm9loaderhax sulla tua console (impiegherà pochi istanti)
     * Spegni la tua console, tieni premuto il pulsante d'accensione se è necessario
-    * Copy your console specific `OTP.bin` from the `/a9lh/` folder on your SD card to a safe location on your computer and back it up to multiple locations (such as online file storage), then reinsert your SD card into your 3DS
+    * Copia il file `OTP.bin`, ricavato precedentemente dalla tua console, dalla cartella `/a9lh/` della tua scheda SD in una posizione sicura sul tuo computer e in ulteriori locazioni (come un archivio online), poi reinserisci la tua scheda SD nel tuo 3DS
 
-##### Section III - Configuring Luma3DS
+##### Sezione III - Configurare Luma3DS
 
-  1. Hold select on boot to enter the Luma3DS menu 
-    * Make sure to start holding the button before pressing power
-    * If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_a9lh) 
-    * If you boot to SafeA9LHInstaller, [follow this troubleshooting guide](troubleshooting#ts_safe_a9lh)
-  2. Use the (A) button and the D-Pad to turn on the following:  
+  1. Tieni premuto (Select) durante l'accensione per entrare nel menu di Luma3DS 
+    * Assicurati di tener premuto il pulsante prima di premere il pulsante di accensione
+    * Se ottieni uno schermo nero, [segui questa guida per risolvere il problema](troubleshooting#ts_sys_a9lh) 
+    * Se il 3DS avvia SafeA9LHInstaller, [segui questa guida per risolvere il problema](troubleshooting#ts_safe_a9lh)
+  2. Usa il pulsante (A) e il D-Pad per selezionare le seguenti opzioni:  
     * **"Autoboot SysNAND"**
     * **"Use SysNAND FIRM if booting with R"**
     * **"Show NAND or user string in System Settings"**
-  3. If you are using a **New 3DS**, you should *also* enable the following: 
-    * **"New 3DS CPU" to "Clock+L2(x)"**
-    * This will increase the framerate of many games, but may cause instability in others
-    * If some games do not work properly, disable this option and try again
-  4. Press Start to save and reboot 
+  3. Se stai usando un **New 3DS**, dovresti selezionare *anche* queste opzioni: 
+    * **"New 3DS CPU" a "Clock+L2(x)"**
+    * Questa opzione aumenterà il framerate in molti giochi, ma può rendere instabili altri
+    * Se alcuni giochi non funzionano come dovrebbero, disabilità questa opzione
+  4. Premi start per salvare e riavviare il 3DS 
     * If you get a black screen, just continue to the next section 
     * If you get a "Failed to mount CTRNAND" error, just continue to the next section 
 
-##### Section IV - Restoring the System
+##### Sezione IV - Ripristinare il Sistema
 
-If, before following this guide, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand) instead of doing the first four steps in this section. {: .notice--info}
+Se, prima di seguire questa guida, avevi già un'installazione EmuNAND presente e vorresti ripristinare il contenuto dell'EmuNAND nel nuovo CFW SysNAND, segui la guida [Spostare l'EmuNAND](move-emunand) al posto di seguire i primi quattro passi indicati in questa sezione. {: .notice--info}
 
-  1. Open Hourglass9 from arm9loaderhax by holding (Start) on boot
-  2. Go to "SysNAND Backup/Restore"
+  1. Apri Hourglass9 dall'arm9loaderhax tenendo premuto (Start) all'avvio
+  2. Vai su "SysNAND Backup/Restore"
   3. Restore from `NANDmin.bin`
   4. Press (Start) to reboot 
     * If you get a black screen, [follow 9.2.0 ctrtransfer](9.2.0-ctrtransfer)
