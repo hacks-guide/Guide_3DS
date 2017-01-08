@@ -12,29 +12,29 @@ Cada secção está ordenada por preço ascendente. {: .notice--info}
 
 Os Códigos QR podem ser usados ao pressionar (L + R) no menu Home, e depois ao clicar no ícone QR no ecrã de baixo. {: .notice--info}
 
-The size requirements are because the injected DSiWare and its hacked save must not modify their respective file sizes in order to system transfer properly, meaning that the donor DSiWare must be large enough to fit the hacked DSiWare. {: .notice--info}
+Os requisitos de tamanho são porque o DSiWare injetado e o seu save hackeado não podem modificar os seus respetivos tamanhos de ficheiro, para que assim possam ser transferidos de sistema, o que significa que o DSiWare doador tem de ser grande o suficiente para que o DSiWare hackeado caiba. {: .notice--info}
 
 {% capture notice-list %}
 
-    Compatible DSiWare games must meet specific size requirements, which are as follows:
+    Jogos DSiWare compatíveis têm de satisfazer os requisitos específicos de tamanho, que são os seguintes:
     
     + USA DSiWare
-      + Uses sudokuhax
-      + `.app` size of >= 3,457,024 bytes
-      + `public.sav` size of >= 67,584 bytes
+      + Usa sudokuhax
+      + `.app` com tamanho de >= 3,457,024 bytes
+      + `public.sav` com tamanho de >= 67,584 bytes
     
     + EUR DSiWare
-      + Uses exidiahax (temporarily)
-      + `.app` size of >= 9,628,672 bytes
-      + `public.sav` size of >= 113,908 bytes
-      + `public.sav` size of <= 131,072 bytes
-      + If `public.sav` is not less than or equal to 128KB, exidia will not load the save
+      + Usa exidiahax (temporário)
+      + `.app` com tamanho de >= 9,628,672 bytes
+      + `public.sav` com tamanho de >= 113,908 bytes
+      + `public.sav` com tamanho de <= 131,072 bytes
+      + Se `public.sav` não for menor que ou igual a 128KB, o exidia não carrega o save
     
     + JPN DSiWare
-      + Uses 4swordshax (temporarily)
-      + `.app` size of >= 14,131,200 bytes
-      + `public.sav` size of == 16,384 bytes
-      + If `public.sav` is not exactly 16KB, 4swords will delete it
+      + Usa 4swordshax (temporário)
+      + `.app` com tamanho de >= 14,131,200 bytes
+      + `public.sav` com tamanho de == 16,384 bytes
+      + Se `public.sav` não for exatamente16KB, o 4swords apaga-o
     
 
 {% endcapture %}
