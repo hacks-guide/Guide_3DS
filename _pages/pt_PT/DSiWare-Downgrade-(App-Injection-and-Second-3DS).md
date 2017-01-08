@@ -12,9 +12,9 @@ Isto aproveita-se duma falha no sistema que permite que títulos DSiWare leiam e
 
 Isto é uma implementação, que funciona correntemente, do exploit "partições FIRM known-plaintext", explicado [aqui](https://www.3dbrew.org/wiki/3DS_System_Flaws). {: .notice--info}
 
-This guide will assume the CFW 3DS is running arm9loaderhax and was setup with this guide, but will work (with slight modifications such as doing all SysNAND steps on EmuNAND) on systems running an EmuNAND. Note that the terms EmuNAND and RedNAND refer to slightly different implementations of [the same concept](http://3dbrew.org/wiki/NAND_Redirection). {: .notice--info}
+Este guia irá assumir que a 3DS com CFW está a correr arm9loaderhax e que foi instalado a partir deste guia, mas também funcionará (com ligeiras modificações tais como fazer todos os passos da SysNAND na sua EmuNAND) em sistemas com EmuNAND. Note que os termos EmuNAND e RedNAND referem-se a implementações ligeiramente diferentes [do mesmo conceito](http://3dbrew.org/wiki/NAND_Redirection). {: .notice--info}
 
-Your DSiWare's save will be backed up before getting replaced by the hacked save. {: .notice--info}
+O seu save DSiWare será copiado antes de ser substituído por um save hackeado. {: .notice--info}
 
 {% capture notice-4 %} This exploit requires you to [System Transfer](http://en-americas-support.nintendo.com/app/answers/detail/a_id/13996/) from a CFW 3DS to a stock 3DS as part of the steps. System Transfers will work in the following directions *only*:  
 + New 3DS -> New 3DS  
