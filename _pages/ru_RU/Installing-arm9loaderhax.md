@@ -61,17 +61,17 @@ arm9loaderhax.bin, используемый в этом гайде - испол�
   1. **Если на карте памяти есть папка `/files9/`, скопируйте ее в надежное место (лучше сделать не одну копию и на разных носителях, а так же в облаке); файлы, находящиеся в этой папке файлы могут вернуть приставку к жизни, в случае проблем.**
   2. Создайте папку `cias` в корне карты памяти.
   3. **Удалите папку `a9lh` из корня КП, если таковая там есть.** 
-    * **If you accidentally install arm9loaderhax using another device's `OTP.bin`, you will BRICK!**
-  4. Delete the `3ds` folder from the root of your SD card if it exists
-  5. **Copy *the contents of* the `starter.zip` to the root of your SD card** 
-    * This will include a brand new `3ds` folder to replace the one you just deleted
-  6. Copy *the contents of* the SafeA9LHInstaller `.7z` to the root of your SD card
-  7. **Copy the `a9lh` folder from the data_input `.zip` to the root of your SD Card**
-  8. **Copy *the contents of* the arm9loaderhax release `.7z` to `a9lh` folder on your SD card**
-  9. Copy `hblauncher_loader.cia` from the hblauncher_loader `.zip` to the `/cias/` folder on your SD card
- 10. Copy `lumaupdater.cia` from the Luma3DS Updater `.zip` to the `/cias/` folder on your SD card
- 11. Copy `FBI.cia` from the FBI `.zip` to the `/cias/` folder on your SD card
- 12. **Copy `arm9loaderhax.bin` from the Luma3DS `.7z` to the root of your SD card, overwrite existing files**
+    * **Если вы по ошибке установите arm9loaderhax, используя `OTP.bin` от другой консоли, то будет БРИК!**
+  4. Удалите папку `3ds` из корня КП, если таковая там есть.
+  5. **Скопируйте *содержимое* архива `starter.zip` в корень карты памяти.** 
+    * Все это нужно сделать, чтобы актуализировать программы, содержащиеся в папке `3ds`.
+  6. Скопируйте *содержимое* `7z-архива` SafeA9LHInstaller в корень карты памяти.
+  7. **Скопируйте папку `a9lh` из архива `data_input` в корень карты памяти.**
+  8. **Скопируйте *содержимое* архива arm9loaderhax (`release.7z`) в папку `a9lh` в корне КП.**
+  9. Скопируйте `hblauncher_loader.cia` из `zip-архива` hblauncher_loader в папку `/cias/` в корне КП.
+ 10. Скопируйте `lumaupdater.cia` из `zip-архива` Luma3DS Updater в папку `/cias/` в корне КП.
+ 11. Скопируйте `FBI.cia` из `zip-архива` FBI в папку `/cias/` в корне КП.
+ 12. **Скопируйте `arm9loaderhax.bin` из `7z-архива` Luma3DS в корень карты памяти, согласившись на перезапись.**
  13. Create a folder named `luma` on the root of your SD card
  14. Create a folder named `payloads` in the `luma` folder on your SD card
  15. Copy `Hourglass9.bin` from the Hourglass9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `Hourglass9.bin` to `start_Hourglass9.bin`
