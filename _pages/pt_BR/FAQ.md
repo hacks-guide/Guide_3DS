@@ -13,8 +13,8 @@ title: "FAQ" permalink: /faq.html lang: en_US ref: faq
 <a name="faq_gatewaysky" />**P:***Ouvi falar sobre este produto pelo qual tenho de pagar (Gateway, Sky3DS, etc), isso é preciso?*  
 **R:**Não. arm9loaderhax é um método superior de carregar hax que arrancam muito cedo quando liga a consola, e abre a possibilidade para coisas tais como custom firmware verdadeiro.
 
-<a name="faq_gatewaysaves" />**Q:** *How do I move saves from an existing Gateway setup to device installed games?*  
-**A:** See this</a>
+<a name="faq_gatewaysaves" />**P:***Como é que eu movo os meus saves de um sistema Gateway para jogos instalados neste sistema?*  
+**R:**Veja isto</a>
 
 <a name="faq_need" />**Q:** *What do I need to do this guide?*  
 **A:** This guide can be completely done with free software and (if you have no browser) a compatible game
