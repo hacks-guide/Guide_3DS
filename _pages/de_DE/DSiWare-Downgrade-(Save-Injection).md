@@ -87,30 +87,30 @@ Diese Sicherheitskopie kann nur auf dieser NAND benutzt werden. Falls du deinen 
   * Dies wird eine Weile dauern
   4. Notiere dir, wo deine NFIRM Sicherheitskopie gespeichert wurde
   5. Beende dgTool 
-  * You may have to force power off by holding the power button
-  6. Put your SD card in your computer, then copy `F0F1_N3DS.bin` or `F0F1_O3DS.bin` (depending on your device) to a safe location 
-  * Make backups in multiple locations
-  * This backup will save you from a brick if anything goes wrong in the future
+  * Eventuell musst du das Ausschalten erzwingen indem du den Power-Knopf gedrückt hälst
+  6. Lege deine SD Karte in deinen Computer ein, kopiere dann `F0F1_N3DS.bin` oder `F0F1_O3DS.bin` (abhängig von deinem Gerät) zu einem sicheren Ort 
+  * Erstelle Sicherheitskopien an verschiedenen Orten
+  * Diese Sicherheitskopie wird dich von einem Brick schützen, falls später etwas schief gehen sollte
 
-##### Section V - Flashing NFIRM
+##### Sektion V - NFIRM flashen
 
-**Never downgrade with dgTool on a device that already has arm9loaderhax installed or you will BRICK!** {: .notice--danger}
+**Downgrade niemals mit dgTool auf einem Gerät, dass bereits arm9loaderhax installiert hat oder du wirst BRICKEN!** {: .notice--danger}
 
-  1. Launch your DSiWare game on
-  2. Launch dgTool using your DSiWare game 
-  * **Fieldrunners**: Touch the 'Scores' button at the main menu
-  * **Legends of Exidia**: After pressing (A) or (Start) at the two title screens, select the first save slot and press continue
-  * **Guitar Rock Tour**: Scroll down and go to High-Scores -> Drums -> Easy
-  * **The Legend of Zelda: Four Swords (Anniversary Edition)**: Just start the game
-  3. Select "Downgrade FIRM to 10.4" and confirm to flash the 10.4.0 NFIRM bin
-  4. Exit dgTool 
-  * You may have to force power off by holding the power button
-  5. Reboot
+  1. Starte dein DSiWare-Spiel
+  2. Starte dgTool in deinem DSiWare-Spiel 
+  * **Fieldrunners**: Berühre den "Ergebnisse" Knopf im Hauptmenü
+  * **Legends of Exidia**: Nachdem du (A) oder (Start) bei den zwei Startbildschirmen gedrückt hast, wähle den ersten Speicherstand und drücke fortfahren
+  * **Guitar Rock Tour**: Scrolle runter und navigier zu Highscores -> Schlagzeug -> Leicht
+  * **The Legend of Zelda: Four Swords (Anniversary Edition)**: Starte einfach das Spiel
+  3. Wähle "Downgrade FIRM to 10.4" und bestätige das flashen der 10.4.0 NFIRM bin
+  4. Beende dgTool 
+  * Eventuell musst du das Ausschalten erzwingen indem du den Power-Knopf gedrückt hälst
+  5. Starte dein Gerät neu
 
-##### Section VI - Exploit verification
+##### Sektion VI - Exploit verifizieren
 
-  1. Reinsert your SD card into your 3DS
-  2. Launch the homebrew launcher on using your entrypoint
+  1. Lege deine SD Karte wieder in deinen 3DS ein
+  2. Starte den Homebrew Launcher mit deinem bevorzugten Eintrittspunkt
   3. Launch 3DSident
   4. Verify that the following: 
   * **Kernel version**: 2.50-11
