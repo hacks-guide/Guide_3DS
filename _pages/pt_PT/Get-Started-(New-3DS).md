@@ -6,7 +6,7 @@ title: "Get Started (New 3DS)" permalink: /get-started-(new-3ds).html lang: en_U
 
 Selecione a página apropriada para a sua versão no gráfico abaixo. {: .notice--primary}
 
-{% capture notice-1 %} The first two columns of the chart refer to the last number of your version (which corresponds to the browser version installed to the system). If the version is -0 then you do not have a browser, while any number above -0 indicates a browser is installed.
+{% capture notice-1 %} As duas primeiras colunas do gráfico referem-se ao último número que aparece na sua versão (que corresponde à versão do browser instalada no sistema). If the version is -0 then you do not have a browser, while any number above -0 indicates a browser is installed.
 
 The "from" and "to" fields are inclusive. This means that, for example, the "from 9.0.0 to 9.2.0" row includes 9.0.0, 9.1.0, and 9.2.0.
 
