@@ -31,7 +31,7 @@ If you are unable to boot your 3DS, please look for the section relevant to you,
   5. Copy `Nintendo DS Cart Whitelist - v11264.cia` to the `/cias/` folder on your SD card
   6. Copy either `New_3DS TWL_FIRM - v9936.cia` or `Old_3DS TWL_FIRM - v8817.cia` to the `/cias/` folder on your SD card
 
-##### Section II - Installing titles
+##### Seksjon II - Installere titler
 
   1. Åpne FBI
   2. Velg "SD"
@@ -87,9 +87,9 @@ This is caused by Gateway implementing a very shoddy downgrade method, which lea
  11. Press (Y) to copy the files
  12. Navigate to `newdir`
  13. Press (Y) to paste the files
- 14. Select "Move path(s)"
+ 14. Velg "Move path(s)"
  15. The uppercase extension files will have been moved to the `newdir` directory
- 16. Press (Start) to reboot
+ 16. Trykk (Start) for omstart
  17. Return to [Installing arm9loaderhax](installing-arm9loaderhax) and retry the FBI injection
  18. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then return to [Installing arm9loaderhax](installing-arm9loaderhax) and retry the FBI injection
 
@@ -168,8 +168,8 @@ This is because you selected the wrong version in the steelhax installer.
     *This probably will not work for an Old 3DS downgraded to 2.1.0*  
     **This will BRICK a New 3DS downgraded to 2.1.0** 
       1. Power off your 3DS by holding down the power button.
-      2. Hold L+R+A+Up.
-      3. Power on the 3DS.
+      2. Hold L+R+A+Opp.
+      3. Slå på konsollen.
       4. If you enter safe mode, update your 3DS *only if you have an entrypoint for the latest FW version and it is possible to downgrade from it* and attempt the downgrade again.
   5. Your 3DS may be bricked. For support, ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [3DS Hacking on Discord](https://discord.gg/MWxPgEp).
 
