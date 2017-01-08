@@ -34,9 +34,9 @@ This will work on New 3DS, Old 3DS, and 2DS. {: .notice--success}
   3. Copy the contents of the NFIRM `.zip` to the `/autofirm/source/firmwares/` folder
   4. Run `autofirm.bat` and select which device and version the NAND backup is for
   5. Wait while the script runs
-  6. If everything worked, then your original NAND will have been renamed to `backup_nand.bin` and you will have a modified `nand.bin` containing the 10.4.0 NATIVE_FIRM 
-  * Keep `backup_nand.bin`, it will be used later
-  7. Flash this `nand.bin` to your device with your hardmod
+  6. If everything worked, then your original NAND will have been renamed to `nand.bin` and you will have a modified `nand_patched.bin` containing the 10.4.0 NATIVE_FIRM 
+  * Keep `nand.bin`, it will be used later
+  7. Flash this `nand_patched.bin` to your device with your hardmod
 
 ##### Section II - Exploit verification
 
