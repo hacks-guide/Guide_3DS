@@ -44,7 +44,7 @@ Die folgenden Schritte werden zudem einige payloads und die AES Key Database akt
   9. Kopiere `arm9loaderhax.bin` aus der Luma3DS `.zip` in das Hauptverzeichnis deiner SD-Karte, und übereschreibe alle vorhandenen Dateien
  10. Lege die SD-Karte wieder in deinen 3DS ein
 
-##### Section II - Payload update
+##### Abschnitt II - payload Update
 
   1. Boot the device while holding D-Pad down
   2. Press (Select) to update arm9loaderhax
