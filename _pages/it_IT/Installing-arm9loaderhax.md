@@ -100,17 +100,17 @@ Durante la guida verranno anche configurati i seguenti programmi:
     * Assicurati di tener premuto il pulsante prima di premere il pulsante di accensione
     * Se ottieni uno schermo nero, [segui questa guida per risolvere il problema](troubleshooting#ts_sys_a9lh) 
     * Se il 3DS avvia SafeA9LHInstaller, [segui questa guida per risolvere il problema](troubleshooting#ts_safe_a9lh)
-  2. Usa il pulsante (A) e il D-Pad per selezionare le seguenti opzioni:  
+  2. Usa il pulsante (A) e il D-Pad per abilitare le seguenti opzioni:  
     * **"Autoboot SysNAND"**
     * **"Use SysNAND FIRM if booting with R"**
     * **"Show NAND or user string in System Settings"**
-  3. Se stai usando un **New 3DS**, dovresti selezionare *anche* queste opzioni: 
+  3. Se stai usando un **New 3DS**, dovresti abilitare *anche* queste opzioni: 
     * **"New 3DS CPU" a "Clock+L2(x)"**
     * Questa opzione aumenterà il framerate in molti giochi, ma può rendere instabili altri
     * Se alcuni giochi non funzionano come dovrebbero, disabilità questa opzione
   4. Premi start per salvare e riavviare il 3DS 
-    * If you get a black screen, just continue to the next section 
-    * If you get a "Failed to mount CTRNAND" error, just continue to the next section 
+    * Se ottieni uno schermo nero, prosegui comunque con la prossima sezione 
+    * Se ottieni l'errore "Failed to mount CTRNAND", prosegui comunque con la prossima sezione 
 
 ##### Sezione IV - Ripristinare il Sistema
 
@@ -118,39 +118,39 @@ Se, prima di seguire questa guida, avevi già un'installazione EmuNAND presente 
 
   1. Apri Hourglass9 dall'arm9loaderhax tenendo premuto (Start) all'avvio
   2. Vai su "SysNAND Backup/Restore"
-  3. Restore from `NANDmin.bin`
-  4. Press (Start) to reboot 
-    * If you get a black screen, [follow 9.2.0 ctrtransfer](9.2.0-ctrtransfer)
-  5. If your backup was of a version between 3.0.0 and 4.5.0, your console will not boot until you manually download the required firmware: 
-    * Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) and rename it to `firmware.bin`
-    * Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
-    * Copy `firmware.bin` and `cetk` to the `/luma/` folder on your SD card
-    * Delete both of these files after updating your 3DS
-  6. Update your 3DS by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update" 
-    * Updates while using A9LH + Luma (what you have) are safe, stop asking about it
-    * The warning about never updating a New 3DS from 2.1.0 does not apply after restoring your NAND backup.
-    * If this gives you an error, set your DNS settings to "auto"
-    * If this still gives you an error and your NAND is below 9.2.0, [follow 9.2.0 ctrtransfer](9.2.0-ctrtransfer)
+  3. Ripristina la SysNAND dal file `NANDmin.bin`
+  4. Premi (Start) per riavviare la console 
+    * Se ottieni uno schermo nero, segui la guida [ctrtransfer 9.2.0](9.2.0-ctrtransfer)
+  5. Se il tuo backup era di una versione di sistema compresa tra 3.0.0 e 4.5.0, la tua console non si avvierà finché non avrai scaricato manualmente il firmware richiesto: 
+    * Scarica [questo file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) e rinominalo in `firmware.bin`
+    * Scarica [questo file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
+    * Copia i file `firmware.bin` e `cetk` nella cartella `/luma/` della tua scheda SD
+    * Elimina entrambi i file dopo aver aggiornato il tuo 3DS
+  6. Aggiorna il tuo 3DS andando su Impostazioni della Console, poi "Impostazioni Generali", infine scorri a destra e seleziona "Aggiornamento" 
+    * Gli aggiornamenti effettuati usando A9LH + Luma (ora installato) sono sicuri, per cui basta chiederne la conferma
+    * L'avviso di non aggiornare un New 3DS con versione 2.1.0 non è più applicabile dopo aver ripristinato il tuo backup della NAND.
+    * Se ottieni un errore, imposta i DNS della connessione di rete in modo che vengano ottenuti automaticamente
+    * Se continui ad ottenere un errore e la tua NAND è ad una versione precedente di 9.2.0, segui la guida [ctrtransfer 9.2.0](9.2.0-ctrtransfer)
 
-##### Section V - Injecting FBI
+##### Sezione V - Iniettare FBI
 
-  1. Open Hourglass9 from arm9loaderhax by holding (Start) on boot
-  2. Go to "SysNAND Backup/Restore", then select the "Health&Safety Dump" option to dump Health & Safety to `hs.app` **(you can use Up and Down / Left and Right to change the name)**
-  3. Press (B), then select the "Health&Safety Inject" option
-  4. Select the FBI injectable `.app` for your region
-  5. Press (A) and confirm to inject
-  6. Press (Start) to reboot
-  7. If you still launch to the stock Health & Safety app and have downgraded with Gateway in the past, [follow this troubleshooting guide](troubleshooting#gw_fbi)
+  1. Apri Hourglass9 dall'arm9loaderhax tenendo premuto (Start) all'avvio
+  2. Seleziona "SysNAND Backup/Restore", poi seleziona "Health&Safety Dump" per creare un backup Health & Safety chiamato `hs.app` **(puoi usare le freccette Su e Giù/Sinistra e Destra per cambiare il nome)**
+  3. Premi (B), quindi seleziona l'opzione "Health&Safety Inject"
+  4. Seleziona il file `.app` iniettabile di FBI della tua regione
+  5. Premi (A) per confermare l'iniezione
+  6. Premi (Start) per riavviare la console
+  7. Se hai ancora l'applicazione "Informazioni per la salute e la sicurezza" di stock e hai usato in passato Gateway per fare un downgrade, [segui questa guida per risolvere il problema](troubleshooting#gw_fbi)
 
-##### Section VI - Finalizing setup
+##### Sezione VI - Ultimare l'installazione
 
-  1. Open Health and Safety (which is now FBI)
-  2. Select "SD"
-  3. Select "cias"
-  4. Navigate to `FBI.cia` and press (A) to install
-  5. Navigate to `hblauncher_loader.cia` and press (A) to install
-  6. Navigate to `lumaupdater.cia` and press (A) to install
-  7. Return to the SD directory with (B)
+  1. Apri Informazioni per la salute e la sicurezza (che ora è FBI)
+  2. Seleziona "SD"
+  3. Seleziona "cias"
+  4. Seleziona il file `FBI.cia` e premi (A) per installarlo
+  5. Seleziona il file `hblauncher_loader.cia` e premi (A) per installarlo
+  6. Seleziona il file `lumaupdater.cia` e premi (A) per installarlo
+  7. Ritorna alla cartella della tua SD premendo (B)
   8. Navigate to `arm9loaderhax.bin`, then press (A) on it and select the "Copy" option
   9. Return to the FBI main menu with (B)
  10. Select "CTR NAND"
