@@ -26,4 +26,4 @@ SoundHax è compatibile con le versioni dalla 9.0.0 alla 11.2.0 nelle regioni EU
   7. Avvia il file SoundHax `.m4a`
   8. La console dovrebbe ora caricare l'homebrew menu
 
-Continue to [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher)) {: .notice--primary}
+Prosegui con [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher)) {: .notice--primary}
