@@ -4,9 +4,9 @@ title: "Troubleshooting" permalink: /troubleshooting.html lang: en_US ref: troub
 
 * * *
 
-If you are unable to boot your 3DS, please look for the section relevant to you, and follow the instructions. Once a solution works for you, you can proceed on with the main guide (The section is fairly long, try using Ctrl+F to search for your issue.) {: .notice--primary}
+Se non riesci ad avviare il tuo 3DS, controlla la sezione rilevante per il tuo problema e segui le istruzioni indicate. Una volta trovata una soluzione, potrai riprendere con la guida principale (Questa sezione è particolarmente lunga, prova a cercare il tuo problema utilizzando Ctrl+F.) {: .notice--primary}
 
-**If you still cannot solve your issue and need to reach out for help, please paste the contents of all relevant .log files from the root of your SD card into a [Gist](https://gist.github.com/), then come for help prepared with a detailed description of your problem and what you've tried.** {: .notice--info}
+**Se non riesci comunque a risolvere il tuo problema e hai bisogno di supporto, incolla il contenuto dei file .log relativi al tuo problema o alla parte della guida a cui sei arrivato dalla root della tua scheda SD in [Gist](https://gist.github.com/), poi prima di chiedere aiuto prepara una descrizione dettagliata del tuo problema e cosa hai tentato per risolverlo.** {: .notice--info}
 
 ## <a name="twl_broken" />DSi / DS functionality is broken after completing the guide
 
