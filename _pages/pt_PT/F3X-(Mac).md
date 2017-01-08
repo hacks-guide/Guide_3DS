@@ -17,8 +17,8 @@ Esta página é apenas para utilizadores de Mac. Se não tiver Mac, veja as pág
 #### Instruções
 
   1. Extraia o ficheiro F3X `.zip`
-  2. Insert your SD card into your computer
-  3. Run the F3X app
+  2. Insira o seu cartão SD no computador
+  3. Corra a aplicação F3X
   4. Select your SD card
   5. Press "Start Test"
   6. Wait until the process is complete.
