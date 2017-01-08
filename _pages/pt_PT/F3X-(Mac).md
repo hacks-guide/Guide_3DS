@@ -4,7 +4,7 @@ title: "F3X (Mac)" permalink: /f3x-(mac).html lang: en_US ref: f3x-(mac)
 
 * * *
 
-This page will walk you through the process of checking your SD card for errors using F3X. {: .notice}
+Esta página irá guiá-lo pelo processo de verificar o seu cartão SD por erros usando o programa F3X. {: .notice}
 
 Depending on the size of your SD card and the speed of your computer, this process can take up to several hours! {: .notice--info}
 
