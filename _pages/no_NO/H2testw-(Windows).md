@@ -26,8 +26,8 @@ Denne siden er for Windows-brukere. Hvis du ikke bruker Windows, sjekk ut disse 
   8. Klikk "Write + Verify"
   9. Vent til prosessen er ferdig
 
-If the test shows the result `Test finished without errors`, your SD card is good and you can delete all `.h2w` files on the SD card {: .notice--success}
+Hvis testen viser resultatet `Test finished without errors`, er SD-kortet klart, og du kan så slette alle `.h2w` filene på SD-kortet {: .notice--success}
 
-If the test shows any other results, your SD card may be corrupted or damaged and you may have to replace it! {: .notice--danger}
+Hvis testen viser noe annet resultat kan det hende SD-kortet er korrupt eller skadet og du må kanskje bytte det!{: .notice--danger}
 
 Gå tilbake til [Kom i Gang](get-started) {: .notice--primary}
