@@ -12,7 +12,7 @@ Wenn du nicht weißt welche Version des arm9loaderhax du verwendest, installiere
 
 Wenn du in Luma einen PIN festgelegt hast, musst du ihn für die folgenden Schritte deaktivieren. Du kannst ihn nach dem Update erneut einrichten.{: .notice--info}
 
-If you are using a payload that does not init the screen on its own (such as Bootanim9), you will need to rename it to `arm9loaderhax_si.bin` instead of `arm9loaderhax.bin` {: .notice--info}
+Wenn du eine payload benutzt die das Display nicht selber starten kann (wie Bootanim9), musst du sie umbenennen in `arm9loaderhax_si.bin` statt `arm9loaderhax.bin` {: .notice--info}
 
 The versions of data_input only refer to revisions of the `.zip` to be compatible with different installer versions, and are *not* the same thing as updating a9lh itself (the payload files). They make no practical difference beyond the installation process. {: .notice--info}
 
