@@ -8,7 +8,7 @@ Se estiver na versão 11.0.0 ou 11.1.0, tem de seguir este guia para fazer o dow
 
 Isto aproveita-se duma falha no sistema que permite que títulos DSiWare leiam e escrevam em qualquer parte da NAND. {: .notice--info}
 
-Be prepared to wait 20 minutes (New 3DS) to an hour (Old 3DS). Slowhax (waithax) is named so for a reason. {: .notice--info}
+Prepare-se para esperar entre 20 minutos (New 3DS) a uma hora (Old 3DS). Slowhax (waithax) tem este nome por algum motivo. {: .notice--info}
 
 This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws). {: .notice--info}
 
