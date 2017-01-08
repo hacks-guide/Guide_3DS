@@ -168,38 +168,38 @@ Capita perché hai selezionato la versione sbagliata nell'installer di steelhax.
     *Probabilmente non funzionerà su un Old 3DS downgradato alla 2.1.0*  
     **Questo processo BRICKERÀ un New 3DS downgradato alla 2.1.0** 
       1. Spegni il tuo 3DS tenendo premuto il pulsante di accensione.
-      2. Tieni premuto L+R+A+Su.
+      2. Tieni premuto (L)+(R)+(A)+(Su).
       3. Accendi il 3DS.
-      4. Se sei entrato nella modalità di ripristino, aggiorna il tuo 3DS *solo se hai un punto di accesso per l'ultima versione del firmware ed è quindi possibile riprovare il downgrade*, e riprova a svolgere il downgrade.
-  5. Il tuo 3DS potrebbe essere brickato. Per il supporto, chiedi pure su [#3dshacks su Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) o sul server [3DS Hacking di Discord](https://discord.gg/MWxPgEp).
+      4. Se sei entrato nella modalità di ripristino, aggiorna il tuo 3DS *solo se hai un punto di accesso per l'ultima versione del firmware ed è quindi possibile effettuare il downgrade*, quindi riprova a svolgere il downgrade.
+  5. Il tuo 3DS potrebbe essere brickato. Per ricevere supporto, chiedi pure sul canale [#3dshacks su Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) o sul canale [3DS Hacking di Discord](https://discord.gg/MWxPgEp).
 
-## <a name="ts_sys_a9lh" />Schermo nero all'avvio della SysNAND dopo aver installato arm9loaderhax
+## <a name="ts_sys_a9lh" />Schermo nero all'avvio della SysNAND dopo aver installato l'arm9loaderhax
 
   1. Assicurati che il payload funzioni. 
       1. Verifica l'esistenza del file `arm9loaderhax.bin` nella root della tua scheda SD.
-  2. Prova a cancellare la configurazione e le opzioni di Luma 
-      1. Cancella `/luma/config.bin` dalla tua scheda SD
-      2. Imposta le opzioni all'avvio
+  2. Prova a cancellare la configurazione e reimposta le opzioni di Luma 
+      1. Cancella il file `/luma/config.bin` dalla tua scheda SD
+      2. Configura Luma all'avvio
   3. Prova ad avviare Hourglass9 
       1. Usando Luma3DS, tieni premuto (Start) all'avvio
-  4. Prova a cancellare l'extdata del menu HOME 
-      1. Clear Home Menu's extdata by navigating to the following folder on your SD card: `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/` 
-        * EUR Region: Delete `00000098`
-        * JPN Region: Delete `00000082`
-        * USA Region: Delete `0000008f`
-        * KOR Region: Delete `000000A9`
-  5. Try booting without any cartridges inserted (including flashcarts)
-  6. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version (v6.2.3 or higher, at the least)
-  7. If your NAND is of a version between 3.0.0 and 4.5.0, do the following: 
-    * Ensure that you are using the latest Luma3DS version (v6.6 or higher, at the least)
-    * Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) and rename it to `firmware.bin`
-    * Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
-    * Copy `firmware.bin` and `cetk` to the `/luma/` folder on your SD card
-    * Delete both of these files after updating your 3DS
-  8. Try following [9.2.0 ctrtransfer](9.2.0-ctrtransfer)
-  9. Ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [3DS Hacking on Discord](https://discord.gg/MWxPgEp).
+  4. Prova a cancellare gli extdata del menu HOME 
+      1. Elimina gli extdata del menu HOME navigando fino alla seguente cartella sulla tua scheda SD: `/Nintendo 3DS/(ID di 32 caratteri)/(ID di 32 caratteri)/extdata/00000000/` 
+        * Regione EUR: Cancella `00000098`
+        * Regione JPN: Cancella `00000082`
+        * Regione USA: Cancella `0000008f`
+        * Regione KOR: Cancella `000000A9`
+  5. Prova ad accendere la console senza cartucce (flashcard incluse)
+  6. Se in precedenza hai effettuato un downgrade tramite Gateway, assicurati di stare utilizzando l'ultima versione di Luma3DS (v6.2.3 o maggiore)
+  7. Se la versione della tua NAND è compresa tra 3.0.0 e 4.5.0, devi seguire i seguenti passaggi: 
+    * Assicurati di utilizzare l'ultima versione di Luma3DS (v6.6 o maggiore)
+    * Scarica [questo file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) e rinominalo in `firmware.bin`
+    * Scarica [questo file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
+    * Copia i file `firmware.bin` e `cetk` nella cartella `/luma/` della tua scheda SD
+    * Elimina entrambi i file dopo aver aggiornato il tuo 3DS
+  8. Prova ad eseguire un [ctrtransfer 9.2.0](9.2.0-ctrtransfer)
+  9. Chiedi supporto sul canale [#3dshacks su Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) o sul canale [3DS Hacking di Discord](https://discord.gg/MWxPgEp).
 
-## <a name="ts_sys_blue" />Blue screen on boot (bootrom error)
+## <a name="ts_sys_blue" />Schermata blu all'avvio (errore bootrom)
 
-  1. Your 3DS is bricked
-  2. You will need to get a [hardmod](https://gbatemp.net/threads/414498/) or repair / replace the device
+  1. Il tuo 3DS è brickato
+  2. Avrai bisogno di un'[hardmod](https://gbatemp.net/threads/414498/) o di riparare / sostituire la console
