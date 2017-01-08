@@ -6,7 +6,7 @@ title: "DSiWare Downgrade (Save Injection)" permalink: /dsiware-downgrade-(save-
 
 Se estiver na versão 11.0.0 ou 11.1.0, tem de seguir este guia para fazer o downgrade da sua NATIVE_FIRM usando DSiWare {: .notice}
 
-This takes advantage of an oversight which allows DSiWare titles to read and write anywhere in NAND. {: .notice--info}
+Isto aproveita-se duma falha no sistema que permite que títulos DSiWare leiam e escrevam em qualquer parte da NAND. {: .notice--info}
 
 Be prepared to wait 20 minutes (New 3DS) to an hour (Old 3DS). Slowhax (waithax) is named so for a reason. {: .notice--info}
 
