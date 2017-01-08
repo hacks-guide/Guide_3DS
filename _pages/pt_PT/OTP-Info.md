@@ -4,7 +4,7 @@ title: "OTP Info" permalink: /otp-info.html lang: en_US ref: otp-info
 
 * * *
 
-The OTP is a 0x100 byte region of seemingly random data at address 0x10012000. It is presumed that console unique keys are derived from this region, although it is currently unknown exactly how. The region is likely the console unique data store which is decrypted by the bootrom, but we don't know how that is done until somebody dumps the full protected bootrom. It is unknown at this time if anyone has successfully dumped the protected bootrom.
+O OTP é uma região de 0x100 bytes de dados aparentemente aleatórios localizados no endereço 0x10012000. It is presumed that console unique keys are derived from this region, although it is currently unknown exactly how. The region is likely the console unique data store which is decrypted by the bootrom, but we don't know how that is done until somebody dumps the full protected bootrom. It is unknown at this time if anyone has successfully dumped the protected bootrom.
 
 Prior to version 3.0.0-X, the 0x10012000-region (the OTP) was left unprotected and could be dumped by an attacker with sufficient permissions (arm9 code execution).
 
