@@ -17,13 +17,13 @@ SoundHax è compatibile con le versioni dalla 9.0.0 alla 11.2.0 nelle regioni EU
 #### Istruzioni
 
   1. Copia *il contenuto* del file `starter.zip` nella root della tua scheda SD
-  2. Copia il file SoundHax `.m4a` nella root della tua scheda SD
+  2. Copia il file `.m4a` del SoundHax nella root della tua scheda SD
   3. Copia l'otherapp payload nella root della tua scheda SD e rinominalo in `otherapp.bin`
   4. Reinserisci la tua scheda SD nel tuo 3DS
   5. Avvia Sound Nintendo 3DS
   6. Scorri tutti i consigli proposti, chiudi l'applicazione normalmente, poi riaprila 
     + Lanciare in questo momento SoundHax farebbe riapparire i consigli al successivo avvio di Sound Nintendo 3DS finché non viene seguita questa procedura
-  7. Avvia il file SoundHax `.m4a`
+  7. Avvia il file `.m4a` del SoundHax
   8. La console dovrebbe ora caricare l'homebrew menu
 
 Prosegui con [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher)) {: .notice--primary}
