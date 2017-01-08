@@ -49,13 +49,13 @@ Die Vorteile von arm9loaderhax über andere Methoden, Custom Firmware zu starten
 + Dump your game cards to a format you can install, and play them without needing the card
 + Nur mit einem New 3DS: Streame dein Gameplay live zu deinem PC mittels NTR CFW ohne eine Capture Card
 + Run many old Nintendo DS flash carts that were blocked long ago or never worked on Nintendo 3DS
-+ Safely update to the latest system version without fear of losing access to homebrew
++ Updates auf die neueste System Version ohne jemals den Homebrew Zugang zu verlieren
 
-## What do I need to know before starting?
+## Was benötige ich um anzufangen?
 
 + **Before beginning the guide, you must know the risks of 3DS hacking: EVERY time you modify your system, there is always the potential for an UNRECOVERABLE brick. They're rare, but still a possibility so make sure you follow ALL directions EXACTLY.**
 + If you have already hacked your 3DS before to get an EmuNAND setup, and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, you should follow all instructions and restore your existing EmuNAND when prompted once you reach [Installing arm9loaderhax](installing-arm9loaderhax).
-+ This guide will work on New 3DS, Old 3DS, and 2DS in all regions on firmware 11.2.0 or below *(except CHN / TWN)*.
++ Dieser Guide funktioniert mit New 3DS, Old 3DS und 2DS Systemen aus allen Regionen auf der Firmware 11.2.0 und darunter *(außer CHN / TWN)*.
 + If everything goes according to plan, you will lose no data and end up with everything that you started with (games, NNID, saves, etc will be preserved).
 + **Keep the device plugged in and charged throughout the entire process to avoid data loss or damage from an unexpected power-off!**
 + Your SD card should be [MBR, not GPT](http://www.howtogeek.com/245610/) (the SD card that comes with the device will be MBR by default).
