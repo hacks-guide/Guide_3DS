@@ -8,7 +8,7 @@ Se não conseguir ligar a sua 3DS, por favor procure a secção relevante ao seu
 
 **Se ainda não conseguiu resolver o seu problema e precisa de ajuda, por favor copie os conteúdos relevantes de todos os ficheiros .log na raíz do seu cartão SD para um [Gist](https://gist.github.com/), e depois peça ajuda já preparado com uma descrição detalhada do seu problema e o que já tentou fazer para o resolver.** {: .notice--info}
 
-## <a name="twl_broken" />DSi / DS functionality is broken after completing the guide
+## <a name="twl_broken" />Não consigo usar funcionalidades DSi / DS depois de completar o guia
 
 #### O que você precisa
 
