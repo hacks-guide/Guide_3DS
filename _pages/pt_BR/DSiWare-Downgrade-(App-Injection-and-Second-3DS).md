@@ -8,7 +8,7 @@ Se estiver entre as versões 11.0.0 e 11.2.0, tem de seguir este guia para fazer
 
 Se algum dispositivo estiver abaixo da versão 11.2.0, então terá de seguir os passos para o ctr-httpwn (quando pedido) em cada dispositivo abaixo de 11.2.0 para que estes possam fazer Transferência de Dados. {: .notice--info}
 
-This takes advantage of an oversight which allows DSiWare titles to read and write anywhere in NAND. {: .notice--info}
+Isto aproveita-se duma falha no sistema que permite que títulos DSiWare leiam e escrevam em qualquer parte da NAND. {: .notice--info}
 
 This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws). {: .notice--info}
 
