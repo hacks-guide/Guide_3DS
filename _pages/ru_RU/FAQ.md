@@ -19,11 +19,11 @@ title: "FAQ" permalink: /faq.html lang: en_US ref: faq
 <a name="faq_need" />**Q:** *Что мне необходимо для прохождения этой инструкции?*  
 **A:** Этот гайд полностью выполним с помощью свободного ПО и (если на консоли нет браузера) совместимой игры
 
-<a name="faq_risky" />**Q:** *How risky is hacking my console?*  
-**A:** Bricks are now *basically* impossible unless you ignore/circumvent all safety checks.
+<a name="faq_risky" />**Q:** *Насколько рискованно взламывать мою консоль?*  
+**A:** Полное окирпичивание *попросту* невозможно, если не игнорировать/пропускать все предписания по безопасности.
 
-<a name="faq_homebrew" />**Q:** *Can I run awesome homebrew and emulators with this?*  
-**A:** Yes! Custom Firmware not only enables the Homebrew Launcher, but it also will give you hacks on all versions, which means you keep it forever, even with updates.
+<a name="faq_homebrew" />**Q:** *Смогу ли я с этим запускать замечательные хоумбрю-приложения и эмуляторы?*  
+**A:** Да! Custom Firmware not only enables the Homebrew Launcher, but it also will give you hacks on all versions, which means you keep it forever, even with updates.
 
 <a name="faq_regionfree" />**Q:** *Can I use this to play games from other regions?*  
 **A:** Luma3DS supports Region Free patches, which enables users to install games from any region without any extra modification or steps.
