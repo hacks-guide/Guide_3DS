@@ -38,18 +38,18 @@ title: "NTR and Cubic Ninja" permalink: /ntr-and-cubic-ninja.html lang: en_US re
  12. Скопируйте `ntr.bin` в корень карты памяти
  13. Создайте папку `files9` в корне SD-карты, если таковой нет
  14. Скопируйте *содержимое* архива `starter.zip` в корень SD-карты
- 15. Copy the `Decrypt9WIP` folder from the Decrypt9WIP `.zip` to `/3ds/` on your SD card
- 16. Put the SD card back into your 3DS
+ 15. Скопируйте папку `Decrypt9WIP` из `.zip`-архива Decrypt9WIP в папку `/3ds/` на SD-карте
+ 16. Вставьте карту памяти обратно в 3DS
 
-##### Section II - Updating
+##### Часть II - Обновление
 
-  1. Boot your 3DS into recovery mode by holding L+R+A+UP while powering on
-  2. Decline the update and reboot
-  3. Open Cubic Ninja (if it already has NinjHax installed, hold L+R+X+Y to reset it)
-  4. Select "Create", then "QR Code", then "Scan QR Code"
-  5. Scan the QR code in the NTR CFW `.zip` for your region
-  6. On the home menu, press (Y) and (X) at the same time to open NTR's menu
-  7. Enable the debugger and close the menu
+  1. Загрузите 3DS в режим восстановления, зажав одновременно (L)+(R)+(A)+(ВВЕРХ) при включении консоли
+  2. Откажитесь от обновления и перезагрузите приставку в обычный режим
+  3. Запустите Cubic Ninja (если у Вас уже был установлен NinjHax, удерживайте (L)+(R)+(X)+(Y) чтобы сбросить его)
+  4. Выберите "Create", затем "QR Code", затем "Scan QR Code"
+  5. Отсканируйте QR-код, содержащийся в `.zip`-архиве NTR CFW и соответствующий Вашему региону
+  6. В домашнем меню нажмите одновременно (X) и (Y), чтобы открыть меню NTR
+  7. Включите дебаггер (Enable the debugger) и закройте меню
   8. Use your router's web page to get your 3DS's IP address (google it if you don't know how, all routers are different)
   9. Run NTR Debugger on your computer
  10. Enter the following commands (replace 192.168.1.100 with your 3DS's IP address and 192.168.1.200 with your computer's IP address)  
