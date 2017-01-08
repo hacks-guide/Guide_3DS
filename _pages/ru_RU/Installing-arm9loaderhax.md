@@ -132,25 +132,25 @@ arm9loaderhax.bin, используемый в этом гайде - испол�
     * Если выскочит ошибка, поставьте в настройках подключения, в настройках DNS "Получить DNS автоматически" в положение "Да";
     * Если выскакивает ошибка и версия вашей прошивки ниже 9.2.0, [выполните 9.2.0 ctrtransfer](9.2.0-ctrtransfer);
 
-##### Section V - Injecting FBI
+##### Часть V - Внедрение FBI
 
-  1. Open Hourglass9 from arm9loaderhax by holding (Start) on boot
-  2. Go to "SysNAND Backup/Restore", then select the "Health&Safety Dump" option to dump Health & Safety to `hs.app` **(you can use Up and Down / Left and Right to change the name)**
-  3. Press (B), then select the "Health&Safety Inject" option
-  4. Select the FBI injectable `.app` for your region
-  5. Press (A) and confirm to inject
-  6. Press (Start) to reboot
-  7. If you still launch to the stock Health & Safety app and have downgraded with Gateway in the past, [follow this troubleshooting guide](troubleshooting#gw_fbi)
+  1. Запустите Hourglass9 из под arm9loaderhax, удерживая кнопку (START) при запуске приставки.
+  2. Перейдите в "SysNAND Backup/Restore", выберите "Health&Safety Dump", чтобы сдампить на карту памяти оригинальный Health & Safety в файл `hs.app` **(стрелками (ВВЕРХ) / (ВНИЗ) и (ВЛЕВО) / (ВПРАВО) можно менять имя дампа)**.
+  3. Нажмите (B), затем выберите "Health&Safety Inject".
+  4. Выберите файл с внедренным FBI формата `.app` кнопками (ВВЕРХ) / (ВНИЗ), соответствующий вашему региону.
+  5. Нажмите (A) для подтверждения.
+  6. Нажмите (START) для перезагрузки
+  7. Если при запуске Health & Safety запускается не FBI и вы в прошлом даунгрейдились с помощью Gateway, милости просим в раздел [проблемы и их решения](troubleshooting#gw_fbi).
 
-##### Section VI - Finalizing setup
+##### Часть VI - Заканчиваем настройку
 
-  1. Open Health and Safety (which is now FBI)
-  2. Select "SD"
-  3. Select "cias"
-  4. Navigate to `FBI.cia` and press (A) to install
-  5. Navigate to `hblauncher_loader.cia` and press (A) to install
-  6. Navigate to `lumaupdater.cia` and press (A) to install
-  7. Return to the SD directory with (B)
+  1. Запустите Информация о здоровье и безопасности (Health & Safety) (это теперь FBI).
+  2. Перейдите в папку "SD".
+  3. Перейдите в папку "cias".
+  4. Перейдите на файл `FBI.cia` и нажмите (A), чтобы установить его.
+  5. Перейдите на файл `hblauncher_loader.cia` и нажмите (A), чтобы установить его.
+  6. Перейдите на файл `lumaupdater.cia` и нажмите (A), чтобы установить его.
+  7. Нажмите (B), чтобы вернуться в папку "SD".
   8. Navigate to `arm9loaderhax.bin`, then press (A) on it and select the "Copy" option
   9. Return to the FBI main menu with (B)
  10. Select "CTR NAND"
