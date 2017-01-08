@@ -18,8 +18,8 @@ This means that a cart update will NOT install a browser if you do not already h
 
 #### Instructions
 
-  1. Boot your 3DS into recovery mode by holding L+R+A+UP while powering on
-  2. Decline the update and reboot
-  3. Put the game in the system
-  4. Attempt to launch the game
-  5. Update when prompted
+  1. Démarrez votre 3DS dans le mode de récupération en maintenant L+R+A+Haut enfoncés au démarrage
+  2. Refusez la mise à jour et redémarrez
+  3. Insérez la cartouche de jeu dans la console
+  4. Tentez de lancer le jeu
+  5. Mise à jour lorsque vous êtes invité
