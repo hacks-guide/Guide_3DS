@@ -4,9 +4,9 @@ title: "OTP Info" permalink: /otp-info.html lang: en_US ref: otp-info
 
 * * *
 
-The OTP is a 0x100 byte region of seemingly random data at address 0x10012000. It is presumed that console unique keys are derived from this region, although it is currently unknown exactly how. The region is likely the console unique data store which is decrypted by the bootrom, but we don't know how that is done until somebody dumps the full protected bootrom. It is unknown at this time if anyone has successfully dumped the protected bootrom.
+L'OTP est une région de 0x100 octets contenant des données apparemment aléatoires à l'adresse 0x10012000. Il est présumé que les clés uniques à chaque console sont dérivées de cette région, même si nous ne savons pas exactement comment actuellement. Cette région est sans doute le "magasin" ou toute les données unique à chaque console sont stocké et celle si sont décrypté par le bootrom, mais nous ne savons pas exactement comment cela ce fait tant que quelqu'un n'a pas dumpé le bootrom entier (qui est protégé). Nous ne savons pas pour l'instant si quelqu'un à réussis à dumpé le bootrom entier.
 
-Prior to version 3.0.0-X, the 0x10012000-region (the OTP) was left unprotected and could be dumped by an attacker with sufficient permissions (arm9 code execution).
+Avant la version 3.0.0-X, la région 0x10012000 (l'OTP) est resté sans défenses et pouvait être dumper par un attaquant qui aurait les permissions nécessaires (exécution de code arm9).
 
 After version 3.0.0-X, Nintendo switched to locking this region using the register CFG_SYSPROT9, which also locks the bootloader and is set extremely early in boot, long before we are able to gain code execution. This register can be set exactly once, and cannot be switched off until the unit is fully powered off, and therefore it is impossible to dump the full OTP without a version below 3.0.0-X.
 
