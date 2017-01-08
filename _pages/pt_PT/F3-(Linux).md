@@ -14,11 +14,11 @@ Esta página é apenas para utilizadores de Linux. Se não tiver Linux, veja as 
 
 * A última versão do [F3](https://github.com/AltraMayor/f3/archive/v6.0.zip)
 
-#### Instructions
+#### Instruções
 
-  1. Unzip the f3 `.zip` file
-  2. `cd` into the f3 directory
-  3. Run `make` to compile F3
+  1. Extraia o ficheiro f3 `.zip`
+  2. Faca `cd` até ao diretório do f3
+  3. Corra `make` para compilar o F3
   4. Insert your SD card into your computer
   5. Mount your SD card
   6. Run `./f3write <your sd card mount point>`
