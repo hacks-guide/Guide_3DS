@@ -151,49 +151,49 @@ arm9loaderhax.bin, используемый в этом гайде - испол�
   5. Перейдите на файл `hblauncher_loader.cia` и нажмите (A), чтобы установить его.
   6. Перейдите на файл `lumaupdater.cia` и нажмите (A), чтобы установить его.
   7. Нажмите (B), чтобы вернуться в папку "SD".
-  8. Navigate to `arm9loaderhax.bin`, then press (A) on it and select the "Copy" option
-  9. Return to the FBI main menu with (B)
- 10. Select "CTR NAND"
- 11. Select "\<current directory>"
- 12. Select the "Paste" option, then press (A) to confirm
- 13. Exit with the home button
- 14. Launch the Homebrew Launcher from the home menu
- 15. Select "DSP Dump"
- 16. Press (Start) when prompted to exit
- 17. Reboot while holding Start to launch Hourglass9
- 18. Go to "SysNAND Backup/Restore", then select "Health&Safety Inject"
- 19. Select `hs.app` (the original one that doesn't contain FBI), then press (A) and confirm to inject
- 20. Press (Select) on the main menu to eject your SD card
- 21. Press (Start) to reboot with the SD card removed 
-    * Booting the device at least once with the SD card removed will allow you to configure the CTRNAND based luma installation
- 22. Use the (A) button and the D-Pad to turn on the following:  
+  8. Перейдите к файлу `arm9loaderhax.bin`, нажмите (A) и выберите “Copy”.
+  9. Нажмите (B), чтобы вернуться в главное меню FBI.
+ 10. Выберите "CTR NAND".
+ 11. Выберите "\<current directory>"
+ 12. Нажмите "Paste", затем нажмите (A) для подтверждения.
+ 13. Выйдите из FBI нажатием кнопки (HOME).
+ 14. Запустите Homebrew Launcher с домашнего экрана.
+ 15. Выберите "DSP Dump".
+ 16. Нажмите (START), после завершения, для выхода.
+ 17. Перезагрузите приставку, удерживая (START) для входа в Hourglass9.
+ 18. Перейдите в "SysNAND Backup/Restore", выберите "Health&Safety Inject".
+ 19. Выберите `hs.app` (оригинальный файл, не содержащий FBI), нажмите (A) для подтверждения внедрения.
+ 20. Нажмите (SELECT) в главном меню Hourglass9, чтобы извлечь КП.
+ 21. Нажмите (START) для перезагрузки с извлеченной картой памяти 
+    * Необходимо хотя бы раз загрузиться без карты памяти, чтобы настроить прошивку, расположенную в CTRNAND.
+ 22. Нажимая (A) выберите следующие пункты:  
     * **"Show NAND or user string in System Settings"**
- 23. If you are using a **New 3DS**, you should *also* enable the following: 
+ 23. Если у вас **New 3DS** так же *отметьте* следующие пункты: 
     * **"New 3DS CPU" to "Clock+L2(x)"**
-    * This will increase the framerate of many games, but may cause instability in others
-    * If some games do not work properly, disable this option and try again
- 24. Reinsert your SD card, then press Start to save and reboot!
+    * Это увеличит частоту кадров в некоторых играх;
+    * Если какие-то игры работают некорректно, отключите эту опцию.
+ 24. Вставьте карту памяти в приставку и нажмите (START) для того, чтобы сохранить настройки и перезагрузить приставку.
 
 * * *
 
-If DSi / DS functionality has broken (such as DS carts or DSiWare no longer working), [follow this troubleshooting guide](troubleshooting#twl_broken) {: .notice--warning}
+В случае проблем с запуском приложений DSi / DS (например, картриджи DS или DSiWare перестали работать), [обратитесь к разделу с проблемами и их решениями](troubleshooting#twl_broken). {: .notice--warning}
 
-{% capture notice-10 %} You can now use Luma3DS Updater to update your Luma3DS to the latest version just by opening it and pressing (A).  
-This is not the same thing as a System Update; it just downloads and extracts the newest Luma3DS files. Luma3DS Updater only updates the files located on the SD card.  
-This will only update the Luma3DS files on the SD Card. If you boot the device without an SD card, it will use whatever version you placed in CTR NAND.  
+{% capture notice-10 %} Теперь вы можете использовать Luma3DS Updater для обновления кастомной прошивки. Запустите его и нажмите (А).  
+Это не обновление системы; это приложение скачивает обновленные файлы luma3DS, находящиеся на карте памяти. Это значит, что версия luma3ds в ctrnand не обновляется этим приложением.  
+При запуске приставки без карты памяти, загрузится та версия Luma, что находится в CTRNAND.  
 {% endcapture %}
 
-<div class="notice--info">{{ notice-10 | markdownify }}</div>
+<div class="notice--info">{ notice-10 | markdownify }</div>
 
 {% capture notice-6 %}  
-You will now boot a Custom Firmware based SysNAND by default.  
-You can now hold (Select) on boot to launch the Luma3DS configuration menu.  
-You can now hold (Start) on boot to launch Hourglass9, an arm9loaderhax safe multipurpose NAND and cartridge tool.  
+Вы загружаетесь сразу в кастомную прошивку, находящуюся в SysNAND.  
+Для запуска конфигуратора luma3DS, нужно зажать (SELECT) и, не отпуская кнопку, включить приставку.  
+Для запуска Hourglass9 - мультифункциональной программы для работы с NAND и картриджами - нужно зажать (START) и, не отпуская кнопку, включить приставку.  
 {% endcapture %}
 
-<div class="notice--info">{{ notice-6 | markdownify }}</div>
+<div class="notice--info">{ notice-6 | markdownify }</div>
 
-You can update your arm9loaderhax installation in the future by following the instructions on the [Updating A9LH](updating-a9lh) page. {: .notice--info}
+Для обновления A9LH, следуйте инструкциям из раздела [обновление A9LH](updating-a9lh). {: .notice--info}
 
 To use [NTR CFW](https://github.com/44670/BootNTR/), get `ntr.bin` from the appropriate `.zip` on [this](https://github.com/44670/BootNTR/releases) page and copy it to the root of your SD card, then install `BootNTR.cia` from [this](https://github.com/astronautlevel2/BootNTR/releases/latest) page. {: .notice--info}
 
