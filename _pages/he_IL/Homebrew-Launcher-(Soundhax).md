@@ -6,7 +6,7 @@ title: "Homebrew Launcher (SoundHax)" permalink: /homebrew-launcher-(soundhax).h
 
 יש הרבה דרכים להיכנס לHomebrew Launcher. {: .notice}
 
-SoundHax עובד בגירסאות בין 9.0.0 ל 11.2.0 באזורים EUR, JPN, KOR, וUSA. {: .notice--info}
+SoundHax עובד בגירסאות בין 9.0.0 ל 11.2.0 בקונסולות מהאזורים EUR, JPN, KOR, וUSA. {: .notice--info}
 
 #### מה נדרש
 
