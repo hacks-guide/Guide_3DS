@@ -13,5 +13,5 @@ This will work on New 3DS, Old 3DS, and 2DS (although the DSiWare methods have s
 * * *
 
 + Utilisez [ce lien](hardmod-downgrade) pour downgrader votre NFIRM avec un [hardmod](https://gbatemp.net/threads/414498/)
-+ Use [this](dsiware-downgrade-(save-injection)) link to downgrade your NFIRM with DSiWare and one of four listed games *(11.0.0 through 11.1.0 only)*
-+ Use [this](dsiware-downgrade-(app-injection-and-second-3ds)) link to downgrade your NFIRM with DSiWare and a second 3DS (which already has CFW)
++ Utilisez [ce lien](dsiware-downgrade-(save-injection)) pour downgrader votre NFIRM avec l'un des 4 jeux DSiWare listés *(de 11.0.0 à 11.1.0 uniquement)*
++ Utilisez [ce lien](dsiware-downgrade-(app-injection-and-second-3ds)) pour dowgrader votre NFIRM avec un DSiWare et une deuxième 3DS (qui a déjà un CFW)
