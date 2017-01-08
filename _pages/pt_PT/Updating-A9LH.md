@@ -10,7 +10,7 @@ A instalação do arm9loaderhax consiste em instalar ficheiros payload nas parti
 
 Se não sabe que versão do arm9loaderhax tem a correr, apenas instale a última versão com estes passos. Instalar a última versão quando já se encontra na última versão não terá efeito. {: .notice--info}
 
-If you have a PIN set on Luma, you must temporarily turn it off to do these steps. You can re-enable the PIN after the update. {: .notice--info}
+Se tiver um PIN configurado no Luma, terá de temporariamente desativá-lo para seguir estes passos. Pode reativá-lo depois da atualização. {: .notice--info}
 
 If you are using a payload that does not init the screen on its own (such as Bootanim9), you will need to rename it to `arm9loaderhax_si.bin` instead of `arm9loaderhax.bin` {: .notice--info}
 
