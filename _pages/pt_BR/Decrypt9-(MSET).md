@@ -8,12 +8,12 @@ O primeiro passo deste guia é conseguir pô-lo a correr o Decrypt9, que é uma 
 
 Se já tiver hackeado a sua 3DS antes e tiver um sistema de CFW EmuNAND, este guia lida exclusivamente com a SysNAND, e todas as intruções que seguir terão de ser feitas ou aplicadas na SysNAND. Note que os termos EmuNAND e RedNAND referem-se a implementações ligeiramente diferentes [do mesmo conceito](http://3dbrew.org/wiki/NAND_Redirection). {: .notice--info}
 
-#### What you need
+#### O que precisa
 
-* DS flashcard that works on your 3DS version
-* The latest release of [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/)
+* Um flashcard DS que funcione na versão da sua 3DS
+* A última versão do [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/)
 
-#### Instructions
+#### Instruções
 
   1. Create a folder named `files9` on the root of your SD card if it does not already exist
   2. Copy `Launcher.dat` and `Decrypt9WIP.dat` from the Decrypt9WIP `.zip` to the root of your SD card
