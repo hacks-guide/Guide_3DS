@@ -4,7 +4,7 @@ title: "Donations" permalink: /donations.html layout: single-no-ads lang: en_US 
 
 * * *
 
-## If you appreciate this guide, I accept donations.
+## Εάν εκτιμήσατε αυτόν τον οδηγό, δέχομαι δωρεές.
 
 {: .text-center} {: .notice--success}
 
