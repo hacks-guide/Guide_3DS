@@ -4,50 +4,50 @@ title: "DSiWare Downgrade (Save Injection and Second 3DS)" permalink: /dsiware-d
 
 * * *
 
-**They are only useful if you already own "Fieldrunners", "Legends of Exidia", "Guitar Rock Tour", or "The Legend of Zelda: Four Swords (Anniversary Edition)" on the source 3DS. Each game has been pulled from the eShop; you must have already gotten them.** {: .notice--primary}
+**Это инструкция полезна только тем, у кого есть купленные "Fieldrunners", "Legends of Exidia", "Guitar Rock Tour", или "The Legend of Zelda: Four Swords (Anniversary Edition)" на исходной 3DS. Каждая из этих игр уже удалена из eShop, именно поэтому для продолжения игра должна быть уже купленной.** {: .notice--primary}
 
-If you are between versions 11.0.0 and 11.2.0, you can follow this guide to downgrade your NATIVE_FIRM using DSiWare and a second 3DS which has already has a Custom Firmware installed on it in order to dump and restore your NAND. {: .notice}
+Если ваша прошивка 11.0.0, 11.1.0, или 11.2.0, то вы можете понизить версию NATIVE_FIRM, используя DSiWare и вторую 3DS с установленной кастомной прошивкой. {: .notice}
 
-If you are below 11.2.0 on either device, then you should do the ctr-httpwn steps (when prompted) on each device under 11.2.0 to allow you to System Transfer with them. {: .notice--info}
+Если на любой из консолей у вас прошивка ниже, чем 11.2.0, то следует пройти шаги с ctr-httpwn на каждом девайсе с такой прошивкой, чтобы заработала Передача данных (System Transfer). {: .notice--info}
 
-This takes advantage of an oversight which allows DSiWare titles to read and write anywhere in NAND. {: .notice--info}
+Этот метод использует уязвимость, которая позволяет DSiWare-приложениям писать и читать в любом месте NAND. {: .notice--info}
 
-This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws). {: .notice--info}
+Это рабочая реализация "FIRM partitions known-plaintext"-эксплойта. Подробнее о нем [здесь](https://www.3dbrew.org/wiki/3DS_System_Flaws). {: .notice--info}
 
-This guide will assume the CFW 3DS is running arm9loaderhax and was setup with this guide, but will work (with slight modifications such as doing all SysNAND steps on EmuNAND) on systems running an EmuNAND. Note that the terms EmuNAND and RedNAND refer to slightly different implementations of [the same concept](http://3dbrew.org/wiki/NAND_Redirection). {: .notice--info}
+Гайд предполагает наличие прошитой arm9loaderhax 3DS с кастомной прошивкой, настроенной по этому же гайду, однако, все нижесказанное заработает и с EmuNAND (правда, с небольшими правками: просто делайте все пункты не в SysNAND, а в EmuNAND). Помните, что RedNAND и EmuNAND - слегка разные реализации одного и того же [концепта](http://3dbrew.org/wiki/NAND_Redirection). {: .notice--info}
 
-Your DSiWare's save will be backed up before getting replaced by the hacked save. {: .notice--info}
+Ваше DSiWare-сохранение будет скопировано перед тем, как будет заменено взломанным сохранением. {: .notice--info}
 
-{% capture notice-4 %} This exploit requires you to [System Transfer](http://en-americas-support.nintendo.com/app/answers/detail/a_id/13996/) from a CFW 3DS to a stock 3DS as part of the steps. System Transfers will work in the following directions *only*:  
+{% capture notice-4 %} Этот метод требует от вас произвести Передачу данных системы ([System Transfer](http://en-americas-support.nintendo.com/app/answers/detail/a_id/13996/)) из приставки с кастомной прошивкой на приставку со стоковой прошивкой. Перенос данных будет работать *только* в одном из следующих направлений:   
 + New 3DS -> New 3DS  
 + Old 3DS or 2DS -> Old 3DS or 2DS  
-+ Old 3DS or 2DS -> New 3DS  
++ Old 3DS or 2DS -> New 3DS   
 {% endcapture %}
 
-<div class="notice--warning">{{ notice-4 | markdownify }}</div>
+<div class="notice--warning">{ notice-4 | markdownify }</div>
 
-Both systems MUST be from the same region. {: .notice--warning}
+Обе приставки должны быть одного региона. {: .notice--warning}
 
-**The *target 3DS* will have all of its data erased!** {: .notice--danger}
+**Вы лишитесь всех данных на *целевой 3DS*!** Заранее озаботьтесь резервными копиями, если в этом есть необходимость. {: .notice--danger}
 
-The source 3DS's NNID will be stuck on the target 3DS unless you either system transfer back or call Nintendo! (details in the instructions) {: .notice--danger}
+NNID из исходной 3DS будет находится в целевой 3DS до тех пор, пока вы не перенесете его назад в исходную консоль, либо не позвоните в Nintendo (подробности в инструкции). {: .notice--danger}
 
-System Transfers can only be performed once a week. {: .notice--danger}
+Перенос системы можно делать лишь раз в неделю для одного NNID. {: .notice--danger}
 
-#### What you need
+#### Что вам нужно:
 
-* Two 3DS systems 
-  * **The source 3DS**: the 3DS running some kind of custom firmware (arm9loaderhax or some form of EmuNAND/RedNAND) *on the latest version*
-  * **The target 3DS**: the 3DS on stock firmware *(between 11.0.0 and 11.2.0)*
-* Already own (and install) one of the following exploitable DSiWare games (a pirated copy of the game will **not** work) on **the source 3DS** 
-  * **Fieldrunners**
-  * **Legends of Exidia**
-  * **Guitar Rock Tour** 
-  * **The Legend of Zelda: Four Swords (Anniversary Edition)** 
-* An entrypoint from [Homebrew Launcher (SoundHax)](homebrew-launcher-(soundhax)) or [Homebrew Launcher (No Browser)](homebrew-launcher-(no-browser))
-* [`4B51394A.zip`](images/4B51394A.zip)
-* The latest release of [3ds_dsiwarehax_installer](https://github.com/yellows8/3ds_dsiwarehax_installer/releases)
-* The latest release of [3DSident](https://github.com/joel16/3DSident/releases/latest)
+* Две приставки 
+  * **Исходная 3DS**: 3DS с кастомной прошивкой (arm9loaderhax, либо прошивка с EmuNAND/RedNAND) *с последней версией системного ПО*. Убедитесь, что помните пароль от Nintendo Network, без него вы не сможете сделать перенос данных;
+  * **Целевая 3DS**: 3DS с официальной прошивкой *(в диапазоне между 11.0.0 и 11.2.0)*.
+* Купленная и установленная DSiWare игра из списка ниже (пиратская копия **не** будет работать) на **исходной 3DS.** 
+  * **Fieldrunners;**
+  * **Legends of Exidia;**
+  * **Guitar Rock Tour;** 
+  * **The Legend of Zelda: Four Swords (Anniversary Edition).** 
+* Точка входа из части [Homebrew Launcher (SoundHax)](homebrew-launcher-(soundhax)) или [Homebrew Launcher (не используя браузер)](homebrew-launcher-(no-browser)).
+* [`4B51394A.zip.`](images/4B51394A.zip)
+* Свежая версия [3ds_dsiwarehax_installer](https://github.com/yellows8/3ds_dsiwarehax_installer/releases)
+* Свежая версия [3DSident](https://github.com/joel16/3DSident/releases/latest)
 * The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest)
 * The latest release of [dgTool](https://github.com/Plailect/dgTool/releases/latest)
 * The NFIRM `.zip` corresponding to the device and version of **the target 3DS**: 
