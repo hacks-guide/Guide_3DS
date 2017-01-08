@@ -14,7 +14,7 @@ If you have already hacked your 3DS before and have an EmuNAND based CFW setup, 
 
 Before starting, you may want to check your SD card for errors using [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), or [F3X (Mac)](f3x-(mac))! {: .notice--warning}
 
-|                                                         New 3DS                                                          |                                                                                    Old 3DS or 2DS                                                                                     |
+|                                                         New 3DS                                                          |                                                                                   Old 3DS eller 2DS                                                                                   |
 |:------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | [![New 3DS](images/new3ds.png)](get-started-(new-3ds))   
   
