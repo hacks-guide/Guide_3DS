@@ -4,15 +4,15 @@ title: "H2testw (Windows)" permalink: /h2testw-(windows).html lang: en_US ref: h
 
 * * *
 
-This page will walk you through the process of checking your SD card for errors using h2testw. {: .notice}
+В этом разделе рассказывается о том, как проверить карту памяти на ошибки под ОС Linux с помощью h2testw. {: .notice}
 
-Depending on the size of your SD card and the speed of your computer, this process can take up to several hours! {: .notice--info}
+В зависимости от размера Вашей SD-карты и скорости Вашего компьютера этот процесс может занять до нескольких часов! {: .notice--info}
 
-This page is for Windows users only. If you are not on windows, check out the [F3 (linux)](f3-(linux)) or [F3X (mac)](f3x-(mac)) pages. {: .notice--info}
+Этот раздел предназначен для пользователей Windows. Если у вас не Windows, воспользуйтесь инструкциями для [F3 (Linux)](f3-(linux)) или [F3X (Mac)](f3x-(mac)). {: .notice--info}
 
-#### What you need
+#### Что понадобится
 
-* The latest version of [h2testw](http://www.heise.de/ct/Redaktion/bo/downloads/h2testw_1.4.zip)
+* Последняя версия [h2testw](http://www.heise.de/ct/Redaktion/bo/downloads/h2testw_1.4.zip)
 
 #### Instructions
 
