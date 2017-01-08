@@ -46,14 +46,14 @@ Die Vorteile von arm9loaderhax über andere Methoden, Custom Firmware zu starten
 + [Sichern, Bearbeiten, und Wiederherstellen](https://gbatemp.net/threads/release-jks-savemanager-homebrew-cia-save-manager.413143/) von Speicherständen für sehr viele Spiele
 + Spiel Spiel von älteren Systemen mit verschiedenen Emulatoren, mittels RetroArch oder einzelnen Emulatoren (Funktioniert am besten mit einem New Nintendo 3DS)
 + Installiere Homebrew Titel auf deinem System, und habe sie auf deinem Home Menü angezeigt
-+ Dump your game cards to a format you can install, and play them without needing the card
++ Sichere deine 3DS Spiele in einem Format das du installieren kannst, und ohne die Karte spielen kannst
 + Nur mit einem New 3DS: Streame dein Gameplay live zu deinem PC mittels NTR CFW ohne eine Capture Card
-+ Run many old Nintendo DS flash carts that were blocked long ago or never worked on Nintendo 3DS
++ Benutze viele alte Nintendo DS Flashkarten die vor einer langen Zeit geblockt wurden, oder niemals auf dem 3DS funktioniert haben
 + Updates auf die neueste System Version ohne jemals den Homebrew Zugang zu verlieren
 
 ## Was benötige ich um anzufangen?
 
-+ **Before beginning the guide, you must know the risks of 3DS hacking: EVERY time you modify your system, there is always the potential for an UNRECOVERABLE brick. They're rare, but still a possibility so make sure you follow ALL directions EXACTLY.**
++ **Bevor du mit diesem Guide anfängst, musst du die Sachen kennen, die du riskierst: JEDES mal wenn du deinen 3DS modifizierst, gibt es immer das Potenzial dass dein 3DS unwiederruflich gebrickt wird. Sie sind selten, aber es gibt immer eine Möglichkeit, also stelle sicher, dass du ALLE Anweisungen GENAU befolgst.**
 + If you have already hacked your 3DS before to get an EmuNAND setup, and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, you should follow all instructions and restore your existing EmuNAND when prompted once you reach [Installing arm9loaderhax](installing-arm9loaderhax).
 + Dieser Guide funktioniert mit New 3DS, Old 3DS und 2DS Systemen aus allen Regionen auf der Firmware 11.2.0 und darunter *(außer CHN / TWN)*.
 + If everything goes according to plan, you will lose no data and end up with everything that you started with (games, NNID, saves, etc will be preserved).
