@@ -38,7 +38,7 @@ Region changing using ctrtransfer (which this method uses) seems to cause reboot
 ##### Section I - Prep work
 
   1. Kopier `GodMode9.bin` fra filen GodMode9 `.zip` til `/luma/payloads/` mappen på SD-kortet og endre navnet på filen `GodMode9.bin` i `/luma/payloads/` til `up_GodMode9.bin`
-  2. Copy `Decrypt9WIP.bin` to the `/luma/payloads/` folder on your SD card and rename `Decrypt9WIP.bin` to `x_Decrypt9WIP.bin`
+  2. Kopier `Decrypt9WIP.bin` til `/luma/payloads/` mappen på SD-kortet og endre navnet på `Decrypt9WIP.bin` til `x_Decrypt9WIP.bin`
   3. Copy the 9.2.0 ctrtransfer image `.bin` and `.bin.sha` from the ctrtransfer `.zip` to the `/files9/` folder on your SD card
   4. Sett inn SD-kortet i konsollen
 
@@ -50,7 +50,7 @@ Region changing using ctrtransfer (which this method uses) seems to cause reboot
   4. Slett alle `.tik` filer i `/files9/` mappen som **ikke** begynner med "00-"
   5. La alle `.tik` filer som begynner med "00-" være i mappen
   6. Reinsert your SD card into your 3DS, then press (B) to go back to the Main Menu
-  7. Go to "SysNAND Options", then "System Save Dump", then select "Dump configsave.bin"
+  7. Gå til "SysNAND Options", deretter "System Save Dump", og velg "Dump configsave.bin"
 
 ##### Section III - ctrtransfer
 
@@ -70,38 +70,38 @@ Region changing using ctrtransfer (which this method uses) seems to cause reboot
 
   1. Press (Start) then hold (Up) to reboot into arm9loaderhax GodMode9 
   2. Navigate to `SYSNAND CTRNAND` -> `rw` -> `sys`
-  3. Press (Y) on `SecureInfo_A` to copy it
-  4. Press (Y) to paste a copy of `SecureInfo_A`
-  5. Select "Copy path(s)"
+  3. Trykk (Y) på `SecureInfo_A` for å kopiere den
+  4. Trykk (Y) for å lime inn en kopi av `SecureInfo_A`
+  5. Velg "Copy path(s)"
   6. Press (A) to unlock SysNAND writing, then input the key combo given
-  7. Select "Choose new name"
+  7. Velg "Choose new name"
   8. Use the D-Pad to rename the file to `SecureInfo_C`, pressing (A) when you're done (overwrite any existing `SecureInfo_C`)
   9. Scroll down to the `SecureInfo_C` you just pasted
- 10. Press (A) on `SecureInfo_C` then select "Show in Hexeditor"
- 11. Press (A) to continue
+ 10. Trykk (A) på `SecureInfo_C` og velg "Show in Hexeditor"
+ 11. Velg (A) for å fortsette
  12. Press (A) to enter edit mode
  13. Go to the beginning of line 00000100 and press (A) on it
  14. Hold (A) while pressing (Up) or (Down) on the D-Pad to edit the number
  15. Change the first number pair on line 00000100 to the following pair that corresponds to *the region you want to change to*: - "00" : JPN - "01" : USA - "02" : EUR
  16. Press (B) to exit edit mode, then save changes, then press (B) again to return to the directory
  17. You should see both a `SecureInfo_A` and `SecureInfo_C` if everything was done properly. (`SecureInfo_C` is used in place of `SecureInfo_A` when using Luma3DS if it detects the file on boot)
- 18. Press Start to reboot
+ 18. Trykk (Start) for omstart
 
 ##### Section V - Reinstalling Tickets
 
-  1. Open FBI
-  2. Select "SD"
-  3. Select "files9"
-  4. Select "\<current directory>"
-  5. Select "Install and delete all tickets"
+  1. Åpne FBI
+  2. Velg "SD"
+  3. Velg "files9"
+  4. Velg "\<current directory>"
+  5. Velg "Install and delete all tickets"
   6. Wait. The system may appear to freeze, just give it time.
-  7. Press (A) to confirm
+  7. Trykk (A) for å bekrefte
   8. Press (B) to decline installing tickets from CDN.
-  9. Exit with the home button
+  9. Avslutt med hjem-knappen
 
 ##### Section VI - Region settings
 
-  1. Open the System Settings
+  1. Åpne Systeminnstillinger
   2. Go to "Other Settings", "Profile", then "Region Settings"
   3. Select a country from the region you switched to
   4. If prompted, you do not need to set a state
