@@ -51,4 +51,4 @@ Es funktioniert mit dem New 3Ds, Old 3Ds und 2DS. {: .notice--success}
 
 Deine Firmware Nummer wird sich in den Systemeinstellungen *nicht* verändert haben. {: .notice--info}
 
-Continue to [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher)). {: .notice--primary}
+Fortfahren mit [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher)). {: .notice--primary}
