@@ -15,11 +15,11 @@ Due to a bug, safehax currently requires a functioning cartridge of some kind (3
 
   1. Créez un dossier qui s'appellera `files9` sur la racine de votre carte SD si le dossier n'existe pas
   2. Copiez et fusionnez le contenu du safehax+fasthax`.zip` à la racine de votre carte SD, écraser les fichiers existants
-  3. Copy `Decrypt9WIP.bin` from the Decrypt9WIP `.zip` to the root of your SD card and rename `Decrypt9WIP.bin` to `arm9.bin`
-  4. Reinsert your SD card into your 3DS
-  5. Enter the homebrew launcher
-  6. Launch safehax
-  7. If the exploit was successful, you will have booted into Decrypt9
+  3. Copiez `Decrypt9WIP.bin` depuis l'archive Decrypt9WIP`.zip` à la racine de votre carte SD et renommez-le `Decrypt9WIP.bin` en `arm9.bin`
+  4. Ré-insérez votre carte SD dans votre console
+  5. Entrez dans homebrew launcher
+  6. Lancer safehax
+  7. Si l'exploit succède, vous allez démarrer dans Decrypt9
 
-Continue to [2.1.0 ctrtransfer](2.1.0-ctrtransfer)  
+Continuez vers [2.1.0 ctrtransfer](2.1.0-ctrtransfer)  
 {: .notice--primary}
