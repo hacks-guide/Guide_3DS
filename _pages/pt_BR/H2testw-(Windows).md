@@ -19,7 +19,7 @@ Esta página é apenas para utilizadores de Windows. Se não tiver Windows, veja
   1. Copy `h2testw.exe` from the h2testw `.zip` to your desktop
   2. Insert your SD card into your computer
   3. Run `h2tsetw.exe`
-  4. Select "English"
+  4. Selecione "English"
   5. Click "Select target"
   6. Select your SD card's drive letter
   7. Ensure "all available space" is selected
