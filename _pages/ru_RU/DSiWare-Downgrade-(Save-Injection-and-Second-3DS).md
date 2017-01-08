@@ -68,7 +68,7 @@ NNID из исходной 3DS будет находится в целевой 3
 
   1. Создайте папку `files9` в корне карты памяти **исходной 3DS**, если таковой не имеется.
   2. **Используйте [save manager](https://github.com/J-D-K/JKSM/releases/latest) для того, чтобы сделать резервные копии всех важных сейвов на целевой 3DS (приставка будет отформатирована)!**
-  3. Скопируйте `public.sav` из папки `/dsiware/(8-значный ID)/` находящегося в архиве `.zip` to the root of **the source 3DS**'s SD card 
+  3. Скопируйте `public.sav` из папки `/dsiware/(8-значный ID)/` находящегося в архиве `3ds_dsiwarehax_installer,` в корень карты памяти **исходной 3DS**("8-ми значный ID", соответствующий каждой игре и региону описан ниже) 
   * **Fieldrunners USA Region**: `4b464445`
   * **Fieldrunners EUR Region**: `4b464456`
   * **Legends of Exidia USA Region**: `4b4c4545`
@@ -78,39 +78,39 @@ NNID из исходной 3DS будет находится в целевой 3
   * **Guitar Rock Tour USA Region**: `4b475245`
   * **The Legend of Zelda: Four Swords (Anniversary Edition) EUR Region**: `4b513956` 
   * **The Legend of Zelda: Four Swords (Anniversary Edition) USA Region**: `4b513945` 
-  * If you are using **The Legend of Zelda: Four Swords (Anniversary Edition) JPN Region**, copy `public.sav` from the `4B51394A` folder in `4B51394A.zip` to the root of your SD card.
-  4. Reinsert **the source 3DS**'s SD card
-  5. On **the source 3DS**, hold (Start) on boot to launch Hourglass9
-  6. Go to SysNAND Options, then SysNAND Backup/Restore, then backup **(min size)** SysNAND to `NANDmin.bin`
-  7. Press (Select) on the main menu to eject **the source 3DS**'s SD card, then put it in your computer
-  8. Copy `NANDmin.bin` and `NANDmin.bin.sha` from the `/files9/` folder on your SD card to a safe location 
-  * Make backups in multiple locations
-  * This backup will save you from a brick if anything goes wrong in the future
-  * **Your backup should match one of the sizes on [this](nand-size) page; if it does not, you should delete it and make a new one!**
-  9. Put **the target 3DS**'s SD card into your computer
- 10. **Backup every file on both 3DS's SD cards to two separate folders on your computer (keep track of which is which)!**
- 11. Reinsert each SD card back into their corresponding 3DS
- 12. Press (Start) to reboot
+  * Если вы используете **The Legend of Zelda: Four Swords (Anniversary Edition) JPN Region**, скопируйте `public.sav` из папки `4B51394A` из архива `4B51394A.zip` в корень карты памяти.
+  4. Вставьте карту памяти в **исходную 3DS**.
+  5. На **исходной 3DS** удерживайте (START) во время загрузки приставки, чтобы попасть в Hourglass9.
+  6. Перейдите в SysNAND Options, SysNAND Backup/Restore, затем сделайте бекап **(min size)** SysNAND в `NANDmin.bin`.
+  7. Нажмите (SELECT) в главном меню, чтобы извлечь КП из **исходной 3DS**, а затем вставьте ее в ПК.
+  8. Скопируйте `NANDmin.bin` и `NANDmin.bin.sha` из папки `/files9/` на карте памяти в надежное место 
+  * Сделайте копии в нескольких местах или в облачном хранилище;
+  * Этот бекап может спасти вам консоль, если что-то пойдет не так;
+  * **Убедитесь, что размер вашего бекапа соответствует размеру указанному на [этой](nand-size) странице; если это не так, удалите бекап и создайте его заново!**
+  9. Вставьте карту памяти из **целевой 3DS** в компьютер.
+ 10. **Сохраните файлы с обеих карт памяти в разные папки на компьютере (назовите папки таким образом, чтобы понимать какие файлы откуда)!**
+ 11. Верните обе карты памяти на места (не перепутайте).
+ 12. Нажмите (START) для перезагрузки.
 
-##### Section II - Backup DSiWare
+##### Часть II - Резервное копирование DsiWare
 
-After completing the entire guide, you can use this backup to restore your DSiWare saves by deleting the DSiWare from your System Memory and copying it from your SD Card. {: .notice--info}
+После того, как вы окончите выполнение инструкций, созданная в этой части резервная копия может быть использована для восстановления сохранений DSiWare-игр. Удалите DSiWare-игры из системной памяти и восстановите их же из карты памяти. {: .notice--info}
 
-This backup can only be used on this NAND. If you format your 3DS or restore another NAND (specifically if `movable.sed` is ever modified), it will become unusable. {: .notice--info}
+Сделанный бекап может быть использован только на том NAND, на котором был создан. Если вы отформатируете 3DS, или восстановите другой NAND, (особенно если `movable.sed` был изменен), резервная копия станет бесполезной. {: .notice--info}
 
-  1. Go to System Settings, then "Data Management", then "DSiWare" on **the source 3DS**
-  2. Copy any DSiWare games that are already on the SD Card back to the System Memory
-  3. Copy the DSiWare game you intend to use to the SD Card
-  4. Exit System Settings
+  1. Перейдите в "Системные настройки" (System Settings), "Управление данными" (Data Management), "DSiWare" на **исходной 3DS**.
+  2. Скопируйте все DSiWare-игры , которые уже есть на КП в системную память.
+  3. Скопируйте DSiWare-игру, которую планируете использовать, на карту памяти.
+  4. Покиньте системное меню.
 
-##### Section III - Installing the save
+##### Часть III - Установка сохранения
 
-  1. Launch FBI on **the source 3DS**
-  2. Navigate to `SD`
-  3. Press (A) on `public.sav` and copy it
-  4. Press (B) to get back to the main menu
-  5. Navigate to `TWL NAND` -> `title` -> `00030004`
-  6. Navigate to the folder for your game and region: 
+  1. Запустите FBI на **исходной 3DS**.
+  2. Перейдите в папку `SD`.
+  3. Нажмите (A) на `public.sav` и скопируйте его.
+  4. Нажмите (B), чтобы вернуться в главное меню.
+  5. Перейдите в `TWL NAND` -> `title` -> `00030004`.
+  6. Перейдите в папку, соответствующую вашей игре и региону: 
   * **Fieldrunners USA Region**: `4b464445`
   * **Fieldrunners EUR Region**: `4b464456`
   * **Legends of Exidia USA Region**: `4b4c4545`
@@ -120,64 +120,64 @@ This backup can only be used on this NAND. If you format your 3DS or restore ano
   * **Guitar Rock Tour USA Region**: `4b475245` 
   * **The Legend of Zelda: Four Swords (Anniversary Edition) EUR Region**: `4b513956` 
   * **The Legend of Zelda: Four Swords (Anniversary Edition) USA Region**: `4b513945` 
-  7. Navigate to the `data` folder
-  8. Press (A) on the existing `public.sav` and delete it
-  9. Press (A) on the current directory and paste `public.sav`
- 10. Press (B) to get back to the main menu
- 11. Press (Start) to exit
- 12. Launch your DSiWare game on **the source 3DS**
- 13. Test if the save is functional 
-  * **Fieldrunners**: Touch the 'Scores' button at the main menu
-  * **Legends of Exidia**: After pressing (A) or (Start) at the two title screens, select the first save slot and press continue
-  * **Guitar Rock Tour**: Scroll down and go to High-Scores -> Drums -> Easy 
-  * **The Legend of Zelda: Four Swords (Anniversary Edition)**: Just start the game
-  * If your game has an error about `boot.nds` or a white screen, **then the exploit has been successful**
-  * If your game behaves normally and does not give you this error, then you should stop and figure out what went wrong
-  * If you get a black screen, [follow this troubleshooting guide](troubleshooting#twl_broken)
+  7. Перейдите в папку `dta`.
+  8. Нажмите (A) на существующем `public.sav` и удалите его.
+  9. Нажмите (A) на строке `<current directory>` и вставьте <0>public.sav</0>.
+ 10. Нажмите (B), чтобы вернуться в главное меню.
+ 11. Нажмите (START) для выхода.
+ 12. Запустите DSiWare-игру на **исходной 3DS**.
+ 13. Проверьте, работает ли импортированное сохранение 
+  * **Fieldrunners**: коснитесь кнопки 'Scores' в главном меню;
+  * **Legends of Exidia**: после того, как нажмёте (A) или (Start) и пропустите два игровых экрана, выберите первый слот сохранения и нажмите "Continue";
+  * **Guitar Rock Tour**: листайте вниз и перейдите в High-Scores -> Drums -> Easy; 
+  * **The Legend of Zelda: Four Swords (Anniversary Edition)**: Просто начните игру.
+  * Если игра падает с ошибкой, касающейся `boot.nds`, либо просто выскакиевает белый экран, **значит эксплойт работает и все в порядке**!
+  * Если игра работает нормально безо всяких ошибок, значит вы где-то допустили оплошность и неверно установили файл сохранения.
+  * Если выскакивает черный экран, обратитесь к разделу с [проблемами и их решениями](troubleshooting#twl_broken).
 
-##### Section IV - ctr-httpwn
+##### Часть IV - ctr-httpwn
 
-**This section is only required if *the target 3DS* is under 11.2.0.**
+**Эта часть нужна только в том случае, если прошивка *целевой 3DS* ниже, чем 11.2.0. **
 
-**This will allow you to system transfer on versions other than the latest.**
+**Эта часть позволит провести перенос системы, даже в том случае, если ваша прошивка ниже последней.**
 
-  1. Copy and merge the `3ds` folder from the ctr-httpwn `.zip` to **the target 3DS**'s SD card
-  2. Reinsert your SD card into **the target 3DS**
-  3. Launch the homebrew launcher on the device using [Homebrew Launcher (No Browser)](homebrew-launcher-(no-browser)) 
-  * **New 3DSs on versions 10.7.0 and 11.0.0 can use [Homebrew Launcher (Browser)](homebrew-launcher-(browser)) instead**
-  * **Ensure menuhax is not installed, or you won't be able to return to Home Menu from the homebrew launcher**
-  4. Launch ctr-httpwn on **the target 3DS**
-  5. Press (A) to continue
-  6. Press (Start) to exit ctr-httpwn
-  7. Press (Start) to open the homebrew launcher exit menu
-  8. Press (X) to Return to Home Menu (no reboot) 
-  * You may get an "Error has occurred" message with the option to continue. This is fine, just hit (A)
-  9. Continue to the next section **without rebooting** 
-  * **the target 3DS** has been temporarily patched to allow network functions (such as System Transfer) without running the latest system version
-  * Keep in mind that exiting the System Settings will reboot the system
-  * If the system is rebooted, you'll have to re-run ctr-httpwn before System Transfer will work
+  1. Скопируйте и объедините папку `3ds` из `zip-архива` ctr-httpwn в корень карты памяти **целевой 3DS**.
+  2. Верните карту памяти назад в **целевую 3DS**.
+  3. Запустите Homebrew launcher на устройстве используя способы, описанные в [Homebrew Launcher (не используя браузер)](homebrew-launcher-(no-browser)) 
+  * **На New 3DSs с версией системного ПО 10.7.0 и 11.0.0 можете для этого использовать [Homebrew Launcher (используя браузер)](homebrew-launcher-(browser));**
+  * **Убедитесь, что в системе не установлен menuhax, иначе вы не сможете вернуться на домашний экран из Homebrew launcher.**
+  4. Запустите ctr-httpwn на **целевой 3DS**.
+  5. Нажмите (A), чтобы продолжить.
+  6. Нажмите (START), чтобы выйти из ctr-httpwn.
+  7. Нажмите (START), чтобы открыть меню Homebrew launcher
+  8. Нажмите (X), чтобы вернуться на домашний экран без перезагрузки 
+  * Может выскочить ошибка "Произошла ошибка" (Error has occurred). Так бывает, просто нажмите (A), чтобы продолжить.
+  9. Переходите к следующей части **без перезагрузки** 
+  * **Целевая 3DS** временно пропатчена для доступа к сетевым функциям без проверки номера установленной прошивки;
+  * Помните, что выход из Системных настроек перезагружает приставку;
+  * Если вы перезагрузили приставку, то следует повторно запустить ctr-httpwn, иначе Перенос системы не будет работать.
 
-##### Section V - System Transfer
+##### Часть V - Перенос системы
 
-  1. **Backup every file on both 3DS's SD cards to two separate folders on your computer (keep track of which is which)!**
-  2. Reinsert each SD card back into their corresponding 3DS
-  3. If **the target 3DS** has a Nintendo Network ID on it, you must format the device using System Settings: 
-  * Go to the last page of "Other Settings" and select "Format System Memory", then follow all instructions
-  4. Read the following: 
-  * Your CFW 3DS = the source 3DS = "Source System"
-  * Your Stock 3DS = the target 3DS = "Target System"
-  * **Move DSiWare titles if prompted!**
-  * Do **NOT** delete the source system's SD card contents if prompted
-  * Make sure neither device's battery dies during the transfer
-  * 2DS/Old 3DS (source) to New 3DS (target) only - if asked which method you wish to use to transfer the SD card data: 
-    * **Do NOT** choose the "Low-Capacity microSD Card Transfer" or minimal option (option 2), it will only transfer tickets and likely will not transfer the DSiWare save.
-    * Fast Method: If you have the ability to move the data from the SD card (source) to the microSD card (target), when prompted use the "PC-Based Transfer" option (option 3).
-    * Slowest Method: If you don't have the ability to move the data on a PC use the **full** "Wireless Transfer" option (option 1).
-  5. Go to [this link](http://en-americas-support.nintendo.com/app/answers/detail/a_id/227/) and follow Nintendo's official instructions for System Transferring from one system to another while keeping in mind what you just read
+  1. **Сохраните файлы с обеих карт памяти в разные папки на компьютере (назовите папки таким образом, чтобы понимать какие файлы откуда)!**
+  2. Верните обе карты памяти на места (не перепутайте).
+  3. Если на **целевой 3DS** есть Nintendo Network ID, отформатируйте приставку, используя Системные настройки: 
+  * Перейдите на последнюю вкладку меню "Прочие настройки" (Other Settings), выберите пункт "Форматировать" (Format System Memory), следуйте инструкциям на экране.
+  4. Прочитайте внимательно: 
+  * Ваша 3DS с CFW = "Исходная система";
+  * Ваша 3DS с официальной прошивкой = "Целевая система";
+  * **Переместите DSiWare по запросу!**
+  * **НЕ** удаляйте содержимое карты памяти на исходной системе, даже по запросу;
+  * Убедитесь, что обе приставки заряжены и батарея не сядет ни у одной из них во время передачи данных;
+  * При запросе на выбор метода переноса данных с карты памяти в случае переноса данных с 2DS/Old 3DS (исходная) на New 3DS (целевая): 
+    * **НЕ** выбирайте "Low-Capacity microSD Card Transfer" (опция 2), при таком варианте перенесутся только тикеты, а DSiWare-игры и, что важно, их сохранения - нет. 
+    * Быстрый способ: Выберите "PC-Based Transfer" (опция 3) и по запросу на экране приставке, скопировать содержимое карты памяти из исходной консоли на карту памяти целевой приставки (если у вас на old3ds\2ds стоит micro SD с переходником, можно просто переставить карту).
+    * Медленный способ: Выберите "Wireless Transfer" (опция 1) для долгого переноса **полного** содержимого карты памяти в целевую приставку по воздуху.
+  5. Перейдите по [этой ссылке](http://en-americas-support.nintendo.com/app/answers/detail/a_id/227/) и следуйте официальным инструкциям от Nintendo, держа в голове то, что вы прочитали чуть выше.
 
-##### Section VI - Restoring the source 3DS
+##### Часть VI - Восстановление исходной 3DS
 
-  1. On **the source 3DS**, complete initial setup
+  1. На **исходной 3DS**, завершите первоначальную настройку.
   2. Do one of the following *(or neither if you don't mind **the source 3DS**'s NNID being nonfunctional)* + Do the rest of the sections and then the full guide on **the target 3DS**, then wait one week, then System Transfer from **the target 3DS** back to **the source 3DS** *(remember you cannot transfer back from a New 3DS to an Old 3DS)* + Call Nintendo and tell them you no longer have access to the device that your NNID is linked to (which is **the target 3DS** in this case), and would like it linked to a different device (which is **the source 3DS** in this case)
   3. Reboot **the source 3DS** while holding Start to launch Hourglass9
   4. Go to SysNAND Backup/Restore and restore SysNAND from `NANDmin.bin`
