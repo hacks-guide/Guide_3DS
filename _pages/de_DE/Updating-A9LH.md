@@ -27,15 +27,15 @@ Die folgenden Schritte werden zudem einige payloads und die AES Key Database akt
 * Die aktuellste Version von [SafeA9LHINstaller](https://github.com/AuroraWright/SafeA9LHInstaller/releases/latest) *(die `.7z` Datei)*
 * Die aktuellste Version von [Hourglass9](https://github.com/d0k3/Hourglass9/releases/latest)
 
-#### Instructions
+#### Anleitung
 
-**For all of these instructions, OVERWRITE any existing files on your SD card.**
+**ÜBERSCHREIBE für die folgenden Schritte alle vorhandenen Dateien auf deiner SD-Karte.**
 
-##### Section I - Prep work
+##### Abschnitt 1 - Vorbereitung
 
-  1. Delete any existing `aeskeydb.bin` from the root of your SD card
-  2. Delete the `a9lh` folder from the root of your SD card if it exists
-  3. Copy `aeskeydb.bin` to the `/files9/` folder on your SD card
+  1. Lösche `aeskeydb.bin` aus dem Hauptverzeichnis deiner SD-Karte
+  2. Lösche den `a9lh` Ordner aus dem Hauptverzeichnis deiner SD-Karte, wenn vorhanden
+  3. Kopiere `aeskeydb.bin` in den `/files9/` Ordner auf deiner SD-Karte
   4. Copy `Hourglass9.bin` from the Hourglass9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `Hourglass9.bin` to `start_Hourglass9.bin`
   5. Copy `arm9loaderhax.bin` from the SafeA9LHInstaller `.zip` to the `/luma/payloads/` folder on your SD card
   6. Rename `arm9loaderhax.bin` in `/luma/payloads/` to `down_safea9lhinstaller.bin`
