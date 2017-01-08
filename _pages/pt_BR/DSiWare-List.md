@@ -10,7 +10,7 @@ Esta lista está seccionada pelas regiões, por ordem, USA, EUR e JPN. {: .notic
 
 Cada secção está ordenada por preço ascendente. {: .notice--info}
 
-QR Codes can be scanned by pressing (L + R) on the home menu, then tapping the QR icon on the bottom screen. {: .notice--info}
+Os Códigos QR podem ser usados ao pressionar (L + R) no menu Home, e depois ao clicar no ícone QR no ecrã de baixo. {: .notice--info}
 
 The size requirements are because the injected DSiWare and its hacked save must not modify their respective file sizes in order to system transfer properly, meaning that the donor DSiWare must be large enough to fit the hacked DSiWare. {: .notice--info}
 
