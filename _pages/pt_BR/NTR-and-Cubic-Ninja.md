@@ -4,9 +4,9 @@ title: "NTR and Cubic Ninja" permalink: /ntr-and-cubic-ninja.html lang: en_US re
 
 * * *
 
-**NTR Cubic Ninja will work for JPN New 3DS ONLY!** {: .notice--warning}
+**NTR Cubic Ninja só funciona APENAS para consolas New 3DS JPN!** {: .notice--warning}
 
-#### What you need
+#### O que precisa
 
 * [JPN Cubic Ninja](https://www.amazon.com/dp/B004QL7M0A)
 * The Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
