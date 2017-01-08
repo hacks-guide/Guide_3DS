@@ -39,10 +39,10 @@ The benefits of arm9loaderhax over other Custom Firmware launch methods are nume
 
 ## Was kann ich alles mit einer Custom Firmware anstellen?
 
-+ Play all game cards and eShop games, regardless of region
++ Spiele alle Game Cards und eShop Spiele, komplett ohne Region Lock
 + Customize your HOME Menu with user-created [themes](https://3dsthem.es/) and [badges](https://badges.3dsthem.es/)
-+ Use "ROM hacks" for games that you own
-+ Take gameplay and application screenshots
++ Verwende "ROM Hacks" für Spiele die du besitzt
++ Erstelle Screenshots von Spielen und Programmen
 + [Backup, edit, and restore](https://gbatemp.net/threads/release-jks-savemanager-homebrew-cia-save-manager.413143/) saves for many games
 + Play games for older systems with various emulators, using RetroArch or other standalone emulators. (Works best with a New Nintendo 3DS)
 + Install homebrew titles to your system, and have them appear on your HOME Menu
