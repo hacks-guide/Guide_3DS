@@ -4,7 +4,7 @@ title: "Donations" permalink: /donations.html layout: single-no-ads lang: en_US 
 
 * * *
 
-## If you appreciate this guide, I accept donations.
+## Se apreciar este guia, o criador (Plailect) aceita doações.
 
 {: .text-center} {: .notice--success}
 
