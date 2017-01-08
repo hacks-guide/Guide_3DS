@@ -51,7 +51,7 @@ Cette page s'adresse uniquement au utilisateur de Linux seulement. Si vous n'êt
         Average Reading speed: 9.42 MB/s
         
 
-Si le test retourne le résultat (ceci n'est qu'une traduction du résultat,je ne peux pas tester par moi-même) `Perte de donnée: 0.00 Byte (0 Secteurs)` votre carte SD est bonne et vous pouvez supprimer les fchiers `.h2w` sur votre carte SD{: .notice--success}
+Si le test retourne le résultat (ceci n'est qu'une traduction du résultat,je ne peux pas tester par moi-même) `Perte de donnée: 0.00 Byte (0 Secteurs)` votre carte SD est bonne et vous pouvez supprimer les fichiers `.h2w` sur votre carte SD{: .notice--success}
 
 Si le test affiche autre chose, votre carte SD pourrait être corrompus ou endommagé et vous serez peut-être dans l'obligation de la remplacer!{: .notice--danger}
 
