@@ -6,12 +6,12 @@ from stock to arm9loaderhax.
 
 * * *
 
-{% capture notice-home %} **This guide is for retail (consumer purchased; not from the Nintendo Developer Program) consoles *only*!  
-If you have a developer ("PANDA" or "SNAKE") console, check out [devGuide](https://dev.3ds.guide)** {% endcapture %}
+{% capture notice-home %} **Ce guide peut être suivis *uniquement* avec une console retail (acheté par un utilisateur; pas du programme des développeur de Nintendo)!  
+Si vous possédez une console pour développeur ("PANDA" ou "SNAKE"), jetez un coup d'oeil sur le [devGuide](https://dev.3ds.guide)** {% endcapture %}
 
 <div class="notice--danger">{{ notice-home | markdownify }}</div>
 
-**This guide needs *your* help to seed [these](https://3ds.guide/rss.xml) torrents!** {: .notice--info}
+**Ce guide a besoins de *votre* aide pour semer [ces](https://3ds.guide/rss.xml) torrents!**{: .notice--info}
 
 **To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links in this guide, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download)** {: .notice--info}
 
