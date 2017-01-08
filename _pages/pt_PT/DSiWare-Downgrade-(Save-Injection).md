@@ -10,7 +10,7 @@ Isto aproveita-se duma falha no sistema que permite que títulos DSiWare leiam e
 
 Prepare-se para esperar entre 20 minutos (New 3DS) a uma hora (Old 3DS). Slowhax (waithax) tem este nome por algum motivo. {: .notice--info}
 
-This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws). {: .notice--info}
+Isto é uma implementação, que funciona correntemente, do exploit "partições FIRM known-plaintext", explicado [aqui](https://www.3dbrew.org/wiki/3DS_System_Flaws). {: .notice--info}
 
 Your DSiWare's save will be backed up before getting replaced by the hacked save. {: .notice--info}
 
