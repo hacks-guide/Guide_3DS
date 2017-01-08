@@ -6,7 +6,7 @@ title: "F3 (Linux)" permalink: /f3-(linux).html lang: en_US ref: f3-(linux)
 
 Denne siden vil gå gjennom prosessen for å sjekke SD-kortet etter feil ved hjelp av F3. {: .notice}
 
-Depending on the size of your SD card and the speed of your computer, this process can take up to several hours! {: .notice--info}
+Avhengig av størrelsen på SD-kortet og hastigheten på datamaskinen din, kan denne prosessen ta opptil flere timer! {: .notice--info}
 
 Denne siden er for Linux-brukere. Hvis du ikke bruker Linux, sjekk ut disse sidene [H2testw (windows)](h2testw-(windows)) eller [F3X (mac)](f3x-(mac)). {: .notice--info}
 
@@ -16,13 +16,13 @@ Denne siden er for Linux-brukere. Hvis du ikke bruker Linux, sjekk ut disse side
 
 #### Instruksjoner
 
-  1. Unzip the f3 `.zip` file
-  2. `cd` into the f3 directory
-  3. Run `make` to compile F3
-  4. Insert your SD card into your computer
-  5. Mount your SD card
-  6. Run `./f3write <your sd card mount point>`
-  7. Wait until the process is complete. See below for an example output.
+  1. Unzip f3 `zip`-filen
+  2. `cd` til f3 mappen
+  3. Kjør `make` for å kompilere F3
+  4. Sett inn SD-kortet i datamaskinen din
+  5. Mount SD-kortet
+  6. Kjør `./f3write <ditt Sd-kort monteringspunkt>`
+  7. Vent til prosessen er ferdig. Se eksempel under.
     
         $ ./f3write /media/michel/6135-3363/
         Free space: 29.71 GB
@@ -33,9 +33,9 @@ Denne siden er for Linux-brukere. Hvis du ikke bruker Linux, sjekk ut disse side
         Average Writing speed: 4.90 MB/s
         
 
-  8. Run `./f3read <your sd card mount point>`
+  8. Kjør `./f3read <ditt Sd-kort monteringspunkt>`
 
-  9. Wait until the process is complete. See below for an example output.
+  9. Vent til prosessen er ferdig. Se eksempel under.
     
         $ ./f3read /media/michel/6135-3363/
                           SECTORS      ok/corrupted/changed/overwritten
