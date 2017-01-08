@@ -6,7 +6,7 @@ title: "NAND Size" permalink: /nand-size.html lang: en_US ref: nand-size
 
 Uma cópia NAND válida deve ter, na maioria dos casos, um tamanho equivalente a algum destes valores. {: .notice--primary}
 
-Ocasionalmente, poderá ter uma cópia com um tamanho diferente dos aqui listados. It is fine for a backup to be larger than expected, just ensure that it is never *smaller* than the sizes listed. {: .notice--info}
+Ocasionalmente, poderá ter uma cópia com um tamanho diferente dos aqui listados. Não há problema se a sua cópia for maior do que o normal. Apenas verifique que nunca é *menor* que os tamanhos aqui listados. {: .notice--info}
 
 Note that a *min size* NAND will always be the smallest possible size for the purpose of saving space, and may not match the size of other NAND backups from your device. This is fine, just make sure that it matches one of the sizes on this page. {: .notice--info}
 
