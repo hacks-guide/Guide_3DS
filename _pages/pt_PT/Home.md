@@ -9,7 +9,7 @@ from stock to arm9loaderhax.
 {% capture notice-home %} **Este guia *apenas* é para consolas de retalhe(para consumidores; não para consolas da Nintendo Developer Program)!  
 Se tiver uma consola de desenvolvimento ("PANDA" ou "SNAKE"), veja o guia [devGuide](https://dev.3ds.guide)** {% endcapture %}
 
-<div class="notice--danger">{{ notice-home | markdownify }}</div>
+<div class="notice--danger">{ notice-home | markdownify }</div>
 
 **This guide needs *your* help to seed [these](https://3ds.guide/rss.xml) torrents!** {: .notice--info}
 
