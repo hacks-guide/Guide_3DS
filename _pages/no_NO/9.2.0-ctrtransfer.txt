@@ -33,35 +33,35 @@ Fordi målet med 9.2.0 ctrtransfer er å feilsøke problemer forårsaket av eksi
 ##### Seksjon I - Forarbeld
 
 1. Kopier 'GodMode9.bin' fra GodMode9 "zip" til "/ luma/payload/" mappen på SD-kortet ditt og endre navnet 'GodMode9.bin' i ' / luma/payloads' til 'up_GodMode9.bin'
-4. Kopier 9.2.0 ctrtransferbildet "bin" og ". bin.sha" fra ctrtransfer "zip" til mappen '/files9/' på SD-kortet
-5. Kopier 'Decrypt9WIP.bin' til '/luma/payloads/" mappen på SD-kortet og ombenenn 'Decrypt9WIP.bin' til 'x_Decrypt9WIP.bin'
-6. Sett inn SD-kortet i konsollen
+2. Kopier 9.2.0 ctrtransferbildet "bin" og ". bin.sha" fra ctrtransfer "zip" til mappen '/files9/' på SD-kortet
+3. Kopier 'Decrypt9WIP.bin' til '/luma/payloads/" mappen på SD-kortet og ombenenn 'Decrypt9WIP.bin' til 'x_Decrypt9WIP.bin'
+4. Sett inn SD-kortet i konsollen
 
 ##### Seksjon II - Sikkerhetskopi av tickets og konfigurashonssaver
 
-5. Åpne Decrypt9 fra arm9loaderhax ved å holde (X) under oppstart
-6. Gå til "Ticket/Titlekey Options", og velg "Ticket Dump (SysNAND)"
-7. Trykk (Select) for å løse ut SD-kortet, og deretter inn i datamaskinen
-8. Slett alle ".tik" filer i mappen "/files9/" som **ikke** starter med "00-"
+1. Åpne Decrypt9 fra arm9loaderhax ved å holde (X) under oppstart
+2. Gå til "Ticket/Titlekey Options", og velg "Ticket Dump (SysNAND)"
+3. Trykk (Select) for å løse ut SD-kortet, og deretter inn i datamaskinen
+4. Slett alle ".tik" filer i mappen "/files9/" som **ikke** starter med "00-"
   + Hvis ingen starter med "00-", så slett dem alle
-10. Sett inn SD-kortet inn i 3DSen, og trykk (B) for å gå tilbake til hovedmenyen
-11. Gå til "SysNAND Options", deretter "System Save Dump", og velg "Dump configsave.bin"
+5. Sett inn SD-kortet inn i 3DSen, og trykk (B) for å gå tilbake til hovedmenyen
+6. Gå til "SysNAND Options", deretter "System Save Dump", og velg "Dump configsave.bin"
 
 ### Seksjon III - ctroverførsel
 
-8. Gå til "SysNAND Options", deretter "CTRNAND Transfer", og deretter "Auto CTRNAND overføring"
-9. Velg 9.2.0 ctroverførselsbilde når bedt, ved å trykke (A), og deretter den gitte tastekombinasjonen
-10. Hvis du ikke allerede har en NAND sikkerhetskopi, ** lag SysNAND til 'NANDmin.bin' når du blir spurt ved å trykke (A)**
-11. La overføringsprosessen å fortsette automatisk, dette kan ta litt tid
-12. Once the transfer is complete, press (Select) to eject your SD card
-13. Putt SD-kortet inn i datamaskinen, kopier deretter `NANDmin.bin` og `NANDmin.bin.sha` fra `/files9/` mappen på SD-kortet til en sikker plass
+1. Gå til "SysNAND Options", deretter "CTRNAND Transfer", og deretter "Auto CTRNAND overføring"
+2. Velg 9.2.0 ctroverførselsbilde når bedt, ved å trykke (A), og deretter den gitte tastekombinasjonen
+3. Hvis du ikke allerede har en NAND sikkerhetskopi, ** lag SysNAND til 'NANDmin.bin' når du blir spurt ved å trykke (A)**
+4. La overføringsprosessen å fortsette automatisk, dette kan ta litt tid
+5. Når overføringen er fullført, trykk på (Select) for å fjerne SD-kortet
+6. Putt SD-kortet inn i datamaskinen, kopier deretter `NANDmin.bin` og `NANDmin.bin.sha` fra `/files9/` mappen på SD-kortet til en sikker plass
   + Lagre sikkerhetskopein flere plasser
   + Denne sikkerhetskopien vil spare deg fra en brick hvis noe går galt i fremtiden
   + **Sikkerhetskopien din skal samsvare med en av størrelse på [denne](nand-size) siden; hvis ikke, bør du slette den og lage en ny!**
-14. Slett 9.2.0 ctroverførselsbilde "bin" og ". bin.sha" fra mappen '/ files9 /' på SD-kortet
-15. Sett inn SD-kortet i konsollen
-16. Trykk (Start) for omstart
-17. Oppdater din 3DS ved å gå til systeminnstillinger, deretter "andre innstillinger", så helt til høyre og start "System Update"
+7. Slett 9.2.0 ctroverførselsbilde "bin" og ". bin.sha" fra mappen '/ files9 /' på SD-kortet
+8. Sett inn SD-kortet i konsollen
+9. Trykk (Start) for omstart
+10. Oppdater din 3DS ved å gå til systeminnstillinger, deretter "andre innstillinger", så helt til høyre og start "System Update"
   + Oppdateringer mens du bruker A9LH + Luma (hva du har) er trygt, ikke spør om det mer
   + Hvis dette gir deg en feil, sett DNS-innstillingene til "auto"
 
@@ -73,12 +73,12 @@ Fordi målet med 9.2.0 ctrtransfer er å feilsøke problemer forårsaket av eksi
 
 ##### Seksjon V - Injeksjon av FBI
 
-2. Gå til "SysNAND Options", deretter "Miscellaneous", deretter velger du "Health&Safety Dump" og dump Health & Safety til 'hs.app' **(Du kan bruke opp og ned / venstre og høyre for å endre navnet)**
-3. Trykk (B), og velg "Health&Safety Inject"
-8. Velg FBI injectable '.app' for din region
+1. Gå til "SysNAND Options", deretter "Miscellaneous", deretter velger du "Health&Safety Dump" og dump Health & Safety til 'hs.app' **(Du kan bruke opp og ned / venstre og høyre for å endre navnet)**
+2. Trykk (B), og velg "Health&Safety Inject"
+3. Velg FBI injectable '.app' for din region
 4. Trykk (A) og bekreft injiseringen
-9. Trykk (Start) for omstart
-10. Hvis du fortsatt starter den normale Health & Safety appen og har nedgradert med Gatewaz tidligere [Følg denne feilsøkingsveiledningen](troubleshooting#gw_fbi)
+5. Trykk (Start) for omstart
+6. Hvis du fortsatt starter den normale Health & Safety appen og har nedgradert med Gatewaz tidligere [Følg denne feilsøkingsveiledningen](troubleshooting#gw_fbi)
 
 ##### Seksjon VI - Reinstallere Tickets
 
@@ -98,5 +98,5 @@ Hvis du ikke hadde noen tickets som startet med 00- tidliger kan du hoppe over d
 Å formatere en enhet etter en ctrtransfer * uten å gjenopprette konfigurasjonssaver * kan forårsake problemer med skjermlysstyrke/flimring. Se [dette] (https://github.com/Plailect/Guide/issues/794).
 {: .notice--info}
 
-Gå tilbake til [installere arm9loaderhax](installing-arm9loaderhax).
+Tilbake til [Installere arm9loaderhax](installing-arm9loaderhax).
 {: .notice--primary}
