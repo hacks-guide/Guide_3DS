@@ -27,11 +27,11 @@ In de meeste gevallen is homebrew draaien op je console 100% gratis met de Ninte
 
 Met **Custom Firmware** ("CFW") kan je gebruik maken van meer geavanceerde hacks die je met userland homebrew niet gemakkelijk kunt doen. Je kan bijvoorbeeld ongesigneerde titels direct op je home menu weergeven.
 
-CFW can be easily set up on any console that is on 11.2.0 (latest) or lower. Other versions can have their firmware downgraded.
+CFW kan gemakkelijk worden geïnstalleerd op een console op 11.2.0 (meest recente) of lager. Bij andere versies kan de firmware gedowngrade worden.
 
-## What does this guide install?
+## Wat installeert deze gids?
 
-This guide has the end goal of taking a completely unmodified 3DS from stock firmware to arm9loaderhax powered Custom Firmware. On some versions, it utilizes homebrew as a stepping off point, but Custom Firmware is still the goal.
+Het uiteindelijke doel van deze gids is een volledig ongemodificeerde 3DS vanaf de standaard firmware naar de arm9loaderhax powered Custom Firmware te brengen. On some versions, it utilizes homebrew as a stepping off point, but Custom Firmware is still the goal.
 
 Arm9loaderhax is the newest and best method of launching Custom Firmware that gives us nearly full control of the system only milliseconds into boot, which is similar to the effect of BootMii for the Wii.
 
