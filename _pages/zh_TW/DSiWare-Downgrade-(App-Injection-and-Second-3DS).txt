@@ -1,67 +1,67 @@
 ---
-title: "DSiWare 降級 (APP 注入和第二部 3DS)"
+title: "DSiWare Downgrade (App Injection and Second 3DS)"
 permalink: /dsiware-downgrade-(app-injection-and-second-3ds).html
-lang: zh_TW
+lang: en_US
 ref: dsiware-downgrade-(app-injection-and-second-3ds)
 ---
 
-如果你的系統版本是在 11.0.0 至 11.2.0 之間的話，你可以經由這個指南透過 DSiWare 及另一台已經改機過的 3DS 降級你的 NATIVE_FIRM 。
+If you are between versions 11.0.0 and 11.2.0, you can follow this guide to downgrade your NATIVE_FIRM using DSiWare and a second 3DS which has already has a Custom Firmware installed on it in order to dump and restore your NAND.
 {: .notice}
 
-如果兩台 3DS 都是在 11.2.0 以下的話，需要時，請於這兩台 3DS 上遵循 ctr-httpwn 的步驟以進行系統轉移。
+If you are below 11.2.0 on either device, then you should do the ctr-httpwn steps (when prompted) on each device under 11.2.0 to allow you to System Transfer with them.
 {: .notice--info}
 
-這方法是透過 DSiWare 可以隨意存取 NAND 的特性所衍生出來的。
+This takes advantage of an oversight which allows DSiWare titles to read and write anywhere in NAND.
 {: .notice--info}
 
 This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws).
 {: .notice--info}
 
-本指南將假定你第二台改機後的 3DS 是透過本指南的 arm9loaderhax 改下去的，但也可以是在 EmuNAND 底下運行的系統。（有些微的修改像是在 EmuNAND 底下的 SysNAND 步驟） 注意 EmuNAND 與 RedNAND 指的是些微不同運作方式但[同樣道理](http://3dbrew.org/wiki/NAND_Redirection)的用語。
+This guide will assume the CFW 3DS is running arm9loaderhax and was setup with this guide, but will work (with slight modifications such as doing all SysNAND steps on EmuNAND) on systems running an EmuNAND. Note that the terms EmuNAND and RedNAND refer to slightly different implementations of [the same concept](http://3dbrew.org/wiki/NAND_Redirection).
 {: .notice--info}
 
-你的 DSiWare 存檔會在修改前被備份。
+Your DSiWare's save will be backed up before getting replaced by the hacked save.
 {: .notice--info}
 
 {% capture notice-4 %}
-此漏洞過程中將需要你透過[系統轉移](http://en-americas-support.nintendo.com/app/answers/detail/a_id/13996/)將改機 3DS 的系統移至未改的 3DS。 系統轉移**僅**能在下列的情況下運作：    
-  + 新 3DS -> 新 3DS    
-  + 舊 3DS or 2DS -> 舊 3DS or 2DS    
-  + 舊 3DS or 2DS -> 新 3DS    
+This exploit requires you to [System Transfer](http://en-americas-support.nintendo.com/app/answers/detail/a_id/13996/) from a CFW 3DS to a stock 3DS as part of the steps. System Transfers will work in the following directions *only*:    
+  + New 3DS -> New 3DS    
+  + Old 3DS or 2DS -> Old 3DS or 2DS    
+  + Old 3DS or 2DS -> New 3DS    
 {% endcapture %}
 
 <div class="notice--warning">{{ notice-4 | markdownify }}</div>
 
-兩台的系統區域必須一致。
+Both systems MUST be from the same region.
 {: .notice--warning}
 
-**_未改的 3DS_ 將會遺失所有的資料！**
+**The _target 3DS_ will have all of its data erased!**
 {: .notice--danger}
 
-改機 3DS 的 NNID 會移植到未改的 3DS 上面除非你系統轉移回來或送回任天堂維修！ （詳見說明）
+The source 3DS's NNID will be stuck on the target 3DS unless you either system transfer back or call Nintendo! (details in the instructions)
 {: .notice--danger}
 
-系統轉移一個禮拜只能執行一次。
+System Transfers can only be performed once a week.
 {: .notice--danger}
 
-#### 必備項目
+#### What you need
 
-* 兩個 3DS 系統
-  + **改機 3DS**: 搭載某種*最新版本*的自製韌體的 3DS （arm9loaderhax 或某種 EmuNAND/RedNAND 的韌體）
-  + **未改 3DS**: 搭載原廠韌體的 3DS *(11.0.0 ~ 11.2.0 間)*
-* 透過 eShop 購買 （或已擁有）並安裝相容的 DSiWare 遊戲至 **改機 3DS** 上
-  + **不能用**盜版遊戲
-  + 若想見相容遊戲的清單，請參考 [DSiWare 清單](dsiware-list) 頁面
-* 一個從[自製軟體啟動程式 (SoundHax) ](homebrew-launcher-(soundhax))或[自製軟體啟動程式 (無瀏覽器) ](homebrew-launcher-(no-browser))的進入點
-* 選擇對應機子區域的 sodokuhax `.zip`
+* Two 3DS systems
+  + **The source 3DS**: the 3DS running some kind of custom firmware (arm9loaderhax or some form of EmuNAND/RedNAND) *on the latest version*
+  + **The target 3DS**: the 3DS on stock firmware *(between 11.0.0 and 11.2.0)*
+* Purchase (or already own) and install a compatible DSiWare game from the eShop on **the source 3DS**
+  + A pirated copy of the game will **not** work
+  + For a list of compatible games, see the [DSiWare List](dsiware-list) page
+* An entrypoint from [Homebrew Launcher (SoundHax)](homebrew-launcher-(soundhax)) or [Homebrew Launcher (No Browser)](homebrew-launcher-(no-browser))
+* The sudokuhax injection `.zip` corresponding to your region
   + [`DSiWare_usa_sudokuhax_injection.zip`](magnet:?xt=urn:btih:7ed7fee15c900ed02b5e2cb3c8e7a0363f4d9354&dn=DSiWare_usa_sudokuhax_injection.zip&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce)
   + [`DSiWare_eur_exidiahax_injection.zip`](magnet:?xt=urn:btih:046bb8023bc40b9a95a8a339c85a9ef18cf60db6&dn=DSiWare_eur_exidiahax_injection.zip&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce)
   + [`DSiWare_jpn_4swordshax_injection.zip`](magnet:?xt=urn:btih:1bcc90c93da91c9876671f6218084207def90db9&dn=DSiWare_jpn_4swordshax_injection.zip&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce)
-* 最新版本的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* 最新版本的 [3DSident](https://github.com/joel16/3DSident/releases/latest)
-* 最新版本的 [dgTool](https://github.com/Plailect/dgTool/releases/latest)
-* 自製軟體[入門套件](http://smealum.github.io/ninjhax2/starter.zip)
-* 選擇對應**未改 3DS** 的型號及版本
+* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* The latest release of [3DSident](https://github.com/joel16/3DSident/releases/latest)
+* The latest release of [dgTool](https://github.com/Plailect/dgTool/releases/latest)
+* The Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
+* The NFIRM `.zip` corresponding to the device and version of **the target 3DS**
   + [New 3DS 11.0.0](magnet:?xt=urn:btih:2d13a5ea1570f911bd5c6423e0c30e51d548837a&dn=11.0.0%5Fto%5F10.4.0%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
   + [Old 3DS 11.0.0](magnet:?xt=urn:btih:72393bbd99bc285db84a9cabf39d9b3200058d6a&dn=11.0.0%5Fto%5F10.4.0%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
   ~    
@@ -70,24 +70,24 @@ This is a currently working implementation of the "FIRM partitions known-plainte
   ~        
   + [New 3DS 11.2.0](magnet:?xt=urn:btih:881388a552a1ce9a963d391bf1a023642270991c&dn=11.2.0%5Fto%5F10.4.0%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
   + [Old 3DS 11.2.0](magnet:?xt=urn:btih:a479e4ee55efbc18c181d426cd77a34815388151&dn=11.2.0%5Fto%5F10.4.0%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)    
-* 如果**未改 3DS** 的系統版本低於 11.2.0 的話，你將**需要**
-  + 最新版本的 [ctr-httpwn](https://github.com/yellows8/ctr-httpwn/releases/latest)
+* If **the target 3DS** is below 11.2.0, you will _also_ need the following
+  + The latest release of [ctr-httpwn](https://github.com/yellows8/ctr-httpwn/releases/latest)
 
-#### 操作說明
+#### Instructions
 
-##### 第一節 — 準備工作
+##### Section I - Prep Work
 
-透過任一[存檔管理器](https://github.com/J-D-K/JKSM/releases/latest)備份在未改 3DS 上重要的存檔 （本指南過程需格式化，所有的資料將遺失！）
+Use a [save manager](https://github.com/J-D-K/JKSM/releases/latest) to backup any saves you care about on the target 3DS (it will be formatted!)
 {: .notice--warning}
 
-1. 在**改機 3DS** 的 SD 卡的根目錄底下，建立一個新資料夾「files9」
-2. 從 GodMode9 `.zip` 中複製 `GodMode9.bin` 到**改機 3DS** 的 SD 卡中 `/luma/payloads/` 底下，並重新命名為 `up_GodMode9.bin`
-3. 從 DSiWare 注射包中，複製 `.app` 副檔名的檔案至**改機 3DS** SD 卡的根目錄中
-4. 從 DSiWare 注射包中，複製 `savedata` 資料夾到**改機 3DS** 中的 SD 卡
-5. 將**改機 3DS**的 SD 卡插回
-6. 於**改機 3DS** 上，開機時按住「開始鍵 (Start)」以開啟 Hourglass9
-7. 到 「SysNAND 選項 (Options)」-> 「SysNAND 備份與還原 (Backup/Restore)」底下，備份**最小 (min size)**大小的 SysNAND 到 `NANDmin.bin`
-8. 在主選單中按下「選擇鍵 (Select)」以退出**改機 3DS** 的 SD 卡，並插入至電腦裡
+1. Create a folder named `files9` on the root of **the source 3DS**'s SD card if it does not already exist
+2. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on **the source 3DS**'s' SD card and rename `GodMode9.bin` in `/luma/payloads/` to `up_GodMode9.bin`
+3. Copy the `.app` from DSiWare injection `.zip` to the root of **the source 3DS**'s SD card
+4. Copy `savedata` folder from DSiWare injection `.zip` to the root of **the source 3DS**'s SD card
+5. Reinsert **the source 3DS**'s SD card
+6. On **the source 3DS**, hold Start on boot to launch Hourglass9
+7. Go to SysNAND Options, then SysNAND Backup/Restore, then backup **(min size)** SysNAND to `NANDmin.bin`
+8. Press (Select) on the main menu to eject **the source 3DS**'s SD card, then put it in your computer
 9. Copy `NANDmin.bin` and `NANDmin.bin.sha` from the `/files9/` folder on your SD card to a safe location
   + Make backups in multiple locations
   + This backup will save you from a brick if anything goes wrong in the future
@@ -234,7 +234,7 @@ This backup can only be used on this NAND. If you format your 3DS or restore ano
 
 1. Copy and merge the `3ds` folder from the 3DSident `.zip` to **the target 3DS**'s SD card
 2. Reinsert your SD card into **the target 3DS**
-3. 利用進入點在**目標3DS**運行自製軟體啟動程式
+3. Launch the homebrew launcher on **the target 3DS** using your entrypoint
 4. Launch 3DSident
 5. Verify that the following:
   + **Kernel version**: 2.50-11
@@ -244,5 +244,5 @@ This backup can only be used on this NAND. If you format your 3DS or restore ano
 **The target 3DS**'s version number will *not* have changed in the settings.
 {: .notice--info}
 
-繼續於 [Decrypt9(自製軟體啟動程式)](decrypt9-(homebrew-launcher))
+Continue to [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher))
 {: .notice--primary}
