@@ -11,7 +11,7 @@ Se hai effettuato il downgrade alla versione 2.1.0 ma per qualche motivo non hai
 Il tuo dispositivo potrebbe non visualizzare i giochi installati dopo il ctrtransfer. Questo è dovuto al fatto che i ticket vengono rimossi dall'operazione di trasferimento, ecco perchè effettueremo un backup. Le procedure di ripristino verranno illustrate al termine della guida.
 {: .notice--info}
 
-Visto che il ctrtransfer alla 9.2.0 serve per risolvere i problemi causati dalla NAND già esistente, questi passaggi, a differenza del ctrtransfer alla 2.1.0, ti faranno salvare solo i ticket e il file dei salvataggi. Se non riesci a fare un salvataggio di questi file PERDERAI tutti i tuoi giochi installati e i tuoi salvataggi!
+Visto che il ctrtransfer alla 9.2.0 serve per risolvere i problemi causati dalla NAND già esistente, questi passaggi, a differenza del ctrtransfer alla 2.1.0, ti faranno salvare solo i ticket e il file configsave. Se non riesci a fare un salvataggio di questi file PERDERAI tutti i tuoi giochi installati e i tuoi salvataggi!
 {: .notice--danger}
 
 #### Cosa serve
@@ -57,18 +57,18 @@ Visto che il ctrtransfer alla 9.2.0 serve per risolvere i problemi causati dalla
 13. Inserisci la scheda SD nel computer, quindi copia i file "NANDmin.bin" e "NANDmin.bin.sha" dalla cartella "/files9/" presente nella scheda SD ad una posizione sicura
   + Crea delle copie e mettile in più locazioni
   + Questo backup ti salverà da un brick nel caso succeda qualcosa in futuro
-  + **Your backup should match one of the sizes on [this](nand-size) page; if it does not, you should delete it and make a new one!**
-14. Delete the 9.2.0 ctrtransfer image `.bin` and `.bin.sha` from the `/files9/` folder on your SD card
-15. Reinsert your SD card into your 3DS
-16. Press (Start) to reboot
-17. Update your 3DS by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
-  + Updates while using A9LH + Luma (what you have) are safe, stop asking about it
-  + If this gives you an error, set your DNS settings to "auto"
+  + **Il file di backup dovrà avere l'esatta dimensione riportata su [questa](nand-size) pagina; se così non fosse dovresti cancellarlo e crearne uno nuovo!**
+14. Elimina i file `.bin` e `.bin.sha` del ctrtransfer 2.1.0 dalla cartella `/files9/` della tua scheda SD
+15. Reinserisci la scheda SD nella console
+16. Premi (Start) per riavviare la console
+17. Aggiorna il tuo 3DS andando su Impostazioni della Console, poi "Impostazioni Generali", infine scorri a destra e seleziona "Aggiornamento"
+  Gli aggiornamenti effettuati usando A9LH + Luma (ora installato) sono sicuri, per cui basta chiederne la conferma
+  + Se ottieni un errore, imposta i DNS della connessione di rete in modo che vengano ottenuti automaticamente
 
 ##### Section IV - Restore config save
 
-1. Reboot holding (X) during boot to launch arm9loaderhax Decrypt9
-2. Go to "SysNAND Options", then "System Save Inject", then select "Inject configsave.bin"
+1. Riavvia tenendo premuto (X) durante l'avvio per lanciare Decrypt9 da arm9loaderhax
+2. Seleziona "SysNAND Options", quindi "System Save Inject", ed infine "Inject configsave.bin"
 3. Press (B) to get back to the main menu
 
 ##### Section V - Injecting FBI
