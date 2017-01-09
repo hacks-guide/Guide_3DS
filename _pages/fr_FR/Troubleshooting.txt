@@ -44,7 +44,7 @@ If you are unable to boot your 3DS, please look for the section relevant to you,
 5. Sélectionnez « Install and delete all CIAs »
 6. Fermez Fbi en appuyant sur le bouton Home
 
-## <a name="rm_nnid" />Removing an NNID without formatting the device
+## <a name="rm_nnid" />Supprimer un NNID sans formater la console
 
 #### Ce qu'il vous faut
 
@@ -59,10 +59,10 @@ La dernière version de [GodMode9](https://github.com/d0k3/GodMode9/releases/)
 5. Appuyez sur Haut pour le renommer `10000000`
 6. Appuyez sur (A) pour enregistrer les modifications
 7. Appuyez sur (A) pour accéder à l'écriture sur SysNAND, puis effectuez la combinaison de touches demandée
-4. Retournez au menu principal
-5. Press Start to reboot
+8. Retournez au menu principal
+9. Appuyez sur Start pour redémarrer
 
-## <a name="gw_fbi" />Cannot inject H&S on Gateway downgraded device
+## <a name="gw_fbi" />Je ne peux pas injecter Santé et Sécurité sur une console downgradée via Gateway
 This is caused by Gateway implementing a very shoddy downgrade method, which leaves two versions of each app on the system. One of them is unused, but it confuses Decrypt9, causing it to inject into the wrong one.
 
 #### Ce qu'il vous faut
@@ -72,20 +72,20 @@ La dernière version de [GodMode9](https://github.com/d0k3/GodMode9/releases/)
 ### Instructions
 
 1. Copiez `GodMode9.bin` se trouvant dans le .zip GodMode9 vers le dossier `/luma/payloads/` de votre carte SD et renommez `GodMode9.bin` `up_GodMode9.bin`
-2. Reinsert your SD card into your 3DS
-3. Open GodMode9 from arm9loaderhax by holding (Up) during boot     
-4. Navigate to `SYSNAND CTRNAND` -> `title` -> `00040010`
-5. Navigate to the folder for your device and region:
+2. Réinsérez votre carte SD dans votre 3DS
+3. Ouvrez Godmode9 depuis arm9loaderhax en maintenant (Haut) au démarrage     
+4. Sélectionnez SYSNAND CTRNAND` -> `title` -> `00040010`
+5. Sélectionnez le dossier correspondant à votre console et votre région:
   + **Old 3DS EUR**: `00022300` -> `content`
   + **Old 3DS JPN**: `00020300` -> `content`
   + **Old 3DS USA**: `00021300` -> `content`
   + **New 3DS EUR**: `20022300` -> `content`
   + **New 3DS JPN**: `20020300` -> `content`
   + **New 3DS USA**: `20021300` -> `content`
-6. Notice that there are two sets of app and tmd files, one set with uppercase extensions (`.TMD` and `.APP`), and one set with lowercase extensions (`.tmd` and `.app`)
+6. Remarquez qu'il y a deux fois les fichiers app et tmd, une en majuscules (`.TMD` and `.APP`), et une en minuscules (`.tmd` and `.app`)
 7. While holding the (R) trigger, press (Y) to create a new directory
-4. Press (A) to confirm the name `newdir` (it doesn't matter what it's called)
-5. Appuyez sur (A) pour accéder à l'écriture sur SysNAND, puis effectuez la combinaison de touches demandée
+8. Press (A) to confirm the name `newdir` (it doesn't matter what it's called)
+9. Appuyez sur (A) pour accéder à l'écriture sur SysNAND, puis effectuez la combinaison de touches demandée
 10. Press the (L) trigger on each of the uppercase extension files (`.TMD` and `.APP`) to mark them
 11. Press (Y) to copy the files
 12. Navigate to `newdir`
@@ -141,22 +141,22 @@ This is because you selected the wrong version in the steelhax installer.
 5. On **the source 3DS**, go to System Settings, "Data Management", "DSiWare", then copy your DSiWare game to your SD card
 6. Either put **the source 3DS**'s SD card in **the target 3DS**, or rename the `Nintendo 3DS` on **the target 3DS**'s SD card and copy the `Nintendo 3DS` folder from **the source 3DS**'s SD card to **the target 3DS**'s SD card
 7. On **the target 3DS**, go to System Settings, "Data Management", "DSiWare", then copy your DSiWare game to the system
-4. Return your SD cards to normal, then continue with the DSiWare Downgrade
+8. Return your SD cards to normal, then continue with the DSiWare Downgrade
 
-## <a name="ts_d9_backup" />Decrypt9 or Hourglass9 won't restore / can't find my NAND backup
+## <a name="ts_d9_backup" />Decrypt9 ou Hourglass9 ne veulent pas restaurer / ne trouvent pas mon backup de NAND
 
-1. Make sure you do not have any folder named "Decrypt9" on **the root** of your SD card
+1. Soyez sûr que vous n'avez pas de dossier nommé "Decrypt9" à la **racine** de votre carte SD
 3. Try checking your SD card for errors using [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), or [F3X (Mac)](f3x-(mac))
-4. Try backing up your SD card files, then formatting it and copying them back
-5. Try a different SD card
+4. Essayez de sauvegarder vos fichiers présent sur la carte SD, formattez-la et remettez-les
+5. Essayez une carte SD différente
 
-## <a name="ts_sys_down" />Black screen on SysNAND boot
+## <a name="ts_sys_down" />Écran noir au démarrage de la SysNAND
 
-1. Try booting with your SD card out, and then reinserting it after booting.
-    1. Power off your 3DS by holding down the power button.
-    2. Take out the SD card.
-    3. Power on the 3DS.
-    4. When the home menu appears, reinsert your SD card.
+1. Essayez de démarrer sans carte SD, puis la ré-inserer après le démarrage.
+    1. Éteingnez votre 3DS en maintenant le bouton power.
+    2. Retirez votre carte SD.
+    3. Allumez votre 3DS.
+    4. Quand le menu Home apparait, ré-inserer la carte SD.
     5. If this worked, you should Clear Home Menu's extdata by navigating to the following folder on your SD card: `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/`
         + EUR Region: Delete `00000098`
         + JPN Region: Delete `00000082`
@@ -167,9 +167,9 @@ This is because you selected the wrong version in the steelhax installer.
 4. Try booting into recovery mode and updating your system.    
     *This probably will not work for an Old 3DS downgraded to 2.1.0*    
     **This will BRICK a New 3DS downgraded to 2.1.0**
-    1. Power off your 3DS by holding down the power button.
-    2. Hold L+R+A+Up.
-    3. Power on the 3DS.
+    1. Éteingnez votre 3DS en maintenant le bouton power.
+    2. Maintenez L+R+A+Haut (croix directionnelle haut).
+    3. Allumez votre 3DS.
     4. If you enter safe mode, update your 3DS *only if you have an entrypoint for the latest FW version and it is possible to downgrade from it* and attempt the downgrade again.
 5. Your 3DS may be bricked. For support, ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [3DS Hacking on Discord](https://discord.gg/MWxPgEp).
 
@@ -196,8 +196,8 @@ This is because you selected the wrong version in the steelhax installer.
     + Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
     + Copy `firmware.bin` and `cetk` to the `/luma/` folder on your SD card
     + Delete both of these files after updating your 3DS
-4. Try following [9.2.0 ctrtransfer](9.2.0-ctrtransfer)
-5. Demandez de l'aide à [#3dshacks sur Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) ou [3DS Hacking sur Dicord](https://discord.gg/MWxPgEp).
+8. Try following [9.2.0 ctrtransfer](9.2.0-ctrtransfer)
+9. Demandez de l'aide à [#3dshacks sur Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) ou [3DS Hacking sur Dicord](https://discord.gg/MWxPgEp).
 
 ## <a name="ts_sys_blue" />Écran bleu au démarrage (erreur bootrom)
 
