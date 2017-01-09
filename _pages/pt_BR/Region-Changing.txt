@@ -7,13 +7,13 @@ ref: region-changing
 Essa é uma seção complementar para mudar a região do seu SysNAND com CFW de arm9loaderhax. Isso é feito instalando a imagem do ctrtransfer 9.2.0 da região para a qual você quer mudar e modificando o seu arquivo SecureInfo_A.
 {: .notice--primary}
 
-**Region changing is almost completely unnecessary since Luma3DS supports out of region games and individual [title region emulation](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage).**
+**Mudança de região é quase completamente desnecessária já que Luma3DS suporta jogos de outras regimes e [emuladores de região de título individuais](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage).**
 {: .notice--info}
 
-This process will unlink your NNID from the system, since it will no longer be compatible with it. NNID's are locked to the region of the device that created them, and cannot be transferred between regions without [a very complex and advanced process](https://gist.githubusercontent.com/yifanlu/e80db121d38aceb8cca0e03cefd5853b/raw/3c4dd89869156ca0f945a2791e699acfdb32b510/gistfile1.txt).
+Esse processo irá desconectar sua NNID do sistema, uma vez que ele não será mais compatível com a mesma. As NNIDs são bloqueadas por região do dispositivo que ás criou e não podem ser transferidas de região sem [um procedimento muito complexo e avançado](https://gist.githubusercontent.com/yifanlu/e80db121d38aceb8cca0e03cefd5853b/raw/3c4dd89869156ca0f945a2791e699acfdb32b510/gistfile1.txt).
 {: .notice--warning}
 
-After this process, only **New 3DSs which have never accessed the eShop before** and **any Old 3DSs** will be able to access the eShop after creating a new NNID on their new region. Region changed New 3DSs that have already accessed the eShop on their original region cannot create a new NNID and access the eShop on their new region!
+Após este processo apenas os **New 3DS que nunca acessaram a eShop antes** e **quaisquer Old 3DS** serão capazes de acessar a eShop após criarem uma nova NNID em sua nova região. Region changed New 3DSs that have already accessed the eShop on their original region cannot create a new NNID and access the eShop on their new region!
 {: .notice--warning}
 
 Note that occasionally the eShop will inexplicably still not work for devices that it should work for. This is entirely to do with Nintendo's servers, and I really do not have any control over it.
@@ -53,24 +53,24 @@ Region changing using ctrtransfer (which this method uses) seems to cause reboot
 
 1. Aperte (Start) e depois segure (X) para reiniciar no modo arm9loaderhax do Decrypt9     
 2. Vá para "Ticket/Titlekey Options", depois selecione "Ticket Dump (SysNAND)"
-3. Press (Select) to eject your SD card, then put it in your computer
-4. Delete all `.tik` files in the `/files9/` folder that **do not** start with "00-"
-5. Leave all the `.tik` files that do start with "00-" in the folder
-6. Reinsert your SD card into your 3DS, then press (B) to go back to the Main Menu
-7. Go to "SysNAND Options", then "System Save Dump", then select "Dump configsave.bin"
+3. Aperte (Select) para ejetar o seu cartão SD, depois coloque-o no seu computador
+4. Exclua todos os arquivos `.tik` da pasta `/files9/` que **não** começam com "00-"
+5. Deixe todos os arquivos `.tik` que começam com "00-" na pasta
+6. Reinsira seu cartão SD no seu 3DS, e depois aperte (B) para retornar ao Menu Principal
+7. Vá para "SysNAND Options", depois "System Save Dump", e depois selecione "Dump configsave.bin"
 
-##### Section III - ctrtransfer
+##### Seção III - ctrtransfer
 
-1. Go to "SysNAND Options", then "CTRNAND Transfer", then "Auto CTRNAND Transfer"
-2. Select the 9.2.0 ctrtransfer image when prompted by pressing (A)
-3. If you do not already have a NAND backup, **backup SysNAND to `NANDmin.bin` when prompted by pressing (A)**
-4. Allow the transfer process to proceed automatically, this may take some time
-5. Once the transfer is complete, press Select to eject your SD card
-6. Put your SD card in your computer, then copy `NANDmin.bin` and `NANDmin.bin.sha` from the `/files9/` folder on your SD card to a safe location
-  + Make backups in multiple locations
-  + This backup will save you from a brick if anything goes wrong in the future
-  + **Your backup should match one of the sizes on [this](nand-size) page; if it does not, you should delete it and make a new one!**
-7. Delete the 9.2.0 ctrtransfer image `.bin` and `.bin.sha` from the `/files9/` folder on your SD card after copying it
+1. Vá para "SysNAND Options", depois "CTRNAND Transfer", depois "Auto CTRNAND Transfer"
+2. Selecione a imagem do ctrtransfer da versão 9.2.0 apertando (A) quando solicitado
+3. Se você já não tiver um backup da NAND, **faça um backup do SysNAND para `NANDmin.bin` apertando (A) quando solicitado**
+4. Permita que o processo de transferência prossiga automaticamente, isso pode levar algum tempo
+5. Quando a transferência estiver concluída, aperte Select para ejetar o seu cartão SD
+6. Coloque o seu cartão SD no seu computador, então copie `NANDmin.bin` e `NANDmin.bin.sha` da pasta `/files9/` no seu cartão SD para um local seguro
+  + Faça backups em vários locais
+  + Este backup vai salvá-lo de um brick caso algo dê errado no futuro
+  + **Seu backup deve corresponder a algum dos tamanhos [nesta](nand-size) página; senão, você deve apagá-lo e fazer um novo!**
+7. Apague os arquivos `.bin` e `.bin.sha` da imagem do ctrtransfer da versão 9.2.0 da pasta `/files9/` no seu cartão SD após copiá-los
 8. Reinsira seu cartão SD no seu 3DS
 
 ##### Section IV - Editing SecureInfo
