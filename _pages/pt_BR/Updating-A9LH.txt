@@ -19,13 +19,13 @@ Se você definiu um código PIN no Luma, você deve desativá-lo temporariamente
 Se você está usando um payload que não inicializa a tela sozinho (como o Bootanim9), você vai precisar renomeá-lo para `arm9loaderhax_si.bin` ao invés de `arm9loaderhax.bin`
 {: .notice--info}
 
-The versions of data_input only refer to revisions of the `.zip` to be compatible with different installer versions, and are *not* the same thing as updating a9lh itself (the payload files). They make no practical difference beyond the installation process.
+As versões do data_input se referem apenas a revisões do arquivo `.zip` para que este seja compatível com versões diferentes do installer, e *não* são a mesma coisa que atualizar o a9lh em si (os arquivos de payload). Na prática, elas não fazem diferença alguma fora do processo de instalação.
 {: .notice--info}
 
-These steps will also update your various payloads and the AES key database.
+Estas etapas também atualizarão seus vários payloads e a base de dados de keys AES.
 {: .notice--success}
 
-#### What you need
+#### O que você vai precisar
 
 * [`aeskeydb.bin`](magnet:?xt=urn:btih:18b3a17f78e2376e05feaa150749d9fd689b25dc&dn=aeskeydb.bin&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 * [`data_input_v4.zip`](magnet:?xt=urn:btih:00f03ff69b5961307303d5e4778a2f65a528bf2d&dn=data%5Finput%5Fv4.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
@@ -34,15 +34,15 @@ These steps will also update your various payloads and the AES key database.
 * The latest release of [SafeA9LHInstaller](https://github.com/AuroraWright/SafeA9LHInstaller/releases/latest) *(the `.7z` file)*
 * The latest release of [Hourglass9](https://github.com/d0k3/Hourglass9/releases/latest)
 
-#### Instructions
+#### Instruções
 
-**For all of these instructions, OVERWRITE any existing files on your SD card.**
+**Ao seguir todas estas instruções, SUBSTITUA quaisquer arquivos existentes no seu cartão SD.**
 
-##### Section I - Prep work
+##### Seção I - Preparação
 
-1. Delete qualquer `aeskeydb.bin` presente na raiz do seu cartão SD
+1. Delete qualquer arquivo `aeskeydb.bin` existente da raiz do seu cartão SD
 2. Exclua a pasta `a9lh` da raiz do cartão SD se ela existir
-3. Copy `aeskeydb.bin` to the `/files9/` folder on your SD card
+3. Copie o arquivo `aeskeydb.bin` para a pasta `/files9/` no seu cartão SD
 4. Copy `Hourglass9.bin` from the Hourglass9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `Hourglass9.bin` to `start_Hourglass9.bin`
 5. Copy `arm9loaderhax.bin` from the SafeA9LHInstaller `.zip` to the `/luma/payloads/` folder on your SD card
 6. Rename `arm9loaderhax.bin` in `/luma/payloads/` to `down_safea9lhinstaller.bin`
@@ -53,15 +53,15 @@ These steps will also update your various payloads and the AES key database.
 
 ##### Seção II - Atualização do payload
 
-1. Boot the device while holding D-Pad down
-2. Aperte (Select) para atualizar arm9loaderhax
+1. Ligue o console enquanto pressiona o D-Pad para baixo
+2. Aperte (Select) para atualizar o arm9loaderhax
 3. Desligue o dispositivo e insira seu cartão SD novamente em seu computador
-4. Delete the `a9lh` folder from the root of your SD card
-5. Delete `down_safea9lhinstaller.bin` from `/luma/payloads/`
+4. Exclua a pasta `a9lh` da raiz do sue cartão SD
+5. Exclua o arquivo `down_safea9lhinstaller.bin` from `/luma/payloads/`
 
-##### Seção III - Configurando Luma3DS
+##### Seção III - Configurando o Luma3DS
 
-1. Reinsira o cartão SD no seu 3DS E ligue-o segurando o botão (Select)
+1. Reinsira o cartão SD no seu 3DS e ligue-o segurando o botão (Select)
 2. Use o botão (A) e o D-Pad para modificar o seguinte:    
   + **"Autoboot SysNAND"**
   + **"Use SysNAND FIRM if booting with R"**
@@ -77,9 +77,9 @@ These steps will also update your various payloads and the AES key database.
 1. Abra o FBI
 2. Selecione "SD"
 3. Navegue até `arm9loaderhax.bin`, aperte (A) nele e selecione a opção "Copiar"
-4. Return to the FBI main menu with (B)
-5. Select "CTR NAND"
-6. Select "\<current directory>"
+4. Volte para o menu principal do FBI pressionando (B)
+5. Selecione "CTR NAND"
+6. Selecione "\<current directory>"
 7. Select the "Paste" option, then press (A) to confirm
 8. Exit with the home button
 9. Power off your 3DS and remove the SD card
