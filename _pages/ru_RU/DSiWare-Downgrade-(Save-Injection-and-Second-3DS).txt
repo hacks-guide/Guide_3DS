@@ -75,13 +75,13 @@ NNID из исходной 3DS будет находится в целевой 3
 * Если версия системного ПО на **целевой 3DS** ниже, чем 11.2.0, вам так же придется воспользоваться
   + Свежей версией [ctr-httpwn](https://github.com/yellows8/ctr-httpwn/releases/latest)
 
-#### Instructions
+#### Инструкция
 
-##### Section I - Prep Work
+##### Часть I - Подготовка к работе
 
-1. Create a folder named `files9` on the root of **the source 3DS**'s SD card if it does not already exist
-2. **Use a [save manager](https://github.com/J-D-K/JKSM/releases/latest) to backup any saves you care about on the target 3DS (it will be formatted!)**
-3. Copy the relevant `public.sav` from the `/dsiware/(8 Character ID)/` folder in the 3ds_dsiwarehax_installer `.zip` to the root of **the source 3DS**'s SD card
+1. Создайте папку `files9` в корне карты памяти **исходной 3DS**, если таковой не имеется
+2. **Используйте [save manager](https://github.com/J-D-K/JKSM/releases/latest) для того, чтобы сделать резервные копии всех важных сейвов на целевой 3DS (приставка будет отформатирована!)**
+3. Скопируйте `public.sav` из папки `/dsiware/(8-ми значный ID)/` из архива `3ds_dsiwarehax_installer`, в корень карты памяти **исходной 3DS** (8-ми значный ID, соответствующий каждой игре и региону описан ниже)
   + **Fieldrunners USA Region**: `4b464445`
   + **Fieldrunners EUR Region**: `4b464456`
   + **Legends of Exidia USA Region**: `4b4c4545`
@@ -91,41 +91,41 @@ NNID из исходной 3DS будет находится в целевой 3
   + **Guitar Rock Tour USA Region**: `4b475245`
   + **The Legend of Zelda: Four Swords (Anniversary Edition) EUR Region**: `4b513956`   
   + **The Legend of Zelda: Four Swords (Anniversary Edition) USA Region**: `4b513945`    
-  + If you are using **The Legend of Zelda: Four Swords (Anniversary Edition) JPN Region**, copy `public.sav` from the `4B51394A` folder in `4B51394A.zip` to the root of your SD card.
-4. Reinsert **the source 3DS**'s SD card
-5. On **the source 3DS**, hold (Start) on boot to launch Hourglass9
-6. Go to SysNAND Options, then SysNAND Backup/Restore, then backup **(min size)** SysNAND to `NANDmin.bin`
-7. Press (Select) on the main menu to eject **the source 3DS**'s SD card, then put it in your computer
-8. Copy `NANDmin.bin` and `NANDmin.bin.sha` from the `/files9/` folder on your SD card to a safe location
-  + Make backups in multiple locations
-  + This backup will save you from a brick if anything goes wrong in the future
-  + **Your backup should match one of the sizes on [this](nand-size) page; if it does not, you should delete it and make a new one!**
-9. Put **the target 3DS**'s SD card into your computer
-10. **Backup every file on both 3DS's SD cards to two separate folders on your computer (keep track of which is which)!**
-11. Reinsert each SD card back into their corresponding 3DS
-12. Press (Start) to reboot
+  + Если вы используете **The Legend of Zelda: Four Swords (Anniversary Edition) JPN Region**, скопируйте `public.sav` из папки `4B51394A` из архива `4B51394A.zip` в корень карты памяти.
+4. Вставьте карту памяти в **исходную 3DS**
+5. На **исходной 3DS** удерживайте (START) во время загрузки приставки, чтобы попасть в Hourglass9
+6. Перейдите в SysNAND Options, SysNAND Backup/Restore, затем сделайте бекап **(min size)** SysNAND в `NANDmin.bin`
+7. Нажмите (SELECT) в главном меню, чтобы извлечь КП из **исходной 3DS**, а затем вставьте ее в ПК
+8. Скопируйте `NANDmin.bin` и `NANDmin.bin.sha` из папки `/files9/` на карте памяти в надежное место
+  + В целях безопасности, сохраните копии этих файлов на нескольких устройствах и/или вашем хранилище в интернете
+  + В случае возникновления проблем в будущем, эти файлы позволят спасти вашу консоль
+  + **Размер этих файлов должен совпадать с указанными на [этой](nand-size) странице. Если размеры не совпадают, вам следует удалить эти файлы и попытаться создать их заново!**
+9. Вставьте карту памяти из **целевой 3DS** в компьютер
+10. **Сохраните файлы с обеих карт памяти в разные папки на компьютере (назовите папки таким образом, чтобы понимать какие файлы откуда)!**
+11. Верните обе карты памяти на места (не перепутайте)
+12. Нажмите (START) для перезагрузки
 
-##### Section II - Backup DSiWare
+##### Часть II - Резервное копирование DsiWare
 
-After completing the entire guide, you can use this backup to restore your DSiWare saves by deleting the DSiWare from your System Memory and copying it from your SD Card.
+После того, как вы окончите выполнение инструкций, созданная в этой части резервная копия может быть использована для восстановления сохранений DSiWare-игр. Удалите DSiWare-игры из системной памяти и восстановите их же из карты памяти.
 {: .notice--info}
 
-This backup can only be used on this NAND. If you format your 3DS or restore another NAND (specifically if `movable.sed` is ever modified), it will become unusable.
+Сделанный бекап может быть использован только на том NAND, на котором был создан. Если вы отформатируете 3DS, или восстановите другой NAND, (особенно если `movable.sed` был изменен), резервная копия станет бесполезной.
 {: .notice--info}
 
-1. Go to System Settings, then "Data Management", then "DSiWare" on **the source 3DS**
-2. Copy any DSiWare games that are already on the SD Card back to the System Memory
-3. Copy the DSiWare game you intend to use to the SD Card
-4. Exit System Settings
+1. Перейдите в Системные настройки (System Settings), Управление данными (Data Management), "DSiWare" на **исходной 3DS**
+2. Скопируйте все DSiWare-игры, которые уже есть на КП в системную память
+3. Скопируйте DSiWare-игру, которую планируете использовать, на карту памяти
+4. Покиньте системное меню
 
-##### Section III - Installing the save
+##### Часть III - Установка сохранения
 
-2. Launch FBI on **the source 3DS**
-3. Navigate to `SD`
-4. Press (A) on `public.sav` and copy it
-5. Press (B) to get back to the main menu
-6. Navigate to `TWL NAND` -> `title` -> `00030004`
-7. Navigate to the folder for your game and region:
+2. Запустите FBI на **исходной 3DS**
+3. Перейдите в `SD`
+4. Нажмите (A) на `public.sav` и скопируйте его
+5. Нажмите (B) для возврата в главное меню программы
+6. Перейдите к `TWL NAND` -> `title` -> `00030004`
+7. Перейдите в папку, соответствующую вашей игре и региону:
   + **Fieldrunners USA Region**: `4b464445`
   + **Fieldrunners EUR Region**: `4b464456`
   + **Legends of Exidia USA Region**: `4b4c4545`
@@ -135,8 +135,8 @@ This backup can only be used on this NAND. If you format your 3DS or restore ano
   + **Guitar Rock Tour USA Region**: `4b475245`    
   + **The Legend of Zelda: Four Swords (Anniversary Edition) EUR Region**: `4b513956`   
   + **The Legend of Zelda: Four Swords (Anniversary Edition) USA Region**: `4b513945`    
-9. Navigate to the `data` folder
-8. Press (A) on the existing `public.sav` and delete it
+9. Перейдите в папку `data`
+8. Нажмите (A) на существующем `public.sav` и удалите его
 9. Press (A) on the current directory and paste `public.sav`
 10. Press (B) to get back to the main menu
 11. Press (Start) to exit
