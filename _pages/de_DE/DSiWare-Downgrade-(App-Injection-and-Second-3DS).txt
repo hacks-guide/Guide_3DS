@@ -145,22 +145,22 @@ Diese Sicherheitskopie kann nur von dieser NAND genutzt werden. Falls du deinen 
 25. Drücke (Start) um das Gerät neuzustarten
 26. Starte dein DSiWare-Spiel auf dem **Ausgangs 3DS**
 27. Berühre den Bildschirm oder drücke irgendeinen Knopf um das Spiel zu starten und zu testen, ob die Speicherstände funktionieren
-  + If you are using the EUR files (**Legends of Exidia**), after pressing (A) or (Start) at the two title screens, select the first save slot and press continue
-  + If your game has an error about `boot.nds` or a white screen, **then the exploit has been successful**
-  + If your game has an error about corrupted or inaccessible save data, confirm that you copied **the contents of** the `savedata` folder and not the `savedata` folder itself
-  + If your game behaves normally and does not give you an error about `boot.nds` or a white screen, then you should stop and figure out what went wrong
+  + Falls du die europäischen Dateien (**Legenden der Exidia**) benutzt, wähle, nachdem du bei beiden Titelbildschirmen (A) oder (Start) gedrückt hast, den ersten Speicherstand und drücke fortfahren
+  + Falls dein Spiel eine Fehlermeldung über `boot.nds` oder einen weißen Bildschirm anzeigt, **dann war der Hack erfolgreich**
+  + Falls dein Spiel einen Fehler über beschädigte oder nicht aufrufbare Speicherdaten anzeigt, stelle sicher, dass du **die Inhalte** des Ordners `savedata`, und nicht den Ordner `savedata` selbst kopiert hast
+  + Falls dein Spiel sich normal verhält und dir keine Fehlermeldung über `boot.nds` oder einen weißen Bildschirm anzeigt, dann solltest du aufhören und herausfinden, was schief gelaufen ist
   + Wenn du einen schwarzen Bildschirm bekommst, [folge diesen Problembehandlungen](troubleshooting#twl_broken)
-  + If the game is missing from **the target 3DS** or has an error about corrupted or inaccessible save data, [follow this troubleshooting guide](troubleshooting#ts_dsiware)
+  + Falls das Spiel auf dem **Ziel 3DS** fehlt oder einen Fehler über beschädigte oder nicht aufrufbare Speicherstände anzeigt, [folge dieser Anleitung zur Problembehandlung](troubleshooting#ts_dsiware)
 
 ##### Abschnitt IV - ctr-httpwn
 
-**This section is only required if _the target 3DS_ is under 11.2.0.**
+**Dieser Abschnitt wird nur benötigt, falls _der Ziel 3DS_ unter Version 11.2.0 ist.**
 
-**This will allow you to system transfer on versions other than the latest.**
+**Dies wird dir erlauben einen Systemtransfer auf Versionen, welche nicht die neuesten sind, durchzuführen.**
 
-1. Copy and merge the `3ds` folder from the ctr-httpwn `.zip` to **the target 3DS**'s SD card
-2. Reinsert your SD card into **the target 3DS**
-3. Launch the homebrew launcher on the device using [Homebrew Launcher (No Browser)](homebrew-launcher-(no-browser))
+1. Kopiere und verbinde den `3ds` Ordner aus der ctr-httpwn `.zip` auf die SD-Karte des **Ziel 3DS**
+2. Lege die SD-Karte wieder in den **Ziel 3DS** ein
+3. Starte den Homebrew Launcher auf dem Gerät, welches [Homebrew Launcher (Ohne Browser)](homebrew-launcher-(no-browser)) benutzt
   + **New 3DSs on versions 10.7.0 and 11.0.0 can use [Homebrew Launcher (Browser)](homebrew-launcher-(browser)) instead**
   + **Ensure menuhax is not installed, or you won't be able to return to Home Menu from the homebrew launcher**
 4. Launch ctr-httpwn on **the target 3DS**
@@ -172,7 +172,7 @@ Diese Sicherheitskopie kann nur von dieser NAND genutzt werden. Falls du deinen 
 9. Continue to the next section **without rebooting**
   + **the target 3DS** has been temporarily patched to allow network functions (such as System Transfer) without running the latest system version
   + Keep in mind that exiting the System Settings will reboot the system
-  + If the system is rebooted, you'll have to re-run ctr-httpwn before System Transfer will work
+  + Wenn das System neugestartet hat, musst du ctr-httpwn erneut ausführen, damit der System Transfer wieder funktioniert
 
 ##### Abschnitt V - Systemtransfer
 
@@ -202,39 +202,39 @@ Diese Sicherheitskopie kann nur von dieser NAND genutzt werden. Falls du deinen 
 3. Reboot **the source 3DS** while holding Start to launch Hourglass9
 4. Go to SysNAND Backup/Restore and restore SysNAND from `NANDmin.bin`
 
-##### Section VII - Backing up the target 3DS's NFIRM
+##### Abschnitt VII - Backup der NFIRM des Ziel 3DS
 
 1. Copy the dgTool `boot.nds` to the root of **the target 3DS**'s SD card
 2. Create a folder named `dgTool` on the root of **the target 3DS**'s SD card if it does not already exist
 3. Copy the contents of the NFIRM `.zip` to the `dgTool` folder on the root of **the target 3DS**'s SD card
-4. Starte dein DSiWare Spiel auf **dem Ziel 3DS**
-5. Öffne dgTool durch starten des DSiWare Spieles
+4. Starte dein DSiWare-Spiel auf **dem Ziel-3DS**
+5. Öffne dgTool durch starten des DSiWare-Spieles
   + If the game does not launch dgTool, [follow this troubleshooting guide](troubleshooting#ts_dsiware)
 6. Select "Dump f0f1" to backup **the target 3DS**'s NFIRM
   + This will take a while
 7. Make note of the NFIRM backup's location
-8. Exit dgTool
-  + You may have to force power off by holding the power button
+8. Beende dgTool
+  + Unter Umständen musst du das Ausschalten der Konsole erzwingen indem du den Power-Knopf gedrückt hälst
 9. Put your SD card in your computer, then copy `F0F1_N3DS.bin` or `F0F1_O3DS.bin` (depending on your device) to a safe location
   + Erstelle Sicherheitskopien an verschiedenen Orten
   Diese Backups werden dich vor zukünftigen Bricks schützen
 
 
-##### Abschnitt VIII - Überschreiben der NFIRM des Ziel 3DS's
+##### Abschnitt VIII - Überschreiben der NFIRM des Ziel-3DS
 
-**Downgrade niemals eine Konsole mit dgTool wenn arm9loaderhax bereits installiert wurde, oder du wirst BRICKEN!**
+**Führe niemals ein Downgrade via dgTool auf einem Gerät, das bereits arm9loaderhax installiert hat, durch, sonst erleidest du einen BRICK!**
 
-1. Starte dein DSiWare Spiel auf **dem Ziel 3DS**
-2. Öffne dgTool durch starten des DSiWare Spieles
-3. Select "Downgrade FIRM to 10.4" and confirm to flash the 10.4.0 NFIRM bin to **the target 3DS**
-4. Exit dgTool
-  + You may have to force power off by holding the power button
-5. Reboot
+1. Starte dein DSiWare-Spiel auf **dem Ziel-3DS**
+2. Öffne dgTool durch starten des DSiWare-Spieles
+3. Wähle "Downgrade FIRM to 10.4" um die 10.4.0 NFIRM bin auf **den Ziel 3DS** aufzuspielen
+4. Beende dgTool
+  + Unter Umständen musst du das Ausschalten der Konsole erzwingen indem du den Power-Knopf gedrückt hälst
+5. Starte die Konsole neu
 
-##### Section IX - Exploit verification
+##### Abschnitt IX - Exploit Verifizierung
 
 1. Copy and merge the `3ds` folder from the 3DSident `.zip` to **the target 3DS**'s SD card
-2. Reinsert your SD card into **the target 3DS**
+2. Lege die SD-Karte wieder in den **Ziel 3DS** ein
 3. Launch the homebrew launcher on **the target 3DS** using your entrypoint
 4. Launch 3DSident
 5. Verify that the following:
