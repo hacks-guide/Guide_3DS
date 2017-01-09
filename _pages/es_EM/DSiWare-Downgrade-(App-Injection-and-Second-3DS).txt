@@ -1,50 +1,50 @@
 ---
 title: "Bajar de versión mediante DSiWare (Inyección de aplicación y segunda 3DS)"
 permalink: /dsiware-downgrade-(app-injection-and-second-3ds).html
-lang: es_ES
+lang: es_EM
 ref: dsiware-downgrade-(app-injection-and-second-3ds)
 ---
 
-Si estás entre las versiones 11.0.0 y 11.2.0, puedes seguir esta guía para downgradear tu NATIVE_FIRM usando un juego de DSiWare y una segunda 3DS que ya tenga un "Custom Firmware" instalado en ella para volcar y restaurar tu NAND.
+Si estás entre las versiones 11.0.0 y 11.2.0, puedes seguir esta guía para downgradear tu NATIVE_FIRM usando DSiWare y y una segunda 3DS que ya tenga instalado un Custom Firmware para extraer y restaurar tu NAND.
 {: .notice}
 
-Si tu versión es inferior a 11.2.0 en cualquiera de las 2 consolas, entonces debes seguir los pasos referentes al ctr-httpwn (cuando sea necesario) en cada dispositivo por debajo de la versión 11.2.0 para poder hacer la transferencia entre ellos.
+Si tu versión es inferior a 11.2.0 en cualquiera de las 2 consolas, entonces debes usar ctr-httpwn (cuando sea necesario) en cada dispositivo por debajo de la versión 11.2.0 para poder hacer la transferencia entre ellos.
 {: .notice--info}
 
-Esto se aprovecha de una vulnerabilidad que permite a los juegos DSiWare a leer y escribir en cualquier parte de la NAND.
+Esto se aprovecha de una vulnerabilidad que permite a los juegos DSiWare leer y escribir en cualquier parte de la NAND.
 {: .notice--info}
 
-Esto es una guía detallada sobre el funcionamiento del exploit "FIRM partitions known-plaintext" [here](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+Esta es una implementación funcional del exploit "Particiones FIRM de texto plano conocido" detallado [aquí](https://www.3dbrew.org/wiki/3DS_System_Flaws) *en inglés.*.
 {: .notice--info}
 
-Esta guía asume que la 3DS que posee CFW está usando arm9loaderhax y que se hizo mediante esta misma guía, pero funcionaría (con pequeñas modificaciones como hacer todos los pasos referentes a la SysNAND en la EmuNAND) en consolas ejecutando una EmuNAND. Nota: los términos EmuNAND y RedNAND son diferentes implementaciones del [Mismo concepto] (http://3dbrew.org/wiki/NAND_Redirection).
+Esta guía asume que la 3DS que posee CFW está usando arm9loaderhax y que se hizo mediante esta misma guía, pero funcionaría (con pequeñas modificaciones como hacer todos los pasos referentes a la SysNAND en la EmuNAND) en consolas ejecutando una EmuNAND. Nota: los términos EmuNAND y RedNAND son diferentes implementaciones del [mismo concepto] (http://3dbrew.org/wiki/NAND_Redirection).
 {: .notice--info}
 
-Se hará una copia de seguridad de la partida guardada del DSiWare antes de instalar la partida hackeada.
+Se hará una copia de seguridad de tu partida de DSiWare antes de ser reemplazada con la partida hackeada.
 {: .notice--info}
 
 {% capture notice-4 %}
-Este exploit requiere que hagas una [Transferencia de sistemas](https://www.nintendo.es/Atencion-al-cliente/Nintendo-3DS-y-Nintendo-2DS/Transferencia-entre-consolas-Nintendo-3DS-Incluida-Nintendo-3DS-XL-/Como-realizar-una-transferencia-de-sistema-entre-las-consolas-Nintendo-3DS-y-Nintendo-3DS-XL/Como-realizar-una-transferencia-de-sistema-entre-consolas-Nintendo-3DS-y-Nintendo-3DS-XL-592194.html) desde una 3DS con CFW instalado a una 3DS stock como parte de los pasos a seguir. Las Transferencias de Sistema funcionarán SÓLO en los siguientes casos:    
+Este exploit requiere que hagas una [Transferencia de sistemas](http://bit.ly/2jlEfZp) desde una 3DS con CFW instalado a una 3DS stock como parte de los pasos a seguir. Las Transferencias de Sistema funcionarán *sólo* en los siguientes direcciones:    
   + New 3DS -> New 3DS    
-  + 3DS vieja (old) o 2DS -> 3DS vieja (old) o 2DS    
-  + 3DS vieja (old) o 2DS -> New 3DS    
+  + Old 3DS o 2DS -> Old 3DS o 2DS    
+  + Old 3DS o 2DS -> New 3DS    
 {% endcapture %}
 
 <div class="notice--warning">{{ notice-4 | markdownify }}</div>
 
-Ambas consolas DEBEN ser de la misma región.
+Ambos sistemas DEBEN ser de la misma región.
 {: .notice--warning}
 
-**Todos los datos se borrarán de la consola de destino (que no tiene CFW)! **
+**¡Todos los datos del _3DS objetivo_ serán eliminados!**
 {: .notice--danger}
 
-El NNID de la consola de origen quedará en la consola de destino a menos que hagas transferencia de vuelta o llames a Nintendo! (detalles en las instrucciones)
+El NNID de la consola de origen quedará en la consola de destino a menos que hagas una transferencia de vuelta o llames a Nintendo! (detalles en las instrucciones)
 {: .notice--danger}
 
 La transferencia entre sistemas solo puede hacerse una vez cada semana.
 {: .notice--danger}
 
-#### Lo que necesitas
+#### Material necesario
 
 * Dos consolas 3DS
   + **La 3ds de origen**: una consola ejecutando algún tipo de CFW (arm9loaderhax o una EmuNAND/RedNAND) *en la ultima versión*
