@@ -8,10 +8,10 @@ ref: 9.2.0-ctrtransfer
 Se hai effettuato il downgrade alla versione 2.1.0 ma per qualche motivo non hai un **backup utilizzabile della NAND**, questa guida fa al caso tuo.
 {: .notice--success}
 
-Il tuo dispositivo potrebbe non visualizzare i giochi installati dopo il ctrtransfer. Questo è dovuto al fatto che i ticket vengono rimossi dall'operazione di trasferimento, ecco perchè effettueremo un backup. Essi verrano ripristinati al termine della guida.
+Il tuo dispositivo potrebbe non visualizzare i giochi installati dopo il ctrtransfer. Questo è dovuto al fatto che i ticket vengono rimossi dall'operazione di trasferimento, ecco perchè effettueremo un backup. Le procedure di ripristino verranno illustrate al termine della guida.
 {: .notice--info}
 
-Lo scopo del ctrtrasnfer 9.2.0 è di risolvere problemi causati dalla NAND esistente; quindi, a differenza del ctrtransfer 2.1.0, effettueremo un backup solo dei ticket e un salvataggio della configurazione. Non effettuare tale backup comporterà un PARDITA di tutti i giochi installati e dei salvataggi!
+Visto che il ctrtransfer alla 9.2.0 serve per risolvere i problemi causati dalla NAND già esistente, questi passaggi, a differenza del ctrtransfer alla 2.1.0, ti faranno salvare solo i ticket e il file dei salvataggi. Se non riesci a fare un salvataggio di questi file PERDERAI tutti i tuoi giochi installati e i tuoi salvataggi!
 {: .notice--danger}
 
 #### Cosa serve
@@ -19,7 +19,7 @@ Lo scopo del ctrtrasnfer 9.2.0 è di risolvere problemi causati dalla NAND esist
 * L'ultima versione di [GodMode9](https://github.com/d0k3/GodMode9/releases/)
 * L'ultima versione di [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/latest)
 * L'immagine ctrtransfer 9.2.0 adatta al tuo dispositivo e alla sua regione     
-*(se il tuo dispositivo non appartiene a queste regioni, puoi usarne uno qualsiasi che rispetti il modello del tuo dispositivo)*:
+*(se la tua console non rientra in una di queste regioni, scegline una per lo stesso modello della tua console)*:
   +    [New 3DS 9.2.0 - EUR - ctrtransfer](magnet:?xt=urn:btih:fed7bfeec0e52b42a77467cfb6ffd3e9dd2d5a70&dn=9.2.0-20E%5Fctrtransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)   
   +    [New 3DS 9.2.0 - JPN - ctrtransfer](magnet:?xt=urn:btih:b22d67fd02b3b0e30ac991e451db0f2d32e7beca&dn=9.2.0-20J%5Fctrtransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
   +    [New 3DS 9.2.0 - USA - ctrtransfer](magnet:?xt=urn:btih:985d47442dc470d1b9f908256bed041c63885f60&dn=9.2.0-20U%5Fctrtransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)    
@@ -32,31 +32,31 @@ Lo scopo del ctrtrasnfer 9.2.0 è di risolvere problemi causati dalla NAND esist
 
 ##### Sezione I - Preparazione
 
-1. Copiare `GodMode9.bin` dal'archivio GodMode9 `.zip` alla cartella `/luma/payloads/` presente nella scheda SD e rinominare `GodMode9.bin` nella cartella `/luma/payloads/` in`up_GodMode9.bin`
-4. Copiare i file immagine ctrtransfer 9.2.0 con estensione `.bin` and `.bin.sha` dall'archivio `.zip` ctrtransfer alla cartella `/files9/` presentae nella scheda SD
-5. Copiare il file `Decrypt9WIP.bin` all'interno della cartella `/luma/payloads/` contenuta nella scheda SD e rinominare il file `Decrypt9WIP.bin` in `x_Decrypt9WIP.bin`
+1. Copia `GodMode9.bin` dall'archivio GodMode9 `.zip` alla cartella `/luma/payloads/` presente nella scheda SD e rinomina il file `GodMode9.bin` nella cartella `/luma/payloads/` in`up_GodMode9.bin`
+4. Copia i file del ctrtransfer 9.2.0 con estensione `.bin` and `.bin.sha` dall'archivio `.zip` ctrtransfer alla cartella `/files9/` presente nella scheda SD
+5. Copia il file `Decrypt9WIP.bin` all'interno della cartella `/luma/payloads/` contenuta nella scheda SD e rinomina il file `Decrypt9WIP.bin` in `x_Decrypt9WIP.bin`
 6. Reinserisci la scheda SD nella console
 
-##### Sezione II - Backup dei ticket e salvataggio della configurazione
+##### Sezione II - Backup dei ticket e dei salvataggi
 
-5. Aprire Decrypt9 tramite arm9loaderhax tenendo premuto il tasto (X) all'accensione
+5. Apri Dercypt9 dall'arm9loaderhax tenendo premuto (X) all'avvio
 6. Seleziona "Ticket/Titlekey Options", quindi seleziona "Ticket Dump (SysNAND)"
 7. Premi (Select) per rimuovere la scheda SD, poi inseriscila nel tuo computer
 8. Elimina tutti i file con estensione ".tik" presenti nella cartella "/files9/" che **NON** cominciano con "00-""
   Se nessuno inizia con "00-", cancellali tutti
-10. Reinsert your SD card into your 3DS, then press (B) to go back to the Main Menu
-11. Go to "SysNAND Options", then "System Save Dump", then select "Dump configsave.bin"
+10. Reinserisci la scheda SD nel tuo 3DS, quindi premi (B) per tornare al menu principale
+11. Seleziona "SysNAND Options", quindi "System Save Dump", ed infine "Dump configsave.bin"
 
-##### Section III - ctrtransfer
+##### Sezione II - ctrtransfer
 
-8. Go to "SysNAND Options", then "CTRNAND Transfer", then "Auto CTRNAND Transfer"
-9. Select the 9.2.0 ctrtransfer image when prompted by pressing (A), then input the key combo given
-10. If you do not already have a NAND backup, **Backup SysNAND to `NANDmin.bin` when prompted by pressing (A)**
-11. Allow the transfer process to proceed automatically, this may take some time
-12. Once the transfer is complete, press Select to eject your SD card
-13. Put your SD card in your computer, then copy `NANDmin.bin` and `NANDmin.bin.sha` from the `/files9/` folder on your SD card to a safe location
-  + Make backups in multiple locations
-  + This backup will save you from a brick if anything goes wrong in the future
+8. Selezionare l'opzione "SysNAND Options", poi selezionare "CTRNAND Transfer" e infine selezionare "Auto CTRNAND Transfer"
+9. Seleziona il file immagine del ctrtransfer della 9.2.0 premendo (A) quando richiesto, quindi immetti la combinazione di pulsanti a schermo
+10. Se non hai un backup della tua NAND, **fai il backup della SysNAND nel file `NANDmin.bin` quando richiesto premendo (A)**
+11. Permetti al processo di trasferimento di completarsi automaticamente, potrebbe richiedere del tempo
+12. Appena il trasferimento è completato, premi (Select) per estrarre la scheda SD
+13. Inserisci la scheda SD nel computer, quindi copia i file "NANDmin.bin" e "NANDmin.bin.sha" dalla cartella "/files9/" presente nella scheda SD ad una posizione sicura
+  + Crea delle copie e mettile in più locazioni
+  + Questo backup ti salverà da un brick nel caso succeda qualcosa in futuro
   + **Your backup should match one of the sizes on [this](nand-size) page; if it does not, you should delete it and make a new one!**
 14. Delete the 9.2.0 ctrtransfer image `.bin` and `.bin.sha` from the `/files9/` folder on your SD card
 15. Reinsert your SD card into your 3DS
