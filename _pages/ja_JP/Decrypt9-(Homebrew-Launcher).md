@@ -7,8 +7,8 @@ title: "Decrypt9 (Homebrew Launcher)" permalink: /decrypt9-(homebrew-launcher).h
 #### 必要なもの
 
 * 最新リリース版の[Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/latest/)
-* The latest release of [safehax](https://github.com/TiniVi/safehax/releases/latest)
-* The latest release of [fasthax](https://github.com/nedwill/fasthax/releases/latest)
+* 最新リリース版の[safehax](https://github.com/TiniVi/safehax/releases/latest)
+* 最新リリース版の[fasthax](https://github.com/nedwill/fasthax/releases/latest)
 
 #### 手順
 
