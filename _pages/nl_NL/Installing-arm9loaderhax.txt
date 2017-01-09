@@ -21,7 +21,7 @@ Dit zal ook de mogelijkheid om payloads op te starten vanuit arm9loaderhax, wat 
 
 In deze sectie zullen we gaan door het proces waar alle andere stappen tot hebben geleid: het daadwerkelijk installeren van arm9loaderhax.
 
-Dit is bijna de beste exploit die er is, aangezien deze permanent geinstalleerd kan worden in the NAND FIRM partitie, en wordt geladen voordat het OS wordt geladen, Waardoor dit niet alleen werkt op *elke* versie zodra geinstalleerd. Maar ook zichzelf beschermd tegen situaties dat een niet-a9lh 3ds zou bricken bijvoorbeeld een niet werkend home menu of een slecht geinstalleerde titel.
+Dit is bijna de beste exploit die er is, aangezien deze permanent geinstalleerd kan worden in de NAND FIRM partitie, en wordt geladen voordat het OS wordt geladen, Waardoor dit niet alleen werkt op *elke* versie zodra geinstalleerd. Maar ook zichzelf beschermd tegen situaties dat een niet-a9lh 3ds zou bricken bijvoorbeeld een niet werkend home menu of een slecht geinstalleerde titel.
 
 Het bestand `arm9loaderhax.bin`is wat wordt opgestart zodra arm9loaderhax wordt opgestart zodra de NAND is geladen en kan elk geldig arm9 payload laden. Dit bestand kan worden vervangen op elk gewenst moment, hoewel Luma3DS andere arm9 payloads kan opstarten bij het inhouden van knoppen.
 
@@ -73,9 +73,9 @@ Tijdens dit proces, stellen wij ook programma's in als volgt:
 5. **kopieer _de inhoud_ van `starter.zip` naar de hoofdmap van de SD kaart**
   + Hierbij zit een gloednieuwe '3ds' map ter vervanging van degene die u zojuist hebt verwijderd
 6. Kopieer _de inhoud van_ de SafeA9LHInstaller `.7z` naar de hoofdmap van de SD kaart
-7. **Copy the `a9lh` folder from the data_input `.zip` to the root of your SD Card**
-8. **Copy _the contents of_ the arm9loaderhax release `.7z` to `a9lh` folder on your SD card**
-9. Copy `hblauncher_loader.cia` from the hblauncher_loader `.zip` to the `/cias/` folder on your SD card
+7. **Kopieer de map 'a9lh' van 'data_input_v4.zip' naar de hoofdmap van de SD-kaart**
+8. **Kopieer _de inhoud_ van de arm9loaderhax release `.7z` naar de `a9lh`map naar de SD-kaart**
+9. Kopieer `hblauncher_loader.cia` van de hblauncher_loader `.zip` naar de `/cias/`map op de SD-kaart
 10. Copy `lumaupdater.cia` from the Luma3DS Updater `.zip` to the `/cias/` folder on your SD card
 11. Copy `FBI.cia` from the FBI `.zip` to the `/cias/` folder on your SD card
 12. **Copy `arm9loaderhax.bin` from the Luma3DS `.7z` to the root of your SD card, overwrite existing files**
@@ -124,11 +124,11 @@ Tijdens dit proces, stellen wij ook programma's in als volgt:
 If, before following this guide, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand) instead of doing the first four steps in this section.
 {: .notice--info}
 
-1. Open Hourglass9 from arm9loaderhax by holding (Start) on boot
-2. Go to "SysNAND Backup/Restore"
-3. Go to "SysNAND Restore (keep a9lh)" and restore from `NANDmin.bin`
-4. Press (Start) to reboot
-  + If you get a black screen, [follow 9.2.0 ctrtransfer](9.2.0-ctrtransfer)
+1. Open Hourglass9 met arm9loaderhax door (Start) in te houden bij het opstarten
+2. Ga naar "SysNAND Backup/Restore"
+3. Ga naar "SysNAND Restore (keep a9lh)" en zet 'NANDmin.bin' terug
+4. Druk op (Start) om opnieuw op te starten
+  + Als je een zwart scherm ziet, [Volg 9.2.0 ctrtransfer](9.2.0-ctrtransfer)
 5. If your backup was of a version between 3.0.0 and 4.5.0, your console will not boot until you manually download the required firmware:
   + Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) and rename it to `firmware.bin`
   + Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
@@ -143,12 +143,12 @@ If, before following this guide, you already had an EmuNAND setup and would like
 
 ##### Section V - Injecting FBI
 
-1. Open Hourglass9 from arm9loaderhax by holding (Start) on boot
+1. Open Hourglass9 met arm9loaderhax door (Start) in te houden bij het opstarten
 2. Go to "SysNAND Backup/Restore", then select the "Health&Safety Dump" option to dump Health & Safety to `hs.app` **(you can use Up and Down / Left and Right to change the name)**
 3. Press (B), then select the "Health&Safety Inject" option
 4. Select the FBI injectable `.app` for your region
 5. Press (A) and confirm to inject
-6. Press (Start) to reboot
+6. Druk op (Start) om opnieuw op te starten
 7. If you still launch to the stock Health & Safety app and have downgraded with Gateway in the past, [follow this troubleshooting guide](troubleshooting#gw_fbi)
 
 ##### Section VI - Finalizing setup
