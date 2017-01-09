@@ -31,15 +31,15 @@ Puede que tu dispositivo no muestre los juegos que tenías instalados tras el ct
 
 #### Descripción general de pasos
 
-En esta sección, flashearas la partición [CTRNAND] (https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) de la consola a 2.1.0 para aprovechar un bug en 2.1.0 con el fin de extraer el [OTP](otp-info) exclusivo de la consola. Este archivo OTP es necesario para instalar arm9loaderhax, y **no se puede compartir** con otras consolas.
+En esta sección estaremos flasheando la partición [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) de tu consola a la version 2.1.0 con el objetivo de aprovechar un descuido en el mismo, con el propósito de extraer el [OTP] (otp-info) exclusivo a tu consola. Este archivo OTP es necesario para instalar arm9loaderhax, y **no se puede compartir** con otras consolas.
 
-Esto se logra instalando [una imagen ctrtransfer previamente hecha] (https://www.reddit.com/r/3dshacks/comments/4zhe4a/) que contiene 2.1.0, copiar los archivos específicos de consola (como 'moveable.sed' y 'SecureInfo_A') que, luego reparar las bases de datos de título.
+Esto se logra instalando [una imagen ctrtransfer previamente hecha] (https://www.reddit.com/r/3dshacks/comments/4zhe4a/) que contiene 2.1.0, copiando los archivos específicos a tu consola (como 'moveable.sed' y 'SecureInfo_A'), luego reparando las bases de datos de títulos.
 
 El archivo OTP de tu consola es NECESARIO para usar arm9loaderhax.
 
 #### Lo que necesitas
 
-*Necesitas haber booteado en Decrypt9
+*Necesitas haber iniciado Decrypt9
 * La imagen 2.1.0 ctrtransfer para tu dispostivo y región     
 *(Si tu dispositivo no pertenece a ninguna de estas regiones, solo elige cualquiera)*:
   +    [New 3DS o Old 3DS o 2DS 2.1.0 - EUR - ctrtransfer](magnet:?xt=urn:btih:89acc9c1b488b8b38251de0ddf07975d6bd354a1&dn=2.1.0-4E%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
@@ -53,52 +53,52 @@ El archivo OTP de tu consola es NECESARIO para usar arm9loaderhax.
 Debes estar en Decrypt9 para estos pasos.
 
 1. Presiona (Select) en el menú principal para expulsar tu tarjeta SD, luego ponla en tu computadora
-2. Copia la 2.1.0 'bin' y '. bin.sha' desde el "zip" ctrtransfer a la 'files9 /' carpeta en la tarjeta SD
+2. Copia los archivos 'bin' y '. bin.sha' de la 2.1.0 desde el "zip" ctrtransfer a la carpeta 'files9 /' en la tarjeta SD
 3. Re-inserta tu tarjeta SD en tu 3DS
 4. Presiona (B) para ir al menú principal de Decrypt9
 
 ### Sección II - ctrtransfer
 
-** Tener un backup de la NAND de TU CONSOLA es NECESARIO. Se le pedirá crear uno como parte de los pasos si no tienes uno.* *
+** Tener un backup de la NAND de _TU_ CONSOLA es NECESARIO. Se le pedirá crear uno como parte de los pasos si no tienes uno.* *
 {: .notice--danger}
 
 **Omitir esta copia de seguridad resultara en una PERDIDA de todos los juegos instalados y partidas guardadas!**
 {: .notice--danger}
 
-** Si no sabes o no tienes un backup de la NAND, crear uno cuando se le solicite presionando (A) para estar seguro.* *
+** Si no sabes o no tienes una copia de seguridad de la NAND, crea una cuando se le solicite presionando (A) para estar seguro.* *
 {: .notice--danger}
 
-** Si no tienes suficiente espacio para crear la copia de seguridad, puede copia de seguridad a otra tarjeta SD o liberar espacio de tu tarjeta SD actual pulsando (Select) en el menú principal de Decrypt9WIP para expulsar la tarjeta SD e intercambiar con otra tarjeta SD o para despejar espacio en su actual tarjeta de SD **
+** Si no tienes suficiente espacio para crear la copia de seguridad, puedes hacer la copia de seguridad a otra tarjeta SD o liberar espacio de tu tarjeta SD actual pulsando (Select) en el menú principal de Decrypt9WIP para expulsar la tarjeta SD e intercambiar con otra tarjeta SD o para despejar espacio en su actual tarjeta de SD **
 {: .notice--danger}
 
 4. Ve hacia "SysNAND Options", luego a "CTRNAND Transfer", luego "AUTO CTRNAND Transfer"
-5. Selecciona 2.1.0 ctrtransfer image cuando te lo pida, presionando (A) y luego presiona el patrón de botones que aparecerá en pantalla
-6. If you do not already have a NAND backup, **backup SysNAND to `NANDmin.bin` when prompted by pressing (A)**
-  + **Having a backup of _your_ device's NAND is REQUIRED.**
-  + **Skipping this backup will result in the LOSS of all installed games and saves!**
-7. Allow the transfer process to proceed automatically, this may take some time
-8. Once the transfer is complete, press (B) to go back
-9. Press (Select) to eject your SD card
-9. Delete the 2.1.0 ctrtransfer image `.bin` and `.bin.sha` from the `/files9/` folder on your SD card
-11. Press (Start) to reboot without reinserting your SD card
-  + While on 2.1.0, the device will black screen on boot if your SD card is inserted before the home menu loads
-12. Reinsert your SD card into your 3DS after the home menu loads
-  + Every time the device is rebooted on 2.1.0, you will need to take out your SD card before boot and put it back in after the home menu loads
-  + This will be fixed once you restore your device in the next page
+5. Selecciona la imagen del ctrtransfer 2.1.0 cuando te lo pida presionando (A), luego presiona el patrón de botones que aparecerá en pantalla
+6. Si aún no tienes una copia de seguridad de la NAND, **haz una copia de seguridad de la SysNAND a 'NANDmin.bin' cuando se te pida, presionando (A)**
+  + **Tener una copia de seguridad de la NAND de _tu_ dispositivo es NECESARIO.**
+  + **Saltarse esta copia de seguridad resultará en la PÉRDIDA de todos tus juegos instalados y partidas guardadas!**
+7. Deja que acabe el proceso de ctrtransfer, esto llevará un tiempo
+8. Cuando acabe el ctrtransfer, pulsa (B) para volver atrás
+9. Presiona (Select) para expulsar tu tarjeta SD
+9. Borra los archivos`.bin` y `.bin.sha` de la imagen ctrtransfer de la carpeta `/files9/`en tu tarjeta SD
+11. Presiona (Start) para reiniciar sin reinsertar tu tarjeta SD
+  + Estando en la 2.1.0, el dispositivo estará con la pantalla negra mientras se inicia si tu tarjeta SD está insertada antes de que el menú de inicio se cargue
+12. Reinserta tu tarjeta SD en la 3DS cuando cargue el menú de inicio
+  + Cada vez que se reinicia el dispositivo en la 2.1.0, tendrás que sacar tu tarjet SD antes de encender y insertarla de nuevo después de que cargue el menú de inicio
+  + Esto se arreglará una vez restaures el dispositivo en la siguiente página
 
 ___
 
-The initial boot of 2.1.0 can take slightly longer than a standard boot on some devices.
+El primer arranque de la 2.1.0 puede llevar un poco mas de lo normal en algunos dispositivos.
 {: .notice--info}
 
-*(Screen distortions or discolorations are normal for some devices while on 2.1.0, they will go away once you restore your backup)*
+*(Que la pantalla se distorsione o salga con mal color es normal en algunos dispositivos en la 2.1.0, volverá a estar normal una vez restaures tu copia de seguridad)*
 {: .notice--info}
 
 {% capture notice %}
-**Putting a New 3DS on 2.1.0 in sleep mode is known to cause an UNRECOVERABLE brick!**
-**This only happens when shutting the lid _while the device is on_; this does not apply to turning the device off.**
-**The device only enters sleep mode when the lid is closed. It is not on a timer or anything like that.**
-**You should continue without delay to avoid any possibility of this happening!**
+**Poner una New 3DS en la 2.1.0 en stand by (cerrar la tapa) causa un brick IRRECUPERABLE!**
+**Esto solo ocurre cuando cierras la tapa _mientras el dispositivo está encendido_; no se aplica cuando está apagado.**
+**El dispositivo solo se pone en stand by cuando la tapa está cerrada. No se pone en stand by al pasar un tiempo, ni nada del estilo.**
+**Deberías continuar sin pausa para evitar cualquier posibilidad de que esto pase!**
 {% endcapture %}
 
 <div class="notice--danger">{{ notice | markdownify }}</div>
