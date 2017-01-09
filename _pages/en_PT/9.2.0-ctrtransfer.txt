@@ -33,35 +33,35 @@ Because the point of the 9.2.0 ctrtransfer is to troubleshoot issues caused by t
 ##### Section I - Prep work
 
 1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `up_GodMode9.bin`
-4. Copy the 9.2.0 ctrtransfer image `.bin` and `.bin.sha` from the ctrtransfer `.zip` to the `/files9/` folder on your SD card
-5. Copy `Decrypt9WIP.bin` to the `/luma/payloads/` folder on your SD card and rename `Decrypt9WIP.bin` to `x_Decrypt9WIP.bin`
-6. Reinsert your SD card into your 3DS
+2. Copy the 9.2.0 ctrtransfer image `.bin` and `.bin.sha` from the ctrtransfer `.zip` to the `/files9/` folder on your SD card
+3. Copy `Decrypt9WIP.bin` to the `/luma/payloads/` folder on your SD card and rename `Decrypt9WIP.bin` to `x_Decrypt9WIP.bin`
+4. Reinsert your SD card into your 3DS
 
 ##### Section II - Backup tickets and config save
 
-5. Open Decrypt9 from arm9loaderhax by holding (X) during boot
-6. Go to "Ticket/Titlekey Options", then select "Ticket Dump (SysNAND)"
-7. Press (Select) to eject your SD card, then put it in your computer
-8. Delete all `.tik` files in the `/files9/` folder that **do not** start with "00-"
+1. Open Decrypt9 from arm9loaderhax by holding (X) during boot
+2. Go to "Ticket/Titlekey Options", then select "Ticket Dump (SysNAND)"
+3. Press (Select) to eject your SD card, then put it in your computer
+4. Delete all `.tik` files in the `/files9/` folder that **do not** start with "00-"
   + If none start with "00-", then just delete all of them
-10. Reinsert your SD card into your 3DS, then press (B) to go back to the Main Menu
-11. Go to "SysNAND Options", then "System Save Dump", then select "Dump configsave.bin"
+5. Reinsert your SD card into your 3DS, then press (B) to go back to the Main Menu
+6. Go to "SysNAND Options", then "System Save Dump", then select "Dump configsave.bin"
 
 ##### Section III - ctrtransfer
 
-8. Go to "SysNAND Options", then "CTRNAND Transfer", then "Auto CTRNAND Transfer"
-9. Select the 9.2.0 ctrtransfer image when prompted by pressing (A), then input the key combo given
-10. If you do not already have a NAND backup, **Backup SysNAND to `NANDmin.bin` when prompted by pressing (A)**
-11. Allow the transfer process to proceed automatically, this may take some time
-12. Once the transfer is complete, press (Select) to eject your SD card
-13. Put your SD card in your computer, then copy `NANDmin.bin` and `NANDmin.bin.sha` from the `/files9/` folder on your SD card to a safe location
+1. Go to "SysNAND Options", then "CTRNAND Transfer", then "Auto CTRNAND Transfer"
+2. Select the 9.2.0 ctrtransfer image when prompted by pressing (A), then input the key combo given
+3. If you do not already have a NAND backup, **Backup SysNAND to `NANDmin.bin` when prompted by pressing (A)**
+4. Allow the transfer process to proceed automatically, this may take some time
+5. Once the transfer is complete, press (Select) to eject your SD card
+6. Put your SD card in your computer, then copy `NANDmin.bin` and `NANDmin.bin.sha` from the `/files9/` folder on your SD card to a safe location
   + Make backups in multiple locations
   + This backup will save you from a brick if anything goes wrong in the future
   + **Your backup should match one of the sizes on [this](nand-size) page; if it does not, you should delete it and make a new one!**
-14. Delete the 9.2.0 ctrtransfer image `.bin` and `.bin.sha` from the `/files9/` folder on your SD card
-15. Reinsert your SD card into your 3DS
-16. Press (Start) to reboot
-17. Update your 3DS by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
+7. Delete the 9.2.0 ctrtransfer image `.bin` and `.bin.sha` from the `/files9/` folder on your SD card
+8. Reinsert your SD card into your 3DS
+9. Press (Start) to reboot
+10. Update your 3DS by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
   + Updates while using A9LH + Luma (what you have) are safe, stop asking about it
   + If this gives you an error, set your DNS settings to "auto"
 
@@ -73,12 +73,12 @@ Because the point of the 9.2.0 ctrtransfer is to troubleshoot issues caused by t
 
 ##### Section V - Injecting FBI
 
-2. Go to "SysNAND Options", then "Miscellaneous", then select the "Health&Safety Dump" option to dump Health & Safety to `hs.app` **(you can use Up and Down / Left and Right to change the name)**
-3. Press (B), then select the "Health&Safety Inject" option
-8. Select the FBI injectable `.app` for your region
+1. Go to "SysNAND Options", then "Miscellaneous", then select the "Health&Safety Dump" option to dump Health & Safety to `hs.app` **(you can use Up and Down / Left and Right to change the name)**
+2. Press (B), then select the "Health&Safety Inject" option
+3. Select the FBI injectable `.app` for your region
 4. Press (A) and confirm to inject
-9. Press (Start) to reboot
-10. If you still launch to the stock Health & Safety app and have downgraded with Gateway in the past, [follow this troubleshooting guide](troubleshooting#gw_fbi)
+5. Press (Start) to reboot
+6. If you still launch to the stock Health & Safety app and have downgraded with Gateway in the past, [follow this troubleshooting guide](troubleshooting#gw_fbi)
 
 ##### Section VI - Reinstalling Tickets
 
