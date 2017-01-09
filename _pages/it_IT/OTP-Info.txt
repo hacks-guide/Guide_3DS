@@ -7,7 +7,7 @@ ref: otp-info
 
 L'OTP è una regione, avente lunghezza 0x100 byte, piena di dati apparentemente casuali, collocata all'indirizzo di memoria 0x10012000. Si presume che le chiavi univoche per console siano derivate da questa regione, anche se è ancora sconosciuto esattamente come questo avvenga. Questa regione di memoria è, probabilmente, l'archivio dei dati univoci della console, che è decrittato dal bootrom, ma non potremo sapere precisamente come, finché qualcuno non effettuerà un dump completo del bootrom. Al 33c3 del 2016, è stato rivelato che è stato eseguito un dump completo del bootrom, ma tuttavia non è ancora stato rilasciato.
 
-Prior to version 3.0.0-X, the 0x10012000-region (the OTP) was left unprotected and could be dumped by an attacker with sufficient permissions (arm9 code execution).
+Prima della versione 3.0.0X, l'indirizzo di memoria 0x10012000 (ovvero l'OTP) era lasciata non protetta e poteva essere dumpata da un attaccante con sufficienti privilegi (esecuzione di codice sul processore arm9).
 
 After version 3.0.0-X, Nintendo switched to locking this region using the register CFG_SYSPROT9, which also locks the bootloader and is set extremely early in boot, long before we are able to gain code execution. This register can be set exactly once, and cannot be switched off until the unit is fully powered off, and therefore it is impossible to dump the full OTP without a version below 3.0.0-X.
 
