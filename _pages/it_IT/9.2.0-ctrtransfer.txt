@@ -11,7 +11,7 @@ Se hai effettuato il downgrade alla versione 2.1.0 ma per qualche motivo non hai
 Il tuo dispositivo potrebbe non visualizzare i giochi installati dopo il ctrtransfer. Questo è dovuto al fatto che i ticket vengono rimossi dall'operazione di trasferimento, ecco perchè effettueremo un backup. Le procedure di ripristino verranno illustrate al termine della guida.
 {: .notice--info}
 
-Visto che il ctrtransfer alla 9.2.0 serve per risolvere i problemi causati dalla NAND già esistente, questi passaggi, a differenza del ctrtransfer alla 2.1.0, ti faranno salvare solo i ticket e il file configsave. Se non riesci a fare un salvataggio di questi file PERDERAI tutti i tuoi giochi installati e i tuoi salvataggi!
+Visto che il ctrtransfer alla 9.2.0 serve per risolvere i problemi causati dalla NAND già esistente, questi passaggi, a differenza del ctrtransfer alla 2.1.0, ti faranno salvare solo i ticket e la configurazione di sistema. Se non riesci a fare un salvataggio di questi file PERDERAI tutti i tuoi giochi installati e la configurazione di sistema!
 {: .notice--danger}
 
 #### Cosa serve
@@ -37,7 +37,7 @@ Visto che il ctrtransfer alla 9.2.0 serve per risolvere i problemi causati dalla
 5. Copia il file `Decrypt9WIP.bin` all'interno della cartella `/luma/payloads/` contenuta nella scheda SD e rinomina il file `Decrypt9WIP.bin` in `x_Decrypt9WIP.bin`
 6. Reinserisci la scheda SD nella console
 
-##### Sezione II - Backup dei ticket e dei salvataggi
+##### Sezione II - Backup dei ticket e della configurazione di sistema
 
 5. Apri Dercypt9 dall'arm9loaderhax tenendo premuto (X) all'avvio
 6. Seleziona "Ticket/Titlekey Options", quindi seleziona "Ticket Dump (SysNAND)"
@@ -65,17 +65,17 @@ Visto che il ctrtransfer alla 9.2.0 serve per risolvere i problemi causati dalla
   Gli aggiornamenti effettuati usando A9LH + Luma (ora installato) sono sicuri, per cui basta chiederne la conferma
   + Se ottieni un errore, imposta i DNS della connessione di rete in modo che vengano ottenuti automaticamente
 
-##### Section IV - Restore config save
+##### Sezione IV - Ripristino configurazione di sistema
 
 1. Riavvia tenendo premuto (X) durante l'avvio per lanciare Decrypt9 da arm9loaderhax
 2. Seleziona "SysNAND Options", quindi "System Save Inject", ed infine "Inject configsave.bin"
-3. Press (B) to get back to the main menu
+3. Premi (B) per tornare al menu principale
 
-##### Section V - Injecting FBI
+##### Sezione V - Injecting di FBI
 
-2. Go to "SysNAND Options", then "Miscellaneous", then select the "Health&Safety Dump" option to dump Health & Safety to `hs.app` **(you can use Up and Down / Left and Right to change the name)**
-3. Press (B), then select the "Health&Safety Inject" option
-8. Select the FBI injectable `.app` for your region
+2. Seleziona "SysNAND Options", poi "Miscellaneous", quindi l'opzione "Health&Safety Dump" per effettuare un dump di Health & Safety nel file `hs.app` **(puoi usare Su e Giù / Sinistra e Destra per cambiare il nome)**
+3. Premi (B), quindi seleziona l'opzione "Health&Safety Inject"
+4. Select the FBI injectable `.app` for your region
 4. Press (A) and confirm to inject
 9. Press (Start) to reboot
 10. If you still launch to the stock Health & Safety app and have downgraded with Gateway in the past, [follow this troubleshooting guide](troubleshooting#gw_fbi)
