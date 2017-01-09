@@ -1,107 +1,107 @@
 ---
 title: "2.1.0 ctrtransfer"
 permalink: /2.1.0-ctrtransfer.html
-lang: vi
+lang: en_US
 ref: 2.1.0-ctrtransfer
 ---
 
-Nếu bạn hạ cấp phần mềm 2DS hoặc New 3DS xuống 2.1.0 mà để mạng không dây tắt, thì bạn có thể mở chức năng đó lại bằng cách tháo pin ra vài giây, và sau đó khởi động lại.
+If you downgrade to 2.1.0 on a 2DS or New 3DS and left Wireless Communication off, you can re-enable the wireless by removing the battery for several seconds then booting back up.
 {: .notice--info}
 
-Nếu bạn thường dùng chức năng quản lý microSD (microSD Management trong cài đặt) của New3DS để chuyển các file vào thẻ nhớ, thì bạn cần phải chuẩn bị một đầu đọc thẻ nhớ trước khi tiến hành, vì chức năng nói trên không hoạt động ở 2.1.0.
+If you've been using the New 3DS's microSD Management to transfer files to your SD card, this will no longer work on 2.1.0, make sure to have a microSD card reader on hand before proceeding.
 {: .notice--info}
 
-Máy của bạn có thể sẽ không hiển thị những game đã cài trước đó sau ctrtransfer. Điều này xảy ra vì ticket của game bị xóa bởi quá trình này, nên bạn cần sao lưu chúng trước. Ticket sẽ được hồi phục ở phần cuối của hướng dẫn.
+Your device may not show your installed games after the ctrtransfer. This is due to the tickets being removed by the transfer, which is why you back them up. They will be restored at the end of the guide.
 {: .notice--info}
 
-**Hiện tại, CẦN kết nối máy của bạn với internet để tiếp tục tiến hành sau quá trình ctrtransfer xuống 2.1.0**
+**For now, connecting your device to the internet is REQUIRED to continue after the 2.1.0 ctrtransfer.**
 {: .notice--warning}
 
-**Vô hiệu hóa chức năng kiểm soát cho trẻ em (parental controls trong cài đặt) trước khi thực hiện ctrtransfer. Nếu bạn không biết mật khẩu khi làm việc này, xem trang [this](https://mkey.salthax.org/) **
+**Disable the parental controls of your device before doing the 2.1.0 ctrtransfer. If you do not know the password, see [this](https://mkey.salthax.org/) site.**
 {: .notice--warning}
 
-** Thực hiện ctrtransfer sẽ xóa bỏ hết mọi ticket được cài bởi người dùng ra khỏi máy cho đến khi khôi phục lại từ bản sao lưu. Bạn không nên bỏ qua việc tạo bản sao lưu trong BẤT KÌ TRƯỜNG HỢP NÀO, hoặc là bạn sẽ MẤT truy cập vào mọi game được cài đặt và save của game!**
+**Performing a ctrtransfer will remove all user-installed tickets from the device until a backup is restored. Under NO CIRCUMSTANCES should you skip creating the backup, or you will LOSE access to all installed games and saves!**
 {: .notice--danger}
 
-**Không bao giờ format lại một 2DS trong khi ở bản <6.0.0, hoặc là bạn sẽ không thể hoàn thành quá trình thiết lập ban đầu và sẽ BRICK máy (máy thành cục gạch)!**
+**Never format a 2DS while on a version <6.0.0 or you will be unable to complete initial setup and will BRICK!**
 {: .notice--danger}
 
-**Không nâng cấp một New 3DS đang chạy 2.1.0 (một bản hệ thống chỉ dành cho 3DS cũ) hoặc là bạn sẽ BRICK máy! Bạn trước tiên PHẢI khôi phục một bản sao lưu NAND hoặc ctrtransfer lên trở lại một bản hệ thống thông thường cho New 3DS!**
+**Never update a New 3DS running 2.1.0 (an Old 3DS firmware) or you will BRICK! You MUST restore a NAND backup or ctrtransfer back to standard New 3DS firmware first!**
 {: .notice--danger}
 
-#### Tổng quan các bước
+#### Overview of steps
 
-Trong phần này, chúng ta sẽ flash phân vùng [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) của máy xuống 2.1.0 để tận dụng một sai sót trong 2.1.0 để giải nén [OTP](otp-info) đặc trưng của máy bạn. File OTP này cần thiết để cài arm9loaderhax, và **không thể** dùng chung với máy khác.
+In this section, we will be flashing your console's [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) partition to 2.1.0 in order to take advantage of an oversight in 2.1.0 for the purpose of extracting the [OTP](otp-info) unique to your console. This OTP file is required to install arm9loaderhax, and **cannot** be shared with other consoles.
 
-Điều này được thực hiện bằng cách [cài đặt một file image của ctrtransfer đã được tạo sẵn](https://www.reddit.com/r/3dshacks/comments/4zhe4a/) có chứa 2.1.0, chép những file cụ thể của máy bạn (như 'movable.sed' và 'SecureInfo_A') vào nó, và sửa cở sở dữ liệu.
+This is accomplished by [installing a premade ctrtransfer image](https://www.reddit.com/r/3dshacks/comments/4zhe4a/) containing 2.1.0, copying your console specific files (such as `moveable.sed` and `SecureInfo_A`) to it, then fixing the title databases.
 
-File OTP là một yêu cầu để sử dụng arm9loaderhax.
+The OTP is a requirement to use arm9loaderhax.
 
-#### Những gì bạn cần
+#### What you need
 
-*Bạn đã boot vào Decrypt9
-*File image ctrtransfer 2.1.0 cho máy và vùng máy của bạn     
-*(nếu máy của bạn không thuộc một trong những vùng sau, hãy chọn 1 cái bất kì)*:
-  +    [New 3DS hoặc Old 3DS hoặc 2DS 2.1.0 - CHÂU ÂU - ctrtransfer](magnet:?xt=urn:btih:89acc9c1b488b8b38251de0ddf07975d6bd354a1&dn=2.1.0-4E%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
-  +    [New 3DS hoặc Old 3DS hoặc 2DS 2.1.0 - NHẬT - ctrtransfer](magnet:?xt=urn:btih:3dbb9c9c85a33c6242f424dcbaebcacdd8a5912b&dn=2.1.0-4J%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
-  +    [New 3DS hoặc Old 3DS hoặc 2DS 2.1.0 - MỸ - ctrtransfer](magnet:?xt=urn:btih:1609ce9ee7b0ed9b6dea0b3e7cca4fc52dad6ff4&dn=2.1.0-4U%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* You will need to have booted into Decrypt9
+* The 2.1.0 ctrtransfer image for your device and region     
+*(if your device is not from one of these regions, just pick one)*:
+  +    [New 3DS or Old 3DS or 2DS 2.1.0 - EUR - ctrtransfer](magnet:?xt=urn:btih:89acc9c1b488b8b38251de0ddf07975d6bd354a1&dn=2.1.0-4E%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    [New 3DS or Old 3DS or 2DS 2.1.0 - JPN - ctrtransfer](magnet:?xt=urn:btih:3dbb9c9c85a33c6242f424dcbaebcacdd8a5912b&dn=2.1.0-4J%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    [New 3DS or Old 3DS or 2DS 2.1.0 - USA - ctrtransfer](magnet:?xt=urn:btih:1609ce9ee7b0ed9b6dea0b3e7cca4fc52dad6ff4&dn=2.1.0-4U%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 
-#### Hướng dẫn
+#### Instructions
 
-##### Mục 1 - Chuẩn bị
+##### Section I - Prep work
 
-Bạn phải ở trong Decrypt9 cho các bước sau.
+You should be in Decrypt9 for these steps.
 
-1. Nhấn (nút Select) ở màn hình chính để tháo thẻ nhớ, sau đó cắm vào máy tính
-2. Chép file 2.1.0 `.bin` và `.bin.sha` từ `.zip` ctrtransfer vào thư mục `/files9/` trong thẻ nhớ của bạn
-3. Cắm lại thẻ nhớ vào 3DS của bạn
-4. Nhấn (nút B) để vào màn hình chính của Decrypt9
+1. Press (Select) on the main menu to eject your SD card, then put it in your computer
+2. Copy the 2.1.0 `.bin` and `.bin.sha` from the ctrtransfer `.zip` to the `/files9/` folder on your SD card
+3. Reinsert your SD card into your 3DS
+4. Press (B) to get to the Decrypt9 main menu
 
-##### Mục 2 - ctrtransfer
+##### Section II - ctrtransfer
 
-**YÊU CẦU phải có một bản sao lưu của NAND của máy bạn. Bạn sẽ được đề xuất tạo một bản sao lưu trong các bước nếu bạn đã không làm thế**
+**Having a backup of _your_ device's NAND is REQUIRED. You will be prompted to create one as part of the steps if you do not already have one.**
 {: .notice--danger}
 
-**Bỏ qua phần này sẽ gây ra sự MẤT MÁT tất cả các game đã được cài đặt và save của game!**
+**Skipping this backup will result in the LOSS of all installed games and saves!**
 {: .notice--danger}
 
-**Nếu bạn không biết bạn có một bản sao lưu NAND hay không, thì hãy nhấn (nút A) để tạo một cái khi được đề xuất cho chắc.**
+**If you do not know whether or not you already have a NAND backup, create one when prompted by pressing (A) just to be sure.**
 {: .notice--danger}
 
-**Nếu bạn không có đủ bộ nhớ để tạo một bản sao lưu, thì bạn có thể sao lưu vào một thẻ nhớ khác hoặc xóa bớt trên thẻ nhớ hiện tại của bạn bằng cách nhấn (nút Select) ở màn hình chính của Decrypt9 để tháo thẻ nhớ và tráo với thẻ khác hoặc để xóa bớt bộ nhớ trong thẻ hiện tại**
+**If you do not have enough space to create the backup, you can either backup to a different SD card or clear space on your current SD card by pressing (Select) on the Decrypt9WIP main menu to eject your SD card and allow it to be swapped with a different SD card or to clear space on your current SD card**
 {: .notice--danger}
 
-1. Vào "SysNAND Options", sau đó vào "CTRNAND Transfer", và sau đó vào "Auto CTRNAND Transfer"
-2. Nhấn (nút A) để chọn file image ctrtransfer 2.1.0 khi được đề xuất, sau đó nhập tổ hợp nút được đưa
-3. Nếu bạn đã không có sẵn một bản sao lưu NAND, thì **nhấn (nút A) sao lưu SysNAND vào `NANDmin.bin`khi được đề xuất**
-  + **Việc có một bản sao lưu NAND của thiết bị của bạn là BẮT BUỘC.**
-  + **Bạn sẽ mất hết game đã cài và save của game khi bỏ qua bước này!**
-4. Để quá trình transfer tự động tiến hành, sẽ mất chút thời gian
-5. Một khi quá trình transfer đã hoàn thành, nhấn (nút B) để quay trở lại
-6. Nhấn (nút Select) để tháo thẻ nhớ của bạn
-7. Xóa file image 2.1.0 ctrtransfer `.bin` và `.bin.sha` từ thư mục `/files9/` trong thẻ nhớ của bạn
-8. Không cắm lại thẻ nhớ, nhấn (nút Start) để khởi động lại
-  + Khi ở 2.1.0, máy sẽ hiển thị màn hình đen khi khởi động nếu thẻ nhớ được cắm trước khi Màn hình menu chính hiện ra
-9. Cắm thẻ nhớ vào 3DS của bạn sau khi màn hình chính đã hiện ra
-  + Mỗi khi máy khởi động lại ở 2.1.0, bạn cần lấy thẻ nhớ ra trước khi khởi động và cắm lại sau khi màn hình chính hiện ra
-  + Điều này sẽ được sửa sau khi bạn khôi phục máy ở trang sau
+1. Go to "SysNAND Options", then "CTRNAND Transfer", then "Auto CTRNAND Transfer"
+2. Select the 2.1.0 ctrtransfer image when prompted by pressing (A), then input the key combo given
+3. If you do not already have a NAND backup, **backup SysNAND to `NANDmin.bin` when prompted by pressing (A)**
+  + **Having a backup of _your_ device's NAND is REQUIRED.**
+  + **Skipping this backup will result in the LOSS of all installed games and saves!**
+4. Allow the transfer process to proceed automatically, this may take some time
+5. Once the transfer is complete, press (B) to go back
+6. Press (Select) to eject your SD card
+7. Delete the 2.1.0 ctrtransfer image `.bin` and `.bin.sha` from the `/files9/` folder on your SD card
+8. Press (Start) to reboot without reinserting your SD card
+  + While on 2.1.0, the device will black screen on boot if your SD card is inserted before the home menu loads
+9. Reinsert your SD card into your 3DS after the home menu loads
+  + Every time the device is rebooted on 2.1.0, you will need to take out your SD card before boot and put it back in after the home menu loads
+  + This will be fixed once you restore your device in the next page
 
 ___
 
-Lần khởi động đầu tiên của 2.1.0 ở một số máy có thể lâu hơn so với khơi động thông thường.
+The initial boot of 2.1.0 can take slightly longer than a standard boot on some devices.
 {: .notice--info}
 
-*(Việc nhiễu màn hình hoặc sai màu là bình thường đối với một số máy trong khi ở 2.1.0, điều này sẽ biến mất một khi bạn khôi phục bản sao lưu)*
+*(Screen distortions or discolorations are normal for some devices while on 2.1.0, they will go away once you restore your backup)*
 {: .notice--info}
 
 {% capture notice %}
-**Để máy New 3DS ở 2.1.0 vào trạng thái ngủ hay gập máy sẽ gây BRICK KHÔNG HỒI PHỤC ĐƯỢC***
-**Điều này chỉ xảy ra khi gập màn hình lại khi thiết bị đang mở; không áp dụng cho việc tắt thiết bị.**
-**Máy chỉ vào trạng thái ngủ khi gập màn hình lại. Không phải do máy chờ lâu hay gì cả.**
-Bạn nên tiếp tục ngay để tránh những sai sót đáng tiếc xảy ra
+**Putting a New 3DS on 2.1.0 in sleep mode is known to cause an UNRECOVERABLE brick!**
+**This only happens when shutting the lid _while the device is on_; this does not apply to turning the device off.**
+**The device only enters sleep mode when the lid is closed. It is not on a timer or anything like that.**
+**You should continue without delay to avoid any possibility of this happening!**
 {% endcapture %}
 
 <div class="notice--danger">{{ notice | markdownify }}</div>
 
-Tiếp tục phần [Cài đặt arm9loaderhax](installing-arm9loaderhax)
+Continue to [Installing arm9loaderhax](installing-arm9loaderhax)
 {: .notice--primary}
