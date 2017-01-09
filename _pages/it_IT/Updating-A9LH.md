@@ -8,9 +8,9 @@ title: "Updating A9LH" permalink: /updating-a9lh.html lang: en_US ref: updating-
 
 L'installazione effettiva dell'arm9loaderhax stesso consiste nei file payload installati nella partizione NFIRM sulla NAND del nostro dispositivo, che è saldata a sua volta alla scheda madre. Questi payloads sono raramente aggiornati e solo veramente quando servono a lanciare `arm9loaderhax.bin` dal SD Car, che è, nel nostro caso, Luma3DS. {: .notice}
 
-If you do not know what version of arm9loaderhax you are running, just install the latest version with these steps. Installing the latest version while already on the latest version will have no effect. {: .notice--info}
+Se non conosci quale versione dell'arm9loaderhax è in esecuzione, allora installa l'ultima versione con questi passaggi. Installare l'ultima versione mentre già sull'ultima non avrà nessun effetto. {: .notice--info}
 
-If you have a PIN set on Luma, you must temporarily turn it off to do these steps. You can re-enable the PIN after the update. {: .notice--info}
+Se si dispone di un PIN impostato su Luma, é necessario temporaneamente disattivarlo e seguire questi passaggi. É possibile riattivare il PIN dopo l'aggiornamento. {: .notice--info}
 
 If you are using a payload that does not init the screen on its own (such as Bootanim9), you will need to rename it to `arm9loaderhax_si.bin` instead of `arm9loaderhax.bin` {: .notice--info}
 
