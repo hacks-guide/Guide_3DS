@@ -17,41 +17,41 @@ ref: dsiware-downgrade-(app-injection-and-second-3ds)
 This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws).
 {: .notice--info}
 
-This guide will assume the CFW 3DS is running arm9loaderhax and was setup with this guide, but will work (with slight modifications such as doing all SysNAND steps on EmuNAND) on systems running an EmuNAND. Note that the terms EmuNAND and RedNAND refer to slightly different implementations of [the same concept](http://3dbrew.org/wiki/NAND_Redirection).
+本指南將假定你第二台改機後的 3DS 是透過本指南的 arm9loaderhax 改下去的，但也可以是在 EmuNAND 底下運行的系統。（有些微的修改像是在 EmuNAND 底下的 SysNAND 步驟） 注意 EmuNAND 與 RedNAND 指的是些微不同運作方式但[同樣道理](http://3dbrew.org/wiki/NAND_Redirection)的用語。
 {: .notice--info}
 
-Your DSiWare's save will be backed up before getting replaced by the hacked save.
+你的 DSiWare 存檔會在修改前被備份。
 {: .notice--info}
 
 {% capture notice-4 %}
-This exploit requires you to [System Transfer](http://en-americas-support.nintendo.com/app/answers/detail/a_id/13996/) from a CFW 3DS to a stock 3DS as part of the steps. System Transfers will work in the following directions *only*:    
-  + New 3DS -> New 3DS    
-  + Old 3DS or 2DS -> Old 3DS or 2DS    
-  + Old 3DS or 2DS -> New 3DS    
+此漏洞過程中將需要你透過[系統轉移](http://en-americas-support.nintendo.com/app/answers/detail/a_id/13996/)將改機 3DS 的系統移至未改的 3DS。 系統轉移**僅**能在下列的情況下運作：    
+  + 新 3DS -> 新 3DS    
+  + 舊 3DS or 2DS -> 舊 3DS or 2DS    
+  + 舊 3DS or 2DS -> 新 3DS    
 {% endcapture %}
 
 <div class="notice--warning">{{ notice-4 | markdownify }}</div>
 
-Both systems MUST be from the same region.
+兩台的系統區域必須一致。
 {: .notice--warning}
 
-**The _target 3DS_ will have all of its data erased!**
+**_未改的 3DS_ 將會遺失所有的資料！**
 {: .notice--danger}
 
-The source 3DS's NNID will be stuck on the target 3DS unless you either system transfer back or call Nintendo! (details in the instructions)
+改機 3DS 的 NNID 會移植到未改的 3DS 上面除非你系統轉移回來或送回任天堂維修！ （詳見說明）
 {: .notice--danger}
 
-System Transfers can only be performed once a week.
+系統轉移一個禮拜只能執行一次。
 {: .notice--danger}
 
-#### What you need
+#### 必備項目
 
-* Two 3DS systems
-  + **The source 3DS**: the 3DS running some kind of custom firmware (arm9loaderhax or some form of EmuNAND/RedNAND) *on the latest version*
-  + **The target 3DS**: the 3DS on stock firmware *(between 11.0.0 and 11.2.0)*
-* Purchase (or already own) and install a compatible DSiWare game from the eShop on **the source 3DS**
-  + A pirated copy of the game will **not** work
-  + For a list of compatible games, see the [DSiWare List](dsiware-list) page
+* 兩個 3DS 系統
+  + **改機 3DS**: 搭載某種*最新版本*的自製韌體的 3DS （arm9loaderhax 或某種 EmuNAND/RedNAND 的韌體）
+  + **未改 3DS**: 搭載原廠韌體的 3DS *(11.0.0 ~ 11.2.0 間)*
+* 透過 eShop 購買 （或已擁有）並安裝相容的 DSiWare 遊戲至 **改機 3DS** 上
+  + **不能用**盜版遊戲
+  + 若想見相容遊戲的清單，請參考 [DSiWare 清單](dsiware-list) 頁面
 * An entrypoint from [Homebrew Launcher (SoundHax)](homebrew-launcher-(soundhax)) or [Homebrew Launcher (No Browser)](homebrew-launcher-(no-browser))
 * The sudokuhax injection `.zip` corresponding to your region
   + [`DSiWare_usa_sudokuhax_injection.zip`](magnet:?xt=urn:btih:7ed7fee15c900ed02b5e2cb3c8e7a0363f4d9354&dn=DSiWare_usa_sudokuhax_injection.zip&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce)
