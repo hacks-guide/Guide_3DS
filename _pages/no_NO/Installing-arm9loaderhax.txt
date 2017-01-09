@@ -81,41 +81,41 @@ During this process, we also setup programs such as the following:
 12. **Kopier `arm9loaderhax.bin` fra Luma3DS `.7z` til roten av SD-kortet, og erstatter eksisterende filer**
 13. Opprett en mappe med navn `luma` på roten av SD-kortet
 14. Opprett en mappe med navn `payloads` i `luma` mappen på SD-kortet
-15. Copy `Hourglass9.bin` from the Hourglass9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `Hourglass9.bin` to `start_Hourglass9.bin`
-16. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` to `up_GodMode9.bin`
-16. Copy `aeskeydb.bin` to the `/files9/` folder on your SD card
-17. Copy `DspDump.3dsx` to the `/3ds/` folder on your SD card
-18. Copy _the contents of_ `fbi-2.4.2-injectable.zip` to the `/files9/` folder on your SD card
+15. Kopier `Hourglass9.bin` fra Hourglass9 `.zip` til `/luma/payloads/` mappen på SD-kortet og endre navnet fra `Hourglass9.bin` til `start_Hourglass9.bin`
+16. Kopier `GodMode9.bin` fra GodMode9 `.zip` til `/luma/payloads/` mappen på SD-kortet og endre navnet fra `GodMode9.bin` til`up_GodMode9.bin`
+16. Kopier `aeskeydb.bin` til `/files9/` mappen på SD-kortet
+17. Kopier `DspDump.3dsx` til `/3ds/` mappen på SD-kortet
+18. Kopier _innholdet av_ `fbi-2.4.2-injectable.zip` til `/files9/` mappen på SD-kortet
 
 ##### Section II - Installing arm9loaderhax
 
-1. Reinsert your SD card into your 3DS
+1. Sett inn SD-kortet i konsollen
 2. Do the steps for installing arm9loaderhax on your device:
-  + You should be on 2.1.0
-  + Go to `http://dukesrg.github.io/2xrsa.html?arm11.bin` on your 3DS
+  + Konsollen skal være på 2.1.0
+  + Gå til `http://dukesrg.github.io/2xrsa.html?arm11.bin` på konsollen
     + If you get the error "This service is not available in your region", use the System Settings to set your device's country to match the NAND region you installed with 2.1.0 ctrtransfer
     + If you get another error, [follow this troubleshooting guide](troubleshooting#ts_browser)
     + If you get a glitched screen, [follow this troubleshooting guide](troubleshooting#ts_safe_a9lh_screen)
-  + Press (Select) to Full Install
+  + Trykk (Select) for Full Install
   + The installer will now install arm9loaderhax on your device (this is very fast)
   + Shut down your console, hold the power button until it turns off if necessary
   + Copy your console specific `OTP.bin` from the `/a9lh/` folder on your SD card to a safe location on your computer and back it up to multiple locations (such as online file storage), then reinsert your SD card into your 3DS
 
-##### Section III - Configuring Luma3DS
+##### Seksjon III - Konfigurering av Luma3DS
 
-1. Hold select on boot to enter the Luma3DS menu
+1. Hold (Select) under oppstart for å åpne Luma3DS menyen
   + Make sure to start holding the button before pressing power
   + If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_a9lh)   
   + If you boot to SafeA9LHInstaller, [follow this troubleshooting guide](troubleshooting#ts_safe_a9lh)
-2. Use the (A) button and the D-Pad to turn on the following:    
+2. Bruk (A)-knappen og piltastene for å aktivere følgende:    
   + **"Autoboot SysNAND"**
   + **"Use SysNAND FIRM if booting with R"**
   + **"Show NAND or user string in System Settings"**
 3. If you are using a **New 3DS**, you should *also* enable the following:
-  + **"New 3DS CPU" to "Clock+L2(x)"**
-    + This will increase the framerate of many games, but may cause instability in others
-    + If some games do not work properly, disable this option and try again
-4. Press Start to save and reboot
+  + **"New 3DS CPU" til "Clock+L2(x)"**
+    + Dette vil øke ytelsen i mange spill, men kan også skape ustabilitet i andre
+    + Hvis noen spill ikke fungerer som de skal, deaktiver dette alternativet å prøv igjen
+4. Trykk (Start) for å lagre og starte på nytt
   + If you get a black screen, just continue to the next section   
   + If you get a "Failed to mount CTRNAND" error, just continue to the next section     
 
@@ -124,10 +124,10 @@ During this process, we also setup programs such as the following:
 If, before following this guide, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand) instead of doing the first four steps in this section.
 {: .notice--info}
 
-1. Open Hourglass9 from arm9loaderhax by holding (Start) on boot
-2. Go to "SysNAND Backup/Restore"
+1. Åpne Hourglass9 fra arm9loaderhax ved å holde (Start) under oppstart
+2. Gå til "SysNAND Backup/Restore"
 3. Go to "SysNAND Restore (keep a9lh)" and restore from `NANDmin.bin`
-4. Press (Start) to reboot
+4. Trykk (Start) for omstart
   + If you get a black screen, [follow 9.2.0 ctrtransfer](9.2.0-ctrtransfer)
 5. If your backup was of a version between 3.0.0 and 4.5.0, your console will not boot until you manually download the required firmware:
   + Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) and rename it to `firmware.bin`
