@@ -1,7 +1,7 @@
 ---
 title: "Updating A9LH"
 permalink: /updating-a9lh.html
-lang: en_US
+lang: de_DE
 ref: updating-a9lh
 ---
 
@@ -47,48 +47,48 @@ Die folgenden Schritte werden außerdem die Payloads und die AES key Datenbanken
 5. Kopiere die "arm9loaderhax.bin" aus dem "SafeA9LHInstaller.zip" in den "/luma/payloads/" Ordner deiner SD-Karte
 6. Benenne die "arm9loaderhax.bin" im "/luma/payloads/" Ordner in "down_safea9lhinstaller.bin" um
 7. Kopiere den "a9lh" Ordner aus der "data_inputv4.zip" in das Stammverzeichnis deiner SD-Karte
-8. Kopieren Sie _den kompletten Inhalt_ der "arm9loaderhax.zip" in den "a9lh" Ordner auf Ihrer SD Karte
-9. Kopieren Sie die "arm9loaderhax.bin" aus der "Luma3DS.zip" in das Stammverzeichnis Ihrer SD Karte (gegebenenfalls vorhandene Dateien überschreiben)
-10. Stecken sie die SD Karte zurück in Ihren Nintendo 3DS
+8. Kopiere _den kompletten Inhalt_ der "arm9loaderhax.zip" in den "a9lh" Ordner auf deiner SD-Karte
+9. Kopiere die "arm9loaderhax.bin" aus der "Luma3DS.zip" in das Stammverzeichnis deiner SD-Karte - vorhandene Dateien gegebenfalls überschreiben
+10. Setze die SD-Karte wieder in deinen 3DS ein
 
-##### Teil 2 - Update des Payloads
+##### Teil 2 - Payload-Update
 
-11. Starten Sie den 3DS während Sie das Steuerkreuz nach unten gedrückt halten
-12. Drücken Sie "Select" um arm9loaderhax zu aktualisieren
-13. Schalten Sie Ihren 3DS nach Abschluss des Vorgangs aus und Stecken Sie die SD Karte zurück in Ihren Computer
-14. Löschen Sie den "a9lh" Ordner aus dem Stammverzeichnis Ihrer SD Karte
-15. Löschen Sie die "down_safea9lhinsstaller.bin" aus dem "/Luma/payloads/" Ordner Ihrer SD Karte
+11. Starte den 3DS, während du das Steuerkreuz nach unten gedrückt hältst
+12. Drücke (Select), um arm9loaderhax zu aktualisieren
+13. Schalte den 3DS nach Abschluss des Vorgangs aus und stecke die SD-Karte zurück in deinen Computer
+14. Lösche den "a9lh" Ordner aus dem Stammverzeichnis deiner SD-Karte
+15. Lösche die "down_safea9lhinstaller.bin" aus dem "/luma/payloads/" Ordner deiner SD-Karte
 
 ##### Teil 3 - Konfiguration von Luma3DS
 
-16. Stecken Sie Ihre SD Karte zurück in Ihren Nintendo 3DS und starten Sie diesen während Sie "Select" gedrückt halten
-17. Benutzen Sie den "A-Knopf" und das Steuerkreuz um folgende Einstellungen zu aktivieren:    
+16. Stecke die SD-Karte wieder zurück in deinen 3DS und starte diesen, während du (Select) gedrückt hältst
+17. Benutze den (A)-Knopf und das Steuerkreuz, um folgende Einstellungen zu aktivieren:    
   + **"Autoboot SysNAND"**
   + **"Use SysNAND FIRM if booting with R"**
+  + **"Show NAND or user string in System Settings"**
+3. Wenn du einen **New 3DS** verwendest, solltest du auch noch die folgenden Einstellungen festlegen:
+  + **"New 3DS CPU" to "Clock+L2(x)"**
+    + Dies wird in vielen Spielen die Bildrate erhöhen, kann aber auch zu Instabilität in manchen Spielen führen
+    + Falls manche Spiele nicht mehr richtig funktionieren sollten, kannst du diese Einstellung auch nachträglich deaktivieren
+4. Drücke Start, um die Einstellungen zu Speichen und deinen 3DS neu zu starten
+
+##### Teil 4 - CTRNAND Luma3DS
+
+18. Öffne "FBI"
+19. Wähle "SD"
+20. Navigiere zu "arm9loaderhax.bin", drücke (A) und wähle "Copy"
+21. Kehre mit (B) ins Hauptmenü von FBI zurück
+22. Wähle "CTR NAND"
+23. Wähle "\<current directory>"
+24. Wähle "Paste", dann drücke (A), um zu bestätigen
+25. Verlasse FBI mit der HOME-Taste
+26. Schalten Sie Ihren 3DS aus und entfernen Sie die SD Karte
+27. Booten Sie das Gerät nun ohne SD Karte während Sie "Select" gedrückt halten
+  + Das Gerät ohne SD Karte zu starten ermöglicht es die CTRNAND basierende Luma Installation zu konfigurieren
+28. Benutzen sie Steuerkreuz und "A-Knopf" um folgende Einstellungen zu aktivieren:    
   + **"Show NAND or user string in System Settings"**
 3. Wenn Sie einen **New 3DS** verwenden, sollten Sie auch noch die folgenden Einstellungen festlegen:
   + **"New 3DS CPU" to "Clock+L2(x)"**
     + Das wird in vielen Spielen die Bildrate erhöhen, kann aber auch zu Instabilität in manchen Spielen führen
     + Falls manche Spiele nicht mehr richtig funktionieren sollten, können Sie diese Einstellung auch nachträglich deaktivieren
-4. Drücken Sie "Start" um die Einstellungen zu Speichen und Ihren 3DS neu zu starten
-
-##### Teil 4 - CTRNAND Luma3DS
-
-18. Öfnnen Sie "FBI"
-19. Wählen Sie "SD"
-20. Navigieren Sie zu "arm9loaderhax.bin", dann drücken Sie den "A-Knopf" und wählen "Copy"
-21. Kehren Sie mit dem "B-Knopf" ins Hauptmenü von FBI zurück
-22. Wählen Sie "CTR NAND"
-23. Wählen Sie "\<current directory>"
-24. Wählen Sie "Paste", dann drücken Sie den "A-Knopf" um zu bestätigen
-25. Verlassen Sie FBI mit dem "Home Button"
-26. Schalten Sie Ihren 3DS aus und entfernen Sie die SD Karte
-27. Boot with the SD card removed while holding (Select)
-  + Booting the device at least once with the SD card removed will allow you to configure the CTRNAND based luma installation
-16. Use the (A) button and the D-Pad to turn on the following:    
-  + **"Show NAND or user string in System Settings"**
-3. If you are using a **New 3DS**, you should *also* enable the following:
-  + **"New 3DS CPU" to "Clock+L2(x)"**
-    + This will increase the framerate of many games, but may cause instability in others
-    + If some games do not work properly, disable this option and try again
-14. Reinsert your SD card, then press Start to save and reboot!
+29. Stecken Sie nun Ihre SD Karte wieder ein und drücken Sie Start um die Einstellungen zu speichern und neu zu starten
