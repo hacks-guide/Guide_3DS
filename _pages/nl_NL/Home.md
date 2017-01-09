@@ -19,13 +19,13 @@ Als je een developer ("PANDA" of "SNAKE") console hebt, check de [devGuide](http
 
 ## Wat is Homebrew?
 
-[**Homebrew**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) verwijst meestal naar software die niet is toegestaan door Nintendo. It allows you to run homebrew games, tools like save editing and backup, and emulators for various older systems.
+[**Homebrew**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) verwijst meestal naar software die niet is toegestaan door Nintendo. Het staat je toe homebrew games te spelen, je saves te bewerken en te back-uppen of emulators te draaien voor verschillende oudere systemen.
 
-In most cases, running homebrew on your console is 100% free using just the Nintendo 3DS Sound app. There are also various other exploits in commercial games and the browser to get homebrew running.
+In de meeste gevallen is homebrew draaien op je console 100% gratis met de Nintendo 3DS Sound app. Er zijn ook verschillende andere exploits in commerciële games en de browser om homebrew op je 3ds draaiend te krijgen.
 
-## What is Custom Firmware?
+## Wat is Custom Firmware?
 
-**Custom Firmware** ("CFW") enables you to use more advanced hacks that userland homebrew can't easily do. For instance, signature patches let you install unsigned titles that appear right on your HOME Menu.
+Met **Custom Firmware** ("CFW") kan je gebruik maken van meer geavanceerde hacks die je met userland homebrew niet gemakkelijk kunt doen. Je kan bijvoorbeeld ongesigneerde titels direct op je home menu weergeven.
 
 CFW can be easily set up on any console that is on 11.2.0 (latest) or lower. Other versions can have their firmware downgraded.
 
