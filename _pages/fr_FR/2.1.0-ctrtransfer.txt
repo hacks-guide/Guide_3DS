@@ -23,15 +23,15 @@ Les jeux que vous avez installé sur votre console peuvent ne pas s'afficher apr
 **<strong>L'exécution du ctrtransfer supprimera tout les tickets installés par l'utilisateur de la console, tant qu'un backup (sauvegarde) ne l'aura pas restauré. En AUCUN CAS vous ne devez omettre de créer une sauvegarde ou vous allez perdre l'accès à tout vos jeux installés !**
 {: .notice--danger}
 
-**Ne jamais formater une 2DS en version inférieure à 6.0.0 ou il vous sera impossible d'effectuer la configuration initiale et se résultera en un brick de votre console!**
+**Ne jamais formater une 2DS en version inférieure à 6.0.0 ou il vous sera impossible d'effectuer la configuration initiale, ce qui résultera en un brick de votre console!**
 {: .notice--danger}
 
-Ne jamais mettre à jour une New 3DS en version 2.1.0 (une version pour Old 3DS) ou vous allez BRICKEZ! Vous DEVEZ restaurez votre sauvegarde de la NAND ou ctrtranfert de retour à une version pour New 3DS en premier
+**Ne faites jamais de mise à jour sur une New 3DS en 2.1.0 (une version prévue pour Old 3DS) sous peine de BRICK! Vous DEVEZ restaurer votre sauvegarde de la NAND ou faire un ctrtranfert pour retourner à une version prévue pour New 3DS en premier!**
 {: .notice--danger}
 
-Vue d'ensemble
+#### Vue d'ensemble
 
-Dans cette section, nous allons flasher la <a href="https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition">CTRNAND</a> de votre console afin d'exploiter une faille en 2.1.0, qui nous permettra d'extraire l'[OTP] unique à votre console. Ce fichier OTP est nécessaire pour installer arm9loaderhax et **ne peut pas** être échangé avec d'autres consoles.
+Dans cette section, nous allons flasher la [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) de votre console en 2.1.0 afin d'exploiter une faille qui nous permettra d'extraire l'[OTP](otp-info) unique à votre console. Ce fichier OTP est nécessaire pour installer arm9loaderhax et **ne peut pas** être échangé avec d'autres consoles.
 
 This is accomplished by [installing a premade ctrtransfer image](https://www.reddit.com/r/3dshacks/comments/4zhe4a/) containing 2.1.0, copying your console specific files (such as `moveable.sed` and `SecureInfo_A`) to it, then fixing the title databases.
 
@@ -96,9 +96,9 @@ Le premier démarrage en 2.1.0 peut prendre un peu plus longtemps qu'un démarra
 
 {% capture notice %}
 **Mettre une New 3DS en 2.1.0 en veille est une cause connue de brick IRRÉCUPÉRABLE !**
-**This only happens when shutting the lid _while the device is on_; this does not apply to turning the device off.**
-**The device only enters sleep mode when the lid is closed. It is not on a timer or anything like that.**
-**You should continue without delay to avoid any possibility of this happening!**
+**Cela ne se produit qu'en fermant la console _pendant qu'elle est allumée_; cela ne concerne pas l'extinction de la console.**
+**La console ne se met en veille que lorsque qu'elle est fermée. Il n'y a pas de minuteur ni rien du genre.**
+**Vous devriez continuer sans attendre pour éviter toute possibilité que cela vous arrive !**
 {% endcapture %}
 
 <div class="notice--danger">{{ notice | markdownify }}</div>
