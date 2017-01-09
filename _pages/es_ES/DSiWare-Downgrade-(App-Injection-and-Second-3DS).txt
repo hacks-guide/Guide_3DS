@@ -5,10 +5,10 @@ lang: es_ES
 ref: dsiware-downgrade-(app-injection-and-second-3ds)
 ---
 
-Si estás entre las versiones 11.0.0 y 11.2.0 puedes seguir esta guía para downgradear tu NATIVE_FIRM usando un juego DSiWare y una segunda 3DS que ya tenga un "Custom Firmware" instalado en ella para volcar y restaurar tu NAND.
+Si estás entre las versiones 11.0.0 y 11.2.0, puedes seguir esta guía para downgradear tu NATIVE_FIRM usando un juego de DSiWare y una segunda 3DS que ya tenga un "Custom Firmware" instalado en ella para volcar y restaurar tu NAND.
 {: .notice}
 
-Si tu versión es inferior a la 11.2.0 en cualquiera de las 2 consolas, entonces debes seguir los pasos referentes al ctr-httpwn (cuando sea necesario) en cada dispositivo por debajo de la versión 11.2.0 para poder hacer la transferencia entre ellos.
+Si tu versión es inferior a 11.2.0 en cualquiera de las 2 consolas, entonces debes seguir los pasos referentes al ctr-httpwn (cuando sea necesario) en cada dispositivo por debajo de la versión 11.2.0 para poder hacer la transferencia entre ellos.
 {: .notice--info}
 
 Esto se aprovecha de una vulnerabilidad que permite a los juegos DSiWare a leer y escribir en cualquier parte de la NAND.
@@ -50,7 +50,7 @@ La transferencia entre sistemas solo puede hacerse una vez cada semana.
   + **La 3ds de origen**: una consola ejecutando algún tipo de CFW (arm9loaderhax o una EmuNAND/RedNAND) *en la ultima versión*
   + **La consola de destino**: la 3DS con la versión de fábrica *(entre la versión 11.0.0 y 11.2.0)*
 * Compra (si no lo tienes ya) e instala un juego de DSIWare compatible desde la eshop en la **3DS de origen**
-  + Una copia pirata del juego **No** funcionará
+  + Una copia pirata del juego **NO** funcionará
   + Para una lista de juegos compatibles. revisa la [Lista DSIWare](dsiware-list)
 * Un punto de entrada como [Homebrew Launcher (SoundHax)](homebrew-launcher-(soundhax)) o [Homebrew Launcher (Sin navegador)](homebrew-launcher-(no-browser))
 * La inyección de sudokuhax correspondiente a tu region
@@ -109,48 +109,48 @@ Luego de completar la guía por completo, puedes usar esta copia de seguridad pa
 Esta copia de seguridad solo puede ser usada en esta NAND. Si formateas tu 3DS o restauras otra NAND (especificamente si "movable.sed" es alguna vez modificado), se volvera inusable.
 {: .notice--info}
 
-1. Go to System Settings, then "Data Management", then "DSiWare" on **the source 3DS**
+1. Ve a "Configuración de la Consola", luego a "Gestión de Datos" y por último "DSiWare" en la **3DS de origen**
 2. Copiar cualquier juego de DSiWare que ya está en la tarjeta SD a la memoria del sistema
 3. Copia el juego DSiWare que quieres usar a la tarjeta SD
-4. Salir de la configuración de la consola
+4. Salir de la Configuración de la Consola
 
 ##### Sección III - Inyectar el juego y su guardado
 
-1. Open GodMode9 from arm9loaderhax by holding (Up) during boot
-2. Navigate to `SDCARD`
-3. Press (Y) on the DSiWare injection `.app` to copy it
-4. Press (B) to go back to the main menu
-5. Navigate to `SYSNAND TWLN` -> `title` -> `00030004` -> `(8 Character ID)`
-  + The 8 Character ID will be the one from the [DSiWare List](dsiware-list) page
-6. Navigate to `content`
-7. Press (A) on the `.app` file in the folder
-8. Select "Inject data @offset"
-9. Press (A) to select the offset `00000000`
-10. Press (A) to unlock SysNAND writing, then input the key combo given
-11. Press (B) to go back to the main menu
-12. Navigate to `SYSNAND TWLN` -> `title` -> `00030004` -> `(8 Character ID)`
-  + The 8 Character ID will be the one from the [DSiWare List](dsiware-list) page
-13. Navigate to `data`
-14. Press (A) on `public.sav`
-15. Select "Mount as FAT image"
-  + If you do not see this option, ensure you are running the latest GodMode9 release
-  + If you still do not see this option, please [report this bug](https://github.com/d0k3/GodMode9/issues)
-16. This will have moved you back to the main menu
-17. Navigate to `SDCARD`
-18. Press (Y) on the file(s) in the `savedata` folder to copy them
-  + If there is a `savedata` folder inside of the `savedata` folder, it is not by mistake. You should copy the second `savedata` folder, not the files inside of that.
-19. Press (B) to go back to the main menu
-20. Navigate to `FAT IMAGE`
-21. Use the (X) button to delete everything inside of `FAT IMAGE`
-22. Press (Y) to paste a copy of **the contents of** the `savedata` folder to `FAT IMAGE`
-23. Select "Copy path(s)"
-24. Press (A) to unlock image writing, then input the key combo given
+1. Inicia GodMode9 desde arm9loaderhax presionando (Arriba) durante el arranque
+2. Ve hacia "SDCARD"
+3. Presiona (Y) en la ".app" de inyección DSiWare para copiarla
+4. Presiona (B) para volver al menu principal
+5. Ve hacia "SYSNAND TWLN" --> "title" --> "00030004" --> "(ID de 8 Caracteres)
+  + El ID de 8 Caracteres sera la de la pagina [DSiWare List](dsiware-list)
+6. Ve hacia "content"
+7. Presiona (A) en el archivo ".app" en la carpeta
+8. Selecciona "Inject data @offset"
+9. Presina (A) para seleccionar el "offset" "00000000"
+10. Presiona (A) para desbloquear la escritura en SysNAND, luego haz la combinación de teclas que se muestra
+11. Presiona (B) para volver al menu principal
+12. Ve hacia "SYSNAND TWLN" --> "title" --> "00030004" --> "(ID de 8 Caracteres)
+  + El ID de 8 Caracteres sera la de la pagina [DSiWare List](dsiware-list)
+13. Ve hacia "data"
+14. Presiona (A) en "public.sav"
+15. Selecciona "Mount as FAT image"
+  Si no ves esta opción, asegúrate de que tienes la última versión de GodMode9
+  + Si aún no ves esta opción, por favor [reporta este bug](https://github.com/d0k3/GodMode9/issues)
+16. Esto te habrá devuelto hacia el menú principal
+17. Ve hacia "SDCARD"
+18. Presina (Y) en el/los archivo(s) en la carpeta "savedata" para copiarlos
+  + Si hay una carpeta "savedata" dentro de la carpeta "savedata", no es un error. Debes copiar la segunda carpeta "savedata", no los archivos dentro.
+19. Presiona (B) para volver al menu principal
+20. Ve hacia "FAT IMAGE"
+21. Presiona el boton (X) para eliminar todo dentro de "FAT IMAGE"
+22. Presiona (Y) para pegar una copia de **los contenidos de** la carpeta "savedata" hacia "FAT IMAGE"
+23. Selecciona "Copy path(s)"
+24. Presiona (A) para desbloquear la escritura de imagen, luego haz la combinación de teclas que se muestra
 25. Presiona (Start) para reiniciar
-26. Launch your DSiWare game on **the source 3DS**
-27. Tap the screen or press any button to start the game and test if the save is functional
-  + If you are using the EUR files (**Legends of Exidia**), after pressing (A) or (Start) at the two title screens, select the first save slot and press continue
-  + If your game has an error about `boot.nds` or a white screen, **then the exploit has been successful**
-  + If your game has an error about corrupted or inaccessible save data, confirm that you copied **the contents of** the `savedata` folder and not the `savedata` folder itself
+26. Ejecuta tu juego de DSiWare en la **3DS de origen**
+27. Presiona la pantalla o cualquier botón para iniciar el juego y comprobar que el guardado es funcional
+  + Si estás usando los archivos EUR (**Legends of Exidia**), luego de presionar (A) o (Start) en la pantalla de dos titulos, seleciona la primer ranura de guardado y presiona continuar
+  + Si tu juego tiene un error sobre "boot.nds" o una pantalla blanca, **entonces el exploit ha sido exitoso**
+  + Si tu juego tiene un error sobre datos de guardado corruptos o inaccesibles, asegurate que hayas copiado **los contenidos de** la carpeta "sabedata" y NO la carpeta "savedata"
   + If your game behaves normally and does not give you an error about `boot.nds` or a white screen, then you should stop and figure out what went wrong
   + If you get a black screen, [follow this troubleshooting guide](troubleshooting#twl_broken)
   + If the game is missing from **the target 3DS** or has an error about corrupted or inaccessible save data, [follow this troubleshooting guide](troubleshooting#ts_dsiware)
@@ -181,12 +181,12 @@ Esta copia de seguridad solo puede ser usada en esta NAND. Si formateas tu 3DS o
 
 1. **Haz una copia de seguridad de cada archivo en las tarjetas SD de las dos 3D en carpetas separadas en tu computadora (especifica en cada carpeta a cual pertenece cada una!)**
 2. Vuelva a colocar cada tarjeta SD en su 3DS correspondiente
-3. If **the target 3DS** has a Nintendo Network ID on it, you must format the device using System Settings:
-  + Go to the last page of "Other Settings" and select "Format System Memory", then follow all instructions
-4. Read the following:
-  + Your CFW 3DS = the source 3DS = "Source System"
-  + Your Stock 3DS = the target 3DS = "Target System"
-  + **Move DSiWare titles if prompted!**
+3. Si **la 3ds de destino** tiene un ID de Nintendo Network, deberás formatear el dispositivo usando las Opciones del Sistema:
+  + Ve a la última página de "Otras Opciones" y selecciona "Formatear", y sigue las instrucciones
+4. Lee lo siguiente:
+  + Tu CFW 3DS = la 3DS original = "Sistema original"
+  + Tu consola de fábrica = la 3ds de destino = "Sistema de destino"
+  + **¡Mueve los juegos de DSiWare si es necesario!**
   + Do **NOT** delete the source system's SD card contents if prompted
   + Make sure neither device's battery dies during the transfer
   + 2DS/Old 3DS (source) to New 3DS (target) only - if asked which method you wish to use to transfer the SD card data:
