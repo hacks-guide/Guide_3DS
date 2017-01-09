@@ -11,23 +11,23 @@ ref: dsiware-downgrade-(save-injection-and-second-3ds)
 Si estás entre las versiones 11.0.0 y 11.2.0, puedes seguir esta guía para bajar la versión de tu NATIVE_FIRM usando DSiWare y una segunda 3DS que ya tenga instalado un Custom Firmware para extraer y restaurar tu NAND.
 {: .notice}
 
-Si tu versión es inferior a 11.2.0 en cualquiera de las 2 consolas, entonces debes seguir los pasos referentes al ctr-httpwn (cuando sea necesario) en cada dispositivo por debajo de la versión 11.2.0 para poder hacer la transferencia entre ellos.
+Si tu versión es inferior a 11.2.0 en cualquiera de las 2 consolas, entonces debes seguir los pasos del ctr-httpwn (cuando sea necesario) en cada dispositivo por debajo de la versión 11.2.0 para poder hacer la transferencia entre ellos.
 {: .notice--info}
 
 Esto se aprovecha de una vulnerabilidad que permite a los juegos DSiWare a leer y escribir en cualquier parte de la NAND.
 {: .notice--info}
 
-Todo esto son implementaciones funcionales del exploit "Particiones FIRM de texto plano conocido" detallado aquí: [aquí](https://www.3dbrew.org/wiki/3DS_System_Flaws) *en inglés*.
+Esto es una implementación funcional del "FIRM partitions known-plaintext" exploit detallado aquí: [aquí](https://www.3dbrew.org/wiki/3DS_System_Flaws) *en inglés*.
 {: .notice--info}
 
-Esta guía asume que la 3DS que posee CFW está usando arm9loaderhax y que se hizo mediante esta misma guía, pero funcionaría (con pequeñas modificaciones como hacer todos los pasos referentes a la SysNAND en la EmuNAND) en consolas ejecutando una EmuNAND. Nota: los términos EmuNAND y RedNAND son diferentes implementaciones del [Mismo concepto] (http://3dbrew.org/wiki/NAND_Redirection).
+Esta guía asume que la 3DS que posee CFW está usando arm9loaderhax y que se hizo mediante esta misma guía, pero funcionaría (con pequeñas modificaciones como hacer todos los pasos referentes a la SysNAND en la EmuNAND) en consolas ejecutando una EmuNAND. Nota: los términos EmuNAND y RedNAND se refiere a implementaciones algo diferentes del [Mismo concepto] (http://3dbrew.org/wiki/NAND_Redirection).
 {: .notice--info}
 
-Se hará una copia de seguridad de la partida guardada del DSiWare antes de instalar la partida hackeada.
+Se hará una copia de seguridad de la partida guardada del DSiWare antes de cambiarla por la partida modificada.
 {: .notice--info}
 
 {% capture notice-4 %}
-Este exploit requiere que hagas una [Transferencia de sistemas](https://www.nintendo.es/Atencion-al-cliente/Nintendo-3DS-y-Nintendo-2DS/Transferencia-entre-consolas-Nintendo-3DS-Incluida-Nintendo-3DS-XL-/Como-realizar-una-transferencia-de-sistema-entre-las-consolas-Nintendo-3DS-y-Nintendo-3DS-XL/Como-realizar-una-transferencia-de-sistema-entre-consolas-Nintendo-3DS-y-Nintendo-3DS-XL-592194.html) desde una 3DS con CFW instalado a una 3DS stock como parte de los pasos a seguir. Las Transferencias de Sistema funcionarán *SÓLO* en los siguientes casos:    
+Este exploit requiere que hagas una [Transferencia de sistemas](https://www.nintendo.es/Atencion-al-cliente/Nintendo-3DS-y-Nintendo-2DS/Transferencia-entre-consolas-Nintendo-3DS-Incluida-Nintendo-3DS-XL-/Como-realizar-una-transferencia-de-sistema-entre-las-consolas-Nintendo-3DS-y-Nintendo-3DS-XL/Como-realizar-una-transferencia-de-sistema-entre-consolas-Nintendo-3DS-y-Nintendo-3DS-XL-592194.html) desde una 3DS con CFW instalado a una 3DS sin modificar como parte de los pasos a seguir. Las Transferencias de Sistema funcionarán *SÓLO* en los siguientes casos:    
   + New 3DS -> New 3DS    
   + Old 3DS or 2DS -> Old 3DS or 2DS    
   + Old 3DS or 2DS -> New 3DS    
@@ -35,7 +35,7 @@ Este exploit requiere que hagas una [Transferencia de sistemas](https://www.nint
 
 <div class="notice--warning">{{ notice-4 | markdownify }}</div>
 
-Ambos sistemas DEBEN ser de la misma región.
+Ambas consolas DEBEN ser de la misma región.
 {: .notice--warning}
 
 **¡Todos los datos de la _3DS objetivo_ serán eliminados!**
@@ -57,13 +57,13 @@ Las transferencias del sistema solo pueden hacerse una vez por semana.
   + **Legends of Exidia**
   + **Guitar Rock Tour**  
   + **The Legend of Zelda: Four Swords (Anniversary Edition)**  
-* An entrypoint from [Homebrew Launcher (SoundHax)](homebrew-launcher-(soundhax)) or [Homebrew Launcher (No Browser)](homebrew-launcher-(no-browser))
+* Un punto de entrada como [Homebrew Launcher (SoundHax)](homebrew-launcher-(soundhax)) o [Homebrew Launcher (Sin navegador)](homebrew-launcher-(no-browser))
 * [`4B51394A.zip`](images/4B51394A.zip)
 * La última versión de [3ds_dsiwarehax_installer](https://github.com/yellows8/3ds_dsiwarehax_installer/releases/latest)
 * La última versión de [3DSident](https://github.com/joel16/3DSident/releases/latest)
-* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest)
-* The latest release of [dgTool](https://github.com/Plailect/dgTool/releases/latest)
-* The NFIRM `.zip` corresponding to the device and version of **the target 3DS**:
+* La última versión de [FBI](https://github.com/Steveice10/FBI/releases/latest)
+* La última versión de [dgTool](https://github.com/Plailect/dgTool/releases/latest)
+* El NFIRM `.zip` correspondiente al dispositivo y la versión de la **3DS de Destino**:
   + [New 3DS 11.0.0](magnet:?xt=urn:btih:2d13a5ea1570f911bd5c6423e0c30e51d548837a&dn=11.0.0%5Fto%5F10.4.0%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
   + [Old 3DS 11.0.0](magnet:?xt=urn:btih:72393bbd99bc285db84a9cabf39d9b3200058d6a&dn=11.0.0%5Fto%5F10.4.0%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
   ~    
@@ -72,7 +72,7 @@ Las transferencias del sistema solo pueden hacerse una vez por semana.
   ~        
   + [New 3DS 11.2.0](magnet:?xt=urn:btih:881388a552a1ce9a963d391bf1a023642270991c&dn=11.2.0%5Fto%5F10.4.0%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
   + [Old 3DS 11.2.0](magnet:?xt=urn:btih:a479e4ee55efbc18c181d426cd77a34815388151&dn=11.2.0%5Fto%5F10.4.0%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)    
-* If **the target 3DS** is below 11.2.0, you will _also_ need the following
+* Si la **consola de destino** está debajo de la versión 11.2.0, también necesitarás lo siguiente
   + The latest release of [ctr-httpwn](https://github.com/yellows8/ctr-httpwn/releases/latest)
 
 #### Instrucciones
@@ -97,8 +97,8 @@ Las transferencias del sistema solo pueden hacerse una vez por semana.
 6. Go to SysNAND Options, then SysNAND Backup/Restore, then backup **(min size)** SysNAND to `NANDmin.bin`
 7. Deja que acabe el proceso de ctrtransfer, esto llevará un tiempo. Pulsa (Select) en el menú principal para expulsar la tarjeta SD de la **3ds de origen**, luego insértala en tu computadora
 8. Copy `NANDmin.bin` and `NANDmin.bin.sha` from the `/files9/` folder on your SD card to a safe location
-  + Make backups in multiple locations
-  + This backup will save you from a brick if anything goes wrong in the future
+  + Haz copias de seguridad en múltiples lugares
+  + Esta copia de seguridad puede salvarte de un brick si algo sale mal en el futuro
   + **Your backup should match one of the sizes on [this](nand-size) page; if it does not, you should delete it and make a new one!**
 9. Put **the target 3DS**'s SD card into your computer
 10. **Haz una copia de seguridad de cada archivo en las tarjetas SD de las dos 3DS en carpetas separadas en tu computadora (especifica en cada carpeta a cual pertenece cada una!)!**
@@ -183,29 +183,29 @@ Esta copia de seguridad sólo puede ser utilizada en esta NAND. Si formateas tu 
   + Tu 3DS de serie = la 3DS destino = "Sistema Destino"
   + **¡Mueve los títulos DSiWare si se solicita!**
   + **NO** borres el contenido de la SD del sistema origen si se solicita
-  + Make sure neither device's battery dies during the transfer
-  + 2DS/Old 3DS (source) to New 3DS (target) only - if asked which method you wish to use to transfer the SD card data:
-    + **Do NOT** choose the "Low-Capacity microSD Card Transfer" or minimal option (option 2), it will only transfer tickets and likely will not transfer the DSiWare save.
-    + Fast Method: If you have the ability to move the data from the SD card (source) to the microSD card (target), when prompted use the "PC-Based Transfer" option (option 3).
-    + Slowest Method: If you don't have the ability to move the data on a PC use the **full** "Wireless Transfer" option (option 1).
-5. Go to [this link](http://en-americas-support.nintendo.com/app/answers/detail/a_id/227/) and follow Nintendo's official instructions for System Transferring from one system to another while keeping in mind what you just read
+  + Asegúrate que no se agote la batería de ninguno de los dispositivos durante la transferencia
+  + Sólo de 2DS/Old 3DS (origen) a New 3DS (destino) - si se pregunta qué método deseas usar para transferir los datos de la tarjeta SD:
+    + **NO** elijas la opción "Transferencia de baja capacidad de tarjeta microSD" u opción mínima (opción 2), esto solo transferirá los tickets y seguramente no transfiera los datos de guardado de DSiWare.
+    + Método rápido: Si puedes mover los datos de la tarjeta SD (origen) hacia la microSD (destino), cuando se solicite, usa la opción "Transferencia con PC" (opción 3).
+    + Método Lento: Si no puedes hacerlo con una computadora, usa la opción "Transferencia Inalámbrica" **completa** (opción 1).
+5. Ve a [este enlace](http://en-americas-support.nintendo.com/app/answers/detail/a_id/227/) y sigue las instrucciones oficiales de Nintendo para la Transferencia de Sistema de un sistema a otro, teniendo siempre en cuenta lo que acabas de leer
 
-##### Section VI - Restoring the source 3DS
+##### Sección VI - Restaurando la 3DS de Origen
 
-1. On **the source 3DS**, complete initial setup
-2. Do one of the following *(or neither if you don't mind __the source 3DS__'s NNID being nonfunctional)*
-    + Do the rest of the sections and then the full guide on **the target 3DS**, then wait one week, then System Transfer from **the target 3DS** back to **the source 3DS** *(remember you cannot transfer back from a New 3DS to an Old 3DS)*
-    + Call Nintendo and tell them you no longer have access to the device that your NNID is linked to (which is **the target 3DS** in this case), and would like it linked to a different device (which is **the source 3DS** in this case)
-3. Reboot **the source 3DS** while holding Start to launch Hourglass9
-4. Go to SysNAND Backup/Restore and restore SysNAND from `NANDmin.bin`
+1. En la **3DS de origen**, completa la configuración inicial
+2. Haz uno de los siguientes *(o si te es indiferente que el NNID de __la 3DS de origen__ sea inutilizable)*
+    + Haz el resto de las secciones y luego la guía completa en la **3DS de destino**, luego espera una semana, haz la Transferencia de Sistema de la **3DS de destino** a la **3DS de origen** *(recuerda que no puedes hacer una transferencia de una New 3DS a una Old 3DS)*
+    + Llama a Nintendo y diles que ya no tienes acceso a la consola a la que tu NNID está vinculada (en este caso la **3DS de destino**), y quisieras que la vinculen a otra consola (la **3DS de origen** en este caso)
+3. Reinicia la **3DS de origen** mientras mantienes presionado (Start) para abrir Hourglass9
+4. Ve a "SysNAND Backup/Restore" y luego "Restore SysNAND (keep a9lh)" de`NANDmin.bin`
 
-##### Section VII - Backing up the target 3DS's NFIRM
+##### Sección VII - Copia de seguridad de la NFIRM de la 3DS de destino
 
-1. Copy the dgTool `boot.nds` to the root of **the target 3DS**'s SD card
-2. Create a folder named `dgTool` on the root of **the target 3DS**'s SD card if it does not already exist
-3. Copy the contents of the NFIRM `.zip` to the `dgTool` folder on the root of **the target 3DS**'s SD card
-4. Launch your DSiWare game on **the target 3DS**
-5. Launch dgTool using your DSiWare game
+1. Copia el `boot.nds` de dgTool a la raíz de la tarjeta SD de la **3DS de destino**
+2. Crea una carpeta llamada `dgTool` en la raíz de la tarjeta SD de la **3DS de destino** si aún no existe
+3. Copia los contenidos del `.zip` de NFIRM a la carpeta `dgTool` en la raíz de la tarjeta SD de la **3DS de destino**
+4. Inicia tu juego DSiWare en la **3DS de Destino**
+5. Ejecuta dgTool utilizando tu juego DSiWare
   + **Fieldrunners**: Toca el boton 'Scores' en el menú principal
   + **Legends of Exidia**: Despues de presionar (A) o (Start) en las dos pantallas de inicio, selecciona el primer archivo guardado y selecciona Continue
   + **Guitar Rock Tour**: Desplazate hacia abajo y selecciona High-Scores -> Drums -> Easy
@@ -217,15 +217,15 @@ Esta copia de seguridad sólo puede ser utilizada en esta NAND. Si formateas tu 
 8. Cierra dgTool
   + Puede que tengas que forzar el apagado manteniendo pulsado el botón de encendido
 9. Pon tu tarjeta SD en tu ordenador, luego copia `F0F1_N3DS.bin` o `F0F1_O3DS.bin` (dependiendo de tu dispositivo) a una ubicación segura
-  + Make backups in multiple locations
-  + This backup will save you from a brick if anything goes wrong in the future
+  + Haz copias de seguridad en múltiples lugares
+  + Esta copia de seguridad puede salvarte de un brick si algo sale mal en el futuro
 
 ##### Sección VIII - Flashear el NFIRM de la 3DS de destino
 
-**Never downgrade with dgTool on a device that already has arm9loaderhax installed or you will BRICK!**
+**¡Nunca realices un downgrade con dgTool en una consola que ya tenga arm9loaderhax instalado o tu consola QUEDARÁ INSERVIBLE (BRICK)!**
 
-1. Launch your DSiWare game on **the target 3DS**
-2. Launch dgTool using your DSiWare game
+1. Inicia tu juego DSiWare en la **3DS de Destino**
+2. Ejecuta dgTool utilizando tu juego DSiWare
   + **Fieldrunners**: Toca el boton 'Scores' en el menú principal
   + **Legends of Exidia**: Despues de presionar (A) o (Start) en las dos pantallas de inicio, selecciona el primer archivo guardado y selecciona Continue
   + **Guitar Rock Tour**: Desplazate hacia abajo y selecciona High-Scores -> Drums -> Easy
@@ -233,7 +233,7 @@ Esta copia de seguridad sólo puede ser utilizada en esta NAND. Si formateas tu 
 3. Selecciona "Downgrade FIRM to 10.4" y confirma para flashear la NFIRM bin de 10.4.0 a la **3DS de destino**
 4. Cierra dgTool
   + Puede que tengas que forzar el apagado manteniendo pulsado el botón de encendido
-5. Reboot
+5. Reinicia
 
 ##### Sección IX - Verificación del exploit
 
