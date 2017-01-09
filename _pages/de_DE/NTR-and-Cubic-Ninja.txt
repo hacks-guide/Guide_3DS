@@ -26,7 +26,7 @@ ref: ntr-and-cubic-ninja
 
 ##### Abschnitt I - Vorbereitung
 
-1. Install WAMP to the default directory
+1. Installiere WAMP in das Standardverzeichnis
 2. Copy the contents of `3ds-private-update-server.zip` to `C:\wamp\www\` (overwrite existing files)
 3. Copy `update.php` to `C:\wamp\www\` (overwrite existing files)
 4. Copy the `updates` folder from the 9.2.0 downgrade `.zip` to `C:\wamp\www\`
@@ -45,15 +45,15 @@ ref: ntr-and-cubic-ninja
 
 ##### Abschnitt II - Updaten
 
-1. Boot your 3DS into recovery mode by holding L+R+A+UP while powering on
+1. Boote deinen 3DS in den Recovery Modus, indem du L+R+A+UP drückst während du ihn einschaltest
 2. Lehne das Update ab und reboote
-3. Open Cubic Ninja (if it already has NinjHax installed, hold L+R+X+Y to reset it)
-4. Select "Create", then "QR Code", then "Scan QR Code"
-5. Scan the QR code in the NTR CFW `.zip` for your region
-6. On the home menu, press (Y) and (X) at the same time to open NTR's menu
+3. Öffne Cubic Ninja (wenn es schon NinjaHax installiert hat, drücke L+R+X+Y, um es zurückzusetzen)
+4. Wähle "Create", dann "QR Code", dann "Scan QR Code"
+5. Scanne den QR Code in der NTR CFW ".zip" für deine Region
+6. Drücke (Y) und (X) gleichzeitig im Home Menü, um das NTR Menü zu öffnen
 7. Aktiviere den Debugger und schließe das Menü
-8. Use your router's web page to get your 3DS's IP address (google it if you don't know how, all routers are different)
-9. Run NTR Debugger on your computer
+8. Nutze die Website deines Routers, um die IP-Adresse deines 3DS herauszufinden (google, wenn du nicht weißt wie das geht; alle Router sind verschieden)
+9. Führe den NTR Debugger auf deinem Computer aus
 10. Enter the following commands (replace 192.168.1.100 with your 3DS's IP address and 192.168.1.200 with your computer's IP address)    
     + `connect("192.168.1.100", 8000)`
     + `write(0x15E424, tuple(map(ord, "http://192.168.1.200/update.php\0")), pid=0x25)`
