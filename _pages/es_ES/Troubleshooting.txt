@@ -73,7 +73,7 @@ Esto ocurre porque la implementación del downgrade de Gateway es muy mala, haci
 
 1. Copia `GodMode9.bin` del archivo GodMode9 `.zip` a la carpeta `/luma/payloads/` en la tarjeta SD y renombra el archivo `GodMode9.bin` en `/luma/payloads/` a `up_GodMode9.bin`
 2. Reinserta tu tarjeta SD en la 3DS
-3. Abre GodMode9 desde arm9loaderhax manteniendo (Arriba) mientras enciendes la consola     
+3. Abre GodMode9 desde arm9loaderhax manteniendo presionado (Arriba) mientras enciendes la consola     
 4. Ve a `SYSNAND CTRNAND` -> `title` -> `00040010`
 5. Ve a la carpeta de tu dispositivo y región:
   + **Old 3DS EUR**: `00022300` -> `content`
@@ -83,24 +83,24 @@ Esto ocurre porque la implementación del downgrade de Gateway es muy mala, haci
   + **New 3DS JPN**: `20020300` -> `content`
   + **New 3DS USA**: `20021300` -> `content`
 6. Ten en cuenta que hay dos conjuntos de archivos app y tmd: Uno tiene la extensión en mayúsculas (`.TMD` y `.APP`) y otro en minúsculas (`.tmd` y `.app`)
-7. Mientras pulsas el botón (R), pulsa (Y) para crear una nueva carpeta
-8. Pulsa (A) para confirmar el nombre `newdir` (No importa como se llame)
+7. Mientras mantienes presionado el botón (R), presiona (Y) para crear una nueva carpeta
+8. Presiona (A) para confirmar el nombre `newdir` (No importa cómo se llame)
 9. Pulsa (A) para desbloquear la escritura de sysNAND y después haz la combinación de teclas que se te muestra
-10. Pulsa el botón (L) para cada una de las extensiones (`.TMD` y `.APP`) que estén en mayúsculas para marcarlas
-11. Pulsa (Y) para copiar los arhivos
+10. Presiona el botón (L) para cada una de las extensiones (`.TMD` y `.APP`) que estén en mayúsculas para marcarlas
+11. Presiona (Y) para copiar los arhivos
 12. Ve a `newdir`
-13. Pulsa (Y) para pegar los archivos
+13. Presiona (Y) para pegar los archivos
 14. Selecciona "Move path(s)"
 15. Las extensiones en mayúsculas deberían haberse movido a la carpeta `newdir`
-16. Pulsa (Start) para reinciar
+16. Presiona (Start) para reinciar
 17. Vuelve a [Instalando arm9loaderhax](installing-arm9loaderhax) y vuelve a intentar la inyección de FBI
 18. Si esto no funciona, devuelve los archivos con extensión en mayúsculas a la carpeta `content` y mueve los archivos con extensión en minúsculas a la carpeta `newdir`. Finalmente vuelve a [Instalando arm9loaderhax](installing-arm9loaderhax) y vuelve a intentar la inyección FBI
 
 ## <a name="ts_browser" />Un exploit basado en el navegador no funciona
-Los exploits basados en navegador como browserhax o 2xrsa, son amenudo inestables y fallan con frecuencia. Puedes intentar lo siguiente si fallan muy a menudo
+Los exploits basados en navegador (como browserhax o 2xrsa) son a menudo inestables y fallan con frecuencia. Puedes intentar lo siguiente si fallan muy seguido
 
 1. Abre el navegador y luego abre los ajustes del navegador
-2. Desplázate hasta el fondo y pulsa en "Borrar datos" (También puede llamarse de otra forma similar)
+2. Desplázate hasta el fondo y presiona "Borrar datos" (También puede llamarse de otra forma similar)
 3. Prueba el exploit otra vez
 
 ## <a name="ts_safe_a9lh" />La consola carga directamente SafeA9LHInstaller
@@ -108,95 +108,95 @@ Has copiado el archivo `arm9loaderhax.bin` equivocado en tu tarjeta SD (solo deb
 
 1. Usa el `arm9loaderhax.bin` correcto
 2. Copia el archivo `arm9loaderhax.bin` del Luma3DS `.zip` a la raíz de tu tarjeta SD
-3. Reinicia manteniendo (select) y continua
+3. Reinicia manteniendo presionado (select) y continúa
 
 ## <a name="ts_safe_a9lh_screen" />SafeA9LHInstaller muestra una imagen deforme
 Esto ocurre a veces y la razón es desconocida. Los botones aún funcionan pero la pantalla tendrá un aspecto extraño
 
 1. Sigue las instrucciones como siempre
-2. Pulsa (Select) y se instalará arm9loaderhax
+2. Presiona (Select) y se instalará arm9loaderhax
 3. La consola se reiniciará
-  + Si la consola no se reinicia, espera 10 segundos y apaga la 3DS manteniendo pulsado el botón (Power)
+  + Si la consola no se reinicia, espera 10 segundos y apaga la 3DS manteniendo presionado el botón (Power)
 
 ## <a name="ts_steelhax" />Después de hacer una transferencia de sistema usando steelhax, la _consola 3DS destino_ se bloquea en una pantalla en negro
 
 Esto ocurre porque has selecciona la versión incorrecta del instalador steelhax.
 
-1. Descarga el [payload otherapp](https://smealum.github.io/3ds/#otherapp) correspondiente a tu versión de **3DS destino**
+1. Descarga el [payload otherapp](https://smealum.github.io/3ds/#otherapp) correspondiente a tu versión de **3DS de destino**
     + Ignora el downgrade de NFIRM
     + Usa la versión mostrada en ajustes
 2. Renombra el payload other app a `steelhax_payload.bin`
-3. Copia el `steelhax_payload.bin` a la raíz de la tarjeta SD de la **3DS destino**
+3. Copia el `steelhax_payload.bin` a la raíz de la tarjeta SD de la **3DS de destino**
     + Sobrescribe cualquier archivo que te indique
 4. Mantén (B) mientas cargas **Steel Diver: Sub Wars**
 
-## <a name="ts_dsiware" />Después de hacer el Downgrade de DSiWate, mi consola hackeada con DSiWare no funciona
+## <a name="ts_dsiware" />Después de hacer el Downgrade de DSiWare, mi consola hackeada con DSiWare no funciona
 
-1. Reinicia la **3DS fuente** mientras mantienes (Start) para abrir Hourglass9
+1. Reinicia la **3DS de origen** mientras mantienes presionado (Start) para abrir Hourglass9
 2. Ve a SysNAND Backup/Restore y restaura la SysNAND desde `NANDmin.bin` (el que se hizo antes de hacer la transferencia del sistema)
-3. Si no ves el juego en la **3DS destino**, pon el NNID con el que compraste el juego en la **3DS destino** y vuelve a descargarlo
-  + Quizás tengas que eliminar el juego desde "Gestión de datos" en Configuración de la consola primero
-  + Si la **3DS destino** no está en la última versión, quizá tengas que ejecutar ctr-httpwn para acceder a la eShop
-4. En la **3DS destino** haz los pasos para injectar el save (y la `.app` si estás usando la página de la `.app`)
-5. En la **3DS fuente**, ve a Configuración de la consola, "Gestión de datos", "DSiWare" y copia el juego a la tarjeta SD
-6. Pon la tarjeta SD de la consola **3DS fuente** en la **3DS destino** o renombra la carpeta `Nintendo 3DS` en la tarjeta SDe de la **3DS destino** y copia la carpeta `Nintendo 3DS` de la **3DS fuente** a la tarjeta SD de la **3DS destino**
-7. En la **3DS fuente**, ve a Configuración de la consola, "Gestión de datos", "DSiWare" y copia el juego al sistema
+3. Si no ves el juego en la **3DS de destino**, pon el NNID con el que compraste el juego en la **3DS de destino** y vuelve a descargarlo
+  + Quizá tengas que eliminar el juego desde "Gestión de datos" en Configuración de la consola primero
+  + Si la **3DS de destino** no está en la última versión, quizá tengas que ejecutar ctr-httpwn para acceder a la eShop
+4. En la **3DS destino** haz los pasos para inyectar el save (y la `.app` si estás usando la página de la `.app`)
+5. En la **3DS de origen**, ve a Configuración de la consola, "Gestión de datos", "DSiWare" y copia el juego a la tarjeta SD
+6. Pon la tarjeta SD de la consola **3DS de origen** en la **3DS de destino** o renombra la carpeta `Nintendo 3DS` en la tarjeta SDe de la **3DS de destino** y copia la carpeta `Nintendo 3DS` de la **3DS de origen** a la tarjeta SD de la **3DS de destino**
+7. En la **3DS de origen**, ve a Configuración de la consola, "Gestión de datos", "DSiWare" y copia el juego al sistema
 8. Regresa las tarjetas SD a la normalidad y continúa con el DSiWare Downgrade
 
 ## <a name="ts_d9_backup" /> Decrypt9 o Hourglass9 no puede restaurar o encontrar mi copia de seguridad de la NAND
 
 1. Asegúrate de que no tienes ninguna carpeta llamada "Decrypt9" en **la raíz** de tu tarjeta SD
-3. Prueba a buscar errores en tu tarjeta SD card utilizando [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), o [F3X (Mac)](f3x-(mac))
+3. Prueba a buscar errores en tu tarjeta SD utilizando [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), o [F3X (Mac)](f3x-(mac))
 4. Intenta respaldando los archivos de tu tarjeta SD, formateándola, y luego copiando los archivos de regreso
 5. Intenta con una tarjeta SD diferente
 
 ## <a name="ts_sys_down" /> Pantalla negra en el arranque de SysNAND
 
-1. Intente el arranque sin la tarjeta SD, y reinsertarla después del arranque.
-    1. Apaga tu 3DS manteniendo pulsado el botón de encendido.
+1. Intenta el arranque sin la tarjeta SD, y reinsértala después del arranque.
+    1. Apaga tu 3DS manteniendo presionado el botón de encendido.
     2. Extrae la tarjeta SD.
     3. Enciende la 3DS.
     4. Cuando aparezca el Menú HOME, reinserta la tarjeta SD.
     5. Si esto funcionó, debes limpiar la extdata del Menú Inicio desplazándote a la siguiente carpeta en la tarjeta SD: ' / Nintendo 3DS /(ID de 32 Caracteres) /(ID de 32 Caracteres)/extdata/00000000 /'
-        + Región EUR: Eliminar '00000098'
-        + Región JPN: Eliminar '00000082'
-        + Región USA: Borrar '0000008f'
-        + Región KOR: Borrar '000000A9'
-2. Trate de arrancar sin cartuchos insertados (incluyendo flashcarts)
+        + Región EUR: Elimina `00000098`
+        + Región JPN: Elimina `00000082`
+        + Región USA: Elimina `0000008f`
+        + Región KOR: Elimina `000000A9`
+2. Trata de arrancar sin cartuchos insertados (incluyendo flashcards)
 3. Si tienes una modificación de Hardware (Hardmod) y un respaldo de la NAND, flashea el respaldo de vuelta a la SysNAND.
 4. Intenta iniciar en modo de recuperación y actualizando tu sistema.    
     *Esto probablemente no funcione en una Old 3DS downgradeada a 2.1.0*    
     **Esto INUTILIZARÁ una New 3DS downgradeada a 2.1.0**
-    1. Apaga tu 3DS manteniendo pulsado el botón de encendido.
-    2. Mantén pulsado L+R+A+Arriba.
+    1. Apaga tu 3DS manteniendo presionado el botón de encendido.
+    2. Mantén presionado L+R+A+Arriba.
     3. Enciende la 3DS.
     4. Si ingresas al modo seguro, actualiza tu 3DS *sólo si tienes un punto de entrada para la última versión de Firmware y es posible downgradear desde ella* e intenta hacer el downgrade nuevamente.
 5. Tu 3DS podría estar brickeada. Puedes pedir ayuda en [#3dshacks en Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) o [3DS Hacking en Discord](https://discord.gg/MWxPgEp).
 
 ## <a name="ts_sys_a9lh" />Pantalla en negro en el arranque de SysNAND tras instalar arm9loaderhax
 
-1. Ensure you have a working payload.
-    1. Check for the existence of `arm9loaderhax.bin` in the root of your SD card.
-2. Try resetting Luma's config and fix options
+1. Asegúrate de tener un payload funcional.
+    1. Comprueba la existencia de `arm9loaderhax.bin` en la raíz de tu tarjeta SD.
+2. Intenta reiniciar la configuración de Luma y arregla sus opciones
     1. Elimina `/luma/config.bin` de tu tarjeta SD
     2. Establece tus opciones cuando arranque
 3. Prueba arrancando Hourglass9
     1. En Luma3DS, mantén presionado (Start) en el arranque
 4. Intenta borrando el extdata del Menú HOME
     1. Limpia el extdata del Menú HOME navegando a la siguiente carpeta en tu tarjeta SD: `/Nintendo 3DS/(ID de 32 caracteres)/(ID de 32 caracteres)/extdata/00000000/`
-        + Región EUR: Eliminar '00000098'
-        + Región JPN: Eliminar '00000082'
-        + Región USA: Borrar '0000008f'
-        + Región KOR: Borrar '000000A9'
-5. Trate de arrancar sin cartuchos insertados (incluyendo flashcarts)
+        + Región EUR: Elimina `00000098`
+        + Región JPN: Elimina `00000082`
+        + Región USA: Elimina `0000008f`
+        + Región KOR: Elimina `000000A9`
+5. Trata de arrancar sin cartuchos insertados (incluyendo flashcards)
 6. Si previamente hiciste un downgrade con Gateway, asegúrate que la versión de Luma3DS que estés utilizando sea la mas reciente (v6.2.3 o mayor)
 7. Si tu NAND es de una versión entre 3.0.0 y 4.5.0, realiza lo siguiente:
-    + Asegurarse de que usted está usando la versión más reciente de Luma3DS (v6.6 o superior, por lo menos)
+    + Asegurarse de que estás usando la versión más reciente de Luma3DS (v6.6 o superior, por lo menos)
     + Descarga [este archivo](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) y cambia el nombre a `firmware.bin`
     + Descarga [este archivo](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
     + Copia `firmware.bin` y `cetk` en la carpeta `/luma/` de tu tarjeta SD
     + Elimina ambos archivos después de actualizar tu 3DS
-8. Prueba seguir [9.2.0 ctrtransfer](9.2.0-ctrtransfer)
+8. Prueba siguiendo [9.2.0 ctrtransfer](9.2.0-ctrtransfer)
 9. Puedes pedir ayuda en [#3dshacks en Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) o [3DS Hacking en Discord](https://discord.gg/MWxPgEp).
 
 ## <a name="ts_sys_blue" />Pantalla azul al encender (error de bootrom)
