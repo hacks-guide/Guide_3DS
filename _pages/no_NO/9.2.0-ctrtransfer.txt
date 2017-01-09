@@ -34,66 +34,66 @@ Fordi målet med 9.2.0 ctrtransfer er å feilsøke problemer forårsaket av eksi
 
 1. Kopier 'GodMode9.bin' fra GodMode9 "zip" til "/ luma/payload/" mappen på SD-kortet ditt og endre navnet 'GodMode9.bin' i ' / luma/payloads' til 'up_GodMode9.bin'
 4. Kopier 9.2.0 ctrtransferbildet "bin" og ". bin.sha" fra ctrtransfer "zip" til mappen '/files9/' på SD-kortet
-5. Copy `Decrypt9WIP.bin` to the `/luma/payloads/` folder on your SD card and rename `Decrypt9WIP.bin` to `x_Decrypt9WIP.bin`
-6. Reinsert your SD card into your 3DS
+5. Kopier 'Decrypt9WIP.bin' til '/luma/payloads/" mappen på SD-kortet og ombenenn 'Decrypt9WIP.bin' til 'x_Decrypt9WIP.bin'
+6. Sett inn SD-kortet i konsollen
 
-##### Section II - Backup tickets and config save
+##### Seksjon II - Sikkerhetskopi av tickets og konfigurashonssaver
 
-5. Open Decrypt9 from arm9loaderhax by holding (X) during boot
-6. Go to "Ticket/Titlekey Options", then select "Ticket Dump (SysNAND)"
-7. Press (Select) to eject your SD card, then put it in your computer
-8. Delete all `.tik` files in the `/files9/` folder that **do not** start with "00-"
-  + If none start with "00-", then just delete all of them
-10. Reinsert your SD card into your 3DS, then press (B) to go back to the Main Menu
-11. Go to "SysNAND Options", then "System Save Dump", then select "Dump configsave.bin"
+5. Åpne Decrypt9 fra arm9loaderhax ved å holde (X) under oppstart
+6. Gå til "Ticket/Titlekey Options", og velg "Ticket Dump (SysNAND)"
+7. Trykk (Select) for å løse ut SD-kortet, og deretter inn i datamaskinen
+8. Slett alle ".tik" filer i mappen "/files9/" som **ikke** starter med "00-"
+  + Hvis ingen starter med "00-", så slett dem alle
+10. Sett inn SD-kortet inn i 3DSen, og trykk (B) for å gå tilbake til hovedmenyen
+11. Gå til "SysNAND Options", deretter "System Save Dump", og velg "Dump configsave.bin"
 
 ### Seksjon III - ctroverførsel
 
-8. Go to "SysNAND Options", then "CTRNAND Transfer", then "Auto CTRNAND Transfer"
-9. Select the 9.2.0 ctrtransfer image when prompted by pressing (A), then input the key combo given
-10. If you do not already have a NAND backup, **Backup SysNAND to `NANDmin.bin` when prompted by pressing (A)**
-11. Allow the transfer process to proceed automatically, this may take some time
-12. Once the transfer is complete, press Select to eject your SD card
-13. Put your SD card in your computer, then copy `NANDmin.bin` and `NANDmin.bin.sha` from the `/files9/` folder on your SD card to a safe location
-  + Make backups in multiple locations
-  + This backup will save you from a brick if anything goes wrong in the future
-  + **Your backup should match one of the sizes on [this](nand-size) page; if it does not, you should delete it and make a new one!**
-14. Delete the 9.2.0 ctrtransfer image `.bin` and `.bin.sha` from the `/files9/` folder on your SD card
-15. Reinsert your SD card into your 3DS
-16. Press (Start) to reboot
-17. Update your 3DS by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
-  + Updates while using A9LH + Luma (what you have) are safe, stop asking about it
-  + If this gives you an error, set your DNS settings to "auto"
+8. Gå til "SysNAND Options", deretter "CTRNAND Transfer", og deretter "Auto CTRNAND overføring"
+9. Velg 9.2.0 ctroverførselsbilde når bedt, ved å trykke (A), og deretter den gitte tastekombinasjonen
+10. Hvis du ikke allerede har en NAND sikkerhetskopi, ** lag SysNAND til 'NANDmin.bin' når du blir spurt ved å trykke (A)**
+11. La overføringsprosessen å fortsette automatisk, dette kan ta litt tid
+12. Når overføringen er fullført, trykk på Velg for å kaste ut SD-kortet
+13. Putt SD-kortet inn i datamaskinen, kopier deretter `NANDmin.bin` og `NANDmin.bin.sha` fra `/files9/` mappen på SD-kortet til en sikker plass
+  + Lagre sikkerhetskopein flere plasser
+  + Denne sikkerhetskopien vil spare deg fra en brick hvis noe går galt i fremtiden
+  + **Sikkerhetskopien din skal samsvare med en av størrelse på [denne](nand-size) siden; hvis ikke, bør du slette den og lage en ny!**
+14. Slett 9.2.0 ctroverførselsbilde "bin" og ". bin.sha" fra mappen '/ files9 /' på SD-kortet
+15. Sett inn SD-kortet i konsollen
+16. Trykk (Start) for omstart
+17. Oppdater din 3DS ved å gå til systeminnstillinger, deretter "andre innstillinger", så helt til høyre og start "System Update"
+  + Oppdateringer mens du bruker A9LH + Luma (hva du har) er trygt, ikke spør om det mer
+  + Hvis dette gir deg en feil, sett DNS-innstillingene til "auto"
 
-##### Section IV - Restore config save
+### Del IV - Gjenopprett konfigurasjonssaver
 
-1. Reboot holding (X) during boot to launch arm9loaderhax Decrypt9
-2. Go to "SysNAND Options", then "System Save Inject", then select "Inject configsave.bin"
-3. Press (B) to get back to the main menu
+1. Start på nytt mens du holder (X) for å starte arm9loaderhax Decrypt9
+2. Gå til "SysNAND Options", deretter "System Save inject", velg deretter "Inject configsave.bin"
+3. Trykk (B) å komme tilbake til hovedmenyen
 
-##### Section V - Injecting FBI
+##### Seksjon V - Injeksjon av FBI
 
-2. Go to "SysNAND Options", then "Miscellaneous", then select the "Health&Safety Dump" option to dump Health & Safety to `hs.app` **(you can use Up and Down / Left and Right to change the name)**
-3. Press (B), then select the "Health&Safety Inject" option
-8. Select the FBI injectable `.app` for your region
-4. Press (A) and confirm to inject
-9. Press (Start) to reboot
-10. If you still launch to the stock Health & Safety app and have downgraded with Gateway in the past, [follow this troubleshooting guide](troubleshooting#gw_fbi)
+2. Gå til "SysNAND Options", deretter "Miscellaneous", deretter velger du "Health&Safety Dump" og dump Health & Safety til 'hs.app' **(Du kan bruke opp og ned / venstre og høyre for å endre navnet)**
+3. Trykk (B), og velg "Health&Safety Inject"
+8. Velg FBI injectable '.app' for din region
+4. Trykk (A) og bekreft injiseringen
+9. Trykk (Start) for omstart
+10. Hvis du fortsatt starter den normale Health & Safety appen og har nedgradert med Gatewaz tidligere [Følg denne feilsøkingsveiledningen](troubleshooting#gw_fbi)
 
-##### Section VI - Reinstalling Tickets
+##### Seksjon VI - Reinstallere Tickets
 
-If you had no tickets beginning with 00- earlier, you can skip this section.
+Hvis du ikke hadde noen tickets som startet med 00- tidliger kan du hoppe over denne seksjonen.
 {: .notice--info}
 
-1. Open FBI
-2. Select "SD"
-3. Select "files9"
-4. Select "\<current directory>"
-5. Select "Install and delete all tickets"
-6. Wait. The system may appear to freeze, just give it time.
-7. Press (A) to confirm
+1. Åpne FBI
+2. Velg "SD"
+3. Velg "files9"
+4. Velg "\<current directory>"
+5. Velg "Install and delete all tickets"
+6. Vent. Systemet kan virke frossent, bare vent.
+7. Trykk (A) for å bekrefte
 8. Press (B) to decline installing tickets from CDN.
-9. Exit with the home button
+9. Avslutt med hjem-knappen
 
 Formatting a device following a ctrtransfer *without restoring the config save* can cause screen brightness / flickering issues. See [this](https://github.com/Plailect/Guide/issues/794).
 {: .notice--info}
