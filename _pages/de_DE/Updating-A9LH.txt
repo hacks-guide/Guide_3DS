@@ -7,38 +7,38 @@ ref: updating-a9lh
 
 ### Letzte Aktualisierung: 3 Nov 2016
 
-Die eigentlich Installation von arm9loaderhax besteht aus "Payload Dateien", die in die NFIRM Partition des NAND Chips deines Geräts installiert werden, welcher sich auf dem Motherboard befindet. These payloads are updated rarely and only really serve the purpose of launching `arm9loaderhax.bin` from the SD Card, which is, in our case, Luma3DS.
+Die eigentlich Installation von arm9loaderhax besteht aus "Payload Dateien", die in die NFIRM Partition des NAND Chips deines Geräts installiert werden, welcher sich auf dem Motherboard befindet. Diese Payloads werden nur sehr selten aktualisiert, und dienen nur dem einen Zweck, die "arm9loaderhax.bin" von der SD Karte zu starten, was in unserem Fall Luma3DS entspricht.
 {: .notice}
 
-If you do not know what version of arm9loaderhax you are running, just install the latest version with these steps. Installing the latest version while already on the latest version will have no effect.
+Falls sie nicht wissen welche Version von arm9loaderhax Sie verwenden, installieren Sie einfach folgendermaßen die neuste Version. Das Installieren der neusten Version wenn Sie schon auf der neusten Version sind wird keine Folgen haben.
 {: .notice--info}
 
-If you have a PIN set on Luma, you must temporarily turn it off to do these steps. You can re-enable the PIN after the update.
+Wenn Sie eine PIN in Luma gesetzt haben müssen sie diese temporär abschalten, um die Folgenden Schritte ausführen zu können. Sie können die PIN nach der Installation wieder aktivieren.
 {: .notice--info}
 
-If you are using a payload that does not init the screen on its own (such as Bootanim9), you will need to rename it to `arm9loaderhax_si.bin` instead of `arm9loaderhax.bin`
+Wenn Sie eine Payload verwenden, die nicht automatisch selbstständig initiiert (zum Beispiel Bootanim9) müssen Sie diese zu "arm9loaderhax_si.bin" anstelle von "arm9loaderhax.bin" umbenennen.
 {: .notice--info}
 
-The versions of data_input only refer to revisions of the `.zip` to be compatible with different installer versions, and are *not* the same thing as updating a9lh itself (the payload files). They make no practical difference beyond the installation process.
+The versions of data_input only refer to revisions of the `.zip` to be compatible with different installer versions, and are *not* the same thing as updating a9lh itself (the payload files). Sie haben keine praktischen Unterschiede nach dem Installationsprozess.
 {: .notice--info}
 
-These steps will also update your various payloads and the AES key database.
+Die folgenden Schritte werden außerdem die Payloads und die AES key Datenbanken aktualisieren.
 {: .notice--success}
 
-#### What you need
+#### Was Sie brauchen:
 
 * [`aeskeydb.bin`](magnet:?xt=urn:btih:18b3a17f78e2376e05feaa150749d9fd689b25dc&dn=aeskeydb.bin&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 * [`data_input_v4.zip`](magnet:?xt=urn:btih:00f03ff69b5961307303d5e4778a2f65a528bf2d&dn=data%5Finput%5Fv4.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(the `.7z` file)*
-* The latest release of [arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(the `.7z` file)*
-* The latest release of [SafeA9LHInstaller](https://github.com/AuroraWright/SafeA9LHInstaller/releases/latest) *(the `.7z` file)*
-* The latest release of [Hourglass9](https://github.com/d0k3/Hourglass9/releases/latest)
+* die neuste Version von Luma3DS [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(Die ".7z" Datei)*
+* Die neuste Version von [arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(Die ".7z" Datei)*
+* die neuste Version von [SafeA9LHInstaller](https://github.com/AuroraWright/SafeA9LHInstaller/releases/latest) *(Die ".7z" Datei)*
+* die neuste Version von[Hourglass9](https://github.com/d0k3/Hourglass9/releases/latest)
 
-#### Instructions
+#### Anleitung
 
-**For all of these instructions, OVERWRITE any existing files on your SD card.**
+**Bei allen Vorgängen vorhandene Dateien auf der SD Karte ÜBERSCHREIBEN**
 
-##### Section I - Prep work
+##### Teil 1 - Vorbereitung
 
 1. Delete any existing `aeskeydb.bin` from the root of your SD card
 4. Delete the `a9lh` folder from the root of your SD card if it exists
