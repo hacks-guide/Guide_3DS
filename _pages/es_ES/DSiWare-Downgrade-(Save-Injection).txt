@@ -5,24 +5,24 @@ lang: en_US
 ref: dsiware-downgrade-(save-injection)
 ---
 
-If you are on version 11.0.0 or 11.1.0, you must follow this guide to downgrade your NATIVE_FIRM using DSiWare
+Si tu sistema se encuentra en la versión 11.0.0 o 11.1.0, debes seguir esta guía para realizar el Downgrade de tu NATIVE_FIRM mediante DSiWare
 {: .notice}
 
-This takes advantage of an oversight which allows DSiWare titles to read and write anywhere in NAND.
+Esto se aprovecha de una vulnerabilidad que permite a los juegos DSiWare a leer y escribir en cualquier parte de la NAND.
 {: .notice--info}
 
-Be prepared to wait 20 minutes (New 3DS) to an hour (Old 3DS). Slowhax (waithax) is named so for a reason.
+Prepárate para esperar 20 minutos (New 3DS) o una hora (Old 3DS). No por nada se llama Slowhax (waithax).
 {: .notice--info}
 
 This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws).
 {: .notice--info}
 
-Your DSiWare's save will be backed up before getting replaced by the hacked save.
+Se hará una copia de seguridad de tu partida de DSiWare antes de ser reemplazada con la partida hackeada.
 {: .notice--info}
 
 Lo que necesita
 
-* Already own (and install) one of the following exploitable DSiWare games installed on your 3DS *(you must have already installed one; they have all been pulled from the eShop)*
+* Haber comprado (e instalado) uno de los siguientes juegos DSiWare vulnerables *(es obligatorio tener por lo menos uno de ellos; todos han sido removidos de la eShop)*
   + **Fieldrunners**
   + **Legends of Exidia**
   + **Guitar Rock Tour**  
@@ -45,8 +45,8 @@ Lo que necesita
 
 ##### Section I - Prep Work
 
-1. Copy _the contents of_ the `starter.zip` to the root of your SD card, replace existing files
-  + This will ensure that the Homebrew Launcher is up to date; older versions will freeze when your try to launch 3ds_dsiwarehax_installer
+1. Copia el contenido de "starter.zip" a la raiz de tu tarjeta SD reemplazando los ficheros existentes.
+  + Esto asegurará que Homebrew Launcher está actualizado; las versiones antiguas se congelarán cuando intentes lanzar 3ds_dsiwarehax_installer
 2. Copy and merge the `3ds` folder from the 3ds_dsiwarehax_installer `.zip` to the root of your SD card
 3. Copy the `4B51394A` folder from `4B51394A.zip` to the `/3ds/3ds_dsiwarehax_installer/dsiware/` folder on your SD card.
 4. Copy and merge the `3ds` folder from the 3DSident `.zip` to your SD card
@@ -54,7 +54,7 @@ Lo que necesita
 6. Copy the dgTool `boot.nds` to the root of your SD card
 7. Create a folder named `dgTool` on the root of your SD card if it does not already exist
 8. Copy the contents of the NFIRM `.zip` to the `dgTool` folder on the root of your SD card
-9. Reinsert your SD card into your 3DS
+9. Vuelva a insertar la tarjeta SD en tu 3DS
 
 ##### Section II - Backup DSiWare
 
@@ -117,9 +117,9 @@ This backup can only be used on this NAND. If you format your 3DS or restore ano
   + You may have to force power off by holding the power button
 5. Reboot
 
-##### Section VI - Exploit verification
+##### Sección VI - Verificación del exploit
 
-1. Reinsert your SD card into your 3DS
+1. Vuelva a insertar la tarjeta SD en tu 3DS
 2. Launch the homebrew launcher on using your entrypoint
 3. Launch 3DSident
 4. Verify that the following:
