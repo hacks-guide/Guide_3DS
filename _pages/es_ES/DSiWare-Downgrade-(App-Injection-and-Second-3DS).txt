@@ -91,22 +91,22 @@ Usa un [Save manager](https://github.com/J-D-K/JKSM/releases/latest) para hacer 
 5. Reinserta la tarjeta SD de la **3DS de origen**
 6. En la **3DS de origen**, mantén presionado Start en el arranque para iniciar Hourglass9
 7. Ve a "SysNAND Options", luego a "SysNAND Backup/Restore, y por último "backup **(min size)** SysNAND" a "NANDmin.bin"
-8. Presiona (Select) en el menu principal para expulsar la tarjeta SD de la **3ds de origen**, luego insertala en tu computadora
-9. Copía "NANDmin.bin" y "NANDmin.bin.sha" de la carpeta "/files9/" en tu tarjeta SD a un lugar seguro
-  Haz copias de seguridad en multiples lugares
+8. Presiona (Select) en el menú principal para expulsar la tarjeta SD de la **3ds de origen**, luego insértala en tu computadora
+9. Copia "NANDmin.bin" y "NANDmin.bin.sha" de la carpeta "/files9/" en tu tarjeta SD a un lugar seguro
+  + Haz copias de seguridad en múltiples lugares
   + Estas copias van a salvarte de un brick si algo sale mal en el futuro
   + **Tu copia debe igualar el tamaño de alguno de los especificados en [this] (tamaño de NAND) pagina; si no lo hace, deberias eliminarla y crear una nueva!**
 10. Inserta la tarjeta SD de la **3DS de destino** en tu computadora
-11. **Haz una copia de seguridad de cada archivo en las tarjetas SD de las dos 3D en carpetas separadas en tu computadora (especifica en cada carpeta a cual pertenece cada una!)**
-12. Vuelva a colocar cada tarjeta SD en su 3DS correspondiente
+11. **Haz una copia de seguridad de cada archivo en las tarjetas SD de las dos 3DS en carpetas separadas en tu computadora (especifica en cada carpeta a cual pertenece cada una!)**
+12. Vuelve a insertar cada tarjeta SD en su correspondiente 3DS
 13. Presiona (Start) para reiniciar
 
 ##### Sección II - Copia de seguridad de DSiWare
 
-Luego de completar la guía por completo, puedes usar esta copia de seguridad para restaurar tus datos de guardado de DSiWare, borrando el DSiWare de tu Memoria de Sistema y copiándolo desde tu tarjeta SD.
+Luego de terminar la guía por completo, puedes usar esta copia de seguridad para restaurar tus datos de guardado de DSiWare, borrando el DSiWare de tu Memoria de Sistema y copiándolo desde tu tarjeta SD.
 {: .notice--info}
 
-Esta copia de seguridad solo puede ser usada en esta NAND. Si formateas tu 3DS o restauras otra NAND (especificamente si "movable.sed" es alguna vez modificado), se volvera inusable.
+Esta copia de seguridad solo puede ser usada en esta NAND. Si formateas tu 3DS o restauras otra NAND (especificamente si `movable.sed` es alguna vez modificado), se volvera inutilizable.
 {: .notice--info}
 
 1. Ve a "Configuración de la Consola", luego a "Gestión de Datos" y por último "DSiWare" en la **3DS de origen**
@@ -170,25 +170,25 @@ Esta copia de seguridad solo puede ser usada en esta NAND. Si formateas tu 3DS o
 5. Presiona (A) para continuar
 6. Presiona (Start) para salir de "ctr-httpwn"
 7. Presiona (start) para abrir el menu de salida del Homebrew Launcher
-8. Press (X) to Return to Home Menu (no reboot)
-  + You may get an "Error has occurred" message with the option to continue. This is fine, just hit (A)
-9. Continue to the next section **without rebooting**
-  + **the target 3DS** has been temporarily patched to allow network functions (such as System Transfer) without running the latest system version
-  + Keep in mind that exiting the System Settings will reboot the system
-  + If the system is rebooted, you'll have to re-run ctr-httpwn before System Transfer will work
+8. Presiona (X) para volver al Menu de Inicio (opción Home Menu (no reboot))
+  + Puede que obtengas el mensaje "Error has ocurred" con la opción de continuar. Esto está bien, sólo presiona (A)
+9. Continua a la siguiente sección **sin reiniciar**
+  + **La 3DS de Destino** ha sido temporalmente parcheada para permitir funciones de red (como la Transferencia de Sistema) sin tener la última versión del sistema
+  + Ten en cuenta que salir de la Configuración del Sistema hará que se reinicie el sistema
+  + Si el sistema es reiniciado, tendrás que volver a ejecutar "ctr-httpwn" para que la Transferencia de Sistema funcione
 
-##### Section V - System Transfer
+##### Sección V - Transferencia de Sistema
 
-1. **Haz una copia de seguridad de cada archivo en las tarjetas SD de las dos 3D en carpetas separadas en tu computadora (especifica en cada carpeta a cual pertenece cada una!)**
-2. Vuelva a colocar cada tarjeta SD en su 3DS correspondiente
-3. Si **la 3ds de destino** tiene un ID de Nintendo Network, deberás formatear el dispositivo usando las Opciones del Sistema:
-  + Ve a la última página de "Otras Opciones" y selecciona "Formatear", y sigue las instrucciones
+1. **Haz una copia de seguridad de cada archivo en las tarjetas SD de las dos 3DS en carpetas separadas en tu computadora (especifica en cada carpeta a cual pertenece cada una!)**
+2. Vuelve a insertar cada tarjeta SD en su correspondiente 3DS
+3. Si **la 3DS de Destino** tiene un ID de Nintendo Network, deberás formatear el dispositivo usando la Configuración de la Consola:
+  + Ve a la última página de "Otras Opciones", selecciona "Formatear" y sigue las instrucciones
 4. Lee lo siguiente:
-  + Tu CFW 3DS = la 3DS original = "Sistema original"
-  + Tu consola de fábrica = la 3ds de destino = "Sistema de destino"
-  + **¡Mueve los juegos de DSiWare si es necesario!**
-  + **NO** borres el contenido de la SD del sistema original aunque te lo digan
-  + Make sure neither device's battery dies during the transfer
+  + Tu CFW 3DS = la 3DS Original = "Sistema Original"
+  + Tu consola de fábrica = la 3DS de Destino = "Sistema de Destino"
+  + **¡Mueve los juegos de DSiWare si te es solicitado!**
+  + **NO** borres el contenido de la SD del sistema original si te es solicitado
+  Asegurate que no se agote la batería de ninguno de los dispositivos
   + 2DS/Old 3DS (source) to New 3DS (target) only - if asked which method you wish to use to transfer the SD card data:
     + **Do NOT** choose the "Low-Capacity microSD Card Transfer" or minimal option (option 2), it will only transfer tickets and likely will not transfer the DSiWare save.
     + Fast Method: If you have the ability to move the data from the SD card (source) to the microSD card (target), when prompted use the "PC-Based Transfer" option (option 3).
@@ -219,7 +219,7 @@ Esta copia de seguridad solo puede ser usada en esta NAND. Si formateas tu 3DS o
 8. Exit dgTool
   + You may have to force power off by holding the power button
 9. Put your SD card in your computer, then copy `F0F1_N3DS.bin` or `F0F1_O3DS.bin` (depending on your device) to a safe location
-  Haz copias de seguridad en multiples lugares
+  + Haz copias de seguridad en múltiples lugares
   + Estas copias van a salvarte de un brick si algo sale mal en el futuro
 
 
