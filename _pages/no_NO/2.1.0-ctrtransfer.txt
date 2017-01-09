@@ -1,107 +1,107 @@
 ---
 title: "2.1.0 ctrtransfer"
 permalink: /2.1.0-ctrtransfer.html
-lang: nb_NO
+lang: en_US
 ref: 2.1.0-ctrtransfer
 ---
 
-Hvis du nedgraderte til 2.1.0 på en 2DS eller Nye 3DS og lot trådløs kommunikasjon være avslått, kan du aktivere trådløs igjen ved å fjerne batteriet på konsollen i noen sekunder og så starte den opp igjen.
+If you downgrade to 2.1.0 on a 2DS or New 3DS and left Wireless Communication off, you can re-enable the wireless by removing the battery for several seconds then booting back up.
 {: .notice--info}
 
-Hvis du har brukt nye 3DS microSD Management til å overføre filer til SD-kortet, vil dette ikke lenger fungere på 2.1.0, sørg for å ha en microSD-kortleser før du fortsetter.
+If you've been using the New 3DS's microSD Management to transfer files to your SD card, this will no longer work on 2.1.0, make sure to have a microSD card reader on hand before proceeding.
 {: .notice--info}
 
-Det er mulig at enheten din ikke vil vise installerte spill etter ctroverføringen. Dette er fordi ticketene har blitt fjernet av overføringen, det er derfor du gjorde en sikkerhetskopi av dem. De vil bli gjenopprettet på slutten av guiden.
+Your device may not show your installed games after the ctrtransfer. This is due to the tickets being removed by the transfer, which is why you back them up. They will be restored at the end of the guide.
 {: .notice--info}
 
-**For nå, er en tilknytning til internet NØDVENDIG for å fortsette etter 2.1.0 ctroverførselen.**
+**For now, connecting your device to the internet is REQUIRED to continue after the 2.1.0 ctrtransfer.**
 {: .notice--warning}
 
-**Skru av foreldrekontroll på enheten din før du gjør 2.1.0 ctroverførselen. Hvis du ikke kan passordet, se [denne](https://mkey.salthax.org/) siden.**
+**Disable the parental controls of your device before doing the 2.1.0 ctrtransfer. If you do not know the password, see [this](https://mkey.salthax.org/) site.**
 {: .notice--warning}
 
-**Utførsel av en ctroverførsel kommer til å fjerne alle brukerinstallerte tickets fra enheten til en sikkerhetskopi er gjenopprettet. Oppretning av en sikkerhetskopi må under INGEN OMSTENDIGHETER hoppes over, ellers vil du MISTE tilgang til alle installerte spill og saver!**
+**Performing a ctrtransfer will remove all user-installed tickets from the device until a backup is restored. Under NO CIRCUMSTANCES should you skip creating the backup, or you will LOSE access to all installed games and saves!**
 {: .notice--danger}
 
-**Formater aldri en 2DS når du er på en versjon lavere enn 6.0.0, ellers vil du ikke kunne gjennomføre førstegangsoppsett og du vil BRICKE!**
+**Never format a 2DS while on a version <6.0.0 or you will be unable to complete initial setup and will BRICK!**
 {: .notice--danger}
 
-**Oppdater aldri en Nye 3DS med versjon 2.1.0 (en versjon for Old 3DS) eller du kommer til å BRICKE! Du MÅ gjenopprette en NAND sikkerhetskopi eller ctroverføre tilbake til standard Nye 3DS firmware først!**
+**Never update a New 3DS running 2.1.0 (an Old 3DS firmware) or you will BRICK! You MUST restore a NAND backup or ctrtransfer back to standard New 3DS firmware first!**
 {: .notice--danger}
 
-### Oversikt av trinn
+#### Overview of steps
 
-I denne delen kommer vi til å flashe konsollens [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) partisjon til 2.1.0 for å dra nytte av en feil i 2.1.0 for å trekke ut [OTP](otp-info) som er unik til din konsoll. Denne OTPfilen kreves for å installere arm9loaderhax, og **kan ikke** deles med andre konsoller.
+In this section, we will be flashing your console's [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) partition to 2.1.0 in order to take advantage of an oversight in 2.1.0 for the purpose of extracting the [OTP](otp-info) unique to your console. This OTP file is required to install arm9loaderhax, and **cannot** be shared with other consoles.
 
-Dette oppnås ved [å installere et forhåndslagd ctroverførsel bilde] (https://www.reddit.com/r/3dshacks/comments/4zhe4a/) som inneholder 2.1.0, kopier dine spesifikke konsollfiler (som 'moveable.sed' og 'SecureInfo_A') in, for så å bestemme titteldatabasene.
+This is accomplished by [installing a premade ctrtransfer image](https://www.reddit.com/r/3dshacks/comments/4zhe4a/) containing 2.1.0, copying your console specific files (such as `moveable.sed` and `SecureInfo_A`) to it, then fixing the title databases.
 
-OTP er en forutsetning for å bruke arm9loaderhax.
+The OTP is a requirement to use arm9loaderhax.
 
-#### Det du trenger
+#### What you need
 
-* Du må ha bootet in i Decrypt9
-* 2.1.0 ctroverførsel bilde for din enhet og region     
-*(Hvis enheten ikke er fra en av disse regionene, bare velg en)*:
+* You will need to have booted into Decrypt9
+* The 2.1.0 ctrtransfer image for your device and region     
+*(if your device is not from one of these regions, just pick one)*:
   +    [New 3DS or Old 3DS or 2DS 2.1.0 - EUR - ctrtransfer](magnet:?xt=urn:btih:89acc9c1b488b8b38251de0ddf07975d6bd354a1&dn=2.1.0-4E%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
   +    [New 3DS or Old 3DS or 2DS 2.1.0 - JPN - ctrtransfer](magnet:?xt=urn:btih:3dbb9c9c85a33c6242f424dcbaebcacdd8a5912b&dn=2.1.0-4J%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
   +    [New 3DS or Old 3DS or 2DS 2.1.0 - USA - ctrtransfer](magnet:?xt=urn:btih:1609ce9ee7b0ed9b6dea0b3e7cca4fc52dad6ff4&dn=2.1.0-4U%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 
-#### Instruksjoner
+#### Instructions
 
-##### Seksjon I - Forarbeld
+##### Section I - Prep work
 
-Du må være i Decrypt9 for disse trinnene.
+You should be in Decrypt9 for these steps.
 
-1. Trykk (Select) i hovedmenyen for å løse ut SD-kortet, og deretter sette det inn i datamaskinen
-2. Kopiér 2.1.0 `.bin` og `. bin.sha` fra ctroverførsel `.zip` til mappen `/files9/` på SD-kortet
-3. Sett inn SD-kortet i konsollen
-4. Trykk (B) for å gå til Decrypt9menyen
+1. Press (Select) on the main menu to eject your SD card, then put it in your computer
+2. Copy the 2.1.0 `.bin` and `.bin.sha` from the ctrtransfer `.zip` to the `/files9/` folder on your SD card
+3. Reinsert your SD card into your 3DS
+4. Press (B) to get to the Decrypt9 main menu
 
-##### Seksjon II - ctrtransfer
+##### Section II - ctrtransfer
 
-**Du MÅ HA en sikkerhetskopi av _din_ enhets NAND. Du vil bli bedt om å opprette den som ett av trinnene hvis du ikke allerede har en.**
+**Having a backup of _your_ device's NAND is REQUIRED. You will be prompted to create one as part of the steps if you do not already have one.**
 {: .notice--danger}
 
-**Hvis du hopper over denne sikkerhetskopien vill det resultere i TAP av all installerte spill og saver!**
+**Skipping this backup will result in the LOSS of all installed games and saves!**
 {: .notice--danger}
 
-**Hvis du ikke vet om du allerede har en NAND sikkerhetskopi, opprett en når du blir spurt ved å trykke (A) bare for å være sikker.**
+**If you do not know whether or not you already have a NAND backup, create one when prompted by pressing (A) just to be sure.**
 {: .notice--danger}
 
-**Hvis du ikke har nok plass til å opprette sikkerhetskopien, kan du sikkerhetskopiere til et annet SD-kort eller gjøre plass på gjeldende SD-kortet ved å trykke (Select) i Decrypt9WIP hovedmenyen for å løse ut SD-kortet og bytte det ut med en annen SD-kort eller gjør plass på din nåværende SD kort**
+**If you do not have enough space to create the backup, you can either backup to a different SD card or clear space on your current SD card by pressing (Select) on the Decrypt9WIP main menu to eject your SD card and allow it to be swapped with a different SD card or to clear space on your current SD card**
 {: .notice--danger}
 
-1. Gå til "SysNAND Options", deretter "CTRNAND Transfer", og deretter "Auto CTRNAND overføring"
-2. Velg 2.1.0 ctroverførsel bilde når bedt, ved å trykke (A), og deretter den gitte tastekombinasjonen
-3. Hvis du ikke allerede har en NAND sikkerhetskopi, **lag SysNAND til `NANDmin.bin` når du blir spurt ved å trykke (A)**
-  + **Du MÅ HA en sikkerhetskopi av _din_ enhets NAND.**
-  + **Hvis du hopper over denne sikkerhetskopien vill det resultere i TAP av all installerte spill og saver!**
-4. La overføringsprosessen å fortsette automatisk, dette kan ta litt tid
-5. Når overføringen er fullført, trykk (B) for å gå tilbake
-6. Trykk (Select) for å løse ut SD-kortet
-7. Slett 2.1.0 ctroverførsel bilde "bin" og ". bin.sha" fra mappen '/ files9 /' på SD-kortet
-8. Trykk (Start) for å starte på nytt uten å putte SD-kortet ditt inn igjen
-  + Mens du er på 2.1.0, vil enheten svart skjerm ved oppstart hvis SD-kortet er satt inn før hjemmemenyen er lastet inn
-9. Sett inn SD-kortet i 3DSen din etter at hjemmemenyen er lastet inn
-  + Hver gang enheten startes under 2.1.0, må du ta ut SD-kortet før oppstart og sette det inn igjen etter at hjemmemenyen er lastet inn
-  + Dette vil bli fikset når du gjenoppretter enheten på neste side
+1. Go to "SysNAND Options", then "CTRNAND Transfer", then "Auto CTRNAND Transfer"
+2. Select the 2.1.0 ctrtransfer image when prompted by pressing (A), then input the key combo given
+3. If you do not already have a NAND backup, **backup SysNAND to `NANDmin.bin` when prompted by pressing (A)**
+  + **Having a backup of _your_ device's NAND is REQUIRED.**
+  + **Skipping this backup will result in the LOSS of all installed games and saves!**
+4. Allow the transfer process to proceed automatically, this may take some time
+5. Once the transfer is complete, press (B) to go back
+6. Press (Select) to eject your SD card
+7. Delete the 2.1.0 ctrtransfer image `.bin` and `.bin.sha` from the `/files9/` folder on your SD card
+8. Press (Start) to reboot without reinserting your SD card
+  + While on 2.1.0, the device will black screen on boot if your SD card is inserted before the home menu loads
+9. Reinsert your SD card into your 3DS after the home menu loads
+  + Every time the device is rebooted on 2.1.0, you will need to take out your SD card before boot and put it back in after the home menu loads
+  + This will be fixed once you restore your device in the next page
 
 ___
 
-Første nystart under 2.1.0 kan ta litt lenger tid en en standard oppstart på noen enheter.
+The initial boot of 2.1.0 can take slightly longer than a standard boot on some devices.
 {: .notice--info}
 
-*(Skjermartefakter eller misfarging er normalt for noen enheter under 2.1.0, de vil forsvinne når du gjenoppretter sikkerhetskopien din)*
+*(Screen distortions or discolorations are normal for some devices while on 2.1.0, they will go away once you restore your backup)*
 {: .notice--info}
 
 {% capture notice %}
-**Å sette en ny3DS på 2.1.0 i hvilemodus har en tendens til å forårsake en UGJENOPPRETTELIG brick!**
-**Dette skjer bare når du stenger lokket _mens enheten er på_; Dette gjelder ikke når enheten slås av.**
-**Enheten går bare over i hvilemodus når dekslet lukkes. Den går ikke på tidsur, eller noe lignende.**
-**Du bør fortsette nå for å unngå enhver mulighet for at dette skjer!**
+**Putting a New 3DS on 2.1.0 in sleep mode is known to cause an UNRECOVERABLE brick!**
+**This only happens when shutting the lid _while the device is on_; this does not apply to turning the device off.**
+**The device only enters sleep mode when the lid is closed. It is not on a timer or anything like that.**
+**You should continue without delay to avoid any possibility of this happening!**
 {% endcapture %}
 
 <div class="notice--danger">{{ notice | markdownify }}</div>
 
-Fortsett til [Installere arm9loaderhax](installing-arm9loaderhax)
+Continue to [Installing arm9loaderhax](installing-arm9loaderhax)
 {: .notice--primary}
