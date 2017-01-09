@@ -99,9 +99,9 @@ ref: installing-arm9loaderhax
   + לחצו על (Select) לביצוע התקנה מלאה
   + arm9loaderhax כעת יותקן למכשירכם (זה מהיר מאוד)
   + כבו את הקונסולה, תחזיקו את כפתור הכיבוי אם זה נחוץ
-  + חברו את ה-SD למחשב, פתחו אותו והעתיקו את הקובץ `OTP.bin` מהתיקייה `/a9lh/` למקום בטוח במחשב שלכם וגבו אותו במספר מקומות (כגון שירות ענן), לאחר מיכן תחזירו את ה-SD ל-3DS
+  + חברו את ה-SD למחשב, פתחו אותו והעתיקו את הקובץ `OTP.bin` מהתיקייה `/a9lh/` למקום בטוח במחשב שלכם וגבו אותו במספר מקומות (כגון שירות ענן), לאחר מכן תחזירו את ה-SD ל-3DS
 
-#### חלק III - הגדרת Luma3DS
+##### חלק III - הגדרת Luma3DS
 
 1. תדליקו את המכשיר תוך לחיצה על המקש Select על מנת להכנס לתפריט Luma3DS
   + שימו לב כי אתם לוחצים על המקש לפני הדלקת הקונסולה
@@ -119,7 +119,7 @@ ref: installing-arm9loaderhax
   + אם אתם מקבלים מסך שחור, פשוט תמשיכו לחלק הבא   
   + אם אתם מקבלים שגיאה "Failed to mount CTRNAND", פשוט תמשיכו לחלק הבא     
 
-#### חלק IV - שחזור מערכת
+##### חלק IV - שחזור מערכת
 
 במקרה שבו לפני החלקת המדריך היה לכם EmuNAND מותקן וברצונכם להעביר את התוכן שלו ל-SysNAND CFW שלכם, עכשיו זה הזמן לבצע [העברת EmuNAND](move-emunand) במקום לבצע את הצעדים הראשונים בחלק זה.
 {: .notice--info}
@@ -127,31 +127,31 @@ ref: installing-arm9loaderhax
 1. תפתחו את Hourglass9 מתוך arm9loaderhax על ידי החזקה של המקש (Start) בעת הדלקה
 2. לחצו על "SysNAND Backup/Restore"
 3. לחצו על "SysNAND Restore (keep a9lh)" ובצעו שחזור מתוך `NANDmin.bin`
-4. בתום התהליך, לחצו על (Start) על מנת להפעיל מחדש
-  + If you get a black screen, [follow 9.2.0 ctrtransfer](9.2.0-ctrtransfer)
-5. If your backup was of a version between 3.0.0 and 4.5.0, your console will not boot until you manually download the required firmware:
-  + Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) and rename it to `firmware.bin`
-  + Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
-  + Copy `firmware.bin` and `cetk` to the `/luma/` folder on your SD card
-  + Delete both of these files after updating your 3DS
-2. Update your 3DS by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
-  + Updates while using A9LH + Luma (what you have) are safe, stop asking about it
-  + The warning about never updating a New 3DS from 2.1.0 does not apply after restoring your NAND backup.
-  + If this gives you an error, set your DNS settings to "auto"
-  + If this still gives you an error and your NAND is below 9.2.0, [follow 9.2.0 ctrtransfer](9.2.0-ctrtransfer)
+4. לחצו על (Start) על מנת להפעיל מחדש
+  + אם אתם מקבלים מסך שחור, עברו ל-[9.2.0 ctrtransfer](9.2.0-ctrtransfer)
+5. אם הגיבוי שלכם היה בין גרסה 3.0.0 ל-4.5.0, הקונסולה שלכם לא תעשה בוט עד שתורידו את הקבצים המתאימים:
+  תורידו את [הקובץ הזה](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) ושנו לו את השם ל-`firmware.bin`
+  + תורידו את [הקובץ הזה](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
+  + תעתיקו את `firmware.bin` ואת `cetk` לתוך התיקייה `/luma/` שב-SD שלכם
+  + מחקו את שני הקבצים האלו לאחר שתעדכנו את ה-3DS שלכם
+2. עדכנו את ה-3DS שלכם על ידי לחיצה על System Sttings, לאחר מיכן "Other Settings", לכו ימינה עד הסוף ואז לחצו על "System Update"
+  + עדכונים שתבצעו תוך שימוש ב-A9LH+Luma (במידה שיש לכם את שניהם) הם בטוחים לחלוטין, מספיק לשאול על זה
+  + האזהרה בה פירטנו לא לעדכן New 3DS מגרסה 2.1.0 לא תקפה ברגע שביצעתם שחזור מגיבוי NAND.
+  + אם אתם מקבלים שגיאה, שנו את הגדרות ה-DNS שלכם ל-"auto"
+  + אם זה ממשיך לתת לכם שגיאה והמכשיר שלכם מתחת לגרסה 9.2.0, עקבו אחרי [9.2.0 ctrtransfer](9.2.0-ctrtransfer)
 
 
-##### Section V - Injecting FBI
+##### חלק V - הזרקת FBI
 
 1. תפתחו את Hourglass9 מתוך arm9loaderhax על ידי החזקה של המקש (Start) בעת הדלקה
-2. Go to "SysNAND Backup/Restore", then select the "Health&Safety Dump" option to dump Health & Safety to `hs.app` **(you can use Up and Down / Left and Right to change the name)**
-3. Press (B), then select the "Health&Safety Inject" option
-4. Select the FBI injectable `.app` for your region
-5. Press (A) and confirm to inject
-6. בתום התהליך, לחצו על (Start) על מנת להפעיל מחדש
-7. If you still launch to the stock Health & Safety app and have downgraded with Gateway in the past, [follow this troubleshooting guide](troubleshooting#gw_fbi)
+2. לחצו על "SysNAND Backup/Restore", לאחר מכן על אופצית "Health&Safety Dump" על מנת לחלץ את Health & Safety לקובץ `hs.app` **(השתמשו במקשי החצים על מנת לשנות את השם של הקובץ)**
+3. לחצו על (B), לאחר מכן על אופצית "Health&Safety Inject"
+4. בחרו בקובץ FBI מסוג `.app` המתאים למכשיר והאיזור שלכם
+5. לחצו על (A) על מנת לאשר בחירה
+6. לחצו על (Start) על מנת להפעיל מחדש
+7. במידה ש-Health & Safety שלכם לא הפך ל-FBI וביצעתם שנמוך בעזרת Gateway בעבר, עקבו אחרי [המדריך הזה](troubleshooting#gw_fbi)
 
-##### Section VI - Finalizing setup
+##### חלק VI - השלמת ההתקנה
 
 1. Open Health and Safety (which is now FBI)
 2. Select "SD"
