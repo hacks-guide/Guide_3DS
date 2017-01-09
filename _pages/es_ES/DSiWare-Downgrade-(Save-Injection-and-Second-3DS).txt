@@ -41,13 +41,13 @@ Ambos sistemas DEBEN ser de la misma región.
 **¡Todos los datos de la _3DS objetivo_ serán eliminados!**
 {: .notice--danger}
 
-The source 3DS's NNID will be stuck on the target 3DS unless you either system transfer back or call Nintendo! (detalles en las instrucciones)
+¡El NNID de la 3DS fuente se mantendrá en la 3DS objetivo a menos que realices una transferencia de regreso o llames a Nintendo! (detalles en las instrucciones)
 {: .notice--danger}
 
 System Transfers can only be performed once a week.
 {: .notice--danger}
 
-#### What you need
+#### Qué necesitas
 
 * Dos consolas 3DS
   + **The source 3DS**: the 3DS running some kind of custom firmware (arm9loaderhax or some form of EmuNAND/RedNAND) *on the latest version*
@@ -75,9 +75,9 @@ System Transfers can only be performed once a week.
 * If **the target 3DS** is below 11.2.0, you will _also_ need the following
   + The latest release of [ctr-httpwn](https://github.com/yellows8/ctr-httpwn/releases/latest)
 
-#### Instructions
+#### Instrucciones
 
-##### Section I - Prep Work
+##### Sección I - Preparativos
 
 1. Create a folder named `files9` on the root of **the source 3DS**'s SD card if it does not already exist
 2. **Use a [save manager](https://github.com/J-D-K/JKSM/releases/latest) to backup any saves you care about on the target 3DS (it will be formatted!)**
@@ -95,22 +95,22 @@ System Transfers can only be performed once a week.
 4. Reinsert **the source 3DS**'s SD card
 5. On **the source 3DS**, hold (Start) on boot to launch Hourglass9
 6. Go to SysNAND Options, then SysNAND Backup/Restore, then backup **(min size)** SysNAND to `NANDmin.bin`
-7. Deja que acabe el proceso de ctrtransfer, esto llevará un tiempo. Press (Select) on the main menu to eject **the source 3DS**'s SD card, then put it in your computer
+7. Deja que acabe el proceso de ctrtransfer, esto llevará un tiempo. Pulsa (Select) en el menú principal para expulsar la tarjeta SD de la **3ds de origen**, luego insértala en tu computadora
 8. Copy `NANDmin.bin` and `NANDmin.bin.sha` from the `/files9/` folder on your SD card to a safe location
   + Make backups in multiple locations
   + This backup will save you from a brick if anything goes wrong in the future
   + **Your backup should match one of the sizes on [this](nand-size) page; if it does not, you should delete it and make a new one!**
 9. Put **the target 3DS**'s SD card into your computer
 10. **Haz una copia de seguridad de cada archivo en las tarjetas SD de las dos 3DS en carpetas separadas en tu computadora (especifica en cada carpeta a cual pertenece cada una!)!**
-11. Reinsert each SD card back into their corresponding 3DS
-12. Press (Start) to reboot
+11. Reinserta cada tarjeta SD a su 3DS correspondiente
+12. Pulsa (Start) para reiniciar
 
 ##### Section II - Backup DSiWare
 
-After completing the entire guide, you can use this backup to restore your DSiWare saves by deleting the DSiWare from your System Memory and copying it from your SD Card.
+Tras completar la guía al completo, puedes usar esta copia de seguridad para restaurar tus partidas guardadas de DSiWare borrando el DSiWare de la memoria del sistema y copiándola a tu tarjeta SD.
 {: .notice--info}
 
-This backup can only be used on this NAND. If you format your 3DS or restore another NAND (specifically if `movable.sed` is ever modified), it will become unusable.
+Esta copia de seguridad sólo puede ser utilizada en esta NAND. If you format your 3DS or restore another NAND (specifically if `movable.sed` is ever modified), it will become unusable.
 {: .notice--info}
 
 1. Go to System Settings, then "Data Management", then "DSiWare" on **the source 3DS**
@@ -142,10 +142,10 @@ This backup can only be used on this NAND. If you format your 3DS or restore ano
 11. Press (Start) to exit
 12. Launch your DSiWare game on **the source 3DS**
 13. Test if the save is functional
-  + **Fieldrunners**: Touch the 'Scores' button at the main menu
-  + **Legends of Exidia**: After pressing (A) or (Start) at the two title screens, select the first save slot and press continue
-  + **Guitar Rock Tour**: Scroll down and go to High-Scores -> Drums -> Easy    
-  + **The Legend of Zelda: Four Swords (Anniversary Edition)**: Just start the game
+  + **Fieldrunners**: Toca el boton 'Scores' en el menú principal
+  + **Legends of Exidia**: Despues de presionar (A) o (Start) en las dos pantallas de inicio, selecciona el primer archivo guardado y selecciona Continue
+  + **Guitar Rock Tour**: Desplazate hacia abajo y selecciona High-Scores -> Drums -> Easy    
+  + **The Legend of Zelda: Four Swords (Anniversary Edition)**: Solo inicia el juego
   + If your game has an error about `boot.nds` or a white screen, **then the exploit has been successful**
   + If your game behaves normally and does not give you this error, then you should stop and figure out what went wrong
   + If you get a black screen, [follow this troubleshooting guide](troubleshooting#twl_broken)
@@ -175,7 +175,7 @@ This backup can only be used on this NAND. If you format your 3DS or restore ano
 ##### Sección V - Transferencia de Sistema
 
 1. **Haz una copia de seguridad de cada archivo en las tarjetas SD de las dos 3DS en carpetas separadas en tu computadora (especifica en cada carpeta a cual pertenece cada una!)!**
-2. Reinsert each SD card back into their corresponding 3DS
+2. Reinserta cada tarjeta SD a su 3DS correspondiente
 3. If **the target 3DS** has a Nintendo Network ID on it, you must format the device using System Settings:
   + Go to the last page of "Other Settings" and select "Format System Memory", then follow all instructions
 4. Read the following:
@@ -206,11 +206,11 @@ This backup can only be used on this NAND. If you format your 3DS or restore ano
 3. Copy the contents of the NFIRM `.zip` to the `dgTool` folder on the root of **the target 3DS**'s SD card
 4. Launch your DSiWare game on **the target 3DS**
 5. Launch dgTool using your DSiWare game
-  + **Fieldrunners**: Touch the 'Scores' button at the main menu
-  + **Legends of Exidia**: After pressing (A) or (Start) at the two title screens, select the first save slot and press continue
-  + **Guitar Rock Tour**: Scroll down and go to High-Scores -> Drums -> Easy
-  + **The Legend of Zelda: Four Swords (Anniversary Edition)**: Just start the game
-  + If your game does not have the hacked save file installed, [follow this troubleshooting guide](troubleshooting#ts_dsiware)
+  + **Fieldrunners**: Toca el boton 'Scores' en el menú principal
+  + **Legends of Exidia**: Despues de presionar (A) o (Start) en las dos pantallas de inicio, selecciona el primer archivo guardado y selecciona Continue
+  + **Guitar Rock Tour**: Desplazate hacia abajo y selecciona High-Scores -> Drums -> Easy
+  + **The Legend of Zelda: Four Swords (Anniversary Edition)**: Solo inicia el juego
+  + Si el juego no inicia dgTool, [sigue esta guía de solución de problemas](troubleshooting#ts_dsiware)
 6. Select "Dump f0f1" to backup **the target 3DS**'s NFIRM
   + This will take a while
 7. Deja que acabe el proceso de ctrtransfer, esto llevará un tiempo. Make note of the NFIRM backup's location
@@ -226,10 +226,10 @@ This backup can only be used on this NAND. If you format your 3DS or restore ano
 
 1. Launch your DSiWare game on **the target 3DS**
 2. Launch dgTool using your DSiWare game
-  + **Fieldrunners**: Touch the 'Scores' button at the main menu
-  + **Legends of Exidia**: After pressing (A) or (Start) at the two title screens, select the first save slot and press continue
-  + **Guitar Rock Tour**: Scroll down and go to High-Scores -> Drums -> Easy
-  + **The Legend of Zelda: Four Swords (Anniversary Edition)**: Just start the game
+  + **Fieldrunners**: Toca el boton 'Scores' en el menú principal
+  + **Legends of Exidia**: Despues de presionar (A) o (Start) en las dos pantallas de inicio, selecciona el primer archivo guardado y selecciona Continue
+  + **Guitar Rock Tour**: Desplazate hacia abajo y selecciona High-Scores -> Drums -> Easy
+  + **The Legend of Zelda: Four Swords (Anniversary Edition)**: Solo inicia el juego
 3. Select "Downgrade FIRM to 10.4" and confirm to flash the 10.4.0 NFIRM bin to **the target 3DS**
 4. Exit dgTool
   + You may have to force power off by holding the power button
