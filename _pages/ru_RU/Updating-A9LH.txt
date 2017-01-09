@@ -5,7 +5,8 @@ lang: ru_RU
 ref: updating-a9lh
 ---
 
-### Last Update: 3 Nov 2016
+### Последнее обновление: 3 ноября 2016
+### Переведено: 09 января 2017
 
 Собственно процесс установки arm9loaderhax подразумевает установку загрузчика, который на лету изменяет файлы, расположенные в системном разделе на NAND-чипе приставки, который припаян к самой материнской плате. Эти загрузчики обновляются редко и нужны только для запуска `arm9loaderhax.bin` с SD-карты, которая, в нашем случае, есть ни что иное как Luma3DS.
 {: .notice}
@@ -19,7 +20,7 @@ ref: updating-a9lh
 Если вы используете загрузчик, не инициализирующий экран (например Bootanim9), следует переименовать его в `arm9loaderhax_si.bin` вместо `arm9loaderhax.bin`
 {: .notice--info}
 
-The versions of data_input only refer to revisions of the `.zip` to be compatible with different installer versions, and are *not* the same thing as updating a9lh itself (the payload files). They make no practical difference beyond the installation process.
+Лишь после установки arm9loaderhax на o3ds можно использовать `data_input_v4`. Первоначальная установка a9lh на old3ds требует `data_input_v3` для совместимости со старой версией SafeA9LHInstaller, которую можно запустить через браузер. Версия в названии архива относится лишь к версии самого архива и не коррелирует с версий загрузчика.
 {: .notice--info}
 
 Эта инструкция также обновит некоторые пэйлоды и базу ключей AES.
@@ -29,66 +30,66 @@ The versions of data_input only refer to revisions of the `.zip` to be compatibl
 
 * [`aeskeydb.bin`](magnet:?xt=urn:btih:18b3a17f78e2376e05feaa150749d9fd689b25dc&dn=aeskeydb.bin&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 * [`data_input_v4.zip`](magnet:?xt=urn:btih:00f03ff69b5961307303d5e4778a2f65a528bf2d&dn=data%5Finput%5Fv4.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(the `.7z` file)*
-* The latest release of [arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(the `.7z` file)*
-* The latest release of [SafeA9LHInstaller](https://github.com/AuroraWright/SafeA9LHInstaller/releases/latest) *(the `.7z` file)*
-* The latest release of [Hourglass9](https://github.com/d0k3/Hourglass9/releases/latest)
+* Свежая версия [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z`-файл)*
+* Свежая версия [arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(`.7z`-файл)*
+* Свежая версия [SafeA9LHInstaller](https://github.com/AuroraWright/SafeA9LHInstaller/releases/latest) *(`.7z`-файл)*
+* Свежая версия [Hourglass9](https://github.com/d0k3/Hourglass9/releases/latest)
 
-#### Instructions
+#### Инструкция
 
 **Для всех шагов в этой инструкции ПЕРЕЗАПИСЫВАЙТЕ любые существующие файлы на вашей карте памяти.**
 
-##### Этап I - Подготовка
+##### Часть I - Подготовка к работе
 
-1. Delete any existing `aeskeydb.bin` from the root of your SD card
-2. Delete the `a9lh` folder from the root of your SD card if it exists
-3. Copy `aeskeydb.bin` to the `/files9/` folder on your SD card
-4. Copy `Hourglass9.bin` from the Hourglass9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `Hourglass9.bin` to `start_Hourglass9.bin`
-5. Copy `arm9loaderhax.bin` from the SafeA9LHInstaller `.zip` to the `/luma/payloads/` folder on your SD card
-6. Rename `arm9loaderhax.bin` in `/luma/payloads/` to `down_safea9lhinstaller.bin`
-7. Copy the `a9lh` folder from `data_input_v4.zip` to the root of your SD Card
-8. Copy _the contents of_ the arm9loaderhax `.zip` to `a9lh` folder on your SD card
-9. Copy `arm9loaderhax.bin` from the Luma3DS `.zip` to the root of your SD card, overwrite existing files
-10. Reinsert your SD card into your 3DS
+1. Удалите `aeskeydb.bin` из корня вашей карты памяти
+2. Удалите папку `a9lh` из корня карты памяти, если она есть
+3. Скопируйте `aeskeydb.bin` в папку `/files9/` вашей карты памяти
+4. Скопируйте `Hourglass9.bin` из архива Hourglass9 в папку `/luma/payloads/` в корне КП и переименуйте `Hourglass9.bin` в `start_Hourglass9.bin`
+5. Скопируйте `arm9loaderhax.bin` из архива SafeA9LHInstaller в папку `/luma/payloads/`
+6. Переименуйте `arm9loaderhax.bin` в `down_safea9lhinstaller.bin`
+7. Скопируйте папку`a9lh` из архива `data_input_v3.zip` в корень карты памяти
+8. Скопируйте содержимое архива arm9loaderhax (release.7z) в папку `a9lh` в корне КП
+9. Скопируйте `arm9loaderhax.bin` из архива Luma3DS в корень карты памяти с заменой
+10. Вставьте SD-карту обратно в 3DS
 
-##### Section II - Payload update
+##### Часть II - Обновление загрузчика
 
-1. Boot the device while holding D-Pad down
-2. Press (Select) to update arm9loaderhax
-3. Power off the device and put your SD card back in your computer
-4. Delete the `a9lh` folder from the root of your SD card
-5. Delete `down_safea9lhinstaller.bin` from `/luma/payloads/`
+1. Отключите питание, зажмите кнопку (ВНИЗ) и, не отпуская кнопку, включите приставку
+2. Нажмите (SELECT), чтобы обновить arm9loaderhax
+3. Отключите приставку и вновь вставьте КП в компьютер
+4. Удалите папку `a9lh` из корня карты памяти
+5. Удалите `down_safea9lhinstaller.bin` из папки `/luma/payloads/`
 
-##### Section III - Configuring Luma3DS
+##### Часть III - Настройка Luma3DS
 
-1. Reinsert your SD card into your 3DS and boot holding (Select)
-2. Use the (A) button and the D-Pad to turn on the following:    
+1. Вставьте карту обратно в 3DS и включите консоль, не отпуская кнопку (SELECT)
+2. С помощью кнопки (А) отметьте следующие пункты:    
   + **"Autoboot SysNAND"**
   + **"Use SysNAND FIRM if booting with R"**
   + **"Show NAND or user string in System Settings"**
-3. If you are using a **New 3DS**, you should *also* enable the following:
+3. Если у вас **New 3DS**, так же отметьте следующие пункты:
   + **"New 3DS CPU" to "Clock+L2(x)"**
-    + This will increase the framerate of many games, but may cause instability in others
-    + If some games do not work properly, disable this option and try again
-4. Press Start to save and reboot
+    + Это увеличит частоту кадров в некоторых играх
+    + Если какие-то игры работают некорректно, отключите эту опцию
+4. Нажмите (START), чтобы сохранить настройки и перезагрузиться
 
-##### Section IV - CTRNAND Luma3DS
+### Часть IV - CTRNAND Luma3DS
 
-1. Запустите FBI.
-2. Перейдите в папку "SD".
-3. Navigate to `arm9loaderhax.bin`, then press (A) on it and select the "Copy" option
-4. Return to the FBI main menu with (B)
-5. Select "CTR NAND"
-6. Select "\<current directory>"
-7. Select the "Paste" option, then press (A) to confirm
-8. Exit with the home button
-9. Power off your 3DS and remove the SD card
-10. Boot with the SD card removed while holding (Select)
-  + Booting the device at least once with the SD card removed will allow you to configure the CTRNAND based luma installation
-11. Use the (A) button and the D-Pad to turn on the following:    
+1. Запустите FBI
+2. Перейдите в папку "SD"
+3. Перейдите к файлу `arm9loaderhax.bin`, нажмите (A) и выберите “Copy”
+4. Нажмите (B), чтобы вернуться в главное меню FBI
+5. Выберите "CTR NAND"
+6. Наведите курсор на строку "\<current directory>" и нажмите (А)
+7. Нажмите "Paste", затем нажмите (A) для подтверждения
+8. Выйдите из FBI нажатием кнопки (HOME)
+9. Выключите 3DS и извлеките карту памяти
+10. Включите устройство без карты памяти и с зажатой кнопкой (SELECT)
+  + Необходимо хотя бы раз загрузиться без карты памяти, чтобы настроить прошивку, расположенную в CTRNAND
+11. С помощью кнопки (А) отметьте следующие пункты:    
   + **"Show NAND or user string in System Settings"**
-12. If you are using a **New 3DS**, you should *also* enable the following:
+12. Если у вас **New 3DS**, так же отметьте следующие пункты:
   + **"New 3DS CPU" to "Clock+L2(x)"**
-    + This will increase the framerate of many games, but may cause instability in others
-    + If some games do not work properly, disable this option and try again
-13. Reinsert your SD card, then press Start to save and reboot!
+    + Это увеличит частоту кадров в некоторых играх
+    + Если какие-то игры работают некорректно, отключите эту опцию
+13. Вставьте карту памяти в приставку и нажмите (START) для того, чтобы сохранить настройки и перезагрузить приставку
