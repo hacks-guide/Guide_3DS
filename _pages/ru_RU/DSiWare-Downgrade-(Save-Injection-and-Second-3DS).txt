@@ -1,33 +1,33 @@
 ---
-title: "Понижение прошивки при помощи DSiWare (инжект сохранения при участии второй 3DS)"
+title: "DSiWare Downgrade (Save Injection and Second 3DS)"
 permalink: /dsiware-downgrade-(save-injection-and-second-3ds).html
-lang: ru_RU
+lang: en_US
 ref: dsiware-downgrade-(save-injection-and-second-3ds)
 ---
 
-**Это инструкция полезна только тем, у кого есть купленные "Fieldrunners", "Legends of Exidia", "Guitar Rock Tour", или "The Legend of Zelda: Four Swords (Anniversary Edition)" на исходной 3DS. Каждая из этих игр уже удалена из eShop, именно поэтому для продолжения игра должна быть уже купленной.**
+**They are only useful if you already own "Fieldrunners", "Legends of Exidia", "Guitar Rock Tour", or "The Legend of Zelda: Four Swords (Anniversary Edition)" on the source 3DS. Each game has been pulled from the eShop; you must have already gotten them.**
 {: .notice--primary}
 
-Если ваша прошивка 11.0.0, 11.1.0, или 11.2.0, то вы можете понизить версию NATIVE_FIRM, используя DSiWare и вторую 3DS с установленной кастомной прошивкой.
+If you are between versions 11.0.0 and 11.2.0, you can follow this guide to downgrade your NATIVE_FIRM using DSiWare and a second 3DS which has already has a Custom Firmware installed on it in order to dump and restore your NAND.
 {: .notice}
 
-Если на любой из консолей у вас прошивка ниже, чем 11.2.0, то следует пройти шаги с ctr-httpwn на каждом девайсе с такой прошивкой, чтобы заработала Передача данных (System Transfer).
+If you are below 11.2.0 on either device, then you should do the ctr-httpwn steps (when prompted) on each device under 11.2.0 to allow you to System Transfer with them.
 {: .notice--info}
 
-Этот метод использует уязвимость, которая позволяет DSiWare-приложениям писать и читать в любом месте NAND.
+This takes advantage of an oversight which allows DSiWare titles to read and write anywhere in NAND.
 {: .notice--info}
 
-Это рабочая реализация "FIRM partitions known-plaintext"-эксплойта. Подробнее о нем [здесь](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws).
 {: .notice--info}
 
-Гайд предполагает наличие прошитой arm9loaderhax 3DS с кастомной прошивкой, настроенной по этому же гайду, однако, все нижесказанное заработает и с EmuNAND (правда, с небольшими правками: просто делайте все пункты не в SysNAND, а в EmuNAND). Помните, что RedNAND и EmuNAND - слегка разные реализации одного и того же [концепта](http://3dbrew.org/wiki/NAND_Redirection).
+This guide will assume the CFW 3DS is running arm9loaderhax and was setup with this guide, but will work (with slight modifications such as doing all SysNAND steps on EmuNAND) on systems running an EmuNAND. Note that the terms EmuNAND and RedNAND refer to slightly different implementations of [the same concept](http://3dbrew.org/wiki/NAND_Redirection).
 {: .notice--info}
 
-Ваше DSiWare-сохранение будет скопировано перед тем, как будет заменено взломанным сохранением.
+Your DSiWare's save will be backed up before getting replaced by the hacked save.
 {: .notice--info}
 
 {% capture notice-4 %}
-Этот метод требует от вас произвести Передачу данных системы ([System Transfer](http://en-americas-support.nintendo.com/app/answers/detail/a_id/13996/)) из приставки с кастомной прошивкой на приставку со стоковой прошивкой. Перенос данных будет работать *только* в одном из следующих направлений:    
+This exploit requires you to [System Transfer](http://en-americas-support.nintendo.com/app/answers/detail/a_id/13996/) from a CFW 3DS to a stock 3DS as part of the steps. System Transfers will work in the following directions *only*:    
   + New 3DS -> New 3DS    
   + Old 3DS or 2DS -> Old 3DS or 2DS    
   + Old 3DS or 2DS -> New 3DS    
@@ -35,35 +35,35 @@ ref: dsiware-downgrade-(save-injection-and-second-3ds)
 
 <div class="notice--warning">{{ notice-4 | markdownify }}</div>
 
-Обе приставки должны быть одного региона.
+Both systems MUST be from the same region.
 {: .notice--warning}
 
-**Вы лишитесь всех данных на _целевой 3DS_!** Заранее озаботьтесь резервными копиями, если в этом есть необходимость
+**The _target 3DS_ will have all of its data erased!**
 {: .notice--danger}
 
-NNID из исходной 3DS будет находится в целевой 3DS до тех пор, пока вы не перенесете его назад в исходную консоль, либо не позвоните в Nintendo (подробности в инструкции).
+The source 3DS's NNID will be stuck on the target 3DS unless you either system transfer back or call Nintendo! (details in the instructions)
 {: .notice--danger}
 
-Перенос системы можно делать лишь раз в неделю для одного NNID.
+System Transfers can only be performed once a week.
 {: .notice--danger}
 
-#### Что вам понадобится
+#### What you need
 
-* Две приставки
-  + **Исходная 3DS**: 3DS с кастомной прошивкой (arm9loaderhax, либо прошивка с EmuNAND/RedNAND) *с последней версией системного ПО*. Убедитесь, что помните пароль от Nintendo Network, без него вы не сможете сделать перенос данных
-  + **Целевая 3DS**: 3DS с официальной прошивкой *(в диапазоне между 11.0.0 и 11.2.0)*.
-* Купленная и установленная DSiWare игра из списка ниже (пиратская копия **не** будет работать) на **исходной 3DS**
-  + ** Fieldrunners **
+* Two 3DS systems
+  + **The source 3DS**: the 3DS running some kind of custom firmware (arm9loaderhax or some form of EmuNAND/RedNAND) *on the latest version*
+  + **The target 3DS**: the 3DS on stock firmware *(between 11.0.0 and 11.2.0)*
+* Already own (and install) one of the following exploitable DSiWare games (a pirated copy of the game will **not** work) on **the source 3DS**
+  + **Fieldrunners**
   + **Legends of Exidia**
   + **Guitar Rock Tour**  
   + **The Legend of Zelda: Four Swords (Anniversary Edition)**  
-* Точка входа из части [Homebrew Launcher (SoundHax)](homebrew-launcher-(soundhax)) или [Homebrew Launcher (не используя браузер)](homebrew-launcher-(no-browser))
+* An entrypoint from [Homebrew Launcher (SoundHax)](homebrew-launcher-(soundhax)) or [Homebrew Launcher (No Browser)](homebrew-launcher-(no-browser))
 * [`4B51394A.zip`](images/4B51394A.zip)
-* Свежая версия [3ds_dsiwarehax_installer](https://github.com/yellows8/3ds_dsiwarehax_installer/releases)
-* Свежая версия [3DSident](https://github.com/joel16/3DSident/releases/latest)
-* Свежая версия [FBI](https://github.com/Steveice10/FBI/releases/latest)
-* Свежая версия [dgTool](https://github.com/Plailect/dgTool/releases/latest)
-* Архив с NFIRM, соответствующий версии **целевой 3DS**:
+* The latest release of [3ds_dsiwarehax_installer](https://github.com/yellows8/3ds_dsiwarehax_installer/releases/latest)
+* The latest release of [3DSident](https://github.com/joel16/3DSident/releases/latest)
+* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest)
+* The latest release of [dgTool](https://github.com/Plailect/dgTool/releases/latest)
+* The NFIRM `.zip` corresponding to the device and version of **the target 3DS**:
   + [New 3DS 11.0.0](magnet:?xt=urn:btih:2d13a5ea1570f911bd5c6423e0c30e51d548837a&dn=11.0.0%5Fto%5F10.4.0%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
   + [Old 3DS 11.0.0](magnet:?xt=urn:btih:72393bbd99bc285db84a9cabf39d9b3200058d6a&dn=11.0.0%5Fto%5F10.4.0%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
   ~    
@@ -72,16 +72,16 @@ NNID из исходной 3DS будет находится в целевой 3
   ~        
   + [New 3DS 11.2.0](magnet:?xt=urn:btih:881388a552a1ce9a963d391bf1a023642270991c&dn=11.2.0%5Fto%5F10.4.0%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
   + [Old 3DS 11.2.0](magnet:?xt=urn:btih:a479e4ee55efbc18c181d426cd77a34815388151&dn=11.2.0%5Fto%5F10.4.0%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)    
-* Если версия системного ПО на **целевой 3DS** ниже, чем 11.2.0, вам так же придется воспользоваться
-  + Свежей версией [ctr-httpwn](https://github.com/yellows8/ctr-httpwn/releases/latest)
+* If **the target 3DS** is below 11.2.0, you will _also_ need the following
+  + The latest release of [ctr-httpwn](https://github.com/yellows8/ctr-httpwn/releases/latest)
 
-#### Инструкция
+#### Instructions
 
-##### Часть I - Подготовка к работе
+##### Section I - Prep Work
 
-1. Создайте папку `files9` в корне карты памяти **исходной 3DS**, если таковой не имеется
-2. **Используйте [save manager](https://github.com/J-D-K/JKSM/releases/latest) для того, чтобы сделать резервные копии всех важных сейвов на целевой 3DS (приставка будет отформатирована!)**
-3. Скопируйте `public.sav` из папки `/dsiware/(8-ми значный ID)/` из архива `3ds_dsiwarehax_installer`, в корень карты памяти **исходной 3DS** (8-ми значный ID, соответствующий каждой игре и региону описан ниже)
+1. Create a folder named `files9` on the root of **the source 3DS**'s SD card if it does not already exist
+2. **Use a [save manager](https://github.com/J-D-K/JKSM/releases/latest) to backup any saves you care about on the target 3DS (it will be formatted!)**
+3. Copy the relevant `public.sav` from the `/dsiware/(8 Character ID)/` folder in the 3ds_dsiwarehax_installer `.zip` to the root of **the source 3DS**'s SD card
   + **Fieldrunners USA Region**: `4b464445`
   + **Fieldrunners EUR Region**: `4b464456`
   + **Legends of Exidia USA Region**: `4b4c4545`
@@ -91,41 +91,41 @@ NNID из исходной 3DS будет находится в целевой 3
   + **Guitar Rock Tour USA Region**: `4b475245`
   + **The Legend of Zelda: Four Swords (Anniversary Edition) EUR Region**: `4b513956`   
   + **The Legend of Zelda: Four Swords (Anniversary Edition) USA Region**: `4b513945`    
-  + Если вы используете **The Legend of Zelda: Four Swords (Anniversary Edition) JPN Region**, скопируйте `public.sav` из папки `4B51394A` из архива `4B51394A.zip` в корень карты памяти.
-4. Вставьте карту памяти в **исходную 3DS**
-5. На **исходной 3DS** удерживайте (START) во время загрузки приставки, чтобы попасть в Hourglass9
-6. Перейдите в SysNAND Options, SysNAND Backup/Restore, затем сделайте бекап **(min size)** SysNAND в `NANDmin.bin`
-7. Нажмите (SELECT) в главном меню, чтобы извлечь КП из **исходной 3DS**, а затем вставьте ее в ПК
-8. Скопируйте `NANDmin.bin` и `NANDmin.bin.sha` из папки `/files9/` на карте памяти в надежное место
-  + В целях безопасности, сохраните копии этих файлов на нескольких устройствах и/или вашем хранилище в интернете
-  + В случае возникновления проблем в будущем, эти файлы позволят спасти вашу консоль
-  + **Размер этих файлов должен совпадать с указанными на [этой](nand-size) странице. Если размеры не совпадают, вам следует удалить эти файлы и попытаться создать их заново!**
-9. Вставьте карту памяти из **целевой 3DS** в компьютер
-10. **Сохраните файлы с обеих карт памяти в разные папки на компьютере (назовите папки таким образом, чтобы понимать какие файлы откуда)!**
-11. Верните обе карты памяти на места (не перепутайте)
-12. Нажмите (START) для перезагрузки
+  + If you are using **The Legend of Zelda: Four Swords (Anniversary Edition) JPN Region**, copy `public.sav` from the `4B51394A` folder in `4B51394A.zip` to the root of your SD card.
+4. Reinsert **the source 3DS**'s SD card
+5. On **the source 3DS**, hold (Start) on boot to launch Hourglass9
+6. Go to SysNAND Options, then SysNAND Backup/Restore, then backup **(min size)** SysNAND to `NANDmin.bin`
+7. Press (Select) on the main menu to eject **the source 3DS**'s SD card, then put it in your computer
+8. Copy `NANDmin.bin` and `NANDmin.bin.sha` from the `/files9/` folder on your SD card to a safe location
+  + Make backups in multiple locations
+  + This backup will save you from a brick if anything goes wrong in the future
+  + **Your backup should match one of the sizes on [this](nand-size) page; if it does not, you should delete it and make a new one!**
+9. Put **the target 3DS**'s SD card into your computer
+10. **Backup every file on both 3DS's SD cards to two separate folders on your computer (keep track of which is which)!**
+11. Reinsert each SD card back into their corresponding 3DS
+12. Press (Start) to reboot
 
-##### Часть II - Резервное копирование DsiWare
+##### Section II - Backup DSiWare
 
-После того, как вы окончите выполнение инструкций, созданная в этой части резервная копия может быть использована для восстановления сохранений DSiWare-игр. Удалите DSiWare-игры из системной памяти и восстановите их же из карты памяти.
+After completing the entire guide, you can use this backup to restore your DSiWare saves by deleting the DSiWare from your System Memory and copying it from your SD Card.
 {: .notice--info}
 
-Сделанный бекап может быть использован только на том NAND, на котором был создан. Если вы отформатируете 3DS, или восстановите другой NAND, (особенно если `movable.sed` был изменен), резервная копия станет бесполезной.
+This backup can only be used on this NAND. If you format your 3DS or restore another NAND (specifically if `movable.sed` is ever modified), it will become unusable.
 {: .notice--info}
 
-1. Перейдите в Системные настройки (System Settings), Управление данными (Data Management), "DSiWare" на **исходной 3DS**
-2. Скопируйте все DSiWare-игры, которые уже есть на КП в системную память
-3. Скопируйте DSiWare-игру, которую планируете использовать, на карту памяти
-4. Покиньте системное меню
+1. Go to System Settings, then "Data Management", then "DSiWare" on **the source 3DS**
+2. Copy any DSiWare games that are already on the SD Card back to the System Memory
+3. Copy the DSiWare game you intend to use to the SD Card
+4. Exit System Settings
 
-##### Часть III - Установка сохранения
+##### Section III - Installing the save
 
-1. Запустите FBI на **исходной 3DS**
-2. Перейдите в `SD`
-3. Нажмите (A) на `public.sav` и скопируйте его
-4. Нажмите (B) для возврата в главное меню программы
-5. Перейдите к `TWL NAND` -> `title` -> `00030004`
-6. Перейдите в папку, соответствующую вашей игре и региону:
+1. Launch FBI on **the source 3DS**
+2. Navigate to `SD`
+3. Press (A) on `public.sav` and copy it
+4. Press (B) to get back to the main menu
+5. Navigate to `TWL NAND` -> `title` -> `00030004`
+6. Navigate to the folder for your game and region:
   + **Fieldrunners USA Region**: `4b464445`
   + **Fieldrunners EUR Region**: `4b464456`
   + **Legends of Exidia USA Region**: `4b4c4545`
@@ -135,121 +135,119 @@ NNID из исходной 3DS будет находится в целевой 3
   + **Guitar Rock Tour USA Region**: `4b475245`    
   + **The Legend of Zelda: Four Swords (Anniversary Edition) EUR Region**: `4b513956`   
   + **The Legend of Zelda: Four Swords (Anniversary Edition) USA Region**: `4b513945`    
-7. Перейдите в папку `data`
-8. Нажмите (A) на существующем `public.sav` и удалите его
-9. Нажмите (A) на строке `<current directory>` и вставьте `public.sav`
-10. Нажмите (B) для возврата в главное меню программы
-11. Нажмите (START) для выхода
-12. Запустите DSiWare-игру на **исходной 3DS**
-13. Проверьте, работает ли импортированное сохранение
-  + **Fieldrunners**: коснитесь кнопки 'Scores' в главном меню
-  + **Legends of Exidia**: после того, как нажмете (A) или (Start) и пропустите два игровых экрана, выберите первый слот сохранения и нажмите продолжить (continue)
-  + **Guitar Rock Tour**: листайте вниз и перейдите в High-Scores -> Drums -> Easy    
-  + **The Legend of Zelda: Four Swords (Anniversary Edition)**: Просто начните игру
-  + Если игра падает с ошибкой, касающейся `boot.nds`, либо просто выскакиевает белый экран, **значит эксплойт работает и все в порядке!**
-  + Если игра работает нормально безо всяких ошибок, значит вы где-то допустили оплошность и неверно установили файл сохранения
-  + Если выскакивает черный экран, обратитесь к разделу с [проблемами и их решениями](troubleshooting#twl_broken)
+7. Navigate to the `data` folder
+8. Press (A) on the existing `public.sav` and delete it
+9. Press (A) on the current directory and paste `public.sav`
+10. Press (B) to get back to the main menu
+11. Press (Start) to exit
+12. Launch your DSiWare game on **the source 3DS**
+13. Test if the save is functional
+  + **Fieldrunners**: Touch the 'Scores' button at the main menu
+  + **Legends of Exidia**: After pressing (A) or (Start) at the two title screens, select the first save slot and press continue
+  + **Guitar Rock Tour**: Scroll down and go to High-Scores -> Drums -> Easy    
+  + **The Legend of Zelda: Four Swords (Anniversary Edition)**: Just start the game
+  + If your game has an error about `boot.nds` or a white screen, **then the exploit has been successful**
+  + If your game behaves normally and does not give you this error, then you should stop and figure out what went wrong
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#twl_broken)
 
-##### Часть IV - ctr-httpwn
+##### Section IV - ctr-httpwn
 
-Эта часть нужна только в том случае, если прошивка _целевой 3DS_ ниже, чем 11.2.0.
-{: .notice--info}
+**This section is only required if _the target 3DS_ is under 11.2.0.**
 
-Эта часть позволит провести перенос системы, даже в том случае, если ваша прошивка ниже последней.
-{: .notice--info}
+**This will allow you to system transfer on versions other than the latest.**
 
-1. Скопируйте и объедините папку `3ds` из архива ctr-httpwn в корень карты памяти **целевой 3DS**
-2. Верните карту памяти назад в **целевую 3DS**
-3. Запустите Homebrew launcher на устройстве используя способы, описанные в [Homebrew Launcher (не используя браузер)](Homebrew-launcher-(no-browser))
-  + **На New 3DSs с версией системного ПО 10.7.0 и 11.0.0 можете для этого использовать [Homebrew Launcher (используя браузер)](homebrew-launcher-(browser))**
-  + **Убедитесь, что в системе не установлен menuhax, иначе вы не сможете вернуться на домашний экран из Homebrew launcher**
-4. Запустите ctr-httpwn на **целевой 3DS**
-5. Нажмите (A), чтобы продолжить
-6. Нажмите (START), чтобы выйти из ctr-httpwn
-7. Нажмите (START), чтобы открыть меню Homebrew launcher
-8. Нажмите (X), чтобы вернуться на домашний экран без перезагрузки
-  + Может выскочить ошибка "Произошла ошибка" (Error has occurred). Так бывает, просто нажмите (A), чтобы продолжить
-9. Переходите к следующей части **без перезагрузки**
-  + **Целевая 3DS** временно пропатчена для доступа к сетевым функциям без проверки номера установленной прошивки
-  + Помните, что выход из Системных настроек перезагружает приставку
-  + Если вы перезагрузили приставку, то следует повторно запустить ctr-httpwn, иначе Перенос системы не будет работать
+1. Copy and merge the `3ds` folder from the ctr-httpwn `.zip` to **the target 3DS**'s SD card
+2. Reinsert your SD card into **the target 3DS**
+3. Launch the homebrew launcher on the device using [Homebrew Launcher (No Browser)](homebrew-launcher-(no-browser))
+  + **New 3DSs on versions 10.7.0 and 11.0.0 can use [Homebrew Launcher (Browser)](homebrew-launcher-(browser)) instead**
+  + **Ensure menuhax is not installed, or you won't be able to return to Home Menu from the homebrew launcher**
+4. Launch ctr-httpwn on **the target 3DS**
+5. Press (A) to continue
+6. Press (Start) to exit ctr-httpwn
+7. Press (Start) to open the homebrew launcher exit menu
+8. Press (X) to Return to Home Menu (no reboot)
+  + You may get an "Error has occurred" message with the option to continue. This is fine, just hit (A)
+9. Continue to the next section **without rebooting**
+  + **the target 3DS** has been temporarily patched to allow network functions (such as System Transfer) without running the latest system version
+  + Keep in mind that exiting the System Settings will reboot the system
+  + If the system is rebooted, you'll have to re-run ctr-httpwn before System Transfer will work
 
-##### Часть V - Перенос системы
+##### Section V - System Transfer
 
-1. **Сохраните файлы с обеих карт памяти в разные папки на компьютере (назовите папки таким образом, чтобы понимать какие файлы откуда)!**
-2. Верните обе карты памяти на места (не перепутайте)
-3. Если на **целевой 3DS** есть Nintendo Network ID, отформатируйте приставку, используя Системные настройки:
-  + Перейдите на последнюю вкладку меню "Прочие настройки" (Other Settings), выберите пункт "Форматировать" (Format System Memory), следуйте инструкциям на экране
-4. Прочитайте внимательно:
-  + Ваша 3DS с CFW = "Исходная система"
-  + Ваша 3DS с официальной прошивкой = "Целевая система"
-  + **Переместите DSiWare по запросу!**
-  + **НЕ** удаляйте содержимое карты памяти на исходной системе, даже по запросу
-  + Убедитесь, что обе приставки заряжены и батарея не сядет ни у одной из них во время передачи данных
-  + При запросе на выбор метода переноса данных с карты памяти в случае переноса данных с 2DS/Old 3DS (исходная) на New 3DS (целевая):
-    **НЕ** выбирайте "Low-Capacity microSD Card Transfer" (опция 2), при таком варианте перенесутся только тикеты, а DSiWare-игры и, что важно, их сохранения - нет.
-    + Быстрый способ: Выберите "PC-Based Transfer" (опция 3) и по запросу на экране приставке, скопировать содержимое карты памяти из исходной консоли на карту памяти целевой приставки (если у вас на old3ds\2ds стоит micro SD с переходником, можно просто переставить карту).
-    + Медленный способ: Выберите "Wireless Transfer" (опция 1) для долгого переноса **полного** содержимого карты памяти в целевую приставку по воздуху.
-5. Перейдите по [этой ссылке](http://www.nintendo.ru/-/Nintendo-2DS-Nintendo-3DS/-Nintendo-3DS-Nintendo-3DS-XL-/-Nintendo-3DS-Nintendo-3DS-XL/-Nintendo-3DS-Nintendo-3DS-XL-592201.html) ([та же информация, но на английском](http://en-americas-support.nintendo.com/app/answers/detail/a_id/227/)) и следуйте официальным инструкциям от nintendo, держа в голове то, что вы прочитали чуть выше
+1. **Backup every file on both 3DS's SD cards to two separate folders on your computer (keep track of which is which)!**
+2. Reinsert each SD card back into their corresponding 3DS
+3. If **the target 3DS** has a Nintendo Network ID on it, you must format the device using System Settings:
+  + Go to the last page of "Other Settings" and select "Format System Memory", then follow all instructions
+4. Read the following:
+  + Your CFW 3DS = the source 3DS = "Source System"
+  + Your Stock 3DS = the target 3DS = "Target System"
+  + **Move DSiWare titles if prompted!**
+  + Do **NOT** delete the source system's SD card contents if prompted
+  + Make sure neither device's battery dies during the transfer
+  + 2DS/Old 3DS (source) to New 3DS (target) only - if asked which method you wish to use to transfer the SD card data:
+    + **Do NOT** choose the "Low-Capacity microSD Card Transfer" or minimal option (option 2), it will only transfer tickets and likely will not transfer the DSiWare save.
+    + Fast Method: If you have the ability to move the data from the SD card (source) to the microSD card (target), when prompted use the "PC-Based Transfer" option (option 3).
+    + Slowest Method: If you don't have the ability to move the data on a PC use the **full** "Wireless Transfer" option (option 1).
+5. Go to [this link](http://en-americas-support.nintendo.com/app/answers/detail/a_id/227/) and follow Nintendo's official instructions for System Transferring from one system to another while keeping in mind what you just read
 
-##### Часть VI - Восстановление исходной 3DS
+##### Section VI - Restoring the source 3DS
 
-1. На **исходной 3DS**, завершите первоначальную настройку
-2. На **исходной 3DS**, завершите первоначальную настройку
-    + Продолжайте выполнять оставшуюся часть инструкции для **целевой 3DS**, а затем подождите неделю и выполните перенос данных уже с **целевой 3DS** на **исходную** *(помните, что вы не можете перенести данные с New 3DS на Old 3DS)*
-    + Позвоните в Nintendo и скажите им, что у вас больше нет доступа к устройству, к которому привязан ваш NNID (в нашем случае, это уже **целевая 3DS**) и вы бы хотели	привязать аккаунт новому устройству (в нашем случае, это **исходная 3DS**)
-3. Перезагрузите **исходную 3DS**, удерживайте (START) во время загрузки устройства, чтобы запустить Hourglass9
-4. Перейдите в SysNAND Backup/Restore восстановите SysNAND из файла `NANDmin.bin`
+1. On **the source 3DS**, complete initial setup
+2. Do one of the following *(or neither if you don't mind __the source 3DS__'s NNID being nonfunctional)*
+    + Do the rest of the sections and then the full guide on **the target 3DS**, then wait one week, then System Transfer from **the target 3DS** back to **the source 3DS** *(remember you cannot transfer back from a New 3DS to an Old 3DS)*
+    + Call Nintendo and tell them you no longer have access to the device that your NNID is linked to (which is **the target 3DS** in this case), and would like it linked to a different device (which is **the source 3DS** in this case)
+3. Reboot **the source 3DS** while holding Start to launch Hourglass9
+4. Go to SysNAND Backup/Restore and restore SysNAND from `NANDmin.bin`
 
-##### Часть VII - Резервное копирование прошивки целевой 3DS
+##### Section VII - Backing up the target 3DS's NFIRM
 
-1. 1. Скопируйте `boot.nds` от dgTools в корень карты памяти **целевой 3DS**
-2. Создайте папку `dgTool` в корне карты памяти **целевой 3DS**, если таковой там нет
-3. Скопируйте содержимое архива с NFIRM (11.y.y_to_10.4.0_x3ds.zip) в папку `dgTool` в корне **целевой 3DS**
-4. Запустите установленную DSiWare игру на **целевой 3DS**
-5. Запустите dgTool, используя установленную DSiWare-игру
-  + **Fieldrunners**: коснитесь кнопки 'Scores' в главном меню
-  + **Legends of Exidia**: после того, как нажмете (A) или (Start) и пропустите два игровых экрана, выберите первый слот сохранения и нажмите продолжить (continue)
-  + **Guitar Rock Tour**: листайте вниз и перейдите в High-Scores -> Drums -> Easy
-  + **The Legend of Zelda: Four Swords (Anniversary Edition)**: Просто начните игру
-  + Если у игры нет установленного хакнутого сохранения обратитесь к разделу с [проблемами и их решениями](troubleshooting#ts_dsiware)
-6. Выберите "Dump f0f1", чтобы сделать резервную копию NFIRM **целевой 3DS**
-  + Процесс не быстрый, ожидайте
-7. Запомните место положения бекапа NFIRM
-8. Закройте dgTool
-  + При необходимости выключите приставку, удерживая кнопку питания
-9. Вставьте КП в компьютер, скопируйте `F0F1_N3DS.bin` или `F0F1_O3DS.bin` (зависит от вашей модели) в надежное место
-  + В целях безопасности, сохраните копии этих файлов на нескольких устройствах и/или вашем хранилище в интернете
-  + В случае возникновления проблем в будущем, эти файлы позволят спасти вашу консоль
+1. Copy the dgTool `boot.nds` to the root of **the target 3DS**'s SD card
+2. Create a folder named `dgTool` on the root of **the target 3DS**'s SD card if it does not already exist
+3. Copy the contents of the NFIRM `.zip` to the `dgTool` folder on the root of **the target 3DS**'s SD card
+4. Launch your DSiWare game on **the target 3DS**
+5. Launch dgTool using your DSiWare game
+  + **Fieldrunners**: Touch the 'Scores' button at the main menu
+  + **Legends of Exidia**: After pressing (A) or (Start) at the two title screens, select the first save slot and press continue
+  + **Guitar Rock Tour**: Scroll down and go to High-Scores -> Drums -> Easy
+  + **The Legend of Zelda: Four Swords (Anniversary Edition)**: Just start the game
+  + If your game does not have the hacked save file installed, [follow this troubleshooting guide](troubleshooting#ts_dsiware)
+6. Select "Dump f0f1" to backup **the target 3DS**'s NFIRM
+  + This will take a while
+7. Make note of the NFIRM backup's location
+8. Exit dgTool
+  + You may have to force power off by holding the power button
+9. Put your SD card in your computer, then copy `F0F1_N3DS.bin` or `F0F1_O3DS.bin` (depending on your device) to a safe location
+  + Make backups in multiple locations
+  + This backup will save you from a brick if anything goes wrong in the future
 
-##### Часть VIII - Прошивка целевой 3DS
+##### Section VIII - Flashing the target 3DS's NFIRM
 
-**НЕ понижайте прошивку с помощью dgTool на приставках с установленным arm9loaderhax. Это гарантированно приведет к брику!**
+**Never downgrade with dgTool on a device that already has arm9loaderhax installed or you will BRICK!**
 
-1. Запустите установленную DSiWare игру на **целевой 3DS**
-2. Запустите dgTool, используя установленную DSiWare-игру
-  + **Fieldrunners**: коснитесь кнопки 'Scores' в главном меню
-  + **Legends of Exidia**: после того, как нажмете (A) или (Start) и пропустите два игровых экрана, выберите первый слот сохранения и нажмите продолжить (continue)
-  + **Guitar Rock Tour**: листайте вниз и перейдите в High-Scores -> Drums -> Easy
-  + **The Legend of Zelda: Four Swords (Anniversary Edition)**: Просто начните игру
-3. Выберите "Downgrade FIRM to 10.4" и подтвердите установку файлов прошивки 10.4.0 в **целевую 3DS**
-4. Закройте dgTool
-  + При необходимости выключите приставку, удерживая кнопку питания
-5. Перезагрузите приставку
+1. Launch your DSiWare game on **the target 3DS**
+2. Launch dgTool using your DSiWare game
+  + **Fieldrunners**: Touch the 'Scores' button at the main menu
+  + **Legends of Exidia**: After pressing (A) or (Start) at the two title screens, select the first save slot and press continue
+  + **Guitar Rock Tour**: Scroll down and go to High-Scores -> Drums -> Easy
+  + **The Legend of Zelda: Four Swords (Anniversary Edition)**: Just start the game
+3. Select "Downgrade FIRM to 10.4" and confirm to flash the 10.4.0 NFIRM bin to **the target 3DS**
+4. Exit dgTool
+  + You may have to force power off by holding the power button
+5. Reboot
 
-##### Часть IX - Проверка эксплойта
+##### Section IX - Exploit verification
 
-1. Скопируйте и объедините папку `3ds` из архива 3DSident в корень карты памяти **целевой 3DS**
-2. Верните карту памяти назад в **целевую 3DS**
-3. Запустите Homebrew launcher на **целевой 3DS** используя способы, описанные в [Homebrew Launcher (не используя браузер)](Homebrew-launcher-(no-browser))
-4. Запустите 3DSident
-5. Убедитесь, что в программе следующие значения совпадают:
+1. Copy and merge the `3ds` folder from the 3DSident `.zip` to **the target 3DS**'s SD card
+2. Reinsert your SD card into **the target 3DS**
+3. Launch the homebrew launcher on **the target 3DS** using [Homebrew Launcher (No Browser)](homebrew-launcher-(no-browser))
+4. Launch 3DSident
+5. Verify that the following:
   + **Kernel version**: 2.50-11
   + **FIRM version**: 2.50-11
-  + Если у вас отображаются другие значения, значит вы где-то допустили ошибку. Проделайте все с самого начала. В первую очередь убедитесь, что использовали верные архивы с NFIRM. Попробуйте прошить NFIRM повторно
+  + If either of these do not display the versions above, make sure you used the correct NFIRM zip and try flashing NFIRM again
 
-Версия прошивки, указанная в настройках **целевой 3DS** не изменится.
+**The target 3DS**'s version number will *not* have changed in the settings.
 {: .notice--info}
 
-Переходите к запуску [Decrypt9 (Homebrew Launcher)](decrypt9-(Homebrew-launcher))
+Continue to [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher))
 {: .notice--primary}
