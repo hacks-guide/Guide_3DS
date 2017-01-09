@@ -1,68 +1,69 @@
 ---
-Downgrade via DSiWare (Injeção de Save e 3DS secundário)
-lang: pt_BR
+title: "DSiWare Downgrade (Save Injection and Second 3DS)"
+permalink: /dsiware-downgrade-(save-injection-and-second-3ds).html
+lang: en_US
 ref: dsiware-downgrade-(save-injection-and-second-3ds)
 ---
 
-**Eles só são úteis se você já possuir "Fieldrunners", "Legends of Exidia", "Guitar Rock Tour", ou "The Legend of Zelda: Four Swords (Anniversary Edition)" no 3DS de origem. Cada jogo foi removido da eShop; você precisa já ter obtido eles.**
+**They are only useful if you already own "Fieldrunners", "Legends of Exidia", "Guitar Rock Tour", or "The Legend of Zelda: Four Swords (Anniversary Edition)" on the source 3DS. Each game has been pulled from the eShop; you must have already gotten them.**
 {: .notice--primary}
 
-Se você está entre as versões 11.0.0 e 11.2.0, você pode seguir este guia para fazer o downgrade da sua NATIVE_FIRM usando o DSiWare e um segundo 3DS que já possua um Custom Firmware instalado com o objetivo de despejar e restaurar sua NAND.
+If you are between versions 11.0.0 and 11.2.0, you can follow this guide to downgrade your NATIVE_FIRM using DSiWare and a second 3DS which has already has a Custom Firmware installed on it in order to dump and restore your NAND.
 {: .notice}
 
-Se você está abaixo da versão 11.2.0 em qualquer um dos dispositivos, então você deve seguir as etapas do ctr-httpwn (quando solicitado) em cada dispositivo abaixo da versão 11.2.0 para permitir-lhe que faça a Transferência de Dados com eles.
+If you are below 11.2.0 on either device, then you should do the ctr-httpwn steps (when prompted) on each device under 11.2.0 to allow you to System Transfer with them.
 {: .notice--info}
 
-Isso se aproveita de uma falha de design que permite aos títulos de DSiWare ler e escrever em qualquer lugar da NAND.
+This takes advantage of an oversight which allows DSiWare titles to read and write anywhere in NAND.
 {: .notice--info}
 
-Esta implementação funciona atualmente com base no exploit "FIRM partitions known-plaintext" detalhado [aqui](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws).
 {: .notice--info}
 
-Este guia assumirá que o 3DS com CFW está rodando arm9loaderhax e foi configurado conforme este guia, mas funcionará (com leves modificações como fazendo todas as etapas de SysNAND na EmuNAND) em sistemas rodando uma EmuNAND. Observe que os termos EmuNAND e RedNAND se referem a implementações levemente diferentes do [mesmo conceito](http://3dbrew.org/wiki/NAND_Redirection).
+This guide will assume the CFW 3DS is running arm9loaderhax and was setup with this guide, but will work (with slight modifications such as doing all SysNAND steps on EmuNAND) on systems running an EmuNAND. Note that the terms EmuNAND and RedNAND refer to slightly different implementations of [the same concept](http://3dbrew.org/wiki/NAND_Redirection).
 {: .notice--info}
 
-O save do seu DSiWare será copiado antes de ser substituído por um save hackeado.
+Your DSiWare's save will be backed up before getting replaced by the hacked save.
 {: .notice--info}
 
 {% capture notice-4 %}
-Este exploit requer que você faça uma [Transferência de Dados](http://en-americas-support.nintendo.com/app/answers/detail/a_id/13996/) de um 3DS com CFW para um 3DS padrão como parte das etapas. Transferências de Dados funcionarão *apenas* nos seguintes sentidos:    
+This exploit requires you to [System Transfer](http://en-americas-support.nintendo.com/app/answers/detail/a_id/13996/) from a CFW 3DS to a stock 3DS as part of the steps. System Transfers will work in the following directions *only*:    
   + New 3DS -> New 3DS    
-  + Old 3DS ou 2DS -> Old 3DS ou 2DS    
-  + Old 3DS ou 2DS -> New 3DS    
+  + Old 3DS or 2DS -> Old 3DS or 2DS    
+  + Old 3DS or 2DS -> New 3DS    
 {% endcapture %}
 
 <div class="notice--warning">{{ notice-4 | markdownify }}</div>
 
-Ambos os sistemas DEVEM ser da mesma região.
+Both systems MUST be from the same region.
 {: .notice--warning}
 
-**O _3DS de destino_ terá todos os seus dados apagados!**
+**The _target 3DS_ will have all of its data erased!**
 {: .notice--danger}
 
-A NNID do 3DS de origem ficará presa no 3DS de destino a menos que você ou faça a transferência de dados de volta ou ligue para a Nintendo! (detalhes nas instruções)
+The source 3DS's NNID will be stuck on the target 3DS unless you either system transfer back or call Nintendo! (details in the instructions)
 {: .notice--danger}
 
-Transferências de dados podem ser realizadas apenas uma vez por semana.
+System Transfers can only be performed once a week.
 {: .notice--danger}
 
-#### O que você precisa
+#### What you need
 
-* Dois consoles 3DSs
-  + **O 3DS de origem**: o 3DS rodando algum tipo de custom firmware (arm9loaderhax or uma forma de EmuNAND/RedNAND) *na versão mais recente*
-  + **O 3DS de destino**: o 3DS no firmware padrão *(entre 11.0.0 e 11.2.0)*
-* Já possuir (e ter instalado) um dos seguintes jogos de DSiWare exploitáveis (uma cópia pirateada do jogo **não** vai funcionar) no **3DS de origem**
+* Two 3DS systems
+  + **The source 3DS**: the 3DS running some kind of custom firmware (arm9loaderhax or some form of EmuNAND/RedNAND) *on the latest version*
+  + **The target 3DS**: the 3DS on stock firmware *(between 11.0.0 and 11.2.0)*
+* Already own (and install) one of the following exploitable DSiWare games (a pirated copy of the game will **not** work) on **the source 3DS**
   + **Fieldrunners**
   + **Legends of Exidia**
   + **Guitar Rock Tour**  
   + **The Legend of Zelda: Four Swords (Anniversary Edition)**  
-* Um ponto de entrada de [Homebrew Launcher (SoundHax)](homebrew-launcher-(soundhax)) ou [Homebrew Launcher (Sem Browser)](homebrew-launcher-(no-browser))
+* An entrypoint from [Homebrew Launcher (SoundHax)](homebrew-launcher-(soundhax)) or [Homebrew Launcher (No Browser)](homebrew-launcher-(no-browser))
 * [`4B51394A.zip`](images/4B51394A.zip)
-* A versão mais recente do [3ds_dsiwarehax_installer](https://github.com/yellows8/3ds_dsiwarehax_installer/releases/latest)
-* A versão mais recente do [3DSident](https://github.com/joel16/3DSident/releases/latest)
-* A versão mais recente do [FBI](https://github.com/Steveice10/FBI/releases/latest)
-* A versão mais recente do [dgTool](https://github.com/Plailect/dgTool/releases/latest)
-* O NFIRM `.zip` correspondente ao dispositivo e versão do **3DS de destino**:
+* The latest release of [3ds_dsiwarehax_installer](https://github.com/yellows8/3ds_dsiwarehax_installer/releases/latest)
+* The latest release of [3DSident](https://github.com/joel16/3DSident/releases/latest)
+* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest)
+* The latest release of [dgTool](https://github.com/Plailect/dgTool/releases/latest)
+* The NFIRM `.zip` corresponding to the device and version of **the target 3DS**:
   + [New 3DS 11.0.0](magnet:?xt=urn:btih:2d13a5ea1570f911bd5c6423e0c30e51d548837a&dn=11.0.0%5Fto%5F10.4.0%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
   + [Old 3DS 11.0.0](magnet:?xt=urn:btih:72393bbd99bc285db84a9cabf39d9b3200058d6a&dn=11.0.0%5Fto%5F10.4.0%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
   ~    
@@ -71,27 +72,27 @@ Transferências de dados podem ser realizadas apenas uma vez por semana.
   ~        
   + [New 3DS 11.2.0](magnet:?xt=urn:btih:881388a552a1ce9a963d391bf1a023642270991c&dn=11.2.0%5Fto%5F10.4.0%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
   + [Old 3DS 11.2.0](magnet:?xt=urn:btih:a479e4ee55efbc18c181d426cd77a34815388151&dn=11.2.0%5Fto%5F10.4.0%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)    
-* Se **o 3DS de destino** está abaixo da versão 11.2.0, você _também_ deverá fazer o seguinte
-  + A versão mais recente do [ctr-httpwn](https://github.com/yellows8/ctr-httpwn/releases/latest)
+* If **the target 3DS** is below 11.2.0, you will _also_ need the following
+  + The latest release of [ctr-httpwn](https://github.com/yellows8/ctr-httpwn/releases/latest)
 
-#### Instruções
+#### Instructions
 
-##### Seção I - Trabalho Preparatório
+##### Section I - Prep Work
 
-1. Crie uma pasta chamada `files9` na raiz do cartão SD do **3DS de origem** caso já não exista
-2. **Use um [gerenciador de saves](https://github.com/J-D-K/JKSM/releases/latest) para fazer cópia de quaisquer saves importantes no 3DS de destino (ele será formatado!)**
-3. Copie o `public.sav` relevante da pasta `/dsiware/(ID de 8 Caracteres)/` em 3ds_dsiwarehax_installer `.zip` para a raíz do cartão SD do **3DS de origem**
-  + **Fieldrunners Região EUA**: `4b464445`
-  + **Fieldrunners Região EUR**: `4b464456`
-  + **Legends of Exidia Região EUA**: `4b4c4545`
-  + **Legends of Exidia Região EUR**: `4b4c4556`
-  + **Legends of Exidia Região JPN**: `4b4c454a`
-  + **Guitar Rock Tour Região EUR**: `4b475256`
-  + **Guitar Rock Tour Região EUA**: `4b475245`
-  + **The Legend of Zelda: Four Swords (Anniversary Edition) Região EUR**: `4b513956`   
-  + **The Legend of Zelda: Four Swords (Anniversary Edition) Região EUA**: `4b513945`    
-  + Se você está usando **The Legend of Zelda: Four Swords (Anniversary Edition) Região JPN**, copie `public.sav` da pasta `4B51394A` em `4B51394A.zip` para a raiz do seu cartão SD.
-4. Reinsira o cartão SD **do 3DS de origem**
+1. Create a folder named `files9` on the root of **the source 3DS**'s SD card if it does not already exist
+2. **Use a [save manager](https://github.com/J-D-K/JKSM/releases/latest) to backup any saves you care about on the target 3DS (it will be formatted!)**
+3. Copy the relevant `public.sav` from the `/dsiware/(8 Character ID)/` folder in the 3ds_dsiwarehax_installer `.zip` to the root of **the source 3DS**'s SD card
+  + **Fieldrunners USA Region**: `4b464445`
+  + **Fieldrunners EUR Region**: `4b464456`
+  + **Legends of Exidia USA Region**: `4b4c4545`
+  + **Legends of Exidia EUR Region**: `4b4c4556`
+  + **Legends of Exidia JPN Region**: `4b4c454a`
+  + **Guitar Rock Tour EUR Region**: `4b475256`
+  + **Guitar Rock Tour USA Region**: `4b475245`
+  + **The Legend of Zelda: Four Swords (Anniversary Edition) EUR Region**: `4b513956`   
+  + **The Legend of Zelda: Four Swords (Anniversary Edition) USA Region**: `4b513945`    
+  + If you are using **The Legend of Zelda: Four Swords (Anniversary Edition) JPN Region**, copy `public.sav` from the `4B51394A` folder in `4B51394A.zip` to the root of your SD card.
+4. Reinsert **the source 3DS**'s SD card
 5. On **the source 3DS**, hold (Start) on boot to launch Hourglass9
 6. Go to SysNAND Options, then SysNAND Backup/Restore, then backup **(min size)** SysNAND to `NANDmin.bin`
 7. Press (Select) on the main menu to eject **the source 3DS**'s SD card, then put it in your computer
@@ -125,15 +126,15 @@ This backup can only be used on this NAND. If you format your 3DS or restore ano
 4. Press (B) to get back to the main menu
 5. Navigate to `TWL NAND` -> `title` -> `00030004`
 6. Navigate to the folder for your game and region:
-  + **Fieldrunners Região EUA**: `4b464445`
-  + **Fieldrunners Região EUR**: `4b464456`
-  + **Legends of Exidia Região EUA**: `4b4c4545`
-  + **Legends of Exidia Região EUR**: `4b4c4556`
-  + **Legends of Exidia Região JPN**: `4b4c454a`
-  + **Guitar Rock Tour Região EUR**: `4b475256`
-  + **Guitar Rock Tour Região EUA**: `4b475245`    
-  + **The Legend of Zelda: Four Swords (Anniversary Edition) Região EUR**: `4b513956`   
-  + **The Legend of Zelda: Four Swords (Anniversary Edition) Região EUA**: `4b513945`    
+  + **Fieldrunners USA Region**: `4b464445`
+  + **Fieldrunners EUR Region**: `4b464456`
+  + **Legends of Exidia USA Region**: `4b4c4545`
+  + **Legends of Exidia EUR Region**: `4b4c4556`
+  + **Legends of Exidia JPN Region**: `4b4c454a`
+  + **Guitar Rock Tour EUR Region**: `4b475256`
+  + **Guitar Rock Tour USA Region**: `4b475245`    
+  + **The Legend of Zelda: Four Swords (Anniversary Edition) EUR Region**: `4b513956`   
+  + **The Legend of Zelda: Four Swords (Anniversary Edition) USA Region**: `4b513945`    
 7. Navigate to the `data` folder
 8. Press (A) on the existing `public.sav` and delete it
 9. Press (A) on the current directory and paste `public.sav`
@@ -232,7 +233,7 @@ This backup can only be used on this NAND. If you format your 3DS or restore ano
 3. Select "Downgrade FIRM to 10.4" and confirm to flash the 10.4.0 NFIRM bin to **the target 3DS**
 4. Exit dgTool
   + You may have to force power off by holding the power button
-5. Faça reboot
+5. Reboot
 
 ##### Section IX - Exploit verification
 
