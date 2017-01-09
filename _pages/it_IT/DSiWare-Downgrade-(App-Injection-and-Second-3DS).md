@@ -14,7 +14,7 @@ Utilizzeremo una falla, attualmente funzionante, denominata "FIRM partitions kno
 
 Questa guida dà per scontato che il CFW del 3DS abbia già arm9loaderhax e che la sua installazione sia stata eseguita tramite questa guida, ma può funzionare (eseguendo alcune modifiche, come fare tutti i passaggi SysNAND su EmuNAND) per console che sono attualmente su EmuNAND. Chiariamo che i termini EmuNAND e RedNAND si riferiscono ad un'interpretazione leggermente diversa [dello stesso concetto](http://3dbrew.org/wiki/NAND_Redirection). {: .notice--info}
 
-Your DSiWare's save will be backed up before getting replaced by the hacked save. {: .notice--info}
+Verrà eseguito il backup dei salvataggi dei giochi DSiWare prima di essere sostituiti da quello hackato.{: .notice--info}
 
 {% capture notice-4 %} This exploit requires you to [System Transfer](http://en-americas-support.nintendo.com/app/answers/detail/a_id/13996/) from a CFW 3DS to a stock 3DS as part of the steps. System Transfers will work in the following directions *only*:  
 + New 3DS -> New 3DS  
