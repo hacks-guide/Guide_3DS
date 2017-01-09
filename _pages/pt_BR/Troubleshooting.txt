@@ -29,20 +29,20 @@ Se não conseguir ligar o seu 3DS, por favor procure a seção relevante ao seu 
 ##### Seção I - Trabalho Preparatório
 
 1. Crie uma pasta chamada `cias` na raiz do seu cartão SD se ela ainda não existir
-1. Copie o `TWL Version Data - v0.cia` pra pasta `/cias/` no seu cartão SD
-2. Copie o `DS Download Play - v1024.cia` pra pasta `/cias/` no seu cartão SD
-3. Copie o `DS Internet - v2048.cia` pra pasta `/cias/` no seu cartão SD
-4. Copie o `Nintendo DS Cart Whitelist - v11264.cia` pra pasta `/cias/` no seu cartão SD
-5. Copie o `New_3DS TWL_FIRM - v9936.cia` ou o `Old_3DS TWL_FIRM - v8817.cia` pra pasta `/cias/` no seu cartão SD
+2. Copie o `TWL Version Data - v0.cia` pra pasta `/cias/` no seu cartão SD
+3. Copie o `DS Download Play - v1024.cia` pra pasta `/cias/` no seu cartão SD
+4. Copie o `DS Internet - v2048.cia` pra pasta `/cias/` no seu cartão SD
+5. Copie o `Nintendo DS Cart Whitelist - v11264.cia` pra pasta `/cias/` no seu cartão SD
+6. Copie o `New_3DS TWL_FIRM - v9936.cia` ou o `Old_3DS TWL_FIRM - v8817.cia` pra pasta `/cias/` no seu cartão SD
 
 # # # Seção II - Instalação das CIAs
 
 1. Abra o FBI
-3. Selecione "SD"
-4. Selecione "cias"
-8. Selecione "\<current directory>"
-9. Selecione "Install and delete all CIAs"
-8. Pressione o botão Home pra sair
+2. Selecione "SD"
+3. Selecione "cias"
+4. Selecione "\<current directory>"
+5. Selecione "Install and delete all CIAs"
+6. Pressione o botão Home pra sair
 
 ## <a name="rm_nnid" />Removendo uma NNID sem formatar o 3DS
 
@@ -53,70 +53,70 @@ Se não conseguir ligar o seu 3DS, por favor procure a seção relevante ao seu 
 #### Instruções
 
 1. Copie o `GodMode9.bin` do `.zip` do GodMode9 pra pasta `/luma/payloads/` no seu cartão SD e o renomeie pra `up_GodMode9.bin`
-6. Ligue o 3DS segurando o (D-Pad pra cima) pra entrar no GodMode9 pelo arm9loaderhax
-14. Navegue até `SYSNAND CTRNAND` -> `data` -> (ID de 32 caracteres) -> `sysdata` -> `00010038`
-15. Segure o gatilho (R), então aperte o X no `00000000` pra renomear esse arquivo
-16. Aperte o D-Pad pra cima uma vez pra mudar o nome pra `10000000`
-17. Aperte (A) pra salvar as mudanças
-18. Aperte (A) pra destravar as modificações na SysNAND, então aperte a sequência de botões pedida
-18. Volte pro menu inicial
-16. Aperte Start pra reiniciar
+2. Ligue o 3DS segurando o (D-Pad pra cima) pra entrar no GodMode9 pelo arm9loaderhax
+3. Navegue até `SYSNAND CTRNAND` -> `data` -> (ID de 32 caracteres) -> `sysdata` -> `00010038`
+4. Segure o gatilho (R), então aperte o X no `00000000` pra renomear esse arquivo
+5. Aperte o D-Pad pra cima uma vez pra mudar o nome pra `10000000`
+6. Aperte (A) pra salvar as mudanças
+7. Aperte (A) pra destravar as modificações na SysNAND, então aperte a sequência de botões pedida
+8. Volte pro menu inicial
+9. Aperte Start pra reiniciar
 
 ## <a name="gw_fbi" />Cannot inject H&S on Gateway downgraded device
 This is caused by Gateway implementing a very shoddy downgrade method, which leaves two versions of each app on the system. One of them is unused, but it confuses Decrypt9, causing it to inject into the wrong one.
 
-#### What you need
+#### O que você precisa
 
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/)
+* A versão mais recente do [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 
-#### Instructions
+#### Instruções
 
-1. Copie `GodMode9.bin` do arquivo `GodMode9.zip` para a pasta `/luma/payloads/` dentro do seu cartão SD e renomeie `GodMode9.bin` no diretório `/luma/payloads/` para `up_GodMode9.bin`
+1. Copie o `GodMode9.bin` do `.zip` do GodMode9 pra pasta `/luma/payloads/` no seu cartão SD e o renomeie pra `up_GodMode9.bin`
 2. Insira novamente o seu cartão SD no seu 3DS
-5. Open GodMode9 from arm9loaderhax by holding (Up) during boot     
-2. Navegue para `SYSNAND CTRNAND` -> `title` -> `00040010`
-7. Navegue para a pasta correspondente ao seu dispositivo e região:
+3. Open GodMode9 from arm9loaderhax by holding (Up) during boot     
+4. Navegue para `SYSNAND CTRNAND` -> `title` -> `00040010`
+5. Navegue para a pasta correspondente ao seu dispositivo e região:
   + **Old 3DS EUR**: `00022300` -> `content`
   + **Old 3DS JPN**: `00020300` -> `content`
   + **Old 3DS USA**: `00021300` -> `content`
   + **New 3DS EUR**: `20022300` -> `content`
   + **New 3DS JPN**: `20020300` -> `content`
   + **New 3DS USA**: `20021300` -> `content`
-8. Notice that there are two sets of app and tmd files, one set with uppercase extensions (`.TMD` and `.APP`), and one set with lowercase extensions (`.tmd` and `.app`)
-11. Enquanto segura o trigger (R), pressione (Y) para criar um novo diretório
-10. Pressione (A) para confirmar o nome `novodiretorio` (não importa como é nomeado)
-6. Pressione (A) para desbloquear as alterações SysNAND e então aperte a sequência de botões pedida
-9. Aperte o trigger (L) em cada um dos arquivos de extensão em maiúsculo (`.TMD`e `.APP`) para marcá-los
-10. Pressione (Y) para copiar os arquivos
-11. Navegue para o `novodiretorio` ( Nome do diretório nomeado no passo 10)
-12. Aperte (Y) para colar os arquivos
-13. Selecione "Move path(s)"
-14. Os arquivos de extensão em maiúsculo terão assim sido movidos para o `novodiretorio` diretório
-15. Aperte (Start) para reiniciar
-16. Retorne para [Installing arm9loaderhax](installing-arm9loaderhax) e tente novamente a injeção do FBI
-17. Se ainda assim não funcionar, mova os arquivos de extensão em maiúsculo de volta para a pasta `content`, então mova os arquivos de extensão em minúsculo para a pasta `novodiretorio`, retorne para [Installing arm9loaderhax](installing-arm9loaderhax) e tente novamente a injeção do FBI
+6. Notice that there are two sets of app and tmd files, one set with uppercase extensions (`.TMD` and `.APP`), and one set with lowercase extensions (`.tmd` and `.app`)
+7. Enquanto segura o trigger (R), pressione (Y) para criar um novo diretório
+8. Pressione (A) para confirmar o nome `novodiretorio` (não importa como é nomeado)
+9. Aperte (A) pra destravar as modificações na SysNAND, então aperte a sequência de botões pedida
+10. Aperte o trigger (L) em cada um dos arquivos de extensão em maiúsculo (`.TMD`e `.APP`) para marcá-los
+11. Pressione (Y) para copiar os arquivos
+12. Navegue para o `novodiretorio` ( Nome do diretório nomeado no passo 10)
+13. Aperte (Y) para colar os arquivos
+14. Selecione "Move path(s)"
+15. Os arquivos de extensão em maiúsculo terão assim sido movidos para o `novodiretorio` diretório
+16. Aperte (Start) para reiniciar
+17. Retorne para [Installing arm9loaderhax](installing-arm9loaderhax) e tente novamente a injeção do FBI
+18. Se ainda assim não funcionar, mova os arquivos de extensão em maiúsculo de volta para a pasta `content`, então mova os arquivos de extensão em minúsculo para a pasta `novodiretorio`, retorne para [Installing arm9loaderhax](installing-arm9loaderhax) e tente novamente a injeção do FBI
 
 ## <a name="ts_browser" />Um exploit baseado no navegador não está funcionando
 Exploits baseados em navegador (como browserhax ou 2xrsa) podem ser instáveis e quebrar frequentemente, mas eles podem em alguns casos serem consertados seguindo os seguintes passos
 
 1. Abra o navegador e, em seguida, abra as configurações do navegador
-    1. Role até o final e Initialize Savedata (pode ser chamado também de Clear All Save Data)
-    2. Tente o exploit novamente
+2. Role até o final e Initialize Savedata (pode ser chamado também de Clear All Save Data)
+3. Tente o exploit novamente
 
 ## <a name="ts_safe_a9lh" />Sistema iniciando diretamente SafeA9LHInstaller
 Você copiou o arquivo `arm9loaderhax.bin` errado para o seu cartão SD ( você deveria ter copiado somente a pasta `3ds`e o arquivo `SafeA9LHInstaller.dat` do seu arquivo SafeA9LHInstaller.zip)    
 
 1. Use o `arm9loaderhax.bin` correto
-    1. Copie o `arm9loaderhax.bin` do Luma3DS.zip para o seu cartão SD
-    2. Reinicie enquanto pressiona o botão select e continue
+2. Copie o `arm9loaderhax.bin` do Luma3DS.zip para o seu cartão SD
+3. Reinicie enquanto pressiona o botão select e continue
 
 ## <a name="ts_safe_a9lh_screen" />SafeA9LHInstaller mostra uma tela com glitch
 Isso acontece às vezes mas a razão é desconhecida. Os botões ainda funcionarão, mas a tela ainda ficará com glitch
 
 1. Siga as instruções normalmente
-    1. Aperte (Select) e o arm9loaderhax será instalado
-    2. O dispositivo reiniciará
-        + Se o dispositivo não reiniciar, espere 10 segundos e então desligue o seu 3DS segurando o botão de power
+2. Aperte (Select) e o arm9loaderhax será instalado
+3. O dispositivo reiniciará
+  + Se o dispositivo não reiniciar, espere 10 segundos e então desligue o seu 3DS segurando o botão de power
 
 ## <a name="ts_steelhax" />Após o sistema transferir o steelhax, ele crasha e fica com uma tela preta no 3DS de destino
 
@@ -132,16 +132,16 @@ Isso é porque você selecionou a versão errada do instalador steelhax.
 
 ## <a name="ts_dsiware" />Após realizar o downgrade do DSiWare, meu DSiWare hackeado não funciona
 
-3. Reboot **the source 3DS** while holding Start to launch Hourglass9
-4. Go to SysNAND Backup/Restore and restore SysNAND from `NANDmin.bin` (the one made before the system transfer)
-1. If you don't see the game at all on **the target 3DS**, link the NNID you bought the game with to **the target 3DS** and redownload it
+1. Reboot **the source 3DS** while holding Start to launch Hourglass9
+2. Go to SysNAND Backup/Restore and restore SysNAND from `NANDmin.bin` (the one made before the system transfer)
+3. If you don't see the game at all on **the target 3DS**, link the NNID you bought the game with to **the target 3DS** and redownload it
   + You may have to delete the game from "Data Management" in the "System Settings" first
   + If **the target 3DS** is not the latest version, you may have to run ctr-httpwn to access the eShop
-2. On **the source 3DS**, do the the save (and `.app` if you are using the `.app` page) injection steps
-3. On **the source 3DS**, go to System Settings, "Data Management", "DSiWare", then copy your DSiWare game to your SD card
-4. Either put **the source 3DS**'s SD card in **the target 3DS**, or rename the `Nintendo 3DS` on **the target 3DS**'s SD card and copy the `Nintendo 3DS` folder from **the source 3DS**'s SD card to **the target 3DS**'s SD card
-5. On **the target 3DS**, go to System Settings, "Data Management", "DSiWare", then copy your DSiWare game to the system
-6. Return your SD cards to normal, then continue with the DSiWare Downgrade
+4. On **the source 3DS**, do the the save (and `.app` if you are using the `.app` page) injection steps
+5. On **the source 3DS**, go to System Settings, "Data Management", "DSiWare", then copy your DSiWare game to your SD card
+6. Either put **the source 3DS**'s SD card in **the target 3DS**, or rename the `Nintendo 3DS` on **the target 3DS**'s SD card and copy the `Nintendo 3DS` folder from **the source 3DS**'s SD card to **the target 3DS**'s SD card
+7. On **the target 3DS**, go to System Settings, "Data Management", "DSiWare", then copy your DSiWare game to the system
+8. Return your SD cards to normal, then continue with the DSiWare Downgrade
 
 ## <a name="ts_d9_backup" />Decrypt9 or Hourglass9 won't restore / can't find my NAND backup
 
@@ -162,16 +162,16 @@ Isso é porque você selecionou a versão errada do instalador steelhax.
         + JPN Region: Delete `00000082`
         + USA Region: Delete `0000008f`
         + KOR Region: Delete `000000A9`
-1. Try booting without any cartridges inserted (including flashcarts)
-2. If you have a hardmod and a NAND backup, flash the backup back to SysNAND.
-3. Try booting into recovery mode and updating your system.    
+2. Try booting without any cartridges inserted (including flashcarts)
+3. If you have a hardmod and a NAND backup, flash the backup back to SysNAND.
+4. Try booting into recovery mode and updating your system.    
     *This probably will not work for an Old 3DS downgraded to 2.1.0*    
     **This will BRICK a New 3DS downgraded to 2.1.0**
     1. Power off your 3DS by holding down the power button.
     2. Hold L+R+A+Up.
     3. Power on the 3DS.
     4. If you enter safe mode, update your 3DS *only if you have an entrypoint for the latest FW version and it is possible to downgrade from it* and attempt the downgrade again.
-4. Your 3DS may be bricked. For support, ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [3DS Hacking on Discord](https://discord.gg/MWxPgEp).
+5. Your 3DS may be bricked. For support, ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [3DS Hacking on Discord](https://discord.gg/MWxPgEp).
 
 ## <a name="ts_sys_a9lh" />Black screen on SysNAND boot after installing arm9loaderhax
 
@@ -189,15 +189,15 @@ Isso é porque você selecionou a versão errada do instalador steelhax.
         + USA Region: Delete `0000008f`
         + KOR Region: Delete `000000A9`
 5. Try booting without any cartridges inserted (including flashcarts)
-8. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version (v6.2.3 or higher, at the least)
-9. If your NAND is of a version between 3.0.0 and 4.5.0, do the following:
+6. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version (v6.2.3 or higher, at the least)
+7. If your NAND is of a version between 3.0.0 and 4.5.0, do the following:
     + Ensure that you are using the latest Luma3DS version (v6.6 or higher, at the least)
     + Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) and rename it to `firmware.bin`
     + Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
     + Copy `firmware.bin` and `cetk` to the `/luma/` folder on your SD card
     + Delete both of these files after updating your 3DS
-9. Try following [9.2.0 ctrtransfer](9.2.0-ctrtransfer)
-10. Ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [3DS Hacking on Discord](https://discord.gg/MWxPgEp).
+8. Try following [9.2.0 ctrtransfer](9.2.0-ctrtransfer)
+9. Ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [3DS Hacking on Discord](https://discord.gg/MWxPgEp).
 
 ## <a name="ts_sys_blue" />Blue screen on boot (bootrom error)
 
