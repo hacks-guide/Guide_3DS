@@ -1,5 +1,6 @@
 ---
-Downgrade DSiWare (Iniezione App e Secondo 3DS)
+title: "Downgrade DSiWare (Iniezione App e Secondo 3DS)"
+permalink: /dsiware-downgrade-(app-injection-and-second-3ds).html
 lang: it_IT
 ref: dsiware-downgrade-(app-injection-and-second-3ds)
 ---
@@ -80,49 +81,49 @@ Usa un [Sava manager] (https://github.com/J-D-K/JKSM/releases/latest) per esegui
 {: .notice--warning}
 
 1. Crea una cartella chiamata ' files9 ' sulla radice della scheda SD **del 3ds di partenza** se non esiste già
-2. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on **the source 3DS**'s' SD card and rename `GodMode9.bin` in `/luma/payloads/` to `up_GodMode9.bin`
+2. Copia `GodMode9.bin` dallo `.zip` di GodMode9 nella cartella `/luma/payloads/` nella sd del **3DS di partenza** e rinomina `GodMode9.bin` in `up_GodMode9.bin`
 3. Copy the `.app` from DSiWare injection `.zip` to the root of **the source 3DS**'s SD card
 4. Copy `savedata` folder from DSiWare injection `.zip` to the root of **the source 3DS**'s SD card
-5. Reinsert **the source 3DS**'s SD card
-6. On **the source 3DS**, hold Start on boot to launch Hourglass9
-7. Go to SysNAND Options, then SysNAND Backup/Restore, then backup **(min size)** SysNAND to `NANDmin.bin`
-8. Press (Select) on the main menu to eject **the source 3DS**'s SD card, then put it in your computer
-9. Copy `NANDmin.bin` and `NANDmin.bin.sha` from the `/files9/` folder on your SD card to a safe location
-  + Make backups in multiple locations
-  + This backup will save you from a brick if anything goes wrong in the future
-  + **Your backup should match one of the sizes on [this](nand-size) page; if it does not, you should delete it and make a new one!**
-10. Put **the target 3DS**'s SD card into your computer
-11. **Backup every file on both 3DS's SD cards to two separate folders on your computer (keep track of which is which)!**
-12. Reinsert each SD card back into their corresponding 3DS
-13. Press (Start) to reboot
+5. Reinserisci la scheda SD nel **3DS di partenza**
+6. Nel **3DS di partenza**, tieni premuto (Start) all'avvio per avviare Hourglass9
+7. Vai su SysNAND Options, poi su SysNAND Backup/Restore, e infine effettua un backup della SysNAND **(di dimensioni minime)** nominando il backup `NANDmin.bin`
+8. Premi (Select) nel menu principale per espellere la scheda SD del **3DS di partenza**, poi inseriscila nel tuo computer
+9. Copia `NANDmin.bin` e`NANDmin.bin.sha` dalla cartella `/files9/`della tua scheda SD in una posizione sicura
+  + Crea delle copie e mettile in più posizioni
+  + Questo backup ti salverà da un brick nel caso succeda qualcosa in futuro
+  + **Il file di backup dovrà avere l'esatta dimensione riportata su [questa](nand-size) pagina; se così non fosse dovresti cancellarlo e crearne uno nuovo!**
+10. Inserisci la scheda SD del **3DS di destinazione** nel tuo computer
+11. **Crea un backup di ogni file di entrambe le schede SD dei 3DS in due separate cartelle del tuo computer (tieni traccia di quali siano!)!**
+12. Reinserisci ciascuna scheda SD nel rispettivo 3DS
+13. Premi il pulsante (Start) per riavviare la console
 
 ##### Section II - Backup DSiWare
 
-After completing the entire guide, you can use this backup to restore your DSiWare saves by deleting the DSiWare from your System Memory and copying it from your SD Card.
+Dopo aver completato tutta la guida, è possibile utilizzare questo backup per ripristinare i salvataggi DSiWare eliminando il DSiWare dalla vostra memoria di sistema e copiandolo dalla scheda SD.
 {: .notice--info}
 
-This backup can only be used on this NAND. If you format your 3DS or restore another NAND (specifically if `movable.sed` is ever modified), it will become unusable.
+Questa copia di backup può essere utilizzata solo su questa NAND. Se formatti il 3DS o ripristini un'altra NAND (più precisamente se il file "movable.sed" viene modificato), diventerà inutilizzabile.
 {: .notice--info}
 
-1. Go to System Settings, then "Data Management", then "DSiWare" on **the source 3DS**
-2. Copy any DSiWare games that are already on the SD Card back to the System Memory
-3. Copy the DSiWare game you intend to use to the SD Card
-4. Exit System Settings
+1. Vai nelle Impostazioni della console, poi su "Gestione Dati", infine su "DSIWare" sul **3DS di partenza**
+2. Copia tutti i giochi DSIWare che sono presenti sulla scheda SD nella memoria di sistema
+3. Copia il gioco DSiWare che intendi utilizzare per la scheda SD
+4. Esci dalle impostazioni della console
 
 ##### Section III - Injecting the game and save
 
-1. Open GodMode9 from arm9loaderhax by holding (Up) during boot
+1. Apri GodMode9 dall'arm9loaderhax tenendo premuto (Su) durante l'avvio
 2. Navigate to `SDCARD`
 3. Press (Y) on the DSiWare injection `.app` to copy it
-4. Press (B) to go back to the main menu
+4. Premi (B) per tornare al menu principale
 5. Navigate to `SYSNAND TWLN` -> `title` -> `00030004` -> `(8 Character ID)`
   + The 8 Character ID will be the one from the [DSiWare List](dsiware-list) page
 6. Navigate to `content`
 7. Press (A) on the `.app` file in the folder
 8. Select "Inject data @offset"
 9. Press (A) to select the offset `00000000`
-10. Press (A) to unlock SysNAND writing, then input the key combo given
-11. Press (B) to go back to the main menu
+10. Premi il pulsante (A) per sbloccare la scrittura su SysNAND quindi inserisci la combinazione di tasti richiesta a schermo
+11. Premi (B) per tornare al menu principale
 12. Navigate to `SYSNAND TWLN` -> `title` -> `00030004` -> `(8 Character ID)`
   + The 8 Character ID will be the one from the [DSiWare List](dsiware-list) page
 13. Navigate to `data`
@@ -134,14 +135,14 @@ This backup can only be used on this NAND. If you format your 3DS or restore ano
 17. Navigate to `SDCARD`
 18. Press (Y) on the file(s) in the `savedata` folder to copy them
   + If there is a `savedata` folder inside of the `savedata` folder, it is not by mistake. You should copy the second `savedata` folder, not the files inside of that.
-19. Press (B) to go back to the main menu
+19. Premi (B) per tornare al menu principale
 20. Navigate to `FAT IMAGE`
 21. Use the (X) button to delete everything inside of `FAT IMAGE`
 22. Press (Y) to paste a copy of **the contents of** the `savedata` folder to `FAT IMAGE`
-23. Select "Copy path(s)"
+23. Seleziona "Copy path(s)"
 24. Press (A) to unlock image writing, then input the key combo given
-25. Press (Start) to reboot
-26. Launch your DSiWare game on **the source 3DS**
+25. Premi il pulsante (Start) per riavviare la console
+26. Apri il gioco DSIWare sul **3DS di partenza**
 27. Tap the screen or press any button to start the game and test if the save is functional
   + If you are using the EUR files (**Legends of Exidia**), after pressing (A) or (Start) at the two title screens, select the first save slot and press continue
   + If your game has an error about `boot.nds` or a white screen, **then the exploit has been successful**
@@ -152,20 +153,20 @@ This backup can only be used on this NAND. If you format your 3DS or restore ano
 
 ##### Section IV - ctr-httpwn
 
-**This section is only required if _the target 3DS_ is under 11.2.0.**
+**Questa sezione è obbligatoria solo se il _3DS di destinazione_ è sotto la 11.2.0.**
 
-**This will allow you to system transfer on versions other than the latest.**
+**Questa sezione ti permetterà di esegure un Trasferimento Dati su versioni che non siano l'ultima.**
 
-1. Copy and merge the `3ds` folder from the ctr-httpwn `.zip` to **the target 3DS**'s SD card
-2. Reinsert your SD card into **the target 3DS**
+1. Copia e unisci la cartella `3ds` dallo `.zip` ctr-httpwn nella scheda SD del **3DS di destinazione
+2. Reinserisci la tua scheda SD nel **3DS di destinazione**
 3. Launch the homebrew launcher on the device using [Homebrew Launcher (No Browser)](homebrew-launcher-(no-browser))
   + **New 3DSs on versions 10.7.0 and 11.0.0 can use [Homebrew Launcher (Browser)](homebrew-launcher-(browser)) instead**
   + **Ensure menuhax is not installed, or you won't be able to return to Home Menu from the homebrew launcher**
 4. Launch ctr-httpwn on **the target 3DS**
-5. Press (A) to continue
-6. Press (Start) to exit ctr-httpwn
-7. Press (Start) to open the homebrew launcher exit menu
-8. Press (X) to Return to Home Menu (no reboot)
+5. Premi il pulsante (A) per continuare
+6. Premi (Start) per uscire da ctr-httpwn
+7. Premi (Start) per aprire il menù per uscire dall'Homebrew Launcher
+8. Premere (X) per tornare al Menu Home (senza riavvio)
   + You may get an "Error has occurred" message with the option to continue. This is fine, just hit (A)
 9. Continue to the next section **without rebooting**
   + **the target 3DS** has been temporarily patched to allow network functions (such as System Transfer) without running the latest system version
@@ -174,8 +175,8 @@ This backup can only be used on this NAND. If you format your 3DS or restore ano
 
 ##### Section V - System Transfer
 
-1. **Backup every file on both 3DS's SD cards to two separate folders on your computer (keep track of which is which)!**
-2. Reinsert each SD card back into their corresponding 3DS
+1. **Crea un backup di ogni file di entrambe le schede SD dei 3DS in due separate cartelle del tuo computer (tieni traccia di quali siano!)!**
+2. Reinserisci ciascuna scheda SD nel rispettivo 3DS
 3. If **the target 3DS** has a Nintendo Network ID on it, you must format the device using System Settings:
   + Go to the last page of "Other Settings" and select "Format System Memory", then follow all instructions
 4. Read the following:
@@ -214,8 +215,8 @@ This backup can only be used on this NAND. If you format your 3DS or restore ano
 8. Exit dgTool
   + You may have to force power off by holding the power button
 9. Put your SD card in your computer, then copy `F0F1_N3DS.bin` or `F0F1_O3DS.bin` (depending on your device) to a safe location
-  + Make backups in multiple locations
-  + This backup will save you from a brick if anything goes wrong in the future
+  + Crea delle copie e mettile in più posizioni
+  + Questo backup ti salverà da un brick nel caso succeda qualcosa in futuro
 
 
 ##### Section VIII - Flashing the target 3DS's NFIRM
@@ -232,7 +233,7 @@ This backup can only be used on this NAND. If you format your 3DS or restore ano
 ##### Section IX - Exploit verification
 
 1. Copy and merge the `3ds` folder from the 3DSident `.zip` to **the target 3DS**'s SD card
-2. Reinsert your SD card into **the target 3DS**
+2. Reinserisci la tua scheda SD nel **3DS di destinazione**
 3. Launch the homebrew launcher on **the target 3DS** using your entrypoint
 4. Launch 3DSident
 5. Verify that the following:
