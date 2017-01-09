@@ -11,19 +11,19 @@ ref: installing-arm9loaderhax
 Мы будем устанавливать [форк arm9loaderhax от AuroraWright](https://github.com/AuroraWright/arm9loaderhax).
 {: .notice--info}
 
-We will also setup the ability to launch payloads from arm9loaderhax, giving us the ability to unbrick our SysNAND from situations that would normally brick us by restoring from backup.
+Ещё мы настроим возможность запускать пейлоады (payloads) через arm9loaderhax, что даст нам возможность восстановить SysNAND из бэкапа в ситуациях, которые обычно привели бы к брику.
 {: .notice--info}
 
-**You cannot use another console's OTP or you will brick GUARANTEED.**
+**Никогда не используйте OTP от другой консоли, это ГАРАНТИРОВАННО приведёт к брику**
 {: .notice--danger}
 
-#### Overview of steps
+#### Что будем делать
 
-In this section, we will go through the process that all the other steps have led up to: actually installing arm9loaderhax.
+В этом разделе мы, наконец, сделаем то, к чему вели все предыдущие шаги: установим arm9loaderhax.
 
-This is nearly the best possible kind of device exploit because it is permanently installable into the NAND firm partitions, and runs before most of the OS loads, allowing it to not only work on *all* versions once installed, but also protect itself and recover from most situations that would brick a non-A9LH 3DS such as a nonfunctional home menu or bad title install.
+Это практически лучший эксплоит из возможных, потому что он перманентно устанавливается в разделы NAND firm и запускается до загрузки ОС, что не только даёт возможность работать на *любых* версиях прошивки после установки, но и защищает от сулчайного удаления эксплойта. А ещё он даёт возможность восстановить прошивку в случаях, которые привели бы консоль без A9LH к брику, например, поломанное home menu, или неудачная установка тайтла.
 
-The file `arm9loaderhax.bin` is what is launched by arm9loaderhax itself after it finishes loading off of NAND, and can be any valid arm9 payload. This file can be replaced at any time, although Luma3DS allows for the launch of other arm9 payloads by holding buttons on boot.
+Файл `arm9loaderhax.bin` - это то, что arm9loaderhax запускает после загрузки. Это может быть любой рабочий arm9 payload. Этот файл можно заменить в любой момент, но Luma3DS позволяет запускать другие arm9 пейлоады удержанием кнопки при загрузке системы.
 
 In this case, we use Luma3DS by [AuroraWright](https://github.com/AuroraWright/) to boot a patched SysNAND directly, allowing us to completely bypass the need for any kind of EmuNAND, vastly simplifying the usage of a hacked 3DS in addition to saving SD card space.
 
