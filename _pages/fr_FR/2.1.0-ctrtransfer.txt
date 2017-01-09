@@ -1,5 +1,5 @@
 ---
-title: "2.1.0 ctrtransfer"
+title: "ctrtransfert 2.1.0"
 permalink: /2.1.0-ctrtransfer.html
 lang: fr_FR
 ref: 2.1.0-ctrtransfer
@@ -33,14 +33,14 @@ Les jeux que vous avez installé sur votre console peuvent ne pas s'afficher apr
 
 Dans cette section, nous allons flasher la [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) de votre console en 2.1.0 afin d'exploiter une faille qui nous permettra d'extraire l'[OTP](otp-info) unique à votre console. Ce fichier OTP est nécessaire pour installer arm9loaderhax et **ne peut pas** être échangé avec d'autres consoles.
 
-This is accomplished by [installing a premade ctrtransfer image](https://www.reddit.com/r/3dshacks/comments/4zhe4a/) containing 2.1.0, copying your console specific files (such as `moveable.sed` and `SecureInfo_A`) to it, then fixing the title databases.
+Pour cela nous allons [installer une image de ctrtransfert réalisée au préalable](https://www.reddit.com/r/3dshacks/comments/4zhe4a/) qui contient la version 2.1.0 du logiciel de la console, y copier les fichiers spécifiques à votre console (comme "moveable.sed" et "SecureInfo_A") puis réparer la liste des titres installés.
 
-L'OTP est obligtoire pour utiliser arm9loaderhax.
+L'OTP est obligatoire pour utiliser arm9loaderhax.
 
 #### Ce qu'il vous faut
 
 * Vous aurez besoin d'avoir démarré Decrypt9
-* L'image ctrtransfer 2.1.0 pour votre console et votre région     
+* L'image ctrtransfert 2.1.0 pour votre console et votre région     
 *(si votre console n'est pas d'une de ces régions, prenez n'importe laquelle)*:
   +    [New 3DS ou Old 3DS ou 2DS 2.1.0 - EUR - ctrtransfer](magnet:?xt=urn:btih:89acc9c1b488b8b38251de0ddf07975d6bd354a1&dn=2.1.0-4E%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
   +    [New 3DS ou Old 3DS ou 2DS 2.1.0 - JPN - ctrtransfer](magnet:?xt=urn:btih:3dbb9c9c85a33c6242f424dcbaebcacdd8a5912b&dn=2.1.0-4J%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
@@ -52,23 +52,23 @@ L'OTP est obligtoire pour utiliser arm9loaderhax.
 
 Vous devez être dans Decrypt9 pour suivre ces étapes.
 
-1. Appuyez sur (Select) sur le menu principal pour ejecter votre carte SD, puis insérez la dans votre ordinateur
-2. Copiez le `.bin` et `.bin.sha` 2.1.0 présents dans le `.zip` ctrtransfer vers le répertoire `/files9/`de votre carte SD
+1. Appuyez sur (Select) sur le menu principal pour éjecter votre carte SD, puis insérez-la dans votre ordinateur
+2. Copiez les fichiers ".bin" et ".bin.sha" inclus dans le .zip du ctrtransfert vers le dossier "/files9/" sur votre carte SD
 3. Réinsérez votre carte SD dans votre 3DS
 4. Appuyez sur (B) pour accéder au menu principal de Decrypt9
 
-##### Section II - ctrtransfer
+##### Section II - ctrtransfert
 
-**Avoir une sauvegarde du NAND de _votre_ console est NÉCESSAIRE. Vous serez invité à en créer une pendant les prochaines étapes si vous n'en avez pas déjà une.**
+**Avoir une sauvegarde de la NAND de _votre_ console est NÉCESSAIRE. Vous serez invité à en créer une pendant les prochaines étapes si vous n'en avez pas déjà une.**
 {: .notice--danger}
 
 **Ne pas faire cette sauvegarde résultera en la PERTE de tous vos jeux et sauvegardes !**
 {: .notice--danger}
 
-**Si vous ne savais si vous avez déjà une sauvegarde de votre NAND, créez en une quand vous y serez invité en appuyant sur (A) juste pour être sûr.**
+**Si vous ne savez pas si vous avez déjà une sauvegarde de votre NAND, créez-en une quand vous y serez invité en appuyant sur (A) juste pour être sûr.**
 {: .notice--danger}
 
-**Si vous n'avez pas assez d'espace libre pour créer la sauvegarde, vous pouvez appuyer sur (Select) sur le menu principal de Decrypt9WIP pour éjecter votre carte SD. Cela vous permet d'insérer une autre carte SD dans votre 3DS ou de libérer de l'espace sur votre carte SD actuelle.**
+**Si vous n'avez pas assez d'espace libre pour créer la sauvegarde, vous pouvez appuyer sur (Select) sur le menu principal de Decrypt9WIP pour éjecter votre carte SD. Cela vous permet d'insérer une autre carte SD dans votre 3DS pour y faire la sauvegarde ou de libérer de l'espace sur votre carte SD actuelle.**
 {: .notice--danger}
 
 4. Naviguez dans "SysNAND Options", puis "CTRNAND Transfer", puis "Auto CTRNAND Transfer"
@@ -103,5 +103,5 @@ Le premier démarrage en 2.1.0 peut prendre un peu plus longtemps qu'un démarra
 
 <div class="notice--danger">{{ notice | markdownify }}</div>
 
-Continue to [Installing arm9loaderhax](installing-arm9loaderhax)
+Continuez avec [l'installation d'am9loaderhax](installing-arm9loaderhax)
 {: .notice--primary}
