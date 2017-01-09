@@ -101,33 +101,33 @@ ref: installing-arm9loaderhax
   + כבו את הקונסולה, תחזיקו את כפתור הכיבוי אם זה נחוץ
   + חברו את ה-SD למחשב, פתחו אותו והעתיקו את הקובץ `OTP.bin` מהתיקייה `/a9lh/` למקום בטוח במחשב שלכם וגבו אותו במספר מקומות (כגון שירות ענן), לאחר מיכן תחזירו את ה-SD ל-3DS
 
-##### Section III - Configuring Luma3DS
+#### חלק III - הגדרת Luma3DS
 
-1. Hold select on boot to enter the Luma3DS menu
-  + Make sure to start holding the button before pressing power
-  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_a9lh)   
-  + If you boot to SafeA9LHInstaller, [follow this troubleshooting guide](troubleshooting#ts_safe_a9lh)
-2. Use the (A) button and the D-Pad to turn on the following:    
+1. תדליקו את המכשיר תוך לחיצה על המקש Select על מנת להכנס לתפריט Luma3DS
+  + שימו לב כי אתם לוחצים על המקש לפני הדלקת הקונסולה
+  + אם אתם מקבלים מסך שחור, [עקבו אחרי המדריך הבא](troubleshooting#ts_sys_a9lh)   
+  + אם אתם עושים בוט לתוך SafeA9LHInstaller, [עקבו אחרי המדריך הבא](troubleshooting#ts_safe_a9lh)
+2. תשתמשו במקש (A) ובמקשי החיצים על מנת להפעיל את ההגדרות הבאות:    
   + **"Autoboot SysNAND"**
   + **"Use SysNAND FIRM if booting with R"**
   + **"Show NAND or user string in System Settings"**
-3. If you are using a **New 3DS**, you should *also* enable the following:
+3. במידה שאתם משתמשים ב-**New 3DS**, אתם מוזמנים להפעיל את האוצפיה הבא:
   + **"New 3DS CPU" to "Clock+L2(x)"**
-    + This will increase the framerate of many games, but may cause instability in others
-    + If some games do not work properly, disable this option and try again
-4. Press Start to save and reboot
-  + If you get a black screen, just continue to the next section   
-  + If you get a "Failed to mount CTRNAND" error, just continue to the next section     
+    + זה יאיץ את ה-FPS של מספר משחקים, אך עשוי לגרום לאי יציבות באחרים
+    + אם משחקים לא עובדים טוב, בטלו את האופציה ונסו שוב
+4. לחצו על Start על מנת לשמור ולהפעיל מחדש
+  + אם אתם מקבלים מסך שחור, פשוט תמשיכו לחלק הבא   
+  + אם אתם מקבלים שגיאה "Failed to mount CTRNAND", פשוט תמשיכו לחלק הבא     
 
-##### Section IV - Restoring the System
+#### חלק IV - שחזור מערכת
 
-If, before following this guide, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand) instead of doing the first four steps in this section.
+במקרה שבו לפני החלקת המדריך היה לכם EmuNAND מותקן וברצונכם להעביר את התוכן שלו ל-SysNAND CFW שלכם, עכשיו זה הזמן לבצע [העברת EmuNAND](move-emunand) במקום לבצע את הצעדים הראשונים בחלק זה.
 {: .notice--info}
 
-1. Open Hourglass9 from arm9loaderhax by holding (Start) on boot
-2. Go to "SysNAND Backup/Restore"
-3. Go to "SysNAND Restore (keep a9lh)" and restore from `NANDmin.bin`
-4. Press (Start) to reboot
+1. תפתחו את Hourglass9 מתוך arm9loaderhax על ידי החזקה של המקש (Start) בעת הדלקה
+2. לחצו על "SysNAND Backup/Restore"
+3. לחצו על "SysNAND Restore (keep a9lh)" ובצעו שחזור מתוך `NANDmin.bin`
+4. בתום התהליך, לחצו על (Start) על מנת להפעיל מחדש
   + If you get a black screen, [follow 9.2.0 ctrtransfer](9.2.0-ctrtransfer)
 5. If your backup was of a version between 3.0.0 and 4.5.0, your console will not boot until you manually download the required firmware:
   + Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) and rename it to `firmware.bin`
@@ -143,12 +143,12 @@ If, before following this guide, you already had an EmuNAND setup and would like
 
 ##### Section V - Injecting FBI
 
-1. Open Hourglass9 from arm9loaderhax by holding (Start) on boot
+1. תפתחו את Hourglass9 מתוך arm9loaderhax על ידי החזקה של המקש (Start) בעת הדלקה
 2. Go to "SysNAND Backup/Restore", then select the "Health&Safety Dump" option to dump Health & Safety to `hs.app` **(you can use Up and Down / Left and Right to change the name)**
 3. Press (B), then select the "Health&Safety Inject" option
 4. Select the FBI injectable `.app` for your region
 5. Press (A) and confirm to inject
-6. Press (Start) to reboot
+6. בתום התהליך, לחצו על (Start) על מנת להפעיל מחדש
 7. If you still launch to the stock Health & Safety app and have downgraded with Gateway in the past, [follow this troubleshooting guide](troubleshooting#gw_fbi)
 
 ##### Section VI - Finalizing setup
@@ -175,12 +175,12 @@ If, before following this guide, you already had an EmuNAND setup and would like
 20. Press (Select) on the main menu to eject your SD card
 21. Press (Start) to reboot with the SD card removed
   + Booting the device at least once with the SD card removed will allow you to configure the CTRNAND based luma installation
-22. Use the (A) button and the D-Pad to turn on the following:    
+22. תשתמשו במקש (A) ובמקשי החיצים על מנת להפעיל את ההגדרות הבאות:    
   + **"Show NAND or user string in System Settings"**
-23. If you are using a **New 3DS**, you should *also* enable the following:
+23. במידה שאתם משתמשים ב-**New 3DS**, אתם מוזמנים להפעיל את האוצפיה הבא:
   + **"New 3DS CPU" to "Clock+L2(x)"**
-    + This will increase the framerate of many games, but may cause instability in others
-    + If some games do not work properly, disable this option and try again
+    + זה יאיץ את ה-FPS של מספר משחקים, אך עשוי לגרום לאי יציבות באחרים
+    + אם משחקים לא עובדים טוב, בטלו את האופציה ונסו שוב
 24. Reinsert your SD card, then press Start to save and reboot!
 
 ___
