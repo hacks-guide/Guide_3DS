@@ -1,134 +1,135 @@
 ---
-Downgrade via DSiWare (Injeção de Save)"
-lang: pt_BR
+title: "DSiWare Downgrade (Save Injection)"
+permalink: /dsiware-downgrade-(save-injection).html
+lang: en_US
 ref: dsiware-downgrade-(save-injection)
 ---
 
-Se você estiver na versão 11.0.0 ou 11.1.0, você deve seguir esse guia para fazer o downgrade do seu NATIVE_FIRM usando DSiWare
+If you are on version 11.0.0 or 11.1.0, you must follow this guide to downgrade your NATIVE_FIRM using DSiWare
 {: .notice}
 
-Isso se aproveita de uma falha no sistema que permite que títulos de DSiWare leiam e escrevam em qualquer lugar da NAND.
+This takes advantage of an oversight which allows DSiWare titles to read and write anywhere in NAND.
 {: .notice--info}
 
-Esteja pronto para esperar de 20 minutos (New 3DS) a uma hora (Old 3DS). Slowhax (waithax) tem esse nome por um motivo.
+Be prepared to wait 20 minutes (New 3DS) to an hour (Old 3DS). Slowhax (waithax) is named so for a reason.
 {: .notice--info}
 
-Esta implementação atualmente funciona com base na "FIRM partitions known-plaintext" exploit devidamente detalhado [aqui](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws).
 {: .notice--info}
 
-O save do seu DSiWare será copiado antes de ser substituído por um save hackeado.
+Your DSiWare's save will be backed up before getting replaced by the hacked save.
 {: .notice--info}
 
-#### O que você precisa
+#### What you need
 
-* Já possui (e tem instalado) um dos seguintes jogos de DSiWare com exploit no seu 3DS *(você deve já ter um deles instalado; eles foram todos removidos da eShop)*
+* Already own (and install) one of the following exploitable DSiWare games installed on your 3DS *(you must have already installed one; they have all been pulled from the eShop)*
   + **Fieldrunners**
   + **Legends of Exidia**
   + **Guitar Rock Tour**  
   + **The Legend of Zelda: Four Swords (Anniversary Edition)**  
-* Um entrypoint de [Homebrew Launcher (SoundHax)](homebrew-launcher-(soundhax)) ou [Homebrew Launcher (No Browser)](homebrew-launcher-(no-browser))
+* An entrypoint from [Homebrew Launcher (SoundHax)](homebrew-launcher-(soundhax)) or [Homebrew Launcher (No Browser)](homebrew-launcher-(no-browser))
 * [`4B51394A.zip`](images/4B51394A.zip)
-* A versão mais recente do [3ds_dsiwarehax_installer](https://github.com/yellows8/3ds_dsiwarehax_installer/releases/latest)
-* A última versão do [waithax](https://github.com/Mrrraou/waithax/releases/latest)
-* A última versão do [3DSident](https://github.com/joel16/3DSident/releases/latest)
-* A última versão do [dgTool](https://github.com/Plailect/dgTool/releases/latest)
-* O Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
-* O ZIP do NFRIM correspondente ao seu console e versão do **3DS alvo**:
+* The latest release of [3ds_dsiwarehax_installer](https://github.com/yellows8/3ds_dsiwarehax_installer/releases/latest)
+* The latest release of [waithax](https://github.com/Mrrraou/waithax/releases/latest)
+* The latest release of [3DSident](https://github.com/joel16/3DSident/releases/latest)
+* The latest release of [dgTool](https://github.com/Plailect/dgTool/releases/latest)
+* The Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
+* The NFIRM `.zip` corresponding to the device and version of **the target 3DS**:
   + [New 3DS 11.0.0](magnet:?xt=urn:btih:2d13a5ea1570f911bd5c6423e0c30e51d548837a&dn=11.0.0%5Fto%5F10.4.0%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
   + [Old 3DS 11.0.0](magnet:?xt=urn:btih:72393bbd99bc285db84a9cabf39d9b3200058d6a&dn=11.0.0%5Fto%5F10.4.0%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
   ~    
   + [New 3DS 11.1.0](magnet:?xt=urn:btih:d7d60c27c18f53bd8508a194656a465f6448bedf&dn=11.1.0%5Fto%5F10.4.0%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
   + [Old 3DS 11.1.0](magnet:?xt=urn:btih:0caf9a948a2d8bf23606d641f6628e2baeb983bb&dn=11.1.0%5Fto%5F10.4.0%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
 
-#### Instruções
+#### Instructions
 
-##### Seção I - Trabalho Preparatório
+##### Section I - Prep Work
 
-1. Copie _os conteúdos_ da pasta `starter.zip` para a raiz do seu cartão SD e substitua quaisquer arquivos já existentes
-  + Isso vai assegurar que o Homebrew Launcher está atualizado; versões desatualizadas irão travar quando você tentar abrir o 3ds_dsiwarehax_installer
-2. Copie e cole a pasta "3ds" do "3ds_dsiwarehax_installer.zip" para a raíz do seu microSD
-3. Copie a pasta "4B51394A" do "4B51394A.zip" para a pasta "/3ds/3ds_dsiwarehax_installer/dsiware/" no seu microSD.
-4. Copie e cole a pasta "3DS" do "3DSident.zip" para o seu microSD
-5. Copie "waithax.3dsx" para a pasta "/3ds/" no seu microSD
-6. Copie o "boot.nds" da dgTool para a raíz do seu microSD
-7. Crie uma pasta chamada "dgTool" na raíz do seu microSD se já não existir
-8. Copie os conteúdos do NFIRM `.zip` para a pasta `dgTool` na raiz do seu cartão SD
-9. Reinsira seu cartão SD no seu 3DS
+1. Copy _the contents of_ the `starter.zip` to the root of your SD card, replace existing files
+  + This will ensure that the Homebrew Launcher is up to date; older versions will freeze when your try to launch 3ds_dsiwarehax_installer
+2. Copy and merge the `3ds` folder from the 3ds_dsiwarehax_installer `.zip` to the root of your SD card
+3. Copy the `4B51394A` folder from `4B51394A.zip` to the `/3ds/3ds_dsiwarehax_installer/dsiware/` folder on your SD card.
+4. Copy and merge the `3ds` folder from the 3DSident `.zip` to your SD card
+5. Copy `waithax.3dsx` to the `/3ds/` folder on your SD card
+6. Copy the dgTool `boot.nds` to the root of your SD card
+7. Create a folder named `dgTool` on the root of your SD card if it does not already exist
+8. Copy the contents of the NFIRM `.zip` to the `dgTool` folder on the root of your SD card
+9. Reinsert your SD card into your 3DS
 
-##### Seção II - Backup DSiWare
+##### Section II - Backup DSiWare
 
-Após completar todo o guia, você pode usar esse backup para restaurar os saves do seu jogo DSiWare depois de deletá-lo da sua Memória Interna e copiá-lo do seu microSD.
+After completing the entire guide, you can use this backup to restore your DSiWare saves by deleting the DSiWare from your System Memory and copying it from your SD Card.
 {: .notice--info}
 
-Este backup pode ser usado apenas para essa NAND. Se você fromatar o seu 3DS ou restaurar outra NAND (Especificamente se a "movable.sed" for modificada), ele vai se tornar inútil.
+This backup can only be used on this NAND. If you format your 3DS or restore another NAND (specifically if `movable.sed` is ever modified), it will become unusable.
 {: .notice--info}
 
-1. Vá para a Configuração do console, então "Gerenciador de Dados", então "DSiWare"
-2. Copie o jogo DSiWare que você quer usar para o microSD
-3. Saia da Configuração do console
+1. Go to System Settings, then "Data Management", then "DSiWare"
+2. Copy the DSiWare game you intend to use to the SD Card
+3. Exit System Settings
 
-##### Seção III - waithax
+##### Section III - waithax
 
-1. Entre no Homebrew Launcher usando seu entrypoint
-2. Abra o waithax
-3. Espere
-  + No New 3DS, vai levar por volta de 20 minutos (devido a um bug, pode levar o mesmo tempo de um O3DS para alguns consoles)
-  + No Old 3DS, vai levar cerca de uma hora
-4. Assim que acabar, pressione START para sair
-5. Abra o 3ds_dsiwarehax_installer
-6. Selecione o jogo DSiWare no qual você quer instalar o exploit
-7. Assim que terminar, pressione A para sair
-8. Pressione START para abrir o Menu de Saída do Homebrew Launcher
-9. Pressione (A) para sair
+1. Get into the Homebrew Launcher using your entrypoint
+2. Launch waithax
+3. Wait
+  + On New 3DS, this will take about 20 minutes (due to a bug, this can take the same time as an Old 3DS for some systems)
+  + On Old 3DS, this will take about an hour
+4. Once it's done, press (Start) to exit
+5. Launch 3ds_dsiwarehax_installer
+6. Select the DSiWare game you want to install the exploit on
+7. Once it's done, press (A) to exit
+8. Press (Start) to open the homebrew launcher exit menu
+9. Press (A) to exit
 
 
-##### Seção IV - Fazendo o backup da NFIRM
+##### Section IV - Backing up NFIRM
 
-1. Abra o seu jogo DSiWare
-2. Abra a dgTool usando o seu jogo DSiWare
-  + **Fieldrunners**: Toque no botão 'Scores' no menu principal
-  + **Legends of Exidia**: Depois de apertar A ou START nas duas telas iniciais, selecione o primeiro slot de save e pressione em continuar
-  + **Guitar Rock Tour**: Desça e vá para High-Scores -> Drums -> Easy
-  + **The Legend of Zelda: Four Swords (Anniversary Edition)**: Apenas abra o jogo
-  + Se o seu jogo não tem o save hackeado instalado, reinicie do começo
-3. Selecione "Dump f0f1" para fazer o backup da sua NFIRM
-  + Isto pode demorar um pouco
-4. Anote a localização do backup da sua NFIRM
-5. Saia do dgTool
-  + Você pode ter que forçar o desligamento do aparelho segurando o botão power
-6. Colo que o seu microSD no seu computador e copie o "F0F1_N3DS.bin" ou "F0F1_O3DS.bin" (dependendo do seu console) para um local seguro
-  + Faça backups em diversos locais
-  + Este backup irá te salvar de um brick caso algo dê errado no futuro
+1. Launch your DSiWare game
+2. Launch dgTool using your DSiWare game
+  + **Fieldrunners**: Touch the 'Scores' button at the main menu
+  + **Legends of Exidia**: After pressing (A) or (Start) at the two title screens, select the first save slot and press continue
+  + **Guitar Rock Tour**: Scroll down and go to High-Scores -> Drums -> Easy
+  + **The Legend of Zelda: Four Swords (Anniversary Edition)**: Just start the game
+  + If your game does not have the hacked save file installed, restart from the beginning
+3. Select "Dump f0f1" to backup your NFIRM
+  + This will take a while
+4. Make note of the NFIRM backup's location
+5. Exit dgTool
+  + You may have to force power off by holding the power button
+6. Put your SD card in your computer, then copy `F0F1_N3DS.bin` or `F0F1_O3DS.bin` (depending on your device) to a safe location
+  + Make backups in multiple locations
+  + This backup will save you from a brick if anything goes wrong in the future
 
-##### Seção V - Gravando a NFIRM
+##### Section V - Flashing NFIRM
 
-**Nunca realize o downgrade com a dgTool em um console que já tenha o arm9loaderhax instalada ou você irá BRICKAR!**
+**Never downgrade with dgTool on a device that already has arm9loaderhax installed or you will BRICK!**
 {: .notice--danger}
 
-1. Abra o seu jogo DSiWare
-2. Abra a dgTool usando o seu jogo DSiWare
-  + **Fieldrunners**: Toque no botão 'Scores' no menu principal
-  + **Legends of Exidia**: Depois de apertar A ou START nas duas telas iniciais, selecione o primeiro slot de save e pressione em continuar
-  + **Guitar Rock Tour**: Desça e vá para High-Scores -> Drums -> Easy
-  + **The Legend of Zelda: Four Swords (Anniversary Edition)**: Apenas abra o jogo
-3. Selecione "Downgrade FIRM to 10.4" e confirme para gravar a imagem do NFIRM da 10.4
-4. Saia do dgTool
-  + Você pode ter que forçar o desligamento do aparelho segurando o botão power
-5. Reinicie
+1. Launch your DSiWare game on
+2. Launch dgTool using your DSiWare game
+  + **Fieldrunners**: Touch the 'Scores' button at the main menu
+  + **Legends of Exidia**: After pressing (A) or (Start) at the two title screens, select the first save slot and press continue
+  + **Guitar Rock Tour**: Scroll down and go to High-Scores -> Drums -> Easy
+  + **The Legend of Zelda: Four Swords (Anniversary Edition)**: Just start the game
+3. Select "Downgrade FIRM to 10.4" and confirm to flash the 10.4.0 NFIRM bin
+4. Exit dgTool
+  + You may have to force power off by holding the power button
+5. Reboot
 
-##### Section VI - Verificação do Exploit
+##### Section VI - Exploit verification
 
-1. Reinsira seu cartão SD no seu 3DS
-2. Abra o Homebrew Launcher usando seu entrypoint
-3. Abra o 3DSident
-4. Verifique o seguinte:
+1. Reinsert your SD card into your 3DS
+2. Launch the homebrew launcher on using your entrypoint
+3. Launch 3DSident
+4. Verify that the following:
   + **Kernel version**: 2.50-11
   + **FIRM version**: 2.50-11
-  + Se qualquer uma dessas versões não bater com essas, certifique-se que você usou o zip da NFIRM correto e tente flashear a NFIRM de novo
-5. Pressione qualquer botão para voltar para o Homebrew Launcher
+  + If either of these do not display the versions above, make sure you used the correct NFIRM zip and try flashing NFIRM again
+5. Press any button to exit back to the Homebrew Launcher
 
-Sua versão *não* terá sido alterada nas configurações.
+Your version number will *not* have changed in the settings.
 {: .notice--info}
 
-Continue para [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher))
+Continue to [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher))
 {: .notice--primary}
