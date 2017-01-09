@@ -1,47 +1,47 @@
 ---
-title: "2.1.0 ctrtransfer"
+title: "ctrtransfer 2.1.0"
 permalink: /2.1.0-ctrtransfer.html
 lang: it_IT
 ref: 2.1.0-ctrtransfer
 ---
 
-Nel caso di un downgrade alla versione 2.1.0 in un 2DS o New 3DS con la comunicazione Wi-Fi disattivata è possibile riattivarla rimuovendo la batteria per qualche secondo e, in seguito, riavviando il dispositivo.
+Se effettui il downgrade alla versione 2.1.0 su un 2DS o su un New 3DS lasciando inattiva la comunicazione wireless, puoi riattivarla rimuovendo la batteria per alcuni secondi prima di accendere la console.
 {: .notice--info}
 
-Se si sta utilizzando la funzione "Gestione microSD" del New 3DS per trasferire file alla propria scheda SD questa non sarà più utilizzabile sulla versione 2.1.0, assicuratevi di avere un lettore di schede microSD esterno a portata di mano.
+Se stai usando la Gestione microSD del New 3DS per trasferire i file sulla tua scheda SD, tieni presente che non è utilizzabile nella versione 2.1.0. Assicurati di avere un lettore di microSD a portata di mano prima di proseguire.
 {: .notice--info}
 
-Il dispositivo potrebbe non visualizzare i giochi installati dopo il ctrtransfer. Ciò è dovuto al fatto che i relativi ticket vengono rimossi durante il trasferimento, ecco perchè va eseguito un loro backup. Le procedure di ripristino verranno illustrate al termine della guida.
+La tua console potrebbe non visualizzare più i giochi installati dopo il ctrtransfer. La causa è la rimozione dei ticket durante il trasferimento, per cui è necessario effettuarne il backup. Verranno ripristinati al termine della guida.
 {: .notice--info}
 
-**Al momento la necessità del dispositivo di collegarsi ad internet è INDISPENSABILE per poter procedere dopo il ctrtransfer alla versione 2.1.0.**
+**Al momento, la connessione a internet è NECESSARIA per proseguire dopo il ctrtransfer 2.1.0.**
 {: .notice--warning}
 
-**Disabilitare il controllo genitori del dispositivo prima di procedere con il ctrtransfer alla versione 2.1.0. Se non si conosce la password, collegati a [this](http://mkey.salthax.org/) sito.**
+**Assicurati di disattivare il Filtro famiglia della tua console prima del ctrtransfer 2.1.0. Se non conosci la password, collegati a [questo](http://mkey.salthax.org/) sito.**
 {: .notice--warning}
 
-**Effettuare un ctrtransfer rimuoverà tutti i ticket installati dall'utente dal dispositivo finchè non ne verrà ripristinato un backup. In NESSUN CASO la creazione del backup andrebbe ignorata, altrimenti verrà PERSO l'accesso a tutti i giochi installati e i relativi salvataggi!**
+**Un ctrtransfer rimuoverà dalla console tutti i ticket installati dall'utente fintantoché non verrà ripristinato un backup. La creazione di un backup è pertanto NECESSARIA, altrimenti PERDERAI l'accesso ai salvataggi e a tutti i giochi installati!**
 {: .notice--danger}
 
-**Mai formattare un 2DS che esegue un sistema con versione <6.00 perchè in queste condizioni non è possibile completare la procedura iniziale di configurazione causando un BRICK!**
+**Non formattare mai un 2DS se sei ad una versione <6.0.0 o non potrai più completare l'installazione iniziale e BRICKERAI la console!**
 {: .notice--danger}
 
-**Mai aggiornare un New 3DS che esegue un sistema con versione 2.1.0 (vecchio firmware del Old 3DS) perchè ciò causerà un BRICK! Prima si deve OBBLIGATORIAMENTE ripristinare un backup della NAND o effettuare un ctrtransfer di un firmware standard del New 3DS!**
+**Mai aggiornare un New 3DS se sei alla versione 2.1.0 (firmware di un Old 3DS) o BRICKERAI LA CONSOLE! Prima si deve OBBLIGATORIAMENTE ripristinare un backup della NAND proveniente dal dispositivo o effettuare un ctrtransfer di un firmware standard del New 3DS!**
 {: .notice--danger}
 
 #### Panoramica
 
-In questa sezione effettueremo il flashing della partizione [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) della console alla versione 2.1.0 in maniera da sfruttare una falla per estrarre l'[OTP](otp-info) univoco della console. Questo file OTP è necessario per installare arm0loaderhax e **non** è condivisibile con altre console.
+In questa sezione verrà flashata la versione 2.1.0 nella partizione [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) per sfruttare un exploit che permetterà di estrarre l'[OTP](otp-info) univoco della tua console. Questo file OTP è necessario per l'installazione dell'arm9loaderhax, e **non** può essere condiviso con altre console.
 
-Questo è possibile [installando un'immagine prefabbricata ctrtransfer](https://www.reddit.com/r/3dshacks/comments/4zhe4a/) contenente il firmware in versione 2.1.0, copiandovi alcuni file specifici della console (tipo 'moveable.sed' e 'SecureInfo_A') e infine fixando il database dei titoli.
+Per farlo, verrà [installata un'immagine ctrtransfer prefabbricata](https://www.reddit.com/r/3dshacks/comments/4zhe4a/) contenente la versione 2.1.0, copiando nella tua console dei file specifici (come `moveable.sed` e `SecureInfo_A`) per poi correggere il title database.
 
-L'OTP è un requisito indispensabile per utilizare arm9loaderhax.
+Il file OTP è necessario per utilizzare l'arm9loaderhax.
 
-####Cosa serve
+#### Cosa serve
 
-* Servirà lanciare all'avvio Decrypt9
-* L'immagine ctrtransfer del firmware versione 2.1.0 relativa al tuo dispositivo e alla sua regione     
-*(se il tuo dispositivo non rientra in queste regioni, prendine uno qualsasi)*:
+* La console deve essere avviata con Decrypt9
+* L'immagine ctrtransfer 2.1.0 relativa alla tua console e alla sua regione     
+*(se la tua console non rientra in nessuna di queste regioni, scegline una qualunque):
   +  [New 3DS o Old 3DS o 2DS 2.1.0 - EUR - ctrtransfer]
 (magnet:?xt=urn:btih:89acc9c1b488b8b38251de0ddf07975d6bd354a1&dn=2.1.0-4E%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
   + [New 3DS o Old 3DS o 2DS 2.1.0 - JPN - ctrtransfer]
@@ -54,14 +54,14 @@ L'OTP è un requisito indispensabile per utilizare arm9loaderhax.
 
 Questi passi vanno eseguiti all'interno di Decrypt9.
 
-1. Premere (Select) nel menu principale per poter poi estrarre la scheda SD, quindi inserirla nel computer
+1. Premi (Select) nel menu principale per rimuovere la scheda SD, poi inseriscila nel tuo computer
 2. Copiare i file di sistema 2.1.0, che terminano con estensione '.bin' e '.bin.sha', dall'archivio '.zip' ctrtransfer alla cartella '/files9/' all'interno della scheda SD
 3. Reinserire la scheda SD nella console
 4. Premere (B) per tornare al menu principale di Decrypt9
 
 ##### Sezione II - ctrtransfer
 
-**E' INDISPENSABILE aver a disposizione un backup della NAND del dispositivo. Verrà comunque chiesto di crearne uno durante le operazioni nel caso in cui non fosse già stato creato.**
+**E' INDISPENSABILE aver a disposizione un backup della NAND proveniente dal dispositivo. Verrà comunque chiesto di crearne uno durante le operazioni nel caso in cui non fosse già stato creato.**
 {: .notice--danger}
 
 **Saltare il backup porterà ad una PERDITA di tutti i giochi installati e dei salvataggi!**
@@ -76,12 +76,12 @@ Questi passi vanno eseguiti all'interno di Decrypt9.
 4. Selezionare l'opzione "SysNAND Options", poi selezionare "CTRNAND Transfer" e infine selezionare "Auto CTRNAND Transfer"
 5. Selezionare l'immagine ctrtransfer 2.1.0 quando richiesto tramite la pressione del tasto (A), quindi inserire la combinazione di tasti richiesta a schermo
 6. Nel caso non si abbia ancora possesso di un backup della NAND, **effettuare un backup della sysNAND nel file 'NANDmin.bin' quando richiesto premendo il tasto (A)**
-  + **Having a backup of _your_ device's NAND is REQUIRED.**
-  + **Skipping this backup will result in the LOSS of all installed games and saves!**
-7. Allow the transfer process to proceed automatically, this may take some time
-8. Once the transfer is complete, press (B) to go back
-9. Press (Select) to eject your SD card
-9. Delete the 2.1.0 ctrtransfer image `.bin` and `.bin.sha` from the `/files9/` folder on your SD card
+  +**Essere in possesso di un backup della NAND proveniente dal dispositivo è NECESSARIO.**
+  +**Saltare la creazione del backup risulterà nella PERDITA di tutti i giochi installati e dei salvataggi!**
+7. Permettere al processo di trasferimento di completarsi automaticamente, potrebbe richiedere del tempo
+8. A trasferimento completato premere (B) per tornare indietro
+9. Premere (Select) per estrarre la scheda SD
+10. Delete the 2.1.0 ctrtransfer image `.bin` and `.bin.sha` from the `/files9/` folder on your SD card
 11. Press (Start) to reboot without reinserting your SD card
   + While on 2.1.0, the device will black screen on boot if your SD card is inserted before the home menu loads
 12. Reinsert your SD card into your 3DS after the home menu loads
