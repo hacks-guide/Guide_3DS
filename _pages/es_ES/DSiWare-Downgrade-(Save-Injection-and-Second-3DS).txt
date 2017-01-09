@@ -1,33 +1,33 @@
 ---
 title: "Bajar de versión mediante DSiWare (Inyección de partida y segunda 3DS)"
 permalink: /dsiware-downgrade-(save-injection-and-second-3ds).html
-lang: en_US
+lang: es_ES
 ref: dsiware-downgrade-(save-injection-and-second-3ds)
 ---
 
-**They are only useful if you already own "Fieldrunners", "Legends of Exidia", "Guitar Rock Tour", or "The Legend of Zelda: Four Swords (Anniversary Edition)" on the source 3DS. Each game has been pulled from the eShop; you must have already gotten them.**
+** Esta guía sólo es útil si ya posees los títulos "Fieldrunners", "Legends of Exidia", "Guitar Rock Tour", o "The Legend of Zelda: Four Sowrds (Anniversary Edition)" en la 3DS de origen. Todos los juegos han sido eliminados de la eShop; por lo que debes tenerlos ya.**
 {: .notice--primary}
 
-If you are between versions 11.0.0 and 11.2.0, you can follow this guide to downgrade your NATIVE_FIRM using DSiWare and a second 3DS which has already has a Custom Firmware installed on it in order to dump and restore your NAND.
+Si estás entre las versiones 11.0.0 y 11.2.0, puedes seguir esta guía para downgradear tu NATIVE_FIRM usando DSiWare y y una segunda 3DS que ya tenga instalado un Custom Firmware para extraer y restaurar tu NAND.
 {: .notice}
 
-If you are below 11.2.0 on either device, then you should do the ctr-httpwn steps (when prompted) on each device under 11.2.0 to allow you to System Transfer with them.
+Si tu versión es inferior a 11.2.0 en cualquiera de las 2 consolas, entonces debes seguir los pasos referentes al ctr-httpwn (cuando sea necesario) en cada dispositivo por debajo de la versión 11.2.0 para poder hacer la transferencia entre ellos.
 {: .notice--info}
 
-This takes advantage of an oversight which allows DSiWare titles to read and write anywhere in NAND.
+Esto se aprovecha de una vulnerabilidad que permite a los juegos DSiWare a leer y escribir en cualquier parte de la NAND.
 {: .notice--info}
 
-This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+Todo esto son implementaciones funcionales del exploit "Particiones FIRM de texto plano conocido" detallado aquí: [aquí](https://www.3dbrew.org/wiki/3DS_System_Flaws) *en inglés*.
 {: .notice--info}
 
-This guide will assume the CFW 3DS is running arm9loaderhax and was setup with this guide, but will work (with slight modifications such as doing all SysNAND steps on EmuNAND) on systems running an EmuNAND. Note that the terms EmuNAND and RedNAND refer to slightly different implementations of [the same concept](http://3dbrew.org/wiki/NAND_Redirection).
+Esta guía asume que la 3DS que posee CFW está usando arm9loaderhax y que se hizo mediante esta misma guía, pero funcionaría (con pequeñas modificaciones como hacer todos los pasos referentes a la SysNAND en la EmuNAND) en consolas ejecutando una EmuNAND. Nota: los términos EmuNAND y RedNAND son diferentes implementaciones del [Mismo concepto] (http://3dbrew.org/wiki/NAND_Redirection).
 {: .notice--info}
 
-Your DSiWare's save will be backed up before getting replaced by the hacked save.
+Se hará una copia de seguridad de la partida guardada del DSiWare antes de instalar la partida hackeada.
 {: .notice--info}
 
 {% capture notice-4 %}
-This exploit requires you to [System Transfer](http://en-americas-support.nintendo.com/app/answers/detail/a_id/13996/) from a CFW 3DS to a stock 3DS as part of the steps. System Transfers will work in the following directions *only*:    
+Este exploit requiere que hagas una [Transferencia de sistemas](https://www.nintendo.es/Atencion-al-cliente/Nintendo-3DS-y-Nintendo-2DS/Transferencia-entre-consolas-Nintendo-3DS-Incluida-Nintendo-3DS-XL-/Como-realizar-una-transferencia-de-sistema-entre-las-consolas-Nintendo-3DS-y-Nintendo-3DS-XL/Como-realizar-una-transferencia-de-sistema-entre-consolas-Nintendo-3DS-y-Nintendo-3DS-XL-592194.html) desde una 3DS con CFW instalado a una 3DS stock como parte de los pasos a seguir. Las Transferencias de Sistema funcionarán *SÓLO* en los siguientes casos:    
   + New 3DS -> New 3DS    
   + Old 3DS or 2DS -> Old 3DS or 2DS    
   + Old 3DS or 2DS -> New 3DS    
@@ -35,7 +35,7 @@ This exploit requires you to [System Transfer](http://en-americas-support.ninten
 
 <div class="notice--warning">{{ notice-4 | markdownify }}</div>
 
-Both systems MUST be from the same region.
+Ambos sistemas DEBEN ser de la misma región.
 {: .notice--warning}
 
 **The _target 3DS_ will have all of its data erased!**
