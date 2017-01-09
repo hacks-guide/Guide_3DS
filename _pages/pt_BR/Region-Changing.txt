@@ -13,16 +13,16 @@ Essa é uma seção complementar para mudar a região do seu SysNAND com CFW de 
 Esse processo irá desconectar sua NNID do sistema, uma vez que ele não será mais compatível com a mesma. As NNIDs são bloqueadas por região do dispositivo que ás criou e não podem ser transferidas de região sem [um procedimento muito complexo e avançado](https://gist.githubusercontent.com/yifanlu/e80db121d38aceb8cca0e03cefd5853b/raw/3c4dd89869156ca0f945a2791e699acfdb32b510/gistfile1.txt).
 {: .notice--warning}
 
-Após este processo apenas os **New 3DS que nunca acessaram a eShop antes** e **quaisquer Old 3DS** serão capazes de acessar a eShop após criarem uma nova NNID em sua nova região. Region changed New 3DSs that have already accessed the eShop on their original region cannot create a new NNID and access the eShop on their new region!
+Após este processo apenas os **New 3DS que nunca acessaram a eShop antes** e **quaisquer Old 3DS** serão capazes de acessar a eShop após criarem uma nova NNID em sua nova região. New 3DSs com as regiões mudadas que já acessaram a eShop nas suas regiões originais não podem criar uma nova NNID e acessar a eShop nas suas novas regiões!
 {: .notice--warning}
 
-Note that occasionally the eShop will inexplicably still not work for devices that it should work for. This is entirely to do with Nintendo's servers, and I really do not have any control over it.
+Note que de vez em quando a eShop inexplicavelmente não vai funcionar para os dispositivos para os quais deve funcionar. Isto tem a ver com os servidores da Nintendo, e eu não tenho mesmo qualquer controle sobre isto.
 {: .notice--warning}
 
-Mudar de região usando ctrtransfer (que é usado nesse método) parece fazer com que patches de reboot quebrem. The cause for this is unknown, but for now Old 3DS users will be unable to play extended memory mode games (such as Monster Hunter, Super Smash Bros, and Pokémon Sun / Moon).
+Mudar de região usando ctrtransfer (que é usado nesse método) parece fazer com que patches de reboot quebrem. A causa disso é desconhecida, mas por enquanto usúarios do O3DS/2DS não vão ser capazes de jogar jogos que utilizem o modo de RAM extendida. (como Monster Hunter, Super Smash BRos, e Pokémon Sun & Moon)
 {: .notice--warning}
 
-**You MUST have already installed arm9loaderhax + Luma3DS to use this.**
+**Você DEVE ter acabado de instalar o arm9loaderhax + Luma3DS para usar isso.**
 {: .notice--danger}
 
 #### O que você precisa
@@ -83,7 +83,7 @@ Mudar de região usando ctrtransfer (que é usado nesse método) parece fazer co
 6. Aperte (A) para desbloquear a escrita da SysNAND, depois aperte a sequência de botões fornecida
 7. Selecione "Choose new name"
 8. Use os botões direcionais pra renomear o arquivo para `SecureInfo_C`, apertando (A) quando você estiver pronto (sobrescrevendo qualquer `SecureInfo_C` existente)
-9. Scroll down to the `SecureInfo_C` you just pasted
+9. Desça até achar o "SecureInfo_C" que você acabou de copiar
 10. Aperte (A) no `SecureInfo_C` depois selecione "Show in Hexeditor"
 11. Aperte (A) para continuar
 12. Aperte (A) para entrar no modo de edição
@@ -107,23 +107,23 @@ Mudar de região usando ctrtransfer (que é usado nesse método) parece fazer co
 6. Aguarde. O sistema pode parecer que está congelado, dê-lhe tempo.
 7. Aperte (A) para confirmar
 8. Aperte (B) para recusar a instalação de tickets do CDN.
-9. Exit with the home button
+9. Saia apertando o botão HOME
 
-##### Section VI - Region settings
+##### Seção VI - Configurações de região
 
-1. Open the System Settings
-2. Go to "Other Settings", "Profile", then "Region Settings"
-3. Select a country from the region you switched to
-4. If prompted, you do not need to set a state
-5. Update your region changed CFW SysNAND to the latest version
+1. Abra a Configuração do Console
+2. Vá para "Outras Configurações", "Perfil", depois "Região"
+3. Selecione um país da região para qual você trocou
+4. Se solicitado, você não precisa definir um estado
+5. Atualize sua SysNAND CFW com a região mudada para a versão mais recente
 
-##### Section VII - Restore config save
+##### Seção VII - Restaurando as configurações salvas
 
-1. Reboot holding (X) during boot to launch arm9loaderhax Decrypt9
-2. Go to "SysNAND Options", then "System Save Inject", then select "Inject configsave.bin"
+1. Reinicie segurando (X) durante a inicialização para abrir o Decrypt9 no modo arm9loaderhax
+2. Vá para "SysNAND Options", depois "System Save Inject", e selecione "Inject configsave.bin"
 
-Old 3DSs / 2DSs may need to format (using TinyFormat or the System Settings) to play extended memory mode games (such as Monster Hunter, Super Smash Bros, or Pokemon Sun/Moon).
+Old 3DSs / 2DSs podem precisar ser formatados (usando TinyFormat ou a Configuração do Console) para jogar jogos com o modo de memória estendida (tais como Monster Hunter, Super Smash Bros, ou Pokémon Sun/Moon).
 {: .notice--info}
 
-Formatting a device following a ctrtransfer *without restoring the config save* can cause screen brightness / flickering issues. See [this](https://github.com/Plailect/Guide/issues/794).
+Formatar um dispositivo após um ctrtransfer *sem restaurar as configurações salvas* pode causar problemas de brilho / cintilação na tela. Veja [isto](https://github.com/Plailect/Guide/issues/794).
 {: .notice--info}
