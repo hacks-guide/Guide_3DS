@@ -8,7 +8,7 @@ ref: dsiware-downgrade-(app-injection-and-second-3ds)
 Si estás entre las versiones 11.0.0 y 11.2.0 puedes seguir esta guía para downgradear tu NATIVE_FIRM usando un juego DSiWare y una segunda 3DS que ya tenga un "Custom Firmware" instalado en ella para volcar y restaurar tu NAND.
 {: .notice}
 
-Si tu versión es inferior a la 11.2.0 en cualquiera de las 2 consolas, entonces debes seguir los pasos referentes al ctr-httpwn (cuando sea necesario) en cada dispositivo por debajo de la version 11.2.0 para poder hacer la tranferencia entre ellos.
+Si tu versión es inferior a la 11.2.0 en cualquiera de las 2 consolas, entonces debes seguir los pasos referentes al ctr-httpwn (cuando sea necesario) en cada dispositivo por debajo de la versión 11.2.0 para poder hacer la transferencia entre ellos.
 {: .notice--info}
 
 Esto se aprovecha de una vulnerabilidad que permite a los juegos DSiWare a leer y escribir en cualquier parte de la NAND.
@@ -17,25 +17,25 @@ Esto se aprovecha de una vulnerabilidad que permite a los juegos DSiWare a leer 
 Esto es una guía detallada sobre el funcionamiento del exploit "FIRM partitions known-plaintext" [here](https://www.3dbrew.org/wiki/3DS_System_Flaws).
 {: .notice--info}
 
-Esta guía asume que la 3DS que posee CFW está usando arm9loaderhax y que se hizo mediante esta misma guia, pero funcionaría (con pequeñas modificaciones como hacer todos los pasos referentes a la SysNAND en la EmuNAND) en consolas ejecutando una EmuNAND. Nota: los términos EmuNAND y RedNAND son diferentes implementaciones del [Mismo concepto] (http://3dbrew.org/wiki/NAND_Redirection).
+Esta guía asume que la 3DS que posee CFW está usando arm9loaderhax y que se hizo mediante esta misma guía, pero funcionaría (con pequeñas modificaciones como hacer todos los pasos referentes a la SysNAND en la EmuNAND) en consolas ejecutando una EmuNAND. Nota: los términos EmuNAND y RedNAND son diferentes implementaciones del [Mismo concepto] (http://3dbrew.org/wiki/NAND_Redirection).
 {: .notice--info}
 
-Your DSiWare's save will be backed up before getting replaced by the hacked save.
+Se hará una copia de seguridad de la partida guardada del DSiWare antes de instalar la partida hackeada.
 {: .notice--info}
 
 {% capture notice-4 %}
-This exploit requires you to [System Transfer](http://en-americas-support.nintendo.com/app/answers/detail/a_id/13996/) from a CFW 3DS to a stock 3DS as part of the steps. System Transfers will work in the following directions *only*:    
+Este exploit requiere que hagas una [Transferencia de sistemas](https://www.nintendo.es/Atencion-al-cliente/Nintendo-3DS-y-Nintendo-2DS/Transferencia-entre-consolas-Nintendo-3DS-Incluida-Nintendo-3DS-XL-/Como-realizar-una-transferencia-de-sistema-entre-las-consolas-Nintendo-3DS-y-Nintendo-3DS-XL/Como-realizar-una-transferencia-de-sistema-entre-consolas-Nintendo-3DS-y-Nintendo-3DS-XL-592194.html) desde una 3DS con CFW instalado a una 3DS stock como parte de los pasos a seguir. Las Transferencias de Sistema funcionarán SÓLO en los siguientes casos:    
   + New 3DS -> New 3DS    
-  + Old 3DS or 2DS -> Old 3DS or 2DS    
-  + Old 3DS or 2DS -> New 3DS    
+  + 3DS vieja (old) o 2DS -> 3DS vieja (old) o 2DS    
+  + 3DS vieja (old) o 2DS -> New 3DS    
 {% endcapture %}
 
 <div class="notice--warning">{{ notice-4 | markdownify }}</div>
 
-Both systems MUST be from the same region.
+Las dos consolas DEBEN ser de la misma región.
 {: .notice--warning}
 
-**The _target 3DS_ will have all of its data erased!**
+**Todos los datos se borrarán de la consola de destino (que no tiene CFW)! **
 {: .notice--danger}
 
 The source 3DS's NNID will be stuck on the target 3DS unless you either system transfer back or call Nintendo! (details in the instructions)
