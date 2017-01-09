@@ -1,77 +1,77 @@
 ---
 layout: splash
 permalink: /
-title: "Руководство"
+title: "Guide"
 header:
   overlay_color: "#5e616c"
   overlay_image: images/home-page-feature.jpg
   overlay_filter: 0.5
-  cta_label: "Начнем!"
+  cta_label: "Get Started"
   cta_url: "/get-started"
   caption:
-excerpt: 'Пошаговая инструкция по установке arm9loaderhax и <br /> кастомной прошивки для 3DS от А до Я.<br />'
-lang: ru_RU
+excerpt: 'A complete guide to 3DS custom firmware, <br /> from stock to arm9loaderhax.<br />'
+lang: en_US
 ref: home
 ---
 
 {% capture notice-home %}
-**Это руководство применимо только для консолей, продающихся в рознице. Приставки, выдававшиеся по программе разработчиков Nintendo невозможно прошить по этому гайду!    
-Воспользуйтесь [этой инструкцией](https://dev.3ds.guide), если у вас версия для разработчиков ("PANDA" или "SNAKE").**
+**This guide is for retail (consumer purchased; not from the Nintendo Developer Program) consoles _only_!    
+If you have a developer ("PANDA" or "SNAKE") console, check out [devGuide](https://dev.3ds.guide)**
 {% endcapture %}
 
 <div class="notice--danger">{{ notice-home | markdownify }}</div>
 
-**Гайду необходима *ваша* помощь. Пожалуйста помогите просидировать [эти](https://3ds.guide/rss.xml) файлы!**
+**This guide needs *your* help to seed [these](https://3ds.guide/rss.xml) torrents!**
 {: .notice--info}
 
-**Для использования [magnet](https://ru.wikipedia.org/wiki/Magnet-%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0)-ссылок нужен torrent-клиент. Рекомендуемый клиент - [Deluge](http://dev.deluge-torrent.org/wiki/Download)**
+**To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links in this guide, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download)**
 {: .notice--info}
 
-**Перед началом работ следует прочитать инструкцию полностью, чтобы осознать весь фронт работ.**
+**Read all of the introductory pages before proceeding.**
 {: .notice--warning}
 
-## Что такое Homebrew?
+## What is Homebrew?
 
-Под словом [**Homebrew**](https://ru.wikipedia.org/wiki/Homebrew_(%D0%BA%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D1%8B%D0%B5_%D0%B8%D0%B3%D1%80%D1%8B)) обычно подразумевают ПО не авторизованное Nintendo. В качестве примера можно привести эмуляторы консолей предыдущих поколений, различные программы для бекапа и редактирования сохранений, разные самописные игры.
+[**Homebrew**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) usually refers to software that is not authorized by Nintendo. It allows you to run homebrew games, tools like save editing and backup, and emulators for various older systems.
 
-В большинстве случаев, запуск хомбрю легален и не требует денежных вложений. Часто достаточно лишь встроенного в прошивку приложения Звуки Nintendo 3DS. Однако, существуют эксплойты, требующие наличия купленной коммерческой игры.
+In most cases, running homebrew on your console is 100% free using just the Nintendo 3DS Sound app. There are also various other exploits in commercial games and the browser to get homebrew running.
 
-## Что такое кастомная прошивка (CFW)?
+## What is Custom Firmware?
 
-**Кастомная прошивка** ("CFW", "кастом") позволяет пользоваться всеми возможностями приставки и делать вещи не доступные простым пользователям хомбрю. Например, можно устанавливать неподписанное ПО и запускать его прямо с домашнего экрана. Например, можно устанавливать неподписанное ПО и запускать его прямо с домашнего экрана.
+**Custom Firmware** ("CFW") enables you to use more advanced hacks that userland homebrew can't easily do. For instance, signature patches let you install unsigned titles that appear right on your HOME Menu.
 
-Кастомную прошивку можно запросто установить на приставку с любой версией прошивки, даже с 11.2.0 (самая последняя прошивка на сегодняшний день).
+CFW can be easily set up on any console that is on 11.2.0 (latest) or lower. Other versions can have their firmware downgraded.
 
-## Так чему же учит этот гайд?
+## What does this guide install?
 
-Конечная цель гайда - установка кастомной прошивки, базирующейся на arm9loaderhax
-на любую приставку с родной немодифицированной прошивкой. В некоторых случая мы используем хомбрю, как трамплин для достижения конечной цели - CFW.
+This guide has the end goal of taking a completely unmodified 3DS from stock
+firmware to arm9loaderhax powered Custom Firmware. On some versions, it utilizes homebrew as a stepping off point, but Custom Firmware is still the goal.
 
-arm9loaderhax - новейший и наилучший метод запуска кастомной прошивки. Благодаря ему можно получить практически неограниченный доступ к системе, а скорость загрузки будет сравнима с таковой на оригинальной прошивке.
+Arm9loaderhax is the newest and best method of launching Custom Firmware that gives us nearly full control of the system only milliseconds into boot, which is similar to the effect of BootMii for the Wii.
 
-arm9loaderhax имеет множество преимуществ перед другими методами запуска кастомных прошивок. Рекомендуется использовать именно этот гайд, поскольку он постоянно обновляется и не содержит устаревших программ и методов запуска кастомных прошивок (например, menuhax или rxTools).
+The benefits of arm9loaderhax over other Custom Firmware launch methods are numerous, and as such it is recommended to use this guide over any other that relies on outdated software (such as menuhax or rxTools).
 
-## Что же можно делать на кастомной прошивке?
+## What can I do with Custom Firmware?
 
-+ Играть во все игры, когда-либо выходившие на картриджах, или в цифровом виде вне зависимости от их региона
-+ Настраивать внешний вид домашнего экрана с помощью кастомных [тем](http://rashevskyv.github.io/themes) и [жетонов](http://rashevskyv.github.io/tbadges), используя программы [СHMM2](http://rinnegatamante.it/site/3ds_hbs.php) и [GYTB](https://github.com/MrCheeze/GYTB) соответственно
-+ Использовать патчи на легально купленных играх, например, любительские переводы и модификации
-+ Делать скриншоты игр и приложений
-+ [Делать резервные копии, редактировать и восстанавливать](https://gbatemp.net/threads/release-jks-savemanager-Homebrew-cia-save-manager.413143/) сохранения игр
-+ Играть в игры от приставок предыдущих поколений с помощью эмуляторов (на New 3DS производительность выше)
-+ Устанавливать хомбрю в память приставки, таким образом, чтобы их было видно на домашнем экране
-+ Дампить игры в формате CIA, который можно [установить прямо в систему и играть](https://vk.com/3ds_cfw?w=wall-125012133_147%2Fall) не используя картридж
-+ Только New 3DS: стримить геймплей на компьютер по беспроводной сети с помощью NTR CFW
-+ Играть в игры от DS с помощью картриджей, которые заблокированы на 3DS, или вообще на ней не работали
-+ Безопасно обновляться до актуальных версий прошивок без боязни потерять доступ к хомбрю и кастому
++ Play all game cards and eShop games, regardless of region
++ Customize your HOME Menu with user-created [themes](https://3dsthem.es/) and [badges](https://badges.3dsthem.es/)
++ Use "ROM hacks" for games that you own
++ Take gameplay and application screenshots
++ [Backup, edit, and restore](https://gbatemp.net/threads/release-jks-savemanager-homebrew-cia-save-manager.413143/) saves for many games
++ Play games for older systems with various emulators, using RetroArch or other standalone emulators. (Works best with a New Nintendo 3DS)
++ Install homebrew titles to your system, and have them appear on your HOME Menu
++ Dump your game cards to a format you can install, and play them without needing the card
++ New 3DS only: stream live gameplay to your PC wirelessly with NTR CFW
++ Run many old Nintendo DS flash carts that were blocked long ago or never worked on Nintendo 3DS
++ Safely update to the latest system version without fear of losing access to homebrew
 
-## Что нужно знать, перед тем, как начать?
+## What do I need to know before starting?
 
-+ **Перед тем, как начинать прошивку, следует осознать все сопутствующие риски. КАЖДЫЙ раз, модифицируя прошивку консоли, вы рискуете получить НЕВОССТАНОВИМЫЙ брик. То есть, совсем. Вообще. Не поможет ни хардмод, ни молитва. Риск хоть и невысок, но он есть. Чем тщательней вы следуете инструкциям, тем ближе к нулю риск убить консоль. Удачи!** + Риск хоть и невысок, но он есть. Чем тщательней вы следуете инструкциям, тем ближе к нулю риск убить консоль. Удачи!
-+ Если ваша 3ds уже взломана и у нее есть рабочий и настроенный EmuNAND, и если вы хотите [перенести этот EmuNAND](move-emunand) со всем содержимым в ваш SysNAND, в новую кастомную прошивку, вам следует следовать всем инструкциям и восстановить бекап EmuNAND, когда вы доберетесь до [установки arm9loaderhax](installing-arm9loaderhax)
-+ Инструкция предназначена для New 3DS, Old 3DS и 2DS любых регионов на прошивке 11.2.0 или ниже *(за исключением любых консолей CHN / TWN регионов)*
-+ Если быть внимательным и не торопиться, то все данные на приставке будут сохранены, включая сейвы, игры и даже NNID.
-+ **На протяжении всего пути рекомендую держать консоль на зарядке**
-+ Карта памяти должна быть отформатирована в [MBR, а не в GPT](http://www.howtogeek.com/245610/) (большинство КП и так в MBR по-умолчанию, в том числе и комплектная).
-+ Если нужно отформатировать новую карту памяти, рекомендуем сделать это [этим](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) приложением. Следует установить Allocation Unit Size в 32К.
-+ 2DS практически полностью идентична Old 3DS по софту и железу. Все шаги, предназначенные для "Old 3DS" применимы и к 2DS.
++ **Before beginning the guide, you must know the risks of 3DS hacking: EVERY time you modify your system, there is always the potential for an UNRECOVERABLE brick. They're rare, but still a possibility so make sure you follow ALL directions EXACTLY.**
++ If you have already hacked your 3DS before to get an EmuNAND setup, and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, you should follow all instructions and restore your existing EmuNAND when prompted once you reach [Installing arm9loaderhax](installing-arm9loaderhax).
++ This guide will work on New 3DS, Old 3DS, and 2DS in all regions on firmware 11.2.0 or below *(except CHN / TWN)*.
++ If everything goes according to plan, you will lose no data and end up with everything that you started with (games, NNID, saves, etc will be preserved).
++ **Keep the device plugged in and charged throughout the entire process to avoid data loss or damage from an unexpected power-off!**
++ Your SD card should be [MBR, not GPT](http://www.howtogeek.com/245610/) (the SD card that comes with the device will be MBR by default).
++ If you need to format a brand new SD card, you can use [`guiformat`](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) and set to an Allocation Unit Size of 32K.
++ The 2DS is essentially identical to the Old 3DS in terms of software, and that any steps which say "Old 3DS" also apply to 2DS.
