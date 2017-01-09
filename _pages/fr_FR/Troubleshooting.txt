@@ -9,7 +9,7 @@ Si vous ne parvenez pas à démarrer votre 3DS, recherchez la section qui vous c
 (Cette section est plutôt longue, essayer de rechercher votre problème avec Ctrl+F)
 {: .notice--primary}
 
-**If you still cannot solve your issue and need to reach out for help, please paste the contents of all relevant .log files from the root of your SD card into a [Gist](https://gist.github.com/), then come for help prepared with a detailed description of your problem and what you've tried.**
+**Si vous n'arrivez toujours pas à résoudre votre problème et avez besoin d'aide, copiez le contenu de tous les fichiers .log pertinents présents à la racine de votre carte SD dans un [Gist](https://gist.github.com/), puis venez demander de l'aide avec une description détaillée de votre problème et de ce que vous avez essayé.**
 {: .notice--info}
 
 ## <a name="twl_broken" /> La fonction DSi / DS ne fonctionne plus après avoir fini le guide
@@ -35,7 +35,7 @@ Si vous ne parvenez pas à démarrer votre 3DS, recherchez la section qui vous c
 5. Copiez `Nintendo DS Cart Whitelist - v11264.cia` dans le dossier `/cias/` sur votre carte SD
 6. Copiez `New_3DS TWL_FIRM - v9936.cia`  ou `Old_3DS TWL_FIRM - v8817.cia` dans le dossier `/cias/` sur votre carte SD
 
-##### Section II - Installing titles
+### Section II - Installation d'applications
 
 1. Ouvrez FBI
 2. Sélectionnez "SD"
@@ -62,8 +62,8 @@ La dernière version de [GodMode9](https://github.com/d0k3/GodMode9/releases/)
 8. Retournez au menu principal
 9. Appuyez sur Start pour redémarrer
 
-## <a name="gw_fbi" />Je ne peux pas injecter Santé et Sécurité sur une console downgradée via Gateway
-This is caused by Gateway implementing a very shoddy downgrade method, which leaves two versions of each app on the system. One of them is unused, but it confuses Decrypt9, causing it to inject into the wrong one.
+## <a name="gw_fbi" />Je ne peux pas injecter sur Santé et Sécurité sur une console downgradée via Gateway
+Cela vient de l'implémentation bancale faite par Gateway pour downgrader et qui laisse deux version de chaque application la console. L'une d'entre elle n'est pas utilisée, mais cela confond Decrypt9 qui du coup fait l'injection dans la mauvaise.
 
 #### Ce qu'il vous faut
 
@@ -94,7 +94,7 @@ La dernière version de [GodMode9](https://github.com/d0k3/GodMode9/releases/)
 15. Les fichiers dont les extensions sont en majuscules seront déplacés vers le dossier `newdir`
 16. Appuyez sur (Start) pour redémarrer
 17. Retournez à [Installation arm9loaderhax](installing-arm9loaderhax) and réessayez l'injection de FBI
-18. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then return to [Installing arm9loaderhax](installing-arm9loaderhax) and retry the FBI injection
+18. Si cela ne fonctionne toujours pas, replacez les fichiers à l'extension en majuscules dans le dossier `content`, puis déplacez les fichiers à l'extension en minuscules dans le dossier `newdir`, puis retournez à [Installation arm9loaderhax](installing-arm9loaderhax) et réessayez l'injection de FBI
 
 ## <a name="ts_browser" />Un exploit basé sur le navigateur web ne fonctionne pas
 Les exploits basé sur le naviguateur (tel que browserhax ou 2xrsa) sont parfois instable et crash fréquement, mais ils peuvent parfois être réglés en faisant les étapes suivantes
@@ -118,16 +118,16 @@ Ceci se produira occasionnellement, mais la raison est inconnue. Les boutons fon
 3. La console redémarrera ensuite
   + Si la console ne redémarre pas, attendez 10 secondes, puis éteignez votre 3DS en maintenant le bouton power
 
-## <a name="ts_steelhax" />After System Transfering steelhax, it crashes to a black screen on _the target 3DS_
+## <a name="ts_steelhax" />Après avoir fait un transfert système de Steelhax, cela crash et donne un écran noir sur _la 3DS cible_
 
-This is because you selected the wrong version in the steelhax installer.
+C'est parce que vous avez sélectionné la mauvaise version de l'installeur de Steelhax.
 
-1. Download the [otherapp payload](https://smealum.github.io/3ds/#otherapp) corresponding to **the target 3DS's** version
-    + Ignore the NFIRM being downgraded
-    + Use the version displayed in settings
-2. Rename the otherapp payload to `steelhax_payload.bin`
-3. Copy it `steelhax_payload.bin` to the root of **the target 3DS's** SD Card
-    + Overwrite any existing files
+1. Téléchargez l'[otherapp payload](https://smealum.github.io/3ds/#otherapp) correspondant à la version de la **3DS cible**
+    + Faites comme si NFIRM n'était pas downgradé en chossisant
+    + Utilisez la version affichée dans les réglages
+2. Renommez l'otherapp payload `steelhax_payload.bin`
+3. Copiez `steelhax_payload.bin` à la racine de la carte SD de la **3DS cible**
+    + Remplacez tous les fichiers déjà présents
 4. Hold (B) while launching **Steel Diver: Sub Wars**
 
 ## <a name="ts_dsiware" />After doing the DSiWare Downgrade, my hacked DSiWare does not work
