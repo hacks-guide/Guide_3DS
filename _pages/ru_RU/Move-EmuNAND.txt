@@ -5,25 +5,25 @@ lang: en_US
 ref: move-emunand
 ---
 
-This is add-on section for moving the contents of a previous EmuNAND to your new SysNAND CFW, then removing the old EmuNAND partition. Note that the terms EmuNAND and RedNAND refer to slightly different implementations of [the same concept](http://3dbrew.org/wiki/NAND_Redirection).
+Этот дополнительный раздел предназначен тем, кто хочет перенести содержимое своего EmuNAND в новый SysNAND с кастомной прошивкой. В процессе мы так же удалим раздел с EmuNAND с карты памяти, что освободит немного места на карте памяти. Помните, что RedNAND и EmuNAND - слегка разные реализации одного и того же [концепта](http://3dbrew.org/wiki/NAND_Redirection).
 {: .notice--info}
 
-You will LOSE your GBA VC and DSiWare saves!
+Примечания: по окончанию, вы лишитесь ВСЕХ своих сохранений в GBA VC и DSiWare играх!
 {: .notice--danger}
 
-**You MUST have already installed arm9loaderhax + Luma3DS to use this.**
+**На момент начала работы, у вас УЖЕ должна быть установлена связка arm9loaderhax + Luma3DS**
 {: .notice--danger}
 
-#### What you need
+#### Требуется
 
-* An existing EmuNAND
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* Существующая EmuNAND
+* Самый свежая версия [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 
-#### Instructions
+#### Инструкция
 
-1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `up_GodMode9.bin`
-2. Reinsert your SD card into your 3DS
-3. Open Hourglass9 from arm9loaderhax by holding (Start) on boot
+1. Скопируйте `GodMode9.bin` из GodMode9 `.zip` архива в директорию `/luma/payloads/` на карте памяти, и в ней переименуйте `GodMode9.bin` в `up_GodMode9.bin`
+2. Вставьте SD карту обратно в приставку
+3. Запустите Hourglass9, зажав и держа кнопку Start при включении консоли.
 4. Go to "EmuNAND Backup/Restore", then select the "EmuNAND Backup" option to backup your EmuNAND to `NANDmin_emu.bin`
 5. Press (B) to get back to the main menu
 6. Go to "SysNAND Backup/Restore", then select the "SysNAND Restore (keep a9lh)" option to restore your SysNAND from `NANDmin_emu.bin`
@@ -38,16 +38,16 @@ You will LOSE your GBA VC and DSiWare saves!
 12. Press (Start) to reboot while holding (Up) to open GodMode9
 13. Press the (Home) button to bring up the action menu
 14. Select "SD format menu"
-15. Press (A) to confirm
-16. Select "No EmuNAND"
-17. Select "Auto"
-18. Enter the prompted button combination to confirm
-19. Hold (R) and press (B) at the same time to eject your SD card
-16. Put your SD card in your computer, then copy all your files back into it
-  + Ensure you replace the `arm9loaderhax.bin` file on the SD card with the one from your backup
-18. Reinsert your SD card into your 3DS
-19. Press (A) to remount your SD card
-20. Press (Start) to reboot!
-19. If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_down)
+15. Нажмите (A) для подтверждения
+16. Выберите "No EmuNAND"
+17. Выберите "Auto"
+18. Введите указанную последовательность кнопок для подтверждения
+19. Удерживая (R) нажмите (B) для того, чтобы извлечь карту памяти
+16. Вставьте карту памяти в компьютер и скопируйте на нее файлы, которые вы сохранили несколько шагов назад
+  + Убедитесь, что скопировали с заменой файл `arm9loaderhax.bin`. То есть на карте памяти должен быть файл, который вы копировали на компьютер, вместе со всем содержимым карты памяти до ее форматирования.
+18. Вставьте SD карту в приставку
+19. Нажмите (A) чтобы смонтировать карту памяти
+20. Нажмите (Start) для перезагрузки!
+19. Если нарветесь на черный экран, перейдите к разделу с [проблемами и их решениями](troubleshooting#ts_sys_down)
 
-Return to [Installing arm9loaderhax](installing-arm9loaderhax).
+Вернитесь в раздел [установку arm9loaderhax](installing-arm9loaderhax).
