@@ -58,9 +58,9 @@ Regionswechsel durch die ctrtransfer Methode (welche hier verwendet wird) schein
 2. Navigieren Sie zu "Ticket/Titlekey Options", dann wählen Sie "Ticket Dump (SysNAND)"
 3. Drücken Sie "Select" um Ihre SD Karte zu trennen und stecken Sie die SD Karte in Ihren Computer (Nintendo 3DS bleibt eingeschaltet)
 4. Löschen Sie alle ".tik" Dateien im "/files9/" Ordner die **nicht** mit "00-" starten
-5. Alle ".tik" Dateien die mit "00-" starten müssen im Ordner bleiben
-6. Stecken Sie Ihre SD Karte zurück in Ihren Nintendo 3DS, und drücken Sie "B" um ins Hauptmenü zurückzukehren
-7. Gehen Sie zu "SysNAND Options", dann "System Save Dump" und wählen Sie "Dump configsave.bin"
+1. Alle ".tik" Dateien die mit "00-" starten müssen im Ordner bleiben
+2. Stecken Sie Ihre SD Karte zurück in Ihren Nintendo 3DS, und drücken Sie "B" um ins Hauptmenü zurückzukehren
+3. Gehen Sie zu "SysNAND Options", dann "System Save Dump" und wählen Sie "Dump configsave.bin"
 
 ##### Teil 3 - ctrtransfer
 
@@ -68,13 +68,13 @@ Regionswechsel durch die ctrtransfer Methode (welche hier verwendet wird) schein
 2. Wählen Sie bei Aufforderung das 9.2.0 ctrtransfer Abbild udn bestätigen sie mit dem "A-Knopf"
 3. Wenn Sie noch kein NAND-Backup haben, wählen Sie bei Aufforderung **backup SysNAND to "NANDmin.bin" und bestätigen Sie mit dem "A-Knopf" **
 4. Erlauben Sie es dem Transferprozess automatisch fortzufahren, dies könnte einige Zeit in Anspruch nehmen
-5. Sobald der Transfer abgeschlossen ist, drücken Sie "Select" um Ihre SD Karte zu trennen
-6. Stecken Sie die SD Karte zurück in Ihren Computer, dann kopieren Sie die "NANDmin.bin" und die "NANDmin.bin.sha" aus dem "/files9/" Ordner an einen sicheren Platz
+1. Sobald der Transfer abgeschlossen ist, drücken Sie "Select" um Ihre SD Karte zu trennen
+2. Stecken Sie die SD Karte zurück in Ihren Computer, dann kopieren Sie die "NANDmin.bin" und die "NANDmin.bin.sha" aus dem "/files9/" Ordner an einen sicheren Platz
   + Speichern Sie Backups immer an mehrere Stellen
   + Das Backup wird Sie vor einem Brick schützen, falls in Zukunft etwas mit Ihrem Gerät schief gehen sollte
   + **Ihr Backup sollte eines der folgenden Größen besitzen [this](nand-size), ist dies nicht der Fall sollten Sie es löschen und ein neues Backup machen!**
-7. Löschen Sie das 9.2.0 ctrtransfer Abbild ".bin" und ".bin.sha" aus dem "/files9/" Ordner auf Ihrer SD Karte nach dem Sie es kopiert haben
-8. Stecken Sie Ihre SD Karte zurück in den Nintendo 3DS
+3. Löschen Sie das 9.2.0 ctrtransfer Abbild ".bin" und ".bin.sha" aus dem "/files9/" Ordner auf Ihrer SD Karte nach dem Sie es kopiert haben
+4. Stecken Sie die SD Karte zurück in Ihren Nintendo 3DS
 
 ##### Teil 4 - Bearbeiten der SecureInfo
 
@@ -82,16 +82,16 @@ Regionswechsel durch die ctrtransfer Methode (welche hier verwendet wird) schein
 2. Navigieren Sie zu "SYSNAND CTRNAND" -> "rw" -> "sys"
 3. Drücken Sie den "Y-Knopf" auf der "SecureInfo_A" um Sie zu kopieren
 4. Drücken Sie den "Y-Knopf" um die Kopie der "SecureInfo_A" einzufügen
-5. Wählen Sie "Copy path(s)"
-6. Drücken Sie den "A-Knopf" um SysNAND-Schreiben zu aktivieren, dann geben Sie die gegebene Schlüsselkombination ein
-7. Wählen Sie "Choose new name"
-8. Use the D-Pad to rename the file to `SecureInfo_C`, pressing (A) when you're done (overwrite any existing `SecureInfo_C`)
-9. Scroll down to the `SecureInfo_C` you just pasted
-10. Press (A) on `SecureInfo_C` then select "Show in Hexeditor"
-11. Press (A) to continue
-12. Press (A) to enter edit mode
+1. Wählen Sie "Copy path(s)"
+2. Drücken Sie den "A-Knopf" um SysNAND-Schreiben zu aktivieren, dann geben Sie die gegebene Schlüsselkombination ein
+3. Wählen Sie "Choose new name"
+4. Verwende das D-Pad um die Datei in "SecureInfo_C" umzubenennen, drücke (A) wenn du fertig bist (überschreibe existierende "SecureInfo_C")
+9. Scrolle runter zu "SecureInfo_C", welches du gerade eingefügt hast
+10. Drücke (A) auf `SecureInfo_C`, dann wähle "Show in Hexeditor" aus
+11. Drücke (A) um fortzufahren
+12. Drücke (A), um den Bearbeiten Modus zu starten
 13. Go to the beginning of line 00000100 and press (A) on it
-14. Hold (A) while pressing (Up) or (Down) on the D-Pad to edit the number
+14. Halte (A) während du (Hoch) oder (Runter) auf den Steuerkreuz drückst, um die Zahl zu bearbeiten
 15. Change the first number pair on line 00000100 to the following pair that corresponds to *the region you want to change to*:
     - "00" : JPN
     - "01" : USA
@@ -100,27 +100,27 @@ Regionswechsel durch die ctrtransfer Methode (welche hier verwendet wird) schein
 17. You should see both a `SecureInfo_A` and `SecureInfo_C` if everything was done properly. (`SecureInfo_C` is used in place of `SecureInfo_A` when using Luma3DS if it detects the file on boot)
 18. Drücke Start, um neuzustarten
 
-##### Section V - Reinstalling Tickets
+##### Teil 5 - Tickets wiederinstallieren
 
 1. Öffne FBI
 2. Wähle "SD"
 3. Wähle "files9"
 4. Wähle "\<current directory>"
-5. Wähle "Install and delete all tickets"
-6. Warte. Es mag so scheinen, dass das System einfriert. Lass ihm einfach Zeit.
-7. Drücke (A) um zu bestätigen
-8. Drücke (B) um einen Installation der Tickets von CDN abzulehnen.
+1. Wähle "Install and delete all tickets"
+2. Warte. Es mag so scheinen, dass das System einfriert. Lass ihm einfach Zeit.
+3. Drücke (A) um zu bestätigen
+4. Drücke (B) um einen Installation der Tickets von CDN abzulehnen.
 9. Schließe FBI mit dem Home Button
 
-##### Abschnitt VI - Regions-Einstellungen
+##### Teil 6 - Regions-Einstellungen
 
 1. Öffne die Systemeinstellungen
 2. Go to "Other Settings", "Profile", then "Region Settings"
 3. Select a country from the region you switched to
 4. If prompted, you do not need to set a state
-5. Update your region changed CFW SysNAND to the latest version
+1. Update your region changed CFW SysNAND to the latest version
 
-##### Section VII - Restore config save
+###### Teil 7 - Config Save wiederherstellen
 
 1. Reboot holding (X) during boot to launch arm9loaderhax Decrypt9
 2. Go to "SysNAND Options", then "System Save Inject", then select "Inject configsave.bin"
