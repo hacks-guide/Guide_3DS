@@ -1,30 +1,29 @@
 ---
-title: "DSiWare Downgrade (App Injection and Second 3DS)"
-permalink: /dsiware-downgrade-(app-injection-and-second-3ds).html
-lang: en_US
+Downgrade DSiWare (Iniezione App e Secondo 3DS)
+lang: it_IT
 ref: dsiware-downgrade-(app-injection-and-second-3ds)
 ---
 
-If you are between versions 11.0.0 and 11.2.0, you can follow this guide to downgrade your NATIVE_FIRM using DSiWare and a second 3DS which has already has a Custom Firmware installed on it in order to dump and restore your NAND.
+Se siete tra le versioni 11.0.0 e 11.2.0, potete seguire questa guida al downgrade del vostro NATIVE_FIRM tramite l'utilizzo di giochi DSiWare e di un secondo 3DS che possiede già un Custom Firmware, che servirà per poter eseguire dump e restore della vostra NAND.
 {: .notice}
 
-If you are below 11.2.0 on either device, then you should do the ctr-httpwn steps (when prompted) on each device under 11.2.0 to allow you to System Transfer with them.
+Se entrambi i 3DS hanno una versione inferiore alla 11.2.0, allora devi eseguire i passaggi di ctr-httpwn (quando richiesti) su ciascun dispositivo al di sotto della 11.2.0 per permetterti di eseguire il Trasferimento Dati.
 {: .notice--info}
 
-This takes advantage of an oversight which allows DSiWare titles to read and write anywhere in NAND.
+Questo metodo si avvale di una svista che permette ai titoli DSIWare di leggere e scrivere dappertutto nella NAND.
 {: .notice--info}
 
-This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+Questa è un'implementazione funzionante del "FIRM partitions known-plaintext" exploit spiegato [quì](https://www.3dbrew.org/wiki/3DS_System_Flaws).
 {: .notice--info}
 
-This guide will assume the CFW 3DS is running arm9loaderhax and was setup with this guide, but will work (with slight modifications such as doing all SysNAND steps on EmuNAND) on systems running an EmuNAND. Note that the terms EmuNAND and RedNAND refer to slightly different implementations of [the same concept](http://3dbrew.org/wiki/NAND_Redirection).
+Questa guida dà per scontato che il 3DS con CFW abbia già arm9loaderhax e che la sua installazione sia stata eseguita tramite questa guida, ma può funzionare (eseguendo alcune modifiche, come fare tutti i passaggi SysNAND su EmuNAND) su console che sono attualmente su EmuNAND. Nota che i termini EmuNAND e RedNAND si riferiscono a due implementazioni leggermente diverse [dello stesso concetto](http://3dbrew.org/wiki/NAND_Redirection).
 {: .notice--info}
 
-Your DSiWare's save will be backed up before getting replaced by the hacked save.
+Verrà eseguito un backup del salvataggio del tuo DSIWare prima di essere rimpazzato dal salvataggio modificato.
 {: .notice--info}
 
 {% capture notice-4 %}
-This exploit requires you to [System Transfer](http://en-americas-support.nintendo.com/app/answers/detail/a_id/13996/) from a CFW 3DS to a stock 3DS as part of the steps. System Transfers will work in the following directions *only*:    
+Questo exploit richiede di effettuare un [Trasferimento Dati](https://www.nintendo.it/Servizio-al-consumatore/New-Nintendo-3DS-e-New-Nintendo-3DS-XL/Trasferire-i-dati-tra-le-console/Guida-passo-dopo-passo-per-il-trasferimento-dati/Guida-passo-dopo-passo-per-il-trasferimento-dati-956502.html) da un 3DS con CFW a un 3DS stock tra i passi della guida. Il Trasferimento Dati funzionerà *soltanto in queste modalità*:    
   + New 3DS -> New 3DS    
   + Old 3DS or 2DS -> Old 3DS or 2DS    
   + Old 3DS or 2DS -> New 3DS    
@@ -32,35 +31,35 @@ This exploit requires you to [System Transfer](http://en-americas-support.ninten
 
 <div class="notice--warning">{{ notice-4 | markdownify }}</div>
 
-Both systems MUST be from the same region.
+Tutti e due i dispositivi DEVONO essere della stessa regione.
 {: .notice--warning}
 
-**The _target 3DS_ will have all of its data erased!**
+**Nel 3DS di destinazione verranno cancellati tutti i dati!**
 {: .notice--danger}
 
-The source 3DS's NNID will be stuck on the target 3DS unless you either system transfer back or call Nintendo! (details in the instructions)
+Il NNID del 3DS di partenza rimarrà bloccato nel 3DS di destinazione a meno che tu non faccia un altro Trasferimento Dati tra i due 3DS o chiami Nintendo! (dettagli nelle istruzioni)
 {: .notice--danger}
 
-System Transfers can only be performed once a week.
+Il Trasferimento Dati può essere eseguito solo una volta a settimana.
 {: .notice--danger}
 
-#### What you need
+#### Quello che ti serve
 
-* Two 3DS systems
-  + **The source 3DS**: the 3DS running some kind of custom firmware (arm9loaderhax or some form of EmuNAND/RedNAND) *on the latest version*
-  + **The target 3DS**: the 3DS on stock firmware *(between 11.0.0 and 11.2.0)*
-* Purchase (or already own) and install a compatible DSiWare game from the eShop on **the source 3DS**
-  + A pirated copy of the game will **not** work
+* Due dispositivi 3DS
+  + **Il 3DS di partenza**: il 3DS che ha in esecuzione qualche tipo di custom firmware (arm9loaderhax o qualche forma di EmuNAND/RedNAND) *aggiornato all'ultima versione*
+  + **Il 3DS di destinazione**: il 3DS con un firmware stock *(tra la 11.0.0 e la 11.2.0)*
+* Acquistare (o essere già in possesso) di un gioco compatibile DSiWare dal eShop sul ** il 3DS di origine **
+  + Una copia pirata del gioco **non ** funzionerà
   + For a list of compatible games, see the [DSiWare List](dsiware-list) page
-* An entrypoint from [Homebrew Launcher (SoundHax)](homebrew-launcher-(soundhax)) or [Homebrew Launcher (No Browser)](homebrew-launcher-(no-browser))
-* The sudokuhax injection `.zip` corresponding to your region
+* Un entry point da [Homebrew Launcher (SoundHax)](homebrew-launcher-(soundhax)) o [Homebrew Launcher (No Browser)](homebrew-launcher-(no-browser))
+* La sudokuhax injection `.zip` corrispondente alla tua regione
   + [`DSiWare_usa_sudokuhax_injection.zip`](magnet:?xt=urn:btih:7ed7fee15c900ed02b5e2cb3c8e7a0363f4d9354&dn=DSiWare_usa_sudokuhax_injection.zip&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce)
   + [`DSiWare_eur_exidiahax_injection.zip`](magnet:?xt=urn:btih:046bb8023bc40b9a95a8a339c85a9ef18cf60db6&dn=DSiWare_eur_exidiahax_injection.zip&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce)
   + [`DSiWare_jpn_4swordshax_injection.zip`](magnet:?xt=urn:btih:1bcc90c93da91c9876671f6218084207def90db9&dn=DSiWare_jpn_4swordshax_injection.zip&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce)
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* The latest release of [3DSident](https://github.com/joel16/3DSident/releases/latest)
-* The latest release of [dgTool](https://github.com/Plailect/dgTool/releases/latest)
-* The Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
+* L'ultima release di [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* L'ultima versione di [3DSident](https://github.com/joel16/3DSident/releases/latest)
+* L'ultima versione di [dgTool] (https://github.com/Plailect/dgTool/releases/latest)
+* Lo [Starter Kit] dell'homebrew(http://smealum.github.io/ninjhax2/starter.zip)
 * The NFIRM `.zip` corresponding to the device and version of **the target 3DS**
   + [New 3DS 11.0.0](magnet:?xt=urn:btih:2d13a5ea1570f911bd5c6423e0c30e51d548837a&dn=11.0.0%5Fto%5F10.4.0%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
   + [Old 3DS 11.0.0](magnet:?xt=urn:btih:72393bbd99bc285db84a9cabf39d9b3200058d6a&dn=11.0.0%5Fto%5F10.4.0%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
@@ -73,14 +72,14 @@ System Transfers can only be performed once a week.
 * If **the target 3DS** is below 11.2.0, you will _also_ need the following
   + The latest release of [ctr-httpwn](https://github.com/yellows8/ctr-httpwn/releases/latest)
 
-#### Instructions
+#### Istruzioni
 
-##### Section I - Prep Work
+##### Sezione I - Preparazione
 
-Use a [save manager](https://github.com/J-D-K/JKSM/releases/latest) to backup any saves you care about on the target 3DS (it will be formatted!)
+Usa un [Sava manager] (https://github.com/J-D-K/JKSM/releases/latest) per eseguire il backup qualsiasi salvataggio che ti interessa sul 3DS di destinazione (verrà formattato!)
 {: .notice--warning}
 
-1. Create a folder named `files9` on the root of **the source 3DS**'s SD card if it does not already exist
+1. Crea un folder chiamato ' files9 ' sulla radice della scheda SD **del 3ds di partenza** se non esiste
 2. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on **the source 3DS**'s' SD card and rename `GodMode9.bin` in `/luma/payloads/` to `up_GodMode9.bin`
 3. Copy the `.app` from DSiWare injection `.zip` to the root of **the source 3DS**'s SD card
 4. Copy `savedata` folder from DSiWare injection `.zip` to the root of **the source 3DS**'s SD card
