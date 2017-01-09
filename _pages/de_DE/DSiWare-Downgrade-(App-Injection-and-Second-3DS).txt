@@ -17,22 +17,23 @@ Dies nutzt eine Schwachstelle, welche es DSIWare-Titeln erlaubt, überall im NAN
 Dies ist eine momentan funktionierende Implementierung des "FIRM partitions known-plaintext"-Exploits, der [hier](https://www.3dbrew.org/wiki/3DS_System_Flaws) erklärt wird.
 {: .notice--info}
 
-This guide will assume the CFW 3DS is running arm9loaderhax and was setup with this guide, but will work (with slight modifications such as doing all SysNAND steps on EmuNAND) on systems running an EmuNAND. Note that the terms EmuNAND and RedNAND refer to slightly different implementations of [the same concept](http://3dbrew.org/wiki/NAND_Redirection).
+Dieser Guide geht davon aus, dass der CFW 3DS bereits mit arm9loaderhax läuft und mit diesem Guide gehackt wurde.
+Trotzdem sollte er auch (mit kleinen Modifikationen, wie z. B. die Durchführung aller SysNAND-Schritte auf dem EmuNAND) auf EmuNAND-Systemen funktionieren. Beachte, dass die Begriffe EmuNAND und RedNAND sich auf leicht unterschiedliche Implemenhierungen [des selben Konzepts](http://3dbrew.org/wiki/NAND_Redirection) beziehen.
 {: .notice--info}
 
-Your DSiWare's save will be backed up before getting replaced by the hacked save.
+Deine DSIWare-Spielstände werden gesichert, bevor sie mit gehackten Spielständen ersetzt werden.
 {: .notice--info}
 
 {% capture notice-4 %}
-This exploit requires you to [System Transfer](http://en-americas-support.nintendo.com/app/answers/detail/a_id/13996/) from a CFW 3DS to a stock 3DS as part of the steps. System Transfers will work in the following directions *only*:    
+Dieser Exploit erfordert einen[System Transfer](http://en-americas-support.nintendo.com/app/answers/detail/a_id/13996/) von einem CFW 3DS zu einem regulären 3DS als Teil der benötigten Schritte. System Transfers funktionieren *nur* in die folgenden Richtungen:    
   + New 3DS -> New 3DS    
-  + Old 3DS or 2DS -> Old 3DS or 2DS    
-  + Old 3DS or 2DS -> New 3DS    
+  + Old 3DS oder 2DS -> Old 3DS oder 2DS    
+  + Old 3DS oder 2DS -> New 3DS    
 {% endcapture %}
 
 <div class="notice--warning">{{ notice-4 | markdownify }}</div>
 
-Both systems MUST be from the same region.
+Beide Systeme MÜSSEN aus der selben Region sein.
 {: .notice--warning}
 
 **The _target 3DS_ will have all of its data erased!**
