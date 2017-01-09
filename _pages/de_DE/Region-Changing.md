@@ -8,9 +8,9 @@ Dies ist ein zusätzlicher Abschnitt für den Regionwechsel deines arm9loaderhax
 
 **Ein Regionwechsel ist nahezu unnötig, da Luma3DS Unterstützung für Out-Of-Region Spiele und individuelle [Title Region Emulation](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage) bietet.** {: .notice--info}
 
-This process will unlink your NNID from the system, since it will no longer be compatible with it. NNID's are locked to the region of the device that created them, and cannot be transferred between regions without [a very complex and advanced process](https://gist.githubusercontent.com/yifanlu/e80db121d38aceb8cca0e03cefd5853b/raw/3c4dd89869156ca0f945a2791e699acfdb32b510/gistfile1.txt). {: .notice--warning}
+Dieser Prozess wird deine NNID von deiner Konsole entfernen, da diese nicht mehr unterstützt wird. NNIDs sind auf die Regionen der Ursprungskonsolen gesperrt, und können ohne Anwenden eines [höchst komplizieren und anspruchvollen Prozess](https://gist.githubusercontent.com/yifanlu/e80db121d38aceb8cca0e03cefd5853b/raw/3c4dd89869156ca0f945a2791e699acfdb32b510/gistfile1.txt) nicht zwischen den Regionen übertragen werden. {: .notice--warning}
 
-After this process, only **New 3DSs which have never accessed the eShop before** and **any Old 3DSs** will be able to access the eShop after creating a new NNID on their new region. Region changed New 3DSs that have already accessed the eShop on their original region cannot create a new NNID and access the eShop on their new region! {: .notice--warning}
+Nach diesem Prozess, nur **New 3DS Systeme welche den eShop nie zuvor besucht haben** und **jeder Old 3DS** werden den eShop besuchen und eine neue NNID für die gewechselte Region erstellen können. Region gewechselte New 3DS Systeme welche schon zuvor den eShop in ihrer Ursprungsregion besucht haben, können keine neue NNID erstellen oder den eShop in der neuen Region besuchen! {: .notice--warning}
 
 Note that occasionally the eShop will inexplicably still not work for devices that it should work for. This is entirely to do with Nintendo's servers, and I really do not have any control over it. {: .notice--warning}
 
