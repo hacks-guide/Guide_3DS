@@ -5,25 +5,25 @@ lang: en_US
 ref: installing-arm9loaderhax
 ---
 
-The final Step of this guide is to install arm9loaderhax and setup Luma3DS to run just milliseconds into the boot. This is accomplished by using SafeA9LHInstaller by [AuroraWright](https://github.com/AuroraWright/).
+השלב הסופי של המדריך הינו התקנת arm9loaderhax וביצוע הגדרות ל-Luma3DS על מנת שירוץ עם הדלקת הקונסולה. זה יבוצע תוך שימוש בכלי SafeA9LHInstaller מאת [AuroraWright](https://github.com/AuroraWright/).
 {: .notice}
 
-This will install [AuroraWright's Fork](https://github.com/AuroraWright/arm9loaderhax) of arm9loaderhax.
+זה יתקין למכשירכם את [הפורק של AuroraWright](https://github.com/AuroraWright/arm9loaderhax) ל-arm9loaderhax.
 {: .notice--info}
 
-We will also setup the ability to launch payloads from arm9loaderhax, giving us the ability to unbrick our SysNAND from situations that would normally brick us by restoring from backup.
+בנוסף, נבצע הגדרה לאופציה להפעיל payloads דרך arm9loaderhax, דבר אשר יתן לנו את האפשרות לשחזר גיבוי NAND ובכך לתקן מצבים של בריק.
 {: .notice--info}
 
-**You cannot use another console's OTP or you will brick GUARANTEED.**
+**לעולם אל תשתמשו בקובץ OTP של קונסולה אחרת או שתקבלו בריק ודאי.**
 {: .notice--danger}
 
-#### Overview of steps
+#### מעבר על הצעדים
 
-In this section, we will go through the process that all the other steps have led up to: actually installing arm9loaderhax.
+בחלק זה, נבצע את התהליך אשר כל שאר הצעדים שביצענו עד כה הובילו אליו: התקנת arm9loaderhax.
 
-This is nearly the best possible kind of device exploit because it is permanently installable into the NAND firm partitions, and runs before most of the OS loads, allowing it to not only work on *all* versions once installed, but also protect itself and recover from most situations that would brick a non-A9LH 3DS such as a nonfunctional home menu or bad title install.
+זהו למעשה האקספלויט הטוב ביותר לקונסולה מכיוון שהוא מותקן באופן תמידי ישירות למחיצת ה-firm ב-NAND שלכם, ורץ בעת ההלדקה של הקונסולה עוד לפני מערכת ההפעלה, דבר אשר מאפשר לו לעבוד על *כל* גרסת מערכת, ובנוסף נותן לנו הגנה מלאה ואפשרות לשחזר כל נזק אשר ייגרם לקונסולה שלכם בעתיד, כגון תפריט ראשי שהפסיק לעבוד או תוכנה לא טובה שהתקנתם.
 
-The file `arm9loaderhax.bin` is what is launched by arm9loaderhax itself after it finishes loading off of NAND, and can be any valid arm9 payload. This file can be replaced at any time, although Luma3DS allows for the launch of other arm9 payloads by holding buttons on boot.
+הקובץ `arm9loaderhax.bin` הוא מה שמופעל בעת ההדלקה של הקונסולה על ידי arm9loaderhax עצמו לאחר שהוא טוען את ה-NAND, וניתן לטעון בעזרתו כל payload של arm9. את קובץ זה תוכלו להחליף בכל עת, אך Luma3DS מעניק לנו את האופציה להפעיל arm9 payloads אחרים על ידי לחיצה והחזקה של מקשים ספציפיים בעת ההדלקה.
 
 In this case, we use Luma3DS by [AuroraWright](https://github.com/AuroraWright/) to boot a patched SysNAND directly, allowing us to completely bypass the need for any kind of EmuNAND, vastly simplifying the usage of a hacked 3DS in addition to saving SD card space.
 
