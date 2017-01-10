@@ -20,7 +20,7 @@ Seu dispositivo pode não mostrar os jogos instalados após o ctrtransfer. Isso 
 **Desabilite o Controle Parental do seu aparelho antes de realizar o ctrtransfer para 2.1.0. Se você esqueceu sua senha, veja [este](https://mkey.salthax.org/) site.**
 {: .notice--warning}
 
-**A realização do ctrtransfer removerá todos os tickets do aparelho instalados pelo usuário até que um backup seja restaurado. Você não deve pular a criação do backup sob NENHUMA CIRCUNSTÂNCIA, ou você PERDERÁ o acesso a todos os jogos instalados e saves!**
+**A realização do ctrtransfer removerá todos os tickets do aparelho instalados pelo usuário até que um backup seja restaurado. Under NO CIRCUMSTANCES should you skip creating a backup!**
 {: .notice--danger}
 
 **Nunca formate um 2DS enquanto estiver em uma versão <6.0.0 senão você não conseguirá concluir a configuração inicial e irá BRICKAR!**
@@ -31,11 +31,9 @@ Seu dispositivo pode não mostrar os jogos instalados após o ctrtransfer. Isso 
 
 #### Visão geral das etapas
 
-Nesta seção, regravaremos a partição [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) do seu console para a versão 2.1.0 a fim de nos aproveitarmos de uma vulnerabilidade e extrair o [OTP](otp-info) exclusivo do seu console. Esse OTP é necessário para instalar o arm9loaderhax e **não pode** ser compartilhado com outros consoles.
+In this section, we will be flashing your console's [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) partition to 2.1.0 in order to take advantage of an oversight in 2.1.0 for the purpose of extracting the [OTP](https://www.3dbrew.org/wiki/OTP_Registers) unique to your console. Esse OTP é necessário para instalar o arm9loaderhax e **não pode** ser compartilhado com outros consoles.
 
 Isto é alcançado através da [instalação de uma imagem ctrtransfer já pronta] (https://www.reddit.com/r/3dshacks/comments/4zhe4a/) que contém a versão 2.1.0, e em seguida copiando os arquivos específicos do console (tais como `moveable.sed` e `SecureInfo_A`) para tal, e então corrigindo os bancos de dados de títulos.
-
-O OTP é um requisito para usar o arm9loaderhax.
 
 #### O que você precisa
 
@@ -62,9 +60,6 @@ Você deve estar no Decrypt9 para seguir essas etapas.
 **Ter um backup da NAND do _seu_ aparelho é OBRIGATÓRIO. Você será solicitado a criar um como parte das etapas se você já não possui um.**
 {: .notice--danger}
 
-**Pular este backup ocasionará na PERDA de todos os jogos e saves instalados!**
-{: .notice--danger}
-
 **Se você não tem certeza se você já possui um backup da NAND, crie um novo quando solicitado apertando (A) apenas para ter certeza.**
 {: .notice--danger}
 
@@ -82,8 +77,8 @@ Você deve estar no Decrypt9 para seguir essas etapas.
 7. Apague a imagem ctrtransfer 2.1.0 `.bin` e `.bin.sha` da pasta `/files9/` do seu cartão SD
 8. Aperte (Start) para reiniciar o aparelho sem o cartão SD
   + Enquanto estiver na versão 2.1.0, o aparelho irá para uma tela preta após ligá-lo se o seu cartão SD estiver inserido antes do Menu HOME carregar
-9. Reinsira o seu cartão SD no 3DS depois que o Menu HOME carregar
   + Toda vez que o aparelho é reiniciado na versão 2.1.0, você precisará tirar o seu cartão SD antes de ligar e colocá-lo de volta no aparelho depois que o Menu HOME carregar
+  + For now, leave the SD card out as you will be copying files to it in the next page
   + Isso será resolvido assim que você restaurar o seu aparelho na página seguinte
 
 ___
