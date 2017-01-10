@@ -20,7 +20,7 @@ Your device may not show your installed games after the ctrtransfer. This is due
 **Disable the parental controls of your device before doing the 2.1.0 ctrtransfer. If you do not know the password, see [this](https://mkey.salthax.org/) site.**
 {: .notice--warning}
 
-**Performing a ctrtransfer will remove all user-installed tickets from the device until a backup is restored. Under NO CIRCUMSTANCES should you skip creating the backup, or you will LOSE access to all installed games and saves!**
+**Performing a ctrtransfer will remove all user-installed tickets from the device until a backup is restored. Under NO CIRCUMSTANCES should you skip creating a backup!**
 {: .notice--danger}
 
 **Never format a 2DS while on a version <6.0.0 or you will be unable to complete initial setup and will BRICK!**
@@ -31,11 +31,9 @@ Your device may not show your installed games after the ctrtransfer. This is due
 
 #### Overview of steps
 
-In this section, we will be flashing your console's [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) partition to 2.1.0 in order to take advantage of an oversight in 2.1.0 for the purpose of extracting the [OTP](otp-info) unique to your console. This OTP file is required to install arm9loaderhax, and **cannot** be shared with other consoles.
+In this section, we will be flashing your console's [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) partition to 2.1.0 in order to take advantage of an oversight in 2.1.0 for the purpose of extracting the [OTP](https://www.3dbrew.org/wiki/OTP_Registers) unique to your console. This OTP file is required to install arm9loaderhax, and **cannot** be shared with other consoles.
 
 This is accomplished by [installing a premade ctrtransfer image](https://www.reddit.com/r/3dshacks/comments/4zhe4a/) containing 2.1.0, copying your console specific files (such as `moveable.sed` and `SecureInfo_A`) to it, then fixing the title databases.
-
-The OTP is a requirement to use arm9loaderhax.
 
 #### What you need
 
@@ -62,9 +60,6 @@ You should be in Decrypt9 for these steps.
 **Having a backup of _your_ device's NAND is REQUIRED. You will be prompted to create one as part of the steps if you do not already have one.**
 {: .notice--danger}
 
-**Skipping this backup will result in the LOSS of all installed games and saves!**
-{: .notice--danger}
-
 **If you do not know whether or not you already have a NAND backup, create one when prompted by pressing (A) just to be sure.**
 {: .notice--danger}
 
@@ -82,8 +77,8 @@ You should be in Decrypt9 for these steps.
 7. Delete the 2.1.0 ctrtransfer image `.bin` and `.bin.sha` from the `/files9/` folder on your SD card
 8. Press (Start) to reboot without reinserting your SD card
   + While on 2.1.0, the device will black screen on boot if your SD card is inserted before the home menu loads
-9. Reinsert your SD card into your 3DS after the home menu loads
   + Every time the device is rebooted on 2.1.0, you will need to take out your SD card before boot and put it back in after the home menu loads
+  + For now, leave the SD card out as you will be copying files to it in the next page
   + This will be fixed once you restore your device in the next page
 
 ___
