@@ -20,7 +20,7 @@ La tua console potrebbe non visualizzare più i giochi installati dopo il ctrtra
 **Assicurati di disattivare il Filtro famiglia della tua console prima del ctrtransfer 2.1.0. Se non conosci la password, collegati a [questo](http://mkey.salthax.org/) sito.**
 {: .notice--warning}
 
-**Un ctrtransfer rimuoverà dalla console tutti i ticket installati dall'utente finché non verrà ripristinato un backup. La creazione di un backup è pertanto NECESSARIA, altrimenti PERDERAI l'accesso ai salvataggi e a tutti i giochi installati!**
+**Un ctrtransfer rimuoverà dalla console tutti i ticket installati dall'utente finché non verrà ripristinato un backup. Under NO CIRCUMSTANCES should you skip creating a backup!**
 {: .notice--danger}
 
 **Non formattare mai un 2DS se sei ad una versione del software <6.0.0 altrimenti non potrai più completare l'installazione iniziale e BRICKERAI la console!**
@@ -31,11 +31,9 @@ La tua console potrebbe non visualizzare più i giochi installati dopo il ctrtra
 
 #### Panoramica
 
-In questa sezione verrà installata nella partizione [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) una particolare versione del software 2.1.0 per sfruttare un exploit che permetterà di estrarre l'[OTP](otp-info) univoco della tua console. Questo file OTP è necessario per l'installazione dell'arm9loaderhax, e **non** può essere condiviso con altre console.
+In this section, we will be flashing your console's [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) partition to 2.1.0 in order to take advantage of an oversight in 2.1.0 for the purpose of extracting the [OTP](https://www.3dbrew.org/wiki/OTP_Registers) unique to your console. Questo file OTP è necessario per l'installazione dell'arm9loaderhax, e **non** può essere condiviso con altre console.
 
 Per questo motivo verrà [installata un'immagine ctrtransfer prefabbricata](https://www.reddit.com/r/3dshacks/comments/4zhe4a/) contenente la versione 2.1.0, copiando nella tua console dei file specifici (come `moveable.sed` e `SecureInfo_A`) per poi correggere il title database.
-
-Il file OTP è necessario per utilizzare l'arm9loaderhax.
 
 #### Cosa serve
 
@@ -64,9 +62,6 @@ Questi passi vanno eseguiti dalla schermata principale di Decrypt9.
 **È NECESSARIO avere un backup della NAND della _tua_ console. Proseguendo con la guida ti verrà richiesto di crearne uno se non ne hai già uno a disposizione.**
 {: .notice--danger}
 
-**Saltare la creazione del backup porterà alla PERDITA di tutti i giochi installati e dei salvataggi!**
-{: .notice--danger}
-
 **Se non sai se hai già un backup NAND a disposizione, creane uno per sicurezza quando verrà richiesto premendo (A).**
 {: .notice--danger}
 
@@ -84,8 +79,8 @@ Questi passi vanno eseguiti dalla schermata principale di Decrypt9.
 7. Elimina i file `.bin` e `.bin.sha` del ctrtransfer 2.1.0 dalla cartella `/files9/` della tua scheda SD
 8. Senza reinserire la scheda SD, premi (Start) per riavviare la console
   + Nella versione del software 2.1.0, la console mostrerà una schermata nera se la scheda SD viene inserita prima del caricamento del menu HOME
-9. Reinserisci la scheda SD nel tuo 3DS al termine del caricamento del menu HOME
   + Ogni volta che la console verrà riavviata nella versione del software 2.1.0, dovrai estrarre la scheda SD prima dell'accensione e reinserirla al termine del caricamento del menu HOME
+  + For now, leave the SD card out as you will be copying files to it in the next page
   + Al termine del ripristino della console, effettuato nella prossima sezione della guida, non sarà più necessario
 
 ___
