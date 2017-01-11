@@ -5,28 +5,28 @@ lang: ko_KR
 ref: f3-(linux)
 ---
 
-이 페이지에서는 F3를 사용하여 SD 카드의 오류를 확인하는 과정을 안내합니다.
+This page will walk you through the process of checking your SD card for errors using F3.
 {: .notice}
 
-이 과정은 SD 카드의 크기와 컴퓨터의 속도에 따라 최대 몇 시간이 걸릴 수도 있습니다!
+Depending on the size of your SD card and the speed of your computer, this process can take up to several hours!
 {: .notice--info}
 
-이 페이지는 Linux 사용자를 위한 페이지입니다. Linux 사용자가 아니라면 [H2testw (windows)](h2testw-(windows)) 또는 [F3X (mac)](f3x-(mac)) 페이지를 확인하십시오.
+This page is for Linux users only. If you are not on Linux, check out the [H2testw (windows)](h2testw-(windows)) or [F3X (mac)](f3x-(mac)) pages.
 {: .notice--info}
 
-#### 준비물
+#### What you need
 
-* 최신 버전의 [F3](https://github.com/AltraMayor/f3/archive/v6.0.zip)
+* The latest version of [F3](https://github.com/AltraMayor/f3/archive/v6.0.zip)
 
-#### 지시 사항
+#### Instructions
 
-1. f3 `.zip` 파일의 압축을 푸십시오.
-2. f3 디렉터리로 `cd` 하십시오.
-3. `make` 커맨드를 실행하여 F3를 컴파일하십시오.
-4. SD 카드를 컴퓨터에 삽입하십시오.
-5. SD 카드를 마운트하십시오.
-6. `./f3write <SD 카드 마운트 포인트>` 커맨드를 실행하십시오.
-7. 과정이 완료될 때까지 기다리십시오. 예시 결과는 아래를 참조하십시오.
+1. Unzip the f3 `.zip` file
+2. `cd` into the f3 directory
+3. Run `make` to compile F3
+4. Insert your SD card into your computer
+5. Mount your SD card
+6. Run `./f3write <your sd card mount point>`
+7. Wait until the process is complete. See below for an example output.
 
 		$ ./f3write /media/michel/6135-3363/
 		Free space: 29.71 GB
@@ -36,8 +36,8 @@ ref: f3-(linux)
 		Free space: 0.00 Byte
 		Average Writing speed: 4.90 MB/s
 
-8. `./f3read <SD 카드 마운트 포인트>` 커맨드를 실행하십시오.
-9. 과정이 완료될 때까지 기다리십시오. 예시 결과는 아래를 참조하십시오.
+8. Run `./f3read <your sd card mount point>`
+9. Wait until the process is complete. See below for an example output.
 
 		$ ./f3read /media/michel/6135-3363/
 		                  SECTORS      ok/corrupted/changed/overwritten
@@ -53,11 +53,11 @@ ref: f3-(linux)
 		Average Reading speed: 9.42 MB/s
 
 
-테스트 결과가 `Data LOST: 0.00 Byte (0 sectors)`와 같이 표시되면, SD 카드가 정상이라는 의미이며 SD 카드 안의 모든 `.h2w` 파일을 삭제할 수 있습니다.
+If the test shows the result `Data LOST: 0.00 Byte (0 sectors)` your SD card is good and you can delete all `.h2w` files on the SD card
 {: .notice--success}
 
-테스트에서 다른 결과가 표시되면, SD 카드가 손상되었을 수 있으므로 SD 카드를 교체해야 할 수 있습니다!
+If the test shows any other results, your SD card may be corrupted or damaged and you may have to replace it!
 {: .notice--danger}
 
-[시작하기](get-started)로 돌아갑니다.
+Return to [Get Started](get-started)
 {: .notice--primary}
