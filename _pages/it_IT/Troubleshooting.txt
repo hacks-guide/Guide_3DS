@@ -55,15 +55,15 @@ Se non riesci ad avviare il tuo 3DS, consulta la sezione relativa al tuo problem
 1. Copia il file `GodMode9.bin` dall'archivio `.zip` di GodMode9 nella cartella `/luma/payloads/` presente nella scheda SD e rinomina il file `GodMode9.bin` appena copiato in `up_GodMode9.bin`
 2. Avvia la console tenendo premuto (Su) per avviare GodMode9 tramite l'arm9loaderhax
 3. Cerca la cartella `SYSNAND CTRNAND` -> `data` -> (ID a 32 caratteri) -> `sysdata` -> `00010038`
-4. Hold down the (R) trigger, then press X on `00000000` to rename this file
-5. Press Up once to change the name to `10000000`
-6. Press (A) to save changes
-7. Press (A) to unlock SysNAND writing, then input the key combo given
-8. Navigate back to the Main Menu
-9. Press Start to reboot
+4. Tieni premuto il pulsante (R), quindi premi (X) su `00000000` per rinominare il file
+5. Premi (Su) una volta per cambiare il nome in `10000000`
+6. Premi (A) per salvare le modifiche
+7. Premi il pulsante (A) per sbloccare la scrittura su SysNAND, quindi inserisci la combinazione di tasti richiesta a schermo
+8. Ritorna al menu principale
+9. Premi il pulsante (Start) per riavviare la console
 
-## <a name="gw_fbi" />Cannot inject H&S on Gateway downgraded device
-This is caused by Gateway implementing a very shoddy downgrade method, which leaves two versions of each app on the system. One of them is unused, but it confuses Decrypt9, causing it to inject into the wrong one.
+## <a name="gw_fbi" />Impossibile eseguire l'inject di "Informazioni per la salute e la sicurezza" su console downgradate tramite Gateway
+Questo problema è dovuto alla pessima implementazione da parte di Gateway di una procedura di downgrade, che duplica ogni applicazione installata nel sistema. Una di queste copie rimane inutilizzata, ma confonde Decrypt9 e gli impedisce di modificare l'applicazione corretta.
 
 #### Cosa serve
 
@@ -72,20 +72,20 @@ This is caused by Gateway implementing a very shoddy downgrade method, which lea
 #### Istruzioni
 
 1. Copia il file `GodMode9.bin` dall'archivio `.zip` di GodMode9 nella cartella `/luma/payloads/` presente nella scheda SD e rinomina il file `GodMode9.bin` appena copiato in `up_GodMode9.bin`
-2. Reinsert your SD card into your 3DS
-3. Open GodMode9 from arm9loaderhax by holding (Up) during boot     
-4. Navigate to `SYSNAND CTRNAND` -> `title` -> `00040010`
-5. Navigate to the folder for your device and region:
+2. Reinserisci la scheda SD nel 3DS
+3. Avvia GodMode9 tramite l'arm9loaderhax tenendo premuto (Su) durante l'accensione della console     
+4. Cerca la cartella `SYSNAND CTRNAND` -> `title` -> `00040010`
+5. Naviga fino alla cartella corretta a seconda della tua console e della sua regione:
   + **Old 3DS EUR**: `00022300` -> `content`
   + **Old 3DS JPN**: `00020300` -> `content`
   + **Old 3DS USA**: `00021300` -> `content`
   + **New 3DS EUR**: `20022300` -> `content`
   + **New 3DS JPN**: `20020300` -> `content`
   + **New 3DS USA**: `20021300` -> `content`
-6. Notice that there are two sets of app and tmd files, one set with uppercase extensions (`.TMD` and `.APP`), and one set with lowercase extensions (`.tmd` and `.app`)
-7. While holding the (R) trigger, press (Y) to create a new directory
+6. Noterai la presenza di due serie di file app e tmd, una con estensione in uppercase (`.TMD` and `.APP`), e una con estensione in lowercase (`.tmd` and `.app`)
+7. Tenendo premuto il pulsante (R), premi (Y) per creare una nuova cartella
 8. Press (A) to confirm the name `newdir` (it doesn't matter what it's called)
-9. Press (A) to unlock SysNAND writing, then input the key combo given
+9. Premi il pulsante (A) per sbloccare la scrittura su SysNAND, quindi inserisci la combinazione di tasti richiesta a schermo
 10. Press the (L) trigger on each of the uppercase extension files (`.TMD` and `.APP`) to mark them
 11. Press (Y) to copy the files
 12. Navigate to `newdir`
