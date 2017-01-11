@@ -53,50 +53,50 @@ L'objectif du ctrtransfer en 9.2.0 étant de résoudre les problèmes causés pa
 2. Sélectionnez l'image ctrtransfer 9.2.0 en pressant (A) quand invité, puis effectuez la combinaison de touches qui vous est demandée
 3. Si vous n'avez pas de sauvegarde de votre NAND, **Sauvegardez (backup) votre SysNAND vers le fichier `NANDmin.bin` en appuyant sur (A) quand vous y êtes invité**
 4. Patientez pendant que le transfert s'effectue automatiquement, cela peut prendre du temps
-5. Once the transfer is complete, press (Select) to eject your SD card
-6. Put your SD card in your computer, then copy `NANDmin.bin` and `NANDmin.bin.sha` from the `/files9/` folder on your SD card to a safe location
-  + Make backups in multiple locations
-  + This backup will save you from a brick if anything goes wrong in the future
-  + **Your backup should match one of the sizes on [this](nand-size) page; if it does not, you should delete it and make a new one!**
-7. Delete the 9.2.0 ctrtransfer image `.bin` and `.bin.sha` from the `/files9/` folder on your SD card
+5. Une fois le transfert terminé, appuyez sur (Select) pour éjecter votre carte SD
+6. Insérez votre carte SD dans votre ordinateur, puis copiez le fichier `NANDmin.bin` et `NANDmin.bin.sha` du dossier `/files9/` de votre carte SD vers un endroit sûr
+  + Sauvegardez ces fichiers à plusieurs endroits
+  + Cette sauvegarde vous sauvera d'un brick si quelque chose se passe mal dans le futur
+  + **Votre sauvegarde devrait avoir la même taille que sur cette [page](nand-size) ; dans le cas contraire, supprimez votre sauvegarde et refaite-en une !**
+7. Supprimez les fichiers `.bin` et `.bin.sha` de l'image ctrtransfer 9.2.0 dans le dossier `/files9/` de votre carte SD
 8. Réinsérez votre carte SD dans votre console
-9. Press (Start) to reboot
-10. Update your 3DS by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
-  + Updates while using A9LH + Luma (what you have) are safe, stop asking about it
-  + If this gives you an error, set your DNS settings to "auto"
+9. Appuyez sur (Start) pour redémarrer la console
+10. Mettez à jour votre console en vous rendant dans "Paramètres de la console", puis "Autres paramètres", puis tout à droite sur l'option "Mise à jour du Système"
+  + Mettre à jour sa console alors que A9LH et Luma3DS sont installés (ce que vous avez) n'est pas dangereux, arrêtez de poser la question
+  + Si vous obtenez une erreur, réglez vos paramètres DNS sur "Automatique"
 
-##### Section IV - Restore config save
+##### Section IV - Restauration de la configuration
 
-1. Reboot holding (X) during boot to launch arm9loaderhax Decrypt9
-2. Go to "SysNAND Options", then "System Save Inject", then select "Inject configsave.bin"
-3. Press (B) to get back to the main menu
+1. Redémarrez la console en maintenant le bouton (X) appuyé pour lancer arm9loaderhax et Decrypt9
+2. Allez dans "SysNAND Options", puis "System Save Inject", puis sélectionnez "Inject configsave.bin"
+3. Appuyez sur (B) pour retourner au menu principal
 
-##### Section V - Injecting FBI
+##### Section V - Injection de FBI
 
-1. Go to "SysNAND Options", then "Miscellaneous", then select the "Health&Safety Dump" option to dump Health & Safety to `hs.app` **(you can use Up and Down / Left and Right to change the name)**
-2. Press (B), then select the "Health&Safety Inject" option
-3. Select the FBI injectable `.app` for your region
-4. Press (A) and confirm to inject
-5. Press (Start) to reboot
-6. If you still launch to the stock Health & Safety app and have downgraded with Gateway in the past, [follow this troubleshooting guide](troubleshooting#gw_fbi)
+1. Allez dans "SysNAND Options", puis "Miscellaneous", puis sélectionnez "Health&Safety Dump" pour faire une copie de l'application "Informations sur la santé et la sécurité" vers le fichier `hs.app` **(vous pouvez utiliser les touches haut et bas / gauche et droite pour changer le nom)**
+2. Appuyez sur (B), puis sélectionnez "Health&Safety Inject"
+3. Sélectionnez le fichier `.app` "FBI injectable" pour votre région
+4. Appuyez sur (A) pour confirmer l'injection
+5. Appuyez sur (Start) pour redémarrer la console
+6. Si votre application Santé et Sécurité est toujours celle de base et que vous avez downgradé avec Gateway dans le passé, suivez ce [guide](troubleshooting#gw_fbi)
 
-##### Section VI - Reinstalling Tickets
+##### Section VI - Réinstallation des Tickets
 
-If you had no tickets beginning with 00- earlier, you can skip this section.
+Si vous n'aviez aucun tickets dont le nom commençait par "00-", vous pouvez passer cette section.
 {: .notice--info}
 
-1. Open FBI
-2. Select "SD"
-3. Select "files9"
-4. Select "\<current directory>"
-5. Select "Install and delete all tickets"
-6. Wait. The system may appear to freeze, just give it time.
-7. Press (A) to confirm
-8. Press (B) to decline installing tickets from CDN.
-9. Exit with the home button
+1. Ouvrez FBI
+2. Sélectionnez "SD"
+3. Sélectionnez "files9"
+4. Sélectionnez "\<current directory>"
+5. Sélectionnez "Install and delete all tickets"
+6. Attendez. The system may appear to freeze, just give it time.
+7. Appuyez sur (A) pour confirmer
+8. Appuyez sur (B) pour décliner l'installation de tickets depuis un CDN.
+9. Quittez FBI en appuyant sur le bouton Home
 
-Formatting a device following a ctrtransfer *without restoring the config save* can cause screen brightness / flickering issues. See [this](https://github.com/Plailect/Guide/issues/794).
+Le formatage d'une console après un ctrtransfer *sans restaurer la sauvegarde de la configuration* peut entraîner des problèmes de luminosité / de scintillement de l'écran. Voir [ceci](https://github.com/Plailect/Guide/issues/794).
 {: .notice--info}
 
-Return to [Installing arm9loaderhax](installing-arm9loaderhax).
+Retournez à [L'installation d'arm9loaderhax](installing-arm9loaderhax).
 {: .notice--primary}
