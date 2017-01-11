@@ -1,53 +1,52 @@
 ---
-title: "Move EmuNAND"
-permalink: /move-emunand.html
-lang: en_US
+title: "Déplacement EmuNAND" permalink: /move-emunand.html
+lang: fr_FR
 ref: move-emunand
 ---
 
-This is add-on section for moving the contents of a previous EmuNAND to your new SysNAND CFW, then removing the old EmuNAND partition. Note that the terms EmuNAND and RedNAND refer to slightly different implementations of [the same concept](http://3dbrew.org/wiki/NAND_Redirection).
+Ceci est une section complémentaire qui vous permettra de déplacer le contenu d'une EmuNAND précédente sur votre nouveau CFW SysNAND, puis de supprimer l'ancienne partition EmuNAND. Notez que les termes EmuNAND et RedNAND font référence à des implémentations légèrement différentes du [même concept](http://3dbrew.org/wiki/NAND_Redirection).
 {: .notice--info}
 
-You will LOSE your GBA VC and DSiWare saves!
+Vous allez PERDRE vos sauvegardes GBA VC et DSiWare!
 {: .notice--danger}
 
-**You MUST have already installed arm9loaderhax + Luma3DS to use this.**
+**Vous DEVEZ avoir déjà installé arm9loaderhax + Luma3DS afin d'utiliser cela.**
 {: .notice--danger}
 
-#### What you need
+#### Ce dont vous aurez besoin
 
-* An existing EmuNAND
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* Une EmuNAND existante
+* La dernière version de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 
-#### Instructions
+### Instructions
 
-1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `up_GodMode9.bin`
+1. Copier `GodMode9.bin` depuis GodMode9 `.zip` vers le dossier `/luma/payloads/` sur votre carte SD et renomez `GodMode9.bin` dans `/luma/payloads/` en `up_GodMode9.bin`
 2. Reinsert your SD card into your 3DS
-3. Open Hourglass9 from arm9loaderhax by holding (Start) on boot
-4. Go to "EmuNAND Backup/Restore", then select the "EmuNAND Backup" option to backup your EmuNAND to `NANDmin_emu.bin`
-5. Press (B) to get back to the main menu
-6. Go to "SysNAND Backup/Restore", then select the "SysNAND Restore (keep a9lh)" option to restore your SysNAND from `NANDmin_emu.bin`
-7. Press (Select) to eject your SD card
-8. Put your SD card in your computer, then copy `NANDmin_emu.bin` and `NANDmin_emu.bin.sha` from the `/files9/` folder on your SD card to a safe location
-  + Make backups in multiple locations
-  + This backup will save you from a brick if anything goes wrong in the future
-  + **Your backup should match one of the sizes on [this](nand-size) page; if it does not, you should delete it and make a new one!**
-9. Delete `NANDmin_emu.bin` from the `/files9/` folder on your SD card after copying it
-10. **Backup every file on your SD card to a folder on your computer, all files will be deleted in the next step**
+3. Ouvrez Hourglass9 depuis arm9loaderhax en maintenant (Start) au démarrage
+4. Sélectionnez "EmuNAND Backup/Restore", puis "EmuNAND Backup" de façon à sauvegarder votre EmuNAND dans `NANDmin_emu.bin`
+5. Appuyez sur (B) pour retourner sur le menu principal
+6. Sélectionnez "SysNAND Backup/Restore", puis "SysNAND Restore (keep a9lh)" pour restaurer votre SysNand depuis `NANDmin_emu.bin`
+7. Appuyez sur (Select) pour éjecter votre carte SD
+8. Insérez votre carte SD dans votre ordinateur, puis copiez `NANDmin_emu.bin` et `NANDmin_emu.bin.sha` se trouvant dans le dossier`/files9/` sur votre carte SD vers un endroit sûr
+  + Faites-en des copies à différents emplacements
+  + Cette sauvegarde vous sauvera d'un brick si quoi que ce soit se passe mal à l'avenir
+  + **Votre sauvegarde devrait correspondre à une des taille de [cette](nand-size) page; si cela n'est pas le cas, vous devrez supprimer votre sauvegarde et en refaire une nouvelle!**
+9. Supprimez `NANDmin_emu.bin` du dossier `/files9/` sur votre carte SD après l'avoir copié
+10. **Sauvegardez tous les fichiers sur votre carte SD dans un dossier sur votre ordinateur, tous les fichiers seront supprimés à l'étape suivante**
 11. Reinsert your SD card into your 3DS
-12. Press (Start) to reboot while holding (Up) to open GodMode9
-13. Press the (Home) button to bring up the action menu
-14. Select "SD format menu"
-15. Press (A) to confirm
-16. Select "No EmuNAND"
-17. Select "Auto"
-18. Enter the prompted button combination to confirm
-19. Hold (R) and press (B) at the same time to eject your SD card
-20. Put your SD card in your computer, then copy all your files back into it
-  + Ensure you replace the `arm9loaderhax.bin` file on the SD card with the one from your backup
+12. Appuyez sur (Start) pour redémarrer tout en maintenant (Haut) enfoncé pour lancer GodMode9
+13. Appuyez sur le bouton (Home) pour afficher le menu
+14. Sélectionnez "SD format menu"
+15. Appuyez sur (A) pour confirmer
+16. Sélectionnez "No EmuNAND"
+17. Sélectionnez "Auto"
+18. Entrez la combinaison de boutons affichée
+19. Maintenez (R) et appuyez sur (B) en même temps pour éjecter votre carte SD
+20. Insérez votre carte SD dans votre ordinateur, puis copiez dessus tous vos fichiers sauvegardés
+  + Assurez-vous de remplacer le fichier `arm9loaderhax.bin` sur votre carte SD par celui de votre sauvegarde
 21. Reinsert your SD card into your 3DS
-22. Press (A) to remount your SD card
-23. Press (Start) to reboot!
-24. If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_down)
+22. Appuyez sur (A) pour remonter votre carte SD
+23. Appuyez sur (Start) pour redémarrer!
+24. Si vous obtenez un écran noir, [suivez ce guide de dépannage](troubleshooting#ts_sys_down)
 
-Return to [Installing arm9loaderhax](installing-arm9loaderhax).
+Retournez à l'[installation d'arm9loaderhax](installing-arm9loaderhax).
