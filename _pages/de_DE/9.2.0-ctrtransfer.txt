@@ -35,7 +35,7 @@ Weil der 9.2.0 ctrtransfer dazu da ist, um Fehler, welche von dem aktuellen NAND
 1. Kopiere `GodMode9.bin` aus GodMode9.zip ins `/luma/payloads/` Verzeichnis auf deiner SD-Karte und benenne `GodMode9.bin` in `/luma/payloads/` zu `up_GodMode9.bin` um
 2. Kopiere das 9.2.0 ctrtransfer-Abbild ".bin" und ". bin.sha" aus der ctrtransfer ".zip" in den Ordner '/ files9 /' auf deiner SD-Karte
 3. Kopiere 'Decrypt9WIP.bin' in den '/luma/payloads/' Ordner auf deiner SD-Karte und benenne die Datei 'Decrypt9WIP.bin' zu 'x_Decrypt9WIP.bin' um
-4. Lege die SD Karte wieder in deinen 3DS ein
+4. Lege die SD-Karte wieder in deinen 3DS ein
 
 ##### Abschnitt II - Tickets und Konfigurations-Speicherstand sichern
 
@@ -54,43 +54,43 @@ Weil der 9.2.0 ctrtransfer dazu da ist, um Fehler, welche von dem aktuellen NAND
 3. Wenn du noch keine NAND-Sicherheitskopie angelegt haben solltest, wähle **Backup SysNAND" aus, nenne es `NANDmin.bin` und bestätigte die Eingaben mit (A)**
 4. Lass den Transfer-Prozess durchlaufen. Dies kann einige Zeit in Anspruch nehmen
 5. Sobald der Transfer abgeschlossen ist, drücke (Select), um die SD-Karte auszuwerfen
-6. Put your SD card in your computer, then copy `NANDmin.bin` and `NANDmin.bin.sha` from the `/files9/` folder on your SD card to a safe location
-  + Make backups in multiple locations
-  + This backup will save you from a brick if anything goes wrong in the future
-  + **Your backup should match one of the sizes on [this](nand-size) page; if it does not, you should delete it and make a new one!**
-7. Delete the 9.2.0 ctrtransfer image `.bin` and `.bin.sha` from the `/files9/` folder on your SD card
-8. Lege die SD Karte wieder in deinen 3DS ein
-9. Press (Start) to reboot
-10. Update your 3DS by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
-  + Updates while using A9LH + Luma (what you have) are safe, stop asking about it
-  + If this gives you an error, set your DNS settings to "auto"
+6. Stecke die SD-Karte in deinen Computer und kopiere dann "NANDmin.bin" und "NANDmin.bin.sha" vom "/files9/"-Ordner an einem sicheren Speicherort
+  + Erstelle Sicherheitskopien von diesem Ordner auf vielen verschiedenen Speichermedien
+  + Diese Sicherheitskopie wird dich vor einem Brick bewahren, sollte in der Zukunft etwas schief gehen
+  + **Die Sicherheitskopie sollte die Größe von einem [dieser](nand-size) beispielhaften Sucherheitskopien haben; ist dies nicht der Fall, solltest du es löschen und ein Neues erstellen!**
+7. Lösche das 9.2.0-ctrtransfer-Abbild ".bin" und ".bin.sha" vom "/files9/"-Ordner auf deiner SD-Karte
+8. Lege die SD-Karte wieder in deinen 3DS ein
+9. Drücke (Start), um deinen 3DS neu zu starten
+10. Aktualisiere deinen 3DS über die Systemeinstellungen, wähle dann "Allgemeine Einstellungen" aus, schalte ganz nach rechts und klicke daraufhin auf "System-Update"
+  + Du kannst ohne Bedenken dein System aktualisieren, sollte A9LH + Luma vorhanden sein. Da du genau das hast, wenn du dem Guide gefolgt bist, ist es nicht notwendig, immer wieder nachzufragen
+  + Wenn eine Fehlermeldung auftaucht, musst du in den DNS-Einstellungen die Option "Ja" auswählen, wenn du gefragt wirst, ob die DNS automatisch bezogen werden soll
 
-##### Section IV - Restore config save
+##### Abschnitt IV - Konfigurations-Speicherstand wiederherstellen
 
-1. Reboot holding (X) during boot to launch arm9loaderhax Decrypt9
-2. Go to "SysNAND Options", then "System Save Inject", then select "Inject configsave.bin"
-3. Press (B) to get back to the main menu
+1. Starte deine Konsole neu, während du (X) drückst, um über arm9loaderhax Decrypt9 zu starten
+2. Wähle "SysNAND Options", dann "System Save Inject" und danach "Inject configsave.bin" aus
+3. Drücke (B), um zum Hauptmenü zurückzukehren
 
-##### Section V - Injecting FBI
+##### Abschnitt V - Injezierung von FBI
 
-1. Go to "SysNAND Options", then "Miscellaneous", then select the "Health&Safety Dump" option to dump Health & Safety to `hs.app` **(you can use Up and Down / Left and Right to change the name)**
-2. Press (B), then select the "Health&Safety Inject" option
-3. Select the FBI injectable `.app` for your region
-4. Press (A) and confirm to inject
-5. Press (Start) to reboot
-6. If you still launch to the stock Health & Safety app and have downgraded with Gateway in the past, [follow this troubleshooting guide](troubleshooting#gw_fbi)
+1. Gehe zu "SysNAND Options", dann "Miscellaneous" und danach zu "Health&Safety Dump" und wähle "hs.app" aus **(du kannst den Namen ändern, indem du nach oben und unten, beziehungsweise links und rechts mit dem Steuerkreuz drückst)**
+2. Drücke (B) und wähle "Health&Safety Inject" aus
+3. Wähle die injezierbare FBI ".app" für deine Region aus
+4. Drücke (A) und bestätige die Injektion
+5. Drücke (Start), um deinen 3DS neu zu starten
+6. Wenn du noch immer die normale Gesundheits & Sicherheitsinformationen-Applikation siehst und bereits zuvor mit einer Gateway-Flashcard deine Konsole gedowngradet hast, dann [folge diesem Guide zur Fehlerbehebung](troubleshooting#gw_fbi)
 
-##### Section VI - Reinstalling Tickets
+##### Abschnitt VI - Tickets wiederherstellen
 
-If you had no tickets beginning with 00- earlier, you can skip this section.
+Wenn du vorher keine Tickets hattest, die mit 00- begannen, kannst du diesen Abschnitt überspringen.
 {: .notice--info}
 
-1. Open FBI
-2. Select "SD"
-3. Select "files9"
-4. Select "\<current directory>"
-5. Select "Install and delete all tickets"
-6. Wait. The system may appear to freeze, just give it time.
+1. Öffne FBI
+2. Wähle "SD" aus
+3. Wähle den "files9"-Ordner aus
+4. Wähle "\<current directory>" aus
+5. Wähle "Install and delete all tickets" aus
+6. Warte. The system may appear to freeze, just give it time.
 7. Press (A) to confirm
 8. Press (B) to decline installing tickets from CDN.
 9. Exit with the home button
