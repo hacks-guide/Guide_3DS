@@ -55,8 +55,8 @@ Se non riesci ad avviare il tuo 3DS, consulta la sezione relativa al tuo problem
 1. Copia il file `GodMode9.bin` dall'archivio `.zip` di GodMode9 nella cartella `/luma/payloads/` presente nella scheda SD e rinomina il file `GodMode9.bin` appena copiato in `up_GodMode9.bin`
 2. Avvia la console tenendo premuto (Su) per avviare GodMode9 tramite l'arm9loaderhax
 3. Cerca la cartella `SYSNAND CTRNAND` -> `data` -> (ID a 32 caratteri) -> `sysdata` -> `00010038`
-4. Tieni premuto il pulsante (R), quindi premi (X) su `00000000` per rinominare il file
-5. Premi (Su) una volta per cambiare il nome in `10000000`
+4. Hold down the (R) trigger, then press (X) on `00000000` to rename this file
+5. Press (Up) once to change the name to `10000000`
 6. Premi (A) per salvare le modifiche
 7. Premi il pulsante (A) per sbloccare la scrittura su SysNAND, quindi inserisci la combinazione di tasti richiesta a schermo
 8. Ritorna al menu principale
@@ -84,33 +84,33 @@ Questo problema è dovuto alla pessima implementazione da parte di Gateway di un
   + **New 3DS USA**: `20021300` -> `content`
 6. Noterai la presenza di due serie di file app e tmd, una con estensione in uppercase (`.TMD` and `.APP`), e una con estensione in lowercase (`.tmd` and `.app`)
 7. Tenendo premuto il pulsante (R), premi (Y) per creare una nuova cartella
-8. Press (A) to confirm the name `newdir` (it doesn't matter what it's called)
+8. Premi (A) per confermare il nome `newdir` (non ha importanza)
 9. Premi il pulsante (A) per sbloccare la scrittura su SysNAND, quindi inserisci la combinazione di tasti richiesta a schermo
-10. Press the (L) trigger on each of the uppercase extension files (`.TMD` and `.APP`) to mark them
-11. Press (Y) to copy the files
-12. Navigate to `newdir`
-13. Press (Y) to paste the files
-14. Select "Move path(s)"
-15. The uppercase extension files will have been moved to the `newdir` directory
-16. Press (Start) to reboot
-17. Return to [Installing arm9loaderhax](installing-arm9loaderhax) and retry the FBI injection
-18. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then return to [Installing arm9loaderhax](installing-arm9loaderhax) and retry the FBI injection
+10. Premi il pulsante (L) su ogni file con estensione in uppercase (`.TMD` and `.APP`) per evidenziarli
+11. Premi (Y) per copiare i file
+12. Naviga fino a `newdir`
+13. Premi (Y) per incollare i file
+14. Seleziona "Move path(s)"
+15. I file con estensione in uppercase sono ora stati spostati nella cartella `newdir`
+16. Premi il pulsante (Start) per riavviare la console
+17. Ritorna a [Installazione dell'arm9loaderhax](installing-arm9loaderhax) e riprova l'inject di FBI
+18. Se ancora non dovesse funzionare, riporta i file con estensione in uppercase nella cartella `content`, poi sposta i file con estensione in lowercase nella cartella `newdir`, quindi ritorna a [Installazione dell'arm9loaderhax](installing-arm9loaderhax) e riprova l'inject di FBI
 
-## <a name="ts_browser" />A browser based exploit is not working
-Browser based exploits (such as browserhax or 2xrsa) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps
+## <a name="ts_browser" />Un exploit basato sul browser non funziona
+Questo tipo di exploit (come browserhax o 2xrsa) è instabile e tende a crashare piuttosto spesso, ma i problemi potrebbero venire risolti con i seguenti passaggi
 
-1. Open the browser, then open the browser settings
-2. Scroll to the bottom and Initialize Savedata (it also may be called Clear All Save Data)
-3. Try the exploit again
+1. Apri il Browser Internet, quindi vai su Impostazioni
+2. Clicca sul pulsante "Elimina tutti i dati salvati"
+3. Prova di nuovo ad eseguire l'exploit
 
-## <a name="ts_safe_a9lh" />System boots directly SafeA9LHInstaller
-You copied the wrong `arm9loaderhax.bin` file to your SD card (you were only supposed to copy the `3ds` folder and `SafeA9LHInstaller.dat` file from the SafeA9LHInstaller zip)    
+## <a name="ts_safe_a9lh" />Il sistema avvia automaticamente SafeA9LHInstaller all'avvio
+Hai copiato il file `arm9loaderhax.bin` sbagliato sulla tua scheda SD (dovevi solamente copiare la cartella `3ds` e il file `SafeA9LHInstaller.dat` dall'archivio `.zip` di SafeA9LHInstaller)    
 
-1. Use the correct `arm9loaderhax.bin`
-2. Copy `arm9loaderhax.bin` from the Luma3DS `.zip` to the root of your SD card
-3. Reboot holding select and continue
+1. Usa il file `arm9loaderhax.bin` corretto
+2. Copia il file `arm9loaderhax.bin` dall'archivio`.zip` di Luma3DS nella root della tua scheda SD
+3. Riavvia tenendo premuto (Select) per continuare
 
-## <a name="ts_safe_a9lh_screen" />SafeA9LHInstaller shows a glitched screen
+## <a name="ts_safe_a9lh_screen" />SafeA9LHInstaller mostra una schermata corrotta
 This happens occasionally, but the reason is unknown. The buttons will still work, but the screen will be glitched looking
 
 1. Follow instructions as normal
@@ -132,12 +132,12 @@ This is because you selected the wrong version in the steelhax installer.
 
 ## <a name="ts_dsiware" />After doing the DSiWare Downgrade, my hacked DSiWare does not work
 
-1. Reboot **the source 3DS** while holding Start to launch Hourglass9
+1. Reboot **the source 3DS** while holding (Start) to launch Hourglass9
 2. Go to SysNAND Backup/Restore and restore SysNAND from `NANDmin.bin` (the one made before the system transfer)
 3. If you don't see the game at all on **the target 3DS**, link the NNID you bought the game with to **the target 3DS** and redownload it
   + You may have to delete the game from "Data Management" in the "System Settings" first
   + If **the target 3DS** is not the latest version, you may have to run ctr-httpwn to access the eShop
-4. On **the source 3DS**, do the the save (and `.app` if you are using the `.app` page) injection steps
+4. On **the source 3DS**, do the save (and `.app` if you are using the `.app` page) injection steps
 5. On **the source 3DS**, go to System Settings, "Data Management", "DSiWare", then copy your DSiWare game to your SD card
 6. Either put **the source 3DS**'s SD card in **the target 3DS**, or rename the `Nintendo 3DS` on **the target 3DS**'s SD card and copy the `Nintendo 3DS` folder from **the source 3DS**'s SD card to **the target 3DS**'s SD card
 7. On **the target 3DS**, go to System Settings, "Data Management", "DSiWare", then copy your DSiWare game to the system
