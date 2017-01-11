@@ -5,29 +5,29 @@ lang: ko_KR
 ref: decrypt9-(browser)
 ---
 
-이 가이드에서 가장 먼저 할 작업은, 시스템의 추가적인 익스플로잇 실행에 필요한 취약점을 가진 2.1.0 버전을 설치할 수 있는 다목적 툴킷 Decrypt9을 실행하는 것입니다.
+The first thing this guide will do is get you running Decrypt9, which is a multipurpose toolkit that will allow us to install the version 2.1.0, which contains a vulnerability that is needed for further exploitation of the system.
 {: .notice}
 
-이미 커스텀 펌웨어 3DS를 가지고 있고 EmuNAND 기반의 커스텀 펌웨어 설정을 마친 경우, 이 가이드는 SysNAND만 다루므로 모든 지시 사항을 SysNAND 상태에서 따르거나 SysNAND에 적용해야 합니다. EmuNAND와 RedNAND라는 용어는 [동일한 개념](http://3dbrew.org/wiki/NAND_Redirection)을 약간 다른 방식으로 구현한 결과라는 것을 숙지하십시오.
+If you have already hacked your 3DS before and have a EmuNAND based CFW setup, this guide deals exclusively with SysNAND and you should follow all instructions from within or applying to SysNAND. Note that the terms EmuNAND and RedNAND refer to slightly different implementations of [the same concept](http://3dbrew.org/wiki/NAND_Redirection).
 {: .notice--info}
 
-#### 준비물
+#### What you need
 
-* 최신 버전의 [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/)
+* The latest release of [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/)
 
-#### 지시 사항
+#### Instructions
 
-1. SD 카드의 최상위 경로에 `files9` 폴더가 존재하지 않을 경우 폴더를 만드십시오.
-2. Decrypt9WIP `.zip` 파일에서 `Launcher.dat` 파일과 `Decrypt9WIP.dat` 파일을 SD 카드의 최상위 경로에 복사하십시오.
-3. SD 카드를 다시 3DS에 삽입하십시오.
-4. 3DS에서 브라우저를 열고 다음 주소 중 하나에 접속하십시오.
+1. Create a folder named `files9` on the root of your SD card if it does not already exist
+2. Copy `Launcher.dat` and `Decrypt9WIP.dat` from the Decrypt9WIP `.zip` to the root of your SD card
+3. Reinsert your SD card into your 3DS
+4. Open the browser and go to one of the following URLs on your 3DS
   + `https://dukesrg.github.io/?Decrypt9WIP.dat`
   + `http://go.gateway-3ds.com/`
   + `http://www.reboot.ms/3ds/load.html?Launcher.dat`
   + `http://dukesrg.dynu.net/3ds/rop?GW17567.dat&Launcher.dat`
-  + 첫 번째 주소가 실패할 경우 다른 주소들도 시도해 보십시오. (일부 버전에서는 첫 번째 주소를 사용할 수 없으며, 일부 버전에서는 나머지 세 주소를 사용할 수 없습니다.)
-  + 오류가 발생한다면, [이 문제 해결 가이드](troubleshooting#ts_browser)를 따라가십시오.
-5. 익스플로잇이 성공적으로 실행되면, Decrypt9으로 부팅될 것입니다.
+  + Make sure to try each URL if the first one doesn't work (some versions cannot use the first one, and some versions cannot use the last three)
+  + If you get an error, [follow this troubleshooting guide](troubleshooting#ts_browser)
+5. If the exploit was successful, you will have booted into Decrypt9
 
-[2.1.0 ctrtransfer](2.1.0-ctrtransfer)로 이어집니다.
+Continue to [2.1.0 ctrtransfer](2.1.0-ctrtransfer).
 {: .notice--primary}
