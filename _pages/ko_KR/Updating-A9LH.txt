@@ -5,90 +5,90 @@ lang: ko_KR
 ref: updating-a9lh
 ---
 
-### 마지막 업데이트: 2016년 11월 3일
+### Last Update: 3 Nov 2016
 
-arm9loaderhax의 실제 설치본은 기기의 마더보드에 납땜되어 있는 NAND 칩의 NFIRM 파티션에 설치된 페이로드 파일들로 이루어져 있습니다. 이 페이로드 파일들은 매우 드물게 업데이트되며, SD 카드에서 `arm9loaderhax.bin`을 실행하려는 목적을 실제로 수행합니다. 우리의 경우 Luma3DS를 실행하게 됩니다.
+The actual installation of arm9loaderhax itself consists of payload files installed into the NFIRM partitions on your device's NAND chip, which is soldered to the motherboard itself. These payloads are updated rarely and only really serve the purpose of launching `arm9loaderhax.bin` from the SD Card, which is, in our case, Luma3DS.
 {: .notice}
 
-현재 사용 중인 amr9loaderhax가 무슨 버전인지 잘 모르겠다면, 그냥 아래의 단계를 통해 최신 버전을 설치하십시오. 최신 버전인 상태에서 다시 최신 버전을 설치하는 것은 아무런 영향을 주지 않습니다.
+If you do not know what version of arm9loaderhax you are running, just install the latest version with these steps. Installing the latest version while already on the latest version will have no effect.
 {: .notice--info}
 
-Luma3DS에 PIN이 설정되어 있는 경우, 아래의 단계를 진행하는 동안 PIN을 잠시 꺼 두십시오. 업데이트 이후 PIN을 다시 활성화할 수 있습니다.
+If you have a PIN set on Luma, you must temporarily turn it off to do these steps. You can re-enable the PIN after the update.
 {: .notice--info}
 
-그 자체로 화면을 띄우지 않는 (Bootanim9 등의) 페이로드를 사용할 경우, 파일의 이름을 `arm9loaderhax.bin`에서 `arm9loaderhax_si.bin`으로 바꾸어 사용해야 합니다.
+If you are using a payload that does not init the screen on its own (such as Bootanim9), you will need to rename it to `arm9loaderhax_si.bin` instead of `arm9loaderhax.bin`
 {: .notice--info}
 
-data_input의 버전은 다른 인스톨러와 호환되는 `.zip` 파일의 개정판임을 의미하며, A9LH 자체 (페이로드 파일들)를 업데이트하는 것과는 *다른* 의미입니다. 설치 과정 외에는 실질적인 차이점이 없습니다.
+The versions of data_input only refer to revisions of the `.zip` to be compatible with different installer versions, and are *not* the same thing as updating a9lh itself (the payload files). They make no practical difference beyond the installation process.
 {: .notice--info}
 
-이 단계는 다양한 페이로드와 AES 키 데이터베이스도 업데이트합니다.
+These steps will also update your various payloads and the AES key database.
 {: .notice--success}
 
-#### 준비물
+#### What you need
 
 * [`aeskeydb.bin`](magnet:?xt=urn:btih:18b3a17f78e2376e05feaa150749d9fd689b25dc&dn=aeskeydb.bin&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 * [`data_input_v4.zip`](magnet:?xt=urn:btih:00f03ff69b5961307303d5e4778a2f65a528bf2d&dn=data%5Finput%5Fv4.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
-* 최신 버전의 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z` 파일)*
-* 최신 버전의 [arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(`.7z` 파일)*
-* 최신 버전의 [SafeA9LHInstaller](https://github.com/AuroraWright/SafeA9LHInstaller/releases/latest) *(`.7z` 파일)*
-* 최신 버전의 [Hourglass9](https://github.com/lilymaniac/Hourglass9/releases/latest)
+* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(the `.7z` file)*
+* The latest release of [arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(the `.7z` file)*
+* The latest release of [SafeA9LHInstaller](https://github.com/AuroraWright/SafeA9LHInstaller/releases/latest) *(the `.7z` file)*
+* The latest release of [Hourglass9](https://github.com/d0k3/Hourglass9/releases/latest)
 
-#### 지시 사항
+#### Instructions
 
-**다음 지시 사항에서, SD 카드에 동일한 파일이 존재할 경우 모두 덮어씌우십시오.**
+**For all of these instructions, OVERWRITE any existing files on your SD card.**
 
-##### 섹션 I - 준비 작업
+##### Section I - Prep work
 
-1. SD 카드의 최상위 경로에 `aeskeydb.bin` 파일이 있을 경우 삭제하십시오.
-2. SD 카드의 최상위 경로에 `a9lh` 폴더가 존재하지 않을 경우 폴더를 만드십시오.
-3. `aeskeydb.bin` 파일을 SD 카드의 `/files9/` 폴더에 복사하십시오.
-4. Hourglass9 `.zip` 파일에서 `Hourglass9.bin` 파일을 SD 카드의 `/luma/payloads/` 폴더에 복사하고 `Hourglass9.bin` 파일의 이름을 `start_Hourglass9.bin`으로 바꾸십시오.
-5. SafeA9LHInstaller `.zip` 파일에서 `arm9loaderhax.bin` 파일을 SD 카드의 `/luma/payloads/` 폴더에 복사하십시오.
-6. `/luma/payloads/` 폴더 안의 `arm9loaderhax.bin` 파일의 이름을 `down_safea9lhinstaller.bin`으로 바꾸십시오.
-7. `data_input_v4.zip` 파일에서 `a9lh` 폴더를 SD 카드의 최상위 경로에 복사하십시오.
-8. arm9loaderhax `.7z` 파일의 _내용물을_ SD 카드의 `a9lh` 폴더에 복사하십시오.
-9. Luma3DS `.7z` 파일에서 `arm9loaderhax.bin` 파일을 SD 카드의 최상위 경로에 복사하십시오. 동일한 파일은 덮어씌우십시오.
-10. SD 카드를 다시 3DS에 삽입하십시오.
+1. Delete any existing `aeskeydb.bin` from the root of your SD card
+2. Delete the `a9lh` folder from the root of your SD card if it exists
+3. Copy `aeskeydb.bin` to the `/files9/` folder on your SD card
+4. Copy `Hourglass9.bin` from the Hourglass9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `Hourglass9.bin` to `start_Hourglass9.bin`
+5. Copy `arm9loaderhax.bin` from the SafeA9LHInstaller `.zip` to the `/luma/payloads/` folder on your SD card
+6. Rename `arm9loaderhax.bin` in `/luma/payloads/` to `down_safea9lhinstaller.bin`
+7. Copy the `a9lh` folder from `data_input_v4.zip` to the root of your SD Card
+8. Copy _the contents of_ the arm9loaderhax `.zip` to `a9lh` folder on your SD card
+9. Copy `arm9loaderhax.bin` from the Luma3DS `.zip` to the root of your SD card, overwrite existing files
+10. Reinsert your SD card into your 3DS
 
-##### 섹션 II - 페이로드 업데이트
+##### Section II - Payload update
 
-1. (Down) 버튼을 누른 채 기기를 켜십시오.
-2. (Select) 버튼을 눌러 arm9loaderhax를 업데이트하십시오.
-3. 기기의 전원을 끄고 SD 카드를 컴퓨터에 삽입하십시오.
-4. SD 카드의 최상위 경로에서 `a9lh` 폴더를 삭제하십시오.
-5. `/luma/payloads/` 폴더에서 `down_safea9lhinstaller.bin` 파일을 삭제하십시오.
+1. Boot the device while holding D-Pad down
+2. Press (Select) to update arm9loaderhax
+3. Power off the device and put your SD card back in your computer
+4. Delete the `a9lh` folder from the root of your SD card
+5. Delete `down_safea9lhinstaller.bin` from `/luma/payloads/`
 
-##### 섹션 III - Luma3DS 구성
+##### Section III - Configuring Luma3DS
 
-1. SD 카드를 다시 3DS에 삽입하고 (Select) 버튼을 누른 채 기기를 켜십시오.
-2. (A) 버튼과 십자 버튼을 이용해 다음을 옵션을 켜십시오:    
+1. Reinsert your SD card into your 3DS and boot holding (Select)
+2. Use the (A) button and the D-Pad to turn on the following:    
   + **"Autoboot SysNAND"**
   + **"Use SysNAND FIRM if booting with R"**
   + **"Show NAND or user string in System Settings"**
-3. **뉴 3DS**라면, 다음 옵션 *또한* 켜십시오:
+3. If you are using a **New 3DS**, you should *also* enable the following:
   + **"New 3DS CPU" to "Clock+L2(x)"**
-    + 이 옵션은 많은 게임의 프레임을 향상시키지만, 일부 게임은 불안정해질 수 있습니다.
-    + 게임이 제대로 작동하지 않으면 이 옵션을 끄고 다시 시도해 보십시오.
-4. (Start) 버튼을 눌러 저장하고 기기를 다시 시작하십시오.
+    + This will increase the framerate of many games, but may cause instability in others
+    + If some games do not work properly, disable this option and try again
+4. Press Start to save and reboot
 
-##### 섹션 IV - CTRNAND Luma3DS
+##### Section IV - CTRNAND Luma3DS
 
-1. FBI를 여십시오.
-2. "SD"를 선택하십시오.
-3. `arm9loaderhax.bin`로 이동하여, (A) 버튼을 누르고 "Copy" 옵션을 선택하십시오.
-4. (B) 버튼을 눌러 FBI 메인 메뉴로 돌아오십시오.
-5. "CTR NAND"를 선택하십시오.
-6. "\<current directory>"를 선택하십시오.
-7. "Paste" 옵션을 선택하고, (A) 버튼을 눌러 진행하십시오.
-8. 홈 버튼을 눌러 빠져나오십시오.
-9. 3DS의 전원을 끄고 SD 카드를 제거하십시오.
-10. SD 카드가 제거된 상태에서 (Select) 버튼을 누른 채 기기를 켜십시오.
-  + CTRNAND 기반의 Luma3DS를 구성하기 위해 적어도 한 번은 SD 카드가 제거된 상태에서 기기를 켜십시오.
-11. (A) 버튼과 십자 버튼을 이용해 다음을 옵션을 켜십시오:    
+1. Open FBI
+2. Select "SD"
+3. Navigate to `arm9loaderhax.bin`, then press (A) on it and select the "Copy" option
+4. Return to the FBI main menu with (B)
+5. Select "CTR NAND"
+6. Select "\<current directory>"
+7. Select the "Paste" option, then press (A) to confirm
+8. Exit with the home button
+9. Power off your 3DS and remove the SD card
+10. Boot with the SD card removed while holding (Select)
+  + Booting the device at least once with the SD card removed will allow you to configure the CTRNAND based luma installation
+11. Use the (A) button and the D-Pad to turn on the following:    
   + **"Show NAND or user string in System Settings"**
-12. **뉴 3DS**라면, 다음 옵션 *또한* 켜십시오:
+12. If you are using a **New 3DS**, you should *also* enable the following:
   + **"New 3DS CPU" to "Clock+L2(x)"**
-    + 이 옵션은 많은 게임의 프레임을 향상시키지만, 일부 게임은 불안정해질 수 있습니다.
-    + 게임이 제대로 작동하지 않으면 이 옵션을 끄고 다시 시도해 보십시오.
-13. SD 카드를 다시 3DS에 삽입하고, (Start) 버튼을 눌러 저장한 뒤 기기를 다시 시작하십시오.
+    + This will increase the framerate of many games, but may cause instability in others
+    + If some games do not work properly, disable this option and try again
+13. Reinsert your SD card, then press Start to save and reboot!
