@@ -5,7 +5,7 @@ lang: en_US
 ref: region-changing
 ---
 
-This is add-on section for region changing your arm9loaderhax CFW SysNAND. This is done by installing the 9.2.0 ctrtransfer image for the region you want to switch to and modifying your SecureInfo_A file.
+Essa é uma seção complementar para mudar a região da sua SysNAND com CFW arm9loaderhax. This is done by installing the 9.2.0 ctrtransfer image for the region you want to switch to and modifying your SecureInfo_A file.
 {: .notice--primary}
 
 **Region changing is almost completely unnecessary since Luma3DS supports out of region games and individual [title region emulation](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage).**
@@ -53,21 +53,21 @@ Region changing using ctrtransfer (which this method uses) seems to cause reboot
 ##### Section II - Backup tickets and config save
 
 1. Press (Start) then hold (X) to reboot into arm9loaderhax Decrypt9     
-2. Go to "Ticket/Titlekey Options", then select "Ticket Dump (SysNAND)"
+2. Vá para "Ticket/Titlekey Options", depois selecione "Ticket Dump (SysNAND)"
 3. Press (Select) to eject your SD card, then put it in your computer
 4. Apague todos os arquivos `.tik` da pasta `/files9/` que **não** começam com "00-"
 5. Leave all the `.tik` files that do start with "00-" in the folder
 6. Reinsert your SD card into your 3DS, then press (B) to go back to the Main Menu
-7. Go to "SysNAND Options", then "System Save Dump", then select "Dump configsave.bin"
+7. Vá para "SysNAND Options", depois "System Save Dump", e depois selecione "Dump configsave.bin"
 
 ##### Section III - ctrtransfer
 
-1. Go to "SysNAND Options", then "CTRNAND Transfer", then "Auto CTRNAND Transfer"
+1. Vá para "SysNAND Options", depois "CTRNAND Transfer", depois "Auto CTRNAND Transfer"
 2. Select the 9.2.0 ctrtransfer image when prompted by pressing (A)
-3. If you do not already have a NAND backup, **backup SysNAND to `NANDmin.bin` when prompted by pressing (A)**
+3. Se você já não tiver um backup da NAND, **faça um backup do SysNAND para `NANDmin.bin` apertando (A) quando solicitado**
 4. Allow the transfer process to proceed automatically, this may take some time
 5. Once the transfer is complete, press Select to eject your SD card
-6. Put your SD card in your computer, then copy `NANDmin.bin` and `NANDmin.bin.sha` from the `/files9/` folder on your SD card to a safe location
+6. Coloque o seu cartão SD no seu computador, então copie `NANDmin.bin` e `NANDmin.bin.sha` da pasta `/files9/` no seu cartão SD para um local seguro
   + Make backups in multiple locations
   + This backup will save you from a brick if anything goes wrong in the future
   + **Seu backup deve corresponder a algum dos tamanhos [nesta](nand-size) página; senão, você deve apagá-lo e fazer um novo!**
@@ -77,11 +77,11 @@ Region changing using ctrtransfer (which this method uses) seems to cause reboot
 ##### Section IV - Editing SecureInfo
 
 1. Press (Start) then hold (Up) to reboot into arm9loaderhax GodMode9     
-2. Navigate to `SYSNAND CTRNAND` -> `rw` -> `sys`
+2. Navegue para `SYSNAND CTRNAND` -> `rw`-> `sys`
 3. Press (Y) on `SecureInfo_A` to copy it
 4. Press (Y) to paste a copy of `SecureInfo_A`
 5. Select "Copy path(s)"
-6. Press (A) to unlock SysNAND writing, then input the key combo given
+6. Aperte (A) para desbloquear a escrita da SysNAND, depois aperte a sequência de botões fornecida
 7. Select "Choose new name"
 8. Use the D-Pad to rename the file to `SecureInfo_C`, pressing (A) when you're done (overwrite any existing `SecureInfo_C`)
 9. Scroll down to the `SecureInfo_C` you just pasted
