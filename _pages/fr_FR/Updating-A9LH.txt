@@ -1,36 +1,36 @@
 ---
-title: "Updating A9LH"
+title: "Mettre à jour A9LH"
 permalink: /updating-a9lh.html
-lang: en_US
+lang: fr_FR
 ref: updating-a9lh
 ---
 
-### Last Update: 3 Nov 2016
+### Dernière mise à jour : 3 Novembre 2016
 
-The actual installation of arm9loaderhax itself consists of payload files installed into the NFIRM partitions on your device's NAND chip, which is soldered to the motherboard itself. These payloads are updated rarely and only really serve the purpose of launching `arm9loaderhax.bin` from the SD Card, which is, in our case, Luma3DS.
+Arm9loaderhax en lui-même consiste en des fichiers "payload" installés dans la partition NFIRM de la puce NAND de votre console, qui est soudée à la carte mère. Ces fichiers sont rarement mis à jour et servent uniquement au lancement d'`arm9loaderhax.bin`depuis la carte SD qui est, dans notre cas, Luma3DS.
 {: .notice}
 
-If you do not know what version of arm9loaderhax you are running, just install the latest version with these steps. Installing the latest version while already on the latest version will have no effect.
+Si vous ne savez pas quelle version d'arm9loaderhax vous utilisez, installez simplement la dernière version en suivant ces étapes. Installer la dernière version en étant déjà à la dernière version n'aura aucun effet.
 {: .notice--info}
 
-If you have a PIN set on Luma, you must temporarily turn it off to do these steps. You can re-enable the PIN after the update.
+Si vous avez un code PIN défini dans Luma, vous devez temporairement le désactiver. Vous pourrez le réactiver après la mise à jour.
 {: .notice--info}
 
-If you are using a payload that does not init the screen on its own (such as Bootanim9), you will need to rename it to `arm9loaderhax_si.bin` instead of `arm9loaderhax.bin`
+Si vous utilisez un payload qui n'initialise pas l'écran (comme Bootanim9), vous devez le renommer en `arm9loaderhax_si.bin` et non `arm9loaderhax.bin
 {: .notice--info}
 
-The versions of data_input only refer to revisions of the `.zip` to be compatible with different installer versions, and are *not* the same thing as updating a9lh itself (the payload files). They make no practical difference beyond the installation process.
+Les versions de data_input ne font références qu'à des révisions du `.zip` pour être compatible avec différentes versions de l'installeur, et ne sont *pas* la même chose qu'une mise à jour d'a9lh (les fichiers payload). Elles ne sont aucunement différentes en dehors du processus d'installation.
 {: .notice--info}
 
-These steps will also update your various payloads and the AES key database.
+Ces étapes vont également mettre à jour divers payloads, et la base de données des clés AES.
 {: .notice--success}
 
-#### What you need
+#### Ce dont vous aurez besoin
 
 * [`aeskeydb.bin`](magnet:?xt=urn:btih:18b3a17f78e2376e05feaa150749d9fd689b25dc&dn=aeskeydb.bin&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 * [`data_input_v4.zip`](magnet:?xt=urn:btih:00f03ff69b5961307303d5e4778a2f65a528bf2d&dn=data%5Finput%5Fv4.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(the `.7z` file)*
-* The latest release of [arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(the `.7z` file)*
+* La dernière version de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(le fichier `.7z`)*
+* La dernière version d'[arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(le fichier `.7z`)*
 * The latest release of [SafeA9LHInstaller](https://github.com/AuroraWright/SafeA9LHInstaller/releases/latest) *(the `.7z` file)*
 * The latest release of [Hourglass9](https://github.com/d0k3/Hourglass9/releases/latest)
 
