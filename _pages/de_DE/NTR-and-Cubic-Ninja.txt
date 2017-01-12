@@ -27,39 +27,39 @@ ref: ntr-and-cubic-ninja
 ##### Abschnitt I - Vorbereitung
 
 1. Installiere WAMP in das Standardverzeichnis
-2. Copy the contents of `3ds-private-update-server.zip` to `C:\wamp\www\` (overwrite existing files)
-3. Copy `update.php` to `C:\wamp\www\` (overwrite existing files)
-4. Copy the `updates` folder from the 9.2.0 downgrade `.zip` to `C:\wamp\www\`
-5. Move `node.exe` to `C:\wamp\www\updates`
-6. Move `C:\wamp\www\CdnCiaUnpack.js` to `C:\wamp\www\updates`
-7. In the `C:\wamp\www\updates` directory, drag `CdnCiaUnpack.js` onto `node.exe` to create `GetSystemUpdate.partial.xml`
-8. Move `node.exe` and `CdnCiaUnpack.js` back to `C:\wamp\www\`
-9. Copy `GetSystemUpdate.partial.xml` to `C:\wamp\www\` (so that a copy of it exists in both `C:\wamp\www\updates` and `C:\wamp\www\`)
-10. Click the WAMP icon in your system tray, then click "Put Online"
-11. Use the command `ipconfig` in CMD to get your computer's IPv4 Address, you will need it soon
-12. Copy `ntr.bin` to the root of your SD card
-13. Create a folder named `files9` on the root of your SD card if it does not already exist
-14. Copy _the contents of_ the `starter` folder in `starter.zip` to the root of your SD card
-15. Copy the `Decrypt9WIP` folder from the Decrypt9WIP `.zip` to `/3ds/` on your SD card
-16. Put the SD card back into your 3DS
+2. Kopiere den Inhalt von `3ds-private-update-server.zip` in `C:\wamp\www\` (überschreibe alle anderen Dateien)
+3. Kopiere `update.php`in `C:\wamp\www\` (überschreibe dabei bereits existierende Dateien)
+4. Kopiere den `update` Ordner aus der 9.2.0 downgrade`.zip` in `C:\wamp\www\`
+5. Schiebe die `node.exe`in `C:\wamp\www\updates`
+6. Schiebe `C:\wamp\www\CdnCiaUnpack.js`in `C:\wamp\www\updates`
+7. Im `C:\wamp\www\updates` Verzeichnis musst du die `CdnCiaUnpack.js` auf die `node.exe`ziehen, um die Datei `GetSystemUpdate.partial.xml` zu erstellen
+8. Verschiebe `node.exe`und `CdnCiaUnpack.js`zurück zu `C:\wamp\www\`
+9. Kopiere `GetSystemUpdate.partial.xml`zu `C:\wamp\www\`(Sodass jeweils eine Kopie in `C:\wamp\www\updates` und `C:\wamp\www\`existiert)
+10. Klicke auf das WAMP Symbol in der Taskleiste und wähle "Put Online"
+11. Benutze den Befehl `ipconfig` in der Eingabeaufforderung (CMD) um die IPv4 Adresse deines Computers zu erhalten; du wirst sie bald brauchen
+12. Kopiere `ntr.bin`auf das Stammverzeichnis deiner SD-Karte
+13. Erstelle einen Ordner namens `files9` im Stammverzeichnis deiner SD-Karte, falls er noch nicht existiert
+14. Kopieren _den Inhalt_ des `starter`Ordner in der `starter.zip` auf das Stammverzeichnis deiner SD-Karte
+15. Kopiere den`Decrypt9WIP`Ordner aus Decrypt9WIP `.zip` in den `/3ds/` Ordner deiner SD Karte
+16. Lege die SD-Karte wieder in deinen 3DS ein
 
-##### Section II - Updating
+##### Abschnitt II - Updaten
 
-1. Boot your 3DS into recovery mode by holding L+R+A+UP while powering on
-2. Decline the update and reboot
-3. Open Cubic Ninja (if it already has NinjHax installed, hold L+R+X+Y to reset it)
-4. Select "Create", then "QR Code", then "Scan QR Code"
-5. Scan the QR code in the NTR CFW `.zip` for your region
-6. On the home menu, press (Y) and (X) at the same time to open NTR's menu
-7. Enable the debugger and close the menu
-8. Use your router's web page to get your 3DS's IP address (google it if you don't know how, all routers are different)
-9. Run NTR Debugger on your computer
-10. Enter the following commands (replace 192.168.1.100 with your 3DS's IP address and 192.168.1.200 with your computer's IP address)    
+1. Starte deinen 3DS in den Wiederherstellungsmodus, indem du beim Hochfahren (L)+(R)+(A)+(Steuerkreuz oben) gedrückt hälst
+2. Lehne das Update ab und starte das Gerät neu
+3. Öffne Cubic Ninja (wenn es schon NinjaHax installiert hat, drücke (L)+(R)+(X)+(Y), um es zurückzusetzen)
+4. Wähle "Create", dann "QR Code", dann "Scan QR Code"
+5. Scanne den QR Code in der NTR CFW`.zip` für deine Region
+6. Drücke im Home Menü (Y) und (X) gleichzeitig, um das NTR Menü zu öffnen
+7. Aktiviere den Debugger und schließe das Menü
+8. Nutze die Website deines Routers, um die IP-Adresse deines 3DS herauszufinden (benutze Google, falls du nicht weißt wie das geht; alle Router sind verschieden)
+9. Führe den NTR Debugger auf deinem Computer aus
+10. Gebe die folgenden befehle ein (Ersetze 192.168.1.100 mit der IP-Adresse deines 3DS und 192.168.1.200 mit der IP-Adresse deines Computers)    
     + `connect("192.168.1.100", 8000)`
     + `write(0x15E424, tuple(map(ord, "http://192.168.1.200/update.php\0")), pid=0x25)`
     + `write(0x15E0EC, tuple(map(ord, "http://192.168.1.200/update.php\0")), pid=0x25)`
     + `write(0x15E463, tuple(map(ord, "http://192.168.1.200/update.php\0")), pid=0x25)`
-11. Update your 3DS by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
+11. Aktualisiere deinen 3DS, indem du in die Systemeinstellungen gehst, dann unter "Allgemeine Einstellungen" ganz nach rechts und "System-Update" wählst
 
 ___
 
