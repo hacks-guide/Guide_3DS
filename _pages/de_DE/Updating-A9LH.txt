@@ -16,10 +16,10 @@ Wenn du nicht weißt, welche Version des arm9loaderhax du verwendest, installier
 Wenn du in Luma einen PIN festgelegt hast, musst du ihn für die folgenden Schritte deaktivieren. Du kannst ihn nach dem Update erneut einrichten.
 {: .notice--info}
 
-If you are using a payload that does not init the screen on its own (such as Bootanim9), you will need to rename it to `arm9loaderhax_si.bin` instead of `arm9loaderhax.bin`
+Wenn du eine payload benutzt die das Display nicht selber starten kann (wie Bootanim9), musst du sie umbenennen in `arm9loaderhax_si.bin` statt `arm9loaderhax.bin`
 {: .notice--info}
 
-The versions of data_input only refer to revisions of the `.zip` to be compatible with different installer versions, and are *not* the same thing as updating a9lh itself (the payload files). Sie machen über den Installationsprozess hinaus keinen Unterschied.
+Die Versionen der data_input Datei beziehen sich nur auf Änderungen an der `.zip` Datei selbst um mit den unterschiedlichen Versionen des Installers kompatibel zu sein. Sie haben *nichts* mit dem Update des A9LH an sich zutun (die payload Dateien). Sie machen über den Installationsprozess hinaus keinen Unterschied.
 {: .notice--info}
 
 Die folgenden Schritte werden zudem einige payloads und die AES Key Database aktualisieren.
@@ -46,48 +46,48 @@ Die folgenden Schritte werden zudem einige payloads und die AES Key Database akt
 5. Kopiere `arm9loaderhax.bin` aus der SafeA9LHInstaller`.zip` in den `/luma/payloads/` Ordner auf deiner SD-Karte
 6. Benenne `arm9loaderhax.bin` aus `/luma/payloads/` um in `down_safea9lhinstaller.bin`
 7. Kopiere den `a9lh` Ordner aus der `data_input_v4.zip` in das Stammverzeichnis deiner SD-Karte
-8. Copy _the contents of_ the arm9loaderhax `.zip` to `a9lh` folder on your SD card
-9. Copy `arm9loaderhax.bin` from the Luma3DS `.zip` to the root of your SD card, overwrite existing files
-10. Reinsert your SD card into your 3DS
+8. Kopiere _den Inhalt_ der arm9loaderhax `.zip` in den `a9lh` Ordner auf deiner SD-Karte
+9. Kopiere `arm9loaderhax.bin` aus der Luma3DS `.zip` in das Stammverzeichnis deiner SD-Karte, und überschreibe alle bereits existierenden Dateien
+10. Lege die SD-Karte wieder in deinen 3DS ein
 
 ##### Abschnitt II - Payload-Update
 
-1. Boot the device while holding D-Pad down
-2. Press (Select) to update arm9loaderhax
-3. Power off the device and put your SD card back in your computer
-4. Delete the `a9lh` folder from the root of your SD card
-5. Delete `down_safea9lhinstaller.bin` from `/luma/payloads/`
+1. Starte die Konsole und halte dabei (Steuerkreuz unten) gedrückt
+2. Drücke (Select) um arm9loaderhax zu updaten
+3. Schalte die Konsole aus und stecke die SD-Karte wieder in deinen PC
+4. Lösche den `a9lh` Ordner aus dem Stammverzeichnis deiner SD-Karte
+5. Lösche `down_safea9lhinstaller.bin` aus `/luma/payloads/`
 
 ##### Abschnitt III - Luma3DS konfigurieren
 
-1. Reinsert your SD card into your 3DS and boot holding (Select)
-2. Use the (A) button and the D-Pad to turn on the following:    
+1. Lege die SD-Karte wieder in deinen 3DS ein und halte (Select) beim Starten gedrückt
+2. Nutze den (A)-Knopf und das Steuerkreuz um folgende Funktionen zu aktivieren:    
   + **"Autoboot SysNAND"**
   + **"Use SysNAND FIRM if booting with R"**
   + **"Show NAND or user string in System Settings"**
-3. If you are using a **New 3DS**, you should *also* enable the following:
-  + **"New 3DS CPU" to "Clock+L2(x)"**
-    + This will increase the framerate of many games, but may cause instability in others
-    + If some games do not work properly, disable this option and try again
-4. Press Start to save and reboot
+3. Falls du einen **New 3DS** nutzt, solltest du auch das folgendes aktivieren:
+  + **"New 3DS CPU" zu "Clock+L2(x)"**
+    + Dies sorgt in vielen Spielen für eine bessere Framerate, kann aber auch bei einigen zu Instabilität führen
+    + Wenn ein Spiel nicht richtig funktioniert, deaktiviere diese Funktion und versuche es nochmal
+4. Drücke (Start) um zu speichern und neu zu starten
 
 ##### Abschnitt IV - Installation von Luma3DS auf das CTRNAND
 
-1. Open FBI
-2. Select "SD"
-3. Navigate to `arm9loaderhax.bin`, then press (A) on it and select the "Copy" option
-4. Return to the FBI main menu with (B)
-5. Select "CTR NAND"
-6. Select "\<current directory>"
-7. Select the "Paste" option, then press (A) to confirm
-8. Exit with the home button
-9. Power off your 3DS and remove the SD card
-10. Boot with the SD card removed while holding (Select)
-  + Booting the device at least once with the SD card removed will allow you to configure the CTRNAND based luma installation
-11. Use the (A) button and the D-Pad to turn on the following:    
+1. Öffne FBI
+2. Wähle "SD" aus
+3. Navigiere zu `arm9loaderhax.bin`, drücke (A) auf der Datei und wähle "Copy" aus
+4. Kehre mit (B) ins Hauptmenü von FBI zurück
+5. Wähle "CTR NAND"
+6. Wähle "\<current directory>"
+7. Wähle "Paste", dann drücke (A), um zu bestätigen
+8. Verlasse Fbi mit der (Home)-Taste
+9. Schalte deinen 3DS aus und entferne die SD-Karte
+10. Starte das Gerät ohne SD-Karte und halte dabei (Select) gedrückt
+  + Die Konsole ohne die SD-Karte zu starten erlaubt es dir die CTRNAND basierende Luma Installation zu nutzen und zu konfigurieren
+11. Nutze den (A)-Knopf und das Steuerkreuz um folgende Funktionen zu aktivieren:    
   + **"Show NAND or user string in System Settings"**
-12. If you are using a **New 3DS**, you should *also* enable the following:
-  + **"New 3DS CPU" to "Clock+L2(x)"**
-    + This will increase the framerate of many games, but may cause instability in others
-    + If some games do not work properly, disable this option and try again
-13. Reinsert your SD card, then press Start to save and reboot!
+12. Falls du einen **New 3DS** nutzt, solltest du auch das folgendes aktivieren:
+  + **"New 3DS CPU" zu "Clock+L2(x)"**
+    + Dies sorgt in vielen Spielen für eine bessere Framerate, kann aber auch bei einigen zu Instabilität führen
+    + Wenn ein Spiel nicht richtig funktioniert, deaktiviere diese Funktion und versuche es nochmal
+13. Lege deine SD-Karte wieder in dein Gerät ein und drücke dann (Start) um zu speichern und um neuzustarten!
