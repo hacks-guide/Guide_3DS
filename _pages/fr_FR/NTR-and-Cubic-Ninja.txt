@@ -34,34 +34,34 @@ ref: ntr-and-cubic-ninja
 6. Déplacez `C:\wamp\ www\CdnCiaUnpack.js` dans `C:\wamp\www\updates`
 7. Dans le répertoire `C:\wamp\www\updates`, faites glisser `CdnCiaUnpack.js` sur `node.exe` pour générer le fichier `GetSystemUpdate.partial.xml`
 8. Move `node.exe` and `CdnCiaUnpack.js` back to `C:\wamp\www\`
-9. Copy `GetSystemUpdate.partial.xml` to `C:\wamp\www\` (so that a copy of it exists in both `C:\wamp\www\updates` and `C:\wamp\www\`)
-10. Click the WAMP icon in your system tray, then click "Put Online"
-11. Use the command `ipconfig` in CMD to get your computer's IPv4 Address, you will need it soon
-12. Copy `ntr.bin` to the root of your SD card
-13. Create a folder named `files9` on the root of your SD card if it does not already exist
-14. Copy _the contents of_ the `starter` folder in `starter.zip` to the root of your SD card
-15. Copy the `Decrypt9WIP` folder from the Decrypt9WIP `.zip` to `/3ds/` on your SD card
-16. Put the SD card back into your 3DS
+9. Copiez `GetSystemUpdate.partial.xml` dans `C:\wamp\www\` (de sorte qu’une copie de celui-ci existe à la fois dans `C:\wamp\www\updates` et dans `C:\wamp\www\`)
+10. Cliquez sur l’icône WAMP dans la barre d’état système, puis cliquez sur "Mettre en ligne"
+11. Utilisez la commande `ipconfig` dans CMD pour obtenir l’adresse IPv4 de votre ordinateur, vous en aurez bientôt besoin
+12. Copiez `ntr.bin` à la racine de votre carte SD
+13. Créez un dossier nommé `files9` à la racine de votre carte SD si celui-ci n'existe pas déjà
+13. Copiez _le contenu du_ dossier `starter` inclus dans l'archive `starter.zip` à la racine de votre carte SD
+15. Copiez le dossier `Decrypt9WIP` inclus dans Decrypt9WIP `.zip` vers `/ 3ds /` sur votre carte SD
+15. Remettez la carte SD dans votre 3DS
 
-##### Section II - Updating
+### Section II - Mise à jour
 
-1. Boot your 3DS into recovery mode by holding L+R+A+UP while powering on
-2. Decline the update and reboot
-3. Open Cubic Ninja (if it already has NinjHax installed, hold L+R+X+Y to reset it)
-4. Select "Create", then "QR Code", then "Scan QR Code"
-5. Scan the QR code in the NTR CFW `.zip` for your region
-6. On the home menu, press (Y) and (X) at the same time to open NTR's menu
-7. Enable the debugger and close the menu
-8. Use your router's web page to get your 3DS's IP address (google it if you don't know how, all routers are different)
-9. Run NTR Debugger on your computer
-10. Enter the following commands (replace 192.168.1.100 with your 3DS's IP address and 192.168.1.200 with your computer's IP address)    
+1. Démarrez votre 3DS en mode de récupération en maintenant L+R+A+Haut enfoncés au démarrage
+2. Refusez la mise à jour et redémarrez
+3. Démarrez Cubic Ninja (si NinjHax est déjà installé, maintenez L + R + X + Y pour le réinitialiser)
+4. Sélectionnez "Créer", puis "QR Code", puis "Scan Code QR"
+5. Scannez le QR code inclus dans le NTR CFW `.zip` de votre région
+6. Sur le menu Home, appuyez sur (Y) et (X) en même temps pour ouvrir le menu de NTR
+7. Sélectionnez "Enable Debugging" et fermez le menu de NTR
+8. Utilisez la page web de votre routeur pour obtenir l’adresse IP de votre 3DS ( Si vous ne savez pas comment faire, cherchez sur google, tous les routeurs sont différents)
+9. Exécutez NTR Debugger sur votre ordinateur
+10. Entrez les commandes suivantes (remplacez 192.168.1.100 par l’adresse IP de votre 3DS et 192.168.1.200 par l’adresse IP de votre ordinateur)    
     + `connect("192.168.1.100", 8000)`
     + `write(0x15E424, tuple(map(ord, "http://192.168.1.200/update.php\0")), pid=0x25)`
     + `write(0x15E0EC, tuple(map(ord, "http://192.168.1.200/update.php\0")), pid=0x25)`
     + `write(0x15E463, tuple(map(ord, "http://192.168.1.200/update.php\0")), pid=0x25)`
-11. Update your 3DS by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
+11. Mettez à jour votre console en vous rendant dans les Paramètres de la console, puis "Autres paramètres", puis tout à droite sur l'option "Mise à jour du Système"
 
 ___
 
-Continue to [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher))
+Continuez vers [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher))
 {: .notice--primary}
