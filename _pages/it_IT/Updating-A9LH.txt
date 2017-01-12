@@ -7,16 +7,16 @@ ref: updating-a9lh
 
 ### Ultimo Aggiornamento: 3 novembre 2016
 
-The actual installation of arm9loaderhax itself consists of payload files installed into the NFIRM partitions on your device's NAND chip, which is soldered to the motherboard itself. These payloads are updated rarely and only really serve the purpose of launching `arm9loaderhax.bin` from the SD Card, which is, in our case, Luma3DS.
+Arm9loaderhax è composto da alcuni file di payload installati nella partizione NFIRM del chip NAND della console, saldato alla scheda madre. Questi file vengono aggiornati raramente, e hanno l'unico scopo di avviare dalla scheda SD il file `arm9loaderhax.bin` che è, nel nostro caso, Luma3DS.
 {: .notice}
 
-If you do not know what version of arm9loaderhax you are running, just install the latest version with these steps. Installing the latest version while already on the latest version will have no effect.
+Se non conosci quale versione dell'arm9loaderhax è in esecuzione, puoi installare per sicurezza l'ultima versione con i passaggi qui spiegati. Installare l'ultima versione anche se già presente non avrà alcun effetto.
 {: .notice--info}
 
-If you have a PIN set on Luma, you must temporarily turn it off to do these steps. You can re-enable the PIN after the update.
+Se Luma è configurato con un PIN di accesso, è necessario disattivarlo temporaneamente prima di seguire le istruzioni. Al termine dell'aggiornamento è possibile reimpostare il PIN.
 {: .notice--info}
 
-If you are using a payload that does not init the screen on its own (such as Bootanim9), you will need to rename it to `arm9loaderhax_si.bin` instead of `arm9loaderhax.bin`
+Se si utilizza un payload che non inizializza lo schermo (come Bootanim9), sarà necessario rinominarlo in `arm9loaderhax_si.bin` invece di `arm9loaderhax.bin`
 {: .notice--info}
 
 The versions of data_input only refer to revisions of the `.zip` to be compatible with different installer versions, and are *not* the same thing as updating a9lh itself (the payload files). They make no practical difference beyond the installation process.
@@ -29,13 +29,13 @@ These steps will also update your various payloads and the AES key database.
 
 * [`aeskeydb.bin`](magnet:?xt=urn:btih:18b3a17f78e2376e05feaa150749d9fd689b25dc&dn=aeskeydb.bin&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 * [`data_input_v4.zip`](magnet:?xt=urn:btih:00f03ff69b5961307303d5e4778a2f65a528bf2d&dn=data%5Finput%5Fv4.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
-* The latest fork of [SafeA9LHInstaller](https://github.com/Plailect/SafeA9LHInstaller/releases/latest) *(the `.7z` file)*
-* The latest fork of [arm9loaderhax](https://github.com/Plailect/arm9loaderhax/releases/latest) *(the `.7z` file)*
-* The latest release of [Hourglass9](https://github.com/d0k3/Hourglass9/releases/latest)
+* L'ultima fork di [SafeA9LHInstaller](https://github.com/Plailect/SafeA9LHInstaller/releases/latest) *(il file `.7z`)*
+* L'ultima fork di [arm9loaderhax](https://github.com/Plailect/arm9loaderhax/releases/latest) *(il file `.7z`)*
+* L'ultima versione di [Hourglass9] (https://github.com/d0k3/Hourglass9/releases/latest)
 
 #### Instructions
 
-**For all of these instructions, OVERWRITE any existing files on your SD card.**
+**Se dovesse essere richiesto, SOVRASCRIVI SEMPRE qualunque file preesistente nella scheda SD**
 
 ##### Section I - Prep work
 
