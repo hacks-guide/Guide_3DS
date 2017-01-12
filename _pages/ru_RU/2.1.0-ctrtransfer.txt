@@ -8,7 +8,7 @@ ref: 2.1.0-ctrtransfer
 Если перед даунгрейдом прошивки до 2.1.0 на 2DS или New 3DS вы забыли включить Wi-Fi, это можно сделать, вытащив батарею и отключив зарядное устройство на несколько секунд, и затем снова включить консоль.
 {: .notice--info}
 
-If you've been using the New 3DS's microSD Management to transfer files to your SD card, this will no longer work on 2.1.0, make sure to have a microSD card reader on hand before proceeding.
+Если вы привыкли использовать встроенное приложение "Управление microSD" на New 3DS, на 2.1.0 оно работать не будет; используйте кардридер для прохождения гайда.
 {: .notice--info}
 
 После ctrtransfer ваше устройство может перестать отображать установленные игры. Это происходит из-за удаления тикетов в процессе переноса, почему и была сделана их резервная копия. Они будут восстановлены в конце руководства.
@@ -20,7 +20,7 @@ If you've been using the New 3DS's microSD Management to transfer files to your 
 **Отключите родительский контроль (parental control) на устройстве перед тем, как перейти к 2.1.0 ctrtransfer. Если вы не знаете пароля, воспользуйтесь [генератором мастер-ключа](https://mkey.salthax.org/) (англ.).**
 {: .notice--warning}
 
-**Процесс ctrtransfer удалит все установленные пользователем тикеты с устройства до тех пор, пока резервная копия не будет восстановлена. НИ В КОЕМ СЛУЧАЕ не пропускайте создание бекапа!**
+**Процесс ctrtransfer удалит все установленные пользователем тикеты с устройства до тех пор, пока резервная копия не будет восстановлена. НИ В КОЕМ СЛУЧАЕ не пропускайте создание бэкапа!**
 {: .notice--danger}
 
 **НИКОГДА не форматируйте 2DS на прошивках ниже 6.0.0, иначе вы не сможете закончить первоначальную настройку и получите БРИК!**
@@ -37,7 +37,7 @@ If you've been using the New 3DS's microSD Management to transfer files to your 
 
 #### Что понадобится
 
-* You will need to have booted into Decrypt9
+* Необходимо загрузить устройство в Decrypt9
 * Образ 2.1.0 ctrtransfer для вашего устройства и региона     
 *(Если вашего региона нет в списке, выберите любой)*:
   +    [New 3DS\Old 3DS\2DS 2.1.0 - EUR - ctrtransfer](magnet:?xt=urn:btih:89acc9c1b488b8b38251de0ddf07975d6bd354a1&dn=2.1.0-4E%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
@@ -46,9 +46,9 @@ If you've been using the New 3DS's microSD Management to transfer files to your 
 
 #### Инструкция
 
-##### Section I - Prep work
+##### Часть I - Подготовительные работы
 
-You should be in Decrypt9 for these steps.
+Вы должны находиться в Decrypt9 для выполнения этих шагов.
 
 1. Нажмите (Select) в главном меню, чтобы извлечь SD-карту, а затем вставьте ее в компьютер
 2. Скопируйте `.bin` и `.bin.sha` из архива в папку `/files9/` на SD-карте
@@ -57,13 +57,13 @@ You should be in Decrypt9 for these steps.
 
 ##### Часть II - ctrtransfer
 
-**Наличие бэкапа NAND _вашей консоли_ ОБЯЗАТЕЛЬНО. You will be prompted to create one as part of the steps if you do not already have one.**
+**Наличие бэкапа NAND _вашей консоли_ ОБЯЗАТЕЛЬНО. Вам будет предложено создать его в одном из шагов инструкции, если у вас ещё нет бэкапа.**
 {: .notice--danger}
 
-**If you do not know whether or not you already have a NAND backup, create one when prompted by pressing (A) just to be sure.**
+**Если вы не уверены, есть ли у вас бэкап, создайте его, нажав на (A) по запросу, чтобы убедиться в наличии бэкапа в дальнейшем.**
 {: .notice--danger}
 
-**If you do not have enough space to create the backup, you can either backup to a different SD card or clear space on your current SD card by pressing (Select) on the Decrypt9WIP main menu to eject your SD card and allow it to be swapped with a different SD card or to clear space on your current SD card**
+**Если у вас недостаточно места для создания бэкапа, вы можете сделать его на другую SD-карту, или отчистить место на текущей, нажав (Select) в главном меню Decrypt9WIP, что позволит безопасно извлечь SD-карту с последующей заменой или очищением места**
 {: .notice--danger}
 
 1. Выберите "SysNAND Options", затем "CTRNAND Transfer", затем "Auto CTRNAND Transfer"
@@ -71,7 +71,7 @@ You should be in Decrypt9 for these steps.
 3. Если у вас нет NAND бэкапа, создайте его **backup SysNAND to `NANDmin.bin` при появлении запроса, нажатием кнопки (А)**
   + **Наличие бекапа NAND _вашей консоли_ НЕОБХОДИМО.**
   + **Отсутствие резервной копии приведет к ПОТЕРЕ всех установленных игр и сохранений!**
-4. Allow the transfer process to proceed automatically, this may take some time
+4. Дождитесь окончания процесса; это может занять продолжительное время
 5. По завершению переноса данных, нажмите (В)
 6. Нажмите (SELECT), чтобы извлечь карту памяти
 7. Удалите файлы образа 2.1.0 ctrtransfer `.bin` и `.bin.sha` из папки `/files9/` на SD-карте
@@ -91,9 +91,9 @@ ___
 
 {% capture notice %}
 **Вы ГАРАНТИРОВАННО получите НЕВОССТАНАВЛИВАЕМЫЙ брик, если вы введете New 3DS с прошивкой 2.1.0 в режим сна!**
-**This only happens when shutting the lid _while the device is on_; this does not apply to turning the device off.**
+**Это происходит только при закрытии крышки, _пока устройство включено_; это не касается выключения консоли.**
 **Устройство переходит в спящий режим только при закрытии крышки. Таймера, или чего-то похожего в системе нет.**
-**You should continue without delay to avoid any possibility of this happening!**
+**Без промедления сделайте все необходимые шаги, чтобы избежать этого!**
 {% endcapture %}
 
 <div class="notice--danger">{{ notice | markdownify }}</div>
