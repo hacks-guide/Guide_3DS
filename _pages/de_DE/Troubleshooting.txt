@@ -55,15 +55,15 @@ Wenn dein 3DS nicht mehr starten sollte, suche bitte den für dich relevanten Ab
 1. Kopiere `GodMode9.bin` aus der GodMode9`.zip` in den `/luma/payloads/` Ordner auf deiner SD-Karte und benenne `GodMode9.bin` im Ordner `/luma/payloads/`um in `up_GodMode9.bin`
 2. Drücke (Steuerkreuz oben) während des Hochfahrens um in arm9loaderhax GodMode9 zu gelangen
 3. Gehe zu `SYSNAND CTRNAND` -> `data` -> (32 Zeichen ID) -> `sysdata` -> `00010038`
-4. Hold down the (R) trigger, then press (X) on `00000000` to rename this file
-5. Press (Up) once to change the name to `10000000`
+4. Halte den (R) Trigger gedrückt und drücke dann (X) bei `00000000` um die Datei umzubenennen
+5. Drücke einmal (Steuerkreuz oben) um den Namen zu `10000000` zu ändern
 6. Drücke (A) um die Änderungen zu speichern
 7. Drück (A) um das Bearbeiten des SysNAND zu entsperren und gib danach die angezeigte Tastenkombination ein
 8. Gehe zurück zum Hauptmenü
-9. Press (Start) to reboot
+9. Drück (Start) um die Konsole neu zu starten
 
-## <a name="gw_fbi" />Cannot inject H&S on Gateway downgraded device
-This is caused by Gateway implementing a very shoddy downgrade method, which leaves two versions of each app on the system. One of them is unused, but it confuses Decrypt9, causing it to inject into the wrong one.
+## <a name="gw_fbi" />Kann G&S nicht mit einem Gateway gedowngradeten Gerät einfügen
+Dies wird dadurch verursacht, da Gatewayeinfügung eine sehr schäbige Downgrademethode ist, welche zwei verschiedene Versionen jeder App auf dem System zurücklässt. Obwohl eine der beiden unbenutzt bleibt, verwirrt es Decrypt9, was dazu führt, dass die falsche App eingebunden wird.
 
 #### Was du brauchst
 
@@ -72,27 +72,27 @@ This is caused by Gateway implementing a very shoddy downgrade method, which lea
 #### Anleitung
 
 1. Kopiere `GodMode9.bin` aus der GodMode9`.zip` in den `/luma/payloads/` Ordner auf deiner SD-Karte und benenne `GodMode9.bin` im Ordner `/luma/payloads/`um in `up_GodMode9.bin`
-2. Reinsert your SD card into your 3DS
-3. Open GodMode9 from arm9loaderhax by holding (Up) during boot     
-4. Navigate to `SYSNAND CTRNAND` -> `title` -> `00040010`
-5. Navigate to the folder for your device and region:
+2. Lege deine SD-Karte wieder in deinen 3DS ein
+3. Öffne GodMode9 mittels arm9loaderhax indem du während des hochfahrens (Steuerkreuz oben) drückst     
+4. Gehe zu `SYSNAND CTRNAND` -> `title` -> `00040010`
+5. Gehe zum Ordner deiner Konsole und Region:
   + **Old 3DS EUR**: `00022300` -> `content`
   + **Old 3DS JPN**: `00020300` -> `content`
   + **Old 3DS USA**: `00021300` -> `content`
   + **New 3DS EUR**: `20022300` -> `content`
   + **New 3DS JPN**: `20020300` -> `content`
   + **New 3DS USA**: `20021300` -> `content`
-6. Notice that there are two sets of app and tmd files, one set with uppercase extensions (`.TMD` and `.APP`), and one set with lowercase extensions (`.tmd` and `.app`)
-7. While holding the (R) trigger, press (Y) to create a new directory
-8. Press (A) to confirm the name `newdir` (it doesn't matter what it's called)
+6. Achte darauf, dass es zwei Paare von app und tmd Dateien gibt. Ein Paar mit großgeschriebenen Endungen (`.TMD` und `.APP`), und ein Paar mit kleingeschriebenen Endungen (`.tmd` und `.app`)
+7. Während du den (R) Trigger gedrückt hälst, drücke zusätzlich (Y) um einen neuen Ordner zu erstellen
+8. Drücke (A) um den Ordnernamen `newdir` zu bestätigen (es spielt keine Rolle wie der Ordner heißt)
 9. Drück (A) um das Bearbeiten des SysNAND zu entsperren und gib danach die angezeigte Tastenkombination ein
-10. Press the (L) trigger on each of the uppercase extension files (`.TMD` and `.APP`) to mark them
-11. Press (Y) to copy the files
-12. Navigate to `newdir`
-13. Press (Y) to paste the files
-14. Select "Move path(s)"
-15. The uppercase extension files will have been moved to the `newdir` directory
-16. Press (Start) to reboot
+10. Drücke den (L) Trigger auf jeder der Dateien mit den großgeschriebenen Endungen (`.TMD` und `.APP`) um sie zu markieren
+11. Drück (Y) um die Dateien zu kopieren
+12. Gehe zu `newdir`
+13. Drück (Y) um die Dateien einzufügen
+14. Wähle "Move path(s)" aus
+15. Die Dateien mit den großgeschriebenen Endungen wurden in den ´newdir´ Ordner verschoben
+16. Drück (Start) um die Konsole neu zu starten
 17. Return to [Installing arm9loaderhax](installing-arm9loaderhax) and retry the FBI injection
 18. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then return to [Installing arm9loaderhax](installing-arm9loaderhax) and retry the FBI injection
 
