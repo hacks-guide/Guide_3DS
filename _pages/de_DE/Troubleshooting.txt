@@ -93,52 +93,52 @@ Dies wird dadurch verursacht, da Gatewayeinfügung eine sehr schäbige Downgrade
 14. Wähle "Move path(s)" aus
 15. Die Dateien mit den großgeschriebenen Endungen wurden in den ´newdir´ Ordner verschoben
 16. Drück (Start) um die Konsole neu zu starten
-17. Return to [Installing arm9loaderhax](installing-arm9loaderhax) and retry the FBI injection
-18. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then return to [Installing arm9loaderhax](installing-arm9loaderhax) and retry the FBI injection
+17. Kehere zu [arm9loaderhax](installing-arm9loaderhax) zurück und versuche die FBI-Injektion erneut
+18. Wenn das immer noch nicht funktioniert, verschiebe die Dateien mit den Endungen die NUR Großbuchstaben enthalten zurück in den `content`Ordner, und die die nur Kleinbuchstaben als Endung haben in den neuen `newdir`Ordner. Danach versuche erneut Schritt 17
 
-## <a name="ts_browser" />A browser based exploit is not working
-Browser based exploits (such as browserhax or 2xrsa) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps
+## <a name="ts_browser" />Ein browserbasierter Exploit funktioniert nicht
+Browserbasierte Exploits (wie browserhax oder 2xrsa) sind oft instabil und stürzen häufig ab. Manchmal kann dem mit den folgenden Schritten entgegengewirkt werden
 
-1. Open the browser, then open the browser settings
-2. Scroll to the bottom and Initialize Savedata (it also may be called Clear All Save Data)
-3. Try the exploit again
+1. Öffne den Internetbrowser, dann die Browser-Einstellungen
+2. Scrolle nach unten und wähle "Speicherdaten löschen"
+3. Versuche den Exploit erneut
 
-## <a name="ts_safe_a9lh" />System boots directly SafeA9LHInstaller
-You copied the wrong `arm9loaderhax.bin` file to your SD card (you were only supposed to copy the `3ds` folder and `SafeA9LHInstaller.dat` file from the SafeA9LHInstaller zip)    
+## <a name="ts_safe_a9lh" />Das System startet direkt SafeA9LHInstaller
+Du hast die falsche `arm9loaderhax.bin`-Datei auf deine SD-Karte kopiert (du solltest nur den `3ds`-Ordner und die `SafeA9LHInstaller.dat`-Datei aus dem SafeA9LHInstaller-Archiv kopieren)    
 
-1. Use the correct `arm9loaderhax.bin`
-2. Copy `arm9loaderhax.bin` from the Luma3DS `.zip` to the root of your SD card
-3. Reboot holding (Select) and continue
+1. Verwende die richtige `arm9loaderhax.bin`
+2. Kopiere `arm9loaderhax.bin` aus Luma3DS `.zip` in das Stammverzeichnis deiner SD-Karte
+3. Halte, während du den 3DS neustartest, (Select) gedrückt und fahre fort
 
-## <a name="ts_safe_a9lh_screen" />SafeA9LHInstaller shows a glitched screen
-This happens occasionally, but the reason is unknown. The buttons will still work, but the screen will be glitched looking
+## <a name="ts_safe_a9lh_screen" />SafeA9LHInstaller zeigt einen fehlerhaften Bildschirm
+Dies passiert ab und zu, aber der Grund ist nicht bekannt. Die Knöpfe funktionieren noch, aber der Bildschirm wird fehlerhaft aussehen
 
-1. Follow instructions as normal
-2. Press (Select) and arm9loaderhax will be installed
-3. The console will reboot
-  + If the console does not reboot, wait 10 seconds, then power off your 3DS by holding down the power button
+1. Folge der Anleitung wie gehabt
+2. Drücke (Select) und arm9loaderhax wird installiert
+3. Die Konsole wird neustarten
+  + Falls die Konsole nicht neustartet, warte 10 Sekunden, schalte deinen 3DS dann ab, indem du den Powerknopf gedrückt hälst
 
-## <a name="ts_steelhax" />After System Transfering steelhax, it crashes to a black screen on _the target 3DS_
+## <a name="ts_steelhax" />Nachdem der steelhax Systemtransfer abgeschlossen ist, stürzt der _Ziel 3DS_ mit einem schwarzen Bildschirm ab
 
-This is because you selected the wrong version in the steelhax installer.
+Der Grund dafür ist, dass du die falsche Version der steelhax Installation ausgewählt ist.
 
-1. Download the [otherapp payload](https://smealum.github.io/3ds/#otherapp) corresponding to **the target 3DS's** version
-    + Ignore the NFIRM being downgraded
-    + Use the version displayed in settings
-2. Rename the otherapp payload to `steelhax_payload.bin`
-3. Copy it `steelhax_payload.bin` to the root of **the target 3DS's** SD Card
-    + Overwrite any existing files
-4. Hold (B) while launching **Steel Diver: Sub Wars**
+1. Lade die [otherapp payload](https://smealum.github.io/3ds/#otherapp), die der Version des **Ziel 3DS** entspricht
+    + Ignoriere, dass die NFIRM gedowngraded wird
+    + Benutze die Version, die in den Einstellungen angezeigt wird
+2. Benenne die otherapp payload in `steelhax_payload.bin` um
+3. Kopiere `steelhax_payload.bin` auf das Stammverzeichnis der SD-Karte des **Ziel 3DS**
+    + Ersetze dabei alle bereits existierenden Dateien
+4. Halte (B) gedrückt während du **Steel Diver: Sub Wars** startest
 
-## <a name="ts_dsiware" />After doing the DSiWare Downgrade, my hacked DSiWare does not work
+## <a name="ts_dsiware" />Nachdem DSiWare Downgrade sollte die gehackte DSiWare nicht mehr funktionieren
 
-1. Reboot **the source 3DS** while holding (Start) to launch Hourglass9
-2. Go to SysNAND Backup/Restore and restore SysNAND from `NANDmin.bin` (the one made before the system transfer)
-3. If you don't see the game at all on **the target 3DS**, link the NNID you bought the game with to **the target 3DS** and redownload it
-  + You may have to delete the game from "Data Management" in the "System Settings" first
-  + If **the target 3DS** is not the latest version, you may have to run ctr-httpwn to access the eShop
-4. On **the source 3DS**, do the save (and `.app` if you are using the `.app` page) injection steps
-5. On **the source 3DS**, go to System Settings, "Data Management", "DSiWare", then copy your DSiWare game to your SD card
+1. Starte den **Ausgangs 3DS** während du (Start) drückst um in Hourglass9 zu kommen
+2. Navigiere zu SysNAND Backup/Restore und stelle die SysNAND aus `NANDmin.bin` wieder her (die, welche vor dem Systemtransfer erstellt wurde)
+3. Falls du das Spiel nirgends auf dem **Ziel 3DS** siehst, verlinke die NNID, mit der du das Spiel gekauft hast, mit dem **Ziel 3DS** und lade es erneut runter
+  + Eventuell musst du das Spiel mit "Datenverwaltung" in den "Systemeinstellungen" zuerst entfernen
+  + Falls **der Ziel 3DS** nicht auf der neuesten Version ist, musst du eventuell ctr-httpwn starten um in den eShop zu gelangen
+4. Folge den Speicher- (und `.app`, falls du die `.app`-Seite benutzt) Injektionsschritten auf dem**Ausgangs 3DS**
+5. Navigiere auf dem **Ausgangs 3DS** in die Systemeinstellungen -> "Datenverwaltung" -> "DSiWare" und kopiere dann dein DSiWare-Spiel auf deine SD-Karte
 6. Either put **the source 3DS**'s SD card in **the target 3DS**, or rename the `Nintendo 3DS` on **the target 3DS**'s SD card and copy the `Nintendo 3DS` folder from **the source 3DS**'s SD card to **the target 3DS**'s SD card
 7. On **the target 3DS**, go to System Settings, "Data Management", "DSiWare", then copy your DSiWare game to the system
 8. Return your SD cards to normal, then continue with the DSiWare Downgrade
