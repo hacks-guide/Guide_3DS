@@ -52,32 +52,32 @@ Il cambio regione tramite ctrtransfer (effettuato in questa guida) sembra far sm
 
 ##### Sezione II - Backup dei ticket e della configurazione di sistema
 
-1. Premi il pulsante (Start) mentre tieni premuto il pulsante (X) per riavviare il sistema in Decrypt9 tramite arm9loaderhax     
+1. Premi il pulsante (Start) mentre tieni premuto il pulsante (X) per riavviare la console in Decrypt9 tramite arm9loaderhax     
 2. Seleziona "Ticket/Titlekey Options", quindi seleziona "Ticket Dump (SysNAND)"
 3. Premi (Select) per rimuovere la scheda SD, poi inseriscila nel tuo computer
-4. Delete all `.tik` files in the `/files9/` folder that **do not** start with "00-"
-5. Leave all the `.tik` files that do start with "00-" in the folder
-6. Reinsert your SD card into your 3DS, then press (B) to go back to the Main Menu
-7. Go to "SysNAND Options", then "System Save Dump", then select "Dump configsave.bin"
+4. Elimina tutti i file con estensione `.tik` presenti nella cartella `/files9/` che **NON** cominciano con "00-"
+5. Lascia stare tutti i file con estensione `.tik` che cominciano con "00-" presenti nella cartella
+6. Reinserisci la scheda SD nel tuo 3DS, quindi premi (B) per tornare al menu principale
+7. Seleziona "SysNAND Options", quindi "System Save Dump", e infine "Dump configsave.bin"
 
-##### Section III - ctrtransfer
+##### Sezione III - ctrtransfer
 
-1. Go to "SysNAND Options", then "CTRNAND Transfer", then "Auto CTRNAND Transfer"
-2. Select the 9.2.0 ctrtransfer image when prompted by pressing (A)
-3. If you do not already have a NAND backup, **backup SysNAND to `NANDmin.bin` when prompted by pressing (A)**
-4. Allow the transfer process to proceed automatically, this may take some time
-5. Once the transfer is complete, press Select to eject your SD card
-6. Put your SD card in your computer, then copy `NANDmin.bin` and `NANDmin.bin.sha` from the `/files9/` folder on your SD card to a safe location
-  + Make backups in multiple locations
-  + This backup will save you from a brick if anything goes wrong in the future
-  + **Your backup should match one of the sizes on [this](nand-size) page; if it does not, you should delete it and make a new one!**
-7. Delete the 9.2.0 ctrtransfer image `.bin` and `.bin.sha` from the `/files9/` folder on your SD card after copying it
+1. Seleziona l'opzione "SysNAND Options", poi seleziona "CTRNAND Transfer" e infine seleziona "Auto CTRNAND Transfer"
+2. Quando richiesto, seleziona il file del ctrtransfer 9.2.0 premendo (A)
+3. Se non hai un backup della tua NAND, **fai il backup della SysNAND nel file `NANDmin.bin` quando richiesto premendo (A)**
+4. Lascia che il trasferimento finisca automaticamente. Ci vorrà un po' di tempo
+5. Al termine del trasferimento, premi (Select) per estrarre la scheda SD
+6. Inserisci la scheda SD nel computer, quindi copia i file `NANDmin.bin` e `NANDmin.bin.sha` dalla cartella `/files9/` presente nella scheda SD in una posizione sicura
+  + Crea delle copie di backup e salvale in posti sicuri
+  + Questi backup ti salveranno da un brick nel caso dovesse accadere qualcosa in futuro
+  + **Il file di backup dovrà avere l'esatta dimensione riportata su [questa](nand-size) pagina; se così non fosse, cancellalo e creane uno nuovo!**
+7. Dopo la copia, elimina i file `.bin` e `.bin.sha` del ctrtransfer 9.2.0 dalla cartella `/files9/` della tua scheda SD
 8. Reinserisci la scheda SD nel 3DS
 
-##### Section IV - Editing SecureInfo
+##### Sezione IV - Modifica di SecureInfo
 
-1. Press (Start) then hold (Up) to reboot into arm9loaderhax GodMode9     
-2. Navigate to `SYSNAND CTRNAND` -> `rw` -> `sys`
+1. Premi il pulsante (Start) mentre tieni premuto il pulsante (Su) per riavviare la console in Decrypt9 tramite arm9loaderhax     
+2. Cerca la cartella `SYSNAND CTRNAND` -> `rw` -> `sys`
 3. Press (Y) on `SecureInfo_A` to copy it
 4. Press (Y) to paste a copy of `SecureInfo_A`
 5. Select "Copy path(s)"
@@ -98,17 +98,17 @@ Il cambio regione tramite ctrtransfer (effettuato in questa guida) sembra far sm
 17. You should see both a `SecureInfo_A` and `SecureInfo_C` if everything was done properly. (`SecureInfo_C` is used in place of `SecureInfo_A` when using Luma3DS if it detects the file on boot)
 18. Press (Start) to reboot
 
-##### Section V - Reinstalling Tickets
+##### Sezione V - Ripristino dei Ticket
 
-1. Open FBI
-2. Select "SD"
-3. Select "files9"
-4. Select "\<current directory>"
-5. Select "Install and delete all tickets"
-6. Wait. The system may appear to freeze, just give it time.
-7. Press (A) to confirm
-8. Press (B) to decline installing tickets from CDN.
-9. Exit with the home button
+1. Avvia FBI
+2. Seleziona "SD"
+3. Seleziona "files9"
+4. Seleziona "\<current directory>"
+5. Seleziona "Install and delete all tickets"
+6. Attendi. Il sistema sembrerà essersi bloccato, dagli del tempo per eseguire l'operazione.
+7. Premi (A) per confermare
+8. Premi (B) per rifiutare l'installazione di ticket dal CDN.
+9. Esci premendo il pulsante HOME
 
 ##### Section VI - Region settings
 
