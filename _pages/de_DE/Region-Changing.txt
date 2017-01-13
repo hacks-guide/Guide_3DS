@@ -20,7 +20,7 @@ Nach diesem Vorgang werden nur **New 3DS, welche den eShop noch nie zuvor besuch
 Beachte, dass der eShop ab und zu, aus unerklärlichen Gründen auf Geräten, auf denen er eigentlich funktionieren sollte, nicht aufrufbar ist. Dies liegt komplett an den Serven von Nintendo. Ich habe darauf absolut keinen Einfluss.
 {: .notice--warning}
 
-Region changing using ctrtransfer (which this method uses) seems to cause reboot patches to break. Die Ursache hierfür ist nicht bekannt, aber zum jetzigen Stande werden Old 3DS Konsolen nicht mehr im Stande sein Spiele zu zu spielen, die den erweiterten Speichermodus verwenden (Hierzu zählen zum Beispiel Monster Hunter, Super Smash Bros. und Pokémon Sonne und Mond).
+Regionswechsel, welche die ctrtransfer-Methode (welche in dieser Anleitung genutzt wird) benutzen, scheinen fehlerhafte Neustartpatches verursachen. Die Ursache hierfür ist nicht bekannt, aber zum jetzigen Stande werden Old 3DS Konsolen nicht mehr im Stande sein Spiele zu zu spielen, die den erweiterten Speichermodus verwenden (Hierzu zählen zum Beispiel Monster Hunter, Super Smash Bros. und Pokémon Sonne und Mond).
 {: .notice--warning}
 
 **arm9loaderhax und Luma3DS müssen bereits installiert sein, um diese Methode zu verwenden**
@@ -95,36 +95,36 @@ Region changing using ctrtransfer (which this method uses) seems to cause reboot
     - "01" : USA
     - "02" : EUR
 16. Drücke (B) um den Bearbeiten Modus zu beenden, speichere dann die Änderungen, dann drücke (B) erneut, um zum Verzeichnis zurückzukehren
-17. You should see both a `SecureInfo_A` and `SecureInfo_C` if everything was done properly. (`SecureInfo_C` is used in place of `SecureInfo_A` when using Luma3DS if it detects the file on boot)
-18. Press (Start) to reboot
+17. Wenn du alles korrekt gemacht hast, solltest du ein "SecureInfo_A" und ein "SecureInfo_C" sehen. ("SecureInfo_C" wird anstelle "SecureInfo_A" benutzt, wenn man Luma3DS nutzt und diese Datei bei Systemstart vorhanden ist)
+18. Drücke (Start), um die Konsole neu zu starten
 
 ##### Abschnitt V - Tickets wiederherstellen
 
-1. Open FBI
-2. Select "SD"
-3. Select "files9"
-4. Select "\<current directory>"
-5. Select "Install and delete all tickets"
-6. Wait. The system may appear to freeze, just give it time.
-7. Press (A) to confirm
-8. Press (B) to decline installing tickets from CDN.
-9. Exit with the home button
+1. Öffne FBI
+2. Wähle "SD"
+3. Wähle "files9"
+4. Wähle "\<current directory>"
+5. Wähle "Install and delete all tickets"
+6. Warte. Es mag so scheinen, dass das System einfriert. Lass ihm einfach Zeit.
+7. Drücke (A) um zu bestätigen
+8. Drücke (B) um eine Installation der Tickets von CDN abzulehnen.
+9. Schließe FBI mit (Home)
 
 ##### Abschnitt VI - Regions-Einstellungen
 
-1. Open the System Settings
-2. Go to "Other Settings", "Profile", then "Region Settings"
-3. Select a country from the region you switched to
-4. If prompted, you do not need to set a state
-5. Update your region changed CFW SysNAND to the latest version
+1. Öffne die Systemeinstellungen
+2. Gehe zu "Allgemeine Einstellungen", "Nutzereinstellungen", dann "Region wählen"
+3. Wähle ein Land der Region, zu welcher du gewechselt hast
+4. Falls aufgefordert, musst du keinen Staat einstellen
+5. Aktualisiere nun deine regions-gewechselte CFW SysNAND auf die neueste Version
 
-##### Abschnitt VII - Konfigurations-Speicherstand wiederherstellen
+##### Abschnitt VII - Konfigurationen wiederherstellen
 
-1. Reboot holding (X) during boot to launch arm9loaderhax Decrypt9
-2. Go to "SysNAND Options", then "System Save Inject", then select "Inject configsave.bin"
+1. Starte das Gerät neu und halte (X) während des Hochfahrens gedrückt, um arm9loaderhax Decrypt9 zu starten
+2. Gehe zu "SysNAND Options", dann "System Save Inject", dann wähle "Inject configsave.bin"
 
-Old 3DSs / 2DSs may need to format (using TinyFormat or the System Settings) to play extended memory mode games (such as Monster Hunter, Super Smash Bros, or Pokemon Sun/Moon).
+Old 3DS / 2DS müssen möglicherweise formatiert werden (mit TinyFormat oder in den Systemeinstellungen) um Spiele, welche den erweiteten Speichermodus benötigen (z. B Monster Hunter, Super Smash Bros, oder Pokemon Sonne/Mond) spielen zu können.
 {: .notice--info}
 
-Formatting a device following a ctrtransfer *without restoring the config save* can cause screen brightness / flickering issues. See [this](https://github.com/Plailect/Guide/issues/794).
+Der Bildschirm kann Probleme mit der Helligkeit haben und flackern, wenn du deine Konsole nach einem ctrtransfer *ohne das Wiederherstellen der Konfigurationen* formatiert hast. Siehe [this](https://github.com/Plailect/Guide/issues/794).
 {: .notice--info}
