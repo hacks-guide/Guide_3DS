@@ -1,5 +1,5 @@
 ---
-title: "Updating A9LH"
+title: "Bijwerken van A9LH" 
 permalink: /updating-a9lh.html
 lang: nl_NL
 ref: updating-a9lh
@@ -7,16 +7,16 @@ ref: updating-a9lh
 
 ### Laatste Update: 3 november 2016
 
-De daadwerkelijke instalatie van arm9loaderhax zelf bestaat uit meerdere 'payload' bestanden welke instaleren in de NFIRM partitie van het NAND van je 3DS, wat gesoldeerd is op het moederbord van je 3DS. These payloads are updated rarely and only really serve the purpose of launching `arm9loaderhax.bin` from the SD Card, which is, in our case, Luma3DS.
+De daadwerkelijke instalatie van arm9loaderhax zelf bestaat uit meerdere 'payload' bestanden welke instaleren in de NFIRM partitie van het NAND van je 3DS, wat gesoldeerd is op het moederbord van je 3DS. Deze 'payloads' worden zelden geüpdatet en dienen alleen om `arm9loaderhax.bin` te laden van de SD-kaart, wat in ons geval Luma3DS laadt.
 {: .notice}
 
 Als je niet zeker bent over de versie van je huidige arm9loaderhax installatie, kan je gewoon de laatste versie installeren met de volgende stappen. Installeren van de laatste versie als je al op de laatste versie bent heeft namelijk geen effect.
 {: .notice--info}
 
-If you have a PIN set on Luma, you must temporarily turn it off to do these steps. Na de update kan je de PIN weer aanzetten.
+Als je een PIN hebt ingesteld in Luma moet je deze tijdelijk uitzetten om de stappen te doorlopen. Na de update kan je de PIN weer aanzetten.
 {: .notice--info}
 
-If you are using a payload that does not init the screen on its own (such as Bootanim9), you will need to rename it to `arm9loaderhax_si.bin` instead of `arm9loaderhax.bin`
+Als je een 'payload' gebruikt welke niet uit zichzelf het scherm initieerd (zoals Bootanim9), dien je deze te hernoemen van `arm9loaderhax.bin` naar `arm9loaderhax_si.bin`
 {: .notice--info}
 
 The versions of data_input only refer to revisions of the `.zip` to be compatible with different installer versions, and are *not* the same thing as updating a9lh itself (the payload files). Deze maken geen praktisch verschil na het installatieproces.
@@ -40,25 +40,25 @@ Deze stappen zullen ook je 'payloads' en de AES key database updaten.
 ### Deel I - Voorbereiding
 
 1. Verwijderen 'aeskeydb.bin' in de hoofdmap van uw SD-kaart als deze bestaat
-2. Delete the `a9lh` folder from the root of your SD card if it exists
-3. Copy `aeskeydb.bin` to the `/files9/` folder on your SD card
-4. Copy `Hourglass9.bin` from the Hourglass9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `Hourglass9.bin` to `start_Hourglass9.bin`
+2. Verwijder de `a9lh` map van de sd kaart als deze al bestaat
+3. Kopieer 'Aeskeydb.bin' naar de map '/ files9 /' op uw SD-kaart
+4. Kopieer 'Hourglass9.bin' van Hourglass9 '.zip' naar de ' / luma/payloads/' map op uw SD-kaart en hernoem 'Hourglass9.bin' naar 'start_Hourglass9.bin'
 5. Kopieer 'Arm9loaderhax.bin' van SafeA9LHInstaller '.zip' naar de ' /luma/payloads/' map op uw SD-kaart
 6. Wijzig de naam van 'arm9loaderhax.bin' in ' / luma/payloads/' naar 'down_safea9lhinstaller.bin'
 7. Kopieer de map 'a9lh' van 'data_input_v4.zip' naar de hoofdmap van uw SD-kaart
 8. Kopieer _de inhoud_ van de arm9loaderhax `.zip` naar de `a9lh` map op je sd kaart
-9. Copy `arm9loaderhax.bin` from the Luma3DS `.zip` to the root of your SD card, overwrite existing files
+9. Kopieer 'Arm9loaderhax.bin' van de Luma3DS 'zip' naar de hoofdmap van uw SD-kaart en, overschrijf bestaande bestanden
 10. Stop je sd kaart opnieuw in jouw 3DS
 
 ### Deel II - Payload update
 
 1. Start de 3ds met D-pad beneden ingedrukt
 2. Druk op (Select) om arm9loaderhax bijwerken
-3. Power off the device and put your SD card back in your computer
-4. Delete the `a9lh` folder from the root of your SD card
-5. Delete `down_safea9lhinstaller.bin` from `/luma/payloads/`
+3. Schakel het apparaat uit en plaats je SD-kaart terug in je computer
+4. Verwijder de 'a9lh'-map in de hoofdmap van uw SD-kaart
+5. Verwijder `down_safea9lhinstaller.bin` uit de map `/luma/payloads/`
 
-##### Section III - Configuring Luma3DS
+### Deel III - Luma3DS configureren
 
 1. Reinsert your SD card into your 3DS and boot holding (Select)
 2. Use the (A) button and the D-Pad to turn on the following:    
@@ -75,15 +75,15 @@ Deze stappen zullen ook je 'payloads' en de AES key database updaten.
 
 1. Open FBI
 2. Selecteer "SD"
-3. Navigate to `arm9loaderhax.bin`, then press (A) on it and select the "Copy" option
+3. Navigeer naar 'arm9loaderhax.bin', druk dan op (A) en selecteer de optie "Copy"
 4. Ga terug naar het hoofdmenu van FBI met (B)
-5. Select "CTR NAND"
-6. Select "\<current directory>"
-7. Select the "Paste" option, then press (A) to confirm
-8. Exit with the home button
+5. Selecteer "CTR NAND"
+6. Selecteer "\<current directory >"
+7. Selecteer de optie "Paste" en druk op (A) om te bevestigen
+8. Sluit af met de home knop
 9. Power off your 3DS and remove the SD card
 10. Boot with the SD card removed while holding (Select)
-  + Booting the device at least once with the SD card removed will allow you to configure the CTRNAND based luma installation
+  + Opstarten met de SD-kaart verwijderd laat je de Luma installatie in CTRNAND configureren
 11. Use the (A) button and the D-Pad to turn on the following:    
   + **"Show NAND or user string in System Settings"**
 12. If you are using a **New 3DS**, you should *also* enable the following:
