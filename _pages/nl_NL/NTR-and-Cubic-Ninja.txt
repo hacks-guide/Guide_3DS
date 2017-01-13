@@ -1,6 +1,5 @@
 ---
-title: "NTR and Cubic Ninja"
-permalink: /ntr-and-cubic-ninja.html
+title: "NTR and Cubic Ninja" permalink: /ntr-and-cubic-ninja.html
 lang: nl_NL
 ref: ntr-and-cubic-ninja
 ---
@@ -32,9 +31,9 @@ ref: ntr-and-cubic-ninja
 4. Kopieer de `updates` map van de 9.2.0 downgrade `.zip` naar`C:\wamp\www\`
 5. Verplaats `node.exe` naar `C:\wamp\www\updates`
 6. Verplaats `C:\wamp\www\CdnCiaUnpack.js` naar `C:\wamp\www\updates`
-7. In the `C:\wamp\www\updates` directory, drag `CdnCiaUnpack.js` onto `node.exe` to create `GetSystemUpdate.partial.xml`
-8. Move `node.exe` and `CdnCiaUnpack.js` back to `C:\wamp\www\`
-9. Copy `GetSystemUpdate.partial.xml` to `C:\wamp\www\` (so that a copy of it exists in both `C:\wamp\www\updates` and `C:\wamp\www\`)
+7. In de`C:\wamp\www\updates` map: Sleep `CdnCiaUnpack.js` naar`node.exe`om `GetSystemUpdate.partial.xml` te creëren
+8. Verplaats `node.exe` en `CdnCiaUnpack.js` terug naar `C:\wamp\www\`
+9. Kopieer`GetSystemUpdate.partial.xml` naar `C:\wamp\www\` (zodat er een kopie van bestaat in zowel `C:\wamp\www\updates` als`C:\wamp\www\`)
 10. Klik op het WAMP-icoon in je Taakbalk, en druk dan op "Put Online"
 11. Gebruik het commando `ipconfig` in CMD om je computers IPv4 adres te bemachtigen, je zal het binnenkort nodig hebben
 12. Kopieer 'ntr.bin' naar de root van je SD-Kaart
@@ -47,21 +46,21 @@ ref: ntr-and-cubic-ninja
 
 1. Start je 3DS op in herstelmodus door het indrukken van L+R+A+UP terwijl hij aangezet wordt
 2. Weiger de update en start opnieuw op
-3. Open Cubic Ninja (if it already has NinjHax installed, hold L+R+X+Y to reset it)
-4. Select "Create", then "QR Code", then "Scan QR Code"
-5. Scan the QR code in the NTR CFW `.zip` for your region
-6. On the home menu, press (Y) and (X) at the same time to open NTR's menu
-7. Enable the debugger and close the menu
+3. Open Cubic Ninja (als NinjHax er al op geïnstalleerd is, hou dan L+R+X+Y in om het te resetten)
+4. Selecteer "Create", daarna "QR Code" en daarna "Scan QR Code"
+5. Scan de QR code in de NTR CFW `.zip` voor je respectievelijke regio
+6. Op het homemenu, druk op (Y) en (X) tegelijkertijd om het NTR-menu te openen
+7. Activeer de debugger en sluit het menu
 8. Gebruik de webpagina van je router om het IP adres van je 3DS te weten te komen (google het als je niet weet hoe, alle routers zijn verschillend).
-9. Run NTR Debugger on your computer
-10. Enter the following commands (replace 192.168.1.100 with your 3DS's IP address and 192.168.1.200 with your computer's IP address)    
+9. Voer NTR Debugger uit op je computer
+10. Voer de volgende commando's uit (vervang 192.168.1.100 met het IP adres van je 3DS en 192.168.1.200 met je computer's IP adres)    
     + `connect("192.168.1.100", 8000)`
     + `write(0x15E424, tuple(map(ord, "http://192.168.1.200/update.php\0")), pid=0x25)`
     + `write(0x15E0EC, tuple(map(ord, "http://192.168.1.200/update.php\0")), pid=0x25)`
     + `write(0x15E463, tuple(map(ord, "http://192.168.1.200/update.php\0")), pid=0x25)`
-11. Update your 3DS by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
+11. Update je 3DS door naar System Settings en dan naar "Other Settings" te gaan. Ga in dat menu helemaal naar rechts en klik op "System Update"
 
 ___
 
-Continue to [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher))
+Ga verder naar [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher))
 {: .notice--primary}
