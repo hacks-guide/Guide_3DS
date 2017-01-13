@@ -33,12 +33,12 @@ Als je jouw 3DS niet meer aan krijgt, kijk dan naar de relevante sectie voor jou
 3. Kopieer `DS Download Play - v1024.cia` naar de `/cias/` map op jouw SD kaart
 4. Kopieer `DS Internet - v2048.cia` naar de `/cias/` map op jouw SD kaart
 5. Kopieer `Nintendo DS Cart Whitelist - v11264.cia` naar de `/cias/` map op jouw SD kaart
-6. Copy either `New_3DS TWL_FIRM - v9936.cia`  or `Old_3DS TWL_FIRM - v8817.cia` to the `/cias/` folder on your SD card
+6. Kopieer, bij een new 3DS, `New_3DS TWL_FIRM - V9936.cia`, of bij een standaard 3DS OF 2DS, `Old_3DS TWL_FIRM - v8817.cia` naar de `/cias/` map op jouw SD kaart
 
-##### Section II - Installing titles
+##### Deel II - Titels installeren
 
 1. Open FBI
-2. Select "SD"
+2. Selecteer "SD"
 3. Selecteer "cias"
 4. Selecteer "\<current directory>"
 5. Selecteer "Install and delete all CIAs"
@@ -55,15 +55,15 @@ Als je jouw 3DS niet meer aan krijgt, kijk dan naar de relevante sectie voor jou
 1. Kopieer `GodMode9.bin` van de GodMode9 `.zip` naar de `/luma/payloads/` map op jouw SD kaart en wijzig de naam `GodMode9.bin` in `/luma/payloads/` naar `up_GodMode9.bin`
 2. Zet de 3DS aan terwijl je op de D-PAD omhoog ingedrukt houdt om zo GodMode9 m.b.v. arm9loaderhax op te starten
 3. Navigeer naar `SYSNAND CTRNAND` -> `data` -> (32 karakters lang ID) -> `sysdata` -> `00010038`
-4. Hold down the (R) trigger, then press (X) on `00000000` to rename this file
-5. Press (Up) once to change the name to `10000000`
-6. Press (A) to save changes
-7. Press (A) to unlock SysNAND writing, then input the key combo given
-8. Navigate back to the Main Menu
+4. Hou de (R) knop ingedrukt, druk daarna op (X) op `00000000` om dit bestand een andere naam te geven
+5. Druk op (Boven) op de naam te veranderen naar `10000000`
+6. Druk nu op (A) om de veranderingen op te slaan
+7. Druk op (A) om het schrijven op de SysNAND te ontgrendelen, druk vervolgens de gegeven combinatie van knoppen in
+8. Ga nu terug naar het hoofdmenu
 9. Druk op (Start) om opnieuw op te starten
 
 ## <a name="gw_fbi" />Kan H&S niet injecteren op een systeem die gedowngrade is met behulp van Gateway
-This is caused by Gateway implementing a very shoddy downgrade method, which leaves two versions of each app on the system. One of them is unused, but it confuses Decrypt9, causing it to inject into the wrong one.
+This is caused by Gateway implementing a very shoddy downgrade method, which leaves two versions of each app on the system. Een van de twee wordt niet gebruikt, maar Decrypt9 snapt dit niet, waardoor de verkeerde H&S geinjecteerd wordt.
 
 #### Benodigdheden
 
@@ -72,21 +72,21 @@ This is caused by Gateway implementing a very shoddy downgrade method, which lea
 #### Instructies
 
 1. Kopieer `GodMode9.bin` van de GodMode9 `.zip` naar de `/luma/payloads/` map op jouw SD kaart en wijzig de naam `GodMode9.bin` in `/luma/payloads/` naar `up_GodMode9.bin`
-2. Reinsert your SD card into your 3DS
-3. Open GodMode9 from arm9loaderhax by holding (Up) during boot     
-4. Navigate to `SYSNAND CTRNAND` -> `title` -> `00040010`
-5. Navigate to the folder for your device and region:
+2. Plaats je SD kaart weer in je 3DS
+3. Open GodMode9 vanaf arm9loaderhax door (Up) ingedrukt te houden bij het opstarten     
+4. Navigeer naar `SYSNAND CTRNAND` -> `title` -> `00040010`
+5. Navigeer naar de map voor je device en regio:
   + **Oude 3DS EUR**: '00022300' -> 'content'
   + **Oude 3DS JPN**: '00020300' -> 'content'
-  + **Old 3DS USA**: `00021300` -> `content`
-  + **New 3DS EUR**: `20022300` -> `content`
-  + **New 3DS JPN**: `20020300` -> `content`
-  + **New 3DS USA**: `20021300` -> `content`
-6. Notice that there are two sets of app and tmd files, one set with uppercase extensions (`.TMD` and `.APP`), and one set with lowercase extensions (`.tmd` and `.app`)
-7. While holding the (R) trigger, press (Y) to create a new directory
-8. Press (A) to confirm the name `newdir` (it doesn't matter what it's called)
-9. Press (A) to unlock SysNAND writing, then input the key combo given
-10. Press the (L) trigger on each of the uppercase extension files (`.TMD` and `.APP`) to mark them
+  + **Oude 3DS USA**: '00021300' -> 'content'
+  + **Nieuwe 3DS EUR**: '20022300' -> 'content'
+  + **Nieuwe 3DS JPN**: '20020300' -> 'content'
+  + **Nieuwe 3DS USA**: '20021300' -> 'content'
+6. Merk op dat er twee sets van de app- en tmd-bestanden zijn. Een set met extensies in hoofdletters ('.TMD' en '.APP'), en een set met extensies in kleine letters ('tmd' en '.app')
+7. Terwijl je de (R)-trigger vasthoudt, druk op (Y) om een nieuwe map te maken
+8. Druk op (A) om de naam 'newdir' te bevestigen (de mapnaam maakt niets uit)
+9. Druk op (A) om het schrijven op de SysNAND te ontgrendelen, druk vervolgens de gegeven combinatie van knoppen in
+10. Druk op de (L)-trigger op elke van de bestanden met extensies met hoofdletters om ze te selecteren ('.TMD' en '.APP')
 11. Druk op (Y) om de bestanden te kopieren
 12. Navigeer naar 'newdir'
 13. Press (Y) to paste the files
@@ -97,20 +97,20 @@ This is caused by Gateway implementing a very shoddy downgrade method, which lea
 18. Als dit nog steeds niet werkt, verplaats de bestanden met een extensie die in hoofdletters staan terug naar de 'content'-map, en verplaats de bestanden met een extensie in kleine letters naar de 'newdir'-map, en ga dan terug naar [Installeren van arm9loaderhax](installing-arm9loaderhax) en probeer de FBI-injectie opnieuw
 
 ## <a name="ts_browser" />Een op de browser gebaseerde exploit werkt niet
-Browser based exploits (such as browserhax or 2xrsa) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps
+Op de browser gebaseerde exploits (zoals browserhax or 2xrsa) zijn vaak erg onstabiel en crashen regelmatig, maar ze kunnen soms met de volgende stappen gerepareerd worden
 
-1. Open the browser, then open the browser settings
-2. Scroll to the bottom and Initialize Savedata (it also may be called Clear All Save Data)
-3. Try the exploit again
+1. Open de browser en open de browserinstellingen
+2. Scroll naar beneden en initialiseer Savedata (het kan ook Clear All Save Data heten)
+3. Probeer de exploit weer
 
-## <a name="ts_safe_a9lh" />System boots directly SafeA9LHInstaller
-You copied the wrong `arm9loaderhax.bin` file to your SD card (you were only supposed to copy the `3ds` folder and `SafeA9LHInstaller.dat` file from the SafeA9LHInstaller zip)    
+## <a name="ts_safe_a9lh" />Het systeem start direct de SafeA9LHInstaller
+Je hebt het verkeerde 'arm9loaderhax.bin'-bestand naar de SD-kaart gekopieerd (je hoefde alleenmaar de '3ds'-map en het 'SafeA9LHInstaller.dat' bestand van het zip-bestand te kopiëren)    
 
-1. Use the correct `arm9loaderhax.bin`
-2. Copy `arm9loaderhax.bin` from the Luma3DS `.zip` to the root of your SD card
-3. Reboot holding (Select) and continue
+1. Gebruik de juiste 'arm9loaderhax.bin'
+2. Kopieer 'arm9loaderhax.bin' van het Luma3DS '.zip' naar de root van je SD-kaart
+3. Start opnieuw op terwijl je (Select) ingedrukt houdt en ga verder
 
-## <a name="ts_safe_a9lh_screen" />SafeA9LHInstaller shows a glitched screen
+## <a name="ts_safe_a9lh_screen" />SafeA9LHInstaller geeft een vreemd beeld
 This happens occasionally, but the reason is unknown. De knoppen werken nog steeds, maar het scherm ziet er vreemd uit
 
 1. Volg de instructies zoals normaal
