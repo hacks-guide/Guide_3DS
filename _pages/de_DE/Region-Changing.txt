@@ -46,44 +46,44 @@ Region changing using ctrtransfer (which this method uses) seems to cause reboot
 ##### Abschnitt I - Vorbereitung
 
 1. Kopiere die `GodMode9.bin` aus der `GodMode9.zip` in den `/luma/payloads/` Ordner auf deiner SD-Karte, und benenne die Datei in `up_GodMode9.bin` um
-2. Copy `Decrypt9WIP.bin` to the `/luma/payloads/` folder on your SD card and rename `Decrypt9WIP.bin` to `x_Decrypt9WIP.bin`
-3. Copy the 9.2.0 ctrtransfer image `.bin` and `.bin.sha` from the ctrtransfer `.zip` to the `/files9/` folder on your SD card
-4. Reinsert your SD card into your 3DS
+2. Kopiere die `Decrypt9WIP.bin` in den `/luma/payloads/` Ordner auf deiner SD-Karte und benenne `Decrypt9WIP.bin`in `x_Decrypt9WIP.bin` um
+3. Kopiere die 9.2.0 ctrtransfer image`.bin` und `.bin.sha` aus der `ctrtransfer.zip` in den `/files9/` Ordner auf deiner SD-Karte
+4. Lege deine SD-Karte wieder in deinen 3DS ein
 
-##### Abschnitt II - Sichern der Tickets und des Konfigurations-Speicherstandes
+##### Abschnitt II - Sichern der Tickets und der Konfigurationen
 
-1. Press (Start) then hold (X) to reboot into arm9loaderhax Decrypt9     
-2. Go to "Ticket/Titlekey Options", then select "Ticket Dump (SysNAND)"
-3. Press (Select) to eject your SD card, then put it in your computer
-4. Delete all `.tik` files in the `/files9/` folder that **do not** start with "00-"
-5. Leave all the `.tik` files that do start with "00-" in the folder
-6. Reinsert your SD card into your 3DS, then press (B) to go back to the Main Menu
-7. Go to "SysNAND Options", then "System Save Dump", then select "Dump configsave.bin"
+1. Drücke (Start) und halte dann (X) gedrückt, um in den arm9loaderhax Decrypt9 zu starten     
+2. Navigiere zu "Ticket/Titlekey Options", dann wählst du "Ticket Dump (SysNAND)" aus
+3. Drücke (Select) um deine SD-Karte zu entfernen und stecke die SD Karte in deinen Computer
+4. Lösche alle `.tik` Dateien im `/files9/` Ordner die **nicht** mit `00-` starten
+5. Alle `.tik` Dateien die mit `00-` starten müssen im Ordner bleiben
+6. Lege deine SD-Karte wieder in deinen 3DS ein und drücke (B) um ins Hauptmenü zurückzukehren
+7. Gehe zu "SysNAND Options", dann "System Save Dump" und wähle "Dump configsave.bin" aus
 
 ##### Abschnitt III - ctrtransfer
 
-1. Go to "SysNAND Options", then "CTRNAND Transfer", then "Auto CTRNAND Transfer"
-2. Select the 9.2.0 ctrtransfer image when prompted by pressing (A)
-3. If you do not already have a NAND backup, **backup SysNAND to `NANDmin.bin` when prompted by pressing (A)**
-4. Allow the transfer process to proceed automatically, this may take some time
-5. Once the transfer is complete, press Select to eject your SD card
-6. Put your SD card in your computer, then copy `NANDmin.bin` and `NANDmin.bin.sha` from the `/files9/` folder on your SD card to a safe location
-  + Make backups in multiple locations
-  + This backup will save you from a brick if anything goes wrong in the future
-  + **Your backup should match one of the sizes on [this](nand-size) page; if it does not, you should delete it and make a new one!**
-7. Delete the 9.2.0 ctrtransfer image `.bin` and `.bin.sha` from the `/files9/` folder on your SD card after copying it
-8. Reinsert your SD card into your 3DS
+1. Gehe zu "SysNAND Options", dann "CTRNAND Transfer", dann "Auto CTRNAND Transfer"
+2. Wähle bei Aufforderung das 9.2.0 ctrtransfer image, indem du (A) drückst
+3. Wenn du noch kein NAND-Backup hast, solltest du bei der Aufforderung**backup SysNAND to `NANDmin.bin` mit (A) bestätigen **
+4. Lass den Transfer-Prozess durchlaufen. Dies kann einige Zeit in Anspruch nehmen
+5. Sobald der Transfer abgeschlossen ist, drücke (Select) um deine SD-Karte auszuwerfen
+6. Stecke deine SD Karte zurück in deinen Computer, dann kopiere die `NANDmin.bin` und die `NANDmin.bin.sha` aus dem `/files9/` Ordner an einen sicheren Platz
+  + Speichere die Sicherheitskopien immer an mehrere Stellen
+  + Diese Sicherheitskopie wird dich vor einem Brick schützen, falls in Zukunft etwas schief gehen sollte
+  + **Deine Sicherheitskopie sollte eine der folgenden Größen besitzen [this](nand-size), ist dies nicht der Fall solltest du sie löschen und eine neue Sicherheitskopie erstellen!**
+7. Lösche die 9.2.0 ctrtransfer image `.bin` und `.bin.sha` aus dem `/files9/` Ordner auf deiner SD-Karte, nachdem du diese kopiert hast
+8. Lege deine SD-Karte wieder in deinen 3DS ein
 
 ##### Abschnit IV - Bearbeiten der SecureInfo
 
-1. Press (Start) then hold (Up) to reboot into arm9loaderhax GodMode9     
-2. Navigate to `SYSNAND CTRNAND` -> `rw` -> `sys`
-3. Press (Y) on `SecureInfo_A` to copy it
-4. Press (Y) to paste a copy of `SecureInfo_A`
-5. Select "Copy path(s)"
-6. Press (A) to unlock SysNAND writing, then input the key combo given
-7. Select "Choose new name"
-8. Use the D-Pad to rename the file to `SecureInfo_C`, pressing (A) when you're done (overwrite any existing `SecureInfo_C`)
+1. Drücke (Start), halte dann (Steuerkreuz oben) gedrückt, um in amr9loaderhax GodMode9 zu starten     
+2. Navigiere zu `SYSNAND CTRNAND` -> `rw` -> `sys`
+3. Drücke (Y) auf `SecureInfo_A` um sie zu kopieren
+4. Drücke (Y) um die Kopie der `SecureInfo_A` Datei einzufügen
+5. Wähle "Copy path(s)"
+6. Drücke (A) um SysNAND-Schreiben zu aktivieren, dann gib die angezeigte Tastenkombination ein
+7. Wähle "Choose new name"
+8. Verwende das Steuerkreuz um die Datei in `SecureInfo_C` umzubenennen, drück (A) wenn du fertig bist (überschreibe existierende `SecureInfo_C`)
 9. Scroll down to the `SecureInfo_C` you just pasted
 10. Press (A) on `SecureInfo_C` then select "Show in Hexeditor"
 11. Press (A) to continue
