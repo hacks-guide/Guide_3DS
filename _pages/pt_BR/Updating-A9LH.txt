@@ -7,10 +7,10 @@ ref: updating-a9lh
 
 ### Última Atualização: 3 Nov 2016
 
-A instalação do arm9loaderhax consiste em instalar payloads nas partições NFIRM do chip NAND do teu dispositivo, que está soldado à própria placa-mãe. These payloads are updated rarely and only really serve the purpose of launching `arm9loaderhax.bin` from the SD Card, which is, in our case, Luma3DS.
+A instalação do arm9loaderhax consiste em instalar payloads nas partições NFIRM do chip NAND do teu dispositivo, que está soldado à própria placa-mãe. Estes payloads são atualizados muito raramente, e o seu único propósito é executar o ficheiro `arm9loaderhax.bin` do cartão SD que, no nosso caso, é o Luma3DS.
 {: .notice}
 
-If you do not know what version of arm9loaderhax you are running, just install the latest version with these steps. Instalar a última versão quando já se está nela não causará nenhum efeito.
+Se não sabes que versão do arm9loaderhax tens instalada, simplesmente instala a última versão com estes passos. Instalar a última versão quando já se está nela não causará nenhum efeito.
 {: .notice--info}
 
 Se você definiu um código PIN no Luma, você deve desativá-lo temporariamente para cumprir estas etapas. Você pode reabilitar o PIN após a atualização.
@@ -25,19 +25,19 @@ As versões do data_input se referem apenas a revisões do arquivo `.zip` para q
 These steps will also update your various payloads and the AES key database.
 {: .notice--success}
 
-#### What you need
+#### O que precisas
 
 * [`aeskeydb.bin`](magnet:?xt=urn:btih:18b3a17f78e2376e05feaa150749d9fd689b25dc&dn=aeskeydb.bin&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 * [`data_input_v4.zip`](magnet:?xt=urn:btih:00f03ff69b5961307303d5e4778a2f65a528bf2d&dn=data%5Finput%5Fv4.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
-* The latest fork of [SafeA9LHInstaller](https://github.com/Plailect/SafeA9LHInstaller/releases/latest) *(the `.7z` file)*
-* The latest release of [arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(the `.7z` file)*
-* The latest release of [Hourglass9](https://github.com/d0k3/Hourglass9/releases/latest)
+*A versão mais recente do [SafeA9LHInstaller](https://github.com/Plailect/SafeA9LHInstaller/releases/latest) *(o ficheiro `.7z`)*
+* A versão mais recente do [arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(o ficheiro `.7z`)*
+* A versão mais recente do [Hourglass9](https://github.com/d0k3/Hourglass9/releases/latest)
 
-#### Instructions
+#### Instruções
 
-**For all of these instructions, OVERWRITE any existing files on your SD card.**
+**Para todas estas instruções, SUBSTITUI quaisquer ficheiros já existentes no teu cartão SD.**
 
-##### Section I - Prep work
+##### Secção I - Preparação
 
 1. Apague qualquer arquivo `aeskeydb.bin` existente da raiz do seu cartão SD
 2. Apague a pasta `a9lh` da raiz do cartão SD se ela existir
