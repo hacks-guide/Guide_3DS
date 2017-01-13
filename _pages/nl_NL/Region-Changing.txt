@@ -41,14 +41,14 @@ Het veranderen van je regio met behulp van ctrtransfer (dit is de methode die hi
 
 #### Instructies
 
-**Some consoles have a `SecureInfo_B` instead of `SecureInfo_A`; this is fine and you should use `SecureInfo_B` for the relevant steps.**    
+** Sommige consoles hebben een `SecureInfo_B` in plaats van `SecureInfo_A`; dit maakt niet uit en je moet `SecureInfo_B` gebruiken in de relevante stappen.**    
 
-##### Section I - Prep work
+##### Section I - Voorbereidingen
 
 1. Kopieer `GodMode9.bin` van de GodMode9 `.zip` naar de `/luma/payloads` folder op je SD-kaart en verander de naam van `GodMode9.bin` in `/luma/payloads` naar `up_GodMode9.bin`
 2. Kopieer `Decrypt9WIP.bin` naar de `/luma/payloads` folder op je SD kaart en verander de naam van `Decrypt9WIP.bin` naar `x_Decrypt9WIP.bin`
 3. Kopieerd de 9.2.0 ctrtransfer image `.bin` en `.bin.sha` van de ctrtransfer `.zip` naar de `/files9/` folder op je SD kaart
-4. Reinsert your SD card into your 3DS
+4. Stop de SD kaart opnieuw in je 3DS
 
 ##### Deel II - Backup tickets en config save
 
@@ -57,22 +57,22 @@ Het veranderen van je regio met behulp van ctrtransfer (dit is de methode die hi
 3. Druk op (Select) om je SD kaart uit te werpen en stop je SD kaart daarna in je computer
 4. Verwijder alle `.tik`-bestanden in de `/files9/` folder die **niet** beginnen met "00-"
 5. Laat alle `.tik`-bestanden die niet beginnen met "00-" in de folder
-6. Reinsert your SD card into your 3DS, then press (B) to go back to the Main Menu
-7. Go to "SysNAND Options", then "System Save Dump", then select "Dump configsave.bin"
+6. Stop je SD kaart in je 3DS en druk dan op (B) om terug te gaan naar het hoofdmenu
+7. Ga naar "SysNAND Options", daarna "System Save Dump" en selecteer daarna "Dump configsave.bin"
 
 ##### Sectie III - ctrtransfer
 
-1. Go to "SysNAND Options", then "CTRNAND Transfer", then "Auto CTRNAND Transfer"
-2. Select the 9.2.0 ctrtransfer image when prompted by pressing (A)
-3. If you do not already have a NAND backup, **backup SysNAND to `NANDmin.bin` when prompted by pressing (A)**
+1. Ga naar "SysNAND Options", daarna "CTRNAND Transfer" en daarna "Auto CTRNAND Transfer"
+2. Selecteer de 9.2.0 ctrtransfer image wanneer het je gevraagd wordt, door op (A) te drukken
+3. Als je niet al een NAND backup hebt, **backup SysNAND naar `NANDmin.bin` wanneerhet je gevraagd wordt, door op (A) te drukken**
 4. Laat het transfer proces zijn gang gaan, dit kan een tijdje duren
-5. Once the transfer is complete, press Select to eject your SD card
-6. Put your SD card in your computer, then copy `NANDmin.bin` and `NANDmin.bin.sha` from the `/files9/` folder on your SD card to a safe location
-  + Make backups in multiple locations
-  + This backup will save you from a brick if anything goes wrong in the future
+5. Als de transfer compleet is, druk op Select om je SD kaart uit te werpen
+6. Stop je SD kaart in je computer, kopieer dan `NANDmin.bin` en `NANDmin.bin.sha` van de `/files9/` folder op je SD kaart naar een veilige plek
+  + Maak backups naar meerdere locaties
+  + Deze backup zal je van een brick redden als er iets misgaat in de toekomst
   + **Your backup should match one of the sizes on [this](nand-size) page; if it does not, you should delete it and make a new one!**
 7. Delete the 9.2.0 ctrtransfer image `.bin` and `.bin.sha` from the `/files9/` folder on your SD card after copying it
-8. Reinsert your SD card into your 3DS
+8. Stop de SD kaart opnieuw in je 3DS
 
 ##### Deel IV - SecureInfo bewerken
 
@@ -85,25 +85,25 @@ Het veranderen van je regio met behulp van ctrtransfer (dit is de methode die hi
 7. Selecteer "Choose new name"
 8. Gebruik de D-Pad om het bestand te hernoemen naar `SecureInfo_C`, waarna je op (A) drukt wanneer je klaar bent (overschrijf elke al bestaande `SecureInfo_C`)
 9. Scroll naar beneden naar de `SecureInfo_C` die je net geplakt hebt
-10. Press (A) on `SecureInfo_C` then select "Show in Hexeditor"
+10. Druk op (A) op `SecureInfo_C` en selecteer daarna "Show in Hexeditor"
 11. Druk op (A) om door te gaan
 12. Druk op (A) om in de bewerkingsmodus te gaan
-13. Go to the beginning of line 00000100 and press (A) on it
+13. Ga naar het begin van lijn 00000100 en druk (A) er op
 14. Hou (A) ingedrukt terwijl je (Boven) of (Beneden) op de D-Pad ingedrukt houdt om het nummer de bewerken
 15. Verander het eerste nummerpaar op lijn 00000100 naar het volgende paar dat overeenkomt met *de regio waar je naar wil veranderen*:
     - "00" : JPN
     - "01" : USA
     - "02" : EUR
 16. Druk op (B) om uit de bewerkingsmodus te gaan, sla daarna je werk op en druk daarna opnieuw op (B) om terug te gaan naar de directory
-17. You should see both a `SecureInfo_A` and `SecureInfo_C` if everything was done properly. (`SecureInfo_C` is used in place of `SecureInfo_A` when using Luma3DS if it detects the file on boot)
-18. Press (Start) to reboot
+17. Je zou nu een `SecureInfo_A` en een `SecureInfo_C` moeten zijn als alles correct is gedaan. ('SecureInfo_C' wordt in plaats van 'SecureInfo_A' gebruikt wanneer je Luma3DS gebruikt en het bestand tijdens het opstarten detecteert)
+18. Druk op (Start) om opnieuw op te starten
 
-##### Section V - Reinstalling Tickets
+##### Deel V - Tickets opnieuw installeren
 
 1. Open FBI
 2. Selecteer "SD"
 3. Selecteer "files9"
-4. Select "\<current directory>"
+4. Selecteer "\<current directory>"
 5. Selecteer "Install and delete all tickets"
 6. Wacht. Het systeem lijkt misschien vast te lopen, maar geef het wat tijd.
 7. Druk op (A) om het te bevestigen
@@ -123,8 +123,8 @@ Het veranderen van je regio met behulp van ctrtransfer (dit is de methode die hi
 1. Start opnieuw op terwijl je (X) ingedrukt houdt om arm9loaderhax Decrypt9 op te starten
 2. Ga naar "SysNAND Options", daarna "System Save Inject" en selecteer daarna "Inject configsave.bin"
 
-Old 3DSs / 2DSs may need to format (using TinyFormat or the System Settings) to play extended memory mode games (such as Monster Hunter, Super Smash Bros, or Pokemon Sun/Moon).
+Old 3DS'en / 2DS'en moeten misschien geformatteerd worden (door gebruik te maken van TinyFormat of de Systeem Instellingen) om extended memory mode games te kunnen spelen (zoals Monster Hunter, Super Smash Bros of Pokemon Sun/Moon).
 {: .notice--info}
 
-Formatting a device following a ctrtransfer *without restoring the config save* can cause screen brightness / flickering issues. Zie [dit](https://github.com/Plailect/Guide/issues/794).
+Het formatteren van een apparaat nadat je een ctrtransfer hebt gedaan *zonder dat je de config save herstelt* kan voor schermhelderheids- / schermflikkeringproblemen zorgen. Zie [dit](https://github.com/Plailect/Guide/issues/794).
 {: .notice--info}
