@@ -37,7 +37,7 @@ Como o objetivo da ctrtransfer 9.2.0 é solucionar problemas causados pela NAND 
 3. Copia o ficheiro `Decrypt9WIP.bin` para a pasta `/luma/payloads/` do teu cartão SD e muda o nome de `Decrypt9WIP.bin` para `x_Decrypt9WIP.bin`
 4. Volta a inserir o Cartão SD na 3DS
 
-##### Section II - Backup tickets and config save
+##### Secção II - Copiar os tickets e as configurações guardadas
 
 1. Open Decrypt9 from arm9loaderhax by holding (X) during boot
 2. Vai a "Ticket/Titlekey Options" e depois seleciona "Ticket Dump (SysNAND)"
@@ -60,42 +60,42 @@ Como o objetivo da ctrtransfer 9.2.0 é solucionar problemas causados pela NAND 
   + **Seu backup deve corresponder a algum dos tamanhos [nesta](nand-size) página; senão, você deve apagá-lo e fazer um novo!**
 7. Apague a imagem ctrtransfer 9.2.0 `.bin` e `.bin.sha` da pasta `/ files9 /` no seu cartão SD
 8. Volta a inserir o Cartão SD na 3DS
-9. Press (Start) to reboot
-10. Update your 3DS by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
-  + Updates while using A9LH + Luma (what you have) are safe, stop asking about it
-  + If this gives you an error, set your DNS settings to "auto"
+9. Pressiona (Start) para reiniciar
+10. Atualiza a tua 3DS para a última versão (vai a Definições da Consola, depois a "Outras Definições", depois até até à última página, e seleciona "Atualização")
+  + Atualizar o sistema é seguro quando se utiliza A9LH + Luma (que é o que tens agora), por isso não perguntem sobre isto
+  + Se encontrares algum erro, muda as configurações da DNS para "automático"
 
-##### Section IV - Restore config save
+##### Secção IV - Restaurar as configurações guardadas
 
-1. Reboot holding (X) during boot to launch arm9loaderhax Decrypt9
-2. Go to "SysNAND Options", then "System Save Inject", then select "Inject configsave.bin"
-3. Press (B) to get back to the main menu
+1. Reinicia a consola e pressiona (X) enquanto a ligas para entrar no Decrypt9 a partir do arm9loaderhax
+2. Vai a "SysNAND Options", depois a "System Save Inject", e depois seleciona "Inject configsave.bin"
+3. Pressiona (B) para voltar ao menu principal
 
-##### Section V - Injecting FBI
+##### Secção V - Injetar o FBI
 
 1. Go to "SysNAND Options", then "Miscellaneous", then select the "Health&Safety Dump" option to dump Health & Safety to `hs.app` **(you can use Up and Down / Left and Right to change the name)**
-2. Press (B), then select the "Health&Safety Inject" option
-3. Select the FBI injectable `.app` for your region
-4. Press (A) and confirm to inject
-5. Press (Start) to reboot
+2. Pressiona (B) e depois seleciona a opção "Health&Safety Inject"
+3. Seleciona o ficheiro `.app` FBI injetável para a tua região
+4. Pressiona (A) e confirma para injetar
+5. Pressiona (Start) para reiniciar
 6. If you still launch to the stock Health & Safety app and have downgraded with Gateway in the past, [follow this troubleshooting guide](troubleshooting#gw_fbi)
 
-##### Section VI - Reinstalling Tickets
+##### Secção VI - Reinstalar os tickets
 
-If you had no tickets beginning with 00- earlier, you can skip this section.
+Se não tinhas nenhum ticket cujo nome começasse por 00- anteriormente, podes saltar esta secção.
 {: .notice--info}
 
-1. Open FBI
-2. Select "SD"
-3. Select "files9"
-4. Select "\<current directory>"
-5. Select "Install and delete all tickets"
-6. Wait. The system may appear to freeze, just give it time.
-7. Press (A) to confirm
-8. Press (B) to decline installing tickets from CDN.
-9. Exit with the home button
+1. Abre o FBI
+2. Seleciona "SD"
+3. Seleciona "files9"
+4. Seleciona "\<current directory>"
+5. Seleciona "Install and delete all tickets"
+6. Espera. O sistema pode parecer ter parado, dá-lhe tempo.
+7. Pressiona (A) para confirmar
+8. Pressiona (B) para rejeitar instalar tickets a partir de CDN.
+9. Sai com o botão Home
 
-Formatting a device following a ctrtransfer *without restoring the config save* can cause screen brightness / flickering issues. See [this](https://github.com/Plailect/Guide/issues/794).
+Se formatares um dispositivo depois de uma ctrtransfer sem restaurares as configurações guardadas, o ecrã poderá piscar ou ter problemas de brilho. Consulta [isto](https://github.com/Plailect/Guide/issues/794).
 {: .notice--info}
 
 Voltar para [Instalando arm9loaderhax](installing-arm9loaderhax).
