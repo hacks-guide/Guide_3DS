@@ -34,7 +34,7 @@ O dispositivo poderá não mostrar os jogos instalados depois de realizar a ctrt
 Nesta secção, vamos injetar a partição [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) da tua consola para 2.1.0 para tirar vantagem de uma vulnerabilidade nesse firmware, com o propósito de extrair o [OTP](otp-info) específico da tua consola. O ficheiro OTP é necessário para instalar o arm9loaderhax, e **não** pode ser partilhado com outras consolas.
 
 Isto é concretizado através da [instalação de uma imagem de ctrtransfer pré-concebida]
-(https://www.reddit.com/r/3dshacks/comments/4zhe4a/) que contém o 2.1.0, copiando os ficheiros específicos da tua consola (tais como `moveable.sed` e `SecureInfo_A`) para a mesma e depois concertando os títulos da base de dados.
+(https://www.reddit.com/r/3dshacks/comments/4zhe4a/) que contém o 2.1.0, copiando os ficheiros específicos da tua consola (tais como `moveable.sed` e `SecureInfo_A`) para a mesma e depois consertando os títulos da base de dados.
 
 #### Requisitos
 
@@ -47,7 +47,7 @@ Isto é concretizado através da [instalação de uma imagem de ctrtransfer pré
 
 #### Instruções
 
-##### Secção 1 - Pré-Preparação
+##### Secção I - Preparação
 
 Deverás estar no Decrypt9 para esta fase.
 
@@ -58,13 +58,13 @@ Deverás estar no Decrypt9 para esta fase.
 
 ##### Secção II - ctrtransfer
 
-**Ter uma cópia de segurança da NAND do teu dispositivo é OBRIGATÓRIO. Ser-te-á solicitada a criação de uma cópia de segurança numa das etapas deste tutorial se ainda não o tiveres feito.**
+**Ter uma cópia de segurança da NAND do teu dispositivo é OBRIGATÓRIO. Ser-te-á solicitada a criação de uma cópia de segurança numa das etapas deste tutorial se ainda não a tiveres feito.**
 {: .notice--danger}
 
-**Se tiveres alguma dúvida em relação a ter feito uma cópia de segurança da NAND, cria uma quando solicitado pressionando (A) só para teres a certeza.**
+**Se tiveres alguma dúvida se fizeste ou não uma cópia de segurança da NAND, cria uma quando solicitado pressionando (A) só para teres a certeza.**
 {: .notice--danger}
 
-** Se não tiveres espaço suficiente para criar a cópia de segurança, podes fazer uma cópia do SD para outro SD ou criar espaço limpando o teu cartão SD pressionando (Select) no menu inicial do Decrypt9WIP para ejectar o cartão SD permitindo assim trocar com um cartão SD diferente ou limpar o cartão SD atual**
+** Se não tiveres espaço suficiente para criar a cópia de segurança, podes fazer uma cópia para outro cartão SD ou arranjar espaço no teu cartão SD pressionando (Select) no menu inicial do Decrypt9WIP para ejectar o cartão SD permitindo assim trocar para um cartão SD diferente ou arranjar espaço no cartão SD atual**
 {: .notice--danger}
 
 1. Vai a "SysNAND Options", depois "CTRNAND Transfer", e em seguida "Auto CTRNAND Transfer"
@@ -75,10 +75,10 @@ Deverás estar no Decrypt9 para esta fase.
 4. Deixa o processo de transferência ocorrer automaticamente, isto poderá levar algum tempo
 5. Uma vez que a transferência esteja completa, pressiona (B) para voltar atrás
 6. Pressiona (Select) para ejectar o teu cartão SD
-7. Apaga a imagem da ctrtransfer para 2.1.0 de formatos `.bin` e `.bin.sha` da pasta `/files9/` do teu cartão SD
+7. Apaga os ficheiros da imagem `.bin` e `.bin.sha` da ctrtransfer para 2.1.0 na pasta `/files9/` do teu cartão SD
 8. Pressiona (Start) para reiniciar a consola sem reinserir o cartão SD
   + Enquanto estiveres na versão 2.1.0 o dispositivo irá ficar num ecrã preto se iniciares a consola com o Cartão SD inserido antes do menu Home iniciar
-  +Sempre que o dispositivo for reiniciado em 2.1.0 irás precisar de retirar o cartão SD antes de ligar a consola e inseri-lo9 de novo depois do menu Home iniciar
+  +Sempre que o dispositivo for reiniciado em 2.1.0 irás precisar de retirar o cartão SD antes de ligar a consola e inseri-lo de novo depois do menu Home iniciar
   + Por agora, deixa o cartão SD fora da consola, já que vais ter que copiar ficheiros para dentro dele na próxima página
   +Este problema será corrigido quando restaurarmos o teu dispositivo na próxima página
 
@@ -100,5 +100,5 @@ IRRECUPERÁVEL!**
 
 <div class="notice--danger">{{ notice | markdownify }}</div>
 
-Continuar para [Instalando arm9loaderhax](installing-arm9loaderhax)
+Continua para [Instalando arm9loaderhax](installing-arm9loaderhax)
 {: .notice--primary}
