@@ -58,12 +58,12 @@ Si no eres capaz de encender tu 3DS, por favor, busca la sección correspondient
 4. Manteniendo pulsado el botón (R), presiona (X) sobre `00000000` para renombrar este archivo
 5. Presiona una vez (Arriba) para cambiar el nombre a `10000000`
 6. Presiona (A) para guardar los cambios
-7. Press (A) to unlock SysNAND writing, then input the key combo given
+7. Pulsa (A) para desbloquear la escritura de SysNAND y después haz la combinación de teclas que mostrada
 8. Vuelve al menú principal
 9. Presiona (Start) para reinciar
 
-## <a name="gw_fbi" />Cannot inject H&S on Gateway downgraded device
-This is caused by Gateway implementing a very shoddy downgrade method, which leaves two versions of each app on the system. One of them is unused, but it confuses Decrypt9, causing it to inject into the wrong one.
+## <a name="gw_fbi" />No se puede injectar H&S en un dispositivo downgradeado con Gateway
+Esto ocurre porque la implementación del downgrade de Gateway es muy mala, haciendo que aparezcan dos versiones de cada aplicación en el sistema. Una de ellas no se usa, pero confunde a Decrypt9 haciendo que la inyección sea errónea.
 
 #### Qué necesitas
 
@@ -73,7 +73,7 @@ This is caused by Gateway implementing a very shoddy downgrade method, which lea
 
 1. Copia `GodMode9.bin` encontrado en el `.zip` de GodMode9 a la carpeta `/luma/payloads/` en tu tarjeta SD y renombra `GodMode9.bin` en `/luma/payloads/` a `up_GodMode9.bin`
 2. Reinserta tu tarjeta SD en tu 3DS
-3. Open GodMode9 from arm9loaderhax by holding (Up) during boot     
+3. Abre GodMode9 desde arm9loaderhax manteniendo presionado (Arriba) mientras enciendes la consola     
 4. Ve a `SYSNAND CTRNAND` -> `title` -> `00040010`
 5. Ve a la carpeta según tu dispositivo y región:
   + **Old 3DS EUR**: `00022300` -> `content`
@@ -82,10 +82,10 @@ This is caused by Gateway implementing a very shoddy downgrade method, which lea
   + **New 3DS EUR**: `20022300` -> `content`
   + **New 3DS JPN**: `20020300` -> `content`
   + **New 3DS USA**: `20021300` -> `content`
-6. Notice that there are two sets of app and tmd files, one set with uppercase extensions (`.TMD` and `.APP`), and one set with lowercase extensions (`.tmd` and `.app`)
-7. While holding the (R) trigger, press (Y) to create a new directory
-8. Press (A) to confirm the name `newdir` (it doesn't matter what it's called)
-9. Press (A) to unlock SysNAND writing, then input the key combo given
+6. Ten en cuenta que hay dos conjuntos de archivos app y tmd: Uno tiene la extensión en mayúsculas (`.TMD` y `.APP`) y otro en minúsculas (`.tmd` y `.app`)
+7. Mientras mantienes presionado el botón (R), presiona (Y) para crear una nueva carpeta
+8. Presiona (A) para confirmar el nombre `newdir` (no importa cómo se llame)
+9. Pulsa (A) para desbloquear la escritura de SysNAND y después haz la combinación de teclas que mostrada
 10. Press the (L) trigger on each of the uppercase extension files (`.TMD` and `.APP`) to mark them
 11. Presiona (Y) para copiar los arhivos
 12. Ve a `newdir`
@@ -101,14 +101,14 @@ Browser based exploits (such as browserhax or 2xrsa) are often unstable and cras
 
 1. Open the browser, then open the browser settings
 2. Scroll to the bottom and Initialize Savedata (it also may be called Clear All Save Data)
-3. Try the exploit again
+3. Prueba el exploit otra vez
 
 ## <a name="ts_safe_a9lh" />System boots directly SafeA9LHInstaller
-You copied the wrong `arm9loaderhax.bin` file to your SD card (you were only supposed to copy the `3ds` folder and `SafeA9LHInstaller.dat` file from the SafeA9LHInstaller zip)    
+Has copiado el archivo `arm9loaderhax.bin` equivocado en tu tarjeta SD (solo deberías haber copiado la carpeta `3ds` y el archivo `SafeA9LHInstaller.dat` contenidos en el `.zip` de SafeA9LHInstaller)    
 
-1. Use the correct `arm9loaderhax.bin`
-2. Copy `arm9loaderhax.bin` from the Luma3DS `.zip` to the root of your SD card
-3. Reboot holding (Select) and continue
+1. Usa el `arm9loaderhax.bin` correcto
+2. Copia el archivo `arm9loaderhax.bin` en el `.zip` de Luma3DS a la raíz de tu tarjeta SD
+3. Reinicia manteniendo presionado (Select) y continúa
 
 ## <a name="ts_safe_a9lh_screen" />SafeA9LHInstaller shows a glitched screen
 This happens occasionally, but the reason is unknown. The buttons will still work, but the screen will be glitched looking
@@ -150,11 +150,11 @@ This happens occasionally, but the reason is unknown. The buttons will still wor
 
 ## <a name="ts_sys_a9lh" />Black screen on SysNAND boot after installing arm9loaderhax
 
-1. Ensure you have a working payload.
+1. Asegúrate de tener un payload funcional.
     1. Check for the existence of `arm9loaderhax.bin` in the root of your SD card.
-2. Try resetting Luma's config and fix options
+2. Intenta reiniciar la configuración de Luma y arregla sus opciones
     1. Elimina `/luma/config.bin` de tu tarjeta SD
-    2. Set your options when it boots
+    2. Establece tus opciones cuando inicie
 3. Prueba arrancando Hourglass9
     1. En Luma3DS, mantén presionado (Start) en el arranque
 4. Intenta borrando el extdata del Menú HOME
