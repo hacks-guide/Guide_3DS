@@ -25,7 +25,7 @@ Este es casi el mejor tipo de exploit posible para la consola pues se instala de
 
 El archivo 'arm9loaderhax.bin' es el que ejecuta arm9loaderhax después de que se cargue desde la NAND y puede ser cualquier payload de arm9 válido. Este archivo puede ser reemplazado en cualquier momento, aunque Luma3DS permite la ejecución de otras payloads de arm9 manteniendo pulsado botones al inicio.
 
-In this case, we use Luma3DS by [AuroraWright](https://github.com/AuroraWright/) to boot a patched SysNAND directly, allowing us to completely bypass the need for any kind of EmuNAND, vastly simplifying the usage of a hacked 3DS in addition to saving SD card space.
+En este caso, utilizamos Luma3DS de [AuroraWright](https://github.com/AuroraWright/) para ejecutar al inicio un SysNAND modificado directamente, permitiéndonos saltar la necesidad de cualquier EmuNAND, simplificando enormemente el uso de una 3DS hackeada además de ahorrar espacio en la tarjeta SD.
 
 Una vez arm9loaderhax es instalado y Luma3DS configurado correctamente, restauraremos nuestra copia de seguridad creada anteriormente.
 
@@ -93,10 +93,10 @@ Durante este proceso, también instalaremos programas como los siguientes:
 2. Sigue los pasos para instalar arm9loaderhax en tu consola:
   + Debes estar en 2.1.0
   + Ve a `http://dukesrg.github.io/2xrsa.html?arm11.bin` en tu 3DS
-    + If you get the error "This service is not available in your region", use the System Settings to set your device's country to match the NAND region you installed with 2.1.0 ctrtransfer
-    + If you get another error, [follow this troubleshooting guide](troubleshooting#ts_browser)
-    + If you get a glitched screen, [follow this troubleshooting guide](troubleshooting#ts_safe_a9lh_screen)
-    + If your wifi switch is off, unplug the 3DS and remove the battery for several seconds to enable wifi
+    + Si tienes un error de "Este servicio no está disponible en tu región", usa la Configuración de la Consola para cambiar el país de tu consola por uno de la misma región que la región del NAND cuando realizaste el ctrtransfer a 2.1.0
+    + Si te sale otro error, sigue esta [guía de resolución de problemas](troubleshooting#ts_browser)
+    + Si tienes una pantalla defectuosa, sigue esta [guía de resolución de problemas](troubleshooting#ts_browser)
+    + Si tu interruptor de wifi está apagado, desconecta la 3DS y quita la batería por algunos segundos para activar el wifi
   + Presiona (Select) para una instalación completa (Full Install)
   + Ahora se instalará arm9loaderhax en tu consola (esto es muy rápido)
   + Apaga la consola. Mánten presionado el botón de encendido hasta que se apague si es necesario
@@ -190,7 +190,7 @@ Si la compatibilidad DSi / DS deja de funcionar (los cartuchos de DS o DSiWare n
 {: .notice--warning}
 
 {% capture notice-10 %}
-You can now use Luma3DS Updater to update your Luma3DS to the latest version just by opening it and pressing (A).     
+Ahora ya puedes usar Luma3DS Updater para actualizar tu Luma3DS a la última versión con tan solo abrirlo y presionar (A).     
 This is not the same thing as a System Update; it just downloads and extracts the newest Luma3DS files.
 This will only update the Luma3DS files on the SD Card. If you boot the device without an SD card, it will use whatever version you placed in CTR NAND.    
 {% endcapture %}
@@ -198,17 +198,17 @@ This will only update the Luma3DS files on the SD Card. If you boot the device w
 <div class="notice--info">{{ notice-10 | markdownify }}</div>
 
 {% capture notice-6 %}   
-You will now boot a Custom Firmware based SysNAND by default.    
-You can now hold (Select) on boot to launch the Luma3DS configuration menu.    
-You can now hold (Start) on boot to launch Hourglass9, an arm9loaderhax safe multipurpose NAND and cartridge tool.     
+A partir de ahora arrancarás un CFW en la SysNAND por defecto.    
+Ahora puedes mantener pulsado (Select) mientras la consola arranca para acceder al menú de configuración de Luma3DS.    
+Ahora puedes mantener pulsado (Start) mientras la consola arranca para acceder a Hourglass9, una herramienta multiuso de arm9loaderhax para la gestión de la NAND y de los cartuchos.     
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
 
-You can update your arm9loaderhax installation in the future by following the instructions on the [Updating A9LH](updating-a9lh) page.
+Puedes actualizar tu instalación de arm9loaderhax en el futuro siguiendo las instrucciones en la página [Actualizar A9LH](updating-a9lh).
 {: .notice--info}
 
-To use [NTR CFW](https://github.com/44670/BootNTR/), get `ntr.bin` from the appropriate `.zip` on [this](https://github.com/44670/BootNTR/releases) page and copy it to the root of your SD card, then install `BootNTR.cia` from [this](https://github.com/astronautlevel2/BootNTR/releases/latest) page.
+Para usar [NTR CFW](https://github.com/44670/BootNTR/), obtén `ntr.bin` del archivo `.zip` apropiado de [esta](https://github.com/44670/BootNTR/releases) página y cópialo en la raíz de tu tarjeta SD, luego instala `BootNTR.cia` desde [esta](https://github.com/astronautlevel2/BootNTR/releases/latest) página.
 {: .notice--info}
 
 Guarda el archivo `NANDmin.bin`, puede restaurarse usando Hourglass9 para salvarte de un futuro brick.
