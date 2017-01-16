@@ -13,7 +13,7 @@ If you are unable to boot your 3DS, please look for the section relevant to you,
 
 ## <a name="twl_broken" />DSi / DS functionality is broken after completing the guide
 
-#### What you need
+#### Что нам понадобится
 
 * The TWL_FIRM `.cia` for your device
     + [`New_3DS TWL_FIRM - v9936.cia`](magnet:?xt=urn:btih:eab8558c97b18b1f329a2bfcc3c899b84c082a27&dn=New%5F3DS%20TWL%5FFIRM%20-%20v9936.cia&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
@@ -43,38 +43,38 @@ If you are unable to boot your 3DS, please look for the section relevant to you,
 5. Выберите "Install and delete all CIAs"
 6. Exit with the home button
 
-## <a name="rm_nnid" />Removing an NNID without formatting the device
+## <a name="rm_nnid" />Удаление NNID без форматирования устройства
 
-#### What you need
+#### Что нам понадобится
 
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/)
+* Свежая версия [GodMode9](https://github.com/d0k3/GodMode9/releases/)
 
 #### Инструкция
 
 1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `up_GodMode9.bin`
 2. Boot holding (Up) to reboot into arm9loaderhax GodMode9
-3. Navigate to `SYSNAND CTRNAND` -> `data` -> (32 Character ID) -> `sysdata` -> `00010038`
-4. Hold down the (R) trigger, then press (X) on `00000000` to rename this file
-5. Press (Up) once to change the name to `10000000`
-6. Press (A) to save changes
-7. Press (A) to unlock SysNAND writing, then input the key combo given
-8. Navigate back to the Main Menu
-9. Press (Start) to reboot
+3. Перейдите в `SYSNAND CTRNAND` -> `data` -> (32-значный ID) -> `sysdata` -> `00010038`
+4. Зажмите (R), затем нажмите (X) на файле `00000000`, чтобы переименовать его
+5. Нажмите (Вверх), чтобы переименовать файл в `10000000`
+6. Нажмите (A), чтобы сохранить изменения
+7. Нажмите (A), чтобы разрешить запись в SysNAND и введите указанную комбинацию кнопок
+8. Вернитесь в главное меню
+9. Нажмите (Start) для перезагрузки
 
 ## <a name="gw_fbi" />Cannot inject H&S on Gateway downgraded device
 This is caused by Gateway implementing a very shoddy downgrade method, which leaves two versions of each app on the system. One of them is unused, but it confuses Decrypt9, causing it to inject into the wrong one.
 
-#### What you need
+#### Что нам понадобится
 
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/)
+* Свежая версия [GodMode9](https://github.com/d0k3/GodMode9/releases/)
 
 #### Инструкция
 
 1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `up_GodMode9.bin`
 2. Reinsert your SD card into your 3DS
-3. Open GodMode9 from arm9loaderhax by holding (Up) during boot     
-4. Navigate to `SYSNAND CTRNAND` -> `title` -> `00040010`
-5. Navigate to the folder for your device and region:
+3. Запустите GodMode9 из под arm9loaderhax, удерживая (Вверх) во время загрузки     
+4. Перейдите в `SYSNAND CTRNAND` -> `title` -> `00040010`
+5. Перейдите в папку, соответствующую вашей приставке и региону:
   + **Old 3DS EUR**: `00022300` -> `content`
   + **Old 3DS JPN**: `00020300` -> `content`
   + **Old 3DS USA**: `00021300` -> `content`
@@ -84,14 +84,14 @@ This is caused by Gateway implementing a very shoddy downgrade method, which lea
 6. Notice that there are two sets of app and tmd files, one set with uppercase extensions (`.TMD` and `.APP`), and one set with lowercase extensions (`.tmd` and `.app`)
 7. While holding the (R) trigger, press (Y) to create a new directory
 8. Press (A) to confirm the name `newdir` (it doesn't matter what it's called)
-9. Press (A) to unlock SysNAND writing, then input the key combo given
+9. Нажмите (A), чтобы разрешить запись в SysNAND и введите указанную комбинацию кнопок
 10. Press the (L) trigger on each of the uppercase extension files (`.TMD` and `.APP`) to mark them
 11. Press (Y) to copy the files
 12. Navigate to `newdir`
 13. Press (Y) to paste the files
 14. Select "Move path(s)"
 15. The uppercase extension files will have been moved to the `newdir` directory
-16. Press (Start) to reboot
+16. Нажмите (Start) для перезагрузки
 17. Return to [Installing arm9loaderhax](installing-arm9loaderhax) and retry the FBI injection
 18. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then return to [Installing arm9loaderhax](installing-arm9loaderhax) and retry the FBI injection
 
