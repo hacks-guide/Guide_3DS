@@ -3,9 +3,13 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ '/' | absolute_url }}">{{ site.title }}</a></li>
           {% assign split_path = page.path | split: "/" %}
           {% assign locale = split_path[1] %}
+          {% if locale == 'en_US' %}
+            <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ site.url }}/">{{ site.title }}</a></li>
+          {% else %}
+            <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ site.url }}/{{ locale }}/">{{ site.title }}</a></li>
+          {% endif %}
           {% for link in site.data.navigation[locale].main %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
@@ -16,43 +20,47 @@
           {% endfor %}
         </ul>
         <ul class="hidden-links links-menu hidden"></ul>
-        <!-- LANG_TODO
         <ul class="hidden-links lang-menu hidden">
-          <li class="masthead__menu-item"><a href="{{ site.url }}{{ page.url }}">English</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.url }}/es_ES{{ page.url }}">Español</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.url }}/de_DE{{ page.url }}">Deutsch</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.url }}/fr_FR{{ page.url }}">français</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.url }}/it_IT{{ page.url }}">italiano</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.url }}/nl_NL{{ page.url }}">Nederlands</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.url }}/pt_BR{{ page.url }}">Português do Brasil</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.url }}/pt_PT{{ page.url }}">Português (Portugal)</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.url }}/ru_RU{{ page.url }}">Русский</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.url }}/zh_CN{{ page.url }}">汉语</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.url }}/zh_TW{{ page.url }}">漢語</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.url }}/pl_PL{{ page.url }}">polski</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.url }}/tr_TR{{ page.url }}">Türkçe</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.url }}/vi_VN{{ page.url }}">Tiếng Việt</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.url }}/ca_ES{{ page.url }}">Català</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.url }}/el_GR{{ page.url }}">Ελληνικά</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.url }}/he_IL{{ page.url }}">עברית‎</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.url }}/sv_SE{{ page.url }}">Svenska</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.url }}/ko_KR{{ page.url }}">한국어</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.url }}/no_NO{{ page.url }}">Norsk</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.url }}/ja_JP{{ page.url }}">日本語</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.url }}/ar_SA{{ page.url }}">اللغة العربية</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.url }}/hu_HU{{ page.url }}">Magyar</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.url }}/ro_RO{{ page.url }}">Română</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.url }}/sr_SP{{ page.url }}">Српски</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.url }}/af_ZA{{ page.url }}">Afrikaans</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.url }}/ms_MY{{ page.url }}">Bahasa melayu</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.url }}/fi_FI{{ page.url }}">Suomi</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.url }}/da_DK{{ page.url }}">Dansk</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.url }}/uk_UA{{ page.url }}">Українська</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.url }}/cs_CZ{{ page.url }}">Čeština</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.url }}/en_PT{{ page.url }}">Pirate English</a></li>
+          {% assign split_url = page.url | split: "/" %}
+          {% if split_url.size == 3 %}
+            {% assign langless_url = split_url[2] %}
+          {% else %}
+            {% assign langless_url = split_url[1] %}
+          {% endif %}
+          <li class="masthead__menu-item"><a href="{{ site.url }}/{{ langless_url }}">English</a></li>
+          <li class="masthead__menu-item"><a href="{{ site.url }}/es_ES/{{ langless_url }}">Español</a></li>
+          <!-- <li class="masthead__menu-item"><a href="{{ site.url }}/de_DE/{{ langless_url }}">Deutsch</a></li> -->
+          <li class="masthead__menu-item"><a href="{{ site.url }}/fr_FR/{{ langless_url }}">Français</a></li>
+          <li class="masthead__menu-item"><a href="{{ site.url }}/it_IT/{{ langless_url }}">Italiano</a></li>
+          <!-- <li class="masthead__menu-item"><a href="{{ site.url }}/nl_NL/{{ langless_url }}">Nederlands</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="{{ site.url }}/pt_BR/{{ langless_url }}">Português do Brasil</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="{{ site.url }}/pt_PT/{{ langless_url }}">Português (Portugal)</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="{{ site.url }}/ru_RU/{{ langless_url }}">Русский</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="{{ site.url }}/zh_CN/{{ langless_url }}">汉语</a></li> -->
+          <li class="masthead__menu-item"><a href="{{ site.url }}/zh_TW/{{ langless_url }}">漢語</a></li>
+          <!-- <li class="masthead__menu-item"><a href="{{ site.url }}/pl_PL/{{ langless_url }}">polski</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="{{ site.url }}/tr_TR/{{ langless_url }}">Türkçe</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="{{ site.url }}/vi_VN/{{ langless_url }}">Tiếng Việt</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="{{ site.url }}/ca_ES/{{ langless_url }}">Català</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="{{ site.url }}/el_GR/{{ langless_url }}">Ελληνικά</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="{{ site.url }}/he_IL/{{ langless_url }}">עברית‎</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="{{ site.url }}/sv_SE/{{ langless_url }}">Svenska</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="{{ site.url }}/ko_KR/{{ langless_url }}">한국어</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="{{ site.url }}/no_NO/{{ langless_url }}">Norsk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="{{ site.url }}/ja_JP/{{ langless_url }}">日本語</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="{{ site.url }}/ar_SA/{{ langless_url }}">اللغة العربية</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="{{ site.url }}/hu_HU/{{ langless_url }}">Magyar</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="{{ site.url }}/ro_RO/{{ langless_url }}">Română</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="{{ site.url }}/sr_SP/{{ langless_url }}">Српски</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="{{ site.url }}/af_ZA/{{ langless_url }}">Afrikaans</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="{{ site.url }}/ms_MY/{{ langless_url }}">Bahasa melayu</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="{{ site.url }}/fi_FI/{{ langless_url }}">Suomi</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="{{ site.url }}/da_DK/{{ langless_url }}">Dansk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="{{ site.url }}/uk_UA/{{ langless_url }}">Українська</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="{{ site.url }}/cs_CZ/{{ langless_url }}">Čeština</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="{{ site.url }}/en_PT/{{ langless_url }}">Pirate English</a></li> -->
         </ul>
         <button class="lang-selector"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
-        -->
         <button class="nav-selector" id="toggle-nav"><div class="navicon"></div></button>
       </nav>
     </div>
