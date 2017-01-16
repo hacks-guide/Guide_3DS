@@ -22,7 +22,7 @@ I denne seksjonen, vil vi gå gjennom prosessen som alle de andre trinnene har l
 
 This is nearly the best possible kind of device exploit because it is permanently installable into the NAND firm partitions, and runs before most of the OS loads, allowing it to not only work on *all* versions once installed, but also protect itself and recover from most situations that would brick a non-A9LH 3DS such as a nonfunctional home menu or bad title install.
 
-The file `arm9loaderhax.bin` is what is launched by arm9loaderhax itself after it finishes loading off of NAND, and can be any valid arm9 payload. This file can be replaced at any time, although Luma3DS allows for the launch of other arm9 payloads by holding buttons on boot.
+Filen `arm9loaderhax.bin` er det som startes av arm9loaderhax, etter at den er ferdig med å laste NAND, og kan være enhver gyldig arm9 payload. This file can be replaced at any time, although Luma3DS allows for the launch of other arm9 payloads by holding buttons on boot.
 
 In this case, we use Luma3DS by [AuroraWright](https://github.com/AuroraWright/) to boot a patched SysNAND directly, allowing us to completely bypass the need for any kind of EmuNAND, vastly simplifying the usage of a hacked 3DS in addition to saving SD card space.
 
@@ -48,7 +48,7 @@ During this process, we also setup programs such as the following:
 * Siste utgave av [DspDump](https://github.com/Cruel/DspDump/releases/latest)
 * Siste utgave av [FBI](https://github.com/Steveice10/FBI/releases/latest)
 * Siste utgave av [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* The Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
+* Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
 
 #### Instruksjoner
 
@@ -59,15 +59,15 @@ During this process, we also setup programs such as the following:
 
 **If you use a corrupted SD card without fixing it, you may BRICK!**
 
-**If you think your SD card may be corrupted, check your SD card for errors using [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), or [F3X (Mac)](f3x-(mac))!**
+**Hvis du tror SD-kortet kan være korrupt, kan du sjekke etter feil med, [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), eller [F3X (Mac)](f3x-(mac))!**
 {% endcapture %}
 
 <div class="notice--danger">{{ notice-5 | markdownify }}</div>
 
 1. **If it exists, copy the `/files9/` folder on your SD card to a safe location on your computer and back it up to multiple locations (such as online file storage); the files inside could save you from total data loss if you break your system**
-2. Create a folder named `cias` on the root of your SD card if it does not already exist
-3. **Delete the `a9lh` folder from the root of your SD card if it exists**
-  + **If you accidentally install arm9loaderhax using another device's `OTP.bin`, you will BRICK!**
+2. Opprett en mappe kalt `cias` på roten av SD-kortet hvis den ikke allerede er der
+3. **Slett `a9lh` mappen fra roten av SD-kortet hvis den eksisterer**
+  + ** Hvis du utilsiktet installerer arm9loaderhax, og bruker en annen enhets `OTP.bin`, vil du BRICKE!**
 4. Delete the `3ds` folder from the root of your SD card if it exists
 5. **Copy _the contents of_ the `starter` folder in `starter.zip` to the root of your SD card**
   + This will include a brand new `3ds` folder to replace the one you just deleted
