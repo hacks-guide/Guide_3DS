@@ -1,0 +1,101 @@
+---
+title: "2.1.0 ctrtransfer"
+lang: ru
+permalink: /ru_RU/2.1.0-ctrtransfer.html
+---
+
+Если перед даунгрейдом прошивки до 2.1.0 на 2DS или New 3DS вы забыли включить Wi-Fi, это можно сделать, вытащив батарею и отключив зарядное устройство на несколько секунд, и затем снова включить консоль.
+{: .notice--info}
+
+Если вы привыкли использовать встроенное приложение "Управление microSD" на New 3DS, на 2.1.0 оно работать не будет; используйте кардридер для прохождения гайда.
+{: .notice--info}
+
+После ctrtransfer ваше устройство может перестать отображать установленные игры. Это происходит из-за удаления тикетов в процессе переноса, почему и была сделана их резервная копия. Они будут восстановлены в конце руководства.
+{: .notice--info}
+
+**На данный момент подключение устройства к интернету НЕОБХОДИМО, чтобы продолжить после 2.1.0 ctrtransfer.**
+{: .notice--warning}
+
+**Отключите родительский контроль (parental control) на устройстве перед тем, как перейти к 2.1.0 ctrtransfer. Если вы не знаете пароля, воспользуйтесь [генератором мастер-ключа](https://mkey.salthax.org/) (англ.).**
+{: .notice--warning}
+
+**Процесс ctrtransfer удалит все установленные пользователем тикеты с устройства до тех пор, пока резервная копия не будет восстановлена. НИ В КОЕМ СЛУЧАЕ не пропускайте создание бэкапа!**
+{: .notice--danger}
+
+**НИКОГДА не форматируйте 2DS на прошивках ниже 6.0.0, иначе вы не сможете закончить первоначальную настройку и получите БРИК!**
+{: .notice--danger}
+
+**НИКОГДА не обновляйте New 3DS с прошивкой 2.1.0 (это старая прошивка Old 3DS), это чревато БРИКОМ! Сначала ОБЯЗАТЕЛЬНО восстановите NAND из резервной копии или произведите обратный ctrtransfer на стандартную прошивку New 3DS!**
+{: .notice--danger}
+
+#### Описание шагов
+
+В этой части мы будем прошивать [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) консоли до версии 2.1.0, чтобы воспользоваться уязвимостью получения уникального для устройства [OTP](https://www.3dbrew.org/wiki/OTP_Registers). OTP необходим для установки arm9loaderhax и **не может быть использован** на других устройствах.
+
+Это достигается благодаря [установке заранее подготовленного образа ctrtransfer](https://www.reddit.com/r/3dshacks/comments/4zhe4a/), содержащего 2.1.0, и копированию в него уникальных для каждой консоли файлов (таких как `moveable.sed` и `SecureInfo_A`), а затем восстановлением базы данных тайтлов.
+
+#### Что понадобится
+
+* Необходимо загрузить устройство в Decrypt9
+* Образ 2.1.0 ctrtransfer для вашего устройства и региона     
+*(Если вашего региона нет в списке, выберите любой)*:
+  +    [New 3DS\Old 3DS\2DS 2.1.0 - EUR - ctrtransfer](magnet:?xt=urn:btih:89acc9c1b488b8b38251de0ddf07975d6bd354a1&dn=2.1.0-4E%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    [New 3DS\Old 3DS\2DS 2.1.0 - JPN - ctrtransfer](magnet:?xt=urn:btih:3dbb9c9c85a33c6242f424dcbaebcacdd8a5912b&dn=2.1.0-4J%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    [New 3DS\Old 3DS\2DS - USA - ctrtransfer](magnet:?xt=urn:btih:1609ce9ee7b0ed9b6dea0b3e7cca4fc52dad6ff4&dn=2.1.0-4U%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+
+#### Инструкция
+
+##### Часть I - Подготовительные работы
+
+Вы должны находиться в Decrypt9 для выполнения этих шагов.
+
+1. Нажмите (Select) в главном меню, чтобы извлечь SD-карту, а затем вставьте ее в компьютер
+2. Скопируйте `.bin` и `.bin.sha` из архива в папку `/files9/` на SD-карте
+3. Вставьте SD-карту в 3DS
+4. Нажмите (B), чтобы вернуться обратно в главное меню Decrypt9
+
+##### Часть II - ctrtransfer
+
+**Наличие бэкапа NAND _вашей консоли_ ОБЯЗАТЕЛЬНО. Вам будет предложено создать его в одном из шагов инструкции, если у вас ещё нет бэкапа.**
+{: .notice--danger}
+
+**Если вы не уверены, есть ли у вас бэкап, создайте его, нажав на (A) по запросу, чтобы убедиться в наличии бэкапа в дальнейшем.**
+{: .notice--danger}
+
+**Если у вас недостаточно места для создания бэкапа, вы можете сделать его на другую SD-карту, или отчистить место на текущей, нажав (Select) в главном меню Decrypt9WIP, что позволит безопасно извлечь SD-карту с последующей заменой или очищением места**
+{: .notice--danger}
+
+1. Выберите "SysNAND Options", затем "CTRNAND Transfer", затем "Auto CTRNAND Transfer"
+2. Input the key combo given, then select the 2.1.0 ctrtransfer image when prompted by pressing (A)
+3. Если у вас нет NAND бэкапа, создайте его **backup SysNAND to `NANDmin.bin` при появлении запроса, нажатием кнопки (А)**
+  + **Наличие бекапа NAND _вашей консоли_ НЕОБХОДИМО.**
+  + **Отсутствие резервной копии приведет к ПОТЕРЕ всех установленных игр и сохранений!**
+4. Дождитесь завершения процесса. Это может занять некоторое время
+5. По завершению переноса данных, нажмите (В)
+6. Нажмите (SELECT), чтобы извлечь карту памяти
+7. Удалите файлы образа 2.1.0 ctrtransfer `.bin` и `.bin.sha` из папки `/files9/` на SD-карте
+8. Нажмите (Start) для перезагрузки консоли, не вставляя SD-карту в устройство
+  + Консоль c прошивкой 2.1.0 будет зависать при загрузке на черном экране, если в консоли будет находиться карта памяти до загрузки меню Home
+  + Каждый раз при перезагрузке на 2.1.0 необходимо извлекать карту памяти и вставлять обратно после загрузки меню Home
+  + Не вставляйте карту памяти обратно в консоль. На следующей странице вы будете копировать на нее файлы
+  + Это будет исправлено после восстановления вашей резервной копии на следующей странице
+
+___
+
+Первый запуск 2.1.0 может длиться дольше чем обычно на некоторых устройствах.
+{: .notice--info}
+
+*(Изменение цвета или искажения экрана - норма для некоторых устройств на 2.1.0; они исчезнут сразу после восстановления вашей резервной копии)*
+{: .notice--info}
+
+{% capture notice %}
+**Вы ГАРАНТИРОВАННО получите НЕВОССТАНАВЛИВАЕМЫЙ брик, если вы введете New 3DS с прошивкой 2.1.0 в режим сна!**
+**Это происходит только при закрытии крышки, _пока устройство включено_; это не касается выключения консоли.**
+**Устройство переходит в спящий режим только при закрытии крышки. Таймера, или чего-то похожего, в системе нет.**
+**Без промедления сделайте все необходимые шаги, чтобы избежать этого!**
+{% endcapture %}
+
+<div class="notice--danger">{ notice | markdownify }</div>
+
+Следующий шаг: [Установка arm9loaderhax](installing-arm9loaderhax)
+{: .notice--primary}
