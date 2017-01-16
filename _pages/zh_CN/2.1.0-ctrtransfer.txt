@@ -1,0 +1,107 @@
+---
+title: "2.1.0 ctr转移"
+permalink: /2.1.0-ctrtransfer.html
+lang: zh_CN
+ref: 2.1.0-ctrtransfer
+---
+
+如果你在降级**新3DS**或者**2DS**到2.1.0系统时**没有开启无线连接**，将电池拔掉并且等待数秒后再开机可以重新开启无线连接。
+{: .notice--info}
+
+请注意，在2.1.0系统上新3DS不能使用设置里的SD卡管理功能（microSD Management）来传输文件。如果你之前都是靠无线功能传输文件的，请确保在开始本教程之前，你手头有一个可用的SD卡读卡器。
+{: .notice--info}
+
+在进行ctr转移后，你的设备可能不会显示已安装的游戏。 其原因在于转移的过程中ticket会被删除。这也是为什么我们会先备份ticket， 并在本教程最后恢复ticket。
+{: .notice--info}
+
+**目前为止，你的3DS必须要能连接上互联网才能继续进行2.1.0 ctr转移教程！**
+{: .notice--warning}
+
+**在进行2.1.0 ctr转移之前，请确保您已禁用了家长控制（parental control）。 如果您不知道密码，参见[这里](https://mkey.salthax.org/)。**
+{: .notice--warning}
+
+**进行ctr转移会删除所有已安装游戏的ticket文件，直到恢复备份后才能复原。 请务必创建备份，否则你将丢失所有已安装的游戏及其存档！**
+{: .notice--danger}
+
+**永远不要在低于6.0.0版本的2DS上进行恢复出厂设置，否则你将无法完成初始化步骤，导致变砖！**
+{: .notice--danger}
+
+**千万不要在新3DS运行2.1.0版本系统时的上进行系统更新（2.1.0实际上是给老3DS设计的固件），否则会变砖！ 你必须在更新前先恢复NAND备份，或ctr转移回新3DS的固件！**
+{: .notice--danger}
+
+#### 步骤概览
+
+在本节教程中，我们将向您的设备的[CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition)分区刷入2.1.0版本的系统，以便利用2.1.0中的一个漏洞来提取每个设备独一无二的[OTP](otp-info)文件。 此OTP文件在安装arm9loaderhax的过程中必不可少，并且**不能**在不同设备间共享。
+
+通过[预先制作好的ctr转移镜像](https://www.reddit.com/r/3dshacks/comments/4zhe4a/)，我们可以在安装2.1.0版本的过程中保留您的设备独有的系统文件（例如`moveable.sed`和`SecureInfo_A`），并修复title数据库。
+
+要想使用arm9loaderhax，就必须要有这个OTP文件。
+
+#### 您需要：
+
+* 设备已在运行Decrypt9
+* 对应您设备和设备地区的 2.1.0 ctr转移镜像文件     
+*（如果您的设备不在下列地区中，请随便选一个）*:
+  +    [新3DS，老3DS或2DS 2.1.0 - 欧版 - ctr转移镜像](magnet:?xt=urn:btih:89acc9c1b488b8b38251de0ddf07975d6bd354a1&dn=2.1.0-4E%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    [新3DS，老3DS或2DS 2.1.0 - 日版 - ctr转移镜像](magnet:?xt=urn:btih:3dbb9c9c85a33c6242f424dcbaebcacdd8a5912b&dn=2.1.0-4J%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    [新3DS，老3DS或2DS 2.1.0 - 美版 - ctr转移镜像](magnet:?xt=urn:btih:1609ce9ee7b0ed9b6dea0b3e7cca4fc52dad6ff4&dn=2.1.0-4U%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+
+#### 操作指南
+
+##### 第一部分 - 准备工作
+
+以下步骤应在Decrypt9中进行：
+
+1. Press (Select) on the main menu to eject your SD card, then put it in your computer
+2. Copy the 2.1.0 `.bin` and `.bin.sha` from the ctrtransfer `.zip` to the `/files9/` folder on your SD card
+3. Reinsert your SD card into your 3DS
+4. Press (B) to get to the Decrypt9 main menu
+
+##### Section II - ctrtransfer
+
+**Having a backup of _your_ device's NAND is REQUIRED. You will be prompted to create one as part of the steps if you do not already have one.**
+{: .notice--danger}
+
+**Skipping this backup will result in the LOSS of all installed games and saves!**
+{: .notice--danger}
+
+**If you do not know whether or not you already have a NAND backup, create one when prompted by pressing (A) just to be sure.**
+{: .notice--danger}
+
+**If you do not have enough space to create the backup, you can either backup to a different SD card or clear space on your current SD card by pressing (Select) on the Decrypt9WIP main menu to eject your SD card and allow it to be swapped with a different SD card or to clear space on your current SD card**
+{: .notice--danger}
+
+1. Go to "SysNAND Options", then "CTRNAND Transfer", then "Auto CTRNAND Transfer"
+2. Select the 2.1.0 ctrtransfer image when prompted by pressing (A), then input the key combo given
+3. If you do not already have a NAND backup, **backup SysNAND to `NANDmin.bin` when prompted by pressing (A)**
+  + **Having a backup of _your_ device's NAND is REQUIRED.**
+  + **Skipping this backup will result in the LOSS of all installed games and saves!**
+4. Allow the transfer process to proceed automatically, this may take some time
+5. Once the transfer is complete, press (B) to go back
+6. Press (Select) to eject your SD card
+7. Delete the 2.1.0 ctrtransfer image `.bin` and `.bin.sha` from the `/files9/` folder on your SD card
+8. Press (Start) to reboot without reinserting your SD card
+  + While on 2.1.0, the device will black screen on boot if your SD card is inserted before the home menu loads
+9. Reinsert your SD card into your 3DS after the home menu loads
+  + Every time the device is rebooted on 2.1.0, you will need to take out your SD card before boot and put it back in after the home menu loads
+  + This will be fixed once you restore your device in the next page
+
+___
+
+The initial boot of 2.1.0 can take slightly longer than a standard boot on some devices.
+{: .notice--info}
+
+*(Screen distortions or discolorations are normal for some devices while on 2.1.0, they will go away once you restore your backup)*
+{: .notice--info}
+
+{% capture notice %}
+**Putting a New 3DS on 2.1.0 in sleep mode is known to cause an UNRECOVERABLE brick!**
+**This only happens when shutting the lid _while the device is on_; this does not apply to turning the device off.**
+**The device only enters sleep mode when the lid is closed. It is not on a timer or anything like that.**
+**You should continue without delay to avoid any possibility of this happening!**
+{% endcapture %}
+
+<div class="notice--danger">{{ notice | markdownify }}</div>
+
+Continue to [Installing arm9loaderhax](installing-arm9loaderhax)
+{: .notice--primary}

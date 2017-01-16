@@ -1,0 +1,249 @@
+---
+title: "DSiWare Downgrade (App Injection und zweiter 3DS)"
+permalink: /dsiware-downgrade-(app-injection-and-second-3ds).html
+lang: de_DE
+ref: dsiware-downgrade-(app-injection-and-second-3ds)
+---
+
+Wenn du zwischen den Versionen 11.0.0 und 11.2.0 bist, kannst du diesem Guide folgen, um deine NATIVE_FIRM mithilfe einer DSIWare und eines zweiten 3DS mit bereits installierter Custom Firmware downzugraden oder dein NAND zu sichern, bzw. wiederherzustellen.
+{: .notice}
+
+Wenn du unter 11.2.0 auf einem der beiden Geräte bist, solltest du die ctr-httpwn - Schritte (wenn du dazu aufgefordert wirst) auf jedem Gerät unter 11.2.0 ausführen, damit ein System-Transfer zwischen den Geräten möglich ist.
+{: .notice--info}
+
+Dies nutzt eine Schwachstelle, welche es DSIWare-Titeln erlaubt, überall im NAND zu lesen und zu schreiben.
+{: .notice--info}
+
+Dies ist eine momentan funktionierende Implementierung des "FIRM partitions known-plaintext"-Exploits, der [hier](https://www.3dbrew.org/wiki/3DS_System_Flaws) erklärt wird.
+{: .notice--info}
+
+Dieser Guide geht davon aus, dass der CFW 3DS bereits mit arm9loaderhax läuft und mit diesem Guide gehackt wurde.
+Trotzdem sollte er auch (mit kleinen Modifikationen, wie z. B. die Durchführung aller SysNAND-Schritte auf dem EmuNAND) auf EmuNAND-Systemen funktionieren. Beachte, dass die Begriffe EmuNAND und RedNAND sich auf leicht unterschiedliche Implemenhierungen [des selben Konzepts](http://3dbrew.org/wiki/NAND_Redirection) beziehen.
+{: .notice--info}
+
+Deine DSIWare-Spielstände werden gesichert, bevor sie mit gehackten Spielständen ersetzt werden.
+{: .notice--info}
+
+{% capture notice-4 %}
+Dieser Exploit erfordert einen[System Transfer](http://en-americas-support.nintendo.com/app/answers/detail/a_id/13996/) von einem CFW 3DS zu einem regulären 3DS als Teil der benötigten Schritte. System Transfers funktionieren *nur* in die folgenden Richtungen:    
+  + New 3DS -> New 3DS    
+  + Old 3DS oder 2DS -> Old 3DS oder 2DS    
+  + Old 3DS oder 2DS -> New 3DS    
+{% endcapture %}
+
+<div class="notice--warning">{{ notice-4 | markdownify }}</div>
+
+Beide Systeme MÜSSEN aus der selben Region sein.
+{: .notice--warning}
+
+**Alle Daten des Ziel-3DS werden gelöscht!**
+{: .notice--danger}
+
+Die NNID des CFW 3DS wird an den Ziel-3DS gebunden sein, bis du entweder einen System Transfer zurück durchführst (nach einer Woche Wartezeit) oder dich an den Nintendo Support wendest, um die Bindung aufzuheben! (Details weiter unten)
+{: .notice--danger}
+
+System Transfers können nur einmal pro Woche durchgeführt werden.
+{: .notice--danger}
+
+#### Was du brauchst
+
+* Zwei 3DS Systeme
+  + **Der Quell-3DS**: Der 3DS mit einer installierten Custom Firmware (arm9loaderhax oder eine Variante von EmuNAND/RedNAND) *Auf der aktuellen Version*
+  + **Der Ziel-3DS:**: Der ungehackte 3DS mit regulärer Firmware*(zwischen 11.0.0 und 11.2.0)*
+* Kaufe (falls noch nicht getan) und installiere ein kompatibles DsiWare-Spiel aus dem eShop auf dem **Quell-3DS**
+  + Eine illegale Kopie des Spiels wird **Nicht** funktionieren
+  + Eine Liste mit kompatiblen Spielen findest du unter [DSiWare List](dsiware-list)
+* Ein Einstiegspunkt aus [Homebrew Launcher (SoundHax)](homebrew-launcher-(soundhax)) oder [Homebrew Launcher (Kein Browser)](homebrew-launcher-(no-browser))
+* Die Sudokuhax Injection `.zip` passend zu deiner Region
+  + [`DSiWare_usa_sudokuhax_injection.zip`](magnet:?xt=urn:btih:7ed7fee15c900ed02b5e2cb3c8e7a0363f4d9354&dn=DSiWare_usa_sudokuhax_injection.zip&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce)
+  + [`DSiWare_eur_exidiahax_injection.zip`](magnet:?xt=urn:btih:046bb8023bc40b9a95a8a339c85a9ef18cf60db6&dn=DSiWare_eur_exidiahax_injection.zip&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce)
+  + [`DSiWare_jpn_4swordshax_injection.zip`](magnet:?xt=urn:btih:1bcc90c93da91c9876671f6218084207def90db9&dn=DSiWare_jpn_4swordshax_injection.zip&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce)
+* Die aktuelle Version von [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+Die aktuelle Version von [3DSident](https://github.com/joel16/3DSident/releases/latest)
+* Die aktuelle Version von [dgTool](https://github.com/Plailect/dgTool/releases/latest)
+* Das Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
+* Die NFIRM `.zip` passend zu dem System und der Version des **Ziel-3DS**
+  + [New 3DS 11.0.0](magnet:?xt=urn:btih:2d13a5ea1570f911bd5c6423e0c30e51d548837a&dn=11.0.0%5Fto%5F10.4.0%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+  + [Old 3DS 11.0.0](magnet:?xt=urn:btih:72393bbd99bc285db84a9cabf39d9b3200058d6a&dn=11.0.0%5Fto%5F10.4.0%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  ~    
+  + [New 3DS 11.1.0](magnet:?xt=urn:btih:d7d60c27c18f53bd8508a194656a465f6448bedf&dn=11.1.0%5Fto%5F10.4.0%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  + [Old 3DS 11.1.0](magnet:?xt=urn:btih:0caf9a948a2d8bf23606d641f6628e2baeb983bb&dn=11.1.0%5Fto%5F10.4.0%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  ~        
+  + [New 3DS 11.2.0](magnet:?xt=urn:btih:881388a552a1ce9a963d391bf1a023642270991c&dn=11.2.0%5Fto%5F10.4.0%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  + [Old 3DS 11.2.0](magnet:?xt=urn:btih:a479e4ee55efbc18c181d426cd77a34815388151&dn=11.2.0%5Fto%5F10.4.0%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)    
+* Wenn der **Ziel-3DS** unter Version 11.2.0 ist, benötigst du außerdem:
+  + Die aktuelle Version von [ctr-httpwn](https://github.com/yellows8/ctr-httpwn/releases/latest)
+
+#### Anleitung
+
+##### Abschnitt I - Vorbereitungen
+
+Benutze einen [save manager](https://github.com/J-D-K/JKSM/releases/latest) um alle Spielstände auf dem Ziel-3DS, die dir wichtig sind, zu sichern (Er wird formatiert!)
+{: .notice--warning}
+
+1. Erstelle einen Ordner namens `files9` im Stammverzeichnis der SD-Karte des **Quell-3DS**, falls er noch nicht existiert
+2. Kopiere `GodMode9.bin` aus der GodMode9 `.zip` in den `/luma/payloads/` Ordner auf der **Quell-3DS** SD-Karte und benenne `GodMode9.bin` in `/luma/payloads/` um zu `up_GodMode9.bin`
+3. Kopiere die `.app` aus der DSiWare injection `.zip` ins Stammverzeichnis der **Quell-3DS** SD-Karte
+4. Kopiere den `savedata`-Ordner aus der DSiWare injection `.zip` ins Stammverzeichnis der **Quell-3DS** SD-Karte
+5. Setze die **Quell-3DS** SD-Karte wieder in das entsprechende System ein
+6. Halte auf **dem Ausgangs 3DS** beim Einschalten (Start) gedrückt, um Hourglass9 zu starten
+7. In den SysNAND Options, gehe zu SysNAND Backup/Restore, und ändere **(min size)** SysNAND auf ´NANDmin.bin`
+8. Drücke im Hauptmenü (Select) um die SD-Karte **des Ausgangs 3DS** auszuwerfen, lege sie dann in deinen Computer ein
+9. Kopiere `NANDmin.bin` und `NANDmin.bin.sha` aus dem`/files9/` Ordner aus deiner SD-Karte zu einem sicheren Ort
+  + Erstelle Sicherheitskopien an verschiedenen Orten
+  Diese Backups werden dich vor zukünftigen Bricks schützen
+  +**Deine Sicherheitskopie sollte einer dieser Größen sein [this](nand-size); falls sie das nicht ist, lösche sie und erstelle eine neue!**
+10. Lege die SD-Karte des **Ziel 3DS** in deinen Computer ein
+11. **Stelle eine Sicherheitskopie jeder Datei von den SD-Karten der beiden 3DS und speichere diese in zwei verschiedenen Ordnern auf deinem Computer ab (stelle sicher, dass du weißt, welche zu welchem gehört)!**
+12. Lege die SD-Karten beider 3DS in den jeweiligen wieder ein
+13. Drücke (Start) um das Gerät neuzustarten
+
+##### Sektion II - DSiWare sichern
+
+Nachdem du der gesamten Anleitung gefolgt bist, kannst du diese Sicherheitskopie nutzen, um die Speicherstände deiner DSiWare wieder herzustellen, indem du die DSiWare aus deinem Systemspeicher löschst und sie von deiner SD-Karte auf dein Gerät kopierst.
+{: .notice--info}
+
+Diese Sicherheitskopie kann nur von dieser NAND genutzt werden. Falls du deinen 3DS zurücksetzt oder du ein anderes NAND wiederherstellst (besonders wenn `movable.sed` jemals verändert wird), wird sie unbrauchbar.
+{: .notice--info}
+
+1. Navigiere auf dem **Ausgangs 3DS** zu Systemeinstellungen -> "Datenverwaltung" -> "DSiWare"
+2. Kopiere jegliche DSiWare-Spiele, welche bereits auf deiner SD-Karte sind, zurück auf deinen Systemspeicher
+3. Kopiere das DSiWare-Spiel, welches zu benutzen möchtest, auf deine SD-Karte
+4. Verlasse die Systemeinstellungen
+
+##### Abschnitt III - Injektion von Spiel und Spielstand
+
+1. Öffne GodMode9 aus arm9loaderhax, indem du (Steuerkreuz oben) während dem Booten gedrückt hältst
+2. Navigiere zu `SDCARD`
+3. Drücke (Y) auf der DSiWare Injektion `.app` um diese zu kopieren
+4. Drücke (B), um zurück ins Hauptmenü zu gelangen
+5. Navigiere zu `SYSNAND TWLN` -> `title` -> `00030004` -> `(8 Zeichen ID)`
+  + Die 8 Zeichen ID wird eine von der [DSiWare Liste](dsiware-list) Seite sein
+6. Navigiere zu `content`
+7. Drücke (A) auf der `.app` Datei im Ordner
+8. Wähle "Inject data @offset"
+9. Drücke (A) um den Offset `00000000` zu wählen
+10. Drücke (A) um das Schreiben auf SysNAND freizuschalten, gebe dann die angezeigte Tastenkombination ein
+11. Drücke (B), um zurück ins Hauptmenü zu gelangen
+12. Navigiere zu `SYSNAND TWLN` -> `title` -> `00030004` -> `(8 Zeichen ID)`
+  + Die 8 Zeichen ID wird eine von der [DSiWare Liste](dsiware-list) Seite sein
+13. Navigiere zu `data`
+14. Drücke (A) auf `public.sav`
+15. Wähle "Mount as FAT image"
+  + Falls du diese Option nicht siehst, stelle sicher, dass du die neueste Version von GodMode9 benutzt
+  + Falls du diese Option dann immer noch nicht siehst, [melde diesen Fehler](https://github.com/d0k3/GodMode9/issues) bitte hier
+16. Dies wird dich zurück ins Hauptmenü bringen
+17. Navigiere zu `SDCARD`
+18. Drücke auf der/den Datei/en im `savedata` (Y) um sie zu kopieren
+  + Falls es einen `savedata` Ordner in dem `savedata` Ordner gibt, ist dies kein Fehler. Du solltest den zweiten `savedata` Ordner kopieren, nicht die Dateien in dem Ordner.
+19. Drücke (B), um zurück ins Hauptmenü zu gelangen
+20. Navigiere zu `FAT IMAGE`
+21. Benutzt den (X) Knopf um alles in `FAT IMAGE` zu löschen
+22. Drücke (Y) um eine Kopie **des Inhaltes** des `savedata`Ordner in den `FAT IMAGE` Ornder einzufügen
+23. Wähle "Copy path(s)"
+24. Drücke (A) um das Schreiben des Images freizuschalten, gebe dann die angezeigte Tastenkombination ein
+25. Drücke (Start) um das Gerät neuzustarten
+26. Starte dein DSiWare-Spiel auf dem **Ausgangs 3DS**
+27. Berühre den Bildschirm oder drücke irgendeinen Knopf um das Spiel zu starten und zu testen, ob die Speicherstände funktionieren
+  + Falls du die europäischen Dateien (**Legenden der Exidia**) benutzt, wähle, nachdem du bei beiden Titelbildschirmen (A) oder (Start) gedrückt hast, den ersten Speicherstand und drücke fortfahren
+  + Falls dein Spiel eine Fehlermeldung über `boot.nds` oder einen weißen Bildschirm anzeigt, **dann war der Hack erfolgreich**
+  + Falls dein Spiel einen Fehler über beschädigte oder nicht aufrufbare Speicherdaten anzeigt, stelle sicher, dass du **die Inhalte** des Ordners `savedata`, und nicht den Ordner `savedata` selbst kopiert hast
+  + Falls dein Spiel sich normal verhält und dir keine Fehlermeldung über `boot.nds` oder einen weißen Bildschirm anzeigt, dann solltest du aufhören und herausfinden, was schief gelaufen ist
+  + Wenn du einen schwarzen Bildschirm bekommst, [folge diesen Problembehandlungen](troubleshooting#twl_broken)
+  + Falls das Spiel auf dem **Ziel 3DS** fehlt oder einen Fehler über beschädigte oder nicht aufrufbare Speicherstände anzeigt, [folge dieser Anleitung zur Problembehandlung](troubleshooting#ts_dsiware)
+
+##### Abschnitt IV - ctr-httpwn
+
+**Dieser Abschnitt wird nur benötigt, falls _der Ziel 3DS_ unter Version 11.2.0 ist.**
+
+**Dies wird dir erlauben einen Systemtransfer auf Versionen, welche nicht die neuesten sind, durchzuführen.**
+
+1. Kopiere und verbinde den `3ds` Ordner aus der ctr-httpwn `.zip` auf die SD-Karte des **Ziel 3DS**
+2. Lege die SD-Karte wieder in den **Ziel 3DS** ein
+3. Starte den Homebrew Launcher auf dem Gerät, welches [Homebrew Launcher (Ohne Browser)](homebrew-launcher-(no-browser)) benutzt
+  + **New 3DSs on versions 10.7.0 and 11.0.0 can use [Homebrew Launcher (Browser)](homebrew-launcher-(browser)) instead**
+  + **Ensure menuhax is not installed, or you won't be able to return to Home Menu from the homebrew launcher**
+4. Launch ctr-httpwn on **the target 3DS**
+5. Press (A) to continue
+6. Press (Start) to exit ctr-httpwn
+7. Press (Start) to open the homebrew launcher exit menu
+8. Press (X) to Return to Home Menu (no reboot)
+  + You may get an "Error has occurred" message with the option to continue. This is fine, just hit (A)
+9. Continue to the next section **without rebooting**
+  + **the target 3DS** has been temporarily patched to allow network functions (such as System Transfer) without running the latest system version
+  + Keep in mind that exiting the System Settings will reboot the system
+  + Wenn das System neugestartet hat, musst du ctr-httpwn erneut ausführen, damit der System Transfer wieder funktioniert
+
+##### Abschnitt V - Systemtransfer
+
+1. **Stelle eine Sicherheitskopie jeder Datei von den SD-Karten der beiden 3DS und speichere diese in zwei verschiedenen Ordnern auf deinem Computer ab (stelle sicher, dass du weißt, welche zu welchem gehört)!**
+2. Lege die SD-Karten beider 3DS in den jeweiligen wieder ein
+3. If **the target 3DS** has a Nintendo Network ID on it, you must format the device using System Settings:
+  + Go to the last page of "Other Settings" and select "Format System Memory", then follow all instructions
+4. Read the following:
+  + Your CFW 3DS = the source 3DS = "Source System"
+  + Your Stock 3DS = the target 3DS = "Target System"
+  + **Move DSiWare titles if prompted!**
+  + Do **NOT** delete the source system's SD card contents if prompted
+  + Make sure neither device's battery dies during the transfer
+  + 2DS/Old 3DS (source) to New 3DS (target) only - if asked which method you wish to use to transfer the SD card data:
+    + **Do NOT** choose the "Low-Capacity microSD Card Transfer" or minimal option (option 2), it will only transfer tickets and likely will not transfer the DSiWare save.
+    + Fast Method: If you have the ability to move the data from the SD card (source) to the microSD card (target), when prompted use the "PC-Based Transfer" option (option 3).
+    + Slowest Method: If you don't have the ability to move the data on a PC use the **full** "Wireless Transfer" option (option 1).
+5. Go to [this link](http://en-americas-support.nintendo.com/app/answers/detail/a_id/227/) and follow Nintendo's official instructions for System Transferring from one system to another while keeping in mind what you just read
+
+##### Section VI - Restoring the source 3DS
+
+1. On **the source 3DS**, complete initial setup
+2. Do one of the following
+    + Do the rest of the sections and then the full guide on **the target 3DS**, then wait one week, then System Transfer from **the target 3DS** back to **the source 3DS** *(remember you cannot transfer back from a New 3DS to an Old 3DS)*
+    + Call Nintendo and tell them you no longer have access to the device that your NNID is linked to (which is **the target 3DS** in this case), and would like it linked to a different device (which is **the source 3DS** in this case)
+    + You can also just [remove the NNID](https://3ds.guide/troubleshooting#rm_nnid) from **the source 3DS** if you'd prefer it remain on **the target 3DS**
+3. Reboot **the source 3DS** while holding Start to launch Hourglass9
+4. Go to SysNAND Backup/Restore and restore SysNAND from `NANDmin.bin`
+
+##### Abschnitt VII - Backup der NFIRM des Ziel 3DS
+
+1. Copy the dgTool `boot.nds` to the root of **the target 3DS**'s SD card
+2. Create a folder named `dgTool` on the root of **the target 3DS**'s SD card if it does not already exist
+3. Copy the contents of the NFIRM `.zip` to the `dgTool` folder on the root of **the target 3DS**'s SD card
+4. Starte dein DSiWare-Spiel auf **dem Ziel-3DS**
+5. Öffne dgTool durch starten des DSiWare-Spieles
+  + If the game does not launch dgTool, [follow this troubleshooting guide](troubleshooting#ts_dsiware)
+6. Select "Dump f0f1" to backup **the target 3DS**'s NFIRM
+  + This will take a while
+7. Make note of the NFIRM backup's location
+8. Beende dgTool
+  + Unter Umständen musst du das Ausschalten der Konsole erzwingen indem du den Power-Knopf gedrückt hälst
+9. Put your SD card in your computer, then copy `F0F1_N3DS.bin` or `F0F1_O3DS.bin` (depending on your device) to a safe location
+  + Erstelle Sicherheitskopien an verschiedenen Orten
+  Diese Backups werden dich vor zukünftigen Bricks schützen
+
+
+##### Abschnitt VIII - Überschreiben der NFIRM des Ziel-3DS
+
+**Führe niemals ein Downgrade via dgTool auf einem Gerät, das bereits arm9loaderhax installiert hat, durch, sonst erleidest du einen BRICK!**
+
+1. Starte dein DSiWare-Spiel auf **dem Ziel-3DS**
+2. Öffne dgTool durch starten des DSiWare-Spieles
+3. Wähle "Downgrade FIRM to 10.4" um die 10.4.0 NFIRM bin auf **den Ziel 3DS** aufzuspielen
+4. Beende dgTool
+  + Unter Umständen musst du das Ausschalten der Konsole erzwingen indem du den Power-Knopf gedrückt hälst
+5. Starte die Konsole neu
+
+##### Abschnitt IX - Exploit Verifizierung
+
+1. Copy and merge the `3ds` folder from the 3DSident `.zip` to **the target 3DS**'s SD card
+2. Lege die SD-Karte wieder in den **Ziel 3DS** ein
+3. Launch the homebrew launcher on **the target 3DS** using your entrypoint
+4. Launch 3DSident
+5. Verify that the following:
+  + **Kernel version**: 2.50-11
+  + **FIRM version**: 2.50-11
+  + If either of these do not display the versions above, make sure you used the correct NFIRM zip and try flashing NFIRM again
+
+**The target 3DS**'s version number will *not* have changed in the settings.
+{: .notice--info}
+
+Continue to [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher))
+{: .notice--primary}

@@ -1,0 +1,248 @@
+---
+title: "DSiWare Downgrade (App Injection and Second 3DS)"
+permalink: /dsiware-downgrade-(app-injection-and-second-3ds).html
+lang: nb_NO
+ref: dsiware-downgrade-(app-injection-and-second-3ds)
+---
+
+Hvis du er mellom versjonenene 11.0.0 og 11.2.0, kan du følge denne veiledningen for å nedgradere din NATIVE_FIRM ved hjelp av DSiWare og en annen 3DS som har allerede har en Custom Firmware installert for å dumpe og gjenopprette NAND.
+{: .notice}
+
+Hvis du er under 11.2.0 på begge enhetene, bør du gå igjennom ctr-httpwn trinnene (når du blir spurt) på hver enhet under 11.2.0 slik at du kan overføre systemet mellom dem.
+{: .notice--info}
+
+Dette utnytter en svakhet som lar DSiWare titler lese og skrive hvor som helst i NAND.
+{: .notice--info}
+
+Dette er en implementasjon av "FIRM partitions known-plaintext" svakheten som til dette tidspunktet virker. Detaljert [her](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+{: .notice--info}
+
+Denne veiledningen vil anta at CFWen 3DSen har arm9loaderhax og ble satt opp med denne veiledningen, men fungerer (med små modifikasjoner som gjør alle SysNAND trinnene på EmuNAND) på systemer som kjører en EmuNAND. Merk at EmuNAND og RedNAND refererer til litt forskjellige implementeringer av [det samme konseptet](http://3dbrew.org/wiki/NAND_Redirection).
+{: .notice--info}
+
+DSiWare saven din vill bli sikkerhetskopiert før den blir erstattet av en hacket en.
+{: .notice--info}
+
+{% capture notice-4 %}
+Dette sikkerhetsproblemet krever en [Systemoverførsel](http://en-americas-support.nintendo.com/app/answers/detail/a_id/13996/) fra en CFW 3DS til en "butikkfrisk" 3DS som en del av trinnene. Systemet overføringer fungerer *bare* i disse retningene:    
+  + New 3DS -> New 3DS    
+  + Old 3DS or 2DS -> Old 3DS or 2DS    
+  + Old 3DS or 2DS -> New 3DS    
+{% endcapture %}
+
+<div class="notice--warning">{{ notice-4 | markdownify }}</div>
+
+Begge systemene MÅ være fra samme region.
+{: .notice--warning}
+
+**_Mål3DSen_ vil ha alle dataene slettet!**
+{: .notice--danger}
+
+Kilde3DSens NNID vil bli sittende fast på målets 3DS med mindre du enten systemoverfører eller ringer Nintendo! (detaljer i instruksjonene)
+{: .notice--danger}
+
+Systemeoverføringer kan bare utføres en gang i uken.
+{: .notice--danger}
+
+#### Det du trenger
+
+* To 3DS-systemer
+  + **Kilde3DSen**: 3DSen må kjøre en eller annen type custom firmware (arm9loaderhax eller en form av EmuNAND/RedNAND) *på nyeste versjon*
+  + **Mål3DSen**: 3DSen på butikkfirmware *(mellom 11.0.0 og 11.2.0)*
+* Kjøpt (eller allerede eid) og installere et kompatibelt DSiWarespill fra eShop på **kilde3DSen**
+  + En piratkopi av spillet vil **ikke** fungere
+  + For en liste over kompatible spill, se [DSiWare List](dsiware-list)
+* En inngangspunkt fra [Homebrew Launcher (SoundHax)](homebrew-launcher-(soundhax)) eller [Homebrew Launcher (Uten Nettleser)](homebrew-launcher-(no-browser))
+* Sudokuhax injeksjon `.zip` som tilsvarer din region
+  + [`DSiWare_usa_sudokuhax_injection.zip`](magnet:?xt=urn:btih:7ed7fee15c900ed02b5e2cb3c8e7a0363f4d9354&dn=DSiWare_usa_sudokuhax_injection.zip&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce)
+  + [`DSiWare_eur_exidiahax_injection.zip`](magnet:?xt=urn:btih:046bb8023bc40b9a95a8a339c85a9ef18cf60db6&dn=DSiWare_eur_exidiahax_injection.zip&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce)
+  + [`DSiWare_jpn_4swordshax_injection.zip`](magnet:?xt=urn:btih:1bcc90c93da91c9876671f6218084207def90db9&dn=DSiWare_jpn_4swordshax_injection.zip&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce)
+* Siste utgave av [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* Siste versjon av [3DSident](https://github.com/joel16/3DSident/releases/latest)
+* Siste versjon av [dgTool](https://github.com/Plailect/dgTool/releases/latest)
+* Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
+* NFIRM `.zip` som tilsvarer enheten og versjonen av **mål3DSen**
+  + [New 3DS 11.0.0](magnet:?xt=urn:btih:2d13a5ea1570f911bd5c6423e0c30e51d548837a&dn=11.0.0%5Fto%5F10.4.0%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+  + [Old 3DS 11.0.0](magnet:?xt=urn:btih:72393bbd99bc285db84a9cabf39d9b3200058d6a&dn=11.0.0%5Fto%5F10.4.0%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  ~    
+  + [New 3DS 11.1.0](magnet:?xt=urn:btih:d7d60c27c18f53bd8508a194656a465f6448bedf&dn=11.1.0%5Fto%5F10.4.0%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  + [Old 3DS 11.1.0](magnet:?xt=urn:btih:0caf9a948a2d8bf23606d641f6628e2baeb983bb&dn=11.1.0%5Fto%5F10.4.0%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  ~        
+  + [New 3DS 11.2.0](magnet:?xt=urn:btih:881388a552a1ce9a963d391bf1a023642270991c&dn=11.2.0%5Fto%5F10.4.0%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  + [Old 3DS 11.2.0](magnet:?xt=urn:btih:a479e4ee55efbc18c181d426cd77a34815388151&dn=11.2.0%5Fto%5F10.4.0%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)    
+* Hvis **mål3DSen** er under 11.2.0, trenger du _også_
+  + Siste utgave av [ctr-httpwn](https://github.com/yellows8/ctr-httpwn/releases/latest)
+
+#### Instruksjoner
+
+##### Seksjon I - Forarbeld
+
+Bruk en [save manager](https://github.com/J-D-K/JKSM/releases/latest) for å sikkerhetskopiere alle saver du bryr deg om på mål3DSen (den vil bli formatert!)
+{: .notice--warning}
+
+1. Opprett en mappe med navnet `files9` på roten av **mål3DSen**s SD-kort hvis den ikke allerede eksisterer
+2. Kopier `GodMode9.bin` fra GodMode9 `.zip` til `/luma/payloads/` mappen på **kilde3DSen**s' SD-kort endre `GodMode9.bin` i `/luma/payloads/` til `up_GodMode9.bin`
+3. Kopier `.app` fra DSiWare injection `.zip` til roten av **kilde3DSen**s SD-kort
+4. Kopier `savedata` mappen fra DSiWare injection `.zip` til roten av **kilde3DSen**s SD-kort
+5. Sett in **kilde3DSen**s SD-kort
+6. På **kilde3DSen**, hold Start ved nystart for å starte Hourglass9
+7. Gå til SysNAND Options, deretter SysNAND Backup/Restore, og så sikkerhetskopier **(min size)** SysNAND til `NANDmin.bin`
+8. Trykk (Select) på hovedmenyen for å løse ut **kilde3DSen**s SD-kort, deretter sette den inn i datamaskinen
+9. Kopier 'NANDmin.bin' og 'NANDmin.bin.sha' fra mappen '/files9/' på SD-kortet til et trygt sted
+  + Lagre sikkerhetskopien flere plasser
+  + Denne sikkerhetskopien vil spare deg fra en brick hvis noe går galt i fremtiden
+  + **Sikkerhetskopien din skal samsvare med en av størrelse på [denne](nand-size) siden; hvis ikke, bør du slette den og lage en ny!**
+10. Sett **mål3DSen**s SD-kort inn i datamaskinen
+11. **Sikkerhetskopierer alle filene på begge 3DSenes SD-kort til to separate mapper på datamaskinen (hold oversikt over hvilken er hvilken)!**
+12. Putt hvert SD-kort tilbake i sine tilsvarende 3DSer
+13. Trykk (Start) for omstart
+
+##### Seksjon II - Sikkerhetskopi av DSiWare
+
+Etter å ha fullført hele veiledningen, kan du bruke denne sikkerhetskopien for å gjenopprette dine DSiWaren saver ved å slette DSiWare fra systemminnet og kopiere fra SD-kortet.
+{: .notice--info}
+
+Denne sikkerhetskopien kan bare brukes på dette NANDet. Hvis du formaterer din 3DSen din eller gjenoppretter en annen NAND (spesielt hvis 'movable.sed' er endret), vil den bli ubrukelig.
+{: .notice--info}
+
+1. Gå til systeminnstillinger, deretter "Data Management" og deretter "DSiWare" på **kilde3DSen**
+2. Kopiere et hvilket som helst DSiWare-spill som allerede er på SD-kortet til systemminnet
+3. Kopier DSiWare-spillet du vil bruke til SD-kortet
+4. Avslutt systeminnstillingene
+
+### Seksjon III - injisering av spillet og saven
+
+1. Åpne GodMode9 fra arm9loaderhax ved å holde (Opp) under oppstart
+2. Navigér til 'SDCARD'
+3. Trykk (Y) på DSiWare injection '.app' for å kopiere den
+4. Trykk (B) å komme tilbake til hovedmenyen
+5. Navigér til 'SYSNAND TWLN'-> 'tittel'-> '00030004'-> '(8 tegns ID)'
+  + 8 tegns-IDen vil være en fra [DSiWare List](dsiware-list)
+6. Naviger til "content"
+7. Trykk (A) på «.app» filen i mappen
+8. Velg "Inject data @offset"
+9. Trykk (A) for å velge forskyvningen "00000000"
+10. Trykk (A) å låse opp SysNAND skriving, og trykk in den gitte tastekombinasjonen
+11. Trykk (B) å komme tilbake til hovedmenyen
+12. Navigér til 'SYSNAND TWLN'-> 'tittel'-> '00030004'-> '(8 tegns ID)'
+  + 8 tegns-IDen vil være en fra [DSiWare List](dsiware-list)
+13. Navigér til "data"
+14. Trykk (A) på "public.sav"
+15. Velg "Mount as FAT image"
+  + Hvis du ikke ser dette alternativet, gjør deg sikker på at du kjører den nyeste versjonen av GodMode9
+  + Hvis du fremdeles ikke ser dette alternativet, [rapporter denne feilen] (https://github.com/d0k3/GodMode9/issues)
+16. Dette vil ha flyttet deg tilbake til hovedmenyen
+17. Navigér til 'SDCARD'
+18. Trykk (Y) på filen(e) i 'savedata' mappen for å kopiere dem
+  + Hvis det er en 'savedata' mappe i mappen 'savedata', er det ikke en feil. Du må kopiere den andre 'savedata' mappen, ikke filene i den.
+19. Trykk (B) å komme tilbake til hovedmenyen
+20. Navigér til`FAT IMAGE`
+21. Bruk (X)-knappen for å slette alt i 'FAT IMAGE'
+22. Trykk (Y) for å lime inn en kopi av **innholdet i** `savedata` mappen til `FAT IMAGE`
+23. Velg "Copy path(s)"
+24. Trykk (A) å låse opp avbildeskriving, og gjør den gitte tastekombinasjonen
+25. Trykk (Start) for omstart
+26. Starter DSiWare-spillet på **kilde3DSen**
+27. Trykk på skjermen eller trykker på en vilkårligh knapp for å starte spillet og teste om saven fungerer
+  + Hvis du bruker EUR filene (**Legends of Exidia**), trykk (A) eller (Start) på de to tittelskjermene, velg den første lagringsposisjonen og trykk fortsett
+  + Om spillet har en feilmelding om `boot.nds` eller en hvit skjerm, **har exploiten vært vellykket**
+  + Om spillet har en feilmelding om skadet eller utilgjengelig savedata, bekreft at du kopierte **innholdet i** mappen `savedata` og ikke selve `savedata` mappen
+  + Hvis spillet fungerer normalt, og ikke gir deg en feilmelding om "boot.nds" eller en hvit skjerm, så bør du stoppe og finne ut hva som gikk galt
+  + Hvis du får en svart skjerm, [følg denne feilsøkingsveiledningen](troubleshooting#twl_broken)
+  + Hvis spillet mangler på **mål3DSen** eller har en feilmelding om skadet eller utilgjengelig save data, [Følg denne feilsøkingsveiledningen](troubleshooting#ts_dsiware)
+
+##### Seksjon IV - ctr-httpwn
+
+**Denne seksjonen er bare nødvendig hvis _mål3DSen_ er under 11.2.0.**
+
+**Dette vil gjøre det mulig å overføre systemfiler på andre versjoner enn den nyeste.**
+
+1. Kopier og flett mappen `3ds` fra ctr-httpwn `.zip` til **måle3DSen**s SD-kort
+2. Sett SD-kortet inn i **mål3DSen**
+3. Starte homebrew-launcheren på enheten ved hjelp av [Homebrew launcher (uten nettleser)](homebrew-launcher-(no-browser))
+  + **Ny3DSer på versjon 10.7.0 og 11.0.0 kan bruke [Homebrew Launcher (Nettleser)](homebrew-launcher-(browser)) istedet**
+  + **Gjør deg sikker på at menuhax ikke er installert, ellers vil det ikke være mulig å gå tilbake til hjemmemenyen fra homebrew-launcheren.**
+4. Start ctr-httpwn på **mål3DSen**
+5. Velg (A) for å fortsette
+6. Trykk (Start) for å avslutte ctr-httpwn
+7. Trykk (Start) for å åpne homebrew-launcher avslutningsmeny
+8. Trykk (X) for å gå tilbake til hjemmemenyen (uten omstart)
+  + Du kan få meldingen "Det har oppstått feil" med muligheten til å fortsette. Dette er OK, bare trykk (A)
+9. Fortsett til den neste seksjonen **uten å gjenstarte**
+  + **mål3DSen** har blitt midlertidig patchet til å tillate nettverksfunksjoner (for eksempel System Transfer) uten å kjøre den nyeste systemversjonen
+  + Vær oppmerksom på at å avslutte systeminnstillingene vil gjenstarte systemet
+  + Hvis systemet startes på nytt, må du kjøre ctr-httpwn på nytt før systemoverførselen fungerer
+
+### Seksjon V - Systemoverføring
+
+1. **Sikkerhetskopierer alle filene på begge 3DSenes SD-kort til to separate mapper på datamaskinen (hold oversikt over hvilken er hvilken)!**
+2. Putt hvert SD-kort tilbake i sine tilsvarende 3DSer
+3. Hvis **mål3DSen** har en Nintendo nettverks-ID på seg, må du formatere enheten ved hjelp av systeminnstillingene:
+  + Gå til den siste siden i "Andre innstillinger" og velg "Format systemminne", og følg alle instruksjonene
+4. Les følgende:
+  + Your CFW 3DS = the source 3DS = "Source System"
+  + Your Stock 3DS = the target 3DS = "Target System"
+  + **Move DSiWare titles if prompted!**
+  + Do **NOT** delete the source system's SD card contents if prompted
+  + Make sure neither device's battery dies during the transfer
+  + 2DS/Old 3DS (source) to New 3DS (target) only - if asked which method you wish to use to transfer the SD card data:
+    + **Do NOT** choose the "Low-Capacity microSD Card Transfer" or minimal option (option 2), it will only transfer tickets and likely will not transfer the DSiWare save.
+    + Fast Method: If you have the ability to move the data from the SD card (source) to the microSD card (target), when prompted use the "PC-Based Transfer" option (option 3).
+    + Slowest Method: If you don't have the ability to move the data on a PC use the **full** "Wireless Transfer" option (option 1).
+5. Go to [this link](http://en-americas-support.nintendo.com/app/answers/detail/a_id/227/) and follow Nintendo's official instructions for System Transferring from one system to another while keeping in mind what you just read
+
+##### Section VI - Restoring the source 3DS
+
+1. On **the source 3DS**, complete initial setup
+2. Do one of the following
+    + Do the rest of the sections and then the full guide on **the target 3DS**, then wait one week, then System Transfer from **the target 3DS** back to **the source 3DS** *(remember you cannot transfer back from a New 3DS to an Old 3DS)*
+    + Call Nintendo and tell them you no longer have access to the device that your NNID is linked to (which is **the target 3DS** in this case), and would like it linked to a different device (which is **the source 3DS** in this case)
+    + You can also just [remove the NNID](https://3ds.guide/troubleshooting#rm_nnid) from **the source 3DS** if you'd prefer it remain on **the target 3DS**
+3. Reboot **the source 3DS** while holding Start to launch Hourglass9
+4. Go to SysNAND Backup/Restore and restore SysNAND from `NANDmin.bin`
+
+##### Section VII - Backing up the target 3DS's NFIRM
+
+1. Copy the dgTool `boot.nds` to the root of **the target 3DS**'s SD card
+2. Create a folder named `dgTool` on the root of **the target 3DS**'s SD card if it does not already exist
+3. Copy the contents of the NFIRM `.zip` to the `dgTool` folder on the root of **the target 3DS**'s SD card
+4. Launch your DSiWare game on **the target 3DS**
+5. Launch dgTool by starting your DSiWare game
+  + If the game does not launch dgTool, [follow this troubleshooting guide](troubleshooting#ts_dsiware)
+6. Select "Dump f0f1" to backup **the target 3DS**'s NFIRM
+  + This will take a while
+7. Make note of the NFIRM backup's location
+8. Avslutt dgTool
+  + You may have to force power off by holding the power button
+9. Put your SD card in your computer, then copy `F0F1_N3DS.bin` or `F0F1_O3DS.bin` (depending on your device) to a safe location
+  + Lagre sikkerhetskopien flere plasser
+  + Denne sikkerhetskopien vil spare deg fra en brick hvis noe går galt i fremtiden
+
+
+##### Section VIII - Flashing the target 3DS's NFIRM
+
+**Never downgrade with dgTool on a device that already has arm9loaderhax installed or you will BRICK!**
+
+1. Launch your DSiWare game on **the target 3DS**
+2. Launch dgTool by starting your DSiWare game
+3. Select "Downgrade FIRM to 10.4" and confirm to flash the 10.4.0 NFIRM bin to **the target 3DS**
+4. Avslutt dgTool
+  + You may have to force power off by holding the power button
+5. Reboot
+
+##### Section IX - Exploit verification
+
+1. Copy and merge the `3ds` folder from the 3DSident `.zip` to **the target 3DS**'s SD card
+2. Sett SD-kortet inn i **mål3DSen**
+3. Launch the homebrew launcher on **the target 3DS** using your entrypoint
+4. Kjør 3DSident
+5. Kontroller at følgende:
+  + **Kernel version**: 2.50-11
+  + **FIRM version**: 2.50-11
+  + If either of these do not display the versions above, make sure you used the correct NFIRM zip and try flashing NFIRM again
+
+**The target 3DS**'s version number will *not* have changed in the settings.
+{: .notice--info}
+
+Continue to [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher))
+{: .notice--primary}

@@ -1,0 +1,241 @@
+---
+title: "arm9loaderhax installeren"
+permalink: /installing-arm9loaderhax.html
+lang: nl_NL
+ref: installing-arm9loaderhax
+---
+
+De laatste stap van deze handleiding is het installeren van arm9loaderhax en het instellen van Luma3DS, zodat we deze op kunnen starten een paar miliseconden na opstarten. Dit wordt bereikt door het gebruik van SafeA9LHInstaller door [AuroraWright] (https://github.com/AuroraWright/).
+{: .notice}
+
+Dit zal [AuroraWright de vork] (https://github.com/AuroraWright/arm9loaderhax) van arm9loaderhax installeren.
+{: .notice--info}
+
+Dit zal ook de mogelijkheid om payloads op te starten vanuit arm9loaderhax, wat ons de mogelijkheid geeft om onze SysNAND te unbricken in situaties waar wij normaal zouden bricken door het herstellen van een backup.
+{: .notice--info}
+
+**Je kan GEEN OTP van een andere console gebruiken, anders zal je GEGARANDEERD bricken.**
+{: .notice--danger}
+
+### Overzicht van stappen
+
+In deze sectie zullen we gaan door het proces waar alle andere stappen tot hebben geleid: het daadwerkelijk installeren van arm9loaderhax.
+
+Dit is bijna de beste exploit die er is, aangezien deze permanent geinstalleerd kan worden in de NAND FIRM partitie, en wordt geladen voordat het OS wordt geladen, Waardoor dit niet alleen werkt op *elke* versie zodra geinstalleerd. Maar ook zichzelf beschermd tegen situaties dat een niet-a9lh 3ds zou bricken bijvoorbeeld een niet werkend home menu of een slecht geinstalleerde titel.
+
+Het bestand `arm9loaderhax.bin`is wat wordt opgestart zodra arm9loaderhax wordt opgestart zodra de NAND is geladen en kan elk geldig arm9 payload laden. Dit bestand kan worden vervangen op elk gewenst moment, hoewel Luma3DS andere arm9 payloads kan opstarten bij het inhouden van knoppen.
+
+In dit geval gebruiken we Luma3DS door [AuroraWright] (https://github.com/AuroraWright/) om direct op te starten een aangepaste SysNAND, waardoor de behoefte aan enige vorm van EmuNAND niet meer nodig is, hierdoor is het makkelijker om je 3ds te gebruiken en besparen we ruimte op de SD kaart.
+
+Zodra arm9loaderhax is geïnstalleerd en Luma3DS ingesteld is met de juiste opties, daarna zetten we onze vorige backup terug.
+
+Tijdens dit proces, stellen wij ook programma's in als volgt:    
+
++ ** FBI ** *(Installeert games en apps in CIA formaat)*
++ ** Luma3DS Updater ** *(Hiermee updaten wij onze CFW makkelijk)*
++ ** Hourglass9 ** *(multifunctionele tool met NAND en cartridge functies)*
+
+#### Benodigdheden
+
+* [`aeskeydb.bin`](magnet:?xt=urn:btih:18b3a17f78e2376e05feaa150749d9fd689b25dc&dn=aeskeydb.bin&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* [`fbi-2.4.2-injectable.zip`](magnet:?xt=urn:btih:f978b4cf5eda72823240b9c649f3fd2940a9f525&dn=fbi-2.4.2-injectable.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* [`data_input_v3.zip`](magnet:?xt=urn:btih:a1195c9f7ab650fa7c7bf020b51fc19ea8d9440c&dn=data%5Finput%5Fv3.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* De nieuwste fork van [SafeA9LHInstaller] (https://github.com/Plailect/SafeA9LHInstaller/releases/latest) *(het '.7z' bestand) *
+* De laatste versie van [arm9loaderhax] (https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(het '.7z' bestand)*
+* De laatste versie van [Luma3DS] (https://github.com/AuroraWright/Luma3DS/releases/latest) *(het '.7z' bestand) *
+* De laatste versie van [hblauncher_loader] (https://github.com/yellows8/hblauncher_loader/releases/latest)
+* De laatste versie van [Hourglass9] (https://github.com/d0k3/Hourglass9/releases/latest)
+* De laatste versie van de [Luma3DS Updater] (https://github.com/Hamcha/lumaupdate/releases/latest)
+* De laatste versie van [DspDump] (https://github.com/Cruel/DspDump/releases/latest)
+* De laatste versie van [FBI] (https://github.com/Steveice10/FBI/releases/)
+* De laatste versie van [GodMode9] (https://github.com/d0k3/GodMode9/releases/)
+* De Homebrew [Starter Kit] (http://smealum.github.io/ninjhax2/starter.zip)
+
+### Instructies
+
+### Deel I - Voorbereiding
+
+{% capture notice-5 %}
+** Controleer of je een SD kaart gebruikt die NIET is beschadigd!**
+
+** Als u een beschadigde SD-kaart gebruikt zonder deze te repareren, is er kans op een BRICK!**
+
+** Als u denkt dat uw SD-kaart is beschadigd, Controleer uw SD-kaart voor fouten met behulp van [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), of [F3X (Mac)](f3x-(mac))!**
+{% endcapture %}
+
+<div class="notice--danger">{{ notice-5 | markdownify }}</div>
+
+1. ** Als er al een map genaamd '/ files9 /' is, kopieert u deze map naar een veilige locatie op uw computer en andere locaties (zoals online bestandsopslag); deze bestanden kunnen bestandsverlies voorkomen**
+2. Maak een map genaamd 'cias' in de hoofdmap van uw SD-kaart als het niet al bestaat
+3. **Verwijder de `a9lh` map van de sd kaart als deze al bestaat**
+  + ** Als u per ongeluk arm9loaderhax installeert met behulp van een 'OTP.bin' van een ander apparaat zal je BRICKEN!**
+4. Verwijder de `3ds` map van de sd kaart als deze al bestaat
+5. **kopieer _de inhoud_ van `starter.zip` naar de hoofdmap van de SD kaart**
+  + Hierbij zit een gloednieuwe '3ds' map ter vervanging van degene die u zojuist hebt verwijderd
+6. Kopieer _de inhoud van_ de SafeA9LHInstaller `.7z` naar de hoofdmap van de SD kaart
+7. **Kopieer de map 'a9lh' van 'data_input_v4.zip' naar de hoofdmap van de SD-kaart**
+8. **Kopieer _de inhoud_ van de arm9loaderhax release `.7z` naar de `a9lh`map naar de SD-kaart**
+9. Kopieer `hblauncher_loader.cia` van de hblauncher_loader `.zip` naar de `/cias/`map op de SD-kaart
+10. Copy `lumaupdater.cia` from the Luma3DS Updater `.zip` to the `/cias/` folder on your SD card
+11. Copy `FBI.cia` from the FBI `.zip` to the `/cias/` folder on your SD card
+12. **Copy `arm9loaderhax.bin` from the Luma3DS `.7z` to the root of your SD card, overwrite existing files**
+13. Create a folder named `luma` on the root of your SD card
+14. Create a folder named `payloads` in the `luma` folder on your SD card
+15. Copy `Hourglass9.bin` from the Hourglass9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `Hourglass9.bin` to `start_Hourglass9.bin`
+16. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` to `up_GodMode9.bin`
+17. Copy `aeskeydb.bin` to the `/files9/` folder on your SD card
+18. Copy `DspDump.3dsx` to the `/3ds/` folder on your SD card
+19. Copy _the contents of_ `fbi-2.4.2-injectable.zip` to the `/files9/` folder on your SD card
+
+##### Section II - Installing arm9loaderhax
+
+1. Reinsert your SD card into your 3DS
+2. Do the steps for installing arm9loaderhax on your device:
+  + You should be on 2.1.0
+  + Go to `http://dukesrg.github.io/2xrsa.html?arm11.bin` on your 3DS
+    + If you get the error "This service is not available in your region", use the System Settings to set your device's country to match the NAND region you installed with 2.1.0 ctrtransfer
+    + If you get another error, [follow this troubleshooting guide](troubleshooting#ts_browser)
+    + If you get a glitched screen, [follow this troubleshooting guide](troubleshooting#ts_safe_a9lh_screen)
+  + Press (Select) to Full Install
+  + The installer will now install arm9loaderhax on your device (this is very fast)
+  + Shut down your console, hold the power button until it turns off if necessary
+  + Copy your console specific `OTP.bin` from the `/a9lh/` folder on your SD card to a safe location on your computer and back it up to multiple locations (such as online file storage), then reinsert your SD card into your 3DS
+
+##### Section III - Configuring Luma3DS
+
+1. Hold select on boot to enter the Luma3DS menu
+  + Make sure to start holding the button before pressing power
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_a9lh)   
+  + If you boot to SafeA9LHInstaller, [follow this troubleshooting guide](troubleshooting#ts_safe_a9lh)
+2. Use the (A) button and the D-Pad to turn on the following:    
+  + **"Autoboot SysNAND"**
+  + **"Use SysNAND FIRM if booting with R"**
+  + **"Show NAND or user string in System Settings"**
+3. If you are using a **New 3DS**, you should *also* enable the following:
+  + **"New 3DS CPU" to "Clock+L2(x)"**
+    + This will increase the framerate of many games, but may cause instability in others
+    + If some games do not work properly, disable this option and try again
+4. Press Start to save and reboot
+  + If you get a black screen, just continue to the next section   
+  + If you get a "Failed to mount CTRNAND" error, just continue to the next section     
+
+##### Section IV - Restoring the System
+
+If, before following this guide, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand) instead of doing the first four steps in this section.
+{: .notice--info}
+
+1. Open Hourglass9 met arm9loaderhax door (Start) in te houden bij het opstarten
+2. Ga naar "SysNAND Backup/Restore"
+3. Ga naar "SysNAND Restore (keep a9lh)" en zet 'NANDmin.bin' terug
+4. Druk op (Start) om opnieuw op te starten
+  + Als je een zwart scherm ziet, [Volg 9.2.0 ctrtransfer](9.2.0-ctrtransfer)
+5. If your backup was of a version between 3.0.0 and 4.5.0, your console will not boot until you manually download the required firmware:
+  + Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) and rename it to `firmware.bin`
+  + Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
+  + Copy `firmware.bin` and `cetk` to the `/luma/` folder on your SD card
+  + Delete both of these files after updating your 3DS
+2. Update your 3DS by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
+  + Updates while using A9LH + Luma (what you have) are safe, stop asking about it
+  + The warning about never updating a New 3DS from 2.1.0 does not apply after restoring your NAND backup.
+  + If this gives you an error, set your DNS settings to "auto"
+  + If this still gives you an error and your NAND is below 9.2.0, [follow 9.2.0 ctrtransfer](9.2.0-ctrtransfer)
+
+
+##### Section V - Injecting FBI
+
+1. Open Hourglass9 met arm9loaderhax door (Start) in te houden bij het opstarten
+2. Go to "SysNAND Backup/Restore", then select the "Health&Safety Dump" option to dump Health & Safety to `hs.app` **(you can use Up and Down / Left and Right to change the name)**
+3. Press (B), then select the "Health&Safety Inject" option
+4. Select the FBI injectable `.app` for your region
+5. Press (A) and confirm to inject
+6. Druk op (Start) om opnieuw op te starten
+7. If you still launch to the stock Health & Safety app and have downgraded with Gateway in the past, [follow this troubleshooting guide](troubleshooting#gw_fbi)
+
+##### Section VI - Finalizing setup
+
+1. Open Health and Safety (which is now FBI)
+2. Select "SD"
+3. Select "cias"
+4. Navigate to `FBI.cia` and press (A) to install
+5. Navigate to `hblauncher_loader.cia` and press (A) to install
+6. Navigate to `lumaupdater.cia` and press (A) to install
+7. Return to the SD directory with (B)
+8. Navigate to `arm9loaderhax.bin`, then press (A) on it and select the "Copy" option
+9. Return to the FBI main menu with (B)
+10. Select "CTR NAND"
+11. Select "\<current directory>"
+12. Select the "Paste" option, then press (A) to confirm
+13. Exit with the home button
+14. Launch the Homebrew Launcher from the home menu
+15. Select "DSP Dump"
+16. Press (Start) when prompted to exit
+17. Reboot while holding Start to launch Hourglass9
+18. Go to "SysNAND Backup/Restore", then select "Health&Safety Inject"
+19. Select `hs.app` (the original one that doesn't contain FBI), then press (A) and confirm to inject
+20. Press (Select) on the main menu to eject your SD card
+21. Press (Start) to reboot with the SD card removed
+  + Booting the device at least once with the SD card removed will allow you to configure the CTRNAND based luma installation
+22. Use the (A) button and the D-Pad to turn on the following:    
+  + **"Show NAND or user string in System Settings"**
+23. If you are using a **New 3DS**, you should *also* enable the following:
+  + **"New 3DS CPU" to "Clock+L2(x)"**
+    + This will increase the framerate of many games, but may cause instability in others
+    + If some games do not work properly, disable this option and try again
+24. Reinsert your SD card, then press Start to save and reboot!
+
+___
+
+If DSi / DS functionality has broken (such as DS carts or DSiWare no longer working), [follow this troubleshooting guide](troubleshooting#twl_broken)
+{: .notice--warning}
+
+{% capture notice-10 %}
+You can now use Luma3DS Updater to update your Luma3DS to the latest version just by opening it and pressing (A).     
+This is not the same thing as a System Update; it just downloads and extracts the newest Luma3DS files. Luma3DS Updater only updates the files located on the SD card.    
+This will only update the Luma3DS files on the SD Card. If you boot the device without an SD card, it will use whatever version you placed in CTR NAND.    
+{% endcapture %}
+
+<div class="notice--info">{{ notice-10 | markdownify }}</div>
+
+{% capture notice-6 %}   
+You will now boot a Custom Firmware based SysNAND by default.    
+You can now hold (Select) on boot to launch the Luma3DS configuration menu.    
+You can now hold (Start) on boot to launch Hourglass9, an arm9loaderhax safe multipurpose NAND and cartridge tool.     
+{% endcapture %}
+
+<div class="notice--info">{{ notice-6 | markdownify }}</div>
+
+You can update your arm9loaderhax installation in the future by following the instructions on the [Updating A9LH](updating-a9lh) page.
+{: .notice--info}
+
+To use [NTR CFW](https://github.com/44670/BootNTR/), get `ntr.bin` from the appropriate `.zip` on [this](https://github.com/44670/BootNTR/releases) page and copy it to the root of your SD card, then install `BootNTR.cia` from [this](https://github.com/astronautlevel2/BootNTR/releases/latest) page.
+{: .notice--info}
+
+Keep your `NANDmin.bin` file, it can be restored by Hourglass9 to save you from a brick in the future.
+{: .notice--info}
+
+You can remove your NAND backups from `/files9/` as long as you still have them backed up to a safe location.
+{: .notice--info}
+
+{% capture notice-7 %}
+**You can remove any extra files and folders from the root of the SD card that are *not* in the following list:**
+
+    + 3ds
+    + files9
+    + hblauncherloader
+    + luma
+    + Nintendo 3DS
+    + arm9loaderhax.bin
+    + boot.3dsx
+
+{% endcapture %}
+
+<div class="notice--info">{{ notice-7 | markdownify }}</div>
+
+For information on changing your device to another region, check out the [Region Changing](region-changing) page.
+{: .notice--success}
+
+For information on keeping your A9LH installation up to date, check out the [Updating A9LH](updating-a9lh) page.
+{: .notice--success}
+
+For information on using Luma3DS's various features, check out [its wiki](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage).
+{: .notice--success}

@@ -1,0 +1,53 @@
+---
+title: "Move EmuNAND"
+permalink: /move-emunand.html
+lang: en_US
+ref: move-emunand
+---
+
+זוהי הרחבה עבור העברת התכנים מהEmuNAND הישן שלכם ל CFW SysNAND חדש, ולאחר מכן הסרת הEmuNAND הישן. Emunand וRednand כמעט מונחים נרדפים.
+{: .notice--info}
+
+אתם תאבדו את השמירות VC GBA ו DSiWare!
+{: .notice--danger}
+
+**אתם חייבים להתקין את arm9loaderhax + Luma3DS כדי להשתמש בזה.**
+{: .notice--danger}
+
+#### מה אתם צריכים
+
+* EmuNAND כמובן
+* את הגרסה העדכנית של [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+
+#### הוראות
+
+1. תעתיקו את `GodMode9.bin` מתוך הזיפ של GodMode9 אל תוך התיקייה `/luma/payloads/` שב-SD שלכם ושנו את שם הקובץ `GodMode9.bin` ל-`up_GodMode9.bin`
+2. תכניסו את ה-SD שלכם בחזרה לקונסולה
+3. תפתחו את Hourglass9 מתוך arm9loaderhax על ידי החזקה של המקש (Start) בעת הדלקה
+4. לחצו על "EmuNAND Backup/Restore", ואז תבחרו בEmunand Backup כדי לגבות את הEmunand שלכם לNANDmin_emu.bin
+5. תלחצו (B) כדי לחזור לתפריט הראשי
+6. לחצו על "SysNAND Backup/Restore", ואז לחצו על "SysNAND Restore (keep a9lh)" ובצעו שחזור מתוך `NANDmin_emu.bin`
+7. לחצו על (Select) על מנת להוציא את ה-SD
+8. תכניסו את ה SD למחשב שלכם, ואז תעתיקו את 'NANDmin_emu.bin' ו- 'NANDmin_emu.bin.sha' מהתיקיה '/ files9 /' ב SD למקום בטוח
+  + תיצרו גיבויים בכמה מקומות
+  + הגיבוי הזה ישמור עליכם מבריק אם משהו ישתבש בעתיד
+  + * * הגיבוי שלכם צריך להתאים לאחד מהגדלים בדף [הזה](nand-size); אם הוא לא, עליכם למחוק אותו ולעשות אחד חדש! * *
+9. תמחקו את 'NANDmin_emu.bin' בתיקיה '/ files9 /' על הSD
+10. * * תגבו את כל הקבצים על הSD לתיקייה במחשב שלך, כי כל הקבצים יימחקו בצעד הבא * *
+11. תכניסו את ה-SD שלכם בחזרה לקונסולה
+12. תלחצו (Start) כדי לאתחל מחדש תוך החזקת (חץ למעלה) כדי לפתוח את GodMode9
+13. תלחצו על (Home) כדי להראות את התפריט פעולה
+14. תבחרו "SD format menu"
+15. תלחצו (A) כדי לאשר
+16. תבחרו "No EmuNAND"
+17. תבחרו "Auto"
+18. תזינו את השילוב כפתורים כדי לאשר
+19. תחזיקו (R) ולחצו (B) באותו הזמן כדי להוציא את הSD
+20. תשימו את הSD במחשב שלכם, ותשחזרו את הקבצים שהיו עליו
+  + תוודאו שאתם מחליפים את הקובץ 'arm9loaderhax.bin' על כרטיס ה-SD עם האחד מהגיבוי שלכם
+21. תכניסו את ה-SD שלכם בחזרה לקונסולה
+22. תלחצו A כדי לגרום לתוכנה לקלוט שהSD חזר
+23. לחצו על (Start) על מנת להפעיל מחדש!
+24. + אם אתם מקבלים מסך שחור, [עקבו אחרי המדריך הבא](troubleshooting#ts_sys_down)
+
+תחזרו ל [Installing arm9loaderhax](installing-arm9loaderhax).
