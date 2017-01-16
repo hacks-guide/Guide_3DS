@@ -4,21 +4,21 @@ lang: en
 permalink: /installing-arm9loaderhax.html
 ---
 
-The final Step of this guide is to install arm9loaderhax and setup Luma3DS to run just milliseconds into the boot. This is accomplished by using SafeA9LHInstaller by [AuroraWright](https://github.com/AuroraWright/).
+The final Step of this guide is to install arm9loaderhax and setup Luma3DS to run just milliseconds into the boot. Dette blir oppnådd ved å bruke SafeA9LHInstaller fra [AuroraWright](https://github.com/AuroraWright/).
 {: .notice}
 
-This will install [AuroraWright's Fork](https://github.com/AuroraWright/arm9loaderhax) of arm9loaderhax.
+Dette vil installere [AuroraWright's gren](https://github.com/AuroraWright/arm9loaderhax) av arm9loaderhax.
 {: .notice--info}
 
-We will also setup the ability to launch payloads from arm9loaderhax, giving us the ability to unbrick our SysNAND from situations that would normally brick us by restoring from backup.
+Vi kommer også til å sette opp muligheten til å starte payloads fra arm9loaderhax, noe som gir oss muligheten til å unbricke SysNAND fra situasjoner som normalt ville bricke oss ved å gjenopprette fra en sikkerhetskopi.
 {: .notice--info}
 
-**You cannot use another console's OTP or you will brick GUARANTEED.**
+**Du kan ikke bruke en annen konsolls OTP det vil GARANTERT føre til en bricket enhet.**
 {: .notice--danger}
 
-#### Overview of steps
+#### Oversikt over trinnene
 
-In this section, we will go through the process that all the other steps have led up to: actually installing arm9loaderhax.
+I denne seksjonen, vil vi gå gjennom prosessen som alle de andre trinnene har ledet opp til: å faktisk installere arm9loaderhax.
 
 This is nearly the best possible kind of device exploit because it is permanently installable into the NAND firm partitions, and runs before most of the OS loads, allowing it to not only work on *all* versions once installed, but also protect itself and recover from most situations that would brick a non-A9LH 3DS such as a nonfunctional home menu or bad title install.
 
@@ -107,7 +107,7 @@ During this process, we also setup programs such as the following:
   + Make sure to start holding the button before pressing power
   + If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_a9lh)   
   + If you boot to SafeA9LHInstaller, [follow this troubleshooting guide](troubleshooting#ts_safe_a9lh)
-2. Use the (A) button and the D-Pad to turn on the following:    
+2. Bruk (A)-knappen og piltastene for å aktivere følgende:    
   + **"Autoboot SysNAND"**
   + **"Use SysNAND FIRM if booting with R"**
   + **"Show NAND or user string in System Settings"**
@@ -124,10 +124,10 @@ During this process, we also setup programs such as the following:
 If, before following this guide, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand) instead of doing the first four steps in this section.
 {: .notice--info}
 
-1. Open Hourglass9 from arm9loaderhax by holding (Start) on boot
+1. Åpne Hourglass9 fra arm9loaderhax ved å holde (Start) under oppstart
 2. Gå til "SysNAND Backup/Restore"
 3. Go to "SysNAND Restore (keep a9lh)" and restore from `NANDmin.bin`
-4. Trykk (Start) for omstart
+4. Press (Start) to reboot
   + If you get a black screen, [follow 9.2.0 ctrtransfer](9.2.0-ctrtransfer)
 5. If your backup was of a version between 3.0.0 and 4.5.0, your console will not boot until you manually download the required firmware:
   + Last ned [denne filen](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) og endre navnet til `firmware.bin`
@@ -143,12 +143,12 @@ If, before following this guide, you already had an EmuNAND setup and would like
 
 ##### Section V - Injecting FBI
 
-1. Open Hourglass9 from arm9loaderhax by holding (Start) on boot
+1. Åpne Hourglass9 fra arm9loaderhax ved å holde (Start) under oppstart
 2. Go to "SysNAND Backup/Restore", then select the "Health&Safety Dump" option to dump Health & Safety to `hs.app` **(you can use Up and Down / Left and Right to change the name)**
 3. Press (B), then select the "Health&Safety Inject" option
 4. Select the FBI injectable `.app` for your region
 5. Press (A) and confirm to inject
-6. Trykk (Start) for omstart
+6. Press (Start) to reboot
 7. If you still launch to the stock Health & Safety app and have downgraded with Gateway in the past, [follow this troubleshooting guide](troubleshooting#gw_fbi)
 
 ##### Section VI - Finalizing setup
@@ -175,7 +175,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
 20. Press (Select) on the main menu to eject your SD card
 21. Press (Start) to reboot with the SD card removed
   + Booting the device at least once with the SD card removed will allow you to configure the CTRNAND based Luma3DS installation
-22. Use the (A) button and the D-Pad to turn on the following:    
+22. Bruk (A)-knappen og piltastene for å aktivere følgende:    
   + **"Show NAND or user string in System Settings"**
 23. If you are using a **New 3DS**, you should *also* enable the following:
   + **"New 3DS CPU" til "Clock+L2(x)"**
@@ -204,7 +204,7 @@ You can now hold (Start) on boot to launch Hourglass9, an arm9loaderhax safe mul
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
 
-You can update your arm9loaderhax installation in the future by following the instructions on the [Updating A9LH](updating-a9lh) page.
+Du kan oppdatere arm9loaderhaxinstallasjonen i fremtiden ved å følge instruksjonene på [oppdatering av A9LH](updating-a9lh) siden.
 {: .notice--info}
 
 To use [NTR CFW](https://github.com/44670/BootNTR/), get `ntr.bin` from the appropriate `.zip` on [this](https://github.com/44670/BootNTR/releases) page and copy it to the root of your SD card, then install `BootNTR.cia` from [this](https://github.com/astronautlevel2/BootNTR/releases/latest) page.
