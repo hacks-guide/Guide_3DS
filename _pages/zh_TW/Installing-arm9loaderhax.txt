@@ -1,0 +1,241 @@
+---
+title: "安裝 arm9loaderhax"
+lang: zh-Hant
+permalink: /zh_TW/installing-arm9loaderhax.html
+---
+
+本教學的最後一步驟則是安裝 arm9loaderhax 並設定 Luma3DS，令它能在裝置啟動時開啟。 這是由 [AuroraWright](https://github.com/AuroraWright/) 所製的 SafeA9LHInstaller 所達成的。
+{: .notice}
+
+這將會安裝 [AuroraWright 版](https://github.com/AuroraWright/arm9loaderhax)的 arm9loaderhax。
+{: .notice--info}
+
+我們將同時設定從 arm9loaderhax 啟動 payloads 的方法。此功能可以解決在還原備份情況下所造成的磚機。
+{: .notice--info}
+
+**絕對不能使用其他 3DS 主機的 OTP 文件，否則保證磚機。**
+{: .notice--danger}
+
+#### 步驟概述
+
+在本節中，我們將完成之前所有準備工作的最終目的：安裝 arm9loaderhax。
+
+這是 3DS 上近乎完美的一種破解，因為它可以永久地被裝在 NAND 磁區裡，而且能在大部分的主系統載入完畢前運行。這讓它不僅能在*所有*版本的 3DS 上運行，而還可以保護自身，並能從大多數使非 A9LH 破解的 3DS 變磚的情況中恢復，比如像是裝了個有問題的 HOME 主選單或者一個有問題的程式。
+
+`arm9loaderhax.bin`這個檔案是在 arm9loaderhax 從 NAND 中讀取完後所開啟的，它可以是任何有效的 arm9 payload。 你隨時可以替換這檔案，不過 Luma3DS 可以在開機時透過按鍵組合以啟動任意對應的 arm9 payload。
+
+本節中，我們將使用 [AuroraWright](https://github.com/AuroraWright/) 所製的 Luma3DS 來直接啟動一個修改後的 SysNAND，使我們完全跳過需要使用任一種 EmuNAND 的步驟。這除了大量的簡化使用改機後 3DS 的步驟，還能節省 SD 卡的使用空間。
+
+當 arm9loaderhax 安裝完畢後，且 Luma3DS 正確設定後，我們將還原之前的備份。
+
+在這過程中，我們也同時安裝下列程式：    
+
++ **FBI 管理器** *（安裝 CIA 格式的遊戲及程式）*
++ **Luma3DS 更新器** *（以便更新 Luma3DS）*
++ **Hourglass9** *（多功能工具包，用來處理 NAND 及卡帶的相關功能）*
+
+#### 必備項目
+
+* [`aeskeydb.bin`](magnet:?xt=urn:btih:18b3a17f78e2376e05feaa150749d9fd689b25dc&dn=aeskeydb.bin&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* [`fbi-2.4.2-injectable.zip`](magnet:?xt=urn:btih:f978b4cf5eda72823240b9c649f3fd2940a9f525&dn=fbi-2.4.2-injectable.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* [`data_input_v3.zip`](magnet:?xt=urn:btih:a1195c9f7ab650fa7c7bf020b51fc19ea8d9440c&dn=data%5Finput%5Fv3.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* Plailect 修改過後的新版 [SafeA9LHInstaller](https://github.com/Plailect/SafeA9LHInstaller/releases/latest) *(`.7z` 檔案)*
+* 最新版的 [arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(`.7z` 檔案)*
+* 最新版的 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z` 檔案)*
+* 最新版的 [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
+* 最新版的 [Hourglass9](https://github.com/d0k3/Hourglass9/releases/latest)
+* 最新版的 [Luma3DS Updater](https://github.com/Hamcha/lumaupdate/releases/latest)
+* 最新版的 [DspDump](https://github.com/Cruel/DspDump/releases/latest)
+* 最新版的 [FBI 管理器](https://github.com/Steveice10/FBI/releases/latest)
+* 最新版的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* 自製軟體[入門套件](http://smealum.github.io/ninjhax2/starter.zip)
+
+#### 操作說明
+
+##### 第一節 — 準備工作
+
+{% capture notice-5 %}
+**確保你使用的 SD 卡沒有損壞！**
+
+**如果你用了個損壞的 SD 卡，你將會面臨磚機的風險！**
+
+**如果你認為你目前使用的 SD 卡有問題，用 H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), or [F3X (Mac)](f3x-(mac)) 來檢查！**
+{% endcapture %}
+
+<div class="notice--danger">{{ notice-5 | markdownify }}</div>
+
+1. **如果 SD 卡上有 `/files9/` 資料夾，請將它備份到多個安全的地方（像是雲端空間）；裡面的檔案可以在你系統弄壞的時候救你一命，免得所有資料遺失**
+2. 在 SD 卡的根目錄底下，建立一個新資料夾 `cias`
+3. **如果 `a9lh` 資料夾存在的話，請將它刪除**
+  + **如果你不小心用了其他裝置的 `OTP.bin` 來安裝 arm9loaderhax 就完了！（磚機）**
+4. 如果 `3ds` 資料夾存在的話，請將它刪除
+5. **解壓 `starter.zip` 裡 `starter` 資料夾中的_所有內容_到 SD 卡的根目錄底下**
+  + 裡面將有一個新的 `3ds` 資料夾以替代你剛所刪除的
+6. 解壓 SafeA9LHInstaller `.7z` 裡的_所有內容_到 SD 卡的根目錄底下
+7. **解壓 data_input `.zip` 中的 `a9lh` 資料夾到你的 SD 卡下**
+8. **解壓 arm9loaderhax `.7z` 裡的_所有內容_到 SD 卡中的 `a9lh` 資料夾底下**
+9. 解壓 hblauncher_loader `.zip` 中的 `hblauncher_loader.cia` 到 SD 卡中的 `/cias/` 資料夾底下
+10. 解壓 Luma3DS Updater `.zip` 中的 `lumaupdater.cia` 到 SD 卡中的 `/cias/` 資料夾底下
+11. 解壓 FBI `.zip` 中的 `FBI.cia` 到 SD 卡中的 `/cias/` 資料夾底下
+12. **解壓 Luma3DS `.7z` 內的 `arm9loaderhax.bin` 到 SD 卡的根目錄底下並覆蓋**
+13. 在 SD 卡的根目錄底下建立一個新的資料夾 `luma`
+14. 在 SD 上的 `luma` 資料夾中建立一個新的資料夾叫做 `payloads`
+15. 解壓 Hourglass9 `.zip` 中的 `Hourglass9.bin` 到 SD 卡中的 `/luma/payloads/` 底下，並重新命名為 `start_Hourglass9.bin`
+16. 解壓 GodMode9 `.zip` 中的 `GodMode9.bin` 到 SD 卡中的 `/luma/payloads/` 底下，並重新命名為 `up_GodMode9.bin`
+17. 在 SD 卡上，將 `aeskeydb.bin` 複製到 `/files9/` 資料夾底下
+18. 在 SD 卡上，將 `DspDump.3dsx` 複製到 `/3ds/` 資料夾底下
+19. 解壓 `fbi-2.4.2-injectable.zip` 中的_所有內容_到 SD 卡上
+
+##### 第二節 — 安裝 arm9loaderhax
+
+1. 將 SD 卡插回至你的 3DS 中
+2. 按照下列步驟以安装 arm9loaderhax：
+  + 你系統版本應該要是 2.1.0
+  + 在你的 3DS 上以瀏覽器開啟 `http://dukesrg.github.io/2xrsa.html?arm11.bin` 的連結
+    + 如果出現錯誤「當前服務在你的區域不可用（This service is not available in your region）」，請使用系統設置以修改你裝置所在的國家，使它與你 NAND 所改的 2.1.0 ctrtransfer 地區相同
+    + 如果遇到另一個錯誤的話， [請參見此疑難排解](troubleshooting#ts_browser)
+    + 如果螢幕顯示有問題的話， [請參見此疑難排解](troubleshooting#ts_safe_a9lh_screen)
+    + 如果你的 Wi-Fi 是關閉的狀態，請將 3DS 從充電器拔出，並將電池拔出個幾秒鐘
+  + 按下「選擇鍵 (Select)」以進行安裝
+  + 安裝包將安裝 arm9loaderhax 至你的裝置上（過程很快）
+  + 按任意按鈕關機
+  + 將你主機特有的 `OTP.bin` 從 SD 卡 `/a9lh/` 資料夾中複製出來並備份至各個安全的地方（像是雲端硬碟），再將你的 SD 卡插回至 3DS 中
+
+##### 第三節 — 設定 Luma3DS
+
+1. 開機時按住「選擇鍵 (Select)」以開啟 Luma3DS 選單
+  + 請確保按電源鍵之前按住「選擇鍵 (Select)」
+  + 如果黑屏，[請參見此疑難排解](troubleshooting#ts_sys_a9lh)   
+  + 如果你進入了 SafeA9LHInstaller，[請參見此疑難排解](troubleshooting#ts_safe_a9lh)
+2. 透過方向鍵及「A」以開啟下列選項：    
+  + **"Autoboot SysNAND"**
+  + **"Use SysNAND FIRM if booting with R"**
+  + **"Show NAND or user string in System Settings"**
+3. 如果你的裝置是 **新 3DS** 的話，請同時開啟下列選項：
+  + **"New 3DS CPU" to "Clock+L2(x)"**
+    + 某些情況下，這將提高遊戲的流暢度，但也有些遊戲會有不穩的情況
+    + 如果有些遊戲無法正常運作的話，試試看關閉這個選項再試一次
+4. 按下「開始鍵 (Start)」以存檔並重新啟動系統
+  + 如果黑屏，直接到下一節即可   
+  + 如果你遇到「Failed to mount CTRNAND」錯誤的話，直接跳到下一節即可     
+
+##### 第四節 — 還原系統
+
+如果你在讀本教學之前已經破解並安裝了 EmuNAND，並且想把你原來 EmuNAND 中的內容轉移到新的 SysNAND 自製韌體中，請在開始本部分操作之前先按照[遷移EmuNAND數據](move- emunand)一節進行，然後跳過本部分的前四步。
+{: .notice--info}
+
+1. 開機時按住「開始鍵 (Start)」來透過 arm9loaderhax 啟動 Hourglass9
+2. 選擇 「SysNAND Backup/Restore」
+3. 選擇 「SysNAND Restore (keep a9lh)」並從 `NANDmin.bin` 中還原系統
+4. 按下「開始鍵 (Start)」以重啟
+  + 如果黑屏，請進行[版本 9.2.0 的 ctrtransfer](9.2.0-ctrtransfer)
+5. 如果你所備份的系統版本是在 3.0.0 到 4.5.0 之間，在你下載必備的韌體前，你的主機將無法開機：
+  + 下載[此檔案](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056)並將它重新命名為`firmware.bin`
+  + 下載[此檔案](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
+  + 複製 `firmware.bin` 及 `cetk` 檔案到 SD 卡上的 `/luma/` 資料夾
+  + 在更新完你的 3DS 主機後，刪除這兩個檔案
+2. 到 3DS 主選單中更新你的主機，去「系統設置（System Settings）」、「其他設置（Other Settings）」底下選擇「系統更新（System Update）」
+  + 在 A9LH + Luma （不管你用什麼）底下更新是沒問題的，別再問啦
+  + 之前有說過千萬不要更新版本 2.1.0 的 新 3DS，這點在還原過 NAND 備份後就沒關係了。
+  + 如果過程中出現錯誤，試試到 DNS 設定底下將設定改成「自動 （auto）」
+  + 如果錯誤持續而且你 NAND 的系統版本為 9.2.0，請[進行 9.2.0 的 ctrtransfer](9.2.0-ctrtransfer)
+
+
+##### 第五節 — 注入 FBI 管理器
+
+1. 開機時按住「開始鍵 (Start)」來透過 arm9loaderhax 啟動 Hourglass9
+2. 選擇「SysNAND Options」中的「Health&Safety Dump」以匯出「健康與安全」程式至 `hs.app` **（你可以透過方向鍵更改名字）**
+3. 按下「B」，選擇「Health&Safety Inject」
+4. 選擇對應裝置區域用來注入 FBI 管理器的`.app`檔
+5. 按下「A」以確認注入
+6. 按下「開始鍵 (Start)」以重啟
+7. 如果你進入的依然是官方的「健康與警示」程式，並且之前曾經用 Gateway 進行過系統降級，[請參見此疑難排解](troubleshooting#gw_fbi)
+
+##### 第六節 — 最終設定
+
+1. 啟動「健康與安全」（改為 FBI 管理器）
+2. 選擇「SD」
+3. 選擇「cias」資料夾
+4. 選擇 `FBI.cia` 並按下「A」安裝
+5. 選擇 `hblauncher_loader.cia` 並按下「A」安裝
+6. 選擇 `lumaupdater.cia` 並按下「A」安裝
+7. 按下「B」以回到 SD 卡根目錄
+8. 選擇 `arm9loaderhax.bin`，按下「A」，並選擇「Copy」
+9. 按下「B」以回到 FBI 管理器主選單
+10. 選擇「CTR NAND」
+11. 選擇「\<current directory>」
+12. 選擇「Paste」，按下「A」確認
+13. 按「首頁鍵 (Home)」退出
+14. 從主選單中啟動 Homebrew Launcher
+15. 啟動「DSP Dump」
+16. 提示時，按下「開始鍵 (Start)」退出
+17. 重新啟動，並按住「開始鍵 (Start)」開啟 Hourglass9
+18. 選擇「SysNAND Backup/Restore」中的「Health&Safety Inject」
+19. 選擇你第一次備份出來原本的 `hs.app`，按下「A」確認安裝
+20. 於主選單按下「選擇鍵 (Select)」以卸除 SD 卡
+21. 在 SD 拔出後，按下「開始鍵 (Start)」重啟
+  + 在 SD 卡拔除的情況下開機將讓你可以在 CTRNAND 上設置 Luma3DS
+22. 透過方向鍵及「A」以開啟下列選項：    
+  + **"Show NAND or user string in System Settings"**
+23. 如果你的裝置是 **新 3DS** 的話，請同時開啟下列選項：
+  + **"New 3DS CPU" to "Clock+L2(x)"**
+    + 某些情況下，這將提高遊戲的流暢度，但也有些遊戲會有不穩的情況
+    + 如果有些遊戲無法正常運作的話，試試看關閉這個選項再試一次
+24. 重新插入你的 SD 卡，按下「開始鍵 (Start)」存檔並重啟！
+
+___
+
+如果DSi / DS 功能不能用了（像是 DS 卡帶或是 DSiWare 啟動不了了)，[請參見此疑難排解](troubleshooting#twl_broken)
+{: .notice--warning}
+
+{% capture notice-10 %}
+你現在可以用 Luma3DS Updater 來更新你裝置上的 Luma3DS，只要將它開啟然後再按下「A」就好了。     
+這跟系統更新是不一樣的；這只會下載並解壓最新的 Luma3DS 檔案。
+這只會更新 SD 卡上的 Luma3DS 檔案。 如果你在拔除 SD 卡的情況下開機，它只會用你上次放在 CTRNAND 裡的 Luma3DS 版本。    
+{% endcapture %}
+
+<div class="notice--info">{{ notice-10 | markdownify }}</div>
+
+{% capture notice-6 %}   
+預設情況下，你每次開機都會進入自製到 SysNAND 的系統中。    
+你現在可以在開機時按住「選擇鍵 (Select)」進入 Luma3DS 的設定選單。    
+你現在可以在開機時按住「開始鍵 (Start)」以進入 Hourglass9，也就是 arm9loaderhax 環境下安全的多功能 NAND 及遊戲卡帶工具包。     
+{% endcapture %}
+
+<div class="notice--info">{{ notice-6 | markdownify }}</div>
+
+你未來可以透過[更新 A9LH](updating-a9lh) 的教學更新你的 arm9loaderhax 安裝。
+{: .notice--info}
+
+若要使用 [NTR CFW](https://github.com/44670/BootNTR/)，請於[此](https://github.com/44670/BootNTR/releases)下載對應你裝置的 `ntr.bin` 並將它複製到你 SD 卡的根目錄底下，然後於[此](https://github.com/astronautlevel2/BootNTR/releases/latest)下載並安裝 `BootNTR.cia`。
+{: .notice--info}
+
+留著你的 `NANDmin.bin` 檔案，未來如果你磚機了，你能透過 Hourglass9 還原你的裝置。
+{: .notice--info}
+
+只要你電腦上還有你之前所存的 NAND 備份，你可以從 `/files9/` 中刪除所有的備份檔
+{: .notice--info}
+
+{% capture notice-7 %}
+**你可以刪除其他*不是*這些檔案的檔案：**
+
+    + 3ds
+    + files9
+    + hblauncherloader
+    + luma
+    + Nintendo 3DS
+    + arm9loaderhax.bin
+    + boot.3dsx
+
+{% endcapture %}
+
+<div class="notice--info">{{ notice-7 | markdownify }}</div>
+
+如果你想要更換你裝置的地區，請見[變更區域](region-changing)。
+{: .notice--success}
+
+如果你想要更新 A9LH，請見[更新 A9LH](updating-a9lh)。
+{: .notice--success}
+
+如果你想知道如何使用 Luma3DS 的各項功能，請見[他們的 wiki](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage)。
+{: .notice--success}
