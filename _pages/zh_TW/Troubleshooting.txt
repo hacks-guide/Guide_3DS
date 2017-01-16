@@ -1,0 +1,179 @@
+---
+title: "疑難排解"
+lang: zh-Hant
+permalink: /zh_TW/troubleshooting.html
+---
+
+如果你的 3DS 開不起來了，請在這裡找找可能相關的章節並照著步驟走。 問題解決後再繼續讀完本教學
+（本章節比較長一些，建議透過 CTRL+F 來找尋你的問題）
+{: .notice--primary}
+
+**如果你還是沒辦法解決你的問題而且你認為你需要找其他人幫忙，請將主機上 SD 卡根目錄底下的 .log 檔案弄成[Gist](https://gist.github.com/)，然後再去找人並跟他詳細地解釋問題所在加上你試了哪些步驟。**
+{: .notice--info}
+
+## <a name="twl_broken" />讀完本教學之後，我 DSi / DS 的功能都不能用了
+
+#### 必備項目
+
+* 符合你裝置的 TWL_FIRM `.cia` 檔案
+    + [`New_3DS TWL_FIRM - v9936.cia`（新 3DS）](magnet:?xt=urn:btih:eab8558c97b18b1f329a2bfcc3c899b84c082a27&dn=New%5F3DS%20TWL%5FFIRM%20-%20v9936.cia&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+    + [`Old_3DS TWL_FIRM - v8817.cia`（舊 3DS）](magnet:?xt=urn:btih:17511eadb6e6f3ff22d04f90644e37bd2d96ca43&dn=Old%5F3DS%20TWL%5FFIRM%20-%20v8817.cia&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* [`TWL Version Data - v0.cia`](magnet:?xt=urn:btih:4a106681407fede5de95cc8bda635432481f6b5d&dn=TWL%20Version%20Data%20-%20v0.cia&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* [`DS Internet - v2048.cia`](magnet:?xt=urn:btih:2b9df8496922f2546dfb0b01220068ce53c19d3d&dn=DS%20Internet%20-%20v2048.cia&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* [`DS Download Play - v1024.cia`](magnet:?xt=urn:btih:b581d3c5d98f5e621fddfc1ce5704bb45bf05a8c&dn=DS%20Download%20Play%20-%20v1024.cia&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* [`Nintendo DS Cart Whitelist - v11264.cia`](magnet:?xt=urn:btih:7b90d506ad032a581a00035616eaa17a68c48eff&dn=Nintendo%20DS%20Cart%20Whitelist%20-%20v11264.cia&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+
+#### 操作說明
+
+##### 第一節 — 準備工作
+
+1. 在 SD 卡的根目錄底下，建立一個新資料夾 `cias`
+2. 複製 `TWL Version Data - v0.cia` 檔案至 SD 卡上的 `/cias/` 資料夾中
+3. 複製 `DS Download Play - v1024.cia` 檔案至 SD 卡上的 `/cias/` 資料夾中
+4. 複製 `DS Internet - v2048.cia` 檔案至 SD 卡上的 `/cias/` 資料夾中
+5. 複製 `Nintendo DS Cart Whitelist - v11264.cia` 檔案至 SD 卡上的 `/cias/` 資料夾中
+6. 根據你的裝置而定，將 `New_3DS TWL_FIRM - v9936.cia` 或 `Old_3DS TWL_FIRM - v8817.cia` 檔案複製至 SD 卡上的 `/cias/` 資料夾中
+
+##### 第一節 — 安裝程式
+
+1. 開啟 FBI 管理器
+2. 選擇「SD」
+3. 選擇「cias」資料夾
+4. 選擇「\<current directory>」
+5. 選擇 「Install and delete all CIAs」（安裝並刪除所有 CIA 檔案）
+6. 按「首頁鍵 (Home)」退出
+
+## <a name="rm_nnid" />如何在不格式化的情況下清除 NNID
+
+#### 必備項目
+
+* 最新版的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+
+#### 操作說明
+
+1. 解壓 GodMode9 `.zip` 中的 `GodMode9.bin` 到 SD 卡中的 `/luma/payloads/` 底下，並重新命名為 `up_GodMode9.bin`
+2. 開機時按住「上」以進入 arm9loaderhax GodMode9
+3. 到 `SYSNAND CTRNAND` -> `data` -> (32 Character ID) -> `sysdata` -> `00010038`
+4. 按住「R」，並在 `00000000` 上按下「X」以重新命名此檔案
+5. 按一下「上」將名字改成 `10000000`
+6. 按「A」以儲存變更
+7. 按下「A」以解鎖 SysNAND 的寫入保護，然後按下提示的按鍵組合
+8. 回到主選單
+9. 按下「開始鍵 (Start)」以重新啟動系統
+
+## <a name="gw_fbi" />無法在 Gateway 降級過後的裝置上注入 FBI 管理器到「健康警示」程式裡
+這是因為 Gateway 所用的降級方式是非常糟糕的，那方式將在系統內留下各兩個版本的 3DS 程式。 其中一個是沒用到的版本，而 Decrypt9 不知道這點，而將 FBI 管理器注入到錯誤的程式中。
+
+#### 必備項目
+
+* 最新版的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+
+#### 操作說明
+
+1. 解壓 GodMode9 `.zip` 中的 `GodMode9.bin` 到 SD 卡中的 `/luma/payloads/` 底下，並重新命名為 `up_GodMode9.bin`
+2. 將 SD 卡插回至你的 3DS 中
+3. 開機時按住「上」以啟動 arm9loaderhax GodMode9     
+4. 到 `SYSNAND CTRNAND` -> `title` -> `00040010`
+5. 移動到對應你裝置及區域的資料夾中：
+  + **舊 3DS 歐版**: `00022300` -> `content`
+  + **舊 3DS 日版**: `00020300` -> `content`
+  + **舊 3DS 美版**: `00021300` -> `content`
+  + **新 3DS 歐版**: `20022300` -> `content`
+  + **新 3DS 日版**: `20020300` -> `content`
+  + **新 3DS 美版**: `20021300` -> `content`
+6. 注意這裡有兩組不同的 app 及 tmd 檔案，其中一組副檔名為大寫 (`.TMD` 及 `.APP`)，另一組為小寫(`.tmd` 及 `.app`)
+7. 按住「R」時再按下「Y」以建立新的資料夾
+8. 按「A」確認資料夾名稱 `newdir`（不管叫什麼都可以）
+9. 按下「A」以解鎖 SysNAND 的寫入保護，然後按下提示的按鍵組合
+10. 在大寫副檔名的每個檔案上按「L」將它們標記起來
+11. 按「Y」複製檔案
+12. 移動到 `newdir` 中
+13. 按「Y」貼上檔案
+14. 選擇 「Move path(s)」
+15. 大寫副檔名的檔案將被移至 `newdir` 資料夾中
+16. 按下「開始鍵 (Start)」以重新啟動系統
+17. 繼續[安裝 arm9loaderhax](installing-arm9loaderhax)，並重試 FBI 管理器注入
+18. 如果還是沒用的話，將大寫副檔名的檔案移回，再以同樣步驟試試小寫附檔名的檔案
+
+## <a name="ts_browser" />瀏覽器漏洞沒有用
+瀏覽器版本的漏洞（像是 browserhax 或 2xrsa）常常不穩而且還會當掉，但有時候可以透過下列步驟來修正
+
+1. 啟動網頁瀏覽器，開啟設定
+2. 滑到最下面並「清除資料（Initialize Savedata 或 Clear All Save Data）」
+3. 再試一次漏洞看看
+
+## <a name="ts_safe_a9lh" />系統都會直接開機到 SafeA9LHInstaller 底下
+你複製錯的 `arm9loaderhax.bin` 檔案到你的 SD 卡中了（SafeA9LHInstaller 包只需解壓 `3ds`資料夾及 `SafeA9LHInstaller.dat` 到 SD 卡而已）    
+
+1. 複製正確的 `arm9loaderhax.bin` 檔案
+2. 解壓 Luma3DS `.zip` 內的 `arm9loaderhax.bin` 到 SD 卡的根目錄底下
+3. 按住「選擇鍵 (Select)」重啟並繼續
+
+## <a name="ts_safe_a9lh_screen" />SafeA9LHInstaller 花屏
+這種情況有時候會發生，但原因不明。 按鈕還是可以按的，只是螢幕會有花屏的現象
+
+1. 依照原步驟進行。
+2. 按下「選擇鍵 (Select)」安裝 arm9loaderhax
+3. 等待幾秒鐘
+4. 按任意按鈕關機
+
+## <a name="ts_d9_backup" />Decrypt9 或 Hourglass9 無法還原或找不到我的備份
+
+1. 請先確保你 SD 卡的**根目錄**底下沒有叫「Decrypt9」的資料夾
+2. 試試看使用 H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), or [F3X (Mac)](f3x-(mac)) 來檢查問題你裝置的 SD 卡有沒有問題
+3. 試試看將你 SD 卡上的檔案備份起來，格式化 SD 卡，再將檔案複製回去
+4. 試試使用不同的 SD 卡
+
+## <a name="ts_sys_down" />SysNAND 啟動時黑屏
+
+1. 試試看先將 SD 卡拔出，開機完後再插回。
+    1. 按住 3DS 電源紐以強制關機。
+    2. 取出 SD 卡。
+    3. 開機。
+    4. 當 HOME 主選單出現時，重新插入你的 SD 卡。
+    5. 如果上述步驟成功的話，依照你裝置的區域到 SD 卡上的 `/Nintendo 3DS/(32 字元 ID)/(32 字元 ID)/extdata/00000000/` 中清除 HOME 主選單的外存
+        + 歐版: 刪除 `00000098`
+        + 日版: 刪除 `00000082`
+        + 美版: 刪除 `0000008f`
+        + 韓版: 刪除 `000000A9`
+2. 試試看將遊戲卡帶拔出（包括燒錄卡）
+3. 如果你有硬改而且有先前的 NAND 備份，試試看將備份還原至 SysNAND 上。
+4. 試試看進入主機的還原模式並更新你的系統    
+    *這大概無法在降級至版本 2.1.0 的 舊 3DS 上使用*    
+    **這樣會使降級到版本 2.1.0 的 新 3DS _變磚_**
+    1. 按住 3DS 電源紐以強制關機。
+    2. 按住「L+R+A+上」。
+    3. 開機。
+    4. 如果進入安全模式，*僅當你有最新固件版本進入HBL的方法，並且能進行降級的情況下*，才升級你的3DS，並再次嘗試降級。
+5. 你的 3DS 可能已經變磚了。 你可以在 [Rizon IRC 上的 #3dshacks 聊天室](https://www.reddit.com/r/3dshacks/wiki/irc) 或 [Discord 上的 3DS Hacking 伺服器](https://discord.gg/MWxPgEp)上求助。
+
+## <a name="ts_sys_a9lh" />SysNAND 在安裝完 arm9loaderhax 後開機時黑屏
+
+1. 請先確保 payload 檔案是沒問題的
+    1. 檢查 `arm9loaderhax.bin` 是否在 SD 卡的根目錄底下。
+2. 試試看重設 Luma3DS 的設定檔
+    1. 刪除 SD 卡上的 `/luma/config.bin`
+    2. 啟動後設定 Luma3DS 選項
+3. 測試啟動 Hourglass9
+    1. 在 Luma3DS 中，開機時按住「開始鍵 (Start)」
+4. 試試看刪除 HOME 主選單的外存（extdata）
+    1. 依照你裝置的區域到 SD 卡上的 `/Nintendo 3DS/(32 字元 ID)/(32 字元 ID)/extdata/00000000/` 中清除 HOME 主選單的外存
+        + 歐版: 刪除 `00000098`
+        + 日版: 刪除 `00000082`
+        + 美版: 刪除 `0000008f`
+        + 韓版: 刪除 `000000A9`
+5. 試試看將遊戲卡帶拔出（包括燒錄卡）
+6. 如果你之前有透過 Gateway 進行降級，請確保你使用的是最新版的 Luma3DS （v6.2.3 以上）
+7. 如果你 NAND 的系統版本是在 3.0.0 到 4.5.0 之間，請進行下列操作：
+    + 請先確保你 Luma3DS 是最新版本的（至少 v6.6 版）
+    + 下載[此檔案](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056)並將它重新命名為`firmware.bin`
+    + 下載[此檔案](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
+    + 複製 `firmware.bin` 及 `cetk` 檔案到 SD 卡上的 `/luma/` 資料夾
+    + 在更新完你的 3DS 主機後，刪除這兩個檔案
+8. 試試看進行[9.2.0 ctrtransfer](9.2.0-ctrtransfer)
+9. 在 [Rizon IRC 上的 #3dshacks 聊天室](https://www.reddit.com/r/3dshacks/wiki/irc) 或 [Discord 上的 3DS Hacking 伺服器](https://discord.gg/MWxPgEp)上求助。
+
+## <a name="ts_sys_blue" />開機時藍屏 (bootrom error)
+
+1. 你的 3DS 已經變磚了
+2. 你將需要[硬改](https://gbatemp.net/threads/414498/)你的主機或送修
