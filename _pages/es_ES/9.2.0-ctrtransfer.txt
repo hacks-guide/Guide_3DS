@@ -1,3 +1,97 @@
+---
+title: "9.2.0 ctrtransfer"
+lang: en
+permalink: /9.2.0-ctrtransfer.html
+---
+
+Si has realizado un downgrade a 2.1.0 pero por alguna razón **no tienes un respaldo funcional de tu NAND**, esta guía es para ti.
+{: .notice--success}
+
+Puede que tu consola no muestre los juegos instalados tras el ctrtransfer. Esto es debido a que los tickets son borrados por la transferencia, por esto es que son respaldados. Serán restaurados al final de la guía.
+{: .notice--info}
+
+Debido a que el objetivo del ctrtransfer 9.2.0 es solucionar problemas causados por la NAND existente, estos pasos, a diferencia del ctrtransfer 2.1.0, te harán respaldar sólo los tickets y las configuraciones. Fallar al respaldarlos resultará en la PÉRDIDA de todos tus juegos instalados, ¡además de tus partidas guardadas!
+{: .notice--danger}
+
+#### Qué necesitas
+
+* La última versión de [GodMode9](https://github.com/d0k3/GodMode9/releases/)
+* La última versión de [Decrypt9WIP] 
+(https://github.com/d0k3/Decrypt9WIP/releases/latest/)
+* La imagen ctrtransfer 9.2.0 para tu consola y región     
+*(si tu consola no corresponde a una de estas regiones, escoge la que corresponda a tu tipo de consola)*:
+  +    [New 3DS 9.2.0 - EUR - ctrtransfer](magnet:?xt=urn:btih:fed7bfeec0e52b42a77467cfb6ffd3e9dd2d5a70&dn=9.2.0-20E%5Fctrtransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)   
+  +    [New 3DS 9.2.0 - JPN - ctrtransfer](magnet:?xt=urn:btih:b22d67fd02b3b0e30ac991e451db0f2d32e7beca&dn=9.2.0-20J%5Fctrtransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    [New 3DS 9.2.0 - USA - ctrtransfer](magnet:?xt=urn:btih:985d47442dc470d1b9f908256bed041c63885f60&dn=9.2.0-20U%5Fctrtransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)    
+~
+  +    [Old 3DS o 2DS 9.2.0 - EUR - ctrtransfer](magnet:?xt=urn:btih:8d6142313971b08f92257e7fb1c1d5689e34ed78&dn=9.2.0-20E%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    [Old 3DS o 2DS 9.2.0 - JPN - ctrtransfer](magnet:?xt=urn:btih:24ad2b85e67013ef1f91178dca7ad2e40663b9b2&dn=9.2.0-20J%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    [Old 3DS o 2DS 9.2.0 - USA - ctrtransfer](magnet:?xt=urn:btih:1dc79a2a0babb45497961888f369423a93135e2b&dn=9.2.0-20U%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+
+#### Instrucciones
+
+##### Sección 1 - Preparativos
+
+1. Copia `GodMode9.bin` encontrado en el `.zip` de GodMode9 a la carpeta `/luma/payloads/` en tu tarjeta SD y renombra el archivo `GodMode9.bin` en `/luma/payloads/` a `up_GodMode9.bin`
+2. Copia los archivos `.bin` y `.bin.sha` encontrados en el `.zip` del ctrtransfer 9.2.0 a la carpeta `/files9/` en tu tarjeta SD
+3. Copia el archivo `Decrypt9WIP.bin` a la carpeta `/luma/payloads/` en tu tarjeta SD y renombra `Decrypt9WIP.bin` a `x_Decrypt9WIP.bin`
+4. Reinserta tu tarjeta SD en tu 3DS
+
+##### Sección II - Copia de seguridad de tickets y configuración de la consola
+
+1. Abre Decrypt9 desde arm9loaderhax manteniendo presionado (X) en el arranque
+2. Ve a "Ticket/Titlekey Options" y selecciona "Ticket Dump (SysNAND)"
+3. Presiona (Select) para extraer tu tarjeta SD e insertala en tu computadora
+4. Elimina todos los archivos `.tik` en la carpeta `/files9/` que **no empiecen** por "00-"
+  + Si ninguno empieza por "00-", entonces elimínalos todos
+5. Inserta de nuevo tu tarjeta SD en la 3DS y presiona (B) para volver al menú principal
+6. Ve a "SysNAND Options", luego a "System Save Dump" y selecciona "Dump configsave.bin"
+
+##### Sección III - ctrtransfer
+
+1. Ve hacia "SysNAND Options", luego a "CTRNAND Transfer" y después a "Auto CTRNAND Transfer"
+2. Ingresa la combinación de teclas dada, luego selecciona la imagen ctrtransfer 9.2.0 cuando se te pida presionando (A)
+3. Si aún no tienes una copia de seguridad de la SysNAND, **presiona (A) cuando se te pida para crear una con el nombre de `NANDmin.bin`**
+4. Deja que acabe el proceso de ctrtransfer puesto que podría llevar algo de tiempo
+5. Cuando la transferencia se haya completado, presiona (Select) para extraer la tarjeta SD
+6. Inserta tu tarjeta SD en tu computadora, copia `NANDmin.bin` y `NANDmin.bin.sha` desde la carpeta `/files9/` a un lugar seguro
+  + Haz copias de seguridad en diferentes sitios
+  + Esta copia de seguridad puede salvarte de un brick si algo sale mal en el futuro
+  + **Tu copia de seguridad debe coincidir con alguno de los tamaños especificados en [esta](nand-size) página; si no es así, ¡debes borrarla y hacer una nueva!**
+7. Borra los archivos`.bin` y `.bin.sha` de la imagen ctrtransfer 9.2.0 de la carpeta `/files9/`en tu tarjeta SD
+8. Reinserta tu tarjeta SD en tu 3DS
+9. Presiona (Start) para reiniciar
+10. Actualiza tu 3DS dirigiéndote a "Configuración de la consola", luego a "Otras opciones" y después ve al último menú de la derecha y pulsa en "Actualización"
+  + Actualizar la consola teniendo A9LH y Luma (lo que acabas de instalar) es seguro, no vuelvas a preguntarlo
+  + Si esto te da un error, ajusta tu configuración de DNS a "obtención automática"
+
+##### Sección IV - Restaurar la configuración de la consola
+
+1. Reinicia mientras mantienes presionado (X) para abrir Decrypt9 arm9loaderhax
+2. Ve a "SysNAND Options", luego "System Save Inject" y selecciona "Inject configsave.bin"
+3. Presiona (B) para volver al menú principal
+
+##### Sección V - Inyectar FBI
+
+1. Ve a "SysNAND options", luego "Miscellaneous", luego selecciona la opción "Health&Safety Dump" para extraer Información sobre salud y Seguridad a `hs.app` **(puedes usar las flechas para cambiar el nombre)**
+2. Presiona (B), luego selecciona la opción "Health&Safety Inject"
+3. Selecciona el `.app` inyectable de FBI correspondiente a tu región
+4. Presiona (A) y confirma para inyectar
+5. Presiona (Start) para reiniciar
+6. Si aún así abres la aplicación normal de Información sobre salud y seguridad y downgradeaste con Gateway en el pasado, [sigue esta guía](troubleshooting#gw_fbi)
+
+##### Sección VI - Reinstalar Tickets
+
+Si antes no tenias tickets que comenzaran con 00-, puedes saltarte esta sección.
+{: .notice--info}
+
+1. Abre FBI
+2. Selecciona "SD"
+3. Selecciona "files9"
+4. Selecciona "\<current directory>"
+5. Selecciona "Install and delete all tickets"
+6. Espera. El sistema aparentará estar congelado, simplemente dale tiempo.
+7. Presiona (A) para confirmar
 8. Presiona (B) para rechazar la instalación de tickets desde CDN.
 9. Sal presionando el botón HOME
 
