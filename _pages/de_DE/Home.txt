@@ -1,0 +1,79 @@
+---
+layout: splash
+title: "Guide"
+lang: en
+permalink: /index.html
+header:
+  overlay_color: "#5e616c"
+  overlay_image: images/home-page-feature.jpg
+  overlay_filter: 0.5
+  cta_label: "Los geht's"
+  cta_url: "get-started"
+  caption:
+excerpt: 'A complete guide to 3DS custom firmware, <br /> from stock to arm9loaderhax.<br />'
+---
+
+{% capture notice-home %}
+**Diese Anleitung ist _nur_ für Handelsübliche Konsolen (vom Endnutzer im Handel erworben; nicht aus dem Nintendo Entwickler Programm bezogen) gedacht!    
+Wenn du eine Entwicklerkonsole ("PANDA" oder "SNAKE") besitzt, wirf einen Blick auf den [devGuide](https://dev.3ds.guide)**
+{% endcapture %}
+
+<div class="notice--danger">{{ notice-home | markdownify }}</div>
+
+** Um die [magnet] (https://en.wikipedia.org/wiki/Magnet_URI_scheme) Links in dieser Anleitung zu verwenden, brauchst du einen Torrent Client wie [Deluge] (http://dev.deluge-torrent.org/wiki/Download) **
+{: .notice--info}
+
+**Diese Anleitung benötigt *deine* Hilfe für die [Übersetzung](https://translate.3ds.guide/) in andere Sprachen!**
+{: .notice--success}
+
+**Diese Anleitung braucht *deine* Hilfe, um [diese](https://3ds.guide/rss.xml) Torrents zu seeden!**
+{: .notice--success}
+
+**Bevor du fortfährst, lies alle Einleitungsseiten.**
+{: .notice--warning}
+
+## Was ist Homebrew?
+
+[**Homebrew**](https://de.wikipedia.org/wiki/Homebrew) bezeichnet für gewöhnlich Software, die nicht von Nintendo autorisiert wurde. Es erlaubt dir, Homebrew-Spiele, -Werkzeuge (wie beispielsweise Spielstandbearbeitung/-sicherung), oder Emulatoren für verschiedene ältere Konsolen laufen zu lassen.
+
+In den meisten Fällen kannst du Homebrew auf deiner Konsole mit Hilfe der Nintendo 3DS Sound-App komplett kostenlos nutzen. Es gibt aber auch verschiedene andere Exploits, z. B. im Browser oder in kommerziellen Spielen, die zur Ausführung von Homebrew genutzt werden können.
+
+## Was ist Custom Firmware?
+
+**Custom Firmware** ("CFW") ermöglicht dir fortgeschrittene Hacks, welche Userland-Homebrew nicht ohne weiteres erlaubt. Zum Beispiel lassen sich mit Hilfe von Signatur-Patches unsiginierte Titel installieren, die direkt im HOME-Menü erscheinen.
+
+CFW kann leicht auf Konsolen mit der Systemsoftwareversion 11.2.0 (aktuellste) oder älter installiert werden.
+
+## Was wird mit dieser Anleitung installiert?
+
+Diese Anleitung hat das Ziel, einen 3DS mit Standardsoftware durch eine Installation
+von Custom Firmware auf Basis von arm9loaderhax zu begleiten. Für manche Versionen wird Homebrew als Ausgangspunkt benötigt, jedoch ist Custom Firmware trotzdem das Ziel.
+
+Arm9loaderhax ist die neueste und beste Methode um Custom Firmware auszuführen. Es gibt uns, ähnlich wie BootMii für die Wii, wenige Millisekunden nach dem Systemstart fast volle Kontrolle über das System.
+
+Die Vorteile von arm9loaderhax gegenüber anderen Methoden, Custom Firmware auszuführen, sind zahlreich. Deshalb ist es empfohlen, diesen Guide zu benutzen, und nicht andere, welche auf veralteter Software (zum Beispiel Menuhax oder rxTools) basieren.
+
+## Was kann ich mit Custom Firmware anstellen?
+
++ Spiele unabhängig der Region alle Game Cards und eShop Spiele
++ Richte dein Home Menü mit selbsterstellten [Themes](https://3dsthem.es/) und [Badges](https://badges.3dsthem.es/) ein
++ Nutze "ROM-Hacks" für Spiele, die du besitzt
++ Nimm Screenshots deiner Spiele und Programme auf
++ [Erstelle Sicherheitskopien von Speicherständen](https://gbatemp.net/threads/release-jks-savemanager-homebrew-cia-save-manager.413143/) der meisten Spiele und editiere bzw. verwalte sie
++ Emuliere Spiele von älteren Konsolen mit Hilfe von RetroArch und anderen Emulatoren. (Funktioniert am besten mit einem New 3DS)
++ Installiere Homebrewtitel so, dass sie ein Symbol im HOME-Menü erhalten
++ Erstelle Sicherheitskopien deiner Cartridges in einem installierbaren Format, um deine Spiele ohne Cartridge spielen zu können
++ Nur für den New 3DS: Streame Gameplay über Wifi auf deinen PC mittels NTR CFW
++ Nutze viele alte Nintendo DS Flashkarten die vor langer Zeit geblockt wurden oder nie auf dem 3DS funktionierten
++ Installiere Systemupdates, ohne die Möglichkeit Homebrew auszuführen zu verlieren
+
+## Was muss ich wissen, bevor ich anfange?
+
++ **Bevor du mit dieser Anleitung anfängst, musst du die Risiken kennen: JEDES mal wenn du deinen 3DS modifizierst, besteht die Gefahr eines BRICKS, der deine Konsole UNWIDERRUFLICH unbrauchbar macht. Ein Brick tritt selten auf, aber ein Restrisiko bleibt bestehen, also befolge ALLE Anweisungen dieser Anleitung GENAUESTENS.**
++ Wenn du deinen 3DS bereits modifiziert hast und bereits über ein EmuNAND-Setup verfügst, kannst du den Inhalt des vorherigen EmuNANDs auf dein neues CFW-SysNAND transferieren. Befolge dazu alle Anweisungen zum Wiederherstellen des EmuNAND sobald du im Abschnitt [arm9loaderhax installieren](installing-arm9loaderhax) dazu aufgefordert wirst.
++ Diese Anleitung funktioniert beim New 3DS, Old 3DS (dem Vorgängermodell) und dem 2DS aller Regionen mit Firmware 11.2.0 oder niedriger *(mit Ausnahme der Regionen CHN / TWN)*.
++ Wenn alles nach Plan verläuft, wirst du keine Daten verlieren und dein System wird die gleichen Daten wie vorher haben (Spiele, NNID, Speicherstände, etc. werden erhalten bleiben).
++ **Sorge dafür, dass die Konsole während des gesamten Prozesses geladen und am Stromnetz angeschlossen ist, um Datenverlust oder Schäden durch ein unerwartetes Abschalten zu vermeiden!**
++ Deine SD-Karte sollte mit [MBR, nicht GPT](http://www.howtogeek.com/245610/) formatiert sein. (Die mitgelieferte SD-Karte ist standardmäßig mit MBR formatiert).
++ Falls du eine neue SD-Karte formatieren musst, kannst du [`guiformat`](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) benutzen und die Größe der Zuordnungseinheiten ("Allocation Unit Size") auf 32K setzen.
++ Der 2DS ist Softwaremäßig im Wesentlichen identisch zum Old 3DS, und alle Schritte für den Old 3DS können auch für den 2DS durchgeführt werden.

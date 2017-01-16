@@ -1,0 +1,101 @@
+---
+title: "2.1.0 ctrtransfer"
+lang: en # see http://www.w3schools.com/TagS/ref_language_codes.asp for lang codes
+permalink: /2.1.0-ctrtransfer.html # translations should be /<locale>/<file>.html (i.e.: /es_ES/credits.html) (see https://github.com/Plailect/Guide/tree/l10n/_pages for locale codes)
+---
+
+Jeśli obniżysz wersję firmware do 2.1.0 w konsoli 2DS lub New 3DS, nie włączając wcześniej komunikacji bezprzewodowej (Wi-Fi), możesz ją włączyć ponownie poprzez wyjęcie baterii i odłączenie ładowarki od konsoli na kilka sekund a następnie ponowne jej uruchomienie.
+{: .notice--info}
+
+Jeśli używałeś funkcji "microSD Management" w New 3DS do transferu plików na kartę pamięci, nie będzie ona dostępna na firmware 2.1.0, upewnij się, że posiadasz czytnik kart microSD zanim przejdziesz dalej.
+{: .notice--info}
+
+Twoje urządzenie może nie pokazywać twoich zainstalowanych gier po ctrtransfer. Jest to wynikiem usunięcia biletów w trakcie transferu, dlatego wcześniej należy wykonać ich kopię. Będą one przywrócone na końcu instrukcji.
+{: .notice--info}
+
+**Póki co, połączenie internetowe jest WYMAGANE do kontynuowania instrukcji po operacji ctrtransferu do wersji 2.1.0**
+{: .notice--warning}
+
+**Wyłącz kontrolę rodzicielską urządzenia zanim przystąpisz do ctrtransferu do 2.1.0. Jeśli nie znasz hasła, zobacz [tą] (https://mkey.salthax.org/) stronę.**
+{: .notice--warning}
+
+**Przeprowadzenie ctrtransferu usunie wszystkie bilety zainstalowane przez użytkownika do czasu przywrócenia kopii zapasowej NAND. W ŻADNYM WYPADKU nie powinieneś pomijać utworzenia tej kopii!**
+{: .notice--danger}
+
+**Nigdy nie formatuj konsoli 2DS z firmware <6.00, ponieważ nie będziesz miał możliwości ukończenia ustawień wstępnych (ze względu na brak przełącznika 3D), powodując tym samym BRICK!**
+{: .notice--danger}
+
+**Nigdy nie aktualizuj konsoli New 3DS z firmware 2.1.0 (oryginalnie występującym tylko na konsoli Old 3DS), gdyż spowoduje to BRICK! Zanim wykonasz aktualizację, MUSISZ przywrócić kopię zapasową NAND lub wykonać ctrtransfer spowrotem do oryginalnego firmware dla konsoli New 3DS!**
+{: .notice--danger}
+
+####Przegląd kroków
+
+W tej sekcji, będziemy wgrywać partycję [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) twojej konsoli w wersji 2.1.0 w celu wykorzystania luki w firmware 2.1.0 do zrzucenia pliku [OTP](https://www.3dbrew.org/wiki/OTP_Registers), unikalnego dla twojej konsoli. Plik OTP jest niezbędy to zainstalowania arm9loaderhax i **nie może być** wykorzystany na innych konsolach.
+
+Obniżenie wersji partycji [CTRNAND] dokonane będzie poprzez [wgranie przygotowanego wcześniej pliku ctrtransfer] https://www.reddit.com/r/3dshacks/comments/4zhe4a/) w wersji 2.1.0, skopiowanie do niej plików unikalnych dla konsoli (takich jak 'movable.sed' oraz 'SecureInfo_A'), a następnie, naprawienie bazy zainstalowanych tytułów.
+
+#### Czego potrzebujesz
+
+* Będziesz potrzebował urchomić aplikację Decrypt9
+* Plik ctrtransfer 2.1.0 dla twojego regionu i typu konsoli     
+*(jeśli twoja konsola nie jest z żadnego z tych regionów, po prostu wybierz dowolny)*:
+  +    [New 3DS lub Old 3DS lub 2DS 2.1.0 - EUR - ctrtransfer](magnet:?xt=urn:btih:89acc9c1b488b8b38251de0ddf07975d6bd354a1&dn=2.1.0-4E%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    [New 3DS lub Old 3DS lub 2DS 2.1.0 - JPN - ctrtransfer](magnet:?xt=urn:btih:3dbb9c9c85a33c6242f424dcbaebcacdd8a5912b&dn=2.1.0-4J%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    [New 3DS lub Old 3DS lub 2DS 2.1.0 - USA - ctrtransfer](magnet:?xt=urn:btih:1609ce9ee7b0ed9b6dea0b3e7cca4fc52dad6ff4&dn=2.1.0-4U%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+
+#### Instrukcje
+
+#### Sekcja I - Przygotowanie
+
+Do poniższych kroków powinieneś mieć uruchomione Decrypt9.
+
+1. Naciśnij (Select) w głównym menu Decrypt9, wyciągnij kartę SD ze swojej konsoli, a następnie włóż ją do czytnika w komputerze
+2. Skopiuj pliki ctrtransfer o rozszerzeniu '.bin' oraz '.bin.sha' z archiwum '.zip' do folderu '/files9/' na twojej karcie SD
+3. Włóż kartę SD z powrotem do swojego 3DS
+4. Naciśnij (B) aby wrócić do głównego menu Decrypt9
+
+#### Sekcja II - ctrtransfer
+
+**Posiadanie kopii zapasowej NAND _twojej_ konsoli jest WYMAGANE. Jeśli jeszcze nie posiadasz kopii zapasowej, część z poniższych kroków obejmuje jej utworzenie
+{: .notice--danger}
+
+**Jeśli nie wiesz, czy już posiadasz kopię zapasową NAND, dla pewności utwórz ją kiedy zostaniesz o to zapytany przez Decrypt9 poprzez naciśnięcie (A).**
+{: .notice--danger}
+
+**Jeśli nie masz wystarczającej ilości miejsca na karcie SD do utworzenia kopii zapasowej NAND, możesz utworzyć ją na innej karcie SD lub zwolnić miejsce na obecnie używanej karcie poprzez naciśnięcie (Select) w głównym menu Decrypt9WIP. Umożliwi ci to bezpieczne wyjęcie karty SD i zamienienie ją z inną kartą SD lub zwolnienie miejsca na obecnej karcie
+{: .notice--danger}
+
+1. Przejdź do "SysNAND Options", następnie "CTRNAND Transfer", a następnie "Auto CTRNAND Transfer"
+2. Input the key combo given, then select the 2.1.0 ctrtransfer image when prompted by pressing (A)
+3. Jeśli nie posiadasz jeszcze kopii zapasowej NAND, potwierdź **backup SysNAND to 'NANDmin.bin' poprzez naciśnięcie (A)**
+  Posiadanie kopii zapasowej NAND _twojej_ konsoli jest WYMAGANE.**
+  + **Pominięcie utworzenia kopii zapasowej NAND spowoduje UTRATĘ wszystkich zainstalowanych gier oraz ich zapisów stanu!**
+4. Zaczekaj, aż proces się zakończy. Może to zająć trochę czasu
+5. Kiedy transfer dobiegnie końca, naciśnij (B) aby powrócić do głównego menu Decrypt9
+6. Naciśnij (Select) aby bezpiecznie wyjąć kartę SD
+7. Usuń plik 2.1.0 ctrtransfer, o rozszerzeniu `.bin` oraz `.bin.sha` z folderu `/files9/` na karcie SD
+8. Naciśnij (Start) aby uruchomić ponownie konsolę bez wkładania do niej karty SD
+  +Dopóki znajdujesz się na firmware 2.1.0, twoja konsola podczas uruchamiania zatrzyma się na czarnym ekranie jeśli znajduje się w niej karta SD zanim załaduje się home menu
+  +Dopóki twoja konsola działa z firmware 2.1.0, będziesz musiał wyjąć kartę SD za każdym razem kiedy uruchamiasz ją ponownie i włożyć ją z powrotem dopiero gdy załaduje się home menu
+  + Na razie, pozostaw kartę SD wyciągniętą z konsoli, gdyż będziesz kopiował na nią pliki na następnej stronie tej instrukcji
+  +Problem ten zostanie rozwiązany kiedy przywrócisz swoją konsolę do oryginalnego firmware na następnej stronie
+
+___
+
+Pierwszy rozruch firmware 2.1.0 może zająć nieco dłużej na niektórych konsolach niż standardowy rozruch.
+{: .notice--info}
+
+*(Zniekształcenia i błędy w kolorach obrazu są normalne na niektórych konsolach z firmware 2.1.0, znikną one kiedy po przywróceniu firmware z utworzonej kopii zapasowej)*
+{: .notice--info}
+
+{% capture notice %}
+**Przejście w tryb uśpienia na New 3DS z firmware 2.1.0 powoduje NIEODWRACALNY brick**
+**Przez tryb uśpienia rozumie się zamknięcie pokrywy konsoli podczas gdy jest uruchomiona: nie dotyczy to wyłączenia konsoli za pomocą przycisku zasilania.**
+**Konsola przechodzi w tryb uśpienia tylko wówczas, gdy zostanie zamknięta pokrywa podczas jej działania. Nie następuje to po upływie określonego czasu ani pod wpływem innych czynników.**
+**Niemniej, zaleca się niezwłoczną kontynuację niniejszej instrukcji w celu uniknięcia tej możliwości!**
+{% endcapture %}
+
+<div class="notice--danger"> {{ notice | markdownify }}</div>
+
+Przejdź do [Instalacja arm9loaderhax](installing-arm9loaderhax)
+{: .notice--primary}

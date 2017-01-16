@@ -1,0 +1,62 @@
+---
+title: "F3 (Linux)"
+lang: en # see http://www.w3schools.com/TagS/ref_language_codes.asp for lang codes
+permalink: /f3-(linux).html # translations should be /<locale>/<file>.html (i.e.: /es_ES/credits.html) (see https://github.com/Plailect/Guide/tree/l10n/_pages for locale codes)
+---
+
+Deze pagina legt uit hoe je je SD-kaart checkt op fouten met F3.
+{: .notice}
+
+Afhankelijk van de grootte van je SD-kaart en de snelheid van je computer kan dit proces een aantal uur duren!
+{: .notice--info}
+
+Deze pagina is alleen voor Linux gebruikers. Als je geen Linux gebruikt, zie dan de [H2testw (windows)](h2testw-(windows)) of [F3X (mac)](f3x-(mac)) pagina.
+{: .notice--info}
+
+#### Benodigdheden
+
+* De nieuwste versie van [F3](https://github.com/AltraMayor/f3/archive/v6.0.zip)
+
+#### Instructies
+
+1. Unzip het f3 `.zip` bestand
+2. `cd` naar de bestandslocatie van f3
+3. Voer `make` uit om F3 te compileren
+4. Plaats je SD-kaart in je computer
+5. Mount je SD kaart
+6. Voer `./f3write <jouw SD kaart mount locatie>` uit
+7. Wacht totdat het proces voltooid is. Zie hieronder voor een voorbeeld van de uitkomst.
+
+		$./ f3write /media/michel/6135-3363/
+		Free space: 29.71 GB
+		Creating file 1.h2w ... OK!
+		...
+		Creating file 30.h2w ... OK!
+		Free space: 0.00 Byte
+		Average Writing speed: 4.90 MB/s
+
+8. Voer `./f3read <jouw SD kaart mount locatie>` uit
+9. Wacht totdat het proces voltooid is. Zie hieronder voor een voorbeeld van de uitkomst.
+
+		$ ./f3read /media/michel/6135-3363/
+		                  SECTORS      ok/corrupted/changed/overwritten
+		Validating file 1.h2w ... 2097152/        0/      0/      0
+		...
+		Validating file 30.h2w ... 1491904/        0/      0/      0
+
+		  Data OK: 29.71 GB (62309312 sectors)
+		Data LOST: 0.00 Byte (0 sectors)
+			       Corrupted: 0.00 Byte (0 sectors)
+			Slightly changed: 0.00 Byte (0 sectors)
+			     Overwritten: 0.00 Byte (0 sectors)
+		Average Reading speed: 9.42 MB/s
+
+
+Als het resultaat van de test `Data LOST: 0.00 Byte (0 sectors)` is, dan is je SD-kaart goed en kun je alle `.h2w` bestanden van je SD-kaart verwijderen
+{: .notice--success}
+
+Als de test iets anders laat zien, kan het zijn dat je SD-kaart corrupt of kapot is en moet je hem wellicht vervangen!
+{: .notice--danger}
+
+Ga terug naar [Begin](get-started)
+{: .notice--primary}

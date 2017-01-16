@@ -1,0 +1,92 @@
+---
+title: "更新 A9LH"
+lang: zh-Hant # see http://www.w3schools.com/TagS/ref_language_codes.asp for lang codes
+permalink: /zh_TW/updating-a9lh.html # translations should be /<locale>/<file>.html i.e.: /es_ES/credits.html
+---
+
+### 最後更新︰ 2016 年 11 月 3 日
+
+安裝 arm9loaderhax 本身是由安裝至裝置上 NAND 晶片 NFIRM 磁區中的 payloads 組成。 這些 payloads 檔很少會需要更新，而且真正目的只是為了啟動 SD 卡中的 `arm9loaderhax.bin`，也就是我們的 Luma3DS。
+{: .notice}
+
+如果你不確定你所裝的 arm9loaderhax 版本是什麼，照做以下步驟就對了，因為它將會把 arm9loaderhax 更新至最新版本。 就算你本來安裝的就是最新版的，再更新是沒關係的。
+{: .notice--info}
+
+如果你有在 Luma 上設定 PIN 碼，你需要先把它關掉才能繼續。 在更新後就可以重新啟用 PIN 碼。
+{: .notice--info}
+
+如果你用的 payload 不會自動初始化螢幕（像是 Bootanim9），你將會需要把 `arm9loaderhax.bin` 重新命名為 `arm9loaderhax_si.bin`
+{: .notice--info}
+
+data_input 的版本指的是 `.zip` 相容於不同安裝器版本的更新版，而跟更新 A9LH 本身（payload 檔）*不一樣*。 它們在安裝過程之外無實際差異。
+{: .notice--info}
+
+下列步驟有將會更新各式 payloads 及 AES 金鑰資料庫。
+{: .notice--success}
+
+#### 必備項目
+
+* [`aeskeydb.bin`](magnet:?xt=urn:btih:18b3a17f78e2376e05feaa150749d9fd689b25dc&dn=aeskeydb.bin&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* [`data_input_v4.zip`](magnet:?xt=urn:btih:00f03ff69b5961307303d5e4778a2f65a528bf2d&dn=data%5Finput%5Fv4.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* The latest release of [SafeA9LHInstaller](https://github.com/AuroraWright/SafeA9LHInstaller/releases/latest) *(the `.7z` file)*
+* 最新版的 [arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(`.7z` 檔案)*
+* 最新版的 [Hourglass9](https://github.com/d0k3/Hourglass9/releases/latest)
+
+#### 操作說明
+
+**請於接下來的步驟中_覆蓋_所有的檔案。**
+
+##### 第一節 — 準備工作
+
+1. 如果 `aeskeydb.bin` 檔案存在於 SD 卡根目錄底下的話，請將它刪除
+2. 如果 `a9lh` 資料夾存在的話，請將它刪除
+3. 在 SD 卡上，將 `aeskeydb.bin` 複製到 `/files9/` 資料夾底下
+4. 解壓 Hourglass9 `.zip` 中的 `Hourglass9.bin` 到 SD 卡中的 `/luma/payloads/` 底下，並重新命名為 `start_Hourglass9.bin`
+5. 從 SafeA9LHInstaller `.zip` 中解壓 `arm9loaderhax.bin` 到 SD 上的 `/luma/payloads/` 中
+6. 在 `/luma/payloads/` 中重新命名 `arm9loaderhax.bin` 為 `down_safea9lhinstaller.bin`
+7. 解壓 `data_input_v4.zip` 中的 `a9lh` 資料夾到你的 SD 卡下
+8. 解壓 arm9loaderhax `.7z` 裡的_所有內容_到 SD 卡中的 `a9lh` 資料夾底下
+9. 解壓 Luma3DS `.zip` 內的 `arm9loaderhax.bin` 到 SD 卡的根目錄底下並覆蓋
+10. 將 SD 卡插回至你的 3DS 中
+
+##### 第二節 — Payload 更新
+
+1. 於開機時，按住「下」鍵
+2. 按下「選擇鍵 (Select)」更新 arm9loaderhax
+3. 關機並將 SD 卡插回電腦中
+4. 將 `a9lh` 資料夾從 SD 卡中刪除
+5. 從 `/luma/payloads/` 中刪除 `down_safea9lhinstaller.bin`
+
+##### 第三節 — 設定 Luma3DS
+
+1. 將 SD 卡插回至你的 3DS 中，並開機按住「選擇鍵 (Select)」
+2. 透過方向鍵及「A」以開啟下列選項：    
+  + **"Autoboot SysNAND"**
+  + **"Use SysNAND FIRM if booting with R"**
+  + **"Show NAND or user string in System Settings"**
+3. 如果你的裝置是 **新 3DS** 的話，請同時開啟下列選項：
+  + **"New 3DS CPU" to "Clock+L2(x)"**
+    + 某些情況下，這將提高遊戲的流暢度，但也有些遊戲會有不穩的情況
+    + 如果有些遊戲無法正常運作的話，試試看關閉這個選項再試一次
+4. Press (Start) to save and reboot
+
+##### 第四節 — CTRNAND Luma3DS
+
+1. 開啟 FBI 管理器
+2. 選擇「SD」
+3. 選擇 `arm9loaderhax.bin`，按下「A」，並選擇「Copy」
+4. 按下「B」以回到 FBI 管理器主選單
+5. 選擇「CTR NAND」
+6. 選擇「\<current directory>」
+7. 選擇「Paste」，按下「A」確認
+8. 按「首頁鍵 (Home)」退出
+9. 關機並拔出 SD 卡
+10. SD 卡拔出後，按住「選擇鍵 (Select)」並開機
+  + Booting the device at least once with the SD card removed will allow you to configure the CTRNAND based Luma3DS installation
+11. 透過方向鍵及「A」以開啟下列選項：    
+  + **"Show NAND or user string in System Settings"**
+12. 如果你的裝置是 **新 3DS** 的話，請同時開啟下列選項：
+  + **"New 3DS CPU" to "Clock+L2(x)"**
+    + 某些情況下，這將提高遊戲的流暢度，但也有些遊戲會有不穩的情況
+    + 如果有些遊戲無法正常運作的話，試試看關閉這個選項再試一次
+13. 重新插入你的 SD 卡，按下「開始鍵 (Start)」存檔並重啟！

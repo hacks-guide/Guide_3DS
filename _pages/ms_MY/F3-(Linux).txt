@@ -1,0 +1,62 @@
+---
+title: "F3 (Linux)"
+lang: en
+permalink: /f3-(linux).html
+---
+
+Halaman ini akan menunjukkan anda proses memeriksa error pada kad SD anda menggunakan F3.
+{: .notice}
+
+Depending on the size of your SD card and the speed of your computer, this process can take up to several hours!
+{: .notice--info}
+
+Laman ini hanya untuk pengguna Linux sahaja. Jika anda tidak berada di Linux, lihat halaman [H2testw (windows)](h2testw-(windows)) atau [F3X (mac)](f3x-(mac)).
+{: .notice--info}
+
+#### Apa yang ada perlukan
+
+* Versi terkini [F3](https://github.com/AltraMayor/f3/archive/v6.0.zip)
+
+#### Arahan
+
+1. Unzip f3 fail `.zip`
+2. `cd` ke dalam f3 directori
+3. Run `make` untuk compile F3
+4. Pasang kad SD anda ke dalam komputer
+5. Mount SD card anda
+6. Run `./f3write <your sd card mount point>`
+7. Tunggu sehingga proses selesai. Lihat dibawah sebagai contoh output.
+
+		$ ./f3write /media/michel/6135-3363/
+		Free space: 29.71 GB
+		Creating file 1.h2w ... OK!
+		...
+		Creating file 30.h2w ... OK!
+		Free space: 0.00 Byte
+		Average Writing speed: 4.90 MB/s
+
+8. Run `./f3read <lokasi sd kad mount point anda>`
+9. Tunggu sehingga proses selesai. Lihat dibawah sebagai contoh output.
+
+		$ ./f3read /media/michel/6135-3363/
+		                  SECTORS      ok/corrupted/changed/overwritten
+		Validating file 1.h2w ... 2097152/        0/      0/      0
+		...
+		Validating file 30.h2w ... 1491904/        0/      0/      0
+
+		  Data OK: 29.71 GB (62309312 sectors)
+		Data LOST: 0.00 Byte (0 sectors)
+			       Corrupted: 0.00 Byte (0 sectors)
+			Slightly changed: 0.00 Byte (0 sectors)
+			     Overwritten: 0.00 Byte (0 sectors)
+		Average Reading speed: 9.42 MB/s
+
+
+Jika keputusan test menunjukkan`Data LOST: 0.00 Byte (0 sectors)` bermaksud kad SD anda baik dan anda boleh buang semua file `.h2w` pada kad SD
+{: .notice--success}
+
+Jika keputusan test yang berlainan, kad SD anda mungkin rosak dan and perlu menukarnya!
+{: .notice--danger}
+
+Kembali ke [Mari Mulakan](get-started)
+{: .notice--primary}

@@ -1,0 +1,129 @@
+---
+title: "Region Changing"
+lang: en # see http://www.w3schools.com/TagS/ref_language_codes.asp for lang codes
+permalink: /region-changing.html # translations should be /<locale>/<file>.html i.e.: /es_ES/credits.html
+---
+
+Dit is een extra sectie om de regio van jouw arm9loaderhax CFW SysNAND te veranderen. Dit wordt gedaan door het installeren van de 9.2.0 ctrtransfer image voor de regio waar jij naar toe wilt veranderen en jouw SecureInfo_A bestand aan te passen.
+{: .notice--primary}
+
+**Het veranderen van jouw regio is bijna volledig onnodig omdat Luma3DS spellen uit andere regio's kan afspelen, en ook individuele [title region emulation](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage).**
+{: .notice--info}
+
+Dit proces zal jouw NNID loskoppelen van het systeem, omdat het niet langer passend is met het systeem. NNID's zijn aan de regio van het systeem die de NNID's gemaakt heeft verbonden, en kunnen daarom niet met de regio's mee veranderen zonder [een erg complex en gevorderd proces](https://gist.githubusercontent.com/yifanlu/e80db121d38aceb8cca0e03cefd5853b/raw/3c4dd89869156ca0f945a2791e699acfdb32b510/gistfile1.txt).
+{: .notice--warning}
+
+Na dit proces kunnen alleen **New 3DS'en die nog nóóit eerder de eShop bezocht hebben** en **alle Old 3DS'en** nog de eShop bezoeken na het maken van een nieuw NNID op hun nieuwe regio. De New 3DS'en die al eerder op de eShop op hun originele regio zijn geweest, kunnen geen nieuwe NNID maken en kunnen niet de eShop bezoeken wanneer de regio veranderd is!
+{: .notice--warning}
+
+Let wel op dat af en toe de eShop, zonder goede reden, nog steeds niet werkt voor de systemen waarop het wel zou moeten werken. Dit ligt helemaal bij de servers van Nintendo en ik heb hier totaal geen controle over.
+{: .notice--warning}
+
+Het veranderen van je regio met behulp van ctrtransfer (dit is de methode die hier gebruikt wordt) blijkt "reboot patches" kapot te maken. De reden hiervoor is nog niet duidellijk, maar tot op heden kunnen Old 3DS gebruikers geen spellen spelen die extra geheugen-modus gebruiken (zoals Monster Hunter, Super Smash Bros, en Pokémon Sun/Moon).
+{: .notice--warning}
+
+**arm9loaderhax en Luma3DS MOETEN al geïnstalleerd zijn om dit te doen.**
+{: .notice--danger}
+
+#### Benodigdheden
+
+* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* De nieuwste versie van [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/latest)
+* De 9.2.0 ctrtransfer image voor jouw apparaat en de regio waar je naar wil veranderen     
+  +    [New 3DS 9.2.0 - EUR - ctrtransfer](magnet:?xt=urn:btih:fed7bfeec0e52b42a77467cfb6ffd3e9dd2d5a70&dn=9.2.0-20E%5Fctrtransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)   
+  +    [New 3DS 9.2.0 - JPN - ctrtransfer](magnet:?xt=urn:btih:b22d67fd02b3b0e30ac991e451db0f2d32e7beca&dn=9.2.0-20J%5Fctrtransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    [New 3DS 9.2.0 - USA - ctrtransfer](magnet:?xt=urn:btih:985d47442dc470d1b9f908256bed041c63885f60&dn=9.2.0-20U%5Fctrtransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)    
+~
+  +    [Old 3DS or 2DS 9.2.0 - EUR - ctrtransfer](magnet:?xt=urn:btih:8d6142313971b08f92257e7fb1c1d5689e34ed78&dn=9.2.0-20E%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    [Old 3DS or 2DS 9.2.0 - JPN - ctrtransfer](magnet:?xt=urn:btih:24ad2b85e67013ef1f91178dca7ad2e40663b9b2&dn=9.2.0-20J%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    [Old 3DS or 2DS 9.2.0 - USA - ctrtransfer](magnet:?xt=urn:btih:1dc79a2a0babb45497961888f369423a93135e2b&dn=9.2.0-20U%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+
+#### Instructies
+
+** Sommige consoles hebben een `SecureInfo_B` in plaats van `SecureInfo_A`; dit maakt niet uit en je moet `SecureInfo_B` gebruiken in de relevante stappen.**    
+
+##### Section I - Voorbereidingen
+
+1. Kopieer `GodMode9.bin` van de GodMode9 `.zip` naar de `/luma/payloads` folder op je SD-kaart en verander de naam van `GodMode9.bin` in `/luma/payloads` naar `up_GodMode9.bin`
+2. Kopieer `Decrypt9WIP.bin` naar de `/luma/payloads` folder op je SD kaart en verander de naam van `Decrypt9WIP.bin` naar `x_Decrypt9WIP.bin`
+3. Kopieerd de 9.2.0 ctrtransfer image `.bin` en `.bin.sha` van de ctrtransfer `.zip` naar de `/files9/` folder op je SD kaart
+4. Stop de SD kaart opnieuw in je 3DS
+
+##### Deel II - Backup tickets en config save
+
+1. Druk op (Start) en hou dan (X) ingedrukt om arm9loaderhax Decrypt9 op te starten     
+2. Ga naar "Ticket/Titlekey Options" en selecteer dan "Ticket Dump (SysNAND)"
+3. Druk op (Select) om je SD kaart uit te werpen en stop je SD kaart daarna in je computer
+4. Verwijder alle `.tik`-bestanden in de `/files9/` folder die **niet** beginnen met "00-"
+5. Laat alle `.tik`-bestanden die niet beginnen met "00-" in de folder
+6. Stop je SD kaart in je 3DS en druk dan op (B) om terug te gaan naar het hoofdmenu
+7. Ga naar "SysNAND Options", daarna "System Save Dump" en selecteer daarna "Dump configsave.bin"
+
+##### Sectie III - ctrtransfer
+
+1. Ga naar "SysNAND Options", daarna "CTRNAND Transfer" en daarna "Auto CTRNAND Transfer"
+2. Selecteer de 9.2.0 ctrtransfer image wanneer het je gevraagd wordt, door op (A) te drukken
+3. Als je niet al een NAND backup hebt, **backup SysNAND naar `NANDmin.bin` wanneerhet je gevraagd wordt, door op (A) te drukken**
+4. Laat het overzetten zijn gang gaan, dit kan even duren
+5. Once the transfer is complete, press (Select) to eject your SD card
+6. Stop je SD kaart in je computer, kopieer dan `NANDmin.bin` en `NANDmin.bin.sha` van de `/files9/` folder op je SD kaart naar een veilige plek
+  + Maak backups naar meerdere locaties
+  + Deze backup zal je van een brick redden als er iets misgaat in de toekomst
+  + **Je backup zou dezelfde grootte moeten hebben als één op [deze](nand-size) pagina; als dat niet zo is, zal je het moeten verwijderen en een nieuwe moeten aanmaken!**
+7. Verwijder de 9.2.0 ctrtransfer image `.bin` en `.bin.sha` van de `/files9/` folder op je SD kaart nadat je het gekopieerd hebt
+8. Stop de SD kaart opnieuw in je 3DS
+
+##### Deel IV - SecureInfo bewerken
+
+1. Druk op (Start) en hou daarna (Up) ingedrukt om opnieuw op te starten in arm9loaderhax GodMode9     
+2. Navigeer naar `SYSNAND CTRNAND` -> `rw` -> `sys`
+3. Druk op (Y) op `SecureInfo_A` om het te kopiëren
+4. Druk op (Y) om een kopie van `SecureInfo_A` te plakken
+5. Selecteer "Copy path(s)"
+6. Druk op (A) om SysNAND writing te ontgrendelen en voer daarna de toetsencombinatie in die wordt gegeven
+7. Selecteer "Choose new name"
+8. Gebruik de D-Pad om het bestand te hernoemen naar `SecureInfo_C`, waarna je op (A) drukt wanneer je klaar bent (overschrijf elke al bestaande `SecureInfo_C`)
+9. Scroll naar beneden naar de `SecureInfo_C` die je net geplakt hebt
+10. Druk op (A) op `SecureInfo_C` en selecteer daarna "Show in Hexeditor"
+11. Druk op (A) om door te gaan
+12. Druk op (A) om in de bewerkingsmodus te gaan
+13. Ga naar het begin van lijn 00000100 en druk (A) er op
+14. Hou (A) ingedrukt terwijl je (Boven) of (Beneden) op de D-Pad ingedrukt houdt om het nummer de bewerken
+15. Verander het eerste nummerpaar op lijn 00000100 naar het volgende paar dat overeenkomt met *de regio waar je naar wil veranderen*:
+    - "00" : JPN
+    - "01" : USA
+    - "02" : EUR
+16. Druk op (B) om uit de bewerkingsmodus te gaan, sla daarna je werk op en druk daarna opnieuw op (B) om terug te gaan naar de directory
+17. Je zou nu een `SecureInfo_A` en een `SecureInfo_C` moeten zijn als alles correct is gedaan. ('SecureInfo_C' wordt in plaats van 'SecureInfo_A' gebruikt wanneer je Luma3DS gebruikt en het bestand tijdens het opstarten detecteert)
+18. Druk op (Start) om opnieuw op te starten
+
+##### Deel V - Tickets opnieuw installeren
+
+1. Open FBI
+2. Selecteer "SD"
+3. Selecteer "files9"
+4. Selecteer "\<current directory>"
+5. Selecteer "Install and delete all tickets"
+6. Wacht. Het systeem lijkt misschien vast te lopen, maar geef het wat tijd.
+7. Druk op (A) om het te bevestigen
+8. Druk op (B) om het installeren van tickets van CDN af te wijzen.
+9. Sluit af met de home knop
+
+##### Sectie VI - Regio instellingen
+
+1. Open Systeem Instellingen
+2. Ga naar "Andere Instellingen", "Profiel" en daarna "Regio Instellingen"
+3. Selecteer een land van de regio waar je je apparaat naar hebt veranderd
+4. Als er om gevraagd wordt hoef je niet een staat te selecteren
+5. Update je regio-veranderde CFW SysNAND naar de nieuwste versie
+
+##### Deel VII - Config save herstellen
+
+1. Start opnieuw op terwijl je (X) ingedrukt houdt om arm9loaderhax Decrypt9 op te starten
+2. Ga naar "SysNAND Options", daarna "System Save Inject" en selecteer daarna "Inject configsave.bin"
+
+Old 3DS'en / 2DS'en moeten misschien geformatteerd worden (door gebruik te maken van TinyFormat of de Systeem Instellingen) om extended memory mode games te kunnen spelen (zoals Monster Hunter, Super Smash Bros of Pokemon Sun/Moon).
+{: .notice--info}
+
+Het formatteren van een apparaat nadat je een ctrtransfer hebt gedaan *zonder dat je de config save herstelt* kan voor schermhelderheids- / schermflikkeringproblemen zorgen. Zie [dit](https://github.com/Plailect/Guide/issues/794).
+{: .notice--info}
