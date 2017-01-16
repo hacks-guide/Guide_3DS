@@ -1,0 +1,101 @@
+---
+title: "9.2.0 ctrtransfer"
+lang: zh-Hant
+permalink: /zh_TW/9.2.0-ctrtransfer.html
+---
+
+如果你降級至 2.1.0 了，但是你手上沒有**可用的 NAND 備份**，別怕，本教學是專為你而寫的。
+{: .notice--success}
+
+在 ctrtransfer 後，你的裝置可能會看不到你所安裝的遊戲。 這是因為在轉移後，那些 tickets 都將被移除。也就是為什麼你該先進行備份。 在這教學最後，我們將回復這點。
+{: .notice--info}
+
+因為 9.2.0 ctrtransfer 的意義是在於排除現成 NAND 所造成的問題，所以不像 2.1.0 的 ctrtransfer，這裡只需要你備份 tickets 及設定檔。 如果你沒備份這些檔案的話，你所有已安裝的遊戲及存檔將遺失！
+{: .notice--danger}
+
+#### 必備項目
+
+* 最新版的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* 最新版的 [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/)
+* 對應你裝置地區及型號的 9.2.0 ctrtransfer 鏡像檔     
+*（如果你的裝置不在下面所列區域內，挑一個符合你裝置型號的就對了）*:
+  +    [新 3DS 9.2.0 - 歐版 - ctrtransfer](magnet:?xt=urn:btih:fed7bfeec0e52b42a77467cfb6ffd3e9dd2d5a70&dn=9.2.0-20E%5Fctrtransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)   
+  +    [新 3DS 9.2.0 - 日版 - ctrtransfer](magnet:?xt=urn:btih:b22d67fd02b3b0e30ac991e451db0f2d32e7beca&dn=9.2.0-20J%5Fctrtransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    [新 3DS 9.2.0 - 美版 - ctrtransfer](magnet:?xt=urn:btih:985d47442dc470d1b9f908256bed041c63885f60&dn=9.2.0-20U%5Fctrtransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)    
+~
+  +    [舊 3DS 或 2DS 9.2.0 - 歐版 - ctrtransfer](magnet:?xt=urn:btih:8d6142313971b08f92257e7fb1c1d5689e34ed78&dn=9.2.0-20E%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    [舊 3DS 或 2DS 9.2.0 - 日版 - ctrtransfer](magnet:?xt=urn:btih:24ad2b85e67013ef1f91178dca7ad2e40663b9b2&dn=9.2.0-20J%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    [舊 3DS 或 2DS 9.2.0 - 美版 - ctrtransfer](magnet:?xt=urn:btih:1dc79a2a0babb45497961888f369423a93135e2b&dn=9.2.0-20U%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+
+#### 操作說明
+
+##### 第一節 — 準備工作
+
+1. 解壓 GodMode9 `.zip` 中的 `GodMode9.bin` 到 SD 卡中的 `/luma/payloads/` 底下，並重新命名為 `up_GodMode9.bin`
+2. 從剛下載的 ctrtransfer`.zip` 中，解壓 9.2.0 ctrtransfer 鏡像檔 `.bin` 及 `.bin.sha` 檔案至 SD 卡上的 `/files9/` 資料夾
+3. 複製 `Decrypt9WIP.bin` 到 SD 卡底下的 `/luma/payloads/` 資料夾內，並將它重新命名為`x_Decrypt9WIP.bin`
+4. 將 SD 卡插回至你的 3DS 中
+
+##### 第二節 — 備份 tickets 及系統設定檔
+
+1. 開機時按住「X」以啟動 arm9loaderhax Decrypt9
+2. 選擇「Ticket/Titlekey Options」中的「Ticket Dump (SysNAND)」
+3. 按下「選擇鍵 (Select)」以卸除 SD 卡，並插入至電腦裡
+4. 刪除所有**非** 00- 開頭的 `.tik` 檔案
+  + 如果所有檔案都不是 00- 開頭的話，直接全部刪除
+5. 重新將你的 SD 卡插入至你的 3DS 中，並按下「B」以回到主選單
+6. 選擇「SysNAND Options」、「System Save Dump」、「Dump configsave.bin」
+
+##### 第三節 — ctrtransfer
+
+1. 選擇「SysNAND Options」、 「CTRNAND Transfer」、「Auto CTRNAND Transfer」
+2. 當提示時，輸入的按鍵組合，並選取 9.2.0 ctrtransfer 的鏡像檔
+3. 如果你尚未進行 NAND 備份，**請在提示出現時按下「A」以備份 SysNAND 至 `NANDmin.bin`**
+4. 備份過程將耗費一段時間，請耐心等候
+5. 備份完成後，按下「選擇鍵 (Select)」以卸除 SD 卡
+6. 將 SD 卡插入至你的電腦裡，並從`/files9/`資料夾中複製`NANDmin.bin`及`NANDmin.bin.sha`到一個安全可靠的地方
+  + 盡量把備份存在各個不同的地方
+  + 未來如果你不小心玩到磚機，它將會是你的救命恩人
+  + **你的備份應該要跟[本頁面](nand-size)所列其中之一的大小一樣；如果不一樣，趕快刪掉重新做一個新的！**
+7. 在 SD 卡底下，刪除 `/files9/` 資料夾底下的 9.2.0 ctrtransfer 鏡像檔 `.bin` 及 `.bin.sha` 檔案
+8. 將 SD 卡插回至你的 3DS 中
+9. 按下「開始鍵 (Start)」以重啟
+10. 到 3DS 主選單中更新你的主機，去「系統設置（System Settings）」、「其他設置（Other Settings）」底下選擇「系統更新（System Update）」
+  + 在 A9LH + Luma （不管你用什麼）底下更新是沒問題的，別再問啦
+  + 如果過程中出現錯誤，試試到 DNS 設定底下將設定改成「自動 （auto）」
+
+##### 第四節 — 還原系統設定檔
+
+1. 重開機時按住「X」以啟動 arm9loaderhax Decrypt9
+2. 選擇「SysNAND Options」、「System Save Inject」、「Inject configsave.bin」
+3. 按「B」以回到主選單
+
+##### 第五節 — 注入 FBI 管理器
+
+1. 選擇「SysNAND Options」、「Miscellaneous」中選擇「Health&Safety Dump」以匯出「健康與安全」程式至 `hs.app` **（你可以透過方向鍵更改名字）**
+2. 按下「B」，選擇「Health&Safety Inject」
+3. 選擇對應裝置區域可注入 FBI 管理器的`.app`檔
+4. 按下「A」以確認注入
+5. 按下「開始鍵 (Start)」以重啟
+6. 如果你進入的依然是官方的「健康與警示」程式，並且之前曾經用 Gateway 進行過系統降級，[請參見此疑難排解](troubleshooting#gw_fbi)
+
+##### 第六節 — 重新安裝 Tickets
+
+如果剛剛沒看到有 00- 開頭的 tickets，你可以跳過此步驟。
+{: .notice--info}
+
+1. 開啟 FBI 管理器
+2. 選擇「SD」
+3. 選擇「files9」
+4. 選擇「\<current directory>」
+5. 選擇 「Install and delete all tickets」（安裝並刪除所有 tickets 檔案）
+6. 稍等一下。 系統可能會卡住一段時間，等就對了。
+7. 按 「A」 確認
+8. 按 「B」以取消 CDN tickets 的安裝
+9. 按「首頁鍵 (Home)」退出
+
+在 ctrtransfer 之後，在*未還原系統設置檔*的情況下格式化裝置，可能會造成螢幕閃爍或亮度問題。 請見[此](https://github.com/Plailect/Guide/issues/794)。
+{: .notice--info}
+
+回到 [安裝 arm9loaderhax](installing-arm9loaderhax)
+{: .notice--primary}
