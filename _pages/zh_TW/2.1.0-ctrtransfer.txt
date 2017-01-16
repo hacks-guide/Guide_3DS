@@ -1,0 +1,101 @@
+---
+title: "2.1.0 ctrtransfer"
+lang: zh-Hant
+permalink: /zh_TW/2.1.0-ctrtransfer.html
+---
+
+如果你在 2DS 或 新 3DS 上降級至 2.1.0 且你之前曾將無線功能關閉，你可以透過關機拔出電池跟充電器個幾秒鐘，並重新啟動就可以重新開啟無線功能。
+{: .notice--info}
+
+如果你之前都是使用 新 3DS 上的 microSD 管理器傳輸 SD 卡的內容，注意這功能在 2.1.0 的系統上是無法使用的。所以請在繼續前確保手上有個可用的 SD 讀卡機。
+{: .notice--info}
+
+在 ctrtransfer 後，你可能會看不到你之前所安裝的遊戲。 這是因為在轉移後，那些程式的 tickets 都將被移除。這也就是為什麼你該先進行備份。 在本教學最後我們將還原那些程式。
+{: .notice--info}
+
+**就目前情況，在 2.1.0 ctrtransfer 後，裝置一定得在連網的情況下使用才能繼續。**
+{: .notice--warning}
+
+**在進行 2.1.0 ctrtransfer 前，請先關閉家長監護功能（parental controls）。 如果你不知道密碼的話，請見[此](https://mkey.salthax.org/)。**
+{: .notice--warning}
+
+**進行 ctrtransfer 時，這將移除裝置上所有使用者安裝的 tickets，直到還原備份為止。 千萬不要跳過備份這步驟！**
+{: .notice--danger}
+
+**千萬不要在低於版本 6.0.0 的 2DS 下格式化 ，否則你將無法完成初始設置而且將磚機！**
+{: .notice--danger}
+
+**千萬不要在以版本 2.1.0 的 新 3DS 下更新系統（因為它是個 舊 3DS 的韌體），否則保證磚機！ 你一定得先還原先前的 NAND 備份或透過 ctrtransfer 切回至正常的 新 3DS 韌體才行！**
+{: .notice--danger}
+
+#### 步驟概述
+
+在本節中，我們將寫入至你主機上的 [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) 磁區至系統版本 2.1.0，此版本上的漏洞將可以讓我們提取你裝置上獨特的 [OTP](https://www.3dbrew.org/wiki/OTP_Registers) 資訊。 安裝 arm9loaderhax 時，這 OTP 檔案是缺一不可的，而且**千萬不能**跟其他 3DS 主機共用。
+
+這是透過搭載版本 2.1.0 [預先做好的 ctrtransfer 鏡像檔](https://www.reddit.com/r/3dshacks/comments/4zhe4a/)所達成的，複製你遊戲機上某些特定檔案 （像是 `moveable.sed` 及 `SecureInfo_A`）到那上面去，接著再修正上面的檔案索引。
+
+#### 必備項目
+
+* 開機至 Decrypt9
+* 對應你裝置地區及型號的 2.1.0 ctrtransfer 鏡像檔     
+*（如果你的裝置不在下面所列區域內，挑一個就對了）*:
+  +    [新 3DS 或 舊 3DS 或 2DS 2.1.0 - 歐版 - ctrtransfer](magnet:?xt=urn:btih:89acc9c1b488b8b38251de0ddf07975d6bd354a1&dn=2.1.0-4E%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    [新 3DS 或 舊 3DS 或 2DS 2.1.0 - 日版 - ctrtransfer](magnet:?xt=urn:btih:3dbb9c9c85a33c6242f424dcbaebcacdd8a5912b&dn=2.1.0-4J%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    [新 3DS 或 舊 3DS 或 2DS 2.1.0 - 美版 - ctrtransfer](magnet:?xt=urn:btih:1609ce9ee7b0ed9b6dea0b3e7cca4fc52dad6ff4&dn=2.1.0-4U%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+
+#### 操作說明
+
+##### 第一節 — 準備工作
+
+記得這些步驟是在 Decrypt9 的環境下做的。
+
+1. 在主選單中按下「選擇鍵 (Select)」以卸除 SD 卡，並插入至電腦裡
+2. 從剛下載的 ctrtransfer`.zip` 中，解壓 2.1.0 的 `.bin` 及 `.bin.sha` 檔案至 SD 卡上的 `/files9/` 資料夾
+3. 將 SD 卡插回至你的 3DS 中
+4. 按下「B」以進入到 Decrypt9 的主選單
+
+##### 第二節 — ctrtransfer
+
+**這裡將需要_你_這台裝置的 NAND 備份檔。 如果你尚未進行備份，稍後教學中的步驟中將會教你如何做一個備份檔。**
+{: .notice--danger}
+
+**如果你不確定你是否已經有進行過 NAND 備份，當等一下提到時，按下「A」以進行備份，以防萬一。**
+{: .notice--danger}
+
+**如果你 SD 卡中的儲存空間不夠了，你可以在 Decrypt9 主選單底下透過按下「選擇鍵 (Select)」以卸除你的 SD 卡換另一張有足夠空間的 SD 卡上去或拿到電腦上清些空間出來。**
+{: .notice--danger}
+
+1. 選擇「SysNAND Options」、 「CTRNAND Transfer」、「Auto CTRNAND Transfer」
+2. 當提示時，輸入的按鍵組合，並選取 2.1.0 ctrtransfer 的鏡像檔
+3. 如果你尚未進行 NAND 備份，**請在提示出現時按下「A」以備份 SysNAND 至 `NANDmin.bin`**
+  **你一定要備份_你_裝置的 NAND。**
+  **跳過本步驟的話，你將遺失所有已安裝的遊戲及存檔！**
+4. 備份過程將耗費一段時間，請耐心等候
+5. 備份完畢後，按下「B」回上一頁
+6. 按下「選擇鍵 (Select)」以卸除 SD 卡
+7. 在 SD 卡底下，刪除 `/files9/` 資料夾底下的 2.1.0 ctrtransfer 鏡像檔 `.bin` 及 `.bin.sha` 檔案
+8. 先不用將 SD 卡插回，並按下「開始鍵 (Start)」以重啟裝置
+  + 在 2.1.0 上，3DS 在你在開機時且在主選單載入前插入 SD 卡的話，將只會看到黑屏
+  + 每次在版本 2.1.0 的系統重新啟動時，你將會需要先在 HOME 主選單載入前拔出你的 SD 卡，直到讀取完後才能插回
+  + SD 卡暫時先不用插回 3DS 裡，因為我們到下一頁時還會再丟些檔案進去
+  + 到下一頁時，我們將還原你裝置的備份，到時這個問題就會被修正了
+
+___
+
+在某些裝置上，版本 2.1.0 的首次開機可能會花比較長的時間開啟。
+{: .notice--info}
+
+*（在某些裝置上，螢幕可能會出現扭曲或顏色走調的現象，這是正常的。在回復裝置備份後，這點就會被修正了）*
+{: .notice--info}
+
+{% capture notice %}
+**如果在 新 3DS 2.1.0 的情況下進入休眠狀態，就永遠都醒不過來了！（救不了的磚機）**
+**這問題只在_裝置還開著時_將螢幕闔上才會發生；不包括關機。**
+**裝置只有在螢幕闔上時才會進入休眠模式。 這與螢幕開啟時間無關。**
+**建議趕快做完這些步驟，避免悲劇發生！**
+{% endcapture %}
+
+<div class="notice--danger">{{ notice | markdownify }}</div>
+
+繼續至 [安裝 arm9loaderhax](installing-arm9loaderhax)
+{: .notice--primary}
