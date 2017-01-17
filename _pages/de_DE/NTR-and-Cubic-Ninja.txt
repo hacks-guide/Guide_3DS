@@ -44,20 +44,20 @@ permalink: /de_DE/ntr-and-cubic-ninja.html
 
 ##### Abschnitt II - Updaten
 
-1. Starte deinen 3DS in den Wiederherstellungsmodus, indem du beim Hochfahren (L)+(R)+(A)+(Steuerkreuz oben) gedrückt hälst
+1. Boot your 3DS into recovery mode by holding (L)+(R)+(A)+(UP) while powering on
 2. Lehne das Update ab und starte das Gerät neu
-3. Öffne Cubic Ninja (wenn es schon NinjaHax installiert hat, drücke (L)+(R)+(X)+(Y), um es zurückzusetzen)
+3. Open Cubic Ninja (if it already has NinjHax installed, hold (L)+(R)+(X)+(Y) to reset it)
 4. Wähle "Create", dann "QR Code", dann "Scan QR Code"
 5. Scanne den QR Code in der NTR CFW`.zip` für deine Region
 6. Drücke im Home Menü (Y) und (X) gleichzeitig, um das NTR Menü zu öffnen
 7. Aktiviere den Debugger und schließe das Menü
 8. Nutze die Website deines Routers, um die IP-Adresse deines 3DS herauszufinden (benutze Google, falls du nicht weißt wie das geht; alle Router sind verschieden)
 9. Führe den NTR Debugger auf deinem Computer aus
-10. Gebe die folgenden befehle ein (Ersetze 192.168.1.100 mit der IP-Adresse deines 3DS und 192.168.1.200 mit der IP-Adresse deines Computers)    
-    + `connect("192.168.1.100", 8000)`
-    + `write(0x15E424, tuple(map(ord, "http://192.168.1.200/update.php\0")), pid=0x25)`
-    + `write(0x15E0EC, tuple(map(ord, "http://192.168.1.200/update.php\0")), pid=0x25)`
-    + `write(0x15E463, tuple(map(ord, "http://192.168.1.200/update.php\0")), pid=0x25)`
+10. Enter the following commands (replace XXX.XXX.XXX.XXX with your 3DS's IP address and YYY.YYY.YYY.YYY with your computer's IP address)    
+    + `connect("XXX.XXX.XXX.XXX", 8000)`
+    + `write(0x15E424, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
+    + `write(0x15E0EC, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
+    + `write(0x15E463, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
 11. Aktualisiere deinen 3DS, indem du in die Systemeinstellungen gehst, dann unter "Allgemeine Einstellungen" ganz nach rechts und "System-Update" wählst
 
 ___
