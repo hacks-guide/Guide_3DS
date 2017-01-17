@@ -4,35 +4,35 @@ lang: pt
 permalink: /pt_BR/installing-arm9loaderhax.html
 ---
 
-A etapa final deste guia é instalar o arm9loaderhax e configurar o Luma3DS para rodar em apenas alguns milisegundos durante a inicialização. This is accomplished by using SafeA9LHInstaller by [AuroraWright](https://github.com/AuroraWright/).
+A etapa final deste guia é instalar o arm9loaderhax e configurar o Luma3DS para rodar em apenas alguns milisegundos durante a inicialização. Isso é realizado utilizando o SafeA9LHInstaller por [AuroraWright](https://github.com/AuroraWright/).
 {: .notice}
 
-Isto irá instalar a [versão de AuroraWright](https://github.com/AuroraWright/arm9loaderhax) do arm9loaderhax.
+Isto irá instalar o [Fork de AuroraWright](https://github.com/AuroraWright/arm9loaderhax) do arm9loaderhax.
 {: .notice--info}
 
 Iremos também configurar a habilidade de rodar payloads do arm9loaderhax, nos dando a habilidade de desbrickar a nossa SysNAND de situações que normalmente brickariam o nosso aparelho ao restaurá-la de um backup.
 {: .notice--info}
 
-**You cannot use another console's OTP or you will brick GUARANTEED.**
+**Você não pode usar o OTP de outro console, é GARANTIDO que você irá brickar se fizer isso.**
 {: .notice--danger}
 
 #### Visão geral das etapas
 
-In this section, we will go through the process that all the other steps have led up to: actually installing arm9loaderhax.
+Nesta seção, vamos passar pela etapa à qual todas as outras etapas levaram: instalar o arm9loaderhax.
 
-This is nearly the best possible kind of device exploit because it is permanently installable into the NAND firm partitions, and runs before most of the OS loads, allowing it to not only work on *all* versions once installed, but also protect itself and recover from most situations that would brick a non-A9LH 3DS such as a nonfunctional home menu or bad title install.
+Este é quase o melhor tipo possível de exploit do dispositivo, porque é permanentemente instalável nas partições FIRM da NAND e é executado antes da maior parte do sistema operacional carregar, permitindo que ele não só funcione em *todas* as versões depois de instalado, mas também consegue se proteger e oferecer meios de recuperar um 3DS brickado, como um menu HOME não-funcional ou a instalação de um título corrompido.
 
-The file `arm9loaderhax.bin` is what is launched by arm9loaderhax itself after it finishes loading off of NAND, and can be any valid arm9 payload. This file can be replaced at any time, although Luma3DS allows for the launch of other arm9 payloads by holding buttons on boot.
+O arquivo `arm9loaderhax.bin` é o que é executado pelo próprio arm9loaderhax depois que ele termina o carregamento da NAND, e pode ser qualquer payload arm9 válido. Este arquivo pode ser substituído a qualquer momento, embora o Luma3DS permita o uso de outros payloads arm9 ao segurar botões durante a inicialização.
 
 Neste caso, usamos o Luma3DS por [AuroraWright](https://github.com/AuroraWright/) para carregar uma SysNAND com patches diretamente, o que nos permite evitar a necessidade de qualquer tipo de EmuNAND, simplificando enormemente o uso de um 3DS hackeado, além de economizar espaço no cartão SD.
 
-Once arm9loaderhax is installed and Luma3DS is setup with the correct options, we then restore our previous backup.
+Assim que o arm9loaderhax estiver instalado e o Luma3DS estiver configurado com as opções corretas, restauraremos o backup anterior.
 
-During this process, we also setup programs such as the following:    
+Durante este processo, também configuramos alguns programas como os seguintes:    
 
-+  **FBI** *(installs CIA formatted games and applications)*
-+  **Luma3DS Updater** *(updates our CFW installation easily)*
-+  **Hourglass9** *(multipurpose tool which can do NAND and cartridge functions)*
++  **FBI** *(Instala jogos e aplicativos no formato CIA)*
++  **Luma3DS Updater** *(Atualiza nossa instalação CFW facilmente)*
++  **Hourglass9** *(Ferramenta multiuso com funções de NAND e cartucho)*
 
 #### O que você precisa
 
