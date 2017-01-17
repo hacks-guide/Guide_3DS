@@ -34,26 +34,26 @@ Ta metoda zadziała na New 3DS, Old 3DS oraz 2DS.
 
 1. Wypakuj zawartość archiwum autofirm `.zip` do katalogu o nazwie `autofirm`
 2. Umieść kopię NAND twojej konsoli (plik o nazwie `nand.bin`) w katalogu `/autofirm/`
-3. Copy the contents of the NFIRM `.zip` to the `/autofirm/source/firmwares/` folder
-4. Run `autofirm.bat` and select which device and version the NAND backup is for
-5. Wait while the script runs
-6. If everything worked, then your original NAND will have been renamed to `nand.bin` and you will have a modified `nand_patched.bin` containing the 10.4.0 NATIVE_FIRM
-  + Keep `nand.bin`, it will be used later
-7. Flash this `nand_patched.bin` to your device with your hardmod
+3. Skopiuj zawartość archiwum NFIRM `.zip` do katalogu `/autofirm/source/firmwares/`
+4. Uruchom 'autofirm.bat', a następnie wybierz typ konsoli i wersję firmware, które zawiera twoja kopia zapasowa NAND
+5. Poczekaj aż skrypt zakończy pracę
+6. Jeśli wszystko się powiodło, nazwa źródłowego pliku NAND zostanie zmieniona na `nand.bin`, a zmodyfikowany plik NAND zawierający `10.4.0 NATIVE_FIRM` będzie posiadał nazwę `nand_patched.bin`
+  + Zachowaj plik`nand.bin`, będzie użyty w jednym z kolejnych kroków
+7. Wgraj uzyskany w poprzednim kroku `nand_patched.bin` na twoje urządzenie przy użyciu hardmoda
 
-##### Section II - Exploit verification
+#### Sekcja II - Weryfikacja luki
 
-1. Copy and merge the `3ds` folder from the 3DSident `.zip` to your device's SD card
-2. Reinsert your SD card into your 3DS
-3. Use [Homebrew Launcher (SoundHax)](homebrew-launcher-(soundhax)) to launch the homebrew launcher on the device
-4. Launch 3DSident
-5. Verify that the following:
+1. Skopiuj katalog `3ds` z archiwum 3DSident `.zip` do karty SD Twojej konsoli. Nadpisz katalog `3ds`na karcie SD, jeśli już istnieje
+2. Włóż kartę SD z powrotem do konsoli
+3. Wykorzystaj [Homebrew Launcher (SoundHax)](homebrew-launcher-(soundhax)) żeby uruchomić homebrew launcher na Twoim urządzeniu
+4. Uruchom 3DSident
+5. Zweryfikuj czy wyświetlane dane są zgodne z poniższymi:
   + **Kernel version**: 2.50-11
   + **FIRM version**: 2.50-11
-  + If either of these do not display the versions above, something has gone wrong and you should try again from the beginning
+  + Jeżeli któraś z wartości wyświetlonych na 3DS nie zgadza się z zamieszczonymi powyżej, coś poszło nie tak i powinieneś powtórzyć wszystkie kroki od początku
 
-Your version number will *not* have changed in the settings.
+Wersja systemu w ustawieniach (System Settings) *nie* ulegnie zmianie.
 {: .notice--info}
 
-Continue to [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher)).
+Kontynuuj do [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher)).
 {: .notice--primary}
