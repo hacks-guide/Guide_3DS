@@ -44,20 +44,20 @@ permalink: /ntr-and-cubic-ninja.html
 
 ##### Deel II - updaten
 
-1. Start je 3DS op in herstelmodus door het indrukken van L+R+A+UP terwijl hij aangezet wordt
+1. Boot your 3DS into recovery mode by holding (L)+(R)+(A)+(UP) while powering on
 2. Weiger de update en start opnieuw op
-3. Open Cubic Ninja (als NinjHax er al op geïnstalleerd is, hou dan L+R+X+Y in om het te resetten)
+3. Open Cubic Ninja (if it already has NinjHax installed, hold (L)+(R)+(X)+(Y) to reset it)
 4. Selecteer "Create", daarna "QR Code" en daarna "Scan QR Code"
 5. Scan de QR code in de NTR CFW `.zip` voor je respectievelijke regio
 6. Op het homemenu, druk op (Y) en (X) tegelijkertijd om het NTR-menu te openen
 7. Activeer de debugger en sluit het menu
 8. Gebruik de webpagina van je router om het IP adres van je 3DS te weten te komen (google het als je niet weet hoe, alle routers zijn verschillend).
 9. Voer NTR Debugger uit op je computer
-10. Voer de volgende commando's uit (vervang 192.168.1.100 met het IP adres van je 3DS en 192.168.1.200 met je computer's IP adres)    
-    + `connect("192.168.1.100", 8000)`
-    + `write(0x15E424, tuple(map(ord, "http://192.168.1.200/update.php\0")), pid=0x25)`
-    + `write(0x15E0EC, tuple(map(ord, "http://192.168.1.200/update.php\0")), pid=0x25)`
-    + `write(0x15E463, tuple(map(ord, "http://192.168.1.200/update.php\0")), pid=0x25)`
+10. Enter the following commands (replace XXX.XXX.XXX.XXX with your 3DS's IP address and YYY.YYY.YYY.YYY with your computer's IP address)    
+    + `connect("XXX.XXX.XXX.XXX", 8000)`
+    + `write(0x15E424, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
+    + `write(0x15E0EC, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
+    + `write(0x15E463, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
 11. Update je 3DS door naar System Settings en dan naar "Other Settings" te gaan. Ga in dat menu helemaal naar rechts en klik op "System Update"
 
 ___
