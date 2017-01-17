@@ -32,48 +32,48 @@ permalink: /index.html
 **请先阅读完本介绍页面后，再开始操作。**
 {: .notice--warning}
 
-## What is Homebrew?
+## 什么是自制程序？
 
-[**Homebrew**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) usually refers to software that is not authorized by Nintendo. It allows you to run homebrew games, tools like save editing and backup, and emulators for various older systems.
+[**Homebrew（自制程序）**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) 通常指未经任天堂授权的软件。 它能让你运行自制游戏，使用像修改和备份存档的工具，以及运行模拟器。
 
-In most cases, running homebrew on your console is 100% free using just the Nintendo 3DS Sound app. There are also various other exploits in commercial games and the browser to get homebrew running.
+大多数情况下，只需使用Nintendo 3DS Sound（任天堂3DS声音）就能在你的机器上运行自制程序，且完全免费。部分付费游戏和系统自带的浏览器中也有一些漏洞，可以使你运行自制程序。
 
-## What is Custom Firmware?
+## 什么是自制系统？
 
-**Custom Firmware** ("CFW") enables you to use more advanced hacks that userland homebrew can't easily do. For instance, signature patches let you install unsigned titles that appear right on your HOME Menu.
+**Custom Firmware（自制系统）** ("CFW") 可以使你进行自制程序无法轻易做到的更高级的破解。 例如，签名补丁可以使你安装未签名的程序，并让它们出现在桌面中。
 
-CFW can be easily set up on any console that is on 11.2.0 (latest) or lower.
+CFW可以很容易地在系统版本11.2.0（最新）及以下的设备上安装。
 
-## What does this guide install?
+## 本教程将安装什么？
 
-This guide has the end goal of taking a completely unmodified 3DS from stock
-firmware to arm9loaderhax powered Custom Firmware. On some versions, it utilizes homebrew as a stepping off point, but Custom Firmware is still the goal.
+本教程的最终目的，是将一个未经修改过的装有原生系统的3DS
+变成一个基于arm9loaderhax的自制系统。 在某些版本的机器上，本教程会使用自制程序作为手段，但是安装自制系统才是最终目的。
 
-Arm9loaderhax is the newest and best method of launching Custom Firmware that gives us nearly full control of the system only milliseconds into boot, which is similar to the effect of BootMii for the Wii.
+Arm9loaderhax是一种最新和最好的引导自制系统的方法，只需启动时几毫秒的时间，就能让你获得几乎全部系统权限，类似于Wii上面BootMii的作用。
 
-The benefits of arm9loaderhax over other Custom Firmware launch methods are numerous, and as such it is recommended to use this guide over any other that relies on outdated software (such as menuhax or rxTools).
+相比于其它运行自制系统的方法，arm9loaderhax有许多优势。因此推荐使用本教程，而不是其它依赖已过时软件（例如menuhax或rxTools）的教程。
 
-## What can I do with Custom Firmware?
+## 我可以在自制系统上做什么？
 
-+ Play all game cards and eShop games, regardless of region
-+ Customize your HOME Menu with user-created [themes](https://3dsthem.es/) and [badges](https://badges.3dsthem.es/)
-+ Use "ROM hacks" for games that you own
-+ Take gameplay and application screenshots
-+ [Backup, edit, and restore](https://gbatemp.net/threads/release-jks-savemanager-homebrew-cia-save-manager.413143/) saves for many games
-+ Play games for older systems with various emulators, using RetroArch or other standalone emulators. (Works best with a New Nintendo 3DS)
-+ Install homebrew titles to your system, and have them appear on your HOME Menu
-+ Dump your game cards to a format you can install, and play them without needing the card
-+ New 3DS only: stream live gameplay to your PC wirelessly with NTR CFW
-+ Run many old Nintendo DS flash carts that were blocked long ago or never worked on Nintendo 3DS
-+ Safely update to the latest system version without fear of losing access to homebrew
++ 跨区运行所有游戏卡带和eShop游戏
++ 使用玩家自制的[主题](https://3dsthem.es/)和[卡贴](https://badges.3dsthem.es/)来自定义你的桌面。
++ 对你已有的游戏进行"ROM hacks"
++ 进行游戏录像和程序截屏
++ [备份、修改和恢复](https://gbatemp.net/threads/release-jks-savemanager-homebrew-cia-save-manager.413143/)游戏存档
++ 使用模拟器（如RetroArch或其它独立模拟器）运行老系统的游戏 （在任天堂新3DS上效果最佳）
++ 安装自制程序，并让它们在你的桌面上出现
++ 将游戏卡带的内容导出为可安装的格式，从而可以无需卡带运行游戏
++ 仅限新3DS：使用NTR CFW将游戏录像在线输出到PC
++ 运行许多以前被禁的或者无法在任天堂3DS上使用的NDS卡带
++ 安全地升级到最新版本的系统，无需担心升级后无法访问自制程序
 
-## What do I need to know before starting?
+## 在开始之前我需要知道什么？
 
-+ **Before beginning the guide, you must know the risks of 3DS hacking: EVERY time you modify your system, there is always the potential for an UNRECOVERABLE brick. They're rare, but still a possibility so make sure you follow ALL directions EXACTLY.**
-+ If you have already hacked your 3DS before to get an EmuNAND setup, and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, you should follow all instructions and restore your existing EmuNAND when prompted once you reach [Installing arm9loaderhax](installing-arm9loaderhax).
-+ This guide will work on New 3DS, Old 3DS, and 2DS in all regions on firmware 11.2.0 or below *(except CHN / TWN)*.
-+ If everything goes according to plan, you will lose no data and end up with everything that you started with (games, NNID, saves, etc will be preserved).
-+ **Keep the device plugged in and charged throughout the entire process to avoid data loss or damage from an unexpected power-off!**
-+ Your SD card should be [MBR, not GPT](http://www.howtogeek.com/245610/) (the SD card that comes with the device will be MBR by default).
-+ If you need to format a brand new SD card, you can use [`guiformat`](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) and set to an Allocation Unit Size of 32K.
-+ The 2DS is essentially identical to the Old 3DS in terms of software, and that any steps which say "Old 3DS" also apply to 2DS.
++ **在开始之前，你要知道破解3DS的风险：每次你修改系统的时候，都有可能会使你的3DS不可恢复的变砖。 这种情况很少见，但是仍然存在这样的可能性，所以请确保你完全按照本教程的指导进行操作。**
++ 如果你之前破解过你的3DS并安装了EmuNAND，想将原EmuNAND中的内容迁移到新的SysNAND CFW中，请依操作进行，并在[安装arm9loaderhax](installing-arm9loaderhax)这一步中依照提示还原的你EmuNAND。
++ 本教程适用于所有区域的新3DS，老3DS和2DS，固件版本在11.2.0及以下*（除神游/台版机）*。
++ 如果一切顺利，在安装完自制系统后你不会丢失任何数据（包括游戏、NNID、存档等）。
++ **确保你的设备在操作过程中接上电源线充电，防止因意外关机而造成数据丢失或机器损坏！**
++ 你的SD卡的分区表格式必须是[MBR，而不是GPT](http://www.howtogeek.com/245610/)(机器自带的SD卡的分区表格式默认是MBR)。
++ 如果你需要格式化一张新的SD卡，可以使用[`guiformat`](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm)，并将Allocation Unit Size设置为32K。
++ 2DS所需的软件和老3DS一样，因而任何适用于老3DS的步骤也同样适用于2DS。
