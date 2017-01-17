@@ -44,20 +44,20 @@ permalink: /fr_FR/ntr-and-cubic-ninja.html
 
 ### Section II - Mise à jour
 
-1. Démarrez votre 3DS en mode de récupération en maintenant L+R+A+Haut enfoncés au démarrage
+1. Boot your 3DS into recovery mode by holding (L)+(R)+(A)+(UP) while powering on
 2. Refusez la mise à jour et redémarrez
-3. Démarrez Cubic Ninja (si NinjHax est déjà installé, maintenez L + R + X + Y pour le réinitialiser)
+3. Open Cubic Ninja (if it already has NinjHax installed, hold (L)+(R)+(X)+(Y) to reset it)
 4. Sélectionnez "Créer", puis "QR Code", puis "Scan Code QR"
 5. Scannez le QR code inclus dans le NTR CFW `.zip` de votre région
 6. Sur le menu Home, appuyez sur (Y) et (X) en même temps pour ouvrir le menu de NTR
 7. Sélectionnez "Enable Debugging" et fermez le menu de NTR
 8. Utilisez la page web de votre routeur pour obtenir l’adresse IP de votre 3DS ( Si vous ne savez pas comment faire, cherchez sur google, tous les routeurs sont différents)
 9. Exécutez NTR Debugger sur votre ordinateur
-10. Entrez les commandes suivantes (remplacez 192.168.1.100 par l’adresse IP de votre 3DS et 192.168.1.200 par l’adresse IP de votre ordinateur)    
-    + `connect("192.168.1.100", 8000)`
-    + `write(0x15E424, tuple(map(ord, "http://192.168.1.200/update.php\0")), pid=0x25)`
-    + `write(0x15E0EC, tuple(map(ord, "http://192.168.1.200/update.php\0")), pid=0x25)`
-    + `write(0x15E463, tuple(map(ord, "http://192.168.1.200/update.php\0")), pid=0x25)`
+10. Enter the following commands (replace XXX.XXX.XXX.XXX with your 3DS's IP address and YYY.YYY.YYY.YYY with your computer's IP address)    
+    + `connect("XXX.XXX.XXX.XXX", 8000)`
+    + `write(0x15E424, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
+    + `write(0x15E0EC, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
+    + `write(0x15E463, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
 11. Mettez à jour votre console en vous rendant dans les Paramètres de la console, puis "Autres paramètres", puis tout à droite sur l'option "Mise à jour du Système"
 
 ___
