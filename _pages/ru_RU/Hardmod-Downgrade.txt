@@ -1,7 +1,7 @@
 ---
-title: "Hardmod Downgrade" #
-lang: en
-permalink: /hardmod-downgrade.html
+title: "Понижение прошивки с помощью хардмода" #
+lang: ru
+permalink: /ru_RU/hardmod-downgrade.html
 ---
 
 An excellent guide to getting a hardmod can be found [here](https://gbatemp.net/threads/414498/). Если у вас New 3DS, прочтите [это](https://github.com/Plailect/Guide/issues/681) перед тем, как приступать.
@@ -10,15 +10,15 @@ An excellent guide to getting a hardmod can be found [here](https://gbatemp.net/
 Это рабочая реализация "FIRM partitions known-plaintext"-эксплойта. Подробнее о нем [здесь](https://www.3dbrew.org/wiki/3DS_System_Flaws).
 {: .notice--info}
 
-This will work on New 3DS, Old 3DS, and 2DS.
+Актуально для всех версий 3DS - New 3DS, Old 3DS, и 2DS.
 {: .notice--success}
 
 #### Что необходимо
 
-* Your NAND image extracted using your [hardmod](https://gbatemp.net/threads/414498/)
+* Полученный с помощью [хардмода](https://gbatemp.net/threads/414498/) образ NAND
 * Свежая версия [autofirm](https://github.com/Plailect/autofirm/archive/master.zip)
 * Свежая версия [3DSident](https://github.com/joel16/3DSident/releases/latest)
-* The NFIRM `.zip` corresponding to your device and version:
+* `.zip-архив` с NFIRM, соответствующий версии приставки и ее региону:
   + [New 3DS 11.0.0](magnet:?xt=urn:btih:2d13a5ea1570f911bd5c6423e0c30e51d548837a&dn=11.0.0%5Fto%5F10.4.0%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
   + [Old 3DS 11.0.0](magnet:?xt=urn:btih:72393bbd99bc285db84a9cabf39d9b3200058d6a&dn=11.0.0%5Fto%5F10.4.0%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
   ~    
@@ -32,19 +32,19 @@ This will work on New 3DS, Old 3DS, and 2DS.
 
 ##### Часть I - Модификация NAND
 
-1. Extract the autofirm `.zip` to a folder called `autofirm`
+1. Распакуйте `.zip-архив` с autofirm в папку `autofirm`
 2. Place a copy of your NAND backup (named `nand.bin`) in `/autofirm/` folder
-3. Извлеките файлы из архива NFIRM `.zip` в папку `/autofirm/source/firmwares/`
+3. Извлеките файлы из `.zip-архива` NFIRM в папку `/autofirm/source/firmwares/`
 4. Run `autofirm.bat` and select which device and version the NAND backup is for
 5. Дождитесь окончания процесса
 6. If everything worked, then your original NAND will have been renamed to `nand.bin` and you will have a modified `nand_patched.bin` containing the 10.4.0 NATIVE_FIRM
-  + Keep `nand.bin`, it will be used later
+  + Не удаляйте `nand.bin`, он еще понадобится
 7. Flash this `nand_patched.bin` to your device with your hardmod
 
 ##### Section II - Exploit verification
 
-1. Copy and merge the `3ds` folder from the 3DSident `.zip` to your device's SD card
-2. Reinsert your SD card into your 3DS
+1. Скопируйте и объедините папку `3ds` из`.zip-архива` 3DSident с папкой `3ds` в корне SD-карты
+2. Вставьте SD-карту обратно в 3DS
 3. Use [Homebrew Launcher (SoundHax)](homebrew-launcher-(soundhax)) to launch the homebrew launcher on the device
 4. Launch 3DSident
 5. Verify that the following:
