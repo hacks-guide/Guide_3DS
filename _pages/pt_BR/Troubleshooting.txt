@@ -62,7 +62,7 @@ Se não conseguir inicializar o seu 3DS, por favor procure a seção relevante a
 9. Aperte (Start) para reiniciar
 
 ## <a name="gw_fbi" />Não consigo injetar o H&S em um 3DS/2DS que sofreu um downgrade do Gateway
-This is caused by Gateway implementing a very shoddy downgrade method, which leaves two versions of each app on the system. One of them is unused, but it confuses Decrypt9, causing it to inject into the wrong one.
+Isso é causado porque o Gateway emprega um método inferior no seu downgrade para a 4.x, deixando duas versões de cada app no sistema. Uma delas não é utilizada, mas ter os dois presentes confunde o Decrypt9, que injeta o H&S na versão errada.
 
 #### O que você precisa
 
@@ -71,18 +71,18 @@ This is caused by Gateway implementing a very shoddy downgrade method, which lea
 #### Instruções
 
 1. Copie o `GodMode9.bin` do `.zip` do GodMode9 para a pasta `/luma/payloads/` no seu cartão SD e o renomeie para `up_GodMode9.bin`
-2. Reinsert your SD card into your 3DS
-3. Open GodMode9 from arm9loaderhax by holding (Up) during boot     
-4. Navigate to `SYSNAND CTRNAND` -> `title` -> `00040010`
-5. Navigate to the folder for your device and region:
-  + **Old 3DS EUR**: `00022300` -> `content`
-  + **Old 3DS JPN**: `00020300` -> `content`
-  + **Old 3DS EUA**: `00021300` → `content`
-  + **New 3DS EUR**: `20022300` -> `content`
-  + **New 3DS JPN**: `20020300` -> `content`
+2. Reinsira seu cartão SD no seu 3DS
+3. Ligue o 3DS segurando (Cima) para entrar no GodMode9 pelo arm9loaderhax     
+4. Navegue para `SYSNAND CTRNAND` → `title` → `00040010`
+5. Navegue para a pasta correspondente ao modelo e região do seu 3DS:
+  + **Old 3DS EUR**: `00022300` → `content`
+  + **Old 3DS JPN**: `00020300` → `content`
+  + **Old 3DS USA**: `00021300` -> `content`
+  + **New 3DS EUR**: `20022300` → `content`
+  + **New 3DS JPN**: `20020300` → `content`
   + **New 3DS EUA**: `20021300` → `content`
-6. Notice that there are two sets of app and tmd files, one set with uppercase extensions (`.TMD` and `.APP`), and one set with lowercase extensions (`.tmd` and `.app`)
-7. While holding the (R) trigger, press (Y) to create a new directory
+6. Observe que há dois conjuntos de arquivos app e tmd, um com extensão em letras maiúsculas (`.TMD`e `.APP`), e um com extensões em letras minúsculas (`.tmd` e `.app`)
+7. Segure o gatilho (R) e aperte (Y) para criar um novo diretório
 8. Press (A) to confirm the name `newdir` (it doesn't matter what it's called)
 9. Aperte (A) para destravar as modificações na SysNAND, então aperte a sequência de botões solicitada
 10. Press the (L) trigger on each of the uppercase extension files (`.TMD` and `.APP`) to mark them
