@@ -44,20 +44,20 @@ permalink: /ntr-and-cubic-ninja.html
 
 ##### 第二部分 - 升级
 
-1. 按住L+R+A+上键启动你的3DS，进入恢复模式
+1. Boot your 3DS into recovery mode by holding (L)+(R)+(A)+(UP) while powering on
 2. 取消升级，并重启
-3. 打开立体忍者（如果已经安装过NinjHax，按L+R+X+Y键重置）
+3. Open Cubic Ninja (if it already has NinjHax installed, hold (L)+(R)+(X)+(Y) to reset it)
 4. 依次选择”Create”，”QR Code”，”Scan QR Code”
 5. 扫描NTR CFW压缩包中对应你区域的二维码
 6. 在桌面菜单（home menu），同时按下(Y)键和(X)键打开NTR菜单
 7. 启用debugger，并关闭菜单
 8. 使用你路由器的后台页面获取你的3DS的IP地址（每种路由器的查看方法都不同，建议在网上搜索一下）
 9. 在你的电脑上运行NTR Debugger
-10. 输入如下命令（将192.168.1.100替换为你的3DS的IP地址，并将192.168.1.200替换为你的电脑的IP地址）    
-    + `connect("192.168.1.100", 8000)`
-    + `write(0x15E424, tuple(map(ord, "http://192.168.1.200/update.php\0")), pid=0x25)`
-    + `write(0x15E0EC, tuple(map(ord, "http://192.168.1.200/update.php\0")), pid=0x25)`
-    + `write(0x15E463, tuple(map(ord, "http://192.168.1.200/update.php\0")), pid=0x25)`
+10. Enter the following commands (replace XXX.XXX.XXX.XXX with your 3DS's IP address and YYY.YYY.YYY.YYY with your computer's IP address)    
+    + `connect("XXX.XXX.XXX.XXX", 8000)`
+    + `write(0x15E424, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
+    + `write(0x15E0EC, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
+    + `write(0x15E463, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
 11. 进入3DS的系统设置 - 其它设置 - 系统升级，升级你的3DS
 
 ___
