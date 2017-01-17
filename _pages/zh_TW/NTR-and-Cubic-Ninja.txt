@@ -44,16 +44,16 @@ permalink: /zh_TW/ntr-and-cubic-ninja.html
 
 ##### 第二節 — 更新
 
-1. Boot your 3DS into recovery mode by holding (L)+(R)+(A)+(UP) while powering on
+1. 開機時按住「L+R+A+上」以進入 3DS 還原模式
 2. 拒絕更新並重啟
-3. Open Cubic Ninja (if it already has NinjHax installed, hold (L)+(R)+(X)+(Y) to reset it)
+3. 啟動「方塊忍者」（如果已經裝了 NinjHax，按住 L+R+X+Y 將它重設）
 4. 選擇「創建」、「QR 碼」、「掃描 QR 碼」
 5. 掃描 NTR CFW `.zip` 中對應你區域的二維條碼
 6. 在主選單中，重時按下「Y」及「X」開啟 NTR 選單
 7. 啟動 NTR Debugger 並關閉選單
 8. 透過你路由器來找尋你 3DS 的 IP 位置（如果不知道的話，Google 找一下，每台路由器都不太一樣）
 9. 在電腦上啟動 NTR Debugger
-10. Enter the following commands (replace XXX.XXX.XXX.XXX with your 3DS's IP address and YYY.YYY.YYY.YYY with your computer's IP address)    
+10. 輸入以下指令（將 IP 位址「XXX.XXX.XXX.XXX」換成你 3DS 主機的位址，「YYY.YYY.YYY.YYY」換成你電腦主機的位址）    
     + `connect("XXX.XXX.XXX.XXX", 8000)`
     + `write(0x15E424, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
     + `write(0x15E0EC, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
