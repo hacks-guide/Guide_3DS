@@ -40,11 +40,12 @@ Changer la région de votre 3DS grâce à un CTRtransfer (ce que fait cette mét
 
 #### Instructions
 
-**Certaines consoles utilisent un fichier `SecureInfo_B` au lieu de `SecureInfo_A` ; cela est tout à fait bénin et vous pouvez utiliser `SecureInfo_B` pour toutes les étapes concernées.**    
+**Certaines consoles utilisent un fichier `SecureInfo_B` au lieu de `SecureInfo_A` ; cela est tout à fait bénin et vous pouvez utiliser `SecureInfo_B` pour toutes les étapes concernées.**   
+{: .notice--info} 
 
 ##### Section I - Préparation
 
-1. Copiez le fichier `GodMode9.bin` inclus dans GodMode9`.zip` dans le dossier `/luma/payloads/` de votre carte SD et renommez `GodMode9.bin` dans `/luma/payloads/` en `up_GodMode9.bin`
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 2. Copiez `Decrypt9WIP.bin` dans le fichier `/luma/payloads/` sur votre carte SD et renommez`Decrypt9WIP.bin` en `x_Decrypt9WIP.bin`
 3. Copiez les fichiers `.bin` et `.bin.sha`inclus dans le `.zip` de votre image ctrtransfer9.2.0 vers le dossier `/files9/` sur votre carte SD
 4. Réinsérez votre carte SD dans votre 3DS
@@ -52,12 +53,13 @@ Changer la région de votre 3DS grâce à un CTRtransfer (ce que fait cette mét
 ##### Section II - Sauvegarde des tickets et de la configuration
 
 1. Appuyez sur (Start) puis maintenez (X) pour redémarrer en lançant Decrypt9 via arm9loaderhax     
-2. Sélectionnez "Ticket/Titlekey Options", puis "Ticket Dump (SysNAND)"
-3. Appuyez sur (Select) pour éjecter votre carte SD, puis insérez-la dans votre ordinateur
-4. Supprimez tous les fichiers `.tik` dans le dossier `/files9/` qui **ne commencent pas** par "00-"
-5. Gardez tous les fichiers `.tik`qui commencent par "00-"
-6. Réinsérez votre carte SD dans votre 3DS, puis appuyez sur (B) pour revenir au Menu Principal
-7. Sélectionnez "SysNAND Options", puis "System Save Dump", puis "Dump configsave.bin"
+2. Hover over Decrypt9WIP, then press (A) to launch it   
+3. Sélectionnez "Ticket/Titlekey Options", puis "Ticket Dump (SysNAND)"
+4. Appuyez sur (Select) pour éjecter votre carte SD, puis insérez-la dans votre ordinateur
+5. Supprimez tous les fichiers `.tik` dans le dossier `/files9/` qui **ne commencent pas** par "00-"
+6. Gardez tous les fichiers `.tik`qui commencent par "00-"
+7. Réinsérez votre carte SD dans votre 3DS, puis appuyez sur (B) pour revenir au Menu Principal
+8. Sélectionnez "SysNAND Options", puis "System Save Dump", puis "Dump configsave.bin"
 
 ##### Section III - ctrtransfer
 
@@ -75,7 +77,7 @@ Changer la région de votre 3DS grâce à un CTRtransfer (ce que fait cette mét
 
 ##### Section IV - Édition de SecureInfo
 
-1. Appuyez sur (Start) et maintenez enfoncé (Haut) pour redémarrer en lançant GodMode9 via arm9loaderhax     
+1. Appuyez sur (Start) et maintenez enfoncé (Haut) pour redémarrer en lançant GodMode9 via arm9loaderhax      
 2. Allez dans `SYSNAND CTRNAND` -> `rw` -> `sys`
 3. Appuyez sur (Y) sur `SecureInfo_A` pour le copier
 4. Appuyez sur (Y) pour coller une copie de `SecureInfo_A`
@@ -119,7 +121,8 @@ Changer la région de votre 3DS grâce à un CTRtransfer (ce que fait cette mét
 
 ##### Section VII - Restaurer la configuration
 
-1. Redémarrez en maintenant (X) durant le démarrage pour lancer Decrypt9 via arm9loaderhax
+1. Appuyez sur (Start) puis maintenez (X) pour redémarrer en lançant Decrypt9 via arm9loaderhax   
+2. Hover over Decrypt9WIP, then press (A) to launch it   
 2. Sélectionnez "SysNAND Options", puis "System Save Inject", puis "Inject configsave.bin"
 
 Les Old 3DS ou 2DS auront peut être besoin d'être formatées (via TinyFormat ou les Paramètres Système) pour pouvoir jouer aux jeux en mode de mémoire étendue (comme Monster Hunter, Super Smash Bros ou Pokemon Soleil/Lune).
