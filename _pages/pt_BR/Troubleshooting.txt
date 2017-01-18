@@ -61,8 +61,8 @@ Se não conseguir inicializar o seu 3DS, por favor procure a seção relevante a
 8. Volte para o menu inicial
 9. Aperte (Start) para reiniciar
 
-## <a name="gw_fbi" />Não consigo injetar o H&S em um 3DS/2DS que sofreu um downgrade do Gateway
-Isso é causado porque o Gateway emprega um método inferior no seu downgrade para a 4.x, deixando duas versões de cada app no sistema. Uma delas não é utilizada, mas ter os dois presentes confunde o Decrypt9, que injeta o H&S na versão errada.
+## <a name="gw_fbi" />Não consigo injetar o Informações sobre saúde e segurança em um dispositivo que sofreu um downgrade com Gateway
+Isso é causado porque o Gateway emprega um método inferior no seu downgrade para a 4.x, deixando duas versões de cada app no sistema. Uma delas não é utilizada, mas ter os dois presentes confunde o Decrypt9, que injeta na versão errada.
 
 #### O que você precisa
 
@@ -73,14 +73,14 @@ Isso é causado porque o Gateway emprega um método inferior no seu downgrade pa
 1. Copie o `GodMode9.bin` do `.zip` do GodMode9 para a pasta `/luma/payloads/` no seu cartão SD e o renomeie para `up_GodMode9.bin`
 2. Reinsira seu cartão SD no seu 3DS
 3. Ligue o 3DS segurando (Cima) para entrar no GodMode9 pelo arm9loaderhax     
-4. Navegue para `SYSNAND CTRNAND` → `title` → `00040010`
+4. Navegue para `SYSNAND CTRNAND` -> `title` -> `00040010`
 5. Navegue para a pasta correspondente ao modelo e região do seu 3DS:
-  + **Old 3DS EUR**: `00022300` → `content`
-  + **Old 3DS JPN**: `00020300` → `content`
-  + **Old 3DS EUA**: `00021300` → `content`
-  + **New 3DS EUR**: `20022300` → `content`
-  + **New 3DS JPN**: `20020300` → `content`
-  + **New 3DS EUA**: `20021300` → `content`
+  + **Old 3DS EUR**: `00022300` -> `content`
+  + **Old 3DS JPN**: `00020300` -> `content`
+  + **Old 3DS EUA**: `00021300` -> `content`
+  + **New 3DS EUR**: `20022300` -> `content`
+  + **New 3DS JPN**: `20020300` -> `content`
+  + **New 3DS EUA**: `20021300` -> `content`
 6. Observe que há dois conjuntos de arquivos app e tmd, um com extensão em letras maiúsculas (`.TMD`e `.APP`), e um com extensões em letras minúsculas (`.tmd` e `.app`)
 7. Segure o gatilho (R) e aperte (Y) para criar um novo diretório
 8. Aperte (A) para confirmar o nome `newdir` (não importa como é nomeado)
@@ -98,7 +98,7 @@ Isso é causado porque o Gateway emprega um método inferior no seu downgrade pa
 ## <a name="ts_browser" />Um exploit do navegador não está funcionando
 Exploits do navegador (como browserhax ou 2xrsa) são normalmente instáveis e falham frequentemente, mas em alguns casos eles podem ser consertados seguindo as seguintes etapas
 
-1. Open the browser, then open the browser settings
+1. Abra o navegador, e então abra as configurações do navegador
 2. Desça até o final e use o `Deletar dados salvos`
 3. Tente o exploit novamente
 
@@ -127,43 +127,43 @@ Isso ocorre ocasionalmente, mas não se sabe o porquê. Os botões ainda funcion
 ## <a name="ts_sys_down" />Tela preta na inicialização da SysNAND
 
 1. Tente ligar o 3DS sem o cartão SD, e então reinsira-o quando estiver no Menu HOME.
-    1. Power off your 3DS by holding down the power button.
-    2. Take out the SD card.
-    3. Power on the 3DS.
-    4. When the home menu appears, reinsert your SD card.
+    1. Desligue o seu 3DS segurando o botão Power.
+    2. Remova o seu cartão SD.
+    3. Ligue o 3DS.
+    4. Quando o Menu HOME aparecer, reinsira o seu cartão SD.
     5. Se isso funcionou, você deve apagar os dados externos do Menu HOME navegando para a seguinte pasta no seu cartão SD: `/Nintendo 3DS/(ID de 32 Caracteres)/(ID de 32 Caracteres)/extdata/00000000/`
-        + Região EUR: apague `00000098`
-        + Região JPN: apague `00000082`
-        + Região EUA: apague `0000008f`
-        + Região KOR: apague `000000A9`
-2. Try booting without any cartridges inserted (including flashcarts)
-3. If you have a hardmod and a NAND backup, flash the backup back to SysNAND.
-4. Try booting into recovery mode and updating your system.    
-    *This probably will not work for an Old 3DS downgraded to 2.1.0*    
-    **This will BRICK a New 3DS downgraded to 2.1.0**
-    1. Power off your 3DS by holding down the power button.
-    2. Hold (L)+(R)+(A)+(Up).
-    3. Power on the 3DS.
-    4. If you enter safe mode, update your 3DS *only if you have an entrypoint for the latest FW version and it is possible to downgrade from it* and attempt the downgrade again.
-5. Your 3DS may be bricked. For support, ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [3DS Hacking on Discord](https://discord.gg/MWxPgEp).
+        + Região EUR: Apague `00000098`
+        + Região JPN: Apague `00000082`
+        + Região EUA: Apague `0000008f`
+        + Região KOR: Apague `000000A9`
+2. Tente ligar sem nenhum cartucho inserido (incluindo flashcarts)
+3. Se você tem um hardmod e um backup da NAND, copie o backup de volta para a SysNAND.
+4. Tente ligar no modo recovery e atualize o seu sistema.    
+    *Isso provavelmente não funcionará num Old 3DS que fez downgrade para 2.1.0*    
+    **Isso irá BRICKAR um New 3DS que fez downgrade para 2.1.0**
+    1. Desligue o seu 3DS segurando o botão Power.
+    2. Segure os botões (L)+(R)+(A)+(Cima).
+    3. Ligue o 3DS.
+    4. Se você entrar no modo recovery, atualize o seu 3DS *somente se você tiver um ponto de entrada para a versão mais atual da firmware e se for possível fazer downgrade a partir dela* e tente o downgrade de novo.
+5. Seu 3DS pode ter sido brickado. Para suporte, peça ajuda em [#3dshacks no Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) ou [3DS Hacking no Discord](https://discord.gg/MWxPgEp).
 
-## <a name="ts_sys_a9lh" />Black screen on SysNAND boot after installing arm9loaderhax
+## <a name="ts_sys_a9lh" />Tela preta na inicialização da SysNAND após instalação do arm9loaderhax
 
-1. Ensure you have a working payload.
+1. Certifique-se que seu payload é funcional.
     1. Verifique se o arquivo `arm9loaderhax.bin` está presente na raiz do seu cartão SD.
-2. Try resetting Luma's config and fix options
+2. Tente resetar as configurações do Luma e ajustar as opções
     1. Apague o arquivo `/luma/config.bin` do seu cartão SD
-    2. Set your options when it boots
-3. Test booting Hourglass9
-    1. On Luma3DS, hold (Start) on boot
+    2. Marque suas opções quando o 3DS inicializar
+3. Tente inicializar o Hourglass9
+    1. No Luma3DS, segure (Start) durante a inicialização
 4. Tente apagar o extdata do Menu HOME
-    1. Clear Home Menu's extdata by navigating to the following folder on your SD card: `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/`
-        + Região EUR: apague `00000098`
-        + Região JPN: apague `00000082`
-        + Região EUA: apague `0000008f`
-        + Região KOR: apague `000000A9`
-5. Try booting without any cartridges inserted (including flashcarts)
-6. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version (v6.2.3 or higher, at the least)
+    1. Exclua a extdata do Menu HOME localizada na seguinte pasta no seu cartão SD: `/Nintendo 3DS/(ID de 32 caracteres)/(ID de 32 caracteres)/extdata/00000000/`
+        + Região EUR: Apague `00000098`
+        + Região JPN: Apague `00000082`
+        + Região EUA: Apague `0000008f`
+        + Região KOR: Apague `000000A9`
+5. Tente ligar sem nenhum cartucho inserido (incluindo flashcarts)
+6. Caso você tenha realizado um downgrade com algum Gateway anteriormente, certifique-se de estar usando a versão mais recente do Luma3DS (v6.2.3 ou superior, pelo menos)
 7. Se sua NAND estiver com a firmware numa versão entre 3.0.0 e 4.5.0, faça o seguinte:
     + Certifique-se de que você está usando o Luma3DS versão 6.6 ou mais recente
     + Baixe [este arquivo](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) e renomeie-o para `firmware.bin`
