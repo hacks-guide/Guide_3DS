@@ -40,11 +40,12 @@ permalink: /zh_TW/region-changing.html
 
 #### 操作說明
 
-**有些主機看到的檔案將會是 `SecureInfo_B` 而非 `SecureInfo_A`；這是沒關係的，而你應該以 `SecureInfo_B` 作為接下來步驟所使用的檔案。**    
+**有些主機看到的檔案將會是 `SecureInfo_B` 而非 `SecureInfo_A`；這是沒關係的，而你應該以 `SecureInfo_B` 作為接下來步驟所使用的檔案。**   
+{: .notice--info} 
 
 ##### 第一節 — 準備工作
 
-1. 解壓 GodMode9 `.zip` 中的 `GodMode9.bin` 到 SD 卡中的 `/luma/payloads/` 底下，並重新命名為 `up_GodMode9.bin`
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 2. 複製 `Decrypt9WIP.bin` 到 SD 卡底下的 `/luma/payloads/` 資料夾內，並將它重新命名為`x_Decrypt9WIP.bin`
 3. 從剛下載的 ctrtransfer`.zip` 中，解壓 9.2.0 ctrtransfer 鏡像檔 `.bin` 及 `.bin.sha` 檔案至 SD 卡上的 `/files9/` 資料夾
 4. 將 SD 卡插回至你的 3DS 中
@@ -52,12 +53,13 @@ permalink: /zh_TW/region-changing.html
 ##### 第二節 — 備份 tickets 及系統設定檔
 
 1. 按下「開始鍵 (Start)」然後按住「X」以啟動至 arm9loaderhax Decrypt9     
-2. 選擇「Ticket/Titlekey Options」中的「Ticket Dump (SysNAND)」
-3. 按下「選擇鍵 (Select)」以卸除 SD 卡，並插入至電腦裡
-4. 刪除所有**非** 00- 開頭的 `.tik` 檔案
-5. 留下所有 00- 開頭的 `.tik` 檔案
-6. 重新將你的 SD 卡插入至你的 3DS 中，並按下「B」以回到主選單
-7. 選擇「SysNAND Options」、「System Save Dump」、「Dump configsave.bin」
+2. Hover over Decrypt9WIP, then press (A) to launch it   
+3. 選擇「Ticket/Titlekey Options」中的「Ticket Dump (SysNAND)」
+4. 按下「選擇鍵 (Select)」以卸除 SD 卡，並插入至電腦裡
+5. 刪除所有**非** 00- 開頭的 `.tik` 檔案
+6. 留下所有 00- 開頭的 `.tik` 檔案
+7. 重新將你的 SD 卡插入至你的 3DS 中，並按下「B」以回到主選單
+8. 選擇「SysNAND Options」、「System Save Dump」、「Dump configsave.bin」
 
 ##### 第三節 — ctrtransfer
 
@@ -75,7 +77,7 @@ permalink: /zh_TW/region-changing.html
 
 ##### 第四節 — 編輯 SecureInfo
 
-1. 按下「開始鍵 (Start)」然後按住「上」以啟動至 arm9loaderhax GodMode9     
+1. 按下「開始鍵 (Start)」然後按住「上」以啟動至 arm9loaderhax GodMode9      
 2. 到 `SYSNAND CTRNAND` -> `rw` -> `sys`
 3. 在 `SecureInfo_A` 上按下「Y」以複製檔案
 4. 再按下「Y」以貼上 `SecureInfo_A` 的複製
@@ -119,7 +121,8 @@ permalink: /zh_TW/region-changing.html
 
 ##### 第七節 — 還原系統設定檔
 
-1. 重開機時按住「X」以啟動 arm9loaderhax Decrypt9
+1. 按下「開始鍵 (Start)」然後按住「X」以啟動至 arm9loaderhax Decrypt9   
+2. Hover over Decrypt9WIP, then press (A) to launch it   
 2. 選擇「SysNAND Options」、「System Save Inject」、「Inject configsave.bin」
 
 舊 3DS 及 2DS 主機可能需要先格式化（透過 TinyFormat 或 系統設定內）才能玩需要用到「額外記憶體模式」的遊戲（像是魔物獵人，任天堂明星大亂鬥、或神奇寶貝太陽/月亮版...等）
