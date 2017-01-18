@@ -22,7 +22,7 @@ permalink: /zh_CN/installing-arm9loaderhax.html
 
 这几乎是所有设备破解中最好的一种，因为它能被永久安装到NAND固件分区中，并在大多数系统文件启动前运行，使得它不仅可以在任何版本上生效，而且能保护其自身，并可以从大多数使非A9LH破解的3DS变砖的情况恢复，如损坏的桌面菜单（home menu）或者安装了一个错误的title（条目，如系统文件、游戏、软件等等）。
 
-在加载完NAND之后，会启动`arm9loaderhax.bin`文件，它可以是任何有效的arm9 payload。 This file can be replaced at any time, although Luma3DS allows for the launch of other arm9 payloads using the Luma3DS chainloader.
+在加载完NAND之后，会启动`arm9loaderhax.bin`文件，它可以是任何有效的arm9 payload。 你可以随时替换该文件，尽管Luma3DS允许在启动时按下按键来启动对应的arm9 payloads。
 
 本教程中，我们使用[AuroraWright](https://github.com/AuroraWright/)提供的Luma3DS来直接启动一个破解过的SysNAND，使我们能完全避免使用RedNAND，从而极大地简化使用破解的3DS系统的步骤，并节省SD卡的空间。
 
@@ -66,12 +66,12 @@ permalink: /zh_CN/installing-arm9loaderhax.html
 1. **如果SD卡上有 `/files9/` 文件夹，请将此文件夹复制到电脑上，并在多出备份 （例如网盘等）；文件夹里含有系统备份，可以在系崩溃时用来恢复数据**
 2. 在SD卡的根目录下创建 `cias` 文件夹，如果已有此文件夹，则不用创建
 6. 解压`SafeA9LHInstaller.7z`，并复制解压后的文件到你SD卡的根目录
-7. Copy the `a9lh` folder from the data_input `.zip` to the root of your SD Card
-8. Copy _the contents of_ the arm9loaderhax release `.7z` to `a9lh` folder on your SD card
+7. 从data_input压缩包中解压并复制`a9lh`文件夹到SD卡的根目录
+8. 解压arm9loaderhax的压缩包，并复制其中的内容到你SD卡下的`a9lh`文件夹中
 9. 解压hblauncher_loader压缩包，并复制 `hblauncher_loader.cia` 到你SD卡的 `/cias/` 目录
 10. 解压Luma3DS Updater压缩包，并复制 `lumaupdater.cia` 到你SD卡 `/cias/` 目录
 11. 解压FBI压缩包，并复制 `FBI.cia` 到你SD卡的 `/cias/` 目录
-12. Copy `arm9loaderhax.bin` from the Luma3DS `.7z` to the root of your SD card, overwrite existing files
+12. 解压`Luma3DS.zip`压缩包，复制`arm9loaderhax.bin`文件到SD卡根目录下，覆盖已有文件
 13. 在你SD卡的根目录创建一个叫 `luma` 的文件夹
 14. 在SD卡的 `luma` 文件夹里创建 `payloads` 文件夹
 15. 将Hourglass9压缩包的 `Hourglass9.bin` 复制到你SD卡的 `/luma/payloads/` 目录下，并重命名 `Hourglass9.bin` 为 `start_Hourglass9.bin`
@@ -88,7 +88,7 @@ permalink: /zh_CN/installing-arm9loaderhax.html
     + 如果出现错误：“当前服务在你的区域不可用”，请使用系统设置修改你的设备所在的国家，匹配你安装的2.1.0 ctr转移镜像所对应的NAND区域
     + 如果出现错误，[参见这个问题排查](troubleshooting#ts_browser)
     + 如果出现花屏，[参见这个问题排查](troubleshooting#ts_safe_a9lh_screen)
-    + If you are on a 2DS or New 3DS and Wireless Communication is off, you can re-enable the wireless by removing the battery and unplugging the charger for several seconds then booting back up
+    + 如果你的设备是新3DS或者2DS，在降级到了2.1.0系统时无线连接没有开启，你可以将充电器断开并将电池拿下来，等待数秒后再开机，即可重新开启无线连接。
   + 按（Select）选择Full Install
   + 安装程序将在你的设备上安装arm9loaderhax（速度很快）
   +按任意按钮关机
@@ -104,7 +104,7 @@ permalink: /zh_CN/installing-arm9loaderhax.html
   + **"Autoboot SysNAND"**
   + **"Use SysNAND FIRM if booting with R"**
   + **"Show NAND or user string in System Settings"**
-3. If you are using a **New 3DS**, you can *also* enable the following:
+3. 如果你的设备是**新3DS**，你还应该启用如下设置：
   + **“New 3DS CPU”选项，请移动光标到”Clock+L2(x)”**
     + 这将提升许多游戏的帧率，但可能会造成某些游戏的不稳定
     + 如果有部分游戏不能正常运行，关闭这个选项并重试
@@ -169,7 +169,7 @@ permalink: /zh_CN/installing-arm9loaderhax.html
   + 在没有SD卡的情况下至少开启一次你的机器，可以使你配置基于CTRNAND的luma
 23. 使用方向键和A键来启用以下设置：    
   + **"Show NAND or user string in System Settings"**
-24. If you are using a **New 3DS**, you can *also* enable the following:
+24. 如果你的设备是**新3DS**，你还应该启用如下设置：
   + **“New 3DS CPU”选项，请移动光标到”Clock+L2(x)”**
     + 这将提升许多游戏的帧率，但可能会造成某些游戏的不稳定
     + 如果有部分游戏不能正常运行，关闭这个选项并重试
