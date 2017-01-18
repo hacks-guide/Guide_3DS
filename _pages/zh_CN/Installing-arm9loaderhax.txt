@@ -31,7 +31,7 @@ permalink: /zh_CN/installing-arm9loaderhax.html
 在这个过程当中，我们还会安装像下面所示的几个工具：    
 
 +  **FBI** *(用来安装CIA格式的游戏和程序)*
-+  **Luma3DS Updater** *(updates your CFW installation easily)*
++  **Luma3DS Updater** *(用来更新Luma3DS固件)*
 +  **Hourglass9** *(一款多功能工具，包括恢复/备份系统功能)*
 
 #### 你需要
@@ -96,7 +96,7 @@ permalink: /zh_CN/installing-arm9loaderhax.html
 
 ##### 第三部分 - 设置 Luma3DS
 
-1. Boot your device while holding (Select) to enter the Luma3DS configuration menu
+1. 住(select)键开机，进入Luma3DS的菜单
   + 请确保按电源键之前按住select
   + 如果黑屏，[参见这个问题排查](troubleshooting#ts_sys_a9lh)   
   + 如果你进入了SafeA9LHInstaller，[参见这个问题排查](troubleshooting#ts_safe_a9lh)
@@ -117,7 +117,7 @@ permalink: /zh_CN/installing-arm9loaderhax.html
 如果你在看本教程之前已经破解并安装了EmuNAND，并且想把你原来的EmuNAND中的内容转移到新的SysNAND自制固件中，请在开始本部分操作之前先按照[迁移EmuNAND数据](move-emunand) 一节进行，然后跳过本部分的前四步。
 {: .notice--info}
 
-1. Boot your device while holding (Start) to enter Hourglass9
+1. 按住(Start)键开机，通过arm9loaderhax进入Hourglass9
 2. 选择 “SysNAND Backup/Restore”
 3. 选择 “SysNAND Restore (keep a9lh)”，从 `NANDmin.bin` 文件中恢复原系统的备份文件
 4. 按(Start)键重启
@@ -135,7 +135,7 @@ permalink: /zh_CN/installing-arm9loaderhax.html
 
 ##### 第五部分 - 注入FBI
 
-1. Boot your device while holding (Start) to enter Hourglass9
+1. 按住(Start)键开机，通过arm9loaderhax进入Hourglass9
 2. 选择 “SysNAND Backup/Restore”，然后选择”Health&Safety Dump”，导出Health & Safety（健康与安全）应用到`hs.app` **(你可以按十字键上下/左右来改名字)**
 3. 按(B)键，选择”Health&Safety Inject”
 4. 依照你的区域，选择可以注入的FBI.app文件
@@ -161,7 +161,7 @@ permalink: /zh_CN/installing-arm9loaderhax.html
 14. 从桌面菜单中运行Homebrew Launcher（自制程序启动器）
 15. 选择”DSP Dump”
 16. 按照提示，按(Start)键退出
-17. Boot your device while holding (Start) to enter Hourglass9
+17. 按住(Start)键开机，通过arm9loaderhax进入Hourglass9
 19. 选择”SysNAND Backup/Restore”，然后选择”Health&Safety Inject”
 20. 选择 `hs.app` (原来那个并不包含FBI的版本)，然后按(A)键确认注入
 21. 在主菜单中，按(Select)键弹出你的SD卡
@@ -183,7 +183,7 @@ ___
 {% capture notice-10 %}
 你现在可以使用Luma3DS Updater来更新你的Luma3DS到最新版，只需运行该程序并按下(A)键。     
 这和系统升级不是一回事；它只会下载并提取最新的Luma3DS文件。
-这只会升级SD卡上的Luma3DS文件。 If you boot the device without an SD card, it will use the version you placed in CTR NAND.    
+这只会升级SD卡上的Luma3DS文件。 如果你在没有SD卡的情况下开机，它会使用你放在CTR NAND上的版本。    
 {% endcapture %}
 
 <div class="notice--info">{{ notice-10 | markdownify }}</div>
@@ -191,7 +191,7 @@ ___
 {% capture notice-6 %}   
 现在你将默认启动到一个自制的SysNAND系统。    
 你可以在启动时按下Select键，进入Luma3DS的设置菜单。    
-You can now hold (Start) on boot to launch Hourglass9.     
+你可以在启动时按下Start键运行Hourglass9     
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
