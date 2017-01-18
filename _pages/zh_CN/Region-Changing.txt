@@ -40,11 +40,12 @@ permalink: /region-changing.html
 
 #### 操作指南
 
-**一些设备只有 SecureInfo_B 而不是 SecureInfo_A；这是正常现象，使用SecureInfo_B 来完成相关的步骤。**    
+**一些设备只有 SecureInfo_B 而不是 SecureInfo_A；这是正常现象，使用SecureInfo_B 来完成相关的步骤。**   
+{: .notice--info} 
 
 ##### 第一部分 - 准备工作
 
-1. 提取GodMode9压缩包中的`GodMode9.bin`文件，复制到SD卡的`/luma/payloads/`目录下，并将`GodMode9.bin`重命名为`up_GodMode9.bin`
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 2. 复制`Decrypt9WIP.bin`文件到SD卡的`/luma/payloads/`文件夹，并将`Decrypt9WIP.bin`重命名为`x_Decrypt9WIP.bin`
 3. 从ctrtransfer压缩包中提取9.2.0 ctrtransfer文件`.bin`和`.bin.sha`，复制到SD卡的`/files9/` 目录
 4. 将SD卡插回3DS
@@ -52,12 +53,13 @@ permalink: /region-changing.html
 ##### 第二部分 － 备份tickets和config save
 
 1. 按住(X)键开机，进入Decrypt9     
-2. 进入”Ticket/Titlekey Options”，选择”Ticket Dump (SysNAND)”
-3. 按(Select)键弹出你的SD卡，并把SD卡插入电脑
-4. 删除所有`/files9/`文件夹中不以“00-“开头的`.tik`文件
-5. 将所有以”00-“开头的`.tik`文件留在文件夹中
-6. 重新将SD卡插入你的3DS，并按(B)键返回到主菜单
-7. 选择”SysNAND Options”，然后选”System Save Dump”，然后选”Dump configsave.bin”
+2. Hover over Decrypt9WIP, then press (A) to launch it   
+3. 进入”Ticket/Titlekey Options”，选择”Ticket Dump (SysNAND)”
+4. 按(Select)键弹出你的SD卡，并把SD卡插入电脑
+5. 删除所有`/files9/`文件夹中不以“00-“开头的`.tik`文件
+6. 将所有以”00-“开头的`.tik`文件留在文件夹中
+7. 重新将SD卡插入你的3DS，并按(B)键返回到主菜单
+8. 选择”SysNAND Options”，然后选”System Save Dump”，然后选”Dump configsave.bin”
 
 ##### 第三部分 - ctr转移
 
@@ -75,7 +77,7 @@ permalink: /region-changing.html
 
 ##### 第三部分 - 修改SecureInfo
 
-1. 按住(方向上)键开机，重启进入arm9loaderhax GodMode9     
+1. 按住(方向上)键开机，重启进入arm9loaderhax GodMode9      
 2. 依次选择 `SYSNAND CTRNAND` -> `rw` -> `sys` 目录
 3. 找到`SecureInfo_A`，按(Y)键复制
 4. 再次按(Y)键粘贴，生成`SecureInfo_A`的副本
@@ -119,7 +121,8 @@ permalink: /region-changing.html
 
 ##### 第七部分 - 恢复config save
 
-1. 按住(X)键重启，进入Decrypt9
+1. 按住(X)键开机，进入Decrypt9   
+2. Hover over Decrypt9WIP, then press (A) to launch it   
 2. 进入”SysNAND Options”，选择”System Save Inject”，然后选”Inject configsave.bin”
 
 老3DS/2DS可能需要格式化机器（使用TinyFormat或系统设置）才能玩扩展内存模式的游戏（如怪物猎人，任天堂明星大乱斗，和精灵宝可梦日/月）。
