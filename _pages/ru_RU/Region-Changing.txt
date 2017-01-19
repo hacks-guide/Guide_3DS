@@ -10,7 +10,7 @@ This is add-on section for region changing your arm9loaderhax CFW SysNAND. This 
 **Region changing is almost completely unnecessary since Luma3DS supports out of region games and individual [title region emulation](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage).**
 {: .notice--info}
 
-This process will unlink your NNID from the system, since it will no longer be compatible with it. NNID's are locked to the region of the device that created them, and cannot be transferred between regions without [a very complex and advanced process](https://gist.githubusercontent.com/yifanlu/e80db121d38aceb8cca0e03cefd5853b/raw/3c4dd89869156ca0f945a2791e699acfdb32b510/gistfile1.txt).
+Этот процесс отсоединит NNID от приставки, поскольку он больше не будет совместим с вашей консолью. NNID's are locked to the region of the device that created them, and cannot be transferred between regions without [a very complex and advanced process](https://gist.githubusercontent.com/yifanlu/e80db121d38aceb8cca0e03cefd5853b/raw/3c4dd89869156ca0f945a2791e699acfdb32b510/gistfile1.txt).
 {: .notice--warning}
 
 After this process, only **New 3DSs which have never accessed the eShop before** and **any Old 3DSs** will be able to access the eShop after creating a new NNID on their new region. Region changed New 3DSs that have already accessed the eShop on their original region cannot create a new NNID and access the eShop on their new region!
@@ -45,28 +45,28 @@ Region changing using ctrtransfer (which this method uses) seems to cause reboot
 
 ##### Часть I - Подготовительные работы
 
-1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
+1. Скопируйте `GodMode9.bin` из `.zip-архива` GodMode9 в папку `/luma/payloads/`на SD-карте
 2. Скопируйте `Decrypt9WIP.bin` в папку `/luma/payloads/` на карте памяти и переименуйте `Decrypt9WIP.bin` в `x_Decrypt9WIP.bin`
-3. Copy the 9.2.0 ctrtransfer image `.bin` and `.bin.sha` from the ctrtransfer `.zip` to the `/files9/` folder on your SD card
+3. Скопируйте файлы `.bin` и `.bin.sha` из `.zip-архива` с образом 9.2.0 ctrtransfer в папку `/files9/` на SD-карте
 4. Вставьте карту памяти в 3DS
 
 ##### Section II - Backup tickets and config save
 
 1. Press (Start) then hold (X) to reboot into arm9loaderhax Decrypt9     
-2. Hover over Decrypt9WIP, then press (A) to launch it   
-3. Go to "Ticket/Titlekey Options", then select "Ticket Dump (SysNAND)"
-4. Press (Select) to eject your SD card, then put it in your computer
-5. Delete all `.tik` files in the `/files9/` folder that **do not** start with "00-"
-6. Leave all the `.tik` files that do start with "00-" in the folder
-7. Reinsert your SD card into your 3DS, then press (B) to go back to the Main Menu
-8. Go to "SysNAND Options", then "System Save Dump", then select "Dump configsave.bin"
+2. Выберите пункт Decrypt9WIP, а затем нажмите (A), чтобы запустить его   
+3. Перейдите в меню "Ticket/Titlekey Options", затем выберите "Ticket Dump (SysNAND)"
+4. Нажмите (Select), чтобы извлечь SD-карту, а затем вставьте её в компьютер
+5. Удалите все файлы с расширением `.tik` в папке `/files9/`, которые **НЕ** начинаются с "00-"
+6. Все файлы с разрешением `.tik`, начинающиеся с "00-" оставьте в папке
+7. Вставьте карту памяти назад в 3DS и нажмите (B), чтобы вернуться в главное меню
+8. Выберите "SysNAND Options", "System Save Dump", а затем выберите "Dump configsave.bin"
 
-##### Section III - ctrtransfer
+##### Часть III - ctrtransfer
 
 1. Go to "SysNAND Options", then "CTRNAND Transfer", then "Auto CTRNAND Transfer"
 2. Select the 9.2.0 ctrtransfer image when prompted by pressing (A)
 3. If you do not already have a NAND backup, **backup SysNAND to `NANDmin.bin` when prompted by pressing (A)**
-4. Allow the transfer process to proceed automatically, this will take some time
+4. Дождитесь завершения процесса. Это может занять некоторое время
 5. Once the transfer is complete, press (Select) to eject your SD card
 6. Put your SD card in your computer, then copy `NANDmin.bin` and `NANDmin.bin.sha` from the `/files9/` folder on your SD card to a safe location
   + Make backups in multiple locations
@@ -75,20 +75,20 @@ Region changing using ctrtransfer (which this method uses) seems to cause reboot
 7. Delete the 9.2.0 ctrtransfer image `.bin` and `.bin.sha` from the `/files9/` folder on your SD card after copying it
 8. Вставьте карту памяти в 3DS
 
-##### Section IV - Editing SecureInfo
+##### Часть IV - Редактирование SecureInfo
 
 1. Press (Start) then hold (Up) to reboot into arm9loaderhax GodMode9      
-2. Navigate to `SYSNAND CTRNAND` -> `rw` -> `sys`
-3. Press (Y) on `SecureInfo_A` to copy it
-4. Press (Y) to paste a copy of `SecureInfo_A`
-5. Select "Copy path(s)"
-6. Press (A) to unlock SysNAND writing, then input the key combo given
-7. Select "Choose new name"
+2. Перейдите в `SYSNAND CTRNAND` -> `rw` -> `sys`
+3. Нажмите (Y) на файле `SecureInfo_A`, чтобы скопировать его
+4. Нажмите (Y), чтобы вставить копию `SecureInfo_A`
+5. Выберите "Copy path(s)"
+6. Нажмите (A), чтобы разрешить запись в SysNAND и введите указанную комбинацию кнопок
+7. Выберите "Choose new name"
 8. Use the D-Pad to rename the file to `SecureInfo_C`, pressing (A) when you're done (overwrite any existing `SecureInfo_C`)
 9. Scroll down to the `SecureInfo_C` you just pasted
-10. Press (A) on `SecureInfo_C` then select "Show in Hexeditor"
-11. Press (A) to continue
-12. Press (A) to enter edit mode
+10. Нажмите (A) на файле `SecureInfo_C` и выберите "Show in Hexeditor"
+11. Нажмите (A), чтобы продолжить
+12. Нажмите (A), чтобы войти в режим редактирования
 13. Go to the beginning of line 00000100 and press (A) on it
 14. Hold (A) while pressing (Up) or (Down) on the D-Pad to edit the number
 15. Change the first number pair on line 00000100 to the following pair that corresponds to *the region you want to change to*:
@@ -122,7 +122,7 @@ Region changing using ctrtransfer (which this method uses) seems to cause reboot
 ##### Section VII - Restore config save
 
 1. Press (Start) then hold (X) to reboot into arm9loaderhax Decrypt9   
-2. Hover over Decrypt9WIP, then press (A) to launch it   
+2. Выберите пункт Decrypt9WIP, а затем нажмите (A), чтобы запустить его   
 2. Go to "SysNAND Options", then "System Save Inject", then select "Inject configsave.bin"
 
 Old 3DSs / 2DSs may need to format (using TinyFormat or the System Settings) to play extended memory mode games (such as Monster Hunter, Super Smash Bros, or Pokemon Sun/Moon).
