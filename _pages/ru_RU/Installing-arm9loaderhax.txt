@@ -66,12 +66,12 @@ This is nearly the best possible kind of device exploit because it is permanentl
 1. **If it exists, copy the `/files9/` folder on your SD card to a safe location on your computer and back it up to multiple locations (such as online file storage); the files inside could save you from total data loss if you break your system**
 2. Создайте папку `cias` в корне SD-карты
 6. Скопируйте _содержимое_ `.7z-архива` SafeA9LHInstaller в корень SD-карты
-7. Copy the `a9lh` folder from the data_input `.zip` to the root of your SD Card
-8. Copy _the contents of_ the arm9loaderhax release `.7z` to `a9lh` folder on your SD card
-9. Copy `hblauncher_loader.cia` from the hblauncher_loader `.zip` to the `/cias/` folder on your SD card
-10. Copy `lumaupdater.cia` from the Luma3DS Updater `.zip` to the `/cias/` folder on your SD card
-11. Copy `FBI.cia` from the FBI `.zip` to the `/cias/` folder on your SD card
-12. Copy `arm9loaderhax.bin` from the Luma3DS `.7z` to the root of your SD card, overwrite existing files
+7. **Скопируйте папку `a9lh` из `.zip-архива` `data_input` в корень SD-карты**
+8. Скопируйте _содержимое_ `.7z-архива` arm9loaderhax в папку `a9lh` в корне SD-карты
+9. Скопируйте `hblauncher_loader.cia` из архива hblauncher_loader в папку `/cias/` в корне SD-карты
+10. Скопируйте `lumaupdater.cia` из архива Luma3DS Updater в папку `/cias/` в корне SD-карты
+11. Скопируйте `FBI.cia` из архива FBI в папку `/cias/` в корне SD-карты
+12. **Скопируйте `arm9loaderhax.bin` из `.7z-архива` Luma3DS в корень SD-карты, соглашаясь на перезапись файлов**
 13. Создайте папку `luma` в корне SD-карты
 14. Создайте папку `payloads` в папке `luma` на SD-карты
 15. Скопируйте `Hourglass9.bin` из `.zip-архива` Hourglass9 в папку `/luma/payloads/` в корне SD-карты и переименуйте `Hourglass9.bin` в `start_Hourglass9.bin`
@@ -88,7 +88,7 @@ This is nearly the best possible kind of device exploit because it is permanentl
     + Если появляется ошибка "This service is not available in your region", поменяйте регион в Системных настройках (System Settings) на соответствующий тому, который был установлен при 2.1.0 ctrtransfer
     + При возникновении другой ошибки, обратитесь к разделу [Проблемы и их решения](troubleshooting#ts_browser)
     + If you get a glitched screen, [follow this troubleshooting guide](troubleshooting#ts_safe_a9lh_screen)
-    + If you are on a 2DS or New 3DS and Wireless Communication is off, you can re-enable the wireless by removing the battery and unplugging the charger for several seconds then booting back up
+    Если вы забыли включить Wi-Fi на 2DS или New 3DS, это можно сделать, вытащив батарею и отключив зарядное устройство на несколько секунд, а затем снова включить консоль
   + Нажмите (Select) для установки
   + Установщик поставит arm9loaderhax на вашу консоль (буквально за секунду)
   + Нажмите любую кнопку для выключения консоли
@@ -96,7 +96,7 @@ This is nearly the best possible kind of device exploit because it is permanentl
 
 ##### Часть III - Настройка Luma3DS
 
-1. Boot your device while holding (Select) to enter the Luma3DS configuration menu
+1. Включите вашу консоль, зажав кнопку (Select), чтобы попасть в меню настроек Luma3DS
   + Важно зажать кнопку до того, как включать приставку
   + Если после включения экран остаётся чёрным, то перейдите к разделу [проблемы и их решения](troubleshooting#ts_sys_down)   
   + Если после загрузки запускается SafeA9LHInstaller, то перейдите к разделу [проблемы и их решения](troubleshooting#ts_sys_a9lh)
@@ -104,7 +104,7 @@ This is nearly the best possible kind of device exploit because it is permanentl
   + **"Autoboot SysNAND"**
   + **"Use SysNAND FIRM if booting with R"**
   + **"Show NAND or user string in System Settings"**
-3. If you are using a **New 3DS**, you can *also* enable the following:
+3. Если у вас **New 3DS**, вы *так же* можете выбрать следующие пункты:
   + **"New 3DS CPU" to "Clock+L2(x)"**
     + Это увеличит частоту кадров в множестве игр, но может отразиться на стабильности других
     + Если какие-либо игры работают некорректно, отключите эту опцию
@@ -114,10 +114,10 @@ This is nearly the best possible kind of device exploit because it is permanentl
 
 ##### Часть IV - Восстановление системы
 
-If, before following this guide, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand) instead of doing the first four steps in this section.
+Если прежде чем начать выполнять действия из этого руководства у вас уже был установлен EmuNAND и вы хотите перенести содержимое EmuNAND в SysNAND с кастомной прошивкой - сейчас самый подходящий момент. Выполните действия из раздела [перенос EmuNAND](move-emunand), вместо первых 4 шагов в этой части.
 {: .notice--info}
 
-1. Boot your device while holding (Start) to enter Hourglass9
+1. Включите вашу консоль, зажав кнопку (Select), чтобы запустить Hourglass9
 2. Перейдите в "SysNAND Backup/Restore"
 3. Перейдите в "SysNAND Restore (keep a9lh)" и восстановите NAND из `NANDmin.bin`
 4. Нажмите (Start) для перезагрузки
@@ -135,7 +135,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
 
 ##### Часть V - Интеграция FBI
 
-1. Boot your device while holding (Start) to enter Hourglass9
+1. Включите вашу консоль, зажав кнопку (Select), чтобы запустить Hourglass9
 2. Перейдите в "SysNAND Options", затем "Health&Safety Dump", чтобы сохранить оригинал приложения Информация о здоровье и безопасности (Health & Safety) в файл `hs.app` **(стрелками Вверх и Вниз / Влево и Вправо можно менять название файла)**
 3. Нажмите (B), затем выберите "Health&Safety Inject"
 4. Выберите файл с интегрированным FBI формата `.app` соответствующий вашему региону
@@ -161,7 +161,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
 14. Запустите Homebrew Launcher с домашнего экрана
 15. Выберите "DSP Dump"
 16. После завершения нажмите (Start) для выхода
-17. Boot your device while holding (Start) to enter Hourglass9
+17. Включите вашу консоль, зажав кнопку (Select), чтобы запустить Hourglass9
 19. Перейдите в "SysNAND Backup/Restore", затем "Health&Safety Inject"
 20. Выберите `hs.app` (оригинальный файл, не содержащий FBI), нажмите (A) для подтверждения
 21. Нажмите (Select) в главном меню Hourglass9, чтобы извлечь SD-карту
@@ -169,7 +169,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
   + Для того, чтобы настроить Luma3DS, установленную в раздел CTRNAND, необходимо хотя бы раз загрузить консоль с извлеченной SD-картой.
 23. Нажимая (A) выберите следующие пункты:    
   + **"Show NAND or user string in System Settings"**
-24. If you are using a **New 3DS**, you can *also* enable the following:
+24. Если у вас **New 3DS**, вы *так же* можете выбрать следующие пункты:
   + **"New 3DS CPU" to "Clock+L2(x)"**
     + Это увеличит частоту кадров в множестве игр, но может отразиться на стабильности других
     + Если какие-либо игры работают некорректно, отключите эту опцию
