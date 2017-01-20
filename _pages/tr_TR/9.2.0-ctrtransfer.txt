@@ -48,54 +48,54 @@ Cihazınız, ctrtransfer işleminden sonra yüklü oyunlarınızı göstermeyebi
 
 ##### Bölüm III - ctrtransfer
 
-1. Go to "SysNAND Options", then "CTRNAND Transfer", then "Auto CTRNAND Transfer"
-2. Input the key combo given, then select the 9.2.0 ctrtransfer image when prompted by pressing (A)
-3. If you do not already have a NAND backup, **Backup SysNAND to `NANDmin.bin` when prompted by pressing (A)**
-4. Allow the transfer process to proceed automatically, this will take some time
-5. Once the transfer is complete, press (Select) to eject your SD card
-6. Put your SD card in your computer, then copy `NANDmin.bin` and `NANDmin.bin.sha` from the `/files9/` folder on your SD card to a safe location
-  + Make backups in multiple locations
-  + This backup will save you from a brick if anything goes wrong in the future
-  + **Your backup should match one of the sizes on [this](nand-size) page; if it does not, you should delete it and make a new one!**
-7. Delete the 9.2.0 ctrtransfer image `.bin` and `.bin.sha` from the `/files9/` folder on your SD card
+1. "SysNAND Options" seçeneğine girin, daha sonra "CTRNAND Transfer", sonra "Auto CTRNAND Transfer"i seçin
+2. Gösterilen tuşları girin, daha sonra (A) tuşlamanız istendiğinde 9.2.0 ctrtransfer imajını seçin
+3. Zaten NAND yedeğiniz yok ise, **istendiğinde (A) tuşuna basarak SysNAND'i `NANDmin.bin` dosyasına yedekleyiniz**
+4. Transfer işleminin otomatik olarak ilerlemesine izin verin, bu biraz zaman alabilir.
+5. Aktarım tamamlandıktan sonra SD kartı çıkarmak için (Select) basın
+6. SD kartınızı bilgisayarınıza yerleştirin, ardından SD kartınızdaki `/ files9 /` klasöründen `NANDmin.bin` ve` NANDmin.bin.sha` dosyalarını güvenli bir yere kopyalayın
+  + Birden çok konumda yedekleyin
+  Bu yedek eğer ileride bir şey ters giderse cihazın brick olma ihtimalini engelleyecek
+  + **Yedeğiniz bu sayfadaki boyutlardan birine uymalı [this](nand-size); uymazsa, silip yeniden yapın!**
+7. SD kartınızın `/files9/` klasöründeki 9.2.0 ctrtransfer imajının `.bin` ve `.bin.sha` dosyalarını silin
 8. SD kartınızı cihazınıza takın.
-9. Press (Start) to reboot
-10. Update your 3DS by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
-  + Updates while using A9LH + Luma (what you have) are safe, stop asking about it
-  + If this gives you an error, set your DNS settings to "auto"
+9. Start'a basarak yeniden başlatın
+10. Sistem Ayarları'na, ardından da "Other Settings" a gidin, sonra sağa doğru devam edip "System Update" yi kullanarak 3DS'nizi güncelleyin
+  a9LH+Luma(sizde olanlar) varken güncelleme yapmak güvenlidir, sormanıza gerek yok
+  + Bu bir hata verirse, DNS ayarlarınızı "otomatik" olarak belirleyin
 
-##### Section IV - Restore config save
+### Bölüm IV - Ayarları geri yükleme
 
-1. Reboot holding (X) during boot to launch arm9loaderhax Decrypt9
-2. Go to "SysNAND Options", then "System Save Inject", then select "Inject configsave.bin"
-3. Press (B) to get back to the main menu
+1. arm9loaderhax Decrypt9'u başlatmak için (X)'e basılı tutarken cihazı açın
+2. "SysNAND Options" gidin, sonra "System Save Inject", daha sonra "Inject configsave.bin" seçin
+3. Ana menüye dönmek için (B)'ye basın
 
-##### Section V - Injecting FBI
+##### Bölüm V - FBI enjekte edilmesi
 
-1. Go to "SysNAND Options", then "Miscellaneous", then select the "Health&Safety Dump" option to dump Health & Safety to `hs.app` **(you can use Up and Down / Left and Right to change the name)**
-2. Press (B), then select the "Health&Safety Inject" option
-3. Select the FBI injectable `.app` for your region
-4. Press (A) and confirm to inject
-5. Press (Start) to reboot
-6. If you still launch to the stock Health & Safety app and have downgraded with Gateway in the past, [follow this troubleshooting guide](troubleshooting#gw_fbi)
+1. "SysNAND Options" gidin, sonra "Miscellaneous", daha sonra "Health&Safety Dump" seçin ve Health & Safety uygulamasını `hs.app`ismine dump edin. **(İsmi değiştirmek için yön tuşlarını kullanabilirsiniz.)**
+2. (B) basın ve daha sonra "Health&Safety Inject" seçeneğini seçin
+3. Bölgenize uygun FBI enjekte `.app` dosyanızı seçin
+4. (A)'ya basın ve enjekte etmek için onaylayın
+5. Start'a basarak yeniden başlatın
+6. Eğer hala orjinal Health & Safety app açılıyorsa ve geçmişte Gateway kullanarak downgrade yaptıysanız, [bu sorun giderme rehberine bakın](troubleshooting#gw_fbi)
 
-##### Section VI - Reinstalling Tickets
+##### Bölüm VI - Ticketları yeniden yükleme
 
-If you had no tickets beginning with 00- earlier, you can skip this section.
+Önceden 00- ile başlayan ticketlarınız yoksa, bu bölümü atlayabilirsiniz.
 {: .notice--info}
 
-1. Open FBI
-2. Select "SD"
-3. Select "files9"
-4. Select "\<current directory>"
-5. Select "Install and delete all tickets"
-6. Wait. The system may appear to freeze, just give it time.
-7. Press (A) to confirm
-8. Press (B) to decline installing tickets from CDN.
-9. Exit with the home button
+1. FBI'ı açın
+2. "SD" 'yi seçin
+3. "Files9" seçin
+4. "\<current directory>" 'i seçin
+5. "Install and delete all tickets" seçin
+6. Bekle. Sistem donabilir biraz zaman verin.
+7. Onaylamak için (A) basın
+8. CDN'den ticket yüklemeyi reddetmek için (B) tuşuna basın.
+9. Home tuşu ile çıkın
 
-Formatting a device following a ctrtransfer *without restoring the config save* can cause screen brightness / flickering issues. See [this](https://github.com/Plailect/Guide/issues/794).
+Bir aygıtı ctrtransfer işleminden sonra *ayarları geri yüklemeden * biçimlendirmek ekran parlaklığı / titreklik sorunlarına neden olabilir. Buraya bakın [this](https://github.com/Plailect/Guide/issues/794).
 {: .notice--info}
 
-Return to [Installing arm9loaderhax](installing-arm9loaderhax).
+Buraya dönün [arm9loaderhax yükleme](installing-arm9loaderhax).
 {: .notice--primary}
