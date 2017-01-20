@@ -19,10 +19,10 @@ permalink: /ru_RU/region-changing.html
 Note that occasionally the eShop will inexplicably still not work for devices that it should work for. This is entirely to do with Nintendo's servers, and I really do not have any control over it.
 {: .notice--warning}
 
-Region changing using ctrtransfer (which this method uses) seems to cause reboot patches to break. Причина этого неизвестна, но из-за этого владельцы Old 3DS теряют возможность играть в игры, требующие режим расширенной оперативной памяти (например, Monster Hunter, Super Smash Bros, and Pokémon Sun / Moon).
+Смена региона при помощи ctrtransfer (что используется в этом методе) по какой-то причине ломает reboot-патч. Причина этого неизвестна, но из-за этого владельцы Old 3DS теряют возможность играть в игры, требующие режим расширенной оперативной памяти (например, Monster Hunter, Super Smash Bros, and Pokémon Sun / Moon).
 {: .notice--warning}
 
-**You MUST have already installed arm9loaderhax + Luma3DS to use this.**
+**У вас уже ДОЛЖНЫ быть установлены arm9loaderhax и Luma3DS для работы с этим**
 {: .notice--danger}
 
 #### Что понадобится
@@ -76,25 +76,25 @@ Region changing using ctrtransfer (which this method uses) seems to cause reboot
 
 ##### Часть IV - Редактирование SecureInfo
 
-1. Press (Start) then hold (Up) to reboot into arm9loaderhax GodMode9      
+1. Нажмите (Start), и удерживайте (Вверх), чтобы запустить GodMode9      
 2. Перейдите в `SYSNAND CTRNAND` -> `rw` -> `sys`
 3. Нажмите (Y) на файле `SecureInfo_A`, чтобы скопировать его
 4. Нажмите (Y), чтобы вставить копию `SecureInfo_A`
 5. Выберите "Copy path(s)"
 6. Нажмите (A), чтобы разрешить запись в SysNAND и введите указанную комбинацию кнопок
 7. Выберите "Choose new name"
-8. Use the D-Pad to rename the file to `SecureInfo_C`, pressing (A) when you're done (overwrite any existing `SecureInfo_C`)
+8. С помощью крестовины переименуйте файл в `SecureInfo_C` и нажмите (A) для подтверждения (соглашайтесь на замену существующего `SecureInfo_C`)
 9. Прокрутите вниз до `SecureInfo_C`, который мы только что вставили
 10. Нажмите (A) на файле `SecureInfo_C` и выберите "Show in Hexeditor"
 11. Нажмите (A), чтобы продолжить
 12. Нажмите (A), чтобы войти в режим редактирования
-13. Go to the beginning of line 00000100 and press (A) on it
+13. Перейдите на начало строки под номером 00000100 и нажмите (A)
 14. Удерживая (A), нажимайте (Вверх) или (Вниз) для редактирования значения
-15. Change the first number pair on line 00000100 to the following pair that corresponds to *the region you want to change to*:
+15. Измените первое число из двух цифр в строке на число, соответствующее *региону, на который вы хотите перейти*:
     - "00" : JPN
     - "01" : USA
     - "02" : EUR
-16. Press (B) to exit edit mode, then save changes, then press (B) again to return to the directory
+16. Нажмите (B), чтобы выйти из режима редактирования, (А), чтобы сохранить изменения, и затем еще раз (В), чтобы вернуться в папку
 17. Если все сделано правильно, то вы увидите оба файла - `SecureInfo_A` и `SecureInfo_C` (`SecureInfo_C` автоматически используется вместо `SecureInfo_A` в том случае, если при загрузке Luma3DS находит его в директории)
 18. Нажмите (Start) для перезагрузки
 
@@ -114,7 +114,7 @@ Region changing using ctrtransfer (which this method uses) seems to cause reboot
 
 1. Откройте Системные настройки (System settings)
 2. Перейдите в "Прочие настройки" (Other Settings), затем "Профиль" (Profile), затем "Настройки региона" (Region Settings)
-3. Select a country from the region you switched to
+3. Выберите страну из вашего нового региона
 4. При появлении запроса о штате указывать его не нужно
 5. Обновите SysNAND нового региона до последней версии
 
