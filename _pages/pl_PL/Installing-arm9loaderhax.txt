@@ -88,7 +88,7 @@ Podczas tego procesu zainstalujemy również takie programy jak:
     + Jeśli pojawi się błąd "This service is not available in your region", użyj ustawień systemowych aby zmienić region konsoli zgodnie z regionem NAND'u zainstalowanego wraz z 2.1.0 ctrtransfer
     + Jeśli pojawi się inny błąd, [przejdź do rozwiązywania problemów](troubleshooting#ts_browser)
     + Jeśli pojawi się zglitchowany ekran, [przejdź do rozwiązywania problemów](troubleshooting#ts_safe_a9lh_screen)
-    + If you are on a 2DS or New 3DS and Wireless Communication is off, you can re-enable the wireless by removing the battery and unplugging the charger for several seconds then booting back up
+    + Jeśli używasz 2DS lub New3DS i obniżyłeś wersję firmware do 2.1.0 z wyłączoną komunikacją bezprzewodową (Wi-Fi), możesz ją ponownie włączyć poprzez wyjęcie baterii i odłączenie ładowarki od konsoli na kilka sekund, a następnie ponowne jej uruchomienie
   + Naciśnij (Select) aby przeprowadzić pełną instalację
   + Instalator zainstaluje teraz arm9loaderhax na twoim urządzeniu (jest to bardzo szybkie)
   + Wyłącz swoją konsolę, naciskając dowolny przycisk
@@ -96,7 +96,7 @@ Podczas tego procesu zainstalujemy również takie programy jak:
 
 ##### Sekcja III - Konfiguracja Luma3DS
 
-1. Boot your device while holding (Select) to enter the Luma3DS configuration menu
+1. Uruchom swoją konsolę przytrzymując jednocześnie przycisk (Select) aby dostać się do menu konfiguracji Luma3DS
   + Upewnij się, że trzymasz go zanim naciśniesz przycisk power
   + Jeśli pojawi się czarny ekran, [przejdź do rozwiązywania problemów](troubleshooting#ts_sys_a9lh)   
   + Jeśli uruchomi się SafeA9LHInstaller, [przejdź do rozwiązywania problemów](troubleshooting#ts_safe_a9lh)
@@ -104,7 +104,7 @@ Podczas tego procesu zainstalujemy również takie programy jak:
   + **"Autoboot SysNAND"**
   + **"Use SysNAND FIRM if booting with R"**
   + **"Show NAND or user string in System Settings"**
-3. If you are using a **New 3DS**, you can *also* enable the following:
+3. Jeśli posiadasz **New 3DS**, możesz *także* włączyć następujące funkcje:
   + **"New 3DS CPU" to "Clock+L2(x)"**
     + Spowoduje to zwiększenie ilości klatek na sekundę w wielu grach, ale może także spowodować niestabilność w innych
     + Jeśli jakieś gry nie działają poprawnie, należy wyłączyć tę opcję i spróbować ponownie
@@ -117,16 +117,16 @@ Podczas tego procesu zainstalujemy również takie programy jak:
 Jeśli przed rozpoczęciem tej instrukcji miałeś już zainstalowaną konfigurację CFW z EmuNAND i chciałbyś przenieść jego zawartość do nowego CFW na SysNAND, teraz jest czas, aby [przejść do Przenoszenie EmuNAND](move-emunand) zamiast wykonywania pierwszych czterech kroków tej sekcji.
 {: .notice--info}
 
-1. Boot your device while holding (Start) to enter Hourglass9
-2. Go to "SysNAND Backup/Restore"
-3. Go to "SysNAND Restore (keep a9lh)" and restore from `NANDmin.bin`
-4. Press (Start) to reboot
-  + If you get a black screen, [follow 9.2.0 ctrtransfer](9.2.0-ctrtransfer)
-5. If your backup was of a version between 3.0.0 and 4.5.0, your console will not boot until you manually download the required firmware:
-  + Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) and rename it to `firmware.bin`
-  + Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
-  + Copy `firmware.bin` and `cetk` to the `/luma/` folder on your SD card
-  + Delete both of these files after updating your 3DS
+1. Uruchom swoją konsolę przytrzymując jednocześnie przycisk (Start) aby uruchomić aplikację Hourglass9
+2. Przejdź do "SysNAND Backup/Restore"
+3. Wybierz "SysNAND Restore (keep a9lh)" i przywróć NAND swojej konsoli z pliku `NANDmin.bin`
+4. Naciśnij przycisk (Start) by uruchomić konsolę ponownie
+  + Jeśli pojawi się czarny ekran, [przejdź do 9.2.0 ctrtransfer](9.2.0-ctrtransfer)
+5. Jeśli twoja kopia NAND pochodzi z wersji pomiędzy 3.0.0 a 4.5.0, twoja konsola nie uruchomi się dopóki ręcznie nie pobierzesz wymaganego firmware:
+  + Pobierz [ten plik](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) i zmień jego nazwę na `firmware.bin`
+  + Pobierz [ten plik](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
+  + Skopiuj pliki `firmware.bin` i `cetk` do folderu `/luma/` na twojej karcie SD
+  + Usuń oba te pliki po aktualizacji twojego 3DS
 6. Update your 3DS by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
   + Updates while using A9LH + Luma (what you have) are safe, stop asking about it
   + The warning about never updating a New 3DS from 2.1.0 does not apply after restoring your NAND backup.
@@ -135,12 +135,12 @@ Jeśli przed rozpoczęciem tej instrukcji miałeś już zainstalowaną konfigura
 
 ##### Section V - Injecting FBI
 
-1. Boot your device while holding (Start) to enter Hourglass9
+1. Uruchom swoją konsolę przytrzymując jednocześnie przycisk (Start) aby uruchomić aplikację Hourglass9
 2. Go to "SysNAND Backup/Restore", then select the "Health&Safety Dump" option to dump Health & Safety to `hs.app` **(you can use Up and Down / Left and Right to change the name)**
 3. Press (B), then select the "Health&Safety Inject" option
 4. Select the FBI injectable `.app` for your region
 5. Press (A) and confirm to inject
-6. Press (Start) to reboot
+6. Naciśnij przycisk (Start) by uruchomić konsolę ponownie
 7. If you still launch to the stock Health & Safety app and have downgraded with Gateway in the past, [follow this troubleshooting guide](troubleshooting#gw_fbi)
 
 ##### Section VI - Finalizing setup
@@ -161,7 +161,7 @@ Jeśli przed rozpoczęciem tej instrukcji miałeś już zainstalowaną konfigura
 14. Launch the Homebrew Launcher from the home menu
 15. Select "DSP Dump"
 16. Press (Start) when prompted to exit
-17. Boot your device while holding (Start) to enter Hourglass9
+17. Uruchom swoją konsolę przytrzymując jednocześnie przycisk (Start) aby uruchomić aplikację Hourglass9
 19. Go to "SysNAND Backup/Restore", then select "Health&Safety Inject"
 20. Select `hs.app` (the original one that doesn't contain FBI), then press (A) and confirm to inject
 21. Press (Select) on the main menu to eject your SD card
@@ -169,7 +169,7 @@ Jeśli przed rozpoczęciem tej instrukcji miałeś już zainstalowaną konfigura
   + Booting the device at least once with the SD card removed will allow you to configure the CTRNAND based Luma3DS installation
 23. Użyj przycisku (A) oraz D-Pada, aby włączyć następujące opcje:    
   + **"Show NAND or user string in System Settings"**
-24. If you are using a **New 3DS**, you can *also* enable the following:
+24. Jeśli posiadasz **New 3DS**, możesz *także* włączyć następujące funkcje:
   + **"New 3DS CPU" to "Clock+L2(x)"**
     + Spowoduje to zwiększenie ilości klatek na sekundę w wielu grach, ale może także spowodować niestabilność w innych
     + Jeśli jakieś gry nie działają poprawnie, należy wyłączyć tę opcję i spróbować ponownie
