@@ -58,11 +58,11 @@ permalink: /tr_TR/troubleshooting.html
 5. Yukarıya bir defa basarak ismini `10000000` olarak değiştirin
 6. (A)'ya basarak değişiklikleri kaydedin
 7. SysNAND yazımını aktifleştirmek için (A)'ya basın, ardından verilen tuş dizimini girin
-8. Navigate back to the Main Menu
-9. Press (Start) to reboot
+8. Ana menüye geri dönün
+9. Start'a basarak yeniden başlatın
 
-## <a name="gw_fbi" />Cannot inject H&S on Gateway downgraded device
-This is caused by Gateway implementing a very shoddy downgrade method, which leaves two versions of each app on the system. One of them is unused, but it confuses Decrypt9, causing it to inject into the wrong one.
+## <a name="gw_fbi" />Gateway ile eski sürüme düşürülmüş cihaza H&S enjekte edilemez
+Bu, Gateway'in eski sürüme düşürme yönteminin kalitesizliğinden ve her uygulamanın iki versiyonunu bırakmasından kaynaklanır. Biri gereksizdir, ama Decrypt9'ın şaşırmasına ve yanlış olana enjekte etmesine sebep olur.
 
 #### Gerekenler
 
@@ -71,10 +71,10 @@ This is caused by Gateway implementing a very shoddy downgrade method, which lea
 #### Talimatlar
 
 1. GodMode9 `.zip` dosyasından `GodMode9.bin` dosyasını SD kartınızdaki `/luma/payloads/` klasörüne kopyalayın ve `/luma/payloads/` içindeki `GodMode9.bin` dosyasının ismini `up_GodMode9.bin` şeklinde değiştirin
-2. Reinsert your SD card into your 3DS
-3. Open GodMode9 from arm9loaderhax by holding (Up) during boot     
-4. Navigate to `SYSNAND CTRNAND` -> `title` -> `00040010`
-5. Navigate to the folder for your device and region:
+2. SD kartınızı 3DS'inize tekrar yerleştirin
+3. Cihazı açarken (Yukarı)'ya basılı tutarak arm9loaderhax ile GodMode9'ı çalıştırın     
+4. `SYSNAND CTRNAND` -> `title` -> `00040010` şeklinde ilerleyin
+5. Cihaz modeline ve bölgesine göre şu şekilde ilerleyin:
   + **Old 3DS EUR**: `00022300` -> `content`
   + **Old 3DS JPN**: `00020300` -> `content`
   + **Old 3DS USA**: `00021300` -> `content`
@@ -91,7 +91,7 @@ This is caused by Gateway implementing a very shoddy downgrade method, which lea
 13. Press (Y) to paste the files
 14. Select "Move path(s)"
 15. The uppercase extension files will have been moved to the `newdir` directory
-16. Press (Start) to reboot
+16. Start'a basarak yeniden başlatın
 17. Return to [Installing arm9loaderhax](installing-arm9loaderhax) and retry the FBI injection
 18. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then return to [Installing arm9loaderhax](installing-arm9loaderhax) and retry the FBI injection
 
