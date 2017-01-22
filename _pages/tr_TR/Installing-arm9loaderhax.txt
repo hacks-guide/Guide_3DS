@@ -106,62 +106,62 @@ Bu süreç boyunca, aşağıdaki gibi programları kuruyoruz:
   + **"Show NAND or user string in System Settings"**
 3. **New 3DS** kullanıyorsanız bunu *ayrıca* açmanız gerekir:
   + **"New 3DS CPU" to "Clock+L2(x)"**
-    + This will increase the framerate of many games, but may cause instability in others
-    + If some games do not work properly, disable this option and try again
-4. Press (Start) to save and reboot
-  + If you get a black screen, just continue to the next section   
-  + If you get a "Failed to mount CTRNAND" error, just continue to the next section     
+    +Bu oyunlarda framerate'i artırır ancak diğerlerinde stabiliteyi bozabilir
+    + Bazı oyunlar düzgün çalışmazsa, bu seçeneğini devre dışı bırakın ve tekrar deneyin
+4. Kaydedip yeniden başlatmak için (Start) basın
+  + Siyah ekran alırsanız yine de bir sonraki bölüme geçin   
+  + "Failed to mount CTRNAND" hatası alırsanız yine de bir sonraki bölüme geçin     
 
-##### Section IV - Restoring the System
+##### Bölüm IV - Sistem geri yükleme
 
-If, before following this guide, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand) instead of doing the first four steps in this section.
+Bu rehberi takip etmeden önce eğer zaten bir EmuNAND kurduysanız ve EmuNAND içeriklerinizi yeni SysNAND'a taşımak istiyorsanız, bu bölümdeki ilk dört adımı yapmak yerine bunu yapmalısınız [EmuNAND taşıma takip edin](move-emunand).
 {: .notice--info}
 
-1. Boot your device while holding (Start) to enter Hourglass9
-2. Go to "SysNAND Backup/Restore"
-3. Go to "SysNAND Restore (keep a9lh)" and restore from `NANDmin.bin`
-4. Press (Start) to reboot
-  + If you get a black screen, [follow 9.2.0 ctrtransfer](9.2.0-ctrtransfer)
-5. If your backup was of a version between 3.0.0 and 4.5.0, your console will not boot until you manually download the required firmware:
-  + Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) and rename it to `firmware.bin`
-  + Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
-  + Copy `firmware.bin` and `cetk` to the `/luma/` folder on your SD card
-  + Delete both of these files after updating your 3DS
-6. Update your 3DS by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
-  + Updates while using A9LH + Luma (what you have) are safe, stop asking about it
-  + The warning about never updating a New 3DS from 2.1.0 does not apply after restoring your NAND backup.
-  + If this gives you an error, set your DNS settings to "auto"
-  + If this still gives you an error and your NAND is below 9.2.0, [follow 9.2.0 ctrtransfer](9.2.0-ctrtransfer)
+1. Hourglass9'a girmek için konsolu açarken (Start) basılı tutun
+2. "SysNAND Backup/Restore" gidin
+3. "SysNAND Restore (keep a9lh)" ya gidin ve `NANDmin.bin '' den geri yükleyin
+4. Start'a basarak yeniden başlatın
+  + Eğer siyah ekran alırsanız, [9.2.0 ctrtransfer takip edin](9.2.0-ctrtransfer)
+5. Yedek versiyonunuz 3.0.0 ve 4.5.0 arasındaysa konsolunuz siz gerekli firmware'i manuel olarak indirene kadar başlamaz:
+  +Bunu indirin [bu dosyayı](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) ve `firmware.bin` olarak yeniden adlandırın
+  + Bunu indirin [bu dosya](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
+  + `firmware.bin` ve` cetk` dosyalarını SD kartınızdaki `/ luma /` klasörüne kopyalayın
+  + 3DS'nizi güncelledikten sonra bu dosyaların her ikisini de silin
+6. Sistem Ayarları'na, ardından da "Other Settings" a gidin, sonra sağa doğru devam edip "System Update" yi kullanarak 3DS'nizi güncelleyin
+  a9LH+Luma(sizde olanlar) varken güncelleme yapmak güvenlidir, sormanıza gerek yok
+  + New 3DS'yi 2.1.0'dan asla güncellememe hakkında uyarı, NAND yedeklemenizi geri yükledikten sonra geçerli değildir.
+  + Bu bir hata verirse, DNS ayarlarınızı "otomatik" olarak belirleyin
+  Hala hata alıyorsanız ve NAND'ınız 9.2.0 altındaysa, [takip edin 9.2.0 ctrtransfer](9.2.0-ctrtransfer)
 
-##### Section V - Injecting FBI
+##### Bölüm V - FBI enjekte edilmesi
 
-1. Boot your device while holding (Start) to enter Hourglass9
-2. Go to "SysNAND Backup/Restore", then select the "Health&Safety Dump" option to dump Health & Safety to `hs.app` **(you can use Up and Down / Left and Right to change the name)**
-3. Press (B), then select the "Health&Safety Inject" option
-4. Select the FBI injectable `.app` for your region
-5. Press (A) and confirm to inject
-6. Press (Start) to reboot
-7. If you still launch to the stock Health & Safety app and have downgraded with Gateway in the past, [follow this troubleshooting guide](troubleshooting#gw_fbi)
+1. Hourglass9'a girmek için konsolu açarken (Start) basılı tutun
+2. "SysNAND Backup/Restore" ye gidin, ardından Health & Safety bölümünü "hs.app` 'ya dump etmek için "Health&Safety Dump "seçeneğini seçin **(ismi değiştirmek için Yukarı ve Aşağı / Sol ve Sağ kullanabilirsiniz) **
+3. (B) basın ve daha sonra "Health&Safety Inject" seçeneğini seçin
+4. Bölgenize uygun FBI enjekte `.app` dosyanızı seçin
+5. (A)'ya basın ve enjekte etmek için onaylayın
+6. Start'a basarak yeniden başlatın
+7. Eğer hala orjinal Health & Safety app açılıyorsa ve geçmişte Gateway kullanarak downgrade yaptıysanız, [bu sorun giderme rehberine bakın](troubleshooting#gw_fbi)
 
-##### Section VI - Finalizing setup
+##### Bölüm VI - Kurulumun Tamamlanması
 
-1. Open Health and Safety (which is now FBI)
-2. Select "SD"
-3. Select "cias"
-4. Navigate to `FBI.cia` and press (A) to install
-5. Navigate to `hblauncher_loader.cia` and press (A) to install
-6. Navigate to `lumaupdater.cia` and press (A) to install
-7. Return to the SD directory with (B)
-8. Navigate to `arm9loaderhax.bin`, then press (A) on it and select the "Copy" option
-9. Return to the FBI main menu with (B)
-10. Select "CTR NAND"
-11. Select "\<current directory>"
-12. Select the "Paste" option, then press (A) to confirm
-13. Exit with the home button
-14. Launch the Homebrew Launcher from the home menu
-15. Select "DSP Dump"
-16. Press (Start) when prompted to exit
-17. Boot your device while holding (Start) to enter Hourglass9
+1. Health and Safety (şu an da FBI) uygulamasını açın
+2. "SD" 'yi seçin
+3. "cias" 'i seçin
+4. 'FBI.cia' gidin ve yüklemek için (A) tuşuna basın
+5. 'hblauncher_loader.cia' gidin ve yüklemek için (A) tuşuna basın
+6. 'Lumaupdater.cia' gidin ve yüklemek için (A) tuşuna basın
+7. (B) ile SD dizinine dönün
+8. 'Arm9loaderhax.bin', gidin sonra üzerinde (A) basın ve "Copy" seçeneğini seçin
+9. (B) tuşu ile FBI ana menüsüne dönün
+10. "CTR NAND" seçin
+11. "\<current directory>" 'i seçin
+12. "Paste" seçeneğini seçin, sonra onaylamak için (A) tuşuna basın
+13. Home tuşu ile çıkın
+14. Ana menüden Homebrew Launcher'ı başlatın
+15. "DSP dump" seçin
+16. Çıkmak isteyip istemediğiniz sorulduğunda (Start) tuşuna basın
+17. Hourglass9'a girmek için konsolu açarken (Start) basılı tutun
 19. Go to "SysNAND Backup/Restore", then select "Health&Safety Inject"
 20. Select `hs.app` (the original one that doesn't contain FBI), then press (A) and confirm to inject
 21. Press (Select) on the main menu to eject your SD card
@@ -171,8 +171,8 @@ If, before following this guide, you already had an EmuNAND setup and would like
   + **"Show NAND or user string in System Settings"**
 24. **New 3DS** kullanıyorsanız bunu *ayrıca* açmanız gerekir:
   + **"New 3DS CPU" to "Clock+L2(x)"**
-    + This will increase the framerate of many games, but may cause instability in others
-    + If some games do not work properly, disable this option and try again
+    +Bu oyunlarda framerate'i artırır ancak diğerlerinde stabiliteyi bozabilir
+    + Bazı oyunlar düzgün çalışmazsa, bu seçeneğini devre dışı bırakın ve tekrar deneyin
 25. Reinsert your SD card, then press (Start) to save and reboot!
 
 ___
