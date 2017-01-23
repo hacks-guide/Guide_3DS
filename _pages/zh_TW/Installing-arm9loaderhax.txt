@@ -4,16 +4,16 @@ lang: zh-Hant
 permalink: /zh_TW/installing-arm9loaderhax.html
 ---
 
-本教學的最後一步驟則是安裝 arm9loaderhax 並設定 Luma3DS，令它能在裝置啟動時開啟。 這是透過 [AuroraWright](https://github.com/AuroraWright/) 所製的 SafeA9LHInstaller 所達成的。
+本教學的最後一步驟則是安裝 arm9loaderhax 並設定 Luma3DS，令它能在裝置啟動時運行。 這是透過 [AuroraWright](https://github.com/AuroraWright/) 所製的 SafeA9LHInstaller 所達成的。
 {: .notice}
 
 本篇將安裝 [AuroraWright 版的 arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax)。
 {: .notice--info}
 
-我們將同時設定從 arm9loaderhax 啟動 payloads 的方法。此功能可以解決在還原備份情況下所造成的磚機。
+我們將同時設定從 arm9loaderhax 加載 payloads 的功能。這讓我們可以透過還原備份來解決通常會造成磚機的情況。
 {: .notice--info}
 
-**絕對不能使用其他 3DS 主機的 OTP 文件，否則保證磚機。**
+**絕對不要使用其他 3DS 主機的 OTP 文件，否則保證磚機。**
 {: .notice--danger}
 
 #### 步驟概述
@@ -22,13 +22,13 @@ permalink: /zh_TW/installing-arm9loaderhax.html
 
 這是 3DS 上近乎完美的一種破解方式，因為它可以永久地被裝在 NAND 磁區裡，而且能在大部分的主系統載入完畢前運行。這讓它不僅能在*所有*版本的 3DS 上運行，而還可以保護自身，並能從大多數使非 A9LH 破解的 3DS 變磚的情況中恢復，比如像是裝了個有問題的 HOME 主選單或者一個有問題的程式。
 
-`arm9loaderhax.bin`這個檔案是在 arm9loaderhax 從 NAND 中讀取完後所開啟的，它可以是任何有效的 arm9 payload。 你隨時可以替換這檔案，不過 Luma3DS 可以在開機時透過 Luma3DS chainloader 來啟動其他 arm9 payloads。
+`arm9loaderhax.bin`這個檔案是 arm9loaderhax 在讀取完 NAND 後所載入的，且它可以是任何有效的 arm9 payload。 你隨時可以替換這檔案，不過 Luma3DS 本身就有內建加載其他 arm9 payloads 檔案的功能。
 
-本節中，我們將使用 [AuroraWright](https://github.com/AuroraWright/) 所製的 Luma3DS 來直接啟動一個修改後的 SysNAND，使我們完全跳過需要使用任一種 EmuNAND 的步驟。這除了大量的簡化使用改機後 3DS 的步驟，還能節省 SD 卡的使用空間。
+本節中，我們將使用 [AuroraWright](https://github.com/AuroraWright/) 所製的 Luma3DS 來直接啟動一個修改後的 SysNAND，讓我們不必再使用任何的 EmuNAND。這除了大量的簡化使用改機後 3DS 所需的步驟，還能節省 SD 卡的使用空間。
 
-當 arm9loaderhax 安裝完畢後，且 Luma3DS 正確設定後，我們將還原之前的備份。
+當 arm9loaderhax 安裝完畢且正確設定完 Luma3DS 後，我們將還原之前的備份。
 
-在這過程中，我們也同時安裝下列程式：    
+在這過程中，我們也將安裝下列程式：    
 
 + **FBI 管理器** *（安裝 CIA 格式的遊戲及程式）*
 + **Luma3DS 更新器** *（用做更新 Luma3DS）*
