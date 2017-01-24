@@ -36,45 +36,45 @@ Jeśli nie jesteś w stanie uruchomić swojego 3DSa, poszukaj sekcji odnoszącej
 
 ##### Section II - Instalacja tytułów TWL
 
-1. Open FBI
-2. Select "SD"
-3. Select "cias"
-4. Select "\<current directory>"
-5. Select "Install and delete all CIAs"
-6. Exit with the home button
+1. Otwórz aplikację FBI
+2. Wybierz "SD"
+3. Wybierz "cias"
+4. Wybierz "\<current directory>"
+5. Wybierz opcję "Install and delete all CIAs"
+6. Wyjdź z aplikacji FBI naciskając przycisk "Home"
 
-## <a name="rm_nnid" />Removing an NNID without formatting the device
-
-#### Czego potrzebujesz
-
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-
-#### Instrukcje
-
-1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `up_GodMode9.bin`
-2. Boot holding (Up) to reboot into arm9loaderhax GodMode9
-3. Navigate to `SYSNAND CTRNAND` -> `data` -> (32 Character ID) -> `sysdata` -> `00010038`
-4. Hold down the (R) trigger, then press (X) on `00000000` to rename this file
-5. Press (Up) once to change the name to `10000000`
-6. Press (A) to save changes
-7. Press (A) to unlock SysNAND writing, then input the key combo given
-8. Navigate back to the Main Menu
-9. Press (Start) to reboot
-
-## <a name="gw_fbi" />Cannot inject H&S on Gateway downgraded device
-This is caused by Gateway implementing a very shoddy downgrade method, which leaves two versions of each app on the system. One of them is unused, but it confuses Decrypt9, causing it to inject into the wrong one.
+## <a name="rm_nnid" />Usuwanie NNID bez formatowania konsoli
 
 #### Czego potrzebujesz
 
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* Najnowszej wersji [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 
 #### Instrukcje
 
-1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `up_GodMode9.bin`
-2. Reinsert your SD card into your 3DS
-3. Open GodMode9 from arm9loaderhax by holding (Up) during boot     
-4. Navigate to `SYSNAND CTRNAND` -> `title` -> `00040010`
-5. Navigate to the folder for your device and region:
+1. Skopiuj plik 'GodMode9.bin' z archiwum GodMode9 '.zip' do folderu '/luma/payloads/' na twojej karcie SD i zmień jego nazwę z 'GodMode9.bin' na 'up_GodMode9.bin'
+2. Uruchom konsolę przytrzymując przycisk (Dpad w górę) aby załadować GodMode9 przez arm9loaderhax
+3. Wybierz kolejno `SYSNAND CTRNAND` -> `data` -> (32-znakowy identyfikator) -> `sysdata` -> `00010038`
+4. Przytrzymaj prawy (R) trigger, a następnie naciśnij (X) na `00000000` aby zmienić nazwę tego pliku
+5. Wciśnij jeden raz (Dpad w górę) by zmienić nazwę na `10000000`
+6. Naciśnij (A) aby zapisać zmiany
+7. Naciśnij (A) żeby odblokować możliwość zapisu do SysNAND, a następnie wprowadź żądaną na ekranie konsoli sekwencję klawiszy
+8. Wróć do menu głównego GodMode9
+9. Naciśnij przycisk (Start) aby uruchomić konsolę ponownie
+
+## <a name="gw_fbi" />Nie można wdrożyć aplikacji Health & Safety na konsoli, która miała obniżoną wersję firmware przy użyciu flashcartu Gateway
+Przyczyną tego problemu jest kiepski sposób implementacji procesu obniżania wersji firmware przez Gateway, po którym zostają 2 wersje aplikacji Health & Safety w systemie. Jedna z nich nie jest używana, ale powoduje błąd Decrypt9, wdrażając dane do niewłaściwej aplikacji.
+
+#### Czego potrzebujesz
+
+* Najnowszej wersji [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+
+#### Instrukcje
+
+1. Skopiuj plik 'GodMode9.bin' z archiwum GodMode9 '.zip' do folderu '/luma/payloads/' na twojej karcie SD i zmień jego nazwę z 'GodMode9.bin' na 'up_GodMode9.bin'
+2. Włóż z powrotem kartę SD do swojego 3DS'a
+3. Załaduj GodMode9 przez arm9loaderhax, przytrzymując (Dpad w górę) podczas uruchamiania konsoli     
+4. Wybierz kolejno `SYSNAND CTRNAND` -> `title` -> `00040010`
+5. Przejdź do katalogu odpowiadającemu twojej konsoli i jej regionowi:
   + **Old 3DS EUR**: `00022300` -> `content`
   + **Old 3DS JPN**: `00020300` -> `content`
   + **Old 3DS USA**: `00021300` -> `content`
@@ -84,14 +84,14 @@ This is caused by Gateway implementing a very shoddy downgrade method, which lea
 6. Notice that there are two sets of app and tmd files, one set with uppercase extensions (`.TMD` and `.APP`), and one set with lowercase extensions (`.tmd` and `.app`)
 7. While holding the (R) trigger, press (Y) to create a new directory
 8. Press (A) to confirm the name `newdir` (it doesn't matter what it's called)
-9. Press (A) to unlock SysNAND writing, then input the key combo given
+9. Naciśnij (A) żeby odblokować możliwość zapisu do SysNAND, a następnie wprowadź żądaną na ekranie konsoli sekwencję klawiszy
 10. Press the (L) trigger on each of the uppercase extension files (`.TMD` and `.APP`) to mark them
 11. Press (Y) to copy the files
 12. Navigate to `newdir`
 13. Press (Y) to paste the files
 14. Select "Move path(s)"
 15. The uppercase extension files will have been moved to the `newdir` directory
-16. Press (Start) to reboot
+16. Naciśnij przycisk (Start) aby uruchomić konsolę ponownie
 17. Return to [Installing arm9loaderhax](installing-arm9loaderhax) and retry the FBI injection
 18. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then return to [Installing arm9loaderhax](installing-arm9loaderhax) and retry the FBI injection
 
