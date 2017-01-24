@@ -58,44 +58,44 @@ Ponadto, zmiana regionu konsoli przy użyciu ctrtransfer (z którego korzysta ta
 5. Usuń wszystkie pliki `.tik` w folderze `/files9/` które **nie zaczynają się** od "00-"
 6. Pozostaw w folderze wszystkie pliki `.tik` które zaczynają się od "00-"
 7. Włóż kartę SD z powrotem do swojej konsoli, a następnie naciśnij (B) aby powrócić do głównego menu Decrypt9
-8. Go to "SysNAND Options", then "System Save Dump", then select "Dump configsave.bin"
+8. Przejdź do "SysNAND Options", następnie "System Save Dump" i wybierz "Dump configsave.bin"
 
-##### Section III - ctrtransfer
+##### Sekcja III - ctrtransfer
 
-1. Go to "SysNAND Options", then "CTRNAND Transfer", then "Auto CTRNAND Transfer"
-2. Select the 9.2.0 ctrtransfer image when prompted by pressing (A)
-3. If you do not already have a NAND backup, **backup SysNAND to `NANDmin.bin` when prompted by pressing (A)**
-4. Allow the transfer process to proceed automatically, this will take some time
-5. Once the transfer is complete, press (Select) to eject your SD card
-6. Put your SD card in your computer, then copy `NANDmin.bin` and `NANDmin.bin.sha` from the `/files9/` folder on your SD card to a safe location
-  + Make backups in multiple locations
-  + This backup will save you from a brick if anything goes wrong in the future
-  + **Your backup should match one of the sizes on [this](nand-size) page; if it does not, you should delete it and make a new one!**
-7. Delete the 9.2.0 ctrtransfer image `.bin` and `.bin.sha` from the `/files9/` folder on your SD card after copying it
+1. Przejdź do "SysNAND Options", następnie wybierz "CTRNAND Transfer", a później "Auto CTRNAND Transfer"
+2. Wybierz plik 9.2.0 ctrtransfer, kiedy zostaniesz o niego zapytany, naciskając (A)
+3. Jeśli nie posiadasz jeszcze kopii zapasowej NAND, potwierdź **backup SysNAND to 'NANDmin.bin' poprzez naciśnięcie (A)**
+4. Pozwól na automatyczny przebieg procesu. Może to zająć trochę czasu
+5. Kiedy transfer dobiegnie końca, naciśnij (Select) aby bezpiecznie wyciągnąć kartę SD
+6. Włóż kartę SD do czytnika w swoim komputerze, a następnie skopiuj pliki "NANDmin.bin" i "NANDmin.bin.sha" z folderu '/files9/' na karcie SD do bezpiecznego miejsca na twoim komputerze
+  + Zrób kopie zapasowe tych plików w kilku lokacjach (np. dysk, pendrive, płyta DVD)
+  + Ta kopia uratuje cię przed brickiem jeśli cokolwiek pójdzie nie tak w przyszłości
+  +**Rozmiar twojej kopii zapasowej powinien zgadzać się z jednym z rozmiarów na [tej](nand-size) stronie, jeśli tak nie jest - usuń ją i zrób nową!**
+7. Usuń pliki 9.2.0 ctrtransfer (z roszerzeniem `.bin` oraz `.bin.sha`) z folderu `/files9/` na twojej karcie SD po wcześniejszym ich skopiowaniu
 8. Włóż kartę SD z powrotem do swojej konsoli
 
-##### Section IV - Editing SecureInfo
+##### Sekcja IV - Edycja pliku SecureInfo
 
-1. Press (Start) then hold (Up) to reboot into arm9loaderhax GodMode9      
-2. Navigate to `SYSNAND CTRNAND` -> `rw` -> `sys`
-3. Press (Y) on `SecureInfo_A` to copy it
-4. Press (Y) to paste a copy of `SecureInfo_A`
-5. Select "Copy path(s)"
-6. Press (A) to unlock SysNAND writing, then input the key combo given
-7. Select "Choose new name"
-8. Use the D-Pad to rename the file to `SecureInfo_C`, pressing (A) when you're done (overwrite any existing `SecureInfo_C`)
-9. Scroll down to the `SecureInfo_C` you just pasted
-10. Press (A) on `SecureInfo_C` then select "Show in Hexeditor"
-11. Press (A) to continue
-12. Press (A) to enter edit mode
-13. Go to the beginning of line 00000100 and press (A) on it
-14. Hold (A) while pressing (Up) or (Down) on the D-Pad to edit the number
-15. Change the first number pair on line 00000100 to the following pair that corresponds to *the region you want to change to*:
+1. Naciśnij (Start), a następnie przytrzymaj (Dpad w górę), aby uruchomić konsolę ponownie i załadować GodMode9 poprzez arm9loaderhax      
+2. Przejdź do `SYSNAND CTRNAND` -> `rw` -> `sys`
+3. Zaznacz plik 'SecureInfo_A', a następnie naciśnij (Y) aby go skopiować
+4. Naciśnij (Y) aby wkleić kopię pliku `SecureInfo_A` w tej samej lokalizacji
+5. Wybierz "Copy path(s)"
+6. Naciśnij (A) żeby odblokować możliwość zapisu do SysNAND, a następnie wprowadź wyświetloną sekwencję klawiszy
+7. Wybierz "Choose new name"
+8. Użyj D-pada aby zmienić nazwę pliku na `SecureInfo_C`, a następnie naciśnij (A) aby potwierdzić (jeśli plik `SecureInfo_C`już istnieje, nadpisz go)
+9. Przejdź w dół i zaznacz plik `SecureInfo_C` który właśnie wkleiłeś
+10. Naciśnij (A) na pliku `SecureInfo_C`, a następnie wybierz "Show in Hexeditor"
+11. Naciśnij (A), aby kontynuować
+12. Ponownie naciśnij (A), aby przejść w tryb edycji
+13. Przejdź na początek linii 00000100 i po jego zaznaczeniu, naciśnij (A)
+14. Przytrzymując przycisk (A), użyj (D-pad w górę) oraz (D-pad w dół) aby edytować cyfrę
+15. Zmień pierwszą parę cyfr w linii 00000100 na jedną z par wymienionych poniżej, odpowiadającej *regionowi na który chcesz przejść*:
     - "00" : JPN
     - "01" : USA
     - "02" : EUR
-16. Press (B) to exit edit mode, then save changes, then press (B) again to return to the directory
-17. You should see both a `SecureInfo_A` and `SecureInfo_C` if everything was done properly. (`SecureInfo_C` is used in place of `SecureInfo_A` when using Luma3DS if it detects the file on boot)
+16. Naciśnij (B) aby wyjśc z trybu edycji, zapisz zmiany, a następnie naciśnij ponownie (B) aby powrócić do przeglądanego folderu
+17. Jeśli wszystkie kroki zostały wykonane poprawnie, powinieneś widzieć zarówno plik `SecureInfo_A`, jak i `SecureInfo_C`. (plik `SecureInfo_C` używany jest zamiast `SecureInfo_A`, jeśli Luma3DS wykryje go podczas uruchamiania konsoli)
 18. Press (Start) to reboot
 
 ##### Section V - Reinstalling Tickets
