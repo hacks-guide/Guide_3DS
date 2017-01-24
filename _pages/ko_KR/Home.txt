@@ -47,33 +47,33 @@ CFW can be easily set up on any console that is on 11.2.0 (latest) or lower.
 
 ## 이 가이드는 무엇을 설치하는 가이드입니까?
 
-This guide has the end goal of taking a completely unmodified 3DS from stock
-firmware to arm9loaderhax powered Custom Firmware. On some versions, it utilizes homebrew as a stepping off point, but Custom Firmware is still the goal.
+이 가이드의 최종 목적은 순정 펌웨어의 3DS에
+arm9loaderhax를 통해 작동하는 커스텀 펌웨어를 설치하는 것입니다. 일부 버전에서는 해당 버전을 벗어나는 발판으로 홈브류를 사용하지만, 여전히 최종 목적은 커스텀 펌웨어입니다.
 
-Arm9loaderhax is the newest and best method of launching Custom Firmware that gives us nearly full control of the system only milliseconds into boot, which is similar to the effect of BootMii for the Wii.
+Arm9loaderhax는 Wii의 BootMii와 유사하게 부팅 시 수 ms 안에 시스템을 완벽히 제어할 수 있게 해 줍니다. 따라서 Arm9loaderhax는 커스텀 펌웨어 실행에 있어서 가장 최신이며 최고의 방법입니다.
 
-The benefits of arm9loaderhax over other Custom Firmware launch methods are numerous, and as such it is recommended to use this guide over any other that relies on outdated software (such as menuhax or rxTools).
+다른 커스텀 펌웨어 실행 방법보다 arm9loaderhax의 이점이 더 많으므로, (menuhax 또는 rxTools 같은) 오래된 소프트웨어를 사용하는 가이드보다 이 가이드를 사용하는 것이 좋습니다.
 
-## What can I do with Custom Firmware?
+## 커스텀 펌웨어로 무엇을 할 수 있나요?
 
-+ Play all game cards and eShop games, regardless of region
-+ Customize your HOME Menu with user-created [themes](https://3dsthem.es/) and [badges](https://badges.3dsthem.es/)
-+ Use "ROM hacks" for games that you own
-+ Take gameplay and application screenshots
-+ [Backup, edit, and restore](https://gbatemp.net/threads/release-jks-savemanager-homebrew-cia-save-manager.413143/) saves for many games
-+ Play games for older systems with various emulators, using RetroArch or other standalone emulators. (Works best with a New Nintendo 3DS)
-+ Install homebrew titles to your system, and have them appear on your HOME Menu
-+ Dump your game cards to a format you can install, and play them without needing the card
-+ New 3DS only: stream live gameplay to your PC wirelessly with NTR CFW
-+ Run many old Nintendo DS flash carts that were blocked long ago or never worked on Nintendo 3DS
-+ Safely update to the latest system version without fear of losing access to homebrew
++ 지역에 상관 없이 게임 팩 및 e숍 게임의 실행 및 설치
++ 유저 제작 [테마](https://3dsthem.es/) 및 [배지](https://badges.3dsthem.es/)로 홈 메뉴 꾸미기
++ 보유 게임의 "롬 핵" 사용
++ 게임 플레이 및 애플리케이션 스크린샷 촬영
++ 많은 게임의 세이브 [백업, 수정 및 복원](https://gbatemp.net/threads/release-jks-savemanager-homebrew-cia-save-manager.413143/)
++ RetroArch 또는 다른 에뮬레이터를 통해 구형 시스템의 게임 실행  (뉴 닌텐도 3DS에서 최적화 됨)
++ 시스템에 홈브류 타이틀을 설치하고 홈 메뉴에 등록
++ 게임 팩을 설치할 수 있는 포맷으로 덤프하고 팩 없이 게임 플레이
++ 뉴 3DS 한정: NTR CRW를 통해 무선으로 게임 플레이를 PC로 스트리밍
++ 오래 전에 막히거나 닌텐도 3DS에서 작동하지 않았던 많은 닌텐도 DS용 플래시 카트 실행
++ 홈브류 접근 권한을 유지한 채 최신 버전으로 안전하게 업데이트
 
-## What do I need to know before starting?
+## 시작하기 전에 무엇을 알고 있어야 합니까?
 
-+ **Before beginning the guide, you must know the risks of 3DS hacking: EVERY time you modify your system, there is always the potential for an UNRECOVERABLE brick. They're rare, but still a possibility so make sure you follow ALL directions EXACTLY.**
-+ If you have already hacked your 3DS before to get an EmuNAND setup, and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, you should follow all instructions and restore your existing EmuNAND when prompted once you reach [Installing arm9loaderhax](installing-arm9loaderhax).
-+ This guide will work on New 3DS, Old 3DS, and 2DS in all regions on firmware 11.2.0 or below *(except CHN / TWN)*.
-+ If everything goes according to plan, you will lose no data and end up with everything that you started with (games, NNID, saves, etc will be preserved).
++ **가이드를 시작하기 앞서 반드시 3DS 해킹의 리스크를 인지하시기 바랍니다: 시스템을 수정하는 모든 행위는 기기를 복구가 불가능한 벽돌로 만들 위험을 안고 있습니다. 매우 드물어도 가능성은 존재하므로 모든 절차들을 정확하게 따르세요.**
++ 이미 EmuNAND 기반의 커스텀 펌웨어 3DS를 보유하고 있고 그 데이터를 새 SysNAND 커스텀 펌웨어로 옮기고 싶은 경우, 가이드에 따라 진행하다가 [Installing arm9loaderhax](installing-arm9loaderhax) 섹션에 도달하여 메시지가 떴을 때 EmuNAND를 복원하면 됩니다.
++ 이 가이드는 모든 지역의 11.2.0 이하 버전의 뉴 3DS, 구 3DS 및 2DS에서 사용이 가능합니다. *(CHN / TWN 제외)*
++ 모든 것이 계획대로 진행될 경우 시작할 때 갖고 있던 데이터가 모두 보존됩니다. (게임, NNID, 세이브 등이 보존.)
 + **Keep the device plugged in and charged throughout the entire process to avoid data loss or damage from an unexpected power-off!**
 + Your SD card should be [MBR, not GPT](http://www.howtogeek.com/245610/) (the SD card that comes with the device will be MBR by default).
 + If you need to format a brand new SD card, you can use [`guiformat`](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) and set to an Allocation Unit Size of 32K.
