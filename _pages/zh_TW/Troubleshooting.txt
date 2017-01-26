@@ -120,44 +120,44 @@ permalink: /zh_TW/troubleshooting.html
 ## <a name="ts_d9_backup" />Decrypt9 或 Hourglass9 無法還原或找不到我的備份
 
 1. 請先確保你 SD 卡的**根目錄**底下沒有叫「Decrypt9」的資料夾
-2. 試試看使用 [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), or [F3X (Mac)](f3x-(mac)) 來檢查問題你裝置的 SD 卡有沒有問題
-3. 試試看將你 SD 卡上的檔案備份起來，格式化 SD 卡，再將檔案複製回去
-4. 試試使用不同的 SD 卡
+2. 試試看使用 [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), 或 [F3X (Mac)](f3x-(mac)) 來檢查你裝置的 SD 卡
+3. 試試看將你 SD 卡上的檔案備份起來，格式化 SD 卡後再將檔案複製回去
+4. 試試看使用不同的 SD 卡
 
-## <a name="ts_sys_down" />SysNAND 啟動時黑屏
+## <a name="ts_sys_down" />啟動 SysNAND 時黑屏
 
 1. 試試看先將 SD 卡拔出，開機完後再插回。
-    1. 按住 3DS 電源紐以強制關機。
+    1. 按住 3DS 電源紐強制關機。
     2. 取出 SD 卡。
     3. 開機。
-    4. 當 HOME 主選單出現時，重新插入你的 SD 卡。
-    5. 如果上述步驟成功的話，依照你裝置的區域到 SD 卡上的 `/Nintendo 3DS/(32 字元 ID)/(32 字元 ID)/extdata/00000000/` 中清除 HOME 主選單的外存
+    4. 當 HOME 主選單出現後，重新插入你的 SD 卡。
+    5. 如果上述步驟成功的話，依你裝置區域到 SD 卡中的 `/Nintendo 3DS/(32 字元 ID)/(32 字元 ID)/extdata/00000000/` 清除 HOME 主選單的外存
         + 歐版: 刪除 `00000098`
         + 日版: 刪除 `00000082`
         + 美版: 刪除 `0000008f`
         + 韓版: 刪除 `000000A9`
 2. 試試看將遊戲卡帶拔出（包括燒錄卡）
 3. 如果你有硬改而且有先前的 NAND 備份，試試看將備份還原至 SysNAND 上。
-4. 試試看進入主機的還原模式並更新你的系統    
-    *這大概無法在降級至版本 2.1.0 的 原 3DS 上使用*    
-    **這樣會使降級到版本 2.1.0 的 New 3DS _變磚_**
-    1. 按住 3DS 電源紐以強制關機。
+4. 試試看透過還原模式更新你的系統。    
+    *這大概無法在降級至版本 2.1.0 的原 3DS 上使用*    
+    **這會使降級到版本 2.1.0 的 New 3DS _變磚_**
+    1. 按住 3DS 電源紐強制關機。
     2. 按住「L+R+A+上」。
     3. 開機。
-    4. 如果進入安全模式，*僅當你有最新固件版本進入HBL的方法，並且能進行降級的情況下*，才升級你的3DS，並再次嘗試降級。
+    4. 如果進入安全模式，*僅在你有最新系統版本進入 Homebrew Launcher 的方法，並且能進行降級的情況下*，才升級你的 3DS，並再次嘗試降級。
 5. 你的 3DS 可能已經變磚了。 你可以在 [Rizon IRC 上的 #3dshacks 聊天室](https://www.reddit.com/r/3dshacks/wiki/irc) 或 [Discord 上的 3DS Hacking 伺服器](https://discord.gg/MWxPgEp)上求助。
 
 ## <a name="ts_sys_a9lh" />SysNAND 在安裝完 arm9loaderhax 後開機黑屏
 
-1. 請先確保 payload 檔案是沒問題的
+1. Ensure you have a working payload.
     1. 檢查 `arm9loaderhax.bin` 是否在 SD 卡的根目錄底下。
 2. 試試看重設 Luma3DS 的設定檔
-    1. 刪除 SD 卡上的 `/luma/config.bin`
-    2. 啟動後設定 Luma3DS 選項
+    1. 刪除 SD 卡中的 `/luma/config.bin`
+    2. 開機後設定 Luma3DS
 3. 測試啟動 Hourglass9
     1. 在 Luma3DS 中，開機時按住「開始鍵 (Start)」
 4. 試試看刪除 HOME 主選單的外存（extdata）
-    1. 依照你裝置的區域到 SD 卡上的 `/Nintendo 3DS/(32 字元 ID)/(32 字元 ID)/extdata/00000000/` 中清除 HOME 主選單的外存
+    1. 依你裝置區域到 SD 卡中的 `/Nintendo 3DS/(32 字元 ID)/(32 字元 ID)/extdata/00000000/` 清除 HOME 主選單的外存
         + 歐版: 刪除 `00000098`
         + 日版: 刪除 `00000082`
         + 美版: 刪除 `0000008f`
