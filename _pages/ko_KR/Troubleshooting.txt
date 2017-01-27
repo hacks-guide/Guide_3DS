@@ -124,45 +124,45 @@ SD 카드에 잘못된 `arm9loaderhax.bin` 파일을 복사했을 수 있습니�
 3. SD 카드의 파일을 백업하고, SD 카드를 포맷한 후 파일을 다시 옮겨 보세요.
 4. 다른 SD 카드로 시도해 보세요.
 
-## <a name="ts_sys_down" />Black screen on SysNAND boot
+## <a name="ts_sys_down" />SysNAND 부팅 시 검은 화면이 보입니다.
 
-1. Try booting with your SD card out, and then reinserting it after booting.
-    1. Power off your 3DS by holding down the power button.
-    2. Take out the SD card.
-    3. Power on the 3DS.
-    4. When the home menu appears, reinsert your SD card.
-    5. If this worked, you should Clear Home Menu's extdata by navigating to the following folder on your SD card: `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/`
-        + EUR Region: Delete `00000098`
-        + JPN Region: Delete `00000082`
-        + USA Region: Delete `0000008f`
-        + KOR Region: Delete `000000A9`
-2. Try booting without any cartridges inserted (including flashcarts)
-3. If you have a hardmod and a NAND backup, flash the backup back to SysNAND.
-4. Try booting into recovery mode and updating your system.    
-    *This probably will not work for an Old 3DS downgraded to 2.1.0*    
-    **This will BRICK a New 3DS downgraded to 2.1.0**
-    1. Power off your 3DS by holding down the power button.
-    2. Hold (L)+(R)+(A)+(Up).
-    3. Power on the 3DS.
-    4. If you enter safe mode, update your 3DS *only if you have an entrypoint for the latest FW version and it is possible to downgrade from it* and attempt the downgrade again.
-5. Your 3DS may be bricked. For support, ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [3DS Hacking on Discord](https://discord.gg/MWxPgEp).
+1. SD 카드가 제거된 상태에서 부팅을 해 보고, 부팅이 완료되면 SD 카드를 다시 삽입하세요.
+    1. 전원 버튼을 눌러 3DS의 전원을 끄세요.
+    2. SD 카드를 빼내세요.
+    3. 3DS의 전원을 켜세요.
+    4. 홈 메뉴가 나타나면 SD 카드를 다시 삽입하세요.
+    5. 고쳐졌다면 SD 카드의 다음 경로로 이동하여 홈 메뉴의 extdata를 지우세요: `/Nintendo 3DS/(32자리 ID)/(32자리 ID)/extdata/00000000/`
+        + EUR 지역: `00000098` 삭제
+        + JPN 지역: `00000082` 삭제
+        + USA 지역: `0000008f` 삭제
+        + KOR 지역: `000000A9` 삭제
+2. 게임 팩을 삽입한 상태에서 부팅을 시도해 보세요 (플래시카트 포함).
+3. 하드모드와 NAND 백업이 있다면, SysNAND에 백업을 플래싱하세요.
+4. 복구 모드로 부팅하여 시스템을 업데이트해 보세요.    
+    *이 방법은 2.1.0 버전으로 다운그레이드한 구 3DS에서는 작동하지 않을 것입니다.*    
+    **이 방법은 2.1.0 버전으로 다운그레이드한 뉴 3DS를 벽돌로 만들 수 있습니다.**
+    1. 전원 버튼을 눌러 3DS의 전원을 끄세요.
+    2. (L)+(R)+(A)+십자버튼 (위)를 누르세요.
+    3. 3DS의 전원을 켜세요.
+    4. 안전 모드로 진입했다면, *최신 펌웨어 버전에서 홈브류 런처에 진입할 방법을 가지고 있는 경우에만* 3DS를 업데이트하고 다시 다운그레이드를 시도하세요.
+5. 벽돌이 된 것일 수 있습니다. 도움이 필요하면 [Rizon IRC의 #3dshacks 채널](https://www.reddit.com/r/3dshacks/wiki/irc) 또는 [Discord의 3DS Hacking 서버](https://discord.gg/MWxPgEp)에서 요청하시면 됩니다.
 
-## <a name="ts_sys_a9lh" />Black screen on SysNAND boot after installing arm9loaderhax
+## <a name="ts_sys_a9lh" />arm9loaderhax 설치 이후 SysNAND 부팅 시 검은 화면이 보입니다.
 
-1. Ensure you have a working payload.
-    1. Check for the existence of `arm9loaderhax.bin` in the root of your SD card.
-2. Try resetting Luma's config and fix options
-    1. Delete `/luma/config.bin` from your SD card
+1. 작동하는 페이로드인지 확인하세요.
+    1. SD 카드의 최상위 경로에 `arm9loaderhax.bin` 파일이 있는지 확인하세요.
+2. Luma3DS의 설정을 초기화하고 옵션을 고쳐 보세요.
+    1. SD 카드의 `/luma/config.bin` 파일을 삭제하세요.
     2. Set your options when it boots
 3. Test booting Hourglass9
     1. On Luma3DS, hold (Start) on boot
 4. Try deleting home menu's extdata
     1. Clear Home Menu's extdata by navigating to the following folder on your SD card: `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/`
-        + EUR Region: Delete `00000098`
-        + JPN Region: Delete `00000082`
-        + USA Region: Delete `0000008f`
-        + KOR Region: Delete `000000A9`
-5. Try booting without any cartridges inserted (including flashcarts)
+        + EUR 지역: `00000098` 삭제
+        + JPN 지역: `00000082` 삭제
+        + USA 지역: `0000008f` 삭제
+        + KOR 지역: `000000A9` 삭제
+5. 게임 팩을 삽입한 상태에서 부팅을 시도해 보세요 (플래시카트 포함).
 6. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version (v6.2.3 or higher, at the least)
 7. If your NAND is of a version between 3.0.0 and 4.5.0, do the following:
     + Ensure that you are using the latest Luma3DS version (v6.6 or higher, at the least)
