@@ -52,79 +52,79 @@ Penukaran kawasan menggunakan ctrtransfer (dimana cara ini gunakan) menunjukkan 
 
 ##### Seksyen II - Simpanan tickets dan config save
 
-1. Press (Start) then hold (X) to reboot into arm9loaderhax Decrypt9     
-3. Go to "Ticket/Titlekey Options", then select "Ticket Dump (SysNAND)"
-4. Press (Select) to eject your SD card, then put it in your computer
-5. Delete all `.tik` files in the `/files9/` folder that **do not** start with "00-"
-6. Leave all the `.tik` files that do start with "00-" in the folder
-7. Reinsert your SD card into your 3DS, then press (B) to go back to the Main Menu
-8. Go to "SysNAND Options", then "System Save Dump", then select "Dump configsave.bin"
+1. Tekan (Start) kemudian tahan butang (X) untuk reboot ke dalam arm9loaderhax Decrypt9     
+3. Pergi ke "Ticket/Titlekey Options", kemudian pilih "Ticket Dump (SysNAND)"
+4. Sila tekan (Select) untuk mengeluarkan kad SD, kemudian pasangkannya kepada komputer anda
+5. Buang semua fail `.tik` didalam folder `/files9/` yang **tidak** bermula dengan "00-"
+6. Tinggalkan semua fail '.tik' yang bermula dengan "00-" di dalam folder
+7. Masukkan semula kad SD ke dalam 3DS anda, kemudian tekan (B) untuk pergi kembali ke Menu Utama
+8. Pergi ke "SysNAND Options", kemudian "System Save Dump", kemudian pilih "Dump configsave.bin"
 
-##### Section III - ctrtransfer
+##### Seksyen III - ctrtransfer
 
-1. Go to "SysNAND Options", then "CTRNAND Transfer", then "Auto CTRNAND Transfer"
-2. Select the 9.2.0 ctrtransfer image when prompted by pressing (A)
-3. If you do not already have a NAND backup, **backup SysNAND to `NANDmin.bin` when prompted by pressing (A)**
-4. Allow the transfer process to proceed automatically, this will take some time
-5. Once the transfer is complete, press (Select) to eject your SD card
-6. Put your SD card in your computer, then copy `NANDmin.bin` and `NANDmin.bin.sha` from the `/files9/` folder on your SD card to a safe location
-  + Make backups in multiple locations
-  + This backup will save you from a brick if anything goes wrong in the future
-  + **Your backup should match one of the sizes on [this](nand-size) page; if it does not, you should delete it and make a new one!**
-7. Delete the 9.2.0 ctrtransfer image `.bin` and `.bin.sha` from the `/files9/` folder on your SD card after copying it
+1. Pergi ke "SysNAND Options", kemudian "CTRNAND Transfer", kemudian "Auto CTRNAND Transfer"
+2. Pilih 9.2.0 ctrtransfer image apabila ditanya dengan menekan (A)
+3. Jika anda tidak mempunyai simpanan NAND, **Simpan SysNAND ke `NANDmin.bin` apabila ditanya dengan menekan (A)**
+4. Proses pemindahan akan berlaku secara automatik, ianya akan mengambil sedikit masa
+5. Sebaik sahaja pemindahan selesai, tekan (Select) untuk keluarkan kad SD anda
+6. Masukkan kad SD anda ke dalam komputer, kemudian Salin 'NANDmin.bin' dan 'NANDmin.bin.sha' dari folder '/ files9 /' pada kad SD anda ke tempat yang selamat
+  + Letak simpanan ini di beberapa lokasi
+  + Simpanan ini akan menyelamatkan anda daripada brick andai perkara tidak elok berlaku kelak
+  + **Saiz simpanan anda patut sama seperti halaman [ini](nand-size); Jika tidak, anda patut buangnya dan buat baru!**
+7. Buang 9.2.0 ctrtransfer image `.bin` dan `.bin.sha` dari folder`/files9/` di kad SD anda selepas menyalinnya
 8. Pasang kad SD anda ke dalam komputer
 
-##### Section IV - Editing SecureInfo
+### Seksyen IV - Mengubah SecureInfo
 
-1. Press (Start) then hold (Up) to reboot into arm9loaderhax GodMode9      
-2. Navigate to `SYSNAND CTRNAND` -> `rw` -> `sys`
-3. Press (Y) on `SecureInfo_A` to copy it
-4. Press (Y) to paste a copy of `SecureInfo_A`
-5. Select "Copy path(s)"
-6. Press (A) to unlock SysNAND writing, then input the key combo given
-7. Select "Choose new name"
-8. Use the D-Pad to rename the file to `SecureInfo_C`, pressing (A) when you're done (overwrite any existing `SecureInfo_C`)
-9. Scroll down to the `SecureInfo_C` you just pasted
-10. Press (A) on `SecureInfo_C` then select "Show in Hexeditor"
-11. Press (A) to continue
-12. Press (A) to enter edit mode
-13. Go to the beginning of line 00000100 and press (A) on it
-14. Hold (A) while pressing (Up) or (Down) on the D-Pad to edit the number
-15. Change the first number pair on line 00000100 to the following pair that corresponds to *the region you want to change to*:
+1. Tekan (Start) kemudian tahan butang (Up) untuk reboot ke dalam arm9loaderhax Decrypt9      
+2. Pergi ke `SYSNAND CTRNAND` -> `rw` -> `sys`
+3. Tekan (Y) pada `SecureInfo_A` untuk menyalinnya
+4. Tekan (Y) untuk meletak salinan `SecureInfo_A`
+5. Pilih "Copy path(s)"
+6. Tekan (A) untuk membuka SysNAND writing, kemudian letakkan key combo yang diberikan
+7. Pilih "Choose new name"
+8. Gunakan D-Pad untuk menukar nama fail kepada `SecureInfo_C`, tekan (A) apabila selesai (ganti sebarang fail sedia ada `SecureInfo_C`)
+9. Pergi ke bawah sehingga ke `SecureInfo_C` yang anda sudah letakkan
+10. Tekan (A) pada `SecureInfo_C` kemudian pilih "Show in Hexeditor"
+11. Tekan (A) untuk meneruskan
+12. Tekan (A) untuk memasuki edit mode
+13. Pergi ke permulaan barisan 00000100 dan tekan (A) padanya
+14. Tahan butang (A) sambil menekan Butang (Up) atau (Down) pada D-Pad untuk mengubah nombor
+15. Tukar pasangan nombor pertama pada 00000100 kepada pasangan nombor yang sepadan dengan *kawasan yang anda ingin tukarkan*:
     - "00" : JPN
     - "01" : USA
     - "02" : EUR
-16. Press (B) to exit edit mode, then save changes, then press (B) again to return to the directory
-17. You should see both a `SecureInfo_A` and `SecureInfo_C` if everything was done properly. (`SecureInfo_C` is used in place of `SecureInfo_A` when using Luma3DS if it detects the file on boot)
-18. Press (Start) to reboot
+16. Tekan (B) keluar dari edit mode, kemudian save changes, kemudian tekan (B) sekali lagi untuk kembali ke direktori
+17. Anda patut nampak kedua `SecureInfo_A` dan `SecureInfo_C` jika semuanya dilakukan dengan betul. (`SecureInfo_C` digunakan sebagai `SecureInfo_A` apabila menggunakan Luma3DS jika ia mengesan fail ketika boot)
+18. Tekan (Start) untuk reboot
 
-##### Section V - Reinstalling Tickets
+### Seksyen V - Memasang semula Tiket
 
-1. Open FBI
-2. Select "SD"
-3. Select "files9"
-4. Select "\<current directory>"
-5. Select "Install and delete all tickets"
-6. Wait. The system may appear to freeze, just give it time.
-7. Press (A) to confirm
-8. Press (B) to decline installing tickets from CDN.
-9. Exit with the home button
+1. Buka FBI
+2. Pilih "SD"
+3. Pilih "files9"
+4. Pilih "\<current directory>"
+5. Pilih "Install and delete all tickets"
+6. Tunggu. Sistem mungkin akan beku sementara, tunggu sebentar.
+7. Tekan (A) untuk pengesahan
+8. Tekan (B) untuk menolak dari memasang tiket daripada CDN.
+9. Keluar dengan menekan butang home
 
-##### Section VI - Region settings
+##### Seksyen VI - Setting Kawasan
 
-1. Open the System Settings
-2. Go to "Other Settings", "Profile", then "Region Settings"
-3. Select a country from the region you switched to
-4. If prompted, you do not need to set a state
-5. Update your region changed CFW SysNAND to the latest version
+1. Buka System Settings
+2. Pergi ke "Other Settings", "Profile", kemudian "Region Settings"
+3. Pilih negara dari kawasan yang anda tukarkan
+4. Jika ditanya, anda tidak perlu melakukan bahagian negeri
+5. Kemaskini CFW SysNAND kawasan yang diubah kepada versi terkini
 
-##### Section VII - Restore config save
+##### Seksyen VII - Pemulihan config save
 
-1. Press (Start) then hold (X) to reboot into arm9loaderhax Decrypt9   
-2. Go to "SysNAND Options", then "System Save Inject", then select "Inject configsave.bin"
+1. Tekan (Start) kemudian tahan butang (X) untuk reboot ke dalam arm9loaderhax Decrypt9   
+2. Pergi ke "SysNAND Options", kemudian "System Save Inject", kemudian pilih "Inject configsave.bin"
 
-Old 3DSs / 2DSs may need to format (using TinyFormat or the System Settings) to play extended memory mode games (such as Monster Hunter, Super Smash Bros, or Pokemon Sun/Moon).
+Old 3DS / 2DS mungkin perlu di format (menggunakan TinyFormat atau dari System Settings) untuk bermain extended memory mode games (seperti Monster Hunter, Super Smash Bros, or Pokemon Sun/Moon).
 {: .notice--info}
 
-Formatting a device following a ctrtransfer *without restoring the config save* can cause screen brightness / flickering issues. See [this](https://github.com/Plailect/Guide/issues/794).
+Format peranti diikuti dengan ctrtransfer *tanpa pemulihan config save* akan menyebabkan permasalahan kecerahan skrin / kelip. Sila lihat [ini](https://github.com/Plailect/Guide/issues/794).
 {: .notice--info}
