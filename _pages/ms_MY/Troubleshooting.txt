@@ -120,60 +120,60 @@ Ini terjadi sekali-sekala, sebabnya masih tidak diketahui. Butangnya masih boleh
 ## <a name="ts_d9_backup" />Decrypt9 atau Hourglass9 tidak memulihkan / tidak menjumpai simpanan NAND saya
 
 1. Pastikan anda tidak ada folder bernama "Decrypt9" pada **root** kad SD anda
-2. Try checking your SD card for errors using [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), or [F3X (Mac)](f3x-(mac))
-3. Try backing up your SD card files, then formatting it and copying them back
-4. Try a different SD card
+2. Cuba lihat kad SD anda untuk sebarang kerosakkan menggunakan [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), atau [F3X (Mac)](f3x-(mac))
+3. Cuba salin semua fail kad SD anda, kemudian format dan masukkan kembali
+4. Cuba kad SD yang berbeza
 
-## <a name="ts_sys_down" />Black screen on SysNAND boot
+## <a name="ts_sys_down" />Skrin hitam ketika boot SysNAND
 
-1. Try booting with your SD card out, and then reinserting it after booting.
-    1. Power off your 3DS by holding down the power button.
-    2. Take out the SD card.
-    3. Power on the 3DS.
-    4. When the home menu appears, reinsert your SD card.
-    5. If this worked, you should Clear Home Menu's extdata by navigating to the following folder on your SD card: `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/`
-        + EUR Region: Delete `00000098`
-        + JPN Region: Delete `00000082`
-        + USA Region: Delete `0000008f`
-        + KOR Region: Delete `000000A9`
-2. Try booting without any cartridges inserted (including flashcarts)
-3. If you have a hardmod and a NAND backup, flash the backup back to SysNAND.
-4. Try booting into recovery mode and updating your system.    
-    *This probably will not work for an Old 3DS downgraded to 2.1.0*    
-    **This will BRICK a New 3DS downgraded to 2.1.0**
-    1. Power off your 3DS by holding down the power button.
-    2. Hold (L)+(R)+(A)+(Up).
-    3. Power on the 3DS.
-    4. If you enter safe mode, update your 3DS *only if you have an entrypoint for the latest FW version and it is possible to downgrade from it* and attempt the downgrade again.
-5. Your 3DS may be bricked. For support, ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [3DS Hacking on Discord](https://discord.gg/MWxPgEp).
+1. Cuba boot dengan kad SD anda dikeluarkan, dan kemudian letakkan balik selepas boot.
+    1. Tutup 3DS anda dengan menahan butang power.
+    2. Keluarkan kad SD.
+    3. Buka 3DS anda.
+    4. Apabila muncul home menu, masukkan kad SD anda.
+    5. Jika ini berjaya, anda patut Clear Home Menu's extdata dengan pergi ke folder berikut pada kad SD anda: `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/`
+        + EUR Region: Buang `00000098`
+        + JPN Region: Buang `00000082`
+        + USA Region: Buang `0000008f`
+        + KOR Region: Buang `000000A9`
+2. Cuba boot tanpa memasukkan apa-apa katirj (termasuk juga flashcarts)
+3. Jika anda mempunyai harmod dan simpanan NAND, sila pasang simpanan kembali ke SysNAND.
+4. Cuba boot masuk ke recovery mode dan kemaskini sistem anda.    
+    *Ini mungkin tidak boleh digunakan pada Old 3DS downgraded ke 2.1.0*    
+    **Ini akan BRICK New 3DS downgraded ke 2.1.0**
+    1. Tutup 3DS anda dengan menahan butang power.
+    2. Tahan butang (L)+(R)+(A)+(Up).
+    3. Buka 3DS anda.
+    4. Jika anda memasuki safe mode, kemas kini 3DS anda *hanya jika anda mempunyai entrypoint untuk versi FW terbaru dan membolehkan ia downgrade darinya* dan cuba downgrade sekali lagi.
+5. 3DS anda mungkin sudah brick. Untuk bantuan, anda boleh meminta tolong di [#3dshacks pada Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) atau [3DS Hacking pada Discord](https://discord.gg/MWxPgEp).
 
-## <a name="ts_sys_a9lh" />Black screen on SysNAND boot after installing arm9loaderhax
+## <a name="ts_sys_a9lh" />Skrin hitam pada SysNAND boot selepas memasang arm9loaderhax
 
-1. Ensure you have a working payload.
-    1. Check for the existence of `arm9loaderhax.bin` in the root of your SD card.
-2. Try resetting Luma's config and fix options
-    1. Delete `/luma/config.bin` from your SD card
-    2. Set your options when it boots
-3. Test booting Hourglass9
-    1. On Luma3DS, hold (Start) on boot
-4. Try deleting home menu's extdata
-    1. Clear Home Menu's extdata by navigating to the following folder on your SD card: `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/`
-        + EUR Region: Delete `00000098`
-        + JPN Region: Delete `00000082`
-        + USA Region: Delete `0000008f`
-        + KOR Region: Delete `000000A9`
-5. Try booting without any cartridges inserted (including flashcarts)
-6. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version (v6.2.3 or higher, at the least)
-7. If your NAND is of a version between 3.0.0 and 4.5.0, do the following:
-    + Ensure that you are using the latest Luma3DS version (v6.6 or higher, at the least)
-    + Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) and rename it to `firmware.bin`
-    + Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
-    + Copy `firmware.bin` and `cetk` to the `/luma/` folder on your SD card
-    + Delete both of these files after updating your 3DS
-8. Try following [9.2.0 ctrtransfer](9.2.0-ctrtransfer)
-9. Ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [3DS Hacking on Discord](https://discord.gg/MWxPgEp).
+1. Pastikan anda mempunyai payload yang berfungsi.
+    1. Sila semak kewujudan fail `arm9loaderhax.bin` pada root kad SD anda.
+2. Cuba reset config Luma dan pilihan pembetulan
+    1. Buang `/luma/config.bin` dari kad SD anda
+    2. Set kan pilihan ketika ia boot
+3. Menguji boot Hourglass9
+    1. Pada Luma3DS, tahan butang (Start) ketika boot
+4. Cuba buang home menu extdata
+    1. Clear Home Menu's extdata dengan pergi ke folder berikut pada kad SD anda: `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/`
+        + EUR Region: Buang `00000098`
+        + JPN Region: Buang `00000082`
+        + USA Region: Buang `0000008f`
+        + KOR Region: Buang `000000A9`
+5. Cuba boot tanpa memasukkan apa-apa katirj (termasuk juga flashcarts)
+6. Jika sebelum ini anda downgrade menggunakan Gateway, sila pastikan anda menggunakan versi Luma3DS terkini (v6.2.3 atau tinggi, sekurang-kurangnya)
+7. Jika versi NAND anda antara 3.0.0 dan 4.5.0, buat seperti berikut:
+    + Pastikan anda menggunakan versi Luma 3ds terikini (v6.6 atau tinggi, sekurang-kurangnya)
+    + Muat turun [fail ini](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) dan tukar namanya kepada `firmware.bin`
+    + Muat turun [fail ini](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
+    + Salin `firmware.bin` dan `cetk` letakkan ke folder `/luma/` pada kad SD anda
+    + Buang kedua fail tadi selepas kemaskini 3DS anda
+8. Cuba ikuti [9.2.0 ctrtransfer](9.2.0-ctrtransfer)
+9. Dapatkan bantuan di [#3dshacks pada Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) atau [3DS Hacking pada Discord](https://discord.gg/MWxPgEp).
 
-## <a name="ts_sys_blue" />Blue screen on boot (bootrom error)
+## <a name="ts_sys_blue" />Skrin biru ketika boot (bootrom error)
 
-1. Your 3DS is bricked
-2. You will need to get a [hardmod](https://gbatemp.net/threads/414498/) or repair / replace the device
+1. 3DS anda sudah brick
+2. Anda perlu mendapatkan [hardmod](https://gbatemp.net/threads/414498/) atau baiki / ganti peranti anda
