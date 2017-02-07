@@ -1,5 +1,5 @@
 ---
-title: "Installing arm9loaderhax" #
+title: "Installin' arm9loaderhax" #
 lang: en
 permalink: /installing-arm9loaderhax.html
 ---
@@ -10,13 +10,13 @@ The final Step of this guide is to install arm9loaderhax and setup Luma3DS to ru
 This will install [AuroraWright's Fork](https://github.com/AuroraWright/arm9loaderhax) of arm9loaderhax.
 {: .notice--info}
 
-We will also setup the ability to launch payloads from arm9loaderhax, giving us the ability to unbrick our SysNAND from situations that would normally brick us by restoring from backup.
+We gunna also setup th' ability to launch payloads from arm9loaderhax, givin' us th' ability to unbrick our SysNAND from situations that would normally brick us by restorin' from backup.
 {: .notice--info}
 
-**You cannot use another console's OTP or you will brick GUARANTEED.**
+**Ye cannot use another console's OTP or ye gunna brick GUARANTEED.**
 {: .notice--danger}
 
-#### Overview of steps
+#### Overview 'o steps
 
 In this section, we will go through the process that all the other steps have led up to: actually installing arm9loaderhax.
 
@@ -26,28 +26,28 @@ The file `arm9loaderhax.bin` is what is launched by arm9loaderhax itself after i
 
 In this case, we use Luma3DS by [AuroraWright](https://github.com/AuroraWright/) to boot a patched SysNAND directly, allowing us to completely bypass the need for any kind of EmuNAND, vastly simplifying the usage of a hacked 3DS in addition to saving SD card space.
 
-Once arm9loaderhax is installed and Luma3DS is setup with the correct options, we then restore our previous backup.
+Once arm9loaderhax be installed 'n Luma3DS be setup wit' th' correct options, we then restore our previous backup.
 
-During this process, we also setup programs such as the following:    
+Durin' 'tis process, we also setup programs such as th' followin':    
 
-+  **FBI** *(installs CIA formatted games and applications)*
++  **FBI** *(installs CIA formatted games 'n applications)*
 +  **Luma3DS Updater** *(updates your CFW installation easily)*
 +  **Hourglass9** *(multipurpose tool which can do NAND and cartridge functions)*
 
-#### What you need
+#### What ye need
 
 * <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [`aeskeydb.bin`](magnet:?xt=urn:btih:18b3a17f78e2376e05feaa150749d9fd689b25dc&dn=aeskeydb.bin&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 * <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [`fbi-2.4.2-injectable.zip`](magnet:?xt=urn:btih:f978b4cf5eda72823240b9c649f3fd2940a9f525&dn=fbi-2.4.2-injectable.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 * <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [`data_input_v3.zip`](magnet:?xt=urn:btih:a1195c9f7ab650fa7c7bf020b51fc19ea8d9440c&dn=data%5Finput%5Fv3.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
-* The latest fork of [SafeA9LHInstaller](https://github.com/Plailect/SafeA9LHInstaller/releases/latest) *(the `.7z` file)*
-* The latest release of [arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(the `.7z` file)*
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(the `.7z` file)*
-* The latest release of [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
-* The latest release of [Hourglass9](https://github.com/d0k3/Hourglass9/releases/latest)
-* The latest release of [Luma3DS Updater](https://github.com/Hamcha/lumaupdate/releases/latest)
-* The latest release of [DspDump](https://github.com/Cruel/DspDump/releases/latest)
+* Th' latest fork 'o [SafeA9LHInstaller](https://github.com/Plailect/SafeA9LHInstaller/releases/latest) *(th' `.7z` file)*
+* Th' latest release 'o [arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(the `.7z` file)*
+* Th' latest release 'o [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(th' `.7z` file)*
+* Th' latest release 'o [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
+* Th' latest release 'o [Hourglass9](https://github.com/d0k3/Hourglass9/releases/latest)
+* Th' latest release 'o [Luma3DS Updater](https://github.com/Hamcha/lumaupdate/releases/latest)
+* Th' latest release 'o [DspDump](https://github.com/Cruel/DspDump/releases/latest)
 * The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest)
-* The Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
+* Th' Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
 
 #### Instructions
 
@@ -122,7 +122,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
 1. Boot your device while holding (Start) to enter Hourglass9
 2. Go to "SysNAND Backup/Restore"
 3. Go to "SysNAND Restore (keep a9lh)"
-4. Input the key combo given, then select the NANDmin.bin`image when prompted by pressing (A)
+4. Input the key combo given, then select the `NANDmin.bin` image when prompted by pressing (A)
 5. Press (Start) to reboot
   + If you get a black screen, [follow 9.2.0 ctrtransfer](9.2.0-ctrtransfer)
 6. If your backup was of a version between 3.0.0 and 4.5.0, your console will not boot until you manually download the required firmware:
