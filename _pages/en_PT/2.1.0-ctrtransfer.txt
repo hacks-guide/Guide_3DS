@@ -4,7 +4,7 @@ lang: en
 permalink: /2.1.0-ctrtransfer.html
 ---
 
-If you downgrade to 2.1.0 on a 2DS or New 3DS and left Wireless Communication off, you can re-enable the wireless by removing the battery and unplugging the charger for several seconds then booting back up.
+If ye downgrade to 2.1.0 on a 2DS or New 3DS 'n left Wireless Communication off, ye can re-enable th' wireless by removin' th' battery 'n unpluggin' th' charger fer several seconds then bootin' back up.
 {: .notice--info}
 
 If you've been using the New 3DS's microSD Management to transfer files to your SD card, this will no longer work on 2.1.0. Ensure you have a microSD card reader available before proceeding.
@@ -37,16 +37,16 @@ Your device may not show your installed games after the ctrtransfer. This is due
 
 <div class="notice--danger">{{ notice | markdownify }}</div>
 
-#### Overview of steps
+#### Overview 'o steps
 
-In this section, we will be flashing your console's [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) partition to 2.1.0 in order to take advantage of an oversight in 2.1.0 for the purpose of extracting the [OTP](https://www.3dbrew.org/wiki/OTP_Registers) unique to your console. This OTP file is required to install arm9loaderhax, and **cannot** be shared with other consoles.
+In 'tis section, we gunna be flashin' ye console's [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) partition to 2.1.0 in order to take advantage 'o an oversight in 2.1.0 fer th' purpose 'o extractin' th' [OTP](https://www.3dbrew.org/wiki/OTP_Registers) unique to ye console. This OTP file is required to install arm9loaderhax, and **cannot** be shared with other consoles.
 
 This is accomplished by [installing a premade ctrtransfer image](https://www.reddit.com/r/3dshacks/comments/4zhe4a/) containing 2.1.0, copying your console specific files (such as `moveable.sed` and `SecureInfo_A`) to it, then fixing the title databases.
 
-#### What you need
+#### What ye need
 
-* You will need to have booted into Decrypt9
-* The 2.1.0 ctrtransfer image for your device and region     
+* Ye gunna need to have booted into Decrypt9
+* Th' 2.1.0 ctrtransfer image fer ye device 'n region     
 *(if your device is not from one of these regions, just pick one)*:
   +    <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [New 3DS or Old 3DS or 2DS 2.1.0 - EUR - ctrtransfer](magnet:?xt=urn:btih:89acc9c1b488b8b38251de0ddf07975d6bd354a1&dn=2.1.0-4E%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
   +    <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [New 3DS or Old 3DS or 2DS 2.1.0 - JPN - ctrtransfer](magnet:?xt=urn:btih:3dbb9c9c85a33c6242f424dcbaebcacdd8a5912b&dn=2.1.0-4J%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
@@ -60,15 +60,15 @@ You should be in Decrypt9 for these steps.
 
 1. Press (Select) on the main menu to eject your SD card, then put it in your computer
 2. Copy the 2.1.0 `.bin` and `.bin.sha` from the ctrtransfer `.zip` to the `/files9/` folder on your SD card
-3. Reinsert your SD card into your 3DS
-4. Press (B) to get to the Decrypt9 main menu
+3. Reinsert ye SD card into ye 3DS
+4. Press (B) to get to th' Decrypt9 main menu
 
 ##### Section II - ctrtransfer
 
-**Having a backup of _your_ device's NAND is REQUIRED. You will be prompted to create one as part of the steps if you do not already have one.**
+**Having a backup of _your_ device's NAND is REQUIRED. Ye gunna be prompted to create one as part 'o th' steps if ye do not already have one.**
 {: .notice--danger}
 
-**If you do not know whether or not you already have a NAND backup, create one when prompted by pressing (A) just to be sure.**
+**If ye do not be knowin' whether or not ye already have a NAND backup, create one when prompted by pressin' (A) jus' to be sure.**
 {: .notice--danger}
 
 **If you do not have enough space to create the backup, you can either backup to a different SD card or clear space on your current SD card by pressing (Select) on the Decrypt9WIP main menu to eject your SD card and allow it to be swapped with a different SD card or to clear space on your current SD card**
@@ -76,17 +76,17 @@ You should be in Decrypt9 for these steps.
 
 1. Go to "SysNAND Options", then "CTRNAND Transfer", then "Auto CTRNAND Transfer"
 2. Input the key combo given, then select the 2.1.0 ctrtransfer image when prompted by pressing (A)
-3. If you do not already have a NAND backup, **backup SysNAND to `NANDmin.bin` when prompted by pressing (A)**
+3. If ye do not already have a NAND backup, **backup SysNAND to `NANDmin.bin` when prompted by pressin' (A)**
   + **Having a backup of _your_ device's NAND is REQUIRED.**
-  + **Skipping this backup will result in the LOSS of all installed games and saves!**
+  + **Skippin' 'tis backup gunna result in th' LOSS 'o all installed games 'n saves!**
 4. Allow the transfer process to proceed automatically, this will take some time
 5. Once the transfer is complete, press (B) to go back
-6. Press (Select) to eject your SD card
-7. Delete the 2.1.0 ctrtransfer image `.bin` and `.bin.sha` from the `/files9/` folder on your SD card
+6. Press (Select) to eject ye SD card
+7. Delete th' 2.1.0 ctrtransfer image `.bin` 'n `.bin.sha` from th' `/files9/` folder on ye SD card
 8. Press (Start) to reboot without reinserting your SD card
   + While on 2.1.0, the device will black screen on boot if your SD card is inserted before the home menu loads
-  + Every time the device is rebooted on 2.1.0, you will need to take out your SD card before boot and put it back in after the home menu loads
-  + For now, leave the SD card out as you will be copying files to it in the next page
+  + Every time th' device be rebooted on 2.1.0, ye gunna need to take out ye SD card before boot 'n put it back in after th' home menu loads
+  + Fer now, leave th' SD card out as ye gunna be copyin' files to it in th' next page
   + This will be fixed once you restore your device in the next page
 
 ___
@@ -106,5 +106,5 @@ The initial boot of 2.1.0 can take slightly longer than a standard boot on some 
 
 <div class="notice--danger">{{ notice | markdownify }}</div>
 
-Continue to [Installing arm9loaderhax](installing-arm9loaderhax)
+Continue to [Installin' arm9loaderhax](installing-arm9loaderhax)
 {: .notice--primary}
