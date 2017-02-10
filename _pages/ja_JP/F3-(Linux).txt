@@ -1,31 +1,31 @@
 ---
-title: "F3 (Linux)" #
-lang: en
-permalink: /f3-(linux).html
+title: "F3（Linux）" #
+lang: ja
+permalink: /ja_JP/f3-(linux).html
 ---
 
-This page will walk you through the process of checking your SD card for errors using F3.
+このページはどうやればSDカードのエラーをチェックできるか教えてあげます。
 {: .notice}
 
-Depending on the size of your SD card and the speed of your computer, this process can take up to several hours!
+SDカードのサイズとコンピュータのパフォーマンスによって、かかる時間は異なり、数時間もかかる場合があります！
 {: .notice--info}
 
-This page is for Linux users only. If you are not on Linux, check out the [H2testw (windows)](h2testw-(windows)) or [F3X (mac)](f3x-(mac)) pages.
+このページはLinuxユーザー向けです。 Linuxを使用しないユーザーは、[H2testw (windows)](h2testw-(windows))か[F3X (mac)](f3x-(mac))をご覧ください。
 {: .notice--info}
 
-#### What you need
+#### 必要なもの
 
-* The latest version of [F3](https://github.com/AltraMayor/f3/archive/v6.0.zip)
+* [F3](https://github.com/AltraMayor/f3/archive/v6.0.zip)の最新バージョン
 
-#### Instructions
+#### 手順
 
-1. Unzip the f3 `.zip` file
-2. `cd` into the f3 directory
-3. Run `make` to compile F3
-4. Insert your SD card into your computer
-5. Mount your SD card
-6. Run `./f3write <your sd card mount point>`
-7. Wait until the process is complete. See below for an example output.
+1. F3 `.zip`ファイルをを解凍します
+2. `cd`でf3ディレクトリまで移動します
+3. `make`でF3をコンパイルします
+4. パソコンにSDカードを入れます
+5. SDカードをマウントします
+6. `./f3write <SDカードのマウントポイント>`を実行します
+7. 処理が完了するまで待ちます。 下記はサンプル出力です。
 
 		$ ./f3write /media/michel/6135-3363/
 		Free space: 29.71 GB
@@ -35,8 +35,8 @@ This page is for Linux users only. If you are not on Linux, check out the [H2tes
 		Free space: 0.00 Byte
 		Average Writing speed: 4.90 MB/s
 
-8. Run `./f3read <your sd card mount point>`
-9. Wait until the process is complete. See below for an example output.
+8. `./f3read <your sd card mount point>`を実行します
+9. 処理が完了するまで待ちます。 下記はサンプル出力です。
 
 		$ ./f3read /media/michel/6135-3363/
 		                  SECTORS      ok/corrupted/changed/overwritten
@@ -52,11 +52,11 @@ This page is for Linux users only. If you are not on Linux, check out the [H2tes
 		Average Reading speed: 9.42 MB/s
 
 
-If the test shows the result `Data LOST: 0.00 Byte (0 sectors)` your SD card is good and you can delete all `.h2w` files on the SD card
+処理結果は`Data LOST: 0.00 Byte (0 sectors)`であれば、SDカードが正常であることを示します。SDカード上の`.h2w`ファイルを全て削除できます。
 {: .notice--success}
 
-If the test shows any other results, your SD card may be corrupted or damaged and you may have to replace it!
+結果はそうでなければ、SDカードは壊れた恐れがありますので、新しいSDカードに切り替えることをご検討ください！
 {: .notice--danger}
 
-Return to [Get Started](get-started)
+[はじめる](get-started)に戻る
 {: .notice--primary}
