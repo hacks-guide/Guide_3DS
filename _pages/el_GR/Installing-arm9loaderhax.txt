@@ -10,48 +10,48 @@ permalink: /el_GR/installing-arm9loaderhax.html
 Τα παρακάτω βήματα θα εγκαταστήσουν το [Fork του χρήστη AuroraWright](https://github.com/AuroraWright/arm9loaderhax) του arm9loaderhax.
 {: .notice--info}
 
-We will also setup the ability to launch payloads from arm9loaderhax, giving us the ability to unbrick our SysNAND from situations that would normally brick us by restoring from backup.
+Θα ετοιμάσουμε της ικανότητα να εκκινήσουμε payloads από το arm9loaderhax, επιτρέποντάς μας να επισκευάσουμε τη SysNAND σε περίπτωση που αχρηστεύσουμε την συσκευή μας.
 {: .notice--info}
 
-**You cannot use another console's OTP or you will brick GUARANTEED.**
+**Δεν μπορείτε να χρησιμοποιήσετε το OTP μιας άλλης συσκευής, αλλιώς είναι ΕΓΓΥΗΜΕΝΟ πως θα αχρηστεύσετε την συσκευή σας.**
 {: .notice--danger}
 
-#### Overview of steps
+#### Επισκόπηση των βημάτων
 
-In this section, we will go through the process that all the other steps have led up to: actually installing arm9loaderhax.
+Σε αυτήν την ενότητα θα πραγματοποιήσουμε αυτό στο οποίο μας οδήγησαν όλα τα προηγούμενα βήματα: στην εγκατάσταση του arm9loaderhax.
 
-This is nearly the best possible kind of device exploit because it is permanently installable into the NAND firm partitions, and runs before most of the OS loads, allowing it to not only work on *all* versions once installed, but also protect itself and recover from most situations that would brick a non-A9LH 3DS such as a nonfunctional home menu or bad title install.
+Αυτό είναι το σχεδόν καλύτερο δυνατό είδος exploit καθώς εγκαθίσταται μόνιμα στα διαμερίσματα της NAND firm και εκτελείται πριν φορτώσει η πλειοψηφία του Λειτουργικού Συστήματος, επιτρέποντας όχι μόνο να δουλεύει σε *όλες* τις εκδόσεις στις οποίες είναι εγκατεστημένο, αλλά να προστατεύει επίσης τον εαυτό του και να επανέρχεται απ' όλες τις καταστάσεις οι οποίες θα καθιστούσαν άχρηστο ένα 3DS χωρίς A9LH, όπως ένα μη-λειτουργικό home menu ή μια κακή εγκατάσταση τίτλου.
 
-The file `arm9loaderhax.bin` is what is launched by arm9loaderhax itself after it finishes loading off of NAND, and can be any valid arm9 payload. This file can be replaced at any time, although Luma3DS allows for the launch of other arm9 payloads using the Luma3DS chainloader.
+Το αρχείο `arm9loaderhax.bin` εκκινείται από το arm9loaderhax έπειτα από το φόρτωμά του στη NAND, και μπορεί να είναι οποιοδήποτε έγκυρο arm9 payload. Αυτό το αρχείο μπορεί να αντικατασταθεί ανά πάσα στιγμή, αν και το Luma3DS επιτρέπει την εκκίνηση άλλων amr9 payloads χρησιμοποιώντας το Luma3DS chainloader.
 
-In this case, we use Luma3DS by [AuroraWright](https://github.com/AuroraWright/) to boot a patched SysNAND directly, allowing us to completely bypass the need for any kind of EmuNAND, vastly simplifying the usage of a hacked 3DS in addition to saving SD card space.
+Σε αυτήν την περίπτωση, θα χρησιμοποιήσουμε το Luma3DS του χρήστη [AuroraWright](https://github.com/AuroraWright/) ώστε να εκκινήσουμε απευθείας μια επεξεργασμένη έκδοση της SysNAND, που μας επιτρέπει να παρακάμψουμε την ανάγκη για μια EmuNAND, απλοποιώντας έτσι την χρήση ενός χακαρισμένου 3DS και απελευθερώνοντας χώρο στην κάρτα SD.
 
-Once arm9loaderhax is installed and Luma3DS is setup with the correct options, we then restore our previous backup.
+Μόλις εγκαταστήσουμε το arm9loaderhax και ρυθμίσουμε το Luma3DS με τις κατάλληλες ρυθμίσεις, θα επαναφέρουμε τα αντίγραφα ασφαλείας που φτιάξαμε νωρίτερα.
 
-During this process, we also setup programs such as the following:    
+Ταυτόχρονα, θα εγκαταστήσουμε προγράμματα όπως τα παρακάτω:    
 
-+  **FBI** *(installs CIA formatted games and applications)*
-+  **Luma3DS Updater** *(updates your CFW installation easily)*
-+  **Hourglass9** *(multipurpose tool which can do NAND and cartridge functions)*
++  **FBI** *(Εγκαθιστά εφαρμογές και παιχνίδια που έχουν την μορφή CIA)*
++  **Luma3DS Updater** *(ενημερώνει εύκολα την εγκατάσταση του CFW)*
++  **Hourglass9** *(Εργαλείο πολλών χρήσεων το οποίο μπορεί να πραγματοποιήσει λειτουργίες της NAND και των κασετών)*
 
-#### What you need
+#### Τι χρειάζεστε
 
 * <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [`aeskeydb.bin`](magnet:?xt=urn:btih:18b3a17f78e2376e05feaa150749d9fd689b25dc&dn=aeskeydb.bin&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 * <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [`fbi-2.4.2-injectable.zip`](magnet:?xt=urn:btih:f978b4cf5eda72823240b9c649f3fd2940a9f525&dn=fbi-2.4.2-injectable.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 * <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [`data_input_v3.zip`](magnet:?xt=urn:btih:a1195c9f7ab650fa7c7bf020b51fc19ea8d9440c&dn=data%5Finput%5Fv3.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
-* The latest fork of [SafeA9LHInstaller](https://github.com/Plailect/SafeA9LHInstaller/releases/latest) *(the `.7z` file)*
-* The latest release of [arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(the `.7z` file)*
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(the `.7z` file)*
-* The latest release of [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
-* The latest release of [Hourglass9](https://github.com/d0k3/Hourglass9/releases/latest)
-* The latest release of [Luma3DS Updater](https://github.com/Hamcha/lumaupdate/releases/latest)
-* The latest release of [DspDump](https://github.com/Cruel/DspDump/releases/latest)
-* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest)
-* The Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
+*Το τελευταίο fork του [SafeA9LHInstaller](https://github.com/Plailect/SafeA9LHInstaller/releases/latest) *(το αρχείο `.7z`)*
+* Την τελευταία έκδοση του [arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(το αρχείο `.7z`)*
+* Την τελευταία έκδοση του [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(the `.7z` file)*
+* Την τελευταία έκδοση του [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
+* Την τελευταία έκδοση του [Hourglass9](https://github.com/d0k3/Hourglass9/releases/latest)
+* Την τελευταία έκδοση του [Luma3DS Updater](https://github.com/Hamcha/lumaupdate/releases/latest)
+* Την τελευταία έκδοση του [DspDump](https://github.com/Cruel/DspDump/releases/latest)
+* Την τελευταία έκδοση του [FBI](https://github.com/Steveice10/FBI/releases/latest)
+* Το Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
 
-#### Instructions
+#### Οδηγίες
 
-##### Section I - Prep work
+##### Ενότητα I - Προετοιμασία
 
 {% capture notice-5 %}
 **Ensure you are using an SD card that is not corrupted!**
@@ -63,40 +63,40 @@ During this process, we also setup programs such as the following:
 
 <div class="notice--danger">{{ notice-5 | markdownify }}</div>
 
-1. **If it exists, copy the `/files9/` folder on your SD card to a safe location on your computer and back it up to multiple locations (such as online file storage); the files inside could save you from total data loss if you break your system**
-2. Create a folder named `cias` on the root of your SD card if it does not already exist
-3. Delete the `3ds` folder from the root of your SD card if it exists
-5. Copy _the contents of_ the `starter` folder in `starter.zip` to the root of your SD card
-  + This will include a brand new `3ds` folder to replace the one you just deleted
-6. Copy _the contents of_ the SafeA9LHInstaller `.7z` to the root of your SD card
-7. Copy the `a9lh` folder from the data_input `.zip` to the root of your SD Card
-8. Copy _the contents of_ the arm9loaderhax release `.7z` to `a9lh` folder on your SD card
-9. Copy `hblauncher_loader.cia` from the hblauncher_loader `.zip` to the `/cias/` folder on your SD card
-10. Copy `lumaupdater.cia` from the Luma3DS Updater `.zip` to the `/cias/` folder on your SD card
-11. Copy `FBI.cia` from the FBI `.zip` to the `/cias/` folder on your SD card
-12. Copy `arm9loaderhax.bin` from the Luma3DS `.7z` to the root of your SD card, overwrite existing files
-13. Create a folder named `luma` on the root of your SD card
-14. Create a folder named `payloads` in the `luma` folder on your SD card
-15. Copy `Hourglass9.bin` from the Hourglass9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `Hourglass9.bin` to `start_Hourglass9.bin`
-17. Copy `aeskeydb.bin` to the `/files9/` folder on your SD card
-18. Copy `DspDump.3dsx` to the `/3ds/` folder on your SD card
-19. Copy _the contents of_ `fbi-2.4.2-injectable.zip` to the `/files9/` folder on your SD card
+1. ** Εάν υπάρχει φάκελος με το όνομα `/files9/` στην κάρτα SD, αντιγράψτε τον σε μία ασφαλή τοποθεσία στον υπολογιστή σας και δημιουργήστε αρκετά αντίγραφα ασφαλείας (όπως στο σύννεφο)· τα περιεχόμενά του μπορεί να σας σώσουν από την απώλεια των δεδομένων σας σε περίπτωση που αχρηστεύσετε το σύστημά σας**
+2. Δημιουργήστε έναν φάκελο με το όνομα `cias` στην ρίζα της κάρτας SD, σε περίπτωση που δεν υπάρχει ήδη
+3. Εάν υπάρχει, διαγράψτε το φάκελο `3ds` από τη ρίζα της κάρτας SD
+5. Αντιγράψτε _τα περιεχόμενα_του φακέλου `starter`, που βρίσκονται στο `starter.zip`, στη ρίζα της κάρτας SD
+  + Αυτό θα περιλαμβάνει και έναν καινούργιο φάκελο `3ds` που αντικαθιστά αυτόν που μόλις διαγράψατε
+6. Αντιγράψτε _τα περιεχόμενα του_ SafeA9LHInstaller `.7z` στην ρίζα της κάρτας SD
+7. Αντιγράψτε το φάκελο `a9lh` από το data_input `.zip` στη ρίζα της κάρτας SD
+8. Αντιγράψτε _τα περιεχόμενα_ του arm9loaderhax release `.7z` στο φάκελο `a9lh` της κάρτας SD
+9. Αντιγράψτε το αρχείο `hblauncher_loader.cia` από το hblauncher_loader `.zip` στον φάκελο `/cias/` της κάρτας SD
+10. Αντιγράψτε το αρχείο `lumaupdater.cia` από το Luma3DS Updater `.zip` στον φάκελο `/cias/` της κάρτας SD
+11. Αντιγράψτε το αρχείο `FBI.cia` από το FBI `.zip` στον φάκελο `/cias/` της κάρτας SD
+12. Αντιγράψτε το `arm9loaderhax.bin` από το Luma3DS `.7z` στη ρίζα της κάρτας SD, αντικαθιστώντας υπάρχοντα αρχεία
+13. Δημιουργήστε έναν φάκελο με το όνομα `luma` στην ρίζα της κάρτας SD
+14. Δημιουργήστε έναν φάκελο με το όνομα `payloads` στον φάκελο `luma` της κάρτας SD
+15. Αντιγράψτε το `Hourglass9.bin` από το Hourglass9 `.zip` στον φάκελο `/luma/payloads/` της κάρτας SD και μετονομάστε το `Hourglass9.bin` σε `start_Hourglass9.bin`
+17. Αντιγράψτε το αρχείο `aeskeydb.bin` στον φάκελο `/files9/` της κάρτας SD
+18. Αντιγράψτε το αρχείο `DspDump.3dsx` στον φάκελο `/3ds/` της κάρτας SD
+19. Αντιγράψτε _τα περιεχόμενα_ του `fbi-2.4.2-injectable.zip` στον φάκελο `/files9/` της κάρτας SD
 
-##### Section II - Installing arm9loaderhax
+##### Ενότητα II - Εγκατάσταση του arm9loaderhax
 
-1. Reinsert your SD card into your 3DS
-2. You should be on 2.1.0
-3. Go to `http://2xrsa.3ds.guide` on your 3DS
-  + If you get the error "This service is not available in your region", use the System Settings to set your device's country to match the NAND region you installed with 2.1.0 ctrtransfer
-  + If you get another error, [follow this troubleshooting guide](troubleshooting#ts_browser)
-  + If you get a glitched screen, [follow this troubleshooting guide](troubleshooting#ts_safe_a9lh_screen)
-  + If you are on a 2DS or New 3DS and Wireless Communication is off, you can re-enable the wireless by removing the battery and unplugging the charger for several seconds then booting back up
-4. Press (Select) to Full Install
-5. The installer will now install arm9loaderhax on your device (this is very fast)
-6. Shut down your console by pressing any button
-7. Copy your console specific `otp.bin` from the `/a9lh/` folder on your SD card to a safe location on your computer and back it up to multiple locations (such as online file storage), then reinsert your SD card into your 3DS
+1. Επανατοποθετήστε την κάρτα SD στο 3DS
+2. Θα πρέπει να βρίσκεστε στην έκδοση 2.1.0
+3. Μεταβείτε στο `http://2xrsa.3ds.guide` στο 3DS σας
+  + Εάν αντιμετωπίζετε το σφάλμα "This service is not available in your region", χρησιμοποιήστε το System Settings ώστε να ορίσετε την χώρα της συσκευής σας έτσι ώστε να ταιριάζει με την περιοχή της NAND που εγκαταστήσατε νωρίτερα, κατά την διάρκεια του ctrtransfer 2.1.0
+  + Εάν αντιμετωπίζετε κάποιο άλλο σφάλμα, [ακολουθήστε αυτόν τον οδηγό αντιμετώπισης σφαλμάτων](troubleshooting#ts_browser)
+  + Εάν αντιμετωπίζετε μια κολλημένη οθόνη, [ακολουθήστε αυτόν τον οδηγό αντιμετώπισης σφαλμάτων](troubleshooting#ts_safe_a9lh_screen)
+  + Εάν βρίσκεστε στο 2DS ή στο New 3DS και έχετε απενεργοποιημένη την Ασύρματη Σύνδεση, μπορείτε να την επανενεργοποιήσετε αφαιρώντας την μπαταρία και αποσυνδέοντας τον φορτιστή για μερικά δευτερόλεπτα. Έπειτα ενεργοποιήστε ξανά την συσκευή
+4. Πατήστε (Select) για να πραγματοποιήσετε μια πλήρη εγκατάσταση
+5. Το πρόγραμμα εγκατάστασης θα εγκαταστήσει τώρα το arm9loaderhax στη συσκευή σας (αυτό γίνεται πολύ γρήγορα)
+6. Απενεργοποιήστε την κονσόλα σας πατώντας οποιοδήποτε κουμπί
+7. Αντιγράψτε το `otp.bin` της κονσόλας σας από το φάκελο `/a9lh/` της κάρτα SD σε μία ασφαλή τοποθεσία στον υπολογιστή σας και δημιουργήστε αντίγραφα ασφαλείας σε πολλές τοποθεσίες (όπως μία online αποθήκευση αρχείων), και επανατοποθετήστε την κάρτα SD στο 3DS
 
-##### Section III - Configuring Luma3DS
+##### Ενότητα III - Ρύθμιση του Luma3DS
 
 1. Boot your device while holding (Select) to enter the Luma3DS configuration menu
   + Make sure to start holding the button before pressing power
@@ -214,7 +214,7 @@ You can remove your NAND backups from `/files9/` as long as you still have them 
 {: .notice--info}
 
 {% capture notice-7 %}
-**You can remove any extra files and folders from the root of the SD card that are *not* in the following list:**
+**Μπορείτε να διαγράψετε τα επιπλέον αρχεία και φακέλους από την ρίζα της κάρτας SD εφόσον *δεν* βρίσκονται στην παρακάτω λίστα:**
 
     + 3ds
     + files9
@@ -228,11 +228,11 @@ You can remove your NAND backups from `/files9/` as long as you still have them 
 
 <div class="notice--info">{{ notice-7 | markdownify }}</div>
 
-For information on changing your device to another region, check out the [Region Changing](region-changing) page.
+Για πληροφορίες σχετικά με την αλλαγή της περιοχής της συσκευής σας, επισκεφθείτε την σελίδα [Αλλαγής περιοχής](region-changing).
 {: .notice--success}
 
-For information on keeping your A9LH installation up to date, check out the [Updating A9LH](updating-a9lh) page.
+Για πληροφορίες σχετικά με την ενημέρωση του A9LH, επισκεφθείτε την σελίδα [Ενημερώνοντας το A9LH](updating-a9lh).
 {: .notice--success}
 
-For information on using Luma3DS's various features, check out [its wiki](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage).
+Για πληροφορίες σχετικά με την χρήση του Luma3DS, επισκεφθείτε [το wiki του](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage).
 {: .notice--success}
