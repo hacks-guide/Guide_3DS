@@ -6,7 +6,7 @@ permalink: /el_GR/updating-a9lh.html
 
 ### Τελευταία Ενημέρωση στις: 3 Νοεμβρίου 2016
 
-The actual installation of arm9loaderhax itself consists of payload files installed into the NFIRM partitions on your device's NAND chip, which is soldered to the motherboard itself. Αυτά τα payload αρχεία ενημερώνονται σπάνια και συντελούν στον σκοπό της εκκίνησης του `arm9loaderhax.bin` από την κάρτα SD,που στην περίπτωση μας είναι το Luma3DS.
+Η πραγματική εγκατάσταση του arm9loaderhax αποτελείται από αρχεία λεγόμενα ως payload τα οποία εγκαθίστανται στα NFIRM διαμερίσματα του τσιπ της NAND της συσκευής σας, το οποίο είναι συγκολλημένο μέσα στην μητρική του συστήματος. Αυτά τα payload αρχεία ενημερώνονται σπάνια και συντελούν στον σκοπό της εκκίνησης του `arm9loaderhax.bin` από την κάρτα SD,που στην περίπτωση μας είναι το Luma3DS.
 {: .notice}
 
 Εάν δεν ξέρετε ποια έκδοση του arm9loaderhax τρέχετε, τότε εγκαταστήστε την πιο πρόσφατη έκδοση με αυτά τα βήματα. Εγκαθιστώντας την πιο πρόσφατη έκδοση ενώ είστε ήδη σε αυτή δεν θα έχει κανένα αποτέλεσμα.
@@ -15,13 +15,13 @@ The actual installation of arm9loaderhax itself consists of payload files instal
 Εάν έχετε θέσει κάποιο PIN στο Luma, θα πρέπει προσωρινά να το απενεργοποιήσετε για να ακολουθήσετε τα βήματα του οδηγού. Μπορείτε να ενεργοποιήσετε ξανά το PIN σας μετά την ενημέρωση.
 {: .notice--info}
 
-If you are using a payload that does not init the screen on its own (such as Bootanim9), you will need to rename it to `arm9loaderhax_si.bin` instead of `arm9loaderhax.bin`
+Εάν χρησιμοποιείτε ένα payload το οποίο δεν ενεργοποιείται στην οθόνη από μόνο του (όπως το Bootanim9), θα πρέπει να το μετονομάσετε σε `arm9loaderhax_si.bin` αντί για `arm9loaderhax.bin`
 {: .notice--info}
 
 Οι εκδόσεις του data_input αναφέρονται μόνο σε αναθεωρήσεις του `.zip` οι οποίες είναι συμβατές με διαφορετικές εκδόσεις εγκατάστασης, *δεν* είναι το ίδιο όπως η ενημέρωση του a9lh (τα αρχεία payload). Δεν έχουν καμία πρακτική διαφορά πέρα από την διαδικασία εγκατάστασης.
 {: .notice--info}
 
-These steps will also update your various payloads and the AES key database.
+Τα παρακάτω βήματα θα ενημερώσουν επίσης και τα διάφορα payload όπως και την βάση δεδομένων AES key.
 {: .notice--success}
 
 #### Τι χρειάζεστε
@@ -29,51 +29,51 @@ These steps will also update your various payloads and the AES key database.
 * <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [`aeskeydb.bin`](magnet:?xt=urn:btih:18b3a17f78e2376e05feaa150749d9fd689b25dc&dn=aeskeydb.bin&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 * <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [`data_input_v4.zip`](magnet:?xt=urn:btih:00f03ff69b5961307303d5e4778a2f65a528bf2d&dn=data%5Finput%5Fv4.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 * The latest release of [SafeA9LHInstaller](https://github.com/AuroraWright/SafeA9LHInstaller/releases/latest) *(the `.7z` file)*
-* The latest release of [arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(the `.7z` file)*
-* The latest release of [Hourglass9](https://github.com/d0k3/Hourglass9/releases/latest)
+* Την τελευταία έκδοση του [arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(the `.7z` file)*
+* Την τελευταία έκδοση του [Hourglass9](https://github.com/d0k3/Hourglass9/releases/latest)
 
-#### Instructions
+#### Οδηγίες
 
-**For all of these instructions, OVERWRITE any existing files on your SD card.**
+**Για όλες αυτές τις οδηγίες παρακαλώ ΑΝΤΙΚΑΤΑΣΤΗΣΤΕ οποιαδήποτε υπάρχοντα αρχεία στην κάρτα σας SD.**
 
-##### Section I - Prep work
+##### Ενότητα I - Προετοιμασία
 
-1. Delete any existing `aeskeydb.bin` from the root of your SD card
-2. Delete the `a9lh` folder from the root of your SD card if it exists
-3. Copy `aeskeydb.bin` to the `/files9/` folder on your SD card
-4. Copy `Hourglass9.bin` from the Hourglass9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `Hourglass9.bin` to `start_Hourglass9.bin`
-5. Copy `arm9loaderhax.bin` from the SafeA9LHInstaller `.zip` to the `/luma/payloads/` folder on your SD card
-6. Rename `arm9loaderhax.bin` in `/luma/payloads/` to `down_safea9lhinstaller.bin`
-7. Copy the `a9lh` folder from data_input `.zip` to the root of your SD Card
-8. Copy _the contents of_ the arm9loaderhax `.7z` to `a9lh` folder on your SD card
-9. Copy `arm9loaderhax.bin` from the Luma3DS `.zip` to the root of your SD card, overwrite existing files
-10. Reinsert your SD card into your 3DS
+1. Διαγράψτε, εάν υπάρχει, οποιοδήποτε aeskeydb.bin από τη ρίζα της κάρτας SD
+2. Εάν υπάρχει, διαγράψτε τον φάκελο `a9lh` από τη ρίζα της κάρτας SD
+3. Αντιγράψτε το αρχείο `aeskeydb.bin` στο φάκελο `/files9/` της κάρτας SD
+4. Αντιγράψτε το `Hourglass9.bin` από το Hourglass9 `.zip` στο φάκελο `/luma/payloads/` της κάρτας SD και μετονομάστε το `Hourglass9.bin` σε `start_Hourglass9.bin`
+5. Αντιγράψτε το `arm9loaderhax.bin` από το SafeA9LHInstaller `.zip` στο φάκελο `/luma/payloads/` της κάρτας SD
+6. Μετονομάστε το `arm9loaderhax.bin` που βρίσκεται στο `/luma/payloads/` σε `down_safea9lhinstaller.bin`
+7. Αντιγράψτε τον φάκελο `a9lh` από το data_input `.zip` στη ρίζα της κάρτας SD
+8. Αντιγράψτε_τα περιεχόμενα του_ arm9loaderhax `.7z` στο φάκελο `a9lh` της κάρτας SD
+9. Αντιγράψτε το αρχείο `arm9loaderhax.bin` από το Luma3DS `.zip` στη ρίζα της κάρτας SD, αντικαθιστώντας τυχόν υπάρχοντα αρχεία
+10. Επανατοποθετήστε την κάρτα SD μέσα στο 3DS
 
 ##### Section II - Payload update
 
-1. Reinsert your SD card into your 3DS and boot holding (Down)
-2. Press (Select) to update arm9loaderhax
-3. Power off the device and put your SD card back in your computer
-4. Delete the `a9lh` folder from the root of your SD card
-5. Delete `down_safea9lhinstaller.bin` from `/luma/payloads/`
+1. Τοποθετήστε ξανά την κάρτα SD στo 3DS σας και εκκινήστε το σύστημα κρατώντας το (Dοwn)
+2. Πατήστε (Select) για να ενημερώσετε το arm9loaderhax
+3. Απενεργοποιήστε τη συσκευή σας και τοποθετήστε την κάρτα SD στον υπολογιστή σας
+4. Διαγράψτε τον φάκελο `a9lh` από τη ρίζα της κάρτας SD
+5. Διαγράψτε το `down_safea9lhinstaller.bin` από το φάκελο `/luma/payloads/`
 
-##### Section III - Configuring Luma3DS
+##### Ενότητα III - Ρύθμιση του Luma3DS
 
-1. Reinsert your SD card into your 3DS and boot holding (Select)
-2. Use the (A) button and the D-Pad to turn on the following:    
+1. Τοποθετήστε ξανά την κάρτα SD στο 3DS σας και εκκινήστε κρατώντας πατημένο το (SELECT)
+2. Χρησιμοποιήστε το κουμπί (A) και το D-Pad για να ενεργοποιήστε τα παρακάτω:    
   + **"Autoboot SysNAND"**
   + **"Use SysNAND FIRM if booting with R"**
   + **"Show NAND or user string in System Settings"**
 3. If you are using a **New 3DS**, you should *also* enable the following:
   + **"New 3DS CPU" to "Clock+L2(x)"**
-    + This will increase the framerate of many games, but may cause instability in others
-    + If some games do not work properly, disable this option and try again
+    + Αυτό θα αυξήσει το framerate σε πολλά παιχνίδια, αλλά μπορεί να προκαλέσει αστάθεια σε άλλα
+    + Εάν μερικά παιχνίδια δεν λειτουργούν σωστά, απενεργοποιήστε αυτήν την ρύθμιση και δοκιμάστε ξανά
 4. Press (Start) to save and reboot
 
-##### Section IV - CTRNAND Luma3DS
+##### Ενότητα IV - CTRNAND Luma3DS
 
-1. Open FBI
-2. Select "SD"
+1. Ανοίξτε το FBI
+2. Επιλέξτε "SD"
 3. Navigate to `arm9loaderhax.bin`, then press (A) on it and select the "Copy" option
 4. Return to the FBI main menu with (B)
 5. Select "CTR NAND"
@@ -83,10 +83,10 @@ These steps will also update your various payloads and the AES key database.
 9. Power off your 3DS and remove the SD card
 10. Boot with the SD card removed while holding (Select)
   + Booting the device at least once with the SD card removed will allow you to configure the CTRNAND based Luma3DS installation
-11. Use the (A) button and the D-Pad to turn on the following:    
+11. Χρησιμοποιήστε το κουμπί (A) και το D-Pad για να ενεργοποιήστε τα παρακάτω:    
   + **"Show NAND or user string in System Settings"**
 12. If you are using a **New 3DS**, you should *also* enable the following:
   + **"New 3DS CPU" to "Clock+L2(x)"**
-    + This will increase the framerate of many games, but may cause instability in others
-    + If some games do not work properly, disable this option and try again
+    + Αυτό θα αυξήσει το framerate σε πολλά παιχνίδια, αλλά μπορεί να προκαλέσει αστάθεια σε άλλα
+    + Εάν μερικά παιχνίδια δεν λειτουργούν σωστά, απενεργοποιήστε αυτήν την ρύθμιση και δοκιμάστε ξανά
 13. Reinsert your SD card, then press Start to save and reboot!
