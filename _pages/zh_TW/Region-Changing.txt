@@ -4,7 +4,7 @@ lang: zh-Hant
 permalink: /zh_TW/region-changing.html
 ---
 
-本篇為變更安裝於 SysNAND 上基於 arm9loaderhax 的自製系統的區域的附加章節。 這是透過安裝另一區域的 9.2.0 ctrtransfer 鏡像檔及更改你的 SecureInfo_A 檔案所達成的。
+本篇為附加章節。我們將帶過如何改變基於 arm9loaderhax 的自製韌體的區碼。 這是透過安裝另一區域的 9.2.0 ctrtransfer 鏡像檔及更改你的 SecureInfo_A 檔案所達成的。
 {: .notice--primary}
 
 **區碼變更通常是不需要的，因為 Luma3DS 本身就支援跨區遊玩及各[程式區域模擬](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage)的功能。**
@@ -45,9 +45,9 @@ permalink: /zh_TW/region-changing.html
 
 ##### 第一節 — 準備工作
 
-1. 解壓 GodMode9 `.zip` 中的 `GodMode9.bin` 到 SD 卡中的 `/luma/payloads/` 底下，並重新命名為 `up_GodMode9.bin`
-2. 複製 `Decrypt9WIP.bin` 到 SD 卡底下的 `/luma/payloads/` 資料夾內，並將它重新命名為`x_Decrypt9WIP.bin`
-3. 從剛下載的 ctrtransfer`.zip` 中，解壓 9.2.0 ctrtransfer 鏡像檔 `.bin` 及 `.bin.sha` 檔案至 SD 卡上的 `/files9/` 資料夾
+1. 解壓 GodMode9 `.zip` 中的 `GodMode9.bin` 到 SD 卡的 `/luma/payloads/` 資料夾內，並將其重新命名為 `up_GodMode9.bin`
+2. 複製 `Decrypt9WIP.bin` 到 SD 卡的 `/luma/payloads/` 資料夾內，並將其重新命名為`x_Decrypt9WIP.bin`
+3. 解壓 ctrtransfer `.zip` 中的 9.2.0 `.bin` 及 `.bin.sha` 檔案至 SD 卡上的 `/files9/` 資料夾
 4. 將 SD 卡插回 3DS 中
 
 ##### 第二節 — 備份 tickets 及系統設定檔
@@ -64,36 +64,36 @@ permalink: /zh_TW/region-changing.html
 
 1. 到「SysNAND Options」、「CTRNAND Transfer」中選擇「Auto CTRNAND Transfer」
 2. 提示時，按下「A」以選擇你要的 9.2.0 ctrtransfer 鏡像檔
-3. 如果你尚未進行 NAND 備份，**請在提示出現時按下「A」以備份 SysNAND 至 `NANDmin.bin`**
-4. 備份過程將耗費一段時間，請耐心等候
-5. 備份完成後，按下「選擇鍵 (Select)」以卸除 SD 卡
-6. 將 SD 卡插入至你的電腦裡，並從`/files9/`資料夾中複製`NANDmin.bin`及`NANDmin.bin.sha`到一個安全可靠的地方
+3. 如果你尚未進行 NAND 備份，**請在提示出現時按下「A」備份 SysNAND 至 `NANDmin.bin`**
+4. 轉移及備份過程將耗費一段時間，請耐心等候
+5. 轉移完成後，按下「選擇鍵 (Select)」以卸除 SD 卡
+6. 將 SD 卡插入至你的電腦裡，並從 `/files9/` 資料夾中複製 `NANDmin.bin` 及 `NANDmin.bin.sha` 到一個安全可靠的地方
   + 盡量把備份存在各個不同的地方
-  + 未來如果你不小心玩到磚機，它將會是你的救命恩人
-7. 在複製完備份後，在 SD 卡上刪除 `/files9/` 中的 9.2.0 的 ctrtransfer 鏡像檔 `.bin` 及 `.bin.sha` 檔案
+  + 未來如果你不小心玩到磚機，這備份將會是你的救命恩人
+7. 在複製完備份後，刪除 SD 卡中 `/files9/` 資料夾底下的 9.2.0 的 ctrtransfer 鏡像檔 `.bin` 及 `.bin.sha` 檔案
 8. 將 SD 卡插回 3DS 中
 
 ##### 第四節 — 編輯 SecureInfo
 
-1. 按下「開始鍵 (Start)」然後按住「上」以啟動至 arm9loaderhax GodMode9      
+1. 按下「開始鍵 (Start)」然後按住「上」以透過 arm9loaderhax 啟動 GodMode9      
 2. 到 `SYSNAND CTRNAND` -> `rw` -> `sys` 中
 3. 在 `SecureInfo_A` 上按下「Y」複製檔案
 4. 再按下「Y」貼上
 5. 選擇 「Copy path(s)」
-6. 按下「A」解鎖 SysNAND 的寫入保護，然後按下提示的按鍵組合
+6. 按「A」以解鎖 SysNAND 的寫入保護，然後按下提示的按鍵組合
 7. 選擇 「Choose new name」
 8. 透過方向鍵將檔案重新命名為 `SecureInfo_C`，完成後按下「A」（複寫原有的 `SecureInfo_C`）
 9. 往下滑到你剛貼上的 `SecureInfo_C`
 10. 在 `SecureInfo_C` 上按下「A」，然後選擇 「Show in Hexeditor」
 11. 按 「A」 繼續
-12. 按下「A」以進入編輯模式
+12. 按「A」以進入編輯模式
 13. 到 00000100 行的開頭並按下「A」
 14. 按住「A」然後透過上下方向鍵以修改號碼
 15. 在 00000100 行上，將前兩個數字改成*你想改成的區域*的號碼：
     - "00" : 日版
     - "01" : 美版
     - "02" : 歐版
-16. 按下「B」以退出編輯模式，然後儲存變更，再按下「B」以回到檔案目錄中
+16. 按「B」以退出編輯模式並儲存變更，再按下「B」以回到檔案目錄中
 17. 如果一切順利，你應該會看到 `SecureInfo_A` 及 `SecureInfo_C` 的檔案。 （當 Luma3DS 在開機時發現 `SecureInfo_A` 檔案時，它將會使用 `SecureInfo_C` 來代替）
 18. 按下「開始鍵 (Start)」以重啟
 
@@ -113,9 +113,9 @@ permalink: /zh_TW/region-changing.html
 
 1. 開啟系統設定
 2. 選擇「Other Settings」、「Profile」中的「Region Settings」
-3. 選擇你想改成的區域的國家
+3. 選擇你想改成的國家
 4. 如果系統提示的話，你不必設定州的部分
-5. 更新你改完區域後的自製系統 SysNAND 至最新版本
+5. 更新你改區完後的自製系統至最新版本
 
 ##### 第七節 — 還原系統設定檔
 
