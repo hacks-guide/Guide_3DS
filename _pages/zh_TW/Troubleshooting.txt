@@ -51,15 +51,15 @@ permalink: /zh_TW/troubleshooting.html
 
 #### 操作說明
 
-1. 解壓 GodMode9 `.zip` 中的 `GodMode9.bin` 到 SD 卡中的 `/luma/payloads/` 底下，並重新命名為 `up_GodMode9.bin`
+1. 解壓 GodMode9 `.zip` 中的 `GodMode9.bin` 到 SD 卡的 `/luma/payloads/` 資料夾內，並將其重新命名為 `up_GodMode9.bin`
 2. 開機時按住「上」以進入 arm9loaderhax GodMode9
-3. 到 `SYSNAND CTRNAND` -> `data` -> (32 Character ID) -> `sysdata` -> `00010038`
+3. 移動至 `SYSNAND CTRNAND` -> `data` -> (32 字元 ID) -> `sysdata` -> `00010038` 下
 4. 按住「R」，並在 `00000000` 上按下「X」以重新命名此檔案
 5. 按一下「上」將名字改成 `10000000`
 6. 按「A」以儲存變更
-7. 按下「A」以解鎖 SysNAND 的寫入保護，然後按下提示的按鍵組合
+7. 按「A」以解鎖 SysNAND 的寫入保護，然後按下提示的按鍵組合
 8. 回到主選單
-9. 按下「開始鍵 (Start)」以重新啟動系統
+9. 按「開始鍵 (Start)」以重新啟動系統
 
 ## <a name="gw_fbi" />無法在 Gateway 降級過後的裝置上注入 FBI 管理器到「健康與警示」程式裡
 這是因為 Gateway 所用的降級方式是非常糟糕的，那方式將在系統內留下各兩個版本的 3DS 程式。 其中一個是沒用到的版本，而 Decrypt9 不知道這點，而將 FBI 管理器注入到錯誤的程式中。
@@ -70,7 +70,7 @@ permalink: /zh_TW/troubleshooting.html
 
 #### 操作說明
 
-1. 解壓 GodMode9 `.zip` 中的 `GodMode9.bin` 到 SD 卡中的 `/luma/payloads/` 底下，並重新命名為 `up_GodMode9.bin`
+1. 解壓 GodMode9 `.zip` 中的 `GodMode9.bin` 到 SD 卡的 `/luma/payloads/` 資料夾內，並將其重新命名為 `up_GodMode9.bin`
 2. 將 SD 卡插回 3DS 中
 3. 開機時按住「上」以啟動 arm9loaderhax GodMode9     
 4. 到 `SYSNAND CTRNAND` -> `title` -> `00040010`
@@ -84,14 +84,14 @@ permalink: /zh_TW/troubleshooting.html
 6. 注意這裡有兩組不同的 app 及 tmd 檔案，其中一組副檔名為大寫 (`.TMD` 及 `.APP`)，另一組為小寫(`.tmd` 及 `.app`)
 7. 按住「R」時再按下「Y」以建立新的資料夾
 8. 按「A」確認資料夾名稱 `newdir`（不管叫什麼都可以）
-9. 按下「A」以解鎖 SysNAND 的寫入保護，然後按下提示的按鍵組合
+9. 按「A」以解鎖 SysNAND 的寫入保護，然後按下提示的按鍵組合
 10. 在大寫副檔名的每個檔案上按「L」將它們標記起來
 11. 按「Y」複製檔案
 12. 移動到 `newdir` 中
 13. 按「Y」貼上檔案
 14. 選擇 「Move path(s)」
 15. 大寫副檔名的檔案將被移至 `newdir` 資料夾中
-16. 按下「開始鍵 (Start)」以重新啟動系統
+16. 按「開始鍵 (Start)」以重新啟動系統
 17. 繼續[安裝 arm9loaderhax](installing-arm9loaderhax)，並重試 FBI 管理器注入
 18. 如果還是沒用的話，將大寫副檔名的檔案移回，再以同樣步驟試試小寫附檔名的檔案
 
@@ -100,7 +100,7 @@ permalink: /zh_TW/troubleshooting.html
 
 1. 啟動網頁瀏覽器，開啟設定
 2. 滑到最下面並「清除資料（Initialize Savedata 或 Clear All Save Data）」
-3. 再試一次漏洞看看
+3. 再試一次
 
 ## <a name="ts_safe_a9lh" />系統都會直接開機到 SafeA9LHInstaller 底下
 你複製錯的 `arm9loaderhax.bin` 檔案到你的 SD 卡中了（SafeA9LHInstaller 包只需解壓 `3ds`資料夾及 `SafeA9LHInstaller.dat` 到 SD 卡而已）。    
