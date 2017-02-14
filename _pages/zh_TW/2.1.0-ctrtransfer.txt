@@ -39,9 +39,9 @@ permalink: /zh_TW/2.1.0-ctrtransfer.html
 
 #### 步驟概述
 
-在本節中，我們將寫入到你主機上的 [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) 磁區並刷入版本 2.1.0 的系統。此版本上的漏洞將可以讓我們提取你裝置上獨特的 [OTP](https://www.3dbrew.org/wiki/OTP_Registers) 資訊。 在安裝 arm9loaderhax 時，這 OTP 檔案是缺一不可的，而且**千萬不能**跟其他 3DS 主機共用。
+在本節中，我們將寫入到你主機上的 [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) 磁區並刷入版本 2.1.0 的系統。此版本上的漏洞將可以讓我們提取你裝置上獨特的 [OTP](https://www.3dbrew.org/wiki/OTP_Registers) 資訊。 在安裝 arm9loaderhax 時，這 OTP 檔案是缺一不可的，而這檔案**千萬不能**與其他 3DS 主機共用。
 
-這是透過刷入搭載版本 2.1.0 [預先做好的 ctrtransfer 鏡像檔](https://www.reddit.com/r/3dshacks/comments/4zhe4a/)所達成的，這過程中將保留你的主機獨有的系統文件（例：`moveable.sed` 及 `SecureInfo_A`），並修復 title 資料庫。
+這是透過刷入搭載版本 2.1.0 且[預先做好的 ctrtransfer 鏡像檔](https://www.reddit.com/r/3dshacks/comments/4zhe4a/)所達成的。本過程中將保留你的主機獨有的系統文件（例：`moveable.sed` 及 `SecureInfo_A`），並修復 title 資料庫。
 
 #### 必備項目
 
@@ -58,8 +58,8 @@ permalink: /zh_TW/2.1.0-ctrtransfer.html
 
 以下步驟應於 Decrypt9 中進行：
 
-1. 在主選單中按下「選擇鍵 (Select)」以卸除 SD 卡，並插入至電腦裡
-2. 從剛下載的 ctrtransfer`.zip` 中，解壓 2.1.0 的 `.bin` 及 `.bin.sha` 檔案至 SD 卡上的 `/files9/` 資料夾
+1. 在主選單中按下「選擇鍵 (Select)」卸除 SD 卡，並插入至電腦裡
+2. 解壓 ctrtransfer `.zip` 中的 2.1.0 `.bin` 及 `.bin.sha` 檔案至 SD 卡上的 `/files9/` 資料夾
 3. 將 SD 卡插回 3DS 中
 4. 按下「B」以進入到 Decrypt9 的主選單
 
@@ -79,19 +79,19 @@ permalink: /zh_TW/2.1.0-ctrtransfer.html
 3. 如果你尚未進行 NAND 備份，**請在提示出現時按下「A」備份 SysNAND 至 `NANDmin.bin`**
   + **你一定得備份 _你的_ 主機的 NAND。**
   + **跳過本步驟的話，你將遺失所有已安裝的遊戲及存檔！**
-4. 備份過程將耗費一段時間，請耐心等候
-5. 備份完畢後，按下「B」回上一頁
+4. 轉移及備份過程將耗費一段時間，請耐心等候
+5. 轉移完畢後，按下「B」回上一頁
 6. 按下「選擇鍵 (Select)」以卸除 SD 卡
-7. 在 SD 卡底下，刪除 `/files9/` 資料夾底下的 2.1.0 ctrtransfer 鏡像檔 `.bin` 及 `.bin.sha` 檔案
+7. 刪除 SD 卡中 `/files9/` 資料夾底下的 2.1.0 ctrtransfer 鏡像檔 `.bin` 及 `.bin.sha` 檔案
 8. 在不插入 SD 卡的情況下，按「開始鍵 (Start)」重啟裝置
-  + 如果你在版本 2.1.0 的 3DS 上在載入 HOME 主選單前插入 SD 卡的話，你將只會看到黑屏
-  + 每次在重新啟動版本 2.1.0 的系統時，你將會需要先在 HOME 主選單載入前拔出你的 SD 卡，直到載入完後才能插回
+  + 如果你在版本 2.1.0 的 3DS 上在載入 HOME 主選單前插入 SD 卡的話，裝置將無法啟動
+  + 每次在重啟版本 2.1.0 的主機時，你將會需要先在 HOME 主選單載入前拔出你的 SD 卡，直到載入完後才能插回
   + SD 卡暫時先不用插回 3DS 裡，因為我們到下一頁時還會再丟些檔案進去
-  + 到下一頁時，我們將還原你裝置的備份，到時這個問題就會被修正了
+  + 這問題將於下一章節還原裝置備份後解決
 
 ___
 
-某些裝有版本 2.1.0 裝置首次開機可能會花比較長的時間。
+某些裝有版本 2.1.0 的裝置首次開機可能會花比較長的時間。
 {: .notice--info}
 
 *（在某些裝置上，螢幕可能會出現扭曲或顏色走調的現象，這是正常的。在回復裝置備份後，這點就會被修正了）*
