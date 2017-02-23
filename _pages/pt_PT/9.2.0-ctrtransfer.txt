@@ -10,7 +10,7 @@ Se tiveres feito o downgrade para o 2.1.0 mas, por alguma razão, **não tens c�
 O teu dispositivo poderá não mostrar os teus jogos instalados após realizar a ctrtransfer. Isso deve-se ao facto de os tickets serem removidos na transferência, e é por isso que fazemos a cópia de segurança. Os tickets serão restaurados no final do guia.
 {: .notice--info}
 
-Como o objetivo da ctrtransfer 9.2.0 é solucionar problemas causados pela NAND existente, nestes passos só irás fazer a cópia dos tickets e das configurações guardadas, ao contrário do que acontece na ctrtransfer 2.1.0. Não fazer estas cópias irá resultar na PERDA de todos os jogos instalados e dados guardados!
+Because the point of the 9.2.0 ctrtransfer is to troubleshoot issues caused by the existing NAND, these steps, unlike the 2.1.0 ctrtransfer, will have you backup only the tickets. Não fazer estas cópias irá resultar na PERDA de todos os jogos instalados e dados guardados!
 {: .notice--danger}
 
 #### O que precisas
@@ -36,7 +36,7 @@ Como o objetivo da ctrtransfer 9.2.0 é solucionar problemas causados pela NAND 
 3. Copia o ficheiro `Decrypt9WIP.bin` para a pasta `/luma/payloads/` do teu cartão SD e muda o nome de `Decrypt9WIP.bin` para `x_Decrypt9WIP.bin`
 4. Volta a inserir o Cartão SD na 3DS
 
-##### Secção II - Copiar os tickets e as configurações guardadas
+##### Section II - Backup tickets
 
 1. Abre o Decrypt9 a partir do arm9loaderhax pressionando (X) enquanto ligas a consola
 2. Vai a "Ticket/Titlekey Options" e depois seleciona "Ticket Dump (SysNAND)"
@@ -44,7 +44,6 @@ Como o objetivo da ctrtransfer 9.2.0 é solucionar problemas causados pela NAND 
 4. Apaga todos os ficheiros `.tik` na pasta `/files9/` que **não** comecem com "00-"
   + Se nenhum ficheiro começar com "00-", apaga-os todos
 5. Reinsere o cartão SD na tua 3DS, e depois pressiona (B) para voltar ao menu principal
-6. Vai a "SysNAND Options", depois a "System Save Dump", e depois seleciona "Dump configsave.bin"
 
 ##### Secção III - ctrtransfer
 
@@ -57,26 +56,23 @@ Como o objetivo da ctrtransfer 9.2.0 é solucionar problemas causados pela NAND 
   + Faz cópias para múltiplos locais
   Esta cópia de segurança irá salvar-te de um brick se algo correr mal no futuro
 7. Delete the 9.2.0 ctrtransfer image `.bin` and `.bin.sha` from the `/files9/` folder on your SD card
-8. Volta a inserir o Cartão SD na 3DS
+8. Reinsert your SD card into your 3DS
 9. Pressiona (Start) para reiniciar
 10. Atualiza a tua 3DS para a última versão (vai a Definições da Consola, depois a "Outras Definições", depois até até à última página, e seleciona "Atualização")
   + Atualizar o sistema é seguro quando se utiliza A9LH + Luma (que é o que tens agora), por isso não perguntem sobre isto
   + Se encontrares algum erro, muda as configurações da DNS para "automático"
 
-##### Secção IV - Restaurar as configurações guardadas
-
-1. Reinicia a consola e pressiona (X) enquanto a ligas para entrar no Decrypt9 a partir do arm9loaderhax
-2. Vai a "SysNAND Options", depois a "System Save Inject", e depois seleciona "Inject configsave.bin"
-3. Pressiona (B) para voltar ao menu principal
-
 ##### Secção V - Injetar o FBI
 
-1. Vai a "SysNAND Options", depois a "Miscellaneous", e depois seleciona a opção "Health&Safety Dump" para extrair a tua aplicação "Informações sobre Saúde e Segurança" para o ficheiro `hs.app` **(podes usar as setas Cima e Baixo/Esquerda e Direita para mudar o nome)**
-2. Pressiona (B) e depois seleciona a opção "Health&Safety Inject"
-3. Seleciona o ficheiro `.app` FBI injetável para a tua região
-4. Pressiona (A) e confirma para injetar
-5. Pressiona (Start) para reiniciar
-6. Se, ao abrires a aplicação "Informações sobre Saúde e Segurança", esta for a aplicação original, e se tiveres feito algum downgrade no passado com software Gateway, [segue este guia de resolução de problemas](troubleshooting#gw_fbi)
+1. Reboot holding (Start during boot to launch Hourglass9
+2. Go to "SysNAND Backup/Restore", then select the "Health&Safety Dump" option to dump Health & Safety to `hs.app` **(you can use Up and Down / Left and Right to change the name)**
+  + If this file exists already, you can skip the Health and Safety dump
+3. Pressiona (B) e depois seleciona a opção "Health&Safety Inject"
+4. Input the key combo given
+5. Seleciona o ficheiro `.app` FBI injetável para a tua região
+6. Pressiona (A) e confirma para injetar
+7. Press (Start) to reboot
+8. Se, ao abrires a aplicação "Informações sobre Saúde e Segurança", esta for a aplicação original, e se tiveres feito algum downgrade no passado com software Gateway, [segue este guia de resolução de problemas](troubleshooting#gw_fbi)
 
 ##### Secção VI - Reinstalar os tickets
 
@@ -93,10 +89,14 @@ Se não tinhas nenhum ticket cujo nome começasse por 00- anteriormente, podes s
 8. Pressiona (B) para rejeitar instalar tickets a partir de CDN.
 9. Sai com o botão Home
 
-___
+##### Section VII - Restore Health and Safety
 
-Se formatares um dispositivo depois de uma ctrtransfer sem restaurares as configurações guardadas, o ecrã poderá piscar ou ter problemas de brilho. Consulta [isto](https://github.com/Plailect/Guide/issues/794).
-{: .notice--info}
+1. Press (Start) then hold (Start) to reboot into Hourglass9   
+2. Go to "SysNAND Backup/Restore", then select "Health&Safety Inject"
+3. Select `hs.app` (the original one that doesn't contain FBI), then press (A) and confirm to inject
+4. Press (Start) to reboot
+
+___
 
 Volta para [Instalar arm9loaderhax](installing-arm9loaderhax).
 {: .notice--primary}
