@@ -10,7 +10,7 @@ Hvis du nedgraderte til 2.1.0 men av en eller annen grunn **ikke har en funksjon
 Det er mulig at enheten din ikke vil vise installerte spill etter ctroverføringen. Dette er fordi ticketene dine har blitt fjernet av overføringen, det er derfor du gjorde en sikkerhetskopi av dem. De vil bli gjenopprettet på slutten av guiden.
 {: .notice--info}
 
-Fordi målet med 9.2.0 ctrtransfer er å feilsøke problemer forårsaket av eksisterende NAND, behøver du i motsetning til 2.1.0 ctrtransfer, bare sikkerhetskopiere tickets og konfigurasjonssave. Hvis du ikke lager en sikkerhetskopi av disse, vil det resultere i TAP av alle installerte spill og saver!
+Because the point of the 9.2.0 ctrtransfer is to troubleshoot issues caused by the existing NAND, these steps, unlike the 2.1.0 ctrtransfer, will have you backup only the tickets. Hvis du ikke lager en sikkerhetskopi av disse, vil det resultere i TAP av alle installerte spill og saver!
 {: .notice--danger}
 
 #### Det du trenger
@@ -36,7 +36,7 @@ Fordi målet med 9.2.0 ctrtransfer er å feilsøke problemer forårsaket av eksi
 3. Kopier `Decrypt9WIP.bin` til `/luma/payloads/` mappen på SD-kortet og ombenenn `Decrypt9WIP.bin` til `x_Decrypt9WIP.bin`
 4. Sett inn SD-kortet i konsollen
 
-##### Seksjon II - Sikkerhetskopi av tickets og konfigurasjonssaver
+##### Section II - Backup tickets
 
 1. Åpne Decrypt9 fra arm9loaderhax ved å holde (X) under oppstart
 2. Gå til "Ticket/Titlekey Options", og velg "Ticket Dump (SysNAND)"
@@ -44,7 +44,6 @@ Fordi målet med 9.2.0 ctrtransfer er å feilsøke problemer forårsaket av eksi
 4. Slett alle `.tik` filer i mappen `/files9/` som **ikke** starter med "00-"
   + Hvis ingen starter med "00-", så slett dem alle
 5. Sett inn SD-kortet inn i 3DSen, og trykk (B) for å gå tilbake til hovedmenyen
-6. Gå til "SysNAND Options", deretter "System Save Dump", og velg "Dump configsave.bin"
 
 ### Seksjon III - ctroverførsel
 
@@ -57,26 +56,23 @@ Fordi målet med 9.2.0 ctrtransfer er å feilsøke problemer forårsaket av eksi
   + Lagre sikkerhetskopien flere plasser
   + Denne sikkerhetskopien vil spare deg fra en brick hvis noe går galt i fremtiden
 7. Slett 9.2.0 ctroverførselsbilde `.bin` og `. bin.sha` fra mappen `/files9/` på SD-kortet
-8. Sett inn SD-kortet i konsollen
+8. Reinsert your SD card into your 3DS
 9. Trykk (Start) for omstart
 10. Oppdater din 3DS ved å gå til systeminnstillinger, deretter "Other Settings", så helt til høyre og start "System Update"
   + Oppdateringer mens du bruker A9LH + Luma (det du har) er trygt, ikke spør om det mer
   + Hvis dette gir deg en feil, sett DNS-innstillingene til "auto"
 
-### Del IV - Gjenopprett konfigurasjonssaver
-
-1. Start på nytt mens du holder (X) for å starte arm9loaderhax Decrypt9
-2. Gå til "SysNAND Options", deretter "System Save inject", velg deretter "Inject configsave.bin"
-3. Trykk (B) å komme tilbake til hovedmenyen
-
 ##### Seksjon V - Injeksjon av FBI
 
-1. Gå til "SysNAND Options", deretter "Miscellaneous", deretter velger du "Health&Safety Dump" og dump Health & Safety til `hs.app` **(Du kan bruke opp og ned / venstre og høyre for å endre navnet)**
-2. Trykk (B), og velg "Health&Safety Inject"
-3. Velg FBI injectable `.app` for din region
-4. Trykk (A) og bekreft injiseringen
-5. Trykk (Start) for omstart
-6. Hvis du fortsatt starter den normale Health & Safety appen og har nedgradert med Gateway tidligere [Følg denne feilsøkingsveiledningen](troubleshooting#gw_fbi)
+1. Reboot holding (Start during boot to launch Hourglass9
+2. Go to "SysNAND Backup/Restore", then select the "Health&Safety Dump" option to dump Health & Safety to `hs.app` **(you can use Up and Down / Left and Right to change the name)**
+  + If this file exists already, you can skip the Health and Safety dump
+3. Trykk (B), og velg "Health&Safety Inject"
+4. Input the key combo given
+5. Velg FBI injectable `.app` for din region
+6. Trykk (A) og bekreft injiseringen
+7. Press (Start) to reboot
+8. Hvis du fortsatt starter den normale Health & Safety appen og har nedgradert med Gateway tidligere [Følg denne feilsøkingsveiledningen](troubleshooting#gw_fbi)
 
 ##### Seksjon VI - Reinstallere Tickets
 
@@ -93,10 +89,14 @@ Hvis du ikke hadde noen tickets som startet med 00- tidliger kan du hoppe over d
 8. Trykk (B) å avslå ticketinstallasjon fra CDN.
 9. Avslutt med hjem-knappen
 
-___
+##### Section VII - Restore Health and Safety
 
-Å formatere en enhet etter en ctrtransfer * uten å gjenopprette konfigurasjonssaver * kan forårsake problemer med skjermlysstyrke/flimring. Se [dette](https://github.com/Plailect/Guide/issues/794).
-{: .notice--info}
+1. Press (Start) then hold (Start) to reboot into Hourglass9   
+2. Go to "SysNAND Backup/Restore", then select "Health&Safety Inject"
+3. Select `hs.app` (the original one that doesn't contain FBI), then press (A) and confirm to inject
+4. Press (Start) to reboot
+
+___
 
 Tilbake til [Installere arm9loaderhax](installing-arm9loaderhax).
 {: .notice--primary}
