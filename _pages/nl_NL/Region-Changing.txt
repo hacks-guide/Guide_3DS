@@ -19,7 +19,10 @@ Na dit proces kunnen alleen **New 3DS'en die nog nóóit eerder de eShop bezocht
 Let wel op dat af en toe de eShop, zonder goede reden, nog steeds niet werkt voor de systemen waarop het wel zou moeten werken. Dit ligt helemaal bij de servers van Nintendo en ik heb hier totaal geen controle over.
 {: .notice--warning}
 
-Het veranderen van je regio met behulp van ctrtransfer (dit is de methode die hier gebruikt wordt) blijkt "reboot patches" kapot te maken. De reden hiervoor is nog niet duidellijk, maar tot op heden kunnen Old 3DS gebruikers geen spellen spelen die extra geheugen-modus gebruiken (zoals Monster Hunter, Super Smash Bros, en Pokémon Sun/Moon).
+Similar to the above warning, note that ocasionally the eShop will inexplicably work for devices that it should not (such as some New 3DSs). The cause for this is currently unknown.
+{: .notice--warning}
+
+Het veranderen van je regio met behulp van ctrtransfer (dit is de methode die hier gebruikt wordt) blijkt "reboot patches" kapot te maken. The cause for this is unknown, but for now Old 3DS users will be unable to play extended memory mode games (such as Monster Hunter, Super Smash Bros, and Pokémon Sun / Moon) until they format their devices (details at the end of this page).
 {: .notice--warning}
 
 **arm9loaderhax en Luma3DS MOETEN al geïnstalleerd zijn om dit te doen.**
@@ -50,7 +53,7 @@ Het veranderen van je regio met behulp van ctrtransfer (dit is de methode die hi
 3. Kopieerd de 9.2.0 ctrtransfer image `.bin` en `.bin.sha` van de ctrtransfer `.zip` naar de `/files9/` folder op je SD kaart
 4. Stop de SD kaart opnieuw in je 3DS
 
-##### Deel II - Backup tickets en config save
+##### Section II - Backup tickets
 
 1. Druk op (Start) en hou dan (X) ingedrukt om arm9loaderhax Decrypt9 op te starten     
 3. Ga naar "Ticket/Titlekey Options" en selecteer dan "Ticket Dump (SysNAND)"
@@ -58,7 +61,6 @@ Het veranderen van je regio met behulp van ctrtransfer (dit is de methode die hi
 5. Verwijder alle `.tik`-bestanden in de `/files9/` folder die **niet** beginnen met "00-"
 6. Laat alle `.tik`-bestanden die niet beginnen met "00-" in de folder
 7. Stop je SD kaart in je 3DS en druk dan op (B) om terug te gaan naar het hoofdmenu
-8. Ga naar "SysNAND Options", daarna "System Save Dump" en selecteer daarna "Dump configsave.bin"
 
 ##### Sectie III - ctrtransfer
 
@@ -71,7 +73,7 @@ Het veranderen van je regio met behulp van ctrtransfer (dit is de methode die hi
   + Maak backups naar meerdere locaties
   + Deze backup zal je van een brick redden als er iets misgaat in de toekomst
 7. Verwijder de 9.2.0 ctrtransfer image `.bin` en `.bin.sha` van de `/files9/` folder op je SD kaart nadat je het gekopieerd hebt
-8. Stop de SD kaart opnieuw in je 3DS
+8. Reinsert your SD card into your 3DS
 
 ##### Deel IV - SecureInfo bewerken
 
@@ -95,9 +97,20 @@ Het veranderen van je regio met behulp van ctrtransfer (dit is de methode die hi
     - "02" : EUR
 16. Druk op (B) om uit de bewerkingsmodus te gaan, sla daarna je werk op en druk daarna opnieuw op (B) om terug te gaan naar de directory
 17. Je zou nu een `SecureInfo_A` en een `SecureInfo_C` moeten zijn als alles correct is gedaan. ('SecureInfo_C' wordt in plaats van 'SecureInfo_A' gebruikt wanneer je Luma3DS gebruikt en het bestand tijdens het opstarten detecteert)
-18. Druk op (Start) om opnieuw op te starten
+18. Press and hold (Start) to reboot into Hourglass9
 
-##### Deel V - Tickets opnieuw installeren
+##### Section V - Injecting FBI
+
+1. Go to "SysNAND Backup/Restore", then select the "Health&Safety Dump" option to dump Health & Safety to `hs.app` **(you can use Up and Down / Left and Right to change the name)**
+  + If this file exists already, you can skip the Health and Safety dump
+2. Press (B), then select the "Health&Safety Inject" option
+3. Input the key combo given
+4. Select the FBI injectable `.app` for your region
+5. Press (A) and confirm to inject
+6. Druk op (Start) om opnieuw op te starten
+7. If you still launch to the stock Health & Safety app and have downgraded with Gateway in the past, [follow this troubleshooting guide](troubleshooting#gw_fbi)
+
+##### Section VI - Reinstalling Tickets
 
 1. Open FBI
 2. Selecteer "SD"
@@ -109,7 +122,7 @@ Het veranderen van je regio met behulp van ctrtransfer (dit is de methode die hi
 8. Druk op (B) om het installeren van tickets van CDN af te wijzen.
 9. Sluit af met de home knop
 
-##### Sectie VI - Regio instellingen
+##### Section VII - Region settings
 
 1. Open Systeem Instellingen
 2. Ga naar "Andere Instellingen", "Profiel" en daarna "Regio Instellingen"
@@ -117,15 +130,14 @@ Het veranderen van je regio met behulp van ctrtransfer (dit is de methode die hi
 4. Als er om gevraagd wordt hoef je niet een staat te selecteren
 5. Update je regio-veranderde CFW SysNAND naar de nieuwste versie
 
-##### Deel VII - Config save herstellen
+##### Section VIII - Restore Health and Safety
 
-1. Druk op (Start) en hou dan (X) ingedrukt om arm9loaderhax Decrypt9 op te starten   
-2. Ga naar "SysNAND Options", daarna "System Save Inject" en selecteer daarna "Inject configsave.bin"
+1. Press (Start) then hold (Start) to reboot into Hourglass9   
+2. Go to "SysNAND Backup/Restore", then select "Health&Safety Inject"
+3. Select `hs.app` (the original one that doesn't contain FBI), then press (A) and confirm to inject
+4. Press (Start) to reboot
 
 ___
 
 Old 3DS'en / 2DS'en moeten misschien geformatteerd worden (door gebruik te maken van TinyFormat of de Systeem Instellingen) om extended memory mode games te kunnen spelen (zoals Monster Hunter, Super Smash Bros of Pokemon Sun/Moon).
-{: .notice--info}
-
-Het formatteren van een apparaat nadat je een ctrtransfer hebt gedaan *zonder dat je de config save herstelt* kan voor schermhelderheids- / schermflikkeringproblemen zorgen. Zie [dit](https://github.com/Plailect/Guide/issues/794).
 {: .notice--info}
