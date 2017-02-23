@@ -19,7 +19,10 @@ Etter denne prosessen, vil kun **New3DSer som aldri har vært i eShop før** og 
 Legg merke til at noen ganger vil eShop uforklarlig fortsatt ikke virke for enheter som de burde virke for. Dette har bare noe med Nintendos servere å gjøre, og jeg har ikke noe kontroll over det.
 {: .notice--warning}
 
-Regionsbytte ved hjelp av ctrtransfer (som denne metoden bruker) ser ut til å forårsake nystartspatcher til å ikke fungere mer. Årsaken til dette er uviss, men for nå vil Old 3DS bruker ikke ha muligheten til å spille utvidet minnnemodus spill (slikt som MonsterHunter, Super Smash Bros, og Pokémon Sun / Moon).
+Similar to the above warning, note that ocasionally the eShop will inexplicably work for devices that it should not (such as some New 3DSs). The cause for this is currently unknown.
+{: .notice--warning}
+
+Regionsbytte ved hjelp av ctrtransfer (som denne metoden bruker) ser ut til å forårsake nystartspatcher til å ikke fungere mer. The cause for this is unknown, but for now Old 3DS users will be unable to play extended memory mode games (such as Monster Hunter, Super Smash Bros, and Pokémon Sun / Moon) until they format their devices (details at the end of this page).
 {: .notice--warning}
 
 **Du MÅ allerede ha installert arm9loaderhax + Luma3DS for å bruke dette.**
@@ -50,7 +53,7 @@ Regionsbytte ved hjelp av ctrtransfer (som denne metoden bruker) ser ut til å f
 3. Kopier 9.2.0 ctrtransferbildet `.bin` og `. bin.sha` fra ctrtransfer `.zip` til mappen `/files9/` på SD-kortet
 4. Sett inn SD-kortet i konsollen
 
-##### Seksjon II - Sikkerhetskopi av tickets og konfigurasjonssaver
+##### Section II - Backup tickets
 
 1. Trykk (Start) og hold (X) for omstart til arm9loaderhax Decrypt9     
 3. Gå til "Ticket/Titlekey Options", og velg "Ticket Dump (SysNAND)"
@@ -58,7 +61,6 @@ Regionsbytte ved hjelp av ctrtransfer (som denne metoden bruker) ser ut til å f
 5. Slett alle `.tik` filer i mappen `/files9/` som **ikke** starter med "00-"
 6. La alle `.tik` filer som begynner med "00-" være i mappen
 7. Sett inn SD-kortet i 3DSen, og trykk (B) for å gå tilbake til hovedmenyen
-8. Gå til "SysNAND Options", deretter "System Save Dump", og velg "Dump configsave.bin"
 
 ### Seksjon III - ctroverførsel
 
@@ -71,7 +73,7 @@ Regionsbytte ved hjelp av ctrtransfer (som denne metoden bruker) ser ut til å f
   + Lagre sikkerhetskopien flere plasser
   + Denne sikkerhetskopien vil spare deg fra en brick hvis noe går galt i fremtiden
 7. Slett 9.2.0 ctrtransfer avbildet `.bin` og `.bin.sha` fra `/files9/` mappen på SD-kortet etter at du har kopiert det
-8. Sett inn SD-kortet i konsollen
+8. Reinsert your SD card into your 3DS
 
 ### Del IV - redigering av SecureInfo
 
@@ -95,9 +97,20 @@ Regionsbytte ved hjelp av ctrtransfer (som denne metoden bruker) ser ut til å f
     - "02" : EUR
 16. Trykk (B) for å avslutte redigeringsmodus, for deretter å lagre endringene og så trykke (B) for å gå tilbake til mappen
 17. Du burde see både en `SecureInfo_A` og en `SecureInfo_C` hvis alt gikk riktig. (`SecureInfo_C` blir brukt istedet for `SecureInfo_A` når Luma3DS blir brukt hvis den finner filen ved nystart)
-18. Trykk (Start) for omstart
+18. Press and hold (Start) to reboot into Hourglass9
 
-##### Seksjon V - Reinstallere Tickets
+##### Section V - Injecting FBI
+
+1. Go to "SysNAND Backup/Restore", then select the "Health&Safety Dump" option to dump Health & Safety to `hs.app` **(you can use Up and Down / Left and Right to change the name)**
+  + If this file exists already, you can skip the Health and Safety dump
+2. Press (B), then select the "Health&Safety Inject" option
+3. Input the key combo given
+4. Select the FBI injectable `.app` for your region
+5. Press (A) and confirm to inject
+6. Trykk (Start) for omstart
+7. If you still launch to the stock Health & Safety app and have downgraded with Gateway in the past, [follow this troubleshooting guide](troubleshooting#gw_fbi)
+
+##### Section VI - Reinstalling Tickets
 
 1. Åpne FBI
 2. Velg "SD"
@@ -109,7 +122,7 @@ Regionsbytte ved hjelp av ctrtransfer (som denne metoden bruker) ser ut til å f
 8. Trykk (B) å avslå ticketinstallasjon fra CDN.
 9. Avslutt med hjem-knappen
 
-##### Seksjon VI - Regionsinnstillinger
+##### Section VII - Region settings
 
 1. Åpne Systeminnstillinger
 2. Gå til "Other Settings", "Profile", og deretter "Region Settings"
@@ -117,15 +130,14 @@ Regionsbytte ved hjelp av ctrtransfer (som denne metoden bruker) ser ut til å f
 4. Hvis du bir spurt, er det ikke nødvendig å angi stat
 5. Oppdater din regionsbyttede CFW SysNAND til den nyeste versjonen
 
-### Del IV - Gjenopprett konfigurasjonssaver
+##### Section VIII - Restore Health and Safety
 
-1. Trykk (Start) og hold (X) for omstart til arm9loaderhax Decrypt9   
-2. Gå til "SysNAND Options", deretter "System Save inject", velg deretter "Inject configsave.bin"
+1. Press (Start) then hold (Start) to reboot into Hourglass9   
+2. Go to "SysNAND Backup/Restore", then select "Health&Safety Inject"
+3. Select `hs.app` (the original one that doesn't contain FBI), then press (A) and confirm to inject
+4. Press (Start) to reboot
 
 ___
 
 Gamle 3DSs / 2DSs kann trenge en ny formatering (bruk TinyFormat eller systeminnstillinger) for å spille utvidet minnemodusspill (som Monster Hunter, Super Smash Bros eller Pokemon Sun/Moon).
-{: .notice--info}
-
-Å formatere en enhet etter en ctrtransfer *uten å gjenopprette konfigurasjonssaver* kan forårsake problemer med skjermlysstyrke/flimring. Se [dette](https://github.com/Plailect/Guide/issues/794).
 {: .notice--info}
