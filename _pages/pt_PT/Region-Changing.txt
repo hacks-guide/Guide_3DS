@@ -19,7 +19,10 @@ After this process, only **New 3DSs which have never accessed the eShop before**
 Note that occasionally the eShop will inexplicably still not work for devices that it should work for. Isto tem a ver totalmente com os servidores da Nintendo, e eu não tenho nenhum controlo sobre isso.
 {: .notice--warning}
 
-Region changing using ctrtransfer (which this method uses) seems to cause reboot patches to break. A causa para isto é desconhecida, mas por agora os utilizadores da Old 3DS não poderão jogar jogos de memória expandida (como Monster Hunter, Super Smash Bros, e Pokémon Sun / Moon).
+Similar to the above warning, note that ocasionally the eShop will inexplicably work for devices that it should not (such as some New 3DSs). The cause for this is currently unknown.
+{: .notice--warning}
+
+Region changing using ctrtransfer (which this method uses) seems to cause reboot patches to break. The cause for this is unknown, but for now Old 3DS users will be unable to play extended memory mode games (such as Monster Hunter, Super Smash Bros, and Pokémon Sun / Moon) until they format their devices (details at the end of this page).
 {: .notice--warning}
 
 **You MUST have already installed arm9loaderhax + Luma3DS to use this.**
@@ -50,7 +53,7 @@ Region changing using ctrtransfer (which this method uses) seems to cause reboot
 3. Copia a imagem da ctrtransfer 9.2.0 `.bin` e `.bin.sha` do ctrtransfer `.zip` para a pasta `/files9/` do teu cartão SD
 4. Reinsert your SD card into your 3DS
 
-##### Secção II - Copiar os tickets e as configurações guardadas
+##### Section II - Backup tickets
 
 1. Press (Start) then hold (X) to reboot into arm9loaderhax Decrypt9     
 3. Vai a "Ticket/Titlekey Options" e depois seleciona "Ticket Dump (SysNAND)"
@@ -58,7 +61,6 @@ Region changing using ctrtransfer (which this method uses) seems to cause reboot
 5. Apaga todos os ficheiros `.tik` na pasta `/files9/` que **não** comecem com "00-"
 6. Leave all the `.tik` files that do start with "00-" in the folder
 7. Reinsere o cartão SD na tua 3DS, e depois pressiona (B) para voltar ao menu principal
-8. Vai a "SysNAND Options", depois a "System Save Dump", e depois seleciona "Dump configsave.bin"
 
 ##### Secção III - ctrtransfer
 
@@ -95,9 +97,20 @@ Region changing using ctrtransfer (which this method uses) seems to cause reboot
     - "02" : EUR
 16. Press (B) to exit edit mode, then save changes, then press (B) again to return to the directory
 17. You should see both a `SecureInfo_A` and `SecureInfo_C` if everything was done properly. (`SecureInfo_C` is used in place of `SecureInfo_A` when using Luma3DS if it detects the file on boot)
-18. Press (Start) to reboot
+18. Press and hold (Start) to reboot into Hourglass9
 
-##### Section V - Reinstalling Tickets
+##### Section V - Injecting FBI
+
+1. Go to "SysNAND Backup/Restore", then select the "Health&Safety Dump" option to dump Health & Safety to `hs.app` **(you can use Up and Down / Left and Right to change the name)**
+  + If this file exists already, you can skip the Health and Safety dump
+2. Press (B), then select the "Health&Safety Inject" option
+3. Input the key combo given
+4. Select the FBI injectable `.app` for your region
+5. Press (A) and confirm to inject
+6. Press (Start) to reboot
+7. If you still launch to the stock Health & Safety app and have downgraded with Gateway in the past, [follow this troubleshooting guide](troubleshooting#gw_fbi)
+
+##### Section VI - Reinstalling Tickets
 
 1. Open FBI
 2. Select "SD"
@@ -109,7 +122,7 @@ Region changing using ctrtransfer (which this method uses) seems to cause reboot
 8. Press (B) to decline installing tickets from CDN.
 9. Exit with the home button
 
-##### Section VI - Region settings
+##### Section VII - Region settings
 
 1. Abre as definições do sistema
 2. Vai a "Outras Definições, "Perfil", depois a "Definições de Região"
@@ -117,15 +130,14 @@ Region changing using ctrtransfer (which this method uses) seems to cause reboot
 4. If prompted, you do not need to set a state
 5. Update your region changed CFW SysNAND to the latest version
 
-##### Section VII - Restore config save
+##### Section VIII - Restore Health and Safety
 
-1. Press (Start) then hold (X) to reboot into arm9loaderhax Decrypt9   
-2. Go to "SysNAND Options", then "System Save Inject", then select "Inject configsave.bin"
+1. Press (Start) then hold (Start) to reboot into Hourglass9   
+2. Go to "SysNAND Backup/Restore", then select "Health&Safety Inject"
+3. Select `hs.app` (the original one that doesn't contain FBI), then press (A) and confirm to inject
+4. Press (Start) to reboot
 
 ___
 
 Old 3DSs / 2DSs may need to format (using TinyFormat or the System Settings) to play extended memory mode games (such as Monster Hunter, Super Smash Bros, or Pokemon Sun/Moon).
-{: .notice--info}
-
-Formatting a device following a ctrtransfer *without restoring the config save* can cause screen brightness / flickering issues. See [this](https://github.com/Plailect/Guide/issues/794).
 {: .notice--info}
