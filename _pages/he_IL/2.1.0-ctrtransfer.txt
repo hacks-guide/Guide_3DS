@@ -25,50 +25,50 @@ permalink: /he_IL/2.1.0-ctrtransfer.html
 **לעולם אל תבצעו פרמוט על 2DS בגרסה נמוכה מ-6.0.0 כי לא תוכלו לסיים את ההגדרה הראשונית והקונסולה תקבל בריק!**
 {: .notice--danger}
 
-**Never update a New 3DS running 2.1.0 (an Old 3DS firmware) or you will BRICK! You MUST restore a NAND backup or ctrtransfer back to standard New 3DS firmware first!**
+**לעולם אל תעדכנו New 3DS בגרסה 2.1.0 (זוהי גרסת Old 3DS) או שתקבלו בריק! חובה לבצע שחזור מערכת מגיבוי NAND או לעשות ctrtransfer לגרסת New 3DS סטנדרטית קודם!**
 {: .notice--danger}
 
 {% capture notice %}
-**Putting a New 3DS on 2.1.0 in sleep mode is known to cause an UNRECOVERABLE brick!**
-**This only happens when shutting the lid _while the device is on_; this does not apply to turning the device off.**
-**The device only enters sleep mode when the lid is closed. It is not on a timer or anything like that.**
-**Once on 2.1.0, you should continue without delay to avoid any possibility of this happening!**
+**הכנסת New 3DS בגרסה 2.1.0 ל-Sleep mode ידועה כגורם לבריק בלתי הפיך!**
+**זה תקף רק לסגירה של המסך _בזמן שהקונסולה דלוקה_; זה לא נוגע לכיבוי הקונסולה.**
+**הקונסולה נכנסת ל-Sleep mode רק כאשר סוגרים את המסך. זה לא עובד על טיימר או משהו בסגנון.**
+**כשתהיו ב 2.1.0, עליכם להמשיך ללא דחיה כדי למנוע כל אפשרות שזה יקרה! **
 {% endcapture %}
 
 <div class="notice--danger">{{ notice | markdownify }}</div>
 
-#### Overview of steps
+#### מעבר על הצעדים
 
-In this section, we will be flashing your console's [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) partition to 2.1.0 in order to take advantage of an oversight in 2.1.0 for the purpose of extracting the [OTP](https://www.3dbrew.org/wiki/OTP_Registers) unique to your console. This OTP file is required to install arm9loaderhax, and **cannot** be shared with other consoles.
+בחלק זה, נבצע צריבה של קובץ [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) בגרסה 2.1.0 על מנת לנצל חולשת אבטחה אשר נמצאת בגרסה זו ותעזור לנו לחלץ את [OTP](otp-info), שזה קובץ נתונים ייחודי לכל קונסולה. קובץ ה-OTP הוא תנאי הכרחי להתקנת arm9loaderhax **ואינו** ניתן להעברה בין קונסולות שונות.
 
-This is accomplished by [installing a premade ctrtransfer image](https://www.reddit.com/r/3dshacks/comments/4zhe4a/) containing 2.1.0, copying your console specific files (such as `moveable.sed` and `SecureInfo_A`) to it, then fixing the title databases.
+זה יבוצע על ידי [התקנה של ctrnand image מותאם מראש] (https://www.reddit.com/r/3dshacks/comments/4zhe4a/) אשר מכיל את גרסה 2.1.0, תוך העתקה של הקבצים הספציפיים לקונסולה שלכם (כגון `moveable.sed` ו- `SecureInfo_A`) אליו, ואז תיקון מאגר הנתונים.
 
-#### What you need
+#### מה נדרש
 
-* You will need to have booted into Decrypt9
-* The 2.1.0 ctrtransfer image for your device and region     
-*(if your device is not from one of these regions, just pick one)*:
-  +    <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [New 3DS or Old 3DS or 2DS 2.1.0 - EUR - ctrtransfer](magnet:?xt=urn:btih:89acc9c1b488b8b38251de0ddf07975d6bd354a1&dn=2.1.0-4E%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
-  +    <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [New 3DS or Old 3DS or 2DS 2.1.0 - JPN - ctrtransfer](magnet:?xt=urn:btih:3dbb9c9c85a33c6242f424dcbaebcacdd8a5912b&dn=2.1.0-4J%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
-  +    <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [New 3DS or Old 3DS or 2DS 2.1.0 - USA - ctrtransfer](magnet:?xt=urn:btih:1609ce9ee7b0ed9b6dea0b3e7cca4fc52dad6ff4&dn=2.1.0-4U%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* קונסולה בתוך Decrypt9
+* את קובץ ה-2.1.0 ctrtransfer image המתאים לקונסולה ולאיזור שלכם     
+*(אם הקונסולה שלכם אינה מאחד האיזורים האלו, פשוט תבחרו אחד מהם)*:
+  +    <i class="fa fa-magnet" aria-hidden="true" title=" זה לינק מגנטי. תשתמשו בתוכנת טורנט להורדת הקובץ."></i> - [New 3DS או Old 3DS או 2DS 2.1.0 - EUR - ctrtransfer](magnet:?xt=urn:btih:89acc9c1b488b8b38251de0ddf07975d6bd354a1&dn=2.1.0-4E%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+  +    <i class="fa fa-magnet" aria-hidden="true" title=" זה לינק מגנטי. תשתמשו בתוכנת טורנט להורדת הקובץ"></i> - [New 3DS או Old 3DS או 2DS 2.1.0 - JPN - ctrtransfer](magnet:?xt=urn:btih:3dbb9c9c85a33c6242f424dcbaebcacdd8a5912b&dn=2.1.0-4J%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    <i class="fa fa-magnet" aria-hidden="true" title="זה לינק מגנטי. תשתמשו בתוכנת טורנט להורדת הקובץ."></i> - [New 3DS או Old 3DS או 2DS 2.1.0 - USA - ctrtransfer](magnet:?xt=urn:btih:1609ce9ee7b0ed9b6dea0b3e7cca4fc52dad6ff4&dn=2.1.0-4U%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 
-#### Instructions
+#### הוראות
 
-##### Section I - Prep work
+##### חלק I - הכנות
 
-You should be in Decrypt9 for these steps.
+אתם צריכים להיות בתוך Decrypt9 על מנת לבצע את הצעדים הבאים.
 
-1. Press (Select) on the main menu to eject your SD card, then put it in your computer
-2. Copy the 2.1.0 `.bin` and `.bin.sha` from the ctrtransfer `.zip` to the `/files9/` folder on your SD card
-3. Reinsert your SD card into your 3DS
-4. Press (B) to get to the Decrypt9 main menu
+1. לחצו (Select) בתפריט הראשי על מנת להוציא את כרטיס ה-SD וחברו אותו למחשב
+2. תעתיקו את קבצי ה-`bin.` ו-`bin.sha.` מה'zip.' של ctrtransfer לתיקיית `/files9/` שבתוך ה-SD
+3. תכניסו את ה-SD שלכם בחזרה ל-3DS
+4. תלחצו (B) על מנת לחזור לתפריט הראשי של Decrypt9
 
-##### Section II - ctrtransfer
+#### חלק II - ביצוע ctrtransfer
 
-**Having a backup of _your_ device's NAND is REQUIRED. You will be prompted to create one as part of the steps if you do not already have one.**
+**החזקת גיבוי NAND של הקונסולה _שלכם_ הינו חובה. התוכנה תבקש מכם ליצור גיבוי כזה בהמשך במידה שלא יצרתם אותו כבר.**
 {: .notice--danger}
 
-**If you do not know whether or not you already have a NAND backup, create one when prompted by pressing (A) just to be sure.**
+**במידה שאתם לא יודעים אם יש לכם כבר גיבוי NAND, תצרו כזה ברגע שהתוכנה מבקשת מכם על ידי לחיצה על (A), ליתר ביטחון.**
 {: .notice--danger}
 
 **If you do not have enough space to create the backup, you can either backup to a different SD card or clear space on your current SD card by pressing (Select) on the Decrypt9WIP main menu to eject your SD card and allow it to be swapped with a different SD card or to clear space on your current SD card**
