@@ -7,8 +7,8 @@ permalink: /ja_JP/move-emunand.html
 このエクストラセクションでは、どうやって古いEmuNANDのコンテンツを新しいSysNAND CFWに移動し、古いEmuNANDパーティションを削除するか紹介します。 EmuNANDとRedNANDは[同じ理論](http://3dbrew.org/wiki/NAND_Redirection)の少々違う実装です。
 {: .notice--info}
 
-ご注意ください、既存のGBA VCとDSiWareのセーブデータを引き継ぐことはできません。
-{: .notice--danger}
+DSiWare and GBA
+{: .notice--warning}
 
 **これを使用するには、arm9loaderhaxとLuma3DSが必要です。**
 {: .notice--danger}
@@ -17,36 +17,133 @@ permalink: /ja_JP/move-emunand.html
 
 * 既存のEmuNAND
 * [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)の最新バージョン
+* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest)
 
 #### 手順
 
-1. GodMode9 `.zip`から`GodMode9.bin`をあなたのSDカードの`/luma/payloads/`フォルダにコピーして、`/luma/payloads/`の中にある`GodMode9.bin`の名前を`up_GodMode9.bin`に変更します
-2. 3DSにSDカードを入れます
-3. ブート中に (Start) を押してarm9loaderhaxからHourglass9を起動します
-4. 「EmuNAND Backup/Restore」に行って、「EmuNAND Backup」オプションを選択し、あなたのEmuNANDを`NANDmin_emu.bin`にバックアップします
-5. (B) を押してメインメニューに戻ります
-6. 「SysNAND Backup/Restore」に行って、「SysNAND Restore (keep a9lh)」オプションを選択し、`NANDmin_emu.bin`からSysNANDを復元します
-7. (Select) を押してSDカードを取り外します
-8. パソコンにSDカードを入れて、`NANDmin_emu.bin`と`NANDmin_emu.bin.sha`をSDカードの`/files9/`フォルダから安全な場所にコピーします
-  + バックアップを複数の場所に保存してください
+##### Section I - Prep work
+
+1. Power off your device
+1. Insert your SD card into your computer
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `start_GodMode9.bin`
+1. Reinsert your SD card into your device
+
+##### Section II - Backup SysNAND DSiWare Saves
+
+If you do not have any DSiWare games or saves that you care about, skip this section.
+{: .notice--info}
+
+1. Launch GodMode9 from arm9loaderhax by holding (Start) on boot
+1. Navigate to `SYSNAND TWLN` -> `title`
+1. Hold (R) and press (A) at the same time on `00030004` to select the folder, then select "Copy to 0:/gm9out"
+  + This process may take some time if you have many DSiWare games
+1. Press (B) twice to return to the main menu
+
+##### Section III - Backup GBA VCs Saves
+
+If you do not have any GBA VC games or saves that you care about, skip this section.
+{: .notice--info}
+
+Note that this is not necessary for any other kind of Virtual Console games (GBC, NES, etc)
+{: .notice--info}
+
+1. Hold (R) and press (Start) at the same time to power off your device
+1. Insert your SD card into your computer
+1. Create a folder in `/files9/` for each GBA VC game that you want to backup the save for 
+1. Reinsert your SD card into your device
+1. Power on your device into SysNAND
+1. Do the following process for each GBA VC game that you want to backup the save for:
+  + Launch the GBA VC game on SysNAND
+  + Exit the GBA VC game
+  + Reboot holding (Start) during boot to launch GodMode9
+  + Navigate to `SYSNAND VIRTUAL`
+  + Press (Y) on `gbavc.sav` to copy it
+  + Press (B) to return to the main menu
+  + Navigate to `SDCARD` -> `files9`
+  + Navigate to the folder you created for this GBA VC game
+  + Press (Y) to paste `gbavc.sav`
+  + Press (Start) to reboot your device
+1. Reboot holding (Start) during boot to launch GodMode9
+
+##### Section IV - Copy EmuNAND to SysNAND
+
+1. Navigate to `EMUNAND VIRTUAL`
+1. Press (A) on `nand.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
+1. Press (A) to unlock SysNAND overwriting, then input the key combo given
+  + This will not overwrite your arm9loaderhax installation
+1. Input the key combo given to unlock SysNAND (lvl1) writing
+  + This process will take some time
+1. Press (A) to continue once it has completed
+1. Press (B) to return to the main menu
+
+##### Section V - Restore DSiWare Saves
+
+If you did not backup DSiWare Saves earlier, skip this section.
+{: .notice--info}
+
+1. Navigate to `SDCARD` -> `gm9out`
+1. Press (Y) on the `00030004` folder to copy it
+1. Press (B) twice to return to the main menu
+1. Navigate to `SYSNAND TWLN` -> `title`
+1. Press (Y) to paste the `00030004` folder
+1. Select "Copy path(s)"
+1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+1. Select "Overwrite file(s)"
+  + This process may take some time if you have many DSiWare games
+1. Press (B) twice to return to the main menu
+
+##### Section VI - Restore GBA VC Saves
+
+If you did not backup GBA VC Saves earlier, skip this section.
+{: .notice--info}
+
+1. Hold (R) and press (Start) at the same time to power off your device
+1. Power on your device into SysNAND
+1. Do the following process for each GBA VC game that you want to backup the save for:
+  + Launch the GBA VC game on SysNAND
+  + Exit the GBA VC game
+  + Reboot holding (Start) during boot to launch GodMode9
+  + Navigate to `SDCARD` -> `files9`
+  + Navigate to the folder you created for this GBA VC game
+  + Press (Y) on `gbavc.sav` to copy it
+  + Press (B) to return to the main menu
+  + Navigate to `SYSNAND VIRTUAL`
+  + Press (Y) to paste `gbavc.sav`
+  + Press (A) to confirm
+  + Press (Start) to reboot your device
+1. Reboot holding (Start) during boot to launch GodMode9
+
+##### Section VII- Backup SysNAND
+
+1. Press (Home) to bring up the action menu
+1. Select "More..."
+1. Select "Backup NAND"
+1. Press (A) to continue
+1. (R) を押したまま (B) を押してSDカードを取り外します
+1. Insert your SD card into your computer, then copy `nand.bin` from the `/gm9out/` folder on your SD card to a safe location on your computer
+  + If you previously used SafeCtrTransfer and have a NAND backup named `<serialnumber>_nand.bin`, replace it with this one (rename `nand.bin` to match `<serialnumber>_nand.bin`)
+  + Make backups in multiple locations (such as online file storage)
   + 将来は何か間違ってデバイスが壊れる場合、このバックアップが役に立ちます
-9. コピーしたあと、`/files9/`フォルダから`NANDmin_emu.bin`を削除します
-10. **次のステップではSDカードに保存してあるファイルを全て削除しますので、SDカードのコンテンツをパソコンにバックアップします**
-11. 3DSにSDカードを入れます
-12. (Up) を押したまま(Start) を押して再起動し、GodMode9を起動します
-13. (Home) ボタンを押してアクションメニューを呼び出します
-14. 「SD format menu」を選択します
-15. (A) で確認します
-16. 「No EmuNAND」を選択します
-17. 「Auto」を選択します
-18. 表示しているボタンコンボを入力して確認します
-19. (R) を押したまま (B) を押してSDカードを取り外します
-20. パソコンにSDカードを入れます。バックアップしたSDカードのファイルをすべてSDカードにコピーします
+1. Delete `nand.bin` from the `/gm9out/` folder on your SD card after copying it
+1. **次のステップではSDカードに保存してあるファイルを全て削除しますので、SDカードのコンテンツをパソコンにバックアップします**
+
+##### Section VIII - Format SD card
+
+1. Reinsert your SD card into your device
+1. Press (Home) to bring up the action menu
+1. Select "More..."
+1. 「SD format menu」を選択します
+1. (A) で確認します
+1. 「No EmuNAND」を選択します
+1. 「Auto」を選択します
+1. When prompted, input the key combo given to confirm
+1. Hold (R) and press (B) at the same time to eject your SD card
+1. Insert your SD card into your computer, then copy all your files back into it
   + SDカード上の`arm9loaderhax.bin`ファイルをバックアップにあるそのファイルで上書きしたことを確保してください
-21. 3DSにSDカードを入れます
-22. (A) を押してSDカードをマウントします
-23. (Start) を押して再起動！
-24. ブラックスクリーンになってしまったら、[このトラブルシューティングガイドをご覧ください](troubleshooting#ts_sys_down)
+1. Reinsert your SD card into your device
+1. (A) を押してSDカードをマウントします
+1. Press (Start) to save and reboot
+1. ブラックスクリーンになってしまったら、[このトラブルシューティングガイドをご覧ください](troubleshooting#ts_sys_down)
 
 ___
 
