@@ -32,7 +32,7 @@ Under denne prossesen, vil vi også sette opp program som følgende:
 
 +  **FBI** *(installerer CIAformaterte spill og applikasjoner)*
 +  **Luma3DS Updater** *(oppdaterer CFWinstallasjonen vår)*
-+  **Hourglass9** *(multifunksjonsverktøy som utfører NAND- og kassettfunksjoner)*
++  **GodMode9** *(multipurpose tool which can do NAND and cartridge functions)*
 
 #### Det du trenger
 
@@ -43,7 +43,7 @@ Under denne prossesen, vil vi også sette opp program som følgende:
 * Siste utgave av [arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(`.7z`-filen)*
 * Siste utgave av [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z`-filen)*
 * Siste utgave av [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
-* Siste utgave av [Hourglass9](https://github.com/d0k3/Hourglass9/releases/latest)
+* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * Siste utgave av [Luma3DS Updater](https://github.com/Hamcha/lumaupdate/releases/latest)
 * Siste utgave av [DspDump](https://github.com/Cruel/DspDump/releases/latest)
 * Siste utgave av [FBI](https://github.com/Steveice10/FBI/releases/latest)
@@ -53,48 +53,40 @@ Under denne prossesen, vil vi også sette opp program som følgende:
 
 ##### Seksjon I - Forarbeid
 
-{% capture notice-5 %}
-**Sørg for at SD-kortet du bruker ikke er skadet!**
-
-**Hvis du bruker et skadet SD-kort uten å fikse det, er muligheten stor for BRICKING!**
-
-**Hvis du tror SD-kortet kan være korrupt, kan du sjekke etter feil med, [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), eller [F3X (Mac)](f3x-(mac))!**
-{% endcapture %}
-
-<div class="notice--danger">{{ notice-5 | markdownify }}</div>
-
-1. **Hvis den finnes, kopiér `/files9/` mappen på SD-kortet ditt till en trygg plass på datamaskinen din og kopier den også til et par plasser (som f. eks online skylagring); Filene den innehoder kan redde deg fra et totalt datatap hvis du ødelegger systemet ditt.**
-2. Opprett en mappe kalt `cias` på roten av SD-kortet hvis den ikke allerede er der
-3. Slett `3ds` mappen fra roten av SD-kortet
-5. Kopier _innholdet av_ `starter` mappen i `starter.zip` til roten av SD-kortet
+1. Insert your SD card into your computer
+1. **If it exists, copy `<serialnumber>_nand.bin` from the `/ctrtransfer/` folder on your SD card to a safe location on your computer**
+  + Make backups in multiple locations (such as online file storage)
+  + This backup will save you from a brick if anything goes wrong in the future
+1. Opprett en mappe kalt `cias` på roten av SD-kortet hvis den ikke allerede er der
+1. Slett `3ds` mappen fra roten av SD-kortet
+1. Kopier _innholdet av_ `starter` mappen i `starter.zip` til roten av SD-kortet
   + Dette gjelder også den nye `3ds` mappen som erstatter den du nettop slettet
-6. Kopier _innholdet av_ SafeA9LHInstaller `.7z` til roten av SD-kortet
-7. Copy the `a9lh` folder from the data_input `.zip` to the root of your SD card
-8. Kopier _innholdet av_ arm9loaderhax `.7z` til `a9lh` mappen på SD-kortet
-9. Kopier `hblauncher_loader.cia` fra hblauncher_loader `.zip` til `/cias/` mappen på SD-kortet
-10. Kopier `lumaupdater.cia` fra Luma3DS Updater `.zip` til `/cias/` mappen på SD-kortet
-11. Kopier `FBI.cia` fra FBI `.zip` til `/cias/` mappen på SD-kortet
-12. Kopier `arm9loaderhax.bin` fra Luma3DS `.7y` til roten av SD-kortet, og erstatter eksisterende filer
-13. Opprett en mappe med navn `luma` på roten av SD-kortet
-14. Opprett en mappe med navnet `payloads` i `luma` mappen på SD-kortet
-15. Kopier `Hourglass9.bin` fra Hourglass9 `.zip` til `/luma/payloads/` mappen på SD-kortet og endre navnet fra `Hourglass9.bin` til `start_Hourglass9.bin`
-17. Kopier `aeskeydb.bin` til `/files9/` mappen på SD-kortet
-18. Kopier `DspDump.3dsx` til `/3ds/` mappen på SD-kortet
-19. Kopier _innholdet av_ `fbi-2.4.2-injectable.zip` til `/files9/` mappen på SD-kortet
+1. Kopier _innholdet av_ SafeA9LHInstaller `.7z` til roten av SD-kortet
+1. Copy the `a9lh` folder from the data_input `.zip` to the root of your SD card
+1. Kopier _innholdet av_ arm9loaderhax `.7z` til `a9lh` mappen på SD-kortet
+1. Kopier `hblauncher_loader.cia` fra hblauncher_loader `.zip` til `/cias/` mappen på SD-kortet
+1. Kopier `lumaupdater.cia` fra Luma3DS Updater `.zip` til `/cias/` mappen på SD-kortet
+1. Kopier `FBI.cia` fra FBI `.zip` til `/cias/` mappen på SD-kortet
+1. Kopier `arm9loaderhax.bin` fra Luma3DS `.7y` til roten av SD-kortet, og erstatter eksisterende filer
+1. Opprett en mappe med navn `luma` på roten av SD-kortet
+1. Opprett en mappe med navnet `payloads` i `luma` mappen på SD-kortet
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `start_GodMode9.bin`
+1. Kopier `aeskeydb.bin` til `/files9/` mappen på SD-kortet
+1. Kopier `DspDump.3dsx` til `/3ds/` mappen på SD-kortet
 
 ##### Seksjon I - Installere arm9loaderhax
 
-1. Sett inn SD-kortet i konsollen
-2. Konsollen skal være på 2.1.0
-3. Gå til 'http://2xrsa.3ds.guide' på 3DSen din
-  + Hvis du får feilmeldingen "This service is not available in your region", bruk systeminnstillingene for å sette enhetens land til å matche NAND regionen du installerte med 2.1.0 ctrtransfer
+1. Reinsert your SD card into your device
+1. You should be already on 2.1.0 and powered on
+1. Go to URL `http://2xrsa.3ds.guide` in the browser of your device
+  + If you get the error "This service is not available in your region", use the System Settings to set your device's country to match the NAND region you installed with 2.1.0 CtrTransfer
   + Hvis du får en feilmelding, [Følg denne feilsøkingsveiledningen](troubleshooting#ts_browser)
   + Hvis du får en glitcha skjerm, [Følg denne feilsøkingsveiledningnen](troubleshooting#ts_safe_a9lh_screen)
   Hvis du nedgraderte til 2. 1. 0 på en 2DS eller Nye 3DS og lot trådløs kommunikasjon være avslått, kan du aktivere trådløs igjen ved å fjerne batteriet og koble fra laderen på konsollen i noen sekunder og så starte den opp igjen
-4. Trykk (Select) for Full Installasjon
-5. Installasjonsprogrammet installerer nå arm9loaderhax på enheten (dette går veldig fort)
-6. Slå konsollen av ved å trykke på en hvilken som helst knapp
-7. Kopier konsollen egen `otp.bin` fra `/a9lh/` mappen på SD-kortet til et sikkert sted på datamaskinen og også til flere plasseringer (for eksempel online fillagring), deretter sette SD-kortet inn i 3DSen din
+1. Trykk (Select) for Full Installasjon
+1. Installasjonsprogrammet installerer nå arm9loaderhax på enheten (dette går veldig fort)
+1. Power off your device by pressing any button
+1. Copy your device specific `otp.bin` from the `/a9lh/` folder on your SD card to a safe location on your computer and back it up to multiple locations (such as online file storage), then reinsert your SD card into your device
 
 ##### Seksjon III - Konfigurering av Luma3DS
 
@@ -102,16 +94,16 @@ Under denne prossesen, vil vi også sette opp program som følgende:
   + Hold knappen før du trykker på strømknappen
   + Hvis du får en svart skjerm, [følg denne feilsøkingsveiledningen](troubleshooting#ts_sys_down)   
   + Hvis du starter opp i SafeA9LHInstaller, [Følg denne feilsøkingsveiledningen](troubleshooting#ts_safe_a9lh)
-2. Bruk (A)-knappen og piltastene for å aktivere følgende:    
+1. Bruk (A)-knappen og piltastene for å aktivere følgende:    
   + **"Autoboot SysNAND"**
   + **"Use SysNAND FIRM if booting with R"**
   + **"Show NAND or user string in System Settings"**
-3. Hvis du bruker en **New 3DS**, bør du *også* aktivere følgende:
+1. Hvis du bruker en **New 3DS**, bør du *også* aktivere følgende:
   + **"New 3DS CPU" til "Clock+L2(x)"**
     + Dette vil øke ytelsen i mange spill, men kan også skape ustabilitet i andre
     + Hvis noen spill ikke fungerer som de skal, deaktiver dette alternativet å prøve igjen
     + **This breaks the Homebrew Launcher on 11.3!**
-4. Trykk (Start) for å lagre og starte på nytt
+1. Trykk (Start) for å lagre og starte på nytt
   + Hvis du får svart skjerm, bare fortsett til neste seksjon   
   + Hvis du får en feil som sier "Failed to mount CTRNAND", bare fortsett til den neste seksjonen     
 
@@ -120,66 +112,84 @@ Under denne prossesen, vil vi også sette opp program som følgende:
 Hvis du før du fulgte denne veiledningen, allerede hadde et EmuNAND oppsett og ønsker å flytte innholdet i ditt tidligere EmuNAND til ditt nye SysNAND CFW, så er det nå på tide å [følge flytte EmuNAND](move-emunand) istedet for å gjøre de første fire trinnene i dette avsnittet.
 {: .notice--info}
 
-1. Starte enheten mens du holder (Start) til å gå inn i Hourglass9
-2. Gå til "SysNAND Backup/Restore"
-3. Gå til "SysNAND Restore (keep a9lh)"
-4. Gi inn den gitte tastekombinasjonen og velg `NANDmin.bin` avbildningen når du blir spurt ved å trykke (A)
-5. Trykk (Start) for omstart
-  + Hvis du får svart skjerm, [følg 9.2.0 ctrtransfer](9.2.0-ctrtransfer)
-6. Hvis sikkerhetskopien er av en versjon mellom 3.0.0 og 4.5.0, vil konsollen ikke starte før du manuelt laster ned den nødvendige firmwaren:
+1. Boot your device while holding (Start) to enter GodMode9
+1. Navigate to `SDCARD` -> `ctrtransfer`
+1. Press (A) on `<serialnumber>_nand.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
+1. Press (A) to unlock SysNAND overwriting, then input the key combo given
+  + This will not overwrite your arm9loaderhax installation
+1. Input the key combo given to unlock SysNAND (lvl1) writing
+  + This process will take some time
+1. Press (A) to continue once it has completed
+1. Press (Start) to reboot your device
+  + If you get a black screen, [follow 9.2.0 CtrTransfer](9.2.0-ctrtransfer)
+1. If your backup was of a version between 3.0.0 and 4.5.0, your device will not boot until you manually download the required firmware:
   + Last ned [denne filen](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) og endre navnet til `firmware.bin`
   + Last ned [denne filen](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
   + Kopier `firmware.bin` og `cetk` til `/luma/` mappen på SD-kortet
-  + Slett begge filene etter du har oppdatert konsollen
-7. Oppdater konsollen ved å gå til Systeminnstillinger, deretter "Other Settings", så helt til høyre og start "System Update"
+  + Delete both of these files after updating your device
+1. Update your device by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
   + Oppdateringer mens du bruker A9LH + Luma (hva du har) er trygt, ikke spør om det mer
   + Advarselen om å aldri oppdatere en ny 3DS fra 2.1.0 gjelder ikke lenger etter gjenopprettelse av en NAND sikkerhetskopi.
   + Hvis dette gir deg en feil, sett DNS-innstillingene til "auto"
-  + Hvis dette fremdeles gir deg en feil og NAND er under 9.2.0, [følg 9.2.0 ctrtransfer](9.2.0-ctrtransfer)
+  + If this still gives you an error and your NAND is below 9.2.0, [follow 9.2.0 CtrTransfer](9.2.0-ctrtransfer)
 
 ##### Seksjon V - Injeksjon av FBI
 
-1. Boot your device while holding (Start) to enter Hourglass9
-2. Gå til "SysNAND Backup/Restore", og velg deretter "Health&Safety Dump" for å dumpe Health&Safety til `hs.app` **(du kan bruke Opp og Ned / Venstre og Høyre for å forandre navnet)**
-3. Trykk (B), og velg "Health&Safety Inject"
-4. Input the key combo given
-5. Velg FBI injectable `.app` for din region
-6. Trykk (A) og bekreft injiseringen
-7. Trykk (Start) for omstart
-8. Hvis du fortsatt starter den normale Health & Safety appen og har nedgradert med Gateway tidligere [Følg denne feilsøkingsveiledningen](troubleshooting#gw_fbi)
+1. Reboot holding (Start) during boot to launch GodMode9
+1. Navigate to `SDCARD` -> `cias`
+1. Press (A) on `FBI.cia` to select it, then select "CIA image options...", then select "Mount image to drive"
+1. Press (A) on the `.app` file, then select "NCCH image options", then select "Inject to H&S"
+1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+1. Press (A) to continue
+1. Press (Start) to reboot your device
+1. Hvis du fortsatt starter den normale Health & Safety appen og har nedgradert med Gateway tidligere [Følg denne feilsøkingsveiledningen](troubleshooting#gw_fbi)
 
-##### Seksjon VI - Fullfør installasjonen
+##### Section VI - Installing CIAs
 
-1. Åpne "Health and Safety" (som nå er FBI)
-2. Velg "SD"
-3. Velg "cias"
-4. Velg "\<current directory>"
-5. Select the "Install all CIAs" option, then press (A) to confirm
-6. Gå tilbake til SD-mappen med (B)
-7. Gå til `arm9loaderhax.bin`, deretter trykk (A) og velg "Copy"
-8. Gå tilbake til hovedmenyen for FBI med (B)
-9. Velg "CTR NAND"
-10. Velg "\<current directory>"
-11. Velg alternativet "Paste", for å lime inn, og trykk (A) for å bekrefte
-12. Avslutt med hjem-knappen
-13. Launch the Homebrew Launcher from the home menu
-14. Velg "DSP Dump"
-15. Press (Start) when prompted to exit
-16. Press (Start) to open the Homebrew Launcher exit menu
-17. Press (A) while holding (Start) to reboot into Hourglass9
-18. Gå til "SysNAND Backup/Restore", og velg "Health&Safety Inject"
-19. Velg `hs.app` (den originale som ikke inneholder FBI), og trykk (A) for å bekrefte injeksjon
-20. Trykk (Select) på hovedmenyen for å løse ut SD-kortet
-21. Trykk (Start) for omstart med SD-kortet fjernet
-  + Å starte konsollen minst en gang uten SD-kortet, lar deg konfigurere den CTRNAND-baserte Luma installasjonen
-22. Use the (A) button and the D-Pad to turn on the following:    
+1. Launch Health and Safety (which is now FBI)
+1. Navigate to `SD` -> `cias`
+1. Velg "\<current directory>"
+1. Select the "Install all CIAs" option, then press (A) to confirm
+1. Press (Home) to exit FBI
+
+##### Section VII - DSP Dump
+
+1. Launch the Homebrew Launcher from the home menu
+1. Velg "DSP Dump"
+1. Press (Start) when prompted to exit DSP Dump
+1. Press (Start) to launch the Homebrew Launcher exit menu
+
+##### Section VIII - Restore Health and Safety
+
+1. Reboot holding (Start) during boot to launch GodMode9
+1. Press (Home) to bring up the action menu
+1. Select "More..."
+1. Select "Restore H&S"
+1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+
+##### Section IX - CTRNAND Luma3DS
+
+1. Navigate to `SDCARD`
+1. Press (Y) on `arm9loaderhax.bin` to copy it
+1. Press (B) to return to the main menu
+1. Navigate to `SYSNAND CTRNAND`
+1. Press (Y) to paste `arm9loaderhax.bin`
+1. Select "Copy path(s)"
+1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+1. Press (B) to return to the main menu
+1. Hold (R) and press (B) at the same time to eject your SD card
+1. Remove your SD card from your device
+1. Press (Start) to reboot your device with the SD card removed
+  + Booting your device at least once with the SD card removed will allow you to configure the CTRNAND based Luma3DS installation
+1. Use the (A) button and the D-Pad to turn on the following:    
   + **"Show NAND or user string in System Settings"**
-23. If you are using a **New 3DS**, you can *also* enable the following:
+1. If you are using a **New 3DS**, you can *also* enable the following:
   + **"New 3DS CPU" til "Clock+L2(x)"**
     + This will increase the framerate of many games, but may cause instability in others
     + If some games do not work properly, disable this option and try again
     + **This breaks the Homebrew Launcher on 11.3!**
-24. Sett inn SD-kortet, og trykk (Start) for å lagre og starte på nytt!
+1. Reinsert your SD card into your device
+1. Press (Start) to save and reboot
 
 ___
 
@@ -189,15 +199,15 @@ Hvis DSi / DS funksjonalitet har blitt ødelagt (f. eks. DS kassetter eller DSiW
 {% capture notice-10 %}
 Du kan nå bruke "Luma3DS Updater" for å oppdatere din Luma3DS til siste versjon, ved å åpne den og trykke (A).     
 Dette er ikke det samme som en systemoppdatering; den bare laster ned og pakker ut de nyeste Luma3DS-filene.
-This will only update the Luma3DS files on the SD card. Hvis du starter enheten uten et SD-kort, vil den bruke den versjonen du lastet opp i CTR NAND.    
+This will only update the Luma3DS files on the SD card. If you boot your device without an SD card, it will use the version you placed in CTR NAND.    
 {% endcapture %}
 
 <div class="notice--info">{{ notice-10 | markdownify }}</div>
 
 {% capture notice-6 %}   
-En oppstart vil nå starte Custom Firmware-basert SysNAND som standard.    
+You will now boot Luma3DS CFW SysNAND by default.    
 Du kan holde (Select) ved oppstart for å laste Luma3DSs konfigurasjonsmeny.    
-Du kan nå holde (Start) ved oppstart for å laste Hourglass9.     
+You can now hold (Start) on boot to launch GodMode9.     
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
@@ -208,7 +218,7 @@ Du kan oppdatere arm9loaderhaxinstallasjonen i fremtiden ved å følge instruksj
 For å bruke [NTR CFW](https://github.com/44670/BootNTR/), ta `ntr.bin` fra den riktige `.zip` på [denne](https://github.com/44670/BootNTR/releases) siden, og kopiér den til roten av SD-kortet ditt, installér så `BootNTR.cia` fra [denne](https://github.com/astronautlevel2/BootNTR/releases/latest) siden.
 {: .notice--info}
 
-Behold filen `NANDmin.bin`, den kan gjenopprettes ved hjelp av Hourglass9 for å redde deg fra en brick i fremtiden.
+Keep your `<serialnumber>_nand.bin` file, it can be restored by GodMode9 to save you from a brick in the future.
 {: .notice--info}
 
 Du kan fjerne NAND sikkerhetskopier fra `/files9/` så lenge du har dem sikkerhetskopiert til et trygt sted.
