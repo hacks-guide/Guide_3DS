@@ -7,8 +7,8 @@ permalink: /tr_TR/move-emunand.html
 Bu, eski bir EmuNAND'ın içeriğini yeni SysNAND CFW'ye taşımak, daha sonra eski EmuNAND bölümünü kaldırmak için eklenti bölümüdür. EmuNAND ve RedNAND terimlerinin, birbirinden farklı uygulamalara işaret ettiğini unutmayın.[aynı konsept](http://3dbrew.org/wiki/NAND_Redirection).
 {: .notice--info}
 
-GBA VC ve DSiWare kayıtlarınız SİLİNECEK!
-{: .notice--danger}
+DSiWare and GBA
+{: .notice--warning}
 
 **Bunu kullanmak için arm9loaderhax + Luma3DS YÜKLEMİŞ olmanız gerekir.**
 {: .notice--danger}
@@ -17,36 +17,133 @@ GBA VC ve DSiWare kayıtlarınız SİLİNECEK!
 
 * Bir varolan EmuNAND
 * En son sürümü [GodMode9] (https://github.com/d0k3/GodMode9/releases/latest)
+* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest)
 
 #### Talimatlar
 
-1. GodMode9 `.zip` dosyasından `GodMode9.bin` dosyasını SD kartınızdaki `/luma/payloads/` klasörüne kopyalayın ve `/luma/payloads/` içindeki `GodMode9.bin` dosyasının ismini `up_GodMode9.bin` şeklinde değiştirin
-2. SD kartınızı cihazınıza takın
-3. Açılışta (Start) basılı tutarak arm9loaderhax'tan Hourglass9'u açın
-4. "EmuNAND Backup/Restore" gidin. sonra EmuNAND'ınızın yedeğini `NANDmin_emu.bin` dosyasına yedeklemek için "EmuNAND Backup" seçeneğini seçin
-5. Ana menüye dönmek için (B)'ye basın
-6. "EmuNAND Backup/Restore" gidin. sonra SysNAND'ınızın yedeğini `NANDmin_emu.bin` dosyasından geri almak için "SysNAND Restore (keep a9lh)" seçeneğini seçin
-7. (Select) tuşuna basarak SD kartınızı çıkarın
-8. SD kartınızı bilgisayarınıza yerleştirin, ardından SD kartınızdaki `/ files9 /` klasöründen `NANDmin_emu.bin` ve `NANDmin_emu.bin.sha` dosyalarını güvenli bir yere kopyalayın
-  + Birden çok konumda yedekleyin
+##### Section I - Prep work
+
+1. Power off your device
+1. Insert your SD card into your computer
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `start_GodMode9.bin`
+1. Reinsert your SD card into your device
+
+##### Section II - Backup SysNAND DSiWare Saves
+
+If you do not have any DSiWare games or saves that you care about, skip this section.
+{: .notice--info}
+
+1. Launch GodMode9 from arm9loaderhax by holding (Start) on boot
+1. Navigate to `SYSNAND TWLN` -> `title`
+1. Hold (R) and press (A) at the same time on `00030004` to select the folder, then select "Copy to 0:/gm9out"
+  + This process may take some time if you have many DSiWare games
+1. Press (B) twice to return to the main menu
+
+##### Section III - Backup GBA VCs Saves
+
+If you do not have any GBA VC games or saves that you care about, skip this section.
+{: .notice--info}
+
+Note that this is not necessary for any other kind of Virtual Console games (GBC, NES, etc)
+{: .notice--info}
+
+1. Hold (R) and press (Start) at the same time to power off your device
+1. Insert your SD card into your computer
+1. Create a folder in `/files9/` for each GBA VC game that you want to backup the save for 
+1. Reinsert your SD card into your device
+1. Power on your device into SysNAND
+1. Do the following process for each GBA VC game that you want to backup the save for:
+  + Launch the GBA VC game on SysNAND
+  + Exit the GBA VC game
+  + Reboot holding (Start) during boot to launch GodMode9
+  + Navigate to `SYSNAND VIRTUAL`
+  + Press (Y) on `gbavc.sav` to copy it
+  + Press (B) to return to the main menu
+  + Navigate to `SDCARD` -> `files9`
+  + Navigate to the folder you created for this GBA VC game
+  + Press (Y) to paste `gbavc.sav`
+  + Press (Start) to reboot your device
+1. Reboot holding (Start) during boot to launch GodMode9
+
+##### Section IV - Copy EmuNAND to SysNAND
+
+1. Navigate to `EMUNAND VIRTUAL`
+1. Press (A) on `nand.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
+1. Press (A) to unlock SysNAND overwriting, then input the key combo given
+  + This will not overwrite your arm9loaderhax installation
+1. Input the key combo given to unlock SysNAND (lvl1) writing
+  + This process will take some time
+1. Press (A) to continue once it has completed
+1. Press (B) to return to the main menu
+
+##### Section V - Restore DSiWare Saves
+
+If you did not backup DSiWare Saves earlier, skip this section.
+{: .notice--info}
+
+1. Navigate to `SDCARD` -> `gm9out`
+1. Press (Y) on the `00030004` folder to copy it
+1. Press (B) twice to return to the main menu
+1. Navigate to `SYSNAND TWLN` -> `title`
+1. Press (Y) to paste the `00030004` folder
+1. Select "Copy path(s)"
+1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+1. Select "Overwrite file(s)"
+  + This process may take some time if you have many DSiWare games
+1. Press (B) twice to return to the main menu
+
+##### Section VI - Restore GBA VC Saves
+
+If you did not backup GBA VC Saves earlier, skip this section.
+{: .notice--info}
+
+1. Hold (R) and press (Start) at the same time to power off your device
+1. Power on your device into SysNAND
+1. Do the following process for each GBA VC game that you want to backup the save for:
+  + Launch the GBA VC game on SysNAND
+  + Exit the GBA VC game
+  + Reboot holding (Start) during boot to launch GodMode9
+  + Navigate to `SDCARD` -> `files9`
+  + Navigate to the folder you created for this GBA VC game
+  + Press (Y) on `gbavc.sav` to copy it
+  + Press (B) to return to the main menu
+  + Navigate to `SYSNAND VIRTUAL`
+  + Press (Y) to paste `gbavc.sav`
+  + Press (A) to confirm
+  + Press (Start) to reboot your device
+1. Reboot holding (Start) during boot to launch GodMode9
+
+##### Section VII- Backup SysNAND
+
+1. Press (Home) to bring up the action menu
+1. Select "More..."
+1. Select "Backup NAND"
+1. Press (A) to continue
+1. SD kartınızı çıkarmak için aynı anda (R) ve (B) ye basın ve basılı tutun
+1. Insert your SD card into your computer, then copy `nand.bin` from the `/gm9out/` folder on your SD card to a safe location on your computer
+  + If you previously used SafeCtrTransfer and have a NAND backup named `<serialnumber>_nand.bin`, replace it with this one (rename `nand.bin` to match `<serialnumber>_nand.bin`)
+  + Make backups in multiple locations (such as online file storage)
   Bu yedek eğer ileride bir şey ters giderse cihazın brick olma ihtimalini engelleyecek
-9. `NANDmin_emu.bin` dosyasını kopyaladıktan sonra SD kartınızdaki` / files9 / `klasöründen silin
-10. **SD kartınızdaki tüm dosyaları bilgisayarınızdaki bir klasöre taşıyın; işlemin devamında tüm dosyalarınız silinecektir**
-11. SD kartınızı cihazınıza takın
-12. GodMode9'u açmak için (Up) basılı tutarken (Start) basarak yeniden başlatın
-13. İşlem menüsünü getirmek için (Home) düğmesine basın
-14. "SD format menu" seçin
-15. Onaylamak için (A) basın
-16. "No EmuNAND" seçin
-17. "Auto" seçin
-18. Onaylamak için istenen düğme kombinasyonunu girin
-19. SD kartınızı çıkarmak için aynı anda (R) ve (B) ye basın ve basılı tutun
-20. SD kartınızı bilgisayarınıza yerleştirin, ardından tüm dosyalarınızı içine geri kopyalayın
+1. Delete `nand.bin` from the `/gm9out/` folder on your SD card after copying it
+1. **SD kartınızdaki tüm dosyaları bilgisayarınızdaki bir klasöre taşıyın; işlemin devamında tüm dosyalarınız silinecektir**
+
+##### Section VIII - Format SD card
+
+1. Reinsert your SD card into your device
+1. Press (Home) to bring up the action menu
+1. Select "More..."
+1. "SD format menu" seçin
+1. Onaylamak için (A) basın
+1. "No EmuNAND" seçin
+1. "Auto" seçin
+1. When prompted, input the key combo given to confirm
+1. Hold (R) and press (B) at the same time to eject your SD card
+1. Insert your SD card into your computer, then copy all your files back into it
   + SD karttaki `arm9loaderhax.bin` dosyasını yedeklemenizdeki dosyayla değiştirdiğinizden emin olun
-21. SD kartınızı cihazınıza takın
-22. SD kartınızı yeniden takmak için (A) tuşuna basın
-23. Start'a basarak yeniden başlatın!
-24. + Siyah ekran alıyorsanız, [bu sorun giderme rehberine bakın](troubleshooting#ts_sys_a9lh)
+1. Reinsert your SD card into your device
+1. SD kartınızı yeniden takmak için (A) tuşuna basın
+1. Press (Start) to save and reboot
+1. + Siyah ekran alıyorsanız, [bu sorun giderme rehberine bakın](troubleshooting#ts_sys_a9lh)
 
 ___
 
