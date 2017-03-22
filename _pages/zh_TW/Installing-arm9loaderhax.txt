@@ -32,7 +32,7 @@ permalink: /zh_TW/installing-arm9loaderhax.html
 
 + **FBI 管理器** *（安裝 CIA 格式的遊戲及程式）*
 + **Luma3DS 更新器** *（用做更新 Luma3DS）*
-+ **Hourglass9** *（多功能工具包，用來處理 NAND 及卡帶的相關功能）*
++  **GodMode9** *(multipurpose tool which can do NAND and cartridge functions)*
 
 #### 必備項目
 
@@ -43,7 +43,7 @@ permalink: /zh_TW/installing-arm9loaderhax.html
 * 最新版的 [arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(`.7z` 檔案)*
 * 最新版的 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z` 檔案)*
 * 最新版的 [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
-* 最新版的 [Hourglass9](https://github.com/d0k3/Hourglass9/releases/latest)
+* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * 最新版的 [Luma3DS Updater](https://github.com/Hamcha/lumaupdate/releases/latest)
 * 最新版的 [DspDump](https://github.com/Cruel/DspDump/releases/latest)
 * 最新版的 [FBI 管理器](https://github.com/Steveice10/FBI/releases/latest)
@@ -53,48 +53,40 @@ permalink: /zh_TW/installing-arm9loaderhax.html
 
 ##### 第一節 — 準備工作
 
-{% capture notice-5 %}
-**請先確保你使用的 SD 卡沒有損壞！**
-
-**如果你用了個損壞的 SD 卡，你將面臨磚機的風險！**
-
-**如果你認為你的 SD 卡可能已損壞，請使用 [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), 或 [F3X (Mac)](f3x-(mac)) 來檢查！**
-{% endcapture %}
-
-<div class="notice--danger">{{ notice-5 | markdownify }}</div>
-
-1. **如果 SD 卡中有個 `/files9/` 資料夾，請將它備份到多個安全的地方（像是雲端空間）；裡面的檔案可以在你系統弄壞的時候救你一命，防止資料遺失**
-2. 在 SD 卡的根目錄底下，建立一個新資料夾 `cias`
-3. 如果 `3ds` 資料夾存在的話，請將它刪除
-5. 解壓`starter.zip`中 `starter` 資料夾中的 _所有內容_ 至 SD 卡的根目錄底下
+1. Insert your SD card into your computer
+1. **If it exists, copy `<serialnumber>_nand.bin` from the `/ctrtransfer/` folder on your SD card to a safe location on your computer**
+  + Make backups in multiple locations (such as online file storage)
+  + This backup will save you from a brick if anything goes wrong in the future
+1. 在 SD 卡的根目錄底下，建立一個新資料夾 `cias`
+1. 如果 `3ds` 資料夾存在的話，請將它刪除
+1. 解壓`starter.zip`中 `starter` 資料夾中的 _所有內容_ 至 SD 卡的根目錄底下
   + 裡面將有一個替代的 `3ds` 資料夾
-6. 解壓 SafeA9LHInstaller `.7z` 裡的 _所有內容_ 到 SD 卡的根目錄底下
-7. 解壓 data_input `.zip` 中的 `a9lh` 資料夾到 SD 卡的根目錄底下
-8. 解壓 arm9loaderhax `.7z` 裡的 _所有內容_ 到 SD 卡中的 `a9lh` 資料夾底下
-9. 解壓 hblauncher_loader `.zip` 中的 `hblauncher_loader.cia` 到 SD 卡中的 `/cias/` 資料夾底下
-10. 解壓 Luma3DS Updater `.zip` 中的 `lumaupdater.cia` 到 SD 卡中的 `/cias/` 資料夾底下
-11. 解壓 FBI `.zip` 中的 `FBI.cia` 到 SD 卡中的 `/cias/` 資料夾底下
-12. 解壓 Luma3DS `.7z` 內的 `arm9loaderhax.bin` 到 SD 卡的根目錄底下並覆蓋
-13. 在 SD 卡的根目錄底下建立一個新的資料夾 `luma`
-14. 在 SD 上的 `luma` 資料夾中，建立一個新的 `payloads` 資料夾
-15. 解壓 Hourglass9 `.zip` 中的 `Hourglass9.bin` 到 SD 卡中的 `/luma/payloads/` 底下，並重新命名為 `start_Hourglass9.bin`
-17. 在 SD 卡上，將 `aeskeydb.bin` 複製到 `/files9/` 資料夾底下
-18. 在 SD 卡上，將 `DspDump.3dsx` 複製到 `/3ds/` 資料夾底下
-19. 解壓 `fbi-2.4.2-injectable.zip` 中的 _所有內容_ 到 SD 卡中的 `/files9/` 資料夾底下
+1. 解壓 SafeA9LHInstaller `.7z` 裡的 _所有內容_ 到 SD 卡的根目錄底下
+1. 解壓 data_input `.zip` 中的 `a9lh` 資料夾到 SD 卡的根目錄底下
+1. 解壓 arm9loaderhax `.7z` 裡的 _所有內容_ 到 SD 卡中的 `a9lh` 資料夾底下
+1. 解壓 hblauncher_loader `.zip` 中的 `hblauncher_loader.cia` 到 SD 卡中的 `/cias/` 資料夾底下
+1. 解壓 Luma3DS Updater `.zip` 中的 `lumaupdater.cia` 到 SD 卡中的 `/cias/` 資料夾底下
+1. 解壓 FBI `.zip` 中的 `FBI.cia` 到 SD 卡中的 `/cias/` 資料夾底下
+1. 解壓 Luma3DS `.7z` 內的 `arm9loaderhax.bin` 到 SD 卡的根目錄底下並覆蓋
+1. 在 SD 卡的根目錄底下建立一個新的資料夾 `luma`
+1. 在 SD 上的 `luma` 資料夾中，建立一個新的 `payloads` 資料夾
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `start_GodMode9.bin`
+1. 在 SD 卡上，將 `aeskeydb.bin` 複製到 `/files9/` 資料夾底下
+1. 在 SD 卡上，將 `DspDump.3dsx` 複製到 `/3ds/` 資料夾底下
 
 ##### 第二節 — 安裝 arm9loaderhax
 
-1. 將 SD 卡插回 3DS 中
-2. 系統版本須為 2.1.0
-3. 在你的 3DS 上開啟 `http://2xrsa.3ds.guide`
-  + 如果出現錯誤「當前服務在你的區域不可用（This service is not available in your region）」，請透過系統設置改變你裝置所在的國家，使它與你使用的 2.1.0 ctrtransfer 地區相同
+1. Reinsert your SD card into your device
+1. You should be already on 2.1.0 and powered on
+1. Go to URL `http://2xrsa.3ds.guide` in the browser of your device
+  + If you get the error "This service is not available in your region", use the System Settings to set your device's country to match the NAND region you installed with 2.1.0 CtrTransfer
   + 如果遇到其他錯誤的話， [請參見此疑難排解](troubleshooting#ts_browser)
   + 如果螢幕花屏， [請參見此疑難排解](troubleshooting#ts_safe_a9lh_screen)
   + 如果你在 2DS 或 New 3DS 上無線功能是關閉的狀態的話，只需要將電池移除並拔掉充電器數秒再重新開啟即可。
-4. 按下「選擇鍵 (Select)」以進行安裝
-5. 安裝包將安裝 arm9loaderhax 至你的裝置上（過程很快）
-6. 按任意按鈕關機
-7. 將你主機特有的 `otp.bin` 從 SD 卡 `/a9lh/` 資料夾中複製出來並備份至各個安全的地方（像是雲端硬碟），再將你的 SD 卡插回至 3DS 中
+1. 按下「選擇鍵 (Select)」以進行安裝
+1. 安裝包將安裝 arm9loaderhax 至你的裝置上（過程很快）
+1. Power off your device by pressing any button
+1. Copy your device specific `otp.bin` from the `/a9lh/` folder on your SD card to a safe location on your computer and back it up to multiple locations (such as online file storage), then reinsert your SD card into your device
 
 ##### 第三節 — 設定 Luma3DS
 
@@ -102,16 +94,16 @@ permalink: /zh_TW/installing-arm9loaderhax.html
   + 請於按下電源紐前按住「選擇鍵 (Select)」
   + 如果黑屏，[請參見此疑難排解](troubleshooting#ts_sys_a9lh)   
   + 如果你開機自動進入了 SafeA9LHInstaller，[請參見此疑難排解](troubleshooting#ts_safe_a9lh)
-2. 透過方向鍵及「A」以開啟下列選項：    
+1. 透過方向鍵及「A」以開啟下列選項：    
   + **「Autoboot SysNAND」**
   + **「Use SysNAND FIRM if booting with R」**
   + **「Show NAND or user string in System Settings」**
-3. 如果你的裝置是 **New 3DS** 的話，你也可以同時開啟下列選項：
+1. 如果你的裝置是 **New 3DS** 的話，你也可以同時開啟下列選項：
   + **「New 3DS CPU」中選擇「Clock+L2(x)」**
     + 某些情況下，這將提高遊戲的流暢度，但也有些遊戲會有不穩的情況
     + 如果有些遊戲無法正常運作的話，請關閉此選項再試一次
     + **若在版本 11.3 上啟用此選項將無法運行 Homebrew Launcher！**
-4. 按下「開始鍵 (Start)」以存檔並重新啟動系統
+1. 按下「開始鍵 (Start)」以存檔並重新啟動系統
   + 如果黑屏，直接到下一節即可   
   + 如果你遇到「Failed to mount CTRNAND」錯誤的話，直接跳到下一節即可     
 
@@ -120,66 +112,84 @@ permalink: /zh_TW/installing-arm9loaderhax.html
 如果你在本教學之前就已經改機完且安裝了 EmuNAND，並且想把你原來 EmuNAND 中的內容轉移到新的 SysNAND 自製韌體中，請在開始本部分操作之前先按照[移植EmuNAND](move-emunand)一節進行，然後跳過本部的前四步。
 {: .notice--info}
 
-1. 開機時，按住「開始鍵 (Start)」進入 Hourglass9
-2. 選擇 「SysNAND Backup/Restore」
-3. 選擇「SysNAND Restore (keep a9lh)」
-4. 按照提示按按鍵，並在提示時按「A」鍵來選取 `NANDmin.bin` 的鏡像檔
-5. 按下「開始鍵 (Start)」以重啟
-  + 如果黑屏，請進行[版本 9.2.0 的 ctrtransfer](9.2.0-ctrtransfer)
-6. 如果你所備份的系統版本是在 3.0.0 到 4.5.0 之間，你必須同時手動下載下列韌體，否則無法開機：
+1. Boot your device while holding (Start) to enter GodMode9
+1. Navigate to `SDCARD` -> `ctrtransfer`
+1. Press (A) on `<serialnumber>_nand.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
+1. Press (A) to unlock SysNAND overwriting, then input the key combo given
+  + This will not overwrite your arm9loaderhax installation
+1. Input the key combo given to unlock SysNAND (lvl1) writing
+  + This process will take some time
+1. Press (A) to continue once it has completed
+1. Press (Start) to reboot your device
+  + If you get a black screen, [follow 9.2.0 CtrTransfer](9.2.0-ctrtransfer)
+1. If your backup was of a version between 3.0.0 and 4.5.0, your device will not boot until you manually download the required firmware:
   + 下載[此檔案](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056)並將它重新命名為`firmware.bin`
   + 下載[此檔案](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
   + 複製 `firmware.bin` 及 `cetk` 檔案到 SD 卡上的 `/luma/` 資料夾
-  + 在更新完你的 3DS 主機後，刪除這兩個檔案
-7. 到 3DS 主選單中更新你的主機，去「系統設置（System Settings）」、「其他設置（Other Settings）」底下選擇「系統更新（System Update）」
+  + Delete both of these files after updating your device
+1. Update your device by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
   + 在 A9LH + Luma （不管你用什麼）底下更新是沒問題的，別再問啦
   + 之前有說過千萬不要在 New 3DS 上更新 2.1.0 韌體，這點在還原過 NAND 備份後就沒關係了。
   + 如果過程中出現錯誤，試試到 DNS 設定底下將設定改成「自動 （auto）」
-  + 如果錯誤持續，且你 NAND 的系統版本為 9.2.0 以下，請進行[版本 9.2.0 的 ctrtransfer](9.2.0-ctrtransfer)
+  + If this still gives you an error and your NAND is below 9.2.0, [follow 9.2.0 CtrTransfer](9.2.0-ctrtransfer)
 
 ##### 第五節 — 注入 FBI 管理器
 
-1. 開機時，按住「開始鍵 (Start)」進入 Hourglass9
-2. 選擇「SysNAND Options」中的「Health&Safety Dump」以匯出「健康與安全」程式至 `hs.app` **（你可以透過方向鍵更改名字）**
-3. 按下「B」，選擇「Health&Safety Inject」
-4. 按下提示的按鍵組合
-5. 選擇對應裝置區域用來注入 FBI 管理器的`.app`檔
-6. 按下「A」以確認注入
-7. 按「開始鍵 (Start)」以重新啟動系統
-8. 如果你啟動後發現依然是原廠的「健康與警示」程式，並且之前曾經用 Gateway 進行過系統降級，[請參見此疑難排解](troubleshooting#gw_fbi)
+1. Reboot holding (Start) during boot to launch GodMode9
+1. Navigate to `SDCARD` -> `cias`
+1. Press (A) on `FBI.cia` to select it, then select "CIA image options...", then select "Mount image to drive"
+1. Press (A) on the `.app` file, then select "NCCH image options", then select "Inject to H&S"
+1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+1. Press (A) to continue
+1. Press (Start) to reboot your device
+1. 如果你啟動後發現依然是原廠的「健康與警示」程式，並且之前曾經用 Gateway 進行過系統降級，[請參見此疑難排解](troubleshooting#gw_fbi)
 
-##### 第六節 — 最終設定
+##### Section VI - Installing CIAs
 
-1. 啟動「健康與安全」程式（改為 FBI 管理器後）
-2. 選擇「SD」
-3. 選擇「cias」資料夾
-4. 選擇「\<current directory>」
-5. 選擇「Install all CIAs」，並按下「A」確認
-6. 按下「B」以回到 SD 卡根目錄
-7. 選擇 `arm9loaderhax.bin`，按下「A」，並選擇「Copy」
-8. 按下「B」以回到 FBI 管理器主選單
-9. 選擇「CTR NAND」
-10. 選擇「\<current directory>」
-11. 選擇「Paste」，按下「A」確認
-12. 按「Home」鍵退出
-13. 從 HOME 選單中啟動 Homebrew Launcher
-14. 啟動「DSP Dump」
-15. 提示時，按下「開始鍵 (Start)」退出
-16. 按下「開始鍵 (Start)」開啟 Homebrew Launcher 離開選單
-17. 按住「開始鍵 (Start)」後，按「A」以重新啟動至 Hourglass9
-18. 選擇「SysNAND Backup/Restore」中的「Health&Safety Inject」
-19. 選擇你第一次備份出來原本的 `hs.app`，按下「A」確認安裝
-20. 於主選單按下「選擇鍵 (Select)」以卸除 SD 卡
-21. 在 SD 拔出後，按下「開始鍵 (Start)」重啟
-  + 在 SD 卡拔除的情況下開機將讓你可以在 CTRNAND 上設置 Luma3DS
-22. 透過方向鍵及「A」以開啟下列選項：    
+1. Launch Health and Safety (which is now FBI)
+1. Navigate to `SD` -> `cias`
+1. 選擇「\<current directory>」
+1. 選擇「Install all CIAs」，並按下「A」確認
+1. Press (Home) to exit FBI
+
+##### Section VII - DSP Dump
+
+1. 從 HOME 選單中啟動 Homebrew Launcher
+1. 啟動「DSP Dump」
+1. Press (Start) when prompted to exit DSP Dump
+1. Press (Start) to launch the Homebrew Launcher exit menu
+
+##### Section VIII - Restore Health and Safety
+
+1. Reboot holding (Start) during boot to launch GodMode9
+1. Press (Home) to bring up the action menu
+1. Select "More..."
+1. Select "Restore H&S"
+1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+
+##### Section IX - CTRNAND Luma3DS
+
+1. Navigate to `SDCARD`
+1. Press (Y) on `arm9loaderhax.bin` to copy it
+1. Press (B) to return to the main menu
+1. Navigate to `SYSNAND CTRNAND`
+1. Press (Y) to paste `arm9loaderhax.bin`
+1. Select "Copy path(s)"
+1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+1. Press (B) to return to the main menu
+1. Hold (R) and press (B) at the same time to eject your SD card
+1. Remove your SD card from your device
+1. Press (Start) to reboot your device with the SD card removed
+  + Booting your device at least once with the SD card removed will allow you to configure the CTRNAND based Luma3DS installation
+1. 透過方向鍵及「A」以開啟下列選項：    
   + **「Show NAND or user string in System Settings」**
-23. 如果你的裝置是 **New 3DS** 的話，你也可以同時開啟下列選項：
+1. 如果你的裝置是 **New 3DS** 的話，你也可以同時開啟下列選項：
   + **「New 3DS CPU」中選擇「Clock+L2(x)」**
     + 某些情況下，這將提高遊戲的流暢度，但也有些遊戲會有不穩的情況
     + 如果有些遊戲無法正常運作的話，試試看關閉這個選項再試一次
     + **若在版本 11.3 上啟用此選項將無法運行 Homebrew Launcher！**
-24. 重新插入你的 SD 卡，按下「開始鍵 (Start)」存檔並重啟！
+1. Reinsert your SD card into your device
+1. Press (Start) to save and reboot
 
 ___
 
@@ -189,15 +199,15 @@ ___
 {% capture notice-10 %}
 你現在可以透過 Luma3DS Updater 來更新你裝置上的 Luma3DS 系統。只要將更新器開啟再按下「A」即可。     
 這跟系統更新是不一樣的；這只會下載並解壓最新的 Luma3DS 檔案。
-這只會更新 SD 卡上的 Luma3DS 檔案。 如果你在拔除 SD 卡的情況下開機，它則會用你放在 CTRNAND 裡的 Luma3DS 版本啟動。    
+這只會更新 SD 卡上的 Luma3DS 檔案。 If you boot your device without an SD card, it will use the version you placed in CTR NAND.    
 {% endcapture %}
 
 <div class="notice--info">{{ notice-10 | markdownify }}</div>
 
 {% capture notice-6 %}   
-預設情況下，每次開機自動進入到自製的 SysNAND 系統中。    
+You will now boot Luma3DS CFW SysNAND by default.    
 你現在可以在開機時按住「選擇鍵 (Select)」啟動 Luma3DS 的設定選單。    
-你現在可以於開機時按住「開始鍵 (Start)」啟動 Hourglass9。     
+You can now hold (Start) on boot to launch GodMode9.     
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
@@ -208,7 +218,7 @@ ___
 若要使用 [NTR CFW](https://github.com/44670/BootNTR/)，請於[此](https://github.com/44670/BootNTR/releases)下載對應你裝置的 `ntr.bin` 並將它複製到你 SD 卡的根目錄底下，然後於[此](https://github.com/astronautlevel2/BootNTR/releases/latest)下載並安裝 `BootNTR.cia`。
 {: .notice--info}
 
-留好 `NANDmin.bin` 檔案，如果你未來磚機了你可以透過 Hourglass9 還原你的裝置。
+Keep your `<serialnumber>_nand.bin` file, it can be restored by GodMode9 to save you from a brick in the future.
 {: .notice--info}
 
 只要你還另外存有 NAND 備份，你可以從 `/files9/` 中刪除先前的備份。
