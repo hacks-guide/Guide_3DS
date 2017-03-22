@@ -1,0 +1,109 @@
+---
+title: "SafeCtrTransfer (MSET)" #
+lang: zh-Hant
+permalink: /safectrtransfer-(mset).html
+---
+
+If you have already hacked your device before and have a EmuNAND based CFW setup, this guide deals exclusively with SysNAND and you should follow all instructions from within or applying to SysNAND. Note that the terms EmuNAND and RedNAND refer to slightly different implementations of [the same concept](http://3dbrew.org/wiki/NAND_Redirection).
+{: .notice--info}
+
+If you downgrade to 2.1.0 on a 2DS or New 3DS and leave Wireless Communication off, you can re-enable the wireless by removing the battery and unplugging the charger for several seconds then booting back up.
+{: .notice--info}
+
+If you've been using the New 3DS's microSD Management to transfer files to your SD card, this will no longer work on 2.1.1. 請於繼續前確保你手上有台可用的 microSD 讀卡機。
+{: .notice--info}
+
+**For now, connecting your device to the internet is REQUIRED to continue after the 2.1.0 CtrTransfer.**
+{: .notice--warning}
+
+**Disable the parental controls of your device before doing the 2.1.0 CtrTransfer. 如果你不知道密碼的話，請見[此](https://mkey.salthax.org/)。 如果你的 NNID 因為是給低於13歲的小孩所設置的而無法關閉家長監護的話，你可以將各個家長監護選項停用。**
+{: .notice--warning}
+
+**Performing a CtrTransfer will remove all user-installed tickets (which allow access to games) from your device until the created backup is restored.**
+{: .notice--danger}
+
+**千萬不要在低於版本 6.0.0 時格式化 2DS ，否則你將無法完成初始設置且 _會變磚_ ！**
+{: .notice--danger}
+
+**千萬不要在版本 2.1.0 （原 3DS 的韌體）上的 New 3DS 下更新系統，否則 _保證磚機_ ！ You MUST restore a NAND backup or CtrTransfer back to standard New 3DS firmware first!**
+{: .notice--danger}
+
+{% capture notice %}
+**如果 New 3DS 在系統 2.1.0 底下進入休眠狀態，就永遠都醒不過來了！（無法還原的磚機）**    
+**This only happens when shutting the lid _while your device is on_; this does not apply to turning your device off.**    
+**Your device only enters sleep mode when the lid is closed. 這與螢幕開啟時間無關。**    
+**不過還是建議在升級至 2.1.0 後趕快完成本教學，避免悲劇發生！**    
+{% endcapture %}
+
+<div class="notice--danger">{{ notice | markdownify }}</div>
+
+#### 步驟概述
+
+In this section, we will be flashing your device's [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) partition to 2.1.0 in order to take advantage of an oversight in 2.1.0 for the purpose of extracting the [OTP](https://www.3dbrew.org/wiki/OTP_Registers) unique to your device. 在安裝 arm9loaderhax 時，這 OTP 檔案是缺一不可的，而這檔案**千萬不能**與其他 3DS 主機共用。
+
+This is accomplished by [installing a premade CtrTransfer image](https://www.reddit.com/r/3dshacks/comments/4zhe4a/) containing 2.1.0, copying your device specific files (such as `moveable.sed` and `SecureInfo_A`) to it, then fixing the title databases.
+
+#### 必備項目
+
+* DS flashcard that works on your device version
+* The latest release of [SafeCtrTransfer](https://github.com/d0k3/SafeCtrTransfer/releases/latest)
+* The 2.1.0 CtrTransfer image for your device and region     
+*（如果你的裝置不屬下列區域內，挑一個就對了）*:
+  +    <i class="fa fa-magnet" aria-hidden="true" title="這是個種子連結。 Use a torrent client to download the file."></i> - [New 3DS or Old 3DS or 2DS 2.1.0 - EUR - CtrTransfer](magnet:?xt=urn:btih:89acc9c1b488b8b38251de0ddf07975d6bd354a1&dn=2.1.0-4E%5FCtrTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+  +    <i class="fa fa-magnet" aria-hidden="true" title="這是個種子連結。 Use a torrent client to download the file."></i> - [New 3DS or Old 3DS or 2DS 2.1.0 - JPN - CtrTransfer](magnet:?xt=urn:btih:3dbb9c9c85a33c6242f424dcbaebcacdd8a5912b&dn=2.1.0-4J%5FCtrTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    <i class="fa fa-magnet" aria-hidden="true" title="這是個種子連結。 Use a torrent client to download the file."></i> - [New 3DS or Old 3DS or 2DS 2.1.0 - USA - CtrTransfer](magnet:?xt=urn:btih:1609ce9ee7b0ed9b6dea0b3e7cca4fc52dad6ff4&dn=2.1.0-4U%5FCtrTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+
+#### 操作說明
+
+##### 第一節 — 準備工作
+
+1. Power off your device
+1. Insert your SD card into your computer
+1. Create a folder named `CtrTransfer` on the root of your SD card if it does not already exist
+1. Copy the 2.1.0 `.bin` and `.bin.sha` from the CtrTransfer `.zip` to the `/CtrTransfer/` folder on your SD card
+1. Copy `SafeCtrTransfer.dat` from the SafeCtrTransfer `.zip` to the root of your SD card
+1. Reinsert your SD card into your device
+1. Copy `SafeCtrTransfer.nds` from the SafeCtrTransfer `.zip` to your DS flashcard
+1. Power on your device
+
+##### Section II - Launch SafeCtrTransfer
+
+1. Start your DS flashcard from your device
+1. Boot `SafeCtrTransfer.nds` using your flashcart
+1. Select the correct option for your system version
+  + 4.X.X -> "4.x SafeCtrTransfer"
+  + 6.X.X -> "6.x SafeCtrTransfer"
+1. Reboot the system, then go to System Settings, then "Other Settings", then "Profile", then "Nintendo DS Profile"
+1. If the exploit was successful, you will have booted into SafeCtrTransfer
+
+##### Section III - CtrTransfer
+
+1. Allow the SafeCtrTransfer initialization and safety checks to proceed automatically
+  + If you get an error, ensure you have all files in the correct locations and that you have enough free space on your SD card as detailed in [Get Started](get-started)
+1. When prompted, input the key combo given to confirm CtrTransfer to 2.1.0
+  + This process will take some time
+  + This process will automatically create a backup of your device's NAND at `/ctrtransfer/<serialnumber>_nand.bin`
+  + If you get a critical error, [follow this troubleshooting guide](troubleshooting#ts_transfer)   
+1. Once this process has completed, remove your SD card from your device to reboot
+  + The reboot will take about 2 seconds to trigger
+  + While on 2.1.0, your device will black screen on boot if your SD card is inserted before the home menu loads
+  + Every time your device is rebooted on 2.1.0, you will need to take out your SD card before boot and put it back in after the home menu loads
+  + SD 卡暫時先不用插回 3DS 裡，因為我們到下一頁時還會再丟些檔案進去
+  + 這問題將於下一章節還原裝置備份後解決
+
+___
+
+*（在某些裝置上，螢幕可能會出現扭曲或顏色走調的現象，這是正常的。這問題將於還原裝置備份後消失）*
+{: .notice--info}
+
+{% capture notice %}
+**如果 New 3DS 在系統 2.1.0 底下進入休眠狀態，就永遠都醒不過來了！（無法還原的磚機）**    
+**This only happens when shutting the lid _while your device is on_; this does not apply to turning your device off.**    
+**Your device only enters sleep mode when the lid is closed. 這與螢幕開啟時間無關。**    
+**Once on 2.1.0, you should continue without delay to avoid any possibility of this happening!**    
+{% endcapture %}
+
+<div class="notice--danger">{{ notice | markdownify }}</div>
+
+繼續至 [安裝 arm9loaderhax](installing-arm9loaderhax)
+{: .notice--primary}
