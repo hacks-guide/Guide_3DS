@@ -7,8 +7,8 @@ permalink: /pl_PL/move-emunand.html
 Jest to dodatkowa sekcja niniejszej instrukcji, obejmująca przenoszenie zawartości poprzedniego EmuNAND do SysNAND twojego nowego CFW (bazującego na A9LH), a następnie, usunięciu starej partycji EmuNAND z karty SD. Zauważ, że terminy EmuNand i RedNAND odnoszą się do nieco innych implementacji [tej samej idei] (http://3dbrew.org/wiki/NAND_Redirection).
 {: .notice--info}
 
-W wyniki poniższych kroków, STRACISZ swoje zapisy stanu gier GBA VC oraz DSiWare!
-{: .notice--danger}
+DSiWare and GBA
+{: .notice--warning}
 
 **Aby móc wykonać poniższe kroki, MUSISZ mieć zainstalowane arm9loaderhax + Luma3DS.**
 {: .notice--danger}
@@ -17,36 +17,133 @@ W wyniki poniższych kroków, STRACISZ swoje zapisy stanu gier GBA VC oraz DSiWa
 
 * Istniejącego EmuNAND
 * Najnowszej wersji [GodMode9](https://github.com/d0k3/GodMode9/releases/)
+* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest)
 
 #### Instrukcje
 
-1. Skopiuj plik 'GodMode9.bin' z archiwum GodMode9 '.zip' do folderu '/luma/payloads/' na twojej karcie SD i zmień jego nazwę z 'GodMode9.bin' na 'up_GodMode9.bin'
-2. Włóż kartę SD z powrotem do swojej konsoli
-3. Załaduj Hourglass9 poprzez arm9loaderhax przytrzymując przycisk (Start) podczas uruchamiania konsoli
-4. Przejdź "EmuNAND Backup/Restore", a następnie wybierz opcję "EmuNAND Backup". Utwórz kopię zapasową EmuNAND do pliku `NANDmin_emu.bin`
-5. Naciśnij przycisk (B) aby powrócić do menu głównego Hourglass9
-6. Przejdź do "SysNAND Backup/Restore", a następnie wybierz opcję "SysNAND restore (keep a9lh)", aby przywrócić swój SysNAND z pliku 'NANDmin_emu.bin'
-7. Naciśnij (Select) aby bezpiecznie wyjąć kartę SD
-8. Włóż kartę SD do czytnika w swoim komputerze, a następnie skopiuj pliki "NANDmin.bin" i "NANDmin.bin.sha" z folderu '/files9/' na karcie SD do bezpiecznego miejsca na twoim komputerze
-  + Zrób kopie zapasowe tych plików w kilku lokacjach (np. dysk, pendrive, płyta DVD)
+##### Section I - Prep work
+
+1. Power off your device
+1. Insert your SD card into your computer
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `start_GodMode9.bin`
+1. Reinsert your SD card into your device
+
+##### Section II - Backup SysNAND DSiWare Saves
+
+If you do not have any DSiWare games or saves that you care about, skip this section.
+{: .notice--info}
+
+1. Launch GodMode9 from arm9loaderhax by holding (Start) on boot
+1. Navigate to `SYSNAND TWLN` -> `title`
+1. Hold (R) and press (A) at the same time on `00030004` to select the folder, then select "Copy to 0:/gm9out"
+  + This process may take some time if you have many DSiWare games
+1. Press (B) twice to return to the main menu
+
+##### Section III - Backup GBA VCs Saves
+
+If you do not have any GBA VC games or saves that you care about, skip this section.
+{: .notice--info}
+
+Note that this is not necessary for any other kind of Virtual Console games (GBC, NES, etc)
+{: .notice--info}
+
+1. Hold (R) and press (Start) at the same time to power off your device
+1. Insert your SD card into your computer
+1. Create a folder in `/files9/` for each GBA VC game that you want to backup the save for 
+1. Reinsert your SD card into your device
+1. Power on your device into SysNAND
+1. Do the following process for each GBA VC game that you want to backup the save for:
+  + Launch the GBA VC game on SysNAND
+  + Exit the GBA VC game
+  + Reboot holding (Start) during boot to launch GodMode9
+  + Navigate to `SYSNAND VIRTUAL`
+  + Press (Y) on `gbavc.sav` to copy it
+  + Press (B) to return to the main menu
+  + Navigate to `SDCARD` -> `files9`
+  + Navigate to the folder you created for this GBA VC game
+  + Press (Y) to paste `gbavc.sav`
+  + Press (Start) to reboot your device
+1. Reboot holding (Start) during boot to launch GodMode9
+
+##### Section IV - Copy EmuNAND to SysNAND
+
+1. Navigate to `EMUNAND VIRTUAL`
+1. Press (A) on `nand.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
+1. Press (A) to unlock SysNAND overwriting, then input the key combo given
+  + This will not overwrite your arm9loaderhax installation
+1. Input the key combo given to unlock SysNAND (lvl1) writing
+  + This process will take some time
+1. Press (A) to continue once it has completed
+1. Press (B) to return to the main menu
+
+##### Section V - Restore DSiWare Saves
+
+If you did not backup DSiWare Saves earlier, skip this section.
+{: .notice--info}
+
+1. Navigate to `SDCARD` -> `gm9out`
+1. Press (Y) on the `00030004` folder to copy it
+1. Press (B) twice to return to the main menu
+1. Navigate to `SYSNAND TWLN` -> `title`
+1. Press (Y) to paste the `00030004` folder
+1. Select "Copy path(s)"
+1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+1. Select "Overwrite file(s)"
+  + This process may take some time if you have many DSiWare games
+1. Press (B) twice to return to the main menu
+
+##### Section VI - Restore GBA VC Saves
+
+If you did not backup GBA VC Saves earlier, skip this section.
+{: .notice--info}
+
+1. Hold (R) and press (Start) at the same time to power off your device
+1. Power on your device into SysNAND
+1. Do the following process for each GBA VC game that you want to backup the save for:
+  + Launch the GBA VC game on SysNAND
+  + Exit the GBA VC game
+  + Reboot holding (Start) during boot to launch GodMode9
+  + Navigate to `SDCARD` -> `files9`
+  + Navigate to the folder you created for this GBA VC game
+  + Press (Y) on `gbavc.sav` to copy it
+  + Press (B) to return to the main menu
+  + Navigate to `SYSNAND VIRTUAL`
+  + Press (Y) to paste `gbavc.sav`
+  + Press (A) to confirm
+  + Press (Start) to reboot your device
+1. Reboot holding (Start) during boot to launch GodMode9
+
+##### Section VII- Backup SysNAND
+
+1. Press (Home) to bring up the action menu
+1. Select "More..."
+1. Select "Backup NAND"
+1. Press (A) to continue
+1. Przytrzymaj przycisk (R) i jednocześnie naciśnij przycisk (B), aby bezpiecznie wyjąć kartę SD
+1. Insert your SD card into your computer, then copy `nand.bin` from the `/gm9out/` folder on your SD card to a safe location on your computer
+  + If you previously used SafeCtrTransfer and have a NAND backup named `<serialnumber>_nand.bin`, replace it with this one (rename `nand.bin` to match `<serialnumber>_nand.bin`)
+  + Make backups in multiple locations (such as online file storage)
   + Ta kopia uratuje Cie przed brick'iem jeśli cokolwiek pójdzie nie tak w przyszłości
-9. Usuń plik `NANDmin_emu.bin` z folderu '/files9/' na karcie SD po skopiowaniu go
-10. **Utwórz kopię zapasową wszystkich plików na karcie SD do folderu na swoim komputerze. Wszystkie pliki znajdujące się obecnie na karcie SD zostaną usunięte w następnym kroku**
-11. Włóż kartę SD z powrotem do swojej konsoli
-12. Naciśnij przycisk (Start) aby uruchomić ponownie konsolę, jednocześnie trzymając przycisk (D-pad w górę), aby otworzyć GodMode9
-13. Naciśnij przycisk (Home), aby wyświetlić menu akcji
-14. Wybierz "SD format menu"
-15. Naciśnij (A) aby potwierdzić
-16. Wybierz "No EmuNAND"
-17. Wybierz opcję "Auto"
-18. Wprowadź wyświetloną kombinację klawiszy aby potwierdzić
-19. Przytrzymaj przycisk (R) i jednocześnie naciśnij przycisk (B), aby bezpiecznie wyjąć kartę SD
-20. Włoż kartę SD do czytnika w swoim komputerze, a następnie z powrotem skopiuj na nią wszystkie pliki z folderu, do którego skopiowałeś je w kroku 10
+1. Delete `nand.bin` from the `/gm9out/` folder on your SD card after copying it
+1. **Utwórz kopię zapasową wszystkich plików na karcie SD do folderu na swoim komputerze. Wszystkie pliki znajdujące się obecnie na karcie SD zostaną usunięte w następnym kroku**
+
+##### Section VIII - Format SD card
+
+1. Reinsert your SD card into your device
+1. Press (Home) to bring up the action menu
+1. Select "More..."
+1. Wybierz "SD format menu"
+1. Naciśnij (A) aby potwierdzić
+1. Wybierz "No EmuNAND"
+1. Wybierz opcję "Auto"
+1. When prompted, input the key combo given to confirm
+1. Hold (R) and press (B) at the same time to eject your SD card
+1. Insert your SD card into your computer, then copy all your files back into it
   + Upewnij się, że plik 'arm9loaderhax.bin' na twojej karcie SD zastąpiony jest plikiem z kopii zapasowej
-21. Włóż kartę SD z powrotem do swojej konsoli
-22. Naciśnij przycisk (A), aby ponownie zamontować swoją kartę SD
-23. Naciśnij przycisk (Start) aby uruchomić konsolę ponownie!
-24. Jeżeli uruchamianie konsoli zatrzyma się na czarnym ekranie, [wykonaj instrukcję rozwiązywania problemów](troubleshooting#ts_sys_down)
+1. Reinsert your SD card into your device
+1. Naciśnij przycisk (A), aby ponownie zamontować swoją kartę SD
+1. Press (Start) to save and reboot
+1. Jeżeli uruchamianie konsoli zatrzyma się na czarnym ekranie, [wykonaj instrukcję rozwiązywania problemów](troubleshooting#ts_sys_down)
 
 ___
 
