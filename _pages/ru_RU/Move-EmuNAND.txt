@@ -7,8 +7,8 @@ permalink: /ru_RU/move-emunand.html
 Этот дополнительный раздел содержит информацию о переносе содержимого EmuNAND в новый SysNAND с кастомной прошивкой, с последующим удалением раздела, содержащего EmuNAND. Помните, что RedNAND и EmuNAND - немного разные реализации [одного и того же](http://3dbrew.org/wiki/NAND_Redirection).
 {: .notice--info}
 
-Вы лишитесь ВСЕХ своих сохранений в GBA VC и DSiWare играх!
-{: .notice--danger}
+DSiWare and GBA
+{: .notice--warning}
 
 **На момент начала работы, у вас УЖЕ должны быть установлены arm9loaderhax и Luma3DS**
 {: .notice--danger}
@@ -17,36 +17,133 @@ permalink: /ru_RU/move-emunand.html
 
 * Существующий EmuNAND
 * Свежая версия [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest)
 
 #### Инструкция
 
-1. Скопируйте `GodMode9.bin` из  `.zip-архива` GodMode9 в папку `/luma/payloads/` на SD-карте и переименуйте `GodMode9.bin` в `up_GodMode9.bin`
-2. Вставьте SD-карту обратно в 3DS
-3. Запустите Hourglass9, зажав кнопку (Start) при включении консоли
-4. Перейдите в "EmuNAND Backup/Restore", затем выберите "EmuNAND Backup", чтобы сделать резервную копию EmuNAND в файл `NANDmin_emu.bin`
-5. Нажмите (B) для возврата в главное меню
-6. Перейдите в "SysNAND Backup/Restore", затем выберите "SysNAND Restore (keep a9lh)", чтобы восстановить `NANDmin_emu.bin` в SysNAND
-7. Нажмите (Select), чтобы извлечь SD-карту
-8. Подключите SD-карту к компьютеру, затем скопируйте в безопасное место файлы `NANDmin_emu.bin` и `NANDmin_emu.bin.sha` из папки `/files9/` в корне SD-карты
-  + Сделайте несколько резервных копий в различных местах
+##### Section I - Prep work
+
+1. Power off your device
+1. Insert your SD card into your computer
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `start_GodMode9.bin`
+1. Reinsert your SD card into your device
+
+##### Section II - Backup SysNAND DSiWare Saves
+
+If you do not have any DSiWare games or saves that you care about, skip this section.
+{: .notice--info}
+
+1. Launch GodMode9 from arm9loaderhax by holding (Start) on boot
+1. Navigate to `SYSNAND TWLN` -> `title`
+1. Hold (R) and press (A) at the same time on `00030004` to select the folder, then select "Copy to 0:/gm9out"
+  + This process may take some time if you have many DSiWare games
+1. Press (B) twice to return to the main menu
+
+##### Section III - Backup GBA VCs Saves
+
+If you do not have any GBA VC games or saves that you care about, skip this section.
+{: .notice--info}
+
+Note that this is not necessary for any other kind of Virtual Console games (GBC, NES, etc)
+{: .notice--info}
+
+1. Hold (R) and press (Start) at the same time to power off your device
+1. Insert your SD card into your computer
+1. Create a folder in `/files9/` for each GBA VC game that you want to backup the save for 
+1. Reinsert your SD card into your device
+1. Power on your device into SysNAND
+1. Do the following process for each GBA VC game that you want to backup the save for:
+  + Launch the GBA VC game on SysNAND
+  + Exit the GBA VC game
+  + Reboot holding (Start) during boot to launch GodMode9
+  + Navigate to `SYSNAND VIRTUAL`
+  + Press (Y) on `gbavc.sav` to copy it
+  + Press (B) to return to the main menu
+  + Navigate to `SDCARD` -> `files9`
+  + Navigate to the folder you created for this GBA VC game
+  + Press (Y) to paste `gbavc.sav`
+  + Press (Start) to reboot your device
+1. Reboot holding (Start) during boot to launch GodMode9
+
+##### Section IV - Copy EmuNAND to SysNAND
+
+1. Navigate to `EMUNAND VIRTUAL`
+1. Press (A) on `nand.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
+1. Press (A) to unlock SysNAND overwriting, then input the key combo given
+  + This will not overwrite your arm9loaderhax installation
+1. Input the key combo given to unlock SysNAND (lvl1) writing
+  + This process will take some time
+1. Press (A) to continue once it has completed
+1. Press (B) to return to the main menu
+
+##### Section V - Restore DSiWare Saves
+
+If you did not backup DSiWare Saves earlier, skip this section.
+{: .notice--info}
+
+1. Navigate to `SDCARD` -> `gm9out`
+1. Press (Y) on the `00030004` folder to copy it
+1. Press (B) twice to return to the main menu
+1. Navigate to `SYSNAND TWLN` -> `title`
+1. Press (Y) to paste the `00030004` folder
+1. Select "Copy path(s)"
+1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+1. Select "Overwrite file(s)"
+  + This process may take some time if you have many DSiWare games
+1. Press (B) twice to return to the main menu
+
+##### Section VI - Restore GBA VC Saves
+
+If you did not backup GBA VC Saves earlier, skip this section.
+{: .notice--info}
+
+1. Hold (R) and press (Start) at the same time to power off your device
+1. Power on your device into SysNAND
+1. Do the following process for each GBA VC game that you want to backup the save for:
+  + Launch the GBA VC game on SysNAND
+  + Exit the GBA VC game
+  + Reboot holding (Start) during boot to launch GodMode9
+  + Navigate to `SDCARD` -> `files9`
+  + Navigate to the folder you created for this GBA VC game
+  + Press (Y) on `gbavc.sav` to copy it
+  + Press (B) to return to the main menu
+  + Navigate to `SYSNAND VIRTUAL`
+  + Press (Y) to paste `gbavc.sav`
+  + Press (A) to confirm
+  + Press (Start) to reboot your device
+1. Reboot holding (Start) during boot to launch GodMode9
+
+##### Section VII- Backup SysNAND
+
+1. Press (Home) to bring up the action menu
+1. Select "More..."
+1. Select "Backup NAND"
+1. Press (A) to continue
+1. Удерживая (R) нажмите (B) для того, чтобы извлечь SD-карту
+1. Insert your SD card into your computer, then copy `nand.bin` from the `/gm9out/` folder on your SD card to a safe location on your computer
+  + If you previously used SafeCtrTransfer and have a NAND backup named `<serialnumber>_nand.bin`, replace it with this one (rename `nand.bin` to match `<serialnumber>_nand.bin`)
+  + Make backups in multiple locations (such as online file storage)
   + Эти бэкапы позволят восстановить консоль, если впоследствии что-то пойдёт не так
-9. После копирования удалите `NANDmin_emu.bin` и `NANDmin_emu.bin.sha` из папки `/files9/`
-10. **Сделайте резервную копию всех файлов на SD-карте, поскольку в следующих шагах карта будет отформатирована.**
-11. Вставьте SD-карту обратно в 3DS
-12. Нажмите (Start) для перезагрузки и удерживайте (Вверх), чтобы запустить GodMode9
-13. Нажмите кнопку (Home) для вызова меню
-14. Выберите "SD format menu"
-15. Нажмите (A) для подтверждения
-16. Выберите "No EmuNAND"
-17. Выберите "Auto"
-18. Введите указанную последовательность кнопок для подтверждения
-19. Удерживая (R) нажмите (B) для того, чтобы извлечь SD-карту
-20. Вставьте SD-карту в компьютер и скопируйте на нее файлы, которые вы сохранили несколько шагов назад
+1. Delete `nand.bin` from the `/gm9out/` folder on your SD card after copying it
+1. **Сделайте резервную копию всех файлов на SD-карте, поскольку в следующих шагах карта будет отформатирована.**
+
+##### Section VIII - Format SD card
+
+1. Reinsert your SD card into your device
+1. Press (Home) to bring up the action menu
+1. Select "More..."
+1. Выберите "SD format menu"
+1. Нажмите (A) для подтверждения
+1. Выберите "No EmuNAND"
+1. Выберите "Auto"
+1. When prompted, input the key combo given to confirm
+1. Hold (R) and press (B) at the same time to eject your SD card
+1. Insert your SD card into your computer, then copy all your files back into it
   + Убедитесь, что вы заменили `arm9loaderhax.bin` его версией из сохраненных ранее файлов
-21. Вставьте SD-карту обратно в 3DS
-22. Нажмите (A), чтобы смонтировать SD-карту
-23. Нажмите (Start) для перезагрузки!
-24. Если после включения экран остаётся чёрным, перейдите к разделу с [проблемами и их решениями](troubleshooting#ts_sys_down)
+1. Reinsert your SD card into your device
+1. Нажмите (A), чтобы смонтировать SD-карту
+1. Press (Start) to save and reboot
+1. Если после включения экран остаётся чёрным, перейдите к разделу с [проблемами и их решениями](troubleshooting#ts_sys_down)
 
 ___
 
