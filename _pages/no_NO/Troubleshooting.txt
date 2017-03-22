@@ -4,7 +4,7 @@ lang: no
 permalink: /no_NO/troubleshooting.html
 ---
 
-Hvis 3DSen din ikke starter, se i den seksjonen som er relevant for deg, og følg instruksjonene. Når en løsning virker for deg, kan du fortsette med hovedveiledningen
+If you are unable to boot your device, please look for the section relevant to you, and follow the instructions. Når en løsning virker for deg, kan du fortsette med hovedveiledningen
 (Denne seksjonen er ganske lang, prøv å bruke Ctrl+F for å søke eller ditt problem.)
 {: .notice--primary}
 
@@ -28,152 +28,166 @@ Hvis 3DSen din ikke starter, se i den seksjonen som er relevant for deg, og føl
 ##### Seksjon I - Forarbeid
 
 1. Opprett en mappe kalt `cias` på roten av SD-kortet hvis den ikke allerede er der
-2. Kopier `TWL Version Data - v0.cia` til `/cias/` mappen på SD-kortet
-3. Kopier `DS Download Play - v1024.cia` til `/cias/` mappen på SD-kortet
-4. Kopier `DS Internet - v2048.cia` til `/cias/` mappen på SD-kortet
-5. Kopier `Nintendo DS Cart Whitelist - v11264.cia` til `/cias/` mappen på SD-kortet
-6. Kopier enten `New_3DS TWL_FIRM - v9936.cia`  eller `Old_3DS TWL_FIRM - v8817.cia`til `/cias/` mappen på SD-kortet
+1. Kopier `TWL Version Data - v0.cia` til `/cias/` mappen på SD-kortet
+1. Kopier `DS Download Play - v1024.cia` til `/cias/` mappen på SD-kortet
+1. Kopier `DS Internet - v2048.cia` til `/cias/` mappen på SD-kortet
+1. Kopier `Nintendo DS Cart Whitelist - v11264.cia` til `/cias/` mappen på SD-kortet
+1. Kopier enten `New_3DS TWL_FIRM - v9936.cia`  eller `Old_3DS TWL_FIRM - v8817.cia`til `/cias/` mappen på SD-kortet
 
 Seksjon II - Installere titler
 
-1. Åpne FBI
-2. Velg "SD"
-3. Velg "cias"
-4. Velg "\<current directory>"
-5. Velg "Install and delete all CIAs"
-6. Avslutt med hjem-knappen
+1. Launch FBI
+1. Navigate to `SD` -> `cias`
+1. Velg "\<current directory>"
+1. Velg "Install and delete all CIAs"
+1. Press (Home) to exit FBI
 
-## <a name="rm_nnid" />Fjerne NNID uten å formatere enheten
+## <a name="rm_nnid" />Removing an NNID without formatting your device
 
-#### Det du trenger
+#### What you need
 
 * Siste utgave av [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 
-#### Instruksjoner
+#### Instructions
 
 1. Kopier `GodMode9.bin` fra GodMode9 `.zip` til `/luma/payload/` mappen på SD-kortet ditt og endre navnet `GodMode9.bin` i `/luma/payloads` til `up_GodMode9.bin`
-2. Start mens du holder (Opp) for å starte på ny inn i arm9loaderhax GodMode9
-3. Navigér til `SYSNAND CTRNAND` -> `data` -> (32 Character ID) -> `sysdata` -> `00010038`
-4. Hold nede (R) triggeren, og trykk (X) på `00000000` for å gi denne filen et nytt navn
-5. Trykk (Opp) en gang for å forandre navnet til `10000000`
-6. Trykk (A) for å lagre endringene
-7. Trykk (A) for å låse opp SysNAND skriving, og trykk in den gitte tastekombinasjonen
-8. Navigér tilbake til hovedmenyen
-9. Trykk (Start) for omstart
+1. Start mens du holder (Opp) for å starte på ny inn i arm9loaderhax GodMode9
+1. Navigér til `SYSNAND CTRNAND` -> `data` -> (32 Character ID) -> `sysdata` -> `00010038`
+1. Hold nede (R) triggeren, og trykk (X) på `00000000` for å gi denne filen et nytt navn
+1. Trykk (Opp) en gang for å forandre navnet til `10000000`
+1. Trykk (A) for å lagre endringene
+1. Trykk (A) for å låse opp SysNAND skriving, og trykk in den gitte tastekombinasjonen
+1. Navigér tilbake til hovedmenyen
+1. Press (Start) to reboot your device
 
 ## <a name="gw_fbi" />Kan ikke injisere H&s Gateway nedgradert enhet
-Dette er forårsaket av Gateways veldig stakkarslige nedgraderingsmetode, som lar to versjoner av hver app bli på systemet. En av dem er ubrukt, men den forvirrer Decrypt9, og fører den til å injisere inn i den ikke brukte appen.
+Dette er forårsaket av Gateways veldig stakkarslige nedgraderingsmetode, som lar to versjoner av hver app bli på systemet. One of them is unused, but it confuses the H&S inject system, causing it to inject into the wrong one.
 
-#### Det du trenger
-
-* Siste utgave av [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-
-#### Instruksjoner
-
-1. Kopier `GodMode9.bin` fra GodMode9 `.zip` til `/luma/payload/` mappen på SD-kortet ditt og endre navnet `GodMode9.bin` i `/luma/payloads` til `up_GodMode9.bin`
-2. Sett inn SD-kortet i konsollen
-3. Åpne GodMode9 fra arm9loaderhax ved å holde (Opp) under oppstart     
-4. Navigér til `SYSNAND CTRNAND` -> `title` -> `00040010`
-5. Naviger til mappen for din enhet og region:
+1. Launch GodMode9 from arm9loaderhax by holding (Start) during boot     
+1. Navigér til `SYSNAND CTRNAND` -> `title` -> `00040010`
+1. Naviger til mappen for din enhet og region:
   + **Old 3DS EUR**: `00022300` -> `content`
   + **Old 3DS JPN**: `00020300` -> `content`
   + **Old 3DS USA**: `00021300` -> `content`
   + **New 3DS EUR**: `20022300` -> `content`
   + **New 3DS JPN**: `20020300` -> `content`
   + **New 3DS USA**: `20021300` -> `content`
-6. Legg merke til at det er to sett med apper og tmdfiler, ett sett med filendinger med store bokstaver (`.TMD` og `.APP`), og ett sett med små bokstaver (`.tmd` and `.app`)
-7. Mens du holder (R), trykk (Y) for å lage en ny mappe
-8. Trykk (A) for å bekrefte navnet `newdir` (det spiller ingen rolle hva den heter)
-9. Trykk (A) for å låse opp SysNAND skriving, og trykk in den gitte tastekombinasjonen
-10. Trykk (L) utløseren på hver av filene med store bokstaver i filendelsen (`.TMD` og `.APP`) for å markere dem
-11. Trykk (Y) for å kopiere filene
-12. Navigér til `newdir`
-13. Trykk (Y) for å lime inn filene
-14. Velg "Move path(s)"
-15. Filene med store bokstaver i filendingene vil nå ha blitt flyttet til `newdir` mappen
-16. Trykk (Start) for omstart
-17. Gå tilbake til [installasjon av arm9loaderhax](installing-arm9loaderhax) og prøv FBI injeksjonen på nytt
-18. Hvis det fortsatt ikke virker, flytt filene med store bokstaver tilbake til `content` mappen, og flytt de med små til `newdir` og gå til [Installasjon av arm9loaderhax](installing-arm9loaderhax) og prøv FBI injeksjonen på nytt
+1. Legg merke til at det er to sett med apper og tmdfiler, ett sett med filendinger med store bokstaver (`.TMD` og `.APP`), og ett sett med små bokstaver (`.tmd` and `.app`)
+1. Mens du holder (R), trykk (Y) for å lage en ny mappe
+1. Press (A) to confirm the name `newdir` (it does not matter what the folder is called)
+1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+1. Trykk (L) utløseren på hver av filene med store bokstaver i filendelsen (`.TMD` og `.APP`) for å markere dem
+1. Trykk (Y) for å kopiere filene
+1. Navigér til `newdir`
+1. Trykk (Y) for å lime inn filene
+1. Velg "Move path(s)"
+1. Filene med store bokstaver i filendingene vil nå ha blitt flyttet til `newdir` mappen
+1. Press (Start) to reboot your device
+1. Gå tilbake til [installasjon av arm9loaderhax](installing-arm9loaderhax) og prøv FBI injeksjonen på nytt
+1. Hvis det fortsatt ikke virker, flytt filene med store bokstaver tilbake til `content` mappen, og flytt de med små til `newdir` og gå til [Installasjon av arm9loaderhax](installing-arm9loaderhax) og prøv FBI injeksjonen på nytt
 
 ## <a name="ts_browser" /> en nettleserbasert exploit fungerer ikke
 Nettleserbaserte exploits (som browserhax eller 2xrsa) er ofte ustabile og krasjer ofte, men de kan noen ganger bli fikset ved å gjennomføre følgende steg
 
-1. Åpne nettleseren, og deretter nettleserinnstillingene
-2. Bla til bunnen og intialiser savedata (Dette kan også være kalt slett alle lagrede Data)
-3. Prøv exploiten på nytt
+1. Launch the browser, then launch the browser settings
+1. Bla til bunnen og intialiser savedata (Dette kan også være kalt slett alle lagrede Data)
+1. Prøv exploiten på nytt
 
 ## <a name="ts_safe_a9lh" />Systemet starter opp rett inn i SafeA9LHInstaller
 Du kopierte feil `arm9loaderhax.bin` fil til SD-kortet (du skulle bare a hopiert `3ds` mappen og `SafeA9LHInstaller.dat`filen fra SafeA9LHInstaller zip)    
 
 1. Bruk den riktige `arm9loaderhax.bin`
-2. Kopier `arm9loaderhax.bin` fra Luma3DS `.zip` til roten av SD-kortet
-3. Start på nytt mens du holder (Select) og fortsett
+1. Kopier `arm9loaderhax.bin` fra Luma3DS `.zip` til roten av SD-kortet
+1. Start på nytt mens du holder (Select) og fortsett
 
 ## <a name="ts_safe_a9lh_screen" />SafeA9LHInstaller viser en glitchet skjerm
 Dette skjer noen ganger, men grunnen er ukjent. Knappene virker fortsatt, men skjermen ser glitchet ut
 
 1. Følg instruksjonene som normalt
-2. Trykk (Select) og arm9loaderhax vil bli installert
-3. Vent noen sekunder
-4. + Slå konsollen av ved å trykke på en hvilken som helst knapp
-
-## <a name="ts_d9_backup" />Decrypt9 eller Hourglass9 vil ikke gjenopprette / finner ikke sikkerhetskopi av NAND
-
-1. Kontroller at du ikke har en mappe med navn "Decrypt9" på **på roten** av SD-kortet
-2. Prøv å sjekke for feil på SD-kortet med [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), eller [F3X (Mac)](f3x-(mac))
-3. Prøv å sikkerhetskopiere filene på SD-kortet, formater SD-kortet, så kopier filene tilbake
-4. Prøv et annet SD-kort
+1. Trykk (Select) og arm9loaderhax vil bli installert
+1. Vent noen sekunder
+1. Power off your device by pressing any button
 
 ## <a name="ts_sys_down" />Svart skjerm under oppstart av SysNAND
 
-1. Prøv å starte uten SD-kort, og sett det inn etter oppstart.
-    1. Slå av konsollen ved å holde nede strømknappen.
-    2. Ta ut SD-kortet.
-    3. Slå på konsollen.
-    4. Når hjemmemenyen vises, sett inn SD-kortet.
-    5. Hvis dette virket, bør du fjerne hjemmemenyens extdata ved å navigere til denne mappen på SD-kortet: `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/`
+1. Try booting with your SD card out, and then reinserting it after booting
+    1. Power off your device
+    1. Remove the SD card from your device
+    1. Power on your device
+    1. When the home menu appears, reinsert your SD card into your device
+    1. If this worked, you should clear Home Menu's extdata by navigating to the following folder on your SD card: `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/`
         + EUR Region: Slett `00000098`
         + JPN Region: Slett `00000082`
         + USA Region: Slett `0000008f`
+        + CHN Region: Delete `000000A1`
         + KOR Region: Slett `000000A9`
-2. Prøv å starte uten spillkasett (inkludert flashkort)
-3. Hvis du har en hardmod og en NAND sikkerhetskopi, flash sikkerhetskopien tilbake til SysNAND.
-4. Prøv å starte inn i gjennoppretningsmodus og oppdatere systemet.    
+        + TWN Region: Delete `000000B1`
+1. Prøv å starte uten spillkasett (inkludert flashkort)
+1. If you have a hardmod and a NAND backup, flash the backup back to SysNAND
+1. Try booting into recovery mode and updating your system    
     * Dette vil sannsynligvis ikke fungere på en Old3DS nedgradert til 2.1.0*    
     **Dette vill BRICKE en New 3DS som er nedgradert til 2.1.0**
-    1. Slå av konsollen ved å holde nede strømknappen.
-    2. Hold (L)+(R)+(A)+(Up).
-    3. Slå på konsollen.
-    4. Hvis du kommer inn i safemode, oppdater #DSen *Kun hvis du har et inngangspunkt for den nyeste FW versjonen og det er mulig å nedgradere fra den* og prøv å nedgradere igjen.
-5. Det er mulig at 3DSen din er bricket. For support, ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+    1. Power off your device
+    1. Hold (L)+(R)+(A)+(Up)
+    1. Power on your device
+    1. If you enter safe mode, update your device *only if you have an entrypoint for the latest FW version and it is possible to downgrade from it* and attempt the downgrade again.
+1. Your device may be bricked. For support, ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
 
 ## <a name="ts_sys_a9lh" />Svart skjerm under oppstart av SysNAND etter insallasjon av arm9loaderhax
 
 1. Forsikre deg om at du har et nyttelast som fungerer.
     1. Kontroller at `arm9loaderhax.bin` finnes på roten av SD-kortet.
-2. Prøv å tilbakestille Luma's konfigurasjon og fikse alternativer
+1. Prøv å tilbakestille Luma's konfigurasjon og fikse alternativer
     1. Slett `/luma/config.bin` fra SD-kortet
-    2. Angi alternativer når den starter
-3. Test oppstart av Hourglass9
+    1. Angi alternativer når den starter
+1. Test booting GodMode9
     1. På Luma3DS, hold (Start) ved oppstart
-4. Prøv å slett hjemmemenyens extdata
+1. Prøv å slett hjemmemenyens extdata
     1. Fjern hjemmemenyens extdata ved å navigere til den følgende mappen på SD-kortet: `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/`
-        + EUR Region: Slett `00000098`
-        + JPN Region: Slett `00000082`
-        + USA Region: Slett `0000008f`
-        + KOR Region: Slett `000000A9`
-5. Prøv å starte uten spillkasett (inkludert flashkort)
-6. Hvis du nedgraderte med Gateway tidligere, må du kontrollere at du bruker siste utgave av Luma3DS (v6.2.3 eller nyere)
-7. Hvis NANDen din er på en versjon mellom 3.0.0 og 4.5.0 gjør følgende:
+        + EUR Region: Delete `00000098`
+        + JPN Region: Delete `00000082`
+        + USA Region: Delete `0000008f`
+        + CHN Region: Delete `000000A1`
+        + KOR Region: Delete `000000A9`
+        + TWN Region: Delete `000000B1`
+1. Try booting without any cartridges inserted (including flashcarts)
+1. Hvis du nedgraderte med Gateway tidligere, må du kontrollere at du bruker siste utgave av Luma3DS (v6.2.3 eller nyere)
+1. Hvis NANDen din er på en versjon mellom 3.0.0 og 4.5.0 gjør følgende:
     + Kontroller at du bruker nyeste utgave av Luma3DS (v6.6 eller høyere, i minst)
     + Last ned [denne filen](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) og endre navnet til `firmware.bin`
     + Last ned [denne filen](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
     + Kopier `firmware.bin` og `cetk` til `/luma/` mappen på SD-kortet
-    + Slett begge filene etter du har oppdatert konsollen
-8. Prøv å følg [9.2.0 ctrtransfer](9.2.0-ctrtransfer)
-9. Spør om hjelp fra [#3dshacks på Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) eller [Nintendo Homebrew på Discord](https://discord.gg/MWxPgEp).
+    + Delete both of these files after updating your device
+1. Try following [9.2.0 CtrTransfer](9.2.0-crtransfer)
+1. Spør om hjelp fra [#3dshacks på Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) eller [Nintendo Homebrew på Discord](https://discord.gg/MWxPgEp).
+
+## <a name="ts_transfer" />Error during SafeCtrTransfer
+
+If an error occurs during the SafeCtrTransfer process, you will be prompted to launch an external payload for the purpose of repairing your device.
+
+#### What you need
+
+* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+
+#### Instructions
+
+1. Select "Unmount SD card"
+1. Insert your SD card into your computer
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/ctrtransfer/` folder on your SD card and rename `GodMode9.bin` in `/ctrtransfer/` to `payload.bin`
+1. Reinsert your SD card into your device
+1. Select "Run 0:/ctrtransfer/payload.bin"
+1. If it was successful, you will have entered GodMode9
+1. Navigate to `SDCARD` -> `ctrtransfer`
+1. Press (A) on `<serialnumber>_nand.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
+1. Press (A) to unlock SysNAND overwriting, then input the key combo given
+  + This will not overwrite your arm9loaderhax installation
+1. Input the key combo given to unlock SysNAND (lvl1) writing
+  + This process will take some time
+1. Press (A) to continue once it has completed
+1. Press (Start) to reboot your device
+1. Report this issue to the [SafeCtrTransfer Issues Page](https://github.com/d0k3/SafeCtrTransfer/issues)
 
 ## <a name="ts_sys_blue" />Blåskjerm under oppstart (bootrom error)
 
-1. Din 3DS er bricket
-2. Du vil trenge en [hardmod](https://gbatemp.net/threads/414498/) eller reparere / erstatte konsollen
+1. Your device is bricked
+1. You will need to get a [hardmod](https://gbatemp.net/threads/414498/) or repair / replace your device
