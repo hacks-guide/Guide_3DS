@@ -45,7 +45,7 @@ Region changing using CtrTransfer (which this method uses) seems to cause reboot
 
 ##### Часть I - Подготовительные работы
 
-1. Power off your device
+1. Выключите консоль
 1. Вставьте SD-карту в компьютер
 1. Создайте папку `cias` в корне SD-карты
 1. Скопируйте `GodMode9.bin` из `.zip-архива` GodMode9 в папку `/luma/payloads/` на SD-карте и переименуйте `GodMode9.bin` внутри папки `/luma/payloads/` в `start_GodMode9.bin`
@@ -55,67 +55,67 @@ Region changing using CtrTransfer (which this method uses) seems to cause reboot
 
 ##### Часть II - Резервное копирование Ticket-файлов
 
-1. Launch GodMode9 from arm9loaderhax by holding (Start) during boot
-1. Navigate to `SYSNAND CTRNAND` -> `dbs`
+1. Запустите GodMode9 из под arm9loaderhax, удерживая (Start) во время загрузки
+1. Перейдите в `SYSNAND CTRNAND` -> `dbs`
 1. Press (A) on `ticket.db` to select it, then select "Mount as ticket.db"
 1. If it exists, hold (R) and press (A) at the same time on `eshop` to select the folder, then select "Copy to 0:/gm9out"
   + This process may take some time if you have many tickets
-  + Press (A) to continue once it has completed
+  + Нажмите (A) для продолжения, когда процесс завершится
 1. If it exists, hold (R) and press (A) at the same time on `unknown` to select the folder, then select "Copy to 0:/gm9out"
   + This process may take some time if you have many tickets
-  + Press (A) to continue once it has completed
-1. Press (B) to return to the main menu
+  + Нажмите (A) для продолжения, когда процесс завершится
+1. Нажмите (B) для возврата в главное меню
 
-##### Section III - CtrTransfer
+##### Часть III - CtrTransfer
 
-1. Navigate to `SDCARD` -> `files9`
+1. Перейдите в `SDCARD` -> `files9`
 1. Press (A) on the CtrTransfer `.bin` to select it
 1. Select "CTRNAND options..."
 1. Select "Adapt image to SysNAND"
 1. Press (A) to confirm alteration of the image for your device
-  + This process may take some time
-1. Press (A) to continue once it has completed
+  + Этот процесс может занять некоторое время
+1. Нажмите (A) для продолжения, когда процесс завершится
 1. Press (Y) on the CtrTransfer `.bin` to copy it
-1. Press (B) twice to return to the main menu
-1. Navigate to `SYSNAND VIRTUAL`
+1. Дважды нажмите (B) для возврата в главное меню
+1. Перейдите в `SYSNAND VIRTUAL`
 1. Press (Y) to paste the CtrTransfer `.bin`
 1. Press (A) to confirm, then press (A) to inject
-  + This process will take some time
+  + Этот процесс займет некоторое время
 1. Once the transfer has completed, press (Start) to reboot your device
 1. Update your device by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
   + Обновление консоли с установленным A9LH + Luma (который стоит у вас) безопасно, прекратите переспрашивать
   + При появлении ошибки, поставьте в настройках подключения, в настройках DNS "Получать DNS автоматически" в положение "Да"
 
-##### Section IV - Injecting FBI
+##### Часть IV - Интеграция FBI
 
-1. Reboot holding (Start) during boot to launch GodMode9
-1. Navigate to `SDCARD` -> `cias`
-1. Press (A) on `FBI.cia` to select it, then select "CIA image options...", then select "Mount image to drive"
-1. Press (A) on the `.app` file, then select "NCCH image options", then select "Inject to H&S"
-1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+1. Перезагрузитесь, удерживая кнопку (Start), чтобы запустить GodMode9
+1. Перейдите в `SDCARD` -> `cias`
+1. Нажмите (A) чтобы выбрать файл `FBI.cia`, затем выберите "CIA image options...", затем "Mount image to drive"
+1. Нажмите (A) чтобы выбрать файл `.app`, затем выберите "NCCH image options", затем "Inject to H&S"
+1. Нажмите (A), чтобы разрешить запись в SysNAND (lvl1) и введите указанную комбинацию кнопок
 1. Нажмите (A), чтобы продолжить
-1. Press (Start) to reboot your device
+1. Нажмите (Start) для перезагрузки
 1. Если при запуске Health & Safety запускается не FBI и вы в прошлом понижали прошивку с помощью Gateway, перейдите в раздел [проблемы и их решения](troubleshooting#gw_fbi)
 
-##### Section V - Reinstalling Tickets
+##### Часть V - Переустановка тикетов
 
 If you had no `eshop` or `unknown` folders earlier, skip this section.
 {: .notice--info}
 
-1. Launch Health and Safety (which is now FBI)
-1. Navigate to `SD` -> `cias`
-1. Select "FBI.cia"
-1. Select the "Install" option, then press (A) to confirm
-1. Return to the SD directory with (B)
-1. Select "gm9out"
+1. Запустите "Информация о здоровье и безопасности" (Health and Safety) (теперь это FBI)
+1. Перейдите в `SD` -> `cias`
+1. Выберите "FBI.cia"
+1. Выберите "Install", затем нажмите (A) для подтверждения
+1. Нажмите (B), чтобы вернуться в папку "SD"
+1. Выберите "gm9out"
 1. Do the following process for either the `eshop` folder, `unknown` folder, or both
-  + Navigate to the folder
-  + Select "\<current directory>"
-  + Select "Install and delete all tickets"
-  + Wait. Может показаться, что приставка зависла, просто дайте ей время.
-  + Press (A) to confirm
-  + Press (B) to decline installing tickets from CDN.
-1. Press (Home) to exit FBI
+  + Перейдите в папку
+  + Выберите "\<current directory>"
+  + Выберите "Install and delete all tickets"
+  + Ожидайте. Может показаться, что приставка зависла, просто дайте ей время.
+  + Нажмите (A) для подтверждения
+  + Нажмите (B) для отмены установки тикетов из CDN.
+1. Нажмите (Home) для выхода из FBI
 
 ##### Section VI - Region settings
 
@@ -127,18 +127,18 @@ If you had no `eshop` or `unknown` folders earlier, skip this section.
 
 ##### Section VII - Restore Health and Safety
 
-1. Reboot holding (Start) during boot to launch GodMode9
-1. Press (Home) to bring up the action menu
-1. Select "More..."
-1. Select "Restore H&S"
-1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+1. Перезагрузитесь, удерживая кнопку (Start), чтобы запустить GodMode9
+1. Нажмите кнопку (Home) для вызова меню
+1. Выберите "More..."
+1. Выберите "Restore H&S"
+1. Нажмите (A), чтобы разрешить запись в SysNAND (lvl1) и введите указанную комбинацию кнопок
 
 ##### Section VII - Remove CtrTransfer image
 
-1. Navigate to `SDCARD` -> `files9`
+1. Перейдите в `SDCARD` -> `files9`
 1. Press (X) on the CtrTransfer image `.bin` to delete it
 1. Нажмите (A) для подтверждения
-1. Press (Start) to reboot your device
+1. Нажмите (Start) для перезагрузки
 
 ___
 
