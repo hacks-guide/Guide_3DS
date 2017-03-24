@@ -56,40 +56,33 @@ permalink: /zh_TW/region-changing.html
 1. 解壓 FBI `.zip` 中的 `FBI.cia` 到 SD 卡中的 `/cias/` 資料夾底下
 1. 將 SD 卡插回裝置中
 
-##### 第二節 — 備份 Tickets
+##### Section II - CTRTransfer
 
 1. 開機時按住「Start」鍵以透過 arm9loaderhax 啟動 GodMode9
+1.  移動至 `SDCARD` -> `files9`
+1. 選擇 CTRTransfer `.bin`，並按「A」選擇
+1. 選擇「CTRNAND options...」
+1. Select "Transfer image to CTRNAND"
+1. If prompted, select "Transfer to SysNAND"
+  + This prompt will only appear if you have an EmuNAND
+1. 按「A」解鎖 SysNAND（lvl1）的寫入保護，然後按下提示的按鍵組合
+  + 此過程將花費一些時間
+1. Once the transfer has completed, press (A) to continue
+1. 按「B」兩次回到主選單
 1. 到 `SYSNAND CTRNAND` -> `dbs` 中
-1. 選取 `ticket.db` 並按「A」選取，並選擇「Mount as ticket.db」
+1. Press (A) on `ticket.bak` to select it, then select "Mount as ticket.db"
+1. 按下「Start」鍵重啟你的裝置
 1. 若存在的話，在 `eshop` 上按住「R」並同時按下「A」以選取資料夾，並選擇「Copy to 0:/gm9out」
   + 如果你有很多 tickets 的話，本過程可能會耗費一些時間
   + 完成後，按「A」繼續
 1. 若存在的話，在 `unknown` 上按住「R」並同時按下「A」以選取資料夾，並選擇「Copy to 0:/gm9out」
   + 如果你有很多 tickets 的話，本過程可能會耗費一些時間
   + 完成後，按「A」繼續
-1. 按「B」回到主選單
-
-##### 第三節 — CTRTransfer
-
-1.  移動至 `SDCARD` -> `files9`
-1. 選擇 CTRTransfer `.bin`，並按「A」選擇
-1. 選擇「CTRNAND options...」
-1. 選擇「Adapt image to SysNAND」
-1. 按「A」確認對你的設備鏡像檔的更改
-  + 此過程可能將花費一些時間
-1. 完成後，按「A」繼續
-1. 選擇 CTRTransfer `.bin`，並按「Y」複製
-1. 按「B」兩次回到主選單
-1. 移動至 `SYSNAND VIRTUAL`
-1. 按「Y」貼上 CTRTransfer `.bin`
-1. 按「A」確認，然後按「A」進行注入
-  + 此過程將花費一些時間
-1. 備份完成後，按下「Start」鍵重啟你的裝置
 1. 到裝置主選單中更新你的主機，到「系統設置（System Settings）」、「其他設置（Other Settings）」底下選擇「系統更新（System Update）」
   + 在 A9LH + Luma （不管你用什麼）底下更新是沒問題的，別再問啦
   + 如果過程中出現錯誤，試試到 DNS 設定底下將設定改成「自動 （auto）」
 
-##### 第四節 — 注入 FBI 管理器
+##### Section III - Injecting FBI
 
 1. 重開機時按住「Start」鍵進入 GodMode9
 1. 移動至 `SDCARD` -> `cias`
@@ -100,7 +93,7 @@ permalink: /zh_TW/region-changing.html
 1. 按下「Start」鍵重啟你的裝置
 1. 如果你啟動後發現依然是原廠的「健康與警示」程式，並且之前曾經用 Gateway 進行過系統降級，[請參見此疑難排解](troubleshooting#gw_fbi)
 
-##### 第五節 — 重新安裝 Tickets
+##### Section IV - Reinstalling Tickets
 
 如果您之前沒有 `eshop` 或 `unknown` 資料夾，請跳過本節。
 {: .notice--info}
@@ -120,7 +113,7 @@ permalink: /zh_TW/region-changing.html
   + 按「B」以取消 CDN tickets 的安裝
 1. 按下「Home」鍵退出 FBI 管理器
 
-##### 第六節 — 區域設定
+##### Section V - Region settings
 
 1. 開啟系統設定
 1. 選擇「Other Settings」、「Profile」中的「Region Settings」
@@ -128,7 +121,7 @@ permalink: /zh_TW/region-changing.html
 1. 如果系統提示的話，你不必設定州的部分
 1. 更新你改區完後的自製系統至最新版本
 
-##### 第七節 — 還原「健康與警示」程式
+##### Section VI - Restore Health and Safety
 
 1. 重開機時按住「Start」鍵進入 GodMode9
 1. 按「Home」鍵以叫出主選單
