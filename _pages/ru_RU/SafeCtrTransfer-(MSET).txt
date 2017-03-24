@@ -1,10 +1,10 @@
 ---
 title: "SafeCTRTransfer (MSET)" #
 lang: ru
-permalink: /safectrtransfer-(mset).html
+permalink: /ru_RU/safectrtransfer-(mset).html
 ---
 
-If you have already hacked your device before and have a EmuNAND based CFW setup, this guide deals exclusively with SysNAND and you should follow all instructions from within or applying to SysNAND. Note that the terms EmuNAND and RedNAND refer to slightly different implementations of [the same concept](http://3dbrew.org/wiki/NAND_Redirection).
+Если вы взламывали ваше устройство ранее и у вас установлена кастомная прошивка на основе EmuNAND, помните, что данное руководство работает только с SysNAND и вы должны выполнять вся шаги находясь в SysNAND. Помните, что RedNAND и EmuNAND - немного разные реализации [одного и того же](http://3dbrew.org/wiki/NAND_Redirection).
 {: .notice--info}
 
 If you downgrade to 2.1.0 on a 2DS or New 3DS and leave Wireless Communication off, you can re-enable the wireless by removing the battery and unplugging the charger for several seconds then booting back up.
@@ -33,8 +33,8 @@ If you've been using the New 3DS's microSD Management to transfer files to your 
 
 {% capture notice %}
 **Вы ГАРАНТИРОВАННО получите НЕВОССТАНАВЛИВАЕМЫЙ брик, если вы введете New 3DS с прошивкой 2.1.0 в режим сна!**    
-**This only happens when shutting the lid _while your device is on_; this does not apply to turning your device off.**    
-**Your device only enters sleep mode when the lid is closed. Таймера, или чего-то похожего, в системе нет.**    
+**Это происходит только при закрытии крышки, _пока устройство включено_; это не касается выключения консоли.**    
+**Устройство переходит в спящий режим только когда крышка закрыта. Таймера, или чего-то похожего, в системе нет.**    
 **Оказавшись на 2.1.0 без промедления сделайте все необходимые шаги, чтобы избежать этого!**    
 {% endcapture %}
 
@@ -42,13 +42,13 @@ If you've been using the New 3DS's microSD Management to transfer files to your 
 
 #### Описание шагов
 
-In this section, we will be flashing your device's [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) partition to 2.1.0 in order to take advantage of an oversight in 2.1.0 for the purpose of extracting the [OTP](https://www.3dbrew.org/wiki/OTP_Registers) unique to your device. OTP необходим для установки arm9loaderhax и **не может быть использован** на других устройствах.
+В этой части мы будем прошивать [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) (англ.) консоли до версии 2.1.0, чтобы воспользоваться уязвимостью получения уникального для устройства [OTP](https://www.3dbrew.org/wiki/OTP_Registers) (англ.). OTP необходим для установки arm9loaderhax и **не может быть использован** на других устройствах.
 
 Это достигается благодаря [установке заранее подготовленного образа CTRTransfer](https://www.reddit.com/r/3dshacks/comments/4zhe4a/) (англ.), содержащего 2.1.0, и копированию в него уникальных для каждой консоли файлов (таких как `moveable.sed` и `SecureInfo_A`), а затем восстановлением базы данных тайтлов.
 
 #### Что понадобится
 
-* DS flashcard that works on your device version
+* Флешкартридж для DS, работающий на вашей версии прошивки
 * Свежая версия [SafeCTRTransfer](https://github.com/d0k3/SafeCTRTransfer/releases/latest)
 * Образ 2.1.0 CTRTransfer для вашего устройства и региона     
 *(Если вашего региона нет в списке, выберите любой)*:
@@ -58,40 +58,40 @@ In this section, we will be flashing your device's [CTRNAND](https://www.3dbrew.
 
 #### Инструкция
 
-##### Section I - Prep Work
+##### Часть I - Подготовительные работы
 
-1. Power off your device
-1. Insert your SD card into your computer
+1. Выключите консоль
+1. Вставьте SD-карту в компьютер
 1. Создайте папку `CTRTransfer` в корне SD-карты, если таковой нет
 1. Скопируйте 2.1.0 `.bin` и `.bin.sha` из `.zip-архива` CTRTransfer в папку `/CTRTransfer/` на SD-карте
-1. Copy `SafeCTRTransfer.dat` from the SafeCTRTransfer `.zip` to the root of your SD card
-1. Reinsert your SD card into your device
-1. Copy `SafeCTRTransfer.nds` from the SafeCTRTransfer `.zip` to your DS flashcard
-1. Power on your device
+1. Скопируйте `SafeCTRTransfer.dat` из `.zip-ахрива` SafeCTRTransfer в корень SD-карты
+1. Вставьте SD-карту обратно в консоль
+1. Скопируйте `SafeCTRTransfer.nds` из `.zip-архива` CTRTransfer на ваш флешкартридж для DS
+1. Включите консоль
 
 ##### Часть II - Запуск SafeCTRTransfer
 
 1. Start your DS flashcard from your device
-1. Boot `SafeCTRTransfer.nds` using your flashcart
-1. Select the correct option for your system version
+1. Запустите `SafeCTRTransfer.nds`, используя флешкартридж
+1. Выберите опцию, соответствующую версии прошивки
   + 4.X.X -> "4.x SafeCTRTransfer"
   + 6.X.X -> "6.x SafeCTRTransfer"
-1. Reboot the system, then go to System Settings, then "Other Settings", then "Profile", then "Nintendo DS Profile"
+1. Перезагрузите консоль, зайдите в "Системные настройки" (System Settings), затем "Прочие настройки" (Other Settings), затем "Профиль" (Profile), затем "Профиль Nintendo DS" (Nintendo DS Profile)
 1. Если эксплойт сработал, запустится SafeCTRTransfer
 
 ##### Часть III - CTRTransfer
 
 1. Подождите пока SafeCTRTransfer автоматически произведет инициализацию и проверки безопасности
-  + If you get an error, ensure you have all files in the correct locations and that you have enough free space on your SD card as detailed in [Get Started](get-started)
+  + Если возникнет ошибка, убедитесь что все файлы на месте, и что на SD-карте достаточно свободного места в соответствии с разделом [Начало](get-started)
 1. При появлении запроса, введите указанную комбинацию кнопок, чтобы подтвердить CTRTransfer на 2.1.0
-  + This process will take some time
-  + This process will automatically create a backup of your device's NAND at `/ctrtransfer/<serialnumber>_nand.bin`
-  + If you get a critical error, [follow this troubleshooting guide](troubleshooting#ts_transfer)   
+  + Этот процесс займет некоторое время
+  + Этот процесс автоматически создаст бэкап NAND вашей консоли в файле `/ctrtransfer/<serialnumber>_nand.bin`
+  + При возникновении критической ошибки, обратитесь к разделу [Проблемы и их решения](troubleshooting#ts_transfer)   
 1. Once this process has completed, remove your SD card from your device to reboot
   + The reboot will take about 2 seconds to trigger
-  + While on 2.1.0, your device will black screen on boot if your SD card is inserted before the home menu loads
-  + Every time your device is rebooted on 2.1.0, you will need to take out your SD card before boot and put it back in after the home menu loads
-  + For now, leave your SD card out as you will be copying files to it in the next page
+  + Консоль с прошивкой 2.1.0 при загрузке будет зависать на чёрном экране, если SD-карта будет находиться в консоли до загрузки меню HOME
+  + Каждый раз при перезагрузке на 2.1.0 необходимо извлекать SD-карту и вставлять обратно после загрузки меню HOME
+  + Не вставляйте SD-карту обратно в консоль. На следующей странице вы будете копировать на неё файлы
   + Это будет исправлено после восстановления вашей резервной копии на следующей странице
 
 ___
@@ -101,9 +101,9 @@ ___
 
 {% capture notice %}
 **Вы ГАРАНТИРОВАННО получите НЕВОССТАНАВЛИВАЕМЫЙ брик, если вы введете New 3DS с прошивкой 2.1.0 в режим сна!**    
-**This only happens when shutting the lid _while your device is on_; this does not apply to turning your device off.**    
-**Your device only enters sleep mode when the lid is closed. Таймера, или чего-то похожего, в системе нет.**    
-**Once on 2.1.0, you should continue without delay to avoid any possibility of this happening!**    
+**Это происходит только при закрытии крышки, _пока устройство включено_; это не касается выключения консоли.**    
+**Устройство переходит в спящий режим только когда крышка закрыта. Таймера, или чего-то похожего, в системе нет.**    
+**Оказавшись на 2.1.0 без промедления сделайте все необходимые шаги, чтобы избежать этого!**    
 {% endcapture %}
 
 <div class="notice--danger">{{ notice | markdownify }}</div>
