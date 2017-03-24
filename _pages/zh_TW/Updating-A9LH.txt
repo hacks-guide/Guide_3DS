@@ -6,7 +6,7 @@ permalink: /zh_TW/updating-a9lh.html
 
 ### 上次更新︰ 2016 年 11 月 3 日
 
-安裝 arm9loaderhax 本身這過程是由寫入 payloads 至焊在主板裝置上 NAND 晶片的 NFIRM 磁區中所達成。 These payloads are updated rarely and only really serve the purpose of launching `arm9loaderhax.bin` from your SD card, which is, in our case, Luma3DS.
+安裝 arm9loaderhax 本身這過程是由寫入 payloads 至焊在主板裝置上 NAND 晶片的 NFIRM 磁區中所達成。 這些 payload 檔很少會需要更新，而且真正目的只是為了啟動 SD 卡中的 `arm9loaderhax.bin`，也就是我們的 Luma3DS。
 {: .notice}
 
 如果你不確定你所安裝的 arm9loaderhax 版本是什麼，照做就對了，因為它將會把 arm9loaderhax 更新至最新版本。 就算你本來安裝的就是最新版的，再更新是沒關係的。
@@ -21,7 +21,7 @@ permalink: /zh_TW/updating-a9lh.html
 data_input 的版本指的是 `.zip` 相容於不同安裝器版本的更新版，而跟更新 A9LH 本身（payload 檔）*不一樣*。 它們在安裝過程之外無實際差異。
 {: .notice--info}
 
-To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+本頁面會有些許的[磁力](https://en.wikipedia.org/wiki/Magnet_URI_scheme)連結，你將需要個像 [Deluge](http://dev.deluge-torrent.org/wiki/Download) 的 BT 種子下載器來下載磁力連結的檔案。
 {: .notice--info}
 
 下列步驟有將會更新各式 payloads 及 AES 金鑰資料庫。
@@ -33,37 +33,37 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
 * <i class="fa fa-magnet" aria-hidden="true" title="這是個種子連結。 請使用一個 BT 下載器來下載此檔案。"></i> - [`data_input_v4.zip`](magnet:?xt=urn:btih:00f03ff69b5961307303d5e4778a2f65a528bf2d&dn=data%5Finput%5Fv4.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 * 最新版的 [SafeA9LHInstaller](https://github.com/AuroraWright/SafeA9LHInstaller/releases/latest) *(`.7z` 檔案)*
 * 最新版的 [arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(`.7z` 檔案)*
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* 最新版的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 
 #### 操作說明
 
 **請於接下來的步驟中 _覆蓋_  所有的檔案。**
 {: .notice--info}
 
-##### Section I - Prep Work
+##### 第一節 — 準備工作
 
-1. Power off your device
+1. 關閉你的裝置
 1. 將 SD 卡插入電腦中
 1. 如果 `aeskeydb.bin` 檔案存在於 SD 卡根目錄底下的話，請將它刪除
 1. 如果 `a9lh` 資料夾存在的話，請將它刪除
 1. 在 SD 卡上，將 `aeskeydb.bin` 複製到 `/files9/` 資料夾底下
-1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `start_GodMode9.bin`
-  + If `start_Hourglass9.bin` already exists in this folder, delete `start_Hourglass9.bin`
+1. 解壓 GodMode9 `.zip` 中的 `GodMode9.bin` 到 SD 卡中的 `/luma/payloads/` 底下，並重新命名為 `start_GodMode9.bin`
+  +如果此資料夾中已存在 `start_Hourglass9.bin`，請將此檔案刪除
 1. 解壓 SafeA9LHInstaller `.zip` 中的 `arm9loaderhax.bin` 到 SD 中的 `/luma/payloads/` 下
 1. 將 `/luma/payloads/` 中的 `arm9loaderhax.bin` 重新命名為 `down_safea9lhinstaller.bin`
 1. 解壓 data_input `.zip` 中的 `a9lh` 資料夾到你的 SD 卡下
 1. 解壓 arm9loaderhax `.7z` 中的 _所有內容_ 到 SD 卡中的 `a9lh` 資料夾底下
-1. Reinsert your SD card into your device
+1. 將 SD 卡插回裝置中
 
 ##### 第二節 — Payload 更新
 
-1. Launch SafeA9LHInstaller from arm9loaderhax by holding (Down) during boot
+1. 開機時按住「下」鍵以透過 arm9loaderhax 啟動 SafeA9LHInstaller
 1. 按下「選擇鍵 (Select)」更新 arm9loaderhax
-1. Power off your device
+1. 關閉你的裝置
 1. 將 SD 卡插入電腦中
 1. 將 `a9lh` 資料夾從 SD 卡中刪除
 1. 將 `/luma/payloads/` 中的 `down_safea9lhinstaller.bin` 刪除
-1. Reinsert your SD card into your device
+1. 將 SD 卡插回裝置中
 
 ##### 第三節 — 設定 Luma3DS
 
@@ -80,21 +80,21 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
 
 ##### 第四節 — 安裝 Luma3DS 至 CTRNAND
 
-1. Reboot holding (Start) during boot to launch GodMode9
-1. Navigate to `SDCARD`
-1. Press (Y) on `arm9loaderhax.bin` to copy it
+1. 重開機時按住「Start」鍵進入 GodMode9
+1. 移動至 `SDCARD`
+1. 選取 `arm9loaderhax.bin` 並按下「Y」複製
 1. Press (B) to return to
  the main menu
-1. Navigate to `SYSNAND CTRNAND`
-1. Press (Y) to paste `arm9loaderhax.bin`
-1. Select "Copy path(s)"
-  + Overwrite any existing `arm9loaderhax.bin` if prompted
-1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
-1. Press (B) to return to the main menu
+1. 移動至 `SYSNAND CTRNAND`
+1. 按「Y」貼上 `arm9loaderhax.bin`
+1. 選擇 「Copy path(s)」
+  + 如果出現提示，覆蓋任何現有的「arm9loaderhax.bin」
+1. 按「A」解鎖 SysNAND（lvl1）的寫入保護，然後按下提示的按鍵組合
+1. 按「B」回到主選單
 1. 同時按住「R」及「B」以卸除 SD 卡
-1. Remove your SD card from your device
-1. Press (Start) to reboot your device with your SD card removed
-  + Booting your device at least once with your SD card removed will allow you to configure the CTRNAND based Luma3DS installation
+1. 將 SD 卡從裝置中拔出
+1. 在 SD 卡拔出後，按下「Start」鍵重啟你的裝置
+  + 在 SD 卡拔除的情況下開機將讓你可以在 CTRNAND 上設置 Luma3DS
 1. 透過方向鍵及「A」以開啟下列選項：    
   + **「Show NAND or user string in System Settings」**
 1. 如果你的裝置是 **New 3DS** 的話，你也可以同時開啟下列選項：
@@ -102,5 +102,5 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
     + 某些情況下，這將提高遊戲的流暢度，但也有些遊戲會有不穩的情況
     + 如果有些遊戲無法正常運作的話，試試看關閉這個選項再試一次
     + **若在版本 11.3 上啟用此選項將無法運行 Homebrew Launcher！**
-1. Reinsert your SD card into your device
+1. 將 SD 卡插回裝置中
 1. 按下「Start」鍵以存檔並重新啟動系統
