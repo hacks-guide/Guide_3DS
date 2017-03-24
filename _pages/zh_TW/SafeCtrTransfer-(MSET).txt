@@ -1,16 +1,16 @@
 ---
 title: "SafeCTRTransfer (MSET)" #
 lang: zh-Hant
-permalink: /safectrtransfer-(mset).html
+permalink: /zh_TW/safectrtransfer-(mset).html
 ---
 
-If you have already hacked your device before and have a EmuNAND based CFW setup, this guide deals exclusively with SysNAND and you should follow all instructions from within or applying to SysNAND. 注意 EmuNAND 與 RedNAND 指的是些微不同運作方式但[同樣道理](http://3dbrew.org/wiki/NAND_Redirection)的用語。
+如果你先前已經有改機過，且已安裝基於 EmuNAND 的自製系統－請注意本教學是專門用來處理 SysNAND 的，而你應在閱讀此教學時在 SysNAND 底下操作或套用至 SysNAND。 注意 EmuNAND 與 RedNAND 指的是些微不同運作方式但[同樣道理](http://3dbrew.org/wiki/NAND_Redirection)的用語。
 {: .notice--info}
 
-If you downgrade to 2.1.0 on a 2DS or New 3DS and leave Wireless Communication off, you can re-enable the wireless by removing the battery and unplugging the charger for several seconds then booting back up.
+如果你在 2DS 或 New 3DS 上降級前關閉了無線功能，只需要將電池移除並拔掉充電器數秒後再重新啟動主機即可。
 {: .notice--info}
 
-If you've been using the New 3DS's microSD Management to transfer files to your SD card, this will no longer work on 2.1.1. 請於繼續前確保你手上有台可用的 microSD 讀卡機。
+如果你之前都是透過 New 3DS 上的「microSD 資料管理」功能無線傳輸檔案到你 SD 卡上的話，請注意，本功能在版本 2.1.1 上是無法使用的。 請於繼續前確保你手上有台可用的 microSD 讀卡機。
 {: .notice--info}
 
 To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download)
@@ -33,8 +33,8 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
 
 {% capture notice %}
 **如果 New 3DS 在系統 2.1.0 底下進入休眠狀態，就永遠都醒不過來了！（無法還原的磚機）**    
-**This only happens when shutting the lid _while your device is on_; this does not apply to turning your device off.**    
-**Your device only enters sleep mode when the lid is closed. 這與螢幕開啟時間無關。**    
+**這問題只在 _裝置還開啟時_ 將螢幕闔上才會發生；不包括關機。**    
+**裝置只有在螢幕闔上時才會進入休眠模式。 這與螢幕開啟時間無關。**    
 **不過還是建議在升級至 2.1.0 後趕快完成本教學，避免悲劇發生！**    
 {% endcapture %}
 
@@ -42,13 +42,13 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
 
 #### 步驟概述
 
-In this section, we will be flashing your device's [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) partition to 2.1.0 in order to take advantage of an oversight in 2.1.0 for the purpose of extracting the [OTP](https://www.3dbrew.org/wiki/OTP_Registers) unique to your device. 在安裝 arm9loaderhax 時，這 OTP 檔案是缺一不可的，而這檔案**千萬不能**與其他 3DS 主機共用。
+在本節中，我們將寫入到你裝置上的 [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) 磁區並刷入版本 2.1.0 的系統。此版本上的漏洞將可以讓我們提取你裝置上獨特的 [OTP](https://www.3dbrew.org/wiki/OTP_Registers) 資訊。 在安裝 arm9loaderhax 時，這 OTP 檔案是缺一不可的，而這檔案**千萬不能**與其他 3DS 主機共用。
 
 This is accomplished by [installing a premade CTRTransfer image](https://www.reddit.com/r/3dshacks/comments/4zhe4a/) containing 2.1.0, copying your device specific files (such as `moveable.sed` and `SecureInfo_A`) to it, then fixing the title databases.
 
 #### 必備項目
 
-* DS flashcard that works on your device version
+* 可在你裝置上運行的燒錄卡
 * The latest release of [SafeCTRTransfer](https://github.com/d0k3/SafeCTRTransfer/releases/latest)
 * The 2.1.0 CTRTransfer image for your device and region     
 *（如果你的裝置不屬下列區域內，挑一個就對了）*:
@@ -60,37 +60,37 @@ This is accomplished by [installing a premade CTRTransfer image](https://www.red
 
 ##### Section I - Prep Work
 
-1. Power off your device
+1. 關閉你的裝置
 1. 將 SD 卡插入電腦中
 1. Create a folder named `CTRTransfer` on the root of your SD card if it does not already exist
 1. Copy the 2.1.0 `.bin` and `.bin.sha` from the CTRTransfer `.zip` to the `/CTRTransfer/` folder on your SD card
 1. Copy `SafeCTRTransfer.dat` from the SafeCTRTransfer `.zip` to the root of your SD card
-1. Reinsert your SD card into your device
+1. 將 SD 卡插回裝置中
 1. Copy `SafeCTRTransfer.nds` from the SafeCTRTransfer `.zip` to your DS flashcard
-1. Power on your device
+1. 啟動你的裝置
 
 ##### Section II - Launch SafeCTRTransfer
 
-1. Start your DS flashcard from your device
+1. 啟動你的 DS 燒錄卡
 1. Boot `SafeCTRTransfer.nds` using your flashcart
-1. Select the correct option for your system version
+1. 依據你的系統版本選擇正確的選項：
   + 4.X.X -> "4.x SafeCTRTransfer"
   + 6.X.X -> "6.x SafeCTRTransfer"
-1. Reboot the system, then go to System Settings, then "Other Settings", then "Profile", then "Nintendo DS Profile"
+1. 重新啟動系統，接著到「系統設置（System Settings）」、「其他設置（Other Settings）」、「設定檔（Profile）」中選擇「任天堂 DS 設定檔（Nintendo DS Profile）」
 1. If the exploit was successful, you will have booted into SafeCTRTransfer
 
 ##### Section III - CTRTransfer
 
 1. Allow the SafeCTRTransfer initialization and safety checks to proceed automatically
-  + If you get an error, ensure you have all files in the correct locations and that you have enough free space on your SD card as detailed in [Get Started](get-started)
+  +如果遇到錯誤，請確保所有檔案都在正確的位置中，並且確保你的 SD 卡上有足夠的可用空間，像[從頭開始](get-started)中詳述的那樣
 1. When prompted, input the key combo given to confirm CTRTransfer to 2.1.0
-  + This process will take some time
-  + This process will automatically create a backup of your device's NAND at `/ctrtransfer/<serialnumber>_nand.bin`
+  + 此過程將花費一些時間
+  +這個過程將自動在 `/ctrtransfer/<serialnumber>_nand.bin` 中建立裝置的 NAND 的備份
   + If you get a critical error, [follow this troubleshooting guide](troubleshooting#ts_transfer)   
 1. Once this process has completed, remove your SD card from your device to reboot
   + The reboot will take about 2 seconds to trigger
-  + While on 2.1.0, your device will black screen on boot if your SD card is inserted before the home menu loads
-  + Every time your device is rebooted on 2.1.0, you will need to take out your SD card before boot and put it back in after the home menu loads
+  + 如果你在版本 2.1.0 的裝置上且於載入 HOME 主選單前插入 SD 卡的話，裝置將無法啟動
+  + 每次在重啟版本 2.1.0 的主機時，你將會需要先在 HOME 主選單載入前拔出你的 SD 卡，直到載入完後才能插回
   + For now, leave your SD card out as you will be copying files to it in the next page
   + 這問題將於下一章節還原裝置備份後解決
 
@@ -101,8 +101,8 @@ ___
 
 {% capture notice %}
 **如果 New 3DS 在系統 2.1.0 底下進入休眠狀態，就永遠都醒不過來了！（無法還原的磚機）**    
-**This only happens when shutting the lid _while your device is on_; this does not apply to turning your device off.**    
-**Your device only enters sleep mode when the lid is closed. 這與螢幕開啟時間無關。**    
+**這問題只在 _裝置還開啟時_ 將螢幕闔上才會發生；不包括關機。**    
+**裝置只有在螢幕闔上時才會進入休眠模式。 這與螢幕開啟時間無關。**    
 **不過還是建議在升級至 2.1.0 後趕快完成本教學，避免悲劇發生！**    
 {% endcapture %}
 
