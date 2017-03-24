@@ -39,40 +39,33 @@ Because the point of the 9.2.0 CTRTransfer is to troubleshoot issues caused by t
 1. Copy `FBI.cia` from the FBI `.zip` to the `/cias/` folder on your SD card
 1. Reinsert your SD card into your device
 
-##### Section II - Backup Tickets
+##### Section II - CTRTransfer
 
 1. Launch GodMode9 from arm9loaderhax by holding (Start) during boot
+1. Navigate to `SDCARD` -> `files9`
+1. Press (A) on the CTRTransfer `.bin` to select it
+1. Select "CTRNAND options..."
+1. Select "Transfer image to CTRNAND"
+1. If prompted, select "Transfer to SysNAND"
+  + This prompt will only appear if you have an EmuNAND
+1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+  + This process will take some time
+1. Once the transfer has completed, press (A) to continue
+1. Press (B) twice to return to the main menu
 1. Navigate to `SYSNAND CTRNAND` -> `dbs`
-1. Press (A) on `ticket.db` to select it, then select "Mount as ticket.db"
+1. Press (A) on `ticket.bak` to select it, then select "Mount as ticket.db"
+1. Press (Start) to reboot your device
 1. If it exists, hold (R) and press (A) at the same time on `eshop` to select the folder, then select "Copy to 0:/gm9out"
   + This process may take some time if you have many tickets
   + Press (A) to continue once it has completed
 1. If it exists, hold (R) and press (A) at the same time on `unknown` to select the folder, then select "Copy to 0:/gm9out"
   + This process may take some time if you have many tickets
   + Press (A) to continue once it has completed
-1. Press (B) to return to the main menu
-
-##### Section III - CTRTransfer
-
-1. Navigate to `SDCARD` -> `files9`
-1. Press (A) on the CTRTransfer `.bin` to select it
-1. Select "CTRNAND options..."
-1. Select "Adapt image to SysNAND"
-1. Press (A) to confirm alteration of the image for your device
-  + This process may take some time
-1. Press (A) to continue once it has completed
-1. Press (Y) on the CTRTransfer `.bin` to copy it
-1. Press (B) twice to return to the main menu
-1. Navigate to `SYSNAND VIRTUAL`
-1. Press (Y) to paste the CTRTransfer `.bin`
-1. Press (A) to confirm, then press (A) to inject
-  + This process will take some time
-1. Once the transfer has completed, press (Start) to reboot your device
 1. Update your device by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
   + Actualizările cât timp folosiți A9LH + Luma(ce aveți) sunt sigure, opriți-vă din a mai întreba despre asta
   + Dacă aceasta vă da o eroare, setați DNS-ul pe "auto"
 
-##### Section IV - Injecting FBI
+##### Section III - Injecting FBI
 
 1. Reboot holding (Start) during boot to launch GodMode9
 1. Navigate to `SDCARD` -> `cias`
@@ -83,7 +76,7 @@ Because the point of the 9.2.0 CTRTransfer is to troubleshoot issues caused by t
 1. Press (Start) to reboot your device
 1. Dacă încă lansați aplicația de bază Health&Safety și ați făcut downgrade folosind Gateway în trecut, [urmați acest ghid de depanare](troubleshooting#gw_fbi)
 
-##### Section V - Reinstalling Tickets
+##### Section IV - Reinstalling Tickets
 
 If you had no `eshop` or `unknown` folders earlier, skip this section.
 {: .notice--info}
@@ -103,7 +96,7 @@ If you had no `eshop` or `unknown` folders earlier, skip this section.
   + Press (B) to decline installing tickets from CDN.
 1. Press (Home) to exit FBI
 
-##### Section VI - Restore Health and Safety
+##### Section V - Restore Health and Safety
 
 1. Reboot holding (Start) during boot to launch GodMode9
 1. Press (Home) to bring up the action menu
@@ -111,7 +104,7 @@ If you had no `eshop` or `unknown` folders earlier, skip this section.
 1. Select "Restore H&S"
 1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
 
-##### Section VII - Remove CTRTransfer image
+##### Section VI - Remove CTRTransfer image
 
 1. Navigate to `SDCARD` -> `files9`
 1. Press (X) on the CTRTransfer image `.bin` to delete it
