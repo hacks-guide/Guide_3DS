@@ -56,40 +56,33 @@ Region changing using CTRTransfer (which this method uses) seems to cause reboot
 1. FBI `.zip` 파일에서 `FBI.cia` 파일을 SD 카드의 `/cias/` 폴더에 복사하세요.
 1. Reinsert your SD card into your device
 
-##### Section II - Backup Tickets
+##### Section II - CTRTransfer
 
 1. Launch GodMode9 from arm9loaderhax by holding (Start) during boot
+1. Navigate to `SDCARD` -> `files9`
+1. Press (A) on the CTRTransfer `.bin` to select it
+1. Select "CTRNAND options..."
+1. Select "Transfer image to CTRNAND"
+1. If prompted, select "Transfer to SysNAND"
+  + This prompt will only appear if you have an EmuNAND
+1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+  + This process will take some time
+1. Once the transfer has completed, press (A) to continue
+1. Press (B) twice to return to the main menu
 1. Navigate to `SYSNAND CTRNAND` -> `dbs`
-1. Press (A) on `ticket.db` to select it, then select "Mount as ticket.db"
+1. Press (A) on `ticket.bak` to select it, then select "Mount as ticket.db"
+1. Press (Start) to reboot your device
 1. If it exists, hold (R) and press (A) at the same time on `eshop` to select the folder, then select "Copy to 0:/gm9out"
   + This process may take some time if you have many tickets
   + Press (A) to continue once it has completed
 1. If it exists, hold (R) and press (A) at the same time on `unknown` to select the folder, then select "Copy to 0:/gm9out"
   + This process may take some time if you have many tickets
   + Press (A) to continue once it has completed
-1. Press (B) to return to the main menu
-
-##### Section III - CTRTransfer
-
-1. Navigate to `SDCARD` -> `files9`
-1. Press (A) on the CTRTransfer `.bin` to select it
-1. Select "CTRNAND options..."
-1. Select "Adapt image to SysNAND"
-1. Press (A) to confirm alteration of the image for your device
-  + This process may take some time
-1. Press (A) to continue once it has completed
-1. Press (Y) on the CTRTransfer `.bin` to copy it
-1. Press (B) twice to return to the main menu
-1. Navigate to `SYSNAND VIRTUAL`
-1. Press (Y) to paste the CTRTransfer `.bin`
-1. Press (A) to confirm, then press (A) to inject
-  + This process will take some time
-1. Once the transfer has completed, press (Start) to reboot your device
 1. Update your device by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
   + A9LH + Luma (지금 적용되어 있는 것) 상태에서 하는 업데이트는 안전합니다. 그만 물어보십시오.
   + 오류가 발생한다면, DNS 설정을 "자동"으로 설정하십시오.
 
-##### Section IV - Injecting FBI
+##### Section III - Injecting FBI
 
 1. Reboot holding (Start) during boot to launch GodMode9
 1. Navigate to `SDCARD` -> `cias`
@@ -100,7 +93,7 @@ Region changing using CTRTransfer (which this method uses) seems to cause reboot
 1. Press (Start) to reboot your device
 1. 기존 안전을 위한 주의사항 앱이 실행되고 예전에 게이트웨이로 다운그레이드한 적이 있다면 [이 문제 해결 가이드](troubleshooting#gw_fbi)를 따르세요.
 
-##### Section V - Reinstalling Tickets
+##### Section IV - Reinstalling Tickets
 
 If you had no `eshop` or `unknown` folders earlier, skip this section.
 {: .notice--info}
@@ -120,7 +113,7 @@ If you had no `eshop` or `unknown` folders earlier, skip this section.
   + Press (B) to decline installing tickets from CDN.
 1. Press (Home) to exit FBI
 
-##### Section VI - Region settings
+##### Section V - Region settings
 
 1. Launch the System Settings
 1. "기타 설정", "유저 정보", "지역 정보"까지 차레로 이동하세요.
@@ -128,7 +121,7 @@ If you had no `eshop` or `unknown` folders earlier, skip this section.
 1. 메시지가 뜨더라도 '주'까지 설정할 필요는 없습니다.
 1. 본체 설정에서 지역이 변경된 커스텀 펌웨어 SysNAND를 최신 버전으로 업데이트하세요.
 
-##### Section VII - Restore Health and Safety
+##### Section VI - Restore Health and Safety
 
 1. Reboot holding (Start) during boot to launch GodMode9
 1. Press (Home) to bring up the action menu
