@@ -1,5 +1,5 @@
 ---
-title: "SafeCTRTransfer (MSET)" #
+title: "SafeCTRTransfer (透過 MSET)" #
 lang: zh-Hant
 permalink: /zh_TW/safectrtransfer-(mset).html
 ---
@@ -13,22 +13,22 @@ permalink: /zh_TW/safectrtransfer-(mset).html
 如果你之前都是透過 New 3DS 上的「microSD 資料管理」功能無線傳輸檔案到你 SD 卡上的話，請注意，本功能在版本 2.1.1 上是無法使用的。 請於繼續前確保你手上有台可用的 microSD 讀卡機。
 {: .notice--info}
 
-To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+本頁面會有些許的[磁力](https://en.wikipedia.org/wiki/Magnet_URI_scheme)連結，你將需要個像 [Deluge](http://dev.deluge-torrent.org/wiki/Download) 的 BT 種子下載器來下載磁力連結的檔案。
 {: .notice--info}
 
-**For now, connecting your device to the internet is REQUIRED to continue after the 2.1.0 CTRTransfer.**
+**目前為止，在 2.1.0 CTRTransfer 後，裝置 _一定_ 得在連網的情況下才能完成本章節。**
 {: .notice--warning}
 
-**Disable the parental controls of your device before doing the 2.1.0 CTRTransfer. 如果你不知道密碼的話，請見[此](https://mkey.salthax.org/)。 如果你的 NNID 因為是給低於13歲的小孩所設置的而無法關閉家長監護的話，你可以將各個家長監護選項停用。**
+**在進行 2.1.0 CTRTransfer 前，請先關閉家長監護功能。 如果你不知道密碼的話，請見[此](https://mkey.salthax.org/)。 如果你的 NNID 因為是給低於13歲的小孩所設置的而無法關閉家長監護的話，你可以將各個家長監護選項停用。**
 {: .notice--warning}
 
-**Performing a CTRTransfer will remove all user-installed tickets (which allow access to games) from your device until the created backup is restored.**
+**進行 CTRTransfer 將從裝置中移除所有用戶安裝的 Tickets（用來啟動遊戲的票證）直到還原備份為止。**
 {: .notice--danger}
 
 **千萬不要在低於版本 6.0.0 時格式化 2DS ，否則你將無法完成初始設置且 _會變磚_ ！**
 {: .notice--danger}
 
-**千萬不要在版本 2.1.0 （原 3DS 的韌體）上的 New 3DS 下更新系統，否則 _保證磚機_ ！ You MUST restore a NAND backup or CTRTransfer back to standard New 3DS firmware first!**
+**千萬不要在版本 2.1.0 （原 3DS 的韌體）上的 New 3DS 下更新系統，否則 _保證磚機_ ！ 你一定得先還原到先前的 NAND 或透過 CTRTransfer 刷回至正常的 New 3DS 韌體才行！**
 {: .notice--danger}
 
 {% capture notice %}
@@ -44,54 +44,54 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
 
 在本節中，我們將寫入到你裝置上的 [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) 磁區並刷入版本 2.1.0 的系統。此版本上的漏洞將可以讓我們提取你裝置上獨特的 [OTP](https://www.3dbrew.org/wiki/OTP_Registers) 資訊。 在安裝 arm9loaderhax 時，這 OTP 檔案是缺一不可的，而這檔案**千萬不能**與其他 3DS 主機共用。
 
-This is accomplished by [installing a premade CTRTransfer image](https://www.reddit.com/r/3dshacks/comments/4zhe4a/) containing 2.1.0, copying your device specific files (such as `moveable.sed` and `SecureInfo_A`) to it, then fixing the title databases.
+這是透過刷入搭載版本 2.1.0 且[預先做好的 CTRTransfer 鏡像檔](https://www.reddit.com/r/3dshacks/comments/4zhe4a/)所達成的。本過程中將保留你的裝置獨有的系統文件（例：`moveable.sed` 及 `SecureInfo_A`），並修復 title 資料庫。
 
 #### 必備項目
 
 * 可在你裝置上運行的燒錄卡
-* The latest release of [SafeCTRTransfer](https://github.com/d0k3/SafeCTRTransfer/releases/latest)
-* The 2.1.0 CTRTransfer image for your device and region     
+* 最新版的 [SafeCTRTransfer](https://github.com/d0k3/SafeCTRTransfer/releases/latest)
+* 對應你裝置地區及型號的 2.1.0 CTRTransfer 鏡像檔     
 *（如果你的裝置不屬下列區域內，挑一個就對了）*:
-  +    <i class="fa fa-magnet" aria-hidden="true" title="這是個種子連結。 Use a torrent client to download the file."></i> - [New 3DS or Old 3DS or 2DS 2.1.0 - EUR - CTRTransfer](magnet:?xt=urn:btih:89acc9c1b488b8b38251de0ddf07975d6bd354a1&dn=2.1.0-4E%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
-  +    <i class="fa fa-magnet" aria-hidden="true" title="這是個種子連結。 Use a torrent client to download the file."></i> - [New 3DS or Old 3DS or 2DS 2.1.0 - JPN - CTRTransfer](magnet:?xt=urn:btih:3dbb9c9c85a33c6242f424dcbaebcacdd8a5912b&dn=2.1.0-4J%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
-  +    <i class="fa fa-magnet" aria-hidden="true" title="這是個種子連結。 Use a torrent client to download the file."></i> - [New 3DS or Old 3DS or 2DS 2.1.0 - USA - CTRTransfer](magnet:?xt=urn:btih:1609ce9ee7b0ed9b6dea0b3e7cca4fc52dad6ff4&dn=2.1.0-4U%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+  +    <i class="fa fa-magnet" aria-hidden="true" title="這是個種子連結。 請使用一個 BT 下載器來下載此檔案。"></i> - [New 3DS 或 原 3DS 或 2DS 2.1.0 - 歐版 - CTRTransfer](magnet:?xt=urn:btih:89acc9c1b488b8b38251de0ddf07975d6bd354a1&dn=2.1.0-4E%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+  +    <i class="fa fa-magnet" aria-hidden="true" title="這是個種子連結。 請使用一個 BT 下載器來下載此檔案。"></i> - [New 3DS 或 原 3DS 或 2DS 2.1.0 - 日版 - CTRTransfer](magnet:?xt=urn:btih:3dbb9c9c85a33c6242f424dcbaebcacdd8a5912b&dn=2.1.0-4J%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    <i class="fa fa-magnet" aria-hidden="true" title="這是個種子連結。 請使用一個 BT 下載器來下載此檔案。"></i> - [New 3DS 或 原 3DS 或 2DS 2.1.0 - 美版 - CTRTransfer](magnet:?xt=urn:btih:1609ce9ee7b0ed9b6dea0b3e7cca4fc52dad6ff4&dn=2.1.0-4U%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 
 #### 操作說明
 
-##### Section I - Prep Work
+##### 第一節 — 準備工作
 
 1. 關閉你的裝置
 1. 將 SD 卡插入電腦中
-1. Create a folder named `CTRTransfer` on the root of your SD card if it does not already exist
-1. Copy the 2.1.0 `.bin` and `.bin.sha` from the CTRTransfer `.zip` to the `/CTRTransfer/` folder on your SD card
-1. Copy `SafeCTRTransfer.dat` from the SafeCTRTransfer `.zip` to the root of your SD card
+1. 在 SD 卡的根目錄底下，建立一個新資料夾 `CTRTransfer`
+1. 將 CTRTransfer `.zip` 中的 2.1.0 `.bin` 和 `.bin.sha` 複製到 SD 卡中的`/CTRTransfer/` 資料夾
+1. 將 SafeCTRTransfer `.zip` 中的 `SafeCTRTransfer.dat` 複製到 SD 卡的根目錄
 1. 將 SD 卡插回裝置中
-1. Copy `SafeCTRTransfer.nds` from the SafeCTRTransfer `.zip` to your DS flashcard
+1. 將 SafeCTRTransfer `.zip` 中的 `SafeCTRTransfer.nds` 複製到你的 DS 燒錄卡
 1. 啟動你的裝置
 
-##### Section II - Launch SafeCTRTransfer
+##### 第二節 — 啟動 SafeCTRTransfer
 
 1. 啟動你的 DS 燒錄卡
-1. Boot `SafeCTRTransfer.nds` using your flashcart
+1. 透過燒錄卡啟動 `SafeCTRTransfer.nds`
 1. 依據你的系統版本選擇正確的選項：
   + 4.X.X -> "4.x SafeCTRTransfer"
   + 6.X.X -> "6.x SafeCTRTransfer"
 1. 重新啟動系統，接著到「系統設置（System Settings）」、「其他設置（Other Settings）」、「設定檔（Profile）」中選擇「任天堂 DS 設定檔（Nintendo DS Profile）」
-1. If the exploit was successful, you will have booted into SafeCTRTransfer
+1. 如果一切成功的話，你將自動進入 SafeCTRTransfer
 
-##### Section III - CTRTransfer
+##### 第三節 — 進行 CTRTransfer
 
-1. Allow the SafeCTRTransfer initialization and safety checks to proceed automatically
+1. 等待 SafeCTRTransfer 初始化及進行所有的安全性檢查再繼續
   +如果遇到錯誤，請確保所有檔案都在正確的位置中，並且確保你的 SD 卡上有足夠的可用空間，像[從頭開始](get-started)中詳述的那樣
-1. When prompted, input the key combo given to confirm CTRTransfer to 2.1.0
+1. 出現提示時，輸入提示的按鍵組合以確認進行 CTRTransfer 至版本 2.1.0
   + 此過程將花費一些時間
   +這個過程將自動在 `/ctrtransfer/<serialnumber>_nand.bin` 中建立裝置的 NAND 的備份
-  + If you get a critical error, [follow this troubleshooting guide](troubleshooting#ts_transfer)   
-1. Once this process has completed, remove your SD card from your device to reboot
-  + The reboot will take about 2 seconds to trigger
+  + 如果遇到嚴重錯誤（critical error）的話， [請參見此疑難排解](troubleshooting#ts_transfer)   
+1. 完成此過程後，請從裝置中退出 SD 卡以重新啟動
+  + 裝置將於約兩秒後自動重啟
   + 如果你在版本 2.1.0 的裝置上且於載入 HOME 主選單前插入 SD 卡的話，裝置將無法啟動
   + 每次在重啟版本 2.1.0 的主機時，你將會需要先在 HOME 主選單載入前拔出你的 SD 卡，直到載入完後才能插回
-  + For now, leave your SD card out as you will be copying files to it in the next page
+  + SD 卡暫時先不用插回 3DS 裡，因為我們到下一頁時還會再丟些檔案進去
   + 這問題將於下一章節還原裝置備份後解決
 
 ___
