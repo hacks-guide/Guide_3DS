@@ -35,7 +35,7 @@ permalink: /ru_RU/installing-arm9loaderhax.html
 
 +  **FBI** *(установщик приложений и игр в формате CIA)*
 +  **Luma3DS Updater** *(Удобное обновление CFW)*
-+  **GodMode9** *(multipurpose tool which can do NAND and cartridge functions)*
++  **GodMode9** *(многофункциональная утилита для работы с NAND и картриджами)*
 
 #### Что понадобится
 
@@ -53,14 +53,14 @@ permalink: /ru_RU/installing-arm9loaderhax.html
 
 #### Инструкция
 
-##### Section I - Prep Work
+##### Часть I - Подготовительные работы
 
-1. Insert your SD card into your computer
-1. **If it exists, copy `<serialnumber>_nand.bin` from the `/ctrtransfer/` folder on your SD card to a safe location on your computer**
-  + Make backups in multiple locations (such as online file storage)
-  + This backup will save you from a brick if anything goes wrong in the future
+1. Вставьте SD-карту в компьютер
+1. **Если такой файл существует, скопируйте `<serialnumber>_nand.bin` из папки `/ctrtransfer/` на вашей SD-карте в безопасное место на вашем компьютере**
+  + Сделайте несколько резервных копий в нескольких местах (например в облачном хранилище)
+  + Эти бэкапы позволят восстановить консоль, если впоследствии что-то пойдёт не так
 1. Создайте папку `cias` в корне SD-карты
-1. Create a folder named `files9` on the root of your SD card if it does not already exist
+1. Создайте папку `files9` в корне SD-карты, если таковой нет
 1. Удалите папку `3ds` из корня SD-карты, если таковая существует
 1. Скопируйте _содержимое_ папки `starter` из архива `starter.zip` в корень вашей SD-карты
   + Этот архив содержит новую папку `3ds`, которая заменит удаленную
@@ -73,25 +73,25 @@ permalink: /ru_RU/installing-arm9loaderhax.html
 1. **Скопируйте `arm9loaderhax.bin` из `.7z-архива` Luma3DS в корень SD-карты, соглашаясь на перезапись файлов**
 1. Создайте папку `luma` в корне SD-карты
 1. Создайте папку `payloads` в папке `luma` на SD-карте
-1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `start_GodMode9.bin`
+1. Скопируйте `GodMode9.bin` из `.zip-архива` GodMode9 в папку `/luma/payloads/` на SD-карте и переименуйте `GodMode9.bin` внутри папки `/luma/payloads/` в `start_GodMode9.bin`
 1. Скопируйте `aeskeydb.bin` в папку `/files9/` в корне SD-карты
 1. Скопируйте `DspDump.3dsx` в папку `/3ds/` в корне SD-карты
 
 ##### Часть II - Установка arm9loaderhax
 
-1. Reinsert your SD card into your device
-1. You should be already on 2.1.0 and powered on
-1. Go to URL `http://2xrsa.3ds.guide` in the browser of your device
-  + If you get the error "This service is not available in your region", use the System Settings to set your device's country to match the NAND region you installed with 2.1.0 CTRTransfer
+1. Вставьте SD-карту обратно в консоль
+1. Консоль уже должна быть на прошивке 2.1.0 и включена
+1. Откройте ссылку `http://2xrsa.3ds.guide` в браузере на вашей консоли
+  + Если появляется ошибка "This service is not available in your region", поменяйте регион в Системных настройках (System Settings) на соответствующий тому, который был установлен при 2.1.0 CTRTransfer
   + При возникновении другой ошибки, обратитесь к разделу [Проблемы и их решения](troubleshooting#ts_browser)
   + Если на экране видны искажения, обратитесь к разделу [Проблемы и их решения](troubleshooting#ts_safe_a9lh_screen)
   + Если вы забыли включить Wi-Fi на 2DS или New 3DS, это можно сделать, вытащив батарею и отключив зарядное устройство на несколько секунд, а затем снова включить консоль
 1. Нажмите (Select) для установки
 1. Установщик поставит arm9loaderhax на вашу консоль (буквально за секунду)
-1. Power off your device by pressing any button
-1. Insert your SD card into your computer
-1. Copy your device specific `otp.bin` from the `/a9lh/` folder on your SD card to a safe location on your computer and back it up to multiple locations (such as online file storage), then reinsert your SD card into your device
-1. Reinsert your SD card into your device
+1. Выключите консоль, нажав любую кнопку
+1. Вставьте SD-карту в компьютер
+1. Скопируйте уникальный для вашей консоли файл `otp.bin` из папки `/a9lh/` на SD-карте в надежное место на вашем компьютере и сделайте несколько резервных копий в нескольких местах (например в облачном хранилище), вставьте SD-карту обратно в консоль
+1. Вставьте SD-карту обратно в консоль
 
 ##### Часть III - Настройка Luma3DS
 
@@ -117,27 +117,27 @@ permalink: /ru_RU/installing-arm9loaderhax.html
 Если прежде чем начать выполнять действия из этого руководства у вас уже был установлен EmuNAND и вы хотите перенести содержимое EmuNAND в SysNAND с кастомной прошивкой - сейчас самый подходящий момент. Выполните действия из раздела [перенос EmuNAND](move-emunand), вместо первых 4 шагов в этой части.
 {: .notice--info}
 
-1. Boot your device while holding (Start) to enter GodMode9
-1. Navigate to `SDCARD` -> `ctrtransfer`
-1. Press (A) on `<serialnumber>_nand.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
-1. Press (A) to unlock SysNAND overwriting, then input the key combo given
-  + This will not overwrite your arm9loaderhax installation
-1. Input the key combo given to unlock SysNAND (lvl1) writing
-  + This process will take some time
-1. Press (A) to continue once it has completed
-1. Press (Start) to reboot your device
-  + If you get a black screen, [follow 9.2.0 CTRTransfer](9.2.0-ctrtransfer)
-  + It is now safe to put New 3DSs in sleep mode again
-1. If your backup was of a version between 3.0.0 and 4.5.0, your device will not boot until you manually download the required firmware:
+1. Включите вашу консоль, зажав кнопку (Start), чтобы запустить GodMode9
+1. Перейдите в `SDCARD` -> `ctrtransfer`
+1. Нажмите (A) чтобы выбрать файл `<serialnumber>_nand.bin`, затем выберите "NAND image options...", затем "Restore SysNAND (safe)"
+1. Нажмите (A), чтобы разрешить запись в SysNAND и введите указанную комбинацию кнопок
+  + Это действие не перезапишет установленный arm9loaderhax
+1. Введите указанную комбинацию кнопок чтобы разрешить запись в SysNAND (lvl1)
+  + Этот процесс займет некоторое время
+1. Нажмите (A) для продолжения, когда процесс завершится
+1. Нажмите (Start) для перезагрузки
+  + Если после запуска экран чёрный, выполняйте инструкции из раздела [9.2.0 CTRTransfer](9.2.0-ctrtransfer)
+  + Теперь вы снова можете безопасно переводить New 3DS в режим сна
+1. Если ваш бэкап был сделан на прошивках от 3.0.0 до 4.5.0, консоль не запустится до тех пор, пока вы вручную не скачаете нужные файлы прошивки:
   + Скачайте [этот файл](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) и переименуйте его в `firmware.bin`
   + Скачайте [этот файл](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
   + Скопируйте `firmware.bin` и `cetk` в папку `/luma/` на SD-карте
-  + Delete both of these files after updating your device
-1. Update your device by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
+  + После обновления прошивки удалите оба этих файла
+1. Обновите прошивку консоли, зайдя в Системные настройки (System Settings), затем "Прочие настройки" (Other Settings), затем листайте вправо до конца и выберите пункт "Обновление" (System Update)
   + Обновление консоли с установленным A9LH + Luma (который стоит у вас) безопасно, прекратите переспрашивать
   + Запрет на обновление New 3DS с прошивкой 2.1.0 не действует после восстановления бэкапа.
   + При появлении ошибки, поставьте в настройках подключения, в настройках DNS "Получать DNS автоматически" в положение "Да"
-  + If this still gives you an error and your NAND is below 9.2.0, [follow 9.2.0 CTRTransfer](9.2.0-ctrtransfer)
+  + Если вы все еще получаете ошибку и версия вашего NAND ниже 9.2.0, [выполните 9.2.0 CTRTransfer](9.2.0-ctrtransfer)
 
 ##### Часть V - Интеграция FBI
 
