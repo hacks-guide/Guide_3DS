@@ -14,7 +14,7 @@ permalink: /ru_RU/ntr-and-cubic-ninja.html
 
 * [JPN Cubic Ninja](https://www.amazon.com/dp/B004QL7M0A)
 * Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
-* The latest release of [SafeCTRTransferWIP](https://github.com/d0k3/SafeCTRTransferWIP/releases/latest)
+* Свежая версия [SafeCtrTransferWIP](https://github.com/d0k3/SafeCtrTransferWIP/releases/latest)
 * <i class="fa fa-magnet" aria-hidden="true" title="Это magnet-ссылка. Воспользуйтесь торрент-клиентом, чтобы скачать этот файл."></i> - [`3ds-private-update-server.zip`](magnet:?xt=urn:btih:8623e580752f22940d96630ef723ce30a707b22e&dn=3ds-private-update-server.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.piratepublic.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.kicks-ass.net%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce)
 * [WAMPSERVER (PHP 5.5) 2.5](http://www.wampserver.com/en/#download-wrapper)
 * [`node.exe`](http://nodejs.org/dist/latest/win-x86/node.exe)
@@ -42,26 +42,26 @@ permalink: /ru_RU/ntr-and-cubic-ninja.html
 1. Скопируйте `ntr.bin` в корень SD-карты
 1. Создайте папку `files9` в корне SD-карты, если таковой нет
 1. Скопируйте _содержимое_ папки `starter` из архива `starter.zip` в корень вашей SD-карты
-1. Copy the `SafeCTRTransferWIP` folder from the SafeCTRTransferWIP `.zip` to `/3ds/` on your SD card
-1. Put your SD card back into your device
+1. Скопируйте папку `SafeCTRTransferWIP` из `.zip-архива` SafeCTRTransferWIP в папку `/3ds/` на SD-карте
+1. Вставьте SD-карту обратно в консоль
 
 ##### Часть II - Обновление
 
-1. Boot your device into recovery mode by holding (L)+(R)+(A)+(UP) while powering on
+1. Загрузите консоль в режиме восстановления, удерживая (L)+(R)+(A)+(Вверх) во время включения приставки
 1. Откажитесь от обновления и перезагрузите консоль
-1. Launch Cubic Ninja (if it already has NinjHax installed, hold (L)+(R)+(X)+(Y) to reset it)
+1. Запустите Cubic Ninja (если у вас уже был установлен NinjHax, зажмите (L)+(R)+(X)+(Y), чтобы сбросить его)
 1. Выберите "Create", затем "QR Code", затем "Scan QR Code"
 1. Отсканируйте QR-код, содержащийся в `.zip-архиве` NTR CFW и соответствующий вашему региону
-1. On the home menu, press (Y) and (X) at the same time to launch NTR's menu
+1. В меню HOME нажмите одновременно (X) и (Y), чтобы открыть меню NTR
 1. Включите отладчик (Enable the debugger) и закройте меню
-1. Use your router's web page to get your device's IP address (google it if you don't know how, all routers are different)
+1. Используйте web-интерфейс своего маршрутизатора, чтобы узнать IP-адрес вашей консоли (если не знаете, как это сделать - воспользуйтесь google, так как все роутеры разные)
 1. Запустите NTR Debugger на компьютере
-1. Enter the following commands (replace XXX.XXX.XXX.XXX with your device's IP address and YYY.YYY.YYY.YYY with your computer's IP address)    
+1. Введите следующие команды (замените XXX.XXX.XXX.XXX IP-адресом вашей консоли, а YYY.YYY.YYY.YYY IP-адресом вашего компьютера)    
     + `connect("XXX.XXX.XXX.XXX", 8000)`
     + `write(0x15E424, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
     + `write(0x15E0EC, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
     + `write(0x15E463, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
-1. Update your device by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
+1. Обновите прошивку консоли, зайдя в Системные настройки (System Settings), затем "Прочие настройки" (Other Settings), затем листайте вправо до конца и выберите пункт "Обновление" (System Update)
 
 ___
 
