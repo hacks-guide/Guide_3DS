@@ -56,40 +56,33 @@ Region changing using CTRTransfer (which this method uses) seems to cause reboot
 1. Copy `FBI.cia` from the FBI `.zip` to the `/cias/` folder on your SD card
 1. Reinsert your SD card into your device
 
-##### Section II - Backup Tickets
+##### Section II - CTRTransfer
 
 1. Launch GodMode9 from arm9loaderhax by holding (Start) during boot
+1. Navigate to `SDCARD` -> `files9`
+1. Premi (A) sul file `.bin` del CTRTransfer per selezionarlo
+1. Select "CTRNAND options..."
+1. Select "Transfer image to CTRNAND"
+1. If prompted, select "Transfer to SysNAND"
+  + This prompt will only appear if you have an EmuNAND
+1. Premi il pulsante (A) per sbloccare i permessi di scrittura di primo livello su SysNAND, quindi inserisci la combinazione di tasti richiesta a schermo
+  + This process will take some time
+1. Once the transfer has completed, press (A) to continue
+1. Press (B) twice to return to the main menu
 1. Navigate to `SYSNAND CTRNAND` -> `dbs`
-1. Press (A) on `ticket.db` to select it, then select "Mount as ticket.db"
+1. Press (A) on `ticket.bak` to select it, then select "Mount as ticket.db"
+1. Press (Start) to reboot your device
 1. Se esiste, tenendo premuto (R) premi (A) sulla cartella `eshop` per selezionarla, quindi seleziona "Copy to 0:/gm9out"
   + This process may take some time if you have many tickets
   + Al termine del processo, premi (A) per continuare
 1. Se esiste, tenendo premuto (R) premi (A) sulla cartella `unknown` per selezionarla, quindi seleziona "Copy to 0:/gm9out"
   + This process may take some time if you have many tickets
   + Al termine del processo, premi (A) per continuare
-1. Press (B) to return to the main menu
-
-##### Sezione III - CTRTransfer
-
-1. Navigate to `SDCARD` -> `files9`
-1. Premi (A) sul file `.bin` del CTRTransfer per selezionarlo
-1. Select "CTRNAND options..."
-1. Select "Adapt image to SysNAND"
-1. Press (A) to confirm alteration of the image for your device
-  + This process may take some time
-1. Al termine del processo, premi (A) per continuare
-1. Premi (Y) sul file `.bin` del CTRTransfer per copiarlo
-1. Press (B) twice to return to the main menu
-1. Navigate to `SYSNAND VIRTUAL`
-1. Premi (Y) per incollare il file `.bin` del CTRTransfer
-1. Press (A) to confirm, then press (A) to inject
-  + This process will take some time
-1. Once the transfer has completed, press (Start) to reboot your device
 1. Update your device by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
   + Updates while using A9LH + Luma (what you have) are safe, stop asking about it
   + If this gives you an error, set your DNS settings to "auto"
 
-##### Section IV - Injecting FBI
+##### Section III - Injecting FBI
 
 1. Reboot holding (Start) during boot to launch GodMode9
 1. Navigate to `SDCARD` -> `cias`
@@ -100,7 +93,7 @@ Region changing using CTRTransfer (which this method uses) seems to cause reboot
 1. Press (Start) to reboot your device
 1. Se al lancio di "Informazioni per la salute e la sicurezza" appare la schermata originale dell'applicazione e in passato hai effettuato un downgrade tramite Gateway, [segui questa guida per risolvere il problema](troubleshooting#gw_fbi)
 
-##### Section V - Reinstalling Tickets
+##### Section IV - Reinstalling Tickets
 
 If you had no `eshop` or `unknown` folders earlier, skip this section.
 {: .notice--info}
@@ -120,7 +113,7 @@ If you had no `eshop` or `unknown` folders earlier, skip this section.
   + Press (B) to decline installing tickets from CDN.
 1. Press (Home) to exit FBI
 
-##### Section VI - Region settings
+##### Section V - Region settings
 
 1. Launch the System Settings
 1. Vai su "Impostazioni generali", poi "Profilo", quindi "Area di residenza"
@@ -128,7 +121,7 @@ If you had no `eshop` or `unknown` folders earlier, skip this section.
 1. Se richiesto, non è necessario selezionare uno stato
 1. Dopo aver cambiato l'area di residenza, aggiorna la SysNAND all'ultima versione del software di sistema
 
-##### Section VII - Restore Health and Safety
+##### Section VI - Restore Health and Safety
 
 1. Reboot holding (Start) during boot to launch GodMode9
 1. Press (Home) to bring up the action menu
@@ -141,7 +134,7 @@ If you had no `eshop` or `unknown` folders earlier, skip this section.
 1. Navigate to `SDCARD` -> `files9`
 1. Premi (X) sul file immagine `.bin` del CTRTransfer per cancellarlo
 1. Premi (A) per confermare
-1. Press (Start) to reboot your device
+1. Premi (Start) per riavviare la console
 
 ___
 
