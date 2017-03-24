@@ -32,17 +32,17 @@ If you downgrade to 2.1.0 on a 2DS or New 3DS and leave Wireless Communication o
 {: .notice--danger}
 
 {% capture notice %}
-**Putting a New 3DS on 2.1.0 in sleep mode is known to cause an UNRECOVERABLE brick!**    
-**This only happens when shutting the lid _while your device is on_; this does not apply to turning your device off.**    
-**Your device only enters sleep mode when the lid is closed. It is not on a timer or anything like that.**    
-**Once on 2.1.0, you should continue without delay to avoid any possibility of this happening!**    
+**Вы ГАРАНТИРОВАННО получите НЕВОССТАНАВЛИВАЕМЫЙ брик, если вы введете New 3DS с прошивкой 2.1.0 в режим сна!**    
+**Это происходит только при закрытии крышки, _пока устройство включено_; это не касается выключения консоли.**    
+**Устройство переходит в спящий режим только когда крышка закрыта. Таймера, или чего-то похожего, в системе нет.**    
+**Оказавшись на 2.1.0 без промедления сделайте все необходимые шаги, чтобы избежать этого!**    
 {% endcapture %}
 
 <div class="notice--danger">{{ notice | markdownify }}</div>
 
 #### Описание шагов
 
-In this section, we will be flashing your device's [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) partition to 2.1.0 in order to take advantage of an oversight in 2.1.0 for the purpose of extracting the [OTP](https://www.3dbrew.org/wiki/OTP_Registers) unique to your device. OTP необходим для установки arm9loaderhax и **не может быть использован** на других устройствах.
+В этой части мы будем прошивать [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) (англ.) консоли до версии 2.1.0, чтобы воспользоваться уязвимостью получения уникального для устройства [OTP](https://www.3dbrew.org/wiki/OTP_Registers) (англ.). OTP необходим для установки arm9loaderhax и **не может быть использован** на других устройствах.
 
 Это достигается благодаря [установке заранее подготовленного образа CTRTransfer](https://www.reddit.com/r/3dshacks/comments/4zhe4a/) (англ.), содержащего 2.1.0, и копированию в него уникальных для каждой консоли файлов (таких как `moveable.sed` и `SecureInfo_A`), а затем восстановлением базы данных тайтлов.
 
@@ -54,61 +54,61 @@ In this section, we will be flashing your device's [CTRNAND](https://www.3dbrew.
 * Образ 2.1.0 CTRTransfer для вашего устройства и региона     
 *(Если вашего региона нет в списке, выберите любой)*:
   +    <i class="fa fa-magnet" aria-hidden="true" title="Это magnet-ссылка. Воспользуйтесь торрент-клиентом, чтобы скачать этот файл."></i> - [New 3DS или Old 3DS или 2DS 2.1.0 - EUR - CTRTransfer](magnet:?xt=urn:btih:89acc9c1b488b8b38251de0ddf07975d6bd354a1&dn=2.1.0-4E%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
-  +    <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Воспользуйтесь торрент-клиентом, чтобы скачать этот файл."></i> - [New 3DS или Old 3DS или 2DS 2.1.0 - JPN - CTRTransfer](magnet:?xt=urn:btih:3dbb9c9c85a33c6242f424dcbaebcacdd8a5912b&dn=2.1.0-4J%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
-  +    <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Воспользуйтесь торрент-клиентом, чтобы скачать этот файл."></i> - [New 3DS или Old 3DS или 2DS 2.1.0 - USA - CTRTransfer](magnet:?xt=urn:btih:1609ce9ee7b0ed9b6dea0b3e7cca4fc52dad6ff4&dn=2.1.0-4U%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+  +    <i class="fa fa-magnet" aria-hidden="true" title="Это magnet-ссылка. Воспользуйтесь торрент-клиентом, чтобы скачать этот файл."></i> - [New 3DS или Old 3DS или 2DS 2.1.0 - JPN - CTRTransfer](magnet:?xt=urn:btih:3dbb9c9c85a33c6242f424dcbaebcacdd8a5912b&dn=2.1.0-4J%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    <i class="fa fa-magnet" aria-hidden="true" title="Это magnet-ссылка. Воспользуйтесь торрент-клиентом, чтобы скачать этот файл."></i> - [New 3DS или Old 3DS или 2DS 2.1.0 - USA - CTRTransfer](magnet:?xt=urn:btih:1609ce9ee7b0ed9b6dea0b3e7cca4fc52dad6ff4&dn=2.1.0-4U%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 
-#### Instructions
+#### Инструкция
 
-##### Section I - Prep Work
+##### Часть I - Подготовительные работы
 
-1. Remove your SD card from your device, leaving it on the Homebrew Launcher, then insert your SD card into your computer
+1. Не выходя из Homebrew Launcher, вытащите SD-карту и вставьте её в компьютер
 1. Создайте папку `CTRTransfer` в корне SD-карты, если таковой нет
 1. Скопируйте 2.1.0 `.bin` и `.bin.sha` из `.zip-архива` CTRTransfer в папку `/CTRTransfer/` на SD-карте
-1. Copy `safehax.3dsx` to the `/3ds/` folder on your SD card
-1. Copy `fasthax.3dsx` to the `/3ds/` folder on your SD card
-1. Copy `SafeCTRTransfer.bin` from the SafeCTRTransfer `.zip` to the root of your SD card and rename `SafeCTRTransfer.bin` to `safehaxpayload.bin`
-1. Reinsert your SD card into your device
+1. Скопируйте `safehax.3dsx` в папку `/3ds/` на SD-карте
+1. Скопируйте `fasthax.3dsx` в папку `/3ds/` на SD-карте
+1. Скопируйте `SafeCTRTransfer.bin` из `.zip-архива` SafeCTRTransfer в корень SD-карты и переименуйте `SafeCTRTransfer.bin` в `safehaxpayload.bin`
+1. Вставьте SD-карту обратно в консоль
 
 ##### Часть II - Запуск SafeCTRTransfer
 
-1. Launch fasthax from the list of homebrew
-  + You may have to scroll down to see this option
-1. Once it has completed, press (Start) to exit fasthax
-  + This may take several tries
-  + If it freezes, just force the console to power off by holding the power button, then try again
-1. Launch safehax from the list of homebrew
-  + You may have to scroll down to see this option
-  + If it freezes, just force the console to power off by holding the power button, then try again
+1. Выберите fasthax в списке homebrew
+  + Вам может потребоваться пролистать список вниз, чтобы увидеть нужный пункт
+1. После завершения, нажмите (Start) для выхода из fasthax
+  + Может потребоваться несколько попыток
+  + При зависании отключите питание консоли, зажав кнопку питания, и попробуйте снова
+1. Выберите safehax в списке homebrew
+  + Вам может потребоваться пролистать список вниз, чтобы увидеть нужный пункт
+  + При зависании отключите питание консоли, зажав кнопку питания, и попробуйте снова
 1. Если эксплойт сработал, запустится SafeCTRTransfer
 
 ##### Часть III - CTRTransfer
 
 1. Подождите пока SafeCTRTransfer автоматически произведет инициализацию и проверки безопасности
-  + If you get an error, ensure you have all files in the correct locations and that you have enough free space on your SD card as detailed in [Get Started](get-started)
+  + Если возникнет ошибка, убедитесь что все файлы на месте, и что на SD-карте достаточно свободного места в соответствии с разделом [Начало](get-started)
 1. При появлении запроса, введите указанную комбинацию кнопок, чтобы подтвердить CTRTransfer на 2.1.0
-  + This process will take some time
-  + This process will automatically create a backup of your device's NAND at `/ctrtransfer/<serialnumber>_nand.bin`
-  + If you get a critical error, [follow this troubleshooting guide](troubleshooting#ts_transfer)   
+  + Этот процесс займет некоторое время
+  + Этот процесс автоматически создаст бэкап NAND вашей консоли в файле `/ctrtransfer/<serialnumber>_nand.bin`
+  + При возникновении критической ошибки, обратитесь к разделу [Проблемы и их решения](troubleshooting#ts_transfer)   
 1. Once this process has completed, remove your SD card from your device to reboot
   + The reboot will take about 2 seconds to trigger
-  + While on 2.1.0, your device will black screen on boot if your SD card is inserted before the home menu loads
-  + Every time your device is rebooted on 2.1.0, you will need to take out your SD card before boot and put it back in after the home menu loads
+  + Консоль с прошивкой 2.1.0 при загрузке будет зависать на чёрном экране, если SD-карта будет находиться в консоли до загрузки меню HOME
+  + Каждый раз при перезагрузке на 2.1.0 необходимо извлекать SD-карту и вставлять обратно после загрузки меню HOME
   + For now, leave your SD card out as you will be copying files to it in the next page
-  + This will be fixed once you restore your device in the next page
+  + Это будет исправлено после восстановления бэкапа на следующей странице
 
 ___
 
-*(Screen distortions or discolorations are normal for some devices while on 2.1.0, they will go away once you restore your backup)*
+*(Изменение цвета или искажения экрана - норма для некоторых устройств на 2.1.0, они исчезнут сразу после восстановления бэкапа)*
 {: .notice--info}
 
 {% capture notice %}
-**Putting a New 3DS on 2.1.0 in sleep mode is known to cause an UNRECOVERABLE brick!**    
-**This only happens when shutting the lid _while your device is on_; this does not apply to turning your device off.**    
-**Your device only enters sleep mode when the lid is closed. It is not on a timer or anything like that.**    
-**Once on 2.1.0, you should continue without delay to avoid any possibility of this happening!**    
+**Вы ГАРАНТИРОВАННО получите НЕВОССТАНАВЛИВАЕМЫЙ брик, если вы введете New 3DS с прошивкой 2.1.0 в режим сна!**    
+**Это происходит только при закрытии крышки, _пока устройство включено_; это не касается выключения консоли.**    
+**Устройство переходит в спящий режим только когда крышка закрыта. Таймера, или чего-то похожего, в системе нет.**    
+**Оказавшись на 2.1.0 без промедления сделайте все необходимые шаги, чтобы избежать этого!**    
 {% endcapture %}
 
 <div class="notice--danger">{{ notice | markdownify }}</div>
 
-Continue to [Installing arm9loaderhax](installing-arm9loaderhax)
+Следующий шаг: [Установка arm9loaderhax](installing-arm9loaderhax)
 {: .notice--primary}
