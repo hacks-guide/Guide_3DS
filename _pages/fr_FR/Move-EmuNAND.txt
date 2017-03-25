@@ -4,7 +4,7 @@ lang: fr
 permalink: /fr_FR/move-emunand.html
 ---
 
-This is an add-on section for moving the contents of a previous EmuNAND to your new SysNAND CFW, then removing the old EmuNAND partition. Notez que les termes EmuNAND et RedNAND font référence à des implémentations légèrement différentes du [même concept](http://3dbrew.org/wiki/NAND_Redirection).
+Ceci est une section complémentaire qui vous permettra de déplacer le contenu de votre EmuNAND vers votre CFW SysNAND, puis de supprimer l'ancienne partition EmuNAND. Notez que les termes EmuNAND et RedNAND font référence à des implémentations légèrement différentes du [même concept](http://3dbrew.org/wiki/NAND_Redirection).
 {: .notice--info}
 
 **Vous DEVEZ avoir déjà installé arm9loaderhax + Luma3DS afin d'utiliser cela.**
@@ -20,56 +20,57 @@ This is an add-on section for moving the contents of a previous EmuNAND to your 
 
 ##### Section I - Préparation
 
-1. Power off your device
+1. Éteignez votre 3DS
 1. Insérez votre carte SD dans votre ordinateur
 1. Copiez le fichier `GodMode9.bin` de GodMod9`.zip` dans le dossier `/luma/payloads/` de votre carte SD et renommez `GodMode9.bin` dans `/luma/payloads/` en `start_GodMode9.bin`
-1. Reinsert your SD card into your device
+1. Retirez la carte SD de votre ordinateur et réinsérez-là dans votre 3DS
 
-##### Section II - Backup SysNAND DSiWare Saves
+##### Section II - Enregistrer les sauvegardes de vos DSIWare (présentes sur votre SysNAND)
 
-If you do not have any DSiWare games or saves that you care about, skip this section.
+SI vous n'avez pas de DSiWares ou de sauvegardes (de DSiwares) auxquels vous tenez, vous pouvez ignorer cette section.
 {: .notice--info}
 
-1. Launch GodMode9 from arm9loaderhax by holding (Start) on boot
-1. Navigate to `SYSNAND TWLN` -> `title`
-1. Hold (R) and press (A) at the same time on `00030004` to select the folder, then select "Copy to 0:/gm9out"
-  + This process may take some time if you have many DSiWare games
+1. Lancez Godmode9 depuis arm9loaderhax en maintenant (Start) au démarrage
+1. Navigate vers `SYSNAND TWLN` -> `title`
+1. Maintenez la touche (R) appuyée et appuyez sur la touche (A) en même temps sur le dossier `00030004`pour le sélectionner, puis choisissez "Copy to 0:/gm9out"
+
+  + Ce processus peut prendre un certain temps si vous avez beaucoup de jeux DSiWare
 1. Appuyez deux fois sur (B) pour revenir au menu principal
 
-##### Section III - Backup GBA VCs Saves
+##### Section III - Enregistrer les sauvegardes de vos jeux GBA console virtuelle (présentes sur votre SysNAND)
 
-If you do not have any GBA VC games or saves that you care about, skip this section.
+SI vous n'avez pas de jeux GBA en VC ou de sauvegardes (de GBA VC) auxquels vous tenez, vous pouvez ignorer cette section.
 {: .notice--info}
 
-Note that this is not necessary for any other kind of Virtual Console games (GBC, NES, etc)
+Notez que ce n’est pas nécessaire pour tout autre type de jeux Console Virtuelle (GBC, NES, etc.)
 {: .notice--info}
 
-1. Hold (R) and press (Start) at the same time to power off your device
+1. Maintenez la touche (R) appuyée et appuyez sur la touche (Start) en même temps pour éteindre votre console
 1. Insérez votre carte SD dans votre ordinateur
-1. Create a folder in `/files9/` for each GBA VC game that you want to backup the save for 
-1. Reinsert your SD card into your device
-1. Power on your device into SysNAND
-1. Do the following process for each GBA VC game that you want to backup the save for:
-  + Launch the GBA VC game on SysNAND
-  + Exit the GBA VC game
-  + Reboot holding (Start) during boot to launch GodMode9
-  + Navigate to `SYSNAND VIRTUAL`
-  + Press (Y) on `gbavc.sav` to copy it
-  + Press (B) to return to the main menu
-  + Navigate to `SDCARD` -> `files9`
-  + Navigate to the folder you created for this GBA VC game
-  + Press (Y) to paste `gbavc.sav`
-  + Press (Start) to reboot your device
-1. Reboot holding (Start) during boot to launch GodMode9
+1. Créez un dossier dans `/files9/` pour chaque jeu GBA VC dont vous souhaitez conserver la sauvegarde 
+1. Retirez la carte SD de votre ordinateur et réinsérez-là dans votre 3DS
+1. Démarrez votre console en bootant sur la SysNAND
+1. Effectuez la procédure suivante pour chaque jeu GBA VC pour chaque jeu GBA VC dont vous souhaitez conserver la sauvegarde:
+  + Lancer le jeu GBA VC depuis la SysNAND
+  + Quittez le jeu GBA VC
+  + Redémarrez en appuyant sur (Start) lors du démarrage de la console pour lancer GodMode9
+  + Navigate vers `SYSNAND VIRTUAL`
+  + Placez vous sur `gbavc.sav`et appuyez sur (Y) pour le copier
+  + Appuyez sur (B) pour revenir au menu principal
+  + Naviguer vers `SDCARD` -> `files9`
+  + Naviguer vers le dossier que vous avez crée pour ce jeu GBA VC
+  + Appuyez sur (Y) pour coller `gbavc.sav`
+  + Appuyez sur (Start) pour redémarrer votre système
+1. Redémarrez en appuyant sur (Start) lors du démarrage de la console pour lancer GodMode9
 
-##### Section IV - Copy EmuNAND to SysNAND
+##### Section IV - Copier votre EmuNAND sur votre SysNAND
 
-1. Navigate to `EMUNAND VIRTUAL`
-1. Press (A) on `nand.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
-1. Press (A) to unlock SysNAND overwriting, then input the key combo given
-  + This will not overwrite your arm9loaderhax installation
-1. Input the key combo given to unlock SysNAND (lvl1) writing
-  + This process will take some time
+1. Naviguer vers `EMUNAND VIRTUAL`
+1. Appuyez sur (A) sur `nand.bin` pour le sélectionner, puis choisissez "NAND image options...", puis "Restore SysNAND (safe)"
+1. Appuyez sur (A) pour débloquer l'écriture sur votre SysNAND, puis entrez la combinaison de touches demandée
+  + Ceci n'affectera pas votre installation de arm9loaderhax
+1. Entrez la combinaison de touche demandée pour débloquer l'écriture sur votre SysNAND (lvl1)
+  + Ce processus prendra un certain temps
 1. Press (A) to continue once it has completed
 1. Press (B) to return to the main menu
 
