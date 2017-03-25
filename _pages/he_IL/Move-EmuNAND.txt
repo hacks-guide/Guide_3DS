@@ -1,52 +1,52 @@
 ---
-title: "Move EmuNAND" #
-lang: en
-permalink: /move-emunand.html
+title: "הזזת EmuNAND" #
+lang: he_IL
+permalink: /he_IL/move-emunand.html
 ---
 
-This is an add-on section for moving the contents of a previous EmuNAND to your new SysNAND CFW, then removing the old EmuNAND partition. Emunand וRednand כמעט מונחים נרדפים.
+זוהי הרחבה עבור העברת התכנים מהEmuNAND הישן שלכם ל CFW SysNAND חדש, ולאחר מכן הסרת הEmuNAND הישן. Emunand וRednand כמעט מונחים נרדפים.
 {: .notice--info}
 
-**You MUST have already installed arm9loaderhax + Luma3DS to use this.**
+**אתם חייבים להתקין את arm9loaderhax + Luma3DS כדי להשתמש בזה.**
 {: .notice--danger}
 
-#### What you need
+#### מה אתם צריכים
 
-* An existing EmuNAND
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest)
+* EmuNAND כמובן
+* את הגרסה העדכנית של [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+*את הגרסה העדכנית של [FBI](https://github.com/Steveice10/FBI/releases/latest)
 
-#### Instructions
+#### הוראות
 
 ##### חלק I - הכנות
 
 1. תכבו את המכשיר
 1. תכניסו את ה-SD שלכם למחשב
-1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `start_GodMode9.bin`
+1. תעתיקו את `GodMode9.bin` מתוך הזיפ של GodMode9 אל תוך התיקייה `/luma/payloads/` שב- SD שלכם ושנו את שם הקובץ `GodMode9.bin` ל-`start_GodMode9.bin`
 1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
 
-##### Section II - Backup SysNAND DSiWare Saves
+##### Section II - גיבוי שמירות DSiWare מהSysNAND
 
-If you do not have any DSiWare games or saves that you care about, skip this section.
+אם אין לכם שמירות או משחקי DSiWare שאכפת לכם מהם, תדלגו על החלק הזה.
 {: .notice--info}
 
-1. Launch GodMode9 from arm9loaderhax by holding (Start) on boot
-1. Navigate to `SYSNAND TWLN` -> `title`
-1. Hold (R) and press (A) at the same time on `00030004` to select the folder, then select "Copy to 0:/gm9out"
-  + This process may take some time if you have many DSiWare games
-1. Press (B) twice to return to the main menu
+1. תפתחו את GodMode9 מתוך arm9loaderhax על ידי החזקה של המקש (Start) בעת הדלקה
+1. נווטו אל`SYSNAND TWLN` ומשם ל `title`
+1. תחזיקו (R) ותלחצו (A) באותו הזמן על `00030004` כדי לבחור את התיקייה, ואז תבחרו "Copy to 0:/gm9out"
+  + תהליך זה עלול לקחת זמן מה אם יש לכם הרבה משחקי DSiWare
+1. תלחצו (B) פעמיים כדי לחזור לתפריט הראשי
 
-##### Section III - Backup GBA VCs Saves
+##### Section II - גיבוי שמירות GBA VC מהSysNAND
 
-If you do not have any GBA VC games or saves that you care about, skip this section.
+אם אין לכם שמירות או משחקי GBA VC שאכפת לכם מהם, תדלגו על החלק הזה.
 {: .notice--info}
 
-Note that this is not necessary for any other kind of Virtual Console games (GBC, NES, etc)
+שימו לב שזה לא נדרש למשחקי Virtual Console אחרים (GBC, NES ועוד)
 {: .notice--info}
 
-1. Hold (R) and press (Start) at the same time to power off your device
+1. תחזיקו (R) ולחצו (Start) באותו הזמן כדי לכבות את המכשיר
 1. תכניסו את ה-SD שלכם למחשב
-1. Create a folder in `/files9/` for each GBA VC game that you want to backup the save for 
+1. תצרו תיקייה ב`/files9/` בשביל כל משחק GBA VC שאתם רוצים לגבות לו את השמירה 
 1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
 1. Power on your device into SysNAND
 1. Do the following process for each GBA VC game that you want to backup the save for:
@@ -81,12 +81,12 @@ If you did not backup DSiWare Saves earlier, skip this section.
 1. Navigate to `SDCARD` -> `gm9out`
 1. Press (Y) on the `00030004` folder to copy it
 1. Press (B) twice to return to the main menu
-1. Navigate to `SYSNAND TWLN` -> `title`
+1. נווטו אל`SYSNAND TWLN` ומשם ל `title`
 1. Press (Y) to paste the `00030004` folder
 1. Select "Copy path(s)"
 1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
 1. Select "Overwrite file(s)"
-  + This process may take some time if you have many DSiWare games
+  + תהליך זה עלול לקחת זמן מה אם יש לכם הרבה משחקי DSiWare
 1. Press (B) twice to return to the main menu
 
 ##### Section VI - Restore GBA VC Saves
@@ -94,7 +94,7 @@ If you did not backup DSiWare Saves earlier, skip this section.
 If you did not backup GBA VC Saves earlier, skip this section.
 {: .notice--info}
 
-1. Hold (R) and press (Start) at the same time to power off your device
+1. תחזיקו (R) ולחצו (Start) באותו הזמן כדי לכבות את המכשיר
 1. Power on your device into SysNAND
 1. Do the following process for each GBA VC game that you want to backup the save for:
   + Launch the GBA VC game on SysNAND
