@@ -4,7 +4,7 @@ lang: fr
 permalink: /fr_FR/troubleshooting.html
 ---
 
-If you are unable to boot your device, please look for the section relevant to you, and follow the instructions. Une fois qu'une solution fonctionne pour vous, vous pouvez passer à la suite du guide principal
+Si vous ne parvenez pas à démarrer votre 3DS, recherchez la section qui vous concerne et suivez les instructions correspondantes. Une fois qu'une solution fonctionne pour vous, vous pouvez passer à la suite du guide principal
 (Cette section est plutôt longue, essayez de rechercher votre problème avec Ctrl+F)
 {: .notice--primary}
 
@@ -39,13 +39,13 @@ Pour utiliser les liens suivant [magnet](https://fr.wikipedia.org/wiki/Magnet_(s
 
 ### Section II - Installation des applications
 
-1. Launch FBI
-1. Navigate to `SD` -> `cias`
+1. Lancez FBI
+1. Naviguez vers `SD` -> `cias`
 1. Sélectionnez "\<current directory>"
 1. Sélectionnez "Install and delete all CIAs"
-1. Press (Home) to exit FBI
+1. Appuyez sur (Home) pour quitter FBI
 
-## <a name="rm_nnid" />Removing an NNID without formatting your device
+## <a name="rm_nnid" />Supprimer un NNID sans formater votre console
 
 #### Ce dont vous aurez besoin
 
@@ -64,7 +64,7 @@ Pour utiliser les liens suivant [magnet](https://fr.wikipedia.org/wiki/Magnet_(s
 1. Appuyez sur (Start) pour redémarrer votre système
 
 ## <a name="gw_fbi" />Je ne peux pas injecter dans Santé et Sécurité sur une console downgradée via Gateway
-Cela vient de l'implémentation bancale faite par Gateway pour downgrader et qui laisse deux version de chaque application sur la console. One of them is unused, but it confuses the H&S inject system, causing it to inject into the wrong one.
+Cela vient de l'implémentation bancale faite par Gateway pour downgrader et qui laisse deux version de chaque application sur la console. L'une des deux est inutilisée, mais cela perturbe le système d'injection de H&S, provoquant l'injection dans la mauvaise version.
 
 1. Ouvrez Godmode9 depuis arm9loaderhax en maintenant (Start) au démarrage     
 1. Sélectionnez `SYSNAND CTRNAND` -> `title` -> `00040010`
@@ -77,7 +77,7 @@ Cela vient de l'implémentation bancale faite par Gateway pour downgrader et qui
   + **New 3DS USA**: `20021300` -> `content`
 1. Notez qu'il y a deux fois les fichiers app et tmd, une dont les extensions de fichier sont en majuscules (`.TMD` and `.APP`), et une dont les extensions de fichier sont en minuscules (`.tmd` and `.app`)
 1. En maintenant le bouton (R), appuyez sur (Y) pour créer un nouveau dossier
-1. Press (A) to confirm the name `newdir` (it does not matter what the folder is called)
+1. Appuyez sur (A) pour confirmer le nom `newdir` (le nom du dossier n'a pas d'importance)
 1. Appuyez sur (A) pour autoriser l'écriture sur votre SysNAND, puis entrez la combinaison de touches demandée
 1. Appuyez sur le bouton (L) sur chacun des fichiers dont l'extension de fichier est en majucules (`.TMD` and `.APP`) pour les marquer
 1. Appuyez sur (Y) pour les copier
@@ -92,7 +92,7 @@ Cela vient de l'implémentation bancale faite par Gateway pour downgrader et qui
 ## <a name="ts_browser" />Un exploit basé sur le navigateur web ne fonctionne pas
 Les exploits basé sur le navigateur (tel que browserhax ou 2xrsa) sont parfois instable et plantent fréquemment, mais ils peuvent parfois être réglés en suivant ces étapes
 
-1. Launch the browser, then launch the browser settings
+1. Lancez le navigateur, puis accédez aux paramètres du navigateur
 1. Faites défiler tout en bas et sélectionnez "Initialiser les données de sauvegarde" (ou "Effacer les données de sauvegarde")
 1. Retentez l'exploit
 
@@ -109,32 +109,32 @@ Ceci se produit occasionnellement, mais la raison est inconnue. Les boutons fonc
 1. Suivez les instructions comme si de rien n'était
 1. Appuyez sur (Select) et arm9loaderhax sera installé
 1. Patientez quelques secondes
-1. Power off your device by pressing any button
+1. Eteignez votre console en appuyant sur n’importe quel bouton
 
 ## <a name="ts_sys_down" />Écran noir au démarrage de la SysNAND
 
-1. Try booting with your SD card out, and then reinserting it after booting
-    1. Power off your device
-    1. Remove your SD card from your device
-    1. Power on your device
-    1. When the home menu appears, reinsert your SD card into your device
-    1. If this worked, you should clear Home Menu's extdata by navigating to the following folder on your SD card: `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/`
+1. Essayez de démarrer sans carte SD, puis de la réinsérer après le démarrage
+    1. Éteignez votre 3DS
+    1. Retirez votre carte SD de votre 3DS
+    1. Allumez à présent votre 3DS
+    1. Lorsque le menu home apparaît, vous pouvez réinsérez votre carte SD dans votre console
+    1. Si cela a fonctionné, vous devriez effacer les données additionnelles du Menu Home en naviguant jusqu’au dossier suivant sur votre carte SD : ' / Nintendo 3DS /(32 Character ID) 00000000/extdata//(32 Character ID) /'
         + Région EUR : Supprimer `00000098`
         + Région JPN : Supprimer `00000082`
         + Région USA : Supprimer `0000008f`
-        + CHN Region: Delete `000000A1`
+        + Région CHN : Supprimer `000000A1`
         + Région KOR : Supprimer `000000A9`
-        + TWN Region: Delete `000000B1`
+        + Région TWN : Supprimer `000000B1`
 1. Essayez de démarrer votre console sans aucune cartouche insérée (ni linker)
-1. If you have a hardmod and a NAND backup, flash the backup back to SysNAND
-1. Try booting into recovery mode and updating your system    
+1. Si vous avez un hardmod et une sauvegarde de votre NAND, flashez-la vers votre SysNAND
+1. Essayez de démarrer en mode de récupération et de mettre à jour votre console    
     * Ceci ne fonctionnera probablement pas pour une Old 3DS downgradée en 2.1.0*    
     ** Ceci BRICKERA (rendra non-fonctionnelle) une New 3DS downgradée en 2.1.0**
-    1. Power off your device
-    1. Hold (L)+(R)+(A)+(Up)
-    1. Power on your device
-    1. If you enter safe mode, update your device *only if you have an entrypoint for the latest FW version and it is possible to downgrade from it* and attempt the downgrade again.
-1. Your device may be bricked. For support, ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
+    1. Éteignez votre 3DS
+    1. Maintenez les boutons (L)+(R)+(A)+(Haut) enfoncés
+    1. Allumez à présent votre 3DS
+    1. Si vous démarrez en mode de récupération , mettez à jour votre 3DS *uniquement si vous avez un point d’entrée accessible sur la dernière version du firmware et s'il est possible de downgrader a partir de cette version* puis retentez le downgrade.
+1. Votre console est peut-être brickée. Si vous avez besoin d'aide, rendez vous sur [le chat Rizon IRC #3dshacks](https://www.reddit.com/r/3dshacks/wiki/irc) ou sur [le serveur Discord Nintendo Homebrew](https://discord.gg/MWxPgEp)
 
 ## <a name="ts_sys_a9lh" /> Écran noir au démarrage de ma SysNAND après avoir installé arm9loaderhax
 
@@ -143,16 +143,16 @@ Ceci se produit occasionnellement, mais la raison est inconnue. Les boutons fonc
 1. Essayez de réinitialiser la configuration de Luma3DS et de corriger les options
     1. Supprimez `/luma/config.bin` de votre carte SD
     1. Définissez vos options au prochain démarrage de la console
-1. Test booting GodMode9
+1. Essayez de démarrer GodMod9
     1. Avec Luma3DS, maintenez (Start) au démarrage
 1. Essayez de supprimer les données additionnelles (extdata) du menu Home
     1. Supprimez les données additionnelles du menu Home en allant dans le répertoire suivant sur votre carte SD : `/Nintendo 3DS/(ID de 32 caractères)/(ID de 32 caractères)/extdata/00000000/`
         + Région EUR : Supprimer `00000098`
         + Région JPN : Supprimer `00000082`
         + Région USA : Supprimer `0000008f`
-        + CHN Region: Delete `000000A1`
+        + Région CHN : Supprimer `000000A1`
         + Région KOR : Supprimer `000000A9`
-        + TWN Region: Delete `000000B1`
+        + Région TWN : Supprimer `000000B1`
 1. Essayez de démarrer votre console sans aucune cartouche insérée (ni linker)
 1. Si vous avez auparavant réalisé un downgrade via Gateway, assurez-vous que vous utilisez la dernière version de Luma3DS (v6.2.3 ou plus récent, au minimum)
 1. Si votre NAND est entre la version 3.0.0 et 4.5.0, faites ceci :
@@ -160,13 +160,13 @@ Ceci se produit occasionnellement, mais la raison est inconnue. Les boutons fonc
     + Téléchargez [ce fichier](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) et renommez-le en `firmware.bin`
     + Téléchargez [ce fichier](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
     + Copiez `firmware.bin` et`cetk` dans le répertoire `/luma/` sur votre carte SD
-    + Delete both of these files after updating your device
-1. Try following [9.2.0 CTRTransfer](9.2.0-crtransfer)
+    + Supprimez ces deux fichiers après avoir mis à jour de votre console
+1. Essayer de réaliser le [downgrade en 9.2.0 (CTRtransfer)](9.2.0-ctrtransfer)
 1. Demandez de l'aide (En Anglais) sur [le chat Rizon IRC #3dshacks](https://www.reddit.com/r/3dshacks/wiki/irc) ou sur [le serveur Discord Nintendo Homebrew](https://discord.gg/MWxPgEp).
 
-## <a name="ts_transfer" />Error during SafeCTRTransfer
+## <a name="ts_transfer" />Erreur pendant SafeCTRTransfer
 
-If an error occurs during the SafeCTRTransfer process, you will be prompted to launch an external payload for the purpose of repairing your device.
+Si une erreur se produit pendant le processus de SafeCTRTransfer, il vous sera demandé de lancer un payload externe dans le but de réparer votre appareil.
 
 #### Ce dont vous aurez besoin
 
@@ -174,23 +174,24 @@ If an error occurs during the SafeCTRTransfer process, you will be prompted to l
 
 ##### Instructions
 
-1. Select "Unmount SD card"
+1. Sélectionnez "Unmount SD card"
 1. Insérez votre carte SD dans votre ordinateur
-1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/ctrtransfer/` folder on your SD card and rename `GodMode9.bin` in `/ctrtransfer/` to `payload.bin`
-1. Reinsert your SD card into your device
-1. Select "Run 0:/ctrtransfer/payload.bin"
-1. If it was successful, you will have entered GodMode9
-1. Navigate to `SDCARD` -> `ctrtransfer`
-1. Press (A) on `<serialnumber>_nand.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
-1. Press (A) to unlock SysNAND overwriting, then input the key combo given
-  + This will not overwrite your arm9loaderhax installation
-1. Input the key combo given to unlock SysNAND (lvl1) writing
-  + This process will take some time
-1. Press (A) to continue once it has completed
+1. Copiez `GodMode9.bin` depuis GodMode9 `.zip` vers le dossier `/ctrtransfer/` sur votre carte SD, et renommez `GodMode9.bin` situé dans `/ctrtransfer/` en `payload.bin`
+1. Réinsérez votre carte SD dans votre 3DS
+1. Sélectionnez "Run 0:/ctrtransfer/payload.bin"
+1. Si cela fonctionne, vous avez accédé à GodMode9 avec succès
+1. Naviguez vers `SDCARD` -> `ctrtransfer`
+1. Appuyez sur (A) sur `<serialnumber>_nand.bin`pour le sélectionner, puis choisissez "NAND image options...", puis "Restore SysNAND (safe)"
+1. Appuyez sur (A) pour débloquer l'écriture sur votre SysNAND, puis entrez la combinaison de touches demandée
+  + Ceci n'affectera pas votre installation de arm9loaderhax
+1. Entrez la combinaison de touche demandée pour débloquer l'écriture sur votre SysNAND (lvl1)
+  + Ce processus prendra un certain temps
+1. Appuyez sur (A) pour continuer une fois terminé
 1. Appuyez sur (Start) pour redémarrer votre système
-1. Report this issue to the [SafeCTRTransfer Issues Page](https://github.com/d0k3/SafeCTRTransfer/issues)
+1. Signalez ce problème à la [Page relative aux problèmes liés à SafeCTRTransfer] (en anglais)(https://github.com/d0k3/SafeCTRTransfer/issues)
+
 
 ## <a name="ts_sys_blue" />Écran bleu au démarrage (erreur bootrom)
 
-1. Your device is bricked
-1. You will need to get a [hardmod](https://gbatemp.net/threads/414498/) or repair / replace your device
+1. Votre console est brickée (H.S)
+1. Vous allez devoir mettre en place un [hardmod](https://gbatemp.net/threads/414498/) ou réparer/remplacer votre console
