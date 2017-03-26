@@ -13,7 +13,7 @@ Dieser installiert [AuroraWright's Fork](https://github.com/AuroraWright/arm9loa
 arm9loaderhax wird es dir auch ermöglichen, Payloads zu installieren, was dir dann die Möglichkeit gibt, dein SysNAND zu unbricken, wenn es ansonsten durch das Wiedereinspielen einer Sicherheitskopie gebrickt wäre.
 {: .notice--info}
 
-To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+Um die [Magnet-Links](https://en.wikipedia.org/wiki/Magnet_URI_scheme) auf dieser Seite zu nutzen, brauchst du einen Torrent-Programm wie [Deluge](http://dev.deluge-torrent.org/wiki/Download)
 {: .notice--info}
 
 **Du darfst auf KEINEN Fall den OTP einer anderen Konsole verwenden, oder du wirst GARANTIERT bricken**
@@ -73,7 +73,7 @@ Die neueste Version von [Luma3DS](https://github.com/AuroraWright/Luma3DS/releas
 1. Kopiere `arm9loaderhax.bin` aus der Luma3DS `.7z` in das Stammverzeichnis deiner SD-Karte, überschreibe dabei bereits existierenden Dateien
 1. Erstelle einen Ordner mit dem Namen `luma` im Stammverzeichnis deiner SD-Karte
 1. Erstelle einen Ordner mit dem Namen `payloads` in dem `luma`-Ordner auf deiner SD-Karte
-1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `start_GodMode9.bin`
+1. Kopiere die Datei `GodMode9.bin` aus der GodMode9 `.zip` in den `/luma/payloads/` Ordner deiner SD-Karte und ändere den Namen `GodMode9.bin` aus dem Ordner `/luma/payloads` in `start_GodMode9.bin`
 1. Kopiere `aeskeydb.bin` in den `/files9/`-Ordner auf deiner SD-Karte
 1. Kopiere `DspDump.3dsx` in den `/3ds/`-Ordner auf deiner SD-Karte
 
@@ -125,7 +125,7 @@ Falls du vor dem Befolgen dieser Anleitung bereits ein EmuNAND eingerichtet hatt
 1. Input the key combo given to unlock SysNAND (lvl1) writing
   + This process will take some time
 1. Press (A) to continue once it has completed
-1. Press (Start) to reboot your device
+1. Drücke (Start) um deinen 3DS neu zu starten
   + If you get a black screen, [follow 9.2.0 CTRTransfer](9.2.0-ctrtransfer)
   + It is now safe to put New 3DSs in sleep mode again
 1. If your backup was of a version between 3.0.0 and 4.5.0, your device will not boot until you manually download the required firmware:
@@ -133,7 +133,7 @@ Falls du vor dem Befolgen dieser Anleitung bereits ein EmuNAND eingerichtet hatt
   + Lade [diese Datei](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk) herunter
   + Kopiere `firmware.bin` und `cetk` in den `/luma/`-Ordner auf deiner SD-Karte
   + Delete both of these files after updating your device
-1. Update your device by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
+1. Aktualisiere deinen 3DS, indem zu zu den Systemeinstellungen gehst, dann "Allgemeine Einstellungen" auswählst und dann "System-Update" startest
   + Updates während der Nutzung von A9LH + Luma (was du hast) sind sicher, hört auf nachzufragen
   + Die Warnung, dass ein New 3DS niemals von 2.1.0 aktualisiert werden darf, gilt nicht mehr nach der Wiederherstellung deines NAND-Backups.
   + Falls ein Fehler auftreten sollte, setze deine DNS-Einstellungen auf "automatisch beziehen"
@@ -141,22 +141,22 @@ Falls du vor dem Befolgen dieser Anleitung bereits ein EmuNAND eingerichtet hatt
 
 ##### Abschnitt V - Injektion von FBI
 
-1. Reboot holding (Start) during boot to launch GodMode9
-1. Navigate to `SDCARD` -> `cias`
-1. Press (A) on `FBI.cia` to select it, then select "CIA image options...", then select "Mount image to drive"
-1. Press (A) on the `.app` file, then select "NCCH image options", then select "Inject to H&S"
-1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+1. Starte den 3DS neu, während du (Start) hältst, um GodMode9 zu starten
+1. Navigiere zu `SDCARD` -> `cias`
+1. Drücke (A) auf der `FBI.cia`-Datei, um diese auszuwählen. Wähle dann "CIA Image options..." und dann "Mount Image to drive"
+1. Drücke (A) auf der `.app`-Datei, dann wähle "NCCH Image options" und danach wählst du "Inject to H&S"
+1. Drücke (A), um die SysNAND (Stufe 1) Bearbeitung zu aktivieren. Dann gebe die angegebene Tastenkombination ein
 1. Drücke (A) um fortzufahren
-1. Press (Start) to reboot your device
+1. Drücke (Start) um deinen 3DS neu zu starten
 1. Wenn du immer noch in die normale Gesundheits- und Sicherheitsinformationen-Applikation startest und in der Vergangenheit mithilfe einer Gateway Flashkarte gedowngradet hast, dann folge [dieser Anleitung](troubleshooting#gw_fbi) zur Fehlerbehebung
 
 ##### Section VI - Installing CIAs
 
-1. Launch Health and Safety (which is now FBI)
-1. Navigate to `SD` -> `cias`
+1. Starte die Gesundheits & Sicherheitsinformationen-Anwendung (Welche jetzt FBI ist.)
+1. Navigiere zu `SD` -> `cias`
 1. Wähle "\<current directory>"
 1. Wähle die "Installiere alle CIAs" Option aus und drücke (A) zum bestätigen
-1. Press (Home) to exit FBI
+1. Drücke (HOME), um FBI zu verlassen
 
 ##### Section VII - DSP Dump
 
@@ -167,11 +167,11 @@ Falls du vor dem Befolgen dieser Anleitung bereits ein EmuNAND eingerichtet hatt
 
 ##### Section VIII - Restore Health and Safety
 
-1. Reboot holding (Start) during boot to launch GodMode9
-1. Press (Home) to bring up the action menu
-1. Select "More..."
-1. Select "Restore H&S"
-1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+1. Starte den 3DS neu, während du (Start) hältst, um GodMode9 zu starten
+1. Drücke  (HOME) um das Aktionsmenü aufzurufen
+1. Wähle "More..."
+1. Wähle "Restore H&S"
+1. Drücke (A), um die SysNAND (Stufe 1) Bearbeitung zu aktivieren. Dann gebe die angegebene Tastenkombination ein
 
 ##### Section IX - CTRNAND Luma3DS
 
