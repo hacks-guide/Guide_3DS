@@ -35,7 +35,7 @@ Während dieses Prozesses richtest du auch folgende Programme ein:
 
 + **FBI** *(installiert Spiele und Anwendungen im CIA-Format)*
 + **Luma3DS Updater** *(aktualisiert deine CFW Installation)*
-+  **GodMode9** *(multipurpose tool which can do NAND and cartridge functions)*
++ **GodMode9** *(Multifunktionstool, welches NAND- und Cartridge-Funktionen ausführen kann)*
 
 #### Was du brauchst
 
@@ -88,9 +88,9 @@ Die neueste Version von [Luma3DS](https://github.com/AuroraWright/Luma3DS/releas
   + Wenn du einen 2DS oder New 3DS benutzt und die Internet Verbindung nicht mehr aktiviert ist, entferne die Batterie für einige Sekunden um die Verbidung wiederherzustellen
 1. Drücke (Select) für eine vollständige Installation
 1. Nun wird arm9loaderhax auf deiner Konsole installiert (dies geht sehr schnell)
-1. Power off your device by pressing any button
+1. Drücke eine beliebige Taste, um die Konsole aus zu schalten
 1. Stecke deine SD-Karte in deinen Computer
-1. Copy your device specific `otp.bin` from the `/a9lh/` folder on your SD card to a safe location on your computer and back it up to multiple locations (such as online file storage), then reinsert your SD card into your device
+1. Kopiere deine gerätespezifische `otp.bin` aus dem `/a9lh/` Ordner deiner SD-Karte an einen sicheren Ort auf deinem Computer und sichere sie wenn möglich zusätzlich zum Beispiel in einer Cloud. Danach stecke die SD-Karte wieder in dein Gerät
 1. Reinsert your SD card into your device
 
 ##### Abschnitt III - Luma3DS konfigurieren
@@ -117,27 +117,27 @@ Die neueste Version von [Luma3DS](https://github.com/AuroraWright/Luma3DS/releas
 Falls du vor dem Befolgen dieser Anleitung bereits ein EmuNAND eingerichtet hattest und die Inhalte deines EmuNAND gerne auf deine neue SysNAND-CFW übertragen möchtest, solltest du jetzt [Verschiebe EmuNAND](move-emunand) befolgen, anstatt die ersten vier Schritte dieses Abschnittes durchzuführen.
 {: .notice--info}
 
-1. Boot your device while holding (Start) to enter GodMode9
-1. Navigate to `SDCARD` -> `ctrtransfer`
-1. Press (A) on `<serialnumber>_nand.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
-1. Press (A) to unlock SysNAND overwriting, then input the key combo given
-  + This will not overwrite your arm9loaderhax installation
-1. Input the key combo given to unlock SysNAND (lvl1) writing
-  + This process will take some time
-1. Press (A) to continue once it has completed
+1. Starte deine Konsole während du (Start) gedrückt hälst, um in GodMode9 zu gelangen
+1. Navigiere zu `SDCARD` -> `ctrtransfer`
+1. Drücke (A) auf `<seriennummer>_nand.bin`, um dies auszuwählen, danach "NAND image options..." auswählen und zuletzt "Restore SysNAND (safe)" auswählen
+1. Drücke (A), um SysNAND-Änderungen zu aktivieren. Gib danach die angezeigte Tastenkombination ein
+  + Die arm9loaderhax-Installation wird hiermit nicht überschrieben
+1. Gib die angezeigte Tastenkombination ein, um SysNAND-Änderungen (auf erster Ebene) zu aktivieren
+  + Dieser Prozess kann einige Zeit in Anspruch nehmen
+1. Drücke (A) um fortzufahren, sobald es abgeschlossen ist
 1. Drücke (Start) um deinen 3DS neu zu starten
-  + If you get a black screen, [follow 9.2.0 CTRTransfer](9.2.0-ctrtransfer)
+  + Falls du einen schwarzen Bildschirm erhältst, [folge 9.2.0 ctrtransfer](9.2.0-ctrtransfer)
   + It is now safe to put New 3DSs in sleep mode again
-1. If your backup was of a version between 3.0.0 and 4.5.0, your device will not boot until you manually download the required firmware:
+1. Falls deine Sicherheitskopie von einer System-Firmware zwischen 3.0.0 und 4.5.0 stammt, wird deine Konsole nicht starten, bis du manuell die benötigte Firmware herunterlädst:
   + Lade [diese Datei](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) herunter und benenne sie zu "firmware.bin" um
   + Lade [diese Datei](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk) herunter
   + Kopiere `firmware.bin` und `cetk` in den `/luma/`-Ordner auf deiner SD-Karte
-  + Delete both of these files after updating your device
+  + Lösche beide dieser Dateien nach dem das Update installiert wurde
 1. Aktualisiere deinen 3DS, indem zu zu den Systemeinstellungen gehst, dann "Allgemeine Einstellungen" auswählst und dann "System-Update" startest
   + Updates während der Nutzung von A9LH + Luma (was du hast) sind sicher, hört auf nachzufragen
   + Die Warnung, dass ein New 3DS niemals von 2.1.0 aktualisiert werden darf, gilt nicht mehr nach der Wiederherstellung deines NAND-Backups.
   + Falls ein Fehler auftreten sollte, setze deine DNS-Einstellungen auf "automatisch beziehen"
-  + If this still gives you an error and your NAND is below 9.2.0, [follow 9.2.0 CTRTransfer](9.2.0-ctrtransfer)
+  + Sollte immer noch ein Fehler auftreten und dein NAND älter als 9.2.0 sein, [dann folge 9.2.0 ctrtransfer](9.2.0-ctrtransfer)
 
 ##### Abschnitt V - Injektion von FBI
 
@@ -150,7 +150,7 @@ Falls du vor dem Befolgen dieser Anleitung bereits ein EmuNAND eingerichtet hatt
 1. Drücke (Start) um deinen 3DS neu zu starten
 1. Wenn du immer noch in die normale Gesundheits- und Sicherheitsinformationen-Applikation startest und in der Vergangenheit mithilfe einer Gateway Flashkarte gedowngradet hast, dann folge [dieser Anleitung](troubleshooting#gw_fbi) zur Fehlerbehebung
 
-##### Section VI - Installing CIAs
+##### Abschnitt VI - CIAs Installieren
 
 1. Starte die Gesundheits & Sicherheitsinformationen-Anwendung (Welche jetzt FBI ist.)
 1. Navigiere zu `SD` -> `cias`
@@ -158,14 +158,14 @@ Falls du vor dem Befolgen dieser Anleitung bereits ein EmuNAND eingerichtet hatt
 1. Wähle die "Installiere alle CIAs" Option aus und drücke (A) zum bestätigen
 1. Drücke (HOME), um FBI zu verlassen
 
-##### Section VII - DSP Dump
+##### Abschnitt VII - DSP Dump
 
 1. Starte den Homebrew Launcher vom Home Menü aus
 1. Wähle "DSP Dump" aus
-1. Press (Start) when prompted to exit DSP Dump
-1. Press (Start) to launch the Homebrew Launcher exit menu
+1. Drücke (Start) wenn du zum Verlassen von DSP Dump aufgeforderst wirst
+1. Drücke (Start) um das Menü zu öffnen, welches dir erlaubt, den Homebrew Launcher zu verlassen
 
-##### Section VIII - Restore Health and Safety
+##### Abschnitt VII - Die Gesundheits- und Sicherheitsinformationen-Applikation wiederherstellen
 
 1. Starte den 3DS neu, während du (Start) hältst, um GodMode9 zu starten
 1. Drücke  (HOME) um das Aktionsmenü aufzurufen
@@ -173,19 +173,19 @@ Falls du vor dem Befolgen dieser Anleitung bereits ein EmuNAND eingerichtet hatt
 1. Wähle "Restore H&S"
 1. Drücke (A), um die SysNAND (Stufe 1) Bearbeitung zu aktivieren. Dann gebe die angegebene Tastenkombination ein
 
-##### Section IX - CTRNAND Luma3DS
+##### Abschnitt IX - Installation von Luma3DS auf das CTRNAND
 
-1. Navigate to `SDCARD`
-1. Press (Y) on `arm9loaderhax.bin` to copy it
-1. Press (B) to return to the main menu
-1. Navigate to `SYSNAND CTRNAND`
-1. Press (Y) to paste `arm9loaderhax.bin`
-1. Select "Copy path(s)"
-1. Press (B) to return to the main menu
+1. Navigiere zu "SDCARD"
+1. Drücke (Y) auf `arm9loaderhax.bin`, um diese Datei zu kopieren
+1. Drücke (B), um zum Hauptmenü zurückzukehren
+1. Navigiere zu `SYSNAND CTRNAND`
+1. Drücke (Y), um `arm9loaderhax.bin` einzufügen
+1. Wähle "Copy path(s)" aus
+1. Drücke (B), um zum Hauptmenü zurückzukehren
 1. Drücke (R) und (B) gleichzeitig um die SD-Karte auszuwerfen
-1. Remove your SD card from your device
-1. Press (Start) to reboot your device with your SD card removed
-  + Booting your device at least once with your SD card removed will allow you to configure the CTRNAND based Luma3DS installation
+1. Entferne die SD-Karte aus deiner Konsole
+1. Drücke (Start), um deine Konsole ohne SD-Karte neu zu starten
+  + Dadurch, dass du deine Konsole einmal ohne SD-Karte startest, kannst du die CTRNAND basierte Luma3DS-Installation einrichten
 1. Benutze den (A)-Knopf und das (Steuerkreuz), um die folgenden Punkte zu aktivieren:    
   + **"Show NAND or user string in System Settings"**
 1. Falls du einen **New 3DS** nutzt, kannst du *auch* folgendes aktivieren:
@@ -204,7 +204,7 @@ Wenn DSi/DS-Spiele nicht mehr funktionieren, dann folge [dieser Anleitung](troub
 {% capture notice-10 %}
 Ab jetzt kannst du den Luma 3DS Updater verwenden, um Luma3DS auf dem neuesten Stand zu halten. Dafür drücke einfach den (A)-Knopf nach dem Öffnen des Updaters.     
 Das ist nicht das gleiche wie ein System-Update; der Updater lädt nur die neuesten Dateien für Luma3DS herunter.
-This will only update the Luma3DS files on your SD card. If you boot your device without an SD card, it will use the version you placed in CTRNAND.    
+Dies aktualisiert nur die Luma3DS-Dateien auf der SD-Karte. Wenn du die Konsole ohne die SD-Karte startest, wird die Version verwendet, die du in den CTRNAND kopiert hast.    
 {% endcapture %}
 
 <div class="notice--info">{{ notice-10 | markdownify }}</div>
@@ -212,7 +212,7 @@ This will only update the Luma3DS files on your SD card. If you boot your device
 {% capture notice-6 %}   
 You will now boot Luma3DS CFW SysNAND by default.    
 Du kannst nun (Select) beim Starten halten, um das Luma3DS Konfigurationsmenü zu öffnen.    
-You can now hold (Start) on boot to launch GodMode9.     
+Du kannst nun (Start) beim Starten deiner Konsole gedrückt halten, um GodMode9 zu starten.     
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
@@ -224,14 +224,14 @@ Um [NTR CFW](https://github.com/44670/BootNTR/) zu nutzen, kopiere `ntr.bin` aus
 
 {: .notice--info}
 
-Keep your `<serialnumber>_nand.bin` file, it can be restored by GodMode9 to save you from a brick in the future.
+Behalte deine `<serialnumber>_nand.bin`-Datei. Sie kann in Zukunft mit GodMode9 wieder eingespielt werden, um dich vor einem Brick zu retten.
 {: .notice--info}
 
 Du kannst deine NAND-Sicherheitskopien aus dem `/files9/`-Ordner entfernen, solange du Kopien an einem sicheren Ort aufbewahrst.
 {: .notice--info}
 
 {% capture notice-7 %}
-**You can remove any extra files and folders from the root of your SD card that are *not* in the following list:**
+**Du kannst alle unnötigen Dateien und Ordner aus dem Hauptverzeichnis der SD-Karte löschen, die *nicht* in der folgenden Liste stehen:**
 
     + 3ds
     + DCIM
