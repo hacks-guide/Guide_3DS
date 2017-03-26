@@ -133,8 +133,8 @@ Isso ocorre ocasionalmente, mas não se sabe o porquê. Os botões ainda funcion
     1. Desligue seu dispositivo
     1. Segure (L)+(R)+(A)+(Cima)
     1. Ligue o seu dispositivo
-    1. If you enter safe mode, update your device *only if you have an entrypoint for the latest FW version and it is possible to downgrade from it* and attempt the downgrade again.
-1. Your device may be bricked. For support, ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
+    1. Se você entrar no modo de segurança, atualize o dispositivo *apenas se você tem um ponto de entrada para o firmware mais atual e se for possível o downgrade por meio dele* e tente fazer o downgrade novamente.
+1. Seu dispositivo talvez tenha brickado. Para suporte peça por ajuda em [#3dshacks no IRC Rizon](https://www.reddit.com/r/3dshacks/wiki/irc) ou [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp)
 
 ## <a name="ts_sys_a9lh" />Tela preta na inicialização da SysNAND após instalação do arm9loaderhax
 
@@ -143,16 +143,16 @@ Isso ocorre ocasionalmente, mas não se sabe o porquê. Os botões ainda funcion
 1. Tente resetar as configurações do Luma e ajustar as opções
     1. Apague o arquivo `/luma/config.bin` do seu cartão SD
     1. Marque suas opções quando o 3DS inicializar
-1. Test booting GodMode9
+1. Tente inicializar o GodMode9
     1. No Luma3DS, segure (Start) durante a inicialização
 1. Tente apagar o extdata do Menu HOME
     1. Exclua a extdata do Menu HOME localizada na seguinte pasta no seu cartão SD: `/Nintendo 3DS/(ID de 32 caracteres)/(ID de 32 caracteres)/extdata/00000000/`
         + Região EUR: Apague `00000098`
         + Região JPN: Apague `00000082`
         + Região EUA: Apague `0000008f`
-        + CHN Region: Delete `000000A1`
-        + KOR Region: Delete `000000A9`
-        + TWN Region: Delete `000000B1`
+        + Região CHN: Apague `000000A1`
+        + Região KOR: Apague `000000A9`
+        + Região TWN: Apague `000000B1`
 1. Tente ligar sem nenhum cartucho inserido (incluindo flashcarts)
 1. Caso você tenha realizado um downgrade com algum Gateway anteriormente, certifique-se de estar usando a versão mais recente do Luma3DS (v6.2.3 ou superior, pelo menos)
 1. Se sua NAND estiver com a firmware numa versão entre 3.0.0 e 4.5.0, faça o seguinte:
@@ -160,13 +160,13 @@ Isso ocorre ocasionalmente, mas não se sabe o porquê. Os botões ainda funcion
     + Baixe [este arquivo](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) e renomeie-o para `firmware.bin`
     + Baixe [este arquivo](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
     + Copie os arquivos `firmware.bin` e `cetk` para a pasta `/luma/` do seu cartão SD
-    + Delete both of these files after updating your device
-1. Try following [9.2.0 CTRTransfer](9.2.0-crtransfer)
+    + Apague ambos os arquivos depois de atualizar o dispositivo
+1. Tente seguir [CTRTransfer para 9.2.0](9.2.0-crtransfer)
 1. Peça ajuda no [#3dshacks no Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) ou [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp).
 
-## <a name="ts_transfer" />Error during SafeCTRTransfer
+## <a name="ts_transfer" />Erro durante o SafeCTRTransfer
 
-If an error occurs during the SafeCTRTransfer process, you will be prompted to launch an external payload for the purpose of repairing your device.
+Se um erro ocorrer durante o processo do SafeCTRTransfer, você será solicitado a iniciar um payload externo com o propósito de reparar seu dispositivo.
 
 #### O que você precisa
 
@@ -174,20 +174,20 @@ If an error occurs during the SafeCTRTransfer process, you will be prompted to l
 
 #### Instruções
 
-1. Select "Unmount SD card"
+1. Selecione "Unmount SD card"
 1. Insira o cartão SD no seu computador
-1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/ctrtransfer/` folder on your SD card and rename `GodMode9.bin` in `/ctrtransfer/` to `payload.bin`
-1. Reinsert your SD card into your device
-1. Select "Run 0:/ctrtransfer/payload.bin"
-1. If it was successful, you will have entered GodMode9
-1. Navigate to `SDCARD` -> `ctrtransfer`
-1. Press (A) on `<serialnumber>_nand.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
-1. Press (A) to unlock SysNAND overwriting, then input the key combo given
-  + This will not overwrite your arm9loaderhax installation
+1. Copie `GodMode9.bin` do `.zip` do GodMode9 para o diretório `/ctrtransfer/` no seu cartão SD e renomeie `GodMode9.bin` em `/ctrtransfer/` para `payload.bin`
+1. Reinsira seu cartão SD no seu dispositivo
+1. Selecione "Run 0:/ctrtransfer/payload.bin"
+1. Se tudo der certo, você terá entrado no GodMode9
+1. Navegue para `SDCARD` -> `ctrtransfer`
+1. Aperte (A) em `<serialnumber>_nand.bin` para selecioná-lo, então selecione "NAND image options...", depois selecione "Restore SysNAND (safe)"
+1. Aperte (A) para destravar as modificações na SysNAND, então aperte a sequência de botões solicitada
+  + Isso não irá sobreescrever sua instalação do arm9loaderhax
 1. Aperte a sequência de botões solicitada para desbloquear "SysNAND (lvl1) writing"
-  + This process will take some time
-1. Press (A) to continue once it has completed
-1. Press (Start) to reboot your device
+  + Este processo levará algum tempo
+1. Aperte (A) para continuar uma vez que for concluído
+1. Aperte (Start) para reiniciar seu dispositivo
 1. Report this issue to the [SafeCTRTransfer Issues Page](https://github.com/d0k3/SafeCTRTransfer/issues)
 
 ## <a name="ts_sys_blue" />O 3DS inicializa numa tela azul ("bootrom error")
