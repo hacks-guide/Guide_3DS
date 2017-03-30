@@ -1,31 +1,31 @@
 ---
 title: "F3 (Linux)" #
-lang: en
-permalink: /f3-(linux).html
+lang: fi
+permalink: /fi_FI/f3-(linux).html
 ---
 
-This page will walk you through the process of checking your SD card for errors using F3.
+Tämä sivu opastaa sinua tarkistamaan SD-korttisi virheiden varalta käyttäen F3-ohjelmaa.
 {: .notice}
 
-Depending on the size of your SD card and the speed of your computer, this process can take up to several hours!
+SD-korttisi koosta ja tietokoneesi nopeudesta riippuen tämä prosessi voi kestää jopa useita tunteja!
 {: .notice--info}
 
-This page is for Linux users only. If you are not on Linux, check out the [H2testw (windows)](h2testw-(windows)) or [F3X (mac)](f3x-(mac)) pages.
+Tämä sivu on vain Linux-käyttäjille. Jos et käytä Linuxia, tutustu sivuun [H2testw (Windows)](h2testw-(windows)) tai [F3X (Mac)](f3x-(mac)).
 {: .notice--info}
 
-#### What you need
+#### Tarpeet
 
-* The latest version of [F3](https://github.com/AltraMayor/f3/archive/v6.0.zip)
+* F3:n [viimeisin versio](https://github.com/AltraMayor/f3/archive/v6.0.zip)
 
-#### Instructions
+#### Ohjeet
 
-1. Unzip the f3 `.zip` file
-2. `cd` into the f3 directory
-3. Run `make` to compile F3
-4. Insert your SD card into your computer
-5. Mount your SD card
-6. Run `./f3write <your sd card mount point>`
-7. Wait until the process is complete. See below for an example output.
+1. Pura f3-`.zip`-tiedosto
+1. Vaihda f3-hakemistoon `cd`-komennolla
+1. Aja `make`-komento kääntääksesi F3:n
+1. Aseta SD-korttisi tietokoneeseesi
+1. Liitä SD-korttisi tiedostojärjestelmään
+1. Run `./f3write <your sd card mount point>`
+1. Odota, kunnes toiminto on suoritettu. Alla esimerkkituloste.
 
 		$ ./f3write /media/michel/6135-3363/
 		Free space: 29.71 GB
@@ -35,8 +35,8 @@ This page is for Linux users only. If you are not on Linux, check out the [H2tes
 		Free space: 0.00 Byte
 		Average Writing speed: 4.90 MB/s
 
-8. Run `./f3read <your sd card mount point>`
-9. Wait until the process is complete. See below for an example output.
+1. Aja komento `./f3read <SD-korttisi liitoskohta>`
+1. Odota, kunnes toiminto on suoritettu. Alla esimerkkituloste.
 
 		$ ./f3read /media/michel/6135-3363/
 		                  SECTORS      ok/corrupted/changed/overwritten
@@ -53,11 +53,11 @@ This page is for Linux users only. If you are not on Linux, check out the [H2tes
 
 ___
 
-If the test shows the result `Data LOST: 0.00 Byte (0 sectors)` your SD card is good and you can delete all `.h2w` files on the SD card
+Jos testi näyttää tuloksen `Data LOST: 0.00 Byte (0 sectors)`, SD-korttisi on kunnossa, ja voit poistaa siltä kaikki `.h2w- tiedostot
 {: .notice--success}
 
-If the test shows any other results, your SD card may be corrupted or damaged and you may have to replace it!
+Jos testi näyttää jonkin muun tuloksen, SD-korttisi saattaa olla vioittunut, ja saatat joutua hankkimaan uuden!
 {: .notice--danger}
 
-Return to [Get Started](get-started)
+Palaa osioon [Aloitus](get-started)
 {: .notice--primary}
