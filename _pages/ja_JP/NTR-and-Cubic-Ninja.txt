@@ -4,6 +4,9 @@ lang: ja
 permalink: /ja_JP/ntr-and-cubic-ninja.html
 ---
 
+To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+{: .notice--info}
+
 **NTRキュービックニンジャは日本仕様のNew 3DSだけに有効です！**
 {: .notice--warning}
 
@@ -11,7 +14,6 @@ permalink: /ja_JP/ntr-and-cubic-ninja.html
 
 * [日本仕様のキュービックニンジャ](https://www.amazon.com/dp/B004QL7M0A)
 * Homebrew [スターターキット](http://smealum.github.io/ninjhax2/starter.zip)
-* [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/latest)の最新バージョン
 * <i class="fa fa-magnet" aria-hidden="true" title="トレント用のマグネットリンク。 トレントのソフトを使ってダウンロードしてください。"></i> - [`3ds-private-update-server.zip`](magnet:?xt=urn:btih:8623e580752f22940d96630ef723ce30a707b22e&dn=3ds-private-update-server.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.piratepublic.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.kicks-ass.net%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce)
 * [WAMPSERVER (PHP 5.5) 2.5](http://www.wampserver.com/en/#download-wrapper)
 * [`node.exe`](http://nodejs.org/dist/latest/win-x86/node.exe)
@@ -26,42 +28,40 @@ permalink: /ja_JP/ntr-and-cubic-ninja.html
 ##### セクション I -　準備
 
 1. WAMPをデフォルトディレクトリにインストールします
-2. `3ds-private-update-server.zip`のコンテンツを`C:\wamp\www\`に解凍します（既存のファイルを上書きします）
-3. `C:\wamp\www\` に`update.php`をコピーします（既存のファイルを上書きします）
-4. 9.2.0ダウングレード `.zip`から`updates`フォルダを`C:\wamp\www\`にコピーします
-5. `C:\wamp\www\updates`に`node.exe`を移動します
-6. `C:\wamp\www\updates`に`C:\wamp\www\CdnCiaUnpack.js`を移動します
-7. `C:\wamp\www\updates`で、`CdnCiaUnpack.js`を`node.exe`にドラッグして`GetSystemUpdate.partial.xml`
+1. `3ds-private-update-server.zip`のコンテンツを`C:\wamp\www\`に解凍します（既存のファイルを上書きします）
+1. `C:\wamp\www\` に`update.php`をコピーします（既存のファイルを上書きします）
+1. 9.2.0ダウングレード `.zip`から`updates`フォルダを`C:\wamp\www\`にコピーします
+1. `C:\wamp\www\updates`に`node.exe`を移動します
+1. `C:\wamp\www\updates`に`C:\wamp\www\CdnCiaUnpack.js`を移動します
+1. `C:\wamp\www\updates`で、`CdnCiaUnpack.js`を`node.exe`にドラッグして`GetSystemUpdate.partial.xml`
 を取得します
-8. `node.exe`と`CdnCiaUnpack.js`を`C:\wamp\www\`に戻します
-9. `C:\wamp\www\`にGetSystemUpdate.partial.xml`をコピーします（`C:\wamp\www\updates`にも`C:\wamp\www\`にもそのファイルのコピーがあるようになります）
-10. システムトレイのWAMPアイコンをクリックし、「Put Online」をクリックします
-11. CMDで`ipconfig /all`コマンドを実行して、お使いのパソコンのIPv4アドレスを取得します。これはすぐに役立ちます
-12. SDカードのルートに`ntr.bin`をコピーします
-13. SDカードのルートに`files9`フォルダはない場合、そのフォルダを作成します
-14. `starter.zip` の_中身_をSDカードのルートにコピーします
-15. Decrypt9WIP `.zip`から`Decrypt9WIP`フォルダをSDカードの`/3ds/`にコピーします
-16. SDカードを3DSに入れます
+1. `node.exe`と`CdnCiaUnpack.js`を`C:\wamp\www\`に戻します
+1. `C:\wamp\www\`にGetSystemUpdate.partial.xml`をコピーします（`C:\wamp\www\updates`にも`C:\wamp\www\`にもそのファイルのコピーがあるようになります）
+1. システムトレイのWAMPアイコンをクリックし、「Put Online」をクリックします
+1. CMDで`ipconfig /all`コマンドを実行して、お使いのパソコンのIPv4アドレスを取得します。これはすぐに役立ちます
+1. SDカードのルートに`ntr.bin`をコピーします
+1. `starter.zip` の_中身_をSDカードのルートにコピーします
+1. Put your SD card back into your device
 
 ##### セクション II - 更新する
 
-1. (L)+(R)+(A)+(UP) を同時に押して3DSを起動します。デバイスはリカバリーモードを起動します
-2. アップデートを拒否して再起動します
-3. キュービックニンジャを起動します（すでにNinjHaxがインストールされている場合、(L)+(R)+(X)+(Y) を押してリセットします）
-4. 「作成(Create)」を選択し、「QRコード(QR Code)」を選択し、「QRコードをスキャン(Scan QR Code)」を選択します
-5. NTR CFW `.zip`にあるデバイスの地域に対応するQRコードをスキャンします
-6. ホームメニューで、(Y) と (X) 同時に押してNTRのメニューを開きます
-7. デバッガーを有効にして、メニューを閉じます
-8. 3DSのIPアドレスをルーターのWebページで取得します（どうやってかわからないなら、Googleで検索してください。各ルーターは別々に違う方法があります）
-9. コンピュータでNTRデバッガーを実行します
-10. 下記のコマンドを入力します（XXX.XXX.XXX.XXXを3DSのIPアドレスで、YYY.YYY.YYY.YYYをお使いのパソコンのIPアドレスで置き換えます）    
+1. Boot your device into recovery mode by holding (L)+(R)+(A)+(UP) while powering on
+1. アップデートを拒否して再起動します
+1. Launch Cubic Ninja (if it already has NinjHax installed, hold (L)+(R)+(X)+(Y) to reset it)
+1. 「作成(Create)」を選択し、「QRコード(QR Code)」を選択し、「QRコードをスキャン(Scan QR Code)」を選択します
+1. NTR CFW `.zip`にあるデバイスの地域に対応するQRコードをスキャンします
+1. On the home menu, press (Y) and (X) at the same time to launch NTR's menu
+1. デバッガーを有効にして、メニューを閉じます
+1. Use your router's web page to get your device's IP address (google it if you don't know how, all routers are different)
+1. コンピュータでNTRデバッガーを実行します
+1. Enter the following commands (replace XXX.XXX.XXX.XXX with your device's IP address and YYY.YYY.YYY.YYY with your computer's IP address)    
     + `connect("XXX.XXX.XXX.XXX", 8000)`
     + `write(0x15E424, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
     + `write(0x15E0EC, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
     + `write(0x15E463, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
-11. システム設定で3DSをアップデートしてください。「本体設定」に行って、そして「その他の設定」に行って、一番右のページで「本体の更新」をしてください
+1. Update your device by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
 
 ___
 
-[Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher)) へ続く
+Continue to [SafeCTRTransfer (Homebrew Launcher)](safectrtransfer-(homebrew-launcher))
 {: .notice--primary}
