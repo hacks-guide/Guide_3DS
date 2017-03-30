@@ -1,100 +1,115 @@
 ---
-title: "9.2.0 ctrtransfer" #
+title: "9.2.0 CTRTransfer" #
 lang: nl
 permalink: /nl_NL/9.2.0-ctrtransfer.html
 ---
 
-Als je gedowngrade hebt naar 2.1.0, maar voor welke reden dan ook **geen functionerende NAND backup hebt** is dit de handleiding die je moet volgen
-{: .notice--success}
-
-Het kan voorkomen dat je geïnstalleerde spellen na de crtransfer niet meer te zien zijn. Dit is omdat de tickets zijn verwijderd door de transfer, dit is de reden waarom je een backup het moeten maken van deze tickets. Ze zullen worden teruggezet aan het einde van de gids.
+Het kan voorkomen dat je geïnstalleerde spellen na de CTRTransfer niet meer te zien zijn. Dit is omdat de tickets zijn verwijderd door de transfer, dit is de reden waarom je een backup het moeten maken van deze tickets. Ze zullen worden hersteld aan het einde van de gids.
 {: .notice--info}
 
-Omdat het doel van de 9.2.0 ctrtransfer het oplossen van problemen in het bestaande NAND is, zal je in deze stappen, in tegenstelling tot de 2.1.0 ctrtransfer, alleen je tickets backuppen. Door geen backup te maken van deze gegevens zal dit leiden tot het VERLIES van alle geinstalleerde games en saves!
+Om een [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) link te gebruiken in deze handleiding, moet je een torrent client hebben zoals [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+{: .notice--info}
+
+Omdat het doel van de 9.2.0 CTRTransfer het oplossen van problemen in het bestaande NAND is, zal je in deze stappen, in tegenstelling tot de 2.1.0 CTRTransfer, alleen backups maken van je tickets. Als je geen backup van deze maakt zal je alle geïnstalleerde spellen en saves VERLIEZEN!
 {: .notice--danger}
 
 #### Benodigdheden
 
-* De nieuwste versie van [GodMode9] (https://github.com/d0k3/GodMode9/releases/)
-* De nieuwste versie van [Decrypt9WIP] (https://github.com/d0k3/Decrypt9WIP/releases/latest)
-* De 9.2.0 ctrtransfer image voor jouw apparaat en regio     
+* De nieuwste versie van [GodMode9](https://github.com/d0k3/GodMode9/releases/)
+* De meest recente versie van [FBI](https://github.com/Steveice10/FBI/releases/latest)
+* De 9.2.0 CTRTransfer image voor jouw apparaat en regio     
 *(Als jouw apparaat niet uit één van deze regio's afkomstig is, kan je een apparaat van hetzelfde type kiezen)*:
-  +    <i class="fa fa-magnet" aria-hidden="true" title="Dit is een magnet link. Gebruik een torrent client om dit bestand te downloaden."></i> - [New 3DS 9.2.0 - EUR - ctrtransfer](magnet:?xt=urn:btih:fed7bfeec0e52b42a77467cfb6ffd3e9dd2d5a70&dn=9.2.0-20E%5Fctrtransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)   
-  +    <i class="fa fa-magnet" aria-hidden="true" title="Dit is een magnet link. Gebruik een torrent client om dit bestand te downloaden."></i> - [New 3DS 9.2.0 - JPN - ctrtransfer](magnet:?xt=urn:btih:b22d67fd02b3b0e30ac991e451db0f2d32e7beca&dn=9.2.0-20J%5Fctrtransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
-  +    <i class="fa fa-magnet" aria-hidden="true" title="Dit is een magnet link. Gebruik een torrent client om dit bestand te downloaden."></i> - [New 3DS 9.2.0 - USA - ctrtransfer](magnet:?xt=urn:btih:985d47442dc470d1b9f908256bed041c63885f60&dn=9.2.0-20U%5Fctrtransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)    
+  +    <i class="fa fa-magnet" aria-hidden="true" title="Dit is een magnet link. Gebruik een torrent client om dit bestand te downloaden."></i> - [New 3DS 9.2.0 - EUR - CTRTransfer](magnet:?xt=urn:btih:fed7bfeec0e52b42a77467cfb6ffd3e9dd2d5a70&dn=9.2.0-20E%5FCTRTransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)   
+  +    <i class="fa fa-magnet" aria-hidden="true" title="Dit is een magnet link. Gebruik een torrent client om dit bestand te downloaden."></i> - [New 3DS 9.2.0 - JPN - CTRTransfer](magnet:?xt=urn:btih:b22d67fd02b3b0e30ac991e451db0f2d32e7beca&dn=9.2.0-20J%5FCTRTransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    <i class="fa fa-magnet" aria-hidden="true" title="Dit is een magnet link. Gebruik een torrent client om dit bestand te downloaden."></i> - [New 3DS 9.2.0 - USA - CTRTransfer](magnet:?xt=urn:btih:985d47442dc470d1b9f908256bed041c63885f60&dn=9.2.0-20U%5FCTRTransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)    
 ~
-  +    <i class="fa fa-magnet" aria-hidden="true" title="Dit is een magnet link. Gebruik een torrent client om dit bestand te downloaden."></i> - [Old 3DS of 2DS 9.2.0 - EUR - ctrtransfer](magnet:?xt=urn:btih:8d6142313971b08f92257e7fb1c1d5689e34ed78&dn=9.2.0-20E%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
-  +    <i class="fa fa-magnet" aria-hidden="true" title="Dit is een magnet link. Gebruik een torrent client om dit bestand te downloaden."></i> - [Old 3DS of 2DS 9.2.0 - JPN - ctrtransfer](magnet:?xt=urn:btih:24ad2b85e67013ef1f91178dca7ad2e40663b9b2&dn=9.2.0-20J%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
-  +    <i class="fa fa-magnet" aria-hidden="true" title="Dit is een magnet link. Gebruik een torrent client om dit bestand te downloaden."></i> - [Old 3DS of 2DS 9.2.0 - USA - ctrtransfer](magnet:?xt=urn:btih:1dc79a2a0babb45497961888f369423a93135e2b&dn=9.2.0-20U%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+  +    <i class="fa fa-magnet" aria-hidden="true" title="Dit is een magnet link. Gebruik een torrent client om dit bestand te downloaden."></i> - [Old 3DS of 2DS 9.2.0 - EUR - CTRTransfer](magnet:?xt=urn:btih:8d6142313971b08f92257e7fb1c1d5689e34ed78&dn=9.2.0-20E%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    <i class="fa fa-magnet" aria-hidden="true" title="Dit is een magnet link. Gebruik een torrent client om dit bestand te downloaden."></i> - [Old 3DS of 2DS 9.2.0 - JPN - CTRTransfer](magnet:?xt=urn:btih:24ad2b85e67013ef1f91178dca7ad2e40663b9b2&dn=9.2.0-20J%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    <i class="fa fa-magnet" aria-hidden="true" title="Dit is een magnet link. Gebruik een torrent client om dit bestand te downloaden."></i> - [Old 3DS of 2DS 9.2.0 - USA - CTRTransfer](magnet:?xt=urn:btih:1dc79a2a0babb45497961888f369423a93135e2b&dn=9.2.0-20U%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 
 ### Instructies
 
-### Deel I - Voorbereiding
+##### Deel I - Voorbereiding
 
-1. Kopiëer 'GodMode9.bin' van GodMode9 '.zip' naar de '/luma/payloads/' map op je SD-kaart en verander de naam van 'GodMode9.bin' in '/luma/payloads/' naar 'up_GodMode9.bin'
-2. Kopieer de 9.2.0 ctrtransfer image `.bin` en`.bin.sha` van de ctrtransfer `.zip` naar de`/files9/` map op je SD kaart
-3. Kopieer `Decrypt9WIP.bin` naar de `/luma/payloads/` map op je SD kaart en verander de naam van `Decrypt9WIP.bin` naar `x_Decrypt9WIP.bin`
-4. Plaats je SD kaart opnieuw in je 3DS
+1. Schakel je 3ds uit
+1. Plaats je SD-kaart in je computer
+1. Maak een nieuwe map genaamd `cias` in de hooofdmap van je SD kaart, indien deze nog niet aanwezig is
+1. Kopiëer `GodMode9.bin` van GodMode9 `.zip` naar de `/luma/payloads/` map op je SD-kaart en verander de naam van `GodMode9.bin` in `/luma/payloads/` naar `start_GodMode9.bin`
+1. Kopieer de 9.2.0 CTRTransfer image `.bin` van de CTRTransfer `.zip` naar de `/files9/` map op je SD kaart
+1. Kopieer `FBI.cia` van de FBI `.zip` naar de `/cias/` map op je SD kaart
+1. Stop je SD kaart terug in je 3DS
 
-##### Section II - Tickets backuppen
+##### Deel II - CTRTransfer
 
-1. Open Decrypt9 met arm9loaderhax door (X) ingedrukt te houden tijdens het opstartten
-2. Kies "Ticket/Titlekey Options", en selecteer daar "Ticket Dump (SysNAND)"
-3. Druk op (Select) om je sd kaart uit te werpen en stop deze in je computer
-4. Verwijder alle`.tik` bestanden in de`/files9/` map die **Niet** beginnen met "00-"
-  + Als er geen een begint met "00-", verwijder ze dan gewoon allemaal
-5. Stop je SD kaart terug in je 3ds, en druk op (B) om terug te gaan naar het Hoofdmenu
-
-### Deel III - ctrtransfer
-
-1. Ga naar "SysNAND Options", klik dan op "CTRNAND Transfer", en vervolgens klik je op "Auto CTRNAND Transfer"
-2. Voer de combinatie van toetsen in die op het scherm verschijnt, selecteer dan het 2.1.0 ctrtransfer image door op (A) te drukken
-3. Als u nog geen een NAND back-up heeft, ** back-up dan SysNAND naar 'NANDmin.bin' wanneer dit wordt gevraagd door op (A) te drukken**
-4. Laat het overzetten zijn gang gaan, dit kan even duren
-5. Als de transfer compleet is, druk op (Select) om je SD kaart uit te werpen
-6. Stop je SD kaart in je computer en kopieer `NANDmin.bin` en `NANDmin.bin.sha` van de `/files9/` map van je sd kaart naar een veilige plek
-  + Maak backups naar meerdere locaties
-  + Deze backup zal je van een brick redden als er iets misgaat in de toekomst
-7. Verwijder de 9.2.0 ctrtansfer image '.bin' en '.bin.sha' van de '/files9' map op je sd kaart
-8. Stop je SD-kaart terug in je 3DS
-9. Druk (Start) om te herstarten
-10. Update je 3DS door naar System Settings en dan naar "Other Settings" te gaan. Ga in dat menu helemaal naar rechts en klik op "System Update"
-  + Updaten terwijl je A9LH + Luma gebruikt (wat het geval is) is veilig, hou op dit te vragen
+1. Open GodMode9 vanaf arm9loaderhax door (Start) ingedrukt te houden bij het opstarten van je 3DS
+1. Navigeer naar `SDCARD`-> `files9`
+1. Druk op (A) op de CTRTransfer `.bin` om deze te selecteren
+1. Selecteer "CTRNAND options..."
+1. Selecteer "Transfer image to CTRNAND"
+1. Wanneer gevraagd, selecteer "Transfer to SysNAND"
+  + Deze vraag verschint alleen als je een EmuNAND hebt
+1. Druk op (A) om SysNAND (lvl1) writing te ontgrendelen en voer daarna de toetsencombinatie in die wordt gegeven
+  + Dit proces zal enige tijd duren
+1. Zodra de overdracht voltooid is, kan je op (B) drukken om verder te gaan
+1. Druk twee keer op (B) om terug te gaan naar het hoofdmenu
+1. Navigeer naar `SYSNAND CTRNAND` -> `dbs`
+1. Druk op (A) op `ticket.bak` om dit te selecteren, selecteer vervolgens "Mount as ticket.db"
+1. Als dit bestaat, houdt (R) ingedrukt en druk op (A) op hetzelfde moment op `eshop` om deze map te selecteren, selecteer dan "Copy to 0:/gm9out"
+  + Dit proces kan even duren als je veel tickets hebt
+  + Druk op (A) om verder te gaan als het voltooid is
+1. Als dit bestaat, houdt (R) ingedrukt en druk op (A) op hetzelfde moment op `unknown` om deze map te selecteren, selecteer dan "Copy to 0:/gm9out"
+  + Dit proces kan even duren als je veel tickets hebt
+  + Druk op (A) om verder te gaan als het voltooid is
+1. Druk op (Start) om je 3DS opnieuw op te starten
+1. Update je 3DS door naar System Settings en dan naar "Algemene Instellingen" te gaan. Ga in dat menu helemaal naar rechts en klik op "Systeemupdate"
+  + Updaten terwijl je A9LH + Luma (wat je hebt) gebruikt zijn veilig, stop met hierover vragen te stellen
   + Als dit je een foutmelding geeft, zet dan je DNS instellingen op "auto"
 
-##### Deel V - FBI Injecteren
+##### Deel III - FBI Injecteren
 
-1. Herstart terwijl je (Start) in gedrukt houdt bij het opstarten om Hourglass9 te openen
-2. Ga naar "SysNAND Backup/Restore" en selecteer de "Health&Safety Dump" optie om Health & Safety te dumpen naar`hs.app` **(je kan de D-Pad gebruiken om de juiste bestandsnaam te selecteren)**
-  + Als dit bestand al bestaat kan je de Health and Safety dump overslaan
-3. Druk op (B) en selecteer dan de "Health&Safety Inject" optie
-4. Voer de gegeven combinatie van knoppen in
-5. Selecteer de FBI injectable '.app' voor jouw regio
-6. Druk op (A) en bevestig het injecten
-7. Druk op (Start) om opnieuw op te starten
-8. Als je nog steeds de originele Health & Safety app wil gebruiken en je in het verleden gedowngraded hebt met Gateway, [volg dan deze uitleg](troubleshooting#gw_fbi)
+1. Herstart terwijl je (Start) ingedrukt houdt bij het opstarten om GodMode9 te openen
+1. Navigeer naar `SDCARD` -> `cias`
+1. Druk op (A) op `FBI.cia` om deze te selecteren, selecteer vervolgens "CIA image options...", en selecteer dan "Mount image to drive"
+1. Druk op (A) op het `.app` bestand, selecteer vervolgens "NCCH image options", en selecteer dan "Inject to H&S"
+1. Druk op (A) om SysNAND (lvl1) writing te ontgrendelen en voer daarna de toetsencombinatie in die wordt gegeven
+1. Druk op (A) om door te gaan
+1. Druk op (Start) om je 3DS opnieuw op te starten
+1. Als je nog steeds de originele gezondheids- en veiligheidsinformatie app wil gebruiken en je in het verleden gedowngraded hebt met Gateway, [volg dan deze uitleg](troubleshooting#gw_fbi)
 
-##### Sectie VI - Tickets herinstalleren
+##### Deel IV - Tickets opnieuw installeren
 
-Als je geen tickets had die begonnen met 00-, kan je de volgende sectie overslaan.
+Als je geen `eshop` of `unknown` mappen had eerder in dit proces, zie deel 2, dan kan je dit deel overslaan.
 {: .notice--info}
 
-1. Open FBI
-2. Selecteer "SD"
-3. Selecteer "files9"
-4. Selecteer "\<current directory >"
-5. Selecteer "Install and delete all tickets"
-6. Wacht. Het systeem kan lijken te bevriezen, heb even geduld.
-7. Druk op (A) om te bevestigen
-8. Druk op (B) om het installeren van tickets via CDN af te wijzen
-9. Sluit af met de home knop
+1. Open Gezondheids- en veiligheidsinformatie (wat nu FBI is)
+1. Navigeer naar `SD` -> `cias`
+1. Selecteer "FBI.cia"
+1. Selecteer de "Install" optie en druk op (A) om te bevestigen
+1. Ga terug naar de SD directory (map) door op (B) te drukken
+1. Selecteer "gm9out"
+1. Doe het volgende proces voor de `eshop`, `unknown` of beide mappen
+  + Navigeer naar de map
+  + Selecteer "\<current directory>"
+  + Selecteer "Install and delete all tickets"
+  + Wacht. Het systeem lijkt misschien vast te lopen, maar geef het wat tijd.
+  + Druk op (A) om het te bevestigen
+  + Druk op (B) om het installeren van tickets van CDN te weigeren.
+1. Druk op (Home) om FBI af te sluiten
 
-##### Section VIII - Health and Safety (Gezondheids- en veiligheidsinformatie) herstellen
+##### Deel V - Health and Safety (Gezondheids- en veiligheidsinformatie) herstellen
 
-1. Druk op (Start) en houdt dan (Start) ingedrukt om Hourglass9 op te starten   
-2. Ga naar "SysNAND Backup/Restore" en kies "Health&Safety Inject"
-3. Selecteer `hs.app` (het oorspronkelijke bestand dat niet met FBI geïnjecteerd is), druk op (A) en bevestig om te injecteren
-4. Druk op (Start) om opnieuw op te starten
+1. Herstart terwijl je (Start) ingedrukt houdt bij het opstarten om GodMode9 te openen
+1. Druk op de (Home) knop om het actiemenu te openen
+1. Selecteer "More..."
+1. Selecteer "Restore H&S"
+1. Druk op (A) om SysNAND (lvl1) writing te ontgrendelen en voer daarna de toetsencombinatie in die wordt gegeven
+
+##### Deel VI - Verwijder de CTRTransfer image
+
+1. Navigeer naar `SDCARD`-> `files9`
+1. Druk op (X) om de CTRTransfer image `.bin` te verwijderen
+1. Druk op (A) om te bevestigen
+1. Druk op (Start) om je 3DS opnieuw op te starten
 
 ___
 
