@@ -15,13 +15,10 @@ permalink: /nl_NL/index.html
 
 {% capture notice-home %}
 **Deze gids is _alleen_ voor kleinhandel (door consumenten gekochte; niet van de Nintendo Developer Program) consoles!    
-Als je een ontwikkelaars console hebt ("PANDA" of "SNAKE"), zie dan de [devGuide](https://dev.3ds.guide)**
+Als je een ontwikkelaarsconsole hebt ("PANDA" of "SNAKE"), zie dan de [devGuide](https://dev.3ds.guide)**
 {% endcapture %}
 
-<div class="notice--danger">{{ notice-home | markdownify }}</div>
-
-**Om een [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) link te gebruiken uit de handleiding, moet je een torrent client hebben zoals [Deluge](http://dev.deluge-torrent.org/wiki/Download)**
-{: .notice--info}
+<div class="notice--danger">{ notice-home | markdownify }</div>
 
 **Deze handleiding heeft *jouw* hulp nodig om te [vertalen](https://translate.3ds.guide/) naar andere talen!**
 {: .notice--success}
@@ -34,7 +31,7 @@ Als je een ontwikkelaars console hebt ("PANDA" of "SNAKE"), zie dan de [devGuide
 
 ## Wat is Homebrew?
 
-[**Homebrew**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) verwijst gewoonlijk naar software die niet is geauthoriseerd door Nintendo. Het zorgt ervoor dat je homebrew games kan spelen en gereedschappen als save editing, backups en emulators voor oudere systemen kan gebruiken.
+[**Homebrew**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) verwijst gewoonlijk naar software die niet is geauthoriseerd door Nintendo. Het zorgt ervoor dat je homebrew spellen kan spelen en tools als save editing, backups en emulators voor oudere systemen kan gebruiken.
 
 In de meeste gevallen is het gebruik maken van Homebrew op je systeem 100% gratis [met gewoon de Nintendo 3DS Sound app](homebrew-launcher-(soundhax)) (als je op versie >=11.3.0 bent, zal je niet verder dan Homebrew kunnen gaan). Er zijn ook verschillende andere exploits in commerciële spellen en de browser die kunnen worden gebruikt om homebrew te krijgen.
 
@@ -44,36 +41,36 @@ In de meeste gevallen is het gebruik maken van Homebrew op je systeem 100% grati
 
 CFW kan gemakkelijk opgezet worden op elke console die firmwareversie 11.2.0 of lager heeft.
 
-## Wat installeert deze gids?
+## Wat installeert deze handleiding?
 
-Deze gids heeft het nemen van een niet gemodificeerde 3DS met stock
-firmware naar een door arm9loaderhax aangedreven Custom Firmware als einddoel. Op sommige versies gebruikt het homebrew als een startplek, maar Custom Firmware is nog steeds het doel.
+Deze handleiding heeft als einddoel het nemen van een unmodded 3DS van stock versie
+naar een 3DS met Custom Firmware die gebruik maakt van arm9loaderhax. Op sommige firmwareversies gebruikt deze handleiding homebrew als startplek, maar het einddoel blijft Custom Firmware.
 
-Arm9loaderhax is de nieuwste en beste manier om Custom Firmware te gebruiken en geeft ons bijna volledige controle over het systeem luttele milliseconden nadat het apparaat opstart, wat vergelijkbaar is met BootMii voor de Wii.
+Arm9loaderhax is de recentste en beste manier om Custom Firmware op te starten, aangezien het binnen een paar milliseconden tijdens het opstarten bijna volledige controle over het systeem aan ons geeft, dit is te vergelijken met BootMii voor de Wii.
 
-Er zijn vele voordelen van arm9loaderhax boven andere manieren om Custom Firmware te gebruiken en het wordt daarom aangeraden deze gids over elke andere te gebruiken die nog steeds oude software gebruikt (zoals menuhax of rxTools).
+Er zijn veel voordelen van het gebruik van arm9loaderhax boven andere manieren om Custom Firmware op te starten, en daarom is het aangeraden om deze handleiding te volgen in plaats van andere die nog op verouderde software berust is (zoals menuhax of rxTools).
 
 ## Wat kan ik doen met Custom Firmware?
 
-+ Speel alle gamecards en eShop games, maakt niet uit welke regio
-+ Pas je HOME Menu aan met door gebruikersgemaakte [thema's](https://3dsthem.es/) en [badges](https://badges.3dsthem.es/)
-+ Gebruik "ROM hacks" voor spellen die je bezit
-+ Neem schermafbeeldingen van gameplay en applicaties
-+ [Backup, bewerk, en herstel](https://gbatemp.net/threads/release-jks-savemanager-homebrew-cia-save-manager.413143/) opslagdata voor vele spellen
-+ Speel spellen van oudere systemen met diversie emulators, gebruik RetroArch of andere standalone-emulators. (Werkt het beste met een New Nintendo 3DS)
-+ Installeer homebrew titles op je systeem en laat ze verschijnen op je HOME Menu
-+ Dump je gamecards naar een formaat die je kan installeren en speel ze zonder dat je een card nodig hebt
-+ Alleen voor New 3DS: stream draadloos live gameplay naar je PC met NTR CFW
-+ Gebruik vele, oude Nintendo DS flashcarts die lang geleden geblokkeerd waren of nooit werkte op de Nintendo 3DS
-+ Veilig updaten naar de laatste systeem versie zonder de angst homebrew toegang te verliezen
++ Alle gamecards en eShop spellen spelen, ongeacht de regio
++ Je HOME Menu aanpassen met door gebruikers gemaakte [themes](https://3dsthem.es/) en [badges](https://badges.3dsthem.es/)
++ "ROM hacks" gebruiken voor spellen die je bezit
++ Screenshots maken van applicaties en gameplay
++ Opslagdata voor veel verschillende spellen [backuppen, bewerken, en herstellen](https://gbatemp.net/threads/release-jks-savemanager-homebrew-cia-save-manager.413143/)
++ Spellen van oudere systemen spelen met behulp van diverse emulators, zoals bijvoorbeeld RetroArch. (Werkt het beste met een New Nintendo 3DS)
++ Homebrew titles op je systeem installeren deze laten verschijnen op je HOME Menu
++ Je spelkaarten dumpen naar een installeerbaar formaat, zodat je ze kan spelen zonder ze nodig te hebben
++ Je gameplay draadloos livestreamen naar je computer met behulp van NTR CFW. **Dit is alleen voor New 3DS**
++ Gebruik maken van oude DS flashkaarten die al lang geblokkeerd zijn of nooit hebben gewerkt op de Nintendo 3DS
++ Veilig naar de laatste systeemversie updaten zonder bang te hoeven zijn voor het verliezen van homebrew toegang
 
 ## Wat moet ik weten voordat ik begin?
 
-+ **Voordat je begint met de gids, moet je de risico's van 3DS hacking weten: ELKE keer dat je je systeem aanpast is er altijd een kans op een ONHERSTELBARE brick. Ze zijn zeer zeldzaam, maar er is nog steeds een mogelijkheid, dus wees zeker dat je ALLE stappen EXACT volgt.**
++ **Voordat je met deze handleiding begint moet je weten wat de risico's zijn van het hacken van je 3DS: ELKE keer als je een aanpassing maakt aan je 3DS zal er een altijd een kans zijn op een ONHERSTELBARE brick. Deze zijn zeer zeldzaam, maar het blijft altijd een mogelijkheid, dus wees er zeker van dat je ALLE stappen EXACT volgt.**
 + Als je je 3DS al een keer hebt gehackt om een EmuNAND setup te krijgen, en de inhoud van je vorige EmuNAND zou willen verplaatsen naar je nieuwe SysNAND CFW, volg dan alle instructies en herstel je bestaande EmuNAND wanneer de gids het opmerkt wanneer je [arm9loaderhax installeren](installing-arm9loaderhax) bereikt.
 + Deze gids zal alleen werken op een New 3DS, Old 3DS en 2DS in alle regio's op firmware 11.2.0 of lager *(behalve CHN / TWN)*.
 + Als alles volgens plan verloopt, zal je geen date verliezen en zal je eindigen met alles waarmee je begon (games, NNID, opslagdata, etc. zullen worden bewaard).
-+ **Laad je apparaat continu op tijdens het hele proces om dataverlies of schade van een onverwachte power-off te vermijden!**
-+ Je SD zou een [MBR, niet GPT](http://www.howtogeek.com/245610/) (de SD card die standaard komt bij het apparaat is MBR) moeten zijn.
++ **Keep your device plugged in and charged throughout the entire process to avoid data loss or damage from an unexpected power-off!**
++ Your SD card should be [MBR, not GPT](http://www.howtogeek.com/245610/) (the SD card that comes with your device will be MBR by default).
 + Als je een gloednieuwe SD moet formatteren, kan je [`guiformat`](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) gebruiken die op een Allocation Unit Size van 32K is ingesteld.
 + De 2DS is essentieel identiek aan de Old 3DS qua software en elke stappen die "Old 3DS" zeggen zullen ook toepassen op de 2DS.
