@@ -6,7 +6,7 @@ permalink: /ko_KR/updating-a9lh.html
 
 ### 마지막 업데이트: 2016년 11월 3일
 
-arm9loaderhax는 마더보드에 위치한 NAND 칩의 NFIRM 파티션에 페이로드 파일들을 설치하여 설치가 됩니다. These payloads are updated rarely and only really serve the purpose of launching `arm9loaderhax.bin` from the SD card, which is, in our case, Luma3DS.
+arm9loaderhax는 마더보드에 위치한 NAND 칩의 NFIRM 파티션에 페이로드 파일들을 설치하여 설치가 됩니다. These payloads are updated rarely and only really serve the purpose of launching `arm9loaderhax.bin` from your SD card, which is, in our case, Luma3DS.
 {: .notice}
 
 사용 중인 arm9loaderhax의 버전을 모르는 경우, 다음 단계에서 최신 버전을 설치하시면 됩니다. 최신 버전인 상태에서 다시 최신 버전을 설치하는 것은 아무런 영향을 주지 않습니다.
@@ -21,72 +21,85 @@ Luma3DS에 PIN이 설정되어 있는 경우, 아래의 단계를 진행하는 �
 data_input의 버전은 다른 인스톨러와 호환되되도록 수정된 `.zip` 파일의 버전과 연관되어 있을 뿐, A9LH (페이로드 파일들)를 업데이트하는 것과는 *다릅니다*. 설치 과정 외에는 실질적인 차이점이 없습니다.
 {: .notice--info}
 
+To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+{: .notice--info}
+
 다음 단계는 갖고 있는 여러 페이로드와 AES 키 데이터베이스도 업데이트합니다.
 {: .notice--success}
 
 #### 준비물
 
 * <i class="fa fa-magnet" aria-hidden="true" title="이것은 자석링크입니다. 토렌트 클라이언트를 이용하여 다운로드하세요."></i> - [`aeskeydb.bin`](magnet:?xt=urn:btih:18b3a17f78e2376e05feaa150749d9fd689b25dc&dn=aeskeydb.bin&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
-* <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. 토렌트 클라이언트를 이용하여 다운로드하세요."></i> - [`data_input_v4.zip`](magnet:?xt=urn:btih:00f03ff69b5961307303d5e4778a2f65a528bf2d&dn=data%5Finput%5Fv4.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* <i class="fa fa-magnet" aria-hidden="true" title="이것은 자석링크입니다. 토렌트 클라이언트를 이용하여 다운로드하세요."></i> - [`data_input_v4.zip`](magnet:?xt=urn:btih:00f03ff69b5961307303d5e4778a2f65a528bf2d&dn=data%5Finput%5Fv4.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 * 최신 버전의 [SafeA9LHInstaller](https://github.com/AuroraWright/SafeA9LHInstaller/releases/latest) *(`.7z` 파일)*
 * 최신 버전의 [arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(`.7z` 파일)*
-* 최신 버전의 [Hourglass9](https://github.com/lilymaniac/Hourglass9/releases/latest)
+* 최신 버전의 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 
 #### 진행 방법
 
 **모든 단계에서 SD 카드에 동일한 이름의 파일이 있을 경우 덮어쓰세요.**
+{: .notice--info}
 
 ##### 섹션 I - 준비 작업
 
+1. Power off your device
+1. SD 카드를 컴퓨터에 삽입하세요.
 1. SD 카드의 최상위 경로에 `aeskeydb.bin` 파일이 있으면 삭제하세요.
-2. SD 카드의 최상위 경로에 `a9lh` 폴더가 있으면 이를 삭제하세요.
-3. `aeskeydb.bin` 파일을 SD 카드의 `/files9/` 폴더에 복사하세요.
-4. Hourglass9 `.zip` 파일에서 `Hourglass9.bin` 파일을 SD 카드의 `/luma/payloads/` 폴더에 복사하고 `Hourglass9.bin` 파일의 이름을 `start_Hourglass9.bin`으로 변경하세요.
-5. SafeA9LHInstaller `.zip` 파일에서 `arm9loaderhax.bin` 파일을 SD 카드의 `/luma/payloads/` 폴더에 복사하세요.
-6. `/luma/payloads/` 폴더 안의 `arm9loaderhax.bin` 파일의 이름을 `down_safea9lhinstaller.bin`으로 변경하세요.
-7. Copy the `a9lh` folder from data_input `.zip` to the root of your SD card
-8. arm9loaderhax `.7z` 파일의 _내용물 만_ SD 카드의 `a9lh` 폴더에 복사하세요.
-10. SD 카드를 다시 3DS에 삽입하세요.
+1. SD 카드의 최상위 경로에 `a9lh` 폴더가 있으면 이를 삭제하세요.
+1. `aeskeydb.bin` 파일을 SD 카드의 `/files9/` 폴더에 복사하세요.
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `start_GodMode9.bin`
+  + If `start_Hourglass9.bin` already exists in this folder, delete `start_Hourglass9.bin`
+1. SafeA9LHInstaller `.zip` 파일에서 `arm9loaderhax.bin` 파일을 SD 카드의 `/luma/payloads/` 폴더에 복사하세요.
+1. `/luma/payloads/` 폴더 안의 `arm9loaderhax.bin` 파일의 이름을 `down_safea9lhinstaller.bin`으로 변경하세요.
+1. Copy the `a9lh` folder from data_input `.zip` to the root of your SD card
+1. arm9loaderhax `.7z` 파일의 _내용물 만_ SD 카드의 `a9lh` 폴더에 복사하세요.
+1. Reinsert your SD card into your device
 
 ##### 섹션 II - 페이로드 업데이트
 
-1. SD 카드를 다시 3DS에 삽입하고 (Down) 버튼을 누른 채 기기를 부팅시키세요.
-2. (Select) 버튼을 눌러서 arm9loaderhax를 업데이트하세요.
-3. 전원을 끄고 SD 카드를 컴퓨터에 삽입하세요.
-4. SD 카드의 최상위 경로에서 `a9lh` 폴더를 삭제하세요.
-5. `/luma/payloads/` 폴더에서 `down_safea9lhinstaller.bin` 파일을 삭제하세요.
+1. Launch SafeA9LHInstaller from arm9loaderhax by holding (Down) during boot
+1. (Select) 버튼을 눌러서 arm9loaderhax를 업데이트하세요.
+1. Power off your device
+1. SD 카드를 컴퓨터에 삽입하세요.
+1. SD 카드의 최상위 경로에서 `a9lh` 폴더를 삭제하세요.
+1. `/luma/payloads/` 폴더에서 `down_safea9lhinstaller.bin` 파일을 삭제하세요.
+1. Reinsert your SD card into your device
 
 ##### 섹션 III - Luma3DS 설정하기
 
-1. SD 카드를 다시 3DS에 삽입하고 (Select) 버튼을 누른 채 기기를 부팅시키세요.
-2. (A) 버튼과 십자 버튼을 이용해 다음 옵션들을 설정하세요:    
+1. (Select) 버튼을 누른 채 기기를 부팅하여 Luma3DS 설정 메뉴로 들어가세요.
+1. (A) 버튼과 십자 버튼을 이용해 다음 옵션들을 설정하세요:    
   + **"Autoboot SysNAND"**
   + **"Use SysNAND FIRM if booting with R"**
   + **"Show NAND or user string in System Settings"**
-3. **뉴 3DS** 사용자는 다음 옵션들도 설정하실 수 있습니다:
+1. **뉴 3DS** 사용자는 다음 옵션들도 설정하실 수 있습니다:
   + **"New 3DS CPU" 옵션을 "Clock+L2(x)"**로
     + 이 옵션은 많은 게임의 프레임을 향상시키지만, 일부 게임은 불안정해질 수 있습니다.
     + 게임이 제대로 작동하지 않으면 이 옵션을 끄고 다시 시도해 보십시오.
-4. (Start) 버튼을 눌러 저장하고 기기를 재시작하세요.
+1. (Start) 버튼을 눌러 저장하고 기기를 재시작하세요.
 
 ##### 섹션 IV - CTRNAND Luma3DS
 
-1. FBI를 실행하세요.
-2. "SD"를 선택하세요.
-3. `arm9loaderhax.bin`로 가서 (A) 버튼을 누르고 "Copy" 옵션을 선택하세요.
-4. (B) 버튼을 눌러 FBI 메인 메뉴로 돌아가세요.
-5. "CTR NAND"를 선택하세요.
-6. "\<current directory>"를 선택하세요.
-7. "Paste" 옵션을 선택 후 (A) 버튼을 눌러 진행하세요.
-8. 홈 버튼을 눌러 빠져나오세요.
-9. 3DS의 전원을 끄고 SD 카드를 빼세요.
-10. SD 카드가 제거된 상태에서 (Select) 버튼을 누른 채 기기를 부팅시키세요.
-  + SD 카드가 제거된 상태에서 부팅하여 CTRNAND 기반의 Luma3DS 설치를 설정합니다.
-11. Use the (A) button and the D-Pad to turn on the following:    
+1. Reboot holding (Start) during boot to launch GodMode9
+1. Navigate to `SDCARD`
+1. Press (Y) on `arm9loaderhax.bin` to copy it
+1. Press (B) to return to the main menu
+1. Navigate to `SYSNAND CTRNAND`
+1. Press (Y) to paste `arm9loaderhax.bin`
+1. Select "Copy path(s)"
+  + Overwrite any existing `arm9loaderhax.bin` if prompted
+1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+1. Press (B) to return to the main menu
+1. (R) 버튼과 (B) 버튼을 동시에 누른 후 SD 카드를 빼세요.
+1. Remove your SD card from your device
+1. Press (Start) to reboot your device with your SD card removed
+  + Booting your device at least once with your SD card removed will allow you to configure the CTRNAND based Luma3DS installation
+1. (A) 버튼과 십자 버튼을 이용해 다음 옵션들을 설정하세요:    
   + **"Show NAND or user string in System Settings"**
-12. If you are using a **New 3DS**, you should *also* enable the following:
+1. **뉴 3DS** 사용자는 다음 옵션들도 설정하실 수 있습니다:
   + **"New 3DS CPU" to "Clock+L2(x)"**
-    + This will increase the framerate of many games, but may cause instability in others
-    + If some games do not work properly, disable this option and try again
+    + 이 옵션은 많은 게임의 프레임을 향상시키지만, 일부 게임은 불안정해질 수 있습니다.
+    + 게임이 제대로 작동하지 않으면 이 옵션을 끄고 다시 시도해 보세요.
     + **This breaks the Homebrew Launcher on 11.3!**
-13. SD 카드를 다시 3DS에 삽입한 다음 (Start) 버튼을 눌러 저장 후 재시작을 하세요.
+1. Reinsert your SD card into your device
+1. (Start) 버튼을 눌러 저장하고 기기를 재시작하세요.
