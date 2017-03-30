@@ -4,6 +4,9 @@ lang: ko
 permalink: /ko_KR/ntr-and-cubic-ninja.html
 ---
 
+To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+{: .notice--info}
+
 **NTR Cubic Ninja는 JPN 뉴 3DS에서만 작동합니다!**
 {: .notice--warning}
 
@@ -11,7 +14,6 @@ permalink: /ko_KR/ntr-and-cubic-ninja.html
 
 * [JPN Cubic Ninja](https://www.amazon.com/dp/B004QL7M0A)
 * 홈브류 [스타터 킷](http://smealum.github.io/ninjhax2/starter.zip)
-* 최신 버전의 [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/latest)
 * <i class="fa fa-magnet" aria-hidden="true" title="이것은 자석링크입니다. 토렌트 클라이언트를 이용하여 다운로드하세요."></i> - [`3ds-private-update-server.zip`](magnet:?xt=urn:btih:8623e580752f22940d96630ef723ce30a707b22e&dn=3ds-private-update-server.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.piratepublic.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.kicks-ass.net%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce)
 * [WAMPSERVER (PHP 5.5) 2.5](http://www.wampserver.com/en/#download-wrapper)
 * [`node.exe`](http://nodejs.org/dist/latest/win-x86/node.exe)
@@ -26,41 +28,39 @@ permalink: /ko_KR/ntr-and-cubic-ninja.html
 ##### 섹션 I - 준비 작업
 
 1. WAMP를 설치하세요.
-2. `3ds-private-update-server.zip` 파일의 내용물을 `C:\wamp\www\` 폴더에 복사하세요. (동일한 파일은 덮어쓰세요)
-3. `update.php` 파일을 `C:\wamp\www\` 폴더에 복사하세요. (동일한 파일은 덮어쓰세요)
-4. 9.2.0 다운그레이드 팩 `.zip` 파일 내 `updates` 폴더를 통째로 `C:\wamp\www\` 폴더에 복사하세요.
-5. `node.exe` 파일을 `C:\wamp\www\updates` 폴더로 옮기세요.
-6. `C:\wamp\www\CdnCiaUnpack.js` 파일을 `C:\wamp\www\updates` 폴더로 옮기세요.
-7. `C:\wamp\www\updates`에서 `CdnCiaUnpack.js` 파일을 `node.exe` 파일 위로 드래그하여 `GetSystemUpdate.partial.xml` 파일을 생성하세요.
-8. `node.exe` 파일과 `CdnCiaUnpack.js` 파일을 다시 `C:\wamp\www\` 폴더로 옮기세요.
-9. `GetSystemUpdate.partial.xml` 파일을 `C:\wamp\www\` 폴더에 복사하세요. (파일의 사본이 `C:\wamp\www\updates` 폴더와 `C:\wamp\www\` 폴더에 모두 있도록)
-10. WAMP 트레이 아이콘을 클릭하고 "Put Online"을 클릭하세요.
-11. 명령 프롬프트에서 `ipconfig/all` 커맨드를 입력하여 컴퓨터의 IPv4 주소를 알아내세요. 곧 필요합니다.
-12. `ntr.bin` 파일을 SD 카드의 최상위 경로에 복사하세요.
-13. SD 카드의 최상위 경로에 `files9` 폴더가 없을 경우 폴더를 만드세요.
-14. `starter.zip` 파일 내 `starter` 폴더의 _내용물을_ SD 카드의 최상위 경로에 복사하세요.
-15. Decrypt9WIP `.zip` 파일에서 `Decrypt9WIP` 폴더를 SD 카드의 `/3ds/` 폴더에 복사하세요.
-16. SD 카드를 다시 3DS에 삽입하세요.
+1. `3ds-private-update-server.zip` 파일의 내용물을 `C:\wamp\www\` 폴더에 복사하세요. (동일한 파일은 덮어쓰세요)
+1. `update.php` 파일을 `C:\wamp\www\` 폴더에 복사하세요. (동일한 파일은 덮어쓰세요)
+1. 9.2.0 다운그레이드 팩 `.zip` 파일 내 `updates` 폴더를 통째로 `C:\wamp\www\` 폴더에 복사하세요.
+1. `node.exe` 파일을 `C:\wamp\www\updates` 폴더로 옮기세요.
+1. `C:\wamp\www\CdnCiaUnpack.js` 파일을 `C:\wamp\www\updates` 폴더로 옮기세요.
+1. `C:\wamp\www\updates`에서 `CdnCiaUnpack.js` 파일을 `node.exe` 파일 위로 드래그하여 `GetSystemUpdate.partial.xml` 파일을 생성하세요.
+1. `node.exe` 파일과 `CdnCiaUnpack.js` 파일을 다시 `C:\wamp\www\` 폴더로 옮기세요.
+1. `GetSystemUpdate.partial.xml` 파일을 `C:\wamp\www\` 폴더에 복사하세요. (파일의 사본이 `C:\wamp\www\updates` 폴더와 `C:\wamp\www\` 폴더에 모두 있도록)
+1. WAMP 트레이 아이콘을 클릭하고 "Put Online"을 클릭하세요.
+1. 명령 프롬프트에서 `ipconfig/all` 커맨드를 입력하여 컴퓨터의 IPv4 주소를 알아내세요. 곧 필요합니다.
+1. `ntr.bin` 파일을 SD 카드의 최상위 경로에 복사하세요.
+1. `starter.zip` 파일 내 `starter` 폴더의 _내용물을_ SD 카드의 최상위 경로에 복사하세요.
+1. Put your SD card back into your device
 
 ##### 섹션 II - 업데이트
 
-1. (L)+(R)+(A)+십자버튼 (위)를 동시에 누른 채 기기를 부팅시켜서 복구 모드를 실행하세요.
-2. 업데이트를 취소하고 재시작하세요.
-3. Cubic Ninja를 실행하세요. (NinjHax가 이미 설치 되었다면 (L)+(R)+(X)+(Y) 버튼을 동시에 눌러 초기화하세요)
-4. "Create", "QR Code", "Scan QR Code"를 차례로 선택하세요.
-5. NTR CRW `.zip` 파일에서 지역에 맞는 QR 코드를 골라 스캔하세요.
-6. 홈 메뉴에서 (X) 버튼과 (Y) 버튼을 동시에 눌러 NTR 메뉴를 띄우세요.
-7. 디버거(debugger)를 켜고 메뉴를 닫으세요.
-8. 본인 라우터의 웹 페이지에서 3DS의 IP 주소를 알아내세요. (방법을 모를 경우 검색하세요. 라우터마다 방식이 다릅니다.)
-9. 컴퓨터에서 NTR Debugger를 실행하세요.
-10. XXX.XXX.XXX.XXX 에는 3DS의 IP 주소를, YYY.YYY.YYY.YYY 에는 컴퓨터의 IP 주소를 대입한 후 아래 커맨드를 입력하세요.    
+1. Boot your device into recovery mode by holding (L)+(R)+(A)+(UP) while powering on
+1. 업데이트를 취소하고 재시작하세요.
+1. Launch Cubic Ninja (if it already has NinjHax installed, hold (L)+(R)+(X)+(Y) to reset it)
+1. "Create", "QR Code", "Scan QR Code"를 차례로 선택하세요.
+1. NTR CRW `.zip` 파일에서 지역에 맞는 QR 코드를 골라 스캔하세요.
+1. On the home menu, press (Y) and (X) at the same time to launch NTR's menu
+1. 디버거(debugger)를 켜고 메뉴를 닫으세요.
+1. Use your router's web page to get your device's IP address (google it if you don't know how, all routers are different)
+1. 컴퓨터에서 NTR Debugger를 실행하세요.
+1. Enter the following commands (replace XXX.XXX.XXX.XXX with your device's IP address and YYY.YYY.YYY.YYY with your computer's IP address)    
     + `connect("XXX.XXX.XXX.XXX", 8000)`
     + `write(0x15E424, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
     + `write(0x15E0EC, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
     + `write(0x15E463, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
-11. "본체 설정"의 "기타 설정"에서 가장 오른쪽에 있는 "본체 업데이트"를 선택하여 3DS를 업데이트하세요.
+1. Update your device by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
 
 ___
 
-[Decrypt9 (홈브류 런처)](decrypt9-(homebrew-launcher))으로 이어집니다.
+Continue to [SafeCTRTransfer (Homebrew Launcher)](safectrtransfer-(homebrew-launcher))
 {: .notice--primary}
