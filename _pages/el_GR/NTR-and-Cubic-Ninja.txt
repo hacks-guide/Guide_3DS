@@ -4,6 +4,9 @@ lang: el
 permalink: /el_GR/ntr-and-cubic-ninja.html
 ---
 
+To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+{: .notice--info}
+
 **Το NTR Cubic Ninja δουλεύει ΜΟΝΟ σε JPN New 3DS!**
 {: .notice--warning}
 
@@ -11,7 +14,6 @@ permalink: /el_GR/ntr-and-cubic-ninja.html
 
 * [JPN Cubic Ninja](https://www.amazon.com/dp/B004QL7M0A)
 * Το Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
-* Την τελευταία έκδοση του [Decrypt9WIP](https://github.com/d0k3/Decrypt9WIP/releases/latest)
 * <i class="fa fa-magnet" aria-hidden="true" title="Αυτός είναι ένας σύνδεσμος magnet. Χρησιμοποιείστε κάποιον Torrent client για να κατεβάσετε το αρχείο."></i> - [`3ds-private-update-server.zip`](magnet:?xt=urn:btih:8623e580752f22940d96630ef723ce30a707b22e&dn=3ds-private-update-server.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.piratepublic.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.kicks-ass.net%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce)
 * [WAMPSERVER (PHP 5.5) 2.5](http://www.wampserver.com/en/#download-wrapper)
 * [`node.exe`](http://nodejs.org/dist/latest/win-x86/node.exe)
@@ -26,41 +28,39 @@ permalink: /el_GR/ntr-and-cubic-ninja.html
 ##### Ενότητα I - Προετοιμασία
 
 1. Εγκαταστήστε το WAMP στον προκαθορισμένο κατάλογο αποθήκευσης
-2. Αντιγράψτε τα περιεχόμενα του `3ds-private-update-server.zip` στο `C:\wamp\www\` (αντικαταστήστε τα υπάρχοντα αρχεία)
-3. Αντιγράψτε το `update.php` στο `C:\wamp\www\` (αντικαταστήστε τα υπάρχοντα αρχεία)
-4. Αντιγράψτε το φάκελο `updates` από το 9.2.0 downgrade `.zip` στο `C:\wamp\www\`
-5. Μετακινήστε το `node.exe` στο `C:\wamp\www\updates`
-6. Μετακινήστε το `C:\wamp\www\CdnCiaUnpack.js` στο `C:\wamp\www\updates`
-7. Στον κατάλογο `C:\wamp\www\updates`, σύρετε το `CdnCiaUnpack.js` επάνω στο `node.exe` για να δημιουργήσετε το`GetSystemUpdate.partial.xml`
-8. Μετακινήστε το `node.exe` και το `CdnCiaUnpack.js` ξανά πίσω στο `C:\wamp\www\`
-9. Αντιγράψτε το `GetSystemUpdate.partial.xml` στο `C:\wamp\www\` (έτσι ώστε να υπάρχει ένα αντίγραφο στο `C:\wamp\www\updates` και στο `C:\wamp\www\`)
-10. Κάντε κλικ στο εικονίδιο WAMP στο πλαίσιο συστήματος και έπειτα κάντε κλικ στο "Put Online"
-11. Χρησιμοποιήστε την εντολή `ipconfig /all` στο CMD για να λάβετε την IPv4 διεύθυνση του υπολογιστή σας, θα την χρειαστείτε σύντομα
-12. Αντιγράψτε το `ntr.bin` στη ρίζα της κάρτας SD
-13. Δημιουργήστε έναν φάκελο με το όνομα `files9` στην ρίζα της κάρτας SD, σε περίπτωση που δεν υπάρχει ήδη
-14. Αντιγράψτε _τα περιεχόμενα_του φακέλου `starter` που βρίσκονται στο`starter.zip`, στη ρίζα της κάρτας SD
-15. Αντιγράψτε το φάκελο `Decrypt9WIP` που βρίσκεται στο Decrypt9WIP `.zip` στο φάκελο `/3ds/` της κάρτας SD
-16. Τοποθετήστε την κάρτα SD στο 3DS σας
+1. Αντιγράψτε τα περιεχόμενα του `3ds-private-update-server.zip` στο `C:\wamp\www\` (αντικαταστήστε τα υπάρχοντα αρχεία)
+1. Αντιγράψτε το `update.php` στο `C:\wamp\www\` (αντικαταστήστε τα υπάρχοντα αρχεία)
+1. Αντιγράψτε το φάκελο `updates` από το 9.2.0 downgrade `.zip` στο `C:\wamp\www\`
+1. Μετακινήστε το `node.exe` στο `C:\wamp\www\updates`
+1. Μετακινήστε το `C:\wamp\www\CdnCiaUnpack.js` στο `C:\wamp\www\updates`
+1. Στον κατάλογο `C:\wamp\www\updates`, σύρετε το `CdnCiaUnpack.js` επάνω στο `node.exe` για να δημιουργήσετε το`GetSystemUpdate.partial.xml`
+1. Μετακινήστε το `node.exe` και το `CdnCiaUnpack.js` ξανά πίσω στο `C:\wamp\www\`
+1. Αντιγράψτε το `GetSystemUpdate.partial.xml` στο `C:\wamp\www\` (έτσι ώστε να υπάρχει ένα αντίγραφο στο `C:\wamp\www\updates` και στο `C:\wamp\www\`)
+1. Κάντε κλικ στο εικονίδιο WAMP στο πλαίσιο συστήματος και έπειτα κάντε κλικ στο "Put Online"
+1. Χρησιμοποιήστε την εντολή `ipconfig /all` στο CMD για να λάβετε την IPv4 διεύθυνση του υπολογιστή σας, θα την χρειαστείτε σύντομα
+1. Αντιγράψτε το `ntr.bin` στη ρίζα της κάρτας SD
+1. Αντιγράψτε _τα περιεχόμενα_του φακέλου `starter` που βρίσκονται στο`starter.zip`, στη ρίζα της κάρτας SD
+1. Put your SD card back into your device
 
 ##### Τμήμα II - Ενημέρωση
 
-1. Εκκινήστε το 3DS σε λειτουργία ανάκτησης κρατώντας πατημένα τα (L)+(R)+(A)+(UP) κατά την ενεργοποίηση
-2. Αρνηθείτε την ενημέρωση και επανεκκινήστε
-3. Ανοίξτε το Cubic Ninja (αν έχει ήδη εγκατασταθεί το NinjHax, κρατήστε πατημένα τα (L)+(R)+(X)+(Y) για να το επαναφέρετε)
-4. Επιλέξτε "Create", μετά "QR Code" και έπειτα "Scan QR Code"
-5. Σαρώστε τον κωδικό QR από το NTR CFW `.zip` για την περιοχή σας
-6. Από το home menu, πατήστε ταυτόχρονα τα πλήκτρα (Y) και (X) για να ανοίξετε το μενού του NTR
-7. Επιλέξτε το "Enable Debugging" και κλείστε το μενού του NTR
-8. Χρησιμοποιήστε την ιστοσελίδα του ρουτερ σας για να λάβετε την IP διεύθυνση του 3DS σας (χρησιμοποιήστε το google αν δεν γνωρίζετε πως, όλα τα ρουτερ είναι διαφορετικά)
-9. Εκτελέστε το NTR Debugger στον υπολογιστή σας
-10. Πληκτρολογήστε τις ακόλουθες εντολές (αντικαταστήστε τα XXX.XXX.XXX.XXX με την IP διεύθυνση του 3DS σας και τα YYY. YYY. YYY. YYY με τη IP διεύθυνση του υπολογιστή σας)    
+1. Boot your device into recovery mode by holding (L)+(R)+(A)+(UP) while powering on
+1. Αρνηθείτε την ενημέρωση και επανεκκινήστε
+1. Launch Cubic Ninja (if it already has NinjHax installed, hold (L)+(R)+(X)+(Y) to reset it)
+1. Επιλέξτε "Create", μετά "QR Code" και έπειτα "Scan QR Code"
+1. Σαρώστε τον κωδικό QR από το NTR CFW `.zip` για την περιοχή σας
+1. On the home menu, press (Y) and (X) at the same time to launch NTR's menu
+1. Επιλέξτε το "Enable Debugging" και κλείστε το μενού του NTR
+1. Use your router's web page to get your device's IP address (google it if you don't know how, all routers are different)
+1. Εκτελέστε το NTR Debugger στον υπολογιστή σας
+1. Enter the following commands (replace XXX.XXX.XXX.XXX with your device's IP address and YYY.YYY.YYY.YYY with your computer's IP address)    
     + `connect("XXX.XXX.XXX.XXX", 8000)`
     + `write(0x15E424, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
     + `write(0x15E0EC, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
     + `write(0x15E463, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
-11. Ενημερώστε το 3DS σας πηγαίνοντας στο System Settings, έπειτα στην επιλογή "Other Settings" και μετά πηγαίνοντας μέχρι το τέλος προς τα δεξιά και βρίσκοντας την επιλογή "System Update"
+1. Update your device by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
 
 ___
 
-Συνέχεια στο [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher))
+Continue to [SafeCTRTransfer (Homebrew Launcher)](safectrtransfer-(homebrew-launcher))
 {: .notice--primary}
