@@ -1,0 +1,105 @@
+---
+title: "A9LH updaten" #
+lang: nl
+permalink: /nl_NL/updating-a9lh.html
+---
+
+### Laatste Update: 3 november 2016
+
+De daadwerkelijke instalatie van arm9loaderhax zelf bestaat uit meerdere 'payload' bestanden die installeren in de NFIRM partitie van de NAND chip van je 3DS, die gesoldeerd is op het moederbord van je 3DS. Deze 'payloads' worden zelden geüpdatet en dienen alleen om `arm9loaderhax.bin` te laden van de SD-kaart, wat in ons geval Luma3DS zal opstarten.
+{: .notice}
+
+Als je niet zeker bent over de versie van je huidige arm9loaderhax installatie, kan je gewoon de laatste versie installeren met de volgende stappen. Installeren van de laatste versie als je al op de laatste versie bent heeft namelijk geen effect.
+{: .notice--info}
+
+Als je een PIN hebt ingesteld in Luma moet je deze tijdelijk uitzetten om de stappen te doorlopen. Na de update kan je de PIN weer aanzetten.
+{: .notice--info}
+
+Als je een 'payload' gebruikt welke niet uit zichzelf het scherm initieerd (zoals Bootanim9), dien je deze te hernoemen van `arm9loaderhax.bin` naar `arm9loaderhax_si.bin`
+{: .notice--info}
+
+De versie van data_input verwijst alleen naar de versie van de `.zip` om te werken met de verschillende installer versies en zijn *niet* hetzelfde als het updaten van a9lh zelf (de payload bestanden). Deze maken geen praktisch verschil na het installatieproces.
+{: .notice--info}
+
+Om een [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) link te gebruiken in deze handleiding, moet je een torrent client hebben zoals [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+{: .notice--info}
+
+Deze stappen zullen ook je 'payloads' en de AES key database updaten.
+{: .notice--success}
+
+#### Benodigdheden
+
+* <i class="fa fa-magnet" aria-hidden="true" title="Dit is een magnet link. Gebruik een torrent client om dit bestand te downloaden."></i> - [`aeskeydb.bin`](magnet:?xt=urn:btih:18b3a17f78e2376e05feaa150749d9fd689b25dc&dn=aeskeydb.bin&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* <i class="fa fa-magnet" aria-hidden="true" title="Dit is een magnet link. Gebruik een torrent client om dit bestand te downloaden."></i> - [`data_input_v4.zip`](magnet:?xt=urn:btih:00f03ff69b5961307303d5e4778a2f65a528bf2d&dn=data%5Finput%5Fv4.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* De meest recente versie van [SafeA9LHInstaller](https://github.com/AuroraWright/SafeA9LHInstaller/releases/latest) *(het `.7z` bestand)*
+* De nieuwste versie van [arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(the `.7z` file)*
+* De meest recente versie van [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+
+#### Instructies
+
+**Voor al deze instructies dien je de bestaande bestanden op je SD kaart te OVERSCHRIJVEN**
+{: .notice--info}
+
+##### Deel I - Voorbereiding
+
+1. Schakel je 3DS uit
+1. Plaats je SD kaart in je computer
+1. Verwijder alle bestaande `aeskeydb.bin` bestanden van de hoofdmap van je SD kaart
+1. Verwijder de `a9lh` map van de sd kaart als deze al bestaat
+1. Kopieer 'Aeskeydb.bin' naar de map '/ files9 /' op uw SD-kaart
+1. Kopiëer `GodMode9.bin` van GodMode9 `.zip` naar de `/luma/payloads/` map op je SD-kaart en verander de naam van `GodMode9.bin` in `/luma/payloads/` naar `start_GodMode9.bin`
+  + Als `start_Hourglass9.bin` al bestaat in deze map, verwijder `start_Hourglass9.bin`
+1. Kopieer 'Arm9loaderhax.bin' van SafeA9LHInstaller '.zip' naar de ' /luma/payloads/' map op uw SD-kaart
+1. Wijzig de naam van 'arm9loaderhax.bin' in ' / luma/payloads/' naar 'down_safea9lhinstaller.bin'
+1. Kopieer de`a9lh`map van de data_input `.zip` naar de hoofdmap van de SD-kaart
+1. Kopieer _de inhoud_ van de arm9loaderhax `.7z` naar de `a9lh` folder op je SD-kaart
+1. Stop je SD kaart terug in je 3DS
+
+### Deel II - Payload update
+
+1. Open SafeA9LHInstaller vanaf arm9loaderhax door (Down) ingedrukt te houden bij het opstarten van je 3DS
+1. Druk op (Select) om arm9loaderhax bijwerken
+1. Schakel je 3DS uit
+1. Plaats je SD kaart in je computer
+1. Verwijder de 'a9lh'-map in de hoofdmap van uw SD-kaart
+1. Verwijder `down_safea9lhinstaller.bin` uit de map `/luma/payloads/`
+1. Stop je SD kaart terug in je 3DS
+
+### Deel III - Luma3DS configureren
+
+1. Start je 3DS terwijl je (Select) ingedrukt houdt om het Luma3DS configuratie scherm te openen
+1. Gebruik de (A) knop en het D-Pad om het volgende aan te zetten:    
+  + **"Autoboot SysNAND"**
+  + **"Use SysNAND FIRM if booting with R"**
+  + **"Show NAND or user string in System Settings"**
+1. Als je gebruikmaakt van een ** New 3DS **, dien je ook de volgende opties in te schakelen:
+  + **"New 3DS CPU" to "Clock+L2(x)"**
+    + Dit zorgt van een toename van de framerate voor veel spellen, maar kan instabiliteit veroorzaken in andere
+    + Als een spel niet fatsoenlijk werkt, zet deze optie dan uit en probeer het opnieuw
+1. Druk op (Start) om op te slaan en opnieuw op te starten
+
+### Deel IV - CTRNAND Luma3DS
+
+1. Herstart terwijl je (Start) ingedrukt houdt bij het opstarten om GodMode9 te openen
+1. Navigeer naar `SDCARD`
+1. Druk op (Y) op `arm9loaderhax.bin` om deze te kopiëren
+1. Druk op (B) om terug te gaan naar het hoofdmenu
+1. Navigeer naar `SYSNAND CTRNAND`
+1. Druk op (Y) om `arm9loaderhax.bin` te plakken
+1. Selecteer "Copy path(s)"
+  + Overschrijf alle bestaande `arm9loaderhax.bin` als hierom gevraagd wordt
+1. Druk op (A) om SysNAND (lvl1) writing te ontgrendelen en voer daarna de toetsencombinatie in die wordt gegeven
+1. Druk op (B) om terug te gaan naar het hoofdmenu
+1. Houd (R) en (B) gelijkertijd ingedrukt om je SD-Kaart uit te werpen
+1. Verwijder je SD kaart uit je 3DS
+1. Drup op (Start) om je 3DS opnieuw op te starten met de SD kaart verwijderd
+  + Door het apparaat tenminste één keer op te starten zonder de SD kaart laat je de op CTRNAND gebasseerde Luma3DS installatie configureren
+1. Gebruik de D-Pad en de (A) knop om de volgende opties aan te zetten:    
+  + **"Show NAND or user string in System Settings"**
+1. Als je gebruikmaakt van een **New 3DS**, kan je *ook* de volgende opties inschakelen:
+  + **"New 3DS CPU" to "Clock+L2(x)"**
+    + Dit zorgt van een toename van de framerate voor veel spellen, maar kan instabiliteit veroorzaken in andere
+    + Als een spel niet fatsoenlijk werkt, zet deze optie dan uit en probeer het opnieuw
+    + **Dit zorgt ervoor dat de Homebrew Launcher niet meer zal werken op 11.3!**
+1. Stop je SD kaart terug in je 3DS
+1. Druk op (Start) om op te slaan en opnieuw op te starten
