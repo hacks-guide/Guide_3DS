@@ -6,7 +6,7 @@ permalink: /zh_CN/updating-a9lh.html
 
 ### 最近的升级: 2016年11月3日
 
-arm9loaderhax的安装实际上就是把一些payload文件安装到了你设备NAND芯片的NFIRM分区中。而NAND是焊接在设备主板上的。 这些payload文件很少更新，它们存在的目的就是为了运行SD卡上的`arm9loaderhax.bin`文件，而这个文件在本教程中是用来启动Luma3DS的。
+arm9loaderhax的安装实际上就是把一些payload文件安装到了你设备NAND芯片的NFIRM分区中。而NAND是焊接在设备主板上的。 These payloads are updated rarely and only really serve the purpose of launching `arm9loaderhax.bin` from your SD card, which is, in our case, Luma3DS.
 {: .notice}
 
 如果你不知道你现在使用的arm9loaderhax是什么版本，请直接按照以下步骤安装最新版。 覆盖安装最新版不会有什么影响。
@@ -21,6 +21,9 @@ arm9loaderhax的安装实际上就是把一些payload文件安装到了你设备
 data_input的版本是指为了适配不同安装程序版本而修改的.zip压缩包版本，*并非*所更新的a9lh（payload文件）本身的版本。 这个版本号只在安装阶段有实际意义。
 {: .notice--info}
 
+To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+{: .notice--info}
+
 本节的操作同时也会更新其它payloads和AES密钥数据库。
 {: .notice--success}
 
@@ -30,63 +33,73 @@ data_input的版本是指为了适配不同安装程序版本而修改的.zip压
 * <i class="fa fa-magnet" aria-hidden="true" title="下载链接。 使用一个BT下载器来下载此文件。"></i> - [`data_input_v4.zip`](magnet:?xt=urn:btih:00f03ff69b5961307303d5e4778a2f65a528bf2d&dn=data%5Finput%5Fv4.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 * 最新版的[SafeA9LHInstaller](https://github.com/AuroraWright/SafeA9LHInstaller/releases/latest) *(the `.7z` file)*
 * 最新版的[arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *（`.7z`压缩包）*
-* 最新版本的 [Hourglass9](https://github.com/d0k3/Hourglass9/releases/latest)
+* 最新版本的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 
 #### 操作指南
 
 **对于以下所有操作，覆盖你SD卡上任何已有的文件。**
+{: .notice--info}
 
-##### 第一部分 - 准备工作
+##### Section I - Prep Work
 
+1. Power off your device
+1. Insert your SD card into your computer
 1. 删除你SD卡根目录下的` aeskeydb.bin `文件
-2. 如果在你SD卡的根目录下存在`a9lh`目录，请删除
-3. 将`aeskeydb.bin`文件复制到SD卡的`/files9/`目录下
-4. 将`Hourglass9 zip`下的`Hourglass9.bin`解压到SD卡 `/luma/payloads/` 目录下，并把 `Hourglass9.bin` 重命名为 `start_Hourglass9.bin`
-5. 将`SafeA9LHInstaller.zip`中的 `arm9loaderhax.bin` 解压到SD卡 `/luma/payloads/` 目录下
-6. 将 `/luma/payloads/` 目录下的 `arm9loaderhax.bin` 重命名成 `down_safea9lhinstaller.bin`
-7. 从data_input压缩包中解压并复制`a9lh`文件夹到SD卡的根目录
-8. 解压arm9loaderhax压缩包，并复制解压的文件到SD卡的 `a9lh` 目录下
-10. 将你的SD卡插回3DS
+1. 如果在你SD卡的根目录下存在`a9lh`目录，请删除
+1. 将`aeskeydb.bin`文件复制到SD卡的`/files9/`目录下
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `start_GodMode9.bin`
+  + If `start_Hourglass9.bin` already exists in this folder, delete `start_Hourglass9.bin`
+1. 将`SafeA9LHInstaller.zip`中的 `arm9loaderhax.bin` 解压到SD卡 `/luma/payloads/` 目录下
+1. 将 `/luma/payloads/` 目录下的 `arm9loaderhax.bin` 重命名成 `down_safea9lhinstaller.bin`
+1. 从data_input压缩包中解压并复制`a9lh`文件夹到SD卡的根目录
+1. 解压arm9loaderhax压缩包，并复制解压的文件到SD卡的 `a9lh` 目录下
+1. Reinsert your SD card into your device
 
 ##### 第二部分 - Payload更新
 
-1. 将你的SD卡重新插入3DS，然后按住(方向键下) 键开机。
-2. 按(select)键更新arm9loaderhax
-3. 关机并将SD卡插入你的电脑
-4. 删除SD卡根目录下的 `a9lh` 目录
-5. 把`down_safea9lhinstaller.bin` 从`/luma/payloads/`中删除。
+1. Launch SafeA9LHInstaller from arm9loaderhax by holding (Down) during boot
+1. 按(select)键更新arm9loaderhax
+1. Power off your device
+1. Insert your SD card into your computer
+1. 删除SD卡根目录下的 `a9lh` 目录
+1. 把`down_safea9lhinstaller.bin` 从`/luma/payloads/`中删除。
+1. Reinsert your SD card into your device
 
 ##### 第三部分 - 设置 Luma3DS
 
-1. 将你的SD卡重新插入3DS，并按住(select)键开机
-2. 通过方向键和A键来启用以下设置：    
+1. Boot your device while holding (Select) to enter the Luma3DS configuration menu
+1. 通过方向键和A键来启用以下设置：    
   + **"Autoboot SysNAND"**
   + **"Use SysNAND FIRM if booting with R"**
   + **"Show NAND or user string in System Settings"**
-3. 如果你的设备是**新3DS**，你还应该启用如下设置：
+1. 如果你的设备是**新3DS**，你还应该启用如下设置：
   + **“New 3DS CPU”选项，请移动光标到”Clock+L2(x)”**
     + 这将提升许多游戏的帧率，但可能会造成某些游戏的不稳定
     + 如果有部分游戏不能正常运行，关闭这个选项并重试
-4. 按下(Start)键保存设置并重启
+1. 按下(Start)键保存设置并重启
 
 ##### 第四部分 - CTRNAND Luma3DS
 
-1. 打开FBI
-2. 选择”SD”
-3. 选择 `arm9loaderhax.bin` 文件，按(A)键并选择“复制”选项
-4. 按(B)键返回FBI主菜单
-5. 选择”CTR NAND”
-6. 选择”\<current directory>”
-7. 选择”Paste”选项，并按(A)键确认
-8. 按home键退出
-9. 将3DS关机，移除SD卡
-10. 按(Select)键，在没有SD卡的情况下重启
-  + 在没有SD卡的情况下至少开启一次你的机器，可以使你配置基于CTRNAND的luma
-11. 通过方向键和A键来启用以下设置：    
+1. Reboot holding (Start) during boot to launch GodMode9
+1. Navigate to `SDCARD`
+1. Press (Y) on `arm9loaderhax.bin` to copy it
+1. Press (B) to return to the main menu
+1. Navigate to `SYSNAND CTRNAND`
+1. Press (Y) to paste `arm9loaderhax.bin`
+1. Select "Copy path(s)"
+  + Overwrite any existing `arm9loaderhax.bin` if prompted
+1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+1. Press (B) to return to the main menu
+1. Hold (R) and press (B) at the same time to eject your SD card
+1. Remove your SD card from your device
+1. Press (Start) to reboot your device with your SD card removed
+  + Booting your device at least once with your SD card removed will allow you to configure the CTRNAND based Luma3DS installation
+1. 通过方向键和A键来启用以下设置：    
   + **"Show NAND or user string in System Settings"**
-12. 如果你的设备是**新3DS**，你还应该启用如下设置：
+1. If you are using a **New 3DS**, you can *also* enable the following:
   + **“New 3DS CPU”选项，请移动光标到”Clock+L2(x)”**
     + 这将提升许多游戏的帧率，但可能会造成某些游戏的不稳定
     + 如果有部分游戏不能正常运行，关闭这个选项并重试
     + **这样将会破坏11.3上的Homebrew Launcher!**
-13. 将SD卡插回3DS，按下Start键保存设置并重启！
+1. Reinsert your SD card into your device
+1. Press (Start) to save and reboot
