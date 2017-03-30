@@ -1,53 +1,147 @@
 ---
-title: "Move EmuNAND" #
-lang: en
-permalink: /move-emunand.html
+title: "הזזת EmuNAND" #
+lang: he
+permalink: /he_IL/move-emunand.html
 ---
 
-This is add-on section for moving the contents of a previous EmuNAND to your new SysNAND CFW, then removing the old EmuNAND partition. Note that the terms EmuNAND and RedNAND refer to slightly different implementations of [the same concept](http://3dbrew.org/wiki/NAND_Redirection).
+זוהי הרחבה עבור העברת התכנים מהEmuNAND הישן שלכם ל CFW SysNAND חדש, ולאחר מכן הסרת הEmuNAND הישן. Emunand וRednand כמעט מונחים נרדפים.
 {: .notice--info}
 
-You will LOSE your GBA VC and DSiWare saves!
+**אתם חייבים להתקין את arm9loaderhax + Luma3DS כדי להשתמש בזה.**
 {: .notice--danger}
 
-**You MUST have already installed arm9loaderhax + Luma3DS to use this.**
-{: .notice--danger}
+#### מה אתם צריכים
 
-#### What you need
+* EmuNAND כמובן
+* את הגרסה העדכנית של [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* את הגרסה העדכנית של [FBI](https://github.com/Steveice10/FBI/releases/latest)
 
-* An existing EmuNAND
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+#### הוראות
 
-#### Instructions
+##### חלק I - הכנות
 
-1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `up_GodMode9.bin`
-2. Reinsert your SD card into your 3DS
-3. Open Hourglass9 from arm9loaderhax by holding (Start) on boot
-4. Go to "EmuNAND Backup/Restore", then select the "EmuNAND Backup" option to backup your EmuNAND to `NANDmin_emu.bin`
-5. Press (B) to get back to the main menu
-6. Go to "SysNAND Backup/Restore", then select the "SysNAND Restore (keep a9lh)" option to restore your SysNAND from `NANDmin_emu.bin`
-7. Press (Select) to eject your SD card
-8. Put your SD card in your computer, then copy `NANDmin_emu.bin` and `NANDmin_emu.bin.sha` from the `/files9/` folder on your SD card to a safe location
-  + Make backups in multiple locations
-  + This backup will save you from a brick if anything goes wrong in the future
-9. Delete `NANDmin_emu.bin` from the `/files9/` folder on your SD card after copying it
-10. **Backup every file on your SD card to a folder on your computer; all files will be deleted in the following steps**
-11. Reinsert your SD card into your 3DS
-12. Press (Start) to reboot while holding (Up) to open GodMode9
-13. Press the (Home) button to bring up the action menu
-14. Select "SD format menu"
-15. Press (A) to confirm
-16. Select "No EmuNAND"
-17. Select "Auto"
-18. Enter the prompted button combination to confirm
-19. Hold (R) and press (B) at the same time to eject your SD card
-20. Put your SD card in your computer, then copy all your files back into it
-  + Ensure you replace the `arm9loaderhax.bin` file on the SD card with the one from your backup
-21. Reinsert your SD card into your 3DS
-22. Press (A) to remount your SD card
-23. Press (Start) to reboot!
-24. If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_down)
+1. תכבו את המכשיר
+1. תכניסו את ה-SD שלכם למחשב
+1. תעתיקו את `GodMode9.bin` מתוך הזיפ של GodMode9 אל תוך התיקייה `/luma/payloads/` שב- SD שלכם ושנו את שם הקובץ `GodMode9.bin` ל-`start_GodMode9.bin`
+1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
+
+##### Section II - גיבוי שמירות DSiWare מהSysNAND
+
+אם אין לכם שמירות או משחקי DSiWare שאכפת לכם מהם, תדלגו על החלק הזה.
+{: .notice--info}
+
+1. תפתחו את GodMode9 מתוך arm9loaderhax על ידי החזקה של המקש (Start) בעת הדלקה
+1. נווטו אל`SYSNAND TWLN` ומשם ל `title`
+1. תחזיקו (R) ותלחצו (A) באותו הזמן על `00030004` כדי לבחור את התיקייה, ואז תבחרו "Copy to 0:/gm9out"
+  + תהליך זה עלול לקחת זמן מה אם יש לכם הרבה משחקי DSiWare
+1. תלחצו (B) פעמיים כדי לחזור לתפריט הראשי
+
+##### Section II - גיבוי שמירות GBA VC מהSysNAND
+
+אם אין לכם שמירות או משחקי GBA VC שאכפת לכם מהם, תדלגו על החלק הזה.
+{: .notice--info}
+
+שימו לב שזה לא נדרש למשחקי Virtual Console אחרים (GBC, NES ועוד)
+{: .notice--info}
+
+1. תחזיקו (R) ולחצו (Start) באותו הזמן כדי לכבות את המכשיר
+1. תכניסו את ה-SD שלכם למחשב
+1. תצרו תיקייה ב`/files9/` בשביל כל משחק GBA VC שאתם רוצים לגבות לו את השמירה 
+1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
+1. תפעילו את המכשיר אל SysNAND
+1. תעשו את התהליך הבא בשביל כל משחק GBA VC שאתם רוצים לגבות לו את השמירה:
+  + תפעילו את משחק הGBA VC על SysNAND
+  + תצאו מהמשחק
+  + תאתחלו בזמן שאתם מחזיקים (Start) במהלך האתחול כדי להפעיל את GodMode9
+  + נווטו אל `SYSNAND VIRTUAL`
+  + תלחצו (Y) על `gbavc.sav` כדי להעתיק אותו
+  + תלחצו (B) כדי לחזור לתפריט הראשי
+  + נווטו אל `SDCARD` ושם אל `files9`
+  + נווטו לתיקייה שיצרתם בשביל משחק הGBA VC
+  + תלחצו (Y) כדי להדביק את `gbavc.sav`
+  + תלחצו (Start) כדי לאתחל את המכשיר
+1. תאתחלו בזמן שאתם מחזיקים (Start) במהלך האתחול כדי להפעיל את GodMode9
+
+##### חלק IV - העתקת EmuNAND אל SysNAND
+
+1. + נווטו אל `EMUNAND VIRTUAL`
+1. תלחצו (A) על `nand.bin` כדי לבחור בו, ואז תבחרו ב "NAND image options...", ושם ב "Restore SysNAND (safe)"
+1. לחצו (A) כדי לפתוח גישת שכתוב לSysNAND, ואז תלחצו על המקשים בסדר הנכון
+  + זה לא ישכתב את התקנת הarm9loaderhax שלכם
+1. תלחצו על המקשים בסדר הנכון כדי לפתוח גישת כתיבה לSysNAND (בlvl1)
+  + זה ייקח קצת זמן
+1. תלחצו (A) כדי להמשיך אחרי שזה סיים
+1. תלחצו (B) כדי לחזור לתפריט הראשי
+
+##### חלק V - שחזור שמירות DSiWare
+
+אם לא גיביתם שמירות DSiWare מקודם, תדלגו על החלק הזה.
+{: .notice--info}
+
+1. נווטו אל `SDCARD` ושם אל `gm9out`
+1. תלחצו (Y) על תיקיית `00030004` כדי להעתיק אותה
+1. תלחצו (B) פעמיים כדי לחזור לתפריט הראשי
+1. נווטו אל`SYSNAND TWLN` ומשם ל `title`
+1. תלחצו (Y) כדי להדביק את תיקיית `00030004`
+1. תבחרו "Copy path(s)"
+1. לחצו (A) כדי לפתוח גישת כתיבת lvl1 לSysNAND, ואז תלחצו על המקשים בסדר הנכון
+1. תבחרו ב "Overwrite file(s)"
+  + תהליך זה עלול לקחת זמן מה אם יש לכם הרבה משחקי DSiWare
+1. תלחצו (B) פעמיים כדי לחזור לתפריט הראשי
+
+##### חלק VI - שחזור שמירות GBA VC
+
+אם לא גיביתם שמירות GBA VC מקודם, תדלגו על החלק הזה.
+{: .notice--info}
+
+1. תחזיקו (R) ולחצו (Start) באותו הזמן כדי לכבות את המכשיר
+1. תפעילו את המכשיר אל SysNAND
+1. תעשו את התהליך הבא בשביל כל משחק GBA VC שאתם רוצים לגבות לו את השמירה:
+  + תפעילו את משחק הGBA VC על SysNAND
+  + תצאו מהמשחק
+  + תאתחלו בזמן שאתם מחזיקים (Start) במהלך האתחול כדי להפעיל את GodMode9
+  + נווטו אל `SDCARD` ושם אל `files9`
+  + נווטו לתיקייה שיצרתם בשביל משחק הGBA VC
+  + תלחצו (Y) על `gbavc.sav` כדי להעתיק אותו
+  + תלחצו (B) כדי לחזור לתפריט הראשי
+  + נווטו אל `SYSNAND VIRTUAL`
+  + תלחצו (Y) כדי להדביק את `gbavc.sav`
+  + תלחצו (A) כדי לאשר
+  + תלחצו (Start) כדי לאתחל את המכשיר
+1. תאתחלו בזמן שאתם מחזיקים (Start) במהלך האתחול כדי להפעיל את GodMode9
+
+##### חלק VII - גיבוי SysNAND
+
+1. תלחצו על (Home) כדי להראות את תפריט הפעולה
+1. תבחרו ב"More..."
+1. תבחרו ב "Backup NAND"
+1. תלחצו (A) כדי להמשיך
+1. תחזיקו (R) ולחצו (B) באותו הזמן כדי להוציא את הSD
+1. תכניסו את הSD שלכם למחשב, ואז תעתיקו את `nand.bin` מתיקיית `/gm9out/` על הכרטיס זכרון אל מקום בטוח במחשב שלכם
+  + אם בעבר השתמשתם בSafeCTRTransfer ויש לכם גיבוי NAND בשם `<serialnumber>_nand.bin`, תחליפו אותו בזה (תשנו את השם של `nand.bin`שיהיה כמו `<serialnumber>_nand.bin`)
+  + תיצרו גיבויים במקומות שונים (כמו אחסון בענן)
+  + הגיבוי הזה ישמור עליכם מבריק אם משהו ישתבש בעתיד
+1. תמחקו את `nand.bin` בתיקיה '/ gm9out /' על הSD לאחר שהעתקתם אותו
+1. ** תגבו את כל הקבצים על הSD לתיקייה במחשב שלכם, כי כל הקבצים יימחקו בצעדים הבאים **
+
+##### חלק VIII - פרמוט ה SD
+
+1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
+1. תלחצו על (Home) כדי להראות את תפריט הפעולה
+1. תבחרו ב"More..."
+1. תבחרו ב"SD format menu"
+1. תלחצו (A) כדי לאשר
+1. תבחרו "No EmuNAND"
+1. תבחרו "Auto"
+1. כאשר תתבקשו, תלחצו על הכפתורים שנתונים לכם כדי לאשר
+1. תחזיקו (R) ולחצו (B) באותו הזמן כדי להוציא את הSD
+1. תשימו את הSD במחשב שלכם, ותשחזרו את הקבצים שהיו עליו
+  + תוודאו שאתם מחליפים את הקובץ 'arm9loaderhax.bin' על כרטיס ה-SD עם האחד מהגיבוי שלכם
+1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
+1. תלחצו A כדי לגרום לתוכנה לקלוט שהSD חזר
+1. לחצו על (Start) על מנת לשמור ולהפעיל מחדש
+1. + אם אתם מקבלים מסך שחור, [עקבו אחרי המדריך הבא](troubleshooting#ts_sys_down)
 
 ___
 
-Return to [Installing arm9loaderhax](installing-arm9loaderhax).
+תחזרו ל [Installing arm9loaderhax](installing-arm9loaderhax).
