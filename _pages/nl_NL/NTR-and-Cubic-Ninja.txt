@@ -38,22 +38,22 @@ Om een [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) link te gebruik
 1. Kopieer`GetSystemUpdate.partial.xml` naar `C:\wamp\www\` (zodat er een kopie van bestaat in zowel `C:\wamp\www\updates` als`C:\wamp\www\`)
 1. Klik op het WAMP-icoon in je Taakbalk, en druk dan op "Put Online"
 1. Gebruik de opdracht `ipconfig/all` in CMD om jouw computers' IPv4 adres te krijgen, je zal het later nodig hebben
-1. Kopieer 'ntr.bin' naar de root van je SD-Kaart
-1. Kopieer _de inhoud_ van de 'starter'-map in 'starter.zip' naar de root van je SD-Kaart
-1. Put your SD card back into your device
+1. Kopieer `ntr.bin` naar de hoofdmap van je SD kaart
+1. Kopieer _de inhoud van_ de `starter` map in `starter.zip` naar de hoofdmap van je SD kaart
+1. Stop je SD kaart weer terug in je 3DS
 
 ##### Deel II - updaten
 
-1. Boot your device into recovery mode by holding (L)+(R)+(A)+(UP) while powering on
+1. Start je 3DS op in de herstelmodus door (L)+(R)+(A)+(UP) ingedrukt te houden terwijl je de 3DS aan zet
 1. Weiger de update en start opnieuw op
-1. Launch Cubic Ninja (if it already has NinjHax installed, hold (L)+(R)+(X)+(Y) to reset it)
+1. Open Cubic Ninja (als NinjHax er al op geïnstalleerd is, houd dan (L)+(R)+(X)+(Y) ingedrukt om het te resetten)
 1. Selecteer "Create", daarna "QR Code" en daarna "Scan QR Code"
-1. Scan de QR code in de NTR CFW `.zip` voor je respectievelijke regio
-1. On the home menu, press (Y) and (X) at the same time to launch NTR's menu
+1. Scan de QR code in de NTR CFW `.zip` voor jouw regio
+1. Op het homemenu, druk op (Y) en (X) tegelijkertijd om het NTR-menu te openen
 1. Activeer de debugger en sluit het menu
-1. Use your router's web page to get your device's IP address (google it if you don't know how, all routers are different)
+1. Gebruik de webpagina van je router om het IP adres van je 3DS te weten te komen (google het als je niet weet hoe, alle routers zijn verschillend)
 1. Voer NTR Debugger uit op je computer
-1. Enter the following commands (replace XXX.XXX.XXX.XXX with your device's IP address and YYY.YYY.YYY.YYY with your computer's IP address)    
+1. Voer de volgende opdrachten uit (vervang XXX.XXX.XXX.XXX met het IP adres van je 3DS en YYY.YYY.YYY.YYY met je computer's IP adres)    
     + `connect("XXX.XXX.XXX.XXX", 8000)`
     + `write(0x15E424, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
     + `write(0x15E0EC, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
