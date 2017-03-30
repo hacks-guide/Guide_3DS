@@ -4,11 +4,14 @@ lang: pl
 permalink: /pl_PL/troubleshooting.html
 ---
 
-Jeśli nie jesteś w stanie uruchomić swojego 3DSa, poszukaj sekcji odnoszącej się do twojego problemu i postępuj zgodnie z instrukcjami. Kiedy rozwiążesz swój problem, możesz kontynuować z główną instrukcją
+If you are unable to boot your device, please look for the section relevant to you, and follow the instructions. Kiedy rozwiążesz swój problem, możesz kontynuować z główną instrukcją
 (Ta sekcja jest dosyć długa, spróbuj użyć Ctrl+F aby wyszukać swój problem.)
 {: .notice--primary}
 
 **Jeśli nadal nie możesz rozwiązać swojego problemu i potrzebujesz szerszej pomocy, wklej zawartość wszystkich istotnych plików .log znajdujących się w katalogu głównym twojej karty SD do [Gist](https://gist.github.com/). Zapytując o pomoc zamieść dokładny opis twojego problemu i kroki które już podjąłeś, aby go rozwiązać.**
+{: .notice--info}
+
+To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download)
 {: .notice--info}
 
 ## <a name="twl_broken" />Tryb DSi / DS nie działa prawidłowo po ukończeniu instrukcji
@@ -28,22 +31,21 @@ Jeśli nie jesteś w stanie uruchomić swojego 3DSa, poszukaj sekcji odnoszącej
 ##### Sekcja I - Przygotowania
 
 1. Stwórz folder o nazwie "cias" w głównym katalogu twojej karty SD, jeśli jeszcze nie istnieje
-2. Skopiuj plik `TWL Version Data - v0.cia` do folderu `/cias/` na twojej karcie SD
-3. Skopiuj plik `DS Download Play - v1024.cia` do folderu `/cias/` na twojej karcie SD
-4. Skopiuj plik `DS Internet - v2048.cia` do folderu `/cias/` na twojej karcie SD
-5. Skopiuj plik `Nintendo DS Cart Whitelist - v11264.cia` do folderu `/cias/` na twojej karcie SD
-6. Skopiuj plik `New_3DS TWL_FIRM - v9936.cia` LUB plik `Old_3DS TWL_FIRM - v8817.cia` do folderu `/cias/` na twojej karcie SD
+1. Skopiuj plik `TWL Version Data - v0.cia` do folderu `/cias/` na twojej karcie SD
+1. Skopiuj plik `DS Download Play - v1024.cia` do folderu `/cias/` na twojej karcie SD
+1. Skopiuj plik `DS Internet - v2048.cia` do folderu `/cias/` na twojej karcie SD
+1. Skopiuj plik `Nintendo DS Cart Whitelist - v11264.cia` do folderu `/cias/` na twojej karcie SD
+1. Skopiuj plik `New_3DS TWL_FIRM - v9936.cia` LUB plik `Old_3DS TWL_FIRM - v8817.cia` do folderu `/cias/` na twojej karcie SD
 
 ##### Section II - Instalacja tytułów TWL
 
-1. Otwórz aplikację FBI
-2. Wybierz "SD"
-3. Wybierz "cias"
-4. Wybierz "\<current directory>"
-5. Wybierz opcję "Install and delete all CIAs"
-6. Wyjdź z aplikacji FBI naciskając przycisk "Home"
+1. Launch FBI
+1. Navigate to `SD` -> `cias`
+1. Wybierz "\<current directory>"
+1. Wybierz opcję "Install and delete all CIAs"
+1. Press (Home) to exit FBI
 
-## <a name="rm_nnid" />Usuwanie NNID bez formatowania konsoli
+## <a name="rm_nnid" />Removing an NNID without formatting your device
 
 #### Czego potrzebujesz
 
@@ -52,128 +54,143 @@ Jeśli nie jesteś w stanie uruchomić swojego 3DSa, poszukaj sekcji odnoszącej
 #### Instrukcje
 
 1. Skopiuj plik 'GodMode9.bin' z archiwum GodMode9 '.zip' do folderu '/luma/payloads/' na twojej karcie SD i zmień jego nazwę z 'GodMode9.bin' na 'up_GodMode9.bin'
-2. Uruchom konsolę przytrzymując przycisk (Dpad w górę) aby załadować GodMode9 przez arm9loaderhax
-3. Wybierz kolejno `SYSNAND CTRNAND` -> `data` -> (32-znakowy identyfikator) -> `sysdata` -> `00010038`
-4. Przytrzymaj (R) trigger, a następnie naciśnij (X) na `00000000` aby zmienić nazwę tego pliku
-5. Wciśnij jeden raz (Dpad w górę) by zmienić nazwę na `10000000`
-6. Naciśnij (A) aby zapisać zmiany
-7. Naciśnij (A) żeby odblokować możliwość zapisu do SysNAND, a następnie wprowadź żądaną na ekranie konsoli sekwencję klawiszy
-8. Wróć do menu głównego GodMode9
-9. Naciśnij przycisk (Start) aby uruchomić konsolę ponownie
+1. Uruchom konsolę przytrzymując przycisk (Dpad w górę) aby załadować GodMode9 przez arm9loaderhax
+1. Wybierz kolejno `SYSNAND CTRNAND` -> `data` -> (32-znakowy identyfikator) -> `sysdata` -> `00010038`
+1. Przytrzymaj (R) trigger, a następnie naciśnij (X) na `00000000` aby zmienić nazwę tego pliku
+1. Wciśnij jeden raz (Dpad w górę) by zmienić nazwę na `10000000`
+1. Naciśnij (A) aby zapisać zmiany
+1. Naciśnij (A) żeby odblokować możliwość zapisu do SysNAND, a następnie wprowadź żądaną na ekranie konsoli sekwencję klawiszy
+1. Wróć do menu głównego GodMode9
+1. Press (Start) to reboot your device
 
 ## <a name="gw_fbi" />Nie można wdrożyć aplikacji Health & Safety na konsoli, która miała obniżoną wersję firmware przy użyciu flashcartu Gateway
-Przyczyną tego problemu jest kiepski sposób implementacji procesu obniżania wersji firmware przez Gateway, po którym zostają 2 wersje aplikacji Health & Safety w systemie. Jedna z nich nie jest używana, ale powoduje błąd Decrypt9, wdrażając dane do niewłaściwej aplikacji.
+Przyczyną tego problemu jest kiepski sposób implementacji procesu obniżania wersji firmware przez Gateway, po którym zostają 2 wersje aplikacji Health & Safety w systemie. One of them is unused, but it confuses the H&S inject system, causing it to inject into the wrong one.
 
-#### Czego potrzebujesz
-
-* Najnowszej wersji [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-
-#### Instrukcje
-
-1. Skopiuj plik 'GodMode9.bin' z archiwum GodMode9 '.zip' do folderu '/luma/payloads/' na twojej karcie SD i zmień jego nazwę z 'GodMode9.bin' na 'up_GodMode9.bin'
-2. Włóż z powrotem kartę SD do swojego 3DS'a
-3. Załaduj GodMode9 przez arm9loaderhax, przytrzymując (Dpad w górę) podczas uruchamiania konsoli     
-4. Wybierz kolejno `SYSNAND CTRNAND` -> `title` -> `00040010`
-5. Przejdź do katalogu odpowiadającemu twojej konsoli i jej regionowi:
+1. Launch GodMode9 from arm9loaderhax by holding (Start) during boot     
+1. Wybierz kolejno `SYSNAND CTRNAND` -> `title` -> `00040010`
+1. Przejdź do katalogu odpowiadającemu twojej konsoli i jej regionowi:
   + **Old 3DS EUR**: `00022300` -> `content`
   + **Old 3DS JPN**: `00020300` -> `content`
   + **Old 3DS USA**: `00021300` -> `content`
   + **New 3DS EUR**: `20022300` -> `content`
   + **New 3DS JPN**: `20020300` -> `content`
   + **New 3DS USA**: `20021300` -> `content`
-6. Zauważ, że znajdują się tu dwa zestawy plików app i tmd, jeden z rozszerzeniami zapisanymi wielkimi literami (`.TMD` i `.APP`), drugi z rozszerzeniami zapisanymi małymi literami (`.tmd` i `.app`)
-7. Przytrzymując (R) trigger, naciśnij (Y) żeby utworzyć nowy katalog
-8. Naciśnij (A) by potwierdzić nazwę katalogu jako `newdir` (nazwa nie ma znaczenia)
-9. Naciśnij (A) żeby odblokować możliwość zapisu do SysNAND, a następnie wprowadź żądaną na ekranie konsoli sekwencję klawiszy
-10. Naciśnij (L) trigger na każdym z plików zawierających rozszerzenia z wielkich liter (`.TMD` i `.APP`) aby je zaznaczyć
-11. Naciśnij (Y) żeby skopiować zaznaczone pliki
-12. Przejdź do stworzonego wcześniej katalogu `newdir`
-13. Naciśnij (Y) żeby wkleić pliki
-14. Wybierz "Move path(s)"
-15. Pliki z rozszerzeniami napisanymi wielkimi literami (`.TMD` i `.APP`), zostaną przeniesione do katalogu `newdir`
-16. Naciśnij przycisk (Start) aby uruchomić konsolę ponownie
-17. Wróć do [Instalacja arm9loaderhax](installing-arm9loaderhax) i spróbuj raz jeszcze wdrożyć FBI do Health & Safety
-18. Jeżeli problem dalej występuje, przenieś pliki z rozszerzeniami pisanymi wielkimi literami (`. TMD` i `. APP`) z powrotem do katalogu `content`, a pliki z rozszerzeniami pisanymi małymi literami (`. tmd` i `. app`) do folderu `newdir`, a następnie wróć do [Instalacja arm9loaderhax](installing-arm9loaderhax)) i spróbuj raz jeszcze wdrożyć FBI do Health & Safety
+1. Zauważ, że znajdują się tu dwa zestawy plików app i tmd, jeden z rozszerzeniami zapisanymi wielkimi literami (`.TMD` i `.APP`), drugi z rozszerzeniami zapisanymi małymi literami (`.tmd` i `.app`)
+1. Przytrzymując (R) trigger, naciśnij (Y) żeby utworzyć nowy katalog
+1. Press (A) to confirm the name `newdir` (it does not matter what the folder is called)
+1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+1. Naciśnij (L) trigger na każdym z plików zawierających rozszerzenia z wielkich liter (`.TMD` i `.APP`) aby je zaznaczyć
+1. Naciśnij (Y) żeby skopiować zaznaczone pliki
+1. Przejdź do stworzonego wcześniej katalogu `newdir`
+1. Naciśnij (Y) żeby wkleić pliki
+1. Wybierz "Move path(s)"
+1. Pliki z rozszerzeniami napisanymi wielkimi literami (`.TMD` i `.APP`), zostaną przeniesione do katalogu `newdir`
+1. Press (Start) to reboot your device
+1. Wróć do [Instalacja arm9loaderhax](installing-arm9loaderhax) i spróbuj raz jeszcze wdrożyć FBI do Health & Safety
+1. Jeżeli problem dalej występuje, przenieś pliki z rozszerzeniami pisanymi wielkimi literami (`. TMD` i `. APP`) z powrotem do katalogu `content`, a pliki z rozszerzeniami pisanymi małymi literami (`. tmd` i `. app`) do folderu `newdir`, a następnie wróć do [Instalacja arm9loaderhax](installing-arm9loaderhax)) i spróbuj raz jeszcze wdrożyć FBI do Health & Safety
 
 ## <a name="ts_browser" />Exploit przeglądarki internetowej 3DS nie działa
 Exploity wykorzystujące luki w przeglądarce (takie jak browserhax albo 2xrsa) są często niestabilne i zawieszają się. Czasami można to poprawić wykonując następujące kroki
 
-1. Otwórz przeglądarkę (browser), a następnie ustawienia przeglądarki (browser settings)
-2. Przewiń na dół strony, gdzie znajduje się opcja Initialize Savedata (może też występować pod nazwą Clear All Save Data) i ją wybierz
-3. Ponownie spróbuj exploit
+1. Launch the browser, then launch the browser settings
+1. Przewiń na dół strony, gdzie znajduje się opcja Initialize Savedata (może też występować pod nazwą Clear All Save Data) i ją wybierz
+1. Ponownie spróbuj exploit
 
 ## <a name="ts_safe_a9lh" />System uruchamia się bezpośrednio do SafeA9LHInstaller
 Skopiowałeś niewłaściwy plik `arm9loaderhax.bin` na swoją kartę SD (należało skopiować wyłącznie katalog `3ds` i plik `SafeA9LHInstaller.dat` z archiwum SafeA9LHInstaller`zip`)    
 
 1. Użyj właściwego pliku `arm9loaderhax.bin`
-2. Skopiuj plik `arm9loaderhax.bin` z archiwum Luma3DS `.zip` do katalogu głównego twojej karty SD, nadpisz istniejący plik
-3. Uruchom ponownie konsolę, przytrzymując jednocześnie przycisk (Select) i kontynuuj instrukcję
+1. Skopiuj plik `arm9loaderhax.bin` z archiwum Luma3DS `.zip` do katalogu głównego twojej karty SD, nadpisz istniejący plik
+1. Uruchom ponownie konsolę, przytrzymując jednocześnie przycisk (Select) i kontynuuj instrukcję
 
 ## <a name="ts_safe_a9lh_screen" />SafeA9LHInstaller wyświetla nieczytelny (zglitchowany) ekran
 To się czasami zdarza, jednak przyczyna tego zachowania jest nieznana. Przyciski będą działać, jednak ekran będzie nieczytelny
 
 1. Wykonuj instrukcje tak jakby problem nie występował
-2. Naciśnij (Select), arm9loaderhax zostanie zainstalowany
-3. Odczekaj kilka sekund
-4. Wyłącz swoją konsolę, naciskając dowolny przycisk
-
-## <a name="ts_d9_backup" />Decrypt9 oraz Hourglass9 nie mogą przywrócić / znaleźć mojej kopii zapasowej NAND
-
-1. Upewnij się, że w **katalogu głównym** twojej karty SD nie istnieje folder o nazwie "Decrypt9"
-2. Przeskanuj swoją kartę SD pod kątem błędów przy użyciu [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), or [F3X (Mac)](f3x-(mac))
-3. Skopiuj wszystkie pliki znajdujące się na karcie SD na swój komputer, sformatuj ją a następnie skopiuj je z powrotem na kartę
-4. Spróbuj innej karty SD
+1. Naciśnij (Select), arm9loaderhax zostanie zainstalowany
+1. Odczekaj kilka sekund
+1. Power off your device by pressing any button
 
 ## <a name="ts_sys_down" />Ładowanie SysNAND zatrzymuje się na czarnym ekranie
 
-1. Spróbuj uruchomić konsolę bez karty SD, włóż ją z powrotem po uruchomieniu.
-    1. Wyłącz swoją konsolę poprzez przytrzymanie przycisku power.
-    2. Wyciągnij kartę SD z konsoli.
-    3. Włącz swoją konsolę.
-    4. Kiedy pojawi się Home Menu, włóż kartę SD z powrotem to konsoli.
-    5. Jeśli powyższe kroki pozwoliły na uruchomienie twojej konsoli, powinieneś wyczyścić pliki extdata Home Menu poprzez przejście do następującego folderu na karcie SD: `/Nintendo 3DS/(32 znakowy identyfikator)/(32 znakowy identyfikator)/extdata/00000000/`
+1. Try booting with your SD card out, and then reinserting it after booting
+    1. Power off your device
+    1. Remove your SD card from your device
+    1. Power on your device
+    1. When the home menu appears, reinsert your SD card into your device
+    1. If this worked, you should clear Home Menu's extdata by navigating to the following folder on your SD card: `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/`
         + Region EUR: Usuń folder `00000098`
         + Region JPN: Usuń folder `00000082`
         + Region USA: Usuń folder `0000008f`
+        + CHN Region: Delete `000000A1`
         + Region KOR: Usuń folder `000000A9`
-2. Spróbuj uruchomić konsolę bez żadnego kartridżu (dotyczy to również flashcartów)
-3. Jeśli masz hardmoda i kopię zapasową NAND, przywróć SysNAND przy jego użyciu.
-4. Spróbuj uruchomić konsolę w trybie recovery i zaktualizować firmware.    
+        + TWN Region: Delete `000000B1`
+1. Spróbuj uruchomić konsolę bez żadnego kartridżu (dotyczy to również flashcartów)
+1. If you have a hardmod and a NAND backup, flash the backup back to SysNAND
+1. Try booting into recovery mode and updating your system    
     *Prawdopodobnie nie zadziała to na konsoli Old 3DS z wersją firmware 2.1.0*    
     **Spowoduje to BRICK konsoli New 3DS z firmware 2.1.0!**
-    1. Wyłącz swoją konsolę poprzez przytrzymanie przycisku power.
-    2. Przytrzymaj jednocześnie przyciski (L)+(R)+(A)+(Dpad w górę).
-    3. Włącz swoją konsolę.
-    4. Jeśli posiadasz konsolę Old 3DS i uruchomi się tryb recovery, przeprowadź aktualizację *ale tylko jeśli posiadasz entrypoint dla najnowszej wersji firmware i jest możliwe jej ponowne obniżenie* a następnie spróbuj ponwownie obniżyć wersję firmware do 2.1.0 poprzez wykonanie niniejszej instrukcji.
-5. Twój 3DS jest prawdopodobnie programowo uszkodzony (tzw. brick). For support, ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+    1. Power off your device
+    1. Hold (L)+(R)+(A)+(Up)
+    1. Power on your device
+    1. If you enter safe mode, update your device *only if you have an entrypoint for the latest FW version and it is possible to downgrade from it* and attempt the downgrade again.
+1. Your device may be bricked. For support, ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
 
 ## <a name="ts_sys_a9lh" />Po zainstalowaniu arm9loaderhax, ładowanie SysNAND zatrzymuje się na czarnym ekranie
 
 1. Upewnij się, że posiadasz działający payload.
     1. Sprawdź, czy w katalogu głównym twojej karty SD istnieje plik `arm9loaderhax.bin`.
-2. Spróbuj zresetować konfiurację Luma i ponownie włączyć odpowiednie opcje
+1. Spróbuj zresetować konfiurację Luma i ponownie włączyć odpowiednie opcje
     1. Usuń plik `config.bin` z folderu `luma` na twojej karcie SD
-    2. Ponownie zaznacz odpowiednie opcji w menu konfiguracji Luma3DS, które pojawi się podczas uruchamiania konsoli
-3. Spróbuj testowo załadować Hourglass9
+    1. Ponownie zaznacz odpowiednie opcji w menu konfiguracji Luma3DS, które pojawi się podczas uruchamiania konsoli
+1. Test booting GodMode9
     1. Przytrzymaj przycisk (Start) podczas uruchamiania konsoli z zainstalowanym Luma3DS
-4. Wyczyść pliki extdata Home Menu
+1. Wyczyść pliki extdata Home Menu
     1. Przejdź do folderu `/Nintendo 3DS/(32 znakowy identyfikator)/(32 znakowy identyfikator)/extdata/00000000/` na twojej karcie SD
         + Region EUR: Usuń folder `00000098`
         + Region JPN: Usuń folder `00000082`
         + Region USA: Usuń folder `0000008f`
+        + CHN Region: Delete `000000A1`
         + Region KOR: Usuń folder `000000A9`
-5. Spróbuj uruchomić konsolę bez żadnego kartridżu (dotyczy to również flashcartów)
-6. Jeśli konsola miała wcześniej obniżaną wersję firmware przy użyciu flashcartu Gateway, upewnij się że używasz najnowszej wersji Luma3DS (minimum v6.2.3 lub wyższej)
-7. Jeśli NAND twojej konsoli zawiera wersję firmware pomiędzy 3.0.0 a 4.5.0, wykonaj poniższe kroki:
+        + TWN Region: Delete `000000B1`
+1. Spróbuj uruchomić konsolę bez żadnego kartridżu (dotyczy to również flashcartów)
+1. Jeśli konsola miała wcześniej obniżaną wersję firmware przy użyciu flashcartu Gateway, upewnij się że używasz najnowszej wersji Luma3DS (minimum v6.2.3 lub wyższej)
+1. Jeśli NAND twojej konsoli zawiera wersję firmware pomiędzy 3.0.0 a 4.5.0, wykonaj poniższe kroki:
     + Upewnij się, że korzystasz z najnowszej wersji Luma3DS (minimum v6.6 lub wyższej)
     + Pobierz [ten plik](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) i zmień jego nazwę na `firmware.bin`
     + Pobierz [ten plik](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
     + Skopiuj pliki `firmware.bin` i `cetk` do folderu `/luma/` na twojej karcie SD
-    + Usuń oba te pliki po aktualizacji twojego 3DS
-8. Spróbuj wykonać [9.2.0 ctrtransfer](9.2.0-ctrtransfer)
-9. Ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+    + Delete both of these files after updating your device
+1. Try following [9.2.0 CTRTransfer](9.2.0-ctrtransfer)
+1. Ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+
+## <a name="ts_transfer" />Error during SafeCTRTransfer
+
+If an error occurs during the SafeCTRTransfer process, you will be prompted to launch an external payload for the purpose of repairing your device.
+
+#### Czego potrzebujesz
+
+* Najnowszej wersji [GodMode9](https://github.com/d0k3/GodMode9/releases/)
+
+#### Instrukcje
+
+1. Select "Unmount SD card"
+1. Włóż kartę SD do komputera
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/ctrtransfer/` folder on your SD card and rename `GodMode9.bin` in `/ctrtransfer/` to `payload.bin`
+1. Reinsert your SD card into your device
+1. Select "Run 0:/ctrtransfer/payload.bin"
+1. If it was successful, you will have entered GodMode9
+1. Navigate to `SDCARD` -> `ctrtransfer`
+1. Press (A) on `<serialnumber>_nand.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
+1. Press (A) to unlock SysNAND overwriting, then input the key combo given
+  + This will not overwrite your arm9loaderhax installation
+1. Input the key combo given to unlock SysNAND (lvl1) writing
+  + This process will take some time
+1. Press (A) to continue once it has completed
+1. Press (Start) to reboot your device
+1. Report this issue to the [SafeCTRTransfer Issues Page](https://github.com/d0k3/SafeCTRTransfer/issues)
 
 ## <a name="ts_sys_blue" />Podczas uruchamiania konsoli pojawia się niebieski ekran (bootrom error)
 
-1. Twój 3DS jest programowo uszkodzony (tzw. brick)
-2. Musisz wykonać [hardmod](https://gbatemp.net/threads/414498/) swojej konsoli albo ją naprawić / wymienić
+1. Your device is bricked
+1. You will need to get a [hardmod](https://gbatemp.net/threads/414498/) or repair / replace your device
