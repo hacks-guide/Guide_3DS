@@ -1,0 +1,114 @@
+---
+title: "SafeCTRTransfer (Homebrew Launcher)" #
+lang: he
+permalink: /he_IL/safectrtransfer-(homebrew-launcher).html
+---
+
+אם המכשיר שלכם כבר פרוץ עם EmuNAND, המדריך הזה עוסק רק בSysNAND. תבצעו את ההוראות על SysNAND. Emunand וRednand כמעט מונחים נרדפים.
+{: .notice--info}
+
+אם שנמכתם לגירסה 2.1.0 על 2DS או על New 3DS והשארתם את החיבור לרשת כבוי, ניתן להפעיל את החיבור לרשת מחדש על הוצאה של הסוללה והמטען למספר שניות והדלקה מחדש.
+{: .notice--info}
+
+אם אתם משתמשים בניהול כרטיס SD של הNew 3DS כדי להעביר קבצים לכרטיס SD שלכם, זה כבר לא יעבוד בגרסה 2.1.0. ודאו שיש לכם קורא כרטיסי microSD זמין לפני שתמשיכו.
+{: .notice--info}
+
+**כדי להשתמש בקישורי מגנט, תצטרכו כלי טורנט כמו [Deluge](http://dev.deluge-torrent.org/wiki/Download)**
+{: .notice--info}
+
+**מכאן הלאה, החיבור לרשת הינו דרוש על מנת שתוכלו להמשיך להתקדם ב-2.1.0.**
+{: .notice--warning}
+
+**במידה שבקרת הורים מופעלת בקונסולה שלכם, בטלו אותה לפני שאתם מתחילים בתהליך ה-CtrTransfer. אם אתם לא יודעים את הסיסמה, ראו באתר [זה](https://mkey.salthax.org/). אם אתם לא יכול לבטל את בקרת ההורים כי הNNID המקושר הוא לילד מתחת לגיל 13, אתם יכולים במקום זאת להגדיר את כל האפשרויות של בקרת הורים ל-"do not restrict". **
+{: .notice--warning}
+
+**ביצוע CTRTransfer ימחק את כל הTicketים שהותקנו על ידי המשתמש (שנותנות גישה למשחקים) מהמכשיר עד שהגיבוי הנוצר מוחזר.**
+{: .notice--danger}
+
+**לעולם אל תבצעו פרמוט על 2DS בגרסה נמוכה מ-6.0.0 כי לא תוכלו לסיים את ההגדרה הראשונית והקונסולה תקבל בריק!**
+{: .notice--danger}
+
+**לעולם אל תעדכנו New 3DS בגרסה 2.1.0 (זוהי גרסת Old 3DS) או שתקבלו בריק! חובה לבצע שחזור מערכת מגיבוי NAND או לעשות CtrTransfer לגרסת New 3DS סטנדרטית קודם!**
+{: .notice--danger}
+
+{% capture notice %}
+**הכנסת New 3DS בגרסה 2.1.0 ל-Sleep mode ידועה כגורם לבריק בלתי הפיך!**    
+**זה תקף רק לסגירה של המסך _בזמן שהמכשיר שלכם דלוק_; זה לא נוגע לכיבוי המכשיר.**    
+**המכשיר נכנס ל-Sleep mode רק כאשר סוגרים את המסך. זה לא עובד על טיימר או משהו בסגנון.**    
+**כשתהיו ב 2.1.0, עליכם להמשיך ללא דחיה כדי למנוע כל אפשרות שזה יקרה! **    
+{% endcapture %}
+
+<div class="notice--danger">{{ notice | markdownify }}</div>
+
+#### מעבר על הצעדים
+
+בחלק זה, נבצע צריבה של קובץ [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) בגרסה 2.1.0 למכשיר שלכם על מנת לנצל חולשת אבטחה אשר נמצאת בגרסה זו ותעזור לנו לחלץ את ה[OTP](otp-info), שזה קובץ נתונים ייחודי לכל מכשיר. קובץ ה-OTP הוא תנאי הכרחי להתקנת arm9loaderhax **ואינו** ניתן להעברה בין קונסולות שונות.
+
+זה יבוצע על ידי [התקנה של CTRTransfer image מותאם מראש] (https://www.reddit.com/r/3dshacks/comments/4zhe4a/) אשר מכיל את גרסה 2.1.0, תוך העתקה של הקבצים הספציפיים למכשיר שלכם (כגון `moveable.sed` ו- `SecureInfo_A`) אליו, ואז תיקון מאגר הנתונים.
+
+#### מה נדרש
+
+* הגרסה העדכנית של [SafeCTRTransfer](https://github.com/d0k3/SafeCTRTransfer/releases/latest)
+* הגרסה העדכנית של [safehax] (https://github.com/TiniVi/safehax/releases/latest)
+* הגרסה העדכנית של [fasthax] (https://github.com/nedwill/fasthax/releases/latest)
+* קובץ ה-2.1.0 CtrTransfer image המתאים למכשיר והאיזור שלכם     
+*(אם המכשיר שלכם אינו מאחד האיזורים האלו, פשוט תבחרו אחד מהם)*:
+  +    <i class="fa fa-magnet" aria-hidden="true" title=" זה לינק מגנטי. תשתמשו בתוכנת טורנט להורדת הקובץ."></i> - [New 3DS או Old 3DS או 2DS 2.1.0 - EUR - CTRTransfer](magnet:?xt=urn:btih:89acc9c1b488b8b38251de0ddf07975d6bd354a1&dn=2.1.0-4E%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+  +    <i class="fa fa-magnet" aria-hidden="true" title=" זה לינק מגנטי. תשתמשו בתוכנת טורנט להורדת הקובץ"></i> - [New 3DS או Old 3DS או 2DS 2.1.0 - JPN - CTRTransfer](magnet:?xt=urn:btih:3dbb9c9c85a33c6242f424dcbaebcacdd8a5912b&dn=2.1.0-4J%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    <i class="fa fa-magnet" aria-hidden="true" title=" זה לינק מגנטי. תשתמשו בתוכנת טורנט להורדת הקובץ."></i> - [New 3DS או Old 3DS או 2DS 2.1.0 - USA - CTRTransfer](magnet:?xt=urn:btih:1609ce9ee7b0ed9b6dea0b3e7cca4fc52dad6ff4&dn=2.1.0-4U%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+
+#### הוראות
+
+##### חלק I - הכנות
+
+1. תוציאו את כרטיס הSD מהכשיר שלכם, שנשאר על הHomebrew Launcher, ולאחר מכן תכניסו אותו למחשב שלכם
+1. צרו תיקייה בשם `CTRTransfer` בתיקיית האם של כרטיס ה- SD שלכם אם לא קיימת תיקייה כזו
+1. תעתיקו את קבצי ה-`bin.` ו-`bin.sha.` מה'zip.' של הCTRTransfer לתיקיית `/CTRTransfer/` שבתוך ה-SD
+1. תעתיקו את 'safehax.3dsx' לתיקיה '/ 3ds /' על כרטיס הזכרון
+1. תעתיקו את 'fasthax.3dsx' לתיקיה '/ 3ds /' על כרטיס הזכרון
+1. מתוך הזיפ של SafeCTRTransfer, תעתיקו את הקובץ SafeCTRTransfer.bin ל-SD שלכם, ותשנו לו את השם ל-safehaxpayload (מבלי לגעת בסיומת שלו)
+1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
+
+##### חלק II - הפעלת SafeCTRTransfer
+
+1. תפעילו את fasthax מרשימת הhomebrew שלכם
+  + ייתכן שתצטרכו לגלול למטה כדי לראות את האופציה הזאת
+1. לאחר שזה סיים, תלחצו (Start) כדי לצאת מfasthax
+  + זה יכול לקחת כמה נסיונות
+  + אם זה נקפא, כבו בכוח את המכשיר על-ידי החזקת כפתור ההדלקה ולאחר מכן נסו שוב
+1. תפעילו את safehax מרשימת הhomebrew שלכם
+  + ייתכן שתצטרכו לגלול למטה כדי לראות את האופציה הזאת
+  + אם זה נקפא, כבו בכוח את המכשיר על-ידי החזקת כפתור ההדלקה ולאחר מכן נסו שוב
+1. כעת אתם אמורים לעשות בוט לתוך SafeCTRTransfer
+
+#### חלק III - ביצוע CTRTransfer
+
+1. תאפשרו לבדיקות האתחול והבטחון של SafeCTRTransfer להמשיך כרגיל
+  + אם אתם מקבלים שגיאה, תבדקו שיש לכם את כל הקבצים במקומות הנכונים ושיש לכם מספיק מקום פנוי בSD שלכם כפי שמצויין ב [Get Started](get-started)
+1. כאשר תתבקשו, תלחצו על הכפתורים שנתונים לכם כדי לאשר את הCTRTransfer אל 2.1.0
+  + זה ייקח קצת זמן
+  + זה גם ייצור באופן אוטומטי גיבוי NAND של המכשיר ב`/ctrtransfer/<serialnumber>_nand.bin`
+  + אם אתם מקבלים שגיאה קריטית, [עקבו אחרי המדריך הבא](troubleshooting#ts_transfer)   
+1. לאחר השלמת תהליך זה, הסירו את הSD מהמכשיר שלכם כדי לאתחל
+  + האתחול ייקח בערך 2 שניות להיקלט
+  + בזמן שאתם על 2.1.0, המכשיר עשוי לקבל מסך שחור בהדלקה אם כרטיס ה-SD שלכם הוכנס לפני ההדלקה
+  + בכל פעם שאתם מדליקים את המכשיר לתוך 2.1.0 תצטרכו להוציא את ה-SD לפני ההדלקה ולהכניס אותו שוב ברגע שהוא נדלק
+  + לבינתיים, תעזבו את ה SD מחוץ למכשיר כי אתם תעתיקו אליו קבצים בעמוד הבא
+  + זה יתוקן ברגע שנבצע שחזור מערכת בדף הבא
+
+___
+
+*(עיוותים וריצודים של המסך זה רגיל לגמרי בגרסה 2.1.0 בחלק מהמכשירים וזה יתוקן בחלק שחזור המערכת)*
+{: .notice--info}
+
+{% capture notice %}
+**הכנסת New 3DS בגרסה 2.1.0 ל-Sleep mode ידועה כגורם לבריק בלתי הפיך!**    
+**זה תקף רק לסגירה של המסך _בזמן שהמכשיר שלכם דלוק_; זה לא נוגע לכיבוי המכשיר.**    
+**המכשיר נכנס ל-Sleep mode רק כאשר סוגרים את המסך. זה לא עובד על טיימר או משהו בסגנון.**    
+**כשתהיו ב 2.1.0, עליכם להמשיך ללא דחיה כדי למנוע כל אפשרות שזה יקרה! **    
+{% endcapture %}
+
+<div class="notice--danger">{{ notice | markdownify }}</div>
+
+תמשיכו לחלק הבא [התקנת arm9loaderhax](installing-arm9loaderhax)
+{: .notice--primary}

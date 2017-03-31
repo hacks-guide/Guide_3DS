@@ -1,0 +1,111 @@
+---
+title: "SafeCTRTransfer (Browser)" #
+lang: fr
+permalink: /fr_FR/safectrtransfer-(browser).html
+---
+
+Si vous avez déjà hacké votre console auparavant et que vous avez un CFW basé sur une EmuNAND, notez que ce guide s'applique exclusivement à votre SysNAND et vous devez appliquer toutes les instructions depuis ou vers votre SysNAND. Notez que les termes EmuNAND et RedNAND font référence à des implémentations légèrement différentes du [même concept](http://3dbrew.org/wiki/NAND_Redirection).
+{: .notice--info}
+
+Si vous avez downgradé votre 2DS ou New3DS en version 2.1.0 en ayant désactivé le Wifi de la console, vous pouvez le réactiver en enlevant la batterie et en débranchant le chargeur pendant quelques secondes puis en la redémarrant.
+{: .notice--info}
+
+If you've been using the New 3DS's microSD Management to transfer files to your SD card, this will no longer work on 2.1.0. Assurez vous d'avoir un lecteur de carte microSD à portée de la main avant de continuer à suivre ce guide.
+{: .notice--info}
+
+Pour utiliser les liens suivant [magnet](https://fr.wikipedia.org/wiki/Magnet_(standard)), vous avez besoin d'un client Torrent comme [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+{: .notice--info}
+
+**Pour l'instant, il est NÉCESSAIRE de connecter votre console à internet pour continuer après le CTRtransfer en 2.1.0.**
+{: .notice--warning}
+
+**Désactivez le contrôle parental de votre console avant d'effectuer le CTRTransfer vers la 2.1.0. Si vous ne connaissez pas le mot de passe, rendez-vous sur [ce site](https://mkey.salthax.org/). Si vous ne pouvez pas désactiver le contrôle parental parce que l’Identifiant Nintendo Network lié à la console est celui d'un enfant de moins de 13 ans, vous pouvez à la place régler tous les paramètres du contrôle parental sur "ne pas restreindre".**
+{: .notice--warning}
+
+**Effectuer un CTRTransfer supprimera tous les tikcets utilisateurs installés (qui permettent l'accès aux jeux) sur votre console jusqu'à ce que la sauvegarde que vous avez crée soit restaurée.**
+{: .notice--danger}
+
+**Ne formatez jamais une 2DS en version inférieure à 6.0.0 ou il vous sera impossible d'effectuer la configuration initiale, ce qui résultera en un BRICK de votre console !**
+{: .notice--danger}
+
+**Ne faites jamais de mise à jour sur une New 3DS en 2.1.0 (une version prévue pour Old 3DS) sous peine de BRICK! Vous DEVEZ tout d'abord restaurer votre sauvegarde de la NAND ou faire un ctrtransfer pour retourner à un firmware conçu pour New 3DS !**
+{: .notice--danger}
+
+{% capture notice %}
+**Mettre une New 3DS en 2.1.0 en veille est une cause connue de brick IRRÉCUPÉRABLE !**    
+**Cela ne se produit que lorsque l'on rabat le couvercle de la console _lorsque celle-ci est allumée_; éteindre la console complètement ne cause pas de brick.**    
+**La console n'entre en mode veille que lorsque le couvercle est rabattu. Il n'y a pas de minuteur ni rien du genre.**    
+**Une fois en 2.1.0, vous devriez continuer sans tarder afin d’éviter tout problème !**    
+{% endcapture %}
+
+<div class="notice--danger">{{ notice | markdownify }}</div>
+
+#### Vue d'ensemble
+
+Dans cette section, nous allons flasher la [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) de votre console en 2.1.0 afin d'exploiter une faille qui nous permettra d'en extraire l'[OTP](https://www.3dbrew.org/wiki/OTP_Registers) unique à votre console. Ce fichier OTP est nécessaire pour installer arm9loaderhax et **ne peut pas** être échangé avec d'autres consoles.
+
+Pour cela, nous allons [installer une image de ctrtransfer réalisée au préalable](https://www.reddit.com/r/3dshacks/comments/4zhe4a/) qui contient le firmware 2.1.0, y copier les fichiers spécifiques à votre console (comme `moveable.sed` et `SecureInfo_A`), puis réparer la liste des titres installés.
+
+#### Ce dont vous aurez besoin
+
+* La dernière version de [SafeCTRTransfer](https://github.com/d0k3/SafeCTRTransfer/releases/latest)
+* L'image CTRtransfer 9.2.0 pour votre console et région     
+*(si votre console n'est pas d'une de ces régions, prenez n'importe laquelle)*:
+  +    <i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Utilisez un client torrent pour télécharger le fichier."></i> - [New 3DS or Old 3DS or 2DS 2.1.0 - EUR - CTRTransfer](magnet:?xt=urn:btih:89acc9c1b488b8b38251de0ddf07975d6bd354a1&dn=2.1.0-4E%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+  +    <i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Utilisez un client torrent pour télécharger le fichier."></i> - [New 3DS or Old 3DS or 2DS 2.1.0 - JPN - CTRTransfer](magnet:?xt=urn:btih:3dbb9c9c85a33c6242f424dcbaebcacdd8a5912b&dn=2.1.0-4J%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    <i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Utilisez un client torrent pour télécharger le fichier."></i> - [New 3DS or Old 3DS or 2DS 2.1.0 - USA - CTRTransfer](magnet:?xt=urn:btih:1609ce9ee7b0ed9b6dea0b3e7cca4fc52dad6ff4&dn=2.1.0-4U%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+
+##### Instructions
+
+##### Section I - Préparatifs
+
+1. Éteignez votre 3DS
+1. Insérez votre carte SD dans votre ordinateur
+1. Créez un dossier nommé `CTRTransfer` à la racine de votre carte SD si celui ci n'existe pas déjà
+1. Copiez les fichiers `.bin` et `.bin.sha` inclus dans le `.zip` du ctrtransfer 2.1.0 vers le dossier `/CtrTransfer/`de votre carte SD
+1. Copiez les fichiers `Launcher.dat` and `SafeCTRTransfer.dat`inclus dans SafeCTRTransfer `.zip` vers la racine de votre carte SD
+1. Réinsérez votre carte SD dans votre 3DS
+1. Allumez à présent votre 3DS
+
+##### Section II - Lancer SafeCTRTransfer
+
+1. Lancez le navigateur et allez à l’une des URL suivantes depuis votre console
+  + `https://dukesrg.github.io/?SafeCTRTransfer.dat`
+  + `http://go.gateway-3ds.com/`
+  + `http://www.reboot.ms/3ds/load.html?Launcher.dat`
+  + `http://dukesrg.dynu.net/3ds/rop?GW17567.dat&Launcher.dat`
+  Assurez-vous d’essayer chaque URL si la première ne fonctionne pas (certaines versions ne peuvent pas utiliser la première, et certaines versions ne peuvent pas utiliser les trois dernières)
+  + Si vous rencontrez une erreur, [suivez ce guide de dépannage](troubleshooting#ts_browser)
+1. Si l'exploit a réussit, vous devriez avoir démarré dans SafeCTRTransfer
+
+##### Section III - CTRTransfer
+
+1. Laissez l'initialisation ainsi que les vérificatifs de sécurité de SafeCTRTransfer procéder automatiquement
+  + Si vous rencontrez une erreur, assurez-vous que vous avez tous les fichiers dans les emplacements corrects et que vous avez suffisamment d’espace libre sur votre carte SD, tel qu'indiqué dans [obtenir Started](get-started)
+1. Lorsque vous y êtes invité, entrez la combinaison de touches demandée pour confirmer le CTRTransfer en 2.1.0
+  + Ce processus prendra un certain temps
+  + Ce processus va créer automatiquement une sauvegarde de la NAND de votre console dans le répertoire suivant : `/ctrtransfer/<serialnumber>_nand.bin`
+  + Si vous rencontrez une erreur critique, [suivez ce guide](troubleshooting#ts_transfer)   
+1. Une fois ce processus terminé, retirez la carte SD de votre console pour redémarrer
+  + Le redémarrage prendra environ 2 secondes pour s'effectuer
+  En 2.1.0, la console affichera un écran noir si votre carte SD est insérée avant le chargement du menu home
+  + Chaque fois que la console est redémarrée en 2.1.0, vous devrez retirer votre carte SD avant le démarrage et la remettre après que le menu HOME soit chargé
+  + Pour l'instant, laissez la carte SD hors de la console puisque vous allez copier des fichiers dessus dans la page suivante
+  + Cela sera corrigé lorsque vous restaurerez votre appareil dans la page suivante
+
+___
+
+*(Des déformations de l'écran ou des décolorations sont normales pour les consoles en 2.1.0, elles disparaîtront après la restauration de votre sauvegarde)*
+{: .notice--info}
+
+{% capture notice %}
+**Mettre une New 3DS en 2.1.0 en veille est une cause connue de brick IRRÉCUPÉRABLE !**    
+**Cela ne se produit que lorsque l'on rabat le couvercle de la console _lorsque celle-ci est allumée_; éteindre la console complètement ne cause pas de brick.**    
+**La console n'entre en mode veille que lorsque le couvercle est rabattu. Il n'y a pas de minuteur ni rien du genre.**    
+**Une fois en 2.1.0, vous devriez continuer sans tarder afin d’éviter tout problème !**    
+{% endcapture %}
+
+<div class="notice--danger">{{ notice | markdownify }}</div>
+
+Continuez avec [l'installation d'am9loaderhax](installing-arm9loaderhax)
+{: .notice--primary}
