@@ -51,9 +51,9 @@ Um die [Magnet-Links](https://en.wikipedia.org/wiki/Magnet_URI_scheme) auf diese
 1. Scanne den QR Code in der NTR CFW `.zip` für deine Region
 1. Drücke im Home Menü (Y) und (X) gleichzeitig, um das NTR Menü zu öffnen
 1. Aktiviere den Debugger und schließe das Menü
-1. Use your router's web page to get your device's IP address (google it if you don't know how, all routers are different)
+1. Finde deine IP-Adresse heraus. Unter Windows tippe "ipconfig" in die Eingabeaufforderung ein, oder navigiere dich durch die Seite deines Routers. Google liefert dir die nötigen Treffer, wenn du deinen Router-Anbieter dazuschreibst.
 1. Führe den NTR Debugger auf deinem Computer aus
-1. Enter the following commands (replace XXX.XXX.XXX.XXX with your device's IP address and YYY.YYY.YYY.YYY with your computer's IP address)    
+1. Gib die folgenden Zeilen ein und ersetze dabei jeweils XXX.XXX.XXX.XXX durch die IP-Adresse deines 3DS und YYY.YYY.YYY.YYY durch die IP-Adresse deines Computers    
     + `connect("XXX.XXX.XXX.XXX", 8000)`
     + `write(0x15E424, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
     + `write(0x15E0EC, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
