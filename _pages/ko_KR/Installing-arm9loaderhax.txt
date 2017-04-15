@@ -68,7 +68,7 @@ arm9loaderhax를 설치하고 Luma3DS의 설정이 완료되면 백업을 복원
 1. Luma3DS `.7z` 파일에서 `arm9loaderhax.bin` 파일을 SD 카드의 최상위 경로에 복사하고 기존 파일을 덮어쓰세요.
 1. SD 카드의 최상위 경로에 `luma` 폴더를 만드세요.
 1. SD 카드의 `luma` 폴더에 `payloads` 폴더를 만드세요.
-1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `start_GodMode9.bin`
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `GodMode9.bin`
 1. `aeskeydb.bin` 파일을 SD 카드의 `/files9/` 폴더에 복사하세요.
 
 ##### 섹션 II - arm9loaderhax 설치
@@ -106,7 +106,8 @@ arm9loaderhax를 설치하고 Luma3DS의 설정이 완료되면 백업을 복원
 EmuNAND 기반의 커스텀 펌웨어의 데이터를 새 SysNAND 커스텀 펌웨어로 옮기고 싶은 경우, 이 섹션의 단계 1-4 대신에 [EmuNAND 이사](move-emunand) 가이드에 따라 진행하세요.
 {: .notice--info}
 
-1. Boot your device while holding (Start) to enter GodMode9
+1. Boot your device while holding (Start) to launch the Luma3DS chainloader menu
+1. Launch GodMode9 by pressing (A)
 1. Navigate to `SDCARD` -> `ctrtransfer`
 1. Press (A) on `<serialnumber>_nand.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
 1. Press (A) to unlock SysNAND overwriting, then input the key combo given
@@ -123,7 +124,6 @@ EmuNAND 기반의 커스텀 펌웨어의 데이터를 새 SysNAND 커스텀 펌�
   + `firmware.bin` 파일과 `cetk` 파일을 SD 카드의 `/luma/` 폴더에 복사하세요.
   + Delete both of these files after updating your device
 1. Update your device by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
-  + **Note that, as 11.4.0 is very recent, some Luma3DS bugs exist on it (DS and GBA games will not launch). Additionally, NTR CFW is not yet compatible with 11.4.0. You may choose to delay updating for now until a new Luma3DS version is released that fixes these bugs.**
   + Updates while using A9LH + Luma (what you have) are safe
   + 2.1.0 버전의 뉴 3DS를 절대로 업데이트하지 말라는 경고는 NAND 백업을 복원한 시점부터 해당되지 않습니다.
   + 오류가 발생한다면, DNS 설정을 "자동"으로 설정하십시오.
@@ -131,7 +131,8 @@ EmuNAND 기반의 커스텀 펌웨어의 데이터를 새 SysNAND 커스텀 펌�
 
 ##### 섹션 V - FBI 주입
 
-1. Reboot holding (Start) during boot to launch GodMode9
+1. Reboot holding (Start) during boot to launch the Luma3DS chainloader menu
+1. Launch GodMode9 by pressing (A)
 1. Navigate to `SDCARD` -> `cias`
 1. Press (A) on `FBI.cia` to select it, then select "CIA image options...", then select "Mount image to drive"
 1. Press (A) on the `.app` file, then select "NCCH image options", then select "Inject to H&S"
@@ -150,7 +151,8 @@ EmuNAND 기반의 커스텀 펌웨어의 데이터를 새 SysNAND 커스텀 펌�
 
 ##### Section VII - Restore Health and Safety
 
-1. Reboot holding (Start) during boot to launch GodMode9
+1. Reboot holding (Start) during boot to launch the Luma3DS chainloader menu
+1. Launch GodMode9 by pressing (A)
 1. Press (Home) to bring up the action menu
 1. Select "More..."
 1. Select "Restore H&S"
@@ -198,10 +200,10 @@ You can now hold (Start) on boot to launch GodMode9.
 추후에 arm9loaderhax를 업데이트 하고자 할 경우 [A9LH 업데이트](updating-a9lh) 페이지를 참고하세요.
 {: .notice--info}
 
-Keep your `<serialnumber>_nand.bin` file, it can be restored by GodMode9 to save you from a brick in the future.
+To use [NTR CFW](https://github.com/44670/BootNTR/), install [BootNTR Selector](https://gbatemp.net/threads/432911/).
 {: .notice--info}
 
-백업한 NAND 파일을 안전한 장소에 복사해뒀다면 `/files9/` 폴더에서 NAND 백업을 삭제해도 됩니다.
+Keep your `<serialnumber>_nand.bin` file, it can be restored by GodMode9 to save you from a brick in the future.
 {: .notice--info}
 
 {% capture notice-7 %}
