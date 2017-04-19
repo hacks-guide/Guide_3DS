@@ -6,7 +6,7 @@ permalink: /ko_KR/updating-a9lh.html
 
 ### 마지막 업데이트: 2016년 11월 3일
 
-arm9loaderhax는 마더보드에 위치한 NAND 칩의 NFIRM 파티션에 페이로드 파일들을 설치하여 설치가 됩니다. These payloads are updated rarely and only really serve the purpose of launching `arm9loaderhax.bin` from your SD card, which is, in our case, Luma3DS.
+arm9loaderhax는 마더보드에 위치한 NAND 칩의 NFIRM 파티션에 페이로드 파일들을 설치하여 설치가 됩니다. 이 payloads 파일들은 매우 드물게 업데이트되며 SD 카드에서 `arm9loaderhax.bin`을 실행하는 기능만 합니다. 예를 들어 저희들의 경우 Luma3DS가 실행됩니다.
 {: .notice}
 
 사용 중인 arm9loaderhax의 버전을 모르는 경우, 다음 단계에서 최신 버전을 설치하시면 됩니다. 최신 버전인 상태에서 다시 최신 버전을 설치하는 것은 아무런 영향을 주지 않습니다.
@@ -42,28 +42,28 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
 
 ##### 섹션 I - 준비 작업
 
-1. Power off your device
+1. 기기를 종료해 주세요.
 1. SD 카드를 컴퓨터에 삽입하세요.
 1. SD 카드의 최상위 경로에 `aeskeydb.bin` 파일이 있으면 삭제하세요.
 1. SD 카드의 최상위 경로에 `a9lh` 폴더가 있으면 이를 삭제하세요.
 1. `aeskeydb.bin` 파일을 SD 카드의 `/files9/` 폴더에 복사하세요.
-1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
-  + If `start_Hourglass9.bin` already exists in this folder, delete `start_Hourglass9.bin`
+1. Godmode9 `.zip` 파일에서 `Godmode9.bin` 파일을 SD 카드의 `/luma/payloads/` 폴더에 복사해 주세요.
+  + 이 폴더에 이미 `start_Hourglass9.bin` 파일이 존재한다면, `start_Hourglass9.bin` 파일을 삭제해 주세요.
 1. SafeA9LHInstaller `.zip` 파일에서 `arm9loaderhax.bin` 파일을 SD 카드의 `/luma/payloads/` 폴더에 복사하세요.
 1. `/luma/payloads/` 폴더 안의 `arm9loaderhax.bin` 파일의 이름을 `down_safea9lhinstaller.bin`으로 변경하세요.
-1. Copy the `a9lh` folder from data_input `.zip` to the root of your SD card
+1. data_input `.zip` 파일 안의 `a9lh` 폴더를 SD 카드의 최상위 경로에 복사해 주세요.
 1. arm9loaderhax `.7z` 파일의 _내용물 만_ SD 카드의 `a9lh` 폴더에 복사하세요.
-1. Reinsert your SD card into your device
+1. SD 카드를 기기에 다시 삽입해 주세요.
 
 ##### 섹션 II - 페이로드 업데이트
 
-1. Launch SafeA9LHInstaller from arm9loaderhax by holding (Down) during boot
+1. 시작 중 (아래) 버튼을 누르고 arm9loaderhax에서 SafeA9LHInstaller를 실행해 주세요.
 1. (Select) 버튼을 눌러서 arm9loaderhax를 업데이트하세요.
-1. Power off your device
+1. 기기를 종료해 주세요.
 1. SD 카드를 컴퓨터에 삽입하세요.
 1. SD 카드의 최상위 경로에서 `a9lh` 폴더를 삭제하세요.
 1. `/luma/payloads/` 폴더에서 `down_safea9lhinstaller.bin` 파일을 삭제하세요.
-1. Reinsert your SD card into your device
+1. SD 카드를 기기에 다시 삽입해 주세요.
 
 ##### 섹션 III - Luma3DS 설정하기
 
@@ -80,22 +80,22 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
 
 ##### 섹션 IV - CTRNAND Luma3DS
 
-1. Reboot holding (Start) during boot to launch the Luma3DS chainloader menu
-1. Launch GodMode9 by pressing (A)
-1. Navigate to `SDCARD`
-1. Press (Y) on `arm9loaderhax.bin` to copy it
-1. Press (B) to return to the main menu
-1. Navigate to `SYSNAND CTRNAND`
-1. Press (Y) to paste `arm9loaderhax.bin`
-1. Select "Copy path(s)"
-  + Overwrite any existing `arm9loaderhax.bin` if prompted
-1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
-1. Press (B) to return to the main menu
+1. (Start) 버튼을 누른 채 시작해 Luma3DS chainloader 메뉴를 실행해 주세요.
+1. (A) 버튼을 눌러 GodMode9를 실행해 주세요.
+1. `SDCARD`로 이동해 주세요.
+1. (Y) 버튼을 눌러 `arm9loaderhax.bin` 를 복사해 주세요.
+1. (B) 버튼을 눌러 메인 메뉴로 돌아가 주세요.
+1. `SYSNAND CTRNAND` 로 이동해 주세요.
+1. (Y) 버튼을 눌러 `arm9loaderhax.bin` 파일을 붙여넣어 주세요.
+1. "Copy path(s)"를 선택해 주세요.
+  + 메시지가 표시되면 모든 기존의 `arm9loaderhax.bin` 파일을 덮어쓰세요.
+1. (A) 버튼을 눌러 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요.
+1. (B) 버튼을 눌러 메인 메뉴로 돌아가 주세요.
 1. (R) 버튼과 (B) 버튼을 동시에 누른 후 SD 카드를 빼세요.
-1. Remove your SD card from your device
-1. Press (Start) to reboot your device with your SD card removed
-  + Booting your device at least once with your SD card removed will allow you to configure the CTRNAND based Luma3DS installation
+1. SD 카드를 기기에서 빼 주세요.
+1. SD 카드가 제거된 상태에서 (Start) 버튼을 눌러 기기를 재시작하세요.
+  + SD 카드가 제거된 상태에서 부팅하여 CTRNAND 기반의 Luma3DS 설치를 설정합니다.
 1. (A) 버튼과 십자 버튼을 이용해 다음 옵션들을 설정하세요:    
   + **"Show NAND or user string in System Settings"**
-1. Reinsert your SD card into your device
+1. SD 카드를 기기에 다시 삽입해 주세요.
 1. (Start) 버튼을 눌러 저장하고 기기를 재시작하세요.
