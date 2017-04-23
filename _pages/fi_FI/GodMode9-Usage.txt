@@ -1,0 +1,223 @@
+---
+title: "GodMode9 Usage" #
+lang: fi
+permalink: /godmode9-usage.html
+---
+
+GodMode9 is a full access file browser for the Nintendo 3DS console, giving you access to your SD card, to the FAT partitions inside your SysNAND and EmuNAND and to basically anything else. Among other functionality, you can copy, delete, rename files and create folders.
+{: .notice--primary}
+
+**This is powerful stuff, it provides you with the means to do basically any thinkable modification to any system data available on the 3DS console. However, precautions are taken so you don't accidentally damage the data of your console. The write permissions system protects you by providing warnings and forces you to enter an unlock sequence for enabling write permissions. It is not possible to overwrite or modify any important stuff without such unlock sequences and it is not possible to accidentally unlock something. As always, be smart, keep backups, just to be safe.**
+{: .notice--danger}
+
+## <a name="nand_backup" /> Creating a NAND Backup
+
+#### Ohjeet
+
+1. Avaa Luma3DS:n ketjulatausvalikko pitämällä (START)-painiketta pohjassa käynnistyksen aikana
+1. Avaa GodMode9 painamalla (A):ta
+1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
+1. Valitse "More..."
+1. Valitse "Backup NAND"
+1. Paina (A):ta jatkaaksesi
+1. Pidä (R):ää pohjassa ja paina samalla (B):tä irrottaaksesi SD-korttisi
+1. Aseta SD-korttisi tietokoneeseesi
+1. Copy `nand.bin` from the `/gm9out/` folder on your SD card to a safe location on your computer
+  + Jos käytit aikaisemmin SafeCTRTransferia ja sinulla on `<sarjanumero>_nand.bin`-niminen varmuuskopio, korvaa se tällä (uudelleennimeä `nand.bin` muotoon `<sarjanumero>_nand.bin`)
+  + Varmuuskopioi useaan eri paikkaan (kuten pilvipalveluihin)
+  + Tämä varmuuskopiointi pelastaa sinut laitteen vioittumiselta, jos jokin menee pieleen tulevaisuudessa
+1. Poista SD-korttisi `/gm9out/`-kansiosta `nand.bin`, kun olet kopioinut sen
+1. Aseta SD-korttisi takaisin konsoliisi
+
+
+## <a name="nand_restore" /> Restoring a NAND Backup
+
+#### Ohjeet
+
+1. Avaa Luma3DS:n ketjulatausvalikko pitämällä (START)-painiketta pohjassa käynnistyksen aikana
+1. Avaa GodMode9 painamalla (A):ta
+1. Navigate to `[0:] SDCARD`
+1. Press (A) on your NAND `.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
+1. Paina (A):ta ottaaksesi käyttöön SysNANDin ylikirjoittamisen ja syötä annettu painikeyhdistelmä
+  + Tämä ei ylikirjoita arm9loaderhax-asennustasi
+1. Syötä annettu painikeyhdistelmä ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1)
+  + Tämä prosessi kestää jonkin aikaa
+1. Paina (A):ta jatkaaksesi, kun toiminto on suoritettu
+
+## <a name="injectHS" /> Injecting any .CIA app into Health & Safety
+
+#### Prep Work
+
++ For organizational purposes, copy the `.cia` file you wish to inject to the `/cias/` folder on your SD card
+    + Note that it is not possible to inject files into Health & Safety that are larger than it (including games and other large applications)
+
+#### Ohjeet
+
+1. Avaa Luma3DS:n ketjulatausvalikko pitämällä (START)-painiketta pohjassa käynnistyksen aikana
+1. Avaa GodMode9 painamalla (A):ta
+1. Navigate to `[0:] SDCARD` -> `cias`
+1. Press (A) on your `.cia` to select it, then select "CIA image options...", then select "Mount image to drive"
+1. Paina (A):ta `.app`-tiedoston kohdalla valitaksesi sen, valitse "NCCH image options" ja sitten "Inject to H&S"
+1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1) ja syötä annettu painikeyhdistelmä
+1. Paina (A):ta jatkaaksesi
+
+## <a name="restore_hs" /> Restoring Health & Safety after injecting a .CIA app
+
+This will only work if the Health & Safety injection was performed by GodMode9 (not Decrypt9 or Hourglass9).
+{: .notice--info}
+
+#### Ohjeet
+
+1. Avaa Luma3DS:n ketjulatausvalikko pitämällä (START)-painiketta pohjassa käynnistyksen aikana
+1. Avaa GodMode9 painamalla (A):ta
+1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
+1. Valitse "More..."
+1. Valitse "Restore H&S"
+1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1) ja syötä annettu painikeyhdistelmä
+
+## <a name="dump_cart" /> Dumping a Game Cartridge
+
+#### Prep Work
+
++ Insert the game cartridge you intend to dump into your device
+    + 3DS game cartridges will be dumped to an installable `.cia` format
+    + NDS game cartridges will be dumped to a non-installable `.nds` format compatible with flashcarts and emulators
+
+#### Ohjeet
+
+1. Avaa Luma3DS:n ketjulatausvalikko pitämällä (START)-painiketta pohjassa käynnistyksen aikana
+1. Avaa GodMode9 painamalla (A):ta
+1. Navigate to `[C:] GAMECART`
+1. Follow the steps applicable to your game cartridge:
+  + **3DS Game Cartridge:** Press (A) on `[TitleID].trim.3ds` to select it, then select "NCSD image options...", then select "Build CIA from file"
+  + **NDS Game Cartridge:** Press (A) on `[TitleID].trim.nds` to select it, then select "Copy to 0:/gm9out"
+1. Your installable `.cia` or non-installable `.nds` formatted file will be outputted to the `/gm9out/` folder on your SD card
+
+## <a name="dump_title" /> Dumping a Title
+
+Use the `Titles` menu in FBI to get the Title ID of the installed title you wish to dump
+{: .notice--info}
+
+#### Ohjeet
+
+1. Avaa Luma3DS:n ketjulatausvalikko pitämällä (START)-painiketta pohjassa käynnistyksen aikana
+1. Avaa GodMode9 painamalla (A):ta
+1. Navigate to the drive applicable to the type of title you wish to dump:
+  + **User Installed Title**: Navigate to `[A:] SYSNAND SD`
+  + **System Title**: Navigate to `[1:] SYSNAND CTRNAND`
+1. Navigate to `title`
+1. Navigate to the folder corresponding to the first 8 digits of the Title ID
+1. Navigate to the folder corresponding to the last 8 digits of the Title ID
+1. Navigate to `content`
+1. Press (A) on the `.tmd` file to select it, then select "TMD file options...", then select "Show title info"
+1. Ensure you have found the correct title
+1. Press (B) to exit the title info
+1. Press (A) on the `.tmd` file to select it, then select "TMD file options...", then select "Build CIA (standard)"
+1. Your installable `.cia` formatted file will be outputted to the `/gm9out/` folder on your SD card
+
+## <a name="convert_3ds" /> Converting a .3DS to .CIA
+
+#### Prep Work
+
++ For organizational purposes, copy each `.3ds` file you wish to convert to the `/cias/` folder on your SD card
+    + Note that if you wish to convert a `.3ds` file that is already on a flashcart, you should follow [Dumping a Game Cartridge](#dump_cart)
+
+#### Ohjeet
+
+1. Avaa Luma3DS:n ketjulatausvalikko pitämällä (START)-painiketta pohjassa käynnistyksen aikana
+1. Avaa GodMode9 painamalla (A):ta
+1. Navigate to `[0:] SDCARD` -> `cias`
+1. Press (A) on your `.3ds` file to select it, then select "NCSD image options...", then select "Build CIA from file"
+1. Your installable `.cia` formatted file will be outputted to the `/gm9out/` folder on your SD card
+
+## <a name="backup_gba" /> Backup GBA VC Saves
+
+#### Ohjeet
+
+1. Sammuta konsolisi
+1. Aseta SD-korttisi tietokoneeseesi
+1. Luo kansio `/files9/`-hakemistoon jokaista GBA VC -peliä kohden, jonka tallennuksen haluat varmuuskopioida
+1. Aseta SD-korttisi takaisin konsoliisi
+1. Käynnistä konsolisi
+1. Tee seuraava prosessi jokaista GBA VC -peliä kohden, jonka tallennuksen haluat varmuuskopioida:
+  + Launch the GBA VC game
+  + Sulje peli
+  + Boot your device while holding (Start) to launch the Luma3DS chainloader menu
+  + Launch GodMode9 by pressing (A)
+  + Navigate to `[S:] SYSNAND VIRTUAL`
+  + Paina (Y):tä `gbavc.sav`-tiedoston kohdalla kopioidaksesi sen
+  + Paina (B):tä palataksesi päävalikkoon
+  + Navigate to `[0:] SDCARD` -> `files9`
+  + Mene hakemistoon, jonka loit tälle pelille
+  + Paina (Y):tä liittääksesi `gbavc.sav`-tiedoston
+  + Paina (START)-painiketta käynnistääksesi uudelleen
+
+## <a name="restore_gba" /> Restore GBA VC Saves
+
+#### Ohjeet
+
+1. Ensure you have a folder containing a save in `/files9/` for each GBA VC game that you want to restore the save for
+1. Tee seuraava prosessi jokaista GBA VC -peliä kohden, jonka tallennuksen haluat varmuuskopioida:
+  + Launch the GBA VC game
+  + Sulje peli
+  + Boot your device while holding (Start) to launch the Luma3DS chainloader menu
+  + Launch GodMode9 by pressing (A)
+  + Navigate to `[0:] SDCARD` -> `files9`
+  + Mene hakemistoon, jonka loit tälle pelille
+  + Paina (Y):tä `gbavc.sav`-tiedoston kohdalla kopioidaksesi sen
+  + Paina (B):tä palataksesi päävalikkoon
+  + Navigate to `[S:] SYSNAND VIRTUAL`
+  + Paina (Y):tä liittääksesi `gbavc.sav`-tiedoston
+  Paina (A):ta vahvistaaksesi
+  + Paina (START)-painiketta käynnistääksesi uudelleen
+
+## <a name="format_sd" /> Format an SD card
+
+**Note that this will erase the contents of your SD card!**
+{: .notice--danger}
+
+#### Ohjeet
+
+1. Avaa Luma3DS:n ketjulatausvalikko pitämällä (START)-painiketta pohjassa käynnistyksen aikana
+1. Avaa GodMode9 painamalla (A):ta
+1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
+1. Valitse "More..."
+1. Valitse "SD format menu"
+1. Select any EmuNAND options you wish to use
+  + Most users will want to select "No EmuNAND"
+1. Valitse "Auto"
+1. Press (A) to accept the label `GM9SD`
+  + Optionally, you may input a custom name for the SD card
+1. Syötä kehotettaessa annettu painikeyhdistelmä
+
+## <a name="payload_chain" /> Chainloading an ARM9 Payload
+
+#### Ohjeet
+
+1. Avaa Luma3DS:n ketjulatausvalikko pitämällä (START)-painiketta pohjassa käynnistyksen aikana
+1. Avaa GodMode9 painamalla (A):ta
+1. Navigate to the ARM9 payload you want to open.
+    + An ARM9 payload file generally ends with `.bin`
+    + This does not mean that all files that end with `.bin` are ARM9 payloads
+    + Some examples of ARM9 payloads are Luma3DS, Decrypt9 and GodMode9
+1. Press (A) on the ARM9 payload `.bin` to select it, then select "Launch as arm9 Payload"
+1. When prompted, input the key combo given to confirm ARM9 payload launch
+
+## <a name="crypt_cia" /> Encrypting / Decrypting a .CIA file
+
+#### Prep Work
+
++ For organizational purposes, copy each `.cia` file you wish to encrypt / decrypt to the `/cias/` folder on your SD card
+
+#### Ohjeet
+
+1. Avaa Luma3DS:n ketjulatausvalikko pitämällä (START)-painiketta pohjassa käynnistyksen aikana
+1. Avaa GodMode9 painamalla (A):ta
+1. Navigate to `[0:] SDCARD` -> `cias`
+1. Press (A) on the `.cia` file to select it, then select "CIA image options..."
+1. Select the option to perform the desired function:
+    + **Encrypt to 0:/gm9out:** Create an encrypted copy of the selected `.cia` file in the `/gm9out/` folder on your SD card
+    + **Decrypt to 0:/gm9out:** Create a decrypted copy of the selected `.cia` file in the `/gm9out/` folder on your SD card
+    + **Encrypt inplace:** Replace the selected `.cia` file with an encrypted version
+    + **Decrypt inplace:** Replace the selected `.cia` file with a decrypted version
+1. Your encrypted / decrypted `.cia` will be outputted to the desired location
