@@ -7,10 +7,10 @@ permalink: /he_IL/godmode9-usage.html
 GodMode9 הוא מנהל קבצים עם גישה מלאה לקונסולת ה-3DS, שנותן לכם גישה לכרטיס SD, למחיצות הFAT בתוך הSysNAND והEmuNAND שלכם ובעצם לכל דבר אחר. ביחד עם פונקציות אחרות, אתם יכולים להתיק, למחוק, לשנות שם לקבצים וליצור תיקיות.
 {: .notice--primary}
 
-**This is powerful stuff, it provides you with the means to do basically any thinkable modification to any system data available on the 3DS console. However, precautions are taken so you don't accidentally damage the data of your console. The write permissions system protects you by providing warnings and forces you to enter an unlock sequence for enabling write permissions. It is not possible to overwrite or modify any important stuff without such unlock sequences and it is not possible to accidentally unlock something. As always, be smart, keep backups, just to be safe.**
+** זה כלי חזק, הוא נותן לכם את הדרך לעשות כל שינוי שניתן לחשוב עליו למידע המערכת שזמין על קונסולת ה3DS. עם זאת, אמצעי זהירות קיימים כדי שאתם לא תגרמו בטעות נזק לנתונים של הקונסולה שלכם. מערכת ההרשאות של הכתיבה מגנה עליכם על ידי מתן אזהרות והיא כופה עליכם להזין רצף של כפתורים כדי לפתוח את הרשאות הכתיבה. זה בלתי אפשרי להחליף או לשנות שום דבר חשוב ללא רצפים כאלה וזה לא אפשרי לפתוח משהו בטעות. כמו תמיד, תהיו חכמים ותשמרו על קיבויים, רק כדי להיות בטוחים.**
 {: .notice--danger}
 
-## <a name="nand_backup" /> Creating a NAND Backup
+## <a name="nand_backup" /> יצירת גיבוי NAND
 
 #### הוראות
 
@@ -22,7 +22,7 @@ GodMode9 הוא מנהל קבצים עם גישה מלאה לקונסולת ה-3
 1. תלחצו (A) כדי להמשיך
 1. תחזיקו (R) ולחצו (B) באותו הזמן כדי להוציא את הSD
 1. תכניסו את ה-SD שלכם למחשב
-1. Copy `nand.bin` from the `/gm9out/` folder on your SD card to a safe location on your computer
+1. תעתיקו את `nand.bin` מתיקיית `/gm9out/` על הכרטיס זכרון אל מקום בטוח במחשב שלכם
   + אם בעבר השתמשתם בSafeCTRTransfer ויש לכם גיבוי NAND בשם `<serialnumber>_nand.bin`, תחליפו אותו בזה (תשנו את השם של `nand.bin`שיהיה כמו `<serialnumber>_nand.bin`)
   + תיצרו גיבויים במקומות שונים (כמו אחסון בענן)
   + הגיבוי הזה ישמור עליכם מבריק אם משהו ישתבש בעתיד
@@ -30,23 +30,23 @@ GodMode9 הוא מנהל קבצים עם גישה מלאה לקונסולת ה-3
 1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
 
 
-## <a name="nand_restore" /> Restoring a NAND Backup
+## <a name="nand_restore" /> שחזור גיבוי NAND
 
 #### הוראות
 
 1. תפעילו את הקונסולה בזמן שאתם מחזיקים (Start) במהלך האתחול כדי להפעיל את תפריט הטעינה של Luma3DS
 1. תפעילו את GodMode9 על ידי לחיצת (A)
-1. Navigate to `[0:] SDCARD`
-1. Press (A) on your NAND `.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
+1. נווטו ל`[0:] SDCARD`
+1. תלחצו (A) על קובץ ה`.bin` של הNAND שלכם כדי לבחור בו, ואז תבחרו ב "NAND image options...", ושם ב "Restore SysNAND (safe)"
 1. לחצו (A) כדי לפתוח גישת שכתוב לSysNAND, ואז תלחצו על המקשים בסדר הנכון
   + זה לא ישכתב את התקנת הarm9loaderhax שלכם
 1. תלחצו על המקשים בסדר הנכון כדי לפתוח גישת כתיבה לSysNAND (בlvl1)
   + זה ייקח קצת זמן
 1. תלחצו (A) כדי להמשיך אחרי שזה סיים
 
-## <a name="injectHS" /> Injecting any .CIA app into Health & Safety
+## <a name="injectHS" /> הזרקת כל תוכנת .CIA אל Health & Safety
 
-#### Prep Work
+### הכנה
 
 + For organizational purposes, copy the `.cia` file you wish to inject to the `/cias/` folder on your SD card
     + Note that it is not possible to inject files into Health & Safety that are larger than it (including games and other large applications)
@@ -77,7 +77,7 @@ This will only work if the Health & Safety injection was performed by GodMode9 (
 
 ## <a name="dump_cart" /> Dumping a Game Cartridge
 
-#### Prep Work
+### הכנה
 
 + Insert the game cartridge you intend to dump into your device
     + 3DS game cartridges will be dumped to an installable `.cia` format
@@ -117,7 +117,7 @@ Use the `Titles` menu in FBI to get the Title ID of the installed title you wish
 
 ## <a name="convert_3ds" /> Converting a .3DS to .CIA
 
-#### Prep Work
+### הכנה
 
 + For organizational purposes, copy each `.3ds` file you wish to convert to the `/cias/` folder on your SD card
     + Note that if you wish to convert a `.3ds` file that is already on a flashcart, you should follow [Dumping a Game Cartridge](#dump_cart)
@@ -205,7 +205,7 @@ Use the `Titles` menu in FBI to get the Title ID of the installed title you wish
 
 ## <a name="crypt_cia" /> Encrypting / Decrypting a .CIA file
 
-#### Prep Work
+### הכנה
 
 + For organizational purposes, copy each `.cia` file you wish to encrypt / decrypt to the `/cias/` folder on your SD card
 
