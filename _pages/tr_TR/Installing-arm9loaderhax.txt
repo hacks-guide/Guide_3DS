@@ -48,6 +48,7 @@ Bu süreç boyunca, aşağıdaki gibi programları kuruyoruz:
 * En son sürümü [GodMode9] (https://github.com/d0k3/GodMode9/releases/latest)
 * En son sürümü [Luma3DS Updater](https://github.com/Hamcha/lumaupdate/releases/latest)
 * En son sürüm [FBI](https://github.com/Steveice10/FBI/releases/latest)
+* **Old 3DS and 2DS Only:** The Old 3DS 11.2.0-35 [otherapp payload](https://smealum.github.io/3ds/#otherapp) for your region
 
 #### Talimatlar
 
@@ -59,6 +60,7 @@ Bu süreç boyunca, aşağıdaki gibi programları kuruyoruz:
   Bu yedek eğer ileride bir şey ters giderse cihazın brick olma ihtimalini engelleyecek
 1. SD kartınızın ana dizininde eğer yoksa `cias` isminde klasör oluşturun
 1. SD kartınızın ana dizininde eğer yoksa `files9` isminde klasör oluşturun
+1. Create a folder named `hblauncherloader` on the root of your SD card if it does not already exist
 1. SD kartınızın kök dizinine SafeA9LHInstaller `.7z` dosyasının içindekileri kopyalayın
 1. `a9lh` klasörünü data_input`.zip` dosyasından SD Kartınızın köküne kopyalayın
 1. arm9loaderhax ".7z" sürümünün içeriğini SD kartınızdaki "a9lh" klasörüne kopyalayın
@@ -70,6 +72,12 @@ Bu süreç boyunca, aşağıdaki gibi programları kuruyoruz:
 1. SD kartınızdaki `luma` klasöründe` payloads` adlı bir klasör oluşturun
 1. GodMode9 '.zip' dosyasındaki 'GodMode9.bin'i SD kartınızdaki `/luma/payloads/` klasörüne kopyalayın
 1. `aeskeydb.bin` dosyasını SD kartınızdaki / files9 /` klasörüne kopyalayın
+1. **Old 3DS and 2DS Only:** Copy the Old 3DS 11.2.0-35 otherapp payload for your region to the `/hblauncherloader/` folder on your SD card
+1. **Old 3DS and 2DS Only:** Rename the Old 3DS 11.2.0-35 otherapp payload on your SD card to match your region:
+  + **EUR:** `OLD-11-4-0-37-EUR.bin`
+  + **JPN:** `OLD-11-4-0-37-JPN.bin`
+  + **KOR:** `OLD-11-4-0-37-KOR.bin`
+  + **USA:** `OLD-11-4-0-37-USA.bin`
 
 ##### Bölüm II - arm9loaderhax yükleme
 
@@ -77,6 +85,7 @@ Bu süreç boyunca, aşağıdaki gibi programları kuruyoruz:
 1. You should be already on 2.1.0 and powered on
 1. Go to URL `http://2xrsa.3ds.guide` in the browser of your device
   + If you get the error "This service is not available in your region", use the System Settings to set your device's country to match the NAND region you installed with 2.1.0 CTRTransfer
+  + If you forgot to disable parental controls before CTRTransfering or otherwise cannot access wireless settings, note that the device will autoconnect to any network named `attwifi` with no password
   Eğer hata alırsanız.[bu sorun giderme rehberini takip edin](troubleshooting#ts_browser)
   + Ekranınızda glitch oluşursa, [bu rehberi takip edin](troubleshooting#ts_safe_a9lh_screen)
   Eğer 2DS veya New 3DS kullanıyorsanız ve Wi-Fi'yi kapalı bıraktıysanız, tekrar açmak için pili çıkartıp ve fişten çekerek biraz bekleyin sonrasında tekrar başlatın
@@ -226,6 +235,9 @@ Cihazınızın bölgesini başka bir bölgeye çevirmek için, rehberin [Bölge 
 {: .notice--success}
 
 A9LH yazılımınızı güncel tutmak için rehberin [A9LH'ı Güncelleme](updating-a9lh) kısmına bakın.
+{: .notice--success}
+
+For information on using GodMode9's various features, check out the [GodMode9 Usage](godmode9-usage) page.
 {: .notice--success}
 
 Luma3DS'in çeşitli özelliklerini kullanmak için, yazılımın [wiki sayfasına](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage) bakın.
