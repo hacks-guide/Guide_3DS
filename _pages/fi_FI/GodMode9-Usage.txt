@@ -7,10 +7,10 @@ permalink: /fi_FI/godmode9-usage.html
 GodMode9 on täysillä oikeuksilla varustettu tiedostoselain Nintendo 3DS -konsolille. Sen avulla pääset käsiksi SD-korttiisi, SysNANDisi ja EmuNANDisi FAT-osioihin sekä periaatteessa mihin tahansa muuhunkin. Among other functionality, you can copy, delete, rename files and create folders.
 {: .notice--primary}
 
-**Kyseessä on tehokas ohjelma, jolla voi tehdä periaatteessa mitä tahansa muutoksia 3DS-konsolin kaikkiin järjestelmätietoihin. However, precautions are taken so you don't accidentally damage the data of your console. The write permissions system protects you by providing warnings and forces you to enter an unlock sequence for enabling write permissions. It is not possible to overwrite or modify any important stuff without such unlock sequences and it is not possible to accidentally unlock something. As always, be smart, keep backups, just to be safe.**
+**Kyseessä on tehokas ohjelma, jolla voi tehdä periaatteessa mitä tahansa muutoksia 3DS-konsolin kaikkiin järjestelmätietoihin. Ohjelmassa on kuitenkin erinäisiä varotoimenpiteitä, jotta et epähuomiossa vahingoittaisi konsolisi tietoja. Järjestelmän kirjoitusoikeudet on suojattu varoituksilla, ja sinun on syötettävä painikeyhdistelmä ottaaksesi kirjoitusoikeudet käyttöön. Tärkeitä tietoja on mahdotonta ylikirjoittaa tai muokata ilman painikeyhdistelmien syöttämistä, eikä oikeuksia voi ottaa käyttöön vahingossa. On joka tapauksessa suositeltavaa tehdä säännöllisiä varmuuskopioita, ohjelman suojauksista huolimatta.**
 {: .notice--danger}
 
-## <a name="nand_backup" /> Creating a NAND Backup
+## <a name="nand_backup" /> NAND-varmuuskopion luominen
 
 #### Ohjeet
 
@@ -22,7 +22,7 @@ GodMode9 on täysillä oikeuksilla varustettu tiedostoselain Nintendo 3DS -konso
 1. Paina (A):ta jatkaaksesi
 1. Pidä (R):ää pohjassa ja paina samalla (B):tä irrottaaksesi SD-korttisi
 1. Aseta SD-korttisi tietokoneeseesi
-1. Copy `nand.bin` from the `/gm9out/` folder on your SD card to a safe location on your computer
+1. Kopioi SD-korttisi `/gm9out/`-kansiosta `nand.bin` turvalliseen paikkaan tietokoneellasi
   + Jos käytit aikaisemmin SafeCTRTransferia ja sinulla on `<sarjanumero>_nand.bin`-niminen varmuuskopio, korvaa se tällä (uudelleennimeä `nand.bin` muotoon `<sarjanumero>_nand.bin`)
   + Varmuuskopioi useaan eri paikkaan (kuten pilvipalveluihin)
   + Tämä varmuuskopiointi pelastaa sinut laitteen vioittumiselta, jos jokin menee pieleen tulevaisuudessa
@@ -30,40 +30,40 @@ GodMode9 on täysillä oikeuksilla varustettu tiedostoselain Nintendo 3DS -konso
 1. Aseta SD-korttisi takaisin konsoliisi
 
 
-## <a name="nand_restore" /> Restoring a NAND Backup
+## <a name="nand_restore" /> NAND-varmuuskopion palauttaminen
 
 #### Ohjeet
 
 1. Avaa Luma3DS:n ketjulatausvalikko pitämällä (START)-painiketta pohjassa käynnistyksen aikana
 1. Avaa GodMode9 painamalla (A):ta
-1. Navigate to `[0:] SDCARD`
-1. Press (A) on your NAND `.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
+1. Mene hakemistoon `[0:] SDCARD`
+1. Paina (A):ta NAND-`.bin`-tiedoston kohdalla, valitse "NAND image options..." ja sitten "Restore SysNAND (safe)"
 1. Paina (A):ta ottaaksesi käyttöön SysNANDin ylikirjoittamisen ja syötä annettu painikeyhdistelmä
   + Tämä ei ylikirjoita arm9loaderhax-asennustasi
 1. Syötä annettu painikeyhdistelmä ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1)
   + Tämä prosessi kestää jonkin aikaa
 1. Paina (A):ta jatkaaksesi, kun toiminto on suoritettu
 
-## <a name="injectHS" /> Injecting any .CIA app into Health & Safety
+## <a name="injectHS" /> .CIA-sovellusten injektoiminen Health & Safety -sovellukseen
 
 #### Prep Work
 
-+ For organizational purposes, copy the `.cia` file you wish to inject to the `/cias/` folder on your SD card
-    + Note that it is not possible to inject files into Health & Safety that are larger than it (including games and other large applications)
++ Kun sinulla on `.cia`-tiedosto, jonka haluat injektoida, kopioi se käytännöllisyyden vuoksi SD-korttisi `/cias/`-kansioon
+    Huomaa, että Health & Safety -sovellusta isompia tiedostoja ei ole mahdollista injektoida (mukaan lukien pelit ja muut isokokoiset sovellukset)
 
 #### Ohjeet
 
 1. Avaa Luma3DS:n ketjulatausvalikko pitämällä (START)-painiketta pohjassa käynnistyksen aikana
 1. Avaa GodMode9 painamalla (A):ta
 1. Mene hakemistoon `[0:] SDCARD` → `cias`
-1. Press (A) on your `.cia` to select it, then select "CIA image options...", then select "Mount image to drive"
+1. Paina (A):ta `.cia`-tiedostosi kohdalla, valitse "CIA image options..." ja sitten "Mount image to drive"
 1. Paina (A):ta `.app`-tiedoston kohdalla valitaksesi sen, valitse "NCCH image options" ja sitten "Inject to H&S"
 1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1) ja syötä annettu painikeyhdistelmä
 1. Paina (A):ta jatkaaksesi
 
-## <a name="restore_hs" /> Restoring Health & Safety after injecting a .CIA app
+## <a name="restore_hs" /> Health & Safetyn palauttaminen .CIA-sovelluksen injektoimisen jälkeen
 
-This will only work if the Health & Safety injection was performed by GodMode9 (not Decrypt9 or Hourglass9).
+Tämä toimii vain, jos Health & Safety -injektio tehtiin GodMode9:n avulla (eikä Decrypt9:n tai Hourglass9:n).
 {: .notice--info}
 
 #### Ohjeet
@@ -75,22 +75,22 @@ This will only work if the Health & Safety injection was performed by GodMode9 (
 1. Valitse "Restore H&S"
 1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1) ja syötä annettu painikeyhdistelmä
 
-## <a name="dump_cart" /> Dumping a Game Cartridge
+## <a name="dump_cart" /> Pelikortin kopioiminen
 
 #### Prep Work
 
-+ Insert the game cartridge you intend to dump into your device
-    + 3DS game cartridges will be dumped to an installable `.cia` format
-    + NDS game cartridges will be dumped to a non-installable `.nds` format compatible with flashcarts and emulators
++ Syötä konsoliisi pelikortti, jonka sisällön haluat kopioida
+    + 3DS-pelikortit vedostuvat asennettavaan `.cia`-muotoon
+    + NDS-pelikortit vedostuvat ei-asennettavaan `.nds`-muotoon, joka on yhteensopiva flash-korttien ja emulaattorien kanssa
 
 #### Ohjeet
 
 1. Avaa Luma3DS:n ketjulatausvalikko pitämällä (START)-painiketta pohjassa käynnistyksen aikana
 1. Avaa GodMode9 painamalla (A):ta
-1. Navigate to `[C:] GAMECART`
-1. Follow the steps applicable to your game cartridge:
-  + **3DS Game Cartridge:** Press (A) on `[TitleID].trim.3ds` to select it, then select "NCSD image options...", then select "Build CIA from file"
-  + **NDS Game Cartridge:** Press (A) on `[TitleID].trim.nds` to select it, then select "Copy to 0:/gm9out"
+1. Mene hakemistoon `[C:] GAMECART`
+1. Seuraa korttiasi vastaavaa ohjetta:
+  + **3DS-pelikortti:** Paina (A):ta `[sovellus-ID].trim.3ds`-tiedoston kohdalla, valitse "NCSD image options..." ja sitten "Build CIA from file"
+  + **NDS-pelikortti:** Paina (A):ta `[sovellus-ID].trim.nds`-tiedoston kohdalla ja valitse "Copy to 0:/gm9out"
 1. Your installable `.cia` or non-installable `.nds` formatted file will be outputted to the `/gm9out/` folder on your SD card
 
 ## <a name="dump_title" /> Dumping a Title
