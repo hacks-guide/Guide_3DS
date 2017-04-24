@@ -48,6 +48,7 @@ Durant cette étape, nous allons également configurer les programmes suivants :
 * La dernière version de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * La dernière version de [Luma3DS Updater](https://github.com/Hamcha/lumaupdate/releases/latest)
 * La dernière version de [FBI](https://github.com/Steveice10/FBI/releases/latest)
+* **Old 3DS and 2DS Only:** The Old 3DS 11.2.0-35 [otherapp payload](https://smealum.github.io/3ds/#otherapp) for your region
 
 ### Instructions
 
@@ -59,6 +60,7 @@ Durant cette étape, nous allons également configurer les programmes suivants :
   + Cette sauvegarde vous sauvera d'un brick si quoi que ce soit se passe mal à l'avenir
 1. Créez un répertoire nommé `cias` à la racine de votre carte SD s'il n'existe pas déjà
 1. Créez un dossier nommé `files9` à la racine de votre carte SD si celui-ci n'existe pas déjà
+1. Create a folder named `hblauncherloader` on the root of your SD card if it does not already exist
 1. Copiez _le contenu de_ SafeA9LHInstaller`.7z` à la racine de votre carte SD
 1. Copiez le dossier `a9lh`  de data_input `.zip` à la racine de votre carte SD
 1. Copiez _le contenu du_ fichier arm9loaderhax `.7z` dans le dossier `a9lh` de votre carte SD
@@ -70,6 +72,12 @@ Durant cette étape, nous allons également configurer les programmes suivants :
 1. Créez un répertoire appelé `payloads` dans le répertoire `luma` sur votre carte SD
 1. Copiez le fichier `GodMode9.bin` de l'archive GodMode9 `.zip` dans le dossier `/luma/payloads/` sur votre carte SD
 1. Copiez `aeskeydb.bin` vers le répertoire `/files9/` sur votre carte SD
+1. **Old 3DS and 2DS Only:** Copy the Old 3DS 11.2.0-35 otherapp payload for your region to the `/hblauncherloader/` folder on your SD card
+1. **Old 3DS and 2DS Only:** Rename the Old 3DS 11.2.0-35 otherapp payload on your SD card to match your region:
+  + **EUR:** `OLD-11-4-0-37-EUR.bin`
+  + **JPN:** `OLD-11-4-0-37-JPN.bin`
+  + **KOR:** `OLD-11-4-0-37-KOR.bin`
+  + **USA:** `OLD-11-4-0-37-USA.bin`
 
 ### Section II - Installation d’arm9loaderhax
 
@@ -77,6 +85,7 @@ Durant cette étape, nous allons également configurer les programmes suivants :
 1. Vous devriez être en 2.1.0
 1. Aller à « http://2xrsa.3ds.guide » dans le navigateur de la 3DS
   + Si vous obtenez l'erreur "Ce service n'est pas disponible dans votre région", changez les paramètres de pays dans les paramètres de la console pour qu'il corresponde à la region de la NAND installée lors du CTRtransfer en 2.1.0
+  + If you forgot to disable parental controls before CTRTransfering or otherwise cannot access wireless settings, note that the device will autoconnect to any network named `attwifi` with no password
   + Si vous rencontrez une erreur, [suivez ce guide de dépannage](troubleshooting#ts_browser)
   + Si vous obtenez un écran glitché, suivez [ce guide de dépannage](troubleshooting#ts_safe_a9lh_screen)
   + Si vous êtes sur une New 3DS ou 2DS et que le Wifi de la console est désactivé, vous pouvez le réactiver en enlevant la batterie et en débranchant le chargeur pendant quelques secondes puis en redémarrant la console
@@ -226,6 +235,9 @@ Pour plus d'informations sur le changement de la région de votre 3DS, veuillez 
 {: .notice--success}
 
 Pour plus d'informations concernant la mise à jour de l'installation d'A9LH, veuillez consulter la page [Mettre à jour A9LH](updating-a9lh).
+{: .notice--success}
+
+For information on using GodMode9's various features, check out the [GodMode9 Usage](godmode9-usage) page.
 {: .notice--success}
 
 Pour plus d'informations concernant les diverses fonctionnalités de Luma3DS, veuillez consulter [Le wiki dédié](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage).
