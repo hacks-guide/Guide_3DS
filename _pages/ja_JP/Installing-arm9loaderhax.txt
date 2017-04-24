@@ -48,6 +48,7 @@ arm9loaderhaxをインストールし、Luma3DSを正しくセットアップし
 * [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)の最新バージョン
 * [Luma3DS Updater](https://github.com/Hamcha/lumaupdate/releases/latest)の最新バージョン
 * [FBI](https://github.com/Steveice10/FBI/releases/latest)の最新バージョン
+* **Old 3DS and 2DS Only:** The Old 3DS 11.2.0-35 [otherapp payload](https://smealum.github.io/3ds/#otherapp) for your region
 
 #### 手順
 
@@ -59,6 +60,7 @@ arm9loaderhaxをインストールし、Luma3DSを正しくセットアップし
   + 将来は何か間違ってデバイスが壊れる場合、このバックアップが役に立ちます
 1. SDカードのルートに`cias`というフォルダが存在しない場合、それを作成します
 1. SDカードのルートに`files9`フォルダはない場合、そのフォルダを作成します
+1. Create a folder named `hblauncherloader` on the root of your SD card if it does not already exist
 1. SafeA9LHInstaller `.7z`の_コンテンツ_を、SDカードのルートにコピーします
 1. data_input `.zip`から`a9lh`フォルダをSDカードのルートにコピーします
 1. arm9loaderhaxリリースの`.7z`の_コンテンツ_をSDカードの`a9lh`にコピーします
@@ -70,6 +72,12 @@ arm9loaderhaxをインストールし、Luma3DSを正しくセットアップし
 1. `payloads`というフォルダをSDカードの`luma`フォルダに作成します
 1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 1. `aeskeydb.bin`をSDカードの`/files9/`フォルダにコピーします
+1. **Old 3DS and 2DS Only:** Copy the Old 3DS 11.2.0-35 otherapp payload for your region to the `/hblauncherloader/` folder on your SD card
+1. **Old 3DS and 2DS Only:** Rename the Old 3DS 11.2.0-35 otherapp payload on your SD card to match your region:
+  + **EUR:** `OLD-11-4-0-37-EUR.bin`
+  + **JPN:** `OLD-11-4-0-37-JPN.bin`
+  + **KOR:** `OLD-11-4-0-37-KOR.bin`
+  + **USA:** `OLD-11-4-0-37-USA.bin`
 
 ##### セクション II - arm9loaderhaxをインストールする
 
@@ -77,6 +85,7 @@ arm9loaderhaxをインストールし、Luma3DSを正しくセットアップし
 1. You should be already on 2.1.0 and powered on
 1. Go to URL `http://2xrsa.3ds.guide` in the browser of your device
   + If you get the error "This service is not available in your region", use the System Settings to set your device's country to match the NAND region you installed with 2.1.0 CTRTransfer
+  + If you forgot to disable parental controls before CTRTransfering or otherwise cannot access wireless settings, note that the device will autoconnect to any network named `attwifi` with no password
   + その他のエラーが発生したら、「このトラブルシューティングガイドをご覧ください](troubleshooting#ts_browser)
   + 画面が点滅する場合、[このトラブルシューティングガイドをご覧ください](troubleshooting#ts_safe_a9lh_screen)
   + 「無線接続」がオフの場合、バッテリーを外し、チャージャーも外し、しばらく置いてから起動することでオンにできます
@@ -226,6 +235,9 @@ Keep your `<serialnumber>_nand.bin` file, it can be restored by GodMode9 to save
 {: .notice--success}
 
 A9LHのバージョンを更新したいなら、[A9LHを更新する](updating-a9lh)ページをご覧ください。
+{: .notice--success}
+
+For information on using GodMode9's various features, check out the [GodMode9 Usage](godmode9-usage) page.
 {: .notice--success}
 
 Luma3DSの使い方については、[このwiki](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage)をご覧ください。
