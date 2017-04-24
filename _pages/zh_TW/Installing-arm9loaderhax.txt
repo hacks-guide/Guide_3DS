@@ -48,6 +48,7 @@ permalink: /zh_TW/installing-arm9loaderhax.html
 * 最新版的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * 最新版的 [Luma3DS Updater](https://github.com/Hamcha/lumaupdate/releases/latest)
 * 最新版的 [FBI 管理器](https://github.com/Steveice10/FBI/releases/latest)
+* **Old 3DS and 2DS Only:** The Old 3DS 11.2.0-35 [otherapp payload](https://smealum.github.io/3ds/#otherapp) for your region
 
 #### 操作說明
 
@@ -59,6 +60,7 @@ permalink: /zh_TW/installing-arm9loaderhax.html
   + 未來如果你不小心磚機了，這備份將會是你的救命恩人
 1. 在 SD 卡的根目錄底下建立一個新資料夾 `cias`
 1. 在 SD 卡的根目錄底下建立一個新資料夾 `files9`
+1. Create a folder named `hblauncherloader` on the root of your SD card if it does not already exist
 1. 解壓 SafeA9LHInstaller `.7z` 裡的 _所有內容_ 到 SD 卡的根目錄底下
 1. 解壓 data_input `.zip` 中的 `a9lh` 資料夾到 SD 卡的根目錄底下
 1. 解壓 arm9loaderhax `.7z` 裡的 _所有內容_ 到 SD 卡中的 `a9lh` 資料夾底下
@@ -70,6 +72,12 @@ permalink: /zh_TW/installing-arm9loaderhax.html
 1. 在 SD 上的 `luma` 資料夾中，建立一個新的 `payloads` 資料夾
 1. 從 GodMode9 `.zip` 中解壓 `GodMode9.bin` 到 SD 上的 `/luma/payloads/` 中
 1. 在 SD 卡上，將 `aeskeydb.bin` 複製到 `/files9/` 資料夾底下
+1. **Old 3DS and 2DS Only:** Copy the Old 3DS 11.2.0-35 otherapp payload for your region to the `/hblauncherloader/` folder on your SD card
+1. **Old 3DS and 2DS Only:** Rename the Old 3DS 11.2.0-35 otherapp payload on your SD card to match your region:
+  + **EUR:** `OLD-11-4-0-37-EUR.bin`
+  + **JPN:** `OLD-11-4-0-37-JPN.bin`
+  + **KOR:** `OLD-11-4-0-37-KOR.bin`
+  + **USA:** `OLD-11-4-0-37-USA.bin`
 
 ##### 第二節 — 安裝 arm9loaderhax
 
@@ -77,6 +85,7 @@ permalink: /zh_TW/installing-arm9loaderhax.html
 1. 啟動你的裝置並確保系統版本為 2.1.0
 1. 在裝置上開啟網頁瀏覽器並前往 `http://2xrsa.3ds.guide`
   + 如果出現錯誤「您所在地區不提供此項服務（This service is not available in your region）」，請透過系統設置改變你裝置所在的國家，使它與你使用的 2.1.0 CTRTransfer 地區相同
+  + If you forgot to disable parental controls before CTRTransfering or otherwise cannot access wireless settings, note that the device will autoconnect to any network named `attwifi` with no password
   + 如果遇到其他錯誤的話， [請參見此疑難排解](troubleshooting#ts_browser)
   + 如果螢幕花屏， [請參見此疑難排解](troubleshooting#ts_safe_a9lh_screen)
   + 如果你在 2DS 或 New 3DS 上無線功能是關閉的狀態的話，只需要將電池移除並拔掉充電器數秒再重啟主機即可。
@@ -226,6 +235,9 @@ ___
 {: .notice--success}
 
 如果你想要更新 A9LH，請見[更新 A9LH](updating-a9lh)。
+{: .notice--success}
+
+For information on using GodMode9's various features, check out the [GodMode9 Usage](godmode9-usage) page.
 {: .notice--success}
 
 如果你想知道如何使用 Luma3DS 的各項功能，請見[他們的 wiki](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage)。
