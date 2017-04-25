@@ -55,7 +55,7 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
 
 1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `up_GodMode9.bin`
 1. Boot holding (Up) to reboot into arm9loaderhax GodMode9
-1. Navigate to `SYSNAND CTRNAND` -> `data` -> (32 Character ID) -> `sysdata` -> `00010038`
+1. Navigate to `[1:] SYSNAND CTRNAND` -> `data` -> (32 Character ID) -> `sysdata` -> `00010038`
 1. Hold down the (R) trigger, then press (X) on `00000000` to rename this file
 1. Press (Up) once to change the name to `10000000`
 1. Press (A) to save changes
@@ -68,7 +68,7 @@ This is caused by Gateway implementing a very shoddy downgrade method, which lea
 
 1. Boot your device while holding (Start) to launch the Luma3DS chainloader menu
 1. Launch GodMode9 by pressing (A)   
-1. Navigate to `SYSNAND CTRNAND` -> `title` -> `00040010`
+1. Navigate to `[1:] SYSNAND CTRNAND` -> `title` -> `00040010`
 1. Navigate to the folder for your device and region:
   + **Old 3DS EUR**: `00022300` -> `content`
   + **Old 3DS JPN**: `00020300` -> `content`
@@ -135,7 +135,7 @@ This happens occasionally, but the reason is unknown. The buttons will still wor
     1. Hold (L)+(R)+(A)+(Up)
     1. Power on your device
     1. If you enter safe mode, update your device *only if you have an entrypoint for the latest FW version and it is possible to downgrade from it* and attempt the downgrade again.
-1. Your device may be bricked. For support, ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
+1. Your device may be bricked. For support, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
 
 ## <a name="ts_sys_a9lh" />Black screen on SysNAND boot after installing arm9loaderhax
 
@@ -163,7 +163,7 @@ This happens occasionally, but the reason is unknown. The buttons will still wor
     + Copy `firmware.bin` and `cetk` to the `/luma/` folder on your SD card
     + Delete both of these files after updating your device
 1. Try following [9.2.0 CTRTransfer](9.2.0-ctrtransfer)
-1. Ask for help at [#3dshacks on Rizon IRC](https://www.reddit.com/r/3dshacks/wiki/irc) or [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+1. Ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
 
 ## <a name="ts_transfer" />Error during SafeCTRTransfer
 
@@ -181,10 +181,10 @@ If an error occurs during the SafeCTRTransfer process, you will be prompted to l
 1. Reinsert your SD card into your device
 1. Select "Run 0:/ctrtransfer/payload.bin"
 1. If it was successful, you will have entered GodMode9
-1. Navigate to `SDCARD` -> `ctrtransfer`
+1. Navigate to `[0:] SDCARD` -> `ctrtransfer`
 1. Press (Y) on `<serialnumber>_nand.bin` to copy it
 1. Press (B) twice to return to the main menu
-1. Navigate to `SYSNAND VIRTUAL`
+1. Navigate to `[S:] SYSNAND VIRTUAL`
 1. Press (Y) to paste `<serialnumber>_nand.bin`
 1. Press (A) to confirm
 1. Press (A) to inject into `nand.bin`

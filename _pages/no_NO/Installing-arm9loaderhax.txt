@@ -68,7 +68,7 @@ Under denne prossesen, vil vi også sette opp program som følgende:
 1. Kopier `arm9loaderhax.bin` fra Luma3DS `.7y` til roten av SD-kortet, og erstatter eksisterende filer
 1. Opprett en mappe med navn `luma` på roten av SD-kortet
 1. Opprett en mappe med navnet `payloads` i `luma` mappen på SD-kortet
-1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `start_GodMode9.bin`
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 1. Kopier `aeskeydb.bin` til `/files9/` mappen på SD-kortet
 
 ##### Seksjon I - Installere arm9loaderhax
@@ -106,7 +106,8 @@ Under denne prossesen, vil vi også sette opp program som følgende:
 Hvis du før du fulgte denne veiledningen, allerede hadde et EmuNAND oppsett og ønsker å flytte innholdet i ditt tidligere EmuNAND til ditt nye SysNAND CFW, så er det nå på tide å [følge flytte EmuNAND](move-emunand) istedet for å gjøre de første fire trinnene i dette avsnittet.
 {: .notice--info}
 
-1. Boot your device while holding (Start) to enter GodMode9
+1. Boot your device while holding (Start) to launch the Luma3DS chainloader menu
+1. Launch GodMode9 by pressing (A)
 1. Navigate to `SDCARD` -> `ctrtransfer`
 1. Press (A) on `<serialnumber>_nand.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
 1. Press (A) to unlock SysNAND overwriting, then input the key combo given
@@ -123,7 +124,6 @@ Hvis du før du fulgte denne veiledningen, allerede hadde et EmuNAND oppsett og 
   + Kopier `firmware.bin` og `cetk` til `/luma/` mappen på SD-kortet
   + Delete both of these files after updating your device
 1. Update your device by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
-  + **Note that, as 11.4.0 is very recent, some Luma3DS bugs exist on it (DS and GBA games will not launch). Additionally, NTR CFW is not yet compatible with 11.4.0. You may choose to delay updating for now until a new Luma3DS version is released that fixes these bugs.**
   + Updates while using A9LH + Luma (what you have) are safe
   + Advarselen om å aldri oppdatere en ny 3DS fra 2.1.0 gjelder ikke lenger etter gjenopprettelse av en NAND sikkerhetskopi.
   + Hvis dette gir deg en feil, sett DNS-innstillingene til "auto"
@@ -131,7 +131,8 @@ Hvis du før du fulgte denne veiledningen, allerede hadde et EmuNAND oppsett og 
 
 ##### Seksjon V - Injeksjon av FBI
 
-1. Reboot holding (Start) during boot to launch GodMode9
+1. Reboot holding (Start) during boot to launch the Luma3DS chainloader menu
+1. Launch GodMode9 by pressing (A)
 1. Navigate to `SDCARD` -> `cias`
 1. Press (A) on `FBI.cia` to select it, then select "CIA image options...", then select "Mount image to drive"
 1. Press (A) on the `.app` file, then select "NCCH image options", then select "Inject to H&S"
@@ -150,7 +151,8 @@ Hvis du før du fulgte denne veiledningen, allerede hadde et EmuNAND oppsett og 
 
 ##### Section VII - Restore Health and Safety
 
-1. Reboot holding (Start) during boot to launch GodMode9
+1. Reboot holding (Start) during boot to launch the Luma3DS chainloader menu
+1. Launch GodMode9 by pressing (A)
 1. Press (Home) to bring up the action menu
 1. Select "More..."
 1. Select "Restore H&S"
@@ -198,10 +200,10 @@ You can now hold (Start) on boot to launch GodMode9.
 Du kan oppdatere arm9loaderhaxinstallasjonen i fremtiden ved å følge instruksjonene på [oppdatering av A9LH](updating-a9lh) siden.
 {: .notice--info}
 
-Keep your `<serialnumber>_nand.bin` file, it can be restored by GodMode9 to save you from a brick in the future.
+To use [NTR CFW](https://github.com/44670/BootNTR/), install [BootNTR Selector](https://gbatemp.net/threads/432911/).
 {: .notice--info}
 
-Du kan fjerne NAND sikkerhetskopier fra `/files9/` så lenge du har dem sikkerhetskopiert til et trygt sted.
+Keep your `<serialnumber>_nand.bin` file, it can be restored by GodMode9 to save you from a brick in the future.
 {: .notice--info}
 
 {% capture notice-7 %}

@@ -20,12 +20,12 @@ This is an add-on section for moving the contents of a previous EmuNAND to your 
 
 ##### 섹션 I - 준비 작업
 
-1. Power off your device
-1. SD 카드를 컴퓨터에 삽입하세요.
-1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `start_GodMode9.bin`
+1. 기기를 종료해 주세요.
+1. SD 카드를 컴퓨터에 삽입해 주세요.
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 1. Reinsert your SD card into your device
 
-##### Section II - Backup SysNAND DSiWare Saves
+##### 섹션 II - SysNAND DSiWare 세이브 파일 백업
 
 If you do not have any DSiWare games or saves that you care about, skip this section.
 {: .notice--info}
@@ -36,7 +36,7 @@ If you do not have any DSiWare games or saves that you care about, skip this sec
   + This process may take some time if you have many DSiWare games
 1. Press (B) twice to return to the main menu
 
-##### Section III - Backup GBA VCs Saves
+##### 섹션 III - GBA VC 세이브 파일 백업
 
 If you do not have any GBA VC games or saves that you care about, skip this section.
 {: .notice--info}
@@ -44,10 +44,10 @@ If you do not have any GBA VC games or saves that you care about, skip this sect
 Note that this is not necessary for any other kind of Virtual Console games (GBC, NES, etc)
 {: .notice--info}
 
-1. Hold (R) and press (Start) at the same time to power off your device
-1. SD 카드를 컴퓨터에 삽입하세요.
+1. (R) 버튼을 누른 채 (Start) 버튼을 눌러 기기를 종료해 주세요.
+1. SD 카드를 컴퓨터에 삽입해 주세요.
 1. Create a folder in `/files9/` for each GBA VC game that you want to backup the save for 
-1. Reinsert your SD card into your device
+1. SD 카드를 기기에 다시 삽입해 주세요.
 1. Power on your device into SysNAND
 1. Do the following process for each GBA VC game that you want to backup the save for:
   + Launch the GBA VC game on SysNAND
@@ -59,10 +59,11 @@ Note that this is not necessary for any other kind of Virtual Console games (GBC
   + Navigate to `SDCARD` -> `files9`
   + Navigate to the folder you created for this GBA VC game
   + Press (Y) to paste `gbavc.sav`
-  + Press (Start) to reboot your device
-1. Reboot holding (Start) during boot to launch GodMode9
+  + (Start) 버튼을 눌러 기기를 재시작해 주세요.
+1. Reboot holding (Start) during boot to launch the Luma3DS chainloader menu
+1. (A) 버튼을 눌러 GodMode9를 실행해 주세요.
 
-##### Section IV - Copy EmuNAND to SysNAND
+##### 섹션 IV - EmuNAND를 SysNAND로 복사
 
 1. Navigate to `EMUNAND VIRTUAL`
 1. Press (A) on `nand.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
@@ -73,7 +74,7 @@ Note that this is not necessary for any other kind of Virtual Console games (GBC
 1. Press (A) to continue once it has completed
 1. Press (B) to return to the main menu
 
-##### Section V - Restore DSiWare Saves
+##### 섹션 V - DSiWare 세이브 파일 복원
 
 If you did not backup DSiWare Saves earlier, skip this section.
 {: .notice--info}
@@ -89,12 +90,12 @@ If you did not backup DSiWare Saves earlier, skip this section.
   + This process may take some time if you have many DSiWare games
 1. Press (B) twice to return to the main menu
 
-##### Section VI - Restore GBA VC Saves
+##### 섹션 VI - GBA VC 세이브 파일 복원
 
 If you did not backup GBA VC Saves earlier, skip this section.
 {: .notice--info}
 
-1. Hold (R) and press (Start) at the same time to power off your device
+1. (R) 버튼을 누른 채 (Start) 버튼을 눌러 기기를 종료해 주세요.
 1. Power on your device into SysNAND
 1. Do the following process for each GBA VC game that you want to backup the save for:
   + Launch the GBA VC game on SysNAND
@@ -106,9 +107,10 @@ If you did not backup GBA VC Saves earlier, skip this section.
   + Press (B) to return to the main menu
   + Navigate to `SYSNAND VIRTUAL`
   + Press (Y) to paste `gbavc.sav`
-  + Press (A) to confirm
-  + Press (Start) to reboot your device
-1. Reboot holding (Start) during boot to launch GodMode9
+  + (A) 버튼을 눌러 주세요.
+  + (Start) 버튼을 눌러 기기를 재시작해 주세요.
+1. Reboot holding (Start) during boot to launch the Luma3DS chainloader menu
+1. (A) 버튼을 눌러 GodMode9를 실행해 주세요.
 
 ##### Section VII - Backup SysNAND
 
@@ -117,27 +119,28 @@ If you did not backup GBA VC Saves earlier, skip this section.
 1. Select "Backup NAND"
 1. (A) 버튼을 눌러 진행하세요.
 1. (R) 버튼과 (B) 버튼을 동시에 누른 후 SD 카드를 빼세요.
-1. Insert your SD card into your computer, then copy `nand.bin` from the `/gm9out/` folder on your SD card to a safe location on your computer
+1. SD 카드를 컴퓨터에 삽입하고 SD 카드의
+`/gm9out/` 폴더에서 `nand.bin` 파일을 컴퓨터의 안전한 곳에 복사해 주세요.
   + If you previously used SafeCTRTransfer and have a NAND backup named `<serialnumber>_nand.bin`, replace it with this one (rename `nand.bin` to match `<serialnumber>_nand.bin`)
   + Make backups in multiple locations (such as online file storage)
   + 나중에 문제가 생겨 벽돌이 되었을 때 이 백업으로 기기를 살릴 수 있습니다.
 1. Delete `nand.bin` from the `/gm9out/` folder on your SD card after copying it
 1. **SD 카드의 모든 파일을 컴퓨터에 백업해두세요. 다음 단계에서 SD 카드의 모든 파일이 삭제됩니다.**
 
-##### Section VIII - Format SD card
+##### 섹션 VIII - SD 카드 포맷
 
-1. Reinsert your SD card into your device
+1. SD 카드를 기기에 다시 삽입해 주세요.
 1. Press (Home) to bring up the action menu
 1. Select "More..."
 1. "SD format menu"를 선택하세요.
-1. (A) 버튼을 눌러 진행하세요.
+1. (A) 버튼을 눌러 주세요.
 1. "No EmuNAND"를 선택하세요.
 1. "Auto"를 선택하세요.
 1. When prompted, input the key combo given to confirm
 1. (R) 버튼과 (B) 버튼을 동시에 누른 후 SD 카드를 빼세요.
-1. Insert your SD card into your computer, then copy all your files back into it
+1. SD 카드를 컴퓨터에 삽입하고 백업한 모든 파일을 다시 SD 카드에 복사해 주세요.
   + Ensure you replace the `arm9loaderhax.bin` file on your SD card with the one from your backup
-1. Reinsert your SD card into your device
+1. SD 카드를 기기에 다시 삽입해 주세요.
 1. (A) 버튼을 눌러 SD 카드를 다시 마운트하세요.
 1. (Start) 버튼을 눌러 저장하고 기기를 재시작하세요.
 1. 검은 화면이 보인다면 [이 문제 해결 가이드](troubleshooting#ts_sys_down)를 참고하세요.

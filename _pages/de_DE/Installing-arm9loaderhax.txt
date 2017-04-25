@@ -68,7 +68,7 @@ Die neueste Version von [Luma3DS](https://github.com/AuroraWright/Luma3DS/releas
 1. Kopiere `arm9loaderhax.bin` aus der Luma3DS `.7z` in das Stammverzeichnis deiner SD-Karte, überschreibe dabei bereits existierenden Dateien
 1. Erstelle einen Ordner mit dem Namen `luma` im Stammverzeichnis deiner SD-Karte
 1. Erstelle einen Ordner mit dem Namen `payloads` in dem `luma`-Ordner auf deiner SD-Karte
-1. Kopiere die Datei `GodMode9.bin` aus der GodMode9 `.zip` in den `/luma/payloads/` Ordner deiner SD-Karte und ändere den Namen `GodMode9.bin` aus dem Ordner `/luma/payloads` in `start_GodMode9.bin`
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 1. Kopiere `aeskeydb.bin` in den `/files9/`-Ordner auf deiner SD-Karte
 
 ##### Abschnitt II - arm9loaderhax installieren
@@ -106,7 +106,8 @@ Die neueste Version von [Luma3DS](https://github.com/AuroraWright/Luma3DS/releas
 Falls du vor dem Befolgen dieser Anleitung bereits ein EmuNAND eingerichtet hattest und die Inhalte deines EmuNAND gerne auf deine neue SysNAND-CFW übertragen möchtest, solltest du jetzt [Verschiebe EmuNAND](move-emunand) befolgen, anstatt die ersten vier Schritte dieses Abschnittes durchzuführen.
 {: .notice--info}
 
-1. Starte deine Konsole während du (Start) gedrückt hälst, um in GodMode9 zu gelangen
+1. Boot your device while holding (Start) to launch the Luma3DS chainloader menu
+1. Launch GodMode9 by pressing (A)
 1. Navigiere zu `SDCARD` -> `ctrtransfer`
 1. Drücke (A) auf `<seriennummer>_nand.bin`, um dies auszuwählen, danach "NAND image options..." auswählen und zuletzt "Restore SysNAND (safe)" auswählen
 1. Drücke (A), um SysNAND-Änderungen zu aktivieren. Gib danach die angezeigte Tastenkombination ein
@@ -123,7 +124,6 @@ Falls du vor dem Befolgen dieser Anleitung bereits ein EmuNAND eingerichtet hatt
   + Kopiere `firmware.bin` und `cetk` in den `/luma/`-Ordner auf deiner SD-Karte
   + Lösche beide dieser Dateien nach dem das Update installiert wurde
 1. Aktualisiere deinen 3DS, indem zu zu den Systemeinstellungen gehst, dann "Allgemeine Einstellungen" auswählst und dann "System-Update" startest
-  + **Beachte, dass die Version 11.4.0 sehr neu ist, einige Luma3DS Bugs existieren (DS und GBA Spiele starten nicht). Unter anderem ist NTR CFW noch nicht mit 11.4.0 kompatibel. Du solltest mit dem Update noch warten bis eine neue Luma3DS Version erscheint, welche diese Fehler behebt.**
   + Updates mit A9LH + Luma (welches du hast) sind sicher
   + Die Warnung, dass ein New 3DS niemals von 2.1.0 aktualisiert werden darf, gilt nicht mehr nach der Wiederherstellung deines NAND-Backups.
   + Falls ein Fehler auftreten sollte, setze deine DNS-Einstellungen auf "automatisch beziehen"
@@ -131,7 +131,8 @@ Falls du vor dem Befolgen dieser Anleitung bereits ein EmuNAND eingerichtet hatt
 
 ##### Abschnitt V - Injektion von FBI
 
-1. Starte den 3DS neu, während du (Start) hältst, um GodMode9 zu starten
+1. Reboot holding (Start) during boot to launch the Luma3DS chainloader menu
+1. Launch GodMode9 by pressing (A)
 1. Navigiere zu `SDCARD` -> `cias`
 1. Drücke (A) auf der `FBI.cia`-Datei, um diese auszuwählen. Wähle dann "CIA Image options..." und dann "Mount Image to drive"
 1. Drücke (A) auf der `.app`-Datei, dann wähle "NCCH Image options" und danach wählst du "Inject to H&S"
@@ -150,7 +151,8 @@ Falls du vor dem Befolgen dieser Anleitung bereits ein EmuNAND eingerichtet hatt
 
 ##### Abschnitt VII - Die Gesundheits- und Sicherheitsinformationen-Applikation wiederherstellen
 
-1. Starte den 3DS neu, während du (Start) hältst, um GodMode9 zu starten
+1. Reboot holding (Start) during boot to launch the Luma3DS chainloader menu
+1. Launch GodMode9 by pressing (A)
 1. Drücke  (HOME) um das Aktionsmenü aufzurufen
 1. Wähle "More..."
 1. Wähle "Restore H&S"
@@ -198,10 +200,10 @@ Du kannst nun (Start) beim Starten deiner Konsole gedrückt halten, um GodMode9 
 Du kannst deine A9LH-Installation auf dem neuesten Stand halten, indem du die Anweisungen der [A9LH updaten](updating-a9lh)-Seite befolgst.
 {: .notice--info}
 
-Behalte deine `<serialnumber>_nand.bin`-Datei. Sie kann in Zukunft mit GodMode9 wieder eingespielt werden, um dich vor einem Brick zu retten.
+To use [NTR CFW](https://github.com/44670/BootNTR/), install [BootNTR Selector](https://gbatemp.net/threads/432911/).
 {: .notice--info}
 
-Du kannst deine NAND-Sicherheitskopien aus dem `/files9/`-Ordner entfernen, solange du Kopien an einem sicheren Ort aufbewahrst.
+Behalte deine `<serialnumber>_nand.bin`-Datei. Sie kann in Zukunft mit GodMode9 wieder eingespielt werden, um dich vor einem Brick zu retten.
 {: .notice--info}
 
 {% capture notice-7 %}

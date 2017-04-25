@@ -68,7 +68,7 @@ permalink: /zh_TW/installing-arm9loaderhax.html
 1. 解壓 Luma3DS `.7z` 內的 `arm9loaderhax.bin` 到 SD 卡的根目錄底下並覆蓋
 1. 在 SD 卡的根目錄底下建立一個新的資料夾 `luma`
 1. 在 SD 上的 `luma` 資料夾中，建立一個新的 `payloads` 資料夾
-1. 解壓 GodMode9 `.zip` 中的 `GodMode9.bin` 到 SD 卡中的 `/luma/payloads/` 底下，並重新命名為 `start_GodMode9.bin`
+1. 從 GodMode9 `.zip` 中解壓 `GodMode9.bin` 到 SD 上的 `/luma/payloads/` 中
 1. 在 SD 卡上，將 `aeskeydb.bin` 複製到 `/files9/` 資料夾底下
 
 ##### 第二節 — 安裝 arm9loaderhax
@@ -106,7 +106,8 @@ permalink: /zh_TW/installing-arm9loaderhax.html
 如果你在本教學之前就已經改機完且安裝了 EmuNAND，並且想把你原來 EmuNAND 中的內容轉移到新的 SysNAND 自製韌體中，請在開始本部分操作之前先按照[移植EmuNAND](move-emunand)一節進行，然後跳過本部的前四步。
 {: .notice--info}
 
-1. 開機時，按住「Start」鍵進入 GodMode9
+1. 開機時，按住「Start」鍵進入 Luma3DS 選單
+1. 按「A」啟動 GodMode9
 1. 移動至 `SDCARD` -> `ctrtransfer`
 1. 透過「A」選取 `<serialnumber>_nand.bin`，並選擇「NAND image options...」，再選「Restore SysNAND (safe)」
 1. 按「A」解鎖 SysNAND 的複寫保護，然後按下提示的按鍵組合
@@ -123,7 +124,6 @@ permalink: /zh_TW/installing-arm9loaderhax.html
   + 複製 `firmware.bin` 及 `cetk` 檔案到 SD 卡上的 `/luma/` 資料夾
   + 在更新完你的裝置後，刪除這兩個檔案
 1. 到裝置主選單中更新你的主機，到「系統設置（System Settings）」、「其他設置（Other Settings）」底下選擇「系統更新（System Update）」
-  + **請注意，因為系統版本 11.4.0 才剛釋出，Luma3DS 可能會有些問題（例如 DS 及 GBA 遊戲無法啟動）。 另外，NTR 自製韌體目前與系統版本 11.4.0 不相容。 你可以選擇等到 Luma3DS 發布新的版本後再更新至 11.4.0 以來修復這些問題。**
   + 在 A9LH + Luma 底下更新是沒問題的
   + 之前有說過千萬不要在 New 3DS 上更新 2.1.0 韌體，這點在還原過 NAND 備份後就沒關係了。
   + 如果過程中出現錯誤，試試到 DNS 設定底下將設定改成「自動 （auto）」
@@ -131,7 +131,8 @@ permalink: /zh_TW/installing-arm9loaderhax.html
 
 ##### 第五節 — 注入 FBI 管理器
 
-1. 重開機時按住「Start」鍵進入 GodMode9
+1. 重啟時按住「Start」鍵啟動 Luma3DS 選單
+1. 按「A」啟動 GodMode9
 1. 移動至 `SDCARD` -> `cias`
 1. 按「A」選取 `FBI.cia`，並選擇「CIA image options...」，再選「Mount image to drive」
 1. 按「A」選取 `.app` 結尾的檔案，並選擇「NCCH image options」，再選「Inject to H&S」
@@ -150,7 +151,8 @@ permalink: /zh_TW/installing-arm9loaderhax.html
 
 ##### 第七節 — 還原「健康與警示」程式
 
-1. 重開機時按住「Start」鍵進入 GodMode9
+1. 重啟時按住「Start」鍵啟動 Luma3DS 選單
+1. 按「A」啟動 GodMode9
 1. 按「Home」鍵以叫出主選單
 1. 選擇「More...」
 1. 選擇「Restore H&S」
@@ -198,10 +200,10 @@ ___
 你未來可以透過[更新 A9LH](updating-a9lh)的教學更新你的 arm9loaderhax。
 {: .notice--info}
 
-保留好你的 `<serialnumber>_nand.bin` 檔案，如果你未來磚機了你可以透過 GodMode9 還原你的裝置。
+若要使用 [NTR CFW](https://github.com/44670/BootNTR/)，請安裝 [BootNTR Selector](https://gbatemp.net/threads/432911/).
 {: .notice--info}
 
-只要你還另外存有 NAND 備份，你可以從 `/files9/` 中刪除先前的備份。
+保留好你的 `<serialnumber>_nand.bin` 檔案，如果你未來磚機了你可以透過 GodMode9 還原你的裝置。
 {: .notice--info}
 
 {% capture notice-7 %}

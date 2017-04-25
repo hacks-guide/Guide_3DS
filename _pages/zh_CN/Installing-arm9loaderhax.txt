@@ -68,7 +68,7 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
 1. 解压`Luma3DS.zip`压缩包，复制`arm9loaderhax.bin`文件到SD卡根目录下，覆盖已有文件
 1. 在你SD卡的根目录创建一个叫 `luma` 的文件夹
 1. 在SD卡的 `luma` 文件夹里创建 `payloads` 文件夹
-1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `start_GodMode9.bin`
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 1. 复制 `aeskeydb.bin` 到你SD卡的 `/files9/` 目录
 
 ##### 第二部分 - 安装 arm9loaderhax
@@ -106,7 +106,8 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
 如果你在看本教程之前已经破解并安装了EmuNAND，并且想把你原来的EmuNAND中的内容转移到新的SysNAND自制固件中，请在开始本部分操作之前先按照[迁移EmuNAND数据](move-emunand) 一节进行，然后跳过本部分的前四步。
 {: .notice--info}
 
-1. Boot your device while holding (Start) to enter GodMode9
+1. Boot your device while holding (Start) to launch the Luma3DS chainloader menu
+1. Launch GodMode9 by pressing (A)
 1. Navigate to `SDCARD` -> `ctrtransfer`
 1. Press (A) on `<serialnumber>_nand.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
 1. Press (A) to unlock SysNAND overwriting, then input the key combo given
@@ -123,7 +124,6 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
   + 复制 `firmware.bin` 和 `cetk` 到SD卡的 `/luma/` 文件夹下
   + Delete both of these files after updating your device
 1. Update your device by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
-  + **Note that, as 11.4.0 is very recent, some Luma3DS bugs exist on it (DS and GBA games will not launch). Additionally, NTR CFW is not yet compatible with 11.4.0. You may choose to delay updating for now until a new Luma3DS version is released that fixes these bugs.**
   + Updates while using A9LH + Luma (what you have) are safe
   + 之前关于新3DS不能在2.1.0系统版本下进行升级的警告不适用于恢复了你的NAND备份之后（译者注：因为已经不是2.1.0系统了）
   + 如果出现错误，将你的DNS设置改为”auto”（自动）模式
@@ -131,7 +131,8 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
 
 ##### 第五部分 - 注入FBI
 
-1. Reboot holding (Start) during boot to launch GodMode9
+1. Reboot holding (Start) during boot to launch the Luma3DS chainloader menu
+1. Launch GodMode9 by pressing (A)
 1. Navigate to `SDCARD` -> `cias`
 1. Press (A) on `FBI.cia` to select it, then select "CIA image options...", then select "Mount image to drive"
 1. Press (A) on the `.app` file, then select "NCCH image options", then select "Inject to H&S"
@@ -150,7 +151,8 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
 
 ##### Section VII - Restore Health and Safety
 
-1. Reboot holding (Start) during boot to launch GodMode9
+1. Reboot holding (Start) during boot to launch the Luma3DS chainloader menu
+1. Launch GodMode9 by pressing (A)
 1. Press (Home) to bring up the action menu
 1. Select "More..."
 1. Select "Restore H&S"
@@ -198,10 +200,10 @@ You can now hold (Start) on boot to launch GodMode9.
 如果你以后想升级你的arm9loaderhax，请参见[升级A9LH](updating-a9lh)页面。
 {: .notice--info}
 
-Keep your `<serialnumber>_nand.bin` file, it can be restored by GodMode9 to save you from a brick in the future.
+To use [NTR CFW](https://github.com/44670/BootNTR/), install [BootNTR Selector](https://gbatemp.net/threads/432911/).
 {: .notice--info}
 
-只要你在其他安全的地方有备份，你就可以从 `/files9/` 文件夹删除NAND备份文件。
+Keep your `<serialnumber>_nand.bin` file, it can be restored by GodMode9 to save you from a brick in the future.
 {: .notice--info}
 
 {% capture notice-7 %}

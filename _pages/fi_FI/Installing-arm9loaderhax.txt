@@ -68,7 +68,7 @@ Tämän prosessin aikana myös asennetaan muun muassa seuraavat ohjelmat:
 1. Kopioi Luma3DS-`.7z`-pakkauksesta `arm9loaderhax.bin` SD-korttisi juureen, korvaten aiemmat tiedostot
 1. Luo `luma`-niminen kansio SD-korttisi juureen
 1. Luo `payloads`-niminen kansio SD-korttisi `luma`-kansioon
-1. Kopioi GodMode9-`.zip`-pakkauksesta `GodMode9.bin` SD-korttisi `/luma/payloads/`-kansioon ja uudelleennimeä se siellä muotoon `start_GodMode9.bin`
+1. Kopioi GodMode9-`.zip`-pakkauksesta `GodMode9.bin` SD-korttisi `/luma/payloads/`-kansioon
 1. Kopioi `aeskeydb.bin` SD-korttisi `/files9/`-kansioon
 
 ##### Vaihe II – Arm9loaderhaxin asentaminen
@@ -106,7 +106,8 @@ Tämän prosessin aikana myös asennetaan muun muassa seuraavat ohjelmat:
 Jos sinulla oli ennen tämän oppaan aloittamista EmuNAND-kokoonpano, ja haluaisit siirtää sen sisällön uuteen SysNAND-CFW-kokoonpanoosi, seuraa osiota [EmuNANDin siirtäminen](move-emunand) tämän vaiheen neljän ensimmäisen kohdan sijaan.
 {: .notice--info}
 
-1. Käynnistä konsolisi pitäen (START)-painiketta pohjassa avataksesi GodMode9:n
+1. Avaa Luma3DS:n ketjulatausvalikko pitämällä (START)-painiketta pohjassa käynnistyksen aikana
+1. Avaa GodMode9 painamalla (A):ta
 1. Mene hakemistoon `SDCARD` → `ctrtransfer`
 1. Paina (A):ta `<sarjanumero>_nand.bin`-tiedoston kohdalla, valitse "NAND image options..." ja sitten "Restore SysNAND (safe)"
 1. Paina (A):ta ottaaksesi käyttöön SysNANDin ylikirjoittamisen ja syötä annettu painikeyhdistelmä
@@ -123,7 +124,6 @@ Jos sinulla oli ennen tämän oppaan aloittamista EmuNAND-kokoonpano, ja haluais
   + Kopioi `firmware.bin` ja `cetk` SD-korttisi `/luma/`-kansioon
   + Poista kummatkin tiedostot päivitettyäsi konsolin
 1. Päivitä konsolisi menemällä järjestelmäasetuksiin (System Settings), siellä muihin asetuksiin (Other Settings) ja sitten valitsemalla järjestelmäpäivitys (System Update) aivan oikeasta reunasta
-  + **Huomaathan, että koska 11.4.0 on vasta julkaistu, esiintyy Luma3DS:llä joitakin virheitä (DS- ja GBA-pelit eivät käynnisty). Lisäksi NTR-CFW ei ole vielä yhteensopiva 11.4.0:n kanssa. Voi olla järkevää päivittää vasta sitten, kun Luma3DS:stä julkaistaan uusi versio, joka korjaa nämä virheet.**
   + Pävitykset A9LH + Luma -kokoonpanolla (joka sinulla on) ovat turvallisia
   + Varoitus New 3DS:n päivittämisestä versiolla 2.1.0 ei päde sen jälkeen, kun olet palauttanut NAND-varmuuskopion.
   + Jos saat virheen, laita DNS:n automaattinen haku (Auto-Obtain DNS) päälle asetuksista
@@ -131,7 +131,8 @@ Jos sinulla oli ennen tämän oppaan aloittamista EmuNAND-kokoonpano, ja haluais
 
 ##### Vaihe V – FBI:n injektointi
 
-1. Käynnistä uudelleen pitäen (START)-painiketta pohjassa avataksesi GodMode9:n
+1. Avaa Luma3DS:n ketjulatausvalikko pitämällä (START)-painiketta pohjassa käynnistyksen aikana
+1. Avaa GodMode9 painamalla (A):ta
 1. Mene hakemistoon `SDCARD` → `cias`
 1. Paina (A):ta `FBI.cia`-tiedoston kohdalla valitaksesi sen, valitse "CIA image options..." ja sitten "Mount image to drive"
 1. Paina (A):ta `.app`-tiedoston kohdalla valitaksesi sen, valitse "NCCH image options" ja sitten "Inject to H&S"
@@ -151,7 +152,8 @@ Jos sinulla oli ennen tämän oppaan aloittamista EmuNAND-kokoonpano, ja haluais
 
 ##### Vaihe VII – Health and Safetyn palauttaminen
 
-1. Käynnistä uudelleen pitäen (START)-painiketta pohjassa avataksesi GodMode9:n
+1. Avaa Luma3DS:n ketjulatausvalikko pitämällä (START)-painiketta pohjassa käynnistyksen aikana
+1. Avaa GodMode9 painamalla (A):ta
 1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
 1. Valitse "More..."
 1. Valitse "Restore H&S"
@@ -199,10 +201,10 @@ Voit nyt pitää (START)-painiketta pohjassa käynnistyksen aikana avataksesi Go
 Tulevaisuudessa voit päivittää arm9loaderhax-asennuksesi seuraamalla ohjeita osiossa [A9LH:n päivittäminen](updating-a9lh).
 {: .notice--info}
 
-Pidä `<sarjanumero>_nand.bin`-tiedosto tallessa; sen voi palauttaa GodMode9:n avulla, jos konsolisi sattuu vioittumaan tuelvaisuudessa.
+Käyttääksesi [NTR-CFW](https://github.com/44670/BootNTR/):tä asenna [BootNTR Selector](https://gbatemp.net/threads/432911/).
 {: .notice--info}
 
-Voit poistaa NAND-varmuukopiot `/files9/`-kansiosta, kunhan sinulla on ne tallessa jossakin turvallisessa paikassa.
+Pidä `<sarjanumero>_nand.bin`-tiedosto tallessa; sen voi palauttaa GodMode9:n avulla, jos konsolisi sattuu vioittumaan tuelvaisuudessa.
 {: .notice--info}
 
 {% capture notice-7 %}
@@ -221,7 +223,7 @@ Voit poistaa NAND-varmuukopiot `/files9/`-kansiosta, kunhan sinulla on ne talles
 
 <div class="notice--info">{{ notice-7 | markdownify }}</div>
 
-Tietoja konsolisi alueen vaihtamisesta toiseen saat osiosta [Alueen vaihtaminen](region-changing) page.
+Tietoja konsolisi alueen vaihtamisesta toiseen saat osiosta [Alueen vaihtaminen](region-changing).
 {: .notice--success}
 
 Tietoja A9LH:n pitämisestä ajan tasalla löydät osiosta [A9LH:n päivittäminen](updating-a9lh).

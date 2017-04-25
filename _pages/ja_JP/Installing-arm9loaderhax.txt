@@ -68,7 +68,7 @@ arm9loaderhaxをインストールし、Luma3DSを正しくセットアップし
 1. Luma3DS `.7z`から`arm9loaderhax.bin`をSDカードのルートにコピーし、既存のファイルを上書きします
 1. `luma`というフォルダをSDカードのルートに作成します
 1. `payloads`というフォルダをSDカードの`luma`フォルダに作成します
-1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card and rename `GodMode9.bin` in `/luma/payloads/` to `start_GodMode9.bin`
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 1. `aeskeydb.bin`をSDカードの`/files9/`フォルダにコピーします
 
 ##### セクション II - arm9loaderhaxをインストールする
@@ -106,7 +106,8 @@ arm9loaderhaxをインストールし、Luma3DSを正しくセットアップし
 次のステップを行う前に、もしもうEmuNANDセットアップを持っており、既存のEmuNANDコンテンツを今のSysNAND CFWに移行したいなら、次の最初の四つのステップをする代わりに、[EmuNANDのデータ移行をご覧ください](move-emunand) 。
 {: .notice--info}
 
-1. Boot your device while holding (Start) to enter GodMode9
+1. Boot your device while holding (Start) to launch the Luma3DS chainloader menu
+1. Launch GodMode9 by pressing (A)
 1. Navigate to `SDCARD` -> `ctrtransfer`
 1. Press (A) on `<serialnumber>_nand.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
 1. Press (A) to unlock SysNAND overwriting, then input the key combo given
@@ -123,7 +124,6 @@ arm9loaderhaxをインストールし、Luma3DSを正しくセットアップし
   + `firmware.bin`と`cetk`をSDカードの`/luma/`フォルダにコピーします
   + Delete both of these files after updating your device
 1. Update your device by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
-  + **Note that, as 11.4.0 is very recent, some Luma3DS bugs exist on it (DS and GBA games will not launch). Additionally, NTR CFW is not yet compatible with 11.4.0. You may choose to delay updating for now until a new Luma3DS version is released that fixes these bugs.**
   + Updates while using A9LH + Luma (what you have) are safe
   + 前は2.1.0でNew 3DSを絶対に更新しないと警告していましたが、NANDバックアップを復元した後は更新しても問題がありません。
   + エラーが発生すれば、DNS設定を「自動」に変更してください
@@ -131,7 +131,8 @@ arm9loaderhaxをインストールし、Luma3DSを正しくセットアップし
 
 ##### セクション V - FBI を注入する
 
-1. Reboot holding (Start) during boot to launch GodMode9
+1. Reboot holding (Start) during boot to launch the Luma3DS chainloader menu
+1. Launch GodMode9 by pressing (A)
 1. Navigate to `SDCARD` -> `cias`
 1. Press (A) on `FBI.cia` to select it, then select "CIA image options...", then select "Mount image to drive"
 1. Press (A) on the `.app` file, then select "NCCH image options", then select "Inject to H&S"
@@ -150,7 +151,8 @@ arm9loaderhaxをインストールし、Luma3DSを正しくセットアップし
 
 ##### Section VII - Restore Health and Safety
 
-1. Reboot holding (Start) during boot to launch GodMode9
+1. Reboot holding (Start) during boot to launch the Luma3DS chainloader menu
+1. Launch GodMode9 by pressing (A)
 1. Press (Home) to bring up the action menu
 1. Select "More..."
 1. Select "Restore H&S"
@@ -198,10 +200,10 @@ You can now hold (Start) on boot to launch GodMode9.
 今後は[A9LHを更新する](updating-a9lh)ページの指示に従って、arm9loaderhaxのバージョンを更新できます。
 {: .notice--info}
 
-Keep your `<serialnumber>_nand.bin` file, it can be restored by GodMode9 to save you from a brick in the future.
+To use [NTR CFW](https://github.com/44670/BootNTR/), install [BootNTR Selector](https://gbatemp.net/threads/432911/).
 {: .notice--info}
 
-もうNANDバックアップを安全な場所にコピーしたら、`/files9/`からそれを削除できます。
+Keep your `<serialnumber>_nand.bin` file, it can be restored by GodMode9 to save you from a brick in the future.
 {: .notice--info}
 
 {% capture notice-7 %}
