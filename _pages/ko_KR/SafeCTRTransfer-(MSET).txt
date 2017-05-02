@@ -7,10 +7,10 @@ permalink: /safectrtransfer-(mset).html
 이 설명은 SysNAND를 기준으로 제작되었으므로 기기가 EmuNAND 기반이라면 모든 과정을 SysNAND에 적용해 주세요. EmuNAND와 RedNAND는 [동일한 개념](http://3dbrew.org/wiki/NAND_Redirection)을 다른 방식으로 구현한 것입니다.
 {: .notice--info}
 
-만약 2DS 또는 New 3DS에서 무선 통신 기능을 끈 채 2.1.0 버전으로 다운그레이드했다면, 충전기와 배터리를 제거하고 몇 초 기다린 뒤 다시 장착하여 재시작하고 다시 시도할 수 있습니다.
+만약 2DS 또는 New 3DS에서 무선 통신 기능을 끈 채 2.1.0 버전으로 다운그레이드했다면, 충전기와 배터리를 제거하고 몇 초 기다린 뒤 다시 장착하여 다시 시작하고 다시 시도할 수 있습니다.
 {: .notice--info}
 
-2.1.0 버전에서는 New 3DS의 microSD 관리 기능을 이용해 SD 카드에 파일을 전송할 수 없습니다. 진행하기 전에 SD 카드 리더기를 준비하세요.
+2.1.0 버전에서는 New 3DS의 microSD 관리 기능을 이용해 SD 카드에 파일을 전송할 수 없습니다. 진행하기 전에 SD 카드 리더기를 준비해 주세요.
 {: .notice--info}
 
 이 페이지의 [마그넷](https://en.wikipedia.org/wiki/Magnet_URI_scheme) 링크를 사용하려면
@@ -20,23 +20,23 @@ permalink: /safectrtransfer-(mset).html
 **현재, 2.1.0 CTRTransfer 이후의 작업을 진행하기 위해서는 기기의 무선 인터넷 연결이 필요합니다.**
 {: .notice--warning}
 
-**Disable the parental controls of your device before doing the 2.1.0 CTRTransfer. If you do not know the password, see [this](https://mkey.salthax.org/) site. If you cannot disable parental controls because the linked NNID is for a child under 13, you can instead set all parental control options to "do not restrict".**
+**Disable the parental controls of your device before doing the 2.1.0 CTRTransfer. 비밀번호를 모를 경우 [이곳](https://mkey.salthax.org/)을 참고해 주세요. 만약 등록된 NNID가 13세 이하 전용이라서 청소년 제한 설정을 해제할 수 없다면, 대신 모든 청소년 제한 설정을 "제한하지 않음" 설정으로 설정해도 됩니다.**
 {: .notice--warning}
 
-**Performing a CTRTransfer will remove all user-installed tickets (which allow access to games) from your device until the created backup is restored.**
+**CTRTransfer 작업을 하면 생성된 백업이 재설치되기 전까지 기기에 설치된 모든 티켓 (게임에 접속을 허용하는 것) 을 삭제합니다.**
 {: .notice--danger}
 
-**6.0.0 버전 이하의 2DS는 절대로 포맷하지 마세요. 초기 설정을 완료하지 못하고 그대로 벽돌이 됩니다!**
+**6.0.0 버전 이하의 2DS는 절대로 포맷하지 말아 주세요. 초기 설정을 완료하지 못하고 그대로 벽돌이 됩니다!**
 {: .notice--danger}
 
-**2.1.0 버전(구 3DS 펌웨어)의 뉴 3DS는 절대로 업데이트하지 마세요! 100% 벽돌이 됩니다! You MUST restore a NAND backup or CTRTransfer back to standard New 3DS firmware first!**
+**2.1.0 버전(Old 3DS 펌웨어)의 New 3DS는 절대로 업데이트하지 말아 주세요! 100% 벽돌이 됩니다! You MUST restore a NAND backup or CTRTransfer back to standard New 3DS firmware first!**
 {: .notice--danger}
 
 {% capture notice %}
-**2.1.0 버전에서 뉴 3DS를 슬립 모드로 전환하면 복구가 불가능한 벽돌이 됩니다!**    
+**2.1.0 버전에서 New 3DS를 슬립 모드로 전환하면 복구가 불가능한 벽돌이 됩니다!**    
 **This only happens when shutting the lid _while your device is on_; this does not apply to turning your device off.**    
 **Your device only enters sleep mode when the lid is closed. 경과되는 시간에 따라 전환되지 않습니다.**    
-**망하기 싫으면 정신 차리고 지체 없이 진행하세요!**    
+**2.1.0 버전에서 위험 요소를 피하려면 지체 없이 진행해 주세요!**    
 {% endcapture %}
 
 <div class="notice--danger">{{ notice | markdownify }}</div>
@@ -52,7 +52,7 @@ This is accomplished by [installing a premade CTRTransfer image](https://www.red
 * DS flashcart that works on your device version
 * 최신 버전의 [SafeCTRTransfer](https://github.com/d0k3/SafeCTRTransfer/releases/latest)
 * The 2.1.0 CTRTransfer image for your device and region     
-*(맞는 지역이 없다면, 아무 파일이나 선택하세요)*
+*(기기에 맞는 지역이 없다면, 아무 파일이나 선택해 주세요)*
   +    <i class="fa fa-magnet" aria-hidden="true" title="이것은 마그넷 링크입니다. Use a torrent client to download the file."></i> - [New 3DS or Old 3DS or 2DS 2.1.0 - EUR - CTRTransfer](magnet:?xt=urn:btih:89acc9c1b488b8b38251de0ddf07975d6bd354a1&dn=2.1.0-4E%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
   +    <i class="fa fa-magnet" aria-hidden="true" title="이것은 마그넷 링크입니다. Use a torrent client to download the file."></i> - [New 3DS or Old 3DS or 2DS 2.1.0 - JPN - CTRTransfer](magnet:?xt=urn:btih:3dbb9c9c85a33c6242f424dcbaebcacdd8a5912b&dn=2.1.0-4J%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
   +    <i class="fa fa-magnet" aria-hidden="true" title="이것은 마그넷 링크입니다. Use a torrent client to download the file."></i> - [New 3DS or Old 3DS or 2DS 2.1.0 - USA - CTRTransfer](magnet:?xt=urn:btih:1609ce9ee7b0ed9b6dea0b3e7cca4fc52dad6ff4&dn=2.1.0-4U%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
@@ -68,7 +68,7 @@ This is accomplished by [installing a premade CTRTransfer image](https://www.red
 1. Copy `SafeCTRTransfer.dat` from the SafeCTRTransfer `.zip` to the root of your SD card
 1. Reinsert your SD card into your device
 1. Copy `SafeCTRTransfer.nds` from the SafeCTRTransfer `.zip` to your DS flashcart
-1. Power on your device
+1. 기기를 시작해 주세요.
 
 ##### 섹션 II - SafeCTRTransfer 실행
 
@@ -93,7 +93,7 @@ This is accomplished by [installing a premade CTRTransfer image](https://www.red
   + While on 2.1.0, your device will black screen on boot if your SD card is inserted before the home menu loads
   + Every time your device is rebooted on 2.1.0, you will need to take out your SD card before boot and put it back in after the home menu loads
   + For now, leave your SD card out as you will be copying files to it in the next page
-  + 다음 페이지에서 기기를 복원한 후에는 더이상 할 필요 없어집니다.
+  + 다음 페이지에서 기기를 복원한 뒤 더이상 할 필요 없어집니다.
 
 ___
 
@@ -101,10 +101,10 @@ ___
 {: .notice--info}
 
 {% capture notice %}
-**2.1.0 버전에서 뉴 3DS를 슬립 모드로 전환하면 복구가 불가능한 벽돌이 됩니다!**    
+**2.1.0 버전에서 New 3DS를 슬립 모드로 전환하면 복구가 불가능한 벽돌이 됩니다!**    
 **This only happens when shutting the lid _while your device is on_; this does not apply to turning your device off.**    
 **Your device only enters sleep mode when the lid is closed. 경과되는 시간에 따라 전환되지 않습니다.**    
-**망하기 싫으면 정신 차리고 지체 없이 진행하세요!**    
+**2.1.0 버전에서 위험 요소를 피하려면 지체 없이 진행해 주세요!**    
 {% endcapture %}
 
 <div class="notice--danger">{{ notice | markdownify }}</div>
