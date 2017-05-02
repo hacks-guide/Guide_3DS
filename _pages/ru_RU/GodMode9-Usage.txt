@@ -7,7 +7,7 @@ permalink: /ru_RU/godmode9-usage.html
 GodMode9 это полноценный файловый менеджер для Nintendo 3DS, который дает вам доступ к SD-карте, FAT разделам внутри SysNAND или EmuNAND и просто ко всему остальному. Среди других его функций есть возможность копировать, удалять, переименовывать файлы и создавать папки.
 {: .notice--primary}
 
-**Это мощный инструмент, который даёт вам доступ к всевозможным модификациям системных данных 3DS. Однако, используются меры предосторожности, чтобы вы случайно не повредили системные данные консоли. The write permissions system protects you by providing warnings and forces you to enter an unlock sequence for enabling write permissions. It is not possible to overwrite or modify any important stuff without such unlock sequences and it is not possible to accidentally unlock something. В любом случае, действуйте с умом, делайте бэкапы, чтобы обезопасить себя.**
+**Это мощный инструмент, который даёт вам доступ к всевозможным модификациям системных данных 3DS. Однако, используются меры предосторожности, чтобы вы случайно не повредили системные данные консоли. Система разрешений на запись защищает вас, показывая предупреждения и заставляя вводить комбинации кнопок для включения разрешений на запись. Невозможно перезаписать или модифицировать любые важные вещи без ввода таких комбинаций разблокировки, и также невозможно случайно разблокировать что-то. В любом случае, действуйте с умом, делайте бэкапы, чтобы обезопасить себя.**
 {: .notice--danger}
 
 ## <a name="nand_backup" /> Создание бэкапа NAND
@@ -93,25 +93,25 @@ GodMode9 это полноценный файловый менеджер для 
   + **NDS картридж:** Нажмите (A) чтобы выбрать файл `[TitleID].trim.nds`, затем выберите "Copy to 0:/gm9out"
 1. Ваш файл в формате `.cia` либо `.nds` будет помещен в папку `/gm9out/` на SD-карте
 
-## <a name="dump_title" /> Dumping a Title
+## <a name="dump_title" /> Создание дампа тайтла
 
-Use the `Titles` menu in FBI to get the Title ID of the installed title you wish to dump
+Используйте меню `Titles` в FBI, чтобы узнать ID тайтла, который вы хотите сдампить
 {: .notice--info}
 
 #### Инструкция
 
 1. Включите вашу консоль, удерживая (Start), чтобы запустить меню Luma3DS chainloader
 1. Запустите GodMode9, нажав кнопку (A)
-1. Navigate to the drive applicable to the type of title you wish to dump:
-  + **User Installed Title**: Navigate to `[A:] SYSNAND SD`
-  + **System Title**: Navigate to `[1:] SYSNAND CTRNAND`
+1. Перейдите на диск, соответствующий типу вашего тайтла:
+  + **Пользовательский тайтл**: Перейдите в `[A:] SYSNAND SD`
+  + **Системный тайтл**: Перейдите в `[1:] SYSNAND CTRNAND`
 1. Перейдите в `title`
-1. Navigate to the folder corresponding to the first 8 digits of the Title ID
-1. Navigate to the folder corresponding to the last 8 digits of the Title ID
+1. Перейдите в папку, соответствующую первым 8 цифрам ID тайтла
+1. Перейдите в папку, соответствующую последним 8 цифрам ID тайтла
 1. Перейдите в папку `content`
 1. Нажмите (A) чтобы выбрать файл `.tmd`, затем выберите "TMD file options...", затем "Show title info"
-1. Ensure you have found the correct title
-1. Press (B) to exit the title info
+1. Убедитесь, что вы нашли верный тайтл
+1. Нажмите (B) для выхода из информации о тайтле
 1. Нажмите (A) чтобы выбрать файл `.tmd`, затем выберите "TMD file options...", затем "Build CIA (standard)"
 1. Ваш файл в формате `.cia` будет помещен в папку `/gm9out/` на SD-карте
 
@@ -186,8 +186,8 @@ Use the `Titles` menu in FBI to get the Title ID of the installed title you wish
 1. Выберите любую опцию EmuNAND, подходящую вам
   + Большинству пользователей следует выбрать "No EmuNAND"
 1. Выберите "Auto"
-1. Press (A) to accept the label `GM9SD`
-  + Optionally, you may input a custom name for the SD card
+1. Нажмите (A), чтобы подтвердить метку `GM9SD`
+  + При необходимости вы можете ввести другую метку для SD-карты
 1. При появлении запроса, введите указанную комбинацию кнопок
 
 ## <a name="payload_chain" /> Загрузка другого ARM9 приложения
@@ -197,7 +197,7 @@ Use the `Titles` menu in FBI to get the Title ID of the installed title you wish
 1. Включите вашу консоль, удерживая (Start), чтобы запустить меню Luma3DS chainloader
 1. Запустите GodMode9, нажав кнопку (A)
 1. Перейдите в папку с ARM9 приложением, которое вы хотите запустить.
-    + An ARM9 payload file generally ends with `.bin`
+    + Файл ARM9 приложения обычно имеет расширение `.bin`
     + Это не означает, что все файлы с расширением `.bin` являются ARM9 приложениями
     + К примеру ARM9 приложениями являются Luma3DS, Decrypt9 и GodMode9
 1. Нажмите (A) чтобы выбрать `.bin` файл ARM9 приложения, затем выберите "Launch as arm9 Payload"
@@ -207,7 +207,7 @@ Use the `Titles` menu in FBI to get the Title ID of the installed title you wish
 
 #### Подготовительные работы
 
-+ For organizational purposes, copy each `.cia` file you wish to encrypt / decrypt to the `/cias/` folder on your SD card
++ В целях поддержания порядка, скопируйте каждый файл `.cia` для шифровки / расшифровки в папку `/cias/` на SD-карте
 
 #### Инструкция
 
@@ -215,7 +215,7 @@ Use the `Titles` menu in FBI to get the Title ID of the installed title you wish
 1. Запустите GodMode9, нажав кнопку (A)
 1. Перейдите в `[0:] SDCARD` -> `cias`
 1. Нажмите (A) чтобы выбрать файл `.cia`, затем выберите "CIA image options..."
-1. Select the option to perform the desired function:
+1. Выберите опцию для выполнения нужной функции:
     + **Encrypt to 0:/gm9out:** Создать шифрованную копию выбранного файла `.cia` в папке `/gm9out/` на SD-карте
     + **Decrypt to 0:/gm9out:** Создать расшифрованную копию выбранного файла `.cia` в папке `/gm9out/` на SD-карте
     + **Encrypt inplace:** Заменить выбранный файл `.cia` его шифрованной версией
