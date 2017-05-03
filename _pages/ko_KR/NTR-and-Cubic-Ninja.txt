@@ -31,31 +31,31 @@ permalink: /ko_KR/ntr-and-cubic-ninja.html
 1. WAMP를 기본 디텍터리에 설치해 주세요.
 1. `3ds-private-update-server.zip` 파일의 내용물을 `C:\wamp\www\` 폴더에 복사해 주세요. (동일한 파일은 덮어써 주세요)
 1. `update.php` 파일을 `C:\wamp\www\` 폴더에 복사해 주세요. (동일한 파일은 덮어써 주세요)
-1. 9.2.0 다운그레이드 팩 `.zip` 파일 내 `updates` 폴더를 통째로 `C:\wamp\www\` 폴더에 복사해 주세요.
-1. `node.exe` 파일을 `C:\wamp\www\updates` 폴더로 옮겨 주세요.
-1. `C:\wamp\www\CdnCiaUnpack.js` 파일을 `C:\wamp\www\updates` 폴더로 옮겨 주세요.
-1. `C:\wamp\www\updates`에서 `CdnCiaUnpack.js` 파일을 `node.exe` 파일 위로 드래그해
-`GetSystemUpdate.partial.xml` 파일을 생성해 주세요.
-1. `node.exe` 파일과 `CdnCiaUnpack.js` 파일을 다시 `C:\wamp\www\` 폴더로 옮겨 주세요.
-1. `GetSystemUpdate.partial.xml` 파일을 `C:\wamp\www\` 폴더에 복사해 주세요. (파일의 사본이 `C:\wamp\www\updates` 폴더와 `C:\wamp\www\` 폴더에 모두 있도록)
+1. 9.2.0 다운그레이드 팩 `.zip`의 `updates` 폴더를 통째로 `C:\wamp\www\`에 복사해 주세요.
+1. `node.exe`를 `C:\wamp\www\updates`로 옮겨 주세요.
+1. `C:\wamp\www\CdnCiaUnpack.js`를 `C:\wamp\www\updates`로 옮겨 주세요.
+1. `C:\wamp\www\updates`의 `CdnCiaUnpack.js`를 `node.exe` 위로 드래그해
+`GetSystemUpdate.partial.xml`을 생성해 주세요.
+1. `node.exe`와 `CdnCiaUnpack.js`를 다시 `C:\wamp\www\`로 옮겨 주세요.
+1. `GetSystemUpdate.partial.xml`을 `C:\wamp\www\`에 복사해 주세요. (파일의 사본이 `C:\wamp\www\updates`와 `C:\wamp\www\`에 모두 있도록)
 1. WAMP 트레이 아이콘을 클릭하고 "Put Online"을 클릭해 주세요.
 1. 명령 프롬프트에서 `ipconfig/all` 커맨드를 입력하여 컴퓨터의 IPv4 주소를 알아내 주세요. 곧 필요합니다.
-1. `ntr.bin` 파일을 SD 카드의 최상위 경로에 복사해 주세요.
-1. `starter.zip` 파일 내 `starter` 폴더의 _내용물_을 SD 카드의 최상위 경로에 복사해 주세요.
-1. Put your SD card back into your device
+1. `ntr.bin`을 SD 카드의 최상위 경로에 복사해 주세요.
+1. `starter.zip`의 `starter` 폴더의 _내용물_을 SD 카드의 최상위 경로에 복사해 주세요.
+1. SD 카드를 기기에 다시 삽입해 주세요.
 
 ##### 섹션 II - 업데이트
 
-1. Boot your device into recovery mode by holding (L)+(R)+(A)+(UP) while powering on
+1. (L)+(R)+(A)+(위)를 동시에 누른 채 기기를 시작해 복구 모드를 실행해 주세요.
 1. 업데이트를 취소하고 다시 시작해 주세요.
-1. Launch Cubic Ninja (if it already has NinjHax installed, hold (L)+(R)+(X)+(Y) to reset it)
+1. Cubic Ninja를 실행해 주세요. (NinjHax가 이미 설치 되었다면 (L)+(R)+(X)+(Y)를 동시에 눌러 초기화해 주세요)
 1. "Create", "QR Code", "Scan QR Code"를 차례로 선택해 주세요.
 1. NTR CRW `.zip` 파일에서 지역에 맞는 QR 코드를 골라 스캔해 주세요.
-1. On the home menu, press (Y) and (X) at the same time to launch NTR's menu
+1. 홈 메뉴에서 (X) 버튼과 (Y)를 동시에 눌러 NTR 메뉴를 실행해 주세요.
 1. 디버거(debugger)를 켜고 메뉴를 닫아 주세요.
-1. Use your router's web page to get your device's IP address (google it if you don't know how, all routers are different)
+1. 본인 라우터의 웹 페이지에서 기기의 IP 주소를 알아내 주세요. (방법을 모를 경우 검색해 주세요. 라우터마다 방식이 다릅니다)
 1. 컴퓨터에서 NTR Debugger를 실행해 주세요.
-1. Enter the following commands (replace XXX.XXX.XXX.XXX with your device's IP address and YYY.YYY.YYY.YYY with your computer's IP address)    
+1. XXX.XXX.XXX.XXX 에는 기기의 IP 주소를, YYY.YYY.YYY.YYY 에는 컴퓨터의 IP 주소를 대입한 후 아래 커맨드를 입력해 주세요.    
     + `connect("XXX.XXX.XXX.XXX", 8000)`
     + `write(0x15E424, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
     + `write(0x15E0EC, tuple(map(ord, "http://YYY.YYY.YYY.YYY/update.php\0")), pid=0x25)`
