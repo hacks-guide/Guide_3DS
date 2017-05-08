@@ -7,7 +7,7 @@ permalink: /safectrtransfer-(browser).html
 이 설명은 SysNAND를 기준으로 제작되었으므로 기기가 EmuNAND 기반이라면 모든 과정을 SysNAND에 적용해 주세요. EmuNAND와 RedNAND는 [동일한 개념](http://3dbrew.org/wiki/NAND_Redirection)을 다른 방식으로 구현한 것입니다.
 {: .notice--info}
 
-만약 2DS 또는 New 3DS에서 무선 통신 기능을 끈 채 2.1.0 버전으로 다운그레이드했다면, 충전기와 배터리를 제거하고 몇 초 기다린 뒤 다시 장착하여 다시 시작하고 다시 시도할 수 있습니다.
+만약 2DS 또는 New 3DS에서 무선 통신 기능을 끈 채 2.1.0 버전으로 다운그레이드했다면, 충전기와 배터리를 제거하고 몇 초 기다린 뒤 다시 장착해 다시 시작하고 다시 시도할 수 있습니다.
 {: .notice--info}
 
 2.1.0 버전에서는 New 3DS의 microSD 관리 기능을 이용해 SD 카드에 파일을 전송할 수 없습니다. 진행하기 전에 SD 카드 리더기를 준비해 주세요.
@@ -34,27 +34,27 @@ permalink: /safectrtransfer-(browser).html
 
 {% capture notice %}
 **2.1.0 버전에서 New 3DS를 슬립 모드로 전환하면 복구가 불가능한 벽돌이 됩니다!**    
-**This only happens when shutting the lid _while your device is on_; this does not apply to turning your device off.**    
-**Your device only enters sleep mode when the lid is closed. It is not on a timer or anything like that.**    
-**Once on 2.1.0, you should continue without delay to avoid any possibility of this happening!**    
+**이는 _켜진 기기_의 화면을 닫았을 때 나타나는 증상입니다. 기기를 종료해도 됩니다.**    
+**기기는 화면을 닫을 경우에만 슬립 모드로 전환됩니다. 경과되는 시간에 따라 전환되지 않습니다.**    
+**2.1.0 버전에서 위험 요소를 피하려면 지체 없이 진행해 주세요!**    
 {% endcapture %}
 
 <div class="notice--danger">{{ notice | markdownify }}</div>
 
 #### 단계별 개요
 
-In this section, we will be flashing your device's [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) partition to 2.1.0 in order to take advantage of an oversight in 2.1.0 for the purpose of extracting the [OTP](https://www.3dbrew.org/wiki/OTP_Registers) unique to your device. 이 OTP 파일은 arm9loaderhax 설치에 필요하며, 다른 기기에서는 사용이 **불가능** 합니다.
+이번 섹션에서는 [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition) 파티션에 2.1.0 버전을 플래싱한 뒤 버전의 취약점을 이용해 기기 고유의 [OTP](https://www.3dbrew.org/wiki/OTP_Registers)를 추출합니다. 이 OTP 파일은 arm9loaderhax 설치에 필요하며, 다른 기기에서는 사용이 **불가능**합니다.
 
-This is accomplished by [installing a premade CTRTransfer image](https://www.reddit.com/r/3dshacks/comments/4zhe4a/) containing 2.1.0, copying your device specific files (such as `moveable.sed` and `SecureInfo_A`) to it, then fixing the title databases.
+이는 2.1.0 버전을 담은 [CTRTransfer 이미지 설치](https://www.reddit.com/r/3dshacks/comments/4zhe4a/) 뒤, 기기 고유의 정보를 담은 파일(`moveable.sed`와 `SecureInfo_A` 등)을 복사하고 타이틀 정보를 수정하는 것으로 이루어집니다.
 
-#### 준비물
+#### 준비 사항
 
 * 최신 버전의 [SafeCTRTransfer](https://github.com/d0k3/SafeCTRTransfer/releases/latest)
-* The 2.1.0 CTRTransfer image for your device and region     
-*(기기에 맞는 지역이 없다면, 아무 파일이나 선택해 주세요)*
-  +    <i class="fa fa-magnet" aria-hidden="true" title="이것은 마그넷 링크입니다. Use a torrent client to download the file."></i> - [New 3DS or Old 3DS or 2DS 2.1.0 - EUR - CTRTransfer](magnet:?xt=urn:btih:89acc9c1b488b8b38251de0ddf07975d6bd354a1&dn=2.1.0-4E%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
-  +    <i class="fa fa-magnet" aria-hidden="true" title="이것은 마그넷 링크입니다. Use a torrent client to download the file."></i> - [New 3DS or Old 3DS or 2DS 2.1.0 - JPN - CTRTransfer](magnet:?xt=urn:btih:3dbb9c9c85a33c6242f424dcbaebcacdd8a5912b&dn=2.1.0-4J%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
-  +    <i class="fa fa-magnet" aria-hidden="true" title="이것은 마그넷 링크입니다. Use a torrent client to download the file."></i> - [New 3DS or Old 3DS or 2DS 2.1.0 - USA - CTRTransfer](magnet:?xt=urn:btih:1609ce9ee7b0ed9b6dea0b3e7cca4fc52dad6ff4&dn=2.1.0-4U%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* 기기와 지역에 맞는 2.1.0 CTRTransfer 이미지     
+*(기기에 맞는 지역이 없다면, 기기 종류만 맞추어 아무 파일이나 선택해 주세요)*
+  +    <i class="fa fa-magnet" aria-hidden="true" title="이것은 마그넷 링크입니다. 토렌트 클라이언트를 이용해 다운로드해 주세요."></i> - [New 3DS 또는 Old 3DS 또는 2DS 2.1.0 - 유럽 - CTRTransfer](magnet:?xt=urn:btih:89acc9c1b488b8b38251de0ddf07975d6bd354a1&dn=2.1.0-4E%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+  +    <i class="fa fa-magnet" aria-hidden="true" title="이것은 마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드해 주세요."></i> - [New 3DS 또는 Old 3DS 또는 2DS 2.1.0 - 일본 - CTRTransfer](magnet:?xt=urn:btih:3dbb9c9c85a33c6242f424dcbaebcacdd8a5912b&dn=2.1.0-4J%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    <i class="fa fa-magnet" aria-hidden="true" title="이것은 마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드해 주세요."></i> - [New 3DS 또는 Old 3DS 또는 2DS 2.1.0 - 미국 - CTRTransfer](magnet:?xt=urn:btih:1609ce9ee7b0ed9b6dea0b3e7cca4fc52dad6ff4&dn=2.1.0-4U%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 
 #### 진행 방법
 
@@ -62,22 +62,23 @@ This is accomplished by [installing a premade CTRTransfer image](https://www.red
 
 1. 기기를 종료해 주세요.
 1. SD 카드를 컴퓨터에 삽입해 주세요.
-1. SD 카드의 최상위 경로에 `CTRTransfer` 폴더가 없을 경우 폴더를 만들어 주세요.
-1. Copy the 2.1.0 `.bin` and `.bin.sha` from the CTRTransfer `.zip` to the `/CTRTransfer/` folder on your SD card
-1. Copy `Launcher.dat` and `SafeCTRTransfer.dat` from the SafeCTRTransfer `.zip` to the root of your SD card
-1. Reinsert your SD card into your device
+1. SD 카드의 최상위 경로에 `CTRTransfer` 폴더가 없을 경우 폴더를 만어 주세요.
+1. CTRTransfer `.zip`에서 2.1.0 `.bin`과 `.bin.sha`를 SD 카드의 `/CTRTransfer/` 폴더에 복사해 주세요.
+1. SafeCTRTransfer `.zip`에서 `Launcher.dat`와 `SafeCTRTransfer.dat`를 SD 카드 최상단에 복사해 주세요.
+1. SD 카드를 기기에 다시 삽입해 주세요.
 1. 기기를 시작해 주세요.
 
 ##### 섹션 II - SafeCTRTransfer 실행
 
-1. Launch the browser and go to one of the following URLs on your device
+1. 기기에서 브라우저를 열고 다음 주소 중 하나에 접속해 주세요.
   + `https://dukesrg.github.io/?SafeCTRTransfer.dat`
   + `http://go.gateway-3ds.com/`
   + `http://www.reboot.ms/3ds/load.html?Launcher.dat`
   + `http://dukesrg.dynu.net/3ds/rop?GW17567.dat&Launcher.dat`
-  + Make sure to try each URL if the first one doesn't work (some versions cannot use the first one, and some versions cannot use the last three)
-  + If you get an error, [follow this troubleshooting guide](troubleshooting#ts_browser)
-1. If the exploit was successful, you will have booted into SafeCTRTransfer
+  + 첫 번째 주소로 접속이 안될 경우 다른 주소을 시도해 주세요. (일부 버전에서는 첫 번째 주소가 안되고, 일부 버전에서는 나머지 세 주소가 안됩니다.)
+  + 오류가 발생하면 이 [문제 해결 가이드](troubleshooting#ts_browser) 를 참고해 주세요.
+1. 익스플로잇이 성공적으로 실행되었다면
+SafeCTRTransfer로 시작합니다.
 
 ##### 섹션 III - CTRTransfer
 
@@ -101,8 +102,8 @@ ___
 
 {% capture notice %}
 **Putting a New 3DS on 2.1.0 in sleep mode is known to cause an UNRECOVERABLE brick!**    
-**This only happens when shutting the lid _while your device is on_; this does not apply to turning your device off.**    
-**Your device only enters sleep mode when the lid is closed. It is not on a timer or anything like that.**    
+**이는 _켜진 기기_의 화면을 닫았을 때 나타나는 증상입니다. 기기를 종료해도 됩니다.**    
+**기기는 화면을 닫을 경우에만 슬립 모드로 전환됩니다. It is not on a timer or anything like that.**    
 **Once on 2.1.0, you should continue without delay to avoid any possibility of this happening!**    
 {% endcapture %}
 
