@@ -1,0 +1,63 @@
+---
+title: "F3 (Linux)" #
+lang: el
+permalink: /el_GR/f3-(linux).html
+---
+
+This is an add-on section for checking your SD card for errors using F3.
+{: .notice--info}
+
+Ανάλογα με το μέγεθος της κάρτας SD και την ταχύτητα του υπολογιστή σας, αυτή η διαδικασία ενδέχεται να διαρκέσει πολλές ώρες!
+{: .notice--info}
+
+Αυτή η σελίδα είναι μόνο για χρήστες Linux. Εάν δεν είστε σε Linux, ελέγξτε τις σελίδες [H2testw (windows)](h2testw-(windows)) ή [F3X (mac)](f3x-(mac)).
+{: .notice--info}
+
+#### Τι χρειάζεστε
+
+* Την τελευταία έκδοση του [F3] (https://github.com/AltraMayor/f3/archive/v6.0.zip)
+
+#### Οδηγίες
+
+1. Αποσυμπιέστε το αρχείο `.zip` του f3
+1. Μεταφερθείτε στον κατάλογο του f3 χρησιμοποιώντας την εντολή `cd`
+1. Χρησιμοποιήστε την εντολή `make` για να συντάξετε το F3
+1. Εισάγετε την κάρτα SD στον υπολογιστή σας
+1. Μοντάρετε την κάρτα SD
+1. Run `./f3write <your sd card mount point>`
+1. Περιμένετε μέχρι να ολοκληρωθεί η διαδικασία. Δείτε παρακάτω ένα παράδειγμα αποτελέσματος.
+
+		$ ./f3write /media/michel/6135-3363/
+		Free space: 29.71 GB
+		Creating file 1.h2w ... OK!
+		...
+		Creating file 30.h2w ... OK!
+		Free space: 0.00 Byte
+		Average Writing speed: 4.90 MB/s
+
+1. Εκτελέστε την εντολή `./f3read <το σημείο μονταρίσματος της κάρτας SD>`
+1. Περιμένετε μέχρι να ολοκληρωθεί η διαδικασία. Δείτε παρακάτω ένα παράδειγμα αποτελέσματος.
+
+		$ ./f3read /media/michel/6135-3363/
+		                  SECTORS      ok/corrupted/changed/overwritten
+		Validating file 1.h2w ... 2097152/        0/      0/      0
+		...
+		Validating file 30.h2w ... 1491904/        0/      0/      0
+
+		  Data OK: 29.71 GB (62309312 sectors)
+		Data LOST: 0.00 Byte (0 sectors)
+			       Corrupted: 0.00 Byte (0 sectors)
+			Slightly changed: 0.00 Byte (0 sectors)
+			     Overwritten: 0.00 Byte (0 sectors)
+		Average Reading speed: 9.42 MB/s
+
+___
+
+If the test shows the result `Data LOST: 0.00 Byte (0 sectors)` your SD card is good and you can delete all `.h2w` files on your SD card
+{: .notice--success}
+
+Εάν το τεστ δείξει κάποιο άλλο αποτέλεσμα, η κάρτα SD σας μπορεί να είναι κατεστραμμένη και μπορεί να χρειαστεί να την αντικαταστήσετε!
+{: .notice--danger}
+
+Επιστροφή στο [Ας αρχίσουμε](get-started)
+{: .notice--primary}
