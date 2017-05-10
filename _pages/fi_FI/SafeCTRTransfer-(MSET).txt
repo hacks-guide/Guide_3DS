@@ -1,0 +1,123 @@
+---
+title: "SafeCTRTransfer (MSET)" #
+lang: fi
+permalink: /fi_FI/safectrtransfer-(mset).html
+---
+
+Jos olet jo hakkeroinut konsolisi aikaisemmin, ja sinulla on EmuNAND-pohjainen CFW-kokoonpano, ota huomioon, että nämä ohjeet koskevat ainoastaan SysNANDia, joten sinun tulisi seurata ohjeita sen mukaisesti. Huomaa, että termit EmuNAND ja RedNAND viittaavat [saman konseptin](http://3dbrew.org/wiki/NAND_Redirection) kahteen hiukan erilaiseen toteutukseen.
+{: .notice--info}
+
+Jos jätät langattoman yhteyden kiinni ennen kuin päivität 2DS:llä tai New 3DS:llä taaksepäin versioon 2.1.0, voit ottaa sen uudestaan käyttöön irrottamalla akun ja laturin muutamaksi sekunniksi, ja sitten käynnistämällä konsolin uudestaan.
+{: .notice--info}
+
+Huomioi, että New 3DS:n microSD-kortin hallinta (microSD Management) ei toimi versiolla 2.1.0. Varmista, että sinulla on toimiva microSD-kortinlukija tietokoneessasi ennen jatkamista.
+{: .notice--info}
+
+**Käyttääksesi tällä sivulla olevia [magneetti](https://en.wikipedia.org/wiki/Magnet_URI_scheme)linkkejä tarvitset torrent-ohjelman, kuten [Deluge](http://dev.deluge-torrent.org/wiki/Download)n**
+{: .notice--info}
+
+**Toistaiseksi konsolisi yhdistäminen internetiin VAADITAAN, jotta 2.1.0-CTRTransferin jälkeen voidaan jatkaa.**
+{: .notice--warning}
+
+**Poista konsolisi lapsilukko käytöstä ennen 2.1.0-CTRTransferia. Jos et tiedä salasanaa, käytä [tätä](https://mkey.salthax.org/) sivustoa. Jos et voi ottaa lapsilukkoa pois käytöstä, koska yhdistetty NNID on alle 13-vuotiaalle lapselle, voit sen sijaan asettaa kaikkiin kohtiin "Do not restrict".**
+{: .notice--warning}
+
+**CTRTransferin suorittaminen poistaa kaikki käyttäjän asentamat tiketit (jotka sallivat pääsyn peleihin) konsolistasi, kunnes varmuuskopio palautetaan.**
+{: .notice--danger}
+
+**Älä koskaan alusta 2DS:ää, jonka versio on 6.0.0 tai vanhempi, tai et pysty määrittämään alkuasetuksia loppuun asti ja konsolistasi tulee KÄYTTÖKELVOTON!**
+{: .notice--danger}
+
+**Älä koskaan päivitä New 3DS:ää, jonka versio on 2.1.0 (vanhan 3DS:n laiteohjelmisto), tai konsolistasi tulee KÄYTTÖKELVOTON! Sinun TÄYTYY ensin palauttaa NAND-varmuuskopio tai suorittaa CTRTransfer takaisin New 3DS:n vakiolaiteohjelmistoon!**
+{: .notice--danger}
+
+{% capture notice %}
+**Versiolla 2.1.0 olevan New 3DS:n laittaminen lepotilaan tekee siitä PYSYVÄSTI käyttökelvottoman!**    
+**Tämä tapahtuu vain sulkiessa kansi _konsolisi ollessa päällä_, eikä koske konsolisi sammuttamista.**    
+**Konsolisi menee lepotilaan vain kannen ollessa suljettuna. Ajastettua lepotilaa tms. ei siis ole.**    
+**Kun olet versiolla 2.1.0, on suositeltavaa jatkaa viipymättä välttääksesi tällaisen vahingon!**    
+{% endcapture %}
+
+<div class="notice--danger">{{ notice | markdownify }}</div>
+
+#### Katsaus vaiheisiin
+
+{% capture notice-2 %}
+
+Tässä osiossa konsolisi [CTRNAND](https://www.3dbrew.org/wiki/Flash_Filesystem#CTR_partition)-osiolle asennetaan 2.1.0, jotta pystytään käyttämään hyväksi kyseisessä versiossa olevaa virhettä konsolisi [OTP](https://www.3dbrew.org/wiki/OTP_Registers):n saamiseksi. OTP-tiedosto vaaditaan arm9loaderhaxin asentamiseen. Tiedostoa **ei voi** käyttää muilla konsoleilla.
+<br><br>
+Tämä saavutetaan [asentamalla version 2.1.0 sisältävä CTRTransfer-näköistiedosto](https://www.reddit.com/r/3dshacks/comments/4zhe4a/), kopioimalla konsolikohtaiset tiedostosi (kuten `moveable.sed` ja `SecureInfo_A`) sille ja korjaamalla sovellustietokannat.
+
+{% endcapture %}
+
+<div class="notice--info">{{ notice-2 | markdownify }}</div>
+
+#### Tarpeet
+
+* Homebrew-[aloituspakkaus](http://smealum.github.io/ninjhax2/starter.zip)
+* DS-flash-kortti, joka toimii konsolisi versiolla
+* SafeCTRTransferin [viimeisin julkaisu](https://github.com/d0k3/SafeCTRTransferWIP/releases/latest)
+* Konsolisi mallin ja alueen mukainen 2.1.0-CTRTransfer-näköistiedosto     
+*(jos laitteesi ei kuulu mihinkään näistä alueista, valitse mikä tahansa)*:
+  +    <i class="fa fa-magnet" aria-hidden="true" title="Tämä on magneettilinkki. Käytä torrent-ohjelmaa ladataksesi tiedoston."></i> – [New 3DS tai vanha 3DS tai 2DS 2.1.0 – EUR – CTRTransfer](magnet:?xt=urn:btih:89acc9c1b488b8b38251de0ddf07975d6bd354a1&dn=2.1.0-4E%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+  +    <i class="fa fa-magnet" aria-hidden="true" title="Tämä on magneettilinkki. Käytä torrent-ohjelmaa ladataksesi tiedoston."></i> – [New 3DS tai vanha 3DS tai 2DS 2.1.0 – JPN – CTRTransfer](magnet:?xt=urn:btih:3dbb9c9c85a33c6242f424dcbaebcacdd8a5912b&dn=2.1.0-4J%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    <i class="fa fa-magnet" aria-hidden="true" title="Tämä on magneettilinkki. Käytä torrent-ohjelmaa ladataksesi tiedoston."></i> – [New 3DS tai vanha 3DS tai 2DS 2.1.0 – USA – CTRTransfer](magnet:?xt=urn:btih:1609ce9ee7b0ed9b6dea0b3e7cca4fc52dad6ff4&dn=2.1.0-4U%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+
+#### Ohjeet
+
+##### Vaihe I – Valmistelut
+
+1. Sammuta konsolisi
+1. Aseta SD-korttisi tietokoneeseesi
+1. Luo `CTRTransfer`-niminen kansio SD-korttisi juureen, jos sitä ei jo ole olemassa
+1. Kopioi CTRTransfer-`.zip`-pakkauksesta 2.1.0-`.bin` ja -`.bin.sha`SD-korttisi `/CTRTransfer/`-kansioon
+
+    <div class="notice--info"><a href="{{ base_path }}/images/screenshots/ctrtransfer-file-layout.png"><div class="screenshot_image"><img src="{{ base_path }}/images/screenshots/ctrtransfer-file-layout-crop.png"></div></a></div>
+
+1. Kopioi SafeCTRTransfer-`.zip`-pakkauksesta `SafeCTRTransfer.dat` SD-korttisi juureen
+1. Kopioi `starter.zip`-pakkauksesta `starter`-kansion _sisältö_ SD-korttisi juureen
+1. Aseta SD-korttisi takaisin konsoliisi
+1. Kopioi SafeCTRTransfer-`.zip`-pakkauksesta `SafeCTRTransfer.nds` DS-flash-kortillesi
+1. Käynnistä konsolisi
+
+##### Vaihe II – SafeCTRTransferin käynnistäminen
+
+1. Käynnistä DS-flash-korttisi konsolistasi
+1. Avaa `SafeCTRTransfer.nds` flash-kortiltasi
+1. Valitse järjestelmäversiollesi sopiva vaihtoehto
+  + 4.X.X -> "4.x SafeCTRTransfer"
+  + 6.X.X -> "6.x SafeCTRTransfer"
+1. Käynnistä konsoli uudelleen, mene järjestelmäasetuksiin (System Settings), siellä muihin asetuksiin (Other Settings), profiiliin (Profile) ja valitse Nintendo DS -profiili (Nintendo DS Profile)
+1. Jos haavoittuvuuden hyödyntäminen onnistui, SafeCTRTransferin pitäisi avautua
+
+##### Vaihe III – CTRTransfer
+
+1. Anna SafeCTRTransferin alkuvalmisteluiden ja turvatarkistusten suoriutua itsestään
+  + Jos saat virheen, varmista, että kaikki tiedostot ovat oikeissa paikoissaan ja että SD-kortillasi on tarpeeksi vapaata tallennustilaa, kuten [aloitus](get-started)osiossa selitettiin
+1. Kehotettaessa syötä annettu painikeyhdistelmä vahvistaaksesi CTRTransferin versiolle 2.1.0
+  + Tämä prosessi kestää jonkin aikaa
+  + This process will automatically create a backup of your device's NAND at `/CTRTransfer/<serialnumber>_nand.bin`
+  + Jos saat kriittisen virheen, [seuraa tätä vianmääritysohjetta](troubleshooting#ts_transfer)   
+1. Kun tämä prosessi on valmis, irrota SD-korttisi konsolistasi ja käynnistä uudelleen
+  + Uudelleenkäynnistys alkaa noin 2 sekunnin kuluttua
+  + Versiolla 2.1.0 konsolisi käynnistyy mustaan ruutuun, jos SD-kortti on sisällä ennen kuin HOME-valikko latautuu
+  + Sinun on otettava SD-korttisi pois joka kerralla, kun käynnistät konsolin uudelleen versiolla 2.1.0, ja laitettava se takaisin HOME-valikon latauduttua
+  + Jätä toistaiseksi SD-korttisi pois konsolista, sillä seuraavassa osiossa kopioidaan sille tiedostoja
+  + Tämä korjataan samalla kun konsolisi palautetaan seuraavan osion aikana
+
+___
+
+*(Näytön vääristymät ja värivirheet ovat normaaleja joillakin laitteilla versiolla 2.1.0, ja ne häipyvät kun varmuuskopio palautetaan)*
+{: .notice--info}
+
+{% capture notice %}
+**New 3DS:n laittaminen lepotilaan versiolla 2.1.0 tekee siitä PYSYVÄSTI käyttökelvottoman!**    
+**Tämä tapahtuu vain sulkiessa kansi _konsolisi ollessa päällä_, eikä koske konsolisi sammuttamista.**    
+**Konsolisi menee lepotilaan vain kannen ollessa suljettuna. Mitään ajastinta tai vastaavaa ei ole.**    
+**Kun olet versiolla 2.1.0, on suositeltavaa jatkaa viipymättä välttääksesi tällaisen vahingon!**    
+{% endcapture %}
+
+<div class="notice--danger">{{ notice | markdownify }}</div>
+
+Jatka osioon [Arm9loaderhaxin asentaminen](installing-arm9loaderhax)
+{: .notice--primary}
