@@ -1,0 +1,98 @@
+---
+title: "A9LH:n päivittäminen" #
+lang: fi
+permalink: /fi_FI/updating-a9lh.html
+---
+
+### Viimeksi päivitetty: 3. marraskuuta 2016
+
+Arm9loaderhaxin varsinainen asennus koostuu tiedostoista, jotka on asennettu konsolisi NFIRM-osioille NAND-sirulla, joka on juotettu suoraan emolevyyn. Näitä tiedostoja päivitetään vain harvoin, eikä niillä oikeastaan ole muuta käyttötarkoitusta kuin käynnistää SD-kortiltasi `arm9loaderhax.bin`, joka tässä tapauksessa on Luma3DS.
+{: .notice}
+
+Jos et tiedä asennettuna olevan arm9loaderhaxin versiota, asenna viimeisin versio näiden ohjeiden avulla. Viimeisimmän version asentaminen viimeisimmän version päälle ei vaikuta mihinkään.
+{: .notice--info}
+
+Jos olet asettanut PIN-koodin Lumaa varten, on se otettava pois käytöstä näiden toimien ajaksi. Voit ottaa PINin käyttöön uudestaan päivittämisen jälkeen.
+{: .notice--info}
+
+Jos käytät käynnistystiedostoa, joka ei tee näytön alustamista itse (kuten Bootanim9), sinun täytyy nimetä se muotoon `arm9loaderhax_si.bin`, eikä muotoon `arm9loaderhax.bin`
+{: .notice--info}
+
+Data_inputin versio viittaa vain kyseisen `.zip`-pakkauksen versioon, *eikä* vaikuta a9lh:n (käynnistystiedostojen) päivittämiseen. Sillä ei siis ole käytännön eroa asennusprosessin ulkopuolella.
+{: .notice--info}
+
+**Käyttääksesi tällä sivulla olevia [magneetti](https://en.wikipedia.org/wiki/Magnet_URI_scheme)linkkejä tarvitset torrent-ohjelman, kuten [Deluge](http://dev.deluge-torrent.org/wiki/Download)n**
+{: .notice--info}
+
+Näissä ohjeissa päivitetään myös muita ohjelmia sekä AES-avaintietokanta.
+{: .notice--success}
+
+#### Tarpeet
+
+* <i class="fa fa-magnet" aria-hidden="true" title="Tämä on magneettilinkki. Käytä torrent-ohjelmaa tiedoston lataamiseen."></i> – [`aeskeydb.bin`](magnet:?xt=urn:btih:18b3a17f78e2376e05feaa150749d9fd689b25dc&dn=aeskeydb.bin&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* <i class="fa fa-magnet" aria-hidden="true" title="Tämä on magneettilinkki. Käytä torrent-ohjelmaa ladataksesi tiedoston.."></i> – [`data_input_v4.zip`](magnet:?xt=urn:btih:00f03ff69b5961307303d5e4778a2f65a528bf2d&dn=data%5Finput%5Fv4.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* SafeA9LHInstallerin [viimeisin julkaisu](https://github.com/AuroraWright/SafeA9LHInstaller/releases/latest) *(`.7z`-tiedosto)*
+* Arm9loaderhaxin [viimeisin julkaisu](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(`.7z`-tiedosto)*
+* GodMode9:n [viimeisin julkaisu](https://github.com/d0k3/GodMode9/releases)
+
+#### Ohjeet
+
+**KORVAA mahdolliset olemassa olevat tiedostot SD-kortillasi tämän sivun ohjeissa.**
+{: .notice--info}
+
+##### Vaihe I – Valmistelut
+
+1. Sammuta konsolisi
+1. Aseta SD-korttisi tietokoneeseesi
+1. Poista SD-korttisi juuresta `aeskeydb.bin`, jos se on olemassa
+1. Poista SD-korttisi juuresta `a9lh`-kansio, jos se on olemassa
+1. Kopioi `aeskeydb.bin` SD-korttisi `/files9/`-kansioon
+1. Kopioi GodMode9-`.zip`-pakkauksesta `GodMode9.bin` SD-korttisi `/luma/payloads/`-kansioon
+  + Jos `start_Hourglass9.bin` on jo olemassa tässä kansiossa, poista se
+1. Kopioi SafeA9LHInstaller-`.zip`-pakkauksesta `arm9loaderhax.bin` SD-korttisi `/luma/payloads/`-kansioon
+1. Uudelleennimeä `/luma/payloads/`-kansiossa oleva `arm9loaderhax.bin` muotoon `safea9lhinstaller.bin`
+1. Kopioi data_input-`.zip`-pakkauksesta `a9lh`-kansio SD-korttisi juureen
+1. Kopioi arm9loaderhax-`.7z`-pakkauksen _sisältö_ SD-korttisi `a9lh`-kansioon
+1. Aseta SD-korttisi takaisin konsoliisi
+
+##### Vaihe II – Käynnistystiedoston päivittäminen
+
+1. Avaa Luma3DS:n ketjulatausvalikko pitämällä (START)-painiketta pohjassa käynnistyksen aikana
+1. Avaa SafeA9LHInstaller painamalla (A):ta
+1. Paina (SELECT)-painiketta päivittääksesi arm9loaderhaxin
+1. Sammuta konsolisi
+1. Aseta SD-korttisi tietokoneeseesi
+1. Poista SD-korttisi juuresta `a9lh`-kansio
+1. Poista `/luma/payloads/`-kansiosta `safea9lhinstaller.bin`
+1. Aseta SD-korttisi takaisin konsoliisi
+
+##### Vaihe III – Luma3DS:n määrittäminen
+
+1. Käynnistä konsolisi pitäen (SELECT)-painiketta pohjassa avataksesi Luma3DS:n määritysvalikon
+1. Käytä (A):ta ja ristiohjainta ottaaksesi seuraavat asetukset käyttöön:    
+  + **"Autoboot SysNAND"**
+  + **"Use SysNAND FIRM if booting with R"**
+  + **"Show NAND or user string in System Settings"**
+1. Paina (START)-painiketta tallentaaksesi ja käynnistääksesi uudelleen
+
+##### Vaihe IV – Luma3DS:n asentaminen CTRNANDiin
+
+1. Avaa Luma3DS:n ketjulatausvalikko pitämällä (START)-painiketta pohjassa käynnistyksen aikana
+1. Avaa GodMode9 painamalla (A):ta
+1. Mene hakemistoon `[0:] SDCARD`
+1. Paina (Y):tä `arm9loaderhax.bin`-tiedoston kohdalla kopioidaksesi sen
+1. Paina (B):tä palataksesi päävalikkoon
+1. Mene hakemistoon `[1:] SYSNAND CTRNAND`
+1. Paina (Y):tä liittääksesi `arm9loaderhax.bin`-tiedoston
+1. Valitse "Copy path(s)"
+  + Ylikirjoita kehotettaessa `arm9loaderhax.bin`, jos sellainen on jo olemassa
+1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1) ja syötä annettu painikeyhdistelmä
+1. Paina (B):tä palataksesi päävalikkoon
+1. Pidä (R):ää pohjassa ja paina samalla (B):tä irrottaaksesi SD-korttisi
+1. Irrota SD-korttisi konsolistasi
+1. Paina (START)-painiketta käynnistääksesi konsolisi uudelleen SD-kortin ollessa irrotettuna
+  + Kun käynnistät konsolin vähintään kerran ilman SD-korttia, voit määrittää CTRNAND-pohjaisen Luma3DS-asennuksen asetukset
+1. Käytä (A):ta ja ristiohjainta ottaaksesi seuraavat asetukset käyttöön:    
+  + **"Show NAND or user string in System Settings"**
+1. Aseta SD-korttisi takaisin konsoliisi
+1. Paina (START)-painiketta tallentaaksesi ja käynnistääksesi uudelleen
