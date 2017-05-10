@@ -1,0 +1,76 @@
+---
+layout: splash
+title: "3DS-opas" #
+header:
+  overlay_color: "#5e616c" #
+  overlay_image: images/home-page-feature.jpg
+  overlay_filter: 0.5
+  cta_label: "Aloita" #
+  cta_url: "/fi_FI/get-started" #
+  caption:
+excerpt: "Perusteellinen opas 3DS:n mukautettuun laiteohjelmistoon, <br /> vakio-ohjelmistosta arm9loaderhaxiin.<br />" #
+lang: fi
+permalink: /fi_FI/index.html
+---
+
+{% capture notice-home %}
+This guide is for retail (consumer purchased; not from the Nintendo Developer Program) consoles _only_!    
+If you have a developer ("PANDA" or "SNAKE") console, check out [devGuide](https://dev.3ds.guide).
+{% endcapture %}
+
+<div class="notice--danger">{{ notice-home | markdownify }}</div>
+
+This guide needs *your* help to [translate](https://translate.3ds.guide/) it to other languages!
+{: .notice--success}
+
+This guide needs *your* help to seed [these](https://3ds.guide/rss.xml) torrents!
+{: .notice--success}
+
+Read all of the introductory pages before proceeding.
+{: .notice--warning}
+
+## Mikä on homebrew?
+
+[**Homebrew**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) viittaa yleensä ohjelmistoon, joka ei ole Nintendon hyväksymä. Se mahdollistaa kotitekoisten pelien, työkalujen (kuten tallennusten muokkaus ja varmuuskopiointi) ja emulaattoreiden käyttämisen.
+
+Useimmissa tapauksissa homebrew'n ajaminen konsolillasi on täysin ilmaista, käyttäen [Nintendo 3DS Sound -sovellusta](homebrew-launcher-(soundhax)) (jos olet versiolla >=11.4.0, et voi jatkaa homebrew'ta pidemmälle). Homebrew-ohjelmien ajamiseksi on myös menetelmiä, joissa hyödynnetään haavoittuvuuksia peleissä sekä konsolin selaimessa.
+
+## Mikä on mukautettu laiteohjelmisto?
+
+**Mukautettu laiteohjelmisto** (engl. custom firmware, "CFW") sallii kehittyneempiä hackejä, joihin ei käyttäjätilan homebrew'lla pysty. Esimerkkinä allekirjoitusten paikkaaminen, joka sallii sinun asentaa allekirjoittamattomia sovelluksia, jotka ilmestyvät suoraan HOME-valikkoosi.
+
+CFW:n voi asentaa helposti mille tahansa konsolille, jonka versio on 11.3.0 tai vanhempi.
+
+## Mitä tässä oppaassa asennetaan?
+
+Tämän oppaan lopputavoitteena on saada täysin muokkaamaton 3DS vakiolaiteohjelmistosta
+arm9loaderhax-käyttöiseen mukautettuun laiteohjelmistoon. Joissain oppaan versioissa homebrew'ta hyödynnetään lähtökohtana, mutta mukautettu laiteohjelmisto on silti lopputavoitteena.
+
+Arm9loaderhax on uusin sekä paras tapa käynnistää mukautettu laiteohjelmisto, joka antaa lähes täydet oikeudet järjestelmään vain millisekuntien viiveellä käynnistyksessä, samaan tapaan kuin BootMii-ohjelma Wiillä.
+
+Arm9loaderhaxin hyödyt verrattuna muihin käynnistystapoihin ovat lukuisat, minkä takia tämän oppaan käyttöä suositellaan muiden, vanhentuneisiin ratkaisuihin (kuten menuhax tai rxTools) perustuvien oppaiden sijasta.
+
+## Mitä voin tehdä mukautetulla laiteohjelmistolla?
+
++ Pelata kaikkia kortilla julkaistuja sekä eShop-pelejä alueesta riippumatta
++ Customize your HOME Menu with user-created [themes](https://3dsthem.es/), [badges](https://badges.3dsthem.es/), and [splash screens](https://splash.3dsthem.es/)
++ Käyttää "ROM-hackejä" omistamissasi peleissä
++ Ottaa kuvankaappauksia peleistä ja sovelluksista
++ [Backup, edit, and restore](https://gbatemp.net/threads/413143/) saves for many games
++ Pelata vanhempien konsolien pelejä eri emulaattoreilla käyttäen RetroArchia tai yksittäisemulaattoreita. (Toimii parhaiten New Nintendo 3DS:llä)
++ Asentaa homebrew-sovelluksia laitteellesi ja saada ne näkymään HOME-valikossasi
++ Kopioida fyysiset pelisi kortilta asennettavaan muotoon ja pelata niitä ilman korttia
++ Vain New 3DS: suoratoistaa livepelikuvaa tietokoneellesi langattomasti NTR-CFW:llä
++ Käyttää monia vanhoja Nintendo DS -flash-kortteja, jotka on estetty jo aikaa sitten tai jotka eivät ole koskaan toimineet 3DS:llä
++ Päivittää turvallisesti viimeisimpään järjestelmäversioon ilman pelkoa homebrew'n menettämisestä
+
+## Mitä minun täytyy tietää ennen aloittamista?
+
++ **Ennen oppaan aloittamista sinun on tiedettävä 3DS-hakkeroinnin riskit: JOKA kerta, kun muokkaat konsoliasi, on mahdollisuus siihen, että se vioittuu PYSYVÄSTI. Vaikkakin harvinaista, se on silti mahdollista, joten seuraa KAIKKIA ohjeita TARKALLEEN.**
++ Jos olet jo hakkeroinut konsolisi EmuNAND-kokoonpanoa varten, ja haluat siirtää sisältösi uuteen SysNAND-CFW-kokoonpanoon, seuraa kaikkia ohjeita ja palauta EmuNAND osiossa [Arm9loaderhaxin asennus](installing-arm9loaderhax), siinä vaiheessa kun ohje siihen kehottaa.
++ Tämä opas toimii New 3DS:llä, vanhalla 3DS:llä sekä 2DS:llä kaikilla alueilla, laiteohjelmistolla 11.3.0 tai sitä vanhemmilla versioilla *(lukuunottamatta CHN-/TWN-alueita)*.
++ Jos kaikki menee suunnitelmien mukaan, et menetä mitään tietoja ja päädyt samaan kokoonpanoon, joka sinulla oli alussa (pelit, NNID, tallennukset jne. säilyvät).
++ **Pidä konsolisi latauksessa koko prosessin ajan välttyäksesi tietojen menettämiseltä tai odottamattomasta sammumisesta aiheutuvalta vahingolta!**
++ SD-korttisi on oltava [MBR, ei GPT](http://www.howtogeek.com/245610/) (laitteen mukana tuleva kortti on oletuksena MBR).
++ Jos sinun on alustettava uusi SD-kortti, voit käyttää [`guiformat`](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm)-ohjelmaa ja asettaa varausyksiköksi 32 kt.
++ 2DS on ohjelmistoltaan identtinen vanhan 3DS:n kanssa, joten kaikki kohdat, joissa viitataan "vanhaan 3DS:ään", pätevät myös 2DS:ään.
