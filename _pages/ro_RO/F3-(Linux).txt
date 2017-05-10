@@ -1,0 +1,63 @@
+---
+title: "F3 (Linux)" #
+lang: ro
+permalink: /ro_RO/f3-(linux).html
+---
+
+This is an add-on section for checking your SD card for errors using F3.
+{: .notice--info}
+
+În funcție de mărimea cardului SD și de viteza computerului dumneavoastră, acest proces poate dura până la câteva ore!
+{: .notice--info}
+
+Această pagină este doar pentru utilizatorii de Linux. Dacă nu sunteți pe Linux, verificați paginile [H2testw (windows)](h2testw-(windows)) sau [F3X (mac)](f3x-(mac)).
+{: .notice--info}
+
+#### Ce vă trebuie
+
+* Cea mai recentă versiune de [F3] (https://github.com/AltraMayor/f3/archive/v6.0.zip)
+
+#### Instrucţiuni
+
+1. Dezarhivaţi fişierul '.zip' F3X
+1. 'cd' în directorul f3
+1. Rulați 'make ' pentru a compila F3
+1. Introduceți cardul SD în computer
+1. Montați cardul SD
+1. Executaţi '. / f3write <your sd card mount point>'
+1. Așteptați până când procesul este terminat. Vezi mai jos un exemplu de rezultat.
+
+		$. / f3write /media/michel/6135-3363 /
+		Spaţiu liber: 29,71 GB
+		Crearea fişierului 1.h2w... OK!
+		...
+		Crearea fişierului 1.h2w ... OK!
+		Spaţiu liber: 0.00 octet
+		Viteză medie de scriere: 4.90 MB/s
+
+1. Executaţi '. / f3write <your sd card mount point>'
+1. Așteptați până când procesul este terminat. Vezi mai jos un exemplu de rezultat.
+
+		$ ./f3read /media/michel/6135-3363/
+		                  SECTORS      ok/corrupted/changed/overwritten
+		Validare fișier 1.h2w... 2097152/        0/      0/      0
+		...
+		Validare fișier 30.h2w ... 1491904/        0/      0/      0
+
+		  Data OK: 29.71 GB (62309312 sectors)
+		Datele PIERDUTE: 0.00 octet (sectoarele 0)
+			       Corupt: Byte 0.00 (0 sectoare)
+			Uşor schimbat: 0.00 octet (sectoarele 0)
+			     Suprascrise: 0.00 octet (sectoarele 0)
+		Viteză medie de citire: 9.42 MB/s
+
+___
+
+If the test shows the result `Data LOST: 0.00 Byte (0 sectors)` your SD card is good and you can delete all `.h2w` files on your SD card
+{: .notice--success}
+
+Dacă testul arată alte rezultate, cardul SD ar putea fi corupt sau deteriorat și s-ar putea să trebuiască să îl înlocuiți!
+{: .notice--danger}
+
+Întoarceți-vă la [Începe](get-started)
+{: .notice--primary}
