@@ -36,7 +36,7 @@ Kun arm9loaderhax ja Luma3DS on asennettu oikeilla asetuksilla, palautetaan aiem
 Tämän prosessin aikana myös asennetaan muun muassa seuraavat ohjelmat:    
 
 +  **FBI** *(asentaa CIA-muotoisia pelejä ja sovelluksia)*
-+  **Themely** *(installs custom themes)*
++  **Themely** *(asentaa mukautettuja teemoja)*
 +  **Luma3DS Updater** *(päivittää CFW-asennuksesi helposti)*
 +  **GodMode9** *(monikäyttöinen työkalu, jolla voi tehdä NANDiin ja pelikorttiin liittyviä toimintoja)*
 
@@ -51,11 +51,11 @@ Tämän prosessin aikana myös asennetaan muun muassa seuraavat ohjelmat:
 * SafeA9LHInstallerin [viimeisin haara](https://github.com/Plailect/SafeA9LHInstaller/releases/latest) *(`.7z`-tiedosto)*
 * Arm9loaderhaxin [viimeisin julkaisu](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(`.7z`-tiedosto)*
 * Luma3DS:n [viimeisin julkaisu](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z`-tiedosto)*
-* The latest release of [Themely](https://github.com/ErmanSayin/Themely/releases/latest) *(the `.cia` file)*
+* Themelyn [viimeisin julkaisu](https://github.com/ErmanSayin/Themely/releases/latest) *(`.cia`-tiedosto)*
 * Hblauncher_loaderin [viimeisin julkaisu](https://github.com/yellows8/hblauncher_loader/releases/latest)
 * GodMode9:n [viimeisin julkaisu](https://github.com/d0k3/GodMode9/releases)
 * Luma3DS Updaterin [viimeisin julkaisu](https://github.com/Hamcha/lumaupdate/releases/latest)
-* The latest release of [DSP1](https://github.com/zoogie/DSP1/releases/latest)
+* DSP1:n [viimeisin julkaisu](https://github.com/zoogie/DSP1/releases/latest)
 * FBI:n [viimeisin julkaisu](https://github.com/Steveice10/FBI/releases/latest)
 * **Vain vanha 3DS ja 2DS:** Vanhan 3DS:n version 11.2.0-35 [otherapp-tiedosto](https://smealum.github.io/3ds/#otherapp) (konsolisi alueen mukainen)
 
@@ -64,7 +64,7 @@ Tämän prosessin aikana myös asennetaan muun muassa seuraavat ohjelmat:
 ##### Vaihe I – Valmistelut
 
 1. Aseta SD-korttisi tietokoneeseesi
-1. If they exist, copy `<serialnumber>_nand.bin` and `<serialnumber>_nand.bin.sha` from the `/CTRTransfer/` folder on your SD card to a safe location on your computer
+1. **Jos `<serialnumber>_nand.bin` ja `<serialnumber>_nand.bin.sha` ovat olemassa SD-korttisi `/CTRTransfer/`-kansiossa, kopioi ne turvalliseen paikkaan tietokoneellasi
   + Varmuuskopioi useaan eri paikkaan (kuten pilvipalveluihin)
   + Tämä varmuuskopiointi pelastaa sinut laitteen vioittumiselta, jos jokin menee pieleen tulevaisuudessa
 1. Luo `cias`-niminen kansio SD-korttisi juureen, jos sitä ei jo ole olemassa
@@ -76,8 +76,8 @@ Tämän prosessin aikana myös asennetaan muun muassa seuraavat ohjelmat:
 1. Kopioi hblauncher_loader-`.zip`-pakkauksesta `hblauncher_loader.cia` SD-korttisi `/cias/`-kansioon
 1. Kopioi Luma3DS Updater -`.zip`-pakkauksesta `lumaupdater.cia` SD-korttisi `/cias/`-kansioon
 1. Kopioi FBI-`.zip`-pakkauksesta `FBI.cia` SD-korttisi `/cias/`-kansioon
-1. Copy `DSP1.cia` to the `/cias/` folder on your SD card
-1. Copy `Themely.cia` to the `/cias/` folder on your SD card
+1. Kopioi `DSP1.cia` SD-korttisi `/cias/`-kansioon
+1. Kopioi `Themely.cia` SD-korttisi `/cias/`-kansioon
 
     <div class="notice--info"><a href="{{ base_path }}/images/screenshots/cias-file-layout.png"><div class="screenshot_image"><img src="{{ base_path }}/images/screenshots/cias-file-layout-crop.png"></div></a></div>
 
@@ -109,7 +109,7 @@ Tämän prosessin aikana myös asennetaan muun muassa seuraavat ohjelmat:
 1. Asennusohjelma asentaa arm9loaderhaxin konsolillesi (tämä kestää vain hetken)
 1. Sammuta konsolisi millä tahansa painikkeella
 1. Aseta SD-korttisi tietokoneeseesi
-1. Copy your device specific `otp.bin` from the `/a9lh/` folder on your SD card to a safe location on your computer and back it up to multiple locations (such as online file storage)
+1. Kopioi SD-korttisi `/a9lh/`-kansiosta konsolikohtainen `otp.bin`-tiedostosi turvalliseen paikkaan tietokoneellasi ja varmuuskopioi se useaan eri paikkaan (kuten pilvipalveluihin)
 1. Aseta SD-korttisi takaisin konsoliisi
 
 ##### Vaihe III – Luma3DS:n määrittäminen
@@ -128,7 +128,7 @@ Tämän prosessin aikana myös asennetaan muun muassa seuraavat ohjelmat:
 
 ##### Vaihe IV – Järjestelmän palauttaminen
 
-If, before following this guide, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand) instead of doing the first nine steps in this section.
+Jos sinulla oli ennen tämän oppaan aloittamista EmuNAND-kokoonpano, ja haluaisit siirtää sen sisällön uuteen SysNAND-CFW-kokoonpanoosi, seuraa osiota [EmuNANDin siirtäminen](move-emunand) tämän vaiheen yhdeksän ensimmäisen kohdan sijaan.
 {: .notice--info}
 
 1. Avaa Luma3DS:n ketjulatausvalikko pitämällä (START)-painiketta pohjassa käynnistyksen aikana
