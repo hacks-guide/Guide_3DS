@@ -13,18 +13,20 @@ Soundhax è compatibile con le versioni del software comprese tra 9.0.0 e 11.3.0
 Assicurati che la comunicazione wireless sia attiva dato che udsploit (usato nella prossima pagina) ha bisogno di poter accedere al modulo wireless della console, e alcune (come il New 3DS e il 2DS) non possono gestirne l'attivazione tramite Homebrew Launcher. Non è necessaria la connessione ad un access point.
 {: .notice--info}
 
+{% capture notice-1 %}
+
 Tieni presente che tramite scheda di gioco vengono aggiornate solamente le applicazioni principali del sistema, come le Impostazioni della console, il menu HOME, ecc. Non vengono invece aggiornate le funzionalità come Sound Nintendo 3DS o le funzionalità che necessitano di Internet, come ad esempio il Trasferimento dati, il Browser Internet, la Piazza Mii StreetPass o l'eShop.
-{: .notice--info}
+<br><br>
+Ciò significa che se aggiornate con una scheda di gioco da una versione avente una versione di Sound Nintendo 3DS obsoleta *(<7.0.0 per Old 3DS EUR, USA, JAP e KOR)* ad una versione con la stessa applicazione aggiornata, [Soundhax](homebrew-launcher-(soundhax)) non funzionerà! Dovrai utilizzare un [metodo alternativo](homebrew-launcher-(alternatives)) per avviare l'Homebrew Launcher!
+{% endcapture %}
 
-Questo significa che un aggiornamento tramite scheda di gioco ad una versione di sistema inferiore alla 9.0.0 renderà inutilizzabile [Soundhax](homebrew-launcher-(soundhax))! Dovrai utilizzare un [metodo alternativo](homebrew-launcher-(alternatives)) per avviare l'Homebrew Launcher!
-{: .notice--warning}
-
+<div class="notice--warning">{{ notice-1 | markdownify }}</div>
 
 #### Cosa serve
 
 * L'[Homebrew Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
-* The latest release of [Soundhax](http://soundhax.com/) *(for your device and region)*
-* The [otherapp payload](https://smealum.github.io/3ds/#otherapp) *(for your version and region)*
+* L'ultima versione di [Soundhax](http://soundhax.com/) *(adatta alla tua console e alla tua regione)*
+* Il file [otherapp payload](https://smealum.github.io/3ds/#otherapp) *(adatto alla versione e alla regione della console)*
 
 #### Istruzioni
 
@@ -34,26 +36,30 @@ Questo significa che un aggiornamento tramite scheda di gioco ad una versione di
 1. Copia il file `.m4a`di Soundhax nella directory principale della tua scheda SD
 1. Copia il file otherapp payload nella directory principale della tua scheda SD e rinominalo in `otherapp.bin`
 
-    <div class="notice--info"><a href="{{ base_path }}/images/screenshots/soundhax-file-layout.png"><div class="screenshot_image"><img src="{{ base_path }}/images/screenshots/soundhax-file-layout-crop.png"></div></a></div>
+    ![]({{ base_path }}/images/screenshots/soundhax-file-layout.png)
+    {: .notice--info}
 
 1. Reinserisci la scheda SD nel Nintendo 3DS
 1. Accendi la console
 1. Avvia Sound Nintendo 3DS
 
-    <div class="notice--info"><a href="{{ base_path }}/images/screenshots/soundhax-welcome.png"><div class="screenshot_image"><img src="{{ base_path }}/images/screenshots/soundhax-welcome-crop.png"></div></a></div>
+    ![]({{ base_path }}/images/screenshots/soundhax-welcome.png)
+    {: .notice--info}
 
-1. If you've never opened Nintendo 3DS Sound before and get tips on how to use it from a bird icon, go through all of the bird tips, then close the app normally and relaunch it
-  + In this situation, launching Soundhax immediately would cause these tips to appear on every launch of the Nintendo 3DS Sound until this is done
+1. Se non hai mai aperto Sound Nintendo 3DS, riceverai suggerimenti sul suo utilizzo dalla mascotte dell'applicazione. Scorrili tutti, quindi chiudi e riapri l'applicazione
+  + Se non chiudi Sound Nintendo 3DS, l'esecuzione di Soundhax farebbe riapparire i consigli ad ogni successivo avvio dell'applicazione finché non viene seguita questa procedura
 1. Seleziona `/Scheda SD`, quindi avvia "<3 nedwill 2016"
   + Potrebbero essere necessari più tentativi
   + Se la console dovesse bloccarsi, forzane lo spegnimento tenendo premuto il pulsante di accensione, quindi riprova
-  + If you get a red screen, ensure you copied _the contents of_ the `starter` folder to the root of your SD card
+  + Se ottieni una schermata rossa, assicurati di aver copiato _il contenuto_ della cartella `starter` nella directory principale della tua scheda SD
 
-    <div class="notice--info"><a href="{{ base_path }}/images/screenshots/soundhax-launch.png"><div class="screenshot_image"><img src="{{ base_path }}/images/screenshots/soundhax-launch-crop.png"></div></a></div>
+    ![]({{ base_path }}/images/screenshots/soundhax-launch.png)
+    {: .notice--info}
 
 1. La console dovrebbe ora avviare l'Homebrew Launcher
 
-    <div class="notice--info"><a href="{{ base_path }}/images/screenshots/homebrew-launcher.png"><div class="screenshot_image"><img src="{{ base_path }}/images/screenshots/homebrew-launcher-crop.png"></div></a></div>
+    ![]({{ base_path }}/images/screenshots/homebrew-launcher.png)
+    {: .notice--info}
 
 ___
 
