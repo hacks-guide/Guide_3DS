@@ -13,47 +13,53 @@ Soundhax 相容於 9.0.0 至 11.3.0 的歐、日、韓及美區的系統版本�
 請確保你裝置的無線網路已經開啟，因為 udsploit（在下一頁中使用）將需要它才能使用，某些裝置（New 3DS 及 2DS）無法從 Homebrew Launcher 調整無線通信設置。 只需要將無線網路啟動即可；不須連接至任何網路或熱點。
 {: .notice--info}
 
+{% capture notice-1 %}
+
 請注意，卡帶更新僅會更新系統的核心組件，像是系統設定、HOME 主選單等。 卡帶更新不會更新音樂播放器或是線上下載的功能，如系統轉移、網頁瀏覽器、StressPass Mii 廣場、或是 eShop。
-{: .notice--info}
+<br><br>
+這也就是說，如果本身系統版本有安裝較舊版的音樂撥放器*（歐、日、韓、及美版的原 3DS 的版本為 <7.0.0）*且透過含有較新版本音樂撥放器的卡帶進行更新，[Soundhax](homebrew-launcher-(soundhax)) 漏洞將無法正常執行！ 你將會需要透過[另一個方法](homebrew-launcher-(alternatives))才能使用 Homebrew Launcher。
+{% endcapture %}
 
-也就是說，從一個帶有 9.0.0 或以下版本的卡帶更新將無法使用 [Soundhax](homebrew-launcher-(soundhax))！ 你將會需要透過[另一個方法](homebrew-launcher-(alternatives))才能使用 Homebrew Launcher。
-{: .notice--warning}
-
+<div class="notice--warning">{{ notice-1 | markdownify }}</div>
 
 #### 必備項目
 
 * 自製軟體[入門套件](http://smealum.github.io/ninjhax2/starter.zip)
-* The latest release of [Soundhax](http://soundhax.com/) *(for your device and region)*
-* The [otherapp payload](https://smealum.github.io/3ds/#otherapp) *(for your version and region)*
+* 最新版的 [Soundhax](http://soundhax.com/) *（選擇對應你裝置的區域及型號）*
+* [otherapp 啟動程式](https://smealum.github.io/3ds/#otherapp) *（選擇對應你裝置的區域及型號）*
 
 #### 操作說明
 
 1. 關閉你的裝置
 1. 將 SD 卡插入電腦中
-1. 解壓`starter.zip`中`starter`資料夾中的 _所有內容_ 至 SD 卡的根目錄底下
+1. 解壓 `starter.zip` 的 `starter` 資料夾中的 _所有內容_ 至 SD 卡的根目錄底下
 1. 複製 Soundhax `.m4a` 至 SD 卡的根目錄底下
 1. 複製 otherapp 啟動程式到 SD 卡的根目錄底下，並重新命名其檔名為 `otherapp.bin`
 
-    <div class="notice--info"><a href="{{ base_path }}/images/screenshots/soundhax-file-layout.png"><div class="screenshot_image"><img src="{{ base_path }}/images/screenshots/soundhax-file-layout-crop.png"></div></a></div>
+    ![]({{ base_path }}/images/screenshots/soundhax-file-layout.png)
+    {: .notice--info}
 
 1. 將 SD 卡插回裝置中
 1. 啟動你的裝置
 1. 啟動音樂播放程式（Nintendo 3DS Sound）
 
-    <div class="notice--info"><a href="{{ base_path }}/images/screenshots/soundhax-welcome.png"><div class="screenshot_image"><img src="{{ base_path }}/images/screenshots/soundhax-welcome-crop.png"></div></a></div>
+    ![]({{ base_path }}/images/screenshots/soundhax-welcome.png)
+    {: .notice--info}
 
-1. If you've never opened Nintendo 3DS Sound before and get tips on how to use it from a bird icon, go through all of the bird tips, then close the app normally and relaunch it
-  + In this situation, launching Soundhax immediately would cause these tips to appear on every launch of the Nintendo 3DS Sound until this is done
+1. 如果你從未開啟過音樂撥放器或曾未聽過撥放器內鳥的提示，請一一略過鳥的提示，並關閉及重啟本程式
+  + 在這情況下，如果直接啟動 Soundhax，這些提示每次都會跳出來；除非你先跳過提示，然後再正常重新啟動播放程式
 1. 選擇「/SDCARD」，並播放「<3 nedwill 2016」
   + 可能需要嘗試多次
   + 如果當機的話，按住電源紐強制重啟你的裝置在試一次即可
-  + If you get a red screen, ensure you copied _the contents of_ the `starter` folder to the root of your SD card
+  + 如果你只看到紅屏，請確保你已將 `starter` 資料夾內的 _所有內容_ 複製至 SD 卡的根目錄下
 
-    <div class="notice--info"><a href="{{ base_path }}/images/screenshots/soundhax-launch.png"><div class="screenshot_image"><img src="{{ base_path }}/images/screenshots/soundhax-launch-crop.png"></div></a></div>
+    ![]({{ base_path }}/images/screenshots/soundhax-launch.png)
+    {: .notice--info}
 
 1. 你的主機應該就會啟動 Homebrew Launcher 了
 
-    <div class="notice--info"><a href="{{ base_path }}/images/screenshots/homebrew-launcher.png"><div class="screenshot_image"><img src="{{ base_path }}/images/screenshots/homebrew-launcher-crop.png"></div></a></div>
+    ![]({{ base_path }}/images/screenshots/homebrew-launcher.png)
+    {: .notice--info}
 
 ___
 
