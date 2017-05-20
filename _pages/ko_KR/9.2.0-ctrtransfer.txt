@@ -4,14 +4,17 @@ lang: ko
 permalink: /ko_KR/9.2.0-ctrtransfer.html
 ---
 
-CTRTransfer 뒤 설치한 게임이 보이지 않을 수 있습니다. 이는 CTRTransfer 과정 중 티켓이 제거되기 때문이며, 티켓을 백업해야 하는 이유이기도 합니다. 티켓은 이 가이드의 마지막 부분에서 복원됩니다.
-{: .notice--info}
+This is add-on section for installing a 9.2.0 CTRTransfer image to your device.
+{: .notice--primary}
 
 이 페이지의 [마그넷](https://en.wikipedia.org/wiki/Magnet_URI_scheme) 링크를 사용하려면
  [Deluge](http://dev.deluge-torrent.org/wiki/Download)와 같은 토렌트 클라이언트가 필요합니다.
 {: .notice--info}
 
-9.2.0 CTRTransfer의 목적은 기존의 NAND에서 발생하는 오류를 해결하기 위한 것이므로, 이 과정에서는 2.1.0 CTRTransfer와 달리 티켓만 백업합니다. 티켓을 복구하지 않으면 설치한 게임과 저장 데이터 모두를 잃게 됩니다!
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+{: .notice--info}
+
+**You MUST have already installed Luma3DS and boot9strap or arm9loaderhax to use this.**
 {: .notice--danger}
 
 #### 준비물
@@ -35,6 +38,7 @@ CTRTransfer 뒤 설치한 게임이 보이지 않을 수 있습니다. 이는 CT
 1. 기기를 종료해 주세요.
 1. SD 카드를 컴퓨터에 삽입해 주세요.
 1. SD 카드의 최상위 경로에 `cias` 폴더가 없을 경우 폴더를 만어 주세요.
+1. SD 카드의 최상위 경로에 `files9` 폴더가 없을 경우 폴더를 만어 주세요.
 1. Godmode9 `.zip`에서 `Godmode9.bin`을 SD 카드의 `/luma/payloads/` 폴더에 복사해 주세요.
 1. CTRTransfer `.zip`에서 9.2.0 CTRTransfer image `.bin`을 SD 카드의 `/files9/` 폴더로 복사해 주세요.
 1. FBI `.zip`에서 `FBI.cia`를 SD 카드의 `/cias/` 폴더에 복사해 주세요.
@@ -42,7 +46,7 @@ CTRTransfer 뒤 설치한 게임이 보이지 않을 수 있습니다. 이는 CT
 
 ##### 섹션 II - CTRTransfer
 
-1. 시작 중 (start)를 눌러 arm9loaderhax에서 Luma3DS chainloader 메뉴를 실행해 주세요.
+1. Launch the Luma3DS chainloader menu by holding (Start) during boot
 1. (A)를 눌러 GodMode9을 실행해 주세요.
 1. `[0:] SDCARD` ->`files9`으로 이동해 주세요.
 1. CTRTransfer `.bin`에 (A)를 눌러 선택해 주세요.
@@ -64,7 +68,7 @@ CTRTransfer 뒤 설치한 게임이 보이지 않을 수 있습니다. 이는 CT
   + 작업이 완료되면 (A)를 눌려 계속해 주세요.
 1. (start)를 눌러 기기를 다시 시작해 주세요.
 1. 본체 설정의 "기타 설정"에서 가장 오른쪽에 있는 "본체 업데이트"를 선택해 기기를 업데이트해 주세요.
-  + A9LH + Luma(지금 적용되어 있는 것)가 설치된 상태에서는 업데이트를 해도 안전합니다.
+  + Updates while using B9S + Luma (what you have) are safe
   + 오류가 발생한다면, DNS 설정을 "자동"으로 설정해 주세요.
 
 ##### 섹션 III - FBI 주입
@@ -117,5 +121,5 @@ CTRTransfer 뒤 설치한 게임이 보이지 않을 수 있습니다. 이는 CT
 
 ___
 
-[arm9loaderhax 설치](installing-arm9loaderhax)로 돌아가 주세요.
+Continue to [Finalizing Setup](finalizing-setup)
 {: .notice--primary}
