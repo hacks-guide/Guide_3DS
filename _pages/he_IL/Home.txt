@@ -46,13 +46,13 @@ permalink: /he_IL/index.html
 למדריך זה יש את היעד הסופי של לקחת 3DS חדש לחלוטין שלא שונה בכלל מקושחה רשמית
 לקושחה מותאמת אישית מבוססת boot9strap. על גירסאות מסוימות, הוא מנצל homebrew פשוט כנקודת המוצא, אבל קושחה מותאמת אישית היא עדיין המטרה.
 
-boot9strap היא השיטה הטובה ביותר והעדכנית של הפעלת קושחה מותאמת אישית שנותנת לנו שליטה כמעט מלאה של המערכת, מילישניות אחרי ההפעלה - כמו BootMii לWii. It gives us even earlier control than arm9loaderhax did, and, unlike standard sighax, boot9strap uses an NDMA overwrite exploit in order to gain Boot9 code execution. This means that any console running boot9strap is capable of dumping the console unique OTP (`OTP.bin`), the ARM11 bootrom (`boot11.bin`), and the ARM9 bootrom (`boot9.bin`).
+boot9strap היא השיטה הטובה ביותר והעדכנית של הפעלת קושחה מותאמת אישית שנותנת לנו שליטה כמעט מלאה של המערכת, מילישניות אחרי ההפעלה - כמו BootMii לWii. זה נותן לנו גישה עוד יותר מוקדמת מאשר מה שarm9loaderhax נתן, ובניגוד לsighax סטנדרטי, arm9loaderhax משתמש בפירצת שכתוב NDMA כדי להשיג הפעלת קוד בBoot9. זה אומר שכל קונסולה שמריצה את boot9strap מסוגלת להשיג את הOTP המיוחד לכל קונסולה (שהוא`OTP.bin`), הbootrom של ה ARM11 (שהוא`boot11.bin`), והbootrom של ה ARM9 (שהוא `boot9.bin`).
 
-The benefits of boot9strap over other Custom Firmware launch methods are numerous, and as such it is recommended to use this guide over any other that relies on outdated software (such as menuhax + rxTools, arm9loaderhax, or even normal sighax).
+היתרונות של bootrom מול כל שיטות ההפעלה האחרות של קושחות מותאמות אישית הן רבות, ובגלל זה מומלץ להשתמש במדריך זה על פני אחרים שמסתמכים על תוכנה מיושנת (כגון menuhax + rxTools, arm9loaderhax, או אפילו sighax סטנדרטי).
 
-For information on how boot9strap works, please see [this presentation](https://sciresm.github.io/33-and-a-half-c3/) by [SciresM](https://github.com/SciresM/).
+למידע על איך boot9strap עובד, בבקשה תראו את [המצגת הבאה](https://sciresm.github.io/33-and-a-half-c3/) על ידי [SciresM](https://github.com/SciresM/).
 
-For a list of each of the calculated sighax signatures (the platform boot9strap is built on), see [this gist](https://gist.github.com/SciresM/cdd2266efb80175d37eabbe86f9d8c52).
+לרשימת כל החתימות של sighax (הפלטפורמה שboot9strap בנוי עליה), תראו [את הgist הבא](https://gist.github.com/SciresM/cdd2266efb80175d37eabbe86f9d8c52).
 
 ## מה אני יכול לעשות עם קושחה מותאמת אישית?
 
@@ -71,8 +71,8 @@ For a list of each of the calculated sighax signatures (the platform boot9strap 
 ## מה עלי לדעת לפני שמתחילים?
 
 + **לפני תחילת המדריך, אתם חייבים לדעת את הסיכונים של פריצת 3DS: בכל פעם שתשנו את המערכת שלכם, תמיד יש הפוטנציאל** לבריק בלתי הפיך. הם נדירים, אבל עדיין אפשרות לקבל אותם אז תקפידו לעקוב אחרי השלבים במדיוק.**
-+ If you have already hacked your 3DS before to get an EmuNAND setup, and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, you should follow all instructions and restore your existing EmuNAND when prompted once you reach [Finalizing Setup](finalizing-setup).
-+ This guide will work on New 3DS, Old 3DS, and 2DS in all regions on firmware 11.4.0 or below.
++ אם ה- 3DS שלכם כבר פרוץ עם Emunand ואתם רוצים להעביר את מה שיש עליו ל- Sysnand, עקבו אחרי כל ההוראות ולכו למקום המתאים כשאתם ב [סיום התהליך](finalizing-setup).
++ המדריך הזה יעבוד על כל New 3DS, Old 3DS ו- 2DS בכל האזורים על הגרסה 11.4.0 ומתחתיה.
 + אם הכול ילך לפי התוכנית, לא תאבדו נתונים ותסיימו עם כל מה שהתחלתם (משחקים, NNID, שמירות, ועוד).
 + ** תשמרו על המכשיר מחובר לחשמל וטעון לאורך כל התהליך כדי למנוע אובדן נתונים או נזק מכיבוי בלתי צפוי! **
 + ה- SD שלכם צריך להיות [MBR, לא GPT](http://www.howtogeek.com/245610/) (כרטיס ה- SD שמגיע עם המכשיר יהיה MBR כברירת מחדל).
