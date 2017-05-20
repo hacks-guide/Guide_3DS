@@ -1,7 +1,7 @@
 ---
 title: "Finalizing Setup" #
 lang: it
-permalink: /finalizing-setup.html
+permalink: /it_IT/finalizing-setup.html
 ---
 
 **Per usare i link [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) di questa guida avrai bisogno di un client torrent come [Deluge](http://dev.deluge-torrent.org/wiki/Download)**
@@ -11,7 +11,7 @@ permalink: /finalizing-setup.html
 
 {% capture notice-2 %}
 
-The file `boot.firm` is what is launched by boot9strap itself after it finishes loading off of NAND, and can be any valid arm9 payload in the FIRM format. This file can be replaced at any time, although Luma3DS allows for the launch of other arm9 payloads in the FIRM format using the Luma3DS chainloader.
+Il file `boot.firm` viene lanciato da boot9strap stesso al termine del caricamento dalla NAND, e può essere un qualunque payload arm9 valido in formato FIRM. Questo file può essere sostituito in qualunque momento, tuttavia Luma3DS permette il lancio di diversi payload arm9 in formato FIRM grazie al chainloader di Luma3DS.
 <br><br>
 In questo caso, useremo Luma3DS di [AuroraWright](https://github.com/AuroraWright/) per avviare direttamente una SysNAND patchata, bypassando del tutto il bisogno di una EmuNAND. Questo semplifica l'uso di un 3DS così modificato, e permette di risparmiare spazio sulla scheda SD.
 <br><br>
@@ -34,7 +34,7 @@ Durante la guida verranno anche configurate le seguenti applicazioni:
 * L'ultima release di [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * L'ultima versione di [DSP1](https://github.com/zoogie/DSP1/releases/latest)
 * L'ultima versione di [FBI](https://github.com/Steveice10/FBI/releases/latest)
-* The latest fork of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
+* L'ultima versione di [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
 * **Solo Old 3DS e 2DS:** L'[otherapp payload](https://smealum.github.io/3ds/#otherapp) della versione del software 11.2.0-35 per Old 3DS corrispondente alla tua regione
 
 #### Istruzioni
@@ -45,7 +45,7 @@ Durante la guida verranno anche configurate le seguenti applicazioni:
 1. Se assente, crea una cartella chiamata `cias` nella directory principale della tua scheda SD
 1. Se assente, crea una cartella chiamata `hblauncherloader` nella directory principale della tua scheda SD
 1. Copia il file `hblauncher_loader.cia` dall'archivio`.zip`di hblauncher_loader nella cartella `/cias/` della tua scheda SD
-1. Copy `lumaupdater-v2.0.cia` from the Luma3DS Updater `.zip` to the `/cias/` folder on your SD card
+1. Copia il file `lumaupdater-v2.0.cia` dall'archivio`.zip` di Luma3DS Updater nella cartella `/cias/` della tua scheda SD
 1. Copia il file `FBI.cia` dall'archivio`.zip` di FBI nella cartella `/cias/` della tua scheda SD
 1. Copia il file `DSP1.cia` nella cartella `/cias/` della tua scheda SD
 1. Copia il file `Themely.cia` nella cartella `/cias/` della tua scheda SD
@@ -53,10 +53,10 @@ Durante la guida verranno anche configurate le seguenti applicazioni:
     ![]({{ base_path }}/images/screenshots/cias-file-layout.png)
     {: .notice--info}
 
-1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card
+1. Copia il file `boot.firm` dall'archivio`.7z` di Luma3DS nella directory principale della tua scheda SD
 1. Crea una cartella chiamata `luma` nella directory principale della tua scheda SD
 1. Crea una cartella chiamata `payloads` nella cartella `luma` della tua scheda SD
-1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
+1. Copia il file `GodMode9.firm` dall'archivio `.zip` di GodMode9 dentro la cartella `/luma/payloads/` della tua scheda SD
 1. **Solo Old 3DS e 2DS:** Copia l'otherapp payload della versione del software 11.2.0-35 per Old 3DS corrispondente alla tua regione nella cartella `/hblauncherloader/` della tua scheda SD
 1. **Solo Old 3DS e 2DS:** Rinomina l'otherapp payload della versione del software 11.2.0-35 per Old 3DS sulla tua scheda SD in modo tale che corrisponda alla tua regione:
   + **EUR:** `OLD-11-4-0-37-EUR.bin`
@@ -67,7 +67,7 @@ Durante la guida verranno anche configurate le seguenti applicazioni:
     ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
     {: .notice--info}
 
-1. If your device is on a version between 3.0.0 and 4.5.0 (inclusive), your device will not boot until you manually download the required firmware:
+1. Se la tua console è ad una versione del software compresa tra 3.0.0 e 4.5.0 (incluse), non si avvierà finché non avrai scaricato manualmente la versione del software richiesta:
   + Scarica [questo file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) e rinominalo`firmware.bin`
   + Scarica [questo file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
   + Copia i file `firmware.bin` e `cetk` nella cartella `/luma/` della tua scheda SD
@@ -89,7 +89,7 @@ Se prima di seguire questa guida avevi già un'installazione EmuNAND presente e 
 {: .notice--info}
 
 1. Aggiorna la console andando su Impostazioni della console, poi "Impostazioni generali", infine scorri a destra e seleziona "Aggiornamento"
-  + Updates while using B9S + Luma (what you have) are safe
+  + Gli aggiornamenti effettuati usando B9S + Luma (ora installato) sono sicuri
   + Se ottieni un errore, imposta i DNS della connessione di rete in modo che vengano ottenuti automaticamente
   + If this still gives you an error and your NAND is below 9.2.0, [follow 9.2.0 CTRTransfer](9.2.0-ctrtransfer), then try updating again
 
