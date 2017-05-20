@@ -7,7 +7,10 @@ permalink: /ru_RU/move-emunand.html
 Этот дополнительный раздел содержит информацию о переносе содержимого EmuNAND в новый SysNAND с кастомной прошивкой, с последующим удалением раздела, содержащего EmuNAND. Помните, что RedNAND и EmuNAND - немного разные реализации [одного и того же](http://3dbrew.org/wiki/NAND_Redirection) (англ.).
 {: .notice--info}
 
-**Для продолжения у вас уже ДОЛЖНЫ быть установлены arm9loaderhax и Luma3DS**
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+{: .notice--info}
+
+**You MUST have already installed Luma3DS and boot9strap or arm9loaderhax to use this.**
 {: .notice--danger}
 
 #### Что понадобится
@@ -22,7 +25,7 @@ permalink: /ru_RU/move-emunand.html
 
 1. Выключите консоль
 1. Вставьте SD-карту в компьютер
-1. Скопируйте `GodMode9.bin` из `.zip-архива` GodMode9 в папку `/luma/payloads/`на SD-карте
+1. Скопируйте `GodMode9.bin` из `.zip-архива` GodMode9 в папку `/luma/payloads/` на SD-карте
 1. Вставьте SD-карту обратно в консоль
 
 ##### Часть II - Бэкап сохранений DSiWare из SysNAND
@@ -30,7 +33,7 @@ permalink: /ru_RU/move-emunand.html
 Если у вас нет игр DSiWare или важных для вас сохранений, пропустите эту часть.
 {: .notice--info}
 
-1. Включите вашу консоль, удерживая (Start), чтобы запустить меню Luma3DS chainloader
+1. Включите консоль кнопкой питания, держа нажатой кнопку (Start), чтобы запустить меню Luma3DS chainloader
 1. Запустите GodMode9, нажав кнопку (A)
 1. Перейдите в `[2:] SYSNAND TWLN` -> `title`
 1. Удерживая (R), нажмите (A) чтобы выбрать папку `00030004`, затем выберите "Copy to 0:/gm9out"
@@ -47,13 +50,14 @@ permalink: /ru_RU/move-emunand.html
 
 1. Удерживая (R), нажмите (Start) чтобы выключить консоль
 1. Вставьте SD-карту в компьютер
+1. Создайте папку `files9` в корне SD-карты, если таковой нет
 1. Создайте внутри `/files9/` папку для каждой игры GBA VC, для сохранений которых вы хотите создать бэкап 
 1. Вставьте SD-карту обратно в консоль
 1. Загрузитесь в SysNAND консоли
 1. Выполните действия ниже для каждой игры GBA VC, для сохранений которых вы хотите создать бэкап:
   + Запустите игру GBA VC, находясь в SysNAND
   + Выйдите из игры GBA VC
-  + Включите вашу консоль, удерживая (Start), чтобы запустить меню Luma3DS chainloader
+  + Включите консоль кнопкой питания, держа нажатой кнопку (Start), чтобы запустить меню Luma3DS chainloader
   + Запустите GodMode9, нажав кнопку (A)
   + Перейдите в `[S:] SYSNAND VIRTUAL`
   + Нажмите (Y), выделив файл `gbavc.sav` чтобы скопировать его
@@ -102,7 +106,7 @@ permalink: /ru_RU/move-emunand.html
 1. Выполните действия ниже для каждой игры GBA VC, для сохранений которых вы хотите создать бэкап:
   + Запустите игру GBA VC, находясь в SysNAND
   + Выйдите из игры GBA VC
-  + Включите вашу консоль, удерживая (Start), чтобы запустить меню Luma3DS chainloader
+  + Включите консоль кнопкой питания, держа нажатой кнопку (Start), чтобы запустить меню Luma3DS chainloader
   + Запустите GodMode9, нажав кнопку (A)
   + Перейдите в `[0:] SDCARD` -> `files9`
   + Перейдите в папку, которую вы создали для этой игры GBA VC
@@ -145,7 +149,7 @@ permalink: /ru_RU/move-emunand.html
 1. Удерживая (R) нажмите (B) для того, чтобы извлечь SD-карту
 1. Вставьте SD-карту в компьютер
 1. Скопируйте все ваши файлы обратно на SD-карту
-  + Убедитесь, что вы заменили `arm9loaderhax.bin` его версией из сохраненных ранее файлов
+  + Ensure you replace the `boot.firm` file on your SD card with the one from your backup
 1. Вставьте SD-карту обратно в консоль
 1. Нажмите (A), чтобы смонтировать SD-карту
 1. Нажмите (Start), чтобы сохранить настройки и перезагрузиться
@@ -153,5 +157,5 @@ permalink: /ru_RU/move-emunand.html
 
 ___
 
-Вернитесь в раздел [Установка arm9loaderhax](installing-arm9loaderhax).
+Return to [Finalizing Setup](finalizing-setup).
 {: .notice--primary}
