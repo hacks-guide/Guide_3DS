@@ -7,7 +7,10 @@ permalink: /zh_TW/move-emunand.html
 本篇為附加章節。我們將帶過如何把之前 EmuNAND 中的內容移植到你新的自製 SysNAND 系統底下，並移除舊的 EmuNAND 磁區。 注意 EmuNAND 與 RedNAND 指的是些微不同運作方式但[同樣道理](http://3dbrew.org/wiki/NAND_Redirection)的用語。
 {: .notice--info}
 
-**你 _必須_ 先安裝好 arm9loaderhax + Luma3DS 才能繼續。**
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+{: .notice--info}
+
+**You MUST have already installed Luma3DS and boot9strap or arm9loaderhax to use this.**
 {: .notice--danger}
 
 #### 必備項目
@@ -47,6 +50,7 @@ permalink: /zh_TW/move-emunand.html
 
 1. 按住「R」並按下「Start」鍵關機
 1. 將 SD 卡插入電腦中
+1. 在 SD 卡的根目錄底下建立一個新資料夾 `files9`
 1. 在 `/files9/` 資料夾中為各個想備份的 GBA 虛擬主機 遊戲建立一個新的資料夾 
 1. 將 SD 卡插回裝置中
 1. 啟動你的裝置至 SysNAND 中
@@ -145,7 +149,7 @@ permalink: /zh_TW/move-emunand.html
 1. 同時按住「R」及「B」以卸除 SD 卡
 1. 將 SD 卡插入電腦中
 1. 將所有檔案複製回 SD 卡中
-  + 記得以你先前備份的檔案中替代 `arm9loaderhax.bin`
+  + Ensure you replace the `boot.firm` file on your SD card with the one from your backup
 1. 將 SD 卡插回裝置中
 1. 按「A」重新載入 SD 卡
 1. 按下「Start」鍵以存檔並重新啟動系統
@@ -153,5 +157,5 @@ permalink: /zh_TW/move-emunand.html
 
 ___
 
-回到 [安裝 arm9loaderhax](installing-arm9loaderhax)
+Return to [Finalizing Setup](finalizing-setup).
 {: .notice--primary}
