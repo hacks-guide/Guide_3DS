@@ -4,13 +4,16 @@ lang: nl
 permalink: /nl_NL/region-changing.html
 ---
 
-Dit is een extra sectie om de regio van jouw arm9loaderhax CFW SysNAND te veranderen. Dit wordt gedaan door de 9.2.0 CTRTransfer image voor de regio die jij wil hebben te installeren.
+This is add-on section for region changing your CFW SysNAND. Dit wordt gedaan door de 9.2.0 CTRTransfer image voor de regio die jij wil hebben te installeren.
 {: .notice--primary}
 
 **Het veranderen van jouw regio is bijna volledig onnodig omdat Luma3DS spellen uit andere regio's kan afspelen, en ook individuele [title region emulation](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage).**
 {: .notice--info}
 
 Om een [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) link te gebruiken in deze handleiding, moet je een torrent client hebben zoals [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+{: .notice--info}
+
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
 {: .notice--info}
 
 Dit proces zal jouw NNID loskoppelen van het systeem, omdat het niet langer passend is met het systeem. NNID's zijn aan de regio van je systeem die de NNID's gemaakt heeft verbonden, en kunnen daarom niet met de regio's mee veranderen zonder [een erg complex en gevorderd proces](https://gist.githubusercontent.com/yifanlu/e80db121d38aceb8cca0e03cefd5853b/raw/3c4dd89869156ca0f945a2791e699acfdb32b510/gistfile1.txt).
@@ -25,10 +28,10 @@ Let wel op dat af en toe de eShop, zonder goede reden, nog steeds niet werkt voo
 Vergelijkbaar tot de bovenstaande waarschuwing, wees er bewust van dat in sommige gevallen de eShop voor geen duidelijke reden zal werken op systemen waarop het niet zou moeten (zoals sommige New 3DSen). De oorzaak hiervoor is momenteel onbekend.
 {: .notice--warning}
 
-Het veranderen van je regio met behulp van CTRTransfer (dit is de methode die hier gebruikt wordt) blijkt "reboot patches" kapot te maken. De reden hiervoor is nog niet duidellijk, maar tot op heden kunnen Old 3DS gebruikers geen spellen spelen die extra geheugen-modus gebruiken (zoals Monster Hunter, Super Smash Bros, en Pokémon Sun/Moon) totdat ze hun systemen formatteren (details hierover onder aan deze pagina).
+Het veranderen van je regio met behulp van CTRTransfer (dit is de methode die hier gebruikt wordt) blijkt "reboot patches" kapot te maken. The cause for this is unknown, but for now Old 3DS users will be unable to play extended memory mode games (such as Monster Hunter, Super Smash Bros, and Pokémon Sun / Moon) until they format their devices.
 {: .notice--warning}
 
-**arm9loaderhax en Luma3DS MOETEN al geïnstalleerd zijn om dit te doen.**
+**You MUST have already installed Luma3DS and boot9strap or arm9loaderhax to use this.**
 {: .notice--danger}
 
 #### Benodigdheden
@@ -51,6 +54,7 @@ Het veranderen van je regio met behulp van CTRTransfer (dit is de methode die hi
 1. Schakel je 3DS uit
 1. Plaats je SD kaart in je computer
 1. Maak een map genaamd `cias` in de hoofdmap van je SD kaart als deze nog niet bestaat
+1. Maak een map genaamd `files9` in de hoofdmap van je SD kaart als deze nog niet bestaat
 1. Kopieer `GodMode9.bin` van de GodMode9 `.zip` naar de `/luma/payloads/` map op je SD kaart
 1. Kopieer de 9.2.0 CTRTransfer image `.bin` van de CTRTransfer `.zip` naar de `/files9/` map op je SD kaart
 1. Kopieer `FBI.cia` van de FBI `.zip` naar de `/cias/` map op je SD kaart
@@ -80,7 +84,7 @@ Het veranderen van je regio met behulp van CTRTransfer (dit is de methode die hi
   + Once it has completed, press (A) to continue
 1. Druk op (Start) om je 3DS opnieuw op te starten
 1. Update je 3DS door naar System Settings en dan naar "Algemene Instellingen" te gaan. Ga in dat menu helemaal naar rechts en klik op "Systeemupdate"
-  + Updaten terwijl je A9LH + Luma (wat je hebt) gebruikt is veilig
+  + Updates while using B9S + Luma (what you have) are safe
   + Als dit je een foutmelding geeft, zet dan je DNS instellingen op "auto"
 
 ##### Deel III - FBI Injecteren
@@ -141,5 +145,5 @@ Als je geen `eshop` of `unknown` mappen had eerder in dit proces, zie deel 2, da
 
 ___
 
-Old 3DS'en / 2DS'en moeten misschien geformatteerd worden (door gebruik te maken van TinyFormat of de Systeem Instellingen) om extra geheugen modus spellen te kunnen spelen (zoals Monster Hunter, Super Smash Bros of Pokemon Sun/Moon).
+Old 3DSs and 2DSs may need to format (using TinyFormat or the System Settings) to play extended memory mode games (such as Monster Hunter, Super Smash Bros, or Pokemon Sun/Moon).
 {: .notice--info}
