@@ -66,6 +66,9 @@ Seksjon II - Installere titler
 ## <a name="gw_fbi" />Kan ikke injisere H&s Gateway nedgradert enhet
 Dette er forårsaket av Gateways veldig stakkarslige nedgraderingsmetode, som lar to versjoner av hver app bli på systemet. One of them is unused, but it confuses the H&S inject system, causing it to inject into the wrong one.
 
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+{: .notice--info}
+
 1. Boot your device while holding (Start) to launch the Luma3DS chainloader menu
 1. Launch GodMode9 by pressing (A)   
 1. Navigate to `[1:] SYSNAND CTRNAND` -> `title` -> `00040010`
@@ -87,8 +90,8 @@ Dette er forårsaket av Gateways veldig stakkarslige nedgraderingsmetode, som la
 1. Velg "Move path(s)"
 1. Filene med store bokstaver i filendingene vil nå ha blitt flyttet til `newdir` mappen
 1. Press (Start) to reboot your device
-1. Gå tilbake til [installasjon av arm9loaderhax](installing-arm9loaderhax) og prøv FBI injeksjonen på nytt
-1. Hvis det fortsatt ikke virker, flytt filene med store bokstaver tilbake til `content` mappen, og flytt de med små til `newdir` og gå til [Installasjon av arm9loaderhax](installing-arm9loaderhax) og prøv FBI injeksjonen på nytt
+1. Return to [Finalizing Setup](finalizing-setup) and retry the FBI injection
+1. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then return to [Finalizing Setup](finalizing-setup) and retry the FBI injection
 
 ## <a name="ts_browser" /> en nettleserbasert exploit fungerer ikke
 Nettleserbaserte exploits (som browserhax eller 2xrsa) er ofte ustabile og krasjer ofte, men de kan noen ganger bli fikset ved å gjennomføre følgende steg
@@ -96,21 +99,6 @@ Nettleserbaserte exploits (som browserhax eller 2xrsa) er ofte ustabile og krasj
 1. Launch the browser, then launch the browser settings
 1. Bla til bunnen og intialiser savedata (Dette kan også være kalt slett alle lagrede Data)
 1. Prøv exploiten på nytt
-
-## <a name="ts_safe_a9lh" />Systemet starter opp rett inn i SafeA9LHInstaller
-Du kopierte feil `arm9loaderhax.bin` fil til SD-kortet (du skulle bare a hopiert `3ds` mappen og `SafeA9LHInstaller.dat`filen fra SafeA9LHInstaller zip)    
-
-1. Bruk den riktige `arm9loaderhax.bin`
-1. Kopier `arm9loaderhax.bin` fra Luma3DS `.zip` til roten av SD-kortet
-1. Start på nytt mens du holder (Select) og fortsett
-
-## <a name="ts_safe_a9lh_screen" />SafeA9LHInstaller viser en glitchet skjerm
-Dette skjer noen ganger, men grunnen er ukjent. Knappene virker fortsatt, men skjermen ser glitchet ut
-
-1. Følg instruksjonene som normalt
-1. Trykk (Select) og arm9loaderhax vil bli installert
-1. Vent noen sekunder
-1. Power off your device by pressing any button
 
 ## <a name="ts_sys_down" />Svart skjerm under oppstart av SysNAND
 
@@ -132,15 +120,15 @@ Dette skjer noen ganger, men grunnen er ukjent. Knappene virker fortsatt, men sk
     * Dette vil sannsynligvis ikke fungere på en Old3DS nedgradert til 2.1.0*    
     **Dette vill BRICKE en New 3DS som er nedgradert til 2.1.0**
     1. Power off your device
-    1. Hold (L)+(R)+(A)+(Up)
+    1. Hold (L) + (R) + (A) + (Up)
     1. Power on your device
     1. If you enter safe mode, update your device *only if you have an entrypoint for the latest FW version and it is possible to downgrade from it* and attempt the downgrade again.
 1. Your device may be bricked. For support, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
 
-## <a name="ts_sys_a9lh" />Svart skjerm under oppstart av SysNAND etter insallasjon av arm9loaderhax
+## <a name="ts_sys_b9s" />Black screen on SysNAND boot after Installing boot9strap
 
 1. Forsikre deg om at du har et nyttelast som fungerer.
-    1. Kontroller at `arm9loaderhax.bin` finnes på roten av SD-kortet.
+    1. Check for the existence of `boot.firm` in the root of your SD card.
 1. Prøv å tilbakestille Luma's konfigurasjon og fikse alternativer
     1. Slett `/luma/config.bin` fra SD-kortet
     1. Angi alternativer når den starter
@@ -165,9 +153,9 @@ Dette skjer noen ganger, men grunnen er ukjent. Knappene virker fortsatt, men sk
 1. Try following [9.2.0 CTRTransfer](9.2.0-ctrtransfer)
 1. Ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
 
-## <a name="ts_transfer" />Error during SafeCTRTransfer
+## <a name="ts_transfer" />Error during SafeB9SInstaller
 
-If an error occurs during the SafeCTRTransfer process, you will be prompted to launch an external payload for the purpose of repairing your device.
+If an error occurs during the SafeB9SInstaller process, you will be prompted to launch an external payload for the purpose of repairing your device.
 
 #### Det du trenger
 
@@ -177,23 +165,23 @@ If an error occurs during the SafeCTRTransfer process, you will be prompted to l
 
 1. Select "Unmount SD card"
 1. Sett inn SD-kortet i datamaskinen din
-1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/CTRTransfer/` folder on your SD card and rename `GodMode9.bin` in `/CTRTransfer/` to `payload.bin`
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/boot9strap/` folder on your SD card and rename `GodMode9.bin` in `/boot9strap/` to `payload.bin`
 1. Reinsert your SD card into your device
 1. Select "Run 0:/CTRTransfer/payload.bin"
 1. If it was successful, you will have entered GodMode9
-1. Navigate to `[0:] SDCARD` -> `ctrtransfer`
-1. Press (Y) on `<serialnumber>_nand.bin` to copy it
+1. Navigate to `[0:] SDCARD` -> `boot9strap`
+1. Press the (L) trigger on `firm0firm1.bak` and `sector0x96.bak` to mark them
+1. Trykk (Y) for å kopiere filene
 1. Press (B) twice to return to the main menu
 1. Navigate to `[S:] SYSNAND VIRTUAL`
-1. Press (Y) to paste `<serialnumber>_nand.bin`
+1. Trykk (Y) for å lime inn filene
 1. Trykk (A) for å bekrefte
-1. Press (A) to inject into `nand.bin`
+1. Press (A) to inject the files
 1. Press (A) to unlock SysNAND overwriting
 1. Input the key combo given to unlock SysNAND (lvl3) writing
-  + This process will take some time
 1. Once it has completed, press (A) to continue
 1. Press (Start) to reboot your device
-1. Report this issue to the [SafeCTRTransfer Issues Page](https://github.com/d0k3/SafeCTRTransfer/issues)
+1. Report this issue to the [SafeB9SInstaller Issues Page](https://github.com/d0k3/SafeB9SInstaller/issues)
 
 ## <a name="ts_sys_blue" />Blåskjerm under oppstart (bootrom error)
 
