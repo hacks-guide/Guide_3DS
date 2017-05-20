@@ -7,7 +7,10 @@ permalink: /it_IT/move-emunand.html
 In questa sezione aggiuntiva verrà spiegato come spostare il contenuto di una EmuNAND preesistente nel nuovo CFW SysNAND, per poi rimuovere la vecchia partizione EmuNAND. Tieni presente che i termini EmuNAND e RedNAND si riferiscono a due implementazioni leggermente diverse [dello stesso concetto](http://3dbrew.org/wiki/NAND_Redirection).
 {: .notice--info}
 
-**È necessario aver già installato arm9loaderhax e Luma3DS per poter procedere.**
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+{: .notice--info}
+
+**You MUST have already installed Luma3DS and boot9strap or arm9loaderhax to use this.**
 {: .notice--danger}
 
 #### Cosa serve
@@ -47,6 +50,7 @@ Questo processo non è necessario per giochi delle altre Virtual Console (quali 
 
 1. Tenendo premuto (R), premi (Start) per spegnere la console
 1. Inserisci la scheda SD nel tuo computer
+1. Se assente, crea una cartella chiamata `files9` nella directory principale della tua scheda SD
 1. Crea una cartella all'interno della cartella `/files9/` per ogni gioco GBA della Virtual Console del quale vuoi mantenere i salvataggi 
 1. Reinserisci la scheda SD nel Nintendo 3DS
 1. Avvia la console nella SysNAND
@@ -145,7 +149,7 @@ Se non hai mantenuto alcun salvataggio GBA della Virtual Console, salta questa s
 1. Tenendo premuto (R), premi (B) per rimuovere la scheda SD
 1. Inserisci la scheda SD nel tuo computer
 1. Ripristina tutti i file sulla tua scheda SD
-  + Assicurati di sostituire il file `arm9loaderhax.bin` sulla tua scheda SD con quello preso dal tuo backup
+  + Ensure you replace the `boot.firm` file on your SD card with the one from your backup
 1. Reinserisci la scheda SD nel Nintendo 3DS
 1. Premi (A) per eseguire il remount della scheda SD
 1. Premi (Start) per salvare e riavviare il 3DS
@@ -153,5 +157,5 @@ Se non hai mantenuto alcun salvataggio GBA della Virtual Console, salta questa s
 
 ___
 
-Ritorna all'[Installazione dell'arm9loaderhax](installing-arm9loaderhax).
+Return to [Finalizing Setup](finalizing-setup).
 {: .notice--primary}
