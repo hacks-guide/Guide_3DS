@@ -66,6 +66,9 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
 ## <a name="gw_fbi" />在Gateway降级过的设备上无法注入Health & Safety应用
 这一因为Gateway的降级方法非常糟糕，会在系统中留下每个app降级前后的两个版本，其中一个不再使用。 One of them is unused, but it confuses the H&S inject system, causing it to inject into the wrong one.
 
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+{: .notice--info}
+
 1. Boot your device while holding (Start) to launch the Luma3DS chainloader menu
 1. Launch GodMode9 by pressing (A)   
 1. Navigate to `[1:] SYSNAND CTRNAND` -> `title` -> `00040010`
@@ -87,8 +90,8 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
 1. 选择”Move path(s)”
 1. 大写字母后缀的文件将被移动到`newdir`文件夹下
 1. Press (Start) to reboot your device
-1. 返回到[安装arm9loaderhax](installing-arm9loaderhax)一节，重新尝试FBI注入
-1. 如果还是不能注入， 将大写字母后缀的文件移动回content文件夹，然后将小写字母后缀的文件移动到`newdir`文件夹中，再返回到[安装arm9loaderhax](installing-arm9loaderhax)一节，重新尝试FBI注入
+1. Return to [Finalizing Setup](finalizing-setup) and retry the FBI injection
+1. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then return to [Finalizing Setup](finalizing-setup) and retry the FBI injection
 
 ## <a name="ts_browser" />基于浏览器的漏洞利用失效
 基于浏览器的漏洞利用（例如browserhax和2xrsa）通常不够稳定并经常崩溃，但有时也可以尝试按照下面的步骤修复：
@@ -96,21 +99,6 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
 1. Launch the browser, then launch the browser settings
 1. 移动到页面最底端，选择Initialize Savedata（初始化缓存）（有时也会叫做Clear All Save Data，清除所有缓存）
 1. 再次尝试漏洞利用
-
-## <a name="ts_safe_a9lh" />系统启动进入了SafeA9LHInstaller
-你将错误的`arm9loaderhax.bin`文件拷贝到SD卡中了（你应该仅将SafeA9LHInstaller压缩包中的`3ds`文件夹和`SafeA9LHInstaller.dat`文件拷贝到SD卡中）    
-
-1. 使用正确的 'arm9loaderhax.bin'
-1. 将Luma3DS压缩包中的`arm9loaderhax.bin`文件拷贝到你的SD卡根目录
-1. 按住(Select)键重启机器，并继续按照教程进行
-
-## <a name="ts_safe_a9lh_screen" />SafeA9LHInstaller中屏幕闪烁
-这种情况偶尔会发生，但原因未知。 按键仍能正常工作，但屏幕会一直闪烁。
-
-1. 按照教程正常执行
-1. 按下(Select)键安装arm9loaderhax
-1. 等一下
-1. Power off your device by pressing any button
 
 ## <a name="ts_sys_down" />启动到SysNAND黑屏
 
@@ -132,15 +120,15 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
     *老3DS降级到2.1.0的系统后，该方法很可能会失效。*    
     **新3DS降级到2.1.0后，尝试该方法会变砖。**
     1. Power off your device
-    1. Hold (L)+(R)+(A)+(Up)
+    1. Hold (L) + (R) + (A) + (Up)
     1. Power on your device
     1. If you enter safe mode, update your device *only if you have an entrypoint for the latest FW version and it is possible to downgrade from it* and attempt the downgrade again.
 1. Your device may be bricked. For support, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
 
-## <a name="ts_sys_a9lh" />安装完arm9loaderhax后启动到SysNAND黑屏
+## <a name="ts_sys_b9s" />Black screen on SysNAND boot after Installing boot9strap
 
 1. 确保你有一个正常工作的payload
-    1. 检查你的SD卡根目录有`arm9loaderhax.bin`文件。
+    1. Check for the existence of `boot.firm` in the root of your SD card.
 1. 尝试重置Luma3DS的设置
     1. 删除SD卡上的`/luma/config.bin`文件
     1. 启动Luma3DS后重新设置
@@ -166,9 +154,9 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
 1. Try following [9.2.0 CTRTransfer](9.2.0-ctrtransfer)
 1. Ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
 
-## <a name="ts_transfer" />Error during SafeCTRTransfer
+## <a name="ts_transfer" />Error during SafeB9SInstaller
 
-If an error occurs during the SafeCTRTransfer process, you will be prompted to launch an external payload for the purpose of repairing your device.
+If an error occurs during the SafeB9SInstaller process, you will be prompted to launch an external payload for the purpose of repairing your device.
 
 #### What you need
 
@@ -178,23 +166,23 @@ If an error occurs during the SafeCTRTransfer process, you will be prompted to l
 
 1. Select "Unmount SD card"
 1. Insert your SD card into your computer
-1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/CTRTransfer/` folder on your SD card and rename `GodMode9.bin` in `/CTRTransfer/` to `payload.bin`
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/boot9strap/` folder on your SD card and rename `GodMode9.bin` in `/boot9strap/` to `payload.bin`
 1. Reinsert your SD card into your device
 1. Select "Run 0:/CTRTransfer/payload.bin"
 1. If it was successful, you will have entered GodMode9
-1. Navigate to `[0:] SDCARD` -> `ctrtransfer`
-1. Press (Y) on `<serialnumber>_nand.bin` to copy it
+1. Navigate to `[0:] SDCARD` -> `boot9strap`
+1. Press the (L) trigger on `firm0firm1.bak` and `sector0x96.bak` to mark them
+1. 按(Y)键复制这些文件
 1. Press (B) twice to return to the main menu
 1. Navigate to `[S:] SYSNAND VIRTUAL`
-1. Press (Y) to paste `<serialnumber>_nand.bin`
+1. 按(Y)键粘贴这些文件
 1. 按 (A) 确认
-1. Press (A) to inject into `nand.bin`
+1. Press (A) to inject the files
 1. Press (A) to unlock SysNAND overwriting
 1. Input the key combo given to unlock SysNAND (lvl3) writing
-  + This process will take some time
 1. Once it has completed, press (A) to continue
 1. Press (Start) to reboot your device
-1. Report this issue to the [SafeCTRTransfer Issues Page](https://github.com/d0k3/SafeCTRTransfer/issues)
+1. Report this issue to the [SafeB9SInstaller Issues Page](https://github.com/d0k3/SafeB9SInstaller/issues)
 
 ## <a name="ts_sys_blue" />启动时蓝屏（bootrom错误）
 
