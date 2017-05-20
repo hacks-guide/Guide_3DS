@@ -13,8 +13,8 @@ Tutte le future versioni di Luma3DS verranno rilasciate in formato `.firm`, comp
 Se Luma è configurato con un PIN di accesso, è necessario disattivarlo temporaneamente prima di seguire le istruzioni. Al termine dell'aggiornamento è possibile reimpostare il PIN.
 {: .notice--info}
 
-Se stai utilizzando o se hai utilizzato in precedenza il software "3dsafe", potresti ricevere l'errore "OTP Crypto Fail" durante l'avvio di SafeB9SInstaller. Si sta ancora cercando il modo di risolvere questo problema, quindi abbi pazienza.
-{: .notice--warning}
+If you have the software "3dsafe" installed, you must remove it to do these steps or you will get an "OTP Crypto Fail" error. If you do not have the required files to remove "3dsafe", a method to remove "3dsafe" (without any of its removal files such as `lost.bin` or `sha.bin`) is being looked into, so just be patient.
+{: .notice--info}
 
 **Per usare i link [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) di questa guida avrai bisogno di un client torrent come [Deluge](http://dev.deluge-torrent.org/wiki/Download)**
 {: .notice--info}
@@ -42,7 +42,7 @@ Il file `secret_sector,bin` è necessario per ripristinare le modifiche fatte da
 1. Inserisci la scheda SD nel tuo computer
 1. Copia il file `boot.firm` dall'archivio`.7z` di Luma3DS nella directory principale della tua scheda SD
 1. Se assente, crea una cartella chiamata `cias` nella directory principale della tua scheda SD
-1. Copia il file `lumaupdater-v2.0.cia` dall'archivio`.zip` di Luma3DS Updater nella cartella `/cias/` della tua scheda SD
+1. Copy `lumaupdater-v2.0.cia` to the `/cias/` folder on your SD card
 1. Crea una cartella chiamata `boot9strap` nella directory principale della tua scheda SD
 1. Copia il file `GodMode9.firm` dall'archivio `.zip` di GodMode9 dentro la cartella `/luma/payloads/` della tua scheda SD
 1. Elimina qualunque payload `.bin` dalla cartella `/luma/payloads/` della tua scheda SD in quanto non è utilizzabile con le versioni di boot9strap compatibili con Luma3DS
@@ -113,10 +113,10 @@ Questa sezione è necessaria solo se ti viene presentato il menu di configurazio
 
 ___
 
-Ora puoi rimuovere qualunque file relativo all'arm9loaderhax come il file `arm9loaderhax.bin` nella directory principale della tua scheda SD o la cartella `files9`.
+You can now remove any arm9loaderhax related files from your SD card, such as `arm9loaderhax.bin` on the root of your SD card and the `aeskeydb.bin` file in the `files9` folder on your SD card.
 {: .notice--info}
 
-Tieni presente che i file `firm0firm1.bak` e `sector0x96.bak` nella cartella `/boot9strap/` della tua scheda SD sono necessari solo in caso di un'installazione fallita di boot9strap. Al termine di un'installazione completata con successo, puoi eliminarli.
+Tieni presente che i file `firm0firm1.bak` e `sector0x96.bak` nella cartella `/boot9strap/` della tua scheda SD sono necessari solo in caso di un'installazione fallita di boot9strap. Once you have installed successfully, you can delete the entire `boot9strap` folder.
 {: .notice--info}
 
 Questa versione di Luma3DS Updater aggiunge la compatibilità con boot9strap scaricando ed estraendo autonomamente l'ultima versione del file `boot.firm` di Luma3DS.
