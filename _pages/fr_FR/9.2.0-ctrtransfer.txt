@@ -4,13 +4,16 @@ lang: fr
 permalink: /fr_FR/9.2.0-ctrtransfer.html
 ---
 
-Il est possible que votre console ne montre pas vos jeux installés après le CTRTransfert. Cela est dû au fait que les tickets sont supprimés par le transfert. Vous devez donc les sauvegarder. Ils seront restaurés à la fin du guide.
-{: .notice--info}
+This is add-on section for installing a 9.2.0 CTRTransfer image to your device.
+{: .notice--primary}
 
 Pour utiliser les liens suivant [magnet](https://fr.wikipedia.org/wiki/Magnet_(standard)), vous avez besoin d'un client Torrent comme [Deluge](http://dev.deluge-torrent.org/wiki/Download)
 {: .notice--info}
 
-L'objectif du CTRTransfert 9.2.0 est de résoudre les problèmes causés par la NAND déjà existante. Vous n'aurez donc besoin pour ces étapes, contrairement à celles du CTRTransfert 2.1.0, que de sauvegarder les tickets. Un échec de leur sauvegarde causera la PERTE de tous les jeux installés et de toutes les sauvegardes !
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+{: .notice--info}
+
+**You MUST have already installed Luma3DS and boot9strap or arm9loaderhax to use this.**
 {: .notice--danger}
 
 #### Ce dont vous aurez besoin
@@ -34,6 +37,7 @@ L'objectif du CTRTransfert 9.2.0 est de résoudre les problèmes causés par la 
 1. Éteignez votre 3DS
 1. Insérez votre carte SD dans votre ordinateur
 1. Créez un répertoire nommé `cias` à la racine de votre carte SD s'il n'existe pas déjà
+1. Créez un dossier nommé `files9` à la racine de votre carte SD si celui-ci n'existe pas déjà
 1. Copiez le fichier `GodMode9.bin` de l'archive GodMode9 `.zip` dans le dossier `/luma/payloads/` sur votre carte SD
 1. Copiez les fichiers `.bin` et `.bin.sha` de l'image CTRtransfer 9.2.0 depuis le `.zip` de CTRtransfer vers le dossier `/files9/` de votre carte SD
 1. Copiez le fichier `FBI.cia` se trouvant dans FBI`.zip` vers le répertoire `/cias/` de votre carte SD
@@ -41,7 +45,7 @@ L'objectif du CTRTransfert 9.2.0 est de résoudre les problèmes causés par la 
 
 ##### Section II - CTRTransfer
 
-1. Démarrez la console en maintenant (Start) enfoncé pour accéder au menu de chainloader de Luma3DS
+1. Launch the Luma3DS chainloader menu by holding (Start) during boot
 1. Lancez GodMode9 en appuyant sur (A)
 1. Naviguez vers `[0:] SDCARD` -> `files9`
 1. Appuyez sur (A) sur le CTRTransfer `.bin` pour le sélectionner
@@ -63,7 +67,7 @@ L'objectif du CTRTransfert 9.2.0 est de résoudre les problèmes causés par la 
   + Une fois le transfert terminé, appuyez sur (A) pour continuer
 1. Appuyez sur (Start) pour redémarrer votre système
 1. Mettez à jour votre console en vous rendant dans les Paramètres de la console, puis "Autres paramètres", puis tout à droite sur l'option "Mise à jour du Système"
-  + Mettre à jour sa console alors que A9LH et Luma3DS sont installés (ce que vous avez maintenant) n'est pas dangereux, arrêtez de poser la question
+  + Updates while using B9S + Luma (what you have) are safe
   + Si vous obtenez une erreur, réglez vos paramètres DNS sur "Automatique"
 
 ##### Section III - Injection de FBI
@@ -116,5 +120,5 @@ Si vous n'aviez pas de dossiers `eshop` ou `unknown`, sautez cette partie.
 
 ___
 
-Retournez à [L'installation d'arm9loaderhax](installing-arm9loaderhax).
+Continue to [Finalizing Setup](finalizing-setup)
 {: .notice--primary}
