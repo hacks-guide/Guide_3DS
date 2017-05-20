@@ -53,7 +53,7 @@ Para utilizar los enlaces [magnet](https://es.wikipedia.org/wiki/Magnet) de esta
 
 #### Instrucciones
 
-1. Copia `GodMode9.bin` contenido en el `.zip` de GodMode9 a la carpeta `/luma/payloads/` en tu tarjeta SD
+1. Copia el archivo `GodMode9.firm` desde el `.zip` de GodMode9 a la carpeta `/luma/payloads/` en tu tarjeta SD
 1. Inicia GodMode9 presionando (A)
 1. Ve a `[1:] SYSNAND CTRNAND` -> `data` -> (ID de 32 caracteres) -> `sysdata` -> `00010038`
 1. Manteniendo pulsado el botón (R), presiona (X) sobre `00000000` para renombrar este archivo
@@ -66,7 +66,7 @@ Para utilizar los enlaces [magnet](https://es.wikipedia.org/wiki/Magnet) de esta
 ## <a name="gw_fbi" />No se puede injectar H&S en una consola downgradeada con Gateway
 Esto ocurre porque la implementación del downgrade de Gateway es muy mala, haciendo que aparezcan dos versiones de cada aplicación en el sistema. Una de ellas no se usa, pero confunde al sistema de inyección de H&S causando una inyección errónea.
 
-Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+Ten en cuenta que en algunas versiones de Luma3DS, el menú de selección de payloads sólo es mostrado si se ha detectado más de un payload. Si sólo se detecta un payload, mantener (Start) al encender hará que se inicie GodMode9 de forma directa.
 {: .notice--info}
 
 1. Enciende tu consola manteniendo (Start) para ingresar al menú de selección de payloads de Luma3DS
@@ -90,8 +90,8 @@ Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only dis
 1. Selecciona "Move path(s)"
 1. Las extensiones en mayúsculas deberían haberse movido a la carpeta `newdir`
 1. Presiona (Start) para reiniciar tu consola
-1. Return to [Finalizing Setup](finalizing-setup) and retry the FBI injection
-1. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then return to [Finalizing Setup](finalizing-setup) and retry the FBI injection
+1. Vuelve a [Finalizar instalación](finalizing-setup) y reintenta la inyección de FBI
+1. Si esto tampoco funciona, mueve los archivos con la extensión en mayúscula de regreso a la carpeta `content`, y luego mueve los archivos con la extensión en minúscula a la carpeta `newdir`, luego regresa a [Finalizar instalación](finalizing-setup) y reintenta la inyección de FBI
 
 ## <a name="ts_browser" />Un exploit basado en el navegador no funciona
 Los exploits basados en navegador (como browserhax o 2xrsa) son a menudo inestables y fallan con frecuencia, pero pueden arreglarse realizando los siguientes pasos
@@ -120,15 +120,15 @@ Los exploits basados en navegador (como browserhax o 2xrsa) son a menudo inestab
     *Esto probablemente no funcione en una Old 3DS downgradeada a 2.1.0*    
     **Esto INUTILIZARÁ una New 3DS downgradeada a 2.1.0**
     1. Apaga tu consola
-    1. Hold (L) + (R) + (A) + (Up)
+    1. Mantén pulsados (L) + (R) + (A) + (Up)
     1. Enciende tu consola
     1. Si ingresas al modo seguro, actualiza tu consola *sólo si tienes un punto de entrada para la última versión de firmware y es posible downgradear desde ella* e intenta hacer el downgrade nuevamente.
 1. Tu consola podría estar brickeada. Para soporte, puedes pedir ayuda (*en inglés*) en el [Discord de Nintendo Homebrew](https://discord.gg/MWxPgEp)
 
-## <a name="ts_sys_b9s" />Black screen on SysNAND boot after Installing boot9strap
+## <a name="ts_sys_b9s" />Pantalla negra al iniciar la SysNAND luego de instalar boot9strap
 
 1. Asegúrate de tener un payload funcional.
-    1. Check for the existence of `boot.firm` in the root of your SD card.
+    1. Comprueba que existe el archivo `boot.firm` en la raíz de tu tarjeta SD.
 1. Intenta reiniciar la configuración de Luma y arregla sus opciones
     1. Elimina `/luma/config.bin` de tu tarjeta SD
     1. Establece tus opciones cuando inicie
@@ -153,9 +153,9 @@ Los exploits basados en navegador (como browserhax o 2xrsa) son a menudo inestab
 1. Prueba siguiendo [9.2.0 CTRTransfer](9.2.0-ctrtransfer)
 1. Pide ayuda (*en inglés*) en el [Discord de Nintendo Homebrew](https://discord.gg/MWxPgEp)
 
-## <a name="ts_transfer" />Error during SafeB9SInstaller
+## <a name="ts_transfer" />Error durante SafeB9SInstaller
 
-If an error occurs during the SafeB9SInstaller process, you will be prompted to launch an external payload for the purpose of repairing your device.
+Si ocurre un error durante el proceso de SafeB9SInstaller, se te pedirá iniciar un payload externo con el objetivo de reparar tu consola.
 
 #### Qué necesitas
 
@@ -165,23 +165,23 @@ If an error occurs during the SafeB9SInstaller process, you will be prompted to 
 
 1. Selecciona "Unmount SD card"
 1. Inserta tu tarjeta SD en tu computadora
-1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/boot9strap/` folder on your SD card and rename `GodMode9.bin` in `/boot9strap/` to `payload.bin`
+1. Copia el archivo `GodMode9.bin` del archivo `.zip` de GodMode9 a la carpeta `/boot9strap/` de tu tarjeta SD y luego renombra el archivo `GodMode9.bin` en `/boot9strap/` a `payload.bin`
 1. Reinserta tu tarjeta SD en tu consola
 1. Selecciona "Run 0:/CTRTransfer/payload.bin"
 1. Si fue exitoso, habrás iniciado GodMode9
-1. Navigate to `[0:] SDCARD` -> `boot9strap`
-1. Press the (L) trigger on `firm0firm1.bak` and `sector0x96.bak` to mark them
+1. Ve a `[0:] SDCARD` -> `boot9strap`
+1. Presiona (L) sobre `firm0firm1.bak` y `sector0x96.bak` para marcarlos
 1. Presiona (Y) para copiar los arhivos
 1. Presiona (B) dos veces para volver al menú principal
 1. Ve a `[S:] SYSNAND VIRTUAL`
 1. Presiona (Y) para pegar los archivos
 1. Presiona (A) para confirmar
-1. Press (A) to inject the files
+1. Presiona (A) para inyectar los archivos
 1. Presiona (A) para desbloquear la sobreescritura en la SysNAND
 1. Ingresa la combinación de teclas mostrada para desbloquear la escritura en la SysNAND (lvl3)
 1. Una vez que haya terminado, presiona (A) para continuar
 1. Presiona (Start) para reiniciar tu consola
-1. Report this issue to the [SafeB9SInstaller Issues Page](https://github.com/d0k3/SafeB9SInstaller/issues)
+1. Reporta este problema en la [Página de issues de SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/issues) (*en inglés*)
 
 ## <a name="ts_sys_blue" />Pantalla azul al encender (error de bootrom)
 
