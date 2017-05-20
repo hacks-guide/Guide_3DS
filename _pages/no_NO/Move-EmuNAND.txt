@@ -7,7 +7,10 @@ permalink: /no_NO/move-emunand.html
 This is an add-on section for moving the contents of a previous EmuNAND to your new SysNAND CFW, then removing the old EmuNAND partition. Merk at EmuNAND og RedNAND refererer til litt forskjellige implementeringer av [det samme konseptet](http://3dbrew.org/wiki/NAND_Redirection).
 {: .notice--info}
 
-**Du MÅ allerede ha installert arm9loaderhax + Luma3DS for å bruke dette.**
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+{: .notice--info}
+
+**You MUST have already installed Luma3DS and boot9strap or arm9loaderhax to use this.**
 {: .notice--danger}
 
 #### Det du trenger
@@ -47,6 +50,7 @@ Note that this is not necessary for any other kind of Virtual Console games (GBC
 
 1. Hold (R) and press (Start) at the same time to power off your device
 1. Sett inn SD-kortet i datamaskinen din
+1. Opprett en mappe kalt `files9` på roten av SD-kortet hvis den ikke allerede er der
 1. Create a folder in `/files9/` for each GBA VC game that you want to backup the save for 
 1. Reinsert your SD card into your device
 1. Power on your device into SysNAND
@@ -145,7 +149,7 @@ If you did not backup GBA VC Saves earlier, skip this section.
 1. Hold (R) og trykk (B) for å løse ut SD-kortet
 1. Sett inn SD-kortet i datamaskinen din
 1. Copy all your files back to your SD card
-  + Ensure you replace the `arm9loaderhax.bin` file on your SD card with the one from your backup
+  + Ensure you replace the `boot.firm` file on your SD card with the one from your backup
 1. Reinsert your SD card into your device
 1. Trykk (A) for å montere SD-kortet på nytt
 1. Trykk (Start) for å lagre og starte på nytt
@@ -153,5 +157,5 @@ If you did not backup GBA VC Saves earlier, skip this section.
 
 ___
 
-Tilbake til [Installere arm9loaderhax](installing-arm9loaderhax).
+Return to [Finalizing Setup](finalizing-setup).
 {: .notice--primary}
