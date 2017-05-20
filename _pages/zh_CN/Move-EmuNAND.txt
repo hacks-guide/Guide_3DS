@@ -7,7 +7,10 @@ permalink: /zh_CN/move-emunand.html
 本节是附加章节，将你的EmuNAND的数据迁移到新的SysNAND自制系统中，然后删除EmuNAND分区。 注意EmuNAND和RedNAND是[同一概念](http://3dbrew.org/wiki/NAND_Redirection)的两种略微不同的实现。
 {: .notice--info}
 
-**你必须已经安装了arm9loaderhax + Luma3DS才能执行接下来的操作。**
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+{: .notice--info}
+
+**You MUST have already installed Luma3DS and boot9strap or arm9loaderhax to use this.**
 {: .notice--danger}
 
 #### 你需要
@@ -47,6 +50,7 @@ Note that this is not necessary for any other kind of Virtual Console games (GBC
 
 1. Hold (R) and press (Start) at the same time to power off your device
 1. Insert your SD card into your computer
+1. Create a folder named `files9` on the root of your SD card if it does not already exist
 1. Create a folder in `/files9/` for each GBA VC game that you want to backup the save for 
 1. Reinsert your SD card into your device
 1. Power on your device into SysNAND
@@ -145,7 +149,7 @@ If you did not backup GBA VC Saves earlier, skip this section.
 1. Hold (R) and press (B) at the same time to eject your SD card
 1. 将你的 SD 卡插入到您的计算机
 1. Copy all your files back to your SD card
-  + Ensure you replace the `arm9loaderhax.bin` file on your SD card with the one from your backup
+  + Ensure you replace the `boot.firm` file on your SD card with the one from your backup
 1. Reinsert your SD card into your device
 1. 按(A)键重新加载你的SD卡
 1. Press (Start) to save and reboot
@@ -153,5 +157,5 @@ If you did not backup GBA VC Saves earlier, skip this section.
 
 ___
 
-返回到[安装arm9loaderhax](installing-arm9loaderhax)继续操作。
+Return to [Finalizing Setup](finalizing-setup).
 {: .notice--primary}
