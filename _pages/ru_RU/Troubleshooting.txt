@@ -66,6 +66,9 @@ permalink: /ru_RU/troubleshooting.html
 ## <a name="gw_fbi" />Не работает интеграция в Health & Safety на устройстве с пониженной прошивкой при помощи Gateway
 Это вызвано крайне некорректной процедурой понижения прошивки Gateway, которая дублирует каждое приложение в системе. Одно из них не используется, но это сбивает с толку систему интеграции в H&S, из-за чего она интегрирует FBI в неиспользуемый дубликат.
 
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+{: .notice--info}
+
 1. Включите консоль кнопкой питания, держа нажатой кнопку (Start), чтобы запустить меню Luma3DS chainloader
 1. Запустите GodMode9, нажав кнопку (A)   
 1. Перейдите в `[1:] SYSNAND CTRNAND` -> `title` -> `00040010`
@@ -87,8 +90,8 @@ permalink: /ru_RU/troubleshooting.html
 1. Выберите "Move path(s)"
 1. Теперь файлы с расширением из прописных букв перемещены в папку `newdir`
 1. Нажмите (Start) для перезагрузки
-1. Вернитесь к [установке A9LH](installing-arm9loaderhax) и попробуйте интегрировать FBI еще раз
-1. Если это не помогло, верните файлы с расширением `.TMD` и `.APP` обратно в папку `content`, а файлы с расширением `.tmd` и `.app` переместите в папку `newdir`, затем попытайтесь интегрировать FBI еще раз
+1. Return to [Finalizing Setup](finalizing-setup) and retry the FBI injection
+1. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then return to [Finalizing Setup](finalizing-setup) and retry the FBI injection
 
 ## <a name="ts_browser" />Не работает эксплойт на основе браузера
 Эксплойты, базирующиеся на браузере (например, browserhax или 2xrsa), нестабильны и часто не срабатывают, но в некоторых случаях это можно исправить, следуя рекомендациям ниже
@@ -96,21 +99,6 @@ permalink: /ru_RU/troubleshooting.html
 1. Откройте браузер, затем настройки браузера (Settings)
 1. Прокрутите до конца вниз и выберите "Удалить сохр. данные" (Initialize Savedata/Clear All Save Data)
 1. Попробуйте запустить эксплойт еще раз
-
-## <a name="ts_safe_a9lh" />При загрузке запускается SafeA9LHInstaller
-Вы скопировали неверный файл `arm9loaderhax.bin` на SD-карту (следовало скопировать только папку `3ds` и файл `SafeA9LHInstaller.dat` из архива SafeA9LHInstaller)    
-
-1. Используйте верный файл `arm9loaderhax.bin`
-1. Скопируйте файл `arm9loaderhax.bin` из `.zip-архива` Luma3DS в корень SD-карты
-1. Выключите приставку, зажмите (Select) и включите
-
-## <a name="ts_safe_a9lh_screen" />Видны искажения на экране после запуска SafeA9LHInstaller
-Такое иногда происходит, но причины этого неизвестны. Кнопки продолжат работать, однако изображение на экране будет искажено
-
-1. Продолжайте следовать инструкции
-1. Нажмите (Select) и arm9loaderhax будет установлен
-1. Подождите несколько секунд
-1. Выключите консоль, нажав любую кнопку
 
 ## <a name="ts_sys_down" />Черный экран при загрузке SysNAND
 
@@ -132,15 +120,15 @@ permalink: /ru_RU/troubleshooting.html
     *Скорее всего это не будет работать на Old 3DS с прошивкой 2.1.0*    
     **Вы получите БРИК на New 3DS c прошивкой 2.1.0**
     1. Выключите консоль
-    1. Зажмите (L)+(R)+(A)+(Вверх)
+    1. Hold (L) + (R) + (A) + (Up)
     1. Включите консоль
     1. Если вы вошли в режим восстановления, обновите консоль *при условии, что у вас есть возможность запустить Homebrew Launcher на последней версии прошивки, и понизить версию прошивки*, и попробуйте понизить прошивку ещё раз.
 1. Ваша консоль, скорее всего, превратилась в брик. Для поддержки, обратитесь за помощью в [Nintendo Homebrew on Discord (англ.)](https://discord.gg/MWxPgEp)
 
-## <a name="ts_sys_a9lh" />Черный экран при загрузке SysNAND после установки a9lh
+## <a name="ts_sys_b9s" />Black screen on SysNAND boot after Installing boot9strap
 
 1. Убедитесь, что у вас установлен рабочий загрузчик
-    1. Проверьте, есть ли в корне SD-карты файл `arm9loaderhax.bin`.
+    1. Check for the existence of `boot.firm` in the root of your SD card.
 1. Попробуйте сбросить настройки Luma3DS
     1. Удалите файл `/luma/config.bin` с SD-карты
     1. Выберите нужные настройки при запуске
@@ -165,9 +153,9 @@ permalink: /ru_RU/troubleshooting.html
 1. Попробуйте выполнить [9.2.0 CTRTransfer](9.2.0-ctrtransfer)
 1. Обратитесь за помощью в [Nintendo Homebrew on Discord (англ.)](https://discord.gg/MWxPgEp).
 
-## <a name="ts_transfer" />Ошибка во время SafeCTRTransfer
+## <a name="ts_transfer" />Error during SafeB9SInstaller
 
-Если во время процесса SafeCTRTransfer возникнет ошибка, вам будет предложено запустить стороннее приложение (payload) для того, чтобы восстановить вашу консоль.
+If an error occurs during the SafeB9SInstaller process, you will be prompted to launch an external payload for the purpose of repairing your device.
 
 #### Что понадобится
 
@@ -177,23 +165,23 @@ permalink: /ru_RU/troubleshooting.html
 
 1. Выберите "Unmount SD card"
 1. Вставьте SD-карту в компьютер
-1. Скопируйте `GodMode9.bin` из `.zip-архива` GodMode9 в папку `/CTRTransfer/` на SD-карте и переименуйте `GodMode9.bin` внутри папки `/CTRTransfer/` в `payload.bin`
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/boot9strap/` folder on your SD card and rename `GodMode9.bin` in `/boot9strap/` to `payload.bin`
 1. Вставьте SD-карту обратно в консоль
 1. Выберите "Run 0:/CTRTransfer/payload.bin"
 1. В случае успеха запустится GodMode9
-1. Перейдите в `[0:] SDCARD` -> `ctrtransfer`
-1. Нажмите (Y), выделив файл `<serialnumber>_nand.bin` чтобы скопировать его
+1. Navigate to `[0:] SDCARD` -> `boot9strap`
+1. Press the (L) trigger on `firm0firm1.bak` and `sector0x96.bak` to mark them
+1. Нажмите (Y), чтобы скопировать эти файлы
 1. Дважды нажмите (B) для возврата в главное меню
 1. Перейдите в `[S:] SYSNAND VIRTUAL`
-1. Нажмите (Y) чтобы вставить файл `<serialnumber>_nand.bin`
+1. Нажмите (Y), чтобы вставить скопированные ранее файлы
 1. Нажмите (A) для подтверждения
-1. Нажмите (A) для запуска процесса инъекции в `nand.bin`
+1. Press (A) to inject the files
 1. Нажмите (A), чтобы разрешить перезапись SysNAND
 1. Введите указанную комбинацию кнопок чтобы разрешить запись в SysNAND (lvl3)
-  + Этот процесс займет некоторое время
 1. По завершению процесса, нажмите (A)
 1. Нажмите (Start) для перезагрузки
-1. Сообщите об этой проблеме сюда [SafeCTRTransfer Issues Page](https://github.com/d0k3/SafeCTRTransfer/issues) (англ.)
+1. Report this issue to the [SafeB9SInstaller Issues Page](https://github.com/d0k3/SafeB9SInstaller/issues)
 
 ## <a name="ts_sys_blue" />Голубой экран при загрузке (bootrom error)
 
