@@ -7,7 +7,10 @@ permalink: /fi_FI/move-emunand.html
 Tässä lisäosiossa opastetaan EmuNANDin sisällön siirtäminen uuteen SysNAND-kokoonpanoon sekä EmuNAND-osion poistaminen tämän jälkeen. Huomaa, että termit EmuNAND ja RedNAND viittaavat [saman konseptin](http://3dbrew.org/wiki/NAND_Redirection) kahteen hiukan erilaiseen toteutukseen.
 {: .notice--info}
 
-**Sinulla TÄYTYY olla asennettuna sekä arm9loaderhax että Luma3DS käyttääksesi tätä ohjetta.**
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+{: .notice--info}
+
+**You MUST have already installed Luma3DS and boot9strap or arm9loaderhax to use this.**
 {: .notice--danger}
 
 #### Tarpeet
@@ -47,6 +50,7 @@ Huomaa, että tämä ei ole tarpeellista muille Virtual Console -peleille (GBC, 
 
 1. Pidä (R):ää pohjassa ja paina samalla (START)-painiketta sammuttaaksesi konsolisi
 1. Aseta SD-korttisi tietokoneeseesi
+1. Luo `files9`-niminen kansio SD-korttisi juureen, jos sitä ei jo ole olemassa
 1. Luo kansio `/files9/`-hakemistoon jokaista GBA VC -peliä kohden, jonka tallennuksen haluat varmuuskopioida 
 1. Aseta SD-korttisi takaisin konsoliisi
 1. Käynnistä laitteesi SysNANDiin
@@ -145,7 +149,7 @@ Jos et varmuuskopioinut GBA VC -tallennuksia aiemmin, voit ohittaa tämän osion
 1. Pidä (R):ää pohjassa ja paina samalla (B):tä irrottaaksesi SD-korttisi
 1. Aseta SD-korttisi tietokoneeseesi
 1. Kopioi kaikki tiedostosi takaisin SD-kortillesi
-  + Varmista, että SD-kortillasi oleva `arm9loaderhax.bin`-tiedosto korvataan varmuuskopion vastaavalla
+  + Ensure you replace the `boot.firm` file on your SD card with the one from your backup
 1. Aseta SD-korttisi takaisin konsoliisi
 1. Paina (A):ta liittääksesi SD-korttisi takaisin järjestelmään
 1. Paina (START)-painiketta tallentaaksesi ja käynnistääksesi uudelleen
@@ -153,5 +157,5 @@ Jos et varmuuskopioinut GBA VC -tallennuksia aiemmin, voit ohittaa tämän osion
 
 ___
 
-Palaa osioon [Arm9loaderhaxin asennus](installing-arm9loaderhax).
+Return to [Finalizing Setup](finalizing-setup).
 {: .notice--primary}
