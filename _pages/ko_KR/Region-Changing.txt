@@ -4,7 +4,7 @@ lang: ko
 permalink: /ko_KR/region-changing.html
 ---
 
-이 페이지는 arm9loaderhax CFW SysNAND의 지역을 변경하는 방법을 안내하는 부가 섹션입니다. 바꾸고자 하는 지역의 9.2.0 CTRTransfer 이미지를 설치해 끝납니다.
+This is add-on section for region changing your CFW SysNAND. 바꾸고자 하는 지역의 9.2.0 CTRTransfer 이미지를 설치해 끝납니다.
 {: .notice--primary}
 
 **Luma3DS에서는 [타이틀별 지역 에뮬레이션](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage)이 가능해지면서 지역 변경할 필요는 별로 없어졌습니다.**
@@ -12,6 +12,9 @@ permalink: /ko_KR/region-changing.html
 
 이 페이지의 [마그넷](https://en.wikipedia.org/wiki/Magnet_URI_scheme) 링크를 사용하려면
  [Deluge](http://dev.deluge-torrent.org/wiki/Download)와 같은 토렌트 클라이언트가 필요합니다.
+{: .notice--info}
+
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
 {: .notice--info}
 
 이 작업을 진행하면 NNID가 더이상 시스템과 호환되지 않아 연결이 해제됩니다. NNID는 이를 생성한 기기의 지역에 종속되며 [매우 복잡하고 어려운 과정](https://gist.githubusercontent.com/yifanlu/e80db121d38aceb8cca0e03cefd5853b/raw/3c4dd89869156ca0f945a2791e699acfdb32b510/gistfile1.txt) 없이는 다른 지역의 기기에 등록할 수 없습니다.
@@ -27,10 +30,10 @@ permalink: /ko_KR/region-changing.html
 위 경고와 마찬가지로, 때때로 e숍이 일부 기기에서 기기에 맞지 않게 작동할 (일부 New 3DS와 같은) 것이라는 점을 참고해 주세요. 이 현상의 원인은 아직 밝혀지지 않았습니다.
 {: .notice--warning}
 
-(이 가이드에 명시된) CTRTransfer를 이용한 지역 변경은 재부팅 패치를 사용할 수 없게 만드는 듯합니다. 정확한 원인은 알려지지 않았으나 Old 3DS 사용자는 확장 메모리 모드를 사용하는 게임(몬스터헌터, 대난투 스매시브라더스, 포켓몬 썬 / 문 등)을 기기를 초기화하기 전까지 즐길 수 없는 상황입니다. (세부사항은 이 페이지의 끝에 있습니다.)
+(이 가이드에 명시된) CTRTransfer를 이용한 지역 변경은 재부팅 패치를 사용할 수 없게 만드는 듯합니다. The cause for this is unknown, but for now Old 3DS users will be unable to play extended memory mode games (such as Monster Hunter, Super Smash Bros, and Pokémon Sun / Moon) until they format their devices.
 {: .notice--warning}
 
-**이 작업을 하기 위해서는 arm9loaderhax + Luma3DS가 설치되어 있어야 합니다.**
+**You MUST have already installed Luma3DS and boot9strap or arm9loaderhax to use this.**
 {: .notice--danger}
 
 #### 준비물
@@ -53,6 +56,7 @@ permalink: /ko_KR/region-changing.html
 1. 기기를 종료해 주세요.
 1. SD 카드를 컴퓨터에 삽입해 주세요.
 1. SD 카드의 최상위 경로에 `cias` 폴더가 없을 경우 폴더를 만어 주세요.
+1. SD 카드의 최상위 경로에 `files9` 폴더가 없을 경우 폴더를 만어 주세요.
 1. Godmode9 `.zip`에서 `Godmode9.bin`을 SD 카드의 `/luma/payloads/` 폴더에 복사해 주세요.
 1. CTRTransfer `.zip`에서 9.2.0 CTRTransfer image `.bin`을 SD 카드의 `/files9/` 폴더로 복사해 주세요.
 1. FBI `.zip`에서 `FBI.cia`를 SD 카드의 `/cias/` 폴더에 복사해 주세요.
@@ -82,7 +86,7 @@ permalink: /ko_KR/region-changing.html
   + 작업이 완료되면 (A)를 눌려 계속해 주세요.
 1. (start)를 눌러 기기를 다시 시작해 주세요.
 1. 본체 설정의 "기타 설정"에서 가장 오른쪽에 있는 "본체 업데이트"를 선택해 기기를 업데이트해 주세요.
-  + A9LH + Luma(지금 적용되어 있는 것)가 설치된 상태에서는 업데이트를 해도 안전합니다.
+  + Updates while using B9S + Luma (what you have) are safe
   + 오류가 발생하면 DNS 설정을 "자동"으로 설정해 주세요.
 
 ##### 섹션 III - FBI 주입
@@ -143,5 +147,5 @@ permalink: /ko_KR/region-changing.html
 
 ___
 
-Old 3DS / 2DS로 메모리 확장 모드를 사용하는 게임(몬스터헌터, 슈퍼 스매시브라더스, 포켓몬 썬/문 등)을 즐기기 위해서는 (TinyFormat 혹은 본체 설정에서) 시스템을 포맷해야 할 수 있습니다.
+Old 3DSs and 2DSs may need to format (using TinyFormat or the System Settings) to play extended memory mode games (such as Monster Hunter, Super Smash Bros, or Pokemon Sun/Moon).
 {: .notice--info}
