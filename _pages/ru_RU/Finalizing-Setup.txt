@@ -32,9 +32,9 @@ permalink:  /ru_RU/finalizing-setup.html
 * Свежая версия [Themely](https://github.com/ErmanSayin/Themely/releases/latest) *(`.cia` файл)*
 * Свежая версия [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
 * Свежая версия [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* Свежая версия [Luma3DS Updater](https://github.com/Hamcha/lumaupdate/releases/latest)
 * Свежая версия [DSP1](https://github.com/zoogie/DSP1/releases/latest)
 * Свежая версия [FBI](https://github.com/Steveice10/FBI/releases/latest)
+* Свежая версия [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
 * **Только для Old 3DS и 2DS:** Old 3DS 11.2.0-35 [otherapp payload](https://smealum.github.io/3ds/#otherapp) для вашего региона
 
 #### Инструкция
@@ -45,7 +45,7 @@ permalink:  /ru_RU/finalizing-setup.html
 1. Создайте папку `cias` в корне SD-карты
 1. Создайте папку `hblauncherloader` в корне SD-карты, если таковой нет
 1. Скопируйте `hblauncher_loader.cia` из архива hblauncher_loader в папку `/cias/` в корне SD-карты
-1. Скопируйте `lumaupdater.cia` из архива Luma3DS Updater в папку `/cias/` в корне SD-карты
+1. Скопируйте `lumaupdater-v2.0.cia` из `.zip-архива` Luma3DS Updater в папку `/cias/` в корне SD-карты
 1. Скопируйте `FBI.cia` из архива FBI в папку `/cias/` в корне SD-карты
 1. Скопируйте `DSP1.cia` в папку `/cias/` в корне SD-карты
 1. Скопируйте `Themely.cia` в папку `/cias/` в корне SD-карты
@@ -170,8 +170,13 @@ permalink:  /ru_RU/finalizing-setup.html
 
 ___
 
-Note that this guide does not have Luma3DS updater anymore due to its incompatibility with the name `boot.firm`. It will be re-added once it is updated to support Boot9Strap.
-{: .notice--info}
+{% capture notice-10 %}
+Теперь вы можете использовать Luma3DS Updater для обновления кастомной прошивки. Запустите его и нажмите (А).     
+Это не тоже самое что Обновление системы (System Update). Это приложение обновляет только файлы Luma3DS.
+Это обновит только те файлы Luma3DS, которые находятся на SD-карте. Если вы включите консоль без SD-карты, она загрузится используя Luma3DS из CTRNAND.    
+{% endcapture %}
+
+<div class="notice--info">{{ notice-10 | markdownify }}</div>
 
 {% capture notice-6 %}   
 Теперь по умолчанию будет запускаться Luma3DS CFW SysNAND.    
