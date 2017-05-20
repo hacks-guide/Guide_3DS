@@ -29,6 +29,7 @@ Note that `secret_sector.bin` is needed to revert the arm9loaderhax exploit, whi
 * The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest)
 * The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* The latest fork of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
 
 #### Instructions
 
@@ -36,11 +37,14 @@ Note that `secret_sector.bin` is needed to revert the arm9loaderhax exploit, whi
 
 1. Power off your device
 1. Insert your SD card into your computer
-1. Create a folder named `boot9strap` on the root of your SD card
 1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card
+1. Crie uma pasta chamada `cias` na raiz do seu cartão SD se ela ainda não existir
+1. Copy `lumaupdater-v2.0.cia` from the Luma3DS Updater `.zip` to the `/cias/` folder on your SD card
+1. Create a folder named `boot9strap` on the root of your SD card
 1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
-  + Delete any existing `.bin` payloads in this folder as they will not be compatible with boot9strap compatible Luma3DS versions
+1. Delete any existing `.bin` payloads in the `/luma/payloads/` folder on your SD card as they will not be compatible with boot9strap compatible Luma3DS versions
 1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the `/luma/payloads/` folder on your SD card
+1. Rename `SafeB9SInstaller.bin` in the `/luma/payloads/` folder on your SD card to `start_SafeB9SInstaller.bin`
 1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
 1. Copy `secret_sector.bin` to the `/boot9strap/` folder on your SD card
 
@@ -52,10 +56,13 @@ Note that `secret_sector.bin` is needed to revert the arm9loaderhax exploit, whi
 ##### Section II - Installing boot9strap
 
 1. Boot your device while holding (Start) to launch the Luma3DS chainloader menu
+  + Some versions of Luma3DS will just directly start whichever payload begins with `start_`
+  + If your version does this, just proceed with the instructions
 1. Launch SafeB9SInstaller by pressing (A) on it
 1. Wait for all safety checks to complete
 1. When prompted, input the key combo given to install boot9strap
 1. Once it has completed, your device will reboot automatically
+  + If your device shuts down on boot, ensure that you have copied `boot.firm` from the Luma3DS `.7z` to the root of your SD card
 
 ##### Section III - Configuring Luma3DS
 
@@ -71,7 +78,7 @@ This section is only needed if you are prompted with the Luma3DS configuration m
 1. Reboot holding (Start) during boot to launch the Luma3DS chainloader menu
 1. Launch GodMode9 by pressing (A)
 1. Navigate to `[0:] SDCARD` -> `luma` -> `payloads`
-1. Press (X) on `SafeB9SInstaller.bin` to delete it
+1. Press (X) on `start_SafeB9SInstaller.bin` to delete it
 1. Press (A) to confirm
 1. Press (B) to return to `[0:] SDCARD`
 1. Press (Y) on `boot.firm` to copy it
@@ -81,6 +88,7 @@ This section is only needed if you are prompted with the Luma3DS configuration m
 1. Select "Copy path(s)"
 1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
 1. Press (X) on `arm9loaderhax.bin` to delete it
+  + If you do not have this file, just proceed with the instructions
 1. Press (A) to confirm
 1. Press (B) to return to the main menu
 1. Hold (R) and press (B) at the same time to eject your SD card
@@ -92,9 +100,23 @@ This section is only needed if you are prompted with the Luma3DS configuration m
 1. Reinsert your SD card into your device
 1. Press (Start) to save and reboot
 
+##### Section V - Installing Luma3DS Updater
+
+1. Inicie o FBI
+1. Navegue para `SD` -> `cias`
+1. Select `lumaupdater-v2.0.cia`
+1. Select the "Install CIA" option, then press (A) to confirm
+1. Aperte (Home) para sair do FBI
+
 ___
 
 You can now remove any arm9loaderhax related files from your SD card, such as `arm9loaderhax.bin` on the root of your SD card and the `files9` folder on your SD card.
+{: .notice--info}
+
+Note that `firm0firm1.bak` and `sector0x96.bak` in the `/boot9strap/` folder on your SD card are only needed in the event of a failed boot9strap install. Once you have installed successfully, you can delete these two files.
+{: .notice--info}
+
+This fork of Luma3DS Updater allows for boot9strap compatibility by downloading and extracting the latest Luma3DS `boot.firm` for you.
 {: .notice--info}
 
 {% capture notice-6 %}   
