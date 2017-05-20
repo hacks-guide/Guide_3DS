@@ -66,6 +66,9 @@ permalink: /he_IL/troubleshooting.html
 ## <a name="gw_fbi" />אי אפשר להזריק את H&S על קונסולה ששונמכה עם Gateway
 זה קורה בגלל שGateway שנמכו בצורה מאוד גרועה, שמשאירה 2 גרסאות של כל תוכנה על הקונסולה. אחת מהם לא בשימוש, אבל זה מבלבל את מערכת הזרקת H&S, וגורם לה להכניס את FBI לקובץ הלא נכון.
 
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+{: .notice--info}
+
 1. תפעילו את הקונסולה בזמן שאתם מחזיקים (Start) במהלך האתחול כדי להפעיל את תפריט הטעינה של Luma3DS
 1. תפעילו את GodMode9 על ידי לחיצת (A)   
 1. לכו ל`[1:] SYSNAND CTRNAND`ואז `title` ולבסוף`00040010`
@@ -87,8 +90,8 @@ permalink: /he_IL/troubleshooting.html
 1. תבחרו "Move path(s)"
 1. הקבצים עם האותיות הגדולות עברו לתיקיית `newdir`
 1. תלחצו על (Start) כדי לאתחל את המכשיר
-1. חזרו ל [Installing arm9loaderhax](installing-arm9loaderhax) ונסו להזריק את FBI מחדש
-1. אם זה עדיין לא עובד, החזירו את הקבצים עם האותיות הגדולות לתיקייה `content`, העבירו את הקבצים עם האותיות הקטנות לתיקייה `newdir`, חזרו ל[התקנת arm9loaderhax](installing-arm9loaderhax) ונסו שוב להזריק את FBI
+1. Return to [Finalizing Setup](finalizing-setup) and retry the FBI injection
+1. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then return to [Finalizing Setup](finalizing-setup) and retry the FBI injection
 
 ## <a name="ts_browser" />פריצה מבוססת דפדפן לא עובדת
 פריצות מבוססות דפדפן (כגון browserhax או 2xrsa) לעיתים קרובות אינן יציבות וקורסות לעתים קרובות, אבל לפעמים ניתן לתקן אותן על-ידי ביצוע השלבים הבאים
@@ -96,21 +99,6 @@ permalink: /he_IL/troubleshooting.html
 1. תפתחו את הדפדפן, ואז תפתחו את ההגדרות שלו
 1. רדו למטה ותלחצו על Intiallize Savedate או Clear All Save Data
 1. תנסו שוב
-
-## <a name="ts_safe_a9lh" />המכשיר מפעיל את SafeA9LHInstaller
-העתקתם את ה`arm9loaderhax.bin` הלא נכון לSD שלכם (הייתם אמורים להעתיק רק את קובץ הDAT ואת קבצי הARM מהזיפ של SafeA9LHInstaller)    
-
-1. תשתמשו ב`arm9loaderhax.bin` הנכון
-1. תעתיקו את הקובץ `arm9loaderhax.bin` מתוך הזיפ של Luma3DS לתוך ה-SD שלכם, ותחליפו את הקובץ הקיים
-1. תאתחלו כשאתם מחזיקים (Select) ותמשיכו
-
-## <a name="ts_safe_a9lh_screen" />SafeA9LHInstaller מראה מסך גליצ'י
-זה קורה לעיתים, אבל הסיבה לא ידועה. הכפתורים עדיין עובדים, אבל המסך ירצד
-
-1. תעקבו אחר ההוראות כרגיל
-1. תלחצו (Select) וarm9loaderhax יותקן
-1. תחכו כמה שניות
-1. תכבו את המכשיר שלכם על ידי לחיצה על כל כפתור
 
 ## <a name="ts_sys_down" />מסך שחור בהפעלת SysNAND
 
@@ -133,15 +121,15 @@ permalink: /he_IL/troubleshooting.html
     *זה ככל הנראה לא יעבוד לOLD 3DS משונמך ל2.1.0*    
     **זה ישבור New 3DS משונמך ל2.1.0**
     1. תכבו את המכשיר
-    1. תחזיקו (L)+(R)+(A)+(Up)
+    1. Hold (L) + (R) + (A) + (Up)
     1. תפעילו את המכשיר
     1. אם אתם מצליכים להיכנס, תעדכנו את המכשיר *רק אם יש לכם דרך להיכנס לHomebrew בגרסה העדכנית ואפשרי לשנמך ממנה* ותנסו את השנמוך שוב פעם.
 1. יש סיכוי שחטפתם בריק. לקבלת תמיכה, תבקשו עזרה ב[Nintendo Homebrew על Discord](https://discord.gg/MWxPgEp)
 
-## <a name="ts_sys_a9lh" />מסך שחור בהפעלת SysNAND אחרי התקנת arm9loaderhax
+## <a name="ts_sys_b9s" />Black screen on SysNAND boot after Installing boot9strap
 
 1. תבדקו שיש לכם תוכנה עובדת.
-    1. תבדקו שיש לכם `arm9loaderhax.bin` מחוץ לכל תיקייה בSD.
+    1. Check for the existence of `boot.firm` in the root of your SD card.
 1. תנסו לאפס את ההגדרות של לומה ולתקן אותן
     1. תמחקו את `/luma/config.bin` מה SD שלכם
     1. תגדירו את האפשרויות כשזה עולה
@@ -167,9 +155,9 @@ permalink: /he_IL/troubleshooting.html
 1. תנסו לעקוב אחרי [9.2.0 CTRTransfer](9.2.0-ctrtransfer)
 1. תבקשו עזרה ב[Nintendo Homebrew על Discord](https://discord.gg/MWxPgEp).
 
-## <a name="ts_transfer" />בעיה בזמן הSafeCTRTransfer
+## <a name="ts_transfer" />Error during SafeB9SInstaller
 
-אם מתרחשת שגיאה במהלך תהליך הSafeCTRTransfer, תטצרכו להפעיל תוכנה חיצונית לצורך תיקון המכשיר.
+If an error occurs during the SafeB9SInstaller process, you will be prompted to launch an external payload for the purpose of repairing your device.
 
 #### מה נדרש
 
@@ -179,23 +167,23 @@ permalink: /he_IL/troubleshooting.html
 
 1. תבחרו ב "Unmount SD card"
 1. תכניסו את ה-SD שלכם למחשב
-1. העתיקו את `GodMode9.bin` מתוך הזיפ של GodMode9 אל תוך התיקייה `/CTRTransfer/` שב- SD שלכם ושנו את שם הקובץ `GodMode9.bin` ל-`payload.bin`
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/boot9strap/` folder on your SD card and rename `GodMode9.bin` in `/boot9strap/` to `payload.bin`
 1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
 1. תבחרו ב "Run 0:/CTRTransfer/payload.bin"
 1. אם זה היה מוצלח, אתם תיכנסו אל GodMode9
-1. נווטו אל `[0:] SDCARD` ושם אל `ctrtransfer`
-1. תלחצו (Y) על `<serialnumber>_nand.bin` כדי להעתיק אותו
+1. Navigate to `[0:] SDCARD` -> `boot9strap`
+1. Press the (L) trigger on `firm0firm1.bak` and `sector0x96.bak` to mark them
+1. לחצו (Y) כדי להעתיק את הקבצים
 1. תלחצו (B) פעמיים כדי לחזור לתפריט הראשי
 1. נווטו אל `[S:] SYSNAND VIRTUAL`
-1. תלחצו (Y) כדי להדביק את `<serialnumber>_nand.bin`
+1. לחצו (Y) כדי להדביק את הקבצים
 1. תלחצו (A) כדי לאשר
-1. תלחצו (A) כדי להזריק אל `nand.bin`
+1. Press (A) to inject the files
 1. תלחצו (A) כדי לפתוח גישת כתיבה לSysNAND
 1. תלחצו על המקשים בסדר הנכון כדי לפתוח גישת כתיבה לSysNAND (בlvl3)
-  + זה ייקח קצת זמן
 1. כאשר התהליך מסתיים, לחצו על (A) כדי להמשיך
 1. תלחצו על (Start) כדי לאתחל את המכשיר
-1. דווחו על בעייה זאת ל[עמוד הבאגים של SafeCTRTransfer](https://github.com/d0k3/SafeCTRTransfer/issues)
+1. Report this issue to the [SafeB9SInstaller Issues Page](https://github.com/d0k3/SafeB9SInstaller/issues)
 
 ## <a name="ts_sys_blue" />מסך כחול בהפעלה (bootrom error)
 
