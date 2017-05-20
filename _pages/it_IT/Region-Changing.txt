@@ -4,13 +4,16 @@ lang: it
 permalink: /it_IT/region-changing.html
 ---
 
-Questa sezione aggiuntiva spiega come cambiare regione su SysNAND con CFW arm9loaderhax. Per questo scopo, verrà eseguito un CTRTransfer alla versione 9.2.0 della regione alla quale si desidera passare.
+This is add-on section for region changing your CFW SysNAND. Per questo scopo, verrà eseguito un CTRTransfer alla versione 9.2.0 della regione alla quale si desidera passare.
 {: .notice--primary}
 
 **Il cambio della regione è tuttavia quasi completamente inutile in quanto Luma3DS supporta l'avvio di giochi di altre regioni e l'[emulazione regionale](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage) su titoli individuali.**
 {: .notice--info}
 
 **Per usare i link [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) di questa guida avrai bisogno di un client torrent come [Deluge](http://dev.deluge-torrent.org/wiki/Download)**
+{: .notice--info}
+
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
 {: .notice--info}
 
 Questo processo scollegherà il NNID dalla console, in quanto non potrà essere più compatibile. I NNID sono legati alla regione della console con cui vengono creati e non possono essere trasferiti ad un'altra senza un [procedimento avanzato e molto complesso](https://gist.githubusercontent.com/yifanlu/e80db121d38aceb8cca0e03cefd5853b/raw/3c4dd89869156ca0f945a2791e699acfdb32b510/gistfile1.txt).
@@ -25,10 +28,10 @@ Tieni presente che occasionalmente l'eShop potrebbe non funzionare senza alcun m
 In maniera molto simile, l'eShop potrebbe invece funzionare su console per cui non dovrebbe (come su alcuni New 3DS). Le cause sono correntemente sconosciute.
 {: .notice--warning}
 
-Il cambio regione tramite CTRTransfer (effettuato in questa guida) sembra far smettere di funzionare le patch relative al riavvio della console. La causa è sconosciuta, ma al momento gli utenti in possesso di un Old 3DS non potranno avviare giochi che utilizzano la modalità a memoria estesa (come Monster Hunter, Super Smash Bros e Pokémon Sole / Luna) finché non formattano la console (maggiori dettagli in fondo alla pagina).
+Il cambio regione tramite CTRTransfer (effettuato in questa guida) sembra far smettere di funzionare le patch relative al riavvio della console. The cause for this is unknown, but for now Old 3DS users will be unable to play extended memory mode games (such as Monster Hunter, Super Smash Bros, and Pokémon Sun / Moon) until they format their devices.
 {: .notice--warning}
 
-**È NECESSARIO aver già installato arm9loaderhax e Luma3DS per proseguire.**
+**You MUST have already installed Luma3DS and boot9strap or arm9loaderhax to use this.**
 {: .notice--danger}
 
 #### Cosa serve
@@ -51,6 +54,7 @@ Il cambio regione tramite CTRTransfer (effettuato in questa guida) sembra far sm
 1. Spegni il tuo 3DS
 1. Inserisci la scheda SD nel tuo computer
 1. Se assente, crea una cartella chiamata `cias` nella directory principale della tua scheda SD
+1. Se assente, crea una cartella chiamata `files9` nella directory principale della tua scheda SD
 1. Copia il file `GodMode9.bin` dall'archivio `.zip` di GodMode9 nella cartella `/luma/payloads/` della tua scheda SD
 1. Copia il file immagine del CTRTransfer 9.2.0 con estensione `.bin` dall'archivio `.zip` del CTRTransfer alla cartella `/files9/` presente nella scheda SD
 1. Copia il file `FBI.cia` dall'archivio`.zip` di FBI nella cartella `/cias/` della tua scheda SD
@@ -80,7 +84,7 @@ Il cambio regione tramite CTRTransfer (effettuato in questa guida) sembra far sm
   + Una volta completato, premi (A) per proseguire
 1. Premi (Start) per riavviare la console
 1. Aggiorna la console andando su Impostazioni della console, poi "Impostazioni generali", infine scorri a destra e seleziona "Aggiornamento"
-  + Gli aggiornamenti effettuati usando A9LH + Luma (ora installato) sono sicuri
+  + Updates while using B9S + Luma (what you have) are safe
   + Se ottieni un errore, imposta i DNS della connessione di rete in modo che vengano ottenuti automaticamente
 
 ##### Sezione III - Injecting di FBI
@@ -141,5 +145,5 @@ Se in precedenza non avevi le cartelle `eshop` e `unknown`, salta questa sezione
 
 ___
 
-Le console Old 3DS / 2DS potrebbero dover essere formattate (tramite TinyFormat o con le Impostazioni della console) per poter utilizzare la modalità memoria estesa (con ad esempio Monster Hunter, Super Smash Bros o Pokémon Sole/Luna).
+Old 3DSs and 2DSs may need to format (using TinyFormat or the System Settings) to play extended memory mode games (such as Monster Hunter, Super Smash Bros, or Pokemon Sun/Moon).
 {: .notice--info}
