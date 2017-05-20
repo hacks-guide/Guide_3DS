@@ -66,6 +66,9 @@ permalink: /zh_TW/troubleshooting.html
 ## <a name="gw_fbi" />無法在 Gateway 降級過後的裝置上注入 FBI 管理器到「健康與警示」程式裡
 這是因為 Gateway 所用的降級方式是非常糟糕的，那方式將在系統內留下各兩個版本的 3DS 程式。 其中一個是沒用到的版本，而「健康與警示」注射工具不知道這點，而將 FBI 管理器注入到錯誤的程式中。
 
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+{: .notice--info}
+
 1. 開機時，按住「Start」鍵進入 Luma3DS 選單
 1. 按「A」啟動 GodMode9   
 1. 移動至 `[1:] SYSNAND CTRNAND` -> `title` -> `00040010`
@@ -87,8 +90,8 @@ permalink: /zh_TW/troubleshooting.html
 1. 選擇 「Move path(s)」
 1. 大寫副檔名的檔案將被移至 `newdir` 資料夾中
 1. 按下「Start」鍵重啟你的裝置
-1. 繼續[安裝 arm9loaderhax](installing-arm9loaderhax)，並重試 FBI 管理器注入
-1. 如果還是沒用的話，將大寫副檔名的檔案移回，再以同樣步驟試試小寫附檔名的檔案
+1. Return to [Finalizing Setup](finalizing-setup) and retry the FBI injection
+1. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then return to [Finalizing Setup](finalizing-setup) and retry the FBI injection
 
 ## <a name="ts_browser" />瀏覽器漏洞沒有用
 瀏覽器版本的漏洞（像是 browserhax 或 2xrsa）常常不穩而且還會當掉，但有時候可以透過下列步驟來修正：
@@ -96,21 +99,6 @@ permalink: /zh_TW/troubleshooting.html
 1. 啟動網頁瀏覽器並啟動瀏覽器設定
 1. 滑到最下面並「清除資料（Initialize Savedata 或 Clear All Save Data）」
 1. 再試一次
-
-## <a name="ts_safe_a9lh" />系統都會直接開機到 SafeA9LHInstaller 底下
-你複製錯的 `arm9loaderhax.bin` 檔案到你的 SD 卡中了（SafeA9LHInstaller 包只需解壓 `3ds`資料夾及 `SafeA9LHInstaller.dat` 到 SD 卡而已）。    
-
-1. 複製正確的 `arm9loaderhax.bin` 檔案
-1. 解壓 Luma3DS `.zip` 內的 `arm9loaderhax.bin` 到 SD 卡的根目錄底下
-1. 按住「Select」鍵重啟並繼續
-
-## <a name="ts_safe_a9lh_screen" />SafeA9LHInstaller 花屏
-這種情況有時候會發生，但原因不明。 按鈕還是可以按的，只是螢幕會有花屏的現象
-
-1. 依照原步驟進行。
-1. 按下「Select」鍵安裝 arm9loaderhax
-1. 等待幾秒鐘
-1. 按下任意按鈕關機
 
 ## <a name="ts_sys_down" />啟動 SysNAND 時黑屏
 
@@ -132,15 +120,15 @@ permalink: /zh_TW/troubleshooting.html
     *這大概無法在降級至版本 2.1.0 的原 3DS 上使用*    
     **這會使降級到版本 2.1.0 的 New 3DS _變磚_**
     1. 關閉你的裝置
-    1. 按住「L+R+A+上」
+    1. Hold (L) + (R) + (A) + (Up)
     1. 啟動你的裝置
     1. 如果進入安全模式，*僅在你有最新系統版本進入 Homebrew Launcher 的方法，並且能進行降級的情況下*，才升級你的裝置，並再次嘗試降級。
 1. 你的裝置可能已經變磚。 若需求助，請至 [Discord 的 Nintendo Homebrew](https://discord.gg/MWxPgEp) 伺服器中尋求。
 
-## <a name="ts_sys_a9lh" />安裝完 arm9loaderhax 後，SysNAND 開機黑屏
+## <a name="ts_sys_b9s" />Black screen on SysNAND boot after Installing boot9strap
 
 1. 請先確保 payload 檔案可以正常運行
-    1. 檢查 `arm9loaderhax.bin` 是否在 SD 卡的根目錄底下。
+    1. Check for the existence of `boot.firm` in the root of your SD card.
 1. 試試看重設 Luma3DS 的設定檔
     1. 刪除 SD 卡中的 `/luma/config.bin`
     1. 開機後設定 Luma3DS
@@ -165,9 +153,9 @@ permalink: /zh_TW/troubleshooting.html
 1. 試試看進行[9.2.0 CTRTransfer](9.2.0-ctrtransfer)
 1. 請於 [Discord 的 Nintendo Homebrew 伺服器](https://discord.gg/MWxPgEp)尋求。
 
-## <a name="ts_transfer" />SafeCTRTransfer 時出錯了
+## <a name="ts_transfer" />Error during SafeB9SInstaller
 
-如果在 SafeCTRTransfer 過程中發生錯誤，系統將提示你啟動一個外部的 payload 以修復裝置。
+If an error occurs during the SafeB9SInstaller process, you will be prompted to launch an external payload for the purpose of repairing your device.
 
 #### 必備項目
 
@@ -177,23 +165,23 @@ permalink: /zh_TW/troubleshooting.html
 
 1. 選擇「Unmount SD card」
 1. 將 SD 卡插入電腦中
-1. 解壓 GodMode9 `.zip` 中的 `GodMode9.bin` 到 SD 卡中的 `/CTRTransfer/` 底下，並重新命名為 `payload.bin`
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/boot9strap/` folder on your SD card and rename `GodMode9.bin` in `/boot9strap/` to `payload.bin`
 1. 將 SD 卡插回裝置中
 1. 選擇 「Run 0:/CTRTransfer/payload.bin」
 1. 如果成功，你將進入 GodMode9
-1. 移動至 `[0:] SDCARD` -> `ctrtransfer`
-1. 選取 `<serialnumber>_nand.bin` 並按下「Y」複製
+1. Navigate to `[0:] SDCARD` -> `boot9strap`
+1. Press the (L) trigger on `firm0firm1.bak` and `sector0x96.bak` to mark them
+1. 按「Y」複製檔案
 1. 按「B」兩次回到主選單
 1. 移動至 `[S:] SYSNAND VIRTUAL`
-1. 按下「Y」以貼上 `<serialnumber>_nand.bin`
+1. 按「Y」貼上檔案
 1. 按 「A」 確認
-1. 按下「A」以注入 `nand.bin`
+1. Press (A) to inject the files
 1. 按下「A」以解鎖 SysNAND 複寫
 1. 按下提示的按鍵組合以解鎖 SysNAND（lvl3）的寫入保護
-  + 此過程將花費一些時間
 1. 過程結束後，按下「A」繼續
 1. 按下「Start」鍵重啟你的裝置
-1. 報告此問題到 [SafeCTRTransfer 問題頁](https://github.com/d0k3/SafeCTRTransfer/issues)
+1. Report this issue to the [SafeB9SInstaller Issues Page](https://github.com/d0k3/SafeB9SInstaller/issues)
 
 ## <a name="ts_sys_blue" />開機時藍屏 (bootrom error)
 
