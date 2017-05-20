@@ -8,7 +8,7 @@ header:
   cta_label: "はじめる" #
   cta_url: "/ja_JP/get-started" #
   caption:
-excerpt: "3DSのCFW導入ガイド<br />公式ファームウェアからarm9loaderhaxまで。<br />" #
+excerpt: "A complete guide to 3DS custom firmware, <br /> from stock to boot9strap.<br />" #
 lang: ja
 permalink: /ja_JP/index.html
 ---
@@ -33,22 +33,26 @@ Read all of the introductory pages before proceeding.
 
 [**Homebrew**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games)は通常、任天堂が許可していないソフトウェアを指します。 自作ゲーム、セーブデータの改造やバックアップ、さまざまな古いゲームのエミュレータなどのソフトウェアを実行できます。
 
-In most cases, running homebrew on your device is 100% free using [just the Nintendo 3DS Sound app](homebrew-launcher-(soundhax)) (if you are on >=11.4.0, you will be unable to proceed past homebrew). ゲームとブラウザにある色んな脆弱性によってHomebrewも起動できます。
+In most cases, running homebrew on your device is 100% free using [just the Nintendo 3DS Sound app](homebrew-launcher-(soundhax)). ゲームとブラウザにある色んな脆弱性によってHomebrewも起動できます。
 
 ## カスタムファームウェアとは
 
 **カスタム ファームウェア** ("CFW") は高度な技術によりHomebrewでは実現できないようなハッキングを実現しています。 例えば「署名回避パッチ」は、署名のない、許可されていないソフトをHOMEメニューにインストールできます。
 
-CFW can be easily set up on any console that is on 11.3.0 or lower.
+CFW can be easily set up on any console that is on 11.4.0 or lower.
 
 ## ごのガイドでインストールされるもの
 
 このガイドの目的は、通常の3DSファームウェアを
-arm9loaderhax搭載のカスタムファームウェアに書き換えることです。 一部のバージョンではHomebrewを利用していますが、最終的にはカスタムファームウェアを導入します。
+firmware to boot9strap powered Custom Firmware. 一部のバージョンではHomebrewを利用していますが、最終的にはカスタムファームウェアを導入します。
 
-Arm9loaderhaxは、WiiにおけるBootMiiと似た、起動からわずか数ミリ秒で完全にシステムを制御できる、カスタムファームウェアを起動する最新かつ最良の方法です。
+boot9strap is the newest and best method of launching Custom Firmware that gives us nearly full control of the system only milliseconds into boot, which is similar to the effect of BootMii for the Wii. It gives us even earlier control than arm9loaderhax did, and, unlike standard sighax, boot9strap uses an NDMA overwrite exploit in order to gain Boot9 code execution. This means that any console running boot9strap is capable of dumping the console unique OTP (`OTP.bin`), the ARM11 bootrom (`boot11.bin`), and the ARM9 bootrom (`boot9.bin`).
 
-他のカスタムファームウェアの起動方法に比べてarm9loaderhaxのメリットは数多くあり、古いバージョンのソフトウェア ( menuhaxやrxToolsなど) を使用する方法よりもこのガイドを使用することをお勧めします。
+The benefits of boot9strap over other Custom Firmware launch methods are numerous, and as such it is recommended to use this guide over any other that relies on outdated software (such as menuhax + rxTools, arm9loaderhax, or even normal sighax).
+
+For information on how boot9strap works, please see [this presentation](https://sciresm.github.io/33-and-a-half-c3/) by [SciresM](https://github.com/SciresM/).
+
+For a list of each of the calculated sighax signatures (the platform boot9strap is built on), see [this gist](https://gist.github.com/SciresM/cdd2266efb80175d37eabbe86f9d8c52).
 
 ## カスタムファームウェアでできること
 
@@ -67,8 +71,8 @@ Arm9loaderhaxは、WiiにおけるBootMiiと似た、起動からわずか数ミ
 ## 改造する前の注意点
 
 + **ガイドを始める前に、あなたの3DSが復元不可能なBRICK状態になるリスクが有ることを忘れないでください。 稀ではありますが、BRICKする可能性があります。必ず全ての指示に従ってください。**
-+ 既にEmuNANDが3DSに導入されていて、以前のEmuNANDの内容を新しいSysNAND CFWに移行したい場合、あなたは全ての指示に従ってください。[arm9loaderhaxをインストールする](installing-arm9loaderhax) のページで、既存のEmuNANDをSysNANDにリストアするよう促す案内が表示されます。
-+ This guide will work on New 3DS, Old 3DS, and 2DS in all regions on firmware 11.3.0 or below *(except CHN / TWN)*.
++ If you have already hacked your 3DS before to get an EmuNAND setup, and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, you should follow all instructions and restore your existing EmuNAND when prompted once you reach [InFinastalling boot9strap](installing-arm9loaderhax).
++ This guide will work on New 3DS, Old 3DS, and 2DS in all regions on firmware 11.4.0 or below.
 すべてが計画通りに進めば、データは全く失われず、導入前にあなたが使用していたすべてのもの (ゲーム、NNID、セーブデータなど) が保持されます。
 + **Keep your device plugged in and charged throughout the entire process to avoid data loss or damage from an unexpected power-off!**
 + Your SD card should be [MBR, not GPT](http://www.howtogeek.com/245610/) (the SD card that comes with your device will be MBR by default).
