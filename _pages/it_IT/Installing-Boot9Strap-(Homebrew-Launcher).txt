@@ -1,0 +1,58 @@
+---
+title: "Installing boot9strap (Homebrew Launcher)" #
+lang: it
+permalink: /installing-boot9strap-(homebrew-launcher).html
+---
+
+Se hai già modificato il tuo 3DS in passato e hai installato un CFW basato su EmuNAND, ricorda che questa guida interessa solamente la SysNAND per cui dovresti seguire le istruzioni in tale modalità. Tieni presente che i termini EmuNAND e RedNAND si riferiscono a due implementazioni leggermente diverse [dello stesso concetto](http://3dbrew.org/wiki/NAND_Redirection).
+{: .notice--info}
+
+**Per usare i link [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) di questa guida avrai bisogno di un client torrent come [Deluge](http://dev.deluge-torrent.org/wiki/Download)**
+{: .notice--info}
+
+#### Cosa serve
+
+* The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest)
+* L'ultima versione di [safehax](https://github.com/TiniVi/safehax/releases/latest)
+* L'ultima versione di [udsploit](https://github.com/smealum/udsploit/releases/latest)
+
+#### Istruzioni
+
+##### Sezione I - Preparazione
+
+1. Rimuovi la scheda SD dalla tua console lasciando però l'Homebrew Launcher in esecuzione, quindi inserisci la scheda SD nel tuo computer
+1. Create a folder named `boot9strap` on the root of your SD card
+1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
+1. Copia il file `safehax.3dsx` nella cartella `/3ds/` nella tua scheda SD
+1. Copia il file `udsploit.3dsx` nella cartella `/3ds/` della tua scheda SD
+1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card and rename `SafeB9SInstaller.bin` to `safehaxpayload.bin`
+
+    ![]({{ base_path }}/images/screenshots/boot9strap-hb-file-layout.png)
+    {: .notice--info}
+
+1. Reinserisci la scheda SD nel Nintendo 3DS
+
+##### Section II - Launching SafeB9SInstaller
+
+1. Avvia udsploit dalla lista degli homebrew disponibili
+  + Potrebbe essere necessario scorrere la lista per visualizzare l'homebrew
+1. Al termine del processo, premi (Start) per uscire da udsploit
+  + Potrebbero essere necessari più tentativi
+  + Se la console dovesse bloccarsi, forzane lo spegnimento tenendo premuto il pulsante di accensione, quindi riprova
+1. Avvia safehax dalla lista degli homebrew disponibili
+  + Potrebbe essere necessario scorrere la lista per visualizzare l'homebrew
+  + Se dovessi riscontrare l'errore "PM INIT FAILED", prova ad usare la [versione r19 di safehax](https://github.com/TiniVi/safehax/releases/tag/r19)
+  + Se la console dovesse bloccarsi, forzane lo spegnimento tenendo premuto il pulsante di accensione, quindi riprova
+1. If the exploit was successful, you will have booted into SafeB9SInstaller
+
+##### Section III - Installing boot9strap
+
+1. Wait for all safety checks to complete
+1. When prompted, input the key combo given to install boot9strap
+1. Once it has completed, your device will reboot into boot9strap, then shutdown automatically
+
+___
+
+Continue to [Finalizing Setup](finalizing-setup)
+{: .notice--primary}
