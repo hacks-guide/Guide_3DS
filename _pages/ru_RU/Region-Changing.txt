@@ -4,13 +4,16 @@ lang: ru
 permalink: /ru_RU/region-changing.html
 ---
 
-Этот дополнительный раздел рассказывает о смене региона на вашей приставке с arm9loaderhax CFW SysNAND. Это делается путем установки образа 9.2.0 CTRTransfer того региона, на который вы хотите перейти.
+This is add-on section for region changing your CFW SysNAND. Это делается путем установки образа 9.2.0 CTRTransfer того региона, на который вы хотите перейти.
 {: .notice--primary}
 
 **Смена региона абсолютно не обязательна с тех пор, как в Luma3DS поддерживает запуск игр других регионов и индивидуальную [эмуляцию региона для отдельных игр](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage) (англ.).**
 {: .notice--info}
 
 Для использования [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme)-ссылок в этом руководстве необходим torrent-клиент, например [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+{: .notice--info}
+
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
 {: .notice--info}
 
 Этот процесс отсоединит NNID от приставки, поскольку он больше не будет совместим с вашей консолью. NNID привязан к конкретному устройству и к его региону, поэтому перенос NNID между приставками с разными регионами невозможен без применения [крайне сложных операций](https://gist.githubusercontent.com/yifanlu/e80db121d38aceb8cca0e03cefd5853b/raw/3c4dd89869156ca0f945a2791e699acfdb32b510/gistfile1.txt).
@@ -25,10 +28,10 @@ permalink: /ru_RU/region-changing.html
 Как и в случае выше, иногда eShop работает там, где не должен (например на некоторых New 3DS). Причины на данный момент неизвестны.
 {: .notice--warning}
 
-Смена региона при помощи CTRTransfer (что используется в этом методе) по какой-то причине ломает reboot-патч. Причина этого неизвестна, но из-за этого владельцы Old 3DS теряют возможность играть в игры, требующие режим расширенной оперативной памяти (например, Monster Hunter, Super Smash Bros, и Pokémon Sun / Moon) до тех пор, пока не выполнят форматирование устройства (подробности в конце этой страницы).
+Смена региона при помощи CTRTransfer (что используется в этом методе) по какой-то причине ломает reboot-патч. The cause for this is unknown, but for now Old 3DS users will be unable to play extended memory mode games (such as Monster Hunter, Super Smash Bros, and Pokémon Sun / Moon) until they format their devices.
 {: .notice--warning}
 
-**Для продолжения у вас уже ДОЛЖНЫ быть установлены arm9loaderhax и Luma3DS**
+**You MUST have already installed Luma3DS and boot9strap or arm9loaderhax to use this.**
 {: .notice--danger}
 
 #### Что понадобится
@@ -51,14 +54,15 @@ permalink: /ru_RU/region-changing.html
 1. Выключите консоль
 1. Вставьте SD-карту в компьютер
 1. Создайте папку `cias` в корне SD-карты
-1. Скопируйте `GodMode9.bin` из `.zip-архива` GodMode9 в папку `/luma/payloads/`на SD-карте
+1. Создайте папку `files9` в корне SD-карты, если таковой нет
+1. Скопируйте `GodMode9.bin` из `.zip-архива` GodMode9 в папку `/luma/payloads/` на SD-карте
 1. Скопируйте файлы `.bin` и `.bin.sha` из `.zip-архива` с образом 9.2.0 CTRTransfer в папку `/files9/` на SD-карте
 1. Скопируйте `FBI.cia` из архива FBI в папку `/cias/` в корне SD-карты
 1. Вставьте SD-карту обратно в консоль
 
 ##### Часть II - CTRTransfer
 
-1. Включите вашу консоль, удерживая (Start), чтобы запустить меню Luma3DS chainloader
+1. Включите консоль кнопкой питания, держа нажатой кнопку (Start), чтобы запустить меню Luma3DS chainloader
 1. Запустите GodMode9, нажав кнопку (A)
 1. Перейдите в `[0:] SDCARD` -> `files9`
 1. Нажмите (A) чтобы выбрать файл `.bin` CTRTransfer
@@ -80,7 +84,7 @@ permalink: /ru_RU/region-changing.html
   + По завершению процесса, нажмите (A)
 1. Нажмите (Start) для перезагрузки
 1. Обновите прошивку консоли, зайдя в Системные настройки (System Settings), затем "Прочие настройки" (Other Settings), затем листайте вправо до конца и выберите пункт "Обновление" (System Update)
-  + Обновление консоли с установленным A9LH + Luma (установленых у вас) безопасно
+  + Updates while using B9S + Luma (what you have) are safe
   + При появлении ошибки, поставьте в настройках подключения, в настройках DNS "Получать DNS автоматически" в положение "Да"
 
 ##### Часть III - Интеграция FBI
@@ -141,5 +145,5 @@ permalink: /ru_RU/region-changing.html
 
 ___
 
-Для Old 3DS / 2DS может потребоваться форматирование (используя TinyFormat или Системные настройки), иначе игры требующие режима расширенной памяти могут не заработать (Monster Hunter, Super Smash Bros, Pokemon Sun/Moon, и т. п.).
+Old 3DSs and 2DSs may need to format (using TinyFormat or the System Settings) to play extended memory mode games (such as Monster Hunter, Super Smash Bros, or Pokemon Sun/Moon).
 {: .notice--info}
