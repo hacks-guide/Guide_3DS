@@ -66,6 +66,9 @@ Om een [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) link te gebruik
 ## <a name="gw_fbi" />Kan H&S niet injecteren op een systeem die gedowngrade is met behulp van Gateway
 Dit komt omdat Gateway een slechte kwaliteit downgrademethode implementeert, welke twee versies van elke app op het systeem laat staan. Een van de twee wordt niet gebruikt, maar het injectiesysteem snapt dit niet, waardoor de verkeerde H&S geinjecteerd wordt.
 
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+{: .notice--info}
+
 1. Start je 3DS terwijl je (Start) ingedrukt houdt om het Luma3DS chainloader menu te openen
 1. Open GodMode9 door op (A) te drukken   
 1. Navigeer naar `[1:] SYSNAND CTRNAND` -> `title` -> `00040010`
@@ -87,8 +90,8 @@ Dit komt omdat Gateway een slechte kwaliteit downgrademethode implementeert, wel
 1. Selecteer "Move path(s)"
 1. De bestanden met extensies met hoofdletters zullen naar de map `newdir` verplaatst zijn
 1. Druk op (Start) om je 3DS opnieuw op te starten
-1. Ga terun naar [Installeren van arm9loaderhax](installing-arm9loaderhax) en probeer de FBI-injectie opnieuw
-1. Als dit nog steeds niet werkt, verplaats dan de bestanden met een hoofdletter extensie naar de `content` map, verplaats dan de bestanden met extensie in kleine letters naar de `newdir` map, en ga dan terug naar [arm9loaderhax installeren](installing-arm9loaderhax) en probeer de FBI injectie opnieuw
+1. Return to [Finalizing Setup](finalizing-setup) and retry the FBI injection
+1. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then return to [Finalizing Setup](finalizing-setup) and retry the FBI injection
 
 ## <a name="ts_browser" />Een op de browser gebaseerde exploit werkt niet
 Op de browser gebaseerde exploits (zoals browserhax or 2xrsa) zijn vaak erg onstabiel en crashen regelmatig, maar ze kunnen soms met de volgende stappen gerepareerd worden
@@ -96,21 +99,6 @@ Op de browser gebaseerde exploits (zoals browserhax or 2xrsa) zijn vaak erg onst
 1. Open de browser en open de browserinstellingen
 1. Scroll naar beneden en initialiseer Savedata (het kan ook Clear All Save Data heten)
 1. Probeer de exploit weer
-
-## <a name="ts_safe_a9lh" />Het systeem start direct de SafeA9LHInstaller
-Je hebt het verkeerde `arm9loaderhax.bin` bestand naar je SD kaart gekopieerd (je hoefde alleen maar de `3ds` map en het `SafeA9LHInstaller.dat` bestand van de SafeA9LHInstaller zip te kopiëren)    
-
-1. Gebruik de juiste `arm9loaderhax.bin`
-1. Kopieer `arm9loaderhax.bin` van de Luma3DS `.zip` naar de hoofdmap van je SD kaart
-1. Start opnieuw op terwijl je (Select) ingedrukt houdt en ga verder
-
-## <a name="ts_safe_a9lh_screen" />SafeA9LHInstaller geeft een vreemd beeld
-Dit gebeurt soms, maar de reden is niet bekend. De knoppen werken nog steeds, maar het scherm ziet er vreemd uit
-
-1. Volg de instructies zoals normaal
-1. Druk op (Select) en arm9loaderhax wordt geïnstalleerd
-1. Wacht een paar seconden
-1. Zet je 3DS uit door op een willekeurige knop te drukken
 
 ## <a name="ts_sys_down" />Zwart scherm bij het opstarten van SysNAND
 
@@ -132,15 +120,15 @@ Dit gebeurt soms, maar de reden is niet bekend. De knoppen werken nog steeds, ma
     *Dit werkt waarschijnlijk niet voor een oude 3DS die is gedowngrade naar 2.1.0*    
     **Dit zal een nieuwe 3DS die gedowngrade is naar 2.1.0 ONBRUIKBAAR maken**
     1. Schakel je 3DS uit
-    1. Houd (L)+(R)+(A)+(Up) tegelijkertijd ingedrukt
+    1. Hold (L) + (R) + (A) + (Up)
     1. Zet je 3DS aan
     1. Als je in safe-mode komt, update je 3DS *alleen wanneer je beschikking hebt tot een entrypoint voor de laatste firmwareversie en de mogelijkheid om hem te downgraden* en probeer weer te downgraden.
 1. Je 3DS is misschien gebricked. Voor support, vraag om hulp op [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
 
-## <a name="ts_sys_a9lh" />Zwart scherm op SysNAND-boot na het installeren van arm9loaderhax
+## <a name="ts_sys_b9s" />Black screen on SysNAND boot after Installing boot9strap
 
 1. Zorg er voor dat je een werkende payload hebt.
-    1. Controleer of `arm9loaderhax.bin` in de hoofdmap van je SD kaart bestaat.
+    1. Check for the existence of `boot.firm` in the root of your SD card.
 1. Probeer om de configuratie van Luma te resetten en de opties te repareren,
     1. Verwijder `/luma/config.bin` van je SD kaart
     1. Stel je opties in wanneer hij opstart
@@ -165,9 +153,9 @@ Dit gebeurt soms, maar de reden is niet bekend. De knoppen werken nog steeds, ma
 1. Probeer de [9.2.0 ctrtransfer](9.2.0-ctrtransfer) te volgen
 1. Vraag om hulp op [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
 
-## <a name="ts_transfer" />Foutmelding tijdens SafeCTRTransfer
+## <a name="ts_transfer" />Error during SafeB9SInstaller
 
-Als er een fout optreed tijdens het SafeCTRTransfer proces, wordt je gevraagd een externe payload te openen, met als doel het repareren van je 3DS.
+If an error occurs during the SafeB9SInstaller process, you will be prompted to launch an external payload for the purpose of repairing your device.
 
 #### Benodigdheden
 
@@ -177,23 +165,23 @@ Als er een fout optreed tijdens het SafeCTRTransfer proces, wordt je gevraagd ee
 
 1. Selecteer "Unmount SD card"
 1. Plaats je SD kaart in je computer
-1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/CTRTransfer/` folder on your SD card and rename `GodMode9.bin` in `/CTRTransfer/` to `payload.bin`
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/boot9strap/` folder on your SD card and rename `GodMode9.bin` in `/boot9strap/` to `payload.bin`
 1. Stop je SD kaart terug in je 3DS
 1. Select "Run 0:/CTRTransfer/payload.bin"
 1. Als dit succesvol was zal je GodMode9 geopend hebben
-1. Navigeer naar `[0:] SDCARD` -> `ctrtransfer`
-1. Druk op (Y) op `<serienummer>_nand.bin` om deze te kopiëren
+1. Navigate to `[0:] SDCARD` -> `boot9strap`
+1. Press the (L) trigger on `firm0firm1.bak` and `sector0x96.bak` to mark them
+1. Druk op (Y) om de bestanden te kopieren
 1. Druk twee keer op (B) om terug te gaan naar het hoofdmenu
 1. Navigeer naar `[S:] SYSNAND VIRTUAL`
-1. Druk op (Y) om `<serienummer>_nand.bin` te plakken
+1. Druk op (Y) om de bestanden te plakken
 1. Druk op (A) om te bevestigen
-1. Druk op (A) om in `nand.bin` te injecteren
+1. Press (A) to inject the files
 1. Druk op (A) om SysNAND overschrijven aan te zetten
 1. Voer de gegeven combinatie van knoppen in om SysNAND (lvl3) writing in te schakelen
-  + Dit proces zal enige tijd duren
 1. Once it has completed, press (A) to continue
 1. Druk op (Start) om je 3DS opnieuw op te starten
-1. Meld dit probleem bij de [SafeCTRTransfer Issues Pagina](https://github.com/d0k3/SafeCTRTransfer/issues)
+1. Report this issue to the [SafeB9SInstaller Issues Page](https://github.com/d0k3/SafeB9SInstaller/issues)
 
 ## <a name="ts_sys_blue" />Blauw scherm tijdens het opstarten (bootrom error)
 
