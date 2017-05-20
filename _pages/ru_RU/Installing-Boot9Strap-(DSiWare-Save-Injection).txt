@@ -1,5 +1,5 @@
 ---
-title: "Installing boot9strap (DSiWare Save Injection)" #
+title: "Установка boot9strap (Инъекция в сохранения DSiWare)" #
 lang: ru
 permalink: /ru_RU/installing-boot9strap-(dsiware-save-injection).html
 ---
@@ -13,7 +13,7 @@ permalink: /ru_RU/installing-boot9strap-(dsiware-save-injection).html
 Прежде чем продолжить, убедитесь, вы прочитали все уведомления и предупреждения в [Установка boot9strap (DSiWare)](installing-boot9strap-(dsiware))
 {: .notice--danger}
 
-If you do not use the correct `.firm` corresponding to the target 3DS, you will BRICK! Ensure you download and use the correct one!
+Если вы не будете использовать корректный `.firm`, соответствующий целевой 3DS, вы получите БРИК! Убедитесь что скачали и используете правильный!
 {: .notice--danger}
 
 #### Что понадобится
@@ -21,12 +21,12 @@ If you do not use the correct `.firm` corresponding to the target 3DS, you will 
 * Две консоли
   + **Исходная 3DS**: 3DS с кастомной прошивкой (boot9strap или arm9loaderhax) *с последней версией системного ПО*
   + **Целевая 3DS**: 3DS с официальной прошивкой *11.4.0*
-* Already own one of the following exploitable DSiWare games (a pirated copy of the game will **not** work) on **the source 3DS**
+* Купленная DSiWare игра из списка ниже (пиратская копия **не** будет работать) на **исходной 3DS**
   + **Fieldrunners**
   + **Legends of Exidia**
   + **Guitar Rock Tour**  
   + **The Legend of Zelda: Four Swords**  
-* The latest release of [3ds_dsiwarehax_installer](https://github.com/yellows8/3ds_dsiwarehax_installer/releases)
+* Свежая версия [3ds_dsiwarehax_installer](https://github.com/yellows8/3ds_dsiwarehax_installer/releases)
 * Свежая версия [GodMode9](images/GodMode9-20161209-011002.zip)
 * Свежая версия [b9sTool](https://github.com/Plailect/b9sTool/releases/latest)
 * Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
@@ -41,8 +41,8 @@ If you do not use the correct `.firm` corresponding to the target 3DS, you will 
 Используйте [save manager](https://github.com/J-D-K/JKSM/releases/latest) для того, чтобы сделать резервные копии всех важных сохранений на *целевой 3DS* (приставка будет отформатирована!)
 {: .notice--warning}
 
-1. Copy `GodMode9.firm` (or `GodMode9.bin` for arm9loaderhax users) from the GodMode9 `.zip` to the `/luma/payloads` folder on **the source 3DS**'s SD card
-1. Copy the relevant `public.sav` from the `/dsiware/(8 Character ID)/` folder in the 3ds_dsiwarehax_installer `.zip` to the root of **the source 3DS**'s SD card
+1. Скопируйте `GodMode9.firm` (или `GodMode9.bin` для пользователей arm9loaderhax) из `.zip-архива` GodMode9 в папку `/luma/payloads/` на SD-карте **исходной 3DS**
+1. Скопируйте `public.sav` из папки `/dsiware/(8-ми значный ID)/` из `.zip-архива` 3ds_dsiwarehax_installer, в корень SD-карты **исходной 3DS**
   + **Fieldrunners USA Region**: `4b464445`
   + **Fieldrunners EUR Region**: `4b464456`
   + **Legends of Exidia USA Region**: `4b4c4545`
@@ -50,8 +50,8 @@ If you do not use the correct `.firm` corresponding to the target 3DS, you will 
   + **Legends of Exidia JPN Region**: `4b4c454a`
   + **Guitar Rock Tour EUR Region**: `4b475256`
   + **Guitar Rock Tour USA Region**: `4b475245`
-  + **The Legend of Zelda: Four Swords EUR Region**: `4b51391`   
-  + **The Legend of Zelda: Four Swords USA Region**: `4b51391`    
+  + **The Legend of Zelda: Four Swords EUR Region**: `4b513945`   
+  + **The Legend of Zelda: Four Swords USA Region**: `4b513956`    
 1. Вставьте SD-карту в **исходную 3DS**
 1. Включите **исходную 3DS** кнопкой питания, держа нажатой кнопку (Start), чтобы запустить меню Luma3DS chainloader
 1. Запустите GodMode9, нажав кнопку (A)
@@ -70,10 +70,10 @@ If you do not use the correct `.firm` corresponding to the target 3DS, you will 
 1. Включите **исходную 3DS** кнопкой питания, держа нажатой кнопку (Start), чтобы запустить меню Luma3DS chainloader
 1. Запустите GodMode9, нажав кнопку (A)
 1. Перейдите в `SDCARD`
-1. Press (Y) on `public.sav` to copy it
+1. Нажмите (Y) на `public.sav`, чтобы скопировать его
 1. Нажмите (B) для возврата в главное меню
 1. Перейдите в `SYSNAND TWLN` -> `title` -> `00030004`
-1. Navigate to the folder for your game and region:
+1. Перейдите в папку, соответствующую вашей игре и региону:
   + **Fieldrunners USA Region**: `4b464445`
   + **Fieldrunners EUR Region**: `4b464456`
   + **Legends of Exidia USA Region**: `4b4c4545`
@@ -84,7 +84,7 @@ If you do not use the correct `.firm` corresponding to the target 3DS, you will 
   + **The Legend of Zelda: Four Swords EUR Region**: `4b51391`   
   + **The Legend of Zelda: Four Swords USA Region**: `4b51391`   
 1. Перейдите в папку `data`
-1. Press (X) on the existing `public.sav` to delete it
+1. Нажмите (X) на существующем `public.sav`, чтобы удалить его
 1. Введите указанную комбинацию кнопок чтобы разрешить запись в SysNAND (lvl1)
 1. Нажмите (A), чтобы продолжить
 1. Нажмите (Y) чтобы вставить файл `public.sav`
@@ -95,9 +95,9 @@ If you do not use the correct `.firm` corresponding to the target 3DS, you will 
   + **Fieldrunners**: коснитесь кнопки 'Scores' в главном меню
   + **Legends of Exidia**: после того, как нажмёте (A) или (Start) и пропустите два игровых экрана, выберите первый слот сохранения и нажмите продолжить (continue)
   + **Guitar Rock Tour**: пролистайте вниз и перейдите в High-Scores -> Drums -> Easy    
-  + **The Legend of Zelda: Four Swords**: Just start the game
-  + If your game has an error about `boot.nds` or a white screen, **then the exploit has been successful**
-  + If your game behaves normally and does not give you this error, then you should stop and figure out what went wrong
+  + **The Legend of Zelda: Four Swords**: Просто начните игру
+  + Если игра завершается с ошибкой о `boot.nds`, либо просто появляется белый экран, **значит эксплойт сработал успешно!**
+  + Если игра работает нормально безо всяких ошибок, значит вам следует остановится и выяснить на каком этапе вы допустили оплошность
   + Если появляется черный экран, обратитесь к разделу с [проблемами и их решениями](troubleshooting#twl_broken)
 
 ##### Часть III - Передача данных
@@ -116,7 +116,7 @@ If you do not use the correct `.firm` corresponding to the target 3DS, you will 
     + **НЕ** выбирайте "Low-Capacity microSD Card Transfer" (опция 2), при таком варианте перенесутся только тикеты, а сохранения DSiWare-игр не будут перенесены.
     + Быстрый способ: Если у вас есть возможность перенести данные с SD-карты (исходная) на microSD-карту (целевая), выберите "PC-Based Transfer" (опция 3) при появлении запроса.
     + Медленный способ: Если у вас нет возможности перенести данные с помощью компьютера, выберите "Wireless Transfer" (опция 1).
-1. Go to [this link](http://en-americas-support.nintendo.com/app/answers/detail/a_id/227/) and follow Nintendo's official instructions for System Transferring from one system to another while keeping in mind what you just read
+1. Перейдите по [этой ссылкк](http://en-americas-support.nintendo.com/app/answers/detail/a_id/227/) и следуйте официальным инструкциям от Nintendo для Переноса данных, держа в голове то, что вы прочитали чуть выше
 
 ##### Часть IV - Восстановление исходной 3DS
 
@@ -136,40 +136,40 @@ If you do not use the correct `.firm` corresponding to the target 3DS, you will 
 1. По завершению процесса, нажмите (A)
 1. Нажмите (Start) для того, чтобы перезагрузить **исходную 3DS**
 
-##### Section V - Backing up the target 3DS's FIRM
+##### Часть V - Резервное копирование FIRM целевой 3DS
 
-1. Copy `boot.nds` to the root of **the target 3DS**'s SD card
-1. Create a folder named `boot9strap` on the root of **the target 3DS**'s SD card
-1. Copy the 11.4.0 `.firm` corresponding to **the target 3DS** to the `boot9strap` folder on the root of **the target 3DS**'s SD card
-1. Copy `boot9strap.firm` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
-1. Launch your DSiWare game on **the target 3DS**
-1. Launch b9sTool using your DSiWare game
+1. Скопируйте `boot.nds` в корень SD-карты **целевой 3DS**
+1. Создайте папку `boot9strap` в корне SD-карты **целевой 3DS**
+1. Скопируйте 11.4.0 `.firm`, соответствующий **целевой 3DS** в папку `boot9strap` на SD-карте **целевой 3DS**
+1. Скопируйте `boot9strap.firm` из `.zip-архива` boot9strap в папку `/boot9strap/` в корне SD-карты
+1. Запустите DSiWare игру на **целевой 3DS**
+1. Запустите b9sTool, используя DSiWare игру
   + **Fieldrunners**: коснитесь кнопки 'Scores' в главном меню
-  + **Legends of Exidia**: After pressing (A) or (Start) at the two title screens, select the first save slot and press continue
+  + **Legends of Exidia**: После нажатия (A), либо (Start) на двух первых экранах, выберите первый слот и нажмите "continue"
   + **Guitar Rock Tour**: пролистайте вниз и перейдите в High-Scores -> Drums -> Easy
-  + **The Legend of Zelda: Four Swords**: Just start the game
-  + If your game does not have the hacked save file installed, [follow this troubleshooting guide](troubleshooting#ts_dsiware)
-1. Select "Dump F0F1" to backup **the target 3DS**'s FIRM
-1. Make note of the FIRM backup's location
-1. Exit b9sTool
-  + You may have to force power off by holding the power button
-1. Put your SD card in your computer, then copy `F0F1_N3DS.bin` or `F0F1_O3DS.bin` (depending on your device) to a safe location; make backups in multiple locations; this backup will save you from a brick if anything goes wrong
+  + **The Legend of Zelda: Four Swords**: Просто начните игру
+  + Если у игры нет установленного взломанного сохранения, обратитесь к разделу с [проблемами и их решениями](troubleshooting#ts_dsiware)
+1. Выберите "Dump F0F1", чтобы сделать резервную копию разделов FIRM **целевой 3DS**
+1. Запомните место положения бекапа FIRM
+1. Закройте b9sTool
+  + При необходимости выключите консоль принудительно, удерживая кнопку питания
+1. Вставьте SD-карту в компьютер и скопируйте `F0F1_N3DS.bin` или `F0F1_O3DS.bin` (в зависимости от типа вашего устройства) в безопасное место; сделайте их резервные копии в нескольких местах; эти файлы помогут вам восстановить приставку в случае брика, если что-то пойдет не так
 
-##### Section VI - Flashing the target 3DS's FIRM
+##### Часть VI - Прошивка FIRM целевой 3DS
 
-**Do NOT use b9sTool on a device that already has arm9loaderhax installed or you will BRICK!**
+**НЕ используйте b9sTool на приставках с установленным arm9loaderhax. Это гарантированно приведет к БРИКУ!**
 {: .notice--danger}
 
-1. Launch your DSiWare game on **the target 3DS**
-1. Launch b9sTool using your DSiWare game
-  + **Fieldrunners**: Touch the 'Scores' button at the main menu
-  + **Legends of Exidia**: After pressing (A) or (Start) at the two title screens, select the first save slot and press continue
-  + **Guitar Rock Tour**: Scroll down and go to High-Scores -> Drums -> Easy
-  + **The Legend of Zelda: Four Swords**: Just start the game
-1. Select "Install boot9strap" and confirm
-1. Exit b9sTool, then power off your device
-  + You may have to force power off by holding the power button
-1. Your device will boot into boot9strap, then shutdown automatically because it does not yet have a payload to launch
+1. Запустите DSiWare игру на **целевой 3DS**
+1. Запустите b9sTool, используя DSiWare игру
+  + **Fieldrunners**: коснитесь кнопки 'Scores' в главном меню
+  + **Legends of Exidia**: После нажатия (A), либо (Start) на двух первых экранах, выберите первый слот и нажмите "continue"
+  + **Guitar Rock Tour**: пролистайте вниз и перейдите в High-Scores -> Drums -> Easy
+  + **The Legend of Zelda: Four Swords**: Просто начните игру
+1. Выберите "Install boot9strap" и подтвердите выбор
+1. Закройте b9sTool, затем выключите консоль
+  + При необходимости выключите консоль принудительно, удерживая кнопку питания
+1. Ваша консоль загрузится в boot9strap, затем автоматически выключится, потому что запускаемого файла еще нет
 
 ___
 
