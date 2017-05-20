@@ -4,13 +4,16 @@ lang: zh-Hant
 permalink: /zh_TW/9.2.0-ctrtransfer.html
 ---
 
-在 CTRTransfer 後，你可能會看不到你先前安裝在你裝置上的遊戲。 這是因為在轉移後，那些程式的 tickets 都將被移除。這也就是為什麼你該先進行備份。 在本教學最後我們將還原那些程式。
-{: .notice--info}
+This is add-on section for installing a 9.2.0 CTRTransfer image to your device.
+{: .notice--primary}
 
 本頁面會有些許的[磁力](https://en.wikipedia.org/wiki/Magnet_URI_scheme)連結，你將需要個像 [Deluge](http://dev.deluge-torrent.org/wiki/Download) 的 BT 種子下載器來下載磁力連結的檔案。
 {: .notice--info}
 
-進行 9.2.0 的 CTRTransfer 的目的是為了排除現有 NAND 所導致的問題。所以不像 2.1.0 的 CTRTransfer，本章節僅需備份 tickets。 如果你沒備份這些檔案的話，你將遺失所有已安裝的遊戲及存檔！
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+{: .notice--info}
+
+**You MUST have already installed Luma3DS and boot9strap or arm9loaderhax to use this.**
 {: .notice--danger}
 
 #### 必備項目
@@ -34,6 +37,7 @@ permalink: /zh_TW/9.2.0-ctrtransfer.html
 1. 關閉你的裝置
 1. 將 SD 卡插入電腦中
 1. 在 SD 卡的根目錄底下建立一個新資料夾 `cias`
+1. 在 SD 卡的根目錄底下建立一個新資料夾 `files9`
 1. 從 GodMode9 `.zip` 中解壓 `GodMode9.bin` 到 SD 上的 `/luma/payloads/` 中
 1. 從剛下載的 CTRTransfer `.zip` 中，解壓 9.2.0 CTRTransfer 鏡像檔 `.bin` 檔案至 SD 卡上的 `/files9/` 資料夾
 1. 解壓 FBI `.zip` 中的 `FBI.cia` 到 SD 卡中的 `/cias/` 資料夾底下
@@ -41,7 +45,7 @@ permalink: /zh_TW/9.2.0-ctrtransfer.html
 
 ##### 第二節 — 進行 CTRTransfer
 
-1. 開機時按住「Start」鍵以透過 arm9loaderhax 啟動 Luma3DS 選單
+1. Launch the Luma3DS chainloader menu by holding (Start) during boot
 1. 按「A」啟動 GodMode9
 1. 移動至 `[0:] SDCARD` -> `files9`
 1. 選擇 CTRTransfer `.bin`，並按「A」選擇
@@ -63,7 +67,7 @@ permalink: /zh_TW/9.2.0-ctrtransfer.html
   + 過程結束後，按下「A」繼續
 1. 按下「Start」鍵重啟你的裝置
 1. 到裝置主選單中更新你的主機，到「系統設置（System Settings）」、「其他設置（Other Settings）」底下選擇「系統更新（System Update）」
-  + 在 A9LH + Luma 底下更新是沒問題的
+  + Updates while using B9S + Luma (what you have) are safe
   + 如果過程中出現錯誤，試試到 DNS 設定底下將設定改成「自動 （auto）」
 
 ##### 第三節 — 注入 FBI 管理器
@@ -116,5 +120,5 @@ permalink: /zh_TW/9.2.0-ctrtransfer.html
 
 ___
 
-回到 [安裝 arm9loaderhax](installing-arm9loaderhax)
+Continue to [Finalizing Setup](finalizing-setup)
 {: .notice--primary}
