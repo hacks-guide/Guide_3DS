@@ -4,13 +4,16 @@ lang: zh-Hant
 permalink: /zh_TW/region-changing.html
 ---
 
-本篇為附加章節。我們將帶過如何改變基於 arm9loaderhax 的自製韌體的區碼。 這是透過安裝所選區域的系統 9.2.0 的 CTRTransfer 鏡像檔達成的。
+This is add-on section for region changing your CFW SysNAND. 這是透過安裝所選區域的系統 9.2.0 的 CTRTransfer 鏡像檔達成的。
 {: .notice--primary}
 
 **區碼變更通常是不需要的，因為 Luma3DS 本身就支援跨區遊玩及各[程式區域模擬](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage)的功能。**
 {: .notice--info}
 
 本頁面會有些許的[磁力](https://en.wikipedia.org/wiki/Magnet_URI_scheme)連結，你將需要個像 [Deluge](http://dev.deluge-torrent.org/wiki/Download) 的 BT 種子下載器來下載磁力連結的檔案。
+{: .notice--info}
+
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
 {: .notice--info}
 
 本過程將解除你系統與 NNID 間的綁定，因為在改變區域後它們將不再兼容。 NNID 在創建後就會被鎖定至當前裝置所在的區域，除非透過[一個非常複雜且進階的流程](https://gist.githubusercontent.com/yifanlu/e80db121d38aceb8cca0e03cefd5853b/raw/3c4dd89869156ca0f945a2791e699acfdb32b510/gistfile1.txt)，不然 NNID 不能在區域間遷移。
@@ -25,10 +28,10 @@ permalink: /zh_TW/region-changing.html
 類似上面所提到的警示，有時候 eShop 突然會在正常來說不能使用的主機上（比如說某些 New 3DS 主機）變得可以使用。 目前原因仍未知。
 {: .notice--warning}
 
-透過 CTRTransfer 所達成的區碼變更似乎會使重啟補丁失效。 目前原因還尚待了解中，總之目前原 3DS 的玩家將無法遊玩需要用到「額外記憶體模式」的遊戲（像是魔物獵人，任天堂明星大亂鬥、或神奇寶貝太陽/月亮版... 等）直到你格式化裝置為止（詳情請見本頁最後）。
+透過 CTRTransfer 所達成的區碼變更似乎會使重啟補丁失效。 The cause for this is unknown, but for now Old 3DS users will be unable to play extended memory mode games (such as Monster Hunter, Super Smash Bros, and Pokémon Sun / Moon) until they format their devices.
 {: .notice--warning}
 
-**你 _必須_ 先安裝好 arm9loaderhax + Luma3DS 才能繼續。**
+**You MUST have already installed Luma3DS and boot9strap or arm9loaderhax to use this.**
 {: .notice--danger}
 
 #### 必備項目
@@ -51,6 +54,7 @@ permalink: /zh_TW/region-changing.html
 1. 關閉你的裝置
 1. 將 SD 卡插入電腦中
 1. 在 SD 卡的根目錄底下建立一個新資料夾 `cias`
+1. 在 SD 卡的根目錄底下建立一個新資料夾 `files9`
 1. 從 GodMode9 `.zip` 中解壓 `GodMode9.bin` 到 SD 上的 `/luma/payloads/` 中
 1. 從剛下載的 CTRTransfer `.zip` 中，解壓 9.2.0 CTRTransfer 鏡像檔 `.bin` 檔案至 SD 卡上的 `/files9/` 資料夾
 1. 解壓 FBI `.zip` 中的 `FBI.cia` 到 SD 卡中的 `/cias/` 資料夾底下
@@ -80,7 +84,7 @@ permalink: /zh_TW/region-changing.html
   + 過程結束後，按下「A」繼續
 1. 按下「Start」鍵重啟你的裝置
 1. 到裝置主選單中更新你的主機，到「系統設置（System Settings）」、「其他設置（Other Settings）」底下選擇「系統更新（System Update）」
-  + 在 A9LH + Luma 底下更新是沒問題的
+  + Updates while using B9S + Luma (what you have) are safe
   + 如果過程中出現錯誤，試試到 DNS 設定底下將設定改成「自動 （auto）」
 
 ##### 第三節 — 注入 FBI 管理器
@@ -141,5 +145,5 @@ permalink: /zh_TW/region-changing.html
 
 ___
 
-原 3DS 及 2DS 主機可能需要先格式化（透過 TinyFormat 或 系統設定內）才能玩需要用到「額外記憶體模式」的遊戲（像是魔物獵人，任天堂明星大亂鬥、或神奇寶貝太陽/月亮版...等）
+Old 3DSs and 2DSs may need to format (using TinyFormat or the System Settings) to play extended memory mode games (such as Monster Hunter, Super Smash Bros, or Pokemon Sun/Moon).
 {: .notice--info}
