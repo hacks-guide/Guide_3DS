@@ -66,6 +66,9 @@ Bu rehberi kullanmak için [Deluge](http://dev.deluge-torrent.org/wiki/Download)
 ## <a name="gw_fbi" />Gateway ile eski sürüme düşürülmüş cihaza H&S enjekte edilemez
 Bu, Gateway'in eski sürüme düşürme yönteminin kalitesizliğinden ve her uygulamanın iki versiyonunu bırakmasından kaynaklanır. Biri gereksizdir, ama Decrypt9'ın şaşırmasına ve yanlış olana enjekte etmesine sebep olur.
 
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+{: .notice--info}
+
 1. Boot your device while holding (Start) to launch the Luma3DS chainloader menu
 1. Launch GodMode9 by pressing (A)   
 1. Navigate to `[1:] SYSNAND CTRNAND` -> `title` -> `00040010`
@@ -87,8 +90,8 @@ Bu, Gateway'in eski sürüme düşürme yönteminin kalitesizliğinden ve her uy
 1. "Move path(s)" seçin
 1. Büyük karakterli uzantı dosyaları `newdir ' dizinine taşınmış olacak
 1. Cihazı yeniden başlatmak için (Start) basın
-1. [arm9loaderhax yükleme](installing-arm9loaderhax) dönün ve FBI enjekte etmeyi yeniden deneyin
-1. Bu yine de işe yaramazsa, büyük harf uzantı dosyalarını 'content' klasörüne geri getirin, ardından küçük harf uzantı dosyalarını `newdir 'klasörüne taşıyın sonrasında [arm9loaderhax yükleme](installing-arm9loaderhax) dönün ve FBI enjekte etmeyi yeniden deneyin
+1. Return to [Finalizing Setup](finalizing-setup) and retry the FBI injection
+1. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then return to [Finalizing Setup](finalizing-setup) and retry the FBI injection
 
 ## <a name="ts_browser" />Tarayıcı tabanlı açık çalışmıyorsa
 Tarayıcı tabanlı açıklar (browserhax veya 2xrsa gibi) çoğu zaman dengesizdir ve sık sık kilitlenir, ancak bazen aşağıdaki adımları uygulayarak düzeltilebilirler
@@ -96,21 +99,6 @@ Tarayıcı tabanlı açıklar (browserhax veya 2xrsa gibi) çoğu zaman dengesiz
 1. Tarayıcıyı açın, ardından tarayıcı ayarlarını açın
 1. Aşağıya ilerleyin ve savedata'yı başlatın (aynı zamanda Clear All Save Data olarak da adlandırılabilir)
 1. Açığı tekrar deneyin
-
-## <a name="ts_safe_a9lh" />Sistem direk olarak SafeA9LHInstaller başlatırsa
-Yanlış 'arm9loaderhax.bin' dosyasını SD kartınıza kopyaladınız (yalnızca `3ds` klasörünü ve SafeA9LHInstaller.dat` dosyasını SafeA9LHInstaller zip dosyasından kopyalamanız gerekiyordu)    
-
-1. Doğru `arm9loaderhax.bin` kullanın
-1. `arm9loaderhax.bin` dosyasını Luma3DS`.zip` dosyasından SD kartınızın kök dizinine kopyalayın
-1. (Select)'e basarken yeniden başlatın ve devam edin
-
-## <a name="ts_safe_a9lh_screen" />SafeA9LHInstaller glitch ekran oluşursa
-Bu bazen olur, ancak nedeni bilinmiyor. Düğmeler yine de çalışacak, ancak ekran glitch'li olacak
-
-1. Her zamanki gibi yönergeleri izleyin
-1. (Select) tuşuna basın ve arm9loaderhax yüklenecektir
-1. Birkaç saniye bekleyin
-1. Power off your device by pressing any button
 
 ## <a name="ts_sys_down" /> SysNAND açılışta siyah ekran
 
@@ -132,15 +120,15 @@ Bu bazen olur, ancak nedeni bilinmiyor. Düğmeler yine de çalışacak, ancak e
     * Bu muhtemelen eski bir 3DS 2.1.0'a indirgendiğinde çalışmaz *    
     ** Bu, 2.1.0 sürümünde yeni 3DS'yi BRICK yapacaktır **
     1. Cihazınızı kapatın
-    1. Hold (L)+(R)+(A)+(Up)
+    1. Hold (L) + (R) + (A) + (Up)
     1. Power on your device
     1. If you enter safe mode, update your device *only if you have an entrypoint for the latest FW version and it is possible to downgrade from it* and attempt the downgrade again.
 1. Your device may be bricked. For support, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
 
-## <a name="ts_sys_a9lh" /> arm9loaderhax kurduktan sonra SysNAND açılışta siyah ekran
+## <a name="ts_sys_b9s" />Black screen on SysNAND boot after Installing boot9strap
 
 1. Çalışan bir payload'unuz olduğuna emin olun.
-    1. SD kartın kök dizininde 'arm9loaderhax.bin' nın varlığını kontrol edin.
+    1. Check for the existence of `boot.firm` in the root of your SD card.
 1. Luma'nın ayarlarını resetlemeyi deneyin
     1. SD kartınızdaki `/ luma / config.bin 'dosyasını silin
     1. Seçeneklerinizi açılışta ayarlayın
@@ -165,9 +153,9 @@ Bu bazen olur, ancak nedeni bilinmiyor. Düğmeler yine de çalışacak, ancak e
 1. Try following [9.2.0 CTRTransfer](9.2.0-ctrtransfer)
 1. Ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
 
-## <a name="ts_transfer" />Error during SafeCTRTransfer
+## <a name="ts_transfer" />Error during SafeB9SInstaller
 
-If an error occurs during the SafeCTRTransfer process, you will be prompted to launch an external payload for the purpose of repairing your device.
+If an error occurs during the SafeB9SInstaller process, you will be prompted to launch an external payload for the purpose of repairing your device.
 
 ### Gerekenler
 
@@ -177,23 +165,23 @@ If an error occurs during the SafeCTRTransfer process, you will be prompted to l
 
 1. Select "Unmount SD card"
 1. SD kartınızı bilgisayarınıza takın
-1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/CTRTransfer/` folder on your SD card and rename `GodMode9.bin` in `/CTRTransfer/` to `payload.bin`
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/boot9strap/` folder on your SD card and rename `GodMode9.bin` in `/boot9strap/` to `payload.bin`
 1. Reinsert your SD card into your device
 1. Select "Run 0:/CTRTransfer/payload.bin"
 1. If it was successful, you will have entered GodMode9
-1. Navigate to `[0:] SDCARD` -> `ctrtransfer`
-1. Press (Y) on `<serialnumber>_nand.bin` to copy it
+1. Navigate to `[0:] SDCARD` -> `boot9strap`
+1. Press the (L) trigger on `firm0firm1.bak` and `sector0x96.bak` to mark them
+1. (Y)'ye basarak dosyaları kopyalayın
 1. Press (B) twice to return to the main menu
 1. Navigate to `[S:] SYSNAND VIRTUAL`
-1. Press (Y) to paste `<serialnumber>_nand.bin`
+1. (Y)'ye basarak dosyaları yapıştırın
 1. Onaylamak için (A) basın
-1. Press (A) to inject into `nand.bin`
+1. Press (A) to inject the files
 1. Press (A) to unlock SysNAND overwriting
 1. Input the key combo given to unlock SysNAND (lvl3) writing
-  + This process will take some time
 1. Once it has completed, press (A) to continue
 1. Press (Start) to reboot your device
-1. Report this issue to the [SafeCTRTransfer Issues Page](https://github.com/d0k3/SafeCTRTransfer/issues)
+1. Report this issue to the [SafeB9SInstaller Issues Page](https://github.com/d0k3/SafeB9SInstaller/issues)
 
 ## <a name="ts_sys_blue" />Açılışta mavi ekran (bootrom error)
 
