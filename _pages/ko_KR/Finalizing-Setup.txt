@@ -33,9 +33,9 @@ The file `boot.firm` is what is launched by boot9strap itself after it finishes 
 * The latest release of [Themely](https://github.com/ErmanSayin/Themely/releases/latest) *(the `.cia` file)*
 * 최신 버전의 [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
 * 최신 버전의 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* 최신 버전의 [Luma3DS Updater](https://github.com/Hamcha/lumaupdate/releases/latest)
 * The latest release of [DSP1](https://github.com/zoogie/DSP1/releases/latest)
 * 최신 버전의 [FBI](https://github.com/Steveice10/FBI/releases/latest)
+* The latest fork of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
 * **Old 3DS와 2DS 전용:** 지역에 맞는 Old 3DS 11.2.0-35 [otherapp 페이로드](https://smealum.github.io/3ds/#otherapp)
 
 #### 진행 방법
@@ -46,7 +46,7 @@ The file `boot.firm` is what is launched by boot9strap itself after it finishes 
 1. SD 카드의 최상위 경로에 `cias` 폴더가 없을 경우 폴더를 만들어 주세요.
 1. SD 카드에 `hblauncherloader` 폴더가 없을 경우 폴더를 만어 주세요.
 1. hblauncher_loader `.zip`에서 `hblauncher_loader.cia`를 SD 카드의 `/cias/` 폴더에 복사해 주세요.
-1. Luma3DS Updater `.zip`에서 `lumaupdater.cia`를 SD 카드의 `/cias/` 폴더에 복사해 주세요.
+1. Copy `lumaupdater-v2.0.cia` from the Luma3DS Updater `.zip` to the `/cias/` folder on your SD card
 1. FBI `.zip`에서 `FBI.cia`를 SD 카드의 `/cias/` 폴더에 복사해 주세요.
 1. Copy `DSP1.cia` to the `/cias/` folder on your SD card
 1. Copy `Themely.cia` to the `/cias/` folder on your SD card
@@ -172,8 +172,13 @@ If, before following this guide, you already had an EmuNAND setup and would like
 
 ___
 
-Note that this guide does not have Luma3DS updater anymore due to its incompatibility with the name `boot.firm`. It will be re-added once it is updated to support Boot9Strap.
-{: .notice--info}
+{% capture notice-10 %}
+이제 Luma3DS Updater를 열고 (A)를 누르기만 하면 Luma3DS를 최신 버전으로 업데이트할 수 있습니다.     
+이는 본체 업데이트와 다르며 오직 최신 버전의 Luma3DS 파일을 다운로드해서 압축을 풀어줍니다.
+이는 SD 카드에 저장된 Luma3DS 파일만 업데이트 할 것입니다. SD 카드가 제거된 상태에서 기기를 시작하면 CTRNAND에 있는 버전이 실행됩니다.    
+{% endcapture %}
+
+<div class="notice--info">{{ notice-10 | markdownify }}</div>
 
 {% capture notice-6 %}   
 이제 Luma3DS CFW SysNAND를 기본으로 시작할 것입니다.    
