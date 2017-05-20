@@ -8,7 +8,7 @@ header:
   cta_label: "Начать" #
   cta_url: "/ru_RU/get-started" #
   caption:
-excerpt: "A complete guide to 3DS custom firmware, <br /> from stock to boot9strap.<br />" #
+excerpt: "Полное руководство по прошивке 3DS, <br /> от начала до boot9strap.<br />" #
 lang: ru
 permalink: /ru_RU/index.html
 ---
@@ -33,26 +33,26 @@ permalink: /ru_RU/index.html
 
 Под словом [**Homebrew (хомбрю)**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) (англ.) обычно подразумевают программное обеспечение, не авторизованное Nintendo. В качестве примера можно привести разные самописные игры, программы для бэкапа и редактирования сохранений и эмуляторы консолей предыдущих поколений.
 
-In most cases, running homebrew on your device is 100% free using [just the Nintendo 3DS Sound app](homebrew-launcher-(soundhax)). Существуют также и различные эксплойты в коммерческих играх и браузере, позволяющие запускать homebrew.
+В большинстве случаев, запуск homebrew на вашем устройстве на 100% бесплатен, используя [только приложение Звук Nintendo 3DS (Nintendo 3DS Sound)](homebrew-launcher-(soundhax)). Существуют также и различные эксплойты в коммерческих играх и браузере, позволяющие запускать homebrew.
 
 ## Что такое кастомная прошивка (CFW)?
 
 **Кастомная прошивка** ("CFW", "кастом") позволяет использовать более продвинутые инструменты, чем простые homebrew. Например, можно устанавливать неподписанное ПО и запускать его прямо из меню HOME.
 
-CFW can be easily set up on any console that is on 11.4.0 or lower.
+Кастомную прошивку можно легко установить на любую приставку с версией прошивки 11.4.0 или ниже.
 
 ## Что устанавливается в этом руководстве?
 
 Конечная цель этого руководства это установка на не взломанную 3DS
-firmware to boot9strap powered Custom Firmware. В некоторых случаях мы используем homebrew как промежуточный шаг для достижения конечной цели - кастомной прошивки.
+кастомной прошивки с boot9strap. В некоторых случаях мы используем homebrew как промежуточный шаг для достижения конечной цели - кастомной прошивки.
 
-boot9strap is the newest and best method of launching Custom Firmware that gives us nearly full control of the system only milliseconds into boot, which is similar to the effect of BootMii for the Wii. It gives us even earlier control than arm9loaderhax did, and, unlike standard sighax, boot9strap uses an NDMA overwrite exploit in order to gain Boot9 code execution. This means that any console running boot9strap is capable of dumping the console unique OTP (`OTP.bin`), the ARM11 bootrom (`boot11.bin`), and the ARM9 bootrom (`boot9.bin`).
+boot9strap - новейший и наилучший метод запуска кастомной прошивки. Благодаря ему можно получить практически неограниченный доступ к системе спустя несколько миллисекунд после загрузки, что похоже на эффект BootMii для Wii. It gives us even earlier control than arm9loaderhax did, and, unlike standard sighax, boot9strap uses an NDMA overwrite exploit in order to gain Boot9 code execution. This means that any console running boot9strap is capable of dumping the console unique OTP (`OTP.bin`), the ARM11 bootrom (`boot11.bin`), and the ARM9 bootrom (`boot9.bin`).
 
-The benefits of boot9strap over other Custom Firmware launch methods are numerous, and as such it is recommended to use this guide over any other that relies on outdated software (such as menuhax + rxTools, arm9loaderhax, or even normal sighax).
+Boot9strap имеет множество преимуществ перед другими методами запуска кастомных прошивок. Поэтому он рекомендован к использованию в этом руководстве вместо устаревших программ и методов запуска кастомных прошивок (например, menuhax + rxTools, arm9loaderhax, или даже обычный sighax).
 
-For information on how boot9strap works, please see [this presentation](https://sciresm.github.io/33-and-a-half-c3/) by [SciresM](https://github.com/SciresM/).
+Для получения информации о том, как работает boot9strap, пожалуйста, посмотрите [эту презентацию](https://sciresm.github.io/33-and-a-half-c3/) by [SciresM](https://github.com/SciresM/).
 
-For a list of each of the calculated sighax signatures (the platform boot9strap is built on), see [this gist](https://gist.github.com/SciresM/cdd2266efb80175d37eabbe86f9d8c52).
+Для списка каждой вычисленной sighax подписи (платформа, на которой базируется boot9strap), обратитесь к [этому gist](https://gist.github.com/SciresM/cdd2266efb80175d37eabbe86f9d8c52) (англ.).
 
 ## Что позволяет кастомная прошивка?
 
@@ -71,8 +71,8 @@ For a list of each of the calculated sighax signatures (the platform boot9strap 
 ## Что нужно знать, перед тем, как начать?
 
 + **Перед тем, как начинать прошивку, следует понимать риск взлома 3DS: КАЖДЫЙ раз, модифицируя прошивку консоли, вы рискуете получить НЕВОССТАНОВИМЫЙ брик. Вероятность этого крайне низкая, но шанс всё равно есть. Так что убедитесь что вы СТРОГО следуете всем указаниям.**
-+ If you have already hacked your 3DS before to get an EmuNAND setup, and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, you should follow all instructions and restore your existing EmuNAND when prompted once you reach [InFinastalling boot9strap](installing-arm9loaderhax).
-+ This guide will work on New 3DS, Old 3DS, and 2DS in all regions on firmware 11.4.0 or below.
++ Если ранее вы уже взламывали свою 3DS для получения EmuNAND и хотите перенести его содержимое в SysNAND с кастомной прошивкой, просто следуйте руководству пока не дойдете до пункта о восстановлении EmuNAND в разделе [Завершение установки](finalizing-setup)..
++ Инструкция предназначена для New 3DS, Old 3DS и 2DS любых регионов на прошивке 11.4.0 или ниже.
 + Если всё пройдет по плану, вы ничего не потеряете и всё останется в первоначальном состоянии (игры, сохранения, NNID).
 + **Держите консоль подключенной к зарядному устройству на протяжении всего процесса, чтобы избежать потери данных или поломки, в случае внезапного отключения консоли**
 + SD-карта должна использовать [MBR, а не GPT](http://www.howtogeek.com/245610/) (англ.) (SD-карта, входящая в комплект, уже использует MBR).
