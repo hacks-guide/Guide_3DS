@@ -4,13 +4,16 @@ lang: nl
 permalink: /nl_NL/9.2.0-ctrtransfer.html
 ---
 
-Het kan voorkomen dat je geïnstalleerde spellen na de CTRTransfer niet meer te zien zijn. Dit is omdat de tickets zijn verwijderd door de transfer, dit is de reden waarom je een backup het moeten maken van deze tickets. Ze zullen worden hersteld aan het einde van de gids.
-{: .notice--info}
+This is add-on section for installing a 9.2.0 CTRTransfer image to your device.
+{: .notice--primary}
 
 Om een [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) link te gebruiken in deze handleiding, moet je een torrent client hebben zoals [Deluge](http://dev.deluge-torrent.org/wiki/Download)
 {: .notice--info}
 
-Omdat het doel van de 9.2.0 CTRTransfer het oplossen van problemen in het bestaande NAND is, zal je in deze stappen, in tegenstelling tot de 2.1.0 CTRTransfer, alleen backups maken van je tickets. Als je geen backup van deze maakt zal je alle geïnstalleerde spellen en saves VERLIEZEN!
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+{: .notice--info}
+
+**You MUST have already installed Luma3DS and boot9strap or arm9loaderhax to use this.**
 {: .notice--danger}
 
 #### Benodigdheden
@@ -34,6 +37,7 @@ Omdat het doel van de 9.2.0 CTRTransfer het oplossen van problemen in het bestaa
 1. Schakel je 3ds uit
 1. Plaats je SD kaart in je computer
 1. Maak een nieuwe map genaamd `cias` in de hooofdmap van je SD kaart, indien deze nog niet aanwezig is
+1. Maak een map genaamd `files9` in de hoofdmap van je SD kaart als deze nog niet bestaat
 1. Kopieer `GodMode9.bin` van de GodMode9 `.zip` naar de `/luma/payloads/` map op je SD kaart
 1. Kopieer de 9.2.0 CTRTransfer image `.bin` van de CTRTransfer `.zip` naar de `/files9/` map op je SD kaart
 1. Kopieer `FBI.cia` van de FBI `.zip` naar de `/cias/` map op je SD kaart
@@ -41,7 +45,7 @@ Omdat het doel van de 9.2.0 CTRTransfer het oplossen van problemen in het bestaa
 
 ##### Deel II - CTRTransfer
 
-1. Open het Luma3DS chainloader menu vanaf arm9loaderhax door (Start) ingedrukt te houden bij het opstarten van je 3DS
+1. Launch the Luma3DS chainloader menu by holding (Start) during boot
 1. Open GodMode9 door op (A) te drukken
 1. Navigeer naar `[0:] SDCARD`-> `files9`
 1. Druk op (A) op de CTRTransfer `.bin` om deze te selecteren
@@ -63,7 +67,7 @@ Omdat het doel van de 9.2.0 CTRTransfer het oplossen van problemen in het bestaa
   + Once it has completed, press (A) to continue
 1. Druk op (Start) om je 3DS opnieuw op te starten
 1. Update je 3DS door naar System Settings en dan naar "Algemene Instellingen" te gaan. Ga in dat menu helemaal naar rechts en klik op "Systeemupdate"
-  + Updaten terwijl je A9LH + Luma (wat je hebt) gebruikt is veilig
+  + Updates while using B9S + Luma (what you have) are safe
   + Als dit je een foutmelding geeft, zet dan je DNS instellingen op "auto"
 
 ##### Deel III - FBI Injecteren
@@ -116,5 +120,5 @@ Als je geen `eshop` of `unknown` mappen had eerder in dit proces, zie deel 2, da
 
 ___
 
-Keer terug naar [Installeer arm9loaderhax](installing-arm9loaderhax).
+Continue to [Finalizing Setup](finalizing-setup)
 {: .notice--primary}
