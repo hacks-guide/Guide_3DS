@@ -4,10 +4,10 @@ lang: he
 permalink: /he_IL/updating-to-boot9strap.html
 ---
 
-This page is for existing arm9loaderhax users to update their devices to boot9strap.
+דף זה מיועד למשתמשי arm9loaderhax קיימים לעדכן את מכשיריהם לboot9strap.
 {: .notice--info}
 
-All future releases of Luma3DS will only be made in the `.firm` format, which will only be compatible with boot9strap and sighax. This means that to continue receiving the latest updates of Luma3DS, you should use this page to update your installation.
+כל המהדורות הבאות של Luma3DS יוצרו בתוך פורמט ה'firm' בלבד, שיתמוך רק בboot9strap ובsighax. זה אומר שכדי להמשיך לקבל את העדכונים האחרונים של Luma3DS עליכם להשתמש בדף הזה כדי לעדכן את ההתקנה שלכם.
 {: .notice--info}
 
 אם יש לכם סיסמה ב- Luma, אתם צריכים לבטל אותה זמנית בשביל השלבים האלו. אתם יכולים להפעיל אותה מחדש לאחר העדכון.
@@ -40,11 +40,11 @@ Note that `secret_sector.bin` is needed to revert the arm9loaderhax exploit, whi
 
 1. תכבו את המכשיר
 1. תכניסו את ה-SD שלכם למחשב
-1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card
+1. תעתיקו את הקובץ `boot.firm` מתוך ה`.7z` של Luma3DS לתוך ה-SD שלכם
 1. תצרו תיקייה בשם `cias` ב-SD שלכם אם לא קיימת לכם כבר תיקייה כזו
 1. Copy `lumaupdater-v2.0.cia` from the Luma3DS Updater `.zip` to the `/cias/` folder on your SD card
 1. תצרו ב-SD שלכם תיקייה חדשה בשם `boot9strap`
-1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
+1. העתיקו את `GodMode9.firm` מהזיפ של GodMode9 אל תיקיית /luma/payloads/ ב- SD שלכם
 1. Delete any existing `.bin` payloads in the `/luma/payloads/` folder on your SD card as they will not be compatible with boot9strap compatible Luma3DS versions
 1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the `/luma/payloads/` folder on your SD card
 1. Rename `SafeB9SInstaller.bin` in the `/luma/payloads/` folder on your SD card to `start_SafeB9SInstaller.bin`
@@ -80,14 +80,14 @@ This section is only needed if you are prompted with the Luma3DS configuration m
 
 1. תאתחלו בזמן שאתם מחזיקים (Start) במהלך האתחול כדי להפעיל את תפריט הטעינה של Luma3DS
 1. תפעילו את GodMode9 על ידי לחיצת (A)
-1. Navigate to `[0:] SDCARD` -> `luma` -> `payloads`
+1. נווטו אל `[0:] SDCARD` ואז `luma`ולבסוף `payloads`
 1. Press (X) on `start_SafeB9SInstaller.bin` to delete it
 1. תלחצו (A) כדי לאשר
-1. Press (B) to return to `[0:] SDCARD`
-1. Press (Y) on `boot.firm` to copy it
+1. תלחצו (B) כדי לחזור ל`[0:] SDCARD`
+1. תלחצו (Y) על `boot.firm` כדי להעתיק אותו
 1. תלחצו (B) כדי לחזור לתפריט הראשי
 1. נווטו אל `[1:] SYSNAND CTRNAND`
-1. Press (Y) to paste a copy of `boot.firm`
+1. תלחצו (Y) כדי להדביק עותק של `boot.firm`
 1. תבחרו "Copy path(s)"
 1. לחצו (A) כדי לפתוח גישת כתיבת lvl1 לSysNAND, ואז תלחצו על המקשים בסדר הנכון
 1. Press (X) on `arm9loaderhax.bin` to delete it
@@ -124,8 +124,8 @@ This fork of Luma3DS Updater allows for boot9strap compatibility by downloading 
 
 {% capture notice-6 %}   
 אתם יכולים להחזיק את (Select) בזמן הדלקה על מנת להפעיל את תפריט ההגדרות של Luma3DS.    
-You can now hold (Start) on boot to launch the Luma3DS chainloader menu (note that the Luma3DS chainloader menu is only displayed if there is more than one payload detected).
-You can now hold (Start) + (Select) + (X) on boot to dump the ARM11 bootrom (`boot11.bin`), the ARM9 bootrom (`boot9.bin`), and your console unique OTP (`OTP.bin`) to the `/boot9strap/` folder on your SD card (note that this will not have any kind of prompt or message).
+אתם יכולים עכשיו להחזיק (Start) בהפעלה כדי להפעיל את תפריט ההפעלה של Luma3DS (שימו לב שהוא יופיע רק אם יש לכם יותר מתוכנה אחת שזוהתה).
+אתם יכולים עכשיו להחזיק (Start) + (Select) + (X) בהפעלה כדי להשיג את הOTP המיוחד לכל קונסולה (שהוא`OTP.bin`), הbootrom של ה ARM11 (שהוא`boot11.bin`), והbootrom של ה ARM9 (שהוא `boot9.bin`), בתיקיית `/boot9strap/` על כרטיס הSD שלכם (שימו לב שלא תהיה שום הודעה או סימן).
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
