@@ -4,7 +4,7 @@ lang: ru
 permalink: /ru_RU/installing-boot9strap-(dsiware-game-injection).html
 ---
 
-Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. Если есть только одно приложение, удержание (Start) при включении консоли запустит GodMode9 напрямую.
+Обратите внимание, что в некоторых версиях Luma3DS меню Luma3DS chainloader отображается только в том случае, если в папке payloads имеется более одного приложения. Если есть только одно приложение, удержание (Start) при включении консоли запустит GodMode9 напрямую.
 {: .notice--info}
 
 Для использования [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme)-ссылок в этом руководстве необходим torrent-клиент, например [Deluge](http://dev.deluge-torrent.org/wiki/Download)
@@ -15,13 +15,13 @@ Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only dis
 
 #### Что понадобится
 
-* Two 3DS systems
-  + **The source 3DS**: the 3DS running some kind of custom firmware (such as boot9strap or arm9loaderhax) *on the latest version*
-  + **The target 3DS**: the 3DS on stock firmware *on 11.4.0*
-* Купленная (или уже имеющаяся) DSiWare-игра из eShop на **исходной 3DS**
-  + A pirated copy of the game will **not** work
+* Две консоли
+  + **Исходная 3DS**: 3DS с кастомной прошивкой (boot9strap или arm9loaderhax) *с последней версией системного ПО*
+  + **Целевая 3DS**: 3DS с официальной прошивкой *11.4.0*
+* Купленная (или уже имеющаяся) совместимая DSiWare-игра из eShop на **исходной 3DS**
+  + Пиратская копия игры **НЕ** будет работать
   + For a list of compatible games, see the [Installing boot9strap (DSiWare Game Injection List)](installing-boot9strap-(dsiware-game-injection-list)) page
-* The sudokuhax injection `.zip` corresponding to your region
+* Версия `.zip-архива` sudokuhax injection для вашего региона
   + [`DSiWare_usa_sudokuhax_injection.zip`](magnet:?xt=urn:btih:7ed7fee15c900ed02b5e2cb3c8e7a0363f4d9354&dn=DSiWare_usa_sudokuhax_injection.zip&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce)
   + [`DSiWare_eur_exidiahax_injection.zip`](magnet:?xt=urn:btih:046bb8023bc40b9a95a8a339c85a9ef18cf60db6&dn=DSiWare_eur_exidiahax_injection.zip&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce)
   + [`DSiWare_jpn_4swordshax_injection.zip`](magnet:?xt=urn:btih:1bcc90c93da91c9876671f6218084207def90db9&dn=DSiWare_jpn_4swordshax_injection.zip&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce)
@@ -41,9 +41,9 @@ Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only dis
 
 1. Выключите **исходную 3DS**
 1. Вставьте SD-карту **исходной 3DS** в компьютер
-1. Copy `GodMode9.firm` (or `GodMode9.bin` for arm9loaderhax users) from the GodMode9 `.zip` to the `/luma/payloads` folder on **the source 3DS**'s SD card
-1. Copy the `.app` from DSiWare injection `.zip` to the root of **the source 3DS**'s SD card
-1. Copy `savedata` folder from DSiWare injection `.zip` to the root of **the source 3DS**'s SD card
+1. Скопируйте `GodMode9.firm` (или `GodMode9.bin` для пользователей arm9loaderhax) из `.zip-архива` GodMode9 в папку `/luma/payloads/` на SD-карте **исходной 3DS**
+1. Скопируйте `.app` из `.zip-архива` DSiWare injection в корень SD-карты **исходной 3DS**
+1. Скопируйте папку `savedata` из `.zip-архива` DSiWare injection в корень SD-карты **исходной 3DS**
 1. Вставьте SD-карту в **исходную 3DS**
 1. Включите **исходную 3DS** кнопкой питания, держа нажатой кнопку (Start), чтобы запустить меню Luma3DS chainloader
 1. Запустите GodMode9, нажав кнопку (A)
@@ -53,8 +53,8 @@ Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only dis
 1. Нажмите (A), чтобы продолжить
 1. Удерживая (R) нажмите (B) для того, чтобы извлечь SD-карту
 1. Вставьте SD-карту **целевой 3DS** в компьютер
-1. **Backup every file on both 3DS's SD cards to two separate folders on your computer (keep track of which is which)!**
-1. Reinsert each SD card back into their corresponding 3DS
+1. **Сохраните файлы с обеих SD-карт в разные папки на компьютере (назовите папки таким образом, чтобы понимать какие файлы откуда!)**
+1. Вставьте SD-карты обратно в соответствующие 3DS
 1. Нажмите (Start) на **исходной 3DS** для перезагрузки
 
 ##### Часть II - Инъекция игры и сохранения
@@ -62,29 +62,29 @@ Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only dis
 1. Включите **исходную 3DS** кнопкой питания, держа нажатой кнопку (Start), чтобы запустить меню Luma3DS chainloader
 1. Запустите GodMode9, нажав кнопку (A)
 1. Перейдите в `SDCARD`
-1. Press (Y) on the DSiWare injection `.app` to copy it
+1. Нажмите (Y) на `.app-файле` из архива DSiWare injection, чтобы скопировать его
 1. Нажмите (B) для возврата в главное меню
-1. Navigate to `SYSNAND TWLN` -> `title` -> `00030004` -> `(8 Character ID)`
-  + The 8 Character ID will be the one from the [Installing boot9strap (DSiWare Game Injection List)](installing-boot9strap-(dsiware-game-injection-list)) page
+1. Перейдите в `SYSNAND TWNLN` -> `title` -> `00030004` -> `(8-ми значный ID)`
+  + 8-ми значный ID смотрите на странице [Установка boot9strap (Список уязвимых игр DSiWare)](installing-boot9strap-(dsiware-game-injection-list))
 1. Перейдите в папку `content`
 1. Нажмите (A) на `.app-файле`, находящемся в папке
 1. Выберите "Inject data @offset"
-1. Press (A) to select the offset `00000000`
+1. Нажмите (A), чтобы выбрать смещение `00000000`
 1. Нажмите (A), чтобы разрешить запись в SysNAND и введите указанную комбинацию кнопок
 1. Нажмите (B) для возврата в главное меню
-1. Navigate to `SYSNAND TWLN` -> `title` -> `00030004` -> `(8 Character ID)`
-  + The 8 Character ID will be the one from the [Installing boot9strap (DSiWare Game Injection List)](installing-boot9strap-(dsiware-game-injection-list)) page
+1. Перейдите в `SYSNAND TWNLN` -> `title` -> `00030004` -> `(8-ми значный ID)`
+  + 8-ми значный ID смотрите на странице [Установка boot9strap (Список уязвимых игр DSiWare)](installing-boot9strap-(dsiware-game-injection-list))
 1. Перейдите в `data`
 1. Нажмите (A) на `public.sav`
 1. Выберите "Mount as FAT image"
 1. Это вернет вас обратно в главное меню
 1. Перейдите в `SDCARD`
-1. Press (Y) on the file(s) in the `savedata` folder to copy them
-  + If there is a `savedata` folder inside of the `savedata` folder, it is not by mistake. You should copy the second `savedata` folder, not the files inside of that.
+1. Нажмите (Y) на файле(ах) в папке `savedata`, чтобы скопировать их
+  + Если в папке `savedata`  есть папка `savedata`, это не ошибка. Вам следует скопировать вложенную папку `savedata`, а не файлы в ней.
 1. Нажмите (B) для возврата в главное меню
-1. Navigate to `FAT IMAGE`
-1. Use the (X) button to delete everything inside of `FAT IMAGE`
-1. Press (Y) to paste a copy of **the contents of** the `savedata` folder to `FAT IMAGE`
+1. Перейдите в `FAT IMAGE`
+1. C помощью кнопки (X) удалите все содержимое папки `FAT IMAGE`
+1. Нажмите (Y), чтобы вставить **содержимое** папки `savedata` в `FAT IMAGE`
 1. Выберите "Copy path(s)"
 1. Нажмите (A), чтобы разрешить запись в SysNAND и введите указанную комбинацию кнопок
 1. Нажмите (Start) для перезагрузки
@@ -158,5 +158,5 @@ Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only dis
 
 ___
 
-Continue to [Finalizing Setup](finalizing-setup)
+Следующий шаг: [Завершение установки](finalizing-setup)
 {: .notice--primary}
