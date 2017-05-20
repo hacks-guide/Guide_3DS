@@ -4,13 +4,16 @@ lang: fi
 permalink: /fi_FI/9.2.0-ctrtransfer.html
 ---
 
-Konsolisi ei välttämättä näytä asennettuja pelejäsi CTRTransferin suorittamisen jälkeen. Tämä johtuu siitä, että tiketit poistetaan tiedonsiirrossa. Tämän takia ne varmuuskopioidaan talteen. Tiketit palautetaan ohjeiden lopussa.
-{: .notice--info}
+This is add-on section for installing a 9.2.0 CTRTransfer image to your device.
+{: .notice--primary}
 
 **Käyttääksesi tällä sivulla olevia [magneetti](https://en.wikipedia.org/wiki/Magnet_URI_scheme)linkkejä tarvitset torrent-ohjelman, kuten [Deluge](http://dev.deluge-torrent.org/wiki/Download)n**
 {: .notice--info}
 
-Koska 9.2.0-CTRTransferin tarkoituksena on löytää olemassa olevan NANDin aiheuttamia vikoja, tässä osiossa – toisin kuin 2.1.0-CTRTransferissa – varmuuskopioidaan pelkästään tiketit. Tämän varmuuskopioinnin ohittaminen aiheuttaa kaikkien asennettujen pelien sekä niiden tallennusten MENETTÄMISEN!
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+{: .notice--info}
+
+**You MUST have already installed Luma3DS and boot9strap or arm9loaderhax to use this.**
 {: .notice--danger}
 
 #### Tarpeet
@@ -34,6 +37,7 @@ Koska 9.2.0-CTRTransferin tarkoituksena on löytää olemassa olevan NANDin aihe
 1. Sammuta konsolisi
 1. Aseta SD-korttisi tietokoneeseesi
 1. Luo `cias`-niminen kansio SD-korttisi juureen, jos sitä ei jo ole olemassa
+1. Luo `files9`-niminen kansio SD-korttisi juureen, jos sitä ei jo ole olemassa
 1. Kopioi GodMode9-`.zip`-pakkauksesta `GodMode9.bin` SD-korttisi `/luma/payloads/`-kansioon
 1. Kopioi CTRTransfer-`.zip`-pakkauksesta 9.2.0-CTRTransfer-`.bin`-näköistiedosto SD-korttisi `/files9/`-kansioon
 1. Kopioi FBI-`.zip`-pakkauksesta `FBI.cia` SD-korttisi `/cias/`-kansioon
@@ -41,7 +45,7 @@ Koska 9.2.0-CTRTransferin tarkoituksena on löytää olemassa olevan NANDin aihe
 
 ##### Vaihe II – CTRTransfer
 
-1. Avaa Luma3DS:n ketjulatausvalikko arm9loaderhaxin kautta pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
+1. Launch the Luma3DS chainloader menu by holding (Start) during boot
 1. Avaa GodMode9 painamalla (A):ta
 1. Mene hakemistoon `[0:] SDCARD` → `files9`
 1. Paina (A):ta CTRTransfer-`.bin`-tiedoston kohdalla valitaksesi sen
@@ -63,7 +67,7 @@ Koska 9.2.0-CTRTransferin tarkoituksena on löytää olemassa olevan NANDin aihe
   + Kun toiminto on suoritettu, paina (A):ta jatkaaksesi
 1. Paina (START)-painiketta käynnistääksesi uudelleen
 1. Päivitä konsolisi menemällä järjestelmäasetuksiin (System Settings), siellä muihin asetuksiin (Other Settings) ja sitten valitsemalla järjestelmäpäivitys (System Update) aivan oikeasta reunasta
-  + Pävitykset A9LH + Luma -kokoonpanolla (joka sinulla on) ovat turvallisia
+  + Updates while using B9S + Luma (what you have) are safe
   + Jos saat virheen, laita DNS:n automaattinen haku (Auto-Obtain DNS) päälle asetuksista
 
 ##### Vaihe III – FBI:n injektointi
@@ -116,5 +120,5 @@ Jos sinulla ei ollut `eshop`- tai `unknown`-kansiota vaiheessa II, ohita tämä 
 
 ___
 
-Palaa osioon [Arm9loaderhaxin asennus](installing-arm9loaderhax).
+Continue to [Finalizing Setup](finalizing-setup)
 {: .notice--primary}
