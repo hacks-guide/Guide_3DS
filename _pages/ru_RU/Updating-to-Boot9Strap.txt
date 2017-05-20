@@ -10,6 +10,9 @@ This page is for existing arm9loaderhax users to update their devices to boot9st
 All future releases of Luma3DS will only be made in the `.firm` format, which will only be compatible with boot9strap and sighax. This means that to continue receiving the latest updates of Luma3DS, you should use this page to update your installation.
 {: .notice--info}
 
+Если у вас стоит ПИН-код на Luma, вы должны выключить его, чтобы выполнить обновление. После обновления вы можете включить пин-код назад.
+{: .notice--info}
+
 Для использования [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme)-ссылок в этом руководстве необходим torrent-клиент, например [Deluge](http://dev.deluge-torrent.org/wiki/Download)
 {: .notice--info}
 
@@ -23,8 +26,8 @@ Note that `secret_sector.bin` is needed to revert the arm9loaderhax exploit, whi
 
 * <i class="fa fa-magnet" aria-hidden="true" title="Это magnet-ссылка. Use a torrent client to download the file."></i> - [`secret_sector.bin`](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce)
 * Свежая версия [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z`-архив)*
-* The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
-* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest)
+* Свежая версия [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* Свежая версия [boot9strap](https://github.com/SciresM/boot9strap/releases/latest)
 * Свежая версия [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 
 #### Инструкция
@@ -33,12 +36,12 @@ Note that `secret_sector.bin` is needed to revert the arm9loaderhax exploit, whi
 
 1. Выключите консоль
 1. Вставьте SD-карту в компьютер
-1. Create a folder named `boot9strap` on the root of your SD card
+1. Создайте папку `boot9strap` в корне SD-карты
 1. Скопируйте файл `boot.firm` из `.7z-архива` Luma3DS в корень SD-карты
 1. Скопируйте `GodMode9.firm` из `.zip-архива` GodMode9 в папку `/luma/payloads/` на SD-карте
   + Delete any existing `.bin` payloads in this folder as they will not be compatible with boot9strap compatible Luma3DS versions
 1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the `/luma/payloads/` folder on your SD card
-1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
+1. Скопируйте `boot9strap.firm` и `boot9strap.firm.sha` из `.zip-архива`boot9strap в папку `/boot9strap/` в корне SD-карты
 1. Copy `secret_sector.bin` to the `/boot9strap/` folder on your SD card
 
     ![]({{ base_path }}/images/screenshots/updating-to-b9s-file-layout.png)
