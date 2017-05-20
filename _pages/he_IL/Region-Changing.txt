@@ -4,13 +4,16 @@ lang: he
 permalink: /he_IL/region-changing.html
 ---
 
-זוהי הרחבה עבור שינוי אזור SysNAND CFW עם arm9loaderhax. זה נעשה על ידי התקנת ה9.2.0 CTRTransfer image לאיזור שאתם רוצים לשנות אליו.
+This is add-on section for region changing your CFW SysNAND. זה נעשה על ידי התקנת ה9.2.0 CTRTransfer image לאיזור שאתם רוצים לשנות אליו.
 {: .notice--primary}
 
 ** שינוי אזור מיותר כמעט לחלוטין כי Luma3DS תומכת בReigon Free ו [אמולצית אזור לכל משחק בנפרד] (https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage). **
 {: .notice--info}
 
 **כדי להשתמש בקישורי מגנט, תצטרכו כלי טורנט כמו [Deluge](http://dev.deluge-torrent.org/wiki/Download)**
+{: .notice--info}
+
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
 {: .notice--info}
 
 תהליך זה ינתק את הNNID שלכם מהמערכת, כי הוא לא יהיה תואם איתה. NNID נעולים לאזור של המכשיר שבו יצרתם אותם, ולא ניתן להעביר בין אזורים ללא [תהליך מתקדם ומסובך מאוד](https://gist.githubusercontent.com/yifanlu/e80db121d38aceb8cca0e03cefd5853b/raw/3c4dd89869156ca0f945a2791e699acfdb32b510/gistfile1.txt).
@@ -25,10 +28,10 @@ permalink: /he_IL/region-changing.html
 בדומה לאזהרה מעל, שימו לב שמידי פעם הeShop יעבוד באופן בלתי מוסבר עבור מכשירים שהוא לא אמור (לדוגמת הNew 3DS). הסיבה לכך היא כרגע לא ידועה.
 {: .notice--warning}
 
-שינוי אזור עם CTRTransfer (שזו מה שהשיטה הזאת משתמשת) גורמת לתיקוני Reboot להישבר. הגורם לזה אינו ידוע, אך עבור בעלי Old 3DS לא תהיה אפשרות לפעיל משחקי HIMEM (כגון Monster Hunter, Super Smash Bros Pokémon Sun / Moon) עד שהם מפרמטים את המכשירים שלהם (פרטים בסוף דף זה).
+שינוי אזור עם CTRTransfer (שזו מה שהשיטה הזאת משתמשת) גורמת לתיקוני Reboot להישבר. The cause for this is unknown, but for now Old 3DS users will be unable to play extended memory mode games (such as Monster Hunter, Super Smash Bros, and Pokémon Sun / Moon) until they format their devices.
 {: .notice--warning}
 
-**אתם חייבים להתקין את arm9loaderhax + Luma3DS כדי להשתמש בזה.**
+**You MUST have already installed Luma3DS and boot9strap or arm9loaderhax to use this.**
 {: .notice--danger}
 
 #### מה אתם צריכים
@@ -51,6 +54,7 @@ permalink: /he_IL/region-changing.html
 1. תכבו את המכשיר
 1. תכניסו את ה-SD שלכם למחשב
 1. תצרו תיקייה בשם `cias` ב-SD שלכם אם לא קיימת לכם כבר תיקייה כזו
+1. תצרו תיקייה חדשה בשם files9 אם היא לא קיימת
 1. העתיקו את `GodMode9.bin` מהזיפ של GodMode9 אל תיקיית /luma/payloads/ ב- SD שלכם
 1. תעתיקו את קובץ ה-`.bin` מהזיפ של הCTRransfer לתיקיית `/files9/` שבתוך ה-SD
 1. תעתיקו את `FBI.cia` מתוך הזיפ של FBI לתוך התיקייה `/cias/` שב-SD שלכם
@@ -80,7 +84,7 @@ permalink: /he_IL/region-changing.html
   + כאשר התהליך מסתיים, לחצו על (A) כדי להמשיך
 1. תלחצו על (Start) כדי לאתחל את המכשיר
 1. עדכנו את המכשיר שלכם על ידי לחיצה על System Sttings, לאחר מכן "Other Settings", לכו ימינה עד הסוף ואז לחצו על "System Update"
-  + עדכונים שתבצעו תוך שימוש ב-A9LH+Luma (במידה שיש לכם את שניהם) הם בטוחים לחלוטין
+  + Updates while using B9S + Luma (what you have) are safe
   + אם אתם מקבלים שגיאה, שנו את הגדרות ה-DNS שלכם ל-"auto"
 
 ##### חלק III - הזרקת FBI
@@ -141,5 +145,5 @@ permalink: /he_IL/region-changing.html
 
 ___
 
-Old 3DS\2DS יצטרכו פרמוט (עם ההגדרות או TinyFormat) כדי לשחק במשחקי זכרון מורחב (כמו סמאש ברוס, Sun and Moon, או Monster Hunter).
+Old 3DSs and 2DSs may need to format (using TinyFormat or the System Settings) to play extended memory mode games (such as Monster Hunter, Super Smash Bros, or Pokemon Sun/Moon).
 {: .notice--info}
