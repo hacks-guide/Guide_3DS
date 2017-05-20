@@ -66,6 +66,9 @@ Jos et pysty käynnistämään konsoliasi, seuraa tilannettasi vastaavan kohdan 
 ## <a name="gw_fbi" />H&S:n injektointi ei onnistu Gatewayn avulla taaksepäin päivitetyllä konsolilla
 Tämä johtuu Gatewayn huonosta päivitysmenetelmästä, joka jättää jokaisesta sovelluksesta kaksi versiota järjestelmään. Toista niistä ei käytetä, mutta se häiritsee H&S-injektointia saamalla sen injektoimaan väärän kappaleen.
 
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+{: .notice--info}
+
 1. Avaa Luma3DS:n ketjulatausvalikko pitämällä (START)-painiketta pohjassa käynnistyksen aikana
 1. Avaa GodMode9 painamalla (A):ta   
 1. Mene hakemistoon `[1:] SYSNAND CTRNAND` → `title` → `00040010`
@@ -87,8 +90,8 @@ Tämä johtuu Gatewayn huonosta päivitysmenetelmästä, joka jättää jokaises
 1. Valitse "Move path(s)"
 1. Isokirjaimisen tiedostopäätteen omaavat tiedostot on nyt siirretty `newdir`-hakemistoon
 1. Paina (START)-painiketta käynnistääksesi uudelleen
-1. Palaa osioon [Arm9loaderhaxin asentaminen](installing-arm9loaderhax) ja yritä FBI:n injektointia uudelleen
-1. Jos injektointi ei vieläkään toimi, siirrä isokirjaimisen tiedostopäätteen omaavat tiedostot takaisin `content`-kansioon ja pienikirjaimisen tiedostopäätteen omaavat tiedostot `newdir`-kansioon. Palaa sitten osioon [Arm9loaderhaxin asennus](installing-arm9loaderhax) ja yritä FBI-injektiota uudelleen
+1. Return to [Finalizing Setup](finalizing-setup) and retry the FBI injection
+1. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then return to [Finalizing Setup](finalizing-setup) and retry the FBI injection
 
 ## <a name="ts_browser" />Selainpohjainen käynnistystapa ei toimi
 Selainhaavoittuvuuksiin perustuvat käynnistystavat (kuten browserhax ja 2xrsa) ovat monesti epävakaita ja kaatuvat usein, mutta toisinaan seuraavat toimet saattavat auttaa:
@@ -96,21 +99,6 @@ Selainhaavoittuvuuksiin perustuvat käynnistystavat (kuten browserhax ja 2xrsa) 
 1. Avaa selain ja mene sen asetuksiin
 1. Selaa alas ja paina "Initialize Savedata" (joskus myös "Clear All Save Data")
 1. Kokeile käynnistystapaa uudelleen
-
-## <a name="ts_safe_a9lh" />Järjestelmä käynnistyy suoraan SafeA9LHInstalleriin
-Kopioit väärän `arm9loaderhax.bin`-tiedoston SD-kortillesi (sinun piti pelkästään kopioida `3ds`-kansio sekä `SafeA9LHInstaller.dat`-tiedosto SafeA9LHInstaller-zip-pakkauksesta)    
-
-1. Käytä oikeaa `arm9loaderhax.bin`-tiedostoa
-1. Kopioi Luma3DS-`.zip`-pakkauksesta `arm9loaderhax.bin` SD-korttisi juureen
-1. Käynnistä pitäen (SELECT)-painiketta pohjassa
-
-## <a name="ts_safe_a9lh_screen" />SafeA9LHInstaller näyttää häiriöityneen kuvan
-Tätä tapahtuu toisinaan, mutta syytä ei tiedetä. Painikkeet toimivat silti, vaikka ruutu onkin virheellisen näköinen
-
-1. Seuraa ohjeita normaalisti
-1. Paina (SELECT)-painiketta, niin arm9loaderhax asentuu
-1. Odota muutama sekunti
-1. Sammuta konsolisi millä tahansa painikkeella
 
 ## <a name="ts_sys_down" />Musta ruutu, kun SysNAND on käynnistetty
 
@@ -132,15 +120,15 @@ Tätä tapahtuu toisinaan, mutta syytä ei tiedetä. Painikkeet toimivat silti, 
     *Tämä ei todennäköisesti toimi vanhalla 3DS:llä, joka on päivitetty taaksepäin versioon 2.1.0*    
     **Tämän tekeminen VIOITTAA New 3DS:n, joka on päivitetty taaksepäin versioon 2.1.0**
     1. Sammuta konsolisi
-    1. Pidä pohjassa painikeyhdistelmää (L)+(R)+(A)+(YLÖS)
+    1. Hold (L) + (R) + (A) + (Up)
     1. Käynnistä konsolisi
     1. Kun konsolisi käynnistyy palautustilaan, päivitä se *vain, jos sinulla on käynnistystapa uusimmalle laiteohjelmistoversiolle, ja jos siltä on mahdollista päivittää taaksepäin*. Kokeile sitten taaksepäin päivittämistä uudelleen.
 1. Konsolisi saattaa olla vioittunut. Kysy apua (englanniksi) [Nintendo Homebrew -palvelimelta Discordissa](https://discord.gg/MWxPgEp).
 
-## <a name="ts_sys_a9lh" />Musta ruutu arm9loaderhaxin asentamisen jälkeen, kun SysNAND on käynnistetty
+## <a name="ts_sys_b9s" />Black screen on SysNAND boot after Installing boot9strap
 
 1. Varmista, että sinulla on toimiva käynnistystiedosto.
-    1. Tarkista, että SD-korttisi juuressa on `arm9loaderhax.bin`-tiedosto.
+    1. Check for the existence of `boot.firm` in the root of your SD card.
 1. Kokeile nollata Luman määritykset
     1. Poista SD-kortiltasi `/luma/config.bin`
     1. Määritä asetuksesi, kun käynnistät konsolin
@@ -165,9 +153,9 @@ Tätä tapahtuu toisinaan, mutta syytä ei tiedetä. Painikkeet toimivat silti, 
 1. Kokeile seurata osiota [9.2.0-CTRTransfer](9.2.0-crtransfer)
 1. Kysy apua (englanniksi) [Nintendo Homebrew -palvelimelta Discordissa](https://discord.gg/MWxPgEp).
 
-## <a name="ts_transfer" />Virhe SafeCTRTransferin aikana
+## <a name="ts_transfer" />Error during SafeB9SInstaller
 
-Jos SafeCTRTransferin prosessin aikana tapahtuu virhe, sinua kehotetaan käynnistämään ulkoinen käynnistystiedosto konsolisi korjaamiseksi.
+If an error occurs during the SafeB9SInstaller process, you will be prompted to launch an external payload for the purpose of repairing your device.
 
 #### Tarpeet
 
@@ -177,23 +165,23 @@ Jos SafeCTRTransferin prosessin aikana tapahtuu virhe, sinua kehotetaan käynnis
 
 1. Valitse "Unmount SD card"
 1. Aseta SD-korttisi tietokoneeseesi
-1. Kopioi GodMode9-`.zip`-pakkauksesta `GodMode9.bin` SD-korttisi `/CTRTransfer/`-kansioon ja uudelleennimeä se siellä muotoon `payload.bin`
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/boot9strap/` folder on your SD card and rename `GodMode9.bin` in `/boot9strap/` to `payload.bin`
 1. Aseta SD-korttisi takaisin konsoliisi
 1. Valitse "Run 0:/CTRTransfer/payload.bin"
 1. Jos toiminto onnistui, GodMode9:n pitäisi avautua
-1. Mene hakemistoon `[0:] SDCARD` → `ctrtransfer`
-1. Paina (Y):tä `<serialnumber>_nand.bin`-tiedoston kohdalla kopioidaksesi sen
+1. Navigate to `[0:] SDCARD` -> `boot9strap`
+1. Press the (L) trigger on `firm0firm1.bak` and `sector0x96.bak` to mark them
+1. Paina (Y):tä kopioidaksesi tiedostot
 1. Paina (B):tä kahdesti palataksesi päävalikkoon
 1. Mene hakemistoon `[S:] SYSNAND VIRTUAL`
-1. Paina (Y):tä liittääksesi `<sarjanumero>_nand.bin`-tiedoston
+1. Paina (Y):tä liittääksesi tiedostot
 1. Paina (A):ta vahvistaaksesi
-1. Paina (A):ta injektoidaksesi `nand.bin`-tiedostoon
+1. Press (A) to inject the files
 1. Paina (A):ta ottaaksesi käyttöön SysNANDin ylikirjoittamisen
 1. Syötä annettu painikeyhdistelmä ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl3)
-  + Tämä prosessi kestää jonkin aikaa
 1. Kun toiminto on suoritettu, paina (A):ta jatkaaksesi
 1. Paina (START)-painiketta käynnistääksesi uudelleen
-1. Raportoi ongelma [SafeCTRTransferin Issues-sivulle](https://github.com/d0k3/SafeCTRTransfer/issues)
+1. Report this issue to the [SafeB9SInstaller Issues Page](https://github.com/d0k3/SafeB9SInstaller/issues)
 
 ## <a name="ts_sys_blue" />Sininen ruutu käynnistyksessä (bootrom-virhe)
 
