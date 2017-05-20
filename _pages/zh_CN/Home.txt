@@ -8,7 +8,7 @@ header:
   cta_label: "开始教程" #
   cta_url: "/zh_CN/get-started" #
   caption:
-excerpt: "利用arm9loaderhax实现3DS运行自制固件的完整教程。" #
+excerpt: "A complete guide to 3DS custom firmware, <br /> from stock to boot9strap.<br />" #
 lang: zh_CN
 permalink: /zh_CN/index.html
 ---
@@ -33,22 +33,26 @@ Read all of the introductory pages before proceeding.
 
 [**Homebrew（自制程序）**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) 通常指未经任天堂授权的软件。 它能让你运行自制游戏，使用像修改和备份存档的工具，以及运行模拟器。
 
-In most cases, running homebrew on your device is 100% free using [just the Nintendo 3DS Sound app](homebrew-launcher-(soundhax)) (if you are on >=11.4.0, you will be unable to proceed past homebrew). 除此之外也有许多其他在游戏里或者浏览器里的漏洞可以启动自制程序。
+In most cases, running homebrew on your device is 100% free using [just the Nintendo 3DS Sound app](homebrew-launcher-(soundhax)). 除此之外也有许多其他在游戏里或者浏览器里的漏洞可以启动自制程序。
 
 ## 什么是自制系统？
 
 **Custom Firmware（自制系统）** ("CFW") 可以使你进行自制程序无法轻易做到的更高级的破解。 例如，签名补丁可以使你安装未签名的程序，并让它们出现在桌面中。
 
-CFW can be easily set up on any console that is on 11.3.0 or lower.
+CFW can be easily set up on any console that is on 11.4.0 or lower.
 
 ## 本教程将安装什么？
 
 本教程的最终目的，是将一个未经修改过的装有原生系统的3DS
-变成一个基于arm9loaderhax的自制系统。 在某些版本的机器上，本教程会使用自制程序作为手段，但是安装自制系统才是最终目的。
+firmware to boot9strap powered Custom Firmware. 在某些版本的机器上，本教程会使用自制程序作为手段，但是安装自制系统才是最终目的。
 
-Arm9loaderhax是一种最新和最好的引导自制系统的方法，只需启动时几毫秒的时间，就能让你获得几乎全部系统权限，类似于Wii上面BootMii的作用。
+boot9strap is the newest and best method of launching Custom Firmware that gives us nearly full control of the system only milliseconds into boot, which is similar to the effect of BootMii for the Wii. It gives us even earlier control than arm9loaderhax did, and, unlike standard sighax, boot9strap uses an NDMA overwrite exploit in order to gain Boot9 code execution. This means that any console running boot9strap is capable of dumping the console unique OTP (`OTP.bin`), the ARM11 bootrom (`boot11.bin`), and the ARM9 bootrom (`boot9.bin`).
 
-相比于其它运行自制系统的方法，arm9loaderhax有许多优势。因此推荐使用本教程，而不是其它依赖已过时软件（例如menuhax或rxTools）的教程。
+The benefits of boot9strap over other Custom Firmware launch methods are numerous, and as such it is recommended to use this guide over any other that relies on outdated software (such as menuhax + rxTools, arm9loaderhax, or even normal sighax).
+
+For information on how boot9strap works, please see [this presentation](https://sciresm.github.io/33-and-a-half-c3/) by [SciresM](https://github.com/SciresM/).
+
+For a list of each of the calculated sighax signatures (the platform boot9strap is built on), see [this gist](https://gist.github.com/SciresM/cdd2266efb80175d37eabbe86f9d8c52).
 
 ## 我可以在自制系统上做什么？
 
@@ -67,8 +71,8 @@ Arm9loaderhax是一种最新和最好的引导自制系统的方法，只需启�
 ## 在开始之前我需要知道什么？
 
 + **在开始之前，你要知道破解3DS的风险：每次你修改系统的时候，都有可能会使你的3DS不可恢复的变砖。 这种情况很少见，但是仍然存在这样的可能性，所以请确保你完全按照本教程的指导进行操作。**
-+ 如果你之前破解过你的3DS并安装了EmuNAND，想将原EmuNAND中的内容迁移到新的SysNAND CFW中，请依操作进行，并在[安装arm9loaderhax](installing-arm9loaderhax)这一步中依照提示还原的你EmuNAND。
-+ This guide will work on New 3DS, Old 3DS, and 2DS in all regions on firmware 11.3.0 or below *(except CHN / TWN)*.
++ If you have already hacked your 3DS before to get an EmuNAND setup, and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, you should follow all instructions and restore your existing EmuNAND when prompted once you reach [InFinastalling boot9strap](installing-arm9loaderhax).
++ This guide will work on New 3DS, Old 3DS, and 2DS in all regions on firmware 11.4.0 or below.
 + 如果一切顺利，在安装完自制系统后你不会丢失任何数据（包括游戏、NNID、存档等）。
 + **Keep your device plugged in and charged throughout the entire process to avoid data loss or damage from an unexpected power-off!**
 + Your SD card should be [MBR, not GPT](http://www.howtogeek.com/245610/) (the SD card that comes with your device will be MBR by default).
