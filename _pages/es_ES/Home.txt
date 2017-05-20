@@ -8,7 +8,7 @@ header:
   cta_label: "Comencemos" #
   cta_url: "/es_ES/get-started"
   caption:
-excerpt: "Una completa guía de custom firmware para 3DS, <br /> desde stock a arm9loaderhax.<br />" #
+excerpt: "A complete guide to 3DS custom firmware, <br /> from stock to boot9strap.<br />" #
 lang: es
 permalink: /es_ES/index.html
 ---
@@ -33,22 +33,26 @@ Lee todas las páginas introductorias antes de continuar.
 
 [**Homebrew**](https://es.wikipedia.org/wiki/Homebrew) suele referirse a software no autorizado por Nintendo. Esto te permite ejecutar varios juegos caseros, herramientas para editar y respaldar partidas y emuladores de varios sistemas antiguos.
 
-En la mayoría de los casos, ejecutar homebrew en tu consola es 100% gratis, utilizando [únicamente la aplicación Nintendo 3DS Sound](homebrew-launcher-(soundhax)) (si estás en una versión mayor o igual a 11.4.0, no podrás proceder más allá del homebrew). Adicionalmente, hay otras fallas en juegos comerciales y en el navegador web que permiten ejecutar homebrew.
+In most cases, running homebrew on your device is 100% free using [just the Nintendo 3DS Sound app](homebrew-launcher-(soundhax)). Adicionalmente, hay otras fallas en juegos comerciales y en el navegador web que permiten ejecutar homebrew.
 
 ## ¿Qué es Custom Firmware?
 
 **Custom Firmware** ("CFW") te permite utilizar hacks más avanzados que el homebrew en el espacio del usuario no pueden utilizar fácilmente. Por ejemplo, los parches de firmas digitales te permiten instalar títulos no firmados que aparecen directamente en el Menú HOME.
 
-Un CFW puede configurarse fácilmente en cualquier consola en la versión 11.3.0 o inferior.
+CFW can be easily set up on any console that is on 11.4.0 or lower.
 
 ## ¿Qué se instalará con esta guía?
 
 El propósito final de esta guía es tomar una 3DS sin ninguna modificación, desde el firmware original
-a un Custom Firmware potenciado por arm9loaderhax. En algunas versiones, se utiliza homebrew como un punto de apoyo, pero el Custom Firmware continúa siendo la meta a alcanzar.
+firmware to boot9strap powered Custom Firmware. En algunas versiones, se utiliza homebrew como un punto de apoyo, pero el Custom Firmware continúa siendo la meta a alcanzar.
 
-Arm9loaderhax el más nuevo y mejor método para instalar Custom Firmware, proceso que te da un control casi total del sistema solo milisegundos después de encender la consola, similar al efecto de BootMii en la Wii.
+boot9strap is the newest and best method of launching Custom Firmware that gives us nearly full control of the system only milliseconds into boot, which is similar to the effect of BootMii for the Wii. It gives us even earlier control than arm9loaderhax did, and, unlike standard sighax, boot9strap uses an NDMA overwrite exploit in order to gain Boot9 code execution. This means that any console running boot9strap is capable of dumping the console unique OTP (`OTP.bin`), the ARM11 bootrom (`boot11.bin`), and the ARM9 bootrom (`boot9.bin`).
 
-Los beneficios de arm9loaderhax sobre otros métodos para iniciar Custom Firmware son numerosos, y como tal, se recomienda priorizar y utilizar esta guía sobre cualquier otra que se base en software anticuado (como menuhax o rxTools).
+The benefits of boot9strap over other Custom Firmware launch methods are numerous, and as such it is recommended to use this guide over any other that relies on outdated software (such as menuhax + rxTools, arm9loaderhax, or even normal sighax).
+
+For information on how boot9strap works, please see [this presentation](https://sciresm.github.io/33-and-a-half-c3/) by [SciresM](https://github.com/SciresM/).
+
+For a list of each of the calculated sighax signatures (the platform boot9strap is built on), see [this gist](https://gist.github.com/SciresM/cdd2266efb80175d37eabbe86f9d8c52).
 
 ## ¿Qué puedo hacer con Custom Firmware?
 
@@ -67,8 +71,8 @@ Los beneficios de arm9loaderhax sobre otros métodos para iniciar Custom Firmwar
 ## ¿Qué necesito saber antes de empezar?
 
 + **Antes de comenzar la guía, debes conocer los riesgos de hackear la 3DS: CADA VEZ que modificas tu sistema, siempre existe la posibilidad de que tu consola quede inutilizable de forma IRRECUPERABLE. Es algo raro, pero la posibilidad está ahí, así que asegúrate de seguir TODAS las instrucciones AL PIE DE LA LETRA.**
-+ Si ya has hackeado tu 3DS antes para tener una configuración con EmuNAND y quieres mover el contenido de ésta a tu nueva CFW SysNAND, debes seguir todas las instrucciones y restaurar tu EmuNAND existente cuando se te solicite al llegar a [Instalar arm9loaderhax](installing-arm9loaderhax).
-+ Esta guía funciona en New 3DS, Old 3DS y 2DS en todas las regiones en firmware 11.3.0 o anterior *(excepto CHN / TWN)*.
++ If you have already hacked your 3DS before to get an EmuNAND setup, and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, you should follow all instructions and restore your existing EmuNAND when prompted once you reach [InFinastalling boot9strap](installing-arm9loaderhax).
++ This guide will work on New 3DS, Old 3DS, and 2DS in all regions on firmware 11.4.0 or below.
 + Si todo va según el plan, no perderás datos y terminarás con todo lo que tenías anteriormente (juegos, NNID, datos de guardado, etc se conservarán).
 + **¡Mantén tu consola conectada y cargada durante todo el proceso para evitar pérdidas de datos o daños, producto de un apagado inesperado!**
 + Tu tarjeta SD debe ser [MBR, no GPT](http://www.howtogeek.com/245610/) (la tarjeta SD que viene con tu consola es MBR por defecto).
