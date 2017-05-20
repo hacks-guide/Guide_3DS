@@ -32,9 +32,9 @@ Tämän prosessin aikana myös asennetaan muun muassa seuraavat ohjelmat:
 * Themelyn [viimeisin julkaisu](https://github.com/ErmanSayin/Themely/releases/latest) *(`.cia`-tiedosto)*
 * Hblauncher_loaderin [viimeisin julkaisu](https://github.com/yellows8/hblauncher_loader/releases/latest)
 * GodMode9:n [viimeisin julkaisu](https://github.com/d0k3/GodMode9/releases)
-* Luma3DS Updaterin [viimeisin julkaisu](https://github.com/Hamcha/lumaupdate/releases/latest)
 * DSP1:n [viimeisin julkaisu](https://github.com/zoogie/DSP1/releases/latest)
 * FBI:n [viimeisin julkaisu](https://github.com/Steveice10/FBI/releases/latest)
+* The latest fork of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
 * **Vain vanha 3DS ja 2DS:** Vanhan 3DS:n version 11.2.0-35 [otherapp-tiedosto](https://smealum.github.io/3ds/#otherapp) (konsolisi alueen mukainen)
 
 #### Ohjeet
@@ -45,7 +45,7 @@ Tämän prosessin aikana myös asennetaan muun muassa seuraavat ohjelmat:
 1. Luo `cias`-niminen kansio SD-korttisi juureen, jos sitä ei jo ole olemassa
 1. Luo `hblauncherloader`-niminen kansio SD-korttisi juureen, jos sitä ei jo ole olemassa
 1. Kopioi hblauncher_loader-`.zip`-pakkauksesta `hblauncher_loader.cia` SD-korttisi `/cias/`-kansioon
-1. Kopioi Luma3DS Updater -`.zip`-pakkauksesta `lumaupdater.cia` SD-korttisi `/cias/`-kansioon
+1. Copy `lumaupdater-v2.0.cia` from the Luma3DS Updater `.zip` to the `/cias/` folder on your SD card
 1. Kopioi FBI-`.zip`-pakkauksesta `FBI.cia` SD-korttisi `/cias/`-kansioon
 1. Kopioi `DSP1.cia` SD-korttisi `/cias/`-kansioon
 1. Kopioi `Themely.cia` SD-korttisi `/cias/`-kansioon
@@ -170,8 +170,13 @@ Jos sinulla oli ennen tämän oppaan aloittamista EmuNAND-kokoonpano, ja haluais
 
 ___
 
-Note that this guide does not have Luma3DS updater anymore due to its incompatibility with the name `boot.firm`. It will be re-added once it is updated to support Boot9Strap.
-{: .notice--info}
+{% capture notice-10 %}
+Voit nyt käyttää Luma3DS Updateria päivittääksesi Luma3DS:n viimeisimpään versioon. Avaa vain sovellus ja paina (A):ta.     
+Tämä ei ole sama asia kuin järjestelmäpäivitys; toiminto vain lataa ja purkaa uusimmat Luma3DS-tiedostot.
+Tämä päivittää vain SD-kortilla olevat Luma3DS-tiedostot. Jos käynnistät konsolisi ilman SD-korttia, käytetään CTRNANDiin asettamaasi versiota.    
+{% endcapture %}
+
+<div class="notice--info">{{ notice-10 | markdownify }}</div>
 
 {% capture notice-6 %}   
 Konsolisi käynistää nyt oletuksena Luma3DS-CFW-SysNANDin.    
