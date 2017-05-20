@@ -32,9 +32,9 @@ The file `boot.firm` is what is launched by boot9strap itself after it finishes 
 * 最新版的 [Themely](https://github.com/ErmanSayin/Themely/releases/latest) *(`.cia` 檔案)*
 * 最新版的 [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
 * 最新版的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* 最新版的 [Luma3DS Updater](https://github.com/Hamcha/lumaupdate/releases/latest)
 * 最新版的 [DSP1](https://github.com/zoogie/DSP1/releases/latest)
 * 最新版的 [FBI 管理器](https://github.com/Steveice10/FBI/releases/latest)
+* The latest fork of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
 * **僅限原 3DS 及 2DS：**依你裝置所在區域所選之原 3DS 的 11.2.0-35 [otherapp payload](https://smealum.github.io/3ds/#otherapp)
 
 #### 操作說明
@@ -45,7 +45,7 @@ The file `boot.firm` is what is launched by boot9strap itself after it finishes 
 1. 在 SD 卡的根目錄底下建立一個新資料夾 `cias`
 1. 在 SD 卡的根目錄底下建立一個新資料夾 `hblauncherloader`
 1. 解壓 hblauncher_loader `.zip` 中的 `hblauncher_loader.cia` 到 SD 卡中的 `/cias/` 資料夾底下
-1. 解壓 Luma3DS Updater `.zip` 中的 `lumaupdater.cia` 到 SD 卡中的 `/cias/` 資料夾底下
+1. Copy `lumaupdater-v2.0.cia` from the Luma3DS Updater `.zip` to the `/cias/` folder on your SD card
 1. 解壓 FBI `.zip` 中的 `FBI.cia` 到 SD 卡中的 `/cias/` 資料夾底下
 1. 在 SD 卡上，將 `DSP1.cia` 複製到 `/cias/` 資料夾底下
 1. 在 SD 卡上，將 `Themely.cia` 複製到 `/cias/` 資料夾底下
@@ -170,8 +170,13 @@ The file `boot.firm` is what is launched by boot9strap itself after it finishes 
 
 ___
 
-Note that this guide does not have Luma3DS updater anymore due to its incompatibility with the name `boot.firm`. It will be re-added once it is updated to support Boot9Strap.
-{: .notice--info}
+{% capture notice-10 %}
+你現在可以透過 Luma3DS Updater 來更新你裝置上的 Luma3DS 系統。只要將更新器開啟再按下「A」即可。     
+這跟系統更新是不一樣的；這只會下載並解壓最新的 Luma3DS 檔案。
+這只會更新 SD 卡上的 Luma3DS 檔案。 如果你在拔除 SD 卡的情況下開機，它則會用你放在 CTRNAND 裡的 Luma3DS 版本啟動。    
+{% endcapture %}
+
+<div class="notice--info">{{ notice-10 | markdownify }}</div>
 
 {% capture notice-6 %}   
 現在你的裝置將會自動於開機時啟動 SysNAND 中的 Luma3DS CFW（預設情況下）。    
