@@ -4,13 +4,16 @@ lang: en
 permalink: /region-changing.html
 ---
 
-This is add-on section for region changing your arm9loaderhax CFW SysNAND. This is done by installing the 9.2.0 CTRTransfer image for the region you want to switch to.
+This is add-on section for region changing your CFW SysNAND. This is done by installing the 9.2.0 CTRTransfer image for the region you want to switch to.
 {: .notice--primary}
 
 **Region changing is almost completely unnecessary since Luma3DS supports out of region games and individual [title region emulation](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage).**
 {: .notice--info}
 
 To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+{: .notice--info}
+
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
 {: .notice--info}
 
 This process will unlink your NNID from the system, since it will no longer be compatible with it. NNID's are locked to the region of your device that created them, and cannot be transferred between regions without [a very complex and advanced process](https://gist.githubusercontent.com/yifanlu/e80db121d38aceb8cca0e03cefd5853b/raw/3c4dd89869156ca0f945a2791e699acfdb32b510/gistfile1.txt).
@@ -25,10 +28,10 @@ Note that occasionally the eShop will inexplicably still not work for devices th
 Similar to the above warning, note that occasionally the eShop will inexplicably work for devices that it should not (such as some New 3DSs). The cause for this is currently unknown.
 {: .notice--warning}
 
-Region changing using CTRTransfer (which this method uses) seems to cause reboot patches to break. The cause for this is unknown, but for now Old 3DS users will be unable to play extended memory mode games (such as Monster Hunter, Super Smash Bros, and Pokémon Sun / Moon) until they format their devices (details at the end of this page).
+Region changing using CTRTransfer (which this method uses) seems to cause reboot patches to break. The cause for this is unknown, but for now Old 3DS users will be unable to play extended memory mode games (such as Monster Hunter, Super Smash Bros, and Pokémon Sun / Moon) until they format their devices.
 {: .notice--warning}
 
-**You MUST have already installed arm9loaderhax + Luma3DS to use this.**
+**You MUST have already installed Luma3DS and boot9strap or arm9loaderhax to use this.**
 {: .notice--danger}
 
 #### What you need
@@ -51,6 +54,7 @@ Region changing using CTRTransfer (which this method uses) seems to cause reboot
 1. Power off your device
 1. Insert your SD card into your computer
 1. Create a folder named `cias` on the root of your SD card if it does not already exist
+1. Create a folder named `files9` on the root of your SD card if it does not already exist
 1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 1. Copy the 9.2.0 CTRTransfer image `.bin` from the CTRTransfer `.zip` to the `/files9/` folder on your SD card
 1. Copy `FBI.cia` from the FBI `.zip` to the `/cias/` folder on your SD card
@@ -80,7 +84,7 @@ Region changing using CTRTransfer (which this method uses) seems to cause reboot
   + Once it has completed, press (A) to continue
 1. Press (Start) to reboot your device
 1. Update your device by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
-  + Updates while using A9LH + Luma (what you have) are safe
+  + Updates while using B9S + Luma (what you have) are safe
   + If this gives you an error, set your DNS settings to "auto"
 
 ##### Section III - Injecting FBI
@@ -141,5 +145,5 @@ If you had no `eshop` or `unknown` folders earlier, skip this section.
 
 ___
 
-Old 3DSs / 2DSs may need to format (using TinyFormat or the System Settings) to play extended memory mode games (such as Monster Hunter, Super Smash Bros, or Pokemon Sun/Moon).
+Old 3DSs and 2DSs may need to format (using TinyFormat or the System Settings) to play extended memory mode games (such as Monster Hunter, Super Smash Bros, or Pokemon Sun/Moon).
 {: .notice--info}
