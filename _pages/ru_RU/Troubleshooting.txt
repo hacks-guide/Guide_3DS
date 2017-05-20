@@ -120,15 +120,15 @@ Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only dis
     *Скорее всего это не будет работать на Old 3DS с прошивкой 2.1.0*    
     **Вы получите БРИК на New 3DS c прошивкой 2.1.0**
     1. Выключите консоль
-    1. Hold (L) + (R) + (A) + (Up)
+    1. Зажмите (L) + (R) + (A) + (Up)
     1. Включите консоль
     1. Если вы вошли в режим восстановления, обновите консоль *при условии, что у вас есть возможность запустить Homebrew Launcher на последней версии прошивки, и понизить версию прошивки*, и попробуйте понизить прошивку ещё раз.
 1. Ваша консоль, скорее всего, превратилась в брик. Для поддержки, обратитесь за помощью в [Nintendo Homebrew on Discord (англ.)](https://discord.gg/MWxPgEp)
 
-## <a name="ts_sys_b9s" />Black screen on SysNAND boot after Installing boot9strap
+## <a name="ts_sys_b9s" />Черный экран при загрузке SysNAND после установки boot9strap
 
 1. Убедитесь, что у вас установлен рабочий загрузчик
-    1. Check for the existence of `boot.firm` in the root of your SD card.
+    1. Проверьте, есть ли в корне SD-карты файл `boot.firm`.
 1. Попробуйте сбросить настройки Luma3DS
     1. Удалите файл `/luma/config.bin` с SD-карты
     1. Выберите нужные настройки при запуске
@@ -153,9 +153,9 @@ Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only dis
 1. Попробуйте выполнить [9.2.0 CTRTransfer](9.2.0-ctrtransfer)
 1. Обратитесь за помощью в [Nintendo Homebrew on Discord (англ.)](https://discord.gg/MWxPgEp).
 
-## <a name="ts_transfer" />Error during SafeB9SInstaller
+## <a name="ts_transfer" />Ошибка во время SafeB9SInstaller
 
-If an error occurs during the SafeB9SInstaller process, you will be prompted to launch an external payload for the purpose of repairing your device.
+Если во время процесса SafeB9SInstaller возникнет ошибка, вас попросят запустить стороннее приложение (payload) для того, чтобы восстановить вашу консоль.
 
 #### Что понадобится
 
@@ -165,23 +165,23 @@ If an error occurs during the SafeB9SInstaller process, you will be prompted to 
 
 1. Выберите "Unmount SD card"
 1. Вставьте SD-карту в компьютер
-1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/boot9strap/` folder on your SD card and rename `GodMode9.bin` in `/boot9strap/` to `payload.bin`
+1. Скопируйте `GodMode9.bin` из `.zip-архива` GodMode9 в папку `/boot9strap/` на SD-карте и переименуйте `GodMode9.bin` внутри папки `/boot9strap/` в `payload.bin`
 1. Вставьте SD-карту обратно в консоль
 1. Выберите "Run 0:/CTRTransfer/payload.bin"
 1. В случае успеха запустится GodMode9
-1. Navigate to `[0:] SDCARD` -> `boot9strap`
-1. Press the (L) trigger on `firm0firm1.bak` and `sector0x96.bak` to mark them
+1. Перейдите в `[0:] SDCARD` -> `boot9strap`
+1. Нажмите курок (L) на `firm0firm1.bak` и `sector0x96.bak`, чтобы пометить их
 1. Нажмите (Y), чтобы скопировать эти файлы
 1. Дважды нажмите (B) для возврата в главное меню
 1. Перейдите в `[S:] SYSNAND VIRTUAL`
 1. Нажмите (Y), чтобы вставить скопированные ранее файлы
 1. Нажмите (A) для подтверждения
-1. Press (A) to inject the files
+1. Нажмите (A), чтобы интегрировать эти файлы
 1. Нажмите (A), чтобы разрешить перезапись SysNAND
 1. Введите указанную комбинацию кнопок чтобы разрешить запись в SysNAND (lvl3)
 1. По завершению процесса, нажмите (A)
 1. Нажмите (Start) для перезагрузки
-1. Report this issue to the [SafeB9SInstaller Issues Page](https://github.com/d0k3/SafeB9SInstaller/issues)
+1. Сообщите об этой проблеме сюда [SafeB9SInstaller Issues Page](https://github.com/d0k3/SafeB9SInstaller/issues) (англ.)
 
 ## <a name="ts_sys_blue" />Голубой экран при загрузке (bootrom error)
 
