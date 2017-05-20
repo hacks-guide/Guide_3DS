@@ -1,19 +1,19 @@
 ---
-title: "Updating to boot9strap" #
+title: "Обновление до boot9strap" #
 lang: ru
 permalink: /ru_RU/updating-to-boot9strap.html
 ---
 
-This page is for existing arm9loaderhax users to update their devices to boot9strap.
+Эта страница предназначена для пользователей arm9loaderhax, чтобы обновить их устройства до boot9strap.
 {: .notice--info}
 
-All future releases of Luma3DS will only be made in the `.firm` format, which will only be compatible with boot9strap and sighax. This means that to continue receiving the latest updates of Luma3DS, you should use this page to update your installation.
+Все будущие релизы Luma3DS будут только в формате `.firm`, который будет совместим только с boot9strap и sighax. Это означает, что для того, чтобы продолжать получать последние обновления Luma3DS, вы должны использовать эту страницу для обновления установки.
 {: .notice--info}
 
 Если у вас стоит ПИН-код на Luma, вы должны выключить его, чтобы выполнить обновление. После обновления вы можете включить пин-код назад.
 {: .notice--info}
 
-If you have the software "3dsafe" installed, you must remove it to do these steps or you will get an "OTP Crypto Fail" error. If you do not have the required files to remove "3dsafe", a method to remove "3dsafe" (without any of its removal files such as `lost.bin` or `sha.bin`) is being looked into, so just be patient.
+Если у вас установлена программа "3dsafe", вы должны удалить ее чтобы продолжить, иначе вы получите ошибку "OTP Crypto Fail". Если у вас нет необходимых для удаления "3dsafe" файлов, метод удаления "3dsafe" (без использования файлов `lost.bin` или `sha.bin`) находится в разработке, будьте терпеливы.
 {: .notice--info}
 
 Для использования [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme)-ссылок в этом руководстве необходим torrent-клиент, например [Deluge](http://dev.deluge-torrent.org/wiki/Download)
@@ -21,10 +21,10 @@ If you have the software "3dsafe" installed, you must remove it to do these step
 
 #### Что понадобится
 
-Note that the following required file named `secret_sector.bin` is the same one that was found in the various `data_input.zip` file versions. If you already have that file on your disk somewhere, you can use that one instead of downloading the one below.
+Обратите внимание, что требуемый ниже файл с именем `secret_sector.bin` это тот же, что присутствовал в различных версиях архива `data_input.zip`. Если у вас уже есть этот файл где-то на диске, вы можете использовать его, вместо загрузки файла ниже.
 {: .notice--info}
 
-Note that `secret_sector.bin` is needed to revert the arm9loaderhax exploit, which is why it is not needed for the installation of boot9strap on a stock console.
+Обратите внимание, что `secret_sector.bin` необходим для отката эксплойта arm9loaderhax, поэтому он не требуется для установки на не взломанную консоль.
 {: .notice--info}
 
 * <i class="fa fa-magnet" aria-hidden="true" title="Это magnet-ссылка. Воспользуйтесь торрент-клиентом, чтобы скачать этот файл."></i> - [`secret_sector.bin`](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce)
@@ -42,12 +42,12 @@ Note that `secret_sector.bin` is needed to revert the arm9loaderhax exploit, whi
 1. Вставьте SD-карту в компьютер
 1. Скопируйте файл `boot.firm` из `.7z-архива` Luma3DS в корень SD-карты
 1. Создайте папку `cias` в корне SD-карты
-1. Copy `lumaupdater-v2.0.cia` to the `/cias/` folder on your SD card
+1. Скопируйте `lumaupdater-v2.0.cia` в папку `/cias/` на SD-карте
 1. Создайте папку `boot9strap` в корне SD-карты
 1. Скопируйте `GodMode9.firm` из `.zip-архива` GodMode9 в папку `/luma/payloads/` на SD-карте
-1. Delete any existing `.bin` payloads in the `/luma/payloads/` folder on your SD card as they will not be compatible with boot9strap compatible Luma3DS versions
+1. Удалите все существующие `.bin` приложения в папке `/luma/payloads/` на SD-карте, так как они не будут совместимы с boot9strap совместимыми версиями Luma3DS
 1. Скопируйте `SafeB9SInstaller.bin` из `.zip-архива` SafeB9SInstaller в папку `/luma/payloads/` на SD-карте
-1. Rename `SafeB9SInstaller.bin` in the `/luma/payloads/` folder on your SD card to `start_SafeB9SInstaller.bin`
+1. Переименуйте `SafeB9SInstaller.bin` в папке `/luma/payloads/` на SD-карте в `start_SafeB9SInstaller.bin`
 1. Скопируйте `boot9strap.firm` и `boot9strap.firm.sha` из `.zip-архива` boot9strap в папку `/boot9strap/` в корне SD-карты
 1. Скопируйте `secret_sector.bin` в папку `/boot9strap/` на SD-карте
 
@@ -59,8 +59,8 @@ Note that `secret_sector.bin` is needed to revert the arm9loaderhax exploit, whi
 ##### Часть II - Установка boot9strap
 
 1. Включите консоль кнопкой питания, держа нажатой кнопку (Start), чтобы запустить меню Luma3DS chainloader
-  + Some versions of Luma3DS will just directly start whichever payload begins with `start_`
-  + If your version does this, just proceed with the instructions
+  + Некоторые версии Luma3DS будут напрямую запускать любое приложение, начинающееся со `start_`
+  + Если ваша версия делает так, просто продолжайте следовать инструкциям
 1. Запустите SafeB9SInstaller, нажав кнопку (A) на нём
 1. Дождитесь окончания всех проверок безопасности
 1. При появлении запроса, введите указанную комбинацию кнопок для установки boot9strap
@@ -72,7 +72,7 @@ Note that `secret_sector.bin` is needed to revert the arm9loaderhax exploit, whi
 Этот раздел требуется только в том случае, если после перезагрузки появилось меню настроек Luma3DS.
 {: .notice--info}
 
-1. In the Luma3DS configuration menu, use the (A) button and the D-Pad to turn on the following:    
+1. В меню настроек Luma3DS используйте кнопки (A) и D-Pad чтобы включить следующие опции:    
   + **"Show NAND or user string in System Settings"**
 1. Нажмите (Start), чтобы сохранить настройки и перезагрузиться
 
@@ -91,7 +91,7 @@ Note that `secret_sector.bin` is needed to revert the arm9loaderhax exploit, whi
 1. Выберите "Copy path(s)"
 1. Нажмите (A), чтобы разрешить запись в SysNAND (lvl1) и введите указанную комбинацию кнопок
 1. Нажмите (X), выделив файл `arm9loaderhax.bin`, чтобы удалить его
-  + If you do not have this file, just proceed with the instructions
+  + Если у вас нет этого файла, просто продолжайте следовать инструкциям
 1. Нажмите (A) для подтверждения
 1. Нажмите (B) для возврата в главное меню
 1. Удерживая (R) нажмите (B) для того, чтобы извлечь SD-карту
@@ -113,19 +113,19 @@ Note that `secret_sector.bin` is needed to revert the arm9loaderhax exploit, whi
 
 ___
 
-You can now remove any arm9loaderhax related files from your SD card, such as `arm9loaderhax.bin` on the root of your SD card and the `aeskeydb.bin` file in the `files9` folder on your SD card.
+Теперь вы можете удалить все файлы, связанные с arm9loaderhax, с SD-карты, такие как `arm9loaderhax.bin` в корне SD-карты и файл `aeskeydb.bin` в папке `files9` на SD-карте.
 {: .notice--info}
 
-Note that `firm0firm1.bak` and `sector0x96.bak` in the `/boot9strap/` folder on your SD card are only needed in the event of a failed boot9strap install. Once you have installed successfully, you can delete the entire `boot9strap` folder.
+Обратите внимание, что `firm0firm1.bak` и `sector0x96.bak` в папке `/boot9strap/` на SD-карте необходимы только в случае неудачной установки boot9strap. После успешной установки вы можете удалить всю папку `boot9strap`.
 {: .notice--info}
 
-This fork of Luma3DS Updater allows for boot9strap compatibility by downloading and extracting the latest Luma3DS `boot.firm` for you.
+Эта версия Luma3DS Updater позволяет работать с boot9strap, путем загрузки и распаковки последнего Luma3DS `boot.firm`.
 {: .notice--info}
 
 {% capture notice-6 %}   
 Для запуска конфигуратора Luma3DS включите консоль с зажатой кнопкой (Select).    
-You can now hold (Start) on boot to launch the Luma3DS chainloader menu (note that the Luma3DS chainloader menu is only displayed if there is more than one payload detected).
-You can now hold (Start) + (Select) + (X) on boot to dump the ARM11 bootrom (`boot11.bin`), the ARM9 bootrom (`boot9.bin`), and your console unique OTP (`OTP.bin`) to the `/boot9strap/` folder on your SD card (note that this will not have any kind of prompt or message).
+Теперь вы можете удерживать (Start) при загрузке для запуска меню Luma3DS chainloader (обратите внимание, что меню Luma3DS chainloader отображается только если существует более одного приложения).
+Теперь вы можете удерживать (Start) + (Select) + (X) при загрузке для сохранения копий ARM11 bootrom (`boot11.bin`), ARM9 bootrom (`boot9.bin`) и уникального OTP вашей консоли (`OTP.bin`) в папку `/boot9strap/` на SD-карте (обратите внимание, что это не имеет какого-либо запроса или сообщения).
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
