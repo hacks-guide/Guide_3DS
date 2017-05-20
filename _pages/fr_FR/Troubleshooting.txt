@@ -66,6 +66,9 @@ Pour utiliser les liens suivant [magnet](https://fr.wikipedia.org/wiki/Magnet_(s
 ## <a name="gw_fbi" />Je ne peux pas injecter dans Santé et Sécurité sur une console downgradée via Gateway
 Cela vient de l'implémentation bancale faite par Gateway pour downgrader et qui laisse deux version de chaque application sur la console. L'une des deux est inutilisée, mais cela perturbe le système d'injection de H&S, provoquant l'injection dans la mauvaise version.
 
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+{: .notice--info}
+
 1. Démarrez la console en maintenant (Start) enfoncé pour accéder au menu de chainloader de Luma3DS
 1. Lancez GodMode9 en appuyant sur (A)   
 1. Naviguez vers `[1:] SYSNAND CTRNAND` -> `title` -> `00040010`
@@ -87,8 +90,8 @@ Cela vient de l'implémentation bancale faite par Gateway pour downgrader et qui
 1. Sélectionnez "Move path(s)"
 1. Les fichiers dont les extensions sont en majuscules seront déplacés vers le dossier `newdir`
 1. Appuyez sur (Start) pour redémarrer votre système
-1. Retournez à [Installation d'arm9loaderhax](installing-arm9loaderhax) et réessayez d'injecter FBI
-1. Si cela ne fonctionne toujours pas, replacez les fichiers à l'extension en majuscules dans le dossier `content`, puis déplacez les fichiers à l'extension en minuscules dans le dossier `newdir`, puis retournez à [Installation d'arm9loaderhax](installing-arm9loaderhax) et réessayez d'injecter FBI
+1. Return to [Finalizing Setup](finalizing-setup) and retry the FBI injection
+1. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then return to [Finalizing Setup](finalizing-setup) and retry the FBI injection
 
 ## <a name="ts_browser" />Un exploit basé sur le navigateur web ne fonctionne pas
 Les exploits basé sur le navigateur (tel que browserhax ou 2xrsa) sont parfois instable et plantent fréquemment, mais ils peuvent parfois être réglés en suivant ces étapes
@@ -96,21 +99,6 @@ Les exploits basé sur le navigateur (tel que browserhax ou 2xrsa) sont parfois 
 1. Lancez le navigateur, puis accédez aux paramètres du navigateur
 1. Faites défiler tout en bas et sélectionnez "Initialiser les données de sauvegarde" (ou "Effacer les données de sauvegarde")
 1. Retentez l'exploit
-
-## <a name="ts_safe_a9lh" />Le système démarre directement dans SafeA9LHInstaller
-Vous avez copié le mauvais fichier `arm9loaderhax.bin` sur votre carte SD (vous auriez dû uniquement copier le dossier `3ds` et le fichier`SafeA9LHInstaller.dat` de l'archive SafeA9LHInstaller.zip)    
-
-1. Assurez-vous d'utiliser le bon fichier `arm9loaderhax.bin`
-1. Copiez `arm9loaderhax.bin` de l'archive Luma3DS`.zip` vers la racine de votre carte SD
-1. Redémarrez en maintenant (Select) enfoncé et continuez
-
-## <a name="ts_safe_a9lh_screen" />SafeA9LHInstaller affiche un écran glitché
-Ceci se produit occasionnellement, mais la raison est inconnue. Les boutons fonctionneront malgré tout, mais l'écran sera glitché
-
-1. Suivez les instructions comme si de rien n'était
-1. Appuyez sur (Select) et arm9loaderhax sera installé
-1. Patientez quelques secondes
-1. Eteignez votre console en appuyant sur n’importe quel bouton
 
 ## <a name="ts_sys_down" />Écran noir au démarrage de la SysNAND
 
@@ -132,15 +120,15 @@ Ceci se produit occasionnellement, mais la raison est inconnue. Les boutons fonc
     *Ceci ne fonctionnera probablement pas pour une Old 3DS downgradée en 2.1.0*    
     **Ceci BRICKERA une New 3DS downgradée en 2.1.0**
     1. Éteignez votre 3DS
-    1. Maintenez les boutons (L)+(R)+(A)+(Haut) enfoncés
+    1. Hold (L) + (R) + (A) + (Up)
     1. Allumez à présent votre 3DS
     1. Si vous démarrez en mode de récupération , mettez à jour votre 3DS *uniquement si vous avez un point d’entrée accessible sur la dernière version du firmware et s'il est possible de downgrader a partir de cette version* puis retentez le downgrade.
 1. Votre console est peut-être brickée. Pour obtenir de l'aide, demandez de l'aide à [Nintendo Homebrew sur Discord(Anglais)](https://discord.gg/MWxPgEp)
 
-## <a name="ts_sys_a9lh" /> Écran noir au démarrage de ma SysNAND après avoir installé arm9loaderhax
+## <a name="ts_sys_b9s" />Black screen on SysNAND boot after Installing boot9strap
 
 1. Assurez-vous d'avoir un payload fonctionnel.
-    1. Vérifiez que vous avez bien un fichier nommé `arm9loaderhax.bin` à la racine de votre carte SD.
+    1. Check for the existence of `boot.firm` in the root of your SD card.
 1. Essayez de réinitialiser la configuration de Luma3DS et de corriger les options
     1. Supprimez `/luma/config.bin` de votre carte SD
     1. Définissez vos options au prochain démarrage de la console
@@ -165,9 +153,9 @@ Ceci se produit occasionnellement, mais la raison est inconnue. Les boutons fonc
 1. Essayer de réaliser le [CTRtransfer en 9.2.0](9.2.0-ctrtransfer)
 1. Pour obtenir de l'aide, demandez de l'aide à [Nintendo Homebrew sur Discord(Anglais)](https://discord.gg/MWxPgEp).
 
-## <a name="ts_transfer" />Erreur pendant SafeCTRTransfer
+## <a name="ts_transfer" />Error during SafeB9SInstaller
 
-Si une erreur se produit pendant le processus de SafeCTRTransfer, il vous sera demandé de lancer un payload externe dans le but de réparer votre appareil.
+If an error occurs during the SafeB9SInstaller process, you will be prompted to launch an external payload for the purpose of repairing your device.
 
 #### Ce dont vous aurez besoin
 
@@ -177,24 +165,23 @@ Si une erreur se produit pendant le processus de SafeCTRTransfer, il vous sera d
 
 1. Sélectionnez "Unmount SD card"
 1. Insérez votre carte SD dans votre ordinateur
-1. Copiez `GodMode9.bin` depuis GodMode9 `.zip` vers le dossier `/CTRTransfer/` sur votre carte SD, et renommez `GodMode9.bin` situé dans `/CTRTransfer/` en `payload.bin`
+1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/boot9strap/` folder on your SD card and rename `GodMode9.bin` in `/boot9strap/` to `payload.bin`
 1. Réinsérez votre carte SD dans votre 3DS
 1. Sélectionnez "Run 0:/CTRTransfer/payload.bin"
 1. Si cela fonctionne, vous avez accédé à GodMode9 avec succès
-1. Naviguez vers `[0:] SDCARD` -> `ctrtransfer`
-1. Appuyez sur (Y) sur `<serialnumber>_nand.bin` pour le copier
+1. Navigate to `[0:] SDCARD` -> `boot9strap`
+1. Press the (L) trigger on `firm0firm1.bak` and `sector0x96.bak` to mark them
+1. Appuyez sur (Y) pour les copier
 1. Appuyez deux fois sur (B) pour revenir au menu principal
 1. Naviguez vers `[S:] SYSNAND VIRTUAL`
-1. Appuyez sur (Y) pour coller `<serialnumber>_nand.bin`
+1. Appuyez sur (Y) pour les coller
 1. Appuyez sur (A) pour confirmer
-1. Appuyez sur (A) pour injecter dans `nand.bin`
+1. Press (A) to inject the files
 1. Appuyez sur (A) pour déverrouiller l'écriture sur la SysNAND
 1. Entrez la combinaison de touche demandée pour débloquer l'écriture sur votre SysNAND (lvl3)
-  + Ce processus prendra un certain temps
 1. Une fois le transfert terminé, appuyez sur (A) pour continuer
 1. Appuyez sur (Start) pour redémarrer votre système
-1. Signalez ce problème à la [Page relative aux problèmes liés à SafeCTRTransfer] (en anglais)(https://github.com/d0k3/SafeCTRTransfer/issues)
-
+1. Report this issue to the [SafeB9SInstaller Issues Page](https://github.com/d0k3/SafeB9SInstaller/issues)
 
 ## <a name="ts_sys_blue" />Écran bleu au démarrage (erreur bootrom)
 
