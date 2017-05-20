@@ -4,13 +4,16 @@ lang: tr
 permalink: /tr_TR/9.2.0-ctrtransfer.html
 ---
 
-Cihazınız, CTRTransfer işleminden sonra yüklü oyunlarınızı göstermeyebilir. Bu, transfer yapılırken ticketların kaldırılmasından dolayıdır. Bu yüzden önceki aşamada ticketların yedeklerini alındı. Rehberin sonunda ticketlarınız geri yüklenecektir.
-{: .notice--info}
+This is add-on section for installing a 9.2.0 CTRTransfer image to your device.
+{: .notice--primary}
 
 Bu rehberi kullanmak için [Deluge](http://dev.deluge-torrent.org/wiki/Download) gibi [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) linkleri açabilen bir torrent programına ihtiyaç duyulacaktır. **
 {: .notice--info}
 
-9.2.0 ctrtransfer adımlarının amacı varsayılan NAND'dan kaynaklanan sorunların çözümüdür ve bu adımlar 2.1.0 ctrtransfer'in tersine sadece ticketların ve ayarların geri yüklenmesini sağlar. Bu yedeklerin yapılmaması BÜTÜN oyunların ve kayıtların kaybıyla sonuçlanır!
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+{: .notice--info}
+
+**You MUST have already installed Luma3DS and boot9strap or arm9loaderhax to use this.**
 {: .notice--danger}
 
 #### Nelere ihtiyacınız var
@@ -34,6 +37,7 @@ Bu rehberi kullanmak için [Deluge](http://dev.deluge-torrent.org/wiki/Download)
 1. Cihazınızı kapatın
 1. SD kartınızı bilgisayarınıza takın
 1. SD kartınızın ana dizininde eğer yoksa `cias` isminde klasör oluşturun
+1. SD kartınızın ana dizininde eğer yoksa `files9` isminde klasör oluşturun
 1. GodMode9 '.zip' dosyasındaki 'GodMode9.bin'i SD kartınızdaki `/luma/payloads/` klasörüne kopyalayın
 1. CTRTransfer `.zip` dosyasından 9.2.0 CTRTransfer imajı olan `.bin` dosyasını, SD kartınızdaki `/files9/` klasörüne kopyalayın
 1. `FBI.cia 'dosyasını FBI`.zip` dosyasından SD kartınızdaki `/ cias /` klasörüne kopyalayın
@@ -41,7 +45,7 @@ Bu rehberi kullanmak için [Deluge](http://dev.deluge-torrent.org/wiki/Download)
 
 ##### Bölüm II - CTRTransfer
 
-1. Launch the Luma3DS chainloader menu from arm9loaderhax by holding (Start) during boot
+1. Launch the Luma3DS chainloader menu by holding (Start) during boot
 1. Launch GodMode9 by pressing (A)
 1. Navigate to `[0:] SDCARD` -> `files9`
 1. Press (A) on the CTRTransfer `.bin` to select it
@@ -63,7 +67,7 @@ Bu rehberi kullanmak için [Deluge](http://dev.deluge-torrent.org/wiki/Download)
   + Once it has completed, press (A) to continue
 1. Press (Start) to reboot your device
 1. Update your device by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
-  + Updates while using A9LH + Luma (what you have) are safe
+  + Updates while using B9S + Luma (what you have) are safe
   + Bu bir hata verirse, DNS ayarlarınızı "otomatik" olarak belirleyin
 
 ##### Section III - Injecting FBI
@@ -116,5 +120,5 @@ If you had no `eshop` or `unknown` folders earlier, skip this section.
 
 ___
 
-Buraya dönün [arm9loaderhax yükleme](installing-arm9loaderhax).
+Continue to [Finalizing Setup](finalizing-setup)
 {: .notice--primary}
