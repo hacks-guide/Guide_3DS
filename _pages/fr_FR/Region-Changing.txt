@@ -4,13 +4,16 @@ lang: fr
 permalink: /fr_FR/region-changing.html
 ---
 
-Ceci est une section complémentaire pour ceux qui voudraient changer la région de leur SysNAND une fois arm9loaderhax et un CFW installés. On peut le faire en installant l'image CTRTransfer 9.2.0 de la région à laquelle vous souhaitez passer.
+This is add-on section for region changing your CFW SysNAND. On peut le faire en installant l'image CTRTransfer 9.2.0 de la région à laquelle vous souhaitez passer.
 {: .notice--primary}
 
 **Il est quasiment inutile de changer la région de sa 3DS car Luma3DS permet de lancer des jeux d'autres régions et d'émuler des [changements de région individuellement](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage) pour chaque titre.**
 {: .notice--info}
 
 Pour utiliser les liens suivant [magnet](https://fr.wikipedia.org/wiki/Magnet_(standard)), vous avez besoin d'un client Torrent comme [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+{: .notice--info}
+
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
 {: .notice--info}
 
 Ce processus déliera votre NNID de votre console, car celui-ci ne sera plus compatible avec. Les NNIDs sont restreints à la région de la console qui les a créés, et ne peuvent pas être transférés dans une autre régions sans [manipulations complexes et avancées](https://gist.githubusercontent.com/yifanlu/e80db121d38aceb8cca0e03cefd5853b/raw/3c4dd89869156ca0f945a2791e699acfdb32b510/gistfile1.txt).
@@ -25,10 +28,10 @@ Notez que parfois, pour une raison inconnue, l'eshop ne fonctionnera pas même s
 Similaire à l’avertissement ci-dessus, notez que parfois l’eShop marchera inexplicablement sur les consoles qui ne devrait pas (par exemple, certaines New 3DS). La cause est actuellement inconnue.
 {: .notice--warning}
 
-Le changement de région de votre 3DS en utilisant un CTRTransfer (ce que vous fait faire cette méthode) semble interférer avec les divers patchs de redémarrage. La cause est actuellement inconnue, mais pour l'instant les utilisateurs d'Old 3DS seront incapables de jouer aux jeux utilisant la mémoire étendue (comme Monster Hunter, Super Smash Bros. et Pokémon Soleil/Lune) jusqu'à ce qu'ils formatent leurs consoles (Détails à la fin de cette page).
+Le changement de région de votre 3DS en utilisant un CTRTransfer (ce que vous fait faire cette méthode) semble interférer avec les divers patchs de redémarrage. The cause for this is unknown, but for now Old 3DS users will be unable to play extended memory mode games (such as Monster Hunter, Super Smash Bros, and Pokémon Sun / Moon) until they format their devices.
 {: .notice--warning}
 
-**Vous DEVEZ avoir déjà installé arm9loaderhax + Luma3DS avant de pouvoir utiliser cette méthode.**
+**You MUST have already installed Luma3DS and boot9strap or arm9loaderhax to use this.**
 {: .notice--danger}
 
 #### Ce dont vous aurez besoin
@@ -51,6 +54,7 @@ Le changement de région de votre 3DS en utilisant un CTRTransfer (ce que vous f
 1. Éteignez votre 3DS
 1. Insérez votre carte SD dans votre ordinateur
 1. Créez un répertoire nommé `cias` à la racine de votre carte SD s'il n'existe pas déjà
+1. Créez un dossier nommé `files9` à la racine de votre carte SD si celui-ci n'existe pas déjà
 1. Copiez le fichier `GodMode9.bin` de l'archive GodMode9 `.zip` dans le dossier `/luma/payloads/` sur votre carte SD
 1. Copiez les fichiers `.bin` et `.bin.sha` de l'image CTRtransfer 9.2.0 depuis le `.zip` de CTRtransfer vers le dossier `/files9/` de votre carte SD
 1. Copiez le fichier `FBI.cia` se trouvant dans FBI`.zip` vers le répertoire `/cias/` de votre carte SD
@@ -80,7 +84,7 @@ Le changement de région de votre 3DS en utilisant un CTRTransfer (ce que vous f
   + Une fois le transfert terminé, appuyez sur (A) pour continuer
 1. Appuyez sur (Start) pour redémarrer votre système
 1. Mettez à jour votre console en vous rendant dans les Paramètres de la console, puis "Autres paramètres", puis tout à droite sur l'option "Mise à jour du Système"
-  + Mettre à jour sa console alors que A9LH et Luma3DS sont installés (ce que vous avez maintenant) n'est pas dangereux, arrêtez de poser la question
+  + Updates while using B9S + Luma (what you have) are safe
   + Si vous obtenez une erreur, réglez vos paramètres DNS sur "Automatique"
 
 ##### Section III - Injection de FBI
@@ -141,5 +145,5 @@ Si vous n'aviez pas de dossiers `eshop` ou `unknown`, sautez cette partie.
 
 ___
 
-Les Old 3DS ou 2DS auront peut être besoin d'être formatées (via TinyFormat ou les Paramètres Système) pour pouvoir jouer aux jeux en mode de mémoire étendue (comme Monster Hunter, Super Smash Bros ou Pokemon Soleil/Lune).
+Old 3DSs and 2DSs may need to format (using TinyFormat or the System Settings) to play extended memory mode games (such as Monster Hunter, Super Smash Bros, or Pokemon Sun/Moon).
 {: .notice--info}
