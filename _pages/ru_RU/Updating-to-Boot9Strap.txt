@@ -13,8 +13,8 @@ All future releases of Luma3DS will only be made in the `.firm` format, which wi
 Если у вас стоит ПИН-код на Luma, вы должны выключить его, чтобы выполнить обновление. После обновления вы можете включить пин-код назад.
 {: .notice--info}
 
-If you currently use or have previously used the software "3dsafe", you may get an "OTP Crypto Fail" error when attempting to run SafeB9SInstaller. A solution for this error is being looked into, so just be patient.
-{: .notice--warning}
+If you have the software "3dsafe" installed, you must remove it to do these steps or you will get an "OTP Crypto Fail" error. If you do not have the required files to remove "3dsafe", a method to remove "3dsafe" (without any of its removal files such as `lost.bin` or `sha.bin`) is being looked into, so just be patient.
+{: .notice--info}
 
 Для использования [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme)-ссылок в этом руководстве необходим torrent-клиент, например [Deluge](http://dev.deluge-torrent.org/wiki/Download)
 {: .notice--info}
@@ -42,7 +42,7 @@ Note that `secret_sector.bin` is needed to revert the arm9loaderhax exploit, whi
 1. Вставьте SD-карту в компьютер
 1. Скопируйте файл `boot.firm` из `.7z-архива` Luma3DS в корень SD-карты
 1. Создайте папку `cias` в корне SD-карты
-1. Скопируйте `lumaupdater-v2.0.cia` из `.zip-архива` Luma3DS Updater в папку `/cias/` в корне SD-карты
+1. Copy `lumaupdater-v2.0.cia` to the `/cias/` folder on your SD card
 1. Создайте папку `boot9strap` в корне SD-карты
 1. Скопируйте `GodMode9.firm` из `.zip-архива` GodMode9 в папку `/luma/payloads/` на SD-карте
 1. Delete any existing `.bin` payloads in the `/luma/payloads/` folder on your SD card as they will not be compatible with boot9strap compatible Luma3DS versions
@@ -113,10 +113,10 @@ Note that `secret_sector.bin` is needed to revert the arm9loaderhax exploit, whi
 
 ___
 
-You can now remove any arm9loaderhax related files from your SD card, such as `arm9loaderhax.bin` on the root of your SD card and the `files9` folder on your SD card.
+You can now remove any arm9loaderhax related files from your SD card, such as `arm9loaderhax.bin` on the root of your SD card and the `aeskeydb.bin` file in the `files9` folder on your SD card.
 {: .notice--info}
 
-Note that `firm0firm1.bak` and `sector0x96.bak` in the `/boot9strap/` folder on your SD card are only needed in the event of a failed boot9strap install. Once you have installed successfully, you can delete these two files.
+Note that `firm0firm1.bak` and `sector0x96.bak` in the `/boot9strap/` folder on your SD card are only needed in the event of a failed boot9strap install. Once you have installed successfully, you can delete the entire `boot9strap` folder.
 {: .notice--info}
 
 This fork of Luma3DS Updater allows for boot9strap compatibility by downloading and extracting the latest Luma3DS `boot.firm` for you.
