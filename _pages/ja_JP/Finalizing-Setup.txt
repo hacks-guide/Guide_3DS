@@ -32,9 +32,9 @@ The file `boot.firm` is what is launched by boot9strap itself after it finishes 
 * The latest release of [Themely](https://github.com/ErmanSayin/Themely/releases/latest) *(the `.cia` file)*
 * [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)の最新バージョン
 * [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)の最新バージョン
-* [Luma3DS Updater](https://github.com/Hamcha/lumaupdate/releases/latest)の最新バージョン
 * The latest release of [DSP1](https://github.com/zoogie/DSP1/releases/latest)
 * [FBI](https://github.com/Steveice10/FBI/releases/latest)の最新バージョン
+* The latest fork of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
 * **Old 3DS and 2DS Only:** The Old 3DS 11.2.0-35 [otherapp payload](https://smealum.github.io/3ds/#otherapp) for your region
 
 #### 手順
@@ -45,7 +45,7 @@ The file `boot.firm` is what is launched by boot9strap itself after it finishes 
 1. SDカードのルートに`cias`というフォルダが存在しない場合、それを作成します
 1. Create a folder named `hblauncherloader` on the root of your SD card if it does not already exist
 1. hblauncher_loader `.zip`から`hblauncher_loader.cia`をSDカードの`/cias/`フォルダにコピーします
-1. Luma3DS Updater `.zip`から`lumaupdater.cia`をSDカードの`/cias/`フォルダにコピーします
+1. Copy `lumaupdater-v2.0.cia` from the Luma3DS Updater `.zip` to the `/cias/` folder on your SD card
 1. FBI `.zip`から`FBI.cia`をSDカードの`/cias/`フォルダにコピーします
 1. Copy `DSP1.cia` to the `/cias/` folder on your SD card
 1. Copy `Themely.cia` to the `/cias/` folder on your SD card
@@ -170,8 +170,13 @@ If, before following this guide, you already had an EmuNAND setup and would like
 
 ___
 
-Note that this guide does not have Luma3DS updater anymore due to its incompatibility with the name `boot.firm`. It will be re-added once it is updated to support Boot9Strap.
-{: .notice--info}
+{% capture notice-10 %}
+Luma3DS UpdaterでLuma3DSを最新バージョンまで更新できます。そのアプリを起動して (A) を押して更新できます。     
+これは「本体の更新」と違うことで、ただ最新バージョンのLuma3DSファイルをダウンロードして解凍するだけです。
+This will only update the Luma3DS files on your SD card. If you boot your device without an SD card, it will use the version you placed in CTRNAND.    
+{% endcapture %}
+
+<div class="notice--info">{{ notice-10 | markdownify }}</div>
 
 {% capture notice-6 %}   
 You will now boot Luma3DS CFW SysNAND by default.    
