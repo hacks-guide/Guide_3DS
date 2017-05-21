@@ -1,0 +1,161 @@
+---
+title: "EmuNAND verplaatsen" #
+lang: nl
+permalink: /nl_NL/move-emunand.html
+---
+
+Dit is de add-on-sectie voor het verplaatsen van een oude EmuNAND naar je nieuwe SysNAND CFW, en daarna het verwijderen van het oude EmuNAND gedeelte. Merk op dat de termen EmuNAND en RedNAND naar iets andere implementaties van [hetzelfde concept verwijzen](http://3dbrew.org/wiki/NAND_Redirection).
+{: .notice--info}
+
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+{: .notice--info}
+
+**You MUST have already installed Luma3DS and boot9strap or arm9loaderhax to use this.**
+{: .notice--danger}
+
+#### Benodigdheden
+
+* Een bestaande EmuNAND
+* De meest recente versie van [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* De meest recente versie van [FBI](https://github.com/Steveice10/FBI/releases/latest)
+
+#### Instructies
+
+##### Deel I - Voorbereiding
+
+1. Schakel je 3DS uit
+1. Plaats je SD kaart in je computer
+1. Copy `GodMode9.firm` (or `GodMode9.bin` for arm9loaderhax users) from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
+1. Stop je SD kaart terug in je 3DS
+
+##### Deel II - Back-up maken SysNAND DSiWare Saves
+
+Als je geen DSiWare spellen of saves hebt die je wilt behouden, kan je dit deel overslaan.
+{: .notice--info}
+
+1. Start je 3DS terwijl je (Start) ingedrukt houdt om het Luma3DS chainloader menu te openen
+1. Open GodMode9 door op (A) te drukken
+1. Navigeer naar `[2:] SYSNAND TWLN` -> `title`
+1. Houd (R) ingedrukt en druk op (A) op hetzelfde moment op `00030004` om deze map te selecteren, selecteer dan "Copy to 0:/gm9out"
+  + Dit proces kan even duren als je veel DSiWare spellen hebt
+1. Druk twee keer op (B) om terug te gaan naar het hoofdmenu
+
+##### Deel II - Backup maken GBA VC Saves
+
+Als je geen GBA VC spellen of saves hebt die je wat uit maken, kan je dit deel overslaan.
+{: .notice--info}
+
+Dit is niet nodig voor elke andere soort van Virtual Console spellen (GBC, NES, etc)
+{: .notice--info}
+
+1. Houd (R) ingedrukt en druk op (Start) op hetzelfde moment om je 3DS uit te zetten
+1. Plaats je SD kaart in je computer
+1. Maak een map genaamd `files9` in de hoofdmap van je SD kaart als deze nog niet bestaat
+1. Maak een map in `/files9/` voor elk GBA VC spel waarvan je een backup van de save wil hebben 
+1. Stop je SD kaart terug in je 3DS
+1. Start je systeem in SysNAND op
+1. Doe het volgende proces voor elk GBA VC spel waarvan je een backup van de save wil maken:
+  + Start het GBA VC spel in SysNAND
+  + Sluit het spel af
+  + Start je 3DS terwijl je (Start) ingedrukt houdt om het Luma3DS chainloader menu te openen
+  + Open GodMode9 door op (A) te drukken
+  + Navigeer naar `[S:] SYSNAND VIRTUAL`
+  + Druk op (Y) op `gbavc.sav` om deze to kopiëren
+  + Druk op (B) om terug te gaan naar het hoofdmenu
+  + Navigeer naar `[0:] SDCARD`-> `files9`
+  + Navigeer naar de map die je gemaakt hebt voor dit GBA VC spel
+  + Druk op (Y) om `gbavc.sav` te plakken
+  + Druk op (Start) om je 3DS opnieuw op te starten
+1. Herstart terwijl je (Start) ingedrukt houd om het Luma3DS chainloader menu te openen
+1. Open GodMode9 door op (A) te drukken
+
+##### Deel IV - EmuNAND naar SysNAND kopiëren
+
+1. Navigeer naar `[E:] EMUNAND VIRTUAL`
+1. Druk op (A) op `nand.bin` om het te selecteren, selecteer vervolgens "NAND image options...", en selecteer dan "Restore SysNAND (safe)"
+1. Druk op (A) om SysNAND overwriting te ontgrendelen en voer daarna de toetsencombinatie in die wordt gegeven
+  + Dit zal niet je arm9loaderhax installatie overschrijven
+1. Voer de gegeven combinatie van knoppen in om SysNAND (lvl1) writing in te schakelen
+  + Dit proces zal enige tijd duren
+1. Once it has completed, press (A) to continue
+1. Druk op (B) om terug te gaan naar het hoofdmenu
+
+##### Deel V - DSiWare Saves Herstellen
+
+Als je geen backup DSiWare Saves hebt gemaakt, kan je dit overslaan.
+{: .notice--info}
+
+1. Navigeer naar `[0:] SDCARD`-> `gm9out`
+1. Druk op (Y) op de `00030004` map om deze te kopiëren
+1. Druk twee keer op (B) om terug te gaan naar het hoofdmenu
+1. Navigeer naar `[2:] SYSNAND TWLN` -> `title`
+1. Druk op (Y) om de `00030004` map te plakken
+1. Selecteer "Copy path(s)"
+1. Druk op (A) om SysNAND (lvl1) writing te ontgrendelen en voer daarna de toetsencombinatie in die wordt gegeven
+1. Selecteer "Overwrite file(s)"
+  + Dit proces kan even duren als je veel DSiWare spellen hebt
+1. Druk twee keer op (B) om terug te gaan naar het hoofdmenu
+
+##### Deel VI - GBA VC Saves Herstellen
+
+Als je geen backup GBA VC Saves hebt gemaakt, kan je dit overslaan.
+{: .notice--info}
+
+1. Houd (R) ingedrukt en druk op (Start) op hetzelfde moment om je 3DS uit te zetten
+1. Start je systeem in SysNAND op
+1. Doe het volgende proces voor elk GBA VC spel waarvan je een backup van de save wil maken:
+  + Start het GBA VC spel in SysNAND
+  + Sluit het spel af
+  + Start je 3DS terwijl je (Start) ingedrukt houdt om het Luma3DS chainloader menu te openen
+  + Open GodMode9 door op (A) te drukken
+  + Navigeer naar `[0:] SDCARD`-> `files9`
+  + Navigeer naar de map die je gemaakt hebt voor dit GBA VC spel
+  + Druk op (Y) op `gbavc.sav` om deze to kopiëren
+  + Druk op (B) om terug te gaan naar het hoofdmenu
+  + Navigeer naar `[S:] SYSNAND VIRTUAL`
+  + Druk op (Y) om `gbavc.sav` te plakken
+  + Druk op (A) om het te bevestigen
+  + Druk op (Start) om je 3DS opnieuw op te starten
+1. Herstart terwijl je (Start) ingedrukt houd om het Luma3DS chainloader menu te openen
+1. Open GodMode9 door op (A) te drukken
+
+##### Deel VII - Backup SysNAND
+
+1. Druk op de (Home) knop om het actiemenu te openen
+1. Selecteer "More..."
+1. Selecteer "Backup NAND"
+1. Druk op (A) om door te gaan
+1. Houd (R) en (B) gelijkertijd ingedrukt om je SD kaart uit te werpen
+1. Plaats je SD kaart in je computer
+1. Kopieer `nand.bin` van de `/gm9out/` map op je SD kaart naar een veilige locatie op je computer
+  + Als je al eerder SafeCTRTransfer hebt gebruikt en je hebt een NAND backup genaamd `<serialnumber>_nand.bin`, overschrijf die dan met deze (hernoem `nand.bin` om overeen te komen met `<serialnumber>_nand.bin`)
+  + Maak back-ups in verschillende locaties (zoals een online bestandsopslag)
+  + Deze backup zal je redden van een brick als er iets fout gaat in de toekomst
+1. Verwijder `nand.bin` uit de `/gm9out/` map op je SD kaart na deze gekopieerd te hebben
+1. **Maak een backup van elk bestand op je SD kaart naar een map op je computer; alle bestanden zullen verwijderd worden in de volgende stappen**
+
+##### Deel VIII - SD kaart formatteren
+
+1. Stop je SD kaart terug in je 3DS
+1. Druk op de (Home) knop om het actiemenu te openen
+1. Selecteer "More..."
+1. Selecteer "SD format menu"
+1. Druk op (A) om het te bevestigen
+1. Selecteer "NO EmuNAND"
+1. Selecteer "Auto"
+1. Druk op (A) om het label `GM9SD` te accepteren
+  + Optioneel kan je een aangepaste naam voor de SD kaart invoeren
+1. Wanneer er om gevraagd wordt, voer de gegeven combinatie van knoppen in om te bevestigen
+1. Houd (R) en (B) gelijkertijd ingedrukt om je SD kaart uit te werpen
+1. Plaats je SD kaart in je computer
+1. Kopieer alle bestanden terug naar je SD kaart
+  + Ensure you replace the `boot.firm` file on your SD card with the one from your backup
+1. Stop je SD kaart terug in je 3DS
+1. Druk (A) om je SD kaart te remounten
+1. Druk op (Start) om op te slaan en opnieuw op te starten
+1. Wanneer je een zwart scherm hebt, [volg dan deze foutoplossingshadleiding](troubleshooting#ts_sys_down)
+
+___
+
+Return to [Finalizing Setup](finalizing-setup).
+{: .notice--primary}
