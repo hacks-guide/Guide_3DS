@@ -1,0 +1,162 @@
+---
+title: "Instalar boot9strap (Inyección de juego DSiWare)" #
+lang: es
+permalink: /es_ES/installing-boot9strap-(dsiware-game-injection).html
+---
+
+Ten en cuenta que en algunas versiones de Luma3DS, el menú de selección de payloads sólo es mostrado si se ha detectado más de un payload. Si sólo se detecta un payload, mantener (Start) al encender hará que se inicie GodMode9 de forma directa.
+{: .notice--info}
+
+Para utilizar los enlaces [magnet](https://es.wikipedia.org/wiki/Magnet) de esta página, vas a necesitar un cliente torrent como [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+{: .notice--insuccessfo}
+
+Antes de proceder, asegúrate de leer todos los avisos y advertencias al [Instalar boot9strap (DSiWare)] (Instalar-boot9strap-(dsiware))
+{: .notice--danger}
+
+#### Qué necesitas
+
+* Dos consolas 3DS
+  + **La consola de origen**: la consola 3DS ejecutando algún tipo de custom firmware (como boot9strap o arm9loaderhax) *en la ultima versión*
+  + **La consola de destino**: la consola 3DS sin modificar *en 11.4.0*
+* Comprar (o ya poseer) e instalar un juego DSiWare compatible, desde la eShop en **la 3DS de origen**
+  + Una copia pirata del juego **NO** funcionará
+  + Para una lista de juegos compatibles, revisa la página [Instalar boot9strap (Lista de juegos DSiWare inyectables)](installing-boot9strap-(dsiware-game-injection-list))
+* El archivo `.zip` de inyección de sudokuhax correspondiente a tu región
+  + [`DSiWare_usa_sudokuhax_injection.zip`](magnet:?xt=urn:btih:7ed7fee15c900ed02b5e2cb3c8e7a0363f4d9354&dn=DSiWare_usa_sudokuhax_injection.zip&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce)
+  + [`DSiWare_eur_exidiahax_injection.zip`](magnet:?xt=urn:btih:046bb8023bc40b9a95a8a339c85a9ef18cf60db6&dn=DSiWare_eur_exidiahax_injection.zip&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce)
+  + [`DSiWare_jpn_4swordshax_injection.zip`](magnet:?xt=urn:btih:1bcc90c93da91c9876671f6218084207def90db9&dn=DSiWare_jpn_4swordshax_injection.zip&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce)
+* La última versión de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* La última versión de [b9sTool](https://github.com/Plailect/b9sTool/releases/latest)
+* El Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
+* El `.firm` 11.4.0 correspondiente a **la 3DS de destino**
+  + [11.4.0 New 3DS](magnet:?xt=urn:btih:3b59dd43eec3edb133555f58d1180bfb196acbb4&dn=2.54-0_11.4_NEW.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+  + [11.4.0 Old 3DS](magnet:?xt=urn:btih:0dd89d42ad711f770da899af05ee162ede0d0070&dn=2.54-0_11.4_OLD.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+
+#### Instrucciones
+
+##### Sección I - Preparativos
+
+Usa un [Gestor de datos de guardado](https://github.com/J-D-K/JKSM/releases/latest) para hacer una copia de seguridad de los juegos que desees salvar en *la 3DS de destino* (¡Ya que se formateará!)
+{: .notice--warning}
+
+1. Apaga **la 3DS de origen**
+1. Inserta la tarjeta SD de **la 3DS de origen** en tu computadora
+1. Copia `GodMode9.firm` (o `GodMode9.bin` para los usuarios de arm9loaderhax) desde el `.zip` de GodMode9 a la carpeta `/luma/payloads` en la tarjeta SD de **la 3DS de origen**
+1. Copia el `.app` desde el `.zip` de DSiWare injection a la raíz de la tarjeta SD de la **3DS de origen*
+1. Copia la carpeta `savedata` del DSiWare injection `.zip` a la raíz de la tarjeta SD de la **consola de origen**
+1. Reinserta la tarjeta SD de **la 3DS de origen**
+1. Enciende **la 3DS de origen** manteniendo presionado (Start) para ingresar al menú de selección de payloads de Luma3DS
+1. Inicia GodMode9 presionando (A)
+1. Presiona el botón (Home) para abrir el menú de acción
+1. Selecciona "Mas..."
+1. Selecciona "Backup NAND"
+1. Presiona (A) para continuar
+1. Mantén (R) y presiona (B) al mismo tiempo para extraer la SD
+1. Inserta la tarjeta SD de **la 3DS de destino** en tu computadora
+1. **¡Crea un respaldo de todos los archivos de ambas tarjetas SD en dos carpetas separadas en tu computadora (recuerda a cuál corresponde cada una)!**
+1. Reinserta cada tarjeta SD a su 3DS correspondiente
+1. Presiona (Start) en **la 3DS de origen** para reiniciar
+
+##### Sección II - Inyectar el juego y el archivo de guardado
+
+1. Enciende **la 3DS de origen** manteniendo presionado (Start) para ingresar al menú de selección de payloads de Luma3DS
+1. Inicia GodMode9 presionando (A)
+1. Ve a `SDCARD`
+1. Presiona (Y) en el archivo `.app` de inyección DSiWare para copiarlo
+1. Presiona (B) para volver al menú principal
+1. Ve a `SYSNAND TWLN` -> `title` ->`00030004` -> `(ID de 8 caracteres)`
+  + El ID de 8 carácteres será uno de la página [Instalar boot9strap (Lista de juegos DSiWare inyectables)](installing-boot9strap-(dsiware-game-injection-list))
+1. Ve a `content`
+1. Presiona (A) en el archivo `.app` en la carpeta
+1. Selecciona "Inject data @offset"
+1. Presiona (A) para seleccionar el offset `00000000`
+1. Presiona (A) para desbloquear la escritura en SysNAND, luego haz la combinación de teclas mostrada
+1. Presiona (B) para volver al menú principal
+1. Ve hacia `SYSNAND TWLN` --> `title` -->`00030004` --> `(ID de 8 Caracteres)`
+  + El ID de 8 carácteres será uno de la página [Instalar boot9strap (Lista de juegos DSiWare inyectables)](installing-boot9strap-(dsiware-game-injection-list))
+1. Ve a `data`
+1. Presiona (A) sobre `public.sav`
+1. Selecciona "Mount as FAT image"
+1. Esto te habrá devuelto al menú principal
+1. Ve a `SDCARD`
+1. Presiona (Y) en el/los archivo(s) de la carpeta `savedata` para copiar(los)
+  + Si hay una carpeta `savedata` dentro de la carpeta `savedata`, no es un error. Debes copiar la segunda carpeta `savedata`, no los archivos dentro.
+1. Presiona (B) para volver al menú principal
+1. Ve a `FAT IMAGE`
+1. Presiona el botón (X) para eliminar todo dentro de `FAT IMAGE`
+1. Presiona (Y) para pegar una copia **del contenido de** la carpeta `savedata` en `FAT IMAGE`
+1. Selecciona "Copy path(s)"
+1. Presiona (A) para desbloquear la escritura de imagen, luego presiona la combinación de teclas que se muestra
+1. Presiona (Start) para reiniciar
+1. Ejecuta tu juego DSiWare en **la 3DS de origen**
+1. Presiona la pantalla o cualquier botón para iniciar el juego y comprobar que el guardado es funcional
+  + Si estás usando los archivos EUR (**Legends of Exidia**), luego de presionar (A) o (Start) en las dos pantallas de título, seleciona la primer ranura de guardado y presiona continuar
+  + Si tu juego muestra un error relacionado a `boot.nds`, **entonces el exploit ha sido exitoso**
+  + Si tu juego tiene un error sobre datos de guardado corruptos o inaccesibles, asegúrate que hayas copiado **el contenido de** la carpeta `savedata` y no la carpeta `savedata` en sí
+  + Si tu juego funciona con normalidad y no da ningún error sobre `boot.nds`, entonces debes parar y averiguar qué salió mal
+  + Si obtienes una pantalla negra, [sigue esta guía de solución de problemas](troubleshooting#twl_broken)
+  + Si el juego no aparece en la **3DS de destino** o tiene un error sobre datos de guardado corruptos o inaccesibles, [sigue esta guía de solución de problemas](troubleshooting#ts_dsiware)
+
+##### Sección III - Transferencia del Sistema
+
+1. Si **la 3DS de destino** tiene un ID de Nintendo Network, deberás formatear el dispositivo usando la Configuración de la Consola:
+  + Ve a la última página de "Otras Opciones", selecciona "Formatear" y sigue las instrucciones
+1. Lee lo siguiente:
+  + Tu 3DS con CFW = la 3DS de origen = "Sistema de Origen"
+  + Tu 3DS sin modificar = la 3DS de destino = "Sistema de Destino"
+  + **¡Mueve los títulos DSiWare si se te solicita!**
+  + **NO** borres el contenido de la tarjeta SD del sistema origen si se solicita
+  + Asegúrate que no se agote la batería de ninguna de las dos consolas durante la transferencia
+  + Sólo para transferencias de 2DS/Old 3DS (origen) a New 3DS (destino) - si se pregunta qué método deseas usar para transferir los datos de la tarjeta SD:
+    + **NO** elijas la opción "Low-Capacity microSD Card Transfer" u opción mínima (opción 2), esto solo transferirá los tickets y seguramente no transfiera los datos de guardado de DSiWare.
+    + Método rápido: Si puedes mover los datos de la tarjeta SD de origen a la tarjeta microSD de destino, cuando se solicite, usa la opción "PC-Based Transfer" (opción 3).
+    + Método Lento: Si no puedes hacerlo con una computadora, usa la opción "Transferencia Inalámbrica" **completa** (opción 1).
+1. Ve a [este enlace](http://en-americas-support.nintendo.com/app/answers/detail/a_id/227/) y sigue las instrucciones oficiales de Nintendo para la Transferencia de Sistema de un sistema a otro, teniendo siempre en cuenta lo que acabas de leer
+
+##### Sección IV - Restaurando la 3DS de origen
+
+1. En la **3DS de origen**, completa la configuración inicial
+1. Haz una de las siguientes acciones
+    + Haz el resto de las secciones y luego la guía completa en **la 3DS de destino**, luego espera una semana y haz la Transferencia de Sistema de **la 3DS de destino** a **la 3DS de origen** *(recuerda que no puedes hacer una transferencia de una New 3DS a una Old 3DS)*
+    + Llama a Nintendo y diles que ya no tienes acceso a la consola a la que tu ID de Nintendo Network está vinculado (en este caso **la 3DS de destino**), y quieres que lo vinculen a otra consola (**la 3DS de origen** en este caso)
+    + Puedes también [eliminar el ID de Nintendo Network](https://3ds.guide/troubleshooting#rm_nnid) de **la 3DS de Origen** si prefieres que permanezca en **la 3DS de Destino**
+1. Reinicia **la 3DS de origen** manteniendo presionado (Start) para ingresar al menú de selección de payloads de Luma3DS
+1. Inicia GodMode9 presionando (A)
+1. Ve a `[0:] SDCARD`
+1. Presiona (A) sobre el `nand.bin` de tu NAND para seleccionarlo, luego selecciona "NAND image options..." y luego selecciona "Restore SysNAND (safe)"
+1. Presiona (A) para desbloquear la sobreescritura de SysNAND, luego introduce la combinación de teclas mostrada
+  + Esto no sobreescribirá tu instalación de boot9strap
+1. Ingresa la combinación de teclas mostrada para desbloquear la escritura de SysNAND (lvl1)
+  + Este proceso tomará un tiempo
+1. Una vez que haya terminado, presiona (A) para continuar
+1. Presiona (Start) para reiniciar **la 3DS de origen**
+
+##### Sección V - Copia de seguridad del FIRM de la 3DS de destino
+
+1. Copia `boot.nds` a la raíz de la tarjeta SD de **la 3DS de destino**
+1. Crea una carpeta llamada `boot9strap` en la raíz de la tarjeta SD de **la 3DS de destino**
+1. Copia el archivo 11.4.0 `.firm` correspondiente a **la 3DS de destino** a la carpeta `boot9strap` en la raíz de la tarjeta SD de **la 3DS de destino**
+1. Copia el archivo `boot9strap.firm` desde el `.zip` de boot9strap a la carpeta `/boot9strap/` en tu tarjeta SD
+1. Ejecuta b9sTool iniciando tu juego DSiWare en **la 3DS de destino**
+  + Si el juego no inicia b9sTool, [sigue esta guía de resolución de problemas](troubleshooting#ts_dsiware)
+1. Selecciona "Dump F0F1" para hacer una copia de seguridad del FIRM de **la 3DS de destino**
+1. Toma nota de la ubicación de la copia de seguridad del FIRM
+1. Sal de b9sTool
+  + Puede que tengas que forzar el apagado manteniendo pulsado el botón de encendido
+1. Pon tu tarjeta SD en tu computadora, luego copia `F0F1_N3DS.bin` o `F0F1_O3DS.bin` (dependiendo de tu consola) a una ubicación segura; haz respaldos en múltiples ubicaciones; este respaldo te salvará de un brick por si algo sale mal
+
+##### Sección VI - Flashear el FIRM de la 3DS de destino
+
+**¡NO utilices b9sTool en una consola que ya tenga instalado arm9loaderhax o la INUTILIZARÁS!**
+{: .notice--danger}
+
+1. Ejecuta b9sTool iniciando tu juego DSiWare en **la 3DS de destino**
+1. Selecciona "Install boot9strap" y confirma
+1. Sal de b9sTool, luego apaga tu consola
+  + Puede que tengas que forzar el apagado manteniendo pulsado el botón de encendido
+1. Tu consola iniciará boot9strap, luego se apagará automáticamente porque aún no tiene un payload para iniciar
+
+___
+
+Continúa en [Finalizar instalación](finalizing-setup)
+{: .notice--primary}
