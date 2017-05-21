@@ -1,0 +1,54 @@
+---
+title: "安裝 boot9strap（透過 MSET）" #
+lang: zh-Hant
+permalink: /zh_TW/installing-boot9strap-(mset).html
+---
+
+如果你先前已經有改機過，且已安裝基於 EmuNAND 的自製系統－請注意本教學是專門用來處理 SysNAND 的，而你應在閱讀此教學時在 SysNAND 底下操作或套用至 SysNAND。 注意 EmuNAND 與 RedNAND 指的是些微不同運作方式但[同樣道理](http://3dbrew.org/wiki/NAND_Redirection)的用語。
+{: .notice--info}
+
+本頁面會有些許的[磁力](https://en.wikipedia.org/wiki/Magnet_URI_scheme)連結，你將需要個像 [Deluge](http://dev.deluge-torrent.org/wiki/Download) 的 BT 種子下載器來下載磁力連結的檔案。
+{: .notice--success}
+
+#### 必備項目
+
+* 最新版的 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* 最新版的 [boot9strap](https://github.com/SciresM/boot9strap/releases/latest)
+* 自製軟體[入門套件](http://smealum.github.io/ninjhax2/starter.zip)
+* 任意可在你主機上運行的 DS 燒錄卡
+
+#### 操作說明
+
+##### 第一節 — 準備工作
+
+1. 關閉你的主機
+1. 將 SD 卡插入電腦中
+1. 解壓 `starter.zip` 的 `starter` 資料夾中的 _所有內容_ 至 SD 卡的根目錄底下
+1. 在 SD 卡的根目錄底下建立一個新的資料夾 `boot9strap`
+1. 解壓 boot9strap `.zip` 的 `boot9strap.firm` 及 `boot9strap.firm.sha` 檔案至 SD 卡的 `/boot9strap/` 資料夾中
+1. 將 SafeB9SInstaller `.zip` 中的 `SafeB9SInstaller.dat` 複製到 SD 卡的根目錄
+1. 將 SD 卡插回主機中
+1. 解壓 SafeB9SInstaller `.zip` 中的 `SafeB9SInstaller.nds` 至 DS 燒錄卡中
+1. 啟動你的主機
+
+##### 第二節 — 啟動 SafeB9SInstaller
+
+1. 啟動你的 DS 燒錄卡
+1. 透過燒錄卡啟動 `SafeB9SInstaller.nds`
+1. 依據你的系統版本選擇正確的選項：
+  + 4.X.X -> "4.x SafeB9SInstaller"
+  + 6.X.X -> "6.x SafeB9SInstaller"
+1. 重新啟動系統，接著到「系統設置（System Settings）」、「其他設置（Other Settings）」、「設定檔（Profile）」中選擇「任天堂 DS 設定檔（Nintendo DS Profile）」
+1. 如果一切成功的話，你將自動進入 SafeB9SInstaller
+
+##### 第三節 — 安裝 boot9strap
+
+1. 等待所有安全性檢查完畢
+1. 出現提示時，輸入提示的按鍵組合以安裝 boot9strap
+1. 過程結束後，按下「A」重啟主機
+1. 你的主機將啟動至 boot9strap 中並自動關機，因為它目前尚無 payload 檔案可供啟動
+
+___
+
+繼續至[完成安裝](finalizing-setup)
+{: .notice--primary}
