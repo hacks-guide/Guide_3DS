@@ -13,8 +13,15 @@ All future releases of Luma3DS will only be made in the `.firm` format, which wi
 If you have a PIN set on Luma, you must temporarily turn it off to do these steps, or you will get an "OTP Crypto Fail" error. You can re-enable the PIN after the update.
 {: .notice--warning}
 
-If you have the software "3dsafe" installed, you must remove it to do these steps, or you will get an "OTP Crypto Fail" error. If you do not have the required files (`sha.bin` or `lost.bin`) to remove "3dsafe", a method to remove "3dsafe" (without any of its removal files such as `lost.bin` or `sha.bin`) is being looked into, so just be patient.
-{: .notice--warning}
+{% capture notice-1 %}
+
+If you have the software "3dsafe" installed, you must remove it to do these steps, or you will get an "OTP Crypto Fail" error.
+<br><br>
+To do this, extract [the latest release of arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases) (the payload files) to a folder named `a9lh` on the root of your SD card, then boot 3dsafe, input your pin and hold down the last key when you do. From there, while holding this key, press (X) to launch the integrated SafeA9LHInstaller, then press (Select) to "update" to standard arm9loaderhax.
+
+{% endcapture %}
+
+<div class="notice--warning">{{ notice-1 | markdownify }}</div>
 
 To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download)
 {: .notice--success}
