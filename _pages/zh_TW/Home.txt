@@ -1,0 +1,81 @@
+---
+layout: splash
+title: "3DS 改機手冊" #
+header:
+  overlay_color: "#5e616c" #
+  overlay_image: images/home-page-feature.jpg
+  overlay_filter: 0.5
+  cta_label: "從頭開始" #
+  cta_url: "/zh_TW/get-started" #
+  caption:
+excerpt: "最完整的 3DS 改機教戰手冊，<br />教你如何從原廠韌體改成 boot9strap。<br />" #
+lang: zh_TW
+permalink: /zh_TW/index.html
+---
+
+{% capture notice-home %}
+此指南是 _僅_ 為零售機所寫的（透過正常管道購買；非任天堂開發者計畫所取得的機子）！    
+如果你的機子是開發平台用的主機（代號 PANDA 或 SNAKE），請見我們的[開發者教學](https://dev.3ds.guide)。
+{% endcapture %}
+
+<div class="notice--danger">{{ notice-home | markdownify }}</div>
+
+本教學需要*你的*幫助[翻譯](https://translate.3ds.guide/)它至其他語言！
+{: .notice--success}
+
+本指南需要*你*的幫助來作種[這些](https://3ds.guide/rss.xml) BT 種子檔案！
+{: .notice--success}
+
+請先讀完本教學所有的序章再進行改機。
+{: .notice--warning}
+
+## 什麼是自製程式？
+
+[**自製程式**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games)（Homebrew）通常是指未經由任天堂所授權之軟體。 透過它，你可以遊玩自製遊戲、使用存檔修改器及備份器等工具，甚至是其他系統的模擬器。
+
+在大多數情況下，你[只需要使用 3DS 內建音樂撥放器](homebrew-launcher-(soundhax))就可以在主機上運行自製軟體。 除此之外，還有其他方式可以用來運行自製程式，像是透過遊戲和網頁瀏覽器中各式各樣的漏洞。
+
+## 什麼是自製韌體？
+
+**自製韌體** （CFW） 可以做些使用者空間底下自製程式無法輕易達到更高階的修改及破解。 例如，簽證補丁（Signature patches）可以安裝讓任一未簽證的程式到你的主選單上。
+
+在主機版本 11.4.0 或先前的系統上安裝自製韌體是再簡單不過的了。
+
+## 本教學將安裝些什麼？
+
+此教學的目的是將未改機的 3DS 從原廠
+韌體改為基於 boot9strap 的自製韌體。 某些系統版本中，它會將自製程式當作跳板，但主要目的還是為了安裝自製韌體。
+
+boot9strap 是目前最新且最棒的自製韌體啟動方式，有點像 Wii 上面的 BootMii 一樣，光是在開機前幾毫秒就能掌握整台主機的控制權。 它跟 arm9loaderhax 相比能更早取得系統控制權，再加上它跟普通的 sighax 不同，boot9strap 使用
+ NDMA 複寫漏洞，於 Boot9 中執行程序。 這也就是說，任何已安裝 boot9strap 的主機皆能轉儲主機中的 OTP 金鑰（`OTP.bin`）、ARM11 bootrom（`boot11.bin`）以及 ARM9 bootrom（`boot9.bin`）。
+
+跟其他自製韌體比起來，boot9strap 的優點多太多了。這就是為什麼我們推薦使用本篇教學，而非其他還在使用過時軟體（像是 menuhax + rxTools、arm9loaderhax、或甚至普通的 sighax）的教學。
+
+如果想知道 boot9strap 怎麼運作的，請見由 [SciresM](https://github.com/SciresM/) 所做的[投影片](https://sciresm.github.io/33-and-a-half-c3/)。
+
+如果想看每個計算出的 sighax 簽證檔（boot9strap 平台的基底），請見[此 gist](https://gist.github.com/SciresM/cdd2266efb80175d37eabbe86f9d8c52)。
+
+## 自製韌體可以做些什麼？
+
++ 玩任一卡帶或 eShop 上的遊戲，就算是不同區的也可以
++ 透過他人創作的[主題](https://3dsthem.es/)、[徽章](https://badges.3dsthem.es/)、及[啟動畫面](https://splash.3dsthem.es/)來個人化你的 HOME 主選單
++ 套用金手指
++ 遊戲或軟體截圖
++ [備份、編輯以及還原](https://gbatemp.net/threads/413143/)各個遊戲的存檔
++ 用像是 RetroArch 或其他模擬器來玩些其他系統的遊戲 （New 3DS 效果最佳）
++ 安裝自製軟體，並讓它們出現在你的 HOME 主選單中
++ 把你的卡帶轉成可以安裝的格式，這樣就再也不需要帶著卡帶到處跑了
++ 僅限 New 3DS：透過 NTR CFW 自製系統以無線串流的方式，直播畫面到電腦上
++ 在 3DS 上遊玩早被禁用的 DS 燒錄卡
++ 未來可以安全地升級到最新版的系統，也不會失去使用自製軟體的功能
+
+## 我在開始前需要知道什麼？
+
++ **在開始前，你一定得注意 3DS 改機的風險：每當你修改系統時，都有可能造成無法挽回的磚機或死機。 這種情況是滿罕見的，但是還是有可能的。所以請確保遵守所有的步驟。**
++ 如果你之前已透過 EmuNAND 的方式改機，而你現在想把你之前的 EmuNAND 移植到你新的 SysNAND 自製韌體底下，你可以在依正常步驟進行，並在[完成安裝](finalizing-setup)這一步中依照提示還原的你 EmuNAND。
++ 本教學適用於任一地區且搭載 11.4.0 或更早版本的 New 3DS、舊型 3DS、及 2DS 上 **。
++ 如果一切都很順利的話，你將不會失去任何資料（像是遊戲、NNID、存檔...等都會被留下）。
++ **請在充電的情況下改機，以確保途中不會因為電力關係而突然關機造成資料遺失或甚至毀損！**
++ 你的 SD 卡應該是 [MBR 的格式，而非 GPT](http://www.howtogeek.com/245610/)（原廠 SD 卡一律都是以 MBR 格式出廠）。
++ 如果你需要格式化一張新的 SD 卡，可以使用 [`guiformat`](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) 且將配置單位設為 32K。
++ 2DS 跟 舊版 3DS 的軟體基本上是幾乎一致的，也就是說任何「舊型 3DS」的步驟也可以適用於 2DS。
