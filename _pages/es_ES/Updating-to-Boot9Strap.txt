@@ -1,0 +1,140 @@
+---
+title: "Actualizar a boot9strap" #
+lang: es
+permalink: /es_ES/updating-to-boot9strap.html
+---
+
+Esta página es para los usuarios actuales de arm9loaderhax que deseen actualizar sus consolas a boot9strap.
+{: .notice--info}
+
+Todas las versiones futuras de Luma3DS serán sólo en formato `.firm`, el cual será únicamente compatible con boot9strap y sighax. Esto significa que para continuar recibiendo las últimas actualizaciones de Luma3DS, deberás utilizar esta página para continuar con tu instalación.
+{: .notice--info}
+
+Si tienes un PIN configurado en Luma, debes desactivarlo temporalmente para realizar los pasos, o tendrás el error "OTP Crypto Fail". Puedes reactivar el PIN después de la actualización.
+{: .notice--warning}
+
+{% capture notice-1 %}
+
+Si tienes el software "3dsafe" instalado, debes eliminarlo para hacer estos pasos o tendrás el error "OTP Crypto Fail".
+<br><br>
+Para hacer esto, extrae [la última versión de arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases) (los archivos de payloads) a una carpeta llamada `a9lh` en la raíz de tu tarjeta SD, luego inicia 3dsafe, ingresa tu pin y mantén presionado el último botón cuando lo hagas. Desde ahí, mientras presionas este botón, presiona (X) para iniciar el SafeA9LHInstaller integrado, luego pulsa (Select) para "actualizar" al arm9loaderhax estándar.
+
+{% endcapture %}
+
+<div class="notice--warning">{{ notice-1 | markdownify }}</div>
+
+Para utilizar los enlaces [magnet](https://es.wikipedia.org/wiki/Magnet) de esta página, vas a necesitar un cliente torrent como [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+{: .notice--success}
+
+#### Qué necesitas
+
+Ten en cuenta que el archivo requerido llamado `secret_sector.bin` es el mismo que se encuentra en varias versiones del archivo `data_input.zip`. Si ya tienes ese archivo en alguna parte de tu disco, puedes usar ese en vez de descargar el que está más abajo.
+{: .notice--info}
+
+Ten en cuenta que `secret_sector.bin` es requerido para revertir el exploit de arm9loaderhax, y por ello no se necesita para la instalación de boot9strap en una consola sin modificar.
+{: .notice--info}
+
+* <i class="fa fa-magnet" aria-hidden="true" title="Este es un enlace magnético. Usa un cliente torrent para descargar el archivo."></i> - [`secret_sector.bin`](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce)
+* La última versión de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(el archivo`.7z`)*
+* La última versión de [SafeB9SInstaller]
+(https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* La última versión de [boot9strap]
+(https://github.com/SciresM/boot9strap/releases/latest)
+* La última versión de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* La última versión (fork) de [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
+
+#### Instrucciones
+
+##### Sección I - Preparativos
+
+1. Apaga tu consola
+1. Inserta tu tarjeta SD en tu computadora
+1. Copia el archivo `boot.firm` desde el `.7z` de Luma3DS a la raíz de tu tarjeta SD
+1. Crea una carpeta llamada `cias` en la raíz de tu tarjeta SD, si aún no existe
+1. Copia `lumaupdater-v2.0.cia` a la carpeta `/cias/` en tu tarjeta SD
+1. Crea una carpeta llamada `boot9strap` en la raíz de tu tarjeta SD
+1. Copia el archivo `GodMode9.firm` desde el `.zip` de GodMode9 a la carpeta `/luma/payloads/` en tu tarjeta SD
+1. Elimina cualquier payload `.bin` de la carpeta `/luma/payloads/` en tu tarjeta SD ya que no serán compatibles con versiones de boot9strap compatibles con Luma3DS
+1. Copia `SafeB9SInstaller.bin` desde el `.zip` de SafeB9SInstaller a la carpeta`/luma/payloads/` en tu tarjeta SD
+1. Renombra `SafeB9SInstaller.bin` en la carpeta `/luma/payloads/` de tu tarjeta SD a `start_SafeB9SInstaller.bin`
+1. Copia `boot9strap.firm` y `boot9strap.firm.sha` desde el `.zip` de `boot9strap` a la carpeta `/boot9strap/` en tu tarjeta SD
+1. Copia `secret_sector.bin` a la carpeta `/boot9strap/` en tu tarjeta SD
+
+    ![]({{ base_path }}/images/screenshots/updating-to-b9s-file-layout.png)
+    {: .notice--info}
+
+1. Reinserta la tarjeta SD en tu consola
+
+##### Sección II - Instalar boot9strap
+
+1. Enciende tu consola manteniendo (Start) para ingresar al menú de selección de payloads de Luma3DS
+  + Algunas versiones de Luma3DS iniciarán directamente cualquier payload que comience con `start_`
+  + Si tu versión hace esto, tan solo prosigue con las instrucciones
+1. Inicia SafeB9SInstaller presionando (A) sobre el
+1. Espera a que todas las verificaciones de seguridad se completen
+1. Cuando se solicite, introduce la combinación de botones mostrada para instalar boot9strap
+1. Una vez se haya completado, presiona (A) para reiniciar tu consola.
+  + Si tu consola se apaga al iniciar, asegúrate de haber copiado el `boot.firm` desde el `.7z` de Luma3DS a la raíz de tu tarjeta SD
+
+##### Sección III - Configuración de Luma3DS
+
+Esta sección es sólo necesaria si se ha mostrado la configuración Luma3DS luego de reiniciar.
+{: .notice--info}
+
+1. En el menú de configuración de Luma3DS, usa el botón (A) y el D-Pad para activar lo siguiente:    
+  + **"Show NAND or user string in System Settings"**
+1. Presiona (Start) para guardar y reiniciar
+
+##### Sección IV - CTRNAND Luma3DS
+
+1. Reinicia manteniendo (Start) al encender la consola para iniciar el menú de selección de payloads de Luma3DS
+1. Inicia GodMode9 presionando (A)
+1. Ve a `[0:] SDCARD` -> `luma` -> `payloads`
+1. Presiona (X) sobre `start_SafeB9SInstaller.bin` para borrarlo
+1. Presiona (A) para confirmar
+1. Presiona (B) para regresar a `[0:] SDCARD`
+1. Presiona (Y) sobre `boot.firm` para copiarlo
+1. Presiona (B) para volver al menú principal
+1. Ve a `[1:] SYSNAND CTRNAND`
+1. Presiona (Y) para pegar una copia de `boot.firm`
+1. Selecciona "Copy path(s)"
+1. Presiona (A) para desbloquear la escritura de SysNAND (lvl1) y después haz la combinación de teclas mostrada
+1. Presiona (X) sobre `arm9loaderhax.bin` para eliminarlo
+  + Si no tienes este archivo, tan sólo prosigue con las instrucciones
+1. Presiona (A) para confirmar
+1. Presiona (B) para volver al menú principal
+1. Mantén (R) y presiona (B) al mismo tiempo para extraer la SD
+1. Extrae tu tarjeta SD de tu consola
+1. Presiona (Start) para reiniciar tu consola sin la tarjeta SD
+  + Encender tu consola sin la tarjeta SD al menos una vez te permitirá configurar la instalación de Luma3DS basada en CTRNAND
+1. Utiliza el botón (A) y las flechas direccionales para activar lo siguiente:    
+  + **"Show NAND or user string in System Settings"**
+1. Reinserta la tarjeta SD en tu consola
+1. Presiona (Start) para guardar y reiniciar
+
+##### Section V - Instalar Luma3DS Updater
+
+1. Inicia FBI
+1. Ve a `SD` -> `cias`
+1. Selecciona `lumaupdater-v2.0.cia`
+1. Selecciona la opción "Install CIA", luego presiona (A) para confirmar
+1. Presiona (Home) para salir de FBI
+
+___
+
+Ahora puedes eliminar cualquier archivo relacionado con arm9loaderhax de tu tarjeta SD, como `arm9loaderhax.bin` en la raíz de tu tarjeta SD y el archivo `aeskeydb.bin` en la carpeta `files9` en tu tarjeta SD.
+{: .notice--info}
+
+Ten en cuenta que `firm0firm1.bak` y `sector0x96.bak` en la carpeta `/boot9strap/` en tu tarjeta SD sólo son necesarios en el caso de que la instalacíon de boot9strap haya fallado. Una vez que hayas realizado la instalación correctamente, puedes borrar la carpeta `boot9strap`.
+{: .notice--info}
+
+Este fork de Luma3DS Updater es compatible con boot9strap ya que descarga y extrae el último `boot.firm` de Luma3DS por ti.
+{: .notice--info}
+
+{% capture notice-6 %}   
+Ahora puedes mantener pulsado (Select) mientras la consola arranca para acceder al menú de configuración de Luma3DS.    
+Ahora puedes mantener (Start) al inicio para iniciar el menú de selección de payloads de Luma3DS (ten en cuenta que este menú sólo es mostrado cuando se detecta más de un payload).
+Ahora puedes mantener (Start) + (Select) + (X) al inicio para volcar el bootrom ARM11 (`boot11.bin`), el bootrom ARM9 (`boot9.bin`) y el OTP (`OTP.bin`) único de tu consola a la carpeta `/boot9strap/` en tu tarjeta SD (ten en cuenta que esto no mostrará ningún tipo de mensaje).
+{% endcapture %}
+
+<div class="notice--info">{{ notice-6 | markdownify }}</div>
