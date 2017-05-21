@@ -1,0 +1,59 @@
+---
+title: "Installing boot9strap (Homebrew Launcher)" #
+lang: de
+permalink: /installing-boot9strap-(homebrew-launcher).html
+---
+
+Falls du bereits deinen 3DS zuvor gehackt hast und eine EmuNAND basierte CFW installiert ist: Diese Anleitung behandelt nur das SysNAND und alle Schritte sollten nur innerhalb des SysNANDs ausgeführt/angewendet werden. Beachte, dass die Begriffe EmuNAND und RedNAND sich auf leicht unterschiedliche Implementierungen [des selben Konzepts](http://3dbrew.org/wiki/NAND_Redirection) beziehen.
+{: .notice--info}
+
+Um die [Magnet-Links](https://en.wikipedia.org/wiki/Magnet_URI_scheme) auf dieser Seite zu nutzen, brauchst du einen Torrent-Programm wie [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+{: .notice--success}
+
+#### Was du brauchst
+
+* The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest)
+* Die neueste Version von [safehax] (https://github.com/TiniVi/safehax/releases/latest)
+* The neueste Version von [udsploit](https://github.com/smealum/udsploit/releases/latest)
+
+#### Anleitung
+
+##### Abschnitt I - Vorbereitung
+
+1. Entferne deine SD-Karte aus dem 3DS und lasse diesen im Homebrew Launcher, dann schließe die SD-Karte an den Computer an
+1. Create a folder named `boot9strap` on the root of your SD card
+1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
+1. Kopiere `safehax.3dsx` in den `/3ds/`-Ordner auf deiner SD-Karte
+1. Kopiere `udsploit.3dsx` in den `/3ds/`-Ordner auf deiner SD-Karte
+1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card and rename `SafeB9SInstaller.bin` to `safehaxpayload.bin`
+
+    ![]({{ base_path }}/images/screenshots/boot9strap-hb-file-layout.png)
+    {: .notice--info}
+
+1. Stecke deine SD-Karte nun wieder in deinen 3DS
+
+##### Section II - Launching SafeB9SInstaller
+
+1. Starte udsploit aus der Liste von Homebrew
+  + Es kann sein, dass du dafür runterscrollen musst
+1. Sobald es fertig ist, drücke (Start) um udsploit zu beenden
+  + Hierzu wirst du wahrscheinlich mehrere Versuche benötigen
+  + Wenn sich deine Konsole aufhängt, schalte sie durch langes halten des Power-Knopfes aus, und versuche es erneut
+1. Starte safehax aus der Liste in homebrew
+  + Es kann sein, dass du dafür runterscrollen musst
+  + Wenn du eine "PM INIT FAILED" Fehlermeldung erhälst, versuche es mit der Version [r19 von Safehax] (https://github.com/TiniVi/safehax/releases/tag/r19)
+  + Wenn sich deine Konsole aufhängt, schalte sie durch langes halten des Power-Knopfes aus, und versuche es erneut
+1. If the exploit was successful, you will have booted into SafeB9SInstaller
+
+##### Section III - Installing boot9strap
+
+1. Wait for all safety checks to complete
+1. When prompted, input the key combo given to install boot9strap
+1. Once it has completed, press (A) to reboot your device
+1. Your device will boot into boot9strap, then shutdown automatically because it does not yet have a payload to launch
+
+___
+
+Continue to [Finalizing Setup](finalizing-setup)
+{: .notice--primary}
