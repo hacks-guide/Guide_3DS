@@ -1,0 +1,54 @@
+---
+title: "Installing boot9strap (MSET)" #
+lang: ro
+permalink: /installing-boot9strap-(mset).html
+---
+
+If you have already hacked your device before and have a EmuNAND based CFW setup, this guide deals exclusively with SysNAND and you should follow all instructions from within or applying to SysNAND. Note that the terms EmuNAND and RedNAND refer to slightly different implementations of [the same concept](http://3dbrew.org/wiki/NAND_Redirection).
+{: .notice--info}
+
+To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+{: .notice--success}
+
+#### Ce iți va trebui
+
+* The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest)
+* The Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
+* Any DS flashcart that works on your device version
+
+#### Instrucţiuni
+
+##### Section I - Prep Work
+
+1. Power off your device
+1. Introduceți cardul SD în computer
+1. Copiați _conținutul_ folderului 'starter' din 'starter.zip' pe rădăcină cardului SD
+1. Create a folder named `boot9strap` on the root of your SD card
+1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
+1. Copy `SafeB9SInstaller.dat` from the SafeB9SInstaller `.zip` to the root of your SD card
+1. Reinsert your SD card into your device
+1. Copy `SafeB9SInstaller.nds` from the SafeB9SInstaller `.zip` to your DS flashcart
+1. Power on your device
+
+##### Section II - Launching SafeB9SInstaller
+
+1. Start your DS flashcart from your device
+1. Boot `SafeB9SInstaller.nds` using your flashcart
+1. Select the correct option for your system version
+  + 4.X.X -> "4.x SafeB9SInstaller"
+  + 6.X.X -> "6.x SafeB9SInstaller"
+1. Reboot the system, then go to System Settings, then "Other Settings", then "Profile", then "Nintendo DS Profile"
+1. If the exploit was successful, you will have booted into SafeB9SInstaller
+
+##### Section III - Installing boot9strap
+
+1. Wait for all safety checks to complete
+1. When prompted, input the key combo given to install boot9strap
+1. Once it has completed, press (A) to reboot your device
+1. Your device will boot into boot9strap, then shutdown automatically because it does not yet have a payload to launch
+
+___
+
+Continue to [Finalizing Setup](finalizing-setup)
+{: .notice--primary}
