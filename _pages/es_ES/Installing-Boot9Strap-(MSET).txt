@@ -1,0 +1,54 @@
+---
+title: "Instalar boot9strap (MSET)" #
+lang: es
+permalink: /es_ES/installing-boot9strap-(mset).html
+---
+
+Si ya habías hackeado tu consola y tienes un CFW basado en EmuNAND, esta guía es sólo para la SysNAND, por lo que todas las instrucciones deben ser aplicadas en la SysNAND. Nota: los términos EmuNAND y RedNAND son diferentes implementaciones del [mismo concepto](http://3dbrew.org/wiki/NAND_Redirection).
+{: .notice--info}
+
+Para utilizar los enlaces [magnet](https://es.wikipedia.org/wiki/Magnet) de esta página, vas a necesitar un cliente torrent como [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+{: .notice--success}
+
+#### Qué necesitas
+
+* La última versión de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* La última versión de [boot9strap](https://github.com/SciresM/boot9strap/releases/latest)
+* El Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
+* Cualquier flashcart de DS que funcione en la versión de tu consola
+
+#### Instrucciones
+
+##### Sección I - Preparativos
+
+1. Apaga tu consola
+1. Inserta tu tarjeta SD en tu computadora
+1. Copia _el contenido de_ la carpeta `starter` del `starter.zip` en el directorio raíz de tu tarjeta SD
+1. Crea una carpeta llamada `boot9strap` en la raíz de tu tarjeta SD
+1. Copia los archivos `boot9strap.firm` y `boot9strap.firm.sha` desde el `.zip` de boot9strap a la carpeta `/boot9strap/` en tu tarjeta SD
+1. Copia el archivo `SafeB9SInstaller.dat` desde el `.zip` de SafeB9SInstaller a la raíz de tu tarjeta SD
+1. Reinserta la tarjeta SD en tu consola
+1. Copia el archivo `SafeB9SInstaller.nds` desde el `.zip` de SafeB9SInstaller a la tarjeta SD de tu flashcart de DS
+1. Enciende tu consola
+
+##### Sección II - Ejecutar SafeB9SInstaller
+
+1. Inicia tu flashcart de DS desde tu consola
+1. Ejecuta `SafeB9SInstaller.nds` usando tu flashcart
+1. Selecciona la opción correcta para la versión de tu sistema
+  + 4.X.X -> "4.x SafeB9SInstaller"
+  + 6.X.X -> "6.x SafeB9SInstaller"
+1. Reinicia el sistema, después ve a la Configuración de la consola, luego "Otras opciones", después "Perfil", y selecciona "Perfil de Nintendo DS"
+1. Si el exploit ha funcionado, habrás iniciado SafeB9SInstaller
+
+##### Sección III - Instalar boot9strap
+
+1. Espera a que todas las verificaciones de seguridad se completen
+1. Cuando se te pida, introduce la combinación de botones mostrada para instalar boot9strap
+1. Una vez se haya completado, presiona (A) para reiniciar tu consola
+1. Tu consola iniciará boot9strap, luego se apagará automáticamente porque aún no tiene un payload para iniciar
+
+___
+
+Continúa en [Finalizar instalación](finalizing-setup)
+{: .notice--primary}
