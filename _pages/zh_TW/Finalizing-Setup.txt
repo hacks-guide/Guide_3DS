@@ -1,7 +1,7 @@
 ---
-title: "Finalizing Setup" #
+title: "完成安裝" #
 lang: zh-Hant
-permalink: /finalizing-setup.html
+permalink: /zh_TW/finalizing-setup.html
 ---
 
 本頁面會有些許的[磁力](https://en.wikipedia.org/wiki/Magnet_URI_scheme)連結，你將需要個像 [Deluge](http://dev.deluge-torrent.org/wiki/Download) 的 BT 種子下載器來下載磁力連結的檔案。
@@ -11,7 +11,7 @@ permalink: /finalizing-setup.html
 
 {% capture notice-2 %}
 
-The file `boot.firm` is what is launched by boot9strap itself after it finishes loading off of NAND, and can be any valid arm9 payload in the FIRM format. This file can be replaced at any time, although Luma3DS allows for the launch of other arm9 payloads in the FIRM format using the Luma3DS chainloader.
+`boot.firm` 這個檔案是 boot9strap 由 NAND 載入自身後所接著加載的，且它可以是任何 FIRM 格式的有效 arm9 payload。 你隨時可以替換這檔案，不過 Luma3DS 本身就有內建加載其他 FIRM 格式的 arm9 payload 檔案的功能。
 <br><br>
 在本節中，我們將使用 [AuroraWright](https://github.com/AuroraWright/) 的 Luma3DS，直接啟動修改後的 SysNAND 系統，讓我們擺脫 EmuNAND。這除了大量的簡化使用改機後的 3DS 所需的步驟，更還能節省 SD 卡的使用空間。
 <br><br>
@@ -34,7 +34,7 @@ The file `boot.firm` is what is launched by boot9strap itself after it finishes 
 * 最新版的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * 最新版的 [DSP1](https://github.com/zoogie/DSP1/releases/latest)
 * 最新版的 [FBI 管理器](https://github.com/Steveice10/FBI/releases/latest)
-* The latest fork of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
+* 最新版的 [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
 * **僅限舊型 3DS 及 2DS：**依你主機所在區域所選之舊型 3DS 的 11.2.0-35 [otherapp payload](https://smealum.github.io/3ds/#otherapp)
 
 #### 操作說明
@@ -45,7 +45,7 @@ The file `boot.firm` is what is launched by boot9strap itself after it finishes 
 1. 在 SD 卡的根目錄底下建立一個新資料夾 `cias`
 1. 在 SD 卡的根目錄底下建立一個新資料夾 `hblauncherloader`
 1. 解壓 hblauncher_loader `.zip` 中的 `hblauncher_loader.cia` 到 SD 卡中的 `/cias/` 資料夾底下
-1. Copy `lumaupdater-v2.0.cia` from the Luma3DS Updater `.zip` to the `/cias/` folder on your SD card
+1. 解壓 Luma3DS Updater `.zip` 中的 `lumaupdater-v2.0.cia` 到 SD 卡中的 `/cias/` 資料夾底下
 1. 解壓 FBI `.zip` 中的 `FBI.cia` 到 SD 卡中的 `/cias/` 資料夾底下
 1. 在 SD 卡上，將 `DSP1.cia` 複製到 `/cias/` 資料夾底下
 1. 在 SD 卡上，將 `Themely.cia` 複製到 `/cias/` 資料夾底下
@@ -53,47 +53,47 @@ The file `boot.firm` is what is launched by boot9strap itself after it finishes 
     ![]({{ base_path }}/images/screenshots/cias-file-layout.png)
     {: .notice--info}
 
-1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card
+1. 解壓 Luma3DS `.7z` 內的 `boot.firm` 到 SD 卡的根目錄底下
 1. 在 SD 卡的根目錄底下建立一個新的資料夾 `luma`
 1. 在 SD 上的 `luma` 資料夾中，建立一個新的 `payloads` 資料夾
-1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
+1. 從 GodMode9 `.zip` 中解壓 `GodMode9.firm` 到 SD 上的 `/luma/payloads/` 中
 1. **僅限舊型 3DS 及 2DS：**複製對應你主機區域的舊型 3DS 11.2.0-35 otherapp payload 檔案至你 SD 卡中的 `/hblauncherloader/` 資料夾
 1. **僅限舊型 3DS 及 2DS：**根據你主機的區域重新命名你的舊型 3DS 11.2.0-35 otherapp payload 檔案
-  + **EUR:** `OLD-11-4-0-37-EUR.bin`
-  + **JPN:** `OLD-11-4-0-37-JPN.bin`
-  + **KOR:** `OLD-11-4-0-37-KOR.bin`
-  + **USA:** `OLD-11-4-0-37-USA.bin`
+  + **歐版：** `OLD-11-4-0-37-EUR.bin`
+  + **日版：** `OLD-11-4-0-37-JPN.bin`
+  + **韓版：** `OLD-11-4-0-37-KOR.bin`
+  + **美版：** `OLD-11-4-0-37-USA.bin`
 
     ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
     {: .notice--info}
 
-1. If your device is on a version between 3.0.0 and 4.5.0 (inclusive), your device will not boot until you manually download the required firmware:
+1. 如果你的系統版本是在 3.0.0 到 4.5.0（含）之間，你必須同時手動下載下列韌體，否則無法開機：
   + 下載[此檔案](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056)並將它重新命名為`firmware.bin`
   + 下載[此檔案](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
   + 複製 `firmware.bin` 及 `cetk` 檔案到 SD 卡上的 `/luma/` 資料夾
-  + Delete both of these files after updating your device later in these instructions
+  + 在教學之後提到更新主機時，請刪除這兩個文件
 1. 將 SD 卡插回主機中
 
-##### Section II - Configuring Luma3DS
+##### 第二節 — 設定 Luma3DS
 
-1. Boot your device to enter the Luma3DS configuration menu
-  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_b9s)
+1. 開機後進入 Luma3DS 設定選單
+  + 如果黑屏，[請參見此疑難排解](troubleshooting#ts_sys_b9s)
 1. 透過方向鍵及「A」以開啟下列選項：    
   + **「Show NAND or user string in System Settings」**
 1. 按下「Start」鍵以存檔並重新啟動系統
   + 如果黑屏，直接到下一節即可   
 
-##### Section III - Updating the System
+##### 第三節 — 更新系統
 
 如果你在本教學之前就已經改機完且安裝了 EmuNAND，並且想把你原來 EmuNAND 中的內容轉移到新的 SysNAND 自製韌體中，請在開始本部分操作之前先按照[移植EmuNAND](move-emunand)一節進行，然後跳過本節的前九步。
 {: .notice--info}
 
 1. 到主機主選單中更新你的主機，到「系統設置（System Settings）」、「其他設置（Other Settings）」底下選擇「系統更新（System Update）」
-  + Updates while using B9S + Luma (what you have) are safe
+  + 在安裝 B9S + Luma 後系統更新是沒問題的
   + 如果過程中出現錯誤，試試到 DNS 設定底下將設定改成「自動 （auto）」
-  + If this still gives you an error and your NAND is below 9.2.0, [follow 9.2.0 CTRTransfer](9.2.0-ctrtransfer), then try updating again
+  + 如果錯誤持續，且你 NAND 的系統版本為 9.2.0 以下，請進行[版本 9.2.0 的 CTRTransfer](9.2.0-ctrtransfer)，並再試一次
 
-##### Section IV - Injecting FBI
+##### 第四節 — 植入 FBI 管理器
 
 1. 重啟時按住「Start」鍵啟動 Luma3DS 選單
 1. 按「A」啟動 GodMode9
@@ -105,7 +105,7 @@ The file `boot.firm` is what is launched by boot9strap itself after it finishes 
 1. 按下「Start」鍵重啟你的主機
 1. 如果你進入的依然是官方的「健康與警示」程式，並且之前曾經用 Gateway 進行過系統降級，[請參見此疑難排解](troubleshooting#gw_fbi)
 
-##### Section V - Installing CIAs
+##### 第五節 — 安裝 CIAs
 
 1. 啟動「健康與安全」程式（改為 FBI 管理器後）
 1. 移動至 `SD` -> `cias`
@@ -113,12 +113,12 @@ The file `boot.firm` is what is launched by boot9strap itself after it finishes 
 1. 選擇「Install all CIAs」，並按下「A」確認
 1. 按下「Home」鍵退出 FBI 管理器
 
-##### Section VI - DSP Dump
+##### 第六節 — DSP 轉儲
 
 1. 啟動 DSP1
 1. 處理完畢後，按下「Start」鍵退出
 
-##### Section VII - Restore Health and Safety
+##### 第七節 — 還原「健康與警示」程式
 
 1. 重啟時按住「Start」鍵啟動 Luma3DS 選單
 1. 按「A」啟動 GodMode9
@@ -127,15 +127,15 @@ The file `boot.firm` is what is launched by boot9strap itself after it finishes 
 1. 選擇「Restore H&S」
 1. 按「A」解鎖 SysNAND（lvl1）的寫入保護，然後按下提示的按鍵組合
 
-##### Section VIII - CTRNAND Luma3DS
+##### 第八節 — 安裝 Luma3DS 至 CTRNAND
 
 1. 重啟時按住「Start」鍵啟動 Luma3DS 選單
 1. 按「A」啟動 GodMode9
 1. 移動至 `[0:] SDCARD`
-1. Press (Y) on `boot.firm` to copy it
+1. 選取 `boot.firm'，並按「Y」複製
 1. 按「B」回到主選單
 1. 移動至 `[1:] SYSNAND CTRNAND`
-1. Press (Y) to paste a copy of `boot.firm`
+1. 按「Y」貼上 `boot.firm`
 1. 選擇 「Copy path(s)」
 1. 按「A」解鎖 SysNAND（lvl1）的寫入保護，然後按下提示的按鍵組合
 1. 按「B」回到主選單
@@ -146,9 +146,9 @@ The file `boot.firm` is what is launched by boot9strap itself after it finishes 
 1. 透過方向鍵及「A」以開啟下列選項：    
   + **「Show NAND or user string in System Settings」**
 1. 將 SD 卡插回主機中
-1. Press (Start) to save and reboot
+1. 按「Start」鍵以存檔並重新啟動系統
 
-##### Section IX - NAND Backup
+##### Section IX - 備份 NAND
 
 1. 開機時，按住「Start」鍵進入 Luma3DS 選單
 1. 按「A」啟動 GodMode9
@@ -178,8 +178,8 @@ ___
 {% capture notice-6 %}   
 現在你的主機將會自動於開機時啟動 SysNAND 中的 Luma3DS CFW（預設情況下）。    
 你現在可以在開機時按住「Select」鍵啟動 Luma3DS 的設定選單。    
-You can now hold (Start) on boot to launch the Luma3DS chainloader menu (note that the Luma3DS chainloader menu is only displayed if there is more than one payload detected).
-You can now hold (Start) + (Select) + (X) on boot to dump the ARM11 bootrom (`boot11.bin`), the ARM9 bootrom (`boot9.bin`), and your console unique OTP (`OTP.bin`) to the `/boot9strap/` folder on your SD card (note that this will not have any kind of prompt or message).
+你現在可以在開機時按住「Start」鍵啟動 Luma3DS 連環加載選單（請注意，它只有在偵測到多個 payload 檔案時，才會顯示 Luma3DS 連環加載選單）。
+你現在可以在開機時按住「Start」+「Select」+「X」轉儲 ARM11 bootrom（`boot11.bin`）、ARM9 bootrom（`boot9.bin`）、以及你主機特有的 OTP 金鑰（`OTP.bin`）到 SD 卡上的 `/ boot9strap /` 資料夾（請注意，本過程中將不會出現任何的提示或訊息）。
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
