@@ -1,0 +1,69 @@
+---
+title: "安裝 boot9strap（透過 DSiWare）" #
+lang: zh-Hant
+permalink: /zh_TW/installing-boot9strap-(dsiware).html
+---
+
+目前有兩種不同方法可以在系統版本 11.4.0 上透過 DSiWare 安裝 boot9strap。
+{: .notice--info}
+
+其中一種方法只適用於已經不在 eShop 上銷售的四款特定遊戲，而另外一種方法所用的許多遊戲仍然在 eShop 上。
+{: .notice--info}
+
+這兩種方法皆須用到兩台主機。 其中一台 3DS（或 2DS）必須已安裝某種自製韌體（如 boot9strap 或 arm9loaderhax），我們將其稱為*3DS 始源機*；另一台 3DS（或2DS）必須仍在原廠系統上且搭載版本 11.4.0，我們將其稱為 *3DS 目標機*。
+{: .notice--info}
+
+兩台的系統區域必須一致。
+{: .notice--warning}
+
+這兩種方法都將假定運行自製韌體的 3DS 已經搭載 boot9strap 或 arm9loaderhax，並已依照本手冊完成改機。 雖然說這兩種方式在其他自製韌體上是可行的，但我們將不在本教學中涵蓋那些部分。
+{: .notice--info}
+
+這兩種方式都是透過「FIRM partitions known-plaintext」漏洞（詳情請見[此](https://www.3dbrew.org/wiki/3DS_System_Flaws)）所達成的；本漏洞可讓 DSiWare 程式任意的在已加密的 NAND 中讀寫。
+{: .notice--info}
+
+{% capture notice-4 %}
+這兩種方法皆需要你透過[系統轉移（System Transfer）](http://en-americas-support.nintendo.com/app/answers/detail/a_id/13996/)將 3DS 始源機的系統移至 3DS 目標機上。 系統轉移**僅**能在下列的情況下運作：    
+  + New 3DS -> New 3DS    
+  + 舊型 3DS 或 2DS -> 舊型 3DS 或 2DS    
+  + 舊型 3DS 或 2DS -> New 3DS    
+{% endcapture %}
+
+<div class="notice--warning">{{ notice-4 | markdownify }}</div>
+
+除非你系統轉移回來或送回任天堂維修，3DS 始源機的 NNID 會移植到 3DS 目標機上面！ （詳情請參見教程）
+{: .notice--danger}
+
+系統轉移一個禮拜只能於一個 NNID 上執行一次。
+{: .notice--danger}
+
+___
+
+{% capture notice-1 %}
+
+[安裝 boot9strap（透過 DSiWare 植入存檔）](installing-boot9strap-(dsiware-save-injection))
+<br><br>
+本方法需要 3DS 始源機已購買下列任一正版遊戲：
+    
+    + "Fieldrunners"
+    + "Legends of Exidia"
+    + "Guitar Rock Tour"
+    + "The Legend of Zelda: Four Swords"
+    
+盜版的遊戲將*無法使用*，而且這些遊戲已從 eShop 中被移除。
+
+{% endcapture %}
+
+<div class="notice--primary">{{ notice-1 | markdownify }}</div>
+
+{% capture notice-1 %}
+
+[安裝 boot9strap（透過 DSiWare 植入遊戲）](installing-boot9strap-(dsiware-game-injection))
+<br><br>
+本方法需要 3DS 始源機購買或已購買[安裝 boot9strap（透過 DSiWare 植入遊戲－遊戲清單）](installing-boot9strap-(dsiware-game-injection-list))表中所列的任一正版遊戲。
+<br><br>
+盜版的遊戲將*無法使用*。
+
+{% endcapture %}
+
+<div class="notice--primary">{{ notice-1 | markdownify }}</div>
