@@ -1,0 +1,80 @@
+---
+layout: splash
+title: "Guia 3DS" #
+header:
+  overlay_color: "#5e616c" #
+  overlay_image: images/home-page-feature.jpg
+  overlay_filter: 0.5
+  cta_label: "Começar" #
+  cta_url: "/pt_BR/get-started" #
+  caption:
+excerpt: "A complete guide to 3DS custom firmware, <br /> from stock to boot9strap.<br />" #
+lang: pt
+permalink: /pt_BR/index.html
+---
+
+{% capture notice-home %}
+Este guia é para aparelhos de varejo (comprados por consumidores; não pelo Nintendo Developer Program) _apenas_!    
+Se você possui um aparelho de desenvolvedor ("PANDA" ou "SNAKE"), cheque o [Guia de desenvolvedor](https://dev.3ds.guide).
+{% endcapture %}
+
+<div class="notice--danger">{{ notice-home | markdownify }}</div>
+
+Este guia precisa da *sua* ajuda para [traduzi-lo](https://translate.3ds.guide/) para outros idiomas!
+{: .notice--success}
+
+Este guia precisa da *sua* ajuda para semear [estes](https://3ds.guide/rss.xml) torrents!
+{: .notice--success}
+
+Leia todas as páginas introdutórias antes de prosseguir.
+{: .notice--warning}
+
+## O que é homebrew?
+
+O termo [**Homebrew**](https://pt.wikipedia.org/wiki/Homebrew) geralmente se refere ao software que não é autorizado pela Nintendo. Ele permite você rodar jogos homebrew, ferramentas como backup e edição de saves, e emuladores de vários sistemas antigos.
+
+In most cases, running homebrew on your device is 100% free using [just the Nintendo 3DS Sound app](homebrew-launcher-(soundhax)). Existem também vários outros exploits em jogos comerciais e no navegador para rodar o homebrew.
+
+## O que é Custom Firmware?
+
+**Custom Firmware** ("CFW") permite você usar hacks mais avançados que o homebrew do modo userland não consegue tão facilmente. Por exemplo, os patches de assinaturas permitem você instalar títulos não assinados que aparecem logo no seu Menu HOME.
+
+CFW can be easily set up on any console that is on 11.4.0 or lower.
+
+## O que este guia instala?
+
+Este guia possui o objetivo final de pegar um 3DS que nunca foi modificado
+e instalar um Custom Firmware por meio do boot9strap. Em algumas versões, ele utiliza homebrew como um pontapé inicial, porém o objetivo permanece o mesmo, que é instalar um Custom Firmware.
+
+boot9strap is the newest and best method of launching Custom Firmware that gives us nearly full control of the system only milliseconds into boot, which is similar to the effect of BootMii for the Wii. It gives us even earlier control than arm9loaderhax did, and, unlike standard sighax, boot9strap uses an NDMA overwrite exploit in order to gain Boot9 code execution. This means that any console running boot9strap is capable of dumping the console unique OTP (`OTP.bin`), the ARM11 bootrom (`boot11.bin`), and the ARM9 bootrom (`boot9.bin`).
+
+The benefits of boot9strap over other Custom Firmware launch methods are numerous, and as such it is recommended to use this guide over any other that relies on outdated software (such as menuhax + rxTools, arm9loaderhax, or even normal sighax).
+
+For information on how boot9strap works, please see [this presentation](https://sciresm.github.io/33-and-a-half-c3/) by [SciresM](https://github.com/SciresM/).
+
+For a list of each of the calculated sighax signatures (the platform boot9strap is built on), see [this gist](https://gist.github.com/SciresM/cdd2266efb80175d37eabbe86f9d8c52).
+
+## O que eu posso fazer com Custom Firmware?
+
++ Jogar todos os cartuchos e jogos da eShop, independente da sua região de origem
++ Customizar seu Menu HOME com [temas](https://3dsthem.es/) criados por usuários, [badges](https://badges.3dsthem.es/), e [splash screens](https://splash.3dsthem.es/)
++ Utilizar "ROM hacks" de jogos que você possui
++ Tirar capturas de telas de aplicações e jogos
++ [Fazer backup, editar e restaurar](https://gbatemp.net/threads/413143/) saves para diversos jogos
++ Jogar jogos de sistemas antigos com vários emuladores, utilizando RetroArch ou outros emuladores separados. (Funciona melhor com um New Nintendo 3DS)
++ Instalar títulos homebrew no seu sistema, e fazê-los aparecer no Menu HOME
++ Copiar os seus cartuchos para um formato que você pode instalar e jogar sem precisar do cartucho
++ New 3DS apenas: capture as telas enquanto joga e envie para o PC sem precisar de cabos, com NTR CFW
++ Rodar vários flash carts de Nintendo DS antigos que foram bloqueados a muito tempo atrás ou que nunca funcionaram no Nintendo 3DS
++ Atualizar com segurança para a última versão do sistema sem medo de perder acesso ao homebrew
+
+## O que eu preciso saber antes de começar?
+
++ **Antes de começar a seguir o guia, você precisa saber os riscos de usar hack no 3DS: TODA vez que você modifica seu sistema, existe sempre o potencial de ocorrer um brick IRRECUPERÁVEL. Eles são raros, mas ainda existe a possibilidade, então garanta que você siga TODOS os passos EXATAMENTE como escritos.**
++ If you have already hacked your 3DS before to get an EmuNAND setup, and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, you should follow all instructions and restore your existing EmuNAND when prompted once you reach [Finalizing Setup](finalizing-setup).
++ This guide will work on New 3DS, Old 3DS, and 2DS in all regions on firmware 11.4.0 or below.
++ Se tudo ocorrer conforme o esperado, você não perderá dados pessoais e continuará com tudo o que tinha antes de começar (jogos, NNID, saves, etc serão preservados).
++ **Mantenha o seu dispositivo plugado e carregando durante todo o processo para evitar perda de dados ou danos causados por um desligamento inesperado!**
++ O seu cartão SD deve ser [MBR, e não GPT](http://adrenaline.uol.com.br/forum/threads/tutorial-convertendo-mbr-gpt-e-gpt-mbr.461966/) (o cartão SD que vem com o seu dispositivo é, por padrão, MBR).
++ Se você precisa formatar um cartão SD novo, você pode utilizar o [`guiformat`](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) e colocar Allocation Unit Size para 32K.
++ O 2DS é essencialmente idêntico ao Old 3DS em termos de software, e todas as etapas que dizem "Old 3DS" também se aplicam ao 2DS.
