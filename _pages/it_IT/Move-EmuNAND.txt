@@ -1,0 +1,161 @@
+---
+title: "Spostare l'EmuNAND" #
+lang: it
+permalink: /it_IT/move-emunand.html
+---
+
+In questa sezione aggiuntiva verrà spiegato come spostare il contenuto di una EmuNAND preesistente nel nuovo CFW SysNAND, per poi rimuovere la vecchia partizione EmuNAND. Tieni presente che i termini EmuNAND e RedNAND si riferiscono a due implementazioni leggermente diverse [dello stesso concetto](http://3dbrew.org/wiki/NAND_Redirection).
+{: .notice--info}
+
+Tieni presente che, su alcune versioni di Luma3DS, il menu chainloader di Luma3DS verrà visualizzato solo se viene rilevato più di un payload. In caso ne venga individuato soltanto uno, tenere premuto (Start) all'avvio lancerà direttamente GodMode9.
+{: .notice--info}
+
+**DEVI aver già installato Luma3DS e uno tra boot9strap e arm9loaderhax per poter proseguire.**
+{: .notice--danger}
+
+#### Cosa serve
+
+*Una EmuNAND esistente
+* L'ultima release di [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* L'ultima versione di [FBI](https://github.com/Steveice10/FBI/releases/latest)
+
+#### Istruzioni
+
+##### Sezione I - Preparazione
+
+1. Spegni il tuo 3DS
+1. Inserisci la scheda SD nel tuo computer
+1. Copia il file `GodMode9.firm` (o `GodMode9.bin` se usi arm9loaderhax) dall'archivhio `zip` di GodMode9 alla cartella `/luma/payloads/` sulla tua scheda SD
+1. Reinserisci la scheda SD nel Nintendo 3DS
+
+##### Sezione II - Backup dei salvataggi dei DSiWare su SysNAND
+
+Se non hai alcun DSiWare o se non hai salvataggi che desideri salvare, salta questa sezione.
+{: .notice--info}
+
+1. Avvia la console tenendo premuto (Start) per avviare il menu chainloader di Luma3DS
+1. Avvia GodMode9 premendo (A)
+1. Entra nella cartella `[2:] SYSNAND TWLN` -> `title`
+1. Tenendo premuto (R), premi (A) sulla cartella `00030004` per selezionarla, quindi seleziona "Copy to 0:/gm9out"
+  + Questo processo potrebbe durare molto se hai molti giochi DSiWare
+1. Premi (B) due volte per ritornare al menu principale
+
+##### Sezione II - Backup dei salvataggi dei giochi GBA della Virtual Console
+
+Se non hai alcun gioco GBA della Virtual Console o se non hai salvataggi che desideri salvare, salta questa sezione.
+{: .notice--info}
+
+Questo processo non è necessario per giochi delle altre Virtual Console (quali GBC, NES, ecc)
+{: .notice--info}
+
+1. Tenendo premuto (R), premi (Start) per spegnere la console
+1. Inserisci la scheda SD nel tuo computer
+1. Se assente, crea una cartella chiamata `files9` nella directory principale della tua scheda SD
+1. Crea una cartella all'interno della cartella `/files9/` per ogni gioco GBA della Virtual Console del quale vuoi mantenere i salvataggi 
+1. Reinserisci la scheda SD nel Nintendo 3DS
+1. Avvia la console nella SysNAND
+1. Esegui i seguenti passaggi per ogni gioco GBA della Virtual Console del quale vuoi mantenere i salvataggi:
+  + Avvia il gioco GBA sulla SysNAND
+  + Esci dal gioco GBA
+  + Avvia la console tenendo premuto (Start) per avviare il menu chainloader di Luma3DS
+  + Avvia GodMode9 premendo (A)
+  + Entra in `[S:] SYSNAND VIRTUAL`
+  + Premi (Y) su `gbavc.sav` per copiarlo
+  + Premi (B) per ritornare al menu principale
+  + Entra nella cartella `[0:] SDCARD` -> `files9`
+  + Entra nella cartella che hai creato per questo gioco GBA della Virtual Console
+  + Premi (Y) per incollare `gbavc.sav`
+  + Premi (Start) per riavviare la console
+1. Riavvia la console tenendo premuto (Start) per avviare il menu chainloader di Luma3DS
+1. Avvia GodMode9 premendo (A)
+
+##### Sezione IV - Copiare la EmuNAND nella SysNAND
+
+1. Entra in `[E:] EMUNAND VIRTUAL`
+1. Premi (A) su `nand.bin` per selezionarlo, quindi seleziona "NAND image options...", ed infine seleziona "Restore SysNAND (safe)"
+1. Premi il pulsante (A) per sbloccare la sovrascrittura su SysNAND, quindi inserisci la combinazione di tasti richiesta a schermo
+  + Questo processo non eliminerà arm9loaderhax
+1. Inserisci la combinazione di tasti richiesta a schermo per sbloccare i permessi di scrittura di primo livello su SysNAND
+  + Questo processo durerà un po'
+1. Una volta completato, premi (A) per proseguire
+1. Premi (B) per ritornare al menu principale
+
+##### Sezione V - Ripristino dei salvataggi DSiWare
+
+Se non hai mantenuto alcun salvataggio DSiWare, salta questa sezione.
+{: .notice--info}
+
+1. Entra nella cartella `[0:] SDCARD` -> `gm9out`
+1. Premi (Y) sulla cartella `00030004` per copiarla
+1. Premi (B) due volte per ritornare al menu principale
+1. Entra nella cartella `[2:] SYSNAND TWLN` -> `title`
+1. Premi (Y) per incollare la cartella `00030004`
+1. Seleziona "Copy path(s)"
+1. Premi il pulsante (A) per sbloccare i permessi di scrittura di primo livello su SysNAND, quindi inserisci la combinazione di tasti richiesta a schermo
+1. Seleziona "Overwrite file(s)"
+  + Questo processo potrebbe durare molto se hai molti giochi DSiWare
+1. Premi (B) due volte per ritornare al menu principale
+
+##### Sezione VI - Ripristino dei salvataggi GBA della Virtual Console
+
+Se non hai mantenuto alcun salvataggio GBA della Virtual Console, salta questa sezione.
+{: .notice--info}
+
+1. Tenendo premuto (R), premi (Start) per spegnere la console
+1. Avvia la console nella SysNAND
+1. Esegui i seguenti passaggi per ogni gioco GBA della Virtual Console del quale vuoi mantenere i salvataggi:
+  + Avvia il gioco GBA sulla SysNAND
+  + Esci dal gioco GBA
+  + Avvia la console tenendo premuto (Start) per avviare il menu chainloader di Luma3DS
+  + Avvia GodMode9 premendo (A)
+  + Entra nella cartella `[0:] SDCARD` -> `files9`
+  + Entra nella cartella che hai creato per questo gioco GBA della Virtual Console
+  + Premi (Y) su `gbavc.sav` per copiarlo
+  + Premi (B) per ritornare al menu principale
+  + Entra in `[S:] SYSNAND VIRTUAL`
+  + Premi (Y) per incollare `gbavc.sav`
+  + Premi il pulsante (A) per confermare
+  + Premi (Start) per riavviare la console
+1. Riavvia la console tenendo premuto (Start) per avviare il menu chainloader di Luma3DS
+1. Avvia GodMode9 premendo (A)
+
+##### Sezione VII - Backup della SysNAND
+
+1. Premi il pulsante HOME per far apparire il menu delle azioni
+1. Seleziona "More..."
+1. Seleziona "Backup NAND"
+1. Premi il pulsante (A) per continuare
+1. Tenendo premuto (R), premi (B) per rimuovere la scheda SD
+1. Inserisci la scheda SD nel tuo computer
+1. Copia il file `nand.bin` dalla cartella `/gm9out/` della tua scheda SD in una posizione sicura sul tuo computer
+  + Se hai usato SafeCTRTransfer in precedenza e hai un backup della NAND rinominato `<codiceseriale>_nand.bin`, sostituiscilo con questo (rinomina `nand.bin` in `<codiceseriale>_nand.bin`)
+  + Crea dei backup in più posti (come ad esempio un servizio di storage dei file online)
+  + Questi backup ti salveranno da un brick nel caso dovesse accadere qualcosa in futuro
+1. Cancella il file `nand.bin` dalla cartella `/gm9out/` della tua scheda SD dopo averne salvato un backup
+1. **Fai un backup di ogni file sulla tua scheda SD e conservalo in una cartella sul tuo computer in quanto la scheda SD verrà formattata nei prossimi passaggi**
+
+##### Sezione VIII - Formattazione della scheda SD
+
+1. Reinserisci la scheda SD nel Nintendo 3DS
+1. Premi il pulsante HOME per far apparire il menu delle azioni
+1. Seleziona "More..."
+1. Seleziona "SD format menu"
+1. Premi il pulsante (A) per confermare
+1. Seleziona "No EmuNAND"
+1. Seleziona "Auto"
+1. Premi (A) per accettare il nome `GM9SD`
+  + Puoi comunque scegliere un altro nome per la tua scheda SD
+1. Quando richiesto, inserisci la combinazione di tasti richiesta a schermo
+1. Tenendo premuto (R), premi (B) per rimuovere la scheda SD
+1. Inserisci la scheda SD nel tuo computer
+1. Ripristina tutti i file sulla tua scheda SD
+  + Assicurati di sostituire il file `boot.firm` sulla tua scheda SD con quello preso dal tuo backup
+1. Reinserisci la scheda SD nel Nintendo 3DS
+1. Premi (A) per eseguire il remount della scheda SD
+1. Premi (Start) per salvare e riavviare il 3DS
+1. Se ottieni una schermata nera, [segui questa guida per risolvere il problema](troubleshooting#ts_sys_a9lh)
+
+___
+
+Ritorna al [Completamento dell'installazione](finalizing-setup).
+{: .notice--primary}
