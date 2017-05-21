@@ -1,30 +1,30 @@
 ---
-title: "Installing boot9strap (Hardmod)" #
+title: "安裝 boot9strap（透過硬改）" #
 lang: zh-Hant
-permalink: /installing-boot9strap-(hardmod).html
+permalink: /zh_TW/installing-boot9strap-(hardmod).html
 ---
 
-An excellent guide to getting a hardmod can be found [here](https://gbatemp.net/threads/414498/). If you are on a New 3DS, read [this](https://github.com/Plailect/Guide/issues/681) before hardmodding.
+你可以在[這裡](https://gbatemp.net/threads/414498/)找到硬改的相關資訊。 如果你的主機是 New 3DS 的話，請在硬改前讀完[本篇](https://github.com/Plailect/Guide/issues/681)。
 {: .notice--info}
 
-This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+此方法是透過「FIRM partitions known-plaintext」漏洞所達成的。詳情請見[此](https://www.3dbrew.org/wiki/3DS_System_Flaws)。
 {: .notice--info}
 
 本頁面會有些許的[磁力](https://en.wikipedia.org/wiki/Magnet_URI_scheme)連結，你將需要個像 [Deluge](http://dev.deluge-torrent.org/wiki/Download) 的 BT 種子下載器來下載磁力連結的檔案。
 {: .notice--success}
 
-This will work on New 3DS, Old 3DS, and 2DS on *all* versions that you have a corresponding `.firm` for.
+只要有對應的 `.firm` 檔案，此方法能在*所有的* New 3DS、舊型 3DS、及 2DS 上使用。
 {: .notice--success}
 
 #### 必備項目
 
-* Your NAND image extracted using your [hardmod](https://gbatemp.net/threads/414498/)
-* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest)
-* The latest version of [hardmod-b9s-installer](https://github.com/ihaveamac/hardmod-b9s-installer/releases/latest)
-  + Windows users can use the compiled `.exe`, while Mac and Linux users will need to have [Python 3](https://www.python.org/downloads/) installed to run the `.py`
-* The `.firm` corresponding to your device and version:
+* 透過[硬改](https://gbatemp.net/threads/414498/)提取你主機的 NAND 鏡像檔
+* 最新版的 [boot9strap](https://github.com/SciresM/boot9strap/releases/latest)
+* 最新版的 [hardmod-b9s-installer](https://github.com/ihaveamac/hardmod-b9s-installer/releases/latest)
+  + Windows 使用者可使用已編譯的 `.exe` 檔，而 Mac 及 Linux 使用者得先安裝 [Python 3](https://www.python.org/downloads/) 才能執行 `.py` 檔
+* 對應你主機型號及版本的 `.firm` 檔案：
 
-| Version(s) | Kernel | Old 3DS | New 3DS |
+| 版本 | 核心版本 | 舊型 3DS | New 3DS |
 |-|-|:-:|:-:|
 | 1.0.0 | 2.27-0 | [`2.27-0_1.0_OLD.firm`](magnet:?xt=urn:btih:5c86edc67a1827991567b3c326a4182b66647d07&dn=2.27-0_1.0_OLD.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce) | - |
 | 1.1.0 | 2.28-0 | [`2.28-0_1.1_OLD.firm`](magnet:?xt=urn:btih:7c7696ff18e7d83a638b9c80f83052f763fb0fa5&dn=2.28-0_1.1_OLD.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce) | - |
@@ -57,16 +57,16 @@ This will work on New 3DS, Old 3DS, and 2DS on *all* versions that you have a co
 
 #### 操作說明
 
-1. Copy the hardmod-b9s-installer folder from the hardmod-b9s-installer `.zip` to your computer
-1. Copy your downloaded `.firm` to the hardmod-b9s-installer folder on your computer
-1. Rename your downloaded `.firm` in the hardmod-b9s-installer folder on your computer to `current.firm`
-1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the hardmod-b9s-installer folder on your computer
-1. Run hardmod-b9s-installer
-  + Windows Users: Run the `.exe`
-  + Mac and Linux Users: Run the `.py`
-1. Flash your outputted `NAND-patched.bin` to your device with your hardmod
+1. 解壓 hardmod-b9s-installer `.zip` 中的 hardmod-b9s-installer 資料夾至電腦中
+1. 複製你所下載的 `.firm` 檔案至電腦的 hardmod-b9s-installer 資料夾中
+1. 在 hardmod-b9s-installer 資料夾中，將你所下載的 `.firm` 檔案重新命名為 `current.firm`
+1. 解壓 boot9strap `.zip` 的 `boot9strap.firm` 及 `boot9strap.firm.sha` 檔案至電腦的 hardmod-b9s-installer 資料夾中
+1. 啟動 hardmod-b9s-installer
+  + Windows 使用者：執行 `.exe` 檔案
+  + Mac and Linux 使用者：執行 `.py` 檔案
+1. 透過硬改刷入剛生成的 `NAND-patched.bin` 檔案至你的主機
 
 ___
 
-Continue to [Finalizing Setup](finalizing-setup)
+繼續至[完成安裝](finalizing-setup)
 {: .notice--primary}
