@@ -1,0 +1,161 @@
+---
+title: "Mover EmuNAND" #
+lang: es
+permalink: /es_ES/move-emunand.html
+---
+
+Esta es una sección adicional para mover los contenidos de una EmuNAND a la nueva SysNAND con CFW, eliminando después la partición de la EmuNAND de la tarjeta SD. Nota: los términos EmuNAND y RedNAND son diferentes implementaciones del [mismo concepto](http://3dbrew.org/wiki/NAND_Redirection).
+{: .notice--info}
+
+Ten en cuenta que en algunas versiones de Luma3DS, el menú de selección de payloads sólo es mostrado si se ha detectado más de un payload. Si sólo se detecta un payload, mantener (Start) al encender hará que se inicie GodMode9 de forma directa.
+{: .notice--info}
+
+**Ya DEBES tener instalado Luma3DS y boot9strap o arm9loaderhax para usar esto.**
+{: .notice--danger}
+
+#### Qué necesitas
+
+* Una EmuNAND existente
+* La última versión de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* La última versión de [FBI](https://github.com/Steveice10/FBI/releases/latest)
+
+#### Instrucciones
+
+##### Sección I - Preparativos
+
+1. Apaga tu consola
+1. Inserta tu tarjeta SD en tu computadora
+1. Copia `GodMode9.firm` (o `GodMode9.bin` para los usuarios de arm9loaderhax) desde el `.zip` de GodMode9 a la carpeta `/luma/payloads/` en tu tarjeta SD
+1. Reinserta tu tarjeta SD en tu consola
+
+##### Sección II - Copia de datos de juegos de DSiWare
+
+Si no tienes ningún juego de DSiWare o datos del mismo que quieras conservar, puedes saltarte esta sección.
+{: .notice--info}
+
+1. Enciende tu consola manteniendo (Start) para ingresar al menú de selección de payloads de Luma3DS
+1. Inicia GodMode9 presionando (A)
+1. Ve a `[2:] SYSNAND TWLN` -> `title`
+1. Mantén presionado (R) y presiona (A) a la vez sobre `00030004` para seleccionar la carpeta, luego elige "Copy to 0:/gm9out"
+  + Este proceso puede llevar un tiempo si tienes muchos juegos de DSiWare
+1. Presiona (B) dos veces para volver al menú principal
+
+##### Sección III - Respaldo de datos de la Consola Virtual de GBA
+
+Si no tienes ningún juego de Consola Virtual de GBA o datos del mismo que quieras conservar, puedes saltarte esta sección.
+{: .notice--info}
+
+Ten en cuenta que esto no es necesario para otro tipo de juegos de Consola Virtual (GBC, NES, etc.)
+{: .notice--info}
+
+1. Mantén presionado (R) y presiona (Start) a la vez para apagar tu consola
+1. Inserta tu tarjeta SD en tu computadora
+1. Crea una carpeta llamada `files9` en la raíz de tu tarjeta SD si aún no existe
+1. Crea una carpeta en `/files9/` por cada juego de Consola Virtual de GBA del cual quieras conservar los datos de guardado 
+1. Reinserta tu tarjeta SD en tu consola
+1. Inicia tu consola en SysNAND
+1. Realiza lo siguiente por cada juego de Consola Virtual de GBA del cual quieras conservar los datos de guardado:
+  + Inicia el juego de Consola Virtual de GBA en SysNAND
+  + Sal del juego de Consola Virtual de GBA
+  + Enciende tu consola manteniendo (Start) para ingresar al menú de selección de payloads de Luma3DS
+  + Inicia GodMode9 presionando (A)
+  + Ve a `[S:] SYSNAND VIRTUAL`
+  + Presiona (Y) sobre `gbavc.sav` para copiarlo
+  + Presiona (B) para regresar al menú principal
+  + Ve a `[0:] SDCARD` -> `files9`
+  + Navega hacia la carpeta que has creado para este juego de Consola Virtual de GBA
+  + Presiona (Y) para pegar `gbavc.sav`
+  + Presiona (Start) para reiniciar tu consola
+1. Reinicia manteniendo (Start) al encender la consola para iniciar el menú de selección de payloads de Luma3DS
+1. Inicia GodMode9 presionando (A)
+
+##### Sección IV - Copiar EmuNAND a la SysNAND
+
+1. Ve a `[E:] EMUNAND VIRTUAL`
+1. Presiona (A) sobre `nand.bin` para seleccionarlo, luego selecciona "NAND image options..." y luego "Restore SysNAND (safe)"
+1. Presiona (A) para desbloquear la sobreescritura de la SysNAND, luego introduce la combinación de teclas mostrada
+  + Esto no sobreescribirá tu instalación de arm9loaderhax
+1. Ingresa la combinación de teclas mostrada para desbloquear la escritura de la SysNAND (lvl1)
+  + Este proceso tomará un tiempo
+1. Una vez que haya terminado, presiona (A) para continuar
+1. Presiona (B) para volver al menú principal
+
+##### Sección V - Restaurar datos de guardado de DSiWare
+
+Si no hiciste el respaldo de datos de DSiWare anteriormente, puedes saltar esta sección.
+{: .notice--info}
+
+1. Ve a `[0:] SDCARD` -> `gm9out`
+1. Presiona (Y) sobre la carpeta `00030004` para copiarla
+1. Presiona (B) dos veces para volver al menú principal
+1. Ve a `[2:] SYSNAND TWLN` -> `title`
+1. Presiona (Y) para pegar la carpeta `00030004`
+1. Selecciona "Copy path(s)"
+1. Presiona (A) para desbloquear la escritura de la SysNAND (lvl1) y después ingresa la combinación de teclas mostrada
+1. Selecciona "Overwrite file(s)"
+  + Este proceso puede llevar un tiempo si tienes muchos juegos de DSiWare
+1. Presiona (B) dos veces para volver al menú principal
+
+##### Sección VI - Restaurar datos de guardado de la Consola Virtual de GBA
+
+Si no habías respaldado datos de partidas de Consola Virtual de GBA antes, puedes saltarte esta sección.
+{: .notice--info}
+
+1. Mantén presionado (R) y presiona (Start) a la vez para apagar tu consola
+1. Inicia tu consola en SysNAND
+1. Realiza lo siguiente por cada juego de Consola Virtual de GBA del cual quieras conservar los datos de guardado:
+  + Inicia el juego de Consola Virtual de GBA en SysNAND
+  + Sal del juego de Consola Virtual de GBA
+  + Enciende tu consola manteniendo (Start) para ingresar al menú de selección de payloads de Luma3DS
+  + Inicia GodMode9 presionando (A)
+  + Ve a `[0:] SDCARD` -> `files9`
+  + Navega hacia la carpeta que has creado para este juego de Consola Virtual de GBA
+  + Presiona (Y) sobre `gbavc.sav` para copiarlo
+  + Presiona (B) para regresar al menú principal
+  + Ve a `[S:] SYSNAND VIRTUAL`
+  + Presiona (Y) para pegar `gbavc.sav`
+  + Presiona (A) para confirmar
+  + Presiona (Start) para reiniciar tu consola
+1. Reinicia manteniendo (Start) al encender la consola para iniciar el menú de selección de payloads de Luma3DS
+1. Inicia GodMode9 presionando (A)
+
+##### Sección VII - Copia de seguridad de la SysNAND
+
+1. Presiona el botón (Home) para abrir el menú de acción
+1. Selecciona "Mas..."
+1. Selecciona "Backup NAND"
+1. Presiona (A) para continuar
+1. Mantén (R) y presiona (B) al mismo tiempo para extraer la SD
+1. Inserta tu tarjeta SD en tu computadora
+1. Copia `nand.bin` desde la carpeta `/gm9out/` en tu tarjeta SD a una ubicación segura en tu computadora
+  + Si previamente has usado SafeCTRTransfer y ya posees de antes una copia de la NAND llamada `<numero-de-serie>_nand.bin`, reemplaza esa copia con la nueva copia (renómbrala para que coincida con `<numero-de-serie>_nand.bin`)
+  + Haz copias de seguridad en múltiples sitios (como por ejemplo, en un pendrive o almacenamiento online)
+  + Esta copia de seguridad puede salvarte de un brick si algo va mal en el futuro
+1. Elimina el archivo `nand.bin` de la carpeta `/gm9out/` de tu tarjeta SD después de copiarlo
+1. **Haz una copia de seguridad de todos los archivos de tu tarjeta SD a una carpeta en tu computadora, todos los archivos se eliminarán en los siguientes pasos**
+
+##### Sección VIII - Formatear la tarjeta SD
+
+1. Reinserta tu tarjeta SD en tu consola
+1. Presiona el botón (Home) para abrir el menú de acción
+1. Selecciona "Mas..."
+1. Selecciona "SD format menu"
+1. Presiona (A) para confirmar
+1. Selecciona "No EmuNAND"
+1. Selecciona "Auto"
+1. Presiona (A) para aceptar la etiqueta `GM9SD`
+  + Opcionalmente, puedes ingresar un nombre personalizado para la tarjeta SD
+1. Cuando se te pida, introduce la combinación de teclas mostrada para confirmar
+1. Mantén (R) y presiona (B) al mismo tiempo para extraer la SD
+1. Inserta tu tarjeta SD en tu computadora
+1. Copia todos tus archivos de regreso a tu tarjeta SD
+  + Asegúrate de reemplazar el archivo `boot.firm` en tu tarjeta SD con el de tu respaldo
+1. Reinserta la tarjeta SD en tu consola
+1. Presiona (A) para montar la SD
+1. Presiona (Start) para guardar y reiniciar
+1. Si se queda la pantalla en negro, [sigue esta guía de resolución de problemas](troubleshooting#ts_sys_down)
+
+___
+
+Regresa a [Finalizar instalación](finalizing-setup).
+{: .notice--primary}
