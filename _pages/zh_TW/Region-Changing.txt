@@ -1,0 +1,149 @@
+---
+title: "區碼變更" #
+lang: zh-Hant
+permalink: /zh_TW/region-changing.html
+---
+
+本篇為更改自製韌體區碼的附加章節。 這是透過安裝所選區域的系統 9.2.0 的 CTRTransfer 鏡像檔達成的。
+{: .notice--primary}
+
+**區碼變更通常是不需要的，因為 Luma3DS 本身就支援跨區遊玩及各[程式區域模擬](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage)的功能。**
+{: .notice--info}
+
+本頁面會有些許的[磁力](https://en.wikipedia.org/wiki/Magnet_URI_scheme)連結，你將需要個像 [Deluge](http://dev.deluge-torrent.org/wiki/Download) 的 BT 種子下載器來下載磁力連結的檔案。
+{: .notice--success}
+
+請注意，在某些版本上的 Luma3DS 中，Luma3DS 連環加載選單僅會在偵測到多個 payload 檔時才會出現。 如果它只偵測到一個 payload 檔案，在開機時按住「Start」鍵將會直接開機至 GodMode9。
+{: .notice--info}
+
+本過程將解除你系統與 NNID 間的綁定，因為在改變區域後它們將不再兼容。 NNID 在創建後就會被鎖定至當前主機所在的區域，除非透過[一個非常複雜且進階的流程](https://gist.githubusercontent.com/yifanlu/e80db121d38aceb8cca0e03cefd5853b/raw/3c4dd89869156ca0f945a2791e699acfdb32b510/gistfile1.txt)，不然 NNID 不能在區域間遷移。
+{: .notice--warning}
+
+區碼變更後，只有在**從未使用過 eShop 的 New 3DS** 及 **任意舊型 3DS** 上才能在新的區域中創建一個新的 NNID 並使用 eShop。 已經在原區域使用過 eShop 的 New 3DS 將無法創建新的 NNID 或在新區域中使用 eShop！
+{: .notice--warning}
+
+注意有時候 eShop 還是沒辦法在應該可以使用的主機上使用。 這部分就是任天堂伺服器那邊的問題了，我沒辦法解決。
+{: .notice--warning}
+
+類似上面所提到的警示，有時候 eShop 突然會在正常來說不能使用的主機上（比如說某些 New 3DS 主機）變得可以使用。 目前原因仍未知。
+{: .notice--warning}
+
+透過 CTRTransfer 所達成的區碼變更似乎會使重啟補丁失效。 目前原因還尚待了解中，總之目前舊型 3DS 的玩家將無法遊玩需要用到「額外記憶體模式」的遊戲（像是《魔物獵人》、《任天堂明星大亂鬥》、或《神奇寶貝太陽／月亮版》...等）直到你格式化主機為止。
+{: .notice--warning}
+
+**你必須先安裝 Luma3DS 和 boot9strap 或 arm9loaderhax 才能繼續。**
+{: .notice--danger}
+
+#### 必備項目
+
+* 最新版的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* 最新版的 [FBI 管理器](https://github.com/Steveice10/FBI/releases/latest)
+* 選擇你想要將你主機區域設定為的 9.2.0 CTRTransfer 鏡像檔
+  +    <i class="fa fa-magnet" aria-hidden="true" title="這是個種子連結。 請使用一個 BT 下載器來下載此檔案。"></i> - [New 3DS 9.2.0 - 歐版 - CTRTransfer](magnet:?xt=urn:btih:fed7bfeec0e52b42a77467cfb6ffd3e9dd2d5a70&dn=9.2.0-20E%5FCtrTransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)   
+  +    <i class="fa fa-magnet" aria-hidden="true" title="這是個種子連結。 請使用一個 BT 下載器來下載此檔案。"></i> - [New 3DS 9.2.0 - 日版 - CTRTransfer](magnet:?xt=urn:btih:b22d67fd02b3b0e30ac991e451db0f2d32e7beca&dn=9.2.0-20J%5Fctrtransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    <i class="fa fa-magnet" aria-hidden="true" title="這是個種子連結。 請使用一個 BT 下載器來下載此檔案。"></i> - [New 3DS 9.2.0 - 美版 - CTRTransfer](magnet:?xt=urn:btih:985d47442dc470d1b9f908256bed041c63885f60&dn=9.2.0-20U%5Fctrtransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)    
+~
+  +    <i class="fa fa-magnet" aria-hidden="true" title="這是個種子連結。 請使用一個 BT 下載器來下載此檔案。"></i> - [舊型 3DS 或 2DS 9.2.0 - 歐版 - CTRTransfer](magnet:?xt=urn:btih:8d6142313971b08f92257e7fb1c1d5689e34ed78&dn=9.2.0-20E%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    <i class="fa fa-magnet" aria-hidden="true" title="這是個種子連結。 請使用一個 BT 下載器來下載此檔案。"></i> - [舊型 3DS 或 2DS 9.2.0 - 日版 - CTRTransfer](magnet:?xt=urn:btih:24ad2b85e67013ef1f91178dca7ad2e40663b9b2&dn=9.2.0-20J%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    <i class="fa fa-magnet" aria-hidden="true" title="這是個種子連結。 請使用一個 BT 下載器來下載此檔案。"></i> - [舊型 3DS 或 2DS 9.2.0 - 美版 - CTRTransfer](magnet:?xt=urn:btih:1dc79a2a0babb45497961888f369423a93135e2b&dn=9.2.0-20U%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+
+#### 操作說明
+
+##### 第一節 — 準備工作
+
+1. 關閉你的主機
+1. 將 SD 卡插入電腦中
+1. 在 SD 卡的根目錄底下建立一個新資料夾 `cias`
+1. 在 SD 卡的根目錄底下建立一個新資料夾 `files9`
+1. 解壓 GodMode9 `.zip` 中的 `GodMode9.firm`（或是 `GodMode9.bin` 如果你是使用 arm9loaderhax 的話）至 SD 卡的 `/luma/payloads/` 資料夾中
+1. 從剛下載的 CTRTransfer `.zip` 中，解壓 9.2.0 CTRTransfer 鏡像檔 `.bin` 檔案至 SD 卡上的 `/files9/` 資料夾
+1. 解壓 FBI `.zip` 中的 `FBI.cia` 到 SD 卡中的 `/cias/` 資料夾底下
+1. 將 SD 卡插回主機中
+
+##### 第二節 — 進行 CTRTransfer
+
+1. 開機時，按住「Start」鍵進入 Luma3DS 選單
+1. 按「A」啟動 GodMode9
+1. 移動至 `[0:] SDCARD` -> `files9`
+1. 選擇 CTRTransfer `.bin`，並按「A」選擇
+1. 選擇「CTRNAND options...」
+1. 選擇「Transfer image to CTRNAND」
+1. 如果出現提示，請選擇「Transfer to SysNAND」
+  + 當你有 EmuNAND 時，才會出現此提示
+1. 按「A」解鎖 SysNAND（lvl1）的寫入保護，然後按下提示的按鍵組合
+  + 此過程將花費一些時間
+1. 轉移完畢後，按下「A」繼續
+1. 按「B」兩次回到主選單
+1. 移動至 `[1:] SYSNAND CTRNAND` -> `dbs`
+1. 按「A」選取 `ticket.bak`，並選擇「Ticket.db options...」，再選「Mount image to drive」
+1. 若存在的話，在 `eshop` 上按住「R」並同時按下「A」以選取資料夾，並選擇「Copy to 0:/gm9out」
+  + 如果你有很多 tickets 的話，本過程可能會耗費一些時間
+  + 過程結束後，按下「A」繼續
+1. 若存在的話，在 `unknown` 上按住「R」並同時按下「A」以選取資料夾，並選擇「Copy to 0:/gm9out」
+  + 如果你有很多 tickets 的話，本過程可能會耗費一些時間
+  + 過程結束後，按下「A」繼續
+1. 按下「Start」鍵重啟你的主機
+1. 到主機主選單中更新你的主機，到「系統設置（System Settings）」、「其他設置（Other Settings）」底下選擇「系統更新（System Update）」
+  + 在安裝 B9S + Luma 後系統更新是沒問題的
+  + 如果過程中出現錯誤，試試到 DNS 設定底下將設定改成「自動 （auto）」
+
+##### 第三節 — 植入 FBI 管理器
+
+1. 重啟時按住「Start」鍵啟動 Luma3DS 選單
+1. 按「A」啟動 GodMode9
+1. 移動至 `[0:] SDCARD` -> `cias`
+1. 按「A」選取 `FBI.cia`，並選擇「CIA image options...」，再選「Mount image to drive」
+1. 按「A」選取 `.app` 結尾的檔案，並選擇「NCCH image options」，再選「Inject to H&S」
+1. 按「A」解鎖 SysNAND（lvl1）的寫入保護，然後按下提示的按鍵組合
+1. 按「A」 繼續
+1. 按「Start」鍵重啟你的主機
+1. 如果你啟動後發現依然是原廠的「健康與警示」程式，並且之前曾經用 Gateway 進行過系統降級，[請參見此疑難排解](troubleshooting#gw_fbi)
+
+##### 第四節 — 重新安裝 Tickets
+
+如果您之前沒有 `eshop` 或 `unknown` 資料夾，請跳過本節。
+{: .notice--info}
+
+1. 啟動「健康與安全」程式（改為 FBI 管理器後）
+1. 移動至 `SD` -> `cias`
+1. 選擇「FBI.cia」
+1. 選擇「Install」，按下「A」確認
+1. 按下「B」以回到 SD 卡根目錄
+1. 選擇「gm9out」
+1. 對 `eshop` 或 `unknown` 資料夾或兩者都執行以下過程
+  + 移動至資料夾
+  + 選擇「\<current directory>」
+  + 選擇「Install and delete all tickets」（安裝並刪除所有 tickets 檔案）
+  + 稍等一下。 系統可能會卡住一段時間，等就對了。
+  + 按「A」確認
+  + 按「B」以取消 CDN tickets 的安裝
+1. 按下「Home」鍵退出 FBI 管理器
+
+##### 第五節 — 區域設定
+
+1. 進入系統設定（System Settings）
+1. 進入「其他設定（Other Settings）」、「個人檔案（Profile）」中的「區域設定（Region Settings）」
+1. 選擇你想改成的國家
+1. 若提示時，州的部分不必設定
+1. 更新你改區完後的自製系統至最新版本
+
+##### 第六節 — 還原「健康與警示」程式
+
+1. 重啟時按住「Start」鍵啟動 Luma3DS 連環加載選單
+1. 按「A」啟動 GodMode9
+1. 按「Home」鍵以叫出主選單
+1. 選擇「More...」
+1. 選擇「Restore H&S」
+1. 按「A」解鎖 SysNAND（lvl1）的寫入保護，然後按下提示的按鍵組合
+
+##### 第七節 — 移除 CTRTransfer 鏡像檔
+
+1. 移動至 `[0:] SDCARD` -> `files9`
+1. 選擇 CTRTransfer `.bin` 鏡像檔，並按「X」刪除
+1. 按 「A」 確認
+1. 按下「Start」鍵重啟你的主機
+
+___
+
+舊型˙ 3DS 及 2DS 主機可能需要先格式化（透過 TinyFormat 或 系統設定）才能遊玩需要用到「額外記憶體模式」的遊戲（像是《魔物獵人》、《任天堂明星大亂鬥》、或《神奇寶貝太陽／月亮版》...等）
+{: .notice--info}
