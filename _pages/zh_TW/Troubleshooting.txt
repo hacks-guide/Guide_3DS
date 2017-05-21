@@ -53,7 +53,7 @@ permalink: /zh_TW/troubleshooting.html
 
 #### 操作說明
 
-1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
+1. 從 GodMode9 `.zip` 中解壓 `GodMode9.firm` 到 SD 上的 `/luma/payloads/` 中
 1. 按「A」啟動 GodMode9
 1. 移動至 `[1:] SYSNAND CTRNAND` -> `data` -> (32 字元 ID) -> `sysdata` -> `00010038`
 1. 按住「R」，並在 `00000000` 上按下「X」以重新命名此檔案
@@ -66,7 +66,7 @@ permalink: /zh_TW/troubleshooting.html
 ## <a name="gw_fbi" />無法在 Gateway 降級過後的主機上植入 FBI 管理器到「健康與警示」程式裡
 這是因為 Gateway 所用的降級方式是非常糟糕的，那方式將在系統內留下各兩個版本的 3DS 程式。 其中一個是沒用到的版本，而「健康與警示」注射工具不知道這點，而將 FBI 管理器植入到錯誤的程式中。
 
-Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+請注意，在某些版本上的 Luma3DS 中，Luma3DS 連環加載選單僅會在偵測到多個 payload 檔時才會出現。 如果它只偵測到一個 payload 檔案，在開機時按住「Start」鍵將會直接開機至 GodMode9。
 {: .notice--info}
 
 1. 開機時，按住「Start」鍵進入 Luma3DS 選單
@@ -90,8 +90,8 @@ Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only dis
 1. 選擇 「Move path(s)」
 1. 大寫副檔名的檔案將被移至 `newdir` 資料夾中
 1. 按下「Start」鍵重啟你的主機
-1. Return to [Finalizing Setup](finalizing-setup) and retry the FBI injection
-1. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then return to [Finalizing Setup](finalizing-setup) and retry the FBI injection
+1. 返回至[完成安裝](finalizing-setup)並重試植入 FBI 管理器
+1. 如果還是沒用的話，試試看將大寫副檔名的檔案移至 `content` 資料夾，並將小寫副檔名的檔案移至 `newdir` 資料夾中，再回到[完成安裝](finalizing-setup)中並重新植入 FBI 管理器
 
 ## <a name="ts_browser" />瀏覽器漏洞沒有用
 瀏覽器版本的漏洞（像是 browserhax 或 2xrsa）常常不穩而且還會當掉，但有時候可以透過下列步驟來修正：
@@ -120,15 +120,15 @@ Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only dis
     *這大概無法在降級至版本 2.1.0 的舊型 3DS 上使用*    
     **這會使降級到版本 2.1.0 的 New 3DS _變磚_**
     1. 關閉你的主機
-    1. Hold (L) + (R) + (A) + (Up)
+    1. 按住「L」+「R」+「A」+「上」
     1. 啟動你的主機
     1. 如果進入安全模式，*僅在你有最新系統版本進入 Homebrew Launcher 的方法，並且能進行降級的情況下*，才升級你的主機，並再次嘗試降級。
 1. 你的主機可能已經變磚。 若需求助，請至 [Discord 的 Nintendo Homebrew](https://discord.gg/MWxPgEp) 伺服器中尋求。
 
-## <a name="ts_sys_b9s" />Black screen on SysNAND boot after Installing boot9strap
+## <a name="ts_sys_b9s" />安裝 boot9strap 後，進入 SysNAND 時黑屏
 
 1. 請先確保 payload 檔案可以正常運行
-    1. Check for the existence of `boot.firm` in the root of your SD card.
+    1. 檢查 `boot.firm` 是否在 SD 卡的根目錄底下。
 1. 試試看重設 Luma3DS 的設定檔
     1. 刪除 SD 卡中的 `/luma/config.bin`
     1. 開機後設定 Luma3DS
@@ -153,9 +153,9 @@ Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only dis
 1. 試試看進行[9.2.0 CTRTransfer](9.2.0-ctrtransfer)
 1. 請於 [Discord 的 Nintendo Homebrew 伺服器](https://discord.gg/MWxPgEp)尋求。
 
-## <a name="ts_transfer" />Error during SafeB9SInstaller
+## <a name="ts_transfer" />執行 SafeB9SInstaller 時出現錯誤
 
-If an error occurs during the SafeB9SInstaller process, you will be prompted to launch an external payload for the purpose of repairing your device.
+如果在 SafeB9SInstaller 過程中發生錯誤，系統將提示你啟動一個外部的 payload 以修復裝置。
 
 #### 必備項目
 
@@ -165,23 +165,23 @@ If an error occurs during the SafeB9SInstaller process, you will be prompted to 
 
 1. 選擇「Unmount SD card」
 1. 將 SD 卡插入電腦中
-1. Copy `GodMode9.bin` from the GodMode9 `.zip` to the `/boot9strap/` folder on your SD card and rename `GodMode9.bin` in `/boot9strap/` to `payload.bin`
+1. 解壓 GodMode9 `.zip` 中的 `GodMode9.bin` 到 SD 卡中的 `/boot9strap/` 底下，並將其重新命名為 `payload.bin`
 1. 將 SD 卡插回主機中
 1. 選擇 「Run 0:/CTRTransfer/payload.bin」
 1. 如果成功，你將進入 GodMode9
-1. Navigate to `[0:] SDCARD` -> `boot9strap`
-1. Press the (L) trigger on `firm0firm1.bak` and `sector0x96.bak` to mark them
+1. 移動至 `[0:] SDCARD` -> `boot9strap`
+1. 選取 `firm0firm1.bak` 以及 `sector0x96.bak`，並按下「L」將它們標示起來
 1. 按「Y」複製檔案
 1. 按「B」兩次回到主選單
 1. 移動至 `[S:] SYSNAND VIRTUAL`
 1. 按「Y」貼上檔案
-1. Press (A) to confirm
-1. Press (A) to inject the files
+1. 按「A」確認
+1. 按「A」開始植入檔案
 1. 按下「A」以解鎖 SysNAND 複寫
 1. 按下提示的按鍵組合以解鎖 SysNAND（lvl3）的寫入保護
 1. 過程結束後，按下「A」繼續
 1. 按下「Start」鍵重啟你的主機
-1. Report this issue to the [SafeB9SInstaller Issues Page](https://github.com/d0k3/SafeB9SInstaller/issues)
+1. 報告此問題到 [SafeB9SInstaller 問題頁](https://github.com/d0k3/SafeB9SInstaller/issues)
 
 ## <a name="ts_sys_blue" />開機時藍屏 (bootrom error)
 
