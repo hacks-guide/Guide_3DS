@@ -1,0 +1,151 @@
+---
+title: "지역 변경" #
+lang: ko
+permalink: /ko_KR/region-changing.html
+---
+
+This is add-on section for region changing your CFW SysNAND. 바꾸고자 하는 지역의 9.2.0 CTRTransfer 이미지를 설치해 끝납니다.
+{: .notice--primary}
+
+**Luma3DS에서는 [타이틀별 지역 에뮬레이션](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage)이 가능해지면서 지역 변경할 필요는 별로 없어졌습니다.**
+{: .notice--info}
+
+이 페이지의 [마그넷](https://en.wikipedia.org/wiki/Magnet_URI_scheme) 링크를 사용하려면
+ [Deluge](http://dev.deluge-torrent.org/wiki/Download)와 같은 토렌트 클라이언트가 필요합니다.
+{: .notice--success}
+
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+{: .notice--info}
+
+이 작업을 진행하면 NNID가 더이상 시스템과 호환되지 않아 연결이 해제됩니다. NNID는 이를 생성한 기기의 지역에 종속되며 [매우 복잡하고 어려운 과정](https://gist.githubusercontent.com/yifanlu/e80db121d38aceb8cca0e03cefd5853b/raw/3c4dd89869156ca0f945a2791e699acfdb32b510/gistfile1.txt) 없이는 다른 지역의 기기에 등록할 수 없습니다.
+{: .notice--warning}
+
+이 작업 뒤 오직 **한번도 e숍에 접속한 적이 없는 New 3DS**와 **모든 Old 3DS**만이 바뀐 지역에서 만든 새로운 NNID를 이용해 e숍에 접속할 수 있습니다. 기존 지역에서 e숍에 접속한 적이 있는 New 3DS는 지역을 바꾼 후 새로운 NNID를 만들 수 없으며 e숍에도 접속할 수 없습니다!
+{: .notice--warning}
+
+간혹 e숍 접속이 가능해야 하는 기기임에도 알 수 없는 이유로 이용이 불가능한 경우도 있음을 참고해 주세요. 이는 전적으로 닌텐도의 서버와 연관된 문제로
+ 어쩔 수가 없습니다.
+{: .notice--warning}
+
+위 경고와 마찬가지로, 때때로 e숍이 일부 기기에서 기기에 맞지 않게 작동할 (일부 New 3DS와 같은) 것이라는 점을 참고해 주세요. 이 현상의 원인은 아직 밝혀지지 않았습니다.
+{: .notice--warning}
+
+(이 가이드에 명시된) CTRTransfer를 이용한 지역 변경은 재부팅 패치를 사용할 수 없게 만드는 듯합니다. The cause for this is unknown, but for now Old 3DS users will be unable to play extended memory mode games (such as Monster Hunter, Super Smash Bros, and Pokémon Sun / Moon) until they format their devices.
+{: .notice--warning}
+
+**You MUST have already installed Luma3DS and boot9strap or arm9loaderhax to use this.**
+{: .notice--danger}
+
+#### 준비물
+
+* 최신 버전의 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* 최신 버전의 [FBI](https://github.com/Steveice10/FBI/releases/latest)
+* 해당 모델의 변경하고 싶은 지역의 9.2.0 ctrtransfer 이미지
+  +    <i class="fa fa-magnet" aria-hidden="true" title="이것은 마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드해 주세요."></i> - [New 3DS 9.2.0 - 유럽 - CTRTransfer](magnet:?xt=urn:btih:fed7bfeec0e52b42a77467cfb6ffd3e9dd2d5a70&dn=9.2.0-20E%5FCTRTransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)   
+  +    <i class="fa fa-magnet" aria-hidden="true" title="이것은 마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드해 주세요."></i> - [New 3DS 9.2.0 - 일본 - CTRTransfer](magnet:?xt=urn:btih:b22d67fd02b3b0e30ac991e451db0f2d32e7beca&dn=9.2.0-20J%5FCTRTransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    <i class="fa fa-magnet" aria-hidden="true" title="이것은 마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드해 주세요."></i> - [New 3DS 9.2.0 - 미국 - CTRTransfer](magnet:?xt=urn:btih:985d47442dc470d1b9f908256bed041c63885f60&dn=9.2.0-20U%5FCTRTransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)    
+~
+  +    <i class="fa fa-magnet" aria-hidden="true" title="이것은 마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드해 주세요."></i> - [Old 3DS 또는 2DS 9.2.0 - 유럽 - CTRTransfer](magnet:?xt=urn:btih:8d6142313971b08f92257e7fb1c1d5689e34ed78&dn=9.2.0-20E%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    <i class="fa fa-magnet" aria-hidden="true" title="이것은 마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드해 주세요."></i> - [Old 3DS 또는 2DS 9.2.0 - 일본 - CTRTransfer](magnet:?xt=urn:btih:24ad2b85e67013ef1f91178dca7ad2e40663b9b2&dn=9.2.0-20J%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    <i class="fa fa-magnet" aria-hidden="true" title="이것은 마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드해 주세요."></i> - [Old 3DS 또는 2DS 9.2.0 - 미국 - CTRTransfer](magnet:?xt=urn:btih:1dc79a2a0babb45497961888f369423a93135e2b&dn=9.2.0-20U%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+
+#### 진행 방법
+
+##### 섹션 I - 준비 작업
+
+1. 기기를 종료해 주세요.
+1. SD 카드를 컴퓨터에 삽입해 주세요.
+1. SD 카드의 최상위 경로에 `cias` 폴더가 없을 경우 폴더를 만어 주세요.
+1. SD 카드의 최상위 경로에 `files9` 폴더가 없을 경우 폴더를 만어 주세요.
+1. Copy `GodMode9.firm` (or `GodMode9.bin` for arm9loaderhax users) from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
+1. CTRTransfer `.zip`에서 9.2.0 CTRTransfer image `.bin`을 SD 카드의 `/files9/` 폴더로 복사해 주세요.
+1. FBI `.zip`에서 `FBI.cia`를 SD 카드의 `/cias/` 폴더에 복사해 주세요.
+1. SD 카드를 기기에 다시 삽입해 주세요.
+
+##### 섹션 II - CTRTransfer
+
+1. (start)를 누른 채 시작해 Luma3DS chainloader 메뉴를 실행해 주세요.
+1. (A)를 눌러 GodMode9을 실행해 주세요.
+1. `[0:] SDCARD` ->`files9`으로 이동해 주세요.
+1. CTRTransfer `.bin`에 (A)를 눌러 선택해 주세요.
+1. "CTRNAND options..."를 선택해 주세요.
+1. "Transfer image to CTRNAND"를 선택해 주세요.
+1. 메시지가 나타나면 "Transfer to SysNAND"를 선택해 주세요.
+  + 이 메시지는 EmuNAND가 있을 경우에만 나타납니다.
+1. (A)를 눌려 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요.
+  + 이 과정은 시간이 좀 걸릴 것입니다.
+1. 작업이 완료되면 (A)를 눌려 계속해 주세요.
+1. (B)를 두 번 눌러 메인 메뉴로 돌아가 주세요.
+1. `[1:] SYSNAND CTRNAND` ->`dbs`로 이동해 주세요.
+1. `ticket.bak`에 (A)를 눌러 선택하고 "Ticket.db options..."를 선택하고 "Mount image to drive"를 선택해 주세요.
+1. 파일이 존재하면 `eshop` 폴더에 (R)을 누른 채 (A)를 눌러 선택하고 "Copy to 0:/gm9out"을 선택해 주세요.
+  + 이 과정은 기기에 티켓이 많다면 시간이 좀 걸릴 수 있습니다.
+  + 작업이 완료되면 (A)를 눌려 계속해 주세요.
+1. `unknown` 폴더가 존재한다면 폴더에 (R)을 누른 채 (A)를 눌러 선택하고 "Copy to 0:/gm9out"을 선택해 주세요.
+  + 이 과정은 기기에 티켓이 많다면 시간이 좀 걸릴 수 있습니다.
+  + 작업이 완료되면 (A)를 눌려 계속해 주세요.
+1. (start)를 눌러 기기를 다시 시작해 주세요.
+1. 본체 설정의 "기타 설정"에서 가장 오른쪽에 있는 "본체 업데이트"를 선택해 기기를 업데이트해 주세요.
+  + Updates while using B9S + Luma (what you have) are safe
+  + 오류가 발생하면 DNS 설정을 "자동"으로 설정해 주세요.
+
+##### 섹션 III - FBI 주입
+
+1. (start)를 누른 채 시작해 Luma3DS chainloader 메뉴를 실행해 주세요.
+1. (A)를 눌러 GodMode9을 실행해 주세요.
+1. `[0:] SDCARD` -> `cias`로 이동해 주세요.
+1. `FBI.cia`에 (A)를 눌러 선택하고 "CIA image options..."를 선택하고 "Mount image to drive"를 선택해 주세요.
+1. `.app` 파일에 (A)를 부르고 "NCCH image options"를 선택하고 "Inject to H&S"를 선택해 주세요.
+1. (A)를 눌려 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요.
+1. (A)를 눌러 진행해 주세요.
+1. (start)를 눌러 기기를 다시 시작해 주세요.
+1. 기존 안전을 위한 주의사항 앱이 실행되고 예전에 Gateway로 다운그레이드한 적이 있다면 이 [문제 해결 가이드](troubleshooting#gw_fbi)를 참고해 주세요.
+
+##### 섹션 IV - 티켓 재설치
+
+만약 기기에 `eshop` 폴더나 `unknown` 폴더가 없었다면 이 섹션을 건너뛰어 주세요.
+{: .notice--info}
+
+1. 안전을 위한 주의사항 (현재는 FBI) 앱을 실행해 주세요.
+1. `SD` -> `cias`로 이동해 주세요.
+1. "FBI.cia"를 선택해 주세요.
+1. "Install"을 선택한 뒤 (A)를 눌러 진행해 주세요.
+1. (B)를 눌러 SD 디렉터리로 돌아가 주세요.
+1. "gm9out"을 선택해 주세요.
+1. `eshop` 폴더와 `unknown` 폴더 중 1개 이상의 폴더에 다음 과정을 수행해 주세요.
+  + 그 폴더로 이동해 주세요.
+  + "\<current directory>"를 선택해 주세요.
+  + "Install and delete all tickets"를 선택해 주세요.
+  + 잠깐. 시스템이 멈춘 것 같더라도 기다려 주세요.
+  + (A)를 눌러 주세요.
+  + (B)를 눌러 CDN에서 티켓 설치를 거절해 주세요.
+1. (Home)을 눌러 FBI를 종료해 주세요.
+
+##### 섹션 V - 지역 설정
+
+1. 본체 설정을 실행해 주세요.
+1. "기타 설정", "유저 정보"및 "지역 정보"로 이동해 주세요.
+1. 변경한 지역에 속한 국가를 선택해 주세요.
+1. 메시지가 뜨더라도 '도'까지 설정할 필요는 없습니다.
+1. 본체 설정에서 지역이 변경된 커스텀 펌웨어 SysNAND를 최신 버전으로 업데이트해 주세요.
+
+##### 섹션 VI - 안전을 위한 주의사항 복원
+
+1. (start)를 누른 채 시작해 Luma3DS chainloader 메뉴를 실행해 주세요.
+1. (A)를 눌러 GodMode9을 실행해 주세요.
+1. (Home)을 눌러 작업 메뉴를 띄워 주세요.
+1. "More..."를 선택해 주세요.
+1. "Restore H&S"를 선택해 주세요.
+1. (A)를 눌려 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요.
+
+##### 섹션 VII - CTRTransfer 이미지 제거
+
+1. `[0:] SDCARD` ->`files9`으로 이동해 주세요.
+1. CTRTransfer image `.bin`에 (X)를 눌러 삭제해 주세요.
+1. (A)를 눌러 주세요.
+1. (start)를 눌러 기기를 다시 시작해 주세요.
+
+___
+
+Old 3DSs and 2DSs may need to format (using TinyFormat or the System Settings) to play extended memory mode games (such as Monster Hunter, Super Smash Bros, or Pokemon Sun/Moon).
+{: .notice--info}
