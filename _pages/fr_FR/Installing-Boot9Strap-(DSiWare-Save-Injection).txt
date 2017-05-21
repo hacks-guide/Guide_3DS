@@ -100,10 +100,10 @@ Utilisez [save manager](https://github.com/J-D-K/JKSM/releases/latest) pour fair
   + Si votre jeu se comprte normalement et ne vous renvoie aucune erreur, vous devriez vous arrêter et trouver le problème
   + Si vous obtenez un écran noir, [suivez ce guide de dépannage](troubleshooting#twl_broken)
 
-##### Section III - System Transfer
+##### Section III - Transfert de données
 
 1. ** Faites une sauvegarde complète des deux cartes SD des deux 3DS dans deux dossiers différents (Gardez une trace pour savoir quelle carte SD appartient à la bonne 3DS)!**
-1. Reinsert each SD card back into their corresponding 3DS
+1. Réinsérez chaque carte SD dans la 3DS correspondante
 1. Si **la 3DS cible ** a déjà un ID Nintendo Network, vous devez formater la console à l’aide des paramètres du système :
   + Aller à la dernière page des "Autres réglages" puis sélectionnez "Format le système", puis suivez toutes les instructions
 1. Lisez ce qui suit :
@@ -118,7 +118,7 @@ Utilisez [save manager](https://github.com/J-D-K/JKSM/releases/latest) pour fair
     + Méthode plus lente : Si vous n’avez pas la possibilité de déplacer les données sur un PC utilisent l'option **complète** "Transfert sans fil" (option 1).
 1. Allez sur [ce lien](http://fr-americas-support.nintendo.com/app/answers/detail/a_id/13403) et suivez les instructions officielles de Nintendo pour le transfert de système d’un système à l’autre tout en gardant à l’esprit ce que vous venez de lire
 
-##### Section IV - Restoring the source 3DS
+##### Section IV - Restaurer la 3DS source
 
 1. Sur **la 3DS source**, terminez la configuration initiale
 1. Effectuez l’une des opérations suivantes
@@ -130,45 +130,45 @@ Utilisez [save manager](https://github.com/J-D-K/JKSM/releases/latest) pour fair
 1. Naviguez vers `[0:] SDCARD`
 1. Appuyez sur (A) sur votre NAND `.bin` pour le sélectionner, puis choisissez "NAND image options...", puis sélectionnez "Restore SysNAND (safe)"
 1. Appuyez sur (A) pour débloquer l'écriture sur votre SysNAND, puis entrez la combinaison de touches demandée
-  + This will not overwrite your boot9strap installation
+  + Ceci n'effacera pas votre boot9strap
 1. Entrez la combinaison de touche demandée pour débloquer l'écriture sur votre SysNAND (lvl1)
   + Ce processus prendra un certain temps
 1. Une fois le transfert terminé, appuyez sur (A) pour continuer
-1. Press (Start) to reboot **the source 3DS**
+1. Appuyez sur (Start) pour redémarrer **la 3DS source**
 
-##### Section V - Backing up the target 3DS's FIRM
+##### Section V - Sauvegarder le FIRM de la 3DS cible
 
 1. Copiez `boot.nds` à la racine de la carte SD de **la 3DS cible**
 1. Créez un dossier nommé `boot9strap` à la racine de la carte SD **de la 3DS cible**
 1. Copiez le fichier `.firm` 11.4.0 correspondant à **la 3DS cible** dans le dossier `boot9strap` à la racine de **carte SD de la 3DS cible**
 1. Copiez le fichier `boot9strap.firm`de l'archive boot9strap`.zip` dans le dossier `/boot9strap/` de votre carte SD
-1. Launch your DSiWare game on **the target 3DS**
-1. Launch b9sTool using your DSiWare game
+1. Lancez votre jeu DSiWare sur **la 3DS cible**
+1. Lancez b9sTool en utilisant votre jeu DSiWare
   + **Fieldrunners**: Appuyez sur le bouton 'Scores' dans le menu principal
   + **Legends of Exidia**: Après avoir appuyé sur (A) ou (Start) sur les deux écran titre, sélectionnez la première sauvegarde et appuyez sur "Continue"
   + **Guitar Rock Tour**: Faites défiler l'écran vers les bas et allez dans High Scores -> Drums -> Easy
   + **The Legend of Zelda: Four Swords**: Il suffit de démarrer le jeu
-  + If your game does not have the hacked save file installed, [follow this troubleshooting guide](troubleshooting#ts_dsiware)
+  + Si votre jeu n’a pas la sauvegarde piratée d'installée, [suivez ce guide](troubleshooting#ts_dsiware)
 1. Sélectionnez "Dump F0F1" pour sauvegarder le FIRM de la **3DS cible**
 1. Prenez note de l’emplacement de la sauvegarde de la NFIRM
 1. Sortez de b9sTool
   + Vous allez peut-être devoir forcer la fermeture en maintenant le bouton d’alimentation enfoncé
 1. Mettez votre carte SD dans votre ordinateur, puis copiez `F0F1_N3DS.bin` ou `F0F1_O3DS.bin` (selon votre appareil) dans un endroit sûr ; faites des sauvegardes à plusieurs emplacements ; cette sauvegarde vous sauvera d’un BRICK si quelque chose se passe mal
 
-##### Section VI - Flashing the target 3DS's FIRM
+##### Section VI - Flasher le FIRM de la 3DS cible
 
-**Do NOT use b9sTool on a device that already has arm9loaderhax installed or you will BRICK!**
+**N'utilisez PAS b9sTool sur un appareil où arm9loaderhax est déjà installé ou vous allez BRICK!**
 {: .notice--danger}
 
-1. Launch your DSiWare game on **the target 3DS**
-1. Launch b9sTool using your DSiWare game
+1. Lancez votre jeu DSiWare sur ** la 3DS cible**
+1. Lancer b9sTool en utilisant votre jeu DSiWare
   + **Fieldrunners**: Appuyez sur le bouton 'Scores' dans le menu principal
   + **Legends of Exidia**: Après avoir appuyé sur (A) ou (Start) sur les deux écran titre, sélectionnez la première sauvegarde et appuyez sur "Continue"
   + **Guitar Rock Tour**: Faites défiler l'écran vers les bas et allez dans High Scores -> Drums -> Easy
   + **The Legend of Zelda: Four Swords**: Il suffit de démarrer le jeu
-1. Select "Install boot9strap" and confirm
-1. Exit b9sTool, then power off your device
-  + You may have to force power off by holding the power button
+1. Séléctionnez "Install boot9strap" et confirmez
+1. Quittez b9sTool, puis éteignez votre appareil
+  + Vous allez peut-être devoir forcer la fermeture en maintenant le bouton d’alimentation enfoncé
 1. Votre appareil va démarrer sur boot9strap, puis va s'éteindre automatiquement car il n'a pas encore de payload à lancer
 
 ___
