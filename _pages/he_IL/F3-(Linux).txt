@@ -1,0 +1,63 @@
+---
+title: "F3 (Linux)" #
+lang: he
+permalink: /he_IL/f3-(linux).html
+---
+
+זוהי הרחבה עבור בדיקת כרטיס הSD שלכם עבור שגיאות באמצעות F3.
+{: .notice--info}
+
+תלוי בגודל של הSD ובמהירות של המחשב, תהליך זה יכול לקחת עד מספר שעות!
+{: .notice--info}
+
+עמוד זה נועד רק עבור משתמשי לינוקס. אם אתם לא ב-לינוקס, תבדקו את העמודים [H2testw (windows)](h2testw-(windows)) או [F3X (mac)](f3x-(mac)).
+{: .notice--info}
+
+#### מה אתם צריכים
+
+* הגירסה העדכנית של [F3] (https://github.com/AltraMayor/f3/archive/v6.0.zip)
+
+#### הוראות
+
+1. תחלצו את קובץ הזיפ של F3
+1. תעשו 'cd' לתיקיית F3
+1. תריצו 'make' כדי לקמפל את F3
+1. תכניסו את ה-SD שלכם למחשב
+1. תעשו Mount לSD שלכם אם המחשב לא עשה אוטומטית
+1. Run `./f3write <your sd card mount point>`
+1. תחכו עד שהתוכנה מסיימת. דוגמה.
+
+		$ ./f3write /media/michel/6135-3363/
+		Free space: 29.71 GB
+		Creating file 1.h2w ... OK!
+		...
+		Creating file 30.h2w ... OK!
+		Free space: 0.00 Byte
+		Average Writing speed: 4.90 MB/s
+
+1. תריצו `./f3read <התיקייה של הSD>`
+1. תחכו עד שהתוכנה מסיימת. דוגמה.
+
+		$ ./f3read /media/michel/6135-3363/
+		                  SECTORS      ok/corrupted/changed/overwritten
+		Validating file 1.h2w ... 2097152 / 0 / 0 / 0
+		...
+		Validating file 30.h2w ... 1491904 / 0 / 0 / 0
+
+		  Data OK: 29.71 GB (62309312 sectors)
+		Data LOST: 0.00 Byte (0 sectors)
+			       Corrupted: 0.00 Byte (0 sectors)
+			Slightly changed: 0.00 Byte (0 sectors)
+			     Overwritten: 0.00 Byte (0 sectors)
+		Average Reading speed: 9.42 MB/s
+
+___
+
+אם הבדיקה מראה את התוצאה `Data LOST: 0.00 Byte (0 sectors)` הכרטיס שלכם טוב, אתם יכולים למחוק את כל קבצי ה- `.h2w` על כרטיס ה- SD שלכם
+{: .notice--success}
+
+אם הבדיקה מראה תוצאות אחרות, הכרטיס שלכם עשוי להיות פגום וייתכן שיהיה עליכם להחליף אותו!
+{: .notice--danger}
+
+תחזרו אל [Get Started](get-started)
+{: .notice--primary}
