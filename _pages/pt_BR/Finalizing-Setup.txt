@@ -83,7 +83,7 @@ Durante este processo, também configuramos alguns programas como os seguintes:
 1. Aperte (Start) para salvar e reiniciar
   + Se você receber uma tela preta, basta continuar para a próxima seção   
 
-##### Section III - Updating the System
+##### Seção III - Atualização do Sistema
 
 Se, antes de seguir este guia, você já tinha uma configuração EmuNAND e gostaria de mover o conteúdo da sua EmuNAND anterior para o seu novo CFW SysNAND, agora é a hora de [seguir Mover EmuNAND](move-emunand) ao invés de seguir as nove primeiras etapas nesta seção.
 {: .notice--info}
@@ -91,9 +91,9 @@ Se, antes de seguir este guia, você já tinha uma configuração EmuNAND e gost
 1. Atualize seu dispositivo indo em Configuração do console, depois "Outras Configurações, depois indo para a direita até o final e selecionando "Atualização"
   + Atualizações feitas enquanto usa B9S + Luma (o que você tem) são seguras
   + Se isso der um erro, defina suas configurações de DNS para "Automático"
-  + If this still gives you an error and your NAND is below 9.2.0, [follow 9.2.0 CTRTransfer](9.2.0-ctrtransfer), then try updating again
+  + Se isso ainda lhe dá um erro e sua NAND está abaixo de 9.2.0, [siga CTRTransfer para 9.2.0](9.2.0-ctrtransfer) e, em seguida, tente atualizar novamente
 
-##### Section IV - Injecting FBI
+##### Seção IV - Injetando o FBI
 
 1. Reinicie segurando (Start) durante a inicialização para iniciar o menu do chainloader do Luma3DS
 1. Inicie o GodMode9 apertando (A)
@@ -105,7 +105,7 @@ Se, antes de seguir este guia, você já tinha uma configuração EmuNAND e gost
 1. Aperte (Start) para reiniciar seu dispositivo
 1. Se você ainda está abrindo o app Informações sobre saúde e segurança original e já fez downgrade com Gateway no passado, [siga este guia de troubleshooting](troubleshooting#gw_fbi)
 
-##### Section V - Installing CIAs
+##### Seção V - Instalando CIAs
 
 1. Inicie o aplicativo Informações sobre saúde e segurança (que agora é o FBI)
 1. Navegue para `SD` -> `cias`
@@ -113,12 +113,12 @@ Se, antes de seguir este guia, você já tinha uma configuração EmuNAND e gost
 1. Selecione a opção "Install all CIAs" e, em seguida, aperte (A) para confirmar
 1. Aperte (Home) para sair do FBI
 
-##### Section VI - DSP Dump
+##### Seção VI - DSP Dump
 
 1. Inicie o DSP1
 1. Quando isso estiver concluído, aperte (Start) para sair
 
-##### Section VII - Restore Health and Safety
+##### Seção VII - Restaurar o aplicativo Informações sobre saúde e segurança
 
 1. Reinicie segurando (Start) durante a inicialização para iniciar o menu do chainloader do Luma3DS
 1. Inicie o GodMode9 apertando (A)
@@ -127,15 +127,15 @@ Se, antes de seguir este guia, você já tinha uma configuração EmuNAND e gost
 1. Selecione "Restore H&S"
 1. Aperte (A) para destravar "SysNAND (lvl1) writing", então aperte a sequência de botões solicitada
 
-##### Section VIII - CTRNAND Luma3DS
+##### Seção VIII - Luma3DS & CTRNAND
 
 1. Reinicie segurando (Start) durante a inicialização para iniciar o menu do chainloader do Luma3DS
 1. Inicie o GodMode9 apertando (A)
 1. Navegue para `[0:] SDCARD`
-1. Press (Y) on `boot.firm` to copy it
+1. Aperte (Y) no `boot.firm` para copiá-lo
 1. Aperte (B) para retornar para o menu principal
 1. Navegue para `[1:] SYSNAND CTRNAND`
-1. Press (Y) to paste a copy of `boot.firm`
+1. Aperte (Y) para colar uma cópia do `boot.firm`
 1. Selecione "Copy path(s)"
 1. Aperte (A) para destravar "SysNAND (lvl1) writing", então aperte a sequência de botões solicitada
 1. Aperte (B) para retornar para o menu principal
@@ -148,7 +148,7 @@ Se, antes de seguir este guia, você já tinha uma configuração EmuNAND e gost
 1. Reinsira seu cartão SD no seu dispositivo
 1. Aperte (Start) para salvar e reiniciar
 
-##### Section IX - NAND Backup
+##### Seção IX - Backup da NAND
 
 1. Inicie seu dispositivo enquanto segura (Start) para iniciar o menu do chainloader do Luma3DS
 1. Inicie o GodMode9 apertando (A)
@@ -178,8 +178,8 @@ Isso só atualizará os arquivos do Luma3DS no seu cartão SD. Se você iniciali
 {% capture notice-6 %}   
 Você agora irá inicializar o CFW Luma3DS na SysNAND por padrão.    
 Agora você pode segurar (Select) durante a inicialização para abrir o menu de configuração do Luma3DS.    
-You can now hold (Start) on boot to launch the Luma3DS chainloader menu (note that the Luma3DS chainloader menu is only displayed if there is more than one payload detected).
-You can now hold (Start) + (Select) + (X) on boot to dump the ARM11 bootrom (`boot11.bin`), the ARM9 bootrom (`boot9.bin`), and your console unique OTP (`OTP.bin`) to the `/boot9strap/` folder on your SD card (note that this will not have any kind of prompt or message).
+Agora você pode segurar (Start) durante a inicialização para abrir o menu do chainloader do Luma3DS (note que este menu só será mostrado se existir mais de um payload detectado).
+Agora você pode segurar (Start) + (Select) + (X) durante a inicialização para criar backups do ARM11 bootrom (`boot11.bin`), do ARM9 bootrom (`boot9.bin`) e do OTP único do seu dispositivo (`OTP.bin`) na pasta `/boot9strap/` no seu cartão SD (note que isso não terá nenhum tipo de aviso ou mensagem).
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
