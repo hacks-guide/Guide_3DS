@@ -1,0 +1,54 @@
+---
+title: "Установка boot9strap (MSET)" #
+lang: ru
+permalink: /ru_RU/installing-boot9strap-(mset).html
+---
+
+Если вы взламывали ваше устройство ранее и у вас установлена кастомная прошивка на основе EmuNAND, помните, что данное руководство работает только с SysNAND и вы должны выполнять вся шаги находясь в SysNAND. Помните, что RedNAND и EmuNAND - немного разные реализации [одного и того же](http://3dbrew.org/wiki/NAND_Redirection) (англ.).
+{: .notice--info}
+
+Для использования [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme)-ссылок в этом руководстве необходим torrent-клиент, например [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+{: .notice--success}
+
+#### Что понадобится
+
+* Свежая версия [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* Свежая версия [boot9strap](https://github.com/SciresM/boot9strap/releases/latest)
+* Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
+* Любой флешкартридж для DS, работающий на вашей версии прошивки
+
+#### Инструкция
+
+##### Часть I - Подготовительные работы
+
+1. Выключите консоль
+1. Вставьте SD-карту в компьютер
+1. Скопируйте _содержимое_ папки `starter` из архива `starter.zip` в корень вашей SD-карты
+1. Создайте папку `boot9strap` в корне SD-карты
+1. Скопируйте `boot9strap.firm` и `boot9strap.firm.sha` из `.zip-архива` boot9strap в папку `/boot9strap/` в корне SD-карты
+1. Скопируйте `SafeB9SInstaller.dat` из `.zip-ахрива` SafeB9SInstaller в корень SD-карты
+1. Вставьте SD-карту обратно в консоль
+1. Скопируйте `SafeB9SInstaller.dat` из `.zip-ахрива` SafeB9SInstaller в корень SD-карты
+1. Включите консоль
+
+##### Часть II - Запуск SafeB9SInstaller
+
+1. Запустите флешкартридж DS
+1. Запустите `SafeB9SInstaller.nds`, используя флешкартридж
+1. Выберите опцию, соответствующую версии прошивки
+  + 4.X.X -> "4.x SafeB9SInstaller"
+  + 6.X.X -> "6.x SafeB9SInstaller"
+1. Перезагрузите консоль, зайдите в "Системные настройки" (System Settings), затем "Прочие настройки" (Other Settings), затем "Профиль" (Profile), затем "Профиль Nintendo DS" (Nintendo DS Profile)
+1. Если эксплойт сработал, запустится SafeB9SInstaller
+
+##### Часть III - Установка boot9strap
+
+1. Дождитесь окончания всех проверок безопасности
+1. При появлении запроса, введите указанную комбинацию кнопок для установки boot9strap
+1. После завершения процесса, нажмите (A) для перезагрузки
+1. Ваша консоль загрузится в boot9strap, затем автоматически выключится, потому что запускаемого файла еще нет
+
+___
+
+Следующий шаг: [Завершение установки](finalizing-setup)
+{: .notice--primary}
