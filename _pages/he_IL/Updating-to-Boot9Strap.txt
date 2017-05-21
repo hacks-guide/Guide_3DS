@@ -1,0 +1,138 @@
+---
+title: "עדכון אל boot9strap" #
+lang: he
+permalink: /he_IL/updating-to-boot9strap.html
+---
+
+דף זה מיועד למשתמשי arm9loaderhax קיימים לעדכן את מכשיריהם לboot9strap.
+{: .notice--info}
+
+כל המהדורות הבאות של Luma3DS יוצרו בתוך פורמט ה'firm' בלבד, שיתמוך רק בboot9strap ובsighax. זה אומר שכדי להמשיך לקבל את העדכונים האחרונים של Luma3DS עליכם להשתמש בדף הזה כדי לעדכן את ההתקנה שלכם.
+{: .notice--info}
+
+אם יש לכם PIN בLuma, אתם צריכים לכבות אותו זמנית בשביל השלבים האלו או שתקבלו שגיאת "OTP Crypto Fail". אתם יכולים להפעיל אותה מחדש לאחר העדכון.
+{: .notice--warning}
+
+{% capture notice-1 %}
+
+אם יש לכם את התוכנה "3dsafe" מותקנת, אתם תצטרכו למחוק אותה או שתקבלו שגיאת "OTP Crypto Fail".
+<br><br>
+כדי לעשות את זה, תחלצו את [הגרסה האחרונה של arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases) (את התוכנה) לתיקייה בשם `a9lh` על שורש כרטיס הSD, ואז תפעילו את 3dsafe, תכניסו את הקוד שלכם ותחזיקו את המקש האחרון כשאתם עושים. משם, בזמן שאתם לוחצים על המקש הזה, תלחצו (X) כדי להפעיל את SafeA9LHInstaller המובנה, ואז תלחצו (Select) כדי "לעדכן" לarm9loaderhax רגיל.
+
+{% endcapture %}
+
+<div class="notice--warning">{{ notice-1 | markdownify }}</div>
+
+**כדי להשתמש בקישורי מגנט, תצטרכו כלי טורנט כמו [Deluge](http://dev.deluge-torrent.org/wiki/Download)**
+{: .notice--success}
+
+#### מה נדרש
+
+שימו לב שהקובץ הדרוש הנקרא `secret_sector.bin` הוא אותו אחד שנמצא בכל הגרסאות של הקובץ `data_input.zip`. אם יש לכם את הקובץ הזה איפושהו, אתם יכולים להשתמש בו במקום להוריד את האחד למטה.
+{: .notice--info}
+
+שימו לב ש'secret_sector.bin' נדרש כדי למחוק את פריצת arm9loaderhax, ולכן הוא לא נחוץ עבור ההתקנה של boot9strap על קונסולה לא פרוצה.
+{: .notice--info}
+
+* <i class="fa fa-magnet" aria-hidden="true" title="זה לינק מגנטי. תשתמשו בתוכנת טורנט כדי להוריד את הקובץ."></i> - [`secret_sector.bin`](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce)
+* את הגרסה העדכנית של [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(יש להוריד את קובץ ה-`.7z`)*
+* הגרסה העדכנית של [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* הגרסא העדכנית של [boot9strap](https://github.com/SciresM/boot9strap/releases/latest)
+* את הגרסה העדכנית של [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* הפורק העדכני של [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
+
+#### הוראות
+
+##### חלק I - הכנות
+
+1. תכבו את המכשיר
+1. תכניסו את ה-SD שלכם למחשב
+1. תעתיקו את הקובץ `boot.firm` מתוך ה`.7z` של Luma3DS לתוך ה-SD שלכם
+1. תצרו תיקייה בשם `cias` ב-SD שלכם אם לא קיימת לכם כבר תיקייה כזו
+1. תעתיקו את הקובץ `lumaupdater-v2.0.cia` לתוך התיקייה `/cias/` שב-SD שלכם
+1. תצרו ב-SD שלכם תיקייה חדשה בשם `boot9strap`
+1. העתיקו את `GodMode9.firm` מהזיפ של GodMode9 אל תיקיית /luma/payloads/ ב- SD שלכם
+1. תמחקו כל קובץ `.bin` בתיקיית `/luma/payloads/`על כרטיס הSD שלכם כי הם לא יהיו תואמים בגרסאות של Luma3DS שתואמות עם boot9strap
+1. העתיקו את `SafeB9SInstaller.bin` מהזיפ של SafeB9SInstaller אל תיקיית /luma/payloads/ ב- SD שלכם
+1. שנו שם ל `SafeB9SInstaller.bin` בתיקיית `/luma/payloads/` על הכרטיס הSD שלכם ל `start_SafeB9SInstaller.bin`
+1. תעתיקו את`boot9strap.firm` ואת `boot9strap.firm.sha` מה `.zip` של boot9strap אל תיקיית `/boot9strap/`על כרטיס הSD שלכם
+1. העתיקו את הקובץ `secret_sector.bin` לתיקייה `/boot9strap/` שב- SD שלכם
+
+    ![]({{ base_path }}/images/screenshots/updating-to-b9s-file-layout.png)
+    {: .notice--info}
+
+1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
+
+#### חלק II - התקנת boot9strap
+
+1. תפעילו את הקונסולה בזמן שאתם מחזיקים (Start) במהלך האתחול כדי להפעיל את תפריט הטעינה של Luma3DS
+  + כמה גרסאות של Luma3DS פשוט יפעילו כל תוכנה שמתחילה עם`start_`
+  + אם הגרסה שלכם עושה את זה, פשוט תמשיכו עם ההוראות
+1. תפעילו את SafeB9SInstaller על ידי לחיצת (A) עליו
+1. תחכו שכל בדיקות הבטיחות יסתיימו
+1. כאשר תתבקשו, תלחצו על הכפתורים שנתונים לכם כדי להתקין את boot9strap
+1. כשזה סיים, לחצו על (A) כדי לאתחל את הקונסולה.
+  אם הקונסולה שלכם מתכבה בהפעלה, תבדקו שהעתקתם את `boot.firm` מה `.7z` של Luma3DS אל שורש כרטיס הSD שלכם
+
+##### חלק III - הגדרת Luma3DS
+
+חלק זה נחוץ רק אם אתם מקבלים את תפריט ההגדרות של Luma3DS אחרי ההפעלה מחדש.
+{: .notice--info}
+
+1. בתפריט ההגדרות של Luma3DS, תשתמשו במקש (A) ובמקשי החיצים על מנת להפעיל את ההגדרות הבאות:    
+  + **"Show NAND or user string in System Settings"**
+1. לחצו על (Start) על מנת לשמור ולהפעיל מחדש
+
+##### חלק IV - Luma3DS על ה- CTRNAND
+
+1. תאתחלו בזמן שאתם מחזיקים (Start) במהלך האתחול כדי להפעיל את תפריט הטעינה של Luma3DS
+1. תפעילו את GodMode9 על ידי לחיצת (A)
+1. נווטו אל `[0:] SDCARD` ואז `luma`ולבסוף `payloads`
+1. תלחצו (X) על `start_SafeB9SInstaller.bin` כדי למחוק אותו
+1. תלחצו (A) כדי לאשר
+1. תלחצו (B) כדי לחזור ל`[0:] SDCARD`
+1. תלחצו (Y) על `boot.firm` כדי להעתיק אותו
+1. תלחצו (B) כדי לחזור לתפריט הראשי
+1. נווטו אל `[1:] SYSNAND CTRNAND`
+1. תלחצו (Y) כדי להדביק עותק של `boot.firm`
+1. תבחרו "Copy path(s)"
+1. לחצו (A) כדי לפתוח גישת כתיבת lvl1 לSysNAND, ואז תלחצו על המקשים בסדר הנכון
+1. תלחצו (X) על `arm9loaderhax.bin` כדי למחוק אותו
+  + אם אין לכם אותו, פשוט תמשיכו עם ההוראות
+1. תלחצו (A) כדי לאשר
+1. תלחצו (B) כדי לחזור לתפריט הראשי
+1. תחזיקו (R) ולחצו (B) באותו הזמן כדי להוציא את הSD
+1. תוציאו את כרטיס הSD שלכם מהמכשיר שלכם
+1. תלחצו על (Start) על מנת להפעיל מחדש את המכשיר שלכם כאשר ה-SD עדיין בחוץ
+  + הדלקת המכשיר כאשר ה- SD בחוץ תאפשר לכם להגדיר את Luma3DS מחדש כאשר הוא נמצאו במחיצת ה- CTRNAND (על המכשיר עצמו)
+1. תשתמשו במקש (A) ובמקשי החיצים על מנת להפעיל את ההגדרות הבאות:    
+  + **"Show NAND or user string in System Settings"**
+1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
+1. לחצו על (Start) על מנת לשמור ולהפעיל מחדש
+
+##### חלק V - התקנת Luma3DS Updater
+
+1. תפעילו את FBI
+1. נווטו אל `SD` ושם אל `cias`
+1. תבחרו ב`lumaupdater-v2.0.cia`
+1. לחצו על האפשרות "Install CIA" ולאחר מכן על (A) על מנת לאשר
+1. תלחצו על (Home) כדי לצאת מFBI
+
+___
+
+אתם יכולים למחוק עכשיו את כל הקבצים שקשורים לarm9loaderhax מהכרטיס SD שלכם, כמו את `arm9loaderhax.bin`על השורש של כרטיס הSD שלכם וקובץ `aeskeydb.bin`שבתיקיית files9 על כרטיס הSD שלכם.
+{: .notice--info}
+
+שימו לב ש `firm0firm1.bak` ו `sector0x96.bak` בתיקיית `/boot9strap/` על הרטיס הSD שלכם נדרשים רק במקרה של התקנה כושלת של boot9strap. אם התקנתם בהצלחה, אתם יכולים למחוק את תיקיית `boot9strap`.
+{: .notice--info}
+
+הפורק הזה של Luma3DS מאפשר תאימות עם boot9strap על ידי הורדה והתקנה של ה`boot.firm` העדכני של Luma3DS בשבילכם.
+{: .notice--info}
+
+{% capture notice-6 %}   
+אתם יכולים להחזיק את (Select) בזמן הדלקה על מנת להפעיל את תפריט ההגדרות של Luma3DS.    
+אתם יכולים עכשיו להחזיק (Start) בהפעלה כדי להפעיל את תפריט ההפעלה של Luma3DS (שימו לב שהוא יופיע רק אם יש לכם יותר מתוכנה אחת שזוהתה).
+אתם יכולים עכשיו להחזיק (Start) + (Select) + (X) בהפעלה כדי להשיג את הOTP המיוחד לכל קונסולה (שהוא`OTP.bin`), הbootrom של ה ARM11 (שהוא`boot11.bin`), והbootrom של ה ARM9 (שהוא `boot9.bin`), בתיקיית `/boot9strap/` על כרטיס הSD שלכם (שימו לב שלא תהיה שום הודעה או סימן).
+{% endcapture %}
+
+<div class="notice--info">{{ notice-6 | markdownify }}</div>
