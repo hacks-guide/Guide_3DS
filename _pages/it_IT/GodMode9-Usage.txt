@@ -1,0 +1,230 @@
+---
+title: "Usare GodMode9" #
+lang: it
+permalink: /it_IT/godmode9-usage.html
+---
+
+GodMode9 è un file browser per il Nintendo 3DS che dà pieno accesso ai file sulla tua scheda SD, ai file delle partizioni FAT della SysNAND e della EmuNAND, e a molto altro ancora. Tra le varie funzioni, puoi anche copiare, cancellare, rinominare file e creare cartelle.
+{: .notice--primary}
+
+Tieni presente che, su alcune versioni di Luma3DS, il menu chainloader di Luma3DS verrà visualizzato solo se viene rilevato più di un payload. In caso ne venga individuato soltanto uno, tenere premuto (Start) all'avvio lancerà direttamente GodMode9.
+{: .notice--info}
+
+{% capture notice %}
+È uno strumento molto potente che permette di fare qualunque modifica ai file di sistema del 3DS. Tuttavia, sono presenti salvaguardie per non danneggiare accidentalmente dati importanti della console.
+<br><br>
+Il sistema dei permessi di scrittura ti protegge facendo apparire avvisi e costringendoti ad immettere una sequenza di sblocco ogni volta si tentasse di scrivere sulla SysNAND. Non è possibile sovrascrivere o modificare dati importanti se prima non si immette tale sequenza, né è possibile sbloccare i permessi accidentalmente. Come sempre, sii intelligente e conserva dei backup per sicurezza.
+{% endcapture %}
+
+<div class="notice--danger">{{ notice | markdownify }}</div>
+
+## <a name="nand_backup" /> Creare un backup della NAND
+
+#### Istruzioni
+
+1. Avvia la console tenendo premuto (Start) per avviare il menu chainloader di Luma3DS
+1. Avvia GodMode9 premendo (A)
+1. Premi il pulsante HOME per far apparire il menu delle azioni
+1. Seleziona "More..."
+1. Seleziona "Backup NAND"
+1. Premi il pulsante (A) per continuare
+1. Tenendo premuto (R), premi (B) per rimuovere la scheda SD
+1. Inserisci la scheda SD nel tuo computer
+1. Copia il file `nand.bin` dalla cartella `/gm9out/` della tua scheda SD in una posizione sicura sul tuo computer
+  + Se hai usato SafeCTRTransfer in precedenza e hai un backup della NAND rinominato `<codiceseriale>_nand.bin`, sostituiscilo con questo (rinomina `nand.bin` in `<codiceseriale>_nand.bin`)
+  + Crea dei backup in più posti (come ad esempio un servizio di storage dei file online)
+  + Questi backup ti salveranno da un brick nel caso dovesse accadere qualcosa in futuro
+1. Cancella il file `nand.bin` dalla cartella `/gm9out/` della tua scheda SD dopo averne salvato un backup
+1. Reinserisci la scheda SD nel Nintendo 3DS
+
+## <a name="nand_restore" /> Ripristinare un backup della NAND
+
+#### Istruzioni
+
+1. Avvia la console tenendo premuto (Start) per avviare il menu chainloader di Luma3DS
+1. Avvia GodMode9 premendo (A)
+1. Entra in `[0:] SDCARD`
+1. Premi (A) sul file `.bin` della NAND per selezionarlo, quindi seleziona "NAND image options...", ed infine seleziona "Restore SysNAND (safe)"
+1. Premi il pulsante (A) per sbloccare la sovrascrittura su SysNAND, quindi inserisci la combinazione di tasti richiesta a schermo
+  + Questo processo non eliminerà boot9strap
+1. Inserisci la combinazione di tasti richiesta a schermo per sbloccare i permessi di scrittura di primo livello su SysNAND
+  + Questo processo durerà un po'
+1. Una volta completato, premi (A) per proseguire
+
+## <a name="injectHS" /> Iniettare un'app .CIA dentro "Informazioni per la salute e la sicurezza"
+
+#### Preparazione
+
++ Per motivi pratici, copia il file `.cia` che desideri iniettare dentro la cartella `/cias/` della tua scheda SD
+    + Nota che non possibile iniettare dentro "Informazioni per la salute e la sicurezza" file che siano più grandi di quest'ultima (come giochi o altre applicazioni pesanti)
+
+#### Istruzioni
+
+1. Avvia la console tenendo premuto (Start) per avviare il menu chainloader di Luma3DS
+1. Avvia GodMode9 premendo (A)
+1. Entra nella cartella `[0:] SDCARD` -> `cias`
+1. Premi (A) sul file `.cia` per selezionarlo, quindi seleziona "CIA image options...", ed infine seleziona "Mount image to drive"
+1. Premi (A) sul file `.app`, quindi seleziona "NCHH image options", ed infine seleziona "Inject to H&S"
+1. Premi il pulsante (A) per sbloccare i permessi di scrittura di primo livello su SysNAND, quindi inserisci la combinazione di tasti richiesta a schermo
+1. Premi il pulsante (A) per continuare
+
+## <a name="restore_hs" /> Ripristinare "Informazioni per la salute e la sicurezza" dopo aver iniettato un'app .CIA
+
+Questo metodo funzionerà solo se l'inject di "Informazioni per la salute e la sicurezza" è stato eseguito con GodMode9 (e non con Decrypt9 o con Hourglass9).
+{: .notice--info}
+
+#### Istruzioni
+
+1. Avvia la console tenendo premuto (Start) per avviare il menu chainloader di Luma3DS
+1. Avvia GodMode9 premendo (A)
+1. Premi il pulsante HOME per far apparire il menu delle azioni
+1. Seleziona "More..."
+1. Seleziona "Restore H&S"
+1. Premi il pulsante (A) per sbloccare i permessi di scrittura di primo livello su SysNAND, quindi inserisci la combinazione di tasti richiesta a schermo
+
+## <a name="dump_cart" /> Creare un backup di una scheda di gioco
+
+#### Preparazione
+
++ Inserisci nella console la scheda di gioco del quale vuoi creare un backup
+    + Le schede di gioco 3DS verranno salvate nel formato installabile `.cia`
+    + Le schede di gioco NDS verranno salvate in un formato non installabile `.nds` compatibile con flashcart ed emulatori
+
+#### Istruzioni
+
+1. Avvia la console tenendo premuto (Start) per avviare il menu chainloader di Luma3DS
+1. Avvia GodMode9 premendo (A)
+1. Entra in `[C:] GAMECART`
+1. Segui i passaggi corretti per la tua scheda di gioco:
+  + **Scheda di gioco 3DS:** Premi (A) su `[TitleID].trim.3ds` per selezionarlo, quindi seleziona "NCSD image options...", ed infine seleziona "Build CIA from file"
+  + **Scheda di gioco NDS:** Premi (A) su `[TitleID].trim.nds` per selezionarlo, quindi seleziona "Copy to 0:/gm9out"
+1. Il tuo file installabile`.cia` o il tuo file non installabile `.nds` saranno salvati nella cartella `/gm9out/` della tua scheda SD
+
+## <a name="dump_title" /> Creare un backup di un Titolo
+
+Usa il menu `Titles` di FBI per ottenere il Title ID del titolo del quale desideri creare un backup
+{: .notice--info}
+
+#### Istruzioni
+
+1. Avvia la console tenendo premuto (Start) per avviare il menu chainloader di Luma3DS
+1. Avvia GodMode9 premendo (A)
+1. Entra nel drive appropriato per il tipo di titolo del quale vuoi creare un backup:
+  + **Titolo installato dall'utente**: Entra in `[A:] SYSNAND SD`
+  + **Titolo di sistema**: Entra in `[1:] SYSNAND CTRNAND`
+1. Entra in `title`
+1. Entra nella cartella che ha come nome le prime 8 cifre del Title ID
+1. Entra nella cartella che ha come nome le ultime 8 cifre del Title ID
+1. Entra in `content`
+1. Premi (A) sul file `.tmd` per selezionarlo, quindi seleziona "TMD file options...", ed infine seleziona "Show title info"
+1. Assicurati di aver trovato il titolo corretto
+1. Premi (B) per uscire dalle informazioni del titolo
+1. Premi (A) sul file `.tmd` per selezionarlo, quindi seleziona "TMD file options...", ed infine seleziona "Build CIA (standard)"
+1. Il file installabile `.cia` del titolo sarà salvato nella cartella `/gm9out/` della tua scheda SD
+
+## <a name="convert_3ds" /> Convertire un file .3DS in un file .CIA
+
+#### Preparazione
+
++ Per motivi pratici, copia i file `.3ds` che desideri convertire dentro la cartella `/cias/` della tua scheda SD
+    + Tieni presente che se desideri convertire un file `.3ds` che si trova su una flashcart, dovresti seguire la sezione [Creare un backup di una scheda di gioco](#dump_cart)
+
+#### Istruzioni
+
+1. Avvia la console tenendo premuto (Start) per avviare il menu chainloader di Luma3DS
+1. Avvia GodMode9 premendo (A)
+1. Entra nella cartella `[0:] SDCARD` -> `cias`
+1. Premi (A) sul file `.3ds` per selezionarlo, quindi seleziona "NCSD file options...", ed infine seleziona "Build CIA from file"
+1. Il file installabile `.cia` del titolo sarà salvato nella cartella `/gm9out/` della tua scheda SD
+
+## <a name="backup_gba" /> Creare un backup dei salvataggi dei giochi GBA della Virtual Console
+
+#### Istruzioni
+
+1. Spegni il tuo 3DS
+1. Inserisci la scheda SD nel tuo computer
+1. Crea una cartella all'interno della cartella `/files9/` per ogni gioco GBA della Virtual Console del quale vuoi mantenere i salvataggi
+1. Reinserisci la scheda SD nel Nintendo 3DS
+1. Accendi la console
+1. Esegui i seguenti passaggi per ogni gioco GBA della Virtual Console del quale vuoi mantenere i salvataggi:
+  + Avvia il gioco GBA
+  + Esci dal gioco GBA
+  + Avvia la console tenendo premuto (Start) per avviare il menu chainloader di Luma3DS
+  + Avvia GodMode9 premendo (A)
+  + Entra in `[S:] SYSNAND VIRTUAL`
+  + Premi (Y) su `gbavc.sav` per copiarlo
+  + Premi (B) per ritornare al menu principale
+  + Entra nella cartella `[0:] SDCARD` -> `files9`
+  + Entra nella cartella che hai creato per questo gioco GBA della Virtual Console
+  + Premi (Y) per incollare `gbavc.sav`
+  + Premi (Start) per riavviare la console
+
+## <a name="restore_gba" /> Ripristinare i salvataggi dei giochi GBA della Virtual Console
+
+#### Istruzioni
+
+1. Per ogni gioco GBA della Virtual Console del quale vuoi ripristinare il salvataggio, assicurati di avere dentro `/files9/` una cartella con all'interno il relativo salvataggio
+1. Esegui i seguenti passaggi per ogni gioco GBA della Virtual Console del quale vuoi mantenere i salvataggi:
+  + Avvia il gioco GBA
+  + Esci dal gioco GBA
+  + Avvia la console tenendo premuto (Start) per avviare il menu chainloader di Luma3DS
+  + Avvia GodMode9 premendo (A)
+  + Entra nella cartella `[0:] SDCARD` -> `files9`
+  + Entra nella cartella che hai creato per questo gioco GBA della Virtual Console
+  + Premi (Y) su `gbavc.sav` per copiarlo
+  + Premi (B) per ritornare al menu principale
+  + Entra nella cartella `[S:] SYSNAND VIRTUAL`
+  + Premi (Y) per incollare `gbavc.sav`
+  + Premi il pulsante (A) per confermare
+  + Premi (Start) per riavviare la console
+
+## <a name="format_sd" /> Formattare una scheda SD
+
+**Questo procedimento cancellerà tutti i dati della tua scheda SD!**
+{: .notice--danger}
+
+#### Istruzioni
+
+1. Avvia la console tenendo premuto (Start) per avviare il menu chainloader di Luma3DS
+1. Avvia GodMode9 premendo (A)
+1. Premi il pulsante HOME per far apparire il menu delle azioni
+1. Seleziona "More..."
+1. Seleziona "SD format menu"
+1. Seleziona le opzioni della EmuNAND che desideri usare
+  + La maggior parte degli utenti dovrebbe scegliere "No EmuNAND"
+1. Seleziona "Auto"
+1. Premi (A) per accettare il nome `GM9SD`
+  + Puoi comunque scegliere un altro nome per la tua scheda SD
+1. Quando richiesto, inserisci la combinazione di tasti richiesta a schermo
+
+## <a name="payload_chain" /> Caricare un Payload ARM9
+
+#### Istruzioni
+
+1. Avvia la console tenendo premuto (Start) per avviare il menu chainloader di Luma3DS
+1. Avvia GodMode9 premendo (A)
+1. Naviga fino al payload ARM9 che si desidera caricare.
+    + Un payload ARM9 solitamente ha come estensione `.bin`
+    + Non vuol dire però che tutti i file di estensione `bin` siano payload ARM9
+    + Alcuni esempi di payload ARM9 sono Luma3DS, Decrypt9 e GodMode9
+1. Premi (A) sul payload ARM9`.bin` per selezionarlo, quindi seleziona "Launch as arm9 Payload"
+1. Quando richiesto, inserisci la combinazione di tasti richiesta a schermo per avviare il payload ARM9
+
+## <a name="crypt_cia" /> Criptare / Decriptare un file .CIA
+
+#### Preparazione
+
++ Per motivi pratici, copia i file `.cia` che desideri criptare/decriptare dentro la cartella `/cias/` della tua scheda SD
+
+#### Istruzioni
+
+1. Avvia la console tenendo premuto (Start) per avviare il menu chainloader di Luma3DS
+1. Avvia GodMode9 premendo (A)
+1. Entra nella cartella `[0:] SDCARD` -> `cias`
+1. Premi (A) sul file `.cia` per selezionarlo, quindi seleziona "CIA image options..."
+1. Seleziona l'opzione appropriata per la funzione desiderata:
+    + **Encrypt to 0:/gm9out:** Crea una copia criptata del file `.cia` nella cartella `/gm9out/` della tua scheda SD
+    + **Decrypt to 0:/gm9out:** Crea una copia decriptata del file `.cia` nella cartella `/gm9out/` della tua scheda SD
+    + **Encrypt inplace:** Sostituisce il file `.cia` con una versione criptata dello stesso
+    + **Decrypt inplace:** Sostituisce Il file `.cia` con una versione decriptata dello stesso
+1. Il tuo file criptato/decriptato in formato `.cia` verrà salvato nella posizione desiderata
