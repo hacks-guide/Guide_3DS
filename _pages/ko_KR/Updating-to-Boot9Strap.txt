@@ -1,0 +1,139 @@
+---
+title: "Updating to boot9strap" #
+lang: ko
+permalink: /updating-to-boot9strap.html
+---
+
+This page is for existing arm9loaderhax users to update their devices to boot9strap.
+{: .notice--info}
+
+All future releases of Luma3DS will only be made in the `.firm` format, which will only be compatible with boot9strap and sighax. This means that to continue receiving the latest updates of Luma3DS, you should use this page to update your installation.
+{: .notice--info}
+
+If you have a PIN set on Luma, you must temporarily turn it off to do these steps, or you will get an "OTP Crypto Fail" error. 업데이트 이후 PIN을 다시 활성화할 수 있습니다.
+{: .notice--warning}
+
+{% capture notice-1 %}
+
+If you have the software "3dsafe" installed, you must remove it to do these steps, or you will get an "OTP Crypto Fail" error.
+<br><br>
+To do this, extract [the latest release of arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases) (the payload files) to a folder named `a9lh` on the root of your SD card, then boot 3dsafe, input your pin and hold down the last key when you do. From there, while holding this key, press (X) to launch the integrated SafeA9LHInstaller, then press (Select) to "update" to standard arm9loaderhax.
+
+{% endcapture %}
+
+<div class="notice--warning">{{ notice-1 | markdownify }}</div>
+
+이 페이지의 [마그넷](https://en.wikipedia.org/wiki/Magnet_URI_scheme) 링크를 사용하려면
+ [Deluge](http://dev.deluge-torrent.org/wiki/Download)와 같은 토렌트 클라이언트가 필요합니다.
+{: .notice--success}
+
+#### What you need
+
+Note that the following required file named `secret_sector.bin` is the same one that was found in the various `data_input.zip` file versions. If you already have that file on your disk somewhere, you can use that one instead of downloading the one below.
+{: .notice--info}
+
+Note that `secret_sector.bin` is needed to revert the arm9loaderhax exploit, which is why it is not needed for the installation of boot9strap on a stock console.
+{: .notice--info}
+
+* <i class="fa fa-magnet" aria-hidden="true" title="이것은 마그넷 링크입니다. Use a torrent client to download the file."></i> - [`secret_sector.bin`](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce)
+* 최신 버전의 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z` 파일)*
+* The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest)
+* 최신 버전의 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* The latest fork of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
+
+#### 진행 방법
+
+##### 섹션 I - 준비 작업
+
+1. 기기를 종료해 주세요.
+1. SD 카드를 컴퓨터에 삽입해 주세요.
+1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card
+1. SD 카드의 최상위 경로에 `cias` 폴더가 없을 경우 폴더를 만들어 주세요.
+1. Copy `lumaupdater-v2.0.cia` to the `/cias/` folder on your SD card
+1. Create a folder named `boot9strap` on the root of your SD card
+1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
+1. Delete any existing `.bin` payloads in the `/luma/payloads/` folder on your SD card as they will not be compatible with boot9strap compatible Luma3DS versions
+1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the `/luma/payloads/` folder on your SD card
+1. Rename `SafeB9SInstaller.bin` in the `/luma/payloads/` folder on your SD card to `start_SafeB9SInstaller.bin`
+1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
+1. Copy `secret_sector.bin` to the `/boot9strap/` folder on your SD card
+
+    ![]({{ base_path }}/images/screenshots/updating-to-b9s-file-layout.png)
+    {: .notice--info}
+
+1. SD 카드를 기기에 다시 삽입해 주세요.
+
+##### Section II - Installing boot9strap
+
+1. (start)를 누른 채 시작해 Luma3DS chainloader 메뉴를 실행해 주세요.
+  + Some versions of Luma3DS will just directly start whichever payload begins with `start_`
+  + If your version does this, just proceed with the instructions
+1. Launch SafeB9SInstaller by pressing (A) on it
+1. Wait for all safety checks to complete
+1. When prompted, input the key combo given to install boot9strap
+1. Once it has completed, press (A) to reboot your device.
+  + If your device shuts down on boot, ensure that you have copied `boot.firm` from the Luma3DS `.7z` to the root of your SD card
+
+##### 섹션 III - Luma3DS 설정
+
+This section is only needed if you are prompted with the Luma3DS configuration menu after the reboot.
+{: .notice--info}
+
+1. In the Luma3DS configuration menu, use the (A) button and the D-Pad to turn on the following:    
+  + **"Show NAND or user string in System Settings"**
+1. (start)를 눌러 저장하고 기기를 다시 시작해 주세요.
+
+##### 섹션 IV - CTRNAND Luma3DS
+
+1. (start)를 누른 채 시작해 Luma3DS chainloader 메뉴를 실행해 주세요.
+1. (A)를 눌러 GodMode9을 실행해 주세요.
+1. Navigate to `[0:] SDCARD` -> `luma` -> `payloads`
+1. Press (X) on `start_SafeB9SInstaller.bin` to delete it
+1. (A)를 눌러 주세요.
+1. Press (B) to return to `[0:] SDCARD`
+1. Press (Y) on `boot.firm` to copy it
+1. (B)를 눌러 메인 메뉴로 돌아가 주세요.
+1. `[1:] SYSNAND CTRNAND`로 이동해 주세요.
+1. Press (Y) to paste a copy of `boot.firm`
+1. "Copy path(s)"를 선택해 주세요.
+1. (A)를 눌려 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요.
+1. Press (X) on `arm9loaderhax.bin` to delete it
+  + If you do not have this file, just proceed with the instructions
+1. (A)를 눌러 주세요.
+1. (B)를 눌러 메인 메뉴로 돌아가 주세요.
+1. (R) 버튼과 (B)를 동시에 눌러 SD 카드를 뺄 준비를 해 주세요.
+1. SD 카드를 기기에서 빼 주세요.
+1. SD 카드가 제거된 상태에서 (start)를 눌러 기기를 다시 시작해 주세요.
+  + SD 카드가 제거된 상태에서 시작해 Luma3DS 설치에 기반한 CTRNAND를 구성합니다.
+1. (A)와 십자 버튼을 이용해 다음 설정을 설정해 주세요:    
+  + **"Show NAND or user string in System Settings"**
+1. SD 카드를 기기에 다시 삽입해 주세요.
+1. (start)를 눌러 저장하고 기기를 다시 시작해 주세요.
+
+##### Section V - Installing Luma3DS Updater
+
+1. Launch FBI
+1. `SD` -> `cias`로 이동해 주세요.
+1. Select `lumaupdater-v2.0.cia`
+1. Select the "Install CIA" option, then press (A) to confirm
+1. (Home)을 눌러 FBI를 종료해 주세요.
+
+___
+
+You can now remove any arm9loaderhax related files from your SD card, such as `arm9loaderhax.bin` on the root of your SD card and the `aeskeydb.bin` file in the `files9` folder on your SD card.
+{: .notice--info}
+
+Note that `firm0firm1.bak` and `sector0x96.bak` in the `/boot9strap/` folder on your SD card are only needed in the event of a failed boot9strap install. Once you have installed successfully, you can delete the entire `boot9strap` folder.
+{: .notice--info}
+
+This fork of Luma3DS Updater allows for boot9strap compatibility by downloading and extracting the latest Luma3DS `boot.firm` for you.
+{: .notice--info}
+
+{% capture notice-6 %}   
+앞으로 (Select)를 누른 채 기기를 부팅시키면 Luma3DS 설정 메뉴가 실행됩니다.    
+You can now hold (Start) on boot to launch the Luma3DS chainloader menu (note that the Luma3DS chainloader menu is only displayed if there is more than one payload detected).
+You can now hold (Start) + (Select) + (X) on boot to dump the ARM11 bootrom (`boot11.bin`), the ARM9 bootrom (`boot9.bin`), and your console unique OTP (`OTP.bin`) to the `/boot9strap/` folder on your SD card (note that this will not have any kind of prompt or message).
+{% endcapture %}
+
+<div class="notice--info">{{ notice-6 | markdownify }}</div>
