@@ -8,7 +8,7 @@ header:
   cta_label: "從頭開始" #
   cta_url: "/zh_TW/get-started" #
   caption:
-excerpt: "A complete guide to 3DS custom firmware, <br /> from stock to boot9strap.<br />" #
+excerpt: "最完整的 3DS 改機教戰手冊，<br />教你如何從原廠韌體改成 boot9strap。<br />" #
 lang: zh_TW
 permalink: /zh_TW/index.html
 ---
@@ -33,26 +33,27 @@ permalink: /zh_TW/index.html
 
 [**自製程式**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games)（Homebrew）通常是指未經由任天堂所授權之軟體。 透過它，你可以遊玩自製遊戲、使用存檔修改器及備份器等工具，甚至是其他系統的模擬器。
 
-In most cases, running homebrew on your device is 100% free using [just the Nintendo 3DS Sound app](homebrew-launcher-(soundhax)). 除此之外，還有其他方式可以用來運行自製程式，像是透過遊戲和網頁瀏覽器中各式各樣的漏洞。
+在大多數情況下，你[只需要使用 3DS 內建音樂撥放器](homebrew-launcher-(soundhax))就可以在主機上運行自製軟體。 除此之外，還有其他方式可以用來運行自製程式，像是透過遊戲和網頁瀏覽器中各式各樣的漏洞。
 
 ## 什麼是自製韌體？
 
 **自製韌體** （CFW） 可以做些使用者空間底下自製程式無法輕易達到更高階的修改及破解。 例如，簽證補丁（Signature patches）可以安裝讓任一未簽證的程式到你的主選單上。
 
-CFW can be easily set up on any console that is on 11.4.0 or lower.
+在主機版本 11.4.0 或先前的系統上安裝自製韌體是再簡單不過的了。
 
 ## 本教學將安裝些什麼？
 
 此教學的目的是將未改機的 3DS 從原廠
-firmware to boot9strap powered Custom Firmware. 某些系統版本中，它會將自製程式當作跳板，但主要目的還是為了安裝自製韌體。
+韌體改為基於 boot9strap 的自製韌體。 某些系統版本中，它會將自製程式當作跳板，但主要目的還是為了安裝自製韌體。
 
-boot9strap is the newest and best method of launching Custom Firmware that gives us nearly full control of the system only milliseconds into boot, which is similar to the effect of BootMii for the Wii. It gives us even earlier control than arm9loaderhax did, and, unlike standard sighax, boot9strap uses an NDMA overwrite exploit in order to gain Boot9 code execution. This means that any console running boot9strap is capable of dumping the console unique OTP (`OTP.bin`), the ARM11 bootrom (`boot11.bin`), and the ARM9 bootrom (`boot9.bin`).
+boot9strap 是目前最新且最棒的自製韌體啟動方式，有點像 Wii 上面的 BootMii 一樣，光是在開機前幾毫秒就能掌握整台主機的控制權。 它跟 arm9loaderhax 相比能更早取得系統控制權，再加上它跟普通的 sighax 不同，boot9strap 使用
+ NDMA 複寫漏洞，於 Boot9 中執行程序。 這也就是說，任何已安裝 boot9strap 的主機皆能轉儲主機中的 OTP 金鑰（`OTP.bin`）、ARM11 bootrom（`boot11.bin`）以及 ARM9 bootrom（`boot9.bin`）。
 
-The benefits of boot9strap over other Custom Firmware launch methods are numerous, and as such it is recommended to use this guide over any other that relies on outdated software (such as menuhax + rxTools, arm9loaderhax, or even normal sighax).
+跟其他自製韌體比起來，boot9strap 的優點多太多了。這就是為什麼我們推薦使用本篇教學，而非其他還在使用過時軟體（像是 menuhax + rxTools、arm9loaderhax、或甚至普通的 sighax）的教學。
 
-For information on how boot9strap works, please see [this presentation](https://sciresm.github.io/33-and-a-half-c3/) by [SciresM](https://github.com/SciresM/).
+如果想知道 boot9strap 怎麼運作的，請見由 [SciresM](https://github.com/SciresM/) 所做的[投影片](https://sciresm.github.io/33-and-a-half-c3/)。
 
-For a list of each of the calculated sighax signatures (the platform boot9strap is built on), see [this gist](https://gist.github.com/SciresM/cdd2266efb80175d37eabbe86f9d8c52).
+如果想看每個計算出的 sighax 簽證檔（boot9strap 平台的基底），請見[此 gist](https://gist.github.com/SciresM/cdd2266efb80175d37eabbe86f9d8c52)。
 
 ## 自製韌體可以做些什麼？
 
@@ -71,8 +72,8 @@ For a list of each of the calculated sighax signatures (the platform boot9strap 
 ## 我在開始前需要知道什麼？
 
 + **在開始前，你一定得注意 3DS 改機的風險：每當你修改系統時，都有可能造成無法挽回的磚機或死機。 這種情況是滿罕見的，但是還是有可能的。所以請確保遵守所有的步驟。**
-+ If you have already hacked your 3DS before to get an EmuNAND setup, and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, you should follow all instructions and restore your existing EmuNAND when prompted once you reach [Finalizing Setup](finalizing-setup).
-+ This guide will work on New 3DS, Old 3DS, and 2DS in all regions on firmware 11.4.0 or below.
++ 如果你之前已透過 EmuNAND 的方式改機，而你現在想把你之前的 EmuNAND 移植到你新的 SysNAND 自製韌體底下，你可以在依正常步驟進行，並在[完成安裝](finalizing-setup)這一步中依照提示還原的你 EmuNAND。
++ 本教學適用於任一地區且搭載 11.4.0 或更早版本的 New 3DS、舊型 3DS、及 2DS 上 **。
 + 如果一切都很順利的話，你將不會失去任何資料（像是遊戲、NNID、存檔...等都會被留下）。
 + **請在充電的情況下改機，以確保途中不會因為電力關係而突然關機造成資料遺失或甚至毀損！**
 + 你的 SD 卡應該是 [MBR 的格式，而非 GPT](http://www.howtogeek.com/245610/)（原廠 SD 卡一律都是以 MBR 格式出廠）。
