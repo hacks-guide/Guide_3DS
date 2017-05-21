@@ -1,0 +1,234 @@
+---
+title: "GodMode9 사용" #
+lang: ko
+permalink: /ko_KR/godmode9-usage.html
+---
+
+GodMode9은 닌텐도 3DS 콘솔의 완전한 파일 관리자이며, SD 카드와 SysNAND와 EmuNAND 안의 FAT 파티션에 접근하고 근본적인 것을 수정할 권한을 줍니다. 다른 기능로는 파일의 복사, 삭제, 이름 바꾸기와 폴더 만기 등이 있습니다.
+{: .notice--primary}
+
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+{: .notice--info}
+
+{% capture notice %}
+이것은 3DS 콘솔에서 사용할 수 있는 모든 시스템 데이터를 근본적으로 가능한 모든 수정을 할 수 있는 강력한 권한을 줍니다. 하지만 실수로 콘솔의 데이터를 손상하지 않도록 경고창이 뜹니다.
+<br><br>
+시스템 쓰기 권한 사용 시 경고창과 키 조합 입력 시스템 제공을 통해 시스템 손상을 막습니다. 모든 중요한 파일과 폴더을 덮어쓰거나 수정하는 것은 이러한 잠금 풀기 과정을 거쳐야 하며 실수로 잠금을 푸는 것은 불가능합니다. 항상 총명하게 생각하고, 백업을 생활하며, 안전을 추구해 주세요.
+{% endcapture %}
+
+<div class="notice--danger">{{ notice | markdownify }}</div>
+
+## <a name="nand_backup" /> NAND 백업 생성
+
+#### 진행 방법
+
+1. (Start)를 누른 채 시작해 Luma3DS chainloader 메뉴를 실행해 주세요.
+1. (A)를 눌러 GodMode9을 실행해 주세요.
+1. (Home)을 눌러 작업 메뉴를 띄워 주세요.
+1. "More..."를 선택해 주세요.
+1. "Backup NAND"를 선택해 주세요.
+1. (A)를 눌러 진행해 주세요.
+1. (R)과 (B)를 동시에 누른 후 SD 카드를 빼 주세요.
+1. SD 카드를 컴퓨터에 삽입해 주세요.
+1. SD 카드 최상단의 `/gm9out/` 폴더의 `nand.bin`을 컴퓨터의 안전한 위치에 복사해 주세요.
+  + 이전에 SafeCTRTransfer를 사용했고 이름이 `<serialnumber>_nand.bin`인 NAND 백업이 있다면 이 파일로 바꿔 주세요.
+(`nand.bin`의 이름을 `<serialnumber>_nand.bin`으로 바꿔 주세요.)
+  + 여러 위치에 백업을 해 주세요. (온라인 파일 저장 공간 등)
+  + 나중에 문제가 생겨 기기가 벽돌이 되었을 때 이 백업으로 기기를 살릴 수 있습니다.
+1. SD 카드의 `/gm9out/` 폴더에서 `nand.bin`을 삭제해 주세요.
+1. SD 카드를 기기에 다시 삽입해 주세요.
+
+## <a name="nand_restore" /> NAND 백업 복구
+
+#### 진행 방법
+
+1. (start)를 누른 채 시작해 Luma3DS chainloader 메뉴를 실행해 주세요.
+1. (A)를 눌러 GodMode9을 실행해 주세요.
+1. `[0:] SDCARD`로 이동해 주세요.
+1. `NAND.bin`에 (A)를 눌러 선택하고 "NAND image options..."를 선택하고 "Restore SysNAND (safe)"를 선택해 주세요.
+1. (A)를 눌러 SysNAND 덮어쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요.
+  + This will not overwrite your boot9strap installation
+1. SysNAND (lvl1) 쓰기의 잠금을 풀기 위해 주어진 키 조합을 입력해 주세요.
+  + 이 과정은 시간이 좀 걸릴 것입니다.
+1. 작업이 완료되면 (A)를 눌려 계속해 주세요.
+
+## <a name="injectHS" /> 모든 .CIA 앱 안전을 위한 주의사항에 주입
+
+#### 준비 작업
+
++ 작업에 앞서, 주입하고자 하는 `.cia` 파일을 SD 카드의 `/cias/` 폴더에 복사해 주세요.
+    + 안전을 위한 주의사항 앱보다 용량이 큰 파일은 주입할 수 없다는 점을 숙지해 주세요. (용량이 큰 게임과 다른 애플리케이션 등)
+
+#### 진행 방법
+
+1. (Start)를 누른 채 시작해 Luma3DS chainloader 메뉴를 실행해 주세요.
+1. (A)를 눌러 GodMode9을 실행해 주세요.
+1. `[0:] SDCARD` -> `cias`로 이동해 주세요.
+1. `.cia`에 (A)를 눌러 선택하고 "CIA image options..."를 선택하고 "Mount image to drive"를 선택해 주세요.
+1. `.app` 파일에 (A)를 부르고 "NCCH image options"를 선택하고 "Inject to H&S"를 선택해 주세요.
+1. (A)를 눌러 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요.
+1. (A)를 눌러 계속해 주세요.
+
+## <a name="restore_hs" /> .CIA 앱 주입 이후 안전을 위한 주의사항 복구
+
+이 과정은 Godmode9(Decrypt9 또는 Hourglass9가 아닌)을 통해 안전을 위한 주의사항을 주입했을 경우에만 적용됩니다.
+{: .notice--info}
+
+#### 진행 방법
+
+1. (Start)를 누른 채 시작해 Luma3DS chainloader 메뉴를 실행해 주세요.
+1. (A)를 눌러 GodMode9을 실행해 주세요.
+1. (Home)을 눌러 작업 메뉴를 띄워 주세요.
+1. "More..."를 선택해 주세요.
+1. "Restore H&S"를 선택해 주세요.
+1. (A)를 눌려 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요.
+
+## <a name="dump_cart" /> 게임 카드 추출
+
+#### 준비 작업
+
++ 기기에 추출하고자 하는 게임 카드를 삽입해 주세요.
+    + 3DS 게임 카드는 설치가 가능한 `.cia` 형식으로 추출됩니다.
+    + NDS 게임 게임 카드는 설치가 불가능하고 플래시 게임 카드와 에뮬레이터에서만 실행이 가능한 `.nds` 형식으로 추출됩니다.
+
+#### 진행 방법
+
+1. (Start)를 누른 채 시작해 Luma3DS chainloader 메뉴를 실행해 주세요.
+1. (A)를 눌러 GodMode9을 실행해 주세요.
+1. `[C:] GAMECART`로 이동해 주세요.
+1. 게임 카드에 맞게 해당 과정을 참고해 주세요.
+  + **3DS 게임 카드:** `[TitleID].trim.3ds`에 (A)를 눌러 선택하고 "NCSD image options..."를 선택하고 "Build CIA from file"을 선택해 주세요.
+  + **NDS 게임 카드:** `[TitleID].trim.nds`에 (A)를 눌러 선택하고 "Copy to 0:/gm9out"을 선택해 주세요.
+1. 설치가 가능한 `.cia` 파일이나 설치가 불가능한 `.nds` 파일은 SD 카드의 `/gm9out/` 폴더에 출력됩니다.
+
+## <a name="dump_title" /> 타이틀 추출
+
+추출하고자 하는 설치된 타이틀의 타이틀 ID를 얻기 위해 FBI의 `Titles` 메뉴를 사용해 주세요.
+{: .notice--info}
+
+#### 진행 방법
+
+1. (Start)를 누른 채 시작해 Luma3DS chainloader 메뉴를 실행해 주세요.
+1. (A)를 눌러 GodMode9을 실행해 주세요.
+1. 추출할 타이틀 유형에 해당하는 드라이브로 이동해 주세요.
+  + **사용자가 설치한 타이틀**: '[A:] SYSNAND SD`로 이동해 주세요.
+  + **시스템 타이틀**:`[1:] SYSNAND CTRNAND`로 이동해 주세요.
+1. `title`로 이동해 주세요.
+1. 타이틀 ID의 처음 8자리에 해당하는 폴더로 이동해 주세요.
+1. 타이틀 ID의 마지막 8자리에 해당하는 폴더로 이동해 주세요.
+1. `content`로 이동해 주세요.
+1. `.tmd` 파일에 (A)를 눌러 선택하고 "TMD file options..."를 선택하고 "Show title info"를 선택해 주세요.
+1. 올바른 타이틀을 찾았는지 확인해 주세요.
+1. (B)를 눌러 타이틀 정보를 닫아 주세요.
+1. `.tmd` 파일에 (A)를 눌러 선택하고 "TMD file options..."를 선택하고 "Build CIA (standard)"를 선택해 주세요.
+1. 설치 가능한`.cia` 형식의 파일은 SD 카드의`/ gm9out /`폴더에 출력됩니다.
+
+## <a name="convert_3ds" /> .3DS 파일을 .CIA 파일로 변환
+
+#### 준비 작업
+
++ 작업에 앞서, 변환하고자 하는 모든 `.3ds` 파일을 SD 카드의 `/cias/` 폴더에 복사해 주세요.
+    + 이미 플래시 게임 카드에 있는`.3ds` 파일을 변환하려면 [게임 카드 추출](# dump_cart) 가이드를 참고해 주세요.
+
+#### 진행 방법
+
+1. (start)를 누른 채 시작해 Luma3DS chainloader 메뉴를 실행해 주세요.
+1. (A)를 눌러 GodMode9을 실행해 주세요.
+1. `[0:] SDCARD` -> `cias`로 이동해 주세요.
+1. `.3ds` 파일에 (A)를 눌러 선택하고 "NCSD image options..."를 선택하고 "Build CIA from file"를
+을 선택해 주세요.
+1. 설치 가능한`.cia` 형식의 파일은 SD 카드의`/ gm9out /`폴더에 출력됩니다.
+
+## <a name="backup_gba" /> GBA VC 저장 데이터 백업
+
+#### 진행 방법
+
+1. 기기를 종료해 주세요.
+1. SD 카드를 컴퓨터에 삽입해 주세요.
+1. 백업하고자 하는 모든 GBA VC 게임 저장 데이터의 폴더를 `/files9/` 폴더에 각각 만들어 주세요.
+1. SD 카드를 기기에 다시 삽입해 주세요.
+1. 기기를 시작해 주세요.
+1. 과정대로 진행해 저장 데이터를 백업하려는 모든 GBA VC 게임 저장 데이터를 백업해 주세요.
+  + GBA VC 게임을 실행해 주세요.
+  + GBA VC 게임을 종료해 주세요.
+  + (start)를 누른 채 기기를 시작해 Luma3DS chainloader 메뉴를 실행해 주세요.
+  + (A)를 눌러 GodMode9을 실행해 주세요.
+  + `[S:] SYSNAND VIRTUAL`로 이동해 주세요.
+  + `gbavc.sav`에 (Y)를 눌러 복사해 주세요.
+  + (B)를 눌러 메인 메뉴로 돌아가 주세요.
+  + `[0:] SDCARD` -> `files9`으로 이동해 주세요.
+  + 이 GBA VC 게임을 위해 만든 폴더로 이동해 주세요.
+  + (Y)를 눌러 `gbavc.sav`를 붙여넣어 주세요.
+  + (start)를 눌러 기기를 다시 시작해 주세요.
+
+## <a name="restore_gba" /> GBA VC 저장 데이터 복구
+
+#### 진행 방법
+
+1. `/files9/`에 복원하고자 하는 GBA VC 게임의 저장 데이터가 있는 폴더가 있는지 확인해 주세요.
+1. 과정대로 진행해 백업하고자 하는 GBA VC 게임 저장 데이터를 저장해 주세요.
+  + GBA VC 게임을 실행해 주세요.
+  + GBA VC 게임을 종료해 주세요.
+  + (start)를 누른 채 기기를 시작해 Luma3DS chainloader 메뉴를 실행해 주세요.
+  + (A)를 눌러 GodMode9을 실행해 주세요.
+  + `[0:] SDCARD` -> `files9`으로 이동해 주세요.
+  + 이 GBA VC 게임을 위해 만든 폴더로 이동해 주세요.
+  + `gbavc.sav`에 (Y)를 눌러 복사해 주세요.
+  + (B)를 눌러 메인 메뉴로 돌아가 주세요.
+  + `[S:] SYSNAND VIRTUAL`로 이동해 주세요.
+  + (Y)를 눌러 `gbavc.sav`를 붙여넣어 주세요.
+  + (A)를 눌러 주세요.
+  + (start)를 눌러 기기를 다시 시작해 주세요.
+
+## <a name="format_sd" /> SD 카드 포맷
+
+**이 과정 중 SD 카드의 모든 정보가 지워진다는 것을 명심해 주세요!**
+{: .notice--danger}
+
+#### 진행 방법
+
+1. (start)를 누른 채 시작해 Luma3DS chainloader 메뉴를 실행해 주세요.
+1. (A)를 눌러 GodMode9을 실행해 주세요.
+1. (Home)을 눌러 작업 메뉴를 띄워 주세요.
+1. "More..."를 선택해 주세요.
+1. "SD format menu"를 선택해 주세요.
+1. 사용하고자 하는 모든 EmuNAND 설정을 선택해 주세요.
+  + 대부분의 사용자는 "No EmuNAND"를 선택하고 싶을 겁니다.
+1. "Auto"를 선택해 주세요.
+1. (A)를 눌러 `GM9SD` 레이블에 동의해 주세요.
+  + 선택적으로 SD 카드에 사용자 지정 이름을 입력할 수 있습니다.
+1. 메시지가 나타나면 사용을 확인하기 위해 주어진 키 조합을 입력해 주세요.
+
+## <a name="payload_chain" /> ARM9 페이로드 체인로드
+
+#### 진행 방법
+
+1. (start)를 누른 채 시작해 Luma3DS chainloader 메뉴를 실행해 주세요.
+1. (A)를 눌러 GodMode9을 실행해 주세요.
+1. 열려는 ARM9 페이로드로 이동해 주세요.
+    + ARM9 페이로드 파일은 일반적으로 '.bin'으로 끝납니다.
+    + 다만 이것이 '.bin'으로 끝나는 모든 파일이 ARM9 페이로드라는 뜻은 아닙니다.
+    + ARM9 페이로드의 몇몇 예로는 Luma3DS, Decrypt9 및 GodMode9이 있습니다.
+1. ARM9 페이로드 '.bin'에 (A)를 눌러 선택하고 "Launch as arm9 Payload"를 선택해 주세요.
+1. 메시지가 나타나면 ARM9 페이로드 실행을 확인하기 위해 주어진 키 조합을 입력해 주세요.
+
+## <a name="crypt_cia" /> .CIA 파일 암호화 / 복호화
+
+#### 준비 작업
+
++ 작업에 앞서, 암호화 / 복호화하고자 하는 모든 `.cia` 파일을 SD 카드의 `/cias/` 폴더에 복사해 주세요.
+
+#### 진행 방법
+
+1. (start)를 누른 채 시작해 Luma3DS chainloader 메뉴를 실행해 주세요.
+1. (A)를 눌러 GodMode9을 실행해 주세요.
+1. `[0:] SDCARD` -> `cias`로 이동해 주세요.
+1. `.cia` 파일에 (A)를 눌러 선택하고 "CIA image options..."를 선택해 주세요.
+1. 원하는 기능 설정을 선택해 주세요:
+    + **0:/gm9out으로 암호화:** SD 카드의
+`/gm9out/` 폴더에 선택한 암호화된 `.cia` 파일을 복사해 주세요.
+    + **0:/gm9out으로 복호화:** SD 카드의
+`/gm9out/` 폴더에 선택한 복호화된 `.cia` 파일을 복사해 주세요.
+    + **내부로 암호화:** 선택한 `.cia` 파일을 암호화한 버전으로 바꿔 주세요.
+    + **내부로 복호화:** 선택한 `.cia` 파일을 복호화한 버전으로 바꿔 주세요.
+1. 암호화 / 복호화된 `.cia`는 원하는 위치에 출력됩니다.
