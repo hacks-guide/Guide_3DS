@@ -1,0 +1,162 @@
+---
+title: "EmuNAND 기반 데이터 이동" #
+lang: ko
+permalink: /ko_KR/move-emunand.html
+---
+
+이 페이지는 이전 EmuNAND의 데이터를 새로운 CFW SysNAND로 옮기고 이전 EmuNAND 파티션을 제거하는 방법을 안내하는 부가 섹션입니다. EmuNAND와 RedNAND는 [동일한 개념](http://3dbrew.org/wiki/NAND_Redirection)을 다른 방식으로 구현한 것입니다.
+{: .notice--info}
+
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+{: .notice--info}
+
+**You MUST have already installed Luma3DS and boot9strap or arm9loaderhax to use this.**
+{: .notice--danger}
+
+#### 준비물
+
+* 설치된 EmuNAND
+* 최신 버전의 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* 최신 버전의 [FBI](https://github.com/Steveice10/FBI/releases/latest)
+
+#### 진행 방법
+
+##### 섹션 I - 준비 작업
+
+1. 기기를 종료해 주세요.
+1. SD 카드를 컴퓨터에 삽입해 주세요.
+1. Copy `GodMode9.firm` (or `GodMode9.bin` for arm9loaderhax users) from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
+1. SD 카드를 기기에 다시 삽입해 주세요.
+
+##### 섹션 II - SysNAND DSiWare 저장 데이터 백업
+
+DSiWare 게임이나 저장 데이터에 대해 신경 쓰지 않는다연 이 섹션을 건너뛰어 주세요.
+{: .notice--info}
+
+1. (start)를 누른 채 시작해 Luma3DS chainloader 메뉴를 실행해 주세요.
+1. (A)를 눌러 GodMode9을 실행해 주세요.
+1. `[2:] SYSNAND TWLN` -> `title`로 이동해 주세요.
+1. `00030004` 폴더에 (R)을 누른 채 (A)를 눌러 선택하고 "Copy to 0:/gm9out"을 선택해 주세요.
+  + 이 과정은 기기에 DSiware 게임이 많다면 시간이 좀 걸릴 수 있습니다.
+1. (B)를 두 번 눌러 메인 메뉴로 돌아가 주세요.
+
+##### 섹션 III - GBA VC 저장 데이터 백업
+
+GBA VC 게임이나 저장 데이터에 대해 신경 쓰지 않는다면 이 섹션을 건너뛰어 주세요.
+{: .notice--info}
+
+다른 종류의 버추얼 콘솔 게임(GBC, FC, 기타)에서 이 과정은 불필요합니다.
+{: .notice--info}
+
+1. (R)을 누른 채 (start)를 눌러 기기를 종료해 주세요.
+1. SD 카드를 컴퓨터에 삽입해 주세요.
+1. SD 카드의 최상위 경로에 `files9` 폴더가 없을 경우 폴더를 만어 주세요.
+1. 백업하고자 하는 GBA VC 게임 저장 데이터의 폴더를 `/files9/`에 각각 만들어 주세요. 
+1. SD 카드를 기기에 다시 삽입해 주세요.
+1. 기기를 SysNAND 상태로 시작해 주세요.
+1. 과정대로 진행해 백업하고자 하는 GBA VC 게임 저장 데이터를 저장해 주세요.
+  + SysNAND에서 GBA VC 게임을 실행해 주세요.
+  + GBA VC 게임을 종료해 주세요.
+  + (start)를 누른 채 기기를 시작해 Luma3DS chainloader 메뉴를 실행해 주세요.
+  + (A)를 눌러 GodMode9을 실행해 주세요.
+  + `[S:] SYSNAND VIRTUAL`로 이동해 주세요.
+  + `gbavc.sav`에 (Y)를 눌러 복사해 주세요.
+  + (B)를 눌러 메인 메뉴로 돌아가 주세요.
+  + `[0:] SDCARD` -> `files9`으로 이동해 주세요.
+  + 이 GBA VC 게임을 위해 만든 폴더로 이동해 주세요.
+  + (Y)를 눌러 `gbavc.sav`를 붙여넣어 주세요.
+  + (start)를 눌러 기기를 다시 시작해 주세요.
+1. (start)를 누른 채 시작해 Luma3DS chainloader 메뉴를 실행해 주세요.
+1. (A)를 눌러 GodMode9을 실행해 주세요.
+
+##### 섹션 IV - EmuNAND를 SysNAND로 복사
+
+1. `[E:] EMUNAND VIRTUAL`로 이동해 주세요.
+1. `nand.bin`에 (A)를 눌러 선택하고 "NAND image options..."를 선택하고 "Restore SysNAND (safe)"를 선택해 주세요.
+1. (A)를 눌러 SysNAND 덮어쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요.
+  + 이 과정은 arm9loaderhax 설치를 덮어쓰지 않을 것입니다.
+1. SysNAND (lvl1) 쓰기 잠금을 풀기 위해 주어진 키 조합을 입력해 주세요.
+  + 이 과정은 시간이 좀 걸릴 것입니다.
+1. 작업이 완료되면 (A)를 눌려 계속해 주세요.
+1. (B)를 눌러 메인 메뉴로 돌아가 주세요.
+
+##### 섹션 V - DSiWare 저장 데이터 파일 복원
+
+이전에 DSiWare 저장 데이터를 백업하지 않았다면 이 섹션을 건너뛰어 주세요.
+{: .notice--info}
+
+1. `[0:] SDCARD` -> `gm9out`으로 이동해 주세요.
+1. `00030004` 폴더에 (Y)를 눌러 복사해 주세요.
+1. (B)를 두 번 눌러 메인 메뉴로 돌아가 주세요.
+1. `[2:] SYSNAND TWLN` -> `title`로 이동해 주세요.
+1. (Y)를 눌러 `00030004` 폴더를 붙여넣어 주세요.
+1. "Copy path(s)"를 선택해 주세요.
+1. (A)를 눌려 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요.
+1. "Overwrite file(s)"를 선택해 주세요.
+  + 이 과정은 기기에 DSiware 게임이 많다면 시간이 좀 걸릴 수 있습니다.
+1. (B)를 두 번 눌러 메인 메뉴로 돌아가 주세요.
+
+##### 섹션 VI - GBA VC 저장 데이터 파일 복원
+
+이전에 GBA VC 저장 데이터를 백업하지 않았다면 이 섹션을 건너뛰어 주세요.
+{: .notice--info}
+
+1. (R)을 누른 채 (start)를 눌러 기기를 종료해 주세요.
+1. 기기를 SysNAND 상태로 시작해 주세요.
+1. 과정대로 진행해 백업하고자 하는 GBA VC 게임 저장 데이터를 저장해 주세요.
+  + SysNAND에서 GBA VC 게임을 실행해 주세요.
+  + GBA VC 게임을 종료해 주세요.
+  + (start)를 누른 채 기기를 시작해 Luma3DS chainloader 메뉴를 실행해 주세요.
+  + (A)를 눌러 GodMode9을 실행해 주세요.
+  + `[0:] SDCARD` -> `files9`으로 이동해 주세요.
+  + 이 GBA VC 게임을 위해 만든 폴더로 이동해 주세요.
+  + `gbavc.sav`에 (Y)를 눌러 복사해 주세요.
+  + (B)를 눌러 메인 메뉴로 돌아가 주세요.
+  + `[S:] SYSNAND VIRTUAL`로 이동해 주세요.
+  + (Y)를 눌러 `gbavc.sav`를 붙여넣어 주세요.
+  + (A)를 눌러 주세요.
+  + (start)를 눌러 기기를 다시 시작해 주세요.
+1. (start)를 누른 채 시작해 Luma3DS chainloader 메뉴를 실행해 주세요.
+1. (A)를 눌러 GodMode9을 실행해 주세요.
+
+# 섹션 VII - SysNAND 백업
+
+1. (Home)을 눌러 작업 메뉴를 띄워 주세요.
+1. "More..."를 선택해 주세요.
+1. "Backup NAND"를 선택해 주세요.
+1. (A)를 눌러 진행해 주세요.
+1. (R) 버튼과 (B)를 동시에 눌러 SD 카드를 뺄 준비를 해 주세요.
+1. SD 카드를 컴퓨터에 삽입해 주세요.
+1. SD 카드 최상단의 `/gm9out/` 폴더의 `nand.bin`을 컴퓨터의 안전한 위치에 복사해 주세요.
+  + 이전에 SafeCTRTransfer를 사용했고
+ 이름이 `<serialnumber>_nand.bin`인 NAND 백업이 있다면 이 파일로 바꿔 주세요. (`nand.bin`의 이름을 `<serialnumber>_nand.bin`으로 바꿔 주세요.)
+  + 여러 위치에 백업을 해 주세요. (온라인 파일 저장 공간 등)
+  + 나중에 문제가 생겨 벽돌이 되었을 때 이 백업으로 기기를 살릴 수 있습니다.
+1. SD 카드의 `/gm9out/` 폴더에서 `nand.bin`을 삭제해 주세요.
+1. **SD 카드의 모든 파일을 컴퓨터에 백업해두세요. 다음 단계에서 SD 카드의 모든 파일이 삭제됩니다.**
+
+##### 섹션 VIII - SD 카드 포맷
+
+1. SD 카드를 기기에 다시 삽입해 주세요.
+1. (Home)을 눌러 작업 메뉴를 띄워 주세요.
+1. "More..."를 선택해 주세요.
+1. "SD format menu"를 선택해 주세요.
+1. (A)를 눌러 주세요.
+1. "No EmuNAND"를 선택해 주세요.
+1. "Auto"를 선택해 주세요.
+1. (A)를 눌러 `GM9SD` 레이블에 동의해 주세요.
+  + 선택적으로 SD 카드에 사용자 지정 이름을 입력할 수 있습니다.
+1. 메시지가 나타나면 사용을 확인하기 위해 주어진 키 조합을 입력해 주세요.
+1. (R) 버튼과 (B)를 동시에 눌러 SD 카드를 뺄 준비를 해 주세요.
+1. SD 카드를 컴퓨터에 삽입해 주세요.
+1. SD 카드의 모든 파일을 도로 복사해 주세요.
+  + Ensure you replace the `boot.firm` file on your SD card with the one from your backup
+1. SD 카드를 기기에 다시 삽입해 주세요.
+1. (A)를 눌러 SD 카드를 다시 마운트해 주세요.
+1. (start)를 눌러 저장하고 기기를 다시 시작해 주세요.
+1. 블랙 스크린이 뜨면 이 [문제 해결 가이드](troubleshooting#ts_sys_down)를 참고해 주세요.
+
+___
+
+Return to [Finalizing Setup](finalizing-setup).
+{: .notice--primary}
