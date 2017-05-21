@@ -1,0 +1,59 @@
+---
+title: "安裝 boot9strap（透過 Homebrew Launcher）" #
+lang: zh-Hant
+permalink: /zh_TW/installing-boot9strap-(homebrew-launcher).html
+---
+
+如果你先前已經有改機過，且已安裝基於 EmuNAND 的自製系統－請注意本教學是專門用來處理 SysNAND 的，而你應在閱讀此教學時在 SysNAND 底下操作或套用至 SysNAND。 注意 EmuNAND 與 RedNAND 指的是些微不同運作方式但[同樣道理](http://3dbrew.org/wiki/NAND_Redirection)的用語。
+{: .notice--info}
+
+本頁面會有些許的[磁力](https://en.wikipedia.org/wiki/Magnet_URI_scheme)連結，你將需要個像 [Deluge](http://dev.deluge-torrent.org/wiki/Download) 的 BT 種子下載器來下載磁力連結的檔案。
+{: .notice--success}
+
+#### 必備項目
+
+* 最新版的 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* 最新版的 [boot9strap](https://github.com/SciresM/boot9strap/releases/latest)
+* 最新版的 [safehax](https://github.com/TiniVi/safehax/releases/latest)
+* 最新版的 [udsploit](https://github.com/smealum/udsploit/releases/latest)
+
+#### 操作說明
+
+##### 第一節 — 準備工作
+
+1. 於 Homebrew Launcher 下，自主機中拔出 SD 卡，並將其插入電腦中
+1. 在 SD 卡的根目錄底下建立一個新的資料夾 `boot9strap`
+1. 解壓 boot9strap `.zip` 的 `boot9strap.firm` 及 `boot9strap.firm.sha` 檔案至 SD 卡的 `/boot9strap/` 資料夾中
+1. 將 `safehax.3dsx` 複製到 SD 卡中的 `/3ds/` 資料夾底下
+1. 將 `udsploit.3dsx` 複製到 SD 卡中的 `/3ds/` 資料夾底下
+1. 解壓 SafeB9SInstaller `.zip` 中的 `SafeB9SInstaller.bin` 到 SD 卡的根目錄下，並將其重新命名為 `safehaxpayload.bin`
+
+    ![]({{ base_path }}/images/screenshots/boot9strap-hb-file-layout.png)
+    {: .notice--info}
+
+1. 將 SD 卡插回主機中
+
+##### 第二節 — 啟動 SafeB9SInstaller
+
+1. 於 Homebrew 清單內啟動 udsploit
+  + 你可能得往下些才會看到此選項
+1. 處理完畢後，按下「Start」鍵退出 udsploit
+  + 可能需要嘗試多次
+  + 如果當機的話，按住電源紐強制重啟你的主機在試一次即可
+1. 於 Homebrew 清單內啟動 safehax
+  + 你可能得往下些才會看到此選項
+  + 如果出現「PM INIT FAILED」錯誤，試試看使用 [r19 版本的 safehax](https://github.com/TiniVi/safehax/releases/tag/r19)
+  + 如果當機的話，按住電源紐強制重啟你的主機在試一次即可
+1. 如果一切成功的話，你將自動進入 SafeB9SInstaller
+
+##### 第三節 — 安裝 boot9strap
+
+1. 等待所有安全性檢查完畢
+1. 出現提示時，輸入提示的按鍵組合以安裝 boot9strap
+1. 過程結束後，按下「A」重啟主機
+1. 你的主機將啟動至 boot9strap 中並自動關機，因為它目前尚無 payload 檔案可供啟動
+
+___
+
+繼續至[完成安裝](finalizing-setup)
+{: .notice--primary}
