@@ -13,8 +13,15 @@ permalink: /he_IL/updating-to-boot9strap.html
 אם יש לכם PIN בLuma, אתם צריכים לכבות אותו זמנית בשביל השלבים האלו או שתקבלו שגיאת "OTP Crypto Fail". אתם יכולים להפעיל אותה מחדש לאחר העדכון.
 {: .notice--warning}
 
-אם יש לכם את התוכנה "3dsafe" מותקנת, אתם תצטרכו למחוק אותה או שתקבלו שגיאת "OTP Crypto Fail". אם אין לכם את הקבצים הדרושים (`sha.bin` או `lost.bin`) כדי למחוק את "3dsafe", דרך למחוק את "3dsafe" (בלי קבצי המחיקה כמו`lost.bin` או `sha.bin`) נחקרת, אז פשוט תחכו בסבלנות.
-{: .notice--warning}
+{% capture notice-1 %}
+
+אם יש לכם את התוכנה "3dsafe" מותקנת, אתם תצטרכו למחוק אותה או שתקבלו שגיאת "OTP Crypto Fail".
+<br><br>
+To do this, extract [the latest release of arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases) (the payload files) to a folder named `a9lh` on the root of your SD card, then boot 3dsafe, input your pin and hold down the last key when you do. From there, while holding this key, press (X) to launch the integrated SafeA9LHInstaller, then press (Select) to "update" to standard arm9loaderhax.
+
+{% endcapture %}
+
+<div class="notice--warning">{{ notice-1 | markdownify }}</div>
 
 **כדי להשתמש בקישורי מגנט, תצטרכו כלי טורנט כמו [Deluge](http://dev.deluge-torrent.org/wiki/Download)**
 {: .notice--success}
