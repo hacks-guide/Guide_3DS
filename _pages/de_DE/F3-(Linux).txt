@@ -1,0 +1,63 @@
+---
+title: "F3 (Linux)" #
+lang: de
+permalink: /de_DE/f3-(linux).html
+---
+
+Dies ist ein Add-on-Abschnitt für die Überprüfung Ihrer SD-Karte für Fehler mit h2testw.
+{: .notice--info}
+
+Basierend auf der Größe der SD-Karte und der Geschwindigkeit deines Computer kann dieser Prozess mehrere Stunden dauern!
+{: .notice--info}
+
+Diese Seite ist nur für Linux-Nutzer gedacht. Falls du kein Linux-Nutzer bist, schaue dir stattdessen [H2testw (Windows)](h2testw-(windows)) oder [F3X (macOS)](f3x-(mac)) an.
+{: .notice--info}
+
+#### Was du brauchst
+
+* Die neueste Version von [F3](https://github.com/AltraMayor/f3/archive/v6.0.zip)
+
+#### Anleitung
+
+1. Entpacke die f3 `.zip`-Datei
+1. Wechsel mit `cd` in das f3-Verzeichnis
+1. Verwende `make`, um F3 zu kompilieren
+1. Stecke deine SD-Karte in deinen Computer
+1. Hänge deine SD-Karte ein
+1. Starte `./fwrite <Dein SD-Karten-Einhängepunkt>`
+1. Warte, bis der Prozess abgeschlossen ist. Folgendermaßen könnte das Ergebnis aussehen:
+
+		$ ./f3write /media/michel/6135-3363/
+		Free space: 29.71 GB
+		Creating file 1.h2w ... OK!
+		...
+		Creating file 30.h2w ... OK!
+		Free space: 0.00 Byte
+		Average Writing speed: 4.90 MB/s
+
+1. Starte `./f3read <your sd card mount point>`
+1. Warte, bis der Prozess abgeschlossen ist. Folgendermaßen könnte das Ergebnis aussehen.
+
+		$ ./f3read /media/michel/6135-3363/
+		                  SECTORS      ok/corrupted/changed/overwritten
+		Validating file 1.h2w ... 2097152/        0/      0/      0
+		...
+		Validating file 30.h2w ... 1491904/        0/      0/      0
+
+		  Data OK: 29.71 GB (62309312 sectors)
+		Data LOST: 0.00 Byte (0 sectors)
+			       Corrupted: 0.00 Byte (0 sectors)
+			Slightly changed: 0.00 Byte (0 sectors)
+			     Overwritten: 0.00 Byte (0 sectors)
+		Average Reading speed: 9.42 MB/s
+
+___
+
+Wenn der Test das Ergebnis `Data LOST: 0.00 Byte (0 sectors)` anzeigt, ist deine SD-Karte einwandfrei und du kannst alle `.h2w` Dateien von der SD-Karte löschen
+{: .notice--success}
+
+Falls es jedoch ein anderes Ergebnis anzeigen sollte, ist deine SD-Karte möglicherweise beschädigt. Du solltest diese möglicherweise austauschen!
+{: .notice--danger}
+
+Zurück zu [Los geht's](get-started)
+{: .notice--primary}
