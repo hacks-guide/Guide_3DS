@@ -1,0 +1,63 @@
+---
+title: "F3 (Linux)" #
+lang: fr
+permalink: /fr_FR/f3-(linux).html
+---
+
+Il s'agit d'une section en plus pour la vérification de votre carte SD afn de trouver des erreurs à l'aide de F3.
+{: .notice--info}
+
+Selon la taille de votre carte SD et la vitesse de votre ordinateur, ce processus peut prendre jusqu'à plusieurs heures !
+{: .notice--info}
+
+Cette page est uniquement destinée aux utilisateurs de Linux. Si vous n'êtes pas sous Linux, utilisez [H2testw (windows)](h2testw-(windows)) ou [F3X (mac)](f3x-(mac)).
+{: .notice--info}
+
+#### Ce dont vous aurez besoin
+
+* La dernière version de [F3](https://github.com/AltraMayor/f3/archive/v6.0.zip)
+
+#### Instructions
+
+1. Décompressez le fichier `.zip` de f3
+1. `cd` dans le répertoire de f3
+1. Exécutez la commande `make` pour compiler F3
+1. Insérez votre carte SD dans votre ordinateur
+1. Montez votre carte SD
+1. Exécutez la commande `./f3write <point de montage de votre carte SD>`
+1. Attendez que le processus soit terminé. Voir ci-dessous pour un exemple de sortie.
+
+		$ ./f3write /media/michel/6135-3363/
+		Free space: 29.71 GB
+		Creating file 1.h2w ... OK!
+		...
+		Creating file 30.h2w ... OK!
+		Free space: 0.00 Byte
+		Average Writing speed: 4.90 MB/s
+
+1. Exécutez la commande `./f3read <point de montage de votre carte SD>`
+1. Attendez que le processus soit terminé. Voir ci-dessous pour un exemple de sortie.
+
+		$ ./f3read /media/michel/6135-3363/
+		                  SECTORS      ok/corrupted/changed/overwritten
+		Validating file 1.h2w ... 2097152/        0/      0/      0
+		...
+		Validating file 30.h2w ... 1491904/        0/      0/      0
+
+		  Data OK: 29.71 GB (62309312 sectors)
+		Data LOST: 0.00 Byte (0 sectors)
+			       Corrupted: 0.00 Byte (0 sectors)
+			Slightly changed: 0.00 Byte (0 sectors)
+			     Overwritten: 0.00 Byte (0 sectors)
+		Average Reading speed: 9.42 MB/s
+
+___
+
+Si le test montre comme résultat `Data LOST: 0.00 Byte (0 sectors)` , votre carte SD est saine et vous pouvez supprimer tous les fichiers `.h2w` sur votre carte SD
+{: .notice--success}
+
+Si le test montre un autre résultat, votre carte SD est peut-être corrompue ou endommagée et vous devrez peut-être la remplacer !
+{: .notice--danger}
+
+Retournez à [Bien démarrer](get-started)
+{: .notice--primary}
