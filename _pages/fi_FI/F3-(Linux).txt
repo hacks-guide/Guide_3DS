@@ -1,0 +1,63 @@
+---
+title: "F3 (Linux)" #
+lang: fi
+permalink: /fi_FI/f3-(linux).html
+---
+
+Tämä lisäosio opastaa sinua tarkistamaan SD-korttisi virheiden varalta F3-ohjelman avulla.
+{: .notice--info}
+
+SD-korttisi koosta ja tietokoneesi nopeudesta riippuen tämä prosessi voi kestää jopa useita tunteja!
+{: .notice--info}
+
+Tämä sivu on vain Linux-käyttäjille. Jos et käytä Linuxia, tutustu sivuun [H2testw (Windows)](h2testw-(windows)) tai [F3X (Mac)](f3x-(mac)).
+{: .notice--info}
+
+#### Tarpeet
+
+* F3:n [viimeisin versio](https://github.com/AltraMayor/f3/archive/v6.0.zip)
+
+#### Ohjeet
+
+1. Pura f3-`.zip`-tiedosto
+1. Vaihda f3-hakemistoon `cd`-komennolla
+1. Aja `make`-komento kääntääksesi F3:n
+1. Aseta SD-korttisi tietokoneeseesi
+1. Liitä SD-korttisi tiedostojärjestelmään
+1. Run `./f3write <your sd card mount point>`
+1. Odota, kunnes toiminto on suoritettu. Alla esimerkkituloste.
+
+		$ ./f3write /media/michel/6135-3363/
+		Free space: 29.71 GB
+		Creating file 1.h2w ... OK!
+		...
+		Creating file 30.h2w ... OK!
+		Free space: 0.00 Byte
+		Average Writing speed: 4.90 MB/s
+
+1. Aja komento `./f3read <SD-korttisi liitoskohta>`
+1. Odota, kunnes toiminto on suoritettu. Alla esimerkkituloste.
+
+		$ ./f3read /media/michel/6135-3363/
+		                  SECTORS      ok/corrupted/changed/overwritten
+		Validating file 1.h2w ... 2097152/        0/      0/      0
+		...
+		Validating file 30.h2w ... 1491904/        0/      0/      0
+
+		  Data OK: 29.71 GB (62309312 sectors)
+		Data LOST: 0.00 Byte (0 sectors)
+			       Corrupted: 0.00 Byte (0 sectors)
+			Slightly changed: 0.00 Byte (0 sectors)
+			     Overwritten: 0.00 Byte (0 sectors)
+		Average Reading speed: 9.42 MB/s
+
+___
+
+Jos testi näyttää tuloksen `Data LOST: 0.00 Byte (0 sectors)`, SD-korttisi on kunnossa, ja voit poistaa siltä kaikki `.h2w- tiedostot
+{: .notice--success}
+
+Jos testi näyttää jonkin muun tuloksen, SD-korttisi saattaa olla vioittunut, ja saatat joutua hankkimaan uuden!
+{: .notice--danger}
+
+Palaa osioon [Aloitus](get-started)
+{: .notice--primary}
