@@ -1,36 +1,36 @@
 ---
-title: "Installing boot9strap (DSiWare Save Injection)" #
+title: "Installer boot9strap (Injection de sauvegarde DSiWare)" #
 lang: fr
-permalink: /installing-boot9strap-(dsiware-save-injection).html
+permalink: /fr_FR/installing-boot9strap-(dsiware-save-injection).html
 ---
 
 Notez que, sur certaines versions de Luma3DS, le Luma3DS chainloader menu ne s’affiche que s’il n’y a plus d’un payload détecté. Si il n’y a qu’un seul payload détecté, maintenir la touche (Start) au démarrage lancera directement GodMode9.
 {: .notice--info}
 
-To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+Pour utiliser les liens suivants [magnet](https://fr.wikipedia.org/wiki/Magnet_(standard)), vous avez besoin d'un client Torrent comme [Deluge](http://dev.deluge-torrent.org/wiki/Download)
 {: .notice--success}
 
 Avant de commencer, assurez-vous que vous avez lu tous les mises en garde à propos de [l'installation de boot9strap (DSiWare)](installing-boot9strap-(dsiware))
 {: .notice--danger}
 
-If you do not use the correct `.firm` corresponding to the target 3DS, you will BRICK! Ensure you download and use the correct one!
+Si vous n'utilisez pas le bon `.firm` correspondant à la 3DS cible, vous allez BRICK! Assuez-vous de télécharger et d'utiliser le `. firm` correct!
 {: .notice--danger}
 
 #### Ce dont vous aurez besoin
 
 * Deux consoles 3DS
-  + **The source 3DS**: the 3DS running some kind of custom firmware (such as boot9strap or arm9loaderhax) *on the latest version*
-  + **The target 3DS**: the 3DS on stock firmware *on 11.4.0*
-* Already own one of the following exploitable DSiWare games (a pirated copy of the game will **not** work) on **the source 3DS**
+  **La 3DS source**: La 3DS faisant tourner un Custom Firmware (comme boot9strap ou arm9loaderhax) *dans sa version la plus récente*
+  + **La 3DS cible**: la 3DS en firmware normal *en 11.4.0*
+* Posséder (et avoir installé) un des titres DSiware exploitables suivants (une copie piratée du jeu ne fonctionnera **pas**) sur **la 3DS source**
   + **Fieldrunners**
   + **Legends of Exidia**
   + **Guitar Rock Tour**  
   + **The Legend of Zelda: Four Swords**  
-* The latest release of [3ds_dsiwarehax_installer](https://github.com/yellows8/3ds_dsiwarehax_installer/releases)
+* La dernière version de [3ds_dsiwarehax_installer](https://github.com/yellows8/3ds_dsiwarehax_installer/releases)
 * La dernière version de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* The latest release of [b9sTool](https://github.com/Plailect/b9sTool/releases/latest)
+* La dernière version de [b9sTool](https://github.com/Plailect/b9sTool/releases/latest)
 * Le Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
-* The 11.4.0 `.firm` corresponding to **the target 3DS**
+* Le `.firm` 11.4.0 correspondant à **la 3DS cible**
   + [11.4.0 New 3DS](magnet:?xt=urn:btih:3b59dd43eec3edb133555f58d1180bfb196acbb4&dn=2.54-0_11.4_NEW.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
   + [11.4.0 Old 3DS](magnet:?xt=urn:btih:0dd89d42ad711f770da899af05ee162ede0d0070&dn=2.54-0_11.4_OLD.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 
@@ -41,68 +41,68 @@ If you do not use the correct `.firm` corresponding to the target 3DS, you will 
 Utilisez [save manager](https://github.com/J-D-K/JKSM/releases/latest) pour faire une copie de toute sauvegarde que vous souhaitez garder sur * la 3DS cible * (elle sera formatée !)
 {: .notice--warning}
 
-1. Copy `GodMode9.firm` (or `GodMode9.bin` for arm9loaderhax users) from the GodMode9 `.zip` to the `/luma/payloads` folder on **the source 3DS**'s SD card
-1. Copy the relevant `public.sav` from the `/dsiware/(8 Character ID)/` folder in the 3ds_dsiwarehax_installer `.zip` to the root of **the source 3DS**'s SD card
-  + **Fieldrunners USA Region**: `4b464445`
-  + **Fieldrunners EUR Region**: `4b464456`
-  + **Legends of Exidia USA Region**: `4b4c4545`
-  + **Legends of Exidia EUR Region**: `4b4c4556`
-  + **Legends of Exidia JPN Region**: `4b4c454a`
-  + **Guitar Rock Tour EUR Region**: `4b475256`
-  + **Guitar Rock Tour USA Region**: `4b475245`
-  + **The Legend of Zelda: Four Swords EUR Region**: `4b513945`   
-  + **The Legend of Zelda: Four Swords USA Region**: `4b513956`    
-1. Reinsert **the source 3DS**'s SD card
-1. Boot **the source 3DS** while holding (Start) to launch the Luma3DS chainloader menu
+1. Copiez `GodMode9.firm` (ou `GodMode9.bin` pour ceux qui utilisent arm9loaderhax) du `.zip` de GodMode9 vers le dossier `/luma/payloads/` sur la carte SD de **la 3DS source**
+1. Copiez le bon `public.sav`du dossier `/dsiware/(8 Character ID)/` dans le `.zip` du 3ds_dsiwarehax_installer vers la racine de la carte SD de **la 3DS source**
+  + **Fieldrunners version USA**: `4b464445`
+  + **Fieldrunners version EUR**: `4b464456`
+  + **Legends of Exidia version USA**: `4b4c4545`
+  + **Legends of Exidia version EUR**: `4b4c4556`
+  + **Legends of Exidia version JPN**: `4b4c454a`
+  + **Guitar Rock Tour version EUR**: `4b475256`
+  + **Guitar Rock Tour version USA**: `4b475245`
+  + **The Legend of Zelda: Four Swords version EUR**: `4b513945`   
+  + **The Legend of Zelda: Four Swords version USA**: `4b513956`    
+1. Réinsérez la carte SD de **la 3DS source** dans **la 3DS source**
+1. Allumez la 3DS en maintenant (Start) pour lancer le chainloader de Luma3DS
 1. Lancez GodMode9 en appuyant sur (A)
 1. Appuyez sur (Home) pour faire apparaître le menu d’actions (action menu)
 1. Sélectionnez "More..."
 1. Sélectionnez "Backup NAND"
 1. Appuyez sur (A) pour continuer
 1. Maintenez (R) et appuyez sur (B) en même temps pour éjecter votre carte SD
-1. Put **the target 3DS**'s SD card into your computer
-1. **Backup every file on both 3DS's SD cards to two separate folders on your computer (keep track of which is which)!**
-1. Reinsert each SD card back into their corresponding 3DS
-1. Press (Start) on **the source 3DS** to reboot
+1. Insérez la carte SD de **la 3DS cible** dans votre ordinateur
+1. ** Faites une sauvegarde complète des deux cartes SD des deux 3DS dans deux dossiers différents (Gardez une trace pour savoir quelle carte SD appartient à la bonne 3DS)!**
+1. Réinsérez chaque carte SD dans la 3DS correspondante
+1. Appuyez sur (Start) sur **la 3DS source** pour redémarrer
 
-##### Section II - Installing the Save
+##### Section II - Installation de la sauvegarde
 
-1. Boot **the source 3DS** while holding (Start) to launch the Luma3DS chainloader menu
+1. Allumez la 3DS en maintenant (Start) pour lancer le chainloader de Luma3DS
 1. Lancez GodMode9 en appuyant sur (A)
-1. Navigate to `SDCARD`
-1. Press (Y) on `public.sav` to copy it
-1. Press (B) to get back to the main menu
-1. Navigate to `SYSNAND TWLN` -> `title` -> `00030004`
-1. Navigate to the folder for your game and region:
-  + **Fieldrunners USA Region**: `4b464445`
-  + **Fieldrunners EUR Region**: `4b464456`
-  + **Legends of Exidia USA Region**: `4b4c4545`
-  + **Legends of Exidia EUR Region**: `4b4c4556`
-  + **Legends of Exidia JPN Region**: `4b4c454a`
-  + **Guitar Rock Tour EUR Region**: `4b475256`
-  + **Guitar Rock Tour USA Region**: `4b47521`    
-  + **The Legend of Zelda: Four Swords EUR Region**: `4b51391`   
-  + **The Legend of Zelda: Four Swords USA Region**: `4b51391`   
-1. Navigate to the `data` folder
-1. Press (X) on the existing `public.sav` to delete it
+1. Naviguez vers `SDCARD`
+1. Appuyez sur (Y) après avoir sélectionné `public.sav` pour le copier
+1. Appuyez sur (B) pour retourner sur le menu principal
+1. Naviguez vers `SYSNAND TWLN` -> `title` -> `00030004`
+1. Choisissez le répertoire selon votre jeu et votre région :
+  + **Fieldrunners version USA**: `4b464445`
+  + **Fieldrunners version EUR**: `4b464456`
+  + **Legends of Exidia version USA**: `4b4c4545`
+  + **Legends of Exidia version EUR**: `4b4c4556`
+  + **Legends of Exidia version JPN**: `4b4c454a`
+  + **Guitar Rock Tour version EUR**: `4b475256`
+  + **Guitar Rock Tour version USA**: `4b47521`    
+  + **The Legend of Zelda: Four Swords version EUR**: `4b51391`   
+  + **The Legend of Zelda: Four Swords version USA**: `4b51391`   
+1. Naviguez vers le dossier `data`
+1. Appuyez sur (X) sur le `public.sav` existant pour le supprimer
 1. Entrez la combinaison de touche demandée pour débloquer l'écriture sur votre SysNAND (lvl1)
 1. Appuyez sur (A) pour continuer
-1. Press (Y) to paste `public.sav`
+1. Appuyez sur (Y) pour coller `public.sav`
 1. Sélectionnez "Copy path(s)"
-1. Press (Start) to reboot **the source 3DS**
-1. Launch your DSiWare game on **the source 3DS**
-1. Test if the save is functional
-  + **Fieldrunners**: Touch the 'Scores' button at the main menu
-  + **Legends of Exidia**: After pressing (A) or (Start) at the two title screens, select the first save slot and press continue
-  + **Guitar Rock Tour**: Scroll down and go to High-Scores -> Drums -> Easy    
-  + **The Legend of Zelda: Four Swords**: Just start the game
-  + If your game has an error about `boot.nds` or a white screen, **then the exploit has been successful**
-  + If your game behaves normally and does not give you this error, then you should stop and figure out what went wrong
-  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#twl_broken)
+1. Appuyez sur (Start) pour redémarrer **la 3DS source**
+1. Démarrez votre jeu DSIWare sur **la 3DS source**
+1. Vérifiez que la sauvegarde fonctionne
+  + **Fieldrunners**: Appuyez sur le bouton 'Scores' dans le menu principal
+  + **Legends of Exidia**: Après avoir appuyé sur (A) ou (Start) sur les deux écran titre, sélectionnez la première sauvegarde et appuyez sur "Continue"
+  + **Guitar Rock Tour**: Faites défiler l'écran vers les bas et allez dans High Scores -> Drums -> Easy    
+  + **The Legend of Zelda: Four Swords**: Il suffit de démarrer le jeu
+  + Si le jeu renvoie une erreur à propos de "boot.nds" ou un écran blanc, **alors l'exploit a fonctionné**
+  + Si votre jeu se comprte normalement et ne vous renvoie aucune erreur, vous devriez vous arrêter et trouver le problème
+  + Si vous obtenez un écran noir, [suivez ce guide de dépannage](troubleshooting#twl_broken)
 
 ##### Section III - System Transfer
 
-1. **Backup every file on both 3DS's SD cards to two separate folders on your computer (keep track of which is which)!**
+1. ** Faites une sauvegarde complète des deux cartes SD des deux 3DS dans deux dossiers différents (Gardez une trace pour savoir quelle carte SD appartient à la bonne 3DS)!**
 1. Reinsert each SD card back into their corresponding 3DS
 1. Si **la 3DS cible ** a déjà un ID Nintendo Network, vous devez formater la console à l’aide des paramètres du système :
   + Aller à la dernière page des "Autres réglages" puis sélectionnez "Format le système", puis suivez toutes les instructions
@@ -138,22 +138,22 @@ Utilisez [save manager](https://github.com/J-D-K/JKSM/releases/latest) pour fair
 
 ##### Section V - Backing up the target 3DS's FIRM
 
-1. Copy `boot.nds` to the root of **the target 3DS**'s SD card
-1. Create a folder named `boot9strap` on the root of **the target 3DS**'s SD card
-1. Copy the 11.4.0 `.firm` corresponding to **the target 3DS** to the `boot9strap` folder on the root of **the target 3DS**'s SD card
-1. Copy `boot9strap.firm` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
+1. Copiez `boot.nds` à la racine de la carte SD de **la 3DS cible**
+1. Créez un dossier nommé `boot9strap` à la racine de la carte SD **de la 3DS cible**
+1. Copiez le fichier `.firm` 11.4.0 correspondant à **la 3DS cible** dans le dossier `boot9strap` à la racine de **carte SD de la 3DS cible**
+1. Copiez le fichier `boot9strap.firm`de l'archive boot9strap`.zip` dans le dossier `/boot9strap/` de votre carte SD
 1. Launch your DSiWare game on **the target 3DS**
 1. Launch b9sTool using your DSiWare game
-  + **Fieldrunners**: Touch the 'Scores' button at the main menu
-  + **Legends of Exidia**: After pressing (A) or (Start) at the two title screens, select the first save slot and press continue
-  + **Guitar Rock Tour**: Scroll down and go to High-Scores -> Drums -> Easy
-  + **The Legend of Zelda: Four Swords**: Just start the game
+  + **Fieldrunners**: Appuyez sur le bouton 'Scores' dans le menu principal
+  + **Legends of Exidia**: Après avoir appuyé sur (A) ou (Start) sur les deux écran titre, sélectionnez la première sauvegarde et appuyez sur "Continue"
+  + **Guitar Rock Tour**: Faites défiler l'écran vers les bas et allez dans High Scores -> Drums -> Easy
+  + **The Legend of Zelda: Four Swords**: Il suffit de démarrer le jeu
   + If your game does not have the hacked save file installed, [follow this troubleshooting guide](troubleshooting#ts_dsiware)
-1. Select "Dump F0F1" to backup **the target 3DS**'s FIRM
-1. Make note of the FIRM backup's location
-1. Exit b9sTool
-  + You may have to force power off by holding the power button
-1. Put your SD card in your computer, then copy `F0F1_N3DS.bin` or `F0F1_O3DS.bin` (depending on your device) to a safe location; make backups in multiple locations; this backup will save you from a brick if anything goes wrong
+1. Sélectionnez "Dump F0F1" pour sauvegarder le FIRM de la **3DS cible**
+1. Prenez note de l’emplacement de la sauvegarde de la NFIRM
+1. Sortez de b9sTool
+  + Vous allez peut-être devoir forcer la fermeture en maintenant le bouton d’alimentation enfoncé
+1. Mettez votre carte SD dans votre ordinateur, puis copiez `F0F1_N3DS.bin` ou `F0F1_O3DS.bin` (selon votre appareil) dans un endroit sûr ; faites des sauvegardes à plusieurs emplacements ; cette sauvegarde vous sauvera d’un BRICK si quelque chose se passe mal
 
 ##### Section VI - Flashing the target 3DS's FIRM
 
@@ -162,10 +162,10 @@ Utilisez [save manager](https://github.com/J-D-K/JKSM/releases/latest) pour fair
 
 1. Launch your DSiWare game on **the target 3DS**
 1. Launch b9sTool using your DSiWare game
-  + **Fieldrunners**: Touch the 'Scores' button at the main menu
-  + **Legends of Exidia**: After pressing (A) or (Start) at the two title screens, select the first save slot and press continue
-  + **Guitar Rock Tour**: Scroll down and go to High-Scores -> Drums -> Easy
-  + **The Legend of Zelda: Four Swords**: Just start the game
+  + **Fieldrunners**: Appuyez sur le bouton 'Scores' dans le menu principal
+  + **Legends of Exidia**: Après avoir appuyé sur (A) ou (Start) sur les deux écran titre, sélectionnez la première sauvegarde et appuyez sur "Continue"
+  + **Guitar Rock Tour**: Faites défiler l'écran vers les bas et allez dans High Scores -> Drums -> Easy
+  + **The Legend of Zelda: Four Swords**: Il suffit de démarrer le jeu
 1. Select "Install boot9strap" and confirm
 1. Exit b9sTool, then power off your device
   + You may have to force power off by holding the power button
