@@ -1,0 +1,50 @@
+---
+title: "Installing boot9strap (Browser)" #
+lang: ko
+permalink: /installing-boot9strap-(browser).html
+---
+
+이 설명은 SysNAND를 기준으로 제작되었으므로 기기가 EmuNAND 기반이라면 모든 과정을 SysNAND에 적용해 주세요. EmuNAND와 RedNAND는 [동일한 개념](http://3dbrew.org/wiki/NAND_Redirection)을 다른 방식으로 구현한 것입니다.
+{: .notice--info}
+
+이 페이지의 [마그넷](https://en.wikipedia.org/wiki/Magnet_URI_scheme) 링크를 사용하려면
+ [Deluge](http://dev.deluge-torrent.org/wiki/Download)와 같은 토렌트 클라이언트가 필요합니다.
+{: .notice--success}
+
+#### What you need
+
+* The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest)
+* 홈브류 [스타터 킷](http://smealum.github.io/ninjhax2/starter.zip)
+
+#### 진행 방법
+
+##### 섹션 I - 준비 작업
+
+1. 기기를 종료해 주세요.
+1. SD 카드를 컴퓨터에 삽입해 주세요.
+1. `starter.zip` 파일 내 `starter` 폴더의_내용물_을 SD 카드의 최상위 경로에 복사해 주세요.
+1. Create a folder named `boot9strap` on the root of your SD card
+1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
+1. Copy `SafeB9SInstaller.dat` from the SafeB9SInstaller `.zip` to the root of your SD card
+1. SD 카드를 기기에 다시 삽입해 주세요.
+1. 기기를 시작해 주세요.
+
+##### Section II - Launching SafeB9SInstaller
+
+1. Launch the browser and go to one of the following URL on your device
+  + `https://dukesrg.github.io/?SafeB9SInstaller.dat`
+  + 오류가 발생하면 이 [문제 해결 가이드](troubleshooting#ts_browser) 를 참고해 주세요.
+1. If the exploit was successful, you will have booted into SafeB9SInstaller
+
+##### Section III - Installing boot9strap
+
+1. Wait for all safety checks to complete
+1. When prompted, input the key combo given to install boot9strap
+1. Once it has completed, press (A) to reboot your device
+1. Your device will boot into boot9strap, then shutdown automatically because it does not yet have a payload to launch
+
+___
+
+Continue to [Finalizing Setup](finalizing-setup)
+{: .notice--primary}
