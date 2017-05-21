@@ -1,0 +1,69 @@
+---
+title: "Instalar boot9strap (DSiWare)" #
+lang: es
+permalink: /es_ES/installing-boot9strap-(dsiware).html
+---
+
+Hay dos métodos para instalar boot9strap usando DSiWare en 11.4.0.
+{: .notice--info}
+
+Uno de estos métodos sólo funciona con cuatro juegos específicos que ya no son vendidos en la eShop, mientras el otro funciona con algunos juegos aún vendidos en la eShop.
+{: .notice--info}
+
+Ámbos métodos requieren dos consolas. Una debe ya tener algún custom firmware (como boot9strap o arm9loaderhax) a la que le llamaremos la *3DS de origen*, mientras que la otra está en el firmware 11.4.0 original y le llamaremos *3DS de destino*.
+{: .notice--info}
+
+Ambos sistemas DEBEN ser de la misma región.
+{: .notice--warning}
+
+Ámbos métodos asumen que la 3DS con custom firmware usan boot9strap o arm9loaderhax y han completado esta guía. Es posible completar estos métodos con otros custom firmware, pero eso está fuera del alcance de esta guía.
+{: .notice--info}
+
+Ámbos métodos usan una combinación del exploit "FIRM partitions known-plaintext" explicado detalladamente [aquí](https://www.3dbrew.org/wiki/3DS_System_Flaws) (*en inglés*) con un error que permite que los juegos DSiWare puedan leer y escribir en cualquier parte de la NAND encriptada.
+{: .notice--info}
+
+{% capture notice-4 %}
+Ámbos métodos requieren que hagas una [Transferencia de sistemas](https://www.nintendo.es/Atencion-al-cliente/Nintendo-3DS-y-Nintendo-2DS/Transferencia-entre-consolas-Nintendo-3DS-Incluida-Nintendo-3DS-XL-/Como-realizar-una-transferencia-de-sistema-entre-las-consolas-Nintendo-3DS-y-Nintendo-3DS-XL/Como-realizar-una-transferencia-de-sistema-entre-consolas-Nintendo-3DS-y-Nintendo-3DS-XL-592194.html) desde una 3DS con CFW instalado a una 3DS sin modificar como parte de los pasos a seguir. Las Transferencias de Sistema funcionarán *sólo* en los siguientes casos:    
+  + New 3DS -> New 3DS    
+  + Old 3DS o 2DS -> Old 3DS o 2DS    
+  + Old 3DS o 2DS -> New 3DS    
+{% endcapture %}
+
+<div class="notice--warning">{{ notice-4 | markdownify }}</div>
+
+¡En ámbos casos, el NNID de la 3DS de origen se mantendrá en la 3DS de destino a menos que realices una transferencia de vuelta o llames a Nintendo! (los detalles pueden encontrarse en las instrucciones)
+{: .notice--danger}
+
+Las transferencias del sistema solo pueden hacerse una vez por semana por NNID.
+{: .notice--danger}
+
+___
+
+{% capture notice-1 %}
+
+[Instalar boot9strap (Inyección de datos de guardado de DSiWare)](installing-boot9strap-(dsiware-save-injection))
+<br><br>
+Este método requiere que la 3DS de origen posea legítimamente uno de los siguientes juegos:
+    
+    + "Fieldrunners"
+    + "Legends of Exidia"
+    + "Guitar Rock Tour"
+    + "The Legend of Zelda: Four Swords"
+    
+Una copia pirata del juego *no* servirá, y todos estos juegos han sido eliminados de la eShop.
+
+{% endcapture %}
+
+<div class="notice--primary">{{ notice-1 | markdownify }}</div>
+
+{% capture notice-1 %}
+
+[Instalar boot9strap (Inyección de Juegos de DSiWare)](installing-boot9strap-(dsiware-game-injection))
+<br><br>
+Este método requiere que la 3DS de origen compre o ya tenga de forma legítima uno de los siguientes juegos listados en la página [Instalar boot9strap (Lista de juegos DSiWare inyectables)](installing-boot9strap-(dsiware-game-injection-list)).
+<br><br>
+Una copia pirata del juego *no* servirá.
+
+{% endcapture %}
+
+<div class="notice--primary">{{ notice-1 | markdownify }}</div>
