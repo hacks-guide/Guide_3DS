@@ -1,0 +1,139 @@
+---
+title: "更新至 boot9strap" #
+lang: zh-Hant
+permalink: /zh_TW/updating-to-boot9strap.html
+---
+
+本頁面是給想更新至 boot9strap 且已安裝 arm9loaderhax 的使用者使用。
+{: .notice--info}
+
+未來的 Luma3DS 版本都只會以 `.firm` 的格式釋出；此格式只相容於 boot9strap 以及 sighax。 也就是說，如果你想要繼續使用最新版的 Luma3DS，你應透過本教學來更新你的主機。
+{: .notice--info}
+
+如果你的 Luma 有設定 PIN 碼，請先將其關閉，否則你將會遇到「OTP Crypto Fail」的錯誤。 在更新後就可以重新啟用 PIN 碼。
+{: .notice--warning}
+
+{% capture notice-1 %}
+
+如果你安裝了《3dsafe》，你必須先將其移除才能繼續，否則你將會遇到「OTP Crypto Fail」的錯誤。
+<br><br>
+若想將其移除，請從[最新版的 arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases) 中提取 payloads 檔案，並將其移至 SD 卡根目錄中的 `a9lh` 資料夾中；接著再啟動 3dsafe，輸入你的 PIN 碼並按住最後一個按鍵。 按住按鍵時，再按下「X」啟動內建的 SafeA9LHInstaller，並按下「Select」鍵以「更新」至正常版的
+ arm9loaderhax。
+
+{% endcapture %}
+
+<div class="notice--warning">{{ notice-1 | markdownify }}</div>
+
+本頁面會有些許的[磁力](https://en.wikipedia.org/wiki/Magnet_URI_scheme)連結，你將需要個像 [Deluge](http://dev.deluge-torrent.org/wiki/Download) 的 BT 種子下載器來下載磁力連結的檔案。
+{: .notice--success}
+
+#### 必備項目
+
+請注意，以下所需的 `secret_sector.bin` 與在各式 `data_input.zip` 版本中所見的檔案相同。 如果你電腦中已經有了那個檔案，你可以直接使用它而不必再重新下載一個新的。
+{: .notice--info}
+
+請注意，`secret_sector.bin` 是用來還原 arm9loaderhax 漏洞用的，這也就是為什麼在原廠主機上安裝 boot9strap 時不會用到它。
+{: .notice--info}
+
+* <i class="fa fa-magnet" aria-hidden="true" title="這是個種子連結。 請使用一個 BT 下載器來下載此檔案。"></i> - [`secret_sector.bin`](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce)
+* 最新版的 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z` 檔案)*
+* 最新版的 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* 最新版的 [boot9strap](https://github.com/SciresM/boot9strap/releases/latest)
+* 最新版的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* 最新版的 [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
+
+#### 操作說明
+
+##### 第一節 — 準備工作
+
+1. 關閉你的主機
+1. 將 SD 卡插入電腦中
+1. 解壓 Luma3DS `.7z` 內的 `boot.firm` 到 SD 卡的根目錄底下
+1. 在 SD 卡的根目錄底下建立一個新資料夾 `cias`
+1. 複製 `lumaupdater-v2.0.cia` 檔案至 SD 卡上的 `/cias/` 資料夾中
+1. 在 SD 卡的根目錄底下建立一個新的資料夾 `boot9strap`
+1. 從 GodMode9 `.zip` 中解壓 `GodMode9.firm` 到 SD 上的 `/luma/payloads/` 中
+1. 刪除任何在你 SD 卡 `/luma/payloads/` 資料夾中的 `.bin` payload 檔案，因為它們將與 boot9strap 版本的 Luma3DS 不相容
+1. 解壓 SafeB9SInstaller`.zip` 中的 `SafeB9SInstaller.bin` 到 SD 中的 `/luma/payloads/` 下
+1. 將 SD 卡 `/luma/payloads/` 資料夾中的 `SafeB9SInstaller.bin` 重新命名為 `start_SafeB9SInstaller.bin`
+1. 解壓 boot9strap `.zip` 的 `boot9strap.firm` 及 `boot9strap.firm.sha` 檔案至 SD 卡的 `/boot9strap/` 資料夾中
+1. 將 `secret_sector.bin` 複製到 SD 卡的 `/boot9strap/` 資料夾中
+
+    ![]({{ base_path }}/images/screenshots/updating-to-b9s-file-layout.png)
+    {: .notice--info}
+
+1. 將 SD 卡插回主機中
+
+##### 第二節 — 安裝 boot9strap
+
+1. 開機時，按住「Start」鍵進入 Luma3DS 選單
+  + 某些版本的 Luma3DS 會直接啟動 `start_` 開頭的 payload 檔案
+  + 如果你的版本這麼做的話，直接依步驟繼續即可
+1. 選取 SafeB9SInstaller，並按下「A」啟動
+1. 等待所有安全性檢查完畢
+1. 出現提示時，輸入提示的按鍵組合以安裝 boot9strap
+1. 過程結束後，按下「A」重啟主機
+  + 如果你的主機在啟動時直接關機，請確保你已經將 Luma3DS `.7z` 中的 `boot.firm` 複製到你的 SD 卡根目錄中
+
+##### 第三節 — 設定 Luma3DS
+
+本節是在你重啟主機後看見 Luma3DS 設定選單才需使用。
+{: .notice--info}
+
+1. 在 Luma3DS 設定選單中，透過「A」及方向鍵來啟用下列選項：    
+  + **「Show NAND or user string in System Settings」**
+1. 按「Start」鍵以存檔並重新啟動系統
+
+##### 第四節 — 安裝 Luma3DS 至 CTRNAND
+
+1. 重啟時按住「Start」鍵啟動 Luma3DS 選單
+1. 按「A」啟動 GodMode9
+1. 移動至 `[0:] SDCARD` -> `luma` -> `payloads`
+1. 選取 `start_SafeB9SInstaller.bin`，並按下「X」刪除
+1. 按 「A」 確認
+1. 按「B」回至 `[0:] SDCARD`
+1. 選取 `boot.firm'，並按下「Y」複製
+1. 按「B」回到主選單
+1. 移動至 `[1:] SYSNAND CTRNAND`
+1. 按「Y」貼上 `boot.firm`
+1. 選擇 「Copy path(s)」
+1. 按「A」解鎖 SysNAND（lvl1）的寫入保護，然後按下提示的按鍵組合
+1. 選取 `arm9loaderhax.bin` ，並按下「X」刪除
+  + 如果你沒有看到這個檔案，請依步驟繼續
+1. 按「A」確認
+1. 按「B」回到主選單
+1. 同時按住「R」及「B」以卸除 SD 卡
+1. 將 SD 卡從主機中拔出
+1. 在 SD 卡拔出後，按下「Start」鍵重啟你的主機
+  + 在 SD 卡拔除的情況下開機將讓你可以在 CTRNAND 上設置 Luma3DS
+1. 透過方向鍵及「A」以開啟下列選項：    
+  + **「Show NAND or user string in System Settings」**
+1. 將 SD 卡插回主機中
+1. 按下「Start」鍵以存檔並重新啟動系統
+
+##### 第五節 — 安裝 Luma3DS Updater
+
+1. 啟動 FBI 管理器
+1. 移動至 `SD` -> `cias`
+1. 選取 `lumaupdater-v2.0.cia`
+1. 選擇「Install CIA」，按下「A」確認
+1. 按下「Home」鍵退出 FBI 管理器
+
+___
+
+你現在可以在你的 SD 卡中移除任何 arm9loaderhax 相關的檔案，像是你 SD 卡根目錄中的 `arm9loaderhax.bin` 及 `files9` 資料夾中的 `aeskeydb.bin` 檔案
+{: .notice--info}
+
+請注意，你 SD 卡 `/boot9strap/` 資料夾中的 `firm0firm1.bak` 及 `sector0x96.bak` 是只有在安裝 boot9strap 失敗後才會需要用到的。 一旦安裝成功後，你可以直接刪掉整個 `boot9strap` 資料夾。
+{: .notice--info}
+
+此版本的 Luma3DS Updater 透過下載並提取最新版本的 `boot.firm` 與 boot9strap 相容。
+{: .notice--info}
+
+{% capture notice-6 %}   
+你現在可以在開機時按住「Select」鍵啟動 Luma3DS 的設定選單。    
+你現在可以在開機時按住「Start」鍵啟動 Luma3DS 連環加載選單（請注意，它只有在偵測到多個 payload 檔案時，才會顯示 Luma3DS 連環加載選單）。
+你現在可以在開機時按住「Start」+「Select」+「X」轉儲 ARM11 bootrom（`boot11.bin`）、ARM9 bootrom（`boot9.bin`）、以及你主機特有的 OTP 金鑰（`OTP.bin`）到 SD 卡上的 `/ boot9strap /` 資料夾（請注意，本過程中將不會出現任何的提示或訊息）。
+{% endcapture %}
+
+<div class="notice--info">{{ notice-6 | markdownify }}</div>
