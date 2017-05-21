@@ -1,0 +1,208 @@
+---
+title: "Finalizar instalación" #
+lang: es
+permalink: /es_ES/finalizing-setup.html
+---
+
+Para utilizar los enlaces [magnet](https://es.wikipedia.org/wiki/Magnet) de esta página, vas a necesitar un cliente torrent como [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+{: .notice--success}
+
+#### Descripción general de pasos
+
+{% capture notice-2 %}
+
+El archivo `boot.firm` es el que ejecuta boot9strap después de que termina de cargarse desde la NAND, y puede ser cualquier payload arm9 válido en formato FIRM. Este archivo puede ser reemplazado en cualquier momento, a pesar de que Luma3DS permite la ejecución de otros payloads arm9 en formato FIRM usando el selector de payloads de Luma3DS.
+<br><br>
+En este caso, utilizamos Luma3DS de [AuroraWright](https://github.com/AuroraWright/) para ejecutar al inicio un SysNAND modificado directamente, permitiéndonos saltar la necesidad de cualquier EmuNAND, simplificando enormemente el uso de una 3DS hackeada además de ahorrar espacio en la tarjeta SD.
+<br><br>
+Durante este proceso, también instalaremos programas como los siguientes:    
+
++ **FBI** *(instala juegos y aplicaciones en formato CIA)*
++ **Themely** *(instala temas personalizados)*
++ **Luma3DS Updater** *(actualiza tu instalación de CFW fácilmente)*
++  **GodMode9** *(herramienta multipropósito que puede realizar funciones sobre la NAND y cartridges)*
+
+{% endcapture %}
+
+<div class="notice--info">{{ notice-2 | markdownify }}</div>
+
+#### Qué necesitas
+
+* La última versión de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(el archivo`.7z`)*
+* La última versión de [Themely](https://github.com/ErmanSayin/Themely/releases/latest) *(el archivo `.cia`)*
+* La última versión de [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
+* La última versión de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* La última versión de [DSP1](https://github.com/zoogie/DSP1/releases/latest)
+* La última versión de [FBI](https://github.com/Steveice10/FBI/releases/latest)
+* La última versión (fork) de [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
+* **Sólo para Old 3DS y 2DS:** El [payload otherapp](https://smealum.github.io/3ds/#otherapp) de Old 3DS 11.2.0-35 para tu región
+
+#### Instrucciones
+
+##### Sección I - Preparativos
+
+1. Inserta tu tarjeta SD en tu computadora
+1. Crea una carpeta llamada `cias` en la raíz de tu tarjeta SD, si aún no existe
+1. Crea una carpeta llamada `hblauncherloader` en la raíz de tu tarjeta SD si aún no existe
+1. Copia el archivo `hblauncher_loader.cia` contenido en el `.zip` de hblauncher_loader a la carpeta`/cias/` en tu tarjeta SD
+1. Copia el archivo `lumaupdater-v2.0.cia` contenido en el `.zip` de Luma3DS Updater a la carpeta`/cias/` en tu tarjeta SD
+1. Copia el archivo `FBI.cia` contenido en el `.zip` de FBI a la carpeta`/cias/` en tu tarjeta SD
+1. Copia `DSP1.cia` a la carpeta `/cias/` en tu tarjeta SD
+1. Copia `Themely.cia` a la carpeta `/cias/` en tu tarjeta SD
+
+    ![]({{ base_path }}/images/screenshots/cias-file-layout.png)
+    {: .notice--info}
+
+1. Copia el archivo `boot.firm` desde el `.7z` de Luma3DS a la raíz de tu tarjeta SD
+1. Crea una carpeta llamada`luma` en la raíz de tu tarjeta SD
+1. Crea una carpeta llamada `payloads` en la carpeta `luma` de tu tarjeta SD
+1. Copia el archivo `GodMode9.firm` desde el `.zip` de GodMode9 a la carpeta `/luma/payloads/` en tu tarjeta SD
+1. **Sólo para Old 3DS y 2DS:** Copia el payload otherapp de Old 3DS 11.2.0-35 para tu región a la carpeta `/hblauncherloader/` en tu tarjeta SD
+1. **Sólo para Old 3DS y 2DS:** Renombra el payload otherapp de Old 3DS 11.2.0-35 en tu tarjeta SD para que concuerde con tu región:
+  + **EUR:** `OLD-11-4-0-37-EUR.bin`
+  + **JPN:** `OLD-11-4-0-37-JPN.bin`
+  + **KOR:** `OLD-11-4-0-37-KOR.bin`
+  + **USA:** `OLD-11-4-0-37-USA.bin`
+
+    ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
+    {: .notice--info}
+
+1. Si tu consola está entre una versión entre 3.0.0 y 4.5.0 (inclusive), tu dispositivo no encenderá hasta que descargues manualmente el firmware requerido:
+  + Descarga [este archivo](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) y renómbralo como `firmware.bin`
+  + Descarga [este archivo](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
+  + Copia `firmware.bin` y `cetk` a la carpeta `/luma/` en tu tarjeta SD
+  + Borra ambos archivos después de actualizar tu dispositivo más adelante en estas instrucciones
+1. Reinserta la tarjeta SD en tu consola
+
+##### Sección II - Configurar Luma3DS
+
+1. Enciende tu consola para entrar al menú de configuración de Luma3DS
+  + Si obtienes una pantalla negra, [sigue esta guía de solución de problemas](troubleshooting#ts_sys_b9s)
+1. Utiliza el botón (A) y las flechas direccionales para activar lo siguiente:    
+  + **"Show NAND or user string in System Settings"**
+1. Presiona (Start) para guardar y reiniciar
+  + Si se te queda la pantalla en negro, simplemente continúa a la siguiente sección   
+
+##### Sección III - Actualizar el sistema
+
+Si, antes de seguir a esta guía, ya tenías una configuración EmuNAND y deseas mover el contenido de tu EmuNAND anterior a tu nuevo CFW SysNAND, ahora es el momento de [seguir Mover EmuNAND](move-emunand) en lugar de hacer los primeros nueve pasos de esta sección.
+{: .notice--info}
+
+1. Actualiza tu 3DS dirigiéndote a la Configuración de la consola, después a "Otras opciones", luego ve al último menú de la derecha y pulsa en "Actualización"
+  + Actualizar la consola teniendo B9S y Luma (lo que acabas de instalar) es seguro
+  + Si esto te da un error, ajusta tu configuración de DNS a "obtención automática"
+  + Si esto te sigue dando un error y tu NAND está por debajo de 9.2.0, [sigue 9.2.0 CTRTransfer(9.2.0-ctrtransfer), luego reintenta actualizar
+
+##### Sección IV - Inyectar FBI
+
+1. Reinicia manteniendo (Start) al encender la consola para iniciar el menú de selección de payloads de Luma3DS
+1. Inicia GodMode9 presionando (A)
+1. Ve a `[0:] SDCARD` -> `cias`
+1. Presiona (A) sobre `FBI.cia` para seleccionarlo, después selecciona "CIA image options...", y luego selecciona "Mount image to drive"
+1. Presiona (A) en el archivo `.app`, después selecciona "NCCH image options", y luego selecciona "Inject to H&S"
+1. Presiona (A) para desbloquear la escritura de SysNAND (lvl1) y después haz la combinación de teclas mostrada
+1. Presiona (A) para continuar
+1. Presiona (Start) para reiniciar tu consola
+1. Si aún así abres la aplicación normal de Información sobre salud y seguridad y downgradeaste con Gateway en el pasado, [sigue esta guía](troubleshooting#gw_fbi)
+
+##### Sección V - Instalar CIAs
+
+1. Abre Información sobre salud y seguridad (que ahora es FBI)
+1. Ve a `SD` -> `cias`
+1. Selecciona "\<current directory>"
+1. Selecciona la opción "Install all CIAs", luego presiona (A) para confirmar
+1. Presiona (Home) para salir de FBI
+
+##### Sección VI - Volcado de DSP
+
+1. Inicia DSP1
+1. Una vez que haya terminado, presiona (Start) para salir
+
+##### Sección VII - Restaurar Salud y Seguriad
+
+1. Reinicia manteniendo (Start) al encender la consola para iniciar el menú de selección de payloads de Luma3DS
+1. Inicia GodMode9 presionando (A)
+1. Presiona el botón (Home) para abrir el menú de acción
+1. Selecciona "Mas..."
+1. Selecciona "Restore H&S"
+1. Presiona (A) para desbloquear la escritura de SysNAND (lvl1) y después haz la combinación de teclas mostrada
+
+##### Sección VIII - CTRNAND Luma3DS
+
+1. Reinicia manteniendo (Start) al encender la consola para iniciar el menú de selección de payloads de Luma3DS
+1. Inicia GodMode9 presionando (A)
+1. Ve a `[0:] SDCARD`
+1. Presiona (Y) sobre `boot.firm` para copiarlo
+1. Presiona (B) para volver al menú principal
+1. Ve a `[1:] SYSNAND CTRNAND`
+1. Presiona (Y) para pegar una copia de `boot.firm`
+1. Selecciona "Copy path(s)"
+1. Presiona (A) para desbloquear la escritura de SysNAND (lvl1) y después haz la combinación de teclas mostrada
+1. Presiona (B) para volver al menú principal
+1. Mantén (R) y presiona (B) al mismo tiempo para extraer la SD
+1. Extrae tu tarjeta SD de tu consola
+1. Presiona (Start) para reiniciar tu consola sin la tarjeta SD
+  + Encender tu consola sin la tarjeta SD al menos una vez te permitirá configurar la instalación de Luma3DS basada en CTRNAND
+1. Utiliza el botón (A) y las flechas direccionales para activar lo siguiente:    
+  + **"Show NAND or user string in System Settings"**
+1. Reinserta la tarjeta SD en tu consola
+1. Presiona (Start) para guardar y reiniciar
+
+##### Sección IX - Copia de seguridad de la NAND
+
+1. Enciende tu consola manteniendo (Start) para ingresar al menú de selección de payloads de Luma3DS
+1. Inicia GodMode9 presionando (A)
+1. Presiona el botón (Home) para abrir el menú de acción
+1. Selecciona "Mas..."
+1. Selecciona "Backup NAND"
+1. Presiona (A) para continuar
+1. Mantén (R) y presiona (B) al mismo tiempo para extraer la SD
+1. Inserta tu tarjeta SD en tu computadora
+1. Copia `nand.bin` desde la carpeta `/gm9out/` en tu tarjeta SD a una ubicación segura en tu computadora
+  + Haz copias de seguridad en múltiples sitios (como por ejemplo, en un pendrive o almacenamiento online)
+  + Esta copia de seguridad puede salvarte de un brick si algo va mal en el futuro
+1. Elimina el archivo `nand.bin` de la carpeta `/gm9out/` de tu tarjeta SD después de copiarlo
+1. Reinserta la tarjeta SD en tu consola
+1. Presiona (Start) para guardar y reiniciar
+
+___
+
+{% capture notice-10 %}
+Ahora ya puedes usar Luma3DS Updater para actualizar tu Luma3DS a la última versión con tan solo abrirlo y presionar (A).     
+No es lo mismo que las actualizaciones de sistema, sólo descarga y extrae los archivos de Luma3DS más recientes.
+Esto sólo actualizará los archivos de Luma3DS de tu tarjeta SD. Si enciendes la consola sin una tarjeta SD, usará cualquier versión que tengas instalada en la CTRNAND.    
+{% endcapture %}
+
+<div class="notice--info">{{ notice-10 | markdownify }}</div>
+
+{% capture notice-6 %}   
+Ahora se iniciará el CFW Luma3DS en la SysNAND por defecto.    
+Ahora puedes mantener pulsado (Select) mientras la consola arranca para acceder al menú de configuración de Luma3DS.    
+Ahora puedes mantener (Start) al inicio para iniciar el menú de selección de payloads de Luma3DS (ten en cuenta que este menú sólo es mostrado cuando se detecta más de un payload).
+Ahora puedes mantener (Start) + (Select) + (X) al inicio para volcar el bootrom ARM11 (`boot11.bin`), el bootrom ARM9 (`boot9.bin`) y el OTP (`OTP.bin`) único de tu consola a la carpeta `/boot9strap/` en tu tarjeta SD (ten en cuenta que esto no mostrará ningún tipo de mensaje).
+{% endcapture %}
+
+<div class="notice--info">{{ notice-6 | markdownify }}</div>
+
+Para usar [NTR CFW](https://github.com/44670/BootNTR/), instala [BootNTR Selector](https://gbatemp.net/threads/432911/).
+{: .notice--info}
+
+{% capture notice-7 %}
+Elimina cualquier archivo y carpeta extra de la raíz de tu tarjeta SD que *no* esté en la siguiente imagen:
+<br><br>
+![]({{ base_path }}/images/screenshots/final-file-layout.png)
+{% endcapture %}
+
+<div class="notice--info">{{ notice-7 | markdownify }}</div>
+
+Para obtener información sobre cómo cambiar la consola a otra región, revisa la página [Cambiar de Región](region-changing).
+{: .notice--success}
+
+Para obtener información sobre el uso de las diversas funciones de GodMode9, consulta la guía de [Usos de GodMode9](godmode9-usage).
+{: .notice--success}
+
+Para información sobre el uso de diversas características de Luma3DS, Revisa [su wiki](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage) (en inglés).
+{: .notice--success}
+
+Para más información sobre cómo instalar temas personalizados, insignias y pantallas splash, echa un vistazo a [3dsthem.es](https://3dsthem.es/about.php).
+{: .notice--success}
