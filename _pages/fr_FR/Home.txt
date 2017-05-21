@@ -8,7 +8,7 @@ header:
   cta_label: "Bien Démarrer" #
   cta_url: "/fr_FR/get-started" #
   caption:
-excerpt: "A complete guide to 3DS custom firmware, <br /> from stock to boot9strap.<br />" #
+excerpt: "Un guide complet pour le custom firmware de 3DS, <br /> depuis le firmware original vers boot9strap.<br />" #
 lang: fr
 permalink: /fr_FR/index.html
 ---
@@ -33,26 +33,26 @@ Lisez toutes les pages d'introduction avant de commencer.
 
 Les [**Homebrew**](http://goo.gl/fXgk5v) désignent généralement des logiciels qui ne sont pas autorisés par Nintendo. Cela vous permet de lancer des jeux créés par la communauté, des outils comme des éditeurs de sauvegarde et des émulateurs pour tout un tas de consoles rétro.
 
-In most cases, running homebrew on your device is 100% free using [just the Nintendo 3DS Sound app](homebrew-launcher-(soundhax)). Il existe également de nombreux exploits dans des jeux commerciaux et le navigateur qui peuvent vous permettre de lancer des homebrews.
+Dans la plupart des cas, exécuter des homebrews sur votre appareil est 100 % gratuit à l’aide de [l'application Studio Son Nintendo 3DS](homebrew-launcher-(soundhax)). Il existe également de nombreux exploits dans des jeux commerciaux et le navigateur qui peuvent vous permettre de lancer des homebrews.
 
 ## Qu'est-ce qu'un Custom Firmware ?
 
 Un **Custom Firmware** ("CFW") vous permet d'utiliser des hacks plus avancés que les homebrew "userland" (ci-dessus) ne permettent pas. Par exemple, les patchs de signatures vous permettent d'installer des titres non signés directement sur votre menu HOME.
 
-CFW can be easily set up on any console that is on 11.4.0 or lower.
+Un CFW peut être facilement mis en place sur toute console en version 11.4.0 ou inférieure.
 
 ## Qu'est-ce que ce guide me fait installer ?
 
 Ce guide a pour but final de transformer une 3DS complètement "Stock" (jamais modifiée)
-firmware to boot9strap powered Custom Firmware. Sur certaines version, il utilise des homebrew comme objectif intermédiaire - mais un Custom Firwmare est toujours le but ultime.
+à un Custom Firmware boosté par boot9strap. Sur certaines version, il utilise des homebrew comme objectif intermédiaire - mais un Custom Firwmare est toujours le but ultime.
 
-boot9strap is the newest and best method of launching Custom Firmware that gives us nearly full control of the system only milliseconds into boot, which is similar to the effect of BootMii for the Wii. It gives us even earlier control than arm9loaderhax did, and, unlike standard sighax, boot9strap uses an NDMA overwrite exploit in order to gain Boot9 code execution. This means that any console running boot9strap is capable of dumping the console unique OTP (`OTP.bin`), the ARM11 bootrom (`boot11.bin`), and the ARM9 bootrom (`boot9.bin`).
+Boot9strap est la plus récente et la meilleure méthode pour lancer un Custom Firmware qui nous donnera un accès quasi complet au système seulement quelques millisecondes après le démarrage, un peu comme BootMii sur la Wii. Il nous donne un contrôle encore plus tôt qu’arm9loaderhax, et, contrairement au standard sighax, boot9strap utilise un exploit écrasant la NDMA afin d’obtenir l’exécution du code Boot9. Cela signifie que n’importe quelle console exécutant boot9strap est capable de sauvegarder l'OTP unique à la console (« OTP.bin »), le bootrom ARM11 (« boot11.bin ») et le bootrom ARM9 (« boot9.bin »).
 
-The benefits of boot9strap over other Custom Firmware launch methods are numerous, and as such it is recommended to use this guide over any other that relies on outdated software (such as menuhax + rxTools, arm9loaderhax, or even normal sighax).
+Les avantages de boot9strap par rapport aux autres méthodes de lancement de Custom Firmware sont nombreux, et c'est pour cela qu'il est recommandé d’utiliser ce guide au lieu de tout autre qui s’appuie sur des logiciels obsolètes (comme menuhax + rxTools, arm9loaderhax ou même un sighax standard).
 
-For information on how boot9strap works, please see [this presentation](https://sciresm.github.io/33-and-a-half-c3/) by [SciresM](https://github.com/SciresM/).
+Pour plus d’informations sur le fonctionnement de la boot9strap, s’il vous plaît allez voir [cette présentation](https://sciresm.github.io/33-and-a-half-c3/) de [SciresM](https://github.com/SciresM/).
 
-For a list of each of the calculated sighax signatures (the platform boot9strap is built on), see [this gist](https://gist.github.com/SciresM/cdd2266efb80175d37eabbe86f9d8c52).
+Pour obtenir la liste de chaque calcul des signatures sighax, (la plateforme sur laquelle boot9strap est construit), allez voir [ce gist](https://gist.github.com/SciresM/cdd2266efb80175d37eabbe86f9d8c52).
 
 ## Que puis-je faire avec un Custom Firmware ?
 
@@ -71,8 +71,8 @@ For a list of each of the calculated sighax signatures (the platform boot9strap 
 ## Que faut-il savoir avant de commencer ?
 
 + **Avant de commencer à suivre ce guide, vous devez connaître les risques liés au hack de votre 3DS: à chaque fois que vous modifiez votre système, il y a toujours un risque de brick IRRÉCUPÉRABLE. Cela arrive rarement, mais c'est toujours une possibilité donc assurez-vous de suivre EXACTEMENT TOUTES les directives.**
-+ If you have already hacked your 3DS before to get an EmuNAND setup, and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, you should follow all instructions and restore your existing EmuNAND when prompted once you reach [Finalizing Setup](finalizing-setup).
-+ This guide will work on New 3DS, Old 3DS, and 2DS in all regions on firmware 11.4.0 or below.
++ Si vous avez déjà hacké votre 3DS dans le passé pour obtenir une EmuNAND, et désirez déplacer le contenu de votre ancienne EmuNAND vers votre nouveau SysNAND CFW, vous devez suivre toutes les instructions et restaurer votre EmuNAND existante quand on vous le demande à l'étape [Finalisation de l'installation](finalizing-setup).
++ Ce guide fonctionnera sur les New3DS, Old3ds et 2DS dans toutes les régions en version 11.4.0 ou en dessous.
 + Si tout se passe comme prévu, vous ne perdrez aucune donnée et finirez avec tout ce que vous aviez au départ (les jeux, votre NNID, les sauvegardes, etc., seront préservées).
 + **Assurez-vous que votre console reste branchée et chargée pendant l'intégralité du processus pour éviter la perte de données ou les dommages causés par une extinction inattendue !**
 + Votre carte SD doit être en [MBR, pas GTP](http://www.howtogeek.com/245610/) (la carte SD fournie avec la console est en MBR par défaut).
