@@ -1,0 +1,60 @@
+---
+title: "Installing boot9strap (Homebrew Launcher)" #
+lang: ko
+permalink: /installing-boot9strap-(homebrew-launcher).html
+---
+
+이 설명은 SysNAND를 기준으로 제작되었으므로 기기가 EmuNAND 기반이라면 모든 과정을 SysNAND에 적용해 주세요. EmuNAND와 RedNAND는 [동일한 개념](http://3dbrew.org/wiki/NAND_Redirection)을 다른 방식으로 구현한 것입니다.
+{: .notice--info}
+
+이 페이지의 [마그넷](https://en.wikipedia.org/wiki/Magnet_URI_scheme) 링크를 사용하려면
+ [Deluge](http://dev.deluge-torrent.org/wiki/Download)와 같은 토렌트 클라이언트가 필요합니다.
+{: .notice--success}
+
+#### What you need
+
+* The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest)
+* 최신 버전의 [safehax](https://github.com/TiniVi/safehax/releases/latest)
+* 최신 버전의 [udsploit](https://github.com/smealum/udsploit/releases/latest)
+
+#### 진행 방법
+
+##### 섹션 I - 준비 작업
+
+1. 홈브류 런처를 실행시킨 채 기기에서 SD 카드를 빼 컴퓨터에 삽입해 주세요.
+1. Create a folder named `boot9strap` on the root of your SD card
+1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
+1. Copy `safehax.3dsx` to the `/3ds/` folder on your SD card
+1. Copy `udsploit.3dsx` to the `/3ds/` folder on your SD card
+1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card and rename `SafeB9SInstaller.bin` to `safehaxpayload.bin`
+
+    ![]({{ base_path }}/images/screenshots/boot9strap-hb-file-layout.png)
+    {: .notice--info}
+
+1. SD 카드를 기기에 다시 삽입해 주세요.
+
+##### Section II - Launching SafeB9SInstaller
+
+1. Launch udsploit from the list of homebrew
+  + You may have to scroll down to see this option
+1. Once it has completed, press (Start) to exit udsploit
+  + This may take several tries
+  + 재생중 화면이 멈출 경우 전원 버튼을 길게 눌러서 기기를 강제로 종료시킨 후 다시 시도해 주세요.
+1. Launch safehax from the list of homebrew
+  + You may have to scroll down to see this option
+  + If you get a "PM INIT FAILED" error, try using the [r19 release of safehax](https://github.com/TiniVi/safehax/releases/tag/r19)
+  + 재생중 화면이 멈출 경우 전원 버튼을 길게 눌러서 기기를 강제로 종료시킨 후 다시 시도해 주세요.
+1. If the exploit was successful, you will have booted into SafeB9SInstaller
+
+##### Section III - Installing boot9strap
+
+1. Wait for all safety checks to complete
+1. When prompted, input the key combo given to install boot9strap
+1. Once it has completed, press (A) to reboot your device
+1. Your device will boot into boot9strap, then shutdown automatically because it does not yet have a payload to launch
+
+___
+
+Continue to [Finalizing Setup](finalizing-setup)
+{: .notice--primary}
