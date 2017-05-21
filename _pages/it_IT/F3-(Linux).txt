@@ -1,0 +1,63 @@
+---
+title: "F3 (Linux)" #
+lang: it
+permalink: /it_IT/f3-(linux).html
+---
+
+In questa sezione aggiuntiva verrà spiegato come verificare la presenza di errori nella tua scheda SD utilizzando F3.
+{: .notice--info}
+
+A seconda delle dimensioni della tua scheda SD e della velocità del tuo computer, questo procedimento può durare diverse ore!
+{: .notice--info}
+
+Questa pagina è solo per utenti Linux. Se non sei su Linux, usa [H2testw (windows)](h2testw-(windows)) o [F3X (mac)](f3x-(mac)).
+{: .notice--info}
+
+#### Cosa serve
+
+* L'ultima versione di [F3](https://github.com/AltraMayor/f3/archive/v6.0.zip)
+
+#### Istruzioni
+
+1. Estrai l'archivio `.zip` di F3
+1. Entra nella cartella di F3 tramite il comando `cd`
+1. Avvia il comando `make` per compilare F3
+1. Inserisci la scheda SD nel tuo computer
+1. Monta la scheda SD
+1. Esegui `. / f3write <Mount point della tua scheda Sd>`
+1. Attendi che il processo sia completato. Di seguito vedrai un esempio di output.
+
+		$ ./f3write /media/michel/6135-3363/
+		Free space: 29.71 GB
+		Creating file 1.h2w ... OK!
+		...
+		Creating file 30.h2w ... OK!
+		Free space: 0.00 Byte
+		Average Writing speed: 4.90 MB/s
+
+1. Esegui `. / f3read <Mount point della tua scheda Sd>`
+1. Attendi il termine del processo. Di seguito vedrai un esempio di output.
+
+		$ ./f3read /media/michel/6135-3363/
+		                  SECTORS      ok/corrupted/changed/overwritten
+		Validating file 1.h2w ... 2097152/        0/      0/      0
+		...
+		Validating file 30.h2w ... 1491904/        0/      0/      0
+
+		  Data OK: 29.71 GB (62309312 sectors)
+		Data LOST: 0.00 Byte (0 sectors)
+			       Corrupted: 0.00 Byte (0 sectors)
+			Slightly changed: 0.00 Byte (0 sectors)
+			     Overwritten: 0.00 Byte (0 sectors)
+		Average Reading speed: 9.42 MB/s
+
+___
+
+Se il test mostra come risultato `Data LOST: 0.00 Byte (0 sectors)` la tua scheda SD funziona correttamente ed è possibile eliminare tutti i file `.h2w` dalla scheda
+{: .notice--success}
+
+Se il test mostra qualunque altro risultato, la tua scheda SD potrebbe essere corrotta o danneggiata e potresti doverla sostituire!
+{: .notice--danger}
+
+Ritorna a [Cominciamo!](get-started)
+{: .notice--primary}
