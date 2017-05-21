@@ -1,0 +1,80 @@
+---
+layout: splash
+title: "Guía de 3DS" #
+header:
+  overlay_color: "#5e616c" #
+  overlay_image: images/home-page-feature.jpg
+  overlay_filter: 0.5
+  cta_label: "Comencemos" #
+  cta_url: "/es_ES/get-started"
+  caption:
+excerpt: "Una guía completa de custom firmware para 3DS, <br /> desde stock a boot9strap.<br />" #
+lang: es
+permalink: /es_ES/index.html
+---
+
+{% capture notice-home %}
+¡Esta guía es _sólo_ para consolas retail (compradas en tiendas), no para consolas del Nintendo Developer Program!    
+Si posees una consola de desarrollador ("PANDA" o "SNAKE"), echa un vistazo a [devGuide](https://dev.3ds.guide).
+{% endcapture %}
+
+<div class="notice--danger">{{ notice-home | markdownify }}</div>
+
+¡Esta guía necesita *tu* ayuda para [traducirla](https://translate.3ds.guide/) a otros idiomas!
+{: .notice--success}
+
+¡Esta guía necesita *tu* ayuda para compartir [estos](https://3ds.guide/rss.xml) torrents!
+{: .notice--success}
+
+Lee todas las páginas introductorias antes de continuar.
+{: .notice--warning}
+
+## ¿Qué es Homebrew?
+
+[**Homebrew**](https://es.wikipedia.org/wiki/Homebrew) suele referirse a software no autorizado por Nintendo. Esto te permite ejecutar varios juegos caseros, herramientas para editar y respaldar partidas y emuladores de varios sistemas antiguos.
+
+En la mayoría de los casos, ejecutar homebrew en tu consola es 100% gratis usando [solamente la aplicación Nintendo 3DS Sound](homebrew-launcher-(soundhax)). Adicionalmente, hay otras fallas en juegos comerciales y en el navegador web que permiten ejecutar homebrew.
+
+## ¿Qué es Custom Firmware?
+
+**Custom Firmware** ("CFW") te permite utilizar hacks más avanzados que el homebrew en el espacio del usuario no pueden utilizar fácilmente. Por ejemplo, los parches de firmas digitales te permiten instalar títulos no firmados que aparecen directamente en el Menú HOME.
+
+Un CFW puede configurarse fácilmente en cualquier consola en la versión 11.4.0 o inferior.
+
+## ¿Qué se instalará con esta guía?
+
+El propósito final de esta guía es tomar una 3DS sin ninguna modificación, desde el firmware original
+a un Custom Firmware potenciado por boot9strap. En algunas versiones, se utiliza homebrew como un punto de apoyo, pero el Custom Firmware continúa siendo la meta a alcanzar.
+
+boot9strap es el mejor y más nuevo método para instalar Custom Firmware, proceso que te otorga un control casi absoluto de tu consola milisegundos después de encenderla, de manera similar a BootMii en la Wii. Otorga control incluso antes de lo que arm9loaderhax fue capaz, y, a diferencia de sighax como tal, boot9strap utiliza un exploit de sobreescritura de NDMA para conseguir ejecución de código en Boot9. Esto significa que cualquier consola que ejecute boot9strap puede volcar el OTP (`OTP.bin`), la bootrom de ARM11 (`boot11.bin`) y la bootrom de ARM9 (`boot9.bin`) únicos de la consola.
+
+Los beneficios de boot9strap por sobre otros métodos de ejecución de Custom Firmware son numerosos, por lo cual se recomienda emplear esta guía en lugar de otras guías que utilicen software desactualizado (tales como menuhax + rxTools, arm9loaderhax, o incluso sighax normal).
+
+Para información sobre cómo funciona boot9strap, por favor echa un vistazo a [esta presentación](https://sciresm.github.io/33-and-a-half-c3/) hecha por [SciresM](https://github.com/SciresM/).
+
+Para una lista de cada una de las firmas calculadas de sighax (la plataforma en la que boot9strap está diseñado), echa un vistazo a [este gist](https://gist.github.com/SciresM/cdd2266efb80175d37eabbe86f9d8c52).
+
+## ¿Qué puedo hacer con Custom Firmware?
+
++ Jugar a todos los juegos disponibles, en formato físico o de la eShop, independiente de su región
++ Personalizar el Menú HOME con [temas](https://3dsthem.es/), [insignias](https://badges.3dsthem.es/), y [pantallas splash](https://splash.3dsthem.es/) creados por los usuarios
++ Utilizar "Hack ROMs" de juegos que ya posees
++ Realizar capturas de pantalla de juegos y aplicaciones
++ [Respaldar, editar y restaurar](https://gbatemp.net/threads/413143/) datos de guardado de muchos juegos
++ Emular juegos de sistemas antiguos con varios emuladores, mediante RetroArch u otros emuladores independientes. (Funciona mejor con una New Nintendo 3DS)
++ Instalar títulos homebrew a tu sistema y hacer que aparezcan en el Menú HOME
++ Respaldar tus juegos en formato físico a un formato que puedas instalar y jugar sin necesidad del mismo
++ Sólo New 3DS: hacer stream directo de las pantallas de tu consola a tu PC sin cables con NTR CFW
++ Ejecutar varias flashcards de Nintendo DS que fueron bloqueadas hace mucho tiempo o que nunca funcionaron en Nintendo 3DS
++ Actualizar de forma segura a la última versión del sistema sin miedo a perder acceso a homebrew
+
+## ¿Qué necesito saber antes de empezar?
+
++ **Antes de comenzar la guía, debes conocer los riesgos de hackear la 3DS: CADA VEZ que modificas tu sistema, siempre existe la posibilidad de que tu consola quede inutilizable de forma IRRECUPERABLE. Es algo raro, pero la posibilidad está ahí, así que asegúrate de seguir TODAS las instrucciones AL PIE DE LA LETRA.**
++ Si ya has hackeado tu 3DS antes para tener una configuración con EmuNAND y quieres mover el contenido de esta a tu nueva CFW SysNAND, debes seguir todas las instrucciones y restaurar tu EmuNAND existente cuando se te solicite al llegar a [Finalizar Instalación](finalizing-setup).
++ Esta guía funcionará en consolas New 3DS, Old 3DS y 2DS de todas las regiones en versión 11.4.0 o inferior.
++ Si todo va según el plan, no perderás datos y terminarás con todo lo que tenías anteriormente (juegos, NNID, datos de guardado, etc se conservarán).
++ **¡Mantén tu consola conectada y cargada durante todo el proceso para evitar pérdidas de datos o daños, producto de un apagado inesperado!**
++ Tu tarjeta SD debe ser [MBR, no GPT](http://www.howtogeek.com/245610/) (la tarjeta SD que viene con tu consola es MBR por defecto).
++ Si necesitas formatear una tarjeta SD nueva, puedes usar [`guiformat`](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) y ajustar el tamaño de unidad de asignación a 32K.
++ La 2DS es esencialmente idéntica a la Old 3DS en términos de software, y cualquiera de los pasos donde aparece "Old 3DS" también se aplican a 2DS.
