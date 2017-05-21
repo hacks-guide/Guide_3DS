@@ -1,0 +1,161 @@
+---
+title: "移植 EmuNAND" #
+lang: zh-Hant
+permalink: /zh_TW/move-emunand.html
+---
+
+本篇如何把之前 EmuNAND 中的內容移植到你新的自製 SysNAND 系統底下，並移除舊的 EmuNAND 磁區的附加章節。 注意 EmuNAND 與 RedNAND 指的是些微不同運作方式但[同樣道理](http://3dbrew.org/wiki/NAND_Redirection)的用語。
+{: .notice--info}
+
+請注意，在某些版本上的 Luma3DS 中，Luma3DS 連環加載選單僅會在偵測到多個 payload 檔時才會出現。 如果它只偵測到一個 payload 檔案，在開機時按住「Start」鍵將會直接開機至 GodMode9。
+{: .notice--info}
+
+**你必須先安裝 Luma3DS 和 boot9strap 或 arm9loaderhax 才能繼續。**
+{: .notice--danger}
+
+#### 必備項目
+
+* 現有的 EmuNAND
+* 最新版的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* 最新版的 [FBI 管理器](https://github.com/Steveice10/FBI/releases/latest)
+
+#### 操作說明
+
+##### 第一節 — 準備工作
+
+1. 關閉你的主機
+1. 將 SD 卡插入電腦中
+1. 解壓 GodMode9 `.zip` 中的 `GodMode9.firm`（或是 `GodMode9.bin` 如果你是使用 arm9loaderhax 的話）至 SD 卡的 `/luma/payloads/` 資料夾中
+1. 將 SD 卡插回主機中
+
+##### 第二節 — 備份 SysNAND 中的 DSiWare 存檔
+
+如果你沒有安裝任何 DSiWare 遊戲或你認為重要的存檔，跳過本節。
+{: .notice--info}
+
+1. 開機時，按住「Start」鍵進入 Luma3DS 選單
+1. 按「A」啟動 GodMode9
+1. 移動至 `[2:] SYSNAND TWLN` -> `title`
+1. 在 `00030004` 上按住「R」並同時按下「A」以選取資料夾，並選擇「Copy to 0:/gm9out」
+  + 如果你有很多 DSiWare 遊戲的話，本過程可能會耗費一些時間
+1. 按「B」兩次回到主選單
+
+##### 第三節 — 備份 GBA 虛擬主機 遊戲存檔
+
+如果你沒有安裝任何 GBA 虛擬主機 遊戲或你認為重要的存檔，跳過本節。
+{: .notice--info}
+
+請注意，對於任何其他類型的 虛擬主機 遊戲（GBC、NES等）可忽略本節。
+{: .notice--info}
+
+1. 按住「R」並按下「Start」鍵關機
+1. 將 SD 卡插入電腦中
+1. 在 SD 卡的根目錄底下建立一個新資料夾 `files9`
+1. 在 `/files9/` 資料夾中為各個想備份的 GBA 虛擬主機 遊戲建立一個新的資料夾 
+1. 將 SD 卡插回主機中
+1. 啟動你的主機至 SysNAND 中
+1. 為各個想備份的 GBA 虛擬主機 遊戲重複下列步驟：
+  + 在 SysNAND 中啟動所選的 GBA 虛擬主機 遊戲
+  + 退出遊戲
+  + 開機時，按住「Start」鍵進入 Luma3DS 選單
+  + 按「A」啟動 GodMode9
+  + 移動至 `[S:] SYSNAND VIRTUAL`
+  選取 `gbavc.sav`，並按下「A」複製
+  + 按「B」回到主選單
+  + 移動至 `[0:] SDCARD` -> `files9`
+  + 移動至為本遊戲所創建的資料夾底下
+  + 按「Y」貼上 `gbavc.sav`
+  + 按下「Start」鍵重啟你的主機
+1. 重啟時按住「Start」鍵啟動 Luma3DS 選單
+1. 按「A」啟動 GodMode9
+
+##### 第四節 — 複製 EmuNAND 至 SysNAND 中
+
+1. 移動至 `[E:] EMUNAND VIRTUAL`
+1. 透過「A」選取 `nand.bin`，並選擇「NAND image options...」，再選「Restore SysNAND (safe)」
+1. 按「A」解鎖 SysNAND 的複寫保護，然後按下提示的按鍵組合
+  + 這不會蓋掉你的 arm9loaderhax
+1. 按下提示的按鍵組合以解鎖 SysNAND（lvl1）的寫入保護
+  + 此過程將花費一些時間
+1. 過程結束後，按下「A」繼續
+1. 按「B」回到主選單
+
+##### 第五節 — 還原 DSiWare 存檔
+
+如果你剛剛沒有備份 DSiWare 遊戲存檔，跳過本節。
+{: .notice--info}
+
+1. 移動至 `[0:] SDCARD` -> `gm9out`
+1. 選取 `00030004` 資料夾並按下「Y」複製
+1. 按「B」兩次回到主選單
+1. 移動至 `[2:] SYSNAND TWLN` -> `title`
+1. 按「Y」貼上 `00030004` 資料夾
+1. 選擇 「Copy path(s)」
+1. 按「A」解鎖 SysNAND（lvl1）的寫入保護，然後按下提示的按鍵組合
+1. 選擇「Overwrite file(s)」
+  + 如果你有很多 DSiWare 遊戲的話，本過程可能會耗費一些時間
+1. 按「B」兩次回到主選單
+
+##### 第六節 — 還原 GBA 虛擬主機 遊戲存檔
+
+如果你剛剛沒有備份 GBA 虛擬主機 遊戲存檔，跳過本節。
+{: .notice--info}
+
+1. 按住「R」並按下「Start」鍵關機
+1. 啟動你的主機至 SysNAND 中
+1. 為各個想備份的 GBA 虛擬主機 遊戲重複下列步驟：
+  + 在 SysNAND 中啟動所選的 GBA 虛擬主機 遊戲
+  + 退出遊戲
+  + 開機時，按住「Start」鍵進入 Luma3DS 選單
+  + 按「A」啟動 GodMode9
+  + 移動至 `[0:] SDCARD` -> `files9`
+  + 移動至為本遊戲所創建的資料夾底下
+  選取 `gbavc.sav`，並按下「A」複製
+  + 按「B」回到主選單
+  + 移動至 `[S:] SYSNAND VIRTUAL`
+  + 按「Y」貼上 `gbavc.sav`
+  + 按「A」確認
+  + 按下「Start」鍵重啟你的主機
+1. 重啟時按住「Start」鍵啟動 Luma3DS 選單
+1. 按「A」啟動 GodMode9
+
+##### 第七節 — 備份 SysNAND
+
+1. 按「Home」鍵以叫出主選單
+1. 選擇「More...」
+1. 選擇「Backup NAND」
+1. 按「A」 繼續
+1. 同時按住「R」及「B」以卸除 SD 卡
+1. 將 SD 卡插入電腦中
+1. 從 SD 卡中的資料夾 `/gm9out/` 複製出 `nand.bin` 至電腦中安全的地方
+  + 如果你先前有用過 SafeCTRTransfer 而且有名為 `<serialnumber>_nand.bin` 的 NAND 備份，用這個檔案蓋過原來的備份（將 `nand.bin` 重新命名為 `<serialnumber>_nand.bin`）。
+  + 建議備份至各個不同的地方（比如雲端硬碟中）
+  + 未來如果你不小心玩到磚機，這備份將會是你的救命恩人
+1. 複製完畢後，將 `/gm9out/` 資料夾中的 `nand.bin` 檔案刪除
+1. **在繼續前，請先將 SD 卡中的所有檔案在電腦上備份起來；接下來的步驟將會刪除所有卡上的檔案**
+
+##### 第八節 — 格式化 SD 卡
+
+1. 將 SD 卡插回主機中
+1. 按「Home」鍵以叫出主選單
+1. 選擇「More...」
+1. 選擇「SD format menu」
+1. 按 「A」 確認
+1. 選擇「No EmuNAND｣
+1. 選擇「Auto」
+1. 按「A」確定命名為 `GM9SD`
+  + 你可以在此設置 SD 卡的名稱
+1. 出現提示時，輸入提示的按鍵組合以確認
+1. 同時按住「R」及「B」以卸除 SD 卡
+1. 將 SD 卡插入電腦中
+1. 將所有檔案複製回 SD 卡中
+  + 記得以你先前備份的檔案中替代 SD 卡中的 `boot.firm` 檔案
+1. 將 SD 卡插回主機中
+1. 按「A」重新載入 SD 卡
+1. 按下「Start」鍵以存檔並重新啟動系統
+1. 如果黑屏，[請參見此故障排除](troubleshooting#ts_sys_down)
+
+___
+
+返回至[完成安裝](finalizing-setup)。
+{: .notice--primary}
