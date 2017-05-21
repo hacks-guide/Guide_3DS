@@ -1,0 +1,80 @@
+---
+layout: splash
+title: "Οδηγός 3DS" #
+header:
+  overlay_color: "#5e616c" #
+  overlay_image: images/home-page-feature.jpg
+  overlay_filter: 0.5
+  cta_label: "Ας αρχίσουμε" #
+  cta_url: "/el_GR/get-started" #
+  caption:
+excerpt: "A complete guide to 3DS custom firmware, <br /> from stock to boot9strap.<br />" #
+lang: el
+permalink: /el_GR/index.html
+---
+
+{% capture notice-home %}
+This guide is for retail (consumer purchased; not from the Nintendo Developer Program) consoles _only_!    
+If you have a developer ("PANDA" or "SNAKE") console, check out [devGuide](https://dev.3ds.guide).
+{% endcapture %}
+
+<div class="notice--danger">{{ notice-home | markdownify }}</div>
+
+This guide needs *your* help to [translate](https://translate.3ds.guide/) it to other languages!
+{: .notice--success}
+
+This guide needs *your* help to seed [these](https://3ds.guide/rss.xml) torrents!
+{: .notice--success}
+
+Read all of the introductory pages before proceeding.
+{: .notice--warning}
+
+## Τι είναι το Homebrew;
+
+Ο όρος [**Homebrew**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) συνήθως αναφέρεται σε λογισμικό το οποίο δεν είναι εξουσιοδοτημένο από την Nintendo. Σας επιτρέπει να τρέξετε homebrew παιχνίδια, εργαλεία όπως επεξεργασία αρχείων save και αντιγράφων ασφαλείας και emulators για διάφορα παλαιότερα συστήματα.
+
+In most cases, running homebrew on your device is 100% free using [just the Nintendo 3DS Sound app](homebrew-launcher-(soundhax)). Υπάρχουν ωστόσο διάφορα άλλα exploits σε παιχνίδια εμπορίου και στο πρόγραμμα περιήγησης για να τρέξετε το homebrew.
+
+## Τι είναι το Custom Firmware;
+
+** Custom Firmware ** («CFW») σας επιτρέπει να χρησιμοποιήσετε πιο προηγμένα hacks που το userland homebrew δεν μπορεί εύκολα να κάνει. Για παράδειγμα, τα patches στην υπογραφή του κώδικα σας επιτρέπουν να εγκαταστήσετε τίτλους χωρίς υπογραφή που θα εμφανίζονται στο HOME Menu σας.
+
+CFW can be easily set up on any console that is on 11.4.0 or lower.
+
+## Τι εγκαθιστά αυτός ο οδηγός;
+
+Αυτός ο οδηγός έχει σαν τελικό στόχο να μετατρέψει ένα μη τροποποιημένο 3DS από ένα εργοστασιακό
+firmware to boot9strap powered Custom Firmware. Σε κάποιες εκδόσεις, το homebrew χρησιμοποιείται ως ένα σημείο "αρχής", αλλά το Custom Firmware εξακολουθεί να είναι ο στόχος.
+
+boot9strap is the newest and best method of launching Custom Firmware that gives us nearly full control of the system only milliseconds into boot, which is similar to the effect of BootMii for the Wii. It gives us even earlier control than arm9loaderhax did, and, unlike standard sighax, boot9strap uses an NDMA overwrite exploit in order to gain Boot9 code execution. This means that any console running boot9strap is capable of dumping the console unique OTP (`OTP.bin`), the ARM11 bootrom (`boot11.bin`), and the ARM9 bootrom (`boot9.bin`).
+
+The benefits of boot9strap over other Custom Firmware launch methods are numerous, and as such it is recommended to use this guide over any other that relies on outdated software (such as menuhax + rxTools, arm9loaderhax, or even normal sighax).
+
+For information on how boot9strap works, please see [this presentation](https://sciresm.github.io/33-and-a-half-c3/) by [SciresM](https://github.com/SciresM/).
+
+For a list of each of the calculated sighax signatures (the platform boot9strap is built on), see [this gist](https://gist.github.com/SciresM/cdd2266efb80175d37eabbe86f9d8c52).
+
+## Τι μπορείτε να κάνετε με το Custom Firmware;
+
++ Να παίξετε όλες τις κασέτες παιχνιδιών και παιχνίδια μέσω eShop, ανεξαρτήτου περιοχής
++ Customize your HOME Menu with user-created [themes](https://3dsthem.es/), [badges](https://badges.3dsthem.es/), and [splash screens](https://splash.3dsthem.es/)
++ Χρήση "ROM hacks" για παιχνίδια που ήδη έχετε στην κατοχή σας
++ Να κάνετε λήψη στιγμιότυπου του παιχνιδιού και εφαρμογών
++ [Backup, edit, and restore](https://gbatemp.net/threads/413143/) saves for many games
++ Να παίξετε παιχνίδια από παλαιότερα συστήματα με την χρήση διάφορων emulators, χρησιμοποιώντας το Retroarch ή άλλων μεμονωμένων emulators. (Λειτουργεί καλύτερα με το New Nintendo 3DS)
++ Εγκατάσταση homebrew τίτλων στο σύστημά σας και δυνατότητα εμφάνισης τους στο HOME Menu
++ Να εξάγετε την κασέτα παιχνιδιού σας σε μία μορφή που θα μπορείτε να εγκαταστήσετε και να παίξετε χωρίς να χρειάζεστε την κασέτα
++ Μόνο για New 3DS: μεταδώστε ζωντανά το παιχνίδι σας στον υπολογιστή σας με την χρήση του NTR CFW
++ Τρέξιμο πολλών παλιών Nintendo DS flash καρτών που είχαν μπλοκαριστεί πριν από καιρό ή δεν δούλεψαν ποτέ στο Nintendo 3DS
++ Να ενημερώσετε με ασφάλεια στην πιο πρόσφατη έκδοση του συστήματος, χωρίς τον φόβο απώλειας πρόσβασης στο homebrew
+
+## Τι πρέπει να γνωρίζετε πριν ξεκινήσετε;
+
++ **Προτού ξεκινήσετε τον οδηγό, θα πρέπει να ξέρετε τους κινδύνους πίσω από το hacking του 3DS: ΚΑΘΕ φορά που τροποποιείτε το σύστημά σας, υπάρχει πάντα η πιθανότητα ΟΛΟΣΧΕΡΗΣ ΑΧΡΗΣΤΕΥΣΗΣ ΤΗΣ ΣΥΣΚΕΥΗΣ ΣΑΣ. Αυτό συμβαίνει σπάνια, όμως υπάρχει ακόμα η πιθανότητα γι΄αυτό βεβαιωθείτε ότι ακολουθείτε πιστά ΟΛΕΣ τις οδηγίες ΑΚΡΙΒΩΣ.**
++ If you have already hacked your 3DS before to get an EmuNAND setup, and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, you should follow all instructions and restore your existing EmuNAND when prompted once you reach [Finalizing Setup](finalizing-setup).
++ This guide will work on New 3DS, Old 3DS, and 2DS in all regions on firmware 11.4.0 or below.
++ Εάν όλα πάνε σύμφωνα με το σχέδιο, δεν θα χάσετε τα δεδομένα σας και θα καταλήξετε με όλα όσα ξεκινήσατε (παιχνίδια, NNID, saves, κλπ. θα διατηρηθούν).
++ **Keep your device plugged in and charged throughout the entire process to avoid data loss or damage from an unexpected power-off!**
++ Your SD card should be [MBR, not GPT](http://www.howtogeek.com/245610/) (the SD card that comes with your device will be MBR by default).
++ Εάν χρειαστεί να διαμορφώσετε μια καινούργια κάρτα SD, μπορείτε να χρησιμοποιήσετε το [`guiformat`](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) και να ορίσετε το Μέγεθος Μονάδας Εκχώρησης στα 32K.
++ Το 2DS είναι ουσιαστικά το ίδιο με το Old 3DS όσον αφορά το λογισμικό και οποιαδήποτε βήματα αναφέρονται στο "Old 3DS" εφαρμόζονται και στο 2DS.
