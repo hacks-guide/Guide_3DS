@@ -1,0 +1,177 @@
+---
+title: "安裝 boot9strap（透過 DSiWare 植入存檔）" #
+lang: zh-Hant
+permalink: /zh_TW/installing-boot9strap-(dsiware-save-injection).html
+---
+
+請注意，在某些版本上的 Luma3DS 中，Luma3DS 連環加載選單僅會在偵測到多個 payload 檔時才會出現。 如果它只偵測到一個 payload 檔案，在開機時按住「Start」鍵將會直接開機至 GodMode9。
+{: .notice--info}
+
+本頁面會有些許的[磁力](https://en.wikipedia.org/wiki/Magnet_URI_scheme)連結，你將需要個像 [Deluge](http://dev.deluge-torrent.org/wiki/Download) 的 BT 種子下載器來下載磁力連結的檔案。
+{: .notice--success}
+
+在繼續之前，請確保你已閱讀[安裝 boot9strap（透過 DSiWare）](installing-boot9strap-(dsiware))中的提示及警告
+{: .notice--danger}
+
+如果你不使用符合 3DS 目標機的 `.firm` 檔案，保證會磚機！ 請確保你下載並使用正確的檔案！
+{: .notice--danger}
+
+#### 必備項目
+
+* 兩台 3DS
+  + **3DS 始源機**：已搭載某種*最新版本*自製韌體的 3DS （如 arm9loaderhax 或 boot9strap）
+  + **3DS 目標機**：已搭載原廠系統*版本 11.4.0* 的 3DS
+* 已經於 **3DS 始源機** 上擁有並安裝以下任意可執行漏洞的 DSiWare 遊戲（盜版遊戲是**無法使用**的）
+  + **《堅守陣地（Fieldrunners）》**
+  + **《Legends of Exidia》**
+  + **《吉他搖滾巡演（Guitar Rock Tour）》**  
+  + **《薩爾達傳說：四人之劍（The Legend of Zelda: Four Swords）》**  
+* 最新版的 [3ds_dsiwarehax_installer](https://github.com/yellows8/3ds_dsiwarehax_installer/releases)
+* 最新版的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* 最新版的 [b9sTool](https://github.com/Plailect/b9sTool/releases/latest)
+* 自製軟體[入門套件](http://smealum.github.io/ninjhax2/starter.zip)
+* 對應 **3DS 目標機** 的 11.4.0 `.firm` 檔案
+  + [11.4.0 New 3DS](magnet:?xt=urn:btih:3b59dd43eec3edb133555f58d1180bfb196acbb4&dn=2.54-0_11.4_NEW.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+  + [11.4.0 舊型 3DS](magnet:?xt=urn:btih:0dd89d42ad711f770da899af05ee162ede0d0070&dn=2.54-0_11.4_OLD.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+
+#### 操作說明
+
+##### 第一節 — 準備工作
+
+建議先透過[存檔管理器](https://github.com/J-D-K/JKSM/releases/latest)備份 3DS 目標機上任何你認為重要的存檔（本教學過程需格式化，所有的資料將遺失！）
+{: .notice--warning}
+
+1. 解壓 GodMode9 `.zip` 中的 `GodMode9.firm`（或是 `GodMode9.bin` 如果你是使用 arm9loaderhax 的話）至 **3DS 始源機**的 SD 卡的 `/luma/payloads/` 資料夾中
+1. 將所選遊戲之 `public.sav` 檔案從 3ds_dsiwarehax_installer `.zip` 中的 `/dsiware/(8 位元 ID)/` 至 3DS 始源機的 SD 卡當中
+  + **美版《堅守陣地（Fieldrunners）》**: `4b464445`
+  + **歐版《堅守陣地（Fieldrunners）》**: `4b464456`
+  + **美版《Legends of Exidia》**: `4b4c4545`
+  + **歐版《Legends of Exidia》**: `4b4c4556`
+  + **日版《Legends of Exidia》**: `4b4c454a`
+  + **歐版《吉他搖滾巡演（Guitar Rock Tour）》**: `4b475256`
+  + **美版《吉他搖滾巡演（Guitar Rock Tour）》**: `4b475245`
+  + **歐版《薩爾達傳說：四人之劍（The Legend of Zelda: Four Swords）》**: `4b513956`
+  + **美版《薩爾達傳說：四人之劍（The Legend of Zelda: Four Swords）》**: `4b513945`
+1. 將 **3DS 始源機** 的 SD 卡插回至主機內
+1. 啟動 **3DS 始源機**，並按住「Start」鍵進入 Luma3DS 連環加載選單
+1. 按「A」啟動 GodMode9
+1. 按「Home」鍵以叫出主選單
+1. 選擇「More...」
+1. 選擇「Backup NAND」
+1. 按「A」 繼續
+1. 同時按住「R」及「B」以卸除 SD 卡
+1. 將 **3DS 目標機** 的 SD 卡插入至電腦中
+1. **將兩台 3DS 的 SD 卡內容備份至電腦中不同的資料夾中（請自己注意哪個是哪台的）！**
+1. 將各個 SD 卡重新插入對應的 3DS 中
+1. 於 **3DS 始源機** 上按下「Start」鍵以重啟
+
+##### 第二節 — 安裝植入後的存檔
+
+1. 啟動 **3DS 始源機**，並按住「Start」鍵進入 Luma3DS 連環加載選單
+1. 按「A」啟動 GodMode9
+1. 移動至 `SDCARD`
+1. 選取 `public.sav`，並按下「Y」複製
+1. 按「B」以回到主選單
+1. 移動至 `SYSNAND TWLN` -> `title` -> `00030004`
+1. 移動到對應所選遊戲及區域的資料夾中：
+  + **美版《堅守陣地（Fieldrunners）》**: `4b464445`
+  + **歐版《堅守陣地（Fieldrunners）》**: `4b464456`
+  + **美版《Legends of Exidia》**: `4b4c4545`
+  + **歐版《Legends of Exidia》**: `4b4c4556`
+  + **日版《Legends of Exidia》**: `4b4c454a`
+  + **歐版《吉他搖滾巡演（Guitar Rock Tour）》**: `4b475256`
+  + **美版《吉他搖滾巡演（Guitar Rock Tour）》**: `4b475245`
+  + **歐版《薩爾達傳說：四人之劍（The Legend of Zelda: Four Swords）》**: `4b513956`
+  + **美版《薩爾達傳說：四人之劍（The Legend of Zelda: Four Swords）》**: `4b513945` 
+1. 移動至 `data` 資料夾
+1. 選取 `public.sav`，並按下「X」刪除
+1. 按下提示的按鍵組合以解鎖 SysNAND（lvl1）的寫入保護
+1. 按「A」 繼續
+1. 按「Y」貼上 `public.sav`
+1. 選擇 「Copy path(s)」
+1. 按「Start」鍵重啟 **3DS 始源機**
+1. 於 **3DS 始源機** 中啟動你所選的 DSiWare
+1. 測試存檔是否可用
+  + **《堅守陣地》**：於主選單中按下「分數（Scores）」按鈕
+  + **《Legends of Exidia》**: 在兩個主選單中按下「A」或「Start」鍵後，選擇第一個存檔並按繼續
+  + **《吉他搖滾巡演（Guitar Rock Tour）》**: 往下滑至「High-Scores」->「Drums」->「Easy」    
+  + **《薩爾達傳說：四人之劍（The Legend of Zelda: Four Swords）》**: 啟動遊戲即可
+  + 如果你的遊戲跳出 `boot.nds` 錯誤或出現白屏，這表示**漏洞已成功執行**
+  + 如果你的遊戲能正常執行且沒有跳出任何錯誤，請先不要繼續並先檢查哪裡是否出了問題
+  + 如果黑屏，[請參見此疑難排解](troubleshooting#twl_broken)
+
+##### 第三節 — 系統轉移
+
+1. **將兩台 3DS 的 SD 卡內容備份至電腦中不同的資料夾中（請自己注意哪個是哪台的）！**
+1. 將各個 SD 卡重新插入對應的 3DS 中
+1. 如果 **3DS 目標機** 已經有綁定了 NNID 帳號，你必須先透過系統設定格式化你的主機：
+  + 進入至「其他設定（Other Settings）」中的最後一頁，選擇「格式化系統（Format System Memory）」並依步驟進行
+1. 請閱讀以下內容︰
+  + 你的自製系統 3DS = 3DS 始源機 = 「原始系統」
+  + 你的原廠 3DS = 3DS 目標機 = 「目標系統」
+  + **當提示時，同時複製 DSiWare 程式！**
+  + 當提示時，**千萬不要**刪除始源機上的 SD 卡內容
+  + 請確保兩台主機的電池是充足的
+  + 僅適用於 2DS 或 舊型 3DS（始源機）轉移至 New 3DS（目標機） — 當提示選擇該以哪個方法轉移 SD 卡內容時：
+    + **千萬不要** 選擇「低容量 microSD 卡轉移（Low-Capacity microSD Card Transfer）」或最低選項（選項 2），這方法只會將 tickets 轉移過去且可能不會將 DSiWare 存檔轉移過去。
+    + 最快的方法：如果你可以將始源機的 SD 卡內容轉移到目標機的 microSD 卡中，那麼，當提示時請選擇「透過電腦轉移（PC-Based Transfer）」（選項 3）。
+    + 最慢的方法：如果你沒辦法透過電腦轉移資料，請選擇**完整的**「無線轉移」方法（選項 1）。
+1. 請見[此連結（英文）](http://en-americas-support.nintendo.com/app/answers/detail/a_id/227/)並遵守任天堂官方系統轉移的指南及步驟並牢牢的將它記好
+
+##### 第四節 — 還舊型 3DS 始源機
+
+1. 在 **3DS 始源機**上，完成初始設定
+1. 進行下列任意一項
+    + 將剩下的步驟全都做完，然後在 **3DS 目標機**上重新照著本手冊從頭開始做起；然後再等一個禮拜，然後在從 **3DS 目標機**系統轉移會去至 **3DS 始源機**上 *（請記住，你不能從 New 3DS 轉移回舊型 3DS 中）*
+    + 打電話給任天堂說你已經沒辦法使用你的 NNID 綁定的舊主機了（也就是 **3DS 目標機**），而你現在想要將它綁定至另一台主機上（也就是 **3DS 始源機**）
+    + 如果你想要將你的 NNID 保留於** 3DS 目標機**上的話，你也可以從 **3DS 始源機**中[移除 NNID](https://3ds.guide/troubleshooting#rm_nnid)
+1. 重啟 **3DS 始源機**，並按住「Start」鍵進入 Luma3DS 連環加載選單
+1. 按「A」啟動 GodMode9
+1. 移動至 `[0:] SDCARD`
+1. 按「A」選取你的 `nand.bin` 檔案，並選擇「NAND image options...」，再選「Restore SysNAND (safe)」
+1. 按「A」解鎖 SysNAND 的複寫保護，然後按下提示的按鍵組合
+  + 這不會複寫你的 boot9strap 安裝
+1. 按下提示的按鍵組合以解鎖 SysNAND（lvl1）的寫入保護
+  + 此過程將花費一些時間
+1. 過程結束後，按下「A」繼續
+1. 按「Start」鍵重啟 **3DS 始源機**
+
+##### 第五節 — 備份 3DS 目標機的 FIRM
+
+1. 將 `boot.nds` 複製到 **3DS 目標機** SD 卡的根目錄中
+1. 建立一個新的資料夾 `boot9strap` 於 **3DS 目標機** 的 SD 卡根目錄中
+1. 依 **3DS 目標機**的型號複製 11.4.0 的 `.firm` 檔案至 **3DS 目標機**的 SD 卡根目錄中
+1. 解壓 boot9strap `.zip` 的 `boot9strap.firm` 檔案至 SD 卡的 `/boot9strap/` 資料夾中
+1. 於 **3DS 目標機** 中啟動你所選的 DSiWare
+1. 透過你的 DSiWare 遊戲啟動 b9sTool
+  + **《堅守陣地》**：於主選單中按下「分數（Scores）」按鈕
+  + **《Legends of Exidia》**: 在兩個主選單中按下「A」或「Start」鍵後，選擇第一個存檔並按繼續
+  + **《吉他搖滾巡演（Guitar Rock Tour）》**: 往下滑至「High-Scores」->「Drums」->「Easy」
+  + **《薩爾達傳說：四人之劍（The Legend of Zelda: Four Swords）》**: 啟動遊戲即可
+  + 如果你發現你的遊戲並沒有修改後的存檔，[請見此疑難排解](troubleshooting#ts_dsiware)
+1. 選擇「Dump F0F1」來備份 **3DS 目標機** 的 FIRM 磁區
+1. 記好 FIRM 磁區的備份位置
+1. 退出 b9sTool
+  + 你可能得按住電源紐強制關機
+1. 將 SD 卡插回至電腦中，並複製 `F0F1_N3DS.bin` 或 `F0F1_O3DS.bin` 檔案（依主機型號而定）至電腦中一個安全的地方；建議備份至各個不同的位置中；這個備份將在未來你磚機時救你一命
+
+##### 第六節 — 刷入 3DS 目標機的 FIRM
+
+**千萬不要在已安裝 arm9loaderhax 的裝置上使用 b9sTool，否則保證變磚！**
+{: .notice--danger}
+
+1. 於 **3DS 目標機** 中啟動你所選的 DSiWare
+1. 透過你的 DSiWare 遊戲啟動 b9sTool
+  + **《堅守陣地》**：於主選單中按下「分數（Scores）」按鈕
+  + **《Legends of Exidia》**: 在兩個主選單中按下「A」或「Start」鍵後，選擇第一個存檔並按繼續
+  + **《吉他搖滾巡演（Guitar Rock Tour）》**: 往下滑至「High-Scores」->「Drums」->「Easy」
+  + **《薩爾達傳說：四人之劍（The Legend of Zelda: Four Swords）》**: 啟動遊戲即可
+1. 選擇「Install boot9strap」並確認
+1. 退出 b9sTool 並關機
+  + 你可能得按住電源紐強制關機
+1. 你的主機將啟動至 boot9strap 中並自動關機，因為它目前尚無 payload 檔案可供啟動
+
+___
+
+繼續至[完成安裝](finalizing-setup)
+{: .notice--primary}
