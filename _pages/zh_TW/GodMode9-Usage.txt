@@ -1,0 +1,230 @@
+---
+title: "如何使用 GodMode9 " #
+lang: zh-Hant
+permalink: /zh_TW/godmode9-usage.html
+---
+
+GodMode9 是可以完全存取任天堂 3DS 主機的文件瀏覽器，你可以用它存取 SD 卡以及你 SysNAND 和 EmuNAND 內的 FAT 磁區以及更多。 除了其他功能外，你還能透過它複製、刪除、重新命名檔案以及建立資料夾。
+{: .notice--primary}
+
+請注意，在某些版本上的 Luma3DS 中，Luma3DS 連環加載選單僅會在偵測到多個 payload 檔時才會出現。 如果它只偵測到一個 payload 檔案，在開機時按住「Start」鍵將會直接開機至 GodMode9。
+{: .notice--info}
+
+{% capture notice %}
+這玩意非常強大，他能針對 3DS 主機上的系統資料進行任何你想得到的修改。 但是別擔心，它採取了各式的預防措施，避免你不小心損壞主機上的資料。
+<br><br>
+寫入權限系統透過提供警告來保護你，並強制你輸入啟用寫入權限的按鍵組合。 你不可能在沒有輸入按鍵組合的情況下覆蓋或修改任何重要的東西，且不可能意外地解鎖某些東西。 不過以防萬一，還是別做傻事且在進行變更前先存好備份。
+{% endcapture %}
+
+<div class="notice--danger">{{ notice | markdownify }}</div>
+
+## <a name="nand_backup" /> 建立 NAND 備份
+
+#### 操作說明
+
+1. 開機時，按住「Start」鍵進入 Luma3DS 選單
+1. 按「A」啟動 GodMode9
+1. 按「Home」鍵以叫出主選單
+1. 選擇「More...」
+1. 選擇「Backup NAND」
+1. 按「A」 繼續
+1. 同時按住「R」及「B」以卸除 SD 卡
+1. 將 SD 卡插入電腦中
+1. 從 SD 卡中的資料夾 `/gm9out/` 複製出 `nand.bin` 至電腦中安全的地方
+  + 如果你先前有用過 SafeCTRTransfer 而且有名為 `<serialnumber>_nand.bin` 的 NAND 備份，用這個檔案蓋過原來的備份（將 `nand.bin` 重新命名為 `<serialnumber>_nand.bin`）。
+  + 建議備份至各個不同的地方（比如雲端硬碟中）
+  + 未來如果你不小心玩到磚機，這備份將會是你的救命恩人
+1. 複製完畢後，將 `/gm9out/` 資料夾中的 `nand.bin` 檔案刪除
+1. 將 SD 卡插回主機中
+
+## <a name="nand_restore" /> 還原 NAND 備份
+
+#### 操作說明
+
+1. 開機時，按住「Start」鍵進入 Luma3DS 選單
+1. 按「A」啟動 GodMode9
+1. 移動至 `[0:] SDCARD`
+1. 按「A」選取你的 `nand.bin` 檔案，並選擇「NAND image options...」，再選「Restore SysNAND (safe)」
+1. 按「A」解鎖 SysNAND 的複寫保護，然後按下提示的按鍵組合
+  + 這不會複寫你的 boot9strap 安裝
+1. 按下提示的按鍵組合以解鎖 SysNAND（lvl1）的寫入保護
+  + 此過程將花費一些時間
+1. 過程結束後，按下「A」繼續
+
+## <a name="injectHS" /> 植入任何 .CIA 程式至「健康與警示」程式中
+
+#### 準備工作
+
++ 為了整潔，將你所想要植入的 `.cia` 檔複製至 SD 卡的 `/cias/` 資料夾中
+    + 請注意，你將無法植入比「健康與警示」程式還大的檔案（包括遊戲以及其他較大的程式）
+
+#### 操作說明
+
+1. 開機時，按住「Start」鍵進入 Luma3DS 選單
+1. 按「A」啟動 GodMode9
+1. 移動至 `[0:] SDCARD` -> `cias`
+1. 按「A」選取你的 `.cia` 檔案，並選擇「CIA image options...」，再選「Mount image to drive」
+1. 按「A」選取 `.app` 結尾的檔案，並選擇「NCCH image options」，再選「Inject to H&S」
+1. 按「A」解鎖 SysNAND（lvl1）的寫入保護，然後按下提示的按鍵組合
+1. 按「A」 繼續
+
+## <a name="restore_hs" /> 還原植入前的「健康與警示」程式
+
+此方法只能在先前使用過 GodMode9 植入檔案至「健康與警示」程式的前提下才能使用（非 Decrypt9 或 Hourglass9）。
+{: .notice--info}
+
+#### 操作說明
+
+1. 開機時，按住「Start」鍵進入 Luma3DS 選單
+1. 按「A」啟動 GodMode9
+1. 按「Home」鍵以叫出主選單
+1. 選擇「More...」
+1. 選擇「Restore H&S」
+1. 按「A」解鎖 SysNAND（lvl1）的寫入保護，然後按下提示的按鍵組合
+
+## <a name="dump_cart" /> 拷貝遊戲卡帶
+
+#### 準備工作
+
++ 將你所想要拷貝的遊戲卡帶至你的主機中
+    + 3DS 遊戲卡帶將被存為可安裝的 `.cia` 格式
+    + NDS 遊戲卡帶將被存為不可直接安裝但可用於燒錄卡及模擬器的 `.nds` 格式
+
+#### 操作說明
+
+1. 開機時，按住「Start」鍵進入 Luma3DS 選單
+1. 按「A」啟動 GodMode9
+1. 移動至 `[C:] GAMECART`
+1. 遵循以下適合你遊戲卡帶的步驟：
+  + **3DS 遊戲卡帶：**按「A」選取 `[程式 ID].trim.3ds`，然後選擇「NCSD image options...」，再選「Build CIA from file」
+  + **NDS 遊戲卡帶：**按「A」選取 `[程式 ID].trim.nds`，然後再選「Copy to 0:/gm9out」
+1. 你可安裝的 `.cia` 或不可安裝的 `.nds` 檔案將被複製到你 SD 卡的 `/gm9out/` 資料夾中
+
+## <a name="dump_title" /> 拷貝程式
+
+透過 FBI 管理器的 `Titles` 選單以取得你所想要拷貝的程式的程式 ID
+{: .notice--info}
+
+#### 操作說明
+
+1. 開機時，按住「Start」鍵進入 Luma3DS 選單
+1. 按「A」啟動 GodMode9
+1. 移動至適合你所想要拷貝的程式種類的磁區：
+  + **使用者安裝程式**：移動至 `[A:] SYSNAND SD`
+  + **系統程式**：移動至 `[1:] SYSNAND CTRNAND`
+1. 移動至 `title`
+1. 移動至對應你程式 ID 前 8 碼的資料夾
+1. 移動至對應你程式 ID 後 8 碼的資料夾
+1. 移動至 `content`
+1. 按「A」鍵選取 `.tmd` 檔案，並選擇「TMD file options...」，再選「Show title info」
+1. 確保你選擇了正確的程式
+1. 按「B」鍵退出程式資訊
+1. 按「A」鍵選取 `.tmd` 檔案，並選擇「TMD file options...」，再選「Build CIA (standard)」
+1. 你可安裝的 `.cia` 檔案將被複製到你 SD 卡的 `/gm9out/` 資料夾中
+
+## <a name="convert_3ds" /> 將 .3DS 檔案轉成 .CIA
+
+#### 準備工作
+
++ 為了整潔，將你所想要轉換的各個 `.3ds` 檔案複製至 SD 卡的 `/cias/` 資料夾中
+    + 請注意，如果你想要轉換已經在燒錄卡上的 `.3ds` 檔案，你應該遵循[拷貝遊戲卡帶](#dump_cart)的步驟
+
+#### 操作說明
+
+1. 開機時，按住「Start」鍵進入 Luma3DS 選單
+1. 按「A」啟動 GodMode9
+1. 移動至 `[0:] SDCARD` -> `cias`
+1. 按「A」鍵選取你的 `.3ds` 檔案，並選擇「TMD file options...」，再選「Build CIA from file」
+1. 你可安裝的 `.cia` 檔案將被複製到你 SD 卡的 `/gm9out/` 資料夾中
+
+## <a name="backup_gba" /> 備份 GBA 虛擬主機遊戲存檔
+
+#### 操作說明
+
+1. 關閉你的主機
+1. 將 SD 卡插入電腦中
+1. 在 `/files9/` 資料夾中為各個想備份的 GBA 虛擬主機 遊戲建立一個新的資料夾
+1. 將 SD 卡插回主機中
+1. 啟動你的主機
+1. 為各個想備份的 GBA 虛擬主機 遊戲重複下列步驟：
+  + 啟動你所想要備份存檔的 GBA 虛擬主機遊戲
+  + 退出遊戲
+  + 開機時，按住「Start」鍵進入 Luma3DS 選單
+  + 按「A」啟動 GodMode9
+  + 移動至 `[S:] SYSNAND VIRTUAL`
+  + 選取 `gbavc.sav`，並按下「A」複製
+  + 按「B」回到主選單
+  + 移動至 `[0:] SDCARD` -> `files9`
+  + 移動至為本遊戲所創建的資料夾底下
+  + 按「Y」貼上 `gbavc.sav`
+  + 按下「Start」鍵重啟你的主機
+
+## <a name="restore_gba" /> 還原 GBA 虛擬主機遊戲存檔
+
+#### 操作說明
+
+1. 請確保在你的 `/files9/` 資料夾中已經先替各個想還原的 GBA 虛擬主機遊戲建立資料夾將確保裡面有還原用的存檔。
+1. 為各個想備份的 GBA 虛擬主機 遊戲重複下列步驟：
+  + 啟動你所想要備份存檔的 GBA 虛擬主機遊戲
+  + 退出遊戲
+  + 開機時，按住「Start」鍵進入 Luma3DS 選單
+  + 按「A」啟動 GodMode9
+  + 移動至 `[0:] SDCARD` -> `files9`
+  + 移動至為本遊戲所創建的資料夾底下
+  選取 `gbavc.sav`，並按下「A」複製
+  + 按「B」回到主選單
+  + 移動至 `[S:] SYSNAND VIRTUAL`
+  + 按「Y」貼上 `gbavc.sav`
+  + 按「A」確認
+  + 按下「Start」鍵重啟你的主機
+
+## <a name="format_sd" /> 格式化 SD 卡
+
+**請注意，這將清除你 SD 卡的所有資料！**
+{: .notice--danger}
+
+#### 操作說明
+
+1. 開機時，按住「Start」鍵進入 Luma3DS 選單
+1. 按「A」啟動 GodMode9
+1. 按「Home」鍵以叫出主選單
+1. 選擇「More...」
+1. 選擇「SD format menu」
+1. 選擇任一你所想使用的 EmuNAND 選項
+  + 大多數使用者會想選擇「No EmuNAND」
+1. 選擇「Auto」
+1. 按「A」確定命名為 `GM9SD`
+  + 你可以在此設置 SD 卡的名稱
+1. 出現提示時，輸入提示的按鍵組合以確認
+
+## <a name="payload_chain" /> 連環加載 ARM9 Payload 檔案
+
+#### 操作說明
+
+1. 開機時，按住「Start」鍵進入 Luma3DS 選單
+1. 按「A」啟動 GodMode9
+1. 移動至你所想要啟動 ARM9 payload 的所在位置
+    + 通常 ARM9 payload 檔案都以 `.bin` 結尾
+    + 這不代表所有以 `.bin` 結尾的檔案都是個 ARM9 payload
+    + 舉例來說，有效的 ARM9 payload 檔案包括 Luma3DS、Decrypt9 以及 GodMode9
+1. 按「A」鍵選擇你想要啟動的 ARM9 payload `.bin` 檔案，並選「Launch as arm9 Payload」
+1. 出現提示時，輸入提示的按鍵組合以確認進行所選的 ARM9 payload
+
+## <a name="crypt_cia" /> 替 .CIA 檔案加密／解密
+
+#### 準備工作
+
++ 為了整潔，將你所想要加密／解密的各個 `.cia` 檔案複製至 SD 卡的 `/cias/` 資料夾中
+
+#### 操作說明
+
+1. 開機時，按住「Start」鍵進入 Luma3DS 選單
+1. 按「A」啟動 GodMode9
+1. 移動至 `[0:] SDCARD` -> `cias`
+1. 按「A」鍵選擇 `.cia`，再選「CIA image options...」
+1. 選擇你所想要執行的選項：
+    + **Encrypt to 0:/gm9out:** 建立一個加密後的 `.cia` 檔案至 SD 卡中 `/gm9out/` 資料夾中
+    + **Decrypt to 0:/gm9out:** 建立一個解密後的 `.cia` 檔案至 SD 卡中 `/gm9out/` 資料夾中
+    + **Encrypt inplace:** 替代所選的 `.cia` 檔案成加密後的版本
+    + **Decrypt inplace:** 替代所選的 `.cia` 檔案成解密後的版本
+1. 加密／解密後的 `.cia` 檔案將被存於指定區域
