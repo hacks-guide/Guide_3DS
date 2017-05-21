@@ -1,0 +1,177 @@
+---
+title: "Installer boot9strap (Injection de sauvegarde DSiWare)" #
+lang: fr
+permalink: /fr_FR/installing-boot9strap-(dsiware-save-injection).html
+---
+
+Notez que, sur certaines versions de Luma3DS, le Luma3DS chainloader menu ne s’affiche que s’il n’y a plus d’un payload détecté. Si il n’y a qu’un seul payload détecté, maintenir la touche (Start) au démarrage lancera directement GodMode9.
+{: .notice--info}
+
+Pour utiliser les liens suivants [magnet](https://fr.wikipedia.org/wiki/Magnet_(standard)), vous avez besoin d'un client Torrent comme [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+{: .notice--success}
+
+Avant de commencer, assurez-vous que vous avez lu tous les mises en garde à propos de [l'installation de boot9strap (DSiWare)](installing-boot9strap-(dsiware))
+{: .notice--danger}
+
+Si vous n'utilisez pas le bon `.firm` correspondant à la 3DS cible, vous allez BRICK! Assuez-vous de télécharger et d'utiliser le `. firm` correct!
+{: .notice--danger}
+
+#### Ce dont vous aurez besoin
+
+* Deux consoles 3DS
+  **La 3DS source**: La 3DS faisant tourner un Custom Firmware (comme boot9strap ou arm9loaderhax) *dans sa version la plus récente*
+  + **La 3DS cible**: la 3DS en firmware normal *en 11.4.0*
+* Posséder (et avoir installé) un des titres DSiware exploitables suivants (une copie piratée du jeu ne fonctionnera **pas**) sur **la 3DS source**
+  + **Fieldrunners**
+  + **Legends of Exidia**
+  + **Guitar Rock Tour**  
+  + **The Legend of Zelda: Four Swords**  
+* La dernière version de [3ds_dsiwarehax_installer](https://github.com/yellows8/3ds_dsiwarehax_installer/releases)
+* La dernière version de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* La dernière version de [b9sTool](https://github.com/Plailect/b9sTool/releases/latest)
+* Le Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
+* Le `.firm` 11.4.0 correspondant à **la 3DS cible**
+  + [11.4.0 New 3DS](magnet:?xt=urn:btih:3b59dd43eec3edb133555f58d1180bfb196acbb4&dn=2.54-0_11.4_NEW.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+  + [11.4.0 Old 3DS](magnet:?xt=urn:btih:0dd89d42ad711f770da899af05ee162ede0d0070&dn=2.54-0_11.4_OLD.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+
+##### Instructions
+
+##### Section I - Préparation
+
+Utilisez [save manager](https://github.com/J-D-K/JKSM/releases/latest) pour faire une copie de toute sauvegarde que vous souhaitez garder sur * la 3DS cible * (elle sera formatée !)
+{: .notice--warning}
+
+1. Copiez `GodMode9.firm` (ou `GodMode9.bin` pour ceux qui utilisent arm9loaderhax) du `.zip` de GodMode9 vers le dossier `/luma/payloads/` sur la carte SD de **la 3DS source**
+1. Copiez le bon `public.sav`du dossier `/dsiware/(8 Character ID)/` dans le `.zip` du 3ds_dsiwarehax_installer vers la racine de la carte SD de **la 3DS source**
+  + **Fieldrunners version USA**: `4b464445`
+  + **Fieldrunners version EUR**: `4b464456`
+  + **Legends of Exidia version USA**: `4b4c4545`
+  + **Legends of Exidia version EUR**: `4b4c4556`
+  + **Legends of Exidia version JPN**: `4b4c454a`
+  + **Guitar Rock Tour version EUR**: `4b475256`
+  + **Guitar Rock Tour version USA**: `4b475245`
+  + **The Legend of Zelda: Four Swords EUR Region**: `4b513956`   
+  + **The Legend of Zelda: Four Swords USA Region**: `4b513945`  
+1. Réinsérez la carte SD de **la 3DS source** dans **la 3DS source**
+1. Allumez la 3DS en maintenant (Start) pour lancer le chainloader de Luma3DS
+1. Lancez GodMode9 en appuyant sur (A)
+1. Appuyez sur (Home) pour faire apparaître le menu d’actions (action menu)
+1. Sélectionnez "More..."
+1. Sélectionnez "Backup NAND"
+1. Appuyez sur (A) pour continuer
+1. Maintenez (R) et appuyez sur (B) en même temps pour éjecter votre carte SD
+1. Insérez la carte SD de **la 3DS cible** dans votre ordinateur
+1. ** Faites une sauvegarde complète des deux cartes SD des deux 3DS dans deux dossiers différents (Gardez une trace pour savoir quelle carte SD appartient à la bonne 3DS)!**
+1. Réinsérez chaque carte SD dans la 3DS correspondante
+1. Appuyez sur (Start) sur **la 3DS source** pour redémarrer
+
+##### Section II - Installation de la sauvegarde
+
+1. Allumez la 3DS en maintenant (Start) pour lancer le chainloader de Luma3DS
+1. Lancez GodMode9 en appuyant sur (A)
+1. Naviguez vers `SDCARD`
+1. Appuyez sur (Y) après avoir sélectionné `public.sav` pour le copier
+1. Appuyez sur (B) pour retourner sur le menu principal
+1. Naviguez vers `SYSNAND TWLN` -> `title` -> `00030004`
+1. Choisissez le répertoire selon votre jeu et votre région :
+  + **Fieldrunners version USA**: `4b464445`
+  + **Fieldrunners version EUR**: `4b464456`
+  + **Legends of Exidia version USA**: `4b4c4545`
+  + **Legends of Exidia version EUR**: `4b4c4556`
+  + **Legends of Exidia version JPN**: `4b4c454a`
+  + **Guitar Rock Tour version EUR**: `4b475256`
+  + **Guitar Rock Tour version USA**: `4b475245`
+  + **The Legend of Zelda: Four Swords EUR Region**: `4b513956`   
+  + **The Legend of Zelda: Four Swords USA Region**: `4b513945`   
+1. Naviguez vers le dossier `data`
+1. Appuyez sur (X) sur le `public.sav` existant pour le supprimer
+1. Entrez la combinaison de touche demandée pour débloquer l'écriture sur votre SysNAND (lvl1)
+1. Appuyez sur (A) pour continuer
+1. Appuyez sur (Y) pour coller `public.sav`
+1. Sélectionnez "Copy path(s)"
+1. Appuyez sur (Start) pour redémarrer **la 3DS source**
+1. Démarrez votre jeu DSIWare sur **la 3DS source**
+1. Vérifiez que la sauvegarde fonctionne
+  + **Fieldrunners**: Appuyez sur le bouton 'Scores' dans le menu principal
+  + **Legends of Exidia**: Après avoir appuyé sur (A) ou (Start) sur les deux écran titre, sélectionnez la première sauvegarde et appuyez sur "Continue"
+  + **Guitar Rock Tour**: Faites défiler l'écran vers les bas et allez dans High Scores -> Drums -> Easy    
+  + **The Legend of Zelda: Four Swords**: Il suffit de démarrer le jeu
+  + Si le jeu renvoie une erreur à propos de "boot.nds" ou un écran blanc, **alors l'exploit a fonctionné**
+  + Si votre jeu se comprte normalement et ne vous renvoie aucune erreur, vous devriez vous arrêter et trouver le problème
+  + Si vous obtenez un écran noir, [suivez ce guide de dépannage](troubleshooting#twl_broken)
+
+##### Section III - Transfert de données
+
+1. ** Faites une sauvegarde complète des deux cartes SD des deux 3DS dans deux dossiers différents (Gardez une trace pour savoir quelle carte SD appartient à la bonne 3DS)!**
+1. Réinsérez chaque carte SD dans la 3DS correspondante
+1. Si **la 3DS cible ** a déjà un ID Nintendo Network, vous devez formater la console à l’aide des paramètres du système :
+  + Aller à la dernière page des "Autres réglages" puis sélectionnez "Format le système", puis suivez toutes les instructions
+1. Lisez ce qui suit :
+  + Votre 3DS avec CFW = la 3DS source = "Système Source"
+  + Votre 3DS non-modifiée/stock = la 3DS cible = "Système cible"
+  + **Déplacez les titres DSiWare si vous y êtes invité ! **
+  + Ne supprimez **PAS** le contenu de la SD de la 3DS source si vous y êtes invité
+  + Assurez-vous que la batterie de la console ne meurt pas pendant le transfert
+  + 2DS/Old 3DS (source) vers New3DS (cible) seulement - si demandé quelle méthode vous souhaitez utiliser pour transférer les données des cartes SD :
+    + **Ne choisissez PAS** l'option « carte microSD à faible capacité » ou l'option minimale (option 2), cela ne transférera que les tickets de jeux mais très certainement pas les sauvegardes DSiWare.
+    + Méthode rapide : Si vous avez la possibilité de déplacer les données de la carte SD (source) sur la carte microSD (cible), lorsque vous êtes invité utilisent l’option "Transfert sur PC" (option 3).
+    + Méthode plus lente : Si vous n’avez pas la possibilité de déplacer les données sur un PC utilisent l'option **complète** "Transfert sans fil" (option 1).
+1. Allez sur [ce lien](http://fr-americas-support.nintendo.com/app/answers/detail/a_id/13403) et suivez les instructions officielles de Nintendo pour le transfert de système d’un système à l’autre tout en gardant à l’esprit ce que vous venez de lire
+
+##### Section IV - Restaurer la 3DS source
+
+1. Sur **la 3DS source**, terminez la configuration initiale
+1. Effectuez l’une des opérations suivantes
+    + Faire le reste des sections puis le guide complet sur **la 3DS cible**, puis attendre une semaine, refaire un transfert de système de **la 3DS cible** jusqu'à **la 3DS source** *(rappelez-vous que vous ne pouvez retransférer les données d'une New3DS à une Old3DS)*
+    + Appelez Nintendo et dites-leur que vous n’avez plus accès à l’appareil lié à votre NNID (qui est **la 3DS cible** dans le cas présent) et que vous voudriez qu’elle soit liée à une autre console (qui est **la 3DS source** dans ce cas)
+    + Vous pouvez également juste [supprimer le NNID](https://3ds.guide/troubleshooting#rm_nnid) de **la 3DS source** si vous préférez qu'il reste sur **la 3DS cible**
+1. Rallumez la **3DS source** en maintenant (Start) pour lancer le chainloader de Luma3DS
+1. Lancez GodMode9 en appuyant sur (A)
+1. Naviguez vers `[0:] SDCARD`
+1. Appuyez sur (A) sur votre NAND `.bin` pour le sélectionner, puis choisissez "NAND image options...", puis sélectionnez "Restore SysNAND (safe)"
+1. Appuyez sur (A) pour débloquer l'écriture sur votre SysNAND, puis entrez la combinaison de touches demandée
+  + Ceci n'effacera pas votre boot9strap
+1. Entrez la combinaison de touche demandée pour débloquer l'écriture sur votre SysNAND (lvl1)
+  + Ce processus prendra un certain temps
+1. Une fois le transfert terminé, appuyez sur (A) pour continuer
+1. Appuyez sur (Start) pour redémarrer **la 3DS source**
+
+##### Section V - Sauvegarder le FIRM de la 3DS cible
+
+1. Copiez `boot.nds` à la racine de la carte SD de **la 3DS cible**
+1. Créez un dossier nommé `boot9strap` à la racine de la carte SD **de la 3DS cible**
+1. Copiez le fichier `.firm` 11.4.0 correspondant à **la 3DS cible** dans le dossier `boot9strap` à la racine de **carte SD de la 3DS cible**
+1. Copiez le fichier `boot9strap.firm`de l'archive boot9strap`.zip` dans le dossier `/boot9strap/` de votre carte SD
+1. Lancez votre jeu DSiWare sur **la 3DS cible**
+1. Lancez b9sTool en utilisant votre jeu DSiWare
+  + **Fieldrunners**: Appuyez sur le bouton 'Scores' dans le menu principal
+  + **Legends of Exidia**: Après avoir appuyé sur (A) ou (Start) sur les deux écran titre, sélectionnez la première sauvegarde et appuyez sur "Continue"
+  + **Guitar Rock Tour**: Faites défiler l'écran vers les bas et allez dans High Scores -> Drums -> Easy
+  + **The Legend of Zelda: Four Swords**: Il suffit de démarrer le jeu
+  + Si votre jeu n’a pas la sauvegarde piratée d'installée, [suivez ce guide](troubleshooting#ts_dsiware)
+1. Sélectionnez "Dump F0F1" pour sauvegarder le FIRM de la **3DS cible**
+1. Prenez note de l’emplacement de la sauvegarde de la NFIRM
+1. Sortez de b9sTool
+  + Vous allez peut-être devoir forcer la fermeture en maintenant le bouton d’alimentation enfoncé
+1. Mettez votre carte SD dans votre ordinateur, puis copiez `F0F1_N3DS.bin` ou `F0F1_O3DS.bin` (selon votre appareil) dans un endroit sûr ; faites des sauvegardes à plusieurs emplacements ; cette sauvegarde vous sauvera d’un BRICK si quelque chose se passe mal
+
+##### Section VI - Flasher le FIRM de la 3DS cible
+
+**N'utilisez PAS b9sTool sur un appareil où arm9loaderhax est déjà installé ou vous allez BRICK!**
+{: .notice--danger}
+
+1. Lancez votre jeu DSiWare sur ** la 3DS cible**
+1. Lancer b9sTool en utilisant votre jeu DSiWare
+  + **Fieldrunners**: Appuyez sur le bouton 'Scores' dans le menu principal
+  + **Legends of Exidia**: Après avoir appuyé sur (A) ou (Start) sur les deux écran titre, sélectionnez la première sauvegarde et appuyez sur "Continue"
+  + **Guitar Rock Tour**: Faites défiler l'écran vers les bas et allez dans High Scores -> Drums -> Easy
+  + **The Legend of Zelda: Four Swords**: Il suffit de démarrer le jeu
+1. Séléctionnez "Install boot9strap" et confirmez
+1. Quittez b9sTool, puis éteignez votre appareil
+  + Vous allez peut-être devoir forcer la fermeture en maintenant le bouton d’alimentation enfoncé
+1. Votre appareil va démarrer sur boot9strap, puis va s'éteindre automatiquement car il n'a pas encore de payload à lancer
+
+___
+
+Continuer vers [Finalisation de l'installation](finalizing-setup)
+{: .notice--primary}
