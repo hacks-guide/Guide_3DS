@@ -1,0 +1,230 @@
+---
+titel: "Benutzung von GodMode9" #
+lang: de
+ermalink: /de_DE/godmode9-usage.html
+---
+
+GodMode9 ist ein Vollzugriffsdateibrowser für die Nintendo 3DS Konsole und gibt dir Zugriff auf deine SD Karte, auf die FAT Partitionen in deinem SysNAND und EmuNAND und im Grunde alles andere auch. Unter anderem kannst du Dateien kopieren, löschen, umbenennen und Ordner erstellen.
+{: .notice--primary}
+
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+{: .notice--info}
+
+{% capture notice %}
+** Das ist ein mächtiges Zeug, es bietet dir die Möglichkeit, grundsätzlich jede denkbare Modifikation aller Systemdaten auf der 3DS-Konsole zu machen. Allerdings werden Vorkehrungen getroffen, damit du die Daten deiner Konsole nicht versehentlich beschädigst.
+<br><br>
+Das Schreibberechtigungssystem schützt dich durch die Bereitstellung von Warnungen und zwingt dich, eine Freischaltungssequenz für die Aktivierung von Schreibberechtigungen einzugeben. Es ist nicht möglich, wichtige Dateien zu verändern oder zu überschreiben, ohne solche Freischaltsequenzen eingegeben zu haben, und es ist auch nicht möglich, versehentlich etwas zu entsperren. Wie immer, sei klug und mache Backups, nur um sicher zu sein. **.
+{% endcapture %}
+
+<div class="notice--danger">{{ notice | markdownify }}</div>
+
+## <a name="nand_backup" /> Erstellen einer NAND-Sicherheitskopie
+
+#### Anleitung
+
+1. Starte das Gerät, während du beim Starten (Start) gedrückt hälst, um den Luma3DS Chainloader zu starten
+1. Starte GodMode9, indem du (A) drückst
+1. Drücke (Home), um das Aktionsmenü aufzurufen
+1. Wähle "More..."
+1. Wähle "Backup NAND"
+1. Drücke (A) um fortzufahren
+1. Drücke (R) und (B) gleichzeitig um die SD-Karte auszuwerfen
+1. Stecke deine SD-Karte in deinen Computer
+1. Kopiere `nand.bin` aus dem` / gm9out / `-Ordner auf deiner SD-Karte an einen sicheren Ort auf deinem Computer
+  + Falls du zuvor SafeCTRTransfer benutzt hast und dein NAND Backup `<Seriennummer>_nand.bin` genannt hast, ersetze dieses durch diese neue bin-Datei und benenne sie auch `<Seriennummer>_nand.bin`
+  + Erstelle Backup Dateien an mehreren Orten (USB-Stick, PC, Externe Festplatte, Online-Speicher, etc.)
+  + Diese Sicherheitskopie wird dich vor einem Brick schützen, falls in der Zukunft etwas schief gehen sollte
+1. Lösche `nand.bin` aus dem `/gm9out/` Ordner deiner SD-Karte, nachdem du sie auf den Computer kopiert hast-
+1. Stecke deine SD-Karte nun wieder in dein Gerät
+
+## <a name="nand_restore" /> Wiederherstellen einer NAND-Sicherheitskopie
+
+#### Anleitung
+
+1. Starte das Gerät, während du beim booten (Start) gedrückt hälst, um den Luma3DS Chainloader zu starten
+1. Starte GodMode9 indem du (A) drückst
+1. Navigiere zu `[0:] SDCARD`
+1. Drücke (A) auf deiner NAND `.bin`, um es auszuwählen, wähle dann" NAND image options... " und wähle dann "Restore SysNAND (safe) "
+1. Drücke (A), um SysNAND-Überschreibungen zu aktivieren. Gib danach die angezeigte Tastenkombination ein
+  + This will not overwrite your boot9strap installation
+1. Gib die angezeigte Tastenkombination ein, um SysNAND-Änderungen (lvl1) zu aktivieren
+  + Dies kann einen Moment dauern
+1. Sobald dies abgeschlossen ist drücke (A) um fortzufahren
+
+## <a name="injectHS" /> Injektion einer beliebigen .CIA app in die "Gesundheits- und Sicherheitsinformationen"-App
+
+#### Vorbereitung
+
++ Für organisatorische Zwecke kopiere die `.cia`-Datei, die du injekten willst, in den `/cias/`-Ordner auf deiner SD-Karte
+    + Beachte, dass es nicht möglich ist, Dateien in Health & Safety zu injizieren, die größer sind als die eigentliche App (einschließlich Spiele und andere große Anwendungen)
+
+#### Anleitung
+
+1. Starte das Gerät, während du beim booten (Start) gedrückt hälst, um den Luma3DS Chainloader anzuzeigen
+1. Starte GodMode9 indem du (A) drückst
+1. Navigiere zu `[0:] SDCARD` ->` cias`
+1. Drücke (A) auf deiner `.cia` um sie auszuwählen, und wähle dann "CIA image otions..." und dann "Mount image to drive"
+1. Drücke (A) auf der `.app`-Datei, dann wähle "NCCH Image options" und danach wählst du "Inject to H&S"
+1. Drücke (A), um die SysNAND (Stufe 1) Bearbeitung zu aktivieren. Gebe dann die angegebene Tastenkombination ein
+1. Drücke (A) um fortzufahren
+
+## <a name="restore_hs" /> Wiederherstellen von Gesundheit und Sicherheit nach der Injektion einer .CIA App
+
+Dies wird nur funktionieren, wenn die Injektion in Gesundheit & Sicherheit von GodMode9 durchgeführt wurde (nicht bei Decrypt9 oder Hourglass9).
+{: .notice--info}
+
+#### Anleitung
+
+1. Starte das Gerät, während du beim booten (Start) gedrückt hälst, um den Luma3DS Chainloader anzuzeigen
+1. Starte GodMode9, indem du (A) drückst
+1. Drücke (Home), um das Aktionsmenü aufzurufen
+1. Wähle "More..."
+1. Wähle "Restore H&S"
+1. Drücke (A), um die SysNAND (Stufe 1) Bearbeitung zu aktivieren. Dann gebe die angegebene Tastenkombination ein
+
+## <a name="dump_cart" /> Dumpen einer Spielecartridge
+
+#### Vorbereitung
+
++ Lege die Spielecartridge ein, die du auf deine Konsole dumpen möchtest
+    + 3DS Spielecartridges werden in ein installierbares `.cia` Format umgewandelt
+    + NDS-Spielecartridges werden in ein nicht installierbares `.nds`-Format, kompatibel mit Flashcarts und Emulatoren, umgewandelt
+
+#### Anleitung
+
+1. Starte das Gerät, während du beim booten (Start) gedrückt hälst, um den Luma3DS Chainloader anzuzeigen
+1. Starte GodMode9 indem du (A) drückst
+1. Navigiere zu `[C:] GAMECART`
+1. Befolge die für deine Spielecartridge geltenden Schritte:
+  + ** 3DS Spielecartridge: ** Drücke (A) auf `[TitleID].trim.3ds`, um es auszuwählen, und wähle dann "NCSD image options...", und dann "Build CIA from file"
+  + **NDS Spielecartridge:** Drücke (A) auf `[TitleID].trim.nds`, um es auszuwählen, und wähle dann "Copy to 0:/gm9out"
+1. Deine installierbare `.cia` oder nicht installierbare`.nds` formatierte Datei wird im `/gm9out/`-Ordner auf Ihrer SD Karte gespeichert
+
+## <a name="dump_title" /> Dumpen eines Titels
+
+Verwende das `Titles`-Menü in FBI, um die Titel-ID des installierten Titel zu erhalten, den du dumpen möchtest
+{: .notice--info}
+
+#### Anleitung
+
+1. Starte das Gerät, während du beim booten (Start) gedrückt hälst, um den Luma3DS Chainloader anzuzeigen
+1. Starte GodMode9, indem du (A) drückst
+1. Navigiere zu dem Laufwerk, das der Art des Titels entspricht, den du dumpen möchtest:
+  + ** Benutzerinstallierter Titel **: Navigiere zu `[A:] SYSNAND SD`
+  + ** Systemtitel **: Navigiere zu `[1:] SYSNAND CTRNAND`
+1. Navigiere zu `title`
+1. Navigiere zu dem Ordner, dessen Name den ersten 8 Ziffern der Titel-ID entspricht
+1. Navigiere zu dem Ordner, der den letzten 8 Ziffern der Titel-ID entspricht
+1. Navigiere zu `content`
+1. Drücke (A) auf der `.tmd`-Datei, um sie auszuwählen, und wähle dann "TMD file options..." und wähle dann "Show title info"
+1. Stelle sicher, dass du den richtigen Titel gefunden hast
+1. Drücke (B), um die Titelinfo zu verlassen
+1. Drücke (A) auf der `.tmd`-Datei, um sie auszuwählen, und wähle dann "TMD file options..." und wähle dann "Build CIA (standard)"
+1. Deine installierbare `.cia` formatierte Datei wird im `/gm9out/`-Ordner auf Ihrer SD Karte gespeichert
+
+## <a name="convert_3ds" /> Umwandeln einer .3DS in .CIA
+
+#### Vorbereitung
+
++ Für organisatorische Zwecke kopiere alle `.3ds`-Dateien, die du konvertieren möchtest, in den `/cias/`-Ordner auf deiner SD-Karte
+    Wenn du eine ".3ds" datei die bereits auf einer Speicherkarte ist konvertieren möchtest solltest du [Dumpen einer Spielecartridge](#dump_cart) folgen
+
+#### Anleitung
+
+1. Starte das Gerät, während du beim booten (Start) gedrückt hälst, um den Luma3DS Chainloader anzuzeigen
+1. Starte GodMode9 indem du (A) drückst
+1. Navigiere zu `[0:] SDCARD` ->` cias`
+1. Drücke (A) auf einer ".3ds" datei um sie auszuwählen dann wähle die option "NCSD image options..." gefolgt von "Build CIA from file"
+1. Deine installierbare `.cia` formatierte Datei wird im `/gm9out/`-Ordner auf Ihrer SD Karte gespeichert
+
+## <a name="backup_gba" />Erstellen einer GBA Spielstand kopie
+
+#### Anleitung
+
+1. Schalte dein Gerät aus
+1. Stecke deine SD-Karte in deinen Computer
+1. Erstelle einen Ordner in `/files9/` für jedes GBA VC-Spiel, für das du ein Backup erstellen möchtest
+1. Stecke deine SD-Karte nun wieder in deinen 3DS
+1. Schalte dein Gerät an
+1. Führe die folgenden Schritte für jedes GBA VC Spiel aus, für das du ein Backup erstellen möchtest:
+  + Starte das GBA VC spiel
+  Verlasse das GBA VC Spiel wieder
+  + Starte dein Gerät während du Start gedrückt hälst um in das Luma3DS Chainloader menü zu kommen
+  + Starte GodMode9 indem du (A) drückst
+  + Navigiere zu `[1:] SYSNAND -> CTRNAND`
+  + Drücke (Y) auf `gbavc.sav` um es kopieren
+  + Drücke (B), um zum Hauptmenü zurückzukehren
+  + Navigiere zu `[0:] SDCARD -> files9`
+  + Navigiere zum Ordner, den du für das GBA VC Spiel erstellt hast
+  + Drücke (Y), um `gbavc.sav` einzufügen
+  + Drücke (Start) um deinen 3DS neu zu starten
+
+## <a name="restore_gba" /> Wiederherstellung einer GBA Spielstand kopie
+
+#### Anleitung
+
+1. Stelle sicher das du einen ordner mit einer speicher datei in `/files9/` für jedes GBA VC spiel dessen spielstand du wiederherstellen willst
+1. Führe die folgenden Schritte für jedes GBA VC Spiel aus, für das du ein Backup erstellen möchtest:
+  + Starte das GBA VC spiel
+  Verlasse das GBA VC Spiel wieder
+  + Starte dein Gerät während du Start gedrückt hälst um in das Luma3DS Chainloader menü zu kommen
+  + Starte GodMode9 indem du (A) drückst
+  + Navigiere zu `[0:] SDCARD` -> `files9`
+  + Navigiere zum Ordner, den du für das GBA VC Spiel erstellt hast
+  + Drücke (Y) auf `gbavc.sav` um es kopieren
+  + Drücke (B), um zum Hauptmenü zurückzukehren
+  + Navigiere zu `[1:] SYSNAND -> CTRNAND`
+  + Drücke (Y), um `gbavc.sav` einzufügen
+  + Drücke (A) um fortzufahren
+  + Drücke (Start) um deinen 3DS neu zu starten
+
+## <a name="format_sd" /> Formatierung einer SD karte
+
+**Beachte dies wird alles von deiner SD karte entfernen
+{: .notice--danger}
+
+#### Anleitung
+
+1. Starte das Gerät, während du beim booten (Start) gedrückt hälst, um den Luma3DS Chainloader anzuzeigen
+1. Starte GodMode9 indem du (A) drückst
+1. Drücke  (HOME) um das Aktionsmenü aufzurufen
+1. Wähle "More..."
+1. Wähle "SD format menu"
+1. Wähle die EmuNand version die du nutzen möchtest
+  + Die meisten Nutzer wollen "No EmuNAND" auswählen
+1. Wähle "Auto"
+1. Drücke nun die (A) taste um den Namen `GM9SD` zu akzeptieren
+  + Alternativ kannst du auch einen eigenen Namen für die SD karte aussuchen
+1. Gib die Tastenkombination zur Bestätigung ein, wenn danach verlangt wird
+
+## <a name="payload_chain" /> Chain-Loading eines ARM9 Payloads
+
+#### Anleitung
+
+1. Starte das Gerät, während du beim booten (Start) gedrückt hälst, um den Luma3DS Chainloader anzuzeigen
+1. Starte GodMode9 indem du (A) drückst
+1. Navigiere zu dem ARM9 Payload den du öffnen möchtest.
+    + Eine ARM9 Payload datei endet meist bit `.bit`
+    + Das heißt nicht das andere dateien bit der endung `.bin` ARM9 Payload dateien sind
+    + Einige Beispiele von ARM9 Payloads sind Luma3DS, Decrypt9 und GodMode9
+1. Drücke (A) auf einem ARM9 Payload `.bin` um sie auszuwählen wähle dann "Launch as arm9 Payload"
+1. Wenn angezeigt drücke die Tasten kombination gegeben um den start des ARM9 Payloades zu bestätigen
+
+## <a name="crypt_cia" /> Entschlüsselung / Verschlüsselung von .CIA dateien
+
+#### Vorbereitung
+
++ Für organisierungs zwecken kopiere jede `.cia` datei die du verschlüsseln / entschlüsseln möchtest in den `/cias/` Ordner auf deiner SD Karte
+
+#### Anleitung
+
+1. Starte das Gerät, während du beim booten (Start) gedrückt hälst, um den Luma3DS Chainloader anzuzeigen
+1. Starte GodMode9 indem du (A) drückst
+1. Navigiere zu `[0:] SDCARD` ->` cias`
+1. Drücke (A) um die `.cia` datei auszuwählen und wähle dann die option "CIA image options..."
+1. Wähle den Vorgang für die gewünschte funktion:
+    + **Verschlüsseln auf 0:/gm9out:** Erstelle eine verschlüsselte Kopie der ausgewählten `.cia`-Datei im Ordner `/gm9out/` auf deiner SD-Karte
+    + **Entschlüsseln auf 0:/gm9out:** Erstelle eine entschlüsselte Kopie der ausgewählten `.cia`-Datei im Ordner `/gm9out/` auf deiner SD-Karte
+    + **Vorhandene verschlüsseln:** Ersetze die ausgewählte `.cia`-Datei mit einer verschlüsselten Version
+    + **Vorhandene entschlüsseln:** Ersetze die ausgewählte `.cia`-Datei mit einer entschlüsselten Version
+1. Deine verschlüsselte / entschlüsselte .cia wird dann an die gewünschte Position ausgegeben
