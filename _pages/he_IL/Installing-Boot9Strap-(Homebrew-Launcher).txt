@@ -1,0 +1,59 @@
+---
+title: "התקנת boot9strap (Homebrew Launcher)" #
+lang: he
+permalink: /he_IL/installing-boot9strap-(homebrew-launcher).html
+---
+
+אם המכשיר שלכם כבר פרוץ עם EmuNAND, המדריך הזה עוסק רק בSysNAND. תבצעו את ההוראות על SysNAND. Emunand וRednand כמעט מונחים נרדפים.
+{: .notice--info}
+
+**כדי להשתמש בקישורי מגנט, תצטרכו כלי טורנט כמו [Deluge](http://dev.deluge-torrent.org/wiki/Download)**
+{: .notice--success}
+
+#### מה נדרש
+
+* הגרסה העדכנית של [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* הגרסא העדכנית של [boot9strap](https://github.com/SciresM/boot9strap/releases/latest)
+* הגרסה העדכנית של [safehax](https://github.com/TiniVi/safehax/releases/latest)
+* את הגרסה העדכנית של [udsploit](https://github.com/smealum/udsploit/releases/latest)
+
+#### הוראות
+
+##### חלק I - הכנות
+
+1. תוציאו את כרטיס הSD מהכשיר שלכם, שנשאר על הHomebrew Launcher, ולאחר מכן תכניסו אותו למחשב שלכם
+1. תצרו ב-SD שלכם תיקייה חדשה בשם `boot9strap`
+1. תעתיקו את`boot9strap.firm` ואת `boot9strap.firm.sha` מה `.zip` של boot9strap אל תיקיית `/boot9strap/`על כרטיס הSD שלכם
+1. תעתיקו את 'safehax.3dsx' לתיקיה '/ 3ds /' על כרטיס הזכרון
+1. תעתיקו את הקובץ `udsploit.3dsx` לתוך התיקייה `/3ds/` שב-SD שלכם
+1. תעתיקו את `SafeB9SInstaller.bin` מתוך ה `.zip` של SafeB9SInstaller אל שורש כרטיס הSD שלכם ושנו את השם של `SafeB9SInstaller.bin` אל `safehaxpayload.bin`
+
+    ![]({{ base_path }}/images/screenshots/boot9strap-hb-file-layout.png)
+    {: .notice--info}
+
+1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
+
+##### חלק II - הפעלת SafeB9SInstaller
+
+1. תפעילו את udsploit מרשימת הhomebrew שלכם
+  + ייתכן שתצטרכו לגלול למטה כדי לראות את האופציה הזאת
+1. לאחר שזה סיים, תלחצו (Start) כדי לצאת מudsploit
+  + זה יכול לקחת כמה נסיונות
+  + אם זה נקפא, כבו בכוח את המכשיר על-ידי החזקת כפתור ההדלקה ולאחר מכן נסו שוב
+1. תפעילו את safehax מרשימת הhomebrew שלכם
+  + ייתכן שתצטרכו לגלול למטה כדי לראות את האופציה הזאת
+  + אם אתם מקבלים את השגיאה "PM INIT FAILED", תנסו להשתמש ב[גרסת r19 של safehax](https://github.com/TiniVi/safehax/releases/tag/r19)
+  + אם זה נקפא, כבו בכוח את המכשיר על-ידי החזקת כפתור ההדלקה ולאחר מכן נסו שוב
+1. כעת אתם אמורים להיכנס לתוך SafeB9SInstaller
+
+#### חלק III - התקנת boot9strap
+
+1. תחכו שכל בדיקות הבטיחות יסתיימו
+1. כאשר תתבקשו, תלחצו על הכפתורים שנתונים לכם כדי להתקין את boot9strap
+1. כשזה סיים, לחצו על (A) כדי לאתחל את הקונסולה
+1. הקונסולה שלכם תאתחל אל boot9strap, ואז תתכבה אוטומטית כי אין לה עדיין תוכנה להפעיל
+
+___
+
+תמשיכו ל[סיום התהליך](finalizing-setup)
+{: .notice--primary}
