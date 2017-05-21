@@ -1,0 +1,210 @@
+---
+title: "Finalizing Setup" #
+lang: ko
+permalink: /finalizing-setup.html
+---
+
+이 페이지의 [마그넷](https://en.wikipedia.org/wiki/Magnet_URI_scheme) 링크를 사용하려면
+ [Deluge](http://dev.deluge-torrent.org/wiki/Download)와 같은 토렌트 클라이언트가 필요합니다.
+{: .notice--success}
+
+#### 단계별 개요
+
+{% capture notice-2 %}
+
+The file `boot.firm` is what is launched by boot9strap itself after it finishes loading off of NAND, and can be any valid arm9 payload in the FIRM format. This file can be replaced at any time, although Luma3DS allows for the launch of other arm9 payloads in the FIRM format using the Luma3DS chainloader.
+<br><br>
+여기에서는 [AuroraWright](https://github.com/AuroraWright/)의 Luma3DS를 사용해 패치된 SysNAND를 부팅하므로 EmuNAND를 사용할 필요가 없으며, 해킹된 3DS의 사용을 크게 단순화시키고 사용되는 SD 카드의 공간도 절약할 수 있습니다.
+<br><br>
+이 과정을 진행하는 동안 다음 프로그램도 설치하게 됩니다:    
+
++  **FBI** *(CIA 형식의 게임 및 애플리케이션 설치)*
++  **Themely** *(installs custom themes)*
++  **Luma3DS Updater** *(간단한 CFW 설치 업데이트)*
++  **Godmode9** *(NAND와 게임 카드의 기능을 수행할 수 있는 다목적 툴)*
+
+{% endcapture %}
+
+<div class="notice--info">{{ notice-2 | markdownify }}</div>
+
+#### What you need
+
+* 최신 버전의 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z` 파일)*
+* The latest release of [Themely](https://github.com/ErmanSayin/Themely/releases/latest) *(the `.cia` file)*
+* 최신 버전의 [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
+* 최신 버전의 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* The latest release of [DSP1](https://github.com/zoogie/DSP1/releases/latest)
+* 최신 버전의 [FBI](https://github.com/Steveice10/FBI/releases/latest)
+* The latest fork of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
+* **Old 3DS와 2DS 전용:** 지역에 맞는 Old 3DS 11.2.0-35 [otherapp 페이로드](https://smealum.github.io/3ds/#otherapp)
+
+#### 진행 방법
+
+##### 섹션 I - 준비 작업
+
+1. SD 카드를 컴퓨터에 삽입해 주세요.
+1. SD 카드의 최상위 경로에 `cias` 폴더가 없을 경우 폴더를 만들어 주세요.
+1. SD 카드에 `hblauncherloader` 폴더가 없을 경우 폴더를 만어 주세요.
+1. hblauncher_loader `.zip`에서 `hblauncher_loader.cia`를 SD 카드의 `/cias/` 폴더에 복사해 주세요.
+1. Copy `lumaupdater-v2.0.cia` from the Luma3DS Updater `.zip` to the `/cias/` folder on your SD card
+1. FBI `.zip`에서 `FBI.cia`를 SD 카드의 `/cias/` 폴더에 복사해 주세요.
+1. Copy `DSP1.cia` to the `/cias/` folder on your SD card
+1. Copy `Themely.cia` to the `/cias/` folder on your SD card
+
+    ![]({{ base_path }}/images/screenshots/cias-file-layout.png)
+    {: .notice--info}
+
+1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card
+1. SD 카드의 최상위 경로에 `luma` 폴더를 만들어 주세요.
+1. SD 카드의 `luma` 폴더에 `payloads` 폴더를 만들어 주세요.
+1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
+1. **Old 3DS와 2DS 전용:** 지역에 맞는 Old 3DS 11.2.0-35 otherapp 페이로드를 SD 카드의
+ `/hblauncherloader/` 폴더에 복사해 주세요.
+1. **Old 3DS와 2DS 전용:** SD 카드의 Old 3DS 11.2.0-35 otherapp 페이로드를 지역에 맞게 이름을 바꿔 주세요:
+  + **유럽:** `OLD-11-4-0-37-EUR.bin`
+  + **일본:** `OLD-11-4-0-37-JPN.bin`
+  + **한국:** `OLD-11-4-0-37-KOR.bin`
+  + **미국:** `OLD-11-4-0-37-USA.bin`
+
+    ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
+    {: .notice--info}
+
+1. If your device is on a version between 3.0.0 and 4.5.0 (inclusive), your device will not boot until you manually download the required firmware:
+  + 이 [파일](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056)을 다운로드받고 이름을 `firmware.bin`으로 바꿔 주세요.
+  + 이 [파일](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)을 다운로드해 주세요.
+  + `firmware.bin`과 `cetk`를 SD 카드의 `/luma/` 폴더에 복사해 주세요.
+  + Delete both of these files after updating your device later in these instructions
+1. SD 카드를 기기에 다시 삽입해 주세요.
+
+##### Section II - Configuring Luma3DS
+
+1. Boot your device to enter the Luma3DS configuration menu
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_b9s)
+1. (A)와 십자 버튼을 이용해 다음 설정을 설정해 주세요:    
+  + **"Show NAND or user string in System Settings"**
+1. (start)를 눌러 저장하고 기기를 다시 시작해 주세요.
+  + 블랙 스크린이 뜬다면 그냥 다음 섹션으로 넘어가 주세요.   
+
+##### Section III - Updating the System
+
+If, before following this guide, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand) instead of doing the first nine steps in this section.
+{: .notice--info}
+
+1. 본체 설정의 "기타 설정"에서 가장 오른쪽에 있는 "본체 업데이트"를 선택해 기기를 업데이트해 주세요.
+  + Updates while using B9S + Luma (what you have) are safe
+  + 오류가 발생한다면, DNS 설정을 "자동"으로 설정해 주세요.
+  + If this still gives you an error and your NAND is below 9.2.0, [follow 9.2.0 CTRTransfer](9.2.0-ctrtransfer), then try updating again
+
+##### Section IV - Injecting FBI
+
+1. (start)를 누른 채 시작해 Luma3DS chainloader 메뉴를 실행해 주세요.
+1. (A)를 눌러 GodMode9을 실행해 주세요.
+1. `[0:] SDCARD` -> `cias`로 이동해 주세요.
+1. `FBI.cia`에 (A)를 눌러 선택하고 "CIA image options..."를 선택하고 "Mount image to drive"를 선택해 주세요.
+1. `.app` 파일에 (A)를 부르고 "NCCH image options"를 선택하고 "Inject to H&S"를 선택해 주세요.
+1. (A)를 눌려 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요.
+1. (A)를 눌러 진행해 주세요.
+1. (start)를 눌러 기기를 다시 시작해 주세요.
+1. 기존 안전을 위한 주의사항 앱이 실행되고 예전에 Gateway로 다운그레이드한 적이 있다면 이 [문제 해결 가이드](troubleshooting#gw_fbi)를 참고해 주세요.
+
+##### Section V - Installing CIAs
+
+1. 안전을 위한 주의사항(현재는 FBI)을 실행해 주세요.
+1. `SD` -> `cias`로 이동해 주세요.
+1. "\<current directory>"를 선택해 주세요.
+1. "Install all CIAs" 설정을 선택한 뒤 (A)를 눌러 주세요.
+1. (Home)을 눌러 FBI를 종료해 주세요.
+
+##### Section VI - DSP Dump
+
+1. Launch DSP1
+1. Once it has completed, press (Start) to exit
+
+##### Section VII - Restore Health and Safety
+
+1. (start)를 누른 채 시작해 Luma3DS chainloader 메뉴를 실행해 주세요.
+1. (A)를 눌러 GodMode9을 실행해 주세요.
+1. (Home)을 눌러 작업 메뉴를 띄워 주세요.
+1. "More..."를 선택해 주세요.
+1. "Restore H&S"를 선택해 주세요.
+1. (A)를 눌려 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요.
+
+##### Section VIII - CTRNAND Luma3DS
+
+1. (start)를 누른 채 시작해 Luma3DS chainloader 메뉴를 실행해 주세요.
+1. (A)를 눌러 GodMode9을 실행해 주세요.
+1. `[0:] SDCARD`로 이동해 주세요.
+1. Press (Y) on `boot.firm` to copy it
+1. (B)를 눌러 메인 메뉴로 돌아가 주세요.
+1. `[1:] SYSNAND CTRNAND`로 이동해 주세요.
+1. Press (Y) to paste a copy of `boot.firm`
+1. "Copy path(s)"를 선택해 주세요.
+1. (A)를 눌려 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요.
+1. (B)를 눌러 메인 메뉴로 돌아가 주세요.
+1. (R) 버튼과 (B)를 동시에 눌러 SD 카드를 뺄 준비를 해 주세요.
+1. SD 카드를 기기에서 빼 주세요.
+1. SD 카드가 제거된 상태에서 (start)를 눌러 기기를 다시 시작해 주세요.
+  + SD 카드가 제거된 상태에서 시작해 Luma3DS 설치에 기반한 CTRNAND를 구성합니다.
+1. (A)와 십자 버튼을 이용해 다음 설정을 설정해 주세요:    
+  + **"Show NAND or user string in System Settings"**
+1. SD 카드를 기기에 다시 삽입해 주세요.
+1. (start)를 눌러 저장하고 기기를 다시 시작해 주세요.
+
+##### Section IX - NAND Backup
+
+1. (start)를 누른 채 시작해 Luma3DS chainloader 메뉴를 실행해 주세요.
+1. (A)를 눌러 GodMode9을 실행해 주세요.
+1. (Home)을 눌러 작업 메뉴를 띄워 주세요.
+1. "More..."를 선택해 주세요.
+1. "Backup NAND"를 선택해 주세요.
+1. (A)를 눌러 진행해 주세요.
+1. (R) 버튼과 (B)를 동시에 눌러 SD 카드를 뺄 준비를 해 주세요.
+1. SD 카드를 컴퓨터에 삽입해 주세요.
+1. SD 카드 최상단의 `/gm9out/` 폴더의 `nand.bin`을 컴퓨터의 안전한 위치에 복사해 주세요.
+  + 여러 위치에 백업을 해 주세요. (온라인 파일 저장 공간 등)
+  + 나중에 문제가 생겨 벽돌이 되었을 때 이 백업으로 기기를 살릴 수 있습니다.
+1. SD 카드의 `/gm9out/` 폴더에서 `nand.bin`을 삭제해 주세요.
+1. SD 카드를 기기에 다시 삽입해 주세요.
+1. (start)를 눌러 저장하고 기기를 다시 시작해 주세요.
+
+___
+
+{% capture notice-10 %}
+이제 Luma3DS Updater를 열고 (A)를 누르기만 하면 Luma3DS를 최신 버전으로 업데이트할 수 있습니다.     
+이는 본체 업데이트와 다르며 오직 최신 버전의 Luma3DS 파일을 다운로드해서 압축을 풀어줍니다.
+이는 SD 카드에 저장된 Luma3DS 파일만 업데이트 할 것입니다. SD 카드가 제거된 상태에서 기기를 시작하면 CTRNAND에 있는 버전이 실행됩니다.    
+{% endcapture %}
+
+<div class="notice--info">{{ notice-10 | markdownify }}</div>
+
+{% capture notice-6 %}   
+이제 Luma3DS CFW SysNAND를 기본으로 시작할 것입니다.    
+앞으로 (Select)를 누른 채 기기를 부팅시키면 Luma3DS 설정 메뉴가 실행됩니다.    
+You can now hold (Start) on boot to launch the Luma3DS chainloader menu (note that the Luma3DS chainloader menu is only displayed if there is more than one payload detected).
+You can now hold (Start) + (Select) + (X) on boot to dump the ARM11 bootrom (`boot11.bin`), the ARM9 bootrom (`boot9.bin`), and your console unique OTP (`OTP.bin`) to the `/boot9strap/` folder on your SD card (note that this will not have any kind of prompt or message).
+{% endcapture %}
+
+<div class="notice--info">{{ notice-6 | markdownify }}</div>
+
+[NTR CFW](https://github.com/44670/BootNTR/)를 실행하려면 [BootNTR Selector](https://gbatemp.net/threads/432911/)를 설치해 주세요.
+{: .notice--info}
+
+{% capture notice-7 %}
+Remove any extra files and folders from the root of your SD card that are *not* in the following image:
+<br><br>
+![]({{ base_path }}/images/screenshots/final-file-layout.png)
+{% endcapture %}
+
+<div class="notice--info">{{ notice-7 | markdownify }}</div>
+
+기기를 다른 지역으로 변경하는 방법에 대해 알아보려면 [지역 변경](region-changing) 페이지를 참고해 주세요.
+{: .notice--success}
+
+GodMode9의 다양한 기능을 알고 싶다면[GodMode9 사용](godmode9-usage) 페이지를 방문해 주세요.
+{: .notice--success}
+
+Luma3DS의 다양한 기능에 대해 알아보려면 [Luma3DS 위키](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage)를 참고해 주세요.
+{: .notice--success}
+
+For information on installing custom themes, badges, and splash screens, check out [3dsthem.es](https://3dsthem.es/about.php).
+{: .notice--success}
