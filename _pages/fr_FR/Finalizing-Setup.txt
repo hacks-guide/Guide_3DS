@@ -85,7 +85,10 @@ Durant cette étape, nous allons également configurer les programmes suivants :
 
 ### Section III - Mise à jour du système
 
-Si, avant de suivre ce guide, vous aviez déjà installé une EmuNAND et que vous souhaitez transférer ces données vers votre SysNand CFW, veuillez suivre [ce guide](move-emunand) à la place des 9 premières étapes de cette section.
+If, while following a previous version of this guide, you CTRTransfered your *New 3DS* to 2.1.0, now is the time to [restore your NAND backup](godmode9-usage#nand_restore) before doing this section.
+{: .notice--danger}
+
+If, before following this guide, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand) before doing this section.
 {: .notice--info}
 
 1. Mettez à jour votre console en vous rendant dans les Paramètres de la console, puis "Autres paramètres", puis tout à droite sur l'option "Mise à jour du Système"
@@ -131,7 +134,10 @@ Si, avant de suivre ce guide, vous aviez déjà installé une EmuNAND et que vou
 
 1. Démarrez la console en maintenant (Start) enfoncé pour accéder au menu de chainloader de Luma3DS
 1. Lancez GodMode9 en appuyant sur (A)
-1. Naviguez vers `[0:] SDCARD`
+1. Naviguez vers`[0:] SDCARD` -> `luma` -> `payloads`
+1. Appuyez sur (X) après avoir sélectionné `start_SafeB9SInstaller.bin` afin de le supprimer
+1. Appuyez sur (A) pour confirmer
+1. Pressez (B) pour revenir à `[0:] SDCARD`
 1. Appuyez sur (Y) en sélectionnant `boot.firm` pour le copier
 1. Appuyez sur (B) pour revenir au menu principal
 1. Naviguez vers `[1:] SYSNAND CTRNAND`
@@ -139,14 +145,15 @@ Si, avant de suivre ce guide, vous aviez déjà installé une EmuNAND et que vou
 1. Sélectionnez "Copy path(s)"
 1. Appuyez sur (A) pour autoriser l'écriture sur votre SysNAND, puis entrez la combinaison de touches demandée
 1. Appuyez sur (B) pour revenir au menu principal
-1. Maintenez (R) et appuyez sur (B) en même temps pour éjecter votre carte SD
-1. Retirez votre carte SD de votre 3DS
-1. Appuyez sur (Start) pour redémarrer sans la carte SD
-  + Démarrer la console au moins une fois alors que la carte SD est retirée vous permettra de configurer la version de Luma3DS installée dans votre CTRNAND
-1. Utilisez le bouton (A) et la croix directionnelle pour activer les éléments suivants :    
-  + **"Show NAND or user string in System Settings"**
-1. Réinsérez votre carte SD dans votre 3DS
-1. Appuyez sur (Start) pour enregistrer les modifications et redémarrer
+1. Naviguez vers `[0:] SDCARD`
+1. Press (Y) on the `luma` folder to copy it
+1. Appuyez sur (B) pour revenir au menu principal
+1. Navigate to `[1:] SYSNAND CTRNAND` -> `rw`
+1. Press (X) on the existing `luma` folder to delete it
+  + If you do not have this folder, just proceed with the instructions
+1. Appuyez sur (A) pour confirmer
+1. Press (Y) to paste a copy of the `luma` folder from your SD card
+1. Appuyez sur (Start) pour redémarrer la console
 
 ### Section IX - Sauvegarde de la NAND
 
