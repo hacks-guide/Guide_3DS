@@ -10,18 +10,8 @@ permalink: /he_IL/updating-to-boot9strap.html
 כל המהדורות הבאות של Luma3DS יוצרו בתוך פורמט ה'firm' בלבד, שיתמוך רק בboot9strap ובsighax. זה אומר שכדי להמשיך לקבל את העדכונים האחרונים של Luma3DS עליכם להשתמש בדף הזה כדי לעדכן את ההתקנה שלכם.
 {: .notice--info}
 
-אם יש לכם PIN בLuma, אתם צריכים לכבות אותו זמנית בשביל השלבים האלו או שתקבלו שגיאת "OTP Crypto Fail". אתם יכולים להפעיל אותה מחדש לאחר העדכון.
+If you have a PIN enabled on Luma3DS, SafeB9SInstaller will give you an "OTP Crypto Fail" error unless you *either* temporarily disable your PIN (you can re-enable the PIN after the update), *or* download the `aeskeydb.bin` file below.
 {: .notice--warning}
-
-{% capture notice-1 %}
-
-אם יש לכם את התוכנה "3dsafe" מותקנת, אתם תצטרכו למחוק אותה או שתקבלו שגיאת "OTP Crypto Fail".
-<br><br>
-כדי לעשות את זה, תחלצו את [הגרסה האחרונה של arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases) (את התוכנה) לתיקייה בשם `a9lh` על שורש כרטיס הSD, ואז תפעילו את 3dsafe, תכניסו את הקוד שלכם ותחזיקו את המקש האחרון כשאתם עושים. משם, בזמן שאתם לוחצים על המקש הזה, תלחצו (X) כדי להפעיל את SafeA9LHInstaller המובנה, ואז תלחצו (Select) כדי "לעדכן" לarm9loaderhax רגיל.
-
-{% endcapture %}
-
-<div class="notice--warning">{{ notice-1 | markdownify }}</div>
 
 **כדי להשתמש בקישורי מגנט, תצטרכו כלי טורנט כמו [Deluge](http://dev.deluge-torrent.org/wiki/Download)**
 {: .notice--success}
@@ -31,10 +21,15 @@ permalink: /he_IL/updating-to-boot9strap.html
 שימו לב שהקובץ הדרוש הנקרא `secret_sector.bin` הוא אותו אחד שנמצא בכל הגרסאות של הקובץ `data_input.zip`. אם יש לכם את הקובץ הזה איפושהו, אתם יכולים להשתמש בו במקום להוריד את האחד למטה.
 {: .notice--info}
 
-שימו לב ש'secret_sector.bin' נדרש כדי למחוק את פריצת arm9loaderhax, ולכן הוא לא נחוץ עבור ההתקנה של boot9strap על קונסולה לא פרוצה.
+Note that, on New 3DS, `secret_sector.bin` is needed to revert the arm9loaderhax exploit, which is why it is not needed for the installation of boot9strap on a stock console. If you do not have a New 3DS, you do not need `secret_sector.bin`.
 {: .notice--info}
 
-* <i class="fa fa-magnet" aria-hidden="true" title="זה לינק מגנטי. תשתמשו בתוכנת טורנט כדי להוריד את הקובץ."></i> - [`secret_sector.bin`](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce)
+Note that the the following required file named `aeskeydb.bin` is *not* the same one that was previously used in this guide. It is required to remove the software "3DSafe" as it allows SafeB9SInstaller to retrieve your console unique OTP. If you do not remember installing "3DSafe", you most likely do not have it, and do not need `aeskeydb.bin`.
+{: .notice--info}
+
+* **"3DSafe" Users Only:** <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [`aeskeydb.bin`](magnet:?xt=urn:btih:621f8af00638cb2b00d5bd0c6816543fa00b5fb1&dn=aeskeydb.bin&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce)
+  + **Note that this file will also fix the error "OTP Crypto Fail" for anyone who encounters it (with or without "3DSafe" installed), such as users with a Luma3DS PIN enabled**
+* **New 3DS Only:** <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. תשתמשו בתוכנת טורנט כדי להוריד את הקובץ."></i> - [`secret_sector.bin`](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce)
 * את הגרסה העדכנית של [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(יש להוריד את קובץ ה-`.7z`)*
 * הגרסה העדכנית של [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * הגרסא העדכנית של [boot9strap](https://github.com/SciresM/boot9strap/releases/latest)
@@ -56,7 +51,9 @@ permalink: /he_IL/updating-to-boot9strap.html
 1. העתיקו את `SafeB9SInstaller.bin` מהזיפ של SafeB9SInstaller אל תיקיית /luma/payloads/ ב- SD שלכם
 1. שנו שם ל `SafeB9SInstaller.bin` בתיקיית `/luma/payloads/` על הכרטיס הSD שלכם ל `start_SafeB9SInstaller.bin`
 1. תעתיקו את`boot9strap.firm` ואת `boot9strap.firm.sha` מה `.zip` של boot9strap אל תיקיית `/boot9strap/`על כרטיס הSD שלכם
-1. העתיקו את הקובץ `secret_sector.bin` לתיקייה `/boot9strap/` שב- SD שלכם
+1. **New 3DS Only:** Copy `secret_sector.bin` to the `/boot9strap/` folder on your SD card
+1. **"3DSafe" Users Only:** Copy `aeskeydb.bin` to the `/boot9strap/` folder on your SD card
+  + **Note that this file will also fix the error "OTP Crypto Fail" for anyone who encounters it (with or without "3DSafe" installed), such as users with a Luma3DS PIN enabled**
 
     ![]({{ base_path }}/images/screenshots/updating-to-b9s-file-layout.png)
     {: .notice--info}
@@ -86,6 +83,9 @@ permalink: /he_IL/updating-to-boot9strap.html
 
 ##### חלק IV - Luma3DS על ה- CTRNAND
 
+If, before updating to boot9strap, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand) before doing this section.
+{: .notice--info}
+
 1. תאתחלו בזמן שאתם מחזיקים (Start) במהלך האתחול כדי להפעיל את תפריט הטעינה של Luma3DS
 1. תפעילו את GodMode9 על ידי לחיצת (A)
 1. נווטו אל `[0:] SDCARD` ואז `luma`ולבסוף `payloads`
@@ -102,14 +102,15 @@ permalink: /he_IL/updating-to-boot9strap.html
   + אם אין לכם אותו, פשוט תמשיכו עם ההוראות
 1. תלחצו (A) כדי לאשר
 1. תלחצו (B) כדי לחזור לתפריט הראשי
-1. תחזיקו (R) ולחצו (B) באותו הזמן כדי להוציא את הSD
-1. תוציאו את כרטיס הSD שלכם מהמכשיר שלכם
-1. תלחצו על (Start) על מנת להפעיל מחדש את המכשיר שלכם כאשר ה-SD עדיין בחוץ
-  + הדלקת המכשיר כאשר ה- SD בחוץ תאפשר לכם להגדיר את Luma3DS מחדש כאשר הוא נמצאו במחיצת ה- CTRNAND (על המכשיר עצמו)
-1. תשתמשו במקש (A) ובמקשי החיצים על מנת להפעיל את ההגדרות הבאות:    
-  + **"Show NAND or user string in System Settings"**
-1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
-1. לחצו על (Start) על מנת לשמור ולהפעיל מחדש
+1. נווטו ל`[0:] SDCARD`
+1. Press (Y) on the `luma` folder to copy it
+1. תלחצו (B) כדי לחזור לתפריט הראשי
+1. Navigate to `[1:] SYSNAND CTRNAND` -> `rw`
+1. Press (X) on the existing `luma` folder to delete it
+  + If you do not have this folder, just proceed with the instructions
+1. תלחצו (A) כדי לאשר
+1. Press (Y) to paste a copy of the `luma` folder from your SD card
+1. לחצו על (Start) על מנת להפעיל מחדש
 
 ##### חלק V - התקנת Luma3DS Updater
 
