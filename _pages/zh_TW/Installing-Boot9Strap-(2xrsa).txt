@@ -1,8 +1,53 @@
 ---
 title: "Installing boot9strap (2xrsa)" #
 lang: zh-Hant
-permalink: /zh_TW/installing-boot9strap-(2xrsa).html
+permalink: /installing-boot9strap-(2xrsa).html
 ---
 
-This is a placeholder page that will be updated once SafeB9SInstaller has a release to support the 2xrsa entrypoint (coming soon). A hardmod is not needed to install boot9strap if you are on 2.1.0. Please be patient.
-{: .notice--info}
+本頁面會有些許的[磁力](https://en.wikipedia.org/wiki/Magnet_URI_scheme)連結，你將需要個像 [Deluge](http://dev.deluge-torrent.org/wiki/Download) 的 BT 種子下載器來下載磁力連結的檔案。
+{: .notice--success}
+
+#### 必備項目
+
+* 最新版的 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* 最新版的 [boot9strap](https://github.com/SciresM/boot9strap/releases/latest)
+* 自製軟體[入門套件](http://smealum.github.io/ninjhax2/starter.zip)
+
+#### 操作說明
+
+##### 第一節 — 準備工作
+
+1. 關閉你的主機
+1. 將 SD 卡插入電腦中
+1. 解壓 `starter.zip` 的 `starter` 資料夾中的 _所有內容_ 至 SD 卡的根目錄底下
+1. 在 SD 卡的根目錄底下建立一個新的資料夾 `boot9strap`
+1. 解壓 boot9strap `.zip` 的 `boot9strap.firm` 及 `boot9strap.firm.sha` 檔案至 SD 卡的 `/boot9strap/` 資料夾中
+1. Copy `arm9.bin` and `arm11.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
+1. 將 SD 卡插回主機中
+1. 啟動你的主機
+
+##### 第二節 — 啟動 SafeB9SInstaller
+
+1. 啟動主機上的網頁瀏覽器，並開啟下列網址
+  + `http://2xrsa.3ds.guide`
+  + 如果你在 2DS 或 New 3DS 上無線功能是關閉的狀態的話，只需要將電池移除並拔掉充電器數秒再重啟主機即可。
+  + 如果出現錯誤「您所在地區不提供此項服務（This service is not available in your region）」，請透過系統設置改變你主機所在的國家，使它與你使用的 2.1.0 CTRTransfer 地區相同
+  + 如果你在 CTRTransfer 前忘了關閉家庭監護功能或者是無法存取無線網路設定，主機會自動連上任何名為 `attwifi` 且沒設密碼的網路。
+  + 如果遇到其他錯誤的話， [請參見此疑難排解](troubleshooting#ts_browser)
+1. 如果一切成功的話，你將自動進入 SafeB9SInstaller
+
+##### 第三節 — 安裝 boot9strap
+
+1. 等待所有安全性檢查完畢
+1. 出現提示時，輸入提示的按鍵組合以安裝 boot9strap
+1. 過程結束後，按下「A」重啟主機
+1. 你的主機將啟動至 boot9strap 中並自動關機，因為它目前尚無 payload 檔案可供啟動
+  + Your device will not boot until you continue with the next page's instructions; do not panic, this is normal
+
+___
+
+Note that *New 3DS* users who ended up on 2.1.0 after a CTRTransfer *must* [restore their NAND backup](godmode9-usage#nand_restore) between "Section II - Configuring Luma3DS" and "Section III - Updating the System" of [Finalizing Setup](finalizing-setup).
+{: .notice--danger}
+
+繼續至[完成安裝](finalizing-setup)
+{: .notice--primary}
