@@ -85,7 +85,10 @@ permalink: /ru_RU/finalizing-setup.html
 
 ##### Часть III - Обновление системы
 
-Если прежде чем начать выполнять действия из этого руководства у вас уже был установлен EmuNAND и вы хотите перенести содержимое EmuNAND в SysNAND с кастомной прошивкой - сейчас самый подходящий момент. Выполните действия из раздела [перенос EmuNAND](move-emunand), вместо первых 9 шагов в этой части.
+If, while following a previous version of this guide, you CTRTransfered your *New 3DS* to 2.1.0, now is the time to [restore your NAND backup](godmode9-usage#nand_restore) before doing this section.
+{: .notice--danger}
+
+If, before following this guide, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand) before doing this section.
 {: .notice--info}
 
 1. Обновите прошивку консоли, зайдя в Системные настройки (System Settings), затем "Прочие настройки" (Other Settings), затем листайте вправо до конца и выберите пункт "Обновление" (System Update)
@@ -131,7 +134,10 @@ permalink: /ru_RU/finalizing-setup.html
 
 1. Перезагрузитесь, удерживая кнопку (Start), чтобы запустить меню Luma3DS chainloader
 1. Запустите GodMode9, нажав кнопку (A)
-1. Перейдите в `[0:] SDCARD`
+1. Перейдите в `[0:] SDCARD` -> `luma` -> `payloads`
+1. Нажмите (X), выделив файл `start_SafeB9SInstaller.bin` чтобы удалить его
+1. Нажмите (A) для подтверждения
+1. Нажмите (B), чтобы вернуться к `[0:] SDCARD`
 1. Нажмите (Y), выделив файл `boot.firm` чтобы скопировать его
 1. Нажмите (B) для возврата в главное меню
 1. Перейдите в `[1:] SYSNAND CTRNAND`
@@ -139,14 +145,15 @@ permalink: /ru_RU/finalizing-setup.html
 1. Выберите "Copy path(s)"
 1. Нажмите (A), чтобы разрешить запись в SysNAND (lvl1) и введите указанную комбинацию кнопок
 1. Нажмите (B) для возврата в главное меню
-1. Удерживая (R) нажмите (B) для того, чтобы извлечь SD-карту
-1. Извлеките SD-карту из консоли
-1. Нажмите (Start) для перезагрузки с извлеченной SD-картой
-  + Необходимо хотя бы раз загрузиться без SD-карты, чтобы настроить Luma3DS, установленную в раздел CTRNAND
-1. Нажимая (A) выберите следующие пункты:    
-  + **"Show NAND or user string in System Settings"**
-1. Вставьте SD-карту обратно в консоль
-1. Нажмите (Start), чтобы сохранить настройки и перезагрузиться
+1. Перейдите в `[0:] SDCARD`
+1. Press (Y) on the `luma` folder to copy it
+1. Нажмите (B) для возврата в главное меню
+1. Navigate to `[1:] SYSNAND CTRNAND` -> `rw`
+1. Press (X) on the existing `luma` folder to delete it
+  + If you do not have this folder, just proceed with the instructions
+1. Нажмите (A) для подтверждения
+1. Press (Y) to paste a copy of the `luma` folder from your SD card
+1. Нажмите (Start) для перезагрузки
 
 ##### Часть IX - NAND Backup
 
