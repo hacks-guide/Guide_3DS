@@ -1,60 +1,60 @@
 ---
-title: "Updating to boot9strap" #
-lang: en
-permalink: /updating-to-boot9strap.html
+Atualizando para boot9strap
+lang: pt-BR
+permalink: /pt_BR/updating-to-boot9strap.html
 ---
 
 Esta página é para usuários de uma instalção arm9loaderhax pré existente atualizarem seus dispositivos para boot9strap.
 {: .notice--info}
 
-All future releases of Luma3DS will only be made in the `.firm` format, which will only be compatible with boot9strap and sighax. This means that to continue receiving the latest updates of Luma3DS, you should use this page to update your installation.
+Todas as versões futuras do Luma3DS serão liberadas apenas no formato `.firm`, que só será compatível com com boot9strap e o sighax. Isto significa que você deve utilizar esta página para atualizar sua instalação, só assim você irá continuar recebendo as atualizações mais recentes do Luma3DS.
 {: .notice--info}
 
-If you have a PIN set on Luma, you must temporarily turn it off to do these steps, or you will get an "OTP Crypto Fail" error. You can re-enable the PIN after the update.
+Se você tem um PIN definido no Luma, você deve desativá-lo temporariamente para executar estas etapas, ou receberá um erro "OTP Crypto Fail". Você pode reabilitar o PIN após a atualização.
 {: .notice--warning}
 
 {% capture notice-1 %}
 
-If you have the software "3dsafe" installed, you must remove it to do these steps, or you will get an "OTP Crypto Fail" error.
+Se você tiver o software "3dsafe" instalado, você deve removê-lo para executar essas etapas ou receberá um erro de "OTP Crypto Fail".
 <br><br>
-To do this, extract [the latest release of arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases) (the payload files) to a folder named `a9lh` on the root of your SD card, then boot 3dsafe, input your pin and hold down the last key when you do. From there, while holding this key, press (X) to launch the integrated SafeA9LHInstaller, then press (Select) to "update" to standard arm9loaderhax.
+Para fazer isto, extraia [a versão mais recente do arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases)(os arquivos payload) para uma pasta chamada `a9lh` na raiz do seu cartão SD depois inicie o 3dsafe, introduza seu pin e mantenha segurada a última tecla. A partir daí, enquanto segura esta tecla, aperte (X) para iniciar o SafeA9LHInstaller integrado, depois aperte (Select) para "atualizar" para o arm9loaderhax padrão.
 
 {% endcapture %}
 
 <div class="notice--warning">{{ notice-1 | markdownify }}</div>
 
-To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+Para usar os links [magnéticos](https://pt.wikipedia.org/wiki/Magnet-Link) nesta página, você precisará de um cliente de torrent, como o [Deluge](http://dev.deluge-torrent.org/wiki/Download)
 {: .notice--success}
 
-#### What you need
+#### O que você precisa
 
-Note that the following required file named `secret_sector.bin` is the same one that was found in the various `data_input.zip` file versions. If you already have that file on your disk somewhere, you can use that one instead of downloading the one below.
+Observe que o arquivo `secret_sector.bin`, necessário para a instalação, é o mesmo que pode ser encontrado nas várias versões do arquivo `data_input.zip`. Se você já possui este arquivo armazenado em algum lugar do seu disco, você pode usá-lo em vez de baixar o listado abaixo.
 {: .notice--info}
 
-Note that `secret_sector.bin` is needed to revert the arm9loaderhax exploit, which is why it is not needed for the installation of boot9strap on a stock console.
+Observe que o `secret_sector.bin` é necessário para reverter o exploit arm9loaderhax, é por isso que ele não é necessário para a instalação do boot9strap em um console sem CFW.
 {: .notice--info}
 
-* <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [`secret_sector.bin`](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce)
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(the `.7z` file)*
-* The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
-* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest)
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* The latest fork of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
+* <i class="fa fa-magnet" aria-hidden="true" title="Este é um link magnético. Use um cliente torrent para baixar o arquivo. "></i> - [`secret_sector.bin`](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce)
+* A versão mais recente do [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(o arquivo `.7z`)*
+* A versão mais recente do [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* A versão mais recente do [boot9strap](https://github.com/SciresM/boot9strap/releases/latest)
+* A versão mais recente do [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* A versão mais recente do [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
 
-#### Instructions
+#### Instruções
 
-##### Section I - Prep Work
+##### Seção I - Trabalho Preparatório
 
-1. Power off your device
-1. Insert your SD card into your computer
-1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card
+1. Desligue seu dispositivo
+1. Insira seu cartão SD no seu computador
+1. Copie o `boot.firm` do `.7z` do Luma3DS para a raíz do seu cartão SD
 1. Crie uma pasta chamada `cias` na raiz do seu cartão SD se ela ainda não existir
-1. Copy `lumaupdater-v2.0.cia` to the `/cias/` folder on your SD card
-1. Create a folder named `boot9strap` on the root of your SD card
-1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
-1. Delete any existing `.bin` payloads in the `/luma/payloads/` folder on your SD card as they will not be compatible with boot9strap compatible Luma3DS versions
-1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the `/luma/payloads/` folder on your SD card
-1. Rename `SafeB9SInstaller.bin` in the `/luma/payloads/` folder on your SD card to `start_SafeB9SInstaller.bin`
+1. Copie `lumaupdater-v2.0.cia` para a pasta `/cias/` no seu cartão SD
+1. Crie uma pasta chamada `boot9strap` na raiz do seu cartão SD
+1. Copie o `GodMode9.firm` do `.zip` do GodMode9 para a pasta `/luma/payloads/` no seu cartão SD
+1. Apague quaisquer payloads `.bin` existentes na pasta `/luma/payloads/` do seu cartão SD card, já que eles não serão compatíveis com as versões boot9strap do Luma3ds
+1. Copie o `SafeB9SInstaller.bin` do `.zip` do SafeB9SInstaller para a pasta `/luma/payloads/` no seu cartão SD
+1. Renomeie `SafeB9SInstaller.bin` na pasta `/luma/payloads/` do seu cartão SD para `start_SafeB9SInstaller.bin`
 1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
 1. Copy `secret_sector.bin` to the `/boot9strap/` folder on your SD card
 
