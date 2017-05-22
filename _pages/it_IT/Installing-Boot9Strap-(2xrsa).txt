@@ -4,5 +4,50 @@ lang: it
 permalink: /it_IT/installing-boot9strap-(2xrsa).html
 ---
 
-Questa è una pagina temporanea che verrà aggiornata non appena SafeB9SInstaller implementerà il supporto per l'entrypoint 2xrsa (in arrivo a breve). Non è necessario l'hardmod per installare boot9strap su console con versione del software 2.1.0. Pazienta ancora un po'.
-{: .notice--info}
+**Per usare i link [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) di questa guida avrai bisogno di un client torrent come [Deluge](http://dev.deluge-torrent.org/wiki/Download)**
+{: .notice--success}
+
+#### Cosa serve
+
+* L'ultima versione di [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* L'ultima versione di [boot9strap](https://github.com/SciresM/boot9strap/releases/latest)
+* L'[Homebrew Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
+
+#### Istruzioni
+
+##### Sezione I - Preparazione
+
+1. Spegni il tuo 3DS
+1. Inserisci la scheda SD nel tuo computer
+1. Copia il _contenuto_ della cartella `starter` dell'archivio `starter.zip` nella directory principale della tua scheda SD
+1. Crea una cartella chiamata `boot9strap` nella directory principale della tua scheda SD
+1. Copia i file `boot9strap.firm` e `boot9strap.firm.sha` dall'archivio `.zip` di boot9strap nella cartella `/boot9strap/` della tua scheda SD
+1. Copia i file `arm9.bin` e `arm11.bin` dall'archivio `.zip` di SafeB9SInstaller nella directory principale della tua scheda SD
+1. Reinserisci la scheda SD nel Nintendo 3DS
+1. Accendi la console
+
+##### Sezione II - Avvio di SafeB9SInstaller
+
+1. Avvia il Browser internet e visita una delle seguenti pagine dalla tua console
+  + `http://2xrsa.3ds.guide`
+  + Se hai un 2DS o su un New 3DS e hai lasciato inattiva la comunicazione wireless, puoi riattivarla rimuovendo l'alimentatore e la batteria per alcuni secondi prima di accendere la console
+  + Se ottieni l'errore "Questo servizio non è disponibile nella tua regione", usa le Impostazioni della console per configurare la nazione in modo che corrisponda alla regione della NAND installata durante il CTRTransfer 2.1.0
+  + Se hai dimenticato di disattivare il filtro famiglia prima di effettuare il CTRTransfer oppure non riesci ad accedere alle impostazioni internet, puoi risolvere il problema rinominando la tua connessione wireless in `attwifi` e rimuovendo la password. In questo modo la console si collegherà in automatico
+  + Se ottieni un errore diverso, [segui questa guida per risolvere il problema](troubleshooting#ts_browser)
+1. Se l'exploit è andato a buon fine, si avvierà SafeB9SInstaller
+
+##### Sezione III - Installazione di boot9strap
+
+1. Attendi il termine di tutti i controlli di sicurezza
+1. Quando richiesto, inserisci la combinazione di tasti richiesta a schermo per installare boot9strap
+1. Una volta completato il processo, premi (A) per riavviare la tua console
+1. La console si riavvierà su boot9strap, quindi si spegnerà automaticamente visto che non ha alcun payload da avviare
+  + Your device will not boot until you continue with the next page's instructions; do not panic, this is normal
+
+___
+
+Note that *New 3DS* users who ended up on 2.1.0 after a CTRTransfer *must* [restore their NAND backup](godmode9-usage#nand_restore) between "Section II - Configuring Luma3DS" and "Section III - Updating the System" of [Finalizing Setup](finalizing-setup).
+{: .notice--danger}
+
+Prosegui con il [Completamento dell'installazione](finalizing-setup)
+{: .notice--primary}
