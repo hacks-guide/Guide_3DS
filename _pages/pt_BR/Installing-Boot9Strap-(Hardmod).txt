@@ -1,30 +1,30 @@
 ---
-title: "Installing boot9strap (Hardmod)" #
+title: "Instalando boot9strap (Hardmod)" #
 lang: pt-BR
-permalink: /installing-boot9strap-(hardmod).html
+permalink: /pt_BR/installing-boot9strap-(hardmod).html
 ---
 
-An excellent guide to getting a hardmod can be found [here](https://gbatemp.net/threads/414498/). If you are on a New 3DS, read [this](https://github.com/Plailect/Guide/issues/681) before hardmodding.
+Um excelente guia para realizar um hardmod pode ser encontrado [aqui](https://gbatemp.net/threads/414498/). Caso esteja utilizando um New 3DS, leia [isto](https://github.com/Plailect/Guide/issues/681) antes de iniciar seu hardmod.
 {: .notice--info}
 
-This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+Esta é uma implementação funcional do exploit "FIRM partitions known-plaintext" detalhado [aqui](https://www.3dbrew.org/wiki/3DS_System_Flaws).
 {: .notice--info}
 
 Para usar os links [magnéticos](https://pt.wikipedia.org/wiki/Magnet-Link) nesta página, você precisará de um cliente de torrent como o [Deluge](http://dev.deluge-torrent.org/wiki/Download)
 {: .notice--success}
 
-This will work on New 3DS, Old 3DS, and 2DS on *all* versions that you have a corresponding `.firm` for.
+Isto funcionará no New 3DS, Old 3DS e 2DS em *todas* as versões em que você tenha um `.firm` correspondente.
 {: .notice--success}
 
-#### What you need
+#### O que você precisa
 
-* Your NAND image extracted using your [hardmod](https://gbatemp.net/threads/414498/)
+* A imagem de sua NAND extraída usando seu [hardmod](https://gbatemp.net/threads/414498/)
 *A versão mais recente do [boot9strap](https://github.com/SciresM/boot9strap/releases/latest)
-* The latest version of [hardmod-b9s-installer](https://github.com/ihaveamac/hardmod-b9s-installer/releases/latest)
-  + Windows users can use the compiled `.exe`, while Mac and Linux users will need to have [Python 3](https://www.python.org/downloads/) installed to run the `.py`
-* The `.firm` corresponding to your device and version:
+* A versão mais recente do [hardmod-b9s-installer](https://github.com/ihaveamac/hardmod-b9s-installer/releases/latest)
+  + Os usuários de Windows podem usar o compilado `.exe`, enquanto os usuários de Mac e Linux precisarão ter [Python 3](https://www.python.org/downloads/) instalado para executar o `.py`
+* O `.firm` correspondente ao seu dispositivo e versão:
 
-| Version(s) | Kernel | Old 3DS | New 3DS |
+| Versão(ões) | Kernel | Old 3DS | New 3DS |
 |-|-|:-:|:-:|
 | 1.0.0 | 2.27-0 | [`2.27-0_1.0_OLD.firm`](magnet:?xt=urn:btih:5c86edc67a1827991567b3c326a4182b66647d07&dn=2.27-0_1.0_OLD.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce) | - |
 | 1.1.0 | 2.28-0 | [`2.28-0_1.1_OLD.firm`](magnet:?xt=urn:btih:7c7696ff18e7d83a638b9c80f83052f763fb0fa5&dn=2.28-0_1.1_OLD.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce) | - |
@@ -57,16 +57,16 @@ This will work on New 3DS, Old 3DS, and 2DS on *all* versions that you have a co
 
 #### Instruções
 
-1. Copy the hardmod-b9s-installer folder from the hardmod-b9s-installer `.zip` to your computer
-1. Copy your downloaded `.firm` to the hardmod-b9s-installer folder on your computer
-1. Rename your downloaded `.firm` in the hardmod-b9s-installer folder on your computer to `current.firm`
-1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the hardmod-b9s-installer folder on your computer
-1. Run hardmod-b9s-installer
-  + Windows Users: Run the `.exe`
-  + Mac and Linux Users: Run the `.py`
-1. Flash your outputted `NAND-patched.bin` to your device with your hardmod
+1. Copie a pasta do hardmod-b9s-installer do `.zip` do hardmod-b9s-Installer para seu computador
+1. Copie o `.firm` baixado para a pasta hardmod-b9s-installer no seu computador
+1. Renomeie o seu `.firm` baixado na pasta hardmod-b9s-installer no seu computador para `current.firm`
+1. Copie o `boot9strap.firm` e `boot9strap.firm.sha` do `.zip` do boot9strap para a pasta hardmod-b9s-installer no seu computador
+1. Execute hardmod-b9s-installer
+  + Usuários Windows: Execute o `.exe`
+  + Usuários de Linux e Mac: Execute o `.py`
+1. Sobrescreva esta `NAND-patched.bin` para o seu dispositivo com seu hardmod
 
 ___
 
-Continue to [Finalizing Setup](finalizing-setup)
+Continue para [Finalizando a instalação](finalizing-setup)
 {: .notice--primary}
