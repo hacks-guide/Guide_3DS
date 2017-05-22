@@ -85,7 +85,10 @@ Tämän prosessin aikana myös asennetaan muun muassa seuraavat ohjelmat:
 
 ##### Section III - Updating the System
 
-Jos sinulla oli ennen tämän oppaan aloittamista EmuNAND-kokoonpano, ja haluaisit siirtää sen sisällön uuteen SysNAND-CFW-kokoonpanoosi, seuraa osiota [EmuNANDin siirtäminen](move-emunand) tämän vaiheen yhdeksän ensimmäisen kohdan sijaan.
+If, while following a previous version of this guide, you CTRTransfered your *New 3DS* to 2.1.0, now is the time to [restore your NAND backup](godmode9-usage#nand_restore) before doing this section.
+{: .notice--danger}
+
+If, before following this guide, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand) before doing this section.
 {: .notice--info}
 
 1. Päivitä konsolisi menemällä järjestelmäasetuksiin (System Settings), siellä muihin asetuksiin (Other Settings) ja sitten valitsemalla järjestelmäpäivitys (System Update) aivan oikeasta reunasta
@@ -131,7 +134,10 @@ Jos sinulla oli ennen tämän oppaan aloittamista EmuNAND-kokoonpano, ja haluais
 
 1. Avaa Luma3DS:n ketjulatausvalikko pitämällä (START)-painiketta pohjassa käynnistyksen aikana
 1. Avaa GodMode9 painamalla (A):ta
-1. Mene hakemistoon `[0:] SDCARD`
+1. Navigate to `[0:] SDCARD` -> `luma` -> `payloads`
+1. Press (X) on `start_SafeB9SInstaller.bin` to delete it
+1. Paina (A):ta vahvistaaksesi
+1. Press (B) to return to `[0:] SDCARD`
 1. Press (Y) on `boot.firm` to copy it
 1. Paina (B):tä palataksesi päävalikkoon
 1. Mene hakemistoon `[1:] SYSNAND CTRNAND`
@@ -139,14 +145,15 @@ Jos sinulla oli ennen tämän oppaan aloittamista EmuNAND-kokoonpano, ja haluais
 1. Valitse "Copy path(s)"
 1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1) ja syötä annettu painikeyhdistelmä
 1. Paina (B):tä palataksesi päävalikkoon
-1. Pidä (R):ää pohjassa ja paina samalla (B):tä irrottaaksesi SD-korttisi
-1. Irrota SD-korttisi konsolistasi
-1. Paina (START)-painiketta käynnistääksesi konsolisi uudelleen SD-kortin ollessa irrotettuna
-  + Kun käynnistät konsolin vähintään kerran ilman SD-korttia, voit määrittää CTRNAND-pohjaisen Luma3DS-asennuksen asetukset
-1. Käytä (A):ta ja ristiohjainta ottaaksesi seuraavat asetukset käyttöön:    
-  + **"Show NAND or user string in System Settings"**
-1. Aseta SD-korttisi takaisin konsoliisi
-1. Paina (START)-painiketta tallentaaksesi ja käynnistääksesi uudelleen
+1. Mene hakemistoon `[0:] SDCARD`
+1. Press (Y) on the `luma` folder to copy it
+1. Paina (B):tä palataksesi päävalikkoon
+1. Navigate to `[1:] SYSNAND CTRNAND` -> `rw`
+1. Press (X) on the existing `luma` folder to delete it
+  + If you do not have this folder, just proceed with the instructions
+1. Paina (A):ta vahvistaaksesi
+1. Press (Y) to paste a copy of the `luma` folder from your SD card
+1. Press (Start) to reboot
 
 ##### Section IX - NAND Backup
 
