@@ -55,84 +55,84 @@ Observe que o `secret_sector.bin` é necessário para reverter o exploit arm9loa
 1. Apague quaisquer payloads `.bin` existentes na pasta `/luma/payloads/` do seu cartão SD card, já que eles não serão compatíveis com as versões boot9strap do Luma3ds
 1. Copie o `SafeB9SInstaller.bin` do `.zip` do SafeB9SInstaller para a pasta `/luma/payloads/` no seu cartão SD
 1. Renomeie `SafeB9SInstaller.bin` na pasta `/luma/payloads/` do seu cartão SD para `start_SafeB9SInstaller.bin`
-1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
-1. Copy `secret_sector.bin` to the `/boot9strap/` folder on your SD card
+1. Copie o `boot9strap.firm` e o `boot9strap.firm.sha` do `.zip` do boot9strap para a pasta `/boot9strap/` no seu cartão SD
+1. Copie o `secret_sector.bin` para a pasta `/boot9strap/` no seu cartão SD
 
     ![]({{ base_path }}/images/screenshots/updating-to-b9s-file-layout.png)
     {: .notice--info}
 
-1. Reinsert your SD card into your device
+1. Reinsira seu cartão SD no seu dispositivo
 
-##### Section II - Installing boot9strap
+##### Seção II - Instalando o boot9strap
 
-1. Boot your device while holding (Start) to launch the Luma3DS chainloader menu
-  + Some versions of Luma3DS will just directly start whichever payload begins with `start_`
-  + If your version does this, just proceed with the instructions
-1. Launch SafeB9SInstaller by pressing (A) on it
-1. Wait for all safety checks to complete
-1. When prompted, input the key combo given to install boot9strap
-1. Once it has completed, press (A) to reboot your device.
-  + If your device shuts down on boot, ensure that you have copied `boot.firm` from the Luma3DS `.7z` to the root of your SD card
+1. Inicie seu dispositivo enquanto segura (Start) para iniciar o menu do chainloader do Luma3DS
+  + Algumas versões do Luma3DS iniciarão automaticamente qualquer payload que inicie com `start_`
+  + Se a sua versão faz isso, apenas prossiga com as instruções
+1. Inicie o SafeB9SInstaller apertando (A) nele
+1. Espere todos as verificações de segurança finalizarem
+1. Quando solicitado, aperte a sequência de botões apresentada na tela para instalar o boot9strap
+1. Quando concluído, aperte (A) para reiniciar o seu dispositivo.
+  + Se seu dispositivo desligar na inicialização, certifique-se de que você copiou `boot.firm` do `.7z` do Luma3DS para a raiz do seu cartão SD
 
-##### Section III - Configuring Luma3DS
+##### Seção III - Configurando o Luma3DS
 
-This section is only needed if you are prompted with the Luma3DS configuration menu after the reboot.
+Esta seção é necessária apenas se o seu dispositivo reiniciar no menu de configuração do Luma3DS.
 {: .notice--info}
 
-1. In the Luma3DS configuration menu, use the (A) button and the D-Pad to turn on the following:    
+1. No menu de configuração do Luma3DS, use o botão (A) e os botões direcionais para selecionar as seguintes opções:    
   + **"Show NAND or user string in System Settings"**
-1. Press (Start) to save and reboot
+1. Aperte (Start) para salvar e reiniciar
 
-##### Section IV - CTRNAND Luma3DS
+##### Seção IV - Luma3DS com CTRNAND
 
-1. Reboot holding (Start) during boot to launch the Luma3DS chainloader menu
-1. Launch GodMode9 by pressing (A)
-1. Navigate to `[0:] SDCARD` -> `luma` -> `payloads`
-1. Press (X) on `start_SafeB9SInstaller.bin` to delete it
-1. Press (A) to confirm
-1. Press (B) to return to `[0:] SDCARD`
-1. Press (Y) on `boot.firm` to copy it
-1. Press (B) to return to the main menu
-1. Navigate to `[1:] SYSNAND CTRNAND`
-1. Press (Y) to paste a copy of `boot.firm`
-1. Select "Copy path(s)"
-1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
-1. Press (X) on `arm9loaderhax.bin` to delete it
-  + If you do not have this file, just proceed with the instructions
-1. Press (A) to confirm
-1. Press (B) to return to the main menu
-1. Hold (R) and press (B) at the same time to eject your SD card
-1. Remove your SD card from your device
-1. Press (Start) to reboot your device with your SD card removed
-  + Booting your device at least once with your SD card removed will allow you to configure the CTRNAND based Luma3DS installation
-1. Use the (A) button and the D-Pad to turn on the following:    
+1. Reinicie segurando (Start) durante a inicialização para iniciar o menu do chainloader do Luma3DS
+1. Inicie o GodMode9 apertando (A)
+1. Navegue para `[0:] SDCARD` -> `luma` -> `payloads`
+1. Aperte (X) no `start_SafeB9SInstaller.bin` para excluí-lo
+1. Aperte (A) para confirmar
+1. Aperte (B) para retornar ao `[0:] SDCARD`
+1. Aperte (Y) no `boot.firm` para copiá-lo
+1. Aperte (B) para retornar para o menu principal
+1. Navegue para `[1:] SYSNAND CTRNAND`
+1. Aperte (Y) para colar uma cópia do `boot.firm`
+1. Selecione "Copy path(s)"
+1. Aperte (A) para destravar "SysNAND (lvl1) writing", então aperte a sequência de botões solicitada
+1. Aperte (X) no `arm9loaderhax.bin` para apagá-lo
+  + Se você não tem esse arquivo, só prossiga com as instruções
+1. Aperte (A) para confirmar
+1. Aperte (B) para retornar para o menu principal
+1. Segure (R) e aperte (B) ao mesmo tempo para ejetar o cartão SD
+1. Remova seu cartão SD do seu dispositivo
+1. Aperte (Start) para reiniciar seu dispositivo com o seu cartão SD removido
+  + Ao inicializar seu dispositivo pelo menos uma vez com o seu cartão SD removido, você poderá configurar a instalação do Luma3DS baseada na CTRNAND
+1. Use o botão (A) e os botões direcionais para ativar o seguinte:    
   + **"Show NAND or user string in System Settings"**
-1. Reinsert your SD card into your device
-1. Press (Start) to save and reboot
+1. Reinsira seu cartão SD no seu dispositivo
+1. Aperte (Start) para salvar e reiniciar
 
-##### Section V - Installing Luma3DS Updater
+##### Seção V - Instalando Luma3DS Updater
 
 1. Inicie o FBI
 1. Navegue para `SD` -> `cias`
-1. Select `lumaupdater-v2.0.cia`
-1. Select the "Install CIA" option, then press (A) to confirm
+1. Selecione `lumaupdater-v2.0.cia`
+1. Selecione a opção "Install CIA", depois aperte (A) para confirmar
 1. Aperte (Home) para sair do FBI
 
 ___
 
-You can now remove any arm9loaderhax related files from your SD card, such as `arm9loaderhax.bin` on the root of your SD card and the `aeskeydb.bin` file in the `files9` folder on your SD card.
+Agora você pode remover qualquer arquivo relacionado ao arm9loaderhax do seu cartão SD, como o `arm9loaderhax.bin` na raiz do seu cartão SD e o arquivo `aeskeydb.bin` na pasta `files9` no seu cartão SD.
 {: .notice--info}
 
-Note that `firm0firm1.bak` and `sector0x96.bak` in the `/boot9strap/` folder on your SD card are only needed in the event of a failed boot9strap install. Once you have installed successfully, you can delete the entire `boot9strap` folder.
+Note que `firm0firm1.bak` e `sector0x96.bak` na pasta `/boot9strap/` no seu cartão SD só serão necessários no caso de uma instalação falha do boot9strap. Uma vez que você tenha instalado com sucesso, você pode remover a pasta `boot9strap` inteira.
 {: .notice--info}
 
-This fork of Luma3DS Updater allows for boot9strap compatibility by downloading and extracting the latest Luma3DS `boot.firm` for you.
+Este fork do Luma3DS Updater tem compatibilidade com o boot9strap fazendo o download e extraindo o `boot.firm` mais recente do Luma3DS para você.
 {: .notice--info}
 
 {% capture notice-6 %}   
-You can now hold (Select) on boot to launch the Luma3DS configuration menu.    
-You can now hold (Start) on boot to launch the Luma3DS chainloader menu (note that the Luma3DS chainloader menu is only displayed if there is more than one payload detected).
-You can now hold (Start) + (Select) + (X) on boot to dump the ARM11 bootrom (`boot11.bin`), the ARM9 bootrom (`boot9.bin`), and your console unique OTP (`OTP.bin`) to the `/boot9strap/` folder on your SD card (note that this will not have any kind of prompt or message).
+Agora você pode segurar (Select) durante a inicialização para abrir o menu de configuração do Luma3DS.    
+Agora você pode segurar (Start) durante a inicialização para abrir o menu do chainloader do Luma3DS (note que este menu só será mostrado se existirem mais de uma payload detectado).
+Agora você pode segurar (Start) + (Select) + (X) durante a inicialização para criar backups do ARM11 bootrom (`boot11.bin`), do ARM9 bootrom (`boot9.bin`) e do OTP único do seu console (`OTP.bin`) na pasta `/boot9strap/` no seu cartão SD (note que isso não terá nenhum tipo de aviso ou mensagem).
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
