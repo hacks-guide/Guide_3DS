@@ -87,7 +87,10 @@ The file `boot.firm` is what is launched by boot9strap itself after it finishes 
 
 ##### Section III - Updating the System
 
-If, before following this guide, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand) instead of doing the first nine steps in this section.
+If, while following a previous version of this guide, you CTRTransfered your *New 3DS* to 2.1.0, now is the time to [restore your NAND backup](godmode9-usage#nand_restore) before doing this section.
+{: .notice--danger}
+
+If, before following this guide, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand) before doing this section.
 {: .notice--info}
 
 1. 본체 설정의 "기타 설정"에서 가장 오른쪽에 있는 "본체 업데이트"를 선택해 기기를 업데이트해 주세요.
@@ -133,7 +136,10 @@ If, before following this guide, you already had an EmuNAND setup and would like
 
 1. (start)를 누른 채 시작해 Luma3DS chainloader 메뉴를 실행해 주세요.
 1. (A)를 눌러 GodMode9을 실행해 주세요.
-1. `[0:] SDCARD`로 이동해 주세요.
+1. Navigate to `[0:] SDCARD` -> `luma` -> `payloads`
+1. Press (X) on `start_SafeB9SInstaller.bin` to delete it
+1. (A)를 눌러 주세요.
+1. Press (B) to return to `[0:] SDCARD`
 1. Press (Y) on `boot.firm` to copy it
 1. (B)를 눌러 메인 메뉴로 돌아가 주세요.
 1. `[1:] SYSNAND CTRNAND`로 이동해 주세요.
@@ -141,14 +147,15 @@ If, before following this guide, you already had an EmuNAND setup and would like
 1. "Copy path(s)"를 선택해 주세요.
 1. (A)를 눌려 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요.
 1. (B)를 눌러 메인 메뉴로 돌아가 주세요.
-1. (R) 버튼과 (B)를 동시에 눌러 SD 카드를 뺄 준비를 해 주세요.
-1. SD 카드를 기기에서 빼 주세요.
-1. SD 카드가 제거된 상태에서 (start)를 눌러 기기를 다시 시작해 주세요.
-  + SD 카드가 제거된 상태에서 시작해 Luma3DS 설치에 기반한 CTRNAND를 구성합니다.
-1. (A)와 십자 버튼을 이용해 다음 설정을 설정해 주세요:    
-  + **"Show NAND or user string in System Settings"**
-1. SD 카드를 기기에 다시 삽입해 주세요.
-1. (start)를 눌러 저장하고 기기를 다시 시작해 주세요.
+1. `[0:] SDCARD`로 이동해 주세요.
+1. Press (Y) on the `luma` folder to copy it
+1. (B)를 눌러 메인 메뉴로 돌아가 주세요.
+1. Navigate to `[1:] SYSNAND CTRNAND` -> `rw`
+1. Press (X) on the existing `luma` folder to delete it
+  + If you do not have this folder, just proceed with the instructions
+1. (A)를 눌러 주세요.
+1. Press (Y) to paste a copy of the `luma` folder from your SD card
+1. Press (Start) to reboot
 
 ##### Section IX - NAND Backup
 
