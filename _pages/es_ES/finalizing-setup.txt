@@ -2,9 +2,6 @@
 title: "Finalizar instalación"
 ---
 
-Para utilizar los enlaces [magnet](https://es.wikipedia.org/wiki/Magnet) de esta página, vas a necesitar un cliente torrent como [Deluge](http://dev.deluge-torrent.org/wiki/Download)
-{: .notice--success}
-
 #### Descripción general de pasos
 
 {% capture notice-2 %}
@@ -66,24 +63,27 @@ Durante este proceso, también instalaremos programas como los siguientes:
     {: .notice--info}
 
 1. Si tu consola está entre una versión entre 3.0.0 y 4.5.0 (inclusive), tu dispositivo no encenderá hasta que descargues manualmente el firmware requerido:
-  + Descarga [este archivo](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) y renómbralo como `firmware.bin`
+  + Descarga [este archivo](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) y cambia su nombre a `firmware.bin`
   + Descarga [este archivo](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
   + Copia `firmware.bin` y `cetk` a la carpeta `/luma/` en tu tarjeta SD
   + Borra ambos archivos después de actualizar tu dispositivo más adelante en estas instrucciones
-1. Reinserta la tarjeta SD en tu consola
+1. Vuelve a insertar tu tarjeta SD en tu consola
 
 ##### Sección II - Configurar Luma3DS
 
 1. Enciende tu consola para entrar al menú de configuración de Luma3DS
   + Si obtienes una pantalla negra, [sigue esta guía de solución de problemas](troubleshooting#ts_sys_b9s)
-1. Utiliza el botón (A) y las flechas direccionales para activar lo siguiente:    
+1. Presiona el botón (A) y utiliza las flechas direccionales para activar lo siguiente:    
   + **"Show NAND or user string in System Settings"**
 1. Presiona (Start) para guardar y reiniciar
   + Si se te queda la pantalla en negro, simplemente continúa a la siguiente sección   
 
 ##### Sección III - Actualizar el sistema
 
-If, before following this guide, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand) before doing this section.
+Si, mientras seguías una versión anterior de esta guía, hiciste CTRTransfer de tu *New 3DS* a 2.1.0, ahora es el momento de [restaurar tu copia de seguridad de la NAND](godmode9-usage#nand_restore) antes de hacer esta sección.
+{: .notice--danger}
+
+Si, antes de seguir esta guía, ya tenías una configuración EmuNAND y deseas mover el contenido de tu EmuNAND a tu nuevo CFW SysNAND, ahora es el momento de [seguir Mover EmuNAND](move-emunand) antes de hacer esta sección.
 {: .notice--info}
 
 1. Actualiza tu 3DS dirigiéndote a la Configuración de la consola, después a "Otras opciones", luego ve al último menú de la derecha y pulsa en "Actualización"
@@ -141,13 +141,13 @@ If, before following this guide, you already had an EmuNAND setup and would like
 1. Presiona (A) para desbloquear la escritura de SysNAND (lvl1) y después haz la combinación de teclas mostrada
 1. Presiona (B) para volver al menú principal
 1. Ve a `[0:] SDCARD`
-1. Press (Y) on the `luma` folder to copy it
+1. Presiona (Y) sobre la carpeta `luma` para copiarla
 1. Presiona (B) para volver al menú principal
-1. Navigate to `[1:] SYSNAND CTRNAND` -> `rw`
-1. Press (X) on the existing `luma` folder to delete it
-  + If you do not have this folder, just proceed with the instructions
+1. Ve a `[1:] SYSNAND CTRNAND` -> `rw`
+1. Presiona (X) sobre la carpeta `luma` existente para borrarla
+  + Si no tienes esta carpeta, tan sólo prosigue con las instrucciones
 1. Presiona (A) para confirmar
-1. Press (Y) to paste a copy of the `luma` folder from your SD card
+1. Presiona (Y) para pegar una copia de la carpeta `luma` desde tu tarjeta SD
 1. Presiona (Start) para reiniciar
 
 ##### Sección IX - Copia de seguridad de la NAND
@@ -164,7 +164,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
   + Haz copias de seguridad en múltiples sitios (como por ejemplo, en un pendrive o almacenamiento online)
   + Esta copia de seguridad puede salvarte de un brick si algo va mal en el futuro
 1. Elimina el archivo `nand.bin` de la carpeta `/gm9out/` de tu tarjeta SD después de copiarlo
-1. Reinserta la tarjeta SD en tu consola
+1. Vuelve a insertar tu tarjeta SD en tu consola
 1. Presiona (Start) para guardar y reiniciar
 
 ___
