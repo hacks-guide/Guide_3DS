@@ -4,9 +4,6 @@ lang: pt-BR
 permalink: /pt_BR/finalizing-setup.html
 ---
 
-Para usar os links [magnéticos](https://pt.wikipedia.org/wiki/Magnet-Link) nesta página, você precisará de um cliente de torrent como o [Deluge](http://dev.deluge-torrent.org/wiki/Download)
-{: .notice--success}
-
 #### Visão geral das etapas
 
 {% capture notice-2 %}
@@ -85,7 +82,10 @@ Durante este processo, também configuramos alguns programas como os seguintes:
 
 ##### Seção III - Atualização do Sistema
 
-Se, antes de seguir este guia, você já tinha uma configuração EmuNAND e gostaria de mover o conteúdo da sua EmuNAND anterior para o seu novo CFW SysNAND, agora é a hora de [seguir Mover EmuNAND](move-emunand) ao invés de seguir as nove primeiras etapas nesta seção.
+If, while following a previous version of this guide, you CTRTransfered your *New 3DS* to 2.1.0, now is the time to [restore your NAND backup](godmode9-usage#nand_restore) before doing this section.
+{: .notice--danger}
+
+If, before following this guide, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand) before doing this section.
 {: .notice--info}
 
 1. Atualize seu dispositivo indo em Configuração do console, depois "Outras Configurações, depois indo para a direita até o final e selecionando "Atualização"
@@ -131,7 +131,10 @@ Se, antes de seguir este guia, você já tinha uma configuração EmuNAND e gost
 
 1. Reinicie segurando (Start) durante a inicialização para iniciar o menu do chainloader do Luma3DS
 1. Inicie o GodMode9 apertando (A)
-1. Navegue para `[0:] SDCARD`
+1. Navegue para `[0:] SDCARD` -> `luma` -> `payloads`
+1. Aperte (X) no `start_SafeB9SInstaller.bin` para excluí-lo
+1. Aperte (A) para confirmar
+1. Aperte (B) para retornar ao `[0:] SDCARD`
 1. Aperte (Y) no `boot.firm` para copiá-lo
 1. Aperte (B) para retornar para o menu principal
 1. Navegue para `[1:] SYSNAND CTRNAND`
@@ -139,14 +142,15 @@ Se, antes de seguir este guia, você já tinha uma configuração EmuNAND e gost
 1. Selecione "Copy path(s)"
 1. Aperte (A) para destravar "SysNAND (lvl1) writing", então aperte a sequência de botões solicitada
 1. Aperte (B) para retornar para o menu principal
-1. Segure (R) e aperte (B) ao mesmo tempo para ejetar o cartão SD
-1. Remova seu cartão SD do seu dispositivo
-1. Aperte (Start) para reiniciar seu dispositivo com o seu cartão SD removido
-  + Ao inicializar seu dispositivo pelo menos uma vez com o seu cartão SD removido, você poderá configurar a instalação do Luma3DS baseada na CTRNAND
-1. Use o botão (A) e os botões direcionais para ativar o seguinte:    
-  + **"Show NAND or user string in System Settings"**
-1. Reinsira seu cartão SD no seu dispositivo
-1. Aperte (Start) para salvar e reiniciar
+1. Navegue para `[0:] SDCARD`
+1. Press (Y) on the `luma` folder to copy it
+1. Aperte (B) para retornar para o menu principal
+1. Navigate to `[1:] SYSNAND CTRNAND` -> `rw`
+1. Press (X) on the existing `luma` folder to delete it
+  + If you do not have this folder, just proceed with the instructions
+1. Aperte (A) para confirmar
+1. Press (Y) to paste a copy of the `luma` folder from your SD card
+1. Press (Start) to reboot
 
 ##### Seção IX - Backup da NAND
 
