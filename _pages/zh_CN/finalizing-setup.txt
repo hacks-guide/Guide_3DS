@@ -2,36 +2,33 @@
 title: "Finalizing Setup"
 ---
 
-To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download)
-{: .notice--success}
-
 #### 步骤概览
 
 {% capture notice-2 %}
 
 The file `boot.firm` is what is launched by boot9strap itself after it finishes loading off of NAND, and can be any valid arm9 payload in the FIRM format. This file can be replaced at any time, although Luma3DS allows for the launch of other arm9 payloads in the FIRM format using the Luma3DS chainloader.
 <br><br>
-本教程中，我们使用[AuroraWright](https://github.com/AuroraWright/)提供的Luma3DS来直接启动一个破解过的SysNAND，使我们能完全避免使用RedNAND，从而极大地简化使用破解的3DS系统的步骤，并节省SD卡的空间。
+In this case, we use Luma3DS by [AuroraWright](https://github.com/AuroraWright/) to boot a patched SysNAND directly, allowing us to completely bypass the need for any kind of EmuNAND, vastly simplifying the usage of a hacked 3DS in addition to saving SD card space.
 <br><br>
 在这个过程当中，我们还会安装像下面所示的几个工具：    
 
 +  **FBI** *(用来安装CIA格式的游戏和程序)*
 +  **Themely** *(installs custom themes)*
-+  **Luma3DS Updater** *(用来更新Luma3DS固件)*
++  **Luma3DS Updater** *(updates your CFW installation easily)*
 +  **GodMode9** *(multipurpose tool which can do NAND and cartridge functions)*
 
 {% endcapture %}
 
 <div class="notice--info">{{ notice-2 | markdownify }}</div>
 
-#### 你需要：
+#### What you need
 
 * 最新版本的[Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *（`.7z`压缩包）*
 * The latest release of [Themely](https://github.com/ErmanSayin/Themely/releases/latest) *(the `.cia` file)*
 * 最新版本的[hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
 * 最新版本的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * The latest release of [DSP1](https://github.com/zoogie/DSP1/releases/latest)
-* 最新版本的[FBI](https://github.com/Steveice10/FBI/releases/latest)
+* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest)
 * The latest fork of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
 * **Old 3DS and 2DS Only:** The Old 3DS 11.2.0-35 [otherapp payload](https://smealum.github.io/3ds/#otherapp) for your region
 
@@ -40,11 +37,11 @@ The file `boot.firm` is what is launched by boot9strap itself after it finishes 
 ##### 第一部分 - 准备工作
 
 1. 将你的 SD 卡插入到您的计算机
-1. 在SD卡的根目录下创建 `cias` 文件夹，如果已有此文件夹，则不用创建
+1. 在你的SD卡根目录新建一个叫`cias`的文件夹，如果还不存在的话
 1. Create a folder named `hblauncherloader` on the root of your SD card if it does not already exist
 1. 解压hblauncher_loader压缩包，并复制 `hblauncher_loader.cia` 到你SD卡的 `/cias/` 目录
 1. 解压Luma3DS Updater压缩包，并复制 `lumaupdater.cia` 到你SD卡 `/cias/` 目录
-1. 解压FBI压缩包，并复制 `FBI.cia` 到你SD卡的 `/cias/` 目录
+1. Copy `FBI.cia` from the FBI `.zip` to the `/cias/` folder on your SD card
 1. Copy `DSP1.cia` to the `/cias/` folder on your SD card
 1. Copy `Themely.cia` to the `/cias/` folder on your SD card
 
@@ -66,9 +63,10 @@ The file `boot.firm` is what is launched by boot9strap itself after it finishes 
     {: .notice--info}
 
 1. If your device is on a version between 3.0.0 and 4.5.0 (inclusive), your device will not boot until you manually download the required firmware:
-  + 下载[这个文件](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) 并重命名为 `firmware.bin`
+  +下载[这个文件](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056)并重命名为`firmware.bin`
   + 下载[这个文件](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
-  + 复制 `firmware.bin` 和 `cetk` 到SD卡的 `/luma/` 文件夹下
+  + 复制`firmware.bin`和`cetk`到SD卡的`/luma/`文件夹下
+
   + Delete both of these files after updating your device later in these instructions
 1. Reinsert your SD card into your device
 
@@ -76,9 +74,9 @@ The file `boot.firm` is what is launched by boot9strap itself after it finishes 
 
 1. Boot your device to enter the Luma3DS configuration menu
   + If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_b9s)
-1. 使用方向键和A键来启用以下设置：    
+1. 通过方向键和A键来启用以下设置：    
   + **"Show NAND or user string in System Settings"**
-1. 按下(Start)键保存设置并重启
+1. Press (Start) to save and reboot
   + 如果出现黑屏，请照常进行接下来的教程   
 
 ##### Section III - Updating the System
@@ -168,7 +166,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
   + 备份文件可以在将来出现错误时将你的机器救砖
 1. Delete `nand.bin` from the `/gm9out/` folder on your SD card after copying it
 1. Reinsert your SD card into your device
-1. 按下(Start)键保存设置并重启
+1. Press (Start) to save and reboot
 
 ___
 
