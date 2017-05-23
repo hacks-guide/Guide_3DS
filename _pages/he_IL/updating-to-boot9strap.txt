@@ -1,5 +1,5 @@
 ---
-title: "עדכון אל boot9strap"
+title: "Updating to boot9strap"
 ---
 
 דף זה מיועד למשתמשי arm9loaderhax קיימים לעדכן את מכשיריהם לboot9strap.
@@ -14,7 +14,7 @@ If you have a PIN enabled on Luma3DS, SafeB9SInstaller will give you an "OTP Cry
 **כדי להשתמש בקישורי מגנט, תצטרכו כלי טורנט כמו [Deluge](http://dev.deluge-torrent.org/wiki/Download)**
 {: .notice--success}
 
-#### מה נדרש
+#### מה שאתם צריכים
 
 שימו לב שהקובץ הדרוש הנקרא `secret_sector.bin` הוא אותו אחד שנמצא בכל הגרסאות של הקובץ `data_input.zip`. אם יש לכם את הקובץ הזה איפושהו, אתם יכולים להשתמש בו במקום להוריד את האחד למטה.
 {: .notice--info}
@@ -22,12 +22,12 @@ If you have a PIN enabled on Luma3DS, SafeB9SInstaller will give you an "OTP Cry
 Note that, on New 3DS, `secret_sector.bin` is needed to revert the arm9loaderhax exploit, which is why it is not needed for the installation of boot9strap on a stock console. If you do not have a New 3DS, you do not need `secret_sector.bin`.
 {: .notice--info}
 
-Note that the the following required file named `aeskeydb.bin` is *not* the same one that was previously used in this guide. It is required to remove the software "3DSafe" as it allows SafeB9SInstaller to retrieve your console unique OTP. If you do not remember installing "3DSafe", you most likely do not have it, and do not need `aeskeydb.bin`.
+Note that the the following required file named `aeskeydb.bin` is *not* the same one that was previously used in this guide. It is required to remove the software "3DSafe" as it allows SafeB9SInstaller to retrieve your console unique OTP. This guide has never instructed you to install "3DSafe", so if you do not remember installing it, you most likely do not have it and do not need `aeskeydb.bin`.
 {: .notice--info}
 
-* **"3DSafe" Users Only:** <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [`aeskeydb.bin`](magnet:?xt=urn:btih:621f8af00638cb2b00d5bd0c6816543fa00b5fb1&dn=aeskeydb.bin&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce)
+* <i class="fa fa-magnet" aria-hidden="true" title="זה לינק מגנטי. Use a torrent client to download the file."></i> - **"3DSafe" Users Only:** [`aeskeydb.bin`](magnet:?xt=urn:btih:621f8af00638cb2b00d5bd0c6816543fa00b5fb1&dn=aeskeydb.bin&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce)
   + **Note that this file will also fix the error "OTP Crypto Fail" for anyone who encounters it (with or without "3DSafe" installed), such as users with a Luma3DS PIN enabled**
-* **New 3DS Only:** <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. תשתמשו בתוכנת טורנט כדי להוריד את הקובץ."></i> - [`secret_sector.bin`](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce)
+* <i class="fa fa-magnet" aria-hidden="true" title="זה לינק מגנטי. Use a torrent client to download the file."></i> - **New 3DS Only:** [`secret_sector.bin`](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce)
 * את הגרסה העדכנית של [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(יש להוריד את קובץ ה-`.7z`)*
 * הגרסה העדכנית של [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * הגרסא העדכנית של [boot9strap](https://github.com/SciresM/boot9strap/releases/latest)
@@ -41,7 +41,7 @@ Note that the the following required file named `aeskeydb.bin` is *not* the same
 1. תכבו את המכשיר
 1. תכניסו את ה-SD שלכם למחשב
 1. תעתיקו את הקובץ `boot.firm` מתוך ה`.7z` של Luma3DS לתוך ה-SD שלכם
-1. תצרו תיקייה בשם `cias` ב-SD שלכם אם לא קיימת לכם כבר תיקייה כזו
+1. צרו תיקייה בשם `cias` בתיקיית האם של כרטיס ה- SD שלכם אם לא קיימת תיקייה כזו
 1. Copy `lumaupdater.cia` to the `/cias/` folder on your SD card
 1. תצרו ב-SD שלכם תיקייה חדשה בשם `boot9strap`
 1. העתיקו את `GodMode9.firm` מהזיפ של GodMode9 אל תיקיית /luma/payloads/ ב- SD שלכם
