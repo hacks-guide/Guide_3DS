@@ -2,9 +2,6 @@
 title: "Finalizing Setup"
 ---
 
-To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download)
-{: .notice--success}
-
 #### Prezentarea pașilor
 
 {% capture notice-2 %}
@@ -24,7 +21,7 @@ During this process, we also setup programs such as the following:
 
 <div class="notice--info">{{ notice-2 | markdownify }}</div>
 
-#### Ce iți va trebui
+#### Ce îți va trebui
 
 * The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(the `.7z` file)*
 * The latest release of [Themely](https://github.com/ErmanSayin/Themely/releases/latest) *(the `.cia` file)*
@@ -35,7 +32,7 @@ During this process, we also setup programs such as the following:
 * The latest fork of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
 * **Old 3DS and 2DS Only:** The Old 3DS 11.2.0-35 [otherapp payload](https://smealum.github.io/3ds/#otherapp) for your region
 
-#### Instrucţiuni
+#### Instrucțiuni
 
 ##### Section I - Prep Work
 
@@ -83,7 +80,10 @@ During this process, we also setup programs such as the following:
 
 ##### Section III - Updating the System
 
-If, before following this guide, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand) instead of doing the first nine steps in this section.
+If, while following a previous version of this guide, you CTRTransfered your *New 3DS* to 2.1.0, now is the time to [restore your NAND backup](godmode9-usage#nand_restore) before doing this section.
+{: .notice--danger}
+
+If, before following this guide, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand) before doing this section.
 {: .notice--info}
 
 1. Update your device by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
@@ -129,7 +129,10 @@ If, before following this guide, you already had an EmuNAND setup and would like
 
 1. Reboot holding (Start) during boot to launch the Luma3DS chainloader menu
 1. Launch GodMode9 by pressing (A)
-1. Navigate to `[0:] SDCARD`
+1. Navigate to `[0:] SDCARD` -> `luma` -> `payloads`
+1. Press (X) on `start_SafeB9SInstaller.bin` to delete it
+1. Apăsați (A) pentru a confirma
+1. Press (B) to return to `[0:] SDCARD`
 1. Press (Y) on `boot.firm` to copy it
 1. Press (B) to return to the main menu
 1. Navigate to `[1:] SYSNAND CTRNAND`
@@ -137,14 +140,15 @@ If, before following this guide, you already had an EmuNAND setup and would like
 1. Select "Copy path(s)"
 1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
 1. Press (B) to return to the main menu
-1. Hold (R) and press (B) at the same time to eject your SD card
-1. Remove your SD card from your device
-1. Press (Start) to reboot your device with your SD card removed
-  + Booting your device at least once with your SD card removed will allow you to configure the CTRNAND based Luma3DS installation
-1. Use the (A) button and the D-Pad to turn on the following:    
-  + **"Show NAND or user string in System Settings"**
-1. Reinsert your SD card into your device
-1. Press (Start) to save and reboot
+1. Navigate to `[0:] SDCARD`
+1. Press (Y) on the `luma` folder to copy it
+1. Press (B) to return to the main menu
+1. Navigate to `[1:] SYSNAND CTRNAND` -> `rw`
+1. Press (X) on the existing `luma` folder to delete it
+  + If you do not have this folder, just proceed with the instructions
+1. Apăsați (A) pentru a confirma
+1. Press (Y) to paste a copy of the `luma` folder from your SD card
+1. Press (Start) to reboot
 
 ##### Section IX - NAND Backup
 
