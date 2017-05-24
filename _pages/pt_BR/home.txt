@@ -31,26 +31,26 @@ Leia todas as páginas introdutórias antes de prosseguir.
 
 O termo [**Homebrew**](https://pt.wikipedia.org/wiki/Homebrew) geralmente se refere ao software que não é autorizado pela Nintendo. Ele permite você rodar jogos homebrew, ferramentas como backup e edição de saves, e emuladores de vários sistemas antigos.
 
-In most cases, running homebrew on your device is 100% free using [just the Nintendo 3DS Sound app](homebrew-launcher-(soundhax)). Existem também vários outros exploits em jogos comerciais e no navegador para rodar o homebrew.
+Na maioria dos casos, executar homebrew no seu dispositivo é 100% gratuito, usando [apenas o aplicativo som Nintendo 3DS](homebrew-launcher-(soundhax)). Existem também vários outros exploits em jogos comerciais e no navegador para rodar o homebrew.
 
 ## O que é Custom Firmware?
 
 **Custom Firmware** ("CFW") permite você usar hacks mais avançados que o homebrew do modo userland não consegue tão facilmente. Por exemplo, os patches de assinaturas permitem você instalar títulos não assinados que aparecem logo no seu Menu HOME.
 
-CFW can be easily set up on any console that is on 11.4.0 or lower.
+CFW pode ser facilmente instalado em qualquer console na versão 11.4.0 ou inferior.
 
 ## O que este guia instala?
 
 Este guia possui o objetivo final de pegar um 3DS que nunca foi modificado
 e instalar um Custom Firmware por meio do boot9strap. Em algumas versões, ele utiliza homebrew como um pontapé inicial, porém o objetivo permanece o mesmo, que é instalar um Custom Firmware.
 
-boot9strap is the newest and best method of launching Custom Firmware that gives us nearly full control of the system only milliseconds into boot, which is similar to the effect of BootMii for the Wii. It gives us even earlier control than arm9loaderhax did, and, unlike standard sighax, boot9strap uses an NDMA overwrite exploit in order to gain Boot9 code execution. This means that any console running boot9strap is capable of dumping the console unique OTP (`OTP.bin`), the ARM11 bootrom (`boot11.bin`), and the ARM9 bootrom (`boot9.bin`).
+boot9strap é o melhor e mais novo método para rodar um Custom Firmware que praticamente nos dá controle total do sistema em apenas milisegundos após a inicialização, que é similar ao efeito do BootMii para o Wii. Ele nos dá controle ainda mais cedo do que o arm9loaderhax, e, ao contrário do sighax padrão, boot9strap usa um exploit de sobrescrição NDMA para ganhar execução de código Boot9. Isso significa que qualquer console rodando boot9strap é capaz de copiar o OTP exclusivo do console (`OTP.bin`), o bootrom do ARM11 (`boot11.bin`), e o bootrom do ARM9 (`boot9.bin`).
 
-The benefits of boot9strap over other Custom Firmware launch methods are numerous, and as such it is recommended to use this guide over any other that relies on outdated software (such as menuhax + rxTools, arm9loaderhax, or even normal sighax).
+Os benefícios do arm9loaderhax sobre outros métodos de rodar Custom Firmware são numerosos, e como tal é recomendado utilizar este guia sobre qualquer outro que dependa de software desatualizado (como menuhax + rxTools, ou até mesmo sighax normal).
 
-For information on how boot9strap works, please see [this presentation](https://sciresm.github.io/33-and-a-half-c3/) by [SciresM](https://github.com/SciresM/).
+Para informação em como o boot9strap funciona, veja [esta apresentação](https://sciresm.github.io/33-and-a-half-c3/) por [SciresM](https://github.com/SciresM/).
 
-For a list of each of the calculated sighax signatures (the platform boot9strap is built on), see [this gist](https://gist.github.com/SciresM/cdd2266efb80175d37eabbe86f9d8c52).
+Para uma lista de cada uma das assinaturas calculadas pelo sighax (a plataforma na qual o boot9strap é construído), veja [este gist](https://gist.github.com/SciresM/cdd2266efb80175d37eabbe86f9d8c52).
 
 ## O que eu posso fazer com Custom Firmware?
 
