@@ -42,7 +42,7 @@ Use um [gerenciador de saves](https://github.com/J-D-K/JKSM/releases/latest) par
 1. Desligue o ** 3DS de origem**
 1. Insira o cartão SD do **3ds de origem** no seu computador
 1. Copie `GodMode9.firm` (ou `GodMode9.bin` para usuários com arm9loaderhax) do `.zip` do GodMode9 para a pasta `/luma/payloads` no cartão SD do **3DS de origem**
-1. Copie o `.app` do `.zip` de injeção DSiWare para a raiz do cartão SD do **3DS fonte** SD card
+1. Copie o `.app` do `.zip` de injeção DSiWare para a raiz do cartão SD do **3DS fonte**
 1. Copie a pasta `savedata` do `.zip` da injeção de DSiWare para a raiz do cartão SD do **3DS de origem**
 1. Reinsira o cartão SD do **3DS de origem**
 1. Inicie o **3DS de origem** enquanto segura (Start) para iniciar o menu do chainloader do Luma3DS
@@ -119,36 +119,36 @@ Use um [gerenciador de saves](https://github.com/J-D-K/JKSM/releases/latest) par
 1. Escolha um dos seguintes
     + Faça o resto das seções e, em seguida, o guia completo no **3DS de destino**. Aguarde uma semana e em seguida faça a Transferência de dados do **3DS de destino** de volta para o **3DS de origem** *(lembre-se que não é possível transferir de volta de um New 3DS para um Old 3DS)*
     + Ligue para a Nintendo e diga que você não tem mais acesso ao dispositivo ao qual seu NNID está vinculado (que é **3DS de destino** neste caso) e gostaria que ela fosse conectada a um dispositivo diferente (que é **3DS de origem** neste caso)
-    + You can also just [remove the NNID](https://3ds.guide/troubleshooting#rm_nnid) from **the source 3DS** if you'd prefer it remain on **the target 3DS**
-1. Reboot **the source 3DS** while holding (Start) to launch the Luma3DS chainloader menu
+    + Você também pode apenas [remover o NNID](https://3ds.guide/troubleshooting#rm_nnid) do **3DS de origem** se você preferir que ele continue no **3DS de destino**
+1. Reinicie o **3DS de origem** enquanto segura (Start) para iniciar o menu do chainloader do Luma3DS
 1. Inicie o GodMode9 apertando (A)
 1. Navegue para `[0:] SDCARD`
-1. Press (A) on your NAND `.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
-1. Press (A) to unlock SysNAND overwriting, then input the key combo given
+1. Aperte (A) no seu `nand.bin` para selecioná-lo, depois selecione "NAND image options...", depois selecione "Restore SysNAND (safe)"
+1. Aperte (A) para destravar as modificações na SysNAND, então aperte a sequência de botões solicitada
   + Isso não irá substituir sua instalação do boot9strap
-1. Input the key combo given to unlock SysNAND (lvl1) writing
+1. Aperte a sequência de botões solicitada para desbloquear "SysNAND (lvl1) writing"
   + Este processo levará algum tempo
 1. Quando concluído, aperte (A) para continuar
-1. Press (Start) to reboot **the source 3DS**
+1. Aperte (Start) para reiniciar o **3DS de origem**
 
-##### Section V - Backing up the target 3DS's FIRM
+##### Seção V - Realizando o backup do FIRM do 3DS de destino
 
-1. Copy `boot.nds` to the root of **the target 3DS**'s SD card
-1. Create a folder named `boot9strap` on the root of **the target 3DS**'s SD card
-1. Copy the 11.4.0 `.firm` corresponding to **the target 3DS** to the `boot9strap` folder on the root of **the target 3DS**'s SD card
-1. Copy `boot9strap.firm` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
-1. Launch b9sTool by starting your DSiWare game on **the target 3DS**
+1. Copie `boot.nds` para a raiz do cartão SD do **3DS de destino**
+1. Crie uma pasta chamada `boot9strap` na raiz do cartão SD do **3DS de destino**
+1. Copie o `.firm` 11.4.0 correspondente ao **3DS de destino** para a pasta `boot9strap` na raiz do cartão SD do **3DS de destino**
+1. Copie `boot9strap.firm` do `.zip` do boot9strap para a pasta `/boot9strap/` no seu cartão SD
+1. Inicie o b9sTool iniciando o seu jogo de DSiWare no **3ds de destino**
   + Os usuários de **EUR (Guitar Rock Tour)** devem rolar para baixo e ir em High-Scores -> Drums -> Easy
-  + If the game does not launch b9sTool, [follow this troubleshooting guide](troubleshooting#ts_dsiware)
+  + Se o jogo não iniciar o b9sTool, [siga este guia de troubleshooting](troubleshooting#ts_dsiware)
 1. Selecione "Dump F0F1" para realizar o backup do FIRM do **3DS de destino**
-1. Make note of the FIRM backup's location
+1. Anote a localização do backup do seu FIRM
 1. Saia do b9sTool
   + Você pode ter que forçar o desligamento do aparelho segurando o botão power
 1. Coloque o seu cartão SD no seu computador e, em seguida, copie o `F0F1_N3DS.bin` or `F0F1_O3DS.bin` (dependendo do seu dispositivo) para um local seguro; faça backups em vários locais; Esse backup vai salvar você de um brick se algo der errado
 
-##### Section VI - Flashing the target 3DS's FIRM
+##### Seção VI - Gravando o FIRM do 3DS de destino
 
-**Do NOT use b9sTool on a device that already has arm9loaderhax installed or you will BRICK!**
+**Não use b9sTool em um dispositivo que já tem o arm9loaderhax instalado, ou você causará um BRICK!**
 {: .notice--danger}
 
 1. Launch b9sTool by starting your DSiWare game on **the target 3DS**
