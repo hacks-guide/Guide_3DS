@@ -19,6 +19,7 @@ title: "התקנת boot9strap (הלחמה)"
 * ה NAND שלכם שהוצאתם עם [ההלחמה](https://gbatemp.net/threads/414498/)
 * הגרסא העדכנית של [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *( boot9strap רגיל; לא קובץ ה `dev`)*
 * הגרסה העדכנית של [hardmod-b9s-installer](https://github.com/ihaveamac/hardmod-b9s-installer/releases/latest)
+* את הגרסה העדכנית של [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(יש להוריד את קובץ ה-`.7z`)*
   + משתמשי Windows יכולים להשתמש ב`.exe` המקומפל, בעוד שמשתמשי Mac וLinux יצטרכו את [Python 3](https://www.python.org/downloads/) מותקן כדי להריץ את ה`.py`
 * הקובץ`.firm` לפי הקונסולה והאזור:
 
@@ -55,16 +56,30 @@ title: "התקנת boot9strap (הלחמה)"
 
 #### הוראות
 
+##### חלק I - הכנות
+
+1. תעתיקו את הקובץ `boot.firm` מתוך ה`.7z` של Luma3DS לתוך ה-SD שלכם
 1. תעתיקו את תיקיית hardmod-b9s-installer מה `.zip` של hardmod-b9s-installer אל תיקייה במחשב שלכם
 1. תעתיקו את ה`.firm` שהורדתם אל תיקיית hardmod-b9s-installer במחשב שלכם
 1. שנו שם ל `.firm` שהורדתם בתיקיית hardmod-b9s-installer על המחשב שלכם אל `current.firm`
 1. תעתיקו את`boot9strap.firm` ואת `boot9strap.firm.sha` מה `.zip` של boot9strap אל תיקיית hardmod-b9s-installer על המחשב שלכם
 1. תעתיקו את גיבוי הNAND שלכם (שהשגתם עם ההלחמה) אל תיקיית hardmod-b9s-installer על המחשב שלכם ותקראו לו `NAND.bin`
+
+#### חלק II - התקנת boot9strap
+
 1. תפעילו את hardmod-b9s-installer
   + משתמשי Windows: תריצו את `install-b9s.exe`
   + משתמשי Mac ו Linux: תריצו את `install-b9s.py`
 1. תשימו את `nand_patched.bin`שיצא על הקונסולה עם ההלחמה שעשיתם
-  + הקונסולה שלכם לא תעבוד עד שתמשיכו עם ההוראות של העמוד הבא; אל תפחדו, זה נורמלי
+1. תפעילו את המכשיר
+
+##### Section IV - Configuring Luma3DS
+
+1. Your device should have booted into the Luma3DS configuration menu
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_b9s)
+1. Use the (A) button and the D-Pad to turn on the following:    
+  + **"Show NAND or user string in System Settings"**
+1. לחצו על (Start) על מנת לשמור ולהפעיל מחדש
 
 ___
 
