@@ -151,36 +151,6 @@ title: "疑難排解"
 1. 試試看進行[9.2.0 CTRTransfer](9.2.0-ctrtransfer)
 1. 請於 [Discord 的 Nintendo Homebrew 伺服器](https://discord.gg/MWxPgEp)尋求。
 
-## <a name="ts_transfer" />執行 SafeB9SInstaller 時出現錯誤
-
-如果在 SafeB9SInstaller 過程中發生錯誤，系統將提示您啟動一個外部的 payload 以修復裝置。
-
-#### 必備項目
-
-* 最新版的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-
-#### 操作說明
-
-1. 選擇「Unmount SD card」
-1. 將 SD 卡插入電腦中
-1. 解壓 GodMode9 `.zip` 中的 `GodMode9.bin` 到 SD 卡中的 `/boot9strap/` 底下，並將其重新命名為 `payload.bin`
-1. 將 SD 卡插回主機中
-1. 選擇 「Run 0:/CTRTransfer/payload.bin」
-1. 如果成功，您將進入 GodMode9
-1. 移動至 `[0:] SDCARD` -> `boot9strap`
-1. 選取 `firm0firm1.bak` 以及 `sector0x96.bak`，並按下「L」將它們標示起來
-1. 按「Y」複製檔案
-1. 按「B」兩次回到主選單
-1. 移動至 `[S:] SYSNAND VIRTUAL`
-1. 按「Y」複製 `firm0firm1.bak` 及 `sector0x96.bak`
-1. 按「A」確認
-1. 按「A」開始植入檔案
-1. 按下「A」以解鎖 SysNAND 複寫
-1. 按下提示的按鍵組合以解鎖 SysNAND（lvl3）的寫入保護
-1. 過程結束後，按下「A」繼續
-1. 按下「Start」鍵重啟您的主機
-1. 報告此問題到 [SafeB9SInstaller 問題頁](https://github.com/d0k3/SafeB9SInstaller/issues)
-
 ## <a name="ts_sys_blue" />開機時藍屏 (bootrom error)
 
 1. 您的主機已經變磚
