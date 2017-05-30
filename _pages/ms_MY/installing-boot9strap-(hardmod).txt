@@ -19,6 +19,7 @@ This will work on New 3DS, Old 3DS, and 2DS on *all* versions that you have a co
 * Your NAND image extracted using your [hardmod](https://gbatemp.net/threads/414498/)
 * The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `dev` file)*
 * The latest version of [hardmod-b9s-installer](https://github.com/ihaveamac/hardmod-b9s-installer/releases/latest)
+*Keluaran terkini [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(fail `.7z`)*
   + Windows users can use the compiled `.exe`, while Mac and Linux users will need to have [Python 3](https://www.python.org/downloads/) installed to run the `.py`
 * The `.firm` corresponding to your device and version:
 
@@ -55,16 +56,30 @@ This will work on New 3DS, Old 3DS, and 2DS on *all* versions that you have a co
 
 #### Arahan
 
+##### Seksyen 1 - Persediaan
+
+1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card
 1. Copy the hardmod-b9s-installer folder from the hardmod-b9s-installer `.zip` to your computer
 1. Copy your downloaded `.firm` to the hardmod-b9s-installer folder on your computer
 1. Rename your downloaded `.firm` in the hardmod-b9s-installer folder on your computer to `current.firm`
 1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the hardmod-b9s-installer folder on your computer
 1. Copy your NAND dump (from your hardmod) to the hardmod-b9s-installer folder on your computer and name it `NAND.bin`
+
+##### Section II - Installing boot9strap
+
 1. Run hardmod-b9s-installer
   + Windows Users: Run `install-b9s.exe`
   + Mac and Linux Users: Run `install-b9s.py`
 1. Flash your outputted `NAND-patched.bin` to your device with your hardmod
-  + Your device will not boot until you continue with the next page's instructions; do not panic, this is normal
+1. Power on your device
+
+##### Section IV - Configuring Luma3DS
+
+1. Your device should have booted into the Luma3DS configuration menu
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_b9s)
+1. Use the (A) button and the D-Pad to turn on the following:    
+  + **"Show NAND or user string in System Settings"**
+1. Tekan (Start) untuk save dan reboot
 
 ___
 
