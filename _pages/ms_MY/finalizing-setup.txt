@@ -23,7 +23,6 @@ Semasa proses ini, kami juga akan memasang program-program berikut:
 
 #### Apa yang ada perlukan
 
-*Keluaran terkini [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(fail `.7z`)*
 * The latest release of [Themely](https://github.com/ErmanSayin/Themely/releases/latest) *(the `.cia` file)*
 * Keluaran terkini [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
 * Keluaran terkini [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
@@ -36,6 +35,7 @@ Semasa proses ini, kami juga akan memasang program-program berikut:
 
 ##### Seksyen 1 - Persediaan
 
+1. Power off your device
 1. Pasang kad SD anda ke dalam komputer
 1. Cipta satu folder bernama `cias` pada root kad SD anda jika ianya tidak pernah wujud
 1. Create a folder named `hblauncherloader` on the root of your SD card if it does not already exist
@@ -48,7 +48,6 @@ Semasa proses ini, kami juga akan memasang program-program berikut:
     ![]({{ base_path }}/images/screenshots/cias-file-layout.png)
     {: .notice--info}
 
-1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card
 1. Cipta satu folder bernama `luma` pada root SD kad anda
 1. Cipta satu folder bernama `payloads` didalam folder `luma` pada kad SD anda
 1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
@@ -68,17 +67,9 @@ Semasa proses ini, kami juga akan memasang program-program berikut:
   + Salin `firmware.bin` dan `cetk` letakkan ke folder `/luma/` pada kad SD anda
   + Delete both of these files after updating your device later in these instructions
 1. Reinsert your SD card into your device
+1. Power on your device
 
-##### Section II - Configuring Luma3DS
-
-1. Boot your device to enter the Luma3DS configuration menu
-  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_b9s)
-1. Gunakan butang (A) dan D-Pad untuk menghidupkan perkara-perkara berikut:    
-  + **"Show NAND or user string in System Settings"**
-1. Tekan (Start) untuk save dan reboot
-  + Jika anda mendapat skrin hitam, sila teruskan ke bahagian seterusnya   
-
-##### Section III - Updating the System
+##### Section II - Updating the System
 
 If, while following a previous version of this guide, you CTRTransfered your *New 3DS* to 2.1.0, now is the time to [restore your NAND backup](godmode9-usage#nand_restore) before doing this section.
 {: .notice--danger}
@@ -91,7 +82,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
   + Jika terdapat error, set DNS settings anda ke "auto"
   + If this still gives you an error and your NAND is below 9.2.0, [follow 9.2.0 CTRTransfer](9.2.0-ctrtransfer), then try updating again
 
-##### Section IV - Injecting FBI
+##### Section III - Injecting FBI
 
 1. Reboot holding (Start) during boot to launch GodMode9
 1. Navigate to `[0:] SDCARD` -> `cias`
@@ -102,7 +93,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
 1. Press (Start) to reboot your device
 1. Jika anda masih menggunakan Health & Safety app yang asal dan sudah menurunkan menggunakan Gateway dahulu, [Ikut panduan penyelesaian ini](troubleshooting#gw_fbi)
 
-##### Section V - Installing CIAs
+##### Section IV - Installing CIAs
 
 1. Launch Health and Safety (which is now FBI)
 1. Navigate to `SD` -> `cias`
@@ -110,12 +101,12 @@ If, before following this guide, you already had an EmuNAND setup and would like
 1. Select the "Install and delete all CIAs" option, then press (A) to confirm
 1. Press (Home) to exit FBI
 
-##### Section VI - DSP Dump
+##### Section V - DSP Dump
 
 1. Launch DSP1
 1. Once it has completed, press (B) to self-delete the app and return to the home menu
 
-##### Section VII - Restore Health and Safety
+##### Section VI - Restore Health and Safety
 
 1. Reboot holding (Start) during boot to launch GodMode9
 1. Press (Home) to bring up the action menu
@@ -123,7 +114,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
 1. Select "Restore H&S"
 1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
 
-##### Section VIII - CTRNAND Luma3DS
+##### Section VII - CTRNAND Luma3DS
 
 1. Press (B) to return to the main menu
 1. Navigate to `[0:] SDCARD`
@@ -139,7 +130,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
 1. Navigate to `[1:] SYSNAND CTRNAND` -> `rw`
 1. Press (Y) to paste a copy of the `luma` folder from your SD card
 
-##### Section IX - NAND Backup
+##### Section VIII - NAND Backup
 
 1. Press (B) twice to return to the main menu
 1. Press (Home) to bring up the action menu
