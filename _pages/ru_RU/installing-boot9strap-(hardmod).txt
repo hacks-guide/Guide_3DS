@@ -19,6 +19,7 @@ title: "Установка boot9strap (Hardmod)"
 * Полученный с помощью [хардмода](https://gbatemp.net/threads/414498/) (англ.) образ NAND
 * Свежая версия [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(стандартный boot9strap; не `dev-файл`)*
 * Свежая версия [hardmod-b9s-installer](https://github.com/ihaveamac/hardmod-b9s-installer/releases/latest)
+* Свежая версия [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z-архив`)*
   + Пользователи Windows могут воспользоваться скомпилированным `.exe-файлом`, тогда как пользователям Mac и Linux нужно иметь в системе установленный [Python 3](https://www.python.org/downloads/) для запуска `.py-файлов`
 * `.firm`, соответствующий вашему устройству и версии ПО:
 
@@ -55,16 +56,30 @@ title: "Установка boot9strap (Hardmod)"
 
 #### Инструкция
 
+##### Часть I - Подготовительные работы
+
+1. Скопируйте файл `boot.firm` из `.7z-архива` Luma3DS в корень SD-карты
 1. Скопируйте папку hardmod-b9s-installer из `.zip-архива` hardmod-b9s-installer на ваш компьютер
 1. Скопируйте загруженный `.firm` в папку hardmod-b9s-installer на вашем компьютере
 1. Переименуйте загруженный `.firm` в папке hardmod-b9s-installer в `current.firm`
 1. Скопируйте `boot9strap.firm` и `boot9strap.firm.sha` из `.zip-архива` boot9strap в папку hardmod-b9s-installer на вашем компьютере
 1. Скопируйте ваш дамп NAND (полученный при помощи хардмода) в папку hardmod-b9s-installer на вашем компьютере и назовите его `NAND.bin`
+
+##### Часть II - Установка boot9strap
+
 1. Запустите hardmod-b9s-installer
   + Пользователи Windows: Запустите `install-b9s.exe`
   + Пользователи Mac и Linux: Запустите `install-b9s.py`
 1. Прошейте получившийся `NAND-patched.bin` обратно в ваше устройство, используя хардмод
-  + Приставка не загрузится до тех пор, пока вы не выполните инструкции на следующей странице; без паники, так и должно быть
+1. Включите консоль
+
+##### Section IV - Configuring Luma3DS
+
+1. Your device should have booted into the Luma3DS configuration menu
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_b9s)
+1. Use the (A) button and the D-Pad to turn on the following:    
+  + **"Show NAND or user string in System Settings"**
+1. Нажмите (Start), чтобы сохранить настройки и перезагрузиться
 
 ___
 
