@@ -23,7 +23,6 @@ title: "סיום התהליך"
 
 #### מה שאתם צריכים
 
-* את הגרסה העדכנית של [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(יש להוריד את קובץ ה-`.7z`)*
 * את הגרסה העדכנית של [Themely](https://github.com/ErmanSayin/Themely/releases/latest) *(יש להוריד את קובץ ה-`.cia`)*
 * את הגרסה העדכנית של [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
 * את הגרסה העדכנית של [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
@@ -36,6 +35,7 @@ title: "סיום התהליך"
 
 ##### חלק I - הכנות
 
+1. תכבו את המכשיר
 1. תכניסו את ה-SD שלכם למחשב
 1. צרו תיקייה בשם `cias` בתיקיית האם של כרטיס ה- SD שלכם אם לא קיימת תיקייה כזו
 1. צרו תיקייה בשם `hblauncherloader` בתיקיית האם של כרטיס ה- SD שלכם אם לא קיימת תיקייה כזו
@@ -48,7 +48,6 @@ title: "סיום התהליך"
     ![]({{ base_path }}/images/screenshots/cias-file-layout.png)
     {: .notice--info}
 
-1. תעתיקו את הקובץ `boot.firm` מתוך ה`.7z` של Luma3DS לתוך ה-SD שלכם
 1. תצרו ב-SD שלכם תיקייה חדשה בשם `luma`
 1. תצרו תיקייה חדשה בשם `payloads` בתוך התיקייה `luma` שהרגע יצרנו
 1. העתיקו את `GodMode9.firm` מהזיפ של GodMode9 אל תיקיית /luma/payloads/ ב- SD שלכם
@@ -68,17 +67,9 @@ title: "סיום התהליך"
   + תעתיקו את `firmware.bin` ואת `cetk` לתוך התיקייה `/luma/` שב-SD שלכם
   + תמחקו את שני הקבצים האלו אחרי שאתם מעדכנים את המכשיר שלכם אחר כך בהוראות
 1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
+1. תפעילו את המכשיר
 
-##### חלק II - הגדרת Luma3DS
-
-1. הדליקו את המכשיר בשביל להכנס למסך ההגדרות של Luma3DS
-  + אם אתם מקבלים מסך שחור, [עקבו אחרי המדריך הבא](troubleshooting#ts_sys_b9s)
-1. השתמשו במקש (A) ובמקשי החיצים על מנת להפעיל את ההגדרות הבאות:    
-  + **"Show NAND or user string in System Settings"**
-1. לחצו על (Start) על מנת לשמור ולהפעיל מחדש
-  + אם אתם מקבלים מסך שחור, פשוט תמשיכו לחלק הבא   
-
-##### חלק III - עדכון המערכת
+##### Section II - Updating the System
 
 אם, במהלך שעקבתם אחרי גרסה ישנה של המדריך, שנמכתם את ה*New 3DS* שלכם לגרסא 2.1.0, עכשיו זה הזמן [לשחזר את הגיבוי שלכם](godmode9-usage#nand_restore) לפני שאתם עושים את החלק הזה.
 {: .notice--danger}
@@ -91,7 +82,7 @@ title: "סיום התהליך"
   + אם אתם מקבלים שגיאה, שנו את הגדרות ה-DNS שלכם ל-"auto"
   + אם זה ממשיך לתת לכם שגיאה והקונסולה שלכם מתחת לגרסה 9.2.0, עקבו אחרי [9.2.0 CTRtransfer](9.2.0-ctrtransfer), ואז תנסו לעדכן שוב
 
-##### חלק IV - הזרקת FBI
+##### חלק III - הזרקת FBI
 
 1. תאתחלו בזמן שאתם מחזיקים (Start) במהלך האתחול כדי להפעיל את GodMode9
 1. נווטו אל `[0:] SDCARD` ושם אל `cias`
@@ -102,7 +93,7 @@ title: "סיום התהליך"
 1. תלחצו על (Start) כדי לאתחל את המכשיר
 1. במידה ש-Health & Safety שלכם לא הפך ל-FBI וביצעתם שנמוך בעזרת Gateway בעבר, עקבו אחרי [המדריך הזה](troubleshooting#gw_fbi)
 
-##### חלק V - התקנת CIA
+##### Section IV - Installing CIAs
 
 1. פתחו את Health & Safety (שהוא כעת FBI)
 1. נווטו אל `SD` ושם אל `cias`
@@ -110,12 +101,12 @@ title: "סיום התהליך"
 1. תבחרו את האופציה "Install and delete all CIAs", ולאחר מכן לחצו על (A) לאישור
 1. תלחצו על (Home) כדי לצאת מFBI
 
-##### חלק VI - DSP Dump
+##### Section V - DSP Dump
 
 1. תפעילו את DSP1
 1. אחרי שזה סיים, תלחצו (B) כדי למחוק את התוכנה ולחזור למסך הבית
 
-##### חלק VII - שחזור Health and Safety
+##### חלק VI - שחזור Health and Safety
 
 1. תאתחלו בזמן שאתם מחזיקים (Start) במהלך האתחול כדי להפעיל את GodMode9
 1. תלחצו על (Home) כדי להראות את תפריט הפעולה
@@ -123,7 +114,7 @@ title: "סיום התהליך"
 1. תבחרו ב "Restore H&S"
 1. לחצו (A) כדי לפתוח גישת כתיבת lvl1 לSysNAND, ואז תלחצו על המקשים בסדר הנכון
 
-##### חלק VIII - Luma3DS על ה- CTRNAND
+##### Section VII - CTRNAND Luma3DS
 
 1. תלחצו (B) כדי לחזור לתפריט הראשי
 1. נווטו ל`[0:] SDCARD`
@@ -139,7 +130,7 @@ title: "סיום התהליך"
 1. לכו ל`[1:] SYSNAND CTRNAND` ומשם ל`rw`
 1. תלחצו (Y) כדי להדביק עותק של תיקיית `luma` מכרטיס הSD שלכם
 
-##### חלק IX - גיבוי NAND
+##### Section VIII - NAND Backup
 
 1. תלחצו (B) פעמיים כדי לחזור לתפריט הראשי
 1. תלחצו על (Home) כדי להראות את תפריט הפעולה
