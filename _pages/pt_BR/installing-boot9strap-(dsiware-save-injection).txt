@@ -28,6 +28,7 @@ Se você não usar o `.firm` correto correspondente ao 3DS de destino, você cau
 * A versão mais recente do [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * A versão mais recente do [b9sTool](https://github.com/Plailect/b9sTool/releases/latest)
 * A versão mais recente do [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(boot9strap padrão; não o arquivo `dev`)*
+* A versão mais recente do [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(o arquivo `.7z`)*
 * O [Kit de Iniciante de Homebrew](http://smealum.github.io/ninjhax2/starter.zip)
 * O `.firm` 11.4.0 correspondente ao **3DS de destino**
   + [`2.54-0_11.4_OLD.firm`](magnet:?xt=urn:btih:0dd89d42ad711f770da899af05ee162ede0d0070&dn=2.54-0_11.4_OLD.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
@@ -137,6 +138,7 @@ Use um [gerenciador de saves](https://github.com/J-D-K/JKSM/releases/latest) par
 
 ##### Seção V - Realizando o backup do FIRM do 3DS de destino
 
+1. Copie o `boot.firm` do `.7z` do Luma3DS para a raíz do seu cartão SD
 1. Copie `boot.nds` para a raiz do cartão SD do **3DS de destino**
 1. Crie uma pasta chamada `boot9strap` na raiz do cartão SD do **3DS de destino**
 1. Copie o `.firm` 11.4.0 correspondente ao **3DS de destino** para a pasta `boot9strap` na raiz do cartão SD do **3DS de destino**
@@ -153,6 +155,7 @@ Use um [gerenciador de saves](https://github.com/J-D-K/JKSM/releases/latest) par
 1. Saia do b9sTool
   + Você pode ter que forçar o desligamento segurando o botão power
 1. Coloque o seu cartão SD no seu computador e, em seguida, copie o `F0F1_N3DS.bin` or `F0F1_O3DS.bin` (dependendo do seu dispositivo) para um local seguro; faça backups em vários locais; Esse backup vai salvar você de um brick se algo der errado
+1. Reinsert your SD card into **the target 3DS**
 
 ##### Seção VI - Gravando o FIRM do 3DS de destino
 
@@ -168,8 +171,15 @@ Use um [gerenciador de saves](https://github.com/J-D-K/JKSM/releases/latest) par
 1. Selecione "Install boot9strap" e confirme
 1. Saia do b9sTool, depois desligue o seu dispositivo
   + Você pode ter que forçar o desligamento do aparelho segurando o botão power
-1. Seu dispositivo irá iniciar no boot9strap e depois desligar automaticamente, porque ele ainda não tem nenhum payload para iniciar
-  + Seu dispositivo não irá inciar até que você continue com as instruções da próxima página; não entre em pânico, isto é normal
+1. Power on **the target 3DS**
+
+##### Section VII - Configuring Luma3DS
+
+1. Your device should have booted into the Luma3DS configuration menu
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_b9s)
+1. Use the (A) button and the D-Pad to turn on the following:    
+  + **"Show NAND or user string in System Settings"**
+1. Aperte (Start) para salvar e reiniciar
 
 ___
 
