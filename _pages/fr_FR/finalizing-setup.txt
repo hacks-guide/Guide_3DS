@@ -23,7 +23,6 @@ Durant cette étape, nous allons également configurer les programmes suivants :
 
 #### Ce dont vous aurez besoin
 
-* La dernière version de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(le fichier `.7z`)*
 * La dernière version de [Themely](https://github.com/ErmanSayin/Themely/releases/latest) *(le fichier`.cia`)*
 * La dernière version de [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
 * La dernière version de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
@@ -36,6 +35,7 @@ Durant cette étape, nous allons également configurer les programmes suivants :
 
 ##### Section I - Préparation
 
+1. Éteignez votre 3DS
 1. Insérez votre carte SD dans votre ordinateur
 1. Créez un dossier nommé "files9" à la racine de votre carte SD si celui ci n'existe pas
 1. Créez un dossier nommé `hblauncherloader` à la racine de votre carte SD si celui-ci n'existe pas déjà
@@ -48,7 +48,6 @@ Durant cette étape, nous allons également configurer les programmes suivants :
     ![]({{ base_path }}/images/screenshots/cias-file-layout.png)
     {: .notice--info}
 
-1. Copiez `boot.firm` de Luma3DS `.7z` dans la racine de votre carte SD
 1. Créez un répertoire appelé `luma` à la racine de votre carte SD
 1. Créez un répertoire appelé `payloads` dans le répertoire `luma` sur votre carte SD
 1. Copiez le fichier `GodMode9.firm` de l'archive GodMode9 `.zip` dans le dossier `/luma/payloads/` sur votre carte SD
@@ -68,17 +67,9 @@ Durant cette étape, nous allons également configurer les programmes suivants :
   + Copiez les fichiers `firmware.bin` et `cetk` dans le dossier `/luma/` de votre carte SD
   + Supprimez ces deux fichiers après avoir mit à jour votre console plus loin dans ce mode d’emploi
 1. Réinsérez votre carte SD dans votre 3DS
+1. Allumez à présent votre 3DS
 
-##### Section II - Configuration de Luma3DS
-
-1. Démarrez votre console pour accéder au menu de configuration de Luma3DS
-  + Si vous obtenez un écran noir, [suivez ce guide de dépannage](troubleshooting#ts_sys_b9s)
-1. Utilisez le bouton (A) et la croix directionnelle pour activer les éléments suivants :    
-  + **"Show NAND or user string in System Settings"**
-1. Appuyez sur (Start) pour enregistrer les modifications et redémarrer
-  + Si vous obtenez un écran noir, continuez simplement vers la section suivante   
-
-### Section III - Mise à jour du système
+##### Section II - Updating the System
 
 Si, vous avez suivi une version précédente de ce guide, vous avez CTRTransférer votre *New 3DS* en 2.1.0, il est maintenant temps de [restaurer votre sauvegarde de la NAND](godmode9-usage#nand_restore) avant de faire cette section.
 {: .notice--danger}
@@ -91,7 +82,7 @@ Si, avant d'avoir suivi ce guide, vous aviez une installation EmuNAND et que vou
   + Si vous obtenez une erreur, réglez vos paramètres DNS sur "Automatique"
   + Si cela vous donne encore une erreur et que votre NAND est en dessous de 9.2.0, [suivez 9.2.0 CTRTransfer](9.2.0-ctrtransfer), puis essayez de mettre à jour à nouveau
 
-##### Section IV - Injection de FBI
+##### Section III - Injection de FBI
 
 1. Redémarrer en appuyant sur (Start) pendant le démarrage pour lancer GodMode9
 1. Naviguez vers `[0:] SDCARD` -> `cias`
@@ -102,7 +93,7 @@ Si, avant d'avoir suivi ce guide, vous aviez une installation EmuNAND et que vou
 1. Appuyez sur (Start) pour redémarrer votre système
 1. Si votre application Santé et Sécurité est toujours celle de base et que vous avez downgradé avec Gateway dans le passé, suivez ce [guide](troubleshooting#gw_fbi)
 
-##### Section V - Installation des CIAs
+##### Section IV - Installing CIAs
 
 1. Lancez Informations sur la santé et la sécurité (qui contient désormais FBI)
 1. Naviguez vers `SD` -> `cias`
@@ -110,12 +101,12 @@ Si, avant d'avoir suivi ce guide, vous aviez une installation EmuNAND et que vou
 1. Sélectionnez l'option "install all CIAs" (installez toutes les CIAs), appuyez ensuite sur (A) pour confirmer votre choix
 1. Appuyez sur (Home) pour quitter FBI
 
-##### Section VI - DSP Dump
+##### Section V - DSP Dump
 
 1. Lancer DSP1
 1. Une fois que c'est fini, presser (B) pour arrêter l'application et retourner au menu Home
 
-##### Section VII - Restaurer Informations sur la santé et la sécurité
+##### Section VI - Restauration Informations sur la santé et la sécurité
 
 1. Redémarrer en appuyant sur (Start) pendant le démarrage pour lancer GodMode9
 1. Appuyez sur (Home) pour faire apparaître le menu d’actions (action menu)
@@ -123,7 +114,7 @@ Si, avant d'avoir suivi ce guide, vous aviez une installation EmuNAND et que vou
 1. Sélectionnez "Restore H&S"
 1. Appuyez sur (A) pour autoriser l'écriture sur votre SysNAND, puis entrez la combinaison de touches demandée
 
-##### Section VIII - CTRNAND Luma3DS
+##### Section VII - CTRNAND Luma3DS
 
 1. Appuyez sur (B) pour revenir au menu principal
 1. Naviguez vers `[0:] SDCARD`
@@ -139,7 +130,7 @@ Si, avant d'avoir suivi ce guide, vous aviez une installation EmuNAND et que vou
 1. Naviguez vers `[1:] SYSNAND CTRNAND` -> `rw`
 1. Appuyez sur (Y) pour coller le dossier `luma` dans votre carte SD
 
-### Section IX - Sauvegarde de la NAND
+##### Section VIII - NAND Backup
 
 1. Appuyez deux fois sur (B) pour revenir au menu principal
 1. Appuyez sur (Home) pour faire apparaître le menu d’actions (action menu)
