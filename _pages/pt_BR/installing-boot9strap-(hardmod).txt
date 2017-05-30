@@ -19,6 +19,7 @@ Isto funcionará no New 3DS, Old 3DS e 2DS em *todas* as versões em que você t
 * A imagem de sua NAND extraída usando seu [hardmod](https://gbatemp.net/threads/414498/)
 * A versão mais recente do [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(boot9strap padrão; não o arquivo `dev`)*
 * A versão mais recente do [hardmod-b9s-installer](https://github.com/ihaveamac/hardmod-b9s-installer/releases/latest)
+* A versão mais recente do [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(o arquivo `.7z`)*
   + Os usuários de Windows podem usar o compilado `.exe`, enquanto os usuários de Mac e Linux precisarão ter [Python 3](https://www.python.org/downloads/) instalado para executar o `.py`
 * O `.firm` correspondente ao seu dispositivo e versão:
 
@@ -55,16 +56,30 @@ Isto funcionará no New 3DS, Old 3DS e 2DS em *todas* as versões em que você t
 
 #### Instruções
 
+##### Seção I - Trabalho Preparatório
+
+1. Copie o `boot.firm` do `.7z` do Luma3DS para a raíz do seu cartão SD
 1. Copie a pasta do hardmod-b9s-installer do `.zip` do hardmod-b9s-Installer para seu computador
 1. Copie o `.firm` baixado para a pasta hardmod-b9s-installer no seu computador
 1. Renomeie o seu `.firm` baixado na pasta hardmod-b9s-installer no seu computador para `current.firm`
 1. Copie o `boot9strap.firm` e `boot9strap.firm.sha` do `.zip` do boot9strap para a pasta hardmod-b9s-installer no seu computador
 1. Copie sua cópia da NAND (do seu hardmod) para a pasta hardmod-b9s-installer no seu computador e renomeie-a para `NAND.bin`
+
+##### Seção II - Instalando o boot9strap
+
 1. Execute hardmod-b9s-installer
   + Usuários Windows: Execute `install-b9s.exe`
   + Usuários de Linux e Mac: Execute `install-b9s.py`
 1. Sobrescreva esta `NAND-patched.bin` para o seu dispositivo com seu hardmod
-  + Seu dispositivo não irá inciar até que você continue com as instruções da próxima página; não entre em pânico, isto é normal
+1. Ligue o seu dispositivo
+
+##### Section IV - Configuring Luma3DS
+
+1. Your device should have booted into the Luma3DS configuration menu
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_b9s)
+1. Use the (A) button and the D-Pad to turn on the following:    
+  + **"Show NAND or user string in System Settings"**
+1. Aperte (Start) para salvar e reiniciar
 
 ___
 
