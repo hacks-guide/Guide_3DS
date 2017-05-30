@@ -26,6 +26,7 @@ title: "安裝 boot9strap（透過 DSiWare 植入遊戲）"
 * 最新版的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * 最新版的 [b9sTool](https://github.com/Plailect/b9sTool/releases/latest)
 * 最新版的 [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *（正常版的 boot9strap；非 `dev` 檔案）*
+* 最新版的 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z` 檔案)*
 * 自製軟體[入門套件](http://smealum.github.io/ninjhax2/starter.zip)
 * 對應 **3DS 目標機** 的 11.4.0 `.firm` 檔案
   + [`2.54-0_11.4_OLD.firm`](magnet:?xt=urn:btih:0dd89d42ad711f770da899af05ee162ede0d0070&dn=2.54-0_11.4_OLD.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
@@ -131,6 +132,7 @@ title: "安裝 boot9strap（透過 DSiWare 植入遊戲）"
 
 ##### 第五節 — 備份 3DS 目標機的 FIRM
 
+1. 解壓 Luma3DS `.7z` 內的 `boot.firm` 到 SD 卡的根目錄底下
 1. 將 `boot.nds` 複製到 **3DS 目標機** SD 卡的根目錄中
 1. 在 **3DS 目標機** 的 SD 卡根目錄中建立一個新的資料夾 `boot9strap`
 1. 依 **3DS 目標機**的型號複製 11.4.0 的 `.firm` 檔案至 **3DS 目標機**的 SD 卡的 `/boot9strap/` 資料夾中
@@ -142,6 +144,7 @@ title: "安裝 boot9strap（透過 DSiWare 植入遊戲）"
 1. 退出 b9sTool
   + 您可能得按住電源紐強制關機
 1. 將 SD 卡插回至電腦中，並複製 `F0F1_N3DS.bin` 或 `F0F1_O3DS.bin` 檔案（依主機型號而定）至電腦中一個安全的地方；建議備份至各個不同的位置中；這個備份將在未來您磚機時救您一命
+1. Reinsert your SD card into **the target 3DS**
 
 ##### 第六節 — 刷入 3DS 目標機的 FIRM
 
@@ -152,8 +155,15 @@ title: "安裝 boot9strap（透過 DSiWare 植入遊戲）"
 1. 選擇「Install boot9strap」並確認
 1. 退出 b9sTool 並關機
   + 您可能得按住電源紐強制關機
-1. 您的主機將啟動至 boot9strap 中並自動關機，因為它目前尚無 payload 檔案可供啟動
-  + 在您進行下一頁的步驟前，您的主機將處於無法開機的狀態；請不要擔心，這是正常的
+1. Power on **the target 3DS**
+
+##### Section VII - Configuring Luma3DS
+
+1. Your device should have booted into the Luma3DS configuration menu
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_b9s)
+1. Use the (A) button and the D-Pad to turn on the following:    
+  + **「Show NAND or user string in System Settings」**
+1. 按下「Start」鍵以存檔並重新啟動系統
 
 ___
 
