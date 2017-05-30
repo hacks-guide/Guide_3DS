@@ -23,7 +23,6 @@ The file `boot.firm` is what is launched by boot9strap itself after it finishes 
 
 #### 준비물
 
-* 최신 버전의 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z` 파일)*
 * The latest release of [Themely](https://github.com/ErmanSayin/Themely/releases/latest) *(the `.cia` file)*
 * 최신 버전의 [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
 * 최신 버전의 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
@@ -36,6 +35,7 @@ The file `boot.firm` is what is launched by boot9strap itself after it finishes 
 
 ##### 섹션 I - 준비 작업
 
+1. 기기를 종료해 주세요.
 1. SD 카드를 컴퓨터에 삽입해 주세요.
 1. SD 카드의 최상위 경로에 `cias` 폴더가 없을 경우 폴더를 만들어 주세요.
 1. SD 카드에 `hblauncherloader` 폴더가 없을 경우 폴더를 만어 주세요.
@@ -48,7 +48,6 @@ The file `boot.firm` is what is launched by boot9strap itself after it finishes 
     ![]({{ base_path }}/images/screenshots/cias-file-layout.png)
     {: .notice--info}
 
-1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card
 1. SD 카드의 최상위 경로에 `luma` 폴더를 만들어 주세요.
 1. SD 카드의 `luma` 폴더에 `payloads` 폴더를 만들어 주세요.
 1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
@@ -69,17 +68,9 @@ The file `boot.firm` is what is launched by boot9strap itself after it finishes 
   + `firmware.bin`과 `cetk`를 SD 카드의 `/luma/` 폴더에 복사해 주세요.
   + Delete both of these files after updating your device later in these instructions
 1. SD 카드를 기기에 다시 삽입해 주세요.
+1. 기기를 시작해 주세요.
 
-##### Section II - Configuring Luma3DS
-
-1. Boot your device to enter the Luma3DS configuration menu
-  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_b9s)
-1. (A) 버튼과 십자 버튼을 이용해 다음 설정을 설정해 주세요:    
-  + **"Show NAND or user string in System Settings"**
-1. (start)를 눌러 저장하고 기기를 다시 시작해 주세요.
-  + 블랙 스크린이 뜬다면 그냥 다음 섹션으로 넘어가 주세요.   
-
-##### Section III - Updating the System
+##### Section II - Updating the System
 
 If, while following a previous version of this guide, you CTRTransfered your *New 3DS* to 2.1.0, now is the time to [restore your NAND backup](godmode9-usage#nand_restore) before doing this section.
 {: .notice--danger}
@@ -92,7 +83,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
   + 오류가 발생한다면, DNS 설정을 "자동"으로 설정해 주세요.
   + If this still gives you an error and your NAND is below 9.2.0, [follow 9.2.0 CTRTransfer](9.2.0-ctrtransfer), then try updating again
 
-##### Section IV - Injecting FBI
+##### 섹션 III - FBI 주입
 
 1. Reboot holding (Start) during boot to launch GodMode9
 1. `[0:] SDCARD` -> `cias`로 이동해 주세요.
@@ -103,7 +94,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
 1. (start)를 눌러 기기를 다시 시작해 주세요.
 1. 기존 안전을 위한 주의사항 앱이 실행되고 예전에 Gateway로 다운그레이드한 적이 있다면 이 [문제 해결 가이드](troubleshooting#gw_fbi)를 참고해 주세요.
 
-##### Section V - Installing CIAs
+##### Section IV - Installing CIAs
 
 1. 안전을 위한 주의사항(현재는 FBI)을 실행해 주세요.
 1. `SD` -> `cias`로 이동해 주세요.
@@ -111,12 +102,12 @@ If, before following this guide, you already had an EmuNAND setup and would like
 1. Select the "Install and delete all CIAs" option, then press (A) to confirm
 1. (Home)을 눌러 FBI를 종료해 주세요.
 
-##### Section VI - DSP Dump
+##### Section V - DSP Dump
 
 1. Launch DSP1
 1. Once it has completed, press (B) to self-delete the app and return to the home menu
 
-##### Section VII - Restore Health and Safety
+##### 섹션 VI - 안전을 위한 주의사항 복원
 
 1. Reboot holding (Start) during boot to launch GodMode9
 1. (Home)을 눌러 작업 메뉴를 띄워 주세요.
@@ -124,7 +115,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
 1. "Restore H&S"를 선택해 주세요.
 1. (A)를 눌려 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요.
 
-##### Section VIII - CTRNAND Luma3DS
+##### Section VII - CTRNAND Luma3DS
 
 1. (B)를 눌러 메인 메뉴로 돌아가 주세요.
 1. `[0:] SDCARD`로 이동해 주세요.
@@ -140,7 +131,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
 1. Navigate to `[1:] SYSNAND CTRNAND` -> `rw`
 1. Press (Y) to paste a copy of the `luma` folder from your SD card
 
-##### Section IX - NAND Backup
+##### Section VIII - NAND Backup
 
 1. (B)를 두 번 눌러 메인 메뉴로 돌아가 주세요.
 1. (Home)을 눌러 작업 메뉴를 띄워 주세요.
