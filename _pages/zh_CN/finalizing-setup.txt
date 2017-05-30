@@ -23,7 +23,6 @@ In this case, we use Luma3DS by [AuroraWright](https://github.com/AuroraWright/)
 
 #### 你需要
 
-* 最新版的 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *（`.7z`压缩包）*
 * 最新版的 [Themely](https://github.com/ErmanSayin/Themely/releases/latest) *(`.cia` 文件)*
 * 最新版的 [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
 * 最新版的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
@@ -36,6 +35,7 @@ In this case, we use Luma3DS by [AuroraWright](https://github.com/AuroraWright/)
 
 ##### 第一部分 - 准备工作
 
+1. Power off your device
 1. 将你的 SD 卡插入到您的计算机
 1. 在你的SD卡根目录新建一个叫`cias`的文件夹，如果还不存在的话
 1. Create a folder named `hblauncherloader` on the root of your SD card if it does not already exist
@@ -48,7 +48,6 @@ In this case, we use Luma3DS by [AuroraWright](https://github.com/AuroraWright/)
     ![]({{ base_path }}/images/screenshots/cias-file-layout.png)
     {: .notice--info}
 
-1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card
 1. 在你SD卡的根目录创建一个叫 `luma` 的文件夹
 1. 在SD卡的 `luma` 文件夹里创建 `payloads` 文件夹
 1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
@@ -69,17 +68,9 @@ In this case, we use Luma3DS by [AuroraWright](https://github.com/AuroraWright/)
 
   + Delete both of these files after updating your device later in these instructions
 1. Reinsert your SD card into your device
+1. Power on your device
 
-##### Section II - Configuring Luma3DS
-
-1. Boot your device to enter the Luma3DS configuration menu
-  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_b9s)
-1. 通过方向键和A键来启用以下设置：    
-  + **"Show NAND or user string in System Settings"**
-1. Press (Start) to save and reboot
-  + 如果出现黑屏，请照常进行接下来的教程   
-
-##### Section III - Updating the System
+##### Section II - Updating the System
 
 If, while following a previous version of this guide, you CTRTransfered your *New 3DS* to 2.1.0, now is the time to [restore your NAND backup](godmode9-usage#nand_restore) before doing this section.
 {: .notice--danger}
@@ -92,7 +83,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
   如果这一步出错，则将DNS设置改为”auto”（自动）
   + If this still gives you an error and your NAND is below 9.2.0, [follow 9.2.0 CTRTransfer](9.2.0-ctrtransfer), then try updating again
 
-##### 第四部分 - 植入FBI
+##### 第三部分 - 植入FBI
 
 1. Reboot holding (Start) during boot to launch GodMode9
 1. Navigate to `[0:] SDCARD` -> `cias`
@@ -103,7 +94,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
 1. 按（Start）重启你的设备
 1. 如果你依然进入的是系统内置的Health & Safety应用，并且之前曾经用Gateway进行过降级，参见这个[问题排查](troubleshooting#gw_fbi)
 
-##### Section V - Installing CIAs
+##### Section IV - Installing CIAs
 
 1. Launch Health and Safety (which is now FBI)
 1. Navigate to `SD` -> `cias`
@@ -111,12 +102,12 @@ If, before following this guide, you already had an EmuNAND setup and would like
 1. Select the "Install and delete all CIAs" option, then press (A) to confirm
 1. Press (Home) to exit FBI
 
-##### Section VI - DSP Dump
+##### Section V - DSP Dump
 
 1. Launch DSP1
 1. Once it has completed, press (B) to self-delete the app and return to the home menu
 
-##### Section VII - Restore Health and Safety
+##### Section VI - Restore Health and Safety
 
 1. Reboot holding (Start) during boot to launch GodMode9
 1. Press (Home) to bring up the action menu
@@ -124,7 +115,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
 1. Select "Restore H&S"
 1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
 
-##### Section VIII - CTRNAND Luma3DS
+##### Section VII - CTRNAND Luma3DS
 
 1. Press (B) to return to the main menu
 1. Navigate to `[0:] SDCARD`
@@ -140,7 +131,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
 1. Navigate to `[1:] SYSNAND CTRNAND` -> `rw`
 1. Press (Y) to paste a copy of the `luma` folder from your SD card
 
-##### Section IX - NAND Backup
+##### Section VIII - NAND Backup
 
 1. Press (B) twice to return to the main menu
 1. Press (Home) to bring up the action menu
