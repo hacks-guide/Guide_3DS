@@ -16,6 +16,7 @@ The file `boot.firm` is what is launched by boot9strap itself after it finishes 
 +  **Themely** *(installs custom themes)*
 +  **Luma3DS Updater** *(간단한 CFW 설치 업데이트)*
 +  **Godmode9** *(NAND와 게임 카드의 기능을 수행할 수 있는 다목적 툴)*
++  **Homebrew Launcher Loader** *(launches the Homebrew Launcher as a regular application thanks to Rosalina magic)*
 
 {% endcapture %}
 
@@ -27,9 +28,9 @@ The file `boot.firm` is what is launched by boot9strap itself after it finishes 
 * 최신 버전의 [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
 * 최신 버전의 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * The latest release of [DSP1](https://github.com/zoogie/DSP1/releases/latest)
-* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) *(the `.cia` file)*
+* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) *(the `.cia` and `.3dsx` files)*
+* The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
 * The latest fork of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(the `.cia` file)*
-* **Old 3DS와 2DS 전용:** 지역에 맞는 Old 3DS 11.2.0-35 [otherapp 페이로드](https://smealum.github.io/3ds/#otherapp)
 
 #### 진행 방법
 
@@ -37,6 +38,8 @@ The file `boot.firm` is what is launched by boot9strap itself after it finishes 
 
 1. 기기를 종료해 주세요.
 1. SD 카드를 컴퓨터에 삽입해 주세요.
+1. Copy `boot.3dsx` to the root of your SD card *(overwrite any existing files)*
+1. Copy `FBI.3dsx` to the `/3ds/` folder on your SD card
 1. SD 카드의 최상위 경로에 `cias` 폴더가 없을 경우 폴더를 만들어 주세요.
 1. SD 카드에 `hblauncherloader` 폴더가 없을 경우 폴더를 만어 주세요.
 1. hblauncher_loader `.zip`에서 `hblauncher_loader.cia`를 SD 카드의 `/cias/` 폴더에 복사해 주세요.
@@ -50,13 +53,6 @@ The file `boot.firm` is what is launched by boot9strap itself after it finishes 
 
 1. SD 카드의 `luma` 폴더에 `payloads` 폴더를 만들어 주세요.
 1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
-1. **Old 3DS와 2DS 전용:** 지역에 맞는 Old 3DS 11.2.0-35 otherapp 페이로드를 SD 카드의
- `/hblauncherloader/` 폴더에 복사해 주세요.
-1. **Old 3DS와 2DS 전용:** SD 카드의 Old 3DS 11.2.0-35 otherapp 페이로드를 지역에 맞게 이름을 바꿔 주세요:
-  + **유럽:** `OLD-11-4-0-37-EUR.bin`
-  + **일본:** `OLD-11-4-0-37-JPN.bin`
-  + **한국:** `OLD-11-4-0-37-KOR.bin`
-  + **미국:** `OLD-11-4-0-37-USA.bin`
 
     ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
     {: .notice--info}
@@ -82,33 +78,40 @@ If, before following this guide, you already had an EmuNAND setup and would like
   + 오류가 발생한다면, DNS 설정을 "자동"으로 설정해 주세요.
   + If this still gives you an error and your NAND is below 9.2.0, [follow 9.2.0 CTRTransfer](9.2.0-ctrtransfer), then try updating again
 
-##### 섹션 III - FBI 주입
+##### Section III - Launching FBI
 
-1. Reboot holding (Start) during boot to launch GodMode9
-1. `[0:] SDCARD` -> `cias`로 이동해 주세요.
-1. `FBI.cia`에 (A)를 눌러 선택하고 "CIA image options..."를 선택하고 "Mount image to drive"를 선택해 주세요.
-1. `.app` 파일에 (A)를 부르고 "NCCH image options"를 선택하고 "Inject to H&S"를 선택해 주세요.
-1. (A)를 눌려 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요.
-1. (A)를 눌러 진행해 주세요.
-1. (start)를 눌러 기기를 다시 시작해 주세요.
-1. 기존 안전을 위한 주의사항 앱이 실행되고 예전에 Gateway로 다운그레이드한 적이 있다면 이 [문제 해결 가이드](troubleshooting#gw_fbi)를 참고해 주세요.
+1. Launch the Download Play application
+1. Press (L) + (Down) + (Select) at the same time to open the Rosalina menu
+1. Select "Process patches menu..."
+1. Select "Patch SM for the service checks"
+1. Press (B) to continue
+1. Select "Patch FS for the archive checks"
+1. Press (B) to continue
+1. Press (B) to return to the Rosalina main menu
+1. Select "Miscellaneous options"
+1. Select "Switch the hb. title to the current app."
+1. Press (B) to continue
+1. Press (B) to return to the Rosalina main menu
+1. Press (B) to exit the Rosalina menu
+1. Press (Home), then close Download Play
+1. Launch the Download Play application
+1. 성공하면 홈브류 런처가 실행될 것입니다.
 
 ##### Section IV - Installing CIAs
 
-1. 안전을 위한 주의사항(현재는 FBI)을 실행해 주세요.
+1. Launch FBI from the list of homebrew
 1. `SD` -> `cias`로 이동해 주세요.
 1. "\<current directory>" 폴더를 선택해 주세요.
 1. Select the "Install and delete all CIAs" option, then press (A) to confirm
-1. (Home)을 눌러 FBI를 종료해 주세요.
+1. Press (Home), then close Download Play
 
 ##### Section V - DSP Dump
 
-1. Launch DSP1
+1. Launch the DSP1 application
 1. Once it has completed, press (B) to self-delete the app and return to the home menu
 
 ##### 섹션 VI - 안전을 위한 주의사항 복원
 
-1. Reboot holding (Start) during boot to launch GodMode9
 1. (Home)을 눌러 작업 메뉴를 띄워 주세요.
 1. "More..."를 선택해 주세요.
 1. "Restore H&S"를 선택해 주세요.
@@ -116,12 +119,14 @@ If, before following this guide, you already had an EmuNAND setup and would like
 
 ##### Section VII - CTRNAND Luma3DS
 
+1. Reboot holding (Start) during boot to launch GodMode9
 1. `[0:] SDCARD`로 이동해 주세요.
 1. Press (Y) on `boot.firm` to copy it
 1. (B)를 눌러 메인 메뉴로 돌아가 주세요.
 1. `[1:] SYSNAND CTRNAND`로 이동해 주세요.
 1. Press (Y) to paste a copy of `boot.firm`
 1. "Copy path(s)"를 선택해 주세요.
+1. (A)를 눌려 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요.
 1. (B)를 눌러 메인 메뉴로 돌아가 주세요.
 1. `[0:] SDCARD`로 이동해 주세요.
 1. Press (Y) on the `luma` folder to copy it
@@ -160,7 +165,8 @@ ___
 이제 Luma3DS CFW SysNAND를 기본으로 시작할 것입니다.    
 앞으로 (Select)를 누른 채 기기를 부팅시키면 Luma3DS 설정 메뉴가 실행됩니다.    
 You can now hold (Start) on boot to launch the Luma3DS chainloader menu (note that the Luma3DS chainloader menu is only displayed if there is more than one payload detected).    
-You can now hold (Start) + (Select) + (X) on boot to dump the ARM11 bootrom (`boot11.bin`), the ARM9 bootrom (`boot9.bin`), and your console unique OTP (`OTP.bin`) to the `/boot9strap/` folder on your SD card (note that this will not have any kind of prompt or message).
+You can now hold (Start) + (Select) + (X) on boot to dump the ARM11 bootrom (`boot11.bin`), the ARM9 bootrom (`boot9.bin`), and your console unique OTP (`OTP.bin`) to the `/boot9strap/` folder on your SD card (note that this will not have any kind of prompt or message).    
+You can now press (L) + (Down) + (Select) while the system is booted to open the Rosalina menu integrated into Luma3DS. For a full list of Rosalina features, please see the [Luma3DS README](https://github.com/AuroraWright/Luma3DS/blob/master/README.md)
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
