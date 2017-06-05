@@ -16,6 +16,7 @@ title: "完成安裝"
 +  **Themely** *（安裝自訂主題）*
 + **Luma3DS Updater** *（以便更新 Luma3DS）*
 + **GodMode9** *（多功能工具包，用來處理 NAND 及卡帶的相關功能）*
++  **Homebrew Launcher Loader** *(launches the Homebrew Launcher as a regular application thanks to Rosalina magic)*
 
 {% endcapture %}
 
@@ -27,9 +28,9 @@ title: "完成安裝"
 * 最新版的 [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
 * 最新版的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * 最新版的 [DSP1](https://github.com/zoogie/DSP1/releases/latest)
-* 最新版的 [FBI 管理器](https://github.com/Steveice10/FBI/releases/latest) *(`.cia` 檔案)*
+* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) *(the `.cia` and `.3dsx` files)*
+* The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
 * 最新修改版的 [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(`.cia` 檔案)*
-* **僅適用於舊型 3DS 及 2DS：**依您主機所在區域所選之舊型 3DS 的 11.2.0-35 [otherapp payload](https://smealum.github.io/3ds/#otherapp)
 
 #### 操作說明
 
@@ -37,6 +38,8 @@ title: "完成安裝"
 
 1. 關閉您的主機
 1. 將 SD 卡插入電腦中
+1. Copy `boot.3dsx` to the root of your SD card *(overwrite any existing files)*
+1. Copy `FBI.3dsx` to the `/3ds/` folder on your SD card
 1. 在 SD 卡的根目錄底下建立一個新資料夾 `cias`
 1. 在 SD 卡的根目錄底下建立一個新資料夾 `hblauncherloader`
 1. 解壓 hblauncher_loader `.zip` 中的 `hblauncher_loader.cia` 到 SD 卡中的 `/cias/` 資料夾底下
@@ -50,12 +53,6 @@ title: "完成安裝"
 
 1. 在 SD 卡的 `luma` 資料夾中建立一個新的資料夾叫做 `payloads`
 1. 從 GodMode9 `.zip` 中解壓 `GodMode9.firm` 到 SD 卡的 `/luma/payloads/` 資料夾中
-1. **僅適用於舊型 3DS 及 2DS：**複製對應您主機區域的舊型 3DS 11.2.0-35 otherapp payload 檔案至您 SD 卡中的 `/hblauncherloader/` 資料夾
-1. **僅適用於舊型 3DS 及 2DS：**根據您主機的區域，重新命名您的舊型 3DS 11.2.0-35 otherapp payload 檔案
-  + **歐版：** `OLD-11-4-0-37-EUR.bin`
-  + **日版：** `OLD-11-4-0-37-JPN.bin`
-  + **韓版：** `OLD-11-4-0-37-KOR.bin`
-  + **美版：** `OLD-11-4-0-37-USA.bin`
 
     ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
     {: .notice--info}
@@ -81,33 +78,40 @@ title: "完成安裝"
   + 如果過程中出現錯誤，試試到 DNS 設定底下將設定改成「自動 （auto）」
   + 如果錯誤持續，且您 NAND 的系統版本為 9.2.0 以下，請進行[版本 9.2.0 的 CTRTransfer](9.2.0-ctrtransfer)，並再試一次
 
-##### 第三節 — 植入 FBI 管理器
+##### Section III - Launching FBI
 
-1. 重啟時按住「Start」鍵進入 GodMode9
-1. 移動至 `[0:] SDCARD` -> `cias`
-1. 按「A」選取 `FBI.cia`，並選擇「CIA image options...」，再選「Mount image to drive」
-1. 按「A」選取 `.app` 結尾的檔案，並選擇「NCCH image options」，再選「Inject to H&S」
-1. 按「A」解鎖 SysNAND（lvl1）的寫入保護，然後按下提示的按鍵組合
-1. 按「A」 繼續
-1. 按下「Start」鍵重啟您的主機
-1. 如果您啟動「健康與警示」程式時發現它仍與先前相同，並且之前曾經用 Gateway 進行過系統降級，[請參見此疑難排解](troubleshooting#gw_fbi)
+1. Launch the Download Play application
+1. Press (L) + (Down) + (Select) at the same time to open the Rosalina menu
+1. Select "Process patches menu..."
+1. Select "Patch SM for the service checks"
+1. Press (B) to continue
+1. Select "Patch FS for the archive checks"
+1. Press (B) to continue
+1. Press (B) to return to the Rosalina main menu
+1. Select "Miscellaneous options"
+1. Select "Switch the hb. title to the current app."
+1. Press (B) to continue
+1. Press (B) to return to the Rosalina main menu
+1. Press (B) to exit the Rosalina menu
+1. Press (Home), then close Download Play
+1. Launch the Download Play application
+1. 您的主機應該就會啟動 Homebrew Launcher 了
 
 ##### 第四節 — 安裝 CIA 檔案
 
-1. 啟動「健康與安全」程式（現在應為 FBI 管理器）
+1. Launch FBI from the list of homebrew
 1. 移動至 `SD` -> `cias`
 1. 選擇「\<current directory>」
 1. 選擇「Install and delete all CIAs」（安裝並刪除所有的 CIA 檔），並按下「A」確認
-1. 按下「Home」鍵退出 FBI 管理器
+1. Press (Home), then close Download Play
 
 ##### 第五節 — DSP 轉儲
 
-1. 啟動 DSP1
+1. Launch the DSP1 application
 1. 當它處理完畢後，按下「B」將程式刪除並回到主選單
 
 ##### 第六節 — 還原「健康與警示」程式
 
-1. 重啟時按住「Start」鍵進入 GodMode9
 1. 按「Home」鍵以叫出主選單
 1. 選擇「More...」
 1. 選擇「Restore H&S」
@@ -115,12 +119,14 @@ title: "完成安裝"
 
 ##### 第七節 — 安裝 Luma3DS 至 CTRNAND
 
+1. 重啟時按住「Start」鍵進入 GodMode9
 1. 移動至 `[0:] SDCARD`
 1. 選取 `boot.firm'，並按「Y」複製
 1. 按「B」回到主選單
 1. 移動至 `[1:] SYSNAND CTRNAND`
 1. 按「Y」貼上 `boot.firm`
 1. 選擇 「Copy path(s)」
+1. 按「A」解鎖 SysNAND（lvl1）的寫入保護，然後按下提示的按鍵組合
 1. 按「B」回到主選單
 1. 移動至 `[0:] SDCARD`
 1. 選取 `luma` 資料夾並按下「Y」複製
@@ -159,7 +165,8 @@ ___
 您的主機現在在預設情況下將會自動於開機時啟動基於 SysNAND 的 Luma3DS 自製韌體。    
 您現在可以在開機時透過按住「Select」鍵進入 Luma3DS 的設定選單。    
 您現在可以在開機時透過按住「Start」鍵啟動 Luma3DS 連環加載選單（請注意，它只有在偵測到多個 payload 檔案時，才會顯示 Luma3DS 連環加載選單）。    
-您現在可以在開機時透過按住「Start」+「Select」+「X」轉儲您主機的 ARM11 bootrom（`boot11.bin`）、ARM9 bootrom（`boot9.bin`）、以及您主機特有的 OTP 金鑰（`OTP.bin`）到 SD 卡的 `/ boot9strap /` 資料夾中（請注意，本過程中將不會出現任何的提示或訊息）。
+您現在可以在開機時透過按住「Start」+「Select」+「X」轉儲您主機的 ARM11 bootrom（`boot11.bin`）、ARM9 bootrom（`boot9.bin`）、以及您主機特有的 OTP 金鑰（`OTP.bin`）到 SD 卡的 `/ boot9strap /` 資料夾中（請注意，本過程中將不會出現任何的提示或訊息）。    
+You can now press (L) + (Down) + (Select) while the system is booted to open the Rosalina menu integrated into Luma3DS. For a full list of Rosalina features, please see the [Luma3DS README](https://github.com/AuroraWright/Luma3DS/blob/master/README.md)
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
