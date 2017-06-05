@@ -1,11 +1,11 @@
 ---
-title: "Updating B9S"
+title: "Atualizando B9S" #
 ---
 
-This page is for existing boot9strap users to update their installation of boot9strap to the latest version.
+Esta página é para usuários do boot9strap atualizarem a instalação do boot9strap para a versão mais recente.
 {: .notice--info}
 
-Note that the recent major release of Luma3DS is *not* compatible with boot9strap version 1.0. It *requires* you to update your boot9strap installation to version 1.2 by following the instructions on this page.
+Note que a versão mais recente do Luma3DS *não* é compatível com a versão 1.0 do boot9strap. Ela *exige* que você atualize sua instalação do boot9strap para a versão 1.2 seguindo as instruções nesta página.
 {: .notice--warning}
 
 {% capture notice-1 %}
@@ -28,48 +28,58 @@ Há relatos de uma onda de bans sendo feita a usuários de CFW pela Nintendo. Pa
 
 * A versão mais recente do [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(o arquivo `.7z`)*
 *A versão mais recente do [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
-* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `dev` file, not the `ntr` file)*
+* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
 * A versão mais recente do [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
+* A versão mais recente do [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
 
 #### Instruções
 
 ##### Seção I - Trabalho Preparatório
 
-For all steps in this section, overwrite any existing files on your SD card.
+Para todas as etapas nesta seção, substitua quaisquer arquivos existentes no seu cartão SD.
 {: .notice--info}
 
 1. Desligue seu dispositivo
 1. Insira o cartão SD no seu computador
-1. Copy `boot.3dsx` to the root of your SD card
+1. **Leave the old (v7.1) version of Luma3DS (`boot.firm`) as it is. You will update this later.**
+1. Copie `boot.3dsx` para a raiz do seu cartão SD
 1. Crie uma pasta chamada `boot9strap` na raiz do seu cartão SD
 1. Copie `GodMode9.firm` do `.zip` do GodMode9 para a pasta `/luma/payloads/` no seu cartão SD
-1. Copy `SafeB9SInstaller.firm` from the SafeB9SInstaller `.zip` to the `/luma/payloads/` folder on your SD card
+1. Copie `SafeB9SInstaller.firm` do `.zip` do SafeB9SInstaller para a pasta `/luma/payloads/` no seu cartão SD
 1. Copie os arquivos `boot9strap.firm` e `boot9strap.firm.sha` do `.zip` do boot9strap para a pasta `/boot9strap/` no seu cartão SD
 1. Reinsira seu cartão SD no seu dispositivo
 
 ##### Seção II - Instalando o boot9strap
 
 1. Reinicie segurando (Start) durante a inicialização para iniciar o menu do chainloader do Luma3DS
-1. Launch SafeB9SInstaller by pressing (A)
+1. Inicie o SafeB9SInstaller apertando (A)
 1. Espere todos as verificações de segurança finalizarem
 1. Quando solicitado, aperte a sequência de botões solicitada para instalar o boot9strap
 1. Quando concluído, aperte (A) para reiniciar o seu dispositivo.
 1. Desligue seu dispositivo
+  + Note que você receberá o erro `Unsupported launcher (argc = 0)` até que você siga o resto das instruções nesta página
 
-##### Section III - Updating Luma3DS
+##### Seção III - Atualizando Luma3DS
 
 1. Insira o cartão SD no seu computador
-1. Delete the existing `boot.firm` from the root of your SD card
+1. Apague o arquivo `boot.firm` na raiz do seu cartão SD
 1. Copie o `boot.firm` do `.7z` do Luma3DS para a raíz do seu cartão SD
 1. Reinsira seu cartão SD no seu dispositivo
 
-##### Seção IV - Luma3DS com CTRNAND
+##### Seção IV - Configurando o Luma3DS
+
+1. Seu dispositivo deve ter reiniciado no menu de configuração de Luma3DS
+  + Se você receber uma tela preta, [siga este guia de troubleshooting](troubleshooting#ts_sys_b9s)
+1. Use o botão (A) e os botões direcionais para ativar o seguinte:    
+  + **"Show NAND or user string in System Settings"**
+1. Aperte (Start) para salvar e reiniciar
+
+##### Section V - CTRNAND Luma3DS
 
 1. Reinicie segurando (Start) durante a inicialização para iniciar o menu do chainloader do Luma3DS
 1. Inicie o GodMode9 apertando (A)
 1. Navegue para `[0:] SDCARD` -> `luma` -> `payloads`
-1. Press (X) on `SafeB9SInstaller.firm` to delete it
+1. Aperte (X) no `SafeB9SInstaller.firm` para apagá-lo
 1. Aperte (A) para confirmar
 1. Aperte (B) para retornar ao `[0:] SDCARD`
 1. Aperte (Y) no `boot.firm` para copiá-lo
@@ -96,8 +106,8 @@ For all steps in this section, overwrite any existing files on your SD card.
 
 ___
 
-Note that the `.bak` files in the `/boot9strap/` folder on your SD card are only needed in the event of a failed boot9strap install. Uma vez que você tenha instalado com sucesso, você pode remover a pasta `boot9strap` inteira.
+Note que os arquivos `.bak` na pasta `/boot9strap/` no seu cartão SD só são necessários no caso de uma instalação falha do boot9strap. Uma vez que você tenha instalado com sucesso, você pode remover a pasta `boot9strap` inteira.
 {: .notice--info}
 
-You can now press (L) + (Down) + (Select) while the system is booted to open the Rosalina menu integrated into Luma3DS. For a full list of Rosalina features, please see the [Luma3DS v8.0 Release](https://github.com/AuroraWright/Luma3DS/releases/tag/v8.0)
+Agora você pode apertar (L) + (Baixo) + (Select) enquanto o sistema está ligado para abrir o menu Rosalina integrado ao Luma3DS. Para uma lista completa das funções de Rosalina, por favor veja o [Luma3DS v8.0 Release](https://github.com/AuroraWright/Luma3DS/releases/tag/v8.0)
 {: .notice--info}
