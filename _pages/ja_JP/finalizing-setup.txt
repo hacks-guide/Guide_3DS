@@ -16,6 +16,7 @@ The file `boot.firm` is what is launched by boot9strap itself after it finishes 
 +  **Themely** *(installs custom themes)*
 +  **Luma3DS Updater** *（CFWインストールを簡単に更新します）*
 +  **GodMode9** *(multipurpose tool which can do NAND and cartridge functions)*
++  **Homebrew Launcher Loader** *(launches the Homebrew Launcher as a regular application thanks to Rosalina magic)*
 
 {% endcapture %}
 
@@ -27,9 +28,9 @@ The file `boot.firm` is what is launched by boot9strap itself after it finishes 
 * [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)の最新バージョン
 * [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)の最新バージョン
 * The latest release of [DSP1](https://github.com/zoogie/DSP1/releases/latest)
-* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) *(the `.cia` file)*
+* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) *(the `.cia` and `.3dsx` files)*
+* The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
 * The latest fork of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(the `.cia` file)*
-* **Old 3DS and 2DS Only:** The Old 3DS 11.2.0-35 [otherapp payload](https://smealum.github.io/3ds/#otherapp) for your region
 
 #### 手順
 
@@ -37,6 +38,8 @@ The file `boot.firm` is what is launched by boot9strap itself after it finishes 
 
 1. Power off your device
 1. パソコンにSDカードを入れます
+1. Copy `boot.3dsx` to the root of your SD card *(overwrite any existing files)*
+1. Copy `FBI.3dsx` to the `/3ds/` folder on your SD card
 1. SDカードのルートに`cias`フォルダはない場合、そのフォルダを作成します
 1. Create a folder named `hblauncherloader` on the root of your SD card if it does not already exist
 1. hblauncher_loader `.zip`から`hblauncher_loader.cia`をSDカードの`/cias/`フォルダにコピーします
@@ -50,12 +53,6 @@ The file `boot.firm` is what is launched by boot9strap itself after it finishes 
 
 1. `payloads`というフォルダをSDカードの`luma`フォルダに作成します
 1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
-1. **Old 3DS and 2DS Only:** Copy the Old 3DS 11.2.0-35 otherapp payload for your region to the `/hblauncherloader/` folder on your SD card
-1. **Old 3DS and 2DS Only:** Rename the Old 3DS 11.2.0-35 otherapp payload on your SD card to match your region:
-  + **EUR:** `OLD-11-4-0-37-EUR.bin`
-  + **JPN:** `OLD-11-4-0-37-JPN.bin`
-  + **KOR:** `OLD-11-4-0-37-KOR.bin`
-  + **USA:** `OLD-11-4-0-37-USA.bin`
 
     ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
     {: .notice--info}
@@ -81,33 +78,40 @@ If, before following this guide, you already had an EmuNAND setup and would like
   + エラーが発生すれば、DNS設定を「自動」に変更してください
   + If this still gives you an error and your NAND is below 9.2.0, [follow 9.2.0 CTRTransfer](9.2.0-ctrtransfer), then try updating again
 
-##### Section III - Injecting FBI
+##### Section III - Launching FBI
 
-1. Reboot holding (Start) during boot to launch GodMode9
-1. Navigate to `[0:] SDCARD` -> `cias`
-1. Press (A) on `FBI.cia` to select it, then select "CIA image options...", then select "Mount image to drive"
-1. Press (A) on the `.app` file, then select "NCCH image options", then select "Inject to H&S"
-1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
-1. (A) で続行します
-1. Press (Start) to reboot your device
-1. 過去でGatewayでダウングレードしたことがあって、そして今はまだオリジナル「安全に使用するために」アプリを起動する場合、[このトラブルシューティングガイドをご覧ください](troubleshooting#gw_fbi)
+1. Launch the Download Play application
+1. Press (L) + (Down) + (Select) at the same time to open the Rosalina menu
+1. Select "Process patches menu..."
+1. Select "Patch SM for the service checks"
+1. Press (B) to continue
+1. Select "Patch FS for the archive checks"
+1. Press (B) to continue
+1. Press (B) to return to the Rosalina main menu
+1. Select "Miscellaneous options"
+1. Select "Switch the hb. title to the current app."
+1. Press (B) to continue
+1. Press (B) to return to the Rosalina main menu
+1. Press (B) to exit the Rosalina menu
+1. Press (Home), then close Download Play
+1. Launch the Download Play application
+1. Your device should load the Homebrew Launcher
 
 ##### Section IV - Installing CIAs
 
-1. Launch Health and Safety (which is now FBI)
+1. Launch FBI from the list of homebrew
 1. Navigate to `SD` -> `cias`
 1. 「\<current directory>」を選択します
 1. Select the "Install and delete all CIAs" option, then press (A) to confirm
-1. Press (Home) to exit FBI
+1. Press (Home), then close Download Play
 
 ##### Section V - DSP Dump
 
-1. Launch DSP1
+1. Launch the DSP1 application
 1. Once it has completed, press (B) to self-delete the app and return to the home menu
 
 ##### Section VI - Restore Health and Safety
 
-1. Reboot holding (Start) during boot to launch GodMode9
 1. Press (Home) to bring up the action menu
 1. 「More...」を選択します
 1. Select "Restore H&S"
@@ -115,12 +119,14 @@ If, before following this guide, you already had an EmuNAND setup and would like
 
 ##### Section VII - CTRNAND Luma3DS
 
+1. Reboot holding (Start) during boot to launch GodMode9
 1. Navigate to `[0:] SDCARD`
 1. Press (Y) on `boot.firm` to copy it
 1. Press (B) to return to the main menu
 1. Navigate to `[1:] SYSNAND CTRNAND`
 1. Press (Y) to paste a copy of `boot.firm`
 1. Select "Copy path(s)"
+1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
 1. Press (B) to return to the main menu
 1. Navigate to `[0:] SDCARD`
 1. Press (Y) on the `luma` folder to copy it
@@ -159,7 +165,8 @@ This will only update the Luma3DS files on your SD card. If you boot your device
 You will now boot Luma3DS CFW SysNAND by default.    
 (Select) を押したまま起動すると、Luma3DS設定メニューを開きます。    
 You can now hold (Start) on boot to launch the Luma3DS chainloader menu (note that the Luma3DS chainloader menu is only displayed if there is more than one payload detected).    
-You can now hold (Start) + (Select) + (X) on boot to dump the ARM11 bootrom (`boot11.bin`), the ARM9 bootrom (`boot9.bin`), and your console unique OTP (`OTP.bin`) to the `/boot9strap/` folder on your SD card (note that this will not have any kind of prompt or message).
+You can now hold (Start) + (Select) + (X) on boot to dump the ARM11 bootrom (`boot11.bin`), the ARM9 bootrom (`boot9.bin`), and your console unique OTP (`OTP.bin`) to the `/boot9strap/` folder on your SD card (note that this will not have any kind of prompt or message).    
+You can now press (L) + (Down) + (Select) while the system is booted to open the Rosalina menu integrated into Luma3DS. For a full list of Rosalina features, please see the [Luma3DS README](https://github.com/AuroraWright/Luma3DS/blob/master/README.md)
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
