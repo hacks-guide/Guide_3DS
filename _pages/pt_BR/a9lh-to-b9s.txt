@@ -43,14 +43,19 @@ Note que, no New 3DS, o `secret_sector.bin` é necessário para reverter o explo
 * A versão mais recente do [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * A versão mais recente do [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(boot9strap padrão; não o arquivo `dev`)*
 * A versão mais recente do [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
 * A versão mais recente do [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
 
 #### Instruções
 
 ##### Seção I - Trabalho Preparatório
 
+For all steps in this section, overwrite any existing files on your SD card.
+{: .notice--info}
+
 1. Desligue seu dispositivo
 1. Insira seu cartão SD no seu computador
+1. Copy `boot.3dsx` to the root of your SD card
 1. Copie o `boot.firm` do `.7z` do Luma3DS para a raíz do seu cartão SD
 1. Crie uma pasta chamada `cias` na raiz do seu cartão SD se ela ainda não existir
 1. Copie `lumaupdater.cia` para a pasta `/cias/` no seu cartão SD
@@ -135,7 +140,7 @@ ___
 Agora você pode remover qualquer arquivo relacionado ao arm9loaderhax do seu cartão SD, como o `arm9loaderhax.bin` na raiz do seu cartão SD e o arquivo `aeskeydb.bin` na pasta `files9` no seu cartão SD.
 {: .notice--info}
 
-Note que `firm0firm1.bak` e `sector0x96.bak` na pasta `/boot9strap/` no seu cartão SD só serão necessários no caso de uma instalação falha do boot9strap. Uma vez que você tenha instalado com sucesso, você pode remover a pasta `boot9strap` inteira.
+Note that the `.bak` files in the `/boot9strap/` folder on your SD card are only needed in the event of a failed boot9strap install. Uma vez que você tenha instalado com sucesso, você pode remover a pasta `boot9strap` inteira.
 {: .notice--info}
 
 Este fork do Luma3DS Updater tem compatibilidade com o boot9strap fazendo o download e extraindo o `boot.firm` mais recente do Luma3DS para você.
