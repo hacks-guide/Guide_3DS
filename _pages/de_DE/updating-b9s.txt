@@ -28,7 +28,7 @@ There have been reports of a wave of bans being handed out to CFW users by Ninte
 
 * The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(the `.7z` file)*
 * The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
-* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `dev` file, not the `ntr` file)*
+* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
 * Der neueste Version von [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
 
@@ -41,6 +41,7 @@ For all steps in this section, overwrite any existing files on your SD card.
 
 1. Schalte deinen 3DS aus
 1. Stecke deine SD-Karte in deinen Computer
+1. **Leave the old (v7.1) version of Luma3DS (`boot.firm`) as it is. You will update this later.**
 1. Copy `boot.3dsx` to the root of your SD card
 1. Create a folder named `boot9strap` on the root of your SD card
 1. Kopiere `Godmode9.firm`von der `Godmode9.zip`-Datei nach `/luma/payloads/` auf deiner SD Karte
@@ -56,6 +57,7 @@ For all steps in this section, overwrite any existing files on your SD card.
 1. When prompted, input the key combo given to install boot9strap
 1. Once it has completed, press (A) to reboot your device.
 1. Schalte deinen 3DS aus
+  + Note that you will receive the error `Unsupported launcher (argc = 0)` until you follow the rest of the instructions on this page
 
 ##### Section III - Updating Luma3DS
 
@@ -64,7 +66,15 @@ For all steps in this section, overwrite any existing files on your SD card.
 1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card
 1. Stecke deine SD-Karte nun wieder in deinen 3DS
 
-##### Abschnitt IV - Installation von Luma3DS auf das CTRNAND
+##### Section IV - Configuring Luma3DS
+
+1. Your device should have rebooted into the Luma3DS configuration menu
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_b9s)
+1. Use the (A) button and the D-Pad to turn on the following:    
+  + **"Show NAND or user string in System Settings"**
+1. Drücke (Start) zum Speichern und neustarten
+
+##### Section V - CTRNAND Luma3DS
 
 1. Starte das Gerät wieder neu, während du (Start) gedrückt hälst, um den Luma3DS Chainlaoder anzuzeigen
 1. Starte GodMode9 indem du (A) drückst
