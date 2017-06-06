@@ -38,7 +38,7 @@ title: "Завершение установки"
 
 1. Выключите консоль
 1. Вставьте SD-карту в компьютер
-1. Скопируйте `boot.3dsx` в корень SD-карты *(перезаписывайте существующие файлы)*
+1. Copy `boot.3dsx` to the root of your SD card *(overwrite existing files)*
 1. Скопируйте `FBI.3dsx` в папку `/3ds/` на SD-карте
 1. Создайте папку `cias` в корне SD-карты, если таковой нет
 1. Создайте папку `hblauncherloader` в корне SD-карты, если таковой нет
@@ -57,6 +57,10 @@ title: "Завершение установки"
     ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
     {: .notice--info}
 
+1. If your device is on a version below 9.0.0, your device will not boot unless you use an alternative version of Luma3DS:
+  + Download [a legacy version of Luma3DS]({{ base_path }}/luma_legacy/cf0b05e/boot.firm)
+  + Copy `boot.firm` to the root of your SD card *(overwrite existing files)*
+  + Replace this `boot.firm` with the one from [the latest release of Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) after updating your device later in these instructions
 1. Если ваше устройство использует прошивку версии от 3.0.0 до 4.5.0, консоль не запустится до тех пор, пока вы вручную не скачаете нужные файлы прошивки:
   + Скачайте [этот файл](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) и переименуйте его в `firmware.bin`
   + Скачайте [этот файл](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
@@ -77,6 +81,8 @@ title: "Завершение установки"
   + Обновление консоли с установленным B9S + Luma (установленых у вас) безопасно
   + При появлении ошибки, поставьте в настройках подключения, в настройках DNS "Получать DNS автоматически" в положение "Да"
   + Если вы все еще получаете ошибку и версия вашего NAND ниже 9.2.0, [выполните 9.2.0 CTRTransfer](9.2.0-ctrtransfer) и попробуйте обновиться еще раз
+1. If your device was on a version below 9.0.0 before updating, replace `boot.firm` on the root of your SD card with the one from [the latest release of Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
+1. If your device was on a version a version between 3.0.0 and 4.5.0 before updating, delete `firmware.bin` and `cetk` from the `/luma/` folder on your SD card
 
 ##### Часть III - Запуск FBI
 
