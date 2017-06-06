@@ -38,7 +38,7 @@ Durant cette étape, nous allons également configurer les programmes suivants :
 
 1. Éteignez votre 3DS
 1. Insérez votre carte SD dans votre ordinateur
-1. Copy `boot.3dsx` to the root of your SD card *(overwrite any existing files)*
+1. Copy `boot.3dsx` to the root of your SD card *(overwrite existing files)*
 1. Copiez `FBI.3dsx` dans le dossier `/3ds/` de votre carte SD
 1. Créez un dossier nommé "files9" à la racine de votre carte SD si celui ci n'existe pas
 1. Créez un dossier nommé `hblauncherloader` à la racine de votre carte SD si celui-ci n'existe pas déjà
@@ -57,6 +57,10 @@ Durant cette étape, nous allons également configurer les programmes suivants :
     ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
     {: .notice--info}
 
+1. If your device is on a version below 9.0.0, your device will not boot unless you use an alternative version of Luma3DS:
+  + Download [a legacy version of Luma3DS]({{ base_path }}/luma_legacy/cf0b05e/boot.firm)
+  + Copy `boot.firm` to the root of your SD card *(overwrite existing files)*
+  + Replace this `boot.firm` with the one from [the latest release of Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) after updating your device later in these instructions
 1. Si votre appareil est sur une version entre 3.0.0 à 4.5.0 (inclue), votre appareil ne démarrera pas jusqu'à ce que vous téléchargiez manuellement le firmware requis :
   + Téléchargez [ce fichier](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) et renommez-le "firmware.bin"
   + Téléchargez [ce fichier](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
@@ -77,6 +81,8 @@ Si, avant d'avoir suivi ce guide, vous aviez une installation EmuNAND et que vou
   + Mettre à jour tout en utilisant B9S + Luma (ce que vous avez) sont sans danger
   + Si vous obtenez une erreur, réglez vos paramètres DNS sur "Automatique"
   + Si cela vous donne encore une erreur et que votre NAND est en dessous de 9.2.0, [suivez 9.2.0 CTRTransfer](9.2.0-ctrtransfer), puis essayez de mettre à jour à nouveau
+1. If your device was on a version below 9.0.0 before updating, replace `boot.firm` on the root of your SD card with the one from [the latest release of Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
+1. If your device was on a version a version between 3.0.0 and 4.5.0 before updating, delete `firmware.bin` and `cetk` from the `/luma/` folder on your SD card
 
 ##### Section III - Lancez FBI
 
