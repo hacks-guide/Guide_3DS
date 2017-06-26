@@ -5,32 +5,9 @@ title: "安裝 boot9strap（透過 Homebrew Launcher）"
 如果您先前已改機過，且已安裝基於 EmuNAND 的自製系統－請注意，本教學是專門用來處理 SysNAND 的。您應在閱讀本手冊時在 SysNAND 中操作，或將其套用至 SysNAND 中。 注意 EmuNAND 與 RedNAND 指的是些微不同運作方式但[同樣道理](http://3dbrew.org/wiki/NAND_Redirection)的用語。
 {: .notice--info}
 
-#### 必備項目
-
-* 最新版的 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
-* 最新版的 [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *（正常版的 boot9strap；非 `devkit` 或 `ntr` 檔案）*
-* 最新版的 [safehax](https://github.com/TiniVi/safehax/releases/latest)
-* 最新版的 [udsploit](https://github.com/smealum/udsploit/releases/latest)
-* 最新版的 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z` 檔案)*
-
 #### 操作說明
 
-##### 第一節 — 準備工作
-
-1. 在 Homebrew Launcher 中，將 SD 卡從主機中拔出，並將其插入電腦中
-1. 解壓 Luma3DS `.7z` 內的 `boot.firm` 到 SD 卡的根目錄底下
-1. 在 SD 卡的根目錄底下建立一個新的資料夾 `boot9strap`
-1. 解壓 boot9strap `.zip` 的 `boot9strap.firm` 及 `boot9strap.firm.sha` 檔案至 SD 卡的 `/boot9strap/` 資料夾中
-1. 將 `safehax.3dsx` 複製到 SD 卡中的 `/3ds/` 資料夾底下
-1. 將 `udsploit.3dsx` 複製到 SD 卡中的 `/3ds/` 資料夾底下
-1. 解壓 SafeB9SInstaller `.zip` 中的 `SafeB9SInstaller.bin` 到 SD 卡的根目錄下，並將其重新命名為 `safehaxpayload.bin`
-
-    ![]({{ base_path }}/images/screenshots/boot9strap-hb-file-layout.png)
-    {: .notice--info}
-
-1. 將 SD 卡插回主機中
-
-##### 第二節 — 啟動 SafeB9SInstaller
+##### Section I - Launching SafeB9SInstaller
 
 1. 透過 Homebrew 清單啟動 udsploit
   + 您可能得往下些才會看到此選項
@@ -44,13 +21,13 @@ title: "安裝 boot9strap（透過 Homebrew Launcher）"
   + 如果當機的話，按住電源紐強制重啟您的主機再試一次即可
 1. 如果一切成功的話，您將自動進入 SafeB9SInstaller
 
-##### 第三節 — 安裝 boot9strap
+##### 第二節 — 安裝 boot9strap
 
 1. 等待所有的安全性檢查檢查完畢
 1. 出現提示時，輸入提示的按鍵組合以安裝 boot9strap
 1. 過程結束後，按下「A」重啟主機
 
-##### 第四節 — 設定 Luma3DS
+##### 第三節 — 設定 Luma3DS
 
 1. 您的主機將會重啟至 Luma3DS 設定選單中
   + 如果黑屏，[請參見此疑難排解](troubleshooting#ts_sys_b9s)
