@@ -45,7 +45,7 @@ Benutze einen [save manager](https://github.com/J-D-K/JKSM/releases/latest) um a
 1. Kopiere die `.app` aus der DSiWare injection `.zip` ins Stammverzeichnis der **Quell-3DS** SD-Karte
 1. Kopiere den `savedata`-Ordner aus der DSiWare injection `.zip` ins Stammverzeichnis der **Quell-3DS** SD-Karte
 1. Setze die **Quell-3DS** SD-Karte wieder in das entsprechende System ein
-1. Starte den **Quellen-3DS**, während du beim Booten (Start) gedrückt hälst, um den Luma3DS Chainloader anzuzeigen
+1. Starte den **Quell-3DS**, während du beim Booten (Start) gedrückt hälst, um den Luma3DS Chainloader anzuzeigen
 1. Starte GodMode9, indem du (A) drückst
 1. Drücke  (HOME) um das Aktionsmenü aufzurufen
 1. Wähle "More..."
@@ -54,53 +54,53 @@ Benutze einen [save manager](https://github.com/J-D-K/JKSM/releases/latest) um a
 1. Drücke (R) und (B) gleichzeitig um die SD-Karte auszuwerfen
 1. Lege die SD-Karte des **Ziel 3DS** in deinen Computer ein
 1. **Sichere jede Datei auf den SD-Karten der beiden 3DS Systeme und nutze dazu zwei getrennte Ordner auf deinem Computer (stelle sicher, dass du weißt, welcher Ordner zu welcher SD-Karte gehört)!**
-1. Reinsert each SD card back into their corresponding 3DS
-1. Press (Start) on **the source 3DS** to reboot
+1. Lege beide SD-Karten wieder in ihr zugehöriges 3DS System ein
+1. Drücke (Start) auf dem **Quell-3DS** um neuzustarten
 
-##### Section II - Injecting the game and save
+##### Abschnitt II - Injektion von Spiel und Spielstand
 
-1. Starte den **Quellen-3DS**, während du beim Booten (Start) gedrückt hälst, um den Luma3DS Chainloader anzuzeigen
+1. Starte den **Quell-3DS**, während du beim Booten (Start) gedrückt hälst, um den Luma3DS Chainloader anzuzeigen
 1. Starte GodMode9 indem du (A) drückst
-1. Navigate to `SDCARD`
-1. Press (Y) on the DSiWare injection `.app` to copy it
-1. Press (B) to go back to the main menu
-1. Navigate to `SYSNAND TWLN` -> `title` -> `00030004` -> `(8 Character ID)`
-  + The 8 Character ID will be the one from the [Installing boot9strap (DSiWare Game Injection List)](installing-boot9strap-(dsiware-game-injection-list)) page
+1. Navigiere zu "SDCARD"
+1. Drücke (Y) auf der DSiWare Injektion `.app` um diese zu kopieren
+1. Drücke (B), um zurück ins Hauptmenü zu gelangen
+1. Navigiere zu `SYSNAND TWLN` -> `title` -> `00030004` -> `(8 Zeichen ID)`
+  + Für eine Liste der 8 Zeichen ID, siehe [Installation von boot9strap (DSiWare Spiel-Injektionsliste)](installing-boot9strap-(dsiware-game-injection-list))
 1. Navigiere zu `content`
-1. Press (A) on the `.app` file in the folder
-1. Select "Inject data @offset"
-1. Press (A) to select the offset `00000000`
+1. Drücke (A) auf der `.app` Datei im Ordner
+1. Wähle "Inject data @offset"
+1. Drücke (A) um den Offset `00000000` zu wählen
 1. Drück (A) um das Bearbeiten des SysNAND zu entsperren und gib danach die angezeigte Tastenkombination ein
-1. Press (B) to go back to the main menu
-1. Navigate to `SYSNAND TWLN` -> `title` -> `00030004` -> `(8 Character ID)`
-  + The 8 Character ID will be the one from the [Installing boot9strap (DSiWare Game Injection List)](installing-boot9strap-(dsiware-game-injection-list)) page
-1. Navigate to `data`
-1. Press (A) on `public.sav`
-1. Select "Mount as FAT image"
-1. Press (B) to go back to the main menu
-1. Navigate to `SDCARD`
-1. Press (Y) on the file(s) in the `savedata` folder to copy them
-  + If there is a `savedata` folder inside of the `savedata` folder, it is not by mistake. You should copy the second `savedata` folder, not the files inside of that.
-1. Press (B) to go back to the main menu
-1. Navigate to `FAT IMAGE`
-1. Use the (X) button to delete everything inside of `FAT IMAGE`
-1. Press (Y) to paste a copy of **the contents of** the `savedata` folder to `FAT IMAGE`
+1. Drücke (B), um zurück ins Hauptmenü zu gelangen
+1. Navigiere zu `SYSNAND TWLN` -> `title` -> `00030004` -> `(8 Zeichen ID)`
+  + Für eine Liste der 8 Zeichen ID, siehe [Installation von boot9strap (DSiWare Spiel-Injektionsliste)](installing-boot9strap-(dsiware-game-injection-list))
+1. Navigiere zu `data`
+1. Drücke (A) auf `public.sav`
+1. Wähle "Mount as FAT image"
+1. Drücke (B), um zurück ins Hauptmenü zu gelangen
+1. Navigiere zu "SDCARD"
+1. Drücke auf der/den Datei/en im `savedata` Ordner (Y), um sie zu kopieren
+  + Falls es einen `savedata` Ordner in dem `savedata` Ordner gibt, ist dies kein Fehler. Du solltest den zweiten `savedata` Ordner kopieren, nicht die Dateien in dem Ordner.
+1. Drücke (B), um zurück ins Hauptmenü zu gelangen
+1. Navigiere zu `FAT IMAGE`
+1. Benutze den (X) Knopf um alles in `FAT IMAGE` zu löschen
+1. Drücke (Y) um eine Kopie **des Inhalts** des `savedata`Ordners in den `FAT IMAGE` Ordner einzufügen
 1. Wähle "Copy path(s)" aus
-1. Press (A) to unlock image writing, then input the key combo given
+1. Drücke (A) um das Schreiben des Images freizuschalten, gebe dann die angezeigte Tastenkombination ein
 1. Drücke (Start), um das System neu zu starten
-1. Launch your DSiWare game on **the source 3DS**
-1. Tap the screen or press any button to start the game and test if the save is functional
-  + If your game has an error about `boot.nds`, **then the exploit has been successful**
-  + If your game has an error about corrupted or inaccessible save data, confirm that you copied **the contents of** the `savedata` folder and not the `savedata` folder itself
-  + If your game behaves normally and does not give you an error about `boot.nds`, then you should stop and figure out what went wrong
-  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#twl_broken)
-  + If the game is missing from **the target 3DS** or has an error about corrupted or inaccessible save data, [follow this troubleshooting guide](troubleshooting#ts_dsiware)
+1. Starte dein DSiWare-Spiel auf dem **Quell-3DS**
+1. Berühre den Bildschirm oder drücke irgendeinen Knopf um das Spiel zu starten und zu testen, ob die Speicherstände funktionieren
+  + Falls dein Spiel eine Fehlermeldung über `boot.nds` anzeigt, **dann war der Hack erfolgreich**
+  + Falls dein Spiel einen Fehler über beschädigte oder nicht aufrufbare Speicherdaten anzeigt, stelle sicher, dass du **die Inhalte** des Ordners `savedata`, und nicht den Ordner `savedata` selbst kopiert hast
+  + Falls dein Spiel sich normal verhält und dir keine Fehlermeldung über `boot.nds` anzeigt, dann solltest du aufhören und herausfinden, was schief gelaufen ist
+  + Wenn du einen schwarzen Bildschirm bekommst, [folge diesen Problembehandlungen](troubleshooting#twl_broken)
+  + Falls das Spiel auf dem **Ziel 3DS** fehlt oder einen Fehler über beschädigte oder nicht aufrufbare Speicherstände anzeigt, [folge dieser Anleitung zur Problembehandlung](troubleshooting#ts_dsiware)
 
-##### Section III - System Transfer
+##### Abschnitt III - Systemtransfer
 
-1. If **the target 3DS** has a Nintendo Network ID on it, you must format the device using System Settings:
-  + Go to the last page of "Other Settings" and select "Format System Memory", then follow all instructions
-1. Read the following:
+1. Falls **der Ziel 3DS** eine Nintendo Network ID hat, musst du dein Gerät in den Systemeinstellungen zurücksetzen:
+  + Navigiere auf die letzte Seite der "Allgemeinen Einstellungen" und wähle "Formatieren", folge dann allen Anweisungen
+1. Lies folgendes:
   + Your CFW 3DS = the source 3DS = "Source System"
   + Your Stock 3DS = the target 3DS = "Target System"
   + **Move DSiWare titles if prompted!**
