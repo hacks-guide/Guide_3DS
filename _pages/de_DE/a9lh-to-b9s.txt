@@ -2,29 +2,29 @@
 title: "A9LH zu B9S"
 ---
 
-This page is for existing arm9loaderhax users to update their devices to boot9strap.
+Diese Seite ist für Benutzer von arm9loaderhax, die ihre Geräte auf boot9strap updaten wollen.
 {: .notice--info}
 
-All future releases of Luma3DS will only be made in the `.firm` format, which will only be compatible with boot9strap and sighax. This means that to continue receiving the latest updates of Luma3DS, you should use this page to update your installation.
+Alle zukünftigen Versionen von Luma3DS werden nur im `.firm`- Format sein, welches nur mit boot9strap und sighax kompatibel ist. This means that to continue receiving the latest updates of Luma3DS, you should use this page to update your installation.
 {: .notice--info}
 
-If you have a PIN enabled on Luma3DS, SafeB9SInstaller will give you an "OTP Crypto Fail" error unless you temporarily disable your PIN (you can re-enable the PIN after the update).
+Wenn du eine PIN für Luma3DS aktiviert hast, wird SafeB9SInstaller einen "OTP Crypto Fail"-Fehler ausgeben, außer du deaktivierst deine PIN vorübergehend (nach dem Update kannst du die PIN wieder aktivieren).
 {: .notice--warning}
 
 Um die [Magnet-Links](https://en.wikipedia.org/wiki/Magnet_URI_scheme) auf dieser Seite zu nutzen, brauchst du einen Torrent-Programm wie [Deluge](http://dev.deluge-torrent.org/wiki/Download)
 {: .notice--success}
 
 {% capture notice-1 %}
-There have been reports of a wave of bans being handed out to CFW users by Nintendo. To protect yourself, please do the following steps before starting this guide:
+Es gibt Berichte über eine Welle von Banns, die Nintendo an CFW-Nutzer aushändigt. Befolge diese Schritte zuerst um dich davor zu schützen:
 
-1. Go to System Settings, then "Internet Settings", then "SpotPass", then "Sending of System Information"
-1. Disable the "Sending of System Information" option
-1. Exit the System Settings
-1. Go to your Friend's List (the Face Icon in the top row of your Home Menu)
-  + If you receive an error and are kicked out of the menu, the Friend's List setting is already disabled
-1. Go to the Friend's List settings, then "Friend Notification Settings", then "Show friends what you're playing"
-1. Disable the "Show friends what you're playing" option
-1. Exit your Friend's List
+1. Gehe zu den System-Einstellungen, dann "Internet-Einstellungen", dann "SpotPass" und dann "Senden von System-Informationen"
+1. Deaktiviere die Option "Senden von Systeminformationen an Nintendo"
+1. Schließe die Systemeinstellungen
+1. Gehe zu deiner Freundesliste (das Gesichtssymbol in der oberen Reihe des Home-Menüs)
+  + Wenn du einen Fehler erhältst und aus dem Menü geworfen wirst, ist die Einstellung bereits deaktiviert
+1. Gehe zu den Einstellungen der Freundesliste, dann zu "Statusanzeige", dann "Freunden zeigen, was du spielst?"
+1. Deaktiviere die Option "Freunden zeigen, was du spielst?"
+1. Schließe die Freundesliste
 
 {% endcapture %}
 
@@ -32,31 +32,31 @@ There have been reports of a wave of bans being handed out to CFW users by Ninte
 
 #### Was du brauchst
 
-Note that the following required file named `secret_sector.bin` is the same one that was found in the various `data_input.zip` file versions. If you already have that file on your disk somewhere, you can use that one instead of downloading the one below.
+Beachte, dass die folgende Datei namens `secret_sector.bin` die gleiche ist, die auch in den verschiedenen Versionen der `data_input.zip` enthalten ist. Wenn du diese Datei irgendwo auf deiner Festplatte hast, kannst du diese benutzen anstatt die folgende Datei herunterzuladen.
 {: .notice--info}
 
-Note that, on New 3DS, `secret_sector.bin` is needed to revert the arm9loaderhax exploit, which is why it is not needed for the installation of boot9strap on a stock console. If you do not have a New 3DS, you do not need `secret_sector.bin`.
+Beachte, dass auf dem New 3DS die `secret_sector.bin` benötigt wird, um den arm9loaderhax-Exploit umzukehren, deswegen ist diese Datei nicht nötig um boot9strap auf einer unmodifizierten Konsole zu installieren. Wenn du keinen New 3DS hast, brauchst du die `secret_sector.bin` Datei nicht.
 {: .notice--info}
 
-* <i class="fa fa-magnet" aria-hidden="true" title="Dies ist ein Magnetlink. Use a torrent client to download the file."></i> - **New 3DS Users Only:** [`secret_sector.bin`](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce)
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(the `.7z` file)*
-* The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
-* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
+* <i class="fa fa-magnet" aria-hidden="true" title="Dies ist ein Magnetlink. Benutze einen Torrent-Client um die Datei herunterzuladen."></i> - **Nur New 3DS Benutzer:** [`secret_sector.bin`](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce)
+* Die neueste Version von [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(die `.7z`-Datei)*
+* Die neuste Version von [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* Die neueste Version von [boot9strap] (https://github.com/SciresM/boot9strap/releases/latest) *(nur boot9strap; weder die `devkit`-Datei, noch die `ntr`-Datei)*
 * Die neueste Version von [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* The latest fork of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
+* Den neuesten Fork des [Luma3DS Updaters](https://github.com/KunoichiZ/lumaupdate/releases/latest)
 * Das Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
 
 #### Anleitung
 
 ##### Abschnitt I - Vorbereitung
 
-For all steps in this section, overwrite any existing files on your SD card.
+Überschreibe für alle Schritte dieses Abschnitts bereits vorhandene Dateien auf der SD-Karte.
 {: .notice--info}
 
-1. Power off your device
+1. Schalte deine Konsole aus
 1. Stecke deine SD-Karte in deinen Computer
 1. Copy _the contents of_ `starter.zip` to the root of your SD card
-1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card
+1. Kopiere die Datei `boot.firm` aus der Luma3DS `.7z` in das Stammverzeichnis deiner SD-Karte
 1. Erstelle einen Ordner namens `cias` im Stammverzeichnis deiner SD-Karte, falls er noch nicht existiert
 1. Copy `lumaupdater.cia` to the `/cias/` folder on your SD card
 1. Create a folder named `boot9strap` on the root of your SD card
