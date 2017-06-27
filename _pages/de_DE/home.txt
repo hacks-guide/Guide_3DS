@@ -8,7 +8,7 @@ header:
   cta_label: "Los geht's" #
   cta_url: "/de_DE/get-started"
   caption:
-excerpt: "A complete guide to 3DS custom firmware, <br /> from stock to boot9strap.<br />"
+excerpt: "Eine vollständige Anleitung für 3DS Custom Firmware, <br />von original zu boot9strap.<br /> #
 ---
 
 {% capture notice-home %}
@@ -31,24 +31,24 @@ Bevor du fortfährst, lies alle Einleitungsseiten.
 
 [**Homebrew**](https://de.wikipedia.org/wiki/Homebrew) bezeichnet für gewöhnlich Software, die nicht von Nintendo autorisiert wurde. Es erlaubt dir, Homebrew-Spiele, -Werkzeuge (wie beispielsweise Spielstandbearbeitung/-sicherung), oder Emulatoren für verschiedene ältere Konsolen laufen zu lassen.
 
-In most cases, running homebrew on your device is 100% free using [just the Nintendo 3DS Sound app](homebrew-launcher-(soundhax)). Es gibt aber auch verschiedene andere Exploits in kommerziellen Spielen und dem Internet-Browser um Homebrew zu starten.
+In den meisten Fällen läuft Homebrew auf deinem Gerät 100% kostenlos [einfach über die Nintendo 3DS Sound App](homebrew-launcher-(soundhax)). Es gibt aber auch verschiedene andere Exploits in kommerziellen Spielen und dem Internet-Browser um Homebrew zu starten.
 
 ## Was ist Custom Firmware?
 
 **Custom Firmware** ("CFW") ermöglicht dir fortgeschrittene Hacks, welche Userland-Homebrew nicht ohne weiteres erlaubt. Zum Beispiel lassen sich mit Hilfe von Signatur-Patches unsignierte Titel installieren, die direkt im HOME-Menü erscheinen.
 
-CFW can be easily set up on any console that is on 11.4.0 or lower.
+CFW kann ganz einfach auf jedem System mit 11.4.0 oder niedriger installiert werden.
 
 ## Was wird mit dieser Anleitung installiert?
 
 Diese Anleitung hat das Ziel, einen 3DS mit Standardsoftware durch eine Installation
 firmware to boot9strap powered Custom Firmware. Für manche Versionen wird Homebrew als Ausgangspunkt benötigt, jedoch ist Custom Firmware trotzdem das Ziel.
 
-boot9strap is the newest and best method of launching Custom Firmware that gives us nearly full control of the system only milliseconds into boot, which is similar to the effect of BootMii for the Wii. It gives us even earlier control than arm9loaderhax did, and, unlike standard sighax, boot9strap uses an NDMA overwrite exploit in order to gain Boot9 code execution. This means that any console running boot9strap is capable of dumping the console unique OTP (`OTP.bin`), the ARM11 bootrom (`boot11.bin`), and the ARM9 bootrom (`boot9.bin`).
+boot9strap is the newest and best method of launching Custom Firmware that gives us nearly full control of the system only milliseconds into boot, which is similar to the effect of BootMii for the Wii. Es gibt uns noch früher Kontrolle als arm9loaderhax, und im Gegensatz zu dem normalen sighax benutzt boot9strap einen NDMA-Überschreibungs-Exploit um Boot9-Code auszuführen. This means that any console running boot9strap is capable of dumping the console unique OTP (`OTP.bin`), the ARM11 bootrom (`boot11.bin`), and the ARM9 bootrom (`boot9.bin`).
 
 The benefits of boot9strap over other Custom Firmware launch methods are numerous, and as such it is recommended to use this guide over any other that relies on outdated software (such as menuhax + rxTools, arm9loaderhax, or even normal sighax).
 
-For information on how boot9strap works, please see [this presentation](https://sciresm.github.io/33-and-a-half-c3/) by [SciresM](https://github.com/SciresM/).
+Informationen über die Funktionsweise von boot9strap werden in dieser [Präsentation](https://sciresm.github.io/33-and-a-half-c3/) von [SciresM](https://github.com/SciresM/) gezeigt.
 
 For a list of each of the calculated sighax signatures (the platform boot9strap is built on), see [this gist](https://gist.github.com/SciresM/cdd2266efb80175d37eabbe86f9d8c52).
 
@@ -62,14 +62,14 @@ For a list of each of the calculated sighax signatures (the platform boot9strap 
 + Emuliere Spiele von älteren Konsolen mit Hilfe von RetroArch und anderen Emulatoren. (Funktioniert am besten mit einem New 3DS)
 + Installiere Homebrewtitel so, dass sie ein Symbol im HOME-Menü erhalten
 + Erstelle Sicherheitskopien deiner Cartridges in einem installierbaren Format, um deine Spiele ohne Cartridge spielen zu können
-+ New 3DS or New 2DS only: stream live gameplay to your PC wirelessly with NTR CFW
++ Nur für den New 3DS: Streame Gameplay über Wifi auf deinen PC mittels NTR CFW
 + Nutze viele alte Nintendo DS Flashkarten die vor langer Zeit geblockt wurden oder nie auf dem 3DS funktionierten
 + Installiere Systemupdates, ohne die Möglichkeit Homebrew auszuführen zu verlieren
 
 ## Was muss ich wissen, bevor ich anfange?
 
 + **Bevor du mit dieser Anleitung anfängst, musst du die Risiken kennen: JEDES mal wenn du deinen 3DS modifizierst, besteht die Gefahr eines BRICKS, der deine Konsole UNWIDERRUFLICH unbrauchbar macht. Ein Brick tritt selten auf, aber ein Restrisiko bleibt bestehen, also befolge ALLE Anweisungen dieser Anleitung GENAUESTENS.**
-+ If you have already hacked your 3DS before to get an EmuNAND setup, and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, you should follow all instructions and restore your existing EmuNAND when prompted once you reach [Finalizing Setup](finalizing-setup).
++ Wenn du deinen 3DS bereits modifiziert hast und bereits über ein EmuNAND-Setup verfügst, kannst du den Inhalt des vorherigen EmuNANDs auf dein neues CFW-SysNAND transferieren. Befolge dazu alle Anweisungen zum Wiederherstellen des EmuNAND sobald du im Abschnitt [Setup fertigstellen](finalizing-setup) dazu aufgefordert wirst.
 + This guide will work on New 3DS, Old 3DS, New 2DS, and Old 2DS in all regions on firmware 11.4.0 or below.
 + Wenn alles nach Plan verläuft, wirst du keine Daten verlieren und dein System wird die gleichen Daten wie vorher haben (Spiele, NNID, Speicherstände, etc. werden erhalten bleiben).
 + **Sorge dafür, dass deine Konsole während des gesamten Prozesses geladen und am Stromnetz angeschlossen ist, um Datenverlust oder Schäden durch ein unerwartetes Abschalten zu vermeiden!**
