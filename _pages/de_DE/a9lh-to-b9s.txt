@@ -55,63 +55,63 @@ Beachte, dass auf dem New 3DS die `secret_sector.bin` benötigt wird, um den arm
 
 1. Schalte deine Konsole aus
 1. Stecke deine SD-Karte in deinen Computer
-1. Copy _the contents of_ `starter.zip` to the root of your SD card
+1. Kopiere _den Inhalt_ der `starter.zip` in das Stammverzeichnis der SD Karte
 1. Kopiere die Datei `boot.firm` aus der Luma3DS `.7z` in das Stammverzeichnis deiner SD-Karte
 1. Erstelle einen Ordner namens `cias` im Stammverzeichnis deiner SD-Karte, falls er noch nicht existiert
-1. Copy `lumaupdater.cia` to the `/cias/` folder on your SD card
-1. Create a folder named `boot9strap` on the root of your SD card
+1. Kopiere `lumaupdater.cia` in den `/cias/`-Ordner auf deiner SD-Karte
+1. Erstelle einen Ordner namens `boot9strap` im Stammverzeichnis deiner SD-Karte
 1. Kopiere `Godmode9.firm`von der `Godmode9.zip`-Datei nach `/luma/payloads/` auf deiner SD Karte
 1. Delete any existing `.bin` payloads in the `/luma/payloads/` folder on your SD card as they will not be compatible with boot9strap compatible Luma3DS versions
 1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the `/luma/payloads/` folder on your SD card
-1. Rename `SafeB9SInstaller.bin` in the `/luma/payloads/` folder on your SD card to `start_SafeB9SInstaller.bin`
-1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
-1. **New 3DS Users Only:** Copy `secret_sector.bin` to the `/boot9strap/` folder on your SD card
+1. Benenne `SafeB9SInstaller.bin` in dem `/luma/payloads/`-Ordner auf deiner SD-Karte zu `start_SafeB9SInstaller.bin` um
+1. Kopiere `boot9strap.firm` und `boot9strap.firm.sha` aus der boot9strap `.zip` in den `/boot9strap/`-Ordner auf deiner SD-Karte
+1. **Nur New 3DS Nutzer:** Kopiere `secret_sector.bin` in den `/boot9strap/` Ordner auf deiner SD-Karte
 
     ![]({{ base_path }}/images/screenshots/a9lh-to-b9s-file-layout.png)
     {: .notice--info}
 
-1. Reinsert your SD card into your device
+1. Stecke deine SD-Karte nun wieder in dein Gerät
 
-##### Section II - Installing boot9strap
+##### Abschnitt II - Installation von boot9strap
 
 1. Starte das Gerät, während du beim booten (Start) gedrückt hälst, um den Luma3DS Chainloader anzuzeigen
-  + Some versions of Luma3DS will just directly start whichever payload begins with `start_`
+  + Einige Versionen von Luma3DS starten einfach sofort einen Payload, der mit `start_` beginnt
   + If your version does this, just proceed with the instructions
-1. Launch SafeB9SInstaller by pressing (A) on it
-  + If this gives you an error, try either using a new SD card, or formatting your current SD card (backup existing files first)
+1. Starte den SafeBS9Installer, indem du (A) drückst
+  + Falls du dadurch eine Fehlermeldung erhälst, solltest du es entweder mit einer anderen SD-Karte versuchen, oder die SD-Karte formatieren (mache davor ein Backup)
 1. Wait for all safety checks to complete
-  + If you get an "OTP Crypto Fail" error, download <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [`aeskeydb.bin`](magnet:?xt=urn:btih:621f8af00638cb2b00d5bd0c6816543fa00b5fb1&dn=aeskeydb.bin&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce), then put it in the `/boot9strap/` folder on your SD card and try again
-1. When prompted, input the key combo given to install boot9strap
-1. Once it has completed, press (A) to reboot your device.
-  + If your device shuts down on boot, ensure that you have copied `boot.firm` from the Luma3DS `.7z` to the root of your SD card
+  + Bekommst du einen "OTP Crypto Fail"-Fehler, lade <i class="fa fa-magnet" aria-hidden="true" title="Dies ist ein Magnetlink. Benutze einen Torrent-Client, um diese Datei herunterzuladen."></i> - [`aeskeydb.bin`](magnet:?xt=urn:btih:621f8af00638cb2b00d5bd0c6816543fa00b5fb1&dn=aeskeydb.bin&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce)herunter, dann verschiebe sie in den `/boot9strap/` Ordner auf deiner SD-Karte und versuche es erneut
+1. Gib die Tastenkombination zur Bestätigung ein, wenn danach verlangt wird
+1. Sobald dies abgeschlossen ist drücke (A) um das Gerät neuzustarten.
+  + Wenn sich dein Gerät beim Startvorgang ausschaltet, solltest du sicherstellen, dass du die `boot.firm` aus der Luma3DS `.7z` in das Stammverzeichnis der SD-Karte kopiert hast
 
 ##### Abschnitt III - Luma3DS konfigurieren
 
-This section is only needed if you are prompted with the Luma3DS configuration menu after the reboot.
+Dieser Abschnitt wird nur benötigt, wenn du nach dem Neustart im Luma3DS-Konfigurationsmenü landest.
 {: .notice--info}
 
-1. In the Luma3DS configuration menu, use the (A) button and the D-Pad to turn on the following:    
+1. Verwende im Konfigurationsmenü von Luma3DS den Knopf (A) und das D-Pad, um folgendes zu aktivieren:    
   + **"Show NAND or user string in System Settings"**
 1. Drücke (Start) zum Speichern und neustarten
 
 ##### Abschnitt IV - Installation von Luma3DS auf das CTRNAND
 
-If, before updating to boot9strap, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand) before doing this section.
+Falls du vor dem Update auf boot9strap bereits ein EmuNAND eingerichtet hattest und die Inhalte deines vorherigen EmuNAND gerne auf deine neue SysNAND-CFW übertragen möchtest, solltest du jetzt [Verschiebe EmuNAND](move-emunand) befolgen, bevor du diesen Abschnitt durchführst.
 {: .notice--info}
 
 1. Starte das Gerät wieder neu, während du (Start) gedrückt hälst, um den Luma3DS Chainlaoder anzuzeigen
 1. Starte GodMode9 indem du (A) drückst
-1. Navigate to `[0:] SDCARD` -> `luma` -> `payloads`
-1. Press (X) on `start_SafeB9SInstaller.bin` to delete it
+1. Navigiere zu `[0:] SDCARD` -> `luma`-> `payloads`
+1. Drücke (X) auf `start_SafeB9SInstaller.bin` um die Datei zu löschen
 1. Drücke (A), um zu bestätigen
-1. Press (B) to return to `[0:] SDCARD`
-1. Press (Y) on `boot.firm` to copy it
+1. Drücke (B) um zu `[0:] SDCARD` zurückzukehren
+1. Drücke (Y) auf `boot.firm` um es zu kopieren
 1. Drücke (B), um zum Hauptmenü zurückzukehren
 1. Navigiere zu `[1:] SYSNAND CTRNAND`
-1. Press (Y) to paste a copy of `boot.firm`
+1. Drücke (Y) um eine Kopie der `boot.firm` einzufügen
 1. Wähle "Copy path(s)" aus
 1. Drücke (A), um die SysNAND (Stufe 1) Bearbeitung zu aktivieren. Dann gebe die angegebene Tastenkombination ein
-1. Press (X) on `arm9loaderhax.bin` to delete it
+1. Drücke (X) auf `arm9loaderhax.bin`, um diese Datei zu löschen
   + If you do not have this file, just proceed with the instructions
 1. Drücke (A), um zu bestätigen
 1. Drücke (B), um zum Hauptmenü zurückzukehren
