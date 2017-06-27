@@ -1,30 +1,30 @@
 ---
-title: "Installing boot9strap (Hardmod)"
+title: "Installieren von boot9strap (Hardmod)"
 ---
 
-An excellent guide to getting a hardmod can be found [here](https://gbatemp.net/threads/414498/). If you are on a New 3DS, read [this](https://github.com/Plailect/Guide/issues/681) and [this](https://github.com/Plailect/Guide/issues/1185) before hardmodding.
+Eine exzellente Anleitung (auf Englisch) für einen Hardmod kannst du [hier](https://gbatemp.net/threads/414498/) finden. Falls dein Gerät ein New 3DS ist, lies [this](https://github.com/Plailect/Guide/issues/681) und [this](https://github.com/Plailect/Guide/issues/1185), bevor du ein Hardmod machst.
 {: .notice--info}
 
-This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+Dies ist eine zurzeit funktionierende Implementation des "FIRM Partitions Known-Plaintext"-Exploits. Details findest du [hier](https://www.3dbrew.org/wiki/3DS_System_Flaws).
 {: .notice--info}
 
 Um die [Magnet-Links](https://en.wikipedia.org/wiki/Magnet_URI_scheme) auf dieser Seite zu nutzen, brauchst du einen Torrent-Programm wie [Deluge](http://dev.deluge-torrent.org/wiki/Download)
 {: .notice--success}
 
-This will work on New 3DS, New 2DS, Old 3DS, and Old 2DS on *all* versions that you have a corresponding `.firm` for.
+Dies funktioniert auf mit New 3DS, New 2DS, Old 3DS und Old 2DS auf *allen* Versionen, für die du eine entsprechende `.firm`-Datei hast.
 {: .notice--success}
 
 #### Was du brauchst
 
-* Your NAND image extracted using your [hardmod](https://gbatemp.net/threads/414498/)
+*Deine NAND-Sicherheitskopie, welche du mit Hilfe deines [Hardmods](https://gbatemp.net/threads/414498/) erstellt hast
 * Die neueste Version von [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; nicht die `devkit` Datei, nicht die `ntr` Datei)*
-* The latest version of [hardmod-b9s-installer](https://github.com/ihaveamac/hardmod-b9s-installer/releases/latest)
-  + Windows users can use the compiled `.exe`, while Mac and Linux users will need to have [Python 3](https://www.python.org/downloads/) installed to run the `.py`
+* Die neueste Version vom [hardmod-b9s-installer] (https://github.com/ihaveamac/hardmod-b9s-installer/releases/latest)
+  + Windows-Benutzer können die kompilierte `.exe` benutzen, während Mac und Linux-Benutzer [Python 3] (https://www.python.org/downloads/) installiert haben müssen, um die `.py` auszuführen
 * Die neueste Version von [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(die `.7z`-Datei)*
 * Das Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
-* The `.firm` corresponding to your device and version:
+* Die `.firm` entsprechend deiner Konsole und Firmware:
 
-| Version(s) | Kernel | Old 3DS or Old 2DS | New 3DS or New 2DS |
+| Version(en) | Kernel | Old 3DS oder Old 2DS | New 3DS oder New 2DS |
 |-|-|:-:|:-:|
 | 1.0.0 | 2.27-0 | [`2.27-0_1.0_OLD.firm`](magnet:?xt=urn:btih:5c86edc67a1827991567b3c326a4182b66647d07&dn=2.27-0_1.0_OLD.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce) | - |
 | 1.1.0 | 2.28-0 | [`2.28-0_1.1_OLD.firm`](magnet:?xt=urn:btih:7c7696ff18e7d83a638b9c80f83052f763fb0fa5&dn=2.28-0_1.1_OLD.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce) | - |
@@ -61,18 +61,18 @@ This will work on New 3DS, New 2DS, Old 3DS, and Old 2DS on *all* versions that 
 
 1. Kopiere die Datei `boot.firm` aus der Luma3DS `.7z` in das Stammverzeichnis deiner SD-Karte
 1. Kopiere _den Inhalt_ der `starter.zip` in das Stammverzeichnis der SD Karte
-1. Copy the hardmod-b9s-installer folder from the hardmod-b9s-installer `.zip` to your computer
-1. Copy your downloaded `.firm` to the hardmod-b9s-installer folder on your computer
-1. Rename your downloaded `.firm` in the hardmod-b9s-installer folder on your computer to `current.firm`
-1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the hardmod-b9s-installer folder on your computer
-1. Copy your NAND dump (from your hardmod) to the hardmod-b9s-installer folder on your computer and name it `NAND.bin`
+1. Kopiere den hardmod-b9s-installer-Ordner von der hardmod-b9s-installer `.zip` auf deinen Computer
+1. Kopiere deine heruntergeladene `.firm` in den hardmod-b9s-installer-Ordner auf deinem PC
+1. Benenne die heruntergeladene `.firm` in dem hardmod-b9s-installer-Ordner auf deinem PC zu `current.firm` um
+1. Kopiere `boot9strap.firm` und `boot9strap.firm.sha` aus der boot9strap `.zip` in den hardmod-b9s-installer-Ordner auf deinem PC
+1. Kopiere deine NAND Kopie (von deinem Hardmod) in den hardmod-b9s-installer auf deinem Computer und benenne sie in `NAND.bin` um
 
 ##### Abschnitt II - Installation von boot9strap
 
-1. Run hardmod-b9s-installer
-  + Windows Users: Run `install-b9s.exe`
-  + Mac and Linux Users: Run `install-b9s.py`
-1. Flash your outputted `NAND-patched.bin` to your device with your hardmod
+1. Starte den hardmod-b9s-installer
+  + Windows Nutzer: Führe `install-b9s.exe` aus
+  + Mac und Linux Nutzer: Führe `install-b9s.py` aus
+1. Beschreibe mit dem ausgegebenen `NAND-patched.bin`, den NAND deines Geräts, indem du dein Hardmod verwendet
 1. Starte dein Gerät neu
 
 ##### Abschnitt III - Luma3DS konfigurieren
