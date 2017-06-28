@@ -94,7 +94,6 @@ Benutze einen [save manager](https://github.com/J-D-K/JKSM/releases/latest) um a
   + Falls dein Spiel einen Fehler über beschädigte oder nicht aufrufbare Speicherdaten anzeigt, stelle sicher, dass du **die Inhalte** des Ordners `savedata`, und nicht den Ordner `savedata` selbst kopiert hast
   + Falls dein Spiel sich normal verhält und dir keine Fehlermeldung über `boot.nds` anzeigt, dann solltest du aufhören und herausfinden, was schief gelaufen ist
   + Wenn du einen schwarzen Bildschirm bekommst, [folge diesen Problembehandlungen](troubleshooting#twl_broken)
-  + Falls das Spiel auf dem **Ziel 3DS** fehlt oder einen Fehler über beschädigte oder nicht aufrufbare Speicherstände anzeigt, [folge dieser Anleitung zur Problembehandlung](troubleshooting#ts_dsiware)
 
 ##### Abschnitt III - Systemtransfer
 
@@ -121,8 +120,8 @@ Benutze einen [save manager](https://github.com/J-D-K/JKSM/releases/latest) um a
     + Du kannst auch einfach [die NNID vom **Quell-3DS** entfernen](https://3ds.guide/troubleshooting#rm_nnid), falls du es bevorzugst, dass diese auf **dem Ziel-3DS** bleibt
 1. Starte den **Quell-3DS** neu, während du beim Booten (Start) gedrückt hälst, um den Luma3DS Chainloader anzuzeigen
 1. Starte GodMode9 indem du (A) drückst
-1. Navigiere zu `[0:] SDCARD`
-1. Drücke (A) auf deiner NAND `.bin`, um es auszuwählen, wähle dann" NAND image options... " und wähle dann "Restore SysNAND (safe) "
+1. Navigiere zu `[0:] SDCARD` ->` gm9out`
+1. Drücke (A) auf `nand.bin`, um es auszuwählen, wähle dann "NAND image options...", dann wähle "Restore SysNAND (safe)"
 1. Drücke (A), um SysNAND-Änderungen zu aktivieren. Gib danach die angezeigte Tastenkombination ein
   + Die Installation von boot9strap wird dadurch nicht überschrieben
 1. Gib die angezeigte Tastenkombination ein, um SysNAND-Änderungen (auf erster Ebene) zu aktivieren
@@ -139,12 +138,11 @@ Benutze einen [save manager](https://github.com/J-D-K/JKSM/releases/latest) um a
 1. Kopiere die 11.4.0 `.firm` entsprechend des **Ziel-3DS** in das `boot9strap`-Verzeichnis im Stammverzeichnis der SD-Karte des **Ziel-3DS**
 1. Kopiere `boot9strap.firm` aus der boot9strap `.zip` in den `/boot9strap/`-Ordner auf deiner SD-Karte
 1. Starte b9sTool indem du das DSiWare-Spiel auf deinem **Ziel-3DS** startest
-  + Wenn das Spiel b9sTool nicht startet, [folge diesem Guide](troubleshooting#ts_dsiware) zur Fehlerbehebung
+  + If the game is missing or does not launch b9sTool, [follow this troubleshooting guide](troubleshooting#ts_dsiware)
 1. Wähle "Dump f0f1" um ein Backup der FIRM **des Ziel-3DS** zu erstellen
-1. Merke dir wo sich das FIRM Backup befindet
 1. Beende b9sTool
   + Unter Umständen musst du das Ausschalten der Konsole erzwingen indem du den Power-Knopf gedrückt hälst
-1. Stecke die SD-Karte wieder in deinen Computer und kopiere dort `F0F1_N3DS.bin` oder `F0F1_O3DS.bin` ( je nachdem, welches Gerät du hast) zu einem sicheren Ort; mache mehrere Kopien in mehreren Ordnern; dieses Backup wird dich von einem Brick schützen, falls etwas schiefgehen sollte
+1. Put your SD card in your computer, then copy `F0F1_N3DS.bin` or `F0F1_O3DS.bin` (depending on your device) from the `boot9strap` folder to a safe location; make backups in multiple locations; this backup will save you from a brick if anything goes wrong
 1. Lege die SD-Karte in den **Ziel-3DS** ein
 
 ##### Abschnitt VI - Überschreiben der FIRM des Zielsystems
