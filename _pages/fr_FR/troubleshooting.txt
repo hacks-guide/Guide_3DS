@@ -122,6 +122,26 @@ Les exploits basé sur le navigateur (tel que browserhax ou 2xrsa) sont parfois 
     1. Si vous passez en mode sécurisé, mettre à jour votre console
 1. Votre console est peut-être brickée. Pour obtenir de l'aide, demandez de l'aide à [Nintendo Homebrew sur Discord(Anglais)](https://discord.gg/MWxPgEp)
 
+## <a name="ts_dsiware" />After doing the DSiWare Transfer, my hacked DSiWare does not work
+
+1. Rallumez la **3DS source** en maintenant (Start) pour lancer le chainloader de Luma3DS
+1. Lancez GodMode9 en appuyant sur (A)
+1. Naviguez vers `[0:] SDCARD` -> `gm9out`
+1. Press (A) on `nand.bin` to select it, then select "NAND image options…", then select "Restore SysNAND (safe)"
+1. Appuyez sur (A) pour débloquer l'écriture sur votre SysNAND, puis entrez la combinaison de touches demandée
+  + Ceci n'effacera pas votre installation boot9strap
+1. Entrez la combinaison de touche demandée pour débloquer l'écriture sur votre SysNAND (lvl1)
+  + Ce processus pendra du temps
+1. Une fois le transfert terminé, appuyez sur (A) pour continuer
+1. If you don't see the game at all on **the target 3DS**, link the NNID you bought the game with to **the target 3DS** and redownload it
+  + You may have to delete the game from "Data Management" in the "System Settings" first
+  + If **the target 3DS** is not the latest version, you may have to run ctr-httpwn to access the eShop
+1. On **the source 3DS**, do the the save (and `.app` if you are using the `.app` page) injection steps
+1. On **the source 3DS**, go to System Settings, "Data Management", "DSiWare", then copy your DSiWare game to your SD card
+1. Either put **the source 3DS**'s SD card in **the target 3DS**, or rename the `Nintendo 3DS` on **the target 3DS**'s SD card and copy the `Nintendo 3DS` folder from **the source 3DS**'s SD card to **the target 3DS**'s SD card
+1. On **the target 3DS**, go to System Settings, "Data Management", "DSiWare", then copy your DSiWare game to the system
+1. Return your SD cards to normal, then continue with the DSiWare Injection
+
 ## <a name="ts_sys_b9s" /> Écran noir au démarrage de SysNAND après l’installation de boot9strap
 
 1. Assurez-vous d'avoir un payload fonctionnel.
