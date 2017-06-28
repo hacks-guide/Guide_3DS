@@ -123,6 +123,26 @@ Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only dis
     1. If you enter safe mode, update your device
 1. Your device may be bricked. For support, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
 
+## <a name="ts_dsiware" />After doing the DSiWare Transfer, my hacked DSiWare does not work
+
+1. Reboot **the source 3DS** while holding (Start) to launch the Luma3DS chainloader menu
+1. (A)를 눌러 GodMode9을 실행해 주세요.
+1. `[0:] SDCARD` -> `gm9out`으로 이동해 주세요.
+1. Press (A) on `nand.bin` to select it, then select "NAND image options…", then select "Restore SysNAND (safe)"
+1. (A)를 눌러 SysNAND 덮어쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요.
+  + This will not overwrite your boot9strap installation
+1. SysNAND (lvl1) 쓰기 잠금을 풀기 위해 주어진 키 조합을 입력해 주세요.
+  + 이 과정은 시간이 좀 걸릴 것입니다.
+1. 작업이 완료되면 (A)를 눌려 계속해 주세요.
+1. If you don't see the game at all on **the target 3DS**, link the NNID you bought the game with to **the target 3DS** and redownload it
+  + You may have to delete the game from "Data Management" in the "System Settings" first
+  + If **the target 3DS** is not the latest version, you may have to run ctr-httpwn to access the eShop
+1. On **the source 3DS**, do the the save (and `.app` if you are using the `.app` page) injection steps
+1. On **the source 3DS**, go to System Settings, "Data Management", "DSiWare", then copy your DSiWare game to your SD card
+1. Either put **the source 3DS**'s SD card in **the target 3DS**, or rename the `Nintendo 3DS` on **the target 3DS**'s SD card and copy the `Nintendo 3DS` folder from **the source 3DS**'s SD card to **the target 3DS**'s SD card
+1. On **the target 3DS**, go to System Settings, "Data Management", "DSiWare", then copy your DSiWare game to the system
+1. Return your SD cards to normal, then continue with the DSiWare Injection
+
 ## <a name="ts_sys_b9s" />Black screen on SysNAND boot after Installing boot9strap
 
 1. 작동하는 페이로드인지 확인해 주세요.
