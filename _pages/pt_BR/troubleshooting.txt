@@ -122,6 +122,26 @@ Exploits do navegador (como browserhax ou 2xrsa) são normalmente instáveis e f
     1. Se você entrar no modo de segurança, atualize seu dispositivo
 1. Seu dispositivo talvez tenha brickado. Para suporte, peça ajuda em [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp)
 
+## <a name="ts_dsiware" />After doing the DSiWare Transfer, my hacked DSiWare does not work
+
+1. Reinicie o **3DS de origem** enquanto segura (Start) para iniciar o menu do chainloader do Luma3DS
+1. Inicie o GodMode9 apertando (A)
+1. Navegue para `[0:] SDCARD` -> `gm9out`
+1. Press (A) on `nand.bin` to select it, then select "NAND image options…", then select "Restore SysNAND (safe)"
+1. Aperte (A) para destravar as modificações na SysNAND, então aperte a sequência de botões solicitada
+  + Isso não irá substituir sua instalação do boot9strap
+1. Aperte a sequência de botões solicitada para desbloquear "SysNAND (lvl1) writing"
+  + Este processo levará algum tempo
+1. Quando concluído, aperte (A) para continuar
+1. If you don't see the game at all on **the target 3DS**, link the NNID you bought the game with to **the target 3DS** and redownload it
+  + You may have to delete the game from "Data Management" in the "System Settings" first
+  + If **the target 3DS** is not the latest version, you may have to run ctr-httpwn to access the eShop
+1. On **the source 3DS**, do the the save (and `.app` if you are using the `.app` page) injection steps
+1. On **the source 3DS**, go to System Settings, "Data Management", "DSiWare", then copy your DSiWare game to your SD card
+1. Either put **the source 3DS**'s SD card in **the target 3DS**, or rename the `Nintendo 3DS` on **the target 3DS**'s SD card and copy the `Nintendo 3DS` folder from **the source 3DS**'s SD card to **the target 3DS**'s SD card
+1. On **the target 3DS**, go to System Settings, "Data Management", "DSiWare", then copy your DSiWare game to the system
+1. Return your SD cards to normal, then continue with the DSiWare Injection
+
 ## <a name="ts_sys_b9s" />Tela preta ao iniciar a SysNAND após instalar o boot9strap
 
 1. Certifique-se que seu payload é funcional.
