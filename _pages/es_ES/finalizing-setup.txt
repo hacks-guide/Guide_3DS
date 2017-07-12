@@ -51,6 +51,7 @@ Durante este proceso, también instalaremos programas como los siguientes:
 
 1. Crea una carpeta llamada `payloads` en la carpeta `luma` de tu tarjeta SD
 1. Copia el archivo `GodMode9.firm` desde el `.zip` de GodMode9 a la carpeta `/luma/payloads/` en tu tarjeta SD
+1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
 
     ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
     {: .notice--info}
@@ -100,6 +101,7 @@ Si, antes de seguir esta guía, ya tenías una configuración EmuNAND y deseas m
 ##### Sección VI - CTRNAND Luma3DS
 
 1. Reinicia tu consola manteniendo pulsado (Start) para entrar a GodMode9
+1. When prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
 1. Ve a `[0:] SDCARD`
 1. Presiona (Y) sobre `boot.firm` para copiarlo
 1. Presiona (B) para volver al menú principal
@@ -107,6 +109,7 @@ Si, antes de seguir esta guía, ya tenías una configuración EmuNAND y deseas m
 1. Presiona (Y) para pegar una copia de `boot.firm`
 1. Selecciona "Copy path(s)"
 1. Presiona (A) para desbloquear la escritura de SysNAND (lvl1) y después haz la combinación de teclas mostrada
+1. Press (B) to decline relocking write permissions if prompted
 1. Presiona (B) para volver al menú principal
 1. Ve a `[0:] SDCARD`
 1. Presiona (Y) sobre la carpeta `luma` para copiarla
@@ -115,19 +118,22 @@ Si, antes de seguir esta guía, ya tenías una configuración EmuNAND y deseas m
 1. Presiona (Y) para pegar una copia de la carpeta `luma` desde tu tarjeta SD
 1. Selecciona "Copy path(s)"
 
-##### Sección VII - Copia de seguridad de la NAND
+##### Sección VII - Copia de seguridad de la SysNAND
 
 1. Presiona (B) dos veces para volver al menú principal
 1. Presiona el botón (Home) para abrir el menú de acción
 1. Selecciona "Mas..."
-1. Selecciona "Backup NAND"
+1. Select "Scripts"
+1. Select "Backup SysNAND"
+1. Presiona (A) para confirmar
+  + Este proceso tomará algún tiempo
 1. Presiona (A) para continuar
 1. Mantén (R) y presiona (B) al mismo tiempo para extraer la SD
 1. Inserta tu tarjeta SD en tu computadora
-1. Copia `nand.bin` y `nand.bin.sha` desde la carpeta `/gm9out/` en tu tarjeta SD a una ubicación segura en tu computadora
+1. Copy `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Haz copias de seguridad en múltiples sitios (como por ejemplo, en un pendrive o almacenamiento online)
   + Esta copia de seguridad puede salvarte de un brick si algo va mal en el futuro
-1. Elimina `nand.bin` y `nand.bin.sha` de la carpeta `/gm9out/` de tu tarjeta SD después de copiarlos
+1. Delete `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. Vuelve a insertar tu tarjeta SD en tu consola
 1. Presiona (Start) para guardar y reiniciar
 
