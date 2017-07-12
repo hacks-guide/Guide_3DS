@@ -24,16 +24,17 @@ Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only dis
 1. (A)를 눌러 GodMode9을 실행해 주세요.
 1. (Home)을 눌러 작업 메뉴를 띄워 주세요.
 1. "More..."를 선택해 주세요.
-1. "Backup NAND"를 선택해 주세요.
+1. Select "Scripts"
+1. Select "Backup SysNAND"
+1. (A)를 눌러 주세요.
+  + 이 과정은 시간이 좀 걸릴 것입니다.
 1. (A)를 눌러 진행해 주세요.
 1. (R)과 (B)를 동시에 누른 후 SD 카드를 빼 주세요.
 1. SD 카드를 컴퓨터에 삽입해 주세요.
-1. Copy `nand.bin` and `nand.bin.sha` from the `/gm9out/` folder on your SD card to a safe location on your computer
-  + 이전에 SafeCTRTransfer를 사용했고 이름이 `<serialnumber>_nand.bin`인 NAND 백업이 있다면 이 파일로 바꿔 주세요.
-(`nand.bin`의 이름을 `<serialnumber>_nand.bin`으로 바꿔 주세요.)
+1. Copy `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + 여러 위치에 백업을 해 주세요. (온라인 파일 저장 공간 등)
   + 나중에 문제가 생겨 기기가 벽돌이 되었을 때 이 백업으로 기기를 살릴 수 있습니다.
-1. Delete `nand.bin` and `nand.bin.sha` from the `/gm9out/` folder on your SD card after copying it
+1. Delete `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. SD 카드를 기기에 다시 삽입해 주세요.
 
 ## <a name="nand_restore" /> NAND 백업 복구
@@ -49,6 +50,7 @@ Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only dis
 1. SysNAND (lvl1) 쓰기의 잠금을 풀기 위해 주어진 키 조합을 입력해 주세요.
   + 이 과정은 시간이 좀 걸릴 것입니다.
 1. 작업이 완료되면 (A)를 눌려 계속해 주세요.
+1. Press (B) to decline relocking write permissions if prompted
 
 ## <a name="injectHS" /> 모든 .CIA 앱 안전을 위한 주의사항에 주입
 
@@ -66,6 +68,7 @@ Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only dis
 1. `.app` 파일에 (A)를 부르고 "NCCH image options"를 선택하고 "Inject to H&S"를 선택해 주세요.
 1. (A)를 눌러 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요.
 1. (A)를 눌러 계속해 주세요.
+1. Press (A) to relock write permissions if prompted
 
 ## <a name="restore_hs" /> .CIA 앱 주입 이후 안전을 위한 주의사항 복구
 
@@ -80,6 +83,7 @@ Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only dis
 1. "More..."를 선택해 주세요.
 1. "Restore H&S"를 선택해 주세요.
 1. (A)를 눌려 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요.
+1. Press (A) to relock write permissions if prompted
 
 ## <a name="dump_cart" /> 게임 카드 추출
 
@@ -96,8 +100,8 @@ Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only dis
 1. `[C:] GAMECART`로 이동해 주세요.
 1. 게임 카드에 맞게 해당 과정을 참고해 주세요.
   + **3DS 게임 카드:** `[TitleID].trim.3ds`에 (A)를 눌러 선택하고 "NCSD image options..."를 선택하고 "Build CIA from file"을 선택해 주세요.
-  + **NDS 게임 카드:** `[TitleID].trim.nds`에 (A)를 눌러 선택하고 "Copy to 0:/gm9out"을 선택해 주세요.
-1. 설치가 가능한 `.cia` 파일이나 설치가 불가능한 `.nds` 파일은 SD 카드의 `/gm9out/` 폴더에 출력됩니다.
+  + **NDS Game Cartridge:** Press (A) on `[TitleID].trim.nds` to select it, then select "Copy to 0:/gm9/out"
+1. Your installable `.cia` or non-installable `.nds` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
 ## <a name="dump_title" /> 타이틀 추출
 
@@ -119,7 +123,7 @@ Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only dis
 1. 올바른 타이틀을 찾았는지 확인해 주세요.
 1. (B)를 눌러 타이틀 정보를 닫아 주세요.
 1. `.tmd` 파일에 (A)를 눌러 선택하고 "TMD file options..."를 선택하고 "Build CIA (standard)"를 선택해 주세요.
-1. 설치 가능한`.cia` 형식의 파일은 SD 카드의`/ gm9out /`폴더에 출력됩니다.
+1. Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
 ## <a name="convert_3ds" /> .3DS 파일을 .CIA 파일로 변환
 
@@ -135,7 +139,7 @@ Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only dis
 1. `[0:] SDCARD` -> `cias`로 이동해 주세요.
 1. `.3ds` 파일에 (A)를 눌러 선택하고 "NCSD image options..."를 선택하고 "Build CIA from file"를
 을 선택해 주세요.
-1. 설치 가능한`.cia` 형식의 파일은 SD 카드의`/ gm9out /`폴더에 출력됩니다.
+1. Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
 ## <a name="backup_gba" /> GBA VC 저장 데이터 백업
 
@@ -210,10 +214,8 @@ Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only dis
 1. `[0:] SDCARD` -> `cias`로 이동해 주세요.
 1. `.cia` 파일에 (A)를 눌러 선택하고 "CIA image options..."를 선택해 주세요.
 1. 원하는 기능 설정을 선택해 주세요:
-    + **0:/gm9out으로 암호화:** SD 카드의
-`/gm9out/` 폴더에 선택한 암호화된 `.cia` 파일을 복사해 주세요.
-    + **0:/gm9out으로 복호화:** SD 카드의
-`/gm9out/` 폴더에 선택한 복호화된 `.cia` 파일을 복사해 주세요.
+    + **Encrypt to 0:/gm9/out:** Create an encrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card
+    + **Decrypt to 0:/gm9/out:** Create a decrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card
     + **내부로 암호화:** 선택한 `.cia` 파일을 암호화한 버전으로 바꿔 주세요.
     + **내부로 복호화:** 선택한 `.cia` 파일을 복호화한 버전으로 바꿔 주세요.
 1. 암호화 / 복호화된 `.cia`는 원하는 위치에 출력됩니다.
