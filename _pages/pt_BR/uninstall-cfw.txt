@@ -1,0 +1,68 @@
+---
+title: "Uninstall CFW"
+---
+
+This will completely remove CFW from your device, including Boot9Strap and Luma3DS, for the purpose of restoring the device to stock.
+{: .notice--danger}
+
+Any unsigned (illegitimate) games will be rendered unusable and can be manually removed using the Data Management section of the System Settings. Use a [save manager](https://github.com/J-D-K/JKSM/releases/latest) to backup any saves for these unsigned (illegitimate) games you care about.
+{: .notice--info}
+
+This will not affect your NNID, any legitimately purchased games, or any saves for those legitimately purchased games.
+{: .notice--info}
+
+Note que, em algumas versões do Luma3DS, o menu do chainloader do Luma3DS só é mostrado se houver mais de um payload detectado. Se houver apenas um payload detectado, segurar (Start) ao inicializar o dispositovo abrirá diretamente o GodMode9.
+{: .notice--info}
+
+#### O que você precisa
+
+* A versão mais recente do [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* The uninstaller script corresponding to your device:
+  + [`uninstall_hax_retail_NEW.gm9`]({{ base_path }}/gm9_scripts/uninstall_hax_retail_NEW.gm9)
+  + [`uninstall_hax_retail_OLD.gm9`]({{ base_path }}/gm9_scripts/uninstall_hax_retail_OLD.gm9)
+
+#### Instruções
+
+##### Seção I - Trabalho Preparatório
+
+1. Desligue seu dispositivo
+1. Insira o cartão SD no seu computador
+1. Copie `GodMode9.firm` do `.zip` do GodMode9 para a pasta `/luma/payloads/` no seu cartão SD
+1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+1. Copy the uninstaller script corresponding to your device to the `/gm9/scripts/` folder on your SD card
+1. Reinsira seu cartão SD no seu dispositivo
+1. Ligue o seu dispositivo
+
+##### Section II - Uninstalling boot9strap
+
+1. Inicie seu dispositivo enquanto segura (Start) para iniciar o menu do chainloader do Luma3DS
+1. Inicie o GodMode9 apertando (A)
+1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
+1. Aperte (Home) para abrir o menu de ações
+1. Selecione "More..."
+1. Select "Scripts..."
+1. Select the uninstaller script
+1. When prompted, press (A) to proceed
+1. Press (A) to unlock SysNAND (lvl3) writing, then input the key combo given
+1. Aperte (A) para continuar
+1. Press (A) to relock write permissions
+
+##### Section III - Removing CTRNAND Luma3DS
+
+1. Navegue para `[1:] SYSNAND CTRNAND` -> `rw`
+1. Press (X) on `luma` to delete it
+1. Aperte (A) para confirmar
+1. Aperte (A) para destravar "SysNAND (lvl1) writing", então aperte a sequência de botões solicitada
+1. Press (B) to decline relocking write permissions if prompted
+1. Press (B) to return to `rw`
+1. Press (X) on `boot.firm` to delete it
+1. Aperte (A) para confirmar
+1. Aperte (Start) para reiniciar
+
+___
+
+All custom firmware has been removed from your device.
+{: .notice--success}
+
+You can now remove any extra files and folders from the root of your SD card that are *not* the `Nintendo 3DS` or `DCIM` folders.
+{: .notice--info}
