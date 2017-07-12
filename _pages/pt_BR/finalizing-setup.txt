@@ -51,6 +51,7 @@ Durante este processo, também configuramos alguns programas como os seguintes:
 
 1. Crie uma pasta chamada `payloads` dentro da pasta `luma` do seu cartão SD
 1. Copie `GodMode9.firm` do `.zip` do GodMode9 para a pasta `/luma/payloads/` no seu cartão SD
+1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
 
     ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
     {: .notice--info}
@@ -100,6 +101,7 @@ Se, antes de seguir este guia, você já possuia uma instalação EmuNAND e gost
 ##### Seção VI - Luma3DS & CTRNAND
 
 1. Reinicie segurando (Start) durante a inicialização para iniciar o GodMode9
+1. When prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
 1. Navegue para `[0:] SDCARD`
 1. Aperte (Y) no `boot.firm` para copiá-lo
 1. Aperte (B) para retornar para o menu principal
@@ -107,6 +109,7 @@ Se, antes de seguir este guia, você já possuia uma instalação EmuNAND e gost
 1. Aperte (Y) para colar uma cópia do `boot.firm`
 1. Selecione "Copy path(s)"
 1. Aperte (A) para destravar "SysNAND (lvl1) writing", então aperte a sequência de botões solicitada
+1. Press (B) to decline relocking write permissions if prompted
 1. Aperte (B) para retornar para o menu principal
 1. Navegue para `[0:] SDCARD`
 1. Aperte (Y) na pasta `luma` para copia-la
@@ -115,19 +118,22 @@ Se, antes de seguir este guia, você já possuia uma instalação EmuNAND e gost
 1. Aperte (Y) para colar uma cópia da pasta `luma` do seu cartão SD
 1. Selecione "Copy path(s)"
 
-##### Seção VII - Backup da NAND
+##### Seção VII - Backup da SysNAND
 
 1. Aperte (B) duas vezes para retornar para o menu principal
 1. Aperte (Home) para abrir o menu de ações
 1. Selecione "More..."
-1. Selecione "Backup NAND"
+1. Select "Scripts"
+1. Select "Backup SysNAND"
+1. Aperte (A) para confirmar
+  + Este processo levará algum tempo
 1. Aperte (A) para continuar
 1. Segure (R) e aperte (B) ao mesmo tempo para ejetar o cartão SD
 1. Insira o cartão SD no seu computador
-1. Copie `nand.bin` e `nand.bin.sha` da pasta `/gm9out/` no seu cartão SD para um local seguro no seu computador
+1. Copy `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Faça backups em diversos lugares (tais como armazenamento de arquivos online)
   + Este backup vai salvá-lo de um brick caso algo dê errado no futuro
-1. Apague `nand.bin` e `nand.bin.sha` da pasta `/gm9out/` no seu cartão SD após copiá-los
+1. Delete `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. Reinsira seu cartão SD no seu dispositivo
 1. Aperte (Start) para salvar e reiniciar
 
