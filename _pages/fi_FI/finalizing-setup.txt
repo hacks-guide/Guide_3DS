@@ -51,6 +51,7 @@ Tämän prosessin aikana myös asennetaan muun muassa seuraavat ohjelmat:
 
 1. Luo `payloads`-niminen kansio SD-korttisi `luma`-kansioon
 1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
+1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
 
     ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
     {: .notice--info}
@@ -100,6 +101,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
 ##### Section VI - CTRNAND Luma3DS
 
 1. Reboot holding (Start) during boot to launch GodMode9
+1. When prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
 1. Mene hakemistoon `[0:] SDCARD`
 1. Press (Y) on `boot.firm` to copy it
 1. Paina (B):tä palataksesi päävalikkoon
@@ -107,6 +109,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
 1. Press (Y) to paste a copy of `boot.firm`
 1. Valitse "Copy path(s)"
 1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1) ja syötä annettu painikeyhdistelmä
+1. Press (B) to decline relocking write permissions if prompted
 1. Paina (B):tä palataksesi päävalikkoon
 1. Mene hakemistoon `[0:] SDCARD`
 1. Press (Y) on the `luma` folder to copy it
@@ -115,19 +118,22 @@ If, before following this guide, you already had an EmuNAND setup and would like
 1. Press (Y) to paste a copy of the `luma` folder from your SD card
 1. Valitse "Copy path(s)"
 
-##### Section VII - NAND Backup
+##### Vaihe VII – SysNANDin varmuuskopiointi
 
 1. Paina (B):tä kahdesti palataksesi päävalikkoon
 1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
 1. Valitse "More..."
-1. Valitse "Backup NAND"
+1. Select "Scripts"
+1. Select "Backup SysNAND"
+1. Paina (A):ta vahvistaaksesi
+  + Tämä proessi kestää jonkin aikaa
 1. Paina (A):ta jatkaaksesi
 1. Pidä (R):ää pohjassa ja paina samalla (B):tä irrottaaksesi SD-korttisi
 1. Aseta SD-korttisi tietokoneeseesi
-1. Copy `nand.bin` and `nand.bin.sha` from the `/gm9out/` folder on your SD card to a safe location on your computer
+1. Copy `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Varmuuskopioi useaan eri paikkaan (kuten pilvipalveluihin)
   + Tämä varmuuskopiointi pelastaa sinut konsolin vioittumiselta, jos jokin menee pieleen tulevaisuudessa
-1. Delete `nand.bin` and `nand.bin.sha` from the `/gm9out/` folder on your SD card after copying it
+1. Delete `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. Aseta SD-korttisi takaisin konsoliisi
 1. Paina (START)-painiketta tallentaaksesi ja käynnistääksesi uudelleen
 
