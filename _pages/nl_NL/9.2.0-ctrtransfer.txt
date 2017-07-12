@@ -23,7 +23,7 @@ Never format a New 2DS while on a version <11.4.0 without the New 2DS XL specifi
 #### Benodigdheden
 
 * De meest recente versie van [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* De meest recente versie van [FBI](https://github.com/Steveice10/FBI/releases/latest)
+* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) *(the`.3dsx` file)*
 * De 9.2.0 CTRTransfer image voor jouw apparaat en regio     
 *(Als jouw apparaat niet uit één van deze regio's afkomstig is, kan je een apparaat van hetzelfde type kiezen)*:
   +    <i class="fa fa-magnet" aria-hidden="true" title="Dit is een magnet link. Use a torrent client to download the file."></i> - [New 3DS or 2DS - 9.2.0 - EUR - CTRTransfer](magnet:?xt=urn:btih:fed7bfeec0e52b42a77467cfb6ffd3e9dd2d5a70&dn=9.2.0-20E%5FCTRTransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)   
@@ -43,14 +43,16 @@ Never format a New 2DS while on a version <11.4.0 without the New 2DS XL specifi
 1. Maak een nieuwe map genaamd `cias` in de hooofdmap van je SD kaart, indien deze nog niet aanwezig is
 1. Maak een map genaamd `files9` in de hoofdmap van je SD kaart als deze nog niet bestaat
 1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
+1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
 1. Kopieer de 9.2.0 CTRTransfer image `.bin` van de CTRTransfer `.zip` naar de `/files9/` map op je SD kaart
-1. Kopieer `FBI.cia` van de FBI `.zip` naar de `/cias/` map op je SD kaart
+1. Copy `FBI.3dsx` to the `/3ds/` folder on your SD card
 1. Stop je SD kaart terug in je 3DS
 
 ##### Deel II - CTRTransfer
 
 1. Launch the Luma3DS chainloader menu by holding (Start) during boot
 1. Open GodMode9 door op (A) te drukken
+1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
 1. Navigeer naar `[0:] SDCARD`-> `files9`
 1. Druk op (A) op de CTRTransfer `.bin` om deze te selecteren
 1. Selecteer "CTRNAND options..."
@@ -60,13 +62,14 @@ Never format a New 2DS while on a version <11.4.0 without the New 2DS XL specifi
 1. Druk op (A) om SysNAND (lvl1) writing te ontgrendelen en voer daarna de toetsencombinatie in die wordt gegeven
   + Dit proces zal enige tijd duren
 1. Zodra de overdracht voltooid is, kan je op (B) drukken om verder te gaan
+1. Press (B) to decline relocking write permissions if prompted
 1. Druk twee keer op (B) om terug te gaan naar het hoofdmenu
 1. Navigeer naar `[1:] SYSNAND CTRNAND` -> `dbs`
 1. Druk op (A) op `ticket.bak` om deze te selecteren, selecteer vervolgens "Ticket.db options...", en selecteer dan "Mount image to drive"
-1. Als dit bestaat, houdt (R) ingedrukt en druk op (A) op hetzelfde moment op `eshop` om deze map te selecteren, selecteer dan "Copy to 0:/gm9out"
+1. If it exists, hold (R) and press (A) at the same time on `eshop` to select the folder, then select "Copy to 0:/gm9/out"
   + Dit proces kan even duren als je veel tickets hebt
   + Once it has completed, press (A) to continue
-1. Als dit bestaat, houdt (R) ingedrukt en druk op (A) op hetzelfde moment op `unknown` om deze map te selecteren, selecteer dan "Copy to 0:/gm9out"
+1. If it exists, hold (R) and press (A) at the same time on `unknown` to select the folder, then select "Copy to 0:/gm9/out"
   + Dit proces kan even duren als je veel tickets hebt
   + Once it has completed, press (A) to continue
 1. Druk op (Start) om je 3DS opnieuw op te starten
@@ -74,29 +77,31 @@ Never format a New 2DS while on a version <11.4.0 without the New 2DS XL specifi
   + Updates while using B9S + Luma (what you have) are safe
   + Als dit je een foutmelding geeft, zet dan je DNS instellingen op "auto"
 
-##### Deel III - FBI Injecteren
+##### Section III - Launching FBI
 
-1. Herstart terwijl je (Start) ingedrukt houd om het Luma3DS chainloader menu te openen
-1. Open GodMode9 door op (A) te drukken
-1. Navigeer naar `[0:] SDCARD`-> `cias`
-1. Druk op (A) op `FBI.cia` om deze te selecteren, selecteer vervolgens "CIA image options...", en selecteer dan "Mount image to drive"
-1. Druk op (A) op het `.app` bestand, selecteer vervolgens "NCCH image options", en selecteer dan "Inject to H&S"
-1. Druk op (A) om SysNAND (lvl1) writing te ontgrendelen en voer daarna de toetsencombinatie in die wordt gegeven
-1. Druk op (A) om door te gaan
-1. Druk op (Start) om je 3DS opnieuw op te starten
-1. Als je nog steeds de originele gezondheids- en veiligheidsinformatie app wil gebruiken en je in het verleden gedowngraded hebt met Gateway, [volg dan deze uitleg](troubleshooting#gw_fbi)
+1. Launch the Download Play application
+1. Press (L) + (Down) + (Select) at the same time to open the Rosalina menu
+1. Select "Miscellaneous options"
+1. Select "Switch the hb. title to the current app."
+1. Press (B) to continue
+1. Press (B) to return to the Rosalina main menu
+1. Press (B) to exit the Rosalina menu
+1. Press (Home), then close Download Play
+1. Launch the Download Play application
+1. Nu zou je console de Homebrew Launcher moeten openen
 
 ##### Deel IV - Tickets opnieuw installeren
 
 Als je geen `eshop` of `unknown` mappen had eerder in dit proces, zie deel 2, dan kan je dit deel overslaan.
 {: .notice--info}
 
-1. Open Gezondheids- en veiligheidsinformatie (wat nu FBI is)
+1. Launch FBI from the list of homebrew
 1. Navigeer naar `SD` -> `cias`
 1. Selecteer "FBI.cia"
 1. Selecteer de "Install" optie en druk op (A) om te bevestigen
 1. Ga terug naar de SD directory (map) door op (B) te drukken
-1. Selecteer "gm9out"
+1. Select "gm9"
+1. Select "out"
 1. Doe het volgende proces voor de `eshop`, `unknown` of beide mappen
   + Navigeer naar de map
   + Selecteer "\<current directory>"
@@ -114,6 +119,7 @@ Als je geen `eshop` of `unknown` mappen had eerder in dit proces, zie deel 2, da
 1. Selecteer "More..."
 1. Selecteer "Restore H&S"
 1. Druk op (A) om SysNAND (lvl1) writing te ontgrendelen en voer daarna de toetsencombinatie in die wordt gegeven
+1. Press (B) to decline relocking write permissions if prompted
 
 ##### Deel VI - Verwijder de CTRTransfer image
 
