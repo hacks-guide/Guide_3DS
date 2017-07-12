@@ -23,7 +23,7 @@ Never format a New 2DS while on a version <11.4.0 without the New 2DS XL specifi
 #### Tarpeet
 
 * GodMode9:n [viimeisin julkaisu](https://github.com/d0k3/GodMode9/releases)
-* FBI:n [viimeisin julkaisu](https://github.com/Steveice10/FBI/releases/latest)
+* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) *(the`.3dsx` file)*
 * Konsolisi mallin ja alueen mukainen 9.2.0-CTRTransfer-näköistiedosto     
 *(jos konsolisi ei kuulu mihinkään näistä alueista, valitse mikä tahansa sen mallia vastaava linkki)*:
   +    <i class="fa fa-magnet" aria-hidden="true" title="Tämä on magneettilinkki. Use a torrent client to download the file."></i> - [New 3DS or 2DS - 9.2.0 - EUR - CTRTransfer](magnet:?xt=urn:btih:fed7bfeec0e52b42a77467cfb6ffd3e9dd2d5a70&dn=9.2.0-20E%5FCTRTransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)   
@@ -43,14 +43,16 @@ Never format a New 2DS while on a version <11.4.0 without the New 2DS XL specifi
 1. Luo `cias`-niminen kansio SD-korttisi juureen, jos sitä ei jo ole olemassa
 1. Luo `files9`-niminen kansio SD-korttisi juureen, jos sitä ei jo ole olemassa
 1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
+1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
 1. Kopioi CTRTransfer-`.zip`-pakkauksesta 9.2.0-CTRTransfer-`.bin`-näköistiedosto SD-korttisi `/files9/`-kansioon
-1. Kopioi FBI-`.zip`-pakkauksesta `FBI.cia` SD-korttisi `/cias/`-kansioon
+1. Copy `FBI.3dsx` to the `/3ds/` folder on your SD card
 1. Aseta SD-korttisi takaisin konsoliisi
 
 ##### Vaihe II – CTRTransfer
 
 1. Launch the Luma3DS chainloader menu by holding (Start) during boot
 1. Avaa GodMode9 painamalla (A):ta
+1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
 1. Mene hakemistoon `[0:] SDCARD` → `files9`
 1. Paina (A):ta CTRTransfer-`.bin`-tiedoston kohdalla valitaksesi sen
 1. Valitse "CTRNAND options..."
@@ -60,13 +62,14 @@ Never format a New 2DS while on a version <11.4.0 without the New 2DS XL specifi
 1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1) ja syötä annettu painikeyhdistelmä
   + Tämä proessi kestää jonkin aikaa
 1. Kun tiedonsiirto on valmis, paina (A):ta jatkaaksesi
+1. Press (B) to decline relocking write permissions if prompted
 1. Paina (B):tä kahdesti palataksesi päävalikkoon
 1. Mene hakemistoon `[1:] SYSNAND CTRNAND` → `dbs`
 1. Paina (A):ta `ticket.bak`-tiedoston kohdalla valitaksesi sen, valitse "Ticket.db options..." ja sitten "Mount image to drive"
-1. Jos `eshop`-kansio on olemassa, mene sen kohdalle, pidä (R):ää pohjassa ja paina samalla (A):ta, valitse sitten "Copy to 0:/gm9out"
+1. If it exists, hold (R) and press (A) at the same time on `eshop` to select the folder, then select "Copy to 0:/gm9/out"
   + Tämä prosessi voi kestää jonkin aikaa, jos sinulla on monta tikettiä
   + Kun toiminto on suoritettu, paina (A):ta jatkaaksesi
-1. Jos `unknown`-kansio on olemassa, mene sen kohdalle, pidä (R):ää pohjassa ja paina samalla (A):ta, valitse sitten "Copy to 0:/gm9out"
+1. If it exists, hold (R) and press (A) at the same time on `unknown` to select the folder, then select "Copy to 0:/gm9/out"
   + Tämä prosessi voi kestää jonkin aikaa, jos sinulla on monta tikettiä
   + Kun toiminto on suoritettu, paina (A):ta jatkaaksesi
 1. Paina (START)-painiketta käynnistääksesi uudelleen
@@ -74,29 +77,31 @@ Never format a New 2DS while on a version <11.4.0 without the New 2DS XL specifi
   + Updates while using B9S + Luma (what you have) are safe
   + Jos saat virheen, laita DNS:n automaattinen haku (Auto-Obtain DNS) päälle asetuksista
 
-##### Vaihe III – FBI:n injektointi
+##### Section III - Launching FBI
 
-1. Avaa Luma3DS:n ketjulatausvalikko pitämällä (START)-painiketta pohjassa käynnistyksen aikana
-1. Avaa GodMode9 painamalla (A):ta
-1. Mene hakemistoon `[0:] SDCARD` → `cias`
-1. Paina (A):ta `FBI.cia`-tiedoston kohdalla valitaksesi sen, valitse "CIA image options..." ja sitten "Mount image to drive"
-1. Paina (A):ta `.app`-tiedoston kohdalla valitaksesi sen, valitse "NCCH image options" ja sitten "Inject to H&S"
-1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1) ja syötä annettu painikeyhdistelmä
-1. Paina (A):ta jatkaaksesi
-1. Paina (START)-painiketta käynnistääksesi uudelleen
-1. Jos Health & Safety käynnistyy edelleen normaalisti, ja olet joskus päivittänyt taaksepäin Gatewayn avulla, [seuraa tätä vianmääritysohjetta](troubleshooting#gw_fbi)
+1. Launch the Download Play application
+1. Press (L) + (Down) + (Select) at the same time to open the Rosalina menu
+1. Select "Miscellaneous options"
+1. Select "Switch the hb. title to the current app."
+1. Press (B) to continue
+1. Press (B) to return to the Rosalina main menu
+1. Press (B) to exit the Rosalina menu
+1. Press (Home), then close Download Play
+1. Launch the Download Play application
+1. Konsolisi pitäisi avata Homebrew Launcher
 
 ##### Vaihe IV – Tikettien uudelleenasentaminen
 
 Jos sinulla ei ollut `eshop`- tai `unknown`-kansiota vaiheessa II, ohita tämä vaihe.
 {: .notice--info}
 
-1. Avaa terveys- ja turvaohjeet (Health and Safety), joka on nyt FBI
+1. Launch FBI from the list of homebrew
 1. Mene hakemistoon `SD` → `cias`
 1. Valitse "FBI.cia"
 1. Valitse "Install" ja paina (A):ta vahvistaaksesi
 1. Palaa SD-hakemistoon painamalla (B):tä
-1. Valitse "gm9out"
+1. Select "gm9"
+1. Select "out"
 1. Tee seuraavat toimet `eshop`- tai `unknown`-kansiolle (tai molemmille, jos sinulla oli kummatkin)
   + Mene kansioon
   + Valitse "\<current directory>"
@@ -114,6 +119,7 @@ Jos sinulla ei ollut `eshop`- tai `unknown`-kansiota vaiheessa II, ohita tämä 
 1. Valitse "More..."
 1. Valitse "Restore H&S"
 1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1) ja syötä annettu painikeyhdistelmä
+1. Press (B) to decline relocking write permissions if prompted
 
 ##### Section VI – CTRTransfer-näköistiedoston poistaminen
 
