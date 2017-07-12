@@ -24,6 +24,7 @@ Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only dis
 1. Schakel je 3DS uit
 1. Plaats je SD kaart in je computer
 1. Copy `GodMode9.firm` (or `GodMode9.bin` for arm9loaderhax users) from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
+1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
 1. Stop je SD kaart terug in je 3DS
 
 ##### Deel II - Back-up maken SysNAND DSiWare Saves
@@ -33,8 +34,9 @@ Als je geen DSiWare spellen of saves hebt die je wilt behouden, kan je dit deel 
 
 1. Start je 3DS terwijl je (Start) ingedrukt houdt om het Luma3DS chainloader menu te openen
 1. Open GodMode9 door op (A) te drukken
+1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
 1. Navigeer naar `[2:] SYSNAND TWLN` -> `title`
-1. Houd (R) ingedrukt en druk op (A) op hetzelfde moment op `00030004` om deze map te selecteren, selecteer dan "Copy to 0:/gm9out"
+1. Hold (R) and press (A) at the same time on `00030004` to select the folder, then select "Copy to 0:/gm9/out"
   + Dit proces kan even duren als je veel DSiWare spellen hebt
 1. Druk twee keer op (B) om terug te gaan naar het hoofdmenu
 
@@ -76,6 +78,7 @@ Dit is niet nodig voor elke andere soort van Virtual Console spellen (GBC, NES, 
 1. Voer de gegeven combinatie van knoppen in om SysNAND (lvl1) writing in te schakelen
   + Dit proces zal enige tijd duren
 1. Once it has completed, press (A) to continue
+1. Press (B) to decline relocking write permissions if prompted
 1. Druk op (B) om terug te gaan naar het hoofdmenu
 
 ##### Deel V - DSiWare Saves Herstellen
@@ -83,7 +86,7 @@ Dit is niet nodig voor elke andere soort van Virtual Console spellen (GBC, NES, 
 Als je geen backup DSiWare Saves hebt gemaakt, kan je dit overslaan.
 {: .notice--info}
 
-1. Navigeer naar `[0:] SDCARD`-> `gm9out`
+1. Navigate to `[0:] SDCARD` -> `gm9` -> `out`
 1. Druk op (Y) op de `00030004` map om deze te kopiëren
 1. Druk twee keer op (B) om terug te gaan naar het hoofdmenu
 1. Navigeer naar `[2:] SYSNAND TWLN` -> `title`
@@ -92,6 +95,7 @@ Als je geen backup DSiWare Saves hebt gemaakt, kan je dit overslaan.
 1. Druk op (A) om SysNAND (lvl1) writing te ontgrendelen en voer daarna de toetsencombinatie in die wordt gegeven
 1. Selecteer "Overwrite file(s)"
   + Dit proces kan even duren als je veel DSiWare spellen hebt
+1. Press (B) to decline relocking write permissions if prompted
 1. Druk twee keer op (B) om terug te gaan naar het hoofdmenu
 
 ##### Deel VI - GBA VC Saves Herstellen
@@ -121,15 +125,17 @@ Als je geen backup GBA VC Saves hebt gemaakt, kan je dit overslaan.
 
 1. Druk op de (Home) knop om het actiemenu te openen
 1. Selecteer "More..."
-1. Selecteer "Backup NAND"
+1. Select "Scripts"
+1. Select "Backup SysNAND"
+1. Druk op (A) om het te bevestigen
+  + Dit proces zal enige tijd duren
 1. Druk op (A) om door te gaan
 1. Houd (R) en (B) gelijkertijd ingedrukt om je SD kaart uit te werpen
 1. Plaats je SD kaart in je computer
-1. Kopieer `nand.bin` van de `/gm9out/` map op je SD kaart naar een veilige locatie op je computer
-  + Als je al eerder SafeCTRTransfer hebt gebruikt en je hebt een NAND backup genaamd `<serialnumber>_nand.bin`, overschrijf die dan met deze (hernoem `nand.bin` om overeen te komen met `<serialnumber>_nand.bin`)
+1. Copy `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Maak back-ups in verschillende locaties (zoals een online bestandsopslag)
   + Deze backup zal je redden van een brick als er iets fout gaat in de toekomst
-1. Verwijder `nand.bin` uit de `/gm9out/` map op je SD kaart na deze gekopieerd te hebben
+1. Delete `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. **Maak een backup van elk bestand op je SD kaart naar een map op je computer; alle bestanden zullen verwijderd worden in de volgende stappen**
 
 ##### Deel VIII - SD kaart formatteren
@@ -138,7 +144,7 @@ Als je geen backup GBA VC Saves hebt gemaakt, kan je dit overslaan.
 1. Druk op de (Home) knop om het actiemenu te openen
 1. Selecteer "More..."
 1. Selecteer "SD format menu"
-1. Druk op (A) om het te bevestigen
+1. Druk op (A) om te bevestigen
 1. Selecteer "NO EmuNAND"
 1. Selecteer "Auto"
 1. Druk op (A) om het label `GM9SD` te accepteren
