@@ -51,6 +51,7 @@ title: "סיום התהליך"
 
 1. תצרו תיקייה חדשה בשם `payloads` בתוך התיקייה `luma` שהרגע יצרנו
 1. העתיקו את `GodMode9.firm` מהזיפ של GodMode9 אל תיקיית /luma/payloads/ ב- SD שלכם
+1. תעתיקו את התיקייה `gm9` מתוך ה`.zip` של GodMode9 ל-SD שלכם
 
     ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
     {: .notice--info}
@@ -100,6 +101,7 @@ title: "סיום התהליך"
 ##### חלק VI - Luma3DS על ה- CTRNAND
 
 1. תאתחלו בזמן שאתם מחזיקים (Start) במהלך האתחול כדי להפעיל את GodMode9
+1. When prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
 1. נווטו ל`[0:] SDCARD`
 1. תלחצו (Y) על `boot.firm` כדי להעתיק אותו
 1. תלחצו (B) כדי לחזור לתפריט הראשי
@@ -107,6 +109,7 @@ title: "סיום התהליך"
 1. תלחצו (Y) כדי להדביק עותק של `boot.firm`
 1. תבחרו "Copy path(s)"
 1. לחצו (A) כדי לפתוח גישת כתיבת lvl1 לSysNAND, ואז תלחצו על המקשים בסדר הנכון
+1. Press (B) to decline relocking write permissions if prompted
 1. תלחצו (B) כדי לחזור לתפריט הראשי
 1. נווטו ל`[0:] SDCARD`
 1. תלחצו (Y) על תיקיית `luma` כדי להעתיק אותה
@@ -115,19 +118,22 @@ title: "סיום התהליך"
 1. תלחצו (Y) כדי להדביק עותק של תיקיית `luma` מכרטיס הSD שלכם
 1. תבחרו "Copy path(s)"
 
-##### חלק VII - גיבוי NAND
+##### חלק VII - גיבוי SysNAND
 
 1. תלחצו (B) פעמיים כדי לחזור לתפריט הראשי
 1. תלחצו על (Home) כדי להראות את תפריט הפעולה
 1. תבחרו ב"More..."
-1. תבחרו ב "Backup NAND"
+1. Select "Scripts"
+1. Select "Backup SysNAND"
+1. תלחצו (A) כדי לאשר
+  + זה ייקח קצת זמן
 1. תלחצו (A) כדי להמשיך
 1. תחזיקו (R) ולחצו (B) באותו הזמן כדי להוציא את הSD
 1. תכניסו את ה-SD שלכם למחשב
-1. תעתיקו את `nand.bin`ואת `nand.bin.sha` מתיקיית `/gm9out/` על הכרטיס זכרון אל מקום בטוח במחשב שלכם
+1. Copy `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + תיצרו גיבויים במקומות שונים (כמו אחסון בענן)
   + הגיבוי הזה ישמור עליכם מבריק אם משהו ישתבש בעתיד
-1. תמחקו את `nand.bin` ואת `nand.bin.sha` בתיקיה '/ gm9out /' על הSD לאחר שהעתקתם אותו
+1. Delete `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
 1. לחצו על (Start) על מנת לשמור ולהפעיל מחדש
 
