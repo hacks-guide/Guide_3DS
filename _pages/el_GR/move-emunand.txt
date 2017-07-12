@@ -24,6 +24,7 @@ Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only dis
 1. Power off your device
 1. Εισάγετε την κάρτα SD στον υπολογιστή σας
 1. Copy `GodMode9.firm` (or `GodMode9.bin` for arm9loaderhax users) from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
+1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
 1. Reinsert your SD card into your device
 
 ##### Section II - Backup SysNAND DSiWare Saves
@@ -33,8 +34,9 @@ If you do not have any DSiWare games or saves that you care about, skip this sec
 
 1. Boot your device while holding (Start) to launch the Luma3DS chainloader menu
 1. Launch GodMode9 by pressing (A)
+1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
 1. Navigate to `[2:] SYSNAND TWLN` -> `title`
-1. Hold (R) and press (A) at the same time on `00030004` to select the folder, then select "Copy to 0:/gm9out"
+1. Hold (R) and press (A) at the same time on `00030004` to select the folder, then select "Copy to 0:/gm9/out"
   + This process may take some time if you have many DSiWare games
 1. Press (B) twice to return to the main menu
 
@@ -76,6 +78,7 @@ Note that this is not necessary for any other kind of Virtual Console games (GBC
 1. Input the key combo given to unlock SysNAND (lvl1) writing
   + This process will take some time
 1. Once it has completed, press (A) to continue
+1. Press (B) to decline relocking write permissions if prompted
 1. Press (B) to return to the main menu
 
 ##### Section V - Restore DSiWare Saves
@@ -83,7 +86,7 @@ Note that this is not necessary for any other kind of Virtual Console games (GBC
 If you did not backup DSiWare Saves earlier, skip this section.
 {: .notice--info}
 
-1. Navigate to `[0:] SDCARD` -> `gm9out`
+1. Navigate to `[0:] SDCARD` -> `gm9` -> `out`
 1. Press (Y) on the `00030004` folder to copy it
 1. Press (B) twice to return to the main menu
 1. Navigate to `[2:] SYSNAND TWLN` -> `title`
@@ -92,6 +95,7 @@ If you did not backup DSiWare Saves earlier, skip this section.
 1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
 1. Select "Overwrite file(s)"
   + This process may take some time if you have many DSiWare games
+1. Press (B) to decline relocking write permissions if prompted
 1. Press (B) twice to return to the main menu
 
 ##### Section VI - Restore GBA VC Saves
@@ -121,15 +125,17 @@ If you did not backup GBA VC Saves earlier, skip this section.
 
 1. Press (Home) to bring up the action menu
 1. Select "More..."
-1. Select "Backup NAND"
+1. Select "Scripts"
+1. Select "Backup SysNAND"
+1. Πατήστε (A) για επιβεβαίωση
+  + This process will take some time
 1. Πατήστε (A) για να συνεχίσετε
 1. Κρατήστε πατημένο το (R) και πατήστε ταυτόχρονα το (B) για να αφαιρέσετε την κάρτα SD
 1. Εισάγετε την κάρτα SD στον υπολογιστή σας
-1. Copy `nand.bin` from the `/gm9out/` folder on your SD card to a safe location on your computer
-  + If you previously used SafeCTRTransfer and have a NAND backup named `<serialnumber>_nand.bin`, replace it with this one (rename `nand.bin` to match `<serialnumber>_nand.bin`)
+1. Copy `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Make backups in multiple locations (such as online file storage)
   + Αυτά τα αντίγραφα ασφαλείας θα σας σώσουν από την αχρήστευση της συσκευής σε περίπτωση που κάτι πάει στραβά
-1. Delete `nand.bin` from the `/gm9out/` folder on your SD card after copying it
+1. Delete `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. **Δημιουργήστε ένα αντίγραφο ασφαλείας όλων των αρχείων της κάρτας SD σε έναν φάκελο στον υπολογιστή σας. Θα διαγραφούν τα πάντα από την κάρτα SD στα επόμενα βήματα**
 
 ##### Section VIII - Format SD card
