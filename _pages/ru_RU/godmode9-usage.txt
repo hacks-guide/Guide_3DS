@@ -24,15 +24,17 @@ GodMode9 это полноценный файловый менеджер для 
 1. Запустите GodMode9, нажав кнопку (A)
 1. Нажмите кнопку (Home) для вызова меню
 1. Выберите "More..."
-1. Выберите "Backup NAND"
+1. Select "Scripts"
+1. Select "Backup SysNAND"
+1. Нажмите (A) для подтверждения
+  + Этот процесс займет некоторое время
 1. Нажмите (A), чтобы продолжить
 1. Удерживая (R) нажмите (B) для того, чтобы извлечь SD-карту
 1. Вставьте SD-карту в компьютер
-1. Скопируйте `nand.bin` и `nand.bin.sha` из папки `/gm9out/` на SD-карте в безопасное место на вашем компьютере
-  + Если вы ранее использовали SafeCTRTransfer и сохранили бэкап NAND с именем `<serialnumber>_nand.bin`, замените его этим файлом (переименуйте `nand.bin` в `<serialnumber>_nand.bin` для соответствия)
+1. Copy `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Сделайте несколько резервных копий в нескольких местах (например в облачном хранилище)
   + Эти бэкапы позволят восстановить консоль, если впоследствии что-то пойдёт не так
-1. После копирования удалите `nand.bin` и `nand.bin.sha` из папки `/gm9out/` на SD-карте
+1. Delete `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. Вставьте SD-карту обратно в консоль
 
 ## <a name="nand_restore" /> Восстановление бэкапа NAND
@@ -48,6 +50,7 @@ GodMode9 это полноценный файловый менеджер для 
 1. Введите указанную комбинацию кнопок чтобы разрешить запись в SysNAND (lvl1)
   + Этот процесс займет некоторое время
 1. По завершению процесса, нажмите (A)
+1. Press (B) to decline relocking write permissions if prompted
 
 ## <a name="injectHS" /> Инъекция любого .CIA в приложение Информация о здоровье и безопасности (Health & Safety)
 
@@ -65,6 +68,7 @@ GodMode9 это полноценный файловый менеджер для 
 1. Нажмите (A) чтобы выбрать файл `.app`, затем выберите "NCCH image options", затем "Inject to H&S"
 1. Нажмите (A), чтобы разрешить запись в SysNAND (lvl1) и введите указанную комбинацию кнопок
 1. Нажмите (A), чтобы продолжить
+1. Press (A) to relock write permissions if prompted
 
 ## <a name="restore_hs" /> Восстановление приложения Информация о здоровье и безопасности
 
@@ -79,6 +83,7 @@ GodMode9 это полноценный файловый менеджер для 
 1. Выберите "More..."
 1. Выберите "Restore H&S"
 1. Нажмите (A), чтобы разрешить запись в SysNAND (lvl1) и введите указанную комбинацию кнопок
+1. Press (A) to relock write permissions if prompted
 
 ## <a name="dump_cart" /> Создание дампа картриджа
 
@@ -95,8 +100,8 @@ GodMode9 это полноценный файловый менеджер для 
 1. Перейдите в `[C:] GAMECART`
 1. Выполните действия ниже, соответствующие вашему типу картриджа:
   + **3DS картридж:** Нажмите (A) чтобы выбрать файл `[TitleID].trim.3ds`, затем выберите "NCSD image options...", затем "Build CIA from file"
-  + **NDS картридж:** Нажмите (A) чтобы выбрать файл `[TitleID].trim.nds`, затем выберите "Copy to 0:/gm9out"
-1. Ваш файл в формате `.cia` либо `.nds` будет помещен в папку `/gm9out/` на SD-карте
+  + **NDS Game Cartridge:** Press (A) on `[TitleID].trim.nds` to select it, then select "Copy to 0:/gm9/out"
+1. Your installable `.cia` or non-installable `.nds` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
 ## <a name="dump_title" /> Создание дампа тайтла
 
@@ -118,7 +123,7 @@ GodMode9 это полноценный файловый менеджер для 
 1. Убедитесь, что вы нашли верный тайтл
 1. Нажмите (B) для выхода из информации о тайтле
 1. Нажмите (A) чтобы выбрать файл `.tmd`, затем выберите "TMD file options...", затем "Build CIA (standard)"
-1. Ваш файл в формате `.cia` будет помещен в папку `/gm9out/` на SD-карте
+1. Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
 ## <a name="convert_3ds" /> Конвертация из .3DS в .CIA
 
@@ -133,7 +138,7 @@ GodMode9 это полноценный файловый менеджер для 
 1. Запустите GodMode9, нажав кнопку (A)
 1. Перейдите в `[0:] SDCARD` -> `cias`
 1. Нажмите (A) чтобы выбрать ваш файл `.3ds`, затем выберите "NCSD image options...", затем "Build CIA from file"
-1. Ваш файл в формате `.cia` будет помещен в папку `/gm9out/` на SD-карте
+1. Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
 ## <a name="backup_gba" /> Бэкап сохранений GBA VC
 
@@ -208,8 +213,8 @@ GodMode9 это полноценный файловый менеджер для 
 1. Перейдите в `[0:] SDCARD` -> `cias`
 1. Нажмите (A) чтобы выбрать файл `.cia`, затем выберите "CIA image options..."
 1. Выберите опцию для выполнения нужной функции:
-    + **Encrypt to 0:/gm9out:** Создать шифрованную копию выбранного файла `.cia` в папке `/gm9out/` на SD-карте
-    + **Decrypt to 0:/gm9out:** Создать расшифрованную копию выбранного файла `.cia` в папке `/gm9out/` на SD-карте
+    + **Encrypt to 0:/gm9/out:** Create an encrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card
+    + **Decrypt to 0:/gm9/out:** Create a decrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card
     + **Encrypt inplace:** Заменить выбранный файл `.cia` его шифрованной версией
     + **Decrypt inplace:** Заменить выбранный файл `.cia` его расшифрованной версией
 1. Ваш шифрованный / расшифрованный файл `.cia` будет помещен в выбранную папку
