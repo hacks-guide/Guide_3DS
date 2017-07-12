@@ -24,15 +24,17 @@ Le système de permissions d’écriture vous protège en proposant des avertiss
 1. Lancez GodMode9 en appuyant sur (A)
 1. Appuyez sur (Home) pour faire apparaître le menu d’actions (action menu)
 1. Sélectionnez "More..."
-1. Sélectionnez "Backup NAND"
+1. Select "Scripts"
+1. Select "Backup SysNAND"
+1. Appuyez sur (A) pour confirmer
+  + Ce processus pendra du temps
 1. Appuyez sur (A) pour continuer
 1. Maintenez (R) et appuyez sur (B) en même temps pour éjecter votre carte SD
 1. Insérez votre carte SD dans votre ordinateur
-1. Copiez `nand.bin` et `nand.bin.sha`du dossier `/gm9out/` sur votre carte SD vers un emplacement sûr sur votre ordinateur
-  + Si vous avez précédemment utilisé SafeCTRTransfer et avez une backup de la NAND nommée `<serialnumber>_nand.bin`, remplacez-le par celui-ci (renommez `nand.bin` pour faire correspondre `<serialnumber>_nand.bin`)
+1. Copy `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Faites des sauvegardes dans plusieurs endroits (tels que des stockages de fichiers en ligne par exemple)
   + Cette sauvegarde vous sauvera d'un brick si quoi que ce soit se passe mal à l'avenir
-1. Supprimez `nand.bin` et `nand.bin.sha` dans le dossier `/gm9out/` sur votre carde SD après l'avoir copié
+1. Delete `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. Réinsérez votre carte SD dans votre 3DS
 
 ## <a name="nand_restore" /> Réstauration de la sauvegarde de la NAND
@@ -48,6 +50,7 @@ Le système de permissions d’écriture vous protège en proposant des avertiss
 1. Entrez la combinaison de touche demandée pour débloquer l'écriture sur votre SysNAND (lvl1)
   + Ce processus pendra du temps
 1. Une fois le transfert terminé, appuyez sur (A) pour continuer
+1. Press (B) to decline relocking write permissions if prompted
 
 ## <a name="injectHS" /> Injection de l'app d'un .CIA dans Santé & Sécurité
 
@@ -65,6 +68,7 @@ Le système de permissions d’écriture vous protège en proposant des avertiss
 1. Appuyez sur (A) sur le fichier avec l'extension `.app`, puis sélectionnez "NCCH image options", puis "Inject to H&S"
 1. Appuyez sur (A) pour autoriser l'écriture sur votre SysNAND, puis entrez la combinaison de touches demandée
 1. Appuyez sur (A) pour continuer
+1. Press (A) to relock write permissions if prompted
 
 ## <a name="restore_hs" /> Restauration de Santé & Sécurité après avoir injecté l'app d'un .CIA
 
@@ -79,6 +83,7 @@ Cela ne fonctionnera que si l’injection dans Santé & Sécurité a été réal
 1. Sélectionnez "More..."
 1. Sélectionnez "Restore H&S"
 1. Appuyez sur (A) pour autoriser l'écriture sur votre SysNAND, puis entrez la combinaison de touches demandée
+1. Press (A) to relock write permissions if prompted
 
 ## <a name="dump_cart" /> Dump d'un jeu en cartouche
 
@@ -95,8 +100,8 @@ Cela ne fonctionnera que si l’injection dans Santé & Sécurité a été réal
 1. Naviguez vers `[0:] SDCARD`
 1. Suivez la procédure associée à votre type de cartouche de jeu :
   + **Cartouche de jeu 3DS :** Appuyez sur (A) sur `[TitleID].trim.3ds` pour le sélectionner, ensuite sélectionnez "NCSD image options...", puis "Build CIA file"
-  + **Cartouche de jeu NDS :** Appuyez sur (A) sur `[TitleID].trim.nds` pour le sélectionner, puis sélectionnez "Copy to 0:/gm9out"
-1. Votre `.cia` installable ou `.nds` non-installable sera envoyé dans le dossier `/gm9out/` de votre carte SD
+  + **NDS Game Cartridge:** Press (A) on `[TitleID].trim.nds` to select it, then select "Copy to 0:/gm9/out"
+1. Your installable `.cia` or non-installable `.nds` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
 ## <a name="dump_title" /> Dumping d'un titre
 
@@ -118,7 +123,7 @@ Utilisez le menu 'Titles' de FBI pour connaitre l'identifiant (ID) du titre que 
 1. Soyez sur que vous avez trouvé le bon titre
 1. Appuyez sur (B) pour sortir des informations du titre
 1. Appuyez sur (A) sur le fichier `.tmd` pour le sélectionner , ensuite choisissez "TMD file options...", puis "Build CIA (standard)"
-1. Votre fichier formaté `.cia` installable sera envoyé au dossier`/gm9out/` sur votre carte SD
+1. Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
 ## <a name="convert_3ds" /> Convertir un .3ds en .CIA
 
@@ -133,7 +138,7 @@ Utilisez le menu 'Titles' de FBI pour connaitre l'identifiant (ID) du titre que 
 1. Lancez GodMode9 en appuyant sur (A)
 1. Naviguez vers `[0:] SDCARD` -> `cias`
 1. Appuyez sur (A) sur votre fichier `.3ds` pour le sélectionner, ensuite choisissez "NCSD image options...", puis "Build CIA from file"
-1. Votre fichier formaté `.cia` installable sera envoyé au dossier `/gm9out/` sur votre carte SD
+1. Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
 ## <a name="backup_gba" /> Sauvegarde d'une sauvegarde VC GBA
 
@@ -208,8 +213,8 @@ Utilisez le menu 'Titles' de FBI pour connaitre l'identifiant (ID) du titre que 
 1. Naviguez vers `[0:] SDCARD` -> `cias`
 1. Appuyez sur (A) sur le fichier `.cia` pour le sélectionner, puis sélectionnez `CIA image options...`
 1. Sélectionnez l’option pour effectuer la fonction désirée:
-    + **Crypter à 0:/gm9out:** Créer une copie chiffrée du fichier `.cia` sélectionné dans le dossier `/gm9out/` sur votre carte SD
-    + **Decrypt to 0:/gm9out:** Créer une copie déchiffrée du fichier `.cia` sélectionné dans le dossier `/gm9out/` sur votre carte SD
+    + **Encrypt to 0:/gm9/out:** Create an encrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card
+    + **Decrypt to 0:/gm9/out:** Create a decrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card
     + **Encrypt inplace:** Remplacez le fichier `.cia` sélectionné par une version cryptée
     + **Decrypt inplace:** Remplacez le fichier `.cia` sélectionné par une version déchiffrée
 1. Votre `.cia` crypté / décrypté sera envoyé à l'emplacement désiré
