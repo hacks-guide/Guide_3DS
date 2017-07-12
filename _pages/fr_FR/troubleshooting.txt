@@ -45,13 +45,9 @@ Pour utiliser les liens suivant [magnet](https://fr.wikipedia.org/wiki/Magnet_(s
 
 ## <a name="rm_nnid" />Supprimer un NNID sans formater votre console
 
-#### Ce dont vous aurez besoin
+Notez que, sur certaines versions de Luma3DS, le Luma3DS chainloader menu ne s’affiche que s’il n’y a plus d’un payload détecté. Si il n’y a qu’un seul payload détecté, maintenir la touche (Start) au démarrage lancera directement GodMode9.
+{: .notice--info}
 
-* La dernière version de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-
-#### Instructions
-
-1. Copiez le fichier `GodMode9.firm` de l'archive GodMode9 `.zip` dans le dossier `/luma/payloads/` sur votre carte SD
 1. Démarrez la console en maintenant (Start) enfoncé pour accéder au menu de chainloader de Luma3DS
 1. Lancez GodMode9 en appuyant sur (A)
 1. Naviguez vers `[1:] SYSNAND CTRNAND` -> `data` -> (32 Character ID) -> `sysdata` -> `00010038`
@@ -82,6 +78,7 @@ Notez que, sur certaines versions de Luma3DS, le Luma3DS chainloader menu ne s�
 1. En maintenant le bouton (R), appuyez sur (Y) pour créer un nouveau dossier
 1. Appuyez sur (A) pour confirmer le nom `newdir` (le nom du dossier n'a pas d'importance)
 1. Appuyez sur (A) pour autoriser l'écriture sur votre SysNAND, puis entrez la combinaison de touches demandée
+1. Press (B) to decline relocking write permissions if prompted
 1. Appuyez sur le bouton (L) sur chacun des fichiers dont l'extension de fichier est en majucules (`.TMD` and `.APP`) pour les marquer
 1. Appuyez sur (Y) pour les copier
 1. Sélectionnez `newdir`
@@ -121,26 +118,6 @@ Les exploits basé sur le navigateur (tel que browserhax ou 2xrsa) sont parfois 
     1. Allumez à présent votre 3DS
     1. Si vous passez en mode sécurisé, mettre à jour votre console
 1. Votre console est peut-être brickée. Pour obtenir de l'aide, demandez de l'aide à [Nintendo Homebrew sur Discord(Anglais)](https://discord.gg/MWxPgEp)
-
-## <a name="ts_dsiware" />Après avoir fait le downgrade par DSiWare, mon DSiWare hacké ne fonctionne pas
-
-1. Rallumez la **3DS source** en maintenant (Start) pour lancer le chainloader de Luma3DS
-1. Lancez GodMode9 en appuyant sur (A)
-1. Naviguez vers `[0:] SDCARD` -> `gm9out`
-1. Appuyez sur (A) sur `nand.bin` pour le sélectionner, puis choisissez "NAND image options...", puis "Restore SysNAND (safe)"
-1. Appuyez sur (A) pour débloquer l'écriture sur votre SysNAND, puis entrez la combinaison de touches demandée
-  + Ceci n'effacera pas votre installation boot9strap
-1. Entrez la combinaison de touche demandée pour débloquer l'écriture sur votre SysNAND (lvl1)
-  + Ce processus pendra du temps
-1. Une fois le transfert terminé, appuyez sur (A) pour continuer
-1. Si vous ne voyez pas du tout le jeu sur **la 3DS cible**, liez le NNID avec lequel vous avez acheté le jeu sur **la 3DS cible** et re-téléchargez le
-  + Vous devrez peut-être tout d’abord supprimer le jeu depuis "Gestion des données" dans les Paramètres de la console
-  + Si **la 3DS cible** n'est pas à la dernière version, vous pourriez avoir à lancer ctr-httpwn pour accéder à l'eShop
-1. Sur la **3DS source**, effectuez les étapes d'injections de sauvegarde (et de `.app` si vous utilisez la page "injection d'`.app`")
-1. Sur la **3DS source, allez dans les Paramètres de la console, "Gestion des données", "DSiWare", puis copiez votre jeu DSiWare sur la carte SD
-1. Insérez la carte SD de la **3DS source** dans la **3DS cible**, ou bien renommez le dossier `Nintendo 3DS` sur la carte SD de la **3DS cible** et copiez le dossier `Nintendo 3DS` de la carte SD de la **3DS source** sur la carte SD de la **3DS cible**
-1. Sur la **3DS cible**, allez dans les Paramètres de la console, "Gestion des données", "DsiWare", puis copiez votre jeu DSiWare sur le système
-1. Remettez vos cartes SD comme avant, puis continuez votre Injection via DSiWare
 
 ## <a name="ts_sys_b9s" /> Écran noir au démarrage de SysNAND après l’installation de boot9strap
 
