@@ -51,6 +51,7 @@ Während dieses Prozesses richtest du auch folgende Programme ein:
 
 1. Erstelle einen Ordner mit dem Namen `payloads` in dem `luma`-Ordner auf deiner SD-Karte
 1. Kopiere `Godmode9.firm`von der `Godmode9.zip`-Datei nach `/luma/payloads/` auf deiner SD Karte
+1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
 
     ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
     {: .notice--info}
@@ -100,6 +101,7 @@ Wenn du vor dieser Anleitung bereits einen EmuNAND hattest und dessen Inhalte in
 ##### Abschnitt VI - CTRNAND Luma3DS
 
 1. Starte deinen 3DS neu und halte beim Hochfahren (Start) gedrückt, um GodMode9 zu starten
+1. When prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
 1. Navigiere zu `[0:] SDCARD`
 1. Drücke (Y) auf "boot.firm" um es zu kopieren
 1. Drücke (B), um zum Hauptmenü zurückzukehren
@@ -107,6 +109,7 @@ Wenn du vor dieser Anleitung bereits einen EmuNAND hattest und dessen Inhalte in
 1. Drücke (Y) um eine Kopie der "boot.firm" einzufügen
 1. Wähle "Copy path(s)" aus
 1. Drücke (A), um die SysNAND (Stufe 1) Bearbeitung zu aktivieren. Dann gebe die angegebene Tastenkombination ein
+1. Press (B) to decline relocking write permissions if prompted
 1. Drücke (B), um zum Hauptmenü zurückzukehren
 1. Navigiere zu `[0:] SDCARD`
 1. Wähle den Ordner `luma` aus und drücke (Y), um ihn zu kopieren
@@ -115,19 +118,22 @@ Wenn du vor dieser Anleitung bereits einen EmuNAND hattest und dessen Inhalte in
 1. Drücke (Y) um eine Kopie des `luma`-Ordners von deiner SD-Karte einzufügen
 1. Wähle "Copy path(s)" aus
 
-##### Abschnitt VII - Sicherheitskopie des NAND
+#### Abschnitt 7 - Erstellung eines Backup für SysNAND
 
 1. Drücke zweimal (B), um zurück in das Hauptmenü zu gelangen
 1. Drücke  (HOME) um das Aktionsmenü aufzurufen
 1. Wähle "More..."
-1. Wähle "Backup NAND"
+1. Select "Scripts"
+1. Select "Backup SysNAND"
+1. Drücke (A), um zu bestätigen
+  + Dieser Vorgang nimmt einige Zeit in Anspruch
 1. Drücke (A) um fortzufahren
 1. Drücke (R) und (B) gleichzeitig um die SD-Karte auszuwerfen
 1. Stecke deine SD-Karte in deinen Computer
-1. Kopiere `nand.bin` und `nand.bin.sha` aus dem `/gm9out/` Ordner an einen sicheren Ort auf deinem Computer
+1. Copy `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Erstelle Backup Dateien an mehreren Orten (USB-Stick, PC, Externe Festplatte, Online-Speicher, etc.)
   + Diese Sicherheitskopie wird dich vor einem Brick schützen, falls in der Zukunft etwas schief gehen sollte
-1. Lösche `nand.bin` und `nand.bin.sha` aus dem `/gm9out/`-Ordner auf deiner SD-Karte, nachdem du sie kopiert hast
+1. Delete `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. Stecke deine SD-Karte nun wieder in deinen 3DS
 1. Drücke (Start) zum Speichern und neustarten
 
