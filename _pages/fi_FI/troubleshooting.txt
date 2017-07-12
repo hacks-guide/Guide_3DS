@@ -45,13 +45,9 @@ Jos et pysty käynnistämään konsoliasi, seuraa tilannettasi vastaavan kohdan 
 
 ## <a name="rm_nnid" />NNID:n poistaminen ilman konsolin alustamista
 
-#### Tarpeet
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+{: .notice--info}
 
-* GodMode9:n [viimeisin julkaisu](https://github.com/d0k3/GodMode9/releases)
-
-#### Ohjeet
-
-1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 1. Avaa Luma3DS:n ketjulatausvalikko pitämällä (START)-painiketta pohjassa käynnistyksen aikana
 1. Avaa GodMode9 painamalla (A):ta
 1. Mene hakemistoon `[1:] SYSNAND CTRNAND` → `data` → (32-merkkinen tunnus) → `sysdata` → `00010038`
@@ -82,6 +78,7 @@ Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only dis
 1. Pidä (R):ää pohjassa ja paina samalla (Y):tä luodaksesi uuden hakemiston
 1. Paina (A):ta vahvistaaksesi nimen `newdir` (kansion nimellä ei ole väliä)
 1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1) ja syötä annettu painikeyhdistelmä
+1. Press (B) to decline relocking write permissions if prompted
 1. Paina (L):ää jokaisen isokirjaimisen tiedostopäätteen (`.TMD` ja `.APP`) omaavan tiedoston kohdalla merkitäksesi ne
 1. Paina (Y):tä kopioidaksesi tiedostot
 1. Mene hakemistoon `newdir`
@@ -121,26 +118,6 @@ Selainhaavoittuvuuksiin perustuvat käynnistystavat (kuten browserhax ja 2xrsa) 
     1. Käynnistä konsolisi
     1. If you enter safe mode, update your device
 1. Konsolisi saattaa olla vioittunut. Kysy apua (englanniksi) [Nintendo Homebrew -palvelimelta Discordissa](https://discord.gg/MWxPgEp).
-
-## <a name="ts_dsiware" />After doing the DSiWare Transfer, my hacked DSiWare does not work
-
-1. Reboot **the source 3DS** while holding (Start) to launch the Luma3DS chainloader menu
-1. Avaa GodMode9 painamalla (A):ta
-1. Mene hakemistoon `[0:] SDCARD` → `gm9out`
-1. Press (A) on `nand.bin` to select it, then select "NAND image options…", then select "Restore SysNAND (safe)"
-1. Paina (A):ta ottaaksesi käyttöön SysNANDin ylikirjoittamisen ja syötä annettu painikeyhdistelmä
-  + This will not overwrite your boot9strap installation
-1. Syötä annettu painikeyhdistelmä ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1)
-  + Tämä proessi kestää jonkin aikaa
-1. Kun toiminto on suoritettu, paina (A):ta jatkaaksesi
-1. If you don't see the game at all on **the target 3DS**, link the NNID you bought the game with to **the target 3DS** and redownload it
-  + You may have to delete the game from "Data Management" in the "System Settings" first
-  + If **the target 3DS** is not the latest version, you may have to run ctr-httpwn to access the eShop
-1. On **the source 3DS**, do the the save (and `.app` if you are using the `.app` page) injection steps
-1. On **the source 3DS**, go to System Settings, "Data Management", "DSiWare", then copy your DSiWare game to your SD card
-1. Either put **the source 3DS**'s SD card in **the target 3DS**, or rename the `Nintendo 3DS` on **the target 3DS**'s SD card and copy the `Nintendo 3DS` folder from **the source 3DS**'s SD card to **the target 3DS**'s SD card
-1. On **the target 3DS**, go to System Settings, "Data Management", "DSiWare", then copy your DSiWare game to the system
-1. Return your SD cards to normal, then continue with the DSiWare Injection
 
 ## <a name="ts_sys_b9s" />Black screen on SysNAND boot after Installing boot9strap
 
