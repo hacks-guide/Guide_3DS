@@ -24,6 +24,7 @@ Tieni presente che, su alcune versioni di Luma3DS, il menu chainloader di Luma3D
 1. Spegni il tuo 3DS
 1. Inserisci la scheda SD nel tuo computer
 1. Copia il file `GodMode9.firm` (o `GodMode9.bin` se usi arm9loaderhax) dall'archivhio `zip` di GodMode9 alla cartella `/luma/payloads/` sulla tua scheda SD
+1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
 1. Reinserisci la scheda SD nel Nintendo 3DS
 
 ##### Sezione II - Backup dei salvataggi dei DSiWare su SysNAND
@@ -33,8 +34,9 @@ Se non hai alcun DSiWare o se non hai salvataggi che desideri salvare, salta que
 
 1. Avvia la console tenendo premuto (Start) per avviare il menu chainloader di Luma3DS
 1. Avvia GodMode9 premendo (A)
+1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
 1. Entra nella cartella `[2:] SYSNAND TWLN` -> `title`
-1. Tenendo premuto (R), premi (A) sulla cartella `00030004` per selezionarla, quindi seleziona "Copy to 0:/gm9out"
+1. Hold (R) and press (A) at the same time on `00030004` to select the folder, then select "Copy to 0:/gm9/out"
   + Questo processo potrebbe durare molto se hai molti giochi DSiWare
 1. Premi (B) due volte per ritornare al menu principale
 
@@ -76,6 +78,7 @@ Questo processo non è necessario per giochi delle altre Virtual Console (quali 
 1. Inserisci la combinazione di tasti richiesta a schermo per sbloccare i permessi di scrittura di primo livello su SysNAND
   + Questo processo durerà un po'
 1. Una volta completato, premi (A) per proseguire
+1. Press (B) to decline relocking write permissions if prompted
 1. Premi (B) per ritornare al menu principale
 
 ##### Sezione V - Ripristino dei salvataggi DSiWare
@@ -83,7 +86,7 @@ Questo processo non è necessario per giochi delle altre Virtual Console (quali 
 Se non hai mantenuto alcun salvataggio DSiWare, salta questa sezione.
 {: .notice--info}
 
-1. Entra nella cartella `[0:] SDCARD` -> `gm9out`
+1. Navigate to `[0:] SDCARD` -> `gm9` -> `out`
 1. Premi (Y) sulla cartella `00030004` per copiarla
 1. Premi (B) due volte per ritornare al menu principale
 1. Entra nella cartella `[2:] SYSNAND TWLN` -> `title`
@@ -92,6 +95,7 @@ Se non hai mantenuto alcun salvataggio DSiWare, salta questa sezione.
 1. Premi il pulsante (A) per sbloccare i permessi di scrittura di primo livello su SysNAND, quindi inserisci la combinazione di tasti richiesta a schermo
 1. Seleziona "Overwrite file(s)"
   + Questo processo potrebbe durare molto se hai molti giochi DSiWare
+1. Press (B) to decline relocking write permissions if prompted
 1. Premi (B) due volte per ritornare al menu principale
 
 ##### Sezione VI - Ripristino dei salvataggi GBA della Virtual Console
@@ -121,15 +125,17 @@ Se non hai mantenuto alcun salvataggio GBA della Virtual Console, salta questa s
 
 1. Premi il pulsante HOME per far apparire il menu delle azioni
 1. Seleziona "More..."
-1. Seleziona "Backup NAND"
+1. Select "Scripts"
+1. Select "Backup SysNAND"
+1. Premi il pulsante (A) per confermare
+  + Questo processo durerà un po'
 1. Premi il pulsante (A) per continuare
 1. Tenendo premuto (R), premi (B) per rimuovere la scheda SD
 1. Inserisci la scheda SD nel tuo computer
-1. Copia il file `nand.bin` dalla cartella `/gm9out/` della tua scheda SD in una posizione sicura sul tuo computer
-  + Se hai usato SafeCTRTransfer in precedenza e hai un backup della NAND rinominato `<codiceseriale>_nand.bin`, sostituiscilo con questo (rinomina `nand.bin` in `<codiceseriale>_nand.bin`)
+1. Copy `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Crea dei backup in più posti (come ad esempio un servizio di storage dei file online)
   + Questi backup ti salveranno da un brick nel caso dovesse accadere qualcosa in futuro
-1. Cancella il file `nand.bin` dalla cartella `/gm9out/` della tua scheda SD dopo averne salvato un backup
+1. Delete `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. **Fai un backup di ogni file sulla tua scheda SD e conservalo in una cartella sul tuo computer in quanto la scheda SD verrà formattata nei prossimi passaggi**
 
 ##### Sezione VIII - Formattazione della scheda SD
@@ -138,7 +144,7 @@ Se non hai mantenuto alcun salvataggio GBA della Virtual Console, salta questa s
 1. Premi il pulsante HOME per far apparire il menu delle azioni
 1. Seleziona "More..."
 1. Seleziona "SD format menu"
-1. Premi il pulsante (A) per confermare
+1. Premi (A) per confermare
 1. Seleziona "No EmuNAND"
 1. Seleziona "Auto"
 1. Premi (A) per accettare il nome `GM9SD`
