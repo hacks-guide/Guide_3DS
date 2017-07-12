@@ -24,15 +24,17 @@ Het heeft een systeem in plaats dat je zal beschermen door middel van waarschuwi
 1. Open GodMode9 door op (A) te drukken
 1. Druk op de (Home) knop om het actiemenu te openen
 1. Selecteer "More..."
-1. Selecteer "Backup NAND"
+1. Select "Scripts"
+1. Select "Backup SysNAND"
+1. Druk op (A) om te bevestigen
+  + Dit proces zal enige tijd duren
 1. Druk op (A) om door te gaan
 1. Houd (R) en (B) gelijkertijd ingedrukt om je SD kaart uit te werpen
 1. Plaats je SD kaart in je computer
-1. Copy `nand.bin` and `nand.bin.sha` from the `/gm9out/` folder on your SD card to a safe location on your computer
-  + Als je al eerder SafeCTRTransfer hebt gebruikt en je hebt een NAND backup genaamd `<serialnumber>_nand.bin`, overschrijf die dan met deze (hernoem `nand.bin` om overeen te komen met `<serialnumber>_nand.bin`)
+1. Copy `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Maak back-ups in verschillende locaties (zoals een online bestandsopslag)
   + Deze backup zal je redden van een brick als er iets fout gaat in de toekomst
-1. Delete `nand.bin` and `nand.bin.sha` from the `/gm9out/` folder on your SD card after copying it
+1. Delete `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. Stop je SD kaart terug in je 3DS
 
 ## <a name="nand_restore" /> Een NAND backup terugzetten
@@ -48,6 +50,7 @@ Het heeft een systeem in plaats dat je zal beschermen door middel van waarschuwi
 1. Voer de gegeven combinatie van knoppen in om SysNAND (lvl1) writing in te schakelen
   + Dit proces zal enige tijd duren
 1. Once it has completed, press (A) to continue
+1. Press (B) to decline relocking write permissions if prompted
 
 ## <a name="injectHS" /> Een willekeurige .CIA app in veiligheid- en gezondheidsinformatie injecteren
 
@@ -65,6 +68,7 @@ Het heeft een systeem in plaats dat je zal beschermen door middel van waarschuwi
 1. Druk op (A) op het `.app` bestand, selecteer vervolgens "NCCH image options", en selecteer dan "Inject to H&S"
 1. Druk op (A) om SysNAND (lvl1) writing te ontgrendelen en voer daarna de toetsencombinatie in die wordt gegeven
 1. Druk op (A) om door te gaan
+1. Press (A) to relock write permissions if prompted
 
 ## <a name="restore_hs" /> Veiligheid- en gezondheidsinformatie herstellen na een injectie met een .CIA app
 
@@ -79,6 +83,7 @@ Dit werkt alleen als veiligheid- en gezondheidsinformatie was geïnjecteerd door
 1. Selecteer "More..."
 1. Selecteer "Restore H&S"
 1. Druk op (A) om SysNAND (lvl1) writing te ontgrendelen en voer daarna de toetsencombinatie in die wordt gegeven
+1. Press (A) to relock write permissions if prompted
 
 ## <a name="dump_cart" /> Een spelkaart dumpen
 
@@ -95,8 +100,8 @@ Dit werkt alleen als veiligheid- en gezondheidsinformatie was geïnjecteerd door
 1. Navigeer naar `[C:] GAMECART`
 1. Volg de stappen die van toepassing zijn voor jouw spelkaart:
   + **3DS Spelkaart:** Druk op (A) op `[TitleID].trim.3ds` om het te selecteren, druk dan op "NCSD Image options...", selecteer dan "Build CIA from file"
-  + **NDS Spelkaart:** Druk op (A) op `[TitleID].trim.nds` om het te selecteren, en druk dan op "Copy to 0:/gm9out"
-1. Jouw installeerbaar `.cia` of niet-installeerbaar `.nds` geformatteerd bestand zal in `/gm9out` geplaatst worden op je SD kaart
+  + **NDS Game Cartridge:** Press (A) on `[TitleID].trim.nds` to select it, then select "Copy to 0:/gm9/out"
+1. Your installable `.cia` or non-installable `.nds` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
 ## <a name="dump_title" /> Een titel dumpen
 
@@ -118,7 +123,7 @@ Gebruik het `Titles` menu in FBI om de Title ID van de geïnstalleerde titel die
 1. Wees er zeker van dat je de juiste titel gevonden hebt
 1. Druk op (B) om de titel informatie af te sluiten
 1. Druk op (A) op het `.tmd` bestand om het te selecteren, selecteer dan "TMD file options...", en selecteer daarna "Build CIA (standard)"
-1. Jouw installeerbaar `.cia` geformatteerd bestand zal in `/gm9out` geplaatst worden op je SD kaart
+1. Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
 ## <a name="convert_3ds" /> Een .3DS converteren naar .CIA
 
@@ -133,7 +138,7 @@ Gebruik het `Titles` menu in FBI om de Title ID van de geïnstalleerde titel die
 1. Open GodMode9 door op (A) te drukken
 1. Navigeer naar `[0:] SDCARD`-> `cias`
 1. Druk op (A) op je `.3ds` bestand om het te selecteren, selecteer dan "NCSD image options...", en selecteer daarna "Build CIA from file"
-1. Jouw installeerbaar `.cia` geformatteerd bestand zal in `/gm9out` geplaatst worden op je SD kaart
+1. Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
 ## <a name="backup_gba" /> GBA VC Saves backuppen
 
@@ -208,8 +213,8 @@ Gebruik het `Titles` menu in FBI om de Title ID van de geïnstalleerde titel die
 1. Navigeer naar `[0:] SDCARD`-> `cias`
 1. Druk op (A) op het `.cia` bestand om het te selecteren, selecteer dan "CIA image options..."
 1. Selecteer de optie om de gewenste functie te vervullen:
-    + **Encrypt to 0:/gm9out:** maakt een gecodeerde kopie van het geselcteerde `.cia` bestand aan in de `/gm9out/` map op je SD kaart
-    + **Decrypt to 0:/gm9out:** maakt een gedecodeerde kopie van het geselcteerde `.cia` bestand aan in de `/gm9out/` map op je SD kaart
+    + **Encrypt to 0:/gm9/out:** Create an encrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card
+    + **Decrypt to 0:/gm9/out:** Create a decrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card
     + **Encrypt inplace:** vervangt het geselcteerde `.cia` bestand met een gecodeerde versie
     + **Decrypt inplace:** vervangt het geselcteerde `.cia` bestand met een gedecodeerde versie
 1. Het gecodeerde / gedecodeerde `.cia` bestand zal worden geplaatst in de gewenste locatie
