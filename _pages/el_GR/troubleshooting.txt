@@ -45,13 +45,9 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
 
 ## <a name="rm_nnid" />Removing an NNID without formatting your device
 
-#### Τι χρειάζεστε
+Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+{: .notice--info}
 
-* Την τελευταία έκδοση του [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-
-#### Οδηγίες
-
-1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 1. Boot your device while holding (Start) to launch the Luma3DS chainloader menu
 1. Launch GodMode9 by pressing (A)
 1. Navigate to `[1:] SYSNAND CTRNAND` -> `data` -> (32 Character ID) -> `sysdata` -> `00010038`
@@ -82,6 +78,7 @@ Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only dis
 1. Ενώ κρατάτε το (R), πατήστε (Y) για να δημιουργήσετε νέο κατάλογο
 1. Press (A) to confirm the name `newdir` (it does not matter what the folder is called)
 1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+1. Press (B) to decline relocking write permissions if prompted
 1. Πατήστε το (L) σε κάθε αρχείο με επέκταση κεφαλαίων γραμμάτων (`.TMD` and `.APP`) για να τα επιλέξετε
 1. Πατήστε (Y) για να αντιγράψετε τα αρχεία
 1. Μεταβείτε στο `newdir`
@@ -121,26 +118,6 @@ Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only dis
     1. Power on your device
     1. If you enter safe mode, update your device
 1. Your device may be bricked. For support, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
-
-## <a name="ts_dsiware" />After doing the DSiWare Transfer, my hacked DSiWare does not work
-
-1. Reboot **the source 3DS** while holding (Start) to launch the Luma3DS chainloader menu
-1. Launch GodMode9 by pressing (A)
-1. Navigate to `[0:] SDCARD` -> `gm9out`
-1. Press (A) on `nand.bin` to select it, then select "NAND image options…", then select "Restore SysNAND (safe)"
-1. Press (A) to unlock SysNAND overwriting, then input the key combo given
-  + This will not overwrite your boot9strap installation
-1. Input the key combo given to unlock SysNAND (lvl1) writing
-  + This process will take some time
-1. Once it has completed, press (A) to continue
-1. If you don't see the game at all on **the target 3DS**, link the NNID you bought the game with to **the target 3DS** and redownload it
-  + You may have to delete the game from "Data Management" in the "System Settings" first
-  + If **the target 3DS** is not the latest version, you may have to run ctr-httpwn to access the eShop
-1. On **the source 3DS**, do the the save (and `.app` if you are using the `.app` page) injection steps
-1. On **the source 3DS**, go to System Settings, "Data Management", "DSiWare", then copy your DSiWare game to your SD card
-1. Either put **the source 3DS**'s SD card in **the target 3DS**, or rename the `Nintendo 3DS` on **the target 3DS**'s SD card and copy the `Nintendo 3DS` folder from **the source 3DS**'s SD card to **the target 3DS**'s SD card
-1. On **the target 3DS**, go to System Settings, "Data Management", "DSiWare", then copy your DSiWare game to the system
-1. Return your SD cards to normal, then continue with the DSiWare Injection
 
 ## <a name="ts_sys_b9s" />Black screen on SysNAND boot after Installing boot9strap
 
