@@ -30,6 +30,7 @@ Durant cette étape, nous allons également configurer les programmes suivants :
 * La dernière version de [DSP1](https://github.com/zoogie/DSP1/releases/latest)
 * La dernière version de [FBI](https://github.com/Steveice10/FBI/releases/latest) *(le fichier `.cia`et le fichier `.3dsx`)*
 * La dernière version de [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(le fichier`.cia`)*
+* [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
 
 #### Instructions
 
@@ -52,6 +53,7 @@ Durant cette étape, nous allons également configurer les programmes suivants :
 1. Créez un répertoire appelé `payloads` dans le répertoire `luma` sur votre carte SD
 1. Copiez le fichier `GodMode9.firm` de l'archive GodMode9 `.zip` dans le dossier `/luma/payloads/` sur votre carte SD
 1. Copiez le dossier `gm9` de GodMode9 `.zip` à la racine de votre carte SD
+1. Copy `setup_ctrnand_luma3ds.gm9` to the `/gm9/scripts/` folder on your SD card
 
     ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
     {: .notice--info}
@@ -100,27 +102,20 @@ Si, avant d'avoir suivi ce guide, vous aviez une installation EmuNAND et que vou
 
 ##### Section VI - CTRNAND Luma3DS
 
-1. Redémarrer en appuyant sur (Start) pendant le démarrage pour lancer GodMode9
-1. Lorsque vous êtes invité à créer une sauvegarde de fichiers essentiels, appuyez sur (A) pour le faire, puis appuyez sur (A) pour continuer une fois qu’elle a complété
-1. Naviguez vers `[0:] SDCARD`
-1. Appuyez sur (Y) en sélectionnant `boot.firm` pour le copier
-1. Appuyez sur (B) pour revenir au menu principal
-1. Naviguez vers `[1:] SYSNAND CTRNAND`
-1. Appuyez sur (Y) pour coller la copie de `boot.firm`
-1. Sélectionnez "Copy path(s)"
+1. Démarrez la console en maintenant (Start) enfoncé pour accéder au menu de chainloader de Luma3DS
+1. Lancez GodMode9 en appuyant sur (A)
+1. Si vous êtes invité à créer une sauvegarde de fichiers essentiels, appuyez sur (A) pour le faire, puis appuyez sur (A) pour continuer une fois qu’elle a complété
+1. Appuyez sur (Home) pour faire apparaître le menu d’actions (action menu)
+1. Sélectionnez "More..."
+1. Sélectionnez "Scripts"
+1. Select "setup_ctrnand_luma3ds"
+1. Lorsque vous êtes invité, appuyez sur (A)
 1. Appuyez sur (A) pour autoriser l'écriture sur votre SysNAND, puis entrez la combinaison de touches demandée
-1. Appuyez (B) à décliner reverrouiller autorisations en écriture si vous êtes invité
-1. Appuyez sur (B) pour revenir au menu principal
-1. Naviguez vers `[0:] SDCARD`
-1. Appuyez sur (Y) en sélectionnant `luma` pour le copier
-1. Appuyez sur (B) pour revenir au menu principal
-1. Naviguez vers `[1:] SYSNAND CTRNAND` -> `rw`
-1. Appuyez sur (Y) pour coller le dossier `luma` dans votre carte SD
-1. Sélectionnez "Copy path(s)"
+1. Appuyez sur (A) pour continuer
+1. Appuyez (A) pour reverrouiller autorisations en écriture
 
 ##### Section VII - Sauvegarder votre SysNAND
 
-1. Appuyez deux fois sur (B) pour revenir au menu principal
 1. Appuyez sur (Home) pour faire apparaître le menu d’actions (action menu)
 1. Sélectionnez "More..."
 1. Sélectionnez "Scripts"
