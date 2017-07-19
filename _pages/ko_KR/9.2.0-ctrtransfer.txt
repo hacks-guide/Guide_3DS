@@ -25,6 +25,7 @@ Never format a New 2DS while on a version <11.4.0 without the New 2DS XL specifi
 
 * The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) *(the`.3dsx` file)*
+* [`ctrtransfer_ticket_copy.gm9`]({{ base_path }}/gm9_scripts/ctrtransfer_ticket_copy.gm9)
 * 기기와 지역에 맞는 9.2.0 CTRTransfer 이미지     
 *(기기에 맞는 지역이 없다면, 기기 종류만 맞추어 아무 파일이나 선택해 주세요)*
   +    <i class="fa fa-magnet" aria-hidden="true" title="이것은 마그넷 링크입니다. Use a torrent client to download the file."></i> - [New 3DS or 2DS - 9.2.0 - EUR - CTRTransfer](magnet:?xt=urn:btih:fed7bfeec0e52b42a77467cfb6ffd3e9dd2d5a70&dn=9.2.0-20E%5FCTRTransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)   
@@ -42,10 +43,10 @@ Never format a New 2DS while on a version <11.4.0 without the New 2DS XL specifi
 1. 기기를 종료해 주세요.
 1. SD 카드를 컴퓨터에 삽입해 주세요.
 1. SD 카드의 최상위 경로에 `cias` 폴더가 없을 경우 폴더를 만어 주세요.
-1. SD 카드의 최상위 경로에 `files9` 폴더가 없을 경우 폴더를 만어 주세요.
 1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
-1. CTRTransfer `.zip`에서 9.2.0 CTRTransfer image `.bin`을 SD 카드의 `/files9/` 폴더로 복사해 주세요.
+1. Copy `ctrtransfer_ticket_copy.gm9` to the `/gm9/scripts/` folder on your SD card
+1. Copy the 9.2.0 CTRTransfer image `.bin` from the CTRTransfer `.zip` to the `/gm9/` folder on your SD card
 1. Copy `FBI.3dsx` to the `/3ds/` folder on your SD card
 1. SD 카드를 기기에 다시 삽입해 주세요.
 
@@ -54,7 +55,7 @@ Never format a New 2DS while on a version <11.4.0 without the New 2DS XL specifi
 1. Launch the Luma3DS chainloader menu by holding (Start) during boot
 1. (A)를 눌러 GodMode9을 실행해 주세요.
 1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
-1. `[0:] SDCARD` ->`files9`으로 이동해 주세요.
+1. Navigate to `[0:] SDCARD` -> `gm9`
 1. CTRTransfer `.bin`에 (A)를 눌러 선택해 주세요.
 1. "CTRNAND options..."를 선택해 주세요.
 1. "Transfer image to CTRNAND"를 선택해 주세요.
@@ -65,14 +66,13 @@ Never format a New 2DS while on a version <11.4.0 without the New 2DS XL specifi
 1. 작업이 완료되면 (A)를 눌려 계속해 주세요.
 1. Press (B) to decline relocking write permissions if prompted
 1. (B)를 두 번 눌러 메인 메뉴로 돌아가 주세요.
-1. `[1:] SYSNAND CTRNAND` ->`dbs`로 이동해 주세요.
-1. `ticket.bak`에 (A)를 눌러 선택하고 "Ticket.db options..."를 선택하고 "Mount image to drive"를 선택해 주세요.
-1. If it exists, hold (R) and press (A) at the same time on `eshop` to select the folder, then select "Copy to 0:/gm9/out"
-  + 이 과정은 기기에 티켓이 많다면 시간이 좀 걸릴 수 있습니다.
-  + 작업이 완료되면 (A)를 눌려 계속해 주세요.
-1. If it exists, hold (R) and press (A) at the same time on `unknown` to select the folder, then select "Copy to 0:/gm9/out"
-  + 이 과정은 기기에 티켓이 많다면 시간이 좀 걸릴 수 있습니다.
-  + 작업이 완료되면 (A)를 눌려 계속해 주세요.
+1. (Home)을 눌러 작업 메뉴를 띄워 주세요.
+1. "More..."를 선택해 주세요.
+1. Select "Scripts..."
+1. Select "ctrtransfer_ticket_copy"
+1. When prompted, press (A) to proceed
+1. (A)를 눌러 진행해 주세요.
+1. Press (A) to relock write permissions
 1. (start)를 눌러 기기를 다시 시작해 주세요.
 1. 본체 설정의 "기타 설정"에서 가장 오른쪽에 있는 "본체 업데이트"를 선택해 기기를 업데이트해 주세요.
   + Updates while using B9S + Luma (what you have) are safe
@@ -93,16 +93,15 @@ Never format a New 2DS while on a version <11.4.0 without the New 2DS XL specifi
 
 ##### 섹션 IV - 티켓 다시 설치
 
-만약 기기에 `eshop` 폴더나 `unknown` 폴더가 없었다면 이 섹션을 건너뛰어 주세요.
+If script found no user tickets told you to skip this section, then skip this section
 {: .notice--info}
 
 1. Launch FBI from the list of homebrew
 1. `SD` -> `cias`로 이동해 주세요.
-1. "FBI.cia"를 선택해 주세요.
-1. "Install"을 선택한 뒤 (A)를 눌러 진행해 주세요.
 1. (B)를 눌러 SD 디렉터리로 돌아가 주세요.
 1. Select "gm9"
 1. Select "out"
+1. Select "ctrtransfer_tickets"
 1. `eshop` 폴더와 `unknown` 폴더 중 1개 이상의 폴더에 다음 과정을 수행해 주세요.
   + 그 폴더로 이동해 주세요.
   + "\<current directory>"를 선택해 주세요.
@@ -124,7 +123,7 @@ Never format a New 2DS while on a version <11.4.0 without the New 2DS XL specifi
 
 ##### 섹션 VI - CTRTransfer 이미지 제거
 
-1. `[0:] SDCARD` ->`files9`으로 이동해 주세요.
+1. Navigate to `[0:] SDCARD` -> `gm9`
 1. CTRTransfer image `.bin`에 (X)를 눌러 삭제해 주세요.
 1. (A)를 눌러 주세요.
 1. (start)를 눌러 기기를 다시 시작해 주세요.
