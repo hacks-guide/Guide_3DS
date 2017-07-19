@@ -23,7 +23,8 @@ title: "9.2.0 CTRTransfer"
 #### Что понадобится
 
 * Свежая версия [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) *(the`.3dsx` file)*
+* Свежая версия [FBI](https://github.com/Steveice10/FBI/releases/latest) *(`.3dsx-файл`)*
+* [`ctrtransfer_ticket_copy.gm9`]({{ base_path }}/gm9_scripts/ctrtransfer_ticket_copy.gm9)
 * Образ 9.2.0 CTRTransfer для вашего устройства и региона     
 *(если вашего региона нет в списке, выберите любой, подходящий типу вашего устройства)*:
   +    <i class="fa fa-magnet" aria-hidden="true" title="Это magnet-ссылка. Воспользуйтесь торрент-клиентом, чтобы скачать этот файл."></i> - [New 3DS или 2DS - 9.2.0 - EUR - CTRTransfer](magnet:?xt=urn:btih:fed7bfeec0e52b42a77467cfb6ffd3e9dd2d5a70&dn=9.2.0-20E%5FCTRTransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)   
@@ -41,10 +42,10 @@ title: "9.2.0 CTRTransfer"
 1. Выключите консоль
 1. Вставьте SD-карту в компьютер
 1. Создайте папку `cias` в корне SD-карты, если таковой нет
-1. Создайте папку `files9` в корне SD-карты, если таковой нет
 1. Скопируйте `GodMode9.firm` из `.zip-архива` GodMode9 в папку `/luma/payloads/` на SD-карте
-1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
-1. Скопируйте файлы `.bin` и `.bin.sha` из `.zip-архива` с образом 9.2.0 CTRTransfer в папку `/files9/` на SD-карте
+1. Скопируйте папку `gm9` из `.zip-архива` `GodMode9` в корень SD-карты
+1. Copy `ctrtransfer_ticket_copy.gm9` to the `/gm9/scripts/` folder on your SD card
+1. Copy the 9.2.0 CTRTransfer image `.bin` from the CTRTransfer `.zip` to the `/gm9/` folder on your SD card
 1. Скопируйте `FBI.3dsx` в папку `/3ds/` на SD-карте
 1. Вставьте SD-карту обратно в консоль
 
@@ -52,8 +53,8 @@ title: "9.2.0 CTRTransfer"
 
 1. Запустите меню Luma3DS chainloader, удерживая (Start) во время загрузки
 1. Запустите GodMode9, нажав кнопку (A)
-1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
-1. Перейдите в `[0:] SDCARD` -> `files9`
+1. Если вам предложат создать бэкап важных файлов, нажмите кнопку (A) чтобы сделать это, затем нажмите (A) чтобы продолжить после завершения
+1. Navigate to `[0:] SDCARD` -> `gm9`
 1. Нажмите (A) чтобы выбрать файл `.bin` CTRTransfer
 1. Выберите "CTRNAND options..."
 1. Выберите "Transfer image to CTRNAND"
@@ -62,16 +63,15 @@ title: "9.2.0 CTRTransfer"
 1. Нажмите (A), чтобы разрешить запись в SysNAND (lvl1) и введите указанную комбинацию кнопок
   + Этот процесс займет некоторое время
 1. По завершению процесса, нажмите (A)
-1. Press (B) to decline relocking write permissions if prompted
+1. Нажмите (B) чтобы не восстанавливать запрет на запись, если появится запрос
 1. Дважды нажмите (B) для возврата в главное меню
-1. Перейдите в `[1:] SYSNAND CTRNAND` -> `dbs`
-1. Нажмите (A) чтобы выбрать файл `ticket.bak`, затем выберите "Ticket.db options...", затем "Mount image to drive"
-1. If it exists, hold (R) and press (A) at the same time on `eshop` to select the folder, then select "Copy to 0:/gm9/out"
-  + Этот процесс может занять некоторое время, если у вас много ticket-файлов
-  + По завершению процесса, нажмите (A)
-1. If it exists, hold (R) and press (A) at the same time on `unknown` to select the folder, then select "Copy to 0:/gm9/out"
-  + Этот процесс может занять некоторое время, если у вас много ticket-файлов
-  + По завершению процесса, нажмите (A)
+1. Нажмите кнопку (Home) для вызова меню
+1. Выберите "More..."
+1. Выберите "Scripts..."
+1. Select "ctrtransfer_ticket_copy"
+1. При появлении запроса, нажмите (A) для продолжения
+1. Нажмите (A), чтобы продолжить
+1. Нажмите (A) чтобы восстановить запрет на запись
 1. Нажмите (Start) для перезагрузки
 1. Обновите прошивку консоли, зайдя в Системные настройки (System Settings), затем "Прочие настройки" (Other Settings), затем листайте вправо до конца и выберите пункт "Обновление" (System Update)
   + Обновление консоли с установленным B9S + Luma (установленых у вас) безопасно
@@ -92,16 +92,15 @@ title: "9.2.0 CTRTransfer"
 
 ##### Часть IV - Переустановка тикетов
 
-Если ранее у вас не было папок `eshop` или `unknown`, пропустите эту часть.
+If script found no user tickets told you to skip this section, then skip this section
 {: .notice--info}
 
 1. Выберите FBI в списке homebrew
 1. Перейдите в `SD` -> `cias`
-1. Выберите "FBI.cia"
-1. Выберите "Install", затем нажмите (A) для подтверждения
 1. Нажмите (B), чтобы вернуться в папку "SD"
-1. Select "gm9"
-1. Select "out"
+1. Выберите "gm9"
+1. Выберите "out"
+1. Select "ctrtransfer_tickets"
 1. Выполните шаги ниже либо для папки `eshop` либо для папки `unknown`, или для обоих
   + Перейдите в папку
   + Выберите "\<current directory>"
@@ -119,11 +118,11 @@ title: "9.2.0 CTRTransfer"
 1. Выберите "More..."
 1. Выберите "Restore H&S"
 1. Нажмите (A), чтобы разрешить запись в SysNAND (lvl1) и введите указанную комбинацию кнопок
-1. Press (B) to decline relocking write permissions if prompted
+1. Нажмите (B) чтобы не восстанавливать запрет на запись, если появится запрос
 
 ##### Часть VI - Удаление образа CTRTransfer
 
-1. Перейдите в `[0:] SDCARD` -> `files9`
+1. Navigate to `[0:] SDCARD` -> `gm9`
 1. Нажмите (X), выделив файл `.bin` CTRTransfer чтобы удалить его
 1. Нажмите (A) для подтверждения
 1. Нажмите (Start) для перезагрузки
