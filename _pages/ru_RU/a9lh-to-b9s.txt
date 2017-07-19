@@ -45,6 +45,7 @@ title: "С A9LH до B9S"
 * Свежая версия [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * Свежая версия [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
 * Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
+* [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
 
 #### Инструкция
 
@@ -62,7 +63,8 @@ title: "С A9LH до B9S"
 1. Создайте папку `boot9strap` в корне SD-карты
 1. Удалите все существующие `.bin` приложения в папке `/luma/payloads/` на SD-карте, так как они не будут совместимы с boot9strap совместимыми версиями Luma3DS
 1. Скопируйте `GodMode9.firm` из `.zip-архива` GodMode9 в папку `/luma/payloads/` на SD-карте
-1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+1. Скопируйте папку `gm9` из `.zip-архива` `GodMode9` в корень SD-карты
+1. Copy `setup_ctrnand_luma3ds.gm9` to the `/gm9/scripts/` folder on your SD card
 1. Скопируйте `SafeB9SInstaller.bin` из `.zip-архива` SafeB9SInstaller в папку `/luma/payloads/` на SD-карте
 1. Переименуйте `SafeB9SInstaller.bin` в папке `/luma/payloads/` на SD-карте в `start_SafeB9SInstaller.bin`
 1. Скопируйте `boot9strap.firm` и `boot9strap.firm.sha` из `.zip-архива` boot9strap в папку `/boot9strap/` в корне SD-карты
@@ -100,34 +102,17 @@ title: "С A9LH до B9S"
 Если перед обновлением до boot9strap у вас уже был установлен EmuNAND, и вы хотите перенести содержимое EmuNAND в SysNAND с кастомной прошивкой - сейчас самый подходящий момент. Выполните действия из раздела [перенос EmuNAND](move-emunand), прежде чем приступить к этой части.
 {: .notice--info}
 
-1. Перезагрузитесь, удерживая кнопку (Start), чтобы запустить меню Luma3DS chainloader
+1. Включите консоль кнопкой питания, держа нажатой кнопку (Start), чтобы запустить меню Luma3DS chainloader
 1. Запустите GodMode9, нажав кнопку (A)
-1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
-1. Перейдите в `[0:] SDCARD` -> `luma` -> `payloads`
-1. Нажмите (X), выделив файл `start_SafeB9SInstaller.bin` чтобы удалить его
-1. Нажмите (A) для подтверждения
-1. Нажмите (B), чтобы вернуться к `[0:] SDCARD`
-1. Нажмите (Y), выделив файл `boot.firm` чтобы скопировать его
-1. Нажмите (B) для возврата в главное меню
-1. Перейдите в `[1:] SYSNAND CTRNAND`
-1. Нажмите (Y), чтобы вставить копию `boot.firm`
-1. Выберите "Copy path(s)"
+1. Если вам предложат создать бэкап важных файлов, нажмите кнопку (A) чтобы сделать это, затем нажмите (A) чтобы продолжить после завершения
+1. Нажмите кнопку (Home) для вызова меню
+1. Выберите "More..."
+1. Выберите "Scripts..."
+1. Select "setup_ctrnand_luma3ds"
+1. При появлении запроса, нажмите (A) для продолжения
 1. Нажмите (A), чтобы разрешить запись в SysNAND (lvl1) и введите указанную комбинацию кнопок
-1. Нажмите (X), выделив файл `arm9loaderhax.bin`, чтобы удалить его
-  + Если у вас нет этого файла, просто продолжайте следовать инструкциям
-1. Нажмите (A) для подтверждения
-1. Нажмите (B) чтобы не восстанавливать запрет на запись, если появится запрос
-1. Нажмите (B) для возврата в главное меню
-1. Перейдите в `[0:] SDCARD`
-1. Нажмите (Y) на папке `luma`, чтобы скопировать её
-  + Если в папке `luma` остались файлы и/или папки (например, файлы LayeredFS) *помимо тех*, что были задействованы в прошлых версиях этого руководства (`config.bin` и `payloads`), вам следует скопировать только `config.bin` и `payloads`, выделив их с помощью (L) и нажав (Y) для копирования
-1. Нажмите (B) для возврата в главное меню
-1. Перейдите в `[1:] SYSNAND CTRNAND` -> `rw`
-1. Нажмите (X) на существующей папке `luma`, чтобы удалить её
-  + Если у вас нет этой папки, просто продолжайте следовать инструкциям
-1. Нажмите (A) для подтверждения
-1. Нажмите (Y), чтобы вставить копию папки `luma` из вашей SD-карты
-  + Если ранее вы скопировали только `config.bin` и `payloads`, вам будет нужно создать папку `luma` вручную (удерживая (R), нажмите (Y), введите имя `luma`, затем нажмите (A) для подтверждения), затем перейти в папку `luma` и нажать (Y), чтобы вставить `config.bin` и `payloads`
+1. Нажмите (A), чтобы продолжить
+1. Нажмите (A) чтобы восстановить запрет на запись
 1. Нажмите (Start) для перезагрузки
 
 ### Часть V - Установка Luma3DS Updater
