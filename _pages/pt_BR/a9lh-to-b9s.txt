@@ -45,6 +45,7 @@ Note que, no New 3DS, o `secret_sector.bin` é necessário para reverter o explo
 * A versão mais recente do [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * A versão mais recente do [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
 * O [Kit de Iniciante de Homebrew](http://smealum.github.io/ninjhax2/starter.zip)
+* [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
 
 #### Instruções
 
@@ -63,6 +64,7 @@ Para todas as etapas nesta seção, substitua quaisquer arquivos existentes no s
 1. Apague quaisquer payloads `.bin` existentes na pasta `/luma/payloads/` do seu cartão SD card, já que eles não serão compatíveis com as versões boot9strap do Luma3ds
 1. Copie o `GodMode9.firm` do `.zip` do GodMode9 para a pasta `/luma/payloads/` no seu cartão SD
 1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+1. Copy `setup_ctrnand_luma3ds.gm9` to the `/gm9/scripts/` folder on your SD card
 1. Copie o `SafeB9SInstaller.bin` do `.zip` do SafeB9SInstaller para a pasta `/luma/payloads/` no seu cartão SD
 1. Renomeie `SafeB9SInstaller.bin` na pasta `/luma/payloads/` do seu cartão SD para `start_SafeB9SInstaller.bin`
 1. Copie o `boot9strap.firm` e o `boot9strap.firm.sha` do `.zip` do boot9strap para a pasta `/boot9strap/` no seu cartão SD
@@ -100,35 +102,18 @@ Esta seção é necessária apenas se o seu dispositivo reiniciar no menu de con
 Se, antes de atualizar para o boot9strap, você já possuia uma instalação EmuNAND e gostaria de mover o conteúdo da EmuNAND anterior para sua nova SysNAND com CFW, agora é hora de [seguir Mover EmuNAND](move-emunand) antes de realizar esta seção.
 {: .notice--info}
 
-1. Reinicie segurando (Start) durante a inicialização para iniciar o menu do chainloader do Luma3DS
+1. Inicie seu dispositivo enquanto segura (Start) para iniciar o menu do chainloader do Luma3DS
 1. Inicie o GodMode9 apertando (A)
 1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
-1. Navegue para `[0:] SDCARD` -> `luma` -> `payloads`
-1. Aperte (X) no `start_SafeB9SInstaller.bin` para excluí-lo
-1. Aperte (A) para confirmar
-1. Aperte (B) para retornar ao `[0:] SDCARD`
-1. Aperte (Y) no `boot.firm` para copiá-lo
-1. Aperte (B) para retornar para o menu principal
-1. Navegue para `[1:] SYSNAND CTRNAND`
-1. Aperte (Y) para colar uma cópia do `boot.firm`
-1. Selecione "Copy path(s)"
+1. Aperte (Home) para abrir o menu de ações
+1. Selecione "More..."
+1. Select "Scripts..."
+1. Select "setup_ctrnand_luma3ds"
+1. When prompted, press (A) to proceed
 1. Aperte (A) para destravar "SysNAND (lvl1) writing", então aperte a sequência de botões solicitada
-1. Aperte (X) no `arm9loaderhax.bin` para apagá-lo
-  + Se você não tem esse arquivo, só prossiga com as instruções
-1. Aperte (A) para confirmar
-1. Press (B) to decline relocking write permissions if prompted
-1. Aperte (B) para retornar para o menu principal
-1. Navegue para `[0:] SDCARD`
-1. Aperte (Y) na pasta `luma` para copia-la
-  + Se você tem arquivos ou pastas *que não sejam* os utilizados em uma versão anterior deste guia (`config.bin` e `payloads`) na sua pasta `luma` (como arquivos do LayeredFS), você deve, ao invés disso, apenas copiar `config.bin` e `payloads` marcando-os com o gatilho (L), depois apertando (Y) para copiar
-1. Aperte (B) para retornar para o menu principal
-1. Navegue para `[1:] SYSNAND CTRNAND` -> `rw`
-1. Aperte (X) na pasta `luma` existente para apagá-la
-  + Se você não tem essa pasta, apenas prossiga com as instruções
-1. Aperte (A) para confirmar
-1. Aperte (Y) para colar uma cópia da pasta `luma` do seu cartão SD
-  + Se você copiou apenas `config.bin` e `payloads` anteriormente, você irá precisar de, ao invés disso, criar a pasta `luma` manualmente (segurando o gatilho (R) e apertando (Y) ao mesmo tempo, dar o nome `luma` e apertar (A) para confirmar) e depois navegar para `luma` e apertar (Y) para colar `config.bin` e `payloads`
-1. Aperte (Start) para reiniciar
+1. Aperte (A) para continuar
+1. Press (A) to relock write permissions
+1. Aperte (Start) para reiniciar seu dispositivo
 
 ##### Seção V - Instalando Luma3DS Updater
 
