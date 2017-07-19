@@ -31,6 +31,7 @@ Il y a eu des informations concernant une vague de bannissements contre les util
 * La dernière version de [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(boot9strap standard, pas le fichier `devkit` et ni le fichier `ntr`)*
 * La dernière version de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * Le Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
+* [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
 
 #### Instructions
 
@@ -46,6 +47,7 @@ Pour toutes les étapes de cette section, remplacez tous les fichiers existants 
 1. Créez un dossier à la racine de votre carte SD nommé `boot9strap`
 1. Copiez le fichier `GodMode9.firm` de l'archive GodMode9 `.zip` dans le dossier `/luma/payloads/` sur votre carte SD
 1. Copiez le dossier `gm9` de GodMode9 `.zip` à la racine de votre carte SD
+1. Copy `setup_ctrnand_luma3ds.gm9` to the `/gm9/scripts/` folder on your SD card
 1. Copiez `SafeB9SInstaller.firm` du dossier SafeB9SInstaller `.zip` vers le dossier `/luma/payloads/` de votre carte SD
 1. Copiez `boot9strap.firm` et `boot9strap.firm.sha` depuis le fichier ".zip" de boot9strap vers le dossier `/boot9strap/` sur votre carte SD
 1. Réinsérez votre carte SD dans votre 3DS
@@ -80,32 +82,15 @@ Pour toutes les étapes de cette section, remplacez tous les fichiers existants 
 1. Démarrez la console en maintenant (Start) enfoncé pour accéder au menu de chainloader de Luma3DS
 1. Lancez GodMode9 en appuyant sur (A)
 1. Si vous êtes invité à créer une sauvegarde de fichiers essentiels, appuyez sur (A) pour le faire, puis appuyez sur (A) pour continuer une fois qu’elle a complété
-1. Naviguez vers`[0:] SDCARD` -> `luma` -> `payloads`
-1. Appuyez sur (X) en sélectionnant `SafeB9SInstaller.firm` afin de le supprimer
-1. Appuyez sur (A) pour confirmer
-1. Pressez (B) pour revenir à `[0:] SDCARD`
-1. Appuyez sur (Y) en sélectionnant `boot.firm` pour le copier
-1. Appuyez sur (B) pour revenir au menu principal
-1. Naviguez vers `[1:] SYSNAND CTRNAND`
-1. Appuyez sur (Y) pour coller la copie de `boot.firm`
-1. Sélectionnez "Copy path(s)"
+1. Appuyez sur (Home) pour faire apparaître le menu d’actions (action menu)
+1. Sélectionnez "More..."
+1. Sélectionnez "Scripts"
+1. Select "setup_ctrnand_luma3ds"
+1. Lorsque vous êtes invité, appuyez sur (A)
 1. Appuyez sur (A) pour autoriser l'écriture sur votre SysNAND, puis entrez la combinaison de touches demandée
-1. Appuyez (B) pour décliner reverrouiller autorisations en écriture si vous êtes invité
-1. Appuyez sur (X) en sélectionnant `arm9loaderhax.bin` pour le supprimer
-  + Si vous n'avez pas ce fichier, procédez directement avec les instructions
-1. Appuyez sur (A) pour confirmer
-1. Appuyez sur (B) pour revenir au menu principal
-1. Naviguez vers `[0:] SDCARD`
-1. Appuyez sur (Y) en sélectionnant `luma` pour le copier
-  + Si vous avez des fichiers ou dossiers *autre que* ceux provenant d'une version antérieur de ce guide (`config.bin` et `payloads`) dans votre répertoire `luma` (tel que les fichiers LayeredFS), vous devriez simplement copier `config.bin` et `payloads` en les marquant avec la gâchette (L), puis appuyez sur ( Y) pour copier
-1. Appuyez sur (B) pour revenir au menu principal
-1. Naviguez vers `[1:] SYSNAND CTRNAND` -> `rw`
-1. Appuyez sur (X) sur le dossier `luma` pour le supprimer
-  + Si vous n'avez pas ce dossier, suivez simplement les instructions
-1. Appuyez sur (A) pour confirmer
-1. Appuyez sur (Y) pour coller le dossier `luma` dans votre carte SD
-  + Si vous avez seulement copier `config.bin` et `payloads` plus tôt, vous allez devoir créer le dossier `luma` manuellement (maintenez la gâchette (R) et appuyer sur (Y) en même temps, nommer le `luma`, appuyer ensuite sur (A) pour confirmer), naviguer ensuite vers `luma`, appuyez ensuite sur (Y) pour coller `config.bin` et `payloads`
-1. Appuyez sur (Start) pour redémarrer la console
+1. Appuyez sur (A) pour continuer
+1. Appuyez (A) pour reverrouiller autorisations en écriture
+1. Appuyez sur (Start) pour redémarrer votre système
 
 ___
 
