@@ -1,25 +1,25 @@
 ---
-title: "A9LH to B9S"
+title: "D'A9LH a B9S"
 ---
 
-This page is for existing arm9loaderhax users to update their devices to boot9strap.
+Aquesta pàgina és per a usuaris actuals d'arm9loaderhax que desitgin actualitzar els seus dispositius a boot9strap.
 {: .notice--info}
 
-All future releases of Luma3DS will only be made in the `.firm` format, which will only be compatible with boot9strap and sighax. This means that to continue receiving the latest updates of Luma3DS, you should use this page to update your installation.
+Totes les futures versions de Luma3DS és faran exclusivament en el format `.firm`, el qual només serà compatible amb boot9strap i sighax. Això vol dir que per a continuar rebent les darreres actualitzacions de Luma3DS, hauríeu d'utilitzar aquesta pàgina per actualitzar la vostra instal·lació.
 {: .notice--info}
 
-If you have a PIN enabled on Luma3DS, SafeB9SInstaller will give you an "OTP Crypto Fail" error unless you temporarily disable your PIN (you can re-enable the PIN after the update).
+Si teniu un PIN habilitat a Luma3DS, SafeB9SInstaller us alertarà de l'error "OTP Crypto Fail" a menys que deshabiliteu el vostre PIN temporalment (podeu tornar-lo a habilitar després de l'actualització).
 {: .notice--warning}
 
-To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+Per a fer servir els enllaços [magnet](https://ca.wikipedia.org/wiki/Magnet), necessitareu un client per a descàrregues BitTorrent com ara [Deluge](http://dev.deluge-torrent.org/wiki/Download)
 {: .notice--success}
 
 {% capture notice-1 %}
-There have been reports of a wave of bans being handed out to CFW users by Nintendo. To protect yourself, please do the following steps before starting this guide:
+Hi ha hagut informes d'una onada de bandejaments a usuaris de CFW per part de Nintendo. Per guardar-vos-en, si us plau, seguiu els següents passos abans de començar aquesta guia:
 
-1. Go to System Settings, then "Internet Settings", then "SpotPass", then "Sending of System Information"
-1. Disable the "Sending of System Information" option
-1. Exit the System Settings
+1. Accediu a la configuració del sistema, a continuació, heu de tocar el requadre on es llegeixi "Configuració d'internet", llavors "SpotPass" i finalment allà on es llegeixi "Enviament d'informació del sistema"
+1. Deshabiliteu l'opció d'"Enviament d'informació del sistema"
+1. Sortiu de la configuració del sistema
 1. Go to your Friend's List (the Face Icon in the top row of your Home Menu)
   + If you receive an error and are kicked out of the menu, the Friend's List setting is already disabled
 1. Go to the Friend's List settings, then "Friend Notification Settings", then "Show friends what you're playing"
@@ -45,6 +45,7 @@ Note that, on New 3DS, `secret_sector.bin` is needed to revert the arm9loaderhax
 * The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * The latest fork of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
 * The Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
+* [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
 
 #### Instruccions
 
@@ -63,6 +64,7 @@ For all steps in this section, overwrite any existing files on your SD card.
 1. Delete any existing `.bin` payloads in the `/luma/payloads/` folder on your SD card as they will not be compatible with boot9strap compatible Luma3DS versions
 1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+1. Copy `setup_ctrnand_luma3ds.gm9` to the `/gm9/scripts/` folder on your SD card
 1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the `/luma/payloads/` folder on your SD card
 1. Rename `SafeB9SInstaller.bin` in the `/luma/payloads/` folder on your SD card to `start_SafeB9SInstaller.bin`
 1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
@@ -100,35 +102,18 @@ This section is only needed if you are prompted with the Luma3DS configuration m
 If, before updating to boot9strap, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand) before doing this section.
 {: .notice--info}
 
-1. Reboot holding (Start) during boot to launch the Luma3DS chainloader menu
+1. Boot your device while holding (Start) to launch the Luma3DS chainloader menu
 1. Launch GodMode9 by pressing (A)
 1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
-1. Navigate to `[0:] SDCARD` -> `luma` -> `payloads`
-1. Press (X) on `start_SafeB9SInstaller.bin` to delete it
-1. Premeu (A) per confirmar
-1. Press (B) to return to `[0:] SDCARD`
-1. Press (Y) on `boot.firm` to copy it
-1. Press (B) to return to the main menu
-1. Navigate to `[1:] SYSNAND CTRNAND`
-1. Press (Y) to paste a copy of `boot.firm`
-1. Select "Copy path(s)"
+1. Press (Home) to bring up the action menu
+1. Select "More..."
+1. Select "Scripts..."
+1. Select "setup_ctrnand_luma3ds"
+1. When prompted, press (A) to proceed
 1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
-1. Press (X) on `arm9loaderhax.bin` to delete it
-  + If you do not have this file, just proceed with the instructions
-1. Premeu (A) per confirmar
-1. Press (B) to decline relocking write permissions if prompted
-1. Press (B) to return to the main menu
-1. Navigate to `[0:] SDCARD`
-1. Press (Y) on the `luma` folder to copy it
-  + If you have files or folders *other than* the ones from following an earlier version of this guide (`config.bin` and `payloads`) in your `luma` directory (such as LayeredFS files), you should instead just copy `config.bin` and `payloads` by marking them with the (L) trigger, then pressing (Y) to copy
-1. Press (B) to return to the main menu
-1. Navigate to `[1:] SYSNAND CTRNAND` -> `rw`
-1. Press (X) on the existing `luma` folder to delete it
-  + If you do not have this folder, just proceed with the instructions
-1. Premeu (A) per confirmar
-1. Press (Y) to paste a copy of the `luma` folder from your SD card
-  + If you only copied `config.bin` and `payloads` earlier, you will need to instead create the `luma` folder manually (hold the (R) trigger and pressing (Y) at the same time, give the name `luma`, then press (A) to confirm), then navigate to `luma`, then press (Y) to paste `config.bin` and `payloads`
-1. Press (Start) to reboot
+1. Press (A) to continue
+1. Press (A) to relock write permissions
+1. Press (Start) to reboot your device
 
 ##### Section V - Installing Luma3DS Updater
 
