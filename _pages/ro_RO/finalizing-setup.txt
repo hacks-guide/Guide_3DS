@@ -1,181 +1,176 @@
 ---
-title: "Finalizing Setup"
+title: "Finalizând instalarea"
 ---
 
-#### Prezentarea pașilor
+#### Descrierea generală a pașilor
 
 {% capture notice-2 %}
 
-The file `boot.firm` is what is launched by boot9strap itself after it finishes loading off of NAND, and can be any valid arm9 payload in the FIRM format. This file can be replaced at any time, although Luma3DS allows for the launch of other arm9 payloads in the FIRM format using the Luma3DS chainloader.
+Fișierul `boot.firm` este ceea ce e rulat de boot9strap însuși după ce se încarcă de pe NAND și poate fi orice alt payload arm9 valid în formatul FIRM. Acest fișier poate fi înlocuit oricând, totuși Luma3DS va permite lansarea altor payload-uri arm9 în formatul FIRM folosind chainloader-ul de la Luma3DS.
 <br><br>
-In this case, we use Luma3DS by [AuroraWright](https://github.com/AuroraWright/) to boot a patched SysNAND directly, allowing us to completely bypass the need for any kind of EmuNAND, vastly simplifying the usage of a hacked 3DS in addition to saving SD card space.
+În acest caz, putem să folosim Luma3DS de [AuroraWright](https://github.com/AuroraWright/) pentru a porni un SysNAND patch-uit direct, făcând inutilă nevoia de a folosi orice fel de EmuNAND, simplificând semnificativ folosirea unui 3DS modat economisind de asemenea spațiu pe cardul SD.
 <br><br>
-During this process, we also setup programs such as the following:    
+Pe parcursul acestui proces, vom instala și programe ca următoarele:    
 
-+  **FBI** *(installs CIA formatted games and applications)*
-+  **Themely** *(installs custom themes)*
-+  **Luma3DS Updater** *(updates your CFW installation easily)*
-+  **GodMode9** *(multipurpose tool which can do NAND and cartridge functions)*
-+  **Homebrew Launcher Loader** *(launches the Homebrew Launcher as a regular application thanks to Rosalina magic)*
++  **FBI** *(instalează jocuri și aplicații în format CIA)*
++ **Themely** *(instalează teme personalizate)*
++  **Luma3DS Updater** *(actualizează CFW-ul instalat cu ușurință)*
++  **GodMode9** *(unealtă multifuncțională care poate face funcții de NAND și card)*
++  **Homebrew Launcher Loader** *(pornește Homebrew Launcger ca o aplicație obișnuită mulțumită magiei lui Rosalina)*
 
 {% endcapture %}
 
 <div class="notice--info">{{ notice-2 | markdownify }}</div>
 
-#### Ce îți va trebui
+#### Ce aveți nevoie
 
-* The latest release of [Themely](https://github.com/ErmanSayin/Themely/releases/latest) *(the `.cia` file)*
-* The latest release of [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* The latest release of [DSP1](https://github.com/zoogie/DSP1/releases/latest)
-* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) *(the `.cia` and `.3dsx` files)*
-* The latest fork of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(the `.cia` file)*
+* Ultima versiune de [Themely](https://github.com/ErmanSayin/Themely/releases/latest) *(fișierul `.cia`)*
+* Ultima versiune de [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
+* Cea mai nouă versiune de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* Cea mai nouă versiune de [DSP1](https://github.com/zoogie/DSP1/releases/latest)
+* Cea mai nouă versiune de [FBI](https://github.com/Steveice10/FBI/releases/) *(fișierele `.3dsx` și `.cia`)*
+* Ultima versiune de [Luma3DS Updater](https://github.com/Hamcha/lumaupdate/releases/latest) *(fișierul `.cia`)*
+* [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
 
 #### Instrucțiuni
 
-##### Section I - Prep Work
+##### Secțiunea I - Preparații
 
-1. Power off your device
-1. Introduceți cardul SD în computer
-1. Copy `FBI.3dsx` to the `/3ds/` folder on your SD card
-1. Create a folder named `cias` on the root of your SD card if it does not already exist
-1. Create a folder named `hblauncherloader` on the root of your SD card if it does not already exist
-1. Copy `hblauncher_loader.cia` from the hblauncher_loader `.zip` to the `/cias/` folder on your SD card
-1. Copy `lumaupdater.cia` to the `/cias/` folder on your SD card
-1. Copy `FBI.cia` to the `/cias/` folder on your SD card
-1. Copy `DSP1.cia` to the `/cias/` folder on your SD card
-1. Copy `Themely.cia` to the `/cias/` folder on your SD card
+1. Închideți dispozitivul
+1. Introduceți cardul SD în calculator
+1. Copiați `FBI.3dsx` în folderul `/3ds/` de pe cardul SD
+1. Creați un folder numit `cias` pe rădăcina cardului SD dacă nu există deja
+1. Creați un folder numit `hblauncherloader` pe rădăcina cardului SD dacă nu există deja
+1. Copiați `hblauncher_loader.cia` din arhiva hblauncher_loader `.zip` în folderul `/cias/` de pe cardul SD
+1. Copiați `lumaupdater.cia` în folderul `/cias/` de pe cardul SD
+1. Copiați `FBI.cia` în folderul `/cias/` de pe cardul SD
+1. Copiați `DSP1.cia` în folderul `/cias/` de pe cardul SD
+1. Copiați `Themely.cia` în folderul `/cias/` de pe cardul SD
 
     ![]({{ base_path }}/images/screenshots/cias-file-layout.png)
     {: .notice--info}
 
-1. Create a folder named `payloads` in the `luma` folder on your SD card
-1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
-1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+1. Creați un folder numit `payloads` în folderul `luma` de pe cardul SD
+1. Copiați `GodMode9.firm` de pe arhiva `.zip` GodMode9 în folderul `/luma/payloads/` de pe cardul SD
+1. Copiați folderul `gm9` din fișierul `.zip` GodMode9 pe rădăcina cardului SD
+1. Copy `setup_ctrnand_luma3ds.gm9` to the `/gm9/scripts/` folder on your SD card
 
     ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
     {: .notice--info}
 
-1. Reinsert your SD card into your device
-1. Power on your device
+1. Reintroduceți cardul SD în dispozitivul dumneavoastră
+1. Porniți dispozitivul
 
-##### Section II - Updating the System
+##### Secțiunea II - Actualizând sistemul
 
-If, while following a previous version of this guide, you CTRTransfered your *New 3DS* to 2.1.0, now is the time to [restore your NAND backup](godmode9-usage#nand_restore) before doing this section.
+Dacă, în timp ce ați folosit o versiune anterioară a acestui ghid, ați efectuat un CTRTransfer pe *New 3DS-ul* dumneavoastră la 2.1.0, acum este timpul să vă [restaurați copia de rezervă NAND](godmode9-usage#nand_restore) înainte de a face această secțiune.
 {: .notice--danger}
 
-If, before following this guide, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand) before doing this section.
+Dacă, înainte să urmăriți acest ghid, aveați deja o configurare cu EmuNAND și doriți să mutați conținutul lui pe noul CFW SysNAND, acum este timpul să [urmați Mutare EmuNAND](move-emunand) înainte să faceți pașii din această secțiune.
 {: .notice--info}
 
-1. Update your device by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
-  + Updates while using B9S + Luma (what you have) are safe
+1. Actualizați dispozitivul mergând în System Settings, apoi "Other Settings", apoi mergeți spre colțul drept și folosiți "System Update"
+  + Actualizările în timp ce folosiți B9S + Luma (ce aveți) sunt sigure
   + Dacă aceasta vă da o eroare, setați DNS-ul pe "auto"
-  + If this still gives you an error and your NAND is below 9.2.0, [follow 9.2.0 CTRTransfer](9.2.0-ctrtransfer), then try updating again
+  + Dacă tot primiți o eroare și NAND-ul dumneavoastră e sub 9.2.0, [urmați CTRTransfer 9.2.0](9.2.0-ctrtransfer), apoi încercați să actualizați din nou
 
-##### Section III - Launching FBI
+##### Secțiunea III - Lansând FBI
 
-1. Launch the Download Play application
-1. Press (L) + (Down) + (Select) at the same time to open the Rosalina menu
-1. Select "Miscellaneous options"
-1. Select "Switch the hb. title to the current app."
-1. Press (B) to continue
-1. Press (B) to return to the Rosalina main menu
-1. Press (B) to exit the Rosalina menu
-1. Press (Home), then close Download Play
-1. Launch the Download Play application
-1. Your device should load the Homebrew Launcher
+1. Lansați aplicația Download Play
+1. Apăsați (L) + (Jos) + (Select) în același timp ca să deschideți meniul Rosalina
+1. Selectați "Miscellaneous options"
+1. Selectați "Switch the hb. title to the current app"
+1. Apăsați (B) pentru a continua
+1. Apăsați (B) ca să vă întoarceți la meniul principal Rosalina
+1. Apăsați (B) pentru a ieși din meniul Rosalina
+1. Apăsați (Home), apoi închideți Download Play
+1. Lansați aplicația Download Play
+1. Dispozitivul dumneavoastră ar trebui să încarce Hombrew Launcher-ul
 
-##### Section IV - Installing CIAs
+##### Secţiunea IV - Instalând CIA-uri
 
-1. Launch FBI from the list of homebrew
-1. Navigate to `SD` -> `cias`
-1. Select "\<current directory>"
-1. Select the "Install and delete all CIAs" option, then press (A) to confirm
-1. Press (Home), then close Download Play
+1. Lansați FBI din lista de homebrew
+1. Navigați spre `SD` -> `cias`
+1. Selectați "\<current directory>"
+1. Selectați opțiunea "Install and delete all CIAs", apoi apăsați (A) pentru a confirma
+1. Apăsați (Home), apoi închideți Download Play
 
-##### Section V - DSP Dump
+##### Secțiunea V - Dump de DSP
 
-1. Launch the DSP1 application
-1. Once it has completed, press (B) to self-delete the app and return to the home menu
+1. Lansați aplicația DSP1
+1. Odată completat, apăsați (B) pentru a auto-șterge aplicația și întoarceți-vă în meniul HOME
 
-##### Section VI - CTRNAND Luma3DS
+##### Secțiunea VI - CTRNAND Luma3DS
 
-1. Reboot holding (Start) during boot to launch GodMode9
-1. When prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
-1. Navigate to `[0:] SDCARD`
-1. Press (Y) on `boot.firm` to copy it
-1. Press (B) to return to the main menu
-1. Navigate to `[1:] SYSNAND CTRNAND`
-1. Press (Y) to paste a copy of `boot.firm`
-1. Select "Copy path(s)"
-1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
-1. Press (B) to decline relocking write permissions if prompted
-1. Press (B) to return to the main menu
-1. Navigate to `[0:] SDCARD`
-1. Press (Y) on the `luma` folder to copy it
-1. Press (B) to return to the main menu
-1. Navigate to `[1:] SYSNAND CTRNAND` -> `rw`
-1. Press (Y) to paste a copy of the `luma` folder from your SD card
-1. Select "Copy path(s)"
+1. Deschideți dispozitivul în timp ce țineți apăsat (Start) pentru a lansa meniul chainloader Luma3DS
+1. Lansați GodMode9 apăsând (A)
+1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
+1. Apăsați (Home) pentru a arăta meniul de acțiuni
+1. Selectați "More..."
+1. Selectați "Scripts..."
+1. Select "setup_ctrnand_luma3ds"
+1. Când vi se solicită, apăsaţi (A) pentru a continua
+1. Apăsați (A) ca să deblocați scrierea în SysNAND (lvl1), apoi apăsați combinația de butoane care vi se cere
+1. Apăsați (A) pentru a continua
+1. Apăsați (A) ca să reblocați permisiunile de scriere
 
-##### Section VII - Backup SysNAND
+##### Secțiunea VII - Copie de rezervă SysNAND
 
-1. Press (B) twice to return to the main menu
-1. Press (Home) to bring up the action menu
-1. Select "More..."
-1. Select "Scripts"
-1. Select "Backup SysNAND"
+1. Apăsați (Home) pentru a arăta meniul de acțiuni
+1. Selectați "More..."
+1. Selectați "Scripts..."
+1. Selectați "Backup SysNAND"
 1. Apăsați (A) pentru a confirma
-  + This process will take some time
+  + Acest proces va lua ceva timp
 1. Press (A) to continue
-1. Hold (R) and press (B) at the same time to eject your SD card
-1. Insert your SD card into your computer
-1. Copy `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
-  + Make backups in multiple locations (such as online file storage)
-  + This backup will save you from a brick if anything goes wrong in the future
-1. Delete `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card after copying it
-1. Reinsert your SD card into your device
-1. Press (Start) to save and reboot
+1. Țineți apăsat (R) și apăsați (B) în același timp pentru a scoate cardul SD
+1. Introduceți cardul SD în calculator
+1. Copiati `<serialnumber>_nandmin_###.bin` din folder-ul '/gm9out/' de pe SD card pe o locatie sigura pe calculator-ul dumneavoastra
+  + Faceți copii de rezervă în mai multe locații (cum ar fi stocări online ale fișierelor)
+  + Această copie de rezervă vă va salva de un brick în caz că ceva nu va merge bine în viitor
+1. Ștergeți `<serialnumber>_nandmin_###.bin` din folderul `/gm9out/` de pe cardul SD după ce l-ați copiat
+1. Reintroduceți cardul SD în dispozitivul dumneavoastră
+1. Apăsați (Start) pentru a salva și reporni
 
 ___
 
 {% capture notice-10 %}
-You can now use Luma3DS Updater to update your Luma3DS to the latest version just by opening it and pressing (A).     
-This is not the same thing as a System Update; it just downloads and extracts the newest Luma3DS files.
-This will only update the Luma3DS files on your SD card. If you boot your device without an SD card, it will use the version you placed in CTRNAND.    
+Acum puteți folosi Luma3DS Updater pentru a actualiza Luma3DS la cea mai nouă versiune doar prin a deschide-o și apăsând (A).     
+Nu este același lucru ca o actualizare de sistem; el doar descarcă și extrage cele mai noi fișiere de Luma3DS.
+Acesta va actualiza doar fișierele Luma3DS de pe cardul SD. Dacă porniți dispozitivul fără un card SD, va utiliza orice versiune este plasată în CTRNAND.    
 {% endcapture %}
 
 <div class="notice--info">{{ notice-10 | markdownify }}</div>
 
 {% capture notice-6 %}   
 You will now boot Luma3DS CFW SysNAND by default.    
-You can now hold (Select) on boot to launch the Luma3DS configuration menu.    
-You can now hold (Start) on boot to launch the Luma3DS chainloader menu (note that the Luma3DS chainloader menu is only displayed if there is more than one payload detected).    
-You can now hold (Start) + (Select) + (X) on boot to dump the ARM11 bootrom (`boot11.bin`), the ARM9 bootrom (`boot9.bin`), and your console unique OTP (`OTP.bin`) to the `/boot9strap/` folder on your SD card (note that this will not have any kind of prompt or message).    
-You can now press (L) + (Down) + (Select) while the system is booted to open the Rosalina menu integrated into Luma3DS. For a full list of Rosalina features, please see the [Luma3DS v8.0 Release](https://github.com/AuroraWright/Luma3DS/releases/tag/v8.0)
+Acum puteți ține apăsat (Select) la pornire pentru a intra în meniul de setări Luma3DS.    
+Puteți ține apăsat (Start) la pornire pentru a lansa meniul chainloader Luma3DS (țineți cont că meniul chainloader Luma3DS este afișat doar dacă mai mult de un payload este detectat).    
+Acum puteți ține apăsat (Start) + (Select) + (X) în timpul pornirii pentru a face dump la bootrom-ul ARM11 (`boot11.bin`), bootrom-ul ARM9 (`boot9.bin`), și OTP-ul unic pentru consolă (`OTP.bin`) în folderul `/boot9strap/` de pe cardul SD (țineți cont că asta nu va crea niciun tip de mesaj).    
+Acum puteți apăsa (L) + (Jos) + (Select) în timp ce sistemul pornește pentru a deschide meniul Rosalina integrat în Luma3DS. Pentru o lista completă de caracteristici din Rosalina, vă rog să vedeți [Publicarea despre Luma3DS 8.0](https://github.com/AuroraWright/Luma3DS/releases/tag/v8.0)
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
 
-To use [NTR CFW](https://github.com/44670/BootNTR/), install [BootNTR Selector](https://gbatemp.net/threads/432911/).
+Pentru a folosi [NTR CFW](https://github.com/44670/BootNTR/), instalați [BootNTR Selector](https://gbatemp.net/threads/432911/).
 {: .notice--info}
 
 {% capture notice-7 %}
-Remove any extra files and folders from the root of your SD card that are *not* in the following image. If you have it, leave the `DCIM` folder as this contains any pictures taken with the 3DS camera:
+Puteți șterge orice fișiere și foldere suplimentare din rădăcina cardului SD care *nu* sunt în următoarea imagine. Dacă îl aveti, lăsați folderul "DCIM" pentru că acesta conține toate pozele făcute cu camera de pe 3DS:
 <br><br>
 ![]({{ base_path }}/images/screenshots/final-file-layout.png)
 {% endcapture %}
 
 <div class="notice--info">{{ notice-7 | markdownify }}</div>
 
-For information on changing your device to another region, check out the [Region Changing](region-changing) page.
+Pentru informații despre cum să schimbați regiunea dispozitivului, vedeți pagina [Schimb de regiune](region-changing).
 {: .notice--success}
 
-For information on using GodMode9's various features, check out the [GodMode9 Usage](godmode9-usage) page.
+Pentru informații despre cum să folosiți funcțiile diverse de pe GodMode9, vedeți pagina [Folosind GodMode9](godmode9-usage).
 {: .notice--success}
 
-For information on using Luma3DS's various features, check out [its wiki](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage).
+Pentru informații despre cum să folosiți funcțiile diverse de pe Luma3DS, vedeți [wiki-ul](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage).
 {: .notice--success}
 
-For information on installing custom themes, badges, and splash screens, check out [3dsthem.es](https://3dsthem.es/about.php).
+Pentru informaţii despre cum să instalați teme personalizate, insigne, şi ecrane splash, vedeți pe [3dsthem.es] (https://3dsthem.es/about.php).
 {: .notice--success}
