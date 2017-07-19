@@ -45,6 +45,7 @@ title: "A9LH אל B9S"
 * את הגרסה העדכנית של [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * הפורק העדכני של [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
 * את הכלים בשביל ה [Homebrew Launcher](http://smealum.github.io/ninjhax2/starter.zip)
+* [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
 
 #### הוראות
 
@@ -63,6 +64,7 @@ title: "A9LH אל B9S"
 1. תמחקו כל קובץ `.bin` בתיקיית `/luma/payloads/`על כרטיס הSD שלכם כי הם לא יהיו תואמים בגרסאות של Luma3DS שתואמות עם boot9strap
 1. העתיקו את `GodMode9.firm` מהזיפ של GodMode9 אל תיקיית /luma/payloads/ ב- SD שלכם
 1. תעתיקו את התיקייה `gm9` מתוך ה`.zip` של GodMode9 ל-SD שלכם
+1. Copy `setup_ctrnand_luma3ds.gm9` to the `/gm9/scripts/` folder on your SD card
 1. העתיקו את `SafeB9SInstaller.bin` מהזיפ של SafeB9SInstaller אל תיקיית /luma/payloads/ ב- SD שלכם
 1. שנו שם ל `SafeB9SInstaller.bin` בתיקיית `/luma/payloads/` על הכרטיס הSD שלכם ל `start_SafeB9SInstaller.bin`
 1. תעתיקו את`boot9strap.firm` ואת `boot9strap.firm.sha` מה `.zip` של boot9strap אל תיקיית `/boot9strap/`על כרטיס הSD שלכם
@@ -100,35 +102,18 @@ title: "A9LH אל B9S"
 במקרה שבו לפני העדכון לboot9strap היה לכם EmuNAND מותקן וברצונכם להעביר את התוכן שלו ל-SysNAND CFW שלכם, עכשיו זה הזמן לבצע [העברת EmuNAND](move-emunand) לפני ביצוע חלק זה.
 {: .notice--info}
 
-1. תאתחלו בזמן שאתם מחזיקים (Start) במהלך האתחול כדי להפעיל את תפריט הטעינה של Luma3DS
+1. תפעילו את הקונסולה בזמן שאתם מחזיקים (Start) במהלך האתחול כדי להפעיל את תפריט הטעינה של Luma3DS
 1. תפעילו את GodMode9 על ידי לחיצת (A)
-1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
-1. נווטו אל `[0:] SDCARD` ואז `luma`ולבסוף `payloads`
-1. תלחצו (X) על `start_SafeB9SInstaller.bin` כדי למחוק אותו
-1. תלחצו (A) כדי לאשר
-1. תלחצו (B) כדי לחזור ל`[0:] SDCARD`
-1. תלחצו (Y) על `boot.firm` כדי להעתיק אותו
-1. תלחצו (B) כדי לחזור לתפריט הראשי
-1. נווטו אל `[1:] SYSNAND CTRNAND`
-1. תלחצו (Y) כדי להדביק עותק של `boot.firm`
-1. תבחרו "Copy path(s)"
+1. אם תתבקשו לעשות גיבוי של קבצים חיוניים, תלחצו (A) כדי לעשות זאת, ואז תלחצו (A) כדי להמשיך אחרי שזה סיים
+1. תלחצו על (Home) כדי להראות את תפריט הפעולה
+1. תבחרו ב"More..."
+1. תבחרו "Scripts..."
+1. Select "setup_ctrnand_luma3ds"
+1. כשתתבקשו, תלחצו (A) כדי להמשיך
 1. לחצו (A) כדי לפתוח גישת כתיבת lvl1 לSysNAND, ואז תלחצו על המקשים בסדר הנכון
-1. תלחצו (X) על `arm9loaderhax.bin` כדי למחוק אותו
-  + אם אין לכם אותו, פשוט תמשיכו עם ההוראות
-1. תלחצו (A) כדי לאשר
-1. Press (B) to decline relocking write permissions if prompted
-1. תלחצו (B) כדי לחזור לתפריט הראשי
-1. נווטו ל`[0:] SDCARD`
-1. תלחצו (Y) על תיקיית `luma` כדי להעתיק אותה
-  + אם יש לכם קבצים או תיקייות *חוץ מ* אלה בגלל שעקבתם אחרי גרסה ישנה של המדריך (`config.bin` ו `payloads`) בתיקיית `luma`שלכם (כמו קבצי LayeredFS), אתם צריכים במקום להעתיק רק את `config.bin` ו`payloads` על ידי סימונם עם (L), ואז לחיצת (Y) כדי להעתיק
-1. תלחצו (B) כדי לחזור לתפריט הראשי
-1. לכו ל`[1:] SYSNAND CTRNAND` ומשם ל`rw`
-1. תלחצו (X) על תיקיית `luma` הקיימת כדי למחוק אותה
-  + אם אין לכם אותה, פשוט תמשיכו עם ההוראות
-1. תלחצו (A) כדי לאשר
-1. תלחצו (Y) כדי להדביק עותק של תיקיית `luma` מכרטיס הSD שלכם
-  + אם רק העתקתם את `config.bin` ו`payloads` מוקדם יותר, אתם תצטרכו ליצור את תיקיית `luma` באופן ידני (תחזיקו את (R) ותלחצו (Y) באותו הזמן, תתנו את השם `luma`, ואז תלחצו (A) כדי לאשר), ואז תנווטו ל `luma`, ואז תלחצו (Y) כדי להדביק את `config.bin` ו`payloads`
-1. לחצו על (Start) על מנת להפעיל מחדש
+1. תלחצו (A) כדי להמשיך
+1. תלחצו (A) כדי לנעול הרשאות כתיבה
+1. תלחצו על (Start) כדי לאתחל את המכשיר
 
 ##### חלק V - התקנת Luma3DS Updater
 
