@@ -5,7 +5,7 @@ title: "GodMode9 Usage"
 GodMode9是一款适用于任天堂3DS的全权限文件管理器。它能够让你访问SD卡、真实系统或者虚拟系统中FAT文件分区以及其他任何地方的文件。 其更多的功能还包括复制、删除、重命名文件或者是创建文件夹。
 {: .notice--primary}
 
-Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+请注意，在某些版本的 Luma3DS 中，Luma3DS 的引导菜单仅在检测到了多个payload 时才会显示。 如果只检测到一个 payload ，按住开始 (Start) 键开机会直接进入 GodMode9 。
 {: .notice--info}
 
 {% capture notice %}
@@ -16,7 +16,8 @@ The write permissions system protects you by providing warnings and forces you t
 
 <div class="notice--danger">{{ notice | markdownify }}</div>
 
-## <a name="nand_backup" /> Creating a NAND Backup
+## <a name="nand_backup" /> 备份NAND
+
 
 #### 操作指南
 
@@ -37,7 +38,7 @@ The write permissions system protects you by providing warnings and forces you t
 1. Delete `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. Reinsert your SD card into your device
 
-## <a name="nand_restore" /> Restoring a NAND Backup
+## <a name="nand_restore" /> 还原NAND
 
 #### 操作指南
 
@@ -52,7 +53,7 @@ The write permissions system protects you by providing warnings and forces you t
 1. Once it has completed, press (A) to continue
 1. Press (B) to decline relocking write permissions if prompted
 
-## <a name="injectHS" /> Injecting any .CIA app into Health & Safety
+## <a name="injectHS" /> 将任意 .CIA应用注入健康与警示软件
 
 #### 准备工作
 
@@ -85,7 +86,8 @@ This will only work if the Health & Safety injection was performed by GodMode9 (
 1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
 1. Press (A) to relock write permissions if prompted
 
-## <a name="dump_cart" /> Dumping a Game Cartridge
+## <a name="dump_cart" /> 导出游戏卡带的内容
+
 
 #### 准备工作
 
@@ -103,7 +105,7 @@ This will only work if the Health & Safety injection was performed by GodMode9 (
   + **NDS Game Cartridge:** Press (A) on `[TitleID].trim.nds` to select it, then select "Copy to 0:/gm9/out"
 1. Your installable `.cia` or non-installable `.nds` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
-## <a name="dump_title" /> Dumping a Title
+## <a name="dump_title" /> 导出已安装的内容
 
 Use the `Titles` menu in FBI to get the Title ID of the installed title you wish to dump
 {: .notice--info}
@@ -125,7 +127,8 @@ Use the `Titles` menu in FBI to get the Title ID of the installed title you wish
 1. Press (A) on the `.tmd` file to select it, then select "TMD file options...", then select "Build CIA (standard)"
 1. Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
-## <a name="convert_3ds" /> Converting a .3DS to .CIA
+## <a name="convert_3ds" /> 将.3DS文件转成.CIA文件
+
 
 #### 准备工作
 
@@ -140,13 +143,14 @@ Use the `Titles` menu in FBI to get the Title ID of the installed title you wish
 1. Press (A) on your `.3ds` file to select it, then select "NCSD image options...", then select "Build CIA from file"
 1. Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
-## <a name="backup_gba" /> Backup GBA VC Saves
+## <a name="backup_gba" /> 备份GBA模拟器的存档
+
 
 #### 操作指南
 
 1. Power off your device
 1. 将你的 SD 卡插入到您的计算机
-1. Create a folder in `/files9/` for each GBA VC game that you want to backup the save for
+1. Create a folder in `/gm9/` for each GBA VC game that you want to backup the save for
 1. Reinsert your SD card into your device
 1. Power on your device
 1. Do the following process for each GBA VC game that you want to backup the save for:
@@ -157,22 +161,23 @@ Use the `Titles` menu in FBI to get the Title ID of the installed title you wish
   + Navigate to `[S:] SYSNAND VIRTUAL`
   + Press (Y) on `gbavc.sav` to copy it
   + Press (B) to return to the main menu
-  + Navigate to `[0:] SDCARD` -> `files9`
+  + Navigate to `[0:] SDCARD` -> `gm9`
   + Navigate to the folder you created for this GBA VC game
   + Press (Y) to paste `gbavc.sav`
   + Press (Start) to reboot your device
 
-## <a name="restore_gba" /> Restore GBA VC Saves
+## <a name="restore_gba" /> 恢复GBA模拟器存档
+
 
 #### 操作指南
 
-1. Ensure you have a folder containing a save in `/files9/` for each GBA VC game that you want to restore the save for
+1. Ensure you have a folder containing a save in `/gm9/` for each GBA VC game that you want to restore the save for
 1. Do the following process for each GBA VC game that you want to restore the save for:
   + Launch the GBA VC game
   + Exit the GBA VC game
   + Boot your device while holding (Start) to launch the Luma3DS chainloader menu
   + Launch GodMode9 by pressing (A)
-  + Navigate to `[0:] SDCARD` -> `files9`
+  + Navigate to `[0:] SDCARD` -> `gm9`
   + Navigate to the folder you created for this GBA VC game
   + Press (Y) on `gbavc.sav` to copy it
   + Press (B) to return to the main menu
@@ -181,7 +186,8 @@ Use the `Titles` menu in FBI to get the Title ID of the installed title you wish
   + Press (A) to confirm
   + Press (Start) to reboot your device
 
-## <a name="format_sd" /> Format an SD card
+## <a name="format_sd" /> 格式化SD卡
+
 
 **Note that this will erase the contents of your SD card!**
 {: .notice--danger}
@@ -200,7 +206,7 @@ Use the `Titles` menu in FBI to get the Title ID of the installed title you wish
   + Optionally, you may input a custom name for the SD card
 1. When prompted, input the key combo given to confirm
 
-## <a name="crypt_cia" /> Encrypting / Decrypting a .CIA file
+## <a name="crypt_cia" /> 加密 / 解密.CIA文件
 
 #### 准备工作
 
