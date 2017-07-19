@@ -23,7 +23,8 @@ Nunca formate um New 2DS enquanto estiver em uma versão <11.4.0 sem os títulos
 #### O que você precisa
 
 * A versão mais recente do [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) *(the`.3dsx` file)*
+* A versão mais recente do [FBI](https://github.com/Steveice10/FBI/releases/latest) *(o arquivo `.3dsx`)*
+* [`ctrtransfer_ticket_copy.gm9`]({{ base_path }}/gm9_scripts/ctrtransfer_ticket_copy.gm9)
 * A imagem da CTRTransfer 9.2.0 para o seu dispositivo e região     
 *(Se seu dispositivo não é de uma dessas regiões, escolha uma que seja do tipo do seu dispositivo)*:
   +    <i class="fa fa-magnet" aria-hidden="true" title="Este é um link magnético. Use um cliente de torrent para baixar este arquivo."></i> - [New 3DS ou 2DS - 9.2.0 - EUR - ctrtransfer](magnet:?xt=urn:btih:fed7bfeec0e52b42a77467cfb6ffd3e9dd2d5a70&dn=9.2.0-20E%5FCTRTransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)   
@@ -41,10 +42,10 @@ Nunca formate um New 2DS enquanto estiver em uma versão <11.4.0 sem os títulos
 1. Desligue seu dispositivo
 1. Insira o cartão SD no seu computador
 1. Crie uma pasta chamada `cias` na raiz do seu cartão SD se ela ainda não existir
-1. Crie uma pasta chamada `files9` na raiz do seu cartão SD se já não existir
 1. Copie `GodMode9.firm` do `.zip` do GodMode9 para a pasta `/luma/payloads/` no seu cartão SD
-1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
-1. Copie a imagem `.bin` da CTRTransfer 9.2.0 do `.zip` do CTRTransfer para a pasta `/files9/` no seu cartão SD
+1. Copie a pasta `gm9` do `.zip` do GodMode9 para a raiz do seu cartão SD
+1. Copie o `ctrtransfer_ticket_copy.gm9` para a pasta `/gm9/scripts/` no seu cartão SD
+1. Copie a imagem `.bin` da CTRTransfer 9.2.0 do `.zip` do CTRTransfer para a pasta `/gm9/` no seu cartão SD
 1. Copie `FBI.3dsx` para a pasta `/3ds/` no seu cartão SD
 1. Reinsira seu cartão SD no seu dispositivo
 
@@ -52,8 +53,8 @@ Nunca formate um New 2DS enquanto estiver em uma versão <11.4.0 sem os títulos
 
 1. Inicie o menu do chainloader do Luma3DS apertando (Start) durante a inicialização
 1. Inicie o GodMode9 apertando (A)
-1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
-1. Navegue para `[0:] SDCARD` -> `files9`
+1. Se você for solicitado para criar um backup de arquivos essenciais, aperte (A) pra fazê-lo, e depois aperte (A) para continuar quando ele for concluído
+1. Navegue para `[0:] SDCARD` -> `gm9`
 1. Aperte (A) no `.bin` da CTRTransfer para selecioná-lo
 1. Selecione "CTRNAND options..."
 1. Selecione "Transfer image to CTRNAND"
@@ -62,16 +63,15 @@ Nunca formate um New 2DS enquanto estiver em uma versão <11.4.0 sem os títulos
 1. Aperte (A) para destravar "SysNAND (lvl1) writing", então aperte a sequência de botões solicitada
   + Este processo levará algum tempo
 1. Quando a transferência completar, aperte (A) para continuar
-1. Press (B) to decline relocking write permissions if prompted
+1. Se solicitado, aperte (B) para recusar o bloqueio da permissão de escrita
 1. Aperte (B) duas vezes para retornar para o menu principal
-1. Navegue para `[1:] SYSNAND CTRNAND` -> `dbs`
-1. Aperte (A) no `ticket.bak` para selecioná-lo, depois selecione "Ticket.db options...", e depois selecione "Mount image to drive"
-1. If it exists, hold (R) and press (A) at the same time on `eshop` to select the folder, then select "Copy to 0:/gm9/out"
-  + Este processo pode levar algum tempo caso você tenha muitos tickets
-  + Quando concluído, aperte (A) para continuar
-1. If it exists, hold (R) and press (A) at the same time on `unknown` to select the folder, then select "Copy to 0:/gm9/out"
-  + Este processo pode levar algum tempo caso você tenha muitos tickets
-  + Quando concluído, aperte (A) para continuar
+1. Aperte (Home) para abrir o menu de ações
+1. Selecione "More..."
+1. Selecione "Scripts..."
+1. Selecione "ctrtransfer_ticket_copy"
+1. Quando solicitado, aperte (A) para prosseguir
+1. Aperte (A) para continuar
+1. Aperte (A) para bloquear as permissões de escrita
 1. Aperte (Start) para reiniciar seu dispositivo
 1. Atualize seu dispositivo indo em Configuração do console, depois "Outras Configurações, depois indo para a direita até o final e selecionando "Atualização"
   + Atualizações feitas enquanto usa B9S + Luma (o que você tem) são seguras
@@ -92,16 +92,15 @@ Nunca formate um New 2DS enquanto estiver em uma versão <11.4.0 sem os títulos
 
 ##### Seção IV - Reinstalando os Tickets
 
-Se você não tinha as pastas `eshop` ou `unknown` anteriormente, pule esta seção.
+Se o script não encontrou nenhum ticket de usuário lhe disse para pular esta seção, então pule esta seção
 {: .notice--info}
 
 1. Abra o FBI da lista de homebrews
 1. Navegue para `SD` -> `cias`
-1. Selecione "FBI.cia"
-1. Selecione a opção "Install", depois aperte (A) para confirmar
 1. Retorne para o diretório SD com (B)
-1. Select "gm9"
-1. Select "out"
+1. Selecione "gm9"
+1. Selecione "out"
+1. Selecione "ctrtransfer_tickets"
 1. Faça o seguinte processo para a pasta `eshop`, `unknown`, ou ambas
   + Navegue até a pasta
   + Selecione "\<current directory>"
@@ -119,11 +118,11 @@ Se você não tinha as pastas `eshop` ou `unknown` anteriormente, pule esta seç
 1. Selecione "More..."
 1. Selecione "Restore H&S"
 1. Aperte (A) para destravar "SysNAND (lvl1) writing", então aperte a sequência de botões solicitada
-1. Press (B) to decline relocking write permissions if prompted
+1. Se solicitado, aperte (B) para recusar o bloqueio da permissão de escrita
 
 ##### Seção VI - Remover a imagem da CTRTransfer
 
-1. Navegue para `[0:] SDCARD` -> `files9`
+1. Navegue para `[0:] SDCARD` -> `gm9`
 1. Aperte (X) na imagem `.bin` da CTRTransfer para apagá-la
 1. Aperte (A) para confirmar
 1. Aperte (Start) para reiniciar seu dispositivo
