@@ -31,6 +31,7 @@ There have been reports of a wave of bans being handed out to CFW users by Ninte
 * The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
 * Την τελευταία έκδοση του [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * Το Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
+* [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
 
 #### Οδηγίες
 
@@ -46,6 +47,7 @@ For all steps in this section, overwrite any existing files on your SD card.
 1. Create a folder named `boot9strap` on the root of your SD card
 1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+1. Copy `setup_ctrnand_luma3ds.gm9` to the `/gm9/scripts/` folder on your SD card
 1. Copy `SafeB9SInstaller.firm` from the SafeB9SInstaller `.zip` to the `/luma/payloads/` folder on your SD card
 1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
 1. Reinsert your SD card into your device
@@ -77,35 +79,18 @@ For all steps in this section, overwrite any existing files on your SD card.
 
 ##### Section V - CTRNAND Luma3DS
 
-1. Reboot holding (Start) during boot to launch the Luma3DS chainloader menu
+1. Boot your device while holding (Start) to launch the Luma3DS chainloader menu
 1. Launch GodMode9 by pressing (A)
 1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
-1. Navigate to `[0:] SDCARD` -> `luma` -> `payloads`
-1. Press (X) on `SafeB9SInstaller.firm` to delete it
-1. Πατήστε (A) για επιβεβαίωση
-1. Press (B) to return to `[0:] SDCARD`
-1. Press (Y) on `boot.firm` to copy it
-1. Press (B) to return to the main menu
-1. Navigate to `[1:] SYSNAND CTRNAND`
-1. Press (Y) to paste a copy of `boot.firm`
-1. Select "Copy path(s)"
+1. Press (Home) to bring up the action menu
+1. Select "More..."
+1. Select "Scripts..."
+1. Select "setup_ctrnand_luma3ds"
+1. When prompted, press (A) to proceed
 1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
-1. Press (B) to decline relocking write permissions if prompted
-1. Press (X) on `arm9loaderhax.bin` to delete it
-  + If you do not have this file, just proceed with the instructions
-1. Πατήστε (A) για επιβεβαίωση
-1. Press (B) to return to the main menu
-1. Navigate to `[0:] SDCARD`
-1. Press (Y) on the `luma` folder to copy it
-  + If you have files or folders *other than* the ones from following an earlier version of this guide (`config.bin` and `payloads`) in your `luma` directory (such as LayeredFS files), you should instead just copy `config.bin` and `payloads` by marking them with the (L) trigger, then pressing (Y) to copy
-1. Press (B) to return to the main menu
-1. Navigate to `[1:] SYSNAND CTRNAND` -> `rw`
-1. Press (X) on the existing `luma` folder to delete it
-  + If you do not have this folder, just proceed with the instructions
-1. Πατήστε (A) για επιβεβαίωση
-1. Press (Y) to paste a copy of the `luma` folder from your SD card
-  + If you only copied `config.bin` and `payloads` earlier, you will need to instead create the `luma` folder manually (hold the (R) trigger and pressing (Y) at the same time, give the name `luma`, then press (A) to confirm), then navigate to `luma`, then press (Y) to paste `config.bin` and `payloads`
-1. Press (Start) to reboot
+1. Πατήστε (A) για να συνεχίσετε
+1. Press (A) to relock write permissions
+1. Press (Start) to reboot your device
 
 ___
 
