@@ -45,6 +45,7 @@ Su New 3DS, il file `secret_sector.bin` è necessario per ripristinare le modifi
 * L'ultima versione di [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * L'ultima fork di [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
 * L'[Homebrew Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
+* [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
 
 #### Istruzioni
 
@@ -62,7 +63,8 @@ Se durante questa sezione ti verrà chiesto di sovrascrivere dei file sulla tua 
 1. Crea una cartella chiamata `boot9strap` nella directory principale della tua scheda SD
 1. Elimina qualunque payload `.bin` dalla cartella `/luma/payloads/` della tua scheda SD in quanto non è utilizzabile con le versioni di boot9strap compatibili con Luma3DS
 1. Copia il file `GodMode9.firm` dall'archivio `.zip` di GodMode9 dentro la cartella `/luma/payloads/` della tua scheda SD
-1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+1. Copia la cartella `gm9` presente nell'archivio `.zip` di GodMode9 nella directory principale della tua scheda SD
+1. Copy `setup_ctrnand_luma3ds.gm9` to the `/gm9/scripts/` folder on your SD card
 1. Copia il file `SafeB9SInstaller.bin` dall'archivio `.zip` di SafeB9SInstaller nella cartella `/luma/payloads/` della tua scheda SD
 1. Rinomina il file`SafeB9SInstaller.bin` appena copiato in `start_SafeB9SInstaller.bin`
 1. Copia i file `boot9strap.firm` e `boot9strap.firm.sha` dall'archivio `.zip` di boot9strap nella cartella `/boot9strap/` della tua scheda SD
@@ -100,35 +102,18 @@ Questa sezione è necessaria solo se ti viene presentato il menu di configurazio
 Se prima di aggiornare a boot9strap avevi già un'installazione EmuNAND presente e vorresti ripristinare il contenuto dell'EmuNAND nella tua nuova SysNAND con CFW, segui la guida [Spostare l'EmuNAND](move-emunand) prima di proseguire con questa sezione.
 {: .notice--info}
 
-1. Riavvia la console tenendo premuto (Start) per avviare il menu chainloader di Luma3DS
+1. Avvia la console tenendo premuto (Start) per avviare il menu chainloader di Luma3DS
 1. Avvia GodMode9 premendo (A)
-1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
-1. Entra nella cartella `[0:] SDCARD` -> `luma` -> `payloads`
-1. Premi (X) su `start_SafeB9SInstaller.bin` per eliminarlo
-1. Premi (A) per confermare
-1. Premi (B) per tornare a `[0:] SDCARD`
-1. Premi (Y) su `boot.firm` per copiarlo
-1. Premi (B) per ritornare al menu principale
-1. Entra in `[1:] SYSNAND CTRNAND`
-1. Premi (Y) per incollare una copia di `boot.firm`
-1. Seleziona "Copy path(s)"
+1. Se ti viene richiesto di creare un backup dei file essenziali, premi (A) per accettare, e al termine di nuovo (A) per proseguire
+1. Premi il pulsante HOME per far apparire il menu delle azioni
+1. Seleziona "More..."
+1. Seleziona "Scripts..."
+1. Select "setup_ctrnand_luma3ds"
+1. Quando richiesto, premi (A) per procedere
 1. Premi il pulsante (A) per sbloccare i permessi di scrittura di primo livello su SysNAND, quindi inserisci la combinazione di tasti richiesta a schermo
-1. Premi (X) su `arm9loaderhax.bin` per eliminarlo
-  + Se non dovessi avere questo file, prosegui normalmente con le istruzioni
-1. Premi (A) per confermare
-1. Press (B) to decline relocking write permissions if prompted
-1. Premi (B) per ritornare al menu principale
-1. Entra in `[0:] SDCARD`
-1. Premi (Y) sulla cartella `luma` per copiarla
-  + Se hai *altri* file o cartelle oltre a quelli utilizzati in precedenti versioni di questa guida (come il file `config.bin` e la cartella `payloads`) nella tua cartella `luma` (è il caso dei file LayeredFS), devi invece copiare solo `config.bin` e `payloads` selezionandoli con (L), quindi copiandoli con (Y)
-1. Premi (B) per ritornare al menu principale
-1. Entra nella cartella `[1:] SYSNAND CTRNAND` -> `rw`
-1. Premi (X) sulla cartella `luma` per cancellarla
-  + Se non dovessi avere questa cartella, prosegui normalmente con le istruzioni
-1. Premi (A) per confermare
-1. Premi (Y) per incollare una copia della cartella `luma` dalla tua scheda SD
-  + Se in precedenza hai copiato soltanto il file `config.bin` e la cartella `payloads`, dovrai invece creare la cartella `luma` manualmente (premi (Y) mentre tieni premuto il pulsante (R), inserisci il nome `luma`, quindi premi (A) per confermare la scelta), poi entrare in `luma`, infine premere (Y) per incollare `config.bin` e `payloads`
-1. Premi il pulsante (Start) per riavviare la console
+1. Premi il pulsante (A) per continuare
+1. Premi (A) per ritirare le autorizzazioni di scrittura
+1. Premi (Start) per riavviare la console
 
 ##### Sezione V - Installazione di Luma3DS Updater
 
