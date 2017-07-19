@@ -24,17 +24,17 @@ GodMode9 это полноценный файловый менеджер для 
 1. Запустите GodMode9, нажав кнопку (A)
 1. Нажмите кнопку (Home) для вызова меню
 1. Выберите "More..."
-1. Select "Scripts"
-1. Select "Backup SysNAND"
+1. Выберите "Scripts"
+1. Выберите "Backup SysNAND"
 1. Нажмите (A) для подтверждения
   + Этот процесс займет некоторое время
 1. Нажмите (A), чтобы продолжить
 1. Удерживая (R) нажмите (B) для того, чтобы извлечь SD-карту
 1. Вставьте SD-карту в компьютер
-1. Copy `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
+1. Скопируйте `<serialnumber>_nandmin_###.bin` из папки `/gm9/out/` на SD-карте в безопасное место на вашем компьютере
   + Сделайте несколько резервных копий в нескольких местах (например в облачном хранилище)
   + Эти бэкапы позволят восстановить консоль, если впоследствии что-то пойдёт не так
-1. Delete `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card after copying it
+1. После копирования удалите `<serialnumber>_nandmin_###.bin` из папки `/gm9/out/` на SD-карте
 1. Вставьте SD-карту обратно в консоль
 
 ## <a name="nand_restore" /> Восстановление бэкапа NAND
@@ -100,8 +100,8 @@ GodMode9 это полноценный файловый менеджер для 
 1. Перейдите в `[C:] GAMECART`
 1. Выполните действия ниже, соответствующие вашему типу картриджа:
   + **3DS картридж:** Нажмите (A) чтобы выбрать файл `[TitleID].trim.3ds`, затем выберите "NCSD image options...", затем "Build CIA from file"
-  + **NDS Game Cartridge:** Press (A) on `[TitleID].trim.nds` to select it, then select "Copy to 0:/gm9/out"
-1. Your installable `.cia` or non-installable `.nds` formatted file will be outputted to the `/gm9/out/` folder on your SD card
+  + **NDS картридж:** Нажмите (A) чтобы выбрать файл `[TitleID].trim.nds`, затем выберите "Copy to 0:/gm9/out"
+1. Ваш файл в формате `.cia` либо `.nds` будет помещен в папку `/gm9/out/` на SD-карте
 
 ## <a name="dump_title" /> Создание дампа тайтла
 
@@ -123,7 +123,7 @@ GodMode9 это полноценный файловый менеджер для 
 1. Убедитесь, что вы нашли верный тайтл
 1. Нажмите (B) для выхода из информации о тайтле
 1. Нажмите (A) чтобы выбрать файл `.tmd`, затем выберите "TMD file options...", затем "Build CIA (standard)"
-1. Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
+1. Ваш файл в формате `.cia` будет помещен в папку `/gm9/out/` на SD-карте
 
 ## <a name="convert_3ds" /> Конвертация из .3DS в .CIA
 
@@ -138,7 +138,7 @@ GodMode9 это полноценный файловый менеджер для 
 1. Запустите GodMode9, нажав кнопку (A)
 1. Перейдите в `[0:] SDCARD` -> `cias`
 1. Нажмите (A) чтобы выбрать ваш файл `.3ds`, затем выберите "NCSD image options...", затем "Build CIA from file"
-1. Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
+1. Ваш файл в формате `.cia` будет помещен в папку `/gm9/out/` на SD-карте
 
 ## <a name="backup_gba" /> Бэкап сохранений GBA VC
 
@@ -146,7 +146,7 @@ GodMode9 это полноценный файловый менеджер для 
 
 1. Выключите консоль
 1. Вставьте SD-карту в компьютер
-1. Создайте внутри `/files9/` папку для каждой игры GBA VC, для сохранений которых вы хотите создать бэкап
+1. Create a folder in `/gm9/` for each GBA VC game that you want to backup the save for
 1. Вставьте SD-карту обратно в консоль
 1. Включите консоль
 1. Выполните нижеуказанные действия для каждой игры GBA VC, для которой вы хотите сделать резервные копии сохранений:
@@ -157,7 +157,7 @@ GodMode9 это полноценный файловый менеджер для 
   + Перейдите в `[S:] SYSNAND VIRTUAL`
   + Нажмите (Y), выделив файл `gbavc.sav` чтобы скопировать его
   + Нажмите (B) для возврата в главное меню
-  + Перейдите в `[0:] SDCARD` -> `files9`
+  + Navigate to `[0:] SDCARD` -> `gm9`
   + Перейдите в папку, которую вы создали для этой игры GBA VC
   + Нажмите (Y) чтобы вставить файл `gbavc.sav`
   + Нажмите (Start) для перезагрузки
@@ -166,13 +166,13 @@ GodMode9 это полноценный файловый менеджер для 
 
 #### Инструкция
 
-1. Убедитесь, что внутри `/files9/` есть папки с сохранениями для каждой игры GBA VC, сохранения которых вы хотите восстановить
+1. Ensure you have a folder containing a save in `/gm9/` for each GBA VC game that you want to restore the save for
 1. Выполните нижеуказанные действия для каждой игры GBA VC, для которой вы хотите восстановить сохранения из резервной копии:
   + Запустите игру GBA VC
   + Выйдите из игры GBA VC
   + Включите консоль кнопкой питания, держа нажатой кнопку (Start), чтобы запустить меню Luma3DS chainloader
   + Запустите GodMode9, нажав кнопку (A)
-  + Перейдите в `[0:] SDCARD` -> `files9`
+  + Navigate to `[0:] SDCARD` -> `gm9`
   + Перейдите в папку, которую вы создали для этой игры GBA VC
   + Нажмите (Y), выделив файл `gbavc.sav` чтобы скопировать его
   + Нажмите (B) для возврата в главное меню
@@ -213,8 +213,8 @@ GodMode9 это полноценный файловый менеджер для 
 1. Перейдите в `[0:] SDCARD` -> `cias`
 1. Нажмите (A) чтобы выбрать файл `.cia`, затем выберите "CIA image options..."
 1. Выберите опцию для выполнения нужной функции:
-    + **Encrypt to 0:/gm9/out:** Create an encrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card
-    + **Decrypt to 0:/gm9/out:** Create a decrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card
+    + **Encrypt to 0:/gm9/out:** Создать шифрованную копию выбранного файла `.cia` в папке `/gm9/out/` на SD-карте
+    + **Decrypt to 0:/gm9/out:** Создать расшифрованную копию выбранного файла `.cia` в папке `/gm9/out/` на SD-карте
     + **Encrypt inplace:** Заменить выбранный файл `.cia` его шифрованной версией
     + **Decrypt inplace:** Заменить выбранный файл `.cia` его расшифрованной версией
 1. Ваш шифрованный / расшифрованный файл `.cia` будет помещен в выбранную папку
