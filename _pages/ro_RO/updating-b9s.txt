@@ -9,16 +9,16 @@ Note that the recent major release of Luma3DS is *not* compatible with boot9stra
 {: .notice--warning}
 
 {% capture notice-1 %}
-There have been reports of a wave of bans being handed out to CFW users by Nintendo. To protect yourself, please do the following steps before starting this guide:
+Au existat rapoarte de un val de banuri adresate utilizatorilor de CFW de către Nintendo. Pentru a vă proteja, efectuaţi următorii paşi înainte de a începe acest ghid:
 
-1. Go to System Settings, then "Internet Settings", then "SpotPass", then "Sending of System Information"
-1. Disable the "Sending of System Information" option
-1. Exit the System Settings
-1. Go to your Friend's List (the Face Icon in the top row of your Home Menu)
-  + If you receive an error and are kicked out of the menu, the Friend's List setting is already disabled
-1. Go to the Friend's List settings, then "Friend Notification Settings", then "Show friends what you're playing"
-1. Disable the "Show friends what you're playing" option
-1. Exit your Friend's List
+1. Mergeți în System Settings, apoi "Internet Settings", apoi "SpotPass", apoi "Sending of System Information"
+1. Dezactivați opţiunea "Sending of System Information"
+1. Ieșiți din System Settings
+1. Mergeți la Lista de prieteni (pictograma cu o față de pe rândul de sus al meniului HOME)
+  + În cazul în care ați primit o eroare şi meniul se închide, setarea de pe Lista de prieteni este deja dezactivată
+1. Mergeți la setările de pe Lista de prieteni, apoi "Friend Notification Settings", apoi "Show friends what you're playing"
+1. Dezactivați opțiunea "Show friends what you're playing"
+1. Ieșiți din Lista de prieteni
 
 {% endcapture %}
 
@@ -26,46 +26,48 @@ There have been reports of a wave of bans being handed out to CFW users by Ninte
 
 #### What you need
 
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(the `.7z` file)*
+* Cea mai nouă versiune de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(fișierul '.7z')*
 * The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
 * The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * The Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
+* [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
 
 #### Instrucțiuni
 
-##### Section I - Prep Work
+##### Secțiunea I - Preparații
 
-For all steps in this section, overwrite any existing files on your SD card.
+Pentru toți pașii din această secțiune, suprascrieți fișierele existente de pe cardul SD.
 {: .notice--info}
 
-1. Power off your device
-1. Introduceți cardul SD în computer
+1. Închideți dispozitivul
+1. Introduceți cardul SD în calculator
 1. **Leave the old (v7.1) version of Luma3DS (`boot.firm`) as it is. You will update this later.**
-1. Copy _the contents of_ `starter.zip` to the root of your SD card
+1. Copiați _conținutul de_ pe `starter.zip` către rădăcina cardului SD
 1. Create a folder named `boot9strap` on the root of your SD card
-1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
+1. Copiați `GodMode9.firm` de pe arhiva `.zip` GodMode9 în folderul `/luma/payloads/` de pe cardul SD
 1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+1. Copy `setup_ctrnand_luma3ds.gm9` to the `/gm9/scripts/` folder on your SD card
 1. Copy `SafeB9SInstaller.firm` from the SafeB9SInstaller `.zip` to the `/luma/payloads/` folder on your SD card
 1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
-1. Reinsert your SD card into your device
+1. Reintroduceți cardul SD în dispozitivul dumneavoastră
 
 ##### Section II - Installing boot9strap
 
-1. Reboot holding (Start) during boot to launch the Luma3DS chainloader menu
+1. Reporniți ținând apăsat (Start) în timpul pornirii pentru a lansa meniul chainloader Luma3DS
 1. Launch SafeB9SInstaller by pressing (A)
 1. Wait for all safety checks to complete
 1. When prompted, input the key combo given to install boot9strap
 1. Once it has completed, press (A) to reboot your device.
-1. Power off your device
+1. Închideți dispozitivul
   + Note that you will receive the error `Unsupported launcher (argc = 0)` until you follow the rest of the instructions on this page
 
 ##### Section III - Updating Luma3DS
 
-1. Introduceți cardul SD în computer
+1. Introduceți cardul SD în calculator
 1. Delete the existing `boot.firm` from the root of your SD card
-1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card
-1. Reinsert your SD card into your device
+1. Copiați `boot.firm` de la Luma3DS `.7z` către rădăcina cardului SD
+1. Reintroduceți cardul SD în dispozitivul dumneavoastră
 
 ##### Section IV - Configuring Luma3DS
 
@@ -73,43 +75,26 @@ For all steps in this section, overwrite any existing files on your SD card.
   + If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_b9s)
 1. Use the (A) button and the D-Pad to turn on the following:    
   + **"Show NAND or user string in System Settings"**
-1. Press (Start) to save and reboot
+1. Apăsați (Start) pentru a salva și reporni
 
 ##### Section V - CTRNAND Luma3DS
 
-1. Reboot holding (Start) during boot to launch the Luma3DS chainloader menu
-1. Launch GodMode9 by pressing (A)
+1. Deschideți dispozitivul în timp ce țineți apăsat (Start) pentru a lansa meniul chainloader Luma3DS
+1. Lansați GodMode9 apăsând (A)
 1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
-1. Navigate to `[0:] SDCARD` -> `luma` -> `payloads`
-1. Press (X) on `SafeB9SInstaller.firm` to delete it
-1. Apăsați (A) pentru a confirma
-1. Press (B) to return to `[0:] SDCARD`
-1. Press (Y) on `boot.firm` to copy it
-1. Press (B) to return to the main menu
-1. Navigate to `[1:] SYSNAND CTRNAND`
-1. Press (Y) to paste a copy of `boot.firm`
-1. Select "Copy path(s)"
-1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
-1. Press (B) to decline relocking write permissions if prompted
-1. Press (X) on `arm9loaderhax.bin` to delete it
-  + If you do not have this file, just proceed with the instructions
-1. Apăsați (A) pentru a confirma
-1. Press (B) to return to the main menu
-1. Navigate to `[0:] SDCARD`
-1. Press (Y) on the `luma` folder to copy it
-  + If you have files or folders *other than* the ones from following an earlier version of this guide (`config.bin` and `payloads`) in your `luma` directory (such as LayeredFS files), you should instead just copy `config.bin` and `payloads` by marking them with the (L) trigger, then pressing (Y) to copy
-1. Press (B) to return to the main menu
-1. Navigate to `[1:] SYSNAND CTRNAND` -> `rw`
-1. Press (X) on the existing `luma` folder to delete it
-  + If you do not have this folder, just proceed with the instructions
-1. Apăsați (A) pentru a confirma
-1. Press (Y) to paste a copy of the `luma` folder from your SD card
-  + If you only copied `config.bin` and `payloads` earlier, you will need to instead create the `luma` folder manually (hold the (R) trigger and pressing (Y) at the same time, give the name `luma`, then press (A) to confirm), then navigate to `luma`, then press (Y) to paste `config.bin` and `payloads`
-1. Press (Start) to reboot
+1. Apăsați (Home) pentru a arăta meniul de acțiuni
+1. Selectați "More..."
+1. Selectați "Scripts..."
+1. Select "setup_ctrnand_luma3ds"
+1. Când vi se solicită, apăsaţi (A) pentru a continua
+1. Apăsați (A) ca să deblocați scrierea în SysNAND (lvl1), apoi apăsați combinația de butoane care vi se cere
+1. Press (A) to continue
+1. Apăsați (A) ca să reblocați permisiunile de scriere
+1. Apăsați (Start) pentru a reporni dispozitivul
 
 ___
 
-Note that the `.bak` files in the `/boot9strap/` folder on your SD card are only needed in the event of a failed boot9strap install. Once you have installed successfully, you can delete the entire `boot9strap` folder.
+Note that the `.bak` files in the `/boot9strap/` folder on your SD card are only needed in the event of a failed boot9strap install. După ce ați instalat cu succes, puteți șterge tot folderul 'boot9strap'.
 {: .notice--info}
 
 You can now press (L) + (Down) + (Select) while the system is booted to open the Rosalina menu integrated into Luma3DS. For a full list of Rosalina features, please see the [Luma3DS v8.0 Release](https://github.com/AuroraWright/Luma3DS/releases/tag/v8.0)
