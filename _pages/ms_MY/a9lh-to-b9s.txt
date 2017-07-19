@@ -45,6 +45,7 @@ Note that, on New 3DS, `secret_sector.bin` is needed to revert the arm9loaderhax
 * Keluaran terkini [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * The latest fork of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
 * Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
+* [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
 
 #### Arahan
 
@@ -63,6 +64,7 @@ For all steps in this section, overwrite any existing files on your SD card.
 1. Delete any existing `.bin` payloads in the `/luma/payloads/` folder on your SD card as they will not be compatible with boot9strap compatible Luma3DS versions
 1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+1. Copy `setup_ctrnand_luma3ds.gm9` to the `/gm9/scripts/` folder on your SD card
 1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the `/luma/payloads/` folder on your SD card
 1. Rename `SafeB9SInstaller.bin` in the `/luma/payloads/` folder on your SD card to `start_SafeB9SInstaller.bin`
 1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
@@ -100,35 +102,18 @@ This section is only needed if you are prompted with the Luma3DS configuration m
 If, before updating to boot9strap, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand) before doing this section.
 {: .notice--info}
 
-1. Reboot holding (Start) during boot to launch the Luma3DS chainloader menu
+1. Boot your device while holding (Start) to launch the Luma3DS chainloader menu
 1. Launch GodMode9 by pressing (A)
 1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
-1. Navigate to `[0:] SDCARD` -> `luma` -> `payloads`
-1. Press (X) on `start_SafeB9SInstaller.bin` to delete it
-1. Tekan (A) untuk pengesahan
-1. Press (B) to return to `[0:] SDCARD`
-1. Press (Y) on `boot.firm` to copy it
-1. Press (B) to return to the main menu
-1. Navigate to `[1:] SYSNAND CTRNAND`
-1. Press (Y) to paste a copy of `boot.firm`
-1. Select "Copy path(s)"
+1. Press (Home) to bring up the action menu
+1. Select "More..."
+1. Select "Scripts..."
+1. Select "setup_ctrnand_luma3ds"
+1. When prompted, press (A) to proceed
 1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
-1. Press (X) on `arm9loaderhax.bin` to delete it
-  + If you do not have this file, just proceed with the instructions
-1. Tekan (A) untuk pengesahan
-1. Press (B) to decline relocking write permissions if prompted
-1. Press (B) to return to the main menu
-1. Navigate to `[0:] SDCARD`
-1. Press (Y) on the `luma` folder to copy it
-  + If you have files or folders *other than* the ones from following an earlier version of this guide (`config.bin` and `payloads`) in your `luma` directory (such as LayeredFS files), you should instead just copy `config.bin` and `payloads` by marking them with the (L) trigger, then pressing (Y) to copy
-1. Press (B) to return to the main menu
-1. Navigate to `[1:] SYSNAND CTRNAND` -> `rw`
-1. Press (X) on the existing `luma` folder to delete it
-  + If you do not have this folder, just proceed with the instructions
-1. Tekan (A) untuk pengesahan
-1. Press (Y) to paste a copy of the `luma` folder from your SD card
-  + If you only copied `config.bin` and `payloads` earlier, you will need to instead create the `luma` folder manually (hold the (R) trigger and pressing (Y) at the same time, give the name `luma`, then press (A) to confirm), then navigate to `luma`, then press (Y) to paste `config.bin` and `payloads`
-1. Press (Start) to reboot
+1. Tekan (A) untuk meneruskan
+1. Press (A) to relock write permissions
+1. Press (Start) to reboot your device
 
 ##### Section V - Installing Luma3DS Updater
 
