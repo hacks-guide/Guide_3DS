@@ -24,7 +24,7 @@ Beachte, dass bei manchen Versionen von Luma3DS das Chainloader-Menü nur angeze
 1. Schalte deine Konsole aus
 1. Stecke deine SD-Karte in deinen Computer
 1. Kopiere `GodMode9.firm` (oder `GodMode9.bin` für arm9loaderhax-Benutzer) aus der GodMode9 `.zip` in den `/luma/payloads`-Ordner auf deiner SD-Karte
-1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+1. Kopiere den Ordner `gm9` aus der GodMode9 `.zip` in das Stammverzeichnis deiner SD-Karte
 1. Stecke deine SD-Karte nun wieder in deinen 3DS
 
 ### Abschnitt II - Sicherung der SysNAND DSiWare Spielstände
@@ -34,9 +34,9 @@ Wenn du noch keine DSiWare-Spiele oder Spielstände hast, überspringe diesen Ab
 
 1. Starte das Gerät, während du beim booten (Start) gedrückt hälst, um den Luma3DS Chainloader anzuzeigen
 1. Starte GodMode9 indem du (A) drückst
-1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
+1. Wenn du aufgefordert wirst, ein "essential files backup" durchzuführen, drücke (A). Drücke erneut (A) nachdem es abgeschlossen ist
 1. Navigiere zu `[2:] SYSNAND TWLN` -> `title`
-1. Hold (R) and press (A) at the same time on `00030004` to select the folder, then select "Copy to 0:/gm9/out"
+1. Halte (R) und drücke gleichzeitig (A) auf dem Ordner `00030004`, um ihn auszuwählen und wähle dann "Copy to 0:/gm9/out"
   + Das kann einen Moment dauern, wenn du viele DSiWare Spiele besitzt
 1. Drücke zweimal (B), um zurück in das Hauptmenü zu gelangen
 
@@ -50,8 +50,7 @@ Diese Schritte sind nicht notwendig für andere Virtual Console Spiele (GBC, NES
 
 1. Halte (R) gedrückt und drücke gleichzeitig (Start), um dein Gerät abzuschalten
 1. Stecke deine SD-Karte in deinen Computer
-1. Erstelle einen Ordner namens `files9` im Stammverzeichnis deiner SD-Karte, falls er noch nicht existiert
-1. Erstelle einen Ordner in "/files9/" für jedes GBA VC-Spiel, für das du ein Backup erstellen möchtest. 
+1. Create a folder in `/gm9/` for each GBA VC game that you want to backup the save for 
 1. Stecke deine SD-Karte nun wieder in deinen 3DS
 1. Schalte das Gerät wieder ein, der SysNAND erscheint.
 1. Führe die folgenden Schritte für jedes GBA VC Spiel aus, für das du ein Backup erstellen möchtest:
@@ -62,7 +61,7 @@ Diese Schritte sind nicht notwendig für andere Virtual Console Spiele (GBC, NES
   + Navigiere zu `[S:] SYSNAND VIRTUAL`
   + Drücke (Y) auf "gbavc.sav" um es kopieren
   + Drücke (B), um zum Hauptmenü zurückzukehren
-  + Navigiere zu `[0:] SDCARD` ->` files9`
+  + Navigate to `[0:] SDCARD` -> `gm9`
   + Navigiere zum Ordner, den du für das GBA VC Spiel erstellt hast
   + Drücke (Y), um `gbavc.sav` einzufügen
   + Drücke (Start) um deinen 3DS neu zu starten
@@ -78,7 +77,7 @@ Diese Schritte sind nicht notwendig für andere Virtual Console Spiele (GBC, NES
 1. Gib die angezeigte Tastenkombination ein, um SysNAND-Änderungen (auf erster Ebene) zu aktivieren
   + Dieser Vorgang nimmt einige Zeit in Anspruch
 1. Sobald dies abgeschlossen ist drücke (A) um fortzufahren
-1. Press (B) to decline relocking write permissions if prompted
+1. Drücke (B), um die Schreibrechte nicht zu deaktiveren
 1. Drücke (B), um zum Hauptmenü zurückzukehren
 
 ##### Abschnitt V - DSiWare Spielstände wiederherstellen
@@ -86,7 +85,7 @@ Diese Schritte sind nicht notwendig für andere Virtual Console Spiele (GBC, NES
 Überspringe diesen Abschnitt, falls du kein Backup für deine DSiWare Spielstände erstellt hast.
 {: .notice--info}
 
-1. Navigate to `[0:] SDCARD` -> `gm9` -> `out`
+1. Navigiere zu `[0:] SDCARD` -> `gm9` -> `out`
 1. Wähle den Ordner "00030004" aus und drücke (Y), um ihn zu kopieren.
 1. Drücke zweimal (B), um zurück in das Hauptmenü zu gelangen
 1. Navigiere zu `[2:] SYSNAND TWLN` -> `title`
@@ -95,7 +94,7 @@ Diese Schritte sind nicht notwendig für andere Virtual Console Spiele (GBC, NES
 1. Drücke (A), um die SysNAND (Stufe 1) Bearbeitung zu aktivieren. Dann gebe die angegebene Tastenkombination ein
 1. Wähle "Overwrite file(s)"
   + Dieser Vorgang kann einige Zeit dauern, wenn du viele DSiWare-Spiele hast
-1. Press (B) to decline relocking write permissions if prompted
+1. Drücke (B), um die Schreibrechte nicht zu deaktiveren
 1. Drücke zweimal (B), um zurück in das Hauptmenü zu gelangen
 
 ### Abschnitt VI - Wiederherstellung von GBA VC Spielständen
@@ -110,7 +109,7 @@ Wenn du keine GBA VC Spielstände früher gesichert hast, überspringe den Absch
   Verlasse das GBA VC Spiel wieder
   + Starte deine Konsole, während du (Start) gedrückt hälst, um das Luma3DS chainloader-Menü zu starten
   + Starte GodMode9, indem du (A) drückst
-  + Navigiere zu `[0:] SDCARD` ->` files9`
+  + Navigate to `[0:] SDCARD` -> `gm9`
   + Navigiere zum Ordner, den du für das GBA VC Spiel erstellt hast
   + Drücke (Y) auf "gbavc.sav" um es kopieren
   + Drücke (B), um zum Hauptmenü zurückzukehren
@@ -125,17 +124,17 @@ Wenn du keine GBA VC Spielstände früher gesichert hast, überspringe den Absch
 
 1. Drücke  (HOME) um das Aktionsmenü aufzurufen
 1. Wähle "More..."
-1. Select "Scripts"
-1. Select "Backup SysNAND"
+1. Wähle "Scripts"
+1. Wähle "Backup SysNAND"
 1. Drücke (A) um zu bestätigen
   + Dieser Vorgang nimmt einige Zeit in Anspruch
 1. Drücke (A) um fortzufahren
 1. Drücke (R) und (B) gleichzeitig um die SD-Karte auszuwerfen
 1. Stecke deine SD-Karte in deinen Computer
-1. Copy `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
+1. Kopiere `<serialnumber>_nandmin_###.bin` aus dem Ordner `/gm9/out/` auf deiner SD-Karte an einen sicheren Ort auf deinem Computer
   + Erstelle Backup Dateien an mehreren Orten (USB-Stick, PC, Externe Festplatte, Online-Speicher, etc.)
   + Diese Sicherheitskopie wird dich vor einem Brick schützen, falls in der Zukunft etwas schief gehen sollte
-1. Delete `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card after copying it
+1. Lösche `<serialnumber>_nandmin_###.bin` aus dem Ordner `/gm9/out/` auf deiner SD-Karte, nach dem Kopieren
 1. ** Sichere jede Datei von deiner SD-Karte in einem Ordner auf deinem Computer, da in den nächsten Schritten alle Dateien gelöscht werden **
 
 ##### Abschnitt 8 - Die SD-Karte formatieren
