@@ -24,7 +24,7 @@ Ten en cuenta que en algunas versiones de Luma3DS, el menú de selección de pay
 1. Apaga tu consola
 1. Inserta tu tarjeta SD en tu computadora
 1. Copia `GodMode9.firm` (o `GodMode9.bin` para los usuarios de arm9loaderhax) desde el `.zip` de GodMode9 a la carpeta `/luma/payloads/` en tu tarjeta SD
-1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+1. Copia la carpeta `gm9`contenida en el `.zip`de GodMode9 al directorio raíz de tu tarjeta SD
 1. Reinserta tu tarjeta SD en tu consola
 
 ##### Sección II - Copia de datos de juegos de DSiWare
@@ -34,9 +34,9 @@ Si no tienes ningún juego de DSiWare o datos del mismo que quieras conservar, p
 
 1. Enciende tu consola manteniendo (Start) para ingresar al menú de selección de payloads de Luma3DS
 1. Inicia GodMode9 presionando (A)
-1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
+1. Si se te pide crear copias de seguridad de archivos esenciales, presiona (A) para hacerlo y luego presiona (A) para continuar una vez que haya terminado
 1. Ve a `[2:] SYSNAND TWLN` -> `title`
-1. Hold (R) and press (A) at the same time on `00030004` to select the folder, then select "Copy to 0:/gm9/out"
+1. Mantén presionado (R) y presiona (A) sobre `00030004` para seleccionar la carpeta y luego selecciona "Copy to 0:/gm9/out"
   + Este proceso puede llevar un tiempo si tienes muchos juegos de DSiWare
 1. Presiona (B) dos veces para volver al menú principal
 
@@ -50,8 +50,7 @@ Ten en cuenta que esto no es necesario para otro tipo de juegos de Consola Virtu
 
 1. Mantén presionado (R) y presiona (Start) a la vez para apagar tu consola
 1. Inserta tu tarjeta SD en tu computadora
-1. Crea una carpeta llamada `files9` en la raíz de tu tarjeta SD si aún no existe
-1. Crea una carpeta en `/files9/` por cada juego de Consola Virtual de GBA del cual quieras conservar los datos de guardado 
+1. Create a folder in `/gm9/` for each GBA VC game that you want to backup the save for 
 1. Reinserta tu tarjeta SD en tu consola
 1. Inicia tu consola en SysNAND
 1. Realiza lo siguiente por cada juego de Consola Virtual de GBA del cual quieras conservar los datos de guardado:
@@ -62,7 +61,7 @@ Ten en cuenta que esto no es necesario para otro tipo de juegos de Consola Virtu
   + Ve a `[S:] SYSNAND VIRTUAL`
   + Presiona (Y) sobre `gbavc.sav` para copiarlo
   + Presiona (B) para regresar al menú principal
-  + Ve a `[0:] SDCARD` -> `files9`
+  + Navigate to `[0:] SDCARD` -> `gm9`
   + Navega hacia la carpeta que has creado para este juego de Consola Virtual de GBA
   + Presiona (Y) para pegar `gbavc.sav`
   + Presiona (Start) para reiniciar tu consola
@@ -78,7 +77,7 @@ Ten en cuenta que esto no es necesario para otro tipo de juegos de Consola Virtu
 1. Ingresa la combinación de teclas mostrada para desbloquear la escritura de la SysNAND (lvl1)
   + Este proceso tomará un tiempo
 1. Una vez que haya terminado, presiona (A) para continuar
-1. Press (B) to decline relocking write permissions if prompted
+1. Presiona (B) para rechazar el rebloqueo de permisos de escritura si se solicita
 1. Presiona (B) para volver al menú principal
 
 ##### Sección V - Restaurar datos de guardado de DSiWare
@@ -86,7 +85,7 @@ Ten en cuenta que esto no es necesario para otro tipo de juegos de Consola Virtu
 Si no hiciste el respaldo de datos de DSiWare anteriormente, puedes saltar esta sección.
 {: .notice--info}
 
-1. Navigate to `[0:] SDCARD` -> `gm9` -> `out`
+1. Ve a `[0:] SDCARD` -> `gm9` -> `out`
 1. Presiona (Y) sobre la carpeta `00030004` para copiarla
 1. Presiona (B) dos veces para volver al menú principal
 1. Ve a `[2:] SYSNAND TWLN` -> `title`
@@ -95,7 +94,7 @@ Si no hiciste el respaldo de datos de DSiWare anteriormente, puedes saltar esta 
 1. Presiona (A) para desbloquear la escritura de la SysNAND (lvl1) y después ingresa la combinación de teclas mostrada
 1. Selecciona "Overwrite file(s)"
   + Este proceso puede llevar un tiempo si tienes muchos juegos de DSiWare
-1. Press (B) to decline relocking write permissions if prompted
+1. Presiona (B) para rechazar el rebloqueo de permisos de escritura si se solicita
 1. Presiona (B) dos veces para volver al menú principal
 
 ##### Sección VI - Restaurar datos de guardado de la Consola Virtual de GBA
@@ -110,7 +109,7 @@ Si no habías respaldado datos de partidas de Consola Virtual de GBA antes, pued
   + Sal del juego de Consola Virtual de GBA
   + Enciende tu consola manteniendo (Start) para ingresar al menú de selección de payloads de Luma3DS
   + Inicia GodMode9 presionando (A)
-  + Ve a `[0:] SDCARD` -> `files9`
+  + Navigate to `[0:] SDCARD` -> `gm9`
   + Navega hacia la carpeta que has creado para este juego de Consola Virtual de GBA
   + Presiona (Y) sobre `gbavc.sav` para copiarlo
   + Presiona (B) para regresar al menú principal
@@ -125,17 +124,17 @@ Si no habías respaldado datos de partidas de Consola Virtual de GBA antes, pued
 
 1. Presiona el botón (Home) para abrir el menú de acción
 1. Selecciona "Mas..."
-1. Select "Scripts"
-1. Select "Backup SysNAND"
+1. Selecciona "Scripts"
+1. Selecciona "Backup SysNAND"
 1. Presiona (A) para confirmar
   + Este proceso tomará algún tiempo
 1. Presiona (A) para continuar
 1. Mantén (R) y presiona (B) al mismo tiempo para extraer la SD
 1. Inserta tu tarjeta SD en tu computadora
-1. Copy `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
+1. Copia `<númerodeserie>_nandmin_###.bin` desde la carpeta `/gm9/out/` en tu tarjeta SD a una ubicación segura en tu computadora
   + Haz copias de seguridad en múltiples sitios (como por ejemplo, en un pendrive o almacenamiento online)
   + Esta copia de seguridad puede salvarte de un brick si algo va mal en el futuro
-1. Delete `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card after copying it
+1. Elimina el archivo `<númerodeserie>_nandmin_###.bin` de la carpeta `/gm9/out/` de tu tarjeta SD después de haberlo copiado
 1. **Haz una copia de seguridad de todos los archivos de tu tarjeta SD a una carpeta en tu computadora, todos los archivos se eliminarán en los siguientes pasos**
 
 ##### Sección VIII - Formatear la tarjeta SD
