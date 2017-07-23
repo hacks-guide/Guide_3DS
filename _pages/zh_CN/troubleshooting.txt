@@ -45,11 +45,10 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
 
 ## <a name="rm_nnid" />Removing an NNID without formatting your device
 
-请注意，在某些版本的 Luma3DS 中，Luma3DS 的引导菜单仅在检测到了多个payload 时才会显示。 如果只检测到一个 payload ，按住开始 (Start) 键开机会直接进入 GodMode9 。
+Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
 {: .notice--info}
 
-1. Boot your device while holding (Start) to launch the Luma3DS chainloader menu
-1. Launch GodMode9 by pressing (A)
+1. Launch GodMode9 by holding (Start) during boot
 1. Navigate to `[1:] SYSNAND CTRNAND` -> `data` -> (32 Character ID) -> `sysdata` -> `00010038`
 1. 在`00000000`上，按住(R)键的同时按下(X)键，以重命名这个文件
 1. 按一次(Up)键，将文件名改为`10000000`
@@ -61,11 +60,10 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
 ## <a name="gw_fbi" />在Gateway降级过的设备上无法注入Health & Safety应用
 这一因为Gateway的降级方法非常糟糕，会在系统中留下每个app降级前后的两个版本，其中一个不再使用。 One of them is unused, but it confuses the H&S inject system, causing it to inject into the wrong one.
 
-请注意，在某些版本的 Luma3DS 中，Luma3DS 的引导菜单仅在检测到了多个payload 时才会显示。 如果只检测到一个 payload ，按住开始 (Start) 键开机会直接进入 GodMode9 。
+Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
 {: .notice--info}
 
-1. Boot your device while holding (Start) to launch the Luma3DS chainloader menu
-1. Launch GodMode9 by pressing (A)   
+1. Launch GodMode9 by holding (Start) during boot
 1. Navigate to `[1:] SYSNAND CTRNAND` -> `title` -> `00040010`
 1. 移动到你的设备和区域所对应的文件夹：
   + **Old 3DS or Old 2DS EUR**: `00022300` -> `content`
