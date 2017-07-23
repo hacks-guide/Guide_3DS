@@ -45,11 +45,10 @@ title: "疑難排解"
 
 ## <a name="rm_nnid" />如何在不格式化主機的情況下清除 NNID
 
-請注意，在某些版本的 Luma3DS 中，Luma3DS 連環加載選單僅會在偵測到多個 payload 檔時才會出現。 如果它只偵測到一個 payload 檔案，在開機時按住「Start」鍵將會直接開機至 GodMode9。
+Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
 {: .notice--info}
 
-1. 開機時，按住「Start」鍵進入 Luma3DS 選單
-1. 按「A」啟動 GodMode9
+1. Launch GodMode9 by holding (Start) during boot
 1. 移動至 `[1:] SYSNAND CTRNAND` -> `data` -> (32 字元 ID) -> `sysdata` -> `00010038`
 1. 按住「R」，並在 `00000000` 上按下「X」以重新命名此檔案
 1. 按一下「上」將名字改成 `10000000`
@@ -61,11 +60,10 @@ title: "疑難排解"
 ## <a name="gw_fbi" />無法在 Gateway 降級過後的主機上植入 FBI 管理器到「健康與警示」程式裡
 這是因為 Gateway 所用的降級方式是非常糟糕的，它將在系統內留下各兩個版本的 3DS 程式。 其中一個是沒用到的版本，而「健康與警示」注射工具不知道這點，而將 FBI 管理器植入到錯誤的程式中。
 
-請注意，在某些版本的 Luma3DS 中，Luma3DS 連環加載選單僅會在偵測到多個 payload 檔時才會出現。 如果它只偵測到一個 payload 檔案，在開機時按住「Start」鍵將會直接開機至 GodMode9。
+Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
 {: .notice--info}
 
-1. 開機時，按住「Start」鍵進入 Luma3DS 選單
-1. 按「A」啟動 GodMode9   
+1. Launch GodMode9 by holding (Start) during boot
 1. 移動至 `[1:] SYSNAND CTRNAND` -> `title` -> `00040010`
 1. 移動到對應您主機及區域的資料夾中：
   + **歐版舊型 3DS 或舊型 2DS**：`20022300` -> `content`
