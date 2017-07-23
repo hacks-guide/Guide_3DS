@@ -5,7 +5,7 @@ title: "Move EmuNAND"
 このエクストラセクションでは、どうやって古いEmuNANDのコンテンツを新しいSysNAND CFWに移動し、古いEmuNANDパーティションを削除するか紹介します。 EmuNANDとRedNANDは[同じ理論](http://3dbrew.org/wiki/NAND_Redirection)の少々違う実装です。
 {: .notice--info}
 
-Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only displayed if there is more than one payload detected. If there is only one payload detected, holding (Start) on boot will directly launch GodMode9.
+Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
 {: .notice--info}
 
 **You MUST have already installed Luma3DS and boot9strap or arm9loaderhax to use this.**
@@ -32,8 +32,7 @@ Note that, on some versions of Luma3DS, the Luma3DS chainloader menu is only dis
 If you do not have any DSiWare games or saves that you care about, skip this section.
 {: .notice--info}
 
-1. Boot your device while holding (Start) to launch the Luma3DS chainloader menu
-1. Launch GodMode9 by pressing (A)
+1. Launch GodMode9 by holding (Start) during boot
 1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
 1. Navigate to `[2:] SYSNAND TWLN` -> `title`
 1. Hold (R) and press (A) at the same time on `00030004` to select the folder, then select "Copy to 0:/gm9/out"
@@ -65,8 +64,7 @@ Note that this is not necessary for any other kind of Virtual Console games (GBC
   + Navigate to the folder you created for this GBA VC game
   + Press (Y) to paste `gbavc.sav`
   + Press (Start) to reboot your device
-1. Reboot holding (Start) during boot to launch the Luma3DS chainloader menu
-1. Launch GodMode9 by pressing (A)
+1. Launch GodMode9 by holding (Start) during boot
 
 ##### Section IV - Copy EmuNAND to SysNAND
 
@@ -117,8 +115,7 @@ If you did not backup GBA VC Saves earlier, skip this section.
   + Press (Y) to paste `gbavc.sav`
   + Press (A) to confirm
   + Press (Start) to reboot your device
-1. Reboot holding (Start) during boot to launch the Luma3DS chainloader menu
-1. Launch GodMode9 by pressing (A)
+1. Launch GodMode9 by holding (Start) during boot
 
 ##### Section VII - Backup SysNAND
 
