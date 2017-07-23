@@ -11,7 +11,7 @@ title: "區碼變更"
 本頁面會有些許的[磁力](https://en.wikipedia.org/wiki/Magnet_URI_scheme)連結，您將需要個像 [Deluge](http://dev.deluge-torrent.org/wiki/Download) 的 BT 種子下載器來下載磁力連結的檔案。
 {: .notice--success}
 
-Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
+請注意，如果您在 SD 卡中的 `/luma/payloads/` 資料夾中放有除了 `GodMode9.firm` 的 payload 檔案，在開機時按住「Start」鍵將會顯示一個「加載選單」，從那裏你得透過方向鍵及按鈕「A」選擇「GodMode9」。 
 {: .notice--info}
 
 本過程將解除您系統與 NNID 間的綁定，因為在改變區域後它們將不再兼容。 NNID 在創建後就會被鎖定至當前主機所在的區域，除非透過[一個非常複雜且進階的流程](https://gist.githubusercontent.com/yifanlu/e80db121d38aceb8cca0e03cefd5853b/raw/3c4dd89869156ca0f945a2791e699acfdb32b510/gistfile1.txt)，不然 NNID 不能在區域間遷移。
@@ -29,7 +29,7 @@ Note that if you have any payload files other than `GodMode9.firm` in the `/luma
 透過 CTRTransfer 所達成的區碼變更似乎會使重啟補丁失效。 目前原因還尚待了解中，總之目前舊型 3DS 的玩家將無法遊玩需要用到「額外記憶體模式」的遊戲（像是《魔物獵人》、《任天堂明星大亂鬥》、或《神奇寶貝太陽／月亮版》...等）直到您格式化主機為止。
 {: .notice--warning}
 
-Never format a New 2DS while on a version <11.4.0 or you will be unable to complete initial setup!
+千萬不要在低於版本 11.4.0 的 New 2DS 上格式化，否則你將無法完成初始設置！
 {: .notice--danger}
 
 **您必須先安裝 Luma3DS 和 boot9strap 或 arm9loaderhax 才能繼續。**
@@ -58,14 +58,14 @@ Never format a New 2DS while on a version <11.4.0 or you will be unable to compl
 1. 在 SD 卡的根目錄底下，建立一個新資料夾 `cias`
 1. 解壓 GodMode9 `.zip` 中的 `GodMode9.firm`（或是 `GodMode9.bin` 如果您是使用 arm9loaderhax 的話）至 SD 卡的 `/luma/payloads/` 資料夾中
 1. 解壓 GodMode9 `.zip` 中的 `gm9` 資料夾到 SD 卡的根目錄底下
-1. Copy `ctrtransfer_ticket_copy.gm9` to the `/gm9/scripts/` folder on your SD card
+1. 複製 `ctrtransfer_ticket_copy.gm9` 到 SD 卡中的 `/gm9/scripts/` 資料夾
 1. 從剛下載的 CTRTransfer `.zip` 中，解壓 9.2.0 CTRTransfer 鏡像檔 `.bin` 檔案至 SD 卡上的 `/gm9/` 資料夾
 1. 將 `FBI.3dsx` 複製到 SD 卡中的 `/3ds/` 資料夾底下
 1. 將 SD 卡插回主機中
 
 ##### 第二節 — 進行 CTRTransfer
 
-1. Launch GodMode9 by holding (Start) during boot
+1. 開機時按住「Start」鍵啟動 GodMode9
 1. 當提示重要檔案備份時，按下「A」繼續，並在完畢後按下「A」繼續
 1. 移動至 `[0:] SDCARD` -> `gm9`
 1. 選擇 CTRTransfer `.bin`，並按「A」選擇
@@ -105,7 +105,7 @@ Never format a New 2DS while on a version <11.4.0 or you will be unable to compl
 
 ##### 第四節 — 重新安裝 Tickets
 
-If script found no user tickets told you to skip this section, then skip this section
+如果腳本說沒有找到任何使用者 tickets 且叫您跳過本節，那麼請您跳過這一節
 {: .notice--info}
 
 1. 於 Homebrew 清單內啟動 FBI 管理器
@@ -131,9 +131,9 @@ If script found no user tickets told you to skip this section, then skip this se
 1. 若提示時，州的部分不必設定
 1. 更新您改區完後的自製系統至最新版本
 
-##### Section VI - Remove CTRTransfer image
+##### 第六節 — 移除 CTRTransfer 鏡像檔
 
-1. Launch GodMode9 by holding (Start) during boot
+1. 開機時按住「Start」鍵啟動 GodMode9
 1. 移動至 `[0:] SDCARD` -> `gm9`
 1. 選擇 CTRTransfer `.bin` 鏡像檔，並按「X」刪除
 1. 按 「A」 確認
