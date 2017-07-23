@@ -5,7 +5,7 @@ title: "移植 EmuNAND"
 本篇為如何把先前的 EmuNAND 中的內容移植到您新的自製 SysNAND 系統底下，並移除舊的 EmuNAND 磁區的附加章節。 注意 EmuNAND 與 RedNAND 指的是些微不同運作方式但[同樣道理](http://3dbrew.org/wiki/NAND_Redirection)的用語。
 {: .notice--info}
 
-請注意，在某些版本的 Luma3DS 中，Luma3DS 連環加載選單僅會在偵測到多個 payload 檔時才會出現。 如果它只偵測到一個 payload 檔案，在開機時按住「Start」鍵將會直接開機至 GodMode9。
+Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
 {: .notice--info}
 
 **您必須先安裝 Luma3DS 和 boot9strap 或 arm9loaderhax 才能繼續。**
@@ -32,8 +32,7 @@ title: "移植 EmuNAND"
 如果您沒有安裝任何 DSiWare 遊戲或您認為重要的存檔，跳過本節。
 {: .notice--info}
 
-1. 開機時，按住「Start」鍵進入 Luma3DS 選單
-1. 按「A」啟動 GodMode9
+1. Launch GodMode9 by holding (Start) during boot
 1. 當提示重要檔案備份時，按下「A」繼續，並在完畢後按下「A」繼續
 1. 移動至 `[2:] SYSNAND TWLN` -> `title`
 1. 在 `00030004` 上按住「R」並同時按下「A」以選取資料夾，並選擇「Copy to 0:/gm9/out」
@@ -65,8 +64,7 @@ title: "移植 EmuNAND"
   + 移動至為本遊戲所創建的資料夾底下
   + 按「Y」貼上 `gbavc.sav`
   + 按下「Start」鍵重啟您的主機
-1. 重啟時按住「Start」鍵啟動 Luma3DS 選單
-1. 按「A」啟動 GodMode9
+1. Launch GodMode9 by holding (Start) during boot
 
 ##### 第四節 — 複製 EmuNAND 至 SysNAND 中
 
@@ -117,8 +115,7 @@ title: "移植 EmuNAND"
   + 按「Y」貼上 `gbavc.sav`
   + 按「A」確認
   + 按下「Start」鍵重啟您的主機
-1. 重啟時按住「Start」鍵啟動 Luma3DS 選單
-1. 按「A」啟動 GodMode9
+1. Launch GodMode9 by holding (Start) during boot
 
 ##### 第七節 — 備份 SysNAND
 
