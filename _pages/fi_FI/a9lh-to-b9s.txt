@@ -117,26 +117,26 @@ Jos sinulla oli ennen boot9strapiin päivittämistä EmuNAND-kokoonpano, ja halu
 ##### Vaihe V – Luma3DS Updaterin asentaminen
 
 1. Avaa FBI
-1. Navigate to `SD` -> `cias`
-1. Select `lumaupdater.cia`
-1. Select the "Install CIA" option, then press (A) to confirm
+1. Mene hakemistoon `SDCARD` → `cias`
+1. Valitse `lumaupdater.cia`
+1. Valitse "Install CIA" ja paina (A):ta vahvistaaksesi
 1. Paina (HOME)-painiketta ja sulje FBI
 
 ___
 
-You can now remove any arm9loaderhax related files from your SD card, such as `arm9loaderhax.bin` on the root of your SD card and the `aeskeydb.bin` file in the `files9` folder on your SD card.
+Voit nyt poistaa SD-kortiltasi kaikki arm9loaderhaxiin liittyvät tiedostot, kuten `arm9loaderhax.bin`-tiedoston korttisi juuresta sekä `aeskeydb.bin`-tiedoston korttisi `files9`-kansiosta.
 {: .notice--info}
 
-Note that the `.bak` files in the `/boot9strap/` folder on your SD card are only needed in the event of a failed boot9strap install. Once you have installed successfully, you can delete the entire `boot9strap` folder.
+Huomaa, että SD-korttisi `/boot9strap/`-kansiossa olevat `.bak`-tiedostot ovat tarpeellisia vain, jos boot9strapin asentaminen epäonnistuu. Kun asennus on onnistunut, voit poistaa koko `boot9strap`-kansion sisältöineen.
 {: .notice--info}
 
-This fork of Luma3DS Updater allows for boot9strap compatibility by downloading and extracting the latest Luma3DS `boot.firm` for you.
+Tämä Luma3DS Updaterin haara mahdollistaa boot9strap-yhteensopivuuden lataamalla ja purkamalla viimeisimmän Luma3DS-`boot.firm`-tiedoston sinun puolestasi.
 {: .notice--info}
 
 {% capture notice-6 %}   
 Voit nyt pitää (SELECT)-painiketta pohjassa käynnistyksen aikana avataksesi Luma3DS:n määritysvalikon.    
-You can now hold (Start) on boot to launch the Luma3DS chainloader menu (note that the Luma3DS chainloader menu is only displayed if there is more than one payload detected).    
-You can now hold (Start) + (Select) + (X) on boot to dump the ARM11 bootrom (`boot11.bin`), the ARM9 bootrom (`boot9.bin`), and your console unique OTP (`OTP.bin`) to the `/boot9strap/` folder on your SD card (note that this will not have any kind of prompt or message).
+Voit nyt pitää (START)-painiketta pohjassa käynnistyksen aikana avataksesi Luma3DS:n ketjulataajan (huomaa, että ketjulatausvalikko näytetään vain, jos useampi kuin yksi ohjelma havaitaan).    
+Voit nyt pitää pohjassa (START) + (SELECT) + (X) -painikeyhdistelmää konsolin käynnistyessä kopioidaksesi ARM11-bootromin (`boot11.bin`), ARM9-bootromin (`boot9.bin`) sekä konsolikohtaisen OTP-tiedostosi (`OTP.bin`) SD-korttisi `/boot9strap/`-kansioon (huomaa, että prosessissa ei näytetä minkäänlaisia viestejä tai kehotteita).
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
