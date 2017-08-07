@@ -76,7 +76,7 @@ Käytä [tallennuksenhallintaohjelmaa](https://github.com/J-D-K/JKSM/releases/la
 1. Paina (A):ta valitaksesi kohdan `00000000`
 1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen ja syötä annettu painikeyhdistelmä
 1. Paina (B):tä palataksesi päävalikkoon
-1. Navigate to `[2:] SYSNAND TWLN` -> `title` -> `00030004` -> `(8 Character ID)`
+1. Mene hakemistoon `[2:] SYSNAND TWLN` → `title` → `00030004` → `(8-merkkinen ID)`
   + 8-merkkinen ID löytyy osiosta [boot9strapin asentaminen (injektoitavat DSiWare-pelit)](installing-boot9strap-(dsiware-game-injection-list))
 1. Mene hakemistoon `data`
 1. Paina (A):ta `public.sav`-tiedoston kohdalla
@@ -86,12 +86,12 @@ Käytä [tallennuksenhallintaohjelmaa](https://github.com/J-D-K/JKSM/releases/la
 1. Paina (Y):tä `savedata`-kansion tiedosto(je)n kohdalla kopioidaksesi sen/ne
   + Jos`savedata`-kansion sisällä on toinen `savedata`-kansio, kyseessä ei ole virhe. Kopioi tällöin sisällä oleva `savedata`-kansio, älä sen sisällä olevia tiedostoja.
 1. Paina (B):tä palataksesi päävalikkoon
-1. Navigate to `[7:] FAT IMAGE`
+1. Mene hakemistoon `[7:] FAT IMAGE`
 1. Käytä (X):ää poistaaksesi kaiken `FAT IMAGE` -hakemiston sisältä
 1. Paina (Y):tä liittääksesi kopion `savedata`-kansion **sisällöstä** `FAT IMAGE` -hakemistoon
 1. Valitse "Copy path(s)"
 1. Press (A) to unlock image writing, then input the key combo given
-1. Press (Start) to reboot **the source 3DS**
+1. Paina (START)-painiketta käynnistääksesi **lähde-3DS**:n uudelleen
 1. Avaa DSiWare-pelisi **lähde-3DS:llä**
 1. Napauta näyttöä tai paina mitä tahansa painiketta aloittaaksesi pelin ja kokeillaksesi, onko tallennus toimiva
   + Jos saat virheen, jossa mainitaan`boot.nds`, **haavoittuvuuden hyödyntäminen on onnistunut**
@@ -103,19 +103,19 @@ Käytä [tallennuksenhallintaohjelmaa](https://github.com/J-D-K/JKSM/releases/la
 
 1. Jos **kohde-3DS:llä** on Nintendo Network ID, sinun täytyy alustaa konsoli järjestelmäasetuksista (System Settings):
   + Mene muiden asetusten (Other Settings) viimeiselle sivulle ja valitse järjestelmämuistin alustaminen (Format System Memory), seuraa sitten kaikkia ohjeita
-1. Read the following:
+1. Huomioi nämä:
   + Your CFW 3DS = the source 3DS = "Source System"
   + Your Stock 3DS = the target 3DS = "Target System"
   + **Siirrä DSiWare-sovellukset kehotettaessa!**
   + **ÄLÄ** poista lähde-3DS:n SD-kortin sisältöä kehotettaessa
   + Varmista, että kummankin konsolin akussa on tarpeeksi virtaa siirron ajaksi
-  + **Old 3DS or Old 2DS (source) to New 3DS or New 2DS (target) only**: if asked which method you wish to use to transfer the SD card data:
+  + **Vain siirrot vanhasta 2DS:stä/3DS:stä (lähde) New 2DS:ään / New 3DS:ään (kohde)**: kysyttäessä mitä menetelmää SD-kortin tietojen siirtämiseen käytetään:
     + **Do NOT** choose the "Low-Capacity microSD Card Transfer" or minimal option (option 2), it will only transfer tickets and likely will not transfer the DSiWare save.
     + Fast Method: If you have the ability to move the data from the SD card (source) to the microSD card (target), when prompted use the "PC-Based Transfer" option (option 3).
     + Slowest Method: If you don't have the ability to move the data on a PC use the **full** "Wireless Transfer" option (option 1).
 1. Go to [this link](http://en-americas-support.nintendo.com/app/answers/detail/a_id/227/) and follow Nintendo's official instructions for System Transferring from one system to another while keeping in mind what you just read
 
-##### Section IV - Restoring the source 3DS
+##### Vaihe IV – Lähde-3DS:n palauttaminen
 
 1. On **the source 3DS**, complete initial setup
 1. Do one of the following
@@ -131,7 +131,7 @@ Käytä [tallennuksenhallintaohjelmaa](https://github.com/J-D-K/JKSM/releases/la
   + Tämä proessi kestää jonkin aikaa
 1. Kun toiminto on suoritettu, paina (A):ta jatkaaksesi
 1. Press (A) to relock write permissions if prompted
-1. Press (Start) to reboot **the source 3DS**
+1. Paina (START)-painiketta käynnistääksesi **lähde-3DS**:n uudelleen
 
 ##### Section V - Backing up the target 3DS's FIRM
 
@@ -140,13 +140,13 @@ Käytä [tallennuksenhallintaohjelmaa](https://github.com/J-D-K/JKSM/releases/la
 1. Kopioi `starter.zip`-pakkauksen _sisältö_ **kohde 3DS**:n SD-kortin juureen
 1. Luo `boot9strap`-niminen kansio **kohde 3DS**:n SD-kortin juureen
 1. Copy the 11.5.0 `.firm` corresponding to **the target 3DS** to the `boot9strap` folder on the root of **the target 3DS**'s SD card
-1. Copy `boot9strap.firm` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
+1. Kopioi boot9strap-`.zip`-pakkauksesta `boot9strap.firm` SD-korttisi `/boot9strap/`-kansioon
 1. Launch b9sTool by starting your DSiWare game on **the target 3DS**
-1. Select "Dump F0F1" to backup **the target 3DS**'s FIRM
-1. Exit b9sTool
+1. Valitse "Dump F0F1" varmuuskopioidaksesi **kohde 3DS**:n FIRMin
+1. Poistu b9sToolista
   + You may have to force power off by holding the power button
 1. Aseta SD-korttisi tietokoneeseesi ja kopioi `boot9strap`-kansiosta `F0F1_N3DS.bin` tai `F0F1_O3DS.bin` (riippuen konsolisi mallista) turvalliseen paikkaan; tee varmuuskopioita useaan paikkaan; tämä varmuuskopiointi voi pelastaa konsolisi, jos jokin menee pieleen
-1. Reinsert your SD card into **the target 3DS**
+1. Aseta SD-korttisi takaisin **kohde-3DS**:ään
 
 ##### Section VI - Flashing the target 3DS's FIRM
 
