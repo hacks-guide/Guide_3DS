@@ -102,20 +102,20 @@ Käytä [tallennuksenhallintaohjelmaa](https://github.com/J-D-K/JKSM/releases/la
   + **The Legend of Zelda: Four Swords**: Just start the game
   + If your game has an error about `boot.nds` or a white screen, **then the exploit has been successful**
   + If your game behaves normally and does not give you this error, then you should stop and figure out what went wrong
-  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#twl_broken)
+  + Jos saat mustan ruudun, [seuraa tätä vianmääritysohjetta](troubleshooting#twl_broken)
 
-##### Section III - System Transfer
+##### Vaihe III – Siirron tekeminen
 
 1. **Varmuuskopioi kummankin 3DS:n SD-korttien sisältö eri kansioihin tietokoneellasi (pidä silmällä, kumpi on kumpi)**
 1. Aseta kumpikin SD-kortti takaisin oikeaan konsoliinsa
-1. If **the target 3DS** has a Nintendo Network ID on it, you must format the device using System Settings:
-  + Go to the last page of "Other Settings" and select "Format System Memory", then follow all instructions
+1. Jos **kohde-3DS:llä** on Nintendo Network ID, sinun täytyy alustaa konsoli järjestelmäasetuksista (System Settings):
+  + Mene muiden asetusten (Other Settings) viimeiselle sivulle ja valitse järjestelmämuistin alustaminen (Format System Memory), seuraa sitten kaikkia ohjeita
 1. Read the following:
   + Your CFW 3DS = the source 3DS = "Source System"
   + Your Stock 3DS = the target 3DS = "Target System"
-  + **Move DSiWare titles if prompted!**
-  + Do **NOT** delete the source system's SD card contents if prompted
-  + Make sure neither device's battery dies during the transfer
+  + **Siirrä DSiWare-sovellukset kehotettaessa!**
+  + **ÄLÄ** poista lähde-3DS:n SD-kortin sisältöä kehotettaessa
+  + Varmista, että kummankin konsolin akussa on tarpeeksi virtaa siirron ajaksi
   + **Old 3DS or Old 2DS (source) to New 3DS or New 2DS (target) only**: if asked which method you wish to use to transfer the SD card data:
     + **Do NOT** choose the "Low-Capacity microSD Card Transfer" or minimal option (option 2), it will only transfer tickets and likely will not transfer the DSiWare save.
     + Fast Method: If you have the ability to move the data from the SD card (source) to the microSD card (target), when prompted use the "PC-Based Transfer" option (option 3).
@@ -131,8 +131,8 @@ Käytä [tallennuksenhallintaohjelmaa](https://github.com/J-D-K/JKSM/releases/la
     + You can also just [remove the NNID](https://3ds.guide/troubleshooting#rm_nnid) from **the source 3DS** if you'd prefer it remain on **the target 3DS**
 1. Reboot **the source 3DS** while holding (Start) to launch GodMode9
 1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
-1. Navigate to `[0:] SDCARD` -> `gm9` -> `out`
-1. Press (A) on `<serialnumber>_nandmin_###.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
+1. Mene hakemistoon `[0:] SDCARD` → `gm9` -> `out`
+1. Paina (A):ta `<sarjanumero>_nandmin_###.bin`-tiedoston kohdalla, valitse "NAND image options..." ja sitten "Restore SysNAND (safe)"
 1. Paina (A):ta ottaaksesi käyttöön SysNANDin ylikirjoittamisen ja syötä annettu painikeyhdistelmä
   + Tämä ei ylikirjoita boot9strap-asennustasi
 1. Syötä annettu painikeyhdistelmä ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1)
@@ -144,9 +144,9 @@ Käytä [tallennuksenhallintaohjelmaa](https://github.com/J-D-K/JKSM/releases/la
 ##### Section V - Backing up the target 3DS's FIRM
 
 1. Kopioi Luma3DS-`.7z`-pakkauksesta `boot.firm` SD-korttisi juureen
-1. Copy `boot.nds` to the root of **the target 3DS**'s SD card
-1. Copy _the contents of_ `starter.zip` to the root of **the target 3DS**'s SD card
-1. Create a folder named `boot9strap` on the root of **the target 3DS**'s SD card
+1. Kopioi `boot.nds` **kohde 3DS**:n SD-kortin juureen
+1. Kopioi `starter.zip`-pakkauksen _sisältö_ **kohde 3DS**:n SD-kortin juureen
+1. Luo `boot9strap`-niminen kansio **kohde 3DS**:n SD-kortin juureen
 1. Copy the 11.5.0 `.firm` corresponding to **the target 3DS** to the `boot9strap` folder on the root of **the target 3DS**'s SD card
 1. Copy `boot9strap.firm` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
 1. Launch your DSiWare game on **the target 3DS**
