@@ -1,5 +1,5 @@
 ---
-title: "Move EmuNAND"
+title: "EmuNANDin siirtäminen"
 ---
 
 Tässä lisäosiossa opastetaan EmuNANDin sisällön siirtäminen uuteen SysNAND-kokoonpanoon sekä EmuNAND-osion poistaminen tämän jälkeen. Huomaa, että termit EmuNAND ja RedNAND viittaavat [saman konseptin](http://3dbrew.org/wiki/NAND_Redirection) kahteen hiukan erilaiseen toteutukseen.
@@ -23,8 +23,8 @@ Huomaa, että jos sinulla on muita käynnistystiedostoja kuin `GodMode9.firm` SD
 
 1. Sammuta konsolisi
 1. Aseta SD-korttisi tietokoneeseesi
-1. Copy `GodMode9.firm` (or `GodMode9.bin` for arm9loaderhax users) from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
-1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+1. Kopioi GodMode9-`.zip`-pakkauksesta `GodMode9.firm` (tai `GodMode9.bin` arm9loaderhax-käyttäjille) SD-korttisi `/luma/payloads/`-kansioon
+1. Kopioi GodMode9-`.zip`-pakkauksesta `gm9`-kansio SD-korttisi juureen
 1. Aseta SD-korttisi takaisin konsoliisi
 
 ##### Vaihe II – SysNANDin DSiWare-tallennusten varmuuskopiointi
@@ -33,7 +33,7 @@ Jos sinulla ei ole yhtäkään DSiWare-peliä tai -tallennusta, voit ohittaa tä
 {: .notice--info}
 
 1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
-1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
+1. Jos ohjelma kehottaa luomaan varmuuskopion tärkeistä tiedostoista (essential files), paina (A):ta tehdäksesi sen, ja kun varmuuskopio on valmis, paina (A):ta uudelleen jatkaaksesi
 1. Mene hakemistoon `[2:] SYSNAND TWLN` → `title`
 1. Hold (R) and press (A) at the same time on `00030004` to select the folder, then select "Copy to 0:/gm9/out"
   + Tämä prosessi voi kestää jonkin aikaa, jos sinulla on monta DSiWare-peliä
@@ -75,7 +75,7 @@ Huomaa, että tämä ei ole tarpeellista muille Virtual Console -peleille (GBC, 
 1. Syötä annettu painikeyhdistelmä ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1)
   + Tämä prosessi voi kestää jonkin aikaa
 1. Kun toiminto on suoritettu, paina (A):ta jatkaaksesi
-1. Press (B) to decline relocking write permissions if prompted
+1. Paina (B):tä kieltäytyäksesi lukitsemasta kirjoitusoikeuksia kehotettaessa
 1. Paina (B):tä palataksesi päävalikkoon
 
 ##### Vaihe V – DSiWare-tallennusten palauttaminen
@@ -83,7 +83,7 @@ Huomaa, että tämä ei ole tarpeellista muille Virtual Console -peleille (GBC, 
 Jos et varmuuskopioinut DSiWare-tallennuksia aiemmin, voit ohittaa tämän osion.
 {: .notice--info}
 
-1. Navigate to `[0:] SDCARD` -> `gm9` -> `out`
+1. Mene hakemistoon `[0:] SDCARD` → `gm9` → `out`
 1. Paina (Y):tä `00030004`-kansion kohdalla kopioidaksesi sen
 1. Paina (B):tä kahdesti palataksesi päävalikkoon
 1. Mene hakemistoon `[2:] SYSNAND TWLN` → `title`
@@ -92,7 +92,7 @@ Jos et varmuuskopioinut DSiWare-tallennuksia aiemmin, voit ohittaa tämän osion
 1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1) ja syötä annettu painikeyhdistelmä
 1. Valitse "Overwrite file(s)"
   + Tämä prosessi voi kestää jonkin aikaa, jos sinulla on monta DSiWare-peliä
-1. Press (B) to decline relocking write permissions if prompted
+1. Paina (B):tä kieltäytyäksesi lukitsemasta kirjoitusoikeuksia kehotettaessa
 1. Paina (B):tä kahdesti palataksesi päävalikkoon
 
 ##### Vaihe VI – GBA VC -tallennusten palauttaminen
@@ -122,16 +122,16 @@ Jos et varmuuskopioinut GBA VC -tallennuksia aiemmin, voit ohittaa tämän osion
 1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
 1. Valitse "More..."
 1. Valitse "Scripts..."
-1. Select "Backup SysNAND"
+1. Valitse "Backup SysNAND"
 1. Paina (A):ta vahvistaaksesi
   + Tämä proessi kestää jonkin aikaa
 1. Paina (A):ta jatkaaksesi
 1. Pidä (R):ää pohjassa ja paina samalla (B):tä irrottaaksesi SD-korttisi
 1. Aseta SD-korttisi tietokoneeseesi
-1. Copy `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
+1. Kopioi SD-korttisi `/gm9/out/`-kansiosta `<sarjanumero>_nandmin_###.bin` turvalliseen paikkaan tietokoneellasi
   + Varmuuskopioi useaan eri paikkaan (kuten pilvipalveluihin)
   + Tämä varmuuskopiointi pelastaa sinut konsolin vioittumiselta, jos jokin menee pieleen tulevaisuudessa
-1. Delete `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card after copying it
+1. Poista SD-korttisi `/gm9/out/`-kansiosta `<sarjanumero>_nandmin_###.bin` kopioituasi sen
 1. **Varmuuskopioi SD-korttisi kaikki tiedostot tietokoneellesi; kaikki tiedostot poistetaan seuraavaksi**
 
 ##### Vaihe VIII – SD-kortin alustaminen
@@ -149,7 +149,7 @@ Jos et varmuuskopioinut GBA VC -tallennuksia aiemmin, voit ohittaa tämän osion
 1. Pidä (R):ää pohjassa ja paina samalla (B):tä irrottaaksesi SD-korttisi
 1. Aseta SD-korttisi tietokoneeseesi
 1. Kopioi kaikki tiedostosi takaisin SD-kortillesi
-  + Ensure you replace the `boot.firm` file on your SD card with the one from your backup
+  + Varmista, että SD-kortillasi oleva `boot.firm`-tiedosto korvataan varmuuskopion vastaavalla
 1. Aseta SD-korttisi takaisin konsoliisi
 1. Paina (A):ta liittääksesi SD-korttisi takaisin järjestelmään
 1. Paina (START)-painiketta tallentaaksesi ja käynnistääksesi uudelleen
@@ -157,5 +157,5 @@ Jos et varmuuskopioinut GBA VC -tallennuksia aiemmin, voit ohittaa tämän osion
 
 ___
 
-Return to [Finalizing Setup](finalizing-setup).
+Palaa osioon [Asennuksen viimeistely](finalizing-setup).
 {: .notice--primary}
