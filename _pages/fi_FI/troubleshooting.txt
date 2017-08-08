@@ -1,5 +1,5 @@
 ---
-title: "Troubleshooting"
+title: "Vianmääritys"
 ---
 
 Jos et pysty käynnistämään konsoliasi, seuraa tilannettasi vastaavan kohdan ohjeita. Kun jokin sivun ratkaisuista toimii ongelmaasi, voit jatkaa pääopasta
@@ -45,10 +45,10 @@ Jos et pysty käynnistämään konsoliasi, seuraa tilannettasi vastaavan kohdan 
 
 ## <a name="rm_nnid" />NNID:n poistaminen ilman konsolin alustamista
 
-Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
+Huomaa, että jos sinulla on muita käynnistystiedostoja kuin `GodMode9.firm` SD-korttisi `/luma/payloads`-kansiossa, (START)-painikkeen pohjassa pitäminen käynnistyksen aikana avaa "ketjulatausvalikon", jossa sinun on käytettävä ristiohjainta ja (A):ta avataksesi GodMode9:n näitä ohjeita varten. 
 {: .notice--info}
 
-1. Launch GodMode9 by holding (Start) during boot
+1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
 1. Mene hakemistoon `[1:] SYSNAND CTRNAND` → `data` → (32-merkkinen tunnus) → `sysdata` → `00010038`
 1. Pidä (R):ää pohjassa ja paina samalla (X):ää `00000000`-tiedoston kohdalla uudelleennimetäksesi sen
 1. Paina ylös kerran vaihtaaksesi nimeksi `10000000`
@@ -66,17 +66,17 @@ Huomaa, että jos sinulla on muita käynnistystiedostoja kuin `GodMode9.firm` SD
 1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
 1. Mene hakemistoon `[1:] SYSNAND CTRNAND` → `title` → `00040010`
 1. Mene konsolisi mallin ja alueen mukaiseen kansioon:
-  + **Old 3DS or Old 2DS EUR**: `00022300` -> `content`
-  + **Old 3DS or Old 2DS JPN**: `00020300` -> `content`
-  + **Old 3DS or Old 2DS USA**: `00021300` -> `content`
-  + **New 3DS or New 2DS EUR**: `20022300` -> `content`
-  + **New 3DS or New 2DS JPN**: `20020300` -> `content`
-  + **New 3DS or New 2DS USA**: `20021300` -> `content`
+  + **EUR-alueen vanha 3DS tai vanha 2DS**: `00022300` → `content`
+  + **JPN-alueen vanha 3DS tai vanha 2DS**: `00020300` → `content`
+  + **USA-alueen vanha 3DS tai vanha 2DS**: `00021300` → `content`
+  + **EUR-alueen New 3DS tai New 2DS**: `20022300` → `content`
+  + **JPN-alueen New 3DS tai New 2DS**: `20020300` → `content`
+  + **USA-alueen New 3DS tai New 2DS**: `20021300` → `content`
 1. Huomaa, että hakemistossa on kahdentuneet app- ja tmd- tiedostot, joista toisten tiedostopäätteet ovat isolla (`.TMD` ja`.APP`) ja toisten pienellä (`.tmd` ja`.app`)
 1. Pidä (R):ää pohjassa ja paina samalla (Y):tä luodaksesi uuden hakemiston
 1. Paina (A):ta vahvistaaksesi nimen `newdir` (kansion nimellä ei ole väliä)
 1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1) ja syötä annettu painikeyhdistelmä
-1. Press (B) to decline relocking write permissions if prompted
+1. Paina (B):tä kieltäytyäksesi lukitsemasta kirjoitusoikeuksia kehotettaessa
 1. Paina (L):ää jokaisen isokirjaimisen tiedostopäätteen (`.TMD` ja `.APP`) omaavan tiedoston kohdalla merkitäksesi ne
 1. Paina (Y):tä kopioidaksesi tiedostot
 1. Mene hakemistoon `newdir`
@@ -84,8 +84,8 @@ Huomaa, että jos sinulla on muita käynnistystiedostoja kuin `GodMode9.firm` SD
 1. Valitse "Move path(s)"
 1. Isokirjaimisen tiedostopäätteen omaavat tiedostot on nyt siirretty `newdir`-hakemistoon
 1. Paina (START)-painiketta käynnistääksesi uudelleen
-1. Return to [Finalizing Setup](finalizing-setup) and retry the FBI injection
-1. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then return to [Finalizing Setup](finalizing-setup) and retry the FBI injection
+1. Palaa osioon [Asennuksen viimeistely](finalizing-setup) ja yritä FBI-injektointia uudelleen
+1. Jos injektointi ei vieläkään onnistu, siirrä isokirjaimisen tiedostopäätteen omaavat tiedostot takaisin `content`-kansioon ja pienikirjaimisen tiedostopäätteen omaavat tiedostot `newdir`-kansioon. Palaa sitten osioon [Asennuksen viimeistely](finalizing-setup) ja yritä FBI-injektiota uudelleen
 
 ## <a name="ts_browser" />Selainpohjainen käynnistystapa ei toimi
 Selainhaavoittuvuuksiin perustuvat käynnistystavat (kuten browserhax ja 2xrsa) ovat monesti epävakaita ja kaatuvat usein, mutta toisinaan seuraavat toimet saattavat auttaa:
@@ -112,9 +112,9 @@ Selainhaavoittuvuuksiin perustuvat käynnistystavat (kuten browserhax ja 2xrsa) 
 1. Jos konsolisi on laitteistomodattu, ja sinulla on NAND-varmuuskopio, palauta varmuuskopio SysNANDiin
 1. Kokeile käynnistää konsolisi palautustilaan ja päivittää se
     1. Sammuta konsolisi
-    1. Hold (L) + (R) + (A) + (Up)
+    1. Pidä pohjassa painikeyhdistelmää (L) + (R) + (A) + (YLÖS)
     1. Käynnistä konsolisi
-    1. If you enter safe mode, update your device
+    1. Jos vikasietotila aukeaa, päivitä konsolisi
 1. Konsolisi saattaa olla vioittunut. Kysy apua (englanniksi) [Nintendo Homebrew -palvelimelta Discordissa](https://discord.gg/MWxPgEp).
 
 ## <a name="ts_sys_b9s" />Black screen on SysNAND boot after Installing boot9strap
