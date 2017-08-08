@@ -1,5 +1,5 @@
 ---
-title: "Installing boot9strap (DSiWare Save Injection)"
+title: "Boot9strapin asentaminen (DSiWare-tallennusinjektio)"
 ---
 
 Huomaa, että jos sinulla on muita käynnistystiedostoja kuin `GodMode9.firm` SD-korttisi `/luma/payloads`-kansiossa, (START)-painikkeen pohjassa pitäminen käynnistyksen aikana avaa "ketjulatausvalikon", jossa sinun on käytettävä ristiohjainta ja (A):ta avataksesi GodMode9:n näitä ohjeita varten. 
@@ -11,26 +11,26 @@ Huomaa, että jos sinulla on muita käynnistystiedostoja kuin `GodMode9.firm` SD
 Varmista ennen jatkamista, että olet lukenut kaikki huomautukset ja varoitukset osiossa [boot9strapin asentaminen (DSiWare)](installing-boot9strap-(dsiware)).
 {: .notice--danger}
 
-Jos et käytä oikeaa kohde-3DS:n mukaista `.firm`-tiedostoa, konsolista tulee KÄYTTÖKELVOTON! Ensure you download and use the correct one!
+Jos et käytä oikeaa kohde-3DS:n mukaista `.firm`-tiedostoa, konsolista tulee KÄYTTÖKELVOTON! Varmista, että lataat ja käytät oikeaa tiedostoa!
 {: .notice--danger}
 
 #### Tarpeet
 
 * Kaksi 3DS-konsolia
   + **Lähde-3DS**: konsoli, jolla on asennettuna jonkin mukautetun laiteohjelmiston (kuten boot9strapin tai arm9loaderhaxin) *viimeisin versio*
-  + **The target 3DS**: the 3DS on stock firmware *on 11.5.0*
-* Already own one of the following exploitable DSiWare games (a pirated copy of the game will **not** work) on **the source 3DS**
+  + **Kohde-3DS**: konsoli, jolla on vakiolaiteohjelmisto *versiolla 11.5.0*
+* Jokin seuraavista haavoittuvaisista DSiWare-peleistä (piratoitu peli **ei** toimi) **lähde-3DS:llä**
   + **Fieldrunners**
   + **Legends of Exidia**
   + **Guitar Rock Tour**  
   + **The Legend of Zelda: Four Swords**  
-* The latest release of [3ds_dsiwarehax_installer](https://github.com/yellows8/3ds_dsiwarehax_installer/releases)
+* 3ds_dsiwarehax_installerin [viimeisin julkaisu](https://github.com/yellows8/3ds_dsiwarehax_installer/releases)
 * GodMode9:n [viimeisin julkaisu](https://github.com/d0k3/GodMode9/releases)
-* The latest release of [b9sTool](https://github.com/Plailect/b9sTool/releases/latest)
+* B9sToolin [viimeisin julkaisu](https://github.com/Plailect/b9sTool/releases/latest)
 * boot9strapin [viimeisin julkaisu](https://github.com/SciresM/boot9strap/releases/latest) *(tavallinen boot9strap; ei `devkit`- eikä `ntr`-tiedosto)*
 * Luma3DS:n [viimeisin julkaisu](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z`-tiedosto)*
-* The Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
-* The 11.4.0 / 11.5.0 (both versions have the same FIRM version) `.firm` corresponding to **the target 3DS**:
+* Homebrew-[aloituspakkaus](http://smealum.github.io/ninjhax2/starter.zip)
+* **Kohde-3DS:ää** vastaava 11.4.0-/11.5.0-version (molemmilla versioilla on sama FIRM-versio) `.firm`-tiedosto:
   + [`2.54-0_11.4_OLD.firm`](magnet:?xt=urn:btih:0dd89d42ad711f770da899af05ee162ede0d0070&dn=2.54-0_11.4_OLD.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
   + [`2.54-0_11.4_NEW.firm`](magnet:?xt=urn:btih:3b59dd43eec3edb133555f58d1180bfb196acbb4&dn=2.54-0_11.4_NEW.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 
@@ -41,28 +41,28 @@ Jos et käytä oikeaa kohde-3DS:n mukaista `.firm`-tiedostoa, konsolista tulee K
 Käytä [tallennuksenhallintaohjelmaa](https://github.com/J-D-K/JKSM/releases/latest) varmuuskopioidaksesi kaikki haluamasi tallennukset *kohde-3DS:llä* (se tullaan alustamaan!)
 {: .notice--warning}
 
-1. Copy `GodMode9.firm` (or `GodMode9.bin` for arm9loaderhax users) from the GodMode9 `.zip` to the `/luma/payloads` folder on **the source 3DS**'s SD card
-1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of **the source 3DS**'s SD card
-1. Copy the relevant `public.sav` from the `/dsiware/(8 Character ID)/` folder in the 3ds_dsiwarehax_installer `.zip` to the root of **the source 3DS**'s SD card
-  + **Fieldrunners USA Region**: `4b464445`
-  + **Fieldrunners EUR Region**: `4b464456`
-  + **Legends of Exidia USA Region**: `4b4c4545`
-  + **Legends of Exidia EUR Region**: `4b4c4556`
-  + **Legends of Exidia JPN Region**: `4b4c454a`
-  + **Guitar Rock Tour EUR Region**: `4b475256`
-  + **Guitar Rock Tour USA Region**: `4b475245`
-  + **The Legend of Zelda: Four Swords EUR Region**: `4b513956`   
-  + **The Legend of Zelda: Four Swords USA Region**: `4b513945`  
-1. Reinsert **the source 3DS**'s SD card
-1. Boot **the source 3DS** while holding (Start) to launch GodMode9
+1. Kopioi GodMode9-`.zip`-pakkauksesta `GodMode9.firm` (tai `GodMode9.bin` arm9loaderhax-käyttäjille) **lähde-3DS:n** SD-kortin `/luma/payloads/`-kansioon
+1. Kopioi GodMode9-`.zip`-pakkauksesta `gm9`-kansio **lähde-3DS**:n SD-kortin juureen
+1. Kopioi 3ds_dsiwarehax_installer-`.zip`-pakkauksen `/dsiware/(8-merkkinen ID)/`-kansiosta oikea `public.sav` **lähde-3DS**:n SD-kortin juureen
+  + **Fieldrunners, USA-alue**: `4b464445`
+  + **Fieldrunners, EUR-alue**: `4b464456`
+  + **Legends of Exidia, USA-alue**: `4b4c4545`
+  + **Legends of Exidia, EUR-alue**: `4b4c4556`
+  + **Legends of Exidia, JPN-alue**: `4b4c454a`
+  + **Guitar Rock Tour, EUR-alue**: `4b475256`
+  + **Guitar Rock Tour, USA-alue**: `4b475245`
+  + **The Legend of Zelda: Four Swords, EUR-alue**: `4b513956`   
+  + **The Legend of Zelda: Four Swords, USA-alue**: `4b513945`  
+1. Aseta SD-kortti takaisin **lähde-3DS**:ään
+1. Avaa GodMode9 pitämällä **lähde-3DS**:n (START)-painiketta pohjassa käynnistyksen aikana
 1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
 1. Valitse "More..."
 1. Valitse "Scripts..."
-1. Select "Backup SysNAND"
+1. Valitse "Backup SysNAND"
 1. Paina (A):ta vahvistaaksesi
   + Tämä proessi kestää jonkin aikaa
 1. Paina (A):ta jatkaaksesi
-1. Hold (R) and press (B) at the same time to eject **the source 3DS**'s SD card
+1. Pidä (R):ää pohjassa ja paina samalla (B):tä irrottaaksesi **lähde-3DS**:n SD-kortin
 1. Put **the source 3DS**'s SD card into your computer
 1. Aseta **kohde-3DS**:n SD-kortti tietokoneeseesi
 1. **Varmuuskopioi kummankin 3DS:n SD-korttien sisältö eri kansioihin tietokoneellasi (pidä silmällä, kumpi on kumpi)**
@@ -77,15 +77,15 @@ Käytä [tallennuksenhallintaohjelmaa](https://github.com/J-D-K/JKSM/releases/la
 1. Press (B) to get back to the main menu
 1. Navigate to `SYSNAND TWLN` -> `title` -> `00030004`
 1. Navigate to the folder for your game and region:
-  + **Fieldrunners USA Region**: `4b464445`
-  + **Fieldrunners EUR Region**: `4b464456`
-  + **Legends of Exidia USA Region**: `4b4c4545`
-  + **Legends of Exidia EUR Region**: `4b4c4556`
-  + **Legends of Exidia JPN Region**: `4b4c454a`
-  + **Guitar Rock Tour EUR Region**: `4b475256`
-  + **Guitar Rock Tour USA Region**: `4b475245`
-  + **The Legend of Zelda: Four Swords EUR Region**: `4b513956`   
-  + **The Legend of Zelda: Four Swords USA Region**: `4b513945`   
+  + **Fieldrunners, USA-alue**: `4b464445`
+  + **Fieldrunners, EUR-alue**: `4b464456`
+  + **Legends of Exidia, USA-alue**: `4b4c4545`
+  + **Legends of Exidia, EUR-alue**: `4b4c4556`
+  + **Legends of Exidia, JPN-alue**: `4b4c454a`
+  + **Guitar Rock Tour, EUR-alue**: `4b475256`
+  + **Guitar Rock Tour, USA-alue**: `4b475245`
+  + **The Legend of Zelda: Four Swords, EUR-alue**: `4b513956`   
+  + **The Legend of Zelda: Four Swords, USA-alue**: `4b513945`   
 1. Navigate to the `data` folder
 1. Press (X) on the existing `public.sav` to delete it
 1. Syötä annettu painikeyhdistelmä ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1)
