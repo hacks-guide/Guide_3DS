@@ -1,30 +1,31 @@
 ---
-title: "Installing boot9strap (Hardmod)"
+title: "boot9strapin asentaminen (laitteistomodaus)"
 ---
 
-An excellent guide to getting a hardmod can be found [here](https://gbatemp.net/threads/414498/). If you are on a New 3DS, read [this](https://github.com/Plailect/Guide/issues/681) and [this](https://github.com/Plailect/Guide/issues/1185) before hardmodding.
+Mainion oppaan konsolisi laitteistomodaamiseen löydät [täältä](https://gbatemp.net/threads/414498/)
+ (englanniksi). Jos käytät New 3DS:ää, lue [tämä](https://github.com/Plailect/Guide/issues/681) ja [tämä](https://github.com/Plailect/Guide/issues/1185) ennen laitteistomodausta.
 {: .notice--info}
 
-This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+Tämä menetelmä käyttää FIRM-osioiden salaamatonta muotoa (known-plaintext, selitetty [täällä](https://www.3dbrew.org/wiki/3DS_System_Flaws)) hyödyntävää haavoittuvuutta.
 {: .notice--info}
 
 **Käyttääksesi tällä sivulla olevia [magneetti](https://en.wikipedia.org/wiki/Magnet_URI_scheme)linkkejä tarvitset torrent-ohjelman, kuten [Deluge](http://dev.deluge-torrent.org/wiki/Download)n**
 {: .notice--success}
 
-This will work on New 3DS, New 2DS, Old 3DS, and Old 2DS on *all* versions that you have a corresponding `.firm` for.
+Tämä toimii *kaikilla* versioilla New 3DS:llä, New 2DS:llä, vanhalla 3DS:llä sekä vanhalla 2DS:llä, kun käytät konsoliasi vastaavaa `.firm`-tiedostoa.
 {: .notice--success}
 
 #### Tarpeet
 
-* Your NAND image extracted using your [hardmod](https://gbatemp.net/threads/414498/)
-* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
-* The latest version of [hardmod-b9s-installer](https://github.com/ihaveamac/hardmod-b9s-installer/releases/latest)
-  + Windows users can use the compiled `.exe`, while Mac and Linux users will need to have [Python 3](https://www.python.org/downloads/) installed to run the `.py`
+* [Laitteistomodauksesi](https://gbatemp.net/threads/414498/) avulla poimittu NAND-näköistiedosto
+* boot9strapin [viimeisin julkaisu](https://github.com/SciresM/boot9strap/releases/latest) *(tavallinen boot9strap; ei `devkit`- eikä `ntr`-tiedosto)*
+* Hardmod-b9s-installerin [viimeisin versio](https://github.com/ihaveamac/hardmod-b9s-installer/releases/latest)
+  + Windows-käyttäjät voivat käyttää käännettyä `.exe`-tiedostoa, Mac- ja Linux-käyttäjät taas tarvitsevat [Python 3](https://www.python.org/downloads/):n suorittaakseen `.py`-tiedoston
 * Luma3DS:n [viimeisin julkaisu](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z`-tiedosto)*
-* The Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
-* The `.firm` corresponding to your device and version:
+* Homebrew-[aloituspakkaus](http://smealum.github.io/ninjhax2/starter.zip)
+* Konsolisi mallin ja alueen mukainen `.firm`-tiedosto:
 
-| Version(s) | Kernel | Old 3DS or Old 2DS | New 3DS or New 2DS |
+| Versio(t) | Käyttöjärjestelmäydin| Vanha 3DS tai vanha 2DS | New 3DS tai New 2DS |
 |-|-|:-:|:-:|
 | 1.0.0 | 2.27-0 | [`2.27-0_1.0_OLD.firm`](magnet:?xt=urn:btih:5c86edc67a1827991567b3c326a4182b66647d07&dn=2.27-0_1.0_OLD.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce) | - |
 | 1.1.0 | 2.28-0 | [`2.28-0_1.1_OLD.firm`](magnet:?xt=urn:btih:7c7696ff18e7d83a638b9c80f83052f763fb0fa5&dn=2.28-0_1.1_OLD.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce) | - |
@@ -60,29 +61,29 @@ This will work on New 3DS, New 2DS, Old 3DS, and Old 2DS on *all* versions that 
 ##### Vaihe I – Valmistelut
 
 1. Kopioi Luma3DS-`.7z`-pakkauksesta `boot.firm` SD-korttisi juureen
-1. Copy _the contents of_ `starter.zip` to the root of your SD card
-1. Copy the hardmod-b9s-installer folder from the hardmod-b9s-installer `.zip` to your computer
-1. Copy your downloaded `.firm` to the hardmod-b9s-installer folder on your computer
-1. Rename your downloaded `.firm` in the hardmod-b9s-installer folder on your computer to `current.firm`
-1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the hardmod-b9s-installer folder on your computer
-1. Copy your NAND dump (from your hardmod) to the hardmod-b9s-installer folder on your computer and name it `NAND.bin`
+1. Kopioi `starter.zip`-pakkauksen _sisältö_ SD-korttisi juureen
+1. Kopioi hardmod-b9s-installer-`.zip`-pakkauksesta hardmod-b9s-installer-kansio tietokoneellesi
+1. Kopioi lataamasi `.firm`-tiedosto tietokoneesi hardmod-b9s-installer-kansioon
+1. Uudelleennimeä tietokoneesi hardmod-b9s-installer-kansiossa oleva `.firm` muotoon `current.firm`
+1. Kopioi boot9strap-`.zip`-pakkauksesta `boot9strap.firm` ja `boot9strap.firm.sha` tietokoneesi `hardmod-b9s-installer`-kansioon
+1. Kopioi laitteistomodauksesi avulla saatu NAND-kopio tietokoneesi `hardmod-b9s-installer`-kansioon ja uudelleennimeä se siellä muotoon `NAND.bin`
 
 ##### Vaihe II – Boot9strapin asentaminen
 
-1. Run hardmod-b9s-installer
-  + Windows Users: Run `install-b9s.exe`
-  + Mac and Linux Users: Run `install-b9s.py`
-1. Flash your outputted `NAND-patched.bin` to your device with your hardmod
+1. Suorita hardmod-b9s-installer
+  + Windows-käyttäjät: Avaa `install-b9s.exe`
+  + Mac- ja Linux-käyttäjät: Suorita `install-b9s.py`
+1. Asenna ohjelman luoma `NAND-patched.bin` konsoliisi laitteistomodauksesi avulla
 1. Käynnistä konsolisi uudelleen
 
 ##### Vaihe III – Luma3DS:n määrittäminen
 
-1. Your device should have booted into the Luma3DS configuration menu
+1. Konsolisi pitäisi uudelleenkäynnistyä suoraan Luma3DS:n määritysvalikkoon
   + Jos saat mustan ruudun, [seuraa tätä vianmääritysohjetta](troubleshooting#ts_sys_b9s)
 1. Käytä (A):ta ja ristiohjainta ottaaksesi seuraavat asetukset käyttöön:    
   + **"Show NAND or user string in System Settings"**
 1. Paina (START)-painiketta tallentaaksesi ja käynnistääksesi uudelleen
-  + Jos saat virheen, jatka vain seuraavalle sivulle
+  + Jos saat virheen, jatka vain seuraavaan osioon
 
 ___
 
