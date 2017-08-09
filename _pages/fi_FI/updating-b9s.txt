@@ -1,11 +1,11 @@
 ---
-title: "Updating B9S"
+title: "B9S:n päivittäminen"
 ---
 
-This page is for existing boot9strap users to update their installation of boot9strap to the latest version.
+Tämä sivu on boot9strap-käyttäjille, jotka haluavat päivittää asennuksensa viimeisimpään versioon.
 {: .notice--info}
 
-Note that the recent major release of Luma3DS is *not* compatible with boot9strap version 1.0. It *requires* you to update your boot9strap installation to version 1.2 by following the instructions on this page.
+Huomioi, että Luma3DS:n viimeisin pääjulkaisu *ei* ole yhteensopiva boot9strapin version 1.0 kanssa. Sen käyttäminen *vaatii*, että päivität boot9strap-asennuksesi versioon 1.2 seuraamalla tämän osion ohjeita.
 {: .notice--warning}
 
 {% capture notice-1 %}
@@ -17,7 +17,7 @@ On käynyt ilmi, että Nintendo jakaa CFW-käyttäjille porttikieltoja verkkotoi
 1. Mene kaverilistaan (naamakuvake HOME-valikon ylärivillä)
   + Jos saat virheilmoituksen etkä pääse kaverilistaan, asetus on jo pois käytöstä
 1. Mene kaverilistan asetuksiin, valitse "Friend Notification Settings" ja sitten "Show friends what you're playing"
-1. Disable the "Show friends what you're playing" option
+1. Ota "Show friends what you're playing" -asetus pois käytöstä
 1. Poistu kaverilistasta
 
 {% endcapture %}
@@ -28,64 +28,64 @@ On käynyt ilmi, että Nintendo jakaa CFW-käyttäjille porttikieltoja verkkotoi
 
 * Luma3DS:n [viimeisin julkaisu](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z`-tiedosto)*
 * SafeB9SInstallerin [viimeisin julkaisu](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
-* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
+* Boot9strapin [viimeisin julkaisu](https://github.com/SciresM/boot9strap/releases/latest) *(tavallinen boot9strap-tiedosto; ei `devkit`- eikä `ntr`-tiedosto)*
 * GodMode9:n [viimeisin julkaisu](https://github.com/d0k3/GodMode9/releases)
-* The Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
+* Homebrew-[aloituspakkaus](http://smealum.github.io/ninjhax2/starter.zip)
 * [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
 
 #### Ohjeet
 
 ##### Vaihe I – Valmistelut
 
-For all steps in this section, overwrite any existing files on your SD card.
+Korvaa mahdolliset olemassa olevat tiedostot SD-kortillasi kaikissa tämän vaiheen kohdissa.
 {: .notice--info}
 
 1. Sammuta konsolisi
 1. Aseta SD-korttisi tietokoneeseesi
-1. **Leave the old (v7.1) version of Luma3DS (`boot.firm`) as it is. You will update this later.**
+1. **Älä tee mitään Luma3DS:n (`boot.firm`) vanhalle versiolle (v7.1). Tulet päivittämään sen myöhemmin.**
 1. Kopioi `starter.zip`-pakkauksen _sisältö_ SD-korttisi juureen
 1. Luo `boot9strap`-niminen kansio SD-korttisi juureen
 1. Kopioi GodMode9-`.zip`-pakkauksesta `GodMode9.firm` SD-korttisi `/luma/payloads/`-kansioon
 1. Kopioi GodMode9-`.zip`-pakkauksesta `gm9`-kansio SD-korttisi juureen
-1. Copy `setup_ctrnand_luma3ds.gm9` to the `/gm9/scripts/` folder on your SD card
-1. Copy `SafeB9SInstaller.firm` from the SafeB9SInstaller `.zip` to the `/luma/payloads/` folder on your SD card
+1. Kopioi `setup_ctrnand_luma3ds.gm9` SD-korttisi `/gm9/scripts/`-kansioon
+1. Kopioi SafeB9SInstaller-`.zip`-pakkauksesta `SafeB9SInstaller.firm` SD-korttisi `/luma/payloads/`-kansioon
 1. Kopioi boot9strap-`.zip`-pakkauksesta `boot9strap.firm` ja `boot9strap.firm.sha` SD-korttisi `/boot9strap/`-kansioon
 1. Aseta SD-korttisi takaisin konsoliisi
 
 ##### Vaihe II – Boot9strapin asentaminen
 
 1. Avaa Luma3DS:n ketjulatausvalikko pitämällä (START)-painiketta pohjassa käynnistyksen aikana
-1. Launch SafeB9SInstaller by pressing (A)
+1. Avaa SafeB9SInstaller painamalla (A):ta
 1. Odota, kunnes kaikki turvatarkistukset on suoritettu
 1. Syötä kehotettaessa annettu painikeyhdistelmä asentaaksesi boot9strapin
 1. Kun toiminto on suoritettu, paina (A):ta käynnistääksesi konsolisi uudelleen.
 1. Sammuta konsolisi
-  + Note that you will receive the error `Unsupported launcher (argc = 0)` until you follow the rest of the instructions on this page
+  + Huomaa, että saat `Unsupported launcher (argc = 0)` -virheen, kunnes olet käynyt läpi loput tämän sivun ohjeista
 
-##### Section III - Updating Luma3DS
+##### Vaihe III – Luma3DS:n päivittäminen
 
 1. Aseta SD-korttisi tietokoneeseesi
-1. Delete the existing `boot.firm` from the root of your SD card
+1. Poista SD-korttisi juuresta jo olemassa oleva `boot.firm`-tiedosto
 1. Kopioi Luma3DS-`.7z`-pakkauksesta `boot.firm` SD-korttisi juureen
 1. Aseta SD-korttisi takaisin konsoliisi
 
-##### Section IV - Configuring Luma3DS
+##### Vaihe IV – Luma3DS:n määrittäminen
 
-1. Your device should have rebooted into the Luma3DS configuration menu
-  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_b9s)
-1. Use the (A) button and the D-Pad to turn on the following:    
+1. Konsolisi pitäisi uudelleenkäynnistyä suoraan Luma3DS:n määritysvalikkoon
+  + Jos saat mustan ruudun, [seuraa tätä vianmääritysohjetta](troubleshooting#ts_sys_b9s)
+1. Käytä (A):ta ja ristiohjainta ottaaksesi seuraavat asetukset käyttöön:    
   + **"Show NAND or user string in System Settings"**
 1. Paina (START)-painiketta tallentaaksesi ja käynnistääksesi uudelleen
 
-##### Section V - CTRNAND Luma3DS
+##### Vaihe V – Luma3DS:n asentaminen CTRNANDiin
 
-1. Launch GodMode9 by holding (Start) during boot
-1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
+1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
+1. Jos ohjelma kehottaa luomaan varmuuskopion tärkeistä tiedostoista (essential files), paina (A):ta tehdäksesi sen, ja kun varmuuskopio on valmis, paina (A):ta uudelleen jatkaaksesi
 1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
 1. Valitse "More..."
 1. Valitse "Scripts..."
 1. Valitse "setup_ctrnand_luma3ds"
-1. When prompted, press (A) to proceed
+1. Paina kehotettaessa (A):ta jatkaaksesi
 1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1) ja syötä annettu painikeyhdistelmä
 1. Paina (A):ta jatkaaksesi
 1. Paina (A):ta lukitaksesi kirjoitusoikeudet
@@ -93,8 +93,8 @@ For all steps in this section, overwrite any existing files on your SD card.
 
 ___
 
-Note that the `.bak` files in the `/boot9strap/` folder on your SD card are only needed in the event of a failed boot9strap install. Kun asennus on onnistunut, voit poistaa koko `boot9strap`-kansion sisältöineen.
+Huomaa, että SD-korttisi `/boot9strap/`-kansiossa olevat `.bak`-tiedostot ovat tarpeellisia vain, jos boot9strapin asentaminen epäonnistuu. Kun asennus on onnistunut, voit poistaa koko `boot9strap`-kansion sisältöineen.
 {: .notice--info}
 
-You can now press (L) + (Down) + (Select) while the system is booted to open the Rosalina menu integrated into Luma3DS. For a full list of Rosalina features, please see the [Luma3DS v8.0 Release](https://github.com/AuroraWright/Luma3DS/releases/tag/v8.0)
+Voit nyt käyttää (L) + (ALAS) + (SELECT) -painikeyhdistelmää, kun konsolisi on päällä avataksesi Luma3DS:ään integroidun Rosalina-valikon. Täyden luettelon Rosalinan ominaisuuksista löydät [Luma3DS v8.0 -julkaisusivulta](https://github.com/AuroraWright/Luma3DS/releases/tag/v8.0)
 {: .notice--info}
