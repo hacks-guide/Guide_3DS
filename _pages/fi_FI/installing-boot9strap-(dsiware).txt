@@ -3,36 +3,24 @@ title: "Boot9strapin asentaminen (DSiWare)"
 ---
 
 On kaksi eri menetelmää asentaa boot9strap käyttäen DSiWarea versiolla 11.5.0.
-{: .notice--info}
 
 Toinen näistä menetelmistä toimii vain neljän tietyn pelin kanssa, joita ei enää saa ostettua eShopista, toinen taas hiukan useamman eShopista vielä saatavan pelin kanssa.
-{: .notice--info}
 
 Kumpikin menetelmä vaatii kaksi konsolia. Yhdellä 3DS:llä (tai 2DS:llä) on oltava jonkinlainen mukautettu laiteohjelmisto (kuten boot9strap tai arm9loaderhax), ja siihen viitataan nimellä *lähde-3DS*. Toisen 3DS:n (tai 2DS:n) on oltava vakiolaiteohjelmistolla versiolla 11.5.0, ja siihen viitataan nimellä *kohde-3DS*.
-{: .notice--info}
-
-Kummankin laitteen TÄYTYY olla samalta alueelta.
-{: .notice--warning}
 
 Kummassakin menetelmässä oletetaan, että mukautetun laiteohjelmiston omaavalla 3DS:llä on joko boot9strap tai arm9loaderhax asennettuna tämän oppaan ohjeiden mukaan. Vaikka näiden menetelmien hyödyntäminen onkin mahdollista myös joillain muilla mukautetuilla laiteohjelmistoilla, ei niitä käsitellä tässä ohjeessa.
-{: .notice--info}
 
 Kumpikin menetelmä käyttää FIRM-osioiden salaamatonta muotoa (selitetty [täällä](https://www.3dbrew.org/wiki/3DS_System_Flaws)) hyödyntävää haavoittuvuutta sekä virhettä, joka sallii DSiWare-sovellusten lukea ja kirjoittaa mihin tahansa salattussa NANDissa.
-{: .notice--info}
 
-{% capture notice-4 %}
 Kumpikin menetelmä vaatii [siirtosovelluksen (System Transfer)](https://www.nintendo.fi/images/_downloads/_manual/_new_nintendo_3ds/KTR_MAN_SCN_Revision_May_2016_ONLINE_160614.pdf#page=95) käyttämistä, jotta tiedot voidaan siirtää lähde-3DS:ltä kohde-3DS:lle. Tiedonsiirto toimii *vain* seuraavissa järjestyksissä:    
   + New 3DS tai New 2DS → New 3DS tai New 2DS    
   + Vanha 3DS tai vanha 2DS → vanha 3DS tai vanha 2DS    
-  + Vanha 3DS tai vanha 2DS → New 3DS tai New 2DS    
-{% endcapture %}
+  + Vanha 3DS tai vanha 2DS → New 3DS tai New 2DS   
 
-<div class="notice--warning">{{ notice-4 | markdownify }}</div>
+Kummankin laitteen TÄYTYY olla samalta alueelta.
+{: .notice--warning} 
 
-Kummassakin menetelmässä lähde-3DS:n NNID jää jumiin kohde-3DS:lle, ellet tee siirtoa takaisin tai soita Nintendolle! (lisätietoja ohjeissa)
-{: .notice--danger}
-
-Tiedonsiirron voi tehdä siirtosovelluksella vain kerran viikossa yhtä NNID:tä kohden.
+In both of these methods, the source 3DS's NNID will be stuck on the target 3DS unless you either system transfer back or call Nintendo (details can be found in the instructions)! Tiedonsiirron voi tehdä siirtosovelluksella vain kerran viikossa yhtä NNID:tä kohden.
 {: .notice--danger}
 
 ___
@@ -40,7 +28,7 @@ ___
 {% capture notice-1 %}
 
 [Boot9strapin asentaminen (DSiWare-tallennusinjektio)](installing-boot9strap-(dsiware-save-injection))
-<br><br>
+
 Tämä menetelmä vaatii, että lähde-3DS:llä on laillisesti hankittuna jokin seuraavista peleistä:
     
     + "Fieldrunners"
@@ -57,9 +45,9 @@ Piratoidut versiot *eivät* toimi, ja kaikki nämä pelit on poistettu eShopista
 {% capture notice-1 %}
 
 [Boot9strapin asentaminen (DSiWare-peli-injektio)](installing-boot9strap-(dsiware-game-injection))
-<br><br>
+
 Tämä menetelmä vaatii, että lähde-3DS:llä on laillisesti hankittuna jokin peleistä, jotka ovat listattuna osiossa [boot9strapin asentaminen (injektoitavat DSiWare-pelit)](installing-boot9strap-(dsiware-game-injection-list)).
-<br><br>
+
 Piratoidut versiot *eivät* toimi.
 
 {% endcapture %}
