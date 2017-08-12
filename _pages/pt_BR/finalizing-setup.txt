@@ -4,12 +4,11 @@ title: "Finalizando a instalação"
 
 #### Visão geral das etapas
 
-{% capture notice-2 %}
 
 O arquivo `boot.firm` é o que é executado pelo boot9strap depois que ele acaba de carregar a NAND, e ele pode ser qualquer payload arm9 válido no formato FIRM. Este arquivo pode ser substituído a qualquer momento, embora o Luma3DS permita a inicialização de outros payloads arm9 no formato FIRM usando o chainloader do Luma3DS.
-<br><br>
+
 Neste caso, usamos o Luma3DS por [AuroraWright](https://github.com/AuroraWright/) para carregar uma SysNAND com patches diretamente, o que nos permite evitar a necessidade de qualquer tipo de EmuNAND, simplificando enormemente o uso de um 3DS hackeado, além de economizar espaço no cartão SD.
-<br><br>
+
 Durante este processo, também configuramos alguns programas como os seguintes:    
 
 +  **FBI** *(Instala jogos e aplicativos no formato CIA)*
@@ -17,10 +16,6 @@ Durante este processo, também configuramos alguns programas como os seguintes:
 +  **Luma3DS Updater** *(Atualiza sua instalação CFW facilmente)*
 +  **GodMode9** *(Ferramenta multiuso com funções de NAND e cartucho)*
 +  **Homebrew Launcher Loader** *(inicia o Homebrew Launcher como um aplicativo normal, graças à mágica do Rosalina)*
-
-{% endcapture %}
-
-<div class="notice--info">{{ notice-2 | markdownify }}</div>
 
 #### O que você precisa
 
@@ -134,8 +129,10 @@ Se, antes de seguir este guia, você já possuia uma instalação EmuNAND e gost
 ___
 
 {% capture notice-10 %}
-Você pode usar o Luma3DS Updater para atualizar o seu Luma3DS para a última versão abrindo-o e apertando (A).     
+Você pode usar o Luma3DS Updater para atualizar o seu Luma3DS para a última versão abrindo-o e apertando (A).
+
 Isso não é a mesma coisa que uma atualização do sistema; ele apenas faz o download e extrai os arquivos mais recentes do Luma3DS.
+
 Isso só atualizará os arquivos do Luma3DS no seu cartão SD. Se você inicializar o seu dispositivo sem um cartão SD, ele usará a versão que você colocou na CTRNAND.    
 {% endcapture %}
 
@@ -143,9 +140,13 @@ Isso só atualizará os arquivos do Luma3DS no seu cartão SD. Se você iniciali
 
 {% capture notice-6 %}   
 Você agora irá inicializar o CFW Luma3DS na SysNAND por padrão.    
+
 Agora você pode segurar (Select) durante a inicialização para abrir o menu de configuração do Luma3DS.    
+
 Agora você pode segurar (Start) durante a inicialização para abrir o menu do chainloader do Luma3DS (note que este menu só será mostrado se existir mais de um payload detectado).    
+
 Agora você pode segurar (Start) + (Select) + (X) durante a inicialização para criar cópias do ARM11 bootrom (`boot11.bin`), do ARM9 bootrom (`boot9.bin`) e do OTP único do seu dispositivo (`OTP.bin`) na pasta `/boot9strap/` no seu cartão SD (note que isso não terá nenhum tipo de aviso ou mensagem).    
+
 Agora você pode apertar (L) + (Baixo) + (Select) enquanto o sistema está ligado para abrir o menu Rosalina integrado ao Luma3DS. Para uma lista completa das funções de Rosalina, por favor veja o [Luma3DS v8.0 Release](https://github.com/AuroraWright/Luma3DS/releases/tag/v8.0)
 {% endcapture %}
 
@@ -156,7 +157,7 @@ Para usar [NTR CFW](https://github.com/44670/BootNTR/), instale [BootNTR Selecto
 
 {% capture notice-7 %}
 Remova quaisquer pastas e arquivos extras da raiz do seu cartão SD que *não* estejam na seguinte imagem. Se tiver, deixe a pasta `DCIM` pois ela contém todas as fotos tiradas com a câmera do 3DS:
-<br><br>
+
 ![]({{ base_path }}/images/screenshots/final-file-layout.png)
 {% endcapture %}
 
