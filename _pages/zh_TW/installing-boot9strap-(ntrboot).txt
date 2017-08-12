@@ -1,0 +1,68 @@
+---
+title: "Installing boot9strap (ntrboot)"
+---
+
+#### 必備項目
+
+* A magnet that triggers the sleep mode of your device (if using a folding style device)
+* Your ntrboot flashed flashcart
+* 最新版的 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* 最新版的 [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *（正常版的 boot9strap；非 `devkit` 或 `ntr` 檔案）*
+* 最新版的 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z` 檔案)*
+* 自製軟體[入門套件](http://smealum.github.io/ninjhax2/starter.zip)
+
+#### 操作說明
+
+##### 第一節 — 準備工作
+
+1. 關閉您的主機
+1. 將 SD 卡插入電腦中
+1. Copy `SafeB9SInstaller.firm` to the root of your SD card and rename it to `boot.firm`
+1. 複製`starter.zip`裡的 _所有內容_ 到 SD 卡的根目錄底下
+1. 在 SD 卡的根目錄底下建立一個新的資料夾 `boot9strap`
+1. 解壓 boot9strap `.zip` 的 `boot9strap.firm` 及 `boot9strap.firm.sha` 檔案至 SD 卡的 `/boot9strap/` 資料夾中
+
+    ![]({{ base_path }}/images/screenshots/boot9strap-ntrboot-file-layout.png)
+    {: .notice--info}
+
+1. 將 SD 卡插回主機中
+1. 啟動您的主機
+
+##### Section II - ntrboot
+
+1. Use the magnet to find the spot on your device where the sleep sensor is triggered
+  + This step is not needed on non-folding style devices (such as the old 2DS)
+1. 關閉您的主機
+1. Insert your flashcart into your device
+1. Power on your device, with the magnet in the sleep triggering position (or toggling the sleep switch on non-folding style devices), while holding (Start) + (Select) + (X)
+  + It may take a few attempts to get this to work because the positioning is awkward
+1. 如果一切成功的話，您將自動進入 SafeB9SInstaller
+
+##### 第三節 — 安裝 boot9strap
+
+1. 等待所有安全性檢查完畢
+1. 出現提示時，輸入提示的按鍵組合以安裝 boot9strap
+1. Once it has completed, force your device to power off by holding down the power button
+  + Your device will only boot to the SafeB9SInstaller screen until the next section is completed
+
+##### 第四節 — 設定 Luma3DS
+
+1. 將 SD 卡插入電腦中
+1. Delete `boot.firm` from the root of your SD card
+1. 解壓 Luma3DS `.7z` 內的 `boot.firm` 到 SD 卡的根目錄底下
+1. 將 SD 卡插回主機中
+1. 啟動您的主機
+1. 您的主機將會啟動至 Luma3DS 設定選單中
+  + 如果黑屏，[請參見此疑難排解](troubleshooting#ts_sys_b9s)
+1. 透過方向鍵及「A」以開啟下列選項：    
+  + **「Show NAND or user string in System Settings」**
+1. 按下「Start」鍵以存檔並重新啟動系統
+  + 如果你遇到了錯誤訊息，繼續到下一頁即可
+
+___
+
+繼續至 [完成安裝](finalizing-setup)
+{: .notice--primary}
+
+If you would like to restore your flashcart to its original state (to allow it to be used for its standard functions), you can now follow the last section of [Flashing ntrboot (Custom Firmware)](flashing-ntrboot-(custom-firmware))
+{: .notice--warning}
