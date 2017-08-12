@@ -1,0 +1,71 @@
+---
+title: "Flashing ntrboot (Custom Firmware)"
+---
+
+Before proceeding, ensure you have read all of the information on [ntrboot](ntrboot)
+{: .notice--info}
+
+Note that the flashcart will not be able to be used for its standard functions while the ntrboot exploit is installed on it. There are optional steps at the end of the ntrboot flashing instructions to remove it from your flashcart when you are done.
+{: .notice--warning}
+
+Note that in some rare circumstances, it may be possible for the flashing process to **brick** a counterfeit flashcart and render it permanently unusable. This is unlikely, but nevertheless only original listed flashcarts are supported. To reduce the chance of receiving a counterfeit card, it is recommended that you use a reputable site to buy your flashcart (such as [NDS Card](http://www.nds-card.com/))
+{: .notice--danger}
+
+#### Det du trenger
+
+* Your ntrboot compatible DS / DSi flashcart:
+  + Either the Acekard 2i or R4i Gold 3DS RTS
+* Two 3DS family devices 
+  + **The source 3DS**: the 3DS family device that is already running some kind of custom firmware (such as boot9strap or arm9loaderhax)
+  + **The target 3DS**: the device on stock firmware
+* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(`ntr` boot9strap; not the `devkit` file)*
+* The latest release of [ntrboot_flasher](https://github.com/kitling/ntrboot_flasher/releases/latest)
+
+#### Instruksjoner
+
+##### Seksjon I - Forarbeid
+
+1. Power off **the source 3DS**
+1. Insert **the source 3DS**'s SD card into your computer
+1. Create a folder named `ntrboot` on the root of your SD card
+1. Copy `boot9strap_ntr.firm` and `boot9strap_ntr.firm.sha` from the boot9strap ntr `.zip` to the `/ntrboot/` folder on your SD card
+1. Copy `ntrboot_flasher.firm` from the ntrboot_flasher `.zip` to the `/luma/payloads` folder on **the source 3DS**'s SD card
+1. Reinsert **the source 3DS**'s SD card back into **the source 3DS**
+1. Insert your ntrboot compatible DS / DSi flashcart into **the source 3DS**
+
+##### Section II - Flashing ntrboot
+
+1. Launch the Luma3DS chainloader by holding (Start) during boot on **the source 3DS**
+1. Select "ntrboot_flasher"
+1. Select "Dump Flash"
+1. Vent til prosessen har fullført
+1. Press (B) to return to the main menu
+1. Select "Inject Ntrboot"
+1. Press (Y) to proceed
+1. Press (R) for retail unit ntrboot
+1. Vent til prosessen har fullført
+1. Press (B) to return to the main menu
+1. Select "EXIT" to power off **the source 3DS**
+
+___
+
+Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-(ntrboot))
+{: .notice--primary}
+
+___
+
+##### Section III - Removing ntrboot
+
+This is an optional section that will allow you to restore your flashcart to its original state.
+{: .notice--info}
+
+Do not follow this section until you have already completed [Installing boot9strap (ntrboot)](installing-boot9strap-(ntrboot)) on **the target 3DS**.
+{: .notice--warning}
+
+1. Launch the Luma3DS chainloader by holding (Start) during boot on **the source 3DS**
+1. Select "ntrboot_flasher"
+1. Select "Restore Flash"
+1. Press (Y) to proceed
+1. Vent til prosessen har fullført
+1. Press (B) to return to the main menu
+1. Select "EXIT" to power off **the source 3DS**
