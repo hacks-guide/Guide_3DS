@@ -4,12 +4,11 @@ title: "Asennuksen viimeistely"
 
 #### Katsaus vaiheisiin
 
-{% capture notice-2 %}
 
 Latauduttuaan NANDilta boot9strap käynnistää `boot.firm`-tiedoston, joka voi olla mikä tahansa kelvollinen arm9-ohjelma FIRM-muodossa. Tämän tiedoston voi korvata milloin tahansa, joskin Luma3DS sallii muidenkin FIRM-muotoisten arm9-ohjelmien käynnistämisen ketjulataajan avulla.
-<br><br>
+
 Tässä tapauksessa käytetään [AuroraWright](https://github.com/AuroraWright/)in luomaa Luma3DS:ää paikatun SysNANDin käynnistämiseen suoraan, jolloin minkäänlaista EmuNANDia ei tarvita, mikä yksinkertaistaa hakkeroidun 3DS:n käyttöä sekä säästää tilaa SD-kortilta.
-<br><br>
+
 Tämän prosessin aikana myös asennetaan muun muassa seuraavat ohjelmat:    
 
 +  **FBI** *(asentaa CIA-muotoisia pelejä ja sovelluksia)*
@@ -17,10 +16,6 @@ Tämän prosessin aikana myös asennetaan muun muassa seuraavat ohjelmat:
 +  **Luma3DS Updater** *(päivittää CFW-asennuksesi helposti)*
 +  **GodMode9** *(monikäyttöinen työkalu, jolla voi tehdä NANDiin ja pelikorttiin liittyviä toimintoja)*
 +  **Homebrew Launcher Loader** *(käynnistää Homebrew Launcherin tavallisena sovelluksena, kiitos Rosalina-taian)*
-
-{% endcapture %}
-
-<div class="notice--info">{{ notice-2 | markdownify }}</div>
 
 #### Tarpeet
 
@@ -134,8 +129,10 @@ Jos sinulla oli ennen tämän oppaan aloittamista EmuNAND-kokoonpano, ja haluais
 ___
 
 {% capture notice-10 %}
-Voit nyt käyttää Luma3DS Updateria päivittääksesi Luma3DS:n viimeisimpään versioon. Avaa vain sovellus ja paina (A):ta.     
+Voit nyt käyttää Luma3DS Updateria päivittääksesi Luma3DS:n viimeisimpään versioon. Avaa vain sovellus ja paina (A):ta.
+
 Tämä ei ole sama asia kuin järjestelmäpäivitys; toiminto vain lataa ja purkaa uusimmat Luma3DS-tiedostot.
+
 Tämä päivittää vain SD-kortilla olevat Luma3DS-tiedostot. Jos käynnistät konsolisi ilman SD-korttia, käytetään CTRNANDiin asettamaasi versiota.    
 {% endcapture %}
 
@@ -143,9 +140,13 @@ Tämä päivittää vain SD-kortilla olevat Luma3DS-tiedostot. Jos käynnistät 
 
 {% capture notice-6 %}   
 Konsolisi käynistää nyt oletuksena Luma3DS-CFW-SysNANDin.    
+
 Voit nyt pitää (SELECT)-painiketta pohjassa käynnistyksen aikana avataksesi Luma3DS:n määritysvalikon.    
+
 Voit nyt pitää (START)-painiketta pohjassa käynnistyksen aikana avataksesi Luma3DS:n ketjulataajan (huomaa, että ketjulatausvalikko näytetään vain, jos useampi kuin yksi ohjelma havaitaan).    
+
 Voit nyt pitää pohjassa (START) + (SELECT) + (X) -painikeyhdistelmää konsolin käynnistyessä kopioidaksesi ARM11-bootromin (`boot11.bin`), ARM9-bootromin (`boot9.bin`) sekä konsolikohtaisen OTP-tiedostosi (`OTP.bin`) SD-korttisi `/boot9strap/`-kansioon (huomaa, että prosessissa ei näytetä minkäänlaisia viestejä tai kehotteita).    
+
 Voit nyt käyttää (L) + (ALAS) + (SELECT) -painikeyhdistelmää, kun konsolisi on päällä avataksesi Luma3DS:ään integroidun Rosalina-valikon. Täyden luettelon Rosalinan ominaisuuksista löydät [Luma3DS v8.0 -julkaisusivulta](https://github.com/AuroraWright/Luma3DS/releases/tag/v8.0)
 {% endcapture %}
 
@@ -156,7 +157,7 @@ Käyttääksesi [NTR-CFW](https://github.com/44670/BootNTR/):tä asenna [BootNTR
 
 {% capture notice-7 %}
 Poista SD-korttisi juuresta kaikki tiedostot ja kansiot, jotka *eivät* ole seuraavassa kuvassa. Jos kortilla on `DCIM`-kansio, jätä se sinne, sillä se sisältää kaikki 3DS:n kameralla otetut kuvat:
-<br><br>
+
 ![]({{ base_path }}/images/screenshots/final-file-layout.png)
 {% endcapture %}
 
