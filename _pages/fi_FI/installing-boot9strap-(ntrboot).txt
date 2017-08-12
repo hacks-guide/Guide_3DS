@@ -4,8 +4,8 @@ title: "Boot9strapin asentaminen (ntrboot)"
 
 #### Tarpeet
 
-* A magnet that triggers the sleep mode of your device (if using a folding style device)
-* Your ntrboot flashed flashcart
+* Magneetti, jolla voit asettaa konsolisi lepotilaan (jos käytössä on läpällinen malli)
+* Flash-korttisi, jolla on asennettuna ntrboot
 * SafeB9SInstallerin [viimeisin julkaisu](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * Boot9strapin [viimeisin julkaisu](https://github.com/SciresM/boot9strap/releases/latest) *(tavallinen boot9strap-tiedosto; ei `devkit`- eikä `ntr`-tiedosto)*
 * Luma3DS:n [viimeisin julkaisu](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z`-tiedosto)*
@@ -17,7 +17,7 @@ title: "Boot9strapin asentaminen (ntrboot)"
 
 1. Sammuta konsolisi
 1. Aseta SD-korttisi tietokoneeseesi
-1. Copy `SafeB9SInstaller.firm` to the root of your SD card and rename it to `boot.firm`
+1. Kopioi `SafeB9SInstaller.firm` SD-korttisi juureen ja uudelleennimeä se siellä muotoon `boot.firm`
 1. Kopioi `starter.zip`-pakkauksen _sisältö_ SD-korttisi juureen
 1. Luo `boot9strap`-niminen kansio SD-korttisi juureen
 1. Kopioi boot9strap-`.zip`-pakkauksesta `boot9strap.firm` ja `boot9strap.firm.sha` SD-korttisi `/boot9strap/`-kansioon
@@ -28,27 +28,27 @@ title: "Boot9strapin asentaminen (ntrboot)"
 1. Aseta SD-korttisi takaisin konsoliisi
 1. Käynnistä konsolisi
 
-##### Section II - ntrboot
+##### Vaihe II – Ntrboot
 
-1. Use the magnet to find the spot on your device where the sleep sensor is triggered
-  + This step is not needed on non-folding style devices (such as the old 2DS)
+1. Käytä magneettia löytääksesi konsolistasi kohdan, jossa lepotilan anturi aktivoituu
+  + Tämä ei ole tarpeen läpättömillä malleilla (vanha 2DS)
 1. Sammuta konsolisi
-1. Insert your flashcart into your device
-1. Power on your device, with the magnet in the sleep triggering position (or toggling the sleep switch on non-folding style devices), while holding (Start) + (Select) + (X)
-  + It may take a few attempts to get this to work because the positioning is awkward
+1. Aseta flash-korttisi konsoliisi
+1. Käynnistä konsolisi pitäen magneettia lepotilasensorin kohdalla (tai käyttämällä lepotilakytkintä läpättömillä malleilla) samalla, kun pidät pohjassa (START) + (SELECT) + (X) -painikeyhdistelmää
+  + Lepotilan aktivoiminen magneetilla saattaa vaatia useamman yrityksen, koska anturi on sijoitettu huonosti
 1. Jos haavoittuvuuden hyödyntäminen onnistui, SafeB9SInstallerin pitäisi avautua
 
 ##### Vaihe III – Boot9strapin asentaminen
 
 1. Odota, kunnes kaikki turvatarkistukset on suoritettu
 1. Syötä kehotettaessa annettu painikeyhdistelmä asentaaksesi boot9strapin
-1. Once it has completed, force your device to power off by holding down the power button
-  + Your device will only boot to the SafeB9SInstaller screen until the next section is completed
+1. Kun toiminto on suoritettu, pakota konsolisi sammuksiin pitämällä virtapainiketta pohjassa
+  + Konsolisi käynnistyy vain SafeB9SInstaller-ruutuun, kunnes olet käynyt läpi seuraavan vaiheen
 
 ##### Vaihe IV – Luma3DS:n määrittäminen
 
 1. Aseta SD-korttisi tietokoneeseesi
-1. Delete `boot.firm` from the root of your SD card
+1. Poista `boot.firm` SD-korttisi juuresta
 1. Kopioi Luma3DS-`.7z`-pakkauksesta `boot.firm` SD-korttisi juureen
 1. Aseta SD-korttisi takaisin konsoliisi
 1. Käynnistä konsolisi
@@ -66,18 +66,18 @@ Jatka osioon [Asennuksen viimeistely](finalizing-setup)
 
 ___
 
-##### Section V - Removing ntrboot
+##### Vaihe V – Ntrbootin poistaminen
 
-This is an optional section that will allow you to restore your flashcart to its original state (to allow it to be used for its standard functions).
+Tämä on vaihtoehtoinen vaihe, jonka avulla voit palauttaa flash-korttisi alkuperäiseen tilaansa (jotta sitä voi taas käyttää sen normaaleihin käyttötarkoituksiin).
 {: .notice--info}
 
-Do not follow this section until you have completed the rest of the instructions on this page.
+Älä käy läpi tätä vaihetta, ennen kuin olet käynyt läpi tämän osion muut vaiheet.
 {: .notice--warning}
 
-1. Launch the Luma3DS chainloader by holding (Start) during boot on **the source 3DS**
-1. Select "ntrboot_flasher"
-1. Select "Restore Flash"
-1. Press (Y) to proceed
+1. Avaa **lähde-3DS**:llä Luma3DS:n ketjulataaja pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
+1. Valitse "ntrboot_flasher"
+1. Valitse "Restore Flash"
+1. Paina (Y):tä jatkaaksesi
 1. Odota, kunnes toiminto on suoritettu
 1. Paina (B):tä palataksesi päävalikkoon
-1. Select "EXIT" to power off **the source 3DS**
+1. Valitse "EXIT" sammuttaaksesi **lähde-3DS**:n
