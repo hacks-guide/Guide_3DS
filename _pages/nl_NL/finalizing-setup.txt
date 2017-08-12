@@ -4,12 +4,11 @@ title: "Finalizing Setup"
 
 ### Overzicht van stappen
 
-{% capture notice-2 %}
 
 The file `boot.firm` is what is launched by boot9strap itself after it finishes loading off of NAND, and can be any valid arm9 payload in the FIRM format. This file can be replaced at any time, although Luma3DS allows for the launch of other arm9 payloads in the FIRM format using the Luma3DS chainloader.
-<br><br>
+
 In dit geval gebruiken we Luma3DS, gemaakt door [AuroraWright](https://github.com/AuroraWright/), om een gepatchde SysNAND op te starten, wat ervoor zorgt dat we geen EmuNAND nodig hebben, hierdoor is het makkelijker om een gehackte 3DS te gebruiken en bespaar je ruimte op je SD kaart.
-<br><br>
+
 Tijdens dit proces zullen we ook de volgende programma's installeren:    
 
 + **FBI** *(Installeert spellen en applicaties in CIA formaat)*
@@ -17,10 +16,6 @@ Tijdens dit proces zullen we ook de volgende programma's installeren:
 + **Luma3DS Updater** *(Hiermee update je jouw CFW gemakkelijk)*
 + **GodMode9** *(multifunctionele tool met NAND en cartridge functies)*
 +  **Homebrew Launcher Loader** *(launches the Homebrew Launcher as a regular application thanks to Rosalina magic)*
-
-{% endcapture %}
-
-<div class="notice--info">{{ notice-2 | markdownify }}</div>
 
 #### Benodigdheden
 
@@ -134,8 +129,10 @@ If, before following this guide, you already had an EmuNAND setup and would like
 ___
 
 {% capture notice-10 %}
-Je kan nu Luma3DS Updater gebruiken om Luma3DS te updaten naar de laatste versie door Luma3DS Updater te openen en op (A) te drukken.     
+Je kan nu Luma3DS Updater gebruiken om Luma3DS te updaten naar de laatste versie door Luma3DS Updater te openen en op (A) te drukken.
+
 Dit is niet hetzeldfe als een Systeemupdate; het downloadt alleen de laatste versie van de Luma3DS bestanden.
+
 Dit zal alleen de Luma3DS bestanden op je SD kaart updaten. Als je jouw 3DS opstart zonder SD kaart zal het de versie gebruiken die je in de CTRNAND geplaatst hebt.    
 {% endcapture %}
 
@@ -143,9 +140,13 @@ Dit zal alleen de Luma3DS bestanden op je SD kaart updaten. Als je jouw 3DS opst
 
 {% capture notice-6 %}   
 Je zal nu standaard Luma3DS CFW SysNAND opstarten.    
+
 Je kan nu (Select) ingedrukt houden bij het opstarten om in het Luma3DS instellingenmenu te komen.    
+
 You can now hold (Start) on boot to launch the Luma3DS chainloader menu (note that the Luma3DS chainloader menu is only displayed if there is more than one payload detected).    
+
 You can now hold (Start) + (Select) + (X) on boot to dump the ARM11 bootrom (`boot11.bin`), the ARM9 bootrom (`boot9.bin`), and your console unique OTP (`OTP.bin`) to the `/boot9strap/` folder on your SD card (note that this will not have any kind of prompt or message).    
+
 You can now press (L) + (Down) + (Select) while the system is booted to open the Rosalina menu integrated into Luma3DS. For a full list of Rosalina features, please see the [Luma3DS v8.0 Release](https://github.com/AuroraWright/Luma3DS/releases/tag/v8.0)
 {% endcapture %}
 
@@ -156,7 +157,7 @@ Om [NTR CFW](https://github.com/44670/BootNTR/) te gebruiken, moet je [BootNTR S
 
 {% capture notice-7 %}
 Remove any extra files and folders from the root of your SD card that are *not* in the following image. If you have it, leave the `DCIM` folder as this contains any pictures taken with the 3DS camera:
-<br><br>
+
 ![]({{ base_path }}/images/screenshots/final-file-layout.png)
 {% endcapture %}
 
