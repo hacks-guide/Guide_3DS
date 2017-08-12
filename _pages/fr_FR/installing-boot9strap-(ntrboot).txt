@@ -1,0 +1,68 @@
+---
+title: "Installing boot9strap (ntrboot)"
+---
+
+#### Ce dont vous aurez besoin
+
+* A magnet that triggers the sleep mode of your device (if using a folding style device)
+* Your ntrboot flashed flashcart
+* La dernière version de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* La dernière version de [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(boot9strap standard, pas le fichier `devkit` et ni le fichier `ntr`)*
+* La dernière version de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(le fichier `.7z`)*
+* Le Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
+
+#### Instructions
+
+##### Section I - Préparation
+
+1. Éteignez votre 3DS
+1. Insérez votre carte SD dans votre ordinateur
+1. Copy `SafeB9SInstaller.firm` to the root of your SD card and rename it to `boot.firm`
+1. Copier _le contenu de_ `starter.zip` vers la racine de votre carte SD
+1. Créez un dossier à la racine de votre carte SD nommé `boot9strap`
+1. Copiez `boot9strap.firm` et `boot9strap.firm.sha` depuis le fichier ".zip" de boot9strap vers le dossier `/boot9strap/` sur votre carte SD
+
+    ![]({{ base_path }}/images/screenshots/boot9strap-ntrboot-file-layout.png)
+    {: .notice--info}
+
+1. Réinsérez votre carte SD dans votre 3DS
+1. Allumez à présent votre 3DS
+
+##### Section II - ntrboot
+
+1. Use the magnet to find the spot on your device where the sleep sensor is triggered
+  + This step is not needed on non-folding style devices (such as the old 2DS)
+1. Éteignez votre 3DS
+1. Insert your flashcart into your device
+1. Power on your device, with the magnet in the sleep triggering position (or toggling the sleep switch on non-folding style devices), while holding (Start) + (Select) + (X)
+  + It may take a few attempts to get this to work because the positioning is awkward
+1. Si l'exploit a réussit, vous devriez avoir démarré dans SafeB9SInstaller
+
+##### Section III - Installation de boot9strap
+
+1. Attendez que tous les tests de sécurité soient finis
+1. Quand cela est demandé, appuyez sur la combinaison de boutons donnée pour installer boot9strap
+1. Once it has completed, force your device to power off by holding down the power button
+  + Your device will only boot to the SafeB9SInstaller screen until the next section is completed
+
+##### Section IV - Configuration de Luma3DS
+
+1. Insérez votre carte SD dans votre ordinateur
+1. Delete `boot.firm` from the root of your SD card
+1. Copiez `boot.firm` de Luma3DS `.7z` dans la racine de votre carte SD
+1. Réinsérez votre carte SD dans votre 3DS
+1. Allumez à présent votre 3DS
+1. Votre console va démarrer dans la configuration de Luma3DS
+  + Si vous obtenez un écran noir, [suivez ce guide de problèmes et dépannage](troubleshooting#ts_sys_b9s)
+1. Utilisez le bouton (A) et la croix directionnelle pour activer les éléments suivants:    
+  + **"Show NAND or user string in System Settings"**
+1. Appuyez sur (Start) pour enregistrer les modifications et redémarrer
+  + Si vous obtenez une erreur, continuez à la prochaine page
+
+___
+
+Continuer vers [Finalisation de l'installation](finalizing-setup)
+{: .notice--primary}
+
+If you would like to restore your flashcart to its original state (to allow it to be used for its standard functions), you can now follow the last section of [Flashing ntrboot (Custom Firmware)](flashing-ntrboot-(custom-firmware))
+{: .notice--warning}
