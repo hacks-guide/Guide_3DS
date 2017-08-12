@@ -1,25 +1,25 @@
 ---
-title: "Flashing ntrboot (Custom Firmware)"
+title: "צריבת ntrboot (פריצה)"
 ---
 
-Before proceeding, ensure you have read all of the information on [ntrboot](ntrboot)
+לפני שאתם ממשיכים, שימו לב שקראתם את כל המידע ב [ntrboot](ntrboot)
 {: .notice--info}
 
-Note that the flashcart will not be able to be used for its standard functions while the ntrboot exploit is installed on it. There are optional steps at the end of the ntrboot flashing instructions to remove it from your flashcart when you are done.
+שימו לב שכרטיס הפריצה לא יעבוד למטרות הרגילות שלו בזמן שפירצת ntrboot מותקנת עליו. יש שלבים אופטימלים בסוף הוראות צריבת ntrboot כדי למחוק אותו מכרטיס הפריצה אחרי שסיימתם.
 {: .notice--warning}
 
-Note that in some rare circumstances, it may be possible for the flashing process to **brick** a counterfeit flashcart and render it permanently unusable. This is unlikely, but nevertheless only original listed flashcarts are supported. To reduce the chance of receiving a counterfeit card, it is recommended that you use a reputable site to buy your flashcart (such as [NDS Card](http://www.nds-card.com/))
+שימו לב שבמקרים נדירים, יתכן שתהליך הצריבה **ישבור** כרטיס פריצה מזוייף ויגרום לו לא לעבוד. זה לא סביר שייקרה, אבל בכל זאת רק כרטיסי פריצה מקוריים שמפורטים נתמכים. כדי להוריד את הסיכויים של להשיג כרטיס פריצה מזוייף, מומלץ להשתמש באתר אמין כדי לקנות את הכרטיס (כמו [NDS Card](http://www.nds-card.com/))
 {: .notice--danger}
 
 #### מה שאתם צריכים
 
-* Your ntrboot compatible DS / DSi flashcart:
-  + Either the Acekard 2i or R4i Gold 3DS RTS
-* Two 3DS family devices 
-  + **The source 3DS**: the 3DS family device that is already running some kind of custom firmware (such as boot9strap or arm9loaderhax)
-  + **The target 3DS**: the device on stock firmware
-* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(`ntr` boot9strap; not the `devkit` file)*
-* The latest release of [ntrboot_flasher](https://github.com/kitling/ntrboot_flasher/releases/latest)
+* כרטיס הפריצה של DS \ DSi שלכם:
+  + או ה Acekard 2i או ה R4i Gold 3DS RTS
++ שתי קונסולות ממשפחת ה3DS 
+  + **3DS המקור**: הקונסולה ממשפחת ה3DS שכבר מריצה סוג של פריצה (כמו boot9strap או arm9loaderhax)
+  + **3DS היעד**: הקונסולה על הקושחה המקורית
+* הגרסא העדכנית של [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *( boot9strap של `ntr`; לא קובץ ה `devkit`)*
+* הגרסא העדכנית של [ntrboot_flasher](https://github.com/kitling/ntrboot_flasher/releases/latest)
 
 #### הוראות
 
@@ -27,45 +27,45 @@ Note that in some rare circumstances, it may be possible for the flashing proces
 
 1. תכבו את **קונסולת המקור**
 1. שימו את כרטיס הSD של **קונסולת המקור** במחשב שלכם
-1. Create a folder named `ntrboot` on the root of your SD card
-1. Copy `boot9strap_ntr.firm` and `boot9strap_ntr.firm.sha` from the boot9strap ntr `.zip` to the `/ntrboot/` folder on your SD card
-1. Copy `ntrboot_flasher.firm` from the ntrboot_flasher `.zip` to the `/luma/payloads` folder on **the source 3DS**'s SD card
-1. Reinsert **the source 3DS**'s SD card back into **the source 3DS**
-1. Insert your ntrboot compatible DS / DSi flashcart into **the source 3DS**
+1. תצרו ב-SD שלכם תיקייה חדשה בשם `ntrboot`
+1. תעתיקו את`boot9strap_ntr.firm` ואת `boot9strap_ntr.firm.sha` מה `.zip` של boot9strap NTR אל תיקיית `/ntrboot/`על כרטיס הSD שלכם
+1. תעתיקו את `ntrboot_flasher.firm` מה `.zip` של ntrboot_flasher אל תיקיית `/luma/payloads` על כרטיס הSD של **3DS המקור**
+1. תכניסו מחדש את כרטיס הSD של **3DS המקור** אל **3DS המקור**
+1. תכניסו את כרטיס הפריצה של DS \ DSi שתואם ntrboot אל **3DS המקור**
 
-##### Section II - Flashing ntrboot
+##### חלק II - צריבת ntrboot
 
-1. Launch the Luma3DS chainloader by holding (Start) during boot on **the source 3DS**
-1. Select "ntrboot_flasher"
-1. Select "Dump Flash"
+1. תפעילו את תפריט הטעינה של Luma3DS על ידי זה שאתם מחזיקים (Start) בזמן הפעלת **3DS המקור**
+1. תבחרו ב "ntrboot_flasher"
+1. תבחרו ב "Dump Flash"
 1. תמתינו עד שהתהליך יושלם
 1. תלחצו (B) כדי לחזור לתפריט הראשי
-1. Select "Inject Ntrboot"
-1. Press (Y) to proceed
-1. Press (R) for retail unit ntrboot
+1. תבחרו ב "Inject Ntrboot"
+1. תלחצו (Y) כדי להמשיך
+1. תלחצו (R) בשביל ntrboot קמעוני
 1. תמתינו עד שהתהליך יושלם
 1. תלחצו (B) כדי לחזור לתפריט הראשי
-1. Select "EXIT" to power off **the source 3DS**
+1. תבחרו "EXIT" כדי לכבות את **3DS המקור**
 
 ___
 
-Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-(ntrboot))
+תמשיכו ל [התקנת boot9strap (ntrboot)](installing-boot9strap-(ntrboot))
 {: .notice--primary}
 
 ___
 
-##### Section III - Removing ntrboot
+##### חלק III - מחיקת ntrboot
 
-This is an optional section that will allow you to restore your flashcart to its original state.
+זהו חלק אופטימלי שיחזיר את כרטיס הפריצה שלכם למצבו המקורי.
 {: .notice--info}
 
-Do not follow this section until you have already completed [Installing boot9strap (ntrboot)](installing-boot9strap-(ntrboot)) on **the target 3DS**.
+אל תעקבו אחרי זה לפני שסיימתם את [התקנת boot9strap (ntrboot)](installing-boot9strap-(ntrboot)) על **3DS היעד**.
 {: .notice--warning}
 
-1. Launch the Luma3DS chainloader by holding (Start) during boot on **the source 3DS**
-1. Select "ntrboot_flasher"
-1. Select "Restore Flash"
-1. Press (Y) to proceed
+1. תפעילו את תפריט הטעינה של Luma3DS על ידי זה שאתם מחזיקים (Start) בזמן הפעלת **3DS המקור**
+1. תבחרו ב "ntrboot_flasher"
+1. תבחרו ב "Restore Flash"
+1. תלחצו (Y) כדי להמשיך
 1. תמתינו עד שהתהליך יושלם
 1. תלחצו (B) כדי לחזור לתפריט הראשי
-1. Select "EXIT" to power off **the source 3DS**
+1. תבחרו "EXIT" כדי לכבות את **3DS המקור**
