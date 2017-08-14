@@ -26,6 +26,7 @@ Durante este proceso, también instalaremos programas como los siguientes:
 * La última versión de [FBI](https://github.com/Steveice10/FBI/releases/latest) *(los archivos `.cia` y `.3dsx`)*
 * La última versión (fork) de [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(el archivo `.cia`)*
 * [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
+* [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
 
 #### Instrucciones
 
@@ -48,6 +49,7 @@ Durante este proceso, también instalaremos programas como los siguientes:
 1. Copia el archivo `GodMode9.firm` desde el `.zip` de GodMode9 a la carpeta `/luma/payloads/` en tu tarjeta SD
 1. Copia la carpeta `gm9`contenida en el `.zip`de GodMode9 al directorio raíz de tu tarjeta SD
 1. Copia `setup_ctrnand_luma3ds.gm9` a la carpeta `/gm9/scripts/` en tu tarjeta SD
+1. Copy `cleanup_sd_card.gm9` to the `/gm9/scripts/` folder on your SD card
 
     ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
     {: .notice--info}
@@ -123,7 +125,16 @@ Si, antes de seguir esta guía, ya tenías una configuración EmuNAND y deseas m
   + Esta copia de seguridad puede salvarte de un brick si algo va mal en el futuro
 1. Elimina el archivo `<númerodeserie>_nandmin_###.bin` de la carpeta `/gm9/out/` de tu tarjeta SD después de haberlo copiado
 1. Vuelve a insertar tu tarjeta SD en tu consola
-1. Presiona (Start) para guardar y reiniciar
+
+##### Section VIII - Cleanup SD Card
+
+1. Presiona el botón (Home) para abrir el menú de acción
+1. Selecciona "Mas..."
+1. Selecciona "Scripts..."
+1. Select "cleanup_sd_card"
+1. Presiona (A) para continuar cuando se te pida
+1. Presiona (A) para continuar
+1. Press (Start) to reboot
 
 ___
 
@@ -153,14 +164,6 @@ Ahora puedes presionar (L) + (Abajo) + (Select) al encender la consola para abri
 
 Para usar [NTR CFW](https://github.com/44670/BootNTR/), instala [BootNTR Selector](https://gbatemp.net/threads/432911/).
 {: .notice--info}
-
-{% capture notice-7 %}
-Elimina cualquier archivo y carpeta extra de la raíz de tu tarjeta SD que *no* esté en la siguiente imagen. Si la tienes, deja la carpeta `DCIM` ya que esta contiene las fotos que hayas tomado con la cámara de la 3DS:
-
-![]({{ base_path }}/images/screenshots/final-file-layout.png)
-{% endcapture %}
-
-<div class="notice--info">{{ notice-7 | markdownify }}</div>
 
 Para obtener información sobre cómo cambiar la consola a otra región, revisa la página [Cambiar de Región](region-changing).
 {: .notice--success}
