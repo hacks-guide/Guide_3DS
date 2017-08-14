@@ -26,6 +26,7 @@ Pe parcursul acestui proces, vom instala și programe ca următoarele:
 * Cea mai nouă versiune de [FBI](https://github.com/Steveice10/FBI/releases/) *(fișierele `.3dsx` și `.cia`)*
 * Ultima versiune de [Luma3DS Updater](https://github.com/Hamcha/lumaupdate/releases/latest) *(fișierul `.cia`)*
 * [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
+* [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
 
 #### Instrucțiuni
 
@@ -48,6 +49,7 @@ Pe parcursul acestui proces, vom instala și programe ca următoarele:
 1. Copiați `GodMode9.firm` din arhiva `.zip` GodMode9 în folderul `/luma/payloads/` de pe cardul SD
 1. Copiați folderul `gm9` din arhiva `.zip` GodMode9 în rădăcina cardului SD
 1. Copiați `setup_ctrnand_luma3ds.gm9` în folderul `/gm9/scripts/` de pe cardul SD
+1. Copy `cleanup_sd_card.gm9` to the `/gm9/scripts/` folder on your SD card
 
     ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
     {: .notice--info}
@@ -123,7 +125,16 @@ Dacă, înainte să urmăriți acest ghid, aveați deja o configurare cu EmuNAND
   + Această copie de rezervă vă va salva de un brick în caz că ceva nu va merge bine în viitor
 1. Ștergeți `<serialnumber>_nandmin_###.bin` din folderul `/gm9out/` de pe cardul SD după ce l-ați copiat
 1. Reintroduceți cardul SD în dispozitivul dumneavoastră
-1. Apăsați (Start) pentru a salva și reporni
+
+##### Section VIII - Cleanup SD Card
+
+1. Apăsați (Home) pentru a arăta meniul de acțiuni
+1. Selectați "More..."
+1. Selectați "Scripts..."
+1. Select "cleanup_sd_card"
+1. Când vi se solicită, apăsaţi (A) pentru a continua
+1. Apăsați (A) pentru a continua
+1. Press (Start) to reboot
 
 ___
 
@@ -153,14 +164,6 @@ Acum puteți apăsa (L) + (Jos) + (Select) în timp ce sistemul pornește pentru
 
 Pentru a folosi [NTR CFW](https://github.com/44670/BootNTR/), instalați [BootNTR Selector](https://gbatemp.net/threads/432911/).
 {: .notice--info}
-
-{% capture notice-7 %}
-Puteți șterge orice fișiere și foldere suplimentare din rădăcina cardului SD care *nu* sunt în următoarea imagine. Dacă îl aveti, lăsați folderul `DCIM` pentru că acesta conține toate pozele făcute cu camera de pe 3DS:
-
-![]({{ base_path }}/images/screenshots/final-file-layout.png)
-{% endcapture %}
-
-<div class="notice--info">{{ notice-7 | markdownify }}</div>
 
 Pentru informații despre cum să schimbați regiunea dispozitivului, vedeți pagina [Schimb de regiune](region-changing).
 {: .notice--success}
