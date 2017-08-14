@@ -26,6 +26,7 @@ Tämän prosessin aikana myös asennetaan muun muassa seuraavat ohjelmat:
 * FBI:n [viimeisin julkaisu](https://github.com/Steveice10/FBI/releases/latest) *(`.cia`- ja `.3dsx`-tiedostot)*
 * Luma3DS Updaterin [viimeisin haara](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(`.cia`-tiedosto)*
 * [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
+* [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
 
 #### Ohjeet
 
@@ -48,6 +49,7 @@ Tämän prosessin aikana myös asennetaan muun muassa seuraavat ohjelmat:
 1. Kopioi GodMode9-`.zip`-pakkauksesta `GodMode9.firm` SD-korttisi `/luma/payloads/`-kansioon
 1. Kopioi GodMode9-`.zip`-pakkauksesta `gm9`-kansio SD-korttisi juureen
 1. Kopioi `setup_ctrnand_luma3ds.gm9` SD-korttisi `/gm9/scripts/`-kansioon
+1. Copy `cleanup_sd_card.gm9` to the `/gm9/scripts/` folder on your SD card
 
     ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
     {: .notice--info}
@@ -123,7 +125,16 @@ Jos sinulla oli ennen tämän oppaan aloittamista EmuNAND-kokoonpano, ja haluais
   + Tämä varmuuskopio pelastaa sinut konsolin vioittumiselta, jos jokin menee pieleen tulevaisuudessa
 1. Poista SD-korttisi `/gm9/out/`-kansiosta `<sarjanumero>_nandmin_###.bin` kopioituasi sen
 1. Aseta SD-korttisi takaisin konsoliisi
-1. Paina (START)-painiketta tallentaaksesi ja käynnistääksesi uudelleen
+
+##### Section VIII - Cleanup SD Card
+
+1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
+1. Valitse "More..."
+1. Valitse "Scripts..."
+1. Select "cleanup_sd_card"
+1. Paina kehotettaessa (A):ta jatkaaksesi
+1. Paina (A):ta jatkaaksesi
+1. Press (Start) to reboot
 
 ___
 
@@ -153,14 +164,6 @@ Voit nyt käyttää (L) + (ALAS) + (SELECT) -painikeyhdistelmää, kun konsolisi
 
 Käyttääksesi [NTR-CFW](https://github.com/44670/BootNTR/):tä asenna [BootNTR Selector](https://gbatemp.net/threads/432911/).
 {: .notice--info}
-
-{% capture notice-7 %}
-Poista SD-korttisi juuresta kaikki tiedostot ja kansiot, jotka *eivät* ole seuraavassa kuvassa. Jos kortilla on `DCIM`-kansio, jätä se sinne, sillä se sisältää kaikki 3DS:n kameralla otetut kuvat:
-
-![]({{ base_path }}/images/screenshots/final-file-layout.png)
-{% endcapture %}
-
-<div class="notice--info">{{ notice-7 | markdownify }}</div>
 
 Tietoja konsolisi alueen vaihtamisesta toiseen saat osiosta [Alueen vaihtaminen](region-changing).
 {: .notice--success}
