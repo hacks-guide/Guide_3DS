@@ -26,6 +26,7 @@ Podczas tego procesu zainstalujemy również takie programy jak:
 * The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) *(the `.cia` and `.3dsx` files)*
 * The latest fork of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(the `.cia` file)*
 * [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
+* [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
 
 #### Instrukcje
 
@@ -48,6 +49,7 @@ Podczas tego procesu zainstalujemy również takie programy jak:
 1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
 1. Copy `setup_ctrnand_luma3ds.gm9` to the `/gm9/scripts/` folder on your SD card
+1. Copy `cleanup_sd_card.gm9` to the `/gm9/scripts/` folder on your SD card
 
     ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
     {: .notice--info}
@@ -123,7 +125,16 @@ If, before following this guide, you already had an EmuNAND setup and would like
   + Ta kopia uratuje Cie przed brick'iem jeśli cokolwiek pójdzie nie tak w przyszłości
 1. Delete `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. Reinsert your SD card into your device
-1. Naciśnij (Start) aby zapisać zmiany i uruchomić konsolę ponownie
+
+##### Section VIII - Cleanup SD Card
+
+1. Press (Home) to bring up the action menu
+1. Select "More..."
+1. Select "Scripts..."
+1. Select "cleanup_sd_card"
+1. When prompted, press (A) to proceed
+1. Naciśnij (A), aby kontynuować
+1. Press (Start) to reboot
 
 ___
 
@@ -153,14 +164,6 @@ You can now press (L) + (Down) + (Select) while the system is booted to open the
 
 To use [NTR CFW](https://github.com/44670/BootNTR/), install [BootNTR Selector](https://gbatemp.net/threads/432911/).
 {: .notice--info}
-
-{% capture notice-7 %}
-Remove any extra files and folders from the root of your SD card that are *not* in the following image. If you have it, leave the `DCIM` folder as this contains any pictures taken with the 3DS camera:
-
-![]({{ base_path }}/images/screenshots/final-file-layout.png)
-{% endcapture %}
-
-<div class="notice--info">{{ notice-7 | markdownify }}</div>
 
 Aby uzyskać informacje na ten temat zmiany regionu twojej konsoli, odwiedź stronę [Zmiana regionu](region-changing).
 {: .notice--success}
