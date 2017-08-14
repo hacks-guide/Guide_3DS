@@ -26,6 +26,7 @@ title: "Завершение установки"
 * Свежая версия [FBI](https://github.com/Steveice10/FBI/releases/latest) *(`.cia-файл` и `.3dsx-файл`)*
 * Свежая версия [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(`.cia-файл`)*
 * [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
+* [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
 
 #### Инструкция
 
@@ -48,6 +49,7 @@ title: "Завершение установки"
 1. Скопируйте `GodMode9.firm` из `.zip-архива` GodMode9 в папку `/luma/payloads/` на SD-карте
 1. Скопируйте папку `gm9` из `.zip-архива` `GodMode9` в корень SD-карты
 1. Скопируйте `setup_ctrnand_luma3ds.gm9` в папку `/gm9/scripts/` на SD-карте
+1. Copy `cleanup_sd_card.gm9` to the `/gm9/scripts/` folder on your SD card
 
     ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
     {: .notice--info}
@@ -123,7 +125,16 @@ title: "Завершение установки"
   + Эти бэкапы позволят восстановить консоль, если впоследствии что-то пойдёт не так
 1. После копирования удалите `<serialnumber>_nandmin_###.bin` из папки `/gm9/out/` на SD-карте
 1. Вставьте SD-карту обратно в консоль
-1. Нажмите (Start), чтобы сохранить настройки и перезагрузиться
+
+##### Section VIII - Cleanup SD Card
+
+1. Нажмите кнопку (Home) для вызова меню
+1. Выберите "More..."
+1. Выберите "Scripts..."
+1. Select "cleanup_sd_card"
+1. При появлении запроса, нажмите (A) для продолжения
+1. Нажмите (A), чтобы продолжить
+1. Press (Start) to reboot
 
 ___
 
@@ -153,14 +164,6 @@ ___
 
 Для использования [NTR CFW](https://github.com/44670/BootNTR/), установите [BootNTR Selector](https://gbatemp.net/threads/432911/).
 {: .notice--info}
-
-{% capture notice-7 %}
-Удалите любые лишние файлы и папки из корня вашей SD-карты, которых *нет* на следующем изображении. Если у вас есть папка `DCIM`, оставьте ее. Она содержит фотографии, сделанные камерой 3DS:
-
-![]({{ base_path }}/images/screenshots/final-file-layout.png)
-{% endcapture %}
-
-<div class="notice--info">{{ notice-7 | markdownify }}</div>
 
 Чтобы узнать, как сменить регион своей консоли, обратитесь к разделу [Смена региона](region-changing).
 {: .notice--success}
