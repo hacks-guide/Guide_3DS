@@ -26,6 +26,7 @@ title: "完成安裝"
 * 最新版的 [FBI 管理器](https://github.com/Steveice10/FBI/releases/latest) *(`.cia` 及 `.3dsx` 檔案)*
 * 最新修改版的 [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(`.cia` 檔案)*
 * [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
+* [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
 
 #### 操作說明
 
@@ -48,6 +49,7 @@ title: "完成安裝"
 1. 從 GodMode9 `.zip` 中解壓 `GodMode9.firm` 到 SD 卡的 `/luma/payloads/` 資料夾中
 1. 解壓 GodMode9 `.zip` 中的 `gm9` 資料夾到 SD 卡的根目錄底下
 1. 複製 `setup_ctrnand_luma3ds.gm9` 到 SD 卡中的 `/gm9/scripts/` 資料夾
+1. Copy `cleanup_sd_card.gm9` to the `/gm9/scripts/` folder on your SD card
 
     ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
     {: .notice--info}
@@ -123,7 +125,16 @@ title: "完成安裝"
   + 未來如果您不小心玩到磚機，這備份將會是您的救命恩人
 1. 複製完畢後，將 `/gm9/out/` 資料夾中的 `<serialnumber>_nandmin_###.bin` 檔案刪除
 1. 將 SD 卡插回主機中
-1. 按下「Start」鍵以存檔並重新啟動系統
+
+##### Section VIII - Cleanup SD Card
+
+1. 按「Home」鍵以叫出主選單
+1. 選擇「More...」
+1. 選擇「Scripts...」
+1. Select "cleanup_sd_card"
+1. 當提示時，按下「A」繼續
+1. 按「A」 繼續
+1. Press (Start) to reboot
 
 ___
 
@@ -153,14 +164,6 @@ ___
 
 如果您想使用 [NTR 自製韌體](https://github.com/44670/BootNTR/)，請安裝 [BootNTR Selector](https://gbatemp.net/threads/432911/).
 {: .notice--info}
-
-{% capture notice-7 %}
-**刪除 SD 卡中*不在*圖中所列的檔案及資料夾。** 如果您有 `DCIM` 資料夾，請將它留著，因為其中包含您曾透過 3DS 相機所拍攝的相片：
-
-![]({{ base_path }}/images/screenshots/final-file-layout.png)
-{% endcapture %}
-
-<div class="notice--info">{{ notice-7 | markdownify }}</div>
 
 有關如何更改主機區碼，請見[區碼變更](region-changing)。
 {: .notice--success}
