@@ -26,6 +26,7 @@ Durante la guida verranno anche configurate le seguenti applicazioni:
 * L'ultima versione di [FBI](https://github.com/Steveice10/FBI/releases/latest) *(i file `.cia` e `.3dsx`)*
 * L'ultima fork di [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(il file `.cia`)*
 * [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
+* [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
 
 #### Istruzioni
 
@@ -48,6 +49,7 @@ Durante la guida verranno anche configurate le seguenti applicazioni:
 1. Copia il file `GodMode9.firm` dall'archivio `.zip` di GodMode9 dentro la cartella `/luma/payloads/` della tua scheda SD
 1. Copia la cartella `gm9` presente nell'archivio `.zip` di GodMode9 nella directory principale della tua scheda SD
 1. Copia il file `setup_ctrnand_luma3ds.gm9` nella cartella `/gm9/scripts/` della tua scheda SD
+1. Copy `cleanup_sd_card.gm9` to the `/gm9/scripts/` folder on your SD card
 
     ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
     {: .notice--info}
@@ -123,7 +125,16 @@ Se prima di seguire questa guida avevi già un'installazione EmuNAND presente e 
   + Questi backup ti salveranno da un brick nel caso dovesse accadere qualcosa in futuro
 1. Cancella il file `<codiceseriale>_nandmin_###.bin` dalla cartella `/gm9/out/` della tua scheda SD dopo la copia
 1. Reinserisci la scheda SD nel Nintendo 3DS
-1. Premi (Start) per salvare e riavviare il 3DS
+
+##### Section VIII - Cleanup SD Card
+
+1. Premi il pulsante HOME per far apparire il menu delle azioni
+1. Seleziona "More..."
+1. Seleziona "Scripts..."
+1. Select "cleanup_sd_card"
+1. Quando richiesto, premi (A) per procedere
+1. Premi il pulsante (A) per continuare
+1. Press (Start) to reboot
 
 ___
 
@@ -153,14 +164,6 @@ Puoi premere i pulsanti (L) + (Giù) + (Select) in qualunque momento per acceder
 
 Per usare [NTR CFW](https://github.com/44670/BootNTR/), installa [BootNTR Selector](https://gbatemp.net/threads/432911/).
 {: .notice--info}
-
-{% capture notice-7 %}
-Rimuovi tutti i file e le cartelle presenti nella directory principale della tua scheda SD che *NON* sono presenti nella seguente immagine. Se presente, non eliminare la cartella `DCIM` in quanto contiene tutte le foto scattate con la fotocamera del 3DS:
-
-![]({{ base_path }}/images/screenshots/final-file-layout.png)
-{% endcapture %}
-
-<div class="notice--info">{{ notice-7 | markdownify }}</div>
 
 Per informazioni su come cambiare la regionalità della tua console, leggi la pagina [Cambiare regione](region-changing).
 {: .notice--success}
