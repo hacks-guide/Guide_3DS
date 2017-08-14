@@ -26,6 +26,7 @@ Durante este processo, também configuramos alguns programas como os seguintes:
 * A versão mais recente do [FBI](https://github.com/Steveice10/FBI/releases/latest) *(os arquivos `.cia` e `.3dsx`)*
 * A versão mais recente do [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(o arquivo `.cia`)*
 * [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
+* [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
 
 #### Instruções
 
@@ -48,6 +49,7 @@ Durante este processo, também configuramos alguns programas como os seguintes:
 1. Copie `GodMode9.firm` do `.zip` do GodMode9 para a pasta `/luma/payloads/` no seu cartão SD
 1. Copie a pasta `gm9` do `.zip` do GodMode9 para a raiz do seu cartão SD
 1. Copie o `setup_ctrnand_luma3ds.gm9` para a pasta `/gm9/scripts/` no seu cartão SD
+1. Copy `cleanup_sd_card.gm9` to the `/gm9/scripts/` folder on your SD card
 
     ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
     {: .notice--info}
@@ -123,7 +125,16 @@ Se, antes de seguir este guia, você já possuia uma instalação EmuNAND e gost
   + Este backup vai salvá-lo de um brick caso algo dê errado no futuro
 1. Apague `<serialnumber>_nandmin_###.bin` da pasta `/gm9/out/` no seu cartão SD após copiá-lo
 1. Reinsira seu cartão SD no seu dispositivo
-1. Aperte (Start) para salvar e reiniciar
+
+##### Section VIII - Cleanup SD Card
+
+1. Aperte (Home) para abrir o menu de ações
+1. Selecione "More..."
+1. Selecione "Scripts..."
+1. Select "cleanup_sd_card"
+1. Quando solicitado, aperte (A) para prosseguir
+1. Aperte (A) para continuar
+1. Press (Start) to reboot
 
 ___
 
@@ -153,14 +164,6 @@ Agora você pode apertar (L) + (Baixo) + (Select) enquanto o sistema está ligad
 
 Para usar [NTR CFW](https://github.com/44670/BootNTR/), instale [BootNTR Selector](https://gbatemp.net/threads/432911/).
 {: .notice--info}
-
-{% capture notice-7 %}
-Remova quaisquer pastas e arquivos extras da raiz do seu cartão SD que *não* estejam na seguinte imagem. Se tiver, deixe a pasta `DCIM` pois ela contém todas as fotos tiradas com a câmera do 3DS:
-
-![]({{ base_path }}/images/screenshots/final-file-layout.png)
-{% endcapture %}
-
-<div class="notice--info">{{ notice-7 | markdownify }}</div>
 
 Para obter informações sobre como mudar o dispositivo para outra região, consulte a página [Mudança de região](region-changing).
 {: .notice--success}
