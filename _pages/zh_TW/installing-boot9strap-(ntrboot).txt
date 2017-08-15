@@ -1,11 +1,11 @@
 ---
-title: "Installing boot9strap (ntrboot)"
+title: "安裝 boot9strap（透過 ntrboot）"
 ---
 
 #### 必備項目
 
-* A magnet that triggers the sleep mode of your device (if using a folding style device)
-* Your ntrboot flashed flashcart
+* 一塊能使你主機進入睡眠模式的磁鐵（僅適用於折疊式主機）
+* 已改過的 ntrboot 燒錄卡
 * 最新版的 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * 最新版的 [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *（正常版的 boot9strap；非 `devkit` 或 `ntr` 檔案）*
 * 最新版的 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z` 檔案)*
@@ -17,7 +17,7 @@ title: "Installing boot9strap (ntrboot)"
 
 1. 關閉您的主機
 1. 將 SD 卡插入電腦中
-1. Copy `SafeB9SInstaller.firm` to the root of your SD card and rename it to `boot.firm`
+1. 將 `SafeB9SInstaller.firm` 複製於 SD 卡中的根目錄，並將其命名為 `boot.firm`
 1. 複製`starter.zip`裡的 _所有內容_ 到 SD 卡的根目錄底下
 1. 在 SD 卡的根目錄底下建立一個新的資料夾 `boot9strap`
 1. 解壓 boot9strap `.zip` 的 `boot9strap.firm` 及 `boot9strap.firm.sha` 檔案至 SD 卡的 `/boot9strap/` 資料夾中
@@ -28,29 +28,29 @@ title: "Installing boot9strap (ntrboot)"
 1. 將 SD 卡插回主機中
 1. 啟動您的主機
 
-##### Section II - ntrboot
+##### 第二節 — ntrboot
 
-1. Use the magnet to find the spot on your device where the sleep sensor is triggered
-  + This step is not needed on the old 2DS (which has a sleep mode switch)
+1. 透過先前準備的磁鐵來找到能啟動睡眠模式的感應器
+  + 舊型 2DS 可跳過本步驟
 1. 關閉您的主機
-1. Insert your flashcart into your device
-1. Place the magnet on your device to trigger the sleep sensor
-  + On old 2DS, you should instead enable the sleep mode switch
-1. Hold (Power) + (Start) + (Select) + (X) for several seconds, then release the buttons
-  + It may take a few attempts to get this to work because the positioning is awkward
+1. 將燒錄卡插回主機中
+1. 將磁鐵放在主機的睡眠感應器上
+  + 舊型 2DS 可直接開啟睡眠模式開關
+1. 按住「電源」鍵 +「Start」鍵 +「Select」鍵個幾秒，並放開
+  + 您可能得多試幾次，因為這組合有些難按
 1. 如果一切成功的話，您將自動進入 SafeB9SInstaller
 
 ##### 第三節 — 安裝 boot9strap
 
 1. 等待所有安全性檢查完畢
 1. 出現提示時，輸入提示的按鍵組合以安裝 boot9strap
-1. Once it has completed, force your device to power off by holding down the power button
-  + Your device will only boot to the SafeB9SInstaller screen until the next section is completed
+1. 完成後，透過長按電源紐以強制關機
+  + 除非您完成下節，否則您只能開機至 SafeB9SInstaller 中
 
 ##### 第四節 — 設定 Luma3DS
 
 1. 將 SD 卡插入電腦中
-1. Delete `boot.firm` from the root of your SD card
+1. 將 SD 卡根目錄中的 `boot.firm` 檔案刪除
 1. 解壓 Luma3DS `.7z` 內的 `boot.firm` 到 SD 卡的根目錄底下
 1. 將 SD 卡插回主機中
 1. 啟動您的主機
@@ -68,18 +68,18 @@ ___
 
 ___
 
-##### Section V - Removing ntrboot
+##### 第五節 — 移除 ntrboot
 
-This is an optional section that will allow you to restore your flashcart to its original state (to allow it to be used for its standard functions).
+本節為教您如何回復燒錄卡功能的選用章節（這樣您可以繼續使用原燒錄卡的功能）。
 {: .notice--info}
 
-Do not follow this section until you have completed the rest of the instructions on this page.
+請不要在完成以上節錄前進行本操作。
 {: .notice--warning}
 
-1. Launch the Luma3DS chainloader by holding (Start) during boot on **the source 3DS**
-1. Select "ntrboot_flasher"
-1. Select "Restore Flash"
-1. Press (Y) to proceed
-1. Wait until the process is completed
+1. 於 **3DS 始源機**開機時按住「Start」鍵以啟動 Luma3DS 加載選單
+1. 選擇「ntrboot_flasher」
+1. 選擇「Restore Flash」
+1. 按「Y」繼續
+1. 等待程序完畢為止
 1. 按「B」回到主選單
-1. Select "EXIT" to power off **the source 3DS**
+1. 選擇「EXIT」將 **3DS 始源機**關機
