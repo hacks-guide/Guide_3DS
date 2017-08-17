@@ -1,0 +1,78 @@
+---
+layout: splash
+title: "3DS-opas" #
+header:
+  overlay_color: "#5e616c" #
+  overlay_image: /images/home-page-feature.jpg
+  overlay_filter: 0.5
+  cta_label: "Aloita" #
+  cta_url: "/fi_FI/get-started" #
+  caption:
+excerpt: "Perusteellinen opas 3DS:n mukautettuun laiteohjelmistoon, <br /> vakio-ohjelmistosta boot9strapiin.<br />"
+---
+
+{% capture notice-home %}
+Tämä opas on _vain_ normaaleille (kuluttajan ostama; ei Nintendon kehittäjäohjelmasta) konsoleille!    
+Jos sinulla on kehittäjäkonsoli ("PANDA" tai "SNAKE"), tutustu [devGuide](https://dev.3ds.guide)en.
+{% endcapture %}
+
+<div class="notice--danger">{{ notice-home | markdownify }}</div>
+
+Tämä opas tarvitsee *sinun* apuasi sen [kääntämisessä](https://translate.3ds.guide/) muille kielille!
+{: .notice--success}
+
+Tämä opas tarvitsee *sinun* apuasi [näiden](https://3ds.guide/rss.xml) torrentien jakamisessa!
+{: .notice--success}
+
+Lue kaikki johdantosivut ennen aloittamista.
+{: .notice--warning}
+
+## Mikä on homebrew?
+
+[**Homebrew**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) viittaa yleensä ohjelmistoon, joka ei ole Nintendon hyväksymä. Se mahdollistaa kotitekoisten pelien, työkalujen (kuten tallennusten muokkaus ja varmuuskopiointi) ja emulaattoreiden käyttämisen.
+
+Useimmissa tapauksissa homebrew'n käyttäminen konsolillasi on täysin ilmaista [Nintendo 3DS Sound -sovelluksen](homebrew-launcher-(soundhax)) avulla. Homebrew'n käyttämiseen on myös menetelmiä, joissa hyödynnetään haavoittuvuuksia peleissä sekä konsolin selaimessa.
+
+## Mikä on mukautettu laiteohjelmisto?
+
+**Mukautettu laiteohjelmisto** (engl. custom firmware, "CFW") sallii kehittyneempiä hackejä, joihin ei käyttäjätilan homebrew'lla pysty. Esimerkkinä allekirjoitusten paikkaaminen, joka sallii sinun asentaa allekirjoittamattomia sovelluksia, jotka ilmestyvät suoraan HOME-valikkoosi.
+
+CFW:n voi asentaa millä tahansa konsolimallilla sekä millä tahansa versiolla (asennus saattaa vaatia lisätyökaluja 11.3.0:lla ja sitä uudemmilla versioilla).
+
+## Mitä tässä oppaassa asennetaan?
+
+Tämän oppaan lopputavoitteena on saada täysin muokkaamaton 3DS vakiolaiteohjelmistosta
+boot9strap-käyttöiseen mukautettuun laiteohjelmistoon. Joissain oppaan versioissa homebrew'ta hyödynnetään lähtökohtana, mutta mukautettu laiteohjelmisto on silti lopputavoitteena.
+
+Boot9strap on uusin sekä paras tapa käynnistää mukautettu laiteohjelmisto, joka antaa lähes täydet oikeudet järjestelmään vain millisekuntien viiveellä käynnistyksessä, samaan tapaan kuin BootMii-ohjelma Wiillä. Se sallii vielä aikaisemman hallinnan kuin arm9loaderhax, ja toisin kuin tavallinen sighax, boot9strap käyttää NDMA-ylikirjoitusmenetelmää saadakseen oikeuden koodin suorittamiseen Boot9:ssä. Tämä tarkoittaa sitä, että millä tahansa boot9strap-asennuksen omaavalla konsolilla pystyy kopioimaan konsolikohtaisen OTP:n (`OTP.bin`), ARM11-bootromin (`boot11.bin`) sekä ARM9-bootromin (`boot9.bin`).
+
+Boot9strapin hyödyt verrattuna muihin käynnistystapoihin ovat lukuisat, minkä takia tämän oppaan käyttöä suositellaan muiden, vanhentuneisiin ratkaisuihin (kuten menuhax + rxTools, arm9loaderhax ja jopa tavallinen sighax) perustuvien oppaiden sijasta.
+
+Tietoja boot9strapin toiminnasta löydät [SciresM](https://github.com/SciresM/):n [esityksestä](https://sciresm.github.io/33-and-a-half-c3/).
+
+Luettelon kaikista lasketuista sighaxin allekirjoituksista (joiden päälle boot9strap on rakennettu) löydät [tästä gististä](https://gist.github.com/SciresM/cdd2266efb80175d37eabbe86f9d8c52).
+
+## Mitä voin tehdä mukautetulla laiteohjelmistolla?
+
++ Pelata kaikkia kortilla julkaistuja sekä eShop-pelejä alueesta riippumatta
++ Mukauttaa HOME-valikkoasi käyttäjien luomilla [teemoilla](https://3dsthem.es/), [badgeillä](https://badges.3dsthem.es/) ja [käynnistysruuduilla](https://splash.3dsthem.es/)
++ Käyttää "ROM-hackejä" omistamissasi peleissä
++ Ottaa kuvankaappauksia peleistä ja sovelluksista
++ [Varmuuskopioida, muokata ja palauttaa](https://gbatemp.net/threads/413143/) tallennuksia monissa peleissä
++ Pelata vanhempien konsolien pelejä eri emulaattoreilla käyttäen RetroArchia tai yksittäisemulaattoreita. (Toimii parhaiten New Nintendo 3DS:llä)
++ Asentaa homebrew-sovelluksia konsolillesi, ja saada ne näkymään HOME-valikossasi
++ Kopioida fyysiset pelisi kortilta asennettavaan muotoon, ja pelata niitä ilman korttia
++ Vain New 3DS tai New 2DS: suoratoistaa langattomasti livepelikuvaa tietokoneellesi NTR-CFW:llä
++ Käyttää monia vanhoja Nintendo DS -flash-kortteja, jotka on estetty jo aikaa sitten tai jotka eivät ole koskaan toimineet 3DS:llä
++ Päivittää turvallisesti viimeisimpään järjestelmäversioon ilman pelkoa homebrew'n menettämisestä
+
+## Mitä minun täytyy tietää ennen aloittamista?
+
++ **Ennen oppaan aloittamista sinun on tiedettävä 3DS-hakkeroinnin riskit: JOKA kerta, kun muokkaat konsoliasi, on mahdollisuus siihen, että se vioittuu PYSYVÄSTI. Vaikkakin harvinaista, se on silti mahdollista, joten seuraa KAIKKIA ohjeita TARKALLEEN.**
++ Jos olet jo hakkeroinut konsolisi EmuNAND-kokoonpanoa varten, ja haluat siirtää sisältösi uuteen SysNAND-CFW-kokoonpanoon, seuraa kaikkia ohjeita ja palauta EmuNAND osiossa [Asennuksen viimeistely](installing-arm9loaderhax), siinä vaiheessa kun ohje siihen kehottaa.
++ Tämä opas toimii New 3DS:llä, vanhalla 3DS:llä, New 2DS:llä sekä vanhalla 2DS:llä kaikilla alueilla, laiteohjelmistolla 11.5.0 tai sitä vanhemmilla versioilla.
++ Jos kaikki menee suunnitelmien mukaan, et menetä mitään tietoja ja päädyt samaan kokoonpanoon, joka sinulla oli alussa (pelit, NNID, tallennukset jne. säilyvät).
++ **Pidä konsolisi latauksessa koko prosessin ajan välttyäksesi tietojen menettämiseltä tai odottamattomasta sammumisesta aiheutuvalta vahingolta!**
++ SD-korttisi on oltava [MBR, ei GPT](http://www.howtogeek.com/245610/) (konsolin mukana tuleva kortti on oletuksena MBR).
++ Jos sinun on alustettava uusi SD-kortti, voit käyttää [`guiformat`](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm)-ohjelmaa ja asettaa varausyksiköksi 32 kt.
++ 2DS on ohjelmistoltaan identtinen vanhan 3DS:n kanssa, joten kaikki kohdat, joissa viitataan "vanhaan 3DS:ään", pätevät myös 2DS:ään.

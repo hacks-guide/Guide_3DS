@@ -1,0 +1,137 @@
+---
+title: "Schimbând regiunea"
+---
+
+Aceasta este o secţiune opţională pentru a schimba regiunea CFW-ului din SysNAND. Acest lucru se realizează instalând imaginea CTRTransfer 9.2.0 pentru regiunea la care doriţi să schimbaţi.
+
+Note that region changing is almost completely unnecessary since Luma3DS supports out of region games and individual [title region emulation](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage).
+
+Pentru a folosi linkurile [magnetice](https://en.wikipedia.org/wiki/Magnet_URI_scheme) de pe această pagină, veți avea nevoie de un client de torrente ca [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+
+Țineți cont că dacă aveți alte payload-uri în afară de `GodMode9.firm` în folderul `/luma/payloads/` de pe cardul SD, apăsând (Start) va lansa un "meniu chainloader" în care va trebui să folosiți D-Pad-ul și butonul (A) ca să selectați "GodMode9" pentru aceste instrucțiuni. 
+
+Acest proces vă va deconecta NNID-ul din sistem, deoarece nu va mai fi compatibil în continuare. NNID-urile sunt blocate pe regiunea dispozitivului care le-ați creat, şi nu pot fi transferate între regiuni fără [un proces foarte complicat si avansat](https://gist.githubusercontent.com/yifanlu/e80db121d38aceb8cca0e03cefd5853b/raw/3c4dd89869156ca0f945a2791e699acfdb32b510/gistfile1.txt).
+{: .notice--warning}
+
+După acest proces, numai **New 3DS-urile care nu au accesat niciodată eShop-ul înainte** şi **orice Old 3DS** vor trebui să acceseze eShop-ul după ce vor crea un NNID nou în noua lor regiune. New 3DS-urile cu regiune schimbată care deja au accesat eShop-ul pe regiunile originale nu pot crea un nou NNID și nu vor putea accesa eShop-ul pe noua regiune!
+{: .notice--warning}
+
+Reţineţi că ocazional eShop-ul în mod inexplicabil nu va mai funcţiona pe dispozitivele pe care ar trebui să funcţioneze. Acest lucru are în totalitate de a face cu serverele Nintendo, şi nu am nici un control asupra lor. Additionally, note that occasionally the eShop will inexplicably work for devices that it should not (such as some New 3DSs). Motivul pentru acest lucru este necunoscut.
+
+Schimbând regiunea folosind CTRTransfer (ceea ce este folosit în aceasta metodă) pare să provoace patch-urile de redeschidere să nu mai funcționeze. Cauza acesteia este necunoscută, dar momentan utilizatorii de Old 3DS nu vor avea posibilitatea să joace jocurile care se joacă în modul de memorie extinsă (cum ar fi Monster Hunter, Super Smash Bros., și Pokémon Sun / Moon) până când nu își formatează dispozitivele.
+
+Never format a New 2DS XL while on a version <11.4.0 or you will be unable to complete initial setup!
+{: .notice--danger}
+
+You MUST have already installed Luma3DS and boot9strap or arm9loaderhax to use this.
+{: .notice--danger}
+
+#### Ce aveți nevoie
+
+* Cea mai nouă versiune de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* Cea mai nouă versiune de [FBI](https://github.com/Steveice10/FBI/releases/) *(fișierul `.3dsx`)*
+* [`ctrtransfer_ticket_copy.gm9`]({{ base_path }}/gm9_scripts/ctrtransfer_ticket_copy.gm9)
+* Imaginea de ctrtransfer 9.2.0 pentru dispozitivul dumneavoastră și regiunea la care doriți să treceți
+  +    <i class="fa fa-magnet" aria-hidden="true" title="Acesta este un link magnetic. Folosiți un client de torrent pentru a descărca fișierul."></i> - [New 3DS sau New 2DS - 9.2.0 - EUR - CTRTransfer](magnet:?xt=urn:btih:fed7bfeec0e52b42a77467cfb6ffd3e9dd2d5a70&dn=9.2.0-20E%5FCTRTransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)   
+  * <i class="fa fa-magnet" aria-hidden="true" title="Acesta este un link magnetic. Folosiți un client de torrent pentru a descărca fișierul."></i> - [New 3DS sau New 2DS - 9.2.0 - JPN - CTRTransfer](magnet:?xt=urn:btih:b22d67fd02b3b0e30ac991e451db0f2d32e7beca&dn=9.2.0-20J%5FCTRTransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  * <i class="fa fa-magnet" aria-hidden="true" title="Acesta este un link magnetic. Folosiți un client de torrent pentru a descărca fișierul."></i> - [New 3DS sau New 2DS - 9.2.0 - USA - CTRTransfer](magnet:?xt=urn:btih:985d47442dc470d1b9f908256bed041c63885f60&dn=9.2.0-20U%5FCTRTransfer%5Fn3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)    
+~
+  * <i class="fa fa-magnet" aria-hidden="true" title="Acesta este un link magnetic. Folosiți un client de torrent pentru a descărca fișierul."></i> - [Old 3DS sau Old 2DS - 9.2.0 - EUR - CTRTransfer](magnet:?xt=urn:btih:8d6142313971b08f92257e7fb1c1d5689e34ed78&dn=9.2.0-20E%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  * <i class="fa fa-magnet" aria-hidden="true" title="Acesta este un link magnetic. Folosiți un client de torrent pentru a descărca fișierul."></i> - [Old 3DS sau Old 2DS - 9.2.0 - JPN - CTRTransfer](magnet:?xt=urn:btih:24ad2b85e67013ef1f91178dca7ad2e40663b9b2&dn=9.2.0-20J%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  * <i class="fa fa-magnet" aria-hidden="true" title="Acesta este un link magnetic. Folosiți un client de torrent pentru a descărca fișierul."></i> - [Old 3DS sau Old 2DS - 9.2.0 - USA - CTRTransfer](magnet:?xt=urn:btih:1dc79a2a0babb45497961888f369423a93135e2b&dn=9.2.0-20U%5FCTRTransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+
+#### Instrucțiuni
+
+##### Secțiunea I - Preparații
+
+1. Închideți dispozitivul
+1. Introduceți cardul SD în calculator
+1. Creați un folder numit `cias` pe rădăcina cardului SD dacă nu există deja
+1. Copiați `GodMode9.firm` (sau `GodMode9.bin` pentru utilizatorii de arm9loaderhax) de la arhiva `.zip` GodMode9 către folderul `/luma/payloads/` de pe cardul SD
+1. Copiați folderul `gm9` din arhiva `.zip` GodMode9 în rădăcina cardului SD
+1. Copiați `ctrtransfer_ticket_copy.gm9` în folderul `/gm9/scripts/` de pe cardul SD
+1. Copiați imaginea `.bin` CTRTransfer 9.2.0 din arhiva `.zip` CTRTransfer în folderul `/gm9/` de pe cardul SD
+1. Copiați `FBI.3dsx` în folderul `/3ds/` de pe cardul SD
+1. Reintroduceți cardul SD în dispozitiul dumneavoastră
+
+##### Secțiunea II - CTRTransfer
+
+1. Lansați GodMode9 ținând apăsat (Start) în timpul pornirii
+1. Dacă vi se cere să faceți o copie de rezervă a fișierelor esențiale, apăsați (A) pentru a o realiza, apoi apăsați (A) ca să continuați după ce s-a terminat
+1. Navigați spre `[0:] SDCARD` -> `gm9`
+1. Apăsați (A) pe CTRTransfer `.bin` pantru a-l selecta
+1. Selectați "CTRNAND options..."
+1. Selectați "Transfer image to CTRNAND"
+1. Dacă apare, selectați "Transfer to SysNAND"
+  + Această solicitare va apărea doar dacă aveți un EmuNAND
+1. Apăsați (A) ca să deblocați scrierea în SysNAND (lvl1), apoi introduceți combinația de butoane care vi se cere
+  + Acest proces va lua ceva timp
+1. Odată ce transferul este complet, apăsați (A) ca să continuați
+1. Apăsați (B) ca să refuzați reblocarea permisiunilor de scriere dacă vi se cere
+1. Apăsați (B) de două ori ca să vă întoarceți la meniul principal
+1. Apăsați (Home) pentru a arăta meniul de acțiuni
+1. Selectați "More..."
+1. Selectați "Scripts..."
+1. Selectaţi "ctrtransfer_ticket_copy"
+1. Când vi se solicită, apăsaţi (A) pentru a continua
+1. Apăsați (A) pentru a continua
+1. Apăsați (A) ca să reblocați permisiunile de scriere
+1. Apăsați (Start) pentru a reporni dispozitivul
+  + Dacă apare o eroare care scrie "Process Title ID: 0x0004013000004202", țineți apăsat (A) + (R) + (L) + (Sus) în timpul pornirii pentru a actualiza sistemul în modul de recuperare
+1. Actualizați dispozitivul mergând în System Settings, apoi "Other Settings", apoi mergeți spre colțul drept și folosiți "System Update"
+  + Actualizările în timp ce folosiți B9S + Luma (ce aveți) sunt sigure
+  + Dacă aceasta vă dă o eroare, setați setările de DNS pe "auto"
+
+##### Secțiunea III - Lansând FBI
+
+1. Lansați aplicația Download Play
+1. Apăsați (L) + (Jos) + (Select) în același timp ca să deschideți meniul Rosalina
+1. Selectați "Miscellaneous options"
+1. Selectați "Switch the hb. title to the current app"
+1. Apăsați (B) pentru a continua
+1. Apăsați (B) ca să vă întoarceți la meniul principal Rosalina
+1. Apăsați (B) pentru a ieși din meniul Rosalina
+1. Apăsați (Home), apoi închideți Download Play
+1. Lansați aplicația Download Play
+1. Dispozitivul dumneavoastră ar trebui să încarce Hombrew Launcher-ul
+
+##### Secțiunea IV - Reinstalând tichetele
+
+Dacă scriptul care nu a găsit tichete de utilizator v-a zis să săriți peste această secțiune, faceți cum vi se cere
+{: .notice--info}
+
+1. Lansați FBI din lista de homebrew
+1. Navigați spre `SD` -> `cias`
+1. Întoarceți-vă înapoi în directorul SD cu (B)
+1. Selectați "gm9"
+1. Selectați "out"
+1. Selectaţi "ctrtransfer_tickets"
+1. Faceți următorul proces fie pentru folderul `eshop`, `unknown`, sau ambele
+  + Navigați spre folder
+  + Selectați "\<current directory>"
+  + Selectați "Install and delete all tickets"
+  + Așteptați. Sistemul poate părea înghețat, doar dați-i timp.
+  + Apăsați (A) pentru a confirma
+  + Apăsați (B) pentru a refuza instalarea tichetelor din CDN.
+1. Apăsați (Home) pentru a ieși din FBI
+
+##### Secțiunea V - Setări de regiune
+
+1. Deschideți System Settings
+1. Mergeți în "Other Settings", "Profile", apoi "Region Settings"
+1. Selectaţi o ţară din regiunea la care ați schimbat
+1. Dacă vi se solicită, nu aveţi nevoie să setați un stat
+1. Actualizați CFW-ul SysNAND al regiunii schimbate spre cea mai nouă versiune
+
+##### Secțiunea VI - Eliminarea imaginii CTRTransfer
+
+1. Lansați GodMode9 ținând apăsat (Start) în timpul pornirii
+1. Navigați spre `[0:] SDCARD` -> `gm9`
+1. Apăsați (X) pe imaginea`.bin` CTRTransfer pentru a o șterge
+1. Apăsați (A) pentru a confirma
+1. Apăsați (Start) pentru a reporni dispozitivul
+
+___
+
+Old 3DS și 2DS-urile s-ar putea să necesite o formatare (folosind TinyFormat sau System Settings) pentru a juca jocurile ce au nevoie de modul de memorie extinsa (cum ar fi Monster Hunter, Super Smash Bros., sau Pokemon Sun/Moon).
+{: .notice--info}

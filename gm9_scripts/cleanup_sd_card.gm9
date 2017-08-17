@@ -1,0 +1,58 @@
+# last changed: 20170813
+# author: Some1CP
+ 
+set SUCCESSMSG "Cleanup completed successfully"
+set ERRORMSG "Cleanup failed"
+ 
+ask "This will clean the final setup files from your SD.\n\nContinue?"
+ 
+#allow SD modifications
+allow -a 0:/
+ 
+# remove existing files
+ #2xrsa
+rm -o -s 0:/arm9.bin
+rm -o -s 0:/arm11.bin
+ 
+#Cubic Ninja
+rm -o -s 0:/ntr.bin
+ 
+#Soundhax
+rm -o -s 0:/soundhax-usa-o3ds.m4a
+rm -o -s 0:/soundhax-usa-n3ds.m4a
+rm -o -s 0:/soundhax-eur-o3ds.m4a
+rm -o -s 0:/soundhax-eur-n3ds.m4a
+rm -o -s 0:/soundhax-jpn-o3ds.m4a
+rm -o -s 0:/soundhax-jpn-n3ds.m4a
+rm -o -s 0:/soundhax-kor-o3ds.m4a
+rm -o -s 0:/soundhax-kor-n3ds.m4a
+rm -o -s 0:/otherapp.bin
+rm -o -s 0:/3ds/safehax.3dsx
+rm -o -s 0:/3ds/udsploit.3dsx
+rm -o -s 0:/safehaxpayload.bin
+ 
+#DSiWareHax
+rm -o -s 0:/public.sav
+rm -o -s 0:/boot.nds
+rm -o -s 0:/savedata
+rm -o -s 0:/sudoku_v0.app
+rm -o -s 0:/4swords.app
+ 
+#ntrboot_flasher
+rm -o -s 0:/luma/payloads/ntrboot_flasher.firm
+rm -o -s 0:/ntrboot
+rm -o -s 0:/ntrboot.firm
+ 
+#Common files
+rm -o -s 0:/boot9strap
+rm -o -s 0:/cias
+rm -o -s 0:/gm9/scripts/setup_ctrnand_luma3ds.gm9
+rm -o -s "0:/gm9/scripts/Clean Setup Files.gm9"
+ 
+set ERRORMSG "Cleanup completed successfully"
+
+#GodMode9's out folder
+# Edited by Plailect--
+# I don't believe a prompt is needed for this since the instructions already told them to make a copy of their NAND backup
+#ask "Do you want to delete GM9's out folder, including\nyour NAND backups, from your SD?"
+rm -o -s $[GM9OUT]

@@ -1,0 +1,52 @@
+---
+title: "Desinstalar CFW"
+---
+
+Esto removerá completamente el CFW de tu consola, incluyendo Boot9Strap y Luma3DS, regresando la consola a su estado original.
+
+Cualquier juego sin firmar (ilegítimo) se volverá inutilizable y puede ser manualmente removido usando la sección de "Gestión de Datos" en la Configuración de la consola. Utiliza un [gestor de datos de guardado](https://github.com/J-D-K/JKSM/releases/latest) para respaldar los datos de guardado de cualquier juego sin firmar (ilegítimo) que te sea de importancia conservar.
+
+Esto no afectará a tu NNID, ningún juego comprado legalmente o a los datos de guardado pertenecientes a dichos juegos.
+
+Ten en cuenta que si tienes archivos de payloads distintos de `GodMode9.firm` en la carpeta `/luma/payloads/` en tu tarjeta SD, al mantener (Start) al inicio se desplegará un "chainloader menu" donde tendrás que usar el D-Pad y pulsar (A) para seleccionar "GodMode9", para esas instrucciones. 
+
+#### Qué necesitas
+
+* La última versión de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* El script de desinstalación correspondiente a tu consola:
+  + [`uninstall_hax_retail_NEW.gm9`]({{ base_path }}/gm9_scripts/uninstall_hax_retail_NEW.gm9)
+  + [`uninstall_hax_retail_OLD.gm9`]({{ base_path }}/gm9_scripts/uninstall_hax_retail_OLD.gm9)
+
+#### Instrucciones
+
+##### Sección I - Preparativos
+
+1. Apaga tu consola
+1. Inserta tu tarjeta SD en tu computadora
+1. Copia el archivo `GodMode9.firm` desde el `.zip` de GodMode9 a la carpeta `/luma/payloads/` en tu tarjeta SD
+1. Copia la carpeta `gm9`contenida en el `.zip`de GodMode9 al directorio raíz de tu tarjeta SD
+1. Copia el script de desinstalación correspondiente a tu consola a la carpeta `/gm9/scripts/` de tu tarjeta SD
+1. Vuelve a insertar tu tarjeta SD en tu consola
+1. Enciende tu consola
+
+##### Sección II - Ejecutar script de desinstalación
+
+1. Inicia GodMode9 manteniendo presionado (Start) mientras enciendes la consola
+1. Si se te pide crear copias de seguridad de archivos esenciales, presiona (A) para hacerlo y luego presiona (A) para continuar una vez que haya terminado
+1. Presiona el botón (Home) para abrir el menú de acción
+1. Selecciona "Mas..."
+1. Selecciona "Scripts..."
+1. Selecciona el script de desinstalación
+1. Presiona (A) para continuar cuando se te pida
+1. Presiona (A) para desbloquear la escritura de SysNAND (lvl3) y después introduce la combinación de teclas mostrada
+1. Presiona (A) para continuar
+1. Presiona (A) para volver a bloquear los permisos de escritura
+1. Presiona (Start) para reiniciar tu consola
+
+___
+
+Todo el custom firmware ha sido removido de tu consola.
+{: .notice--success}
+
+Ahora puedes remover cualquier carpeta o archivo extra del directorio raíz de tu tarjeta SD que *no* sean las carpetas `Nintendo 3DS`o `DCIM`.
+{: .notice--info}

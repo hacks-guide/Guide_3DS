@@ -1,0 +1,26 @@
+# SigHax Uninstaller script (reverts from SigHax to stock)
+# This is for retail O3DS units only
+# Not recommended on custom NCSDs(!)
+# last changed: 20170716
+# author: d0k3
+
+set SUCCESSMSG "CFW uninstalled successfully"
+
+# grab NATIVE_FIRM out of the NCCH
+set ERRORMSG "NATIVE_FIRM not found.\nIs this a O3DS?"
+find 1:/title/00040138/00000002/content/????????.app NATIVE_NCCH
+imgmount $[NATIVE_NCCH]
+verify G:/exefs/.firm
+set NATIVE_FIRM $[GM9OUT]/NATIVE_FIRM.firm
+cp G:/exefs/.firm $[NATIVE_FIRM]
+imgumount
+
+# Write NATIVE_FIRM to the FIRM partitions
+set ERRORMSG "Sighax not uninstalled.\nNo changes written to the system."
+ask "!!WARNING!!\nThis will remove sighax and\nrevert your system to stock.\n \nProceed?"
+allow S:/nand.bin # same permission level for all firms
+allow 1:/ # for ctrnand file removal
+rm -o -s 1:/boot.firm
+rm -o -s 1:/rw/luma
+cp -n $[NATIVE_FIRM] S:/firm0.bin
+cp -n $[NATIVE_FIRM] S:/firm1.bin

@@ -1,0 +1,43 @@
+---
+title: "Installation von boot9strap (Homebrew Launcher)"
+---
+
+Falls du bereits deinen 3DS zuvor gehackt hast und eine EmuNAND basierte CFW installiert ist: Diese Anleitung behandelt nur das SysNAND und alle Schritte sollten nur innerhalb des SysNANDs ausgeführt/angewendet werden. Beachte, dass die Begriffe EmuNAND und RedNAND sich auf leicht unterschiedliche Implementierungen [des selben Konzepts](http://3dbrew.org/wiki/NAND_Redirection) beziehen.
+
+#### Anleitung
+
+##### Abschnitt I - SafeB9SInstaller starten
+
+1. Starte udsploit aus der Liste von Homebrew
+  + Es kann sein, dass du dafür runterscrollen musst
+1. Sobald es fertig ist, drücke (Start) um udsploit zu beenden
+  + Hierzu wirst du wahrscheinlich mehrere Versuche benötigen
+  + Wenn sich deine Konsole aufhängt, schalte sie durch langes halten des Power-Knopfes aus, und versuche es erneut
+1. Starte safehax aus der Liste in homebrew
+  + Es kann sein, dass du dafür runterscrollen musst
+  + Wenn du den Fehler "PM INIT FAILED" bekommst, stelle sicher, dass Drahtloskommunikation eingeschaltet ist, wenn du udsploit ausführst
+  + Wenn du *weiterhin* den Fehler "PM INIT FAILED" bekommst, versuche den [r19 Release von Safehax](https://github.com/TiniVi/safehax/releases/tag/r19) zu benutzen
+  + Wenn sich deine Konsole aufhängt, schalte sie durch langes halten des Power-Knopfes aus, und versuche es erneut
+1. Wenn der Exploit erfolgreich war, wird nun direkt zum SafeBS9Installer gebootet
+  + If you launch into the Luma3DS configuration menu instead of SafeB9SInstaller, power off your device and ensure that `safehaxpayload.bin` exists on the root of your SD card
+  + If it appears that `safehaxpayload.bin` exists on the root of your SD card but you still launch into the Luma3DS configuration menu, ensure you have [enabled the option to show file extensions](file-extensions-(windows))
+
+##### Abschnitt II - Installation von boot9strap
+
+1. Warte auf alle Sicherheitsüberprüfungen
+1. Gib die Tastenkombination zur Bestätigung ein, wenn danach verlangt wird
+1. Sobald dies abgeschlossen ist drücke (A) um das Gerät neuzustarten
+
+##### Abschnitt III - Luma3DS konfigurieren
+
+1. Dein Gerät sollte neu starten und die Luma3DS Konfiguration anzeigen
+  + Wenn du einen schwarzen Bildschirm bekommst, [lies diese Problembehandlung](troubleshooting#ts_sys_b9s)
+1. Benutze den (A) Knopf und das Steuerkreuz, um Folgendes zu aktivieren:    
+  + **"Show NAND or user string in System Settings"**
+1. Drücke (Start) zum Speichern und neustarten
+  + Falls ein Fehler angezeigt wird, fahre einfach mit der nächsten Seite fort
+
+___
+
+Gehe weiter zu [Setup fertigstellen](finalizing-setup)
+{: .notice--primary}

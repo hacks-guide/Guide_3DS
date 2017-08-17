@@ -1,0 +1,43 @@
+---
+title: "Boot9strapin asentaminen (Homebrew Launcher)"
+---
+
+Jos olet jo hakkeroinut konsolisi aikaisemmin, ja sinulla on EmuNAND-pohjainen CFW-kokoonpano, ota huomioon, että nämä ohjeet koskevat ainoastaan SysNANDia, joten sinun tulisi seurata ohjeita sen mukaisesti. Huomaa, että termit EmuNAND ja RedNAND viittaavat [saman konseptin](http://3dbrew.org/wiki/NAND_Redirection) kahteen hiukan erilaiseen toteutukseen.
+
+#### Ohjeet
+
+##### Vaihe I – SafeB9SInstallerin avaaminen
+
+1. Käynnistä udsploit homebrew-listasta
+  + Voit joutua selaamaan alaspäin nähdäksesi sen
+1. Kun udsploit on suoritettu, paina (START)-painiketta poistuaksesi
+  + Tämä saattaa vaatia useita yrityksiä
+  + Jos ohjelma jumiutuu, pakota konsoli sulkeutumaan pitämällä virtapainiketta pohjassa ja yritä sitten uudelleen
+1. Käynnistä safehax homebrew-listasta
+  + Voit joutua selaamaan alaspäin nähdäksesi sen
+  + Jos saat "PM INIT FAILED" -virheen, varmista, että käynnistit udsploitin langattoman yhteyden ollessa päällä
+  + Jos saat *edelleen* "PM INIT FAILED" -virheen, kokeile käyttää [safehaxin r19-julkaisua](https://github.com/TiniVi/safehax/releases/tag/r19)
+  + Jos ohjelma jumiutuu, pakota konsoli sulkeutumaan pitämällä virtapainiketta pohjassa hetken aikaa ja yritä sitten uudelleen
+1. Jos haavoittuvuuden hyödyntäminen onnistui, SafeB9SInstallerin pitäisi avautua
+  + Jos Luma3DS:n määritysvalikko aukeaa SafeB9SInstallerin sijasta, sammuta konsolisi ja varmista, että `safehaxpayload.bin` on SD-korttisi juuressa
+  + Jos Luma3DS:n määritysvalikko aukeaa siitä huolimatta, että`safehaxpayload.bin` on SD-korttisi juuressa, varmista, että sinulla on [tiedostotunnisteet näkyvillä](file-extensions-(windows))
+
+##### Vaihe II – Boot9strapin asentaminen
+
+1. Odota, kunnes kaikki turvatarkistukset on suoritettu
+1. Syötä kehotettaessa annettu painikeyhdistelmä asentaaksesi boot9strapin
+1. Kun toiminto on suoritettu, paina (A):ta käynnistääksesi konsolisi uudelleen
+
+##### Vaihe III – Luma3DS:n määrittäminen
+
+1. Konsolisi pitäisi uudelleenkäynnistyä suoraan Luma3DS:n määritysvalikkoon
+  + Jos saat mustan ruudun, [seuraa tätä vianmääritysohjetta](troubleshooting#ts_sys_b9s)
+1. Käytä (A):ta ja ristiohjainta ottaaksesi seuraavat asetukset käyttöön:    
+  + **"Show NAND or user string in System Settings"**
+1. Paina (START)-painiketta tallentaaksesi ja käynnistääksesi uudelleen
+  + Jos saat virheen, jatka vain seuraavaan osioon
+
+___
+
+Jatka osioon [Asennuksen viimeistely](finalizing-setup)
+{: .notice--primary}

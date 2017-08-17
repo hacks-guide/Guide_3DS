@@ -1,0 +1,19 @@
+# Luma3DS CTRNAND Setup script
+# last changed: 20170716
+# author: ihaveamac
+
+set SUCCESSMSG "Luma3DS copied successfully"
+
+ask "This will copy Luma3DS to your CTRNAND,\nallowing for the system to work without\nan SD card.\n\nContinue?"
+
+allow 1:/
+
+# remove existing files just in case
+rm -o -s 1:/boot.firm
+rm -o -s 1:/rw/luma
+
+# copy specific files over
+cp 0:/boot.firm 1:/boot.firm
+mkdir 1:/rw/luma
+cp 0:/luma/payloads 1:/rw/luma/payloads
+cp 0:/luma/config.bin 1:/rw/luma/config.bin

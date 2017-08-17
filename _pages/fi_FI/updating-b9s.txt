@@ -1,0 +1,98 @@
+---
+title: "B9S:n päivittäminen"
+---
+
+Tämä sivu on boot9strap-käyttäjille, jotka haluavat päivittää asennuksensa viimeisimpään versioon.
+
+Huomioi, että Luma3DS:n viimeisin pääjulkaisu *ei* ole yhteensopiva boot9strapin version 1.0 kanssa. Sen käyttäminen *vaatii*, että päivität boot9strap-asennuksesi versioon 1.2 seuraamalla tämän osion ohjeita.
+
+{% capture notice-1 %}
+On käynyt ilmi, että Nintendo jakaa CFW-käyttäjille porttikieltoja verkkotoimintoihinsa. Välttyäksesi tältä tee seuraavat toimet ennen aloittamista:
+
+1. Mene järjestelmäasetuksiin (System Settings), valitse verkkoasetukset (Internet Settings), sitten "SpotPass" ja sitten järjestelmätietojen lähetys (Sending of System Information)
+1. Ota järjestelmätietojen lähetys pois käytöstä
+1. Poistu järjestelmäasetuksista
+1. Mene kaverilistaan (naamakuvake HOME-valikon ylärivillä)
+  + Jos saat virheilmoituksen etkä pääse kaverilistaan, asetus on jo pois käytöstä
+1. Mene kaverilistan asetuksiin, valitse "Friend Notification Settings" ja sitten "Show friends what you're playing"
+1. Ota "Show friends what you're playing" -asetus pois käytöstä
+1. Poistu kaverilistasta
+
+{% endcapture %}
+
+<div class="notice--danger">{{ notice-1 | markdownify }}</div>
+
+#### Tarpeet
+
+* Luma3DS:n [viimeisin julkaisu](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z`-tiedosto)*
+* SafeB9SInstallerin [viimeisin julkaisu](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* Boot9strapin [viimeisin julkaisu](https://github.com/SciresM/boot9strap/releases/latest) *(tavallinen boot9strap-tiedosto; ei `devkit`- eikä `ntr`-tiedosto)*
+* GodMode9:n [viimeisin julkaisu](https://github.com/d0k3/GodMode9/releases)
+* Homebrew-[aloituspakkaus](http://smealum.github.io/ninjhax2/starter.zip)
+* [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
+
+#### Ohjeet
+
+##### Vaihe I – Valmistelut
+
+Korvaa mahdolliset olemassa olevat tiedostot SD-kortillasi kaikissa tämän vaiheen kohdissa.
+{: .notice--info}
+
+1. Sammuta konsolisi
+1. Aseta SD-korttisi tietokoneeseesi
+1. **Älä tee mitään Luma3DS:n (`boot.firm`) vanhalle versiolle (v7.1). Tulet päivittämään sen myöhemmin.**
+1. Kopioi `starter.zip`-pakkauksen _sisältö_ SD-korttisi juureen
+1. Luo `boot9strap`-niminen kansio SD-korttisi juureen
+1. Kopioi GodMode9-`.zip`-pakkauksesta `GodMode9.firm` SD-korttisi `/luma/payloads/`-kansioon
+1. Kopioi GodMode9-`.zip`-pakkauksesta `gm9`-kansio SD-korttisi juureen
+1. Kopioi `setup_ctrnand_luma3ds.gm9` SD-korttisi `/gm9/scripts/`-kansioon
+1. Kopioi SafeB9SInstaller-`.zip`-pakkauksesta `SafeB9SInstaller.firm` SD-korttisi `/luma/payloads/`-kansioon
+1. Kopioi boot9strap-`.zip`-pakkauksesta `boot9strap.firm` ja `boot9strap.firm.sha` SD-korttisi `/boot9strap/`-kansioon
+1. Aseta SD-korttisi takaisin konsoliisi
+
+##### Vaihe II – Boot9strapin asentaminen
+
+1. Avaa Luma3DS:n ketjulatausvalikko pitämällä (START)-painiketta pohjassa käynnistyksen aikana
+1. Avaa SafeB9SInstaller painamalla (A):ta
+1. Odota, kunnes kaikki turvatarkistukset on suoritettu
+1. Syötä kehotettaessa annettu painikeyhdistelmä asentaaksesi boot9strapin
+1. Kun toiminto on suoritettu, paina (A):ta käynnistääksesi konsolisi uudelleen.
+1. Sammuta konsolisi
+  + Huomaa, että saat `Unsupported launcher (argc = 0)` -virheen, ennen kuin olet käynyt läpi loput tämän sivun ohjeista
+
+##### Vaihe III – Luma3DS:n päivittäminen
+
+1. Aseta SD-korttisi tietokoneeseesi
+1. Poista SD-korttisi juuresta jo olemassa oleva `boot.firm`-tiedosto
+1. Kopioi Luma3DS-`.7z`-pakkauksesta `boot.firm` SD-korttisi juureen
+1. Aseta SD-korttisi takaisin konsoliisi
+
+##### Vaihe IV – Luma3DS:n määrittäminen
+
+1. Konsolisi pitäisi uudelleenkäynnistyä suoraan Luma3DS:n määritysvalikkoon
+  + Jos saat mustan ruudun, [seuraa tätä vianmääritysohjetta](troubleshooting#ts_sys_b9s)
+1. Käytä (A):ta ja ristiohjainta ottaaksesi seuraavat asetukset käyttöön:    
+  + **"Show NAND or user string in System Settings"**
+1. Paina (START)-painiketta tallentaaksesi ja käynnistääksesi uudelleen
+
+##### Vaihe V – Luma3DS:n asentaminen CTRNANDiin
+
+1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
+1. Jos ohjelma kehottaa luomaan varmuuskopion tärkeistä tiedostoista (essential files), paina (A):ta tehdäksesi sen, ja kun varmuuskopio on valmis, paina (A):ta uudelleen jatkaaksesi
+1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
+1. Valitse "More..."
+1. Valitse "Scripts..."
+1. Valitse "setup_ctrnand_luma3ds"
+1. Paina kehotettaessa (A):ta jatkaaksesi
+1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1) ja syötä annettu painikeyhdistelmä
+1. Paina (A):ta jatkaaksesi
+1. Paina (A):ta lukitaksesi kirjoitusoikeudet
+1. Paina (START)-painiketta käynnistääksesi uudelleen
+
+___
+
+Huomaa, että SD-korttisi `/boot9strap/`-kansiossa olevat `.bak`-tiedostot ovat tarpeellisia vain, jos boot9strapin asentaminen epäonnistuu. Kun asennus on onnistunut, voit poistaa koko `boot9strap`-kansion sisältöineen.
+{: .notice--info}
+
+Voit nyt käyttää (L) + (ALAS) + (SELECT) -painikeyhdistelmää, kun konsolisi on päällä avataksesi Luma3DS:ään integroidun Rosalina-valikon. Täyden luettelon Rosalinan ominaisuuksista löydät [Luma3DS v8.0 -julkaisusivulta](https://github.com/AuroraWright/Luma3DS/releases/tag/v8.0).
+{: .notice--info}

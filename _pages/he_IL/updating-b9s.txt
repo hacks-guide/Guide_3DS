@@ -1,0 +1,98 @@
+---
+title: "עדכון B9S"
+---
+
+העמוד הזה קיים בשביל משתמשי boot9strap קיימים כדי לעדכן את ההתקנה שלהם לגרסה הכי חדשה.
+
+שימו לב שהגרסה הגדולה החדשה של Luma3DS *לא* תומכת בboot9strap גרסה 1.0. היא *דורשת* מכם לעדכן את התקנת boot9strap שלכם לגרסה 1.2 על ידי עקיבת ההוראות בעמוד זה.
+
+{% capture notice-1 %}
+היו דיווחים על גל של באנים שנינטנדו נתנו למי שפרץ. כדי להגן על עצמכם, תעשו את השלבים הבאים לפני שאתם מתחילים את המדריך:
+
+1. לכו להגדרות, שם אל "Internet Settings", שם "SpotPass", ולבסוף אל "Sending of System Information"
+1. תבטלו את הגדרת "Sending of System Information"
+1. תצאו מהגדרות המערכת
+1. לכו לרשימת החברים שלכם (הפרצוף בחלק העליון של תפריט הבית)
+  + אם אתם מקבלים שגיאה וזה מוציא אתכם מהתפריט, ההגדרה כבר מבוטלת
+1. לכו להגדרות רשימת החברים, שם אל "Friend Notification Settings", ולבסוף אל "Show friends what you're playing"
+1. תבטלו את האפשרות "Show friends what you're playing"
+1. תצאו מרשימת החברים
+
+{% endcapture %}
+
+<div class="notice--danger">{{ notice-1 | markdownify }}</div>
+
+#### מה שאתם צריכים
+
+* את הגרסה העדכנית של [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(יש להוריד את קובץ ה-`.7z`)*
+* הגרסה העדכנית של [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* הגרסא העדכנית של [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *( boot9strap רגיל; לא קובץ ה `devkit`, ולא קובץ ה`ntr`)*
+* את הגרסה העדכנית של [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* את הכלים בשביל ה [Homebrew Launcher](http://smealum.github.io/ninjhax2/starter.zip)
+* [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
+
+#### הוראות
+
+##### חלק I - הכנות
+
+לכל השלבים בחלק הזה, תשכתבו כל קובץ קיים בכרטיס SD שלכם אם יש.
+{: .notice--info}
+
+1. תכבו את המכשיר
+1. תכניסו את ה-SD שלכם למחשב
+1. **תשאירו את הגרסה הישנה (v7.1) של Luma3DS (`boot.firm`) כמו שהיא. אתם תעדכנו אותה אחר כך.**
+1. תפתחו את starter.zip, בתוך הקובץ יש קובץ boot.3dsx ותיקייה, חלצו את שניהם לתוך ה-SD שלכם. (מחוץ לכל תיקייה)
+1. תצרו ב-SD שלכם תיקייה חדשה בשם `boot9strap`
+1. העתיקו את `GodMode9.firm` מהזיפ של GodMode9 אל תיקיית /luma/payloads/ ב- SD שלכם
+1. תעתיקו את התיקייה `gm9` מתוך ה`.zip` של GodMode9 ל-SD שלכם
+1. תעתיקו את `setup_ctrnand_luma3ds.gm9` אל תיקיית`/gm9/scripts/` על כרטיס הSD שלכם
+1. העתיקו את `SafeB9SInstaller.firm` מהזיפ של SafeB9SInstaller אל תיקיית /luma/payloads/ ב- SD שלכם
+1. תעתיקו את`boot9strap.firm` ואת `boot9strap.firm.sha` מה `.zip` של boot9strap אל תיקיית `/boot9strap/`על כרטיס הSD שלכם
+1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
+
+#### חלק II - התקנת boot9strap
+
+1. תאתחלו בזמן שאתם מחזיקים (Start) במהלך האתחול כדי להפעיל את תפריט הטעינה של Luma3DS
+1. תפעילו את SafeB9SInstaller על ידי לחיצת (A)
+1. תחכו שכל בדיקות הבטיחות יסתיימו
+1. כאשר תתבקשו, תלחצו על הכפתורים שנתונים לכם כדי להתקין את boot9strap
+1. כשזה סיים, לחצו על (A) כדי לאתחל את הקונסולה.
+1. תכבו את המכשיר
+  + שימו לב שתקבלו את השגיאה `Unsupported launcher (argc = 0)` עד שתעקבו אחרי שאר ההוראות בעמוד הזה
+
+##### חלק III - עדכון Luma3DS
+
+1. תכניסו את ה-SD שלכם למחשב
+1. תמחקו את`boot.firm` הקיים מכרטיס הSD שלכם
+1. תעתיקו את הקובץ `boot.firm` מתוך ה`.7z` של Luma3DS לתוך ה-SD שלכם
+1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
+
+##### חלק IV - הגדרת Luma3DS
+
+1. הקןנסולה שלכם צריכה לאתחל לתפריט ההגדרות של Luma3DS
+  + אם אתם מקבלים מסך שחור, [עקבו אחרי המדריך הבא](troubleshooting#ts_sys_b9s)
+1. השתמשו במקש (A) ובמקשי החיצים על מנת להפעיל את ההגדרות הבאות:    
+  + **"Show NAND or user string in System Settings"**
+1. לחצו על (Start) על מנת לשמור ולהפעיל מחדש
+
+##### חלק V - Luma3DS על ה- CTRNAND
+
+1. תפתחו את GodMode9 על ידי החזקה של המקש (Start) בעת ההדלקה
+1. אם תתבקשו לעשות גיבוי של קבצים חיוניים, תלחצו (A) כדי לעשות זאת, ואז תלחצו (A) כדי להמשיך אחרי שזה סיים
+1. תלחצו על (Home) כדי להראות את תפריט הפעולה
+1. תבחרו ב"More..."
+1. תבחרו "Scripts..."
+1. תבחרו ב "setup_ctrnand_luma3ds"
+1. כשתתבקשו, תלחצו (A) כדי להמשיך
+1. לחצו (A) כדי לפתוח גישת כתיבת lvl1 לSysNAND, ואז תלחצו על המקשים בסדר הנכון
+1. תלחצו (A) כדי להמשיך
+1. תלחצו (A) כדי לנעול הרשאות כתיבה
+1. תלחצו על (Start) כדי לאתחל את המכשיר
+
+___
+
+שימו לב שקבצי ה`.bak` בתיקיית `/boot9strap/` על הרטיס הSD שלכם נדרשים רק במקרה של התקנה כושלת של boot9strap. אם התקנתם בהצלחה, אתם יכולים למחוק את תיקיית `boot9strap`.
+{: .notice--info}
+
+אתם יכולים עכשיו ללחוץ על (L) + (Down) + (Select) בזמן שהקונסולה פועלת כדי לפתוח את התפריט Rosalina שנמצא בתוך Luma3DS. לרשימה מלאה של הפיצ'רים של Rosalina בבקשה תראו את ה [שחרור של Luma3DS v8.0](https://github.com/AuroraWright/Luma3DS/releases/tag/v8.0)
+{: .notice--info}

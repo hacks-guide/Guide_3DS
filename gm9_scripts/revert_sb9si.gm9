@@ -1,0 +1,19 @@
+# SafeB9SInstaller reverter script (restores the backed up data)
+# Not recommended on custom NCSDs(!)
+# last changed: 20170706
+# author: d0k3
+
+set SUCCESSMSG "SB9SI reverted successfully"
+
+# check for boot9strap firm backup
+set ERRORMSG "SB9SI FIRM backup not found"
+find 0:/boot9strap/firm0_enc.bak NULL
+find 0:/boot9strap/firm1_enc.bak NULL
+
+# inject the backups @ the correct locations
+set ERRORMSG "SB9SI not reverted.\nNo changes written to the system."
+ask "!!WARNING!!\nThis will restore the backups\nfound in 0:/boot9strap.\n \nProceed?"
+allow S:/nand.bin
+inject -n -s -o 0:/boot9strap/sector0x96_enc.bak S:/nand.bin@12C00
+inject -n 0:/boot9strap/firm0_enc.bak S:/nand.bin@B130000
+inject -n 0:/boot9strap/firm1_enc.bak S:/nand.bin@B530000

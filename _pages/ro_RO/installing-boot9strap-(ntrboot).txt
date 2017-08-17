@@ -1,0 +1,85 @@
+---
+title: "Instalând boot9strap (ntrboot)"
+---
+
+#### Ce aveți nevoie
+
+* Un magnet care declanșează modul de suspendare al dispozitivului (dacă se folosește un dispozitiv care se pliază)
+* Flashcart-ul cu ntrboot instalat
+* Cea mai nouă versiune de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* Cea mai nouă versiune de [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(boot9strap standard; nu fișierul `devkit`, nici cel `ntr`)*
+* Cea mai nouă versiune de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(fișierul `.7z`)*
+* [Kit-ul de începător](http://smealum.github.io/ninjhax2/starter.zip) în Homebrew
+
+#### Instrucțiuni
+
+##### Secțiunea I - Preparații
+
+1. Închideți dispozitivul
+1. Introduceți cardul SD în calculator
+1. Copiați `SafeB9SInstaller.firm` pe rădăcina cardului SD și redenumiți în `boot.firm`
+1. Copiați _conținutul de_ pe `starter.zip` în rădăcina cardului SD
+1. Creați un folder numit 'boot9strap' pe rădăcina cardului SD
+1. Copiați `boot9strap.firm` și `boot9strap.firm.sha` din arhiva `.zip` boot9strap în folderul `/boot9strap/` de pe cardul SD
+
+    ![]({{ base_path }}/images/screenshots/boot9strap-ntrboot-file-layout.png)
+    {: .notice--info}
+
+1. Reintroduceți cardul SD în dispozitivul dumneavoastră
+1. Porniți dispozitivul
+
+##### Secțiunea II - ntrboot
+
+1. Use the magnet to find the spot on your device where the sleep sensor is triggered
+  + This step is not needed on the old 2DS (which has a sleep mode switch)
+1. Închideți dispozitivul
+1. Introduceţi flashcart-ul în dispozitiv
+1. Puneți magnetul pe dispozitiv pentru a declanșa senzorul de suspendare
+  + On old 2DS, you should instead enable the sleep mode switch
+1. Hold (Power) + (Start) + (Select) + (X) for several seconds, then release the buttons
+  + It may take a few attempts to get this to work because the positioning is awkward
+1. Dacă exploit-ul a avut succes, veți porni în SafeB9SInstaller
+
+##### Secțiunea III - Instalând boot9strap
+
+1. Așteptaţi ca toate verificările de siguranță să fie completate
+1. Când vi se cere, introduceți combinația de butoane ca să instalați boot9strap
+1. Once it has completed, force your device to power off by holding down the power button
+  + Your device will only boot to the SafeB9SInstaller screen until the next section is completed
+
+##### Secțiunea IV - Configurând Luma3DS
+
+1. Introduceți cardul SD în calculator
+1. Delete `boot.firm` from the root of your SD card
+1. Copiați `boot.firm` de la Luma3DS `.7z` în rădăcina cardului SD
+1. Reintroduceți cardul SD în dispozitivul dumneavoastră
+1. Porniți dispozitivul
+1. Dispozitivul dumneavoastră ar trebui să fi pornit meniul de configurare Luma3DS
+  + Dacă vă apare un ecran negru, [urmați acest ghid de depanare](troubleshooting#ts_sys_b9s)
+1. Folosiți butonul (A) si D-Pad-ul ca să activați următoarele:    
+  + **"Show NAND or user string in System Settings"**
+1. Apăsați (Start) pentru a salva și reporni
+  + Dacă primiţi o eroare, doar continuați spre pagina următoare
+
+___
+
+Continuați la [Finalizând instalarea](finalizing-setup)
+{: .notice--primary}
+
+___
+
+##### Section V - Removing ntrboot
+
+This is an optional section that will allow you to restore your flashcart to its original state (to allow it to be used for its standard functions).
+{: .notice--info}
+
+Do not follow this section until you have completed the rest of the instructions on this page.
+{: .notice--warning}
+
+1. Launch the Luma3DS chainloader by holding (Start) during boot on **the source 3DS**
+1. Select "ntrboot_flasher"
+1. Select "Restore Flash"
+1. Press (Y) to proceed
+1. Așteptați până când procesul este terminat
+1. Apăsați (B) ca să vă întoarceți în meniul principal
+1. Select "EXIT" to power off **the source 3DS**

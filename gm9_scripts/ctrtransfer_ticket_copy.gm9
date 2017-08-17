@@ -1,0 +1,24 @@
+# CTRTransfer Ticket Copy script
+# last changed: 20170716
+# author: Plailect
+
+set SUCCESSMSG "Copied tickets successfully"
+
+ask "This will copy CTRTransfer tickets,\nallowing for your games to work correctly.\n\nContinue?"
+
+allow 1:/
+
+# Mount ticket image backup
+set ERRORMSG "Could not find ticket backup.\nSomething has gone wrong with your CTRTransfer."
+imgmount 1:/dbs/ticket.bak
+
+# Check for "eshop" or "unknown" tickets, ignore "system" tickets (because "system" has no "o" in it)
+# AFAIK there's no better way to do this because I can't do && in a "find" command
+set ERRORMSG "No user tickets found.\nSkip the 'Reinstalling Tickets' section."
+find T:/*o* NULL
+
+set ERRORMSG ""
+rm -o -s $[GM9OUT]/ctrtransfer_tickets
+mkdir $[GM9OUT]/ctrtransfer_tickets
+cp -o -s T:/eshop $[GM9OUT]/ctrtransfer_tickets/eshop
+cp -o -s T:/unknown $[GM9OUT]/ctrtransfer_tickets/unknown

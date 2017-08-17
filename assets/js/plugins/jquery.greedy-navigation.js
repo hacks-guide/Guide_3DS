@@ -6,15 +6,15 @@
 */
 
 var $nav = $('#site-nav');
-var $btn = $('#site-nav button');
+var $btn = $('#site-nav #toggle-nav');
 var $vlinks = $('#site-nav .visible-links');
-var $hlinks = $('#site-nav .hidden-links');
+var $hlinks = $('#site-nav .hidden-links.links-menu');
 
 var breaks = [];
 
 function updateNav() {
 
-  var availableSpace = $btn.hasClass('hidden') ? $nav.width() : $nav.width() - $btn.width() - 30;
+  var availableSpace = $btn.hasClass('hidden') ? $nav.width() : $nav.width() - $btn.width() - 80;
 
   // The visible list is overflowing the nav
   if($vlinks.width() > availableSpace) {
@@ -65,8 +65,28 @@ $(window).resize(function() {
 });
 
 $btn.on('click', function() {
-  $hlinks.toggleClass('hidden');
-  $(this).toggleClass('close');
+  if($hlinks.is(":visible")){
+    $hlinks.addClass('hidden');
+    $btn.removeClass('close');
+  } else {
+    $hlinks.removeClass('hidden');
+    $('.lang-menu').addClass('hidden');
+    $btn.addClass('close');
+    $('.lang-selector').removeClass('close');
+  }
+});
+
+// Language selector button
+$('.lang-selector').on('click', function() {
+  if($('.lang-menu').is(":visible")){
+    $('.lang-menu').addClass('hidden');
+    $('.lang-selector').removeClass('close');
+  } else {
+    $('.lang-menu').removeClass('hidden');
+    $('.lang-selector').addClass('close');
+    $hlinks.addClass('hidden');
+    $btn.removeClass('close');
+  }
 });
 
 updateNav();
