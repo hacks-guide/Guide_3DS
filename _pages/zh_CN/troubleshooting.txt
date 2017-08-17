@@ -2,12 +2,12 @@
 title: "Troubleshooting"
 ---
 
-如果你启动不了你的设备，请参阅本页面中的相关章节，并按照教程执行。 问题解决后，便可回到主教程继续进行。
-（本页面内容较多，请尝试使用Ctrl+F查找相关内容）
+If you are unable to boot your device, please look for the section relevant to you and follow the instructions. Once a solution works for you, you can proceed with the main guide
+(The section is fairly long, try using Ctrl+F to search for your issue).
 
 If you still cannot solve your issue and need to reach out for help, please paste the contents of all relevant .log files from the root of your SD card into a [Gist](https://gist.github.com/), then come for help prepared with a detailed description of your problem and what you've tried.
 
-To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
 ## <a name="twl_broken" />完成本教程后DSi / DS功能失效
 
@@ -55,7 +55,7 @@ Note that if you have any payload files other than `GodMode9.firm` in the `/luma
 1. Press (Start) to reboot your device
 
 ## <a name="gw_fbi" />在Gateway降级过的设备上无法注入Health & Safety应用
-这一因为Gateway的降级方法非常糟糕，会在系统中留下每个app降级前后的两个版本，其中一个不再使用。 One of them is unused, but it confuses the H&S inject system, causing it to inject into the wrong one.
+This is caused by Gateway implementing a very shoddy downgrade method which leaves two versions of each app on the system. One of them is unused, but it confuses the H&S inject system, causing it to inject into the wrong one.
 
 Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
 {: .notice--info}
@@ -85,7 +85,7 @@ Note that if you have any payload files other than `GodMode9.firm` in the `/luma
 1. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then return to [Finalizing Setup](finalizing-setup) and retry the FBI injection
 
 ## <a name="ts_browser" />基于浏览器的漏洞利用失效
-基于浏览器的漏洞利用（例如browserhax和2xrsa）通常不够稳定并经常崩溃，但有时也可以尝试按照下面的步骤修复：
+Browser based exploits (such as browserhax or 2xrsa) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
 
 1. Launch the browser, then launch the browser settings
 1. 移动到页面最底端，选择Initialize Savedata（初始化缓存）（有时也会叫做Clear All Save Data，清除所有缓存）
@@ -116,7 +116,7 @@ Note that if you have any payload files other than `GodMode9.firm` in the `/luma
 
 ## <a name="ts_sys_b9s" />Black screen on SysNAND boot after Installing boot9strap
 
-1. 确保你有一个正常工作的payload
+1. Ensure you have a working payload
     1. Check for the existence of `boot.firm` in the root of your SD card.
 1. 尝试重置Luma3DS的设置
     1. 删除SD卡上的`/luma/config.bin`文件
@@ -132,9 +132,9 @@ Note that if you have any payload files other than `GodMode9.firm` in the `/luma
         + KOR Region: Delete `000000A9`
         + TWN Region: Delete `000000B1`
 1. Try booting without any cartridges inserted (including flashcarts)
-1. 如果你以前用Gateway降过级，确保你使用的是最新版的Luma3DS（版本号在v6.2.3及以上）
+1. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version (v6.2.3 or higher)
 1. 如果你的系统版本在3.0.0到4.5.0之间，进行如下操作：
-    + 确保你使用的是最新版的Luma3DS（版本号在v6.6及以上）
+    + Ensure that you are using the latest Luma3DS version (v6.6 or higher)
     + Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) and rename it to `native.firm`
     + 下载[这个文件](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
     + Copy `native.firm` and `cetk` to the `/luma/` folder on your SD card
