@@ -2,12 +2,12 @@
 title: "Troubleshooting"
 ---
 
-If you are unable to boot your device, please look for the section relevant to you, and follow the instructions. Når en løsning virker for deg, kan du fortsette med hovedveiledningen
-(Denne seksjonen er ganske lang, prøv å bruke Ctrl+F for å søke eller ditt problem.)
+If you are unable to boot your device, please look for the section relevant to you and follow the instructions. Once a solution works for you, you can proceed with the main guide
+(The section is fairly long, try using Ctrl+F to search for your issue).
 
 If you still cannot solve your issue and need to reach out for help, please paste the contents of all relevant .log files from the root of your SD card into a [Gist](https://gist.github.com/), then come for help prepared with a detailed description of your problem and what you've tried.
 
-**For å benytte [magnetlenker](https://en.wikipedia.org/wiki/Magnet_URI_scheme) du finner i veiledningen trenger du en torrentklient som f.eks. [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
 ## <a name="twl_broken" />DSi / DS funksjonalitet virker ikke etter guide
 
@@ -55,7 +55,7 @@ Note that if you have any payload files other than `GodMode9.firm` in the `/luma
 1. Trykk (Start) å restarte enheten
 
 ## <a name="gw_fbi" />Kan ikke injisere H&s Gateway nedgradert enhet
-Dette er forårsaket av Gateways veldig stakkarslige nedgraderingsmetode, som lar to versjoner av hver app bli på systemet. One of them is unused, but it confuses the H&S inject system, causing it to inject into the wrong one.
+This is caused by Gateway implementing a very shoddy downgrade method which leaves two versions of each app on the system. One of them is unused, but it confuses the H&S inject system, causing it to inject into the wrong one.
 
 Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
 {: .notice--info}
@@ -85,7 +85,7 @@ Note that if you have any payload files other than `GodMode9.firm` in the `/luma
 1. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then return to [Finalizing Setup](finalizing-setup) and retry the FBI injection
 
 ## <a name="ts_browser" /> en nettleserbasert exploit fungerer ikke
-Nettleserbaserte exploits (som browserhax eller 2xrsa) er ofte ustabile og krasjer ofte, men de kan noen ganger bli fikset ved å gjennomføre følgende steg
+Browser based exploits (such as browserhax or 2xrsa) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
 
 1. Launch the browser, then launch the browser settings
 1. Bla til bunnen og intialiser savedata (Dette kan også være kalt slett alle lagrede Data)
@@ -116,7 +116,7 @@ Nettleserbaserte exploits (som browserhax eller 2xrsa) er ofte ustabile og krasj
 
 ## <a name="ts_sys_b9s" />Black screen on SysNAND boot after Installing boot9strap
 
-1. Forsikre deg om at du har et nyttelast som fungerer.
+1. Ensure you have a working payload
     1. Check for the existence of `boot.firm` in the root of your SD card.
 1. Prøv å tilbakestille Luma's konfigurasjon og fikse alternativer
     1. Slett `/luma/config.bin` fra SD-kortet
@@ -132,9 +132,9 @@ Nettleserbaserte exploits (som browserhax eller 2xrsa) er ofte ustabile og krasj
         + KOR Region: Slett `000000A9`
         + TWN Region: Delete `000000B1`
 1. Prøv å starte uten spillkasett (inkludert flashkort)
-1. Hvis du nedgraderte med Gateway tidligere, må du kontrollere at du bruker siste utgave av Luma3DS (v6.2.3 eller nyere)
+1. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version (v6.2.3 or higher)
 1. Hvis NANDen din er på en versjon mellom 3.0.0 og 4.5.0 gjør følgende:
-    + Kontroller at du bruker nyeste utgave av Luma3DS (v6.6 eller høyere, i minst)
+    + Ensure that you are using the latest Luma3DS version (v6.6 or higher)
     + Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) and rename it to `native.firm`
     + Last ned [denne filen](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
     + Copy `native.firm` and `cetk` to the `/luma/` folder on your SD card
