@@ -2,12 +2,12 @@
 title: "פתרון בעיות"
 ---
 
-אם אתם לא מצליחים להפעיל את המכשיר שלכם, תחפשו את החלק הרלוונטי לכם ותעקבו אחרי ההוראות. אחרי שפתרון עבד לכם, תמשיכו עם המדריך הראשי
-(הדף הזה ארוך למדי, השתמשו ב Ctrl + F כדי לחפש את הבעיה)
+If you are unable to boot your device, please look for the section relevant to you and follow the instructions. Once a solution works for you, you can proceed with the main guide
+(The section is fairly long, try using Ctrl+F to search for your issue).
 
 אם אתם עדיין לא יכולים לפתור את הבעיה ואתם צריכים עזרה, בבקשה תדביקו את התוכן של כל קבצי ה- .log הרלוונטיים מה- SD אל תוך [Gist](https://gist.github.com/), ואז תבואו לעזרה מוכנים עם מידע רחב על הבעיה ומה ניסיתם.
 
-**כדי להשתמש בקישורי מגנט, תצטרכו כלי טורנט כמו [Deluge](http://dev.deluge-torrent.org/wiki/Download)**
+To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
 ## <a name="twl_broken" />DS / DSi לא מתפקד אחרי סיום המדריך
 
@@ -55,7 +55,7 @@ title: "פתרון בעיות"
 1. תלחצו על (Start) כדי לאתחל את המכשיר
 
 ## <a name="gw_fbi" />אי אפשר להזריק את H&S על קונסולה ששונמכה עם Gateway
-זה קורה בגלל שGateway שנמכו בצורה מאוד גרועה, שמשאירה 2 גרסאות של כל תוכנה על הקונסולה. אחת מהם לא בשימוש, אבל זה מבלבל את מערכת הזרקת H&S, וגורם לה להכניס את FBI לקובץ הלא נכון.
+This is caused by Gateway implementing a very shoddy downgrade method which leaves two versions of each app on the system. אחת מהם לא בשימוש, אבל זה מבלבל את מערכת הזרקת H&S, וגורם לה להכניס את FBI לקובץ הלא נכון.
 
 שימו לב שאם יש לכם קבצי מטען אחרים מ`GodMode9.firm` בתיקיית `/luma/payloads/` על כרטיס הSD שלכם, החזקת (Start) בהפעלה תציג תפריט שבו תצטרכו להשתמש בחיצים ובכפתור ה(A) כדי לבחור ב"GodMode9" בשביל ההוראות האלה. 
 {: .notice--info}
@@ -85,7 +85,7 @@ title: "פתרון בעיות"
 1. אם זה עדיין לא עובד, החזירו את הקבצים עם האותיות הגדולות לתיקייה `content`, העבירו את הקבצים עם האותיות הקטנות לתיקייה `newdir`, חזרו ל[סיום התהליך](finalizing-setup) ונסו שוב להזריק את FBI
 
 ## <a name="ts_browser" />פריצה מבוססת דפדפן לא עובדת
-פריצות מבוססות דפדפן (כגון browserhax או 2xrsa) לעיתים קרובות אינן יציבות וקורסות לעתים קרובות, אבל לפעמים ניתן לתקן אותן על-ידי ביצוע השלבים הבאים
+Browser based exploits (such as browserhax or 2xrsa) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
 
 1. תפתחו את הדפדפן, ואז תפתחו את ההגדרות שלו
 1. רדו למטה ותלחצו על Intiallize Savedate או Clear All Save Data
@@ -117,7 +117,7 @@ title: "פתרון בעיות"
 
 ## <a name="ts_sys_b9s" />מסך שחור בהפעלת SysNAND אחרי התקנת boot9strap
 
-1. תבדקו שיש לכם תוכנה עובדת.
+1. Ensure you have a working payload
     1. תבדקו שיש לכם `boot.firm` מחוץ לכל תיקייה בSD.
 1. תנסו לאפס את ההגדרות של לומה ולתקן אותן
     1. תמחקו את `/luma/config.bin` מה SD שלכם
@@ -134,9 +134,9 @@ title: "פתרון בעיות"
         + אזור KOR: למחוק את `000000A9`
         + אזור TWN: למחוק את `000000B1`
 1. תנסו להפעיל את המכשיר ללא משחק פיזי בפנים
-1. אם שנמכתם עם Gateway, תבדקו שאתם משתמשים בגרסה העדכנית של Luma3DS, לפחות 6.2.3
+1. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version (v6.2.3 or higher)
 1. אם הNAND שלכם היה בין הגרסאות 3.0.0 ו4.5.0 תעשו את זה:
-    תבדקו שאתם משתמשים בגרסה העדכנית של Luma3DS, לפחות 6.6
+    + Ensure that you are using the latest Luma3DS version (v6.6 or higher)
     תורידו את [הקובץ הזה](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) ושנו לו את השם ל-`native.firm`
     + תורידו את [הקובץ הזה](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
     + תעתיקו את `native.firm` ואת `cetk` לתוך התיקייה `/luma/` שב-SD שלכם
