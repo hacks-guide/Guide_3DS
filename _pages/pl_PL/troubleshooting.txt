@@ -2,12 +2,12 @@
 title: "Troubleshooting"
 ---
 
-If you are unable to boot your device, please look for the section relevant to you, and follow the instructions. Kiedy rozwiążesz swój problem, możesz kontynuować z główną instrukcją
-(Ta sekcja jest dosyć długa, spróbuj użyć Ctrl+F aby wyszukać swój problem.)
+If you are unable to boot your device, please look for the section relevant to you and follow the instructions. Once a solution works for you, you can proceed with the main guide
+(The section is fairly long, try using Ctrl+F to search for your issue).
 
 If you still cannot solve your issue and need to reach out for help, please paste the contents of all relevant .log files from the root of your SD card into a [Gist](https://gist.github.com/), then come for help prepared with a detailed description of your problem and what you've tried.
 
-To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
 ## <a name="twl_broken" />Tryb DSi / DS nie działa prawidłowo po ukończeniu instrukcji
 
@@ -55,7 +55,7 @@ Note that if you have any payload files other than `GodMode9.firm` in the `/luma
 1. Press (Start) to reboot your device
 
 ## <a name="gw_fbi" />Nie można wdrożyć aplikacji Health & Safety na konsoli, która miała obniżoną wersję firmware przy użyciu flashcartu Gateway
-Przyczyną tego problemu jest kiepski sposób implementacji procesu obniżania wersji firmware przez Gateway, po którym zostają 2 wersje aplikacji Health & Safety w systemie. One of them is unused, but it confuses the H&S inject system, causing it to inject into the wrong one.
+This is caused by Gateway implementing a very shoddy downgrade method which leaves two versions of each app on the system. One of them is unused, but it confuses the H&S inject system, causing it to inject into the wrong one.
 
 Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
 {: .notice--info}
@@ -85,7 +85,7 @@ Note that if you have any payload files other than `GodMode9.firm` in the `/luma
 1. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then return to [Finalizing Setup](finalizing-setup) and retry the FBI injection
 
 ## <a name="ts_browser" />Exploit przeglądarki internetowej 3DS nie działa
-Exploity wykorzystujące luki w przeglądarce (takie jak browserhax albo 2xrsa) są często niestabilne i zawieszają się. Czasami można to poprawić wykonując następujące kroki
+Browser based exploits (such as browserhax or 2xrsa) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
 
 1. Launch the browser, then launch the browser settings
 1. Przewiń na dół strony, gdzie znajduje się opcja Initialize Savedata (może też występować pod nazwą Clear All Save Data) i ją wybierz
@@ -116,7 +116,7 @@ Exploity wykorzystujące luki w przeglądarce (takie jak browserhax albo 2xrsa) 
 
 ## <a name="ts_sys_b9s" />Black screen on SysNAND boot after Installing boot9strap
 
-1. Upewnij się, że posiadasz działający payload.
+1. Ensure you have a working payload
     1. Check for the existence of `boot.firm` in the root of your SD card.
 1. Spróbuj zresetować konfiurację Luma i ponownie włączyć odpowiednie opcje
     1. Usuń plik `config.bin` z folderu `luma` na twojej karcie SD
@@ -132,9 +132,9 @@ Exploity wykorzystujące luki w przeglądarce (takie jak browserhax albo 2xrsa) 
         + Region KOR: Usuń folder `000000A9`
         + TWN Region: Delete `000000B1`
 1. Spróbuj uruchomić konsolę bez żadnego kartridżu (dotyczy to również flashcartów)
-1. Jeśli konsola miała wcześniej obniżaną wersję firmware przy użyciu flashcartu Gateway, upewnij się że używasz najnowszej wersji Luma3DS (minimum v6.2.3 lub wyższej)
+1. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version (v6.2.3 or higher)
 1. Jeśli NAND twojej konsoli zawiera wersję firmware pomiędzy 3.0.0 a 4.5.0, wykonaj poniższe kroki:
-    + Upewnij się, że korzystasz z najnowszej wersji Luma3DS (minimum v6.6 lub wyższej)
+    + Ensure that you are using the latest Luma3DS version (v6.6 or higher)
     + Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) and rename it to `native.firm`
     + Pobierz [ten plik](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
     + Copy `native.firm` and `cetk` to the `/luma/` folder on your SD card
