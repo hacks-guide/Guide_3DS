@@ -2,12 +2,12 @@
 title: "Troubleshooting"
 ---
 
-Se você não conseguir inicializar o seu dispositivo, por favor procure pela seção relevante a você e siga as instruções. Quando achar uma solução que funcione, você pode voltar e prosseguir com o guia principal.
-(Esta seção é bem longa, use o Ctrl+F para achar o seu problema mais rápido.)
+If you are unable to boot your device, please look for the section relevant to you and follow the instructions. Once a solution works for you, you can proceed with the main guide
+(The section is fairly long, try using Ctrl+F to search for your issue).
 
 Se você não puder resolver o seu problema sozinho e precisar de ajuda, por favor copie e cole o conteúdo de todos os arquivos .log relevantes num [Gist](https://gist.github.com/), e somente então peça ajuda com uma descrição detalhada do seu problema e do que você já tentou fazer para resolvê-lo.
 
-Para usar os links [magnéticos](https://pt.wikipedia.org/wiki/Magnet-Link) nesta página, você precisará de um cliente de torrent como o [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
 ## <a name="twl_broken" />Aplicativos de DSi / DS não funcionam mais depois de terminar o guia
 
@@ -55,7 +55,7 @@ Note que se você tem outros arquivos de payload diferentes do `GodMode9.firm` n
 1. Aperte (Start) para reiniciar o dispositivo
 
 ## <a name="gw_fbi" />Não consigo injetar o Informações sobre saúde e segurança em um dispositivo que sofreu um downgrade com Gateway
-Isso é causado porque o Gateway emprega um método inferior no seu downgrade para a 4.x, deixando duas versões de cada app no sistema. Uma delas não é usada, mas isso confunde o sistema de injeção fazendo-o injetar na versão errada.
+This is caused by Gateway implementing a very shoddy downgrade method which leaves two versions of each app on the system. Uma delas não é usada, mas isso confunde o sistema de injeção fazendo-o injetar na versão errada.
 
 Note que se você tem outros arquivos de payload diferentes do `GodMode9.firm` na pasta `/luma/payloads/` do seu cartão SD, segure (Start) durante a inicialização para exibir um "menu de chainloader" onde você terá que utilizar os botões direcionais e o botão (A) para selecionar "GodMode9" para estas instruções. 
 {: .notice--info}
@@ -85,7 +85,7 @@ Note que se você tem outros arquivos de payload diferentes do `GodMode9.firm` n
 1. Se isto ainda não funcionar, mova os arquivos com as extensões em maiúsculo de volta para a pasta `content`, depois mova os arquivos com as extensões em minúsculo para a pasta `newdir` e depois retorne para [Finalizando a instalação](finalizing-setup) e tente a injeção do FBI novamente
 
 ## <a name="ts_browser" />Um exploit do navegador não está funcionando
-Exploits do navegador (como browserhax ou 2xrsa) são normalmente instáveis e falham frequentemente, mas em alguns casos eles podem ser consertados seguindo as seguintes etapas
+Browser based exploits (such as browserhax or 2xrsa) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
 
 1. Inicie o navegador, e em seguida abra as configurações do navegador
 1. Desça até o final e use o `Deletar dados salvos`
@@ -116,7 +116,7 @@ Exploits do navegador (como browserhax ou 2xrsa) são normalmente instáveis e f
 
 ## <a name="ts_sys_b9s" />Tela preta ao iniciar a SysNAND após instalar o boot9strap
 
-1. Certifique-se que seu payload é funcional.
+1. Ensure you have a working payload
     1. Verifique a existência do `boot.firm` na raiz do seu cartão SD.
 1. Tente resetar as configurações do Luma e ajustar as opções
     1. Apague o arquivo `/luma/config.bin` do seu cartão SD
@@ -132,9 +132,9 @@ Exploits do navegador (como browserhax ou 2xrsa) são normalmente instáveis e f
         + Região KOR: Apague `000000A9`
         + Região TWN: Apague `000000B1`
 1. Tente ligar sem nenhum cartucho inserido (incluindo flashcarts)
-1. Caso você tenha realizado um downgrade com algum Gateway anteriormente, certifique-se de estar usando a versão mais recente do Luma3DS (v6.2.3 ou superior, pelo menos)
+1. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version (v6.2.3 or higher)
 1. Se sua NAND estiver com a firmware numa versão entre 3.0.0 e 4.5.0, faça o seguinte:
-    + Certifique-se de que você está usando o Luma3DS versão 6.6 ou mais recente
+    + Ensure that you are using the latest Luma3DS version (v6.6 or higher)
     + Baixe [este arquivo](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) e renomeie-o para `native.firm`
     + Baixe [este arquivo](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
     + Copie `native.firm` e `cetk` para a pasta `/luma/` no seu cartão SD
