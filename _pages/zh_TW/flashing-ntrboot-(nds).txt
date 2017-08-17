@@ -1,12 +1,12 @@
 ---
-title: "Flashing ntrboot (NDS)"
+title: "寫入 ntrboot 漏洞（透過 NDS）"
 ---
 
 在開始前，請先確保您已閱讀完 [ntrboot](ntrboot) 頁面。
 
-請注意，在刷入 ntrboot 漏洞後，只要您的燒錄卡還仍裝著漏洞，它將失去燒錄卡的作用（除了 Acekard 2i 外，它仍能於*已安裝自製韌體的主機中正常運作*） 。 There are optional steps at the end of the ntrboot boot9strap installation instructions to remove it from your flashcart when you are done.
+請注意，在刷入 ntrboot 漏洞後，只要您的燒錄卡還仍裝著漏洞，它將失去燒錄卡的作用（除了 Acekard 2i 外，它仍能於*已安裝自製韌體的主機中正常運作*） 。 若有需要，本節最後會附帶些移除 ntrboot boot9strap 漏洞的步驟。
 
-If you would like to remove the ntrboot exploit and restore your flashcart to its original state, note that you should *not* power off your NDS / NDSL until you have restored your flashcart. This is because the flashcart cannot be used to launch `.nds` files while the ntrboot exploit is installed on it, so if you exit the flasher application you will not be able to re-enter it.
+若您想將 ntrboot 漏洞移除且還原至燒錄卡的原始狀態，那請務必注意您*千萬不可以*在還原燒錄卡前關閉您的 NDS 或 NDSL 主機。 這是因為燒錄卡不能在已安裝 ntrboot 漏洞的情況下啟動任何 `.nds` 檔案，所以一旦在您離開了刷寫程式後，您將再也無法使用它了。
 {: .notice--warning}
 
 請注意，在某些特殊情況下，某些冒牌的燒錄卡很有可能會在過程中變磚，使得燒錄卡變得無法使用。 這是不大可能的，但不論如何，我們只支援寫在相容清單中的燒錄卡。 為了避免您採購燒錄卡時買到了冒牌卡帶，建議您應於較知名且放心的網站上購買您的燒錄卡（如 [NDS Card](http://www.nds-card.com/)）。
@@ -16,35 +16,35 @@ If you would like to remove the ntrboot exploit and restore your flashcart to it
 
 * 一張相容於 ntrboot 的 DS / DSi 燒錄卡：
   + Acekard 2i 或 R4i Gold 3DS RTS
-* Two devices 
-  + **The source NDS / NDSL**: the Nintendo DS or Nintendo DS Lite which is compatible with your flashcart
-  + **The target 3DS**: the 3DS family device on stock firmware
-* The latest release of [ak2i_ntrcardhax_flasher](https://github.com/d3m3vilurr/ak2i_ntrcardhax_flasher/releases/latest)
+* 兩台主機 
+  + **始源 NDS / NDSL 主機**：一台可搭配您的燒錄卡使用的任天堂 DS 或 DS Lite 主機
+  + **3DS 目標機**：一台已搭載原廠系統的 3DS 系列主機
+* 最新版的 [ak2i_ntrcardhax_flasher](https://github.com/d3m3vilurr/ak2i_ntrcardhax_flasher/releases/latest)
 
 #### 操作說明
 
 ##### 第一節 — 準備工作
 
-1. Power off **the source NDS / NDSL**
-1. Insert your flashcart's SD card into your computer
-1. Copy `ak2i_ntrcardhax_flasher.nds` to your flashcart's SD card
-1. Reinsert your flashcart's SD card back into your flashcart
-1. Insert your ntrboot compatible DS / DSi flashcart into **the source NDS / NDSL**
+1. 將 **NDS / NDSL 始源機** 關機
+1. 將燒錄卡的 SD 卡插入電腦
+1. 將 `ak2i_ntrcardhax_flasher.nds` 複製到您燒錄卡的 SD 卡中
+1. 重新插入 SD 卡進您的燒錄卡中
+1. 將相容於 ntrboot 的 DS / DSi 燒錄卡插入於 **NDS / NDSL 始源機** 中
 
 ##### 第二節 — 寫入 ntrboot
 
-1. Launch `ak2i_ntrcardhax_flasher.nds` on **the source NDS / NDSL** using your flashcart
+1. 透過您的燒錄卡在 **NDS / NDSL 始源機** 上啟動 `ak2i_ntrcardhax_flasher.nds`
 1. 按「A」 繼續
-1. Press (X) to "load flashrom"
+1. 按「X」選擇「load flashrom」
 1. 按「A」 繼續
-1. Eject your flashcart from **the source NDS / NDSL**
-1. Eject the SD card from your flashcart
-1. Reinsert your flashcart into **the source NDS / NDSL** with the SD card removed
+1. 從您的 **NDS / NDSL 始源機**中退出燒錄卡
+1. 從您的燒錄卡中移除 SD 卡
+1. 將未插入 SD 卡的燒錄卡插回至 **NDS / NDSL 始源機**中
 1. 按「A」 繼續
-1. Press (A) to "inject ntrboothax"
-1. Press (A) to select "RETAIL"
-1. Eject your flashcart from **the source NDS / NDSL**
-  + Do *not* exit the flasher application on **the source NDS / NDSL** if you intend to restore your flashcart to its original state after installing boot9strap on **the target 3DS**
+1. 按「A」選擇「inject ntrboothax」
+1. 按「A」選擇「RETAIL」
+1. 從您的 **NDS / NDSL 始源機**中退出燒錄卡
+  若您想要在安裝 **3DS 目標機**上安裝完 boot9strap 並將您的燒錄卡還原至原始狀態，*千萬不要*在還原燒錄卡前關閉您的 **NDS 或 NDSL 始源機**。
 
 ___
 
