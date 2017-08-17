@@ -2,12 +2,12 @@
 title: "Проблемы и их решения"
 ---
 
-Если ваша консоль не загружается, найдите раздел, соответствующий вашей проблеме, и следуйте его инструкциям. После решения возникшей проблемы, вернитесь к основному руководству
-(Этот раздел весьма обширный, воспользуйтесь Ctrl+F для поиска своей проблемы)
+If you are unable to boot your device, please look for the section relevant to you and follow the instructions. Once a solution works for you, you can proceed with the main guide
+(The section is fairly long, try using Ctrl+F to search for your issue).
 
 Если решения вашей проблемы здесь не оказалось, то загрузите содержимое всех .log файлов из корня SD-карты на [Gist](https://gist.github.com/), а затем обращайтесь за помощью, детально описав проблему и испробованные способы решения.
 
-Для использования [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme)-ссылок в этом руководстве необходим torrent-клиент, например [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
 ## <a name="twl_broken" />DSi / DS игры не работают после завершения руководства
 
@@ -55,7 +55,7 @@ title: "Проблемы и их решения"
 1. Нажмите (Start) для перезагрузки
 
 ## <a name="gw_fbi" />Не работает интеграция в Health & Safety на устройстве с пониженной прошивкой при помощи Gateway
-Это вызвано крайне некорректной процедурой понижения прошивки Gateway, которая дублирует каждое приложение в системе. Одно из них не используется, но это сбивает с толку систему интеграции в H&S, из-за чего она интегрирует FBI в неиспользуемый дубликат.
+This is caused by Gateway implementing a very shoddy downgrade method which leaves two versions of each app on the system. Одно из них не используется, но это сбивает с толку систему интеграции в H&S, из-за чего она интегрирует FBI в неиспользуемый дубликат.
 
 Обратите внимание, что если у вас имеются другие файлы помимо `GodMode9.firm` в папке `/luma/payloads/` на SD-карте, удержание кнопки (Start) при загрузке будет запускать "chainloader menu", где вам нужно будет использовать D-Pad и кнопку (A) для выбора "GodMode9" при выполнении этих инструкций. 
 {: .notice--info}
@@ -85,7 +85,7 @@ title: "Проблемы и их решения"
 1. Если это не помогло, верните файлы с расширением `. TMD` и `. APP` обратно в папку `content`, а файлы с расширением `. tmd` и `. app` переместите в папку `newdir`, затем вернитесь к [Завершение установки](finalizing-setup) и попытайтесь интегрировать FBI еще раз
 
 ## <a name="ts_browser" />Не работает эксплойт на основе браузера
-Эксплойты, базирующиеся на браузере (например, browserhax или 2xrsa), нестабильны и часто не срабатывают, но в некоторых случаях это можно исправить, следуя рекомендациям ниже
+Browser based exploits (such as browserhax or 2xrsa) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
 
 1. Откройте браузер, затем настройки браузера (Settings)
 1. Прокрутите до конца вниз и выберите "Удалить сохр. данные" (Initialize Savedata/Clear All Save Data)
@@ -116,7 +116,7 @@ title: "Проблемы и их решения"
 
 ## <a name="ts_sys_b9s" />Черный экран при загрузке SysNAND после установки boot9strap
 
-1. Убедитесь, что у вас установлен рабочий загрузчик
+1. Ensure you have a working payload
     1. Проверьте, есть ли в корне SD-карты файл `boot.firm`.
 1. Попробуйте сбросить настройки Luma3DS
     1. Удалите файл `/luma/config.bin` с SD-карты
@@ -132,9 +132,9 @@ title: "Проблемы и их решения"
         + KOR регион: Удалите `000000A9`
         + TWN регион: Удалите `000000B1`
 1. Попробуйте включить устройство без каких-либо картриджей (включая флеш-картриджи)
-1. Если вы понижали прошивку через Gateway, то убедитесь, что у вас установлена самая последняя версия Luma3DS (не ниже 6.2.3)
+1. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version (v6.2.3 or higher)
 1. Если версия вашего NAND между 3.0.0 и 4.5.0, проделайте следующие действия:
-    + Убедитесь, что используете самую свежую версию Luma 3DS (6.6, или выше)
+    + Ensure that you are using the latest Luma3DS version (v6.6 or higher)
     + Скачайте [этот файл](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) и переименуйте его в `native.firm`
     + Скачайте [этот файл](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
     + Скопируйте `native.firm` и `cetk` в папку `/luma/` на SD-карте
