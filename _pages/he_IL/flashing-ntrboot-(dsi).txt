@@ -1,0 +1,44 @@
+---
+title: "Flashing ntrboot (DSi)"
+---
+
+לפני שאתם ממשיכים, שימו לב שקראתם את כל המידע ב [ntrboot](ntrboot)
+
+This method requires temporary access to a Nintendo DSi that is compatible with your flashcart.
+
+Note that more recent DSi versions have blocked access to some flashcarts. This leaves them unable to launch the flasher `.nds` file on newer versions. The ntrboot compatible flashcarts are able to launch `.nds` files under the following versions:
+
+  + [R4i Gold 3DS RTS](http://www.nds-card.com/ProShow.asp?ProID=149) : All Versions <= 1.4.5
+  + [Acekard 2i](http://www.nds-card.com/ProShow.asp?ProID=160) : All Versions <= 1.4.4
+
+שימו לב שבמקרים נדירים, יתכן שתהליך הצריבה **ישבור** כרטיס פריצה מזוייף ויגרום לו לא לעבוד. זה לא סביר שייקרה, אבל בכל זאת רק כרטיסי פריצה מקוריים שמפורטים נתמכים. כדי להוריד את הסיכויים של להשיג כרטיס פריצה מזוייף, מומלץ להשתמש באתר אמין כדי לקנות את הכרטיס (כמו [NDS Card](http://www.nds-card.com/))
+{: .notice--danger}
+
+#### מה שאתם צריכים
+
+* כרטיס הפריצה שתומך בntrboot שלכם
+* הגרסה העדכנית של [ak2i_ntrcardhax_flasher](https://github.com/d3m3vilurr/ak2i_ntrcardhax_flasher/releases/latest) *(צורב ה`dsi`; לא הצורב הסטנדרטי)*
+
+#### הוראות
+
+##### חלק I - הכנות
+
+1. תכבו את המכשיר
+1. תכניסו את כרטיס ה- SD של כרטיס הפריצה שלכם אל המחשב
+1. תעתיקו את `ak2i_ntrcardhax_flasher_dsi.nds` אל כרטיס הSD של כרטיס הפריצה שלכם
+1. תכניסו בחזרה את כרטיס ה- SD של כרטיס הפריצה שלכם אל כרטיס הפריצה
+1. תכניסו את כרטיס הפריצה של DS \ DSi שתואם ntrboot אל הקונסולה שלכם
+
+##### חלק II - צריבת ntrboot
+
+1. תפעילו את `ak2i_ntrcardhax_flasher_dsi.nds` על הקונסולה שלכם בעזרת כרטיס הפריצה שלכם
+1. תלחצו (A) כדי להמשיך
+  + אם אתם משתמשים בAcekard 2i ואתם רוצים לשחזר את הכרטיס פריצה שלכם מאוחר יותר, תשימו לב ל "HW Rev"
+1. תלחצו (A) בשביל "inject ntrboothax"
+1. תלחצו (A) כדי לבחור ב"RETAIL"
+1. תלחצו (B) בשביל "EXIT"
+
+___
+
+תמשיכו ל [התקנת boot9strap (ntrboot)](installing-boot9strap-(ntrboot))
+{: .notice--primary}
