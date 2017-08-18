@@ -1,0 +1,57 @@
+---
+title: "Flashing ntrboot (3DS Multi System)"
+---
+
+Avant de commencez , assurez vous de connaître les informations sur [Ntrboot](ntrboot)
+
+Note that R4i Gold 3DS RTS flashcarts will not be able to be used for their standard functions (such as launching `.nds` files) while the ntrboot exploit is installed on it. This does not apply to the Acekard 2i.
+
+There are optional steps at the end of the ntrboot boot9strap installation instructions to remove the ntrboot exploit from your flashcart when you are done.
+
+This method requires temporary access to a second 3DS family device that is already running some kind of custom firmware (such as boot9strap or arm9loaderhax). It is compatible with the following flashcarts:
+
+  + [Acekard 2i](http://www.nds-card.com/ProShow.asp?ProID=160)
+  + [R4i Gold 3DS RTS](http://www.nds-card.com/ProShow.asp?ProID=149)
+
+Notez qu'il est possible que pendant le flash sur un clone celui-ci devienne inutilsable . C'est peu probable , mais notez que seule les originaux fonctionnent avec Ntrboot . Pour réduire les chances d'avoir une contrefaçon utilisez ([NDS Card](http://www.nds-card.com/))
+{: .notice--danger}
+
+#### Ce dont vous aurez besoin
+
+* Your ntrboot compatible flashcart
+* Deux dispositifs de famille de 3DS 
+  ++ **La 3DS source**: La 3DS faisant tourner un Custom Firmware (comme boot9strap ou arm9loaderhax) *dans sa version la plus récente*
+  + **La 3DS cible**: la 3DS en firmware normal
+* La dernière version de [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(ntr standard, pas le fichier `devkit`)*
+* La dernière version de [ntrboot_flasher] (https://github.com/kitling/ntrboot_flasher/releases/latest)
+
+#### Instructions
+
+##### Section I - Préparation
+
+1. Éteignez **La 3DS source**
+1. Insérez la **carte SD de la 3DS source** dans votre ordinateur
+1. Créez un dossier appelé `ntrboot` à la racine de votre carte SD
+1. Copiez `boot9strap_ntr.firm` et `boot9strap_ntr.firm.sha depuis le fichier `.zip` de boot9strap ntr vers le dossier `/ntrboot/` sur votre carte SD
+1. Copiez `ntrboot_flasher.firm` de l'archive ntrboot_flasher `.zip` dans le dossier `/luma/payloads` sur **la carte SD de la 3DS source.**
+1. Réinsérez **de nouveau la carte SD de la source 3DS**
+1. Insérez votre linker DS dans *la 3DS source**
+
+### Section II - Flasher ntrboot
+
+1. Démarrez le Luma3DS chainloader en maintenant (Start) pendant le démarrage **source 3DS**
+1. Selectionnez "ntrboot_flasher"
+1. Selectionnez "Dump Flash"
+1. Attendez que le processus soit terminé
+1. Appuyez sur (B) pour revenir au menu principal
+1. Selectionnez "Inject Ntrboot"
+1. Appuyer (Y) pour continuer
+1. Appuyer (R) pour ntrboot retail
+1. Attendez que le processus soit terminé
+1. Appuyez sur (B) pour revenir au menu principal
+1. Selectionnez "EXIT" pour éteindre **la source 3DS**
+
+___
+
+Continuer à [installation de boot9strap (ntrboot)](installing-boot9strap-(ntrboot))
+{: .notice--primary}
