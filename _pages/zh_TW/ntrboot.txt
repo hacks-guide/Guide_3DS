@@ -5,12 +5,14 @@ title: "ntrboot"
 如果您先前已將 ntrboot 刷入至您的燒錄卡中，您可參考[安裝 boot9strap（透過 ntrboot）](installing-boot9strap-(ntrboot))中的使用說明。
 {: .notice--success}
 
-透過 ntrboot 的 boot9strap 安裝將需要使用可相容的燒錄卡。 下表為目前已知相容的燒錄卡：
+透過 ntrboot 的 boot9strap 安裝將需要使用可相容的燒錄卡。
 
-  + [Acekard 2i](http://www.nds-card.com/ProShow.asp?ProID=160)
+The ntrboot exploit itself is compatible with the following flashcarts:
+
   + [R4i Gold 3DS RTS](http://www.nds-card.com/ProShow.asp?ProID=149)
+  + [Acekard 2i](http://www.nds-card.com/ProShow.asp?ProID=160)
 
-您可以透過兩種不同的方式來將 ntrboot 刷寫至您的燒錄卡中。
+Note that specific methods may have additional compatibility information.
 
 若您想要改的目標機為折疊式的主機，透過這種漏洞的破解方式都得使用一塊小磁鐵（也就是說，除了舊型 2DS 的主機除外都需要它）。 這是因為本漏洞需要在您的裝置於睡眠狀態中按下這些按鈕。
 
@@ -26,9 +28,44 @@ ___
 
 {% capture notice-1 %}
 
-[寫入 ntrboot 漏洞（透過自製韌體）](flashing-ntrboot-(custom-firmware))
+[Flashing ntrboot (3DS Single System)](flashing-ntrboot-(3ds-single-system))
 
-本方法將需要用到另一台已安裝完自製韌體的主機（如 boot9strap 及 arm9loaderhax） 。
+This method requires nothing more than your stock unhacked 3DS.
+
+Note that more recent 3DS versions have blocked access to some flashcarts. This leaves them unable to launch the flasher `.nds` file on newer versions. The ntrboot compatible flashcarts are able to launch `.nds` files under the following versions:
+
+  + [R4i Gold 3DS RTS](http://www.nds-card.com/ProShow.asp?ProID=149) : All Versions <= 11.5.0
+  + [Acekard 2i](http://www.nds-card.com/ProShow.asp?ProID=160) : All Versions <= 4.3.0
+
+{% endcapture %}
+
+<div class="notice--primary">{{ notice-1 | markdownify }}</div>
+
+{% capture notice-1 %}
+
+[Flashing ntrboot (3DS Multi System)](flashing-ntrboot-(3ds-multi-system))
+
+This method requires temporary access to a second 3DS family device that is already running some kind of custom firmware (such as boot9strap or arm9loaderhax).
+
+{% endcapture %}
+
+<div class="notice--primary">{{ notice-1 | markdownify }}</div>
+
+{% capture notice-1 %}
+
+[Flashing ntrboot (NDS)](flashing-ntrboot-(nds))
+
+This method requires temporary access to a Nintendo DS or Nintendo DS Lite that is compatible with your flashcart.
+
+{% endcapture %}
+
+<div class="notice--primary">{{ notice-1 | markdownify }}</div>
+
+{% capture notice-1 %}
+
+[Flashing ntrboot (DSi)](flashing-ntrboot-(dsi))
+
+This method requires temporary access to a Nintendo DSi that is compatible with your flashcart.
 
 {% endcapture %}
 
