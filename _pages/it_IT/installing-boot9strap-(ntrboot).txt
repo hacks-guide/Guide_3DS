@@ -36,7 +36,7 @@ title: "Installazione di boot9strap (ntrboot)"
 1. Inserisci la flashcart nella tua console
 1. Posiziona il magnete sulla console per attivare il sensore della modalità riposo
   + Su Old 2DS, devi invece attivare la levetta della modalità riposo
-1. Tieni premuto i pulsanti (Accensione) + (Start) + (Select) + (X) per alcuni secondi, quindi lascia i pulsanti
+1. Tieni premuto i pulsanti (Accensione) + (Start) + (Select) + (X) per alcuni secondi, quindi rilascia i pulsanti
   + Data la complessita dell'operazione, potrebbero volerci più tentativi
 1. Se l'exploit è andato a buon fine, si avvierà SafeB9SInstaller
 
@@ -68,13 +68,20 @@ Prosegui con il [Completamento dell'installazione](finalizing-setup)
 
 ___
 
-##### Section V - Rimozione di ntrboot
+The following are optional sections that will allow you to restore your flashcart to its original state (to allow it to be used for its standard functions).
 
-Questa è una sezione facoltativa che ti permetterà di riportare la flashcart al suo stato originale (per poter utilizzarne le funzionalità standard).
-{: .notice--info}
+Note that the Acekard 2i retains its ability to launch `.nds` files while having the ntrboot exploit installed. This only applies when the Acekard 2i is in a 3DS running some kind of custom firmware! While the ntrboot exploit is installed to the Acekard 2i, it will be unable to launch `.nds` files on stock NDS, NDSL, DSi, or 3DS system.
 
-Non seguire questa parte finché non avrai completato tutte le altre istruzioni indicate in questa pagina.
-{: .notice--warning}
+Do not follow any of these sections until you have completed the rest of the instructions on this page.
+
+##### Section V (i) - Removing ntrboot (NDS Flasher)
+
+1. Eject your flashcart from **the target 3DS**
+1. Reinserisci la flashcart nel **NDS / NDSL di partenza** con la scheda SD rimossa
+1. Press (Y) to "restore flashrom"
+1. Premi (B) su "EXIT"
+
+##### Section V (ii) - Removing ntrboot (3DS Multi System)
 
 1. Avvia il chainloader Luma3DS premendo (Start) durante l'avvio del **3DS di partenza**
 1. Seleziona "ntrboot_flasher"
@@ -83,3 +90,32 @@ Non seguire questa parte finché non avrai completato tutte le altre istruzioni 
 1. Attendi il termine del processo
 1. Premi (B) per ritornare al menu principale
 1. Seleziona "EXIT" per spegnere il **3DS di partenza**
+
+##### Section V (iii) - Removing ntrboot (3DS Single System)
+
+###### What you need
+
+* L'ultima versione di [ntrboot_flasher](https://github.com/kitling/ntrboot_flasher/releases/latest)
+* The flashrom backup corresponding to your flashcart:
+  + <i class="fa fa-magnet" aria-hidden="true" title="Questo è un link magnet. Use a torrent client to download the file."></i> - [`R4i_Gold_3DS_RTS-Flashrom.zip`](magnet:?xt=urn:btih:0bd5db43b86bcba7aa862c65e15ef8a6358b7099&dn=R4i_Gold_3DS_RTS-Flashrom.zip&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce)
+  + <i class="fa fa-magnet" aria-hidden="true" title="Questo è un link magnet. Use a torrent client to download the file."></i> - [`Acekard_2i_(HW_44)-Flashrom.zip`](magnet:?xt=urn:btih:1f8830ce7fea3a806999734fb8a457fa3e649c1d&dn=Acekard_2i_%28HW_44%29-Flashrom.zip&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce)
+  + <i class="fa fa-magnet" aria-hidden="true" title="Questo è un link magnet. Use a torrent client to download the file."></i> - [`Acekard_2i_(HW_81)-Flashrom.zip`](magnet:?xt=urn:btih:948e6865b57fa2fc469d68df500f774a6d5887a4&dn=Acekard_2i_%28HW_81%29-Flashrom.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce)
+  + Acekard 2i users should have noted their HW Rev number earlier
+  + If you are using an Acekard 2i and did not note your HW Rev, using the "Dump Flash" funciton of ntrboot_flasher will tell you
+
+###### Instructions
+
+1. Spegni il tuo 3DS
+1. Inserisci la scheda SD nel tuo computer
+1. Crea una cartella chiamata `ntrboot` nella directory principale della tua scheda SD
+1. Copy `backup.bin` from your flashrom backup `.zip` to the `/ntrboot/` folder on the root of your SD card
+1. Create a folder named `payloads` in the `luma` folder on your SD card 
+1. Copia il file `ntrboot_flasher.firm` dall'archivio `.zip` di ntrboot_flasher nella cartella `/luma/payloads` della scheda SD del **3DS di partenza**
+1. Reinsert your SD card back into your device
+1. Inserisci la flashcart DS / DSi compatibile con ntrboot nella tua console
+1. Launch ntrboot_flasher by holding (Start) during boot
+1. Seleziona "Restore Flash"
+1. Premi (Y) per procedere
+1. Attendi il termine del processo
+1. Premi (B) per ritornare al menu principale
+1. Select "EXIT" to power off your device
