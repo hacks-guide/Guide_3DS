@@ -4,9 +4,16 @@ title: "寫入 ntrboot 漏洞（透過 NDS）"
 
 在開始前，請先確保您已閱讀完 [ntrboot](ntrboot) 頁面。
 
-請注意，只要您的燒錄卡仍裝著 ntrboot 漏洞，它將失去原卡的功用（除了 Acekard 2i 外，它仍能於*已安裝自製韌體的主機中正常運作*） 。 若有需要，本節最後會附帶些移除 ntrboot boot9strap 漏洞的步驟。
+Note that R4i Gold 3DS RTS flashcarts will not be able to be used for their standard functions (such as launching `.nds` files) while the ntrboot exploit is installed on it. This does not apply to the Acekard 2i.
 
-若您想將 ntrboot 漏洞移除且還原至燒錄卡的原始狀態，那請務必注意您*千萬不可以*在還原燒錄卡前關閉您的 NDS 或 NDSL 主機。 這是因為燒錄卡不能在已安裝 ntrboot 漏洞的情況下啟動任何 `.nds` 檔案，所以一旦在您離開了刷寫程式後，您將再也無法使用它了。
+There are optional steps at the end of the ntrboot boot9strap installation instructions to remove the ntrboot exploit from your flashcart when you are done.
+
+This method requires temporary access to a Nintendo DS or Nintendo DS Lite that is compatible with your flashcart. Note that this method is *not* compatible with the Nintendo DSi. It is compatible with the following flashcarts:
+
+  + [Acekard 2i](http://www.nds-card.com/ProShow.asp?ProID=160)
+  + [R4i Gold 3DS RTS](http://www.nds-card.com/ProShow.asp?ProID=149)
+
+If you would like to remove the ntrboot exploit and restore your flashcart to its original state on the R4i Gold 3DS RTS flashcart, note that you should *not* power off your NDS / NDSL until you have restored your flashcart. This is because the R4i Gold 3DS RTS flashcart cannot be used to launch `.nds` files while the ntrboot exploit is installed on it, so if you exit the flasher application you will not be able to re-enter it.
 {: .notice--warning}
 
 請注意，在某些特殊情況下，某些冒牌的燒錄卡很有可能會在過程中變磚，使得燒錄卡變得無法使用。 這是不大可能的，但不論如何，我們只支援寫在相容清單中的燒錄卡。 為了避免您採購燒錄卡時買到了冒牌卡帶，建議您應於較知名且放心的網站上購買您的燒錄卡（如 [NDS Card](http://www.nds-card.com/)）。
@@ -14,12 +21,11 @@ title: "寫入 ntrboot 漏洞（透過 NDS）"
 
 #### 必備項目
 
-* 一張相容於 ntrboot 的 DS / DSi 燒錄卡：
-  + Acekard 2i 或 R4i Gold 3DS RTS
+* Your ntrboot compatible flashcart
 * 兩台主機 
   + **始源 NDS / NDSL 主機**：一台可搭配您的燒錄卡使用的任天堂 DS 或 DS Lite 主機
   + **3DS 目標機**：一台已搭載原廠系統的 3DS 系列主機
-* 最新版的 [ak2i_ntrcardhax_flasher](https://github.com/d3m3vilurr/ak2i_ntrcardhax_flasher/releases/latest)
+* The latest release of [ak2i_ntrcardhax_flasher](https://github.com/d3m3vilurr/ak2i_ntrcardhax_flasher/releases/latest) *(standard flasher; not the `dsi` flasher)*
 
 #### 操作說明
 
