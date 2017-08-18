@@ -5,19 +5,21 @@ title: "ntrboot"
 Se hai già installato ntrboot nella tua flashcart, troverai i passi successivi alla pagina [Installazione di boot9strap (ntrboot)](installing-boot9strap-(ntrboot)).
 {: .notice--success}
 
-L'installazione di boot9strap tramite ntrboot richiede una flashcart DS / DSi compatibile. La lista delle flashcart attualmente compatibili è la seguente:
+L'installazione di boot9strap tramite ntrboot richiede una flashcart DS / DSi compatibile.
 
-  + [Acekard 2i](http://www.nds-card.com/ProShow.asp?ProID=160)
+The ntrboot exploit itself is compatible with the following flashcarts:
+
   + [R4i Gold 3DS RTS](http://www.nds-card.com/ProShow.asp?ProID=149)
+  + [Acekard 2i](http://www.nds-card.com/ProShow.asp?ProID=160)
 
-Ci sono due metodi per installare ntrboot nella tua flashcart.
+Note that specific methods may have additional compatibility information.
 
 Questo exploit, a prescindere dal metodo di flashing, richiede l'uso di un piccolo magnete se la console di destinazione è a chiusura (ovvero qualsiasi modello della famiglia 3DS che non sia l'Old 2DS con la levetta per la modalità riposo). in quanto la console deve essere in modalità riposo ma al contempo i pulsanti devono rimanere accessibili.
 
 Per testare il funzionamento del magnete, appoggialo vicino ai pulsanti (A)(B)(X)(Y) mentre la console è accesa per verificare l'attivazione della modalità riposo. In tal caso, entrambi gli schermi si spegneranno finché il magnete rimane in questa posizione.
 {: .notice--info}
 
-Nota che la flashcart non potrà più essere utilizzata per le sue funzioni normali finchè l'exploit ntrboot è installato su di essa (fatta eccezione per la Acekard 2i che funzionerà comunque solo su *console 3DS con un custom firmware installato*). Per rimuoverlo dalla flashcart al termine dell'installazione, sono presenti al termine della guida delle istruzioni opzionali.
+Tieni presente che la flashcart non potrà più essere utilizzata per le sue funzioni normali finché l'exploit ntrboot sarà installato su di essa (fatta eccezione per la Acekard 2i che funzionerà comunque solo su *console 3DS con un custom firmware installato*). Per rimuoverlo dalla flashcart al termine dell'installazione, sono presenti al termine della guida delle istruzioni opzionali.
 
 Tieni presente che in rare circostanze è possibile **brickare** una flashcart contraffatta durante il flashing, e renderla permanentemente inutilizzabile. È improbabile, tuttavia sono supportate soltanto le flashcart originali qui indicate. Per ridurre i rischi di ottenere una flashcart contraffatta, si raccomanda di comprarne una solo da siti affidabili (come [NDS Card](http://www.nds-card.com/))
 {: .notice--danger}
@@ -26,9 +28,44 @@ ___
 
 {% capture notice-1 %}
 
-[Flash di ntrboot (Custom Firmware)](flashing-ntrboot-(custom-firmware))
+[Flashing ntrboot (3DS Single System)](flashing-ntrboot-(3ds-single-system))
 
-Questo metodo richiede temporaneamente l'utilizzo di una console con già installato un custom firmware (come boot9strap o arm9loaderhax).
+This method requires nothing more than your stock unhacked 3DS.
+
+Note that more recent 3DS versions have blocked access to some flashcarts. This leaves them unable to launch the flasher `.nds` file on newer versions. The ntrboot compatible flashcarts are able to launch `.nds` files under the following versions:
+
+  + [R4i Gold 3DS RTS](http://www.nds-card.com/ProShow.asp?ProID=149) : All Versions <= 11.5.0
+  + [Acekard 2i](http://www.nds-card.com/ProShow.asp?ProID=160) : All Versions <= 4.3.0
+
+{% endcapture %}
+
+<div class="notice--primary">{{ notice-1 | markdownify }}</div>
+
+{% capture notice-1 %}
+
+[Flashing ntrboot (3DS Multi System)](flashing-ntrboot-(3ds-multi-system))
+
+This method requires temporary access to a second 3DS family device that is already running some kind of custom firmware (such as boot9strap or arm9loaderhax).
+
+{% endcapture %}
+
+<div class="notice--primary">{{ notice-1 | markdownify }}</div>
+
+{% capture notice-1 %}
+
+[Flashing ntrboot (NDS)](flashing-ntrboot-(nds))
+
+This method requires temporary access to a Nintendo DS or Nintendo DS Lite that is compatible with your flashcart.
+
+{% endcapture %}
+
+<div class="notice--primary">{{ notice-1 | markdownify }}</div>
+
+{% capture notice-1 %}
+
+[Flashing ntrboot (DSi)](flashing-ntrboot-(dsi))
+
+This method requires temporary access to a Nintendo DSi that is compatible with your flashcart.
 
 {% endcapture %}
 
