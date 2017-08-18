@@ -5,12 +5,14 @@ title: "ntrboot"
 Если вы уже прошили ntrboot на ваш флешкартридж, вы можете перейти к странице [Установка boot9strap (ntrboot)](installing-boot9strap-(ntrboot)) для получения инструкций о том, как его использовать.
 {: .notice--success}
 
-Для установки boot9strap при помощи ntrboot требуется совместимый DS / DSi флешкартридж, на который можно прошить ntrboot. Текущий список совместимых флешкартриджей указан ниже:
+Для установки boot9strap при помощи ntrboot требуется совместимый DS / DSi флешкартридж, на который можно прошить ntrboot.
 
-  + [Acekard 2i](http://www.nds-card.com/ProShow.asp?ProID=160)
+The ntrboot exploit itself is compatible with the following flashcarts:
+
   + [R4i Gold 3DS RTS](http://www.nds-card.com/ProShow.asp?ProID=149)
+  + [Acekard 2i](http://www.nds-card.com/ProShow.asp?ProID=160)
 
-Существует два различных способа прошивки ntrboot на флешкартридж.
+Note that specific methods may have additional compatibility information.
 
 The usage of this exploit, regardless of flashing method, requires access to a small magnet if the target device is of a folding style (any 3DS family system that is not the old 2DS with a sleep switch). Это необходимо, потому что эксплойт требует ввести консоль в режим ожидания, сохранив при этом доступ к кнопкам.
 
@@ -26,9 +28,44 @@ ___
 
 {% capture notice-1 %}
 
-[Прошивка ntrboot (Кастомная прошивка)](flashing-ntrboot-(custom-firmware))
+[Flashing ntrboot (3DS Single System)](flashing-ntrboot-(3ds-single-system))
 
-Этот метод требует временный доступ ко второй консоли с установленной кастомной прошивкой (например boot9strap или arm9loaderhax).
+This method requires nothing more than your stock unhacked 3DS.
+
+Note that more recent 3DS versions have blocked access to some flashcarts. This leaves them unable to launch the flasher `.nds` file on newer versions. The ntrboot compatible flashcarts are able to launch `.nds` files under the following versions:
+
+  + [R4i Gold 3DS RTS](http://www.nds-card.com/ProShow.asp?ProID=149) : All Versions <= 11.5.0
+  + [Acekard 2i](http://www.nds-card.com/ProShow.asp?ProID=160) : All Versions <= 4.3.0
+
+{% endcapture %}
+
+<div class="notice--primary">{{ notice-1 | markdownify }}</div>
+
+{% capture notice-1 %}
+
+[Flashing ntrboot (3DS Multi System)](flashing-ntrboot-(3ds-multi-system))
+
+This method requires temporary access to a second 3DS family device that is already running some kind of custom firmware (such as boot9strap or arm9loaderhax).
+
+{% endcapture %}
+
+<div class="notice--primary">{{ notice-1 | markdownify }}</div>
+
+{% capture notice-1 %}
+
+[Flashing ntrboot (NDS)](flashing-ntrboot-(nds))
+
+This method requires temporary access to a Nintendo DS or Nintendo DS Lite that is compatible with your flashcart.
+
+{% endcapture %}
+
+<div class="notice--primary">{{ notice-1 | markdownify }}</div>
+
+{% capture notice-1 %}
+
+[Flashing ntrboot (DSi)](flashing-ntrboot-(dsi))
+
+This method requires temporary access to a Nintendo DSi that is compatible with your flashcart.
 
 {% endcapture %}
 
