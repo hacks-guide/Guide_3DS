@@ -1,0 +1,57 @@
+---
+title: "Flashing ntrboot (3DS Multi System)"
+---
+
+Varmista ennen jatkamista, että olet lukenut kaikki [ntrbootia koskevat huomautukset](ntrboot).
+
+Note that R4i Gold 3DS RTS flashcarts will not be able to be used for their standard functions (such as launching `.nds` files) while the ntrboot exploit is installed on it. This does not apply to the Acekard 2i.
+
+There are optional steps at the end of the ntrboot boot9strap installation instructions to remove the ntrboot exploit from your flashcart when you are done.
+
+This method requires temporary access to a second 3DS family device that is already running some kind of custom firmware (such as boot9strap or arm9loaderhax). It is compatible with the following flashcarts:
+
+  + [Acekard 2i](http://www.nds-card.com/ProShow.asp?ProID=160)
+  + [R4i Gold 3DS RTS](http://www.nds-card.com/ProShow.asp?ProID=149)
+
+Huomaa, että joissain harvinaisissa yhteensattumissa asennusprosessi saattaa **vioittaa** jäljitelmä-flash-korttia ja tehdä siitä pysyvästi käyttökelvottoman. Vaikka tämä onkin epätodennäköistä, on suositeltavaa käyttää vain alkuperäisiä kortteja. Jotta välttyisit jäljitelmäkortin saamiselta, on suositeltavaa käyttää flash-kortin ostamiseen hyvämaineista sivustoa (kuten [NDS Card](http://www.nds-card.com/)ia).
+{: .notice--danger}
+
+#### Tarpeet
+
+* Your ntrboot compatible flashcart
+* Kaksi 3DS-perheen konsolia 
+  + **Lähde-3DS**: 3DS-perheen konsoli, jolla on jo asennettuna jokin mukautettu laiteohjelmisto (kuten boot9strap tai arm9loaderhax)
+  + **Kohde-3DS**: konsoli, jolla on vakiolaiteohjelmisto
+* Boot9strapin [viimeisin julkaisu](https://github.com/SciresM/boot9strap/releases/latest) *(`ntr`-boot9strap; ei `devkit`-tiedosto)*
+* Ntrboot_flasherin [viimeisin julkaisu](https://github.com/kitling/ntrboot_flasher/releases/latest)
+
+#### Ohjeet
+
+##### Vaihe I – Valmistelut
+
+1. Sammuta **lähde-3DS**
+1. Aseta **lähde-3DS**:n SD-kortti tietokoneeseesi
+1. Luo `ntrboot`-niminen kansio SD-korttisi juureen
+1. Kopioi ntr-`.zip`-pakkauksesta `boot9strap_ntr.firm` ja `boot9strap_ntr.firm.sha` SD-korttisi `/ntrboot/`-kansioon
+1. Kopioi ntrboot_flasher-`.zip`-pakkauksesta `ntrboot_flasher.firm` **lähde-3DS**:n SD-kortin `/luma/payloads`-kansioon
+1. Aseta **lähde-3DS**:n SD-kortti takaisin konsoliinsa
+1. Aseta ntrboot-yhteensopiva DS-/DSi-flash-korttisi **lähde-3DS**:ään
+
+##### Vaihe II – Ntrbootin asentaminen
+
+1. Avaa **lähde-3DS**:llä Luma3DS:n ketjulataaja pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
+1. Valitse "ntrboot_flasher"
+1. Valitse "Dump Flash"
+1. Odota, kunnes toiminto on suoritettu
+1. Paina (B):tä palataksesi päävalikkoon
+1. Valitse "Inject Ntrboot"
+1. Paina (Y):tä jatkaaksesi
+1. Paina (R):ää valitaksesi vaihtoehdon "retail unit ntrboot"
+1. Odota, kunnes toiminto on suoritettu
+1. Paina (B):tä palataksesi päävalikkoon
+1. Valitse "EXIT" sammuttaaksesi **lähde-3DS**:n
+
+___
+
+Jatka osioon [Boot9strapin asentaminen (ntrboot)](installing-boot9strap-(ntrboot))
+{: .notice--primary}
