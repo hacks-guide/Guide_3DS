@@ -68,13 +68,20 @@ ___
 
 ___
 
-##### 第五節 — 移除 ntrboot
+The following are optional sections that will allow you to restore your flashcart to its original state (to allow it to be used for its standard functions).
 
-本節為教您如何回復燒錄卡功能的選用章節（這樣您可以繼續使用原燒錄卡的功能）。
-{: .notice--info}
+Note that the Acekard 2i retains its ability to launch `.nds` files while having the ntrboot exploit installed. This only applies when the Acekard 2i is in a 3DS running some kind of custom firmware! While the ntrboot exploit is installed to the Acekard 2i, it will be unable to launch `.nds` files on stock NDS, NDSL, DSi, or 3DS system.
 
-請不要在完成以上節錄前進行本操作。
-{: .notice--warning}
+Do not follow any of these sections until you have completed the rest of the instructions on this page.
+
+##### Section V (i) - Removing ntrboot (NDS Flasher)
+
+1. Eject your flashcart from **the target 3DS**
+1. 將未插入 SD 卡的燒錄卡插回至 **NDS / NDSL 始源機**中
+1. Press (Y) to "restore flashrom"
+1. Press (B) to "EXIT"
+
+##### Section V (ii) - Removing ntrboot (3DS Multi System)
 
 1. 於 **3DS 始源機**開機時按住「Start」鍵以啟動 Luma3DS 加載選單
 1. 選擇「ntrboot_flasher」
@@ -83,3 +90,32 @@ ___
 1. 等待程序完畢為止
 1. 按「B」回到主選單
 1. 選擇「EXIT」將 **3DS 始源機**關機
+
+##### Section V (iii) - Removing ntrboot (3DS Single System)
+
+###### What you need
+
+* 最新版的 [ntrboot_flasher](https://github.com/kitling/ntrboot_flasher/releases/latest)
+* The flashrom backup corresponding to your flashcart:
+  + <i class="fa fa-magnet" aria-hidden="true" title="這是個種子連結。 Use a torrent client to download the file."></i> - [`R4i_Gold_3DS_RTS-Flashrom.zip`](magnet:?xt=urn:btih:0bd5db43b86bcba7aa862c65e15ef8a6358b7099&dn=R4i_Gold_3DS_RTS-Flashrom.zip&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce)
+  + <i class="fa fa-magnet" aria-hidden="true" title="這是個種子連結。 Use a torrent client to download the file."></i> - [`Acekard_2i_(HW_44)-Flashrom.zip`](magnet:?xt=urn:btih:1f8830ce7fea3a806999734fb8a457fa3e649c1d&dn=Acekard_2i_%28HW_44%29-Flashrom.zip&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce)
+  + <i class="fa fa-magnet" aria-hidden="true" title="這是個種子連結。 Use a torrent client to download the file."></i> - [`Acekard_2i_(HW_81)-Flashrom.zip`](magnet:?xt=urn:btih:948e6865b57fa2fc469d68df500f774a6d5887a4&dn=Acekard_2i_%28HW_81%29-Flashrom.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce)
+  + Acekard 2i users should have noted their HW Rev number earlier
+  + If you are using an Acekard 2i and did not note your HW Rev, using the "Dump Flash" funciton of ntrboot_flasher will tell you
+
+###### Instructions
+
+1. 關閉您的主機
+1. 將 SD 卡插入電腦中
+1. 在 SD 卡的根目錄底下建立一個新的資料夾 `ntrboot`
+1. Copy `backup.bin` from your flashrom backup `.zip` to the `/ntrboot/` folder on the root of your SD card
+1. Create a folder named `payloads` in the `luma` folder on your SD card 
+1. 解壓 ntrboot_flasher `.zip` 中的 `ntrboot_flasher.firm` 檔案至 **3DS 始源機** SD 卡中的 `/luma/payloads` 資料夾中
+1. Reinsert your SD card back into your device
+1. Insert your ntrboot compatible DS / DSi flashcart into your device
+1. Launch ntrboot_flasher by holding (Start) during boot
+1. 選擇「Restore Flash」
+1. 按「Y」繼續
+1. 等待程序完畢為止
+1. 按「B」回到主選單
+1. Select "EXIT" to power off your device
