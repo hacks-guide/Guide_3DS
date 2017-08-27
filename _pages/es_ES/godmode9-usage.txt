@@ -207,3 +207,19 @@ Usa el menú `Titles` de FBI para obtener el Title ID del título instalado que 
     + **Encrypt inplace:** Reemplaza el archivo `.cia` seleccionado con uno cifrado
     + **Desencriptar in-situ:** Reemplaza el archivo `.cia` seleccionado con uno desencriptado
 1. Tu `.cia` cifrado / descifrado será guardado en la ubicación seleccionada
+
+## <a name="rm_nnid" />Remover un NNID sin formatear tu consola
+
+Ten en cuenta que si tienes archivos de payloads distintos de `GodMode9.firm` en la carpeta `/luma/payloads/` en tu tarjeta SD, al mantener (Start) al inicio se desplegará un "chainloader menu" donde tendrás que usar el D-Pad y pulsar (A) para seleccionar "GodMode9", para esas instrucciones. 
+{: .notice--info}
+
+#### Instrucciones
+
+1. Inicia GodMode9 manteniendo presionado (Start) mientras enciendes la consola
+1. Ve a `[1:] SYSNAND CTRNAND` -> `data` -> (ID de 32 caracteres) -> `sysdata` -> `00010038`
+1. Manteniendo pulsado el botón (R), presiona (X) sobre `00000000` para renombrar este archivo
+1. Presiona una vez (Arriba) para cambiar el nombre a `10000000`
+1. Presiona (A) para guardar los cambios
+1. Presiona (A) para desbloquear la escritura en SysNAND, luego haz la combinación de teclas mostrada
+1. Vuelve al menú principal
+1. Presiona (Start) para reiniciar tu consola
