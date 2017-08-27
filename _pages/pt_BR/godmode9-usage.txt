@@ -207,3 +207,19 @@ Utilize o menu `Titles` no FBI para obter o ID do aplicativo instalado que você
     + **Encrypt inplace:** Substitui o arquivo `.cia` selecionado por uma versão criptografada
     + **Decrypt inplace:** Substitui o arquivo `.cia` selecionado por uma versão descriptografada
 1. Seu `.cia` criptografado / descriptografado será gravado no local desejado
+
+## <a name="rm_nnid" />Removendo uma NNID sem formatar o seu dispositivo
+
+Note que se você tem outros arquivos de payload diferentes do `GodMode9.firm` na pasta `/luma/payloads/` do seu cartão SD, segure (Start) durante a inicialização para exibir um "menu de chainloader" onde você terá que utilizar os botões direcionais e o botão (A) para selecionar "GodMode9" para estas instruções. 
+{: .notice--info}
+
+#### Instruções
+
+1. Inicie o GodMode9 segurando (Start) durante a inicialização
+1. Navegue para `[1:] SYSNAND CTRNAND` -> `data` -> (ID de 32 caracteres) -> `sysdata` -> `00010038`
+1. Segure o gatilho (R), então aperte (X) no `00000000` para renomear este arquivo
+1. Aperte (Cima) uma vez para mudar o nome para `10000000`
+1. Aperte (A) para salvar as mudanças
+1. Aperte (A) para destravar as modificações na SysNAND, então aperte a sequência de botões solicitada
+1. Volte para o menu inicial
+1. Aperte (Start) para reiniciar seu dispositivo
