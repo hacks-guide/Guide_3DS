@@ -207,3 +207,19 @@ Use the `Titles` menu in FBI to get the Title ID of the installed title you wish
     + **Encrypt inplace:** Replace the selected `.cia` file with an encrypted version
     + **Decrypt inplace:** Replace the selected `.cia` file with a decrypted version
 1. Your encrypted / decrypted `.cia` will be outputted to the desired location
+
+## <a name="rm_nnid" />Removing an NNID without formatting your device
+
+Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
+{: .notice--info}
+
+#### 手順
+
+1. Launch GodMode9 by holding (Start) during boot
+1. Navigate to `[1:] SYSNAND CTRNAND` -> `data` -> (32 Character ID) -> `sysdata` -> `00010038`
+1. (R) を押したまま、`00000000`に (X) を押してファイルの名前を変更します
+1. (Up) を一回押して、名前を`10000000`に変更します
+1. (A) を押して変更を承認します
+1. (A) を押してSysNAND書き込みをアンロックします。表示しているキーコンボを入力します
+1. メインメニューまで戻ります
+1. Press (Start) to reboot your device
