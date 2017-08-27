@@ -207,3 +207,19 @@ Use the `Titles` menu in FBI to get the Title ID of the installed title you wish
     + **Encrypt inplace:** Replace the selected `.cia` file with an encrypted version
     + **Decrypt inplace:** Replace the selected `.cia` file with a decrypted version
 1. Your encrypted / decrypted `.cia` will be outputted to the desired location
+
+## <a name="rm_nnid" />Cihazı formatlamadan NNID kaldırma
+
+Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
+{: .notice--info}
+
+#### Talimatlar
+
+1. Launch GodMode9 by holding (Start) during boot
+1. Navigate to `[1:] SYSNAND CTRNAND` -> `data` -> (32 Character ID) -> `sysdata` -> `00010038`
+1. (R) tuşuna basılı tutun, ardından `00000000` üzerinde X'e basarak dosyayı yeniden adlandırın
+1. Yukarıya bir defa basarak ismini `10000000` olarak değiştirin
+1. (A)'ya basarak değişiklikleri kaydedin
+1. SysNAND yazımını aktifleştirmek için (A)'ya basın, ardından verilen tuş dizimini girin
+1. Ana menüye geri dönün
+1. Press (Start) to reboot your device
