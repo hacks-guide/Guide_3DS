@@ -208,3 +208,19 @@ This is powerful stuff. GodMode9 provides you with the means to do basically any
     + **내부로 암호화:** 선택한 `.cia` 파일을 암호화한 버전으로 바꿔 주세요.
     + **내부로 복호화:** 선택한 `.cia` 파일을 복호화한 버전으로 바꿔 주세요.
 1. 암호화 / 복호화된 `.cia`는 원하는 위치에 출력됩니다.
+
+## <a name="rm_nnid" />Removing an NNID without formatting your device
+
+Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
+{: .notice--info}
+
+#### 진행 방법
+
+1. Launch GodMode9 by holding (Start) during boot
+1. Navigate to `[1:] SYSNAND CTRNAND` -> `data` -> (32 Character ID) -> `sysdata` -> `00010038`
+1. `00000000` 파일의 이름을 변경하기 위해 (R)을 누른 채 (X)를 눌러 주세요.
+1. 십자버튼 (위)를 한 번 눌러 이름을 `10000000`로 바꿔 주세요.
+1. (A)를 눌러 저장해 주세요.
+1. (A)를 눌러 SysNAND 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요.
+1. 메인 메뉴로 돌아가세요.
+1. (start)를 눌러 기기를 다시 시작해 주세요.
