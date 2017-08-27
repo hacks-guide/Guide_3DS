@@ -207,3 +207,19 @@ Utilisez le menu 'Titles' de FBI pour connaitre l'identifiant (ID) du titre que 
     + **Encrypt inplace:** Remplacez le fichier `.cia` sélectionné par une version cryptée
     + **Decrypt inplace:** Remplacez le fichier `.cia` sélectionné par une version déchiffrée
 1. Votre `.cia` crypté / décrypté sera envoyé à l'emplacement désiré
+
+## <a name="rm_nnid" />Supprimer un NNID sans formater votre console
+
+Notez que si vous avez n’importe quel autre payload que `GodMode9.firm` dans le dossier `/luma/payloads/` sur votre carte SD, appuyez (Start) au démarrage affiche un "chainloader menu" où vous devrez utiliser le D-Pad et le bouton (A) pour sélectionner "GodMode9" . 
+{: .notice--info}
+
+#### Instructions
+
+1. Ouvrez Godmode9 en maintenant (Start) au démarrage
+1. Naviguez vers `[1:] SYSNAND CTRNAND` -> `data` -> (32 Character ID) -> `sysdata` -> `00010038`
+1. Maintenez (R) enfoncé et appuyez sur (X) en sélectionnant le fichier `00000000` pour le renommer
+1. Appuyez une fois sur (Haut) pour le renommer en `10000000`
+1. Appuyez sur (A) pour enregistrer les modifications
+1. Appuyez sur (A) pour accéder à l'écriture sur SysNAND, puis effectuez la combinaison de touches demandée
+1. Retournez au menu principal
+1. Appuyez sur (Start) pour redémarrer votre système
