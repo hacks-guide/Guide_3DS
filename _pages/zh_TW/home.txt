@@ -12,8 +12,8 @@ excerpt: "最完整的 3DS 改機教戰手冊，<br />教您如何從原廠主�
 ---
 
 {% capture notice-home %}
-此指南 _僅_ 適用於零售機使用（透過正常管道購買；非任天堂開發者計畫所取得的主機）！    
-如果您的機子是開發平台用的主機（代號 PANDA 或 SNAKE），請見我們的[開發者教學](https://dev.3ds.guide)。
+此指南 _僅_ 適用於零售機使用(透過正常管道購買；非任天堂開發者計畫所取得的主機)！    
+如果您的機子是開發平台用的主機(代號 PANDA 或 SNAKE)，請見我們的[開發者教學](https://dev.3ds.guide)。
 {% endcapture %}
 
 <div class="notice--danger">{{ notice-home | markdownify }}</div>
@@ -27,17 +27,17 @@ excerpt: "最完整的 3DS 改機教戰手冊，<br />教您如何從原廠主�
 請先讀完本手冊的所有序章再進行改機。
 {: .notice--warning}
 
-## 什麼是自製程式（Homebrew）？
+## 什麼是自製程式(Homebrew)？
 
-[**自製程式**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games)（Homebrew）通常是指未經由任天堂所授權之軟體。 透過它，您可以遊玩自製遊戲、使用存檔修改器及備份器等工具，甚至是其他系統的模擬器。
+[**自製程式**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games)(Homebrew)通常是指未經由任天堂所授權之軟體。 透過它，您可以遊玩自製遊戲、使用存檔修改器及備份器等工具，甚至是其他系統的模擬器。
 
-在大多數情況下，您[只需要透過「任天堂 3DS 音樂（Nintendo 3DS Sound）」程式](homebrew-launcher-(soundhax))就可以在主機上運行自製軟體。 除此之外，還有其他方式可以用來運行自製程式，像是透過遊戲和網頁瀏覽器中各式各樣的漏洞。
+在大多數情況下，您[只需要透過「任天堂 3DS 音樂(Nintendo 3DS Sound)」程式](homebrew-launcher-(soundhax))就可以在主機上運行自製軟體。 除此之外，還有其他方式可以用來運行自製程式，像是透過遊戲和網頁瀏覽器中各式各樣的漏洞。
 
-## 什麼是自製韌體（Custom Firmware）？
+## 什麼是自製韌體(Custom Firmware)？
 
-**自製韌體** （CFW）可以做些使用者空間中自製程式無法輕易做到的更高階的修改及破解。 例如，簽證補丁（Signature patches）可以安裝讓任一未簽證的程式到您的主選單上。
+**自製韌體** (CFW)可以做些使用者空間中自製程式無法輕易做到的更高階的修改及破解。 例如，簽證補丁(Signature patches)可以安裝讓任一未簽證的程式到您的主選單上。
 
-任何主機及版本都能夠任意地安裝自製韌體（高於 11.3.0 版本的系統可能會需要使用其他額外工具）。
+任何主機及版本都能夠任意地安裝自製韌體(高於 11.3.0 版本的系統可能會需要使用其他額外工具)。
 
 ## 本手冊將安裝些什麼？
 
@@ -45,22 +45,22 @@ excerpt: "最完整的 3DS 改機教戰手冊，<br />教您如何從原廠主�
 韌體改為基於 boot9strap 的自製韌體。 某些系統版本中，它會將自製程式當作跳板，但主要目的還是為了安裝自製韌體。
 
 boot9strap 是目前最新且最棒的自製韌體啟動方式，有點像 Wii 上面的 BootMii 一樣，光是在開機前幾毫秒就能掌握整台主機的控制權。 它跟 arm9loaderhax 相比能更早取得系統控制權，再加上它跟普通的 sighax 不同，boot9strap 使用
- NDMA 複寫漏洞，於 Boot9 中執行程序。 這也就是說，任何已安裝 boot9strap 的主機皆能轉儲主機中的 OTP 金鑰（`OTP.bin`）、ARM11 bootrom（`boot11.bin`）以及 ARM9 bootrom（`boot9.bin`）。
+ NDMA 複寫漏洞，於 Boot9 中執行程序。 這也就是說，任何已安裝 boot9strap 的主機皆能轉儲主機中的 OTP 金鑰(`OTP.bin`)、ARM11 bootrom(`boot11.bin`)以及 ARM9 bootrom(`boot9.bin`)。
 
-跟其他自製韌體比起來，boot9strap 的優點多太多了。這就是為什麼我們推薦使用本手冊，而非其他還在使用過時軟體（像是 menuhax + rxTools、arm9loaderhax、或甚至普通的 sighax）的教學。
+跟其他自製韌體比起來，boot9strap 的優點多太多了。這就是為什麼我們推薦使用本手冊，而非其他還在使用過時軟體(像是 menuhax + rxTools、arm9loaderhax、或甚至普通的 sighax)的教學。
 
 如果想知道 boot9strap 怎麼運作的，請見由 [SciresM](https://github.com/SciresM/) 所做的[投影片](https://sciresm.github.io/33-and-a-half-c3/)。
 
-如果想看每個計算出的 sighax 簽證檔（boot9strap 平台的基底），請見[此 gist](https://gist.github.com/SciresM/cdd2266efb80175d37eabbe86f9d8c52)。
+如果想看每個計算出的 sighax 簽證檔(boot9strap 平台的基底)，請見[此 gist](https://gist.github.com/SciresM/cdd2266efb80175d37eabbe86f9d8c52)。
 
 ## 我可以透過自製韌體做些什麼？
 
-+ 遊玩任一區的遊戲卡帶或 電子商店（eShop） 上的遊戲
++ 遊玩任一區的遊戲卡帶或 電子商店(eShop) 上的遊戲
 + 透過他人創作的[主題](https://3dsthem.es/)、[徽章](https://badges.3dsthem.es/)、及[啟動畫面](https://splash.3dsthem.es/)來個人化您的 HOME 主選單
 + 套用金手指
 + 遊戲或軟體截圖
 + [備份、編輯以及還原](https://gbatemp.net/threads/413143/)各個遊戲的存檔
-+ 用像是 RetroArch 或其他模擬器來玩些其他系統的遊戲 （New 3DS 效果最佳）
++ 用像是 RetroArch 或其他模擬器來玩些其他系統的遊戲 (New 3DS 效果最佳)
 + 安裝自製軟體，並讓它們出現在您的 HOME 主選單中
 + 將您的卡帶轉成可安裝的格式；這樣就再也不需要帶著卡帶到處跑了
 + 僅適用於 New 3DS 和 New 2DS：透過 NTR 自製系統以無線串流的方式，直播畫面到電腦上
@@ -72,8 +72,8 @@ boot9strap 是目前最新且最棒的自製韌體啟動方式，有點像 Wii �
 + **在開始前，您一定得注意 3DS 改機的風險：每當您修改系統時，都有可能造成無法挽回的磚機。 這種情況是滿罕見的，但還是有可能的；所以請確實遵守每一個步驟。**
 + 如果您之前已透過 EmuNAND 的方式改機，而您現在想把您之前的 EmuNAND 移植到您新的 SysNAND 自製韌體底下，您可以在依正常步驟進行，並在[完成安裝](finalizing-setup)這一步中依照提示還原的您 EmuNAND。
 + 本教學適用於任一區域搭載 11.5.0 或更早版本的 New 3DS、舊型 3DS、New 2DS、舊型 2DS。
-+ 如果一切都順利的話，您將不會失去任何資料（像是遊戲、NNID、存檔... 等都會被留下）。
++ 如果一切都順利的話，您將不會失去任何資料(像是遊戲、NNID、存檔... 等都會被留下)。
 + **請在充電的情況下改機，以確保途中不會因為電力關係而突然關機造成資料遺失或甚至毀損！**
-+ 您的 SD 卡應使用 [MBR 的格式，而非 GPT](http://www.howtogeek.com/245610/)（原廠 SD 卡一律都是以 MBR 格式出廠）。
++ 您的 SD 卡應使用 [MBR 的格式，而非 GPT](http://www.howtogeek.com/245610/)(原廠 SD 卡一律都是以 MBR 格式出廠)。
 + 如果您需要格式化一張新的 SD 卡，可以使用 [`guiformat`](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) 且將配置單位設為 32K。
 + 2DS 跟舊型 3DS 的軟體基本上是幾乎一致的，也就是說任何「舊型 3DS」的步驟也可以適用於 2DS。
