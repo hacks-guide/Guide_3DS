@@ -2,12 +2,12 @@
 title: "疑難排解"
 ---
 
-If you are unable to boot your device, please look for the section relevant to you and follow the instructions. Once a solution works for you, you can proceed with the main guide
-(The section is fairly long, try using Ctrl+F to search for your issue).
+如果您的主機無法開機，請在這裡尋找可能相關的章節並照著步驟走。 問題解決後再繼續讀完本教學
+(本章節比較長一些，建議透過 Ctrl+F 來找尋您的問題)。
 
 如果您仍無法解決您的問題且需要額外幫助，請將 SD 卡根目錄底下的 .log 檔案做成一個 [Gist](https://gist.github.com/)，然後再去找人跟他詳細地解釋問題所在，及所有已嘗試的步驟。
 
-To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download).
+本頁面會有些許的[磁力](https://en.wikipedia.org/wiki/Magnet_URI_scheme)連結，您將需要個像 [Deluge](http://dev.deluge-torrent.org/wiki/Download) 的 BT 種子下載器來下載磁力連結的檔案。
 
 ## <a name="twl_broken" />DSi / DS 的相關功能在完成本手冊步驟後無法使用
 
@@ -37,7 +37,7 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
 1. 啟動 FBI 管理器
 1. 移動至 `SD` -> `cias`
 1. 選擇「\<current directory>」
-1. 選擇 「Install and delete all CIAs」(安裝並刪除所有 CIA 檔案)
+1. 選擇 「Install and delete all CIAs (安裝並刪除所有 CIA 檔案)」
 1. 按下「Home」鍵退出 FBI 管理器
 
 ## <a name="rm_nnid" />如何在不格式化主機的情況下清除 NNID
@@ -55,7 +55,7 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
 1. 按下「Start」鍵重啟您的主機
 
 ## <a name="gw_fbi" />無法在 Gateway 降級過後的主機上植入 FBI 管理器到「健康與警示」程式裡
-This is caused by Gateway implementing a very shoddy downgrade method which leaves two versions of each app on the system. 其中一個是沒用到的版本，而「健康與警示」注射工具不知道這點，而將 FBI 管理器植入到錯誤的程式中。
+這是因為 Gateway 所用的降級方式是非常糟糕的，它將在系統內留下各兩個版本的 3DS 程式。 其中一個是沒用到的版本，而「健康與警示」注射工具不知道這點，而將 FBI 管理器植入到錯誤的程式中。
 
 請注意，如果您在 SD 卡中的 `/luma/payloads/` 資料夾中放有除了 `GodMode9.firm` 的 payload 檔案，在開機時按住「Start」鍵將會顯示一個「加載選單」，從那裏你得透過方向鍵及按鈕「A」選擇「GodMode9」。 
 {: .notice--info}
@@ -85,10 +85,10 @@ This is caused by Gateway implementing a very shoddy downgrade method which leav
 1. 如果還是沒用的話，試試看將大寫副檔名的檔案移至 `content` 資料夾，並將小寫副檔名的檔案移至 `newdir` 資料夾中，再回到[完成安裝](finalizing-setup)中並重新植入 FBI 管理器
 
 ## <a name="ts_browser" />有個瀏覽器漏洞無法使用
-Browser based exploits (such as browserhax or 2xrsa) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
+有時候基於瀏覽器的漏洞 (如 browserhax 或 2xrsa) 不大穩定而且有可能死當，不過有時候也可以透過下列步驟來解決這問題。
 
 1. 啟動網頁瀏覽器，並進入瀏覽器設定
-1. 滑到最下面並「清除資料(Initialize Savedata 或 Clear All Save Data)」
+1. 滑到最下面並「清除資料 (Initialize Savedata 或 Clear All Save Data)」
 1. 再試一次
 
 ## <a name="ts_sys_down" />啟動 SysNAND 時黑屏
@@ -97,7 +97,7 @@ Browser based exploits (such as browserhax or 2xrsa) are often unstable and cras
     1. 關閉您的主機
     1. 將 SD 卡從主機中拔出
     1. 啟動您的主機
-    1. 當 HOME 主選單出現後，再重新插入 SD 卡至主機中。
+    1. 當 HOME 主選單出現後，再重新插入 SD 卡至主機中
     1. 如果上述步驟成功的話，依您主機區域到 SD 卡中的 `/Nintendo 3DS/(32 字元 ID)/(32 字元 ID)/extdata/00000000/` 清除 HOME 主選單的外存
         + 歐版：刪除 `00000098`
         + 日版：刪除 `00000082`
@@ -116,8 +116,8 @@ Browser based exploits (such as browserhax or 2xrsa) are often unstable and cras
 
 ## <a name="ts_sys_b9s" />安裝 boot9strap 後，進入 SysNAND 時黑屏
 
-1. Ensure you have a working payload
-    1. 檢查 `boot.firm` 是否在 SD 卡的根目錄底下。
+1. 請先確保 payload 檔案可以正常運行
+    1. 檢查 `boot.firm` 是否在 SD 卡的根目錄底下
 1. 試試看重設 Luma3DS 的設定檔
     1. 刪除 SD 卡中的 `/luma/config.bin`
     1. 開機後設定 Luma3DS
@@ -132,15 +132,15 @@ Browser based exploits (such as browserhax or 2xrsa) are often unstable and cras
         + 韓版：刪除 `000000A9`
         + 台版：刪除 `000000B1`
 1. 試試看將遊戲卡帶拔出(包括燒錄卡)
-1. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version (v6.2.3 or higher)
+1. 如果您之前有透過 Gateway 進行降級，請確保您使用的是最新版的 Luma3DS (v6.2.3 或較新版本)
 1. 如果您 NAND 的系統版本是在 3.0.0 到 4.5.0 之間，請進行下列操作：
-    + Ensure that you are using the latest Luma3DS version (v6.6 or higher)
+    + 請先確保您 Luma3DS 是最新版本的(v6.6 或較新版本)
     + 下載[此檔案](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056)並將它重新命名為`native.firm`
     + 下載[此檔案](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
     + 複製 `native.firm` 及 `cetk` 檔案到 SD 卡上的 `/luma/` 資料夾
     + 如果您的 Luma3DS 版本為 7.1 或更早的版本，請將 `native.firm` 重新命名為 `firmware.bin`
     + 在更新完您的主機後，刪除這兩個檔案
-1. Try following [11.5.0 CTRTransfer](11.5.0-ctrtransfer)
+1. 試試看進行 [CTRTransfer](ctrtransfer)
 1. 請於 [Discord 的 Nintendo Homebrew 伺服器](https://discord.gg/MWxPgEp)尋求。
 
 ## <a name="ts_sys_blue" />開機時藍屏 (bootrom error)
