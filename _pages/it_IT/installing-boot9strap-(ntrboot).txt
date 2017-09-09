@@ -68,20 +68,20 @@ Prosegui con il [Completamento dell'installazione](finalizing-setup)
 
 ___
 
-The following is an optional section that will allow you to restore your flashcart to its original state (to allow it to be used for its standard functions).
+Questa è una sezione facoltativa che ti permetterà di riportare la flashcart al suo stato originale (per poter utilizzarne le funzionalità standard).
 
 Tieni presente che la Acekard 2i mantiene le funzionalità di avvio dei file `.nds` mentre l'exploit ntrboot è installato. Questo vale soltanto quando l'Acekard 2i è utilizzata su un 3DS con custom firmware installato! Su NDS, NDSL, DSi o 3DS non modificati, l'Acekard 2i non potrà avviare file `.nds` finché l'exploit ntrboot è installato.
 
-Do not follow this section until you have completed the rest of the instructions on this page.
+Non seguire questa parte finché non avrai completato tutte le altre istruzioni indicate in questa pagina.
 
-##### Section V - Removing ntrboot
+##### Sezione V - Rimozione di ntrboot
 
 ###### Cosa serve
 
 * L'ultima versione di [ntrboot_flasher](https://github.com/kitling/ntrboot_flasher/releases/latest)
-* The flashrom backup corresponding to your flashcart    
-  + Note that if you followed "Flashing ntrboot (3DS Multi System)", the flashrom already exists in the correct location and does not need to be downloaded
-  + If you do not know which HW revision you have, just try all of them. Only the correct one will allow your flashcart to launch properly from home menu, but flashing the wrong one will not brick the cart:
+* Il backup della flashrom per la tua flashcart    
+  + Se hai seguito la guida "Flash di ntrboot (Con più 3DS)", la flashrom sarà già presente nella cartella corretta e non sarà necessario riscaricarla
+  + Se non sai quale revisione HW hai, provale tutte. Solo quella corretta ti permetterà di avviare la flashcart dal menu HOME, ma flasharne una sbagliata non brickerà la cartuccia:
   + <i class="fa fa-magnet" aria-hidden="true" title="Questo è un link magnet. Per scaricare il file devi utilizzare un client torrent."></i> - [`R4i_Gold_3DS_(HW_A7)-Flashrom.zip`](magnet:?xt=urn:btih:fd1bc5c522988379ee931db45f82b223241ae729&dn=R4i_Gold_3DS_%28HW_A7%29-Flashrom.zip&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce) *(È compatibile anche con **R4i Gold 3DS RTS**)*
   + <i class="fa fa-magnet" aria-hidden="true" title="Questo è un link magnet. Per scaricare il file devi utilizzare un client torrent."></i> - [`R4i_Gold_3DS_(HW_A6)-Flashrom.zip`](magnet:?xt=urn:btih:ed75f8b81b78dad0d98cea59e38f3f61a80d981d&dn=R4i_Gold_3DS_%28HW_A6%29-Flashrom.zip&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce) *(È compatibile anche con **R4 3D Revolution**)*
   + <i class="fa fa-magnet" aria-hidden="true" title="Questo è un link magnet. Per scaricare il file devi utilizzare un client torrent."></i> - [`R4i_Gold_3DS_(HW_A5)-Flashrom.zip`](magnet:?xt=urn:btih:e69774d8a950879e93b18a5c1ccd36ab305b4acd&dn=R4i_Gold_3DS_%28HW_A5%29-Flashrom.zip&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce) *(È compatibile anche con **Infinity 3 R4i**)*
@@ -101,12 +101,12 @@ Do not follow this section until you have completed the rest of the instructions
 1. Reinserisci la scheda SD nella tua console
 1. Inserisci la flashcart DS / DSi compatibile con ntrboot nella tua console
 1. Avvia ntrboot_flasher tenendo premuto (Start) all'accensione della console
-1. Read the red screen warning
+1. Leggi l'avviso sulla schermata rossa
 1. Premi il pulsante (A) per continuare
-1. Select your flashcart
-  + If you do not see your flashcart in the list at the top, read the bottom screen for more info on each option
+1. Seleziona la tua flashcart
+  + Se non vedi la tua flashcart sulla lista in cima, consulta lo schermo inferiore per avere maggiori informazioni su ogni opzione
 1. Seleziona "Restore Flash"
-1. Press (A) to proceed
+1. Premi (A) per procedere
 1. Attendi il termine del processo
-1. Press (A) to return to the main menu
-1. Select "Exit" to power off your device
+1. Premi (A) per ritornare al menu principale
+1. Seleziona "Exit" per spegnere la console
