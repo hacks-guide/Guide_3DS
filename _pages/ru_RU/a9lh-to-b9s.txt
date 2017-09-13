@@ -32,7 +32,7 @@ title: "С A9LH до B9S"
 Обратите внимание, что требуемый ниже файл с именем `secret_sector.bin` это тот же, что присутствовал в различных версиях архива `data_input.zip`. Если у вас уже есть этот файл где-то на диске, вы можете использовать его, вместо загрузки файла ниже.
 {: .notice--info}
 
-Note that, only on New 3DS, `secret_sector.bin` is needed to revert the arm9loaderhax exploit, which is why it is not needed for the installation of boot9strap on a stock console. Если у вас не New 3DS, вам не нужен `secret_sector.bin`.
+Обратите внимание, что `secret_sector.bin` необходим только на New 3DS для отката эксплойта arm9loaderhax, поэтому он не требуется для установки boot9strap на не взломанную консоль. Если у вас не New 3DS, вам не нужен `secret_sector.bin`.
 {: .notice--info}
 
 * <i class="fa fa-magnet" aria-hidden="true" title="Это magnet-ссылка. Воспользуйтесь торрент-клиентом, чтобы скачать этот файл."></i> - **Только пользователи New 3DS:** [`secret_sector.bin`](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce)
@@ -96,7 +96,7 @@ Note that, only on New 3DS, `secret_sector.bin` is needed to revert the arm9load
   + **"Show NAND or user string in System Settings"**
 1. Нажмите (Start), чтобы сохранить настройки и перезагрузиться
 
-##### Section IV - Updating the System
+##### Часть IV - Обновление системы
 
 Если до начала этого руководства у вас уже был установлен EmuNAND, и вы хотите перенести содержимое EmuNAND в SysNAND с кастомной прошивкой - сейчас самый подходящий момент. Выполните действия из раздела [перенос EmuNAND](move-emunand), прежде чем приступить к этой части.
 {: .notice--info}
@@ -141,11 +141,14 @@ Note that, only on New 3DS, `secret_sector.bin` is needed to revert the arm9load
 1. Скопируйте `<serialnumber>_nandmin_###.bin` из папки `/gm9/out/` на SD-карте в безопасное место на вашем компьютере
   + Сделайте несколько резервных копий в нескольких местах (например в облачном хранилище)
   + Эти бэкапы позволят восстановить консоль, если впоследствии что-то пойдёт не так
-  + Replace your old arm9loaderhax NAND backup with this new boot9strap one
+  + Замените ваш старый бэкап NAND с arm9loaderhax на новый с boot9strap
 1. После копирования удалите `<serialnumber>_nandmin_###.bin` из папки `/gm9/out/` на SD-карте
 1. Вставьте SD-карту обратно в консоль
 
 ##### Часть VIII - Очистка SD-карты
+
+Note that this script will remove the `/boot9strap/` and `/cias/` folders from your SD card!
+{: .notice--danger}
 
 1. Нажмите кнопку (Home) для вызова меню
 1. Выберите "More..."
