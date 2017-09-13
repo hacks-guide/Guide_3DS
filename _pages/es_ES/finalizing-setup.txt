@@ -8,6 +8,8 @@ El archivo `boot.firm` es el que ejecuta boot9strap después de que termina de c
 
 En este caso, utilizamos Luma3DS de [AuroraWright](https://github.com/AuroraWright/) para ejecutar al inicio un SysNAND modificado directamente, permitiéndonos saltar la necesidad de cualquier EmuNAND, simplificando enormemente el uso de una 3DS hackeada además de ahorrar espacio en la tarjeta SD.
 
+Ensure your device's Wireless Communication is turned on and is connected to the internet. OCS will need to download some files on your device.
+
 Durante este proceso, también instalaremos programas como los siguientes:    
 
 + **FBI** *(instala juegos y aplicaciones en formato CIA)*
@@ -16,48 +18,9 @@ Durante este proceso, también instalaremos programas como los siguientes:
 +  **GodMode9** *(herramienta multipropósito que puede realizar funciones sobre la NAND y cartridges)*
 +  **Homebrew Launcher Loader** *(inicia el Homebrew Launcher como una aplicación regular gracias a la magia de Rosalina)*
 
-#### Qué necesitas
-
-* La última versión de [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) *(el archivo `.cia`)*
-* La última versión de [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
-* La última versión de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* La última versión de [DSP1](https://github.com/zoogie/DSP1/releases/latest)
-* La última versión de [FBI](https://github.com/Steveice10/FBI/releases/latest) *(los archivos `.cia` y `.3dsx`)*
-* La última versión (fork) de [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(el archivo `.cia`)*
-* [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
-* [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
-
 #### Instrucciones
 
-##### Sección I - Preparativos
-
-1. Apaga tu consola
-1. Inserta tu tarjeta SD en tu computadora
-1. Copia `FBI.3dsx` a la carpeta `/3ds/` de tu tarjeta SD
-1. Crea una carpeta llamada `cias` en la raíz de tu tarjeta SD, si aún no existe
-1. Copia el archivo `hblauncher_loader.cia` contenido en el `.zip` de hblauncher_loader a la carpeta`/cias/` en tu tarjeta SD
-1. Copia `lumaupdater.cia` a la carpeta `/cias/` en tu tarjeta SD
-1. Copia `FBI.cia` a la carpeta `/cias/` en tu tarjeta SD
-1. Copia `DSP1.cia` a la carpeta `/cias/` en tu tarjeta SD
-1. Copia `Anemone3DS.cia` a la carpeta `/cias/` en tu tarjeta SD
-
-    ![]({{ base_path }}/images/screenshots/cias-file-layout.png)
-    {: .notice--info}
-
-1. Crea una carpeta llamada `payloads` dentro de la carpeta `luma` en tu tarjeta SD si aún no existe
-1. Copia el archivo `GodMode9.firm` desde el `.zip` de GodMode9 a la carpeta `/luma/payloads/` en tu tarjeta SD
-1. Elimina `ntrboot_flasher.firm` desde la carpeta `/luma/payloads/` en tu tarjeta SD si existe
-1. Copia la carpeta `gm9`contenida en el `.zip`de GodMode9 al directorio raíz de tu tarjeta SD
-1. Copia `setup_ctrnand_luma3ds.gm9` a la carpeta `/gm9/scripts/` en tu tarjeta SD
-1. Copia `cleanup_sd_card.gm9` a la carpeta `/gm9/scripts/` en tu tarjeta SD
-
-    ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
-    {: .notice--info}
-
-1. Vuelve a insertar tu tarjeta SD en tu consola
-1. Enciende tu consola
-
-##### Sección II - Actualizar el sistema
+##### Section I - Updating the System
 
 Si, mientras seguías una versión anterior de esta guía, hiciste CTRTransfer de tu *New 3DS* a 2.1.0, ahora es el momento de [restaurar tu copia de seguridad de la NAND](godmode9-usage#nand_restore) antes de hacer esta sección.
 {: .notice--danger}
@@ -70,7 +33,7 @@ Si, antes de seguir esta guía, ya tenías una configuración EmuNAND y deseas m
   + Si esto te da un error, ajusta tu configuración de DNS a "obtención automática"
   + Si esto te sigue dando un error, [sigue CTRTransfer](ctrtransfer), luego reintenta actualizar
 
-##### Sección III - Iniciar FBI
+##### Section II - Launching OCS
 
 1. Inicia la aplicación de Modo Descarga
 1. Presiona (L) + (Abajo) + (Select) a la vez para abrir el menú de Rosalina
@@ -81,22 +44,21 @@ Si, antes de seguir esta guía, ya tenías una configuración EmuNAND y deseas m
 1. Presiona (B) para salir del menú de Rosalina
 1. Presiona (Home), luego cierra la aplicación de Modo Descarga
 1. Inicia la aplicación de Modo Descarga
-1. Tu consola debería cargar el Homebrew Launcher
+1. Your device should load OCS
 
-##### Sección IV - Instalar CIAs
+##### Section III - OCS
 
-1. Inicia FBI desde la lista de homebrew
-1. Ve a `SD` -> `cias`
-1. Selecciona "\<current directory>"
-1. Selecciona la opción "Install and delete all CIAs", luego presiona (A) para confirmar
+1. Press (A) to begin
+1. Wait for the downloads and installs to complete
+1. Press (Start) to exit when prompted
 1. Presiona (Home), luego cierra la aplicación de Modo Descarga
 
-##### Sección V - Volcado de DSP
+##### Section IV - DSP Dump
 
 1. Inicia la aplicación DSP1
 1. Una vez que se haya completado, presiona (B) para que la aplicación se elimine a sí misma y regresar al menú HOME
 
-##### Sección VI - CTRNAND Luma3DS
+##### Section V - CTRNAND Luma3DS
 
 1. Inicia GodMode9 manteniendo presionado (Start) mientras enciendes la consola
 1. Si se te pide crear copias de seguridad de archivos esenciales, presiona (A) para hacerlo y luego presiona (A) para continuar una vez que haya terminado
@@ -109,7 +71,7 @@ Si, antes de seguir esta guía, ya tenías una configuración EmuNAND y deseas m
 1. Presiona (A) para continuar
 1. Presiona (A) para volver a bloquear los permisos de escritura
 
-##### Sección VII - Copia de seguridad de la SysNAND
+##### Section VI - Backup SysNAND
 
 1. Presiona el botón (Home) para abrir el menú de acción
 1. Selecciona "Mas..."
@@ -126,7 +88,7 @@ Si, antes de seguir esta guía, ya tenías una configuración EmuNAND y deseas m
 1. Elimina el archivo `<númerodeserie>_nandmin_###.bin` de la carpeta `/gm9/out/` de tu tarjeta SD después de haberlo copiado
 1. Vuelve a insertar tu tarjeta SD en tu consola
 
-##### Sección VIII - Limpiar tarjeta SD
+##### Section VII - Cleanup SD Card
 
 1. Presiona el botón (Home) para abrir el menú de acción
 1. Selecciona "Mas..."
