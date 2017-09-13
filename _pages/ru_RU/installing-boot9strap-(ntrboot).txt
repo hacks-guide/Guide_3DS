@@ -9,7 +9,7 @@ title: "Установка boot9strap (ntrboot)"
 * Свежая версия [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * Свежая версия [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(стандартный boot9strap; не `devkit-файл`, не `ntr-файл`)*
 * Свежая версия [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z-архив`)*
-* The latest release of [OCS](https://github.com/Pirater12/ocs/releases/latest)
+* Свежая версия [OCS](https://github.com/Pirater12/ocs/releases/latest)
 
 #### Инструкция
 
@@ -17,7 +17,7 @@ title: "Установка boot9strap (ntrboot)"
 
 1. Выключите консоль
 1. Вставьте SD-карту в компьютер
-1. Copy `boot.3dsx` (OCS) to the root of your SD card
+1. Скопируйте `boot.3dsx` (OCS) в корень SD-карты
 1. Скопируйте `SafeB9SInstaller.firm` в корень SD-карты и переименуйте его в `boot.firm`
 1. Создайте папку `boot9strap` в корне SD-карты
 1. Скопируйте `boot9strap.firm` и `boot9strap.firm.sha` из `.zip-архива` boot9strap в папку `/boot9strap/` в корне SD-карты
@@ -68,20 +68,20 @@ ___
 
 ___
 
-The following is an optional section that will allow you to restore your flashcart to its original state (to allow it to be used for its standard functions).
+Это дополнительный раздел, который позволяет вернуть флешкартридж в исходное состояние (чтобы использовать флешкартридж для его стандартных функций).
 
 Обратите внимание, что Acekard 2i сохраняет возможность запускать `.nds` файлы, пока на нем установлен эксплойт ntrboot. Это относится только к случаю, когда Acekard 2i используется на 3DS с установленной кастомной прошивкой! Пока эксплойт ntrboot установлен на Acekard 2i, флешкартридж не может запускать `.nds` файлы на не прошитых консолях NDS, NDSL, DSi, или 3DS.
 
-Do not follow this section until you have completed the rest of the instructions on this page.
+Не приступайте к этой части, пока вы не выполнили остальные инструкции на этой странице.
 
-##### Section V - Removing ntrboot
+##### Часть V - Удаление ntrboot
 
 ###### Что понадобится
 
 * Свежая версия [ntrboot_flasher](https://github.com/kitling/ntrboot_flasher/releases/latest)
-* The flashrom backup corresponding to your flashcart    
-  + Note that if you followed "Flashing ntrboot (3DS Multi System)", the flashrom already exists in the correct location and does not need to be downloaded
-  + If you do not know which HW revision you have, just try all of them. Only the correct one will allow your flashcart to launch properly from home menu, but flashing the wrong one will not brick the cart:
+* Резервная копия прошивки, соответствующая вашему флешкартриджу    
+  + Обратите внимание, что если вы следовали инструкции "Прошивка ntrboot (Две консоли 3DS)", резервная копия уже существует в нужном месте, и скачивать ее не требуется
+  + Если вы не знаете HW revision вашего флешкартриджа, просто попробуйте их все. Только правильная версия позволит запустить флешкартридж из меню HOME, но прошивка неправильной версии не испортит картридж:
   + <i class="fa fa-magnet" aria-hidden="true" title="Это magnet-ссылка. Воспользуйтесь торрент-клиентом, чтобы скачать этот файл."></i> - [`R4i_Gold_3DS_(HW_A7)-Flashrom.zip`](magnet:?xt=urn:btih:fd1bc5c522988379ee931db45f82b223241ae729&dn=R4i_Gold_3DS_%28HW_A7%29-Flashrom.zip&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce) *(Также подходит для **R4i Gold 3DS RTS**)*
   + <i class="fa fa-magnet" aria-hidden="true" title="Это magnet-ссылка. Воспользуйтесь торрент-клиентом, чтобы скачать этот файл."></i> - [`R4i_Gold_3DS_(HW_A6)-Flashrom.zip`](magnet:?xt=urn:btih:ed75f8b81b78dad0d98cea59e38f3f61a80d981d&dn=R4i_Gold_3DS_%28HW_A6%29-Flashrom.zip&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce) *(Также подходит для **R4 3D Revolution**)*
   + <i class="fa fa-magnet" aria-hidden="true" title="Это magnet-ссылка. Воспользуйтесь торрент-клиентом, чтобы скачать этот файл."></i> - [`R4i_Gold_3DS_(HW_A5)-Flashrom.zip`](magnet:?xt=urn:btih:e69774d8a950879e93b18a5c1ccd36ab305b4acd&dn=R4i_Gold_3DS_%28HW_A5%29-Flashrom.zip&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce) *(Также подходит для **Infinity 3 R4i**)*
@@ -101,12 +101,12 @@ Do not follow this section until you have completed the rest of the instructions
 1. Вставьте SD-карту обратно в консоль
 1. Вставьте в консоль ваш DS / DSi флешкартридж, совместимый с ntrboot
 1. Запустите ntrboot_flasher, держа нажатой кнопку (Start) во время загрузки
-1. Read the red screen warning
+1. Прочтите предупреждение на красном экране
 1. Нажмите (A), чтобы продолжить
-1. Select your flashcart
-  + If you do not see your flashcart in the list at the top, read the bottom screen for more info on each option
+1. Выберите ваш флешкартридж
+  + Если вашего флешкартриджа нет в списке на верхнем экране, прочтите информацию о каждой из опций на нижнем экране
 1. Выберите "Restore Flash"
-1. Press (A) to proceed
+1. Нажмите (A) чтобы продолжить
 1. Дождитесь окончания процесса
-1. Press (A) to return to the main menu
-1. Select "Exit" to power off your device
+1. Нажмите (A) для возврата в главное меню
+1. Выберите "Exit" чтобы выключить консоль
