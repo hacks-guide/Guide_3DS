@@ -8,6 +8,8 @@ O arquivo `boot.firm` é o que é executado pelo boot9strap depois que ele acaba
 
 Neste caso, usamos o Luma3DS por [AuroraWright](https://github.com/AuroraWright/) para carregar uma SysNAND com patches diretamente, o que nos permite evitar a necessidade de qualquer tipo de EmuNAND, simplificando enormemente o uso de um 3DS hackeado, além de economizar espaço no cartão SD.
 
+Ensure your device's Wireless Communication is turned on and is connected to the internet. OCS will need to download some files on your device.
+
 Durante este processo, também configuramos alguns programas como os seguintes:    
 
 +  **FBI** *(Instala jogos e aplicativos no formato CIA)*
@@ -16,48 +18,9 @@ Durante este processo, também configuramos alguns programas como os seguintes:
 +  **GodMode9** *(Ferramenta multiuso com funções de NAND e cartucho)*
 +  **Homebrew Launcher Loader** *(inicia o Homebrew Launcher como um aplicativo normal, graças à mágica do Rosalina)*
 
-#### O que você precisa
-
-* The latest release of [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) *(the `.cia` file)*
-* A versão mais recente do [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
-* A versão mais recente do [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* A versão mais recente do [DSP1](https://github.com/zoogie/DSP1/releases/latest)
-* A versão mais recente do [FBI](https://github.com/Steveice10/FBI/releases/latest) *(os arquivos `.cia` e `.3dsx`)*
-* A versão mais recente do [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(o arquivo `.cia`)*
-* [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
-* [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
-
 #### Instruções
 
-##### Seção I - Trabalho Preparatório
-
-1. Desligue seu dispositivo
-1. Insira o cartão SD no seu computador
-1. Copie `FBI.3dsx` para a pasta `/3ds/` no seu cartão SD
-1. Crie uma pasta chamada `cias` na raiz do seu cartão SD se ela ainda não existir
-1. Copie `hblauncher_loader.cia` do `.zip` do hblauncher_loader para a pasta `/cias/` do seu cartão SD
-1. Copie `lumaupdater.cia` para a pasta `/cias/` no seu cartão SD
-1. Copie `FBI.cia` para a pasta `/cias/` no seu cartão SD
-1. Copie `DSP1.cia` para a pasta `/cias/` no seu cartão SD
-1. Copy `Anemone3DS.cia` to the `/cias/` folder on your SD card
-
-    ![]({{ base_path }}/images/screenshots/cias-file-layout.png)
-    {: .notice--info}
-
-1. Create a folder named `payloads` in the `luma` folder on your SD card if it does not already exist
-1. Copie `GodMode9.firm` do `.zip` do GodMode9 para a pasta `/luma/payloads/` no seu cartão SD
-1. Delete `ntrboot_flasher.firm` from the `/luma/payloads/` folder on your SD card if it exists
-1. Copie a pasta `gm9` do `.zip` do GodMode9 para a raiz do seu cartão SD
-1. Copie o `setup_ctrnand_luma3ds.gm9` para a pasta `/gm9/scripts/` no seu cartão SD
-1. Copy `cleanup_sd_card.gm9` to the `/gm9/scripts/` folder on your SD card
-
-    ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
-    {: .notice--info}
-
-1. Reinsira seu cartão SD no seu dispositivo
-1. Ligue o seu dispositivo
-
-##### Seção II - Atualização do Sistema
+##### Section I - Updating the System
 
 Se, enquanto você seguia uma versão antiga deste guia, você fez um CTRTransfer no seu *New 3DS* para 2.1.0, agora é o momento de [restaurar seu backup do NAND](godmode9-usage#nand_restore) antes de fazer esta seção.
 {: .notice--danger}
@@ -70,7 +33,7 @@ Se, antes de seguir este guia, você já possuia uma instalação EmuNAND e gost
   + Se isso der um erro, defina suas configurações de DNS para "Automático"
   + If this still gives you an error, [follow CTRTransfer](ctrtransfer), then try updating again
 
-##### Seção III - Iniciando o FBI
+##### Section II - Launching OCS
 
 1. Inicie o aplicativo Download Play
 1. Aperte (L) + (Baixo) + (Select) ao mesmo tempo para abrir o menu do Rosalina
@@ -81,22 +44,21 @@ Se, antes de seguir este guia, você já possuia uma instalação EmuNAND e gost
 1. Aperte (B) para sair do menu do Rosalina
 1. Aperte (Home), depois feche o Download Play
 1. Inicie o aplicativo Download Play
-1. Seu dispositivo deve abrir o Homebrew Launcher
+1. Your device should load OCS
 
-##### Seção IV - Instalando CIAs
+##### Section III - OCS
 
-1. Abra o FBI da lista de homebrews
-1. Navegue para `SD` -> `cias`
-1. Selecione "\<current directory>"
-1. Selecione a opção "Install and delete all CIAs" e, em seguida, aperte (A) para confirmar
+1. Press (A) to begin
+1. Wait for the downloads and installs to complete
+1. Press (Start) to exit when prompted
 1. Aperte (Home), depois feche o Download Play
 
-##### Seção V - DSP Dump
+##### Section IV - DSP Dump
 
 1. Inicie o aplicativo DSP1
 1. Quando completado, aperte (B) para auto excluir o app e retornar ao Menu HOME
 
-##### Seção VI - Luma3DS & CTRNAND
+##### Section V - CTRNAND Luma3DS
 
 1. Inicie o GodMode9 segurando (Start) durante a inicialização
 1. Se você for solicitado para criar um backup de arquivos essenciais, aperte (A) pra fazê-lo, e depois aperte (A) para continuar quando ele for concluído
@@ -109,7 +71,7 @@ Se, antes de seguir este guia, você já possuia uma instalação EmuNAND e gost
 1. Aperte (A) para continuar
 1. Aperte (A) para bloquear as permissões de escrita
 
-##### Seção VII - Backup da SysNAND
+##### Section VI - Backup SysNAND
 
 1. Aperte (Home) para abrir o menu de ações
 1. Selecione "More..."
@@ -126,7 +88,7 @@ Se, antes de seguir este guia, você já possuia uma instalação EmuNAND e gost
 1. Apague `<serialnumber>_nandmin_###.bin` da pasta `/gm9/out/` no seu cartão SD após copiá-lo
 1. Reinsira seu cartão SD no seu dispositivo
 
-##### Section VIII - Cleanup SD Card
+##### Section VII - Cleanup SD Card
 
 1. Aperte (Home) para abrir o menu de ações
 1. Selecione "More..."
