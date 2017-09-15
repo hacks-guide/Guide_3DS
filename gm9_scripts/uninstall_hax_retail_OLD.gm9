@@ -8,7 +8,7 @@ set SUCCESSMSG "CFW uninstalled successfully"
 
 # grab NATIVE_FIRM out of the NCCH
 set ERRORMSG "NATIVE_FIRM not found.\nIs this a O3DS?"
-find 1:/title/00040138/00000002/content/????????.app NATIVE_NCCH
+find -f 1:/title/00040138/00000002/content/????????.app NATIVE_NCCH
 imgmount $[NATIVE_NCCH]
 verify G:/exefs/.firm
 set NATIVE_FIRM $[GM9OUT]/NATIVE_FIRM.firm
