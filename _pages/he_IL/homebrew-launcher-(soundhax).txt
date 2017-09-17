@@ -6,7 +6,7 @@ title: "Homebrew Launcher (Soundhax)"
 
 SoundHax תומך בגירסאות 9.0.0 עד 11.3.0 באזורים EUR, JPN, KOR, וUSA.
 
-תבדקו שהתקשורת האלחוטית של הקונסולה שלכם דלוקה ומחוברת לאינטרנט. OCS (משומש בעמוד הבא) יצטרך להוריד כמה קבצים על הקונסולה שלכם.
+תבדקו שהWi-Fi של הקונסולה שלכם דלוק כי udsploit (שנדרש בעמוד הבא) ידרוש את התוכנה של הWi-Fi כדי לעבוד, ומספר מכשירים (הNew 3DS New 2DS, וה Old 2DS) לא יכולים להדליק את הWi-Fi מהHomebrew Launcher. הWi-Fi רק צריך לדלוק; לא צריך לחבר אותו לרשת אלחוטית.
 
 {% capture notice-1 %}
 
@@ -19,17 +19,32 @@ SoundHax תומך בגירסאות 9.0.0 עד 11.3.0 באזורים EUR, JPN, KO
 
 #### מה נדרש
 
-* הגרסה העדכנית של [OCS](https://github.com/Pirater12/ocs/releases/latest)
-* The latest release of [Soundhax](http://soundhax.com/) *(for your device and region)*
-* The [otherapp payload](https://smealum.github.io/3ds/#otherapp) *(for your version and region)*
+* את הכלים בשביל ה [Homebrew Launcher](http://smealum.github.io/ninjhax2/starter.zip)
+* הגרסה העדכנית של [Soundhax](http://soundhax.com/) *(למכשיר ואזור שלכם)*
+* הגרסה העדכנית של [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* הגרסא העדכנית של [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *( boot9strap רגיל; לא קובץ ה `devkit`, ולא קובץ ה`ntr`)*
+* הגרסה העדכנית של [safehax](https://github.com/TiniVi/safehax/releases/latest)
+* את הגרסה העדכנית של [udsploit](https://github.com/smealum/udsploit/releases/latest)
+* את הגרסה העדכנית של [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(יש להוריד את קובץ ה-`.7z`)*
+* ה [otherapp payload](https://smealum.github.io/3ds/#otherapp) *(למכשיר ולגרסה שלכם)*
 
 #### הוראות
 
 1. תכבו את המכשיר
 1. תכניסו את ה-SD שלכם למחשב
-1. תעתיקו את `boot.3dsx` שהוא OCS אל שורש כרטיס ה SD
-1. Copy the Soundhax `.m4a` to the root of your SD card
-1. Copy the otherapp payload to the root of your SD card and rename it to `otherapp.bin`
+1. תפתחו את starter.zip, בתוך הקובץ יש קובץ boot.3dsx ותיקייה, חלצו את שניהם לתוך ה-SD שלכם. (מחוץ לכל תיקייה)
+1. תעתיקו את קובץ האודיו עם סיומת "M4A" שמתאים לקונסולה שלכם ל-SD
+1. תעתיקו את קובץ ה-Otherapp payload שהורדתם ל-SD שלכם ותשנו לו את השם ל-"otherapp.bin" (ללא מרכאות, ללא סיומת כפולה)
+1. תעתיקו את הקובץ `boot.firm` מתוך ה`.7z` של Luma3DS לתוך ה-SD שלכם
+1. תצרו ב-SD שלכם תיקייה חדשה בשם `boot9strap`
+1. תעתיקו את`boot9strap.firm` ואת `boot9strap.firm.sha` מה `.zip` של boot9strap אל תיקיית `/boot9strap/`על כרטיס הSD שלכם
+1. תעתיקו את 'safehax.3dsx' לתיקיה '/ 3ds /' על כרטיס הזכרון
+1. תעתיקו את הקובץ `udsploit.3dsx` לתוך התיקייה `/3ds/` שב-SD שלכם
+1. תעתיקו את `SafeB9SInstaller.bin` מתוך ה `.zip` של SafeB9SInstaller אל שורש כרטיס הSD שלכם ושנו את השם של `SafeB9SInstaller.bin` אל `safehaxpayload.bin`
+
+    ![]({{ base_path }}/images/screenshots/boot9strap-hb-file-layout.png)
+    {: .notice--info}
+
 1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
 1. תפעילו את המכשיר
 1. כנסו לנגן המוזיקה
@@ -42,11 +57,15 @@ SoundHax תומך בגירסאות 9.0.0 עד 11.3.0 באזורים EUR, JPN, KO
 1. תעברו אל ' / SDCARD ", ואז תפעילו את" < 3 nedwill 2016 "
   + זה עלול לקחת הרבה נסיונות
   + אם זה נקפא, כבו בכוח את המכשיר על-ידי החזקת כפתור ההדלקה ולאחר מכן נסו שוב
+  + אם אתם מקבלים מסך אדום, ודאו שהעתקתם את התוכן של התיקיה `starter` לתיקייה הראשית בSD
 
     ![]({{ base_path }}/images/screenshots/soundhax-launch.png)
     {: .notice--info}
 
-1. הקונסולה שלכם אמורה לטעון את OCS
+1. המכשיר שלכם אמור לטעון את הHomebrew Launcher
+
+    ![]({{ base_path }}/images/screenshots/homebrew-launcher.png)
+    {: .notice--info}
 
 ___
 
