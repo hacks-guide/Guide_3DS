@@ -6,7 +6,7 @@ Der Homebrew Launcher hat viele verschiedene Eintrittspunkte, beziehungsweise M�
 
 Soundhax ist kompatibel mit den Versionen 9.0.0 bis einschließlich 11.3.0 in den Regionen EUR, JPN, KOR, and USA.
 
-Ensure your device's Wireless Communication is turned on and is connected to the internet. OCS (used in the next page) will need to download some files on your device.
+Ensure your device's Wireless Communication is turned on as udsploit (used in the next page) will need the wireless module to be active to function, and some devices (New 3DS, New 2DS, and Old 2DS) cannot adjust the Wireless Communication setting from the Homebrew Launcher. Wireless Communication only has to be on; connecting it to an access point is not required.
 
 {% capture notice-1 %}
 
@@ -19,17 +19,32 @@ Das bedeutet, dass ein Karten-Update von einer Systemversion, die eine ältere V
 
 #### Was du brauchst
 
-* The latest release of [OCS](https://github.com/Pirater12/ocs/releases/latest)
+* Das Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
 * The latest release of [Soundhax](http://soundhax.com/) *(for your device and region)*
+* Die neueste Version von [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* Die neueste Version von [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; nicht die `devkit` Datei, nicht die `ntr` Datei)*
+* The latest release of [safehax](https://github.com/TiniVi/safehax/releases/latest)
+* The latest release of [udsploit](https://github.com/smealum/udsploit/releases/latest)
+* Die neueste Version von [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(die `.7z`-Datei)*
 * The [otherapp payload](https://smealum.github.io/3ds/#otherapp) *(for your version and region)*
 
 #### Anleitung
 
 1. Schalte deine Konsole aus
 1. Stecke deine SD-Karte in deinen Computer
-1. Copy `boot.3dsx` (OCS) to the root of your SD card
+1. Kopiere _den Inhalt_ der `starter.zip` in das Stammverzeichnis der SD Karte
 1. Copy the Soundhax `.m4a` to the root of your SD card
 1. Copy the otherapp payload to the root of your SD card and rename it to `otherapp.bin`
+1. Kopiere die Datei `boot.firm` aus der Luma3DS `.7z` in das Stammverzeichnis deiner SD-Karte
+1. Erstelle einen Ordner namens `boot9strap` im Stammverzeichnis deiner SD-Karte
+1. Kopiere `boot9strap.firm` und `boot9strap.firm.sha` aus der boot9strap `.zip` in den `/boot9strap/`-Ordner auf deiner SD-Karte
+1. Copy `safehax.3dsx` to the `/3ds/` folder on your SD card
+1. Copy `udsploit.3dsx` to the `/3ds/` folder on your SD card
+1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card and rename `SafeB9SInstaller.bin` to `safehaxpayload.bin`
+
+    ![]({{ base_path }}/images/screenshots/boot9strap-hb-file-layout.png)
+    {: .notice--info}
+
 1. Stecke deine SD-Karte nun wieder in deinen 3DS
 1. Schalte deine Konsole an
 1. Starte die Nintendo 3DS Sound App
@@ -42,11 +57,15 @@ Das bedeutet, dass ein Karten-Update von einer Systemversion, die eine ältere V
 1. Gehe zu `/SDCARD` und spiele die Datei "<3 nedwill 2016" ab
   + Dies kann einige Versuche benötigen
   + Wenn sich deine Konsole aufhängt, schalte sie durch langes halten des Power-Knopfes aus, und versuche es erneut
+  + If you get a red screen, ensure you copied _the contents of_ the `starter` folder to the root of your SD card
 
     ![]({{ base_path }}/images/screenshots/soundhax-launch.png)
     {: .notice--info}
 
-1. Your device should load OCS
+1. Deine Konsole sollte den Homebrew Launcher laden
+
+    ![]({{ base_path }}/images/screenshots/homebrew-launcher.png)
+    {: .notice--info}
 
 ___
 
