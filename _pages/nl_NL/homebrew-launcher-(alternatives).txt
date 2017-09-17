@@ -6,19 +6,32 @@ De Homebrew Launcher heeft veel verschillende entrypoints (ingangspunten) of lan
 
 If browserhax is not an option (see the chart below), you do not already own any of these games, and do not have another 3DS that can access the Homebrew Launcher, the cheapest option is to buy a "Nintendo Selects" copy of [Ocarina of Time 3D](https://amzn.to/2fkaKdp) (ensure you get the correct cartridge for your region) and a [Powersaves](https://amzn.to/2fb3VY7) (compatible with all regions), then use oot3dhax from the chart below.
 
-Ensure your device's Wireless Communication is turned on and is connected to the internet. OCS (used in the next page) will need to download some files on your device.
+Ensure your device's Wireless Communication is turned on as udsploit (used in the next page) will need the wireless module to be active to function, and some devices (New 3DS, New 2DS, and Old 2DS) cannot adjust the Wireless Communication setting from the Homebrew Launcher. Wireless Communication only has to be on; connecting it to an access point is not required.
 
 #### Benodigdheden
 
-* The latest release of [OCS](https://github.com/Pirater12/ocs/releases/latest)
-* The [otherapp payload](https://smealum.github.io/3ds/#otherapp) *(for your version and region)*
+* The Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
+* The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
+* The latest release of [safehax](https://github.com/TiniVi/safehax/releases/latest)
+* The latest release of [udsploit](https://github.com/smealum/udsploit/releases/latest)
+* De meest recente versie van [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(het `.7z` bestand)*
 
 #### Instructies
 
 1. Schakel je 3ds uit
 1. Plaats je SD kaart in je computer
-1. Copy `boot.3dsx` (OCS) to the root of your SD card
-1. Copy the otherapp payload to the root of your SD card and rename it to `otherapp.bin`
+1. Copy _the contents of_ the `starter.zip` to the root of your SD card
+1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card
+1. Create a folder named `boot9strap` on the root of your SD card
+1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
+1. Copy `safehax.3dsx` to the `/3ds/` folder on your SD card
+1. Copy `udsploit.3dsx` to the `/3ds/` folder on your SD card
+1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card and rename `SafeB9SInstaller.bin` to `safehaxpayload.bin`
+
+    ![]({{ base_path }}/images/screenshots/boot9strap-hb-file-layout.png)
+    {: .notice--info}
+    
 1. Stop je SD kaart terug in je 3DS
 1. Zet je 3DS aan
 1. Gebruik een van de volgende alternatieve entrypoints om in de Homebrew Launcher te komen:
@@ -52,7 +65,10 @@ Ensure your device's Wireless Communication is turned on and is connected to the
     </script>
     <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
 
-1. Your device should load OCS
+1. Nu zou je console de Homebrew Launcher moeten openen
+
+    ![]({{ base_path }}/images/screenshots/homebrew-launcher.png)
+    {: .notice--info}
 
 Continue to [Installing boot9strap (Homebrew Launcher)](installing-boot9strap-(homebrew-launcher))
 {: .notice--primary}
