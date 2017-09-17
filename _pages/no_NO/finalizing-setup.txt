@@ -8,8 +8,6 @@ The file `boot.firm` is what is launched by boot9strap itself after it finishes 
 
 I dette tilfellet bruker vi Luma3DS fra [AuroraWright](https://github.com/AuroraWright/) for å starte et patchet SysNAND direkte, slik at vi kan omgå behovet for alle slags EmuNAND fullstendig, og dermed forenkle bruken av en hacket 3DS utover det å spare plass på SD-kort.
 
-Ensure your device's Wireless Communication is turned on and is connected to the internet. OCS will need to download some files on your device.
-
 Under denne prossesen, vil vi også sette opp program som følgende:    
 
 +  **FBI** *(installerer CIAformaterte spill og applikasjoner)*
@@ -18,9 +16,48 @@ Under denne prossesen, vil vi også sette opp program som følgende:
 +  **GodMode9** *(multipurpose tool which can do NAND and cartridge functions)*
 +  **Homebrew Launcher Loader** *(launches the Homebrew Launcher as a regular application thanks to Rosalina magic)*
 
+#### Det du trenger
+
+* The latest release of [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) *(the `.cia` file)*
+* The latest release of [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
+* Siste utgave av [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* The latest release of [DSP1](https://github.com/zoogie/DSP1/releases/latest)
+* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) *(the `.cia` and `.3dsx` files)*
+* The latest fork of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(the `.cia` file)*
+* [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
+* [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
+
 #### Instruksjoner
 
-##### Section I - Updating the System
+##### Seksjon I - Forarbeid
+
+1. Slå av enheten
+1. Sett inn SD-kortet i datamaskinen din
+1. Copy `FBI.3dsx` to the `/3ds/` folder on your SD card
+1. Opprett en mappe kalt `cias` på roten av SD-kortet hvis den ikke allerede er der
+1. Copy `hblauncher_loader.cia` from the hblauncher_loader `.zip` to the `/cias/` folder on your SD card
+1. Copy `lumaupdater.cia` to the `/cias/` folder on your SD card
+1. Copy `FBI.cia` to the `/cias/` folder on your SD card
+1. Copy `DSP1.cia` to the `/cias/` folder on your SD card
+1. Copy `Anemone3DS.cia` to the `/cias/` folder on your SD card
+
+    ![]({{ base_path }}/images/screenshots/cias-file-layout.png)
+    {: .notice--info}
+
+1. Create a folder named `payloads` in the `luma` folder on your SD card if it does not already exist
+1. Kopier `GodMode9.firm` fra GodMode9 `.zip` til `/luma/payloads/` på SD-kortet ditt
+1. Delete `ntrboot_flasher.firm` from the `/luma/payloads/` folder on your SD card if it exists
+1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+1. Copy `setup_ctrnand_luma3ds.gm9` to the `/gm9/scripts/` folder on your SD card
+1. Copy `cleanup_sd_card.gm9` to the `/gm9/scripts/` folder on your SD card
+
+    ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
+    {: .notice--info}
+
+1. Sett inn SD-kortet i konsollen igjen
+1. Power on your device
+
+##### Section II - Updating the System
 
 If, while following a previous version of this guide, you CTRTransfered your *New 3DS* to 2.1.0, now is the time to [restore your NAND backup](godmode9-usage#nand_restore) before doing this section.
 {: .notice--danger}
@@ -33,7 +70,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
   + Hvis dette gir deg en feil, sett DNS-innstillingene til "auto"
   + If this still gives you an error, [follow CTRTransfer](ctrtransfer), then try updating again
 
-##### Section II - Launching OCS
+##### Section III - Launching FBI
 
 1. Launch the Download Play application
 1. Press (L) + (Down) + (Select) at the same time to open the Rosalina menu
@@ -44,26 +81,28 @@ If, before following this guide, you already had an EmuNAND setup and would like
 1. Press (B) to exit the Rosalina menu
 1. Press (Home), then close Download Play
 1. Launch the Download Play application
-1. Your device should load OCS
+1. Your device should load the Homebrew Launcher
 
-##### Section III - OCS
+##### Section IV - Installing CIAs
 
-1. Press (A) to begin
-1. Wait for the downloads and installs to complete
-1. Press (Start) to exit when prompted
+1. Launch FBI from the list of homebrew
+1. Navigér til `SD` -> `cias`
+1. Velg "\<current directory>"
+1. Select the "Install and delete all CIAs" option, then press (A) to confirm
 1. Press (Home), then close Download Play
 
-##### Section IV - DSP Dump
+##### Section V - DSP Dump
 
 1. Launch the DSP1 application
 1. Once it has completed, press (B) to self-delete the app and return to the home menu
 
-##### Section V - CTRNAND Luma3DS
+##### Section VI - CTRNAND Luma3DS
 
 1. Launch GodMode9 by holding (Start) during boot
 1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
+1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
+  + Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
 1. Press (Home) to bring up the action menu
-1. Velg "More..."
 1. Select "Scripts..."
 1. Select "setup_ctrnand_luma3ds"
 1. When prompted, press (A) to proceed
@@ -71,10 +110,9 @@ If, before following this guide, you already had an EmuNAND setup and would like
 1. Trykk (A) for å fortsette
 1. Press (A) to relock write permissions
 
-##### Section VI - Backup SysNAND
+##### Section VII - Backup SysNAND
 
 1. Press (Home) to bring up the action menu
-1. Velg "More..."
 1. Select "Scripts..."
 1. Select "Backup SysNAND"
 1. Trykk (A) for å bekrefte
@@ -88,10 +126,9 @@ If, before following this guide, you already had an EmuNAND setup and would like
 1. Delete `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. Sett inn SD-kortet i konsollen igjen
 
-##### Section VII - Cleanup SD Card
+##### Section VIII - Cleanup SD Card
 
 1. Press (Home) to bring up the action menu
-1. Velg "More..."
 1. Select "Scripts..."
 1. Select "cleanup_sd_card"
 1. When prompted, press (A) to proceed
