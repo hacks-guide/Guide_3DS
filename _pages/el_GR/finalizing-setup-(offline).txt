@@ -1,0 +1,177 @@
+---
+title: "Finalizing Setup (Offline)"
+---
+
+#### Επισκόπηση των βημάτων
+
+The file `boot.firm` is what is launched by boot9strap itself after it finishes loading off of NAND, and can be any valid arm9 payload in the FIRM format. This file can be replaced at any time, although Luma3DS allows for the launch of other arm9 payloads in the FIRM format using the Luma3DS chainloader.
+
+Σε αυτήν την περίπτωση, θα χρησιμοποιήσουμε το Luma3DS του χρήστη [AuroraWright](https://github.com/AuroraWright/) ώστε να εκκινήσουμε απευθείας μια επεξεργασμένη έκδοση της SysNAND, που μας επιτρέπει να παρακάμψουμε την ανάγκη για μια EmuNAND, απλοποιώντας έτσι την χρήση ενός χακαρισμένου 3DS και απελευθερώνοντας χώρο στην κάρτα SD.
+
+Ταυτόχρονα, θα εγκαταστήσουμε προγράμματα όπως τα παρακάτω:    
+
++  **FBI** *(Εγκαθιστά εφαρμογές και παιχνίδια που έχουν την μορφή CIA)*
++  **Anemone3DS** *(installs custom themes)*
++  **Luma3DS Updater** *(ενημερώνει εύκολα την εγκατάσταση του CFW)*
++  **GodMode9** *(multipurpose tool which can do NAND and cartridge functions)*
++  **Homebrew Launcher Loader** *(launches the Homebrew Launcher as a regular application thanks to Rosalina magic)*
+
+#### Τι χρειάζεστε
+
+* The latest release of [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) *(the `.cia` file)*
+* The latest release of [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
+* Την τελευταία έκδοση του [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* The latest release of [DSP1](https://github.com/zoogie/DSP1/releases/latest)
+* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) *(the `.cia` and `.3dsx` files)*
+* The latest fork of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(the `.cia` file)*
+* [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
+* [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
+
+#### Οδηγίες
+
+##### Ενότητα I - Προετοιμασία
+
+1. Power off your device
+1. Εισάγετε την κάρτα SD στον υπολογιστή σας
+1. Copy `FBI.3dsx` to the `/3ds/` folder on your SD card
+1. Δημιουργήστε έναν φάκελο με το όνομα `cias` στην ρίζα της κάρτας SD, σε περίπτωση που δεν υπάρχει ήδη
+1. Copy `hblauncher_loader.cia` from the hblauncher_loader `.zip` to the `/cias/` folder on your SD card
+1. Copy `lumaupdater.cia` to the `/cias/` folder on your SD card
+1. Copy `FBI.cia` to the `/cias/` folder on your SD card
+1. Copy `DSP1.cia` to the `/cias/` folder on your SD card
+1. Copy `Anemone3DS.cia` to the `/cias/` folder on your SD card
+
+    ![]({{ base_path }}/images/screenshots/cias-file-layout.png)
+    {: .notice--info}
+
+1. Create a folder named `payloads` in the `luma` folder on your SD card if it does not already exist
+1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
+1. Delete `ntrboot_flasher.firm` from the `/luma/payloads/` folder on your SD card if it exists
+1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+1. Copy `setup_ctrnand_luma3ds.gm9` to the `/gm9/scripts/` folder on your SD card
+1. Copy `cleanup_sd_card.gm9` to the `/gm9/scripts/` folder on your SD card
+
+    ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
+    {: .notice--info}
+
+1. Reinsert your SD card into your device
+1. Power on your device
+
+##### Section II - Updating the System
+
+If, while following a previous version of this guide, you CTRTransfered your *New 3DS* to 2.1.0, now is the time to [restore your NAND backup](godmode9-usage#nand_restore) before doing this section.
+{: .notice--danger}
+
+If, before following this guide, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand) before doing this section.
+{: .notice--info}
+
+1. Update your device by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
+  + Updates while using B9S + Luma (what you have) are safe
+  + Εάν αντιμετωπίζετε σφάλμα, ρυθμίστε τις ρυθμίσεις του DNS σε "auto"
+  + If this still gives you an error, [follow CTRTransfer](ctrtransfer), then try updating again
+
+##### Section III - Launching FBI
+
+1. Launch the Download Play application
+1. Press (L) + (Down) + (Select) at the same time to open the Rosalina menu
+1. Select "Miscellaneous options"
+1. Select "Switch the hb. title to the current app."
+1. Press (B) to continue
+1. Press (B) to return to the Rosalina main menu
+1. Press (B) to exit the Rosalina menu
+1. Press (Home), then close Download Play
+1. Launch the Download Play application
+1. Your device should load the Homebrew Launcher
+
+##### Section IV - Installing CIAs
+
+1. Launch FBI from the list of homebrew
+1. Navigate to `SD` -> `cias`
+1. Επιλέξτε "\<current directory>"
+1. Select the "Install and delete all CIAs" option, then press (A) to confirm
+1. Press (Home), then close Download Play
+
+##### Section V - DSP Dump
+
+1. Launch the DSP1 application
+1. Once it has completed, press (B) to self-delete the app and return to the home menu
+
+##### Section VI - CTRNAND Luma3DS
+
+1. Launch GodMode9 by holding (Start) during boot
+1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
+1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
+  + Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
+1. Press (Home) to bring up the action menu
+1. Select "Scripts..."
+1. Select "setup_ctrnand_luma3ds"
+1. When prompted, press (A) to proceed
+1. Πατήστε (A) για να ξεκλειδώσετε την εγγραφή στη SysNAND (lvl1) και έπειτα εισάγετε τον συνδυασμό πλήκτρων που θα σας δοθεί
+1. Πατήστε (A) για να συνεχίσετε
+1. Press (A) to relock write permissions
+
+##### Section VII - Backup SysNAND
+
+1. Press (Home) to bring up the action menu
+1. Select "Scripts..."
+1. Select "Backup SysNAND"
+1. Πατήστε (A) για επιβεβαίωση
+  + This process will take some time
+1. Πατήστε (A) για να συνεχίσετε
+1. Κρατήστε πατημένο το (R) και πατήστε ταυτόχρονα το (B) για να αφαιρέσετε την κάρτα SD
+1. Εισάγετε την κάρτα SD στον υπολογιστή σας
+1. Αντιγράψτε το `<serialnumber>_nandmin_###.bin` από το φάκελο `/gm9/out/` της κάρτας SD σε μια ασφαλή τοποθεσία στον υπολογιστή σας
+  + Make backups in multiple locations (such as online file storage)
+  + Αυτά τα αντίγραφα ασφαλείας θα σας σώσουν από την αχρήστευση της συσκευής σε περίπτωση που κάτι πάει στραβά
+1. Delete `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card after copying it
+1. Reinsert your SD card into your device
+
+##### Section VIII - Cleanup SD Card
+
+1. Press (Home) to bring up the action menu
+1. Select "Scripts..."
+1. Select "cleanup_sd_card"
+1. When prompted, press (A) to proceed
+1. Πατήστε (A) για να συνεχίσετε
+1. Press (Start) to reboot
+
+___
+
+{% capture notice-10 %}
+Μπορείτε να ενημερώσετε το Luma3DS, χρησιμοποιώντας το Luma3DS Updater, απλώς ανοίγοντάς το και πατώντας το (A).
+
+Δεν είναι το ίδιο με την Ενημέρωση Συστήματος· το μόνο που κάνει είναι να κατεβάσει και να αποσυμπιέσει τα τελευταία αρχεία του Luma3DS.
+
+This will only update the Luma3DS files on your SD card. If you boot your device without an SD card, it will use the version you placed in CTRNAND.    
+{% endcapture %}
+
+<div class="notice--info">{{ notice-10 | markdownify }}</div>
+
+{% capture notice-6 %}   
+You will now boot Luma3DS CFW SysNAND by default.    
+
+Μπορείτε να πατήσετε (Select) κατά την εκκίνηση ώστε να ανοίξετε τις ρυθμίσεις του Luma3DS.    
+
+You can now hold (Start) on boot to launch the Luma3DS chainloader menu (note that the Luma3DS chainloader menu is only displayed if there is more than one payload detected).    
+
+You can now hold (Start) + (Select) + (X) on boot to dump the ARM11 bootrom (`boot11.bin`), the ARM9 bootrom (`boot9.bin`), and your console unique OTP (`OTP.bin`) to the `/boot9strap/` folder on your SD card (note that this will not have any kind of prompt or message).    
+
+You can now press (L) + (Down) + (Select) while the system is booted to open the Rosalina menu integrated into Luma3DS. For a full list of Rosalina features, please see the [Luma3DS v8.0 Release](https://github.com/AuroraWright/Luma3DS/releases/tag/v8.0)
+{% endcapture %}
+
+<div class="notice--info">{{ notice-6 | markdownify }}</div>
+
+To use [NTR CFW](https://github.com/44670/BootNTR/), install [BootNTR Selector](https://gbatemp.net/threads/432911/).
+{: .notice--info}
+
+Για πληροφορίες σχετικά με την αλλαγή της περιοχής της συσκευής σας, επισκεφθείτε την σελίδα [Αλλαγή Περιοχής](region-changing).
+{: .notice--success}
+
+For information on using GodMode9's various features, check out the [GodMode9 Usage](godmode9-usage) page.
+{: .notice--success}
+
+Για πληροφορίες σχετικά με την χρήση του Luma3DS, επισκεφθείτε [το wiki του](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage).
+{: .notice--success}
+
+For information on installing custom themes and splash screens, check out [Theme Plaza](https://themeplaza.eu/).
+{: .notice--success}

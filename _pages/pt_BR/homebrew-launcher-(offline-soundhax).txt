@@ -1,0 +1,76 @@
+---
+title: "Homebrew Launcher (Offline Soundhax)"
+---
+
+This page is the offline version of [Homebrew Launcher (Soundhax)](homebrew-launcher-(soundhax)). It is slightly more complex and requires more manual setup.
+{: .notice--info}
+
+O Homebrew Launcher possui vários pontos de entrada diferentes, ou métodos de execução.
+
+Soundhax é compatível com as versões de 9.0.0 a 11.3.0 nas regiões EUA, EUR, JPN, KOR.
+
+Ensure your device's Wireless Communication is turned on as udsploit (used in the next page) will need the wireless module to be active to function, and some devices (New 3DS, New 2DS, and Old 2DS) cannot adjust the Wireless Communication setting from the Homebrew Launcher. Wireless Communication only has to be on; connecting it to an access point is not required.
+
+{% capture notice-1 %}
+
+Note que atualizações por Cartucho só fornecerão atualizações para recursos principais do sistema, tais como Configuração do console, Menu HOME, etc. Atualizações por Cartucho não fornecerão atualizações para o Som Nintendo 3DS e recursos de rede, tais como Transferência de dados, Navegador de Internet, StreetPass, Mii Plaza ou eShop.
+
+Isto significa que usar um Update por Cartucho de uma versão contendo uma versão mais antiga do Som Nintendo 3DS *(7.0.0 para Old 3DSs na região EUR, JPN, KOR e EUA)* para uma que introduziu uma nova versão do Som Nintendo 3DS irá estragar o funcionamento do [Soundhax](homebrew-launcher-(soundhax))! Você vai precisar de um [método alternativo](homebrew-launcher-(alternatives)) para iniciar o Homebrew Launcher!
+{% endcapture %}
+
+<div class="notice--warning">{{ notice-1 | markdownify }}</div>
+
+#### O que você precisa
+
+* O [Kit de Iniciante de Homebrew](http://smealum.github.io/ninjhax2/starter.zip)
+* The latest release of [Soundhax](http://soundhax.com/) *(for your device and region)*
+*A versão mais recente do [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* A versão mais recente do [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(boot9strap padrão; não o arquivo `devkit`, nem o arquivo `ntr`)*
+* The latest release of [safehax](https://github.com/TiniVi/safehax/releases/latest)
+* The latest release of [udsploit](https://github.com/smealum/udsploit/releases/latest)
+* A versão mais recente do [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(o arquivo `.7z`)*
+* The [otherapp payload](https://smealum.github.io/3ds/#otherapp) *(for your version and region)*
+
+#### Instruções
+
+1. Desligue seu dispositivo
+1. Insira o cartão SD no seu computador
+1. Copie _o conteúdo do_ `starter.zip` para a raiz do seu cartão SD
+1. Copy the Soundhax `.m4a` to the root of your SD card
+1. Copy the otherapp payload to the root of your SD card and rename it to `otherapp.bin`
+1. Copie o `boot.firm` do `.7z` do Luma3DS para a raíz do seu cartão SD
+1. Crie uma pasta chamada `boot9strap` na raiz do seu cartão SD
+1. Copie os arquivos `boot9strap.firm` e `boot9strap.firm.sha` do `.zip` do boot9strap para a pasta `/boot9strap/` no seu cartão SD
+1. Copy `safehax.3dsx` to the `/3ds/` folder on your SD card
+1. Copy `udsploit.3dsx` to the `/3ds/` folder on your SD card
+1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card and rename `SafeB9SInstaller.bin` to `safehaxpayload.bin`
+
+    ![]({{ base_path }}/images/screenshots/boot9strap-hb-file-layout.png)
+    {: .notice--info}
+
+1. Reinsira seu cartão SD no seu dispositivo
+1. Ligue o seu dispositivo
+1. Abra o Som Nintendo 3DS
+
+    ![]({{ base_path }}/images/screenshots/soundhax-welcome.png)
+    {: .notice--info}
+
+1. Se você nunca abriu o Som Nintendo 3DS antes e receber as dicas de como utilizá-lo de um ícone de pássaro, passe por todos os palpites dos papagaios, depois feche o aplicativo normalmente e abra-o novamente
+  + Nesta situação, abrir o Soundhax imediatamente faria com que estes palpites aparecessem toda vez que o Som Nintendo 3DS fosse aberto até que isto fosse feito
+1. Vá até `/SDCARD`, depois toque "<3 nedwill 2016"
+  + Isso pode levar várias tentativas
+  + Se o console congelar, force-o a desligar segurando o botão Power, e então tente novamente
+  + If you get a red screen, ensure you copied _the contents of_ the `starter` folder to the root of your SD card
+
+    ![]({{ base_path }}/images/screenshots/soundhax-launch.png)
+    {: .notice--info}
+
+1. Seu dispositivo deve abrir o Homebrew Launcher
+
+    ![]({{ base_path }}/images/screenshots/homebrew-launcher.png)
+    {: .notice--info}
+
+___
+
+Continue to [Installing boot9strap (Offline Homebrew Launcher)](installing-boot9strap-(offline-homebrew-launcher))
+{: .notice--primary}

@@ -1,0 +1,77 @@
+---
+title: "Homebrew Launcher (Offline Alternatives)"
+---
+
+This page is the offline version of [Homebrew Launcher (Alternatives)](homebrew-launcher-(alternatives)). It is slightly more complex and requires more manual setup.
+{: .notice--info}
+
+Homebrew Launcher 可以透過不同的進入點或方式開啟。
+
+如果您無法使用 browserhax(見下表)、或目前沒有任何底下所列的遊戲、或另一台可以使用 Homebrew Launcher 的主機，最便宜的方法大概就是買「任天堂之選」版本的[《薩爾達傳說時之笛 3D》](https://amzn.to/2fkaKdp)(請確保您所購買的卡帶符合您主機的區碼)以及[Powersaves](https://amzn.to/2fb3VY7)(所有區碼皆相容)，然後再使用底下所列的 oot3dhax。
+
+Ensure your device's Wireless Communication is turned on as udsploit (used in the next page) will need the wireless module to be active to function, and some devices (New 3DS, New 2DS, and Old 2DS) cannot adjust the Wireless Communication setting from the Homebrew Launcher. Wireless Communication only has to be on; connecting it to an access point is not required.
+
+#### 必備項目
+
+* 自製軟體[入門套件](http://smealum.github.io/ninjhax2/starter.zip)
+* 最新版的 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* 最新版的 [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(正常版的 boot9strap；非 `devkit` 或 `ntr` 檔案)*
+* The latest release of [safehax](https://github.com/TiniVi/safehax/releases/latest)
+* The latest release of [udsploit](https://github.com/smealum/udsploit/releases/latest)
+* 最新版的 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z` 檔案)*
+
+#### 操作說明
+
+1. 關閉您的主機
+1. 將 SD 卡插入電腦中
+1. Copy _the contents of_ the `starter.zip` to the root of your SD card
+1. 解壓 Luma3DS `.7z` 內的 `boot.firm` 到 SD 卡的根目錄底下
+1. 在 SD 卡的根目錄底下建立一個新的資料夾 `boot9strap`
+1. 解壓 boot9strap `.zip` 的 `boot9strap.firm` 及 `boot9strap.firm.sha` 檔案至 SD 卡的 `/boot9strap/` 資料夾中
+1. Copy `safehax.3dsx` to the `/3ds/` folder on your SD card
+1. Copy `udsploit.3dsx` to the `/3ds/` folder on your SD card
+1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card and rename `SafeB9SInstaller.bin` to `safehaxpayload.bin`
+
+    ![]({{ base_path }}/images/screenshots/boot9strap-hb-file-layout.png)
+    {: .notice--info}
+    
+1. 將 SD 卡插回主機中
+1. 啟動您的主機
+1. 使用下列任意方式進入 Homebrew Launcher：
+
+    | <sub> | <sub>需要 | <sub>形式 | <sub>主機 | <sub>區碼 | <sub>遊戲版本 | <sub>系統版本 |
+    |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+    | <sub>[browserhax](https://yls8.mtheall.com/3dsbrowserhax.php) | <sub>無 | <sub>已預先安裝 | <sub>New, Old, 2DS | <sub>歐, 日, 美 | <sub>任意 | <sub>9.0.0-2 至 11.0.0-33(含) |
+    | <sub>[oot3dhax](https://github.com/yellows8/oot3dhax) | <sub>[《薩爾達傳說時之笛 3D》](https://amzn.to/2fkaKdp)，<br> 至少需要一個 Powersaves 存檔備份器或另一台可使用 Homebrew Launcher 的 3DS | <sub>卡帶 | <sub>New, Old, 2DS | <sub>歐, 日, 美 | <sub>任意 | <sub>9.0.0-X 至 11.4.0-X(含) |
+    | <sub>[smashbroshax](https://gbatemp.net/threads/397194/) | <sub>[《任天堂明星大亂鬥》](https://amzn.to/2ftGA72) | <sub>卡帶, 電子商店(eShop) | <sub>New  | <sub>歐, 日, 美 | <sub>低於 1.1.3，<br> 卡帶上印有「amiibo」字樣的，遊戲版本皆為 v1.1.4 | <sub>9.0.0-X 至 11.3.0-X(含) |
+    | <sub>[supermysterychunkhax](https://smd.salthax.org/) | <sub>[《寶可夢超級不可思議的迷宮》](https://amzn.to/2ebxZ75)，<br> 另一台可使用 Homebrew Launcher 的 3DS | <sub>卡帶 | <sub>New, Old, 2DS | <sub>歐, 日, 美 | <sub>任意 | <sub>9.9.0-X (美／日)／10.2.0-X (歐)至 11.0.0-X(含) |
+    | <sub>[freakyhax](http://plutooo.github.io/freakyhax/) | <sub>[《奇特風格：展現您的作品活力！》](https://amzn.to/2f6eHO7) | <sub>卡帶, 電子商店(eShop) | <sub>New, Old, 2DS | <sub>歐, 日, 美 | <sub>任意 | <sub>9.0.0-X 至 11.3.0-X(含) |
+    | <sub>[basehaxx](http://mrnbayoh.github.io/basehaxx/) | <sub>《寶可夢 [終極紅寶石](https://amzn.to/2eRILNQ)／[始源藍寶石](https://amzn.to/2ebGrmN)》，<br> 另一台可使用 Homebrew Launcher 的 3DS | <sub>卡帶 | <sub>New, Old, 2DS | <sub>歐, 日, 美 | <sub>1.0, 1.4 | <sub>9.0.0-X 至 11.3.0-X(含) |
+    | <sub>[BASICSploit](https://mrnbayoh.github.io/basicsploit/) | <sub>[《SmileBASIC》](https://www.nintendo.com/games/detail/eYURHNjVdfyrnA3OJGfmlMYIrJUzgOcv) | <sub>電子商店(eShop) | <sub>New, Old, 2DS | <sub>美 | <sub>3.2.1 | <sub>9.0.0-X 至 11.0.0-X(含)|
+    | <sub>[smilehax](https://plutooo.github.io/smilehax/) | <sub>[《SmileBASIC》](https://www.nintendo.com/games/detail/eYURHNjVdfyrnA3OJGfmlMYIrJUzgOcv) | <sub>電子商店(eShop) | <sub>New, Old, 2DS | <sub>日, 美 | <sub>3.3.1 | <sub>9.0.0-X 至 11.0.0-X(含)|
+    | <sub>[stickerhax](https://github.com/yellows8/stickerhax) | <sub>[《紙片瑪利歐：超級貼紙》](https://amzn.to/2f6aDx8)，<br> 另一台可使用 Homebrew Launcher 的 3DS | <sub>卡帶, 電子商店(eShop) | <sub>New, Old, 2DS | <sub>歐, 日, 韓, 美 | <sub>任意 | <sub>9.0.0-X 至 11.3.0-X(含)|
+    | <sub>[Ninjhax 2](http://smealum.github.io/ninjhax2/) | <sub>[《方塊忍者》](https://amzn.to/2eRI1by) | <sub>卡帶, eShop| <sub>New, Old, 2DS | <sub>歐, 日, 美 | <sub>任意 | <sub>9.0.0-X 至 11.4.0-X(含)|
+    | <sub>[GenHax](https://github.com/svanheulen/genhax_proxy_installer) | <sub>[《魔物獵人 X》](http://amzn.to/2gsk6Tk) | <sub>電子商店(eShop) | <sub>New | <sub>日 | <sub>任意 | <sub>9.9.0-X 至 11.2.0-X(含)|
+    {: .notice--info}
+
+    <script type="text/javascript">
+    amzn_assoc_placement = "adunit0";
+    amzn_assoc_tracking_id = "plailect-20";
+    amzn_assoc_ad_mode = "manual";
+    amzn_assoc_ad_type = "smart";
+    amzn_assoc_marketplace = "amazon";
+    amzn_assoc_region = "US";
+    amzn_assoc_title = "";
+    amzn_assoc_linkid = "718ad647bc3d1b8f8c44b3a1f34bc235";
+    amzn_assoc_search_bar = "false";
+    amzn_assoc_asins = "B01AC3ZDCE,B00DD0B1R0,B00YC7DZP4,B00IVJ1M7M,B008YYSBR8,B004SG211I,B00KI2OZ9M,B00K848IH0";
+    </script>
+    <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
+
+1. 您的主機應該就會啟動 Homebrew Launcher 了
+
+    ![]({{ base_path }}/images/screenshots/homebrew-launcher.png)
+    {: .notice--info}
+
+Continue to [Installing boot9strap (Offline Homebrew Launcher)](installing-boot9strap-(offline-homebrew-launcher))
+{: .notice--primary}

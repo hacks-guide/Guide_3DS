@@ -1,0 +1,177 @@
+---
+title: "Finalizing Setup (Offline)"
+---
+
+#### Katsaus vaiheisiin
+
+Latauduttuaan NANDilta boot9strap suorittaa `boot.firm`-tiedoston, joka voi olla mikä tahansa kelvollinen arm9-ohjelma FIRM-muodossa. Tämän tiedoston voi korvata milloin tahansa, joskin Luma3DS sallii muidenkin FIRM-muotoisten arm9-ohjelmien suorittamisen ketjulataajan avulla.
+
+Tässä tapauksessa käytetään [AuroraWright](https://github.com/AuroraWright/)in luomaa Luma3DS:ää käynnistämään paikattu SysNAND suoraan, jolloin minkäänlaista EmuNANDia ei tarvita, mikä yksinkertaistaa hakkeroidun 3DS:n käyttöä sekä säästää tilaa SD-kortilta.
+
+Tämän prosessin aikana myös asennetaan muun muassa seuraavat ohjelmat:    
+
++  **FBI** *(asentaa CIA-muotoisia pelejä ja sovelluksia)*
++  **Anemone3DS** *(asentaa mukautettuja teemoja)*
++  **Luma3DS Updater** *(päivittää CFW-asennuksesi helposti)*
++  **GodMode9** *(monikäyttöinen työkalu, jolla voi tehdä NANDiin ja pelikorttiin liittyviä toimintoja)*
++  **Homebrew Launcher Loader** *(avaa Homebrew Launcherin tavallisena sovelluksena, kiitos Rosalina-taian)*
+
+#### Tarpeet
+
+* The latest release of [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) *(the `.cia` file)*
+* The latest release of [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
+* GodMode9:n [viimeisin julkaisu](https://github.com/d0k3/GodMode9/releases)
+* The latest release of [DSP1](https://github.com/zoogie/DSP1/releases/latest)
+* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) *(the `.cia` and `.3dsx` files)*
+* The latest fork of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(the `.cia` file)*
+* [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
+* [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
+
+#### Ohjeet
+
+##### Vaihe I – Valmistelut
+
+1. Sammuta konsolisi
+1. Aseta SD-korttisi tietokoneeseesi
+1. Kopioi `FBI.3dsx` SD-korttisi `/3ds/`-kansioon
+1. Luo `cias`-niminen kansio SD-korttisi juureen, jos sitä ei jo ole olemassa
+1. Copy `hblauncher_loader.cia` from the hblauncher_loader `.zip` to the `/cias/` folder on your SD card
+1. Kopioi `lumaupdater.cia` SD-korttisi `/cias/`-kansioon
+1. Copy `FBI.cia` to the `/cias/` folder on your SD card
+1. Copy `DSP1.cia` to the `/cias/` folder on your SD card
+1. Copy `Anemone3DS.cia` to the `/cias/` folder on your SD card
+
+    ![]({{ base_path }}/images/screenshots/cias-file-layout.png)
+    {: .notice--info}
+
+1. Create a folder named `payloads` in the `luma` folder on your SD card if it does not already exist
+1. Kopioi GodMode9-`.zip`-pakkauksesta `GodMode9.firm` SD-korttisi `/luma/payloads/`-kansioon
+1. Delete `ntrboot_flasher.firm` from the `/luma/payloads/` folder on your SD card if it exists
+1. Kopioi GodMode9-`.zip`-pakkauksesta `gm9`-kansio SD-korttisi juureen
+1. Kopioi `setup_ctrnand_luma3ds.gm9` SD-korttisi `/gm9/scripts/`-kansioon
+1. Kopioi `cleanup_sd_card.gm9` SD-korttisi `/gm9/scripts/`-kansioon
+
+    ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
+    {: .notice--info}
+
+1. Aseta SD-korttisi takaisin konsoliisi
+1. Käynnistä konsolisi
+
+##### Section II - Updating the System
+
+Jos käytit tämän oppaan vanhemmassa versiossa CTRTransferia saadaksesi *New 3DS* -konsolisi versiolle 2.1.0, [palauta NAND-varmuuskopiosi](godmode9-usage#nand_restore) ennen kuin jatkat tätä vaihetta.
+{: .notice--danger}
+
+Jos sinulla oli ennen tämän oppaan aloittamista EmuNAND-kokoonpano, ja haluaisit siirtää sen sisällön uuteen SysNAND-CFW-kokoonpanoosi, seuraa osiota [EmuNANDin siirtäminen](move-emunand) ennen kuin jatkat tätä vaihetta.
+{: .notice--info}
+
+1. Päivitä konsolisi menemällä järjestelmäasetuksiin (System Settings), valitse muut asetukset (Other Settings) ja sitten järjestelmäpäivitys (System Update) aivan oikeasta reunasta
+  + Päivitykset B9S + Luma -kokoonpanolla (joka sinulla on) ovat turvallisia
+  + Jos saat virheen, laita DNS:n automaattinen haku (Auto-Obtain DNS) päälle asetuksista
+  + Jos saat edelleen virheen, [seuraa osiota CTRTransfer](ctrtransfer) ja yritä sitten päivittämistä uudelleen
+
+##### Vaihe III – FBI:n avaaminen
+
+1. Avaa Download Play -sovellus
+1. Paina (L)-, (ALAS)- ja (SELECT)-painikkeita samaan aikaan avataksesi Rosalina-valikon
+1. Valitse "Miscellaneous options"
+1. Valitse "Switch the hb. title to the current app."
+1. Paina (B):tä jatkaaksesi
+1. Paina (B):tä palataksesi Rosalinan päävalikkoon
+1. Paina (B):tä poistuaksesi Rosalina-valikosta
+1. Paina (HOME)-painiketta ja sulje Download Play
+1. Avaa Download Play -sovellus
+1. Konsolisi pitäisi avata Homebrew Launcher
+
+##### Section IV - Installing CIAs
+
+1. Avaa FBI homebrew-listasta
+1. Mene hakemistoon `SD` → `cias`
+1. Valitse "\<current directory>"
+1. Select the "Install and delete all CIAs" option, then press (A) to confirm
+1. Paina (HOME)-painiketta ja sulje Download Play
+
+##### Section V - DSP Dump
+
+1. Avaa DSP1-sovellus
+1. Kun toiminto on suoritettu, paina (B):tä poistaaksesi sovelluksen ja palataksesi HOME-valikkoon
+
+##### Vaihe VI – Luma3DS:n asentaminen CTRNANDiin
+
+1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
+1. Jos ohjelma kehottaa luomaan varmuuskopion tärkeistä tiedostoista (essential files), paina (A):ta tehdäksesi sen, ja kun varmuuskopio on valmis, paina (A):ta uudelleen jatkaaksesi
+1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
+  + Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
+1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
+1. Valitse "Scripts..."
+1. Valitse "setup_ctrnand_luma3ds"
+1. Paina kehotettaessa (A):ta jatkaaksesi
+1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1) ja syötä annettu painikeyhdistelmä
+1. Paina (A):ta jatkaaksesi
+1. Paina (A):ta lukitaksesi kirjoitusoikeudet
+
+##### Vaihe VII – SysNANDin varmuuskopiointi
+
+1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
+1. Valitse "Scripts..."
+1. Valitse "Backup SysNAND"
+1. Paina (A):ta vahvistaaksesi
+  + Tämä prosessi voi kestää jonkin aikaa
+1. Paina (A):ta jatkaaksesi
+1. Pidä (R):ää pohjassa ja paina samalla (B):tä irrottaaksesi SD-korttisi
+1. Aseta SD-korttisi tietokoneeseesi
+1. Kopioi SD-korttisi `/gm9/out/`-kansiosta `<sarjanumero>_nandmin_###.bin` turvalliseen paikkaan tietokoneellasi
+  + Varmuuskopioi useaan eri paikkaan (kuten pilvipalveluihin)
+  + Tämä varmuuskopiointi pelastaa sinut konsolin vioittumiselta, jos jokin menee pieleen tulevaisuudessa
+1. Poista SD-korttisi `/gm9/out/`-kansiosta `<sarjanumero>_nandmin_###.bin` kopioituasi sen
+1. Aseta SD-korttisi takaisin konsoliisi
+
+##### Vaihe VIII – SD-kortin siivoaminen
+
+1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
+1. Valitse "Scripts..."
+1. Valitse "cleanup_sd_card"
+1. Paina kehotettaessa (A):ta jatkaaksesi
+1. Paina (A):ta jatkaaksesi
+1. Paina (START)-painiketta käynnistääksesi uudelleen
+
+___
+
+{% capture notice-10 %}
+Voit nyt käyttää Luma3DS Updateria päivittääksesi Luma3DS:n viimeisimpään versioon. Avaa vain sovellus ja paina (A):ta.
+
+Tämä ei ole sama asia kuin järjestelmäpäivitys; toiminto vain lataa ja purkaa uusimmat Luma3DS-tiedostot.
+
+Tämä päivittää vain SD-kortilla olevat Luma3DS-tiedostot. Jos käynnistät konsolisi ilman SD-korttia, käytetään CTRNANDiin asettamaasi versiota.    
+{% endcapture %}
+
+<div class="notice--info">{{ notice-10 | markdownify }}</div>
+
+{% capture notice-6 %}   
+Konsolisi käynistää nyt oletuksena Luma3DS-CFW-SysNANDin.    
+
+Voit nyt pitää (SELECT)-painiketta pohjassa käynnistyksen aikana avataksesi Luma3DS:n määritysvalikon.    
+
+Voit nyt pitää (START)-painiketta pohjassa käynnistyksen aikana avataksesi Luma3DS:n ketjulataajan (huomaa, että ketjulatausvalikko näytetään vain, jos useampi kuin yksi ohjelma havaitaan).    
+
+Voit nyt pitää pohjassa (START) + (SELECT) + (X) -painikeyhdistelmää konsolin käynnistyessä kopioidaksesi ARM11-bootromin (`boot11.bin`), ARM9-bootromin (`boot9.bin`) sekä konsolikohtaisen OTP-tiedostosi (`OTP.bin`) SD-korttisi `/boot9strap/`-kansioon (huomaa, että prosessissa ei näytetä minkäänlaisia viestejä tai kehotteita).    
+
+Voit nyt käyttää (L) + (ALAS) + (SELECT) -painikeyhdistelmää, kun konsolisi on päällä avataksesi Luma3DS:ään integroidun Rosalina-valikon. Täyden luettelon Rosalinan ominaisuuksista löydät [Luma3DS v8.0 -julkaisusivulta](https://github.com/AuroraWright/Luma3DS/releases/tag/v8.0).
+{% endcapture %}
+
+<div class="notice--info">{{ notice-6 | markdownify }}</div>
+
+Käyttääksesi [NTR-CFW](https://github.com/44670/BootNTR/):tä asenna [BootNTR Selector](https://gbatemp.net/threads/432911/).
+{: .notice--info}
+
+Tietoja konsolisi alueen vaihtamisesta toiseen saat osiosta [Alueen vaihtaminen](region-changing).
+{: .notice--success}
+
+Tietoja GodMode9:n monista ominaisuuksista löydät osiosta [GodMode9:n käyttäminen](godmode9-usage).
+{: .notice--success}
+
+Tietoja Luma3DS:n monista ominaisuuksista löydät [sen wikistä](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage).
+{: .notice--success}
+
+Tietoja mukautettujen teemojen ja käynnistysruutujen asentamisesta löydät [Theme Plaza](https://themeplaza.eu/)sta.
+{: .notice--success}
