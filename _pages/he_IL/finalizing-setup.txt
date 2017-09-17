@@ -8,8 +8,6 @@ title: "סיום התהליך"
 
 לכן, נשתמש ב-Luma3DS מאת [AuroraWright](https://github.com/AuroraWright/) על מנת לעשות בוט לתוך SysNAND מותאם ישירות, דבר אשר מאפשר לנו לעקוף לחלוטין כל צורך של EmuNAND ובכך לפשט את השימוש ב-3DS פרוץ במקביל לחסכון בנפח ה-SD.
 
-תבדקו שהתקשורת האלחוטית של הקונסולה שלכם דלוקה ומחוברת לאינטרנט. OCS יצטרך להוריד כמה קבצים על הקונסולה שלכם.
-
 בתהליך זה, גם נתקין את התוכנות הבאות:    
 
 + **FBI** *(התקנת משחקים ותוכנות בפורמט CIA)*
@@ -18,9 +16,48 @@ title: "סיום התהליך"
 + **GodMode9** *(כלי רב שימושי אשר מסוגל לבצע פונקציות הקשורות ל-NAND ולקלטות משחק)*
 +  **Homebrew Launcher Loader** *(מפעיל את הHomebrew Launcher כתוכנה רגילה תודות לRosalina)*
 
+#### מה שאתם צריכים
+
+* את הגרסה העדכנית של [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) *(יש להוריד את קובץ ה-`.cia`)*
+* את הגרסה העדכנית של [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
+* את הגרסה העדכנית של [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* את הגרסה העדכנית של [DSP1](https://github.com/zoogie/DSP1/releases/latest)
+* את הגרסה העדכנית של [FBI](https://github.com/Steveice10/FBI/releases/latest) *(יש להוריד את קובץ ה- `.cia` ואת קובץ ה`.3dsx)*
+* הפורק העדכני של [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(יש להוריד את קובץ ה- `.cia`)*
+* [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
+* [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
+
 #### הוראות
 
-##### חלק I - עדכון המערכת
+##### חלק I - הכנות
+
+1. תכבו את המכשיר
+1. תכניסו את ה-SD שלכם למחשב
+1. תעתיקו את 'FBI.3dsx' לתיקיה '/ 3ds /' על כרטיס הזכרון
+1. צרו תיקייה בשם `cias` בתיקיית האם של כרטיס ה- SD שלכם אם לא קיימת תיקייה כזו
+1. תעתיקו את `hblauncher_loader.cia`מתוך הזיפ של hblauncher_loader לתוך התיקייה `/cias/` שב-SD שלכם
+1. תעתיקו את הקובץ `lumaupdater.cia` לתוך התיקייה `/cias/` שב-SD שלכם
+1. תעתיקו את הקובץ `FBI.cia` לתוך התיקייה `/cias/` שב-SD שלכם
+1. תעתיקו את הקובץ `DSP1.cia` לתוך התיקייה `/cias/` שב-SD שלכם
+1. תעתיקו את הקובץ `Anemone3DS.cia` לתוך התיקייה `/cias/` שב-SD שלכם
+
+    ![]({{ base_path }}/images/screenshots/cias-file-layout.png)
+    {: .notice--info}
+
+1. צרו תיקייה בשם `payloads` בתיקיית `luma` של כרטיס ה- SD שלכם אם לא קיימת תיקייה כזו
+1. העתיקו את `GodMode9.firm` מהזיפ של GodMode9 אל תיקיית /luma/payloads/ ב- SD שלכם
+1. תמחקו את `ntrboot_flasher.firm` מתיקיית `/luma/payloads/` על כרטיס הSD שלכם אם הוא קיים
+1. תעתיקו את התיקייה `gm9` מתוך ה`.zip` של GodMode9 ל-SD שלכם
+1. תעתיקו את `setup_ctrnand_luma3ds.gm9` אל תיקיית`/gm9/scripts/` על כרטיס הSD שלכם
+1. תעתיקו את `cleanup_sd_card.gm9` אל תיקיית`/gm9/scripts/` על כרטיס הSD שלכם
+
+    ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
+    {: .notice--info}
+
+1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
+1. תפעילו את המכשיר
+
+##### חלק II - עדכון המערכת
 
 אם, במהלך שעקבתם אחרי גרסה ישנה של המדריך, שנמכתם את ה*New 3DS* שלכם לגרסא 2.1.0, עכשיו זה הזמן [לשחזר את הגיבוי שלכם](godmode9-usage#nand_restore) לפני שאתם עושים את החלק הזה.
 {: .notice--danger}
@@ -33,7 +70,7 @@ title: "סיום התהליך"
   + אם אתם מקבלים שגיאה, שנו את הגדרות ה-DNS שלכם ל-"auto"
   + אם זה ממשיך לתת לכם שגיאה, [עקבו אחרי CTRTransfer](ctrtransfer), ואז תנסו לעדכן שוב
 
-##### חלק II - הפעלת OCS
+##### חלק III - הפעלת FBI
 
 1. תפעילו את Download Play
 1. תלחצו (L) + (Down) + (Select) באותו זמן כדי לפתוח את התפריט של Rosalina
@@ -44,26 +81,28 @@ title: "סיום התהליך"
 1. תלחצו (B) כדי לצאת מהתפריט של Rosalina
 1. תלחצו על (Home), ואז תסגרו את Download Play
 1. תפעילו את Download Play
-1. הקונסולה שלכם אמורה לטעון את OCS
+1. המכשיר שלכם אמור לטעון את הHomebrew Launcher
 
-##### חלק III - OCS
+##### חלק IV - התקנת CIA
 
-1. תלחצו (A) כדי להתחיל
-1. תחכו לכל ההורדות וההתקנות להסתיים
-1. תלחצו (Start) כדי לצאת כשמבקשים ממכם
+1. תפעילו את FBI מרשימת הhomebrew שלכם
+1. נווטו אל `SD` ושם אל `cias`
+1. לחצו על "\<current directory>"
+1. תבחרו את האופציה "Install and delete all CIAs", ולאחר מכן לחצו על (A) לאישור
 1. תלחצו על (Home), ואז תסגרו את Download Play
 
-##### חלק IV - DSP Dump
+##### חלק V - DSP Dump
 
 1. תפעילו את DSP1
 1. אחרי שזה סיים, תלחצו (B) כדי למחוק את התוכנה ולחזור למסך הבית
 
-##### חלק V - Luma3DS על ה- CTRNAND
+##### חלק VI - Luma3DS על ה- CTRNAND
 
 1. תפתחו את GodMode9 על ידי החזקה של המקש (Start) בעת ההדלקה
 1. אם תתבקשו לעשות גיבוי של קבצים חיוניים, תלחצו (A) כדי לעשות זאת, ואז תלחצו (A) כדי להמשיך אחרי שזה סיים
+1. אם אתם מתבקשים לתקן את זמן ותאריך הRTC, תלחצו (A) כדי לעשות זאת, ואז תלחצו (A) כדי להמשיך
+  + שימו לב, אם הייתם צריכים לתקן את תאריך וזמן הRTC, תצטרכו לתקן את הזמן בהגדרות המערכת גם כן אחרי המדריך הזה
 1. תלחצו על (Home) כדי להראות את תפריט הפעולה
-1. תבחרו ב"More..."
 1. תבחרו "Scripts..."
 1. תבחרו ב "setup_ctrnand_luma3ds"
 1. כשתתבקשו, תלחצו (A) כדי להמשיך
@@ -71,10 +110,9 @@ title: "סיום התהליך"
 1. תלחצו (A) כדי להמשיך
 1. תלחצו (A) כדי לנעול הרשאות כתיבה
 
-##### חלק VI - גיבוי SysNAND
+##### חלק VII - גיבוי SysNAND
 
 1. תלחצו על (Home) כדי להראות את תפריט הפעולה
-1. תבחרו ב"More..."
 1. תבחרו "Scripts..."
 1. תבחרו ב "Backup SysNAND"
 1. תלחצו (A) כדי לאשר
@@ -88,10 +126,9 @@ title: "סיום התהליך"
 1. תמחקו את `<serialnumber>_nandmin_###.bin` בתיקיה `/gm9/out/` על הSD לאחר שהעתקתם אותו
 1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
 
-##### חלק VII - ניקוי ה SD
+##### חלק VIII - ניקוי ה SD
 
 1. תלחצו על (Home) כדי להראות את תפריט הפעולה
-1. תבחרו ב"More..."
 1. תבחרו "Scripts..."
 1. תבחרו ב"cleanup_sd_card"
 1. כשתתבקשו, תלחצו (A) כדי להמשיך
