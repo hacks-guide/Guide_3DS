@@ -24,6 +24,7 @@ On käynyt ilmi, että Nintendo jakaa CFW-käyttäjille porttikieltoja verkkotoi
 
 * SafeB9SInstallerin [viimeisin julkaisu](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * Boot9strapin [viimeisin julkaisu](https://github.com/SciresM/boot9strap/releases/latest) *(tavallinen boot9strap-tiedosto; ei `devkit`- eikä `ntr`-tiedosto)*
+* Luma3DS:n [viimeisin julkaisu](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z`-tiedosto)*
 * [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
 
 #### Ohjeet
@@ -33,7 +34,6 @@ On käynyt ilmi, että Nintendo jakaa CFW-käyttäjille porttikieltoja verkkotoi
 Korvaa mahdolliset olemassa olevat tiedostot SD-kortillasi kaikissa tämän vaiheen kohdissa.
 {: .notice--info}
 
-1. Sammuta konsolisi
 1. Aseta SD-korttisi tietokoneeseesi
 1. Luo `boot9strap`-niminen kansio SD-korttisi juureen
 1. Kopioi `cleanup_sd_card.gm9` SD-korttisi `/gm9/scripts/`-kansioon
@@ -48,8 +48,16 @@ Korvaa mahdolliset olemassa olevat tiedostot SD-kortillasi kaikissa tämän vaih
 1. Odota, kunnes kaikki turvatarkistukset on suoritettu
 1. Syötä kehotettaessa annettu painikeyhdistelmä asentaaksesi boot9strapin
 1. Kun toiminto on suoritettu, pidä (START)-painiketta pohjassa ja paina samalla (A):ta käynnistääksesi konsolisi Luma3DS-ketjulataajaan
+  + If you encounter an error booting your device after the B9S update, just continue to fix it
 
-##### Vaihe III – SD-kortin siivoaminen
+##### Section III - Update Luma3DS
+
+1. Sammuta konsolisi
+1. Aseta SD-korttisi tietokoneeseesi
+1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card, replacing the existing file
+1. Aseta SD-korttisi takaisin konsoliisi
+
+##### Section IV - Cleanup SD Card
 
 Note that this script will remove the `/boot9strap/` and `/cias/` folders from your SD card!
 {: .notice--danger}
@@ -63,9 +71,4 @@ Note that this script will remove the `/boot9strap/` and `/cias/` folders from y
 1. Valitse "cleanup_sd_card"
 1. Paina kehotettaessa (A):ta jatkaaksesi
 1. Paina (A):ta jatkaaksesi
-1. Paina (START)-painiketta käynnistääksesi uudelleen
-
-___
-
-On suositeltavaa käyttää Luma3DS Updateria päivittääksesi Luma3DS-asennuksesi sen jälkeen, kun olet päivittänyt boot9strapiin.
-{: .notice--info}
+1. Hold (R) and press (Start) to power off your device
