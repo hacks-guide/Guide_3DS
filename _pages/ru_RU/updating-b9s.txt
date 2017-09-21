@@ -24,6 +24,7 @@ title: "Обновление B9S"
 
 * Свежая версия [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * Свежая версия [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(стандартный boot9strap; не `devkit-файл`, не `ntr-файл`)*
+* Свежая версия [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z-архив`)*
 * [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
 
 #### Инструкция
@@ -33,7 +34,6 @@ title: "Обновление B9S"
 Для всех шагов в этой части перезаписывайте любые существующие файлы на SD-карте.
 {: .notice--info}
 
-1. Выключите консоль
 1. Вставьте SD-карту в компьютер
 1. Создайте папку `boot9strap` в корне SD-карты
 1. Скопируйте `cleanup_sd_card.gm9` в папку `/gm9/scripts/` на SD-карте
@@ -48,8 +48,16 @@ title: "Обновление B9S"
 1. Дождитесь окончания всех проверок безопасности
 1. При появлении запроса, введите указанную комбинацию кнопок для установки boot9strap
 1. После завершения нажмите (A), удерживая кнопку (Start), чтобы запустить меню Luma3DS chainloader
+  + If you encounter an error booting your device after the B9S update, just continue to fix it
 
-##### Часть III - Очистка SD-карты
+##### Section III - Update Luma3DS
+
+1. Выключите консоль
+1. Вставьте SD-карту в компьютер
+1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card, replacing the existing file
+1. Вставьте SD-карту обратно в консоль
+
+##### Section IV - Cleanup SD Card
 
 Обратите внимание, что этот скрипт удалит папки `/boot9strap/` и `/cias/` с SD-карты!
 {: .notice--danger}
@@ -63,9 +71,4 @@ title: "Обновление B9S"
 1. Выберите "cleanup_sd_card"
 1. При появлении запроса, нажмите (A) для продолжения
 1. Нажмите (A), чтобы продолжить
-1. Нажмите (Start) для перезагрузки
-
-___
-
-Рекомендуется использовать Luma3DS Updater, чтобы обновить Luma3DS после завершения обновления boot9strap.
-{: .notice--info}
+1. Hold (R) and press (Start) to power off your device
