@@ -24,6 +24,7 @@ There have been reports of a wave of bans being handed out to CFW users by Ninte
 
 * The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
+* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(the `.7z` file)*
 * [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
 
 #### Instructions
@@ -33,7 +34,6 @@ There have been reports of a wave of bans being handed out to CFW users by Ninte
 For all steps in this section, overwrite any existing files on your SD card.
 {: .notice--info}
 
-1. Power off your device
 1. Insert your SD card into your computer
 1. Create a folder named `boot9strap` on the root of your SD card
 1. Copy `cleanup_sd_card.gm9` to the `/gm9/scripts/` folder on your SD card
@@ -48,8 +48,16 @@ For all steps in this section, overwrite any existing files on your SD card.
 1. Wait for all safety checks to complete
 1. When prompted, input the key combo given to install boot9strap
 1. Once it has completed, hold (Start) while pressing (A) to reboot your device to the Luma3DS chainloader
+  + If you encounter an error booting your device after the B9S update, just continue to fix it
 
-##### Section III - Cleanup SD Card
+##### Section III - Update Luma3DS
+
+1. Power off your device
+1. Insert your SD card into your computer
+1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card, replacing the existing file
+1. Reinsert your SD card into your device
+
+##### Section IV - Cleanup SD Card
 
 Note that this script will remove the `/boot9strap/` and `/cias/` folders from your SD card!
 {: .notice--danger}
@@ -63,9 +71,4 @@ Note that this script will remove the `/boot9strap/` and `/cias/` folders from y
 1. Select "cleanup_sd_card"
 1. When prompted, press (A) to proceed
 1. Press (A) to continue
-1. Press (Start) to reboot
-
-___
-
-It is recommended that you use Luma3DS Updater to update your Luma3DS installation after you have completed the boot9strap update.
-{: .notice--info}
+1. Hold (R) and press (Start) to power off your device
