@@ -24,6 +24,7 @@ Il y a eu des informations concernant une vague de bannissements contre les util
 
 * La dernière version de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * La dernière version de [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(boot9strap standard, pas le fichier `devkit` et ni le fichier `ntr`)*
+* La dernière version de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(le fichier `.7z`)*
 * [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
 
 #### Instructions
@@ -33,7 +34,6 @@ Il y a eu des informations concernant une vague de bannissements contre les util
 Pour toutes les étapes de cette section, remplacez tous les fichiers existants sur votre carte SD.
 {: .notice--info}
 
-1. Éteignez votre 3DS
 1. Insérez votre carte SD dans votre ordinateur
 1. Créez un dossier à la racine de votre carte SD nommé `boot9strap`
 1. Copiez `cleanup_sd_card.gm9` dans le dossier `/gm9/scripts/` sur votre carte SD
@@ -48,8 +48,16 @@ Pour toutes les étapes de cette section, remplacez tous les fichiers existants 
 1. Attendez que tous les tests de sécurité soient finis
 1. Quand cela est demandé, appuyez sur la combinaison de boutons donnée pour installer boot9strap
 1. Once it has completed, hold (Start) while pressing (A) to reboot your device to the Luma3DS chainloader
+  + If you encounter an error booting your device after the B9S update, just continue to fix it
 
-##### Section III - Cleanup SD Card
+##### Section III - Update Luma3DS
+
+1. Éteignez votre 3DS
+1. Insérez votre carte SD dans votre ordinateur
+1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card, replacing the existing file
+1. Réinsérez votre carte SD dans votre 3DS
+
+##### Section IV - Cleanup SD Card
 
 Note that this script will remove the `/boot9strap/` and `/cias/` folders from your SD card!
 {: .notice--danger}
@@ -63,9 +71,4 @@ Note that this script will remove the `/boot9strap/` and `/cias/` folders from y
 1. Sélectionnez "cleanup_sd_card"
 1. Lorsque vous êtes invité, appuyez sur (A)
 1. Appuyez sur (A) pour continuer
-1. Appuyez sur (Start) pour redémarrer la console
-
-___
-
-It is recommended that you use Luma3DS Updater to update your Luma3DS installation after you have completed the boot9strap update.
-{: .notice--info}
+1. Hold (R) and press (Start) to power off your device
