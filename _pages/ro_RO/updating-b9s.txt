@@ -24,6 +24,7 @@ Au existat rapoarte de un val de banuri adresate utilizatorilor de CFW de către
 
 * Cea mai nouă versiune de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * Cea mai nouă versiune de [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(fișierul standard boot9strap; nu cel `devkit`, nici cel `ntr`)*
+* Cea mai nouă versiune de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(fișierul `.7z`)*
 * [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
 
 #### Instrucțiuni
@@ -33,7 +34,6 @@ Au existat rapoarte de un val de banuri adresate utilizatorilor de CFW de către
 Pentru toți pașii din această secțiune, suprascrieți fișierele existente de pe cardul SD.
 {: .notice--info}
 
-1. Închideți dispozitivul
 1. Introduceți cardul SD în calculator
 1. Creați un folder numit `boot9strap` pe rădăcina cardului SD
 1. Copiați `cleanup_sd_card.gm9` în folderul `/gm9/scripts/` de pe cardul SD
@@ -48,8 +48,16 @@ Pentru toți pașii din această secțiune, suprascrieți fișierele existente d
 1. Așteptaţi ca toate verificările de siguranță să fie completate
 1. Când vi se cere, introduceți combinația de butoane ca să instalați boot9strap
 1. Once it has completed, hold (Start) while pressing (A) to reboot your device to the Luma3DS chainloader
+  + If you encounter an error booting your device after the B9S update, just continue to fix it
 
-##### Section III - Cleanup SD Card
+##### Section III - Update Luma3DS
+
+1. Închideți dispozitivul
+1. Introduceți cardul SD în calculator
+1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card, replacing the existing file
+1. Reintroduceți cardul SD în dispozitivul dumneavoastră
+
+##### Section IV - Cleanup SD Card
 
 Note that this script will remove the `/boot9strap/` and `/cias/` folders from your SD card!
 {: .notice--danger}
@@ -63,9 +71,4 @@ Note that this script will remove the `/boot9strap/` and `/cias/` folders from y
 1. Selectaţi "cleanup_sd_card"
 1. Când vi se solicită, apăsaţi (A) pentru a continua
 1. Apăsați (A) pentru a continua
-1. Apăsați (Start) pentru a reporni
-
-___
-
-It is recommended that you use Luma3DS Updater to update your Luma3DS installation after you have completed the boot9strap update.
-{: .notice--info}
+1. Hold (R) and press (Start) to power off your device
