@@ -24,6 +24,7 @@ title: "עדכון B9S"
 
 * הגרסה העדכנית של [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * הגרסא העדכנית של [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *( boot9strap רגיל; לא קובץ ה `devkit`, ולא קובץ ה`ntr`)*
+* את הגרסה העדכנית של [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(יש להוריד את קובץ ה-`.7z`)*
 * [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
 
 #### הוראות
@@ -33,7 +34,6 @@ title: "עדכון B9S"
 לכל השלבים בחלק הזה, תשכתבו כל קובץ קיים בכרטיס SD שלכם אם יש.
 {: .notice--info}
 
-1. תכבו את המכשיר
 1. תכניסו את ה-SD שלכם למחשב
 1. תצרו ב-SD שלכם תיקייה חדשה בשם `boot9strap`
 1. תעתיקו את `cleanup_sd_card.gm9` אל תיקיית`/gm9/scripts/` על כרטיס הSD שלכם
@@ -48,8 +48,16 @@ title: "עדכון B9S"
 1. תחכו שכל בדיקות הבטיחות יסתיימו
 1. כאשר תתבקשו, תלחצו על הכפתורים שנתונים לכם כדי להתקין את boot9strap
 1. אחרי שזה סיים, תחזיקו (Start) בזמן שאתם לוחצים (A) כדי לאתחל את הקונסולה אל תפריט הטעינה שלLuma3DS
+  + If you encounter an error booting your device after the B9S update, just continue to fix it
 
-##### חלק III - ניקוי ה SD
+##### Section III - Update Luma3DS
+
+1. תכבו את המכשיר
+1. תכניסו את ה-SD שלכם למחשב
+1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card, replacing the existing file
+1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
+
+##### Section IV - Cleanup SD Card
 
 שימו לב שהסקריפט הזה ימחק את תיקייות `/boot9strap/` ו`/cias/`מכרטיס הSD שלכם!
 {: .notice--danger}
@@ -63,9 +71,4 @@ title: "עדכון B9S"
 1. תבחרו ב"cleanup_sd_card"
 1. כשתתבקשו, תלחצו (A) כדי להמשיך
 1. תלחצו (A) כדי להמשיך
-1. לחצו על (Start) על מנת להפעיל מחדש
-
-___
-
-זה מומלץ להשתמש בLuma3DS Updater כדי לעדכן את התקנת Luma3DS שלכם אחרי שסיימתם את העדכון של boot9strap.
-{: .notice--info}
+1. Hold (R) and press (Start) to power off your device
