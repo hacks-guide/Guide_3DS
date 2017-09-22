@@ -134,41 +134,41 @@ GodMode9 是個可任意存取任天堂 3DS 主機檔案的檔案管理員，您
 
 #### 操作說明
 
-1. 關閉您的主機
-1. 將 SD 卡插入電腦中
-1. 在 `/gm9/` 資料夾中為各個想備份的 GBA 虛擬主機 遊戲建立一個新的資料夾
-1. 將 SD 卡插回主機中
-1. 啟動您的主機
+The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavs.sav`. FBI lists Title IDs for each installed title under the "Titles" menu. This is only needed to tell which saves correspond to which games.
+{: .notice--info}
+
 1. 為各個想備份的 GBA 虛擬主機 遊戲重複下列步驟：
   + 啟動您所想要備份存檔的 GBA 虛擬主機遊戲
   + 退出遊戲
   + 開機時，按住「Start」鍵進入 Luma3DS 選單
   + 按「A」啟動 GodMode9
   + 移動至 `[S:] SYSNAND VIRTUAL`
-  + 選取 `gbavc.sav`，並按下「A」複製
-  + 按「B」回到主選單
-  + 移動至 `[0:] SDCARD` -> `gm9`
-  + 移動至為本遊戲所創建的資料夾底下
-  + 按「Y」貼上 `gbavc.sav`
+  + Press (A) on `gbavc.sav` to select it
+  + Select "AGBSAVE options..."
+  + Select "Dump GBA VC save"
+  + Press (A) to continue
   + 按下「Start」鍵重啟您的主機
 
 ## <a name="restore_gba" /> 還原 GBA 虛擬主機遊戲存檔
 
+FBI lists Title IDs for each installed title under the "Titles" menu. This is only needed to tell which saves correspond to which games if you used GodMode9 to backup the save.
+{: .notice--info}
+
 #### 操作說明
 
-1. 請確保在您的 `/gm9/` 資料夾中已經先替各個想還原的 GBA 虛擬主機遊戲建立資料夾將確保裡面有還原用的存檔。
 1. 為各個想還原的 GBA 虛擬主機 遊戲重複下列步驟：
   + 啟動您所想要備份存檔的 GBA 虛擬主機遊戲
   + 退出遊戲
   + 開機時，按住「Start」鍵進入 Luma3DS 選單
   + 按「A」啟動 GodMode9
   + 移動至 `[0:] SDCARD` -> `gm9`
-  + 移動至為本遊戲所創建的資料夾底下
-  選取 `gbavc.sav`，並按下「A」複製
+  + Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
   + 按「B」回到主選單
   + 移動至 `[S:] SYSNAND VIRTUAL`
-  + 按「Y」貼上 `gbavc.sav`
-  + 按「A」確認
+  + Press (A) on `gbavc.sav` to select it
+  + Select "AGBSAVE options..."
+  + Select "Inject GBA VC save"
+  + Press (A) to continue
   + 按下「Start」鍵重啟您的主機
 
 ## <a name="format_sd" /> 格式化 SD 卡
