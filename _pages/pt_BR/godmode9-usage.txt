@@ -134,41 +134,41 @@ Utilize o menu `Titles` no FBI para obter o ID do aplicativo instalado que você
 
 #### Instruções
 
-1. Desligue seu dispositivo
-1. Insira o cartão SD no seu computador
-1. Crie uma pasta em `/gm9/` para cada jogo de VC de GBA que você deseja fazer backup do save
-1. Reinsira seu cartão SD no seu dispositivo
-1. Ligue o seu dispositivo
+The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavs.sav`. FBI lists Title IDs for each installed title under the "Titles" menu. This is only needed to tell which saves correspond to which games.
+{: .notice--info}
+
 1. Faça o seguinte processo para cada jogo de VC de GBA que você deseja fazer backup do save:
   + Inicie o jogo de VC de GBA
   + Saia do jogo de VC de GBA
   + Inicie seu dispositivo enquanto segura (Start) para iniciar o menu do chainloader do Luma3DS
   + Inicie o GodMode9 apertando (A)
   + Navegue para `[S:] SYSNAND VIRTUAL`
-  Aperte (Y) em `gbavc.sav` para copiá-lo
-  + Aperte (B) para retornar para o menu principal
-  + Navegue para `[0:] SDCARD` -> `gm9`
-  + Navegue até a pasta que você criou para este jogo de VC de GBA
-  + Aperte (Y) para colar `gbavc.sav`
+  + Press (A) on `gbavc.sav` to select it
+  + Select "AGBSAVE options..."
+  + Select "Dump GBA VC save"
+  + Press (A) to continue
   + Aperte (Start) para reiniciar seu dispositivo
 
 ## <a name="restore_gba" /> Restaurar Saves do VC de GBA
 
+FBI lists Title IDs for each installed title under the "Titles" menu. This is only needed to tell which saves correspond to which games if you used GodMode9 to backup the save.
+{: .notice--info}
+
 #### Instruções
 
-1. Garanta que você tenha uma pasta contendo um save dentro de `/gm9/` para cada jogo de VC de GBA que você deseja restaurar o save
 1. Faça o seguinte processo para cada jogo de VC de GBA que você deseja restaurar o save:
   + Inicie o jogo de VC de GBA
   + Saia do jogo de VC de GBA
   + Inicie seu dispositivo enquanto segura (Start) para iniciar o menu do chainloader do Luma3DS
   + Inicie o GodMode9 apertando (A)
   + Navegue para `[0:] SDCARD` -> `gm9`
-  + Navegue até a pasta que você criou para este jogo de VC de GBA
-  Aperte (Y) em `gbavc.sav` para copiá-lo
+  + Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
   + Aperte (B) para retornar para o menu principal
   + Navegue para `[S:] SYSNAND VIRTUAL`
-  + Aperte (Y) para colar `gbavc.sav`
-  + Aperte (A) para confirmar
+  + Press (A) on `gbavc.sav` to select it
+  + Select "AGBSAVE options..."
+  + Select "Inject GBA VC save"
+  + Press (A) to continue
   + Aperte (Start) para reiniciar seu dispositivo
 
 ## <a name="format_sd" /> Formatar um cartão SD
