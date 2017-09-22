@@ -134,41 +134,41 @@ GodMode9 это полноценный файловый менеджер для 
 
 #### Инструкция
 
-1. Выключите консоль
-1. Вставьте SD-карту в компьютер
-1. Создайте внутри `/gm9/` папку для каждой игры GBA VC, для которой вы хотите сделать резервные копии сохранений
-1. Вставьте SD-карту обратно в консоль
-1. Включите консоль
+The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavs.sav`. FBI lists Title IDs for each installed title under the "Titles" menu. This is only needed to tell which saves correspond to which games.
+{: .notice--info}
+
 1. Выполните нижеуказанные действия для каждой игры GBA VC, для которой вы хотите сделать резервные копии сохранений:
   + Запустите игру GBA VC
   + Выйдите из игры GBA VC
   + Включите консоль кнопкой питания, держа нажатой кнопку (Start), чтобы запустить меню Luma3DS chainloader
   + Запустите GodMode9, нажав кнопку (A)
   + Перейдите в `[S:] SYSNAND VIRTUAL`
-  + Нажмите (Y), выделив файл `gbavc.sav` чтобы скопировать его
-  + Нажмите (B) для возврата в главное меню
-  + Перейдите в `[0:] SDCARD` -> `gm9`
-  + Перейдите в папку, которую вы создали для этой игры GBA VC
-  + Нажмите (Y) чтобы вставить файл `gbavc.sav`
+  + Press (A) on `gbavc.sav` to select it
+  + Select "AGBSAVE options..."
+  + Select "Dump GBA VC save"
+  + Press (A) to continue
   + Нажмите (Start) для перезагрузки
 
 ## <a name="restore_gba" /> Восстановление сохранений GBA VC
 
+FBI lists Title IDs for each installed title under the "Titles" menu. This is only needed to tell which saves correspond to which games if you used GodMode9 to backup the save.
+{: .notice--info}
+
 #### Инструкция
 
-1. Убедитесь, что внутри `/gm9/` есть папки с сохранениями для каждой игры GBA VC, для которой вы хотите восстановить сохранения из резервной копии
 1. Выполните нижеуказанные действия для каждой игры GBA VC, для которой вы хотите восстановить сохранения из резервной копии:
   + Запустите игру GBA VC
   + Выйдите из игры GBA VC
   + Включите консоль кнопкой питания, держа нажатой кнопку (Start), чтобы запустить меню Luma3DS chainloader
   + Запустите GodMode9, нажав кнопку (A)
   + Перейдите в `[0:] SDCARD` -> `gm9`
-  + Перейдите в папку, которую вы создали для этой игры GBA VC
-  + Нажмите (Y), выделив файл `gbavc.sav` чтобы скопировать его
+  + Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
   + Нажмите (B) для возврата в главное меню
   + Перейдите в `[S:] SYSNAND VIRTUAL`
-  + Нажмите (Y) чтобы вставить файл `gbavc.sav`
-  + Нажмите (A) для подтверждения
+  + Press (A) on `gbavc.sav` to select it
+  + Select "AGBSAVE options..."
+  + Select "Inject GBA VC save"
+  + Press (A) to continue
   + Нажмите (Start) для перезагрузки
 
 ## <a name="format_sd" /> Форматирование SD-карты
