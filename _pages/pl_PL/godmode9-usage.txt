@@ -134,41 +134,41 @@ Use the `Titles` menu in FBI to get the Title ID of the installed title you wish
 
 #### Instrukcje
 
-1. Power off your device
-1. Włóż kartę SD do komputera
-1. Create a folder in `/gm9/` for each GBA VC game that you want to backup the save for
-1. Reinsert your SD card into your device
-1. Power on your device
+The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavs.sav`. FBI lists Title IDs for each installed title under the "Titles" menu. This is only needed to tell which saves correspond to which games.
+{: .notice--info}
+
 1. Do the following process for each GBA VC game that you want to backup the save for:
   + Launch the GBA VC game
   + Exit the GBA VC game
   + Boot your device while holding (Start) to launch the Luma3DS chainloader menu
   + Launch GodMode9 by pressing (A)
   + Navigate to `[S:] SYSNAND VIRTUAL`
-  + Press (Y) on `gbavc.sav` to copy it
-  + Press (B) to return to the main menu
-  + Navigate to `[0:] SDCARD` -> `gm9`
-  + Navigate to the folder you created for this GBA VC game
-  + Press (Y) to paste `gbavc.sav`
+  + Press (A) on `gbavc.sav` to select it
+  + Select "AGBSAVE options..."
+  + Select "Dump GBA VC save"
+  + Press (A) to continue
   + Press (Start) to reboot your device
 
 ## <a name="restore_gba" /> Restore GBA VC Saves
 
+FBI lists Title IDs for each installed title under the "Titles" menu. This is only needed to tell which saves correspond to which games if you used GodMode9 to backup the save.
+{: .notice--info}
+
 #### Instrukcje
 
-1. Ensure you have a folder containing a save in `/gm9/` for each GBA VC game that you want to restore the save for
 1. Do the following process for each GBA VC game that you want to restore the save for:
   + Launch the GBA VC game
   + Exit the GBA VC game
   + Boot your device while holding (Start) to launch the Luma3DS chainloader menu
   + Launch GodMode9 by pressing (A)
   + Navigate to `[0:] SDCARD` -> `gm9`
-  + Navigate to the folder you created for this GBA VC game
-  + Press (Y) on `gbavc.sav` to copy it
+  + Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
   + Press (B) to return to the main menu
   + Navigate to `[S:] SYSNAND VIRTUAL`
-  + Press (Y) to paste `gbavc.sav`
-  + Press (A) to confirm
+  + Press (A) on `gbavc.sav` to select it
+  + Select "AGBSAVE options..."
+  + Select "Inject GBA VC save"
+  + Press (A) to continue
   + Press (Start) to reboot your device
 
 ## <a name="format_sd" /> Format an SD card
