@@ -14,9 +14,24 @@ GodMode9 это полноценный файловый менеджер для 
 
 <div class="notice--danger">{{ notice | markdownify }}</div>
 
-## <a name="nand_backup" /> Создание бэкапа NAND
+## <a name="update-gm9" /> Updating GodMode9
+
+Some of the instructions below are only applicable to the latest version of GodMode9, and as such you should follow this section to update your copy before continuing. Overwrite any existing files.
+{: .notice--info}
+
+#### Что понадобится
+
+* Свежая версия [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 
 #### Инструкция
+
+1. Выключите консоль
+1. Вставьте SD-карту в компьютер
+1. Скопируйте `GodMode9.firm` из `.zip-архива` GodMode9 в папку `/luma/payloads/` на SD-карте
+1. Скопируйте папку `gm9` из `.zip-архива` GodMode9 в корень SD-карты
+1. Вставьте SD-карту обратно в консоль
+
+## <a name="nand_backup" /> Создание бэкапа NAND
 
 1. Запустите GodMode9, держа нажатой кнопку (Start) во время загрузки
 1. Нажмите кнопку (Home) для вызова меню
@@ -27,34 +42,36 @@ GodMode9 это полноценный файловый менеджер для 
 1. Нажмите (A), чтобы продолжить
 1. Удерживая (R) нажмите (B) для того, чтобы извлечь SD-карту
 1. Вставьте SD-карту в компьютер
-1. Скопируйте `<serialnumber>_nandmin_###.bin` из папки `/gm9/out/` на SD-карте в безопасное место на вашем компьютере
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Сделайте несколько резервных копий в нескольких местах (например в облачном хранилище)
   + Эти бэкапы позволят восстановить консоль, если впоследствии что-то пойдёт не так
-1. После копирования удалите `<serialnumber>_nandmin_###.bin` из папки `/gm9/out/` на SD-карте
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. Вставьте SD-карту обратно в консоль
 
 ## <a name="nand_restore" /> Восстановление бэкапа NAND
 
-#### Инструкция
-
 1. Запустите GodMode9, держа нажатой кнопку (Start) во время загрузки
-1. Перейдите в `[0:] SDCARD`
-1. Нажмите (A) чтобы выбрать `.bin` файл вашего NAND, затем выберите "NAND image options...", затем "Restore SysNAND (safe)"
-1. Нажмите (A), чтобы разрешить запись в SysNAND и введите указанную комбинацию кнопок
+1. Удерживая (R) нажмите (B) для того, чтобы извлечь SD-карту
+1. Вставьте SD-карту в компьютер
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from your computer to the `/gm9/out/` folder on your SD card if you deleted it after backing it up
+1. Вставьте SD-карту обратно в консоль
+1. Нажмите кнопку (Home) для вызова меню
+1. Выберите "Scripts..."
+1. Select "Restore SysNAND (Safe)"
+1. Select your NAND backup
+1. Нажмите (A), чтобы продолжить
+1. Press (A) to unlock SysNAND (lvl2) writing, then input the key combo given
   + Это действие не перезапишет установленный boot9strap
-1. Введите указанную комбинацию кнопок чтобы разрешить запись в SysNAND (lvl1)
-  + Этот процесс займет некоторое время
 1. По завершению процесса, нажмите (A)
-1. Нажмите (B) чтобы не восстанавливать запрет на запись, если появится запрос
+1. Нажмите (A) чтобы восстановить запрет на запись, если появится запрос
 
 ## <a name="injectHS" /> Инъекция любого .CIA в приложение Информация о здоровье и безопасности (Health & Safety)
 
-#### Подготовительные работы
+For organizational purposes, copy the `.cia` file you wish to inject to the `/cias/` folder on your SD card
+{: .notice--info}
 
-+ В целях порядка, скопируйте файл `.cia` для инъекции в папку `/cias/` на SD-карте
-    + Заметьте, что для инъекции в приложение Информация о здоровье и безопасности (Health & Safety) невозможно использовать файлы больше, чем само приложение (включая игры и другие большие приложения)
-
-#### Инструкция
+Note that it is not possible to inject files into Health & Safety that are larger than it (including games and other large applications)
+{: .notice--info}
 
 1. Запустите GodMode9, держа нажатой кнопку (Start) во время загрузки
 1. Перейдите в `[0:] SDCARD` -> `cias`
@@ -69,8 +86,6 @@ GodMode9 это полноценный файловый менеджер для 
 Эта инструкция сработает, только если процесс инъекции был выполнен при помощи GodMode9 (не Decrypt9 или Hourglass9).
 {: .notice--info}
 
-#### Инструкция
-
 1. Запустите GodMode9, держа нажатой кнопку (Start) во время загрузки
 1. Нажмите кнопку (Home) для вызова меню
 1. Выберите "More..."
@@ -82,11 +97,13 @@ GodMode9 это полноценный файловый менеджер для 
 
 #### Подготовительные работы
 
+{% capture notice %}
 + Вставьте картридж, который вы хотите сдампить, в консоль
-    + дампы картриджей 3DS будут иметь формат `.cia`
-    + дампы картриджей NDS будут иметь формат `.nds`, совместимый с флешкартриджами и эмуляторами
+  + дампы картриджей 3DS будут иметь формат `.cia`
+  + дампы картриджей NDS будут иметь формат `.nds`, совместимый с флешкартриджами и эмуляторами
+{% endcapture %}
 
-#### Инструкция
+<div class="notice--info">{{ notice | markdownify }}</div>
 
 1. Запустите GodMode9, держа нажатой кнопку (Start) во время загрузки
 1. Перейдите в `[C:] GAMECART`
@@ -97,33 +114,24 @@ GodMode9 это полноценный файловый менеджер для 
 
 ## <a name="dump_title" /> Создание дампа тайтла
 
-Используйте меню `Titles` в FBI, чтобы узнать ID тайтла, который вы хотите сдампить
-{: .notice--info}
-
-#### Инструкция
-
 1. Запустите GodMode9, держа нажатой кнопку (Start) во время загрузки
-1. Перейдите на диск, соответствующий типу вашего тайтла:
+1. Hover over the drive applicable to the type of title you wish to dump:
   + **Пользовательский тайтл**: Перейдите в `[A:] SYSNAND SD`
   + **Системный тайтл**: Перейдите в `[1:] SYSNAND CTRNAND`
-1. Перейдите в `title`
-1. Перейдите в папку, соответствующую первым 8 цифрам ID тайтла
-1. Перейдите в папку, соответствующую последним 8 цифрам ID тайтла
-1. Перейдите в папку `content`
-1. Нажмите (A) чтобы выбрать файл `.tmd`, затем выберите "TMD file options...", затем "Show title info"
-1. Убедитесь, что вы нашли верный тайтл
-1. Нажмите (B) для выхода из информации о тайтле
+1. Hold (R) and press (A) at the same time to open the drive options
+1. Select "Search for titles"
+1. Нажмите (A), чтобы продолжить
 1. Нажмите (A) чтобы выбрать файл `.tmd`, затем выберите "TMD file options...", затем "Build CIA (standard)"
 1. Ваш файл в формате `.cia` будет помещен в папку `/gm9/out/` на SD-карте
 
 ## <a name="convert_3ds" /> Конвертация из .3DS в .CIA
 
-#### Подготовительные работы
-
+{% capture notice %}
 + В целях порядка, скопируйте каждый файл `.3ds`, который вы хотите конвертировать, в папку `/cias/` на SD-карте
-    + Заметьте, что если вы хотите конвертировать файл `.3ds`, который уже записан на флешкартридж, вам нужно следовать инструкции [Создание дампа картриджа](#dump_cart)
+  + Заметьте, что если вы хотите конвертировать файл `.3ds`, который уже записан на флешкартридж, вам нужно следовать инструкции [Создание дампа картриджа](#dump_cart)
+{% endcapture %}
 
-#### Инструкция
+<div class="notice--info">{{ notice | markdownify }}</div>
 
 1. Запустите GodMode9, держа нажатой кнопку (Start) во время загрузки
 1. Перейдите в `[0:] SDCARD` -> `cias`
@@ -132,12 +140,10 @@ GodMode9 это полноценный файловый менеджер для 
 
 ## <a name="backup_gba" /> Бэкап сохранений GBA VC
 
-#### Инструкция
-
 The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
 {: .notice--info}
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by holding (R) and pressing (A) on the GodeMode9 main menu, then selecting "Search for titles".
+To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
 {: .notice--info}
 
 1. Выполните нижеуказанные действия для каждой игры GBA VC, для которой вы хотите сделать резервные копии сохранений:
@@ -154,10 +160,8 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 
 ## <a name="restore_gba" /> Восстановление сохранений GBA VC
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by holding (R) and pressing (A) on the GodeMode9 main menu, then selecting "Search for titles".
+To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
 {: .notice--info}
-
-#### Инструкция
 
 1. Выполните нижеуказанные действия для каждой игры GBA VC, для которой вы хотите восстановить сохранения из резервной копии:
   + Запустите игру GBA VC
@@ -181,8 +185,6 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 **Обратите внимание, что это сотрет всё содержимое вашей SD-карты!**
 {: .notice--danger}
 
-#### Инструкция
-
 1. Запустите GodMode9, держа нажатой кнопку (Start) во время загрузки
 1. Нажмите кнопку (Home) для вызова меню
 1. Выберите "More..."
@@ -199,8 +201,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 #### Подготовительные работы
 
 + В целях поддержания порядка, скопируйте каждый файл `.cia` для шифровки / расшифровки в папку `/cias/` на SD-карте
-
-#### Инструкция
+{: .notice--info}
 
 1. Запустите GodMode9, держа нажатой кнопку (Start) во время загрузки
 1. Перейдите в `[0:] SDCARD` -> `cias`
@@ -213,8 +214,6 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Ваш шифрованный / расшифрованный файл `.cia` будет помещен в выбранную папку
 
 ## <a name="rm_nnid" />Удаление NNID без форматирования устройства
-
-#### Инструкция
 
 1. Запустите GodMode9, держа нажатой кнопку (Start) во время загрузки
 1. Перейдите в `[1:] SYSNAND CTRNAND` -> `data` -> (32-значный ID) -> `sysdata` -> `00010038`
