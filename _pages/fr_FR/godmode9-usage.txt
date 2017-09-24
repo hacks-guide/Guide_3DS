@@ -14,9 +14,24 @@ Le système de permissions d’écriture vous protège en proposant des avertiss
 
 <div class="notice--danger">{{ notice | markdownify }}</div>
 
-## <a name="nand_backup" /> Création d'une sauvegarde de la NAND
+## <a name="update-gm9" /> Updating GodMode9
+
+Some of the instructions below are only applicable to the latest version of GodMode9, and as such you should follow this section to update your copy before continuing. Overwrite any existing files.
+{: .notice--info}
+
+#### Ce dont vous aurez besoin
+
+* La dernière version de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 
 #### Instructions
+
+1. Éteignez votre 3DS
+1. Insérez votre carte SD dans votre ordinateur
+1. Copiez le fichier `GodMode9.firm` de l'archive GodMode9 `.zip` dans le dossier `/luma/payloads/` sur votre carte SD
+1. Copiez le dossier `gm9` de GodMode9 `.zip` à la racine de votre carte SD
+1. Réinsérez votre carte SD dans votre 3DS
+
+## <a name="nand_backup" /> Création d'une sauvegarde de la NAND
 
 1. Ouvrez Godmode9 en maintenant (Start) au démarrage
 1. Appuyez sur (Home) pour faire apparaître le menu d’actions (action menu)
@@ -27,34 +42,36 @@ Le système de permissions d’écriture vous protège en proposant des avertiss
 1. Appuyez sur (A) pour continuer
 1. Maintenez (R) et appuyez sur (B) en même temps pour éjecter votre carte SD
 1. Insérez votre carte SD dans votre ordinateur
-1. Copiez `<serialnumber>_nandmin_###.bin` du dossier `/gm9/out/` sur votre carte SD vers un emplacement sûr sur votre ordinateur
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Faites des sauvegardes dans plusieurs endroits (tels que des stockages de fichiers en ligne par exemple)
   + Cette sauvegarde vous sauvera d'un brick si quoi que ce soit se passe mal à l'avenir
-1. Supprimez `<serialnumber>_nandmin_###.bin` dans le dossier `/gm9/out/` sur votre carde SD après l'avoir copié
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. Réinsérez votre carte SD dans votre 3DS
 
 ## <a name="nand_restore" /> Réstauration de la sauvegarde de la NAND
 
-#### Instructions
-
 1. Ouvrez Godmode9 en maintenant (Start) au démarrage
-1. Naviguez vers `[0:] SDCARD`
-1. Appuyez sur (A) sur votre NAND `.bin` pour le sélectionner, puis choisissez "NAND image options...", puis sélectionnez "Restore SysNAND (safe)"
-1. Appuyez sur (A) pour débloquer l'écriture sur votre SysNAND, puis entrez la combinaison de touches demandée
+1. Maintenez (R) et appuyez sur (B) en même temps pour éjecter votre carte SD
+1. Insérez votre carte SD dans votre ordinateur
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from your computer to the `/gm9/out/` folder on your SD card if you deleted it after backing it up
+1. Réinsérez votre carte SD dans votre 3DS
+1. Appuyez sur (Home) pour faire apparaître le menu d’actions (action menu)
+1. Sélectionnez "Scripts"
+1. Select "Restore SysNAND (Safe)"
+1. Select your NAND backup
+1. Appuyez sur (A) pour continuer
+1. Press (A) to unlock SysNAND (lvl2) writing, then input the key combo given
   + Ceci n'effacera pas votre installation boot9strap
-1. Entrez la combinaison de touche demandée pour débloquer l'écriture sur votre SysNAND (lvl1)
-  + Ce processus pendra du temps
 1. Une fois le transfert terminé, appuyez sur (A) pour continuer
-1. Appuyez (B) pour décliner reverrouiller autorisations en écriture si vous êtes invité
+1. Appuyez (A) pour reverrouiller autorisations en écriture si vous êtes invité
 
 ## <a name="injectHS" /> Injection de l'app d'un .CIA dans Santé & Sécurité
 
-#### Préparation
+For organizational purposes, copy the `.cia` file you wish to inject to the `/cias/` folder on your SD card
+{: .notice--info}
 
-+ À des fins d’organisation, copier le fichier `.cia` que vous souhaitez injecter dans le dossier `/cias/` sur votre carte SD
-    + Notez qu’il n’est pas possible d’injecter des fichiers dans Santé & Sécurité qui sont plus grands que l'application elle même (y compris les jeux et autres applications de grandes envergure)
-
-#### Instructions
+Note that it is not possible to inject files into Health & Safety that are larger than it (including games and other large applications)
+{: .notice--info}
 
 1. Ouvrez Godmode9 en maintenant (Start) au démarrage
 1. Naviguez vers `[0:] SDCARD` -> `cias`
@@ -69,8 +86,6 @@ Le système de permissions d’écriture vous protège en proposant des avertiss
 Cela ne fonctionnera que si l’injection dans Santé & Sécurité a été réalisée par GodMode9 (pas Decrypt9 ou Hourglass9).
 {: .notice--info}
 
-#### Instructions
-
 1. Ouvrez Godmode9 en maintenant (Start) au démarrage
 1. Appuyez sur (Home) pour faire apparaître le menu d’actions (action menu)
 1. Sélectionnez "More..."
@@ -82,11 +97,13 @@ Cela ne fonctionnera que si l’injection dans Santé & Sécurité a été réal
 
 #### Préparation
 
+{% capture notice %}
 + Insérez la cartouche du jeu dont vous avez l’intention de dumper dans votre 3DS
-    + Les cartouches de jeux 3DS seront dumpées vers un format `.cia` installable
-    + Cartouches de jeux NDS seront dumpées vers un format non-installable `.nds` compatible avec les linkers et émulateurs
+  + Les cartouches de jeux 3DS seront dumpées vers un format `.cia` installable
+  + Cartouches de jeux NDS seront dumpées vers un format non-installable `.nds` compatible avec les linkers et émulateurs
+{% endcapture %}
 
-#### Instructions
+<div class="notice--info">{{ notice | markdownify }}</div>
 
 1. Ouvrez Godmode9 en maintenant (Start) au démarrage
 1. Naviguez vers `[0:] SDCARD`
@@ -97,33 +114,24 @@ Cela ne fonctionnera que si l’injection dans Santé & Sécurité a été réal
 
 ## <a name="dump_title" /> Dumping d'un titre
 
-Utilisez le menu 'Titles' de FBI pour connaitre l'identifiant (ID) du titre que vous voulez extraire
-{: .notice--info}
-
-#### Instructions
-
 1. Ouvrez Godmode9 en maintenant (Start) au démarrage
-1. Accédez au lecteur applicable au type de titre que vous voulez extraire:
+1. Hover over the drive applicable to the type of title you wish to dump:
   + **Titre installé par l'utilisateur**: Naviguez vers `[A:] SYSNAND SD`
   + **Titre Système**: Naviguez vers `[1:] SYSNAND CTRNAND`
-1. Accédez à `titre`
-1. Placez-vous dans le dossier correspondant aux 8 premiers chiffres de l’ID du titre
-1. Placez-vous dans le dossier correspondant aux 8 derniers chiffres de l’ID du titre
-1. Accédez à `content`
-1. Appuyez sur (A) sur le fichier `.tmd` pour le sélectionner , ensuite choisissez "TMD file options...", puis "Show title info"
-1. Soyez sur que vous avez trouvé le bon titre
-1. Appuyez sur (B) pour sortir des informations du titre
+1. Hold (R) and press (A) at the same time to open the drive options
+1. Select "Search for titles"
+1. Appuyez sur (A) pour continuer
 1. Appuyez sur (A) sur le fichier `.tmd` pour le sélectionner , ensuite choisissez "TMD file options...", puis "Build CIA (standard)"
 1. Votre fichier formaté `.cia` installable sera envoyé au dossier `/gm9/out/` sur votre carte SD
 
 ## <a name="convert_3ds" /> Convertir un .3ds en .CIA
 
-#### Préparation
-
+{% capture notice %}
 + À des fins d'organisation, copiez chaque fichier `.3ds` que vous souhaitez convertir dans le dossier `/cias/` sur votre carte SD
-    + Notez que si vous souhaitez convertir un fichier `.3ds` qui est déjà sur un flashcart, vous devez suivre [Dumping a Game Cartridge](# dump_cart)
+  + Notez que si vous souhaitez convertir un fichier `.3ds` qui est déjà sur un flashcart, vous devez suivre [Dumping a Game Cartridge](# dump_cart)
+{% endcapture %}
 
-#### Instructions
+<div class="notice--info">{{ notice | markdownify }}</div>
 
 1. Ouvrez Godmode9 en maintenant (Start) au démarrage
 1. Naviguez vers `[0:] SDCARD` -> `cias`
@@ -132,12 +140,10 @@ Utilisez le menu 'Titles' de FBI pour connaitre l'identifiant (ID) du titre que 
 
 ## <a name="backup_gba" /> Sauvegarde d'une sauvegarde VC GBA
 
-#### Instructions
-
 The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
 {: .notice--info}
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by holding (R) and pressing (A) on the GodeMode9 main menu, then selecting "Search for titles".
+To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
 {: .notice--info}
 
 1. Effectuez la procédure suivante pour chaque jeu GBA VC pour chaque jeu GBA VC dont vous souhaitez conserver la sauvegarde:
@@ -154,10 +160,8 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 
 ## <a name="restore_gba" /> Réstauration d'une sauvegarde VC GBA
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by holding (R) and pressing (A) on the GodeMode9 main menu, then selecting "Search for titles".
+To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
 {: .notice--info}
-
-#### Instructions
 
 1. Effectuez la procédure suivante pour chaque jeu GBA VC pour chaque jeu GBA VC dont vous souhaitez conserver la sauvegarde:
   + Lancez le jeu VC GBA
@@ -181,8 +185,6 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 **Notez que cela effacera tout le contenu de votre carte SD !**
 {: .notice--danger}
 
-#### Instructions
-
 1. Ouvrez Godmode9 en maintenant (Start) au démarrage
 1. Appuyez sur (Home) pour faire apparaître le menu d’actions (action menu)
 1. Sélectionnez "More..."
@@ -199,8 +201,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 #### Préparation
 
 + À des fins d'organisation, copiez chaque fichier `.cia` que vous souhaitez chiffrer / décrypter dans le dossier `/cias/`sur votre carte SD
-
-#### Instructions
+{: .notice--info}
 
 1. Ouvrez Godmode9 en maintenant (Start) au démarrage
 1. Naviguez vers `[0:] SDCARD` -> `cias`
@@ -213,8 +214,6 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Votre `.cia` crypté / décrypté sera envoyé à l'emplacement désiré
 
 ## <a name="rm_nnid" />Supprimer un NNID sans formater votre console
-
-#### Instructions
 
 1. Ouvrez Godmode9 en maintenant (Start) au démarrage
 1. Naviguez vers `[1:] SYSNAND CTRNAND` -> `data` -> (32 Character ID) -> `sysdata` -> `00010038`
