@@ -14,9 +14,24 @@ GodMode9 是個可任意存取任天堂 3DS 主機檔案的檔案管理員，您
 
 <div class="notice--danger">{{ notice | markdownify }}</div>
 
-## <a name="nand_backup" /> 建立 NAND 備份
+## <a name="update-gm9" /> Updating GodMode9
+
+Some of the instructions below are only applicable to the latest version of GodMode9, and as such you should follow this section to update your copy before continuing. Overwrite any existing files.
+{: .notice--info}
+
+#### 必備項目
+
+* 最新版的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 
 #### 操作說明
+
+1. 關閉您的主機
+1. 將 SD 卡插入電腦中
+1. 解壓 GodMode9 `.zip` 中的 `GodMode9.firm` 檔案到 SD 卡的 `/luma/payloads/` 資料夾中
+1. 解壓 GodMode9 `.zip` 中的 `gm9` 資料夾到 SD 卡的根目錄底下
+1. 將 SD 卡插回主機中
+
+## <a name="nand_backup" /> 建立 NAND 備份
 
 1. 開機時按住「Start」鍵啟動 GodMode9
 1. 按「Home」鍵以叫出主選單
@@ -27,34 +42,36 @@ GodMode9 是個可任意存取任天堂 3DS 主機檔案的檔案管理員，您
 1. 按「A」 繼續
 1. 同時按住「R」及「B」以卸除 SD 卡
 1. 將 SD 卡插入電腦中
-1. 從 SD 卡中的 `/gm9/out/` 資料夾中複製 `<serialnumber>_nandmin_###.bin` 至電腦中安全的地方
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + 建議備份至各個不同的地方(比如雲端硬碟中)
   + 未來如果您不小心玩到磚機，這備份將會是您的救命恩人
-1. 複製完畢後，將 `/gm9/out/` 資料夾中的 `<serialnumber>_nandmin_###.bin` 檔案刪除
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. 將 SD 卡插回主機中
 
 ## <a name="nand_restore" /> 還原 NAND 備份
 
-#### 操作說明
-
 1. 開機時按住「Start」鍵啟動 GodMode9
-1. 移動至 `[0:] SDCARD`
-1. 按「A」選取您的 `nand.bin` 檔案，並選擇「NAND image options...」，再選「Restore SysNAND (safe)」
-1. 按「A」解鎖 SysNAND 的複寫保護，然後按下提示的按鍵組合
+1. 同時按住「R」及「B」以卸除 SD 卡
+1. 將 SD 卡插入電腦中
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from your computer to the `/gm9/out/` folder on your SD card if you deleted it after backing it up
+1. 將 SD 卡插回主機中
+1. 按「Home」鍵以叫出主選單
+1. 選擇「Scripts...」
+1. Select "Restore SysNAND (Safe)"
+1. Select your NAND backup
+1. 按「A」 繼續
+1. Press (A) to unlock SysNAND (lvl2) writing, then input the key combo given
   + 這不會複寫您的 boot9strap 安裝
-1. 按下提示的按鍵組合以解鎖 SysNAND(lvl1)的寫入保護
-  + 此過程將花費一些時間
 1. 過程結束後，按下「A」繼續
-1. 當提示時，按下「B」取消檔案寫入鎖定
+1. 當提示時，按下「A」取消檔案寫入鎖定
 
 ## <a name="injectHS" /> 植入任何 .CIA 程式至「健康與警示」程式中
 
-#### 準備工作
+For organizational purposes, copy the `.cia` file you wish to inject to the `/cias/` folder on your SD card
+{: .notice--info}
 
-+ 為了整潔，將您所想要植入的 `.cia` 檔複製至 SD 卡的 `/cias/` 資料夾中
-    + 請注意，您將無法植入比「健康與警示」程式還大的檔案(包括遊戲以及其他較大的程式)
-
-#### 操作說明
+Note that it is not possible to inject files into Health & Safety that are larger than it (including games and other large applications)
+{: .notice--info}
 
 1. 開機時按住「Start」鍵啟動 GodMode9
 1. 移動至 `[0:] SDCARD` -> `cias`
@@ -69,8 +86,6 @@ GodMode9 是個可任意存取任天堂 3DS 主機檔案的檔案管理員，您
 此方法只能在先前使用過 GodMode9 植入檔案至「健康與警示」程式的前提下才能使用(非 Decrypt9 或 Hourglass9)。
 {: .notice--info}
 
-#### 操作說明
-
 1. 開機時按住「Start」鍵啟動 GodMode9
 1. 按「Home」鍵以叫出主選單
 1. 選擇「More...」
@@ -82,11 +97,13 @@ GodMode9 是個可任意存取任天堂 3DS 主機檔案的檔案管理員，您
 
 #### 準備工作
 
+{% capture notice %}
 + 將所想要拷貝的遊戲卡帶插入至主機中
-    + 3DS 遊戲卡帶將被存為可安裝的 `.cia` 格式
-    + NDS 遊戲卡帶將被存為不可直接安裝但可用於燒錄卡及模擬器的 `.nds` 格式
+  + 3DS 遊戲卡帶將被存為可安裝的 `.cia` 格式
+  + NDS 遊戲卡帶將被存為不可直接安裝但可用於燒錄卡及模擬器的 `.nds` 格式
+{% endcapture %}
 
-#### 操作說明
+<div class="notice--info">{{ notice | markdownify }}</div>
 
 1. 開機時按住「Start」鍵啟動 GodMode9
 1. 移動至 `[C:] GAMECART`
@@ -97,33 +114,24 @@ GodMode9 是個可任意存取任天堂 3DS 主機檔案的檔案管理員，您
 
 ## <a name="dump_title" /> 拷貝程式
 
-透過 FBI 管理器的 `Titles` 選單以取得您所想要拷貝的程式的程式 ID
-{: .notice--info}
-
-#### 操作說明
-
 1. 開機時按住「Start」鍵啟動 GodMode9
-1. 移動至適合您所想要拷貝的程式種類的磁區：
+1. Hover over the drive applicable to the type of title you wish to dump:
   + **使用者安裝程式**：移動至 `[A:] SYSNAND SD`
   + **系統程式**：移動至 `[1:] SYSNAND CTRNAND`
-1. 移動至 `title`
-1. 移動至對應您程式 ID 前 8 碼的資料夾
-1. 移動至對應您程式 ID 後 8 碼的資料夾
-1. 移動至 `content`
-1. 按「A」鍵選取 `.tmd` 檔案，並選擇「TMD file options...」，再選「Show title info」
-1. 確保您選擇了正確的程式
-1. 按「B」鍵退出程式資訊
+1. Hold (R) and press (A) at the same time to open the drive options
+1. Select "Search for titles"
+1. 按「A」 繼續
 1. 按「A」鍵選取 `.tmd` 檔案，並選擇「TMD file options...」，再選「Build CIA (standard)」
 1. 您可安裝的 `.cia` 檔案將被複製到您 SD 卡的 `/gm9/out/` 資料夾中
 
 ## <a name="convert_3ds" /> 將 .3DS 檔案轉成 .CIA
 
-#### 準備工作
-
+{% capture notice %}
 + 為了整潔，將您所想要轉換的各個 `.3ds` 檔案複製至 SD 卡的 `/cias/` 資料夾中
-    + 請注意，如果您想要轉換已經在燒錄卡上的 `.3ds` 檔案，您應該遵循[拷貝遊戲卡帶](#dump_cart)的步驟
+  + 請注意，如果您想要轉換已經在燒錄卡上的 `.3ds` 檔案，您應該遵循[拷貝遊戲卡帶](#dump_cart)的步驟
+{% endcapture %}
 
-#### 操作說明
+<div class="notice--info">{{ notice | markdownify }}</div>
 
 1. 開機時按住「Start」鍵啟動 GodMode9
 1. 移動至 `[0:] SDCARD` -> `cias`
@@ -132,12 +140,10 @@ GodMode9 是個可任意存取任天堂 3DS 主機檔案的檔案管理員，您
 
 ## <a name="backup_gba" /> 備份 GBA 虛擬主機遊戲存檔
 
-#### 操作說明
-
 The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
 {: .notice--info}
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by holding (R) and pressing (A) on the GodeMode9 main menu, then selecting "Search for titles".
+To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
 {: .notice--info}
 
 1. 為各個想備份的 GBA 虛擬主機 遊戲重複下列步驟：
@@ -154,10 +160,8 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 
 ## <a name="restore_gba" /> 還原 GBA 虛擬主機遊戲存檔
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by holding (R) and pressing (A) on the GodeMode9 main menu, then selecting "Search for titles".
+To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
 {: .notice--info}
-
-#### 操作說明
 
 1. 為各個想還原的 GBA 虛擬主機 遊戲重複下列步驟：
   + 啟動您所想要備份存檔的 GBA 虛擬主機遊戲
@@ -181,8 +185,6 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 **請注意，這將清除您 SD 卡的所有資料！**
 {: .notice--danger}
 
-#### 操作說明
-
 1. 開機時按住「Start」鍵啟動 GodMode9
 1. 按「Home」鍵以叫出主選單
 1. 選擇「More...」
@@ -199,8 +201,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 #### 準備工作
 
 + 為了整潔，將您所想要加密／解密的各個 `.cia` 檔案複製至 SD 卡的 `/cias/` 資料夾中
-
-#### 操作說明
+{: .notice--info}
 
 1. 開機時按住「Start」鍵啟動 GodMode9
 1. 移動至 `[0:] SDCARD` -> `cias`
@@ -213,8 +214,6 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. 加密／解密後的 `.cia` 檔案將被存於指定區域
 
 ## <a name="rm_nnid" />如何在不格式化主機的情況下清除 NNID
-
-#### 操作說明
 
 1. 開機時按住「Start」鍵啟動 GodMode9
 1. 移動至 `[1:] SYSNAND CTRNAND` -> `data` -> (32 字元 ID) -> `sysdata` -> `00010038`
