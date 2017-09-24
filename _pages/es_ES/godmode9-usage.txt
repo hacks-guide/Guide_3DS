@@ -6,17 +6,11 @@ GodMode9 es un explorador de archivos con acceso completo para la consola 3DS de
 
 Ten en cuenta que si tienes archivos de payloads distintos de `GodMode9.firm` en la carpeta `/luma/payloads/` en tu tarjeta SD, al mantener (Start) al inicio se desplegará un "chainloader menu" donde tendrás que usar el D-Pad y pulsar (A) para seleccionar "GodMode9", para esas instrucciones. 
 
-{% capture notice %}
-Esta es una herramienta poderosa. Te entrega lo necesario para hacer básicamente cualquier modificación imaginable a todos los datos del sistema de la 3DS. Por ello, se toman precauciones para que no dañes accidentalmente los datos de tu consola.
+GodMode9 is powerful software that has the capability to modify essentially anything on your console. Though many of these modifications are locked behind a permissions system, and it is impossible to accidentally perform dangerous actions without deliberately unlocking permissions, you should still follow instructions carefully and keep backups just in case.
 
-El sistema de permisos de escritura te protege mostrando advertencias y te obliga a ingresar una secuencia de desbloqueo para obtener permisos de escritura. No es posible sobrescribir o modificar cosas importantes sin estas secuencias de desbloqueo y no es posible desbloquear algo accidentalmente. Como siempre, se inteligente, ten copias de seguridad para estar asegurado.
-{% endcapture %}
+## <a name="update-gm9" /> Actualizar GodMode9
 
-<div class="notice--danger">{{ notice | markdownify }}</div>
-
-## <a name="update-gm9" /> Updating GodMode9
-
-Some of the instructions below are only applicable to the latest version of GodMode9, and as such you should follow this section to update your copy before continuing. Overwrite any existing files.
+Algunas de las siguientes instrucciones sólo son aplicables a la última versión de GodMode9, y como tal debes seguir esta sección para actualizar tu instalación antes de continuar. Sobrescribe cualquier archivo que te indique.
 {: .notice--info}
 
 #### Qué necesitas
@@ -42,10 +36,10 @@ Some of the instructions below are only applicable to the latest version of GodM
 1. Presiona (A) para continuar
 1. Mantén (R) y presiona (B) al mismo tiempo para extraer la SD
 1. Inserta tu tarjeta SD en tu computadora
-1. Copy `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
+1. Copia `<date>_<númerodeserie>_sysnand###.bin` desde la carpeta `/gm9/out/` en tu tarjeta SD a una ubicación segura en tu computadora
   + Haz copias de seguridad en múltiples sitios (como por ejemplo, en un pendrive o almacenamiento online)
   + Esta copia de seguridad puede salvarte de un brick si algo va mal en el futuro
-1. Delete `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card after copying it
+1. Elimina el archivo `<fecha>_<númerodeserie>_sysnand_###.bin` de la carpeta `/gm9/out/` de tu tarjeta SD después de haberlo copiado
 1. Vuelve a insertar tu tarjeta SD en tu consola
 
 ## <a name="nand_restore" /> Restaurar una copia de seguridad de la NAND
@@ -53,24 +47,24 @@ Some of the instructions below are only applicable to the latest version of GodM
 1. Inicia GodMode9 manteniendo presionado (Start) mientras enciendes la consola
 1. Mantén (R) y presiona (B) al mismo tiempo para extraer la SD
 1. Inserta tu tarjeta SD en tu computadora
-1. Copy `<date>_<serialnumber>_sysnand_###.bin` from your computer to the `/gm9/out/` folder on your SD card if you deleted it after backing it up
+1. Copia `<fecha>_<númerodeserie>_sysnand_###.bin` desde tu computadora a la carpeta `/gm9/out/` en tu tarjeta SD si lo borraste luego de respaldarlo
 1. Vuelve a insertar tu tarjeta SD en tu consola
 1. Presiona el botón (Home) para abrir el menú de acción
 1. Selecciona "Scripts..."
-1. Select "Restore SysNAND (Safe)"
-1. Select your NAND backup
+1. Selecciona "Restore SysNAND (Safe)"
+1. Selecciona tu copia de seguridad de NAND
 1. Presiona (A) para continuar
-1. Press (A) to unlock SysNAND (lvl2) writing, then input the key combo given
+1. Presiona (A) para desbloquear la escritura de la SysNAND (lvl2) y después ingresa la combinación de teclas mostrada
   + Esto no sobreescribirá tu instalación de boot9strap
 1. Una vez que haya terminado, presiona (A) para continuar
 1. Presiona (A) para volver a bloquear los permisos de escritura si se solicita
 
 ## <a name="injectHS" /> Inyectar cualquier aplicación .CIA en Salud y Seguridad
 
-For organizational purposes, copy the `.cia` file you wish to inject to the `/cias/` folder on your SD card
+Para mantener el orden, copia el archivo `.cia` que deseas inyectar a la carpeta `/cias/` en tu tarjeta SD
 {: .notice--info}
 
-Note that it is not possible to inject files into Health & Safety that are larger than it (including games and other large applications)
+Ten en cuenta que no es posible inyectar archivos en Salud y Seguridad que sean más grandes que esta aplicación (incluyendo juegos y otras aplicaciones de gran tamaño)
 {: .notice--info}
 
 1. Inicia GodMode9 manteniendo presionado (Start) mientras enciendes la consola
@@ -115,11 +109,11 @@ Esto sólo funcionará si la inyección sobre Salud y Seguridad fue realizada co
 ## <a name="dump_title" /> Volcar un título (juegos y aplicaciones)
 
 1. Inicia GodMode9 manteniendo presionado (Start) mientras enciendes la consola
-1. Hover over the drive applicable to the type of title you wish to dump:
+1. Selecciona la unidad correspondiente al tipo de título que quieras volcar:
   + **Título instalado por el usuario**: Ve a `[A:] SYSNAND SD`
   + **Título del sistema**: Ve a `[1:] SYSNAND CTRNAND`
-1. Hold (R) and press (A) at the same time to open the drive options
-1. Select "Search for titles"
+1. Mantén (R) y presiona (A) al mismo tiempo para abrir las opciones de unidad
+1. Selecciona "Search for titles"
 1. Presiona (A) para continuar
 1. Presiona (A) sobre el archivo `.tmd` para seleccionarlo, luego selecciona "TMD file options...", y luego selecciona "Build CIA (standard)"
 1. Tu archivo con formato instalable `.cia` será guardado en la carpeta `/gm9/out/` en tu tarjeta SD
@@ -143,7 +137,7 @@ Esto sólo funcionará si la inyección sobre Salud y Seguridad fue realizada co
 El juego será almacenado en la carpeta `/gm9/out/` de tu tarjeta SD con el nombre `<TitleID>.gbavc.sav`.
 {: .notice--info}
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
+Para identificar el ID de título de un archivo `<TitleID>.gbavc.sav`, puedes obtener una lista de todos los juegos e nel sistema y sus correspondientes IDs de titulo marcando `[A:] SYSNAND SD`, sosteniendo (R) y presionando (A) al mismo tiempo, y luego seleccionando "Search for titles".
 {: .notice--info}
 
 1. Realiza lo siguiente por cada juego de Consola Virtual de GBA del cual quieras conservar los datos de guardado:
@@ -160,7 +154,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 
 ## <a name="restore_gba" /> Restaurar datos de guardado de la Consola Virtual de GBA
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
+Para identificar el ID de título de un archivo `<TitleID>.gbavc.sav`, puedes obtener una lista de todos los juegos e nel sistema y sus correspondientes IDs de titulo marcando `[A:] SYSNAND SD`, sosteniendo (R) y presionando (A) al mismo tiempo, y luego seleccionando "Search for titles".
 {: .notice--info}
 
 1. Haz lo siguiente por cada juego de Consola Virtual de GBA del cual quieras restaurar sus datos de guardado:
