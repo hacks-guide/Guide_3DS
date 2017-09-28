@@ -2,9 +2,11 @@
 title: "安裝 boot9strap (透過 MSET)"
 ---
 
+{% include toc title="Table of Contents" %}
+
 如果您先前已改機過，且已安裝基於 EmuNAND 的自製系統－請注意，本教學是專門用來處理 SysNAND 的。您應在閱讀本手冊時在 SysNAND 中操作，或將其套用至 SysNAND 中。 注意 EmuNAND 與 RedNAND 指的是些微不同運作方式但[同樣道理](http://3dbrew.org/wiki/NAND_Redirection)的用語。
 
-#### 必備項目
+### What you need
 
 * 最新版的 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * 最新版的 [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(正常版的 boot9strap；非 `devkit` 或 `ntr` 檔案)*
@@ -12,9 +14,9 @@ title: "安裝 boot9strap (透過 MSET)"
 * 自製軟體[入門套件](http://smealum.github.io/ninjhax2/starter.zip)
 * 任意可在您主機上運行的 DS 燒錄卡
 
-#### 操作說明
+### Instructions
 
-##### 第一節 — 準備工作
+#### Section I - Prep Work
 
 1. 關閉您的主機
 1. 將 SD 卡插入電腦
@@ -24,14 +26,14 @@ title: "安裝 boot9strap (透過 MSET)"
 1. 解壓 boot9strap `.zip` 的 `boot9strap.firm` 及 `boot9strap.firm.sha` 檔案至 SD 卡的 `/boot9strap/` 資料夾中
 1. 將 SafeB9SInstaller `.zip` 中的 `SafeB9SInstaller.dat` 複製到 SD 卡的根目錄
 
-    ![]({{ base_path }}/images/screenshots/boot9strap-mset-file-layout.png)
+    ![]({{ "/images/screenshots/boot9strap-mset-file-layout.png" | absolute_url }})
     {: .notice--info}
 
 1. 將 SD 卡插回主機中
 1. 解壓 SafeB9SInstaller `.zip` 中的 `SafeB9SInstaller.nds` 至 DS 燒錄卡中
 1. 啟動您的主機
 
-##### 第二節 — 啟動 SafeB9SInstaller
+#### Section II - Launching SafeB9SInstaller
 
 1. 啟動您的 DS 燒錄卡
 1. 透過燒錄卡啟動 `SafeB9SInstaller.nds`
@@ -41,16 +43,16 @@ title: "安裝 boot9strap (透過 MSET)"
 1. 重新啟動系統，接著到「系統設置(System Settings)」、「其他設置(Other Settings)」、「設定檔(Profile)」中選擇「任天堂 DS 設定檔(Nintendo DS Profile)」
 1. 如果一切成功的話，您將自動進入 SafeB9SInstaller
 
-##### 第三節 — 安裝 boot9strap
+#### Section III - Installing boot9strap
 
 1. 等待所有安全性檢查完畢
 1. 出現提示時，輸入提示的按鍵組合以安裝 boot9strap
 1. 過程結束後，按下「A」重啟主機
 
-##### 第四節 — 設定 Luma3DS
+#### Section IV - Configuring Luma3DS
 
 1. 您的主機將會重啟至 Luma3DS 設定選單中
-  + 如果黑屏，[請參見此疑難排解](troubleshooting#ts_sys_b9s)
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 1. 透過方向鍵及「A」以開啟下列選項：    
   + **「Show NAND or user string in System Settings」**
 1. 按「Start」鍵以存檔並重新啟動系統
