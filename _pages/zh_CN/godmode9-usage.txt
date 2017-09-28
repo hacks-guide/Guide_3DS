@@ -6,18 +6,27 @@ GodMode9 is a full access file browser for the Nintendo 3DS console, giving you 
 
 Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
 
-{% capture notice %}
-This is powerful stuff. GodMode9 provides you with the means to do basically any thinkable modification to any system data available on the 3DS console. However, precautions are taken so you don't accidentally damage the data of your console.
+GodMode9 is powerful software that has the capability to modify essentially anything on your console. Though many of these modifications are locked behind a permissions system, and it is impossible to accidentally perform dangerous actions without deliberately unlocking permissions, you should still follow instructions carefully and keep backups just in case.
 
-The write permissions system protects you by providing warnings and forces you to enter an unlock sequence for enabling write permissions. It is not possible to overwrite or modify any important stuff without such unlock sequences and it is not possible to accidentally unlock something. As always, be smart and keep backups, just to be safe.
-{% endcapture %}
+## <a name="update-gm9" /> Updating GodMode9
 
-<div class="notice--danger">{{ notice | markdownify }}</div>
+Some of the instructions below are only applicable to the latest version of GodMode9, and as such you should follow this section to update your copy before continuing. Overwrite any existing files.
+{: .notice--info}
+
+#### 你需要
+
+* 最新版的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+
+#### 操作指南
+
+1. Power off your device
+1. 将你的 SD 卡插入到您的计算机
+1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
+1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+1. Reinsert your SD card into your device
 
 ## <a name="nand_backup" /> 备份NAND
 
-
-#### 操作指南
 
 1. Launch GodMode9 by holding (Start) during boot
 1. Press (Home) to bring up the action menu
@@ -28,34 +37,36 @@ The write permissions system protects you by providing warnings and forces you t
 1. Press (A) to continue
 1. 格式化完成后，同时按(R)键和(B)键，弹出你的SD卡
 1. 将你的 SD 卡插入到您的计算机
-1. Copy `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Make backups in multiple locations (such as online file storage)
   + 备份文件可以在将来出现错误时将你的机器救砖
-1. Delete `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card after copying it
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. Reinsert your SD card into your device
 
 ## <a name="nand_restore" /> 还原NAND
 
-#### 操作指南
-
 1. Launch GodMode9 by holding (Start) during boot
-1. Navigate to `[0:] SDCARD`
-1. Press (A) on your NAND `.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
-1. Press (A) to unlock SysNAND overwriting, then input the key combo given
+1. 格式化完成后，同时按(R)键和(B)键，弹出你的SD卡
+1. 将你的 SD 卡插入到您的计算机
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from your computer to the `/gm9/out/` folder on your SD card if you deleted it after backing it up
+1. Reinsert your SD card into your device
+1. Press (Home) to bring up the action menu
+1. Select "Scripts..."
+1. Select "Restore SysNAND (Safe)"
+1. Select your NAND backup
+1. Press (A) to continue
+1. Press (A) to unlock SysNAND (lvl2) writing, then input the key combo given
   + This will not overwrite your boot9strap installation
-1. Input the key combo given to unlock SysNAND (lvl1) writing
-  + This process will take some time
 1. Once it has completed, press (A) to continue
-1. Press (B) to decline relocking write permissions if prompted
+1. Press (A) to relock write permissions if prompted
 
 ## <a name="injectHS" /> 将任意 .CIA应用注入健康与警示软件
 
-#### 准备工作
+For organizational purposes, copy the `.cia` file you wish to inject to the `/cias/` folder on your SD card
+{: .notice--info}
 
-+ For organizational purposes, copy the `.cia` file you wish to inject to the `/cias/` folder on your SD card
-    + Note that it is not possible to inject files into Health & Safety that are larger than it (including games and other large applications)
-
-#### 操作指南
+Note that it is not possible to inject files into Health & Safety that are larger than it (including games and other large applications)
+{: .notice--info}
 
 1. Launch GodMode9 by holding (Start) during boot
 1. Navigate to `[0:] SDCARD` -> `cias`
@@ -70,8 +81,6 @@ The write permissions system protects you by providing warnings and forces you t
 This will only work if the Health & Safety injection was performed by GodMode9 (not Decrypt9 or Hourglass9).
 {: .notice--info}
 
-#### 操作指南
-
 1. Launch GodMode9 by holding (Start) during boot
 1. Press (Home) to bring up the action menu
 1. Select "More..."
@@ -84,11 +93,13 @@ This will only work if the Health & Safety injection was performed by GodMode9 (
 
 #### 准备工作
 
+{% capture notice %}
 + Insert the game cartridge you intend to dump into your device
-    + 3DS game cartridges will be dumped to an installable `.cia` format
-    + NDS game cartridges will be dumped to a non-installable `.nds` format compatible with flashcarts and emulators
+  + 3DS game cartridges will be dumped to an installable `.cia` format
+  + NDS game cartridges will be dumped to a non-installable `.nds` format compatible with flashcarts and emulators
+{% endcapture %}
 
-#### 操作指南
+<div class="notice--info">{{ notice | markdownify }}</div>
 
 1. Launch GodMode9 by holding (Start) during boot
 1. Navigate to `[C:] GAMECART`
@@ -99,34 +110,25 @@ This will only work if the Health & Safety injection was performed by GodMode9 (
 
 ## <a name="dump_title" /> 导出已安装的内容
 
-Use the `Titles` menu in FBI to get the Title ID of the installed title you wish to dump
-{: .notice--info}
-
-#### 操作指南
-
 1. Launch GodMode9 by holding (Start) during boot
-1. Navigate to the drive applicable to the type of title you wish to dump:
+1. Hover over the drive applicable to the type of title you wish to dump:
   + **User Installed Title**: Navigate to `[A:] SYSNAND SD`
   + **System Title**: Navigate to `[1:] SYSNAND CTRNAND`
-1. Navigate to `title`
-1. Navigate to the folder corresponding to the first 8 digits of the Title ID
-1. Navigate to the folder corresponding to the last 8 digits of the Title ID
-1. Navigate to `content`
-1. Press (A) on the `.tmd` file to select it, then select "TMD file options...", then select "Show title info"
-1. Ensure you have found the correct title
-1. Press (B) to exit the title info
+1. Hold (R) and press (A) at the same time to open the drive options
+1. Select "Search for titles"
+1. Press (A) to continue
 1. Press (A) on the `.tmd` file to select it, then select "TMD file options...", then select "Build CIA (standard)"
 1. Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
 ## <a name="convert_3ds" /> 将.3DS文件转成.CIA文件
 
 
-#### 准备工作
-
+{% capture notice %}
 + For organizational purposes, copy each `.3ds` file you wish to convert to the `/cias/` folder on your SD card
-    + Note that if you wish to convert a `.3ds` file that is already on a flashcart, you should follow [Dumping a Game Cartridge](#dump_cart)
+  + Note that if you wish to convert a `.3ds` file that is already on a flashcart, you should follow [Dumping a Game Cartridge](#dump_cart)
+{% endcapture %}
 
-#### 操作指南
+<div class="notice--info">{{ notice | markdownify }}</div>
 
 1. Launch GodMode9 by holding (Start) during boot
 1. Navigate to `[0:] SDCARD` -> `cias`
@@ -136,12 +138,10 @@ Use the `Titles` menu in FBI to get the Title ID of the installed title you wish
 ## <a name="backup_gba" /> 备份GBA模拟器的存档
 
 
-#### 操作指南
-
 The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
 {: .notice--info}
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by holding (R) and pressing (A) on the GodeMode9 main menu, then selecting "Search for titles".
+To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
 {: .notice--info}
 
 1. Do the following process for each GBA VC game that you want to backup the save for:
@@ -159,10 +159,8 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 ## <a name="restore_gba" /> 恢复GBA模拟器存档
 
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by holding (R) and pressing (A) on the GodeMode9 main menu, then selecting "Search for titles".
+To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
 {: .notice--info}
-
-#### 操作指南
 
 1. Do the following process for each GBA VC game that you want to restore the save for:
   + Launch the GBA VC game
@@ -187,8 +185,6 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 **Note that this will erase the contents of your SD card!**
 {: .notice--danger}
 
-#### 操作指南
-
 1. Launch GodMode9 by holding (Start) during boot
 1. Press (Home) to bring up the action menu
 1. Select "More..."
@@ -205,8 +201,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 #### 准备工作
 
 + For organizational purposes, copy each `.cia` file you wish to encrypt / decrypt to the `/cias/` folder on your SD card
-
-#### 操作指南
+{: .notice--info}
 
 1. Launch GodMode9 by holding (Start) during boot
 1. Navigate to `[0:] SDCARD` -> `cias`
@@ -219,8 +214,6 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Your encrypted / decrypted `.cia` will be outputted to the desired location
 
 ## <a name="rm_nnid" />Removing an NNID without formatting your device
-
-#### 操作指南
 
 1. Launch GodMode9 by holding (Start) during boot
 1. Navigate to `[1:] SYSNAND CTRNAND` -> `data` -> (32 Character ID) -> `sysdata` -> `00010038`

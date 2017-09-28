@@ -6,17 +6,26 @@ GodMode9 הוא מנהל קבצים עם גישה מלאה לקונסולת ה-3
 
 שימו לב שאם יש לכם קבצי מטען אחרים מ`GodMode9.firm` בתיקיית `/luma/payloads/` על כרטיס הSD שלכם, החזקת (Start) בהפעלה תציג תפריט שבו תצטרכו להשתמש בחיצים ובכפתור ה(A) כדי לבחור ב"GodMode9" בשביל ההוראות האלה. 
 
-{% capture notice %}
-זה כלי חזק. GodMode9 נותן לכם את הדרך לעשות כל שינוי שניתן לחשוב עליו למידע המערכת שזמין על קונסולת ה3DS. עם זאת, אמצעי זהירות קיימים כדי שאתם לא תגרמו בטעות נזק לנתונים של הקונסולה שלכם.
+GodMode9 is powerful software that has the capability to modify essentially anything on your console. Though many of these modifications are locked behind a permissions system, and it is impossible to accidentally perform dangerous actions without deliberately unlocking permissions, you should still follow instructions carefully and keep backups just in case.
 
-מערכת ההרשאות של הכתיבה מגנה עליכם על ידי מתן אזהרות והיא כופה עליכם להזין רצף של כפתורים כדי לפתוח את הרשאות הכתיבה. זה בלתי אפשרי להחליף או לשנות שום דבר חשוב ללא רצפים כאלה וזה לא אפשרי לפתוח משהו בטעות. כמו תמיד, תהיו חכמים ותשמרו על גיבויים, רק כדי להיות בטוחים.
-{% endcapture %}
+## <a name="update-gm9" /> Updating GodMode9
 
-<div class="notice--danger">{{ notice | markdownify }}</div>
+Some of the instructions below are only applicable to the latest version of GodMode9, and as such you should follow this section to update your copy before continuing. Overwrite any existing files.
+{: .notice--info}
 
-## <a name="nand_backup" /> יצירת גיבוי NAND
+#### מה שאתם צריכים
+
+* את הגרסה העדכנית של [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 
 #### הוראות
+
+1. תכבו את המכשיר
+1. תכניסו את ה-SD שלכם למחשב
+1. העתיקו את `GodMode9.firm` מהזיפ של GodMode9 אל תיקיית /luma/payloads/ ב- SD שלכם
+1. תעתיקו את התיקייה `gm9` מתוך ה`.zip` של GodMode9 ל-SD שלכם
+1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
+
+## <a name="nand_backup" /> יצירת גיבוי NAND
 
 1. תפתחו את GodMode9 על ידי החזקה של המקש (Start) בעת ההדלקה
 1. תלחצו על (Home) כדי להראות את תפריט הפעולה
@@ -27,34 +36,36 @@ GodMode9 הוא מנהל קבצים עם גישה מלאה לקונסולת ה-3
 1. תלחצו (A) כדי להמשיך
 1. תחזיקו (R) ולחצו (B) באותו הזמן כדי להוציא את הSD
 1. תכניסו את ה-SD שלכם למחשב
-1. תעתיקו את `<serialnumber>_nandmin_###.bin` מתיקיית `/gm9/out/` על הכרטיס זכרון אל מקום בטוח במחשב שלכם
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + תיצרו גיבויים במקומות שונים (כמו אחסון בענן)
   + הגיבוי הזה ישמור עליכם מבריק אם משהו ישתבש בעתיד
-1. תמחקו את `<serialnumber>_nandmin_###.bin` בתיקיה `/gm9/out/` על הSD לאחר שהעתקתם אותו
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
 
 ## <a name="nand_restore" /> שחזור גיבוי NAND
 
-#### הוראות
-
 1. תפתחו את GodMode9 על ידי החזקה של המקש (Start) בעת ההדלקה
-1. נווטו ל`[0:] SDCARD`
-1. תלחצו (A) על קובץ ה`.bin` של הNAND שלכם כדי לבחור בו, ואז תבחרו ב "NAND image options...", ושם ב "Restore SysNAND (safe)"
-1. לחצו (A) כדי לפתוח גישת שכתוב לSysNAND, ואז תלחצו על המקשים בסדר הנכון
+1. תחזיקו (R) ולחצו (B) באותו הזמן כדי להוציא את הSD
+1. תכניסו את ה-SD שלכם למחשב
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from your computer to the `/gm9/out/` folder on your SD card if you deleted it after backing it up
+1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
+1. תלחצו על (Home) כדי להראות את תפריט הפעולה
+1. תבחרו "Scripts..."
+1. Select "Restore SysNAND (Safe)"
+1. Select your NAND backup
+1. תלחצו (A) כדי להמשיך
+1. Press (A) to unlock SysNAND (lvl2) writing, then input the key combo given
   + זה לא ישכתב את התקנת boot9strap שלכם
-1. תלחצו על המקשים בסדר הנכון כדי לפתוח גישת כתיבה לSysNAND (בlvl1)
-  + זה ייקח קצת זמן
 1. כאשר התהליך מסתיים, לחצו על (A) כדי להמשיך
-1. תלחצו (B) כדי לדחות נעילת הרשאות כתיבה אם תתבקשו
+1. תלחצו (A) כדי לנעול הרשאות כתיבה אם תתבקשו
 
 ## <a name="injectHS" /> הזרקת כל תוכנת .CIA אל Health & Safety
 
-### הכנה
+For organizational purposes, copy the `.cia` file you wish to inject to the `/cias/` folder on your SD card
+{: .notice--info}
 
-+ למטרות ארגוניות, תעתיקו את קובץ ה`.cia` שאתם רוצים להזריק לתיקיה '/cias/' על כרטיס הSD
-    + שימו לב שזה לא אפשרי להזריק קבצים אל Health & Safety שיותר גדולים ממנו (כולל משחקים ותוכנות אחרות גדולות)
-
-#### הוראות
+Note that it is not possible to inject files into Health & Safety that are larger than it (including games and other large applications)
+{: .notice--info}
 
 1. תפתחו את GodMode9 על ידי החזקה של המקש (Start) בעת ההדלקה
 1. נווטו אל `[0:] SDCARD` ושם אל `cias`
@@ -69,8 +80,6 @@ GodMode9 הוא מנהל קבצים עם גישה מלאה לקונסולת ה-3
 זה יעבוד רק אם ההזרקה על Health & Safety בוצעה על ידי GodMode9 (ולא Decrypt9 או Hourglass9).
 {: .notice--info}
 
-#### הוראות
-
 1. תפתחו את GodMode9 על ידי החזקה של המקש (Start) בעת ההדלקה
 1. תלחצו על (Home) כדי להראות את תפריט הפעולה
 1. תבחרו ב"More..."
@@ -82,11 +91,13 @@ GodMode9 הוא מנהל קבצים עם גישה מלאה לקונסולת ה-3
 
 ### הכנה
 
+{% capture notice %}
 + תכניסו את המשחק שאתם רוצים ליצור לו גיבוי אל הקונסולה
-    + משחקי 3DS יגובו אל פורמט`.cia` הניתן להתקנה על המכשיר
-    + משחקי NDS יגובו לפורמט `.nds` שלא ניתן להתקין אבל הוא כן עובד עם כרטיסי פריצה ואמולטורים
+  + משחקי 3DS יגובו אל פורמט`.cia` הניתן להתקנה על המכשיר
+  + משחקי NDS יגובו לפורמט `.nds` שלא ניתן להתקין אבל הוא כן עובד עם כרטיסי פריצה ואמולטורים
+{% endcapture %}
 
-#### הוראות
+<div class="notice--info">{{ notice | markdownify }}</div>
 
 1. תפתחו את GodMode9 על ידי החזקה של המקש (Start) בעת ההדלקה
 1. נווטו ל`[C:] GAMECART`
@@ -97,33 +108,24 @@ GodMode9 הוא מנהל קבצים עם גישה מלאה לקונסולת ה-3
 
 ## <a name="dump_title" /> גיבוי תוכנה\משחק דיגיטלים
 
-תשתמשו בתפריט `Titles` בFBI כדי למצוא את הTITLE ID של התוכנה\משחק שאתם רוצים לגבות
-{: .notice--info}
-
-#### הוראות
-
 1. תפתחו את GodMode9 על ידי החזקה של המקש (Start) בעת ההדלקה
-1. נווטו לכונן החל על סוג התוכנה\משחק שאתם רוצים לגבות:
+1. Hover over the drive applicable to the type of title you wish to dump:
   + **תוכנה לא מותקנת מראש**: נווטו אל `[A:] SYSNAND SD`
   + **תוכנה מותקנת מראש**: נווטו אל `[1:] SYSNAND CTRNAND`
-1. נווטו ל`title`
-1. נווטו אל התיקיה שתואמת את 8 הספרות הראשות של הTitle ID
-1. נווטו אל התיקיה שתואמת את 8 הספרות האחרונות של הTitle ID
-1. נווטו ל`content`
-1. תלחצו (A) על קובץ ה `.tmd` כדי לבחור בו, ואז תבחרו ב "TMD file options...", ואז ב "Show title info"
-1. תבתקו שמצאתם את התוכנה\משחק הנכון
-1. תלחצו (B) כדי לצאת מהמידע על התוכנה\משחק
+1. Hold (R) and press (A) at the same time to open the drive options
+1. Select "Search for titles"
+1. תלחצו (A) כדי להמשיך
 1. תלחצו (A) על קובץ ה `.tmd` כדי לבחור בו, ואז תבחרו ב "TMD file options...", ואז ב "Build CIA (standard)"
 1. קובץ ה `.cia` הניתן להתקנה יהיה בתיקית `/gm9/out/` על כרטיס הSD שלכם
 
 ## <a name="convert_3ds" /> המרה של קובץ .3DS אל .CIA
 
-### הכנה
-
+{% capture notice %}
 + למטרות ארגוניות, תעתיקו את קובץ ה`.3ds` שאתם רוצים להמיר לתיקיה '/cias/' על כרטיס הSD
-    + שימו לב שאם אתם רוצים להמיר קובץ `.3ds` שנמצא כבר על כרטיס פריצה, אתם צריכים לעקוב אחרי [גיבוי משחק פיזי](#dump_cart)
+  + שימו לב שאם אתם רוצים להמיר קובץ `.3ds` שנמצא כבר על כרטיס פריצה, אתם צריכים לעקוב אחרי [גיבוי משחק פיזי](#dump_cart)
+{% endcapture %}
 
-#### הוראות
+<div class="notice--info">{{ notice | markdownify }}</div>
 
 1. תפתחו את GodMode9 על ידי החזקה של המקש (Start) בעת ההדלקה
 1. נווטו אל `[0:] SDCARD` ושם אל `cias`
@@ -132,12 +134,10 @@ GodMode9 הוא מנהל קבצים עם גישה מלאה לקונסולת ה-3
 
 ## <a name="backup_gba" /> גיבוי שמירות GBA VC
 
-#### הוראות
-
 השמירה תועבר לתיקיית `/gm9/out/` בכרטיס הSD שלכם על השם `<TitleID>.gbavc.sav`.
 {: .notice--info}
 
-כדי לזהות את ה Title ID של קובץ`<TitleID>.gbavc.sav`, אתם יכולים לקבל רשימה של כל המשחקים על המערכת וה Title IDים המתאימים על ידי החזקת (R) ולחיצת (A) על התפריט הראשי של GodMode9, ואז לבחור ב "Search for titles".
+To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
 {: .notice--info}
 
 1. תעשו את התהליך הבא בשביל כל משחק GBA VC שאתם רוצים לגבות לו את השמירה:
@@ -154,10 +154,8 @@ GodMode9 הוא מנהל קבצים עם גישה מלאה לקונסולת ה-3
 
 ## <a name="restore_gba" /> שחזור שמירות GBA VC
 
-כדי לזהות את ה Title ID של קובץ`<TitleID>.gbavc.sav`, אתם יכולים לקבל רשימה של כל המשחקים על המערכת וה Title IDים המתאימים על ידי החזקת (R) ולחיצת (A) על התפריט הראשי של GodMode9, ואז לבחור ב "Search for titles".
+To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
 {: .notice--info}
-
-#### הוראות
 
 1. תעשו את התהליך הבא בשביל כל משחק GBA VC שאתם רוצים לשחזר לו את השמירה:
   + תפעילו את המשחק
@@ -181,8 +179,6 @@ GodMode9 הוא מנהל קבצים עם גישה מלאה לקונסולת ה-3
 **שימו לב שזה ימחוק את תוכן הכרטיס שלכם!**
 {: .notice--danger}
 
-#### הוראות
-
 1. תפתחו את GodMode9 על ידי החזקה של המקש (Start) בעת ההדלקה
 1. תלחצו על (Home) כדי להראות את תפריט הפעולה
 1. תבחרו ב"More..."
@@ -199,8 +195,7 @@ GodMode9 הוא מנהל קבצים עם גישה מלאה לקונסולת ה-3
 ### הכנה
 
 + למטרות ארגוניות, תעתיקו את קבצי ה`.cia` שאתם רוצים לפענח\להצפין לתיקיה '/cias/' על כרטיס הSD
-
-#### הוראות
+{: .notice--info}
 
 1. תפתחו את GodMode9 על ידי החזקה של המקש (Start) בעת ההדלקה
 1. נווטו אל `[0:] SDCARD` ושם אל `cias`
@@ -213,8 +208,6 @@ GodMode9 הוא מנהל קבצים עם גישה מלאה לקונסולת ה-3
 1. קובץ ה `.cia` המוצפן\מפוענח שלכם יהיה במקום הרצוי
 
 ## <a name="rm_nnid" />מחיקת NNID ללא פרמוט המכשיר
-
-#### הוראות
 
 1. תפתחו את GodMode9 על ידי החזקה של המקש (Start) בעת ההדלקה
 1. נווטו אל `[1:] SYSNAND CTRNAND`, אז`data`, אז מספר בין 32 ספרות, אז `sysdata` ולבסוף `00010038`

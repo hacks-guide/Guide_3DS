@@ -6,17 +6,26 @@ GodMode9 is a full access file browser for the Nintendo 3DS console, giving you 
 
 Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
 
-{% capture notice %}
-This is powerful stuff. GodMode9 provides you with the means to do basically any thinkable modification to any system data available on the 3DS console. 하지만 실수로 콘솔의 데이터를 손상하지 않도록 경고창이 뜹니다.
+GodMode9 is powerful software that has the capability to modify essentially anything on your console. Though many of these modifications are locked behind a permissions system, and it is impossible to accidentally perform dangerous actions without deliberately unlocking permissions, you should still follow instructions carefully and keep backups just in case.
 
-시스템 쓰기 권한 사용 시 경고창과 키 조합 입력 시스템 제공을 통해 시스템 손상을 막습니다. 모든 중요한 파일과 폴더을 덮어쓰거나 수정하는 것은 이러한 잠금 풀기 과정을 거쳐야 하며 실수로 잠금을 푸는 것은 불가능합니다. As always, be smart and keep backups, just to be safe.
-{% endcapture %}
+## <a name="update-gm9" /> Updating GodMode9
 
-<div class="notice--danger">{{ notice | markdownify }}</div>
+Some of the instructions below are only applicable to the latest version of GodMode9, and as such you should follow this section to update your copy before continuing. Overwrite any existing files.
+{: .notice--info}
 
-## <a name="nand_backup" /> NAND 백업 생성
+#### 준비물
+
+* 최신 버전의 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 
 #### 진행 방법
+
+1. 기기를 종료해 주세요.
+1. SD 카드를 컴퓨터에 삽입해 주세요.
+1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
+1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+1. SD 카드를 기기에 다시 삽입해 주세요.
+
+## <a name="nand_backup" /> NAND 백업 생성
 
 1. Launch GodMode9 by holding (Start) during boot
 1. (Home)을 눌러 작업 메뉴를 띄워 주세요.
@@ -27,49 +36,49 @@ This is powerful stuff. GodMode9 provides you with the means to do basically any
 1. (A)를 눌러 진행해 주세요.
 1. (R)과 (B)를 동시에 누른 후 SD 카드를 빼 주세요.
 1. SD 카드를 컴퓨터에 삽입해 주세요.
-1. Copy `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + 여러 위치에 백업을 해 주세요. (온라인 파일 저장 공간 등)
   + 나중에 문제가 생겨 기기가 벽돌이 되었을 때 이 백업으로 기기를 살릴 수 있습니다.
-1. Delete `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card after copying it
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. SD 카드를 기기에 다시 삽입해 주세요.
 
 ## <a name="nand_restore" /> NAND 백업 복구
 
-#### Instructions
-
 1. Launch GodMode9 by holding (Start) during boot
-1. `[0:] SDCARD`로 이동해 주세요.
-1. `NAND.bin`에 (A)를 눌러 선택하고 "NAND image options..."를 선택하고 "Restore SysNAND (safe)"를 선택해 주세요.
-1. (A)를 눌러 SysNAND 덮어쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요.
+1. (R) 버튼과 (B)를 동시에 눌러 SD 카드를 뺄 준비를 해 주세요.
+1. SD 카드를 컴퓨터에 삽입해 주세요.
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from your computer to the `/gm9/out/` folder on your SD card if you deleted it after backing it up
+1. SD 카드를 기기에 다시 삽입해 주세요.
+1. (Home)을 눌러 작업 메뉴를 띄워 주세요.
+1. Select "Scripts..."
+1. Select "Restore SysNAND (Safe)"
+1. Select your NAND backup
+1. (A)를 눌러 계속해 주세요.
+1. Press (A) to unlock SysNAND (lvl2) writing, then input the key combo given
   + This will not overwrite your boot9strap installation
-1. SysNAND (lvl1) 쓰기의 잠금을 풀기 위해 주어진 키 조합을 입력해 주세요.
-  + 이 과정은 시간이 좀 걸릴 것입니다.
 1. 작업이 완료되면 (A)를 눌려 계속해 주세요.
-1. Press (B) to decline relocking write permissions if prompted
+1. Press (A) to relock write permissions if prompted
 
 ## <a name="injectHS" /> 모든 .CIA 앱 안전을 위한 주의사항에 주입
 
-#### 준비 작업
+For organizational purposes, copy the `.cia` file you wish to inject to the `/cias/` folder on your SD card
+{: .notice--info}
 
-+ 작업에 앞서, 주입하고자 하는 `.cia` 파일을 SD 카드의 `/cias/` 폴더에 복사해 주세요.
-    + 안전을 위한 주의사항 앱보다 용량이 큰 파일은 주입할 수 없다는 점을 숙지해 주세요. (용량이 큰 게임과 다른 애플리케이션 등)
-
-#### 진행 방법
+Note that it is not possible to inject files into Health & Safety that are larger than it (including games and other large applications)
+{: .notice--info}
 
 1. Launch GodMode9 by holding (Start) during boot
 1. `[0:] SDCARD` -> `cias`로 이동해 주세요.
 1. `.cia`에 (A)를 눌러 선택하고 "CIA image options..."를 선택하고 "Mount image to drive"를 선택해 주세요.
 1. `.app` 파일에 (A)를 부르고 "NCCH image options"를 선택하고 "Inject to H&S"를 선택해 주세요.
 1. (A)를 눌러 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요.
-1. (A)를 눌러 계속해 주세요.
+1. (A)를 눌러 진행해 주세요.
 1. Press (A) to relock write permissions if prompted
 
 ## <a name="restore_hs" /> .CIA 앱 주입 이후 안전을 위한 주의사항 복구
 
 이 과정은 Godmode9(Decrypt9 또는 Hourglass9가 아닌)을 통해 안전을 위한 주의사항을 주입했을 경우에만 적용됩니다.
 {: .notice--info}
-
-#### 진행 방법
 
 1. Launch GodMode9 by holding (Start) during boot
 1. (Home)을 눌러 작업 메뉴를 띄워 주세요.
@@ -82,11 +91,13 @@ This is powerful stuff. GodMode9 provides you with the means to do basically any
 
 #### 준비 작업
 
+{% capture notice %}
 + 기기에 추출하고자 하는 게임 카드를 삽입해 주세요.
-    + 3DS 게임 카드는 설치가 가능한 `.cia` 형식으로 추출됩니다.
-    + NDS 게임 게임 카드는 설치가 불가능하고 플래시 게임 카드와 에뮬레이터에서만 실행이 가능한 `.nds` 형식으로 추출됩니다.
+  + 3DS 게임 카드는 설치가 가능한 `.cia` 형식으로 추출됩니다.
+  + NDS 게임 게임 카드는 설치가 불가능하고 플래시 게임 카드와 에뮬레이터에서만 실행이 가능한 `.nds` 형식으로 추출됩니다.
+{% endcapture %}
 
-#### 진행 방법
+<div class="notice--info">{{ notice | markdownify }}</div>
 
 1. Launch GodMode9 by holding (Start) during boot
 1. `[C:] GAMECART`로 이동해 주세요.
@@ -97,33 +108,24 @@ This is powerful stuff. GodMode9 provides you with the means to do basically any
 
 ## <a name="dump_title" /> 타이틀 추출
 
-추출하고자 하는 설치된 타이틀의 타이틀 ID를 얻기 위해 FBI의 `Titles` 메뉴를 사용해 주세요.
-{: .notice--info}
-
-#### 진행 방법
-
 1. Launch GodMode9 by holding (Start) during boot
-1. 추출할 타이틀 유형에 해당하는 드라이브로 이동해 주세요.
+1. Hover over the drive applicable to the type of title you wish to dump:
   + **사용자가 설치한 타이틀**: '[A:] SYSNAND SD`로 이동해 주세요.
   + **시스템 타이틀**:`[1:] SYSNAND CTRNAND`로 이동해 주세요.
-1. `title`로 이동해 주세요.
-1. 타이틀 ID의 처음 8자리에 해당하는 폴더로 이동해 주세요.
-1. 타이틀 ID의 마지막 8자리에 해당하는 폴더로 이동해 주세요.
-1. `content`로 이동해 주세요.
-1. `.tmd` 파일에 (A)를 눌러 선택하고 "TMD file options..."를 선택하고 "Show title info"를 선택해 주세요.
-1. 올바른 타이틀을 찾았는지 확인해 주세요.
-1. (B)를 눌러 타이틀 정보를 닫아 주세요.
+1. Hold (R) and press (A) at the same time to open the drive options
+1. Select "Search for titles"
+1. (A)를 눌러 진행해 주세요.
 1. `.tmd` 파일에 (A)를 눌러 선택하고 "TMD file options..."를 선택하고 "Build CIA (standard)"를 선택해 주세요.
 1. Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
 ## <a name="convert_3ds" /> .3DS 파일을 .CIA 파일로 변환
 
-#### 준비 작업
-
+{% capture notice %}
 + 작업에 앞서, 변환하고자 하는 모든 `.3ds` 파일을 SD 카드의 `/cias/` 폴더에 복사해 주세요.
-    + 이미 플래시 게임 카드에 있는`.3ds` 파일을 변환하려면 [게임 카드 추출](# dump_cart) 가이드를 참고해 주세요.
+  + 이미 플래시 게임 카드에 있는`.3ds` 파일을 변환하려면 [게임 카드 추출](# dump_cart) 가이드를 참고해 주세요.
+{% endcapture %}
 
-#### 진행 방법
+<div class="notice--info">{{ notice | markdownify }}</div>
 
 1. Launch GodMode9 by holding (Start) during boot
 1. `[0:] SDCARD` -> `cias`로 이동해 주세요.
@@ -133,12 +135,10 @@ This is powerful stuff. GodMode9 provides you with the means to do basically any
 
 ## <a name="backup_gba" /> GBA VC 저장 데이터 백업
 
-#### 진행 방법
-
 The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
 {: .notice--info}
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by holding (R) and pressing (A) on the GodeMode9 main menu, then selecting "Search for titles".
+To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
 {: .notice--info}
 
 1. 과정대로 진행해 저장 데이터를 백업하려는 모든 GBA VC 게임 저장 데이터를 백업해 주세요.
@@ -155,10 +155,8 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 
 ## <a name="restore_gba" /> GBA VC 저장 데이터 복구
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by holding (R) and pressing (A) on the GodeMode9 main menu, then selecting "Search for titles".
+To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
 {: .notice--info}
-
-#### 진행 방법
 
 1. Do the following process for each GBA VC game that you want to restore the save for:
   + GBA VC 게임을 실행해 주세요.
@@ -182,8 +180,6 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 **이 과정 중 SD 카드의 모든 정보가 지워진다는 것을 명심해 주세요!**
 {: .notice--danger}
 
-#### 진행 방법
-
 1. Launch GodMode9 by holding (Start) during boot
 1. (Home)을 눌러 작업 메뉴를 띄워 주세요.
 1. "More..."를 선택해 주세요.
@@ -200,8 +196,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 #### 준비 작업
 
 + 작업에 앞서, 암호화 / 복호화하고자 하는 모든 `.cia` 파일을 SD 카드의 `/cias/` 폴더에 복사해 주세요.
-
-#### 진행 방법
+{: .notice--info}
 
 1. Launch GodMode9 by holding (Start) during boot
 1. `[0:] SDCARD` -> `cias`로 이동해 주세요.
@@ -214,8 +209,6 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. 암호화 / 복호화된 `.cia`는 원하는 위치에 출력됩니다.
 
 ## <a name="rm_nnid" />Removing an NNID without formatting your device
-
-#### 진행 방법
 
 1. Launch GodMode9 by holding (Start) during boot
 1. Navigate to `[1:] SYSNAND CTRNAND` -> `data` -> (32 Character ID) -> `sysdata` -> `00010038`

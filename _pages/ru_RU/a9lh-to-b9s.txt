@@ -37,6 +37,7 @@ title: "С A9LH до B9S"
 
 * <i class="fa fa-magnet" aria-hidden="true" title="Это magnet-ссылка. Воспользуйтесь торрент-клиентом, чтобы скачать этот файл."></i> - **Только пользователи New 3DS:** [`secret_sector.bin`](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce)
 * Свежая версия [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z-архив`)*
+* The v7.0.5 release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/tag/v7.0.5) *(the `.7z` file)*
 * Свежая версия [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * Свежая версия [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(стандартный boot9strap; не `devkit-файл`, не `ntr-файл`)*
 * Свежая версия [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
@@ -55,7 +56,8 @@ title: "С A9LH до B9S"
 1. Выключите консоль
 1. Вставьте SD-карту в компьютер
 1. Скопируйте _содержимое_ `starter.zip` в корень вашей SD-карты
-1. Скопируйте файл `boot.firm` из `.7z-архива` Luma3DS в корень SD-карты
+1. Copy `boot.firm` from the latest version Luma3DS `.7z` to the root of your SD card
+1. Copy `arm9loaderhax.bin` from the v7.0.5 Luma3DS `.7z` to the root of your SD card
 1. Создайте папку `cias` в корне SD-карты, если таковой нет
 1. Скопируйте `lumaupdater.cia` в папку `/cias/` на SD-карте
 1. Создайте папку `boot9strap` в корне SD-карты
@@ -118,8 +120,8 @@ title: "С A9LH до B9S"
 
 1. Запустите GodMode9, держа нажатой кнопку (Start) во время загрузки
 1. Если вам предложат создать бэкап важных файлов, нажмите кнопку (A) чтобы сделать это, затем нажмите (A) чтобы продолжить после завершения
-1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
-  + Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
+1. Если вам предложат выставить RTC дату и время, нажмите кнопку (A) чтобы сделать это, настройте дату и время, затем нажмите (A) чтобы продолжить
+  + Обратите внимание, что если вы выставили RTC дату и время, вам также придется исправить время в Системных настройках после завершения руководства
 1. Нажмите кнопку (Home) для вызова меню
 1. Выберите "Scripts..."
 1. Выберите "setup_ctrnand_luma3ds"
@@ -138,11 +140,11 @@ title: "С A9LH до B9S"
 1. Нажмите (A), чтобы продолжить
 1. Удерживая (R) нажмите (B) для того, чтобы извлечь SD-карту
 1. Вставьте SD-карту в компьютер
-1. Скопируйте `<serialnumber>_nandmin_###.bin` из папки `/gm9/out/` на SD-карте в безопасное место на вашем компьютере
+1. Скопируйте `<date>_<serialnumber>_sysnand_###.bin` из папки `/gm9/out/` на SD-карте в безопасное место на вашем компьютере
   + Сделайте несколько резервных копий в нескольких местах (например в облачном хранилище)
   + Эти бэкапы позволят восстановить консоль, если впоследствии что-то пойдёт не так
   + Замените ваш старый бэкап NAND с arm9loaderhax на новый с boot9strap
-1. После копирования удалите `<serialnumber>_nandmin_###.bin` из папки `/gm9/out/` на SD-карте
+1. После копирования удалите `<date>_<serialnumber>_sysnand_###.bin` из папки `/gm9/out/` на SD-карте
 1. Вставьте SD-карту обратно в консоль
 
 ##### Часть VIII - Очистка SD-карты

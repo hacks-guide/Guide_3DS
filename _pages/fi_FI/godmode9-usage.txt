@@ -6,17 +6,26 @@ GodMode9 on täysillä oikeuksilla varustettu tiedostoselain Nintendo 3DS -konso
 
 Huomaa, että jos sinulla on muita käynnistystiedostoja kuin `GodMode9.firm` SD-korttisi `/luma/payloads`‑kansiossa, (START)-painikkeen pohjassa pitäminen käynnistyksen aikana avaa "ketjulatausvalikon", jossa sinun on käytettävä ristiohjainta ja (A):ta avataksesi GodMode9:n näitä ohjeita varten. 
 
-{% capture notice %}
-GodMode9 on tehokas ohjelma. Voit tehdä sillä periaatteessa mitä tahansa muutoksia 3DS-konsolin kaikkiin järjestelmätietoihin. Ohjelmassa on kuitenkin erinäisiä varotoimenpiteitä, jotta et epähuomiossa vahingoittaisi konsolisi tietoja.
+GodMode9 is powerful software that has the capability to modify essentially anything on your console. Though many of these modifications are locked behind a permissions system, and it is impossible to accidentally perform dangerous actions without deliberately unlocking permissions, you should still follow instructions carefully and keep backups just in case.
 
-Järjestelmän kirjoitusoikeudet on suojattu varoituksilla, ja sinun on syötettävä painikeyhdistelmä ottaaksesi kirjoitusoikeudet käyttöön. Tärkeitä tietoja on mahdotonta ylikirjoittaa tai muokata ilman painikeyhdistelmien syöttämistä, eikä oikeuksia voi ottaa käyttöön vahingossa. Ohjelman suojauksista huolimatta on kuitenkin suositeltavaa tehdä säännöllisiä varmuuskopioita.
-{% endcapture %}
+## <a name="update-gm9" /> Updating GodMode9
 
-<div class="notice--danger">{{ notice | markdownify }}</div>
+Some of the instructions below are only applicable to the latest version of GodMode9, and as such you should follow this section to update your copy before continuing. Overwrite any existing files.
+{: .notice--info}
 
-## <a name="nand_backup" /> NAND-varmuuskopion luominen
+#### Tarpeet
+
+* GodMode9:n [viimeisin julkaisu](https://github.com/d0k3/GodMode9/releases)
 
 #### Ohjeet
+
+1. Sammuta konsolisi
+1. Aseta SD-korttisi tietokoneeseesi
+1. Kopioi GodMode9-`.zip`-pakkauksesta `GodMode9.firm` SD-korttisi `/luma/payloads/`-kansioon
+1. Kopioi GodMode9-`.zip`-pakkauksesta `gm9`-kansio SD-korttisi juureen
+1. Aseta SD-korttisi takaisin konsoliisi
+
+## <a name="nand_backup" /> NAND-varmuuskopion luominen
 
 1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
 1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
@@ -27,34 +36,36 @@ Järjestelmän kirjoitusoikeudet on suojattu varoituksilla, ja sinun on syötett
 1. Paina (A):ta jatkaaksesi
 1. Pidä (R):ää pohjassa ja paina samalla (B):tä irrottaaksesi SD-korttisi
 1. Aseta SD-korttisi tietokoneeseesi
-1. Kopioi SD-korttisi `/gm9/out/`-kansiosta `<sarjanumero>_nandmin_###.bin` turvalliseen paikkaan tietokoneellasi
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Varmuuskopioi useaan eri paikkaan (kuten pilvipalveluihin)
   + Tämä varmuuskopiointi pelastaa sinut konsolin vioittumiselta, jos jokin menee pieleen tulevaisuudessa
-1. Poista SD-korttisi `/gm9/out/`-kansiosta `<sarjanumero>_nandmin_###.bin` kopioituasi sen
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. Aseta SD-korttisi takaisin konsoliisi
 
 ## <a name="nand_restore" /> NAND-varmuuskopion palauttaminen
 
-#### Ohjeet
-
 1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
-1. Mene hakemistoon `[0:] SDCARD`
-1. Paina (A):ta NAND-`.bin`-tiedoston kohdalla, valitse "NAND image options..." ja sitten "Restore SysNAND (safe)"
-1. Paina (A):ta ottaaksesi käyttöön SysNANDin ylikirjoittamisen ja syötä annettu painikeyhdistelmä
+1. Pidä (R):ää pohjassa ja paina samalla (B):tä irrottaaksesi SD-korttisi
+1. Aseta SD-korttisi tietokoneeseesi
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from your computer to the `/gm9/out/` folder on your SD card if you deleted it after backing it up
+1. Aseta SD-korttisi takaisin konsoliisi
+1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
+1. Valitse "Scripts..."
+1. Select "Restore SysNAND (Safe)"
+1. Select your NAND backup
+1. Paina (A):ta jatkaaksesi
+1. Press (A) to unlock SysNAND (lvl2) writing, then input the key combo given
   + Tämä ei ylikirjoita boot9strap-asennustasi
-1. Syötä annettu painikeyhdistelmä ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1)
-  + Tämä prosessi voi kestää jonkin aikaa
 1. Kun toiminto on suoritettu, paina (A):ta jatkaaksesi
-1. Paina (B):tä kieltäytyäksesi lukitsemasta kirjoitusoikeuksia kehotettaessa
+1. Paina (A):ta lukitaksesi kirjoitusoikeudet kehotettaessa
 
 ## <a name="injectHS" /> .CIA-sovellusten injektoiminen Health & Safety -sovellukseen
 
-##### Valmistelut
+For organizational purposes, copy the `.cia` file you wish to inject to the `/cias/` folder on your SD card
+{: .notice--info}
 
-+ Kun sinulla on `.cia`-tiedosto, jonka haluat injektoida, kopioi se käytännöllisyyden vuoksi SD-korttisi `/cias/`-kansioon
-    Huomaa, että Health & Safety -sovellusta isompia tiedostoja ei ole mahdollista injektoida (mukaan lukien pelit ja muut isokokoiset sovellukset)
-
-#### Ohjeet
+Note that it is not possible to inject files into Health & Safety that are larger than it (including games and other large applications)
+{: .notice--info}
 
 1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
 1. Mene hakemistoon `[0:] SDCARD` → `cias`
@@ -69,8 +80,6 @@ Järjestelmän kirjoitusoikeudet on suojattu varoituksilla, ja sinun on syötett
 Tämä toimii vain, jos Health & Safety -injektio tehtiin GodMode9:n avulla (eikä Decrypt9:n tai Hourglass9:n).
 {: .notice--info}
 
-#### Ohjeet
-
 1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
 1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
 1. Valitse "More..."
@@ -82,11 +91,13 @@ Tämä toimii vain, jos Health & Safety -injektio tehtiin GodMode9:n avulla (eik
 
 ##### Valmistelut
 
+{% capture notice %}
 + Syötä konsoliisi pelikortti, jonka sisällön haluat kopioida
-    + 3DS-pelikortit kopioituvat asennettavaan `.cia`-muotoon
-    + NDS-pelikortit kopioituvat ei-asennettavaan `.nds`-muotoon, joka on yhteensopiva flash-korttien ja emulaattorien kanssa
+  + 3DS-pelikortit kopioituvat asennettavaan `.cia`-muotoon
+  + NDS-pelikortit kopioituvat ei-asennettavaan `.nds`-muotoon, joka on yhteensopiva flash-korttien ja emulaattorien kanssa
+{% endcapture %}
 
-#### Ohjeet
+<div class="notice--info">{{ notice | markdownify }}</div>
 
 1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
 1. Mene hakemistoon `[C:] GAMECART`
@@ -97,33 +108,24 @@ Tämä toimii vain, jos Health & Safety -injektio tehtiin GodMode9:n avulla (eik
 
 ## <a name="dump_title" /> Sovelluksen kopioiminen
 
-Käytä FBI:n `Titles`-valikkoa saadaksesi tietoosi tunnuksen sille sovellukselle, jonka haluat kopioida
-{: .notice--info}
-
-#### Ohjeet
-
 1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
-1. Avaa hakemisto, joka vastaa kopioitavan sovelluksesi tyyppiä:
+1. Hover over the drive applicable to the type of title you wish to dump:
   + **Käyttäjän asentama sovellus**: Mene hakemistoon `[A:] SYSNAND SD`
   + **Järjestelmäsovellus**: Mene hakemistoon `[1:] SYSNAND CTRNAND`
-1. Mene hakemistoon `title`
-1. Mene hakemistoon, jonka nimi vastaa sovelluksen tunnuksen 8:aa ensimmäistä numeroa
-1. Mene hakemistoon, jonka nimi vastaa sovelluksen tunnuksen 8:aa viimeistä numeroa
-1. Mene hakemistoon `content`
-1. Paina (A):ta `.tmd`-tiedoston kohdalla, valitse "TMD file options..." ja sitten "Show title info"
-1. Varmista, että kyseessä on oikea sovellus
-1. Paina (B):tä poistuaksesi sovellustietonäkymästä
+1. Hold (R) and press (A) at the same time to open the drive options
+1. Select "Search for titles"
+1. Paina (A):ta jatkaaksesi
 1. Paina (A):ta `.tmd`-tiedoston kohdalla, valitse "TMD file options..." ja sitten "Build CIA (standard)"
 1. Asennettava `.cia`-muotoinen tiedostosi päätyy SD-korttisi `/gm9/out/`-kansioon
 
 ## <a name="convert_3ds" /> .3DS:n muuntaminen .CIA:ksi
 
-##### Valmistelut
-
+{% capture notice %}
 + Kun sinulla on `.3ds`-tiedosto, jonka haluat muuntaa, kopioi se käytännöllisyyden vuoksi SD-korttisi `/cias/`-kansioon
-    + Huomaa, että jos haluat muuntaa `.3ds-tiedoston, joka on jo flash-kortilla, sinun tulisi seurata kohtaa [Pelikortin kopioiminen](#dump_cart)
+  + Huomaa, että jos haluat muuntaa `.3ds-tiedoston, joka on jo flash-kortilla, sinun tulisi seurata kohtaa [Pelikortin kopioiminen](#dump_cart)
+{% endcapture %}
 
-#### Ohjeet
+<div class="notice--info">{{ notice | markdownify }}</div>
 
 1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
 1. Mene hakemistoon `[0:] SDCARD` → `cias`
@@ -132,12 +134,10 @@ Käytä FBI:n `Titles`-valikkoa saadaksesi tietoosi tunnuksen sille sovelluksell
 
 ## <a name="backup_gba" /> GBA VC -tallennusten varmuuskopioiminen
 
-#### Ohjeet
-
 The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
 {: .notice--info}
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by holding (R) and pressing (A) on the GodeMode9 main menu, then selecting "Search for titles".
+To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
 {: .notice--info}
 
 1. Tee seuraava prosessi jokaista GBA VC -peliä kohden, jonka tallennuksen haluat varmuuskopioida:
@@ -154,10 +154,8 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 
 ## <a name="restore_gba" /> GBA VC -tallennusten palauttaminen
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by holding (R) and pressing (A) on the GodeMode9 main menu, then selecting "Search for titles".
+To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
 {: .notice--info}
-
-#### Ohjeet
 
 1. Tee seuraavat toimet jokaista GBA VC -peliä kohden, jonka tallennuksen haluat palauttaa:
   + Avaa peli
@@ -181,8 +179,6 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 **Huomaa, että tämä tyhjentää SD-korttisi sisällön!**
 {: .notice--danger}
 
-#### Ohjeet
-
 1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
 1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
 1. Valitse "More..."
@@ -199,8 +195,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 ##### Valmistelut
 
 + Kun sinulla on `.cia`-tiedosto, jolle haluat suorittaa salauksen tai sen purkamisen, kopioi se käytännöllisyyden vuoksi SD-korttisi `/cias/`-kansioon
-
-#### Ohjeet
+{: .notice--info}
 
 1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
 1. Mene hakemistoon `[0:] SDCARD` → `cias`
@@ -213,8 +208,6 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Salattu/purettu `.cia`-tiedostosi päätyy valitsemaasi paikkaan
 
 ## <a name="rm_nnid" />NNID:n poistaminen ilman konsolin alustamista
-
-#### Ohjeet
 
 1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
 1. Mene hakemistoon `[1:] SYSNAND CTRNAND` → `data` → (32-merkkinen tunnus) → `sysdata` → `00010038`

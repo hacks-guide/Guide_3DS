@@ -6,17 +6,26 @@ GodMode9 is a full access file browser for the Nintendo 3DS console, giving you 
 
 Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
 
-{% capture notice %}
-This is powerful stuff. GodMode9 provides you with the means to do basically any thinkable modification to any system data available on the 3DS console. Maar, voorzorgen zijn genomen zodat je niet per ongeluk data op je console zal beschadigen.
+GodMode9 is powerful software that has the capability to modify essentially anything on your console. Though many of these modifications are locked behind a permissions system, and it is impossible to accidentally perform dangerous actions without deliberately unlocking permissions, you should still follow instructions carefully and keep backups just in case.
 
-Het heeft een systeem in plaats dat je zal beschermen door middel van waarschuwingen en het zal je vragen om een serie van knoppen in te drukken om de permissies om te schrijven in te schakelen. Het is niet mogelijk om belangrijke dingen te overschrijven of te wijzigen zonder de serie van knoppen en het niet mogelijk om per ongeluk de vergrendeling te ontdoen. As always, be smart and keep backups, just to be safe.
-{% endcapture %}
+## <a name="update-gm9" /> Updating GodMode9
 
-<div class="notice--danger">{{ notice | markdownify }}</div>
+Some of the instructions below are only applicable to the latest version of GodMode9, and as such you should follow this section to update your copy before continuing. Overwrite any existing files.
+{: .notice--info}
 
-## <a name="nand_backup" /> Een NAND Backup maken
+#### Benodigdheden
+
+* De meest recente versie van [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 
 ### Instructies
+
+1. Schakel je 3ds uit
+1. Plaats je SD kaart in je computer
+1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
+1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+1. Stop je SD kaart terug in je 3DS
+
+## <a name="nand_backup" /> Een NAND Backup maken
 
 1. Launch GodMode9 by holding (Start) during boot
 1. Druk op de (Home) knop om het actiemenu te openen
@@ -27,34 +36,36 @@ Het heeft een systeem in plaats dat je zal beschermen door middel van waarschuwi
 1. Druk op (A) om door te gaan
 1. Houd (R) en (B) gelijkertijd ingedrukt om je SD kaart uit te werpen
 1. Plaats je SD kaart in je computer
-1. Copy `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Maak back-ups in verschillende locaties (zoals een online bestandsopslag)
   + Deze backup zal je redden van een brick als er iets fout gaat in de toekomst
-1. Delete `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card after copying it
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. Stop je SD kaart terug in je 3DS
 
 ## <a name="nand_restore" /> Een NAND backup terugzetten
 
-### Instructies
-
 1. Launch GodMode9 by holding (Start) during boot
-1. Navigeer naar `[0:] SDCARD`
-1. Druk op (A) op je `nand.bin` om het te selecteren, selecteer vervolgens "NAND image options...", en selecteer dan "Restore SysNAND (safe)"
-1. Druk op (A) om SysNAND overwriting te ontgrendelen en voer daarna de toetsencombinatie in die wordt gegeven
+1. Houd (R) en (B) gelijkertijd ingedrukt om je SD kaart uit te werpen
+1. Plaats je SD kaart in je computer
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from your computer to the `/gm9/out/` folder on your SD card if you deleted it after backing it up
+1. Stop je SD kaart terug in je 3DS
+1. Druk op de (Home) knop om het actiemenu te openen
+1. Select "Scripts..."
+1. Select "Restore SysNAND (Safe)"
+1. Select your NAND backup
+1. Druk op (A) om door te gaan
+1. Press (A) to unlock SysNAND (lvl2) writing, then input the key combo given
   + This will not overwrite your boot9strap installation
-1. Voer de gegeven combinatie van knoppen in om SysNAND (lvl1) writing in te schakelen
-  + Dit proces zal enige tijd duren
 1. Once it has completed, press (A) to continue
-1. Press (B) to decline relocking write permissions if prompted
+1. Press (A) to relock write permissions if prompted
 
 ## <a name="injectHS" /> Een willekeurige .CIA app in veiligheid- en gezondheidsinformatie injecteren
 
-#### Voorbereidend Werk
+For organizational purposes, copy the `.cia` file you wish to inject to the `/cias/` folder on your SD card
+{: .notice--info}
 
-+ Voor organisatorische redenen, kopieer het `.cia` bestand dat je wilt injecteren naar de `/cias/` map op je SD kaart
-    + Merk op dat het niet mogelijk is om bestanden groter dan veiligheid- en gezondheidsinformatie te injecteren (zoals spellen en grote apps)
-
-### Instructies
+Note that it is not possible to inject files into Health & Safety that are larger than it (including games and other large applications)
+{: .notice--info}
 
 1. Launch GodMode9 by holding (Start) during boot
 1. Navigeer naar `[0:] SDCARD`-> `cias`
@@ -69,8 +80,6 @@ Het heeft een systeem in plaats dat je zal beschermen door middel van waarschuwi
 Dit werkt alleen als veiligheid- en gezondheidsinformatie was geïnjecteerd door GodMode9 (niet Decrypt9 of Hourglass9).
 {: .notice--info}
 
-### Instructies
-
 1. Launch GodMode9 by holding (Start) during boot
 1. Druk op de (Home) knop om het actiemenu te openen
 1. Selecteer "More..."
@@ -82,11 +91,13 @@ Dit werkt alleen als veiligheid- en gezondheidsinformatie was geïnjecteerd door
 
 #### Voorbereidend Werk
 
+{% capture notice %}
 + Plaats het spelkaart dat je wilt dumpen in je 3DS
-    + 3DS spelkaarten zullen naar een installeerbaar `.cia` formaat gedumpt worden
-    + NDS spelkaarten zullen worden gedumpt naar een niet-installeerbaar `.nds` formaat dat compatibel is met flashcarts en emulators
+  + 3DS spelkaarten zullen naar een installeerbaar `.cia` formaat gedumpt worden
+  + NDS spelkaarten zullen worden gedumpt naar een niet-installeerbaar `.nds` formaat dat compatibel is met flashcarts en emulators
+{% endcapture %}
 
-### Instructies
+<div class="notice--info">{{ notice | markdownify }}</div>
 
 1. Launch GodMode9 by holding (Start) during boot
 1. Navigeer naar `[C:] GAMECART`
@@ -97,33 +108,24 @@ Dit werkt alleen als veiligheid- en gezondheidsinformatie was geïnjecteerd door
 
 ## <a name="dump_title" /> Een titel dumpen
 
-Gebruik het `Titles` menu in FBI om de Title ID van de geïnstalleerde titel die je wilt dumpen te krijgen
-{: .notice--info}
-
-### Instructies
-
 1. Launch GodMode9 by holding (Start) during boot
-1. Navigeer naar de drive die van toepassing is op het type titel dat je wilt dumpen:
+1. Hover over the drive applicable to the type of title you wish to dump:
   + **Gebruiker geïnstalleerde titells**: Navigeer naar `[A:] SYSNAND SD`
   + **Systeem titels**: Navigeer naar `[1:] SYSNAND CTRNAND`
-1. Navigeer naar `title`
-1. Navigeer naar de map die overeenkomt met de eerste 8 cijfers van de titel ID
-1. Navigeer naar de map die overeenkomt met de laatste 8 cijfers van de titel ID
-1. Navigeer naar `content`
-1. Druk op (A) op het `.tmd` bestand om het te selecteren, selecteer dan "TMD file options...", en selecteer daarna "Show title info"
-1. Wees er zeker van dat je de juiste titel gevonden hebt
-1. Druk op (B) om de titel informatie af te sluiten
+1. Hold (R) and press (A) at the same time to open the drive options
+1. Select "Search for titles"
+1. Druk op (A) om door te gaan
 1. Druk op (A) op het `.tmd` bestand om het te selecteren, selecteer dan "TMD file options...", en selecteer daarna "Build CIA (standard)"
 1. Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
 ## <a name="convert_3ds" /> Een .3DS converteren naar .CIA
 
-#### Voorbereidend Werk
-
+{% capture notice %}
 + Voor organisatorische redenen, kopieer de`.cia` bestanden die je wilt converteren naar de `/cias/` map op je SD kaart
-    + Houdt er rekening mee dat als je een `.3ds` bestand wil converteren dat al op een flashcart is, je [Een spelkaart dumpen](#dump_cart) volgt
+  + Houdt er rekening mee dat als je een `.3ds` bestand wil converteren dat al op een flashcart is, je [Een spelkaart dumpen](#dump_cart) volgt
+{% endcapture %}
 
-### Instructies
+<div class="notice--info">{{ notice | markdownify }}</div>
 
 1. Launch GodMode9 by holding (Start) during boot
 1. Navigeer naar `[0:] SDCARD`-> `cias`
@@ -132,12 +134,10 @@ Gebruik het `Titles` menu in FBI om de Title ID van de geïnstalleerde titel die
 
 ## <a name="backup_gba" /> GBA VC Saves backuppen
 
-### Instructies
-
 The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
 {: .notice--info}
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by holding (R) and pressing (A) on the GodeMode9 main menu, then selecting "Search for titles".
+To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
 {: .notice--info}
 
 1. Doe het volgende proces voor elk GBA VC spel waarvan je een backup van de save wil maken:
@@ -154,10 +154,8 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 
 ## <a name="restore_gba" /> GBA VC Saves herstellen
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by holding (R) and pressing (A) on the GodeMode9 main menu, then selecting "Search for titles".
+To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
 {: .notice--info}
-
-### Instructies
 
 1. Do the following process for each GBA VC game that you want to restore the save for:
   + Start het GBA VC spel
@@ -181,8 +179,6 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 **Dit zal alle inhoud van je SD kaart verwijderen!**
 {: .notice--danger}
 
-### Instructies
-
 1. Launch GodMode9 by holding (Start) during boot
 1. Druk op de (Home) knop om het actiemenu te openen
 1. Selecteer "More..."
@@ -199,8 +195,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 #### Voorbereidend Werk
 
 + Voor organisatorische redenen, kopieer de `.cia` bestanden die je wilt coderen / decoderen naar de `/cias/` map op je SD kaart
-
-### Instructies
+{: .notice--info}
 
 1. Launch GodMode9 by holding (Start) during boot
 1. Navigeer naar `[0:] SDCARD`-> `cias`
@@ -213,8 +208,6 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Het gecodeerde / gedecodeerde `.cia` bestand zal worden geplaatst in de gewenste locatie
 
 ## <a name="rm_nnid" />Verwijder een NNID zonder je 3DS te formatteren
-
-### Instructies
 
 1. Launch GodMode9 by holding (Start) during boot
 1. Navigeer naar `[1:] SYSNAND CTRNAND` -> `data` -> (32 karakters lang ID) -> `sysdata` -> `00010038`
