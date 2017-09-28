@@ -2,9 +2,11 @@
 title: "Installation von boot9strap (MSET)"
 ---
 
+{% include toc title="Table of Contents" %}
+
 Falls du bereits deinen 3DS zuvor gehackt hast und eine EmuNAND basierte CFW installiert ist: Diese Anleitung behandelt nur das SysNAND und alle Schritte sollten nur innerhalb des SysNANDs ausgeführt/angewendet werden. Beachte, dass die Begriffe EmuNAND und RedNAND sich auf leicht unterschiedliche Implementierungen [des selben Konzepts](http://3dbrew.org/wiki/NAND_Redirection) beziehen.
 
-#### Was du brauchst
+### What you need
 
 * Die neueste Version von [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * Die neueste Version von [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; nicht die `devkit` Datei, nicht die `ntr` Datei)*
@@ -12,9 +14,9 @@ Falls du bereits deinen 3DS zuvor gehackt hast und eine EmuNAND basierte CFW ins
 * Das Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
 * Eine beliebige DS-Flashkarte, die mit deiner 3DS Version funktioniert
 
-#### Anleitung
+### Instructions
 
-##### Abschnitt I - Vorbereitung
+#### Section I - Prep Work
 
 1. Schalte deinen 3DS aus
 1. Insert your SD card into your compute
@@ -24,14 +26,14 @@ Falls du bereits deinen 3DS zuvor gehackt hast und eine EmuNAND basierte CFW ins
 1. Kopiere `boot9strap.firm` und `boot9strap.firm.sha` aus der boot9strap `.zip` in den `/boot9strap/`-Ordner auf deiner SD-Karte
 1. Kopiere `SafeBS9Installer.dat` aus der SafeBS9Installer `.zip` in das Stammverzeichnis deiner SD-Karte
 
-    ![]({{ base_path }}/images/screenshots/boot9strap-mset-file-layout.png)
+    ![]({{ "/images/screenshots/boot9strap-mset-file-layout.png" | absolute_url }})
     {: .notice--info}
 
 1. Stecke deine SD-Karte nun wieder in deinen 3DS
 1. Kopiere `SafeBS9Installer.nds` aus der SafeBS9Installer `.zip` in das Stammverzeichnis deiner DS-Flashcard
 1. Schalte deine Konsole an
 
-##### Abschnitt II - Starten von SafeBS9Installer
+#### Section II - Launching SafeB9SInstaller
 
 1. Starte die DS-Flashkarte von deinem Gerät
 1. Starte `SafeB9SInstaller.nds` mit deiner Flashkarte
@@ -41,16 +43,16 @@ Falls du bereits deinen 3DS zuvor gehackt hast und eine EmuNAND basierte CFW ins
 1. Starte das System neu, gehe dann in die Systemeinstellungen, dann auf "Allgemeine Einstellungen", dann auf "Nutzerprofil" und dann auf "Nintendo DS-Nutzereinstellungen"
 1. Wenn der Exploit erfolgreich war, wird nun direkt zum SafeBS9Installer gebootet
 
-##### Abschnitt III - Installation von boot9strap
+#### Section III - Installing boot9strap
 
 1. Warte auf alle Sicherheitsüberprüfungen
 1. Gib die Tastenkombination zur Bestätigung ein, wenn danach verlangt wird
 1. Sobald dies abgeschlossen ist drücke (A) um das Gerät neuzustarten
 
-##### Abschnitt IV - Luma3DS konfigurieren
+#### Section IV - Configuring Luma3DS
 
 1. Dein Gerät sollte neu starten und die Luma3DS Konfiguration anzeigen
-  + Wenn du einen schwarzen Bildschirm bekommst, [lies diese Problembehandlung](troubleshooting#ts_sys_b9s)
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 1. Benutze den (A) Knopf und das Steuerkreuz, um Folgendes zu aktivieren:    
   + **"Show NAND or user string in System Settings"**
 1. Drücke (Start) zum Speichern und neustarten
