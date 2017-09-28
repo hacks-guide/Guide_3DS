@@ -2,6 +2,8 @@
 title: "Move EmuNAND"
 ---
 
+{% include toc title="Table of Contents" %}
+
 This is an add-on section for moving the contents of a previous EmuNAND to your new SysNAND CFW, then removing the old EmuNAND partition. Σημειώστε ότι οι όροι EmuNAND και RedNAND αναφέρονται σε ελαφρώς διαφορετικές υλοποιήσεις [της ίδιας έννοιας](http://3dbrew.org/wiki/NAND_Redirection).
 
 Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions.
@@ -9,15 +11,15 @@ Note that if you have any payload files other than `GodMode9.firm` in the `/luma
 **You MUST have already installed Luma3DS and boot9strap or arm9loaderhax to use this.**
 {: .notice--danger}
 
-#### Τι χρειάζεστε
+### What you need
 
 * Μια υπάρχουσα EmuNAND
 * Την τελευταία έκδοση του [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * Την τελευταία έκδοση του [FBI](https://github.com/Steveice10/FBI/releases/latest)
 
-#### Οδηγίες
+### Instructions
 
-##### Ενότητα I - Προετοιμασία
+#### Section I - Prep Work
 
 1. Power off your device
 1. Εισάγετε την κάρτα SD στον υπολογιστή σας
@@ -25,7 +27,7 @@ Note that if you have any payload files other than `GodMode9.firm` in the `/luma
 1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
 1. Reinsert your SD card into your device
 
-##### Section II - Backup SysNAND DSiWare Saves
+#### Section II - Backup SysNAND DSiWare Saves
 
 If you do not have any DSiWare games or saves that you care about, skip this section.
 {: .notice--info}
@@ -39,7 +41,7 @@ If you do not have any DSiWare games or saves that you care about, skip this sec
   + This process may take some time if you have many DSiWare games
 1. Press (B) twice to return to the main menu
 
-##### Section III - Backup GBA VC Saves
+#### Section III - Backup GBA VC Saves
 
 If you do not have any GBA VC games or saves that you care about, skip this section.
 {: .notice--info}
@@ -50,7 +52,7 @@ Note that this is not necessary for any other kind of Virtual Console games (GBC
 The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
 {: .notice--info}
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by holding (R) and pressing (A) on the GodeMode9 main menu, then selecting "Search for titles".
+To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
 {: .notice--info}
 
 1. Do the following process for each GBA VC game that you want to backup the save for:
@@ -65,7 +67,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
   + Press (A) to continue
   + Press (Start) to reboot your device
 
-##### Section IV - Copy EmuNAND to SysNAND
+#### Section IV - Copy EmuNAND to SysNAND
 
 1. Launch GodMode9 by holding (Start) during boot
 1. Navigate to `[E:] EMUNAND VIRTUAL`
@@ -78,7 +80,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Press (B) to decline relocking write permissions if prompted
 1. Press (B) to return to the main menu
 
-##### Section V - Restore DSiWare Saves
+#### Section V - Restore DSiWare Saves
 
 If you did not backup DSiWare Saves earlier, skip this section.
 {: .notice--info}
@@ -95,7 +97,7 @@ If you did not backup DSiWare Saves earlier, skip this section.
 1. Press (B) to decline relocking write permissions if prompted
 1. Press (B) twice to return to the main menu
 
-##### Section VI - Restore GBA VC Saves
+#### Section VI - Restore GBA VC Saves
 
 If you did not backup GBA VC Saves earlier, skip this section.
 {: .notice--info}
@@ -123,7 +125,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
   + Exit the GBA VC game
 1. Launch GodMode9 by holding (Start) during boot
 
-##### Section VII - Backup SysNAND
+#### Section VII - Backup SysNAND
 
 1. Press (Home) to bring up the action menu
 1. Select "Scripts..."
@@ -133,13 +135,13 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Πατήστε (A) για να συνεχίσετε
 1. Κρατήστε πατημένο το (R) και πατήστε ταυτόχρονα το (B) για να αφαιρέσετε την κάρτα SD
 1. Εισάγετε την κάρτα SD στον υπολογιστή σας
-1. Αντιγράψτε το `<serialnumber>_nandmin_###.bin` από το φάκελο `/gm9/out/` της κάρτας SD σε μια ασφαλή τοποθεσία στον υπολογιστή σας
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Make backups in multiple locations (such as online file storage)
   + Αυτά τα αντίγραφα ασφαλείας θα σας σώσουν από την αχρήστευση της συσκευής σε περίπτωση που κάτι πάει στραβά
-1. Delete `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card after copying it
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. **Δημιουργήστε ένα αντίγραφο ασφαλείας όλων των αρχείων της κάρτας SD σε έναν φάκελο στον υπολογιστή σας. Θα διαγραφούν τα πάντα από την κάρτα SD στα επόμενα βήματα**
 
-##### Section VIII - Format SD card
+#### Section VIII - Format SD card
 
 1. Reinsert your SD card into your device
 1. Press (Home) to bring up the action menu
@@ -162,5 +164,5 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 
 ___
 
-Return to [Finalizing Setup](finalizing-setup).
+### Return to [Finalizing Setup](finalizing-setup).
 {: .notice--primary}
