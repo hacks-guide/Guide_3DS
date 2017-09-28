@@ -2,6 +2,8 @@
 title: "Updating B9S"
 ---
 
+{% include toc title="Table of Contents" %}
+
 This page is for existing boot9strap users to update their installation of boot9strap to the latest version.
 
 {% capture notice-1 %}
@@ -20,16 +22,16 @@ There have been reports of a wave of bans being handed out to CFW users by Ninte
 
 <div class="notice--danger">{{ notice-1 | markdownify }}</div>
 
-#### Det du trenger
+### What you need
 
 * The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
 * Siste utgave av [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z`-filen)*
-* [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
+* [`cleanup_sd_card.gm9`]({{ "/gm9_scripts/cleanup_sd_card.gm9" | absolute_url }})
 
-#### Instruksjoner
+### Instructions
 
-##### Seksjon I - Forarbeid
+#### Section I - Prep Work
 
 For all steps in this section, overwrite any existing files on your SD card.
 {: .notice--info}
@@ -41,7 +43,7 @@ For all steps in this section, overwrite any existing files on your SD card.
 1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
 1. Sett inn SD-kortet i konsollen igjen
 
-##### Section II - Installing boot9strap
+#### Section II - Installing boot9strap
 
 1. Start på nytt mens og hold (Start) under oppstart for å starte Luma3DS chainloader menyen
 1. Launch SafeB9SInstaller by pressing (A)
@@ -50,14 +52,14 @@ For all steps in this section, overwrite any existing files on your SD card.
 1. Once it has completed, hold (Start) while pressing (A) to reboot your device to the Luma3DS chainloader
   + If you encounter an error booting your device after the B9S update, just continue to fix it
 
-##### Section III - Update Luma3DS
+#### Section III - Update Luma3DS
 
 1. Slå av enheten
 1. Sett inn SD-kortet i datamaskinen din
 1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card, replacing the existing file
 1. Sett inn SD-kortet i konsollen igjen
 
-##### Section IV - Cleanup SD Card
+#### Section IV - Cleanup SD Card
 
 Note that this script will remove the `/boot9strap/` and `/cias/` folders from your SD card!
 {: .notice--danger}
