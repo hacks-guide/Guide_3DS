@@ -2,6 +2,8 @@
 title: "Updatin' B9S"
 ---
 
+{% include toc title="Table of Contents" %}
+
 'Tis page be fer existin' boot9strap users to be updatin' their installation 'o boot9strap to th' latest version.
 
 {% capture notice-1 %}
@@ -20,16 +22,16 @@ There have been reports 'o a wave 'o bans bein' handed out to CFW users by Ninte
 
 <div class="notice--danger">{{ notice-1 | markdownify }}</div>
 
-#### What ye need
+### What you need
 
 * Th' latest release 'o [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * Th' latest release 'o [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not th' `devkit` file, 'n not th' `ntr` file)*
 * Th' latest release 'o [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(th' `.7z` file)*
-* [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
+* [`cleanup_sd_card.gm9`]({{ "/gm9_scripts/cleanup_sd_card.gm9" | absolute_url }})
 
-#### Instructions
+### Instructions
 
-##### Section I - Set th' sails (prep work)
+#### Section I - Prep Work
 
 Fer all steps in 'tis section, overwrite any existin' files on ye SD card.
 {: .notice--info}
@@ -41,7 +43,7 @@ Fer all steps in 'tis section, overwrite any existin' files on ye SD card.
 1. Copy `boot9strap.firm` 'n `boot9strap.firm.sha` from th' boot9strap `.zip` to th' `/boot9strap/` folder on ye SD card
 1. Reinsert ye SD card into ye device
 
-##### Section II - Installin' boot9strap
+#### Section II - Installing boot9strap
 
 1. Reboot holdin' (Start) durin' boot to launch th' Luma3DS chainloader menu
 1. Launch SafeB9SInstaller by pressin' (A)
@@ -50,14 +52,14 @@ Fer all steps in 'tis section, overwrite any existin' files on ye SD card.
 1. Once it has completed, hold (Start) while pressing (A) to reboot your device to the Luma3DS chainloader
   + If you encounter an error booting your device after the B9S update, just continue to fix it
 
-##### Section III - Update Luma3DS
+#### Section III - Update Luma3DS
 
 1. Power off ye device
 1. Insert ye SD card into ye computer
 1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card, replacing the existing file
 1. Reinsert ye SD card into ye device
 
-##### Section IV - Cleanup SD Card
+#### Section IV - Cleanup SD Card
 
 Note that this script will remove the `/boot9strap/` and `/cias/` folders from your SD card!
 {: .notice--danger}
