@@ -2,6 +2,8 @@
 title: "Mutare EmuNAND"
 ---
 
+{% include toc title="Table of Contents" %}
+
 Aceasta este o secțiune suplimentară pentru a muta conținutul unui EmuNAND precedent către noul CFW SysNAND, după care se va elimina partiția veche EmuNAND. Țineți cont că termenii EmuNAND și RedNAND se referă la implementări puțin diferite ale [aceluiași concept](http://3dbrew.org/wiki/NAND_Redirection).
 
 Țineți cont că dacă aveți alte payload-uri în afară de `GodMode9.firm` în folderul `/luma/payloads/` de pe cardul SD, apăsând (Start) va lansa un "meniu chainloader" în care va trebui să folosiți D-Pad-ul și butonul (A) ca să selectați "GodMode9" pentru aceste instrucțiuni.
@@ -9,15 +11,15 @@ Aceasta este o secțiune suplimentară pentru a muta conținutul unui EmuNAND pr
 **Trebuie să aveți deja instalat Luma3DS şi boot9strap sau arm9loaderhax pentru a-l folosi.**
 {: .notice--danger}
 
-#### Ce aveți nevoie
+### What you need
 
 * Un EmuNAND existent
 * Cea mai nouă versiune de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * Cea mai nouă versiune de [FBI](https://github.com/Steveice10/FBI/releases/)
 
-#### Instrucțiuni
+### Instructions
 
-##### Secțiunea I - Preparații
+#### Section I - Prep Work
 
 1. Închideți dispozitivul
 1. Introduceți cardul SD în calculator
@@ -25,7 +27,7 @@ Aceasta este o secțiune suplimentară pentru a muta conținutul unui EmuNAND pr
 1. Copiați folderul `gm9` din arhiva `.zip` GodMode9 în rădăcina cardului SD
 1. Reintroduceți cardul SD în dispozitivul dumneavoastră
 
-##### Secțiunea II - Copie de rezervă la salvările DSiWare de pe SysNAND
+#### Section II - Backup SysNAND DSiWare Saves
 
 Dacă nu aveți niciun joc DSiWare sau date de salvare de care vă interesează, săriți peste această secțiune.
 {: .notice--info}
@@ -39,7 +41,7 @@ Dacă nu aveți niciun joc DSiWare sau date de salvare de care vă interesează,
   + Acest proces poate lua ceva timp dacă aveți multe jocuri DSiWare
 1. Apăsați (B) de două ori ca să vă întoarceți la meniul principal
 
-##### Secțiunea III - Copie de rezervă salvărilor VC GBA
+#### Section III - Backup GBA VC Saves
 
 Dacă nu aveți niciun joc VC GBA sau date de salvare de care vă interesează, săriți peste această secțiune.
 {: .notice--info}
@@ -50,7 +52,7 @@ Dacă nu aveți niciun joc VC GBA sau date de salvare de care vă interesează, 
 The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
 {: .notice--info}
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by holding (R) and pressing (A) on the GodeMode9 main menu, then selecting "Search for titles".
+To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
 {: .notice--info}
 
 1. Faceți următoarea procedură pentru fiecare joc VC GBA la care vreți să le faceți copii de rezervă datelor de salvare:
@@ -65,7 +67,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
   + Press (A) to continue
   + Apăsați (Start) pentru a reporni dispozitivul
 
-##### Secțiunea IV - Copiind EmuNAND pe SysNAND
+#### Section IV - Copy EmuNAND to SysNAND
 
 1. Lansați GodMode9 ținând apăsat (Start) în timpul pornirii
 1. Navigați spre `[E:] EMUNAND VIRTUAL`
@@ -78,7 +80,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Apăsați (B) ca să refuzați reblocarea permisiunilor de scriere dacă vi se cere
 1. Apăsați (B) ca să vă întoarceți în meniul principal
 
-##### Secțiunea V - Restaurând salvările DSiWare
+#### Section V - Restore DSiWare Saves
 
 Dacă nu ați făcut o copie de rezervă la datele de salvare DSiWare, săriți peste această secțiune.
 {: .notice--info}
@@ -95,7 +97,7 @@ Dacă nu ați făcut o copie de rezervă la datele de salvare DSiWare, săriți 
 1. Apăsați (B) ca să refuzați reblocarea permisiunilor de scriere dacă vi se cere
 1. Apăsați (B) de două ori ca să vă întoarceți la meniul principal
 
-##### Secțiunea VI - Restaurând salvările VC GBA
+#### Section VI - Restore GBA VC Saves
 
 Dacă nu ați făcut o copie de rezervă la datele de salvare VC GBA, săriți peste această secțiune.
 {: .notice--info}
@@ -123,7 +125,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
   + Ieșiți din jocul VC GBA
 1. Lansați GodMode9 ținând apăsat (Start) în timpul pornirii
 
-##### Secțiunea VII - Copie de rezervă SysNAND
+#### Section VII - Backup SysNAND
 
 1. Apăsați (Home) pentru a arăta meniul de acțiuni
 1. Selectați "Scripts..."
@@ -133,13 +135,13 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Apăsați (A) pentru a continua
 1. Țineți apăsat (R) și apăsați (B) în același timp pentru a scoate cardul SD
 1. Introduceți cardul SD în calculator
-1. Copiați `<serialnumber>_nandmin_###.bin` din folderul `/ gm9/out /` de pe cardul SD într-o locaţie sigură pe calculator
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Faceți copii de rezervă în mai multe locații (cum ar fi stocări online ale fișierelor)
   + Această copie de rezervă vă va salva de un brick în caz că ceva nu va merge bine în viitor
-1. Ștergeți `<serialnumber>_nandmin_###.bin` din folderul `/gm9out/` de pe cardul SD după ce l-ați copiat
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. **Faceți copii de rezervă la fiecare fișier de pe cardul SD într-un folder din calculator; toate fișierele vor fi șterse în pașii următori**
 
-##### Secțiunea VIII - Formatarea cardului SD
+#### Section VIII - Format SD card
 
 1. Reintroduceți cardul SD în dispozitivul dumneavoastră
 1. Apăsați (Home) pentru a arăta meniul de acțiuni
@@ -162,5 +164,5 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 
 ___
 
-Întoarceți-vă la [Finalizând instalarea](finalizing-setup).
+### Return to [Finalizing Setup](finalizing-setup).
 {: .notice--primary}
