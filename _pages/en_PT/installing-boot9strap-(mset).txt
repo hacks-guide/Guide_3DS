@@ -2,9 +2,11 @@
 title: "Installing boot9strap (MSET)"
 ---
 
+{% include toc title="Table of Contents" %}
+
 If you have already hacked your device before and have a EmuNAND based CFW setup, this guide deals exclusively with SysNAND and you should follow all instructions from within or applying to SysNAND. Note that th' terms EmuNAND 'n RedNAND be referrin' to slightly different implementations 'o [th' same concept](http://3dbrew.org/wiki/NAND_Redirection).
 
-#### What ye need
+### What you need
 
 * Th' latest release 'o [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * Th' latest release 'o [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not th' `devkit` file, not th' `ntr` file)*
@@ -13,9 +15,9 @@ If you have already hacked your device before and have a EmuNAND based CFW setup
 * Th' Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
 * Any DS flashcart that works on your device version
 
-#### Instructions
+### Instructions
 
-##### Section I - Set th' sails (prep work)
+#### Section I - Prep Work
 
 1. Power off ye device
 1. Insert your SD card into your compute
@@ -25,14 +27,14 @@ If you have already hacked your device before and have a EmuNAND based CFW setup
 1. Copy `boot9strap.firm` 'n `boot9strap.firm.sha` from th' boot9strap `.zip` to th' `/boot9strap/` folder on ye SD card
 1. Copy `SafeB9SInstaller.dat` from the SafeB9SInstaller `.zip` to the root of your SD card
 
-    ![]({{ base_path }}/images/screenshots/boot9strap-mset-file-layout.png)
+    ![]({{ "/images/screenshots/boot9strap-mset-file-layout.png" | absolute_url }})
     {: .notice--info}
 
 1. Reinsert ye SD card into ye device
 1. Copy `SafeB9SInstaller.nds` from the SafeB9SInstaller `.zip` to your DS flashcart
 1. Power on your device
 
-##### Section II - Launching SafeB9SInstaller
+#### Section II - Launching SafeB9SInstaller
 
 1. Start your DS flashcart from your device
 1. Boot `SafeB9SInstaller.nds` using your flashcart
@@ -42,16 +44,16 @@ If you have already hacked your device before and have a EmuNAND based CFW setup
 1. Reboot the system, then go to System Settings, then "Other Settings", then "Profile", then "Nintendo DS Profile"
 1. If the exploit was successful, you will have booted into SafeB9SInstaller
 
-##### Section III - Installing boot9strap
+#### Section III - Installing boot9strap
 
 1. Wait fer all safety checks to be completed
 1. When prompted, input th' key combo given to be installin' boot9strap
 1. Once it has completed, press (A) to be rebootin' ye device
 
-##### Section IV - Configurin' Luma3DS
+#### Section IV - Configuring Luma3DS
 
 1. Ye device should have rebooted into th' Luma3DS configuration menu
-  + If ye get a black screen, [follow 'tis troubleshootin' guide](troubleshooting#ts_sys_b9s)
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 1. Use th' (A) button 'n th' D-Pad to turn on th' followin':    
   + **"Show NAND or user string in System Settings"**
 1. Press (Start) to save 'n reboot
