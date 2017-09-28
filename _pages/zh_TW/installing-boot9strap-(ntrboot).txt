@@ -2,7 +2,9 @@
 title: "安裝 boot9strap (透過 ntrboot)"
 ---
 
-#### 必備項目
+{% include toc title="Table of Contents" %}
+
+### What you need
 
 * 一塊能使您主機進入睡眠模式的磁鐵 (僅適用於折疊式主機)
 * 一張已寫入 ntrboot 漏洞的燒錄卡
@@ -11,9 +13,9 @@ title: "安裝 boot9strap (透過 ntrboot)"
 * 最新版的 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z` 檔案)*
 * 自製軟體[入門套件](http://smealum.github.io/ninjhax2/starter.zip)
 
-#### 操作說明
+### Instructions
 
-##### 第一節 — 準備工作
+#### Section I - Prep Work
 
 1. 關閉您的主機
 1. 將 SD 卡插入電腦中
@@ -22,13 +24,13 @@ title: "安裝 boot9strap (透過 ntrboot)"
 1. 在 SD 卡的根目錄底下建立一個新的資料夾 `boot9strap`
 1. 解壓 boot9strap `.zip` 的 `boot9strap.firm` 及 `boot9strap.firm.sha` 檔案至 SD 卡的 `/boot9strap/` 資料夾中
 
-    ![]({{ base_path }}/images/screenshots/boot9strap-ntrboot-file-layout.png)
+    ![]({{ "/images/screenshots/boot9strap-ntrboot-file-layout.png" | absolute_url }})
     {: .notice--info}
 
 1. 將 SD 卡插回主機中
 1. 啟動您的主機
 
-##### 第二節 — ntrboot
+#### Section II - ntrboot
 
 1. 透過先前準備的磁鐵來找到能啟動睡眠模式的感應器
   + 舊型 2DS 可跳過本步驟
@@ -40,14 +42,16 @@ title: "安裝 boot9strap (透過 ntrboot)"
   + 您可能得多試幾次，因為這組合有些難按
 1. 如果一切成功的話，您將自動進入 SafeB9SInstaller
 
-##### 第三節 — 安裝 boot9strap
+#### Section III - Installing boot9strap
 
 1. 等待所有安全性檢查完畢
+1. Remove the magnet from your device
+  + On old 2DS, you should instead disable the sleep mode switch
 1. 出現提示時，輸入提示的按鍵組合以安裝 boot9strap
 1. 完成後，透過長按電源紐以強制關機
   + 除非您完成下節，否則您只能開機至 SafeB9SInstaller 中
 
-##### 第四節 — 設定 Luma3DS
+#### Section IV - Configuring Luma3DS
 
 1. 將 SD 卡插入電腦中
 1. 將 SD 卡根目錄中的 `boot.firm` 檔案刪除
@@ -55,7 +59,7 @@ title: "安裝 boot9strap (透過 ntrboot)"
 1. 將 SD 卡插回主機中
 1. 啟動您的主機
 1. 您的主機將會啟動至 Luma3DS 設定選單中
-  + 如果黑屏，[請參見此疑難排解](troubleshooting#ts_sys_b9s)
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 1. 透過方向鍵及「A」以開啟下列選項：    
   + **「Show NAND or user string in System Settings」**
 1. 按「Start」鍵以存檔並重新啟動系統
@@ -74,9 +78,9 @@ ___
 
 請不要在完成以上節錄前進行本操作。
 
-##### 第五節 — 移除 ntrboot
+#### Section V - Removing ntrboot
 
-###### 必備項目
+##### What you need
 
 * 最新版的 [ntrboot_flasher](https://github.com/kitling/ntrboot_flasher/releases/latest)
 * 對應於您燒錄卡的 flashrom 備份    
@@ -90,7 +94,7 @@ ___
   + <i class="fa fa-magnet" aria-hidden="true" title="這是個種子連結。 請使用一個 BT 下載器來下載此檔案。"></i> - [`Acekard_2i_(HW_44)-Flashrom.zip`](magnet:?xt=urn:btih:d12b46b1bfadc6b03ff260ab90dcb136d890fd39&dn=Acekard_2i_%28HW_44%29-Flashrom.zip&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce)
   + <i class="fa fa-magnet" aria-hidden="true" title="這是個種子連結。 請使用一個 BT 下載器來下載此檔案。"></i> - [`R4i_Ultra-Flashrom.zip`](magnet:?xt=urn:btih:614e9951a6c26145e68de34ed8c23a44bf190728&dn=R4i_Ultra-Flashrom.zip&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce)
 
-###### 操作說明
+##### Instructions
 
 1. 關閉您的主機
 1. 將 SD 卡插入電腦中
