@@ -2,7 +2,9 @@
 title: "Instalar boot9strap (ntrboot)"
 ---
 
-#### Qué necesitas
+{% include toc title="Table of Contents" %}
+
+### What you need
 
 * Un imán que activa el modo de espera de tu consola (si usas una consola con tapa)
 * Tu flashcart con ntrboot instalado
@@ -12,9 +14,9 @@ title: "Instalar boot9strap (ntrboot)"
 * La última versión de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(el archivo`.7z`)*
 * Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
 
-#### Instrucciones
+### Instructions
 
-##### Sección I - Preparativos
+#### Section I - Prep Work
 
 1. Apaga tu consola
 1. Inserta tu tarjeta SD en tu computadora
@@ -23,13 +25,13 @@ title: "Instalar boot9strap (ntrboot)"
 1. Crea una carpeta llamada `boot9strap` en la raíz de tu tarjeta SD
 1. Copia `boot9strap.firm` y `boot9strap.firm.sha` desde el `.zip` de boot9strap a la carpeta `/boot9strap/` en tu tarjeta SD
 
-    ![]({{ base_path }}/images/screenshots/boot9strap-ntrboot-file-layout.png)
+    ![]({{ "/images/screenshots/boot9strap-ntrboot-file-layout.png" | absolute_url }})
     {: .notice--info}
 
 1. Vuelve a insertar tu tarjeta SD en tu consola
 1. Enciende tu consola
 
-##### Sección II - ntrboot
+#### Section II - ntrboot
 
 1. Usa el imán para encontrar el lugar de tu consola donde se activa el sensor del modo en espera
   + Este paso no es necesario en la old 2DS (la cual tiene un interruptor de suspensión)
@@ -41,14 +43,16 @@ title: "Instalar boot9strap (ntrboot)"
   + Podría tomar varios intentos para que esto funcione ya que la ubicación es algo rara
 1. Si el exploit ha funcionado, habrás iniciado SafeB9SInstaller
 
-##### Sección III - Instalar boot9strap
+#### Section III - Installing boot9strap
 
 1. Espera a que todos los controles de seguridad se completen
+1. Quita el imán de tu consola
+  + En la old 2DS, por otro lado, deberías activar el interruptor del modo de espera
 1. Cuando se solicite, introduce la combinación de botones mostrada para instalar boot9strap
 1. Una vez que haya terminado, fuerza el apagado de la consola manteniendo presionado el botón de apagado
   + Tu consola sólo iniciará SafeB9SInstaller mientras no se haya completado la siguiente sección
 
-##### Sección IV - Configurar Luma3DS
+#### Section IV - Configuring Luma3DS
 
 1. Inserta tu tarjeta SD en tu computadora
 1. Elimina `boot.firm` desde la raíz de tu tarjeta SD
@@ -56,7 +60,7 @@ title: "Instalar boot9strap (ntrboot)"
 1. Vuelve a insertar tu tarjeta SD en tu consola
 1. Enciende tu consola
 1. Tu consola debería haber iniciado en el menú de configuración de Luma3DS
-  + Si obtienes una pantalla negra, [sigue esta guía de solución de problemas](troubleshooting#ts_sys_b9s)
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 1. Utiliza el botón (A) y las flechas direccionales para activar lo siguiente:    
   + **"Show NAND or user string in System Settings"**
 1. Presiona (Start) para guardar y reiniciar
@@ -75,9 +79,9 @@ Ten en cuenta que la Acekard 2i mantiene su habilidad para cargar archivos `.nds
 
 No sigas esta sección mientras no hayas completado el resto de instrucciones de esta página.
 
-##### Sección V - Quitar ntrboot
+#### Section V - Removing ntrboot
 
-###### Qué necesitas
+##### What you need
 
 * La última versión de [ntrboot_flasher](https://github.com/kitling/ntrboot_flasher/releases/latest)
 * El respaldo de flashrom correspondiente a tu flashcart    
@@ -91,7 +95,7 @@ No sigas esta sección mientras no hayas completado el resto de instrucciones de
   + <i class="fa fa-magnet" aria-hidden="true" title="Este es un enlace magnético. Usa un cliente torrent para descargar el archivo."></i> - [`Acekard_2i_(HW_44)-Flashrom.zip`](magnet:?xt=urn:btih:d12b46b1bfadc6b03ff260ab90dcb136d890fd39&dn=Acekard_2i_%28HW_44%29-Flashrom.zip&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce)
   + <i class="fa fa-magnet" aria-hidden="true" title="Este es un enlace magnético. Usa un cliente torrent para descargar el archivo."></i> - [`R4i_Ultra-Flashrom.zip`](magnet:?xt=urn:btih:614e9951a6c26145e68de34ed8c23a44bf190728&dn=R4i_Ultra-Flashrom.zip&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce)
 
-###### Instrucciones
+##### Instructions
 
 1. Apaga tu consola
 1. Inserta tu tarjeta SD en tu computadora
