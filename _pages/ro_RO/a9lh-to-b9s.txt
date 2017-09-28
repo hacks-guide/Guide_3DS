@@ -2,6 +2,8 @@
 title: "A9LH către B9S"
 ---
 
+{% include toc title="Table of Contents" %}
+
 Această pagină este pentru utilizatorii de arm9loaderhax care vor să își actualizeze dispozitivele la boot9strap.
 
 Toate versiunile viitoare de Luma3DS se vor face doar în formatul `.firm`, care va fi compatibil doar cu boot9strap și sighax. Asta înseamnă că pentru a continua să primiți cele mai recente actualizări de Luma3DS, ar trebui să folosiți această pagină ca să vă actualizați instalarea.
@@ -27,7 +29,7 @@ Au existat rapoarte despre un val de banuri adresate utilizatorilor de CFW de c�
 
 <div class="notice--danger">{{ notice-1 | markdownify }}</div>
 
-#### Ce aveți nevoie
+### What you need
 
 Țineți cont că următorul fișier necesar numit `secret_sector.bin` e același care se găsea în diferitele versiuni ale arhivei `data_input.zip`. Dacă aveți deja acel fișier undeva pe discul dumneavoastră, puteți să-l folosiți pe acela în loc să descărcați fișierul de mai jos.
 {: .notice--info}
@@ -37,17 +39,18 @@ Au existat rapoarte despre un val de banuri adresate utilizatorilor de CFW de c�
 
 * <i class="fa fa-magnet" aria-hidden="true" title="Acesta este un link magnetic. Folosiți un client de torrent pentru a descărca fișierul."></i> - **Doar pentru utilizatorii de New 3DS:** [`secret_sector.bin`](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce)
 * Cea mai nouă versiune de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(fișierul `.7z`)*
+* The v7.0.5 release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/tag/v7.0.5) *(the `.7z` file)*
 * Cea mai nouă versiune de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * Cea mai nouă versiune de [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(boot9strap standard; nu fișierul `devkit`, nici cel `ntr`)*
 * Cea mai nouă versiune de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * Ultima versiune de [Luma3DS Updater](https://github.com/Hamcha/lumaupdate/releases/latest)
 * [Kit-ul de începător](http://smealum.github.io/ninjhax2/starter.zip) în Homebrew
-* [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
-* [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
+* [`setup_ctrnand_luma3ds.gm9`]({{ "/gm9_scripts/setup_ctrnand_luma3ds.gm9" | absolute_url }})
+* [`cleanup_sd_card.gm9`]({{ "/gm9_scripts/cleanup_sd_card.gm9" | absolute_url }})
 
-#### Instrucțiuni
+### Instructions
 
-##### Secțiunea I - Preparații
+#### Section I - Prep Work
 
 Pentru toți pașii din această secțiune, suprascrieți fișierele existente de pe cardul SD.
 {: .notice--info}
@@ -55,7 +58,8 @@ Pentru toți pașii din această secțiune, suprascrieți fișierele existente d
 1. Închideți dispozitivul
 1. Introduceți cardul SD în calculator
 1. Copiați _conținutul de_ pe `starter.zip` în rădăcina cardului SD
-1. Copiați `boot.firm` de la Luma3DS `.7z` în rădăcina cardului SD
+1. Copy `boot.firm` from the latest version Luma3DS `.7z` to the root of your SD card
+1. Copy `arm9loaderhax.bin` from the v7.0.5 Luma3DS `.7z` to the root of your SD card
 1. Creați un folder numit `cias` în rădăcina cardului SD dacă nu există deja
 1. Copiați `lumaupdater.cia` în folderul `/cias/` de pe cardul SD
 1. Creați un folder numit `boot9strap` pe rădăcina cardului SD
@@ -69,12 +73,12 @@ Pentru toți pașii din această secțiune, suprascrieți fișierele existente d
 1. Copiați `boot9strap.firm` și `boot9strap.firm.sha` din arhiva `.zip` boot9strap în folderul `/boot9strap/` de pe cardul SD
 1. **Doar utilizatorii de New 3DS:** Copiați `secret_sector.bin` în folderul `/boot9strap/`de pe cardul SD
 
-    ![]({{ base_path }}/images/screenshots/a9lh-to-b9s-file-layout.png)
+    ![]({{ "/images/screenshots/a9lh-to-b9s-file-layout.png" | absolute_url }})
     {: .notice--info}
 
 1. Reintroduceți cardul SD în dispozitivul dumneavoastră
 
-##### Secțiunea II - Instalând boot9strap
+#### Section II - Installing boot9strap
 
 1. Deschideți dispozitivul în timp ce țineți apăsat (Start) pentru a lansa meniul chainloader Luma3DS
   + Unele versiuni de Luma3DS vor deschide direct orice payload care începe cu `start_`
@@ -87,7 +91,7 @@ Pentru toți pașii din această secțiune, suprascrieți fișierele existente d
 1. Odată terminat, apăsați (A) pentru a reporni dispozitivul.
   + Dacă dispozitivul se oprește în timpul pornirii, asigurați-vă că ați copiat `boot.firm` din arhiva `.7z` Luma3DS în rădăcina cardului SD
 
-##### Secțiunea III - Configurând Luma3DS
+#### Section III - Configuring Luma3DS
 
 Această secţiune este necesară numai în cazul în care vi se arată meniul de configurare Luma3DS după repornire.
 {: .notice--info}
@@ -96,7 +100,7 @@ Această secţiune este necesară numai în cazul în care vi se arată meniul d
   + **"Show NAND or user string in System Settings"**
 1. Apăsați (Start) pentru a salva și reporni
 
-##### Secțiunea IV - Actualizând sistemul
+#### Section IV - Updating the System
 
 Dacă, înainte să urmăriți acest ghid, aveați deja o configurare cu EmuNAND și doriți să mutați conținutul lui pe noul CFW SysNAND, acum este timpul să [urmați Mutare EmuNAND](move-emunand) înainte să faceți pașii din această secțiune.
 {: .notice--info}
@@ -106,7 +110,7 @@ Dacă, înainte să urmăriți acest ghid, aveați deja o configurare cu EmuNAND
   + Dacă aceasta vă dă o eroare, setați setările de DNS pe "auto"
   + Dacă tot primiți o eroare, [urmați CTRTransfer](ctrtransfer), apoi încercați să actualizați din nou
 
-##### Secțiunea V - Instalând Luma3DS Updater
+#### Section V - Installing Luma3DS Updater
 
 1. Lansați FBI
 1. Navigați spre `SD` -> `cias`
@@ -114,7 +118,7 @@ Dacă, înainte să urmăriți acest ghid, aveați deja o configurare cu EmuNAND
 1. Selectați opțiunea "Install CIA", apoi apăsați (A) pentru a confirma
 1. Apăsați (Home) pentru a ieși din FBI
 
-##### Secțiunea VI - CTRNAND Luma3DS
+#### Section VI - CTRNAND Luma3DS
 
 1. Lansați GodMode9 ținând apăsat (Start) în timpul pornirii
 1. Când vi se cere să faceți o copie de rezervă a fișierelor esențiale, apăsați (A) pentru a o realiza, apoi apăsați (A) ca să continuați după ce s-a terminat
@@ -128,7 +132,7 @@ Dacă, înainte să urmăriți acest ghid, aveați deja o configurare cu EmuNAND
 1. Apăsați (A) pentru a continua
 1. Apăsați (A) ca să reblocați permisiunile de scriere
 
-##### Secțiunea VII - Copie de rezervă SysNAND
+#### Section VII - Backup SysNAND
 
 1. Apăsați (Home) pentru a arăta meniul de acțiuni
 1. Selectați "Scripts..."
@@ -138,14 +142,14 @@ Dacă, înainte să urmăriți acest ghid, aveați deja o configurare cu EmuNAND
 1. Apăsați (A) pentru a continua
 1. Țineți apăsat (R) și apăsați (B) în același timp pentru a scoate cardul SD
 1. Introduceți cardul SD în calculator
-1. Copiați `<serialnumber>_nandmin_###.bin` din folderul `/gm9/out/` de pe cardul SD într-o locaţie sigură pe calculator
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Faceți copii de rezervă în mai multe locații (cum ar fi stocări online ale fișierelor)
   + Această copie de rezervă vă va salva de un brick în caz că ceva nu va merge bine în viitor
   + Înlocuiți vechea copie de rezervă NAND de arm9loaderhax cu cea nouă din boot9strap
-1. Ștergeți `<serialnumber>_nandmin_###.bin` din folderul `/gm9out/` de pe cardul SD după ce l-ați copiat
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. Reintroduceți cardul SD în dispozitivul dumneavoastră
 
-##### Secțiunea VIII - Curățarea cardului SD
+#### Section VIII - Cleanup SD Card
 
 Note that this script will remove the `/boot9strap/` and `/cias/` folders from your SD card!
 {: .notice--danger}
