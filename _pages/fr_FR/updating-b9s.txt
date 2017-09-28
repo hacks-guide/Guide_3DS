@@ -2,6 +2,8 @@
 title: "Mettre à jour B9S"
 ---
 
+{% include toc title="Table of Contents" %}
+
 Cette page s'adresse aux utilisateurs de boot9strap déjà présent sur leurs console afin de le mettre à jour vers la dernière version.
 
 {% capture notice-1 %}
@@ -20,16 +22,16 @@ Il y a eu des informations concernant une vague de bannissements contre les util
 
 <div class="notice--danger">{{ notice-1 | markdownify }}</div>
 
-#### Ce dont vous aurez besoin
+### What you need
 
 * La dernière version de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * La dernière version de [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(boot9strap standard, pas le fichier `devkit` et ni le fichier `ntr`)*
 * La dernière version de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(le fichier `.7z`)*
-* [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
+* [`cleanup_sd_card.gm9`]({{ "/gm9_scripts/cleanup_sd_card.gm9" | absolute_url }})
 
-#### Instructions
+### Instructions
 
-##### Section I - Préparation
+#### Section I - Prep Work
 
 Pour toutes les étapes de cette section, remplacez tous les fichiers existants sur votre carte SD.
 {: .notice--info}
@@ -41,7 +43,7 @@ Pour toutes les étapes de cette section, remplacez tous les fichiers existants 
 1. Copiez `boot9strap.firm` et `boot9strap.firm.sha` depuis le fichier ".zip" de boot9strap vers le dossier `/boot9strap/` sur votre carte SD
 1. Réinsérez votre carte SD dans votre 3DS
 
-### Section II - Installation de boot9strap
+#### Section II - Installing boot9strap
 
 1. Démarrez la console en maintenant (Start) enfoncé pour accéder au menu de chainloader de Luma3DS
 1. Lancez SafeB9SInstaller en appuyant sur (A)
@@ -50,14 +52,14 @@ Pour toutes les étapes de cette section, remplacez tous les fichiers existants 
 1. Once it has completed, hold (Start) while pressing (A) to reboot your device to the Luma3DS chainloader
   + If you encounter an error booting your device after the B9S update, just continue to fix it
 
-##### Section III - Update Luma3DS
+#### Section III - Update Luma3DS
 
 1. Éteignez votre 3DS
 1. Insérez votre carte SD dans votre ordinateur
 1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card, replacing the existing file
 1. Réinsérez votre carte SD dans votre 3DS
 
-##### Section IV - Cleanup SD Card
+#### Section IV - Cleanup SD Card
 
 Note that this script will remove the `/boot9strap/` and `/cias/` folders from your SD card!
 {: .notice--danger}
