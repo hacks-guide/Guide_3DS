@@ -2,6 +2,8 @@
 title: "Finalizând instalarea"
 ---
 
+{% include toc title="Table of Contents" %}
+
 #### Descrierea generală a pașilor
 
 Fișierul `boot.firm` este ceea ce e rulat de boot9strap însuși după ce se încarcă de pe NAND și poate fi orice alt payload arm9 valid în formatul FIRM. Acest fișier poate fi înlocuit oricând, totuși Luma3DS va permite lansarea altor payload-uri arm9 în formatul FIRM folosind chainloader-ul de la Luma3DS.
@@ -16,7 +18,7 @@ Pe parcursul acestui proces, vom instala și programe ca următoarele:
 +  **GodMode9** *(unealtă multifuncțională care poate face funcții de NAND și card)*
 +  **Homebrew Launcher Loader** *(pornește Homebrew Launcher ca o aplicație obișnuită mulțumită magiei lui Rosalina)*
 
-#### Ce aveți nevoie
+### What you need
 
 * The latest release of [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) *(the `.cia` file)*
 * The latest release of [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
@@ -24,12 +26,12 @@ Pe parcursul acestui proces, vom instala și programe ca următoarele:
 * The latest release of [DSP1](https://github.com/zoogie/DSP1/releases/latest)
 * The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) *(the `.cia` and `.3dsx` files)*
 * The latest fork of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(the `.cia` file)*
-* [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
-* [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
+* [`setup_ctrnand_luma3ds.gm9`]({{ "/gm9_scripts/setup_ctrnand_luma3ds.gm9" | absolute_url }})
+* [`cleanup_sd_card.gm9`]({{ "/gm9_scripts/cleanup_sd_card.gm9" | absolute_url }})
 
-#### Instrucțiuni
+### Instructions
 
-##### Secțiunea I - Preparații
+#### Section I - Prep Work
 
 1. Închideți dispozitivul
 1. Introduceți cardul SD în calculator
@@ -41,7 +43,7 @@ Pe parcursul acestui proces, vom instala și programe ca următoarele:
 1. Copy `DSP1.cia` to the `/cias/` folder on your SD card
 1. Copy `Anemone3DS.cia` to the `/cias/` folder on your SD card
 
-    ![]({{ base_path }}/images/screenshots/cias-file-layout.png)
+    ![]({{ "/images/screenshots/cias-file-layout.png" | absolute_url }})
     {: .notice--info}
 
 1. Create a folder named `payloads` in the `luma` folder on your SD card if it does not already exist
@@ -51,15 +53,15 @@ Pe parcursul acestui proces, vom instala și programe ca următoarele:
 1. Copiați `setup_ctrnand_luma3ds.gm9` în folderul `/gm9/scripts/` de pe cardul SD
 1. Copiați `cleanup_sd_card.gm9` în folderul `/gm9/scripts/` de pe cardul SD
 
-    ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
+    ![]({{ "/images/screenshots/finalizing-setup-file-layout.png" | absolute_url }})
     {: .notice--info}
 
 1. Reintroduceți cardul SD în dispozitivul dumneavoastră
 1. Porniți dispozitivul
 
-##### Section II - Updating the System
+#### Section II - Updating the System
 
-Dacă, în timp ce ați folosit o versiune anterioară a acestui ghid, ați efectuat un CTRTransfer pe *New 3DS-ul* dumneavoastră la 2.1.0, acum este timpul să vă [restaurați copia de rezervă NAND](godmode9-usage#nand_restore) înainte de a face această secțiune.
+If, while following a previous version of this guide, you CTRTransfered your *New 3DS* to 2.1.0, now is the time to [restore your NAND backup](godmode9-usage#restoring-a-nand-backup) before doing this section.
 {: .notice--danger}
 
 Dacă, înainte să urmăriți acest ghid, aveați deja o configurare cu EmuNAND și doriți să mutați conținutul lui pe noul CFW SysNAND, acum este timpul să [urmați Mutare EmuNAND](move-emunand) înainte să faceți pașii din această secțiune.
@@ -70,7 +72,7 @@ Dacă, înainte să urmăriți acest ghid, aveați deja o configurare cu EmuNAND
   + Dacă aceasta vă dă o eroare, setați setările de DNS pe "auto"
   + If this still gives you an error, [follow CTRTransfer](ctrtransfer), then try updating again
 
-##### Secțiunea III - Lansând FBI
+#### Section III - Launching FBI
 
 1. Lansați aplicația Download Play
 1. Apăsați (L) + (Jos) + (Select) în același timp ca să deschideți meniul Rosalina
@@ -84,19 +86,19 @@ Dacă, înainte să urmăriți acest ghid, aveați deja o configurare cu EmuNAND
 1. Dispozitivul dumneavoastră ar trebui să încarce Hombrew Launcher-ul
 1. Lansați FBI din lista de homebrew
 
-##### Section IV - Installing CIAs
+#### Section IV - Installing CIAs
 
 1. Navigați spre `SD` -> `cias`
 1. Selectați "\<current directory>"
 1. Select the "Install and delete all CIAs" option, then press (A) to confirm
 1. Apăsați (Home), apoi închideți Download Play
 
-##### Section V - DSP Dump
+#### Section V - DSP Dump
 
 1. Lansați aplicația DSP1
 1. Odată completat, apăsați (B) pentru a auto-șterge aplicația și întoarceți-vă în meniul HOME
 
-##### Secțiunea VI - CTRNAND Luma3DS
+#### Section VI - CTRNAND Luma3DS
 
 1. Lansați GodMode9 ținând apăsat (Start) în timpul pornirii
 1. Când vi se cere să faceți o copie de rezervă a fișierelor esențiale, apăsați (A) pentru a o realiza, apoi apăsați (A) ca să continuați după ce s-a terminat
@@ -110,7 +112,7 @@ Dacă, înainte să urmăriți acest ghid, aveați deja o configurare cu EmuNAND
 1. Apăsați (A) pentru a continua
 1. Apăsați (A) ca să reblocați permisiunile de scriere
 
-##### Secțiunea VII - Copie de rezervă SysNAND
+#### Section VII - Backup SysNAND
 
 1. Apăsați (Home) pentru a arăta meniul de acțiuni
 1. Selectați "Scripts..."
@@ -120,13 +122,13 @@ Dacă, înainte să urmăriți acest ghid, aveați deja o configurare cu EmuNAND
 1. Apăsați (A) pentru a continua
 1. Țineți apăsat (R) și apăsați (B) în același timp pentru a scoate cardul SD
 1. Introduceți cardul SD în calculator
-1. Copiați `<serialnumber>_nandmin_###.bin` din folderul `/gm9/out/` de pe cardul SD într-o locaţie sigură pe calculator
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Faceți copii de rezervă în mai multe locații (cum ar fi stocări online ale fișierelor)
   + Această copie de rezervă vă va salva de un brick în caz că ceva nu va merge bine în viitor
-1. Ștergeți `<serialnumber>_nandmin_###.bin` din folderul `/gm9out/` de pe cardul SD după ce l-ați copiat
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. Reintroduceți cardul SD în dispozitivul dumneavoastră
 
-##### Secțiunea VIII - Curățarea cardului SD
+#### Section VIII - Cleanup SD Card
 
 1. Apăsați (Home) pentru a arăta meniul de acțiuni
 1. Selectați "Scripts..."
