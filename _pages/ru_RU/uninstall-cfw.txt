@@ -2,6 +2,8 @@
 title: "Удаление кастомной прошивки"
 ---
 
+{% include toc title="Table of Contents" %}
+
 Эта инструкция служит для полного удаления кастомной прошивки с вашего устройства, включая Boot9Strap и Luma3DS, в целях восстановления оригинального состояния консоли.
 
 Любые неподписанные (нелегальные) игры перестанут работать и могут быть удалены вручную с помощью раздела Управление данными (Data Management) в Системных настройках (System Settings). Используйте [JK's Save Manager](https://github.com/J-D-K/JKSM/releases/latest) чтобы создать резервные копии любых важных для вас сохранений этих неподписанных (нелегальных) игр.
@@ -10,16 +12,16 @@ title: "Удаление кастомной прошивки"
 
 Обратите внимание, что если у вас имеются другие файлы помимо `GodMode9.firm` в папке `/luma/payloads/` на SD-карте, удержание кнопки (Start) при загрузке будет запускать "chainloader menu", где вам нужно будет использовать D-Pad и кнопку (A) для выбора "GodMode9" при выполнении этих инструкций. 
 
-#### Что понадобится
+### What you need
 
 * Свежая версия [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * Скрипт для удаления кастомной прошивки, соответствующий вашему устройству:
-  + [`uninstall_hax_retail_NEW.gm9`]({{ base_path }}/gm9_scripts/uninstall_hax_retail_NEW.gm9)
-  + [`uninstall_hax_retail_OLD.gm9`]({{ base_path }}/gm9_scripts/uninstall_hax_retail_OLD.gm9)
+  + [`uninstall_hax_retail_NEW.gm9`]({{ "/gm9_scripts/uninstall_hax_retail_NEW.gm9" | absolute_url }})
+  + [`uninstall_hax_retail_OLD.gm9`]({{ "/gm9_scripts/uninstall_hax_retail_OLD.gm9" | absolute_url }})
 
-#### Инструкция
+### Instructions
 
-##### Часть I - Подготовительные работы
+#### Section I - Prep Work
 
 1. Выключите консоль
 1. Вставьте SD-карту в компьютер
@@ -29,12 +31,12 @@ title: "Удаление кастомной прошивки"
 1. Вставьте SD-карту обратно в консоль
 1. Включите консоль
 
-##### Часть II - Запуск скрипта для удаления кастомной прошивки
+#### Section II - Running Uninstall Script
 
 1. Запустите GodMode9, держа нажатой кнопку (Start) во время загрузки
 1. Если вам предложат создать бэкап важных файлов, нажмите кнопку (A) чтобы сделать это, затем нажмите (A) чтобы продолжить после завершения
-1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
-  + Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
+1. Если вам предложат выставить RTC дату и время, нажмите кнопку (A) чтобы сделать это, настройте дату и время, затем нажмите (A) чтобы продолжить
+  + Обратите внимание, что если вы выставили RTC дату и время, вам также придется исправить время в Системных настройках после завершения руководства
 1. Нажмите кнопку (Home) для вызова меню
 1. Выберите "Scripts..."
 1. Выберите скрипт для удаления кастомной прошивки
