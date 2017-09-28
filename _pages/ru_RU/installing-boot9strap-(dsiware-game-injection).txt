@@ -2,6 +2,8 @@
 title: "Установка boot9strap (Инъекция в игры DSiWare)"
 ---
 
+{% include toc title="Table of Contents" %}
+
 Обратите внимание, что если у вас имеются другие файлы помимо `GodMode9.firm` в папке `/luma/payloads/` на SD-карте, удержание кнопки (Start) при загрузке будет запускать "chainloader menu", где вам нужно будет использовать D-Pad и кнопку (A) для выбора "GodMode9" при выполнении этих инструкций. 
 
 Для использования [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme)-ссылок в этом руководстве необходим torrent-клиент, например [Deluge](http://dev.deluge-torrent.org/wiki/Download)
@@ -11,7 +13,7 @@ title: "Установка boot9strap (Инъекция в игры DSiWare)"
 Если вы не будете использовать корректный `.firm`, соответствующий целевой 3DS, вы получите БРИК! Убедитесь что скачали и используете правильный!
 {: .notice--danger}
 
-#### Что понадобится
+### What you need
 
 * Две консоли семейства 3DS
   + **Исходная 3DS**: консоль с кастомной прошивкой (boot9strap или arm9loaderhax) *с последней версией системного ПО*
@@ -32,9 +34,9 @@ title: "Установка boot9strap (Инъекция в игры DSiWare)"
   + <i class="fa fa-magnet" aria-hidden="true" title="Это magnet-ссылка. Используйте торрент-клиент для загрузки файла."></i> - [`2.54-0_11.4_OLD.firm`](magnet:?xt=urn:btih:0dd89d42ad711f770da899af05ee162ede0d0070&dn=2.54-0_11.4_OLD.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
   + <i class="fa fa-magnet" aria-hidden="true" title="Это magnet-ссылка. Используйте торрент-клиент для загрузки файла."></i> - [`2.54-0_11.4_NEW.firm`](magnet:?xt=urn:btih:3b59dd43eec3edb133555f58d1180bfb196acbb4&dn=2.54-0_11.4_NEW.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 
-#### Инструкция
+### Instructions
 
-##### Часть I - Подготовительные работы
+#### Section I - Prep Work
 
 Используйте [save manager](https://github.com/J-D-K/JKSM/releases/latest) для того, чтобы сделать резервные копии всех важных сохранений на *целевой 3DS* (приставка будет отформатирована!)
 {: .notice--warning}
@@ -59,12 +61,12 @@ title: "Установка boot9strap (Инъекция в игры DSiWare)"
 1. Вставьте SD-карты обратно в соответствующие 3DS
 1. Нажмите (Start) на **исходной 3DS** для перезагрузки
 
-##### Часть II - Инъекция игры и сохранения
+#### Section II - Injecting the game and save
 
 1. Включите **исходную 3DS** кнопкой питания, держа нажатой кнопку (Start), чтобы запустить GodMode9
 1. Если вам предложат создать бэкап важных файлов, нажмите кнопку (A) чтобы сделать это, затем нажмите (A) чтобы продолжить после завершения
-1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
-  + Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
+1. Если вам предложат выставить RTC дату и время, нажмите кнопку (A) чтобы сделать это, настройте дату и время, затем нажмите (A) чтобы продолжить
+  + Обратите внимание, что если вы выставили RTC дату и время, вам также придется исправить время в Системных настройках после завершения руководства
 1. Перейдите в `[0:] SDCARD`
 1. Нажмите (Y) на `.app-файле` из архива DSiWare injection, чтобы скопировать его
 1. Нажмите (B) для возврата в главное меню
@@ -97,9 +99,9 @@ title: "Установка boot9strap (Инъекция в игры DSiWare)"
   + Если игра завершается с ошибкой о `boot.nds`, либо просто появляется белый экран, **значит эксплойт сработал успешно!**
   + Если игра жалуется на поврежденный или недоступный файл сохранения, убедитесь, что скопировали именно **содержимое** папки `savedata`, а не саму папку
   + Если игра работает нормально и не выводит ошибку о `boot.nds`, значит вам следует остановиться и выяснить, на каком этапе вы допустили оплошность
-  + Если появляется черный экран, обратитесь к разделу с [проблемами и их решениями](troubleshooting#twl_broken)
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#dsi--ds-functionality-is-broken-after-completing-the-guide)
 
-##### Часть III - Передача данных
+#### Section III - System Transfer
 
 1. Если на **целевой 3DS** есть Nintendo Network ID, отформатируйте приставку, используя Системные настройки:
   + Перейдите на последнюю вкладку меню "Прочие настройки" (Other Settings), выберите пункт "Форматировать" (Format System Memory), следуйте инструкциям на экране
@@ -115,16 +117,16 @@ title: "Установка boot9strap (Инъекция в игры DSiWare)"
     + Медленный способ: Если у вас нет возможности перенести данные с помощью компьютера, выберите "Беспроводная передача (все данные)" (опция 1).
 1. Перейдите по [этой ссылке](http://en-americas-support.nintendo.com/app/answers/detail/a_id/227/) и следуйте официальным инструкциям от Nintendo для Передачи данных, держа в голове то, что вы прочитали чуть выше
 
-##### Часть IV - Восстановление исходной 3DS
+#### Section IV - Restoring the source 3DS
 
 1. На **исходной 3DS**, завершите первоначальную настройку
 1. Выполните одно из следующих действий
     + Продолжайте выполнять оставшуюся часть инструкции для **целевой 3DS**, а затем подождите неделю *(не восстанавливайте бэкап NAND до переноса данных)* и выполните Передачу данных уже с **целевой 3DS** на **исходную** *(помните, что вы не можете перенести данные с New 3DS или New 2DS на Old 3DS или Old 2DS)*
     + Позвоните в Nintendo и скажите им, что у вас больше нет доступа к устройству, к которому привязан ваш NNID (в нашем случае, это уже **целевая 3DS**) и вы бы хотели привязать аккаунт к новому устройству (в нашем случае, это **исходная 3DS**)
-    + Можете просто [удалить NNID](https://3ds.guide/troubleshooting#rm_nnid) из **исходной 3DS**, чтобы оставить его на **целевой 3DS**
+    + You can also just [remove the NNID](https://3ds.guide/troubleshooting#removing-an-nnid-without-formatting-your-device) from **the source 3DS** if you'd prefer it remain on **the target 3DS**
 1. Перезагрузите **исходную 3DS**, держа нажатой кнопку (Start) во время загрузки, чтобы запустить GodMode9
 1. Перейдите в `[0:] SDCARD` -> `gm9` -> `out`
-1. Нажмите (A) чтобы выбрать файл `<serialnumber>_nandmin_###.bin`, затем выберите "NAND image options...", затем "Restore SysNAND (safe)"
+1. Press (A) on `<date>_<serialnumber>_sysnand_###.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
 1. Нажмите (A), чтобы разрешить запись в SysNAND и введите указанную комбинацию кнопок
   + Это действие не перезапишет установленный boot9strap
 1. Введите указанную комбинацию кнопок чтобы разрешить запись в SysNAND (lvl1)
@@ -133,7 +135,7 @@ title: "Установка boot9strap (Инъекция в игры DSiWare)"
 1. Нажмите (A) чтобы восстановить запрет на запись, если появится запрос
 1. Нажмите (Start) для того, чтобы перезагрузить **исходную 3DS**
 
-##### Часть V - Резервное копирование FIRM целевой 3DS
+#### Section V - Backing up the target 3DS's FIRM
 
 1. Скопируйте файл `boot.firm` из `.7z-архива` Luma3DS в корень SD-карты
 1. Скопируйте `boot.nds` (B9STool) в корень SD-карты **целевой 3DS**
@@ -148,7 +150,7 @@ title: "Установка boot9strap (Инъекция в игры DSiWare)"
 1. Вставьте SD-карту в компьютер и скопируйте `F0F1_NEW3DS.bin` или `F0F1_OLD3DS.bin` (в зависимости от типа вашего устройства) из папки `boot9strap` в безопасное место; сделайте их резервные копии в нескольких местах; эти файлы помогут вам восстановить приставку в случае брика, если что-то пойдет не так
 1. Вставьте SD-карту обратно в **целевую 3DS**
 
-##### Часть VI - Прошивка FIRM целевой 3DS
+#### Section VI - Flashing the target 3DS's FIRM
 
 **НЕ используйте b9sTool на приставках с установленным arm9loaderhax. Это гарантированно приведет к БРИКУ!**
 {: .notice--danger}
@@ -159,10 +161,10 @@ title: "Установка boot9strap (Инъекция в игры DSiWare)"
   + При необходимости выключите консоль принудительно, удерживая кнопку питания
 1. Включите **целевую 3DS**
 
-##### Часть VII - Настройка Luma3DS
+#### Section VII - Configuring Luma3DS
 
 1. Ваша консоль должна загрузиться в меню конфигурации Luma3DS
-  + Если экран остаётся чёрным, то перейдите к разделу [проблемы и их решения](troubleshooting#ts_sys_b9s)
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 1. Нажимая (A) выберите следующие пункты:    
   + **"Show NAND or user string in System Settings"**
 1. Нажмите (Start), чтобы сохранить настройки и перезагрузиться
