@@ -2,6 +2,8 @@
 title: "EmuNAND transferieren"
 ---
 
+{% include toc title="Table of Contents" %}
+
 Dies ist ein Zusatzabschnitt zum Verschieben des Inhaltes eines vorherigen EmuNAND in die neue SysNAND CFW plus Entfernung des alten EmuNAND. Beachte, dass die Begriffe EmuNAND und RedNAND sich auf leicht unterschiedliche Implementierungen [des selben Konzepts](http://3dbrew.org/wiki/NAND_Redirection) beziehen.
 
 Beachte: Sollten noch weitere Dateien als nur die`GodMode9.firm` Datei im `/luma/payloads/` Ordner auf deiner SD-Karte sein, starte das "Chainloader Menu", indem du beim Starten der Konsole die (Start) Taste gedrückt hältst und in welchem du dann das D-Pad und die (A) Taste verwenden musst um "GodMode9", für die Anleitung, auszuwählen.
@@ -9,15 +11,15 @@ Beachte: Sollten noch weitere Dateien als nur die`GodMode9.firm` Datei im `/luma
 **Du MUSST bereits Luma3DS und boot9strap oder arm9loaderhax installiert haben, um dies zu benutzen.**
 {: .notice--danger}
 
-#### Was du brauchst
+### What you need
 
 * Einen bestehenden EmuNAND
 * Der neueste Version von [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * Die neueste Version von [FBI](https://github.com/Steveice10/FBI/releases/latest)
 
-#### Anleitung
+### Instructions
 
-##### Abschnitt I - Vorbereitung
+#### Section I - Prep Work
 
 1. Schalte deine Konsole aus
 1. Stecke deine SD-Karte in deinen Computer
@@ -25,7 +27,7 @@ Beachte: Sollten noch weitere Dateien als nur die`GodMode9.firm` Datei im `/luma
 1. Kopiere den Ordner `gm9` aus der GodMode9 `.zip` in das Stammverzeichnis deiner SD-Karte
 1. Stecke deine SD-Karte nun wieder in deinen 3DS
 
-### Abschnitt II - Sicherung der SysNAND DSiWare Spielstände
+#### Section II - Backup SysNAND DSiWare Saves
 
 Wenn du noch keine DSiWare-Spiele oder Spielstände hast, überspringe diesen Abschnitt.
 {: .notice--info}
@@ -39,7 +41,7 @@ Wenn du noch keine DSiWare-Spiele oder Spielstände hast, überspringe diesen Ab
   + Das kann einen Moment dauern, wenn du viele DSiWare Spiele besitzt
 1. Drücke zweimal (B), um zurück in das Hauptmenü zu gelangen
 
-##### Abschnitt III - Backup erstellen für GBA VC Spielstände
+#### Section III - Backup GBA VC Saves
 
 Überspringe diesen Abschnitt, falls du keine GBA VC Spiele oder Spielstände besitzt.
 {: .notice--info}
@@ -50,7 +52,7 @@ Diese Schritte sind nicht notwendig für andere Virtual Console Spiele (GBC, NES
 The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
 {: .notice--info}
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by holding (R) and pressing (A) on the GodeMode9 main menu, then selecting "Search for titles".
+To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
 {: .notice--info}
 
 1. Führe die folgenden Schritte für jedes GBA VC Spiel aus, für das du ein Backup erstellen möchtest:
@@ -65,7 +67,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
   + Press (A) to continue
   + Drücke (Start) um deinen 3DS neu zu starten
 
-##### Abschnitt IV - Kopiere EmuNAND zu SysNAND
+#### Section IV - Copy EmuNAND to SysNAND
 
 1. Starte GodMode9, indem du während dem Starten deiner Konsole die Taste (Start) gedrückt hältst
 1. Navigiere zu `[E:] EMUNAND VIRTUAL`
@@ -78,7 +80,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Drücke (B), um die Schreibrechte nicht zu deaktiveren
 1. Drücke (B), um zum Hauptmenü zurückzukehren
 
-##### Abschnitt V - DSiWare Spielstände wiederherstellen
+#### Section V - Restore DSiWare Saves
 
 Überspringe diesen Abschnitt, falls du kein Backup für deine DSiWare Spielstände erstellt hast.
 {: .notice--info}
@@ -95,7 +97,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Drücke (B), um die Schreibrechte nicht zu deaktiveren
 1. Drücke zweimal (B), um zurück in das Hauptmenü zu gelangen
 
-### Abschnitt VI - Wiederherstellung von GBA VC Spielständen
+#### Section VI - Restore GBA VC Saves
 
 Wenn du keine GBA VC Spielstände früher gesichert hast, überspringe den Abschnitt.
 {: .notice--info}
@@ -123,7 +125,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
   Verlasse das GBA VC Spiel wieder
 1. Starte GodMode9, indem du während dem Starten deiner Konsole die Taste (Start) gedrückt hältst
 
-#### Abschnitt 7 - Erstellung eines Backup für SysNAND
+#### Section VII - Backup SysNAND
 
 1. Drücke  (HOME) um das Aktionsmenü aufzurufen
 1. Wähle "Scripts"
@@ -133,13 +135,13 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Drücke (A) um fortzufahren
 1. Drücke (R) und (B) gleichzeitig um die SD-Karte auszuwerfen
 1. Stecke deine SD-Karte in deinen Computer
-1. Kopiere `<serialnumber>_nandmin_###.bin` aus dem Ordner `/gm9/out/` auf deiner SD-Karte an einen sicheren Ort auf deinem Computer
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Erstelle Backup Dateien an mehreren Orten (USB-Stick, PC, Externe Festplatte, Online-Speicher, etc.)
   + Diese Sicherheitskopie wird dich vor einem Brick schützen, falls in der Zukunft etwas schief gehen sollte
-1. Lösche `<serialnumber>_nandmin_###.bin` aus dem Ordner `/gm9/out/` auf deiner SD-Karte, nach dem Kopieren
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. ** Sichere jede Datei von deiner SD-Karte in einem Ordner auf deinem Computer, da in den nächsten Schritten alle Dateien gelöscht werden **
 
-##### Abschnitt 8 - Die SD-Karte formatieren
+#### Section VIII - Format SD card
 
 1. Stecke deine SD-Karte nun wieder in deinen 3DS
 1. Drücke  (HOME) um das Aktionsmenü aufzurufen
@@ -162,5 +164,5 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 
 ___
 
-Zurück zu [Setup fertigstellen](finalizing-setup)
+### Return to [Finalizing Setup](finalizing-setup).
 {: .notice--primary}
