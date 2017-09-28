@@ -2,6 +2,8 @@
 title: "Перенос EmuNAND"
 ---
 
+{% include toc title="Table of Contents" %}
+
 Этот дополнительный раздел содержит информацию о переносе содержимого EmuNAND в новый SysNAND с кастомной прошивкой, с последующим удалением раздела, содержащего EmuNAND. Помните, что RedNAND и EmuNAND - немного разные реализации [одного и того же](http://3dbrew.org/wiki/NAND_Redirection) (англ.).
 
 Обратите внимание, что если у вас имеются другие файлы помимо `GodMode9.firm` в папке `/luma/payloads/` на SD-карте, удержание кнопки (Start) при загрузке будет запускать "chainloader menu", где вам нужно будет использовать D-Pad и кнопку (A) для выбора "GodMode9" при выполнении этих инструкций.
@@ -9,15 +11,15 @@ title: "Перенос EmuNAND"
 **Для продолжения, у вас уже ДОЛЖНА быть установлена Luma3DS и boot9strap или arm9loaderhax**
 {: .notice--danger}
 
-#### Что понадобится
+### What you need
 
 * Существующий EmuNAND
 * Свежая версия [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * Свежая версия [FBI](https://github.com/Steveice10/FBI/releases/latest)
 
-#### Инструкция
+### Instructions
 
-##### Часть I - Подготовительные работы
+#### Section I - Prep Work
 
 1. Выключите консоль
 1. Вставьте SD-карту в компьютер
@@ -25,21 +27,21 @@ title: "Перенос EmuNAND"
 1. Скопируйте папку `gm9` из `.zip-архива` GodMode9 в корень SD-карты
 1. Вставьте SD-карту обратно в консоль
 
-##### Часть II - Бэкап сохранений DSiWare из SysNAND
+#### Section II - Backup SysNAND DSiWare Saves
 
 Если у вас нет игр DSiWare или важных для вас сохранений, пропустите эту часть.
 {: .notice--info}
 
 1. Запустите GodMode9, держа нажатой кнопку (Start) во время загрузки
 1. Если вам предложат создать бэкап важных файлов, нажмите кнопку (A) чтобы сделать это, затем нажмите (A) чтобы продолжить после завершения
-1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
-  + Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
+1. Если вам предложат выставить RTC дату и время, нажмите кнопку (A) чтобы сделать это, настройте дату и время, затем нажмите (A) чтобы продолжить
+  + Обратите внимание, что если вы выставили RTC дату и время, вам также придется исправить время в Системных настройках после завершения руководства
 1. Перейдите в `[2:] SYSNAND TWLN` -> `title`
 1. Удерживая (R), нажмите (A) чтобы выбрать папку `00030004`, затем выберите "Copy to 0:/gm9/out"
   + Этот процесс может занять некоторое время, если у вас много DSiWare игр
 1. Дважды нажмите (B) для возврата в главное меню
 
-##### Часть III - Бэкап сохранений GBA VC
+#### Section III - Backup GBA VC Saves
 
 Если у вас нет игр GBA VC или важных для вас сохранений, пропустите эту часть.
 {: .notice--info}
@@ -47,10 +49,10 @@ title: "Перенос EmuNAND"
 Обратите внимание, что эти действия не требуется выполнять для любых других типов Virtual Console (GBC, NES и т. д.)
 {: .notice--info}
 
-The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
+Сохранение будет скопировано в папку `/gm9/out/` на SD-карте с именем `<TitleID>.gbavc.sav`.
 {: .notice--info}
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by holding (R) and pressing (A) on the GodeMode9 main menu, then selecting "Search for titles".
+Чтобы идентифицировать Title ID в имени файла `<TitleID>.gbavc.sav`, вы можете посмотреть список всех установленных игр и соответствующих им Title ID. Выделите диск `[A:] SYSNAND SD`, затем удерживая (R), нажмите (A) и выберите "Search for titles".
 {: .notice--info}
 
 1. Выполните действия ниже для каждой игры GBA VC, для сохранений которых вы хотите создать бэкап:
@@ -59,13 +61,13 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
   + Включите консоль кнопкой питания, держа нажатой кнопку (Start), чтобы запустить меню Luma3DS chainloader
   + Запустите GodMode9, нажав кнопку (A)
   + Перейдите в `[S:] SYSNAND VIRTUAL`
-  + Press (A) on `agbsave.bin` to select it
-  + Select "AGBSAVE options..."
-  + Select "Dump GBA VC save"
-  + Press (A) to continue
+  + Нажмите (A) чтобы выбрать файл `agbsave.bin`
+  + Выберите "AGBSAVE options..."
+  + Выберите "Dump GBA VC save"
+  + Нажмите (A), чтобы продолжить
   + Нажмите (Start) для перезагрузки
 
-##### Часть IV - Копирование EmuNAND в SysNAND
+#### Section IV - Copy EmuNAND to SysNAND
 
 1. Запустите GodMode9, держа нажатой кнопку (Start) во время загрузки
 1. Перейдите в `[E:] EMUNAND VIRTUAL`
@@ -78,7 +80,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Нажмите (B) чтобы не восстанавливать запрет на запись, если появится запрос
 1. Нажмите (B) для возврата в главное меню
 
-##### Часть V - Восстановление сохранений DSiWare
+#### Section V - Restore DSiWare Saves
 
 Если вы не создавали бэкап сохранений DSiWare ранее, пропустите эту часть.
 {: .notice--info}
@@ -95,12 +97,12 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Нажмите (B) чтобы не восстанавливать запрет на запись, если появится запрос
 1. Дважды нажмите (B) для возврата в главное меню
 
-##### Часть VI - Восстановление сохранений GBA VC
+#### Section VI - Restore GBA VC Saves
 
 Если вы не создавали бэкап сохранений GBA VC ранее, пропустите эту часть.
 {: .notice--info}
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by holding (R) and pressing (A) on the GodeMode9 main menu, then selecting "Search for titles".
+Чтобы идентифицировать Title ID в имени файла `<TitleID>.gbavc.sav`, вы можете посмотреть список всех установленных игр и соответствующих им Title ID. Удерживая (R), нажмите (A) в главном меню GodeMode9, затем выберите "Search for titles".
 {: .notice--info}
 
 1. Удерживая (R), нажмите (Start) чтобы выключить консоль
@@ -111,19 +113,19 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
   + Включите консоль кнопкой питания, держа нажатой кнопку (Start), чтобы запустить меню Luma3DS chainloader
   + Запустите GodMode9, нажав кнопку (A)
   + Перейдите в `[0:] SDCARD` -> `gm9`
-  + Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
+  + Нажмите (Y) чтобы скопировать файл сохранения `<TitleID>.gbavc.sav`, который вы хотите восстановить
   + Нажмите (B) для возврата в главное меню
   + Перейдите в `[S:] SYSNAND VIRTUAL`
-  + Press (A) on `agbsave.bin` to select it
-  + Select "AGBSAVE options..."
-  + Select "Inject GBA VC save"
-  + Press (A) to continue
+  + Нажмите (A) чтобы выбрать файл `agbsave.bin`
+  + Выберите "AGBSAVE options..."
+  + Выберите "Inject GBA VC save"
+  + Нажмите (A), чтобы продолжить
   + Нажмите (Start) для перезагрузки
   + Запустите игру GBA VC
   + Выйдите из игры GBA VC
 1. Запустите GodMode9, держа нажатой кнопку (Start) во время загрузки
 
-##### Часть VII - Создание бэкапа SysNAND
+#### Section VII - Backup SysNAND
 
 1. Нажмите кнопку (Home) для вызова меню
 1. Выберите "Scripts..."
@@ -133,13 +135,13 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Нажмите (A), чтобы продолжить
 1. Удерживая (R) нажмите (B) для того, чтобы извлечь SD-карту
 1. Вставьте SD-карту в компьютер
-1. Скопируйте `<serialnumber>_nandmin_###.bin` из папки `/gm9/out/` на SD-карте в безопасное место на вашем компьютере
+1. Скопируйте `<date>_<serialnumber>_sysnand_###.bin` из папки `/gm9/out/` на SD-карте в безопасное место на вашем компьютере
   + Сделайте несколько резервных копий в нескольких местах (например в облачном хранилище)
   + Эти бэкапы позволят восстановить консоль, если впоследствии что-то пойдёт не так
-1. После копирования удалите `<serialnumber>_nandmin_###.bin` из папки `/gm9/out/` на SD-карте
+1. После копирования удалите `<date>_<serialnumber>_sysnand_###.bin` из папки `/gm9/out/` на SD-карте
 1. **Сделайте резервную копию всех файлов на SD-карте, поскольку в следующих шагах карта будет отформатирована.**
 
-##### Часть VIII - Форматирование SD-карты
+#### Section VIII - Format SD card
 
 1. Вставьте SD-карту обратно в консоль
 1. Нажмите кнопку (Home) для вызова меню
@@ -162,5 +164,5 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 
 ___
 
-Вернитесь к [Завершение установки](finalizing-setup).
+### Return to [Finalizing Setup](finalizing-setup).
 {: .notice--primary}
