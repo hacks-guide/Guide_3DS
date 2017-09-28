@@ -2,6 +2,8 @@
 title: "移植 EmuNAND"
 ---
 
+{% include toc title="Table of Contents" %}
+
 本篇為如何把先前的 EmuNAND 中的內容移植到您新的自製 SysNAND 系統底下，並移除舊的 EmuNAND 磁區的附加章節。 注意 EmuNAND 與 RedNAND 指的是些微不同運作方式但[同樣道理](http://3dbrew.org/wiki/NAND_Redirection)的用語。
 
 請注意，如果您在 SD 卡中的 `/luma/payloads/` 資料夾中放有除了 `GodMode9.firm` 的 payload 檔案，在開機時按住「Start」鍵將會顯示一個「加載選單」，從那裏您得透過方向鍵及按鈕「A」選擇「GodMode9」。
@@ -9,15 +11,15 @@ title: "移植 EmuNAND"
 **您必須先安裝 Luma3DS 和 boot9strap 或 arm9loaderhax 才能繼續。**
 {: .notice--danger}
 
-#### 必備項目
+### What you need
 
 * 現成的 EmuNAND 磁區
 * 最新版的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * 最新版的 [FBI 管理器](https://github.com/Steveice10/FBI/releases/latest)
 
-#### 操作說明
+### Instructions
 
-##### 第一節 — 準備工作
+#### Section I - Prep Work
 
 1. 關閉您的主機
 1. 將 SD 卡插入電腦中
@@ -25,7 +27,7 @@ title: "移植 EmuNAND"
 1. 解壓 GodMode9 `.zip` 中的 `gm9` 資料夾到 SD 卡的根目錄底下
 1. 將 SD 卡插回主機中
 
-##### 第二節 — 備份 SysNAND 中的 DSiWare 存檔
+#### Section II - Backup SysNAND DSiWare Saves
 
 如果您沒有安裝任何 DSiWare 遊戲或您認為重要的存檔，跳過本節。
 {: .notice--info}
@@ -39,7 +41,7 @@ title: "移植 EmuNAND"
   + 如果您有很多 DSiWare 遊戲的話，本過程可能會耗費一些時間
 1. 按「B」兩次回到主選單
 
-##### 第三節 — 備份 GBA 虛擬主機 遊戲存檔
+#### Section III - Backup GBA VC Saves
 
 如果您沒有安裝任何 GBA 虛擬主機遊戲或您認為重要的存檔，跳過本節。
 {: .notice--info}
@@ -50,7 +52,7 @@ title: "移植 EmuNAND"
 The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
 {: .notice--info}
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by holding (R) and pressing (A) on the GodeMode9 main menu, then selecting "Search for titles".
+To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
 {: .notice--info}
 
 1. 為各個想備份的 GBA 虛擬主機 遊戲重複下列步驟：
@@ -65,7 +67,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
   + 按「A」 繼續
   + 按下「Start」鍵重啟您的主機
 
-##### 第四節 — 複製 EmuNAND 至 SysNAND 中
+#### Section IV - Copy EmuNAND to SysNAND
 
 1. 開機時按住「Start」鍵啟動 GodMode9
 1. 移動至 `[E:] EMUNAND VIRTUAL`
@@ -78,7 +80,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. 當提示時，按下「B」取消檔案寫入鎖定
 1. 按「B」回到主選單
 
-##### 第五節 — 還原 DSiWare 存檔
+#### Section V - Restore DSiWare Saves
 
 如果您剛剛沒有備份 DSiWare 遊戲存檔，請跳過本節。
 {: .notice--info}
@@ -95,7 +97,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. 當提示時，按下「B」取消檔案寫入鎖定
 1. 按「B」兩次回到主選單
 
-##### 第六節 — 還原 GBA 虛擬主機遊戲存檔
+#### Section VI - Restore GBA VC Saves
 
 如果您剛剛沒有備份 GBA 虛擬主機遊戲存檔，跳過本節。
 {: .notice--info}
@@ -123,7 +125,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
   + 退出遊戲
 1. 開機時按住「Start」鍵啟動 GodMode9
 
-##### 第七節 — 備份 SysNAND
+#### Section VII - Backup SysNAND
 
 1. 按「Home」鍵以叫出主選單
 1. 選擇「Scripts...」
@@ -133,13 +135,13 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. 按「A」 繼續
 1. 同時按住「R」及「B」以卸除 SD 卡
 1. 將 SD 卡插入電腦中
-1. 從 SD 卡中的 `/gm9/out/` 資料夾中複製 `<serialnumber>_nandmin_###.bin` 至電腦中安全的地方
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + 建議備份至各個不同的地方(比如雲端硬碟中)
   + 未來如果您不小心玩到磚機，這備份將會是您的救命恩人
-1. 複製完畢後，將 `/gm9/out/` 資料夾中的 `<serialnumber>_nandmin_###.bin` 檔案刪除
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. **在繼續前，請先將 SD 卡中的所有檔案在電腦上備份起來；接下來的步驟將會刪除所有卡上的檔案**
 
-##### 第八節 — 格式化 SD 卡
+#### Section VIII - Format SD card
 
 1. 將 SD 卡插回主機中
 1. 按「Home」鍵以叫出主選單
@@ -162,5 +164,5 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 
 ___
 
-返回至[完成安裝](finalizing-setup)。
+### Return to [Finalizing Setup](finalizing-setup).
 {: .notice--primary}
