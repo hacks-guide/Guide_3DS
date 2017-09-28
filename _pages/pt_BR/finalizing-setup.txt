@@ -2,6 +2,8 @@
 title: "Finalizando a instalação"
 ---
 
+{% include toc title="Table of Contents" %}
+
 #### Visão geral das etapas
 
 O arquivo `boot.firm` é o que é executado pelo boot9strap depois que ele acaba de carregar a NAND, e ele pode ser qualquer payload arm9 válido no formato FIRM. Este arquivo pode ser substituído a qualquer momento, embora o Luma3DS permita a inicialização de outros payloads arm9 no formato FIRM usando o chainloader do Luma3DS.
@@ -16,7 +18,7 @@ Durante este processo, também configuramos alguns programas como os seguintes:
 +  **GodMode9** *(Ferramenta multiuso com funções de NAND e cartucho)*
 +  **Homebrew Launcher Loader** *(inicia o Homebrew Launcher como um aplicativo normal, graças à mágica do Rosalina)*
 
-#### O que você precisa
+### What you need
 
 * The latest release of [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) *(the `.cia` file)*
 * The latest release of [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
@@ -24,12 +26,12 @@ Durante este processo, também configuramos alguns programas como os seguintes:
 * The latest release of [DSP1](https://github.com/zoogie/DSP1/releases/latest)
 * The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) *(the `.cia` and `.3dsx` files)*
 * The latest fork of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(the `.cia` file)*
-* [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
-* [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
+* [`setup_ctrnand_luma3ds.gm9`]({{ "/gm9_scripts/setup_ctrnand_luma3ds.gm9" | absolute_url }})
+* [`cleanup_sd_card.gm9`]({{ "/gm9_scripts/cleanup_sd_card.gm9" | absolute_url }})
 
-#### Instruções
+### Instructions
 
-##### Seção I - Trabalho Preparatório
+#### Section I - Prep Work
 
 1. Desligue seu dispositivo
 1. Insira o cartão SD no seu computador
@@ -41,7 +43,7 @@ Durante este processo, também configuramos alguns programas como os seguintes:
 1. Copy `DSP1.cia` to the `/cias/` folder on your SD card
 1. Copy `Anemone3DS.cia` to the `/cias/` folder on your SD card
 
-    ![]({{ base_path }}/images/screenshots/cias-file-layout.png)
+    ![]({{ "/images/screenshots/cias-file-layout.png" | absolute_url }})
     {: .notice--info}
 
 1. Create a folder named `payloads` in the `luma` folder on your SD card if it does not already exist
@@ -51,15 +53,15 @@ Durante este processo, também configuramos alguns programas como os seguintes:
 1. Copie o`setup_ctrnand_luma3ds.gm9` para a pasta `/gm9/scripts/`no seu cartão de memória
 1. Copy `cleanup_sd_card.gm9` to the `/gm9/scripts/` folder on your SD card
 
-    ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
+    ![]({{ "/images/screenshots/finalizing-setup-file-layout.png" | absolute_url }})
     {: .notice--info}
 
 1. Reinsira seu cartão SD no seu dispositivo
 1. Ligue o seu dispositivo
 
-##### Section II - Updating the System
+#### Section II - Updating the System
 
-Se, enquanto você seguia uma versão antiga deste guia, você fez um CTRTransfer no seu *New 3DS* para 2.1.0, agora é o momento de [restaurar seu backup do NAND](godmode9-usage#nand_restore) antes de fazer esta seção.
+If, while following a previous version of this guide, you CTRTransfered your *New 3DS* to 2.1.0, now is the time to [restore your NAND backup](godmode9-usage#restoring-a-nand-backup) before doing this section.
 {: .notice--danger}
 
 Se, antes de seguir este guia, você já possuia uma instalação EmuNAND e gostaria de mover o conteúdo da EmuNAND anterior para sua nova SysNAND com CFW, agora é hora de [seguir Mover EmuNAND](move-emunand) antes de realizar esta seção.
@@ -70,7 +72,7 @@ Se, antes de seguir este guia, você já possuia uma instalação EmuNAND e gost
   + Se isso der um erro, defina suas configurações de DNS para "Automático"
   + If this still gives you an error, [follow CTRTransfer](ctrtransfer), then try updating again
 
-##### Seção III - Iniciando o FBI
+#### Section III - Launching FBI
 
 1. Inicie o aplicativo Download Play
 1. Aperte (L) + (Baixo) + (Select) ao mesmo tempo para abrir o menu do Rosalina
@@ -84,19 +86,19 @@ Se, antes de seguir este guia, você já possuia uma instalação EmuNAND e gost
 1. Seu dispositivo deve abrir o Homebrew Launcher
 1. Abra o FBI da lista de homebrews
 
-##### Section IV - Installing CIAs
+#### Section IV - Installing CIAs
 
 1. Navegue para `SD` -> `cias`
 1. Selecione "\<current directory>"
 1. Select the "Install and delete all CIAs" option, then press (A) to confirm
 1. Aperte (Home), depois feche o Download Play
 
-##### Section V - DSP Dump
+#### Section V - DSP Dump
 
 1. Inicie o aplicativo DSP1
 1. Quando completado, aperte (B) para auto excluir o app e retornar ao Menu HOME
 
-##### Seção VI - Luma3DS & CTRNAND
+#### Section VI - CTRNAND Luma3DS
 
 1. Inicie o GodMode9 segurando (Start) durante a inicialização
 1. Se você for solicitado para criar um backup de arquivos essenciais, aperte (A) pra fazê-lo, e depois aperte (A) para continuar quando ele for concluído
@@ -110,7 +112,7 @@ Se, antes de seguir este guia, você já possuia uma instalação EmuNAND e gost
 1. Aperte (A) para continuar
 1. Aperte (A) para bloquear as permissões de escrita
 
-##### Seção VII - Backup da SysNAND
+#### Section VII - Backup SysNAND
 
 1. Aperte (Home) para abrir o menu de ações
 1. Selecione "Scripts..."
@@ -120,13 +122,13 @@ Se, antes de seguir este guia, você já possuia uma instalação EmuNAND e gost
 1. Aperte (A) para continuar
 1. Segure (R) e aperte (B) ao mesmo tempo para ejetar o cartão SD
 1. Insira o cartão SD no seu computador
-1. Copie `<serialnumber>_nandmin_###.bin` da pasta `/gm9out/` no seu cartão SD para um local seguro no seu computador
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Faça backups em diversos lugares (tais como armazenamento de arquivos online)
   + Este backup vai salvá-lo de um brick caso algo dê errado no futuro
-1. Apague `<serialnumber>_nandmin_###.bin` da pasta `/gm9/out/` no seu cartão SD após copiá-lo
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. Reinsira seu cartão SD no seu dispositivo
 
-##### Section VIII - Cleanup SD Card
+#### Section VIII - Cleanup SD Card
 
 1. Aperte (Home) para abrir o menu de ações
 1. Selecione "Scripts..."
