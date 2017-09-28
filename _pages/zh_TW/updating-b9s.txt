@@ -2,6 +2,8 @@
 title: "更新 B9S" #
 ---
 
+{% include toc title="Table of Contents" %}
+
 本頁面適用於已安裝 boot9strap 且想將其更新至最新版的使用者。
 
 {% capture notice-1 %}
@@ -20,16 +22,16 @@ title: "更新 B9S" #
 
 <div class="notice--danger">{{ notice-1 | markdownify }}</div>
 
-#### 必備項目
+### What you need
 
 * 最新版的 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * 最新版的 [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(正常版的 boot9strap；非 `devkit` 或 `ntr` 檔案)*
 * 最新版的 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z` 檔案)*
-* [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
+* [`cleanup_sd_card.gm9`]({{ "/gm9_scripts/cleanup_sd_card.gm9" | absolute_url }})
 
-#### 操作說明
+### Instructions
 
-##### 第一節 — 準備工作
+#### Section I - Prep Work
 
 在本節中，請覆蓋所有 SD 卡中可能相衝的檔案。
 {: .notice--info}
@@ -41,7 +43,7 @@ title: "更新 B9S" #
 1. 解壓 boot9strap `.zip` 的 `boot9strap.firm` 及 `boot9strap.firm.sha` 檔案至 SD 卡的 `/boot9strap/` 資料夾中
 1. 將 SD 卡插回主機中
 
-##### 第二節 — 安裝 boot9strap
+#### Section II - Installing boot9strap
 
 1. 重啟時按住「Start」鍵啟動 Luma3DS 選單
 1. 按「A」鍵啟動 SafeB9SInstaller
@@ -50,14 +52,14 @@ title: "更新 B9S" #
 1. 完成後，在按下「A」鍵後按住「Start」鍵以重啟您的裝置至 Luma3DS 加載選單中
   + If you encounter an error booting your device after the B9S update, just continue to fix it
 
-##### 第三節 — 更新 Luma3DS
+#### Section III - Update Luma3DS
 
 1. 關閉您的主機
 1. 將 SD 卡插入電腦中
 1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card, replacing the existing file
 1. 將 SD 卡插回主機中
 
-##### 第四節 — 清理 SD 卡
+#### Section IV - Cleanup SD Card
 
 請注意，本腳本將會從您的 SD 卡中移除 `/boot9strap/` 及 `/cias/` 資料夾
 {: .notice--danger}
