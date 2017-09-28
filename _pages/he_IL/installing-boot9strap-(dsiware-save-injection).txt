@@ -2,6 +2,8 @@
 title: "התקנת boot9strap (הזרקת שמירת DSiWare)"
 ---
 
+{% include toc title="Table of Contents" %}
+
 שימו לב שאם יש לכם קבצי מטען אחרים מ`GodMode9.firm` בתיקיית `/luma/payloads/` על כרטיס הSD שלכם, החזקת (Start) בהפעלה תציג תפריט שבו תצטרכו להשתמש בחיצים ובכפתור ה(A) כדי לבחור ב"GodMode9" בשביל ההוראות האלה. 
 
 **כדי להשתמש בקישורי מגנט, תצטרכו כלי טורנט כמו [Deluge](http://dev.deluge-torrent.org/wiki/Download)**
@@ -11,7 +13,7 @@ title: "התקנת boot9strap (הזרקת שמירת DSiWare)"
 אם אתם לא משתמשים ב`.firm` הנכון בשביל קונסולת היעד, תקבלו בריק! שימו לב שאתם מורידים ומשתמשים בקובץ הנכון!
 {: .notice--danger}
 
-#### מה שאתם צריכים
+### What you need
 
 + שתי קונסולות ממשפחת ה3DS
   + **3DS המקור**: הקונסולה שמריץ סוג כלשהוא של פריצה (כמו boot9strap או arm9loaderhax) *על הגרסא החדשה*
@@ -31,9 +33,9 @@ title: "התקנת boot9strap (הזרקת שמירת DSiWare)"
   + <i class="fa fa-magnet" aria-hidden="true" title="זה לינק מגנטי. תשתמשו בתוכנת טורנט כדי להוריד את הקובץ."></i> - [`2.54-0_11.4_OLD.firm`](magnet:?xt=urn:btih:0dd89d42ad711f770da899af05ee162ede0d0070&dn=2.54-0_11.4_OLD.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
   + <i class="fa fa-magnet" aria-hidden="true" title="זה לינק מגנטי. תשתמשו בתוכנת טורנט כדי להוריד את הקובץ."></i> - [`2.54-0_11.4_NEW.firm`](magnet:?xt=urn:btih:3b59dd43eec3edb133555f58d1180bfb196acbb4&dn=2.54-0_11.4_NEW.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 
-#### הוראות
+### Instructions
 
-##### חלק I - הכנות
+#### Section I - Prep Work
 
 תשתמשו ב[מנהל שמירות](https://github.com/J-D-K/JKSM/releases/latest) כדי לגבות כל שמירה שאכפת לכם ממנה על *קונסולת היעד* (היא תהיה מפורמטת!)
 {: .notice--warning}
@@ -65,7 +67,7 @@ title: "התקנת boot9strap (הזרקת שמירת DSiWare)"
 1. תכניסו מחדש את הכרטיסים לקונסולות המתאימות
 1. תלחצו (Start) ב**קונסולת המקור** כדי לאתחל
 
-##### חלק II - התקנת השמירה
+#### Section II - Installing the Save
 
 1. תפעילו **את ה3DS הפרוץ** תוך לחיצה על (Start) על מנת להפעיל את GodMode9
 1. נווטו ל`[0:] SDCARD`
@@ -98,9 +100,9 @@ title: "התקנת boot9strap (הזרקת שמירת DSiWare)"
   + **The Legend of Zelda: Four Swords**: פשוט תפעילו את המשחק
   + אם אתם מקבלים שגיאה לגבי `boot.nds` על מסך לבן, **הפריצה עבדה**
   + אם המשחק עובד כרגיל ולא נותן לכם את השגיאה, תעצרו ותנסו להבין מה לא הלך טוב
-  + אם אתם מקבלים מסך שחור, [עקבו אחרי המדריך הבא](troubleshooting#twl_broken)
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#dsi--ds-functionality-is-broken-after-completing-the-guide)
 
-#### חלק III - ביצוע System Transfer
+#### Section III - System Transfer
 
 1. **תגבו כל קובץ בשני כרטיסי הSD של הקונסולות לשתי תיקייות שונות במחשב (תזכרו מי של מי)!**
 1. תכניסו מחדש את הכרטיסים לקונסולות המתאימות
@@ -118,19 +120,19 @@ title: "התקנת boot9strap (הזרקת שמירת DSiWare)"
     + דרך איטית: אם אין לכם דרך להעביר את המידע על מחשב תשתמשו באופציה של "Wireless Transfer" **מלא** (אופציה 1).
 1. לכו ל[קישור הזה](http://en-americas-support.nintendo.com/app/answers/detail/a_id/227/) ותעקבו אחרי ההוראות הרשמיות של נינטנדו לSystem Transfer ממערכת אחת לשנייה בזמן שאתם זוכרים את מה שקראתם הרגע
 
-##### חלק IV - שחזור קונסולת המקור
+#### Section IV - Restoring the source 3DS
 
 1. על **קונסולת המקור** תסיימו את ההגדרה הראשונית
 1. תבחרו אחד מהבאים
     + תעשו את שאר הסעיפים ואז את המדריך המלא על **קונסולת היעד**, ואז תחכו שבוע *(אל תשחזרו את גיבוי הNAND שלכם לפני שאתם עושים System Transfer)*, ואז תעשו System Transfer בחזרה מ**קונסולת היעד** אל **קונסולת המקור** *(תזכרו שאתם לא יכולים לעשות System Transfer מNew 3DS או New 2DS אל Old 3DS או Old 2DS)*
     + תתקשרו לנינטנדו ותגידו להם שאין לכם גישה לקונסולה שהNNID שלכם מחובר אליה (שזה **קונסולת היעד** במקרה הזה) ושאתם רוצים אותו מחובר לקונסולה אחרת (שהיא **קונסולת המקור** במקרה הזה)
-    + אתם יכולים גם פשוט [למחוק את הNNID](https://3ds.guide/troubleshooting#rm_nnid) מ**קונסולת המקור** אם אתם מעדיפים שהוא ישאר על **קונסולת היעד**
+    + You can also just [remove the NNID](https://3ds.guide/troubleshooting#removing-an-nnid-without-formatting-your-device) from **the source 3DS** if you'd prefer it remain on **the target 3DS**
 1. תפעילו מחדש **את ה3DS הפרוץ** תוך לחיצה על (Start) על מנת להפעיל את GodMode9
 1. אם תתבקשו לעשות גיבוי של קבצים חיוניים, תלחצו (A) כדי לעשות זאת, ואז תלחצו (A) כדי להמשיך אחרי שזה סיים
 1. אם אתם מתבקשים לתקן את זמן ותאריך הRTC, תלחצו (A) כדי לעשות זאת, ואז תלחצו (A) כדי להמשיך
   + שימו לב, אם הייתם צריכים לתקן את תאריך וזמן הRTC, תצטרכו לתקן את הזמן בהגדרות המערכת גם כן אחרי המדריך הזה
 1. נווטו אל `[0:] SDCARD` ושם אל `gm9` ואז אל `out`
-1. תלחצו (A) על `<serialnumber>_nandmin_###.bin` כדי לבחור בו, ואז תבחרו ב "NAND image options...", ושם ב "Restore SysNAND (safe)"
+1. Press (A) on `<date>_<serialnumber>_sysnand_###.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
 1. לחצו (A) כדי לפתוח גישת שכתוב לSysNAND, ואז תלחצו על המקשים בסדר הנכון
   + זה לא ישכתב את התקנת boot9strap שלכם
 1. תלחצו על המקשים בסדר הנכון כדי לפתוח גישת כתיבה לSysNAND (בlvl1)
@@ -139,7 +141,7 @@ title: "התקנת boot9strap (הזרקת שמירת DSiWare)"
 1. תלחצו (A) כדי לנעול הרשאות כתיבה אם תתבקשו
 1. תלחצו (Start) כדי לאתחל את **קונסולת המקור**
 
-##### חלק V - גיבוי הFIRM של קונסולת היעד
+#### Section V - Backing up the target 3DS's FIRM
 
 1. תעתיקו את הקובץ `boot.firm` מתוך ה`.7z` של Luma3DS לתוך ה-SD שלכם
 1. תעתיקו את `boot.nds` (שזה B9STool) לשורש הSD של **קונסולת היעד**
@@ -159,7 +161,7 @@ title: "התקנת boot9strap (הזרקת שמירת DSiWare)"
 1. תשימו את כרטיס הSD שלכם במחשב, ואז תעתיקו את `F0F1_NEW3DS.bin` או `F0F1_OLD3DS.bin` (תלוי במכשיר) מתיקיית `boot9strap` למקום בטוח; תעשו גיבויים בכמה מקומות; זה ישמור עליכם מבריק אם משהו לא הולך כראוי
 1. תכניסו מחדש את כרטיס הSD שלכם אל **קונסולת היעד**
 
-##### חלק VI - התקנת הFIRM הפרוץ על קונסולת היעד
+#### Section VI - Flashing the target 3DS's FIRM
 
 **אל תשתמשו בb9sTool על קונסולה שיש לה כבר את arm9loaderhax מותקן או שתקבלו בריק!**
 {: .notice--danger}
@@ -175,10 +177,10 @@ title: "התקנת boot9strap (הזרקת שמירת DSiWare)"
   + אולי תצטרכו לאלץ כיבוי על ידי החזקת כפתור ההפעלה
 1. תפעילו את **קונסולת היעד**
 
-##### חלק VII - הגדרת Luma3DS
+#### Section VII - Configuring Luma3DS
 
 1. הקןנסולה שלכם צריכה לאתחל לתפריט ההגדרות של Luma3DS
-  + אם אתם מקבלים מסך שחור, [עקבו אחרי המדריך הבא](troubleshooting#ts_sys_b9s)
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 1. השתמשו במקש (A) ובמקשי החיצים על מנת להפעיל את ההגדרות הבאות:    
   + **"Show NAND or user string in System Settings"**
 1. לחצו על (Start) על מנת לשמור ולהפעיל מחדש
