@@ -2,7 +2,9 @@
 title: "Installing boot9strap (2xrsa)"
 ---
 
-#### What ye need
+{% include toc title="Table of Contents" %}
+
+### What you need
 
 * Th' latest release 'o [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * Th' latest release 'o [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not th' `devkit` file, not th' `ntr` file)*
@@ -10,9 +12,9 @@ title: "Installing boot9strap (2xrsa)"
 * Th' latest release 'o [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(th' `.7z` file)*
 * Th' Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
 
-#### Instructions
+### Instructions
 
-##### Section I - Set th' sails (prep work)
+#### Section I - Prep Work
 
 1. Power off ye device
 1. Insert ye SD card into ye computer
@@ -22,32 +24,32 @@ title: "Installing boot9strap (2xrsa)"
 1. Copy `boot9strap.firm` 'n `boot9strap.firm.sha` from th' boot9strap `.zip` to th' `/boot9strap/` folder on ye SD card
 1. Copy `arm9.bin` and `arm11.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
 
-    ![]({{ base_path }}/images/screenshots/boot9strap-2xrsa-file-layout.png)
+    ![]({{ "/images/screenshots/boot9strap-2xrsa-file-layout.png" | absolute_url }})
     {: .notice--info}
 
 1. Reinsert ye SD card into ye device
 1. Power on your device
 
-##### Section II - Launching SafeB9SInstaller
+#### Section II - Launching SafeB9SInstaller
 
 1. Launch the browser and go to the following URL on your device
   + `http://2xrsa.3ds.guide`
   If ye be on a New 3DS, New 2DS, or Old 2DS 'n left Wireless Communication off, ye can re-enable th' wireless by removin' th' battery 'n unpluggin' th' charger fer several seconds then bootin' back up
   + If you get the error "This service is not available in your region", use the System Settings to set your device's country to match the NAND region you installed with 2.1.0 CTRTransfer
   + If you forgot to disable parental controls before CTRTransfering or otherwise cannot access wireless settings, note that the device will autoconnect to any network named `attwifi` with no password
-  + If ye get another error, [follow 'tis troubleshootin' guide](troubleshooting#ts_browser)
+  + If you get another error, [follow this troubleshooting guide](troubleshooting#a-browser-based-exploit-is-not-working)
 1. If the exploit was successful, you will have booted into SafeB9SInstaller
 
-##### Section III - Installing boot9strap
+#### Section III - Installing boot9strap
 
 1. Wait fer all safety checks to be completed
 1. When prompted, input th' key combo given to be installin' boot9strap
 1. Once it has completed, press (A) to be rebootin' ye device
 
-##### Section IV - Configurin' Luma3DS
+#### Section IV - Configuring Luma3DS
 
 1. Ye device should have rebooted into th' Luma3DS configuration menu
-  + If ye get a black screen, [follow 'tis troubleshootin' guide](troubleshooting#ts_sys_b9s)
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 1. Use th' (A) button 'n th' D-Pad to turn on th' followin':    
   + **"Show NAND or user string in System Settings"**
 1. Press (Start) to save 'n reboot
@@ -55,7 +57,7 @@ title: "Installing boot9strap (2xrsa)"
 
 ___
 
-Note that *New 3DS* users who ended up on 2.1.0 after a CTRTransfer *must* be [restorin' their NAND backup](godmode9-usage#nand_restore) before bein' off to th' [Finalizin' Setup](finalizing-setup) page.
+New 3DS 2.1.0 users *must* [restore their NAND backup](godmode9-usage#nand_restore) before going to the [Finalizing Setup](finalizing-setup) page.
 {: .notice--danger}
 
 Continue to [Finalizin' Setup](finalizing-setup)
