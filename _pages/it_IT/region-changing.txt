@@ -2,6 +2,8 @@
 title: "Cambiare regione"
 ---
 
+{% include toc title="Table of Contents" %}
+
 In questa sezione aggiuntiva verrà spiegato come cambiare regionalità su SysNAND con CFW. Per questo scopo, verrà eseguito un CTRTransfer alla versione 11.5.0 della regione alla quale si desidera passare.
 
 Tuttavia, il cambio della regione è quasi completamente inutile in quanto Luma3DS supporta l'avvio di giochi di altre regioni e l'[emulazione regionale](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage) su titoli individuali.
@@ -23,11 +25,11 @@ Il cambio regione tramite CTRTransfer (effettuato in questa guida) sembra far sm
 DEVI aver già installato Luma3DS e uno tra boot9strap e arm9loaderhax per poter proseguire.
 {: .notice--danger}
 
-#### Cosa serve
+### What you need
 
 * L'ultima release di [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * L'ultima versione di [FBI](https://github.com/Steveice10/FBI/releases/latest) *(il file `.3dsx`)*
-* [`ctrtransfer_ticket_copy.gm9`]({{ base_path }}/gm9_scripts/ctrtransfer_ticket_copy.gm9)
+* [`ctrtransfer_ticket_copy.gm9`]({{ "/gm9_scripts/ctrtransfer_ticket_copy.gm9" | absolute_url }})
 * L'immagine CTRTransfer 11.5.0 relativa alla tua console e alla sua regione     
 *(se la tua console non rientra in nessuna di queste regioni, scegline una qualunque compatibile con la tua console)*:    
   +    <i class="fa fa-magnet" aria-hidden="true" title="Questo è un link magnet. Per scaricare il file devi utilizzare un client torrent."></i> - [New 3DS o 2DS - 11.5.0 - EUR - CTRTransfer](magnet:?xt=urn:btih:465f1048f81e8e5c651ce2a4d9df48fec88d1099&dn=11.5.0-38E_ctrtransfer_n3ds.zip&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce)    
@@ -39,9 +41,9 @@ DEVI aver già installato Luma3DS e uno tra boot9strap e arm9loaderhax per poter
   +    <i class="fa fa-magnet" aria-hidden="true" title="Questo è un link magnet. Per scaricare il file devi utilizzare un client torrent."></i> - [Old 3DS o 2DS - 11.5.0 - JPN - CTRTransfer](magnet:?xt=urn:btih:d8913b4c0da224e8852fa2f685c41ddbce5310bc&dn=11.5.0-38J_ctrtransfer_o3ds.zip&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce)     
   +    <i class="fa fa-magnet" aria-hidden="true" title="Questo è un link magnet. Per scaricare il file devi utilizzare un client torrent."></i> - [Old 3DS o 2DS - 11.5.0 - USA - CTRTransfer](magnet:?xt=urn:btih:2708089605ca47387fa64e996a699eedd18031e8&dn=11.5.0-38U_ctrtransfer_o3ds.zip&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce)    
 
-#### Istruzioni
+### Instructions
 
-##### Sezione I - Preparazione
+#### Section I - Prep Work
 
 1. Spegni il tuo 3DS
 1. Inserisci la scheda SD nel tuo computer
@@ -53,7 +55,7 @@ DEVI aver già installato Luma3DS e uno tra boot9strap e arm9loaderhax per poter
 1. Copia il file `FBI.3dsx` nella cartella `/3ds/` nella tua scheda SD
 1. Reinserisci la scheda SD nel Nintendo 3DS
 
-##### Sezione II - CTRTransfer
+#### Section II - CTRTransfer
 
 1. Avvia GodMode9 tenendo premuto (Start) durante l'accensione della console
 1. Se ti viene richiesto di creare un backup dei file essenziali, premi (A) per accettare, e al termine di nuovo (A) per proseguire
@@ -81,7 +83,7 @@ DEVI aver già installato Luma3DS e uno tra boot9strap e arm9loaderhax per poter
   + Gli aggiornamenti effettuati usando B9S + Luma (ora installato) sono sicuri
   + Se ottieni un errore, imposta i DNS della connessione di rete in modo che vengano ottenuti automaticamente
 
-##### Sezione III - Avviare FBI
+#### Section III - Launching FBI
 
 1. Avvia l'applicazione "Modalità download"
 1. Premi simultaneamente i pulsanti (L) + (Giù) + (Select) per aprire il menu di Rosalina
@@ -94,7 +96,7 @@ DEVI aver già installato Luma3DS e uno tra boot9strap e arm9loaderhax per poter
 1. Avvia l'applicazione "Modalità download"
 1. La console dovrebbe ora avviare l'Homebrew Launcher
 
-##### Sezione IV - Ripristino dei Ticket
+#### Section IV - Reinstalling Tickets
 
 Se lo script non ha trovato alcun ticket dell'utente, salta questa sezione
 {: .notice--info}
@@ -114,7 +116,7 @@ Se lo script non ha trovato alcun ticket dell'utente, salta questa sezione
   + Premi il pulsante (B) per rifiutare l'installazione di ticket dal CDN.
 1. Premi il pulsante HOME per uscire da FBI
 
-##### Sezione V - Cambio dell'area di residenza
+#### Section V - Region settings
 
 1. Avvia le Impostazioni della console
 1. Vai su "Impostazioni generali", poi "Profilo", quindi "Area di residenza"
@@ -122,7 +124,7 @@ Se lo script non ha trovato alcun ticket dell'utente, salta questa sezione
 1. Se richiesto, non è necessario selezionare uno stato
 1. Dopo aver cambiato l'area di residenza, aggiorna la SysNAND all'ultima versione del software di sistema
 
-##### Sezione VI - Rimozione del file immagine del CTRTransfer
+#### Section VI - Remove CTRTransfer image
 
 1. Avvia GodMode9 tenendo premuto (Start) durante l'accensione della console
 1. Entra nella cartella `[0:] SDCARD` -> `gm9`
