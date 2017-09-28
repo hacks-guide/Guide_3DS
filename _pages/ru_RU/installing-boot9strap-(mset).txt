@@ -2,9 +2,11 @@
 title: "Установка boot9strap (MSET)"
 ---
 
+{% include toc title="Table of Contents" %}
+
 Если вы взламывали ваше устройство ранее и у вас установлена кастомная прошивка на основе EmuNAND, помните, что данное руководство работает только с SysNAND и вы должны выполнять вся шаги находясь в SysNAND. Помните, что RedNAND и EmuNAND - немного разные реализации [одного и того же](http://3dbrew.org/wiki/NAND_Redirection) (англ.).
 
-#### Что понадобится
+### What you need
 
 * Свежая версия [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * Свежая версия [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(стандартный boot9strap; не `devkit-файл`, не `ntr-файл`)*
@@ -12,9 +14,9 @@ title: "Установка boot9strap (MSET)"
 * Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
 * Любой флешкартридж для DS, работающий на вашей версии прошивки
 
-#### Инструкция
+### Instructions
 
-##### Часть I - Подготовительные работы
+#### Section I - Prep Work
 
 1. Выключите консоль
 1. Insert your SD card into your compute
@@ -24,14 +26,14 @@ title: "Установка boot9strap (MSET)"
 1. Скопируйте `boot9strap.firm` и `boot9strap.firm.sha` из `.zip-архива` boot9strap в папку `/boot9strap/` в корне SD-карты
 1. Скопируйте `SafeB9SInstaller.dat` из `.zip-ахрива` SafeB9SInstaller в корень SD-карты
 
-    ![]({{ base_path }}/images/screenshots/boot9strap-mset-file-layout.png)
+    ![]({{ "/images/screenshots/boot9strap-mset-file-layout.png" | absolute_url }})
     {: .notice--info}
 
 1. Вставьте SD-карту обратно в консоль
 1. Скопируйте `SafeB9SInstaller.dat` из `.zip-ахрива` SafeB9SInstaller в корень SD-карты
 1. Включите консоль
 
-##### Часть II - Запуск SafeB9SInstaller
+#### Section II - Launching SafeB9SInstaller
 
 1. Запустите флешкартридж DS
 1. Запустите `SafeB9SInstaller.nds`, используя флешкартридж
@@ -41,16 +43,16 @@ title: "Установка boot9strap (MSET)"
 1. Перезагрузите консоль, зайдите в "Системные настройки" (System Settings), затем "Прочие настройки" (Other Settings), затем "Профиль" (Profile), затем "Профиль Nintendo DS" (Nintendo DS Profile)
 1. Если эксплойт сработал, запустится SafeB9SInstaller
 
-##### Часть III - Установка boot9strap
+#### Section III - Installing boot9strap
 
 1. Дождитесь окончания всех проверок безопасности
 1. При появлении запроса, введите указанную комбинацию кнопок для установки boot9strap
 1. После завершения процесса, нажмите (A) для перезагрузки
 
-##### Часть IV - Настройка Luma3DS
+#### Section IV - Configuring Luma3DS
 
 1. Ваша консоль должна перезагрузиться в меню конфигурации Luma3DS
-  + Если экран остаётся чёрным, то перейдите к разделу [проблемы и их решения](troubleshooting#ts_sys_b9s)
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 1. Нажимая (A) выберите следующие пункты:    
   + **"Show NAND or user string in System Settings"**
 1. Нажмите (Start), чтобы сохранить настройки и перезагрузиться
