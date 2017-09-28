@@ -2,6 +2,8 @@
 title: "Transférer votre EmuNAND vers votre SysNAND"
 ---
 
+{% include toc title="Table of Contents" %}
+
 Ceci est une section complémentaire qui vous permettra de déplacer le contenu de votre EmuNAND vers votre CFW SysNAND, puis de supprimer l'ancienne partition EmuNAND. Notez que les termes EmuNAND et RedNAND font référence à des implémentations légèrement différentes du [même concept](http://3dbrew.org/wiki/NAND_Redirection).
 
 Notez que si vous avez n’importe quel autre payload que `GodMode9.firm` dans le dossier `/luma/payloads/` sur votre carte SD, appuyez (Start) au démarrage affiche un "chainloader menu" où vous devrez utiliser le D-Pad et le bouton (A) pour sélectionner "GodMode9" .
@@ -9,7 +11,7 @@ Notez que si vous avez n’importe quel autre payload que `GodMode9.firm` dans l
 **Vous devez avoir déjà installé Luma3DS et boot9strap ou arm9loaderhax pour utiliser ceci.**
 {: .notice--danger}
 
-#### Ce dont vous aurez besoin
+### What you need
 
 * Une EmuNAND existante
 * La dernière version de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
@@ -17,7 +19,7 @@ Notez que si vous avez n’importe quel autre payload que `GodMode9.firm` dans l
 
 ### Instructions
 
-##### Section I - Préparation
+#### Section I - Prep Work
 
 1. Éteignez votre 3DS
 1. Insérez votre carte SD dans votre ordinateur
@@ -25,7 +27,7 @@ Notez que si vous avez n’importe quel autre payload que `GodMode9.firm` dans l
 1. Copiez le dossier `gm9` de GodMode9 `.zip` à la racine de votre carte SD
 1. Retirez la carte SD de votre ordinateur et réinsérez-là dans votre 3DS
 
-##### Section II - Enregistrer les sauvegardes de vos DSIWare (présentes sur votre SysNAND)
+#### Section II - Backup SysNAND DSiWare Saves
 
 SI vous n'avez pas de DSiWares ou de sauvegardes (de DSiwares) auxquels vous tenez, vous pouvez ignorer cette section.
 {: .notice--info}
@@ -39,7 +41,7 @@ SI vous n'avez pas de DSiWares ou de sauvegardes (de DSiwares) auxquels vous ten
   + Ce processus peut prendre un certain temps si vous avez beaucoup de jeux DSiWare
 1. Appuyez deux fois sur (B) pour revenir au menu principal
 
-##### Section III - Enregistrer les sauvegardes GBA VC Saves
+#### Section III - Backup GBA VC Saves
 
 SI vous n'avez pas de jeux GBA en VC ou de sauvegardes (de GBA VC) auxquels vous tenez, vous pouvez ignorer cette section.
 {: .notice--info}
@@ -50,7 +52,7 @@ Notez que ce n’est pas nécessaire pour tout autre type de jeux Console Virtue
 The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
 {: .notice--info}
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by holding (R) and pressing (A) on the GodeMode9 main menu, then selecting "Search for titles".
+To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
 {: .notice--info}
 
 1. Effectuez la procédure suivante pour chaque jeu GBA VC pour chaque jeu GBA VC dont vous souhaitez conserver la sauvegarde:
@@ -65,7 +67,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
   + Press (A) to continue
   + Appuyez sur (Start) pour redémarrer votre système
 
-##### Section IV - Copier votre EmuNAND sur votre SysNAND
+#### Section IV - Copy EmuNAND to SysNAND
 
 1. Ouvrez Godmode9 en maintenant (Start) au démarrage
 1. Naviguez vers `[E:] EMUNAND VIRTUAL`
@@ -78,7 +80,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Appuyez (B) pour décliner reverrouiller autorisations en écriture si vous êtes invité
 1. Appuyez sur (B) pour revenir au menu principal
 
-##### Section V - Restaurer les sauvegardes DSiWare
+#### Section V - Restore DSiWare Saves
 
 Si vous n'avez pas fait de copies de sauvegardes DSiWare, ignorez cette section.
 {: .notice--info}
@@ -95,7 +97,7 @@ Si vous n'avez pas fait de copies de sauvegardes DSiWare, ignorez cette section.
 1. Appuyez (B) pour décliner reverrouiller autorisations en écriture si vous êtes invité
 1. Appuyez deux fois sur (B) pour revenir au menu principal
 
-##### Section VI - Restaurer les sauvegardes GBA VC
+#### Section VI - Restore GBA VC Saves
 
 Si vous n'avez pas fait de copies de sauvegardes GBA VC, ignorez cette section.
 {: .notice--info}
@@ -123,7 +125,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
   + Quittez le jeu GBA VC
 1. Ouvrez Godmode9 en maintenant (Start) au démarrage
 
-##### Section VII - Sauvegarder votre SysNAND
+#### Section VII - Backup SysNAND
 
 1. Appuyez sur (Home) pour faire apparaître le menu d’actions (action menu)
 1. Sélectionnez "Scripts"
@@ -133,13 +135,13 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Appuyez sur (A) pour continuer
 1. Maintenez (R) et appuyez sur (B) en même temps pour éjecter votre carte SD
 1. Insérez votre carte SD dans votre ordinateur
-1. Copiez `<serialnumber>_nandmin_###.bin` du dossier `/gm9/out/` sur votre carte SD vers un emplacement sûr sur votre ordinateur
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Faites des sauvegardes dans plusieurs endroits (tels que des stockages de fichiers en ligne par exemple)
   + Cette sauvegarde vous sauvera d'un brick si quoi que ce soit se passe mal à l'avenir
-1. Supprimez `<serialnumber>_nandmin_###.bin` dans le dossier `/gm9/out/` sur votre carde SD après l'avoir copié
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. **Faites une copie de tous les fichiers présents sur votre carte SD dans un dossier sur votre ordinateur ; les étapes suivantes effaceront tous les fichiers de votre carte SD**
 
-##### Section VIII - Formater la Carte SD
+#### Section VIII - Format SD card
 
 1. Retirez la carte SD de votre ordinateur et réinsérez-là dans votre 3DS
 1. Appuyez sur (Home) pour faire apparaître le menu d’actions (action menu)
@@ -162,5 +164,5 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 
 ___
 
-Retournez vers [Finalisation de l'installation](finalizing-setup).
+### Return to [Finalizing Setup](finalizing-setup).
 {: .notice--primary}
