@@ -2,6 +2,8 @@
 title: "Instalar boot9strap (Inyección de guardado DSiWare)"
 ---
 
+{% include toc title="Table of Contents" %}
+
 Ten en cuenta que si tienes archivos de payloads distintos de `GodMode9.firm` en la carpeta `/luma/payloads/` en tu tarjeta SD, al mantener (Start) al inicio se desplegará un "chainloader menu" donde tendrás que usar el D-Pad y pulsar (A) para seleccionar "GodMode9", para esas instrucciones. 
 
 Para utilizar los enlaces [magnet](https://es.wikipedia.org/wiki/Magnet) de esta página, vas a necesitar un cliente torrent como [Deluge](http://dev.deluge-torrent.org/wiki/Download)
@@ -11,7 +13,7 @@ Antes de proceder, asegúrate de leer todos los avisos y advertencias al [Instal
 ¡Si no usas el `.firm` correspondiente a la 3DS de destino, la INUTILIZARÁS! ¡Asegúrate de descargar y usar el correcto!
 {: .notice--danger}
 
-#### Qué necesitas
+### What you need
 
 * Dos consolas de la familia 3DS
   + **3DS de origen**: la consola ejecutando algún tipo de custom firmware (como boot9strap o arm9loaderhax) *en la última versión*
@@ -31,9 +33,9 @@ Antes de proceder, asegúrate de leer todos los avisos y advertencias al [Instal
   + <i class="fa fa-magnet" aria-hidden="true" title="Este es un enlace magnético. Usa un cliente torrent para descargar el archivo."></i> - [`2.54-0_11.4_OLD.firm`](magnet:?xt=urn:btih:0dd89d42ad711f770da899af05ee162ede0d0070&dn=2.54-0_11.4_OLD.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
   + <i class="fa fa-magnet" aria-hidden="true" title="Este es un enlace magnético. Usa un cliente torrent para descargar el archivo."></i> - [`2.54-0_11.4_NEW.firm`](magnet:?xt=urn:btih:3b59dd43eec3edb133555f58d1180bfb196acbb4&dn=2.54-0_11.4_NEW.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 
-#### Instrucciones
+### Instructions
 
-##### Sección I - Preparativos
+#### Section I - Prep Work
 
 Usa un [Gestor de datos de guardado](https://github.com/J-D-K/JKSM/releases/latest) para hacer una copia de seguridad de los juegos que desees salvar en *la 3DS de destino* (¡Ya que se formateará!)
 {: .notice--warning}
@@ -65,7 +67,7 @@ Usa un [Gestor de datos de guardado](https://github.com/J-D-K/JKSM/releases/late
 1. Reinserta cada tarjeta SD a su 3DS correspondiente
 1. Presiona (Start) en **la 3DS de origen** para reiniciar
 
-##### Sección II - Instalar la partida
+#### Section II - Installing the Save
 
 1. Enciende la **3DS de origen** mientras mantienes presionado (Start) para abrir GodMode9
 1. Ve a `[0:] SDCARD`
@@ -98,9 +100,9 @@ Usa un [Gestor de datos de guardado](https://github.com/J-D-K/JKSM/releases/late
   + **The Legend of Zelda: Four Swords**: Sólo inicia el juego
   + Si tu juego tiene un error sobre `boot.nds` o una pantalla blanca, **entonces el exploit ha sido exitoso**
   + Si tu juego funciona correctamente y no te da error, entonces deberías parar y averiguar qué ha ido mal
-  + Si obtienes una pantalla negra, [sigue esta guía de solución de problemas](troubleshooting#twl_broken)
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#dsi--ds-functionality-is-broken-after-completing-the-guide)
 
-##### Sección III - Transferencia del Sistema
+#### Section III - System Transfer
 
 1. **¡Crea un respaldo de todos los archivos de ambas tarjetas SD en dos carpetas separadas en tu computadora (recuerda a cuál corresponde cada una)!**
 1. Reinserta cada tarjeta SD a su 3DS correspondiente
@@ -118,19 +120,19 @@ Usa un [Gestor de datos de guardado](https://github.com/J-D-K/JKSM/releases/late
     + Método Lento: Si no puedes hacerlo con una computadora, usa la opción "Transferencia Inalámbrica" **completa** (opción 1).
 1. Ve a [este enlace](http://en-americas-support.nintendo.com/app/answers/detail/a_id/227/) y sigue las instrucciones oficiales de Nintendo para la Transferencia de Sistema de un sistema a otro, teniendo siempre en cuenta lo que acabas de leer
 
-##### Sección IV - Restaurando la 3DS de origen
+#### Section IV - Restoring the source 3DS
 
 1. En la **3DS de origen**, completa la configuración inicial
 1. Haz una de las siguientes acciones
     + Haz el resto de las secciones y luego la guía completa en **la 3DS de destino**, luego espera una semana *(no restaures la copia de seguridad de tu NAND antes de hacer la transferencia)* y haz la Transferencia de Sistema de **la 3DS de destino** a **la 3DS de origen** *(recuerda que no puedes hacer una transferencia de una New 3DS o New 2DS a una Old 3DS u Old 2DS)*
     + Llama a Nintendo y diles que ya no tienes acceso a la consola a la que tu ID de Nintendo Network está vinculado (en este caso **la 3DS de destino**), y quieres que lo vinculen a otra consola (**la 3DS de origen** en este caso)
-    + Puedes también [eliminar el ID de Nintendo Network](https://3ds.guide/troubleshooting#rm_nnid) de **la 3DS de Origen** si prefieres que permanezca en **la 3DS de Destino**
+    + You can also just [remove the NNID](https://3ds.guide/troubleshooting#removing-an-nnid-without-formatting-your-device) from **the source 3DS** if you'd prefer it remain on **the target 3DS**
 1. Reinicia la **3DS de origen** mientras mantienes presionado (Start) para abrir GodMode9
 1. Si se te pide crear copias de seguridad de archivos esenciales, presiona (A) para hacerlo y luego presiona (A) para continuar una vez que haya terminado
 1. Si se te pide fijar la fecha y hora RTC, presiona (A) para hacerlo, luego define la fecha y la hora, y después presiona (A) para continuar
   + Ten en cuenta que, si tuviste que cambiar la fecha y hora RTC, también deberás cambiar la hora en la Configuración de la consola después de hacer esta guía
 1. Ve a `[0:] SDCARD` -> `gm9` -> `out`
-1. Presiona (A) sobre `<númerodeserie>_nandmin_###.bin` para seleccionarlo, luego selecciona "NAND image options..." y luego "Restore SysNAND (safe)"
+1. Presiona (A) sobre `<fecha>_<númerodeserie>_sysnand_###.bin` para seleccionarlo, luego selecciona "NAND image options..." y luego "Restore SysNAND (safe)"
 1. Presiona (A) para desbloquear la sobreescritura de la SysNAND, luego introduce la combinación de teclas mostrada
   + Esto no sobreescribirá tu instalación de boot9strap
 1. Ingresa la combinación de teclas mostrada para desbloquear la escritura de la SysNAND (lvl1)
@@ -139,7 +141,7 @@ Usa un [Gestor de datos de guardado](https://github.com/J-D-K/JKSM/releases/late
 1. Presiona (A) para volver a bloquear los permisos de escritura si se solicita
 1. Presiona (Start) para reiniciar **la 3DS de origen**
 
-##### Sección V - Copia de seguridad del FIRM de la 3DS de destino
+#### Section V - Backing up the target 3DS's FIRM
 
 1. Copia el archivo `boot.firm` desde el `.7z` de Luma3DS a la raíz de tu tarjeta SD
 1. Copia `boot.nds` (B9STool) a la raíz de la tarjeta SD de **la 3DS de destino**
@@ -159,7 +161,7 @@ Usa un [Gestor de datos de guardado](https://github.com/J-D-K/JKSM/releases/late
 1. Introduce tu tarjeta SD en tu computadora, luego copia `F0F1_NEW3DS.bin` o `F0F1_OLD3DS.bin` (dependiendo de tu consola) de la carpeta `boot9strap` a una ubicación segura; haz copias de seguridad en distintas ubicaciones; este respaldo te salvará de un brick si algo sale mal
 1. Vuelve a insertar tu tarjeta SD en la **3DS de destino**
 
-##### Sección VI - Flashear el FIRM de la 3DS de destino
+#### Section VI - Flashing the target 3DS's FIRM
 
 **¡NO utilices b9sTool en una consola que ya tenga instalado arm9loaderhax o la INUTILIZARÁS!**
 {: .notice--danger}
@@ -175,10 +177,10 @@ Usa un [Gestor de datos de guardado](https://github.com/J-D-K/JKSM/releases/late
   + Puede que tengas que forzar el apagado manteniendo pulsado el botón de encendido
 1. Enciende **la 3DS de destino**
 
-##### Sección VII - Configuración de Luma3DS
+#### Section VII - Configuring Luma3DS
 
 1. Tu consola debería haber iniciado en el menú de configuración de Luma3DS
-  + Si obtienes una pantalla negra, [sigue esta guía de solución de problemas](troubleshooting#ts_sys_b9s)
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 1. Utiliza el botón (A) y las flechas direccionales para activar lo siguiente:    
   + **"Show NAND or user string in System Settings"**
 1. Presiona (Start) para guardar y reiniciar
