@@ -2,7 +2,9 @@
 title: "Instalând boot9strap (ntrboot)"
 ---
 
-#### Ce aveți nevoie
+{% include toc title="Table of Contents" %}
+
+### What you need
 
 * Un magnet care declanșează modul de suspendare al dispozitivului (dacă se folosește un dispozitiv care se pliază)
 * Flashcart-ul cu ntrboot instalat
@@ -11,9 +13,9 @@ title: "Instalând boot9strap (ntrboot)"
 * Cea mai nouă versiune de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(fișierul `.7z`)*
 * [Kit-ul de începător](http://smealum.github.io/ninjhax2/starter.zip) în Homebrew
 
-#### Instrucțiuni
+### Instructions
 
-##### Secțiunea I - Preparații
+#### Section I - Prep Work
 
 1. Închideți dispozitivul
 1. Introduceți cardul SD în calculator
@@ -22,13 +24,13 @@ title: "Instalând boot9strap (ntrboot)"
 1. Creați un folder numit 'boot9strap' pe rădăcina cardului SD
 1. Copiați `boot9strap.firm` și `boot9strap.firm.sha` din arhiva `.zip` boot9strap în folderul `/boot9strap/` de pe cardul SD
 
-    ![]({{ base_path }}/images/screenshots/boot9strap-ntrboot-file-layout.png)
+    ![]({{ "/images/screenshots/boot9strap-ntrboot-file-layout.png" | absolute_url }})
     {: .notice--info}
 
 1. Reintroduceți cardul SD în dispozitivul dumneavoastră
 1. Porniți dispozitivul
 
-##### Secțiunea II - ntrboot
+#### Section II - ntrboot
 
 1. Folosiți magnetul pentru a găsi locul de pe dispozitiv unde se declanșează senzorul de suspendare
   + Acest pas nu este necesar pe un Old 2DS (care are un întrerupător pentru modul de suspendare)
@@ -40,14 +42,16 @@ title: "Instalând boot9strap (ntrboot)"
   + Ar putea lua câteva încercări ca să meargă din cauza că poziția este stranie
 1. Dacă exploit-ul a avut succes, veți porni în SafeB9SInstaller
 
-##### Secțiunea III - Instalând boot9strap
+#### Section III - Installing boot9strap
 
 1. Așteptaţi ca toate verificările de siguranță să fie completate
+1. Remove the magnet from your device
+  + On old 2DS, you should instead disable the sleep mode switch
 1. Când vi se cere, introduceți combinația de butoane ca să instalați boot9strap
 1. Once it has completed, force your device to power off by holding down the power button
   + Your device will only boot to the SafeB9SInstaller screen until the next section is completed
 
-##### Secțiunea IV - Configurând Luma3DS
+#### Section IV - Configuring Luma3DS
 
 1. Introduceți cardul SD în calculator
 1. Delete `boot.firm` from the root of your SD card
@@ -55,7 +59,7 @@ title: "Instalând boot9strap (ntrboot)"
 1. Reintroduceți cardul SD în dispozitivul dumneavoastră
 1. Porniți dispozitivul
 1. Dispozitivul dumneavoastră ar trebui să fi pornit meniul de configurare Luma3DS
-  + Dacă vă apare un ecran negru, [urmați acest ghid de depanare](troubleshooting#ts_sys_b9s)
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 1. Folosiți butonul (A) si D-Pad-ul ca să activați următoarele:    
   + **"Show NAND or user string in System Settings"**
 1. Apăsați (Start) pentru a salva și reporni
@@ -74,9 +78,9 @@ Note that the Acekard 2i retains its ability to launch `.nds` files while having
 
 Do not follow this section until you have completed the rest of the instructions on this page.
 
-##### Section V - Removing ntrboot
+#### Section V - Removing ntrboot
 
-###### What you need
+##### What you need
 
 * The latest release of [ntrboot_flasher](https://github.com/kitling/ntrboot_flasher/releases/latest)
 * The flashrom backup corresponding to your flashcart    
@@ -90,7 +94,7 @@ Do not follow this section until you have completed the rest of the instructions
   * <i class="fa fa-magnet" aria-hidden="true" title="Acesta este un link magnetic. Use a torrent client to download the file."></i> - [`Acekard_2i_(HW_44)-Flashrom.zip`](magnet:?xt=urn:btih:d12b46b1bfadc6b03ff260ab90dcb136d890fd39&dn=Acekard_2i_%28HW_44%29-Flashrom.zip&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce)
   * <i class="fa fa-magnet" aria-hidden="true" title="Acesta este un link magnetic. Use a torrent client to download the file."></i> - [`R4i_Ultra-Flashrom.zip`](magnet:?xt=urn:btih:614e9951a6c26145e68de34ed8c23a44bf190728&dn=R4i_Ultra-Flashrom.zip&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce)
 
-###### Instructions
+##### Instructions
 
 1. Închideți dispozitivul
 1. Introduceți cardul SD în calculator
