@@ -2,7 +2,9 @@
 title: "Installer boot9strap (ntrboot)"
 ---
 
-#### Ce dont vous aurez besoin
+{% include toc title="Table of Contents" %}
+
+### What you need
 
 * Un aimant qui déclenche le mode veille de votre console
 * Votre linker DS
@@ -11,9 +13,9 @@ title: "Installer boot9strap (ntrboot)"
 * La dernière version de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(le fichier `.7z`)*
 * Le Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
 
-#### Instructions
+### Instructions
 
-##### Section I - Préparation
+#### Section I - Prep Work
 
 1. Éteignez votre 3DS
 1. Insérez votre carte SD dans votre ordinateur
@@ -22,13 +24,13 @@ title: "Installer boot9strap (ntrboot)"
 1. Créez un dossier à la racine de votre carte SD nommé `boot9strap`
 1. Copiez `boot9strap.firm` et `boot9strap.firm.sha` depuis le fichier ".zip" de boot9strap vers le dossier `/boot9strap/` sur votre carte SD
 
-    ![]({{ base_path }}/images/screenshots/boot9strap-ntrboot-file-layout.png)
+    ![]({{ "/images/screenshots/boot9strap-ntrboot-file-layout.png" | absolute_url }})
     {: .notice--info}
 
 1. Réinsérez votre carte SD dans votre 3DS
 1. Allumez à présent votre 3DS
 
-##### Section II - ntrboot
+#### Section II - ntrboot
 
 1. Utilisez l’aimant pour repérer l’emplacement sur votre appareil où la sonde de sommeil est déclenchée
   + Cette étape n’est pas nécessaire sur les vieilles 2DS
@@ -40,14 +42,16 @@ title: "Installer boot9strap (ntrboot)"
   + Cela nécessite peut-être plusieurs tentatives à cause d'un mauvais placement de l'aimant
 1. Si l'exploit a réussit, vous devriez avoir démarré dans SafeB9SInstaller
 
-##### Section III - Installation de boot9strap
+#### Section III - Installing boot9strap
 
 1. Attendez que tous les tests de sécurité soient finis
+1. Remove the magnet from your device
+  + On old 2DS, you should instead disable the sleep mode switch
 1. Quand cela est demandé, appuyez sur la combinaison de boutons donnée pour installer boot9strap
 1. Une fois finis , appuyez longtemps sur le bouton off pour éteindre la console
   + Votre console démarrera seulement à l’écran de SafeB9SInstaller avant d’avoir terminé la section suivante
 
-##### Section IV - Configuration de Luma3DS
+#### Section IV - Configuring Luma3DS
 
 1. Insérez votre carte SD dans votre ordinateur
 1. Supprimez le fichier `boot.firm` de la racine de votre carte SD s'il existe
@@ -55,7 +59,7 @@ title: "Installer boot9strap (ntrboot)"
 1. Réinsérez votre carte SD dans votre 3DS
 1. Allumez à présent votre 3DS
 1. Votre console va démarrer dans la configuration de Luma3DS
-  + Si vous obtenez un écran noir, [suivez ce guide de problèmes et dépannage](troubleshooting#ts_sys_b9s)
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 1. Utilisez le bouton (A) et la croix directionnelle pour activer les éléments suivants:    
   + **"Show NAND or user string in System Settings"**
 1. Appuyez sur (Start) pour enregistrer les modifications et redémarrer
@@ -74,9 +78,9 @@ Note that the Acekard 2i retains its ability to launch `.nds` files while having
 
 Do not follow this section until you have completed the rest of the instructions on this page.
 
-##### Section V - Removing ntrboot
+#### Section V - Removing ntrboot
 
-###### What you need
+##### What you need
 
 * La dernière version de [ntrboot_flasher] (https://github.com/kitling/ntrboot_flasher/releases/latest)
 * The flashrom backup corresponding to your flashcart    
@@ -90,7 +94,7 @@ Do not follow this section until you have completed the rest of the instructions
   + <i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Use a torrent client to download the file."></i> - [`Acekard_2i_(HW_44)-Flashrom.zip`](magnet:?xt=urn:btih:d12b46b1bfadc6b03ff260ab90dcb136d890fd39&dn=Acekard_2i_%28HW_44%29-Flashrom.zip&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce)
   + <i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Use a torrent client to download the file."></i> - [`R4i_Ultra-Flashrom.zip`](magnet:?xt=urn:btih:614e9951a6c26145e68de34ed8c23a44bf190728&dn=R4i_Ultra-Flashrom.zip&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce)
 
-###### Instructions
+##### Instructions
 
 1. Éteignez votre 3DS
 1. Insérez votre carte SD dans votre ordinateur
