@@ -2,6 +2,8 @@
 title: "D'A9LH a B9S"
 ---
 
+{% include toc title="Table of Contents" %}
+
 Aquesta pàgina és per a usuaris actuals d'arm9loaderhax que desitgin actualitzar els seus dispositius a boot9strap.
 
 Totes les futures versions de Luma3DS és faran exclusivament en el format `.firm`, el qual només serà compatible amb boot9strap i sighax. Això vol dir que per a continuar rebent les darreres actualitzacions de Luma3DS, hauríeu d'utilitzar aquesta pàgina per actualitzar la vostra instal·lació.
@@ -27,7 +29,7 @@ Hi ha hagut informes d'una onada de bandejaments a usuaris de CFW per part de Ni
 
 <div class="notice--danger">{{ notice-1 | markdownify }}</div>
 
-#### Què necessiteu
+### What you need
 
 Note that the following required file named `secret_sector.bin` is the same one that was found in the various `data_input.zip` file versions. If you already have that file on your disk somewhere, you can use that one instead of downloading the one below.
 {: .notice--info}
@@ -37,17 +39,18 @@ Note that, only on New 3DS, `secret_sector.bin` is needed to revert the arm9load
 
 * <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - **New 3DS Users Only:** [`secret_sector.bin`](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce)
 * The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(the `.7z` file)*
+* The v7.0.5 release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/tag/v7.0.5) *(the `.7z` file)*
 * The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
 * The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * The latest fork of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
 * The Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
-* [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
-* [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
+* [`setup_ctrnand_luma3ds.gm9`]({{ "/gm9_scripts/setup_ctrnand_luma3ds.gm9" | absolute_url }})
+* [`cleanup_sd_card.gm9`]({{ "/gm9_scripts/cleanup_sd_card.gm9" | absolute_url }})
 
-#### Instruccions
+### Instructions
 
-##### Section I - Prep Work
+#### Section I - Prep Work
 
 For all steps in this section, overwrite any existing files on your SD card.
 {: .notice--info}
@@ -55,7 +58,8 @@ For all steps in this section, overwrite any existing files on your SD card.
 1. Power off your device
 1. Insert your SD card into your computer
 1. Copy _the contents of_ `starter.zip` to the root of your SD card
-1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card
+1. Copy `boot.firm` from the latest version Luma3DS `.7z` to the root of your SD card
+1. Copy `arm9loaderhax.bin` from the v7.0.5 Luma3DS `.7z` to the root of your SD card
 1. Create a folder named `cias` on the root of your SD card if it does not already exist
 1. Copy `lumaupdater.cia` to the `/cias/` folder on your SD card
 1. Create a folder named `boot9strap` on the root of your SD card
@@ -69,12 +73,12 @@ For all steps in this section, overwrite any existing files on your SD card.
 1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
 1. **New 3DS Users Only:** Copy `secret_sector.bin` to the `/boot9strap/` folder on your SD card
 
-    ![]({{ base_path }}/images/screenshots/a9lh-to-b9s-file-layout.png)
+    ![]({{ "/images/screenshots/a9lh-to-b9s-file-layout.png" | absolute_url }})
     {: .notice--info}
 
 1. Reinsert your SD card into your device
 
-##### Section II - Installing boot9strap
+#### Section II - Installing boot9strap
 
 1. Boot your device while holding (Start) to launch the Luma3DS chainloader menu
   + Some versions of Luma3DS will just directly start whichever payload begins with `start_`
@@ -87,7 +91,7 @@ For all steps in this section, overwrite any existing files on your SD card.
 1. Once it has completed, press (A) to reboot your device.
   + If your device shuts down on boot, ensure that you have copied `boot.firm` from the Luma3DS `.7z` to the root of your SD card
 
-##### Section III - Configuring Luma3DS
+#### Section III - Configuring Luma3DS
 
 This section is only needed if you are prompted with the Luma3DS configuration menu after the reboot.
 {: .notice--info}
@@ -96,7 +100,7 @@ This section is only needed if you are prompted with the Luma3DS configuration m
   + **"Show NAND or user string in System Settings"**
 1. Press (Start) to save and reboot
 
-##### Section IV - Updating the System
+#### Section IV - Updating the System
 
 If, before following this guide, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand) before doing this section.
 {: .notice--info}
@@ -106,7 +110,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
   + Si obteniu un error, establiu els vostres paràmetres DNS en "auto"
   + If this still gives you an error, [follow CTRTransfer](ctrtransfer), then try updating again
 
-##### Section V - Installing Luma3DS Updater
+#### Section V - Installing Luma3DS Updater
 
 1. Launch FBI
 1. Navigate to `SD` -> `cias`
@@ -114,7 +118,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
 1. Select the "Install CIA" option, then press (A) to confirm
 1. Press (Home) to exit FBI
 
-##### Section VI - CTRNAND Luma3DS
+#### Section VI - CTRNAND Luma3DS
 
 1. Launch GodMode9 by holding (Start) during boot
 1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
@@ -128,7 +132,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
 1. Press (A) to continue
 1. Press (A) to relock write permissions
 
-##### Section VII - Backup SysNAND
+#### Section VII - Backup SysNAND
 
 1. Press (Home) to bring up the action menu
 1. Select "Scripts..."
@@ -138,14 +142,14 @@ If, before following this guide, you already had an EmuNAND setup and would like
 1. Press (A) to continue
 1. Hold (R) and press (B) at the same time to eject your SD card
 1. Insert your SD card into your computer
-1. Copy `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Make backups in multiple locations (such as online file storage)
   + This backup will save you from a brick if anything goes wrong in the future
   + Replace your old arm9loaderhax NAND backup with this new boot9strap one
-1. Delete `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card after copying it
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. Reinsert your SD card into your device
 
-##### Section VIII - Cleanup SD Card
+#### Section VIII - Cleanup SD Card
 
 Note that this script will remove the `/boot9strap/` and `/cias/` folders from your SD card!
 {: .notice--danger}
