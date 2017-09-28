@@ -2,7 +2,9 @@
 title: "Instalar boot9strap (2xrsa)"
 ---
 
-#### Qué necesitas
+{% include toc title="Table of Contents" %}
+
+### What you need
 
 * La última versión de [SafeB9SInstaller]
 (https://github.com/d0k3/SafeB9SInstaller/releases/latest)
@@ -10,9 +12,9 @@ title: "Instalar boot9strap (2xrsa)"
 * La última versión de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(el archivo`.7z`)*
 * Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
 
-#### Instrucciones
+### Instructions
 
-##### Sección I - Preparativos
+#### Section I - Prep Work
 
 1. Apaga tu consola
 1. Inserta tu tarjeta SD en tu computadora
@@ -22,32 +24,32 @@ title: "Instalar boot9strap (2xrsa)"
 1. Copia `boot9strap.firm` y `boot9strap.firm.sha` desde el `.zip` de boot9strap a la carpeta `/boot9strap/` en tu tarjeta SD
 1. Copia `arm9.bin` y `arm11.bin` desde el `.zip` de SafeB9SInstaller a la raíz de tu tarjeta SD
 
-    ![]({{ base_path }}/images/screenshots/boot9strap-2xrsa-file-layout.png)
+    ![]({{ "/images/screenshots/boot9strap-2xrsa-file-layout.png" | absolute_url }})
     {: .notice--info}
 
 1. Vuelve a insertar tu tarjeta SD en tu consola
 1. Enciende tu consola
 
-##### Sección II - Ejecutar SafeB9SInstaller
+#### Section II - Launching SafeB9SInstaller
 
 1. Abre el navegador de tu consola y ve a la siguiente URL
   + `http://2xrsa.3ds.guide`
   + Si estás en una New 3DS, New 2DS u Old 2DS y dejaste la comunicación inalámbrica apagada, puedes rehabilitarla sacando la batería, desconectando el cargador por varios segundos y volviendo a encender la consola
   + Si tienes un error de "Este servicio no está disponible en tu región", usa la Configuración de la consola para cambiar el país de tu consola por uno de la misma región que la NAND cuando realizaste el CTRTransfer a 2.1.0
   + Si olvidaste deshabilitar los controles parentales antes de realizar el CTRTransfer o si no puedes acceder a la configuración de conexión inalámbrica, ten en cuenta que el dispositivo se conectará automáticamente a cualquier red llamada `attwifi` y sin contraseña
-  + Si te sale otro error, sigue esta [guía de resolución de problemas](troubleshooting#ts_browser)
+  + If you get another error, [follow this troubleshooting guide](troubleshooting#a-browser-based-exploit-is-not-working)
 1. Si el exploit ha funcionado, habrás iniciado SafeB9SInstaller
 
-##### Sección III - Instalar boot9strap
+#### Section III - Installing boot9strap
 
 1. Espera a que todos los controles de seguridad se completen
 1. Cuando se solicite, introduce la combinación de botones mostrada para instalar boot9strap
 1. Una vez se haya completado, presiona (A) para reiniciar tu consola
 
-##### Sección IV - Configurar Luma3DS
+#### Section IV - Configuring Luma3DS
 
 1. Tu consola debería haber reiniciado en el menú de configuración de Luma3DS
-  + Si obtienes una pantalla negra, [sigue esta guía de solución de problemas](troubleshooting#ts_sys_b9s)
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 1. Utiliza el botón (A) y las flechas direccionales para activar lo siguiente:    
   + **"Show NAND or user string in System Settings"**
 1. Presiona (Start) para guardar y reiniciar
@@ -55,7 +57,7 @@ title: "Instalar boot9strap (2xrsa)"
 
 ___
 
-Ten en cuenta que los usuarios de *New 3DS* que quedaron en 2.1.0 luego de un CTRTransfer *deben* [restaurar la copia de seguridad de su NAND](godmode9-usage#nand_restore) antes de pasar a la sección [Finalizar instalación](finalizing-setup).
+New 3DS 2.1.0 users *must* [restore their NAND backup](godmode9-usage#nand_restore) before going to the [Finalizing Setup](finalizing-setup) page.
 {: .notice--danger}
 
 Continúa en [Finalizar instalación](finalizing-setup)
