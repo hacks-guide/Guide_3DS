@@ -2,6 +2,8 @@
 title: "Actualizând B9S" #
 ---
 
+{% include toc title="Table of Contents" %}
+
 Această pagină este pentru utilizatorii de boot9strap ca să-și actualizeze instalarea către ultima versiune.
 
 {% capture notice-1 %}
@@ -20,16 +22,16 @@ Au existat rapoarte de un val de banuri adresate utilizatorilor de CFW de către
 
 <div class="notice--danger">{{ notice-1 | markdownify }}</div>
 
-#### Ce aveți nevoie
+### What you need
 
 * Cea mai nouă versiune de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * Cea mai nouă versiune de [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(fișierul standard boot9strap; nu cel `devkit`, nici cel `ntr`)*
 * Cea mai nouă versiune de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(fișierul `.7z`)*
-* [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
+* [`cleanup_sd_card.gm9`]({{ "/gm9_scripts/cleanup_sd_card.gm9" | absolute_url }})
 
-#### Instrucțiuni
+### Instructions
 
-##### Secțiunea I - Preparații
+#### Section I - Prep Work
 
 Pentru toți pașii din această secțiune, suprascrieți fișierele existente de pe cardul SD.
 {: .notice--info}
@@ -41,7 +43,7 @@ Pentru toți pașii din această secțiune, suprascrieți fișierele existente d
 1. Copiați `boot9strap.firm` și `boot9strap.firm.sha` din arhiva `.zip` boot9strap în folderul `/boot9strap/` de pe cardul SD
 1. Reintroduceți cardul SD în dispozitivul dumneavoastră
 
-##### Secțiunea II - Instalând boot9strap
+#### Section II - Installing boot9strap
 
 1. Reporniți ținând apăsat (Start) în timpul pornirii pentru a lansa meniul chainloader Luma3DS
 1. Lansați SafeB9SInstaller apăsând (A)
@@ -50,14 +52,14 @@ Pentru toți pașii din această secțiune, suprascrieți fișierele existente d
 1. Once it has completed, hold (Start) while pressing (A) to reboot your device to the Luma3DS chainloader
   + If you encounter an error booting your device after the B9S update, just continue to fix it
 
-##### Section III - Update Luma3DS
+#### Section III - Update Luma3DS
 
 1. Închideți dispozitivul
 1. Introduceți cardul SD în calculator
 1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card, replacing the existing file
 1. Reintroduceți cardul SD în dispozitivul dumneavoastră
 
-##### Section IV - Cleanup SD Card
+#### Section IV - Cleanup SD Card
 
 Note that this script will remove the `/boot9strap/` and `/cias/` folders from your SD card!
 {: .notice--danger}
