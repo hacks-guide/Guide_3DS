@@ -2,9 +2,11 @@
 title: "Instalar boot9strap (MSET)"
 ---
 
+{% include toc title="Table of Contents" %}
+
 Si ya habías hackeado tu consola y tienes un CFW basado en EmuNAND, esta guía es sólo para la SysNAND, por lo que todas las instrucciones deben ser aplicadas en la SysNAND. Nota: los términos EmuNAND y RedNAND son diferentes implementaciones del [mismo concepto](http://3dbrew.org/wiki/NAND_Redirection).
 
-#### Qué necesitas
+### What you need
 
 * La última versión de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * La última versión de [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(boot9strap normal; no el archivo `devkit` ni el archivo `ntr`)*
@@ -12,9 +14,9 @@ Si ya habías hackeado tu consola y tienes un CFW basado en EmuNAND, esta guía 
 * Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
 * Cualquier flashcart de DS que funcione en la versión de tu consola
 
-#### Instrucciones
+### Instructions
 
-##### Sección I - Preparativos
+#### Section I - Prep Work
 
 1. Apaga tu consola
 1. Insert your SD card into your computer
@@ -24,14 +26,14 @@ Si ya habías hackeado tu consola y tienes un CFW basado en EmuNAND, esta guía 
 1. Copia los archivos `boot9strap.firm` y `boot9strap.firm.sha` desde el `.zip` de boot9strap a la carpeta `/boot9strap/` en tu tarjeta SD
 1. Copia el archivo `SafeB9SInstaller.dat` desde el `.zip` de SafeB9SInstaller a la raíz de tu tarjeta SD
 
-    ![]({{ base_path }}/images/screenshots/boot9strap-mset-file-layout.png)
+    ![]({{ "/images/screenshots/boot9strap-mset-file-layout.png" | absolute_url }})
     {: .notice--info}
 
 1. Vuelve a insertar tu tarjeta SD en tu consola
 1. Copia el archivo `SafeB9SInstaller.nds` desde el `.zip` de SafeB9SInstaller a la tarjeta SD de tu flashcart de DS
 1. Enciende tu consola
 
-##### Sección II - Ejecutar SafeB9SInstaller
+#### Section II - Launching SafeB9SInstaller
 
 1. Inicia tu flashcart de DS desde tu consola
 1. Ejecuta `SafeB9SInstaller.nds` usando tu flashcart
@@ -41,16 +43,16 @@ Si ya habías hackeado tu consola y tienes un CFW basado en EmuNAND, esta guía 
 1. Reinicia el sistema, después ve a la Configuración de la consola, luego "Otras opciones", después "Perfil", y selecciona "Perfil de Nintendo DS"
 1. Si el exploit ha funcionado, habrás iniciado SafeB9SInstaller
 
-##### Sección III - Instalar boot9strap
+#### Section III - Installing boot9strap
 
 1. Espera a que todas las verificaciones de seguridad se completen
 1. Cuando se te pida, introduce la combinación de botones mostrada para instalar boot9strap
 1. Una vez se haya completado, presiona (A) para reiniciar tu consola
 
-##### Sección IV - Configurar Luma3DS
+#### Section IV - Configuring Luma3DS
 
 1. Tu consola debería haber reiniciado en el menú de configuración de Luma3DS
-  + Si obtienes una pantalla negra, [sigue esta guía de solución de problemas](troubleshooting#ts_sys_b9s)
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 1. Utiliza el botón (A) y las flechas direccionales para activar lo siguiente:    
   + **"Show NAND or user string in System Settings"**
 1. Presiona (Start) para guardar y reiniciar
