@@ -2,18 +2,20 @@
 title: "Installazione di boot9strap (Browser)"
 ---
 
+{% include toc title="Table of Contents" %}
+
 Se hai già modificato il tuo 3DS in passato e hai installato un CFW basato su EmuNAND, ricorda che questa guida interessa solamente la SysNAND per cui dovresti seguire le istruzioni in tale modalità. Tieni presente che i termini EmuNAND e RedNAND si riferiscono a due implementazioni leggermente diverse [dello stesso concetto](http://3dbrew.org/wiki/NAND_Redirection).
 
-#### Cosa serve
+### What you need
 
 * L'ultima versione di [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * L'ultima versione di [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(la versione normale di boot9strap; non il file `devkit`, né il file `ntr`)*
 * L'ultima versione di [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(il file `.7z`)*
 * L'[Homebrew Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
 
-#### Istruzioni
+### Instructions
 
-##### Sezione I - Preparazione
+#### Section I - Prep Work
 
 1. Spegni il tuo 3DS
 1. Inserisci la scheda SD nel tuo computer
@@ -23,13 +25,13 @@ Se hai già modificato il tuo 3DS in passato e hai installato un CFW basato su E
 1. Copia i file `boot9strap.firm` e `boot9strap.firm.sha` dall'archivio `.zip` di boot9strap nella cartella `/boot9strap/` della tua scheda SD
 1. Copia i file `SafeB9SInstaller.dat` e `Launcher.dat` dall'archivio `.zip` di SafeB9SInstaller nella directory principale della tua scheda SD
 
-    ![]({{ base_path }}/images/screenshots/boot9strap-browser-file-layout.png)
+    ![]({{ "/images/screenshots/boot9strap-browser-file-layout.png" | absolute_url }})
     {: .notice--info}
 
 1. Reinserisci la scheda SD nella tua console
 1. Accendi la console
 
-##### Sezione II - Avvio di SafeB9SInstaller
+#### Section II - Launching SafeB9SInstaller
 
 1. Avvia il Browser internet e visita una delle seguenti pagine dalla tua console
   + `https://dukesrg.github.io/?SafeB9SInstaller.dat`
@@ -40,16 +42,16 @@ Se hai già modificato il tuo 3DS in passato e hai installato un CFW basato su E
   + Se ottieni un errore, [segui questa guida per risolvere il problema](troubleshooting#ts_browser)
 1. Se l'exploit è andato a buon fine, si avvierà SafeB9SInstaller
 
-##### Sezione III - Installazione di boot9strap
+#### Section III - Installing boot9strap
 
 1. Attendi il termine di tutti i controlli di sicurezza
 1. Quando richiesto, inserisci la combinazione di tasti richiesta a schermo per installare boot9strap
 1. Una volta completato il processo, premi (A) per riavviare la tua console
 
-##### Sezione IV - Configurare Luma3DS
+#### Section IV - Configuring Luma3DS
 
 1. La tua console dovrebbe riavviarsi all'interno del menu di configurazione di Luma3DS
-  + Se ottieni una schermata nera, [segui questa guida per risolvere il problema](troubleshooting#ts_sys_b9s)
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 1. Usa il pulsante (A) e il D-Pad per abilitare le seguenti opzioni:    
   + **"Show NAND or user string in System Settings"**
 1. Premi (Start) per salvare e riavviare il 3DS
