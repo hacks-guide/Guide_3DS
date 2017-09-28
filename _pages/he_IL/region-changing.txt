@@ -2,6 +2,8 @@
 title: "שינוי אזור"
 ---
 
+{% include toc title="Table of Contents" %}
+
 זוהי הרחבה עבור שינוי אזור הSysNAND CFW שלכם. זה נעשה על ידי התקנת ה11.5.0 CTRTransfer image לאיזור שאתם רוצים לשנות אליו.
 
 שימו לב ששינוי אזור מיותר כמעט לחלוטין כי Luma3DS תומכת בReigon Free ו [אמולצית אזור לכל משחק בנפרד] (https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage).
@@ -23,11 +25,11 @@ title: "שינוי אזור"
 אתם חייבים שLuma3DS וboot9strap או arm9loaderhax יהיו מותקנים כדי להשתמש בזה.
 {: .notice--danger}
 
-#### מה אתם צריכים
+### What you need
 
 * את הגרסה העדכנית של [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * את הגרסה העדכנית של [FBI](https://github.com/Steveice10/FBI/releases/latest) *(יש להוריד את קובץ ה- `.3DSX`)*
-* [`ctrtransfer_ticket_copy.gm9`]({{ base_path }}/gm9_scripts/ctrtransfer_ticket_copy.gm9)
+* [`ctrtransfer_ticket_copy.gm9`]({{ "/gm9_scripts/ctrtransfer_ticket_copy.gm9" | absolute_url }})
 * קובץ ה-11.5.0 CTRTransfer image המתאים למכשיר והאיזור שלכם     
 *(אם המכשיר שלכם אינו מאחד האיזורים האלו, פשוט תבחרו אחד מהם שתואם למכשיר)*:    
   +    <i class="fa fa-magnet" aria-hidden="true" title="זה לינק מגנטי. תשתמשו בתוכנת טורנט כדי להוריד את הקובץ."></i> - [New 3DS or 2DS - 11.5.0 - EUR - CTRTransfer](magnet:?xt=urn:btih:465f1048f81e8e5c651ce2a4d9df48fec88d1099&dn=11.5.0-38E_ctrtransfer_n3ds.zip&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce)    
@@ -39,9 +41,9 @@ title: "שינוי אזור"
   +    <i class="fa fa-magnet" aria-hidden="true" title="זה לינק מגנטי. תשתמשו בתוכנת טורנט כדי להוריד את הקובץ."></i> - [Old 3DS or 2DS - 11.5.0 - JPN - CTRTransfer](magnet:?xt=urn:btih:d8913b4c0da224e8852fa2f685c41ddbce5310bc&dn=11.5.0-38J_ctrtransfer_o3ds.zip&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce)     
   +    <i class="fa fa-magnet" aria-hidden="true" title="זה לינק מגנטי. תשתמשו בתוכנת טורנט כדי להוריד את הקובץ."></i> - [Old 3DS or 2DS - 11.5.0 - USA - CTRTransfer](magnet:?xt=urn:btih:2708089605ca47387fa64e996a699eedd18031e8&dn=11.5.0-38U_ctrtransfer_o3ds.zip&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce)    
 
-#### הוראות
+### Instructions
 
-##### חלק I - הכנות
+#### Section I - Prep Work
 
 1. תכבו את המכשיר
 1. תכניסו את ה-SD שלכם למחשב
@@ -53,7 +55,7 @@ title: "שינוי אזור"
 1. תעתיקו את 'FBI.3dsx' לתיקיה '/ 3ds /' על כרטיס הזכרון
 1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
 
-#### חלק II - ביצוע CTRTransfer
+#### Section II - CTRTransfer
 
 1. תפתחו את GodMode9 על ידי החזקה של המקש (Start) בעת ההדלקה
 1. אם תתבקשו לעשות גיבוי של קבצים חיוניים, תלחצו (A) כדי לעשות זאת, ואז תלחצו (A) כדי להמשיך אחרי שזה סיים
@@ -81,7 +83,7 @@ title: "שינוי אזור"
   + עדכונים שתבצעו תוך שימוש ב-B9S+Luma (במידה שיש לכם את שניהם) הם בטוחים לחלוטין
   + אם אתם מקבלים שגיאה, שנו את הגדרות ה-DNS שלכם ל-"auto"
 
-##### חלק III - הפעלת FBI
+#### Section III - Launching FBI
 
 1. תפעילו את Download Play
 1. תלחצו (L) + (Down) + (Select) באותו זמן כדי לפתוח את התפריט של Rosalina
@@ -94,7 +96,7 @@ title: "שינוי אזור"
 1. תפעילו את Download Play
 1. המכשיר שלכם אמור לטעון את הHomebrew Launcher
 
-##### חלק IV - התקנה מחדש של Ticketים
+#### Section IV - Reinstalling Tickets
 
 אם הסקריפט אמר לכם "No User Tickets Found" או משהו בסגנון אז תדלגו על החלק הזה
 {: .notice--info}
@@ -114,7 +116,7 @@ title: "שינוי אזור"
   + תלחצו (B) כדי לדחות התקנת TICKETים מהCDN.
 1. תלחצו על (Home) כדי לצאת מFBI
 
-##### סעיף V - הגדרות אזור
+#### Section V - Region settings
 
 1. פתחו את הגדרות המערכת
 1. לכו ל Other settings, אז Profile, ולבסוף Region settings
@@ -122,7 +124,7 @@ title: "שינוי אזור"
 1. אם תתבקשו, אתם לא צריכים להגדיר אזור
 1. עדכנו את ה-3DS שלכם על ידי לחיצה על System Sttings, לאחר מיכן "Other Settings", לכו ימינה עד הסוף ואז לחצו על "System Update"
 
-##### חלק VI - מחיקת ה CTRTransfer image
+#### Section VI - Remove CTRTransfer image
 
 1. תפתחו את GodMode9 על ידי החזקה של המקש (Start) בעת ההדלקה
 1. נווטו אל `[0:] SDCARD` ושם אל `gm9`
