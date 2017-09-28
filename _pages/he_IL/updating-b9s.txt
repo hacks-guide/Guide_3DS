@@ -2,6 +2,8 @@
 title: "עדכון B9S"
 ---
 
+{% include toc title="Table of Contents" %}
+
 העמוד הזה קיים בשביל משתמשי boot9strap קיימים כדי לעדכן את ההתקנה שלהם לגרסה הכי חדשה.
 
 {% capture notice-1 %}
@@ -20,16 +22,16 @@ title: "עדכון B9S"
 
 <div class="notice--danger">{{ notice-1 | markdownify }}</div>
 
-#### מה שאתם צריכים
+### What you need
 
 * הגרסה העדכנית של [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * הגרסא העדכנית של [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *( boot9strap רגיל; לא קובץ ה `devkit`, ולא קובץ ה`ntr`)*
 * את הגרסה העדכנית של [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(יש להוריד את קובץ ה-`.7z`)*
-* [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
+* [`cleanup_sd_card.gm9`]({{ "/gm9_scripts/cleanup_sd_card.gm9" | absolute_url }})
 
-#### הוראות
+### Instructions
 
-##### חלק I - הכנות
+#### Section I - Prep Work
 
 לכל השלבים בחלק הזה, תשכתבו כל קובץ קיים בכרטיס SD שלכם אם יש.
 {: .notice--info}
@@ -41,7 +43,7 @@ title: "עדכון B9S"
 1. תעתיקו את`boot9strap.firm` ואת `boot9strap.firm.sha` מה `.zip` של boot9strap אל תיקיית `/boot9strap/`על כרטיס הSD שלכם
 1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
 
-#### חלק II - התקנת boot9strap
+#### Section II - Installing boot9strap
 
 1. תאתחלו בזמן שאתם מחזיקים (Start) במהלך האתחול כדי להפעיל את תפריט הטעינה של Luma3DS
 1. תפעילו את SafeB9SInstaller על ידי לחיצת (A)
@@ -50,14 +52,14 @@ title: "עדכון B9S"
 1. אחרי שזה סיים, תחזיקו (Start) בזמן שאתם לוחצים (A) כדי לאתחל את הקונסולה אל תפריט הטעינה שלLuma3DS
   + אם אתם מקבלים הודעת שגיעה אחרי שאתם מפעילים את הקונסולה לאחר עדכון B9S, פשוט תמשיכו כדי לתקן את זה
 
-##### חלק III - עדכון Luma3DS
+#### Section III - Update Luma3DS
 
 1. תכבו את המכשיר
 1. תכניסו את ה-SD שלכם למחשב
 1. תעתיקו את 'boot.firm' מתוך Luma3DS.7z לSD שלכם, במקום הקובץ הקיים
 1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
 
-##### חלק IV - ניקוי ה SD
+#### Section IV - Cleanup SD Card
 
 שימו לב שהסקריפט הזה ימחק את תיקייות `/boot9strap/` ו`/cias/`מכרטיס הSD שלכם!
 {: .notice--danger}
