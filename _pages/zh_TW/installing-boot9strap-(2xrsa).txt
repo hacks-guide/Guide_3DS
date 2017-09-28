@@ -2,16 +2,18 @@
 title: "安裝 boot9strap (透過 2xrsa)"
 ---
 
-#### 必備項目
+{% include toc title="Table of Contents" %}
+
+### What you need
 
 * 最新版的 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * 最新版的 [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(正常版的 boot9strap；非 `devkit` 或 `ntr` 檔案)*
 * 最新版的 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z` 檔案)*
 * 自製軟體[入門套件](http://smealum.github.io/ninjhax2/starter.zip)
 
-#### 操作說明
+### Instructions
 
-##### 第一節 — 準備工作
+#### Section I - Prep Work
 
 1. 關閉您的主機
 1. 將 SD 卡插入電腦中
@@ -21,32 +23,32 @@ title: "安裝 boot9strap (透過 2xrsa)"
 1. 解壓 boot9strap `.zip` 的 `boot9strap.firm` 及 `boot9strap.firm.sha` 檔案至 SD 卡的 `/boot9strap/` 資料夾中
 1. 解壓 SafeB9SInstaller `.zip` 的 `arm9.bin` 及 `arm11.bin` 至 SD 卡的根目錄中
 
-    ![]({{ base_path }}/images/screenshots/boot9strap-2xrsa-file-layout.png)
+    ![]({{ "/images/screenshots/boot9strap-2xrsa-file-layout.png" | absolute_url }})
     {: .notice--info}
 
 1. 將 SD 卡插回主機中
 1. 啟動您的主機
 
-##### 第二節 — 啟動 SafeB9SInstaller
+#### Section II - Launching SafeB9SInstaller
 
 1. 啟動主機上的網頁瀏覽器，並開啟下列網址
   + `http://2xrsa.3ds.guide`
   如果您的機型為 New 3DS、New 2DS、或舊型 2DS，且您的無線通訊功能是關閉的，您可以透過關機並拔出電池跟充電器個幾秒鐘，然後再重新啟動就可以重新開啟無線功能。
   + 如果出現「您的所在地區不提供此項服務(This service is not available in your region)」的錯誤訊息，請透過系統設置改變您主機所在的國家，使它與您使用的 2.1.0 CTRTransfer 的區域相同
   + 如果您在 CTRTransfer 前忘了關閉家長監護功能，或者是無法存取無線網路設定，主機會自動連上任何名為 `attwifi` 且沒設密碼的網路。
-  + 如果遇到其他錯誤的話， [請參見此疑難排解](troubleshooting#ts_browser)
+  + If you get another error, [follow this troubleshooting guide](troubleshooting#a-browser-based-exploit-is-not-working)
 1. 如果一切成功的話，您將自動進入 SafeB9SInstaller
 
-##### 第三節 — 安裝 boot9strap
+#### Section III - Installing boot9strap
 
 1. 等待所有安全性檢查完畢
 1. 出現提示時，輸入提示的按鍵組合以安裝 boot9strap
 1. 過程結束後，按下「A」重啟主機
 
-##### 第四節 — 設定 Luma3DS
+#### Section IV - Configuring Luma3DS
 
 1. 您的主機將會重啟至 Luma3DS 設定選單中
-  + 如果黑屏，[請參見此疑難排解](troubleshooting#ts_sys_b9s)
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 1. 透過方向鍵及「A」以開啟下列選項：    
   + **「Show NAND or user string in System Settings」**
 1. 按「Start」鍵以存檔並重新啟動系統
@@ -54,7 +56,7 @@ title: "安裝 boot9strap (透過 2xrsa)"
 
 ___
 
-請注意，*New 3DS* 的使用者在 CTRTransfer 降級至系統版本 2.1.0 後**必須**在繼續至[完成安裝](finalizing-setup)頁面前[還原先前的 NAND 備份](godmode9-usage#nand_restore)。
+New 3DS 2.1.0 users *must* [restore their NAND backup](godmode9-usage#nand_restore) before going to the [Finalizing Setup](finalizing-setup) page.
 {: .notice--danger}
 
 繼續至 [完成安裝](finalizing-setup)
