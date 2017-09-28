@@ -2,7 +2,9 @@
 title: "Boot9strapin asentaminen (ntrboot)"
 ---
 
-#### Tarpeet
+{% include toc title="Table of Contents" %}
+
+### What you need
 
 * Magneetti, jolla voit asettaa konsolisi lepotilaan (jos käytössä on läpällinen malli)
 * Flash-korttisi, jolla on asennettuna ntrboot
@@ -11,9 +13,9 @@ title: "Boot9strapin asentaminen (ntrboot)"
 * Luma3DS:n [viimeisin julkaisu](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z`-tiedosto)*
 * Homebrew-[aloituspakkaus](http://smealum.github.io/ninjhax2/starter.zip)
 
-#### Ohjeet
+### Instructions
 
-##### Vaihe I – Valmistelut
+#### Section I - Prep Work
 
 1. Sammuta konsolisi
 1. Aseta SD-korttisi tietokoneeseesi
@@ -22,13 +24,13 @@ title: "Boot9strapin asentaminen (ntrboot)"
 1. Luo `boot9strap`-niminen kansio SD-korttisi juureen
 1. Kopioi boot9strap-`.zip`-pakkauksesta `boot9strap.firm` ja `boot9strap.firm.sha` SD-korttisi `/boot9strap/`-kansioon
 
-    ![]({{ base_path }}/images/screenshots/boot9strap-ntrboot-file-layout.png)
+    ![]({{ "/images/screenshots/boot9strap-ntrboot-file-layout.png" | absolute_url }})
     {: .notice--info}
 
 1. Aseta SD-korttisi takaisin konsoliisi
 1. Käynnistä konsolisi
 
-##### Vaihe II – Ntrboot
+#### Section II - ntrboot
 
 1. Käytä magneettia löytääksesi konsolistasi kohdan, jossa lepotilan anturi aktivoituu
   + Tämä ei ole tarpeen vanhalla 2DS:llä (jossa on erillinen kytkin lepotilalle)
@@ -40,14 +42,16 @@ title: "Boot9strapin asentaminen (ntrboot)"
   + Lepotilan aktivoiminen magneetilla saattaa vaatia useamman yrityksen, koska anturi on hankalassa paikassa
 1. Jos haavoittuvuuden hyödyntäminen onnistui, SafeB9SInstallerin pitäisi avautua
 
-##### Vaihe III – Boot9strapin asentaminen
+#### Section III - Installing boot9strap
 
 1. Odota, kunnes kaikki turvatarkistukset on suoritettu
+1. Remove the magnet from your device
+  + On old 2DS, you should instead disable the sleep mode switch
 1. Syötä kehotettaessa annettu painikeyhdistelmä asentaaksesi boot9strapin
 1. Kun toiminto on suoritettu, pakota konsolisi sammuksiin pitämällä virtapainiketta pohjassa
   + Konsolisi käynnistyy vain SafeB9SInstaller-ruutuun, ennen kuin olet käynyt läpi seuraavan vaiheen
 
-##### Vaihe IV – Luma3DS:n määrittäminen
+#### Section IV - Configuring Luma3DS
 
 1. Aseta SD-korttisi tietokoneeseesi
 1. Poista `boot.firm` SD-korttisi juuresta
@@ -55,7 +59,7 @@ title: "Boot9strapin asentaminen (ntrboot)"
 1. Aseta SD-korttisi takaisin konsoliisi
 1. Käynnistä konsolisi
 1. Konsolisi pitäisi uudelleenkäynnistyä suoraan Luma3DS:n määritysvalikkoon
-  + Jos saat mustan ruudun, [seuraa tätä vianmääritysohjetta](troubleshooting#ts_sys_b9s)
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 1. Käytä (A):ta ja ristiohjainta ottaaksesi seuraavat asetukset käyttöön:    
   + **"Show NAND or user string in System Settings"**
 1. Paina (START)-painiketta tallentaaksesi ja käynnistääksesi uudelleen
@@ -74,9 +78,9 @@ Huomaa, että Acekard 2i -flash-kortti pystyy edelleen avaamaan `.nds`-tiedostoj
 
 Älä käy läpi tätä vaihetta, ennen kuin olet käynyt läpi tämän osion muut vaiheet.
 
-##### Vaihe V – Ntrbootin poistaminen
+#### Section V - Removing ntrboot
 
-###### Tarpeet
+##### What you need
 
 * Ntrboot_flasherin [viimeisin julkaisu](https://github.com/kitling/ntrboot_flasher/releases/latest)
 * Flash-korttiasi vastaava tiedosto, joka sisältää kopion sen flash-muistista    
@@ -90,7 +94,7 @@ Huomaa, että Acekard 2i -flash-kortti pystyy edelleen avaamaan `.nds`-tiedostoj
   + <i class="fa fa-magnet" aria-hidden="true" title="Tämä on magneettilinkki. Käytä torrent-ohjelmaa ladataksesi tiedoston."></i> – [`Acekard_2i_(HW_44)-Flashrom.zip`](magnet:?xt=urn:btih:d12b46b1bfadc6b03ff260ab90dcb136d890fd39&dn=Acekard_2i_%28HW_44%29-Flashrom.zip&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce)
   + <i class="fa fa-magnet" aria-hidden="true" title="Tämä on magneettilinkki. Käytä torrent-ohjelmaa tiedoston lataamiseen."></i> – [`R4i_Ultra-Flashrom.zip`](magnet:?xt=urn:btih:614e9951a6c26145e68de34ed8c23a44bf190728&dn=R4i_Ultra-Flashrom.zip&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce)
 
-###### Ohjeet
+##### Instructions
 
 1. Sammuta konsolisi
 1. Aseta SD-korttisi tietokoneeseesi
