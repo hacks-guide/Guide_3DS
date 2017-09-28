@@ -2,6 +2,8 @@
 title: "Instalando boot9strap (Injeção de jogo DSiWare)"
 ---
 
+{% include toc title="Table of Contents" %}
+
 Note que se você tem outros arquivos de payload diferentes do `GodMode9.firm` na pasta `/luma/payloads/` do seu cartão SD, segure (Start) durante a inicialização para exibir um "menu de chainloader" onde você terá que utilizar os botões direcionais e o botão (A) para selecionar "GodMode9" para estas instruções. 
 
 Para usar os links [magnéticos](https://pt.wikipedia.org/wiki/Magnet-Link) nesta página, você precisará de um cliente de torrent como o [Deluge](http://dev.deluge-torrent.org/wiki/Download)
@@ -11,7 +13,7 @@ Antes de prosseguir, certifique-se de ter lido todos os avisos e advertências e
 Se você não usar o `.firm` correto correspondente ao 3DS de destino, você causará um BRICK! Certifique-se de baixar e usar o correto!
 {: .notice--danger}
 
-#### O que você precisa
+### What you need
 
 * Dois dispositivos da família 3DS
   +**3DS de Origem**: o dispositivo que está executando algum tipo de custom firmware (como o boot9strap ou arm9loaderhax) *na versão mais recente*
@@ -32,9 +34,9 @@ Se você não usar o `.firm` correto correspondente ao 3DS de destino, você cau
   + <i class="fa fa-magnet" aria-hidden="true" title="Este é um link magnético. Use a torrent client to download the file."></i> - [`2.54-0_11.4_OLD.firm`](magnet:?xt=urn:btih:0dd89d42ad711f770da899af05ee162ede0d0070&dn=2.54-0_11.4_OLD.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
   + <i class="fa fa-magnet" aria-hidden="true" title="Este é um link magnético. Use a torrent client to download the file."></i> - [`2.54-0_11.4_NEW.firm`](magnet:?xt=urn:btih:3b59dd43eec3edb133555f58d1180bfb196acbb4&dn=2.54-0_11.4_NEW.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 
-#### Instruções
+### Instructions
 
-##### Seção I - Trabalho Preparatório
+#### Section I - Prep Work
 
 Use um [gerenciador de saves](https://github.com/J-D-K/JKSM/releases/latest) para fazer backup dos saves com os quais você se importa no *3DS de destino* (ele será formatado!)
 {: .notice--warning}
@@ -59,7 +61,7 @@ Use um [gerenciador de saves](https://github.com/J-D-K/JKSM/releases/latest) par
 1. Reinsira cada cartão SD de volta nos seus 3DSs correspondentes
 1. Aperte (Start) no **3ds de origem** para reiniciar
 
-##### Seção II - Injetando o jogo e o save
+#### Section II - Injecting the game and save
 
 1. Inicie **o 3DS de origem** segurando (Start) para abrir o GodMode9
 1. Se você for solicitado para criar um backup de arquivos essenciais, aperte (A) pra fazê-lo, e depois aperte (A) para continuar quando ele for concluído
@@ -97,9 +99,9 @@ Use um [gerenciador de saves](https://github.com/J-D-K/JKSM/releases/latest) par
   + Se seu jogo tem um erro sobre `boot.nds`, **então o exploit teve sucesso**
   + Se seu jogo tem um erro sobre dados corrompidos ou inacessíveis, confirme que você copiou **o conteúdo da** pasta `savedata` e não a própria pasta `savedata`
   + Se seu jogo se comporta normalmente e não lhe dá um erro sobre `boot.nds`, então você deve parar e descobrir o que deu errado
-  + Se você receber uma tela preta, [siga este guia de troubleshooting](troubleshooting#twl_broken)
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#dsi--ds-functionality-is-broken-after-completing-the-guide)
 
-##### Seção III - Transferência de dados
+#### Section III - System Transfer
 
 1. Se o **3DS de destino** tem uma identificação da Nintendo Network, você deve formatar o dispositivo usando a configuração do console:
   + Vá para a última página de "Outras configurações" e selecione "Formatar memória do sistema" e, em seguida, siga todas as instruções
@@ -115,16 +117,16 @@ Use um [gerenciador de saves](https://github.com/J-D-K/JKSM/releases/latest) par
     + Método mais lento: Se você não tem a capacidade de mover os dados em um PC use a opção "Transferência sem fio total"** (opção 1).
 1. Vá para [esse link](http://pt-americas-support.nintendo.com/app/answers/detail/a_id/15647/p/430) e siga as instruções oficiais da Nintendo para a transferência de um sistema para outro, mantendo em mente o que você acabou de ler
 
-##### Seção IV - Restaurando o 3DS de origem
+#### Section IV - Restoring the source 3DS
 
 1. No **3DS de origem**, complete a configuração inicial
 1. Escolha um dos seguintes
     + Do the rest of the sections and then the full guide on **the target 3DS**, then wait one week *(do not restore your NAND backup before system transferring)*, then System Transfer from **the target 3DS** back to **the source 3DS** *(remember you cannot transfer back from a New 3DS or New 2DS to an Old 3DS or Old 2DS)*
     + Ligue para a Nintendo e diga que você não tem mais acesso ao dispositivo ao qual seu NNID está vinculado (que é **3DS de destino** neste caso) e gostaria que ela fosse conectada a um dispositivo diferente (que é **3DS de origem** neste caso)
-    + Você também pode apenas [remover o NNID](https://3ds.guide/troubleshooting#rm_nnid) do **3DS de origem** se você preferir que ele continue no **3DS de destino**
+    + You can also just [remove the NNID](https://3ds.guide/troubleshooting#removing-an-nnid-without-formatting-your-device) from **the source 3DS** if you'd prefer it remain on **the target 3DS**
 1. Reinicie **o 3DS de origem** segurando (Start) para abrir o GodMode9
 1. Navegue para `[0:] SDCARD` -> `gm9` -> `out`
-1. Aperte (A) em `<serialnumber>_nandmin_###.bin` para selecioná-lo, então selecione "NAND image options...", depois selecione "Restore SysNAND (safe)"
+1. Press (A) on `<date>_<serialnumber>_sysnand_###.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
 1. Aperte (A) para destravar as modificações na SysNAND, então aperte a sequência de botões solicitada
   + Isso não irá substituir sua instalação do boot9strap
 1. Aperte a sequência de botões solicitada para desbloquear "SysNAND (lvl1) writing"
@@ -133,7 +135,7 @@ Use um [gerenciador de saves](https://github.com/J-D-K/JKSM/releases/latest) par
 1. Se solicitado, aperte (A) para bloquear as permissões de escrita
 1. Aperte (Start) para reiniciar o **3DS de origem**
 
-##### Seção V - Realizando o backup do FIRM do 3DS de destino
+#### Section V - Backing up the target 3DS's FIRM
 
 1. Copie o `boot.firm` do `.7z` do Luma3DS para a raíz do seu cartão SD
 1. Copy `boot.nds` (B9STool) to the root of **the target 3DS**'s SD card
@@ -148,7 +150,7 @@ Use um [gerenciador de saves](https://github.com/J-D-K/JKSM/releases/latest) par
 1. Coloque o seu cartão SD em seu computador, então copie `F0F1_NEW3DS.bin` ou `F0F1_OLD3DS.bin` (dependendo do seu dispositivo) da pasta `boot9strap` para um local seguro; faça backups em diversos locais; esse backup irá salva-lo de um brick caso algo dê errado
 1. Reinsira seu cartão SD no **3DS de destino**
 
-##### Seção VI - Gravando o FIRM do 3DS de destino
+#### Section VI - Flashing the target 3DS's FIRM
 
 **Não use b9sTool em um dispositivo que já tem o arm9loaderhax instalado, ou você causará um BRICK!**
 {: .notice--danger}
@@ -159,10 +161,10 @@ Use um [gerenciador de saves](https://github.com/J-D-K/JKSM/releases/latest) par
   + Você pode ter que forçar o desligamento segurando o botão power
 1. Ligue **o 3DS de destino**
 
-##### Seção VII - Configurando o Luma3DS
+#### Section VII - Configuring Luma3DS
 
 1. Seu dispositivo deve ter iniciado no menu de configuração do Luma3DS
-  + Se você receber uma tela preta, [siga este guia de troubleshooting](troubleshooting#ts_sys_b9s)
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 1. Use o botão (A) e os botões direcionais para ativar as seguintes opções:    
   + **"Show NAND or user string in System Settings"**
 1. Aperte (Start) para salvar e reiniciar
