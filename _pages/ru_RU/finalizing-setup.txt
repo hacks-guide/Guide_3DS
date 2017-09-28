@@ -2,6 +2,8 @@
 title: "Завершение установки"
 ---
 
+{% include toc title="Table of Contents" %}
+
 #### Описание шагов
 
 Файл `boot.firm` - это то, что boot9strap запускает после загрузки из NAND, и этот файл может быть любым arm9-приложением. Этот файл может быть заменён когда угодно, однако Luma3DS позволяет запускать другие arm9 приложения в FIRM формате, используя свой загрузчик.
@@ -16,7 +18,7 @@ title: "Завершение установки"
 +  **GodMode9** *(многофункциональная утилита для работы с NAND и картриджами)*
 +  **Homebrew Launcher Loader** *(запускает Homebrew Launcher в качестве обычного приложения благодаря магии Rosalina)*
 
-#### Что понадобится
+### What you need
 
 * The latest release of [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) *(the `.cia` file)*
 * The latest release of [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
@@ -24,12 +26,12 @@ title: "Завершение установки"
 * The latest release of [DSP1](https://github.com/zoogie/DSP1/releases/latest)
 * The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) *(the `.cia` and `.3dsx` files)*
 * The latest fork of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(the `.cia` file)*
-* [`setup_ctrnand_luma3ds.gm9`]({{ base_path }}/gm9_scripts/setup_ctrnand_luma3ds.gm9)
-* [`cleanup_sd_card.gm9`]({{ base_path }}/gm9_scripts/cleanup_sd_card.gm9)
+* [`setup_ctrnand_luma3ds.gm9`]({{ "/gm9_scripts/setup_ctrnand_luma3ds.gm9" | absolute_url }})
+* [`cleanup_sd_card.gm9`]({{ "/gm9_scripts/cleanup_sd_card.gm9" | absolute_url }})
 
-#### Инструкция
+### Instructions
 
-##### Часть I - Подготовительные работы
+#### Section I - Prep Work
 
 1. Выключите консоль
 1. Вставьте SD-карту в компьютер
@@ -41,7 +43,7 @@ title: "Завершение установки"
 1. Copy `DSP1.cia` to the `/cias/` folder on your SD card
 1. Copy `Anemone3DS.cia` to the `/cias/` folder on your SD card
 
-    ![]({{ base_path }}/images/screenshots/cias-file-layout.png)
+    ![]({{ "/images/screenshots/cias-file-layout.png" | absolute_url }})
     {: .notice--info}
 
 1. Create a folder named `payloads` in the `luma` folder on your SD card if it does not already exist
@@ -51,15 +53,15 @@ title: "Завершение установки"
 1. Скопируйте `setup_ctrnand_luma3ds.gm9` в папку `/gm9/scripts/` на SD-карте
 1. Скопируйте `cleanup_sd_card.gm9` в папку `/gm9/scripts/` на SD-карте
 
-    ![]({{ base_path }}/images/screenshots/finalizing-setup-file-layout.png)
+    ![]({{ "/images/screenshots/finalizing-setup-file-layout.png" | absolute_url }})
     {: .notice--info}
 
 1. Вставьте SD-карту обратно в консоль
 1. Включите консоль
 
-##### Section II - Updating the System
+#### Section II - Updating the System
 
-Если вы, следуя предыдущей версии этого руководства, выполнили CTRTransfer на прошивку 2.1.0 на *New 3DS*, [Восстановите бэкап NAND](godmode9-usage#nand_restore), прежде чем приступить к этой части.
+If, while following a previous version of this guide, you CTRTransfered your *New 3DS* to 2.1.0, now is the time to [restore your NAND backup](godmode9-usage#restoring-a-nand-backup) before doing this section.
 {: .notice--danger}
 
 Если до начала этого руководства у вас уже был установлен EmuNAND, и вы хотите перенести содержимое EmuNAND в SysNAND с кастомной прошивкой - сейчас самый подходящий момент. Выполните действия из раздела [перенос EmuNAND](move-emunand), прежде чем приступить к этой части.
@@ -70,7 +72,7 @@ title: "Завершение установки"
   + При появлении ошибки, поставьте в настройках подключения, в настройках DNS "Получать DNS автоматически" в положение "Да"
   + Если вы все еще получаете ошибку и версия вашего NAND ниже, [выполните CTRTransfer](ctrtransfer) и попробуйте обновиться еще раз
 
-##### Часть III - Запуск FBI
+#### Section III - Launching FBI
 
 1. Запустите приложение Загружаемая игра
 1. Нажмите (L) + (Вниз) + (Select) одновременно чтобы открыть меню Rosalina
@@ -84,24 +86,24 @@ title: "Завершение установки"
 1. Консоль должна загрузиться в Homebrew Launcher
 1. Выберите FBI в списке homebrew
 
-##### Section IV - Installing CIAs
+#### Section IV - Installing CIAs
 
 1. Перейдите в `SD` -> `cias`
 1. Выберите "\<current directory>"
 1. Select the "Install and delete all CIAs" option, then press (A) to confirm
 1. Нажмите (Home), затем закройте приложение Загружаемая игра
 
-##### Section V - DSP Dump
+#### Section V - DSP Dump
 
 1. Запустите DSP1
 1. После завершения нажмите (B) чтобы удалить это приложение и вернуться в меню HOME
 
-##### Часть VI - CTRNAND Luma3DS
+#### Section VI - CTRNAND Luma3DS
 
 1. Запустите GodMode9, держа нажатой кнопку (Start) во время загрузки
 1. Если вам предложат создать бэкап важных файлов, нажмите кнопку (A) чтобы сделать это, затем нажмите (A) чтобы продолжить после завершения
-1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
-  + Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
+1. Если вам предложат выставить RTC дату и время, нажмите кнопку (A) чтобы сделать это, настройте дату и время, затем нажмите (A) чтобы продолжить
+  + Обратите внимание, что если вы выставили RTC дату и время, вам также придется исправить время в Системных настройках после завершения руководства
 1. Нажмите кнопку (Home) для вызова меню
 1. Выберите "Scripts..."
 1. Выберите "setup_ctrnand_luma3ds"
@@ -110,7 +112,7 @@ title: "Завершение установки"
 1. Нажмите (A), чтобы продолжить
 1. Нажмите (A) чтобы восстановить запрет на запись
 
-##### Часть VII - Создание бэкапа SysNAND
+#### Section VII - Backup SysNAND
 
 1. Нажмите кнопку (Home) для вызова меню
 1. Выберите "Scripts..."
@@ -120,13 +122,13 @@ title: "Завершение установки"
 1. Нажмите (A), чтобы продолжить
 1. Удерживая (R) нажмите (B) для того, чтобы извлечь SD-карту
 1. Вставьте SD-карту в компьютер
-1. Скопируйте `<serialnumber>_nandmin_###.bin` из папки `/gm9/out/` на SD-карте в безопасное место на вашем компьютере
+1. Скопируйте `<date>_<serialnumber>_sysnand_###.bin` из папки `/gm9/out/` на SD-карте в безопасное место на вашем компьютере
   + Сделайте несколько резервных копий в нескольких местах (например в облачном хранилище)
   + Эти бэкапы позволят восстановить консоль, если впоследствии что-то пойдёт не так
-1. После копирования удалите `<serialnumber>_nandmin_###.bin` из папки `/gm9/out/` на SD-карте
+1. После копирования удалите `<date>_<serialnumber>_sysnand_###.bin` из папки `/gm9/out/` на SD-карте
 1. Вставьте SD-карту обратно в консоль
 
-##### Часть VIII - Очистка SD-карты
+#### Section VIII - Cleanup SD Card
 
 1. Нажмите кнопку (Home) для вызова меню
 1. Выберите "Scripts..."
