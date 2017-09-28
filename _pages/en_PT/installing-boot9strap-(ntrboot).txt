@@ -2,7 +2,9 @@
 title: "Installing boot9strap (ntrboot)"
 ---
 
-#### What ye need
+{% include toc title="Table of Contents" %}
+
+### What you need
 
 * A magnet that triggers the sleep mode of your device (if using a folding style device)
 * Your ntrboot flashed flashcart
@@ -12,9 +14,9 @@ title: "Installing boot9strap (ntrboot)"
 * Th' latest release 'o [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(th' `.7z` file)*
 * Th' Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
 
-#### Instructions
+### Instructions
 
-##### Section I - Set th' sails (prep work)
+#### Section I - Prep Work
 
 1. Power off ye device
 1. Insert ye SD card into ye computer
@@ -23,13 +25,13 @@ title: "Installing boot9strap (ntrboot)"
 1. Create a folder named `boot9strap` on th' root 'o ye SD card
 1. Copy `boot9strap.firm` 'n `boot9strap.firm.sha` from th' boot9strap `.zip` to th' `/boot9strap/` folder on ye SD card
 
-    ![]({{ base_path }}/images/screenshots/boot9strap-ntrboot-file-layout.png)
+    ![]({{ "/images/screenshots/boot9strap-ntrboot-file-layout.png" | absolute_url }})
     {: .notice--info}
 
 1. Reinsert ye SD card into ye device
 1. Power on your device
 
-##### Section II - ntrboot
+#### Section II - ntrboot
 
 1. Use the magnet to find the spot on your device where the sleep sensor is triggered
   + This step is not needed on the old 2DS (which has a sleep mode switch)
@@ -41,14 +43,16 @@ title: "Installing boot9strap (ntrboot)"
   + It may take a few attempts to get this to work because the positioning is awkward
 1. If the exploit was successful, you will have booted into SafeB9SInstaller
 
-##### Section III - Installing boot9strap
+#### Section III - Installing boot9strap
 
 1. Wait fer all safety checks to be completed
+1. Remove the magnet from your device
+  + On old 2DS, you should instead disable the sleep mode switch
 1. When prompted, input th' key combo given to be installin' boot9strap
 1. Once it has completed, force your device to power off by holding down the power button
   + Your device will only boot to the SafeB9SInstaller screen until the next section is completed
 
-##### Section IV - Configurin' Luma3DS
+#### Section IV - Configuring Luma3DS
 
 1. Insert ye SD card into ye computer
 1. Delete `boot.firm` from the root of your SD card
@@ -56,7 +60,7 @@ title: "Installing boot9strap (ntrboot)"
 1. Reinsert ye SD card into ye device
 1. Power on your device
 1. Your device should have booted into the Luma3DS configuration menu
-  + If ye get a black screen, [follow 'tis troubleshootin' guide](troubleshooting#ts_sys_b9s)
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 1. Use th' (A) button 'n th' D-Pad to turn on th' followin':    
   + **"Show NAND or user string in System Settings"**
 1. Press (Start) to save 'n reboot
@@ -75,9 +79,9 @@ Note that the Acekard 2i retains its ability to launch `.nds` files while having
 
 Do not follow this section until you have completed the rest of the instructions on this page.
 
-##### Section V - Removing ntrboot
+#### Section V - Removing ntrboot
 
-###### What you need
+##### What you need
 
 * The latest release of [ntrboot_flasher](https://github.com/kitling/ntrboot_flasher/releases/latest)
 * The flashrom backup corresponding to your flashcart    
@@ -91,7 +95,7 @@ Do not follow this section until you have completed the rest of the instructions
   + <i class="fa fa-magnet" aria-hidden="true" title="'Tis be a magnet link. Use a torrent client to download the file."></i> - [`Acekard_2i_(HW_44)-Flashrom.zip`](magnet:?xt=urn:btih:d12b46b1bfadc6b03ff260ab90dcb136d890fd39&dn=Acekard_2i_%28HW_44%29-Flashrom.zip&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce)
   + <i class="fa fa-magnet" aria-hidden="true" title="'Tis be a magnet link. Use a torrent client to download the file."></i> - [`R4i_Ultra-Flashrom.zip`](magnet:?xt=urn:btih:614e9951a6c26145e68de34ed8c23a44bf190728&dn=R4i_Ultra-Flashrom.zip&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce)
 
-###### Instructions
+##### Instructions
 
 1. Power off ye device
 1. Insert ye SD card into ye computer
