@@ -2,6 +2,8 @@
 title: "Mover EmuNAND"
 ---
 
+{% include toc title="Table of Contents" %}
+
 Esta es una sección adicional para mover los contenidos de una EmuNAND a la nueva SysNAND con CFW, eliminando después la partición de la EmuNAND de la tarjeta SD. Nota: los términos EmuNAND y RedNAND son diferentes implementaciones del [mismo concepto](http://3dbrew.org/wiki/NAND_Redirection).
 
 Ten en cuenta que si tienes archivos de payloads distintos de `GodMode9.firm` en la carpeta `/luma/payloads/` en tu tarjeta SD, al mantener (Start) al inicio se desplegará un "chainloader menu" donde tendrás que usar el D-Pad y pulsar (A) para seleccionar "GodMode9", para esas instrucciones.
@@ -9,15 +11,15 @@ Ten en cuenta que si tienes archivos de payloads distintos de `GodMode9.firm` en
 **Ya DEBES tener instalado Luma3DS y boot9strap o arm9loaderhax para usar esto.**
 {: .notice--danger}
 
-#### Qué necesitas
+### What you need
 
 * Una EmuNAND existente
 * La última versión de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * La última versión de [FBI](https://github.com/Steveice10/FBI/releases/latest)
 
-#### Instrucciones
+### Instructions
 
-##### Sección I - Preparativos
+#### Section I - Prep Work
 
 1. Apaga tu consola
 1. Inserta tu tarjeta SD en tu computadora
@@ -25,7 +27,7 @@ Ten en cuenta que si tienes archivos de payloads distintos de `GodMode9.firm` en
 1. Copia la carpeta `gm9`contenida en el `.zip`de GodMode9 al directorio raíz de tu tarjeta SD
 1. Reinserta tu tarjeta SD en tu consola
 
-##### Sección II - Copia de datos de juegos de DSiWare
+#### Section II - Backup SysNAND DSiWare Saves
 
 Si no tienes ningún juego de DSiWare o datos del mismo que quieras conservar, puedes saltarte esta sección.
 {: .notice--info}
@@ -39,7 +41,7 @@ Si no tienes ningún juego de DSiWare o datos del mismo que quieras conservar, p
   + Este proceso puede llevar un tiempo si tienes muchos juegos de DSiWare
 1. Presiona (B) dos veces para volver al menú principal
 
-##### Sección III - Respaldo de datos de la Consola Virtual de GBA
+#### Section III - Backup GBA VC Saves
 
 Si no tienes ningún juego de Consola Virtual de GBA o datos del mismo que quieras conservar, puedes saltarte esta sección.
 {: .notice--info}
@@ -50,7 +52,7 @@ Ten en cuenta que esto no es necesario para otro tipo de juegos de Consola Virtu
 El juego será almacenado en la carpeta `/gm9/out/` de tu tarjeta SD con el nombre `<TitleID>.gbavc.sav`.
 {: .notice--info}
 
-Para identificar el Title ID de un archivo `<TitleID>.gbavc.sav`, tu podrías obtener una lista de todos los juegos en el sistema y sus correspondientes Title IDs, sosteniendo (R) y presionando (A) en el menú principal de GodMode9, y luego seleccionando "Search for titles".
+Para identificar el ID de título de un archivo `<TitleID>.gbavc.sav`, puedes obtener una lista de todos los juegos e nel sistema y sus correspondientes IDs de titulo marcando `[A:] SYSNAND SD`, sosteniendo (R) y presionando (A) al mismo tiempo, y luego seleccionando "Search for titles".
 {: .notice--info}
 
 1. Realiza lo siguiente por cada juego de Consola Virtual de GBA del cual quieras conservar los datos de guardado:
@@ -65,7 +67,7 @@ Para identificar el Title ID de un archivo `<TitleID>.gbavc.sav`, tu podrías ob
   + Presiona (A) para continuar
   + Presiona (Start) para reiniciar tu consola
 
-##### Sección IV - Copiar EmuNAND a la SysNAND
+#### Section IV - Copy EmuNAND to SysNAND
 
 1. Inicia GodMode9 manteniendo presionado (Start) mientras enciendes la consola
 1. Ve a `[E:] EMUNAND VIRTUAL`
@@ -78,7 +80,7 @@ Para identificar el Title ID de un archivo `<TitleID>.gbavc.sav`, tu podrías ob
 1. Presiona (B) para rechazar el rebloqueo de permisos de escritura si se solicita
 1. Presiona (B) para volver al menú principal
 
-##### Sección V - Restaurar datos de guardado de DSiWare
+#### Section V - Restore DSiWare Saves
 
 Si no hiciste el respaldo de datos de DSiWare anteriormente, puedes saltar esta sección.
 {: .notice--info}
@@ -95,7 +97,7 @@ Si no hiciste el respaldo de datos de DSiWare anteriormente, puedes saltar esta 
 1. Presiona (B) para rechazar el rebloqueo de permisos de escritura si se solicita
 1. Presiona (B) dos veces para volver al menú principal
 
-##### Sección VI - Restaurar datos de guardado de la Consola Virtual de GBA
+#### Section VI - Restore GBA VC Saves
 
 Si no habías respaldado datos de partidas de Consola Virtual de GBA antes, puedes saltarte esta sección.
 {: .notice--info}
@@ -123,7 +125,7 @@ Para identificar el Title ID de un archivo `<TitleID>.gbavc.sav`, tu podrías ob
   + Sal del juego de Consola Virtual de GBA
 1. Inicia GodMode9 manteniendo presionado (Start) mientras enciendes la consola
 
-##### Sección VII - Copia de seguridad de la SysNAND
+#### Section VII - Backup SysNAND
 
 1. Presiona el botón (Home) para abrir el menú de acción
 1. Selecciona "Scripts..."
@@ -133,13 +135,13 @@ Para identificar el Title ID de un archivo `<TitleID>.gbavc.sav`, tu podrías ob
 1. Presiona (A) para continuar
 1. Mantén (R) y presiona (B) al mismo tiempo para extraer la SD
 1. Inserta tu tarjeta SD en tu computadora
-1. Copia `<númerodeserie>_nandmin_###.bin` desde la carpeta `/gm9/out/` en tu tarjeta SD a una ubicación segura en tu computadora
+1. Copia `<date>_<númerodeserie>_sysnand###.bin` desde la carpeta `/gm9/out/` en tu tarjeta SD a una ubicación segura en tu computadora
   + Haz copias de seguridad en múltiples sitios (como por ejemplo, en un pendrive o almacenamiento online)
   + Esta copia de seguridad puede salvarte de un brick si algo va mal en el futuro
-1. Elimina el archivo `<númerodeserie>_nandmin_###.bin` de la carpeta `/gm9/out/` de tu tarjeta SD después de haberlo copiado
+1. Elimina el archivo `<fecha>_<númerodeserie>_sysnand_###.bin` de la carpeta `/gm9/out/` de tu tarjeta SD después de haberlo copiado
 1. **Haz una copia de seguridad de todos los archivos de tu tarjeta SD a una carpeta en tu computadora, todos los archivos se eliminarán en los siguientes pasos**
 
-##### Sección VIII - Formatear la tarjeta SD
+#### Section VIII - Format SD card
 
 1. Reinserta tu tarjeta SD en tu consola
 1. Presiona el botón (Home) para abrir el menú de acción
@@ -162,5 +164,5 @@ Para identificar el Title ID de un archivo `<TitleID>.gbavc.sav`, tu podrías ob
 
 ___
 
-Regresa a [Finalizar instalación](finalizing-setup).
+### Return to [Finalizing Setup](finalizing-setup).
 {: .notice--primary}
