@@ -2,6 +2,8 @@
 title: "Move EmuNAND"
 ---
 
+{% include toc title="Table of Contents" %}
+
 이 페이지는 이전 EmuNAND의 데이터를 새로운 CFW SysNAND로 옮기고 이전 EmuNAND 파티션을 제거하는 방법을 안내하는 부가 섹션입니다. EmuNAND와 RedNAND는 [동일한 개념](http://3dbrew.org/wiki/NAND_Redirection)을 다른 방식으로 구현한 것입니다.
 
 Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions.
@@ -9,15 +11,15 @@ Note that if you have any payload files other than `GodMode9.firm` in the `/luma
 **You MUST have already installed Luma3DS and boot9strap or arm9loaderhax to use this.**
 {: .notice--danger}
 
-#### 준비물
+### What you need
 
 * 설치된 EmuNAND
 * 최신 버전의 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * 최신 버전의 [FBI](https://github.com/Steveice10/FBI/releases/latest)
 
-#### 진행 방법
+### Instructions
 
-##### 섹션 I - 준비 작업
+#### Section I - Prep Work
 
 1. 기기를 종료해 주세요.
 1. SD 카드를 컴퓨터에 삽입해 주세요.
@@ -25,7 +27,7 @@ Note that if you have any payload files other than `GodMode9.firm` in the `/luma
 1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
 1. SD 카드를 기기에 다시 삽입해 주세요.
 
-##### 섹션 II - SysNAND DSiWare 저장 데이터 백업
+#### Section II - Backup SysNAND DSiWare Saves
 
 DSiWare 게임이나 저장 데이터에 대해 신경 쓰지 않는다연 이 섹션을 건너뛰어 주세요.
 {: .notice--info}
@@ -39,7 +41,7 @@ DSiWare 게임이나 저장 데이터에 대해 신경 쓰지 않는다연 이 �
   + 이 과정은 기기에 DSiware 게임이 많다면 시간이 좀 걸릴 수 있습니다.
 1. (B)를 두 번 눌러 메인 메뉴로 돌아가 주세요.
 
-##### 섹션 III - GBA VC 저장 데이터 백업
+#### Section III - Backup GBA VC Saves
 
 GBA VC 게임이나 저장 데이터에 대해 신경 쓰지 않는다면 이 섹션을 건너뛰어 주세요.
 {: .notice--info}
@@ -50,7 +52,7 @@ GBA VC 게임이나 저장 데이터에 대해 신경 쓰지 않는다면 이 �
 The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
 {: .notice--info}
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by holding (R) and pressing (A) on the GodeMode9 main menu, then selecting "Search for titles".
+To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
 {: .notice--info}
 
 1. 과정대로 진행해 백업하고자 하는 GBA VC 게임 저장 데이터를 저장해 주세요.
@@ -65,7 +67,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
   + Press (A) to continue
   + (start)를 눌러 기기를 다시 시작해 주세요.
 
-##### 섹션 IV - EmuNAND를 SysNAND로 복사
+#### Section IV - Copy EmuNAND to SysNAND
 
 1. Launch GodMode9 by holding (Start) during boot
 1. `[E:] EMUNAND VIRTUAL`로 이동해 주세요.
@@ -78,7 +80,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Press (B) to decline relocking write permissions if prompted
 1. (B)를 눌러 메인 메뉴로 돌아가 주세요.
 
-##### 섹션 V - DSiWare 저장 데이터 파일 복원
+#### Section V - Restore DSiWare Saves
 
 이전에 DSiWare 저장 데이터를 백업하지 않았다면 이 섹션을 건너뛰어 주세요.
 {: .notice--info}
@@ -95,7 +97,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Press (B) to decline relocking write permissions if prompted
 1. (B)를 두 번 눌러 메인 메뉴로 돌아가 주세요.
 
-##### 섹션 VI - GBA VC 저장 데이터 파일 복원
+#### Section VI - Restore GBA VC Saves
 
 이전에 GBA VC 저장 데이터를 백업하지 않았다면 이 섹션을 건너뛰어 주세요.
 {: .notice--info}
@@ -123,7 +125,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
   + GBA VC 게임을 종료해 주세요.
 1. Launch GodMode9 by holding (Start) during boot
 
-# 섹션 VII - SysNAND 백업
+#### Section VII - Backup SysNAND
 
 1. (Home)을 눌러 작업 메뉴를 띄워 주세요.
 1. Select "Scripts..."
@@ -133,13 +135,13 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. (A)를 눌러 진행해 주세요.
 1. (R) 버튼과 (B)를 동시에 눌러 SD 카드를 뺄 준비를 해 주세요.
 1. SD 카드를 컴퓨터에 삽입해 주세요.
-1. Copy `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + 여러 위치에 백업을 해 주세요. (온라인 파일 저장 공간 등)
   + 나중에 문제가 생겨 벽돌이 되었을 때 이 백업으로 기기를 살릴 수 있습니다.
-1. Delete `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card after copying it
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. **SD 카드의 모든 파일을 컴퓨터에 백업해두세요. 다음 단계에서 SD 카드의 모든 파일이 삭제됩니다.**
 
-##### 섹션 VIII - SD 카드 포맷
+#### Section VIII - Format SD card
 
 1. SD 카드를 기기에 다시 삽입해 주세요.
 1. (Home)을 눌러 작업 메뉴를 띄워 주세요.
@@ -162,5 +164,5 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 
 ___
 
-Return to [Finalizing Setup](finalizing-setup).
+### Return to [Finalizing Setup](finalizing-setup).
 {: .notice--primary}
