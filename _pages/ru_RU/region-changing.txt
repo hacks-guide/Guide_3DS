@@ -2,6 +2,8 @@
 title: "Смена региона"
 ---
 
+{% include toc title="Table of Contents" %}
+
 Этот дополнительный раздел рассказывает о смене региона на вашей приставке с кастомной прошивкой (CFW SysNAND). Это делается путем установки образа 11.5.0 CTRTransfer того региона, на который вы хотите перейти.
 
 Обратите внимание, что смена региона абсолютно не обязательна с тех пор, как Luma3DS поддерживает запуск игр других регионов и индивидуальную [эмуляцию региона для отдельных игр](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage) (англ.).
@@ -23,11 +25,11 @@ title: "Смена региона"
 Для продолжения, у вас уже ДОЛЖНА быть установлена Luma3DS и boot9strap или arm9loaderhax.
 {: .notice--danger}
 
-#### Что понадобится
+### What you need
 
 * Свежая версия [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * Свежая версия [FBI](https://github.com/Steveice10/FBI/releases/latest) *(`.3dsx-файл`)*
-* [`ctrtransfer_ticket_copy.gm9`]({{ base_path }}/gm9_scripts/ctrtransfer_ticket_copy.gm9)
+* [`ctrtransfer_ticket_copy.gm9`]({{ "/gm9_scripts/ctrtransfer_ticket_copy.gm9" | absolute_url }})
 * Образ 11.5.0 CTRTransfer для вашего устройства и региона     
 *(если вашего региона нет в списке, выберите любой, подходящий типу вашего устройства)*:    
   +    <i class="fa fa-magnet" aria-hidden="true" title="Это magnet-ссылка. Воспользуйтесь торрент-клиентом, чтобы скачать этот файл."></i> - [New 3DS или 2DS - 11.5.0 - EUR - CTRTransfer](magnet:?xt=urn:btih:465f1048f81e8e5c651ce2a4d9df48fec88d1099&dn=11.5.0-38E_ctrtransfer_n3ds.zip&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce)    
@@ -39,9 +41,9 @@ title: "Смена региона"
   +    <i class="fa fa-magnet" aria-hidden="true" title="Это magnet-ссылка. Воспользуйтесь торрент-клиентом, чтобы скачать этот файл."></i> - [Old 3DS или 2DS - 11.5.0 - JPN - CTRTransfer](magnet:?xt=urn:btih:d8913b4c0da224e8852fa2f685c41ddbce5310bc&dn=11.5.0-38J_ctrtransfer_o3ds.zip&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce)     
   +    <i class="fa fa-magnet" aria-hidden="true" title="Это magnet-ссылка. Воспользуйтесь торрент-клиентом, чтобы скачать этот файл."></i> - [Old 3DS или 2DS - 11.5.0 - USA - CTRTransfer](magnet:?xt=urn:btih:2708089605ca47387fa64e996a699eedd18031e8&dn=11.5.0-38U_ctrtransfer_o3ds.zip&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce)    
 
-#### Инструкция
+### Instructions
 
-##### Часть I - Подготовительные работы
+#### Section I - Prep Work
 
 1. Выключите консоль
 1. Вставьте SD-карту в компьютер
@@ -53,12 +55,12 @@ title: "Смена региона"
 1. Скопируйте `FBI.3dsx` в папку `/3ds/` на SD-карте
 1. Вставьте SD-карту обратно в консоль
 
-##### Часть II - CTRTransfer
+#### Section II - CTRTransfer
 
 1. Запустите GodMode9, держа нажатой кнопку (Start) во время загрузки
 1. Если вам предложат создать бэкап важных файлов, нажмите кнопку (A) чтобы сделать это, затем нажмите (A) чтобы продолжить после завершения
-1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
-  + Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
+1. Если вам предложат выставить RTC дату и время, нажмите кнопку (A) чтобы сделать это, настройте дату и время, затем нажмите (A) чтобы продолжить
+  + Обратите внимание, что если вы выставили RTC дату и время, вам также придется исправить время в Системных настройках после завершения руководства
 1. Перейдите в `[0:] SDCARD` -> `gm9`
 1. Нажмите (A) чтобы выбрать файл `.bin` CTRTransfer
 1. Выберите "CTRNAND options..."
@@ -81,7 +83,7 @@ title: "Смена региона"
   + Обновление консоли с установленным B9S + Luma (установленых у вас) безопасно
   + При появлении ошибки, поставьте в настройках подключения, в настройках DNS "Получать DNS автоматически" в положение "Да"
 
-##### Часть III - Запуск FBI
+#### Section III - Launching FBI
 
 1. Запустите приложение Загружаемая игра
 1. Нажмите (L) + (Вниз) + (Select) одновременно чтобы открыть меню Rosalina
@@ -94,7 +96,7 @@ title: "Смена региона"
 1. Запустите приложение Загружаемая игра
 1. Консоль должна загрузиться в Homebrew Launcher
 
-##### Часть IV - Переустановка тикетов
+#### Section IV - Reinstalling Tickets
 
 Если скрипт не нашел пользовательских ticket-файлов и просил вас пропустить эту часть (Skip the 'Reinstalling Tickets' section), пропустите эту часть
 {: .notice--info}
@@ -114,7 +116,7 @@ title: "Смена региона"
   + Нажмите (B) для отмены установки тикетов из CDN.
 1. Нажмите (Home) для выхода из FBI
 
-##### Часть V - Региональные настройки
+#### Section V - Region settings
 
 1. Откройте Системные настройки (System settings)
 1. Перейдите в "Прочие настройки" (Other Settings), затем "Профиль" (Profile), затем "Настройки региона" (Region Settings)
@@ -122,7 +124,7 @@ title: "Смена региона"
 1. При появлении запроса о штате указывать его не нужно
 1. Обновите SysNAND нового региона до последней версии
 
-##### Часть VI - Удаление образа CTRTransfer
+#### Section VI - Remove CTRTransfer image
 
 1. Запустите GodMode9, держа нажатой кнопку (Start) во время загрузки
 1. Перейдите в `[0:] SDCARD` -> `gm9`
