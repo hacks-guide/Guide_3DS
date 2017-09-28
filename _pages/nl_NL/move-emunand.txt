@@ -2,6 +2,8 @@
 title: "Move EmuNAND"
 ---
 
+{% include toc title="Table of Contents" %}
+
 Dit is de add-on-sectie voor het verplaatsen van een oude EmuNAND naar je nieuwe SysNAND CFW, en daarna het verwijderen van het oude EmuNAND gedeelte. Merk op dat de termen EmuNAND en RedNAND naar iets andere implementaties van [hetzelfde concept verwijzen](http://3dbrew.org/wiki/NAND_Redirection).
 
 Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions.
@@ -9,15 +11,15 @@ Note that if you have any payload files other than `GodMode9.firm` in the `/luma
 **You MUST have already installed Luma3DS and boot9strap or arm9loaderhax to use this.**
 {: .notice--danger}
 
-#### Benodigdheden
+### What you need
 
 * Een bestaande EmuNAND
 * De meest recente versie van [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * De meest recente versie van [FBI](https://github.com/Steveice10/FBI/releases/latest)
 
-#### Instructies
+### Instructions
 
-##### Deel I - Voorbereiding
+#### Section I - Prep Work
 
 1. Schakel je 3DS uit
 1. Plaats je SD kaart in je computer
@@ -25,7 +27,7 @@ Note that if you have any payload files other than `GodMode9.firm` in the `/luma
 1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
 1. Stop je SD kaart terug in je 3DS
 
-##### Deel II - Back-up maken SysNAND DSiWare Saves
+#### Section II - Backup SysNAND DSiWare Saves
 
 Als je geen DSiWare spellen of saves hebt die je wilt behouden, kan je dit deel overslaan.
 {: .notice--info}
@@ -39,7 +41,7 @@ Als je geen DSiWare spellen of saves hebt die je wilt behouden, kan je dit deel 
   + Dit proces kan even duren als je veel DSiWare spellen hebt
 1. Druk twee keer op (B) om terug te gaan naar het hoofdmenu
 
-##### Deel II - Backup maken GBA VC Saves
+#### Section III - Backup GBA VC Saves
 
 Als je geen GBA VC spellen of saves hebt die je wat uit maken, kan je dit deel overslaan.
 {: .notice--info}
@@ -50,7 +52,7 @@ Dit is niet nodig voor elke andere soort van Virtual Console spellen (GBC, NES, 
 The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
 {: .notice--info}
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by holding (R) and pressing (A) on the GodeMode9 main menu, then selecting "Search for titles".
+To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
 {: .notice--info}
 
 1. Doe het volgende proces voor elk GBA VC spel waarvan je een backup van de save wil maken:
@@ -65,7 +67,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
   + Press (A) to continue
   + Druk op (Start) om je 3DS opnieuw op te starten
 
-##### Deel IV - EmuNAND naar SysNAND kopiëren
+#### Section IV - Copy EmuNAND to SysNAND
 
 1. Launch GodMode9 by holding (Start) during boot
 1. Navigeer naar `[E:] EMUNAND VIRTUAL`
@@ -78,7 +80,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Press (B) to decline relocking write permissions if prompted
 1. Druk op (B) om terug te gaan naar het hoofdmenu
 
-##### Deel V - DSiWare Saves Herstellen
+#### Section V - Restore DSiWare Saves
 
 Als je geen backup DSiWare Saves hebt gemaakt, kan je dit overslaan.
 {: .notice--info}
@@ -95,7 +97,7 @@ Als je geen backup DSiWare Saves hebt gemaakt, kan je dit overslaan.
 1. Press (B) to decline relocking write permissions if prompted
 1. Druk twee keer op (B) om terug te gaan naar het hoofdmenu
 
-##### Deel VI - GBA VC Saves Herstellen
+#### Section VI - Restore GBA VC Saves
 
 Als je geen backup GBA VC Saves hebt gemaakt, kan je dit overslaan.
 {: .notice--info}
@@ -123,7 +125,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
   + Sluit het spel af
 1. Launch GodMode9 by holding (Start) during boot
 
-##### Deel VII - Backup SysNAND
+#### Section VII - Backup SysNAND
 
 1. Druk op de (Home) knop om het actiemenu te openen
 1. Select "Scripts..."
@@ -133,13 +135,13 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Druk op (A) om door te gaan
 1. Houd (R) en (B) gelijkertijd ingedrukt om je SD kaart uit te werpen
 1. Plaats je SD kaart in je computer
-1. Copy `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Maak back-ups in verschillende locaties (zoals een online bestandsopslag)
   + Deze backup zal je redden van een brick als er iets fout gaat in de toekomst
-1. Delete `<serialnumber>_nandmin_###.bin` from the `/gm9/out/` folder on your SD card after copying it
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card after copying it
 1. **Maak een backup van elk bestand op je SD kaart naar een map op je computer; alle bestanden zullen verwijderd worden in de volgende stappen**
 
-##### Deel VIII - SD kaart formatteren
+#### Section VIII - Format SD card
 
 1. Stop je SD kaart terug in je 3DS
 1. Druk op de (Home) knop om het actiemenu te openen
@@ -162,5 +164,5 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 
 ___
 
-Return to [Finalizing Setup](finalizing-setup).
+### Return to [Finalizing Setup](finalizing-setup).
 {: .notice--primary}
