@@ -2,18 +2,20 @@
 title: "Installation von boot9strap (Browser)"
 ---
 
+{% include toc title="Table of Contents" %}
+
 Falls du bereits deinen 3DS zuvor gehackt hast und eine EmuNAND basierte CFW installiert ist: Diese Anleitung behandelt nur das SysNAND und alle Schritte sollten nur innerhalb des SysNANDs ausgeführt/angewendet werden. Beachte, dass die Begriffe EmuNAND und RedNAND sich auf leicht unterschiedliche Implementierungen [des selben Konzepts](http://3dbrew.org/wiki/NAND_Redirection) beziehen.
 
-#### Was du brauchst
+### What you need
 
 * Die neueste Version von [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * Die neueste Version von [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; nicht die `devkit` Datei, nicht die `ntr` Datei)*
 * Die neueste Version von [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(die `.7z`-Datei)*
 * Das Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
 
-#### Anleitung
+### Instructions
 
-##### Abschnitt I - Vorbereitung
+#### Section I - Prep Work
 
 1. Schalte deinen 3DS aus
 1. Stecke deine SD-Karte in deinen Computer
@@ -23,13 +25,13 @@ Falls du bereits deinen 3DS zuvor gehackt hast und eine EmuNAND basierte CFW ins
 1. Kopiere `boot9strap.firm` und `boot9strap.firm.sha` aus der boot9strap `.zip` in den `/boot9strap/`-Ordner auf deiner SD-Karte
 1. Kopiere `SafeB9SInstaller.dat` und `Launcher.dat` aus der SafeB9SInstaller `.zip` in das Stammverzeichnis deiner SD-Karte
 
-    ![]({{ base_path }}/images/screenshots/boot9strap-browser-file-layout.png)
+    ![]({{ "/images/screenshots/boot9strap-browser-file-layout.png" | absolute_url }})
     {: .notice--info}
 
 1. Stecke deine SD-Karte nun wieder in deinen 3DS
 1. Schalte deine Konsole an
 
-##### Abschnitt II - Starten von SafeBS9Installer
+#### Section II - Launching SafeB9SInstaller
 
 1. Starte den Browser und besuche eine der folgenden URLs auf deinem Gerät
   + `https://dukesrg.github.io/?SafeB9SInstaller.dat`
@@ -40,16 +42,16 @@ Falls du bereits deinen 3DS zuvor gehackt hast und eine EmuNAND basierte CFW ins
   + [Folge dieser Problembehebungs-Anleitung](troubleshooting#ts_browser), falls du einen Fehler erhältst
 1. Wenn der Exploit erfolgreich war, wird nun direkt zum SafeBS9Installer gebootet
 
-##### Abschnitt III - Installation von boot9strap
+#### Section III - Installing boot9strap
 
 1. Warte auf alle Sicherheitsüberprüfungen
 1. Gib die Tastenkombination zur Bestätigung ein, wenn danach verlangt wird
 1. Sobald dies abgeschlossen ist drücke (A) um das Gerät neuzustarten
 
-##### Abschnitt IV - Luma3DS konfigurieren
+#### Section IV - Configuring Luma3DS
 
 1. Dein Gerät sollte neu starten und die Luma3DS Konfiguration anzeigen
-  + Wenn du einen schwarzen Bildschirm bekommst, [lies diese Problembehandlung](troubleshooting#ts_sys_b9s)
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 1. Benutze den (A) Knopf und das Steuerkreuz, um Folgendes zu aktivieren:    
   + **"Show NAND or user string in System Settings"**
 1. Drücke (Start) zum Speichern und neustarten
