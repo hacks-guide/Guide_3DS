@@ -2,24 +2,24 @@
 title: "如何使用 GodMode9 "
 ---
 
-{% include toc title="Table of Contents" %}
+{% include toc title="條目內容" %}
 
 GodMode9 是個可任意存取任天堂 3DS 主機檔案的檔案管理員，您可以透過它存取您的 SD 卡、SysNAND 和 EmuNAND 內的 FAT 磁區跟許多其他東西。 除了其他功能外，您還能透過它複製、刪除、重新命名檔案以及建立資料夾。
 
 請注意，如果您在 SD 卡中的 `/luma/payloads/` 資料夾中放有除了 `GodMode9.firm` 的 payload 檔案，在開機時按住「Start」鍵將會顯示一個「加載選單」，從那裏您得透過方向鍵及按鈕「A」選擇「GodMode9」。 
 
-GodMode9 is powerful software that has the capability to modify essentially anything on your console. Though many of these modifications are locked behind a permissions system, and it is impossible to accidentally perform dangerous actions without deliberately unlocking permissions, you should still follow instructions carefully and keep backups just in case.
+GodMode9 是個強大且可修改您主機的資料的一套軟體。 雖然您會需要透過內建的權限管理系統才能修改主機中的資料，且您不可能在不刻意解鎖權限系統的情況下不小心進行任何危險性操作，您還是應該小心翼翼地遵守各操作指南且先進行備份以防萬一。
 
-## Updating GodMode9
+## 更新 GodMode9
 
-Some of the instructions below are only applicable to the latest version of GodMode9, and as such you should follow this section to update your copy before continuing. Overwrite any existing files.
+下列部分操作僅適用於最新版本的 GodMode9，因此，您應先透過下列步驟以更新您的 GodMode9 再行繼續。 請覆蓋所有現有檔案。
 {: .notice--info}
 
-### What you need
+### 必備項目
 
 * 最新版的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 
-### Instructions
+### 操作說明
 
 1. 關閉您的主機
 1. 將 SD 卡插入電腦中
@@ -27,7 +27,7 @@ Some of the instructions below are only applicable to the latest version of GodM
 1. 解壓 GodMode9 `.zip` 中的 `gm9` 資料夾到 SD 卡的根目錄底下
 1. 將 SD 卡插回主機中
 
-## Creating a NAND Backup
+## 建立 NAND 備份
 
 1. 開機時按住「Start」鍵啟動 GodMode9
 1. 按「Home」鍵以叫出主選單
@@ -38,35 +38,35 @@ Some of the instructions below are only applicable to the latest version of GodM
 1. 按「A」 繼續
 1. 同時按住「R」及「B」以卸除 SD 卡
 1. 將 SD 卡插入電腦中
-1. Copy `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
+1. 從 SD 卡中的 `/gm9/out/` 資料夾中複製 `<date>_<serialnumber>_sysnand_###.bin` 至電腦中安全的地方
   + 建議備份至各個不同的地方(比如雲端硬碟中)
   + 未來如果您不小心玩到磚機，這備份將會是您的救命恩人
-1. Delete `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card after copying it
+1. 複製完畢後，將 `/gm9/out/` 資料夾中的 `<date>_<serialnumber>_sysnand_###.bin` 檔案刪除
 1. 將 SD 卡插回主機中
 
-## Restoring a NAND Backup
+## 還原 NAND 備份
 
 1. 開機時按住「Start」鍵啟動 GodMode9
 1. 同時按住「R」及「B」以卸除 SD 卡
 1. 將 SD 卡插入電腦中
-1. Copy `<date>_<serialnumber>_sysnand_###.bin` from your computer to the `/gm9/out/` folder on your SD card if you deleted it after backing it up
+1. 若您先前已複製您的備份至電腦中且已刪除 SD 卡中的備份，請從您的電腦中複製先前的 `<date>_<serialnumber>_sysnand_###.bin` 至 SD 卡中 `/gm9/out/` 資料夾中
 1. 將 SD 卡插回主機中
 1. 按「Home」鍵以叫出主選單
 1. 選擇「Scripts...」
-1. Select "Restore SysNAND (Safe)"
-1. Select your NAND backup
+1. 選擇「Restore SysNAND (Safe)」
+1. 選擇您的 NAND 備份
 1. 按「A」 繼續
-1. Press (A) to unlock SysNAND (lvl2) writing, then input the key combo given
+1. 按「A」解鎖 SysNAND (lvl2) 的寫入保護，然後按下提示的按鍵組合
   + 這不會複寫您的 boot9strap 安裝
 1. 過程結束後，按下「A」繼續
 1. 當提示時，按下「A」取消檔案寫入鎖定
 
-## Injecting any .CIA app into Health & Safety
+## 植入任何 .CIA 程式至「健康與警示」程式中
 
-For organizational purposes, copy the `.cia` file you wish to inject to the `/cias/` folder on your SD card
+為了整潔，請將您所想要植入的 `.cia` 檔複製至 SD 卡的 `/cias/` 資料夾中
 {: .notice--info}
 
-Note that it is not possible to inject files into Health & Safety that are larger than it (including games and other large applications)
+請注意，您將無法植入比「健康與警示」程式還大的檔案 (包括遊戲以及其他較大的程式)
 {: .notice--info}
 
 1. 開機時按住「Start」鍵啟動 GodMode9
@@ -77,7 +77,7 @@ Note that it is not possible to inject files into Health & Safety that are large
 1. 按「A」 繼續
 1. 當提示時，按下「A」取消檔案寫入鎖定
 
-## Restoring Health & Safety after injecting a .CIA app
+## 還原植入前的「健康與警示」程式
 
 此方法只能在先前使用過 GodMode9 植入檔案至「健康與警示」程式的前提下才能使用(非 Decrypt9 或 Hourglass9)。
 {: .notice--info}
@@ -89,7 +89,7 @@ Note that it is not possible to inject files into Health & Safety that are large
 1. 按「A」解鎖 SysNAND(lvl1)的寫入保護，然後按下提示的按鍵組合
 1. 當提示時，按下「A」取消檔案寫入鎖定
 
-## Dumping a Game Cartridge
+## 拷貝遊戲卡帶
 
 #### 準備工作
 
@@ -108,23 +108,23 @@ Note that it is not possible to inject files into Health & Safety that are large
   + **NDS 遊戲卡帶：**按「A」選取 `[程式 ID].trim.nds`，然後再選「Copy to 0:/gm9/out」
 1. 您可安裝的 `.cia` 或不可安裝的 `.nds` 檔案將被複製到您 SD 卡的 `/gm9/out/` 資料夾中
 
-## Dumping a Title
+## 拷貝程式
 
 1. 開機時按住「Start」鍵啟動 GodMode9
-1. Hover over the drive applicable to the type of title you wish to dump:
+1. 移動至適合您所想要拷貝的程式種類的磁區：
   + **使用者安裝程式**：移動至 `[A:] SYSNAND SD`
   + **系統程式**：移動至 `[1:] SYSNAND CTRNAND`
-1. Hold (R) and press (A) at the same time to open the drive options
-1. Select "Search for titles"
+1. 同時按住「R」及「A」以開啟磁碟選項
+1. 選擇「Search for titles」
 1. 按「A」 繼續
 1. 按「A」鍵選取 `.tmd` 檔案，並選擇「TMD file options...」，再選「Build CIA (standard)」
 1. 您可安裝的 `.cia` 檔案將被複製到您 SD 卡的 `/gm9/out/` 資料夾中
 
-## Converting a .3DS to .CIA
+## 將 .3DS 檔案轉成 .CIA
 
 {% capture notice %}
 + 為了整潔，將您所想要轉換的各個 `.3ds` 檔案複製至 SD 卡的 `/cias/` 資料夾中
-  + Note that if you wish to convert a `.3ds` file that is already on a flashcart, you should follow [Dumping a Game Cartridge](#dumping-a-game-cartridge)
+  + 請注意，如果您想要轉換已經在燒錄卡上的 `.3ds` 檔案，您應該遵循[拷貝遊戲卡帶](#dumping-a-game-cartridge)的步驟
 {% endcapture %}
 
 <div class="notice--info">{{ notice | markdownify }}</div>
@@ -134,12 +134,12 @@ Note that it is not possible to inject files into Health & Safety that are large
 1. 按「A」鍵選取您的 `.3ds` 檔案，並選擇「TMD file options...」，再選「Build CIA from file」
 1. 您可安裝的 `.cia` 檔案將被複製到您 SD 卡的 `/gm9/out/` 資料夾中
 
-## Backup GBA VC Saves
+## 備份 GBA 虛擬主機遊戲存檔
 
-The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
+遊戲存檔 `<TitleID>.gbavc.sav` 將被複製至 SD 卡中的`/gm9/out/` 資料夾中。
 {: .notice--info}
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
+若想找出 `<TitleID>.gbavc.sav` 遊戲檔案的 Title ID，您可以在選擇 `[A:] SYSNAND SD` 後按住「R」鍵並按下「A」並選擇 「Search for titles」以列出所有已安裝於系統的遊戲及對應的 Title ID。
 {: .notice--info}
 
 1. 為各個想備份的 GBA 虛擬主機 遊戲重複下列步驟：
@@ -150,13 +150,13 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
   + 移動至 `[S:] SYSNAND VIRTUAL`
   + 選擇 `agbsave.bin`，並按「A」選擇
   + 選擇「AGBSAVE options...」
-  + Select "Dump GBA VC save"
+  + 選擇「Dump GBA VC save」
   + 按「A」 繼續
   + 按下「Start」鍵重啟您的主機
 
-## Restore GBA VC Saves
+## 還原 GBA 虛擬主機遊戲存檔
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
+若想找出 `<TitleID>.gbavc.sav` 遊戲檔案的 Title ID，您可以在選擇 `[A:] SYSNAND SD` 後按住「R」鍵並按下「A」並選擇 「Search for titles」以列出所有已安裝於系統的遊戲及對應的 Title ID。
 {: .notice--info}
 
 1. 為各個想還原的 GBA 虛擬主機 遊戲重複下列步驟：
@@ -165,18 +165,18 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
   + 開機時，按住「Start」鍵進入 Luma3DS 選單
   + 按「A」啟動 GodMode9
   + 移動至 `[0:] SDCARD` -> `gm9`
-  + Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
+  + 選擇所想要還原的 `<TitleID>.gbavc.sav` 並按下「A」複製
   + 按「B」回到主選單
   + 移動至 `[S:] SYSNAND VIRTUAL`
   + 選擇 `agbsave.bin`，並按「A」選擇
   + 選擇「AGBSAVE options...」
-  + Select "Inject GBA VC save"
+  + 選擇「Inject GBA VC save」
   + 按「A」 繼續
   + 按下「Start」鍵重啟您的主機
   + 啟動您所想要備份存檔的 GBA 虛擬主機遊戲
   + 退出遊戲
 
-## Format an SD card
+## 格式化 SD 卡
 
 **請注意，這將清除您 SD 卡的所有資料！**
 {: .notice--danger}
@@ -192,7 +192,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
   + 您可以在此設置 SD 卡的名稱
 1. 出現提示時，輸入提示的按鍵組合以確認
 
-## Encrypting / Decrypting a .CIA file
+## 替 .CIA 檔案加密／解密
 
 #### 準備工作
 
@@ -209,7 +209,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
     + **Decrypt inplace：** 替換所選的 `.cia` 檔案至解密後的版本
 1. 加密／解密後的 `.cia` 檔案將被存於指定區域
 
-## Removing an NNID without formatting your device
+## 如何在不格式化主機的情況下清除 NNID
 
 1. 開機時按住「Start」鍵啟動 GodMode9
 1. 移動至 `[1:] SYSNAND CTRNAND` -> `data` -> (32 字元 ID) -> `sysdata` -> `00010038`
