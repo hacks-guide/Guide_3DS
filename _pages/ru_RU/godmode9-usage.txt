@@ -2,24 +2,24 @@
 title: "Использование GodMode9"
 ---
 
-{% include toc title="Table of Contents" %}
+{% include toc title="Содержание" %}
 
 GodMode9 это полноценный файловый менеджер для Nintendo 3DS, который дает вам доступ к SD-карте, FAT разделам внутри SysNAND или EmuNAND и просто ко всему остальному. Среди других его функций есть возможность копировать, удалять, переименовывать файлы и создавать папки.
 
 Обратите внимание, что если у вас имеются другие файлы помимо `GodMode9.firm` в папке `/luma/payloads/` на SD-карте, удержание кнопки (Start) при загрузке будет запускать "chainloader menu", где вам нужно будет использовать D-Pad и кнопку (A) для выбора "GodMode9" при выполнении этих инструкций. 
 
-GodMode9 is powerful software that has the capability to modify essentially anything on your console. Though many of these modifications are locked behind a permissions system, and it is impossible to accidentally perform dangerous actions without deliberately unlocking permissions, you should still follow instructions carefully and keep backups just in case.
+GodMode9 это мощный инструмент, который имеет возможность изменить все что угодно на вашей консоли. Хотя многие из этих модификаций заблокированы системой разрешений, и невозможно случайно выполнить опасные действия без разблокировки разрешений, всегда тщательно следуйте инструкциям и делайте резервные копии на всякий случай.
 
-## Updating GodMode9
+## Обновление GodMode9
 
-Some of the instructions below are only applicable to the latest version of GodMode9, and as such you should follow this section to update your copy before continuing. Overwrite any existing files.
+Некоторые из инструкций ниже применимы только к последней версии GodMode9, поэтому вы должны выполнить эту часть, чтобы обновить вашу копию, прежде чем продолжить. Перезаписывайте существующие файлы.
 {: .notice--info}
 
-### What you need
+### Что понадобится
 
 * Свежая версия [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 
-### Instructions
+### Инструкция
 
 1. Выключите консоль
 1. Вставьте SD-карту в компьютер
@@ -27,7 +27,7 @@ Some of the instructions below are only applicable to the latest version of GodM
 1. Скопируйте папку `gm9` из `.zip-архива` GodMode9 в корень SD-карты
 1. Вставьте SD-карту обратно в консоль
 
-## Creating a NAND Backup
+## Создание бэкапа NAND
 
 1. Запустите GodMode9, держа нажатой кнопку (Start) во время загрузки
 1. Нажмите кнопку (Home) для вызова меню
@@ -44,29 +44,29 @@ Some of the instructions below are only applicable to the latest version of GodM
 1. После копирования удалите `<date>_<serialnumber>_sysnand_###.bin` из папки `/gm9/out/` на SD-карте
 1. Вставьте SD-карту обратно в консоль
 
-## Restoring a NAND Backup
+## Восстановление бэкапа NAND
 
 1. Запустите GodMode9, держа нажатой кнопку (Start) во время загрузки
 1. Удерживая (R) нажмите (B) для того, чтобы извлечь SD-карту
 1. Вставьте SD-карту в компьютер
-1. Copy `<date>_<serialnumber>_sysnand_###.bin` from your computer to the `/gm9/out/` folder on your SD card if you deleted it after backing it up
+1. Скопируйте `<date>_<serialnumber>_sysnand_###.bin` с вашего компьютера в папку `/gm9/out/` на SD-карте, если вы удалили этот файл после создания бэкапа
 1. Вставьте SD-карту обратно в консоль
 1. Нажмите кнопку (Home) для вызова меню
 1. Выберите "Scripts..."
-1. Select "Restore SysNAND (Safe)"
-1. Select your NAND backup
+1. Выберите "Restore SysNAND (Safe)"
+1. Выберите ваш бэкап NAND
 1. Нажмите (A), чтобы продолжить
-1. Press (A) to unlock SysNAND (lvl2) writing, then input the key combo given
+1. Нажмите (A), чтобы разрешить запись в SysNAND (lvl2) и введите указанную комбинацию кнопок
   + Это действие не перезапишет установленный boot9strap
 1. По завершению процесса, нажмите (A)
 1. Нажмите (A) чтобы восстановить запрет на запись, если появится запрос
 
-## Injecting any .CIA app into Health & Safety
+## Инъекция любого .CIA в приложение Информация о здоровье и безопасности
 
-For organizational purposes, copy the `.cia` file you wish to inject to the `/cias/` folder on your SD card
+В целях поддержания порядка, скопируйте файл `.cia` для инъекции в папку `/cias/` на SD-карте
 {: .notice--info}
 
-Note that it is not possible to inject files into Health & Safety that are larger than it (including games and other large applications)
+Обратите внимание, что для инъекции в приложение Информация о здоровье и безопасности (Health & Safety) невозможно использовать файлы больше, чем само приложение (включая игры и другие большие приложения)
 {: .notice--info}
 
 1. Запустите GodMode9, держа нажатой кнопку (Start) во время загрузки
@@ -77,7 +77,7 @@ Note that it is not possible to inject files into Health & Safety that are large
 1. Нажмите (A), чтобы продолжить
 1. Нажмите (A) чтобы восстановить запрет на запись, если появится запрос
 
-## Restoring Health & Safety after injecting a .CIA app
+## Восстановление приложения Информация о здоровье и безопасности
 
 Эта инструкция сработает, только если процесс инъекции был выполнен при помощи GodMode9 (не Decrypt9 или Hourglass9).
 {: .notice--info}
@@ -89,7 +89,7 @@ Note that it is not possible to inject files into Health & Safety that are large
 1. Нажмите (A), чтобы разрешить запись в SysNAND (lvl1) и введите указанную комбинацию кнопок
 1. Нажмите (A) чтобы восстановить запрет на запись, если появится запрос
 
-## Dumping a Game Cartridge
+## Создание дампа картриджа
 
 #### Подготовительные работы
 
@@ -108,23 +108,23 @@ Note that it is not possible to inject files into Health & Safety that are large
   + **NDS картридж:** Нажмите (A) чтобы выбрать файл `[TitleID].trim.nds`, затем выберите "Copy to 0:/gm9/out"
 1. Ваш файл в формате `.cia` либо `.nds` будет помещен в папку `/gm9/out/` на SD-карте
 
-## Dumping a Title
+## Создание дампа тайтла
 
 1. Запустите GodMode9, держа нажатой кнопку (Start) во время загрузки
-1. Hover over the drive applicable to the type of title you wish to dump:
+1. Выделите диск, соответствующий типу нужного вам тайтла:
   + **Пользовательский тайтл**: `[A:] SYSNAND SD`
   + **Системный тайтл**: `[1:] SYSNAND CTRNAND`
-1. Hold (R) and press (A) at the same time to open the drive options
-1. Select "Search for titles"
+1. Удерживая (R), нажмите (A), чтобы открыть параметры диска
+1. Выберите "Search for titles"
 1. Нажмите (A), чтобы продолжить
 1. Нажмите (A) чтобы выбрать файл `.tmd`, затем выберите "TMD file options...", затем "Build CIA (standard)"
 1. Ваш файл в формате `.cia` будет помещен в папку `/gm9/out/` на SD-карте
 
-## Converting a .3DS to .CIA
+## Конвертация из .3DS в .CIA
 
 {% capture notice %}
 + В целях порядка, скопируйте каждый файл `.3ds`, который вы хотите конвертировать, в папку `/cias/` на SD-карте
-  + Note that if you wish to convert a `.3ds` file that is already on a flashcart, you should follow [Dumping a Game Cartridge](#dumping-a-game-cartridge)
+  + Заметьте, что если вы хотите конвертировать файл `.3ds`, который уже записан на флешкартридж, вам нужно следовать инструкции [Создание дампа картриджа](#dumping-a-game-cartridge)
 {% endcapture %}
 
 <div class="notice--info">{{ notice | markdownify }}</div>
@@ -134,7 +134,7 @@ Note that it is not possible to inject files into Health & Safety that are large
 1. Нажмите (A) чтобы выбрать ваш файл `.3ds`, затем выберите "NCSD image options...", затем "Build CIA from file"
 1. Ваш файл в формате `.cia` будет помещен в папку `/gm9/out/` на SD-карте
 
-## Backup GBA VC Saves
+## Бэкап сохранений GBA VC
 
 Сохранение будет скопировано в папку `/gm9/out/` на SD-карте с именем `<TitleID>.gbavc.sav`.
 {: .notice--info}
@@ -154,7 +154,7 @@ Note that it is not possible to inject files into Health & Safety that are large
   + Нажмите (A), чтобы продолжить
   + Нажмите (Start) для перезагрузки
 
-## Restore GBA VC Saves
+## Восстановление сохранений GBA VC
 
 Чтобы идентифицировать Title ID в имени файла `<TitleID>.gbavc.sav`, вы можете посмотреть список всех установленных игр и соответствующих им Title ID. Выделите диск `[A:] SYSNAND SD`, затем удерживая (R), нажмите (A) и выберите "Search for titles".
 {: .notice--info}
@@ -176,7 +176,7 @@ Note that it is not possible to inject files into Health & Safety that are large
   + Запустите игру GBA VC
   + Выйдите из игры GBA VC
 
-## Format an SD card
+## Форматирование SD-карты
 
 **Обратите внимание, что это сотрет всё содержимое вашей SD-карты!**
 {: .notice--danger}
@@ -192,7 +192,7 @@ Note that it is not possible to inject files into Health & Safety that are large
   + При необходимости вы можете ввести другую метку для SD-карты
 1. При появлении запроса, введите указанную комбинацию кнопок
 
-## Encrypting / Decrypting a .CIA file
+## Шифровка / Расшифровка файла .CIA
 
 #### Подготовительные работы
 
@@ -209,7 +209,7 @@ Note that it is not possible to inject files into Health & Safety that are large
     + **Decrypt inplace:** Заменить выбранный файл `.cia` его расшифрованной версией
 1. Ваш шифрованный / расшифрованный файл `.cia` будет помещен в выбранную папку
 
-## Removing an NNID without formatting your device
+## Удаление NNID без форматирования устройства
 
 1. Запустите GodMode9, держа нажатой кнопку (Start) во время загрузки
 1. Перейдите в `[1:] SYSNAND CTRNAND` -> `data` -> (32-значный ID) -> `sysdata` -> `00010038`
