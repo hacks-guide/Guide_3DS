@@ -2,7 +2,7 @@
 title: "A9LH → B9S"
 ---
 
-{% include toc title="Table of Contents" %}
+{% include toc title="Sisällysluettelo" %}
 
 Tämä sivu on tarkoitettu arm9loaderhax-käyttäjille, jotka haluavat päivittää konsolinsa boot9strapiin.
 
@@ -39,7 +39,7 @@ Huomaa, että New 3DS:llä `secret_sector.bin`-tiedostoa tarvitaan vain arm9load
 
 * <i class="fa fa-magnet" aria-hidden="true" title="Tämä on magneettilinkki. Käytä torrent-ohjelmaa ladataksesi tiedoston."></i> – **Vain New 3DS -käyttäjille:** [`secret_sector.bin`](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce)
 * Luma3DS:n [viimeisin julkaisu](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z`-tiedosto)*
-* The v7.0.5 release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/tag/v7.0.5) *(the `.7z` file)*
+* Luma3DS:n [v7.0.5-julkaisu](https://github.com/AuroraWright/Luma3DS/releases/tag/v7.0.5) *(`.7z`-tiedosto)*
 * SafeB9SInstallerin [viimeisin julkaisu](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * Boot9strapin [viimeisin julkaisu](https://github.com/SciresM/boot9strap/releases/latest) *(tavallinen boot9strap; ei `devkit`- eikä `ntr`-tiedosto)*
 * GodMode9:n [viimeisin julkaisu](https://github.com/d0k3/GodMode9/releases)
@@ -48,9 +48,9 @@ Huomaa, että New 3DS:llä `secret_sector.bin`-tiedostoa tarvitaan vain arm9load
 * [`setup_ctrnand_luma3ds.gm9`]({{ "/gm9_scripts/setup_ctrnand_luma3ds.gm9" | absolute_url }})
 * [`cleanup_sd_card.gm9`]({{ "/gm9_scripts/cleanup_sd_card.gm9" | absolute_url }})
 
-### Instructions
+### Ohjeet
 
-#### Section I - Prep Work
+#### Vaihe I – Valmistelut
 
 Korvaa mahdolliset olemassa olevat tiedostot SD-kortillasi kaikissa tämän vaiheen kohdissa.
 {: .notice--info}
@@ -58,8 +58,8 @@ Korvaa mahdolliset olemassa olevat tiedostot SD-kortillasi kaikissa tämän vaih
 1. Sammuta konsolisi
 1. Aseta SD-korttisi tietokoneeseesi
 1. Kopioi `starter.zip`-pakkauksen _sisältö_ SD-korttisi juureen
-1. Copy `boot.firm` from the latest version Luma3DS `.7z` to the root of your SD card
-1. Copy `arm9loaderhax.bin` from the v7.0.5 Luma3DS `.7z` to the root of your SD card
+1. Kopioi v7.0.5-Luma3DS-`.7z`-pakkauksesta `boot.firm` SD-korttisi juureen
+1. Kopioi v7.0.5-Luma3DS-`.zip`-pakkauksesta `arm9loaderhax.bin` SD-korttisi juureen
 1. Luo `cias`-niminen kansio SD-korttisi juureen, jos sitä ei jo ole olemassa
 1. Kopioi `lumaupdater.cia` SD-korttisi `/cias/`-kansioon
 1. Luo `boot9strap`-niminen kansio SD-korttisi juureen
@@ -78,7 +78,7 @@ Korvaa mahdolliset olemassa olevat tiedostot SD-kortillasi kaikissa tämän vaih
 
 1. Aseta SD-korttisi takaisin konsoliisi
 
-#### Section II - Installing boot9strap
+#### Vaihe II – Boot9strapin asentaminen
 
 1. Avaa Luma3DS:n ketjulatausvalikko pitämällä (START)-painiketta pohjassa käynnistyksen aikana
   + Jotkin Luma3DS-versiot avaavat suoraan käynnistystiedoston, jonka alku on `start_`
@@ -91,7 +91,7 @@ Korvaa mahdolliset olemassa olevat tiedostot SD-kortillasi kaikissa tämän vaih
 1. Kun toiminto on suoritettu, paina (A):ta käynnistääksesi konsolisi uudelleen.
   + Jos konsolisi sammuu käynnistyessä, varmista, että olet kopioinut Luma3DS-`.7z`-pakkauksesta `boot.firm`-tiedoston SD-korttisi juureen
 
-#### Section III - Configuring Luma3DS
+#### Vaihe III – Luma3DS:n määrittäminen
 
 Tämä vaihe on tarpeellinen vain, jos Luma3DS-määritysvalikko näkyy uudelleenkäynnistyksen jälkeen.
 {: .notice--info}
@@ -100,7 +100,7 @@ Tämä vaihe on tarpeellinen vain, jos Luma3DS-määritysvalikko näkyy uudellee
   + **"Show NAND or user string in System Settings"**
 1. Paina (START)-painiketta tallentaaksesi ja käynnistääksesi uudelleen
 
-#### Section IV - Updating the System
+#### Vaihe IV – Järjestelmän päivittäminen
 
 Jos sinulla oli ennen tämän oppaan aloittamista EmuNAND-kokoonpano, ja haluaisit siirtää sen sisällön uuteen SysNAND-CFW-kokoonpanoosi, seuraa osiota [EmuNANDin siirtäminen](move-emunand) ennen kuin jatkat tätä vaihetta.
 {: .notice--info}
@@ -110,24 +110,24 @@ Jos sinulla oli ennen tämän oppaan aloittamista EmuNAND-kokoonpano, ja haluais
   + Jos saat virheen, laita DNS:n automaattinen haku (Auto-Obtain DNS) päälle asetuksista
   + Jos saat edelleen virheen, [seuraa osiota CTRTransfer](ctrtransfer) ja yritä sitten päivittämistä uudelleen
 
-#### Section V - Installing Luma3DS Updater
+#### Vaihe V – Luma3DS Updaterin asentaminen
 
 1. Avaa FBI
-1. Navigate to `Titles`
-1. Select your existing Luma3DS Updater
-1. Select the "Delete Title And Ticket" option, then press (A) to confirm
+1. Mene kohtaan `Titles`
+1. Valitse nykyinen Luma3DS Updater
+1. Valitse "Delete Title And Ticket" ja paina (A):ta vahvistaaksesi
 1. Paina (B):tä palataksesi päävalikkoon
 1. Mene hakemistoon `SDCARD` → `cias`
 1. Valitse `lumaupdater.cia`
 1. Valitse "Install CIA" ja paina (A):ta vahvistaaksesi
 1. Paina (HOME)-painiketta ja sulje FBI
 
-#### Section VI - CTRNAND Luma3DS
+#### Vaihe VI – Luma3DS:n asentaminen CTRNANDiin
 
 1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
 1. Jos ohjelma kehottaa luomaan varmuuskopion tärkeistä tiedostoista (essential files), paina (A):ta tehdäksesi sen, ja kun varmuuskopio on valmis, paina (A):ta uudelleen jatkaaksesi
-1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
-  + Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
+1. Jos sinua kehotetaan korjaamaan RTC-aika ja -päivämäärä, paina (A):ta ja aseta ne oikein, paina sitten (A):ta jatkaaksesi
+  + Huomaa, että jos jouduit korjaamaan RTC-ajan ja -päivämäärän, sinun täytyy korjata ne myös järjestelmäasetuksista (System Settings) näiden ohjeiden jälkeen
 1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
 1. Valitse "Scripts..."
 1. Valitse "setup_ctrnand_luma3ds"
@@ -136,7 +136,7 @@ Jos sinulla oli ennen tämän oppaan aloittamista EmuNAND-kokoonpano, ja haluais
 1. Paina (A):ta jatkaaksesi
 1. Paina (A):ta lukitaksesi kirjoitusoikeudet
 
-#### Section VII - Backup SysNAND
+#### Vaihe VII – SysNANDin varmuuskopiointi
 
 1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
 1. Valitse "Scripts..."
@@ -146,16 +146,16 @@ Jos sinulla oli ennen tämän oppaan aloittamista EmuNAND-kokoonpano, ja haluais
 1. Paina (A):ta jatkaaksesi
 1. Pidä (R):ää pohjassa ja paina samalla (B):tä irrottaaksesi SD-korttisi
 1. Aseta SD-korttisi tietokoneeseesi
-1. Copy `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
+1. Kopioi `<päivämäärä>_<sarjanumero>_sysnand_###.bin` SD-korttisi `/gm9/out/`-kansiosta turvalliseen paikkaan tietokoneellasi
   + Varmuuskopioi useaan eri paikkaan (kuten pilvipalveluihin)
   + Tämä varmuuskopiointi pelastaa sinut konsolin vioittumiselta, jos jokin menee pieleen tulevaisuudessa
   + Korvaa aikaisempi arm9loaderhax-NAND-varmuuskopiosi tällä boot9strap-varmuuskopiolla
-1. Delete `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card after copying it
+1. Poista `<päivämäärä>_<sarjanumero>_sysnand_###.bin` SD-korttisi `/gm9/out/`-kansiosta kopioituasi sen
 1. Aseta SD-korttisi takaisin konsoliisi
 
-#### Section VIII - Cleanup SD Card
+#### Vaihe VIII – SD-kortin siivoaminen
 
-Note that this script will remove the `/boot9strap/` and `/cias/` folders from your SD card!
+Huomaa, että tämä toimenpide poistaa `/boot9strap/`- ja `/cias/`-kansiot SD-kortiltasi!
 {: .notice--danger}
 
 1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
