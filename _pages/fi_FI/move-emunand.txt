@@ -27,21 +27,21 @@ Huomaa, että jos sinulla on muita käynnistystiedostoja kuin `GodMode9.firm` SD
 1. Kopioi GodMode9-`.zip`-pakkauksesta `gm9`-kansio SD-korttisi juureen
 1. Aseta SD-korttisi takaisin konsoliisi
 
-#### Section II - Backup SysNAND DSiWare Saves
+#### Vaihe II – SysNANDin DSiWare-tallennusten varmuuskopiointi
 
 Jos sinulla ei ole yhtäkään DSiWare-peliä tai -tallennusta, voit ohittaa tämän vaiheen.
 {: .notice--info}
 
 1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
 1. Jos ohjelma kehottaa luomaan varmuuskopion tärkeistä tiedostoista (essential files), paina (A):ta tehdäksesi sen, ja kun varmuuskopio on valmis, paina (A):ta uudelleen jatkaaksesi
-1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
-  + Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
+1. Jos sinua kehotetaan korjaamaan RTC-aika ja -päivämäärä, paina (A):ta ja aseta ne oikein, paina sitten (A):ta jatkaaksesi
+  + Huomaa, että jos jouduit korjaamaan RTC-ajan ja -päivämäärän, sinun täytyy korjata ne myös järjestelmäasetuksista (System Settings) näiden ohjeiden jälkeen
 1. Mene hakemistoon `[2:] SYSNAND TWLN` → `title`
 1. Pidä (R):ää pohjassa ja paina samalla (A):ta `00030004`-kansion kohdalla valitaksesi sen, ja valitse sitten "Copy to 0:/gm9/out"
   + Tämä prosessi voi kestää jonkin aikaa, jos sinulla on monta DSiWare-peliä
 1. Paina (B):tä kahdesti palataksesi päävalikkoon
 
-#### Section III - Backup GBA VC Saves
+#### Vaihe III – GBA VC -tallennusten varmuuskopiointi
 
 Jos sinulla ei ole yhtäkään GBA VC -peliä tai -tallennusta, voit ohittaa tämän vaiheen.
 {: .notice--info}
@@ -49,10 +49,10 @@ Jos sinulla ei ole yhtäkään GBA VC -peliä tai -tallennusta, voit ohittaa tä
 Huomaa, että tämä ei ole tarpeellista muille Virtual Console -peleille (GBC, NES jne.)
 {: .notice--info}
 
-The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
+Tallennus kopioidaan SD-korttisi `/gm9/out/`-kansioon tiedostonimellä `<sovellustunnus>.gbavc.sav`.
 {: .notice--info}
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
+Jotta voisit tunnistaa `<sovellustunnus>.gbavc.sav`-tiedoston pelin, voit näyttää listan järjestelmäsi kaikista peleistä sekä niitä vastaavista sovellustunnuksista seuraavasti: mene aseman `[A:] SYSNAND SD` kohdalle, pidä (R):ää pohjassa ja paina samalla (A):ta, valitse sitten "Search for titles".
 {: .notice--info}
 
 1. Tee seuraava prosessi jokaista GBA VC -peliä kohden, jonka tallennuksen haluat varmuuskopioida:
@@ -61,13 +61,13 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
   + Avaa Luma3DS:n ketjulatausvalikko pitämällä (START)-painiketta pohjassa käynnistyksen aikana
   + Avaa GodMode9 painamalla (A):ta
   + Mene hakemistoon `[S:] SYSNAND VIRTUAL`
-  + Press (A) on `agbsave.bin` to select it
-  + Select "AGBSAVE options..."
-  + Select "Dump GBA VC save"
-  + Press (A) to continue
+  + Paina (A):ta `agbsave.bin`-tiedoston kohdalla valitaksesi sen
+  + Valitse "AGBSAVE options..."
+  + Valitse "Dump GBA VC save"
+  + Paina (A):ta jatkaaksesi
   + Paina (START)-painiketta käynnistääksesi uudelleen
 
-#### Section IV - Copy EmuNAND to SysNAND
+#### Vaihe IV – EmuNANDin kopioiminen SysNANDiin
 
 1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
 1. Mene hakemistoon `[E:] SYSNAND VIRTUAL`
@@ -80,7 +80,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Paina (B):tä kieltäytyäksesi lukitsemasta kirjoitusoikeuksia kehotettaessa
 1. Paina (B):tä palataksesi päävalikkoon
 
-#### Section V - Restore DSiWare Saves
+#### Vaihe V – DSiWare-tallennusten palauttaminen
 
 Jos et varmuuskopioinut DSiWare-tallennuksia aiemmin, voit ohittaa tämän osion.
 {: .notice--info}
@@ -97,12 +97,12 @@ Jos et varmuuskopioinut DSiWare-tallennuksia aiemmin, voit ohittaa tämän osion
 1. Paina (B):tä kieltäytyäksesi lukitsemasta kirjoitusoikeuksia kehotettaessa
 1. Paina (B):tä kahdesti palataksesi päävalikkoon
 
-#### Section VI - Restore GBA VC Saves
+#### Vaihe VI – GBA VC -tallennusten palauttaminen
 
 Jos et varmuuskopioinut GBA VC -tallennuksia aiemmin, voit ohittaa tämän osion.
 {: .notice--info}
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by holding (R) and pressing (A) on the GodeMode9 main menu, then selecting "Search for titles".
+Jotta voisit tunnistaa `<sovellustunnus>.gbavc.sav`-tiedoston pelin, voit näyttää listan järjestelmäsi kaikista peleistä sekä niitä vastaavista sovellustunnuksista seuraavasti: ollessasi GodMode9:n päävalikossa pidä (R):ää pohjassa ja paina samalla (A):ta, valitse sitten "Search for titles".
 {: .notice--info}
 
 1. Pidä (R):ää pohjassa ja paina samalla (START)-painiketta sammuttaaksesi konsolisi
@@ -113,13 +113,13 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
   + Avaa Luma3DS:n ketjulatausvalikko pitämällä (START)-painiketta pohjassa käynnistyksen aikana
   + Avaa GodMode9 painamalla (A):ta
   + Mene hakemistoon `[0:] SDCARD` → `gm9`
-  + Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
+  + Paina (Y):tä `sovellustunnus.gbavc.sav`-tiedoston kohdalla kopioidaksesi sen
   + Paina (B):tä palataksesi päävalikkoon
   + Mene hakemistoon `[S:] SYSNAND VIRTUAL`
-  + Press (A) on `agbsave.bin` to select it
-  + Select "AGBSAVE options..."
-  + Select "Inject GBA VC save"
-  + Press (A) to continue
+  + Paina (A):ta `agbsave.bin`-tiedoston kohdalla valitaksesi sen
+  + Valitse "AGBSAVE options..."
+  + Valitse "Inject GBA VC save"
+  + Paina (A):ta jatkaaksesi
   + Paina (START)-painiketta käynnistääksesi uudelleen
   + Avaa peli
   + Sulje peli
@@ -141,7 +141,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Poista `<päivämäärä>_<sarjanumero>_sysnand_###.bin` SD-korttisi `/gm9/out/`-kansiosta kopioituasi sen
 1. **Varmuuskopioi SD-korttisi kaikki tiedostot tietokoneellesi; kaikki tiedostot poistetaan seuraavaksi**
 
-#### Section VIII - Format SD card
+#### Vaihe VIII – SD-kortin alustaminen
 
 1. Aseta SD-korttisi takaisin konsoliisi
 1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
@@ -164,5 +164,5 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 
 ___
 
-### Return to [Finalizing Setup](finalizing-setup).
+### Palaa osioon [Asennuksen viimeistely](finalizing-setup).
 {: .notice--primary}
