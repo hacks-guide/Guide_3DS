@@ -1,0 +1,76 @@
+---
+title: "Mettre à jour B9S"
+---
+
+{% include toc title="Table of Contents" %}
+
+Cette page s'adresse aux utilisateurs de boot9strap déjà présent sur leurs console afin de le mettre à jour vers la dernière version.
+
+{% capture notice-1 %}
+Il y a eu des informations concernant une vague de bannissements contre les utilisateurs de CFW par Nintendo. Pour vous protéger, merci de bien faire les étapes suivantes avant de commencer ce guide:
+
+1. Allez dans les paramètres de la console, puis dans les "Paramètres Internet", puis dans "SpotPass" puis "Envoi d'informations système"
+1. Désactiver l'option "Envoyer des informations système"
+1. Sortez des paramètres système
+1. Allez dans votre liste d'amis (l'icône avec une tête en haut de votre Menu Home)
+  + Si vous recevez une erreur et que vous êtes sorti du menu, le paramètre de la liste d'amis est déjà désactivé
+1. Allez dans les paramètres de la Liste d'Amis, puis dans "Paramètres des notifications d'amis" puis "Montrez a vos amis a quoi vous jouez"
+1. Désactivez l'option "Montrez a vos amis a quoi vous jouez"
+1. Sortez de votre Liste d'Amis
+
+{% endcapture %}
+
+<div class="notice--danger">{{ notice-1 | markdownify }}</div>
+
+### What you need
+
+* La dernière version de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* La dernière version de [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(boot9strap standard, pas le fichier `devkit` et ni le fichier `ntr`)*
+* La dernière version de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(le fichier `.7z`)*
+* [`cleanup_sd_card.gm9`]({{ "/gm9_scripts/cleanup_sd_card.gm9" | absolute_url }})
+
+### Instructions
+
+#### Section I - Prep Work
+
+Pour toutes les étapes de cette section, remplacez tous les fichiers existants sur votre carte SD.
+{: .notice--info}
+
+1. Insérez votre carte SD dans votre ordinateur
+1. Créez un dossier à la racine de votre carte SD nommé `boot9strap`
+1. Copiez `cleanup_sd_card.gm9` dans le dossier `/gm9/scripts/` sur votre carte SD
+1. Copiez `SafeB9SInstaller.firm` du dossier SafeB9SInstaller `.zip` vers le dossier `/luma/payloads/` de votre carte SD
+1. Copiez `boot9strap.firm` et `boot9strap.firm.sha` depuis le fichier ".zip" de boot9strap vers le dossier `/boot9strap/` sur votre carte SD
+1. Réinsérez votre carte SD dans votre 3DS
+
+#### Section II - Installing boot9strap
+
+1. Démarrez la console en maintenant (Start) enfoncé pour accéder au menu de chainloader de Luma3DS
+1. Lancez SafeB9SInstaller en appuyant sur (A)
+1. Attendez que tous les tests de sécurité soient finis
+1. Quand cela est demandé, appuyez sur la combinaison de boutons donnée pour installer boot9strap
+1. Once it has completed, hold (Start) while pressing (A) to reboot your device to the Luma3DS chainloader
+  + If you encounter an error booting your device after the B9S update, just continue to fix it
+
+#### Section III - Update Luma3DS
+
+1. Éteignez votre 3DS
+1. Insérez votre carte SD dans votre ordinateur
+1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card, replacing the existing file
+1. Réinsérez votre carte SD dans votre 3DS
+
+#### Section IV - Cleanup SD Card
+
+Note that this script will remove the `/boot9strap/` and `/cias/` folders from your SD card!
+{: .notice--danger}
+
+1. Ouvrez Godmode9 en maintenant (Start) au démarrage
+1. Si vous êtes invité à créer une sauvegarde de fichiers essentiels, appuyez sur (A) pour le faire, puis appuyez sur (A) pour continuer une fois qu’elle a complété
+1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
+  + Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
+1. Appuyez sur (Home) pour faire apparaître le menu d’actions (action menu)
+1. Sélectionnez "Scripts"
+1. Sélectionnez "cleanup_sd_card"
+1. Lorsque vous êtes invité, appuyez sur (A)
+1. Appuyez sur (A) pour continuer
+1. Hold (R) and press (Start) to power off your device

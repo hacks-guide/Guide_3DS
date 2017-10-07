@@ -1,0 +1,221 @@
+---
+title: "Folosind GodMode9"
+---
+
+{% include toc title="Table of Contents" %}
+
+GodMode9 is a full access file browser for the Nintendo 3DS console, giving you access to your SD card, the FAT partitions inside your SysNAND and EmuNAND, and basically anything else. Among other functionality, you can copy, delete, rename files, and create folders.
+
+Țineți cont că dacă aveți alte payload-uri în afară de `GodMode9.firm` în folderul '/luma/payloads/' de pe cardul SD, apăsând (Start) va lansa un "meniu chainloader" în care va trebui să folosiți D-Pad-ul și butonul (A) ca să selectați "GodMode9" pentru aceste instrucțiuni. 
+
+GodMode9 is powerful software that has the capability to modify essentially anything on your console. Though many of these modifications are locked behind a permissions system, and it is impossible to accidentally perform dangerous actions without deliberately unlocking permissions, you should still follow instructions carefully and keep backups just in case.
+
+## Updating GodMode9
+
+Some of the instructions below are only applicable to the latest version of GodMode9, and as such you should follow this section to update your copy before continuing. Overwrite any existing files.
+{: .notice--info}
+
+### Ce aveți nevoie
+
+* Cea mai nouă versiune de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+
+### Instrucțiuni
+
+1. Închideți dispozitivul
+1. Introduceți cardul SD în calculator
+1. Copiați `GodMode9.firm` de pe arhiva `.zip` GodMode9 în folderul `/luma/payloads/` de pe cardul SD
+1. Copiați folderul `gm9` din fișierul `.zip` GodMode9 în rădăcina cardului SD
+1. Reintroduceți cardul SD în dispozitivul dumneavoastră
+
+## Creating a NAND Backup
+
+1. Lansați GodMode9 ținând apăsat (Start) în timpul pornirii
+1. Apăsați (Home) pentru a arăta meniul de acțiuni
+1. Selectați "Scripts..."
+1. Selectați "Backup SysNAND"
+1. Apăsați (A) pentru a confirma
+  + Acest proces va lua ceva timp
+1. Apăsați (A) pentru a continua
+1. Țineți apăsat (R) și apăsați (B) în același timp pentru a scoate cardul SD
+1. Introduceți cardul SD în calculator
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
+  Faceți copii de rezervă în mai multe locații (cum ar fi stocări online ale fișierelor)
+  + Această copie de rezervă vă va salva de un brick în caz că ceva nu merge bine in viitor
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card after copying it
+1. Reintroduceți cardul SD în dispozitivul dumneavoastră
+
+## Restoring a NAND Backup
+
+1. Lansați GodMode9 ținând apăsat (Start) în timpul pornirii
+1. Țineți apăsat (R) și apăsați (B) în același timp pentru a scoate cardul SD
+1. Introduceți cardul SD în calculator
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from your computer to the `/gm9/out/` folder on your SD card if you deleted it after backing it up
+1. Reintroduceți cardul SD în dispozitivul dumneavoastră
+1. Apăsați (Home) pentru a arăta meniul de acțiuni
+1. Selectați "Scripts..."
+1. Select "Restore SysNAND (Safe)"
+1. Select your NAND backup
+1. Apăsați (A) pentru a continua
+1. Press (A) to unlock SysNAND (lvl2) writing, then input the key combo given
+  + Aceasta nu va suprascrie instalarea boot9strap
+1. Odată terminat, apăsați (A) pentru a continua
+1. Apăsați (A) ca să reblocați permisiunile de scriere dacă vi se cere
+
+## Injecting any .CIA app into Health & Safety
+
+For organizational purposes, copy the `.cia` file you wish to inject to the `/cias/` folder on your SD card
+{: .notice--info}
+
+Note that it is not possible to inject files into Health & Safety that are larger than it (including games and other large applications)
+{: .notice--info}
+
+1. Lansați GodMode9 ținând apăsat (Start) în timpul pornirii
+1. Navigați spre `[0:] SDCARD` -> `cias`
+1. Apăsați (A) pe`.cia`-ul vostru pentru a-l selecta, apoi selectați "CIA image options...", apoi selectați "Mount image to drive"
+1. Apăsați (A) pe fișierul `.app`, apoi selectați "NCCH image options", apoi selectați "Inject to H&S"
+1. Apăsați (A) ca să deblocați scrierea în SysNAND (lvl1), apoi introduceți combinația de butoane care vi se cere
+1. Apăsați (A) pentru a continua
+1. Apăsați (A) ca să reblocați permisiunile de scriere dacă vi se cere
+
+## Restoring Health & Safety after injecting a .CIA app
+
+Aceasta va funcţiona doar dacă injectarea Health & Safety a fost efectuată de GodMode9 (nu Decrypt9 sau Hourglass9).
+{: .notice--info}
+
+1. Lansați GodMode9 ținând apăsat (Start) în timpul pornirii
+1. Apăsați (Home) pentru a arăta meniul de acțiuni
+1. Selectați "More..."
+1. Selectați "Restore H&S"
+1. Apăsați (A) ca să deblocați scrierea în SysNAND (lvl1), apoi introduceți combinația de butoane care vi se cere
+1. Apăsați (A) ca să reblocați permisiunile de scriere dacă vi se cere
+
+## Dumping a Game Cartridge
+
+#### Preparații
+
+{% capture notice %}
++ Introduceți cardul de joc care vreți să faceți copie în dispozitiv
+  + Cardurile de joc 3DS li se vor face copie într-un format `.cia` bun de instalat
+  + Cardurile de joc NDS li se vor face copie într-un format `.nds` care nu se poate instala, însă e compatibil cu flashcart-uri și emulatoare
+{% endcapture %}
+
+<div class="notice--info">{{ notice | markdownify }}</div>
+
+1. Lansați GodMode9 ținând apăsat (Start) în timpul pornirii
+1. Navigați spre `[0:] GAMECART`
+1. Urmaţi paşii pentru cardul de joc:
+  + **Card de joc 3DS:** Apăsați (A) pe`[TitleID].trim.3ds` ca să-l selectați, apoi selectați "NCSD image options...", apoi selectați "Build CIA from file"
+  + **Card de joc NDS:** Apăsați (A) pe `[TitleID].trim.nds` ca să-l selectați, apoi selectați "Copy to 0:/gm9/out"
+1. Fișierul vostru instalabil `.cia` sau fișierul formatat non-instalabil `.nds` se va păstra în folderul `/gm9out/` de pe carsul SD
+
+## Dumping a Title
+
+1. Lansați GodMode9 ținând apăsat (Start) în timpul pornirii
+1. Hover over the drive applicable to the type of title you wish to dump:
+  + **Titlu instalat de utilizator**: Navigați spre `[A:] SYSNAND SD`
+  + **Titlu preinstalat**: Navigați spre `[1:] SYSNAND CTRNAND`
+1. Hold (R) and press (A) at the same time to open the drive options
+1. Select "Search for titles"
+1. Apăsați (A) pentru a continua
+1. Apăsați (A) pe fișierul `.tmd` pentru a-l selecta, apoi selectați "TMD file options...", apoi selectați "Build CIA (standard)"
+1. Fișierul vostru instalabil `.cia` se va păstra în folderul `/gm9out/` de pe carsul SD
+
+## Converting a .3DS to .CIA
+
+{% capture notice %}
++ Pentru scopul de a menține ordinea, copiați fiecare fișier`.3ds` care doriți să convertiți în folderul `/cias/` de pe cardul SD
+  + Note that if you wish to convert a `.3ds` file that is already on a flashcart, you should follow [Dumping a Game Cartridge](#dumping-a-game-cartridge)
+{% endcapture %}
+
+<div class="notice--info">{{ notice | markdownify }}</div>
+
+1. Lansați GodMode9 ținând apăsat (Start) în timpul pornirii
+1. Navigați spre `[0:] SDCARD` -> `cias`
+1. Apăsați (A) pe fișierul `.3ds` pentru a-l selecta, apoi selectați "NCSD image options...", apoi selectați "Build CIA from file"
+1. Fișierul vostru instalabil `.cia` se va păstra în folderul `/gm9out/` de pe carsul SD
+
+## Backup GBA VC Saves
+
+The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
+{: .notice--info}
+
+To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
+{: .notice--info}
+
+1. Faceți următoarea procedură pentru fiecare joc VC GBA la care vreți să le faceți copii de rezervă datelor de salvare:
+  + Lansați jocul VC GBA
+  + Ieșiți din jocul VC GBA
+  + Porniți dispozitivul în timp ce țineți apăsat (Start) pentru a lansa meniul chainloader Luma3DS
+  + Lansați GodMode9 apăsând (A)
+  +Navigați spre '[S:] SYSNAND VIRTUAL'
+  + Press (A) on `agbsave.bin` to select it
+  + Select "AGBSAVE options..."
+  + Select "Dump GBA VC save"
+  + Press (A) to continue
+  + Apăsați (Start) pentru a reporni dispozitivul
+
+## Restore GBA VC Saves
+
+To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
+{: .notice--info}
+
+1. Faceți următoarea procedură pentru fiecare joc VC GBA la care vreți să restaurați datele de salvare:
+  + Lansați jocul VC GBA
+  + Ieșiți din jocul VC GBA
+  + Porniți dispozitivul în timp ce țineți apăsat (Start) pentru a lansa meniul chainloader Luma3DS
+  + Lansați GodMode9 apăsând (A)
+  +Navigați spre '[0:] SDCARD' -> 'gm9'
+  + Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
+  + Apăsați (B) ca să vă întoarceți în meniul principal
+  +Navigați spre '[S:] SYSNAND VIRTUAL'
+  + Press (A) on `agbsave.bin` to select it
+  + Select "AGBSAVE options..."
+  + Select "Inject GBA VC save"
+  + Press (A) to continue
+  + Apăsați (Start) pentru a reporni dispozitivul
+  + Lansați jocul VC GBA
+  + Ieșiți din jocul VC GBA
+
+## Format an SD card
+
+**Țineți cont că asta va elimina complet conținutul cardului SD!**
+{: .notice--danger}
+
+1. Lansați GodMode9 ținând apăsat (Start) în timpul pornirii
+1. Apăsați (Home) pentru a arăta meniul de acțiuni
+1. Selectați "More..."
+1. Selectați "SD format menu"
+1. Selectați opțiunile de EmuNAND care vreți să le folosiți
+  + Majoritatea utilizatorilor vor dori să selecteze "No EmuNAND"
+1. Selectaţi "Auto"
+1. Apăsați (A) ca să acceptați eticheta 'GM9SD'
+  + Opțional, puteți scrie un nume personalizat cardului SD
+1. Când vi se cere, introduceți combinația de butoane ca să confirmați
+
+## Encrypting / Decrypting a .CIA file
+
+#### Preparații
+
++ Pentru scopul de a menține ordinea, copiați fiecare fișier`.cia` care doriți să faceți criptare / decriptare în folderul `/cias/` de pe cardul SD
+{: .notice--info}
+
+1. Lansați GodMode9 ținând apăsat (Start) în timpul pornirii
+1. Navigați spre `[0:] SDCARD` -> `cias`
+1. Apăsați (A) pe fișierul '.cia' ca să-l selectați, apoi selectați "CIA image options..."
+1. Selectaţi opţiunea pentru a efectua funcţia dorită:
+    + **Encrypt to 0:/gm9/out:** Creați o copie criptată a fişierului selectat '.cia' în folderul '/gm9/out/' de pe cardul SD
+    + **Decrypt to 0:/gm9/out:** Creați o copie decriptată a fişierului selectat '.cia' în folderul '/gm9/out/' de pe cardul SD
+    + **Criptare pe loc:** Înlocuiți fișierul `.cia` selectat cu o versiune criptată
+    + **Decriptare pe loc:** Înlocuiți fișierul `.cia` selectat cu o versiune decriptată
+1. Fișierul '.cia' criptat / decriptat va fi scos în locul dorit
+
+## Removing an NNID without formatting your device
+
+1. Lansați GodMode9 ținând apăsat (Start) în timpul pornirii
+1. Navigați spre `[1:] SYSNAND CTRNAND` -> `data` ->(ID de 32 de caractere) -> `sysdata` -> `00010038`
+1. Țineți apăsat (R), apoi apăsați (X) pe `00000000` pentru a redenumi fișierul
+1. Apăsați (Sus) odată pentru a schimba numele în `10000000`
+1. Apăsați (A) pentru a salva modificările
+1. Apăsati (A) pentru a debloca scrierea în SysNAND, apoi introduceți combinația de butoane care vi se cere
+1. Navigați înapoi în meniul principal
+1. Apăsați (Start) pentru a reporni dispozitivul

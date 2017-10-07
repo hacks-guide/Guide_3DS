@@ -1,2 +1,5 @@
 {% include base_path %}
-<div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }} - <a href="https://github.com/Plailect/Guide">Source</a> - <a href="site-navigation">Site Navigation</a> - <a href="why-ads">Why Ads?</a>
+{% assign split_path = page.path | split: "/" %}
+{% assign locale = split_path[1] %}
+{% assign titles = site.data.navigation[locale].footer %}
+<div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }} - <a href="https://github.com/Plailect/Guide">{{ titles[0].title }}</a> - <a href="site-navigation">{{ titles[1].title }}</a> - <a href="why-ads">{{ titles[2].title }}</a>

@@ -1,0 +1,102 @@
+---
+title: "ntrboot"
+---
+
+{% include toc title="Table of Contents" %}
+
+Si vous avez déjà flasher Ntrboot sur votre linker , allez à [Installer boot9strap (ntrboot)](installing-boot9strap-(ntrboot)) Pour des instructions et comment l'utiliser .
+{: .notice--success}
+
+### Required Reading
+
+L'installation de boot9strap à partir de ntrboot nécessite un linker compatible .
+
+L’exploit de ntrboot lui-même est compatible avec les linkers suivants :
+
+  + [R4i Gold 3DS (RTS)](http://www.nds-card.com/ProShow.asp?ProID=149)
+  + [Acekard 2i](http://www.nds-card.com/ProShow.asp?ProID=160)
+  + R4i Gold 3DS "Starter"
+  + R4i Ultra
+  + R4 3D Revolution
+  + Infinity 3 R4i
+  + DSTT ([some flash chips only!](https://gist.github.com/Hikari-chin/6b48f1bb8dd15136403c15c39fafdb42))
+
+  ![]({{ "/images/screenshots/ntrboot-flashcarts.png" | absolute_url }})
+  {: .notice--info}
+
+Notez que des méthodes spécifiques peuvent avoir des informations de compatibilité supplémentaire.
+
+Toutes les consoles pliables nécessite d'avoir un petit aimant pour simuler la fermeture de la console . (La 2DS nécessite d'actionner le switch de veille). C'est parce que l'exploit demande de mettre la console en veille tout en ayant accès aux boutons.
+
+Pour tester un aimant , il suffit de mettre l'aimant autour des boutons (A), (B), (X), (Y) lorsque l'appareil est allumé ,
+puis de voir si l'appareil se met en mode veille . Si cela fonctionne , l'écran restera noir jusqu'à ce que vous retirez l'aimant.
+{: .notice--info}
+
+Notez que le Linker ne sera pas capable d’être utilisé pour ses fonctions standards, tandis que l’exploit de ntrboot est installé dessus (sauf dans le cas de l’Acekard 2i, qui reste fonctionnel *sur 3DS systèmes avec custom firmware installé seulement*). Des étapes facultatives se trouvent à la fin des instructions de flash Ntrboot , concernant la suppresion de l'exploit de votre Linker .
+
+Notez qu'il est possible que pendant le flash sur un clone celui-ci devienne **inutilisable**. C'est peu probable , mais notez que seule les originaux fonctionnent avec Ntrboot . Pour réduire les chances d'avoir une contrefaçon utilisez (ce site [NDS Card](http://www.nds-card.com/))
+{: .notice--danger}
+
+___
+### Methods
+
+___
+
+#### Flashing ntrboot (3DS Single System)
+
+Cette méthode n’exige rien de plus que votre 3DS original stock.
+
+Note that more recent 3DS versions have blocked access to some flashcarts, and some flashcarts have always been blocked on the 3DS. This leaves them unable to launch the flasher `.nds` file on some (or all) versions. The ntrboot compatible flashcarts are able to launch `.nds` files on the 3DS (under the listed versions):
+
+  + [R4i Gold 3DS (RTS)](http://www.nds-card.com/ProShow.asp?ProID=149) : <= 11.6.0
+  + [Acekard 2i](http://www.nds-card.com/ProShow.asp?ProID=160) : <= 4.3.0
+  + R4i Gold 3DS "Starter" : 4.1.0 - 4.5.0
+  + R4i Ultra : <= 4.3.0
+  + Infinity 3 R4i : <= 11.6.0
+
+Continue to [Flashing ntrboot (3DS Single System)](flashing-ntrboot-(3ds-single-system))
+{: .notice--primary}
+
+___
+
+#### Flashing ntrboot (3DS Multi System)
+
+This method requires temporary access to a second 3DS family device that is already running boot9strap.
+
+Continue to [Flashing ntrboot (3DS Multi System)](flashing-ntrboot-(3ds-multi-system))
+{: .notice--primary}
+
+___
+
+#### Flashing ntrboot (NDS)
+
+Cette méthode nécessite un accès temporaire à une Nintendo DS ou DS LITE qui soit compatible avec votre linker.
+
+Continue to [Flashing ntrboot (NDS)](flashing-ntrboot-(nds))
+{: .notice--primary}
+
+___
+
+#### Flashing ntrboot (DSi)
+
+Cette méthode nécessite un accès temporaire à une Nintendo DSI qui soit compatible avec votre linker.
+
+Notez que les versions plus récentes de DSi ont bloqué l’accès à certains Linkers. Cela rend impossible de lancer le fichier `.nds` sur les versions plus récentes. Les linkers compatible ntrboot sont en mesure de lancer des fichiers `.nds` sous les versions suivantes :
+
+  + [R4i Gold 3DS RTS](http://www.nds-card.com/ProShow.asp?ProID=149) : <= 1.4.5
+  + [Acekard 2i](http://www.nds-card.com/ProShow.asp?ProID=160) : <= 1.4.4
+  + R4i Gold 3DS "Starter" : <= 1.4.5
+  + R4i Ultra : <= 1.4.1
+  + Infinity 3 R4i : <= 1.4.5
+
+Continue to [Flashing ntrboot (DSi)](flashing-ntrboot-(dsi))
+{: .notice--primary}
+
+___
+
+#### Flashing ntrboot (Powersaves)
+
+Cette méthode une fois publié nécessitera une [Powersaves](https://amzn.to/2fb3VY7). Cette méthode n'est pas encore publié , ceci est juste une page réservé .
+
+Continue to [Flashing ntrboot (Powersaves)](flashing-ntrboot-(powersaves))
+{: .notice--primary}

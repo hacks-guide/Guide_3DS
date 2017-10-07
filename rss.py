@@ -53,7 +53,7 @@ with open(rss, "w") as xml:
             #xml.write("\t\t\t<torrent:infoHash>{0}</torrent:infoHash>\n".format(infohash))
             #xml.write("\t\t\t<torrent:magnetURI><![CDATA[{0}]]></torrent:magnetURI>\n".format(magnet))
             #xml.write("\t\t\t<torrent:fileName>{0}</torrent:fileName><torrent:fileName>\n".format(name))
-            xml.write("\t\t\t<enclosure url=\"{0}\" type=\"application/x-bittorent\" />\n".format(magnet))
+            xml.write("\t\t\t<enclosure url=\"magnet:?xt=urn:btih:{0}\" type=\"application/x-bittorent\" />\n".format(infohash))
             xml.write("\t\t</item>\n")
     xml.write("\t</channel>\n")
     xml.write("</rss>")

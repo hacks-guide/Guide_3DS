@@ -1,0 +1,168 @@
+---
+title: "EmuNAND transferieren"
+---
+
+{% include toc title="Table of Contents" %}
+
+Dies ist ein Zusatzabschnitt zum Verschieben des Inhaltes eines vorherigen EmuNAND in die neue SysNAND CFW plus Entfernung des alten EmuNAND. Beachte, dass die Begriffe EmuNAND und RedNAND sich auf leicht unterschiedliche Implementierungen [des selben Konzepts](http://3dbrew.org/wiki/NAND_Redirection) beziehen.
+
+Beachte: Sollten noch weitere Dateien als nur die`GodMode9.firm` Datei im `/luma/payloads/` Ordner auf deiner SD-Karte sein, starte das "Chainloader Menu", indem du beim Starten der Konsole die (Start) Taste gedrückt hältst und in welchem du dann das D-Pad und die (A) Taste verwenden musst um "GodMode9", für die Anleitung, auszuwählen.
+
+**Du MUSST bereits Luma3DS und boot9strap oder arm9loaderhax installiert haben, um dies zu benutzen.**
+{: .notice--danger}
+
+### What you need
+
+* Einen bestehenden EmuNAND
+* Der neueste Version von [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* Die neueste Version von [FBI](https://github.com/Steveice10/FBI/releases/latest)
+
+### Instructions
+
+#### Section I - Prep Work
+
+1. Schalte deine Konsole aus
+1. Stecke deine SD-Karte in deinen Computer
+1. Kopiere `GodMode9.firm` (oder `GodMode9.bin` für arm9loaderhax-Benutzer) aus der GodMode9 `.zip` in den `/luma/payloads`-Ordner auf deiner SD-Karte
+1. Kopiere den Ordner `gm9` aus der GodMode9 `.zip` in das Stammverzeichnis deiner SD-Karte
+1. Stecke deine SD-Karte nun wieder in deinen 3DS
+
+#### Section II - Backup SysNAND DSiWare Saves
+
+Wenn du noch keine DSiWare-Spiele oder Spielstände hast, überspringe diesen Abschnitt.
+{: .notice--info}
+
+1. Starte GodMode9, indem du während dem Starten deiner Konsole die Taste (Start) gedrückt hältst
+1. Wenn du aufgefordert wirst, ein "essential files backup" durchzuführen, drücke (A). Drücke erneut (A) nachdem es abgeschlossen ist
+1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
+  + Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
+1. Navigiere zu `[2:] SYSNAND TWLN` -> `title`
+1. Halte (R) und drücke gleichzeitig (A) auf dem Ordner `00030004`, um ihn auszuwählen und wähle dann "Copy to 0:/gm9/out"
+  + Das kann einen Moment dauern, wenn du viele DSiWare Spiele besitzt
+1. Drücke zweimal (B), um zurück in das Hauptmenü zu gelangen
+
+#### Section III - Backup GBA VC Saves
+
+Überspringe diesen Abschnitt, falls du keine GBA VC Spiele oder Spielstände besitzt.
+{: .notice--info}
+
+Diese Schritte sind nicht notwendig für andere Virtual Console Spiele (GBC, NES, etc.)
+{: .notice--info}
+
+The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
+{: .notice--info}
+
+To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
+{: .notice--info}
+
+1. Führe die folgenden Schritte für jedes GBA VC Spiel aus, für das du ein Backup erstellen möchtest:
+  + Starte das GBA VC spiel
+  Verlasse das GBA VC Spiel wieder
+  + Starte deine Konsole, während du (Start) gedrückt hälst, um das Luma3DS chainloader-Menü zu starten
+  + Starte GodMode9, indem du (A) drückst
+  + Navigiere zu `[S:] SYSNAND VIRTUAL`
+  + Press (A) on `agbsave.bin` to select it
+  + Select "AGBSAVE options..."
+  + Select "Dump GBA VC save"
+  + Press (A) to continue
+  + Drücke (Start) um deinen 3DS neu zu starten
+
+#### Section IV - Copy EmuNAND to SysNAND
+
+1. Starte GodMode9, indem du während dem Starten deiner Konsole die Taste (Start) gedrückt hältst
+1. Navigiere zu `[E:] EMUNAND VIRTUAL`
+1. Drücke (A) auf `nand.bin`, um es auszuwählen, wähle dann "NAND image options...", dann wähle "Restore SysNAND (safe)"
+1. Drücke (A), um SysNAND-Änderungen zu aktivieren. Gib danach die angezeigte Tastenkombination ein
+  + Die arm9loaderhax-Installation wird hiermit nicht überschrieben
+1. Gib die angezeigte Tastenkombination ein, um SysNAND-Änderungen (auf erster Ebene) zu aktivieren
+  + Dieser Vorgang nimmt einige Zeit in Anspruch
+1. Sobald dies abgeschlossen ist drücke (A) um fortzufahren
+1. Drücke (B), um die Schreibrechte nicht zu deaktiveren
+1. Drücke (B), um zum Hauptmenü zurückzukehren
+
+#### Section V - Restore DSiWare Saves
+
+Überspringe diesen Abschnitt, falls du kein Backup für deine DSiWare Spielstände erstellt hast.
+{: .notice--info}
+
+1. Navigiere zu `[0:] SDCARD` -> `gm9` -> `out`
+1. Wähle den Ordner "00030004" aus und drücke (Y), um ihn zu kopieren.
+1. Drücke zweimal (B), um zurück in das Hauptmenü zu gelangen
+1. Navigiere zu `[2:] SYSNAND TWLN` -> `title`
+1. Drücke (Y), um den Ordner "00030004" einzufügen.
+1. Wähle "Copy path(s)" aus
+1. Drücke (A), um die SysNAND (Stufe 1) Bearbeitung zu aktivieren. Dann gebe die angegebene Tastenkombination ein
+1. Wähle "Overwrite file(s)"
+  + Dieser Vorgang kann einige Zeit dauern, wenn du viele DSiWare-Spiele hast
+1. Drücke (B), um die Schreibrechte nicht zu deaktiveren
+1. Drücke zweimal (B), um zurück in das Hauptmenü zu gelangen
+
+#### Section VI - Restore GBA VC Saves
+
+Wenn du keine GBA VC Spielstände früher gesichert hast, überspringe den Abschnitt.
+{: .notice--info}
+
+To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by holding (R) and pressing (A) on the GodeMode9 main menu, then selecting "Search for titles".
+{: .notice--info}
+
+1. Halte (R) gedrückt und drücke gleichzeitig (Start), um dein Gerät abzuschalten
+1. Schalte das Gerät wieder ein, der SysNAND erscheint.
+1. Führe den folgenden Prozess für jedes GBA VC Spiel durch, bei dem du einen Spielstand wiederherstellen möchtest:
+  + Starte das GBA VC spiel
+  Verlasse das GBA VC Spiel wieder
+  + Starte deine Konsole, während du (Start) gedrückt hälst, um das Luma3DS chainloader-Menü zu starten
+  + Starte GodMode9, indem du (A) drückst
+  Navigiere zu `[0:] SDCARD` -> `gm9`
+  + Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
+  + Drücke (B), um zum Hauptmenü zurückzukehren
+  + Navigiere zu `[S:] SYSNAND VIRTUAL`
+  + Press (A) on `agbsave.bin` to select it
+  + Select "AGBSAVE options..."
+  + Select "Inject GBA VC save"
+  + Press (A) to continue
+  + Drücke (Start) um deinen 3DS neu zu starten
+  + Starte das GBA VC spiel
+  Verlasse das GBA VC Spiel wieder
+1. Starte GodMode9, indem du während dem Starten deiner Konsole die Taste (Start) gedrückt hältst
+
+#### Section VII - Backup SysNAND
+
+1. Drücke  (HOME) um das Aktionsmenü aufzurufen
+1. Wähle "Scripts"
+1. Wähle "Backup SysNAND"
+1. Drücke (A) um zu bestätigen
+  + Dieser Vorgang nimmt einige Zeit in Anspruch
+1. Drücke (A) um fortzufahren
+1. Drücke (R) und (B) gleichzeitig um die SD-Karte auszuwerfen
+1. Stecke deine SD-Karte in deinen Computer
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
+  + Erstelle Backup Dateien an mehreren Orten (USB-Stick, PC, Externe Festplatte, Online-Speicher, etc.)
+  + Diese Sicherheitskopie wird dich vor einem Brick schützen, falls in der Zukunft etwas schief gehen sollte
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card after copying it
+1. ** Sichere jede Datei von deiner SD-Karte in einem Ordner auf deinem Computer, da in den nächsten Schritten alle Dateien gelöscht werden **
+
+#### Section VIII - Format SD card
+
+1. Stecke deine SD-Karte nun wieder in deinen 3DS
+1. Drücke  (HOME) um das Aktionsmenü aufzurufen
+1. Wähle "More..."
+1. Wähle "SD format menu"
+1. Drücke (A), um zu bestätigen
+1. Wähle "No EmuNAND"
+1. Wähle "Auto"
+1. Drücke (A), um den Namen `GM9SD` zu akzeptieren
+  + Alternativ kannst du auch einen benutzerdefinierten Namen für deine SD-Karte eingeben
+1. Gib die Schlüsselkombination zur Bestätigung ein, wenn danach verlangt wird
+1. Drücke (R) und (B) gleichzeitig um die SD-Karte auszuwerfen
+1. Stecke deine SD-Karte in deinen Computer
+1. Kopiere alle Dateien zurück auf deine SD-Karte
+  Ersetze die Datei `boot.firm` auf deiner SD-Karte durch eine aus deinem Backup
+1. Stecke deine SD-Karte nun wieder in deinen 3DS
+1. Drücke (A) um die SD-Karte einzuhängen
+1. Press (Start) to reboot
+1. Falls du einen einen schwarzen Bildschirm bekommen solltest, [folge dieser Anleitung zur Problembehandlung](troubleshooting#ts_sys_down)
+
+___
+
+### Return to [Finalizing Setup](finalizing-setup).
+{: .notice--primary}

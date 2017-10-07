@@ -25,37 +25,9 @@ $(document).ready(function(){
   // FitVids init
   $("#main").fitVids();
 
-  // init sticky sidebar
-  $(".sticky").Stickyfill();
-
-  var stickySideBar = function(){
-    var show = $(".author__urls-wrapper button").length === 0 ? $(window).width() > 1024 : !$(".author__urls-wrapper button").is(":visible");
-    // console.log("has button: " + $(".author__urls-wrapper button").length === 0);
-    // console.log("Window Width: " + windowWidth);
-    // console.log("show: " + show);
-    //old code was if($(window).width() > 1024)
-    if (show) {
-      // fix
-      Stickyfill.rebuild();
-      Stickyfill.init();
-      $(".author__urls").show();
-    } else {
-      // unfix
-      Stickyfill.stop();
-      $(".author__urls").hide();
-    }
-  };
-
-  stickySideBar();
-
-  $(window).resize(function(){
-    stickySideBar();
-  });
-
   // Follow menu drop down
-
   $(".author__urls-wrapper button").on("click", function() {
-    $(".author__urls").fadeToggle("fast", function() {});
+    $(".author__urls").toggleClass("is--visible");
     $(".author__urls-wrapper button").toggleClass("open");
   });
 
@@ -97,4 +69,159 @@ $(document).ready(function(){
     midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
   });
 
+  if((window.location.href.indexOf("/he_IL/") > -1) || (window.location.href.indexOf("/ar_SA/") > -1)) {
+    $("body").css("direction", "rtl");
+
+    $("nav.greedy-nav .nav-selector").css("left", "2.5rem");
+    $("nav.greedy-nav .lang-selector").css("left", ".2rem");
+    
+    $("nav.greedy-nav .links-menu").css("right", "auto");
+    $("nav.greedy-nav .lang-menu").css("right", "auto");
+
+    $("nav.greedy-nav .links-menu").css("left", "2.5rem");
+    $("nav.greedy-nav .lang-menu").css("left", ".2rem");
+
+    $("nav.greedy-nav .visible-links").css("padding-right", "0");
+    $("nav.greedy-nav .visible-links").css("padding-left", "2rem");
+
+    $("nav.greedy-nav .visible-links li:first-child a").css("margin-right", "0");
+    $("nav.greedy-nav .visible-links li:first-child a").css("margin-left", "1rem");
+
+    $("nav.greedy-nav .visible-links li:first-child").css("padding-right", "0");
+    $("nav.greedy-nav .visible-links li:first-child").css("padding-left", "2em");
+
+    $("nav.greedy-nav .visible-links li:last-child a").css("margin-right", "1rem");
+    $("nav.greedy-nav .visible-links li:last-child a").css("margin-left", "0");
+
+    // for some reason js cannot directly modify :before and :after pseudo-elements' css
+    $('nav.greedy-nav').prepend('<style>.hidden-links:before{right:inherit !important;}</style>');
+    $('nav.greedy-nav').prepend('<style>.hidden-links:before{left:5px !important;}</style>');
+
+    $('nav.greedy-nav').prepend('<style>.hidden-links:after{right:inherit !important;}</style>');
+    $('nav.greedy-nav').prepend('<style>.hidden-links:after{left:5px !important;}</style>');
+  }
+
+  var sidebar_shown = true;
+  var sidebar_hidden_pages = ["404", "a9lh-to-b9s", "credits", "donations", "f3-(linux)", "f3x-(mac)",  
+                              "faq", "file-extensions-(windows)", "get-started", "h2testw-(windows)", 
+                              "region-changing", "site-navigation", "troubleshooting", "uninstall-cfw", 
+                              "updating-b9s", "why-ads"];
+  
+  for(var i = 0; i < sidebar_hidden_pages.length; i++){
+    if(window.location.href.indexOf(sidebar_hidden_pages[i]) > -1) {
+      sidebar_shown = false;
+    }
+  }
+
+  var devices = {
+    "get-started-(old-3ds)": "0",
+    "get-started-(new-3ds)": "1",
+  };
+
+  var methods = {
+    "installing-boot9strap-(2xrsa)": "0",
+    "installing-boot9strap-(mset)": "1",
+    "installing-boot9strap-(browser)": "2",
+    "homebrew-launcher-(soundhax)": "3",
+    "homebrew-launcher-(alternatives)": "4",
+    "installing-boot9strap-(dsiware)": "5",
+    "installing-boot9strap-(dsiware-game-injection)": "6",
+    "installing-boot9strap-(dsiware-save-injection)": "7",
+    "ntr-and-cubic-ninja": "8",
+    "ntrboot": "9",
+    "flashing-ntrboot-(3ds-single-system)": "10",
+    "flashing-ntrboot-(3ds-multi-system)": "11",
+    "flashing-ntrboot-(dsi)": "12",
+    "flashing-ntrboot-(nds)": "13",
+    "flashing-ntrboot-(powersaves)": "14",
+    "installing-boot9strap-(hardmod)": "15",
+  };
+
+  for(var device in devices){
+    if(window.location.href.indexOf("/" + device) > -1) {
+      localStorage.setItem('device', devices[device]);
+    }
+  }
+
+  for(var method in methods){
+    if(window.location.href.indexOf("/" + method) > -1) {
+      localStorage.setItem('method', methods[method]);
+    }
+  }
+
+  var device, method;
+  if(!((device = localStorage.getItem('device')) && (method = localStorage.getItem('method')))){
+    sidebar_shown = false;
+  }
+ 
+  if(sidebar_shown){
+    var unhide = [];
+    var device_old = {
+      "0": ["installing-boot9strap-(2xrsa)", "finalizing-setup"],
+      "1": ["installing-boot9strap-(mset)", "finalizing-setup"],
+      "2": ["installing-boot9strap-(browser)", "finalizing-setup"],
+      "3": ["homebrew-launcher-(soundhax)", "installing-boot9strap-(homebrew-launcher)", "finalizing-setup"],
+      "4": ["homebrew-launcher-(alternatives)", "installing-boot9strap-(homebrew-launcher)", "finalizing-setup"],
+      "5": ["installing-boot9strap-(dsiware)"],
+      "6": ["installing-boot9strap-(dsiware)", "installing-boot9strap-(dsiware-game-injection)", "finalizing-setup"],
+      "7": ["installing-boot9strap-(dsiware)", "installing-boot9strap-(dsiware-save-injection)", "finalizing-setup"],
+      "9": ["ntrboot", "installing-boot9strap-(ntrboot)", "finalizing-setup"],
+      "10": ["ntrboot", "flashing-ntrboot-(3ds-single-system)", "installing-boot9strap-(ntrboot)", "finalizing-setup"],
+      "11": ["ntrboot", "flashing-ntrboot-(3ds-multi-system)", "installing-boot9strap-(ntrboot)", "finalizing-setup"],
+      "12": ["ntrboot", "flashing-ntrboot-(dsi)", "installing-boot9strap-(ntrboot)", "finalizing-setup"],
+      "13": ["ntrboot", "flashing-ntrboot-(nds)", "installing-boot9strap-(ntrboot)", "finalizing-setup"],
+      "14": ["ntrboot", "flashing-ntrboot-(powersaves)", "installing-boot9strap-(ntrboot)", "finalizing-setup"],
+      "15": ["installing-boot9strap-(hardmod)", "finalizing-setup"],
+    };
+    var device_new = {
+      "0": ["installing-boot9strap-(2xrsa)", "godmode9-usage#restoring-a-nand-backup", "finalizing-setup"],
+      "3": ["homebrew-launcher-(soundhax)", "installing-boot9strap-(homebrew-launcher)", "finalizing-setup"],
+      "4": ["homebrew-launcher-(alternatives)", "installing-boot9strap-(homebrew-launcher)", "finalizing-setup"],
+      "5": ["installing-boot9strap-(dsiware)", "multiple-options", "finalizing-setup"],
+      "6": ["installing-boot9strap-(dsiware)", "installing-boot9strap-(dsiware-game-injection)", "finalizing-setup"],
+      "7": ["installing-boot9strap-(dsiware)", "installing-boot9strap-(dsiware-save-injection)", "finalizing-setup"],
+      "8": ["ntr-and-cubic-ninja", "installing-boot9strap-(homebrew-launcher)", "finalizing-setup"],
+      "9": ["ntrboot", "multiple-options", "installing-boot9strap-(ntrboot)", "finalizing-setup"],
+      "10": ["ntrboot", "flashing-ntrboot-(3ds-single-system)", "installing-boot9strap-(ntrboot)", "finalizing-setup"],
+      "11": ["ntrboot", "flashing-ntrboot-(3ds-multi-system)", "installing-boot9strap-(ntrboot)", "finalizing-setup"],
+      "12": ["ntrboot", "flashing-ntrboot-(dsi)", "installing-boot9strap-(ntrboot)", "finalizing-setup"],
+      "13": ["ntrboot", "flashing-ntrboot-(nds)", "installing-boot9strap-(ntrboot)", "finalizing-setup"],
+      "14": ["ntrboot", "flashing-ntrboot-(powersaves)", "installing-boot9strap-(ntrboot)", "finalizing-setup"],
+      "15": ["installing-boot9strap-(hardmod)", "finalizing-setup"],
+    };
+    var route = {
+      "0": device_old,
+      "1": device_new,
+    }
+    unhide = unhide.concat(route[device][method]);
+    if(typeof unhide !== 'undefined' && unhide.length > 0){
+      unhide.push("home");
+      unhide.push("get-started");
+      if(device == "0"){
+        unhide.push("get-started-(old-3ds)");
+      } else if (device == "1"){
+        unhide.push("get-started-(new-3ds)");
+      }
+      var ol = $('.sidebar.sticky .nav__list .nav__items ol');
+      for (var i = 0; i < unhide.length; i++){
+        ol.children('li[data-name="' + unhide[i] + '"]').css("display", "");
+      }
+      ol.children().each(function(idx, li) {
+        var link = $(li).find("a").attr('href');
+        var name = $(li).attr('data-name');
+        if((window.location.href.endsWith(link) || 
+            window.location.href.endsWith(link + "/") || 
+            window.location.href.indexOf(link + "#") > -1 || 
+            window.location.href.indexOf(link + ".html") > -1) 
+            && name !== "home"){
+          $(li).addClass("active");
+          return false;
+        }
+        $(li).addClass("completed");
+      });
+      if (ol.children(".active").css("display") != "none"){
+        $('.sidebar.sticky').css("display", "inherit");
+      }
+    }
+  }
 });
