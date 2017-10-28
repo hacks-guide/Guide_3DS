@@ -9,20 +9,30 @@ title: "ntrboot"
 
 ### קריאה דרושה
 
-התקנת boot9strap עם ntrboot דורשת כרטיס פריצה DS / DSi תואם כדי לצרוב אליו את ntrboot.
+Installing boot9strap with ntrboot requires a compatible NDS / DSi flashcart to flash ntrboot to.
 
-פירצת ntrboot עצמה תומכת בכרטיסי פריצה הבאים:
+While the ntrboot exploit works independently of system version, the ntrboot flasher (which installs the exploit to the cart) is not. This means that, depending on the versions and devices supported by your flashcart, only certain methods may be available to you.
 
-  + [R4i Gold 3DS (RTS)](http://www.nds-card.com/ProShow.asp?ProID=149)
-  + [Acekard 2i](http://www.nds-card.com/ProShow.asp?ProID=160)
-  + R4i Gold 3DS "Starter"
-  + R4i Ultra
-  + R4 3D Revolution
-  + Infinity 3 R4i
-  + [DSTT](http://www.nds-card.com/ProShow.asp?ProID=157) ([כמה שבבי פלאש בלבד!](https://gist.github.com/Hikari-chin/6b48f1bb8dd15136403c15c39fafdb42))
+Note that carts with a "Time Bomb" will no longer be able to launch `.nds` files when they detect that the system clock has passed a date determined by the flashcart firmware. One method to bypass this is to set the system clock to an earlier date.
+
+| Flashcart Name | Current Price | "Time Bomb"? | 3DS Versions? | DSi Versions? | NDS Versions? | Other Notes |
+|-|-:|:-:|:-:|:-:|:-:|-|
+| [DSTT](http://www.nds-card.com/ProShow.asp?ProID=157) | $9.99 | No | None | None | All | Only models with [certain flash chips](https://gist.github.com/Hikari-chin/6b48f1bb8dd15136403c15c39fafdb42) are compatible with ntrboot. |
+| [R4i-SDHC 3DS RTS](http://www.nds-card.com/ProShow.asp?ProID=146) | $13.99 | Probably (Date Unknown) | <= 11.6.0 | <= 1.4.5 | All | |
+| [R4i Gold 3DS RTS](http://www.nds-card.com/ProShow.asp?ProID=149) | $19.99 | No | <= 11.6.0 | <= 1.4.5 | All | |
+| [Acekard 2i](http://www.nds-card.com/ProShow.asp?ProID=160) | $20.99 | No | <= 4.3.0 | <= 1.4.4 | All | |
+| [R4iSDHC GOLD Pro 20XX](http://www.nds-card.com/ProShow.asp?ProID=490) | $9.99 | 3.9b: September 3, 2019 | <= 11.6.0 | <= 1.4.5 | All | All R4iSDHC 20XX flashcarts are identical. |
+| [R4iSDHC RTS LITE 20XX](http://www.nds-card.com/ProShow.asp?ProID=450) | $13.99 | 3.9b: September 3, 2019 | <= 11.6.0 | <= 1.4.5 | All | All R4iSDHC 20XX flashcarts are identical. |
+| R4iSDHC Dual-Core 20XX |  | 3.9b: September 3, 2019 | <= 11.6.0 | <= 1.4.5 | All | All R4iSDHC 20XX flashcarts are identical. |
+| Infinity 3 R4i |  | No | <= 11.6.0 | <= 1.4.5 | All | |
+| R4 3D Revolution |  | No | None | None | All | |
+| R4i Gold 3DS Deluxe "Starter" |  | No | 4.1.0 - 4.5.0 | <= 1.4.5 | All | |
+| R4i Ultra |  | No | <= 4.3.0 | <= 1.4.5 | All | |
 
   ![]({{ "/images/screenshots/ntrboot-flashcarts.png" | absolute_url }})
   {: .notice--info}
+
+Ensure your flashcart is able to launch `.nds` files on your device before beginning. Some flashcarts may require firmware or "kernel" files to be copied to the flashcart SD card. Consult your specific flashcart's instructions for more information.
 
 שימו לב שלדרכים ספציפיות יכול להיות מידע תאימות נוסף.
 
@@ -43,15 +53,7 @@ ___
 
 #### צריבת ntrboot (מערכת 3DS אחת)
 
-שיטה זו דורשת כלום חוץ מה3DS הלא פרוץ שלכם וכרטיס פריצה תואם.
-
-שימו לב שגרסאות 3DS עדכניות יותר חסמו גישה לכרטיסי פריצה מסוימים, וכמה כרטיסי פריצה תמיד היו חסומים על ה3DS. זה משאיר אותן ללא אפשרות לפעיל עליהן את קובץ ה`.nds` הצורב על כמה (או כל) הגרסאות. כרטסי הפריצה שתומכים בntrboot יכולים להריץ קבצי `.nds` על ה3DS (תחת הגרסאות הבאות):
-
-  + [R4i Gold 3DS (RTS)](http://www.nds-card.com/ProShow.asp?ProID=149) : <= 11.6.0
-  + [Acekard 2i](http://www.nds-card.com/ProShow.asp?ProID=160) : <= 4.3.0
-  + R4i Gold 3DS "Starter" : 4.1.0 - 4.5.0
-  + R4i Ultra : <= 4.3.0
-  + Infinity 3 R4i : <= 11.6.0
+שיטה זו דורשת כלום חוץ מה3DS הלא פרוץ שלכם וכרטיס פריצה תואם. This method uses the flashcart to run the ntrboot flasher `.nds` file on your 3DS. This means that your flashcart must support launching `.nds` files on your 3DS's version. See the flashcart table above for more information.
 
 תמשיכו אל [צריבת ntrboot (מערכת 3DS אחת)](flashing-ntrboot-(3ds-single-system))
 {: .notice--primary}
@@ -60,7 +62,7 @@ ___
 
 #### צריבת ntrboot (שתי מערכות 3DS)
 
-שיטה זאת דורשת גישה זמנית לקונסולה נוספת ממשפחת ה3DS שכבר מריצה את boot9strap.
+שיטה זאת דורשת גישה זמנית לקונסולה נוספת ממשפחת ה3DS שכבר מריצה את boot9strap. This does not require your flashcart to support either 3DS's version. See the flashcart table above for more information.
 
 תמשיכו אל [צריבת ntrboot (שתי מערכות 3DS)](flashing-ntrboot-(3ds-multi-system))
 {: .notice--primary}
@@ -69,7 +71,7 @@ ___
 
 #### צריבת ntrboot (NDS)
 
-דרך זו דורשת גישה זמנית לNintendo DS או Nintendo DS Lite שתומך בכרטיס פריצה שלכם.
+דרך זו דורשת גישה זמנית לNintendo DS או Nintendo DS Lite שתומך בכרטיס פריצה שלכם. This method uses the flashcart to run the ntrboot flasher `.nds` file on your NDS. This means that your flashcart must support launching `.nds` files on your NDS's version. See the flashcart table above for more information.
 
 תמשיכו אל [צריבת ntrboot (NDS)](flashing-ntrboot-(nds))
 {: .notice--primary}
@@ -78,24 +80,7 @@ ___
 
 #### צריבת ntrboot (DSi)
 
-דרך זו דורשת גישה זמנית לNintendo DSi שתומך בכרטיס פריצה שלכם.
-
-שימו לב שגרסאות DSi עדכניות יותר חסמו גישה לכרטיסי פריצה מסוימים. זה משאיר אותן ללא אפשרות לפעיל עליהן את קובץ ה`.nds` הצורב על גרסאות חדשות יותר. כרטסי הפריצה שתומכים בntrboot יכולים להריץ קבצי `.nds` תחת הגרסאות הבאות:
-
-  + [R4i Gold 3DS RTS](http://www.nds-card.com/ProShow.asp?ProID=149) : <= 1.4.5
-  + [Acekard 2i](http://www.nds-card.com/ProShow.asp?ProID=160) : <= 1.4.4
-  + R4i Gold 3DS "Starter" : <= 1.4.5
-  + R4i Ultra : <= 1.4.1
-  + Infinity 3 R4i : <= 1.4.5
+דרך זו דורשת גישה זמנית לNintendo DSi שתומך בכרטיס פריצה שלכם. This method uses the flashcart to run the ntrboot flasher `.nds` file on your NDS. This means that your flashcart must support launching `.nds` files on your NDS's version. See the flashcart table above for more information.
 
 תמשיכו אל [צריבת ntrboot (DSi)](flashing-ntrboot-(dsi))
-{: .notice--primary}
-
-___
-
-#### צריבת ntrboot (Powersaves)
-
-הדרך הזאת, כשתיהיה מוכנה, תדרוש גישה זמנית ל[Powersaves](https://amzn.to/2fb3VY7). הדרך הזאת לא הושלמה, ולכן היא רק עמוד ריק.
-
-תמשיכו אל [צריבת ntrboot (Powersaves)](flashing-ntrboot-(powersaves))
 {: .notice--primary}
