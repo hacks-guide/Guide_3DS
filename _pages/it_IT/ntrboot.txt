@@ -9,20 +9,30 @@ Se hai già installato ntrboot nella tua flashcart, troverai i passi successivi 
 
 ### Lettura necessaria
 
-L'installazione di boot9strap tramite ntrboot richiede una flashcart DS / DSi compatibile.
+Installing boot9strap with ntrboot requires a compatible NDS / DSi flashcart to flash ntrboot to.
 
-L'exploit ntrboot è compatibile con le seguenti flashcart:
+While the ntrboot exploit works independently of system version, the ntrboot flasher (which installs the exploit to the cart) is not. This means that, depending on the versions and devices supported by your flashcart, only certain methods may be available to you.
 
-  + [R4i Gold 3DS (RTS)](http://www.nds-card.com/ProShow.asp?ProID=149)
-  + [Acekard 2i](http://www.nds-card.com/ProShow.asp?ProID=160)
-  + R4i Gold 3DS "Starter"
-  + R4i Ultra
-  + R4 3D Revolution
-  + Infinity 3 R4i
-  + [DSTT](http://www.nds-card.com/ProShow.asp?ProID=157) ([solo per alcuni flash chip!](https://gist.github.com/Hikari-chin/6b48f1bb8dd15136403c15c39fafdb42))
+Note that carts with a "Time Bomb" will no longer be able to launch `.nds` files when they detect that the system clock has passed a date determined by the flashcart firmware. One method to bypass this is to set the system clock to an earlier date.
+
+| Flashcart Name | Current Price | "Time Bomb"? | 3DS Versions? | DSi Versions? | NDS Versions? | Other Notes |
+|-|-:|:-:|:-:|:-:|:-:|-|
+| [DSTT](http://www.nds-card.com/ProShow.asp?ProID=157) | $9.99 | No | None | None | All | Only models with [certain flash chips](https://gist.github.com/Hikari-chin/6b48f1bb8dd15136403c15c39fafdb42) are compatible with ntrboot. |
+| [R4i-SDHC 3DS RTS](http://www.nds-card.com/ProShow.asp?ProID=146) | $13.99 | Probably (Date Unknown) | <= 11.6.0 | <= 1.4.5 | All | |
+| [R4i Gold 3DS RTS](http://www.nds-card.com/ProShow.asp?ProID=149) | $19.99 | No | <= 11.6.0 | <= 1.4.5 | All | |
+| [Acekard 2i](http://www.nds-card.com/ProShow.asp?ProID=160) | $20.99 | No | <= 4.3.0 | <= 1.4.4 | All | |
+| [R4iSDHC GOLD Pro 20XX](http://www.nds-card.com/ProShow.asp?ProID=490) | $9.99 | 3.9b: September 3, 2019 | <= 11.6.0 | <= 1.4.5 | All | All R4iSDHC 20XX flashcarts are identical. |
+| [R4iSDHC RTS LITE 20XX](http://www.nds-card.com/ProShow.asp?ProID=450) | $13.99 | 3.9b: September 3, 2019 | <= 11.6.0 | <= 1.4.5 | All | All R4iSDHC 20XX flashcarts are identical. |
+| R4iSDHC Dual-Core 20XX |  | 3.9b: September 3, 2019 | <= 11.6.0 | <= 1.4.5 | All | All R4iSDHC 20XX flashcarts are identical. |
+| Infinity 3 R4i |  | No | <= 11.6.0 | <= 1.4.5 | All | |
+| R4 3D Revolution |  | No | None | None | All | |
+| R4i Gold 3DS Deluxe "Starter" |  | No | 4.1.0 - 4.5.0 | <= 1.4.5 | All | |
+| R4i Ultra |  | No | <= 4.3.0 | <= 1.4.5 | All | |
 
   ![]({{ "/images/screenshots/ntrboot-flashcarts.png" | absolute_url }})
   {: .notice--info}
+
+Ensure your flashcart is able to launch `.nds` files on your device before beginning. Some flashcarts may require firmware or "kernel" files to be copied to the flashcart SD card. Consult your specific flashcart's instructions for more information.
 
 Tieni presente che i metodi specifici forniscono ulteriori informazioni sulla compatibilità.
 
@@ -43,15 +53,7 @@ ___
 
 #### Flash di ntrboot (Singolo 3DS)
 
-Questo metodo richiede soltanto un 3DS non ancora modificato e una flashcart compatibile.
-
-Tieni presente che le più recenti versioni del software del 3DS hanno bloccato l'accesso ad alcune flashcart, mentre altre sono sempre state inutilizzabili su 3DS. Su di esse non è possibile avviare il flasher in formato `.nds` su alcune (o tutte) le versioni del software. Le flashcart compatibili possono eseguire su 3DS i file in formato `.nds` (solo nelle seguenti versioni del software):
-
-  + [R4i Gold 3DS (RTS)](http://www.nds-card.com/ProShow.asp?ProID=149) : <= 11.6.0
-  + [Acekard 2i](http://www.nds-card.com/ProShow.asp?ProID=160) : <= 4.3.0
-  + R4i Gold 3DS "Starter" : 4.1.0 - 4.5.0
-  + R4i Ultra : <= 4.3.0
-  + Infinity 3 R4i : <= 11.6.0
+Questo metodo richiede soltanto un 3DS non ancora modificato e una flashcart compatibile. This method uses the flashcart to run the ntrboot flasher `.nds` file on your 3DS. This means that your flashcart must support launching `.nds` files on your 3DS's version. See the flashcart table above for more information.
 
 Prosegui con il [Flash di ntrboot (Singolo 3DS)](flashing-ntrboot-(3ds-single-system))
 {: .notice--primary}
@@ -60,7 +62,7 @@ ___
 
 #### Flash di ntrboot (Con più 3DS)
 
-Questo metodo richiede l'accesso temporaneo ad una seconda console su cui è installato boot9strap.
+Questo metodo richiede l'accesso temporaneo ad una seconda console su cui è installato boot9strap. This does not require your flashcart to support either 3DS's version. See the flashcart table above for more information.
 
 Prosegui con il [Flash di ntrboot (Con più 3DS)](flashing-ntrboot-(3ds-multi-system))
 {: .notice--primary}
@@ -69,7 +71,7 @@ ___
 
 #### Flash di ntrboot (NDS)
 
-Questo metodo richiede momentaneamente l'utilizzo di un Nintendo DS o DS Lite compatibile con la tua flashcart.
+Questo metodo richiede momentaneamente l'utilizzo di un Nintendo DS o DS Lite compatibile con la tua flashcart. This method uses the flashcart to run the ntrboot flasher `.nds` file on your NDS. This means that your flashcart must support launching `.nds` files on your NDS's version. See the flashcart table above for more information.
 
 Prosegui con il [Flash di ntrboot (NDS)](flashing-ntrboot-(nds))
 {: .notice--primary}
@@ -78,24 +80,7 @@ ___
 
 #### Flash di ntrboot (DSi)
 
-Questo metodo richiede momentaneamente l'utilizzo di un Nintendo DSi compatibile con la tua flashcart.
-
-Tieni presente che versioni del software del DSi più recenti hanno bloccato l'accesso ad alcune flashcart. In parole povere, non è possibile avviare il flasher `.nds` sulle versioni più recenti. Le flashcart compatibili possono eseguire i file in formato `.nds` solo nelle seguenti versioni del software:
-
-  + [R4i Gold 3DS RTS](http://www.nds-card.com/ProShow.asp?ProID=149) : <= 1.4.5
-  + [Acekard 2i](http://www.nds-card.com/ProShow.asp?ProID=160) : <= 1.4.4
-  + R4i Gold 3DS "Starter" : <= 1.4.5
-  + R4i Ultra : <= 1.4.1
-  + Infinity 3 R4i : <= 1.4.5
+Questo metodo richiede momentaneamente l'utilizzo di un Nintendo DSi compatibile con la tua flashcart. This method uses the flashcart to run the ntrboot flasher `.nds` file on your NDS. This means that your flashcart must support launching `.nds` files on your NDS's version. See the flashcart table above for more information.
 
 Prosegui con il [Flash di ntrboot (DSi)](flashing-ntrboot-(dsi))
-{: .notice--primary}
-
-___
-
-#### Flash di ntrboot (Powersaves)
-
-Quando disponibile, questo metodo richiederà temporaneamente l'utilizzo di un [Powersaves](https://www.amazon.it/Action-Replay-PowerSaves-2016-Nintendo/dp/B01EOMFY3C/). Non è ancora pronto, al suo posto è presente solo una pagina temporanea.
-
-Prosegui con [Flash di ntrboot (Powersaves)](flashing-ntrboot-(powersaves))
 {: .notice--primary}
