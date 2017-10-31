@@ -9,30 +9,30 @@ Jos asensit jo ntrbootin flash-kortillesi, voit seurata osiota [Boot9strapin ase
 
 ### Tärkeää tietoa
 
-Installing boot9strap with ntrboot requires a compatible NDS / DSi flashcart to flash ntrboot to.
+Boot9strapin asentaminen ntrbootin avulla vaatii yhteensopivan NDS-/DSi-flash-kortin, jolle voi asentaa ntrbootin.
 
-While the ntrboot exploit works independently of system version, the ntrboot flasher (which installs the exploit to the cart) is not. This means that, depending on the versions and devices supported by your flashcart, only certain methods may be available to you.
+Toisin kuin itse ntrboot-menetelmä, ntrboot-asennusohjelma (joka asentaa ohjelman kortille) ei toimi millä tahansa käyttöjärjestelmäversiolla. Tämä tarkoittaa sitä, että flash-korttisi tukemista versioista ja laitteista riippuen käytössäsi saattaa olla vain tiettyjä menetelmiä.
 
-Note that carts with a "Time Bomb" will no longer be able to launch `.nds` files when they detect that the system clock has passed a date determined by the flashcart firmware. One method to bypass this is to set the system clock to an earlier date.
+Huomaa, että "aikapommin" sisältävät kortit eivät voi enää avata `.nds`-tiedostoja sen jälkeen, kun ne havaitsevat järjestelmän ajan ohittaneen flash-kortin laiteohjelmistossa määritelly päivämäärän. Eräs keino tämän ohittamiseen on asettaa järjestelmän aika aikaisempaan päivämäärään.
 
-| Flashcart Name | Current Price | "Time Bomb"? | 3DS Versions? | DSi Versions? | NDS Versions? | Other Notes |
+| Flash-kortin nimi | Nykyinen hinta | "Aika­pommi"? | 3DS-versiot? | DSi-versiot? | NDS-versiot? | Muita huomioita |
 |-|-:|:-:|:-:|:-:|:-:|-|
-| [DSTT](http://www.nds-card.com/ProShow.asp?ProID=157) | $9.99 | No | None | None | All | Only models with [certain flash chips](https://gist.github.com/Hikari-chin/6b48f1bb8dd15136403c15c39fafdb42) are compatible with ntrboot. |
-| [R4i-SDHC 3DS RTS](http://www.nds-card.com/ProShow.asp?ProID=146) | $13.99 | Probably (Date Unknown) | <= 11.6.0 | <= 1.4.5 | All | |
-| [R4i Gold 3DS RTS](http://www.nds-card.com/ProShow.asp?ProID=149) | $19.99 | No | <= 11.6.0 | <= 1.4.5 | All | |
-| [Acekard 2i](http://www.nds-card.com/ProShow.asp?ProID=160) | $20.99 | No | <= 4.3.0 | <= 1.4.4 | All | |
-| [R4iSDHC GOLD Pro 20XX](http://www.nds-card.com/ProShow.asp?ProID=490) | $9.99 | 3.9b: September 3, 2019 | <= 11.6.0 | <= 1.4.5 | All | All R4iSDHC 20XX flashcarts are identical. |
-| [R4iSDHC RTS LITE 20XX](http://www.nds-card.com/ProShow.asp?ProID=450) | $13.99 | 3.9b: September 3, 2019 | <= 11.6.0 | <= 1.4.5 | All | All R4iSDHC 20XX flashcarts are identical. |
-| R4iSDHC Dual-Core 20XX |  | 3.9b: September 3, 2019 | <= 11.6.0 | <= 1.4.5 | All | All R4iSDHC 20XX flashcarts are identical. |
-| Infinity 3 R4i |  | No | <= 11.6.0 | <= 1.4.5 | All | |
-| R4 3D Revolution |  | No | None | None | All | |
-| R4i Gold 3DS Deluxe "Starter" |  | No | 4.1.0 - 4.5.0 | <= 1.4.5 | All | |
-| R4i Ultra |  | No | <= 4.3.0 | <= 1.4.5 | All | |
+| [DSTT](http://www.nds-card.com/ProShow.asp?ProID=157) | 9,99 $ | Ei | Ei mikään| Ei mikään | Kaikki | Vain [tietyn flash-sirun](https://gist.github.com/Hikari-chin/6b48f1bb8dd15136403c15c39fafdb42) sisältävät mallit ovat yhteen­sopivia ntrbootin kanssa. |
+| [R4i-SDHC 3DS RTS](http://www.nds-card.com/ProShow.asp?ProID=146) | 13,99 $ | Luultavasti (tuntematon päivämäärä) | <= 11.6.0 | <= 1.4.5 | Kaikki | |
+| [R4i Gold 3DS RTS](http://www.nds-card.com/ProShow.asp?ProID=149) | 19,99 $ | Ei | <= 11.6.0 | <= 1.4.5 | Kaikki | |
+| [Acekard 2i](http://www.nds-card.com/ProShow.asp?ProID=160) | 20,99 $ | Ei | <= 4.3.0 | <= 1.4.4 | Kaikki | |
+| [R4iSDHC GOLD Pro 20XX](http://www.nds-card.com/ProShow.asp?ProID=490) | 9,99 $ | 3.9b: 3. syyskuuta 2019 | <= 11.6.0 | <= 1.4.5 | Kaikki | Kaikki R4iSDHC 20XX ‑flash‑kortit ovat identtisiä. |
+| [R4iSDHC RTS LITE 20XX](http://www.nds-card.com/ProShow.asp?ProID=450) | 13,99 $ | 3.9b: 3. syyskuuta 2019 | <= 11.6.0 | <= 1.4.5 | Kaikki | Kaikki R4iSDHC 20XX ‑flash‑kortit ovat identtisiä. |
+| R4iSDHC Dual-Core 20XX |  | 3.9b: 3. syyskuuta 2019 | <= 11.6.0 | <= 1.4.5 | Kaikki | Kaikki R4iSDHC 20XX ‑flash‑kortit ovat identtisiä. |
+| Infinity 3 R4i |  | Ei | <= 11.6.0 | <= 1.4.5 | Kaikki | |
+| R4 3D Revolution |  | Ei | Ei mikään | Ei mikään | Kaikki | |
+| R4i Gold 3DS Deluxe "Starter" |  | Ei | 4.1.0–4.5.0 | <= 1.4.5 | Kaikki | |
+| R4i Ultra |  | Ei | <= 4.3.0 | <= 1.4.5 | Kaikki | |
 
   ![]({{ "/images/screenshots/ntrboot-flashcarts.png" | absolute_url }})
   {: .notice--info}
 
-Ensure your flashcart is able to launch `.nds` files on your device before beginning. Some flashcarts may require firmware or "kernel" files to be copied to the flashcart SD card. Consult your specific flashcart's instructions for more information.
+Varmista, että flash-korttisi voi käynnistää `-nds`-tiedostoja konsolillasi ennen aloittamista. Jotkin flash-kortit saattavat vaatia käyttöjärjestelmäydin- tai laiteohjelmistotiedostojen kopioimista sen SD-kortille. Käänny flash-korttisi käyttöohjeiden puoleen lisätietoja varten.
 
 Huomaa, että joidenkin menetelmien osioissa on lisätietoja yhteensopivuudesta.
 
@@ -41,7 +41,7 @@ Tämän menetelmän käyttäminen vaatii asennustavasta riippumatta pienen magne
 Kokeillaksesi magneetin toimivuutta pidä sitä (A)-, (B)-, (X)- ja (Y)-painikkeiden päällä tai ympärillä konsolin ollessa käynnissä, jotta näet, aktivoituuko lepotila. Jos lepotila menee päälle, kummatkin ruudut ovat mustana niin kauan, kuin pidät magneettia kohdassa.
 {: .notice--info}
 
-Huomaa, että flash-korttia ei voi käyttää sen normaaleihin käyttötarkoituksiin silloin, kun ntrboot on asennettuna sille (lukuun ottamatta Acekard 2i -korttia, joka toimii edelleen normaalisti *3DS:llä, jossa on mukautettu laiteohjelmisto*). Asennusohjeiden lopussa on valinnaiset ohjeet, joiden avulla voit poistaa ntrbootin flash-kortiltasi asennettuasi boot9strapin.
+Huomaa, että flash-korttia ei voi käyttää sen normaaleihin käyttötarkoituksiin silloin, kun ntrboot on asennettuna sille (lukuun ottamatta Acekard 2i -korttia, joka toimii edelleen normaalisti *3DS:llä, jossa on mukautettu laiteohjelmisto*). This means that, for most flashcarts, it will not even display on the home menu. Asennusohjeiden lopussa on valinnaiset ohjeet, joiden avulla voit poistaa ntrbootin flash-kortiltasi asennettuasi boot9strapin.
 
 Huomaa, että joissain harvinaisissa yhteensattumissa asennusprosessi saattaa **vioittaa** jäljitelmä-flash-korttia ja tehdä siitä pysyvästi käyttökelvottoman. Vaikka tämä onkin epätodennäköistä, on suositeltavaa käyttää vain alkuperäisiä kortteja. Jotta välttyisit jäljitelmäkortin saamiselta, on suositeltavaa käyttää flash-kortin ostamiseen hyvämaineista sivustoa (kuten [NDS Card](http://www.nds-card.com/)ia).
 {: .notice--danger}
@@ -53,7 +53,7 @@ ___
 
 #### Ntrbootin asentaminen (yksi 3DS)
 
-Tämä menetelmä vaatii vain hakkeroimattoman, vakiolaiteohjelmistolla olevan 3DS-konsolisi sekä yhteensopivan flash-kortin. This method uses the flashcart to run the ntrboot flasher `.nds` file on your 3DS. This means that your flashcart must support launching `.nds` files on your 3DS's version. See the flashcart table above for more information.
+Tämä menetelmä vaatii vain hakkeroimattoman, vakiolaiteohjelmistolla olevan 3DS-konsolisi sekä yhteensopivan flash-kortin. Tämä menetelmä käyttää flash-korttia ntrbootin asentamiseen `.nds`-tiedoston kautta 3DS:lläsi. Flash-korttisi täytyy siis tukea `.nds`-tiedostojen lataamista 3DS:si versiolla. Tutustu yllä olevaan flash-korttitaulukkoon lisätietoja varten.
 
 Jatka osioon [Ntrbootin asentaminen (yksi 3DS)](flashing-ntrboot-(3ds-single-system))
 {: .notice--primary}
@@ -62,7 +62,7 @@ ___
 
 #### Ntrbootin asentaminen (monta 3DS:ää)
 
-Tämä menetelmä vaatii tilapäiseen käyttöön toisen 3DS-perheen konsolin, jolla on jo asennettuna boot9strap. This does not require your flashcart to support either 3DS's version. See the flashcart table above for more information.
+Tämä menetelmä vaatii tilapäiseen käyttöön toisen 3DS-perheen konsolin, jolla on jo asennettuna boot9strap. Flash-korttisi ei tarvitse tukea kummankaan 3DS:n versiota. Tutustu yllä olevaan flash-korttitaulukkoon lisätietoja varten.
 
 Jatka osioon [Ntrbootin asentaminen (monta 3DS:ää)](flashing-ntrboot-(3ds-multi-system))
 {: .notice--primary}
@@ -71,7 +71,7 @@ ___
 
 #### Ntrbootin asentaminen (NDS)
 
-Tämä menetelmä vaatii tilapäiseen käyttöön flash-korttisi kanssa yhteensopivan Nintendo DS- tai Nintendo DS Lite -konsolin. This method uses the flashcart to run the ntrboot flasher `.nds` file on your NDS. This means that your flashcart must support launching `.nds` files on your NDS's version. See the flashcart table above for more information.
+Tämä menetelmä vaatii tilapäiseen käyttöön flash-korttisi kanssa yhteensopivan Nintendo DS- tai Nintendo DS Lite -konsolin. Tämä menetelmä käyttää flash-korttia ntrbootin asentamiseen `.nds`-tiedoston kautta NDS:lläsi. Flash-korttisi täytyy siis tukea `.nds`-tiedostojen lataamista NDS:si versiolla. Tutustu yllä olevaan flash-korttitaulukkoon lisätietoja varten.
 
 Jatka osioon [Ntrbootin asentaminen (NDS)](flashing-ntrboot-(nds))
 {: .notice--primary}
@@ -80,7 +80,7 @@ ___
 
 #### Ntrbootin asentaminen (DSi)
 
-Tämä menetelmä vaatii tilapäiseen käyttöön flash-korttisi kanssa yhteensopivan Nintendo DSi -konsolin. This method uses the flashcart to run the ntrboot flasher `.nds` file on your NDS. This means that your flashcart must support launching `.nds` files on your NDS's version. See the flashcart table above for more information.
+Tämä menetelmä vaatii tilapäiseen käyttöön flash-korttisi kanssa yhteensopivan Nintendo DSi -konsolin. Tämä menetelmä käyttää flash-korttia ntrbootin asentamiseen `.nds`-tiedoston kautta NDS:lläsi. Flash-korttisi täytyy siis tukea `.nds`-tiedostojen lataamista NDS:si versiolla. Tutustu yllä olevaan flash-korttitaulukkoon lisätietoja varten.
 
 Jatka osioon [Ntrbootin asentaminen (DSi)](flashing-ntrboot-(dsi))
 {: .notice--primary}
