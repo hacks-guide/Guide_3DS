@@ -26,7 +26,9 @@ On käynyt ilmi, että Nintendo jakaa CFW-käyttäjille porttikieltoja verkkotoi
 
 * SafeB9SInstallerin [viimeisin julkaisu](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * Boot9strapin [viimeisin julkaisu](https://github.com/SciresM/boot9strap/releases/latest) *(tavallinen boot9strap-tiedosto; ei `devkit`- eikä `ntr`-tiedosto)*
+* GodMode9:n [viimeisin julkaisu](https://github.com/d0k3/GodMode9/releases)
 * Luma3DS:n [viimeisin julkaisu](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z`-tiedosto)*
+* [`setup_ctrnand_luma3ds.gm9`]({{ "/gm9_scripts/setup_ctrnand_luma3ds.gm9" | absolute_url }})
 * [`cleanup_sd_card.gm9`]({{ "/gm9_scripts/cleanup_sd_card.gm9" | absolute_url }})
 
 ### Ohjeet
@@ -38,19 +40,22 @@ Korvaa mahdolliset olemassa olevat tiedostot SD-kortillasi kaikissa tämän vaih
 
 1. Aseta SD-korttisi tietokoneeseesi
 1. Luo `boot9strap`-niminen kansio SD-korttisi juureen
-1. Kopioi `cleanup_sd_card.gm9` SD-korttisi `/gm9/scripts/`-kansioon
-1. Kopioi SafeB9SInstaller-`.zip`-pakkauksesta `SafeB9SInstaller.firm` SD-korttisi `/luma/payloads/`-kansioon
 1. Kopioi boot9strap-`.zip`-pakkauksesta `boot9strap.firm` ja `boot9strap.firm.sha` SD-korttisi `/boot9strap/`-kansioon
+1. Kopioi SafeB9SInstaller-`.zip`-pakkauksesta `SafeB9SInstaller.firm` SD-korttisi `/luma/payloads/`-kansioon
+1. Kopioi GodMode9-`.zip`-pakkauksesta `GodMode9.firm` SD-korttisi `/luma/payloads/`-kansioon
+1. Kopioi GodMode9-`.zip`-pakkauksesta `gm9`-kansio SD-korttisi juureen
+1. Kopioi `setup_ctrnand_luma3ds.gm9` SD-korttisi `/gm9/scripts/`-kansioon
+1. Kopioi `cleanup_sd_card.gm9` SD-korttisi `/gm9/scripts/`-kansioon
 1. Aseta SD-korttisi takaisin konsoliisi
 
 #### Vaihe II – Boot9strapin asentaminen
 
-1. Avaa Luma3DS:n ketjulatausvalikko pitämällä (START)-painiketta pohjassa käynnistyksen aikana
+1. Avaa Luma3DS:n ketjulatausvalikko pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
 1. Avaa SafeB9SInstaller painamalla (A):ta
 1. Odota, kunnes kaikki turvatarkistukset on suoritettu
 1. Syötä kehotettaessa annettu painikeyhdistelmä asentaaksesi boot9strapin
 1. Kun toiminto on suoritettu, pidä (START)-painiketta pohjassa ja paina samalla (A):ta käynnistääksesi konsolisi Luma3DS-ketjulataajaan
-  + Jos saat virheen käynnistettyäsi konsolisi B9S:n päivityksen jälkeen, jatka seuraavaan vaiheeseen korjataksesi sen
+  + If you encounter an `argc = 0` error booting your device after the B9S update, just continue to fix it
 
 #### Vaihe III – Luma3DS:n päivittäminen
 
@@ -58,16 +63,36 @@ Korvaa mahdolliset olemassa olevat tiedostot SD-kortillasi kaikissa tämän vaih
 1. Aseta SD-korttisi tietokoneeseesi
 1. Kopioi Luma3DS-`.7z`-pakkauksesta `boot.firm` SD-korttisi juureen (korvaa olemassa oleva tiedosto)
 1. Aseta SD-korttisi takaisin konsoliisi
+1. Käynnistä konsolisi
 
-#### Vaihe IV – SD-kortin siivoaminen
+#### Vaihe IV – Luma3DS:n määrittäminen
+
+Tämä vaihe on tarpeellinen vain, jos Luma3DS-määritysvalikko näkyy uudelleenkäynnistyksen jälkeen.
+{: .notice--info}
+
+1. Käytä määritysvalikossa (A):ta ja ristiohjainta ottaaksesi seuraavat asetukset käyttöön:    
+  + **"Show NAND or user string in System Settings"**
+1. Paina (START)-painiketta tallentaaksesi ja käynnistääksesi uudelleen
+
+#### Section V - CTRNAND Luma3DS
+
+1. Käynnistä uudelleen pitäen (START)-painiketta pohjassa avataksesi GodMode9:n
+1. Jos ohjelma kehottaa luomaan varmuuskopion tärkeistä tiedostoista (essential files), paina (A):ta tehdäksesi sen, ja kun varmuuskopio on valmis, paina (A):ta uudelleen jatkaaksesi
+1. Jos sinua kehotetaan korjaamaan RTC-aika ja -päivämäärä, paina (A):ta ja aseta ne oikein, paina sitten (A):ta jatkaaksesi
+  + Huomaa, että jos jouduit korjaamaan RTC-ajan ja -päivämäärän, sinun täytyy korjata ne myös järjestelmäasetuksista (System Settings) näiden ohjeiden jälkeen
+1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
+1. Valitse "Scripts..."
+1. Valitse "setup_ctrnand_luma3ds"
+1. Paina kehotettaessa (A):ta jatkaaksesi
+1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1) ja syötä annettu painikeyhdistelmä
+1. Paina (A):ta jatkaaksesi
+1. Paina (A):ta lukitaksesi kirjoitusoikeudet
+
+#### Section VI - Cleanup SD Card
 
 Huomaa, että tämä toimenpide poistaa `/boot9strap/`- ja `/cias/`-kansiot SD-kortiltasi!
 {: .notice--danger}
 
-1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
-1. Jos ohjelma kehottaa luomaan varmuuskopion tärkeistä tiedostoista (essential files), paina (A):ta tehdäksesi sen, ja kun varmuuskopio on valmis, paina (A):ta uudelleen jatkaaksesi
-1. Jos sinua kehotetaan korjaamaan RTC-aika ja -päivämäärä, paina (A):ta ja aseta ne oikein, paina sitten (A):ta jatkaaksesi
-  + Huomaa, että jos jouduit korjaamaan RTC-ajan ja -päivämäärän, sinun täytyy korjata ne myös järjestelmäasetuksista (System Settings) näiden ohjeiden jälkeen
 1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
 1. Valitse "Scripts..."
 1. Valitse "cleanup_sd_card"
