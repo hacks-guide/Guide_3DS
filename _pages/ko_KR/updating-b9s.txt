@@ -26,7 +26,9 @@ There have been reports of a wave of bans being handed out to CFW users by Ninte
 
 * The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
+* 최신 버전의 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * 최신 버전의 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z` 파일)*
+* [`setup_ctrnand_luma3ds.gm9`]({{ "/gm9_scripts/setup_ctrnand_luma3ds.gm9" | absolute_url }})
 * [`cleanup_sd_card.gm9`]({{ "/gm9_scripts/cleanup_sd_card.gm9" | absolute_url }})
 
 ### Instructions
@@ -38,19 +40,22 @@ For all steps in this section, overwrite any existing files on your SD card.
 
 1. SD 카드를 컴퓨터에 삽입해 주세요.
 1. Create a folder named `boot9strap` on the root of your SD card
-1. Copy `cleanup_sd_card.gm9` to the `/gm9/scripts/` folder on your SD card
-1. Copy `SafeB9SInstaller.firm` from the SafeB9SInstaller `.zip` to the `/luma/payloads/` folder on your SD card
 1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
+1. Copy `SafeB9SInstaller.firm` from the SafeB9SInstaller `.zip` to the `/luma/payloads/` folder on your SD card
+1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
+1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+1. Copy `setup_ctrnand_luma3ds.gm9` to the `/gm9/scripts/` folder on your SD card
+1. Copy `cleanup_sd_card.gm9` to the `/gm9/scripts/` folder on your SD card
 1. SD 카드를 기기에 다시 삽입해 주세요.
 
 #### Section II - Installing boot9strap
 
-1. (start)를 누른 채 시작해 Luma3DS chainloader 메뉴를 실행해 주세요.
+1. Launch Luma3DS chainloader menu by holding (Start) during boot
 1. Launch SafeB9SInstaller by pressing (A)
 1. Wait for all safety checks to complete
 1. When prompted, input the key combo given to install boot9strap
 1. Once it has completed, hold (Start) while pressing (A) to reboot your device to the Luma3DS chainloader
-  + If you encounter an error booting your device after the B9S update, just continue to fix it
+  + If you encounter an `argc = 0` error booting your device after the B9S update, just continue to fix it
 
 #### Section III - Update Luma3DS
 
@@ -58,19 +63,39 @@ For all steps in this section, overwrite any existing files on your SD card.
 1. SD 카드를 컴퓨터에 삽입해 주세요.
 1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card, replacing the existing file
 1. SD 카드를 기기에 다시 삽입해 주세요.
+1. 기기를 시작해 주세요.
 
-#### Section IV - Cleanup SD Card
+#### Section IV - Configuring Luma3DS
 
-Note that this script will remove the `/boot9strap/` and `/cias/` folders from your SD card!
-{: .notice--danger}
+This section is only needed if you are prompted with the Luma3DS configuration menu after the reboot.
+{: .notice--info}
 
-1. Launch GodMode9 by holding (Start) during boot
+1. In the Luma3DS configuration menu, use the (A) button and the D-Pad to turn on the following:    
+  + **"Show NAND or user string in System Settings"**
+1. (start)를 눌러 저장하고 기기를 다시 시작해 주세요.
+
+#### Section V - CTRNAND Luma3DS
+
+1. Reboot holding (Start) to launch GodMode9
 1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
 1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
   + Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
 1. (Home)을 눌러 작업 메뉴를 띄워 주세요.
 1. Select "Scripts..."
+1. Select "setup_ctrnand_luma3ds"
+1. When prompted, press (A) to proceed
+1. (A)를 눌려 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요.
+1. Press (A) to continue
+1. Press (A) to relock write permissions
+
+#### Section VI - Cleanup SD Card
+
+Note that this script will remove the `/boot9strap/` and `/cias/` folders from your SD card!
+{: .notice--danger}
+
+1. (Home)을 눌러 작업 메뉴를 띄워 주세요.
+1. Select "Scripts..."
 1. Select "cleanup_sd_card"
 1. When prompted, press (A) to proceed
-1. Press (A) to continue
+1. (A)를 눌러 진행해 주세요.
 1. Hold (R) and press (Start) to power off your device
