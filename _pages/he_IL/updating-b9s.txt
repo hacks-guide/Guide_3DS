@@ -26,7 +26,9 @@ title: "עדכון B9S"
 
 * הגרסה העדכנית של [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * הגרסא העדכנית של [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *( boot9strap רגיל; לא קובץ ה `devkit`, ולא קובץ ה`ntr`)*
+* את הגרסה העדכנית של [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * את הגרסה העדכנית של [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(יש להוריד את קובץ ה-`.7z`)*
+* [`setup_ctrnand_luma3ds.gm9`]({{ "/gm9_scripts/setup_ctrnand_luma3ds.gm9" | absolute_url }})
 * [`cleanup_sd_card.gm9`]({{ "/gm9_scripts/cleanup_sd_card.gm9" | absolute_url }})
 
 ### הנחיות
@@ -38,19 +40,22 @@ title: "עדכון B9S"
 
 1. תכניסו את ה-SD שלכם למחשב
 1. תצרו ב-SD שלכם תיקייה חדשה בשם `boot9strap`
-1. תעתיקו את `cleanup_sd_card.gm9` אל תיקיית`/gm9/scripts/` על כרטיס הSD שלכם
-1. העתיקו את `SafeB9SInstaller.firm` מהזיפ של SafeB9SInstaller אל תיקיית /luma/payloads/ ב- SD שלכם
 1. תעתיקו את`boot9strap.firm` ואת `boot9strap.firm.sha` מה `.zip` של boot9strap אל תיקיית `/boot9strap/`על כרטיס הSD שלכם
+1. העתיקו את `SafeB9SInstaller.firm` מהזיפ של SafeB9SInstaller אל תיקיית /luma/payloads/ ב- SD שלכם
+1. העתיקו את `GodMode9.firm` מהזיפ של GodMode9 אל תיקיית /luma/payloads/ ב- SD שלכם
+1. תעתיקו את התיקייה `gm9` מתוך ה`.zip` של GodMode9 ל-SD שלכם
+1. תעתיקו את `setup_ctrnand_luma3ds.gm9` אל תיקיית`/gm9/scripts/` על כרטיס הSD שלכם
+1. תעתיקו את `cleanup_sd_card.gm9` אל תיקיית`/gm9/scripts/` על כרטיס הSD שלכם
 1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
 
 #### חלק II - התקנת boot9strap
 
-1. תאתחלו בזמן שאתם מחזיקים (Start) במהלך האתחול כדי להפעיל את תפריט הטעינה של Luma3DS
+1. תפתחו את תפריט הטעינה של Luma3DS על ידי החזקה של המקש (Start) בעת ההדלקה
 1. תפעילו את SafeB9SInstaller על ידי לחיצת (A)
 1. תחכו שכל בדיקות הבטיחות יסתיימו
 1. כאשר תתבקשו, תלחצו על הכפתורים שנתונים לכם כדי להתקין את boot9strap
 1. אחרי שזה סיים, תחזיקו (Start) בזמן שאתם לוחצים (A) כדי לאתחל את הקונסולה אל תפריט הטעינה שלLuma3DS
-  + אם אתם מקבלים הודעת שגיעה אחרי שאתם מפעילים את הקונסולה לאחר עדכון B9S, פשוט תמשיכו כדי לתקן את זה
+  + If you encounter an `argc = 0` error booting your device after the B9S update, just continue to fix it
 
 #### חלק III - עדכון Luma3DS
 
@@ -58,16 +63,36 @@ title: "עדכון B9S"
 1. תכניסו את ה-SD שלכם למחשב
 1. תעתיקו את 'boot.firm' מתוך Luma3DS.7z לSD שלכם, במקום הקובץ הקיים
 1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
+1. תפעילו את המכשיר
 
-#### חלק IV - ניקוי ה SD
+#### חלק IV - הגדרת Luma3DS
+
+חלק זה נחוץ רק אם אתם מקבלים את תפריט ההגדרות של Luma3DS אחרי ההפעלה מחדש.
+{: .notice--info}
+
+1. בתפריט ההגדרות של Luma3DS, תשתמשו במקש (A) ובמקשי החיצים על מנת להפעיל את ההגדרות הבאות:    
+  + **"Show NAND or user string in System Settings"**
+1. לחצו על (Start) על מנת לשמור ולהפעיל מחדש
+
+#### Section V - CTRNAND Luma3DS
+
+1. תאתחלו בזמן שאתם מחזיקים (Start) כדי להפעיל את GodMode9
+1. אם תתבקשו לעשות גיבוי של קבצים חיוניים, תלחצו (A) כדי לעשות זאת, ואז תלחצו (A) כדי להמשיך אחרי שזה סיים
+1. אם אתם מתבקשים לתקן את זמן ותאריך הRTC, תלחצו (A) כדי לעשות זאת, ואז תלחצו (A) כדי להמשיך
+  + שימו לב, אם הייתם צריכים לתקן את תאריך וזמן הRTC, תצטרכו לתקן את הזמן בהגדרות המערכת גם כן אחרי המדריך הזה
+1. תלחצו על (Home) כדי להראות את תפריט הפעולה
+1. תבחרו "Scripts..."
+1. תבחרו ב "setup_ctrnand_luma3ds"
+1. כשתתבקשו, תלחצו (A) כדי להמשיך
+1. לחצו (A) כדי לפתוח גישת כתיבת lvl1 לSysNAND, ואז תלחצו על המקשים בסדר הנכון
+1. תלחצו (A) כדי להמשיך
+1. תלחצו (A) כדי לנעול הרשאות כתיבה
+
+#### Section VI - Cleanup SD Card
 
 שימו לב שהסקריפט הזה ימחק את תיקייות `/boot9strap/` ו`/cias/`מכרטיס הSD שלכם!
 {: .notice--danger}
 
-1. תפתחו את GodMode9 על ידי החזקה של המקש (Start) בעת ההדלקה
-1. אם תתבקשו לעשות גיבוי של קבצים חיוניים, תלחצו (A) כדי לעשות זאת, ואז תלחצו (A) כדי להמשיך אחרי שזה סיים
-1. אם אתם מתבקשים לתקן את זמן ותאריך הRTC, תלחצו (A) כדי לעשות זאת, ואז תלחצו (A) כדי להמשיך
-  + שימו לב, אם הייתם צריכים לתקן את תאריך וזמן הRTC, תצטרכו לתקן את הזמן בהגדרות המערכת גם כן אחרי המדריך הזה
 1. תלחצו על (Home) כדי להראות את תפריט הפעולה
 1. תבחרו "Scripts..."
 1. תבחרו ב"cleanup_sd_card"
