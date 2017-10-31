@@ -39,7 +39,6 @@ Au existat rapoarte despre un val de banuri adresate utilizatorilor de CFW de c�
 
 * <i class="fa fa-magnet" aria-hidden="true" title="Acesta este un link magnetic. Folosiți un client de torrent pentru a descărca fișierul."></i> - **Doar pentru utilizatorii de New 3DS:** [`secret_sector.bin`](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce)
 * Cea mai nouă versiune de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(fișierul `.7z`)*
-* The v7.0.5 release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/tag/v7.0.5) *(the `.7z` file)*
 * Cea mai nouă versiune de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * Cea mai nouă versiune de [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(boot9strap standard; nu fișierul `devkit`, nici cel `ntr`)*
 * Cea mai nouă versiune de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
@@ -59,7 +58,7 @@ Pentru toți pașii din această secțiune, suprascrieți fișierele existente d
 1. Introduceți cardul SD în calculator
 1. Copiați _conținutul de_ pe `starter.zip` în rădăcina cardului SD
 1. Copy `boot.firm` from the latest version Luma3DS `.7z` to the root of your SD card
-1. Copy `arm9loaderhax.bin` from the v7.0.5 Luma3DS `.7z` to the root of your SD card
+1. Delete the existing `arm9loaderhax.bin` file from the root of your SD card
 1. Creați un folder numit `cias` în rădăcina cardului SD dacă nu există deja
 1. Copiați `lumaupdater.cia` în folderul `/cias/` de pe cardul SD
 1. Creați un folder numit `boot9strap` pe rădăcina cardului SD
@@ -68,8 +67,8 @@ Pentru toți pașii din această secțiune, suprascrieți fișierele existente d
 1. Copiați folderul `gm9` din fișierul `.zip` GodMode9 în rădăcina cardului SD
 1. Copiați `setup_ctrnand_luma3ds.gm9` în folderul `/gm9/scripts/` de pe cardul SD
 1. Copiați `cleanup_sd_card.gm9` în folderul `/gm9/scripts/` de pe cardul SD
-1. Copiați `SafeBS9Installer.bin` din arhiva `.zip` SafeB9SInstaller în folderul `/luma/payloads/` de pe cardul SD
-1. Redenumiți fișierul `SafeBS9Installer.bin` din folderul `/luma/payloads/` de pe cardul SD în `start_SafeBS9Installer.bin`
+1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of on your SD card
+1. Rename `SafeB9SInstaller.bin` on the root of your SD card to `arm9loaderhax_si.bin`
 1. Copiați `boot9strap.firm` și `boot9strap.firm.sha` din arhiva `.zip` boot9strap în folderul `/boot9strap/` de pe cardul SD
 1. **Doar utilizatorii de New 3DS:** Copiați `secret_sector.bin` în folderul `/boot9strap/`de pe cardul SD
 
@@ -80,11 +79,7 @@ Pentru toți pașii din această secțiune, suprascrieți fișierele existente d
 
 #### Section II - Installing boot9strap
 
-1. Deschideți dispozitivul în timp ce țineți apăsat (Start) pentru a lansa meniul chainloader Luma3DS
-  + Unele versiuni de Luma3DS vor deschide direct orice payload care începe cu `start_`
-  + Dacă versiunea voastră face asta, continuați cu instrucțiunile
-1. Lansați SafeB9SInstaller apăsând (A) pe el
-  + Dacă asta vă dă o eroare, încercați să folosiți un card SD nou, sau formatați cardul SD actual (faceți o copie de rezervă fișierelor existente mai întâi)
+1. Boot your device to launch SafeB9SInstaller
 1. Așteptaţi ca toate verificările de siguranță să fie completate
   + Dacă primiţi eroarea "OTP Crypto Fail", descărcaţi <i class= "fa fa-magnet" aria-hidden = "true" title = "Acesta este un link magnetic. Use a torrent client to download the file."></i> - [`aeskeydb.bin`](magnet:?xt=urn:btih:d25dab06a7e127922d70ddaa4fe896709dc99a1e&dn=aeskeydb.bin&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce), then put it in the `/boot9strap/` folder on your SD card and try again
 1. Când vi se cere, introduceți combinația de butoane ca să instalați boot9strap
@@ -92,9 +87,6 @@ Pentru toți pașii din această secțiune, suprascrieți fișierele existente d
   + Dacă dispozitivul se oprește în timpul pornirii, asigurați-vă că ați copiat `boot.firm` din arhiva `.7z` Luma3DS în rădăcina cardului SD
 
 #### Section III - Configuring Luma3DS
-
-Această secţiune este necesară numai în cazul în care vi se arată meniul de configurare Luma3DS după repornire.
-{: .notice--info}
 
 1. În meniul de configurare Luma3DS, folosiți butonul (A) și D-Pad-ul ca să activați următoarele:    
   + **"Show NAND or user string in System Settings"**
@@ -112,11 +104,12 @@ Dacă, înainte să urmăriți acest ghid, aveați deja o configurare cu EmuNAND
 
 #### Section V - Installing Luma3DS Updater
 
-1. Lansați FBI
-1. Navigate to `Titles`
+1. Launch System Settings
+1. Navigate to `Data Management` -> `Nintendo 3DS` -> `Software`
 1. Select your existing Luma3DS Updater
-1. Select the "Delete Title And Ticket" option, then press (A) to confirm
-1. Apăsați (B) ca să vă întoarceți în meniul principal
+1. Select the "Delete" option, then select "Delete Software and Save Data", then press "Delete" to confirm
+1. Press "Back" 3 times, then press (HOME) to return to the main menu
+1. Lansați FBI
 1. Navigați spre `SD` -> `cias`
 1. Selectaţi `lumaupdater.cia`
 1. Selectați opțiunea "Install CIA", apoi apăsați (A) pentru a confirma
