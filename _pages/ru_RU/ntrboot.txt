@@ -9,30 +9,30 @@ title: "ntrboot"
 
 ### Обязательно к прочтению
 
-Installing boot9strap with ntrboot requires a compatible NDS / DSi flashcart to flash ntrboot to.
+Для установки boot9strap при помощи ntrboot требуется совместимый NDS / DSi флешкартридж, на который можно прошить ntrboot.
 
-While the ntrboot exploit works independently of system version, the ntrboot flasher (which installs the exploit to the cart) is not. This means that, depending on the versions and devices supported by your flashcart, only certain methods may be available to you.
+Эксплойт ntrboot работает на любой системе вне зависимости от версии прошивки, однако флешер для ntrboot (программа, которая устанавливает эксплойт на картридж) - нет. Это означает, что вы сможете использовать далеко не все методы установки эксплойта на картридж, в зависимости от совместимости вашего картриджа с версией системы.
 
-Note that carts with a "Time Bomb" will no longer be able to launch `.nds` files when they detect that the system clock has passed a date determined by the flashcart firmware. One method to bypass this is to set the system clock to an earlier date.
+Имейте в виду, что картриджи с так называемой “Time Bomb” так же не смогут запускать `.nds-файлы` после срабатывания “бомбы”. One method to bypass this is to set the system clock to an earlier date.
 
-| Flashcart Name | Current Price | "Time Bomb"? | 3DS Versions? | DSi Versions? | NDS Versions? | Other Notes |
+| Флешкартридж | Текущая стоимость | "Time Bomb"? | Версия 3DS? | Версия DSi? | Версия NDS? | Примечания |
 |-|-:|:-:|:-:|:-:|:-:|-|
-| [DSTT](http://www.nds-card.com/ProShow.asp?ProID=157) | $9.99 | No | None | None | All | Only models with [certain flash chips](https://gist.github.com/Hikari-chin/6b48f1bb8dd15136403c15c39fafdb42) are compatible with ntrboot. |
-| [R4i-SDHC 3DS RTS](http://www.nds-card.com/ProShow.asp?ProID=146) | $13.99 | Probably (Date Unknown) | <= 11.6.0 | <= 1.4.5 | All | |
-| [R4i Gold 3DS RTS](http://www.nds-card.com/ProShow.asp?ProID=149) | $19.99 | No | <= 11.6.0 | <= 1.4.5 | All | |
-| [Acekard 2i](http://www.nds-card.com/ProShow.asp?ProID=160) | $20.99 | No | <= 4.3.0 | <= 1.4.4 | All | |
-| [R4iSDHC GOLD Pro 20XX](http://www.nds-card.com/ProShow.asp?ProID=490) | $9.99 | 3.9b: September 3, 2019 | <= 11.6.0 | <= 1.4.5 | All | All R4iSDHC 20XX flashcarts are identical. |
-| [R4iSDHC RTS LITE 20XX](http://www.nds-card.com/ProShow.asp?ProID=450) | $13.99 | 3.9b: September 3, 2019 | <= 11.6.0 | <= 1.4.5 | All | All R4iSDHC 20XX flashcarts are identical. |
-| R4iSDHC Dual-Core 20XX |  | 3.9b: September 3, 2019 | <= 11.6.0 | <= 1.4.5 | All | All R4iSDHC 20XX flashcarts are identical. |
-| Infinity 3 R4i |  | No | <= 11.6.0 | <= 1.4.5 | All | |
-| R4 3D Revolution |  | No | None | None | All | |
-| R4i Gold 3DS Deluxe "Starter" |  | No | 4.1.0 - 4.5.0 | <= 1.4.5 | All | |
-| R4i Ultra |  | No | <= 4.3.0 | <= 1.4.5 | All | |
+| [DSTT](http://www.nds-card.com/ProShow.asp?ProID=157) | $9.99 | Нет | Ни одна | Ни одна | Все | Только определенные [ревизии](https://gist.github.com/Hikari-chin/6b48f1bb8dd15136403c15c39fafdb42) совместимы с ntrboot. |
+| [R4i-SDHC 3DS RTS](http://www.nds-card.com/ProShow.asp?ProID=146) | $13.99 | Возможно (Дата неизвестна) | <= 11.6.0 | <= 1.4.5 | Все | |
+| [R4i Gold 3DS RTS](http://www.nds-card.com/ProShow.asp?ProID=149) | $19.99 | Нет| <= 11.6.0 | <= 1.4.5 | Все | |
+| [Acekard 2i](http://www.nds-card.com/ProShow.asp?ProID=160) | $20.99 | Нет | <= 4.3.0 | <= 1.4.4 | Все | |
+| [R4iSDHC GOLD Pro 20XX](http://www.nds-card.com/ProShow.asp?ProID=490) | $9.99 | 3.9b: 3 сентября 2019 | <= 11.6.0 | <= 1.4.5 | Все | Все R4iSDHC 20XX одинаковы. |
+| [R4iSDHC RTS LITE 20XX](http://www.nds-card.com/ProShow.asp?ProID=450) | $13.99 | 3.9b: 3 сентября 2019 | <= 11.6.0 | <= 1.4.5 | All | Все R4iSDHC 20XX одинаковы. |
+| R4iSDHC Dual-Core 20XX |  | 3.9b: September 3, 2019 | <= 11.6.0 | <= 1.4.5 | Все | Все R4iSDHC 20XX одинаковы. |
+| Infinity 3 R4i |  | Нет | <= 11.6.0 | <= 1.4.5 | Все | |
+| R4 3D Revolution |  | Нет | Ни одна | Ни одна | Все | |
+| R4i Gold 3DS Deluxe "Starter" |  | Нет | 4.1.0 - 4.5.0 | <= 1.4.5 | Все | |
+| R4i Ultra |  | Нет | <= 4.3.0 | <= 1.4.5 | Все | |
 
   ![]({{ "/images/screenshots/ntrboot-flashcarts.png" | absolute_url }})
   {: .notice--info}
 
-Ensure your flashcart is able to launch `.nds` files on your device before beginning. Some flashcarts may require firmware or "kernel" files to be copied to the flashcart SD card. Consult your specific flashcart's instructions for more information.
+Перед началом убедитесь, что ваш флешкартридж может запускать `.nds-файлы` на вашей приставке. Для работы некоторых картриджей на их SD-карту сперва нужно скопировать прошивку или "ядро" (kernel). Обратитесь к инструкции по конкретному флешкатриджу для получения дополнительной информации.
 
 Обратите внимание, что конкретные методы могут иметь дополнительные сведения о совместимости.
 
@@ -41,7 +41,7 @@ Ensure your flashcart is able to launch `.nds` files on your device before begin
 Чтобы проверить работоспособность магнита, приложите его к кнопкам (A)(B)(X)(Y) или рядом с ними, когда консоль включена. Проверьте, включает ли он режим ожидания. Если это так, то оба экрана будут выключаться, пока магнит находится на этом месте.
 {: .notice--info}
 
-Обратите внимание, что флешкартридж не сможет использоваться для своих стандартных функций, пока на нем установлен эксплойт ntrboot (кроме Acekard 2i, который сохраняет функционал, *но только на консолях 3DS с кастомной прошивкой*). В конце инструкций по прошивке ntrboot есть дополнительные шаги, чтобы по окончанию удалить его с флешкартриджа.
+Обратите внимание, что флешкартридж не сможет использоваться для своих стандартных функций, пока на нем установлен эксплойт ntrboot (кроме Acekard 2i, который сохраняет функционал, *но только на консолях 3DS с кастомной прошивкой*). This means that, for most flashcarts, it will not even display on the home menu. В конце инструкций по прошивке ntrboot есть дополнительные шаги, чтобы по окончанию удалить его с флешкартриджа.
 
 Обратите внимание, что в некоторых редких случаях процесс прошивки может **брикнуть** поддельный флешкартридж и навсегда сделать его нерабочим. Это маловероятно, но тем не менее поддерживаются только оригинальные флешкартриджи из списка. Чтобы уменьшить вероятность получения поддельного картриджа, рекомендуется использовать проверенный сайт для покупки флешкартриджа (например [NDS Card](http://www.nds-card.com/))
 {: .notice--danger}
