@@ -39,6 +39,7 @@ Note that, only on New 3DS, `secret_sector.bin` is needed to revert the arm9load
 
 * <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - **New 3DS Users Only:** [`secret_sector.bin`](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce)
 * The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(the `.7z` file)*
+* The v7.0.5 release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/tag/v7.0.5) *(the `.7z` file)*
 * The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
 * The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
@@ -58,7 +59,7 @@ For all steps in this section, overwrite any existing files on your SD card.
 1. Insert your SD card into your computer
 1. Copy _the contents of_ `starter.zip` to the root of your SD card
 1. Copy `boot.firm` from the latest version Luma3DS `.7z` to the root of your SD card
-1. Delete the existing `arm9loaderhax.bin` file from the root of your SD card
+1. Copy `arm9loaderhax.bin` from the v7.0.5 Luma3DS `.7z` to the root of your SD card
 1. Create a folder named `cias` on the root of your SD card if it does not already exist
 1. Copy `lumaupdater.cia` to the `/cias/` folder on your SD card
 1. Create a folder named `boot9strap` on the root of your SD card
@@ -67,8 +68,8 @@ For all steps in this section, overwrite any existing files on your SD card.
 1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
 1. Copy `setup_ctrnand_luma3ds.gm9` to the `/gm9/scripts/` folder on your SD card
 1. Copy `cleanup_sd_card.gm9` to the `/gm9/scripts/` folder on your SD card
-1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of on your SD card
-1. Rename `SafeB9SInstaller.bin` on the root of your SD card to `arm9loaderhax_si.bin`
+1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the `/luma/payloads/` folder on your SD card
+1. Rename `SafeB9SInstaller.bin` in the `/luma/payloads/` folder on your SD card to `start_SafeB9SInstaller.bin`
 1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
 1. **New 3DS Users Only:** Copy `secret_sector.bin` to the `/boot9strap/` folder on your SD card
 
@@ -79,7 +80,8 @@ For all steps in this section, overwrite any existing files on your SD card.
 
 #### Section II - Installing boot9strap
 
-1. Boot your device to launch SafeB9SInstaller
+1. Boot your device while holding (Start) to launch the Luma3DS chainloader menu
+  + If this gives you an error, try either using a new SD card, or formatting your current SD card (backup existing files first)
 1. Wait for all safety checks to complete
   + If you get an "OTP Crypto Fail" error, download <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [`aeskeydb.bin`](magnet:?xt=urn:btih:d25dab06a7e127922d70ddaa4fe896709dc99a1e&dn=aeskeydb.bin&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce), then put it in the `/boot9strap/` folder on your SD card and try again
 1. When prompted, input the key combo given to install boot9strap
@@ -87,6 +89,9 @@ For all steps in this section, overwrite any existing files on your SD card.
   + If your device shuts down on boot, ensure that you have copied `boot.firm` from the Luma3DS `.7z` to the root of your SD card
 
 #### Section III - Configuring Luma3DS
+
+This section is only needed if you are prompted with the Luma3DS configuration menu after the reboot.
+{: .notice--info}
 
 1. In the Luma3DS configuration menu, use the (A) button and the D-Pad to turn on the following:    
   + **"Show NAND or user string in System Settings"**
@@ -104,12 +109,11 @@ If, before following this guide, you already had an EmuNAND setup and would like
 
 #### Section V - Installing Luma3DS Updater
 
-1. Launch System Settings
-1. Navigate to `Data Management` -> `Nintendo 3DS` -> `Software`
-1. Select your existing Luma3DS Updater
-1. Select the "Delete" option, then select "Delete Software and Save Data", then press "Delete" to confirm
-1. Press "Back" 3 times, then press (HOME) to return to the main menu
 1. Launch FBI
+1. Navigate to `Titles`
+1. Select your existing Luma3DS Updater
+1. Select the "Delete Title And Ticket" option, then press (A) to confirm
+1. Press (B) to return to the main menu
 1. Navigate to `SD` -> `cias`
 1. Select `lumaupdater.cia`
 1. Select the "Install CIA" option, then press (A) to confirm
