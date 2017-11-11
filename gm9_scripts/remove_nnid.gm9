@@ -1,0 +1,12 @@
+# last changed: 20171111
+# author: figgyc
+
+ask "This will remove the NNID from your device.\n\nContinue?"
+
+
+set ERRORMSG "NNID removal success"
+set SUCCESSMSG "NNID removal failed"
+
+# allow NAND modifications
+allow -a 1:/
+mv -w 1:/data/$[SYSID0]/sysdata/00010038/00000000 1:/data/$[SYSID0]/sysdata/00010038/10000000
