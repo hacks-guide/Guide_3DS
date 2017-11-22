@@ -43,16 +43,22 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
 
 ## Removing an NNID without formatting your device
 
+### What you need
+
+* [`remove_nnid.gm9`]({{ "/gm9_scripts/remove_nnid.gm9" | absolute_url }})
+
+### Instructions
+
 Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
 {: .notice--info}
 
 1. Launch GodMode9 by holding (Start) during boot
-1. Navigeer naar `[1:] SYSNAND CTRNAND` -> `data` -> (32 karakters lang ID) -> `sysdata` -> `00010038`
-1. Hou de (R) knop ingedrukt, druk daarna op (X) op `00000000` om dit bestand een andere naam te geven
-1. Druk op (Boven) op de naam te veranderen naar `10000000`
-1. Druk nu op (A) om de veranderingen op te slaan
-1. Druk op (A) om het schrijven op de SysNAND te ontgrendelen, druk vervolgens de gegeven combinatie van knoppen in
-1. Ga nu terug naar het hoofdmenu
+1. Select "Scripts..."
+1. Select "remove_nnid"
+1. When prompted, press (A) to proceed
+1. Druk op (A) om SysNAND (lvl1) writing te ontgrendelen en voer daarna de toetsencombinatie in die wordt gegeven
+1. Druk op (A) om door te gaan
+1. Press (A) to relock write permissions
 1. Druk op (Start) om je 3DS opnieuw op te starten
 
 ## Cannot inject H&S on Gateway downgraded device
@@ -96,18 +102,31 @@ Browser based exploits (such as browserhax or 2xrsa) are often unstable and cras
 
 ## Black screen on SysNAND boot
 
+### What you need
+
+* [`remove_extdata.gm9`]({{ "/gm9_scripts/remove_extdata.gm9" | absolute_url }})
+
+### Instructions
+
+Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
+{: .notice--info}
+
 1. Probeer je 3DS zonder SD kaart op te starten, en plaats de kaart na het opstarten weer terug in je 3DS
     1. Schakel je 3ds uit
     1. Verwijder je SD kaart uit je 3DS
     1. Zet je 3DS aan
     1. Wanneer het homemenu verschijnt, stop je SD kaart terug in je 3DS
-    1. Als dat werkte, dan moet je de homemenu extdata verwijderen door naar de volgende map op je SD kaart te navigeren:`/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/`
-        + EUR Regio: Verwijder `00000098`
-        + EUR Regio: Verwijder `00000082`
-        + EUR Regio: Verwijder `0000008f`
-        + CHN Region: Verwijder `000000A1`
-        + EUR Regio: Verwijder `000000A9`
-        + TWN Region: Verwijder `000000B1`
+    1. If this worked, you should clear Home Menu's extdata by following these instructions:
+        1. Schakel je 3ds uit
+        1. Launch GodMode9 by holding (Start) during boot
+        1. Druk op de (Home) knop om het actiemenu te openen
+        1. Select "Scripts..."
+        1. Select "remove_extdata"
+        1. When prompted, press (A) to proceed
+        1. Druk op (A) om SysNAND (lvl1) writing te ontgrendelen en voer daarna de toetsencombinatie in die wordt gegeven
+        1. Druk op (A) om door te gaan
+        1. Press (A) to relock write permissions
+        1. Druk op (Start) om je 3DS opnieuw op te starten
 1. Probeer hem op te starten zonder cartridges in je 3DS (inclusief flashcarts)
 1. Als je een hardmod NAND-backup hebt, flash dan de backup terug naar SysNAND
 1. Probeer in herstelmodus op te starten en je systeem te updaten
@@ -119,6 +138,12 @@ Browser based exploits (such as browserhax or 2xrsa) are often unstable and cras
 
 ## Black screen on SysNAND boot after Installing boot9strap
 
+### What you need
+
+* [`remove_extdata.gm9`]({{ "/gm9_scripts/remove_extdata.gm9" | absolute_url }})
+
+### Instructions
+
 1. Ensure you have a working payload
     1. Check for the existence of `boot.firm` in the root of your SD card.
 1. Probeer om de configuratie van Luma te resetten en de opties te repareren,
@@ -127,13 +152,16 @@ Browser based exploits (such as browserhax or 2xrsa) are often unstable and cras
 1. Test of je GodMode9 kan starten
     1. Op Luma3DS, hou (Start) vast tijdens het opstarten
 1. Verwijder de homemenu-extdata
-    1. Verwijder homedata-extdata door naar je SD kaart te navigeren naar: `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/`
-        + EUR Regio: Verwijder `00000098`
-        + EUR Regio: Verwijder `00000082`
-        + EUR Regio: Verwijder `0000008f`
-        + CHN Region: Verwijder `000000A1`
-        + EUR Regio: Verwijder `000000A9`
-        + TWN Region: Verwijder `000000B1`
+    1. Schakel je 3ds uit
+    1. Launch GodMode9 by holding (Start) during boot
+    1. Druk op de (Home) knop om het actiemenu te openen
+    1. Select "Scripts..."
+    1. Select "remove_extdata"
+    1. When prompted, press (A) to proceed
+    1. Druk op (A) om SysNAND (lvl1) writing te ontgrendelen en voer daarna de toetsencombinatie in die wordt gegeven
+    1. Druk op (A) om door te gaan
+    1. Press (A) to relock write permissions
+    1. Druk op (Start) om je 3DS opnieuw op te starten
 1. Probeer hem op te starten zonder cartridges in je 3DS (inclusief flashcarts)
 1. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version (v6.2.3 or higher)
 1. Als je NAND een versie tussen 3.0.0 en 4.5.0 heeft, doe het volgende:
