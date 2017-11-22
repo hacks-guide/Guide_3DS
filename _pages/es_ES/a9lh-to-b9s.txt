@@ -43,8 +43,8 @@ Ten en cuenta que sólo en la New 3DS, `secret_sector.bin` es requerido para rev
 * La última versión de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * La última versión de [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(boot9strap normal; no el archivo `devkit` ni el archivo `ntr`)*
 * La última versión de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* La última versión (fork) de [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
-* Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
+* The latest release of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
+* La última versión [del Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases)
 * [`setup_ctrnand_luma3ds.gm9`]({{ "/gm9_scripts/setup_ctrnand_luma3ds.gm9" | absolute_url }})
 * [`cleanup_sd_card.gm9`]({{ "/gm9_scripts/cleanup_sd_card.gm9" | absolute_url }})
 
@@ -57,7 +57,7 @@ Para todos los pasos en esta sección, sobreescribe cualquier archivo repetido e
 
 1. Apaga tu consola
 1. Inserta tu tarjeta SD en tu computadora
-1. Copia _el contenido de_ `starter.zip` a la raíz de tu tarjeta SD
+1. Copia `boot.3dsx` a la raíz de tu tarjeta SD
 1. Copia el archivo `boot.firm` desde el `.7z` de la última versión de Luma3DS a la raíz de tu tarjeta SD
 1. Copia `arm9loaderhax.bin` desde el `.7z` de Luma3DS v7.0.5 a la raíz de tu tarjeta SD
 1. Crea una carpeta llamada `cias` en la raíz de tu tarjeta SD, si aún no existe
@@ -131,7 +131,7 @@ Si, antes de seguir esta guía, ya tenías una configuración EmuNAND y deseas m
 1. Presiona (A) para continuar
 1. Presiona (A) para volver a bloquear los permisos de escritura
 
-#### Sección VII - Copia de seguridad de la SysNAND
+#### Section VII - Backup Essential Files
 
 1. Presiona el botón (Home) para abrir el menú de acción
 1. Selecciona "Scripts..."
@@ -141,11 +141,11 @@ Si, antes de seguir esta guía, ya tenías una configuración EmuNAND y deseas m
 1. Presiona (A) para continuar
 1. Mantén (R) y presiona (B) al mismo tiempo para extraer la SD
 1. Inserta tu tarjeta SD en tu computadora
-1. Copia `<date>_<númerodeserie>_sysnand###.bin` desde la carpeta `/gm9/out/` en tu tarjeta SD a una ubicación segura en tu computadora
+1. Copia `<fecha>_<númerodeserie>_sysnand###.bin` y `essential.exefs` desde la carpeta `/gm9/out/` en tu tarjeta SD a una ubicación segura en tu computadora
   + Haz copias de seguridad en múltiples sitios (como por ejemplo, en un pendrive o almacenamiento online)
-  + Esta copia de seguridad puede salvarte de un brick si algo va mal en el futuro
-  + Reemplaza tu antiguo respaldo NAND con arm9loaderhax con este nuevo con boot9strap
-1. Elimina el archivo `<fecha>_<númerodeserie>_sysnand_###.bin` de la carpeta `/gm9/out/` de tu tarjeta SD después de haberlo copiado
+  + Estos respaldos podrán prevenir que se inutilice la consola y/o ayudarte a recuperar archivos de la memoria de tu consola si algo sale mal en el futuro
+  + Replace your old arm9loaderhax SysNAND backup with this new boot9strap one
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` and `<date>_<serialnumber>_sysnand_###.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
 1. Vuelve a insertar tu tarjeta SD en tu consola
 
 #### Sección VIII - Limpiar tarjeta SD
