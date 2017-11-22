@@ -43,8 +43,8 @@ Au existat rapoarte despre un val de banuri adresate utilizatorilor de CFW de c�
 * Cea mai nouă versiune de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * Cea mai nouă versiune de [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(boot9strap standard; nu fișierul `devkit`, nici cel `ntr`)*
 * Cea mai nouă versiune de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* Ultima versiune de [Luma3DS Updater](https://github.com/Hamcha/lumaupdate/releases/latest)
-* [Kit-ul de începător](http://smealum.github.io/ninjhax2/starter.zip) în Homebrew
+* The latest release of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
+* The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases)
 * [`setup_ctrnand_luma3ds.gm9`]({{ "/gm9_scripts/setup_ctrnand_luma3ds.gm9" | absolute_url }})
 * [`cleanup_sd_card.gm9`]({{ "/gm9_scripts/cleanup_sd_card.gm9" | absolute_url }})
 
@@ -57,7 +57,7 @@ Pentru toți pașii din această secțiune, suprascrieți fișierele existente d
 
 1. Închideți dispozitivul
 1. Introduceți cardul SD în calculator
-1. Copiați _conținutul de_ pe `starter.zip` în rădăcina cardului SD
+1. Copy `boot.3dsx` to the root of your SD card
 1. Copy `boot.firm` from the latest version Luma3DS `.7z` to the root of your SD card
 1. Copy `arm9loaderhax.bin` from the v7.0.5 Luma3DS `.7z` to the root of your SD card
 1. Creați un folder numit `cias` în rădăcina cardului SD dacă nu există deja
@@ -131,7 +131,7 @@ Dacă, înainte să urmăriți acest ghid, aveați deja o configurare cu EmuNAND
 1. Apăsați (A) pentru a continua
 1. Apăsați (A) ca să reblocați permisiunile de scriere
 
-#### Section VII - Backup SysNAND
+#### Section VII - Backup Essential Files
 
 1. Apăsați (Home) pentru a arăta meniul de acțiuni
 1. Selectați "Scripts..."
@@ -141,11 +141,11 @@ Dacă, înainte să urmăriți acest ghid, aveați deja o configurare cu EmuNAND
 1. Apăsați (A) pentru a continua
 1. Țineți apăsat (R) și apăsați (B) în același timp pentru a scoate cardul SD
 1. Introduceți cardul SD în calculator
-1. Copy `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Faceți copii de rezervă în mai multe locații (cum ar fi stocări online ale fișierelor)
-  + Această copie de rezervă vă va salva de un brick în caz că ceva nu va merge bine în viitor
-  + Înlocuiți vechea copie de rezervă NAND de arm9loaderhax cu cea nouă din boot9strap
-1. Delete `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card after copying it
+  + These backups will save you from a brick and/or help you recover files from the NAND image if anything goes wrong in the future
+  + Replace your old arm9loaderhax SysNAND backup with this new boot9strap one
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` and `<date>_<serialnumber>_sysnand_###.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
 1. Reintroduceți cardul SD în dispozitivul dumneavoastră
 
 #### Section VIII - Cleanup SD Card
