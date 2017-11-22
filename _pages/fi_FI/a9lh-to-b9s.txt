@@ -43,8 +43,8 @@ Huomaa, että New 3DS:llä `secret_sector.bin`-tiedostoa tarvitaan vain arm9load
 * SafeB9SInstallerin [viimeisin julkaisu](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * Boot9strapin [viimeisin julkaisu](https://github.com/SciresM/boot9strap/releases/latest) *(tavallinen boot9strap; ei `devkit`- eikä `ntr`-tiedosto)*
 * GodMode9:n [viimeisin julkaisu](https://github.com/d0k3/GodMode9/releases)
-* Luma3DS Updaterin [viimeisin haara](https://github.com/Hamcha/lumaupdate/releases/latest)
-* Homebrew-[aloituspakkaus](http://smealum.github.io/ninjhax2/starter.zip)
+* The latest release of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
+* The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases)
 * [`setup_ctrnand_luma3ds.gm9`]({{ "/gm9_scripts/setup_ctrnand_luma3ds.gm9" | absolute_url }})
 * [`cleanup_sd_card.gm9`]({{ "/gm9_scripts/cleanup_sd_card.gm9" | absolute_url }})
 
@@ -57,7 +57,7 @@ Korvaa mahdolliset olemassa olevat tiedostot SD-kortillasi kaikissa tämän vaih
 
 1. Sammuta konsolisi
 1. Aseta SD-korttisi tietokoneeseesi
-1. Kopioi `starter.zip`-pakkauksen _sisältö_ SD-korttisi juureen
+1. Copy `boot.3dsx` to the root of your SD card
 1. Kopioi v7.0.5-Luma3DS-`.7z`-pakkauksesta `boot.firm` SD-korttisi juureen
 1. Copy `arm9loaderhax.bin` from the v7.0.5 Luma3DS `.7z` to the root of your SD card
 1. Luo `cias`-niminen kansio SD-korttisi juureen, jos sitä ei jo ole olemassa
@@ -131,7 +131,7 @@ Jos sinulla oli ennen tämän oppaan aloittamista EmuNAND-kokoonpano, ja haluais
 1. Paina (A):ta jatkaaksesi
 1. Paina (A):ta lukitaksesi kirjoitusoikeudet
 
-#### Vaihe VII – SysNANDin varmuuskopiointi
+#### Section VII - Backup Essential Files
 
 1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
 1. Valitse "Scripts..."
@@ -141,11 +141,11 @@ Jos sinulla oli ennen tämän oppaan aloittamista EmuNAND-kokoonpano, ja haluais
 1. Paina (A):ta jatkaaksesi
 1. Pidä (R):ää pohjassa ja paina samalla (B):tä irrottaaksesi SD-korttisi
 1. Aseta SD-korttisi tietokoneeseesi
-1. Kopioi `<päivämäärä>_<sarjanumero>_sysnand_###.bin` SD-korttisi `/gm9/out/`-kansiosta turvalliseen paikkaan tietokoneellasi
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Varmuuskopioi useaan eri paikkaan (kuten pilvipalveluihin)
-  + Tämä varmuuskopiointi pelastaa sinut konsolin vioittumiselta, jos jokin menee pieleen tulevaisuudessa
-  + Korvaa aikaisempi arm9loaderhax-NAND-varmuuskopiosi tällä boot9strap-varmuuskopiolla
-1. Poista `<päivämäärä>_<sarjanumero>_sysnand_###.bin` SD-korttisi `/gm9/out/`-kansiosta kopioituasi sen
+  + These backups will save you from a brick and/or help you recover files from the NAND image if anything goes wrong in the future
+  + Replace your old arm9loaderhax SysNAND backup with this new boot9strap one
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` and `<date>_<serialnumber>_sysnand_###.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
 1. Aseta SD-korttisi takaisin konsoliisi
 
 #### Vaihe VIII – SD-kortin siivoaminen
