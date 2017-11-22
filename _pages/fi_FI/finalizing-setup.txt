@@ -27,7 +27,7 @@ Tämän prosessin aikana myös asennetaan muun muassa seuraavat ohjelmat:
 * GodMode9:n [viimeisin julkaisu](https://github.com/d0k3/GodMode9/releases)
 * DSP1:n [viimeisin julkaisu](https://github.com/zoogie/DSP1/releases/latest)
 * FBI:n [viimeisin julkaisu](https://github.com/Steveice10/FBI/releases/latest) *(`.cia`- ja `.3dsx`-tiedostot)*
-* Luma3DS Updaterin [viimeisin haara](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(`.cia`-tiedosto)*
+* The latest release of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(the `.cia` file)*
 * [`setup_ctrnand_luma3ds.gm9`]({{ "/gm9_scripts/setup_ctrnand_luma3ds.gm9" | absolute_url }})
 * [`cleanup_sd_card.gm9`]({{ "/gm9_scripts/cleanup_sd_card.gm9" | absolute_url }})
 
@@ -37,8 +37,9 @@ Tämän prosessin aikana myös asennetaan muun muassa seuraavat ohjelmat:
 
 1. Sammuta konsolisi
 1. Aseta SD-korttisi tietokoneeseesi
-1. Kopioi `FBI.3dsx` SD-korttisi `/3ds/`-kansioon
+1. Create a folder named `3ds` on the root of your SD card if it does not already exist
 1. Luo `cias`-niminen kansio SD-korttisi juureen, jos sitä ei jo ole olemassa
+1. Kopioi `FBI.3dsx` SD-korttisi `/3ds/`-kansioon
 1. Kopioi hblauncher_loader-`.zip`-pakkauksesta `hblauncher_loader.cia` SD-korttisi `/cias/`-kansioon
 1. Kopioi `lumaupdater.cia` SD-korttisi `/cias/`-kansioon
 1. Kopioi `FBI.cia` SD-korttisi `/cias/`-kansioon
@@ -115,7 +116,7 @@ Jos sinulla oli ennen tämän oppaan aloittamista EmuNAND-kokoonpano, ja haluais
 1. Paina (A):ta jatkaaksesi
 1. Paina (A):ta lukitaksesi kirjoitusoikeudet
 
-#### Vaihe VII – SysNANDin varmuuskopiointi
+#### Section VII - Backup Essential Files
 
 1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
 1. Valitse "Scripts..."
@@ -128,7 +129,7 @@ Jos sinulla oli ennen tämän oppaan aloittamista EmuNAND-kokoonpano, ja haluais
 1. Copy `<date>_<serialnumber>_sysnand_###.bin` and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Varmuuskopioi useaan eri paikkaan (kuten pilvipalveluihin)
   + These backups will save you from a brick and/or help you recover files from the NAND image if anything goes wrong in the future
-1. Poista `<päivämäärä>_<sarjanumero>_sysnand_###.bin` SD-korttisi `/gm9/out/`-kansiosta kopioituasi sen
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` and `<date>_<serialnumber>_sysnand_###.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
 1. Aseta SD-korttisi takaisin konsoliisi
 
 #### Vaihe VIII – SD-kortin siivoaminen
