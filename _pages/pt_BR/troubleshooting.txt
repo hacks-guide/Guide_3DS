@@ -43,16 +43,22 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
 
 ## Removing an NNID without formatting your device
 
+### What you need
+
+* [`remove_nnid.gm9`]({{ "/gm9_scripts/remove_nnid.gm9" | absolute_url }})
+
+### Instructions
+
 Note que se você tem outros arquivos de payload diferentes do `GodMode9.firm` na pasta `/luma/payloads/` do seu cartão SD, segure (Start) durante a inicialização para exibir um "menu de chainloader" onde você terá que utilizar os botões direcionais e o botão (A) para selecionar "GodMode9" para estas instruções. 
 {: .notice--info}
 
 1. Inicie o GodMode9 segurando (Start) durante a inicialização
-1. Navegue para `[1:] SYSNAND CTRNAND` -> `data` -> (ID de 32 caracteres) -> `sysdata` -> `00010038`
-1. Segure o gatilho (R), então aperte (X) no `00000000` para renomear este arquivo
-1. Aperte (Cima) uma vez para mudar o nome para `10000000`
-1. Aperte (A) para salvar as mudanças
-1. Aperte (A) para destravar as modificações na SysNAND, então aperte a sequência de botões solicitada
-1. Volte para o menu inicial
+1. Selecione "Scripts..."
+1. Select "remove_nnid"
+1. Quando solicitado, aperte (A) para prosseguir
+1. Aperte (A) para destravar "SysNAND (lvl1) writing", então aperte a sequência de botões solicitada
+1. Aperte (A) para continuar
+1. Aperte (A) para bloquear as permissões de escrita
 1. Aperte (Start) para reiniciar o dispositivo
 
 ## Cannot inject H&S on Gateway downgraded device
@@ -83,8 +89,8 @@ Note que se você tem outros arquivos de payload diferentes do `GodMode9.firm` n
 1. Selecione "Move path(s)"
 1. Os arquivos com extensão em maiúsculo terão, assim, sido movidos para o diretório `newdir`
 1. Aperte (Start) para reiniciar o dispositivo
-1. Retorne para [Finalizando a instalação](finalizing-setup) e tente a injeção do FBI novamente
-1. Se isto ainda não funcionar, mova os arquivos com as extensões em maiúsculo de volta para a pasta `content`, depois mova os arquivos com as extensões em minúsculo para a pasta `newdir` e depois retorne para [Finalizando a instalação](finalizing-setup) e tente a injeção do FBI novamente
+1. Retry the H&S injection
+1. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then retry the H&S injection
 
 ## A browser based exploit is not working
 
@@ -96,18 +102,31 @@ Browser based exploits (such as browserhax or 2xrsa) are often unstable and cras
 
 ## Black screen on SysNAND boot
 
+### What you need
+
+* [`remove_extdata.gm9`]({{ "/gm9_scripts/remove_extdata.gm9" | absolute_url }})
+
+### Instructions
+
+Note que se você tem outros arquivos de payload diferentes do `GodMode9.firm` na pasta `/luma/payloads/` do seu cartão SD, segure (Start) durante a inicialização para exibir um "menu de chainloader" onde você terá que utilizar os botões direcionais e o botão (A) para selecionar "GodMode9" para estas instruções. 
+{: .notice--info}
+
 1. Tente inicializar com o cartão SD retirado, e então reinsira-o depois da inicialização
     1. Desligue seu dispositivo
     1. Remova seu cartão SD do seu dispositivo
     1. Ligue o seu dispositivo
     1. Quando o menu HOME aparecer, reinsira o cartão SD no seu dispositivo
-    1. Se isso funcionou, você deve limpar o extdata do menu Home navegando até o seguinte diretório no seu cartão SD: `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/`
-        + Região EUR: Apague `00000098`
-        + Região JPN: Apague `00000082`
-        + Região EUA: Apague `0000008f`
-        + Região CHN: Apague `000000A1`
-        + Região KOR: Apague `000000A9`
-        +Região TWN: Apague `000000B1`
+    1. If this worked, you should clear Home Menu's extdata by following these instructions:
+        1. Desligue seu dispositivo
+        1. Inicie o GodMode9 segurando (Start) durante a inicialização
+        1. Aperte (Home) para abrir o menu de ações
+        1. Selecione "Scripts..."
+        1. Select "remove_extdata"
+        1. Quando solicitado, aperte (A) para prosseguir
+        1. Aperte (A) para destravar "SysNAND (lvl1) writing", então aperte a sequência de botões solicitada
+        1. Aperte (A) para continuar
+        1. Aperte (A) para bloquear as permissões de escrita
+        1. Aperte (Start) para reiniciar seu dispositivo
 1. Tente ligar sem nenhum cartucho inserido (incluindo flashcarts)
 1. Se você tem um hardmod e um backup da NAND, copie o backup de volta para a SysNAND
 1. Tente inicializar no modo recovery e atualizar o seu sistema
@@ -119,6 +138,12 @@ Browser based exploits (such as browserhax or 2xrsa) are often unstable and cras
 
 ## Black screen on SysNAND boot after Installing boot9strap
 
+### What you need
+
+* [`remove_extdata.gm9`]({{ "/gm9_scripts/remove_extdata.gm9" | absolute_url }})
+
+### Instructions
+
 1. Ensure you have a working payload
     1. Verifique a existência do `boot.firm` na raiz do seu cartão SD.
 1. Tente resetar as configurações do Luma e ajustar as opções
@@ -127,13 +152,16 @@ Browser based exploits (such as browserhax or 2xrsa) are often unstable and cras
 1. Tente inicializar o GodMode9
     1. No Luma3DS, segure (Start) durante a inicialização
 1. Tente apagar o extdata do Menu HOME
-    1. Exclua a extdata do Menu HOME localizada na seguinte pasta no seu cartão SD: `/Nintendo 3DS/(ID de 32 caracteres)/(ID de 32 caracteres)/extdata/00000000/`
-        + Região EUR: Apague `00000098`
-        + Região JPN: Apague `00000082`
-        + Região EUA: Apague `0000008f`
-        + Região CHN: Apague `000000A1`
-        + Região KOR: Apague `000000A9`
-        + Região TWN: Apague `000000B1`
+    1. Desligue seu dispositivo
+    1. Inicie o GodMode9 segurando (Start) durante a inicialização
+    1. Aperte (Home) para abrir o menu de ações
+    1. Selecione "Scripts..."
+    1. Select "remove_extdata"
+    1. Quando solicitado, aperte (A) para prosseguir
+    1. Aperte (A) para destravar "SysNAND (lvl1) writing", então aperte a sequência de botões solicitada
+    1. Aperte (A) para continuar
+    1. Aperte (A) para bloquear as permissões de escrita
+    1. Aperte (Start) para reiniciar seu dispositivo
 1. Tente ligar sem nenhum cartucho inserido (incluindo flashcarts)
 1. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version (v6.2.3 or higher)
 1. Se sua NAND estiver com a firmware numa versão entre 3.0.0 e 4.5.0, faça o seguinte:
