@@ -43,16 +43,22 @@ Pour utiliser les liens suivants [magnet](https://fr.wikipedia.org/wiki/Magnet_(
 
 ## Removing an NNID without formatting your device
 
+### What you need
+
+* [`remove_nnid.gm9`]({{ "/gm9_scripts/remove_nnid.gm9" | absolute_url }})
+
+### Instructions
+
 Notez que si vous avez n’importe quel autre payload que `GodMode9.firm` dans le dossier `/luma/payloads/` sur votre carte SD, appuyez (Start) au démarrage affiche un "chainloader menu" où vous devrez utiliser le D-Pad et le bouton (A) pour sélectionner "GodMode9" . 
 {: .notice--info}
 
 1. Ouvrez Godmode9 en maintenant (Start) au démarrage
-1. Naviguez vers `[1:] SYSNAND CTRNAND` -> `data` -> (32 Character ID) -> `sysdata` -> `00010038`
-1. Maintenez (R) enfoncé et appuyez sur (X) en sélectionnant le fichier `00000000` pour le renommer
-1. Appuyez une fois sur (Haut) pour le renommer en `10000000`
-1. Appuyez sur (A) pour enregistrer les modifications
-1. Appuyez sur (A) pour accéder à l'écriture sur SysNAND, puis effectuez la combinaison de touches demandée
-1. Retournez au menu principal
+1. Sélectionnez "Scripts"
+1. Select "remove_nnid"
+1. Lorsque vous êtes invité, appuyez sur (A)
+1. Appuyez sur (A) pour autoriser l'écriture sur votre SysNAND, puis entrez la combinaison de touches demandée
+1. Appuyez sur (A) pour continuer
+1. Appuyez (A) pour reverrouiller autorisations en écriture
 1. Appuyez sur (Start) pour redémarrer votre système
 
 ## Cannot inject H&S on Gateway downgraded device
@@ -96,18 +102,31 @@ Les exploits basé sur le navigateur (tel que browserhax ou 2xrsa) sont parfois 
 
 ## Black screen on SysNAND boot
 
+### What you need
+
+* [`remove_extdata.gm9`]({{ "/gm9_scripts/remove_extdata.gm9" | absolute_url }})
+
+### Instructions
+
+Notez que si vous avez n’importe quel autre payload que `GodMode9.firm` dans le dossier `/luma/payloads/` sur votre carte SD, appuyez (Start) au démarrage affiche un "chainloader menu" où vous devrez utiliser le D-Pad et le bouton (A) pour sélectionner "GodMode9" . 
+{: .notice--info}
+
 1. Essayez de démarrer sans carte SD, puis de la réinsérer après le démarrage
     1. Éteignez votre 3DS
     1. Retirez votre carte SD de votre 3DS
     1. Allumez à présent votre 3DS
     1. Lorsque le menu home apparaît, vous pouvez réinsérez votre carte SD dans votre console
-    1. Si cela a fonctionné, vous devriez effacer les données additionnelles du Menu Home en naviguant jusqu’au dossier suivant sur votre carte SD : `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/`
-        + Région EUR : Supprimer `00000098`
-        + Région JPN : Supprimer `00000082`
-        + Région USA : Supprimer `0000008f`
-        + Région CHN : Supprimer `000000A1`
-        + Région KOR : Supprimer `000000A9`
-        + Région TWN : Supprimer `000000B1`
+    1. If this worked, you should clear Home Menu's extdata by following these instructions:
+        1. Éteignez votre 3DS
+        1. Ouvrez Godmode9 en maintenant (Start) au démarrage
+        1. Appuyez sur (Home) pour faire apparaître le menu d’actions (action menu)
+        1. Sélectionnez "Scripts"
+        1. Select "remove_extdata"
+        1. Lorsque vous êtes invité, appuyez sur (A)
+        1. Appuyez sur (A) pour autoriser l'écriture sur votre SysNAND, puis entrez la combinaison de touches demandée
+        1. Appuyez sur (A) pour continuer
+        1. Appuyez (A) pour reverrouiller autorisations en écriture
+        1. Appuyez sur (Start) pour redémarrer votre système
 1. Essayez de démarrer votre console sans aucune cartouche insérée (ni linker)
 1. Si vous avez un hardmod et une sauvegarde de votre NAND, flashez-la vers votre SysNAND
 1. Essayez de démarrer en mode de récupération et de mettre à jour votre console
@@ -119,6 +138,12 @@ Les exploits basé sur le navigateur (tel que browserhax ou 2xrsa) sont parfois 
 
 ## Black screen on SysNAND boot after Installing boot9strap
 
+### What you need
+
+* [`remove_extdata.gm9`]({{ "/gm9_scripts/remove_extdata.gm9" | absolute_url }})
+
+### Instructions
+
 1. Assurez-vous d'avoir un payload fonctionnel
     1. Vérifiez l’existence de `boot.firm` à la racine de votre carte SD.
 1. Essayez de réinitialiser la configuration de Luma3DS et de corriger les options
@@ -127,13 +152,16 @@ Les exploits basé sur le navigateur (tel que browserhax ou 2xrsa) sont parfois 
 1. Essayez de démarrer GodMod9
     1. Avec Luma3DS, maintenez (Start) au démarrage
 1. Essayez de supprimer les données additionnelles (extdata) du menu Home
-    1. Supprimez les données additionnelles du menu Home en allant dans le répertoire suivant sur votre carte SD : `/Nintendo 3DS/(ID de 32 caractères)/(ID de 32 caractères)/extdata/00000000/`
-        + Région EUR : Supprimer `00000098`
-        + Région JPN : Supprimer `00000082`
-        + Région USA : Supprimer `0000008f`
-        + Région CHN : Supprimer `000000A1`
-        + Région KOR : Supprimer `000000A9`
-        + Région TWN : Supprimer `000000B1`
+    1. Éteignez votre 3DS
+    1. Ouvrez Godmode9 en maintenant (Start) au démarrage
+    1. Appuyez sur (Home) pour faire apparaître le menu d’actions (action menu)
+    1. Sélectionnez "Scripts"
+    1. Select "remove_extdata"
+    1. Lorsque vous êtes invité, appuyez sur (A)
+    1. Appuyez sur (A) pour autoriser l'écriture sur votre SysNAND, puis entrez la combinaison de touches demandée
+    1. Appuyez sur (A) pour continuer
+    1. Appuyez (A) pour reverrouiller autorisations en écriture
+    1. Appuyez sur (Start) pour redémarrer votre système
 1. Essayez de démarrer votre console sans aucune cartouche insérée (ni linker)
 1. Si vous avez auparavant réalisé un downgrade via Gateway, assurez-vous que vous utilisez la dernière version de Luma3DS (v6.2.3 ou plus récent, au minimum)
 1. Si votre NAND est entre la version 3.0.0 et 4.5.0, faites ceci :
