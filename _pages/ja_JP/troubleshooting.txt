@@ -43,16 +43,22 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
 
 ## Removing an NNID without formatting your device
 
+### What you need
+
+* [`remove_nnid.gm9`]({{ "/gm9_scripts/remove_nnid.gm9" | absolute_url }})
+
+### Instructions
+
 Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
 {: .notice--info}
 
 1. Launch GodMode9 by holding (Start) during boot
-1. Navigate to `[1:] SYSNAND CTRNAND` -> `data` -> (32 Character ID) -> `sysdata` -> `00010038`
-1. (R) を押したまま、`00000000`に (X) を押してファイルの名前を変更します
-1. (Up) を一回押して、名前を`10000000`に変更します
-1. (A) を押して変更を承認します
-1. (A) を押してSysNAND書き込みをアンロックします。表示しているキーコンボを入力します
-1. メインメニューまで戻ります
+1. Select "Scripts..."
+1. Select "remove_nnid"
+1. When prompted, press (A) to proceed
+1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+1. (A) で続行します
+1. Press (A) to relock write permissions
 1. Press (Start) to reboot your device
 
 ## Cannot inject H&S on Gateway downgraded device
@@ -83,8 +89,8 @@ Note that if you have any payload files other than `GodMode9.firm` in the `/luma
 1. 「Move path(s)」を選択します
 1. 拡張子が大文字であるファイルは、すべて`newdir`ディレクトリに移動されます
 1. Press (Start) to reboot your device
-1. Return to [Finalizing Setup](finalizing-setup) and retry the FBI injection
-1. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then return to [Finalizing Setup](finalizing-setup) and retry the FBI injection
+1. Retry the H&S injection
+1. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then retry the H&S injection
 
 ## A browser based exploit is not working
 
@@ -96,18 +102,31 @@ Browser based exploits (such as browserhax or 2xrsa) are often unstable and cras
 
 ## Black screen on SysNAND boot
 
+### What you need
+
+* [`remove_extdata.gm9`]({{ "/gm9_scripts/remove_extdata.gm9" | absolute_url }})
+
+### Instructions
+
+Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
+{: .notice--info}
+
 1. Try booting with your SD card out, and then reinserting it after booting
     1. Power off your device
     1. Remove your SD card from your device
     1. Power on your device
     1. When the home menu appears, reinsert your SD card into your device
-    1. If this worked, you should clear Home Menu's extdata by navigating to the following folder on your SD card: `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/`
-        + EUR地域：`00000098`を削除します
-        + JPN地域：`00000082`を削除します
-        + USA地域：`0000008f`を削除します
-        + CHN Region: Delete `000000A1`
-        + KOR地域：`000000A9`を削除します
-        + TWN Region: Delete `000000B1`
+    1. If this worked, you should clear Home Menu's extdata by following these instructions:
+        1. Power off your device
+        1. Launch GodMode9 by holding (Start) during boot
+        1. Press (Home) to bring up the action menu
+        1. Select "Scripts..."
+        1. Select "remove_extdata"
+        1. When prompted, press (A) to proceed
+        1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+        1. (A) で続行します
+        1. Press (A) to relock write permissions
+        1. Press (Start) to reboot your device
 1. ゲームカード（フラッシュカードを含む）を外したまま起動してみます
 1. If you have a hardmod and a NAND backup, flash the backup back to SysNAND
 1. Try booting into recovery mode and updating your system
@@ -119,6 +138,12 @@ Browser based exploits (such as browserhax or 2xrsa) are often unstable and cras
 
 ## Black screen on SysNAND boot after Installing boot9strap
 
+### What you need
+
+* [`remove_extdata.gm9`]({{ "/gm9_scripts/remove_extdata.gm9" | absolute_url }})
+
+### Instructions
+
 1. Ensure you have a working payload
     1. Check for the existence of `boot.firm` in the root of your SD card.
 1. Lumaの設定をリセットし、オプションを再設定します
@@ -127,13 +152,16 @@ Browser based exploits (such as browserhax or 2xrsa) are often unstable and cras
 1. Test booting GodMode9
     1. Luma3DSでは、起動時に (Start) を長押しします
 1. ホームメニューのextdataを削除してみます
-    1. `/Nintendo 3DS/（32桁のID）/（32桁のID）/extdata/00000000/`にある下記のフォルダを削除して、ホームメニューのextdataをクリーンアップします：
-        + EUR地域：`00000098`を削除します
-        + JPN地域：`00000082`を削除します
-        + USA地域：`0000008f`を削除します
-        + CHN Region: Delete `000000A1`
-        + KOR地域：`000000A9`を削除します
-        + TWN Region: Delete `000000B1`
+    1. Power off your device
+    1. Launch GodMode9 by holding (Start) during boot
+    1. Press (Home) to bring up the action menu
+    1. Select "Scripts..."
+    1. Select "remove_extdata"
+    1. When prompted, press (A) to proceed
+    1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+    1. (A) で続行します
+    1. Press (A) to relock write permissions
+    1. Press (Start) to reboot your device
 1. ゲームカード（フラッシュカードを含む）を外したまま起動してみます
 1. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version (v6.2.3 or higher)
 1. NANDのバージョンは3.0.0と4.5.0の範囲内にある場合、下記の指示に従います：
