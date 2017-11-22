@@ -43,16 +43,22 @@ title: "疑難排解"
 
 ## 如何在不格式化主機的情況下清除 NNID
 
+### 必備項目
+
+* [`remove_nnid.gm9`]({{ "/gm9_scripts/remove_nnid.gm9" | absolute_url }})
+
+### 操作說明
+
 請注意，如果您在 SD 卡中的 `/luma/payloads/` 資料夾中放有除了 `GodMode9.firm` 的 payload 檔案，在開機時按住『Start』鍵將會顯示一個『加載選單』，從那裏您得透過方向鍵及按鈕『A』選擇『GodMode9』。 
 {: .notice--info}
 
 1. 開機時按住『Start』鍵啟動 GodMode9
-1. 移動至 `[1:] SYSNAND CTRNAND` -> `data` -> (32 字元 ID) -> `sysdata` -> `00010038`
-1. 按住『R』，並在 `00000000` 上按下『X』以重新命名此檔案
-1. 按一下『上』將名字改成 `10000000`
-1. 按『A』以儲存變更
-1. 按『A』以解鎖 SysNAND 的寫入保護，然後按下提示的按鍵組合
-1. 回到主選單
+1. 選擇『Scripts...』
+1. Select "remove_nnid"
+1. 當提示時，按下『A』繼續
+1. 按『A』解鎖 SysNAND(lvl1)的寫入保護，然後按下提示的按鍵組合
+1. 按『A』 繼續
+1. 按下『A』鎖定檔案寫入
 1. 按下『Start』鍵重啟您的主機
 
 ## 無法在 Gateway 降級過後的主機上植入 FBI 管理器到『健康與警示』程式裡
@@ -96,18 +102,31 @@ title: "疑難排解"
 
 ## 啟動 SysNAND 時黑屏
 
+### 必備項目
+
+* [`remove_extdata.gm9`]({{ "/gm9_scripts/remove_extdata.gm9" | absolute_url }})
+
+### 操作說明
+
+請注意，如果您在 SD 卡中的 `/luma/payloads/` 資料夾中放有除了 `GodMode9.firm` 的 payload 檔案，在開機時按住『Start』鍵將會顯示一個『加載選單』，從那裏您得透過方向鍵及按鈕『A』選擇『GodMode9』。 
+{: .notice--info}
+
 1. 試試看先將 SD 卡拔出，開機完後再插回
     1. 關閉您的主機
     1. 將 SD 卡從主機中拔出
     1. 啟動您的主機
     1. 當 HOME 主選單出現後，再重新插入 SD 卡至主機中
-    1. 如果上述步驟成功的話，依您主機區域到 SD 卡中的 `/Nintendo 3DS/(32 字元 ID)/(32 字元 ID)/extdata/00000000/` 清除 HOME 主選單的外存
-        + 歐版：刪除 `00000098`
-        + 日版：刪除 `00000082`
-        + 美版：刪除 `0000008f`
-        + 中版：刪除 `000000A1`
-        + 韓版：刪除 `000000A9`
-        + 台版：刪除 `000000B1`
+    1. If this worked, you should clear Home Menu's extdata by following these instructions:
+        1. 關閉您的主機
+        1. 開機時按住『Start』鍵啟動 GodMode9
+        1. 按『Home』鍵以叫出主選單
+        1. 選擇『Scripts...』
+        1. Select "remove_extdata"
+        1. 當提示時，按下『A』繼續
+        1. 按『A』解鎖 SysNAND(lvl1)的寫入保護，然後按下提示的按鍵組合
+        1. 按『A』 繼續
+        1. 按下『A』鎖定檔案寫入
+        1. 按下『Start』鍵重啟您的主機
 1. 試試看將遊戲卡帶拔出(包括燒錄卡)
 1. 如果您有進行硬改，且仍有先前的 NAND 備份檔，試試看將備份還原至 SysNAND 上
 1. 試試看透過還原模式更新您的系統
@@ -119,6 +138,12 @@ title: "疑難排解"
 
 ## 安裝 boot9strap 後進入 SysNAND 時黑屏
 
+### 必備項目
+
+* [`remove_extdata.gm9`]({{ "/gm9_scripts/remove_extdata.gm9" | absolute_url }})
+
+### 操作說明
+
 1. 請先確保 payload 檔案可以正常運行
     1. 檢查 `boot.firm` 是否在 SD 卡的根目錄底下
 1. 試試看重設 Luma3DS 的設定檔
@@ -127,13 +152,16 @@ title: "疑難排解"
 1. 試試看開機至 GodMode9
     1. 在 Luma3DS 中，開機時按住『Start』鍵
 1. 試試看刪除 HOME 主選單的外存(extdata)
-    1. 依您主機區域到 SD 卡中的 `/Nintendo 3DS/(32 字元 ID)/(32 字元 ID)/extdata/00000000/` 清除 HOME 主選單的外存
-        + 歐版：刪除 `00000098`
-        + 日版：刪除 `00000082`
-        + 美版：刪除 `0000008f`
-        + 中版：刪除 `000000A1`
-        + 韓版：刪除 `000000A9`
-        + 台版：刪除 `000000B1`
+    1. 關閉您的主機
+    1. 開機時按住『Start』鍵啟動 GodMode9
+    1. 按『Home』鍵以叫出主選單
+    1. 選擇『Scripts...』
+    1. Select "remove_extdata"
+    1. 當提示時，按下『A』繼續
+    1. 按『A』解鎖 SysNAND(lvl1)的寫入保護，然後按下提示的按鍵組合
+    1. 按『A』 繼續
+    1. 按下『A』鎖定檔案寫入
+    1. 按下『Start』鍵重啟您的主機
 1. 試試看將遊戲卡帶拔出(包括燒錄卡)
 1. 如果您之前有透過 Gateway 進行降級，請確保您使用的是最新版的 Luma3DS (v6.2.3 或較新版本)
 1. 如果您 NAND 的系統版本是在 3.0.0 到 4.5.0 之間，請進行下列操作：
