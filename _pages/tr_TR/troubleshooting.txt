@@ -43,16 +43,22 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
 
 ## Removing an NNID without formatting your device
 
+### What you need
+
+* [`remove_nnid.gm9`]({{ "/gm9_scripts/remove_nnid.gm9" | absolute_url }})
+
+### Instructions
+
 Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
 {: .notice--info}
 
 1. Launch GodMode9 by holding (Start) during boot
-1. Navigate to `[1:] SYSNAND CTRNAND` -> `data` -> (32 Character ID) -> `sysdata` -> `00010038`
-1. (R) tuşuna basılı tutun, ardından `00000000` üzerinde X'e basarak dosyayı yeniden adlandırın
-1. Yukarıya bir defa basarak ismini `10000000` olarak değiştirin
-1. (A)'ya basarak değişiklikleri kaydedin
-1. SysNAND yazımını aktifleştirmek için (A)'ya basın, ardından verilen tuş dizimini girin
-1. Ana menüye geri dönün
+1. Select "Scripts..."
+1. Select "remove_nnid"
+1. When prompted, press (A) to proceed
+1. SysNAND (lvl 1) yazısının kilidini açmak için (A) tuşuna basın, ardından verilen tuş kombosunu açılan kutuyu girin
+1. Devam etmek için (A) basın
+1. Press (A) to relock write permissions
 1. Cihazı yeniden başlatmak için (Start) basın
 
 ## Cannot inject H&S on Gateway downgraded device
@@ -74,7 +80,7 @@ Note that if you have any payload files other than `GodMode9.firm` in the `/luma
 1. İki adet app ve tmd dosyası seti olduğuna dikkat edin, biri büyük harflerle (`.TMD` and `.APP`) biri küçük harflerle (`.tmd` and `.app`)
 1. (R) tetikleyici basılı tutarken (Y)'ye basarak yeni dizin oluşturun
 1. (A)'ya basın ve ismi 'newdir' onaylayın (ne olduğunun önemi yok)
-1. SysNAND (lvl 1) yazısının kilidini açmak için (A) tuşuna basın, ardından verilen tuş kombosunu açılan kutuyu girin
+1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
 1. Press (B) to decline relocking write permissions if prompted
 1. Büyük harfli (`.TMD` and `.APP`) olanların üzerinde (L) tetiğine basarak işaretleyin
 1. (Y)'ye basarak dosyaları kopyalayın
@@ -83,8 +89,8 @@ Note that if you have any payload files other than `GodMode9.firm` in the `/luma
 1. "Move path(s)" seçin
 1. Büyük karakterli uzantı dosyaları `newdir ' dizinine taşınmış olacak
 1. Cihazı yeniden başlatmak için (Start) basın
-1. Return to [Finalizing Setup](finalizing-setup) and retry the FBI injection
-1. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then return to [Finalizing Setup](finalizing-setup) and retry the FBI injection
+1. Retry the H&S injection
+1. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then retry the H&S injection
 
 ## A browser based exploit is not working
 
@@ -96,18 +102,31 @@ Browser based exploits (such as browserhax or 2xrsa) are often unstable and cras
 
 ## Black screen on SysNAND boot
 
+### What you need
+
+* [`remove_extdata.gm9`]({{ "/gm9_scripts/remove_extdata.gm9" | absolute_url }})
+
+### Instructions
+
+Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
+{: .notice--info}
+
 1. Try booting with your SD card out, and then reinserting it after booting
     1. Cihazınızı kapatın
     1. Remove your SD card from your device
     1. Power on your device
     1. When the home menu appears, reinsert your SD card into your device
-    1. If this worked, you should clear Home Menu's extdata by navigating to the following folder on your SD card: `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/`
-        + EUR Bölgesi: Sil `00000098`
-        + JPN Bölgesi: Sil `00000082`
-        + USA Bölgesi: Sil `0000008f`
-        + CHN Region: Delete `000000A1`
-        + KOR Bölgesi: Sil `000000A9`
-        + TWN Region: Delete `000000B1`
+    1. If this worked, you should clear Home Menu's extdata by following these instructions:
+        1. Cihazınızı kapatın
+        1. Launch GodMode9 by holding (Start) during boot
+        1. Press (Home) to bring up the action menu
+        1. Select "Scripts..."
+        1. Select "remove_extdata"
+        1. When prompted, press (A) to proceed
+        1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+        1. Devam etmek için (A) basın
+        1. Press (A) to relock write permissions
+        1. Press (Start) to reboot your device
 1. Hiçbir kartuş takılı değilken açmayı deneyin
 1. If you have a hardmod and a NAND backup, flash the backup back to SysNAND
 1. Try booting into recovery mode and updating your system
@@ -119,6 +138,12 @@ Browser based exploits (such as browserhax or 2xrsa) are often unstable and cras
 
 ## Black screen on SysNAND boot after Installing boot9strap
 
+### What you need
+
+* [`remove_extdata.gm9`]({{ "/gm9_scripts/remove_extdata.gm9" | absolute_url }})
+
+### Instructions
+
 1. Ensure you have a working payload
     1. Check for the existence of `boot.firm` in the root of your SD card.
 1. Luma'nın ayarlarını resetlemeyi deneyin
@@ -127,13 +152,16 @@ Browser based exploits (such as browserhax or 2xrsa) are often unstable and cras
 1. Test booting GodMode9
     1. Luma3DS'teyken açılışta (Start) basılı tutun
 1. Ana menünün extdata silmeyi deneyin
-    1. SD kartta aşağıdaki klasöre giderek Home menünün extdata temizleyin: ' / Nintendo 3DS /(32 Character ID) /(32 Character ID)/extdata/00000000 /'
-        + EUR Bölgesi: Sil `00000098`
-        + JPN Bölgesi: Sil `00000082`
-        + USA Bölgesi: Sil `0000008f`
-        + CHN Region: Delete `000000A1`
-        + KOR Bölgesi: Sil `000000A9`
-        + TWN Region: Delete `000000B1`
+    1. Cihazınızı kapatın
+    1. Launch GodMode9 by holding (Start) during boot
+    1. Press (Home) to bring up the action menu
+    1. Select "Scripts..."
+    1. Select "remove_extdata"
+    1. When prompted, press (A) to proceed
+    1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+    1. Devam etmek için (A) basın
+    1. Press (A) to relock write permissions
+    1. Press (Start) to reboot your device
 1. Hiçbir kartuş takılı değilken açmayı deneyin
 1. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version (v6.2.3 or higher)
 1. NAND versiyonunuz 3.0.0 ve 4.5.0 arasındaysa şunları yapın:
