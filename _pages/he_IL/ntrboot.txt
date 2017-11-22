@@ -4,30 +4,34 @@ title: "ntrboot"
 
 {% include toc title="תוכן העניינים" %}
 
-אם כבר צרבתם את ntrboot לכרטיס הפריצה שלכם, אתם יכולים לעקוב אחר [התקנת boot9strap (ntrboot)](installing-boot9strap-(ntrboot)) להוראות השימוש.
+If you have already flashed ntrboot to your flashcart or your flashcart comes pre-flashed with ntrboot, you can skip to [Installing boot9strap (ntrboot)](installing-boot9strap-(ntrboot)) for instructions on how to use it.
 {: .notice--success}
 
 ### קריאה דרושה
 
-התקנת boot9strap עם ntrboot דורשת כרטיס פריצה NDS / DSi תואם כדי לצרוב אליו את ntrboot.
+התקנת boot9strap עם ntrboot דורשת כרטיס פריצה NDS / DSi תואם כדי לצרוב אליו את ntrboot. Additionally, some manufacturers are now selling NDS / DSi flashcarts pre-flashed with ntrboot.
 
 בעוד שפירצת Ntrboot עובדת ללא תלות בגרסת המערכת, הצורב שלה (שמתקין את הפירצה לכרטיס) לא. זה אומר ש, בהתאם לגרסאות ולמכשירים שנתמכים על ידי הכרטיס פריצה שלכם, רק דרכים ספיציפיות יכולות להיות זמינות לכם.
 
 שימו לב שכרטיסים עם "פצצת זמן" לא יוכלו להפעיל קבצי `.nds` כשהם מגלים ששעון המערכת עבר תאריך שנקבע על ידי הקושחה של כרטיס הפריצה. דרך אחת לעקוף את זה זה להחזיר את שעון המערכת אחורה.
 
-| שם הכרטיס | מחיר נוכחי | "פצצת זמן"? | גרסאות 3DS? | גירסאות DSi? | גירסאות NDS? | הערות אחרות |
-|-|-:|:-:|:-:|:-:|:-:|-|
-| [DSTT](http://www.nds-card.com/ProShow.asp?ProID=157) | $9.99 | לא | לא | לא | הכל | רק דגמים עם [שבבי פלאש ספיציפים](https://gist.github.com/Hikari-chin/6b48f1bb8dd15136403c15c39fafdb42) תואמים עם ntrboot. |
-| [R4i-SDHC 3DS RTS](http://www.nds-card.com/ProShow.asp?ProID=146) | $13.99 | ככל הנראה (התאריך מתישהוא ב2020) | <= 11.6.0 | <= 1.4.5 | הכל | |
-| [R4i Gold 3DS RTS](http://www.nds-card.com/ProShow.asp?ProID=149) | $19.99 | לא | <= 11.6.0 | <= 1.4.5 | הכל | |
-| [Acekard 2i](http://www.nds-card.com/ProShow.asp?ProID=160) | $20.99 | לא | <= 4.3.0 | <= 1.4.4 | הכל | |
-| [R4iSDHC GOLD Pro 20XX](http://www.nds-card.com/ProShow.asp?ProID=490) | $9.99 | 3.9b: השלישי בספטמבר, 2019 | <= 11.6.0 | <= 1.4.5 | All | כל כרטיסי R4iSDHC 20XX זהים. |
-| [R4iSDHC RTS LITE 20XX](http://www.nds-card.com/ProShow.asp?ProID=450) | $13.99 | 3.9b: השלישי בספטמבר, 2019 | <= 11.6.0 | <= 1.4.5 | All | כל כרטיסי R4iSDHC 20XX זהים. |
-| R4iSDHC Dual-Core 20XX |  | 3.9b: השלישי בספטמבר, 2019 | <= 11.6.0 | <= 1.4.5 | הכל | כל כרטיסי R4iSDHC 20XX זהים. |
-| Infinity 3 R4i |  | לא | <= 11.6.0 | <= 1.4.5 | הכל | |
-| R4 3D Revolution |  | לא | לא | לא | הכל | |
-| R4i Gold 3DS Deluxe "Starter" |  | לא | 4.1.0 - 4.5.0 | <= 1.4.5 | הכל | |
-| R4i Ultra |  | לא | <= 4.3.0 | <= 1.4.5 | הכל | |
+| שם הכרטיס | מחיר נוכחי | "פצצת זמן"? | גרסאות 3DS? | גירסאות DSi? | הערות אחרות |
+|-|-:|:-:|:-:|:-:|-|
+| [Acekard 2i](http://www.nds-card.com/ProShow.asp?ProID=160) | $20.99 | No | <= 4.3.0 | <= 1.4.4 | |
+| [DSTT](http://www.nds-card.com/ProShow.asp?ProID=157) | $9.99 | No | None | None | Only models with [certain flash chips](https://gist.github.com/Hikari-chin/6b48f1bb8dd15136403c15c39fafdb42) are compatible with ntrboot. |
+| [R4i Gold 3DS](http://www.nds-card.com/ProShow.asp?ProID=149) | $19.99 | No | <= 11.6.0 | <= 1.4.5 | All RTS revisions are compatible. Non-RTS revisions 6, 7, and 8 will be detected but are incompatible. |
+| [R4i Gold 3DS Plus](http://www.nds-card.com/ProShow.asp?ProID=575) | $18.99 | No | <= 11.6.0 | <= 1.4.5 | [Comes with an internal switch to switch between ntrboot and NDS modes]({{ "/images/screenshots/r4i-gold-3ds-plus.png" | absolute_url }}). Do not manually flash with ntrboot. |
+| [R4i-SDHC 3DS RTS](http://www.nds-card.com/ProShow.asp?ProID=146) | $13.99 | Probably (Date Unknown) | <= 11.6.0 | <= 1.4.5 | |
+| [R4i-SDHC B9S](http://www.nds-card.com/ProShow.asp?ProID=574) | $15.99 | No | <= 11.6.0 | <= 1.4.5 | Comes pre-flashed with ntrboot; can be flashed back to an NDS flashcart. |
+| [R4iSDHC GOLD Pro 20XX](http://www.nds-card.com/ProShow.asp?ProID=490) | $9.99 | 3.9b: September 3, 2019 | <= 11.6.0 | <= 1.4.5 | All R4iSDHC 20XX flashcarts are identical. |
+| [R4iSDHC RTS LITE 20XX](http://www.nds-card.com/ProShow.asp?ProID=450) | $13.99 | 3.9b: September 3, 2019 | <= 11.6.0 | <= 1.4.5 | All R4iSDHC 20XX flashcarts are identical. |
+| Ace3DS X | | No | <= 11.6.0 | <= 1.4.5 | Comes with a switch to switch between ntrboot ("3DS") and NDS modes. Do not manually flash with ntrboot. |
+| Infinity 3 R4i | | No | <= 11.6.0 | <= 1.4.5 | |
+| R4 3D Revolution | | No | None | None | |
+| R4i Gold 3DS Deluxe "Starter" | | No | 4.1.0 - 4.5.0 | <= 1.4.5 | |
+| R4i Ultra | | No | <= 4.3.0 | <= 1.4.5 | |
+| R4i-SDHC 3DS RTS Deluxe Edition | | Unknown | <= 11.6.0 | <= 1.4.5 | |
+| R4iSDHC Dual-Core 20XX | | 3.9b: September 3, 2019 | <= 11.6.0 | <= 1.4.5 | All R4iSDHC 20XX flashcarts are identical. |
 
   ![]({{ "/images/screenshots/ntrboot-flashcarts.png" | absolute_url }})
   {: .notice--info}
@@ -41,7 +45,7 @@ title: "ntrboot"
 כדי לבדוק אם מגנט יעבוד, תחזיקו אותו על או באזור כפתורי ה(A)(B)(X)(Y) בזמן שהקונסולה עובדת כדי לראות האם הוא מפעיל את מצב שינה. אם הוא כן, שני המסכים יהיו שחורים כל עוד המגנט מוחזק במקום הזה.
 {: .notice--info}
 
-שימו לב שהכרטיס פריצה לא יהיה ניתן לשימוש בזמן שntrboot מותקן עליו (פרט למקרה של הAcekard 2i שנשאר עובד *רק על 3DSים פרוצים*). זה אומר שרוב הכרטיסים אפילו לא יהיו מוצגים בתפריט הביית. יש שלבים אופטימלים בסוף הוראות צריבת ntrboot כדי למחוק אותו מכרטיס הפריצה אחרי שסיימתם.
+Note that the flashcart will not be able to be used for its standard functions while the ntrboot exploit is installed on it (except for in the case of the Acekard 2i, which remains functional *on NDS and custom firmware 3DS systems only*). זה אומר שרוב הכרטיסים אפילו לא יהיו מוצגים בתפריט הביית. יש שלבים אופטימלים בסוף הוראות צריבת ntrboot כדי למחוק אותו מכרטיס הפריצה אחרי שסיימתם.
 
 שימו לב שבמקרים נדירים, יתכן שתהליך הצריבה **ישבור** כרטיס פריצה מזוייף ויגרום לו לא לעבוד. זה לא סביר שייקרה, אבל בכל זאת רק כרטיסי פריצה מקוריים שמפורטים נתמכים. כדי להוריד את הסיכויים של להשיג כרטיס פריצה מזוייף, מומלץ להשתמש באתר אמין כדי לקנות את הכרטיס (כמו [NDS Card](http://www.nds-card.com/))
 {: .notice--danger}
