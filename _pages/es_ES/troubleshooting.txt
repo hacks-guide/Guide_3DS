@@ -43,16 +43,22 @@ Para utilizar los enlaces [magnet](https://es.wikipedia.org/wiki/Magnet) de esta
 
 ## Remover un NNID sin formatear tu consola
 
+### Qué necesitas
+
+* [`remove_nnid.gm9`]({{ "/gm9_scripts/remove_nnid.gm9" | absolute_url }})
+
+### Instrucciones
+
 Ten en cuenta que si tienes archivos de payloads distintos de `GodMode9.firm` en la carpeta `/luma/payloads/` en tu tarjeta SD, al mantener (Start) al inicio se desplegará un "chainloader menu" donde tendrás que usar el D-Pad y pulsar (A) para seleccionar "GodMode9", para esas instrucciones. 
 {: .notice--info}
 
 1. Inicia GodMode9 manteniendo presionado (Start) mientras enciendes la consola
-1. Ve a `[1:] SYSNAND CTRNAND` -> `data` -> (ID de 32 caracteres) -> `sysdata` -> `00010038`
-1. Manteniendo pulsado el botón (R), presiona (X) sobre `00000000` para renombrar este archivo
-1. Presiona una vez (Arriba) para cambiar el nombre a `10000000`
-1. Presiona (A) para guardar los cambios
-1. Presiona (A) para desbloquear la escritura en SysNAND, luego haz la combinación de teclas mostrada
-1. Vuelve al menú principal
+1. Selecciona "Scripts..."
+1. Select "remove_nnid"
+1. Presiona (A) para continuar cuando se te pida
+1. Presiona (A) para desbloquear la escritura de SysNAND (lvl1) y después haz la combinación de teclas mostrada
+1. Presiona (A) para continuar
+1. Presiona (A) para volver a bloquear los permisos de escritura
 1. Presiona (Start) para reiniciar tu consola
 
 ## No se puede inyectar H&S en una consola downgradeada con Gateway
@@ -83,8 +89,8 @@ Ten en cuenta que si tienes archivos de payloads distintos de `GodMode9.firm` en
 1. Selecciona "Move path(s)"
 1. Las extensiones en mayúsculas deberían haberse movido a la carpeta `newdir`
 1. Presiona (Start) para reiniciar tu consola
-1. Vuelve a [Finalizar instalación](finalizing-setup) y reintenta la inyección de FBI
-1. Si esto tampoco funciona, mueve los archivos con la extensión en mayúscula de regreso a la carpeta `content`, y luego mueve los archivos con la extensión en minúscula a la carpeta `newdir`, luego regresa a [Finalizar instalación](finalizing-setup) y reintenta la inyección de FBI
+1. Vuelve a intentar la inyección de H&S
+1. Si esto tampoco funciona, mueve los archivos con la extensión en mayúscula de regreso a la carpeta `content`, y luego mueve los archivos con la extensión en minúscula a la carpeta `newdir`, luego reintenta la inyección de H&S
 
 ## Un exploit basado en el navegador no funciona
 
@@ -96,18 +102,31 @@ Los exploits basados en navegador (como browserhax o 2xrsa) son a menudo inestab
 
 ## Pantalla negra al iniciar la SysNAND
 
+### Qué necesitas
+
+* [`remove_extdata.gm9`]({{ "/gm9_scripts/remove_extdata.gm9" | absolute_url }})
+
+### Instrucciones
+
+Ten en cuenta que si tienes archivos de payloads distintos de `GodMode9.firm` en la carpeta `/luma/payloads/` en tu tarjeta SD, al mantener (Start) al inicio se desplegará un "chainloader menu" donde tendrás que usar el D-Pad y pulsar (A) para seleccionar "GodMode9", para esas instrucciones. 
+{: .notice--info}
+
 1. Intenta iniciar sin la tarjeta SD, y reinsértala después del arranque
     1. Apaga tu consola
     1. Extrae tu tarjeta SD de tu consola
     1. Enciende tu consola
     1. Cuando aparezca el Menú HOME, reinserta tu tarjeta SD en tu consola
-    1. Si esto funcionó, limpia el extdata del Menú HOME navegando a la siguiente carpeta en tu tarjeta SD: `/Nintendo 3DS/(ID de 32 caracteres)/(ID de 32 caracteres)/extdata/00000000/`
-        + Región EUR: Elimina `00000098`
-        + Región JPN: Elimina `00000082`
-        + Región USA: Elimina `0000008f`
-        + Región CHN: Elimina `000000A1`
-        + Región KOR: Elimina `000000A9`
-        + Región TWN: Elimina `000000B1`
+    1. If this worked, you should clear Home Menu's extdata by following these instructions:
+        1. Apaga tu consola
+        1. Inicia GodMode9 manteniendo presionado (Start) mientras enciendes la consola
+        1. Presiona el botón (Home) para abrir el menú de acción
+        1. Selecciona "Scripts..."
+        1. Select "remove_extdata"
+        1. Presiona (A) para continuar cuando se te pida
+        1. Presiona (A) para desbloquear la escritura de SysNAND (lvl1) y después haz la combinación de teclas mostrada
+        1. Presiona (A) para continuar
+        1. Presiona (A) para volver a bloquear los permisos de escritura
+        1. Presiona (Start) para reiniciar tu consola
 1. Trata de arrancar sin cartuchos insertados (incluyendo flashcards)
 1. Si tienes un hardmod y una copia de seguridad de la NAND, flashea el respaldo de regreso a la SysNAND
 1. Intenta iniciar en modo de recuperación y actualizando tu sistema
@@ -119,6 +138,12 @@ Los exploits basados en navegador (como browserhax o 2xrsa) son a menudo inestab
 
 ## Pantalla negra al iniciar la SysNAND luego de instalar boot9strap
 
+### Qué necesitas
+
+* [`remove_extdata.gm9`]({{ "/gm9_scripts/remove_extdata.gm9" | absolute_url }})
+
+### Instrucciones
+
 1. Asegúrate de tener un payload funcional
     1. Comprueba que existe el archivo `boot.firm` en la raíz de tu tarjeta SD.
 1. Intenta reiniciar la configuración de Luma y arregla sus opciones
@@ -127,13 +152,16 @@ Los exploits basados en navegador (como browserhax o 2xrsa) son a menudo inestab
 1. Prueba iniciando GodMode9
     1. En Luma3DS, mantén presionado (Start) en el arranque
 1. Intenta borrando el extdata del Menú HOME
-    1. Limpia el extdata del Menú HOME navegando a la siguiente carpeta en tu tarjeta SD: `/Nintendo 3DS/(ID de 32 caracteres)/(ID de 32 caracteres)/extdata/00000000/`
-        + Región EUR: Elimina `00000098`
-        + Región JPN: Elimina `00000082`
-        + Región USA: Elimina `0000008f`
-        + Región CHN: Elimina `000000A1`
-        + Región KOR: Elimina `000000A9`
-        + Región TWN: Elimina `000000B1`
+    1. Apaga tu consola
+    1. Inicia GodMode9 manteniendo presionado (Start) mientras enciendes la consola
+    1. Presiona el botón (Home) para abrir el menú de acción
+    1. Selecciona "Scripts..."
+    1. Select "remove_extdata"
+    1. Presiona (A) para continuar cuando se te pida
+    1. Presiona (A) para desbloquear la escritura de SysNAND (lvl1) y después haz la combinación de teclas mostrada
+    1. Presiona (A) para continuar
+    1. Presiona (A) para volver a bloquear los permisos de escritura
+    1. Presiona (Start) para reiniciar tu consola
 1. Trata de arrancar sin cartuchos insertados (incluyendo flashcards)
 1. Si previamente hiciste un downgrade con Gateway, asegúrate que la versión de Luma3DS que estés utilizando sea la mas reciente (v6.2.3 o superior)
 1. Si tu NAND es de una versión entre 3.0.0 y 4.5.0, realiza lo siguiente:
