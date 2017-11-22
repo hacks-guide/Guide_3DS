@@ -43,16 +43,22 @@ Käyttääksesi tällä sivulla olevia [magneetti](https://en.wikipedia.org/wiki
 
 ## NNID:n poistaminen ilman konsolin alustamista
 
+### Tarpeet
+
+* [`remove_nnid.gm9`]({{ "/gm9_scripts/remove_nnid.gm9" | absolute_url }})
+
+### Ohjeet
+
 Huomaa, että jos sinulla on muita käynnistystiedostoja kuin `GodMode9.firm` SD-korttisi `/luma/payloads`-kansiossa, (START)-painikkeen pohjassa pitäminen käynnistyksen aikana avaa "ketjulatausvalikon", jossa sinun on käytettävä ristiohjainta ja (A):ta avataksesi GodMode9:n näitä ohjeita varten. 
 {: .notice--info}
 
 1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
-1. Mene hakemistoon `[1:] SYSNAND CTRNAND` → `data` → (32-merkkinen tunnus) → `sysdata` → `00010038`
-1. Pidä (R):ää pohjassa ja paina samalla (X):ää `00000000`-tiedoston kohdalla uudelleennimetäksesi sen
-1. Paina ylös kerran vaihtaaksesi nimeksi `10000000`
-1. Paina (A):ta tallentaaksesi muutokset
-1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen ja syötä annettu painikeyhdistelmä
-1. Mene takaisin päävalikkoon
+1. Valitse "Scripts..."
+1. Select "remove_nnid"
+1. Paina kehotettaessa (A):ta jatkaaksesi
+1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1) ja syötä annettu painikeyhdistelmä
+1. Paina (A):ta jatkaaksesi
+1. Paina (A):ta lukitaksesi kirjoitusoikeudet
 1. Paina (START)-painiketta käynnistääksesi uudelleen
 
 ## H&S:n injektointi ei onnistu Gatewayn avulla taaksepäin päivitetyllä konsolilla
@@ -96,18 +102,31 @@ Selainhaavoittuvuuksiin perustuvat käynnistystavat (kuten browserhax ja 2xrsa) 
 
 ## Musta ruutu, kun SysNAND on käynnistetty
 
+### Tarpeet
+
+* [`remove_extdata.gm9`]({{ "/gm9_scripts/remove_extdata.gm9" | absolute_url }})
+
+### Ohjeet
+
+Huomaa, että jos sinulla on muita käynnistystiedostoja kuin `GodMode9.firm` SD-korttisi `/luma/payloads`‑kansiossa, (START)-painikkeen pohjassa pitäminen käynnistyksen aikana avaa "ketjulatausvalikon", jossa sinun on käytettävä ristiohjainta ja (A):ta avataksesi GodMode9:n näitä ohjeita varten. 
+{: .notice--info}
+
 1. Kokeile käynnistää konsoli ilman SD-korttia, ja aseta se takaisin käynnistämisen jälkeen
     1. Sammuta konsolisi
     1. Irrota SD-korttisi konsolistasi
     1. Käynnistä konsolisi
     1. Kun HOME-valikko näkyy, aseta SD-korttisi takaisin konsoliisi
-    1. Jos tämä toimi, sinun pitää poistaa HOME-valikon extdata menemällä seuraavaan kansioon SD-kortillasi: `/Nintendo 3DS/(32-merkkinen tunnus)/(32-merkkinen tunnus)/extdata/00000000/`
-        + EUR-alue: Poista `00000098`
-        + JPN-alue: Poista `00000082`
-        + USA-alue: Poista `0000008f`
-        + CHN-alue: Poista `000000A1`
-        + KOR-alue: Poista `000000A9`
-        + TWN-alue: Poista `000000B1`
+    1. If this worked, you should clear Home Menu's extdata by following these instructions:
+        1. Sammuta konsolisi
+        1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
+        1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
+        1. Valitse "Scripts..."
+        1. Select "remove_extdata"
+        1. Paina kehotettaessa (A):ta jatkaaksesi
+        1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1) ja syötä annettu painikeyhdistelmä
+        1. Paina (A):ta jatkaaksesi
+        1. Paina (A):ta lukitaksesi kirjoitusoikeudet
+        1. Paina (START)-painiketta käynnistääksesi uudelleen
 1. Kokeile käynnistää konsoli ilman mitään korttia (mukaan lukien flash-kortit)
 1. Jos konsolisi on laitteistomodattu ja sinulla on NAND-varmuuskopio, asenna varmuuskopio takaisin SysNANDiin
 1. Kokeile käynnistää konsolisi palautustilaan ja päivittää se
@@ -119,6 +138,12 @@ Selainhaavoittuvuuksiin perustuvat käynnistystavat (kuten browserhax ja 2xrsa) 
 
 ## Musta ruutu boot9strapin asentamisen jälkeen, kun SysNAND on käynnistetty
 
+### Tarpeet
+
+* [`remove_extdata.gm9`]({{ "/gm9_scripts/remove_extdata.gm9" | absolute_url }})
+
+### Ohjeet
+
 1. Varmista, että sinulla on toimiva käynnistystiedosto
     1. Tarkista, että SD-korttisi juuressa on `boot.firm`-tiedosto.
 1. Kokeile nollata Luman määritykset
@@ -127,13 +152,16 @@ Selainhaavoittuvuuksiin perustuvat käynnistystavat (kuten browserhax ja 2xrsa) 
 1. Kokeile avata GodMode9
     1. Pidä (START)-painiketta pohjassa konsolin käynnistyessä (kun Luma3DS on käytössä)
 1. Kokeile poistaa HOME-valikon extdata
-    1. Poista HOME‑valikon extdata menemällä seuraavaan kansioon SD‑kortillasi: `/Nintendo 3DS/(32‑merkkinen tunnus)/(32‑merkkinen tunnus)/extdata/00000000/`
-        + EUR-alue: Poista `00000098`
-        + JPN-alue: Poista `00000082`
-        + USA-alue: Poista `0000008f`
-        + CHN-alue: Poista `000000A1`
-        + KOR-alue: Poista `000000A9`
-        + TWN-alue: Poista `000000B1`
+    1. Sammuta konsolisi
+    1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
+    1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
+    1. Valitse "Scripts..."
+    1. Select "remove_extdata"
+    1. Paina kehotettaessa (A):ta jatkaaksesi
+    1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1) ja syötä annettu painikeyhdistelmä
+    1. Paina (A):ta jatkaaksesi
+    1. Paina (A):ta lukitaksesi kirjoitusoikeudet
+    1. Paina (START)-painiketta käynnistääksesi uudelleen
 1. Kokeile käynnistää konsoli ilman mitään korttia (mukaan lukien flash-kortit)
 1. Jos olet aikaisemmin päivittänyt taaksepäin Gatewayn avulla, varmista, että käytät Luma3DS:n viimeisintä versiota (v6.2.3 tai uudempi)
 1. Jos NANDisi versio on jotakin 3.0.0:n ja 4.5.0:n väliltä, tee seuraavat toimet:
