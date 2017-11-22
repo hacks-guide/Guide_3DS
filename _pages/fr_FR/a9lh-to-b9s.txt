@@ -43,8 +43,8 @@ Note that, only on New 3DS, `secret_sector.bin` is needed to revert the arm9load
 * La dernière version de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * La dernière version de [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(boot9strap standard, pas le fichier `devkit` et ni le fichier `ntr`)*
 * La dernière version de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* Le dernier fork de [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
-* Le Homebrew [Starter Kit](http://smealum.github.io/ninjhax2/starter.zip)
+* The latest release of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
+* The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases)
 * [`setup_ctrnand_luma3ds.gm9`]({{ "/gm9_scripts/setup_ctrnand_luma3ds.gm9" | absolute_url }})
 * [`cleanup_sd_card.gm9`]({{ "/gm9_scripts/cleanup_sd_card.gm9" | absolute_url }})
 
@@ -57,7 +57,7 @@ Pour toutes les étapes de cette section, remplacez tous les fichiers existants 
 
 1. Éteignez votre 3DS
 1. Insérez votre carte SD dans votre ordinateur
-1. Copier _le contenu de_ `starter.zip` vers la racine de votre carte SD
+1. Copy `boot.3dsx` to the root of your SD card
 1. Copy `boot.firm` from the latest version Luma3DS `.7z` to the root of your SD card
 1. Copy `arm9loaderhax.bin` from the v7.0.5 Luma3DS `.7z` to the root of your SD card
 1. Créez un dossier nommé `cias` à la racine de votre carte SD si celui ci n'existe pas
@@ -132,7 +132,7 @@ Si, avant d'avoir suivi ce guide, vous aviez une installation EmuNAND et que vou
 1. Appuyez sur (A) pour continuer
 1. Appuyez (A) pour reverrouiller autorisations en écriture
 
-#### Section VII - Backup SysNAND
+#### Section VII - Backup Essential Files
 
 1. Appuyez sur (Home) pour faire apparaître le menu d’actions (action menu)
 1. Sélectionnez "Scripts"
@@ -142,11 +142,11 @@ Si, avant d'avoir suivi ce guide, vous aviez une installation EmuNAND et que vou
 1. Appuyez sur (A) pour continuer
 1. Maintenez (R) et appuyez sur (B) en même temps pour éjecter votre carte SD
 1. Insérez votre carte SD dans votre ordinateur
-1. Copy `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Faites des sauvegardes dans plusieurs endroits (tels que des stockages de fichiers en ligne par exemple)
-  + Cette sauvegarde vous sauvera d'un brick si quoi que ce soit se passe mal à l'avenir
-  + Replace your old arm9loaderhax NAND backup with this new boot9strap one
-1. Delete `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card after copying it
+  + These backups will save you from a brick and/or help you recover files from the NAND image if anything goes wrong in the future
+  + Replace your old arm9loaderhax SysNAND backup with this new boot9strap one
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` and `<date>_<serialnumber>_sysnand_###.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
 1. Réinsérez votre carte SD dans votre 3DS
 
 #### Section VIII - Cleanup SD Card
