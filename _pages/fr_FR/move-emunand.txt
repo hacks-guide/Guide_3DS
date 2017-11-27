@@ -8,10 +8,10 @@ Ceci est une section complémentaire qui vous permettra de déplacer le contenu 
 
 Notez que si vous avez n’importe quel autre payload que `GodMode9.firm` dans le dossier `/luma/payloads/` sur votre carte SD, appuyez (Start) au démarrage affiche un "chainloader menu" où vous devrez utiliser le D-Pad et le bouton (A) pour sélectionner "GodMode9" .
 
-You MUST have already installed Luma3DS and boot9strap to use this.
+Vous DEVEZ avoir déjà installé Luma3DS et boot9strap pour utiliser ceci.
 {: .notice--danger}
 
-### What you need
+### Ce dont vous aurez besoin
 
 * Une EmuNAND existante
 * La dernière version de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
@@ -19,7 +19,7 @@ You MUST have already installed Luma3DS and boot9strap to use this.
 
 ### Instructions
 
-#### Section I - Prep Work
+#### Section I - Préparatifs
 
 1. Éteignez votre 3DS
 1. Insérez votre carte SD dans votre ordinateur
@@ -27,21 +27,21 @@ You MUST have already installed Luma3DS and boot9strap to use this.
 1. Copiez le dossier `gm9` de GodMode9 `.zip` à la racine de votre carte SD
 1. Retirez la carte SD de votre ordinateur et réinsérez-là dans votre 3DS
 
-#### Section II - Backup SysNAND DSiWare Saves
+#### Section II - Enregistrer les sauvegardes de vos DSIWare (présentes sur votre SysNAND)
 
 SI vous n'avez pas de DSiWares ou de sauvegardes (de DSiwares) auxquels vous tenez, vous pouvez ignorer cette section.
 {: .notice--info}
 
 1. Ouvrez Godmode9 en maintenant (Start) au démarrage
 1. Si vous êtes invité à créer une sauvegarde de fichiers essentiels, appuyez sur (A) pour le faire, puis appuyez sur (A) pour continuer une fois qu’elle a complété
-1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
-  + Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
+1. Si vous êtes invité à régler la date et l'heure du RTC, appuyez sur (A) pour le faire, puis réglez la date et l'heure, puis appuyez sur (A) pour continuer
+  Notez que, si vous avez dû régler la date et l'heure du RTC, vous devrez également régler l'heure dans les Paramètres du système après ce guide
 1. Naviguez vers `[2:] SYSNAND TWLN` -> `title`
 1. Maintenez la touche (R) appuyée et appuyez sur la touche (A) en même temps sur le dossier `00030004`pour le sélectionner, puis choisissez "Copy to 0:/gm9/out"
   + Ce processus peut prendre un certain temps si vous avez beaucoup de jeux DSiWare
 1. Appuyez deux fois sur (B) pour revenir au menu principal
 
-#### Section III - Backup GBA VC Saves
+#### Section III - Enregistrer les sauvegardes VC GBA
 
 SI vous n'avez pas de jeux GBA en VC ou de sauvegardes (de GBA VC) auxquels vous tenez, vous pouvez ignorer cette section.
 {: .notice--info}
@@ -49,10 +49,10 @@ SI vous n'avez pas de jeux GBA en VC ou de sauvegardes (de GBA VC) auxquels vous
 Notez que ce n’est pas nécessaire pour tout autre type de jeux Console Virtuelle (GBC, NES, etc.)
 {: .notice--info}
 
-The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
+Le jeu sera exporté dans le dossier `/gm9/out/` de votre carte SD sous le nom `<TitleID>.gbavc.sav`.
 {: .notice--info}
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
+Pour identifier le Title ID d'un fichier `<TitleID>.gbavc.sav`, vous pouvez obtenir une liste de tous les jeux installés sur le système et leurs Title IDs correspondant : en placez votre curseur sur `[A:] SYSNAND SD`, puis maintenez (R) et appuyez sur (A) en même temps, puis sélectionnez "Search for titles".
 {: .notice--info}
 
 1. Effectuez la procédure suivante pour chaque jeu GBA VC pour chaque jeu GBA VC dont vous souhaitez conserver la sauvegarde:
@@ -61,13 +61,13 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
   + Démarrez la console en maintenant (Start) enfoncé pour accéder au menu de chainloader de Luma3DS
   + Lancez GodMode9 en appuyant sur (A)
   + Naviguez vers `[S:] SYSNAND VIRTUAL`
-  + Press (A) on `agbsave.bin` to select it
-  + Select "AGBSAVE options..."
-  + Select "Dump GBA VC save"
-  + Press (A) to continue
+  + Appuyez sur (A) sur `agbsave.bin` pour le sélectionner
+  + Sélectionnez "AGBSAVE options..."
+  + Sélectionnez « Dump GBA VC save »
+  + Appuyez sur (A) pour continuer
   + Appuyez sur (Start) pour redémarrer votre système
 
-#### Section IV - Copy EmuNAND to SysNAND
+#### Section IV - Copier votre EmuNAND sur votre SysNAND
 
 1. Ouvrez Godmode9 en maintenant (Start) au démarrage
 1. Naviguez vers `[E:] EMUNAND VIRTUAL`
@@ -80,7 +80,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Appuyez (B) pour décliner reverrouiller autorisations en écriture si vous êtes invité
 1. Appuyez sur (B) pour revenir au menu principal
 
-#### Section V - Restore DSiWare Saves
+#### Section V - Restaurer les sauvegardes DSiWare
 
 Si vous n'avez pas fait de copies de sauvegardes DSiWare, ignorez cette section.
 {: .notice--info}
@@ -97,7 +97,7 @@ Si vous n'avez pas fait de copies de sauvegardes DSiWare, ignorez cette section.
 1. Appuyez (B) pour décliner reverrouiller autorisations en écriture si vous êtes invité
 1. Appuyez deux fois sur (B) pour revenir au menu principal
 
-#### Section VI - Restore GBA VC Saves
+#### Section VI - Restaurer les sauvegardes GBA VC
 
 Si vous n'avez pas fait de copies de sauvegardes GBA VC, ignorez cette section.
 {: .notice--info}
