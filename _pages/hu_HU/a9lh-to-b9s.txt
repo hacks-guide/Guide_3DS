@@ -1,40 +1,40 @@
 ---
-title: "A9LH to B9S"
+title: "A9LH-ről B9S-re"
 ---
 
-{% include toc title="Table of Contents" %}
+{% include toc title="Tartalomjegyzék" %}
 
-This page is for existing arm9loaderhax users to update their devices to boot9strap.
+Ez az oldal az arm9loaderhax felhasználóknak készült, hogy frissíthessék az eszközüket boot9strap-re.
 
-All future releases of Luma3DS will only be made in the `.firm` format, which will only be compatible with boot9strap and sighax. This means that to continue receiving the latest updates of Luma3DS, you should use this page to update your installation.
+A Luma3DS a jövőben csak `.firm` formátumban kerül kiadásra, amely csak a boot9strap-pel és a sighax-szel kompatibilis. Ez azt jelenti, hogy amennyiben továbbra is szeretnéd a Luma3DS frissítéseit megkapni, ezt az útmutatót kell követned, hogy eszközödet naprakésszé tedd.
 
-To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download).
+Ahhoz, hogy használhasd a [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) linkeket ezen az oldalon, szükséged lesz egy torrent kliensre, mint például a [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
-If you have a PIN enabled on Luma3DS, SafeB9SInstaller will give you an "OTP Crypto Fail" error unless you temporarily disable your PIN (you can re-enable the PIN after the update).
+Ha a Luma3DS-ben PIN-kód van beállítva, akkor a SafeB9SInstaller "OTP Crypto Fail" hibaüzenetet fog adni, hacsak nem kapcsolod ki átmenetileg a PIN-t (újra bekapcsolhatod a folyamat után).
 {: .notice--warning}
 
 {% capture notice-1 %}
-There have been reports of a wave of bans being handed out to CFW users by Nintendo. To protect yourself, please do the following steps before starting this guide:
+Kaptunk visszajelzéseket kitiltási hullámokról, melyeket a Nintendo a CFW-t használóknak osztogatott. Ahhoz, hogy megvédd magadat, kérjük kövesd az alábbi lépéseket még az útmutató megkezdése előtt:
 
-1. Go to System Settings, then "Internet Settings", then "SpotPass", then "Sending of System Information"
-1. Disable the "Sending of System Information" option
-1. Exit the System Settings
-1. Go to your Friend List (the [orange Face Icon]({{ "/images/friend-list-icon.png" | absolute_url }}) in the top row of your Home Menu)
-  + If you receive an error and are kicked out of the menu, the Friend List setting is either already disabled or your console cannot connect to Nintendo's servers (due to a ban or connection issues)
-1. Go to the Friend List settings, then "Friend Notification Settings", then "Show friends what you're playing"
-1. Disable the "Show friends what you're playing" option
-1. Exit your Friend List
+1. Menj a System Settings-be, ott válaszd ezt: "Internet Settings", majd ezt: "SpotPass", végül ezt: "Sending of System Information"
+1. Kapcsold ki a "Sending of System Information" opciót
+1. Lépj ki a System Settings-ből
+1. Válaszd a Friend List opciót (a [narancsszínű fej ikon]({{ "/images/friend-list-icon.png" | absolute_url }}) a Home Menu felső sávján)
+  + Ha hibaüzenetet kapsz, és visszadob a menübe, a Friend List már vagy korábban letiltásra került, vagy a konzolod nem tud csatlakozni a Nintendo szervereihez (kitiltás, vagy kapcsolódási hiba miatt)
+1. Itt menj a beállításokba (Settings), ott válaszd ezt: "Friend Notification Settings", majd ezt: "Show friends what you're playing"
+1. Kapcsold ki a "Show friends what you're playing" opciót
+1. Lépj ki a Friend List-ből
 
 {% endcapture %}
 
 <div class="notice--danger">{{ notice-1 | markdownify }}</div>
 
-### What you need
+### Amire szükséged lesz
 
-Note that the following required file named `secret_sector.bin` is the same one that was found in the various `data_input.zip` file versions. If you already have that file on your disk somewhere, you can use that one instead of downloading the one below.
+Vedd figyelembe, hogy a következő szükséges fájl, aminek a neve `secret_sector.bin` ugyanaz, mint ami a `data_input.zip` fájlokban található volt. Ha létezik már a fájl valahol a lemezeden, szükségtelen letöltened ismét, használhatod azt, ami már megvan.
 {: .notice--info}
 
-Note that, only on New 3DS, `secret_sector.bin` is needed to revert the arm9loaderhax exploit, which is why it is not needed for the installation of boot9strap on a stock console. If you do not have a New 3DS, you do not need `secret_sector.bin`.
+Vedd figyelembe, hogy New 3DS esetében a `secret_sector.bin` fájlra az arm9loaderhax exploit eltávolításához van szükség. Ezért nem kell a gyári állapotú konzolokon a boot9strap telepítéséhez. If you do not have a New 3DS, you do not need `secret_sector.bin`.
 {: .notice--info}
 
 * <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - **New 3DS Users Only:** [`secret_sector.bin`](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce)
