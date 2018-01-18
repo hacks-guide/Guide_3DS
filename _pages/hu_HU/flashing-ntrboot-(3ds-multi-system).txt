@@ -1,56 +1,56 @@
 ---
-title: "Flashing ntrboot (3DS Multi System)"
+title: "ntrboot flashelése (több 3DS)"
 ---
 
-{% include toc title="Table of Contents" %}
+{% include toc title="Tartalomjegyzék" %}
 
-Before proceeding, ensure you have read all of the information on [ntrboot](ntrboot)
+Mielőtt elkezdenénk, bizonyosodj meg róla, hogy mindent elolvastál az [ntrboot](ntrboot)-tal kapcsolatban
 
-This method requires temporary access to a second 3DS family device that is already running boot9strap. This does not require your flashcart to support either 3DS's version. See the flashcart table on [ntrboot](ntrboot) for more information.
+Ehhez a módszerhez szükséged lesz átmenetileg egy második 3DS konzolra, amin már telepítve van a boot9strap. Viszont egyik 3DS verziójának sem szükséges támogatnia a flashkártyádat. További információkért lásd a táblázatot az [ntrboot](ntrboot) oldalon.
 
-Note that in some rare circumstances, it may be possible for the flashing process to **brick** a counterfeit flashcart and render it permanently unusable. This is unlikely, but nevertheless only original listed flashcarts are supported. To reduce the chance of receiving a counterfeit card, it is recommended that you use a reputable site to buy your flashcart (such as [NDS Card](http://www.nds-card.com/))
+Vedd figyelembe, hogy néhány ritka esetben lehetséges, hogy a flashelési folyamat során **brickelődjön** néhány hamisított flashkártya és végleg használhatatlanná váljon. Ez elég valószínűtlen, azonban éppen emiatt csak eredeti flashkártyákat támogatunk. Hogy elkerüld hamisított flashkártyák vásárlását, ajánlott jó hírű oldalakon vásárolni (mint például az [NDS Card](http://www.nds-card.com/))
 {: .notice--danger}
 
-### What you need
+### Amire szükséged lesz
 
-* Your ntrboot compatible flashcart
-* Two 3DS family devices 
-  + **The source 3DS**: the 3DS family device that is already running boot9strap
-  + **The target 3DS**: the device on stock firmware
-* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest){:target="_blank"} *(`ntr` boot9strap; not the `devkit` file)*
-* The latest release of [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest){:target="_blank"}
+* Olyan flashkártya, ami támogatja az ntrboot-ot
+* Két eszköz a 3DS családból 
+  + **A forrás 3DS**: egy eszköz a 3DS családból, amin már boot9strap fut
+  + **A cél 3DS**: egy eszköz, ami gyári állapotban van
+* A [boot9strap](https://github.com/SciresM/boot9strap/releases/latest){:target="_blank"} legújabb verziója *(az `ntr` boot9strap; nem a `devkit` fájl)*
+* Az [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest){:target="_blank"} legújabb kiadása
 
-### Instructions
+### Utasítások
 
-#### Section I - Prep Work
+#### Első rész - Előkészületek
 
-1. Power off **the source 3DS**
-1. Insert **the source 3DS**'s SD card into your computer
-1. Create a folder named `ntrboot` on the root of your SD card
-1. Copy `boot9strap_ntr.firm` and `boot9strap_ntr.firm.sha` from the boot9strap ntr `.zip` to the `/ntrboot/` folder on your SD card
-1. Copy `ntrboot_flasher.firm` to the `/luma/payloads/` folder on **the source 3DS**'s SD card
-1. Reinsert **the source 3DS**'s SD card back into **the source 3DS**
-1. Insert your ntrboot compatible DS / DSi flashcart into **the source 3DS**
+1. Kapcsold ki a **forrás 3DS**-t
+1. Helyezd be a **forrás 3DS** SD kártyáját a számítógépbe
+1. Hozz létre egy mappát `ntrboot` néven az SD kártya gyökerében
+1. Másold át a `boot9strap_ntr.firm` fájlt és a `boot9strap_ntr.firm.sha` fájlt a boot9strap ntr `.zip` fájlból az SD kártyád `/ntrboot/` mappájába
+1. Másold át az `ntrboot_flasher.firm` fájlt a **forrás 3DS** SD kártyáján található `/luma/payloads/` mappába
+1. Helyezd vissza a **forrás 3DS** SD kártyáját a **forrás 3DS**-be
+1. Helyezd be az ntrboot kompatibilis DS / DSi flashkártyádat a **forrás 3DS**-be
 
-#### Section II - Flashing ntrboot
+#### Második rész - ntrboot flashelése
 
-1. Launch the Luma3DS chainloader by holding (Start) during boot on **the source 3DS**
-1. Select "ntrboot_flasher"
-1. Read the red screen warning
-1. Press (A) to continue
-1. Select your flashcart
-  + If you do not see your flashcart in the list at the top, read the bottom screen for more info on each option
-1. Select "Dump Flash"
-1. Wait until the process is completed
-1. Press (A) to continue
-1. Press (A) to return to the main menu
-1. Select "Inject Ntrboot"
-1. Press (A) for retail unit ntrboot
-1. Wait until the process is completed
-1. Press (A) to return to the main menu
-1. Press (B) to power off **the source 3DS**
+1. Indítsd el a Luma3DS chainloadert a (Start) lenyomva tartásával boot közben a **forrás 3DS**-en
+1. Válaszd az "ntrboot_flasher" opciót
+1. Olvasd el a figyelmeztetést a piros képernyőn
+1. Nyomd meg az (A) gombot a folytatáshoz
+1. Válaszd ki a flashkártyádat
+  + Ha nem találod a flashkártyádat a listában felül, olvasd el az alsó képernyőn megjelenő információkat minden opcióra
+1. Válaszd a "Dump Flash" opciót
+1. Várj, amíg a folyamat befejeződik
+1. Nyomd meg az (A) gombot a folytatáshoz
+1. Nyomd meg az (A) gombot, hogy visszakerülj a főmenübe
+1. Válaszd az "Inject Ntrboot" opciót
+1. Nyomd meg az (A) gombot, hogy kiválaszd a "retail unit ntrboot"-ot
+1. Várj, amíg a folyamat befejeződik
+1. Nyomd meg az (A) gombot, hogy visszakerülj a főmenübe
+1. Nyomd meg a (B) gombot a **forrás 3DS** kikapcsolásához
 
 ___
 
-Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-(ntrboot))
+Továbblépés a [boot9strap telepítésére (ntrboot)](installing-boot9strap-(ntrboot))
 {: .notice--primary}
