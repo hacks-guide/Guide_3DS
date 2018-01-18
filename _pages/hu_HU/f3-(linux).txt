@@ -2,29 +2,29 @@
 title: "F3 (Linux)"
 ---
 
-{% include toc title="Table of Contents" %}
+{% include toc title="Tartalomjegyzék" %}
 
-### Required Reading
+### Fontos tudnivalók
 
-This is an add-on section for checking your SD card for errors using F3.
+Ez egy kiegészítő rész, amelyben F3 segítségével keresünk hibákat az SD kártyádon.
 
-Depending on the size of your SD card and the speed of your computer, this process can take up to several hours!
+Az SD kártyád méretétől és a számítógéped sebességétől függően ez a folyamat több óráig is eltarthat!
 
-This page is for Linux users only. If you are not on Linux, check out the [H2testw (windows)](h2testw-(windows)) or [F3X (mac)](f3x-(mac)) pages.
+Ez az oldal Linux felhasználókra vonatkozik. Ha nem Linuxod van, nézd meg a [H2testw (windows)](h2testw-(windows)) vagy az [F3X (mac)](f3x-(mac)) oldalt.
 
-### What you need
+### Amire szükséged lesz
 
-* The latest version of [F3](https://github.com/AltraMayor/f3/archive/v6.0.zip)
+* Az [F3](https://github.com/AltraMayor/f3/archive/v6.0.zip) legújabb kiadása
 
-### Instructions
+### Utasítások
 
-1. Unzip the f3 `.zip` file
-1. `cd` into the f3 directory
-1. Run `make` to compile F3
-1. Insert your SD card into your computer
-1. Mount your SD card
-1. Run `./f3write <your sd card mount point>`
-1. Wait until the process is complete. See below for an example output.
+1. Csomagold ki az f3 `.zip` fájlt
+1. Lépj `cd` paranccsal az f3 könyvtárba
+1. Futtasd a `make`-et az F3 összeállításához
+1. Helyezd az SD kártyád a számítógépbe
+1. Csatold fel az SD kártyádat
+1. Futtasd a `./f3write <az SD kártyád csatolási pontja>` parancsot
+1. Várj, amíg a folyamat befejeződik. Lentebb egy példa kimenet látható.
 
 		$ ./f3write /media/michel/6135-3363/
 		Free space: 29.71 GB
@@ -34,8 +34,8 @@ This page is for Linux users only. If you are not on Linux, check out the [H2tes
 		Free space: 0.00 Byte
 		Average Writing speed: 4.90 MB/s
 
-1. Run `./f3read <your sd card mount point>`
-1. Wait until the process is complete. See below for an example output.
+1. Futtasd a `./f3read <az SD kártyád csatolási pontja>` parancsot
+1. Várj, amíg a folyamat befejeződik. Lentebb egy példa kimenet látható.
 
 		$ ./f3read /media/michel/6135-3363/
 		                  SECTORS      ok/corrupted/changed/overwritten
@@ -52,11 +52,11 @@ This page is for Linux users only. If you are not on Linux, check out the [H2tes
 
 ___
 
-If the test shows the result `Data LOST: 0.00 Byte (0 sectors)` your SD card is good and you can delete all `.h2w` files on your SD card
+Ha a teszt eredménye `Data LOST: 0.00 Byte (0 sectors)`, az SD kártyád rendben van és most már törölheted az összes `.h2w` fájlt róla
 {: .notice--success}
 
-If the test shows any other results, your SD card may be corrupted or damaged and you may have to replace it!
+Ha a teszt eredménye bármi más, elképzelhető, hogy az SD kártyád sérült, és cserélned kell!
 {: .notice--danger}
 
-### Return to [Get Started](get-started)
+### Vissza a [kezdeti lépésekhez](get-started)
 {: .notice--primary}
