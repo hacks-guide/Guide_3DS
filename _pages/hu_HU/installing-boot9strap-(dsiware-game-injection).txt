@@ -1,175 +1,175 @@
 ---
-title: "Installing boot9strap (DSiWare Game Injection)"
+title: "boot9strap telepítése (DSiWare játék-injektálás)"
 ---
 
-{% include toc title="Table of Contents" %}
+{% include toc title="Tartalomjegyzék" %}
 
-Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
+Vedd figyelembe, hogy amennyiben van más payload fájl a `GodMode9.firm` fájlon kívül a `/luma/payloads/`mappában, indításkor a (Start) gombot lenyomva tartva a "chainloader menu" menü fog megjelenni. Itt a D-Pad és az (A) gomb segítségével válaszd a "GodMode9" opciót, hogy az alábbi utasításokat követhesd. 
 
-To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download).
+Ahhoz, hogy használhasd a [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) linkeket ezen az oldalon, szükséged lesz egy torrent kliensre, mint például a [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
-Before proceeding, ensure you have read all of the notices and warnings on [Installing boot9strap (DSiWare)](installing-boot9strap-(dsiware))
+Mielőtt folytatnánk, győződj meg róla, hogy minden megjegyzést és figyelmeztetést elolvastál a [boot9strap telepítése (DSiWare)](installing-boot9strap-(dsiware)) oldalon
 
-If you do not use the correct `.firm` corresponding to the target 3DS, you will BRICK! Ensure you download and use the correct one!
+Ha nem a cél 3DS-ednek megfelelő `.firm`-et használod, BRICKELNI fogod a készülékedet! Bizonyosodj meg róla, hogy a neked megfelelőt töltöd le és használod!
 {: .notice--danger}
 
-### What you need
+### Amire szükséged lesz
 
-* Two 3DS family devices
-  + **The source 3DS**: the device running boot9strap *on the latest version*
-  + **The target 3DS**: the device on stock firmware *on 11.6.0*
-* Purchase (or already own) a compatible DSiWare game from the eShop on **the source 3DS**
-  + A pirated copy of the game will **not** work
-  + For a list of compatible games, see the [Installing boot9strap (DSiWare Game Injection List)](installing-boot9strap-(dsiware-game-injection-list)) page
-* The sudokuhax injection `.zip` corresponding to your region:
-  + <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [`DSiWare_usa_sudokuhax_injection.zip`](magnet:?xt=urn:btih:7ed7fee15c900ed02b5e2cb3c8e7a0363f4d9354&dn=DSiWare_usa_sudokuhax_injection.zip&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce)
-  + <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [`DSiWare_eur_sudokuhax_injection.zip`](magnet:?xt=urn:btih:1542dd3c2bf7785b1e7a6dda3887fc8fb2710685&dn=DSiWare_eur_sudokuhax_injection.zip&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce)
-  + <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [`DSiWare_jpn_4swordshax_injection.zip`](magnet:?xt=urn:btih:1bcc90c93da91c9876671f6218084207def90db9&dn=DSiWare_jpn_4swordshax_injection.zip&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce)
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest){:target="_blank"}
-* The latest release of [b9sTool](https://github.com/Plailect/b9sTool/releases/latest){:target="_blank"}
-* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest){:target="_blank"} *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest){:target="_blank"} *(the `.7z` file)*
-* The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases)
-* The 11.4.0 / 11.5.0 / 11.6.0 (these versions all have the same FIRM version) `.firm` corresponding to **the target 3DS** (either "OLD" for Old 3DS, or "NEW" for New 3DS):
-  + <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [`2.54-0_11.4_OLD.firm`](magnet:?xt=urn:btih:0dd89d42ad711f770da899af05ee162ede0d0070&dn=2.54-0_11.4_OLD.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
-  + <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [`2.54-0_11.4_NEW.firm`](magnet:?xt=urn:btih:3b59dd43eec3edb133555f58d1180bfb196acbb4&dn=2.54-0_11.4_NEW.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* Két eszköz a 3DS családból
+  + **A forrás 3DS**: *a legfrissebb* boot9strap-et futtató készülék
+  + **A cél 3DS**: az a készülék, amely gyári állapotú, *11.6.0-s* rendszert futtat
+* Vásárolj, vagy már legyen meg egy kompatibilis DSiWare játék az eShop-ból a **forrás 3DS**-en
+  + Kalózmásolat **nem** fog működni
+  + A támogatott játékok listáját a [boot9strap telepítése (DSiWare játék-injektálás - támogatott játékok)](installing-boot9strap-(dsiware-game-injection-list)) oldalon találod
+* A régiódhoz megfelelő sudokuhax injekció `.zip` fájl:
+  + <i class="fa fa-magnet" aria-hidden="true" title="Ez egy mágneslink. A fájl letöltéséhez használj torrent klienst."></i> - [`DSiWare_usa_sudokuhax_injection.zip`](magnet:?xt=urn:btih:7ed7fee15c900ed02b5e2cb3c8e7a0363f4d9354&dn=DSiWare_usa_sudokuhax_injection.zip&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce)
+  + <i class="fa fa-magnet" aria-hidden="true" title="Ez egy mágneslink. A fájl letöltéséhez használj torrent klienst."></i> - [`DSiWare_eur_sudokuhax_injection.zip`](magnet:?xt=urn:btih:1542dd3c2bf7785b1e7a6dda3887fc8fb2710685&dn=DSiWare_eur_sudokuhax_injection.zip&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce)
+  + <i class="fa fa-magnet" aria-hidden="true" title="Ez egy mágneslink. A fájl letöltéséhez használj torrent klienst."></i> - [`DSiWare_jpn_4swordshax_injection.zip`](magnet:?xt=urn:btih:1bcc90c93da91c9876671f6218084207def90db9&dn=DSiWare_jpn_4swordshax_injection.zip&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce)
+* A [GodMode9](https://github.com/d0k3/GodMode9/releases/latest){:target="_blank"} legújabb kiadása
+* A [b9sTool](https://github.com/Plailect/b9sTool/releases/latest){:target="_blank"} legújabb kiadása
+* A [boot9strap](https://github.com/SciresM/boot9strap/releases/latest){:target="_blank"} legújabb kiadása *(a sima boot9strap; nem a `devkit` fájl, nem az `ntr` fájl)*
+* A [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest){:target="_blank"} legújabb kiadása *(a `.7z` fájl)*
+* A [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases) legújabb kiadása
+* A 11.4.0 / 11.5.0 / 11.6.0 verziójú (mindegyiknek egyforma a FIRM verziója) `.firm` aszerint, hogy a **cél 3DS** "OLD" vagy "NEW" típusú:
+  + <i class="fa fa-magnet" aria-hidden="true" title="Ez egy mágneslink. A fájl letöltéséhez használj torrent klienst."></i> - [`2.54-0_11.4_OLD.firm`](magnet:?xt=urn:btih:0dd89d42ad711f770da899af05ee162ede0d0070&dn=2.54-0_11.4_OLD.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+  + <i class="fa fa-magnet" aria-hidden="true" title="Ez egy mágneslink. A fájl letöltéséhez használj torrent klienst."></i> - [`2.54-0_11.4_NEW.firm`](magnet:?xt=urn:btih:3b59dd43eec3edb133555f58d1180bfb196acbb4&dn=2.54-0_11.4_NEW.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 
-### Instructions
+### Utasítások
 
-#### Section I - Prep Work
+#### Első rész - Előkészületek
 
-Use a [save manager](https://github.com/BernardoGiordano/Checkpoint/releases/latest){:target="_blank"} to backup any saves you care about on *the target 3DS* (it will be formatted!)
+Használj [mentéskezelőt](https://github.com/BernardoGiordano/Checkpoint/releases/latest){:target="_blank"} a *cél 3DS-en*, hogy biztonsági másolatot készíts azon játékok mentéséről, amik fontosak a számodra (az ugyanis formázva lesz!)
 {: .notice--warning}
 
-1. Power off **the source 3DS**
-1. Insert **the source 3DS**'s SD card into your computer
-1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on **the source 3DS**'s SD card
-1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of **the source 3DS**'s SD card
-1. Copy the `.app` and `savedata` folder from DSiWare injection `.zip` to the root of **the source 3DS**'s SD card
-1. Reinsert **the source 3DS**'s SD card
-1. Boot **the source 3DS** while holding (Start) to launch GodMode9
-1. Press (Home) to bring up the action menu
-1. Select "Scripts..."
-1. Select "Backup SysNAND"
-1. Press (A) to confirm
-  + This process will take some time
-1. Press (A) to continue
-1. Hold (R) and press (B) at the same time to eject **the source 3DS**'s SD card
-1. Put **the source 3DS**'s SD card into your computer
-1. Put **the target 3DS**'s SD card into your computer
-1. **Backup every file on both 3DS's SD cards to two separate folders on your computer (keep track of which is which)!**
-1. Reinsert each SD card back into their corresponding 3DS
-1. Press (Start) on **the source 3DS** to reboot
+1. Kapcsold ki a **forrás 3DS**-t
+1. Helyezd be a **forrás 3DS** SD kártyáját a számítógépbe
+1. Másold át a `GodMode9.firm` fájlt a GodMode9 `.zip`-ből a **cél 3DS** SD kártyájának `/luma/payloads/` mappájába
+1. Másold át a `gm9` mappát a GodMode9 `.zip`-ből a **forrás 3DS** SD kártyájának gyökerébe
+1. Másold át a `.app` és a `savedata` mappát a DSiWare injekció `.zip`-ből a **forrás 3DS** SD kártyájának gyökerébe
+1. Helyezd vissza az SD kártyát a **forrás 3DS**-be
+1. Kapcsold be a **forrás 3DS**-t, miközben lenyomva tartod a (Start) gombot, hogy elinduljon a GodMode9
+1. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
+1. Válaszd a "Scripts..." opciót
+1. Válaszd a "Backup SysNAND" opciót
+1. Nyomd meg az (A) gombot a megerősítéshez
+  + Ez a folyamat igénybe vesz majd némi időt
+1. Nyomd meg az (A) gombot a folytatáshoz
+1. Az **forrás 3DS** SD kártyájának leválasztásához az (R) gomb lenyomva tartása mellett nyomd meg a (B) gombot
+1. Helyezd be a **forrás 3DS** SD kártyáját a számítógépbe
+1. Helyezd be a **cél 3DS** SD kártyáját a számítógépbe
+1. **Készíts biztonsági mentést mindkét 3DS SD kártyájáról két különböző mappába a számítógépeden (tartsd számon, hogy melyik melyik)!**
+1. Helyezd vissza az SD kártyákat a nekik megfelelő 3DS készülékbe
+1. Nyomd meg a (Start) gombot a **forrás 3DS**-en az újraindításhoz
 
-#### Section II - Injecting the game and save
+#### Második rész - Játék és mentés injektálása
 
-1. Boot **the source 3DS** while holding (Start) to launch GodMode9
-1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
-1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
-  + Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
-1. Navigate to `[0:] SDCARD`
-1. Press (Y) on the DSiWare injection `.app` to copy it
-1. Press (B) to go back to the main menu
-1. Navigate to `SYSNAND TWLN` -> `title` -> `00030004` -> `(8 Character ID)`
-  + The 8 Character ID will be the one from the [Installing boot9strap (DSiWare Game Injection List)](installing-boot9strap-(dsiware-game-injection-list)) page
-1. Navigate to `content`
-1. Press (A) on the `.app` file in the folder
-1. Select "Inject data @offset"
-1. Press (A) to select the offset `00000000`
-1. Press (A) to unlock SysNAND writing, then input the key combo given
-1. Press (B) to go back to the main menu
-1. Navigate to `[2:] SYSNAND TWLN` -> `title` -> `00030004` -> `(8 Character ID)`
-  + The 8 Character ID will be the one from the [Installing boot9strap (DSiWare Game Injection List)](installing-boot9strap-(dsiware-game-injection-list)) page
-1. Navigate to `data`
-1. Press (A) on `public.sav`
-1. Select "Mount as FAT image"
-1. Press (B) to go back to the main menu
-1. Navigate to `[0:] SDCARD`
-1. Press (Y) on the file(s) in the `savedata` folder to copy them
-  + If there is a `savedata` folder inside of the `savedata` folder, it is not by mistake. You should copy the second `savedata` folder, not the files inside of that.
-1. Press (B) to go back to the main menu
-1. Navigate to `[7:] FAT IMAGE`
-1. Use the (X) button to delete everything inside of `FAT IMAGE`
-1. Press (Y) to paste a copy of **the contents of** the `savedata` folder to `FAT IMAGE`
-1. Select "Copy path(s)"
-1. Press (A) to unlock image writing, then input the key combo given
-1. Press (Start) to reboot **the source 3DS**
-1. Launch your DSiWare game on **the source 3DS**
-1. Tap the screen or press any button to start the game and test if the save is functional
-  + If your game has an error about `boot.nds` or a white screen, **then the exploit has been successful**
-  + If your game has an error about corrupted or inaccessible save data, confirm that you copied **the contents of** the `savedata` folder and not the `savedata` folder itself
-  + If your game behaves normally and does not give you an error about `boot.nds`, then you should stop and figure out what went wrong
-  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#dsi--ds-functionality-is-broken-after-completing-the-guide)
+1. Kapcsold be a **forrás 3DS**-t, miközben lenyomva tartod a (Start) gombot, hogy elinduljon a GodMode9
+1. Ha rákérdez arra, hogy csináljon-e egy biztonsági másolatot (essential files backup), akkor nyomd meg az (A) gombot, hogy csináljon, majd amikor végzett, nyomd meg ismét az (A) gombot a folytatáshoz
+1. Ha rákérdez arra, hogy szeretnéd-e a valós dátumot és időt javítani (fix the RTC date&time), nyomd meg az (A) gombot, állítsd be a helyes dátumot és időt, majd nyomd meg az (A) gombot a folytatáshoz
+  + Ne feledd, hogy amennyiben ezen a ponton szükséges volt a helyes dátum és idő beállítása, a System Settingsben is be kell majd állítanod a helyes időt az útmutató végén
+1. Menj ide: `[0:] SDCARD`
+1. Nyomd meg az (Y) gombot a DSiWare injekció `.app`-on, hogy kimásold
+1. Nyomd meg a (B) gombot, hogy visszamenj a főmenübe
+1. Kövesd az alábbi útvonalat: `SYSNAND TWLN` -> `title` -> `00030004` -> `(8 hosszú azonosító)`
+  + A "8 hosszú azonosító"-t megtalálod minden játékhoz a [boot9strap telepítése (DSiWare játék-injektálás - támogatott játékok)](installing-boot9strap-(dsiware-game-injection-list)) oldalon lévő táblázatban
+1. Válaszd a `content` mappát
+1. Nyomd meg az (A) gombot a `.app` fájlon ebben a mappában
+1. Válaszd az "Inject data @offset" opciót
+1. Nyomd meg az (A) gombot, hogy kiválaszd a `00000000` offsetet
+1. Nyomd meg az (A) gombot, hogy feloldd a SysNAND írást, majd sorban nyomd meg a kijelzett gombokat
+1. Nyomd meg a (B) gombot, hogy visszamenj a főmenübe
+1. Kövesd az alábbi útvonalat: `[2:] SYSNAND TWLN` -> `title` -> `00030004` -> `(8 hosszú azonosító)`
+  + A "8 hosszú azonosító"-t megtalálod minden játékhoz a [boot9strap telepítése (DSiWare játék-injektálás - támogatott játékok)](installing-boot9strap-(dsiware-game-injection-list)) oldalon lévő táblázatban
+1. Válaszd a `data` mappát
+1. Nyomd meg az (A)-t a `public.sav` fájlon
+1. Válaszd a "Mount as FAT image" opciót
+1. Nyomd meg a (B) gombot, hogy visszamenj a főmenübe
+1. Menj ide: `[0:] SDCARD`
+1. Nyomd meg az (Y) gombot, hogy kimásold a `savedata` mappában található fájl(oka)t
+  + Ha `savedata` nevű mappát látsz a `savedata` mappában, az nem hiba. Neked a második `savedata` mappát kell másolnod, nem a benne található fájlokat.
+1. Nyomd meg a (B) gombot, hogy visszamenj a főmenübe
+1. Menj ide: `[7:] FAT IMAGE`
+1. Használd az (X) gombot, hogy kitörölj mindent a `FAT IMAGE`-ből
+1. Nyomd meg az (Y) gombot, hogy beilleszd a `savedata` mappa **tartalmát** a `FAT IMAGE`-be
+1. Válaszd a "Copy path(s)" opciót
+1. Nyomd meg az (A) gombot, hogy feloldd a képfájl írást, majd sorban nyomd meg a kijelzett gombokat
+1. Nyomd meg a (Start)-ot a **forrás 3DS** újraindításához
+1. Indítsd el a DSiWare játékot a **forrás 3DS**-en
+1. Érintsd meg a képernyőt, vagy nyomj meg egy gombot a játék elindításához, majd nézd meg, hogy működik-e a mentés
+  + Ha játék a `boot.nds`-sel kapcsolatos hibát ad, vagy fehér képernyőt, **az exploit sikeres volt**
+  + Ha a játék sérült vagy hozzáférhetetlen mentésről szóló hibát ad (corrupted or inaccessible save data), győződj meg róla, hogy a `savedata` mappa **tartalmát** másoltad, nem magát a mappát
+  + Ha a játék szokványos módon viselkedik, és nem ad hibát a `boot.nds`-sel kapcsolatban, akkor ezen a ponton meg kell állnod, hogy megkeresd, mit rontottál el
+  + Ha fekete képernyőt kapsz, [nézd át a hibaelhárítási útmutatót](troubleshooting#dsi--ds-functionality-is-broken-after-completing-the-guide)
 
-#### Section III - System Transfer
+#### Harmadik rész - System Transfer
 
-1. If **the target 3DS** has a Nintendo Network ID on it, you must format the device using System Settings:
-  + Go to the last page of "Other Settings" and select "Format System Memory", then follow all instructions
-1. Read the following:
-  + Your CFW 3DS = the source 3DS = "Source System"
-  + Your Stock 3DS = the target 3DS = "Target System"
-  + **Move DSiWare titles if prompted!**
-  + Do **NOT** delete the source system's SD card contents if prompted
-  + Make sure neither device's battery dies during the transfer
-  + **Old 3DS or Old 2DS (source) to New 3DS or New 2DS (target) only**: if asked which method you wish to use to transfer the SD card data:
-    + **Do NOT** choose the "Low-Capacity microSD Card Transfer" or minimal option (option 2), it will only transfer tickets and likely will not transfer the DSiWare save.
-    + Fast Method: If you have the ability to move the data from the SD card (source) to the microSD card (target), when prompted use the "PC-Based Transfer" option (option 3).
-    + Slowest Method: If you don't have the ability to move the data on a PC use the **full** "Wireless Transfer" option (option 1).
-1. Go to [this link](http://en-americas-support.nintendo.com/app/answers/detail/a_id/227/) and follow Nintendo's official instructions for System Transferring from one system to another while keeping in mind what you just read
+1. Ha a **cél 3DS** rendelkezik Nintendo Network ID-vel, formáznod kell a készüléket a System Settings segítségével:
+  + Menj az "Other Settings" utolsó oldalára, válaszd a "Format System Memory" opciót, majd kövesd az utasításait
+1. Olvasd el a következőket:
+  + A CFW-t futattó 3DS-ed = a forrás 3DS = "Source System"
+  + A gyári állapotú 3DS-ed = a cél 3DS = "Target System"
+  + **Válaszd a DSiWare-ek mozgatását (move DSiWare titles), ha kérdezi!**
+  + *NE* engedd, hogy törölje a forrás eszköz SD kártyáját (delete SD card contents), ha kérdezi
+  + Bizonyosodj meg róla, hogy egyik készülék sem merül le az átvitel közben
+  + **A következők csak Old 3DS-ről vagy Old 2DS-ről New 3DS-re vagy New 2DS-re való költöztetés esetén érvényesek**: ha kérdezi, melyik módszerrel szeretnéd az SD kártya adatait másolni:
+    + **NE** válaszd a "Low-Capacity microSD Card Transfer" vagy minimális opciót (második opció), az ugyanis csak a ticketeket másolja, a DSiWare mentéseket valószínűleg nem.
+    + Gyors módszer: ha lehetőséged van arra, hogy az adatot a forrás SD kártyáról kézileg a cél microSD kártyára másold, válaszd a "PC-Based Transfer" opciót (harmadik opció), amikor kérdezi.
+    + Leglassabb módszer: ha nincs lehetőséged számítógép segítségével átmásolni az adatokat, válaszd a **teljes** "Wireless Transfer" opciót (első opció).
+1. Látogasd meg [ezt az oldalt](http://en-americas-support.nintendo.com/app/answers/detail/a_id/227/), és kövesd a Nintendo hivatalos útmutatóját a System Transferről, miközben észben tartod az előbb leírtakat
 
-#### Section IV - Restoring the source 3DS
+#### Negyedik rész - A forrás 3DS visszaállítása
 
-1. On **the source 3DS**, complete initial setup
-1. Do one of the following
-    + Do the rest of the sections and then the full guide on **the target 3DS**, then wait one week *(do not restore your NAND backup before system transferring)*, then System Transfer from **the target 3DS** back to **the source 3DS** *(remember you cannot transfer back from a New 3DS or New 2DS to an Old 3DS or Old 2DS)*
-    + Call Nintendo and tell them you no longer have access to the device that your NNID is linked to (which is **the target 3DS** in this case), and would like it linked to a different device (which is **the source 3DS** in this case)
-    + You can also just [remove the NNID](https://3ds.guide/troubleshooting#removing-an-nnid-without-formatting-your-device) from **the source 3DS** if you'd prefer it remain on **the target 3DS**
-1. Reboot **the source 3DS** while holding (Start) to launch GodMode9
-1. Navigate to `[0:] SDCARD` -> `gm9` -> `out`
-1. Press (A) on `<date>_<serialnumber>_sysnand_###.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
-1. Press (A) to unlock SysNAND overwriting, then input the key combo given
-  + This will not overwrite your boot9strap installation
-1. Input the key combo given to unlock SysNAND (lvl1) writing
-  + This process will take some time
-1. Once it has completed, press (A) to continue
-1. Press (A) to relock write permissions if prompted
-1. Press (Start) to reboot **the source 3DS**
+1. A **forrás 3DS**-en végezd el a kezdeti beállítást
+1. Hajtsd végre az alábbiak egyikét
+    + Kövesd a hátra lévő részeket, majd a teljes útmutatót a **cél 3DS**-en, majd várj egy hetet *(ne állítsd vissza a NAND mentésedet a System Transfer előtt)*, aztán végezz System Transfert a **cél 3DS**-ről a **forrás 3DS**-re *(de ne feledd, hogy a System Transfer nem működik New 3DS-ről vagy New 2DS-ről Old 3DS vagy Old 2DS irányába)*
+    + Hívd fel a Nintendót, és mondd el nekik, hogy már nem férsz hozzá ahhoz a készülékhez, amihez az NNID-d rendelve van (ami a **cél 3DS** ebben az esetben), és szeretnéd egy másik eszközhöz hozzárendelni (ami a **forrás 3DS** ebben az esetben)
+    + Lehetőséged van egyszerűen csak [törölni az NNID-t](https://3ds.guide/troubleshooting#removing-an-nnid-without-formatting-your-device) a **forrás 3DS**-ről, ha szeretnéd, hogy az a **cél 3DS**-en maradjon
+1. Indítsd újra a **forrás 3DS**-t, és indítás közben tartsd lenyomva a (Start) gombot, hogy elinduljon a GodMode9
+1. Menj ide: `[0:] SDCARD` -> `gm9` -> `out`
+1. Nyomd meg az (A) gombot a `<dátum>_<sorozatszám>_sysnand_###.bin` fájlon, hogy kijelöld, majd válaszd a "NAND image options...", aztán a "Restore SysNAND (safe)" opciót
+1. Nyomd meg az (A) gombot, hogy feloldd a SysNAND felülírást, majd sorban nyomd meg a kijelzett gombokat
+  + Ez nem fogja felülírni a boot9strap installációdat
+1. Nyomd meg a kijelzett gombokat sorban, hogy feloldd a SysNAND (lvl1) írást
+  + Ez a folyamat igénybe vesz majd némi időt
+1. Amint ez elkészült, nyomd meg az (A) gombot a folytatáshoz
+1. Nyomd meg az (A) gombot az írási engedélyek visszavonásához
+1. Nyomd meg a (Start)-ot a **forrás 3DS** újraindításához
 
-#### Section V - Backing up the target 3DS's FIRM
+#### Ötödik rész - A cél 3DS FIRM-jének biztonsági mentése
 
-1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card
-1. Copy `boot.nds` (B9STool) to the root of **the target 3DS**'s SD card
-1. Copy `boot.3dsx` to the root of **the target 3DS**'s SD card
-1. Create a folder named `boot9strap` on the root of **the target 3DS**'s SD card
-1. Copy the 11.4.0 / 11.5.0 / 11.6.0 `.firm` corresponding to **the target 3DS** to the `boot9strap` folder on the root of **the target 3DS**'s SD card
-1. Copy `boot9strap.firm` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
-1. Launch b9sTool by starting your DSiWare game on **the target 3DS**
-1. Select "Dump F0F1" to backup **the target 3DS**'s FIRM
-1. Exit b9sTool
-  + You may have to force power off by holding the power button
-1. Put your SD card in your computer, then copy `F0F1_NEW3DS.bin` or `F0F1_OLD3DS.bin` (depending on your device) from the `boot9strap` folder to a safe location; make backups in multiple locations; this backup will save you from a brick if anything goes wrong
-1. Reinsert your SD card into **the target 3DS**
+1. Másold át a `boot.firm` fájlt a Luma3DS `.7z`-ből az SD kártya gyökerébe
+1. Másold a `boot.nds` (B9STool) fájlt a **cél 3DS** SD kártyájának gyökerébe
+1. Másold a `boot.3dsx` fájlt a **cél 3DS** SD kártyájának gyökerébe
+1. Hozz létre egy mappát `boot9strap` néven a **cél 3DS** SD kártyájának gyökerében
+1. Másold a **cél 3DS**-nek megfelelő 11.4.0-s / 11.5.0-s / 11.6.0-s `.firm` fájlt a **cél 3DS** SD kártyáján található `boot9strap` mappába
+1. Másold át a `boot9strap.firm` fájlt a boot9strap `.zip` fájlból az SD kártyád `/boot9strap/` mappájába
+1. Indítsd el a b9sTool-t a megfelelő DSiWare játék elindításával a **cél 3DS**-en
+1. Válaszd a "Dump F0F1" lehetőséget, hogy biztonsági mentést készíts a **cél 3DS** FIRM-jéről
+1. Lépj ki a b9sTool-ból
+  + Elképzelhető, hogy kényszerítened kell a leállást a bekapcsológomb lenyomva tartásával
+1. Helyezd az SD kártyádat a számítógépbe, majd másold az `F0F1_NEW3DS.bin` vagy az `F0F1_OLD3DS.bin` fájlt (a készüléked típusától függően) a `boot9strap` mappából egy biztonságos helyre; tarts több helyen is másolatot belőle; ez a másolat menthet meg egy brickelődéstől, ha bármi balul ütne ki
+1. Tedd vissza az SD kártyád a **cél 3DS**-be
 
-#### Section VI - Flashing the target 3DS's FIRM
+#### Hatodik rész - A cél 3DS FIRM-jének flashelése
 
-**Do NOT use b9sTool on a device that already has arm9loaderhax installed or you will BRICK!**
+** NE használd a b9sTool-t olyan eszközön, amire az arm9loaderhax már telepítve van, különben BRICKELNI fogod!**
 {: .notice--danger}
 
-1. Launch b9sTool by starting your DSiWare game on **the target 3DS**
-1. Select "Install boot9strap" and confirm
-1. Exit b9sTool, then power off your device
-  + You may have to force power off by holding the power button
+1. Indítsd el a b9sTool-t a megfelelő DSiWare játék elindításával a **cél 3DS**-en
+1. Válaszd az "Install boot9strap" opciót, majd erősítsd meg
+1. Lépj ki a b9sTool-ból, majd kapcsold ki a készülékedet
+  + Elképzelhető, hogy kényszerítened kell a leállást a bekapcsológomb lenyomva tartásával
 
-#### Section VII - Configuring Luma3DS
+#### Hetedik rész - Luma3DS konfigurálása
 
-1. Boot your device while holding (Select) to launch the Luma configuration menu
-1. Use the (A) button and the D-Pad to turn on the following:    
+1. Indítsd el a készülékedet a (Select) lenyomva tartásával, hogy megjelenjen a Luma konfigurációs menüje
+1. Használd az (A) gombot és D-Pad-et a következő engedélyezéséhez:    
   + **"Show NAND or user string in System Settings"**
-  + In some cases it may already be configured. If so, proceed to the next step
-1. Press (Start) to save and reboot
-  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
+  + Néhány esetben lehetséges, hogy ez már konfigurálva van. Ebben az esetben folytasd a következő lépéssel
+1. Mentéshez és újraindításhoz nyomd meg a (Start) gombot
+  + Ha fekete képernyőt kapsz, [nézd át a hibaelhárítási útmutatót](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 
 ___
 
-Continue to [Finalizing Setup](finalizing-setup)
+Tovább a [telepítés véglegesítésére](finalizing-setup)
 {: .notice--primary}
