@@ -1,28 +1,28 @@
 ---
-title: "Installing boot9strap (Hardmod)"
+title: "boot9strap telepítése (Hardmod)"
 ---
 
-{% include toc title="Table of Contents" %}
+{% include toc title="Tartalomjegyzék" %}
 
-An excellent guide to getting a hardmod can be found [here](https://gbatemp.net/threads/414498/). If you are on a New 3DS, read [this](https://github.com/Plailect/Guide/issues/681) and [this](https://github.com/Plailect/Guide/issues/1185) before hardmodding.
+[Itt](https://gbatemp.net/threads/414498/) található egy kiváló útmutató arról, hogyan hajtsd végre a hardmodot (hardveres módosítást). Ha New 3DS készülékkel rendelkezel, olvasd el [ezt](https://github.com/Plailect/Guide/issues/681) és [ezt](https://github.com/Plailect/Guide/issues/1185), mielőtt belekezdenél a hardmodba.
 
-This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+Ez egy jelenleg működő megvalósítása a "FIRM partitions known-plaintext" néven ismert exploitnak, amiről részletesebben olvashatsz [itt](https://www.3dbrew.org/wiki/3DS_System_Flaws).
 
-To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download).
+Ahhoz, hogy használhasd a [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) linkeket ezen az oldalon, szükséged lesz egy torrent kliensre, mint például a [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
-This will work on New 3DS, New 2DS, Old 3DS, and Old 2DS on *all* versions that you have a corresponding `.firm` for.
+Ez működni fog a New 3DS, a New 2DS, az Old 3DS, és az Old 2DS konzolok *összes* olyan verzióján, amihez rendelkezel a megfelelő `.firm` fájllal.
 
-### What you need
+### Amire szükséged lesz
 
-* Your NAND image extracted using your [hardmod](https://gbatemp.net/threads/414498/)
-* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest){:target="_blank"} *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
-* The latest version of [hardmod-b9s-installer](https://github.com/ihaveamac/hardmod-b9s-installer/releases/latest){:target="_blank"}
-  + Windows users can use the compiled `.exe`, while Mac and Linux users will need to have [Python 3](https://www.python.org/downloads/) installed to run the `.py`
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest){:target="_blank"} *(the `.7z` file)*
-* The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases)
-* The `.firm` corresponding to your device and version:
+* A NAND-odról készített képfájl, amit a [hardmod](https://gbatemp.net/threads/414498/) nyersz ki a konzolból
+* A [boot9strap](https://github.com/SciresM/boot9strap/releases/latest){:target="_blank"} legújabb kiadása *(a sima boot9strap; nem a `devkit` fájl, nem az `ntr` fájl)*
+* A [hardmod-b9s-installer](https://github.com/ihaveamac/hardmod-b9s-installer/releases/latest){:target="_blank"} legújabb kiadása
+  + A Windows felhasználók használhatják az előre összeállított `.exe`-t, míg a Mac és Linux felhasználóknak [Python 3](https://www.python.org/downloads/)-ra lesz szükségük, hogy futtatni tudják a mellékelt `.py` szkriptet
+* A [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest){:target="_blank"} legújabb kiadása *(a `.7z` fájl)*
+* A [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases) legújabb kiadása
+* A készülékednek és a verziójának megfelelő `.firm`:
 
-| Version(s) | Kernel | Old 3DS or Old 2DS | New 3DS or New 2DS |
+| Verzió(k) | Kernel | Old 3DS vagy Old 2DS | New 3DS vagy New 2DS |
 |-|-|:-:|:-:|
 | 1.0.0 | 2.27-0 | [`2.27-0_1.0_OLD.firm`](magnet:?xt=urn:btih:5c86edc67a1827991567b3c326a4182b66647d07&dn=2.27-0_1.0_OLD.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce) | - |
 | 1.1.0 | 2.28-0 | [`2.28-0_1.1_OLD.firm`](magnet:?xt=urn:btih:7c7696ff18e7d83a638b9c80f83052f763fb0fa5&dn=2.28-0_1.1_OLD.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce) | - |
@@ -52,36 +52,36 @@ This will work on New 3DS, New 2DS, Old 3DS, and Old 2DS on *all* versions that 
 | 11.3.0 | 2.53-0 | [`2.53-0_11.3_OLD.firm`](magnet:?xt=urn:btih:9d8d62c50b0ef1ad35b5e62602f21fac773171ce&dn=2.53-0_11.3_OLD.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce) | [`2.53-0_11.3_NEW.firm`](magnet:?xt=urn:btih:53363ab66f877d9edf33f55e6abc3ccf72819191&dn=2.53-0_11.3_NEW.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce) |
 | 11.4.0 - 11.6.0 | 2.54-0 | [`2.54-0_11.4_OLD.firm`](magnet:?xt=urn:btih:0dd89d42ad711f770da899af05ee162ede0d0070&dn=2.54-0_11.4_OLD.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce) | [`2.54-0_11.4_NEW.firm`](magnet:?xt=urn:btih:3b59dd43eec3edb133555f58d1180bfb196acbb4&dn=2.54-0_11.4_NEW.firm&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce) |
 
-### Instructions
+### Utasítások
 
-#### Section I - Prep Work
+#### Első rész - Előkészületek
 
-1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card
-1. Copy `boot.3dsx` to the root of your SD card
-1. Copy the hardmod-b9s-installer folder from the hardmod-b9s-installer `.zip` to your computer
-1. Copy your downloaded `.firm` to the hardmod-b9s-installer folder on your computer
-1. Rename your downloaded `.firm` in the hardmod-b9s-installer folder on your computer to `current.firm`
-1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the hardmod-b9s-installer folder on your computer
-1. Copy your NAND dump (from your hardmod) to the hardmod-b9s-installer folder on your computer and name it `NAND.bin`
+1. Másold át a `boot.firm` fájlt a Luma3DS `.7z`-ből az SD kártya gyökerébe
+1. Másold az `boot.3dsx` fájlt az SD kártyád gyökerébe
+1. Csomagold ki a hardmod-b9s-installer mappát a hardmod-b9s-installer `.zip`-ből
+1. Másold az előbbiekben letöltött `.firm` fájlt a kicsomagolt hardmod-b9s-installer mappába
+1. Nevezd át a hardmod-b9s-installer mappában található `.firm` fájlt `current.firm` névre
+1. Másold át a `boot9strap.firm` fájlt és a `boot9strap.firm.sha` fájlt a boot9strap `.zip` fájlból a hardmod-b9s-installer mappába
+1. Másold át a NAND-odról készült képfájlt (a hardmododból) a hardmod-b9s-installer mappába és nevezd át `NAND.bin` névre
 
-#### Section II - Installing boot9strap
+#### Második rész - boot9strap telepítése
 
-1. Run hardmod-b9s-installer
-  + Windows Users: Run `install-b9s.exe`
-  + Mac and Linux Users: Run `install-b9s.py`
-1. Flash your outputted `NAND-patched.bin` to your device with your hardmod
-1. Reboot your device
+1. Futtasd a hardmod-b9s-installer-t
+  + Windows felhasználóknak: Futtasd az `install-b9s.exe` fájlt
+  + Mac és Linux felhasználóknak: Futtasd az `install-b9s.py` fájlt
+1. Flasheld rá az így elkészített `NAND-patched.bin` fájlt a készülékedre a hardmodod segítségével
+1. Indítsd újra a készüléked
 
-#### Section III - Configuring Luma3DS
+#### Harmadik rész - Luma3DS konfigurálása
 
-1. Your device should have booted into the Luma3DS configuration menu
-  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
-1. Use the (A) button and the D-Pad to turn on the following:    
+1. A készülékednek az előzőekben a Luma3DS-be kellett bootolnia
+  + Ha fekete képernyőt kapsz, [nézd át a hibaelhárítási útmutatót](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
+1. Használd az (A) gombot és D-Pad-et a következő engedélyezéséhez:    
   + **"Show NAND or user string in System Settings"**
-1. Press (Start) to save and reboot
-  + If you get an error, just continue the next page
+1. Mentéshez és újraindításhoz nyomd meg a (Start) gombot
+  + Ha ezen a ponton hibát kapsz, csak folytasd az útmutatót a következő oldalon
 
 ___
 
-Continue to [Finalizing Setup](finalizing-setup)
+Tovább a [telepítés véglegesítésére](finalizing-setup)
 {: .notice--primary}
