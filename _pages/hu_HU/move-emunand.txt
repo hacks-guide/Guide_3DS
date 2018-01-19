@@ -1,168 +1,168 @@
 ---
-title: "Move EmuNAND"
+title: "EmuNAND költöztetése"
 ---
 
-{% include toc title="Table of Contents" %}
+{% include toc title="Tartalomjegyzék" %}
 
-This is an add-on section for moving the contents of a previous EmuNAND to your new SysNAND CFW, then removing the old EmuNAND partition. Note that the terms EmuNAND and RedNAND refer to slightly different implementations of [the same concept](http://3dbrew.org/wiki/NAND_Redirection).
+Ez egy kiegészítő rész, amelyben egy korábbi EmuNAND tartalmát fogjuk átvinni az új SysNAND CFW-re, majd töröljük a régi EmuNAND partíciót. Jó, ha tudod, hogy az EmuNAND és a RedNAND fogalmak [ugyanazon koncepció](http://3dbrew.org/wiki/NAND_Redirection) két, kicsiben különböző megvalósítását jelentik.
 
-Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions.
+Vedd figyelembe, hogy amennyiben van más payload fájl a `GodMode9.firm` fájlon kívül a `/luma/payloads/`mappában, indításkor a (Start) gombot lenyomva tartva a "chainloader menu" menü fog megjelenni. Itt a D-Pad és az (A) gomb segítségével válaszd a "GodMode9" opciót, hogy az alábbi utasításokat követhesd.
 
-You MUST have already installed Luma3DS and boot9strap to use this.
+Az alábbiak használatához már telepítened kellett a következőket: Luma3DS és boot9strap.
 {: .notice--danger}
 
-### What you need
+### Amire szükséged lesz
 
-* An existing EmuNAND
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest){:target="_blank"}
-* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest){:target="_blank"}
+* Egy létező EmuNAND
+* A [GodMode9](https://github.com/d0k3/GodMode9/releases/latest){:target="_blank"} legújabb kiadása
+* Az [FBI](https://github.com/Steveice10/FBI/releases/latest){:target="_blank"} legújabb kiadása
 
-### Instructions
+### Utasítások
 
-#### Section I - Prep Work
+#### Első rész - Előkészületek
 
-1. Power off your device
-1. Insert your SD card into your computer
-1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
-1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
-1. Reinsert your SD card into your device
+1. Kapcsold ki a készüléked
+1. Helyezd az SD kártyád a számítógépbe
+1. Másold át a `GodMode9.firm` fájlt a GodMode9 `.zip`-ből az SD kártyád `/luma/payloads/` mappájába
+1. Másold át a `gm9` mappát a GodMode9 `.zip`-ből az SD kártyád gyökerébe
+1. Tedd vissza az SD kártyád a készülékedbe
 
-#### Section II - Backup SysNAND DSiWare Saves
+#### Második rész - DSiWare mentések kimásolása a SysNAND-ról
 
-If you do not have any DSiWare games or saves that you care about, skip this section.
+Ha nincs egy DSiWare játékod vagy mentésed sem, ami fontos lenne számodra, akkor hagyd ki ezt a részt.
 {: .notice--info}
 
-1. Launch GodMode9 by holding (Start) during boot
-1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
-1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
-  + Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
-1. Navigate to `[2:] SYSNAND TWLN` -> `title`
-1. Hold (R) and press (A) at the same time on `00030004` to select the folder, then select "Copy to 0:/gm9/out"
-  + This process may take some time if you have many DSiWare games
-1. Press (B) twice to return to the main menu
+1. Indítsd el a GodMode9-et a (Start) lenyomva tartásával boot közben
+1. Ha rákérdez arra, hogy csináljon-e egy biztonsági másolatot (essential files backup), akkor nyomd meg az (A) gombot, hogy csináljon, majd amikor végzett, nyomd meg ismét az (A) gombot a folytatáshoz
+1. Ha rákérdez arra, hogy szeretnéd-e a valós dátumot és időt javítani (fix the RTC date&time), nyomd meg az (A) gombot, állítsd be a helyes dátumot és időt, majd nyomd meg az (A) gombot a folytatáshoz
+  + Ne feledd, hogy amennyiben ezen a ponton szükséges volt a helyes dátum és idő beállítása, a System Settingsben is be kell majd állítanod a helyes időt az útmutató végén
+1. Menj ide: `[2:] SYSNAND TWLN` -> `title`
+1. Tartsd lenyomva az (R) gombot, és közben nyomd le az (A)-t a `00030004` mappán, hogy kijelöld, majd válaszd a "Copy to 0:/gm9/out" opciót
+  + Ez a folyamat eltarthat egy kis ideig, ha sok DSiWare játékod van
+1. Nyomd meg a (B) gombot kétszer, hogy visszamenj a főmenübe
 
-#### Section III - Backup GBA VC Saves
+#### Harmadik rész - GBA VC mentések kimásolása
 
-If you do not have any GBA VC games or saves that you care about, skip this section.
+Ha nincs egy GBA VC játékod vagy mentésed sem, ami fontos lenne számodra, akkor hagyd ki ezt a részt.
 {: .notice--info}
 
-Note that this is not necessary for any other kind of Virtual Console games (GBC, NES, etc)
+Vedd figyelembe, hogy a következő folyamatot szükségtelen végrehajtani bármi más Virtual Console játék esetében (GBC, NES, stb.)
 {: .notice--info}
 
-The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
+A játék az SD kártyád `/gm9/out/` mappájába kerül kimentésre `<TitleID>.gbavc.sav` néven.
 {: .notice--info}
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
+Egy `<TitleID>.gbavc.sav` fájl Title ID-jének azonosításához használhatod a Title ID-k listáját, amit a következőképp érhetsz el: menj a `[A:] SYSNAND SD` opcióra, tartsd lenyomva az (R)-t, és nyomd meg az (A)-t, majd válaszd a "Search for titles" opciót.
 {: .notice--info}
 
-1. Do the following process for each GBA VC game that you want to backup the save for:
-  + Launch the GBA VC game
-  + Exit the GBA VC game
-  + Boot your device while holding (Start) to launch the Luma3DS chainloader menu
-  + Launch GodMode9 by pressing (A)
-  + Navigate to `[S:] SYSNAND VIRTUAL`
-  + Press (A) on `agbsave.bin` to select it
-  + Select "AGBSAVE options..."
-  + Select "Dump GBA VC save"
-  + Press (A) to continue
-  + Press (Start) to reboot your device
+1. Csináld végig az alábbi lépéseket minden egyes GBA VC játékhoz, aminek a mentését másolni szeretnéd:
+  + Indítsd el az adott GBA VC játékot
+  + Lépj ki belőle
+  + Indítsd el a készülékedet a (Start) lenyomva tartásával, hogy megjelenjen a Luma3DS chainloader menü
+  + Indítsd el a GodMode9-et az a (A) gomb megnyomásával
+  + Menj ide: `[S:] SYSNAND VIRTUAL`
+  + Nyomd meg az (A) gombot a `agbsave.bin` fájlon, hogy kijelöld
+  + Válaszd az "AGBSAVE options..." opciót
+  + Válaszd a "Dump GBA VC save" opciót
+  + Nyomd meg az (A) gombot a folytatáshoz
+  + Nyomd meg a (Start) gombot az eszköz újraindításához
 
-#### Section IV - Copy EmuNAND to SysNAND
+#### Negyedik rész - EmuNAND másolása a SysNAND-ba
 
-1. Launch GodMode9 by holding (Start) during boot
-1. Navigate to `[E:] EMUNAND VIRTUAL`
-1. Press (A) on `nand.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
-1. Press (A) to unlock SysNAND overwriting, then input the key combo given
-  + This will not overwrite your boot9strap installation
-1. Input the key combo given to unlock SysNAND (lvl1) writing
-  + This process will take some time
-1. Once it has completed, press (A) to continue
-1. Press (B) to decline relocking write permissions if prompted
-1. Press (B) to return to the main menu
+1. Indítsd el a GodMode9-et a (Start) lenyomva tartásával boot közben
+1. Menj ide: `[E:] EMUNAND VIRTUAL`
+1. Nyomd meg az (A) gombot, amikor a `nand.bin` van kijelölve, hogy kiválaszd, majd válaszd a "NAND image options..." opciót, utána pedig a "Restore SysNAND (safe)" lehetőséget
+1. Nyomd meg az (A) gombot, hogy feloldd a SysNAND felülírást, majd sorban nyomd meg a kijelzett gombokat
+  + Ez nem fogja felülírni a boot9strap installációdat
+1. Nyomd meg a kijelzett gombokat sorban, hogy feloldd a SysNAND (lvl1) írást
+  + Ez a folyamat igénybe vesz majd némi időt
+1. Amint ez elkészült, nyomd meg az (A) gombot a folytatáshoz
+1. Nyomd meg a (B) gombot, hogy elutasítsd az írási engedélyek visszavonását, ha kérdezi
+1. Nyomd meg a (B) gombot, hogy visszamenj a főmenübe
 
-#### Section V - Restore DSiWare Saves
+#### Ötödik rész - DSiWare mentések visszaállítása
 
-If you did not backup DSiWare Saves earlier, skip this section.
+Ha korábban nem másoltál ki egy DSiWare mentést sem, hagyd ki ezt a részt.
 {: .notice--info}
 
-1. Navigate to `[0:] SDCARD` -> `gm9` -> `out`
-1. Press (Y) on the `00030004` folder to copy it
-1. Press (B) twice to return to the main menu
-1. Navigate to `[2:] SYSNAND TWLN` -> `title`
-1. Press (Y) to paste the `00030004` folder
-1. Select "Copy path(s)"
-1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
-1. Select "Overwrite file(s)"
-  + This process may take some time if you have many DSiWare games
-1. Press (B) to decline relocking write permissions if prompted
-1. Press (B) twice to return to the main menu
+1. Menj ide: `[0:] SDCARD` -> `gm9` -> `out`
+1. Nyomd meg az (Y)-t a `00030004` mappán, hogy kimásold
+1. Nyomd meg a (B) gombot kétszer, hogy visszamenj a főmenübe
+1. Menj ide: `[2:] SYSNAND TWLN` -> `title`
+1. Nyomd meg az (Y) gombot, hogy beilleszd a `00030004` mappát
+1. Válaszd a "Copy path(s)" opciót
+1. Nyomd meg az (A) gombot, hogy feloldd a SysNAND (lvl1) írást, majd sorban nyomd meg a kijelzett gombokat
+1. Válaszd az "Overwrite file(s)" opciót
+  + Ez a folyamat eltarthat egy kis ideig, ha sok DSiWare játékod van
+1. Nyomd meg a (B) gombot, hogy elutasítsd az írási engedélyek visszavonását, ha kérdezi
+1. Nyomd meg a (B) gombot kétszer, hogy visszamenj a főmenübe
 
-#### Section VI - Restore GBA VC Saves
+#### Hatodik rész - GBA VC mentések visszaállítása
 
-If you did not backup GBA VC Saves earlier, skip this section.
+Ha korábban nem másoltál ki egy GBA VC mentést sem, hagyd ki ezt a részt.
 {: .notice--info}
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by holding (R) and pressing (A) on the GodeMode9 main menu, then selecting "Search for titles".
+Egy `<TitleID>.gbavc.sav` fájl Title ID-jének azonosításához használhatod a Title ID-k listáját, amit a következőképp érhetsz el: GodeMode9 főmenüjében tartsd lenyomva az (R)-t, és nyomd meg az (A)-t, majd válaszd a "Search for titles" opciót.
 {: .notice--info}
 
-1. Hold (R) and press (Start) at the same time to power off your device
-1. Power on your device into SysNAND
-1. Do the following process for each GBA VC game that you want to restore the save for:
-  + Launch the GBA VC game
-  + Exit the GBA VC game
-  + Boot your device while holding (Start) to launch the Luma3DS chainloader menu
-  + Launch GodMode9 by pressing (A)
-  + Navigate to `[0:] SDCARD` -> `gm9`
-  + Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
-  + Press (B) to return to the main menu
-  + Navigate to `[S:] SYSNAND VIRTUAL`
-  + Press (A) on `agbsave.bin` to select it
-  + Select "AGBSAVE options..."
-  + Select "Inject GBA VC save"
-  + Press (A) to continue
-  + Press (Start) to reboot your device
-  + Launch the GBA VC game
-  + Exit the GBA VC game
-1. Launch GodMode9 by holding (Start) during boot
+1. Az (R) lenyomva tartása közben nyomd meg a (Start) gombot a készüléked kikapcsolásához
+1. Kapcsold be a készülékedet, a SysNAND induljon el
+1. Csináld végig az alábbi lépéseket minden egyes GBA VC játékhoz, aminek a mentését vissza akarod állítani:
+  + Indítsd el az adott GBA VC játékot
+  + Lépj ki belőle
+  + Indítsd el a készülékedet a (Start) lenyomva tartásával, hogy megjelenjen a Luma3DS chainloader menü
+  + Indítsd el a GodMode9-et az a (A) gomb megnyomásával
+  + Menj ide: `[0:] SDCARD` -> `gm9`
+  + Nyomd meg az (Y) gombot a visszaállítani kívánt `<TitleID>.gbavc.sav` fájlon, hogy kimásold
+  + Nyomd meg a (B) gombot, hogy visszamenj a főmenübe
+  + Menj ide: `[S:] SYSNAND VIRTUAL`
+  + Nyomd meg az (A) gombot a `agbsave.bin` fájlon, hogy kijelöld
+  + Válaszd az "AGBSAVE options..." opciót
+  + Válaszd az "Inject GBA VC save" opciót
+  + Nyomd meg az (A) gombot a folytatáshoz
+  + Nyomd meg a (Start) gombot az eszköz újraindításához
+  + Indítsd el az adott GBA VC játékot
+  + Lépj ki belőle
+1. Indítsd el a GodMode9-et a (Start) lenyomva tartásával boot közben
 
-#### Section VII - Backup SysNAND
+#### Hetedik rész - SysNAND biztonsági mentése
 
-1. Press (Home) to bring up the action menu
-1. Select "Scripts..."
-1. Select "Backup SysNAND"
-1. Press (A) to confirm
-  + This process will take some time
-1. Press (A) to continue
-1. Hold (R) and press (B) at the same time to eject your SD card
-1. Insert your SD card into your computer
-1. Copy `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
-  + Make backups in multiple locations (such as online file storage)
-  + This backup will save you from a brick if anything goes wrong in the future
-1. Delete `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card after copying it
-1. **Backup every file on your SD card to a folder on your computer; all files will be deleted in the following steps**
+1. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
+1. Válaszd a "Scripts..." opciót
+1. Válaszd a "Backup SysNAND" opciót
+1. Nyomd meg az (A) gombot a megerősítéshez
+  + Ez a folyamat igénybe vesz majd némi időt
+1. Nyomd meg az (A) gombot a folytatáshoz
+1. Az SD kártya leválasztásához az (R) gomb lenyomva tartása mellett nyomd meg a (B) gombot
+1. Helyezd az SD kártyád a számítógépbe
+1. Másold a `<dátum>_<sorozatszám>_sysnand_###.bin` fájlt az SD kártyád `/gm9/out/` mappájából valami biztonságos helyre a számítógépeden
+  + Tarts belőle biztonsági másolatokat több különböző helyen is (például online tárhelyen)
+  + Ez a biztonsági másolat menthet meg egy esetleges brickeléstől, ha valami balul ütne ki a jövőben
+1. Töröld a `<dátum>_<sorozatszám>_sysnand_###.bin` fájlt az SD kártyád `/gm9/out/` mappájából miután lemásoltad
+1. **Készíts az SD kártyádon található fájlokról biztonsági másolatot a számítógépedre; a következő lépésekben minden fájl törlődni fog róla**
 
-#### Section VIII - Format SD card
+#### Nyolcadik rész - SD kártya formázása
 
-1. Reinsert your SD card into your device
-1. Press (Home) to bring up the action menu
-1. Select "More..."
-1. Select "SD format menu"
-1. Press (A) to confirm
-1. Select "No EmuNAND"
-1. Select "Auto"
-1. Press (A) to accept the label `GM9SD`
-  + Optionally, you may input a custom name for the SD card
-1. When prompted, input the key combo given to confirm
-1. Hold (R) and press (B) at the same time to eject your SD card
-1. Insert your SD card into your computer
-1. Copy all your files back to your SD card
-  + Ensure you replace the `boot.firm` file on your SD card with the one from your backup
-1. Reinsert your SD card into your device
-1. Press (A) to remount your SD card
-1. Press (Start) to reboot
-1. If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_down)
+1. Tedd vissza az SD kártyád a készülékedbe
+1. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
+1. Válaszd ki a "More..." opciót
+1. Válaszd az "SD format menu" opciót
+1. Nyomd meg az (A) gombot a megerősítéshez
+1. Válaszd a "No EmuNAND" opciót
+1. Válaszd az "Auto" opciót
+1. Nyomd meg az (A) gombot, hogy elfogadd a `GM9SD` címkét
+  + Persze tetszőlegesen megadhatsz más, egyedi nevet is az SD kártyádnak
+1. Ha kéri, akkor nyomd meg sorban azokat a gombokat, amiket kijelez a képernyőn, hogy beleegyezz a formázásba
+1. Az SD kártya leválasztásához az (R) gomb lenyomva tartása mellett nyomd meg a (B) gombot
+1. Helyezd az SD kártyád a számítógépbe
+1. Másolj vissza minden fájlt az SD kártyádra
+  + Bizonyosodj meg róla, hogy felülírd az SD kártyán található `boot.firm` fájlt azzal, ami a biztonsági mentésedben van
+1. Tedd vissza az SD kártyád a készülékedbe
+1. Nyomd meg az (A) gombot, hogy visszacsatold az SD kártyát
+1. Nyomd meg a (Start) gombot az újraindításhoz
+1. Ha fekete képernyőt kapsz, [nézd át a hibaelhárítási útmutatót](troubleshooting#ts_sys_down)
 
 ___
 
-### Return to [Finalizing Setup](finalizing-setup).
+### Vissza a [telepítés véglegesítéséhez](finalizing-setup).
 {: .notice--primary}
