@@ -1,101 +1,101 @@
 ---
-title: "Updating B9S"
+title: "B9S frissítése"
 ---
 
-{% include toc title="Table of Contents" %}
+{% include toc title="Tartalomjegyzék" %}
 
-This page is for existing boot9strap users to update their installation of boot9strap to the latest version.
+Ez az oldal azoknak a felhasználóknak szól, akik már rendelkeznek telepített boot9strap-pel, és szeretnék frissíteni azt a legfrissebb verzióra.
 
 {% capture notice-1 %}
-There have been reports of a wave of bans being handed out to CFW users by Nintendo. To protect yourself, please do the following steps before starting this guide:
+Kaptunk visszajelzéseket kitiltási hullámokról, melyeket a Nintendo a CFW-t használóknak osztogatott. Ahhoz, hogy megvédd magadat, kérjük kövesd az alábbi lépéseket még az útmutató megkezdése előtt:
 
-1. Go to System Settings, then "Internet Settings", then "SpotPass", then "Sending of System Information"
-1. Disable the "Sending of System Information" option
-1. Exit the System Settings
-1. Go to your Friend List (the [orange Face Icon]({{ "/images/friend-list-icon.png" | absolute_url }}) in the top row of your Home Menu)
-  + If you receive an error and are kicked out of the menu, the Friend List setting is either already disabled or your console cannot connect to Nintendo's servers (due to a ban or connection issues)
-1. Go to the Friend List settings, then "Friend Notification Settings", then "Show friends what you're playing"
-1. Disable the "Show friends what you're playing" option
-1. Exit your Friend List
+1. Menj a System Settings-be, ott válaszd ezt: "Internet Settings", majd ezt: "SpotPass", végül ezt: "Sending of System Information"
+1. Kapcsold ki a "Sending of System Information" opciót
+1. Lépj ki a System Settings-ből
+1. Válaszd a Friend List opciót (a [narancsszínű fej ikon]({{ "/images/friend-list-icon.png" | absolute_url }}) a Home Menu felső sávján)
+  + Ha hibaüzenetet kapsz, és visszadob a menübe, a Friend List már vagy korábban letiltásra került, vagy a konzolod nem tud csatlakozni a Nintendo szervereihez (kitiltás, vagy kapcsolódási hiba miatt)
+1. Itt menj a beállításokba (Settings), ott válaszd ezt: "Friend Notification Settings", majd ezt: "Show friends what you're playing"
+1. Kapcsold ki a "Show friends what you're playing" opciót
+1. Lépj ki a Friend List-ből
 
 {% endcapture %}
 
 <div class="notice--danger">{{ notice-1 | markdownify }}</div>
 
-### What you need
+### Amire szükséged lesz
 
-* The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest){:target="_blank"}
-* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest){:target="_blank"} *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest){:target="_blank"}
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest){:target="_blank"} *(the `.7z` file)*
+* A [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest){:target="_blank"} legújabb kiadása
+* A [boot9strap](https://github.com/SciresM/boot9strap/releases/latest){:target="_blank"} legújabb kiadása *(a sima boot9strap; nem a `devkit` fájl, nem az `ntr` fájl)*
+* A [GodMode9](https://github.com/d0k3/GodMode9/releases/latest){:target="_blank"} legújabb kiadása
+* A [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest){:target="_blank"} legújabb kiadása *(a `.7z` fájl)*
 * [`setup_ctrnand_luma3ds.gm9`]({{ "/gm9_scripts/setup_ctrnand_luma3ds.gm9" | absolute_url }}){:download}
 * [`cleanup_sd_card.gm9`]({{ "/gm9_scripts/cleanup_sd_card.gm9" | absolute_url }}){:download}
 
-### Instructions
+### Utasítások
 
-#### Section I - Prep Work
+#### Első rész - Előkészületek
 
-For all steps in this section, overwrite any existing files on your SD card.
+A most következő lépésekben mindig írd felül az SD kártyán található fájlokat, ha már létezne bármelyik.
 {: .notice--info}
 
-1. Insert your SD card into your computer
-1. Create a folder named `boot9strap` on the root of your SD card
-1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
-1. Copy `SafeB9SInstaller.firm` from the SafeB9SInstaller `.zip` to the `/luma/payloads/` folder on your SD card
-1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
-1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
-1. Copy `setup_ctrnand_luma3ds.gm9` to the `/gm9/scripts/` folder on your SD card
-1. Copy `cleanup_sd_card.gm9` to the `/gm9/scripts/` folder on your SD card
-1. Reinsert your SD card into your device
+1. Helyezd az SD kártyád a számítógépbe
+1. Hozz létre egy mappát `boot9strap` néven az SD kártya gyökerében
+1. Másold át a `boot9strap.firm` fájlt és a `boot9strap.firm.sha` fájlt a boot9strap `.zip` fájlból az SD kártyád `/boot9strap/` mappájába
+1. Másold át a `SafeB9SInstaller.firm` fájlt a SafeB9SInstaller `.zip`-ből az SD kártyád `/luma/payloads/` mappájába
+1. Másold át a `GodMode9.firm` fájlt a GodMode9 `.zip`-ből az SD kártyád `/luma/payloads/` mappájába
+1. Másold át a `gm9` mappát a GodMode9 `.zip`-ből az SD kártyád gyökerébe
+1. Másold át a `setup_ctrnand_luma3ds.gm9` fájlt az SD kártyán található `/gm9/scripts/` mappába
+1. Másold a `cleanup_sd_card.gm9` fájlt az SD kártyád `/gm9/scripts/` mappájába
+1. Tedd vissza az SD kártyád a készülékedbe
 
-#### Section II - Installing boot9strap
+#### Második rész - boot9strap telepítése
 
-1. Launch Luma3DS chainloader menu by holding (Start) during boot
-1. Launch SafeB9SInstaller by pressing (A)
-1. Wait for all safety checks to complete
-1. When prompted, input the key combo given to install boot9strap
-1. Once it has completed, hold (Start) while pressing (A) to reboot your device to the Luma3DS chainloader
-  + If you encounter an `argc = 0` error booting your device after the B9S update, just continue to fix it
+1. Indítsd el a Luma3DS chainloader menüt a (Start) gomb lenyomva tartásával boot közben
+1. Indítsd el a SafeB9SInstaller programot az (A) gomb lenyomásával
+1. Várj, amíg az összes biztonsági ellenőrzés be nem fejeződik
+1. Ha kéri, akkor nyomd meg sorban azokat a gombokat, amiket kijelez a képernyőn, hogy telepíthesd a boot9strap-et
+1. Ha ez elkészült, nyomd le a (Start)-ot, és az (A)-t, hogy újraindítsd a készülékedet, és a Luma3DS chainloader-be juss
+  + Ha az `argc = 0` hibával találkozol a készüléked bootolása közben a B9S frissítése után, csak menj tovább, hogy kijavítsd
 
-#### Section III - Update Luma3DS
+#### Harmadik rész - Luma3DS frissítése
 
-1. Power off your device
-1. Insert your SD card into your computer
-1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card, replacing the existing file
-1. Reinsert your SD card into your device
-1. Power on your device
+1. Kapcsold ki a készüléked
+1. Helyezd az SD kártyád a számítógépbe
+1. Másold át a `boot.firm` fájlt a Luma3DS `.7z`-ből az SD kártyád gyökerébe, és cseréld le a már meglévő fájlt
+1. Tedd vissza az SD kártyád a készülékedbe
+1. Kapcsold be a készülékedet
 
-#### Section IV - Configuring Luma3DS
+#### Negyedik rész - Luma3DS konfigurálása
 
-This section is only needed if you are prompted with the Luma3DS configuration menu after the reboot.
+Ez a szakasz csak akkor kell, ha előjön a Luma3DS konfigurációs menü újraindítás után.
 {: .notice--info}
 
-1. In the Luma3DS configuration menu, use the (A) button and the D-Pad to turn on the following:    
+1. A Luma3DS konfigurációs menüben használd az (A) gombot és a D-Pad-et, hogy bekapcsold a következőket:    
   + **"Show NAND or user string in System Settings"**
-1. Press (Start) to save and reboot
+1. Mentéshez és újraindításhoz nyomd meg a (Start) gombot
 
-#### Section V - CTRNAND Luma3DS
+#### Ötödik rész - Luma3DS telepítése CTRNAND-ba
 
-1. Reboot holding (Start) to launch GodMode9
-1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
-1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
-  + Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
-1. Press (Home) to bring up the action menu
-1. Select "Scripts..."
-1. Select "setup_ctrnand_luma3ds"
-1. When prompted, press (A) to proceed
-1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
-1. Press (A) to continue
-1. Press (A) to relock write permissions
+1. Indítsd újra a készülékedet, miközben lenyomva tartod a (Start) gombot a GodMode9 elindításához
+1. Ha rákérdez arra, hogy csináljon-e egy biztonsági másolatot (essential files backup), akkor nyomd meg az (A) gombot, hogy csináljon, majd amikor végzett, nyomd meg ismét az (A) gombot a folytatáshoz
+1. Ha rákérdez arra, hogy szeretnéd-e a valós dátumot és időt javítani (fix the RTC date&time), nyomd meg az (A) gombot, állítsd be a helyes dátumot és időt, majd nyomd meg az (A) gombot a folytatáshoz
+  + Ne feledd, hogy amennyiben ezen a ponton szükséges volt a helyes dátum és idő beállítása, a System Settingsben is be kell majd állítanod a helyes időt az útmutató végén
+1. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
+1. Válaszd a "Scripts..." opciót
+1. Majd válaszd a "setup_ctrnand_luma3ds" opciót
+1. Amikor kéri, nyomd meg az (A) gombot a folytatáshoz
+1. Nyomd meg az (A) gombot, hogy feloldd a SysNAND (lvl1) írást, majd sorban nyomd meg a kijelzett gombokat
+1. Nyomd meg az (A) gombot a folytatáshoz
+1. Nyomd meg az (A) gombot az írási engedélyek visszavonásához
 
-#### Section VI - Cleanup SD Card
+#### Hatodik rész - Takarítás az SD kártyán
 
-Note that this script will remove the `/boot9strap/` and `/cias/` folders from your SD card!
+Vedd figyelembe, hogy ez a szkript törölni fogja a `/boot9strap/` és a `/cias/` mappákat az SD kártyádról!
 {: .notice--danger}
 
-1. Press (Home) to bring up the action menu
-1. Select "Scripts..."
-1. Select "cleanup_sd_card"
-1. When prompted, press (A) to proceed
-1. Press (A) to continue
-1. Hold (R) and press (Start) to power off your device
+1. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
+1. Válaszd a "Scripts..." opciót
+1. Válaszd a "cleanup_sd_card" opciót
+1. Amikor kéri, nyomd meg az (A) gombot a folytatáshoz
+1. Nyomd meg az (A) gombot a folytatáshoz
+1. Az (R) lenyomva tartása közben nyomd meg a (Start) gombot a készüléked kikapcsolásához
