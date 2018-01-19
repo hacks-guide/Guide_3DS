@@ -2,89 +2,89 @@
 title: "ntrboot"
 ---
 
-{% include toc title="Table of Contents" %}
+{% include toc title="Tartalomjegyzék" %}
 
-If you have already flashed ntrboot to your flashcart or your flashcart comes pre-flashed with ntrboot, you can skip to [Installing boot9strap (ntrboot)](installing-boot9strap-(ntrboot)) for instructions on how to use it.
+Ha már ráflashelted az ntrboot-ot a flashkártyádra, vagy a flashkártyád gyárilag flashelve van ntrboot-tal, ugorhatsz a [boot9strap telepítése (ntrboot)](installing-boot9strap-(ntrboot)) című útmutatóra, amiben megtudhatod, hogyan kell használni.
 {: .notice--success}
 
-### Required Reading
+### Fontos tudnivalók
 
-Installing boot9strap with ntrboot requires a compatible NDS / DSi flashcart to flash ntrboot to. Note that some of these flashcarts are sold pre-flashed with ntrboot.
+Ahhoz, hogy ntrboot segítségével telepíthesd a boot9strap-et, szükséged lesz egy azt támogató NDS / DSi flashkártyára, amire ráflashelheted az ntrbootot. Megjegyzendő, hogy néhány ilyen flashkártyát már gyárilag ntrboot-tal flashelve árulnak.
 
-While the ntrboot exploit works independently of system version, the ntrboot flasher (which installs the exploit to the cart) is not. This means that, depending on the versions and devices supported by your flashcart, only certain methods may be available to you.
+Míg az ntrboot exploit működése nem függ a rendszerverziótól, az ntrboot flashelő (ami az exploitot a kártyára telepíti) igen. Ez azt jelenti, hogy attól függően, hogy a flashkártyád milyen verziókat és készülékeket támogat, csak bizonyos módszerek lehetnek elérhetőek számodra.
 
-Note that carts with a "Time Bomb" will no longer be able to launch `.nds` files when they detect that the system clock has passed a date determined by the flashcart firmware. One method to bypass this is to set the system clock to an earlier date.
+Vedd figyelembe, hogy a "Time Bomb"-bal rendelkező kártyák nem lesznek képesek `.nds` fájlok futtatására, ha észlelik, hogy a rendszeridő meghaladja a flashkártya firmware-je által meghatározott értéket. Ennek megkerülésére az egyik módszer a rendszeridő korábbi dátumra állítása.
 
-| Flashcart Name | Current Price | "Time Bomb"? | 3DS Versions? | DSi Versions? | Other Notes |
+| Flashkártya neve | Jelenlegi ár | "Time Bomb"? | 3DS verziók? | DSi verziók? | Megjegyzések |
 |-|-:|:-:|:-:|:-:|-|
-| [**R4i-SDHC B9S**](http://www.nds-card.com/ProShow.asp?ProID=574) | $15.99 | September 3, 2019 | <= 11.6.0 | <= 1.4.5 | **Comes pre-flashed with ntrboot**; can be flashed back to an NDS flashcart. |
-| [**R4i Gold 3DS Plus**](http://www.nds-card.com/ProShow.asp?ProID=575) | $19.99 | No | <= 11.6.0 | <= 1.4.5 | **Comes pre-flashed with ntrboot** ([internal switch to switch between ntrboot and NDS modes]({{ "/images/screenshots/r4i-gold-3ds-plus.png" | absolute_url }})); do not manually flash with ntrboot. |
-| [**Acekard 2i**](http://www.nds-card.com/ProShow.asp?ProID=160) | $20.99 | No | <= 4.3.0 | <= 1.4.4 | |
-| [**DSTT**](http://www.nds-card.com/ProShow.asp?ProID=157) | $9.99 | No | None | None | Only models with [certain flash chips](https://gist.github.com/Hikari-chin/6b48f1bb8dd15136403c15c39fafdb42) are compatible with ntrboot. |
-| [**R4i Gold 3DS**](http://www.nds-card.com/ProShow.asp?ProID=149) | $19.99 | No | <= 11.6.0 | <= 1.4.5 | All RTS revisions are compatible. Non-RTS revisions 6, 7, and 8 will be detected but are incompatible. |
-| [**R4i-SDHC 3DS RTS**](http://www.nds-card.com/ProShow.asp?ProID=146) | $13.99 | 1.87: September 3, 2019 | <= 11.6.0 | <= 1.4.5 | |
-| [**R4iSDHC GOLD Pro 20XX**](http://www.nds-card.com/ProShow.asp?ProID=490) | $9.99 | 3.9b: September 3, 2019 | <= 11.6.0 | <= 1.4.5 | All R4iSDHC 20XX flashcarts are identical. 2013 models are incompatible. |
-| [**R4iSDHC RTS LITE 20XX**](http://www.nds-card.com/ProShow.asp?ProID=450) | $13.99 | 3.9b: September 3, 2019 | <= 11.6.0 | <= 1.4.5 | All R4iSDHC 20XX flashcarts are identical. 2013 models are incompatible. |
-| **Ace3DS X** | | No | <= 11.6.0 | <= 1.4.5 | **Comes pre-flashed with ntrboot** (external switch to switch between ntrboot ("3DS") and NDS modes); do not manually flash with ntrboot. |
-| **Infinity 3 R4i** | | No | <= 11.6.0 | <= 1.4.5 | |
-| **R4 3D Revolution** | | No | None | None | |
-| **R4i Gold 3DS Deluxe "Starter"** | | No | 4.1.0 - 4.5.0 | <= 1.4.5 | |
-| **R4i Ultra** | | No | <= 4.3.0 | <= 1.4.5 | |
-| **R4i-SDHC 3DS RTS Deluxe Edition** | | Unknown | <= 11.6.0 | <= 1.4.5 | |
-| **R4iSDHC Dual-Core 20XX** | | 3.9b: September 3, 2019 | <= 11.6.0 | <= 1.4.5 | All R4iSDHC 20XX flashcarts are identical. |
+| [**R4i-SDHC B9S**](http://www.nds-card.com/ProShow.asp?ProID=574) | $15.99 | 2019. szeptember 3. | <= 11.6.0 | <= 1.4.5 | **ntrboot-tal gyárilag flashelve**; visszaflashelhető NDS kártyává. |
+| [**R4i Gold 3DS Plus**](http://www.nds-card.com/ProShow.asp?ProID=575) | $19.99 | No | <= 11.6.0 | <= 1.4.5 | **ntrboot-tal előre flashelve** ([belső kapcsolóval váltogatható az ntrboot és az NDS mód]({{ "/images/screenshots/r4i-gold-3ds-plus.png" | absolute_url }})); ne flasheld kézileg ntrboot-tal. |
+| [**Acekard 2i**](http://www.nds-card.com/ProShow.asp?ProID=160) | $20.99 | nem | <= 4.3.0 | <= 1.4.4 | |
+| [**DSTT**](http://www.nds-card.com/ProShow.asp?ProID=157) | $9.99 | nem | nincs| nincs | Csak [bizonyos flash chipek](https://gist.github.com/Hikari-chin/6b48f1bb8dd15136403c15c39fafdb42) kompatibilisek ntrboot-tal. |
+| [**R4i Gold 3DS**](http://www.nds-card.com/ProShow.asp?ProID=149) | $19.99 | nem | <= 11.6.0 | <= 1.4.5 | Minden RTS revízió kompatibilis. A nem RTS revíziók (6, 7, és 8) fel lesznek ismerve, de nem kompatibilisek. |
+| [**R4i-SDHC 3DS RTS**](http://www.nds-card.com/ProShow.asp?ProID=146) | $13.99 | 1.87: 2019. szeptember 3. | <= 11.6.0 | <= 1.4.5 | |
+| [**R4iSDHC GOLD Pro 20XX**](http://www.nds-card.com/ProShow.asp?ProID=490) | $9.99 | 3.9b: 2019. szeptember 3. | <= 11.6.0 | <= 1.4.5 | Az összes R4iSDHC 20XX flashkártya egyforma. A 2013-as modellek nem kompatibilisek. |
+| [**R4iSDHC RTS LITE 20XX**](http://www.nds-card.com/ProShow.asp?ProID=450) | $13.99 | 3.9b: 2019. szeptember 3. | <= 11.6.0 | <= 1.4.5 | Az összes R4iSDHC 20XX flashkártya egyforma. A 2013-as modellek nem kompatibilisek. |
+| **Ace3DS X** | | No | <= 11.6.0 | <= 1.4.5 | **ntrboot-tal gyárilag flashelve** (külső kapcsolóval váltogatható az ntrboot ("3DS") és az NDS mód); ne flasheld kézileg ntrboot-tal. |
+| **Infinity 3 R4i** | | nem | <= 11.6.0 | <= 1.4.5 | |
+| **R4 3D Revolution** | | nem | nincs | nincs | |
+| **R4i Gold 3DS Deluxe "Starter"** | | nem | 4.1.0 - 4.5.0 | <= 1.4.5 | |
+| **R4i Ultra** | | nem | <= 4.3.0 | <= 1.4.5 | |
+| **R4i-SDHC 3DS RTS Deluxe Edition** | | ismeretlen | <= 11.6.0 | <= 1.4.5 | |
+| **R4iSDHC Dual-Core 20XX** | | 3.9b: 2019. szeptember 3. | <= 11.6.0 | <= 1.4.5 | Az összes R4iSDHC 20XX flashkártya egyforma. |
 
   ![]({{ "/images/screenshots/ntrboot-flashcarts.png" | absolute_url }})
   {: .notice--info}
 
-Ensure your flashcart is able to launch `.nds` files on your device before beginning. Some flashcarts may require firmware or "kernel" files to be copied to the flashcart SD card. Consult your specific flashcart's instructions for more information.
+Bizonyosodj meg róla, hogy a flashkártyád képes az `.nds` fájlok futtatására, mielőtt továbbmész. Néhány flashkártya esetében szükség lehet a firmware, vagy "kernel" fájlok SD kártyára másolására. Részletekért lásd az adott flashkártya használati útmutatóját.
 
-Note that specific methods may have additional compatibility information.
+Megjegyzendő, hogy a konkrét módszerek további információval szolgálhatnak kompatibilitás terén.
 
-The usage of this exploit, regardless of flashing method, requires access to a small magnet if the target device is of a folding style (any 3DS family system that is not the old 2DS with a sleep switch). This is because the exploit requires your device to enter sleep mode while still having access to the buttons.
+A flashelés módjától függetlenül, ezen exploit használatakor szükséged lesz egy apró mágnesre, ha a célkészülék összecsukható kivitelű (a 3DS családba tartozó összes készülék ilyen, kivéve az Old 2DS-t, ami rendelkezik alvó mód kapcsolóval). Ennek az az oka, hogy az exploithoz alvó módba kell lépni, azonban a gombokra továbbra is szükség van.
 
-To test if a magnet will work, hold it on or around the (A)(B)(X)(Y) buttons while the device is powered on to see if it triggers sleep mode. If it does, both displays will go black as long as the magnet is held in that spot.
+Kipróbálhatod, hogy működik-e a mágnes úgy, hogy az (A), (B), (X), (Y) gombok környékére teszed, miközben a készülék be van kapcsolva, így látod, hogy előidézi-e az alvó állapotot. Ha sikerült, mindkét képernyő elsötétül, és úgy is marad, amíg a mágnest a helyén tartod.
 {: .notice--info}
 
-Note that the flashcart will not be able to be used for its standard functions while the ntrboot exploit is installed on it (except for in the case of the Acekard 2i, which remains functional *on NDS and custom firmware 3DS systems only*). This means that, for most flashcarts, it will not even display on the home menu. There are optional steps at the end of the ntrboot flashing instructions to remove it from your flashcart when you are done.
+Vedd figyelembe, hogy a flashkártya nem lesz használható az eredeti rendeltetése szerint addig, amíg az ntrboot exploit telepítve van rá. (Kivételt képez az Acekard 2i, ami működőképes marad *kizárólag NDS-eken, és azokon a 3DS-eken, melyekre egyedi firmware van telepítve*.) Ez azt jelenti, hogy a legtöbb flashkártya még csak a home menu-ben sem jelenik majd meg. Az ntrboot flashelési útmutatójának végén van néhány opcionális lépés arról, hogyan töröld azt a flashkártyádról, ha már végeztél.
 
-Note that in some rare circumstances, it may be possible for the flashing process to **brick** a counterfeit flashcart and render it permanently unusable. This is unlikely, but nevertheless only original listed flashcarts are supported. To reduce the chance of receiving a counterfeit card, it is recommended that you use a reputable site to buy your flashcart (such as [NDS Card](http://www.nds-card.com/))
+Vedd figyelembe, hogy néhány ritka esetben lehetséges, hogy a flashelési folyamat során **brickelődjön** néhány hamisított flashkártya és végleg használhatatlanná váljon. Ez elég valószínűtlen, azonban éppen emiatt csak eredeti flashkártyákat támogatunk. Hogy elkerüld hamisított flashkártyák vásárlását, ajánlott jó hírű oldalakon vásárolni (mint például az [NDS Card](http://www.nds-card.com/))
 {: .notice--danger}
 
 ___
-### Methods
+### Módszerek
 
 ___
 
-#### Flashing ntrboot (3DS Single System)
+#### ntrboot flashelése (egy 3DS)
 
-This method requires nothing more than your stock unhacked 3DS and a compatible flashcart. This method uses the flashcart to run the ntrboot flasher `.nds` file on your 3DS. This means that your flashcart must support launching `.nds` files on your 3DS's version. See the flashcart table above for more information.
+Ehhez a módszerhez mindössze egy gyári állapotú 3DS-re és egy kompatibilis flashkártyára van szükséged. Ez a módszer a flashkártyát használja, hogy futtassa az ntrboot flashelő `.nds` fájlt a 3DS-eden. Ez azt jelenti, hogy a flashkártyádnak támogatnia kell `.nds` fájlok futtatását a 3DS-ed verzióján. További információkért lásd a flashkártyák táblázatát.
 
-Continue to [Flashing ntrboot (3DS Single System)](flashing-ntrboot-(3ds-single-system))
+Tovább az [ntrboot flashelése (egy 3DS)](flashing-ntrboot-(3ds-single-system)) oldalra
 {: .notice--primary}
 
 ___
 
-#### Flashing ntrboot (3DS Multi System)
+#### ntrboot flashelése (több 3DS)
 
-This method requires temporary access to a second 3DS family device that is already running boot9strap. This does not require your flashcart to support either 3DS's version. See the flashcart table above for more information.
+Ehhez a módszerhez szükséged lesz átmenetileg egy második 3DS konzolra, amin már telepítve van a boot9strap. Viszont egyik 3DS verziójának sem szükséges támogatnia a flashkártyádat. További információkért lásd a flashkártyák táblázatát.
 
-Continue to [Flashing ntrboot (3DS Multi System)](flashing-ntrboot-(3ds-multi-system))
+Tovább az [ntrboot flashelése (több 3DS)](flashing-ntrboot-(3ds-multi-system)) oldalra
 {: .notice--primary}
 
 ___
 
-#### Flashing ntrboot (NDS)
+#### ntrboot flashelése (NDS)
 
-This method requires temporary access to a Nintendo DS or Nintendo DS Lite that is compatible with your flashcart. This method uses the flashcart to run the ntrboot flasher `.nds` file on your NDS.
+Ehhez a módszerhez szükséged lesz átmenetileg egy Nintendo DS vagy egy Nintendo DS Lite készülékre, ami kompatibilis a flashkártyáddal. Ez a módszer a flashkártyát használja, hogy futtassa az ntrboot flashelő `.nds` fájlt az NDS-eden.
 
-Continue to [Flashing ntrboot (NDS)](flashing-ntrboot-(nds))
+Tovább az [ntrboot flashelése (NDS)](flashing-ntrboot-(nds)) oldalra
 {: .notice--primary}
 
 ___
 
-#### Flashing ntrboot (DSi)
+#### ntrboot flashelése (DSi)
 
-This method requires temporary access to a Nintendo DSi that is compatible with your flashcart. This method uses the flashcart to run the ntrboot flasher `.nds` file on your DSi.
+Ehhez a módszerhez szükséged lesz átmenetileg egy Nintendo DSi készülékre, ami kompatibilis a flashkártyáddal. Ez a módszer a flashkártyát használja, hogy futtassa az ntrboot flashelő `.nds` fájlt a DSi-den.
 
-Continue to [Flashing ntrboot (DSi)](flashing-ntrboot-(dsi))
+Tovább az [ntrboot flashelése (DSi)](flashing-ntrboot-(dsi)) oldalra
 {: .notice--primary}
