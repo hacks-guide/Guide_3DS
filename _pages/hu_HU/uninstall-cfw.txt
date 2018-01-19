@@ -1,58 +1,58 @@
 ---
-title: "Uninstall CFW"
+title: "CFW eltávolítása"
 ---
 
-{% include toc title="Table of Contents" %}
+{% include toc title="Tartalomjegyzék" %}
 
-This will completely remove CFW from your device, including Boot9Strap and Luma3DS, for the purpose of restoring the device to stock.
+A következőkben teljes egészében el fogjuk távolítani a CFW-t a készülékedről, beleértve a Boot9Strap-et és a Luma3DS-t azzal a céllal, hogy visszaállítsuk a készüléket gyári állapotra.
 
-This is almost never the solution to fix any issues you encounter with your CFW installation. A better idea would be to read the [troubleshooting](troubleshooting) page or ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+Ez az esetek többségében nem old meg semmilyen olyan problémát, ami a CFW telepítése közben felmerülhet. Javasolt inkább elolvasnod a [Hibaelhárítás](troubleshooting) oldalt, vagy segítséget kérni itt: [Nintendo Homebrew a Discord-on](https://discord.gg/MWxPgEp).
 {: .notice--danger}
 
-Any unsigned (illegitimate) games will be rendered unusable and can be manually removed using the Data Management section of the System Settings. Use a [save manager](https://github.com/BernardoGiordano/Checkpoint/releases/latest){:target="_blank"} to backup any saves for these unsigned (illegitimate) games you care about.
+Minden aláíratlan (nem eredeti) játék instabillá fog válni, amiket kézileg törölhetsz majd a System Settings "Data Management" részében. Használj [mentéskezelőt](https://github.com/BernardoGiordano/Checkpoint/releases/latest){:target="_blank"}, hogy biztonsági másolatot készíts azon (nem eredeti) játékok mentéséről, amik fontosak a számodra.
 
-This will not affect your NNID, any legitimately purchased games, or any saves for those legitimately purchased games.
+Ez az eljárás nem fogja befolyásolni sem az NNID-det, sem az eredeti játékaidat, sem bármilyen mentést, ami az eredeti, megvásárolt játékaidhoz tartozik.
 
-Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
+Vedd figyelembe, hogy amennyiben van más payload fájl a `GodMode9.firm` fájlon kívül a `/luma/payloads/`mappában, indításkor a (Start) gombot lenyomva tartva a "chainloader menu" menü fog megjelenni. Itt a D-Pad és az (A) gomb segítségével válaszd a "GodMode9" opciót, hogy az alábbi utasításokat követhesd. 
 
-### What you need
+### Amire szükséged lesz
 
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest){:target="_blank"}
-* The uninstaller script corresponding to your device:
+* A [GodMode9](https://github.com/d0k3/GodMode9/releases/latest){:target="_blank"} legújabb kiadása
+* A készülékedhez tartozó eltávolító szkript:
   + [`uninstall_hax_retail_NEW.gm9`]({{ "/gm9_scripts/uninstall_hax_retail_NEW.gm9" | absolute_url }}){:download}
   + [`uninstall_hax_retail_OLD.gm9`]({{ "/gm9_scripts/uninstall_hax_retail_OLD.gm9" | absolute_url }}){:download}
 
-### Instructions
+### Utasítások
 
-#### Section I - Prep Work
+#### Első rész - Előkészületek
 
-1. Power off your device
-1. Insert your SD card into your computer
-1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
-1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
-1. Copy the uninstaller script corresponding to your device to the `/gm9/scripts/` folder on your SD card
-1. Reinsert your SD card into your device
-1. Power on your device
+1. Kapcsold ki a készüléked
+1. Helyezd az SD kártyád a számítógépbe
+1. Másold át a `GodMode9.firm` fájlt a GodMode9 `.zip`-ből az SD kártyád `/luma/payloads/` mappájába
+1. Másold át a `gm9` mappát a GodMode9 `.zip`-ből az SD kártyád gyökerébe
+1. Másold a készülékednek megfelelő eltávolító szkriptet az SD kártyán található `/gm9/scripts/` mappába
+1. Tedd vissza az SD kártyád a készülékedbe
+1. Kapcsold be a készülékedet
 
-#### Section II - Running Uninstall Script
+#### Második rész - Az eltávolító szkript futtatása
 
-1. Launch GodMode9 by holding (Start) during boot
-1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
-1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
-  + Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
-1. Press (Home) to bring up the action menu
-1. Select "Scripts..."
-1. Select the uninstaller script
-1. When prompted, press (A) to proceed
-1. Press (A) to unlock SysNAND (lvl3) writing, then input the key combo given
-1. Press (A) to continue
-1. Press (A) to relock write permissions
-1. Press (Start) to reboot your device
+1. Indítsd el a GodMode9-et a (Start) lenyomva tartásával boot közben
+1. Ha rákérdez arra, hogy csináljon-e egy biztonsági másolatot (essential files backup), akkor nyomd meg az (A) gombot, hogy csináljon, majd amikor végzett, nyomd meg ismét az (A) gombot a folytatáshoz
+1. Ha rákérdez arra, hogy szeretnéd-e a valós dátumot és időt javítani (fix the RTC date&time), nyomd meg az (A) gombot, állítsd be a helyes dátumot és időt, majd nyomd meg az (A) gombot a folytatáshoz
+  + Ne feledd, hogy amennyiben ezen a ponton szükséges volt a helyes dátum és idő beállítása, a System Settingsben is be kell majd állítanod a helyes időt az útmutató végén
+1. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
+1. Válaszd a "Scripts..." opciót
+1. Válaszd ki az eltávolító szkriptet
+1. Amikor kéri, nyomd meg az (A) gombot a folytatáshoz
+1. Nyomd meg az (A) gombot, hogy feloldd a SysNAND (lvl3) írást, majd sorban nyomd meg a kijelzett gombokat
+1. Nyomd meg az (A) gombot a folytatáshoz
+1. Nyomd meg az (A) gombot az írási engedélyek visszavonásához
+1. Nyomd meg a (Start) gombot az eszköz újraindításához
 
 ___
 
-All custom firmware has been removed from your device.
+Ezt követően már nem lesz egyedi firmware telepítve a készülékeden.
 {: .notice--success}
 
-You can now remove any extra files and folders from the root of your SD card that are *not* the `Nintendo 3DS` or `DCIM` folders.
+Most már eltávolíthatsz minden olyan fájlt és mappát az SD kártyád gyökeréből, ami *nem* a `Nintendo 3DS`, vagy a `DCIM` nevet viseli.
 {: .notice--info}
