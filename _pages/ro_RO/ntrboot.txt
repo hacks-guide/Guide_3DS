@@ -4,24 +4,24 @@ title: "ntrboot"
 
 {% include toc title="Cuprins" %}
 
-If you have already flashed ntrboot to your flashcart or your flashcart comes pre-flashed with ntrboot, you can skip to [Installing boot9strap (ntrboot)](installing-boot9strap-(ntrboot)) for instructions on how to use it.
+Dacă deja ați instalat ntrboot pe flashcart sau flashcart-ul vine cu ntrboot preinstalat, puteți să săriți spre [Instalând boot9strap(ntrboot)](installing-boot9strap-(ntrboot)) pentru instrucțiuni despre cum să-l folosiți.
 {: .notice--success}
 
 ### Lectură obligatorie
 
-Installing boot9strap with ntrboot requires a compatible NDS / DSi flashcart to flash ntrboot to. Note that some of these flashcarts are sold pre-flashed with ntrboot.
+Instalând boot9strap cu ntrboot necesită un flashcart DS/DSi compatibil pentru a instala ntrboot. Țineți cont că unele dintre flashcart-uri se vind cu ntrboot preinstalat.
 
-While the ntrboot exploit works independently of system version, the ntrboot flasher (which installs the exploit to the cart) is not. This means that, depending on the versions and devices supported by your flashcart, only certain methods may be available to you.
+Deși exploit-ul ntrboot merge indiferent de versiunea de sistem, ntrboot flasher (programul care instalează exploit-ul în card) nu este. Asta înseamnă că, depinzând de versiunile și dispozitivele acceptate de flashcart, numai anumite metode vor funcționa pentru dumneavoastră.
 
-Note that carts with a "Time Bomb" will no longer be able to launch `.nds` files when they detect that the system clock has passed a date determined by the flashcart firmware. One method to bypass this is to set the system clock to an earlier date.
+Țineți cont că cardurile cu "Bombă cu Ceas" nu vor mai putea să pornească fișiere `.nds` când vor detecta că ceasul sistemului a trecut o dată stabilită de firmware-ul flashcart-ului. O metodă pentru a ocoli acest lucru este de a seta ceasul sistemului la o dată veche.
 
-| Flashcart Name | Current Price | "Time Bomb"? | 3DS Versions? | DSi Versions? | Other Notes |
+| Nume de Flashcart | Preţul Curent | Are "Bombă cu Ceas"? | Versiuni de 3DS? | Versiuni de DSi? | Alte note |
 |-|-:|:-:|:-:|:-:|-|
-| [**R4i-SDHC B9S**](http://www.nds-card.com/ProShow.asp?ProID=574) | $15.99 | September 3, 2019 | <= 11.6.0 | <= 1.4.5 | **Comes pre-flashed with ntrboot**; can be flashed back to an NDS flashcart. |
-| [**R4i Gold 3DS Plus**](http://www.nds-card.com/ProShow.asp?ProID=575) | $19.99 | No | <= 11.6.0 | <= 1.4.5 | **Comes pre-flashed with ntrboot** ([internal switch to switch between ntrboot and NDS modes]({{ "/images/screenshots/r4i-gold-3ds-plus.png" | absolute_url }})); do not manually flash with ntrboot. |
-| [**Acekard 2i**](http://www.nds-card.com/ProShow.asp?ProID=160) | $20.99 | No | <= 4.3.0 | <= 1.4.4 | |
-| [**DSTT**](http://www.nds-card.com/ProShow.asp?ProID=157) | $9.99 | No | None | None | Only models with [certain flash chips](https://gist.github.com/Hikari-chin/6b48f1bb8dd15136403c15c39fafdb42) are compatible with ntrboot. |
-| [**R4i Gold 3DS**](http://www.nds-card.com/ProShow.asp?ProID=149) | $19.99 | No | <= 11.6.0 | <= 1.4.5 | All RTS revisions are compatible. Non-RTS revisions 6, 7, and 8 will be detected but are incompatible. |
+| [**R4i-SDHC B9S**](http://www.nds-card.com/ProShow.asp?ProID=574) | $15.99 | 3 septembrie 2019 | <= 11.6.0 | <= 1.4.5 | **Vine cu ntrboot preinstalat**; se poate schimba înapoi spre un flashcart de NDS obișnuit. |
+| [**R4i Gold 3DS Plus**](http://www.nds-card.com/ProShow.asp?ProID=575) | $19.99 | Nu | <= 11.6.0 | <= 1.4.5 | **Vine cu ntrboot preinstalat** ([are un întrerupător intern pentru a comuta între modurile ntrboot și NDS]({{ "/images/screenshots/r4i-gold-3ds-plus.png" | absolute_url }})); nu instalați ntrboot manual. |
+| [**Acekard 2i**](http://www.nds-card.com/ProShow.asp?ProID=160) | $20.99 | Nu | <= 4.3.0 | <= 1.4.4 | |
+| [**DSTT**](http://www.nds-card.com/ProShow.asp?ProID=157) | $9.99 | Nu | Niciuna | Niciuna | Numai modelele cu [anumite chipuri flash](https://gist.github.com/Hikari-chin/6b48f1bb8dd15136403c15c39fafdb42) sunt compatibile cu ntrboot. |
+| [**R4i Gold 3DS**](http://www.nds-card.com/ProShow.asp?ProID=149) | $19.99 | Nu | <= 11.6.0 | <= 1.4.5 | Toate reviziile de RTS sunt compatibile. Reviziile non-RTS 6, 7 și 8 vor fi detectate dar sunt incompatibile. |
 | [**R4i-SDHC 3DS RTS**](http://www.nds-card.com/ProShow.asp?ProID=146) | $13.99 | 1.87: September 3, 2019 | <= 11.6.0 | <= 1.4.5 | |
 | [**R4iSDHC GOLD Pro 20XX**](http://www.nds-card.com/ProShow.asp?ProID=490) | $9.99 | 3.9b: September 3, 2019 | <= 11.6.0 | <= 1.4.5 | All R4iSDHC 20XX flashcarts are identical. 2013 models are incompatible. |
 | [**R4iSDHC RTS LITE 20XX**](http://www.nds-card.com/ProShow.asp?ProID=450) | $13.99 | 3.9b: September 3, 2019 | <= 11.6.0 | <= 1.4.5 | All R4iSDHC 20XX flashcarts are identical. 2013 models are incompatible. |
