@@ -1,85 +1,85 @@
 ---
-title: "Installing boot9strap (ntrboot)"
+title: "Installieren von boot9strap (ntrboot)"
 ---
 
-To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download).
+Um die [Magnet-Links](https://de.wikipedia.org/wiki/Magnet-Link) auf dieser Seite nutzen zu können, brauchst du ein Torrent-Programm wie [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
 {% include toc title="Inhalt" %}
 
-### What you need
+### Was du benötigst
 
-* A magnet that triggers the sleep mode of your device (if using a folding style device)
-* Your ntrboot flashed flashcart
+* Ein Magnet, der den Standby-Modus des Geräts auslöst (wenn das Gerät zuklappbar ist)
+* Deine ntrboot geflashte Flashkarte
 * Die neuste Version von [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest){:target="_blank"}
 * Die neuste Version von [boot9strap](https://github.com/SciresM/boot9strap/releases/latest){:target="_blank"} *(standard boot9strap; nicht die `devkit` Datei, nicht die`ntr` Datei)*
 * Die neueste Version von [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(die `.7z`-Datei)*
-* The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases)
+* Die neueste Version des [Homebrew Launchers] (https://github.com/fincs/new-hbmenu/releases)
 
-### Instructions
+### Anleitung
 
-#### Section I - Prep Work
+#### Schritt I - Vorbereitungen
 
-1. Power off your device
-1. Insert your device's SD card into your computer
-  + This is the SD card from your 3DS, *not* the SD card from your flashcart
-1. Copy `SafeB9SInstaller.firm` to the root of your SD card and rename it to `boot.firm`
-1. Copy `boot.3dsx` to the root of your SD card
-1. Create a folder named `boot9strap` on the root of your SD card
-1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
+1. Schalte deine Konsole aus
+1. Stecke die SD-Karte deiner Konsole in deinen Computer
+  + Die SD-Karte deines 3DS, *nicht* die SD-Karte deiner Flashkarte
+1. Kopiere `SafeB9SInstaller.firm` ins Stammverzeichnis deiner SD-Karte and benenne sie in `boot.firm` um
+1. Kopiere die `boot.3dsx`-Datei in das Stammverzeichnis deiner SD-Karte
+1. Erstelle einen Ordner namens `boot9strap` im Stammverzeichnis deiner SD-Karte
+1. Kopiere `boot9strap.firm` und `boot9strap.firm.sha` aus der boot9strap `.zip`-Datei in den `/boot9strap/`-Ordner auf deiner SD-Karte
 
     ![]({{ "/images/screenshots/boot9strap-ntrboot-file-layout.png" | absolute_url }})
     {: .notice--info}
 
-1. Reinsert your SD card into your device
-1. Power on your device
+1. Stecke deine SD-Karte wieder in deine Konsole
+1. Schalte deine Konsole an
 
-#### Section II - ntrboot
+#### Schritt II - ntrboot
 
-1. Use the magnet to find the spot on your device where the sleep sensor is triggered
-  + This step is not needed on the old 2DS (which has a sleep mode switch)
-1. Power off your device
-1. Insert your flashcart into your device
-1. Place the magnet on your device to trigger the sleep sensor
-  + On old 2DS, you should instead enable the sleep mode switch
-1. Hold (Power) + (Start) + (Select) + (X) for several seconds, then release the buttons
-  + It may take a few attempts to get this to work because the positioning is awkward
-1. If the exploit was successful, you will have booted into SafeB9SInstaller
+1. Benutze den Magneten, um die Stelle an deiner Konsole zu finden an der der Schlafmodus ausgelöst wird
+  + Dieser Schritt ist für den alten 2DS nicht notwendig (da dieser einen Schlafmodus-Schalter hat)
+1. Schalte deine Konsole aus
+1. Stecke deine Flashkarte in deine Konsole
+1. Platziere den Magneten auf deiner Konsole um den Schlafmodus auszulösen
+  + Auf dem alten 2DS solltest du stattdessen den Schlafmodus-Schalter anmachen
+1. Halte (Powerknopf) + (Start) + (Select) + (X) für mehrere Sekunden gedrückt und lass sie danach wieder los
+  + Es kann ein paar Versuche brauchen bis das funktioniert, da die Positionierung ungünstig ist
+1. Wenn der Exploit erfolgreich war, wird SafeBS9Installer gestartet
 
-#### Section III - Installing boot9strap
+#### Schritt III - boot9strap installieren
 
-1. Wait for all safety checks to complete
-1. Remove the magnet from your device
-  + On old 2DS, you should instead disable the sleep mode switch
-1. When prompted, input the key combo given to install boot9strap
-1. Once it has completed, force your device to power off by holding down the power button
-  + Your device will only boot to the SafeB9SInstaller screen until the next section is completed
+1. Warte bis alle Sicherheitsprüfungen abgeschlossen sind
+1. Entferne den Magnet von deinem System
+  + Auf dem alten 2DS solltest du stattdessen den Schlafmodus-Schalter ausmachen
+1. Gib die Tastenkombination zur Bestätigung ein, wenn danach verlangt wird
+1. Sobald dies abgeschlossen ist, schalte deine Konsole aus indem du den Power-Knopf gedrückt hältst
+  + Deine Konsole wird solange nur zum SafeB9SInstaller-Bildschirm starten bis die nächste Sektion abgeschlossen wurde
 
-#### Section IV - Configuring Luma3DS
+#### Schritt IV - Luma3DS konfigurieren
 
-1. Insert your SD card into your computer
-1. Delete `boot.firm` from the root of your SD card
-1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card
-1. Reinsert your SD card into your device
-1. Power on your device
-1. Your device should have booted into the Luma3DS configuration menu
-  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
-1. Use the (A) button and the D-Pad to turn on the following:    
+1. Stecke deine SD-Karte in deinen Computer
+1. Lösche `boot.firm` aus dem Stammverzeichnis deiner SD-Karte
+1. Kopiere `boot.firm` aus der Luma3DS `.7z`-Datei in das Stammverzeichnis deiner SD-Karte
+1. Stecke die SD-Karte wieder in deine Konsole ein
+1. Schalte deine Konsole an
+1. Dein Gerät sollte neu starten und die Luma3DS Konfiguration anzeigen
+  + Wenn du einen schwarzen Bildschirm bekommst, [folge dieser Problembehandlung](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
+1. Benutze den (A) Knopf und das Steuerkreuz um Folgendes zu aktivieren:    
   + **"Show NAND or user string in System Settings"**
-1. Press (Start) to save and reboot
-  + If you get an error, just continue the next page
+1. Drücke (Start) um zu Speichern und neu zu starten
+  + Falls ein Fehler angezeigt wird, fahre einfach mit der nächsten Seite fort
 
 ___
 
-Continue to [Finalizing Setup](finalizing-setup)
+Fortfahren mit [Setup fertigstellen](finalizing-setup)
 {: .notice--primary}
 
 ___
 
-The following is an optional section that will allow you to restore your flashcart to its original state (to allow it to be used for its standard functions).
+Das Folgende ist optional und erlaubt es dir, deine Flashkarte in den Ursprungszustand zu versetzen (für das Verwenden ihrer Standardfunktionen).
 
-Note that the Acekard 2i retains its ability to launch `.nds` files while having the ntrboot exploit installed. This only applies when the Acekard 2i is in an NDS or custom firmware 3DS! While the ntrboot exploit is installed to the Acekard 2i, it will be unable to launch `.nds` files on DSi or stock 3DS systems.
+Beachte, dass die Acekard 2i ihre Fähigkeit behält, `.nds`-Dateien zu starten, selbst während der ntrboot-Exploit installiert ist. Dies gilt nur, wenn die Acekard 2i in einem NDS oder einem 3DS mit Custom Firmware ist! Während der ntrboot-Exploit auf der Acekard 2i installiert ist, kann diese keine `.nds`-Dateien auf DSi oder unmodifizierten 3DS-Konsolen starten.
 
-Do not follow this section until you have completed the rest of the instructions on this page.
+Folge diesen Schritten erst, wenn du den Rest der Anweisungen auf dieser Seite abgeschlossen hast.
 
 #### Section V - Removing ntrboot
 
