@@ -1,185 +1,185 @@
 ---
-title: "Troubleshooting"
+title: "Hibaelhárítás"
 ---
 
-{% include toc title="Table of Contents" %}
+{% include toc title="Tartalomjegyzék" %}
 
-If you are unable to boot your device, please look for the section relevant to you and follow the instructions.
+Ha nem tudod elindítani a készülékedet, keresd meg a rád vonatkozó részt, majd kövesd az ott található utasításokat.
 
-If you still cannot solve your issue and need to reach out for help, please paste the contents of all relevant .log files from the root of your SD card into a [Gist](https://gist.github.com/), then come for help prepared with a detailed description of your problem and what you've tried.
+Ha még így sem tudod megoldani a problémádat, és szeretnél segítséget kérni, először másold át az összes lényeges .log fájl tartalmát az SD kártyádról egy [Gistbe](https://gist.github.com/), majd a problémád részletes leírásával és a kipróbált megoldásokkal együtt fordulj hozzánk segítségért.
 
-To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download).
+Ahhoz, hogy használhasd a [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) linkeket ezen az oldalon, szükséged lesz egy torrent kliensre, mint például a [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
-## DSi / DS functionality is broken after completing the guide
+## Egyes DSi / DS funkciók nem működnek az útmutató végigcsinálása után
 
-### What you need
+### Amire szükséged lesz
 
-* The TWL_FIRM `.cia` for your device
-    + <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [`New_3DS TWL_FIRM - v9936.cia`](magnet:?xt=urn:btih:eab8558c97b18b1f329a2bfcc3c899b84c082a27&dn=New%5F3DS%20TWL%5FFIRM%20-%20v9936.cia&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
-    + <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [`Old_3DS TWL_FIRM - v8817.cia`](magnet:?xt=urn:btih:17511eadb6e6f3ff22d04f90644e37bd2d96ca43&dn=Old%5F3DS%20TWL%5FFIRM%20-%20v8817.cia&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
-* <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [`TWL Version Data - v0.cia`](magnet:?xt=urn:btih:4a106681407fede5de95cc8bda635432481f6b5d&dn=TWL%20Version%20Data%20-%20v0.cia&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
-* <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [`DS Internet - v2048.cia`](magnet:?xt=urn:btih:2b9df8496922f2546dfb0b01220068ce53c19d3d&dn=DS%20Internet%20-%20v2048.cia&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
-* <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [`DS Download Play - v1024.cia`](magnet:?xt=urn:btih:b581d3c5d98f5e621fddfc1ce5704bb45bf05a8c&dn=DS%20Download%20Play%20-%20v1024.cia&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
-* <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [`Nintendo DS Cart Whitelist - v11264.cia`](magnet:?xt=urn:btih:7b90d506ad032a581a00035616eaa17a68c48eff&dn=Nintendo%20DS%20Cart%20Whitelist%20-%20v11264.cia&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* A készülékedhez megfelelő TWL_FIRM `.cia`
+    + <i class="fa fa-magnet" aria-hidden="true" title="Ez egy mágneslink. A fájl letöltéséhez használj torrent klienst."></i> - [`New_3DS TWL_FIRM - v9936.cia`](magnet:?xt=urn:btih:eab8558c97b18b1f329a2bfcc3c899b84c082a27&dn=New%5F3DS%20TWL%5FFIRM%20-%20v9936.cia&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+    + <i class="fa fa-magnet" aria-hidden="true" title="Ez egy mágneslink. A fájl letöltéséhez használj torrent klienst."></i> - [`Old_3DS TWL_FIRM - v8817.cia`](magnet:?xt=urn:btih:17511eadb6e6f3ff22d04f90644e37bd2d96ca43&dn=Old%5F3DS%20TWL%5FFIRM%20-%20v8817.cia&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* <i class="fa fa-magnet" aria-hidden="true" title="Ez egy mágneslink. A fájl letöltéséhez használj torrent klienst."></i> - [`TWL Version Data - v0.cia`](magnet:?xt=urn:btih:4a106681407fede5de95cc8bda635432481f6b5d&dn=TWL%20Version%20Data%20-%20v0.cia&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* <i class="fa fa-magnet" aria-hidden="true" title="Ez egy mágneslink. A fájl letöltéséhez használj torrent klienst."></i> - [`DS Internet - v2048.cia`](magnet:?xt=urn:btih:2b9df8496922f2546dfb0b01220068ce53c19d3d&dn=DS%20Internet%20-%20v2048.cia&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* <i class="fa fa-magnet" aria-hidden="true" title="Ez egy mágneslink. A fájl letöltéséhez használj torrent klienst."></i> - [`DS Download Play - v1024.cia`](magnet:?xt=urn:btih:b581d3c5d98f5e621fddfc1ce5704bb45bf05a8c&dn=DS%20Download%20Play%20-%20v1024.cia&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* <i class="fa fa-magnet" aria-hidden="true" title="Ez egy mágneslink. A fájl letöltéséhez használj torrent klienst."></i> - [`Nintendo DS Cart Whitelist - v11264.cia`](magnet:?xt=urn:btih:7b90d506ad032a581a00035616eaa17a68c48eff&dn=Nintendo%20DS%20Cart%20Whitelist%20-%20v11264.cia&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
 
-### Instructions
+### Utasítások
 
-#### Section I - Prep Work
+#### Első rész - Előkészületek
 
-1. Create a folder named `cias` on the root of your SD card if it does not already exist
-1. Copy `TWL Version Data - v0.cia` to the `/cias/` folder on your SD card
-1. Copy `DS Download Play - v1024.cia` to the `/cias/` folder on your SD card
-1. Copy `DS Internet - v2048.cia` to the `/cias/` folder on your SD card
-1. Copy `Nintendo DS Cart Whitelist - v11264.cia` to the `/cias/` folder on your SD card
-1. Copy either `New_3DS TWL_FIRM - v9936.cia`  or `Old_3DS TWL_FIRM - v8817.cia` to the `/cias/` folder on your SD card
+1. Hozz létre egy mappát `cias` néven az SD kártyád gyökerében, ha még nem létezik ilyen
+1. Másold a `TWL Version Data - v0.cia` fájlt az SD kártyád `/cias/` mappájába
+1. Másold a `DS Download Play - v1024.cia` fájlt az SD kártyád `/cias/` mappájába
+1. Másold a `DS Internet - v2048.cia` fájlt az SD kártyád `/cias/` mappájába
+1. Másold a `Nintendo DS Cart Whitelist - v11264.cia` fájlt az SD kártyád `/cias/` mappájába
+1. Másold vagy a `New_3DS TWL_FIRM - v9936.cia`, vagy az `Old_3DS TWL_FIRM - v8817.cia` fájlt az SD kártyád `/cias/` mappájába
 
-#### Section II - Installing titles
+#### Második rész - Alkalmazások telepítése
 
-1. Launch FBI
-1. Navigate to `SD` -> `cias`
-1. Select "\<current directory>"
-1. Select "Install and delete all CIAs"
-1. Press (Home) to exit FBI
+1. Indítsd el az FBI alkalmazást
+1. Menj ide: `SD` -> `cias`
+1. Válaszd ezt: "\<current directory>"
+1. Válaszd az "Install and delete all CIAs" opciót
+1. Nyomd meg a (Home) gombot az FBI-ból való kilépéshez
 
-## Removing an NNID without formatting your device
+## NNID eltávolítása az eszközöd formázása nélkül
 
-### What you need
+### Amire szükséged lesz
 
 * [`remove_nnid.gm9`]({{ "/gm9_scripts/remove_nnid.gm9" | absolute_url }}){:download}
 
-### Instructions
+### Utasítások
 
-Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
+Vedd figyelembe, hogy amennyiben van más payload fájl a `GodMode9.firm` fájlon kívül a `/luma/payloads/`mappában, indításkor a (Start) gombot lenyomva tartva a "chainloader menu" menü fog megjelenni. Itt a D-Pad és az (A) gomb segítségével válaszd a "GodMode9" opciót, hogy az alábbi utasításokat követhesd. 
 {: .notice--info}
 
-1. Launch GodMode9 by holding (Start) during boot
-1. Hold (R) and press (B) at the same time to eject your SD card
+1. Indítsd el a GodMode9-et a (Start) lenyomva tartásával boot közben
+1. Az SD kártya leválasztásához az (R) gomb lenyomva tartása mellett nyomd meg a (B) gombot
 1. Helyezd az SD kártyád a számítógépbe
-1. Copy `remove_nnid.gm9` to the `/gm9/scripts/` folder on your SD card
+1. Másold a `remove_nnid.gm9` fájlt az SD kártyád `/gm9/scripts/` mappájába
 1. Tedd vissza az SD kártyád a készülékedbe
-1. Press (Home) to bring up the action menu
-1. Select "Scripts..."
-1. Select "remove_nnid"
-1. When prompted, press (A) to proceed
-1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
-1. Press (A) to continue
-1. Press (A) to relock write permissions
-1. Press (Start) to reboot your device
+1. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
+1. Válaszd a "Scripts..." opciót
+1. Válaszd a "remove_nnid" opciót
+1. Amikor kéri, nyomd meg az (A) gombot a folytatáshoz
+1. Nyomd meg az (A) gombot, hogy feloldd a SysNAND (lvl1) írást, majd sorban nyomd meg a kijelzett gombokat
+1. Nyomd meg az (A) gombot a folytatáshoz
+1. Nyomd meg az (A) gombot az írási engedélyek visszavonásához
+1. Nyomd meg a (Start) gombot az eszköz újraindításához
 
-## Cannot inject H&S on Gateway downgraded device
+## Nem lehet injektálni H&S-be Gateway segítségével downgrade-elt készüléken
 
-This is caused by Gateway implementing a very shoddy downgrade method which leaves two versions of each app on the system. One of them is unused, but it confuses the H&S inject system, causing it to inject into the wrong one.
+Ezt a jelenséget a Gateway eléggé vacakul implementált downgrade eljárása okozza, ami minden alkalmazásból két verziót hagy a rendszeren. Az egyik verzió mindig használaton kívül van, de a H&S injektálást végző rendszert ez megzavarja, ami aztán a rossz verzióba injektál.
 
-Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
+Vedd figyelembe, hogy amennyiben van más payload fájl a `GodMode9.firm` fájlon kívül a `/luma/payloads/`mappában, indításkor a (Start) gombot lenyomva tartva a "chainloader menu" menü fog megjelenni. Itt a D-Pad és az (A) gomb segítségével válaszd a "GodMode9" opciót, hogy az alábbi utasításokat követhesd. 
 {: .notice--info}
 
-1. Launch GodMode9 by holding (Start) during boot
-1. Navigate to `[1:] SYSNAND CTRNAND` -> `title` -> `00040010`
-1. Navigate to the folder for your device and region:
-  + **Old 3DS or Old 2DS EUR**: `00022300` -> `content`
-  + **Old 3DS or Old 2DS JPN**: `00020300` -> `content`
-  + **Old 3DS or Old 2DS USA**: `00021300` -> `content`
-  + **New 3DS or New 2DS EUR**: `20022300` -> `content`
-  + **New 3DS or New 2DS JPN**: `20020300` -> `content`
-  + **New 3DS or New 2DS USA**: `20021300` -> `content`
-1. Notice that there are two sets of app and tmd files, one set with uppercase extensions (`.TMD` and `.APP`), and one set with lowercase extensions (`.tmd` and `.app`)
-1. While holding the (R) trigger, press (Y) to create a new directory
-1. Press (A) to confirm the name `newdir` (it does not matter what the folder is called)
-1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
-1. Press (B) to decline relocking write permissions if prompted
-1. Press the (L) trigger on each of the uppercase extension files (`.TMD` and `.APP`) to mark them
-1. Press (Y) to copy the files
-1. Navigate to `newdir`
-1. Press (Y) to paste the files
-1. Select "Move path(s)"
-1. The uppercase extension files will have been moved to the `newdir` directory
-1. Press (Start) to reboot your device
-1. Retry the H&S injection
-1. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then retry the H&S injection
+1. Indítsd el a GodMode9-et a (Start) lenyomva tartásával boot közben
+1. Kövesd a `[1:] SYSNAND CTRNAND` -> `title` -> `00040010` útvonalat
+1. Válaszd a készülékednek és a régiódnak megfelelő mappát:
+  + **Old 3DS vagy Old 2DS EUR**: `00022300` -> `content`
+  + **Old 3DS vagy Old 2DS JPN**: `00020300` -> `content`
+  + **Old 3DS vagy Old 2DS USA**: `00021300` -> `content`
+  + **New 3DS vagy New 2DS EUR**: `20022300` -> `content`
+  + **New 3DS vagy New 2DS JPN**: `20020300` -> `content`
+  + **New 3DS vagy New 2DS USA**: `20021300` -> `content`
+1. Figyeljük meg, hogy itt kétféle app és tmd fájl van, az egyik fajta nagybetűs kiterjesztéssel (`.TMD` és`.APP`), a másik fajta kisbetűs kiterjesztéssel (`.tmd` and `.app`)
+1. Az (R) gomb lenyomva tartása mellett nyomd meg az (Y)-t új mappa létrehozásához
+1. Nyomd meg az (A) gombot, hogy elfogadd a `newdir` nevet (nem számít a mappa neve)
+1. Nyomd meg az (A) gombot, hogy feloldd a SysNAND (lvl1) írást, majd sorban nyomd meg a kijelzett gombokat
+1. Nyomd meg a (B) gombot, hogy elutasítsd az írási engedélyek visszavonását, ha kérdezi
+1. Nyomd meg az (L) gombot minden egyes nagybetűs kiterjesztésű fájlon (`.TMD` and `.APP`), hogy megjelöld őket
+1. Nyomd meg az (Y)-t, hogy kimásold a fájlokat
+1. Lépj be a `newdir` mappába
+1. Nyomd meg az (Y) gombot a fájlok beillesztéséhez
+1. Válaszd a "Move path(s)" opciót
+1. A nagybetűs kiterjesztésű fájlok ezután már a `newdir` könyvtárban lesznek megtalálhatók
+1. Nyomd meg a (Start) gombot az eszköz újraindításához
+1. Próbáld újra a H&S injektálást
+1. Ha még így sem működik, helyezd vissza a nagybetűs kiterjesztésű fájlokat a `content` mappába, aztán helyezd át a kisbetűs kiterjesztésűeket a `newdir` mappába, majd próbáld újra az H&S injektálást
 
-## A browser based exploit is not working
+## Egy böngésző alapú exploit nem működik
 
-Browser based exploits (such as browserhax or 2xrsa) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
+A böngésző alapú exploitok (mint például a browserhax, vagy az 2xrsa) gyakran instabilak és sokszor lefagynak, de néha megjavíthatók az alábbi lépések végrehajtásával.
 
-1. Launch the browser, then launch the browser settings
-1. Scroll to the bottom and Initialize Savedata (it also may be called Clear All Save Data)
-1. Try the exploit again
+1. Indítsd el a böngészőt, majd lépj be a beállításokba (browser settings)
+1. Görgess a legaljára, majd válaszd az "Initialize Savedata" opciót (ami lehet, hogy "Clear All Save Data" néven fut)
+1. Próbáld meg újra végrehajtani az exploitot
 
-## Black screen on SysNAND boot
+## Fekete képernyő SysNAND-ról való bootoláskor
 
-### What you need
+### Amire szükséged lesz
 
 * [`remove_extdata.gm9`]({{ "/gm9_scripts/remove_extdata.gm9" | absolute_url }}){:download}
 
-### Instructions
+### Utasítások
 
-Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
+Vedd figyelembe, hogy amennyiben van más payload fájl a `GodMode9.firm` fájlon kívül a `/luma/payloads/`mappában, indításkor a (Start) gombot lenyomva tartva a "chainloader menu" menü fog megjelenni. Itt a D-Pad és az (A) gomb segítségével válaszd a "GodMode9" opciót, hogy az alábbi utasításokat követhesd. 
 {: .notice--info}
 
-1. Try booting with your SD card out, and then reinserting it after booting
-    1. Power off your device
-    1. Remove your SD card from your device
-    1. Power on your device
-    1. When the home menu appears, reinsert your SD card into your device
-    1. If this worked, you should clear Home Menu's extdata by following these instructions:
-        1. Power off your device
-        1. Launch GodMode9 by holding (Start) during boot
-        1. Press (Home) to bring up the action menu
-        1. Select "Scripts..."
-        1. Select "remove_extdata"
-        1. When prompted, press (A) to proceed
-        1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
-        1. Press (A) to continue
-        1. Press (A) to relock write permissions
-        1. Press (Start) to reboot your device
-1. Try booting without any cartridges inserted (including flashcarts)
-1. If you have a hardmod and a NAND backup, flash the backup back to SysNAND
-1. Try booting into recovery mode and updating your system
-    1. Power off your device
-    1. Hold (L) + (R) + (A) + (Up)
-    1. Power on your device
-    1. If you enter safe mode, update your device
-1. Your device may be bricked. For support, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
+1. Próbálj meg SD kártya nélkül bootolni, majd helyezd vissza bootolás után
+    1. Kapcsold ki a készüléked
+    1. Vedd ki az SD kártyát a készülékedből
+    1. Kapcsold be a készülékedet
+    1. Amikor a home menu megjelenik, helyezd vissza az SD kártyát a készülékedbe
+    1. Ha ez működött, törölnöd kell a Home Menu extdata-ját az alábbi módon:
+        1. Kapcsold ki a készüléked
+        1. Indítsd el a GodMode9-et a (Start) lenyomva tartásával boot közben
+        1. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
+        1. Válaszd a "Scripts..." opciót
+        1. Válaszd a "remove_extdata" opciót
+        1. Amikor kéri, nyomd meg az (A) gombot a folytatáshoz
+        1. Nyomd meg az (A) gombot, hogy feloldd a SysNAND (lvl1) írást, majd sorban nyomd meg a kijelzett gombokat
+        1. Nyomd meg az (A) gombot a folytatáshoz
+        1. Nyomd meg az (A) gombot az írási engedélyek visszavonásához
+        1. Nyomd meg a (Start) gombot az eszköz újraindításához
+1. Próbálj meg játékkártya nélkül bootolni (beleértve a flashkártyákat)
+1. Ha rendelkezel hardmoddal és biztonsági mentéssel a NAND-odról, flasheld vissza a biztonsági mentést a SysNAND-odra
+1. Próbálj meg recovery mode-ba bootolni, majd onnét frissíteni a rendszeredet
+    1. Kapcsold ki a készüléked
+    1. Tartsd lenyomva az (L) + (R) + (A) + (Fel) gombokat
+    1. Kapcsold be a készülékedet
+    1. A safe mode-ba lépve frissítsd a készülékedet
+1. Elképzelhető, hogy brickelted a készülékedet. Segítségért fordulj ide: [Nintendo Homebrew a Discord-on](https://discord.gg/MWxPgEp)
 
-## Black screen on SysNAND boot after Installing boot9strap
+## Fekete képernyő a SysNAND-ról való bootoláskor a boot9strap telepítése után
 
-### What you need
+### Amire szükséged lesz
 
 * [`remove_extdata.gm9`]({{ "/gm9_scripts/remove_extdata.gm9" | absolute_url }}){:download}
 
-### Instructions
+### Utasítások
 
-1. Ensure you have a working payload
-    1. Check for the existence of `boot.firm` in the root of your SD card.
-1. Try resetting Luma's config and fix options
-    1. Delete `/luma/config.bin` from your SD card
-    1. Set your options when it boots
-1. Test booting GodMode9
-    1. On Luma3DS, hold (Start) on boot
-1. Try deleting home menu's extdata
-    1. Power off your device
-    1. Launch GodMode9 by holding (Start) during boot
+1. Bizonyosodj meg róla, hogy rendelkezel működőképes payloaddal
+    1. Ellenőrizd, hogy létezik-e a `boot.firm` fájl az SD kártyád gyökerében.
+1. Próbáld meg alaphelyzetbe rakni a Luma konfigurációját, hogy kijavíthasd a beállításait
+    1. Töröld a `/luma/config.bin` fájlt az SD kártyádról
+    1. Bootolás után végezd el a beállításokat
+1. Próbáld ki, hogy bootol-e a GodMode9
+    1. Tartsd lenyomva a (Start) gombot boot közben Luma3DS-en
+1. Próbáld meg a home menu extdata-ját törölni
+    1. Kapcsold ki a készüléked
+    1. Indítsd el a GodMode9-et a (Start) lenyomva tartásával boot közben
     1. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
-    1. Select "Scripts..."
-    1. Select "remove_extdata"
-    1. When prompted, press (A) to proceed
-    1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
-    1. Press (A) to continue
-    1. Press (A) to relock write permissions
-    1. Press (Start) to reboot your device
-1. Try booting without any cartridges inserted (including flashcarts)
-1. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version (v6.2.3 or higher)
-1. If your NAND is of a version between 3.0.0 and 4.5.0, do the following:
-    + Ensure that you are using the latest Luma3DS version (v6.6 or higher)
-    + Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) and rename it to `native.firm`
-    + Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
-    + Copy `native.firm` and `cetk` to the `/luma/` folder on your SD card
-    + If you have Luma3DS version 7.1 or lower, rename `native.firm` to `firmware.bin`
-    + Delete both of these files after updating your device
-1. Try following [CTRTransfer](ctrtransfer)
-1. Ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+    1. Válaszd a "Scripts..." opciót
+    1. Válaszd a "remove_extdata" opciót
+    1. Amikor kéri, nyomd meg az (A) gombot a folytatáshoz
+    1. Nyomd meg az (A) gombot, hogy feloldd a SysNAND (lvl1) írást, majd sorban nyomd meg a kijelzett gombokat
+    1. Nyomd meg az (A) gombot a folytatáshoz
+    1. Nyomd meg az (A) gombot az írási engedélyek visszavonásához
+    1. Nyomd meg a (Start) gombot az eszköz újraindításához
+1. Próbálj meg játékkártya nélkül bootolni (beleértve a flashkártyákat)
+1. Ha korábban Gateway segítségével downgrade-eltél, bizonyosodj meg róla, hogy a legújabb Luma3DS verziót használod-e (v6.2.3-at vagy újabbat)
+1. Ha a NAND-odon 3.0.0 és 4.5.0 közötti rendszer van, hajtsd végre az alábbi lépéseket:
+    + Bizonyosodj meg róla, hogy a legutóbbi Luma3DS verziót használod-e (v6.6-ot vagy újabbat)
+    + Töltsd le [ezt a fájlt](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) és nevezd át `native.firm` névre
+    + Töltsd le [ezt a fájlt](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
+    + Másold a `native.firm` és a `cetk` fájlokat az SD kártyán található `/luma/` mappába
+    + Ha a Luma3DS-ed verziója 7.1-es vagy annál alacsonyabb, nevezd át a `native.firm` fájlt `firmware.bin` névre
+    + Töröld le mindkét fájlt miután frissítetted a készülékedet
+1. Próbálj meg végrehajtani egy [CTRTransfert](ctrtransfer)
+1. Kérj segítséget itt: [Nintendo Homebrew a Discord-on](https://discord.gg/MWxPgEp).
 
-## Blue screen on boot (bootrom error)
+## Kék képernyő bootoláskor (bootrom hiba)
 
-1. Your device is bricked
-1. You will need to get a [hardmod](https://gbatemp.net/threads/414498/) or repair / replace your device
+1. A készüléked brickelve lett
+1. Szükséged lesz egy [hardmodra](https://gbatemp.net/threads/414498/), vagy javításra, esetleg az eszközöd lecserélésére
