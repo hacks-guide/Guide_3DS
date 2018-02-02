@@ -1,63 +1,63 @@
 ---
-title: "Installing boot9strap (2xrsa)"
+title: "boot9strap telepítése (2xrsa)"
 ---
 
-{% include toc title="Table of Contents" %}
+{% include toc title="Tartalomjegyzék" %}
 
-### What you need
+### Amire szükséged lesz
 
-* The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest){:target="_blank"}
-* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest){:target="_blank"} *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest){:target="_blank"} *(the `.7z` file)*
-* The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases)
+* A [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest){:target="_blank"} legújabb kiadása
+* A [boot9strap](https://github.com/SciresM/boot9strap/releases/latest){:target="_blank"} legújabb kiadása *(a sima boot9strap; nem a `devkit` fájl, nem az `ntr` fájl)*
+* A [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest){:target="_blank"} legújabb kiadása *(a `.7z` fájl)*
+* A [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases) legújabb kiadása
 
-### Instructions
+### Utasítások
 
-#### Section I - Prep Work
+#### Első rész - Előkészületek
 
-1. Power off your device
-1. Insert your SD card into your computer
-1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card
-1. Copy `boot.3dsx` to the root of your SD card
-1. Create a folder named `boot9strap` on the root of your SD card
-1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
-1. Copy `arm9.bin` and `arm11.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
+1. Kapcsold ki a készüléked
+1. Helyezd az SD kártyád a számítógépbe
+1. Másold át a `boot.firm` fájlt a Luma3DS `.7z`-ből az SD kártya gyökerébe
+1. Másold az `boot.3dsx` fájlt az SD kártyád gyökerébe
+1. Hozz létre egy mappát `boot9strap` néven az SD kártya gyökerében
+1. Másold át a `boot9strap.firm` fájlt és a `boot9strap.firm.sha` fájlt a boot9strap `.zip` fájlból az SD kártyád `/boot9strap/` mappájába
+1. Másold az `arm9.bin` és az `arm11.bin` fájlokat a SafeB9SInstaller `.zip`-ből az SD kártyád gyökerébe
 
     ![]({{ "/images/screenshots/boot9strap-2xrsa-file-layout.png" | absolute_url }})
     {: .notice--info}
 
-1. Reinsert your SD card into your device
-1. Power on your device
+1. Tedd vissza az SD kártyád a készülékedbe
+1. Kapcsold be a készülékedet
 
-#### Section II - Launching SafeB9SInstaller
+#### Második rész - A SafeB9SInstaller indítása
 
-1. Launch the browser and go to the following URL on your device
+1. Indítsd el a webböngészőt a készülékeden, majd nyisd meg az alábbi URL-t
   + `http://2xrsa.3ds.guide`
-  + If you are on a New 3DS, New 2DS, or Old 2DS and Wireless Communication is off, you can re-enable the wireless by removing the battery and unplugging the charger for several seconds then booting back up
-  + If you get the error "This service is not available in your region", use the System Settings to set your device's country to match the NAND region you installed with 2.1.0 CTRTransfer
-  + If you forgot to disable parental controls before CTRTransfering or otherwise cannot access wireless settings, note that the device will autoconnect to any network named `attwifi` with no password
-  + If you get another error, [follow this troubleshooting guide](troubleshooting#a-browser-based-exploit-is-not-working)
-1. If the exploit was successful, you will have booted into SafeB9SInstaller
+  + Ha készüléked New 3DS, New 2DS, vagy Old 2DS és a vezeték nélküli kapcsolat (Wireless Communication) tiltva van, engedélyezheted ismét úgy, hogy kiveszed az akkumulátort, kihúzod a töltőt néhány másodpercre, majd ismét elindítod a konzolt
+  + Ha a "This service is not available in your region" hibaüzenetet kapod, használd a System Settings-et, hogy a korábban a 2.1.0-s CTRTransferrel telepített NAND régiójával egyező országra állítsd a készülékedet
+  + Ha elfelejtetted volna letiltani a szülői felügyeletet (parental controls) a CTRTransfer használata előtt, vagy egyéb okból nem éred el a vezeték nélküli beállításokat (wireless settings), jó ha tudod, hogy a készüléked automatikusan kapcsolódni fog bármilyen olyan hálózathoz, aminek `attwifi` a neve és nincs jelszava
+  + Ha egyéb hibát kapsz, [nézd át a hibaelhárítási útmutatót](troubleshooting#a-browser-based-exploit-is-not-working)
+1. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
 
-#### Section III - Installing boot9strap
+#### Harmadik rész - boot9strap telepítése
 
-1. Wait for all safety checks to complete
-1. When prompted, input the key combo given to install boot9strap
-1. Once it has completed, press (A) to reboot your device
+1. Várj, amíg az összes biztonsági ellenőrzés be nem fejeződik
+1. Ha kéri, akkor nyomd meg sorban azokat a gombokat, amiket kijelez a képernyőn, hogy telepíthesd a boot9strap-et
+1. Ha ez elkészült, nyomd meg az (A) gombot az eszközöd újraindításához
 
-#### Section IV - Configuring Luma3DS
+#### Negyedik rész - Luma3DS konfigurálása
 
-1. Your device should have rebooted into the Luma3DS configuration menu
-  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
-1. Use the (A) button and the D-Pad to turn on the following:    
+1. A készülékednek az előzőekben a Luma3DS-be kellett bootolnia
+  + Ha fekete képernyőt kapsz, [nézd át a hibaelhárítási útmutatót](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
+1. Használd az (A) gombot és D-Pad-et a következő engedélyezéséhez:    
   + **"Show NAND or user string in System Settings"**
-1. Press (Start) to save and reboot
-  + If you get an error, just continue the next page
+1. Mentéshez és újraindításhoz nyomd meg a (Start) gombot
+  + Ha ezen a ponton hibát kapsz, csak folytasd az útmutatót a következő oldalon
 
 ___
 
-New 3DS 2.1.0 users *must* [restore their NAND backup](godmode9-usage#nand_restore) before going to the [Finalizing Setup](finalizing-setup) page.
+A 2.1.0-es verziójú *New 3DS* felhasználóknak *kötelező* a [NAND biztonsági mentésük visszaállítása](godmode9-usage#nand_restore), még mielőtt [véglegesítenék a telepítést](finalizing-setup).
 {: .notice--danger}
 
-Continue to [Finalizing Setup](finalizing-setup)
+Tovább a [telepítés véglegesítésére](finalizing-setup)
 {: .notice--primary}
