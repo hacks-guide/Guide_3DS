@@ -1,58 +1,58 @@
 ---
-title: "Installing boot9strap (DSiWare)"
+title: "boot9strap telepítése (DSiWare)"
 ---
 
-{% include toc title="Table of Contents" %}
+{% include toc title="Tartalomjegyzék" %}
 
-### Required Reading
+### Fontos tudnivalók
 
-There are two different methods of installing boot9strap using DSiWare on 11.6.0.
+Két különböző módszer létezik a boot9strap DSiWare-rel való telepítésére 11.6.0-s rendszeren.
 
-One of these methods only works with four specific games that are no longer sold on the eShop, while the other works with quite a few games still sold on the eShop.
+Az egyik módszer csak négy olyan játékkal működik, ami már nem kapható az eShop-ban, míg a másik működik egész sok olyan játékkal, ami még mindig kapható az eShop-ban.
 
-Both of these methods require two devices. One 3DS (or 2DS) must be running boot9strap and is referred to as the *source 3DS*, while the other 3DS (or 2DS) is on stock 11.6.0 and referred to as the *target 3DS*.
+Mindkét módszerhez szükséged lesz két készülékre. Egy 3DS-re (vagy 2DS-re), amely boot9strap-et futtat, és amire a későbbiekben *forrás 3DS*-ként fogunk hivatkozni, illetve egy másik 3DS-re (vagy 2DS-re), ami gyári állapotú 11.6.0-s rendszert futtat, és amire a későbbiekben a *cél 3DS*-ként hivatkozunk majd.
 
-Both of these methods will assume that the 3DS running custom firmware is using boot9strap and has completed this guide. While it is possible to do these methods with some other kind of custom firmware, that is out of the scope of this guide.
+Mindkét módszer esetén feltételezzük, hogy az a 3DS, amelyiken egyedi firmware fut, boot9strap-et futtat, és ezen útmutató szerint lett telepítve. Bár lehetséges, hogy ezek a módszerek működnek más egyedi firmware-ekkel is, azokkal ez az útmutató nem foglalkozik.
 
-Both of these methods use a combination of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws), and an oversight that allows DSiWare titles to read and write to anywhere in encrypted NAND.
+Mindkét módszer két dolgon alapszik: az egyik a "FIRM partitions known-plaintext" nevű exploit, amely [itt](https://www.3dbrew.org/wiki/3DS_System_Flaws) kerül részletezésre, a másik pedig egy olyan fejlesztői figyelmetlenség, ami lehetővé teszi a DSiWare alkalmazásoknak, hogy írjanak és olvassanak a titkosított NAND területén.
 
-Both of these methods require you to [System Transfer](http://en-americas-support.nintendo.com/app/answers/detail/a_id/13996/) from a CFW 3DS to a stock 3DS as part of the steps. System Transfers will work in the following directions *only*:    
-  + New 3DS or New 2DS -> New 3DS or New 2DS    
-  + Old 3DS or Old 2DS -> Old 3DS or Old 2DS    
-  + Old 3DS or Old 2DS -> New 3DS or New 2DS   
+Mindkét módszer esetében [System Transfert](http://en-americas-support.nintendo.com/app/answers/detail/a_id/13996/) kell majd használnod, melynek forrása a CFW-vel rendelkező 3DS lesz, célja pedig a gyári állapotú 3DS, ahogy azt a következő lépések majd leírják. A System Transfer *csak* a következő irányokban fog működni:    
+  + New 3DS vagy New 2DS -> New 3DS vagy New 2DS    
+  + Old 3DS vagy Old 2DS -> Old 3DS vagy Old 2DS    
+  + Old 3DS vagy Old 2DS -> New 3DS vagy New 2DS   
 
-Both systems MUST be from the same region.
+A készülékek régiójának meg kell egyeznie.
 {: .notice--warning} 
 
-In both of these methods, the source 3DS's NNID will be stuck on the target 3DS unless you either system transfer back or call Nintendo (details can be found in the instructions)! System Transfers can only be performed once a week per NNID.
+Mindkét módszer esetében a forrás 3DS NNID-je a cél 3DS-en fog ragadni, kivéve, ha utána ellenező irányban is elvégzed a System Transfert, vagy felhívod a Nintendót (a részleteket megtalálod az utasítások között)! System Transfert NNID-nként csak egyszer lehet elvégezni hetente.
 {: .notice--danger}
 
 ___
-### Methods
+### Módszerek
 
 ___
 
-#### Installing boot9strap (DSiWare Save Injection)
+#### boot9strap telepítése (DSiWare mentés-injektálás)
 
-This method requires that the source 3DS already legitimately owns one of the following games:
+Ennél a módszernél szükség lesz arra, hogy a forrás 3DS-en az alábbi játékok egyikének eredeti másolata meglegyen:
     
   + "Fieldrunners"
   + "Legends of Exidia"
   + "Guitar Rock Tour"
   + "The Legend of Zelda: Four Swords"
     
-A pirated copy of the game will *not* work, and all of these games have been pulled from the eShop.
+Kalózmásolat *nem* fog működni, az itt szereplő összes játék az eShop-ból lett letöltve.
 
-Continue to [Installing boot9strap (DSiWare Save Injection)](installing-boot9strap-(dsiware-save-injection))
+Tovább a [boot9strap telepítése (DSiWare mentés-injektálás)](installing-boot9strap-(dsiware-save-injection)) oldalra
 {: .notice--primary}
 
 ___
 
-#### Installing boot9strap (DSiWare Game Injection)
+#### boot9strap telepítése (DSiWare játék-injektálás)
 
-This method requires that the source 3DS buys or already legitimately owns one of the games listed on the [Installing boot9strap (DSiWare Game Injection List)](installing-boot9strap-(dsiware-game-injection-list)) page.
+Ennél a módszernél szükség lesz arra, hogy a forrás 3DS-en megvásárold, vagy már meglegyen valamelyik játék eredeti másolata a [boot9strap telepítése (DSiWare játék-injektálás - támogatott játékok)](installing-boot9strap-(dsiware-game-injection-list)) oldalon felsoroltak közül.
 
-A pirated copy of the game will *not* work.
+Kalózmásolat *nem* fog működni.
 
-Continue to [Installing boot9strap (DSiWare Game Injection)](installing-boot9strap-(dsiware-game-injection))
+Tovább a [boot9strap telepítése (DSiWare játék-injektálás)](installing-boot9strap-(dsiware-game-injection)) oldalra
 {: .notice--primary}
