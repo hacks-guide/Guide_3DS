@@ -9,7 +9,7 @@ header:
 excerpt: "Eine vollständige Anleitung für 3DS Custom Firmware, <br />von original zu boot9strap.<br />" #
 ---
 
-Thoroughly read all of the introductory pages (including this one!) before proceeding.
+Lies alle Einleitungsseiten gründlich durch (einschließlich dieser), bevor du fortfährst.
 {: .notice--warning}
 
 {% capture notice-1 %}
@@ -20,8 +20,8 @@ Wenn du eine Entwicklerkonsole ("PANDA" oder "SNAKE") besitzt, wirf einen Blick 
 <div class="notice--danger">{{ notice-1 | markdownify }}</div>
 
 {% capture notice-1 %}
-This guide is available in other languages!    
-Click the <i class="fa fa-language" aria-hidden="true"></i> icon at the top right of the page to change the language.
+Diese Anleitungen ist in verschiedenen Sprachen verfügbar!    
+Um die Sprache zu ändern klick auf das <i class="fa fa-language" aria-hidden="true"></i> Symbol oben rechts in der Ecke.
 {% endcapture %}
 
 <div class="notice--success">{{ notice-1 | markdownify }}</div>
@@ -36,13 +36,13 @@ Click the <i class="fa fa-language" aria-hidden="true"></i> icon at the top righ
 
 [**Homebrew**](https://de.wikipedia.org/wiki/Homebrew) bezeichnet für gewöhnlich Software, die nicht von Nintendo autorisiert wurde. Es erlaubt dir, Homebrew-Spiele, -Werkzeuge (wie beispielsweise Spielstandbearbeitung/-sicherung), oder Emulatoren für verschiedene ältere Konsolen laufen zu lassen.
 
-In many cases, running homebrew on your device is 100% free using just the Nintendo 3DS Sound app. There are also various other exploits in commercial games and the browser to get homebrew running.
+In den meisten Fällen kannst du Homebrew auf deiner Konsole mit Hilfe der Nintendo 3DS Sound-App komplett kostenlos nutzen. Es gibt aber auch verschiedene andere Exploits, z. B. im Browser oder in kommerziellen Spielen, die zur Ausführung von Homebrew genutzt werden können.
 
 ## Was ist Custom Firmware?
 
 **Custom Firmware** ("CFW") ermöglicht dir fortgeschrittene Hacks, welche Userland-Homebrew nicht ohne weiteres erlaubt. Zum Beispiel lassen sich mit Hilfe von Signatur-Patches unsignierte Titel installieren, die direkt im HOME-Menü erscheinen.
 
-CFW can be set up on any console on any version (but may require additional tools / accessories for versions >11.3.0).
+CFW kann auf jeder Konsole mit jeder Version aufgesetzt werden (kann aber weitere Werkzeuge / Zubehör benötigen bei Versionen > 11.3.0).
 
 ## Was wird mit dieser Anleitung installiert?
 
@@ -60,10 +60,10 @@ Für eine Liste jeder berechneten sighax-Signatur (die Plattform, auf der boot9s
 ## Was kann ich mit Custom Firmware anstellen?
 
 + Spiele unabhängig der Region alle Game Cards und eShop Spiele
-+ Customize your HOME Menu with user-created [themes and splash screens](https://themeplaza.eu/)
++Gestalte dein Home-Menü mit von Benutzer erstellten [Designs und Splash Screens](https://themeplaza.eu/)
 + Nutze "ROM-Hacks" für Spiele, die du besitzt
 + Nimm Screenshots deiner Spiele und Programme auf
-+ Backup, edit, and restore saves for many games
++ Sichere, bearbeite und stelle Spielstände vieler Spiele wieder her
 + Emuliere Spiele von älteren Konsolen mit Hilfe von RetroArch und anderen Emulatoren. (Funktioniert am besten mit einem New 3DS)
 + Installiere Homebrewtitel so, dass sie ein Symbol im HOME-Menü erhalten
 + Erstelle Sicherheitskopien deiner Cartridges in einem installierbaren Format, um deine Spiele ohne Cartridge spielen zu können
@@ -75,14 +75,14 @@ Für eine Liste jeder berechneten sighax-Signatur (die Plattform, auf der boot9s
 
 + **Bevor du mit dieser Anleitung anfängst, musst du die Risiken kennen: JEDES mal wenn du deinen 3DS modifizierst, besteht die Gefahr eines BRICKS, der deine Konsole UNWIDERRUFLICH unbrauchbar macht. Ein Brick tritt selten auf, aber ein Restrisiko bleibt bestehen, also befolge ALLE Anweisungen dieser Anleitung GENAUESTENS.**
 + Wenn du deinen 3DS bereits modifiziert hast und bereits über ein EmuNAND-Setup verfügst, kannst du den Inhalt des vorherigen EmuNANDs auf dein neues CFW-SysNAND transferieren. Befolge dazu alle Anweisungen zum Wiederherstellen des EmuNAND sobald du im Abschnitt [Setup fertigstellen](finalizing-setup) dazu aufgefordert wirst.
-+ This guide will work on New 3DS, Old 3DS, New 2DS, and Old 2DS in all regions on firmware 11.6.0 or below.
++ Diese Anleitung funktioniert bei New 3DS-, Old 3DS-, New 2DS- und Old 2DS-Systemen aller Regionen (Firmware 11.6.0 oder niedriger).
 + Wenn alles nach Plan verläuft, wirst du keine Daten verlieren und dein System wird die gleichen Daten wie vorher haben (Spiele, NNID, Speicherstände, etc. werden erhalten bleiben).
-+ Keep your device plugged in and charged throughout the entire process to avoid data loss or damage from an unexpected power-off!
++ Deine Konsole während des gesamten Prozesses mit dem Ladekabel aufzuladen vermeidet Datenverluste oder Schäden durch unerwartetes Ausschalten!
 + Deine SD-Karte sollte mit [MBR, nicht GPT](http://www.howtogeek.com/245610/) formatiert sein. (Die mitgelieferte SD-Karte ist standardmäßig mit MBR formatiert).
 + Falls du eine neue SD-Karte formatieren musst, kannst du [`guiformat`](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) benutzen und die Größe der Zuordnungseinheiten ("Allocation Unit Size") auf 32K setzen.
 + Der 2DS ist Softwaremäßig im Wesentlichen identisch zum Old 3DS, und alle Schritte für den Old 3DS können auch für den 2DS durchgeführt werden.
 
 ___
 
-Continue to [Get Started](get-started)
+Fahre fort mit [Los geht's](get-started)
 {: .notice--primary}
