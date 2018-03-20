@@ -28,12 +28,15 @@ Pour utiliser les liens suivants [magnet](https://fr.wikipedia.org/wiki/Magnet_(
 
 #### Section I - Préparatifs
 
+1. Éteignez votre 3DS
+1. Insérez votre carte SD dans votre ordinateur
 1. Créez un dossier nommé `cias` à la racine de votre carte SD si celui ci n'existe pas
 1. Copiez `TWL Version Data - v0.cia` dans le dossier `/cias/` sur votre carte SD
 1. Copiez `DS Download Play - v1024.cia` dans le dossier `/cias/` sur votre carte SD
 1. Copiez `DS Internet - v2048.cia` dans le dossier `/cias/` sur votre carte SD
 1. Copiez `Nintendo DS Cart Whitelist - v11264.cia` dans le dossier `/cias/` sur votre carte SD
 1. Copiez soit `New_3DS TWL_FIRM - v9936.cia`  soit `Old_3DS TWL_FIRM - v8817.cia` dans le dossier `/cias/` sur votre carte SD
+1. Réinsérez votre carte SD dans votre 3DS
 
 #### Section II - Installation des applications
 
@@ -143,6 +146,20 @@ Notez que si vous avez n’importe quel autre payload que `GodMode9.firm` dans l
     1. Si vous passez en mode sécurisé, mettre à jour votre console
 1. Votre console est peut-être brickée. Pour obtenir de l'aide, demandez de l'aide à [Nintendo Homebrew sur Discord(Anglais)](https://discord.gg/MWxPgEp)
 
+## Clear Home Menu extdata
+
+1. Éteignez votre 3DS
+1. Insérez votre carte SD dans votre ordinateur
+1. Navigate to the `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/` folder on your SD card
+1. Delete the extdata file corresponding to your region:
+  + **EUR Region**: `00000098`
+  + **JPN Region**: `00000082`
+  + **USA Region**: `0000008f`
+  + **CHN Region**: `000000A1`
+  + **KOR Region**: `000000A9`
+  + **TWN Region**: `000000B1`
+1. Réinsérez votre carte SD dans votre 3DS
+
 ## Écran noir au démarrage de la SysNAND après l’installation de boot9strap
 
 ## Ce dont vous avez besoin
@@ -170,14 +187,7 @@ Notez que si vous avez n’importe quel autre payload que `GodMode9.firm` dans l
     1. Appuyez (A) pour reverrouiller autorisations en écriture
     1. Appuyez sur (Start) pour redémarrer votre système
 1. Essayez de démarrer votre console sans aucune cartouche insérée (ni linker)
-1. Si vous avez auparavant réalisé un downgrade via Gateway, assurez-vous que vous utilisez la dernière version de Luma3DS (v6.2.3 ou plus récent, au minimum)
-1. Si votre NAND est entre la version 3.0.0 et 4.5.0, faites ceci :
-    + Assurez-vous d'utiliser la dernière version de Luma3DS (v6.6 ou plus, au moins)
-    + Téléchargez [ce fichier](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) et renommez-le `native.firm`
-    + Téléchargez [ce fichier](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
-    + Copiez `native.firm` et `cetk` au dossier `/luma/` dans votre carte SD
-    + Si vous avez la version 7.1 de Luma3DS ou inférieur. renommez le fichier `native.firm` en `firmware.bin`
-    + Supprimez ces deux fichiers après avoir mis à jour de votre console
+1. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version
 1. Essayez [CTRTransfer](ctrtransfer)
 1. Pour obtenir de l'aide, demandez de l'aide à [Nintendo Homebrew sur Discord(Anglais)](https://discord.gg/MWxPgEp).
 
