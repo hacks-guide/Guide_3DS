@@ -28,12 +28,15 @@ Um die [Magnet-Links](https://de.wikipedia.org/wiki/Magnet-Link) auf dieser Seit
 
 #### Schritt I - Vorbereitungen
 
+1. Schalte deine Konsole aus
+1. Stecke deine SD-Karte in deinen Computer
 1. Erstelle einen Ordner namens `cias` im Stammverzeichnis deiner SD-Karte, falls er noch nicht existiert
 1. Kopiere `TWL Version Data - v0.cia` in den `/cias/` Ordner auf der SD-Karte
 1. Kopiere `DS Download Play - v1024.cia` in den `/cias/` Ordner auf deiner SD-Karte
 1. Kopiere `DS Internet - v2048.cia` in den `/cias/` Ordner auf deiner SD-Karte
 1. Kopiere `Nintendo DS Cart Whitelist - v11264.cia` in den `/cias/` Ordner auf deiner SD-Karte
 1. Kopiere entweder `New_3DS TWL_FIRM - v9936.cia`  oder `Old_3DS TWL_FIRM - v8817.cia` in den `/cias/` Ordner auf deiner SD-Karte
+1. Stecke deine SD-Karte nun wieder in deinen 3DS
 
 #### Schritt II - CIAs installieren
 
@@ -124,7 +127,7 @@ Beachte: Sollten noch weitere Dateien als nur die`GodMode9.firm` Datei im `/luma
     1. Starte die Konsole wieder
     1. Lege die SD-Karte wieder ein, sobald das Home-Menü angezeigt wird
     1. Wenn das geklappt hat solltest du die Home-Menü extdata entsprechend der folgenden Anweisungen säubern:
-        1. Schalte deine Konsole aus
+        1. Schalte deinen 3DS aus
         1. Starte GodMode9, indem du während dem Starten deiner Konsole die Taste (Start) gedrückt hältst
         1. Drücke  (HOME) um das Aktionsmenü aufzurufen
         1. Wähle "Scripts"
@@ -142,6 +145,20 @@ Beachte: Sollten noch weitere Dateien als nur die`GodMode9.firm` Datei im `/luma
     1. Starte die Konsole wieder
     1. Solltest du in den abgesicherten Modus kommen, aktualisiere dein Gerät
 1. Deine Konsole könnte gebrickt sein. Für Hilfe auf Englisch, frage auf dem [Nintendo Homebrew Discord](https://discord.gg/MWxPgEp)
+
+## Clear Home Menu extdata
+
+1. Schalte deinen 3DS aus
+1. Stecke deine SD-Karte in deinen Computer
+1. Navigate to the `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/` folder on your SD card
+1. Delete the extdata file corresponding to your region:
+  + **EUR Region**: `00000098`
+  + **JPN Region**: `00000082`
+  + **USA Region**: `0000008f`
+  + **CHN Region**: `000000A1`
+  + **KOR Region**: `000000A9`
+  + **TWN Region**: `000000B1`
+1. Stecke deine SD-Karte nun wieder in deinen 3DS
 
 ## Schwarzer Bildschirm beim Start des SysNAND nach der Installation von boot9strap
 
@@ -170,14 +187,7 @@ Beachte: Sollten noch weitere Dateien als nur die`GodMode9.firm` Datei im `/luma
     1. Drücke (A), um die Schreibrechte zu deaktivieren
     1. Drücke (Start) um deinen 3DS neu zu starten
 1. Versuche das Gerät ohne Cartridges (auch ohne Flashcards) einzuschalten
-1. Wenn du vorher bereits mit der Gateway-Flashkarte downgegraded hast, stelle sicher, dass du die neueste Luma3DS-Version (v6.2.3 oder höher) benutzt
-1. Wenn dein NAND zwischen Version 3.0.0 und 4.5.0 ist, mache folgendes:
-    + Stelle sicher, dass du die neueste Version von Luma3DS nutzt (v6.6 oder höher)
-    + Lade [diese Datei](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) herunter und ändere ihren Namen zu `native.firm`
-    + Lade dir [diese Datei](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk) herunter
-    + Kopiere `native.firm` und `cetk` in den `/luma/` Ordner auf deiner SD-Karte
-    + Falls deine Version von Luma3DS 7.1 oder niedriger ist, benenne `native.firm` in `firmware.bin` um
-    + Lösche beide dieser Dateien nach dem das Update installiert wurde
+1. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version
 1. Versuche, [CTRTransfer](ctrtransfer) zu befolgen
 1. Für Hilfe auf Englisch, frage auf dem [Nintendo Homebrew Discord](https://discord.gg/MWxPgEp).
 
