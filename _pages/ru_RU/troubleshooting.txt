@@ -28,12 +28,15 @@ title: "Проблемы и их решения"
 
 #### Часть I - Подготовительные работы
 
+1. Выключите консоль
+1. Вставьте SD-карту в компьютер
 1. Создайте папку `cias` в корне SD-карты, если таковой нет
 1. Скопируйте `TWL Version Data - v0.cia` в папку `/cias/` на SD-карте
 1. Скопируйте `DS Download Play - v1024.cia` в папку `/cias/` на SD-карте
 1. Скопируйте `DS Internet - v2048.cia` в папку `/cias/` на SD-карте
 1. Скопируйте `Nintendo DS Cart Whitelist - v11264.cia` в папку `/cias/` на SD-карте
 1. Скопируйте `New_3DS TWL_FIRM - v9936.cia`  или `Old_3DS TWL_FIRM - v8817.cia` в папку `/cias/` на SD-карте
+1. Вставьте SD-карту обратно в консоль
 
 #### Часть II - Установка тайтлов
 
@@ -143,6 +146,20 @@ title: "Проблемы и их решения"
     1. Если вы зашли в режим восстановления, обновите консоль
 1. Ваша консоль, скорее всего, превратилась в брик. Для поддержки, обратитесь за помощью в [Nintendo Homebrew on Discord (англ.)](https://discord.gg/MWxPgEp)
 
+## Clear Home Menu extdata
+
+1. Выключите консоль
+1. Вставьте SD-карту в компьютер
+1. Navigate to the `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/` folder on your SD card
+1. Delete the extdata file corresponding to your region:
+  + **EUR Region**: `00000098`
+  + **JPN Region**: `00000082`
+  + **USA Region**: `0000008f`
+  + **CHN Region**: `000000A1`
+  + **KOR Region**: `000000A9`
+  + **TWN Region**: `000000B1`
+1. Вставьте SD-карту обратно в консоль
+
 ## Черный экран при загрузке SysNAND после установки boot9strap
 
 ### Что понадобится
@@ -170,14 +187,7 @@ title: "Проблемы и их решения"
     1. Нажмите (A) чтобы восстановить запрет на запись
     1. Нажмите (Start) для перезагрузки
 1. Попробуйте включить устройство без каких-либо картриджей (включая флеш-картриджи)
-1. Если вы понижали прошивку через Gateway, то убедитесь, что у вас установлена самая последняя версия Luma3DS (6.2.3 или выше)
-1. Если версия вашего NAND между 3.0.0 и 4.5.0, проделайте следующие действия:
-    + Убедитесь, что используете самую свежую версию Luma 3DS (6.6, или выше)
-    + Скачайте [этот файл](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) и переименуйте его в `native.firm`
-    + Скачайте [этот файл](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
-    + Скопируйте `native.firm` и `cetk` в папку `/luma/` на SD-карте
-    + Если у вас Luma3DS версии 7.1 или ниже, переименуйте `native.firm` в `firmware.bin`
-    + После обновления прошивки удалите оба этих файла
+1. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version
 1. Попробуйте выполнить [CTRTransfer](ctrtransfer)
 1. Обратитесь за помощью в [Nintendo Homebrew on Discord (англ.)](https://discord.gg/MWxPgEp).
 
