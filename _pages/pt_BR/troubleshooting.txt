@@ -28,12 +28,15 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
 
 #### Section I - Prep Work
 
+1. Desligue seu dispositivo
+1. Insira o cartão SD no seu computador
 1. Crie uma pasta chamada `cias` na raiz do seu cartão SD se ela ainda não existir
 1. Copie o `TWL Version Data - v0.cia` para a pasta `/cias/` no seu cartão SD
 1. Copie o `DS Download Play - v1024.cia` para a pasta `/cias/` no seu cartão SD
 1. Copie o `DS Internet - v2048.cia` para a pasta `/cias/` no seu cartão SD
 1. Copie o `Nintendo DS Cart Whitelist - v11264.cia` para a pasta `/cias/` no seu cartão SD
 1. Copie o `New_3DS TWL_FIRM - v9936.cia` OU o `Old_3DS TWL_FIRM - v8817.cia` para a pasta `/cias/` no seu cartão SD
+1. Reinsira seu cartão SD no seu dispositivo
 
 #### Section II - Installing titles
 
@@ -143,6 +146,20 @@ Note que se você tem outros arquivos de payload diferentes do `GodMode9.firm` n
     1. Se você entrar no modo de segurança, atualize seu dispositivo
 1. Seu dispositivo talvez tenha brickado. Para suporte, peça ajuda em [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp)
 
+## Clear Home Menu extdata
+
+1. Desligue seu dispositivo
+1. Insira o cartão SD no seu computador
+1. Navigate to the `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/` folder on your SD card
+1. Delete the extdata file corresponding to your region:
+  + **EUR Region**: `00000098`
+  + **JPN Region**: `00000082`
+  + **USA Region**: `0000008f`
+  + **CHN Region**: `000000A1`
+  + **KOR Region**: `000000A9`
+  + **TWN Region**: `000000B1`
+1. Reinsira seu cartão SD no seu dispositivo
+
 ## Black screen on SysNAND boot after Installing boot9strap
 
 ### What You Need
@@ -170,14 +187,7 @@ Note que se você tem outros arquivos de payload diferentes do `GodMode9.firm` n
     1. Aperte (A) para bloquear as permissões de escrita
     1. Aperte (Start) para reiniciar seu dispositivo
 1. Tente ligar sem nenhum cartucho inserido (incluindo flashcarts)
-1. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version (v6.2.3 or higher)
-1. Se sua NAND estiver com a firmware numa versão entre 3.0.0 e 4.5.0, faça o seguinte:
-    + Ensure that you are using the latest Luma3DS version (v6.6 or higher)
-    + Baixe [este arquivo](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) e renomeie-o para `native.firm`
-    + Baixe [este arquivo](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
-    + Copie `native.firm` e `cetk` para a pasta `/luma/` no seu cartão SD
-    + Se você tem o Luma3DS na versão 7.1 ou inferior, renomeie `native.firm` para `firmware.bin`
-    + Apague ambos os arquivos depois de atualizar o dispositivo
+1. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version
 1. Try following [CTRTransfer](ctrtransfer)
 1. Peça ajuda em [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp).
 
