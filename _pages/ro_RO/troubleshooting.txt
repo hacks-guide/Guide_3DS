@@ -28,12 +28,15 @@ Pentru a folosi linkurile [magnetice](https://en.wikipedia.org/wiki/Magnet_URI_s
 
 #### Secțiunea I - Preparații
 
+1. Închideți dispozitivul
+1. Introduceți cardul SD în calculator
 1. Creați un folder numit `cias` pe rădăcina cardului SD dacă nu există deja
 1. Copiați `TWL Version Data - v0.cia` în folderul `/cias/` de pe cardul SD
 1. Copiați `DS Download Play - v1024.cia` în folderul `/cias/` de pe cardul SD
 1. Copiați `DS Internet - v2048.cia` în folderul `/cias/` de pe cardul SD
 1. Copiați `Nintendo DS Cart Whitelist - v11264.cia' în folderul '/cias/' de pe cardul SD
 1. Copiați `New_3DS TWL_FIRM - v9936.cia` sau `Old_3DS TWL_FIRM - v8817.cia` în folderul `/cias/` de pe cardul SD
+1. Reintroduceți cardul SD în dispozitivul dumneavoastră
 
 #### Secţiunea II - Instalând titluri
 
@@ -146,6 +149,20 @@ Exploit-uri bazate pe browser (cum ar fi browserhax sau 2xrsa) sunt de obicei in
     1. Dacă intrați în modul de siguranță, actualizați-vă dispozitivul
 1. Dispozitivul dumneavoastră ar putea fi brick-uit. Pentru suport, cereți ajutor la [Nintendo Homebrew pe Discord](https://discord.gg/MWxPgEp)
 
+## Clear Home Menu extdata
+
+1. Închideți dispozitivul
+1. Introduceți cardul SD în calculator
+1. Navigate to the `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/` folder on your SD card
+1. Delete the extdata file corresponding to your region:
+  + **EUR Region**: `00000098`
+  + **JPN Region**: `00000082`
+  + **USA Region**: `0000008f`
+  + **CHN Region**: `000000A1`
+  + **KOR Region**: `000000A9`
+  + **TWN Region**: `000000B1`
+1. Reintroduceți cardul SD în dispozitivul dumneavoastră
+
 ## Ecran negru la pornirea SysNAND-ului după ce s-a instalat boot9strap
 
 ### Ce aveți nevoie
@@ -173,14 +190,7 @@ Exploit-uri bazate pe browser (cum ar fi browserhax sau 2xrsa) sunt de obicei in
     1. Apăsați (A) ca să reblocați permisiunile de scriere
     1. Apăsați (Start) pentru a reporni dispozitivul
 1. Încercați să porniți fără niciun card de joc introdus (inclusiv flashcart-uri)
-1. Dacă ați făcut în trecut retrogradare cu Gateway, asigurați-vă că folosiți cea mai recentă versiune de Luma3DS (v6.2.3 sau superior)
-1. Dacă NAND-ul dumneavoastră este o versiune între 3.0.0 și 4.5.0, faceți următoarele:
-    + Asigurați-vă că folosiți cea mai nouă versiune de Luma3DS (v6.6 sau superior)
-    + Descărcați [acest fișier](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) și redenumiți-l ca `native.firm`
-    + Descărcați [acest fișier](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
-    + Copiați `native.firm` și `cetk` în folderul `/luma/` de pe cardul SD
-    + Dacă aveți Luma3DS versiunea 7.1 sau inferior, redenumiți `native.firm` în `firmware.bin`
-    + Ștergeți ambele fișiere după ce actualizați dispozitivul
+1. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version
 1. Încercați să urmați [CTRTransfer](ctrtransfer)
 1. Cereți ajutor la [Nintendo Homebrew pe Discord](https://discord.gg/MWxPgEp).
 
