@@ -28,12 +28,15 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
 
 #### Section I - Prep Work
 
+1. Schakel je 3ds uit
+1. Plaats je SD kaart in je computer
 1. Maak een map genaamd `cias` op de root van jouw SD kaart, indien deze nog niet aanwezig is
 1. Kopieer `TWL Version Data - v0.cia` naar de `/cias/` map op jouw SD kaart
 1. Kopieer `DS Download Play - v1024.cia` naar de `/cias/` map op jouw SD kaart
 1. Kopieer `DS Internet - v2048.cia` naar de `/cias/` map op jouw SD kaart
 1. Kopieer `Nintendo DS Cart Whitelist - v11264.cia` naar de `/cias/` map op jouw SD kaart
 1. Kopieer, bij een new 3DS, `New_3DS TWL_FIRM - V9936.cia`, of bij een standaard 3DS OF 2DS, `Old_3DS TWL_FIRM - v8817.cia` naar de `/cias/` map op jouw SD kaart
+1. Stop je SD kaart terug in je 3DS
 
 #### Section II - Installing titles
 
@@ -143,6 +146,20 @@ Note that if you have any payload files other than `GodMode9.firm` in the `/luma
     1. If you enter safe mode, update your device
 1. Je 3DS is misschien gebricked. Voor support, vraag om hulp op [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
 
+## Clear Home Menu extdata
+
+1. Schakel je 3ds uit
+1. Plaats je SD kaart in je computer
+1. Navigate to the `/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000/` folder on your SD card
+1. Delete the extdata file corresponding to your region:
+  + **EUR Region**: `00000098`
+  + **JPN Region**: `00000082`
+  + **USA Region**: `0000008f`
+  + **CHN Region**: `000000A1`
+  + **KOR Region**: `000000A9`
+  + **TWN Region**: `000000B1`
+1. Stop je SD kaart terug in je 3DS
+
 ## Black screen on SysNAND boot after Installing boot9strap
 
 ### What You Need
@@ -170,14 +187,7 @@ Note that if you have any payload files other than `GodMode9.firm` in the `/luma
     1. Press (A) to relock write permissions
     1. Druk op (Start) om je 3DS opnieuw op te starten
 1. Probeer hem op te starten zonder cartridges in je 3DS (inclusief flashcarts)
-1. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version (v6.2.3 or higher)
-1. Als je NAND een versie tussen 3.0.0 en 4.5.0 heeft, doe het volgende:
-    + Ensure that you are using the latest Luma3DS version (v6.6 or higher)
-    + Download [this file](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056) and rename it to `native.firm`
-    Download [dit bestand](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)
-    + Copy `native.firm` and `cetk` to the `/luma/` folder on your SD card
-    + If you have Luma3DS version 7.1 or lower, rename `native.firm` to `firmware.bin`
-    + Verwijder beide bestanden na het updaten van je 3DS
+1. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version
 1. Try following [CTRTransfer](ctrtransfer)
 1. Vraag om hulp op [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
 
