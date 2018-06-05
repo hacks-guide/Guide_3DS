@@ -66,80 +66,80 @@ Niektóre z poniższych instrukcji mają zastosowanie tylko do najnowszej wersji
 1. Gdy proces się zakończy, wciśnij (A), aby kontynuować
 1. Naciśnij (A), aby ponownie zablokować uprawnienia do zapisu, jeśli zostaniesz o to poproszony
 
-## Injecting any .CIA app into Health & Safety
+## Podmienianie "Health & Safety" na jakąkolwiek aplikację .CIA
 
-For organizational purposes, copy the `.cia` file you wish to inject to the `/cias/` folder on your SD card
+Dla celów organizacyjnych skopiuj plik `.cia`, który chcesz wykorzystać do podmiany do folderu `/cias/` na karcie SD
 {: .notice--info}
 
-Note that it is not possible to inject files into Health & Safety that are larger than it (including games and other large applications)
+Pamiętaj że aplikacji Health & Safety nie można podmienić na większe pliki niż ona sama (np. gry i inne duże aplikacje)
 {: .notice--info}
 
-1. Launch GodMode9 by holding (Start) during boot
-1. Navigate to `[0:] SDCARD` -> `cias`
-1. Press (A) on your `.cia` to select it, then select "CIA image options...", then select "Mount image to drive"
-1. Press (A) on the `.app` file, then select "NCCH image options", then select "Inject to H&S"
+1. Uruchom GodMode9 poprzez trzymanie przycisku (Start) podczas uruchamiania konsoli
+1. Przejdź do `[0:] SDCARD` -> `cias`
+1. Wciśnij (A) na twojej aplikacji `.cia` aby ją wybrać, następnie wybierz "CIA image options...", a następnie wybierz "Mount image to drive"
+1. Wciśnij (A) na pliku `.app`, następnie wybierz "NCCH image options" i wybierz "Inject to H&S"
 1. Wciśnij (A), aby odblokować zapis do SysNAND (lvl1), a następnie wprowadź przedstawioną kombinację przycisków
 1. Naciśnij (A), aby kontynuować
-1. Press (A) to relock write permissions if prompted
+1. Naciśnij (A), aby ponownie zablokować uprawnienia do zapisu, jeśli zostaniesz o to poproszony
 
-## Restoring Health & Safety after injecting a .CIA app
+## Przywracanie aplikacji Health & Safety po jej podmienieniu
 
-This will only work if the Health & Safety injection was performed by GodMode9 (not Decrypt9 or Hourglass9).
+To zadziała tylko wtedy, gdy podmienienie aplikacji Health & Safety zostało wykonane przez Godmode9 (nie Decrypt9 lub Hourglass9).
 {: .notice--info}
 
-1. Launch GodMode9 by holding (Start) during boot
+1. Uruchom GodMode9 poprzez trzymanie przycisku (Start) podczas uruchamiania konsoli
 1. Wciśnij (Home), aby przywołać menu akcji
-1. Select "More..."
-1. Select "Restore H&S"
+1. Wybierz "More..."
+1. Wybierz "Restore H&S"
 1. Wciśnij (A), aby odblokować zapis do SysNAND (lvl1), a następnie wprowadź przedstawioną kombinację przycisków
-1. Press (A) to relock write permissions if prompted
+1. Naciśnij (A), aby ponownie zablokować uprawnienia do zapisu, jeśli zostaniesz o to poproszony
 
-## Dumping a Game Cartridge
+## Zrzucanie (Dumping) kartridża z grą
 
-#### Prep Work
+#### Przygotowanie
 
 {% capture notice %}
-+ Insert the game cartridge you intend to dump into your device
-  + 3DS game cartridges will be dumped to an installable `.cia` format
-  + NDS game cartridges will be dumped to a non-installable `.nds` format compatible with flashcarts and emulators
++ Włóż kartridż z grą, którą chcesz zrzucić do swojego urządzenia
+  + Kartridże z grami 3DS zostaną zrzucone do instalowalnego formatu `.cia`
+  + Kartridże z grami NDS zostaną zrzucone do nieinstalowalnego formatu `.nds` kompatybilnego z flashcartami i emulatorami
 {% endcapture %}
 
 <div class="notice--info">{{ notice | markdownify }}</div>
 
-1. Launch GodMode9 by holding (Start) during boot
-1. Navigate to `[C:] GAMECART`
-1. Follow the steps applicable to your game cartridge:
-  + **3DS Game Cartridge:** Press (A) on `[TitleID].trim.3ds` to select it, then select "NCSD image options...", then select "Build CIA from file"
-  + **NDS Game Cartridge:** Press (A) on `[TitleID].trim.nds` to select it, then select "Copy to 0:/gm9/out"
-1. Your installable `.cia` or non-installable `.nds` formatted file will be outputted to the `/gm9/out/` folder on your SD card
+1. Uruchom GodMode9 poprzez trzymanie przycisku (Start) podczas uruchamiania konsoli
+1. Przejdź do `[C:] GAMECART`
+1. Wykonaj czynności związane z odpowiednim typem kartridża z grą:
+  + **Kartridż z grą 3DS:** Naciśnij (A) na `[TitleID].trim.3ds`, aby ją wybrać, następnie wybierz "NCSD image options...", a następnie wybierz "Build CIA from file"
+  + **Kartridż z grą NDS:** Naciśnij (A) na `[TitleID].trim.nds`, aby ją wybrać, a następnie wybierz "Copy to 0:/gm9/out"
+1. Twój plik instalacyjny `.cia` lub nieinstalowalny plik `.nds` zostanie zapisany w folderze `/gm9/out/` na karcie SD
 
-## Dumping a Title
+## Zrzucanie (Dumping) zainstalowanej gry lub aplikacji
 
-1. Launch GodMode9 by holding (Start) during boot
-1. Hover over the drive applicable to the type of title you wish to dump:
-  + **User Installed Title**: `[A:] SYSNAND SD`
-  + **System Title**: `[1:] SYSNAND CTRNAND`
-1. Hold (R) and press (A) at the same time to open the drive options
-1. Select "Search for titles"
+1. Uruchom GodMode9 poprzez trzymanie przycisku (Start) podczas uruchamiania konsoli
+1. Najedź na napęd odpowiedni do typu aplikacji którą chcesz zrzucić:
+  + **Aplikacja Zainstalowana Przez Użytkownika**: `[A:] SYSNAND SD`
+  + **Aplikacja Systemowa**: `[1:] SYSNAND CTRNAND`
+1. Przytrzymaj przycisk (R) i jednocześnie wciśnij (A) aby otworzyć opcje napędu
+1. Wybierz "Search for titles"
 1. Naciśnij (A), aby kontynuować
-1. Press (A) on the `.tmd` file to select it, then select "TMD file options...", then select "Build CIA (standard)"
-1. Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
+1. Naciśnij (A) na pliku `.tmd` aby go wybrać, następnie wybierz "TMD file options...", po czym wybierz "Build CIA (standard)"
+1. Twoja aplikacja / gra zostanie zapisana w formacie `.cia` oraz umieszczona w folderze `/gm9/out/` na twojej karcie SD
 
-## Converting a .3DS to .CIA
+## Konwertowanie plików .3DS do .CIA
 
 {% capture notice %}
-+ For organizational purposes, copy each `.3ds` file you wish to convert to the `/cias/` folder on your SD card
-  + Note that if you wish to convert a `.3ds` file that is already on a flashcart, you should follow [Dumping a Game Cartridge](#dumping-a-game-cartridge)
++ Dla celów organizacyjnych skopiuj każdy plik `.3ds`, który chcesz skonwertować do folderu `/cias/` na karcie SD
+  + Zauważ, że jeśli chcesz skonwertować plik `.3ds`, który jest już na flashcarcie powinieneś postępować zgodnie z [Zrzucanie (Dumping) kartridża z grą](#dumping-a-game-cartridge)
 {% endcapture %}
 
 <div class="notice--info">{{ notice | markdownify }}</div>
 
-1. Launch GodMode9 by holding (Start) during boot
-1. Navigate to `[0:] SDCARD` -> `cias`
-1. Press (A) on your `.3ds` file to select it, then select "NCSD image options...", then select "Build CIA from file"
-1. Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
+1. Uruchom GodMode9 poprzez trzymanie przycisku (Start) podczas uruchamiania konsoli
+1. Przejdź do `[0:] SDCARD` -> `cias`
+1. Naciśnij przycisk (A) na pliku `.3ds` aby go wybrać, następnie wybierz "NCSD image options...", po czym wybierz "Build CIA from file"
+1. Twoja aplikacja / gra zostanie zapisana w formacie `.cia` oraz umieszczona w folderze `/gm9/out/` na twojej karcie SD
 
-## Backup GBA VC Saves
+## Kopia zapasowa zapisów GBA VC
 
 The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
 {: .notice--info}
@@ -199,13 +199,13 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 
 ## Encrypting / Decrypting a .CIA file
 
-#### Prep Work
+#### Przygotowanie
 
 + For organizational purposes, copy each `.cia` file you wish to encrypt / decrypt to the `/cias/` folder on your SD card
 {: .notice--info}
 
 1. Launch GodMode9 by holding (Start) during boot
-1. Navigate to `[0:] SDCARD` -> `cias`
+1. Przejdź do `[0:] SDCARD` -> `cias`
 1. Press (A) on the `.cia` file to select it, then select "CIA image options..."
 1. Select the option to perform the desired function:
     + **Encrypt to 0:/gm9/out:** Create an encrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card
