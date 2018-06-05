@@ -4,23 +4,23 @@ title: "Używanie GodMode9"
 
 {% include toc title="Spis Treści" %}
 
-For support with GodMode9, as well as help with scripting and to get updates and info, join the [GodMode9 Discord server](https://discord.gg/EGu6Qxw).
+Aby uzyskać pomoc dotyczącą programu GodMode9, a także pomoc w pisaniu skryptów oraz uzyskiwaniu aktualizacji i informacji, dołącz do serwera [GodMode9 Discord](https://discord.gg/EGu6Qxw).
 {: .notice--primary}
 
 ### Wymagana Lektura
 
-GodMode9 is a full access file browser for the Nintendo 3DS console, giving you access to your SD card, the FAT partitions inside your SysNAND and EmuNAND, and basically anything else. Among other functionality, you can copy, delete, rename files, and create folders.
+GodMode9 to przeglądarka plików z pełnym dostępem dla konsoli Nintendo 3DS, dająca dostęp do Twojej karty SD, partycji FAT wewnątrz SysNAND i EmuNAND oraz praktycznie wszystkiego innego. Możesz też kopiować, usuwać, zmieniać nazwy plików i tworzyć foldery.
 
 Zauważ, że jeżeli będziesz miał pliki inne niż `GodMode9.firm` w folderze `/luma/payloads/` na karcie SD, przytrzymanie (Start), podczas uruchamiania spowoduje wyświetlenie "chainloader menu" w którym będziesz musiał użyć D-Pad'a oraz przycisku (A) aby wybrać "GodMode9" dla tego poradnika. 
 
-GodMode9 is powerful software that has the capability to modify essentially anything on your console. Though many of these modifications are locked behind a permissions system, and it is impossible to accidentally perform dangerous actions without deliberately unlocking permissions, you should still follow instructions carefully and keep backups just in case.
+GodMode9 to potężne oprogramowanie, które ma możliwość modyfikowania praktycznie wszystkiego na Twojej konsoli. Chociaż wiele z tych modyfikacji jest zablokowanych za systemem uprawnień i nie można przypadkowo wykonać niebezpiecznych działań bez świadomego odblokowania uprawnień, należy nadal postępować zgodnie z instrukcjami i zachować kopie zapasowe na wszelki wypadek.
 
-## Updating GodMode9
+## Aktualizacja GodMode9
 
-Some of the instructions below are only applicable to the latest version of GodMode9, and as such you should follow this section to update your copy before continuing. Overwrite any existing files.
+Niektóre z poniższych instrukcji mają zastosowanie tylko do najnowszej wersji GodMode9 i powinieneś postępować zgodnie z tą sekcją, aby zaktualizować swoją kopię, zanim przejdziesz dalej. Nadpisz wszystkie istniejące pliki.
 {: .notice--info}
 
-### What You Need
+### Czego Potrzebujesz
 
 * Najnowszej wersji [GodMode9](https://github.com/d0k3/GodMode9/releases/latest){:target="_blank"}
 
@@ -29,42 +29,42 @@ Some of the instructions below are only applicable to the latest version of GodM
 1. Wyłącz konsolę
 1. Włóż kartę SD do komputera
 1. Skopiuj `GodMode9.firm` z GodMode9 `.zip` do folderu `/luma/payloads/` na karcie SD
-1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
-1. Reinsert your SD card into your device
+1. Skopiuj folder `gm9` z GodMode9 `.zip` do katalogu głównego twojej karty SD
+1. Włóż kartę SD do konsoli
 
-## Creating a NAND Backup
+## Tworzenie kopii zapasowej NAND
 
-1. Launch GodMode9 by holding (Start) during boot
+1. Uruchom GodMode9 poprzez trzymanie przycisku (Start) podczas uruchamiania konsoli
 1. Wciśnij (Home), aby przywołać menu akcji
 1. Wybierz "Scripts..."
-1. Select "Backup SysNAND"
+1. Wybierz "Backup SysNAND"
 1. Naciśnij (A) aby potwierdzić
-  + This process will take some time
+  + Ten proces zajmie trochę czasu
 1. Naciśnij (A), aby kontynuować
 1. Przytrzymaj przycisk (R) i jednocześnie naciśnij przycisk (B), aby bezpiecznie wyjąć kartę SD
 1. Włóż kartę SD do komputera
-1. Copy `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
-  + Make backups in multiple locations (such as online file storage)
+1. Skopiuj `<date>_<serialnumber>_sysnand_###.bin` z folderu `/gm9/out/` na karcie SD do bezpiecznego miejsca na twoim komputerze
+  + Zrób backupy w wielu lokacjach (np. dysku w chmurze)
   + Ta kopia uratuje cię przed brickiem jeśli cokolwiek pójdzie nie tak w przyszłości
-1. Delete `<date>_<serialnumber>_sysnand_###.bin` from the `/gm9/out/` folder on your SD card after copying it
+1. Usuń `<date>_<serialnumber>_sysnand_###.bin` z folderu `/gm9/out/` na Twojej karcie SD po skopiowaniu ich do komputera
 1. Włóż kartę SD do konsoli
 
-## Restoring a NAND Backup
+## Przywracanie kopii zapasowej NAND
 
-1. Launch GodMode9 by holding (Start) during boot
+1. Uruchom GodMode9 poprzez trzymanie przycisku (Start) podczas uruchamiania konsoli
 1. Przytrzymaj przycisk (R) i jednocześnie naciśnij przycisk (B), aby bezpiecznie wyjąć kartę SD
 1. Włóż kartę SD do komputera
-1. Copy `<date>_<serialnumber>_sysnand_###.bin` from your computer to the `/gm9/out/` folder on your SD card if you deleted it after backing it up
+1. Skopiuj `<date>_<serialnumber>_sysnand_###.bin` z Twojego komputera do folderu `/gm9/out/` na Twojej karcie SD jeśli usunąłeś go po utworzeniu kopii zapasowej
 1. Włóż kartę SD do konsoli
 1. Wciśnij (Home), aby przywołać menu akcji
 1. Wybierz "Scripts..."
-1. Select "Restore SysNAND (Safe)"
-1. Select your NAND backup
+1. Wybierz "Restore SysNAND (Safe)"
+1. Wybierz twoją kopie NAND
 1. Naciśnij (A), aby kontynuować
-1. Press (A) to unlock SysNAND (lvl2) writing, then input the key combo given
-  + This will not overwrite your boot9strap installation
-1. Once it has completed, press (A) to continue
-1. Press (A) to relock write permissions if prompted
+1. Wciśnij (A), aby odblokować zapis do SysNAND (lvl2), a następnie wprowadź przedstawioną kombinację przycisków
+  + To nie nadpisze twojej instalacji boot9strap
+1. Gdy proces się zakończy, wciśnij (A), aby kontynuować
+1. Naciśnij (A), aby ponownie zablokować uprawnienia do zapisu, jeśli zostaniesz o to poproszony
 
 ## Injecting any .CIA app into Health & Safety
 
