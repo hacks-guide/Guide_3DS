@@ -1,22 +1,22 @@
 ---
-title: "Installing boot9strap (MSET)"
+title: "Instalacja boot9strap (MSET)"
 ---
 
 {% include toc title="Spis Treści" %}
 
 ### Wymagana Lektura
 
-Jeśli posiadasz już przerobioną konsolę z konfiguracją EmuNAND bazującą na CFW, niniejsza instrukcja dotyczy wyłącznie SysNAND'u i wszystkie jej kroki powinny być wykonywane w SysNAND. Note that the terms EmuNAND and RedNAND refer to slightly different implementations of [the same concept](http://3dbrew.org/wiki/NAND_Redirection).
+Jeśli posiadasz już przerobioną konsolę z konfiguracją EmuNAND bazującą na CFW, niniejsza instrukcja dotyczy wyłącznie SysNAND'u i wszystkie jej kroki powinny być wykonywane w SysNAND. Zauważ, że terminy EmuNand i RedNAND odnoszą się do nieco innych implementacji [tej samej idei](http://3dbrew.org/wiki/NAND_Redirection).
 
-To extract the `.7z` files linked on this page, you will need a file archiver like [7-Zip](http://www.7-zip.org/) or [The Unarchiver](https://theunarchiver.com/).
+Aby wyodrębnić pliki `.7z` załączone na tej stronie, będziesz potrzebować archiwizatora plików, na przykład [7-Zip](http://www.7-zip.org/) lub [The Unarchiver](https://theunarchiver.com/).
 
-### What You Need
+### Czego Potrzebujesz
 
-* Any DS flashcart that works on your device version
-* The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest){:target="_blank"}
-* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest){:target="_blank"} *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest){:target="_blank"} *(the `.7z` file)*
-* The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest){:target="_blank"}
+* Flashcarta DS działającego na twojej konsoli
+* Najnowszej wersji [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest){:target="_blank"}
+* Najnowszej wersji [boot9strap](https://github.com/SciresM/boot9strap/releases/latest){:target="_blank"} *(standardowa instalacja; nie `devkit` czy plik `ntr`)*
+* Najnowszej wersji [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest){:target="_blank"} *(plik`.7z`)*
+* Najnowszej wersji [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest){:target="_blank"}
 
 ### Instrukcje
 
@@ -24,27 +24,27 @@ To extract the `.7z` files linked on this page, you will need a file archiver li
 
 1. Wyłącz konsolę
 1. Włóż kartę SD do komputera
-1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card
-1. Copy `boot.3dsx` to the root of your SD card
+1. Skopiuj `boot.firm` z archiwum Luma3DS `.7z` do katalogu głównego karty SD
+1. Skopiuj plik `boot.3dsx` do katalogu głównego karty SD
 1. Stwórz folder o nazwie `boot9strap` w katalogu głównym karty SD
-1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
-1. Copy `SafeB9SInstaller.dat` from the SafeB9SInstaller `.zip` to the root of your SD card
+1. Skopiuj `boot9strap.firm` i `boot9strap.firm.sha` z boot9strap `.zip` do folderu `boot9strap` na karcie SD
+1. Skopiuj `SafeB9SInstaller.dat` z SafeB9SInstaller `.zip` do katalogu głównego karty SD
 
     ![]({{ "/images/screenshots/boot9strap-mset-file-layout.png" | absolute_url }})
     {: .notice--info}
 
 1. Włóż kartę SD do konsoli
-1. Copy `SafeB9SInstaller.nds` from the SafeB9SInstaller `.zip` to your DS flashcart
+1. Skopiuj `SafeB9SInstaller.nds` z SafeB9SInstaller `.zip` na kartę SD twojego flashcarta
 1. Włącz konsolę
 
 #### Sekcja II - Uruchamianie SafeB9SInstaller
 
-1. Start your DS flashcart from your device
-1. Boot `SafeB9SInstaller.nds` using your flashcart
-1. Select the correct option for your system version
+1. Uruchom flashcarta na twoim 3DSie
+1. Uruchom `SafeB9SInstaller.nds` przy użyciu flashcarta
+1. Wybierz właściwą opcję dla wersji oprogramowania twojego 3DS
   + 4.X.X -> "4.x SafeB9SInstaller"
   + 6.X.X -> "6.x SafeB9SInstaller"
-1. Reboot the system, then go to System Settings, then "Other Settings", then "Profile", then "Nintendo DS Profile"
+1. Uruchom konsolę ponownie, przejdź do System Settings, wybierz "Other Settings", potem "Profile" a potem "Nintendo DS Profile"
 1. Jeśli operacja zakończyła się pomyślnie, uruchomi się SafeB9SInstaller
 
 #### Sekcja III - Instalacja boot9strap
