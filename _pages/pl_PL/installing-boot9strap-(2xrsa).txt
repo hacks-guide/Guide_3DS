@@ -1,19 +1,19 @@
 ---
-title: "Installing boot9strap (2xrsa)"
+title: "Instalacja boot9strap (2xrsa)"
 ---
 
 {% include toc title="Spis Treści" %}
 
 ### Wymagana Lektura
 
-To extract the `.7z` files linked on this page, you will need a file archiver like [7-Zip](http://www.7-zip.org/) or [The Unarchiver](https://theunarchiver.com/).
+Aby wyodrębnić pliki `.7z` załączone na tej stronie, będziesz potrzebować archiwizatora plików, na przykład [7-Zip](http://www.7-zip.org/) lub [The Unarchiver](https://theunarchiver.com/).
 
-### What You Need
+### Czego Potrzebujesz
 
-* The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest){:target="_blank"}
-* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest){:target="_blank"} *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest){:target="_blank"} *(the `.7z` file)*
-* The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest){:target="_blank"}
+* Najnowszej wersji [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest){:target="_blank"}
+* Najnowszej wersji [boot9strap](https://github.com/SciresM/boot9strap/releases/latest){:target="_blank"} *(standardowa wersja; nie `devkit` czy plik `ntr`)*
+* Najnowszej wersji [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest){:target="_blank"} *(plik`.7z`)*
+* Najnowszej wersji [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest){:target="_blank"}
 
 ### Instrukcje
 
@@ -23,9 +23,9 @@ To extract the `.7z` files linked on this page, you will need a file archiver li
 1. Włóż kartę SD do komputera
 1. Skopiuj `boot.firm` z archiwum Luma3DS `.7z` do katalogu głównego karty SD
 1. Skopiuj plik `boot.3dsx` do katalogu głównego twojej karty SD
-1. Create a folder named `boot9strap` on the root of your SD card
-1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
-1. Copy `arm9.bin` and `arm11.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
+1. Stwórz folder o nazwie `boot9strap` w katalogu głównym karty SD
+1. Skopiuj `boot9strap.firm` i `boot9strap.firm.sha` z boot9strap `.zip` do folderu `/boot9strap/` na karcie SD
+1. Skopiuj `arm9.bin` oraz `arm11.bin` z SafeB9SInstaller `.zip` do katalogu głównego karty SD
 
     ![]({{ "/images/screenshots/boot9strap-2xrsa-file-layout.png" | absolute_url }})
     {: .notice--info}
@@ -33,34 +33,34 @@ To extract the `.7z` files linked on this page, you will need a file archiver li
 1. Włóż kartę SD do konsoli
 1. Włącz konsolę
 
-#### Section II - Launching SafeB9SInstaller
+#### Sekcja II - Uruchamianie SafeB9SInstaller
 
-1. Launch the browser and go to the following URL on your device
+1. Uruchom przeglądarkę na 3DSie i przejdź do następującego adresu URL
   + `http://2xrsa.hacks.guide`
-  + If you are on a New 3DS, New 2DS, or Old 2DS and Wireless Communication is off, you can re-enable the wireless by removing the battery and unplugging the charger for several seconds then booting back up
-  + If you get the error "This service is not available in your region", use the System Settings to set your device's country to match the NAND region you installed with 2.1.0 CTRTransfer
-  + If you forgot to disable parental controls before CTRTransfering or otherwise cannot access wireless settings, note that the device will autoconnect to any network named `attwifi` with no password
-  + If you get another error, [follow this troubleshooting guide](troubleshooting#a-browser-based-exploit-is-not-working)
-1. If the exploit was successful, you will have booted into SafeB9SInstaller
+  + Jeśli używasz New 3DS, New 2DS lub Old 2DS i komunikacja bezprzewodowa (Wi-Fi) jest wyłączona, możesz ją włączyć poprzez wyjęcie baterii i odłączenie ładowarki od konsoli na kilka sekund po czym ponownie ją uruchomić
+  + Jeśli dostaniesz błąd "This service is not available in your region", użyj System Settings aby ustawić kraj twojej konsoli aby pasowała do NAND regionu który zainstalowałeś z 2.1.0 CTRTransfer
+  + Jeśli zapomniałeś wyłączyć kontrolę rodzicielską przed CTRTransferem i nie możesz uzyskać dostępu do ustawień sieci bezprzewodowej, pamiętaj, że urządzenie będzie automatycznie łączyć się z dowolną siecią o nazwie "attwifi" bez hasła
+  + Jeśli pojawi się inny błąd, [przejdź do rozwiązywania problemów](troubleshooting#a-browser-based-exploit-is-not-working)
+1. Jeśli operacja zakończyła się pomyślnie, uruchomi się SafeB9SInstaller
 
-#### Section III - Installing boot9strap
+#### Sekcja III - Instalacja boot9strap
 
-1. Wait for all safety checks to complete
-1. When prompted, input the key combo given to install boot9strap
-1. Once it has completed, press (A) to reboot your device
+1. Poczekaj aż weryfikacja instalacji się zakończy
+1. Kiedy zostaniesz poproszony, wprowadź podaną kombinację klawiszy aby zainstalować boot9strap
+1. Po zakończeniu, naciśnij (A), aby ponownie uruchomić urządzenie
 
-#### Section IV - Configuring Luma3DS
+#### Sekcja IV - Konfiguracja Luma3DS
 
-1. Your device should have rebooted into the Luma3DS configuration menu
-  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
-1. Use the (A) button and the D-Pad to turn on the following:    
+1. Twoje urządzenie powinno uruchomić się ponownie i załadować menu konfiguracji Luma3DS
+  + Jeśli wyświetli się pusty czarny ekran [przejdź do rozwiązywania problemów](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
+1. Użyj przycisku (A) oraz D-Pada aby zaznaczyć:    
   + **"Show NAND or user string in System Settings"**
 1. Naciśnij (Start) aby zapisać zmiany i uruchomić konsolę ponownie
-  + If you get an error, just continue the next page
+  + Jeśli wyświetli się błąd po prostu kontynuuj
 
 ___
 
-New 3DS 2.1.0 users *must* [restore their NAND backup](godmode9-usage#nand_restore) before going to the [Finalizing Setup](finalizing-setup) page.
+Użytkownicy New 3DS na wersji 2.1.0 *muszą* [przywrócić kopię zapasową NAND](godmode9-usage#nand_restore) przed przejściem do etapu [Finalizowania Instalacji](finalizing-setup).
 {: .notice--danger}
 
 ### Kontynuuj do [Finalizowanie Instalacji](finalizing-setup)
