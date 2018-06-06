@@ -1,54 +1,54 @@
 ---
-title: "Move EmuNAND"
+title: "Przenoszenie EmuNAND"
 ---
 
 {% include toc title="Spis Treści" %}
 
 ### Wymagana Lektura
 
-This is an add-on section for moving the contents of a previous EmuNAND to your new SysNAND CFW, then removing the old EmuNAND partition. Zauważ, że terminy EmuNand i RedNAND odnoszą się do nieco innych implementacji [tej samej idei](http://3dbrew.org/wiki/NAND_Redirection).
+To jest dodatkowa sekcja która pomoże Ci przenieść obecny EmuNAND do twojego nowego SysNAND CFW, a następnie jak usunąć starą partycje EmuNAND. Zauważ, że terminy EmuNand i RedNAND odnoszą się do nieco innych implementacji [tej samej idei](http://3dbrew.org/wiki/NAND_Redirection).
 
-Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions.
+Zauważ, że jeżeli będziesz miał pliki inne niż `GodMode9.firm` w folderze `/luma/payloads/` na karcie SD, przytrzymanie (Start), podczas uruchamiania spowoduje wyświetlenie "chainloader menu" w którym będziesz musiał użyć D-Pad'a oraz przycisku (A) aby wybrać "GodMode9" dla tego poradnika.
 
 MUSISZ mieć już zainstalowany Luma3DS i boot9strap żeby to wykonać.
 {: .notice--danger}
 
-### What You Need
+### Czego Potrzebujesz
 
 * Istniejącego EmuNAND
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest){:target="_blank"}
-* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest){:target="_blank"}
+* Najnowszej wersji [GodMode9](https://github.com/d0k3/GodMode9/releases/latest){:target="_blank"}
+* Najnowszej wersji [FBI](https://github.com/Steveice10/FBI/releases/latest){:target="_blank"}
 
 ### Instrukcje
 
 #### Sekcja I - Przygotowanie
 
-1. Power off your device
+1. Wyłącz konsolę
 1. Włóż kartę SD do komputera
 1. Skopiuj `GodMode9.firm` z GodMode9 `.zip` do folderu `/luma/payloads/` na karcie SD
-1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
-1. Reinsert your SD card into your device
+1. Skopiuj folder `gm9` z GodMode9 `.zip` do katalogu głównego karty SD
+1. Włóż kartę SD do konsoli
 
-#### Section II - Backup SysNAND DSiWare Saves
+#### Sekcja II - Kopia Zapasowa Zapisów DSiWare SysNAND
 
-If you do not have any DSiWare games or saves that you care about, skip this section.
+Jeśli nie masz żadnych gier DSiWare ani zapisów które cię obchodzą, pomiń tą sekcje.
 {: .notice--info}
 
-1. Launch GodMode9 by holding (Start) during boot
+1. Uruchom GodMode9 poprzez trzymanie przycisku (Start) podczas uruchamiania konsoli
 1. Jeśli zostaniesz poproszony o utworzenie kopii zapasowej niezbędnych plików, naciśnij (A) aby to zrobić, po czym naciśnij (A) aby kontynuować po ich skopiowaniu
-1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
-  + Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
-1. Navigate to `[2:] SYSNAND TWLN` -> `title`
-1. Hold (R) and press (A) at the same time on `00030004` to select the folder, then select "Copy to 0:/gm9/out"
-  + This process may take some time if you have many DSiWare games
-1. Press (B) twice to return to the main menu
+1. Jeśli zostaniesz poproszony o ustawienie czasu RTC, naciśnij (A) aby to zrobić, następnie ustaw datę i czas, oraz naciśnij (A) aby kontynuować
+  + Pamiętaj, że, jeśli musiałeś ustawić datę i czas RTC, będziesz musiał ustawić je w Ustawieniach Systemu po skończeniu tego poradniku
+1. Przejdź do `[2:] SYSNAND TWLN` -> `title`
+1. Przytrzymaj (R) i wciśnij (A) w tym samym momencie na folderze `00030004` aby go wybrać, następnie wybierz "Copy to 0:/gm9/out"
+  + Ten proces może zająć trochę czasu jeśli masz wiele gier DSiWare
+1. Wciśnij (B) dwa razy aby wrócić do menu głównego
 
-#### Section III - Backup GBA VC Saves
+#### Sekcja III - Backup zapisów GBA VC
 
-If you do not have any GBA VC games or saves that you care about, skip this section.
+Jeśli nie masz żadnych gier lub zapisów GBA VC które cię obchodzą, pomiń tą sekcje.
 {: .notice--info}
 
-Note that this is not necessary for any other kind of Virtual Console games (GBC, NES, etc)
+To nie obowiązuje innych gier VC (GBC, NES, itp.)
 {: .notice--info}
 
 Zapis zostanie umieszczony w folderze `/gm9/out/` na karcie SD i będzie nosił nazwę `<TitleID>.gbavc.sav`.
@@ -57,22 +57,22 @@ Zapis zostanie umieszczony w folderze `/gm9/out/` na karcie SD i będzie nosił 
 Aby zidentyfikować Title ID pliku `<TitleID>.gbavc.sav` możesz zobaczyć listę wszystkich gier na systemie i ich Title ID poprzez najechanie na `[A:] SYSNAND SD`, następnie przytrzymując (R) i jednocześnie naciskając (A), po czym wybrać "Search for titles".
 {: .notice--info}
 
-1. Do the following process for each GBA VC game that you want to backup the save for:
-  + Launch the GBA VC game
+1. Wykonaj następujący proces dla każdej gry GBA VC dla której chcesz wykonać kopię zapasową zapisu:
+  + Uruchom grę GBA VC
   + Wyjdź z gry
   + Uruchom konsolę trzymając (Start) aby uruchomić menu chainloader
-  + Launch GodMode9 by pressing (A)
-  + Navigate to `[S:] SYSNAND VIRTUAL`
+  + Uruchom GodMode9 naciskając (A)
+  + Przejdź do `[S:] SYSNAND VIRTUAL`
   + Naciśnij (A) na `agbsave.bin` aby go wybrać
   + Wybierz "AGBSAVE options..."
   + Wybierz "Dump GBA VC save"
-  + Press (A) to continue
+  + Naciśnij (A), aby kontynuować
   + Wciśnij (Start) aby zrestartować konsolę
 
-#### Section IV - Copy EmuNAND to SysNAND
+#### Sekcja IV - Kopiowanie EmuNAND do SysNAND
 
-1. Launch GodMode9 by holding (Start) during boot
-1. Navigate to `[E:] EMUNAND VIRTUAL`
+1. Uruchom GodMode9 poprzez trzymanie przycisku (Start) podczas uruchamiania konsoli
+1. Przejdź do `[E;] EMUNAND VIRTUAL`
 1. Press (A) on `nand.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
 1. Wciśnij (A) aby odblokować nadpisywanie SysNAND, następnie wprowadź wyświetloną sekwencję klawiszy
   + To nie nadpisze twojej instalacji boot9strap
