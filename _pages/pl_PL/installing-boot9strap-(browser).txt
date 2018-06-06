@@ -1,21 +1,21 @@
 ---
-title: "Installing boot9strap (Browser)"
+title: "Instalacja boot9strap (Przeglądarka)"
 ---
 
 {% include toc title="Spis Treści" %}
 
 ### Wymagana Lektura
 
-If you have already hacked your device before and have a EmuNAND based CFW setup, this guide deals exclusively with SysNAND and you should follow all instructions from within or applying to SysNAND. Note that the terms EmuNAND and RedNAND refer to slightly different implementations of [the same concept](http://3dbrew.org/wiki/NAND_Redirection).
+Jeśli posiadasz już przerobioną konsolę z konfiguracją EmuNAND bazującą na CFW, niniejsza instrukcja dotyczy wyłącznie SysNAND'u i wszystkie jej kroki powinny być wykonywane w SysNAND. Zauważ, że terminy EmuNand i RedNAND odnoszą się do nieco innych implementacji [tej samej idei](http://3dbrew.org/wiki/NAND_Redirection).
 
-To extract the `.7z` files linked on this page, you will need a file archiver like [7-Zip](http://www.7-zip.org/) or [The Unarchiver](https://theunarchiver.com/).
+Aby wyodrębnić pliki `.7z` załączone na tej stronie, będziesz potrzebować archiwizatora plików, na przykład [7-Zip](http://www.7-zip.org/) lub [The Unarchiver](https://theunarchiver.com/).
 
-### What You Need
+### Czego Potrzebujesz
 
-* The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest){:target="_blank"}
-* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest){:target="_blank"} *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest){:target="_blank"} *(the `.7z` file)*
-* The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest){:target="_blank"}
+* Najnowszej wersji [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest){:target="_blank"}
+* Najnowszej wersji [boot9strap](https://github.com/SciresM/boot9strap/releases/latest){:target="_blank"} *(standardowa wersja; nie `devkit` czy plik `ntr`)*
+* Najnowszej wersji [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest){:target="_blank"} *(plik`.7z`)*
+* Najnowszej wersji [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest){:target="_blank"}
 
 ### Instrukcje
 
@@ -23,11 +23,11 @@ To extract the `.7z` files linked on this page, you will need a file archiver li
 
 1. Wyłącz konsolę
 1. Włóż kartę SD do komputera
-1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card
-1. Copy `boot.3dsx` to the root of your SD card
-1. Create a folder named `boot9strap` on the root of your SD card
-1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
-1. Copy `SafeB9SInstaller.dat` and `Launcher.dat` from the SafeB9SInstaller `.zip` to the root of your SD card
+1. Skopiuj `boot.firm` z archiwum Luma3DS `.7z` do katalogu głównego karty SD
+1. Skopiuj plik `boot.3dsx` do katalogu głównego karty SD
+1. Stwórz folder o nazwie `boot9strap` w katalogu głównym karty SD
+1. Skopiuj `boot9strap.firm` i `boot9strap.firm.sha` z boot9strap `.zip` do folderu `/boot9strap/` na karcie SD
+1. Skopiuj `SafeB9SInstaller.dat` oraz `Launcher.dat` z SafeB9SInstaller `.zip` do katalogu głównego karty SD
 
     ![]({{ "/images/screenshots/boot9strap-browser-file-layout.png" | absolute_url }})
     {: .notice--info}
@@ -35,31 +35,31 @@ To extract the `.7z` files linked on this page, you will need a file archiver li
 1. Włóż kartę SD do konsoli
 1. Włącz konsolę
 
-#### Section II - Launching SafeB9SInstaller
+#### Sekcja II - Uruchamianie SafeB9SInstaller
 
-1. Launch the browser and go to one of the following URLs on your device
+1. Otwórz przeglądarkę internetową na swojej konsoli, a następnie przejdź do jednego z następujących adresów URL
   + `https://dukesrg.github.io/?SafeB9SInstaller.dat`
   + `http://go.gateway-3ds.com/`
   + `http://www.reboot.ms/3ds/load.html?Launcher.dat`
   + `http://dukesrg.dynu.net/3ds/rop?GW17567.dat&Launcher.dat`
-  + Make sure to try each URL if the first one doesn't work (some versions cannot use the first one, and some versions cannot use the last three)
-  + If you get an error, [follow this troubleshooting guide](troubleshooting#a-browser-based-exploit-is-not-working)
-1. If the exploit was successful, you will have booted into SafeB9SInstaller
+  + Pamiętaj aby wypróbować każdy z adresów jeśli pierwszy nie działa (na niektórych wersjach nie działa pierwszy, a na niektórych pozostałe trzy)
+  + Jeśli pojawi się błąd, [przejdź do rozwiązywania problemów](troubleshooting#a-browser-based-exploit-is-not-working)
+1. Jeśli operacja zakończyła się pomyślnie, uruchomi się SafeB9SInstaller
 
-#### Section III - Installing boot9strap
+#### Sekcja III - Instalacja boot9strap
 
-1. Wait for all safety checks to complete
-1. When prompted, input the key combo given to install boot9strap
-1. Once it has completed, press (A) to reboot your device
+1. Poczekaj aż weryfikacja instalacji się zakończy
+1. Kiedy zostaniesz poproszony, wprowadź podaną kombinację klawiszy aby zainstalować boot9strap
+1. Po zakończeniu, naciśnij (A), aby ponownie uruchomić urządzenie
 
 #### Section IV - Configuring Luma3DS
 
-1. Your device should have rebooted into the Luma3DS configuration menu
-  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
-1. Use the (A) button and the D-Pad to turn on the following:    
+1. Twoje urządzenie powinno uruchomić się ponownie i załadować menu konfiguracji Luma3DS
+  + Jeśli wyświetli się pusty czarny ekran [przejdź do rozwiązywania problemów](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
+1. Użyj przycisku (A) oraz D-Pada aby zaznaczyć:    
   + **"Show NAND or user string in System Settings"**
 1. Naciśnij (Start) aby zapisać zmiany i uruchomić konsolę ponownie
-  + If you get an error, just continue the next page
+  + Jeśli wyświetli się błąd po prostu kontynuuj
 
 ___
 
