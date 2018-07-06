@@ -27,6 +27,7 @@ title: "完成安裝"
 * 最新版的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * 最新版的 [DSP1](https://github.com/zoogie/DSP1/releases/latest)
 * 最新版的 [FBI 管理器](https://github.com/Steveice10/FBI/releases/latest) *(`.cia` 及 `.3dsx` 檔案)*
+* The latest release of [ctr-no-timeoffset](https://github.com/zoogie/DSP1/releases/latest)
 * 最新版的 [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(`.cia` 檔案)*
 * [setup_ctrnand_luma3ds.gm9]({{ "/gm9_scripts/setup_ctrnand_luma3ds.gm9" | absolute_url }}){:download}
 * [cleanup_sd_card.gm9]({{ "/gm9_scripts/cleanup_sd_card.gm9" | absolute_url }}){:download}
@@ -36,9 +37,10 @@ title: "完成安裝"
 #### 第一節 — 準備工作
 
 1. 關閉您的主機
-1. 將 SD 卡插入電腦中
+1. 將 SD 卡插入至電腦中
 1. 在 SD 卡的根目錄底下建立一個新資料夾 `3ds`
 1. 在 SD 卡的根目錄底下，建立一個新資料夾 `cias`
+1. Copy `ctr-no-timeoffset.3dsx` to the `/3ds/` folder on your SD card
 1. 將 `FBI.3dsx` 複製到 SD 卡中的 `/3ds/` 資料夾底下
 1. 解壓 hblauncher_loader `.zip` 中的 `hblauncher_loader.cia` 到 SD 卡中的 `/cias/` 資料夾底下
 1. 複製 `lumaupdater.cia` 檔案至 SD 卡上的 `/cias/` 資料夾中
@@ -78,7 +80,7 @@ title: "完成安裝"
   + 如果過程中出現錯誤，試試到 DNS 設定底下將設定改成『自動 (auto)』
   + 如果錯誤持續，請進行 [CTRTransfer](ctrtransfer)，並再試一次
 
-#### 第三節 — 啟動 FBI 管理器
+#### Section III - Homebrew Launcher
 
 1. 啟動『下載通信 (Download Play)』程式
 1. 同時按下『L』+『下』+『Select』鍵以啟動 Rosalina 選單
@@ -90,6 +92,10 @@ title: "完成安裝"
 1. 按『Home』鍵，並關閉『下載通信 (Download Play)』程式
 1. 啟動『下載通信 (Download Play)』程式
 1. 您的主機應該就會啟動 Homebrew Launcher 了
+1. Launch ctr-no-timeoffset from the list of homebrew
+1. Press (A) to set the offset to 0
+  + This will set the system clock to match the RTC date&time (which we will set soon)
+1. Press (Start) to return to the Homebrew Launcher
 1. 於 Homebrew 清單內啟動 FBI 管理器
 
 #### 第四節 — 安裝 CIA 檔案
@@ -110,7 +116,6 @@ title: "完成安裝"
 1. 開機時按住『Start』鍵啟動 GodMode9
 1. 當提示重要檔案備份時，按下『A』繼續，並在完畢後按下『A』繼續
 1. 當提示修正 RTC 日期及時間時，按『A』繼續並設定日期及時間，再按『A』繼續
-  + 請注意，若您被提示說要修正 RTC 日期及時間，這表示您得在遵循完下列步驟後進入您的系統設定重新設定時間
 1. 按『Home』鍵以叫出主選單
 1. 選擇『Scripts...』
 1. 選擇『setup_ctrnand_luma3ds』
@@ -129,7 +134,7 @@ title: "完成安裝"
   + 若您遇見錯誤訊息，請確保您的 SD 卡空間有 1.2GB 至 1.3GB 的剩餘空間。
 1. 按『A』 繼續
 1. 同時按住『R』及『B』以卸除 SD 卡
-1. 將 SD 卡插入電腦中
+1. 將 SD 卡插入至電腦中
 1. 從 SD 卡中的 `/gm9/out/` 資料夾中複製 `<date>_<serialnumber>_sysnand_###.bin` 及 `essential.exefs` 至電腦中安全的地方
   + 建議備份至各個不同的地方(比如雲端硬碟中)
   + 這些備份檔案可於未來您磚機時用來修復系統檔案
