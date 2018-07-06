@@ -27,6 +27,7 @@ Podczas tego procesu zainstalujemy również takie programy jak:
 * Najnowszej wersji [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * Najnowszej wersji [DSP1](https://github.com/zoogie/DSP1/releases/latest)
 * Najnowszej wersji [FBI](https://github.com/Steveice10/FBI/releases/latest) *(pliki `.cia` oraz `.3dsx`)*
+* The latest release of [ctr-no-timeoffset](https://github.com/zoogie/DSP1/releases/latest)
 * Najnowszej wersji [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(pliku `.cia`)*
 * [setup_ctrnand_luma3ds.gm9]({{ "/gm9_scripts/setup_ctrnand_luma3ds.gm9" | absolute_url }}){:download}
 * [cleanup_sd_card.gm9]({{ "/gm9_scripts/cleanup_sd_card.gm9" | absolute_url }}){:download}
@@ -39,6 +40,7 @@ Podczas tego procesu zainstalujemy również takie programy jak:
 1. Włóż kartę SD do komputera
 1. Stwórz folder o nazwie `3ds` w głównym katalogu twojej karty SD, jeśli jeszcze nie istnieje
 1. Stwórz folder o nazwie `cias` w katalogu głównym karty SD, jeśli jeszcze nie istnieje
+1. Copy `ctr-no-timeoffset.3dsx` to the `/3ds/` folder on your SD card
 1. Skopiuj `FBI.3dsx` do folderu `/3ds/` na karcie SD
 1. Skopiuj plik `hblauncher_loader.cia` z archiwum hblauncher_loader `.zip` do folderu `/cias/` na twojej karcie SD
 1. Skopiuj `lumaupdater.cia` do folderu `/cias/` na karcie SD
@@ -78,7 +80,7 @@ Jeśli przed rozpoczęciem tego poradnika już miałeś skonfigurowane EmuNAND i
   + Jeśli przy próbie aktualizacji pojawia się błąd, ustaw swoje DNS (w ustawieniach połączenia internetowego 3DS) na "auto"
   + Jeśli dalej otrzymujesz błąd, [wykonaj CTRTransfer](ctrtransfer), a potem spróbuj ponownie zaktualizować
 
-#### Sekcja III - Uruchamianie FBI
+#### Section III - Homebrew Launcher
 
 1. Uruchom aplikację Download Play
 1. Naciśnij w tym samym momencie (L) + (Dół) + (Select) aby otworzyć menu Rosalina
@@ -90,6 +92,10 @@ Jeśli przed rozpoczęciem tego poradnika już miałeś skonfigurowane EmuNAND i
 1. Naciśnij (Home), a następnie zamknij aplikację Download Play
 1. Uruchom aplikację Download Play ponownie
 1. Twoja konsola powinna załadować Homebrew Launcher
+1. Launch ctr-no-timeoffset from the list of homebrew
+1. Press (A) to set the offset to 0
+  + This will set the system clock to match the RTC date&time (which we will set soon)
+1. Press (Start) to return to the Homebrew Launcher
 1. Uruchom FBI z listy Homebrew
 
 #### Sekcja IV - Instalowanie CIA
@@ -110,7 +116,6 @@ Jeśli przed rozpoczęciem tego poradnika już miałeś skonfigurowane EmuNAND i
 1. Uruchom GodMode9 poprzez trzymanie przycisku (Start) podczas uruchamiania konsoli
 1. Jeśli zostaniesz poproszony o utworzenie kopii zapasowej niezbędnych plików, naciśnij (A) aby to zrobić, po czym naciśnij (A) aby kontynuować po ich skopiowaniu
 1. Jeśli zostaniesz poproszony o ustawienie czasu RTC, naciśnij (A) aby to zrobić, następnie ustaw datę i czas, oraz naciśnij (A) aby kontynuować
-  + Pamiętaj że, jeśli musiałeś ustawić czas RTC, będziesz musiał ustawić czas w "System Settings" po tym poradniku
 1. Wciśnij (Home), aby przywołać menu akcji
 1. Wybierz "Scripts..."
 1. Wybierz "setup_ctrnand_luma3ds"
