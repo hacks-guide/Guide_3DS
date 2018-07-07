@@ -1,5 +1,5 @@
 ---
-title: "Boot9strapin asentaminen (2xrsa)"
+title: "Installing boot9strap (2xrsa)"
 ---
 
 {% include toc title="Sisällysluettelo" %}
@@ -25,7 +25,7 @@ Purkaaksesi tämän osion `.7z`-tiedostot tarvitset pakkausohjelman, kuten [7-Zi
 1. Kopioi `boot.3dsx` SD-korttisi juureen
 1. Luo `boot9strap`-niminen kansio SD-korttisi juureen
 1. Kopioi boot9strap-`.zip`-pakkauksesta `boot9strap.firm` ja `boot9strap.firm.sha` SD-korttisi `/boot9strap/`-kansioon
-1. Kopioi SafeB9SInstaller-`.zip`-pakkauksesta `arm9.bin`- ja `arm11.bin`-tiedostot SD-korttisi juureen
+1. Copy `arm9.bin` and `arm11.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
 
     ![]({{ "/images/screenshots/boot9strap-2xrsa-file-layout.png" | absolute_url }})
     {: .notice--info}
@@ -35,12 +35,12 @@ Purkaaksesi tämän osion `.7z`-tiedostot tarvitset pakkausohjelman, kuten [7-Zi
 
 #### Vaihe II – SafeB9SInstallerin avaaminen
 
-1. Avaa selain ja siirry seuraavaan URL-osoitteeseen konsolillasi
+1. Launch the browser and go to the following URL on your device
   + `http://2xrsa.hacks.guide`
-  + Jos käytät New 3DS:ää, New 2DS:ää tai vanhaa 2DS:ää ja langaton yhteys ei ole päällä, saat sen takaisin päälle irrottamalla akun ja laturin muutamaksi sekunniksi, jonka jälkeen voit käynnistää konsolin uudelleen
-  + Jos saat virheen "This service is not available in your region", käytä järjestelmäasetuksia (System Settings) asettaaksesi konsolisi maan samaksi kuin CTRTransferilla asentamasi NAND-alue
-  + Huomaa, että jos unohdit poistaa lapsilukon käytöstä ennen CTRTransferia tai jos et muuten vain pääse verkkoasetuksiin, konsolisi yhdistää automaattisesti mihin tahansa salasanattomaan verkkoon, jonka nimi on `attwifi`
-  + Jos saat jonkin toisen virheen, [seuraa tätä vianmääritysohjetta](troubleshooting#selainpohjainen-käynnistystapa-ei-toimi)
+  + If you are on a New 3DS, New 2DS, or Old 2DS and Wireless Communication is off, you can re-enable the wireless by removing the battery and unplugging the charger for several seconds then booting back up
+  + If you get the error "This service is not available in your region", use the System Settings to set your device's country to match the NAND region you installed with 2.1.0 CTRTransfer
+  + If you forgot to disable parental controls before CTRTransfering or otherwise cannot access wireless settings, note that the device will autoconnect to any network named `attwifi` with no password
+  + If you get another error, [follow this troubleshooting guide](troubleshooting#a-browser-based-exploit-is-not-working)
 1. Jos haavoittuvuuden hyödyntäminen onnistui, SafeB9SInstallerin pitäisi avautua
 
 #### Vaihe III – Boot9strapin asentaminen
