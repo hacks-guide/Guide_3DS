@@ -1,5 +1,5 @@
 ---
-title: "התקנת boot9strap (2xrsa)"
+title: "Installing boot9strap (2xrsa)"
 ---
 
 {% include toc title="תוכן העניינים" %}
@@ -25,7 +25,7 @@ To extract the `.7z` files linked on this page, you will need a file archiver li
 1. תעתיקו את `boot.3dsx` אל שורש כרטיס ה SD
 1. תצרו ב-SD שלכם תיקייה חדשה בשם `boot9strap`
 1. תעתיקו את`boot9strap.firm` ואת `boot9strap.firm.sha` מה `.zip` של boot9strap אל תיקיית `/boot9strap/`על כרטיס הSD שלכם
-1. מתוך הזיפ של SafeB9SInstaller, תעתיקו את הקבצים `arm9.bin` ו`arm11.bin` ל-SD שלכם
+1. Copy `arm9.bin` and `arm11.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
 
     ![]({{ "/images/screenshots/boot9strap-2xrsa-file-layout.png" | absolute_url }})
     {: .notice--info}
@@ -35,12 +35,12 @@ To extract the `.7z` files linked on this page, you will need a file archiver li
 
 #### חלק II - הפעלת SafeB9SInstaller
 
-1. תפתחו את הדפדפן ולכו לכתובת האינטרנט הבאה במכשיר שלכם
+1. Launch the browser and go to the following URL on your device
   + `http://2xrsa.hacks.guide`
-  +אם אתם משתמשים ב2DS או New 3DS והWIFI כבוי, אתם יכולים להפעיל אותו מחדש על ידי הוצאה של הבטריה, ניתוק המטען למספר שניות, והדלקה של המכשיר שוב
-  + אם אתם מקבלים שגיאה "This service is not available in your region", השתמשו ב-System Settigns על מנת לשנות את המדינה של הקונסולה שתתאים ל-NAND שהעברנו בשנמוך ל-2.1.0
-  + אם שכחתם לבטל בקרת הורים לפני הCTRTransfer אם שאתם לא יכולים לגשת להגדרות האינטרנט, שימו לב שהקונסולה תתחבר אוטומטית לכל רשת ללא סיסמה עם השם `attwifi`
-  + אם אתם מקבלים שגיאה אחרת, [עקבו אחרי המדריך הבא](troubleshooting#a-browser-based-exploit-is-not-working)
+  + If you are on a New 3DS, New 2DS, or Old 2DS and Wireless Communication is off, you can re-enable the wireless by removing the battery and unplugging the charger for several seconds then booting back up
+  + If you get the error "This service is not available in your region", use the System Settings to set your device's country to match the NAND region you installed with 2.1.0 CTRTransfer
+  + If you forgot to disable parental controls before CTRTransfering or otherwise cannot access wireless settings, note that the device will autoconnect to any network named `attwifi` with no password
+  + If you get another error, [follow this troubleshooting guide](troubleshooting#a-browser-based-exploit-is-not-working)
 1. כעת אתם אמורים להיכנס לתוך SafeB9SInstaller
 
 #### חלק III - התקנת boot9strap
