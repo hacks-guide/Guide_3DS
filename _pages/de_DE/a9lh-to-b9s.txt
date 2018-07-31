@@ -42,15 +42,13 @@ Beachte, dass auf dem New 3DS die `secret_sector.bin` benötigt wird, um den arm
 {: .notice--info}
 
 * <i class="fa fa-magnet" aria-hidden="true" title="Dies ist ein Magnetlink. Um diese Datei herunterzuladen, benötigst du einen Torrent-Client."></i> - **Nur für New 3DS-Benutzer:** [secret_sector.bin](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce)
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(the `.7z` file)*
+* The latest release of [Luma3DS]({{ "/assets/files/Luma3DSv89CC6ED.7z" | absolute_url }}) *(the `.7z` file)*
 * The v7.0.5 release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/tag/v7.0.5) *(the `.7z` file)*
 * The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
 * The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * The latest release of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
 * The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
-* [setup_ctrnand_luma3ds.gm9]({{ "/gm9_scripts/setup_ctrnand_luma3ds.gm9" | absolute_url }}){:download}
-* [cleanup_sd_card.gm9]({{ "/gm9_scripts/cleanup_sd_card.gm9" | absolute_url }}){:download}
 
 ### Anleitung
 
@@ -69,8 +67,6 @@ Beachte, dass auf dem New 3DS die `secret_sector.bin` benötigt wird, um den arm
 1. Lösche alle `.bin`-Payloads im `/luma/payloads/`-Ordner deiner SD-Karte, da sie mit den Luma3DS Versionen, die boot9strap unterstützen, nicht mehr kompatibel sind
 1. Kopiere `Godmode9.firm`von der `Godmode9.zip`-Datei nach `/luma/payloads/` auf deiner SD Karte
 1. Kopiere den Ordner `gm9` aus der GodMode9 `.zip` in das Stammverzeichnis deiner SD-Karte
-1. Kopiere `setup_ctrnand_luma3ds.gm9` nach `/gm9/scripts/` auf deiner SD-Karte
-1. Kopiere `cleanup_sd_card.gm9` in den `/gm9/scripts/` Ordner auf deiner SD-Karte
 1. Kopiere die Datei `SafeB9SInstaller.bin` von der SafeB9SInstaller `.zip` in den Ordner `/luma/payloads/` auf deiner SD-Karte
 1. Erstelle einen Ordner namens `boot9strap` im Stammverzeichnis deiner SD-Karte
 1. Kopiere `boot9strap.firm` und `boot9strap.firm.sha` aus der boot9strap `.zip` in den `/boot9strap/`-Ordner auf deiner SD-Karte
@@ -123,47 +119,45 @@ Wenn du vor dieser Anleitung bereits einen EmuNAND hattest und dessen Inhalte in
 
 #### Schritt VI - CTRNAND Luma3DS
 
+1. Schalte deinen 3DS aus
 1. Starte GodMode9, indem du während des Startvorgangs deiner Konsole die (Start) Taste gedrückt hältst
 1. Wenn du aufgefordert wirst, ein "essential files backup" durchzuführen, drücke (A). Drücke erneut (A) nachdem es abgeschlossen ist
 1. Wenn du aufgefordert wirst Datum und Uhrzeit der RTC zu korrigieren, drücke (A), stelle Datum und Uhrzeit ein und drücke (A) um fortzufahren
-  + Bitte beachte, falls du die RTC korrigieren musstest, dass du nach beenden der Anleitung auch Datum und Uhrzeit in den Systemeinstellungen korrigieren musst
 1. Drücke (Home) um das Aktionsmenü aufzurufen
 1. Wähle "Scripts..."
-1. Wähle "setup_ctrnand_luma3ds"
+1. Select "GM9Megascript"
+1. Select "Scripts from Plailect's Guide"
+1. Select "Setup Luma3DS to CTRNAND"
 1. Drücke (A), wenn du dazu aufgefordert wirst, um fortzufahren
-1. Drücke (A), um die SysNAND (Stufe 1) Bearbeitung zu aktivieren, dann gebe die angezeigte Tastenkombination ein
+1. Drücke (A), um SysNAND-Überschreibungen zu aktivieren. Gib danach die angezeigte Tastenkombination ein
 1. Drücke (A) um fortzufahren
-1. Drücke (A) um die Schreibrechte wieder zu sperren
 
-#### Schritt VI - Wichtige Dateien sichern
+#### Section VII - Cleanup SD Card
 
-1. Drücke (Home) um das Aktionsmenü aufzurufen
-1. Wähle "Scripts"
-1. Wähle "Backup SysNAND"
+1. Select "Cleanup SD Card"
+1. Drücke (A), wenn du dazu aufgefordert wirst um fortzufahren
+1. Drücke (A) um fortzufahren
+1. Drücke (B), um zum Hauptmenü zurückzukehren
+
+#### Section VIII - Backup Essential Files
+
+1. Select "Backup Options"
+1. Select "SysNAND Backup"
 1. Drücke (A) zum bestätigen
   + Dies kann einen Moment dauern
-  + Wenn du eine Fehlermeldung bekommst, stelle sicher dass du auf deiner SD Karte noch mindestens 1.2GB - 1.3GB freien Speicherplatz hast
+  + If you get an error, make sure that you have at least 1.3GB of free space on your SD card
 1. Drücke (A) um fortzufahren
+1. Drücke (B), um zum Hauptmenü zurückzukehren
+1. Select "Exit"
+1. Drücke (A), um die Schreibrechte zu deaktivieren, wenn du dazu aufgefordert wirst
 1. Drücke (R) und (B) gleichzeitig um die SD-Karte auszuwerfen
 1. Stecke deine SD-Karte in deinen Computer
 1. Kopiere `<date>_<serialnumber>_sysnand_###.bin` und `essential.exefs`vom `/gm9/out/`Ordner der SD-Karte an einen sicheren Ort auf deinem Rechner
   + Sichere die Dateien an mehreren Orten (Online-Speicher etc.)
   + Diese Backups werden im Falle eines Bricks benötigt, um Daten aus dem NAND-Image wieder herzustellen, wenn etwas schief gehen sollte
-  + Ersetze dein altes arm9loaderhax SysNAND Backup durch das neue von boot9strap
 1. Lösche `<date>_<serialnumber>_sysnand_###.bin` und `<date>_<serialnumber>_sysnand_###.bin.sha`aus dem `/gm9/out/` Ordner der SD-Karte nachdem du diese kopiert hast
 1. Stecke deine SD-Karte wieder in deinen 3DS
-
-#### Schritt VII - Die SD-Karte aufräumen
-
-Beachte, dass dieses Skript die Ordner `/boot9strap/` und `/cias/` von deiner SD-Karte entfernt!
-{: .notice--danger}
-
-1. Drücke (Home) um das Aktionsmenü aufzurufen
-1. Wähle "Scripts..."
-1. Wähle "cleanup_sd_card"
-1. Drücke (A), wenn du dazu aufgefordert wirst um fortzufahren
-1. Drücke (A) um fortzufahren
-1. Drücke (Start) um neu zu starten
+1. Drücke (Start) um deinen 3DS neu zu starten
 
 ___
 
