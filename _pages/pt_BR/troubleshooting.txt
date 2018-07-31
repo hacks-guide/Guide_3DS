@@ -10,6 +10,8 @@ If you are unable to boot your device, please look for the section relevant to y
 
 Se você não puder resolver o seu problema sozinho e precisar de ajuda, por favor copie e cole o conteúdo de todos os arquivos .log relevantes num [Gist](https://gist.github.com/), e somente então peça ajuda com uma descrição detalhada do seu problema e do que você já tentou fazer para resolvê-lo.
 
+Note que se você tem outros arquivos de payload diferentes do `GodMode9.firm` na pasta `/luma/payloads/` do seu cartão SD, segure (Start) durante a inicialização para exibir um "menu de chainloader" onde você terá que utilizar os botões direcionais e o botão (A) para selecionar "GodMode9" para estas instruções. 
+
 To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
 ## DSi / DS functionality is broken after completing the guide
@@ -48,35 +50,22 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
 
 ## Removing an NNID without formatting your device
 
-### What You Need
-
-* [remove_nnid.gm9]({{ "/gm9_scripts/remove_nnid.gm9" | absolute_url }}){:download}
-
-### Instructions
-
-Note que se você tem outros arquivos de payload diferentes do `GodMode9.firm` na pasta `/luma/payloads/` do seu cartão SD, segure (Start) durante a inicialização para exibir um "menu de chainloader" onde você terá que utilizar os botões direcionais e o botão (A) para selecionar "GodMode9" para estas instruções. 
-{: .notice--info}
-
 1. Inicie o GodMode9 segurando (Start) durante a inicialização
-1. Segure (R) e aperte (B) ao mesmo tempo para ejetar o cartão SD
-1. Insira o cartão SD no seu computador
-1. Copy `remove_nnid.gm9` to the `/gm9/scripts/` folder on your SD card
-1. Reinsira seu cartão SD no seu dispositivo
 1. Aperte (Home) para abrir o menu de ações
 1. Selecione "Scripts..."
-1. Select "remove_nnid"
-1. Quando solicitado, aperte (A) para prosseguir
+1. Select "GM9Megascript"
+1. Select "Scripts from Plailect's Guide"
+1. Aperte (A) para continuar
 1. Aperte (A) para destravar "SysNAND (lvl1) writing", então aperte a sequência de botões solicitada
 1. Aperte (A) para continuar
-1. Aperte (A) para bloquear as permissões de escrita
+1. Aperte (B) para retornar para o menu principal
+1. Select "Exit"
+1. Se solicitado, aperte (A) para bloquear as permissões de escrita
 1. Aperte (Start) para reiniciar o dispositivo
 
 ## Cannot inject H&S on Gateway downgraded device
 
 This is caused by Gateway implementing a very shoddy downgrade method which leaves two versions of each app on the system. Uma delas não é usada, mas isso confunde o sistema de injeção fazendo-o injetar na versão errada.
-
-Note que se você tem outros arquivos de payload diferentes do `GodMode9.firm` na pasta `/luma/payloads/` do seu cartão SD, segure (Start) durante a inicialização para exibir um "menu de chainloader" onde você terá que utilizar os botões direcionais e o botão (A) para selecionar "GodMode9" para estas instruções. 
-{: .notice--info}
 
 1. Inicie o GodMode9 segurando (Start) durante a inicialização
 1. Navegue para `[1:] SYSNAND CTRNAND` -> `title` -> `00040010`
@@ -112,15 +101,6 @@ Browser based exploits (such as browserhax or 2xrsa) are often unstable and cras
 
 ## Black screen on SysNAND boot
 
-### What You Need
-
-* [remove_extdata.gm9]({{ "/gm9_scripts/remove_extdata.gm9" | absolute_url }}){:download}
-
-### Instructions
-
-Note que se você tem outros arquivos de payload diferentes do `GodMode9.firm` na pasta `/luma/payloads/` do seu cartão SD, segure (Start) durante a inicialização para exibir um "menu de chainloader" onde você terá que utilizar os botões direcionais e o botão (A) para selecionar "GodMode9" para estas instruções. 
-{: .notice--info}
-
 1. Tente inicializar com o cartão SD retirado, e então reinsira-o depois da inicialização
     1. Desligue seu dispositivo
     1. Remova seu cartão SD do seu dispositivo
@@ -131,11 +111,15 @@ Note que se você tem outros arquivos de payload diferentes do `GodMode9.firm` n
         1. Inicie o GodMode9 segurando (Start) durante a inicialização
         1. Aperte (Home) para abrir o menu de ações
         1. Selecione "Scripts..."
-        1. Select "remove_extdata"
-        1. Quando solicitado, aperte (A) para prosseguir
+        1. Select "GM9Megascript"
+        1. Select "Scripts from Plailect's Guide"
+        1. Select "Remove extdata"
+        1. Aperte (A) para continuar
         1. Aperte (A) para destravar "SysNAND (lvl1) writing", então aperte a sequência de botões solicitada
         1. Aperte (A) para continuar
-        1. Aperte (A) para bloquear as permissões de escrita
+        1. Aperte (B) para retornar para o menu principal
+        1. Select "Exit"
+        1. Se solicitado, aperte (A) para bloquear as permissões de escrita
         1. Aperte (Start) para reiniciar seu dispositivo
 1. Tente ligar sem nenhum cartucho inserido (incluindo flashcarts)
 1. Se você tem um hardmod e um backup da NAND, copie o backup de volta para a SysNAND
@@ -162,12 +146,6 @@ Note que se você tem outros arquivos de payload diferentes do `GodMode9.firm` n
 
 ## Black screen on SysNAND boot after Installing boot9strap
 
-### What You Need
-
-* [remove_extdata.gm9]({{ "/gm9_scripts/remove_extdata.gm9" | absolute_url }}){:download}
-
-### Instructions
-
 1. Ensure you have a working payload
     1. Verifique a existência do `boot.firm` na raiz do seu cartão SD.
 1. Tente resetar as configurações do Luma e ajustar as opções
@@ -175,16 +153,20 @@ Note que se você tem outros arquivos de payload diferentes do `GodMode9.firm` n
     1. Marque suas opções quando o 3DS inicializar
 1. Tente inicializar o GodMode9
     1. No Luma3DS, segure (Start) durante a inicialização
-1. Tente apagar o extdata do Menu HOME
+1. Try deleting home menu's extdata by following these instructions:
     1. Desligue seu dispositivo
     1. Inicie o GodMode9 segurando (Start) durante a inicialização
     1. Aperte (Home) para abrir o menu de ações
     1. Selecione "Scripts..."
-    1. Select "remove_extdata"
-    1. Quando solicitado, aperte (A) para prosseguir
+    1. Select "GM9Megascript"
+    1. Select "Scripts from Plailect's Guide"
+    1. Select "Remove extdata"
+    1. Aperte (A) para continuar
     1. Aperte (A) para destravar "SysNAND (lvl1) writing", então aperte a sequência de botões solicitada
     1. Aperte (A) para continuar
-    1. Aperte (A) para bloquear as permissões de escrita
+    1. Aperte (B) para retornar para o menu principal
+    1. Select "Exit"
+    1. Se solicitado, aperte (A) para bloquear as permissões de escrita
     1. Aperte (Start) para reiniciar seu dispositivo
 1. Tente ligar sem nenhum cartucho inserido (incluindo flashcarts)
 1. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version
