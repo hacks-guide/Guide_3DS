@@ -23,14 +23,12 @@ Tämän prosessin aikana myös asennetaan muun muassa seuraavat ohjelmat:
 
 * The latest release of [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) *(the `.cia` file)*
 * The latest release of [Checkpoint](https://github.com/BernardoGiordano/Checkpoint/releases/latest) *(the `.cia` file)*
-* The latest release of [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
+* The latest release of [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest)
 * The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * The latest release of [DSP1](https://github.com/zoogie/DSP1/releases/latest)
 * The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) *(the `.cia` and `.3dsx` files)*
 * The latest release of [ctr-no-timeoffset](https://github.com/ihaveamac/ctr-no-timeoffset/releases/latest)
 * The latest release of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(the `.cia` file)*
-* [setup_ctrnand_luma3ds.gm9]({{ "/gm9_scripts/setup_ctrnand_luma3ds.gm9" | absolute_url }}){:download}
-* [cleanup_sd_card.gm9]({{ "/gm9_scripts/cleanup_sd_card.gm9" | absolute_url }}){:download}
 
 ### Ohjeet
 
@@ -42,21 +40,15 @@ Tämän prosessin aikana myös asennetaan muun muassa seuraavat ohjelmat:
 1. Luo `cias`-niminen kansio SD-korttisi juureen, jos sitä ei jo ole olemassa
 1. Copy `ctr-no-timeoffset.3dsx` to the `/3ds/` folder on your SD card
 1. Kopioi `FBI.3dsx` SD-korttisi `/3ds/`-kansioon
-1. Kopioi hblauncher_loader-`.zip`-pakkauksesta `hblauncher_loader.cia` SD-korttisi `/cias/`-kansioon
+1. Copy `Homebrew_Launcher.cia` to the `/cias/` folder on your SD card
 1. Kopioi `lumaupdater.cia` SD-korttisi `/cias/`-kansioon
 1. Kopioi `FBI.cia` SD-korttisi `/cias/`-kansioon
 1. Kopioi `DSP1.cia` SD-korttisi `/cias/`-kansioon
 1. Kopioi `Anemone3DS.cia` SD-korttisi `/cias/`-kansioon
 1. Kopioi `Checkpoint.cia` SD-korttisi `/cias/`-kansioon
-
-    ![]({{ "/images/screenshots/cias-file-layout.png" | absolute_url }})
-    {: .notice--info}
-
 1. Luo `payloads`‑niminen kansio SD‑korttisi `luma`-kansioon, jos sitä ei jo ole olemassa
 1. Kopioi GodMode9-`.zip`-pakkauksesta `GodMode9.firm` SD-korttisi `/luma/payloads/`-kansioon
 1. Kopioi GodMode9-`.zip`-pakkauksesta `gm9`-kansio SD-korttisi juureen
-1. Kopioi `setup_ctrnand_luma3ds.gm9` SD-korttisi `/gm9/scripts/`-kansioon
-1. Kopioi `cleanup_sd_card.gm9` SD-korttisi `/gm9/scripts/`-kansioon
 
     ![]({{ "/images/screenshots/finalizing-setup-file-layout.png" | absolute_url }})
     {: .notice--info}
@@ -118,21 +110,31 @@ Jos sinulla oli ennen tämän oppaan aloittamista EmuNAND-kokoonpano, ja haluais
 1. Jos sinua kehotetaan korjaamaan RTC-aika ja -päivämäärä, paina (A):ta ja aseta ne oikein, paina sitten (A):ta jatkaaksesi
 1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
 1. Valitse "Scripts..."
-1. Valitse "setup_ctrnand_luma3ds"
+1. Select "GM9Megascript"
+1. Select "Scripts from Plailect's Guide"
+1. Select "Setup Luma3DS to CTRNAND"
 1. Paina kehotettaessa (A):ta jatkaaksesi
-1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1) ja syötä annettu painikeyhdistelmä
+1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl2) ja syötä annettu painikeyhdistelmä
 1. Paina (A):ta jatkaaksesi
-1. Paina (A):ta lukitaksesi kirjoitusoikeudet
 
-#### Vaihe VII – Tärkeiden tiedostojen varmuuskopiointi
+#### Section VII - Cleanup SD Card
 
-1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
-1. Valitse "Scripts..."
-1. Valitse "Backup SysNAND"
+1. Select "Cleanup SD Card"
+1. Paina kehotettaessa (A):ta jatkaaksesi
+1. Paina (A):ta jatkaaksesi
+1. Paina (B):tä palataksesi päävalikkoon
+
+#### Section VIII - Backup Essential Files
+
+1. Select "Backup Options"
+1. Select "SysNAND Backup"
 1. Paina (A):ta vahvistaaksesi
   + Tämä prosessi voi kestää jonkin aikaa
-  + Jos saat virheen, varmista, että SD-kortillasi on ainakin 1,2–1,3 Gt vapaata tilaa
+  + If you get an error, make sure that you have at least 1.3GB of free space on your SD card
 1. Paina (A):ta jatkaaksesi
+1. Paina (B):tä palataksesi päävalikkoon
+1. Select "Exit"
+1. Paina (A):ta lukitaksesi kirjoitusoikeudet kehotettaessa
 1. Pidä (R):ää pohjassa ja paina samalla (B):tä irrottaaksesi SD-korttisi
 1. Aseta SD-korttisi tietokoneeseesi
 1. Kopioi `<päivämäärä>_<sarjanumero>_sysnand_###.bin` ja `essential.exefs` SD-korttisi `/gm9/out/`-kansiosta turvalliseen paikkaan tietokoneellasi
@@ -140,15 +142,6 @@ Jos sinulla oli ennen tämän oppaan aloittamista EmuNAND-kokoonpano, ja haluais
   + Nämä varmuuskopiot pelastavat sinut konsolin vioittumiselta ja/tai auttavat palauttamaan tiedostoja NAND-näköistiedostosta, jos jokin menee pieleen tulevaisuudessa
 1. Kun olet varmuuskopioinut NANDin, poista `<päivämäärä>_<sarjanumero>_sysnand_###.bin` ja `<päivämäärä>_<sarjanumero>_sysnand_###.bin.sha` SD-korttisi `/gm9/out/`-kansiosta
 1. Aseta SD-korttisi takaisin konsoliisi
-  + If your SD card was not detected, hold (R) and press (B) at the same time to remount it
-
-#### Vaihe VIII – SD-kortin siivoaminen
-
-1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
-1. Valitse "Scripts..."
-1. Valitse "cleanup_sd_card"
-1. Paina kehotettaessa (A):ta jatkaaksesi
-1. Paina (A):ta jatkaaksesi
 1. Paina (START)-painiketta käynnistääksesi uudelleen
 
 ___
