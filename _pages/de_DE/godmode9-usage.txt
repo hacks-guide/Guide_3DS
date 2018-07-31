@@ -37,33 +37,44 @@ Einige der folgenden Anweisungen sind nur in der neuesten Version von GodMode9 z
 1. Starte GodMode9, indem du während dem Starten deiner Konsole die Taste (Start) gedrückt hältst
 1. Drücke (Home), um das Aktionsmenü aufzurufen
 1. Wähle "Scripts"
-1. Wähle "Backup SysNAND"
+1. Select "GM9Megascript"
+1. Select "Backup Options"
+1. Select "SysNAND Backup"
 1. Drücke (A), um zu bestätigen
   + Dieser Vorgang nimmt einige Zeit in Anspruch
+  + If you get an error, make sure that you have at least 1.3GB of free space on your SD card
 1. Drücke (A), um fortzufahren
+1. Drücke (B), um zum Hauptmenü zurückzukehren
+1. Select "Exit"
+1. Drücke (A), um die Schreibrechte zu deaktivieren, wenn du dazu aufgefordert wirst
 1. Drücke gleichzeitig (R) und (B), um die SD-Karte auszuwerfen
 1. Stecke die SD-Karte in deinen Computer
-1. Kopiere `<datum>_<seriennummer>_sysnand_###.bin` vom `/gm9/out/` Ordner deiner SD-Karte in einen sicheren Ort auf deinem Computer
+1. Kopiere `<date>_<serialnumber>_sysnand_###.bin` und `essential.exefs`vom `/gm9/out/`Ordner der SD-Karte an einen sicheren Ort auf deinem Rechner
   + Sichere die Dateien an mehreren Orten (Online-Speicher etc.)
-  + Diese Sicherheitskopie wird dich vor einem Brick schützen, falls in Zukunft etwas schief gehen sollte
-1. Lösche `<datum>_<seriennummer>_sysnand_###.bin` vom `/gm9/out/` Ordner deiner SD-Karte nach dem Kopieren
+  + Diese Backups werden im Falle eines Bricks benötigt, um Daten aus dem NAND-Image wieder herzustellen, wenn etwas schief gehen sollte
+1. Lösche `<date>_<serialnumber>_sysnand_###.bin` und `<date>_<serialnumber>_sysnand_###.bin.sha`aus dem `/gm9/out/` Ordner der SD-Karte nachdem du diese kopiert hast
 1. Stecke die SD-Karte wieder in deine Konsole
+  + If your SD card was not detected, hold (R) and press (B) at the same time to remount it
 
 ## Wiederherstellen einer NAND-Sicherheitskopie
 
 1. Starte GodMode9, indem du während dem Starten deiner Konsole (Start) gedrückt hältst
 1. Drücke gleichzeitig (R) und (B), um die SD-Karte auszuwerfen
 1. Stecke die SD-Karte in deinen Computer
-1. Wenn du die Datei `<date>_<serialnumber>_sysnand_###.bin` nach dem Backup gelöscht hast, kopiere sie von deinem Computer in den`/gm9/out/` Ordner auf deiner SD-Karte
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from your computer to the `/gm9/out/` folder on your SD card
 1. Stecke die SD-Karte wieder in deine Konsole
 1. Drücke (Home), um das Aktionsmenü aufzurufen
 1. Wähle "Scripts..."
-1. Wähle "Restore SysNAND (Safe)"
+1. Select "GM9Megascript"
+1. Select "Restore Options"
+1. Select "SysNAND Restore (safe)"
 1. Wähle dein NAND backup aus
-1. Drücke (A), um fortzufahren
-1. Drücke (A), um SysNAND-Überschreibungen zu aktivieren. Gib danach die angezeigte Tastenkombination ein
+1. Drücke (A) um die Schreibrechte für SysNAND (lvl3) zu aktivieren und gibt dann die angezeigte Tastenkombination ein
   + Die Installation von boot9strap wird dadurch nicht überschrieben
-1. Sobald dies abgeschlossen ist drücke (A) um fortzufahren
+  + Dieser Vorgang nimmt einige Zeit in Anspruch
+1. Drücke (A), um fortzufahren
+1. Drücke (B), um zum Hauptmenü zurückzukehren
+1. Select "Exit"
 1. Drücke (A), um die Schreibrechte zu deaktivieren, wenn du dazu aufgefordert wirst
 
 ## Injektion einer beliebigen .CIA app in die "Gesundheits- und Sicherheitsinformationen"-App
@@ -81,7 +92,7 @@ Gesundheit & Sicherheitsinformationen zu injizieren, die größer sind als die e
 1. Drücke (A) auf der `.app`-Datei, dann wähle "NCCH Image options" und danach wählst du "Inject to H&S"
 1. Drücke (A), um die SysNAND (Stufe 1) Bearbeitung zu aktivieren. Gebe dann die angegebene Tastenkombination ein
 1. Drücke (A), um fortzufahren
-1. Drücke (A), um die Schreibrechte zu deaktivieren, wenn du dazu aufgefordert wirst
+1. Drücke (A), um die Schreibrechte zu widerrufen, wenn du dazu aufgefordert wirst
 
 ## Wiederherstellen der Gesundheit & Sicherheitsinformationen nach der Initiierung einer .CIA App
 
@@ -93,7 +104,7 @@ Dies wird nur funktionieren, wenn die Injektion in Gesundheit & Sicherheit von G
 1. Wähle "More..."
 1. Wähle "Restore H&S"
 1. Drücke (A), um die SysNAND (Stufe 1) Bearbeitung zu aktivieren. Dann gebe die angegebene Tastenkombination ein
-1. Drücke (A), um die Schreibrechte zu widerrufen, wenn du dazu aufgefordert wirst
+1. Drücke (A), um die Schreibrechte zu deaktivieren, wenn du dazu aufgefordert wirst
 
 ## Dumpen einer Spiele-Cartridge
 
@@ -219,22 +230,15 @@ Markiere dazu `[A:] SYSNAND SD` während du (R) und (A) zeitgleich drückst. Dan
 
 ## Entfernen einer NNID, ohne die Konsole formatieren zu müssen
 
-### Was du brauchst
-
-* [remove_nnid.gm9]({{ "/gm9_scripts/remove_nnid.gm9" | absolute_url }}){:download}
-
-### Anleitung
-
 1. Starte GodMode9, indem du während dem Starten deiner Konsole (Start) gedrückt hältst
-1. Drücke (R) und (B) gleichzeitig um die SD-Karte auszuwerfen
-1. Stecke deine SD-Karte in deinen Computer
-1. Kopiere `remove_nnid.gm9` in den `/gm9/scripts/` Ordner auf deine SD-Karte
-1. Stecke deine SD-Karte nun wieder in deinen 3DS
 1. Drücke  (HOME) um das Aktionsmenü aufzurufen
 1. Wähle "Scripts..."
-1. Wähle "remove_nind"
-1. Drücke (A), wenn du dazu aufgefordert wirst, um fortzufahren
-1. Drücke (A), um die SysNAND (Stufe 1) Bearbeitung zu aktivieren. Dann gebe die angegebene Tastenkombination ein
+1. Select "GM9Megascript"
+1. Select "Scripts from Plailect's Guide"
 1. Drücke (A), um fortzufahren
-1. Drücke (A), um die Schreibrechte zu widerrufen
+1. Drücke (A), um die SysNAND (Stufe 1) Bearbeitung zu aktivieren. Dann gebe die angegebene Tastenkombination ein
+1. Drücke (A) um fortzufahren
+1. Drücke (B), um zum Hauptmenü zurückzukehren
+1. Select "Exit"
+1. Drücke (A), um die Schreibrechte zu deaktivieren, wenn du dazu aufgefordert wirst
 1. Drücke (Start), um deine Konsole neu zu starten
