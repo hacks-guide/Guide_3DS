@@ -23,14 +23,12 @@ Während dieses Prozesses richtest du auch folgende Programme ein:
 
 * The latest release of [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) *(the `.cia` file)*
 * The latest release of [Checkpoint](https://github.com/BernardoGiordano/Checkpoint/releases/latest) *(the `.cia` file)*
-* The latest release of [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
+* The latest release of [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest)
 * The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * The latest release of [DSP1](https://github.com/zoogie/DSP1/releases/latest)
 * The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) *(the `.cia` and `.3dsx` files)*
 * The latest release of [ctr-no-timeoffset](https://github.com/ihaveamac/ctr-no-timeoffset/releases/latest)
 * The latest release of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(the `.cia` file)*
-* [setup_ctrnand_luma3ds.gm9]({{ "/gm9_scripts/setup_ctrnand_luma3ds.gm9" | absolute_url }}){:download}
-* [cleanup_sd_card.gm9]({{ "/gm9_scripts/cleanup_sd_card.gm9" | absolute_url }}){:download}
 
 ### Anleitung
 
@@ -42,21 +40,15 @@ Während dieses Prozesses richtest du auch folgende Programme ein:
 1. Erstelle einen Ordner namens `cias` im Stammverzeichnis deiner SD-Karte falls er noch nicht existiert
 1. Copy `ctr-no-timeoffset.3dsx` to the `/3ds/` folder on your SD card
 1. Kopiere `FBI.3dsx` in den `/3ds/`Ordner auf deiner SD-Karte
-1. Kopiere `hblauncher_loader.cia` aus der hblauncher_loader-`.zip` in den Ordner `/cias/` auf deiner SD-Karte
+1. Copy `Homebrew_Launcher.cia` to the `/cias/` folder on your SD card
 1. Kopiere `lumaupdater.cia` in den `/cias/`Ordner auf deiner SD-Karte
 1. Kopiere `FBI.cia` in den `/cias/`Ordner auf der deiner SD-Karte
 1. Kopiere `DSP1.cia` in den `/cias/` Ordner auf deiner SD-Karte
 1. Kopiere `Anemone3DS.cia` in den `/cias/` Ordner auf deiner SD-Karte
 1. Kopiere `Checkpoint.cia` in den `/cias/` Ordner auf deiner SD-Karte
-
-    ![]({{ "/images/screenshots/cias-file-layout.png" | absolute_url }})
-    {: .notice--info}
-
 1. Erstelle einen Ordner mit dem Namen `payloads` im Ordner`luma` deiner SD-Karte, falls er noch nicht existiert
 1. Kopiere `Godmode9.firm` von der Godmode9 `.zip` nach `/luma/payloads/` auf deiner SD Karte
 1. Kopiere den Ordner `gm9` aus der GodMode9 `.zip`in das Stammverzeichnis deiner SD-Karte
-1. Kopiere `setup_ctrnand_luma3ds.gm9` in den `/gm9/scripts/` Ordner auf deiner SD-Karte
-1. Kopiere `cleanup_sd_card.gm9` in den `/gm9/scripts/` Ordner auf deiner SD-Karte
 
     ![]({{ "/images/screenshots/finalizing-setup-file-layout.png" | absolute_url }})
     {: .notice--info}
@@ -118,21 +110,31 @@ Wenn du vor dieser Anleitung bereits einen EmuNAND hattest und dessen Inhalte in
 1. Wenn du aufgefordert wirst Datum und Uhrzeit der "RTC" (Real Time Clock, Echtzeituhr) zu korrigieren, drücke (A), stelle Datum und Uhrzeit ein und drücke (A) um fortzufahren
 1. Drücke  (HOME) um das Aktionsmenü aufzurufen
 1. Wähle "Scripts"
-1. Wähle "setup_ctrnand_luma3ds"
+1. Select "GM9Megascript"
+1. Select "Scripts from Plailect's Guide"
+1. Select "Setup Luma3DS to CTRNAND"
 1. Drücke (A), wenn du dazu aufgefordert wirst, um fortzufahren
-1. Drücke (A), um die SysNAND (Stufe 1) Bearbeitung zu aktivieren. Dann gebe die angegebene Tastenkombination ein
+1. Drücke (A), um SysNAND-Überschreibungen zu aktivieren. Gib danach die angezeigte Tastenkombination ein
 1. Drücke (A) um fortzufahren
-1. Drücke (A), um die Schreibrechte zu deaktivieren
 
-#### Schritt VI - Wichtige Dateien sichern
+#### Section VII - Cleanup SD Card
 
-1. Drücke  (HOME) um das Aktionsmenü aufzurufen
-1. Wähle "Scripts"
-1. Wähle "Backup SysNAND"
+1. Select "Cleanup SD Card"
+1. Drücke (A), wenn du dazu aufgefordert wirst, um fortzufahren
+1. Drücke (A) um fortzufahren
+1. Drücke (B), um zum Hauptmenü zurückzukehren
+
+#### Section VIII - Backup Essential Files
+
+1. Select "Backup Options"
+1. Select "SysNAND Backup"
 1. Drücke (A) zum bestätigen
   + Dieser Vorgang nimmt einige Zeit in Anspruch
-  + Wenn du eine Fehlermeldung bekommst, stelle sicher das du auf deiner SD Karte noch mindestens 1.2GB - 1.3GB freien Speicher hast
+  + If you get an error, make sure that you have at least 1.3GB of free space on your SD card
 1. Drücke (A) um fortzufahren
+1. Drücke (B), um zum Hauptmenü zurückzukehren
+1. Select "Exit"
+1. Drücke (A), um die Schreibrechte zu deaktivieren, wenn du dazu aufgefordert wirst
 1. Drücke (R) und (B) gleichzeitig um die SD-Karte auszuwerfen
 1. Stecke deine SD-Karte in deinen Computer
 1. Kopiere `<date>_<serialnumber>_sysnand_###.bin` und `essential.exefs`vom `/gm9/out/`Ordner der SD-Karte an einen sicheren Ort auf deinem Rechner
@@ -140,16 +142,7 @@ Wenn du vor dieser Anleitung bereits einen EmuNAND hattest und dessen Inhalte in
   + Diese Backups werden im Falle eines Bricks benötigt, um Daten aus dem NAND-Image wieder herzustellen, wenn etwas schief gehen sollte
 1. Lösche `<date>_<serialnumber>_sysnand_###.bin` und `<date>_<serialnumber>_sysnand_###.bin.sha`aus dem `/gm9/out/` Ordner der SD-Karte nachdem du diese kopiert hast
 1. Setze die SD-Karte wieder in die Konsole ein
-  + If your SD card was not detected, hold (R) and press (B) at the same time to remount it
-
-#### Schritt VII - Die SD-Karte aufräumen
-
-1. Drücke (HOME) um das Aktionsmenü aufzurufen
-1. Wähle "Scripts"
-1. Wähle "Cleanup_sd_card"
-1. Drücke (A), wenn du dazu aufgefordert wirst, um fortzufahren
-1. Drücke (A) um fortzufahren
-1. Drücke (Start), um das System neu zu starten
+1. Drücke (Start) um deinen 3DS neu zu starten
 
 ___
 
