@@ -31,9 +31,7 @@ There have been reports of a wave of bans being handed out to CFW users by Ninte
 * The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
 * The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(the `.7z` file)*
-* [setup_ctrnand_luma3ds.gm9]({{ "/gm9_scripts/setup_ctrnand_luma3ds.gm9" | absolute_url }}){:download}
-* [cleanup_sd_card.gm9]({{ "/gm9_scripts/cleanup_sd_card.gm9" | absolute_url }}){:download}
+* The latest release of [Luma3DS]({{ "/assets/files/Luma3DSv89CC6ED.7z" | absolute_url }}) *(the `.7z` file)*
 
 ### Instructions
 
@@ -48,8 +46,6 @@ For all steps in this section, overwrite any existing files on your SD card.
 1. Copy `SafeB9SInstaller.firm` from the SafeB9SInstaller `.zip` to the `/luma/payloads/` folder on your SD card
 1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
-1. Copy `setup_ctrnand_luma3ds.gm9` to the `/gm9/scripts/` folder on your SD card
-1. Copy `cleanup_sd_card.gm9` to the `/gm9/scripts/` folder on your SD card
 1. Reinsert your SD card into your device
 
 #### Section II - Installing boot9strap
@@ -78,31 +74,30 @@ This section is only needed if you are prompted with the Luma3DS configuration m
   + **"Show NAND or user string in System Settings"**
 1. Press (Start) to save and reboot
 
-#### Section V - CTRNAND Luma3DS
+#### Section VI - CTRNAND Luma3DS
 
-1. Reboot holding (Start) to launch GodMode9
+1. Power off your device
+1. Launch GodMode9 by holding (Start) during boot
 1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
 1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
-  + Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
 1. Press (Home) to bring up the action menu
 1. Select "Scripts..."
-1. Select "setup_ctrnand_luma3ds"
+1. Select "GM9Megascript"
+1. Select "Scripts from Plailect's Guide"
+1. Select "Setup Luma3DS to CTRNAND"
 1. When prompted, press (A) to proceed
-1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+1. Press (A) to unlock SysNAND (lvl2) writing, then input the key combo given
 1. Press (A) to continue
-1. Press (A) to relock write permissions
 
-#### Section VI - Cleanup SD Card
+#### Section VII - Cleanup SD Card
 
-Note that this script will remove the `/boot9strap/` and `/cias/` folders from your SD card!
-{: .notice--danger}
-
-1. Press (Home) to bring up the action menu
-1. Select "Scripts..."
-1. Select "cleanup_sd_card"
+1. Select "Cleanup SD Card"
 1. When prompted, press (A) to proceed
 1. Press (A) to continue
-1. Hold (R) and press (Start) to power off your device
+1. Press (B) to return to the main menu
+1. Select "Exit"
+1. Press (A) to relock write permissions if prompted
+1. Press (Start) to reboot your device
 
 ___
 
