@@ -31,9 +31,7 @@ title: "Обновление B9S"
 * Свежая версия [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * Свежая версия [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(стандартный boot9strap; не `devkit-файл`, не `ntr-файл`)*
 * Свежая версия [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* Свежая версия [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z-архив`)*
-* [setup_ctrnand_luma3ds.gm9]({{ "/gm9_scripts/setup_ctrnand_luma3ds.gm9" | absolute_url }}){:download}
-* [cleanup_sd_card.gm9]({{ "/gm9_scripts/cleanup_sd_card.gm9" | absolute_url }}){:download}
+* The latest release of [Luma3DS]({{ "/assets/files/Luma3DSv89CC6ED.7z" | absolute_url }}) *(the `.7z` file)*
 
 ### Инструкция
 
@@ -48,8 +46,6 @@ title: "Обновление B9S"
 1. Скопируйте `SafeB9SInstaller.firm` из `.zip-архива` SafeB9SInstaller в папку `/luma/payloads/` на SD-карте
 1. Скопируйте `GodMode9.firm` из `.zip-архива` GodMode9 в папку `/luma/payloads/` на SD-карте
 1. Скопируйте папку `gm9` из `.zip-архива` GodMode9 в корень SD-карты
-1. Скопируйте `setup_ctrnand_luma3ds.gm9` в папку `/gm9/scripts/` на SD-карте
-1. Скопируйте `cleanup_sd_card.gm9` в папку `/gm9/scripts/` на SD-карте
 1. Вставьте SD-карту обратно в консоль
 
 #### Часть II - Установка boot9strap
@@ -78,31 +74,30 @@ title: "Обновление B9S"
   + **"Show NAND or user string in System Settings"**
 1. Нажмите (Start), чтобы сохранить настройки и перезагрузиться
 
-#### Часть V - CTRNAND Luma3DS
+#### Часть VI - CTRNAND Luma3DS
 
-1. Перезагрузитесь, удерживая кнопку (Start), чтобы запустить GodMode9
+1. Выключите консоль
+1. Запустите GodMode9, держа нажатой кнопку (Start) во время загрузки
 1. Если вам предложат создать бэкап важных файлов, нажмите кнопку (A) чтобы сделать это, затем нажмите (A) чтобы продолжить после завершения
 1. Если вам предложат выставить RTC дату и время, нажмите кнопку (A) чтобы сделать это, настройте дату и время, затем нажмите (A) чтобы продолжить
-  + Обратите внимание, что если вы выставили RTC дату и время, вам также придется исправить время в Системных настройках после завершения руководства
 1. Нажмите кнопку (Home) для вызова меню
 1. Выберите "Scripts..."
-1. Выберите "setup_ctrnand_luma3ds"
+1. Select "GM9Megascript"
+1. Select "Scripts from Plailect's Guide"
+1. Select "Setup Luma3DS to CTRNAND"
 1. При появлении запроса, нажмите (A) для продолжения
-1. Нажмите (A), чтобы разрешить запись в SysNAND (lvl1) и введите указанную комбинацию кнопок
+1. Нажмите (A), чтобы разрешить запись в SysNAND (lvl2) и введите указанную комбинацию кнопок
 1. Нажмите (A), чтобы продолжить
-1. Нажмите (A) чтобы восстановить запрет на запись
 
-#### Часть VI - Очистка SD-карты
+#### Section VII - Cleanup SD Card
 
-Обратите внимание, что этот скрипт удалит папки `/boot9strap/` и `/cias/` с SD-карты!
-{: .notice--danger}
-
-1. Нажмите кнопку (Home) для вызова меню
-1. Выберите "Scripts..."
-1. Выберите "cleanup_sd_card"
+1. Select "Cleanup SD Card"
 1. При появлении запроса, нажмите (A) для продолжения
 1. Нажмите (A), чтобы продолжить
-1. Удерживая (R), нажмите (Start) чтобы выключить консоль
+1. Нажмите (B) для возврата в главное меню
+1. Select "Exit"
+1. Нажмите (A) чтобы восстановить запрет на запись, если появится запрос
+1. Нажмите (Start) для перезагрузки
 
 ___
 
