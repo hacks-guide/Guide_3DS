@@ -23,14 +23,12 @@ During this process, we also setup programs such as the following:
 
 * The latest release of [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) *(the `.cia` file)*
 * The latest release of [Checkpoint](https://github.com/BernardoGiordano/Checkpoint/releases/latest) *(the `.cia` file)*
-* The latest release of [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
+* The latest release of [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest)
 * The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * The latest release of [DSP1](https://github.com/zoogie/DSP1/releases/latest)
 * The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) *(the `.cia` and `.3dsx` files)*
 * The latest release of [ctr-no-timeoffset](https://github.com/ihaveamac/ctr-no-timeoffset/releases/latest)
 * The latest release of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(the `.cia` file)*
-* [setup_ctrnand_luma3ds.gm9]({{ "/gm9_scripts/setup_ctrnand_luma3ds.gm9" | absolute_url }}){:download}
-* [cleanup_sd_card.gm9]({{ "/gm9_scripts/cleanup_sd_card.gm9" | absolute_url }}){:download}
 
 ### Instructions
 
@@ -42,21 +40,15 @@ During this process, we also setup programs such as the following:
 1. Create a folder named `cias` on the root of your SD card if it does not already exist
 1. Copy `ctr-no-timeoffset.3dsx` to the `/3ds/` folder on your SD card
 1. Copy `FBI.3dsx` to the `/3ds/` folder on your SD card
-1. Copy `hblauncher_loader.cia` from the hblauncher_loader `.zip` to the `/cias/` folder on your SD card
+1. Copy `Homebrew_Launcher.cia` to the `/cias/` folder on your SD card
 1. Copy `lumaupdater.cia` to the `/cias/` folder on your SD card
 1. Copy `FBI.cia` to the `/cias/` folder on your SD card
 1. Copy `DSP1.cia` to the `/cias/` folder on your SD card
 1. Copy `Anemone3DS.cia` to the `/cias/` folder on your SD card
 1. Copy `Checkpoint.cia` to the `/cias/` folder on your SD card
-
-    ![]({{ "/images/screenshots/cias-file-layout.png" | absolute_url }})
-    {: .notice--info}
-
 1. Create a folder named `payloads` in the `luma` folder on your SD card if it does not already exist
 1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
-1. Copy `setup_ctrnand_luma3ds.gm9` to the `/gm9/scripts/` folder on your SD card
-1. Copy `cleanup_sd_card.gm9` to the `/gm9/scripts/` folder on your SD card
 
     ![]({{ "/images/screenshots/finalizing-setup-file-layout.png" | absolute_url }})
     {: .notice--info}
@@ -118,21 +110,31 @@ If, before following this guide, you already had an EmuNAND setup and would like
 1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
 1. Press (Home) to bring up the action menu
 1. Select "Scripts..."
-1. Select "setup_ctrnand_luma3ds"
+1. Select "GM9Megascript"
+1. Select "Scripts from Plailect's Guide"
+1. Select "Setup Luma3DS to CTRNAND"
 1. When prompted, press (A) to proceed
-1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+1. Press (A) to unlock SysNAND (lvl2) writing, then input the key combo given
 1. Press (A) to continue
-1. Press (A) to relock write permissions
 
-#### Section VII - Backup Essential Files
+#### Section VII - Cleanup SD Card
 
-1. Press (Home) to bring up the action menu
-1. Select "Scripts..."
-1. Select "Backup SysNAND"
+1. Select "Cleanup SD Card"
+1. When prompted, press (A) to proceed
+1. Press (A) to continue
+1. Press (B) to return to the main menu
+
+#### Section VIII - Backup Essential Files
+
+1. Select "Backup Options"
+1. Select "SysNAND Backup"
 1. Press (A) to confirm
   + This process will take some time
-  + If you get an error, make sure that you have at least 1.2GB to 1.3GB of free space on your SD card
+  + If you get an error, make sure that you have at least 1.3GB of free space on your SD card
 1. Press (A) to continue
+1. Press (B) to return to the main menu
+1. Select "Exit"
+1. Press (A) to relock write permissions if prompted
 1. Hold (R) and press (B) at the same time to eject your SD card
 1. Insert your SD card into your computer
 1. Copy `<date>_<serialnumber>_sysnand_###.bin` and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
@@ -140,16 +142,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
   + These backups will save you from a brick and/or help you recover files from the NAND image if anything goes wrong in the future
 1. Delete `<date>_<serialnumber>_sysnand_###.bin` and `<date>_<serialnumber>_sysnand_###.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
 1. Reinsert your SD card into your device
-  + If your SD card was not detected, hold (R) and press (B) at the same time to remount it
-
-#### Section VIII - Cleanup SD Card
-
-1. Press (Home) to bring up the action menu
-1. Select "Scripts..."
-1. Select "cleanup_sd_card"
-1. When prompted, press (A) to proceed
-1. Press (A) to continue
-1. Press (Start) to reboot
+1. Press (Start) to reboot your device
 
 ___
 
