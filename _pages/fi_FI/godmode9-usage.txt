@@ -37,33 +37,44 @@ Jotkin alla olevista ohjeista pätevät vain GodMode9:n viimeisimpään versioon
 1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
 1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
 1. Valitse "Scripts..."
-1. Valitse "Backup SysNAND"
+1. Select "GM9Megascript"
+1. Select "Backup Options"
+1. Select "SysNAND Backup"
 1. Paina (A):ta vahvistaaksesi
   + Tämä prosessi voi kestää jonkin aikaa
+  + If you get an error, make sure that you have at least 1.3GB of free space on your SD card
 1. Paina (A):ta jatkaaksesi
+1. Paina (B):tä palataksesi päävalikkoon
+1. Select "Exit"
+1. Paina (A):ta lukitaksesi kirjoitusoikeudet kehotettaessa
 1. Pidä (R):ää pohjassa ja paina samalla (B):tä irrottaaksesi SD-korttisi
 1. Aseta SD-korttisi tietokoneeseesi
-1. Kopioi `<päivämäärä>_<sarjanumero>_sysnand_###.bin` SD-korttisi `/gm9/out/`-kansiosta turvalliseen paikkaan tietokoneellasi
+1. Kopioi `<päivämäärä>_<sarjanumero>_sysnand_###.bin` ja `essential.exefs` SD-korttisi `/gm9/out/`-kansiosta turvalliseen paikkaan tietokoneellasi
   + Varmuuskopioi useaan eri paikkaan (kuten pilvipalveluihin)
-  + Tämä varmuuskopiointi pelastaa sinut konsolin vioittumiselta, jos jokin menee pieleen tulevaisuudessa
-1. Poista `<päivämäärä>_<sarjanumero>_sysnand_###.bin` SD-korttisi `/gm9/out/`-kansiosta kopioituasi sen
+  + Nämä varmuuskopiot pelastavat sinut konsolin vioittumiselta ja/tai auttavat palauttamaan tiedostoja NAND-näköistiedostosta, jos jokin menee pieleen tulevaisuudessa
+1. Kun olet varmuuskopioinut NANDin, poista `<päivämäärä>_<sarjanumero>_sysnand_###.bin` ja `<päivämäärä>_<sarjanumero>_sysnand_###.bin.sha` SD-korttisi `/gm9/out/`-kansiosta
 1. Aseta SD-korttisi takaisin konsoliisi
+  + If your SD card was not detected, hold (R) and press (B) at the same time to remount it
 
 ## NAND-varmuuskopion palauttaminen
 
 1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
 1. Pidä (R):ää pohjassa ja paina samalla (B):tä irrottaaksesi SD-korttisi
 1. Aseta SD-korttisi tietokoneeseesi
-1. Kopioi `<päivämäärä>_<sarjanumero>_sysnand_###.bin` tietokoneeltasi SD-korttisi `/gm9/out/`-kansioon, jos poistit sen SD-kortiltasi tehtyäsi varmuuskopion
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from your computer to the `/gm9/out/` folder on your SD card
 1. Aseta SD-korttisi takaisin konsoliisi
 1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
 1. Valitse "Scripts..."
-1. Valitse "Restore SysNAND (Safe)"
+1. Select "GM9Megascript"
+1. Select "Restore Options"
+1. Select "SysNAND Restore (safe)"
 1. Valitse NAND-varmuuskopiosi
-1. Paina (A):ta jatkaaksesi
-1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl2) ja syötä annettu painikeyhdistelmä
+1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl3) ja syötä annettu painikeyhdistelmä
   + Tämä ei ylikirjoita boot9strap-asennustasi
-1. Kun toiminto on suoritettu, paina (A):ta jatkaaksesi
+  + Tämä prosessi voi kestää jonkin aikaa
+1. Paina (A):ta jatkaaksesi
+1. Paina (B):tä palataksesi päävalikkoon
+1. Select "Exit"
 1. Paina (A):ta lukitaksesi kirjoitusoikeudet kehotettaessa
 
 ## CIA-sovellusten injektoiminen Health & Safety -sovellukseen
@@ -216,22 +227,15 @@ Jotta voisit tunnistaa `<sovellustunnus>.gbavc.sav`-tiedoston pelin, voit näytt
 
 ## NNID:n poistaminen ilman konsolin alustamista
 
-### Tarpeet
-
-* [remove_nnid.gm9]({{ "/gm9_scripts/remove_nnid.gm9" | absolute_url }}){:download}
-
-### Ohjeet
-
 1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
-1. Pidä (R):ää pohjassa ja paina samalla (B):tä irrottaaksesi SD-korttisi
-1. Aseta SD-korttisi tietokoneeseesi
-1. Kopioi `remove_nnid.gm9` SD-korttisi `/gm9/scripts/`-kansioon
-1. Aseta SD-korttisi takaisin konsoliisi
 1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
 1. Valitse "Scripts..."
-1. Valitse "remove_nnid"
-1. Paina kehotettaessa (A):ta jatkaaksesi
+1. Select "GM9Megascript"
+1. Select "Scripts from Plailect's Guide"
+1. Paina (A):ta jatkaaksesi
 1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1) ja syötä annettu painikeyhdistelmä
 1. Paina (A):ta jatkaaksesi
-1. Paina (A):ta lukitaksesi kirjoitusoikeudet
+1. Paina (B):tä palataksesi päävalikkoon
+1. Select "Exit"
+1. Paina (A):ta lukitaksesi kirjoitusoikeudet kehotettaessa
 1. Paina (START)-painiketta käynnistääksesi uudelleen
