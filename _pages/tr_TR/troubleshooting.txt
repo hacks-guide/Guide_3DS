@@ -10,6 +10,8 @@ If you are unable to boot your device, please look for the section relevant to y
 
 If you still cannot solve your issue and need to reach out for help, please paste the contents of all relevant .log files from the root of your SD card into a [Gist](https://gist.github.com/), then come for help prepared with a detailed description of your problem and what you've tried.
 
+Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
+
 To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
 ## DSi / DS functionality is broken after completing the guide
@@ -48,35 +50,22 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
 
 ## Removing an NNID without formatting your device
 
-### What You Need
-
-* [remove_nnid.gm9]({{ "/gm9_scripts/remove_nnid.gm9" | absolute_url }}){:download}
-
-### Instructions
-
-Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
-{: .notice--info}
-
 1. Launch GodMode9 by holding (Start) during boot
-1. SD kartınızı çıkarmak için aynı anda (R) ve (B) ye basın ve basılı tutun
-1. SD kartınızı bilgisayarınıza takın
-1. Copy `remove_nnid.gm9` to the `/gm9/scripts/` folder on your SD card
-1. SD kartınızı cihazınıza tekrar takın
 1. Press (Home) to bring up the action menu
 1. Select "Scripts..."
-1. Select "remove_nnid"
-1. When prompted, press (A) to proceed
+1. Select "GM9Megascript"
+1. Select "Scripts from Plailect's Guide"
+1. Devam etmek için (A) basın
 1. SysNAND (lvl 1) yazısının kilidini açmak için (A) tuşuna basın, ardından verilen tuş kombosunu açılan kutuyu girin
 1. Devam etmek için (A) basın
-1. Press (A) to relock write permissions
+1. Press (B) to return to the main menu
+1. Select "Exit"
+1. Press (A) to relock write permissions if prompted
 1. Cihazı yeniden başlatmak için (Start) basın
 
 ## Cannot inject H&S on Gateway downgraded device
 
 This is caused by Gateway implementing a very shoddy downgrade method which leaves two versions of each app on the system. Biri gereksizdir, ama Decrypt9'ın şaşırmasına ve yanlış olana enjekte etmesine sebep olur.
-
-Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
-{: .notice--info}
 
 1. Launch GodMode9 by holding (Start) during boot
 1. Navigate to `[1:] SYSNAND CTRNAND` -> `title` -> `00040010`
@@ -112,15 +101,6 @@ Browser based exploits (such as browserhax or 2xrsa) are often unstable and cras
 
 ## Black screen on SysNAND boot
 
-### What You Need
-
-* [remove_extdata.gm9]({{ "/gm9_scripts/remove_extdata.gm9" | absolute_url }}){:download}
-
-### Instructions
-
-Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
-{: .notice--info}
-
 1. Try booting with your SD card out, and then reinserting it after booting
     1. Cihazınızı kapatın
     1. Remove your SD card from your device
@@ -131,11 +111,15 @@ Note that if you have any payload files other than `GodMode9.firm` in the `/luma
         1. Launch GodMode9 by holding (Start) during boot
         1. Press (Home) to bring up the action menu
         1. Select "Scripts..."
-        1. Select "remove_extdata"
-        1. When prompted, press (A) to proceed
+        1. Select "GM9Megascript"
+        1. Select "Scripts from Plailect's Guide"
+        1. Select "Remove extdata"
+        1. Devam etmek için (A) basın
         1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
         1. Devam etmek için (A) basın
-        1. Press (A) to relock write permissions
+        1. Press (B) to return to the main menu
+        1. Select "Exit"
+        1. Press (A) to relock write permissions if prompted
         1. Press (Start) to reboot your device
 1. Hiçbir kartuş takılı değilken açmayı deneyin
 1. If you have a hardmod and a NAND backup, flash the backup back to SysNAND
@@ -162,12 +146,6 @@ Note that if you have any payload files other than `GodMode9.firm` in the `/luma
 
 ## Black screen on SysNAND boot after Installing boot9strap
 
-### What You Need
-
-* [remove_extdata.gm9]({{ "/gm9_scripts/remove_extdata.gm9" | absolute_url }}){:download}
-
-### Instructions
-
 1. Ensure you have a working payload
     1. Check for the existence of `boot.firm` in the root of your SD card.
 1. Luma'nın ayarlarını resetlemeyi deneyin
@@ -175,16 +153,20 @@ Note that if you have any payload files other than `GodMode9.firm` in the `/luma
     1. Seçeneklerinizi açılışta ayarlayın
 1. Test booting GodMode9
     1. Luma3DS'teyken açılışta (Start) basılı tutun
-1. Ana menünün extdata silmeyi deneyin
+1. Try deleting home menu's extdata by following these instructions:
     1. Cihazınızı kapatın
     1. Launch GodMode9 by holding (Start) during boot
     1. Press (Home) to bring up the action menu
     1. Select "Scripts..."
-    1. Select "remove_extdata"
-    1. When prompted, press (A) to proceed
+    1. Select "GM9Megascript"
+    1. Select "Scripts from Plailect's Guide"
+    1. Select "Remove extdata"
+    1. Devam etmek için (A) basın
     1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
     1. Devam etmek için (A) basın
-    1. Press (A) to relock write permissions
+    1. Press (B) to return to the main menu
+    1. Select "Exit"
+    1. Press (A) to relock write permissions if prompted
     1. Press (Start) to reboot your device
 1. Hiçbir kartuş takılı değilken açmayı deneyin
 1. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version
