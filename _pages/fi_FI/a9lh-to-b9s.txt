@@ -47,6 +47,7 @@ Huomaa, että New 3DS:llä `secret_sector.bin`-tiedostoa tarvitaan vain arm9load
 * The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
 * The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* The latest release of [ctr-no-timeoffset](https://github.com/ihaveamac/ctr-no-timeoffset/releases/latest)
 * The latest release of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
 * The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
 
@@ -68,6 +69,7 @@ Korvaa mahdolliset olemassa olevat tiedostot SD-kortillasi kaikissa tämän vaih
 1. Kopioi GodMode9-`.zip`-pakkauksesta `GodMode9.firm` SD-korttisi `/luma/payloads/`-kansioon
 1. Kopioi GodMode9-`.zip`-pakkauksesta `gm9`-kansio SD-korttisi juureen
 1. Kopioi SafeB9SInstaller-`.zip`-pakkauksesta `SafeB9SInstaller.bin` SD-korttisi `/luma/payloads/`-kansioon
+1. Copy `ctr-no-timeoffset.3dsx` to the `/3ds/` folder on your SD card
 1. Luo `boot9strap`-niminen kansio SD-korttisi juureen
 1. Kopioi boot9strap-`.zip`-pakkauksesta `boot9strap.firm` ja `boot9strap.firm.sha` SD-korttisi `/boot9strap/`-kansioon
 1. **Vain New 3DS -käyttäjät:** Kopioi `secret_sector.bin` SD-korttisi `/boot9strap/`-kansioon
@@ -116,6 +118,15 @@ Jos sinulla oli ennen tämän oppaan aloittamista EmuNAND-kokoonpano, ja haluais
 1. Valitse `lumaupdater.cia`
 1. Valitse "Install CIA" ja paina (A):ta vahvistaaksesi
 1. Paina (HOME)-painiketta ja sulje FBI
+
+#### Section VI - Homebrew Launcher
+
+1. Launch the Homebrew Launcher
+1. Launch ctr-no-timeoffset from the list of homebrew
+1. Press (A) to set the offset to 0
+  + This will set the system clock to match the RTC date&time (which we will set soon)
+1. Press (Start) to return to the Homebrew Launcher
+1. Paina (HOME)-painiketta ja sulje Download Play
 
 #### Vaihe VI – Luma3DS:n asentaminen CTRNANDiin
 
