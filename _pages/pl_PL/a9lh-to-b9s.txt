@@ -46,9 +46,14 @@ Na New 3DSie plik `secret_sector.bin` jest potrzebny aby cofnąć exploit arm9lo
 * Wersji v7.0.5 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/tag/v7.0.5) *(pliku `.7z`)*
 * Najnowszej wersji [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * Najnowszej wersji [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standardowa instalacja; nie `devkit` czy plik `ntr`)*
+* Najnowszej wersji [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) *(pliku `.cia`)*
+* Najnowszej wersji [Checkpoint](https://github.com/BernardoGiordano/Checkpoint/releases/latest) *(pliku `.cia`)*
+* The latest release of [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest)
 * Najnowszej wersji [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* Najnowszej wersji [DSP1](https://github.com/zoogie/DSP1/releases/latest)
+* Najnowszej wersji [FBI](https://github.com/Steveice10/FBI/releases/latest) *(pliki `.cia` oraz `.3dsx`)*
 * The latest release of [ctr-no-timeoffset](https://github.com/ihaveamac/ctr-no-timeoffset/releases/latest)
-* Najnowszej wersji [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest)
+* Najnowszej wersji [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(pliku `.cia`)*
 * Najnowszej wersji [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
 
 ### Instrukcje
@@ -61,15 +66,22 @@ Wykonując wszystkie kroki opisane w tej sekcji, zastąp istniejące pliki na ka
 1. Wyłącz konsolę
 1. Włóż kartę SD do komputera
 1. Skopiuj plik `boot.3dsx` do katalogu głównego karty SD
+1. Stwórz folder o nazwie `3ds` w głównym katalogu twojej karty SD, jeśli jeszcze nie istnieje
+1. Stwórz folder o nazwie `cias` w katalogu głównym karty SD, jeśli jeszcze nie istnieje
+1. Copy `ctr-no-timeoffset.3dsx` to the `/3ds/` folder on your SD card
+1. Skopiuj `FBI.3dsx` do folderu `/3ds/` na karcie SD
+1. Copy `Homebrew_Launcher.cia` to the `/cias/` folder on your SD card
+1. Skopiuj `lumaupdater.cia` do folderu `/cias/` na karcie SD
+1. Skopiuj `FBI.cia` do folderu `/cias/` na karcie SD
+1. Skopiuj `DSP1.cia` do folderu `/cias/` na karcie SD
+1. Skopiuj `Anemone3DS.cia` do folderu `/cias/` na karcie SD
+1. Skopiuj `Checkpoint.cia` do folderu `/cias/` na karcie SD
 1. Skopiuj `boot.firm` z najnowszej wersji Luma3DS `.7z` do katalogu głownego karty SD
 1. Skopiuj `arm9loaderhax.bin` z Luma3DS `.7z` v7.0.5 do katalogu głównego karty SD
-1. Stwórz folder o nazwie `cias` w katalogu głównym karty SD, jeśli jeszcze nie istnieje
-1. Skopiuj `lumaupdater.cia` do folderu `/cias/` na karcie SD
 1. Usuń wszystkie pliki `.bin` z folderu `/luma/payloads/` na karcie SD, ponieważ nie będą one kompatybilne z wersjami Luma3DS kompatybilnymi z boot9strap
 1. Skopiuj `GodMode9.firm` z GodMode9 `.zip` do folderu `/luma/payloads/` na karcie SD
 1. Skopiuj folder `gm9` z GodMode9 `.zip` do katalogu głównego karty SD
 1. Skopiuj `SafeB9SInstaller.bin` z SafeB9SInstaller `.zip` do folderu `/luma/payloads/` na karcie SD
-1. Copy `ctr-no-timeoffset.3dsx` to the `/3ds/` folder on your SD card
 1. Stwórz folder o nazwie `boot9strap` w katalogu głównym karty SD
 1. Skopiuj `boot9strap.firm` i `boot9strap.firm.sha` z boot9strap `.zip` do folderu `/boot9strap/` na karcie SD
 1. **Tylko użytkownicy New 3DS:** Skopiuj `secret_sector.bin` do folderu `/boot9strap/` na karcie SD
@@ -106,29 +118,37 @@ Jeśli przed rozpoczęciem tego poradnika już miałeś skonfigurowane EmuNAND i
   + Jeśli przy próbie aktualizacji pojawia się błąd, ustaw swoje DNS (w ustawieniach połączenia internetowego 3DS) na "auto"
   + Jeśli to dalej daje błąd, [wykonaj CTRTransfer](ctrtransfer), a potem spróbuj znowu zaktualizować
 
-#### Sekcja V - Instalacja Aktualizatora Luma3DS
+#### Section V - Homebrew Launcher
 
-1. Włącz "System Settings"
-1. Wejdz do `Data Management` -> `Nintendo 3DS` -> `Software`
-1. Wybierz istniejący Luma3DS Updater
-1. Wybierz opcję "Delete", następnie "Delete Software and Save Data", następnie "Delete" by potwierdzić
-1. Wciśnij "Back" trzy razy, a potem (HOME) aby wrócić do menu głównego
-1. Uruchom FBI
-1. Przejdź do `SD` -> `cias`
-1. Wybierz `lumaupdater.cia`
-1. Wybierz opcję "Install CIA", a następnie wciśnij (A), aby potwierdzić
-1. Wciśnij (Home), aby wyjść z FBI
-
-#### Section VI - Homebrew Launcher
-
-1. Launch the Homebrew Launcher
+1. Uruchom aplikację Download Play
+1. Naciśnij w tym samym momencie (L) + (Dół) + (Select) aby otworzyć menu Rosalina
+1. Wybierz "Miscellaneous options"
+1. Wybierz "Switch the hb. title to the current app."
+1. Naciśnij (B) aby kontynuować
+1. Naciśnij (B) aby powrócić do głównego menu Rosalina
+1. Naciśnij (B) aby zamknąć menu Rosalina
+1. Naciśnij (Home), a następnie zamknij aplikację Download Play
+1. Uruchom aplikację Download Play
+1. Twoja konsola powinna załadować Homebrew Launcher
 1. Launch ctr-no-timeoffset from the list of homebrew
 1. Press (A) to set the offset to 0
   + This will set the system clock to match the RTC date&time (which we will set soon)
 1. Press (Start) to return to the Homebrew Launcher
+1. Uruchom FBI z listy Homebrew
+
+#### Section VI - Installing CIAs
+
+1. Przejdź do `SD` -> `cias`
+1. Wybierz "\<current directory>"
+1. Wybierz opcję "Install and delete all CIAs", a następnie naciśnij (A) aby potwierdzić
 1. Naciśnij (Home), a następnie zamknij aplikację Download Play
 
-#### Sekcja VI - CTRNAND Luma3DS
+#### Section VII - DSP Dump
+
+1. Uruchom aplikację DSP1
+1. Po zakończeniu, naciśnij przycisk (B) aby automatycznie usunąć aplikację i powrócić do głównego menu
+
+#### Section VIII - CTRNAND Luma3DS
 
 1. Wyłącz konsolę
 1. Uruchom GodMode9 poprzez trzymanie przycisku (Start) podczas uruchamiania konsoli
@@ -143,14 +163,14 @@ Jeśli przed rozpoczęciem tego poradnika już miałeś skonfigurowane EmuNAND i
 1. Wciśnij (A), aby odblokować zapis do SysNAND (lvl2), a następnie wprowadź przedstawioną kombinację przycisków
 1. Naciśnij (A), aby kontynuować
 
-#### Section VII - Cleanup SD Card
+#### Section IX - Cleanup SD Card
 
 1. Select "Cleanup SD Card"
 1. Gdy zostaniesz poproszony, naciśnij (A) by kontynuować
 1. Naciśnij (A), aby kontynuować
 1. Wciśnij (B) aby wrócić do menu głównego
 
-#### Section VIII - Backup Essential Files
+#### Section X - Backup Essential Files
 
 1. Select "Backup Options"
 1. Select "SysNAND Backup"
@@ -161,9 +181,14 @@ Jeśli przed rozpoczęciem tego poradnika już miałeś skonfigurowane EmuNAND i
 1. Wciśnij (B) aby wrócić do menu głównego
 1. Select "Exit"
 1. Naciśnij (A), aby ponownie zablokować uprawnienia do zapisu, jeśli zostaniesz o to poproszony
+1. Navigate to `[M:] MEMORY VIRTUAL`
+1. Press (A) on `boot9.bin` to select it
+1. Select "Copy to 0:/gm9/out"
+1. Naciśnij (A), aby kontynuować
+1. Wciśnij (B) aby wrócić do menu głównego
 1. Przytrzymaj przycisk (R) i jednocześnie naciśnij przycisk (B), aby bezpiecznie odmontować kartę SD a następnie wyjąć ją z systemu
 1. Włóż kartę SD do komputera
-1. Skopiuj `<date>_<serialnumber>_sysnand_###.bin` i `essential.exefs` z folderu `/gm9/out/` do bezpiecznego miejsca na twoim komputerze
+1. Copy `<date>_<serialnumber>_sysnand_###.bin`, `essential.exefs`, and `boot9.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Zrób kopie zapasowe w wielu lokacjach (np. dysku w chmurze)
   + Te kopie zapasowe uratują cię przed "brickiem" i/lub pomogą ci odzyskać pliki z NAND jeśli coś pójdzie nie tak w przyszłości
 1. Usuń `<date>_<serialnumber>_sysnand_###.bin` i `<date>_<serialnumber>_sysnand_###.bin.sha` z folderu `/gm9/out/` na twojej karcie SD po skopiowaniu ich do komputera
@@ -172,13 +197,49 @@ Jeśli przed rozpoczęciem tego poradnika już miałeś skonfigurowane EmuNAND i
 
 ___
 
-Ten Luma3DS Updater jest kompatybilny z boot9strap pobierając i rozpakowując najnowszy Luma3DS `boot.firm`.
-{: .notice--info}
+{% capture notice-10 %}
+Teraz możesz używać Luma3DS Updater aby aktualizować Luma3DS do najnowszej wersji, wystarczy go uruchomić i nacisnąć (A).
+
+To nie jest to samo co System Update; Luma3DS Updater pobiera i wypakowuje wyłącznie najnowsze pliki Luma3DS.
+
+To zaktualizuje wyłącznie pliki Luma3DS na twojej karcie SD. Jeśli włączysz konsole bez karty SD, użyje ostatniej wersji którą umieściłeś w CTRNAND.    
+{% endcapture %}
+
+<div class="notice--info">{{ notice-10 | markdownify }}</div>
 
 {% capture notice-6 %}   
+Teraz Luma3DS CFW SysNAND będzie uruchamiany domyślnie.    
+
 Możesz dostać się do menu konfiguracji Luma3DS, przytrzymując (Select) podczas uruchamiania konsoli.    
+
 Możesz teraz dostać się do Luma3DS chainloader, przytrzymując (Start) podczas uruchamiania konsoli (menu to jest wyświetlane tylko wtedy, gdy zostanie wykryty więcej niż jeden payload).    
-Możesz teraz zrzucić bootrom ARM11 (`boot11.bin`), bootrom ARM9 (`boot9.bin`), i unikalny OTP konsoli (`OTP.bin`) do folderu `/boot9strap/` na karcie SD, przytrzymując (Start) + (Select) + (X) podczas uruchamiania konsoli (nie zostaniesz o tym poinformowany żadnym pytaniem czy wiadomością).
+
+Możesz teraz zrzucić bootrom ARM11 (`boot11.bin`), bootrom ARM9 (`boot9.bin`), i unikalny OTP konsoli (`OTP.bin`) do folderu `/boot9strap/` na karcie SD, przytrzymując (Start) + (Select) + (X) podczas uruchamiania konsoli (nie zostaniesz o tym poinformowany żadnym pytaniem czy wiadomością).    
+
+Możesz teraz nacisnąć (L) + (Dół) + (Select) kiedy system jest uruchomiony aby otworzyć menu Rosalina zintegrowane z Luma3DS. Pełna lista funkcji Rosalina znajduje się w [Luma3DS v8.0 Release](https://github.com/AuroraWright/Luma3DS/releases/tag/v8.0)
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
+
+{% capture notice-6 %}   
+Jeśli chcesz zmienić swoją kartę SD na większą, wystarczy, że sformatujesz ją (nową) jako FAT32 i wkleisz do niej zawartość poprzedniej karty SD.    
+
+Jeśli twoja nowa karta SD jest większa niż 32GB, musisz użyć innego narzędzia, aby ją ją sformatować, na przykład: [guiformat](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) dla Windows, [gparted](http://gparted.org/download.php) dla Linuxa, lub [Disk Utility](https://support.apple.com/en-gb/guide/disk-utility/format-a-disk-for-windows-computers-dskutl1010/mac) dla Mac'a.    
+{% endcapture %}
+
+<div class="notice--info">{{ notice-6 | markdownify }}</div>
+
+Aby używać [NTR CFW](https://github.com/44670/BootNTR/), zainstaluj [BootNTR Selector](https://gbatemp.net/threads/432911/).
+{: .notice--info}
+
+Aby uzyskać informacje na ten temat zmiany regionu twojej konsoli, odwiedź stronę [Zmiana Regionu Konsoli](region-changing).
+{: .notice--success}
+
+Aby uzyskać informacje na temat korzystania z różnych funkcji GodMode9, sprawdź stronę [Używanie GodMode9](godmode9-usage).
+{: .notice--success}
+
+Aby uzyskać informacje o użytkowaniu różnych funkcji Luma3DS, odwiedź [jej wiki](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage).
+{: .notice--success}
+
+Aby uzyskać informacje na temat instalowania niestandardowych motywów i ekranów powitalnych, sprawdź [Theme Plaza](https://themeplaza.eu/).
+{: .notice--success}
