@@ -12,7 +12,7 @@ title: "Установка boot9strap (DSiWare)"
 
 Затем мы используем этот ключ шифрования DSiWare, чтобы расшифровать совместимое DSiWare приложение и внедрить в него эксплойт для запуска нашего собственного кода.
 
-Если бы этот ключ был полностью случайным, то его было бы невозможно взломать при помощи современных компьютеров. К счастью, первая половина ключа (`movable_part1.sed`) на самом деле математически связана с Friend Code консоли, что позволяет нам взломать шифрование. Для получения информации о том, как работает Seedminer, пожалуйста, посмотрите [эту презентацию](https://zoogie.github.io/web/34⅕c3).
+Если бы этот ключ был полностью случайным, то его было бы невозможно взломать при помощи современных компьютеров. К счастью, первая половина ключа (`movable_part1.sed`) на самом деле математически связана с Кодом друга консоли, что позволяет нам взломать шифрование. Для получения информации о том, как работает Seedminer, пожалуйста, посмотрите [эту презентацию](https://zoogie.github.io/web/34⅕c3).
 
 Обратите внимание, что этот инструмент требует наличия ПК с мощной видеокартой для взлома шифрования DSiWare вашей консоли. Если у вас нет доступа к такому компьютеру, существует несколько онлайн сервисов взаимопомощи, где волонтеры и автоматическое ПО могут сделать это за вас.
 
@@ -37,37 +37,37 @@ title: "Установка boot9strap (DSiWare)"
 
 #### Часть I - Подготовительные работы
 
-1. Launch System Settings on your device
-1. Navigate to `Data Management` -> `DSiWare`
-1. Under the "System Memory" section, select your compatible DSiWare game
-1. Select "Copy", then select "OK"
-  + If prompted, overwrite any existing copy
+1. Откройте Системные настройки на вашей консоли
+1. Перейдите в `Управление данными` -> `DSiWare`
+1. На вкладке "Память системы" выберите вашу совместимую DSiWare игру
+1. Выберите "Копировать", затем "OK"
+  + Если появится запрос, согласитесь на перезапись
 1. Выключите консоль
 1. Вставьте SD-карту в компьютер
 1. Скопируйте файл `boot.firm` из `.7z-архива` Luma3DS в корень SD-карты
-1. Copy `boot.nds` (B9STool) to the root of your SD card
+1. Скопируйте `boot.nds` (B9STool) в корень SD-карты
 1. Скопируйте `boot.3dsx` в корень SD-карты
-1. Navigate to the `Nintendo 3DS` folder on your SD card
-1. Copy the 32 character long name of the folder you see
-  + If you see multiple folders like this, perform the following:
-  + Rename the `Nintendo 3DS` folder to `BACKUP_Nintendo 3DS`
-  + Reinsert your SD card into your device and power on your device
-  + Wait for the device to generate the SD card data
-  + Power off your device and reinsert your SD card into your computer
-  + Navigate to the `Nintendo 3DS` folder on your SD card
-  + Copy the 32 character long name of the folder you see
-  + Delete the `Nintendo 3DS` folder
-  + Rename the `BACKUP_Nintendo 3DS` folder to `Nintendo 3DS`
-1. Paste your 32 character long folder name into a document you can reference later
-  + This folder name is also known as your "ID0"
-1. Navigate to `<ID0>` -> `<32-character-id>` -> `Nintendo DSiWare` on your SD card
-1. Copy `<8-character-id>.bin` to a folder on your computer
+1. Перейдите в папку `Nintendo 3DS` на SD-карте
+1. Скопируйте имя папки из 32 символов, которую вы видите
+  + Если вы видите несколько таких папок, выполните следующие действия:
+  + Переименуйте папку `Nintendo 3DS` в `BACKUP_Nintendo 3DS`
+  + Вставьте SD-карту обратно в консоль и включите консоль
+  + Подождите пока консоль не создаст данные на SD-карте
+  + Выключите консоль и вставьте SD-карту обратно в компьютер
+  + Перейдите в папку `Nintendo 3DS` на SD-карте
+  + Скопируйте имя папки из 32 символов, которую вы видите
+  + Удалите папку `Nintendo 3DS`
+  + Переименуйте папку `BACKUP_Nintendo 3DS` в `Nintendo 3DS`
+1. Вставьте имя папки из 32 символов в документ, к которому вы сможете обратиться позже
+  + Имя этой папки также известно как ваш "ID0"
+1. Перейдите в папку `<ID0>` -> `<32-значный-id>` -> `Nintendo DSiWare` на SD-карте
+1. Скопируйте файл `<8-значный-id>.bin` в папку на вашем компьютере
   + 8-значный ID смотрите на странице [Установка boot9strap (Список уязвимых игр DSiWare)](installing-boot9strap-(dsiware-game-injection-list))
 1. Вставьте SD-карту обратно в консоль
 1. Включите консоль
 1. Откройте Список друзей ([оранжевый значок в виде лица]({{ "/images/friend-list-icon.png" | absolute_url }}) на верхней строчке меню HOME)
-  + If you receive an error and are kicked out of the menu, you either must create a new Mii or your console cannot connect to Nintendo's servers (due to a ban or connection issues)
-1. Find your Mii profile, then find the "Friend Code" field on the top screen
+  + Если появляется ошибка и вас не пускают в меню, значит вам нужно либо создать новый Mii, либо консоль не может подключиться к серверам Nintendo (по причине бана или проблем с соединением)
+1. Найдите свой профиль Mii, затем найдите поле "Код друга" на верхнем экране
 
 #### Section II - Seedminer
 
@@ -110,10 +110,10 @@ title: "Установка boot9strap (DSiWare)"
   + Overwrite the old `<8-character-id>.bin` file when prompted
 1. Вставьте SD-карту обратно в консоль
 1. Включите консоль
-1. Launch System Settings on your device
-1. Navigate to `Data Management` -> `DSiWare`
+1. Откройте Системные настройки на вашей консоли
+1. Перейдите в `Управление данными` -> `DSiWare`
 1. Under the "SD Card" (or "microSD Card") section, select your compatible DSiWare game
-1. Select "Copy", then select "OK"
+1. Выберите "Копировать", затем "OK"
   + This may have caused your game to appear as "Sudoku" or "4Swords" depending on region; this is normal
 1. Exit System Settings
 
