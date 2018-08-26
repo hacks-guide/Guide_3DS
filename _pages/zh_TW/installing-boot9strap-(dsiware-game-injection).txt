@@ -12,8 +12,6 @@ title: "安裝 boot9strap (透過 DSiWare 植入遊戲)"
 
 要解壓此頁面中的`.7z`檔案，您將需要一個壓縮檔管理員，如 [7-Zip](http://www.7-zip.org/) 或 [The Unarchiver](https://theunarchiver.com/)。
 
-在繼續之前，請確保您已閱讀[安裝 boot9strap(透過 DSiWare)](installing-boot9strap-(dsiware))中的提示及警告
-
 如果您使用了不符合 3DS 目標機的 `.firm` 檔案，保證會磚機！ 請確保您下載並使用正確的檔案！
 {: .notice--danger}
 
@@ -76,7 +74,7 @@ title: "安裝 boot9strap (透過 DSiWare 植入遊戲)"
 1. 移動至 `[0:] SDCARD`
 1. 選取 DSiWare Injection 的 `.app` 檔案，並按下『Y』複製
 1. 按『B』以回到主選單
-1. 移動至 `SYSNAND TWLN` -> `title` -> `00030004` -> `(8 位元的 ID)`
+1. Navigate to `SYSNAND TWLN` -> `title` -> `00030004` -> `<8-character-id>`
   + 檔案的 8 位元 ID 將會是[安裝 boot9strap(透過 DSiWare 植入遊戲－遊戲清單)](installing-boot9strap-(dsiware-game-injection-list))中的其中一個遊戲
 1. 移動至 `content`
 1. 選取資料夾中的 `.app` 檔案，並按下『A』
@@ -84,7 +82,7 @@ title: "安裝 boot9strap (透過 DSiWare 植入遊戲)"
 1. 按『A』選擇 `00000000`
 1. 按『A』以解鎖 SysNAND 的寫入保護，然後按下提示的按鍵組合
 1. 按『B』以回到主選單
-1. 移動至 `[2:] SYSNAND TWLN` -> `title` -> `00030004` -> `(8 位元的 ID)`
+1. Navigate to `[2:] SYSNAND TWLN` -> `title` -> `00030004` -> `<8-character-id>`
   + 檔案的 8 位元 ID 將會是[安裝 boot9strap(透過 DSiWare 植入遊戲－遊戲清單)](installing-boot9strap-(dsiware-game-injection-list))中的其中一個遊戲
 1. 移動至 `data`
 1. 選取 `public.sav`，並按下『A』
@@ -143,10 +141,9 @@ title: "安裝 boot9strap (透過 DSiWare 植入遊戲)"
 
 #### 第五節 — 刷入 3DS 目標機的 FIRM
 
-1. 解壓 Luma3DS `.7z` 內的 `boot.firm` 到 SD 卡的根目錄底下
+1. Copy `boot.firm` from the Luma3DS `.7z` to the root of **the target 3DS**'s SD card
 1. 將 `boot.nds`(B9STool)複製到 **3DS 目標機** SD 卡的根目錄中
 1. 將 `boot.3dsx` 複製到 **3DS 目標機** SD 卡的根目錄中
-1. 於 **3DS 目標機** 中啟動您所選的 DSiWare
 1. 在 **3DS 目標機**上透過所選的 DSiWare 遊戲來啟動 b9sTool
   + 如果出現提示，您可能需要點擊螢幕以觸發此漏洞
 1. 選擇『Install boot9strap』並確認
@@ -163,7 +160,6 @@ title: "安裝 boot9strap (透過 DSiWare 植入遊戲)"
 1. 開機時，按住「Select」鍵啟動 Luma 設定選單
 1. 透過方向鍵及『A』以開啟下列選項：    
   + **『Show NAND or user string in System Settings』**
-  + 在某些情況中，此選項可能早已設定完畢。 如果已經設定完畢，請直接進行下一步驟。
 1. 按『Start』鍵以存檔並重新啟動系統
   + 如果黑屏，[請依循本疑難排解之步驟](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 
