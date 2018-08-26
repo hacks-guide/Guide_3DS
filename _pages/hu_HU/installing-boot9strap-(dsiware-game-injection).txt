@@ -12,8 +12,6 @@ Ahhoz, hogy használhasd a [magnet](https://en.wikipedia.org/wiki/Magnet_URI_sch
 
 Ahhoz, hogy kicsomagold az oldalon található `.7z` fájlokat, egy fájl archiváló programra lesz szükséged, mint amilyen a [7-Zip](http://www.7-zip.org/) vagy a [The Unarchiver](https://theunarchiver.com/).
 
-Mielőtt folytatnánk, győződj meg róla, hogy minden megjegyzést és figyelmeztetést elolvastál a [boot9strap telepítése (DSiWare)](installing-boot9strap-(dsiware)) oldalon
-
 Ha nem a cél 3DS-ednek megfelelő `.firm`-et használod, BRICKELNI fogod a készülékedet! Bizonyosodj meg róla, hogy a neked megfelelőt töltöd le és használod!
 {: .notice--danger}
 
@@ -76,7 +74,7 @@ Használj [mentéskezelőt](https://github.com/BernardoGiordano/Checkpoint/relea
 1. Menj ide: `[0:] SDCARD`
 1. Nyomd meg az (Y) gombot a DSiWare injekció `.app`-on, hogy kimásold
 1. Nyomd meg a (B) gombot, hogy visszamenj a főmenübe
-1. Kövesd az alábbi útvonalat: `SYSNAND TWLN` -> `title` -> `00030004` -> `(8 hosszú azonosító)`
+1. Navigate to `SYSNAND TWLN` -> `title` -> `00030004` -> `<8-character-id>`
   + A "8 hosszú azonosító"-t megtalálod minden játékhoz a [boot9strap telepítése (DSiWare játék-injektálás - támogatott játékok)](installing-boot9strap-(dsiware-game-injection-list)) oldalon lévő táblázatban
 1. Válaszd a `content` mappát
 1. Nyomd meg az (A) gombot a `.app` fájlon ebben a mappában
@@ -84,7 +82,7 @@ Használj [mentéskezelőt](https://github.com/BernardoGiordano/Checkpoint/relea
 1. Nyomd meg az (A) gombot, hogy kiválaszd a `00000000` offsetet
 1. Nyomd meg az (A) gombot, hogy feloldd a SysNAND írást, majd sorban nyomd meg a kijelzett gombokat
 1. Nyomd meg a (B) gombot, hogy visszamenj a főmenübe
-1. Kövesd az alábbi útvonalat: `[2:] SYSNAND TWLN` -> `title` -> `00030004` -> `(8 hosszú azonosító)`
+1. Navigate to `[2:] SYSNAND TWLN` -> `title` -> `00030004` -> `<8-character-id>`
   + A "8 hosszú azonosító"-t megtalálod minden játékhoz a [boot9strap telepítése (DSiWare játék-injektálás - támogatott játékok)](installing-boot9strap-(dsiware-game-injection-list)) oldalon lévő táblázatban
 1. Válaszd a `data` mappát
 1. Nyomd meg az (A)-t a `public.sav` fájlon
@@ -143,10 +141,9 @@ Használj [mentéskezelőt](https://github.com/BernardoGiordano/Checkpoint/relea
 
 #### Ötödik rész - A cél 3DS FIRM-jének flashelése
 
-1. Másold át a `boot.firm` fájlt a Luma3DS `.7z`-ből az SD kártya gyökerébe
+1. Copy `boot.firm` from the Luma3DS `.7z` to the root of **the target 3DS**'s SD card
 1. Másold a `boot.nds` (B9STool) fájlt a **cél 3DS** SD kártyájának gyökerébe
 1. Másold a `boot.3dsx` fájlt a **cél 3DS** SD kártyájának gyökerébe
-1. Indítsd el a DSiWare játékot a **cél 3DS**-en
 1. Indítsd el a b9sTool-t a megfelelő DSiWare játék elindításával a **cél 3DS**-en
   + Ekkor lehet, hogy meg kell érintened a képernyőt az exploit előidézéséhez
 1. Válaszd az "Install boot9strap" opciót, majd erősítsd meg
@@ -163,7 +160,6 @@ Használj [mentéskezelőt](https://github.com/BernardoGiordano/Checkpoint/relea
 1. Indítsd el a készülékedet a (Select) lenyomva tartásával, hogy megjelenjen a Luma konfigurációs menüje
 1. Használd az (A) gombot és D-Pad-et a következő engedélyezéséhez:    
   + **"Show NAND or user string in System Settings"**
-  + Néhány esetben lehetséges, hogy ez már konfigurálva van. Ebben az esetben folytasd a következő lépéssel
 1. Mentéshez és újraindításhoz nyomd meg a (Start) gombot
   + Ha fekete képernyőt kapsz, [nézd át a hibaelhárítási útmutatót](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 
