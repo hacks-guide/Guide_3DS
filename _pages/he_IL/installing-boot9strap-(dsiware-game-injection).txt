@@ -12,8 +12,6 @@ title: "התקנת boot9strap (הזרקת משחק DSiWare)"
 
 To extract the `.7z` files linked on this page, you will need a file archiver like [7-Zip](http://www.7-zip.org/) or [The Unarchiver](https://theunarchiver.com/).
 
-לפני שתמשיכו, תבתקו שקראתם את כל ההודעות והאזהרות בעמוד [התקנת boot9strap (DSiWare)](installing-boot9strap-(dsiware))
-
 אם אתם לא משתמשים ב`.firm` הנכון בשביל קונסולת היעד, תקבלו בריק! שימו לב שאתם מורידים ומשתמשים בקובץ הנכון!
 {: .notice--danger}
 
@@ -76,7 +74,7 @@ Use a [save manager](https://github.com/BernardoGiordano/Checkpoint/releases/lat
 1. נווטו ל`[0:] SDCARD`
 1. תלחצו (Y) על ה`.app` של הזרקת הDSiWare כדי להעתיק אותו
 1. תלחצו (B) כדי לחזור לתפריט הראשי
-1. לכו ל`SYSNAND TWLN`ואז `title`, ואז`00030004` ולבסוף אל תיקייה עם 8 תווים
+1. Navigate to `SYSNAND TWLN` -> `title` -> `00030004` -> `<8-character-id>`
   + ה8 תווים יהיו אלו מעמוד [התקנת boot9strap (רשימת משחקי DSiWare הניתן להזריק)](installing-boot9strap-(dsiware-game-injection-list))
 1. נווטו ל`content`
 1. תלחצו (A) על קובץ ה`.app` בתיקייה
@@ -84,7 +82,7 @@ Use a [save manager](https://github.com/BernardoGiordano/Checkpoint/releases/lat
 1. תלחצו (A) כדי לבחור `00000000`
 1. לחצו (A) כדי לפתוח גישת כתיבה לSysNAND, ואז תלחצו על המקשים בסדר הנכון
 1. תלחצו (B) כדי לחזור לתפריט הראשי
-1. לכו ל`[2:] SYSNAND TWLN` ואז `title`, ואז`00030004` ולבסוף אל תיקייה עם 8 תווים
+1. Navigate to `[2:] SYSNAND TWLN` -> `title` -> `00030004` -> `<8-character-id>`
   + ה8 תווים יהיו אלו מעמוד [התקנת boot9strap (רשימת משחקי DSiWare הניתן להזריק)](installing-boot9strap-(dsiware-game-injection-list))
 1. נווטו ל`data`
 1. + תלחצו (A) על`public.sav`
@@ -143,10 +141,9 @@ Use a [save manager](https://github.com/BernardoGiordano/Checkpoint/releases/lat
 
 #### Section V - Flashing the target 3DS's FIRM
 
-1. תעתיקו את הקובץ `boot.firm` מתוך ה`.7z` של Luma3DS לתוך ה-SD שלכם
+1. Copy `boot.firm` from the Luma3DS `.7z` to the root of **the target 3DS**'s SD card
 1. תעתיקו את `boot.nds` (שזה B9STool) לשורש הSD של **קונסולת היעד**
 1. Copy `boot.3dsx` to the root of **the target 3DS**'s SD card
-1. תפעילו את משחק הDSiWare שלכם על **קונסולת היעד**
 1. תפעילו את b9sTool על ידי הפעלת משחק הDSiWare שלכם על **קונסולת היעד**
   + If prompted, you may have to tap the screen to trigger the exploit
 1. תבחרו ב "Install boot9strap" ותאשרו
@@ -163,7 +160,6 @@ Use a [save manager](https://github.com/BernardoGiordano/Checkpoint/releases/lat
 1. Boot your device while holding (Select) to launch the Luma configuration menu
 1. השתמשו במקש (A) ובמקשי החיצים על מנת להפעיל את ההגדרות הבאות:    
   + **"Show NAND or user string in System Settings"**
-  + In some cases it may already be configured. If so, proceed to the next step
 1. לחצו על (Start) על מנת לשמור ולהפעיל מחדש
   + אם אתם מקבלים מסך שחור, [תעקבו אחרי המדריך הזה](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 
