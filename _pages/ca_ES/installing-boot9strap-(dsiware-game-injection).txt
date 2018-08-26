@@ -12,8 +12,6 @@ To use the [magnet](https://en.wikipedia.org/wiki/Magnet_URI_scheme) links on th
 
 To extract the `.7z` files linked on this page, you will need a file archiver like [7-Zip](http://www.7-zip.org/) or [The Unarchiver](https://theunarchiver.com/).
 
-Before proceeding, ensure you have read all of the notices and warnings on [Installing boot9strap (DSiWare)](installing-boot9strap-(dsiware))
-
 If you do not use the correct `.firm` corresponding to the target 3DS, you will BRICK! Ensure you download and use the correct one!
 {: .notice--danger}
 
@@ -76,7 +74,7 @@ Use a [save manager](https://github.com/BernardoGiordano/Checkpoint/releases/lat
 1. Navigate to `[0:] SDCARD`
 1. Press (Y) on the DSiWare injection `.app` to copy it
 1. Press (B) to go back to the main menu
-1. Navigate to `SYSNAND TWLN` -> `title` -> `00030004` -> `(8 Character ID)`
+1. Navigate to `SYSNAND TWLN` -> `title` -> `00030004` -> `<8-character-id>`
   + The 8 Character ID will be the one from the [Installing boot9strap (DSiWare Game Injection List)](installing-boot9strap-(dsiware-game-injection-list)) page
 1. Navigate to `content`
 1. Press (A) on the `.app` file in the folder
@@ -84,7 +82,7 @@ Use a [save manager](https://github.com/BernardoGiordano/Checkpoint/releases/lat
 1. Press (A) to select the offset `00000000`
 1. Press (A) to unlock SysNAND writing, then input the key combo given
 1. Press (B) to go back to the main menu
-1. Navigate to `[2:] SYSNAND TWLN` -> `title` -> `00030004` -> `(8 Character ID)`
+1. Navigate to `[2:] SYSNAND TWLN` -> `title` -> `00030004` -> `<8-character-id>`
   + The 8 Character ID will be the one from the [Installing boot9strap (DSiWare Game Injection List)](installing-boot9strap-(dsiware-game-injection-list)) page
 1. Navigate to `data`
 1. Press (A) on `public.sav`
@@ -143,10 +141,9 @@ Use a [save manager](https://github.com/BernardoGiordano/Checkpoint/releases/lat
 
 #### Section V - Flashing the target 3DS's FIRM
 
-1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card
+1. Copy `boot.firm` from the Luma3DS `.7z` to the root of **the target 3DS**'s SD card
 1. Copy `boot.nds` (B9STool) to the root of **the target 3DS**'s SD card
 1. Copy `boot.3dsx` to the root of **the target 3DS**'s SD card
-1. Launch your DSiWare game on **the target 3DS**
 1. Launch b9sTool by starting your DSiWare game on **the target 3DS**
   + If prompted, you may have to tap the screen to trigger the exploit
 1. Select "Install boot9strap" and confirm
@@ -163,7 +160,6 @@ Use a [save manager](https://github.com/BernardoGiordano/Checkpoint/releases/lat
 1. Boot your device while holding (Select) to launch the Luma configuration menu
 1. Use the (A) button and the D-Pad to turn on the following:    
   + **"Show NAND or user string in System Settings"**
-  + In some cases it may already be configured. If so, proceed to the next step
 1. Press (Start) to save and reboot
   + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 
