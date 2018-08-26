@@ -12,8 +12,6 @@ Käyttääksesi tällä sivulla olevia [magneetti](https://en.wikipedia.org/wiki
 
 Purkaaksesi tämän osion `.7z`-tiedostot tarvitset pakkausohjelman, kuten [7-Zip](http://www.7-zip.org/)in tai [The Unarchiver](https://theunarchiver.com/)in.
 
-Varmista ennen jatkamista, että olet lukenut kaikki huomautukset ja varoitukset osiossa [Boot9strapin asentaminen (DSiWare)](installing-boot9strap-(dsiware)).
-
 Jos et käytä oikeaa kohde-3DS:n mukaista `.firm`-tiedostoa, konsolista tulee KÄYTTÖKELVOTON! Varmista, että lataat ja käytät oikeaa tiedostoa!
 {: .notice--danger}
 
@@ -76,7 +74,7 @@ Use a [save manager](https://github.com/BernardoGiordano/Checkpoint/releases/lat
 1. Mene hakemistoon `[0:] SDCARD`
 1. Paina (Y):tä DSiWare-injektio-`.app`-tiedoston kohdalla kopioidaksesi sen
 1. Paina (B):tä palataksesi päävalikkoon
-1. Mene hakemistoon `SYSNAND TWLN` → `title` → `00030004` → `(8-merkkinen tunnus)`
+1. Navigate to `SYSNAND TWLN` -> `title` -> `00030004` -> `<8-character-id>`
   + 8-merkkinen tunnus löytyy osiosta [Boot9strapin asentaminen (injektoitavat DSiWare-pelit)](installing-boot9strap-(dsiware-game-injection-list))
 1. Mene hakemistoon `content`
 1. Paina kansiossa (A):ta `.app`-tiedoston kohdalla
@@ -84,7 +82,7 @@ Use a [save manager](https://github.com/BernardoGiordano/Checkpoint/releases/lat
 1. Paina (A):ta valitaksesi kohdan `00000000`
 1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen ja syötä annettu painikeyhdistelmä
 1. Paina (B):tä palataksesi päävalikkoon
-1. Mene hakemistoon `[2:] SYSNAND TWLN` → `title` → `00030004` → `(8-merkkinen tunnus)`
+1. Navigate to `[2:] SYSNAND TWLN` -> `title` -> `00030004` -> `<8-character-id>`
   + 8-merkkinen tunnus löytyy osiosta [Boot9strapin asentaminen (injektoitavat DSiWare-pelit)](installing-boot9strap-(dsiware-game-injection-list))
 1. Mene hakemistoon `data`
 1. Paina (A):ta `public.sav`-tiedoston kohdalla
@@ -143,10 +141,9 @@ Use a [save manager](https://github.com/BernardoGiordano/Checkpoint/releases/lat
 
 #### Section V - Flashing the target 3DS's FIRM
 
-1. Kopioi Luma3DS-`.7z`-pakkauksesta `boot.firm` SD-korttisi juureen
+1. Copy `boot.firm` from the Luma3DS `.7z` to the root of **the target 3DS**'s SD card
 1. Kopioi `boot.nds` (B9STool) **kohde-3DS**:n SD-kortin juureen
 1. Kopioi `boot.3dsx` **kohde 3DS**:n SD-kortin juureen
-1. Avaa DSiWare-pelisi **kohde-3DS**:llä
 1. Avaa b9sTool aloittamalla DSiWare-pelisi **kohde-3DS**:llä
   + If prompted, you may have to tap the screen to trigger the exploit
 1. Valitse "Install boot9strap" ja vahvista
@@ -163,7 +160,6 @@ Use a [save manager](https://github.com/BernardoGiordano/Checkpoint/releases/lat
 1. Käynnistä konsolisi pitäen (SELECT)-painiketta pohjassa avataksesi Luman määritysvalikon
 1. Käytä (A):ta ja ristiohjainta ottaaksesi seuraavat asetukset käyttöön:    
   + **"Show NAND or user string in System Settings"**
-  + Joissain tapauksissa asetus voi olla jo käytössä. Jatka seuraavaan kohtaan tästä huolimatta.
 1. Paina (START)-painiketta tallentaaksesi ja käynnistääksesi uudelleen
   + Jos saat mustan ruudun, [seuraa tätä vianmääritysohjetta](troubleshooting#musta-ruutu-boot9strapin-asentamisen-jälkeen-kun-sysnand-on-käynnistetty)
 
