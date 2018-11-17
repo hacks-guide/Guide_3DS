@@ -1,0 +1,170 @@
+---
+title: "Installing boot9strap (Frogminer)"
+---
+
+{% include toc title="Table of Contents" %}
+
+### Required Reading
+
+To install boot9strap on your 11.8.0 device, we exploit an oversight in the security restrictions applied to "DSiWare" applications.
+
+To accomplish this, we use a tool called Seedminer to calculate the DSiWare encryption key (`movable.sed`) for your device.
+
+We then use this DSiWare encryption key to decrypt a compatible DSiWare application and inject an exploit into it to run our own code.
+
+If this key were completely random, the encryption key would be impossible to break on current computing hardware. Fortunately, the first half of the key (`movable_part1.sed`) is actually mathematically related to your device's Friend Code, allowing us to break the encryption. For information on how Seedminer works, please see [this presentation](https://zoogie.github.io/web/34⅕c3).
+
+Note that this tool requires a PC with a powerful graphics card to break your device's DSiWare encryption. If you do not have access to one of these, there exists several online helper services where a volunteer running automated software will do this for you.
+
+To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download).
+
+To extract the `.7z` and `.rar` files linked on this page, you will need a file archiver like [7-Zip](http://www.7-zip.org/) or [The Unarchiver](https://theunarchiver.com/).
+
+This process will overwrite your DSiWare game's save file!
+{: .notice--warning}
+
+### What You Need
+
+* The free DSiWare game "Steel Diver: Sub Wars" from the eShop
+* The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
+* The latest release of [Steelhax](https://github.com/VegaRoXas/vegaroxas.github.io/raw/master/files/steelhax-installer.rar)
+* The latest release of [Frogtool](https://github.com/zoogie/Frogtool/releases/latest)
+* The latest release of [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
+* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(the `.7z` file)*
+* The [otherapp payload](https://smealum.github.io/3ds/#otherapp) *(for your region and version)*
+
+### Instructions
+
+#### Section I - Prep Work
+
+1. 기기를 종료해 주세요.
+1. SD 카드를 컴퓨터에 삽입해 주세요.
+1. Create a folder named `3ds` on the root of your SD card if it does not already exist
+1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card
+1. Copy `boot.nds` (B9STool) to the root of your SD card
+1. Copy `boot.3dsx` to the root of your SD card
+1. Copy the `steelhax` folder from the Steelhax `.rar` to the root of your SD card
+1. Copy the otherapp payload to the `steelhax` folder on your SD card and rename it to `payload.bin`
+1. Copy `Frogtool.3dsx` from the Frogtool `.zip` to the `/3ds/` folder on your SD card
+1. Copy the `private` folder from the Frogtool `.zip` to the root of your SD card
+1. Navigate to the `Nintendo 3DS` folder on your SD card
+1. Copy the 32 character long name of the folder you see
+  + If you see multiple folders like this, perform the following:
+  + Rename the `Nintendo 3DS` folder to `BACKUP_Nintendo 3DS`
+  + Reinsert your SD card into your device and power on your device
+  + Wait for the device to generate the SD card data
+  + Power off your device and reinsert your SD card into your computer
+  + Navigate to the `Nintendo 3DS` folder on your SD card
+  + Copy the 32 character long name of the folder you see
+  + Delete the `Nintendo 3DS` folder
+  + Rename the `BACKUP_Nintendo 3DS` folder to `Nintendo 3DS`
+1. Paste your 32 character long folder name into a document you can reference later
+  + This folder name is also known as your "ID0"
+1. SD 카드를 기기에 다시 삽입해 주세요.
+1. 기기를 시작해 주세요.
+1. Go to your Friend List (the [orange Face Icon]({{ "/images/friend-list-icon.png" | absolute_url }}) in the top row of your Home Menu)
+  + If you receive an error and are kicked out of the menu, you either must create a new Mii or your console cannot connect to Nintendo's servers (due to a ban or connection issues)
+1. Find your Mii profile, then find the "Friend Code" field on the top screen
+
+#### Section II - Seedminer
+
+1. Open [Bruteforce Movable](https://bruteforcemovable.com/) on your computer
+  + This site can automate the retrieval of `movable_part1.sed` (using a bot 3DS console) and the breaking of your device's DSiWare encryption (using a volunteer's computer to run Seedminer)
+  + If you already have access to a 3DS capable of launching the Homebrew Launcher, you can manually retrieve your `movable_part1.sed` using that device by following [these](https://jisagi.github.io/SeedminerGuide/seedminerSelf/#section1) instructions
+  + If you already have access to a PC with a powerful graphics card, you can manually calculate your `movable.sed` using it by following [these](https://jisagi.github.io/SeedminerGuide/seedminerSelf/#section2) instructions
+  + If the automated service is nonfunctional and you cannot do one or both of those manually, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you
+1. Enter your device's Friend Code (with no spaces or dashes) into the "Your friend code" field
+1. Paste your device's 32 character long folder name into the "Your ID0" field
+1. Complete the "I'm not a robot" captcha
+1. Select "Go"
+1. When prompted, use the "Register Friend" button on your device to add the friend code of the bot 3DS console
+1. Wait for the site to update
+  + If it does not, refresh the page
+1. Select "Continue"
+1. Wait for the process to complete
+  + This can take a while (up to an hour in some cases)
+  + If you are still waiting after an hour, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you
+1. When the process has completed, download your `movable.sed` file from the site
+
+#### Section III - Steelminer
+
+1. Launch "Steel Diver: Sub Wars" once and select a Mii to initialize your save file
+  + Decline the game update when prompted
+  + If you have already updated the game, use the Data Management menu of the System Settings to delete the update
+1. Exit "Steel Diver: Sub Wars"
+1. 기기를 종료해 주세요.
+1. SD 카드를 컴퓨터에 삽입해 주세요.
+1. Open [the Steelminer website](http://steelminer.jisagi.net/#Section_III) on your computer
+1. Select your `movable.sed` file
+1. Select "Start!"
+1. Wait for the process to complete
+1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<32-character-id>` -> `title` -> `00040000` -> `<8-character-region>` -> `data` on your SD card
+  + **EUR Region**: `000d7d00`
+  + **JPN Region**: `000d7e00`
+  + **USA Region**: `000d7c00`
+1. Copy the new downloaded save file to the `data` folder on your SD card
+  + Overwrite the old save file when prompted
+1. SD 카드를 기기에 다시 삽입해 주세요.
+1. 기기를 시작해 주세요.
+
+#### Section IV - Frogminer
+
+1. Launch "Steel Diver: Sub Wars"
+1. If the exploit was successful, your device will have loaded the Homebrew Launcher
+1. Launch Frogtool from the list of homebrew
+1. Select the "EXPORT clean DS Download Play" option
+1. Press (Start) to exit Frogtool
+1. 기기를 종료해 주세요.
+1. SD 카드를 컴퓨터에 삽입해 주세요.
+1. Copy `484E4441.bin` from the root of your SD card to your computer
+1. Open [the Frogminer website](https://jenkins.nelthorya.net/job/DSIHaxInjector/build)
+1. Select a username for the "Username" field
+1. Select your console's region for the "Region" field
+1. Select `484E4441.bin` for the "DsiBin" field
+1. Select your `movable.sed` for the "MovableSed" field
+1. Leave the email field blank
+1. Select "Build"
+1. Wait for the process to complete
+1. Search for your username in the "Build History" section of the page
+1. Download the `484E4441.bin.patched_<your-username>` file
+  + If the username does not match the one you input earlier, the file is incorrect and will not work on your device
+1. Copy `484E4441.bin.patched_<your-username>` to the root of your SD card and rename it to `484E4441.bin.patched`
+1. SD 카드를 기기에 다시 삽입해 주세요.
+1. 기기를 시작해 주세요.
+
+#### Section V - Flashing FIRM
+
+1. Launch "Steel Diver: Sub Wars"
+1. If the exploit was successful, your device will have loaded the Homebrew Launcher
+1. Launch Frogtool from the list of homebrew
+1. Select the "IMPORT patched DS Download Play" option
+1. Tap the touch-screen to continue
+1. Select the "BOOT patched DS Download Play" option
+1. If the exploit was successful, your device will have loaded the JPN version of Flipnote Studio
+1. Complete the initial setup process for the launched game until you reach the main menu
+  + Select the left option whenever prompted during the setup process
+1. Using the touch-screen, select the large left box, then select the box with an SD card icon
+1. Once the menu loads, select the face icon, then the bottom right icon to continue
+1. Select the frog icon at the bottom left, then select the second button along the top with a film-reel icon
+1. Scroll right until reel "3/3" is selected
+1. Tap the third box with the letter "A" in it
+1. Scroll left until reel "1/3" is selected
+1. Tap the forth box with the letter "A" in it
+1. If the exploit was successful, your device will have loaded b9sTool
+1. Select "Install boot9strap" and confirm
+1. Exit b9sTool, then power off your device
+  + You may have to force power off by holding the power button
+
+#### Section VI - Configuring Luma3DS
+
+1. Boot your device while holding (Select) to launch the Luma configuration menu
+  + If you encounter issues launching the Luma configuration menu, [follow this troubleshooting guide](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)
+1. Use the (A) button and the D-Pad to turn on the following:
+  + **"Show NAND or user string in System Settings"**
+1. (start)를 눌러 저장하고 기기를 다시 시작해 주세요.
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
+
+___
+
+### Continue to [Finalizing Setup](finalizing-setup)
+{: .notice--primary}
