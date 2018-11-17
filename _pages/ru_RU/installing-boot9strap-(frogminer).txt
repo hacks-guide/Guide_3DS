@@ -1,0 +1,170 @@
+---
+title: "Installing boot9strap (Frogminer)"
+---
+
+{% include toc title="Содержание" %}
+
+### Обязательно к прочтению
+
+Чтобы установить boot9strap на консоль с прошивкой 11.8.0, мы используем уязвимость в ограничениях безопасности для приложений "DSiWare".
+
+Для достижения этой цели, мы используем инструмент под названием Seedminer, чтобы вычислить ключ шифрования DSiWare (`movable.sed`) вашей консоли.
+
+Затем мы используем этот ключ шифрования DSiWare, чтобы расшифровать совместимое DSiWare приложение и внедрить в него эксплойт для запуска нашего собственного кода.
+
+Если бы этот ключ был полностью случайным, то его было бы невозможно взломать при помощи современных компьютеров. К счастью, первая половина ключа (`movable_part1.sed`) на самом деле математически связана с Кодом друга консоли, что позволяет нам взломать шифрование. Для получения информации о том, как работает Seedminer, пожалуйста, посмотрите [эту презентацию](https://zoogie.github.io/web/34⅕c3).
+
+Обратите внимание, что этот инструмент требует наличия ПК с мощной видеокартой для взлома шифрования DSiWare вашей консоли. Если у вас нет доступа к такому компьютеру, существует несколько онлайн сервисов взаимопомощи, где волонтеры и автоматическое ПО могут сделать это за вас.
+
+Для использования [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme)-ссылок в этом руководстве необходим torrent-клиент, например [Deluge](http://dev.deluge-torrent.org/wiki/Download).
+
+To extract the `.7z` and `.rar` files linked on this page, you will need a file archiver like [7-Zip](http://www.7-zip.org/) or [The Unarchiver](https://theunarchiver.com/).
+
+Этот процесс перезапишет сохранение вашей DSiWare игры!
+{: .notice--warning}
+
+### Что понадобится
+
+* The free DSiWare game "Steel Diver: Sub Wars" from the eShop
+* Свежая версия [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
+* The latest release of [Steelhax](https://github.com/VegaRoXas/vegaroxas.github.io/raw/master/files/steelhax-installer.rar)
+* The latest release of [Frogtool](https://github.com/zoogie/Frogtool/releases/latest)
+* Свежая версия [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
+* Свежая версия [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z-архив`)*
+* [Otherapp payload](https://smealum.github.io/3ds/#otherapp) *(для вашего региона и версии прошивки)*
+
+### Инструкция
+
+#### Часть I - Подготовительные работы
+
+1. Выключите консоль
+1. Вставьте SD-карту в компьютер
+1. Создайте папку `3ds` в корне SD-карты, если таковой нет
+1. Скопируйте файл `boot.firm` из `.7z-архива` Luma3DS в корень SD-карты
+1. Скопируйте `boot.nds` (B9STool) в корень SD-карты
+1. Скопируйте `boot.3dsx` в корень SD-карты
+1. Copy the `steelhax` folder from the Steelhax `.rar` to the root of your SD card
+1. Copy the otherapp payload to the `steelhax` folder on your SD card and rename it to `payload.bin`
+1. Copy `Frogtool.3dsx` from the Frogtool `.zip` to the `/3ds/` folder on your SD card
+1. Copy the `private` folder from the Frogtool `.zip` to the root of your SD card
+1. Перейдите в папку `Nintendo 3DS` на SD-карте
+1. Скопируйте имя папки из 32 символов, которую вы видите
+  + Если вы видите несколько таких папок, выполните следующие действия:
+  + Переименуйте папку `Nintendo 3DS` в `BACKUP_Nintendo 3DS`
+  + Вставьте SD-карту обратно в консоль и включите консоль
+  + Подождите пока консоль не создаст данные на SD-карте
+  + Выключите консоль и вставьте SD-карту обратно в компьютер
+  + Перейдите в папку `Nintendo 3DS` на SD-карте
+  + Скопируйте имя папки из 32 символов, которую вы видите
+  + Удалите папку `Nintendo 3DS`
+  + Переименуйте папку `BACKUP_Nintendo 3DS` в `Nintendo 3DS`
+1. Вставьте имя папки из 32 символов в документ, к которому вы сможете обратиться позже
+  + Имя этой папки также известно как ваш "ID0"
+1. Вставьте SD-карту обратно в консоль
+1. Включите консоль
+1. Откройте Список друзей ([оранжевый значок в виде лица]({{ "/images/friend-list-icon.png" | absolute_url }}) на верхней строчке меню HOME)
+  + Если появляется ошибка и вас не пускают в меню, значит вам нужно либо создать новый Mii, либо консоль не может подключиться к серверам Nintendo (по причине бана или проблем с соединением)
+1. Найдите свой профиль Mii, затем найдите поле "Код друга" на верхнем экране
+
+#### Часть II - Seedminer
+
+1. Перейдите по ссылке [Bruteforce Movable](https://bruteforcemovable.com/) на компьютере
+  + Этот сайт может автоматизировать процесс получения `movable_part1.sed` (при помощи консоли-бота 3DS) и процесс взлома шифрования DSiWare вашей консоли (используя компьютер волонтера для запуска Seedminer)
+  + Если у вас уже есть доступ к консоли 3DS, способной запускать Homebrew Launcher, вы можете вручную получить свой `movable_part1.sed`, используя эту консоль и следуя [этим](https://jisagi.github.io/SeedminerGuide/seedminerSelf/#section1) инструкциям (англ.)
+  + Если у вас уже есть доступ к ПК с мощной видеокартой, вы можете вручную вычислить свой `movable.sed`, используя этот компьютер и следуя [этим](https://jisagi.github.io/SeedminerGuide/seedminerSelf/#section2) инструкциям (англ.)
+  + Если автоматизированный сервис не функционирует, и вы не можете выполнить одно или оба этих действия вручную, обратитесь на сервер [Nintendo Homebrew в Discord](https://discord.gg/MWxPgEp) и попросите (на английском языке) кого-нибудь вам помочь
+1. Введите Код друга вашей консоли (без пробелов или тире) в поле "Your friend code"
+1. Вставьте имя папки из 32 символов в поле "Your ID0"
+1. Заполните captcha "Я не робот"
+1. Выберите "Go"
+1. При появлении запроса, используйте кнопку "Регистрация друга" на консоли, чтобы добавить код друга консоли-бота 3DS
+1. Дождитесь обновления страницы
+  + Если этого не происходит, обновите страницу самостоятельно
+1. Выберите "Continue"
+1. Дождитесь окончания процесса
+  + Это может занять некоторое время (вплоть до часа в некоторых случаях)
+  + Если вы все еще в ожидании по прошествии часа, обратитесь на сервер [Nintendo Homebrew в Discord](https://discord.gg/MWxPgEp) и попросите (на английском языке) кого-нибудь вам помочь
+1. После окончания процесса скачайте с сайта свой файл `movable.sed`
+
+#### Section III - Steelminer
+
+1. Launch "Steel Diver: Sub Wars" once and select a Mii to initialize your save file
+  + Decline the game update when prompted
+  + If you have already updated the game, use the Data Management menu of the System Settings to delete the update
+1. Exit "Steel Diver: Sub Wars"
+1. Выключите консоль
+1. Вставьте SD-карту в компьютер
+1. Open [the Steelminer website](http://steelminer.jisagi.net/#Section_III) on your computer
+1. Select your `movable.sed` file
+1. Выберите "Start!"
+1. Дождитесь окончания процесса
+1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<32-character-id>` -> `title` -> `00040000` -> `<8-character-region>` -> `data` on your SD card
+  + **EUR Region**: `000d7d00`
+  + **JPN Region**: `000d7e00`
+  + **USA Region**: `000d7c00`
+1. Copy the new downloaded save file to the `data` folder on your SD card
+  + Overwrite the old save file when prompted
+1. Вставьте SD-карту обратно в консоль
+1. Включите консоль
+
+#### Section IV - Frogminer
+
+1. Launch "Steel Diver: Sub Wars"
+1. Если эксплойт сработал корректно, запустится Homebrew Launcher
+1. Launch Frogtool from the list of homebrew
+1. Select the "EXPORT clean DS Download Play" option
+1. Press (Start) to exit Frogtool
+1. Выключите консоль
+1. Вставьте SD-карту в компьютер
+1. Copy `484E4441.bin` from the root of your SD card to your computer
+1. Open [the Frogminer website](https://jenkins.nelthorya.net/job/DSIHaxInjector/build)
+1. Select a username for the "Username" field
+1. Select your console's region for the "Region" field
+1. Select `484E4441.bin` for the "DsiBin" field
+1. Select your `movable.sed` for the "MovableSed" field
+1. Leave the email field blank
+1. Select "Build"
+1. Дождитесь окончания процесса
+1. Search for your username in the "Build History" section of the page
+1. Download the `484E4441.bin.patched_<your-username>` file
+  + If the username does not match the one you input earlier, the file is incorrect and will not work on your device
+1. Copy `484E4441.bin.patched_<your-username>` to the root of your SD card and rename it to `484E4441.bin.patched`
+1. Вставьте SD-карту обратно в консоль
+1. Включите консоль
+
+#### Section V - Flashing FIRM
+
+1. Launch "Steel Diver: Sub Wars"
+1. Если эксплойт сработал корректно, запустится Homebrew Launcher
+1. Launch Frogtool from the list of homebrew
+1. Select the "IMPORT patched DS Download Play" option
+1. Tap the touch-screen to continue
+1. Select the "BOOT patched DS Download Play" option
+1. If the exploit was successful, your device will have loaded the JPN version of Flipnote Studio
+1. Complete the initial setup process for the launched game until you reach the main menu
+  + Select the left option whenever prompted during the setup process
+1. Using the touch-screen, select the large left box, then select the box with an SD card icon
+1. Once the menu loads, select the face icon, then the bottom right icon to continue
+1. Select the frog icon at the bottom left, then select the second button along the top with a film-reel icon
+1. Scroll right until reel "3/3" is selected
+1. Tap the third box with the letter "A" in it
+1. Scroll left until reel "1/3" is selected
+1. Tap the forth box with the letter "A" in it
+1. If the exploit was successful, your device will have loaded b9sTool
+1. Выберите "Install boot9strap" и подтвердите выбор
+1. Закройте b9sTool, затем выключите консоль
+  + При необходимости выключите консоль принудительно, удерживая кнопку питания
+
+#### Часть VI - Настройка Luma3DS
+
+1. Включите консоль кнопкой питания, держа нажатой кнопку (Select), чтобы попасть в меню настроек Luma
+  + Если вы не можете попасть в меню настроек Luma, [следуйте этим инструкциям](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md) (англ.)
+1. Нажимая (A) выберите следующие пункты:
+  + **"Show NAND or user string in System Settings"**
+1. Нажмите (Start), чтобы сохранить настройки и перезагрузиться
+  + Если экран остаётся чёрным, обратитесь к разделу [Проблемы и их решения](troubleshooting#черный-экран-при-загрузке-sysnand-после-установки-boot9strap)
+
+___
+
+### Следующий шаг: [Завершение установки](finalizing-setup)
+{: .notice--primary}
