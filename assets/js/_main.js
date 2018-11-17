@@ -128,17 +128,18 @@ $(document).ready(function(){
     "installing-boot9strap-(browser)": "2",
     "homebrew-launcher-(soundhax)": "3",
     "homebrew-launcher-(alternatives)": "4",
-    "installing-boot9strap-(dsiware-game-injection)": "6",
-    "installing-boot9strap-(dsiware-save-injection)": "7",
-    "installing-boot9strap-(soundhax)": "8",
-    "ntrboot": "9",
-    "flashing-ntrboot-(3ds-single-system)": "10",
-    "flashing-ntrboot-(3ds-multi-system)": "11",
-    "flashing-ntrboot-(dsi)": "12",
-    "flashing-ntrboot-(nds)": "13",
-    "flashing-ntrboot-(powersaves)": "14",
-    "installing-boot9strap-(hardmod)": "15",
-    "installing-boot9strap-(seedminer)": "16",
+    "installing-boot9strap-(dsiware-game-injection)": "5",
+    "installing-boot9strap-(dsiware-save-injection)": "6",
+    "installing-boot9strap-(soundhax)": "7",
+    "ntrboot": "8",
+    "flashing-ntrboot-(3ds-single-system)": "9",
+    "flashing-ntrboot-(3ds-multi-system)": "10",
+    "flashing-ntrboot-(dsi)": "11",
+    "flashing-ntrboot-(nds)": "12",
+    "flashing-ntrboot-(powersaves)": "13",
+    "installing-boot9strap-(hardmod)": "14",
+    "installing-boot9strap-(seedminer)": "15",
+    "installing-boot9strap-(frogminer)": "16",
   };
 
   for(var method in methods){
@@ -171,6 +172,7 @@ $(document).ready(function(){
       "13": ["ntrboot", "flashing-ntrboot-(powersaves)", "installing-boot9strap-(ntrboot)", "finalizing-setup"],
       "14": ["installing-boot9strap-(hardmod)", "finalizing-setup"],
       "15": ["installing-boot9strap-(seedminer)", "finalizing-setup"],
+      "16": ["installing-boot9strap-(frogminer)", "finalizing-setup"],
     };
     unhide = unhide.concat(route[method]);
     if(typeof unhide !== 'undefined' && unhide.length > 0){
