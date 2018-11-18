@@ -43,10 +43,10 @@ Para extraer los archivos `.7z` y `.rar` enlazados esta página, necesitarás un
 1. Copia el archivo `boot.firm` desde el `.7z` de Luma3DS a la raíz de tu tarjeta SD
 1. Copia `boot.nds` (B9STool) a la raíz de tu tarjeta SD
 1. Copia `boot.3dsx` a la raíz de tu tarjeta SD
-1. Copy the `steelhax` folder from the Steelhax `.rar` to the root of your SD card
-1. Copy the otherapp payload to the `steelhax` folder on your SD card and rename it to `payload.bin`
-1. Copy `Frogtool.3dsx` from the Frogtool `.zip` to the `/3ds/` folder on your SD card
-1. Copy the `private` folder from the Frogtool `.zip` to the root of your SD card
+1. Copia la carpeta `steelhax` contenida en el `.rar` de Steelhax a la raíz de tu tarjeta SD
+1. Copia el otherapp payload a la carpeta `steelhax` en tu tarjeta SD y cambia su nombre a `payload.bin`
+1. Copia `Frogtool.3dsx` contenido en el `.zip` de FrogTool a la carpeta `/3ds/` en tu tarjeta SD
+1. Copia la carpeta `private` contenida en el `.zip` de FrogTool a la raíz de tu tarjeta SD
 1. Ve a la carpeta `Nintendo 3DS` en tu tarjeta SD
 1. Copia el nombre de 32 caracteres que posee la carpeta que hay dentro
   + Si hay más de una carpeta, haz lo siguiente:
@@ -86,62 +86,62 @@ Para extraer los archivos `.7z` y `.rar` enlazados esta página, necesitarás un
   + Si todavía estás esperando luego de una hora, únete al [Discord de Nintendo Homebrew](https://discord.gg/MWxPgEp) (en inglés) y pide ayuda a alguien de allí
 1. Cuando el proceso haya finalizado, descarga tu archivo `movable.sed` desde el sitio
 
-#### Section III - Steelminer
+#### Sección III - Steelminer
 
-1. Launch "Steel Diver: Sub Wars" once and select a Mii to initialize your save file
-  + Decline the game update when prompted
-  + If you have already updated the game, use the Data Management menu of the System Settings to delete the update
-1. Exit "Steel Diver: Sub Wars"
+1. Inicia "Steel Diver: Sub Wars" y selecciona un Mii para crear un archivo de guardado
+  + Rechaza la actualización del juego cuando lo pregunte
+  + Si ya has actualizado el juego, usa el menú de Gestión de datos en la Configuración de la consola para eliminar la actualización
+1. Sal de "Steel Diver: Sub Wars"
 1. Apaga tu consola
 1. Inserta tu tarjeta SD en tu computadora
-1. Open [the Steelminer website](http://steelminer.jisagi.net/#Section_III) on your computer
-1. Select your `movable.sed` file
+1. Abre [el sitio web de Steelminer](http://steelminer.jisagi.net/#Section_III) en tu computadora
+1. Selecciona tu archivo `movable.sed`
 1. Selecciona "Start!"
 1. Espera a que el procesos se complete
-1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<32-character-id>` -> `title` -> `00040000` -> `<8-character-region>` -> `data` on your SD card
-  + **EUR Region**: `000d7d00`
-  + **JPN Region**: `000d7e00`
-  + **USA Region**: `000d7c00`
-1. Copy the new downloaded save file to the `data` folder on your SD card
-  + Overwrite the old save file when prompted
+1. Ve a `Nintendo 3DS` -> `<ID0>` -> `<id-de-32-caracteres>` -> `title` -> `00040000` -> `<región-de-8-caracteres>` -> `data` en tu tarjeta SD
+  + **Región EUR**: `000d7d00`
+  + **Región JPN**: `000d7e00`
+  + **Región USA**: `000d7c00`
+1. Copia el nuevo archivo de guardado que descargaste en la carpeta `data` en tu tarjeta SD
+  + Sobreescribe el archivo anterior cuando te lo pida
 1. Vuelve a insertar tu tarjeta SD en tu consola
 1. Enciende tu consola
 
-#### Section IV - Frogminer
+#### Sección IV - Frogminer
 
-1. Launch "Steel Diver: Sub Wars"
+1. Inicia "Steel Diver: Sub Wars"
 1. Si el exploit fue exitoso, tu consola habrá cargado el Hombrew Launcher
-1. Launch Frogtool from the list of homebrew
-1. Select the "EXPORT clean DS Download Play" option
-1. Press (Start) to exit Frogtool
+1. Inicia Frogtool desde la lista de homebrew
+1. Selecciona la opción "EXPORT clean DS Download Play"
+1. Presiona (Start) para salir de Frogtool
 1. Apaga tu consola
 1. Inserta tu tarjeta SD en tu computadora
-1. Copy `484E4441.bin` from the root of your SD card to your computer
-1. Open [the Frogminer website](https://jenkins.nelthorya.net/job/DSIHaxInjector/build)
-1. Select a username for the "Username" field
-1. Select your console's region for the "Region" field
-1. Select `484E4441.bin` for the "DsiBin" field
-1. Select your `movable.sed` for the "MovableSed" field
-1. Leave the email field blank
-1. Select "Build"
+1. Copia el archivo `484E4441.bin`desde la raíz de tu tarjeta SD a tu computadora
+1. Abre [el sitio web de Frogminer](https://jenkins.nelthorya.net/job/DSIHaxInjector/build)
+1. Elige un nombre de usuario para el campo "Username"
+1. Selecciona la región de tu consola en el campo "Region"
+1. Elige el archivo `484E4441.bin` en tu computadora en el campo "DsiBin"
+1. Selecciona tu archivo `movable.sed` en el campo "MovableSed"
+1. Deja en blanco el campo de correo electrónico
+1. Selecciona "Build"
 1. Espera a que el procesos se complete
-1. Search for your username in the "Build History" section of the page
-1. Download the `484E4441.bin.patched_<your-username>` file
-  + If the username does not match the one you input earlier, the file is incorrect and will not work on your device
-1. Copy `484E4441.bin.patched_<your-username>` to the root of your SD card and rename it to `484E4441.bin.patched`
+1. Busca tu nombre de usuario en la sección "Build History" de la página
+1. Descarga el archivo `484E4441.bin.patched_<tu-nombre-de-usuario>`
+  + Si el nombre de usuario no coincide con el que has puesto antes, el archivo no es el correcto y no funcionará en tu consola
+1. Copia `484E4441.bin.patched_<tu-nombre-de-usuario>` a la raíz de tu tarjeta SD y renómbralo a `484E4441.bin.patched`
 1. Vuelve a insertar tu tarjeta SD en tu consola
 1. Enciende tu consola
 
-#### Section V - Flashing FIRM
+#### Sección V - Flashear FIRM
 
-1. Launch "Steel Diver: Sub Wars"
+1. Inicia "Steel Diver: Sub Wars"
 1. Si el exploit fue exitoso, tu consola habrá cargado el Hombrew Launcher
-1. Launch Frogtool from the list of homebrew
-1. Select the "IMPORT patched DS Download Play" option
-1. Tap the touch-screen to continue
-1. Select the "BOOT patched DS Download Play" option
-1. If the exploit was successful, your device will have loaded the JPN version of Flipnote Studio
-1. Complete the initial setup process for the launched game until you reach the main menu
+1. Inicia Frogtool desde la lista de homebrew
+1. Selecciona la opción "IMPORT patched DS Download Play"
+1. Toca la pantalla táctil para continuar
+1. Selecciona la opción "BOOT patched DS Download Play"
+1. Si el exploit fue exitoso, tu consola habrá cargado la versión japonesa de Flipnote Studio
+1. Completa el proceso de setup inicial del juego hasta que llegues al menú principal
   + Select the left option whenever prompted during the setup process
 1. Using the touch-screen, select the large left box, then select the box with an SD card icon
 1. Once the menu loads, select the face icon, then the bottom right icon to continue
