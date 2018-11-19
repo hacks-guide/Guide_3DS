@@ -1,5 +1,5 @@
 ---
-title: "Installing boot9strap (Frogminer)"
+title: "Установка boot9strap (Frogminer)"
 ---
 
 {% include toc title="Содержание" %}
@@ -18,17 +18,17 @@ title: "Installing boot9strap (Frogminer)"
 
 Для использования [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme)-ссылок в этом руководстве необходим torrent-клиент, например [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
-To extract the `.7z` and `.rar` files linked on this page, you will need a file archiver like [7-Zip](http://www.7-zip.org/) or [The Unarchiver](https://theunarchiver.com/).
+Чтобы распаковать архивы `.7z` и `.rar`, присутствующие на этой странице, вам понадобится архиватор [7-Zip](http://www.7-zip.org/) или [The Unarchiver](https://theunarchiver.com/).
 
 Этот процесс перезапишет сохранение вашей DSiWare игры!
 {: .notice--warning}
 
 ### Что понадобится
 
-* The free DSiWare game "Steel Diver: Sub Wars" from the eShop
+* Бесплатная DSiWare игра "Steel Diver: Sub Wars" из eShop
 * Свежая версия [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
-* The latest release of [Steelhax](https://github.com/VegaRoXas/vegaroxas.github.io/raw/master/files/steelhax-installer.rar)
-* The latest release of [Frogtool](https://github.com/zoogie/Frogtool/releases/latest)
+* Свежая версия [Steelhax](https://github.com/VegaRoXas/vegaroxas.github.io/raw/master/files/steelhax-installer.rar)
+* Свежая версия [Frogtool](https://github.com/zoogie/Frogtool/releases/latest)
 * Свежая версия [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
 * Свежая версия [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z-архив`)*
 * [Otherapp payload](https://smealum.github.io/3ds/#otherapp) *(для вашего региона и версии прошивки)*
@@ -43,10 +43,10 @@ To extract the `.7z` and `.rar` files linked on this page, you will need a file 
 1. Скопируйте файл `boot.firm` из `.7z-архива` Luma3DS в корень SD-карты
 1. Скопируйте `boot.nds` (B9STool) в корень SD-карты
 1. Скопируйте `boot.3dsx` в корень SD-карты
-1. Copy the `steelhax` folder from the Steelhax `.rar` to the root of your SD card
-1. Copy the otherapp payload to the `steelhax` folder on your SD card and rename it to `payload.bin`
-1. Copy `Frogtool.3dsx` from the Frogtool `.zip` to the `/3ds/` folder on your SD card
-1. Copy the `private` folder from the Frogtool `.zip` to the root of your SD card
+1. Скопируйте папку `steelhax` из `.rar-архива` Steelhax в корень SD-карты
+1. Скопируйте otherapp payload в папку `steelhax` на SD-карте и переименуйте его в `payload.bin`
+1. Скопируйте `Frogtool.3dsx` из `.zip-архива` Frogtool в папку `/3ds/` на SD-карте
+1. Скопируйте папку `private` из `.zip-архива` Frogtool в корень SD-карты
 1. Перейдите в папку `Nintendo 3DS` на SD-карте
 1. Скопируйте имя папки из 32 символов, которую вы видите
   + Если вы видите несколько таких папок, выполните следующие действия:
@@ -86,24 +86,24 @@ To extract the `.7z` and `.rar` files linked on this page, you will need a file 
   + Если вы все еще в ожидании по прошествии часа, обратитесь на сервер [Nintendo Homebrew в Discord](https://discord.gg/MWxPgEp) и попросите (на английском языке) кого-нибудь вам помочь
 1. После окончания процесса скачайте с сайта свой файл `movable.sed`
 
-#### Section III - Steelminer
+#### Часть III - Steelminer
 
-1. Launch "Steel Diver: Sub Wars" once and select a Mii to initialize your save file
-  + Decline the game update when prompted
-  + If you have already updated the game, use the Data Management menu of the System Settings to delete the update
-1. Exit "Steel Diver: Sub Wars"
+1. Запустите "Steel Diver: Sub Wars" один раз и выберите Mii, чтобы инициализировать сохранение
+  + Откажитесь от обновления игры при появлении запроса
+  + Если вы уже обновили игру, используйте меню Управление данными в Системных настройках, чтобы удалить обновление
+1. Выйдите из "Steel Diver: Sub Wars"
 1. Выключите консоль
 1. Вставьте SD-карту в компьютер
-1. Open [the Steelminer website](http://steelminer.jisagi.net/#Section_III) on your computer
-1. Select your `movable.sed` file
+1. Перейдите по ссылке [Steelminer](http://steelminer.jisagi.net/#Section_III) на компьютере
+1. Выберите свой файл `movable.sed`
 1. Выберите "Start!"
 1. Дождитесь окончания процесса
-1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<32-character-id>` -> `title` -> `00040000` -> `<8-character-region>` -> `data` on your SD card
-  + **EUR Region**: `000d7e00`
-  + **JPN Region**: `000d7c00`
-  + **USA Region**: `000d7d00`
-1. Copy the new downloaded save file to the `data` folder on your SD card
-  + Overwrite the old save file when prompted
+1. Перейдите в папку `Nintendo 3DS` -> `<ID0>` -> `<32-значный-id>` -> `title` -> `00040000` -> `<8-значный-регион>` -> `data` на SD-карте
+  + **EUR регион**: `000d7e00`
+  + **JPN регион**: `000d7c00`
+  + **USA регион**: `000d7d00`
+1. Скопируйте свой новый скачанный файл сохранения в папку `data` на SD-карте
+  + Перезапишите старый файл сохранения при появлении запроса
 1. Вставьте SD-карту обратно в консоль
 1. Включите консоль
 
