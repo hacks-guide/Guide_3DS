@@ -10,7 +10,7 @@ A `boot.firm` nevezetű fájl az, amit maga a boot9strap elindít, amint betölt
 
 A mi esetünkben az [AuroraWright](https://github.com/AuroraWright/)-féle Luma3DS-t fogjuk használni, hogy közvetlenül bootolhassunk egy patchelt SysNAND-ot. Ez teljesen szükségtelenné teszi bármiféle EmuNAND használatát, nagy mértékben egyszerűsítve ezzel a hackelt 3DS-ek használatát, a megspórolt SD kártya területről nem is beszélve.
 
-Ezen folyamat közben további programokat is telepítünk, melyek az alábbiak:    
+Ezen folyamat közben további programokat is telepítünk, melyek az alábbiak:
 
 + **FBI** *(CIA formátumú játékokat és alkalmazásokat telepít)*
 + **Anemone3DS** *(egyedi témákat telepít)*
@@ -52,7 +52,7 @@ Ezen folyamat közben további programokat is telepítünk, melyek az alábbiak:
 
     ![]({{ "/images/screenshots/finalizing-setup-file-layout.png" | absolute_url }})
     {: .notice--info}
-    
+
     Vedd figyelembe, hogy attól függően, milyen módszerrel telepítetted a boot9strap-et, a készüléked SD kártyáján lehet, hogy nem szerepelnek a `soundhax-usa-n3ds.m4a`, az `otherapp.bin`, vagy a `safehaxpayload.bin` fájlok a fenti képernyőképről.
     {: .notice--info}
 
@@ -74,7 +74,7 @@ Amennyiben ezen leírás megkezdése előtt már rendelkeztél EmuNAND-dal, és 
 
 #### Harmadik rész - Homebrew Launcher
 
-1. Indítsd el a Download Play alkalmazást (ez az [ikon]({{ "/images/download-play-icon.png" | absolute_url }})
+1. Launch the Download Play application (this [icon]({{ "/images/download-play-icon.png" | absolute_url }}))
 1. Nyomd meg az (L) + (Le) + (Select) gombokat egyszerre, hogy a Rosalina menü megnyitásához
 1. Válaszd ki a "Miscellaneous options"-t
 1. Válaszd a "Switch the hb. title to the current app." opciót
@@ -156,29 +156,29 @@ Mostantól bármikor frissítheted a Luma3DS-t a Luma3DS frissítő (Luma3DS Upd
 
 Ennek semmi köze a rendszer frissítéséhez (System Update); ez mindössze letölti és kicsomagolja a legfrissebb Luma3DS fájlokat.
 
-Ez csak az SD kártyádon található Luma3DS fájlokat fogja frissíteni. Ha SD kártya nélkül indítod el a készülékedet, azt a verziót fogja használni, amit a CTRNAND-ba telepítettél.    
+Ez csak az SD kártyádon található Luma3DS fájlokat fogja frissíteni. Ha SD kártya nélkül indítod el a készülékedet, azt a verziót fogja használni, amit a CTRNAND-ba telepítettél.
 {% endcapture %}
 
 <div class="notice--info">{{ notice-10 | markdownify }}</div>
 
-{% capture notice-6 %}   
-Mostantól alapértelmezetten a Luma3DS CFW SysNAND fog bootolni.    
+{% capture notice-6 %}
+Mostantól alapértelmezetten a Luma3DS CFW SysNAND fog bootolni.
 
-Mostantól indításkor előhozhatod a Luma3DS konfigurációs menüjét a (Select) gomb lenyomva tartásával.    
+Mostantól indításkor előhozhatod a Luma3DS konfigurációs menüjét a (Select) gomb lenyomva tartásával.
 
-Mostantól megjelenítheted a Luma3DS chainloader menüjét indításkor a (Start) gomb lenyomva tartásával. (Vedd figyelembe, hogy a Luma3DS chainloader menü csak akkor jelenik meg, ha egynél több payload található.)    
+Mostantól megjelenítheted a Luma3DS chainloader menüjét indításkor a (Start) gomb lenyomva tartásával. (Vedd figyelembe, hogy a Luma3DS chainloader menü csak akkor jelenik meg, ha egynél több payload található.)
 
-Mostantól a (Start) + (Select) + (X) kombináció lenyomva tartásával indításkor az SD kártyád `/boot9strap/` mappájába mentheted az ARM11 bootromot (`boot11.bin`), az ARM9 bootromot (`boot9.bin`), és a konzolod egyedi OTP-jét (`OTP.bin`). (Vedd figyelembe, hogy ez nem kér be vagy ír ki semmiféle információt.)    
+Mostantól a (Start) + (Select) + (X) kombináció lenyomva tartásával indításkor az SD kártyád `/boot9strap/` mappájába mentheted az ARM11 bootromot (`boot11.bin`), az ARM9 bootromot (`boot9.bin`), és a konzolod egyedi OTP-jét (`OTP.bin`). (Vedd figyelembe, hogy ez nem kér be vagy ír ki semmiféle információt.)
 
 Mostantól lenyomhatod az (L) + (Le) + (Select) kombinációt a rendszer futása közben, hogy megnyíljon a Luma3DS-be integrált Rosalina menü. Ha a Rosalina összes funkciójára kíváncsi vagy, látogasd meg a következő oldalt: [Luma3DS v8.0 Release](https://github.com/AuroraWright/Luma3DS/releases/tag/v8.0)
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
 
-{% capture notice-6 %}   
-Ha szeretnél a későbbiekben nagyobb SD kártyát használni, mindössze annyit kell tenned, hogy az új SD kártyádat FAT32-re formázod, majd átmásolod a régi SD kártyád tartalmát az újra.    
+{% capture notice-6 %}
+Ha szeretnél a későbbiekben nagyobb SD kártyát használni, mindössze annyit kell tenned, hogy az új SD kártyádat FAT32-re formázod, majd átmásolod a régi SD kártyád tartalmát az újra.
 
-Ha az új SD kártyád nagyobb, mint 32 GB, más eszközre lesz szükséged a formázásához. Ilyen a [guiformat](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) Windows-on, a [gparted](http://gparted.org/download.php) Linuxon, illetve a [Lemezkezelő](https://support.apple.com/hu-hu/guide/disk-utility/format-a-disk-for-windows-computers-dskutl1010/mac) Mac-en.    
+Ha az új SD kártyád nagyobb, mint 32 GB, más eszközre lesz szükséged a formázásához. Ilyen a [guiformat](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) Windows-on, a [gparted](http://gparted.org/download.php) Linuxon, illetve a [Lemezkezelő](https://support.apple.com/hu-hu/guide/disk-utility/format-a-disk-for-windows-computers-dskutl1010/mac) Mac-en.
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
