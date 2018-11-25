@@ -1,149 +1,150 @@
 ---
-title: "Installing boot9strap (Seedminer)"
+title: "Instalând boot9strap (Seedminer)"
 ---
 
 {% include toc title="Cuprins" %}
 
 ### Lectură obligatorie
 
-To install boot9strap on your 11.8.0 device, we exploit an oversight in the security restrictions applied to "DSiWare" applications.
+Pentru a instala boot9strap pe dispozitivul dumneavoastră cu 11.8.0, putem exploata o neglijare în restricţiile de securitate aplicate aplicațiilor.
 
-To accomplish this, we use a tool called Seedminer to calculate the DSiWare encryption key (`movable.sed`) for your device.
+Pentru a realiza acest lucru, vom folosi o unealtă numită Seedminer pentru a calcula cheia de criptare DSiWare (`movable.sed`) pentru dispozitivul dumneavoastră.
 
-We then use this DSiWare encryption key to decrypt a compatible DSiWare application and inject an exploit into it to run our own code.
+Folosim apoi această cheie de criptare DSiWare pentru a decripta o aplicaţie compatibilă DSiWare şi injecta un exploit în el pentru a rula propriul nostru cod.
 
-If this key were completely random, the encryption key would be impossible to break on current computing hardware. Fortunately, the first half of the key (`movable_part1.sed`) is actually mathematically related to your device's Friend Code, allowing us to break the encryption. For information on how Seedminer works, please see [this presentation](https://zoogie.github.io/web/34⅕c3).
+În cazul în care această cheie ar fi complet întâmplătoare, cheia de criptare ar fi imposibil de decriptat pe hardware-ul de computare existent în prezent. Din fericire, prima jumătate a cheii (`movable_part1.sed`) este de fapt matematic asociată cu Friend Code-ul dispozitivului dumneavoastră, permițând descifrarea criptării. Pentru informaţii despre cum funcţionează Seedminer, vă rugăm să consultaţi [această prezentare](https://zoogie.github.io/web/34⅕c3).
 
-Note that this tool requires a PC with a powerful graphics card to break your device's DSiWare encryption. If you do not have access to one of these, there exists several online helper services where a volunteer running automated software will do this for you.
+Țineți cont că această unealtă necesită un calculator cu o placă video puternică pentru a descifra criptarea DSiWare a dispozitivului. Dacă nu aveţi acces la una dintre acestea, există mai multe servicii online de ajutor unde un voluntar care rulează software-ul automat va face asta pentru dumneavoastră.
 
 Pentru a folosi linkurile [magnetice](https://wikipedia.org/wiki/Magnet_URI_scheme) de pe această pagină, veți avea nevoie de un client de torrente ca [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
 Pentru a extrage fişierele `.7z` de pe această pagină, veţi avea nevoie de un arhivator de fişiere ca [7-Zip](http://www.7-zip.org/) sau [The Unarchiver] (https://theunarchiver.com/).
 
-This process will overwrite your DSiWare game's save file!
+Acest proces va suprascrie fișierul de salvare a jocului DSiWare!
 {: .notice--warning}
 
 ### Ce aveți nevoie
 
-* Purchase from the eShop (or already own) a compatible DSiWare game
+* Cumpărați de la eShop (sau deja obțineți) un joc compatibil DSiWare
   + Pentru o listă de jocuri compatibile, vedeți pagina [Instalând boot9strap (Lista de jocuri DSiWare pentru injectare)](installing-boot9strap-(dsiware-game-injection-list))
-  + Note that you must be on the latest version (currently 11.8.0) in order to purchase games from the eShop
-* <i class="fa fa-magnet" aria-hidden="true" title="Acesta este un link magnetic. Use a torrent client to download the file."></i> - [ctcert.bin](magnet:?xt=urn:btih:ec445a7aae6fd62432c9ccee091919bda41c8283&dn=ctcert.bin&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce)
-* The DSiWare exploit injection `.zip` corresponding to your region:
-  + JPN region users who wish to use the free DSiWare game ほぼ日の健康手帳™ should download `USA.zip` instead of `JPN.zip`
-  * <i class="fa fa-magnet" aria-hidden="true" title="Acesta este un link magnetic. Use a torrent client to download the file."></i> - [USA.zip](magnet:?xt=urn:btih:ead76f1e382cad15efaf1ba87c702f7b4c16d6e0&dn=USA.zip&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce)
-  * <i class="fa fa-magnet" aria-hidden="true" title="Acesta este un link magnetic. Use a torrent client to download the file."></i> - [EUR.zip](magnet:?xt=urn:btih:fe5be30f2a2c33e5e350e099804840560cbb6626&dn=EUR.zip&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce)
-  * <i class="fa fa-magnet" aria-hidden="true" title="Acesta este un link magnetic. Use a torrent client to download the file."></i> - [JPN.zip](magnet:?xt=urn:btih:b10e9c3289c16c6de8aefcaf3892e2efe267acb8&dn=JPN.zip&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce)
-* The latest release of [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(the `.7z` file)*
-* The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
-* **JPN ほぼ日の健康手帳™ Users Only:** The latest release of [squirrelboot](https://github.com/zoogie/squirrelboot/releases)
+  + Țineți cont că trebuie să fii în cea mai recentă versiune (în prezent 11.8.0) pentru a cumpăra jocuri de pe eShop
+* <i class="fa fa-magnet" aria-hidden="true" title="Acesta este un link magnetic. Folosiți un client de torrent pentru a descărca fişierul."></i> - [ctcert.bin](magnet:?xt=urn:btih:ec445a7aae6fd62432c9ccee091919bda41c8283&dn=ctcert.bin&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce)
+* Arhiva `.zip` cu injectarea exploit-ului DSiWare care corespunde regiunii dumneavoastră:
+  + Utilizatorii din regiunea JPN care doresc să utilizeze gratuit jocul DSiWare ほぼ日の健康手帳™ ar trebui să descărcaţi `USA.zip` în loc de `JPN.zip`
+  * <i class="fa fa-magnet" aria-hidden="true" title="Acesta este un link magnetic. Folosiți un client de torrent pentru a descărca fişierul."></i> - [USA.zip](magnet:?xt=urn:btih:ead76f1e382cad15efaf1ba87c702f7b4c16d6e0&dn=USA.zip&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce)
+  * <i class="fa fa-magnet" aria-hidden="true" title="Acesta este un link magnetic. Folosiți un client de torrent pentru a descărca fişierul."></i> - [EUR.zip](magnet:?xt=urn:btih:fe5be30f2a2c33e5e350e099804840560cbb6626&dn=EUR.zip&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce)
+  * <i class="fa fa-magnet" aria-hidden="true" title="Acesta este un link magnetic. Folosiți un client de torrent pentru a descărca fişierul."></i> - [JPN.zip](magnet:?xt=urn:btih:b10e9c3289c16c6de8aefcaf3892e2efe267acb8&dn=JPN.zip&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce)
+* Cea mai recentă versiune de [b9sTool] (https://github.com/zoogie/b9sTool/releases/latest)
+* Cea mai nouă versiune de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(fișierul `.7z`)*
+* Cea mai nouă versiune de [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
+* **Doar utilizatorii JPN ほぼ日の健康手帳™:** Ultima versiune de [squirrelboot](https://github.com/zoogie/squirrelboot/releases)
 
 ### Instrucțiuni
 
 #### Secțiunea I - Preparații
 
-1. Launch System Settings on your device
-1. Navigate to `Data Management` -> `DSiWare`
-1. Under the "System Memory" section, select your compatible DSiWare game
-1. Select "Copy", then select "OK"
-  + If prompted, overwrite any existing copy
+1. Porniți System Settings pe consolă
+1. Navigați spre `Data Management` -> `DSiWare`
+1. Mergeți la secțiunea "System Memory", selectați jocurile DSiWare compatibile
+1. Selectaţi "Copy", apoi selectaţi "OK"
+  + Dacă vi se solicită, suprascrieți orice copie existentă
 1. Închideți dispozitivul
 1. Introduceți cardul SD în calculator
 1. Copiați `boot.firm` de la Luma3DS `.7z` în rădăcina cardului SD
-1. Copy `boot.nds` (B9STool) to the root of your SD card
+1. Copiați `boot.nds` (B9STool) în rădăcina cardului SD
 1. Copiați `boot.3dsx` în rădăcina cardului SD
-1. **JPN ほぼ日の健康手帳™ Users Only**:
-  + Create a folder named `3ds` on the root of your SD card
-  + Copy `squirrelboot.3dsx` to the `/3ds/` folder on your SD card
-1. Navigate to the `Nintendo 3DS` folder on your SD card
-1. Copy the 32 character long name of the folder you see
-  + If you see multiple folders like this, perform the following:
-  + Rename the `Nintendo 3DS` folder to `BACKUP_Nintendo 3DS`
-  + Reinsert your SD card into your device and power on your device
-  + Wait for the device to generate the SD card data
-  + Power off your device and reinsert your SD card into your computer
-  + Navigate to the `Nintendo 3DS` folder on your SD card
-  + Copy the 32 character long name of the folder you see
-  + Delete the `Nintendo 3DS` folder
-  + Rename the `BACKUP_Nintendo 3DS` folder to `Nintendo 3DS`
-1. Paste your 32 character long folder name into a document you can reference later
-  + This folder name is also known as your "ID0"
-1. Navigate to `<ID0>` -> `<32-character-id>` -> `Nintendo DSiWare` on your SD card
-1. Copy `<8-character-id>.bin` to a folder on your computer
+1. **Doar utilizatorii de JPN ほぼ日の健康手帳™**:
+  + Creați un folder numit `3ds` pe rădăcina cardului SD
+  + Copiați `squirrelboot.3dsx` în folderul `/3ds/` de pe cardul SD
+1. Navigați către folderul `Nintendo 3DS` pe cardul SD
+1. Copiați numele lung de 32 de caractere al folderului care îl vedeți
+  + Dacă vedeți foldere multiple precum astea, faceți următoarele:
+  + Redenumiţi folderul `Nintendo 3DS` către `BACKUP_Nintendo 3DS`
+  + Reintroduceţi cardul SD în dispozitiv și porniți dispozitivul
+  + Aşteptaţi dispozitivul pentru a genera datele de card SD
+  + Închideți dispozitivul și reintroduceți cardul SD înapoi în calculator
+  + Navigați către folderul `Nintendo 3DS` pe cardul SD
+  + Copiați numele lung de 32 de caractere al folderului care îl vedeți
+  + Ștergeți folderul `Nintendo 3DS`
+  + Redenumiţi folderul `BACKUP_Nintendo 3DS` către `Nintendo 3DS`
+1. Lipiţi numele lung al folderului de 32 de caractere într-un document pe care îl puteți referenția mai târziu
+  + Acest nume de folder este de asemenea cunoscut ca "ID0" al dispozitivului
+1. Navigați spre `<ID0>` -> `<32-character-id>` -> `Nintendo DSiWare` pe cardul SD
+1. Copiați `<ID-de-8-caractere>.bin` către un folder pe calculator
   + ID-ul de 8 caractere va fi unul din pagina [Instalând boot9strap (Lista de jocuri DSiWare pentru injectare)](installing-boot9strap-(dsiware-game-injection-list))
 1. Reintroduceți cardul SD în dispozitivul dumneavoastră
 1. Porniți dispozitivul
 1. Mergeți în Lista de prieteni ([iconița cu fața portocalie]({{ "/images/friend-list-icon.png" | absolute_url }} în rândul superior de pe meniul HOME)
-  + If you receive an error and are kicked out of the menu, you either must create a new Mii or your console cannot connect to Nintendo's servers (due to a ban or connection issues)
-1. Find your Mii profile, then find the "Friend Code" field on the top screen
+  + Dacă primiți o eroare și sunteți dat afară din meniu, va trebui să creți un nou Mii sau consola nu se mai poate conecta în serverele Nintendo (din cauza unui ban sau problemelor de conexiune)
+1. Găsiți profilul de Mii, apoi găsiţi câmpul "Friend Code" de pe ecranul superior
 
-#### Section II - Seedminer
+#### Secțiunea II - Seedminer
 
-JPN ほぼ日の健康手帳™ users should follow [these instructions](http://steelminer.jisagi.net/) instead of this section. Once those instructions have been completed, resume this guide at "Section III - DSiWare Injection".
+Utilizatorii JPN de ほぼ日の健康手帳™ ar trebui să urmăriți [aceste instrucțiuni](http://steelminer.jisagi.net/) în loc de această secțiune. Odată ce aceste instrucţiuni au fost completate, continuați acest ghid la "Secţiunea III - Injectare DSiWare".
 {: .notice--info}
 
-1. Open [Bruteforce Movable](https://bruteforcemovable.com/) on your computer
-  + This site can automate the retrieval of `movable_part1.sed` (using a bot 3DS console) and the breaking of your device's DSiWare encryption (using a volunteer's computer to run Seedminer)
-  + If you already have access to a 3DS capable of launching the Homebrew Launcher, you can manually retrieve your `movable_part1.sed` using that device by following [these](https://jisagi.github.io/SeedminerGuide/seedminerSelf/#section1) instructions
-  + If you already have access to a PC with a powerful graphics card, you can manually calculate your `movable.sed` using it by following [these](https://jisagi.github.io/SeedminerGuide/seedminerSelf/#section2) instructions
-  + If the automated service is nonfunctional and you cannot do one or both of those manually, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you
-1. Enter your device's Friend Code (with no spaces or dashes) into the "Your friend code" field
-1. Paste your device's 32 character long folder name into the "Your ID0" field
-1. Complete the "I'm not a robot" captcha
-1. Select "Go"
-1. When prompted, use the "Register Friend" button on your device to add the friend code of the bot 3DS console
-1. Wait for the site to update
-  + If it does not, refresh the page
-1. Select "Continue"
-1. Wait for the process to complete
-  + This can take a while (up to an hour in some cases)
-  + If you are still waiting after an hour, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you
-1. When the process has completed, download your `movable.sed` file from the site
+1. Deschideţi [Bruteforce Movable](https://bruteforcemovable.com/) pe calculator
+  + Acest site poate automatiza extragerea de `movable_part1.sed` (folosind un bot care simulează un 3DS) şi descifrarea criptării DSiWare a dispozitivului (folosind calculatorul unui voluntar pentru a rula Seedminer)
+  + În cazul în care aveţi deja acces la un 3DS capabil de a lansa Homebrew Launcher, aveți posibilitatea să obțineți manual `movable_part1.sed` folosind acel dispozitiv, urmărind [aceste](https://jisagi.github.io/SeedminerGuide/seedminerSelf/#section1) instrucțiuni
+  + În cazul în care aveți acces la un calculator cu o placă video puternica, puteți calcula automat `movable.sed` urmărind [aceste](https://jisagi.github.io/SeedminerGuide/seedminerSelf/#section2) instrucțiuni
+  + În cazul în care serviciul automat nu este funcțional și nu puteți face una sau ambele din acestea manual, alăturați-vă la [Nintendo Homebrew pe Discord](https://discord.gg/MWxPgEp) și întrebați (în engleză) pentru a vă ajuta cineva
+1. Introduceți Friend Code-ul dispozitivului (cu fără spaţii sau liniuţe) în câmpul "Your friend code"
+1. Lipiți numele de folder al dispozitvului de 32 de caractere în câmpul "Your ID0"
+1. Finalizați captcha-ul "I'm not a robot"
+1. Selectați "Go"
+1. Când vi se solicită, folosiți butonul "Register Friend" pe dispozitivul dumneavoastră să adăugaţi codul de prieten al bot-ului care simulează un 3DS
+1. Așteptați ca site-ul să se actualizeze
+  + Dacă nu se întâmplă, reîncărcați pagina
+1. Selectaţi "Continue"
+1. Așteptați până când procesul este terminat
+  + Aceasta poate dura o vreme (până la o oră în unele cazuri)
+  + În cazul în care încă așteptați după o oră, alăturați-vă la [Nintendo Homebrew pe Discord] (https://discord.gg/MWxPgEp) şi cereți (în engleză) pentru ca cineva acolo să vă asiste
+1. Când procesul s-a completat, descărcați fişierul `movable.sed` de pe site
 
-#### Section III - DSiWare Injection
+#### Secţiunea III - Injectare DSiWare
 
-1. Open [TADpole Online](https://jisagi.github.io/TADpole-Online/) on your computer
-  + If this site is nonfunctional, try [Project DSIHaxInjector](https://jenkins.nelthorya.net/job/DSIHaxInjector/build)
-1. Extract the contents of the DSiWare exploit injection `.zip` to a folder on your computer
-1. Select your `<8-character-id>.bin` for the "DSiWare.bin" field
-1. Select your `movable.sed` file for the "movable.sed" field
-1. Select the downloaded `ctcert.bin` file for the "ctcert.bin" field
-1. Select the extracted `game_<your-region>.app` file for the "game_XXX.app" field
-  + JPN ほぼ日の健康手帳™ users should be using the files from `USA.zip` instead of `JPN.zip`
-1. Select the extracted `public_<your-region>.sav` file for the "public_XXX.sav" field
-1. Select "Start!"
-1. Wait for the process to complete
-1. Rename the created `<8-character-id>.bin.patched` file to `<8-character-id>.bin`
-  + Do not confuse this file with the `<8-character-id>.bin` file from earlier
+1. Deschideţi [TADpole Online](https://jisagi.github.io/TADpole-Online/) pe calculator
+  + În cazul în care acest site este nefuncțional, încercaţi [Project DSIHaxInjector](https://jenkins.nelthorya.net/job/DSIHaxInjector/build)
+1. Extrageți conţinutul de injectare de exploit DSiWare ".zip" într-un folder de pe calculator
+1. Selectați `<ID-de-8-caractere>.bin` în câmpul "DSiWare.bin"
+1. Selectaţi fişierul `movable.sed` pentru câmpul "movable.sed"
+1. Selectaţi fişierul descărcat `ctcert.bin` pentru câmpul "ctcert.bin"
+1. Selectați fișierul extras `game_<regiunea-dumneavoastră>.app` pentru câmpul "game_XXX.app"
+  + Utilizatorii JPN de ほぼ日の健康手帳™ ar trebui să folosească fişiere de la `USA.zip` în loc de`JPN.zip`
+1. Selectați fișierul extras `public_<regiunea-dumneavoastră>.app` pentru câmpul "public_XXX.app"
+1. Selectați "Start!"
+1. Așteptați până când procesul este terminat
+1. Redenumiţi fișieriul creat `<ID-de-8-caractere>.bin.patched` spre`<ID-de-8-caractere>.bin`
+ 
+  + Nu confundați acest fișier cu fişierul `<ID-de-8-caractere>.bin` de mai devreme
 1. Închideți dispozitivul
 1. Introduceți cardul SD în calculator
-1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<32-character-id>` -> `Nintendo DSiWare` on your SD card
-1. Copy the new `<8-character-id>.bin` file to the `Nintendo DSiWare` folder on your SD card
-  + Overwrite the old `<8-character-id>.bin` file when prompted
+1. Navigați spre `Nintendo 3DS` -> `<ID0>` -> `<ID-de--32-caractere>` -> `Nintendo DSiWare` pe cardul SD
+1. Copiați fișierul `<8-character-id>.bin` nou spre folderul `Nintendo DSiWare` pe cardul SD
+  + Suprascrieți fişierul vechi `<ID-de-8-caractere>.bin` când vi se solicită
 1. Reintroduceți cardul SD în dispozitivul dumneavoastră
 1. Porniți dispozitivul
-1. Launch System Settings on your device
-1. Navigate to `Data Management` -> `DSiWare`
-1. Under the "SD Card" (or "microSD Card") section, select your compatible DSiWare game
-1. Select "Copy", then select "OK"
-  + This may have caused your game to appear as "Sudoku" or "4Swords" depending on region; this is normal
-  + JPN ほぼ日の健康手帳™ users will be missing ほぼ日の健康手帳™ on the home menu; this is normal
-1. Exit System Settings
+1. Porniți System Settings pe consolă
+1. Navigați spre `Data Management` -> `DSiWare`
+1. Sub secțiunea "SD Card" (sau "microSD Card"), selectați jocul DSiWare compatibil
+1. Selectaţi "Copy", apoi selectaţi "OK"
+  + E posibil ca procedeul să fi provocat jocul să apară ca  "Sudoku" sau "4Swords" depinzând de regiune; este ceva normal
+  + Utilizatorii JPN de ほぼ日の健康手帳™ nu vor vedea ほぼ日の健康手帳™ pe meniul HOME; acest lucru este normal
+1. Ieșiți din System Settings
 
-#### Section IV - Flashing FIRM
+#### Secțiunea IV - instalând FIRM
 
-1. Launch b9sTool by starting your DSiWare game on your device
+1. Lansați b9sTool pornind jocul DSiWare pe dispozitiv
   + Dacă vi se cere, va trebui să atingeţi ecranul pentru a declanşa exploit-ul
-  + JPN ほぼ日の健康手帳™ users should instead run Steeldiver to launch the Homebrew Launcher, then run squirrelboot to launch the patched version of ほぼ日の健康手帳™
+  + Utilizatorii JPN de ほぼ日の健康手帳™ ar trebui în schimb să pornească Steeldiver pentru a porni Homebrew Launcher, apoi să pornească squirrelboot pentru a porni versiunea patch-uită de ほぼ日の健康手帳™
 1. Selectaţi "Install boot9strap" şi confirmați
 1. Ieșiți din b9sTool, apoi închideți dispozitivul
   + Este posibil să aveţi nevoie să forțați oprirea dispozitivului apăsând butonul de pornire
 
-#### Section V - Configuring Luma3DS
+#### Secțiunea V - Configurând Luma3DS
 
 1. Porniți dispozitivul în timp ce țineți apăsat (Select) pentru a lansa meniul de configurare Luma
-  + If you encounter issues launching the Luma configuration menu, [follow this troubleshooting guide](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)
+  + În cazul în care găsiți probleme pornind meniul de configurare Luma, [urmați acest ghid de depanare](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)
 1. Folosiți butonul (A) si D-Pad-ul ca să activați următoarele:
   + **"Show NAND or user string in System Settings"**
 1. Apăsați (Start) pentru a salva și reporni
