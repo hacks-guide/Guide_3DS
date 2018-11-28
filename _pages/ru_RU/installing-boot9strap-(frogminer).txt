@@ -14,19 +14,19 @@ title: "Установка boot9strap (Frogminer)"
 
 Если бы этот ключ был полностью случайным, то его было бы невозможно взломать при помощи современных компьютеров. К счастью, первая половина ключа (`movable_part1.sed`) на самом деле математически связана с Кодом друга консоли, что позволяет нам взломать шифрование. Для получения информации о том, как работает Seedminer, пожалуйста, посмотрите [эту презентацию](https://zoogie.github.io/web/34⅕c3).
 
-Обратите внимание, что этот инструмент требует наличия ПК с мощной видеокартой для взлома шифрования DSiWare вашей консоли. If you do not have access to one of these, there exists an online helper service where a volunteer running automated software will do this for you.
+Обратите внимание, что этот инструмент требует наличия ПК с мощной видеокартой для взлома шифрования DSiWare вашей консоли. Если у вас нет доступа к такому компьютеру, существует онлайн сервис взаимопомощи, где волонтеры и автоматическое ПО могут сделать это за вас.
 
 Для использования [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme)-ссылок в этом руководстве необходим torrent-клиент, например [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
 Чтобы распаковать архивы `.7z` и `.rar`, присутствующие на этой странице, вам понадобится архиватор [7-Zip](http://www.7-zip.org/) или [The Unarchiver](https://theunarchiver.com/).
 
-This process will overwrite your game's save file!
+Этот процесс перезапишет сохранение вашей игры!
 {: .notice--warning}
 
 ### Что понадобится
 
-* The free eShop game "Steel Diver: Sub Wars" from the eShop
-* <i class="fa fa-magnet" aria-hidden="true" title="Это magnet-ссылка. Use a torrent client to download the file."></i> - [Frogtool.3dsx](magnet:?xt=urn:btih:f69210242e4649c69ce579360d3c83e7649e49bf&dn=Frogtool.3dsx&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce)
+* Бесплатная игра "Steel Diver: Sub Wars" из eShop
+* <i class="fa fa-magnet" aria-hidden="true" title="Это magnet-ссылка. Воспользуйтесь торрент-клиентом, чтобы скачать этот файл."></i> - [Frogtool.3dsx](magnet:?xt=urn:btih:f69210242e4649c69ce579360d3c83e7649e49bf&dn=Frogtool.3dsx&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce)
 * Свежая версия [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
 * Свежая версия [Steelhax](https://github.com/VegaRoXas/vegaroxas.github.io/raw/master/files/steelhax-installer.rar)
 * Свежая версия [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
@@ -45,7 +45,7 @@ This process will overwrite your game's save file!
 1. Скопируйте `boot.3dsx` в корень SD-карты
 1. Скопируйте папку `steelhax` из `.rar-архива` Steelhax в корень SD-карты
 1. Скопируйте otherapp payload в папку `steelhax` на SD-карте и переименуйте его в `payload.bin`
-1. Copy `Frogtool.3dsx` to the `/3ds/` folder on your SD card
+1. Скопируйте `Frogtool.3dsx` в папку `/3ds/` на SD-карте
 1. Перейдите в папку `Nintendo 3DS` на SD-карте
 1. Скопируйте имя папки из 32 символов, которую вы видите
   + Если вы видите несколько таких папок, выполните следующие действия:
