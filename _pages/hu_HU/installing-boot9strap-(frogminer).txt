@@ -6,7 +6,7 @@ title: "Installing boot9strap (Frogminer)"
 
 ### Fontos tudnivalók
 
-Ahhoz, hogy telepítsük a boot9strap-et a 11.8.0-s készülékedre, egy, a "DSiWare" alkalmazásokra vonatkozó biztonsági megkötés hibáját fogjuk kihasználni.
+To install boot9strap on your 11.9.0 device, we exploit an oversight in the security restrictions applied to "DSiWare" applications.
 
 Ennek eléréséhez egy Seedminer nevű eszközt fogunk használni, hogy kiszámítsuk a készüléked DSiWare titkosítási kulcsát (`movable.sed`).
 
@@ -14,21 +14,21 @@ Ezt követően ezt a DSiWare titkosítási kulcsot arra fogjuk használni, hogy 
 
 Ha ez a kulcs teljesen véletlenszerű lenne, a titkosítási kulcsot lehetetlen lenne feltörni a jelenleg elérhető hardverekkel. Szerencsére a kulcs első fele (`movable_part1.sed`) matematikailag összefüggésben van a készüléked Friend Code-jával, ami lehetővé teszi a titkosítás feltörését. További információért arról, hogyan működik a Seedminer, nézd meg [ezt a prezentációt](https://zoogie.github.io/web/34⅕c3).
 
-Fontos megjegyezni, hogy ennek az eszköznek egy erős grafikus kártyával rendelkező PC-re van szüksége ahhoz, hogy a készüléked DSiWare titkosítását fel tudja törni. Ha nincs hozzáférésed ilyesmihez, létezik néhány önkéntes alapon futtatott segédszolgáltatás, amely megcsinálja neked ugyanezt.
+Fontos megjegyezni, hogy ennek az eszköznek egy erős grafikus kártyával rendelkező PC-re van szüksége ahhoz, hogy a készüléked DSiWare titkosítását fel tudja törni. If you do not have access to one of these, there exists an online helper service where a volunteer running automated software will do this for you.
 
 Ahhoz, hogy használhasd a [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) linkeket ezen az oldalon, szükséged lesz egy torrent kliensre, mint például a [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
 To extract the `.7z` and `.rar` files linked on this page, you will need a file archiver like [7-Zip](http://www.7-zip.org/) or [The Unarchiver](https://theunarchiver.com/).
 
-Ennek a folyamatnak a során a DSiWare játékod mentése felülírásra kerül!
+This process will overwrite your game's save file!
 {: .notice--warning}
 
 ### Amire szükséged lesz
 
-* The free DSiWare game "Steel Diver: Sub Wars" from the eShop
+* The free eShop game "Steel Diver: Sub Wars" from the eShop
+* <i class="fa fa-magnet" aria-hidden="true" title="Ez egy mágneslink. Use a torrent client to download the file."></i> - [Frogtool.3dsx](magnet:?xt=urn:btih:f69210242e4649c69ce579360d3c83e7649e49bf&dn=Frogtool.3dsx&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce)
 * A [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest) legújabb kiadása
 * The latest release of [Steelhax](https://github.com/VegaRoXas/vegaroxas.github.io/raw/master/files/steelhax-installer.rar)
-* The latest release of [Frogtool](https://github.com/zoogie/Frogtool/releases/latest)
 * A [b9sTool](https://github.com/zoogie/b9sTool/releases/latest) legújabb kiadása
 * A [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) legújabb kiadása *(a `.7z` fájl)*
 * Az [otherapp payload](https://smealum.github.io/3ds/#otherapp) *(a készüléked verziójának és régiójának megfelelő változat)*
@@ -45,8 +45,7 @@ Ennek a folyamatnak a során a DSiWare játékod mentése felülírásra kerül!
 1. Másold az `boot.3dsx` fájlt az SD kártyád gyökerébe
 1. Copy the `steelhax` folder from the Steelhax `.rar` to the root of your SD card
 1. Copy the otherapp payload to the `steelhax` folder on your SD card and rename it to `payload.bin`
-1. Copy `Frogtool.3dsx` from the Frogtool `.zip` to the `/3ds/` folder on your SD card
-1. Copy the `private` folder from the Frogtool `.zip` to the root of your SD card
+1. Copy `Frogtool.3dsx` to the `/3ds/` folder on your SD card
 1. Lépj be az SD kártyád `Nintendo 3DS` könyvtárába
 1. Másold le a 32 karakter hosszú nevét annak a mappának, amit látsz
   + Ha több ilyen mappát is látsz, csináld a következőt:
@@ -79,7 +78,7 @@ Ennek a folyamatnak a során a DSiWare játékod mentése felülírásra kerül!
 1. Nyomd meg a "Go" gombot
 1. Ha kéri, használd a "Register Friend" gombot a készülékeden és add hozzá a bot 3DS konzol Friend Code-ját
 1. Várj, amíg az oldal frissül
-  + Ha ez nem történik meg, frissítsd magad az oldalt
+  + If it does not, wait a few minutes before refreshing the page once
 1. Nyomd meg a "Continue" gombot
 1. Várd meg, amíg a folyamat befejeződik
   + Ez beletelhet egy kis időbe (akár egy órába is bizonyos esetekben)
@@ -104,42 +103,18 @@ Ennek a folyamatnak a során a DSiWare játékod mentése felülírásra kerül!
   + **USA Region**: `000d7d00`
 1. Copy the new downloaded save file to the `data` folder on your SD card
   + Overwrite the old save file when prompted
+1. Copy your `movable.sed` to the root of your SD card
 1. Tedd vissza az SD kártyád a készülékedbe
 1. Kapcsold be a készülékedet
 
-#### Section IV - Frogminer
+#### Negyedik rész - FIRM flashelése
 
 1. Launch "Steel Diver: Sub Wars"
 1. Ha az exploit sikeres volt, a készülékednek ezt követően be kell töltenie a Homebrew Launchert
 1. Launch Frogtool from the list of homebrew
-1. Select the "EXPORT clean DS Download Play" option
-1. Press (Start) to exit Frogtool
-1. Kapcsold ki a készüléked
-1. Helyezd az SD kártyád a számítógépbe
-1. Copy `484E4441.bin` from the root of your SD card to your computer
-1. Open [the Frogminer website](https://jenkins.nelthorya.net/job/DSIHaxInjector/build)
-1. Select a username for the "Username" field
-1. Select your console's region for the "Region" field
-1. Select `484E4441.bin` for the "DsiBin" field
-1. Select your `movable.sed` for the "MovableSed" field
-1. Leave the email field blank
-1. Select "Build"
-1. Várd meg, amíg a folyamat befejeződik
-1. Search for your username in the "Build History" section of the page
-1. Download the `484E4441.bin.patched_<your-username>` file
-  + If the username does not match the one you input earlier, the file is incorrect and will not work on your device
-1. Copy `484E4441.bin.patched_<your-username>` to the root of your SD card and rename it to `484E4441.bin.patched`
-1. Tedd vissza az SD kártyád a készülékedbe
-1. Kapcsold be a készülékedet
-
-#### Section V - Flashing FIRM
-
-1. Launch "Steel Diver: Sub Wars"
-1. Ha az exploit sikeres volt, a készülékednek ezt követően be kell töltenie a Homebrew Launchert
-1. Launch Frogtool from the list of homebrew
-1. Select the "IMPORT patched DS Download Play" option
-1. Tap the touch-screen to continue
-1. Select the "BOOT patched DS Download Play" option
+1. Select the "INJECT patched DS Download Play" option
+1. Frogtool will automatically run and inject the JPN version of Flipnote Studio into your DS Download Play
+1. Once this operation has finished, tap the touchscreen and select "BOOT patched DS Download Play"
 1. If the exploit was successful, your device will have loaded the JPN version of Flipnote Studio
 1. Complete the initial setup process for the launched game until you reach the main menu
   + Select the left option whenever prompted during the setup process
@@ -155,7 +130,7 @@ Ennek a folyamatnak a során a DSiWare játékod mentése felülírásra kerül!
 1. Lépj ki a b9sTool-ból, majd kapcsold ki a készülékedet
   + Elképzelhető, hogy kényszerítened kell a leállást a bekapcsológomb lenyomva tartásával
 
-#### Hatodik rész - A Luma3DS konfigurálása
+#### Ötödik rész - A Luma3DS konfigurálása
 
 1. Indítsd el a készülékedet a (Select) lenyomva tartásával, hogy megjelenjen a Luma konfigurációs menüje
   + Ha problémába ütközöl a Luma konfigurációs menü elindításakor, [kövesd ezt a hibaelhárítási útmutatót](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)
