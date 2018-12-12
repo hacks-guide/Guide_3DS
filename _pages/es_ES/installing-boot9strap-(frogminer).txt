@@ -6,7 +6,7 @@ title: "Instalar boot9strap (Frogminer)"
 
 ### Lectura requerida
 
-Para instalar boot9strap en tu consola con firmware 11.8.0 nos aprovecharemos de un descuido existente en las restricciones de seguridad aplicadas a las aplicaciones "DSiWare".
+Para instalar boot9strap en tu consola con firmware 11.9.0 nos aprovecharemos de un descuido existente en las restricciones de seguridad aplicadas a las aplicaciones "DSiWare".
 
 Para lograrlo, utilizaremos una herramienta llamada Seedminer para calcular la clave de encriptación (`movable.sed`) de tu consola.
 
@@ -14,21 +14,21 @@ Luego utilizaremos esta clave de encriptación para desencriptar una aplicación
 
 Si esta clave fuese completamente aleatoria, sería imposible calcularla con el hardware de computación que existe actualmente. Afortunadamente, la primera mitad de la clave (`movable_part1.sed`) está relacionada matemáticamente con el código de amigo de tu consola, permitiéndonos romper la encriptación. Para más información sobre cómo funciona Seedminer, por favor echa un vistazo a [esta presentación](https://zoogie.github.io/web/34⅕c3).
 
-Ten en cuenta que esta herramienta requiere de un PC con una tarjeta gráfica muy poderosa para que pueda romper la encriptación DSiWare de tu consola. Si no tienes acceso a uno, existen varios servicios de ayuda en línea donde un voluntario que corre software automáticamente hará esto por tí.
+Ten en cuenta que esta herramienta requiere de un PC con una tarjeta gráfica muy poderosa para que pueda romper la encriptación DSiWare de tu consola. Si no tienes acceso a uno, existen un servicio de ayuda en línea donde un voluntario ejecutando este software automatizado hará esto por ti.
 
 Para utilizar los enlaces [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) de esta página, vas a necesitar un cliente torrent como [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
 Para extraer los archivos `.7z` y `.rar` enlazados esta página, necesitarás un gestor de archivos como [7-Zip](http://www.7-zip.org/) o [The Unarchiver](https://theunarchiver.com/).
 
-¡Este proceso sobreescribirá el archivo de guardado de tu juego DSiWare!
+¡Este proceso sobreescribirá el archivo de guardado de tu juego!
 {: .notice--warning}
 
 ### Qué necesitas
 
 * El juego gratis "Steel Diver: Sub Wars" de la eShop
+* <i class="fa fa-magnet" aria-hidden="true" title="Este es un enlace magnético. Usa un cliente torrent para descargar el archivo."></i> - [Frogtool.3dsx](magnet:?xt=urn:btih:f69210242e4649c69ce579360d3c83e7649e49bf&dn=Frogtool.3dsx&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce)
 * La última versión [del Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
 * La última versión de [Steelhax](https://github.com/VegaRoXas/vegaroxas.github.io/raw/master/files/steelhax-installer.rar)
-* La última versión de [Frogtool](https://github.com/zoogie/Frogtool/releases/latest)
 * La ultima versión de [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
 * La última versión de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(el archivo`.7z`)*
 * El [otherapp payload](https://smealum.github.io/3ds/#otherapp) *(correspondiente a tu versión del sistema y región)*
@@ -45,8 +45,7 @@ Para extraer los archivos `.7z` y `.rar` enlazados esta página, necesitarás un
 1. Copia `boot.3dsx` a la raíz de tu tarjeta SD
 1. Copia la carpeta `steelhax` contenida en el `.rar` de Steelhax a la raíz de tu tarjeta SD
 1. Copia el otherapp payload a la carpeta `steelhax` en tu tarjeta SD y cambia su nombre a `payload.bin`
-1. Copia `Frogtool.3dsx` contenido en el `.zip` de FrogTool a la carpeta `/3ds/` en tu tarjeta SD
-1. Copia la carpeta `private` contenida en el `.zip` de FrogTool a la raíz de tu tarjeta SD
+1. Copia `Frogtool.3dsx` a la carpeta `/3ds/` en tu tarjeta SD
 1. Ve a la carpeta `Nintendo 3DS` en tu tarjeta SD
 1. Copia el nombre de 32 caracteres que posee la carpeta que hay dentro
   + Si hay más de una carpeta, haz lo siguiente:
@@ -79,7 +78,7 @@ Para extraer los archivos `.7z` y `.rar` enlazados esta página, necesitarás un
 1. Selecciona "Go"
 1. Cuando te lo pida, utiliza el botón de "Añadir amigo" en tu consola para añadir el código de amigo del bot que simula una consola 3DS
 1. Espera a que el sitio se actualice
-  + Si no lo hace, refresca la página
+  + Si no lo hace, espera unos minutos antes de recargar la página una vez
 1. Selecciona "Continue"
 1. Espera a que el procesos se complete
   + Esto puede tomar un tiempo (hasta una hora en algunos casos)
@@ -104,42 +103,18 @@ Para extraer los archivos `.7z` y `.rar` enlazados esta página, necesitarás un
   + **Región USA**: `000d7d00`
 1. Copia el nuevo archivo de guardado que descargaste en la carpeta `data` en tu tarjeta SD
   + Sobreescribe el archivo anterior cuando te lo pida
+1. Copia tu `movable.sed` a la raíz de tu tarjeta SD
 1. Vuelve a insertar tu tarjeta SD en tu consola
 1. Enciende tu consola
 
-#### Sección IV - Frogminer
+#### Sección IV - Flashear FIRM
 
 1. Inicia "Steel Diver: Sub Wars"
 1. Si el exploit fue exitoso, tu consola habrá cargado el Hombrew Launcher
 1. Inicia Frogtool desde la lista de homebrew
-1. Selecciona la opción "EXPORT clean DS Download Play"
-1. Presiona (Start) para salir de Frogtool
-1. Apaga tu consola
-1. Inserta tu tarjeta SD en tu computadora
-1. Copia el archivo `484E4441.bin`desde la raíz de tu tarjeta SD a tu computadora
-1. Abre [el sitio web de Frogminer](https://jenkins.nelthorya.net/job/DSIHaxInjector/build)
-1. Elige un nombre de usuario para el campo "Username"
-1. Selecciona la región de tu consola en el campo "Region"
-1. Elige el archivo `484E4441.bin` en tu computadora en el campo "DsiBin"
-1. Selecciona tu archivo `movable.sed` en el campo "MovableSed"
-1. Deja en blanco el campo de correo electrónico
-1. Selecciona "Build"
-1. Espera a que el procesos se complete
-1. Busca tu nombre de usuario en la sección "Build History" de la página
-1. Descarga el archivo `484E4441.bin.patched_<tu-nombre-de-usuario>`
-  + Si el nombre de usuario no coincide con el que has puesto antes, el archivo no es el correcto y no funcionará en tu consola
-1. Copia `484E4441.bin.patched_<tu-nombre-de-usuario>` a la raíz de tu tarjeta SD y renómbralo a `484E4441.bin.patched`
-1. Vuelve a insertar tu tarjeta SD en tu consola
-1. Enciende tu consola
-
-#### Sección V - Flashear FIRM
-
-1. Inicia "Steel Diver: Sub Wars"
-1. Si el exploit fue exitoso, tu consola habrá cargado el Hombrew Launcher
-1. Inicia Frogtool desde la lista de homebrew
-1. Selecciona la opción "IMPORT patched DS Download Play"
-1. Toca la pantalla táctil para continuar
-1. Selecciona la opción "BOOT patched DS Download Play"
+1. Selecciona la opción "INJECT patched DS Download Play"
+1. Frogtool automáticamente ejecutará e inyectará la versión JPN de Flipnote Studio en tu Modo Descarga de DS
+1. Una vez terminada la operación, presiona la pantalla táctil selecciona "BOOT patched DS Download Play"
 1. Si el exploit fue exitoso, tu consola habrá cargado la versión japonesa de Flipnote Studio
 1. Completa la configuración del juego hasta que llegues al menú principal
   + Selecciona la opción de la izquierda cuando te lo pida durante la configuración inicial
@@ -155,7 +130,7 @@ Para extraer los archivos `.7z` y `.rar` enlazados esta página, necesitarás un
 1. Sal de b9sTool, luego apaga tu consola
   + Puede que tengas que forzar el apagado manteniendo pulsado el botón de encendido
 
-#### Sección VI - Configuración de Luma3DS
+#### Sección V - Configurar Luma3DS
 
 1. Enciende tu consola mientras mantienes presionado (Select) para ingresar al menú de configuración de Luma3DS
   + Si tienes problemas al intentar iniciar el menú de configuración de Luma, [sigue esta guía de resolución de problemas](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)
