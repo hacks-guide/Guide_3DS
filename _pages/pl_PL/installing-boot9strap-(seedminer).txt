@@ -1,16 +1,16 @@
 ---
-title: "Installing boot9strap (Seedminer)"
+title: "Instalacja boot9strap (Seedminer)"
 ---
 
 {% include toc title="Spis Treści" %}
 
 ### Wymagana Lektura
 
-To install boot9strap on your 11.9.0 device, we exploit an oversight in the security restrictions applied to "DSiWare" applications.
+Aby zainstalować boot9strap na urządzeniu posiadającym oprogramowanie 11.9.0, wykorzystujemy przeoczenie w restrykcjach zabezpieczeń zastosowanych w aplikacjach "DSiWare".
 
-To accomplish this, we use a tool called Seedminer to calculate the DSiWare encryption key (`movable.sed`) for your device.
+Aby to się udało, musimy użyć narzędzia zwanego Seedminer, aby obliczyć klucz szyfrowania DSiWare (`movable.sed`) Twojego urządzenia.
 
-We then use this DSiWare encryption key to decrypt a compatible DSiWare application and inject an exploit into it to run our own code.
+Następnie użyjemy tego klucza, aby odszyfrować kompatybilną aplikację/grę DSiWare i umieścimy w niej exploit, który pozwoli na uruchomienie naszego własnego kodu.
 
 If this key were completely random, the encryption key would be impossible to break on current computing hardware. Fortunately, the first half of the key (`movable_part1.sed`) is actually mathematically related to your device's Friend Code, allowing us to break the encryption. For information on how Seedminer works, please see [this presentation](https://zoogie.github.io/web/34⅕c3).
 
