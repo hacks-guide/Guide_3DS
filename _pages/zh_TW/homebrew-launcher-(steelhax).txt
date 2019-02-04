@@ -1,0 +1,62 @@
+---
+title: "Homebrew Launcher (Steelhax)"
+---
+
+{% include toc title="條目內容" %}
+
+### 必讀事項
+
+This method of using Seedminer for further exploitation uses your `movable.sed` file to gain access to the Homebrew Launcher using the Steelhax exploit for the purposes of injecting an exploitable DSiWare title into the DS Download Play application. This method requires you to already own (or download) the free "Steel Divers: Sub Wars" game from the eShop.
+
+If your device already has access to the Homebrew Launcher (whether through Steelhax or another exploit), you can skip to [Installing Boot9strap (Frogminer)](installing-boot9strap-(frogminer)).
+{: .notice--success}
+
+If you already have Steel Diver: Sub Wars, this process will overwrite your game's save file!
+{: .notice--warning}
+
+### 必備項目
+
+* The free eShop game "Steel Diver: Sub Wars"
+* 最新版的 [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
+* 最新版的 [Steelhax](https://github.com/VegaRoXas/vegaroxas.github.io/raw/master/files/steelhax-installer.rar)
+* [otherapp payload 檔案](https://smealum.github.io/3ds/#otherapp) *(選擇對應您主機的區域及型號的檔案)*
+
+### 操作說明
+
+#### 第一節 — 準備工作
+
+1. 在 SD 卡的根目錄底下建立一個新資料夾 `3ds`
+1. 將 `boot.3dsx` 複製到 SD 卡根目錄中
+1. 解壓 Steelhax `.rar` 中的 `steelhax` 資料夾到 SD 卡的根目錄底下
+1. 複製 otherapp 啟動程式到 SD 卡的 `steelhax` 資料夾中，並重新命名其檔名為 `payload.bin`
+
+#### Section II - Steelminer
+
+1. Insert your SD card into your device
+1. Launch "Steel Diver: Sub Wars" once and select a Mii to initialize your save file
+  + Decline the game update when prompted
+  + If you have already updated the game, use the Data Management menu of the System Settings to delete the update
+1. Exit "Steel Diver: Sub Wars"
+1. 關閉您的主機
+1. 將 SD 卡插入至電腦中
+1. Open [the Steelminer Injector website](http://steelminer.jisagi.net/injector) on your computer
+1. Select your `movable.sed` file
+1. Select "Start!"
+1. Wait for the process to complete
+1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<32-character-id>` -> `title` -> `00040000` -> `<8-character-region>` -> `data` on your SD card
+  + **EUR Region**: `000d7e00`
+  + **JPN Region**: `000d7c00`
+  + **USA Region**: `000d7d00`
+1. Copy the new downloaded save file to the `data` folder on your SD card
+  + Overwrite the old save file when prompted
+1. 將 SD 卡插回主機中
+1. 啟動您的主機
+1. Launch "Steel Diver: Sub Wars"
+1. 如果漏洞成功執行，您的主機將自動載入 Homebrew Launcher
+  + You may see an error stating there are no applications found.
+1. Power off your device.
+
+___
+
+### Continue to [Installing Boot9strap (Frogtool)](installing-boot9strap-(frogtool))
+{: .notice--primary}
