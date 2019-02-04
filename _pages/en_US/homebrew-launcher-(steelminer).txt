@@ -1,0 +1,130 @@
+---
+title: "Homebrew Launcher (Steelminer)"
+---
+
+{% include toc title="Table of Contents" %}
+
+### Required Reading
+
+To install boot9strap on your 11.9.0 device, we exploit an oversight in the security restrictions applied to "DSiWare" applications.
+
+Every 3DS system comes with DSiWare applications pre-installed. This method exploits this by using DS Download Play.
+
+To accomplish this, we use a tool called Seedminer to calculate the DSiWare encryption key (`movable.sed`) for your device.
+
+We then use this DSiWare encryption key with the Frogtool app to inject the Japanese version of Flipnote Studio into the DS Download Play app. 
+Frogtool also installs an exploit for Flipnote Studio to run our custom code.
+
+In order to utilize the injection app, Frogtool, we need Homebrew Launcher access. In this guide we will be installing the steelhax exploit.
+
+If this key were completely random, the encryption key would be impossible to break on current computing hardware. Fortunately, the first half of the key (`movable_part1.sed`) is actually mathematically related to your device's Friend Code, allowing us to break the encryption. For information on how Seedminer works, please see [this presentation](https://zoogie.github.io/web/34⅕c3).
+
+Note that this tool requires a PC with a powerful graphics card to break your device's DSiWare encryption. If you do not have access to one of these, there exists an online helper service where a volunteer running automated software will do this for you.
+
+To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download).
+
+To extract the `.7z` and `.rar` files linked on this page, you will need a file archiver like [7-Zip](http://www.7-zip.org/) or [The Unarchiver](https://theunarchiver.com/).
+
+If you already have Steel Diver: Sub Wars, this process will overwrite your game's save file!
+{: .notice--warning}
+
+### What You Need
+
+* The free eShop game "Steel Diver: Sub Wars" from the eShop
+* The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
+* The latest release of [Steelhax](https://github.com/VegaRoXas/vegaroxas.github.io/raw/master/files/steelhax-installer.rar)
+* The [otherapp payload](https://smealum.github.io/3ds/#otherapp) *(for your region and version)*
+
+### Instructions
+
+#### Section I - Compatibility Test
+
+1. Go to System Settings, then "Internet Settings", then "Nintendo DS Connections"
+1. Press "OK"
+1. If your device loads into a "Nintendo Wi-Fi Connection Setup" menu, exit this menu
+  + If the screen stays black or appears to freeze, you will not be able to use Frogminer; return to [Get Started](get-started) and select an "All Versions" method
+1. Power off your device
+
+#### Section II - Gathering Data
+
+1. Insert your SD card into your computer
+1. Navigate to the `Nintendo 3DS` folder on your SD card
+1. Copy the 32 character long name of the folder you see
+  + If you see multiple folders like this, perform the following:
+  + Rename the `Nintendo 3DS` folder to `BACKUP_Nintendo 3DS`
+  + Reinsert your SD card into your device and power on your device
+  + Wait for the device to generate the SD card data
+  + Power off your device and reinsert your SD card into your computer
+  + Navigate to the `Nintendo 3DS` folder on your SD card
+  + Copy the 32 character long name of the folder you see
+  + Delete the `Nintendo 3DS` folder
+  + Rename the `BACKUP_Nintendo 3DS` folder to `Nintendo 3DS`
+1. Paste your 32 character long folder name into a document you can reference later
+  + This folder name is also known as your "ID0"
+1. Power on your device
+1. Go to your Friend List (the [orange Face Icon]({{ "/images/friend-list-icon.png" | absolute_url }}) in the top row of your Home Menu)
+  + If you receive an error and are kicked out of the menu, you either must create a new Mii or your console cannot connect to Nintendo's servers (due to a ban or connection issues)
+1. Find your Mii profile, then find the "Friend Code" field on the top screen
+
+#### Section III - Seedminer
+
+1. Open [Bruteforce Movable](https://bruteforcemovable.com/) on your computer
+  + This site can automate the retrieval of `movable_part1.sed` (using a bot 3DS console) and the breaking of your device's DSiWare encryption (using a volunteer's computer to run Seedminer)
+  + If you already have access to a 3DS capable of launching the Homebrew Launcher, you can manually retrieve your `movable_part1.sed` using that device by following [these](https://jisagi.github.io/SeedminerGuide/seedminerSelf/#section1) instructions
+  + If you already have access to a PC with a powerful graphics card, you can manually calculate your `movable.sed` using it by following [these](https://jisagi.github.io/SeedminerGuide/seedminerSelf/#section2) instructions
+  + If the automated service is nonfunctional and you cannot do one or both of those manually, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you
+1. Enter your device's Friend Code (with no spaces or dashes) into the "Your friend code" field
+1. Paste your device's 32 character long folder name into the "Your ID0" field
+1. Complete the "I'm not a robot" captcha
+1. Select "Go"
+  + If the site immediately goes to step 4, download your `movable.sed` file and continue with the next section.
+1. When prompted, use the "Register Friend" button on your device to add the friend code of the bot 3DS console
+1. Wait for the site to update
+  + If it does not, wait a few minutes before refreshing the page once
+1. Select "Continue"
+1. Wait for the process to complete
+  + This can take a while (up to an hour in some cases)
+  + During this process, the bot may not show up on your 3ds. As long as the website updates, this is not an issue.
+  + If you are still waiting after an hour, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you
+1. When the process has completed, download your `movable.sed` file from the site
+
+#### Section IV - Steelminer Prep Work
+
+If your device already has access to the Homebrew Launcher, proceed to [Installing Boot9strap](installing-boot9strap-(frogminer))
+{: .notice--primary}
+
+1. Create a folder named `3ds` on the root of your SD card if it does not already exist
+1. Copy `boot.3dsx` to the root of your SD card
+1. Copy the `steelhax` folder from the Steelhax `.rar` to the root of your SD card
+1. Copy the otherapp payload to the `steelhax` folder on your SD card and rename it to `payload.bin`
+
+#### Section V - Steelminer
+
+1. Insert your SD card into your device
+1. Launch "Steel Diver: Sub Wars" once and select a Mii to initialize your save file
+  + Decline the game update when prompted
+  + If you have already updated the game, use the Data Management menu of the System Settings to delete the update
+1. Exit "Steel Diver: Sub Wars"
+1. Power off your device
+1. Insert your SD card into your computer
+1. Open [the Steelminer Injector website](http://steelminer.jisagi.net/injector) on your computer
+1. Select your `movable.sed` file
+1. Select "Start!"
+1. Wait for the process to complete
+1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<32-character-id>` -> `title` -> `00040000` -> `<8-character-region>` -> `data` on your SD card
+  + **EUR Region**: `000d7e00`
+  + **JPN Region**: `000d7c00`
+  + **USA Region**: `000d7d00`
+1. Copy the new downloaded save file to the `data` folder on your SD card
+  + Overwrite the old save file when prompted
+1. Reinsert your SD card into your device
+1. Power on your device
+1. Launch "Steel Diver: Sub Wars"
+1. If the exploit was successful, your device will have loaded the Homebrew Launcher
+  + You may see an error stating there are no applications found.
+1. Power off your device.
+
+___
+
+### Continue to [Installing Boot9strap](installing-boot9strap-(frogminer))
+{: .notice--primary}
