@@ -6,6 +6,8 @@ title: "boot9strap telepítése (ntrboot)"
 
 ### Fontos tudnivalók
 
+Ez egy jelenleg működő megvalósítása a "FIRM partitions known-plaintext" néven ismert exploitnak, amiről részletesebben olvashatsz [itt](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+
 Ahhoz, hogy használhasd a [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) linkeket ezen az oldalon, szükséged lesz egy torrent kliensre, mint például a [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
 Ahhoz, hogy kicsomagold az oldalon található `.7z` fájlokat, egy fájl archiváló programra lesz szükséged, mint amilyen a [7-Zip](http://www.7-zip.org/) vagy a [The Unarchiver](https://theunarchiver.com/).
@@ -67,7 +69,7 @@ Ahhoz, hogy kicsomagold az oldalon található `.7z` fájlokat, egy fájl archiv
 1. Kapcsold be a készülékedet
 1. A készülékednek az előzőekben a Luma3DS-be kellett bootolnia
   + Ha fekete képernyőt kapsz, [nézd át a hibaelhárítási útmutatót](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
-1. Használd az (A) gombot és D-Pad-et a következő engedélyezéséhez:    
+1. Használd az (A) gombot és D-Pad-et a következő engedélyezéséhez:
   + **"Show NAND or user string in System Settings"**
 1. Mentéshez és újraindításhoz nyomd meg a (Start) gombot
   + Ha ezen a ponton hibát kapsz, csak folytasd az útmutatót a következő oldalon
@@ -90,7 +92,7 @@ Ne hajtsd végre az itt leírt utasításokat mindaddig, amíg nem végeztél az
 ##### Amire szükséged lesz
 
 * Az [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest) legújabb verziója
-* A flashkártyádhoz tartozó flashrom biztonsági mentés    
+* A flashkártyádhoz tartozó flashrom biztonsági mentés
   + Ne feledd, hogy amennyiben az [ntrboot flashelése (több 3DS)](flashing-ntrboot-(3ds-multi-system)) nevű útmutatót követted, a flashrom biztonsági másolata már létezik a megfelelő helyen, és szükségtelen letölteni
   + Amennyiben az [ntrboot flashelése (egy 3DS)](flashing-ntrboot-(3ds-single-system)), vagy az [ntrboot flashelése (NDS)](flashing-ntrboot-(nds)) című útmutatókat követted, a flashrom biztonsági másolata már létezik a flashkártyád SD kártyáján, és csak a lentebb olvasható helyre kell másolnod
   + Ha nem tudod, hogy melyik HW revízióval rendelkezel, próbáld végig az összeset a kártyáddal. Csak a megfelelővel fog elindulni a flashkártyád a menüből, a nem megfelelő flashrom nem brickeli a kártyádat
@@ -128,7 +130,7 @@ Ne hajtsd végre az itt leírt utasításokat mindaddig, amíg nem végeztél az
   + Ez a 3DS-ed SD kártyája, *nem* a flashkártyádé
 1. Hozz létre egy mappát `ntrboot` néven az SD kártya gyökerében
 1. Másold át a `.bin` fájlt a flashrom biztonsági mentésed `.zip`-jéből az SD kártyád gyökerében található `/ntrboot/` mappába
-1. Hozz létre egy mappát `payloads` néven az SD kártyád `luma` nevezetű mappájában 
+1. Hozz létre egy mappát `payloads` néven az SD kártyád `luma` nevezetű mappájában
 1. Másold át az `ntrboot_flasher.firm` az SD kártyád `/luma/payloads/` mappába
 1. Tedd vissza az SD kártyád a készülékedbe
 1. Helyezd be az ntrboot kompatibilis DS / DSi flashkártyádat az eszközödbe
