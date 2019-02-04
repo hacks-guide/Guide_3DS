@@ -1,0 +1,43 @@
+---
+title: "Installing boot9strap (SafeB9SInstaller)"
+---
+
+{% include toc title="Sisällysluettelo" %}
+
+### Tärkeää tietoa
+
+Tämä menetelmä käyttää FIRM-osioiden salaamatonta muotoa (known-plaintext, selitetty [täällä](https://www.3dbrew.org/wiki/3DS_System_Flaws)) hyödyntävää haavoittuvuutta.
+
+### Ohjeet
+
+#### Vaihe I – SafeB9SInstallerin avaaminen
+
+1. Avaa udsploit homebrew-listasta
+1. Kun udsploit on suoritettu, paina (START)-painiketta poistuaksesi
+  + Tämä saattaa vaatia useita yrityksiä
+  + Jos ohjelma jumiutuu, pakota konsoli sulkeutumaan pitämällä virtapainiketta pohjassa ja yritä sitten uudelleen
+1. Avaa safehax homebrew-listasta
+  + Jos saat "PM INIT FAILED" -virheen, varmista, että käynnistit udsploitin langattoman yhteyden ollessa päällä
+  + Jos saat *edelleen* "PM INIT FAILED" -virheen, kokeile käyttää [safehaxin r19-julkaisua](https://github.com/TiniVi/safehax/releases/tag/r19)
+  + Jos ohjelma jumiutuu, pakota konsoli sulkeutumaan pitämällä virtapainiketta pohjassa ja yritä sitten uudelleen
+1. Jos haavoittuvuuden hyödyntäminen onnistui, SafeB9SInstallerin pitäisi avautua
+
+#### Vaihe II – Boot9strapin asentaminen
+
+1. Odota, kunnes kaikki turvatarkistukset on suoritettu
+1. Syötä kehotettaessa annettu painikeyhdistelmä asentaaksesi boot9strapin
+1. Kun toiminto on suoritettu, paina (A):ta käynnistääksesi konsolisi uudelleen
+
+#### Vaihe III – Luma3DS:n määrittäminen
+
+1. Konsolisi pitäisi uudelleenkäynnistyä suoraan Luma3DS:n määritysvalikkoon
+  + Jos saat mustan ruudun, [seuraa tätä vianmääritysohjetta](troubleshooting#musta-ruutu-boot9strapin-asentamisen-jälkeen-kun-sysnand-on-käynnistetty)
+1. Käytä (A):ta ja ristiohjainta ottaaksesi seuraavat asetukset käyttöön:
+  + **"Show NAND or user string in System Settings"**
+1. Paina (START)-painiketta tallentaaksesi ja käynnistääksesi uudelleen
+  + Jos saat virheen, jatka vain seuraavaan osioon
+
+___
+
+### Jatka osioon [Asennuksen viimeistely](finalizing-setup)
+{: .notice--primary}
