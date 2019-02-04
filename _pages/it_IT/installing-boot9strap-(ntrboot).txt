@@ -6,6 +6,8 @@ title: "Installazione di boot9strap (ntrboot)"
 
 ### Lettura necessaria
 
+Questa è un'implementazione funzionante dell'exploit del "testo in chiaro noto nelle partizioni FIRM" spiegato [qui](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+
 Per usare i link [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) di questa guida avrai bisogno di un client torrent come [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
 Per estrarre i file `.7z` presenti in questa pagina, avrai bisogno di un gestore di file compressi come [7-Zip](http://www.7-zip.org/) o [The Unarchiver](https://theunarchiver.com/).
@@ -67,7 +69,7 @@ Per estrarre i file `.7z` presenti in questa pagina, avrai bisogno di un gestore
 1. Accendi la console
 1. La tua console dovrebbe avviarsi all'interno del menu di configurazione di Luma3DS
   + Se ottieni uno schermo nero, [segui questa guida per risolvere il problema](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
-1. Usa il pulsante (A) e il D-Pad per abilitare le seguenti opzioni:    
+1. Usa il pulsante (A) e il D-Pad per abilitare le seguenti opzioni:
   + **"Show NAND or user string in System Settings"**
 1. Premi (Start) per salvare e riavviare il 3DS
   + Se ottieni un errore, continua comunque alla pagina successiva
@@ -90,7 +92,7 @@ Non seguire questa parte finché non avrai completato tutte le altre istruzioni 
 ##### Cosa serve
 
 * L'ultima versione di [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest)
-* Il backup della flashrom per la tua flashcart    
+* Il backup della flashrom per la tua flashcart
   + Se hai seguito la guida [Flash di ntrboot (Con più 3DS)](flashing-ntrboot-(3ds-multi-system)), la flashrom di backup sarà già presente nella cartella corretta e non sarà necessario riscaricarla
   + Se hai seguito la guida [Flash di ntrboot (Singolo 3DS)](flashing-ntrboot-(3ds-single-system)) o [Flash di ntrboot (NDS)](flashing-ntrboot-(nds)), il backup della flashrom sarà già presente nella scheda SD della tua flashcart, e dovrà essere copiato nella posizione indicata di seguito
   + Se non sai quale revisione HW hai, prova tutte quelle disponibili per la tua cartuccia. Solo quella corretta ti permetterà di avviare la flashcart dal menu HOME, ma flasharne una sbagliata non brickerà la cartuccia
@@ -128,7 +130,7 @@ Non seguire questa parte finché non avrai completato tutte le altre istruzioni 
   + Questa è la scheda SD del tuo 3DS, *non* la scheda SD della tua flashcart
 1. Crea una cartella chiamata `ntrboot` nella directory principale della tua scheda SD
 1. Copia il file `.bin` dal backup `.zip` della tua flashrom nella cartella `/ntrboot/` nella directory principale della tua scheda SD
-1. Crea una cartella chiamata `payloads` nella cartella `luma` della tua scheda SD 
+1. Crea una cartella chiamata `payloads` nella cartella `luma` della tua scheda SD
 1. Copia il file `ntrboot_flasher.firm` nella cartella `/luma/payloads` della tua scheda SD
 1. Reinserisci la scheda SD nella tua console
 1. Inserisci la flashcart DS / DSi compatibile con ntrboot nella tua console
