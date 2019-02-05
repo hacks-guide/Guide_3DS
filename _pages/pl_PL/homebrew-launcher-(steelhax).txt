@@ -1,0 +1,62 @@
+---
+title: "Homebrew Launcher (Steelhax)"
+---
+
+{% include toc title="Spis Treści" %}
+
+### Wymagana Lektura
+
+This method of using Seedminer for further exploitation uses your `movable.sed` file to gain access to the Homebrew Launcher using the Steelhax exploit for the purposes of injecting an exploitable DSiWare title into the DS Download Play application. This method requires you to already own (or download) the free "Steel Divers: Sub Wars" game from the eShop.
+
+If your device already has access to the Homebrew Launcher (whether through Steelhax or another exploit), you can skip to [Installing Boot9strap (Frogminer)](installing-boot9strap-(frogminer)).
+{: .notice--success}
+
+If you already have Steel Diver: Sub Wars, this process will overwrite your game's save file!
+{: .notice--warning}
+
+### Czego Potrzebujesz
+
+* The free eShop game "Steel Diver: Sub Wars"
+* Najnowszej wersji [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
+* Najnowszej wersji [Steelhax](https://github.com/VegaRoXas/vegaroxas.github.io/raw/master/files/steelhax-installer.rar)
+* [payloadu otherapp](https://smealum.github.io/3ds/#otherapp) *(dla twojej konsoli i regionu)*
+
+### Instrukcje
+
+#### Sekcja I - Przygotowanie
+
+1. Stwórz folder o nazwie `3ds` w głównym katalogu twojej karty SD, jeśli jeszcze nie istnieje
+1. Skopiuj plik `boot.3dsx` do katalogu głównego twojej karty SD
+1. Skopiuj folder `steelhax` z archiwum Steelhax `.rar` do katalogu głównego karty SD
+1. Skopiuj pobrany plik otherapp payload do folderu `steelhax` na karcie SD i zmień jego nazwę na `payload.bin`
+
+#### Section II - Steelminer
+
+1. Insert your SD card into your device
+1. Uruchom "Steel Diver: Sub Wars" i wybierz postać Mii, aby zainicjować plik zapisu
+  + Jeśli zostaniesz o to poproszony, **anuluj** aktualizację gry
+  + Jeżeli przypadkowo zaktualizowałeś grę, użyj menu Data Management w System Settings, aby usunąć aktualizację
+1. Wyjdź z gry "Steel Diver: Sub Wars"
+1. Wyłącz konsolę
+1. Włóż kartę SD do komputera
+1. Uruchom [stronę Steelminer](http://steelminer.jisagi.net/injector) na swoim komputerze
+1. Wybierz swój plik `movable.sed`
+1. Wybierz "Start!"
+1. Poczekaj na zakończenie procesu
+1. Przejdź kolejno do katalogów na swojej karcie SD `Nintendo 3DS` -> `<ID0>` -> `<32-znakowe-id>` -> `title` -> `00040000` -> `<8-znakowy-region>` -> `data`
+  + **Region EUR**: `000d7e00`
+  + **Region JPN**: `000d7c00`
+  + **Region USA**: `000d7d00`
+1. Skopiuj świeżo pobrany plik zapisu gry do folderu `data` na karcie SD
+  + Jeśli zostaniesz o to poproszony, nadpisz stary plik zapisu
+1. Włóż ponownie kartę SD do konsoli
+1. Włącz konsolę
+1. Uruchom "Steel Diver: Sub Wars"
+1. Jeśli Soundhax zadziałał, uruchomi się Homebrew Launcher
+  + You may see an error stating there are no applications found.
+1. Power off your device.
+
+___
+
+### Continue to [Installing Boot9strap (Frogtool)](installing-boot9strap-(frogtool))
+{: .notice--primary}

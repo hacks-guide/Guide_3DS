@@ -1,0 +1,43 @@
+---
+title: "安裝 boot9strap (透過 SafeB9SInstaller)"
+---
+
+{% include toc title="條目內容" %}
+
+### 必讀事項
+
+此方法是透過『FIRM partitions known-plaintext』漏洞所達成的。詳情請見[此](https://www.3dbrew.org/wiki/3DS_System_Flaws)。
+
+### 操作說明
+
+#### 第一節 — 啟動 SafeB9SInstaller
+
+1. 透過 Homebrew 清單啟動 udsploit
+1. 處理完畢後，按下『Start』鍵退出 udsploit
+  + 可能需要嘗試多次
+  + 如果當機的話，透過電源按鈕將您的主機強制關機，並再試一次
+1. 透過 Homebrew 清單啟動 safehax
+  + 如果您遇到了『PM INIT FAILED』的錯誤訊息的話，請確保您在執行 udsploit 時已將無線通訊功能開啟
+  + 如果還是遇到了『PM INIT FAILED』錯誤訊息的話，請試試看使用 [r19 版的 safehax](https://github.com/TiniVi/safehax/releases/tag/r19)
+  + 如果當機的話，透過電源按鈕將您的主機強制關機，並再試一次
+1. 如果一切成功的話，您將自動進入 SafeB9SInstaller
+
+#### 第二節 — 安裝 boot9strap
+
+1. 等待所有的安全性檢查檢查完畢
+1. 出現提示時，輸入提示的按鍵組合以安裝 boot9strap
+1. 過程結束後，按下『A』重啟主機
+
+#### 第三節 — 設定 Luma3DS
+
+1. 您的主機將會重啟至 Luma3DS 設定選單中
+  + 如果黑屏，[請依循本疑難排解之步驟](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
+1. 透過方向鍵及『A』以開啟下列選項：
+  + **『Show NAND or user string in System Settings』**
+1. 按『Start』鍵以存檔並重新啟動系統
+  + 如果您遇到了錯誤訊息，繼續到下一頁即可
+
+___
+
+### 繼續至[完成安裝](finalizing-setup)
+{: .notice--primary}

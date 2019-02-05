@@ -8,7 +8,7 @@ title: "安裝 boot9strap (透過 DSiWare 植入存檔)"
 
 請注意，如果您在 SD 卡中的 `/luma/payloads/` 資料夾中放有除了 `GodMode9.firm` 的 payload 檔案，在開機時按住『Start』鍵將會顯示一個『加載選單』，從那裏您得透過方向鍵及按鈕『A』選擇『GodMode9』。 
 
-To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download).
+本頁面會有些許的[磁力](https://wikipedia.org/wiki/Magnet_URI_scheme)連結，您將需要個像 [Deluge](http://dev.deluge-torrent.org/wiki/Download). 的 BT 種子下載器來下載磁力連結的檔案。
 
 要解壓此頁面中的`.7z`檔案，您將需要一個壓縮檔管理員，如 [7-Zip](http://www.7-zip.org/) 或 [The Unarchiver](https://theunarchiver.com/)。
 
@@ -19,7 +19,7 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 
 * 兩台 3DS 系列主機
   + **3DS 始源機**: 已安裝*最新版本*的 boot9strap 的主機
-  + **The target 3DS**: the device on stock firmware *on 11.9.0*
+  + **3DS 目標機**：已搭載原廠系統*版本 11.9.0* 的主機
 * 已經於 **3DS 始源機** 上擁有並安裝以下任意可執行漏洞的 DSiWare 遊戲 (盜版遊戲是**無法使用**的)
   + **《堅守陣地(Fieldrunners)》**
   + **《Legends of Exidia》**
@@ -35,12 +35,12 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 
 #### 第一節 — 準備工作
 
-Use a [save manager](https://github.com/FlagBrew/Checkpoint/releases/latest) to backup any saves you care about on *the target 3DS* (it will be formatted!)
+建議先透過[存檔管理器](https://github.com/FlagBrew/Checkpoint/releases/latest)備份 3DS 目標機中任何您認為重要的遊戲存檔(本教學過程需格式化，所有的資料將遺失！)
 {: .notice--warning}
 
 1. 解壓 GodMode9 `.zip` 中的 `GodMode9.firm` 檔案到 **3DS 始源機** SD 卡的 `/luma/payloads/` 資料夾中
 1. 解壓 GodMode9 `.zip` 中的 `gm9` 資料夾到 **3DS 始源機**的 SD 卡根目錄底下
-1. Copy the relevant `public.sav` from the `/dsiware/<8-character-id>/` folder in the 3ds_dsiwarehax_installer `.zip` to the root of **the source 3DS**'s SD card
+1. 將所選遊戲之 `public.sav` 檔案從 3ds_dsiwarehax_installer `.zip` 中的 `/dsiware/<8-character-id>/` 至 3DS 始源機的 SD 卡當中
   + **美版《堅守陣地(Fieldrunners)》**: `4b464445`
   + **歐版《堅守陣地(Fieldrunners)》**: `4b464456`
   + **美版《Legends of Exidia》**: `4b4c4545`
@@ -147,7 +147,7 @@ Use a [save manager](https://github.com/FlagBrew/Checkpoint/releases/latest) to 
 
 #### 第五節 — 刷入 3DS 目標機的 FIRM
 
-1. Copy `boot.firm` from the Luma3DS `.7z` to the root of **the target 3DS**'s SD card
+1. 解壓 Luma3DS `.7z` 內的 `boot.firm` 到 **3DS 目標機** 的SD 卡的根目錄底下
 1. 將 `boot.nds`(B9STool)複製到 **3DS 目標機** SD 卡的根目錄中
 1. 將 `boot.3dsx` 複製到 **3DS 目標機** SD 卡的根目錄中
 1. 於 **3DS 目標機** 中啟動您所選的 DSiWare
@@ -161,7 +161,7 @@ Use a [save manager](https://github.com/FlagBrew/Checkpoint/releases/latest) to 
 
 #### 第六節 — 設定 Luma3DS
 
-1. Boot **the target 3DS** while holding (Select) to launch the Luma configuration menu
+1. 於 **3DS 目標機**開機時，按住「Select」鍵啟動 Luma 設定選單
   + 如果黑屏，[請依循本疑難排解之步驟](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 1. 透過方向鍵及『A』以開啟下列選項：    
   + **『Show NAND or user string in System Settings』**
