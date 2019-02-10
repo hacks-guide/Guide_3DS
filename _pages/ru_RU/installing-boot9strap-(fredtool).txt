@@ -1,0 +1,104 @@
+---
+title: "Установка Boot9strap (Fredtool)"
+---
+
+{% include toc title="Содержание" %}
+
+### Обязательно к прочтению
+
+Этот метод дальнейшей эксплуатации Seedminer использует ваш файл `movable.sed` для расшифровки любого тайтла DSiWare из eShop в целях инъекции уязвимого тайтла DSiWare в приложение DS Download Play. Этот метод требует, чтобы у вас уже была в наличии (или загружена / куплена) DSiWare игра из eShop.
+
+Это рабочая реализация эксплойта "FIRM partitions known-plaintext". Подробнее о нем [здесь](https://www.3dbrew.org/wiki/3DS_System_Flaws) (англ.).
+
+Для использования [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme)-ссылок в этом руководстве необходим torrent-клиент, например [Deluge](http://dev.deluge-torrent.org/wiki/Download).
+
+Чтобы распаковать архивы `.7z` и `.rar`, присутствующие на этой странице, вам понадобится архиватор [7-Zip](http://www.7-zip.org/) или [The Unarchiver](https://theunarchiver.com/).
+
+### Что понадобится
+
+* Любая игра DSiWare из eShop
+  + Пользователи с регионом JPN могут скачать бесплатный тайтл "ほぼ日の健康手帳™" ([![]({{ "/images/qrcodes/50010000005133.png" | absolute_url }}){: height="24px" width="24px"})]({{ "/images/qrcodes/50010000005133.png" | absolute_url }})
+  + Пользователи с регионом USA могут скачать бесплатный тайтл "Nintendo Fan Network" ([![]({{ "/images/qrcodes/50010000013696.png" | absolute_url }}){: height="24px" width="24px"})]({{ "/images/qrcodes/50010000013696.png" | absolute_url }})
+* Ваш файл `movable.sed`, полученный на странице [Seedminer](seedminer)
+* <i class="fa fa-magnet" aria-hidden="true" title="Это magnet-ссылка. Воспользуйтесь торрент-клиентом, чтобы скачать этот файл."></i> - [frogcert.bin](magnet:?xt=urn:btih:d12278ea50bb3574f1fbd327f3d0e2292c70941f&dn=frogcert.bin&tr=https%3a%2f%2ftracker.fastdownload.xyz%3a443%2fannounce&tr=https%3a%2f%2fopentracker.xyz%3a443%2fannounce&tr=http%3a%2f%2fopen.trackerlist.xyz%3a80%2fannounce&tr=http%3a%2f%2ft.nyaatracker.com%3a80%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2fopen.demonii.si%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.port443.xyz%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.vanitycore.co%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&tr=udp%3a%2f%2fthetracker.org%3a80%2fannounce&tr=http%3a%2f%2ftorrent.nwps.ws%3a80%2fannounce&tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.iamhansen.xyz%3a2000%2fannounce&tr=udp%3a%2f%2fbt.xxx-tracker.com%3a2710%2fannounce&tr=http%3a%2f%2f0d.kebhana.mx%3a443%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2ftracker4.itzmx.com%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.justseed.it%3a1337%2fannounce&tr=http%3a%2f%2ftherightsize.net%3a1337%2fannounce&tr=udp%3a%2f%2fretracker.hotplug.ru%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&tr=udp%3a%2f%2f9.rarbg.com%3a2800%2fannounce&tr=https%3a%2f%2f2.track.ga%3a443%2fannounce&tr=udp%3a%2f%2fbigfoot1942.sektori.org%3a6969%2fannounce)
+* Свежая версия [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest)
+* Свежая версия [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
+* Свежая версия [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z-архив`)*
+* Свежая версия [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
+
+#### Часть I - Подготовительные работы
+
+1. Откройте Системные настройки на вашей консоли
+1. Перейдите в `Управление данными` -> `DSiWare`
+1. На вкладке "Память системы" выберите вашу совместимую DSiWare игру
+1. Выберите "Копировать", затем "OK"
+  + Если появится запрос, согласитесь на перезапись
+1. Выключите консоль
+1. Вставьте SD-карту в компьютер
+1. Скопируйте файл `movable.sed` в корень SD-карты
+1. Скопируйте файл `boot.firm` из `.7z-архива` Luma3DS в корень SD-карты
+1. Скопируйте `boot.nds` (B9STool) в корень SD-карты
+1. Скопируйте `boot.3dsx` в корень SD-карты
+1. Скопируйте папку `private` из `.zip-архива` Frogminer_save в корень SD-карты
+1. Перейдите в папку `<ID0>` -> `<32-значный-id>` -> `Nintendo DSiWare` на SD-карте
+  + Этот `<ID0>` будет таким же, как и на странице [Seedminer](seedminer)
+1. Скопируйте файл `<8-значный-id>.bin` в папку на вашем компьютере
+  + Если есть несколько файлов `<8-значный-id>.bin`, убедитесь, что вы скопировали на SD-карту только одну игру DSiWare в разделе `Управление данными` приложения Системные настройки
+
+#### Часть II - Fredtool
+
+1. Перейдите по ссылке [Fredtool](https://fredtool.bruteforcemovable.com/) на компьютере
+1. Выберите свой файл `movable.sed` в поле "Your movable.sed"
+1. Выберите свой файл `<8-значный-id>.bin` в поле "Your dsiware.bin"
+1. Заполните captcha "Я не робот"
+1. Нажмите "Start"
+1. Дождитесь окончания процесса
+1. После окончания процесса скачайте с сайта свой модифицированный архив DSiWare
+1. Скопируйте новый файл `<8-значный-id>.bin` из папки `output/hax/` внутри скачанного архива DSiWare в папку `/<ID0>/<32-значный-id>/Nintendo DSiWare/` на SD-карте
+  + Это должен быть другой `<8-значный-id>`, отличный от оригинального
+  + Не удаляйте существующий файл `<8-значный-id>.bin`
+1. Вставьте SD-карту обратно в консоль
+1. Включите консоль
+1. Откройте Системные настройки на вашей консоли
+1. Перейдите в `Управление данными` -> `DSiWare`
+1. На вкладке "Карта SD" выберите тайтл "Haxxxxxxxxx!"
+1. Выберите "Копировать", затем "OK"
+1. Вернитесь в главное меню Системных настроек
+1. Перейдите в `Интернет-настройки` -> `Подключения Nintendo DS`, затем нажмите "OK"
+1. Если эксплойт сработал корректно, запустится японская версия Flipnote Studio
+
+#### Часть III - Эксплойт Flipnote
+
+Если вы предпочитаете визуальное руководство вместо этой части, оно доступно [здесь](https://zoogie.github.io/web/flipnote_directions/).
+{: .notice--info}
+
+1. Пройдите процесс первоначальной настройки в запущенной игре, пока не попадете в главное меню
+  + Выберите опцию слева при появлении запроса во время процесса настройки
+1. С помощью сенсорного экрана нажмите на большой значок слева, затем на значок с SD-картой
+1. После того, как загрузится меню, нажмите на значок с лицом, а затем на кнопку справа внизу, чтобы продолжить
+1. Нажмите на значок с лягушкой слева внизу
+  + Вместо этого вы можете нажать (X) или (Вверх) в зависимости от того, что отображается на верхнем экране
+1. Нажмите на вторую кнопку в верхнем ряду со значком кинопленки
+1. Прокрутите вправо, чтобы выбрать кадр "3/3"
+1. Нажмите на третий значок с буквой "A"
+1. Прокрутите влево, чтобы выбрать кадр "1/3"
+1. Нажмите на четвертый значок с буквой "A"
+1. Если эксплойт сработал корректно, запустится b9sTool
+1. Выберите "Install boot9strap" и подтвердите выбор
+1. Закройте b9sTool, затем выключите консоль
+  + При необходимости выключите консоль принудительно, удерживая кнопку питания
+  + Если вы видите меню настроек Luma, продолжайте выполнять инструкции, не выключая консоль
+
+#### Часть IV - Настройка Luma3DS
+
+1. Включите консоль кнопкой питания, держа нажатой кнопку (Select), чтобы попасть в меню настроек Luma
+  + Если вы не можете попасть в меню настроек Luma, [следуйте этим инструкциям](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md) (англ.)
+1. Нажимая (A) выберите следующие пункты:
+  + **"Show NAND or user string in System Settings"**
+1. Нажмите (Start), чтобы сохранить настройки и перезагрузиться
+  + Если экран остаётся чёрным, обратитесь к разделу [Проблемы и их решения](troubleshooting#черный-экран-при-загрузке-sysnand-после-установки-boot9strap)
+
+___
+
+### Следующий шаг: [Завершение установки](finalizing-setup)
+{: .notice--primary}
