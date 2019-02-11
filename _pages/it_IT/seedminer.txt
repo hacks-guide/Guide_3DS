@@ -6,54 +6,54 @@ title: "Seedminer"
 
 ### Lettura necessaria
 
-To install boot9strap on your device, we exploit an oversight in the security restrictions applied to "DSiWare" applications.
+Per installare boot9strap sulla tua console, dovremo approfittare di un errore nelle restrizioni di sicurezza relative alle applicazioni "DSiWare".
 
-To accomplish this, we use a tool called Seedminer to calculate the DSiWare encryption key (`movable.sed`) for your device. We then use this DSiWare encryption key to decrypt a compatible DSiWare application and inject an exploit into it to run our own code (the exact exploit used will depend on your device's region).
+Utilizzeremo perciò un'applicazione chiamata Seedminer per calcolare la chiave di criptazione (`movable.sed`) dei DSiWare della tua console. Useremo quindi questa chiave per decriptare un'applicazione DSiWare compatibile, per poi iniettarci un exploit che eseguirà il nostro codice (il tipo di exploit dipenderà dalla regione della tua console).
 
-If this key were completely random, the encryption key would be impossible to break on current computing hardware. Fortunately, the first half of the key (`movable_part1.sed`) is actually mathematically related to your device's Friend Code, allowing us to break the encryption. For information on how Seedminer works, please see [this presentation](https://zoogie.github.io/web/34⅕c3).
+Se questa chiave fosse completamente casuale, la chiave di criptazione sarebbe impossibile da calcolare con l'hardware correntemente disponibile. Per fortuna, la prima metà (`movable_part1.sed`) è matematicamente correlata al Codice Amico della tua console, e questo ci permette di infrangere la sua sicurezza. Per ulteriori informazioni sul funzionamento di Seedminer, è possibile consultare [questa presentazione](https://zoogie.github.io/web/34⅕c3).
 
-Note that this tool requires a PC with a powerful graphics card to break your device's DSiWare encryption. If you do not have access to one of these, there also exists several online helper services where a volunteer running automated software will do this for you.
+Tieni presente che questo programma richiede un PC con una scheda grafica potente per infrangere la criptazione DSiWare della tua console. Se non ne possiedi uno, esistono diversi servizi online basati su volontari che forniscono il proprio PC per lo scopo.
 
 ### Istruzioni
 
-#### Section I - Compatibility Tests
+#### Sezione I - Test di Compatibilità
 
-While these tests are not strictly necessary to perform the Seedminer exploit, the follow-up exploits to this do require this test to be performed and it would be a waste of time and effort to perform Seedminer without the ability to use the other exploits.
+Anche se questi test non sono strettamente necessari per l'esecuzione dell'exploit Seedminer, gli exploit successivi li richiederanno e sarebbe uno spreco di tempo eseguire il primo senza poter poi eseguire i secondi.
 
-There are two different methods for building on the Seedminer exploit (described in more detail at the bottom of this page), so even if one of these test fails you can still use another method as long as the other does not fail.
+Dopo l'esecuzione dell'exploit Seedminer possono essere eseguiti due diversi exploit (descritti in fondo alla pagina), quindi anche se uno dei test dovesse fallire puoi sempre tentare il secondo.
 
-#### DS Internet Settings Test (used for Fredtool)
+#### Test Impostazioni Internet DS (usato per Fredtool)
 
-1. Go to System Settings, then "Internet Settings", then "Nintendo DS Connections"
-1. Press "OK"
-1. If your device loads into a "Nintendo Wi-Fi Connection Setup" menu, the test was successful
-  + If the screen stays black or appears to freeze, the test has failed and you will not be able to use the Fredtool method which requires a functioning DS Internet Settings
-1. Exit this menu
+1. Vai su "Impostazioni della console", "Impostazioni Internet", quindi "Connessioni Nintendo DS"
+1. Premi "OK"
+1. Se la tua console carica il menu "Configurazione Nintendo Wi-Fi Connection", il test ha avuto successo
+  + Se lo schermo rimane nero o sembra bloccarsi, il test è fallito e non potrai utilizzare il metodo Fredtool, dato che richiede un menu "Connessioni Nintendo DS" funzionale
+1. Esci da questo menu
 
-#### DS Download Play Test (used for Frogtool)
+#### Test Modalità Download DS (usato per Frogtool)
 
 1. Avvia l'applicazione "Modalità download" (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
-1. Select "Nintendo DS"
-1. If your device loads into a "Download software via DS Download Play" menu, the test was successful
-  + If the screen stays black or appears to freeze, the test has failed and you will not be able to use the Frogtool method which requires a functioning DS Download Play
-1. Exit this menu
+1. Seleziona "Nintendo DS"
+1. Se la console ora mostra la scritta "Scarica software tramite il download DS.", il test ha avuto successo
+  + Se lo schermo rimane nero o sembra bloccarsi, il test è fallito e non potrai utilizzare il metodo Frogtool, dato che richiede una Modalità download DS funzionale
+1. Esci da questo menu
 
 #### Section II - Prep Work
 
 1. Inserisci la scheda SD nel tuo computer
-1. Navigate to the `Nintendo 3DS` folder on your SD card
-1. Copy the 32 character long name of the folder you see
-  + If you see multiple folders like this, perform the following:
-  + Rename the `Nintendo 3DS` folder to `BACKUP_Nintendo 3DS`
-  + Reinsert your SD card into your device and power on your device
-  + Wait for the device to generate the SD card data
-  + Power off your device and reinsert your SD card into your computer
-  + Navigate to the `Nintendo 3DS` folder on your SD card
-  + Copy the 32 character long name of the folder you see
-  + Delete the `Nintendo 3DS` folder
-  + Rename the `BACKUP_Nintendo 3DS` folder to `Nintendo 3DS`
-1. Paste your 32 character long folder name into a document you can reference later
-  + This folder name is also known as your "ID0"
+1. Entra nella cartella `Nintendo 3DS` della tua scheda SD
+1. Copia la stringa di 32 caratteri del nome della cartella qui presente
+  + Se vedi più cartelle dal nome lungo, segui i seguenti passaggi:
+  + Rinomina la cartella `Nintendo 3DS` in `BACKUP_Nintendo 3DS`
+  + Reinserisci la tua scheda SD nella console, e accendila
+  + Attendi che la console generi i dati nella scheda SD
+  + Spegni la console e reinserisci la scheda SD nel tuo computer
+  + Entra nella cartella `Nintendo 3DS` della tua scheda SD
+  + Copia la stringa di 32 caratteri del nome della cartella qui presente
+  + Elimina la cartella `Nintendo 3DS`
+  + Rinomina la cartella `BACKUP_Nintendo 3DS` in `Nintendo 3DS`
+1. Incolla la stringa di 32 caratteri in un documento che potrai consultare più avanti
+  + Il nome di questa cartella è il tuo "ID0"
 1. Accendi la console
 1. Accedi alla lista di amici (l'[icona con un viso arancione]({{ "/images/friend-list-icon.png" | absolute_url }}) nella riga superiore del menu HOME)
   + If you receive an error and are kicked out of the menu, you either must create a new Mii or your console cannot connect to Nintendo's servers (due to a ban or connection issues)
