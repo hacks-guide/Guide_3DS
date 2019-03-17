@@ -6,39 +6,39 @@ title: "Seedminer"
 
 ### 必讀事項
 
-To install boot9strap on your device, we exploit an oversight in the security restrictions applied to "DSiWare" applications.
+我們將透過 DSiWare 遊戲應用程式中所存在的一項安全性漏洞自您的裝置中安裝 boot9strap。
 
-To accomplish this, we use a tool called Seedminer to calculate the DSiWare encryption key (`movable.sed`) for your device. We then use this DSiWare encryption key to decrypt a compatible DSiWare application and inject an exploit into it to run our own code (the exact exploit used will depend on your device's region).
+為達成這點，我們將透過一項稱為 Seedminer 的工具來計算您裝置中所持有的 DSiWare 加密金鑰 (`movable.sed`)。 我們將透過此 DSiWare 加密金鑰解密任一相容的 DSiWare 以植入一項安全性漏洞好讓我們執行任何想要的程式 (漏洞種類視您的主機區域而定)。
 
-If this key were completely random, the encryption key would be impossible to break on current computing hardware. Fortunately, the first half of the key (`movable_part1.sed`) is actually mathematically related to your device's Friend Code, allowing us to break the encryption. For information on how Seedminer works, please see [this presentation](https://zoogie.github.io/web/34⅕c3).
+假如該金鑰是亂數產生的，以現在的電腦技術而言將無法破解該加密金鑰。 好消息是該金鑰的前半段 (`movable_part1.sed`) 其實跟您裝置的好友代碼是有相關性的。透過這點，我們將能破解該金鑰。 如果想知道 Seedminer 怎麼運作的，請見該[投影片](https://zoogie.github.io/web/34⅕c3)。
 
-Note that this tool requires a PC with a powerful graphics card to break your device's DSiWare encryption. If you do not have access to one of these, there also exists several online helper services where a volunteer running automated software will do this for you.
+請注意，該工具將需要一台擁有較強顯卡的電腦以破解您裝置所持有的加密金鑰。 如果您並沒有像這樣的設備，網路上將有自願性的服務幫您破解此金鑰。
 
 ### 操作說明
 
-#### Section I - Compatibility Tests
+#### 第一節 — 相容性測試
 
 While these tests are not strictly necessary to perform the Seedminer exploit, the follow-up exploits to this do require this test to be performed and it would be a waste of time and effort to perform Seedminer without the ability to use the other exploits.
 
 There are two different methods for building on the Seedminer exploit (described in more detail at the bottom of this page), so even if one of these test fails you can still use another method as long as the other does not fail.
 
-#### DS Internet Settings Test (used for Fredtool)
+#### DS 網路設定測試 (用於 Fredtool)
 
-1. Go to System Settings, then "Internet Settings", then "Nintendo DS Connections"
-1. Press "OK"
-1. If your device loads into a "Nintendo Wi-Fi Connection Setup" menu, the test was successful
+1. 進入『系統設定 (System Settings)』中的『網路設定 (Internet Settings)』並選取『任天堂 DS 連線 (Nintendo DS Connections)』
+1. 按『OK』
+1. 如果『Nintendo Wi-Fi Connection Setup』選單跳出則代表測試成功
   + If the screen stays black or appears to freeze, the test has failed and you will not be able to use the Fredtool method which requires a functioning DS Internet Settings
-1. Exit this menu
+1. 退出此選單
 
-#### DS Download Play Test (used for Frogtool)
+#### DS 下載通信測試 (用於 Frogtool)
 
-1. 啟動「下載通信（Download Play）」程式 (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
+1. 啟動『下載通信（Download Play）」程式 (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
 1. Select "Nintendo DS"
 1. If your device loads into a "Download software via DS Download Play" menu, the test was successful
   + If the screen stays black or appears to freeze, the test has failed and you will not be able to use the Frogtool method which requires a functioning DS Download Play
-1. Exit this menu
+1. 退出此選單
 
-#### Section II - Prep Work
+#### 第二節 — 準備工作
 
 1. 將 SD 卡插入至電腦中
 1. Navigate to the `Nintendo 3DS` folder on your SD card
