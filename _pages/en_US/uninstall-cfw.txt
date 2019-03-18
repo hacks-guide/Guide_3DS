@@ -28,36 +28,38 @@ Note that if you have any payload files other than `GodMode9.firm` in the `/luma
 
 #### Section I - Safety Test
 
-1. Launch GodMode9 by holding (Start) during boot
-1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
-1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
-  + Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
-1. Navigate to `[1:] SYSNAND CTRNAND > title > 00040138 > (X)0000002 > content`
-  + On a "New" edition console, the (X) will instead be 2
-  + On an "old" edition console, the (X) will instead be 0
-1. Select the `.app` file
-1. Select `NCCH Options`
-1. Select `Mount image to drive`
-1. In the window that appears, open the `exefs` folder
-1. In this folder, select the `.firm` file
-1. Select "Firm Options"
-1. Select "Boot Firm"
-  + If prompted, choose to decrypt and make a copy
-1. You should boot into the regular 3DS Home Menu. If you do, turn your device off and on again and continue to the next section
-  + If you do NOT boot into the regular 3DS Home Menu, continuing with these instructions **WILL** brick your device. You should ask at [Nintendo Homebrew](https://discord.gg/C29hYvh) for advice.
-  
-#### Section II - Prep Work
-
-1. On your device, navigate to System Settings > Data Management > Nintendo 3DS > Software
-1. In this list of software, delete any non-Nintendo content you installed while using CFW
-  + This includes common system software such as FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint, and others, along with any non-eShop games
-  + Failure to remove CFW software before uninstalling CFW may break access to the Data Management menu after uninstalling CFW
 1. Power off your device
 1. Insert your SD card into your computer
 1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
 1. Reinsert your SD card into your device
 1. Power on your device
+1. Launch GodMode9 by holding (Start) during boot
+1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
+1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
+  + Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
+1. Navigate to `[1:] SYSNAND CTRNAND > title > 00040138 > (X)0000002 > content`
+  + On a "New" edition console, the (X) will instead be 2
+  + On an "Old" edition console, the (X) will instead be 0
+1. Select the `.app` file
+1. Select `NCCH Image Options`
+1. Select `Mount image to drive`
+1. In the window that appears, open the `exefs` folder
+1. In this folder, select the `.firm` file
+1. Select "Firm Options"
+1. Select "Boot Firm"
+1. When prompted, choose to decrypt and make a copy
+1. You should boot into the regular 3DS Home Menu. If you do, power your device off and continue to the next section
+  + If you do NOT boot into the regular 3DS Home Menu, continuing with these instructions **WILL** brick your device. You should ask at Nintendo Homebrew on Discord for advice, linked above
+  
+#### Section II - Prep Work
+
+1. Power on your device
+1. Navigate to System Settings > Data Management > Nintendo 3DS > Software
+1. In this list of software, delete any non-Nintendo content you installed while using CFW
+  + This includes common system software such as FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint, and others, along with any non-eShop games
+  + Failure to remove CFW software before uninstalling CFW may break access to the Data Management menu after uninstalling CFW
+1. Power off your device
 
 #### Section III - Running Uninstall Script
 
