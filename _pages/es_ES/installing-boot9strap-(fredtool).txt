@@ -1,26 +1,24 @@
 ---
-title: "Installing Boot9strap (Fredtool)"
+title: "Instalar Boot9strap (Fredtool)"
 ---
 
 {% include toc title="Tabla de contenidos" %}
 
 ### Lectura requerida
 
-This method of using Seedminer for further exploitation uses your `movable.sed` file to decrypt any DSiWare eShop title for the purposes of injecting an exploitable DSiWare title into the DS Internet Settings application. This requires you to already own (or download / buy) a DSiWare game from the eShop.
+Este método de uso de Seedminer, para hacer un mejor exploit, utiliza tu archivo `movable.sed` para desencriptar cualquier título de DSiWare de la eShop que haya disponible con el objetivo de inyectar un título de DSiWare vulnerable en la aplicación de Configuración de Internet de DS. Esto requiere que ya poseas (o descargues/compres) un juego de DSiWare de la eShop.
 
 Todo esto son implementaciones funcionales del exploit "Particiones FIRM de texto plano conocido" detallado [aquí](https://www.3dbrew.org/wiki/3DS_System_Flaws) (*en inglés*).
-
-Para utilizar los enlaces [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) de esta página, vas a necesitar un cliente torrent como [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
 Para extraer los archivos `.7z` y `.rar` enlazados esta página, necesitarás un gestor de archivos como [7-Zip](http://www.7-zip.org/) o [The Unarchiver](https://theunarchiver.com/).
 
 ### Qué necesitas
 
-* Any eShop DSiWare game
-  + JPN region users can download the free title "ほぼ日の健康手帳™" ([![]({{ "/images/qrcodes/50010000005133.png" | absolute_url }}){: height="24px" width="24px"})]({{ "/images/qrcodes/50010000005133.png" | absolute_url }})
-  + USA region users can download the free title "Nintendo Fan Network" ([![]({{ "/images/qrcodes/50010000013696.png" | absolute_url }}){: height="24px" width="24px"})]({{ "/images/qrcodes/50010000013696.png" | absolute_url }})
-* Your `movable.sed` file from completing [Seedminer](seedminer)
-* The latest release of [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest)
+* Cualquier juego de DSiWare de la eShop
+  + Los usuarios de región JPN pueden descargar gratis el título "ほぼ日の健康手帳™" ([![]({{ "/images/qrcodes/50010000005133.png" | absolute_url }}){: height="24px" width="24px"})]({{ "/images/qrcodes/50010000005133.png" | absolute_url }})
+  + Los usuarios de región USA pueden descargar gratis el título "Nintendo Fan Network" ([![]({{ "/images/qrcodes/50010000013696.png" | absolute_url }}){: height="24px" width="24px"})]({{ "/images/qrcodes/50010000013696.png" | absolute_url }})
+* Tu archivo `movable.sed` proveniente de haber completado [Seedminer](seedminer)
+* La última versión de [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest)
 * La ultima versión de [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
 * La última versión de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(el archivo`.7z`)*
 * La última versión [del Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
@@ -29,55 +27,55 @@ Para extraer los archivos `.7z` y `.rar` enlazados esta página, necesitarás un
 
 1. Entra a Configuración de la consola
 1. Ve a `Data Management` -> `DSiWare`
-1. Under the "System Memory" section, select your DSiWare game
+1. Ve a la sección "Memoria de la Consola" y selecciona tu juego de DSiWare
 1. Selecciona "Copiar", luego "OK"
   + Si se te pide, sobreescribe la copia en caso de existir
 1. Apaga tu consola
 1. Inserta tu tarjeta SD en tu computadora
-1. Copy your `movable.sed` file to the root of your SD card
+1. Copia tu archivo `movable.sed` a la raíz de tu tarjeta SD
 1. Copia el archivo `boot.firm` desde el `.7z` de Luma3DS a la raíz de tu tarjeta SD
 1. Copia `boot.nds` (B9STool) a la raíz de tu tarjeta SD
 1. Copia `boot.3dsx` a la raíz de tu tarjeta SD
-1. Copy the `private` folder from the Frogminer_save `.zip` to the root of your SD card
-1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<32-character-id>` -> `Nintendo DSiWare` on your SD card
-  + This `<ID0>` will be the same one that you used in [Seedminer](seedminer)
+1. Copia la carpeta `private` contenida en el `.zip` de Frogminer_save a la raíz de tu tarjeta SD
+1. Ve a `Nintendo 3DS` -> `<ID0>` -> `<ID-de-32-caracteres>` -> `Nintendo DSiWare` en tu tarjeta SD
+  + La `<ID0>` en cuestión es la misma que usaste en [Seedminer](seedminer)
 1. Copia `<ID-de-8-caracteres>.bin` a una carpeta en tu computadora
-  + If there are multiple `<8-character-id>.bin` files, just pick one. It doesn't matter which you use.
+  + Si hay varios archivos llamados `<ID-de-8-caracteres>.bin`, elige uno cualquiera. No importa cuál uses.
 
-#### Section II - Fredtool
+#### Sección II - Fredtool
 
-1. Open [Fredtool](https://fredtool.bruteforcemovable.com/) on your computer
-1. Select your `movable.sed` file for the "Your movable.sed" field
-1. Select your `<8-character-id>.bin` file for the "Your dsiware.bin" field
+1. Abre [Fredtool](https://fredtool.bruteforcemovable.com/) en tu computadora
+1. Selecciona tu archivo `movable.sed` para completar el campo "Your movable.sed"
+1. Selecciona tu archivo `<ID-de-8-caracteres>.bin` para completar el campo "Your dsiware.bin"
 1. Completa el captcha que dice "I'm not a robot"
-1. Select "Start"
+1. Selecciona "Start"
 1. Espera a que el procesos se complete
-1. When the process has completed, download your modified DSiWare archive from the site
-1. Copy the `42383841.bin` file from the `output/hax/` folder of the downloaded DSiWare archive to the `Nintendo 3DS/<ID0>/<32-character-id>/Nintendo DSiWare/` folder on your SD card
-  + This should be different than your initial `<8-character-id>.bin` file
-  + Do not remove any existing `<8-character-id>.bin` files
+1. Cuando el proceso haya finalizado, descarga tu archivo modificado de DSiWare desde el sitio
+1. Copia el archivo `42383841.bin` presente en la carpeta `output/hax/` del archivo DSiWare que descargaste, a la carpeta `Nintendo 3DS/<ID0>/<32-character-id>/Nintendo DSiWare/` en tu tarjeta SD
+  + El mismo debería ser distinto al archivo `<ID-de-8-caracteres>.bin` inicial
+  + No remuevas ninguno de los archivos `<ID-de-8-caracteres>.bin`
 1. Vuelve a insertar tu tarjeta SD en tu consola
 1. Enciende tu consola
 1. Entra a Configuración de la consola
 1. Ve a `Data Management` -> `DSiWare`
-1. Under the "SD Card" section, select the "Haxxxxxxxxx!" title
+1. En la sección "Tarjeta SD", elige el título "Haxxxxxxxxx!"
 1. Selecciona "Copiar", luego "OK"
-1. Return to main menu of the System Settings
-1. Navigate to `Internet Settings` -> `Nintendo DS Connections`, then select "OK"
+1. Regresa al menú principal de Configuración de la Consola
+1. Ve a `Configuraciones de Internet` -> `Conexiones de Nintendo DS`, luego elige "OK"
 1. Si el exploit fue exitoso, tu consola habrá cargado la versión japonesa de Flipnote Studio
 
-#### Section III - Flipnote Exploit
+#### Sección III - Exploit de Flipnote
 
-If you would prefer a visual guide to this section, one is available [here](https://zoogie.github.io/web/flipnote_directions/).
+Si prefieres una guía visual para esta parte, hay una disponible [aquí](https://zoogie.github.io/web/flipnote_directions/).
 {: .notice--info}
 
 1. Completa la configuración del juego hasta que llegues al menú principal
   + Selecciona la opción de la izquierda cuando te lo pida durante la configuración inicial
 1. Utilizando la pantalla táctil, selecciona el cuadrado grande de la izquierda, luego selecciona el cuadrado con el ícono de una tarjeta SD
 1. Una vez que cargue el menú, selecciona el ícono con una cara, luego el ícono abajo a la derecha de la pantalla para continuar
-1. Select the frog icon at the bottom left
-  + Alternatively, press (X) or (UP) on the D-Pad depending on which is shown on the top screen
-1. Select the second button along the top with a film-reel icon
+1. Elige el ícono de la rana abajo del todo a la izquierda
+  + Alternativamente, puedes presionar (X) o (Arriba) en el D-Pad dependiendo de cuál que se muestre en la pantalla superior
+1. Elige el segundo botón de los que están en la parte de arriba, con un ícono de rollo de película
 1. Ve hacia la derecha hasta seleccionar el carrete "3/3"
 1. Toca el tercer cuadrado con una letra "A" en él
 1. Ve hacia la izquierda hasta el carrete "1/3"
@@ -86,7 +84,7 @@ If you would prefer a visual guide to this section, one is available [here](http
 1. Selecciona "Install boot9strap" y confirma
 1. Sal de b9sTool, luego apaga tu consola
   + Puede que tengas que forzar el apagado manteniendo pulsado el botón de encendido
-  + If you see the Luma Configuration screen, continue with the guide without powering off
+  + Si ves la pantalla de configuración de Luma, continúa con la guía sin apagar la consola
 
 #### Sección IV - Configurar Luma3DS
 
@@ -97,17 +95,17 @@ If you would prefer a visual guide to this section, one is available [here](http
 1. Presiona (Start) para guardar y reiniciar
   + Si la pantalla se queda en negro, [sigue la guía de problemas](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 
-#### Section V - Restoring DS Connection Settings
+#### Sección V - Restaurar el menú de Configuración de Internet de DS
 
 1. Apaga tu consola
 1. Inserta tu tarjeta SD en tu computadora
-1. Copy the `42383841.bin` file from the `output/clean/` folder of the downloaded DSiWare archive to the `Nintendo 3DS/<ID0>/<32-character-id>/Nintendo DSiWare/` folder on your SD card
-  + Replace the existing `42383841.bin` file
+1. Copia el archivo `42383841.bin` presente en la carpeta `output/clean/` del archivo de DSiWare que descargaste a la carpeta `Nintendo 3DS/<ID0>/<32-character-id>/Nintendo DSiWare/` en tu tarjeta SD
+  + Reemplaza el archivo `42383841.bin` ya existente
 1. Vuelve a insertar tu tarjeta SD en tu consola
 1. Enciende tu consola
 1. Entra a Configuración de la consola
 1. Ve a `Data Management` -> `DSiWare`
-1. Under the "SD Card" section, select the "Nintendo DSi™" title
+1. En la sección "Tarjeta SD", elige el título "Nintendo DSi™"
 1. Selecciona "Copiar", luego "OK"
 
 ___
