@@ -6,81 +6,79 @@ title: "Seedminer"
 
 ### 必讀事項
 
-To install boot9strap on your device, we exploit an oversight in the security restrictions applied to "DSiWare" applications.
+我們將透過 DSiWare 遊戲應用程式中所存在的一項安全性漏洞自您的裝置中安裝 boot9strap。
 
-To accomplish this, we use a tool called Seedminer to calculate the DSiWare encryption key (`movable.sed`) for your device. We then use this DSiWare encryption key to decrypt a compatible DSiWare application and inject an exploit into it to run our own code (the exact exploit used will depend on your device's region).
+為達成這點，我們將透過一項稱為 Seedminer 的工具來計算您裝置中所持有的 DSiWare 加密金鑰 (`movable.sed`)。 我們將透過此 DSiWare 加密金鑰解密任一相容的 DSiWare 以植入一項安全性漏洞好讓我們執行任何想要的程式 (漏洞種類視您的主機區域而定)。
 
-If this key were completely random, the encryption key would be impossible to break on current computing hardware. Fortunately, the first half of the key (`movable_part1.sed`) is actually mathematically related to your device's Friend Code, allowing us to break the encryption. For information on how Seedminer works, please see [this presentation](https://zoogie.github.io/web/34⅕c3).
+假如該金鑰是亂數產生的，以現在的電腦技術而言將無法破解該加密金鑰。 好消息是該金鑰的前半段 (`movable_part1.sed`) 其實跟您裝置的好友代碼是有相關性的。透過這點，我們將能破解該金鑰。 如果想知道 Seedminer 怎麼運作的，請見該[投影片](https://zoogie.github.io/web/34⅕c3)。
 
-Note that this tool requires a PC with a powerful graphics card to break your device's DSiWare encryption. If you do not have access to one of these, there also exists several online helper services where a volunteer running automated software will do this for you.
+請注意，該工具將需要一台擁有較強顯卡的電腦以破解您裝置所持有的加密金鑰。 如果您並沒有像這樣的設備，網路上將有自願性的服務幫您破解此金鑰。
 
 ### 操作說明
 
-#### Section I - Compatibility Tests
+#### 第一節 — 相容性測試
 
-While these tests are not strictly necessary to perform the Seedminer exploit, the follow-up exploits to this do require this test to be performed and it would be a waste of time and effort to perform Seedminer without the ability to use the other exploits.
+儘管這些測試對於執行 Seedminer 漏洞並非必要，但若不進行此測試的話可能因 Seedminer 漏洞失效而白白浪費時間和精力而無法使用其他依賴於 Seedminer 的漏洞。
 
-There are two different methods for building on the Seedminer exploit (described in more detail at the bottom of this page), so even if one of these test fails you can still use another method as long as the other does not fail.
+以下為兩種不同構建 Seedminer 漏洞的方法 (詳述於該頁面底端)，因此即使其中一個測試失敗，只要另一個並沒有失效，您還是可以使用另一種方​​法。
 
-#### DS Internet Settings Test (used for Fredtool)
+#### DS 網路設定測試 (用於 Fredtool)
 
-1. Go to System Settings, then "Internet Settings", then "Nintendo DS Connections"
-1. Press "OK"
-1. If your device loads into a "Nintendo Wi-Fi Connection Setup" menu, the test was successful
-  + If the screen stays black or appears to freeze, the test has failed and you will not be able to use the Fredtool method which requires a functioning DS Internet Settings
-1. Exit this menu
+1. 進入『系統設定 (System Settings)』中的『網路設定 (Internet Settings)』並選取『任天堂 DS 連線 (Nintendo DS Connections)』
+1. 按『OK』
+1. 如果『Nintendo Wi-Fi Connection Setup』選單跳出則代表測試成功
+  + 如果您的螢幕黑屏或死當，這代表該測試執行失敗且您將無法使用 Frogminer (此漏洞需要能正常使用 DS 網路設定的主機)
+1. 退出此選單
 
-#### DS Download Play Test (used for Frogtool)
+#### DS 下載通信測試 (用於 Frogtool)
 
-1. 啟動「下載通信（Download Play）」程式 (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
-1. Select "Nintendo DS"
-1. If your device loads into a "Download software via DS Download Play" menu, the test was successful
-  + If the screen stays black or appears to freeze, the test has failed and you will not be able to use the Frogtool method which requires a functioning DS Download Play
-1. Exit this menu
+1. 啟動『下載通信(Download Play)』程式 (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
+1. 選擇『任天堂 DS (Nintendo DS)』
+1. 如果您的裝置可正常進入 DS『下載通信(Download Play)』程式則代表測試成功
+  + 如果您的螢幕黑屏或死當，這代表該測試執行失敗且您將無法使用 Frogtool (此漏洞需要能正常使用『下載通信 (Download Play)』程式的主機)
+1. 退出此選單
 
-#### Section II - Prep Work
+#### 第二節 — 準備工作
 
 1. 將 SD 卡插入至電腦中
-1. Navigate to the `Nintendo 3DS` folder on your SD card
-1. Copy the 32 character long name of the folder you see
-  + If you see multiple folders like this, perform the following:
-  + Rename the `Nintendo 3DS` folder to `BACKUP_Nintendo 3DS`
-  + Reinsert your SD card into your device and power on your device
-  + Wait for the device to generate the SD card data
-  + Power off your device and reinsert your SD card into your computer
-  + Navigate to the `Nintendo 3DS` folder on your SD card
-  + Copy the 32 character long name of the folder you see
-  + Delete the `Nintendo 3DS` folder
-  + Rename the `BACKUP_Nintendo 3DS` folder to `Nintendo 3DS`
-1. Paste your 32 character long folder name into a document you can reference later
-  + This folder name is also known as your "ID0"
+1. 移動至 SD 卡的 `Nintendo 3DS` 資料夾中
+1. 複製含有 32 字元的資料夾的名稱
+  + 如果您看到許多類似的資料夾，請遵循下列步驟：
+  + 將 `Nintendo 3DS` 資料夾重新命名為 `BACKUP_Nintendo 3DS`
+  + 將您的 SD 卡插回至您的裝置中並開機
+  + 等待您的裝置生成 SD 卡中的資料
+  + 關機並將 SD 卡插回電腦中
+  + 移動至 SD 卡的 `Nintendo 3DS` 資料夾中
+  + 複製含有 32 字元的資料夾的名稱
+  + 刪除 `Nintendo 3DS` 資料夾
+  + 將 `BACKUP_Nintendo 3DS` 資料夾重新命名為 `Nintendo 3DS`
+1. 將該 32 字元字串複製至記事本中；等一下會用到它
+  + 這個資料夾名稱也就是我們所謂的『ID0』
 1. 啟動您的主機
 1. 開啟您的好友清單 (HOME 主選單中最上方的[橘色笑臉圖示]({{ "/images/friend-list-icon.png" | absolute_url }}))
-  + If you receive an error and are kicked out of the menu, you either must create a new Mii or your console cannot connect to Nintendo's servers (due to a ban or connection issues)
-1. Find your Mii profile, then find the "Friend Code" field on the top screen
+  + 如果您遇到錯誤訊息且從清單中被踢回主選單，那麼您必須先創立一個 Mii，或者您的主機無法連線至任天堂伺服器 (您的主機可能已被封殺或有網路連線之問題)
+1. 選擇您的 Mii 個人檔案，並找尋您的好友代碼
 
-#### Section III - Seedminer
+#### 第三節 — Seedminer
 
-1. Open [Bruteforce Movable](https://bruteforcemovable.com/) on your computer
-  + This site can automate the retrieval of `movable_part1.sed` (using a bot 3DS console) and the breaking of your device's DSiWare encryption (using a volunteer's computer to run Seedminer)
-  + If you already have access to a 3DS capable of launching the Homebrew Launcher, you can manually retrieve your `movable_part1.sed` using that device by following [these](https://jisagi.github.io/SeedminerGuide/seedminerSelf/#section1) instructions
-  + If you already have access to a PC with a powerful graphics card, you can manually calculate your `movable.sed` using it by following [these](https://jisagi.github.io/SeedminerGuide/seedminerSelf/#section2) instructions
-  + If the automated service is nonfunctional and you cannot do one or both of those manually, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you
-1. Enter your device's Friend Code (with no spaces or dashes) into the "Your friend code" field
-1. Paste your device's 32 character long folder name into the "Your ID0" field
-1. 完成『我不是機器人』之驗證
-1. Select "Go"
-  + If the site immediately goes to step 4, download your `movable.sed` file and continue with the next section.
-1. When prompted, use the "Register Friend" button on your device to add the friend code of the bot 3DS console
-1. Wait for the site to update
-  + If it does not, wait a few minutes before refreshing the page once
-1. Select "Continue"
-1. 等待程序完畢為止
-  + This can take a while (up to an hour in some cases)
-  + During this process, the bot may not show up on your 3ds. As long as the website updates, this is not an issue.
-  + If you are still waiting after an hour, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you
-1. When the process has completed, download your `movable.sed` file from the site
-  + Keep this file as you will need it in the upcoming pages
+1. 於您的電腦中開啟 [Bruteforce Movable](https://bruteforcemovable.com/)
+  + 此網站可自動替您取得 `movable_part1.sed` (透過一台機器操控的 3DS 主機)，並破解您裝置的 DSiWare 加密金鑰 (透過某自願者的電腦運行 Seedminer)
+  + If the automated service is nonfunctional, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you
+1. 輸入您裝置的好友代碼 (勿含空白或減號) 至『Your friend code (您的好友代碼)』欄位中
+1. 輸入您主機的 32 字元辨識碼 (剛請您複製至記事本中的號碼) 至『Your ID0』欄位中
+1. 完成「我不是機器人」之驗證
+1. 選擇『Go』
+  + 如果此網站自行跳至第四步，請下載您的 `movable.sed` 檔案並移動至下一章節。
+1. 如提示時，在您的主機中的『好友註冊 (Register Friend)』添加機器人 3DS 的好友代碼
+1. 等待網站更新
+  + 如果遲遲尚未更新，請在刷新頁面前等待個幾分鐘
+1. 一旦網站開始處理您裝置的相關訊息，您將可以選擇『Continue (繼續)』或『Do another device (破解其他裝置)』。 點擊綠色的『Continue (繼續)』按鈕
+1. 等待執行剩下的程序
+  + 這通常是很快的 (1~5分左右)，但在某些情況下可能需要長達半小時。
+  + 在等待過程中，您剛所添加的機器 3DS 可能不會在您的 3DS 主機上顯示。 不過只要網站還有在刷新，這就不是個問題。
+  + 若您等了半小時遲遲沒有結果，那麼請加入[Nintendo Homebrew Discord 伺服器](https://discord.gg/MWxPgEp)使用英文來請求幫助
+1. 當該程序結束時下載您的 `movable.sed` 檔案
+  + 您在待會還會用到該檔案，請先將其保留
 
 ___
 ### 方法
@@ -89,25 +87,25 @@ ___
 
 #### Seedminer + Fredtool
 
-This method of using Seedminer for further exploitation uses your `movable.sed` file to decrypt any DSiWare eShop title for the purposes of injecting an exploitable DSiWare title into the DS Internet Settings application. 於使用此指南時，您必須先擁有 (或下載/購買) eShop 中的 DSiWare 遊戲。
+Seedminer 將透過您的 `movable.sed` 檔案來解密您主機上任何來自 DSiWare eShop 的程式，以便在 DS 網路設定中注入修改後的 DSiWare 程式。 於使用此指南時，您必須先擁有 (或下載/購買) eShop 中的 DSiWare 遊戲。
 
-This method is compatible with all regions, though only the JPN and USA regions have free DSiWare titles in the eShop.
+此方法適用於任何區域之主機，不過只有日版以及美版才有免費的 eShop 遊戲可下載以運行此漏洞。
 
-This method requires that the DS Internet Settings be functioning properly (see the test at the top of this page).
+此方法需要使用 DS 網路設定。請透過本頁上方的測試確認您的主機可以正常使用此程式再行繼續。
 
-Continue to [Installing boot9strap (Fredtool)](installing-boot9strap-(fredtool))
+繼續至[安裝 boot9strap (透過 Fredtool)](installing-boot9strap-(fredtool))
 {: .notice--primary}
 
 ___
 
 #### Seedminer + Steelhax + Frogtool
 
-This method of using Seedminer for further exploitation uses your `movable.sed` file to gain access to the Homebrew Launcher using the Steelhax exploit for the purposes of injecting an exploitable DSiWare title into the DS Download Play application. 於使用此指南時，您必須先擁有 (或下載) eShop 中免費的『Steel Drivers: Sub Wars』遊戲。
+Seedminer 將使用您的 `movable.sed` 檔案並透過 Steelhax 漏洞開啟 Homebrew Launcher 以便在 DS 網路設定中植入修改後的 DSiWare 程式。 於使用此指南時，您必須先擁有 (或下載) eShop 中免費的『Steel Driver: Sub Wars』遊戲。
 
-This method is only compatible with the EUR, JPN, and USA regions, and is somewhat more complicated than the above method. It is only recommended to use this method if you have a EUR region device and do not wish to pay for a DSiWare game, or if the above method does not work for you for some reason.
+此方法僅適用於歐版、日版、及美版主機，且比上方所述方法更加複雜一點。 此方法僅建議給不願花錢購買 DSiWare 遊戲且持有歐版主機或使用以上方法無效的人們。
 
-This method requires that the DS Download Play be functioning properly (see the test at the top of this page).
+此方法需要使用 DS『下載通信 (Download Play)』程式程式。請透過本頁上方的測試確認您的主機可以正常使用此程式再行繼續。
 
-Continue to [Homebrew Launcher (Steelhax)](homebrew-launcher-(steelhax))
+繼續至[安裝 Homebrew Launcher (透過 Steelhax)](homebrew-launcher-(steelhax))
 {: .notice--primary}
 

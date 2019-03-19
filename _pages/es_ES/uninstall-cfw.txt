@@ -11,7 +11,7 @@ Esto removerá completamente el CFW de tu consola, incluyendo Boot9Strap y Luma3
 Esto casi nunca es la solución para arreglar cualquier problema que encuentres en tu instalación del CFW. Una mejor idea sería leer la página de [solución de problemas](troubleshooting) o pedir ayuda en [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) (*en inglés*).
 {: .notice--danger}
 
-Cualquier juego sin firmar (ilegítimo) se volverá inutilizable y puede ser manualmente removido usando la sección de "Gestión de Datos" en la Configuración de la consola. Utiliza un [gestor de datos de guardado](https://github.com/FlagBrew/Checkpoint/releases/latest) para respaldar los datos de guardado de cualquier juego sin firmar (ilegítimo) que te sea de importancia conservar.
+Cualquier juego sin firmar (ilegítimo) se volverá inutilizable y debe ser eliminado manualmente antes de comenzar este proceso yendo a la sección Gestión de datos en la Configuración de la consola. Utiliza un [gestor de datos de guardado](https://github.com/FlagBrew/Checkpoint/releases/latest) para respaldar los datos de guardado de cualquier juego sin firmar (ilegítimo) que te sea de importancia conservar.
 
 Esto no afectará a tu NNID, ningún juego comprado legalmente o a los datos de guardado pertenecientes a dichos juegos.
 
@@ -26,21 +26,43 @@ Ten en cuenta que si tienes archivos de payloads distintos de `GodMode9.firm` en
 
 ### Instrucciones
 
-#### Sección I - Preparativos
+#### Sección I - Prueba de seguridad
 
 1. Apaga tu consola
 1. Inserta tu tarjeta SD en tu computadora
 1. Copia el archivo `GodMode9.firm` desde el `.zip` de GodMode9 a la carpeta `/luma/payloads/` en tu tarjeta SD
 1. Copia la carpeta `gm9`contenida en el `.zip`de GodMode9 al directorio raíz de tu tarjeta SD
 1. Vuelve a insertar tu tarjeta SD en tu consola
-1. Enciende tu consola
-
-#### Sección II - Ejecutar script de desinstalación
-
 1. Inicia GodMode9 manteniendo presionado (Start) mientras enciendes la consola
 1. Si se te pide crear copias de seguridad de archivos esenciales, presiona (A) para hacerlo y luego presiona (A) para continuar una vez que haya terminado
 1. Si se te pide fijar la fecha y hora RTC, presiona (A) para hacerlo, luego define la fecha y la hora, y después presiona (A) para continuar
   + Ten en cuenta que, si tuviste que cambiar la fecha y hora RTC, también deberás cambiar la hora en la Configuración de la consola después de hacer esta guía
+1. Ve a `[1:] SYSNAND CTRNAND > title > 00040138 > (X)0000002 > content`
+  + En una consola "New", la (X) será un 2
+  + En una consola "Old", la (X) será un 0
+1. Selecciona el archivo `.app`
+1. Selecciona `NCCH Image Options`
+1. Selecciona `Mount image to drive`
+1. En la ventana que aparece, abre la carpeta `exefs`
+1. En esta carpeta, selecciona el archivo `.firm`
+1. Selecciona "Firm Options"
+1. Selecciona "Boot Firm"
+1. Cuando se solicite, elige "decrypt and make a copy"
+1. Deberías iniciar en el Menú HOME normal de 3DS. Si lo haces, apaga tu consola y continúa en la siguiente sección
+  + Si NO inicias en el Menú HOME normal de 3DS, continuar con estas instrucciones **INHABILITARÁ** tu consola. Deberías unirte al [Discord de Nintendo Homebrew](https://discord.gg/MWxPgEp) y pide (en inglés) ayuda a alguien de allí
+  
+#### Sección II - Preparativos
+
+1. Enciende tu consola
+1. Ve a Configuración de la consola > Gestión de datos > Nintendo 3DS > Software
+1. En esta lista de software, elimina cualquier contenido que no sea de Nintendo que hayas instalado durante el uso de CFW
+  + Esto incluye software de sistema de uso común como FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint, y otros, junto a los juegos que no sean de eShop
+  + No quitar software de CFW antes de desinstalarlo podría inhabilitar el acceso al menú Gestión de datos luego de desinstalar el CFW
+1. Apaga tu consola
+
+#### Sección III - Ejecutar script de desinstalación
+
+1. Inicia GodMode9 manteniendo presionado (Start) mientras enciendes la consola
 1. Presiona el botón (Home) para abrir el menú de acción
 1. Selecciona "Scripts..."
 1. Selecciona "GM9Megascript"

@@ -11,7 +11,7 @@ Ceci supprimera complètement le CFW de votre console, y compris Boot9Strap et L
 Ce n'est presque jamais la solution pour résoudre les problèmes que vous pouvez rencontrez lors de l'installation d'un CFW. A better idea would be to read the [troubleshooting](troubleshooting) page or ask (in English) for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
 {: .notice--danger}
 
-Tous les jeux (illégitimes) non signés seront rendues inutilisables et peuvent être supprimés manuellement à l’aide de la section de gestion des données des paramètres système. Use a [save manager](https://github.com/FlagBrew/Checkpoint/releases/latest) to backup any saves for these unsigned (illegitimate) games you care about.
+Any unsigned (illegitimate) games will be rendered unusable and should be manually removed before starting this process by using the Data Management section of the System Settings. Use a [save manager](https://github.com/FlagBrew/Checkpoint/releases/latest) to backup any saves for these unsigned (illegitimate) games you care about.
 
 Cela n’affectera pas votre NNID, n’importe quel jeux légitimement achetés ou des sauvegardes pour ces jeux légitimement achetés.
 
@@ -26,21 +26,43 @@ Notez que si vous avez n’importe quel autre payload que `GodMode9.firm` dans l
 
 ### Instructions
 
-#### Section I - Préparatifs
+#### Section I - Safety Test
 
 1. Éteignez votre 3DS
 1. Insérez votre carte SD dans votre ordinateur
 1. Copiez le fichier `GodMode9.firm` de l'archive GodMode9 `.zip` dans le dossier `/luma/payloads/` sur votre carte SD
 1. Copiez le dossier `gm9` de GodMode9 `.zip` à la racine de votre carte SD
 1. Réinsérez votre carte SD dans votre 3DS
-1. Allumez à présent votre 3DS
-
-#### Section II - Exécution du script pour désinstaller CFW
-
 1. Ouvrez Godmode9 en maintenant (Start) au démarrage
 1. Si vous êtes invité à créer une sauvegarde de fichiers essentiels, appuyez sur (A) pour le faire, puis appuyez sur (A) pour continuer une fois qu’elle a complété
 1. Si vous êtes invité à régler la date et l'heure du RTC, appuyez sur (A) pour le faire, puis réglez la date et l'heure, puis appuyez sur (A) pour continuer
   Notez que, si vous avez dû régler la date et l'heure du RTC, vous devrez également régler l'heure dans les Paramètres du système après ce guide
+1. Navigate to `[1:] SYSNAND CTRNAND > title > 00040138 > (X)0000002 > content`
+  + On a "New" edition console, the (X) will instead be 2
+  + On an "Old" edition console, the (X) will instead be 0
+1. Select the `.app` file
+1. Select `NCCH Image Options`
+1. Select `Mount image to drive`
+1. In the window that appears, open the `exefs` folder
+1. In this folder, select the `.firm` file
+1. Select "Firm Options"
+1. Select "Boot Firm"
+1. When prompted, choose to decrypt and make a copy
+1. You should boot into the regular 3DS Home Menu. If you do, power your device off and continue to the next section
+  + If you do NOT boot into the regular 3DS Home Menu, continuing with these instructions **WILL** brick your device. You should join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you
+  
+#### Section II - Prep Work
+
+1. Allumez à présent votre 3DS
+1. Navigate to System Settings > Data Management > Nintendo 3DS > Software
+1. In this list of software, delete any non-Nintendo content you installed while using CFW
+  + This includes common system software such as FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint, and others, along with any non-eShop games
+  + Failure to remove CFW software before uninstalling CFW may break access to the Data Management menu after uninstalling CFW
+1. Éteignez votre 3DS
+
+#### Section III - Running Uninstall Script
+
+1. Ouvrez Godmode9 en maintenant (Start) au démarrage
 1. Appuyez sur (Home) pour faire apparaître le menu d’actions (action menu)
 1. Sélectionnez "Scripts"
 1. Sélectionnez "GM9Megascript"
