@@ -18,11 +18,13 @@ Durant cette étape, nous allons également configurer les programmes suivants :
 +  **Luma3DS Updater** *(Permet de mettre facilement à jour votre CFW)*
 +  **GodMode9** *(Programme multifonction qui peut effectuer des opérations relatives à la NAND et aux cartouches)*
 + **Homebrew Launcher Loader** *(lance le Homebrew Launcher) *
++  **DSP1** *(allows homebrew applications to have sound)*
++  **ctr-no-timeoffset** *(removes the rtc offset so that the home menu and rtc timestamps match)*
 
 ## Ce dont vous avez besoin
 
 * La dernière version de [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) *(le fichier`.cia`)*
-* The latest release of [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/latest) *(the `.cia` file)*
+* La dernière version de [Checkpoint] (https://github.com/FlagBrew/Checkpoint/releases/latest) *(the `.cia` file) *
 * La dernière version de [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest)
 * La dernière version de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * La dernière version de [DSP1](https://github.com/zoogie/DSP1/releases/latest)
@@ -61,7 +63,7 @@ Durant cette étape, nous allons également configurer les programmes suivants :
 
 #### Section II - Mise à jour du système
 
-If, while following a previous version of this guide, you CTRTransfered your *New 3DS* to 2.1.0, you should now [restore your NAND backup](godmode9-usage#restoring-a-nand-backup) before doing this section.
+Si, en suivant une version précédente de ce guide, vous avez CTRTransféré votre *New 3DS* en 2.1.0, vous devrez maintenant [restaurer votre sauvegarde de la NAND](godmode9-usage#restoring-a-nand-backup) avant de faire cette section.
 {: .notice--danger}
 
 Si, avant d'avoir suivi ce guide, vous aviez une installation EmuNAND et que vous souhaitez transférer le contenu de votre précédent EmuNAND sur votre nouvelle SysNAND CFW, il est temps de [Transférer votre EmuNAND](move-emunand) avant de suivre cette section.
@@ -74,7 +76,7 @@ Si, avant d'avoir suivi ce guide, vous aviez une installation EmuNAND et que vou
 
 #### Section III - Homebrew Launcher
 
-1. Launch the Download Play application (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
+1. Lancez l'application Mode Téléchargement (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
 1. Appuyez simultanément sur (L) + (Bas) + (Select) pour ouvrir le menu Rosalina
 1. Sélectionnez "Miscellaneous options"
 1. Sélectionnez "Switch the hb. title to the current app."
@@ -88,7 +90,7 @@ Si, avant d'avoir suivi ce guide, vous aviez une installation EmuNAND et que vou
 1. Appuyez sur (A) pour mettre l’offset à 0
   + Ainsi, l'horloge système correspondra à la date et heure du RTC (que nous allons régler bientôt)
 1. Appuyez sur (Start) pour retourner à l'Homebrew Launcher
-  + If you previously followed [Installing boot9strap (Frogtool)](installing-boot9strap-(frogtool)), you should now use the "RESTORE clean DS Download Play" option in Frogtool to restore the DS Download Play application to its original state
+  + Si vous avez suivi précédemment la section [Installation de boot9strap (Frogtool)](installing-boot9strap-(frogtool)), vous devriez maintenant utiliser l'option "RESTORE clean DS Download Play" de Frogtool afin de restaurer l'application Mode téléchargement à son état original
 1. Lancez FBI que vous trouverez dans la liste des homebrews
 
 #### Section IV - Installation des CIAs
@@ -136,14 +138,14 @@ Si, avant d'avoir suivi ce guide, vous aviez une installation EmuNAND et que vou
 1. Appuyez sur (B) pour revenir au menu principal
 1. Sélectionnez "Exit"
 1. Appuyez (A) pour reverrouiller autorisations en écriture si vous êtes invité
-1. Navigate to `[M:] MEMORY VIRTUAL`
-1. Press (A) on `boot9.bin` to select it
-1. Select "Copy to 0:/gm9/out"
+1. Naviguez vers `[M:] MEMORY VIRTUAL`
+1. Appuyez sur (A) sur `boot9.bin` pour le sélectionner
+1. Sélectionnez "Copy to 0:/gm9/out"
 1. Appuyez sur (A) pour continuer
 1. Appuyez sur (B) pour revenir au menu principal
 1. Maintenez (R) et appuyez sur (B) en même temps pour éjecter votre carte SD
 1. Insérez votre carte SD dans votre ordinateur
-1. Copy `<date>_<serialnumber>_sysnand_###.bin`, `essential.exefs`, and `boot9.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
+1. Copy `<date>_<serialnumber>_sysnand_###.bin`, `<date>_<serialnumber>_sysnand_###.bin.sha`, `essential.exefs`, and `boot9.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Faites des sauvegardes dans plusieurs endroits (tels que des stockages de fichiers en ligne par exemple)
   Ces sauvegardes vous sauveront d'un brick et/ou vous aideront à récupérer des fichiers de l'image de la NAND si quelque chose se passe mal plus tard
 1. Supprimez `<date>_<serialnumber>_sysnand_###.bin` et `<date>_<serialnumber>_sysnand_###.bin.sha` du dossier `/gm9/out/` de votre carte SD après l'avoir copiée

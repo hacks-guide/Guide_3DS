@@ -11,7 +11,7 @@ Acest procedeu va elimina complet CFW-ul de pe dispozitiv, inclusiv Boot9Strap �
 Asta aproape niciodată nu este soluția pentru a repara orice eroare ați putea găsi cu instalarea voastră de CFW. O idee mai bună ar fi să citiţi pagina de [depanare](troubleshooting) sau să cereți ajutor (în engleză) la [Nintendo Homebrew pe Discord] (https://discord.gg/MWxPgEp).
 {: .notice--danger}
 
-Orice joc nesemnat (nelegitim) va deveni inutilizabil și poate fi eliminaat manual folosind secțiunea Data Management de pe System Settings. Folosiți un [manager de date de salvare](https://github.com/FlagBrew/Checkpoint/releases/latest) pentru a face copii de rezervă la orice joc nesemnat (nelegitim) de care vă pasă.
+Any unsigned (illegitimate) games will be rendered unusable and should be manually removed before starting this process by using the Data Management section of the System Settings. Folosiți un [manager de date de salvare](https://github.com/FlagBrew/Checkpoint/releases/latest) pentru a face copii de rezervă la orice joc nesemnat (nelegitim) de care vă pasă.
 
 Acest lucru nu va afecta NNID-ul, orice joc cumpărat în mod legitim, sau orice date de salvare pentru acele jocuri cumpărate legitim.
 
@@ -26,21 +26,43 @@ Dacă ați modificat software critic sistemului (precum editarea meniului HOME, 
 
 ### Instrucțiuni
 
-#### Secțiunea I - Preparații
+#### Section I - Safety Test
 
 1. Închideți dispozitivul
 1. Introduceți cardul SD în calculator
 1. Copiați `GodMode9.firm` de pe fișierul `.zip` GodMode9 către folderul `/luma/payloads/` de pe cardul SD
 1. Copiați folderul `gm9` din fișierul `.zip` GodMode9 în rădăcina cardului SD
 1. Reintroduceți cardul SD în dispozitivul dumneavoastră
-1. Porniți dispozitivul
-
-#### Secţiunea II - Rulând script-ul de dezinstalare
-
 1. Lansați GodMode9 ținând apăsat (Start) în timpul pornirii
 1. Când vi se cere să faceți o copie de rezervă a fișierelor esențiale, apăsați (A) pentru a o realiza, apoi apăsați (A) ca să continuați după ce s-a terminat
 1. Dacă vi se cere să reparați dara și ora RTC, apăsați (A) pentru a efectua, apoi setați data și ora, apoi apăsați (A) pentru a continua
   + Țineți cont că, dacă trebuiați să reparați data și ora, va trebui să reparați ora în System Settings de asemenea după completarea acestui ghid
+1. Navigate to `[1:] SYSNAND CTRNAND > title > 00040138 > (X)0000002 > content`
+  + On a "New" edition console, the (X) will instead be 2
+  + On an "Old" edition console, the (X) will instead be 0
+1. Select the `.app` file
+1. Select `NCCH Image Options`
+1. Select `Mount image to drive`
+1. In the window that appears, open the `exefs` folder
+1. In this folder, select the `.firm` file
+1. Select "Firm Options"
+1. Select "Boot Firm"
+1. When prompted, choose to decrypt and make a copy
+1. You should boot into the regular 3DS Home Menu. If you do, power your device off and continue to the next section
+  + If you do NOT boot into the regular 3DS Home Menu, continuing with these instructions **WILL** brick your device. You should join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you
+  
+#### Section II - Prep Work
+
+1. Porniți dispozitivul
+1. Navigate to System Settings > Data Management > Nintendo 3DS > Software
+1. In this list of software, delete any non-Nintendo content you installed while using CFW
+  + This includes common system software such as FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint, and others, along with any non-eShop games
+  + Failure to remove CFW software before uninstalling CFW may break access to the Data Management menu after uninstalling CFW
+1. Închideți dispozitivul
+
+#### Section III - Running Uninstall Script
+
+1. Lansați GodMode9 ținând apăsat (Start) în timpul pornirii
 1. Apăsați (Home) pentru a arăta meniul de acțiuni
 1. Selectați "Scripts..."
 1. Selectaţi "GM9Megascript"

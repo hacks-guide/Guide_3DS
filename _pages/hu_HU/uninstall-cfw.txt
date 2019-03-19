@@ -11,7 +11,7 @@ A következőkben teljes egészében el fogjuk távolítani a CFW-t a készülé
 Ez az esetek többségében nem old meg semmilyen olyan problémát, ami a CFW telepítése közben felmerülhet. Javasolt inkább elolvasnod a [Hibaelhárítás](troubleshooting) oldalt, vagy segítséget kérni (angol nyelven) itt: [Nintendo Homebrew a Discord-on](https://discord.gg/MWxPgEp).
 {: .notice--danger}
 
-Minden aláíratlan (nem eredeti) játék instabillá fog válni, amiket kézileg törölhetsz majd a System Settings "Data Management" részében. Használj [mentéskezelőt](https://github.com/FlagBrew/Checkpoint/releases/latest), hogy biztonsági másolatot készíts azon (nem eredeti) játékok mentéséről, amik fontosak a számodra.
+Any unsigned (illegitimate) games will be rendered unusable and should be manually removed before starting this process by using the Data Management section of the System Settings. Használj [mentéskezelőt](https://github.com/FlagBrew/Checkpoint/releases/latest), hogy biztonsági másolatot készíts azon (nem eredeti) játékok mentéséről, amik fontosak a számodra.
 
 Ez az eljárás nem fogja befolyásolni sem az NNID-det, sem az eredeti játékaidat, sem bármilyen mentést, ami az eredeti, megvásárolt játékaidhoz tartozik.
 
@@ -26,21 +26,43 @@ Vedd figyelembe, hogy amennyiben van más payload fájl a `GodMode9.firm` fájlo
 
 ### Utasítások
 
-#### Első rész - Előkészületek
+#### Section I - Safety Test
 
 1. Kapcsold ki a készüléked
 1. Helyezd az SD kártyád a számítógépbe
 1. Másold át a `GodMode9.firm` fájlt a GodMode9 `.zip`-ből az SD kártyád `/luma/payloads/` mappájába
 1. Másold át a `gm9` mappát a GodMode9 `.zip`-ből az SD kártyád gyökerébe
 1. Tedd vissza az SD kártyád a készülékedbe
-1. Kapcsold be a készülékedet
-
-#### Második rész - Az eltávolító szkript futtatása
-
 1. Indítsd el a GodMode9-et a (Start) lenyomva tartásával boot közben
 1. Ha rákérdez arra, hogy csináljon-e egy biztonsági másolatot (essential files backup), akkor nyomd meg az (A) gombot, hogy csináljon, majd amikor végzett, nyomd meg ismét az (A) gombot a folytatáshoz
 1. Ha rákérdez arra, hogy szeretnéd-e a valós dátumot és időt javítani (fix the RTC date&time), nyomd meg az (A) gombot, állítsd be a helyes dátumot és időt, majd nyomd meg az (A) gombot a folytatáshoz
   + Ne feledd, hogy amennyiben ezen a ponton szükséges volt a helyes dátum és idő beállítása, a System Settingsben is be kell majd állítanod a helyes időt az útmutató végén
+1. Navigate to `[1:] SYSNAND CTRNAND > title > 00040138 > (X)0000002 > content`
+  + On a "New" edition console, the (X) will instead be 2
+  + On an "Old" edition console, the (X) will instead be 0
+1. Select the `.app` file
+1. Select `NCCH Image Options`
+1. Select `Mount image to drive`
+1. In the window that appears, open the `exefs` folder
+1. In this folder, select the `.firm` file
+1. Select "Firm Options"
+1. Select "Boot Firm"
+1. When prompted, choose to decrypt and make a copy
+1. You should boot into the regular 3DS Home Menu. If you do, power your device off and continue to the next section
+  + If you do NOT boot into the regular 3DS Home Menu, continuing with these instructions **WILL** brick your device. You should join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you
+  
+#### Section II - Prep Work
+
+1. Kapcsold be a készülékedet
+1. Navigate to System Settings > Data Management > Nintendo 3DS > Software
+1. In this list of software, delete any non-Nintendo content you installed while using CFW
+  + This includes common system software such as FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint, and others, along with any non-eShop games
+  + Failure to remove CFW software before uninstalling CFW may break access to the Data Management menu after uninstalling CFW
+1. Kapcsold ki a készüléked
+
+#### Section III - Running Uninstall Script
+
+1. Indítsd el a GodMode9-et a (Start) lenyomva tartásával boot közben
 1. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
 1. Válaszd a "Scripts..." opciót
 1. Válaszd ezt: "GM9Megascript"
