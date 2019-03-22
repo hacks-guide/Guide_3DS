@@ -6,7 +6,7 @@ title: "A9LH升级B9S"
 
 ### 必读事项
 
-This page is for existing arm9loaderhax users to update their devices to boot9strap.
+本页用来帮助已经进行arm9loaderhax破解的用户将设备更新至boot9strap。
 
 Luma3DS的所有未来版本将只以 `.firm` 格式制作，而这种格式只与boot9strap和sighax兼容。 这意味着，如果你想要使用最新版的Luma3DS，就得通过此页面将A9LH转为B9S。
 
@@ -81,165 +81,165 @@ Luma3DS的所有未来版本将只以 `.firm` 格式制作，而这种格式只�
 1. 删除SD卡 `/luma/payloads/` 文件夹中任何后缀为 `.bin` 的文件，因为它们在支持 boot9strap 的 Luma3DS 版本中无法使用
 1. 从GodMode9`.zip`中复制 `GodMode9.firm` 到SD卡的 `/luma/payloads/` 文件夹中
 1. 将GodMode9`.zip`压缩包中的整个 `gm9` 文件夹复制到SD卡的根目录下
-1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the `/luma/payloads/` folder on your SD card
-1. Create a folder named `boot9strap` on the root of your SD card
-1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
-1. **New 3DS Users Only:** Copy `secret_sector.bin` to the `/boot9strap/` folder on your SD card
+1. 从 SafeB9SInstaller`.zip`压缩包中复制 `SafeB9SInstaller.bin`到SD卡 `/luma/payloads/` 目录中
+1. 在SD卡根目录创建一个名为 `boot9strap` 的文件夹
+1. 从boot9strap `.zip` 文件中复制 `boot9strap.firm` 和 `boot9strap.firm.sha` 到你SD卡的 `/boot9strap/` 文件夹中
+1. **仅使用 New 3DS的用户:**复制 `secret_sector.bin` 到SD卡上的 `/boot9strap/` 文件夹
 
     ![]({{ "/images/screenshots/a9lh-to-b9s-file-layout.png" | absolute_url }})
     {: .notice--info}
 
-1. Reinsert your SD card into your device
+1. 将SD卡插回到你的设备
 
-#### Section II - Installing boot9strap
+#### 第二步 — 安装 boot9strap
 
-1. Boot your device while holding (Start) to launch SafeB9SInstaller
-  + If you see the luma configuration screen instead of SafeB9SInstaller, simply press (Start), then shutdown your 3DS and try again
-  + If this gives you an error, try either using a new SD card, or formatting your current SD card (backup existing files first)
-1. Wait for all safety checks to complete
-  + If you get an "OTP Crypto Fail" error, download <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [aeskeydb.bin](magnet:?xt=urn:btih:d25dab06a7e127922d70ddaa4fe896709dc99a1e&dn=aeskeydb.bin&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce), then put it in the `/boot9strap/` folder on your SD card and try again
-1. When prompted, input the key combo given to install boot9strap
+1. 按住 “start” 键开机来启动SafeB9SInstaller
+  + 如果您看到 Luma 设置弹出而不是进入 SafeB9SInstaller ，那么按下 “start” 键，然后关闭3DS，之后再试一次
+  + 如果报错，请尝试使用新的 SD 卡，或格式化你当前使用的 SD 卡 （请注意备份）
+1. 等待所有安全检查完成
+  +如果你遇到 “OTP Crypto Fail” 的错误, 下载 <i class="fa fa-magnet" aria-hidden="true" title="这是一个磁力链接 使用BT协议下载软件来下载此文件"></i> - [aeskeydb.bin](magnet:?xt=urn:btih:d25dab06a7e127922d70ddaa4fe896709dc99a1e&dn=aeskeydb.bin&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce)，然后，将其放入你SD卡的 `/boot9strap/` 中，之后再试一次
+1. 出现提示时，按照提示输入按键来安装boot9strap
 1. 安装完成后，按下 “A” 键重启设备
-  + If your device shuts down on boot, ensure that you have copied `boot.firm` from the Luma3DS `.7z` to the root of your SD card
+  + 如果你的设备在启动时自动关机，请确认你已经从 Luma3DS`.7z` 中复制了 `boot.firm` 文件到你的SD卡根目录
 
-#### Section III - Configuring Luma3DS
+#### 第三步 - 设置 Luma3DS
 
 1. 在Luma3DS配置菜单中，使用 “A” 键和十字键选择并开启下列选项:    
-  + **"Show NAND or user string in System Settings"**
-1. Press (Start) to save and reboot
+  + **“Show NAND or user string in System Settings”**
+1. 按下 “Start” 键保存设置并重启
 
-#### Section IV - Updating the System
+#### 第四步 — 更新系统
 
-If, before following this guide, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand) before doing this section.
+如果你在看本指南之前已经破解并安装了 EmuNAND ，并且想把你原来的 EmuNAND 中的内容转移到新的 SysNAND 自制固件中，请在开始本步操作之前先按照 [迁移EmuNAND](move-emunand) 一节进行操作。
 {: .notice--info}
 
-1. Update your device by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
-  + Updates while using B9S + Luma (what you have) are safe
-  + If this gives you an error, set your DNS settings to "auto"
-  + If this still gives you an error, [follow CTRTransfer](ctrtransfer), then try updating again
+1. 进入 “系统设置(System Settings)”，接着点击“其他设置(Other Settings)”，然后移动到最右边，点击“系统升级(System Update)”来升级你的主机
+  + 你在使用现在的B9S和Luma时升级系统是安全的
+  如果在更新中途出错，请将主机的DNS设置改为 “auto(自动)”
+  + 如果仍然提示错误，请进行 [CTRTransfer](ctrtransfer)，然后再尝试一次更新
 
-#### Section V - Homebrew Launcher
+#### 第五步 — 进入自制程序启动器
 
-1. Launch the Download Play application (this [icon]({{ "/images/download-play-icon.png" | absolute_url }})
-1. Press (L) + (Down) + (Select) at the same time to open the Rosalina menu
-1. Select "Miscellaneous options"
-1. Select "Switch the hb. title to the current app."
+1. 启动“下载通信(Download Play)”程序 (它长这个样子 [icon]({{ "/images/download-play-icon.png" | absolute_url }})
+1. 同时按下“L”+“下”+“Select” 键来打开 Rosalina 菜单
+1. 选择 “Miscellaneous options”
+1. 选择 “Switch the hb. title to the current app.”
 1. 按 “B” 键继续
 1. 按 “B” 键返回 Rosalina 主菜单
 1. 按 “B” 键退出 Rosalina 菜单
-1. Press (Home), then close Download Play
-1. Launch the Download Play application
-1. Your device should load the Homebrew Launcher
-1. Launch ctr-no-timeoffset from the list of homebrew
+1. 按 “Home” 键，关闭“下载通信(Download Play)”
+1. 运行“下载通信(Download Play)”程序
+1. 此时您的主机应该会载入自制程序启动器了
+1. 从自制程序列表中运行 ctr-no-timeoffset
 1. 按 “A” 键来将RTS时间设置为 0
-  + This will set the system clock to match the RTC date&time (which we will set soon)
-1. Press (Start) to return to the Homebrew Launcher
-1. Launch FBI from the list of homebrew
+  + (在此之后会设置) 这个操作将把 RTC 日期和时间同步为系统时间
+1. 按 “Start” 键返回到自制程序启动器
+1. 从自制程序列表中找到并启动 FBI
 
-#### Section VI - Installing CIAs
+#### 第六步 — 安装CIA
 
-1. Navigate to `SD` -> `cias`
-1. Select "\<current directory>"
+1. 移动至 `SD` -> `cias`
+1. 选择 “\<current directory>”
 1. 选择“安装和删除所有CIA(Install and delete all CIAs)”选项，并按 “A” 键确认
-1. Press (Home), then close Download Play
+1. 按下“Home” 键，然后关闭“下载通信(Download Play)”
 
-#### Section VII - DSP Dump
+#### 第七步 — DSP 导出
 
-1. Launch the DSP1 application
+1. 启动 DSP1 应用
 1. 处理完毕后，按 “B” 键自动删除该应用程序并返回到主菜单
 
-#### Section VIII - CTRNAND Luma3DS
+#### 第八部分 — 将Luma3DS复制到CTRNAND
 
-1. Power off your device
-1. Launch GodMode9 by holding (Start) during boot
+1. 将设备关机
+1. 开机时按住 “Start” 键启动 GodMode9
 1. 如果提示创建重要文件备份，按下 “A” 键确认，在完成后再次按下 “A” 键来继续。
 1. 如果出现修复RTC日期与时间的提示，按 “A” 键执行修复，然后设置好日期和时间，并按 “A” 继续
-1. Press (Home) to bring up the action menu
-1. Select "Scripts..."
-1. Select "GM9Megascript"
-1. Select "Scripts from Plailect's Guide"
-1. Select "Setup Luma3DS to CTRNAND"
+1. 按 “Home” 键，打开功能菜单
+1. 选择 “Scripts...”
+1. 选择“GM9Megascript”
+1. 选择 “Scripts from Plailect's Guide”
+1. 选择 “Setup Luma3DS to CTRNAND”
 1. 出现提示时，按 “A” 键继续
 1. 按 “A” 键解锁SysNAND (lvl2) 写入权限，并根据屏幕上的提示依次按下按键
 1. 按 “A” 键继续
 
-#### Section IX - Cleanup SD Card
+#### 第九部分 — 清理 SD 卡
 
-1. Select "Cleanup SD Card"
+1. 选择 “Cleanup SD Card”
 1. 出现提示时，按 “A” 键继续
 1. 按 “A” 键继续
 1. 按 “B” 键返回到主菜单
 
-#### Section X - Backup Essential Files
+#### 第十节 — 备份基础文件
 
-1. Select "Backup Options"
-1. Select "SysNAND Backup"
+1. 选择 “Backup Options”
+1. 选择 “SysNAND Backup”
 1. 按 “A” 键确认
-  + This process will take some time
-  + If you get an error, make sure that you have at least 1.3GB of free space on your SD card
+  + 此过程将花费一些时间
+  + 如果你遇到了错误, 请确保你的 SD 卡上至少有 1.3GB 的可用空间
 1. 按 “A” 键继续
 1. 按 “B” 键返回到主菜单
-1. Select "Exit"
-1. Press (A) to relock write permissions if prompted
-1. Navigate to `[M:] MEMORY VIRTUAL`
-1. Press (A) on `boot9.bin` to select it
-1. Select "Copy to 0:/gm9/out"
-1. Press (A) to continue
-1. Press (B) to return to the main menu
+1. 选择 “Exit”
+1. 如果提示重新锁定写入权限，按下 “A” 键来确认
+1. 移动至 `[M:] MEMORY VIRTUAL`
+1. 在`boot9.bin` 上按 “A” 键选中
+1. 选择 “Copy to 0:/gm9/out”
+1. 按 “A” 键继续
+1. 按 “B” 键返回到主菜单
 1. 格式化完成后，同时按 “R” 键和“B”键，弹出你的SD卡
-1. Insert your SD card into your computer
-1. Copy `<date>_<serialnumber>_sysnand_###.bin`, `essential.exefs`, and `boot9.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
-  + Make backups in multiple locations (such as online file storage)
-  + These backups will save you from a brick and/or help you recover files from the NAND image if anything goes wrong in the future
-1. Delete `<date>_<serialnumber>_sysnand_###.bin` and `<date>_<serialnumber>_sysnand_###.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
-1. Reinsert your SD card into your device
-1. Press (Start) to reboot your device
+1. 将你的 SD 卡插入电脑
+1. 从 SD 卡的 `/gm9/out/` 文件夹中复制 `<date>_<serialnumber>_sysnand_###.bin` ， `essential.exefs`和 `boot9.bin` 到电脑中的安全的位置
+  + 请在多处地方备份这些文件(比如网盘等)
+  + 如果以后机器出现任何问题，这些备份文件将是为你提供修复砖机或从 NAND 镜像恢复文件的帮手
+1. 将 `<date>_<serialnumber>_sysnand_###.bin` 和 `<date>_<serialnumber>_sysnand_###.bin.sha` 从您的 SD 卡上的 `/gm9/out/` 文件夹中复制出，随后将其删除
+1. 将SD卡重新插入你的主机
+1. 按 “Start” 键重启你的设备
 
 ___
 
 {% capture notice-10 %}
-You can now use Luma3DS Updater to update your Luma3DS to the latest version just by opening it and pressing (A).
+你现在可以使用 Luma3DS Updater 来更新你的 Luma3DS 到最新版，只需运行该程序之后按下 “A” 键。
 
 这和系统升级不是一回事；它只会下载并提取最新的Luma3DS文件。
 
-This will only update the Luma3DS files on your SD card. If you boot your device without an SD card, it will use the version you placed in CTRNAND.    
+这只会升级SD卡上的Luma3DS文件。 如果您在拔出 SD 卡的情况下开机，它则会通过你复制在 CTRNAND 里的 Luma3DS 开机。    
 {% endcapture %}
 
 <div class="notice--info">{{ notice-10 | markdownify }}</div>
 
 {% capture notice-6 %}   
-You will now boot Luma3DS CFW SysNAND by default.    
+你的主机将会在预设下开机自动启动基于 SysNAND 的 Luma3DS 自制系统。    
 
 你可以在启动时按下 “Select” 键，进入 Luma3DS的配置菜单。    
 
-You can now hold (Start) on boot to launch the Luma3DS chainloader menu (note that the Luma3DS chainloader menu is only displayed if there is more than one payload detected).    
+你现在可以在启动时按住 “Start” 键，进入 Luma3DS 的 chainloader 菜单 (注意， Luma3DS 的 chainloader 菜单仅在检测到了多个 payload 文件时才会显示)。    
 
-You can now hold (Start) + (Select) + (X) on boot to dump the ARM11 bootrom (`boot11.bin`), the ARM9 bootrom (`boot9.bin`), and your console unique OTP (`OTP.bin`) to the `/boot9strap/` folder on your SD card (note that this will not have any kind of prompt or message).    
+你可以在开机时按下 “Start”+“Select”+“X” 键将ARM11的bootrom (`boot11.bin`) ，ARM9的bootrom (`boot9.bin`) 以及每台设备的独有OTP (`OTP.bin`) 导出到SD卡的 `/boot9strap/` 文件夹中（注意执行这个操作时不会出现任何提示或信息）。    
 
-You can now press (L) + (Down) + (Select) while the system is booted to open the Rosalina menu integrated into Luma3DS. For a full list of Rosalina features, please see the [Luma3DS v8.0 Release](https://github.com/AuroraWright/Luma3DS/releases/tag/v8.0)
+你现在可以在系统启动后同时按下 “L”+“↓”+“Select” 来打开集成在Luma3DS中的Rosalina菜单。 Rosalina的完整功能列表，可以参见 [Luma3DS v8.0 更新条目] (https://github.com/AuroraWright/Luma3DS/releases/tag/v8.0)
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
 
 {% capture notice-6 %}   
-If you would like to upgrade to a bigger sized SD card, all you have to do is format your new SD card as FAT32 and copy paste the contents of the old SD card onto the new SD card.    
+如果你想要更换更大的 SD 卡，只需要将 SD卡格式化为 FAT32 后，将原 SD 卡文件复制到新 SD 卡即可    
 
-If your new SD card is bigger than 32GB, then you have to use a different tool to format it, such as [guiformat](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) for Windows, [gparted](http://gparted.org/download.php) for Linux, or [Disk Utility](https://support.apple.com/en-gb/guide/disk-utility/format-a-disk-for-windows-computers-dskutl1010/mac) for Mac.    
+如果你的 SD 卡大于 32GB，那么你需要使用其他的工具来格式化 SD 卡；例如 Windows 上的 [guiformat](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm)、Linux 上的 [gparted](http://gparted.org/download.php)、Mac 上的[磁盘工具程序](https://support.apple.com/en-gb/guide/disk-utility/format-a-disk-for-windows-computers-dskutl1010/mac)。    
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
 
-To use [NTR CFW](https://github.com/44670/BootNTR/), install [BootNTR Selector](https://gbatemp.net/threads/432911/).
+如果要使用 [NTR CFW](https://github.com/44670/BootNTR/), 请安装[BootNTR Selector](https://gbatemp.net/threads/432911/).
 {: .notice--info}
 
 要想了解如何变更你的设备到另一个区域，参见[区域变更](region-changing) 页面。
 {: .notice--success}
 
-For information on using GodMode9's various features, check out the [GodMode9 Usage](godmode9-usage) page.
+有关使用 GodMode9 的各种功能的信息，请查阅 [如何使用GodMode9](godmode9-usage) 页。
 {: .notice--success}
 
 要想了解如何使用Luma3DS的各种功能，参见[这个wiki](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage).
 {: .notice--success}
 
-For information on installing custom themes and splash screens, check out [Theme Plaza](https://themeplaza.eu/).
+关于安装自定义主题、图标和启动画面的资源，请查阅 [Theme Plaza] (https://themeplaza.eu/)。
 {: .notice--success}
