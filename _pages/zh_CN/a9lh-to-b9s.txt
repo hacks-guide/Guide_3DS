@@ -2,85 +2,85 @@
 title: "A9LH升级B9S"
 ---
 
-{% include toc title="Table of Contents" %}
+{% include toc title="目录内容" %}
 
-### Required Reading
+### 必读事项
 
-该页面用于帮助 arm9loaderhax 的用户将他们的设备升级至 boot9strap。
+This page is for existing arm9loaderhax users to update their devices to boot9strap.
 
-All future releases of Luma3DS will only be made in the `.firm` format, which will only be compatible with boot9strap and sighax. This means that to continue receiving the latest updates of Luma3DS, you should use this page to update your installation.
+Luma3DS的所有未来版本将只以 `.firm` 格式制作，而这种格式只与boot9strap和sighax兼容。 这意味着，如果你想要使用最新版的Luma3DS，就得通过此页面将A9LH转为B9S。
 
-To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download).
+你需要一个支持BT协议的下载程序，如[Deluge](http://dev.deluge-torrent.org/wiki/Download)来下载本教程中的[磁力链](https://zh.wikipedia.org/wiki/%E7%A3%81%E5%8A%9B%E9%93%BE%E6%8E%A5) 。
 
-To extract the `.7z` files linked on this page, you will need a file archiver like [7-Zip](http://www.7-zip.org/) or [The Unarchiver](https://theunarchiver.com/).
+请使用[7-Zip](http://www.7-zip.org/)或[The Unarchiver](https://theunarchiver.com/)之类的压缩软件来解压本页面上的 `.7z` 文件。
 
-If you have a PIN enabled on Luma3DS, SafeB9SInstaller will give you an "OTP Crypto Fail" error unless you temporarily disable your PIN (you can re-enable the PIN after the update).
+如果你的 Luma3DS 设置了 PIN 密码，请暂时将其关闭，否则 SafeB9SInstaller 会提示 “OTP Crypto Fail” 错误信息。（升级完毕后你可以重新打开PIN密码）
 {: .notice--warning}
 
 {% capture notice-1 %}
-据消息称，任天堂封禁了大量使用自制系统（CFW）的用户。 To protect yourself, please do the following steps before starting this guide:
+据消息称，任天堂封禁了大量使用自制系统（CFW）的用户。 为了自保，请在继续教程前先进行如下操作。
 
-1. Go to System Settings, then "Internet Settings", then "SpotPass", then "Sending of System Information"
-1. Disable the "Sending of System Information" option
-1. Exit the System Settings
-1. Go to your Friend List (the [orange Face Icon]({{ "/images/friend-list-icon.png" | absolute_url }}) in the top row of your Home Menu)
-  + If you receive an error and are kicked out of the menu, the Friend List setting is either already disabled or your console cannot connect to Nintendo's servers (due to a ban or connection issues)
-1. Go to the Friend List settings, then "Friend Notification Settings", then "Show friends what you're playing"
-1. Disable the "Show friends what you're playing" option
-1. Exit your Friend List
+1. 进入“系统设置(System Settings)”，点击“互联网设置(Internet Settings)”，然后再点击“SpotPass”，之后再继续点击“发送系统信息(Sending of System Information)”
+1. 关闭“发送系统信息 (Sending of System Information) ”选项
+1. 退出系统设置
+1. 打开你的好友列表（Home 主菜单中最上方的[橙色的笑脸]({{ "/images/friend-list-icon.png" | absolute_url }})）
+  + 如果出现错误信息并被踢回到主菜单，则好友列表设置可能已被禁用或你的设备无法连接到任天堂服务器（由于封禁或网络问题）
+1. 进入“好友列表设置(Friend List settings)”，然后点击“好友提示设置 (Friend Notification Settings)”，再然后点击“展示正在游玩的游戏 (Show friends what you're playing)”
+1. 关闭“向好友展示正在玩的游戏(Show friends what you're playing)”选项
+1. 退出好友列表
 
 {% endcapture %}
 
 <div class="notice--danger">{{ notice-1 | markdownify }}</div>
 
-### What You Need
+### 准备工作
 
-Note that the following required file named `secret_sector.bin` is the same one that was found in the various `data_input.zip` file versions. If you already have that file on your disk somewhere, you can use that one instead of downloading the one below.
+请注意，在下面所需文件中名为“secret_sector.bin”的文件，可在各版本的“data_input.zip”中找到，并且与下文所给出的文件是一模一样的。 如果你已经在计算机中存储了该文件，你就可以直接使用那个文件而不用再在下面重新下载了。
 {: .notice--info}
 
-Note that, only on New 3DS, `secret_sector.bin` is needed to revert the arm9loaderhax exploit, which is why it is not needed for the installation of boot9strap on a stock console. If you do not have a New 3DS, you do not need `secret_sector.bin`.
+注意，只有在New 3DS 上，`secret_sector.bin` 才会被用来还原 arm9loaderhax 漏洞，所以这也是为什么在给原厂主机安装 boot9strap 时不需要这个文件。 如果你的主机不是 New 3DS ，则你无需下载 “secret_sector.bin”
 {: .notice--info}
 
-* <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - **New 3DS Users Only:** [secret_sector.bin](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce)
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(the `.7z` file)*
-* The v7.0.5 release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/tag/v7.0.5) *(the `.7z` file)*
-* The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
-* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
-* The latest release of [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) *(the `.cia` file)*
-* The latest release of [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/latest) *(the `.cia` file)*
-* The latest release of [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest)
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* The latest release of [DSP1](https://github.com/zoogie/DSP1/releases/latest)
-* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) *(the `.cia` and `.3dsx` files)*
-* The latest release of [ctr-no-timeoffset](https://github.com/ihaveamac/ctr-no-timeoffset/releases/latest)
-* The latest release of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(the `.cia` file)*
-* The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
+* <i class="fa fa-magnet" aria-hidden="true" title="这是一个磁力链接。 使用BT协议下载软件来下载此文件."></i> - **仅使用 New 3DS 的用户需下载:** [secret_sector.bin](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce)
+* 最新版 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *( 下载 `.7z` 格式的压缩包文件)*
+* 7.0.5版本的 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/tag/v7.0.5) *(下载 `.7z` 格式的压缩包文件)*
+* 最新版 [SafeB9SInstaller] (https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* 最新版 [boot9strap] (https://github.com/SciresM/boot9strap/releases/latest) *(下载标准的 boot9strap 压缩包文件，而不是带有 `devkit` 或 `ntr` 名字的文件)*
+* 最新版本的 [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) *(下载 `.cia` 文件)*
+* 最新版的 [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/latest) *(下载 `.cia` 文件)*
+* 最新版的 [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest)
+* 最新版本的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* 最新版的 [DSP1](https://github.com/zoogie/DSP1/releases/latest)
+* 最新版的 [FBI](https://github.com/Steveice10/FBI/releases/latest) *(下载 `.cia` 和 `.3dsx` 文件)*
+* 最新版本的[ctr-no-timeoffset](https://github.com/ihaveamac/ctr-no-timeoffset/releases/latest)
+* 最新版本的 [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(下载后缀为 `.cia` 的文件)*
+* 最新版本的 [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
 
 ### 操作步骤
 
-#### Section I - Prep Work
+#### 第一步 — 准备工作
 
-For all steps in this section, overwrite any existing files on your SD card.
+请在本节中的所有步骤覆盖SD卡上的所有现有文件。
 {: .notice--info}
 
-1. Power off your device
-1. Insert your SD card into your computer
-1. Copy `boot.3dsx` to the root of your SD card
-1. Create a folder named `3ds` on the root of your SD card if it does not already exist
-1. Create a folder named `cias` on the root of your SD card if it does not already exist
-1. Copy `ctr-no-timeoffset.3dsx` to the `/3ds/` folder on your SD card
-1. Copy `FBI.3dsx` to the `/3ds/` folder on your SD card
-1. Copy `Homebrew_Launcher.cia` to the `/cias/` folder on your SD card
-1. Copy `lumaupdater.cia` to the `/cias/` folder on your SD card
-1. Copy `FBI.cia` to the `/cias/` folder on your SD card
-1. Copy `DSP1.cia` to the `/cias/` folder on your SD card
-1. Copy `Anemone3DS.cia` to the `/cias/` folder on your SD card
-1. Copy `Checkpoint.cia` to the `/cias/` folder on your SD card
-1. Copy `boot.firm` from the latest version Luma3DS `.7z` to the root of your SD card
-1. Copy `arm9loaderhax.bin` from the v7.0.5 Luma3DS `.7z` to the root of your SD card
-1. Delete any existing `.bin` payloads in the `/luma/payloads/` folder on your SD card as they will not be compatible with boot9strap compatible Luma3DS versions
-1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
-1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+1. 关闭你的主机
+1. 将你的 SD 卡插入到你的电脑
+1. 复制 `boot.3dsx` 到你的 SD 卡根目录
+1. 检查 SD 卡的根目录是否存在一个名为 `3ds` 的文件夹，如果没有则手动新建一个
+1. 检查 SD 卡的根目录是否存在一个名为 `cias` 的文件夹，如果没有则手动新建一个
+1. 复制 `ctr-no-timeoffset.3dsx` 到你 SD 卡的 `/3ds/` 文件夹中
+1. 复制 `FBI.3dsx` 到你SD卡的 `/3ds/` 文件夹中
+1. 复制 `Homebrew_Launcher.cia` 到你 SD 卡的 `/cias/` 文件夹中
+1. 复制 `lumaupdater.cia` 到你 SD 卡的 `/cias/` 文件夹中
+1. 复制 `FBI.cia` 到你 SD 卡的 `/cias/` 文件夹中
+1. 复制 `DSP1.cia` 到你SD卡的 `/cias/` 文件夹中
+1. 复制 `Anemone3DS.cia` 到你 SD 卡的 `/cias/` 文件夹中
+1. 复制 `Themely.cia` 到你 SD 卡的 `/cias/` 文件夹中
+1. 从 Luma3DS`.7z` 压缩包中复制出 `boot.firm` 文件到你 SD 卡的根目录
+1. 从 Luma3DS`.7z` 压缩包中复制 `arm9loaderhax.bin` 文件到你 SD 卡的根目录
+1. 删除SD卡 `/luma/payloads/` 文件夹中任何后缀为 `.bin` 的文件，因为它们在支持 boot9strap 的 Luma3DS 版本中无法使用
+1. 从GodMode9`.zip`中复制 `GodMode9.firm` 到SD卡的 `/luma/payloads/` 文件夹中
+1. 将GodMode9`.zip`压缩包中的整个 `gm9` 文件夹复制到SD卡的根目录下
 1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the `/luma/payloads/` folder on your SD card
 1. Create a folder named `boot9strap` on the root of your SD card
 1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
