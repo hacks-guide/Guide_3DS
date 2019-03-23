@@ -18,7 +18,7 @@ title: "完成安装"
 +  **Luma3DS Updater** *(用来更新Luma3DS固件)*
 +  **GodMode9** *(一款多功能工具，可以处理NAND和卡带的相关功能)*
 + **Homebrew Launcher Loader** *(启动自制程序启动器的快捷方式)*
-+  **DSP1** *(allows homebrew applications to have sound)*
++  **DSP1** *(允许自制程序播放音乐)*
 +  **ctr-no-timeoffset** *(移除 rtc 偏移，让主菜单时间和 rtc 时间匹配)*
 
 ### 准备工作
@@ -76,7 +76,7 @@ title: "完成安装"
 
 #### 第三步 — 进入自制程序启动器
 
-1. Launch the Download Play application (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
+1. 启动“下载通信(Download Play)”程序 (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
 1. 同时按下“L”+“下”+“Select” 键来打开 Rosalina 菜单
 1. 选择 “Miscellaneous options”
 1. 选择 “Switch the hb. title to the current app.”
@@ -85,7 +85,7 @@ title: "完成安装"
 1. 按 “B” 键退出 Rosalina 菜单
 1. 按下 “Home” 键，然后关闭“下载通信(Download Play)”
 1. 运行“下载通信(Download Play)”程序
-1. Your device should load the Homebrew Launcher
+1. 此时你的主机应该会启动“自制程序启动器(Homebrew Launcher)”了
 1. 从自制程序列表中运行 ctr-no-timeoffset
 1. 按 “A” 键来将RTS时间设置为 0
   + (在此之后会设置) 这个操作将把 RTC 日期和时间同步为系统时间
@@ -155,33 +155,33 @@ title: "完成安装"
 ___
 
 {% capture notice-10 %}
-你现在可以使用Luma3DS Updater来更新你的Luma3DS到最新版，只需运行该程序并按下(A)键。
+你现在可以使用 Luma3DS Updater 来更新你的 Luma3DS 到最新版，只需运行该程序之后按下 “A” 键。
 
 这和系统升级不是一回事；它只会下载并提取最新的Luma3DS文件。
 
-This will only update the Luma3DS files on your SD card. If you boot your device without an SD card, it will use the version you placed in CTRNAND.
+这只会升级 SD 卡上的 Luma3DS 文件。 如果您在拔出 SD 卡的情况下开机，它则会通过你复制在 CTRNAND 里的 Luma3DS 开机。
 {% endcapture %}
 
 <div class="notice--info">{{ notice-10 | markdownify }}</div>
 
 {% capture notice-6 %}
-You will now boot Luma3DS CFW SysNAND by default.
+你的主机将会在预设下开机自动启动基于 SysNAND 的 Luma3DS 自制系统。
 
-你可以在启动时按下 “Select” 键，进入 Luma3DS的配置菜单。
+你可以在启动时按下 “Select” 键，进入 Luma3DS 的配置菜单。
 
-You can now hold (Start) on boot to launch the Luma3DS chainloader menu (note that the Luma3DS chainloader menu is only displayed if there is more than one payload detected).
+你现在可以在启动时按住 “Start” 键，进入 Luma3DS 的 chainloader 菜单 (注意， Luma3DS 的 chainloader 菜单仅在检测到了多个 payload 文件时才会显示)。
 
-You can now hold (Start) + (Select) + (X) on boot to dump the ARM11 bootrom (`boot11.bin`), the ARM9 bootrom (`boot9.bin`), and your console unique OTP (`OTP.bin`) to the `/boot9strap/` folder on your SD card (note that this will not have any kind of prompt or message).
+你可以在开机时按下 “Start”+“Select”+“X” 键将ARM11的bootrom (`boot11.bin`) ，ARM9的bootrom (`boot9.bin`) 以及每台设备的独有OTP (`OTP.bin`) 导出到SD卡的 `/boot9strap/` 文件夹中（注意执行这个操作时不会出现任何提示或信息）。
 
-You can now press (L) + (Down) + (Select) while the system is booted to open the Rosalina menu integrated into Luma3DS. For a full list of Rosalina features, please see the [Luma3DS v8.0 Release](https://github.com/AuroraWright/Luma3DS/releases/tag/v8.0)
+你现在可以在系统启动后同时按下 “L”+“↓”+“Select” 来打开集成在Luma3DS中的Rosalina菜单。 Rosalina的完整功能列表，可以参见 [Luma3DS v8.0 更新条目] (https://github.com/AuroraWright/Luma3DS/releases/tag/v8.0)
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
 
 {% capture notice-6 %}
-If you would like to upgrade to a bigger sized SD card, all you have to do is format your new SD card as FAT32 and copy paste the contents of the old SD card onto the new SD card.
+如果你想要更换更大的 SD 卡，只需要将 SD卡格式化为 FAT32 后，将原 SD 卡文件复制到新 SD 卡即可
 
-If your new SD card is bigger than 32GB, then you have to use a different tool to format it, such as [guiformat](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) for Windows, [gparted](http://gparted.org/download.php) for Linux, or [Disk Utility](https://support.apple.com/en-gb/guide/disk-utility/format-a-disk-for-windows-computers-dskutl1010/mac) for Mac.
+如果你的 SD 卡大于 32GB，那么你需要使用其他的工具来格式化 SD 卡；例如 Windows 上的 [guiformat](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm)、Linux 上的 [gparted](http://gparted.org/download.php)、Mac 上的[磁盘工具程序](https://support.apple.com/en-gb/guide/disk-utility/format-a-disk-for-windows-computers-dskutl1010/mac)。
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
@@ -189,14 +189,14 @@ If your new SD card is bigger than 32GB, then you have to use a different tool t
 要想了解如何变更你的设备到另一个区域，参见[区域变更](region-changing) 页面。
 {: .notice--success}
 
-For information on using GodMode9's various features, check out the [GodMode9 Usage](godmode9-usage) page.
+如果想知道 GodMode9 各种功能的使用方法，请查阅 [如何使用GodMode9](godmode9-usage) 页。
 {: .notice--success}
 
-要想了解如何使用Luma3DS的各种功能，参见[这个wiki](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage).
+如果想知道如何使用 Luma3DS 的各种功能，参见[这个wiki](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage).
 {: .notice--success}
 
-For information on installing custom themes and splash screens, check out [Theme Plaza](https://themeplaza.eu/).
+关于安装自定义主题、图标和启动画面的资源，请查阅 [Theme Plaza] (https://themeplaza.eu/)。
 {: .notice--success}
 
-For information on using Gateshark cheat codes on Luma3DS, check out [Sharkive](https://github.com/FlagBrew/Sharkive).
+若想在 Luma3DS 中使用 Gateshark 金手指，请参见 [Sharkive](https://github.com/FlagBrew/Sharkive)。
 {: .notice--success}
