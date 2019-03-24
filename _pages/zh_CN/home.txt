@@ -1,58 +1,58 @@
 ---
 layout: splash
-title: "3DS Hacks Guide" #
+title: "3DS 破解手册" #
 header:
   overlay_color: "#5e616c" #
   overlay_image: /images/home-page-feature.jpg
   overlay_filter: 0.5
   caption:
-excerpt: "A complete guide to 3DS custom firmware, <br /> from stock to boot9strap.<br />"
+excerpt: "最完整的 3DS 破解手册，<br /> 教你从原版主机破解成boot9strap。<br />"
 ---
 
-For complete guides to homebrew and custom firmware for other devices, check out [Hacks.Guide](https://hacks.guide).
+你还可以访问[Hacks.Guide](https://hacks.guide)找到其他设备的自制软件和自制固件完整安装教程。
 {: .notice--primary}
 
 ___
 
-Thoroughly read all of the introductory pages (including this one!) before proceeding.
+请在开始操作前仔细阅读所有步骤页面（包括这个页面）。
 {: .notice--warning}
 
 {% capture notice-1 %}
-This guide is for retail (consumer purchased; not from the Nintendo Developer Program) consoles _only_!
-If you have a developer ("PANDA") console, check out the [Panda 3DS Hacks Guide](https://panda.hacks.guide).
+本教程 _仅_ 适用于零售版的3DS（市面上销售的；而非通过任天堂开发者计划获得的）！
+如果你的主机是开发版(主机代号“PANDA”)的，请参见[Panda 3DS破解指南](https://panda.hacks.guide)。
 {% endcapture %}
 
 <div class="notice--danger">{{ notice-1 | markdownify }}</div>
 
 {% capture notice-1 %}
-This guide is available in other languages!
-Click the <i class="fa fa-language" aria-hidden="true"></i> icon at the top right of the page to change the language.
-Alternatively, click [here](https://crowdin.com/project/3ds-guide) to help to keep these translations up to date.
+本教程支持其他语言！
+点击页面右上角的<i class="fa fa-language" aria-hidden="true"></i>图标更改语言。
+你还可以点击[这里](https://crowdin.com/project/3ds-guide)帮助翻译或更新翻译。
 {% endcapture %}
 
 <div class="notice--success">{{ notice-1 | markdownify }}</div>
 
-This guide needs *your* help to seed [these]({{ "rss.xml" | absolute_url }}) torrents!
+这个手册需要 *你* 的帮助来将[这些]({{ "rss.xml" | absolute_url }})种子做种！
 {: .notice--primary}
 
 ## 什么是自制程序？
 
-[**Homebrew**](https://wikipedia.org/wiki/List_of_homebrew_video_games) usually refers to software that is not authorized by Nintendo. This includes homebrew tools, applications, games, and emulators.
+[**自制程序(Homebrew)**](https://wikipedia.org/wiki/List_of_homebrew_video_games) 通常指未经任天堂授权的软件。 比如自制工具、应用、游戏和模拟器。
 
-In many cases, running homebrew on your device is 100% free using just the Nintendo 3DS Sound app. There are also various other exploits in commercial games and the browser to get homebrew running.
+在很多情况下，只要通过3DS的音乐播放器就可以完全免费的运行自制程序。此外，也可以通过部分游戏或系统自带浏览器中的漏洞运行自制程序。
 
 ## 什么是自制系统？
 
 **自制系统(Custom Firmware)** ("CFW") 可以使你进行自制程序无法轻易做到的更高级的破解。 例如，签名补丁可以使你安装未签名的程序，并让它们出现在桌面中。
 
-CFW can be set up on any console on any version (but may require additional tools / accessories for versions >11.3.0).
+任何主机及版本都能够安装自制系统（高于11.3.0版本的系统可能会需要使用其他额外工具）。
 
 ## 本教程将安装什么？
 
 本教程的最终目的，是将一个未经修改过的装有原生系统的3DS
-firmware to boot9strap powered Custom Firmware. 在某些版本的机器上，本教程会使用自制程序作为跳板，但是最终目的依然是安装自制系统。
+变成一个基于 boot9strap 的自制系统。 On some versions, it utilizes homebrew as a stepping off point, but Custom Firmware is still the goal.
 
-boot9strap is the newest and best method of launching Custom Firmware that gives us nearly full control of the system only milliseconds into boot, which is similar to the effect of BootMii for the Wii. It gives us even earlier control than arm9loaderhax did, and, unlike standard sighax, boot9strap uses an NDMA overwrite exploit in order to gain Boot9 code execution. This means that any console running boot9strap is capable of dumping the console unique OTP (`OTP.bin`), the ARM11 bootrom (`boot11.bin`), and the ARM9 bootrom (`boot9.bin`).
+boot9strap是一种最新和最好的引导自制系统的方法，只需启动时几毫秒的时间，就能让你获得几乎全部系统权限，类似于Wii上面BootMii的作用。 It gives us even earlier control than arm9loaderhax did, and, unlike standard sighax, boot9strap uses an NDMA overwrite exploit in order to gain Boot9 code execution. This means that any console running boot9strap is capable of dumping the console unique OTP (`OTP.bin`), the ARM11 bootrom (`boot11.bin`), and the ARM9 bootrom (`boot9.bin`).
 
 The benefits of boot9strap over other Custom Firmware launch methods are numerous, and as such it is recommended to use this guide over any other that relies on outdated software (such as menuhax + rxTools, arm9loaderhax, or even normal sighax).
 
