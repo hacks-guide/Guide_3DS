@@ -1,14 +1,14 @@
 ---
-title: "启动自制程序启动器 (通过Soundhax)"
+title: "启动Homebrew Launcher (通过Soundhax)"
 ---
 
 {% include toc title="目录内容" %}
 
 ### 必读事项
 
-“自制程序启动器(Homebrew Launcher)” 有许多不同的入口和启动方式。
+Homebrew Launcher 有许多不同的入口和启动方式。
 
-Soundhax (与自制程序启动器一起时) 与欧版、日版、韩版和美版的 9.0.0 至 11.3.0 系统版本的设备兼容。
+Soundhax (与 Homebrew Launcher 一起时) 与欧版、日版、韩版和美版的 9.0.0 至 11.3.0 系统版本的设备兼容。
 
 请确保设备的无线通信功能已启用，因为下一页中要用到的 udsploit 需要它才能使用，一些设备（新3DS、新2DS和老2DS）无法从自制程序启动器中更改无线通信设置。 你只需要打开网络开关；不需要连接到路由器。
 
@@ -18,53 +18,53 @@ Soundhax (与自制程序启动器一起时) 与欧版、日版、韩版和美�
 
 注意，卡带升级只会更新系统核心组件，如系统设置、桌面菜单等等。 卡带升级不会更新Nintendo 3DS的音乐播放器和网络相关的组件，如系统迁移，互联网浏览器，StreetPass Mii广场和eShop。
 
-This means that using a cartridge update from a version containing an older Nintendo 3DS Sound version *(<3.0.0)* to one that introduced a newer Nintendo 3DS Sound version will break Soundhax! You will need an [alternate method](homebrew-launcher-(alternatives)) of entering the Homebrew Launcher!
+这也就是说，如果系统本身就安装有旧版本的“任天堂 3DS 音乐 (Nintendo 3DS Sound)”程序 *(低于3.0.0的版本)* 且通过含有新版此程序的卡带进行更新，将导致 Soundhax 漏洞无法正常使用！ 你需要用 [其他方法](homebrew-launcher-(alternatives)) 来进入Homebrew Launcher！
 {% endcapture %}
 
 <div class="notice--warning">{{ notice-1 | markdownify }}</div>
 
-### What You Need
+### 准备工作
 
-* The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
-* The latest release of [Soundhax](http://soundhax.com) *(for your region, device, and version)*
-* The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
-* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
-* The latest release of [safehax](https://github.com/TiniVi/safehax/releases/latest) *(the `.3dsx` file)*
+* 最新版 [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
+* 最新版[Soundhax](http://soundhax.com/) *(根据你的3DS的区域、型号和版本下载)*
+* 最新版 [SafeB9SInstaller] (https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* 最新版 [boot9strap] (https://github.com/SciresM/boot9strap/releases/latest) *(下载标准的 boot9strap 压缩包文件，而不是带有 `devkit` 或 `ntr` 名字的文件)*
+* 最新版 [safehax](https://github.com/TiniVi/safehax/releases/latest) *(下载`.3dsx` 文件)*
 * 最新版 [udsploit](https://github.com/smealum/udsploit/releases/latest)
 * 最新版 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *( 下载 `.7z` 格式的压缩包文件)*
-* The [otherapp payload](https://smealum.github.io/3ds/#otherapp) *(for your region and version)*
+* The [otherapp payload](https://smealum.github.io/3ds/#otherapp) *(根据你的3DS的区域和版本下载)*
 
 ### 操作步骤
 
-1. Power off your device
-1. Insert your SD card into your computer
+1. 将设备关机
+1. 将SD卡插入电脑
 1. 检查 SD 卡的根目录是否存在一个名为 `3ds` 的文件夹，如果没有则手动新建一个
 1. 复制 `boot.3dsx` 到你的 SD 卡根目录
-1. Copy the Soundhax `.m4a` to the root of your SD card
-1. Copy the otherapp payload to the root of your SD card and rename it to `otherapp.bin`
-1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card
-1. Create a folder named `boot9strap` on the root of your SD card
-1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
+1. 复制 Soundhax 的 `.m4a` 文件到你的 SD 卡根目录下
+1. 将下载的 otherapp payload 复制到SD卡的根目录下，并重命名为 `otherapp.bin`
+1. 从Luma3DS的 `.7z` 文件中复制 `boot.firm` 到你的SD卡根目录
+1. 在 SD 卡根目录创建一个名为 `boot9strap` 的文件夹
+1. 从boot9strap `.zip` 文件中复制 `boot9strap.firm` 和 `boot9strap.firm.sha` 到你SD卡的 `/boot9strap/` 文件夹中
 1. 复制 `safehax.3dsx` 到你 SD 卡的 `/3ds/` 文件夹
 1. 复制 `udsploit.3dsx` 到你 SD 卡的 `/3ds/` 文件夹
-1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card and rename `SafeB9SInstaller.bin` to `safehaxpayload.bin`
+1. 将 SafeB9SInstaller `.zip` 解压，复制 `SafeB9SInstaller.bin` 到 SD 卡的根目录下，并重命名为 `safehaxpayload.bin`
 
     ![]({{ "/images/screenshots/boot9strap-hb-file-layout.png" | absolute_url }})
     {: .notice--info}
 
-1. Reinsert your SD card into your device
-1. Power on your device
+1. 将 SD 卡重新插入设备
+1. 启动你的主机
 1. 启动 “任天堂 3DS 音乐(Nintendo 3DS Sound)”
 
     ![]({{ "/images/screenshots/soundhax-welcome.png" | absolute_url }})
     {: .notice--info}
 
-1. If you've never opened Nintendo 3DS Sound before and get tips on how to use it from a bird icon, go through all of the bird tips, then close the app normally and relaunch it
-  + In this situation, launching Soundhax immediately would cause these tips to appear on every launch of the Nintendo 3DS Sound until this is done
+1. 如果你从未启动过 “任天堂 3DS 音乐(Nintendo 3DS Sound)”，在启动后收到了小鸟的对话框提示，那么请完成所有的对话，然后关闭此软件再重新打开
+  + 在这种情况下，除非你按上文所示的步骤进行操作，直接运行 Soundhax 将会导致这些提示在每次启动“任天堂 3DS 音乐(Nintendo 3DS Sound)”时都会出现
 1. 进入 `/sdcard`，然后播放“< 3 nedwill 2016”
   + 有可能需要反复尝试几次
   + 如果设备死机了，请长按电源键关闭设备，然后再试一次
-  + If you get a red screen, ensure you copied `boot.3dsx` (the Homebrew Launcher) to the root of your SD card
+  + 如果你的设备红屏了，请确认你已经复制了 `boot.3dsx` (Homebrew Launcher) 文件夹中的内容到你 SD 卡的根目录
 
     ![]({{ "/images/screenshots/soundhax-launch.png" | absolute_url }})
     {: .notice--info}
