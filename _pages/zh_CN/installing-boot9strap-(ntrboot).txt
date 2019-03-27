@@ -12,25 +12,25 @@ title: "安装boot9strap (通过 ntrboot)"
 
 请使用[7-Zip](http://www.7-zip.org/)或[The Unarchiver](https://theunarchiver.com/)之类的压缩软件来解压本页面上的 `.7z` 文件。
 
-### What You Need
+### 准备工作
 
-* A magnet that triggers the sleep mode of your device (if using a folding style device)
-* Your ntrboot flashed flashcart
-* The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
-* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
+* 一块用来触发主机的休眠模式的磁铁 (只适用于折叠式主机)
+* 一张已经写入 ntrboot 漏洞的烧录卡
+* 最新版 [SafeB9SInstaller] (https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* 最新版 [boot9strap] (https://github.com/SciresM/boot9strap/releases/latest) *(下载标准的 boot9strap 压缩包文件，而不是带有 `devkit` 或 `ntr` 名字的文件)*
 * 最新版 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *( 下载 `.7z` 格式的压缩包文件)*
-* The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
+* 最新版 [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
 
 ### 操作步骤
 
 #### 第一步 — 准备工作
 
 1. 将设备关机
-1. Insert your device's SD card into your computer
-  + This is the SD card from your 3DS, *not* the SD card from your flashcart
-1. Copy `SafeB9SInstaller.firm` to the root of your SD card and rename it to `boot.firm`
+1. 将你主机的 SD 卡插入你的电脑
+  + 这里指的是 3DS 的 SD 卡，*不* 是烧录卡中的 SD 卡
+1. 复制 `SafeB9SInstaller.firm` 到 SD 卡的根目录，并重命名为 `boot.firm`
 1. 复制 `boot.3dsx` 到你的 SD 卡根目录
-1. Create a folder named `boot9strap` on the root of your SD card
+1. 在SD卡根目录创建一个名为 `boot9strap` 的文件夹
 1. 从boot9strap `.zip` 压缩包中复制 `boot9strap.firm` 和 `boot9strap.firm.sha` 到你SD卡的 `/boot9strap/` 文件夹中
 
     ![]({{ "/images/screenshots/boot9strap-ntrboot-file-layout.png" | absolute_url }})
@@ -39,35 +39,35 @@ title: "安装boot9strap (通过 ntrboot)"
 1. 将SD卡重新插入你的主机
 1. 启动你的主机
 
-#### Section II - ntrboot
+#### 第二步 — 触发 ntrboot
 
-1. Use the magnet to find the spot on your device where the sleep sensor is triggered
-  + This step is not needed on the old 2DS (which has a sleep mode switch)
+1. 使用磁铁在主机上找到可以触发休眠模式的休眠感应器
+  + 老型号的 2DS 可以跳过此步 (因为其有独立的休眠开关)
 1. 将设备关机
-1. Insert your flashcart into your device
-1. Place the magnet on your device to trigger the sleep sensor
-  + On old 2DS, you should instead enable the sleep mode switch
-1. Hold (Start) + (Select) + (X) + (Power) for several seconds, then release the buttons
-  + It may take a few attempts to get this to work because the positioning is awkward
+1. 将烧录卡插回主机中
+1. 将磁铁放在主机的休眠感应器上
+  + 老型号的 2DS 将休眠模式开关打开即可
+1. 按住 “Start” + “Select” + “X” + “电源键” 几秒钟，然后放开
+  + 你可能要多试几次，因为这些组合键有点难按
 1. 如果一切成功的话，你将自动进入 SafeB9SInstaller
 
-#### Section III - Installing boot9strap
+#### 第三步 — 安装 boot9strap
 
 1. 等待所有安全检查完成
-1. Remove the magnet from your device
-  + On old 2DS, you should instead disable the sleep mode switch
+1. 从你的主机上移开磁铁
+  + 老型号的 2DS 将休眠模式开关关闭即可
 1. 出现提示时，按照提示输入按键组合来安装boot9strap
-1. Once it has completed, force your device to power off by holding down the power button
-  + Your device will only boot to the SafeB9SInstaller screen until the next section is completed
+1. 完成后，长按电源键强制关机
+  + 除非你完成下一节，否则你开机后只能进入 SafeB9SInstaller 中
 
-#### Section IV - Configuring Luma3DS
+#### 第四步 — 设置 Luma3DS
 
 1. 将你的 SD 卡插入到电脑
-1. Delete `boot.firm` from the root of your SD card
+1. 删除 SD 卡根目录下的 `boot.firm` 文件
 1. 从Luma3DS的 `.7z` 压缩包中复制 `boot.firm` 到你的SD卡根目录
 1. 将SD卡重新插入你的主机
 1. 启动你的主机
-1. Your device should have booted into the Luma3DS configuration menu
+1. 你的设备应该会在开机后进入 Luma3DS 配置菜单
   + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 1. 使用方向键和 “A” 键来启用以下设置：
   + **“Show NAND or user string in System Settings”**
