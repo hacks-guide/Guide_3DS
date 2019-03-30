@@ -1,176 +1,176 @@
 ---
-title: "Move EmuNAND"
+title: "迁移EmuNAND数据"
 ---
 
-{% include toc title="Table of Contents" %}
+{% include toc title="目录内容" %}
 
-### Required Reading
+### 必读事项
 
-本节是附加章节，将你的EmuNAND的数据迁移到新的SysNAND自制系统中，然后删除EmuNAND分区。 注意EmuNAND和RedNAND是[同一概念](http://3dbrew.org/wiki/NAND_Redirection)的两种略微不同的实现。
+本附加章节将介绍如何将你的 EmuNAND 的数据迁移到新的 SysNAND 自制系统中，然后删除 EmuNAND 分区。 请注意，EmuNAND 和 RedNAND 是[同一概念](http://3dbrew.org/wiki/NAND_Redirection)的两种略微不同的实现。
 
-Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions.
+请注意，如果在SD卡`/luma/payloads/`文件夹下，有除了`GodMode9.firm`以外的payload文件，那么在按住 “Start” 键开机的时候，设备将会进入“chainloader menu”菜单。届时请使用方向键和 “A” 键来选择本教程所需的“GodMode9”。
 
-You MUST have already installed Luma3DS and boot9strap to use this.
+在开始之前，你 *必须* 确认事先装好了Luma3DS和boot9strap。
 {: .notice--danger}
 
-### What You Need
+### 准备工作
 
-* 已有的EmuNAND
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest)
+* 已有 EmuNAND 分区
+* 最新版 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* 最新版 [FBI](https://github.com/Steveice10/FBI/releases/latest)管理器
 
 ### 操作步骤
 
-#### Section I - Prep Work
+#### 第一步 — 准备工作
 
-1. Power off your device
-1. Insert your SD card into your computer
-1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
-1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
-1. Reinsert your SD card into your device
+1. 将设备关机
+1. 将SD卡插入电脑
+1. 从GodMode9 `.zip` 中复制 `GodMode9.firm` 到SD卡的 `/luma/payloads/` 文件夹中
+1. 将 GodMode9 `.zip` 中的整个 `gm9` 文件夹复制到 SD 卡的根目录下
+1. 将 SD 卡重新插入你的设备
 
-#### Section II - Backup SysNAND DSiWare Saves
+#### 第二步 — 备份 SysNAND 中的 DSiware 存档
 
-If you do not have any DSiWare games or saves that you care about, skip this section.
+如果你没有任何 DSiWare 游戏或者不关心其存档，那么你可以跳过这个部分。
 {: .notice--info}
 
-1. Launch GodMode9 by holding (Start) during boot
-1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
-1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
-  + Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
-1. Navigate to `[2:] SYSNAND TWLN` -> `title`
-1. Hold (R) and press (A) at the same time on `00030004` to select the folder, then select "Copy to 0:/gm9/out"
-  + This process may take some time if you have many DSiWare games
-1. Press (B) twice to return to the main menu
+1. 开机时按住 “Start” 键启动 GodMode9
+1. 如果提示创建重要文件备份，按下 “A” 键确认，在完成后再次按下 “A” 键来继续。
+1. 如果出现修复RTC日期与时间的提示，按 “A” 键执行修复，然后设置好日期和时间，并按 “A” 继续
+  + 请注意，如果出现了该提示，则执行完本指南后你还需要在系统设置中重新设置时间
+1. 移动至 `[2:] SYSNAND TWLN` -> `title`
+1. 将光标移动至 `00030004` 目录，然后同时按 “R” + “A” 键 ，然后选择 “Copy to 0:/gm9/out”
+  + 如果你有很多的 DSiWare 游戏，那么此过程可能会花一些时间。
+1. 按两次 “B” 键返回到主菜单
 
-#### Section III - Backup GBA VC Saves
+#### 第三步 — 备份 GBA VC 的存档
 
-If you do not have any GBA VC games or saves that you care about, skip this section.
+如果你没有任何 GBA VC 游戏或者不关心其存档，那么你可以跳过这个部分。
 {: .notice--info}
 
-Note that this is not necessary for any other kind of Virtual Console games (GBC, NES, etc)
+请注意，其他平台的 VC（如GBC, NES, 等）游戏不需要做这些步骤。
 {: .notice--info}
 
-The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
+游戏存档将会输出到 SD 卡上的 `/gm9/out/` 目录，并命名为 `<TitleID>.gbavc.sav`。
 {: .notice--info}
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
+要确定 `<TitleID>.gbavc.sav` 文件的 Title ID 所对应的程序，你可以选中 `[A:] SYSNAND SD` 并同时按下 “R” 键与 “A” 键，然后选择“Search for titles”来获取系统上已安装的游戏的列表及它们对应的 Title ID。
 {: .notice--info}
 
-1. Do the following process for each GBA VC game that you want to backup the save for:
-  + Launch the GBA VC game
-  + Exit the GBA VC game
-  + Boot your device while holding (Start) to launch the Luma3DS chainloader menu
-  + Launch GodMode9 by pressing (A)
-  + Navigate to `[S:] SYSNAND VIRTUAL`
-  + Press (A) on `agbsave.bin` to select it
-  + Select "AGBSAVE options..."
-  + Select "Dump GBA VC save"
-  + Press (A) to continue
-  + Press (Start) to reboot your device
+1. 依次对每个想备份存档的 GBA VC 游戏进行如下操作：
+  + 启动 GBA VC 游戏
+  + 退出游戏并关机
+  + 开机时按住 “Start” 键来进入 Luma3DS chainloader 菜单
+  + 按 “A” 键启动 GodMode9
+  + 移动至 `[S:] SYSNAND VIRTUAL`
+  + 在 `agbsave.bin` 上按 “A” 键选中
+  + 选择 “AGBSAVE options...”
+  + 选择 “Dump GBA VC save”
+  + 按 “A” 键继续
+  + 按下 “Start” 键重启设备
 
-#### Section IV - Copy EmuNAND to SysNAND
+#### 第四步 — 复制 EmuNAND 到 SysNAND
 
-1. Launch GodMode9 by holding (Start) during boot
-1. Navigate to `[E:] EMUNAND VIRTUAL`
-1. Press (A) on `nand.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
-1. Press (A) to unlock SysNAND overwriting, then input the key combo given
-  + This will not overwrite your boot9strap installation
-1. Input the key combo given to unlock SysNAND (lvl1) writing
-  + This process will take some time
-1. + 完成后，按 (A) 键以继续
-1. Press (B) to decline relocking write permissions if prompted
-1. Press (B) to return to the main menu
+1. 开机时按住 “Start” 键启动 GodMode9
+1. 移动至 `[E:] EMUNAND VIRTUAL`
+1. 将光标移动到 `nand.bin` 上，然后按下A键。然后选择“NAND image options...”，再然后选择 “Restore SysNAND (safe)”
+1. 按 “A” 键解锁 SysNAND 写入权限，并依次输入屏幕上给出的的按键
+  + 这不会覆盖你已安装好的 boot9strap
+1. 依次输入屏幕上的按键来解锁 SysNAND(lv1) 的写入权限
+  + 此过程将花费一些时间
+1. 完成后，按下 “A” 键以继续
+1. 如果弹出重新锁定写入权限的提示，按下 “B” 键来拒绝。
+1. 按下 “B” 键返回到主菜单
 
-#### Section V - Restore DSiWare Saves
+#### 第五步 — 还原 DSiWare 游戏的存档
 
-If you did not backup DSiWare Saves earlier, skip this section.
+如果你之前没备份 DSiWare 的游戏存档，那么就跳过此部分。
 {: .notice--info}
 
-1. Navigate to `[0:] SDCARD` -> `gm9` -> `out`
-1. Press (Y) on the `00030004` folder to copy it
-1. Press (B) twice to return to the main menu
-1. Navigate to `[2:] SYSNAND TWLN` -> `title`
-1. Press (Y) to paste the `00030004` folder
-1. Select "Copy path(s)"
-1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
-1. Select "Overwrite file(s)"
-  + This process may take some time if you have many DSiWare games
-1. Press (B) to decline relocking write permissions if prompted
-1. Press (B) twice to return to the main menu
+1. 移动至 `[0:] SDCARD` -> `gm9` -> `out`
+1. 将光标移动至 `00030004` 文件夹，并按下 “Y” 键复制
+1. 按两次 “B” 键返回到主菜单
+1. 移动至 `[2:] SYSNAND TWLN` -> `title`
+1. 按下 “Y” 键来粘贴 `00030004` 文件夹到此处
+1. 选择 “Copy path(s)”
+1. 按 “A” 键解锁SysNAND (lvl1) 写入权限，并根据屏幕上的提示依次按下按键
+1. 选择 “Overwrite file(s)”
+  + 如果你有很多的 DSiWare 游戏，那么此过程可能会花一些时间。
+1. 如果弹出重新锁定写入权限的提示，请按下 “B” 来拒绝
+1. 按两次 “B” 键返回到主菜单
 
-#### Section VI - Restore GBA VC Saves
+#### 第六步 — 还原 GBA VC 的存档
 
-If you did not backup GBA VC Saves earlier, skip this section.
+如果你之前没备份 GBA VC 的游戏存档，那么就跳过此部分。
 {: .notice--info}
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by holding (R) and pressing (A) on the GodeMode9 main menu, then selecting "Search for titles".
+要确定 `<TitleID>.gbavc.sav` 文件的 Title ID 所对应的程序，你可以在 Godmode9 主菜单内同时按下 “R” 键与 “A” 键，然后选择“Search for titles”来获取系统上已安装的游戏的列表及它们对应的 Title ID。
 {: .notice--info}
 
-1. Hold (R) and press (Start) at the same time to power off your device
-1. Power on your device into SysNAND
-1. Do the following process for each GBA VC game that you want to restore the save for:
-  + Launch the GBA VC game
-  + Exit the GBA VC game
-  + Boot your device while holding (Start) to launch the Luma3DS chainloader menu
-  + Launch GodMode9 by pressing (A)
-  + Navigate to `[0:] SDCARD` -> `gm9`
-  + Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
-  + Press (B) to return to the main menu
-  + Navigate to `[S:] SYSNAND VIRTUAL`
-  + Press (A) on `agbsave.bin` to select it
-  + Select "AGBSAVE options..."
-  + Select "Inject GBA VC save"
-  + Press (A) to continue
-  + Press (Start) to reboot your device
-  + Launch the GBA VC game
-  + Exit the GBA VC game
-1. Launch GodMode9 by holding (Start) during boot
+1. 同时按下 “R” + “Start” 键关机
+1. 启动你主机的 SysNAND 系统
+1. 对每个 GBA VC 依次执行下列步骤来恢复它们的存档：
+  + 启动 GBA VC
+  + 退出游戏并关机
+  + 开机时按下 “Start” 键进入 Luma3DS 的 chainloader 菜单
+  + 将光标移动至 GodMode9 ，按下 “A” 键启动
+  + 移动至 `[0:] SDCARD` -> `gm9`
+  + 选择你想要恢复的 `<TitleID>.gbavc.sav` 并按 “Y” 键复制
+  + 按下 “B” 键返回到主菜单
+  + 移动至 `[S:] SYSNAND VIRTUAL`
+  + 在 `agbsave.bin` 上按 “A” 键选中
+  + 选择 “AGBSAVE options...”
+  + 选择 “Inject GBA VC save”
+  + 按 “A” 键继续
+  + 按下 “Start” 键重启设备
+  + 启动 GBA VC
+  + 退出游戏并关机
+1. 开机时按住 “Start” 键启动 GodMode9
 
-#### Section VII - Backup SysNAND
+#### 第七步 — 备份 SysNAND
 
-1. Press (Home) to bring up the action menu
-1. Select "Scripts..."
-1. Select "GM9Megascript"
-1. Select "Backup Options"
-1. Select "SysNAND Backup"
-1. 按(A)键确定
-  + This process will take some time
-  + If you get an error, make sure that you have at least 1.3GB of free space on your SD card
-1. Press (A) to continue
-1. Press (B) to return to the main menu
-1. Select "Exit"
-1. Press (A) to relock write permissions if prompted
-1. 格式化完成后，同时按(R)键和(B)键，弹出你的SD卡
-1. Insert your SD card into your computer
-1. Copy `<date>_<serialnumber>_sysnand_###.bin` and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
-  + Make backups in multiple locations (such as online file storage)
-  + These backups will save you from a brick and/or help you recover files from the NAND image if anything goes wrong in the future
-1. Delete `<date>_<serialnumber>_sysnand_###.bin` and `<date>_<serialnumber>_sysnand_###.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
-1. **备份你SD卡上的所有文件到你的计算机上。SD卡上的所有文件在接下来将被删除**
+1. 按下 “Home” 键来打开功能菜单
+1. 选择 “Scripts...”
+1. 选择“GM9Megascript”
+1. 选择 “Backup Options”
+1. 选择 “SysNAND Backup”
+1. 按下 “A” 键确认
+  + 此过程将花费一些时间
+  + 如果你遇到了错误, 请确保你的 SD 卡上至少有 1.3GB 的可用空间
+1. 按 “A” 键继续
+1. 按下 “B” 键返回到主菜单
+1. 选择 “Exit”
+1. 如果提示重新锁定写入权限，按下 “A” 键来确认
+1. 同时按 “R” 键和“B”键，弹出你的SD卡
+1. 将SD卡插入电脑
+1. 从 SD 卡的 `/gm9/out/` 文件夹中复制 `<date>_<serialnumber>_sysnand_###.bin` 和 `essential.exefs` 到电脑中的安全的位置
+  + 请在多处地方备份这些文件(比如网盘等)
+  + 如果以后机器出现任何问题，这些备份文件将是为你提供修复砖机或从 NAND 镜像恢复文件的帮手
+1. 将 `<date>_<serialnumber>_sysnand_###.bin` 和 `<date>_<serialnumber>_sysnand_###.bin.sha` 从你的 SD 卡上的 `/gm9/out/` 文件夹中复制出，随后将其删除
+1. **请备份你 SD 卡上的所有文件到电脑上；接下来 SD 卡上的所有文件将被删除**
 
-#### Section VIII - Format SD card
+#### 第八步 — 格式化 SD 卡
 
-1. Reinsert your SD card into your device
-1. Press (Home) to bring up the action menu
-1. Select "More..."
-1. 选择”SD format menu”
-1. 按 (A) 确认
-1. 选择”No EmuNAND”
-1. 选择”Auto”
-1. Press (A) to accept the label `GM9SD`
-  + Optionally, you may input a custom name for the SD card
-1. When prompted, input the key combo given to confirm
-1. Hold (R) and press (B) at the same time to eject your SD card
-1. 将你的 SD 卡插入到您的计算机
-1. Copy all your files back to your SD card
-  + Ensure you replace the `boot.firm` file on your SD card with the one from your backup
-1. Reinsert your SD card into your device
-1. 按(A)键重新加载你的SD卡
-1. Press (Start) to reboot
-1. 如果出现黑屏，参见这个[问题排查](troubleshooting#ts_sys_down)
+1. 将 SD 卡重新插入你的设备
+1. 按下 “Home” 键来打开功能菜单
+1. 选择 “More...”
+1. 选择 “SD format menu”
+1. 按 “A” 确认
+1. 选择 “No EmuNAND”
+1. 选择 “Auto”
+1. 按 “A” 键确认格式化后的磁盘名为 `GM9SD`
+  + 当然，你也可以自定义SD卡的名称
+1. 出现提示时，按照提示依次输入按键来确认格式化
+1. 同时按 “R” 键和 “B” 键，弹出你的 SD 卡
+1. 将你的 SD 卡插入到电脑
+1. 将之前备份的所有文件复制到你的 SD 卡
+  + 请确保你替换到 SD 卡中的 `boot.firm` 文件是从你 SD 卡备份中复制的
+1. 将SD卡重新插入你的设备
+1. 按 “A” 键重新装载你的 SD 卡
+1. 按下 “Start” 键来重启
+1. 如果黑屏，[请参见此问题排查章节](troubleshooting#ts_sys_down)
 
 ___
 
-### Return to [Finalizing Setup](finalizing-setup).
+### 返回至[完成安装](finalizing-setup)
 {: .notice--primary}

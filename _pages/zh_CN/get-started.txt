@@ -1,48 +1,48 @@
 ---
-title: "Get Started"
+title: "新手入门"
 ---
 
-{% include toc title="Table of Contents" %}
+{% include toc title="目录内容" %}
 
-### Required Reading
+### 必读事项
 
-请在下表中按照你的系统版本选择对应的页面。 Note that the "from" and "to" fields are inclusive. 也就是说，举个例子“从9.0.0到9.2.0”这一行表示9.0.0，9.1.0，和9.2.0。
+请在下表中按照你的系统版本选择对应的页面。 需要注意的是，下文中所述 “从” 和 “到” 的版本号之间的任何版本均在适用范围。 举个例子：“从9.0.0到9.2.0”表示9.0.0，9.1.0，和9.2.0。
 
-Additionally, note that the last two columns of the chart refer to the last number of your version (which corresponds to the browser version installed to the system). 如果版本号以0结尾，则说明没有浏览器，如果大于0则表示浏览器已经安装。
+另外，表格的最后两列对应你版本号的最尾端数字（即你系统上浏览器的版本）。 如果版本号以 -0 结尾，则说明你的主机系统内没有浏览器，如果大于 -0 则表示浏览器已经安装。
 
-例如，如果系统版本为“5.0.0-0U”，你需要定位到“无浏览器”这一列和“从5.0.0到5.1.0”这一行，因为系统版本在那个范围内并且无浏览器 。
+比如说，如果你的系统版本是“5.0.0-0U”，那么你只能使用“从5.0.0到5.1.0”的“无浏览器”那一列的教程，因为你的系统版本在那个范围内，而且你没有浏览器 。
 
-Your device version can be found at the bottom right of the top screen of the System Settings.
+你可以在系统设置中上屏的右下角找到你的主机版本号。
 
 ![]({{ "/images/screenshots/system-version.png" | absolute_url }})
 {: .notice--info}
 
-**If you are unable to follow the instructions corresponding to your specific version due to missing prerequisites, then you should either update to the latest version or use the "All Versions" row for methods that work regardless of system version.**
+**如果你因缺少某些先决条件而无法使用对应你系统版本的破解方法，那么请更新至最新的系统版本或看表格中适用于任意系统的 “所有版本” 行。**
 
-For all versions you can also [Cartridge Update](cart-update) (or use a standard system update) to get to a higher version in the same column to follow its instructions.
+所有版本都可以通过 [卡带升级](cart-update) 或正常系统更新到更高版本并使用对应版本的方法步骤。
 
-如果你已经破解过你的3DS，并安装了基于EmuNAND的自制系统，请在SysNAND上进行本教程的所有操作。 Replace any files that already exist. Your data will be transferred from EmuNAND to your new B9S install at the end. If you use menuhax, you should [clear Home Menu's extdata](troubleshooting#clear-home-menu-extdata) to remove it before beginning.
+如果你已经破解过你的3DS，并安装了基于EmuNAND的自制系统，那么请切换到 SysNAND上进行本教程的所有操作。 替换所有已存在的文件。 你的数据将在最后从 EmuNAND 迁移到新的 B9S 系统上。 如果你使用menuhax，你应该在开始前先 [清除主菜单外存](troubleshooting#clear-home-menu-extdata) 。
 
-This page is for instructions on how to install boot9strap to a *stock* 3DS or 2DS. If you already have arm9loaderhax installed and are looking to update to boot9strap, follow [A9LH to B9S](a9lh-to-b9s).
+本页面将指导你安装 boot9strap 至 *原厂尚未破解* 的 3DS 或 2DS 上。 如果你已经安装了 arm9loaderhax，并想要升级到boot9strap，请参考 [A9LH升级B9S](a9lh-to-b9s)。
 {: .notice--primary}
 
-Before starting, Windows users should enable the option to show file extensions using [File Extensions (Windows)](file-extensions-(windows))!
+开始前，windows用户需要开启[显示文件后辍](file-extensions-(windows)) 选项！
 {: .notice--info}
 
-开始之前，你可能想检测一下SD卡错误。可以使用[H2testw (Windows)](h2testw-(windows))、[F3 (Linux)](f3-(linux))或[F3X (Mac)](f3x-(mac))。
+开始之前，如果你想检测一下 SD 卡是否有错误，那么你可以使用[H2testw (Windows)](h2testw-(windows))，[F3 (Linux)](f3-(linux)) 或[F3X (Mac)](f3x-(mac))。
 {: .notice--warning}
 
 {% capture notice-1 %}
-There have been reports of a wave of bans being handed out to CFW users by Nintendo. To protect yourself, please do the following steps before starting this guide:
+据消息称，任天堂封禁了大量使用自制系统（CFW）的用户。 为了自保，请在继续教程前先进行如下操作。
 
-1. Go to System Settings, then "Internet Settings", then "SpotPass", then "Sending of System Information"
-1. Disable the "Sending of System Information" option
-1. Exit the System Settings
-1. Go to your Friend List (the [orange Face Icon]({{ "/images/friend-list-icon.png" | absolute_url }}) in the top row of your Home Menu)
-  + If you receive an error and are kicked out of the menu, the Friend List setting is either already disabled or your console cannot connect to Nintendo's servers (due to a ban or connection issues)
-1. Go to the Friend List settings, then "Friend Notification Settings", then "Show friends what you're playing"
-1. Disable the "Show friends what you're playing" option
-1. Exit your Friend List
+1. 进入“系统设置(System Settings)”，点击“互联网设置(Internet Settings)”，然后再点击“SpotPass”，之后再继续点击“发送系统信息(Sending of System Information)”
+1. 关闭“发送系统信息 (Sending of System Information) ”选项
+1. 退出系统设置
+1. 打开你的好友列表（主菜单中最上方的[橙色的笑脸]({{ "/images/friend-list-icon.png" | absolute_url }})）
+  + 如果出现错误信息并被踢回到主菜单，则好友列表设置可能已被禁用或你的设备无法连接到任天堂服务器（由于封禁或网络问题）
+1. 进入“好友列表设置(Friend List settings)”，然后点击“好友提示设置 (Friend Notification Settings)”，再然后点击“展示正在游玩的游戏 (Show friends what you're playing)”
+1. 关闭“向好友展示正在玩的游戏(Show friends what you're playing)”选项
+1. 退出好友列表
 
 {% endcapture %}
 
@@ -61,39 +61,39 @@ There have been reports of a wave of bans being handed out to CFW users by Ninte
       <th style="text-align: center">从</th>
       <th style="text-align: center">到</th>
       <th style="text-align: center">无浏览器</th>
-      <th style="text-align: center">浏览器</th>
+      <th style="text-align: center">有浏览器</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align: center; font-weight: bold;">1.0.0</td>
       <td style="text-align: center; font-weight: bold;">2.0.0</td>
-      <td style="text-align: center; font-weight: bold;" colspan="2">Use an "All Versions" Method</td>
+      <td style="text-align: center; font-weight: bold;" colspan="2"> 使用 “所有版本” 方法</td>
     </tr>
     <tr>
       <td style="text-align: center; font-weight: bold;">2.1.0</td>
       <td style="text-align: center; font-weight: bold;">2.1.0</td>
-      <td style="text-align: center; font-weight: bold;">Use an "All Versions" Method</td>
-      <td style="text-align: center; font-weight: bold;"><a href="installing-boot9strap-(2xrsa)">Installing boot9strap (2xrsa)</a></td>
+      <td style="text-align: center; font-weight: bold;"> 使用 “所有版本” 方法</td>
+      <td style="text-align: center; font-weight: bold;"><a href="installing-boot9strap-(2xrsa)">安装 boot9strap (通过2xrsa)</a></td>
     </tr>
     <tr>
       <td style="text-align: center; font-weight: bold;">2.2.0</td>
       <td style="text-align: center; font-weight: bold;">2.2.0</td>
-      <td style="text-align: center; font-weight: bold;" colspan="2">Use an "All Versions" Method</td>
+      <td style="text-align: center; font-weight: bold;" colspan="2"> 使用 “所有版本” 方法</td>
     </tr>
     <tr>
       <td style="text-align: center; font-weight: bold;">3.0.0</td>
       <td style="text-align: center; font-weight: bold;">8.1.0</td>
-      <td style="text-align: center; font-weight: bold;" colspan="2"><a href="installing-boot9strap-(soundhax)">Installing boot9strap (Soundhax)</a></td>
+      <td style="text-align: center; font-weight: bold;" colspan="2"><a href="installing-boot9strap-(soundhax)">安装 boot9strap (通过Soundhax)</a></td>
     </tr>
     <tr>
       <td style="text-align: center; font-weight: bold;">9.0.0</td>
       <td style="text-align: center; font-weight: bold;">11.3.0</td>
-      <td style="text-align: center; font-weight: bold;" colspan="2"><a href="homebrew-launcher-(soundhax)">Homebrew Launcher (Soundhax)</a></td>
+      <td style="text-align: center; font-weight: bold;" colspan="2"><a href="homebrew-launcher-(soundhax)">启动Homebrew Launcher (通过Soundhax)</a></td>
     </tr><tr>
       <td style="text-align: center; font-weight: bold;">11.4.0</td>
       <td style="text-align: center; font-weight: bold;">11.8.0</td>
-      <td style="text-align: center; font-weight: bold;" colspan="2">Use an "All Versions" Method</td>
+      <td style="text-align: center; font-weight: bold;" colspan="2"> 使用 “所有版本” 方法</td>
     </tr>
     <tr>
       <td style="text-align: center; font-weight: bold;">11.9.0</td>
@@ -101,8 +101,8 @@ There have been reports of a wave of bans being handed out to CFW users by Ninte
       <td style="text-align: center; font-weight: bold;" colspan="2"><a href="seedminer">Seedminer</a></td>
     </tr>
     <tr>
-      <td style="text-align: center; font-weight: bold;" colspan="2">ALL VERSIONS<br></td>
-      <td style="text-align: center; font-weight: bold;" colspan="2"><p style="display: inline-block; margin-top: 1.3em; width: 47%"><a href="ntrboot">ntrboot</a><br><sub>(Requires a Compatible Flashcart)</sub></p><p style="display: inline-block; margin-top: 1.3em; vertical-align: super; width: 6%">or</p><p style="display: inline-block; margin-top: 1.3em; width: 47%"><a href="installing-boot9strap-(hardmod)">Installing boot9strap (Hardmod)</a><br><sub>(Requires Soldering)</sub></p></td>
+      <td style="text-align: center; font-weight: bold;" colspan="2">所有版本<br></td>
+      <td style="text-align: center; font-weight: bold;" colspan="2"><p style="display: inline-block; margin-top: 1.3em; width: 47%"><a href="ntrboot">安装bootstrap (通过 ntrboot)</a><br><sub>(需要一个兼容的烧录卡)</sub></p><p style="display: inline-block; margin-top: 1.3em; vertical-align: super; width: 6%">或者</p><p style="display: inline-block; margin-top: 1.3em; width: 47%"><a href="installing-boot9strap-(hardmod)">安装 boot9strap(通过硬改)</a><br><sub>(需要焊接技术)</sub></p></td>
     </tr>
   </tbody>
 </table>

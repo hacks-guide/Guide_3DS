@@ -1,91 +1,91 @@
 ---
 layout: splash
-title: "3DS Hacks Guide" #
+title: "3DS 破解手册" #
 header:
   overlay_color: "#5e616c" #
   overlay_image: /images/home-page-feature.jpg
   overlay_filter: 0.5
   caption:
-excerpt: "A complete guide to 3DS custom firmware, <br /> from stock to boot9strap.<br />"
+excerpt: "最完整的 3DS 破解手册，<br /> 教你从原版主机破解成boot9strap。<br />"
 ---
 
-For complete guides to homebrew and custom firmware for other devices, check out [Hacks.Guide](https://hacks.guide).
+你还可以访问[Hacks.Guide](https://hacks.guide)找到其他设备的自制软件和自制固件完整安装教程。
 {: .notice--primary}
 
 ___
 
-Thoroughly read all of the introductory pages (including this one!) before proceeding.
+请在开始操作前仔细阅读所有步骤页面（包括这个页面）。
 {: .notice--warning}
 
 {% capture notice-1 %}
-This guide is for retail (consumer purchased; not from the Nintendo Developer Program) consoles _only_!
-If you have a developer ("PANDA") console, check out the [Panda 3DS Hacks Guide](https://panda.hacks.guide).
+本教程 _仅_ 适用于零售版的3DS（市面上销售的；而非通过任天堂开发者计划获得的）！
+如果你的主机是开发版(主机代号“PANDA”)的，请参见[Panda 3DS破解指南](https://panda.hacks.guide)。
 {% endcapture %}
 
 <div class="notice--danger">{{ notice-1 | markdownify }}</div>
 
 {% capture notice-1 %}
-This guide is available in other languages!
-Click the <i class="fa fa-language" aria-hidden="true"></i> icon at the top right of the page to change the language.
-Alternatively, click [here](https://crowdin.com/project/3ds-guide) to help to keep these translations up to date.
+本教程支持其他语言！
+点击页面右上角的<i class="fa fa-language" aria-hidden="true"></i>图标更改语言。
+你还可以点击[这里](https://crowdin.com/project/3ds-guide)帮助翻译或更新翻译。
 {% endcapture %}
 
 <div class="notice--success">{{ notice-1 | markdownify }}</div>
 
-This guide needs *your* help to seed [these]({{ "rss.xml" | absolute_url }}) torrents!
+这个手册需要 *你* 的帮助来将[这些]({{ "rss.xml" | absolute_url }})种子做种！
 {: .notice--primary}
 
 ## 什么是自制程序？
 
-[**Homebrew**](https://wikipedia.org/wiki/List_of_homebrew_video_games) usually refers to software that is not authorized by Nintendo. This includes homebrew tools, applications, games, and emulators.
+[**自制程序(Homebrew)**](https://wikipedia.org/wiki/List_of_homebrew_video_games) 通常指未经任天堂授权的软件。 比如自制工具、应用、游戏和模拟器。
 
-In many cases, running homebrew on your device is 100% free using just the Nintendo 3DS Sound app. There are also various other exploits in commercial games and the browser to get homebrew running.
+在很多情况下，只要通过3DS的音乐播放器就可以完全免费的运行自制程序。此外，也可以通过部分游戏或系统自带浏览器中的漏洞运行自制程序。
 
 ## 什么是自制系统？
 
-**Custom Firmware（自制系统）** ("CFW") 可以使你进行自制程序无法轻易做到的更高级的破解。 例如，签名补丁可以使你安装未签名的程序，并让它们出现在桌面中。
+**自制系统(Custom Firmware)** ("CFW") 可以使你进行自制程序无法轻易做到的更高级的破解。 例如，签名补丁可以使你安装未签名的程序，并让它们出现在桌面中。
 
-CFW can be set up on any console on any version (but may require additional tools / accessories for versions >11.3.0).
+任何主机及版本都能够安装自制系统（高于11.3.0版本的系统可能会需要使用其他额外工具）。
 
 ## 本教程将安装什么？
 
 本教程的最终目的，是将一个未经修改过的装有原生系统的3DS
-firmware to boot9strap powered Custom Firmware. 在某些版本的机器上，本教程会使用自制程序作为手段，但是安装自制系统才是最终目的。
+变成一个基于 boot9strap 的自制系统。 在某些版本的机器上，本教程会使用自制程序作为跳板，但是最终目的依然是安装自制系统。
 
-boot9strap is the newest and best method of launching Custom Firmware that gives us nearly full control of the system only milliseconds into boot, which is similar to the effect of BootMii for the Wii. It gives us even earlier control than arm9loaderhax did, and, unlike standard sighax, boot9strap uses an NDMA overwrite exploit in order to gain Boot9 code execution. This means that any console running boot9strap is capable of dumping the console unique OTP (`OTP.bin`), the ARM11 bootrom (`boot11.bin`), and the ARM9 bootrom (`boot9.bin`).
+boot9strap是一种最新和最好的引导自制系统的方法，只需启动时几毫秒的时间，就能让你获得几乎全部系统权限，类似于Wii上面BootMii的作用。 利用它甚至可以比 arm9loaderhax 更早获得系统控制权，并且 boot9strap 与一般的 sighax 不同，它使用一种 NDMA 覆盖漏洞来使用 Boot9 启动程序。 也就是说，只要设备运行了boot9strap，它就可以dump出每个设备独有的OTP（`OTP.bin`）、ARM11 bootrom（`boot11.bin`）和ARM9 bootrom（`boot9.bin`）。
 
-The benefits of boot9strap over other Custom Firmware launch methods are numerous, and as such it is recommended to use this guide over any other that relies on outdated software (such as menuhax + rxTools, arm9loaderhax, or even normal sighax).
+Boot9strap 拥有许多其他自制固件所没有的优点，因此我们推荐您阅读本指南进行破解，而非使用其他依赖一些过时软件（如 menuhax + rxTools，arm9loaderhax 甚至是普通的 sighax）的指南。
 
-For information on how boot9strap works, please see [this paper](https://arxiv.org/abs/1802.00359).
+想要了解boot9strap的使用方法，请参见[此研究专题](https://arxiv.org/abs/1802.00359)。
 
-For a list of each of the calculated sighax signatures, see [this gist](https://gist.github.com/SciresM/cdd2266efb80175d37eabbe86f9d8c52).
+[此gist](https://gist.github.com/SciresM/cdd2266efb80175d37eabbe86f9d8c52)列出了已被计算出来的sighax签名。
 
 ## 我可以在自制系统上做什么？
 
 + 跨区运行所有游戏卡带和eShop游戏
-+ Customize your HOME Menu with user-created [themes and splash screens](https://themeplaza.eu/)
-+ 对你已有的游戏进行"ROM hacks"
++ 从社区[获取自制主题及启动画面](https://themeplaza.eu/) 以自定义你的主菜单
++ 使用金手指
 + 进行游戏录像和程序截屏
-+ Backup, edit, and restore saves for many games
-+ 使用模拟器（如RetroArch或其它独立模拟器）运行老系统的游戏 （在任天堂新3DS上效果最佳）
++ 备份、修改、或还原游戏的存档
++ 使用模拟器（如RetroArch或其它独立模拟器）运行早期主机的游戏 （在 New 3DS 上效果最佳）
 + 安装自制程序，并让它们在你的桌面上出现
 + 将游戏卡带的内容导出为可安装的格式，从而可以无需卡带运行游戏
-+ New 3DS or New 2DS only: stream live gameplay to your PC wirelessly with NTR CFW
-+ 运行许多以前被禁的或者无法在任天堂3DS上使用的NDS卡带
-+ 安全地升级到最新版本的系统，无需担心升级后无法访问自制程序
++ 仅限 New3DS 或 New2DS：通过NTR CFW无线传输游戏画面到你的电脑上去
++ 运行许多以前被禁的或者无法在 3DS 上使用的 NDS 卡带
++ 安全地升级到最新版本的系统，无需担心升级后无法启动自制程序
 
 ## 在开始之前我需要知道什么？
 
 + **在开始之前，你要知道破解3DS的风险：每次你修改系统的时候，都有可能会使你的3DS不可恢复的变砖。 这种情况很少见，但是仍然存在这样的可能性，所以请确保你完全按照本教程的指导进行操作。**
-+ If you have already hacked your 3DS before to get an EmuNAND setup, and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, you should follow all instructions and restore your existing EmuNAND when prompted once you reach [Finalizing Setup](finalizing-setup).
-+ This guide will work on New 3DS, Old 3DS, New 2DS, and Old 2DS in all regions on firmware 11.9.0 or below.
++ 如果你之前破解过你的 3DS 并安装了 EmuNAND，且想将原 EmuNAND 中的内容迁移到SysNAND 中，请依操作进行，并在[完成安装](finalizing-setup) 这一步中依照提示还原你的EmuNAND。
++ 此教程对所有区域，系统版本号 ≦11.9.0的 New 3DS、3DS、New 2DS和2DS有效
 + 如果一切顺利，在安装完自制系统后你不会丢失任何数据（包括游戏、NNID、存档等）。
-+ Keep your device plugged in and charged throughout the entire process to avoid data loss or damage from an unexpected power-off!
-+ Your SD card should be [MBR, not GPT](http://www.howtogeek.com/245610/) (the SD card that comes with your device will be MBR by default).
-+ If you need to format a brand new SD card, you can use [guiformat](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) and set to an Allocation Unit Size of 32K (32768).
-+ The Old 2DS is essentially identical to the Old 3DS in terms of software, while the New 2DS is essentially identical to the New 3DS in terms of software. Any steps which say "Old 3DS" also apply to Old 2DS, and any steps which say "New 3DS" also apply to New 2DS.
++ 在进行所有操作时请将主机充电，避免意外关机造成数据丢失或损坏！
++ 你的SD卡的分区表格式必须是[MBR，而不是GPT](http://www.howtogeek.com/245610/)（原厂 SD 卡的分区表格式默认是 MBR）。
++ 如果你需要格式化一张新的SD卡，可以使用[guiformat](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm)，并将“分配单元大小(Allocation Unit Size)”设置为 32K (32768)。
++ 老型号的 2DS 和 3DS 使用的系统软件几乎是一模一样的，New 2DS 和 New 3DS也是一样的道理。 任何 “老型号的3DS” 的步骤也适用于“老型号2DS”，任何“New 3DS”的步骤也适用于“New 2DS”。
 
 ___
 
-### Continue to [Get Started](get-started)
+### 继续至 [新手入门](get-started)
 {: .notice--primary}

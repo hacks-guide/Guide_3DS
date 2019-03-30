@@ -1,63 +1,63 @@
 ---
-title: "Homebrew Launcher (Alternatives)"
+title: "启动Homebrew Launcher (使用其他方法)"
 ---
 
-{% include toc title="Table of Contents" %}
+{% include toc title="目录内容" %}
 
-### Required Reading
+### 必读事项
 
-Homebrew Launcher（HBL）有许多不同的入口和启动方式。
+Homebrew Launcher 有许多不同的入口和启动方式。
 
-If browserhax is not an option (see the chart below), you do not already own any of these games, and do not have another 3DS that can access the Homebrew Launcher, the cheapest option is to buy a "Nintendo Selects" copy of [Ocarina of Time 3D](https://amzn.to/2fkaKdp) (ensure you get the correct cartridge for your region) and a [Powersaves](https://amzn.to/2fb3VY7) (compatible with all regions), then use oot3dhax from the chart below.
+如果你无法进行浏览器破解、你没有任何之前列出的游戏，并且没有其他可以使用 Homebrew Launcher 的3DS，则最经济的方法大概是购买 “Nintendo Selects” 版本的《[塞尔达传说：时之笛3D](https://amzn.to/2fkaKdp)》（注意购买正确地区的卡带）以及[Powersaves](https://amzn.to/2fb3VY7)（兼容所有地区），然后使用下表列出的 oot3dhax。
 
-Ensure your device's Wireless Communication is turned on as udsploit (used in the next page) will need the wireless module to be active to function, and some devices (New 3DS, New 2DS, and Old 2DS) cannot adjust the Wireless Communication setting from the Homebrew Launcher. Wireless Communication only has to be on; connecting it to an access point is not required.
+请确保设备的无线通信功能已启用，因为下一页中要用到的 udsploit 需要它才能使用，一些设备（新3DS、新2DS和老2DS）无法在Homebrew Launcher 中更改无线通信设置。 你只需要打开网络开关；不需要连接到路由器。
 
-To extract the `.7z` files linked on this page, you will need a file archiver like [7-Zip](http://www.7-zip.org/) or [The Unarchiver](https://theunarchiver.com/).
+请使用[7-Zip](http://www.7-zip.org/)或[The Unarchiver](https://theunarchiver.com/)之类的压缩软件来解压本页面上的 `.7z` 文件。
 
-### What You Need
+### 准备工作
 
-* The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
-* The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
-* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
-* The latest release of [safehax](https://github.com/TiniVi/safehax/releases/latest)
-* The latest release of [udsploit](https://github.com/smealum/udsploit/releases/latest)
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(the `.7z` file)*
+* 最新版 [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
+* 最新版 [SafeB9SInstaller] (https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* 最新版 [boot9strap] (https://github.com/SciresM/boot9strap/releases/latest) *(下载标准的 boot9strap 压缩包文件，而不是带有 `devkit` 或 `ntr` 名字的文件)*
+* 最新版[safehax](https://github.com/TiniVi/safehax/releases/latest)
+* 最新版 [udsploit](https://github.com/smealum/udsploit/releases/latest)
+* 最新版 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *( 下载 `.7z` 格式的压缩包文件)*
 
 ### 操作步骤
 
-1. 给设备关机
-1. Insert your SD card into your computer
-1. Create a folder named `3ds` on the root of your SD card if it does not already exist
-1. Copy `boot.3dsx` to the root of your SD card
-1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card
-1. Create a folder named `boot9strap` on the root of your SD card
-1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
-1. Copy `safehax.3dsx` to the `/3ds/` folder on your SD card
-1. Copy `udsploit.3dsx` to the `/3ds/` folder on your SD card
-1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card and rename `SafeB9SInstaller.bin` to `safehaxpayload.bin`
+1. 将设备关机
+1. 将SD卡插入电脑
+1. 检查 SD 卡的根目录是否存在一个名为 `3ds` 的文件夹，如果没有则手动新建一个
+1. 复制 `boot.3dsx` 到你的 SD 卡根目录
+1. 从Luma3DS的 `.7z `文件中复制 `boot.firm` 到你的SD卡根目录
+1. 在SD卡根目录创建一个名为 `boot9strap` 的文件夹
+1. 从boot9strap `.zip` 文件中复制 `boot9strap.firm` 和 `boot9strap.firm.sha` 到你SD卡的 `/boot9strap/` 文件夹中
+1. 复制 `safehax.3dsx` 到你 SD 卡的 `/3ds/` 文件夹
+1. 复制 `udsploit.3dsx` 到你 SD 卡的 `/3ds/` 文件夹
+1. 将 SafeB9SInstaller `.zip` 里的 `SafeB9SInstaller.bin` 复制到 SD 卡的根目录下，并重命名为 `safehaxpayload.bin`
 
     ![]({{ "/images/screenshots/boot9strap-hb-file-layout.png" | absolute_url }})
     {: .notice--info}
 
-1. Reinsert your SD card into your device
-1. Power on your device
-1. Use one of the following alternate entrypoints to get into the Homebrew Launcher:
+1. 将SD卡重新插入你的主机
+1. 启动你的主机
+1. 使用下列备选启动方法之一来启动Homebrew Launcher：
 
     |<sub>|<sub>要求 |<sub>版本 |<sub>设备 |<sub>地区 |<sub>游戏版本 |<sub>系统版本 |
     |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-    | <sub>[browserhax](https://yls8.mtheall.com/3dsbrowserhax.php) | <sub>Nothing | <sub>Preinstalled | <sub>New, Old, 2DS | <sub>EUR, JPN, USA | <sub>All | <sub>9.0.0-2 up to and including 11.0.0-33 |
-    | <sub>[oot3dhax](https://github.com/yellows8/oot3dhax) | <sub>[*Ocarina of Time 3D*](https://amzn.to/2fkaKdp), <br> Either a powersaves or another 3DS which already has the Homebrew Launcher | <sub>Cart | <sub>New, Old, 2DS | <sub>EUR, JPN, USA | <sub>All | <sub>9.0.0-X up to and including 11.7.0-X |
-    | <sub>[smashbroshax](https://gbatemp.net/threads/397194/) | <sub>[*Super Smash Bros*](https://amzn.to/2ftGA72) | <sub>Cart, eShop | <sub>New  | <sub>EUR, JPN, USA | <sub><1.1.3, <br> Carts with "amiibo" on the cover are preinstalled with v1.1.4 | <sub>9.0.0-X up to and including 11.3.0-X |
-    | <sub>[supermysterychunkhax](https://smd.salthax.org/) | <sub>《[精灵宝可梦：超级不可思议的迷宫](https://amzn.to/2ebxZ75)》、<br>别的可以访问自制程序启动器的3DS | <sub>卡带 | <sub>新、老、2DS | <sub>欧版、日版、美版 | <sub>全部 | <sub>从9.0.0-X（美版／日版）／10.2.0-X（欧版）到11.2.0-X（包括） |
-    | <sub>[freakyhax](http://plutooo.github.io/freakyhax/) | <sub>[*Freakyforms Deluxe*](https://amzn.to/2f6eHO7) | <sub>eShop, Cart | <sub>New, Old, 2DS | <sub>EUR, JPN, USA | <sub>All | <sub>9.0.0-X up to and including 11.7.0-X |
-    | <sub>[basehaxx](http://mrnbayoh.github.io/basehaxx/) | <sub>*Pokemon [Omega Ruby](https://amzn.to/2eRILNQ)/[Alpha Sapphire](https://amzn.to/2ebGrmN)*, <br> Another 3DS which already has the Homebrew Launcher | <sub>Cart | <sub>New, Old, 2DS | <sub>EUR, JPN, USA | <sub>1.0, 1.4 | <sub>9.0.0-X up to and including 11.3.0-X |
-    | <sub>[BASICSploit](https://mrnbayoh.github.io/basicsploit/) | <sub>[SmileBASIC](https://www.nintendo.com/games/detail/eYURHNjVdfyrnA3OJGfmlMYIrJUzgOcv) | <sub>eShop | <sub>新、老、2DS | <sub>美版 | <sub>3.2.1 | <sub>从9.0.0-X到11.0.0-X（包括） |
-    | <sub>[smilehax](https://plutooo.github.io/smilehax/) | <sub>[SmileBASIC](https://www.nintendo.com/games/detail/eYURHNjVdfyrnA3OJGfmlMYIrJUzgOcv) | <sub>eShop | <sub>新、老、2DS | <sub>日版、美版 | <sub>3.3.1 | <sub>从9.0.0-X到11.0.0-X（包括） |
-    | <sub>[stickerhax](https://github.com/yellows8/stickerhax) | <sub>[*Paper Mario: Sticker Star*](https://amzn.to/2f6aDx8), <br> Another 3DS which already has the Homebrew Launcher | <sub>eShop, Cart | <sub>New, Old, 2DS | <sub>EUR, JPN, KOR, USA | <sub>All | <sub>9.0.0-X up to and including 11.3.0-X |
-    | <sub>[Ninjhax 2](http://smealum.github.io/ninjhax2/) | <sub>[*Cubic Ninja*](https://amzn.to/2eRI1by) | <sub>eShop, Cart | <sub>New, Old, 2DS | <sub>EUR, JPN, USA | <sub>All | <sub>9.0.0-X up to and including 11.7.0-X |
-    | <sub>[Notehax](https://mrnbayoh.github.io/notehax/) | <sub>[*Flipnote Studio 3D*](https://my.nintendo.com/rewards/0391c34c430369c0) | <sub>eShop | <sub>New, Old, 2DS | <sub>EUR, JPN, USA | <sub>1.3.1 (JPN) / 1.0.0 (EUR/USA) | <sub>9.0.0-X up to and including 11.5.0-X |
-    | <sub>[RPwnG](https://mrnbayoh.github.io/rpwng/) | <sub>[*RPG Maker Player*](http://www.nintendo.com/games/detail/rpg-maker-player-3ds) | <sub>eShop | <sub>New, Old, 2DS | <sub>EUR, JPN, USA | <sub>1.1.4 (EUR) / 1.1.2 (JPN/USA) | <sub>9.0.0-X up to and including 11.5.0-X |
-    | <sub>[GenHax](https://github.com/svanheulen/genhax_proxy_installer) | <sub>《[怪物猎人X](http://amzn.to/2gsk6Tk)》 | <sub>eShop | <sub>新 | <sub>日版 | <sub>全部 | <sub>从9.9.0-X到11.2.0-X（包括） |
+    | <sub>[browserhax](https://yls8.mtheall.com/3dsbrowserhax.php) | <sub>无 | <sub>预装 | <sub>新、老型号、2DS | <sub>欧版、日版、美版 | <sub>全部 | <sub>9.0.0-2至11.0.0-33 |
+    | <sub>[oot3dhax](https://github.com/yellows8/oot3dhax) | <sub>《[*塞尔达传说：时之笛3D*](https://amzn.to/2fkaKdp)》, <br> 一个powersaves或一台可以使用 Homebrew Launcher 的3DS | <sub>卡带 | <sub>New、老型号、2DS | <sub>欧版、日版、美版 | <sub>全部 | <sub>9.0.0-X 到 11.7.0-X |
+    | <sub>[smashbroshax](https://gbatemp.net/threads/397194/) | <sub> 《[*任天堂明星大乱斗*](https://amzn.to/2ftGA72)》 | <sub>卡带， eShop | <sub>New  | <sub>欧版、日版、美版 | <sub>低于1.1.3, <br> 卡带上印了 “amiibo” 字样的预装的是 1.1.4 版本 | <sub>9.0.0-X 至 11.3.0-X |
+    | <sub>[supermysterychunkhax](https://smd.salthax.org/) | <sub>《[*精灵宝可梦：超不可思议的迷宫*](https://amzn.to/2ebxZ75)》、<br>可以使用 Homebrew Launcher 的3DS | <sub>卡带 | <sub>New、老型号、2DS | <sub>欧版、日版、美版 | <sub>全部 | <sub>从9.0.0-X（美版／日版）／10.2.0-X（欧版）到11.0.0-X（包括） |
+    | <sub>[freakyhax](http://plutooo.github.io/freakyhax/) | <sub>[*Freakyforms Deluxe*](https://amzn.to/2f6eHO7) | <sub>eShop, 卡带 | <sub>New、老型号、2DS | <sub>欧版，美版，日版 | <sub>全部 | <sub>9.0.0-X 至 11.7.0-X |
+    | <sub>[basehaxx](http://mrnbayoh.github.io/basehaxx/) | <sub>*《精灵宝可梦：[终极红宝石](https://amzn.to/2eRILNQ)/[始源蓝宝石](https://amzn.to/2ebGrmN)》*、<br>一台可以使用 Homebrew Launcher 的3DS | <sub>卡带 | <sub>New、老型号、2DS | <sub>欧版、日版、美版 | <sub>1.0、1.4 | <sub>从9.0.0-X 至 11.0.0-X（包括） |
+    | <sub>[BASICSploit](https://mrnbayoh.github.io/basicsploit/) | <sub>[*SmileBASIC*](https://www.nintendo.com/games/detail/eYURHNjVdfyrnA3OJGfmlMYIrJUzgOcv) | <sub>eShop | <sub>新、老版本、2DS | <sub>美版 | <sub>3.2.1 | <sub>从9.0.0-X到11.0.0-X（包括） |
+    | <sub>[smilehax](https://plutooo.github.io/smilehax/) | <sub>[*SmileBASIC*](https://www.nintendo.com/games/detail/eYURHNjVdfyrnA3OJGfmlMYIrJUzgOcv) | <sub>eShop | <sub>新、老型号、2DS | <sub>日版、美版 | <sub>3.3.1 | <sub>从9.0.0-X到11.0.0-X（包括） |
+    | <sub>[stickerhax](https://github.com/yellows8/stickerhax) | <sub>《[*纸片马里奥：超级贴纸*](https://amzn.to/2f6aDx8)》、<br>一台可以使用 Homebrew Launcher 的3DS | <sub>eShop、卡带 | <sub>新、老、2DS | <sub>欧版、日版、韩版、美版 | <sub>全部 | <sub>9.0.0-X至11.3.0-X |
+    | <sub>[Ninjhax 2](http://smealum.github.io/ninjhax2/) | <sub>《[*方块忍者*](https://amzn.to/2eRI1by)》 | <sub>eShop，卡带 | <sub>New、老型号、2DS | <sub>欧版、日版、美版 | <sub>全部 | <sub>9.0.0-X 至 11.7.0-X |
+    | <sub>[Notehax](https://mrnbayoh.github.io/notehax/) | <sub>《[*瞬缘连接日记*](https://my.nintendo.com/rewards/0391c34c430369c0)》 | <sub>eShop | <sub>New、老型号、2DS | <sub>欧版、日版、美版 | <sub>1.3.1 (日版) / 1.0.0 (欧版/美版) | <sub>9.0.0-X 至 11.5.0-X |
+    | <sub>[RPwnG](https://mrnbayoh.github.io/rpwng/) | <sub>《[*RPG Maker Player*](http://www.nintendo.com/games/detail/rpg-maker-player-3ds)》 | <sub>eShop | <sub>新、老型号、2DS | <sub>欧版、日版、美版 | <sub>1.1.4 （欧版） / 1.1.2 （日版/美版） | <sub>从9.0.0-X 至 11.5.0-X（包括）|
+    | <sub>[GenHax](https://github.com/svanheulen/genhax_proxy_installer) | <sub>《[*怪物猎人X*](http://amzn.to/2gsk6Tk)》 | <sub>eShop | <sub>新 | <sub>日版 | <sub>全部 | <sub>从9.9.0-X 到11.2.0-X（包括） |
     {: .notice--info}
 
     <script type="text/javascript">
@@ -74,10 +74,10 @@ To extract the `.7z` files linked on this page, you will need a file archiver li
     </script>
     <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
 
-1. Your device should load the Homebrew Launcher
+1. 现在你的设备应该可以运行 Homebrew Launcher了
 
     ![]({{ "/images/screenshots/homebrew-launcher.png" | absolute_url }})
     {: .notice--info}
 
-### Continue to [Installing boot9strap (SafeB9SInstaller)](installing-boot9strap-(safeb9sinstaller))
+### 继续至 [安装 boot9starp(通过SafeB9SInstaller)](installing-boot9strap-(safeb9sinstaller))
 {: .notice--primary}

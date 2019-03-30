@@ -1,63 +1,63 @@
 ---
-title: "Homebrew Launcher (Steelhax)"
+title: "启动Homebrew Launcher (通过Steelhax)"
 ---
 
-{% include toc title="Table of Contents" %}
+{% include toc title="目录内容" %}
 
-### Required Reading
+### 必读事项
 
-This method of using Seedminer for further exploitation uses your `movable.sed` file to gain access to the Homebrew Launcher using the Steelhax exploit for the purposes of injecting an exploitable DSiWare title into the DS Download Play application. This method requires you to already own (or download) the free "Steel Divers: Sub Wars" game from the eShop.
+Seedminer 将使用你的 `movable.sed` 文件，通过 Steelhax 漏洞启动 Homebrew Launcher，以便在 DS Download Play 中注入修改后的 DSiWare 程序。 在进行本教程前，你必须先拥有 (或下载) eShop 中免费的“ Steel Drivers: Sub Wars”游戏。
 
-If your device already has access to the Homebrew Launcher (whether through Steelhax or another exploit), you can skip to [Installing Boot9strap (Frogtool)](installing-boot9strap-(frogtool)).
+如果你的设备已通过如 Steelhax 或其他漏洞启动 Homebrew Launcher，那么你可以跳至[安装 Boot9strap (通过 Frogtool)](installing-boot9strap-(frogtool))。
 {: .notice--success}
 
-If you already have Steel Diver: Sub Wars, this process will overwrite your game's save file!
+如果你之前已经拥有了 “Steel Diver: Sub Wars” 游戏，本教程将会覆盖你的游戏存档！
 {: .notice--warning}
 
-### What You Need
+### 准备工作
 
-* The free eShop game "Steel Diver: Sub Wars"
-* Your `movable.sed` file from completing [Seedminer](seedminer)
-* The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
-* The latest release of [Steelhax](https://github.com/VegaRoXas/vegaroxas.github.io/raw/master/files/steelhax-installer.rar)
-* The [otherapp payload](https://smealum.github.io/3ds/#otherapp) *(for your region and version)*
+* eShop中免费的 “Steel Diver: Sub Wars” 游戏
+* 你在 [Seedminer](seedminer) 步骤中获得的 `movable.sed` 文件
+* 最新版 [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
+* 最新版 [Steelhax](https://github.com/VegaRoXas/vegaroxas.github.io/raw/master/files/steelhax-installer.rar)
+* [otherapp payload](https://smealum.github.io/3ds/#otherapp) *(根据你的3DS的区域和版本下载)*
 
 ### 操作步骤
 
-#### Section I - Prep Work
+#### 第一步 — 准备工作
 
-1. Create a folder named `3ds` on the root of your SD card if it does not already exist
-1. Copy `boot.3dsx` to the root of your SD card
-1. Copy the `steelhax` folder from the Steelhax `.rar` to the root of your SD card
-1. Copy the otherapp payload to the `steelhax` folder on your SD card and rename it to `payload.bin`
+1. 检查 SD 卡的根目录是否存在一个名为 `3ds` 的文件夹，如果没有则手动新建一个
+1. 复制 `boot.3dsx` 到你的 SD 卡根目录
+1. 从Steelhax `.rar` 压缩包中解压出 `steelhax` 文件夹并复制到内存卡的根目录
+1. 将 otherapp payload 复制到你 SD 卡的 `steelhax` 文件夹，并重命名为 `payload.bin`
 
-#### Section II - Steelminer
+#### 第二步 — Steelminer
 
-1. Insert your SD card into your device
-1. Launch "Steel Diver: Sub Wars" once and select a Mii to initialize your save file
-  + Decline the game update when prompted
-  + If you have already updated the game, use the Data Management menu of the System Settings to delete the update
-1. Exit "Steel Diver: Sub Wars"
-1. 给设备关机
-1. 将你的 SD 卡插入到您的计算机
-1. Open [the Steelminer Injector website](https://bruteforcemovable.com/steelhax/) on your computer
-1. Select your `movable.sed` file
-1. Select "Start!"
-1. Wait for the process to complete
-1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<32-character-id>` -> `title` -> `00040000` -> `<8-character-region>` -> `data` on your SD card
-  + **EUR Region**: `000d7e00`
-  + **JPN Region**: `000d7c00`
-  + **USA Region**: `000d7d00`
-1. Copy the new downloaded save file to the `data` folder on your SD card
-  + Overwrite the old save file when prompted
-1. Reinsert your SD card into your device
-1. Power on your device
-1. Launch "Steel Diver: Sub Wars"
-1. If the exploit was successful, your device will have loaded the Homebrew Launcher
-  + You may see an error stating there are no applications found.
-1. Power off your device.
+1. 将SD卡插入设备
+1. 启动 “Steel Diver: Sub Wars” 游戏一次，然后选择任意一个 Mii 来初始化存档
+  + 请在提示游戏更新时拒绝更新游戏
+  + 如果你已经更新了游戏，那么进入 “系统设置(System Settings)” -> “数据管理(Data Management menu)” 删除此游戏的更新补丁
+1. 关闭 “Steel Diver: Sub Wars”
+1. 将设备关机
+1. 将你的 SD 卡插入到电脑
+1. 在你的电脑上打开[Steelminer 注入网页](https://bruteforcemovable.com/steelhax/)
+1. 上传你的 `movable.sed` 文件
+1. 选择 “Start!”
+1. 等待该过程执行完成。
+1. 打开你 SD 卡的 `Nintendo 3DS` -> `<ID0>` -> `<32位字符ID>` -> `title` -> `00040000` -> `<8位区码ID>` -> `data` 文件夹
+  + **欧版**: `000d7e00`
+  + **日版**: `000d7c00`
+  + **美版**: `000d7d00`
+1. 复制你刚下载的文件到 `data` 文件夹
+  + 当提示时选择覆盖旧的文件
+1. 将SD卡重新插入你的主机
+1. 启动你的主机
+1. 启动 “Steel Diver: Sub Wars”
+1. 如果漏洞成功执行，你的设备将进入到Homebrew Launcher
+  + 你可能会看到一个没有可用的应用程序的错误信息。
+1. 将设备关机。
 
 ___
 
-### Continue to [Installing Boot9strap (Frogtool)](installing-boot9strap-(frogtool))
+### 继续至 [安装 Boot9strap (通过 Frogtool)](installing-boot9strap-(frogtool))
 {: .notice--primary}

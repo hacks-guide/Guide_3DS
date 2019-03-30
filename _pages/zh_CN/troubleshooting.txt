@@ -1,164 +1,157 @@
 ---
-title: "Troubleshooting"
+title: "故障排查"
 ---
 
-{% include toc title="Table of Contents" %}
+{% include toc title="目录內容" %}
 
-### Required Reading
+### 必读事项
 
-If you are unable to boot your device, please look for the section relevant to you and follow the instructions.
+如果你的设备开不了机，那么请参阅本页面中的相关章节，并按照教程执行。
 
-If you still cannot solve your issue and need to reach out for help, please paste the contents of all relevant .log files from the root of your SD card into a [Gist](https://gist.github.com/), then come for help prepared with a detailed description of your problem and what you've tried.
+如果尝试了本页面的指导后问题仍未解决，请将SD卡上生成的所有.log文件复制到 [Gist](https://gist.github.com/)，然后向我们求助，并附上你对问题的详细描述以及你尝试过的解决方案。
 
-Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
+注意，如果在SD卡`/luma/payloads/`文件夹下，有除了`GodMode9.firm`以外的payload文件，那么在按住 “Start” 键开机的时候，设备将会进入“chainloader menu”菜单。届时请使用方向键和 “A” 键来选择本教程所需的“GodMode9”。 
 
-To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download).
+你需要一个支持BT协议的下载程序，如[Deluge](http://dev.deluge-torrent.org/wiki/Download)来下载本教程中的[磁力链](https://zh.wikipedia.org/wiki/%E7%A3%81%E5%8A%9B%E9%93%BE%E6%8E%A5) 。
 
-## DSi / DS functionality is broken after completing the guide
+## 完成本教程后DSi / DS 相关功能无法使用
 
-### What You Need
+### 准备工作
 
-* 针对你设备的TWL_FIRM `.cia`文件
-    + <i class="fa fa-magnet" aria-hidden="true" title="下载链接。 Use a torrent client to download the file."></i> - [New_3DS TWL_FIRM - v9936.cia](magnet:?xt=urn:btih:eab8558c97b18b1f329a2bfcc3c899b84c082a27&dn=New%5F3DS%20TWL%5FFIRM%20-%20v9936.cia&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce)
-    + <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [Old_3DS TWL_FIRM - v8817.cia](magnet:?xt=urn:btih:17511eadb6e6f3ff22d04f90644e37bd2d96ca43&dn=Old%5F3DS%20TWL%5FFIRM%20-%20v8817.cia&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce)
-* <i class="fa fa-magnet" aria-hidden="true" title="下载链接。 Use a torrent client to download the file."></i> - [TWL Version Data - v0.cia](magnet:?xt=urn:btih:4a106681407fede5de95cc8bda635432481f6b5d&dn=TWL%20Version%20Data%20-%20v0.cia&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce)
-* <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [DS Internet - v2048.cia](magnet:?xt=urn:btih:2b9df8496922f2546dfb0b01220068ce53c19d3d&dn=DS%20Internet%20-%20v2048.cia&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce)
-* <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [DS Download Play - v1024.cia](magnet:?xt=urn:btih:b581d3c5d98f5e621fddfc1ce5704bb45bf05a8c&dn=DS%20Download%20Play%20-%20v1024.cia&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce)
-* <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - [Nintendo DS Cart Whitelist - v11264.cia](magnet:?xt=urn:btih:7b90d506ad032a581a00035616eaa17a68c48eff&dn=Nintendo%20DS%20Cart%20Whitelist%20-%20v11264.cia&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce)
+* 最新版 [TWLFix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest) *(下载 .3dsx 文件)*
 
 ### 操作步骤
 
-#### Section I - Prep Work
+#### 第一步 — 准备工作
 
-1. Power off your device
-1. 将你的 SD 卡插入到您的计算机
-1. 在你的SD卡根目录新建一个叫`cias`的文件夹，如果还不存在的话
-1. 将`TWL Version Data - v0.cia`文件复制到SD卡的`/cias/`目录下
-1. 将`DS Download Play - v1024.cia`文件复制到SD卡的`/cias/`目录下
-1. 将`DS Internet - v2048.cia`文件复制到SD卡的`/cias/`目录下
-1. 将`Nintendo DS Cart Whitelist - v11264.cia`文件复制到SD卡的`/cias/`目录下
-1. 将`New_3DS TWL_FIRM - v9936.cia`或`Old_3DS TWL_FIRM - v8817.cia`文件复制到SD卡的`/cias/`目录下
-1. Reinsert your SD card into your device
+1. 关闭你的设备的电源
+1. 将你的 SD 卡插入到电脑
+1. 检查 SD 卡的根目录是否存在一个名为 `3ds` 的文件夹，如果没有则手动新建一个
+1. 复制 `TWLFix-CFW.3dsx` 到你内存卡的 `/3ds/` 文件夹
+1. 将SD卡重新插入你的主机
 
-#### Section II - Installing titles
+#### 第二步 — 修复 TWL 分区
 
-1. Launch FBI
-1. Navigate to `SD` -> `cias`
-1. 选择”\<current directory>”
-1. 选择"Install and delete all CIAs"
-1. Press (Home) to exit FBI
+1. 启动 Homebrew Launcher
+1. 在自制程序列表中找到 TWLFix-CFW
+1. 按下 “A” 键来卸载损坏的 TWL 程序
+1. 按 “Start” 键重启你的设备
+1. 进入 “系统设置(System Settings)”，接着点击“其他设置(Other Settings)”，然后移动到最右边，点击“系统升级(System Update)”来升级你的主机
+  + 更新程序将检查到你主机基本的 TWL 程序被卸载，然后它将重新安装它们
+1. 更新完成后，点击 “OK” 来重启设备 
 
-## Cannot inject H&S on Gateway downgraded device
+## 在使用 Gateway 降级过的设备上无法注入 “安全与健康提示(Health & Safety)” 应用
 
-This is caused by Gateway implementing a very shoddy downgrade method which leaves two versions of each app on the system. One of them is unused, but it confuses the H&S inject system, causing it to inject into the wrong one.
+这一因为Gateway的降级方法非常糟糕，会在系统中留下每个程序降级前后的两个版本。 这会迷惑注入系统，使其注入错误的版本。
 
-1. Launch GodMode9 by holding (Start) during boot
-1. Navigate to `[1:] SYSNAND CTRNAND` -> `title` -> `00040010`
+1. 开机时按住 “Start” 键启动 GodMode9
+1. 移动至`[1:] SYSNAND CTRNAND` -> `title` -> `00040010`
 1. 移动到你的设备和区域所对应的文件夹：
-  + **Old 3DS or Old 2DS EUR**: `00022300` -> `content`
-  + **Old 3DS or Old 2DS JPN**: `00020300` -> `content`
-  + **Old 3DS or Old 2DS USA**: `00021300` -> `content`
-  + **New 3DS or New 2DS EUR**: `20022300` -> `content`
-  + **New 3DS or New 2DS JPN**: `20020300` -> `content`
-  + **New 3DS or New 2DS USA**: `20021300` -> `content`
-1. 注意，文件夹里有两组app和tmd文件，一组带有大写的后缀（`.TMD`和`.APP`），一组带有小写的后缀（`.tmd`和`.app`）
-1. 按住(R)键的同时，按(Y)键新建一个目录
-1. Press (A) to confirm the name `newdir` (it does not matter what the folder is called)
-1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
-1. Press (B) to decline relocking write permissions if prompted
-1. 在每个大写字母后缀（`.TMD`和`.APP`）的文件上按(L)键选中它们
-1. 按(Y)键复制这些文件
-1. 进入`newdir`文件夹
-1. 按(Y)键粘贴这些文件
-1. 选择”Move path(s)”
-1. 大写字母后缀的文件将被移动到`newdir`文件夹下
-1. Press (Start) to reboot your device
-1. Retry the H&S injection
-1. If this still doesn't work, move the uppercase extension files back to the `content` folder, then move the lowercase extension files to the `newdir` folder, then retry the H&S injection
+  + **老型号的 3DS 或 2DS 欧版**: `00022300` -> `content`
+  + **老型号的 3DS 或 2DS 日版**: `00020300` -> `content`
+  + **老型号的 3DS 或 2DS 美版**: `00021300` -> `content`
+  + **New 3DS 或 2DS 欧版**: `20022300` -> `content`
+  + **New 3DS 或 2DS 日版**: `20020300` -> `content`
+  + **New 3DS 或 2DS 美版**: `20021300` -> `content`
+1. 注意，文件夹里有两组app和tmd文件，一组带有大写的后缀(`.TMD` 和 `.APP`)，一组带有小写的后缀(`.tmd` 和 `.app`)
+1. 按下 “R”+“Y” 键新建一个文件夹
+1. 按 “A” 键确认目录名为 `newdir `(文件夹叫什么名字不重要)
+1. 按 “A” 键解锁SysNAND (lvl1) 写入权限，并根据屏幕上的提示依次按下按键
+1. 如果提示重新锁定写入权限，按下 “B” 键来拒绝。
+1. 在每个大写字母后缀 (`.TMD` 和`.APP`)的文件上按 “L” 键选中它们
+1. 按 “Y” 键复制这些文件
+1. 进入 `newdir` 文件夹
+1. 按 “Y” 键粘贴这些文件
+1. 选择 “Move path(s)”
+1. 大写字母后缀的文件将被移动到 `newdir` 文件夹下
+1. 按 “Start” 键重启你的设备
+1. 重试注入
+1. 如果还是不能用，将大写字母后缀的文件移动到 `content` 文件夹，将小写字母后缀的文件移动到 `newdir` 文件夹，再重新尝试注入
 
-## A browser based exploit is not working
+## 浏览器漏洞无法使用
 
-Browser based exploits (such as browserhax or 2xrsa) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
+基于浏览器的破解漏洞（例如browserhax和2xrsa）不稳定并经常崩溃，你可以尝试按照下面的步骤修复：
 
-1. Launch the browser, then launch the browser settings
-1. 移动到页面最底端，选择Initialize Savedata（初始化缓存）（有时也会叫做Clear All Save Data，清除所有缓存）
-1. 再次尝试漏洞利用
+1. 打开浏览器，进入浏览器设置页面
+1. 移动到页面最底端，选择“Initialize Savedata(初始化缓存)” (有时也会叫做“清除所有缓存(Clear All Save Data)”)
+1. 再次尝试触发漏洞
 
-## Black screen on SysNAND boot
+## 启动 SysNAND 黑屏
 
-1. Try booting with your SD card out, and then reinserting it after booting
-    1. Power off your device
-    1. Remove your SD card from your device
-    1. Power on your device
-    1. When the home menu appears, reinsert your SD card into your device
-    1. If this worked, you should clear Home Menu's extdata by following these instructions:
-        1. 给设备关机
-        1. Launch GodMode9 by holding (Start) during boot
-        1. Press (Home) to bring up the action menu
-        1. Select "Scripts..."
-        1. Select "GM9Megascript"
-        1. Select "Scripts from Plailect's Guide"
-        1. Select "Remove extdata"
-        1. Press (A) to continue
-        1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
-        1. Press (A) to continue
-        1. Press (B) to return to the main menu
-        1. Select "Exit"
-        1. Press (A) to relock write permissions if prompted
-        1. Press (Start) to reboot your device
-1. 尝试拔掉卡带（包括闪存卡带）开机
-1. If you have a hardmod and a NAND backup, flash the backup back to SysNAND
-1. Try booting into recovery mode and updating your system
-    1. 给设备关机
-    1. Hold (L) + (R) + (A) + (Up)
-    1. Power on your device
-    1. If you enter safe mode, update your device
-1. Your device may be bricked. For support (in English), join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
+1. 尝试将 SD 卡拔出后启动系统，启动完成后将 SD 卡插回。
+    1. 将设备关机
+    1. 从设备中拔出你的 SD 卡
+    1. 启动你的主机
+    1. 桌面菜单出现后，将SD卡插回主机。
+    1. 如果上述步骤成功，那么你需要通过下面的步骤来清除桌面外部缓存：
+        1. 将设备关机
+        1. 开机时按住 “Start” 键启动 GodMode9
+        1. 按下 “Home” 键来打开功能菜单
+        1. 选择“Scripts...”
+        1. 选择“GM9Megascript”
+        1. 选择 “Scripts from Plailect's Guide”
+        1. 选择 “Remove extdata”
+        1. 按 “A” 键继续
+        1. 按 “A” 键解锁SysNAND (lvl1) 写入权限，并根据屏幕上的提示依次按下按键
+        1. 按 “A” 键继续
+        1. 按下 “B” 键返回到主菜单
+        1. 选择 “Exit”
+        1. 如果提示重新锁定写入权限，按下 “A” 键来确认
+        1. 按 “Start” 键重启你的设备
+1. 尝试拔掉卡带(包括烧录卡) 开机
+1. 如果你可以hardmod（硬改），并且有 NAND 备份，那么你可以尝试将 NAND 备份写入 SysNAND。
+1. 尝试启动到恢复模式并升级你的系统
+    1. 将设备关机
+    1. 同时按住“L”+“R”+“A”+“Up” 键
+    1. 将设备开机
+    1. 如果你进入了安全模式，更新你的设备
+1. 你的设备可能变砖了。 如需援助，请加入 [Nintendo Homebrew Discord服务器](https://discord.gg/MWxPgEp)并使用英文求助。(请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网)
 
-## Clear Home Menu extdata
+## 清除主菜单的外部存储
 
-1. 给设备关机
-1. 将你的 SD 卡插入到您的计算机
-1. Navigate to the `/Nintendo 3DS/<32-character-id>/<32-character-id>/extdata/00000000/` folder on your SD card
-1. Delete the extdata file corresponding to your region:
-  + **EUR Region**: `00000098`
-  + **JPN Region**: `00000082`
-  + **USA Region**: `0000008f`
-  + **CHN Region**: `000000A1`
-  + **KOR Region**: `000000A9`
-  + **TWN Region**: `000000B1`
-1. Reinsert your SD card into your device
+1. 将设备关机
+1. 将你的 SD 卡插入到电脑
+1. 打开你 SD 卡的 `/Nintendo 3DS/<32位字符id>/<32位字符id>/extdata/00000000/` 文件夹
+1. 根据你的系统区域删除对应的外部存储文件：
+  + **欧版**: `00000098`
+  + **日版**: `000000082`
+  + **美版**: `000008f`
+  + **中国版(神游版)**: `000000A1`
+  + **韩版**: `000000A9`
+  + **台湾版**: `000000B1`
+1. 将SD卡重新插入你的主机
 
-## Black screen on SysNAND boot after Installing boot9strap
+## 安装 boot9strap 后，启动 SysNAND 时黑屏
 
-1. Ensure you have a working payload
-    1. Check for the existence of `boot.firm` in the root of your SD card.
-1. 尝试重置Luma3DS的设置
-    1. 删除SD卡上的`/luma/config.bin`文件
-    1. 启动Luma3DS后重新设置
-1. Test booting GodMode9
-    1. 在Luma3DS上，按住(Start)键开机
-1. Try deleting home menu's extdata by following these instructions:
-    1. 给设备关机
-    1. Launch GodMode9 by holding (Start) during boot
-    1. Press (Home) to bring up the action menu
-    1. Select "Scripts..."
-    1. Select "GM9Megascript"
-    1. Select "Scripts from Plailect's Guide"
-    1. Select "Remove extdata"
-    1. Press (A) to continue
-    1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
-    1. Press (A) to continue
-    1. Press (B) to return to the main menu
-    1. Select "Exit"
-    1. Press (A) to relock write permissions if prompted
-    1. 按（Start）重启你的设备
-1. Try booting without any cartridges inserted (including flashcarts)
-1. If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version
-1. Try following [CTRTransfer](ctrtransfer)
-1. For support (in English), join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
+1. 请确认你有一个正常工作的payload文件。
+    1. 检查你的SD卡根目录是否存在 `boot.firm` 文件。
+1. 尝试重置 Luma3DS 的配置
+    1. 删除SD卡上的 `/luma/config.bin` 文件
+    1. 重启后重新配置
+1. 尝试启动 GodMode9
+    1. 使用 Luma3DS 自制固件时，按住“Start”键开机
+1. 尝试通过下列操作尝试将主菜单的外部存储删除：
+    1. 将设备关机
+    1. 开机时按住 “Start” 键启动 GodMode9
+    1. 按下 “Home” 键来打开功能菜单
+    1. 选择 “Scripts...”
+    1. 选择“GM9Megascript”
+    1. 选择 “Scripts from Plailect's Guide”
+    1. 选择 “Remove extdata”
+    1. 按 “A” 键继续
+    1. 按 “A” 键解锁SysNAND (lvl1) 写入权限，并根据屏幕上的提示依次按下按键
+    1. 按 “A” 键继续
+    1. 按下 “B” 键返回到主菜单
+    1. 选择 “Exit”
+    1. 如果提示重新锁定写入权限，按下 “A” 键来确认
+    1. 按 “Start” 键重启你的设备
+1. 尝试拔掉卡带（包括烧录卡）开机
+1. 如果你之前通过 Gateway 降级过主机，那么请确保你的 Luma3DS 是最新版
+1. 试试 [CTRTransfer](ctrtransfer)
+1. 如需援助，请加入 [Nintendo Homebrew Discord服务器](https://discord.gg/MWxPgEp)并使用英文求助。(请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网)
 
-## Blue screen on boot (bootrom error)
+## 开机时蓝屏(bootrom错误)
 
-1. Your device is bricked
-1. You will need to get a [hardmod](https://gbatemp.net/threads/414498/) or repair / replace your device
+1. 你的设备变砖了。
+1. 你需要使用一张支持 ntrboot 的烧录卡 (兼容名单请看[这里](ntrboot) 或拆机 [硬改](https://gbatemp.net/threads/414498/)来修复主机软件或维修 / 更换你的设备。
+1. 如需援助，请加入 [Nintendo Homebrew Discord服务器](https://discord.gg/MWxPgEp)并使用英文求助。(请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网)

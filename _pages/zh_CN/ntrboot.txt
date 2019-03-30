@@ -2,91 +2,91 @@
 title: "ntrboot"
 ---
 
-{% include toc title="Table of Contents" %}
+{% include toc title="内容目录" %}
 
-If your flashcart comes pre-flashed with ntrboot (or you have already flashed ntrboot to your flashcart), you can skip to [Installing boot9strap (ntrboot)](installing-boot9strap-(ntrboot)) for instructions on how to use it.
+如果你的烧录卡里预先已经安装了ntrboot (或者你已经将 ntrboot 漏洞写入了烧录卡)，那么你可以直接转至 [安装boot9strap (通过 ntrboot)](installing-boot9strap-(ntrboot)) 来进行破解。
 {: .notice--success}
 
-### Required Reading
+### 重要事项
 
-Installing boot9strap with ntrboot requires a compatible NDS / DSi flashcart to flash ntrboot to. Note that some of these flashcarts are sold pre-flashed with ntrboot.
+若想使用 ntrboot 漏洞来安装 boot9strap，那么你需要一张兼容的 NDS / DSi 烧录卡来将ntrboot 写入烧录卡。 请注意，有一些烧录卡已经预先写入了ntrboot。
 
-While the ntrboot exploit works independently of system version, the ntrboot flasher (which installs the exploit to the cart) is not. This means that, depending on the versions and devices supported by your flashcart, only certain methods may be available to you.
+3DS 在任何的系统版本下都可以使用 ntrboot 漏洞，不过在将 ntrboot 写入烧录卡之前不一定可以正常使用烧录卡。 因此，你需要根据你的烧录卡支持的版本和设备选择相应的方法。
 
-Note that carts with a "Time Bomb" will no longer be able to launch `.nds` files when they detect that the system clock has passed a date determined by the flashcart firmware. One method to bypass this is to set the system clock to an earlier date.
+请注意带有 “Time Bomb” 的烧录卡在检测到设备的系统时间超过了烧录卡固件中设置的某一日期后，将无法正常运行并启动 `.nds` 文件。 绕过这一限制的方法之一是把系统时间调到较早日期。
 
-| Flashcart Name | Current Price | "Time Bomb"? | 3DS Versions? | DSi Versions? | Other Notes |
+| 烧录卡名 | 目前价格 | 有无“Time Bomb”？ | 3DS版本？ | DSi版本？ | 备注 |
 |-|-:|:-:|:-:|:-:|-|
-| [**R4i-SDHC B9S**](http://www.nds-card.com/ProShow.asp?ProID=574) | $15.99 | September 3, 2019 | <= 11.9.0 | <= 1.4.5 | **Comes pre-flashed with ntrboot**; can be flashed back to an NDS flashcart. |
-| [**R4i Gold 3DS Plus**](http://www.nds-card.com/ProShow.asp?ProID=575) | $19.99 | No | <= 11.9.0 | <= 1.4.5 | **Comes pre-flashed with ntrboot** ([internal switch to switch between ntrboot and NDS modes]({{ "/images/screenshots/r4i-gold-3ds-plus.png" | absolute_url }})); do not manually flash with ntrboot. |
-| [**Acekard 2i**](http://www.nds-card.com/ProShow.asp?ProID=160) | $20.99 | No | <= 4.3.0 | <= 1.4.4 | |
-| [**DSTT**](http://www.nds-card.com/ProShow.asp?ProID=157) | $9.99 | No | None | None | Only models with [certain flash chips](https://gist.github.com/yuukieve/6b48f1bb8dd15136403c15c39fafdb42) are compatible with ntrboot. |
-| [**R4i Gold 3DS**](http://www.nds-card.com/ProShow.asp?ProID=149) | $19.99 | No | <= 11.9.0 | <= 1.4.5 | All RTS revisions are compatible. |
-| [**R4i-SDHC 3DS RTS**](http://www.nds-card.com/ProShow.asp?ProID=146) | $13.99 | 1.87: September 3, 2019 | <= 11.9.0 | <= 1.4.5 | |
-| [**R4iSDHC GOLD Pro 20XX**](http://www.nds-card.com/ProShow.asp?ProID=490) | $9.99 | 3.9b: September 3, 2019 | <= 11.9.0 | <= 1.4.5 | All R4iSDHC 20XX flashcarts are identical. 2013 models are incompatible. |
-| [**R4iSDHC RTS LITE 20XX**](http://www.nds-card.com/ProShow.asp?ProID=450) | $13.99 | 3.9b: September 3, 2019 | <= 11.9.0 | <= 1.4.5 | All R4iSDHC 20XX flashcarts are identical. 2013 models are incompatible. |
-| **Ace3DS X** | | No | <= 11.9.0 | <= 1.4.5 | **Comes pre-flashed with ntrboot** (external switch to switch between ntrboot ("3DS") and NDS modes); do not manually flash with ntrboot. |
-| **Ace3DS Plus** | | No | <= 11.9.0 | <= 1.4.5 | |
-| **Gateway Blue** | | No | 4.1.0 - 4.5.0 | <= 1.4.5 | |
-| **Infinity 3 R4i** | | No | <= 11.9.0 | <= 1.4.5 | |
-| **R4 3D Revolution** | | No | None | None | |
-| **R4i Gold 3DS Deluxe "Starter"** | | No | 4.1.0 - 4.5.0 | <= 1.4.5 | |
-| **R4i Ultra** | | No | <= 4.3.0 | <= 1.4.5 | |
-| **R4i-SDHC 3DS RTS Deluxe Edition** | | Unknown | <= 11.9.0 | <= 1.4.5 | |
-| **R4iSDHC Dual-Core 20XX** | | 3.9b: September 3, 2019 | <= 11.9.0 | <= 1.4.5 | All R4iSDHC 20XX flashcarts are identical. |
+| [**R4i-SDHC B9S**](http://www.nds-card.com/ProShow.asp?ProID=574) | 15.99美元 | 2019年9月3日 | <= 11.9.0 | <= 1.4.5 | **已经预先写入了 ntrboot 到烧录卡**；可以恢复至正常的 NDS 烧录卡 |
+| [**R4i Gold 3DS Plus**](http://www.nds-card.com/ProShow.asp?ProID=575) | 19.99美元 | 无 | <= 11.9.0 | <= 1.4.5 | **已经预先写入了 ntrboot** ([通过一个开关来切换ntrboot模式和普通的 NDS 烧录卡模式]({{ "/images/screenshots/r4i-gold-3ds-plus.png" | absolute_url }}))；请勿手动写入 ntrboot。 |
+| [**Acekard 2i**](http://www.nds-card.com/ProShow.asp?ProID=160) | 20.99美元 | 无 | <= 4.3.0 | <= 1.4.4 | |
+| [**DSTT**](http://www.nds-card.com/ProShow.asp?ProID=157) | 9.99美元 | 无 | 无 | 无 | 只有部分 [特殊的芯片烧录卡](https://gist.github.com/yuukieve/6b48f1bb8dd15136403c15c39fafdb42) 才能写入ntrboot。 |
+| [**R4i Gold 3DS**](http://www.nds-card.com/ProShow.asp?ProID=149) | 19.99美元 | 无 | <= 11.9.0 | <= 1.4.5 | 所有的 RTS 版本互相兼容。 |
+| [**R4i-SDHC 3DS RTS**](http://www.nds-card.com/ProShow.asp?ProID=146) | 13.99美元 | 1.87: 2019年9月3日 | <= 11.9.0 | <= 1.4.5 | |
+| [**R4iSDHC GOLD Pro 20XX**](http://www.nds-card.com/ProShow.asp?ProID=490) | 9.99美元 | 3.9b: 2019年9月3日 | <= 11.9.0 | <= 1.4.5 | 所有的 “R4iSDHC 20XX” 烧录卡都是相似的。 不支持2013版本。 |
+| [**R4iSDHC RTS LITE 20XX**](http://www.nds-card.com/ProShow.asp?ProID=450) | 13.99美元 | 3.9b: 2019年9月3日 | <= 11.9.0 | <= 1.4.5 | 所有的 “R4iSDHC 20XX” 烧录卡都是相似的 不支持2013版本。 |
+| **Ace3DS X** | | 无 | <= 11.9.0 | <= 1.4.5 | **已经预先写入了 ntrboot** (通过一个开关来切换 ntrboot 功能和普通的 NDS 烧录卡功能)；请勿手动写入 ntrboot。 |
+| **Ace3DS Plus** | | 无 | <= 11.9.0 | <= 1.4.5 | |
+| **Gateway Blue** | | 无 | 4.1.0 - 4.5.0 | <= 1.4.5 | |
+| **Infinity 3 R4i** | | 无 | <= 11.9.0 | <= 1.4.5 | |
+| **R4 3D Revolution** | | 无 | 无 | 无 | |
+| **R4i Gold 3DS Deluxe "Starter"** | | 无 | 4.1.0 - 4.5.0 | <= 1.4.5 | |
+| **R4i Ultra** | | 无 | <= 4.3.0 | <= 1.4.5 | |
+| **R4i-SDHC 3DS RTS Deluxe Edition** | | 未知 | <= 11.9.0 | <= 1.4.5 | |
+| **R4iSDHC Dual-Core 20XX** | | 3.9b: 2019年9月3日 | <= 11.9.0 | <= 1.4.5 | 所有的 R4iSDHC 20XX 烧录卡都是相似的。 |
 
   ![]({{ "/images/screenshots/ntrboot-flashcarts.png" | absolute_url }})
   {: .notice--info}
 
-Ensure your flashcart is able to launch `.nds` files on your device before beginning. Some flashcarts may require firmware or "kernel" files to be copied to the flashcart SD card. Consult your specific flashcart's instructions for more information.
+在开始前，请确认你的烧录卡可以在你的设备上使用并运行 `.nds` 文件。 某些烧录卡可能需要其 SD 卡内含有固件或“内核”文件。 请阅读你的烧录卡的说明书来了解更多细节。
 
-Note that specific methods may have additional compatibility information.
+请注意，某些方法可能有额外的兼容步骤供参阅。
 
-The usage of this exploit, regardless of flashing method, requires access to a small magnet if the target device is of a folding style (any 3DS family system that is not the old 2DS with a sleep switch). This is because the exploit requires your device to enter sleep mode while still having access to the buttons.
+如果你的设备是折叠式 (除了带有睡眠开关的老型号的 2DS 外的所有 3DS 系列机型)，如果你要通过此方法破解，无论你如何写入 ntrboot，你都必须准备一小块磁铁。 这是因为这个漏洞需要在休眠模式按下一些按键。
 
-To test if a magnet will work, hold it on or around the (A)(B)(X)(Y) buttons while the device is powered on to see if it triggers sleep mode. If it does, both displays will go black as long as the magnet is held in that spot.
+要确认你的磁铁是否管用，你可以在开机时将磁铁放在A、B、X、Y键上方或附近然后看看你的设备是否黑屏。 如果有用，只要把磁铁在那个位置附近，主机的两个屏幕应该都会熄灭。
 {: .notice--info}
 
-Note that the flashcart will not be able to be used for its standard functions while the ntrboot exploit is installed on it (except for in the case of the Acekard 2i, which remains functional *on NDS and custom firmware 3DS systems only*). This means that, for most flashcarts, it will not even display on the home menu. There are optional steps at the end of the ntrboot flashing instructions to remove it from your flashcart when you are done.
+请注意，在写入 ntrboot 漏洞后你将无法使用烧录卡的正常功能(除了Acekard 2i，其在 *NDS和已破解的3DS上* 仍能正常使用)。 也就是说大部分烧录卡在被写入 ntrboot 后在主菜单中都不会出现。 在写入 ntrboot 后，你可以通过可选步骤将其从烧录卡中移除。
 
-Note that in some rare circumstances, it may be possible for the flashing process to **brick** a counterfeit flashcart and render it permanently unusable. This is unlikely, but nevertheless only original listed flashcarts are supported. To reduce the chance of receiving a counterfeit card, it is recommended that you use a reputable site to buy your flashcart (such as [NDS Card](http://www.nds-card.com/))
+请注意，在某些极少见情況下，某些伪劣烧录卡有可能会在破解过程中损坏并且无法恢复。 这是一般不会发生的， 但是无论如何，我们只支持写在兼容表格中的烧录卡。 为了防止买到伪劣烧录卡，建议你从一些知名度较高的网站上购买你需要的烧录卡（如[NDS Card](http://www.nds-card.com/)）。
 {: .notice--danger}
 
 ___
-### Methods
+### 方法
 
 ___
 
-#### Flashing ntrboot (3DS Single System)
+#### 使用单台 3DS 写入 ntrboot 到烧录卡
 
-This method requires nothing more than your stock unhacked 3DS and a compatible flashcart. This method uses the flashcart to run the ntrboot flasher `.nds` file on your 3DS. This means that your flashcart must support launching `.nds` files on your 3DS's version. See the flashcart table above for more information.
+本方法只需一台未破解的 3DS 和一张兼容的烧录卡。 本教程烧录卡将用于在你的 3DS 上运行 ntrboot flasher `.nds` 文件。 这也就是说，若想要在3DS上使用你持有的烧录卡运行 `.nds` 文件，烧录卡必须支持在你的 3DS 系统版本上运行。 请参阅上方的烧录卡兼容列表了解更多。
 
-Continue to [Flashing ntrboot (3DS Single System)](flashing-ntrboot-(3ds-single-system))
+继续至[写入ntrboot (通过单台3DS)](flashing-ntrboot-(3ds-single-system))
 {: .notice--primary}
 
 ___
 
-#### Flashing ntrboot (3DS Multi System)
+#### 通过多台 3DS 写入 ntrboot 至烧录卡
 
-This method requires temporary access to a second 3DS family device that is already running boot9strap. This does not require your flashcart to support either 3DS's version.
+本方法会需要暂时用到一台已经破解了 boot9strap 的 3DS 主机， 你的烧录卡在本方法中不受 3DS 系统版本的限制。
 
-Continue to [Flashing ntrboot (3DS Multi System)](flashing-ntrboot-(3ds-multi-system))
+继续至[写入 ntrboot(通过多台 3DS)](flashing-ntrboot-(3ds-multi-system))
 {: .notice--primary}
 
 ___
 
-#### Flashing ntrboot (NDS)
+#### 利用 NDS 写入 ntrboot 到 3DS
 
-This method requires temporary access to a Nintendo DS or Nintendo DS Lite that is compatible with your flashcart. This method uses the flashcart to run the ntrboot flasher `.nds` file on your NDS.
+此方法需要暂时用到支持你烧录卡的NDS或NDS Lite。 烧录卡将用于在你的 NDS 上运行 ntrboot 写入程序的 `.nds` 文件。
 
-Continue to [Flashing ntrboot (NDS)](flashing-ntrboot-(nds))
+继续至[写入 ntrboot(通过 NDS)](flashing-ntrboot-(nds))
 {: .notice--primary}
 
 ___
 
-#### Flashing ntrboot (DSi)
+#### 使用 DSi 写入 ntrboot 到烧录卡
 
-This method requires temporary access to a Nintendo DSi that is compatible with your flashcart. This method uses the flashcart to run the ntrboot flasher `.nds` file on your DSi. This means that your flashcart must support launching `.nds` files on your DSi's version. See the flashcart table above for more information.
+本方法需要暂时用到一台与你的烧录卡兼容的Nintendo DSi主机。 烧录卡将用于在你的 DSi 上运行 ntrboot 写入程序的 `.nds` 文件。 这也就是说，若想要在 DSi 上使用你持有的烧录卡运行 `.nds` 文件，烧录卡必须支持在你的 DSi 系统版本上运行。 请参阅上方的烧录卡兼容列表了解更多。
 
-Continue to [Flashing ntrboot (DSi)](flashing-ntrboot-(dsi))
+继续到[写入 ntrboot(通过 DSi)](flashing-ntrboot-(dsi))
 {: .notice--primary}

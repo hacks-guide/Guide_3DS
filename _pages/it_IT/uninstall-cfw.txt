@@ -11,7 +11,7 @@ In questa sezione verrà spiegato come rimuovere completamente il CFW dalla tua 
 Se dovessi incontrare problemi con la tua installazione del CFW, seguire le istruzioni indicate in questa sezione probabilmente non servirà a risolverli. Un'idea migliore sarebbe leggere la pagina per la [risoluzione dei problemi](troubleshooting) o chiedere aiuto al [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) (in Inglese).
 {: .notice--danger}
 
-Any unsigned (illegitimate) games will be rendered unusable and should be manually removed before starting this process by using the Data Management section of the System Settings. Puoi usare un [save manager](https://github.com/FlagBrew/Checkpoint/releases/latest) per fare un backup dei salvataggi di questi giochi.
+Non sarà più possibile utilizzare i giochi non firmati (in quanto illegittimi), ma potranno essere eliminati manualmente prima delle prossime operazioni tramite la sezione Gestione dati nelle Impostazioni della console. Puoi usare un [save manager](https://github.com/FlagBrew/Checkpoint/releases/latest) per fare un backup dei salvataggi di questi giochi.
 
 Il tuo NNID, i giochi regolarmente acquistati o i salvataggi di questi ultimi non verranno toccati.
 
@@ -26,7 +26,7 @@ Tieni presente che se hai altri file payload oltre a `GodMode9.firm` nella carte
 
 ### Istruzioni
 
-#### Section I - Safety Test
+#### Sezione I - Test di Sicurezza
 
 1. Spegni il tuo 3DS
 1. Inserisci la scheda SD nel tuo computer
@@ -37,30 +37,30 @@ Tieni presente che se hai altri file payload oltre a `GodMode9.firm` nella carte
 1. Se ti viene richiesto di creare un backup dei file essenziali, premi (A) per accettare, e al termine di nuovo (A) per proseguire
 1. Se ti viene chiesto di reimpostare la data e l'ora dell'RTC, premi (A) per farlo, poi imposta la data e l'ora, infine premi (A) per continuare
   + Tieni presente che in tal caso dovrai anche reimpostare data ed ora anche nelle Impostazioni della Console al termine della guida
-1. Navigate to `[1:] SYSNAND CTRNAND > title > 00040138 > (X)0000002 > content`
-  + On a "New" edition console, the (X) will instead be 2
-  + On an "Old" edition console, the (X) will instead be 0
-1. Select the `.app` file
-1. Select `NCCH Image Options`
-1. Select `Mount image to drive`
-1. In the window that appears, open the `exefs` folder
-1. In this folder, select the `.firm` file
-1. Select "Firm Options"
-1. Select "Boot Firm"
-1. When prompted, choose to decrypt and make a copy
-1. You should boot into the regular 3DS Home Menu. If you do, power your device off and continue to the next section
-  + If you do NOT boot into the regular 3DS Home Menu, continuing with these instructions **WILL** brick your device. You should join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you
+1. Vai su `[1:] SYSNAND CTRNAND > title > 00040138 > (X)0000002 > content`
+  + Su una console "New", (X) sarà 2
+  + Su una console "Old", (X) sarà 0
+1. Seleziona il file `.app`
+1. Seleziona `NCCH Image Options`
+1. Seleziona `Mount image to drive`
+1. Nella finestra che appare, apri la cartella `exefs`
+1. In questa cartella, scegli il file `.firm`
+1. Seleziona "Firm Options"
+1. Seleziona "Boot Firm"
+1. Quando richiesto, scegli le opzioni per decriptare a fare una copia
+1. Ora dovrebbe avviarsi il normale menu HOME del 3DS. In tal caso, spegni la console e prosegui con la prossima sezione
+  + In caso CONTRARIO, proseguire con le istruzioni **BRICKERÀ** la tua console. Dovresti entrare nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) (in Inglese) per richiedere assistenza
   
 #### Sezione II - Preparazione
 
 1. Accendi la console
-1. Navigate to System Settings > Data Management > Nintendo 3DS > Software
-1. In this list of software, delete any non-Nintendo content you installed while using CFW
-  + This includes common system software such as FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint, and others, along with any non-eShop games
-  + Failure to remove CFW software before uninstalling CFW may break access to the Data Management menu after uninstalling CFW
+1. Vai in Impostazioni della console > Gestione dati > Nintendo 3DS > Software
+1. In questa lista di software, elimina qualunque contenuto non Nintendo che hai installato usando un CFW
+  + Sono compresi programmi comuni come FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint, e altri software compresi giochi esterni all'eShop
+  + La mancata rimozione di tutti questi programmi prima della disinstallazione del CFW potrebbe negare l'accesso al menù Gestione dati dopo la sua disinstallazione
 1. Spegni il tuo 3DS
 
-#### Section III - Running Uninstall Script
+#### Sezione III - Lanciare lo Script di Disinstallazione
 
 1. Avvia GodMode9 tenendo premuto (Start) durante l'accensione della console
 1. Premi il pulsante HOME per far apparire il menu delle azioni

@@ -1,105 +1,105 @@
 ---
-title: "Updating B9S"
+title: "更新 B9S"
 ---
 
-{% include toc title="Table of Contents" %}
+{% include toc title="目录内容" %}
 
-### Required Reading
+### 必读事项
 
-This page is for existing boot9strap users to update their installation of boot9strap to the latest version.
+本页是给现有Boot9strap的用户且想更新Boot9strap到最新版本而准备的。
 
-To extract the `.7z` files linked on this page, you will need a file archiver like [7-Zip](http://www.7-zip.org/) or [The Unarchiver](https://theunarchiver.com/).
+请使用[7-Zip](http://www.7-zip.org/)或[The Unarchiver](https://theunarchiver.com/)之类的压缩软件来解压本页面上的 `.7z` 文件。
 
 {% capture notice-1 %}
-There have been reports of a wave of bans being handed out to CFW users by Nintendo. To protect yourself, please do the following steps before starting this guide:
+据消息称，任天堂封禁了大量使用自制系统（CFW）的用户。 为了自保，请在继续教程前先进行如下操作。
 
-1. Go to System Settings, then "Internet Settings", then "SpotPass", then "Sending of System Information"
-1. Disable the "Sending of System Information" option
-1. Exit the System Settings
-1. Go to your Friend List (the [orange Face Icon]({{ "/images/friend-list-icon.png" | absolute_url }}) in the top row of your Home Menu)
-  + If you receive an error and are kicked out of the menu, the Friend List setting is either already disabled or your console cannot connect to Nintendo's servers (due to a ban or connection issues)
-1. Go to the Friend List settings, then "Friend Notification Settings", then "Show friends what you're playing"
-1. Disable the "Show friends what you're playing" option
-1. Exit your Friend List
+1. 进入“系统设置(System Settings)”，点击“互联网设置(Internet Settings)”，然后再点击“SpotPass”，之后再继续点击“发送系统信息(Sending of System Information)”
+1. 关闭“发送系统信息 (Sending of System Information) ”选项
+1. 退出系统设置
+1. 开启你的好友列表 (Home 主菜单中最上方的[橙色的笑脸]({{ "/images/friend-list-icon.png" | absolute_url }}))
+  + 如果出现错误信息并被踢回到主菜单，则好友列表设置可能已被禁用或你的设备无法连接到任天堂服务器（由于封禁或网络问题）
+1. 进入“好友列表设置(Friend List settings)”，然后点击“好友提示设置 (Friend Notification Settings)”，再然后点击“展示正在游玩的游戏 (Show friends what you're playing)”
+1. 关闭“向好友展示正在玩的游戏(Show friends what you're playing)”选项
+1. 退出好友列表
 
 {% endcapture %}
 
 <div class="notice--danger">{{ notice-1 | markdownify }}</div>
 
-### What You Need
+### 准备工作
 
-* The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
-* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(the `.7z` file)*
+* 最新版 [SafeB9SInstaller] (https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* 最新版 [boot9strap] (https://github.com/SciresM/boot9strap/releases/latest) *(下载标准的 boot9strap 压缩包文件，而不是带有 `devkit` 或 `ntr` 名字的文件)*
+* 最新版本的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* 最新版 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *( 下载 `.7z` 格式的压缩包文件)*
 
-### Instructions
+### 操作步骤
 
-#### Section I - Prep Work
+#### 第一步 — 准备工作
 
-For all steps in this section, overwrite any existing files on your SD card.
+请在本节中的所有步骤中覆盖SD卡上的所有现有文件。
 {: .notice--info}
 
-1. Insert your SD card into your computer
-1. Create a folder named `boot9strap` on the root of your SD card
-1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
-1. Copy `SafeB9SInstaller.firm` from the SafeB9SInstaller `.zip` to the `/luma/payloads/` folder on your SD card
-1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
-1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
-1. Reinsert your SD card into your device
+1. 将 SD 卡插入电脑
+1. 在SD卡根目录创建一个名为`boot9strap`的文件夹
+1. 从boot9strap `.zip` 压缩包中复制 `boot9strap.firm` 和 `boot9strap.firm.sha` 到你SD卡的 `/boot9strap/` 文件夹中
+1. 从 SafeB9SInstaller`.zip`压缩包中复制 `SafeB9SInstaller.firm`到SD卡 `/luma/payloads/` 目录中
+1. 从GodMode9`.zip`中复制 `GodMode9.firm` 到SD卡的 `/luma/payloads/` 文件夹中
+1. 将 GodMode9 `.zip` 中的整个 `gm9` 文件夹复制到 SD 卡的根目录下
+1. 将 SD 卡重新插入你的设备
 
-#### Section II - Installing boot9strap
+#### 第二步 — 安装 boot9strap
 
-1. Launch Luma3DS chainloader menu by holding (Start) during boot
-1. Launch SafeB9SInstaller by pressing (A)
-1. Wait for all safety checks to complete
-1. When prompted, input the key combo given to install boot9strap
-1. Once it has completed, hold (Start) while pressing (A) to reboot your device to the Luma3DS chainloader
-  + If you encounter an `argc = 0` error booting your device after the B9S update, just continue to fix it
+1. 开机时按住 “Start” 键来启动 Luma3DS chainloader 菜单
+1. 按 “A” 键启动SafeB9SInstaller
+1. 等待所有安全检查完成
+1. 出现提示时，按照提示依次输入按键来确认安装 boot9starp
+1. 当完成后，按下 “Start” 键，然后按 “A” 来重启你的设备到Luma3DS chainloader菜单
+  + 如果你在 B9S 更新后遇到 “argc = 0” 错误， 请忽略并继续教程
 
-#### Section III - Update Luma3DS
+#### 第三步 — 升级 Luma3DS
 
-1. Power off your device
-1. 将你的 SD 卡插入到您的计算机
-1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card, replacing the existing file
-1. Reinsert your SD card into your device
-1. Power on your device
+1. 将设备关机
+1. 将你的 SD 卡插入到电脑
+1. 解压 Luma3DS`.7z` 内的 `boot.firm` 到你 SD 卡的根目录，请覆盖已有文件
+1. 将SD卡重新插入你的主机
+1. 启动你的主机
 
-#### Section IV - Configuring Luma3DS
+#### 第四步 — 配置 Luma3DS
 
-This section is only needed if you are prompted with the Luma3DS configuration menu after the reboot.
+本步骤仅在重启时出现 Luma3DS 设置菜单时才需使用。
 {: .notice--info}
 
-1. In the Luma3DS configuration menu, use the (A) button and the D-Pad to turn on the following:    
-  + **"Show NAND or user string in System Settings"**
-1. Press (Start) to save and reboot
+1. 在Luma3DS配置菜单中，使用 “A” 键和十字键选择并开启下列选项:    
+  + **“Show NAND or user string in System Settings”**
+1. 按下 “Start” 键保存设置并重启
 
-#### Section VI - CTRNAND Luma3DS
+#### 第六步 — 将Luma3DS复制到CTRNAND
 
-1. 给设备关机
-1. Launch GodMode9 by holding (Start) during boot
-1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
-1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
-1. Press (Home) to bring up the action menu
-1. Select "Scripts..."
-1. Select "GM9Megascript"
-1. Select "Scripts from Plailect's Guide"
-1. Select "Setup Luma3DS to CTRNAND"
-1. When prompted, press (A) to proceed
-1. Press (A) to unlock SysNAND (lvl2) writing, then input the key combo given
-1. Press (A) to continue
+1. 将设备关机
+1. 开机时按住 “Start” 键启动 GodMode9
+1. 如果提示创建重要文件备份，按下 “A” 键确认，在完成后再次按下 “A” 键来继续。
+1. 如果出现修复RTC日期与时间的提示，按 “A” 键执行修复，然后设置好日期和时间，并按 “A” 继续
+1. 按下 “Home” 键来打开功能菜单
+1. 选择 “Scripts...”
+1. 选择“GM9Megascript”
+1. 选择 “Scripts from Plailect's Guide”
+1. 选择 “Setup Luma3DS to CTRNAND”
+1. 出现提示时，按 “A” 键继续
+1. 按 “A” 键解锁SysNAND (lvl2) 写入权限，并根据屏幕上的提示依次按下按键
+1. 按 “A” 键继续
 
-#### Section VII - Cleanup SD Card
+#### 第七步 — 清理SD卡
 
-1. Select "Cleanup SD Card"
-1. When prompted, press (A) to proceed
-1. Press (A) to continue
-1. Press (B) to return to the main menu
-1. Select "Exit"
-1. Press (A) to relock write permissions if prompted
-1. 按（Start）重启你的设备
+1. 选择 “Cleanup SD Card”
+1. 出现提示时，按 “A” 键继续
+1. 按 “A” 键继续
+1. 按下 “B” 键返回到主菜单
+1. 选择 “Exit”
+1. 如果提示重新锁定写入权限，按下 “A” 键来确认
+1. 按 “Start” 键重启你的设备
 
 ___
 
-Boot9strap has been successfully updated.
+你已成功更新Boot9strap。
 {: .notice--success}

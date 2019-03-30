@@ -1,57 +1,57 @@
 ---
-title: "Flashing ntrboot (NDS)"
+title: "写入 ntrboot 漏洞 (通过 NDS)"
 ---
 
-{% include toc title="Table of Contents" %}
+{% include toc title="目录内容" %}
 
-### Required Reading
+### 必读事项
 
-Before proceeding, ensure you have read all of the information on [ntrboot](ntrboot)
+请在开始前仔细阅读 [ntrboot](ntrboot) 章节的内容
 
-This method requires temporary access to a Nintendo DS or Nintendo DS Lite that is compatible with your flashcart. This method uses the flashcart to run the ntrboot flasher `.nds` file on your NDS.
+本方法将会暂时用到一台与你的烧录卡兼容的 Nintendo DS 或 Nintendo DS Lite 主机。 烧录卡将用于在你的 NDS 上运行 ntrboot 写入程序的 `.nds` 文件。
 
-Note that in some rare circumstances, it may be possible for the flashing process to **brick** a counterfeit flashcart and render it permanently unusable. This is unlikely, but nevertheless only original listed flashcarts are supported. To reduce the chance of receiving a counterfeit card, it is recommended that you use a reputable site to buy your flashcart (such as [NDS Card](http://www.nds-card.net/))
+请注意，在某些极少见情況下，某些伪劣烧录卡有可能会在破解过程中 **损坏** 并且无法恢复。 这是一般不会发生的， 但是无论如何，我们只支持写在兼容表格中的烧录卡。 为了防止买到伪劣烧录卡，我们建议你从一些知名度较高的网站上购买你需要的烧录卡(比如[NDS Card](http://www.nds-card.net/))
 {: .notice--danger}
 
-### What You Need
+### 准备工作
 
-* Your ntrboot compatible flashcart
-* Two devices 
-  + **The source NDS / NDSL**: the Nintendo DS or Nintendo DS Lite which is compatible with your flashcart
-  + **The target 3DS**: the 3DS family device on stock firmware
-* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(`ntr` boot9strap; not the `devkit` file)*
-* The latest release of [ds_ntrboot_flasher](https://github.com/jason0597/ntrboot_flasher_nds/releases/latest)
+* 一张兼容ntrboot的烧录卡
+* 两台主机 
+  + **源NDS / NDSL**：与你的烧录卡兼容的Nintendo DS 或 Nintendo DS Lite
+  + **目标3DS**：运行原版系统的3DS
+* 最新版 [boot9strap] (https://github.com/SciresM/boot9strap/releases/latest) *(下载 `ntr` 名字的文件；不要下载 `devkit` 名字的文件)*
+* 最新版[ds_ntrboot_flasher](https://github.com/jason0597/ntrboot_flasher_nds/releases/latest)
 
 ### 操作步骤
 
-#### Section I - Prep Work
+#### 第一步 — 准备工作
 
-1. Power off **the source NDS / NDSL**
-1. Insert your flashcart's SD card into your computer
-1. Create a folder named `ntrboot` on the root of your flashcart's SD card
-1. Copy `boot9strap_ntr.firm` from the boot9strap ntr `.zip` to the `/ntrboot/` folder on your flashcart's SD card
-1. Copy `ntrboot_flasher_nds.nds` to your flashcart's SD card
-1. Reinsert your flashcart's SD card back into your flashcart
-1. Insert your ntrboot compatible DS / DSi flashcart into **the source NDS / NDSL**
+1. 关闭 **源NDS / NDSL**
+1. 将烧录卡中的 SD 卡插入电脑
+1. 在烧录卡的 SD 卡根目录创建一个名为 `ntrboot` 的文件夹
+1. 解压 bootstrap ntr `.zip` 然后复制 `boot9strap_ntr.firm` 到烧录卡的 SD 卡根目录的`/ntrboot/` 文件夹
+1. 复制 `ntrboot_flasher_dsi.nds` 到烧录卡的 SD 卡上
+1. 将 SD 卡插回烧录卡
+1. 把兼容ntrboot的 DS / DSi 烧录卡插入 **源NDS / NDSL**
 
-#### Section II - Flashing ntrboot
+#### 第二步 — 写入 ntrboot
 
-1. Launch `ntrboot_flasher_nds.nds` on **the source NDS / NDSL** using your flashcart
-1. Press (A) to continue
-1. Use (Up) and (Down) to select your flashcart
-1. Press (A) to continue
-1. Select "Dump flash" to make a backup of your flashcart's memory
-1. Input the key combo given to confirm
-1. Press (A) to continue
-1. Use (Up) and (Down) to select your flashcart
-1. Press (A) to continue
-1. Select "Inject FIRM" to install boot9strap to your flashcart
-1. Input the key combo given to confirm
-1. Press (A) to continue
-1. Power off **the source NDS / NDSL**
-1. Eject your flashcart from **the source NDS / NDSL**
+1. 在你的 **源 NDS / NDSL** 上使用烧录卡，运行  `ntrboot_flasher_nds.nds`
+1. 按 “A” 键继续
+1. 使用“↑” “↓” 键选中你的烧录卡
+1. 按 “A” 键继续
+1. 选择 “Dump flash” 来备份你烧录卡的原始固件
+1. 依次按下屏幕上给出的按键
+1. 按 “A” 键继续
+1. 使用“↑” “↓” 键选中你的烧录卡
+1. 按 “A” 键继续
+1. 选择 “Inject FIRM” 来安装 boot9starp 到你的烧录卡中
+1. 依次按下屏幕上给出的按键
+1. 按 “A” 键继续
+1. 关闭 **源NDS / NDSL**
+1. 从 **源NDS / NDSL** 中拔出烧录卡
 
 ___
 
-### Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-(ntrboot))
+### 继续至 [安装 boot9strap (通过ntrboot)](installing-boot9strap-(ntrboot))
 {: .notice--primary}

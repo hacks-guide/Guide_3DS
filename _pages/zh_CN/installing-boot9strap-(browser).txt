@@ -1,67 +1,65 @@
 ---
-title: "Installing boot9strap (Browser)"
+title: "安装boot9strap (通过浏览器)"
 ---
 
-{% include toc title="Table of Contents" %}
+{% include toc title="目录内容" %}
 
-### Required Reading
+### 必读事项
 
-This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+请使用[7-Zip](http://www.7-zip.org/)或[The Unarchiver](https://theunarchiver.com/)之类的压缩软件来解压本页面上的 `.7z` 文件。
 
-To extract the `.7z` files linked on this page, you will need a file archiver like [7-Zip](http://www.7-zip.org/) or [The Unarchiver](https://theunarchiver.com/).
+### 准备工作
 
-### What You Need
-
-* The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
-* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(the `.7z` file)*
-* The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
+* 最新版 [SafeB9SInstaller] (https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* 最新版 [boot9strap] (https://github.com/SciresM/boot9strap/releases/latest) *(下载标准的 boot9strap 压缩包文件，而不是带有 `devkit` 或 `ntr` 名字的文件)*
+* 最新版 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *( 下载 `.7z` 格式的压缩包文件)*
+* 最新版 [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
 
 ### 操作步骤
 
-#### Section I - Prep Work
+#### 第一步 — 准备工作
 
-1. Power off your device
-1. Insert your SD card into your computer
-1. Copy `boot.firm` from the Luma3DS `.7z` to the root of your SD card
-1. Copy `boot.3dsx` to the root of your SD card
-1. Create a folder named `boot9strap` on the root of your SD card
-1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
-1. Copy `SafeB9SInstaller.dat` and `Launcher.dat` from the SafeB9SInstaller `.zip` to the root of your SD card
+1. 关闭你的设备的电源
+1. 将SD卡插入电脑
+1. 从Luma3DS的 `.7z` 压缩包中复制 `boot.firm` 到你的SD卡根目录
+1. 复制 `boot.3dsx` 到你的SD卡根目录
+1. 在SD卡根目录创建一个名为`boot9strap`的文件夹
+1. 从boot9strap `.zip` 压缩包中复制 `boot9strap.firm` 和 `boot9strap.firm.sha` 到你SD卡的 `/boot9strap/` 文件夹中
+1. 从 SafeB9SInstaller `.zip` 压缩包中复制 `SafeB9SInstaller.dat` 和 `Launcher.dat` 到 SD 卡根目录下
 
     ![]({{ "/images/screenshots/boot9strap-browser-file-layout.png" | absolute_url }})
     {: .notice--info}
 
-1. Reinsert your SD card into your device
-1. Power on your device
+1. 将SD卡重新插入你的设备
+1. 启动你的主机
 
-#### Section II - Launching SafeB9SInstaller
+#### 第二步 — 启动 SafeB9SInstaller
 
-1. Launch the browser and go to one of the following URLs on your device
+1. 启动浏览器，并打开下列网址中的一个
   + `https://dukesrg.github.io/?SafeB9SInstaller.dat`
   + `http://go.gateway-3ds.com/`
   + `http://www.reboot.ms/3ds/load.html?Launcher.dat`
   + `http://dukesrg.dynu.net/3ds/rop?GW17567.dat&Launcher.dat`
-  + Make sure to try each URL if the first one doesn't work (some versions cannot use the first one, and some versions cannot use the last three)
-  + If you get an error, [follow this troubleshooting guide](troubleshooting#a-browser-based-exploit-is-not-working)
-1. If the exploit was successful, you will have booted into SafeB9SInstaller
+  + 如果第一个网址用不了，把剩下的都试一下（有些机器用不了第一个网址，有些用不了后三个）
+  + 如果出现错误，参见[此故障排查章节](troubleshooting#a-browser-based-exploit-is-not-working)
+1. 如果一切成功的话，你将自动进入 SafeB9SInstaller
 
-#### Section III - Installing boot9strap
+#### 第三步 — 安装 boot9strap
 
-1. Wait for all safety checks to complete
-1. When prompted, input the key combo given to install boot9strap
-1. Once it has completed, press (A) to reboot your device
+1. 等待所有安全检查完成
+1. 出现提示时，按照提示输入按键组合来安装boot9strap
+1. 安装完成后，按下 “A” 键重启设备
 
-#### Section IV - Configuring Luma3DS
+#### 第四步 — 设置 Luma3DS
 
-1. Your device should have rebooted into the Luma3DS configuration menu
-  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
-1. Use the (A) button and the D-Pad to turn on the following:
+1. 你的主机将会在重启后进入至 Luma3DS 配置菜单中
+  + 如果黑屏，[请参见此故障排查章节](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
+1. 使用方向键和 “A” 键来启用以下设置：
   + **"Show NAND or user string in System Settings"**
-1. Press (Start) to save and reboot
-  + If you get an error, just continue the next page
+1. 按下 “Start” 键保存设置并重启
+  + 如果出现错误，继续至下一个页面即可解决
 
 ___
 
-### Continue to [Finalizing Setup](finalizing-setup)
+### 继续至[完成安装](finalizing-setup)
 {: .notice--primary}
