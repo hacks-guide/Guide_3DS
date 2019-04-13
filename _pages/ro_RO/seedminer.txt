@@ -6,79 +6,80 @@ title: "Seedminer"
 
 ### Lectură obligatorie
 
-To install boot9strap on your device, we exploit an oversight in the security restrictions applied to "DSiWare" applications.
+Pentru a instala boot9strap pe dispozitivul dumneavoastră, exploatăm restricțiile de securitate aplicate jocurilor 'DSiWare'.
 
-To accomplish this, we use a tool called Seedminer to calculate the DSiWare encryption key (`movable.sed`) for your device. We then use this DSiWare encryption key to decrypt a compatible DSiWare application and inject an exploit into it to run our own code (the exact exploit used will depend on your device's region).
+Pentru a realiza acest lucru, folosim un program numit Seedminer pentru a calcula cheia de criptare DSiWare (movable.sed) pentru dispozitivul dumneavoastră. Folosim această cheie DSiWare pentru a decripta o aplicație compatibilă DSiWare și injectăm un exploit în el pentru a rula codul nostru (acest exploit depinde de regiunea dispozitivului).
 
-If this key were completely random, the encryption key would be impossible to break on current computing hardware. Fortunately, the first half of the key (`movable_part1.sed`) is actually mathematically related to your device's Friend Code, allowing us to break the encryption. For information on how Seedminer works, please see [this presentation](https://zoogie.github.io/web/34⅕c3).
+Dacă această cheie era complet la întâmplare, ar fi imposibil de decriptat cu tehnologia actuală. Din fericire, prima jumătate a cheii (movable_part1.sed) este asociată matematic cu Friend Code-ul dispozitivului, permițand decriptarea. Pentru informații despre cum Seedminer funcționează, urmăriți [această prezentare]
+(https://zoogie.github.io/web/34⅕c3).
 
-Note that this tool requires a PC with a powerful graphics card to break your device's DSiWare encryption. If you do not have access to one of these, there also exists several online helper services where a volunteer running automated software will do this for you.
+Tineți cont ca această metodă are nevoie de un calculator cu o placă video puternică pentru a sparge cheia de criptare DSiWare a dispozitivului. Dacă nu aveți access la una dintre astea, există câteva servicii online unde un voluntar care rulează programe automate va face asta pentru dumneavoastră.
 
-### Instructions
+### Instrucțiuni
 
-#### Section I - Compatibility Tests
+#### Secțiunea I - Teste de compatibilitate
 
-While these tests are not strictly necessary to perform the Seedminer exploit, the follow-up exploits to this do require this test to be performed and it would be a waste of time and effort to perform Seedminer without the ability to use the other exploits.
+Aceste teste nu sunt strict necesare pentru a face exploit-ul Seedminer, dar exploit-urile de mai târziu au nevoie de aceste teste făcute cu succes și va fi o pierdere de timp pentru a face Seedminer fără posibilitatea de a folosi alte exploit-uri.
 
-There are two different methods for building on the Seedminer exploit (described in more detail at the bottom of this page), so even if one of these test fails you can still use another method as long as the other does not fail.
+Sunt două metode diferite care se bazează pe Seedminer (descris in detaliu în josul pagini), deci chiar dacă unul dintre aceste teste nu are succes poți folosi cealaltă metodă atâta timp cât aceasta nu eșuează.
 
-#### DS Internet Settings Test (used for Fredtool)
+#### Testul "DS Internet Settings” (folosit pentru Fredtool)
 
-1. Go to System Settings, then "Internet Settings", then "Nintendo DS Connections"
-1. Press "OK"
-1. If your device loads into a "Nintendo Wi-Fi Connection Setup" menu, the test was successful
-  + If the screen stays black or appears to freeze, the test has failed and you will not be able to use the Fredtool method which requires a functioning DS Internet Settings
-1. Exit this menu
+1. Mergeți la System Settings, apoi "Internet Settings", apoi "Nintendo DS Connections"
+1. Apăsați "OK"
+1. În cazul în care dispozitivul se încarcă într-un meniu de "Nintendo Wi-Fi Connection Setup", atunci testul a avut succes
+  + Dacă ecranul rămâne negru sau pare să îngheţe, testul a eșuat şi nu veți putea folosi metoda Fredtool care necesită ca DS Internet Settings să funcționeze
+1. Ieşiți din acest meniu
 
-#### DS Download Play Test (used for Frogtool)
+#### Probă pentru DS Download Play (folosit pentru Frogtool)
 
 1. Lansați aplicația Download Play (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
-1. Select "Nintendo DS"
-1. If your device loads into a "Download software via DS Download Play" menu, the test was successful
-  + If the screen stays black or appears to freeze, the test has failed and you will not be able to use the Frogtool method which requires a functioning DS Download Play
-1. Exit this menu
+1. Selectaţi "Nintendo DS"
+1. În cazul în care dispozitivul se încarcă într-un meniu de "Download software via DS Download Play", testul a avut succes
+  + Dacă ecranul rămâne negru sau pare să îngheţe, testul a eșuat şi nu veți putea folosi metoda Fredtool care necesită un DS Download Play funcțional
+1. Ieşiți din acest meniu
 
-#### Section II - Prep Work
+#### Secțiunea II - Preparații
 
 1. Introduceți cardul SD în calculator
-1. Navigate to the `Nintendo 3DS` folder on your SD card
-1. Copy the 32 character long name of the folder you see
-  + If you see multiple folders like this, perform the following:
-  + Rename the `Nintendo 3DS` folder to `BACKUP_Nintendo 3DS`
-  + Reinsert your SD card into your device and power on your device
-  + Wait for the device to generate the SD card data
-  + Power off your device and reinsert your SD card into your computer
-  + Navigate to the `Nintendo 3DS` folder on your SD card
-  + Copy the 32 character long name of the folder you see
-  + Delete the `Nintendo 3DS` folder
-  + Rename the `BACKUP_Nintendo 3DS` folder to `Nintendo 3DS`
-1. Paste your 32 character long folder name into a document you can reference later
-  + This folder name is also known as your "ID0"
+1. Navigați către folderul `Nintendo 3DS` pe cardul SD
+1. Copiați numele lung de 32 de caractere al folderului care îl vedeți
+  + Dacă vedeți foldere multiple precum astea, faceți următoarele:
+  + Redenumiţi folderul `Nintendo 3DS` către `BACKUP_Nintendo 3DS`
+  + Reintroduceţi cardul SD în dispozitiv și porniți dispozitivul
+  + Aşteptaţi dispozitivul pentru a genera datele de card SD
+  + Închideți dispozitivul și reintroduceți cardul SD înapoi în calculator
+  + Navigați către folderul `Nintendo 3DS` pe cardul SD
+  + Copiați numele lung de 32 de caractere al folderului care îl vedeți
+  + Ștergeți folderul `Nintendo 3DS`
+  + Redenumiţi folderul `BACKUP_Nintendo 3DS` către `Nintendo 3DS`
+1. Lipiţi numele lung al folderului de 32 de caractere într-un document pe care îl puteți referenția mai târziu
+  + Acest nume de folder este de asemenea cunoscut ca "ID0" al dispozitivului
 1. Porniți dispozitivul
 1. Mergeți în Lista de prieteni ([iconița cu fața portocalie]({{ "/images/friend-list-icon.png" | absolute_url }} în rândul superior de pe meniul HOME)
-  + If you receive an error and are kicked out of the menu, you either must create a new Mii or your console cannot connect to Nintendo's servers (due to a ban or connection issues)
-1. Find your Mii profile, then find the "Friend Code" field on the top screen
+  + Dacă primiți o eroare și sunteți dat afară din meniu, va trebui să creți un nou Mii sau consola nu se mai poate conecta în serverele Nintendo (din cauza unui ban sau problemelor de conexiune)
+1. Găsiți profilul de Mii, apoi găsiţi câmpul "Friend Code" de pe ecranul superior
 
-#### Section III - Seedminer
+#### Secțiunea III - Seedminer
 
-1. Open [Bruteforce Movable](https://bruteforcemovable.com/) on your computer
-  + This site can automate the retrieval of `movable_part1.sed` (using a bot 3DS console) and the breaking of your device's DSiWare encryption (using a volunteer's computer to run Seedminer)
-  + If the automated service is nonfunctional, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you
-1. Enter your device's Friend Code (with no spaces or dashes) into the "Your friend code" field
-1. Paste your device's 32 character long folder name into the "Your ID0" field
+1. Deschideţi [Bruteforce Movable](https://bruteforcemovable.com/) pe calculator
+  + Acest site poate automatiza extragerea de `movable_part1.sed` (folosind un bot care simulează un 3DS) şi descifrarea criptării DSiWare a dispozitivului (folosind calculatorul unui voluntar pentru a rula Seedminer)
+  + În cazul în care sistemul automatizat este nefuncțional, alăturați-vă la [Nintendo Homebrew pe Discord](https://discord.gg/MWxPgEp) şi cereți (în engleză) pentru ca cineva de acolo să vă asiste
+1. Introduceți Friend Code-ul dispozitivului (cu fără spaţii sau liniuţe) în câmpul "Your friend code"
+1. Lipiți numele de folder al dispozitvului de 32 de caractere în câmpul "Your ID0"
 1. Finalizați captcha-ul "I'm not a robot"
-1. Select "Go"
-  + If the site immediately goes to step 4, download your `movable.sed` file and continue with the next section.
-1. When prompted, use the "Register Friend" button on your device to add the friend code of the bot 3DS console
-1. Wait for the site to update
-  + If it does not, wait a few minutes before refreshing the page once
-1. Once the site processes your information, you will be given the option to "Continue" or "Do another device". Click the green "Continue" button
-1. Wait for the remainder of the process to complete
-  + This is usually fast (1-5 minutes) but in some cases, can take up to half an hour.
-  + During this process, the bot you added may not show up on your 3ds. As long as the website updates, this is not an issue.
-  + If you are still waiting after half an hour, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you
-1. When the process has completed, download your `movable.sed` file from the site
-  + Keep this file as you will need it in the upcoming pages
+1. Selectați "Go"
+  + În cazul în care site-ul se duce imediat la pasul 4, descărcați fişierul `movable.sed` și continuați cu următoarea secţiune.
+1. Când vi se solicită, folosiți butonul "Register Friend" pe dispozitivul dumneavoastră să adăugaţi codul de prieten al bot-ului care simulează un 3DS
+1. Așteptați ca site-ul să se actualizeze
+  + Dacă nu se actualizează, așteptați câteva minute înainte de a reîncărca pagina o dată
+1. Odată ce site-ul vă procesează informațiile, vi se va da opțiunea "Continue" (Continuați) sau "Do another device" (Faceți alt dispozitiv). Faceți click pe butonul verde care scrie "Continue"
+1. Așteptați ca restul procesului să se termine
+  + Acesta este de obicei destul de rapid (1-5 minute) dar în unele cazuri, poate lua până la o jumătate de oră.
+  + În timpul acestui proces, bot-ul care l-ați adăugat s-ar putea să nu apară pe 3DS. Cât timp nu se actualizează website-ul, aceasta nu va fi o problemă.
+  + În cazul în care încă așteptați după o jumătate de oră, alăturați-vă la [Nintendo Homebrew pe Discord](https://discord.gg/MWxPgEp) şi cereți (în engleză) pentru ca cineva de acolo să vă asiste
+1. Când procesul s-a completat, descărcați fişierul `movable.sed` de pe site
+  + Păstrați acest fișier de vreme ce veți avea nevoie de el în următoarele pagini
 
 ___
 ### Metode
@@ -87,25 +88,25 @@ ___
 
 #### Seedminer + Fredtool
 
-This method of using Seedminer for further exploitation uses your `movable.sed` file to decrypt any DSiWare eShop title for the purposes of injecting an exploitable DSiWare title into the DS Internet Settings application. This requires you to already own (or download / buy) a DSiWare game from the eShop.
+Această metodă de a folosi Seedminer pentru mai multă exploatare utilizează fişierul `movable.sed` pentru a decripta orice titlu de DSiWare de pe eShop cu scopul de a injecta un titlu DSiWare exploatabil în aplicaţia DS Internet Settings. Aveți nevoie sa dețineți (sau să cumpărați/descărcați) un joc DSiWare din eShop.
 
-This method is compatible with all regions, though only the JPN and USA regions have free DSiWare titles in the eShop.
+Această metodă este compatibilă cu toate regiunile, deși numai regiunile JPN și USA au titluri DSiWare gratuite în eShop.
 
-This method requires that the DS Internet Settings be functioning properly (see the test at the top of this page).
+Această metodă necesită ca DS Internet Settings să funcţioneze în mod corespunzător (vedeți testul de pe partea superioară a acestei pagini).
 
-Continue to [Installing boot9strap (Fredtool)](installing-boot9strap-(fredtool))
+Continuați la [Instalând boot9strap (Fredtool)](installing-boot9strap-(fredtool))
 {: .notice--primary}
 
 ___
 
 #### Seedminer + Steelhax + Frogtool
 
-This method of using Seedminer for further exploitation uses your `movable.sed` file to gain access to the Homebrew Launcher using the Steelhax exploit for the purposes of injecting an exploitable DSiWare title into the DS Download Play application. This method requires you to already own (or download) the free "Steel Diver: Sub Wars" game from the eShop.
+Această metodă de a folosi Seedminer pentru mai multă exploatare utilizează fişierul `movable.sed` pentru a avea acces la Homebrew Launcher folosind exploit-ul Steelhax în sensul de a injecta un titlu DSiWare exploatabil în aplicaţia DS Download Play. Această metoda are nevoie ca tu să deți (sau să descarci) jocul gratis din eShop "Steel Diver: Sub Wars".
 
-This method is only compatible with the EUR, JPN, and USA regions, and is somewhat more complicated than the above method. It is only recommended to use this method if you have a EUR region device and do not wish to pay for a DSiWare game, or if the above method does not work for you for some reason.
+Această metodă este compatibilă numai cu regiunile EUR, JPN şi SUA, şi este ceva mai complicat decât metoda de mai sus. Se recomandă doar să utilizaţi această metodă dacă aveţi un dispozitiv în regiunea EUR şi nu doriți să plătiți pentru un joc DSiWare sau dacă metoda de mai sus nu funcţionează pentru dumneavoastră pentru anumite motive.
 
-This method requires that the DS Download Play be functioning properly (see the test at the top of this page).
+Această metodă necesită ca DS Download Play să funcţioneze în mod corespunzător (vedeți testul de pe partea superioară a acestei pagini).
 
-Continue to [Homebrew Launcher (Steelhax)](homebrew-launcher-(steelhax))
+Continuați la [Homebrew Launcher (Steelhax)](homebrew-launcher-(steelhax))
 {: .notice--primary}
 
