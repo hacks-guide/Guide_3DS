@@ -1,12 +1,12 @@
 ---
-title: "Installing Boot9strap (Fredtool)"
+title: "Instalând Boot9strap (Fredtool)"
 ---
 
 {% include toc title="Cuprins" %}
 
 ### Lectură obligatorie
 
-This method of using Seedminer for further exploitation uses your `movable.sed` file to decrypt any DSiWare eShop title for the purposes of injecting an exploitable DSiWare title into the DS Internet Settings application. This requires you to already own (or download / buy) a DSiWare game from the eShop.
+Această metodă de a folosi Seedminer pentru mai multă exploatare utilizează fişierul `movable.sed` pentru a decripta orice titlu de DSiWare de pe eShop cu scopul de a injecta un titlu DSiWare exploatabil în aplicaţia DS Internet Settings. Aveți nevoie sa dețineți (sau să cumpărați/descărcați) un joc DSiWare din eShop.
 
 Acest lucru este în prezent o implementare a exploit-ului "Partiții FIRM de text simplu" detaliat [aici](https://www.3dbrew.org/wiki/3DS_System_Flaws).
 
@@ -14,11 +14,11 @@ Pentru a extrage fişierele `.7z` și `.rar` de pe această pagină, veţi avea 
 
 ### Ce aveți nevoie
 
-* Any eShop DSiWare game
-  + JPN region users can download the free title "ほぼ日の健康手帳™" ([![]({{ "/images/qrcodes/50010000005133.png" | absolute_url }}){: height="24px" width="24px"})]({{ "/images/qrcodes/50010000005133.png" | absolute_url }})
-  + USA region users can download the free title "Nintendo Fan Network" ([![]({{ "/images/qrcodes/50010000013696.png" | absolute_url }}){: height="24px" width="24px"})]({{ "/images/qrcodes/50010000013696.png" | absolute_url }})
-* Your `movable.sed` file from completing [Seedminer](seedminer)
-* The latest release of [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest)
+* Orice joc DSiWare din eShop
+  + Utilizatorii din regiunea JPN pot descărca titlul gratuit "ほぼ日の健康手帳™" ([![]({{ "/images/qrcodes/50010000005133.png" | absolute_url }}){: height="24px" width="24px"})]({{ "/images/qrcodes/50010000005133.png" | absolute_url }})
+  + Utilizatorii din regiunea USA pot descărca titlul gratuit "Nintendo Fan Network" ([![]({{ "/images/qrcodes/50010000013696.png" | absolute_url }}){: height="24px" width="24px"})]({{ "/images/qrcodes/50010000013696.png" | absolute_url }})
+* Fișierul 'movable.sed' de la completarea lui [Seedminer](seedminer)
+* Cea mai nouă versiune de [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest)
 * Cea mai recentă versiune de [b9sTool] (https://github.com/zoogie/b9sTool/releases/latest)
 * Cea mai nouă versiune de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(fișierul `.7z`)*
 * Cea mai nouă versiune de [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
@@ -27,55 +27,56 @@ Pentru a extrage fişierele `.7z` și `.rar` de pe această pagină, veţi avea 
 
 1. Porniți System Settings pe consolă
 1. Navigați spre `Data Management` -> `DSiWare`
-1. Under the "System Memory" section, select your DSiWare game
+1. Mergeți la secțiunea "System Memory", selectați jocul DSiWare
 1. Selectaţi "Copy", apoi selectaţi "OK"
   + Dacă vi se solicită, suprascrieți orice copie existentă
 1. Închideți dispozitivul
 1. Introduceți cardul SD în calculator
-1. Copy your `movable.sed` file to the root of your SD card
+1. Copiați fișierul `movable.sed` in rădăcina cardului SD
 1. Copiați `boot.firm` de la Luma3DS `.7z` în rădăcina cardului SD
 1. Copiați `boot.nds` (B9STool) în rădăcina cardului SD
 1. Copiați `boot.3dsx` în rădăcina cardului SD
-1. Copy the `private` folder from the Frogminer_save `.zip` to the root of your SD card
-1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<32-character-id>` -> `Nintendo DSiWare` on your SD card
-  + This `<ID0>` will be the same one that you used in [Seedminer](seedminer)
+1. Copiați folderul `private` de pe arhiva Frogminer_save `.zip` în rădăcina cardului SD
+1. Navigați spre `Nintendo 3DS` -> `<ID0>` -> `<ID-de--32-caractere>` -> `Nintendo DSiWare` pe cardul SD
+  + Acest `<ID0>` va fi la fel ca cel care l-ați folosit în [Seedminer](seedminer)
 1. Copiați `<ID-de-8-caractere>.bin` către un folder pe calculator
-  + If there are multiple `<8-character-id>.bin` files, just pick one. It doesn't matter which you use.
+  + Dacă există mai multe fișiere cu numele `<id-de-8-caractere>.bin`, alegeți oricare. Nu contează care utilizaţi.
 
-#### Section II - Fredtool
+#### Secțiunea II - Fredtool
 
-1. Open [Fredtool](https://fredtool.bruteforcemovable.com/) on your computer
-1. Select your `movable.sed` file for the "Your movable.sed" field
-1. Select your `<8-character-id>.bin` file for the "Your dsiware.bin" field
+1. Deschideți [Fredtool](https://fredtool.bruteforcemovable.com/) pe calculatorul dumneavoastră
+1. Selectaţi fişierul `movable.sed` pentru câmpul "Your movable.sed"
+1. Selectați `<ID-de-8-caractere>.bin` în câmpul "Your dsiware.bin"
 1. Finalizați captcha-ul "I'm not a robot"
-1. Select "Start"
+1. Selectați "Start"
 1. Așteptați până când procesul este terminat
-1. When the process has completed, download your modified DSiWare archive from the site
-1. Copy the `42383841.bin` file from the `output/hax/` folder of the downloaded DSiWare archive to the `Nintendo 3DS/<ID0>/<32-character-id>/Nintendo DSiWare/` folder on your SD card
-  + This should be different than your initial `<8-character-id>.bin` file
-  + Do not remove any existing `<8-character-id>.bin` files
+1. Când procesul s-a completat, descărcați arhiva modificată DSiWare de pe site
+1. Copiaţi fişierul `42383841.bin` din folderul `output/hax/` de la DSiWare-ul descărcat (`fredtool_output.zip`) către folderul `Nintendo 3DS/<ID0>/<id-de-32-caractere>/Nintendo DSiWare/` de pe cardul SD
+  + Acesta ar trebui să fie diferit decât fişierul iniţial `<id-de-8-caractere>.bin`
+  + Nu eliminați vreun fişier `<id-de-8-caractere>.bin`
 1. Reintroduceți cardul SD în dispozitivul dumneavoastră
 1. Porniți dispozitivul
 1. Porniți System Settings pe consolă
 1. Navigați spre `Data Management` -> `DSiWare`
-1. Under the "SD Card" section, select the "Haxxxxxxxxx!" title
+1. În secţiunea "SD Card", selectați titlul "Haxxxxxxxxx!"
 1. Selectaţi "Copy", apoi selectaţi "OK"
-1. Return to main menu of the System Settings
-1. Navigate to `Internet Settings` -> `Nintendo DS Connections`, then select "OK"
+1. Reveniți la meniul principal de System Settings
+1. Navigați spre `Internet Settings` -> `Nintendo DS Connections`, apoi selectați "OK"
 1. În cazul în care exploit-ul a mers, dispozitivul va încărca versiunea JPN de Flipnote Studio
 
-#### Section III - Flipnote Exploit
+#### Secțiunea III - Exploit-ul Flipnote
 
-If you would prefer a visual guide to this section, one is available [here](https://zoogie.github.io/web/flipnote_directions/).
+Dacă preferați un ghid vizual pentru aceasta secțiune, unul este disponibil [here]
+(https://zoogie.github.io/web/flipnote_directions/).
 {: .notice--info}
 
 1. Finalizați procesul de configurare iniţială pentru jocul lansat până când ajungeți la meniul principal
   + Selectaţi opţiunea stângă ori de câte ori se solicită în timpul procesului de instalare
 1. Folosind ecranul tactil, selectaţi căsuța mare din stânga, apoi selectaţi căsuța cu o pictogramă de card SD
 1. Odată ce se încarcă meniul, selectaţi iconița cu o față apoi iconița din dreapta jos pentru a continua
-1. Select the frog icon at the bottom left
-  + Alternatively, press (X) or (UP) on the D-Pad depending on which is shown on the top screen
-1. Select the second button along the top with a film-reel icon
+1. Alege iconița cu broasca din colțul din stânga jos
+  + Alternativ, apăsați (X) sau (Sus) pe D-Pad în funcție de care este afișat pe ecranul superior
+1. Alegeți al doilea buton de sus cu o iconiță de rolă de film
 1. Derulați dreapta până când este selectat rola "3/3"
 1. Atingeţi căsuța a treia cu litera "A" în ea
 1. Derulați stânga până când este selectat rola "1/3"
@@ -84,7 +85,7 @@ If you would prefer a visual guide to this section, one is available [here](http
 1. Selectaţi "Install boot9strap" şi confirmați
 1. Ieșiți din b9sTool, apoi închideți dispozitivul
   + Este posibil să aveţi nevoie să forțați oprirea dispozitivului apăsând butonul de pornire
-  + If you see the Luma Configuration screen, continue with the guide without powering off
+  + Dacă vedeți meniul de configurare Luma, continuați fără sa opriți dispozitivul
 
 #### Secțiunea IV - Configurând Luma3DS
 
@@ -95,20 +96,20 @@ If you would prefer a visual guide to this section, one is available [here](http
 1. Apăsați (Start) pentru a salva și reporni
   + Dacă vedeți un ecran negru [urmați acest ghid de depanare](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 
-#### Section V - Restoring DS Connection Settings
+#### Secțiunea V - Restaurând meniul DS Connection Settings
 
 1. Închideți dispozitivul
 1. Introduceți cardul SD în calculator
-1. Copy the `42383841.bin` file from the `output/clean/` folder of the downloaded DSiWare archive to the `Nintendo 3DS/<ID0>/<32-character-id>/Nintendo DSiWare/` folder on your SD card
-  + Replace the existing `42383841.bin` file
+1. Copiaţi fişierul `42383841.bin` din folderul `output/clean/` de la DSiWare-ul descărcat (`fredtool_output.zip`) către folderul `Nintendo 3DS/<ID0>/<id-de-32-caractere>/Nintendo DSiWare/` de pe cardul SD
+  + Înlocuiţi fişierul existent `42383841.bin
 1. Reintroduceți cardul SD în dispozitivul dumneavoastră
 1. Porniți dispozitivul
 1. Porniți System Settings pe consolă
 1. Navigați spre `Data Management` -> `DSiWare`
-1. Under the "SD Card" section, select the "Nintendo DSi™" title
-1. Select "Copy", then select "OK"
+1. Sub secțiunea "SD Card", alegeți titlul "Nintendo DSi™"
+1. Selectaţi "Copy", apoi selectaţi "OK"
 
 ___
 
-### Continue to [Finalizing Setup](finalizing-setup)
+### Continuați la [Finalizând instalarea](finalizing-setup)
 {: .notice--primary}
