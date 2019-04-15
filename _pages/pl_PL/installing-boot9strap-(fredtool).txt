@@ -1,12 +1,12 @@
 ---
-title: "Installing Boot9strap (Fredtool)"
+title: "Instalacja Boot9strap (Fredtool)"
 ---
 
 {% include toc title="Spis Treści" %}
 
 ### Wymagana Lektura
 
-This method of using Seedminer for further exploitation uses your `movable.sed` file to decrypt any DSiWare eShop title for the purposes of injecting an exploitable DSiWare title into the DS Internet Settings application. This requires you to already own (or download / buy) a DSiWare game from the eShop.
+Ta metoda wykorzystuje twój uzyskany wcześniej plik `movable.sed` do odszyfrowania jakiejkolwiek aplikacji DSiWare z eShopu, aby wprowadzić łatwą do zmodyfikowania aplikację DSiWare do aplikacji DS Internet Settings. Ta metoda wymaga posiadania (lub pobrania / kupienia) gry DSiWare z eShopu.
 
 To obecnie działająca implementacja luki: "FIRM partitions known-plaintext" szczegółowo opisanej [tutaj] (https://www.3dbrew.org/wiki/3DS_System_Flaws).
 
@@ -14,11 +14,11 @@ Aby wyodrębnić pliki `.7z` załączone na tej stronie, będziesz potrzebować 
 
 ### Czego Potrzebujesz
 
-* Any eShop DSiWare game
-  + JPN region users can download the free title "ほぼ日の健康手帳™" ([![]({{ "/images/qrcodes/50010000005133.png" | absolute_url }}){: height="24px" width="24px"})]({{ "/images/qrcodes/50010000005133.png" | absolute_url }})
-  + USA region users can download the free title "Nintendo Fan Network" ([![]({{ "/images/qrcodes/50010000013696.png" | absolute_url }}){: height="24px" width="24px"})]({{ "/images/qrcodes/50010000013696.png" | absolute_url }})
-* Your `movable.sed` file from completing [Seedminer](seedminer)
-* The latest release of [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest)
+* Jakiejkolwiek gry DSiWare z eShopu
+  + Użytkownicy regionu JPN mogą pobrać darmową grę "ほぼ日の健康手帳™" ([![]({{ "/images/qrcodes/50010000005133.png" | absolute_url }}){: height="24px" width="24px"})]({{ "/images/qrcodes/50010000005133.png" | absolute_url }})
+  + Użytkownicy regionu USA mogą pobrać darmową aplikację "Nintendo Fan Network" ([![]({{ "/images/qrcodes/50010000013696.png" | absolute_url }}){: height="24px" width="24px"})]({{ "/images/qrcodes/50010000013696.png" | absolute_url }})
+* Twojego pliku `movable.sed` z ukończenia [Seedminer](seedminer)
+* Najnowszej wersji [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest)
 * Najnowszej wersji [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
 * Najnowszej wersji [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(plik`.7z`)*
 * Najnowszej wersji [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
@@ -27,31 +27,31 @@ Aby wyodrębnić pliki `.7z` załączone na tej stronie, będziesz potrzebować 
 
 1. Uruchom "System Settings" na twoim urządzeniu
 1. Przejdź do `Data Management` -> `DSiWare`
-1. Under the "System Memory" section, select your DSiWare game
+1. Wejdź w sekcję "System Memory", i wybierz Twoją grę DSiWare
 1. Wybierz "Copy", a następnie "OK"
   + Zastąp istniejącą kopię, jeśli zostaniesz o to poproszony
 1. Wyłącz konsolę
 1. Włóż kartę SD do komputera
-1. Copy your `movable.sed` file to the root of your SD card
+1. Skopiuj plik `movable.sed` do katalogu głównego karty SD
 1. Skopiuj `boot.firm` z archiwum Luma3DS `.7z` do katalogu głównego karty SD
 1. Skopiuj plik `boot.nds` (B9STool) do katalogu głównego karty SD
 1. Skopiuj plik `boot.3dsx` do katalogu głównego twojej karty SD
-1. Copy the `private` folder from the Frogminer_save `.zip` to the root of your SD card
-1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<32-character-id>` -> `Nintendo DSiWare` on your SD card
-  + This `<ID0>` will be the same one that you used in [Seedminer](seedminer)
+1. Skopiuj folder `private` z katalogu Frogminer_save `.zip` do głównego katalogu Twojej karty SD
+1. Przejdź kolejno do katalogów `Nintendo 3DS` -> `<ID0>` -> `<32-znakowe-id>` -> `Nintendo DSiWare` na karcie SD
+  + Twoje `<ID0>` będzie takie samo jak te użyte przez Ciebie w [Seedminer](seedminer)
 1. Skopiuj `<8-znakowe-id>.bin` do folderu na swoim komputerze
-  + If there are multiple `<8-character-id>.bin` files, just pick one. It doesn't matter which you use.
+  + Jeżeli istnieje więcej plików `<8-znakowe-id>.bin` wybierz jakikolwiek. Nie jest ważne którego pliku użyjesz.
 
-#### Section II - Fredtool
+#### Sekcja II - Fredtool
 
-1. Open [Fredtool](https://fredtool.bruteforcemovable.com/) on your computer
-1. Select your `movable.sed` file for the "Your movable.sed" field
-1. Select your `<8-character-id>.bin` file for the "Your dsiware.bin" field
+1. Otwórz [Fredtool](https://fredtool.bruteforcemovable.com/) na komputerze
+1. Wybierz swój plik `movable.sed` w polu "Your movable.sed"
+1. Wybierz swój plik `<8-znakowe-id>.bin` w polu "Your dsiware.bin"
 1. Wypełnij captcha "I'm not a robot" (nie jestem robotem)
-1. Select "Start"
+1. Wybierz "Start"
 1. Poczekaj na zakończenie procesu
 1. When the process has completed, download your modified DSiWare archive from the site
-1. Copy the `42383841.bin` file from the `output/hax/` folder of the downloaded DSiWare archive to the `Nintendo 3DS/<ID0>/<32-character-id>/Nintendo DSiWare/` folder on your SD card
+1. Copy the `42383841.bin` file from the `output/hax/` folder of the downloaded DSiWare archive (`fredtool_output.zip`) to the `Nintendo 3DS/<ID0>/<32-character-id>/Nintendo DSiWare/` folder on your SD card
   + This should be different than your initial `<8-character-id>.bin` file
   + Do not remove any existing `<8-character-id>.bin` files
 1. Włóż ponownie kartę SD do konsoli
@@ -73,7 +73,7 @@ If you would prefer a visual guide to this section, one is available [here](http
   + Jeśli będziesz miał wybór, zawsze wybieraj opcję po lewej stronie ekranu
 1. Używając ekranu dotykowego, wybierz duży lewy kwadrat, następnie wybierz kwadrat z ikoną karty SD
 1. Po załadowaniu się menu, wybierz ikonkę twarzy, następnie ikonkę w prawym dolnym rogu ekranu w celu kontynuacji
-1. Select the frog icon at the bottom left
+1. Wybierz ikonę żaby w dolnym lewym rogu
   + Alternatively, press (X) or (UP) on the D-Pad depending on which is shown on the top screen
 1. Select the second button along the top with a film-reel icon
 1. Przewijaj taśmę w prawo, aby najechać na klatkę "3/3"
@@ -99,7 +99,7 @@ If you would prefer a visual guide to this section, one is available [here](http
 
 1. Wyłącz konsolę
 1. Włóż kartę SD do komputera
-1. Copy the `42383841.bin` file from the `output/clean/` folder of the downloaded DSiWare archive to the `Nintendo 3DS/<ID0>/<32-character-id>/Nintendo DSiWare/` folder on your SD card
+1. Copy the `42383841.bin` file from the `output/clean/` folder of the downloaded DSiWare archive (`fredtool_output.zip`) to the `Nintendo 3DS/<ID0>/<32-character-id>/Nintendo DSiWare/` folder on your SD card
   + Replace the existing `42383841.bin` file
 1. Włóż ponownie kartę SD do konsoli
 1. Włącz konsolę

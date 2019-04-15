@@ -24,9 +24,9 @@ title: "完成安装"
 ### 准备工作
 
 * 最新版 [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) *(下载 `.cia` 文件)*
-* 最新版的 [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/latest) *(下载 `.cia` 文件)*
+* 最新版 [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/latest) *(下载 `.cia` 文件)*
 * 最新版  [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest)
-* 最新版本的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* 最新版 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * 最新版 [DSP1](https://github.com/zoogie/DSP1/releases/latest)
 * 最新版 [FBI](https://github.com/Steveice10/FBI/releases/latest) *(下载 `.cia` 和 `.3dsx` 文件)*
 * 最新版 [ctr-no-timeoffset](https://github.com/ihaveamac/ctr-no-timeoffset/releases/latest)
@@ -142,24 +142,26 @@ title: "完成安装"
 1. 在`boot9.bin` 上按 “A” 键选中
 1. 选择 “Copy to 0:/gm9/out”
 1. 按 “A” 键继续
-1. 按 “B” 键返回到主菜单
-1. 同时按 “R” 键和“B”键，弹出你的SD卡
+1. 按下 “Home” 键来打开功能菜单
+1. 选择 “Poweroff system” 来将设备关机
 1. 将你的 SD 卡插入到电脑
 1. 从 SD 卡的 `/gm9/out/` 文件夹中复制 `<date>_<serialnumber>_sysnand_###.bin.sha` ，`<date>_<serialnumber>_sysnand_###.bin`，`essential.exefs` 和 `boot9.bin` 到电脑中的安全的位置
   + 请在多处地方备份这些文件(比如网盘等)
   + 如果以后机器出现任何问题，这些备份文件将是为你提供修复砖机或从 NAND 镜像恢复文件的帮手
 1. 将 `<date>_<serialnumber>_sysnand_###.bin` 和 `<date>_<serialnumber>_sysnand_###.bin.sha` 从你的 SD 卡的 `/gm9/out/` 文件夹中复制出后将其删除
 1. 将SD卡重新插入你的主机
-1. 按 “Start” 键重启你的设备
+1. 启动你的主机
 
 ___
+
+#### 信息与注意事项
 
 {% capture notice-10 %}
 你现在可以使用 Luma3DS Updater 来更新你的 Luma3DS 到最新版，只需运行该程序之后按下 “A” 键。
 
 这和系统升级不是一回事；它只会下载并提取最新的Luma3DS文件。
 
-这只会升级 SD 卡上的 Luma3DS 文件。 如果你在拔出 SD 卡的情况下开机，它则会通过你复制在 CTRNAND 里的 Luma3DS 开机。
+这将更新你的SD卡上的Luma3DS文件以及CTRNAND中的Luma3DS的文件，在你的设备没有SD卡时将会自动启动CTRNAND中的文件。
 {% endcapture %}
 
 <div class="notice--info">{{ notice-10 | markdownify }}</div>
@@ -173,7 +175,7 @@ ___
 
 你可以在开机时按下 “Start”+“Select”+“X” 键将ARM11的bootrom (`boot11.bin`) ，ARM9的bootrom (`boot9.bin`) 以及每台设备的独有OTP (`OTP.bin`) 导出到SD卡的 `/boot9strap/` 文件夹中（注意执行这个操作时不会出现任何提示或信息）。
 
-你现在可以在系统启动后同时按下 “L”+“↓”+“Select” 来打开集成在Luma3DS中的Rosalina菜单。 Rosalina的完整功能列表，可以参见 [Luma3DS v8.0 更新条目] (https://github.com/AuroraWright/Luma3DS/releases/tag/v8.0)
+你现在可以在系统启动后同时按下 “L”+“↓”+“Select” 来打开集成在Luma3DS中的Rosalina菜单。 Rosalina的完整功能列表，可以参见 [Luma3DS v8.0 更新条目](https://github.com/AuroraWright/Luma3DS/releases/tag/v8.0)
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
@@ -195,8 +197,5 @@ ___
 如果想知道如何使用 Luma3DS 的各种功能，参见[这个wiki](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage).
 {: .notice--success}
 
-关于安装自定义主题、图标和启动画面的资源，请查阅 [Theme Plaza] (https://themeplaza.eu/)。
-{: .notice--success}
-
-若想在 Luma3DS 中使用 Gateshark 金手指，请参见 [Sharkive](https://github.com/FlagBrew/Sharkive)。
+关于安装自定义主题、图标和启动画面的资源，请查阅 [Theme Plaza](https://themeplaza.eu/)。
 {: .notice--success}
