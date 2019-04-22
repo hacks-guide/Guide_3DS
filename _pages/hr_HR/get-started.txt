@@ -1,0 +1,108 @@
+---
+title: "Get Started"
+---
+
+{% include toc title="Table of Contents" %}
+
+### Required Reading
+
+Select the appropriate page for your version from the chart below. Note that the "from" and "to" fields are inclusive. This means that, for example, the "from 9.0.0 to 9.2.0" row includes 9.0.0, 9.1.0, and 9.2.0.
+
+Additionally, note that the last two columns of the chart refer to the last number of your version (which corresponds to the browser version installed to the system). If the version is -0 then you do not have a browser, while any number above -0 indicates a browser is installed.
+
+In the case of "5.0.0-0U" for example, you would follow the "No Browser" column and 5.0.0 to 5.1.0 row because the system is on the a system version in that range and has no browser installed.
+
+Your device version can be found at the bottom right of the top screen of the System Settings.
+
+![]({{ "/images/screenshots/system-version.png" | absolute_url }})
+{: .notice--info}
+
+**If you are unable to follow the instructions corresponding to your specific version due to missing prerequisites, then you should either update to the latest version or use the "All Versions" row for methods that work regardless of system version.**
+
+For all versions you can also [Cartridge Update](cart-update) (or use a standard system update) to get to a higher version in the same column to follow its instructions.
+
+If you have already hacked your 3DS before and have an EmuNAND based CFW setup, just follow all instructions while on SysNAND. Replace any files that already exist. Your data will be transferred from EmuNAND to your new B9S install at the end. If you use menuhax, you should [clear Home Menu's extdata](troubleshooting#clear-home-menu-extdata) to remove it before beginning.
+
+This page is for instructions on how to install boot9strap to a *stock* 3DS or 2DS. If you already have arm9loaderhax installed and are looking to update to boot9strap, follow [A9LH to B9S](a9lh-to-b9s).
+{: .notice--primary}
+
+Before starting, Windows users should enable the option to show file extensions using [File Extensions (Windows)](file-extensions-(windows))!
+{: .notice--info}
+
+Before starting, you may want to check your SD card for errors using [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), or [F3X (Mac)](f3x-(mac))!
+{: .notice--warning}
+
+{% capture notice-1 %}
+There have been reports of a wave of bans being handed out to CFW users by Nintendo. To protect yourself, please do the following steps before starting this guide:
+
+1. Go to System Settings, then "Internet Settings", then "SpotPass", then "Sending of System Information"
+1. Disable the "Sending of System Information" option
+1. Exit the System Settings
+1. Go to your Friend List (the [orange Face Icon]({{ "/images/friend-list-icon.png" | absolute_url }}) in the top row of your Home Menu)
+  + If you receive an error and are kicked out of the menu, the Friend List setting is either already disabled or your console cannot connect to Nintendo's servers (due to a ban or connection issues)
+1. Go to the Friend List settings, then "Friend Notification Settings", then "Show friends what you're playing"
+1. Disable the "Show friends what you're playing" option
+1. Exit your Friend List
+
+{% endcapture %}
+
+<div class="notice--danger">{{ notice-1 | markdownify }}</div>
+
+### Version Table
+
+<table>
+  <colgroup>
+    <col span="1" style="width: 10%;">
+    <col span="1" style="width: 10%;">
+    <col span="1" style="width: 40%;">
+  </colgroup>
+  <thead>
+    <tr>
+      <th style="text-align: center">From</th>
+      <th style="text-align: center">To</th>
+      <th style="text-align: center">No Browser</th>
+      <th style="text-align: center">Browser</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center; font-weight: bold;">1.0.0</td>
+      <td style="text-align: center; font-weight: bold;">2.0.0</td>
+      <td style="text-align: center; font-weight: bold;" colspan="2">Use an "All Versions" Method</td>
+    </tr>
+    <tr>
+      <td style="text-align: center; font-weight: bold;">2.1.0</td>
+      <td style="text-align: center; font-weight: bold;">2.1.0</td>
+      <td style="text-align: center; font-weight: bold;">Use an "All Versions" Method</td>
+      <td style="text-align: center; font-weight: bold;"><a href="installing-boot9strap-(2xrsa)">Installing boot9strap (2xrsa)</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: center; font-weight: bold;">2.2.0</td>
+      <td style="text-align: center; font-weight: bold;">2.2.0</td>
+      <td style="text-align: center; font-weight: bold;" colspan="2">Use an "All Versions" Method</td>
+    </tr>
+    <tr>
+      <td style="text-align: center; font-weight: bold;">3.0.0</td>
+      <td style="text-align: center; font-weight: bold;">8.1.0</td>
+      <td style="text-align: center; font-weight: bold;" colspan="2"><a href="installing-boot9strap-(soundhax)">Installing boot9strap (Soundhax)</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: center; font-weight: bold;">9.0.0</td>
+      <td style="text-align: center; font-weight: bold;">11.3.0</td>
+      <td style="text-align: center; font-weight: bold;" colspan="2"><a href="homebrew-launcher-(soundhax)">Homebrew Launcher (Soundhax)</a></td>
+    </tr><tr>
+      <td style="text-align: center; font-weight: bold;">11.4.0</td>
+      <td style="text-align: center; font-weight: bold;">11.8.0</td>
+      <td style="text-align: center; font-weight: bold;" colspan="2">Use an "All Versions" Method</td>
+    </tr>
+    <tr>
+      <td style="text-align: center; font-weight: bold;">11.9.0</td>
+      <td style="text-align: center; font-weight: bold;">11.9.0</td>
+      <td style="text-align: center; font-weight: bold;" colspan="2"><a href="seedminer">Seedminer</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: center; font-weight: bold;" colspan="2">ALL VERSIONS<br></td>
+      <td style="text-align: center; font-weight: bold;" colspan="2"><p style="display: inline-block; margin-top: 1.3em; width: 47%"><a href="ntrboot">ntrboot</a><br><sub>(Requires a Compatible Flashcart)</sub></p><p style="display: inline-block; margin-top: 1.3em; vertical-align: super; width: 6%">or</p><p style="display: inline-block; margin-top: 1.3em; width: 47%"><a href="installing-boot9strap-(hardmod)">Installing boot9strap (Hardmod)</a><br><sub>(Requires Soldering)</sub></p></td>
+    </tr>
+  </tbody>
+</table>
