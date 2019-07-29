@@ -16,34 +16,27 @@ title: "Seedminer"
 
 ### Инструкция
 
-#### Часть I - Проверка совместимости
+#### Section I - Compatibility Test
 
-Несмотря на то, что эти проверки не являются строго необходимыми для эксплойта Seedminer, последующие эксплойты требуют выполнения этих проверок, и было бы пустой тратой времени и сил применять эксплойт Seedminer, не имея возможности использовать другие эксплойты.
+While this test is not strictly necessary to perform the Seedminer exploit, the follow-up exploits to this do require this test to be performed and it would be a waste of time and effort to perform Seedminer without the ability to use the other exploits.
 
-Есть два различных метода дальнейшей эксплуатации Seedminer (подробности внизу этой страницы), так что даже если один из этих тестов завершится неудачей, вы сможете использовать другой метод при условии, что другой тест будет пройден успешно.
+There are two different methods for building on the Seedminer exploit (described in more detail at the bottom of this page), so even if this test fails you can still use another method.
 
 #### Тест DS Internet Settings (используется для Fredtool)
 
 1. Откройте Системные настройки, затем "Интернет-настройки", затем "Подключения Nintendo DS"
 1. Нажмите "OK"
 1. Если консоль загружает меню "Nintendo Wi-Fi Connection Setup", значит тест пройден успешно
-  + Если экран остается черным, или консоль зависает, значит тест не удался, и вы не сможете использовать метод Fredtool, для которого требуется работоспособное приложение DS Internet Settings
-1. Выйдите из меню
-
-#### Тест DS Download Play (используется для Frogtool)
-
-1. Запустите приложение Загружаемая игра (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
-1. Выберите "Nintendo DS"
-1. Если консоль загружает меню "Download software via DS Download Play", значит тест пройден успешно
-  + Если экран остается черным, или консоль зависает, значит тест не удался, и вы не сможете использовать метод Frogtool, для которого требуется работоспособное приложение DS Download Play
+  + If the screen stays black or appears to freeze, the test has failed and you will not be able to use the bannerbomb3 method which requires a functioning DS Internet Settings
 1. Выйдите из меню
 
 #### Часть II - Подготовка
 
 1. Вставьте SD-карту в компьютер
 1. Перейдите в папку `Nintendo 3DS` на SD-карте
-1. Скопируйте имя папки из 32 символов, которую вы видите
-  + Если вы видите несколько таких папок, выполните следующие действия:
+1. Copy the 32 character long name of the folder you see inside Nintendo 3DS
+  + Do not go inside any more folders
+  + If you see multiple folders with long, random names inside `Nintendo 3DS` without opening any other folders, perform the following:
   + Переименуйте папку `Nintendo 3DS` в `BACKUP_Nintendo 3DS`
   + Вставьте SD-карту обратно в консоль и включите консоль
   + Подождите пока консоль не создаст данные на SD-карте
@@ -66,6 +59,7 @@ title: "Seedminer"
   + Если автоматизированный сервис не функционирует, обратитесь на сервер [Nintendo Homebrew в Discord](https://discord.gg/MWxPgEp) и попросите (на английском языке) кого-нибудь вам помочь
 1. Введите Код друга вашей консоли (без пробелов или тире) в поле "Your friend code"
 1. Вставьте имя папки из 32 символов в поле "Your ID0"
+  + Do not attempt to enter the ID0 by hand. Ensure the ID0 is entered correctly by copying and pasting it from where you saved it in the previous section
 1. Заполните captcha "Я не робот"
 1. Выберите "Go"
   + Если сайт сразу переходит к шагу номер 4, скачайте свой файл `movable.sed` и переходите к следующей части.
@@ -85,26 +79,24 @@ ___
 
 ___
 
-#### Seedminer + Fredtool
+#### Seedminer + BannerBomb3 + Fredtool
 
-Этот метод дальнейшей эксплуатации Seedminer использует ваш файл `movable.sed` для расшифровки любого тайтла DSiWare из eShop в целях инъекции уязвимого тайтла DSiWare в приложение DS Download Play. Этот метод требует, чтобы у вас уже была в наличии (или загружена / куплена) DSiWare игра из eShop.
+This method of using Seedminer for further exploitation uses your `movable.sed` file to decrypt any DSiWare title for the purposes of injecting an exploitable DSiWare title into the DS Internet Settings application. 
 
-Этот метод совместим со всеми регионами, но только регионы JPN и USA имеют бесплатные тайтлы DSiWare в eShop.
+This method is compatible with all regions, though CHN region is not covered by this guide.
 
 Этот метод требует работоспособности приложения DS Internet Settings (см. тест в верхней части этой страницы).
 
-Следующий шаг: [Установка boot9strap (Fredtool)](installing-boot9strap-(fredtool))
+Continue to [BannerBomb3](bannerbomb3)
 {: .notice--primary}
 
 ___
 
-#### Seedminer + Steelhax + Frogtool
+#### Seedminer + Steelhax + DSiDumper + Fredtool
 
-Этот метод дальнейшей эксплуатации Seedminer использует ваш файл `movable.sed` для получения доступа к Homebrew Launcher при помощи эксплойта Steelhax в целях инъекции уязвимого тайтла DSiWare в приложение DS Download Play. Этот метод требует, чтобы у вас уже была в наличии (или загружена) бесплатная игра "Steel Diver: Sub Wars" из eShop.
+This method of using Seedminer for further exploitation uses your `movable.sed` file to gain access to the Homebrew Launcher using the Steelhax exploit for the purpose of dumping a system DSiWare. Этот метод требует, чтобы у вас уже была в наличии (или загружена) бесплатная игра "Steel Diver: Sub Wars" из eShop.
 
-Этот метод совместим только с регионами EUR, JPN и USA, а также несколько сложнее, чем метод выше. Рекомендуется использовать этот метод только в том случае, если у вас консоль региона EUR, и вы не хотите платить за игру DSiWare, или если метод выше не работает для вас по какой-либо причине.
-
-Этот метод требует работоспособности приложения DS Download Play (см. тест в верхней части этой страницы).
+Этот метод совместим только с регионами EUR, JPN и USA, а также несколько сложнее, чем метод выше. It is only recommended to use this method if you do not have a functioning DS Internet Settings application.
 
 Следующий шаг: [Homebrew Launcher (Steelhax)](homebrew-launcher-(steelhax))
 {: .notice--primary}
