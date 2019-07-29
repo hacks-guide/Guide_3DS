@@ -16,34 +16,27 @@ title: "Seedminer"
 
 ### 操作步骤
 
-#### 第一步 — 兼容性测试
+#### Section I - Compatibility Test
 
-虽然这些测试不是为了触发 Seedminer 漏洞而必须要做的。但是如果不进行测试的话可能会因为 Seedminer 漏洞失效而白白浪费时间和精力并可能会无法使用其他的漏洞。
+While this test is not strictly necessary to perform the Seedminer exploit, the follow-up exploits to this do require this test to be performed and it would be a waste of time and effort to perform Seedminer without the ability to use the other exploits.
 
-这里有两种方法来构建 Seedminer 漏洞(详情请看本页底端)，因此，如果其中一项测试失败，只要另一个测试没有失败，你就可以使用另一个办法。
+There are two different methods for building on the Seedminer exploit (described in more detail at the bottom of this page), so even if this test fails you can still use another method.
 
 #### DS 网络设置测试 (用于Fredtool)
 
 1. 进入系统设置，然后进入“互联网设置(Internet Settings)”，然后进入“任天堂 DS 连接(Nintendo DS Connections)”
 1. 点击 “OK”
 1. 如果你的设备进入到了 “任天堂 Wi-Fi 连接设置(Nintendo Wi-Fi Connection Setup)” 菜单中，则此测试成功
-  + 如果屏幕一直黑屏或者看上去似乎死机了，那么测试失败。你将无法使用 Fredtool (因为此漏洞需要能正常使用 DS 网络设置的主机)
-1. 退出此菜单
-
-#### DS 下载通信测试 (用于 Frogtool)
-
-1. 启动“下载通信(Download Play)”程序 (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
-1. 选择 “Nintendo DS”
-1. 如果你的主机正常进入了 DS “下载通信(Download Play)” 程序，那么测试成功。
-  + 如果屏幕一直黑屏或者看上去似乎死机了，那么测试失败。你将无法使用 Frogtool (因为此漏洞需要能正常使用 DS 下载通信的主机)
+  + If the screen stays black or appears to freeze, the test has failed and you will not be able to use the bannerbomb3 method which requires a functioning DS Internet Settings
 1. 退出此菜单
 
 #### 第二步 — 准备工作
 
 1. 将你的 SD 卡插入到电脑
 1. 打开你 SD 卡的 `Nintendo 3DS` 文件夹
-1. 复制你看到的32位字符文件夹的名称
-  + 如果你看到多个类似的文件夹，那么请按以下内容做：
+1. 复制你在Nintendo 3DS文件夹内看到的32位字符文件夹的名称
+  + 不要再点进任何文件夹
+  + 如果你在 `Nintendo 3DS` 文件夹中看到多个非常长且随机名称的文件夹（请注意不要再点击进入任何一个文件夹），请执行以下操作：
   + 将`Nintendo 3DS` 文件夹重命名为`BACKUP_Nintendo 3DS`
   + 重新将 SD 卡插入设备并开机
   + 等待设备生成 SD 卡中的数据
@@ -66,6 +59,7 @@ title: "Seedminer"
   + 如果自助功能无法使用，请加入[Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp) 并使用英文请求帮助。(请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网)你也可以到译者的<a href="https://jq.qq.com/?_wv=1027&k=5CfEA4c">QQ群</a>寻求帮助，群号为942052497。
 1. 在 “Your friend code” 选项填入你设备的 “朋友代码(Friend Code)”(只要数字，不要填入空格和破折号)
 1. 在 “Your ID0” 栏位粘贴之前复制的32位长的字符串
+  + 不要尝试手动输入 ID0 确保那是你在上一节中复制并粘贴的ID0以防复制错了
 1. 完成谷歌的 “人机身份验证” (请注意，如果你身处中国大陆，看到这个选项可能需要科学上网)
 1. 点击 “Go”
   + 如果网站直接跳到了第四步 (step 4) ，那么就下载 `movable.sed` 并跳到下一部分
@@ -85,26 +79,24 @@ ___
 
 ___
 
-#### Seedminer + Fredtool
+#### Seedminer + BannerBomb3 + Fredtool
 
-本章节 Seedminer 将使用你的 `movable.sed` 文件来解密所有的来自 eShop 的 DSiWare 程序，以便在3DS中内置的 DS 网络设定中注入修改后的 DSiWare 程序。 在使用本教程之前你需要拥有 (或下载 / 购买) 在eShop 上下载的 DSiWare 软件。
+This method of using Seedminer for further exploitation uses your `movable.sed` file to decrypt any DSiWare title for the purposes of injecting an exploitable DSiWare title into the DS Internet Settings application. 
 
-这个方法适用于所有区域的主机，不过只有日版和美版区域的 eShop 内有免费的 DSiWare 游戏。
+This method is compatible with all regions, though CHN region is not covered by this guide.
 
 这个方法要求 DS 互联网设置正常运行。请通过此页面顶部的测试确认可以使用后再继续此教程。
 
-继续至 [安装 boot9strap (通过Fredtool)](installing-boot9strap-(fredtool))
+Continue to [BannerBomb3](bannerbomb3)
 {: .notice--primary}
 
 ___
 
-#### Seedminer + Steelhax + Frogtool
+#### Seedminer + Steelhax + DSiDumper + Fredtool
 
-本章节 Seedminer 将使用你的 `movable.sed` 文件，通过 Steelhax 漏洞启动 Homebrew Launcher，以便在 DS Download Play 中注入修改后的 DSiWare 程序。 在进行本教程前，你必须先拥有 (或下载) eShop 中免费的“ Steel Driver: Sub Wars”游戏。
+This method of using Seedminer for further exploitation uses your `movable.sed` file to gain access to the Homebrew Launcher using the Steelhax exploit for the purpose of dumping a system DSiWare. 在进行本教程前，你必须先拥有 (或下载) eShop 中免费的“ Steel Driver: Sub Wars”游戏。
 
-这个方法只适用于欧版，日版和美版的设备。而且比另一方法稍微复杂一些。 这个方法只建议给不愿花钱买 DSiWare 游戏的欧版主机或使用另一方法无效的人们。
-
-这个方法要求 DS 下载通信正常运行。请通过此页面顶部的测试确认可以使用后再继续此教程。
+这个方法只适用于欧版，日版和美版的设备。而且比另一方法稍微复杂一些。 It is only recommended to use this method if you do not have a functioning DS Internet Settings application.
 
 继续至 [启动 Homebrew Launcher (通过Steelhax)](homebrew-launcher-(steelhax))
 {: .notice--primary}
