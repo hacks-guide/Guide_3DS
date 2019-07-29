@@ -16,34 +16,27 @@ Questo metodo utilizza una scheda grafica di fascia alta per eseguire i calcoli 
 
 ### Istruzioni
 
-#### Sezione I - Test di Compatibilità
+#### Section I - Compatibility Test
 
-Anche se questi test non sono strettamente necessari per l'esecuzione dell'exploit Seedminer, gli exploit successivi li richiederanno e sarebbe uno spreco di tempo eseguire il primo senza poter poi eseguire i secondi.
+While this test is not strictly necessary to perform the Seedminer exploit, the follow-up exploits to this do require this test to be performed and it would be a waste of time and effort to perform Seedminer without the ability to use the other exploits.
 
-Dopo l'esecuzione dell'exploit Seedminer possono essere eseguiti due diversi exploit (descritti in fondo alla pagina), quindi anche se uno dei test dovesse fallire puoi sempre tentare il secondo.
+There are two different methods for building on the Seedminer exploit (described in more detail at the bottom of this page), so even if this test fails you can still use another method.
 
 #### Test Impostazioni Internet DS (usato per Fredtool)
 
 1. Vai su "Impostazioni della console", "Impostazioni Internet", quindi "Connessioni Nintendo DS"
 1. Premi "OK"
 1. Se la tua console carica il menu "Configurazione Nintendo Wi-Fi Connection", il test ha avuto successo
-  + Se lo schermo rimane nero o sembra bloccarsi, il test è fallito e non potrai utilizzare il metodo Fredtool, dato che richiede un menu "Connessioni Nintendo DS" funzionale
-1. Esci da questo menu
-
-#### Test Modalità Download DS (usato per Frogtool)
-
-1. Avvia l'applicazione "Modalità download" (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
-1. Seleziona "Nintendo DS"
-1. Se la console ora mostra la scritta "Scarica software tramite il download DS.", il test ha avuto successo
-  + Se lo schermo rimane nero o sembra bloccarsi, il test è fallito e non potrai utilizzare il metodo Frogtool, dato che richiede una Modalità download DS funzionale
+  + If the screen stays black or appears to freeze, the test has failed and you will not be able to use the bannerbomb3 method which requires a functioning DS Internet Settings
 1. Esci da questo menu
 
 #### Sezione II - Preparazione
 
 1. Inserisci la scheda SD nel tuo computer
 1. Entra nella cartella `Nintendo 3DS` della tua scheda SD
-1. Copia la stringa di 32 caratteri del nome della cartella qui presente
-  + Se vedi più cartelle dal nome lungo, segui i seguenti passaggi:
+1. Copia la stringa di 32 caratteri del nome della cartella presente dentro il Nintendo 3DS
+  + Non entrare in ulteriori cartelle
+  + Se vedi più cartelle con nomi lunghi e casuali dentro `Nintendo 3DS`, senza aprire altre cartelle esegui le seguenti operazioni:
   + Rinomina la cartella `Nintendo 3DS` in `BACKUP_Nintendo 3DS`
   + Reinserisci la tua scheda SD nella console, e accendila
   + Attendi che la console generi i dati nella scheda SD
@@ -66,6 +59,7 @@ Dopo l'esecuzione dell'exploit Seedminer possono essere eseguiti due diversi exp
   + Se il servizio automatizzato non funziona, entra nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) (in Inglese) per richiedere assistenza
 1. Inserisci il Codice Amico della tua console (senza spazi o trattini) nel campo "Your friend code"
 1. Incolla i 32 caratteri della cartella nel campo "Your ID0"
+  + Non inserire l'ID0 a mano. Assicurati che l'ID0 sia stato inserito correttamente copiandolo e incollandolo da dove l'hai salvato nella sezione precedente
 1. Supera il captcha "I'm not a robot"
 1. Seleziona "Go"
   + Se il sito passa direttamente al punto 4, scarica il tuo file `movable.sed` e prosegui con la sezione successiva.
@@ -85,26 +79,24 @@ ___
 
 ___
 
-#### Seedminer + Fredtool
+#### Seedminer + BannerBomb3 + Fredtool
 
-Seedminer utilizza il tuo file `movable.sed` per decriptare un qualunque titolo DSiWare dell'eShop per iniettare una particolare applicazione DSiWare nell'applicazione Impostazioni Internet DS. Questo metodo richiede che tu possegga (o scarichi / compri) un gioco DSiWare dall'eShop.
+This method of using Seedminer for further exploitation uses your `movable.sed` file to decrypt any DSiWare title for the purposes of injecting an exploitable DSiWare title into the DS Internet Settings application. 
 
-Il metodo è compatibile con tutte le regioni, anche se soltanto le regioni JPN e USA hanno titoli DSiWare gratuiti scaricabili dall'eShop.
+This method is compatible with all regions, though CHN region is not covered by this guide.
 
 Questo metodo richiede che le Impostazioni Internet DS funzionino regolarmente (vedi il test in cima a questa pagina).
 
-+ Prosegui con l'[Installazione di boot9strap (Fredtool)](installing-boot9strap-(fredtool))
+Continue to [BannerBomb3](bannerbomb3)
 {: .notice--primary}
 
 ___
 
-#### Seedminer + Steelhax + Frogtool
+#### Seedminer + Steelhax + DSiDumper + Fredtool
 
-Seedminer utilizza il tuo file `movable.sed` per ottenere accesso all'Homebrew Launcher tramite l'exploit Steelhax per iniettare una particolare applicazione DSiWare nell'applicazione DS "Modalità download". Questo metodo richiede il possesso (o lo scaricamento) del gioco gratuito "Steel Diver: Sub Wars" dall'eShop.
+This method of using Seedminer for further exploitation uses your `movable.sed` file to gain access to the Homebrew Launcher using the Steelhax exploit for the purpose of dumping a system DSiWare. Questo metodo richiede il possesso (o lo scaricamento) del gioco gratuito "Steel Diver: Sub Wars" dall'eShop.
 
-Questo metodo è compatibile con le regioni EUR, JPN e USA, ed è leggermente più complicato del precedente. Si raccomanda di usare questo metodo se hai una console EUR e non vuoi comprare un gioco DSiWare, o se il metodo precedente non è eseguibile per qualche motivo.
-
-Questo metodo richiede che la Modalità download DS funzioni correttamente (vedi il test in cima a questa pagina).
+Questo metodo è compatibile con le regioni EUR, JPN e USA, ed è leggermente più complicato del precedente. It is only recommended to use this method if you do not have a functioning DS Internet Settings application.
 
 Prosegui con l'[Homebrew Launcher (Steelhax)](homebrew-launcher-(steelhax))
 {: .notice--primary}
