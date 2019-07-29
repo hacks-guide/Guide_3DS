@@ -8,8 +8,6 @@ title: "Mettre à jour B9S"
 
 Cette page s'adresse aux utilisateurs de boot9strap déjà présent sur leurs console afin de le mettre à jour vers la dernière version.
 
-Pour extraire les fichiers `.7z` sur cette page, vous aurez besoin d'un programme d'archives comme [7-Zip](http://www.7-zip.org/) ou [The Unarchiver](https://theunarchiver.com).
-
 {% capture notice-1 %}
 Il y a eu des informations concernant une vague de bannissements contre les utilisateurs de CFW par Nintendo. Pour vous protéger, merci de bien faire les étapes suivantes avant de commencer ce guide:
 
@@ -30,8 +28,8 @@ Il y a eu des informations concernant une vague de bannissements contre les util
 
 * La dernière version de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * La dernière version de [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(boot9strap standard, ni le fichier `devkit`, ni le fichier `ntr`)*
-* La dernière version de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* La dernière version de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(le fichier`.7z`)*
+* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
+* The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
 
 ### Instructions
 
@@ -41,11 +39,10 @@ Pour toutes les étapes de cette section, remplacez tous les fichiers existants 
 {: .notice--info}
 
 1. Insérez votre carte SD dans votre ordinateur
+1. Copiez `boot.3dsx` à la racine de votre carte SD
 1. Créez un dossier à la racine de votre carte SD nommé `boot9strap`
 1. Copiez `boot9strap.firm` et `boot9strap.firm.sha` depuis le fichier ".zip" de boot9strap vers le dossier `/boot9strap/` sur votre carte SD
 1. Copiez `SafeB9SInstaller.firm` du dossier SafeB9SInstaller `.zip` vers le dossier `/luma/payloads/` de votre carte SD
-1. Copiez le fichier `GodMode9.firm` de l'archive GodMode9 `.zip` dans le dossier `/luma/payloads/` sur votre carte SD
-1. Copiez le dossier `gm9` de GodMode9 `.zip` à la racine de votre carte SD
 1. Réinsérez votre carte SD dans votre 3DS
 
 #### Section II - Installation de boot9strap
@@ -61,7 +58,7 @@ Pour toutes les étapes de cette section, remplacez tous les fichiers existants 
 
 1. Éteignez votre 3DS
 1. Insérez votre carte SD dans votre ordinateur
-1. Copiez le fichier `boot.firm` de Luma3DS `.7z` à la racine de votre carte SD, en remplaçant le fichier existant si nécessaire
+1. Copy `boot.firm` from the Luma3DS `.zip` to the root of your SD card, replacing the existing file
 1. Réinsérez votre carte SD dans votre 3DS
 1. Allumez à présent votre 3DS
 
@@ -74,32 +71,7 @@ Cette section est nécessaire uniquement si le menu de configuration de Luma3DS 
   + **"Show NAND or user string in System Settings"**
 1. Appuyez sur (Start) pour enregistrer les modifications et redémarrer
 
-#### Section VI - CTRNAND Luma3DS
-
-1. Éteignez votre 3DS
-1. Ouvrez Godmode9 en maintenant (Start) au démarrage
-1. Si vous êtes invité à créer une sauvegarde de fichiers essentiels, appuyez sur (A) pour le faire, puis appuyez sur (A) pour continuer une fois qu’elle a complété
-1. Si vous êtes invité à régler la date et l'heure du RTC, appuyez sur (A) pour le faire, puis réglez la date et l'heure, puis appuyez sur (A) pour continuer
-1. Appuyez sur (Home) pour faire apparaître le menu d’actions (action menu)
-1. Sélectionnez "Scripts"
-1. Sélectionnez "GM9Megascript"
-1. Sélectionnez "Scripts from Plailect's Guide"
-1. Sélectionnez "Setup Luma3DS to CTRNAND"
-1. Lorsque vous êtes invité, appuyez sur (A)
-1. Appuyez sur (A) pour autoriser l'écriture (lv2) sur votre SysNAND, puis entrez la combinaison de touches demandée
-1. Appuyez sur (A) pour continuer
-
-#### Section VII - Nettoyage de la carte SD
-
-1. Sélectionnez "Cleanup SD Card"
-1. Lorsque vous êtes invité, appuyez sur (A)
-1. Appuyez sur (A) pour continuer
-1. Appuyez sur (B) pour revenir au menu principal
-1. Sélectionnez "Exit"
-1. Appuyez (A) pour reverrouiller autorisations en écriture si vous êtes invité
-1. Appuyez sur (Start) pour redémarrer votre système
-
 ___
 
-Boot9strap a bien été mis à jour.
-{: .notice--success}
+### Continuer vers [Finalisation de l'installation](finalizing-setup)
+{: .notice--primary}
