@@ -16,18 +16,18 @@ title: "Seedminer"
 
 ### 操作步骤
 
-#### Section I - Compatibility Test
+#### 第一步 — 兼容性测试
 
-While this test is not strictly necessary to perform the Seedminer exploit, the follow-up exploits to this do require this test to be performed and it would be a waste of time and effort to perform Seedminer without the ability to use the other exploits.
+虽然这些测试不是为了触发 Seedminer 漏洞而必须要做的。但是如果不进行测试的话可能会因为 Seedminer 漏洞在你的主机失效而白白浪费时间并可能会无法使用其他的漏洞。
 
-There are two different methods for building on the Seedminer exploit (described in more detail at the bottom of this page), so even if this test fails you can still use another method.
+这里有两种方法来构建 Seedminer 漏洞（详情请看本页底端），因此，如果其中一项测试失败，只要另一个测试没有失败，你就可以使用另一个办法。
 
 #### DS 网络设置测试（用于Fredtool）
 
 1. 进入系统设置，然后进入“互联网设置(Internet Settings)”，然后进入“任天堂 DS 连接(Nintendo DS Connections)”
 1. 点击 “OK”
 1. 如果你的设备进入到了 “任天堂 Wi-Fi 连接设置(Nintendo Wi-Fi Connection Setup)” 菜单中，则此测试成功
-  + If the screen stays black or appears to freeze, the test has failed and you will not be able to use the bannerbomb3 method which requires a functioning DS Internet Settings
+  + 如果屏幕一直黑屏或者看上去似乎死机了，那么测试失败。你将无法使用 bannerbomb3 （因为此漏洞需要能正常使用 DS 网络设置的主机）
 1. 退出此菜单
 
 #### 第二步 — 准备工作
@@ -81,22 +81,22 @@ ___
 
 #### Seedminer + BannerBomb3 + Fredtool
 
-This method of using Seedminer for further exploitation uses your `movable.sed` file to decrypt any DSiWare title for the purposes of injecting an exploitable DSiWare title into the DS Internet Settings application. 
+本章节 Seedminer 将使用你的 `movable.sed` 文件来解密所有的 DSiWare 程序，以便在3DS中内置的 DS 网络设定中注入修改后的 DSiWare 程序。 
 
-This method is compatible with all regions, though CHN region is not covered by this guide.
+这种方法与所有区域兼容，尽管神游机因为阉割了此部分所需内容并不能执行这个操作
 
 这个方法要求 DS 互联网设置正常运行。请通过此页面顶部的测试确认可以使用后再继续此教程。
 
-Continue to [BannerBomb3](bannerbomb3)
+继续至 [BannerBomb3](bannerbomb3)
 {: .notice--primary}
 
 ___
 
 #### Seedminer + Steelhax + DSiDumper + Fredtool
 
-This method of using Seedminer for further exploitation uses your `movable.sed` file to gain access to the Homebrew Launcher using the Steelhax exploit for the purpose of dumping a system DSiWare. 在进行本教程前，你必须先拥有 (或下载) eShop 中免费的“ Steel Driver: Sub Wars”游戏。
+本章节 Seedminer 将使用你的 `movable.sed` 文件，通过 Steelhax 漏洞启动 Homebrew Launcher，以便获得权限来启动 Homebrew Launcher 来导出系统的 DsiWare 软件。 在进行本教程前，你必须先拥有 (或下载) eShop 中免费的“ Steel Driver: Sub Wars”游戏。
 
-这个方法只适用于欧版，日版和美版的设备。而且比另一方法稍微复杂一些。 It is only recommended to use this method if you do not have a functioning DS Internet Settings application.
+这个方法只适用于欧版，日版和美版的设备。而且比另一方法稍微复杂一些。 只有当你无法运行 DS 互联网设置时才建议使用此方法。
 
 继续至 [启动 Homebrew Launcher (通过Steelhax)](homebrew-launcher-(steelhax))
 {: .notice--primary}
