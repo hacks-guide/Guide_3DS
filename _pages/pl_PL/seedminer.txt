@@ -16,56 +16,50 @@ Metoda ta wymaga użycia wydajnej karty graficznej, aby wykonać potrzebne oblic
 
 ### Instrukcje
 
-#### Sekcja I - Testy Zgodności
+#### Section I - Compatibility Test
 
-While these tests are not strictly necessary to perform the Seedminer exploit, the follow-up exploits to this do require this test to be performed and it would be a waste of time and effort to perform Seedminer without the ability to use the other exploits.
+While this test is not strictly necessary to perform the Seedminer exploit, the follow-up exploits to this do require this test to be performed and it would be a waste of time and effort to perform Seedminer without the ability to use the other exploits.
 
-There are two different methods for building on the Seedminer exploit (described in more detail at the bottom of this page), so even if one of these test fails you can still use another method as long as the other does not fail.
+There are two different methods for building on the Seedminer exploit (described in more detail at the bottom of this page), so even if this test fails you can still use another method.
 
-#### DS Internet Settings Test (used for Fredtool)
+#### Test DS Internet Settings (używany do Fredtool)
 
-1. Go to System Settings, then "Internet Settings", then "Nintendo DS Connections"
-1. Press "OK"
-1. If your device loads into a "Nintendo Wi-Fi Connection Setup" menu, the test was successful
-  + If the screen stays black or appears to freeze, the test has failed and you will not be able to use the Fredtool method which requires a functioning DS Internet Settings
-1. Exit this menu
-
-#### DS Download Play Test (used for Frogtool)
-
-1. Uruchom aplikację "Download Play" (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
-1. Select "Nintendo DS"
-1. If your device loads into a "Download software via DS Download Play" menu, the test was successful
-  + If the screen stays black or appears to freeze, the test has failed and you will not be able to use the Frogtool method which requires a functioning DS Download Play
-1. Exit this menu
+1. Uruchom System Settings, przejdź do "Internet Settings", a następnie wybierz "Nintendo DS Connections"
+1. Naciśnij przycisk "OK"
+1. Jeśli na twojej konsoli pokazało się menu "Nintendo Wi-Fi Connection Setup", to test się powiódł
+  + If the screen stays black or appears to freeze, the test has failed and you will not be able to use the bannerbomb3 method which requires a functioning DS Internet Settings
+1. Wyjdź z tego menu
 
 #### Sekcja II - Przygotowanie
 
 1. Włóż kartę SD do komputera
-1. Navigate to the `Nintendo 3DS` folder on your SD card
-1. Copy the 32 character long name of the folder you see
-  + If you see multiple folders like this, perform the following:
-  + Rename the `Nintendo 3DS` folder to `BACKUP_Nintendo 3DS`
-  + Reinsert your SD card into your device and power on your device
-  + Wait for the device to generate the SD card data
-  + Power off your device and reinsert your SD card into your computer
-  + Navigate to the `Nintendo 3DS` folder on your SD card
-  + Copy the 32 character long name of the folder you see
-  + Delete the `Nintendo 3DS` folder
-  + Rename the `BACKUP_Nintendo 3DS` folder to `Nintendo 3DS`
-1. Paste your 32 character long folder name into a document you can reference later
-  + This folder name is also known as your "ID0"
+1. Przejdź do folderu `Nintendo 3DS` na karcie SD
+1. Skopiuj 32 znakową nazwę folderu który widzisz w folderze Nintendo 3DS
+  + Nie wchodź w żadne inne foldery
+  + Jeśli widzisz wiele folderów z długimi, losowymi nazwami w folderze `Nintendo 3DS` (nie wchodząc w żadne inne foldery), wykonaj następujące instrukcje:
+  + Zmień nazwę folderu `Nintendo 3DS` na `BACKUP_Nintendo 3DS`
+  + Włóż ponownie kartę SD do konsoli i uruchom ją
+  + Poczekaj aż konsola wygeneruje dane na karcie SD
+  + Wyłącz konsolę, wyciągnij z niej kartę SD i włóż ją do czytnika w swoim komputerze
+  + Przejdź do folderu `Nintendo 3DS` na swojej karcie SD
+  + Skopiuj 32 znakową nazwę folderu który widzisz
+  + Usuń folder `Nintendo 3DS`
+  + Zmień nazwę folderu `BACKUP_Nintendo 3DS` na `Nintendo 3DS`
+1. Wklej skopiowaną 32 znakową nazwę folderu do np. notatnika i zapisz w łatwo dostępnym miejscu na komputerze
+  + Nazwa folderu, która została skopiowana to Twoje tzw. "ID0"
 1. Włącz konsolę
 1. Wejdź do Listy Znajomych (pomarańczowa ikona twarzy)({{ "/images/friend-list-icon.png" | absolute_url }}) w górnej linii Home menu
-  + If you receive an error and are kicked out of the menu, you either must create a new Mii or your console cannot connect to Nintendo's servers (due to a ban or connection issues)
-1. Find your Mii profile, then find the "Friend Code" field on the top screen
+  + Jeśli wyświetli się błąd i zostaniesz wyrzucony z menu, musisz stworzyć nową postać Mii, lub twoja konsola nie może się połączyć z serwerami Nintendo (przez bana lub problemy z połączeniem)
+1. Wejdź na profil swojego Mii, a następnie znajdź pole "Friend Code" na górnym ekranie
 
-#### Section III - Seedminer
+#### Sekcja III - Seedminer
 
 1. Open [Bruteforce Movable](https://bruteforcemovable.com/) on your computer
   + This site can automate the retrieval of `movable_part1.sed` (using a bot 3DS console) and the breaking of your device's DSiWare encryption (using a volunteer's computer to run Seedminer)
   + If the automated service is nonfunctional, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you
 1. Enter your device's Friend Code (with no spaces or dashes) into the "Your friend code" field
 1. Paste your device's 32 character long folder name into the "Your ID0" field
+  + Do not attempt to enter the ID0 by hand. Ensure the ID0 is entered correctly by copying and pasting it from where you saved it in the previous section
 1. Wypełnij captcha "I'm not a robot" (nie jestem robotem)
 1. Select "Go"
   + If the site immediately goes to step 4, download your `movable.sed` file and continue with the next section.
@@ -85,26 +79,24 @@ ___
 
 ___
 
-#### Seedminer + Fredtool
+#### Seedminer + BannerBomb3 + Fredtool
 
-Ta metoda wykorzystuje twój uzyskany wcześniej plik `movable.sed` do odszyfrowania jakiejkolwiek aplikacji DSiWare z eShopu, aby wprowadzić łatwą do zmodyfikowania aplikację DSiWare do aplikacji DS Internet Settings. Ta metoda wymaga posiadania (lub pobrania / kupienia) gry DSiWare z eShopu.
+This method of using Seedminer for further exploitation uses your `movable.sed` file to decrypt any DSiWare title for the purposes of injecting an exploitable DSiWare title into the DS Internet Settings application. 
 
-This method is compatible with all regions, though only the JPN and USA regions have free DSiWare titles in the eShop.
+This method is compatible with all regions, though CHN region is not covered by this guide.
 
 This method requires that the DS Internet Settings be functioning properly (see the test at the top of this page).
 
-Continue to [Installing boot9strap (Fredtool)](installing-boot9strap-(fredtool))
+Continue to [BannerBomb3](bannerbomb3)
 {: .notice--primary}
 
 ___
 
-#### Seedminer + Steelhax + Frogtool
+#### Seedminer + Steelhax + DSiDumper + Fredtool
 
-Ta metoda wykorzystuje twój uzyskany wcześniej plik `movable.sed` do uzyskania dostępu do Homebrew Launchera, wykorzystując exploit Steelhax, aby wprowadzić łatwą do zmodyfikowania aplikację DSiWare do DS Download Play. This method requires you to already own (or download) the free "Steel Diver: Sub Wars" game from the eShop.
+This method of using Seedminer for further exploitation uses your `movable.sed` file to gain access to the Homebrew Launcher using the Steelhax exploit for the purpose of dumping a system DSiWare. This method requires you to already own (or download) the free "Steel Diver: Sub Wars" game from the eShop.
 
-This method is only compatible with the EUR, JPN, and USA regions, and is somewhat more complicated than the above method. It is only recommended to use this method if you have a EUR region device and do not wish to pay for a DSiWare game, or if the above method does not work for you for some reason.
-
-This method requires that the DS Download Play be functioning properly (see the test at the top of this page).
+This method is only compatible with the EUR, JPN, and USA regions, and is somewhat more complicated than the above method. It is only recommended to use this method if you do not have a functioning DS Internet Settings application.
 
 Continue to [Homebrew Launcher (Steelhax)](homebrew-launcher-(steelhax))
 {: .notice--primary}
