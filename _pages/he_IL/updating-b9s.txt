@@ -8,8 +8,6 @@ title: "עדכון B9S"
 
 העמוד הזה קיים בשביל משתמשי boot9strap קיימים כדי לעדכן את ההתקנה שלהם לגרסה הכי חדשה.
 
-To extract the `.7z` files linked on this page, you will need a file archiver like [7-Zip](http://www.7-zip.org/) or [The Unarchiver](https://theunarchiver.com/).
-
 {% capture notice-1 %}
 היו דיווחים על גל של באנים שנינטנדו נתנו למי שפרץ. כדי להגן על עצמכם, תעשו את השלבים הבאים לפני שאתם מתחילים את המדריך:
 
@@ -30,8 +28,8 @@ To extract the `.7z` files linked on this page, you will need a file archiver li
 
 * The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(the `.7z` file)*
+* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
+* The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
 
 ### הנחיות
 
@@ -41,11 +39,10 @@ To extract the `.7z` files linked on this page, you will need a file archiver li
 {: .notice--info}
 
 1. תכניסו את ה-SD שלכם למחשב
+1. תעתיקו את `boot.3dsx` אל שורש כרטיס ה SD
 1. תצרו ב-SD שלכם תיקייה חדשה בשם `boot9strap`
 1. תעתיקו את`boot9strap.firm` ואת `boot9strap.firm.sha` מה `.zip` של boot9strap אל תיקיית `/boot9strap/`על כרטיס הSD שלכם
 1. העתיקו את `SafeB9SInstaller.firm` מהזיפ של SafeB9SInstaller אל תיקיית /luma/payloads/ ב- SD שלכם
-1. העתיקו את `GodMode9.firm` מהזיפ של GodMode9 אל תיקיית /luma/payloads/ ב- SD שלכם
-1. תעתיקו את התיקייה `gm9` מתוך ה`.zip` של GodMode9 ל-SD שלכם
 1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
 
 #### חלק II - התקנת boot9strap
@@ -61,7 +58,7 @@ To extract the `.7z` files linked on this page, you will need a file archiver li
 
 1. תכבו את המכשיר
 1. תכניסו את ה-SD שלכם למחשב
-1. תעתיקו את 'boot.firm' מתוך Luma3DS.7z לSD שלכם, במקום הקובץ הקיים
+1. Copy `boot.firm` from the Luma3DS `.zip` to the root of your SD card, replacing the existing file
 1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
 1. תפעילו את המכשיר
 
@@ -74,32 +71,7 @@ To extract the `.7z` files linked on this page, you will need a file archiver li
   + **"Show NAND or user string in System Settings"**
 1. לחצו על (Start) על מנת לשמור ולהפעיל מחדש
 
-#### חלק VI - Luma3DS על ה- CTRNAND
-
-1. תכבו את המכשיר
-1. תפתחו את GodMode9 על ידי החזקה של המקש (Start) בעת ההדלקה
-1. אם תתבקשו לעשות גיבוי של קבצים חיוניים, תלחצו (A) כדי לעשות זאת, ואז תלחצו (A) כדי להמשיך אחרי שזה סיים
-1. אם אתם מתבקשים לתקן את זמן ותאריך הRTC, תלחצו (A) כדי לעשות זאת, ואז תלחצו (A) כדי להמשיך
-1. תלחצו על (Home) כדי להראות את תפריט הפעולה
-1. תבחרו "Scripts..."
-1. Select "GM9Megascript"
-1. Select "Scripts from Plailect's Guide"
-1. Select "Setup Luma3DS to CTRNAND"
-1. כשתתבקשו, תלחצו (A) כדי להמשיך
-1. לחצו (A) כדי לפתוח גישת כתיבת (lvl2) לSysNAND, ואז תלחצו על המקשים בסדר הנכון
-1. תלחצו (A) כדי להמשיך
-
-#### Section VII - Cleanup SD Card
-
-1. Select "Cleanup SD Card"
-1. כשתתבקשו, תלחצו (A) כדי להמשיך
-1. תלחצו (A) כדי להמשיך
-1. תלחצו (B) כדי לחזור לתפריט הראשי
-1. Select "Exit"
-1. תלחצו (A) כדי לנעול הרשאות כתיבה אם תתבקשו
-1. תלחצו על (Start) כדי לאתחל את המכשיר
-
 ___
 
-Boot9strap has been successfully updated.
-{: .notice--success}
+### Continue to [Finalizing Setup](finalizing-setup)
+{: .notice--primary}

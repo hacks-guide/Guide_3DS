@@ -8,8 +8,6 @@ title: "Обновление B9S"
 
 Эта страница предназначена для пользователей boot9strap, чтобы они могли обновить установленный boot9strap до последней версии.
 
-Чтобы распаковать архивы `.7z`, присутствующие на этой странице, вам понадобится архиватор [7-Zip](http://www.7-zip.org/) или [The Unarchiver](https://theunarchiver.com/).
-
 {% capture notice-1 %}
 Сообщается о волне банов, выданных Nintendo пользователям CFW. Чтобы защитить себя, выполните следующие шаги перед началом этого руководства:
 
@@ -30,8 +28,8 @@ title: "Обновление B9S"
 
 * Свежая версия [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * Свежая версия [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(стандартный boot9strap; не `devkit-файл`, не `ntr-файл`)*
-* Свежая версия [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* Свежая версия [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z-архив`)*
+* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
+* Свежая версия [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
 
 ### Инструкция
 
@@ -41,11 +39,10 @@ title: "Обновление B9S"
 {: .notice--info}
 
 1. Вставьте SD-карту в компьютер
+1. Скопируйте `boot.3dsx` в корень SD-карты
 1. Создайте папку `boot9strap` в корне SD-карты
 1. Скопируйте `boot9strap.firm` и `boot9strap.firm.sha` из `.zip-архива` boot9strap в папку `/boot9strap/` в корне SD-карты
 1. Скопируйте `SafeB9SInstaller.firm` из `.zip-архива` SafeB9SInstaller в папку `/luma/payloads/` на SD-карте
-1. Скопируйте `GodMode9.firm` из `.zip-архива` GodMode9 в папку `/luma/payloads/` на SD-карте
-1. Скопируйте папку `gm9` из `.zip-архива` GodMode9 в корень SD-карты
 1. Вставьте SD-карту обратно в консоль
 
 #### Часть II - Установка boot9strap
@@ -61,7 +58,7 @@ title: "Обновление B9S"
 
 1. Выключите консоль
 1. Вставьте SD-карту в компьютер
-1. Скопируйте `boot.firm` из `.7z-архива` Luma3DS в корень SD-карты, соглашаясь на перезапись файла
+1. Copy `boot.firm` from the Luma3DS `.zip` to the root of your SD card, replacing the existing file
 1. Вставьте SD-карту обратно в консоль
 1. Включите консоль
 
@@ -74,32 +71,7 @@ title: "Обновление B9S"
   + **"Show NAND or user string in System Settings"**
 1. Нажмите (Start), чтобы сохранить настройки и перезагрузиться
 
-#### Часть VI - CTRNAND Luma3DS
-
-1. Выключите консоль
-1. Запустите GodMode9, держа нажатой кнопку (Start) во время загрузки
-1. Если вам предложат создать бэкап важных файлов, нажмите кнопку (A) чтобы сделать это, затем нажмите (A) чтобы продолжить после завершения
-1. Если вам предложат выставить RTC дату и время, нажмите кнопку (A) чтобы сделать это, настройте дату и время, затем нажмите (A) чтобы продолжить
-1. Нажмите кнопку (Home) для вызова меню
-1. Выберите "Scripts..."
-1. Выберите "GM9Megascript"
-1. Выберите "Scripts from Plailect's Guide"
-1. Выберите "Setup Luma3DS to CTRNAND"
-1. При появлении запроса, нажмите (A) для продолжения
-1. Нажмите (A), чтобы разрешить запись в SysNAND (lvl2) и введите указанную комбинацию кнопок
-1. Нажмите (A), чтобы продолжить
-
-#### Часть VII - Очистка SD-карты
-
-1. Выберите "Cleanup SD Card"
-1. При появлении запроса, нажмите (A) для продолжения
-1. Нажмите (A), чтобы продолжить
-1. Нажмите (B) для возврата в главное меню
-1. Выберите "Exit"
-1. Нажмите (A) чтобы восстановить запрет на запись, если появится запрос
-1. Нажмите (Start) для перезагрузки
-
 ___
 
-Boot9strap был успешно обновлен.
-{: .notice--success}
+### Следующий шаг: [Завершение установки](finalizing-setup)
+{: .notice--primary}
