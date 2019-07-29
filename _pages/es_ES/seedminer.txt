@@ -16,34 +16,27 @@ Este método utiliza una tarjeta gráfica potente para realizar los cálculos ne
 
 ### Instrucciones
 
-#### Sección I - Pruebas de compatibilidad
+#### Section I - Compatibility Test
 
-Si bien estas pruebas no son estrictamente necesarias para poder ejecutar el exploit Seedminer, los exploits posteriores a éste requieren que las pruebas se realicen y sería una pérdida de tiempo y esfuerzo ejecutar Seedminer sin ser capaz de ejecutar el resto de exploits.
+While this test is not strictly necessary to perform the Seedminer exploit, the follow-up exploits to this do require this test to be performed and it would be a waste of time and effort to perform Seedminer without the ability to use the other exploits.
 
-Existen dos métodos diferentes que se basan en el exploit Seedminer (descriptos en más detalle al pie de la página), de modo que si una de las pruebas falla todavía puedes utilizar el otro método siempre y cuando la otra prueba no falle.
+There are two different methods for building on the Seedminer exploit (described in more detail at the bottom of this page), so even if this test fails you can still use another method.
 
 #### Prueba de la Configuración de Internet de DS (utilizada para Fredtool)
 
 1. Ve a Configuración de la Consola, luego a "Ajustes de Internet", luego a "Conexiones de Nintendo DS"
 1. Presiona "OK"
 1. Si tu consola carga un menú que dice "Nintendo Wi-Fi Connection Setup", la prueba fue exitosa
-  + Si la pantalla se queda en negro o parece estar congelada, la prueba ha fallado; no podrás utilizar el método de Fredtool ya que es necesario que la Configuración de Internet de DS funcione correctamente
-1. Sal de este menú
-
-#### Prueba del Modo Descarga de DS (utilizado para Frogtool)
-
-1. Ejecuta la aplicación Modo Descarga (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
-1. Selecciona "Nintendo DS"
-1. Si tu consola carga un menú que dice "Download software via DS Download Play", la prueba fue exitosa
-  + Si la pantalla se queda en negro o parece estar congelada, la prueba ha fallado; no podrás utilizar el método de Frogtool ya que es necesario que el Modo Descarga de DS funcione correctamente
+  + If the screen stays black or appears to freeze, the test has failed and you will not be able to use the bannerbomb3 method which requires a functioning DS Internet Settings
 1. Sal de este menú
 
 #### Sección II - Preparativos
 
 1. Inserta tu tarjeta SD en tu computadora
 1. Ve a la carpeta `Nintendo 3DS` en tu tarjeta SD
-1. Copia el nombre de 32 caracteres que posee la carpeta que hay dentro
-  + Si hay más de una carpeta, haz lo siguiente:
+1. Copia el nombre de 32 caracteres de la carpeta que hay dentro de Nintendo 3DS
+  + No abras más carpetas dentro de ésta
+  + Si ves varias carpetas con nombres largos y aleatorios dentro de `Nintendo 3DS` sin abrir ninguna otra carpeta, haz lo siguiente:
   + Renombra la carpeta `Nintendo 3DS` como `BACKUP_Nintendo 3DS`
   + Reinserta la tarjeta SD en tu consola y enciéndela
   + Espera a que la consola genere los datos necesarios en la tarjeta SD
@@ -66,6 +59,7 @@ Existen dos métodos diferentes que se basan en el exploit Seedminer (descriptos
   + Si el sistema automático no está operativo, únete al [Discord de Nintendo Homebrew](https://discord.gg/MWxPgEp) (en inglés) y pide ayuda a alguien de allí
 1. Ingresa el código de amigo de tu consola (sin espacios ni guiones) en donde dice "Your friend code"
 1. Copia y pega el nombre de 32 caracteres donde dice "Your ID0"
+  + No intentes introducir el ID0 a mano. Asegúrate de que el ID0 se introduzca correctamente copiándolo y pegándolo desde donde lo guardaste en la sección anterior
 1. Completa el captcha que dice "I'm not a robot"
 1. Selecciona "Go"
   + Si el sitio se mueve inmediatamente al paso 4, descarga tu archivo `movable.sed` y continúa con la siguiente sección.
@@ -85,26 +79,24 @@ ___
 
 ___
 
-#### Seedminer + Fredtool
+#### Seedminer + BannerBomb3 + Fredtool
 
-Este método de uso de Seedminer, para hacer un mejor exploit, utiliza tu archivo `movable.sed` para desencriptar cualquier título de DSiWare de la eShop que haya disponible con el objetivo de inyectar un título de DSiWare vulnerable en la aplicación de Configuración de Internet de DS. Esto requiere que ya poseas (o descargues/compres) un juego de DSiWare de la eShop.
+This method of using Seedminer for further exploitation uses your `movable.sed` file to decrypt any DSiWare title for the purposes of injecting an exploitable DSiWare title into the DS Internet Settings application. 
 
-Este método es compatible con todas las regiones, aunque solamente las regiones JPN y USA poseen títulos de DSiWare gratuitos en la eShop.
+This method is compatible with all regions, though CHN region is not covered by this guide.
 
 Este método requiere que la Configuración de Internet de DS funcione correctamente (ver la prueba realizada al comienzo de la página).
 
-Continúa en [Instalar boot9strap (Fredtool)](installing-boot9strap-(fredtool))
+Continue to [BannerBomb3](bannerbomb3)
 {: .notice--primary}
 
 ___
 
-#### Seedminer + Steelhax + Frogtool
+#### Seedminer + Steelhax + DSiDumper + Fredtool
 
-Este método de uso de Seedminer, para hacer un mejor exploit, utiliza tu archivo `movable.sed` para obtener acceso al Homebrew Launcher por medio del exploit Steelhax, tras lo cual inyectar un juego vulnerable de DSiWare en la aplicación de Modo Descarga de DS. Este método requiere que poseas de antemano (o que descargues) el juego gratuito "Steel Divers: Sub Wars" desde la eShop.
+This method of using Seedminer for further exploitation uses your `movable.sed` file to gain access to the Homebrew Launcher using the Steelhax exploit for the purpose of dumping a system DSiWare. Este método requiere que poseas de antemano (o que descargues) el juego gratuito "Steel Divers: Sub Wars" desde la eShop.
 
-Este método sólo es compatible con las regiones EUR, JPN y USA, y es un poco más complicado que el método anterior. Se recomienda utilizar este método solamente si posees una consola de región EUR y no deseas pagar por un juego de DSiWare, o si el método anterior no te sirve por algún motivo.
-
-Este método requiere que el Modo Descarga de DS funcione correctamente (ver la prueba realizada el inicio de la página).
+Este método sólo es compatible con las regiones EUR, JPN y USA, y es un poco más complicado que el método anterior. It is only recommended to use this method if you do not have a functioning DS Internet Settings application.
 
 Continúa en [Homebrew Launcher (Steelhax)](homebrew-launcher-(steelhax))
 {: .notice--primary}
