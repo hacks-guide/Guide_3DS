@@ -6,13 +6,13 @@ title: "Installazione di Boot9strap (Fredtool)"
 
 ### Lettura necessaria
 
-This method of using Seedminer for further exploitation uses your `movable.sed` file to decrypt any DSiWare title for the purposes of injecting an exploitable DSiWare title into the DS Internet Settings application. This requires you to have a DSiWare backup, for example from BannerBomb or the DSiWare Dumper tool.
+Seedminer utilizza il tuo file `movable.sed` per decriptare un qualunque titolo DSiWare per iniettare una particolare applicazione DSiWare nell'applicazione Connessioni Nintendo DS. Questo richiede un backup DSiWare, ad esempio da BannerBomb o da DSiWare Dumper.
 
 Questa è un'implementazione funzionante dell'exploit del "testo in chiaro noto nelle partizioni FIRM" spiegato [qui](https://www.3dbrew.org/wiki/3DS_System_Flaws).
 
 ### Cosa serve
 
-* A DSiWare Backup (such as from [BannerBomb3](bannerbomb3) or [DSiWare Dumper](dsidumper))
+* Un backup DSiWare (proveniente da [BannerBomb3](bannerbomb3) o da [DSiWare Dumper](dsidumper))
 * Il tuo file `movable.sed` dalla sezione [Seedminer](seedminer)
 * L'ultima versione di [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest)
 * L'ultima versione di [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
@@ -33,13 +33,13 @@ Questa è un'implementazione funzionante dell'exploit del "testo in chiaro noto 
 
 1. Avvia [Fredtool](https://fredtool.bruteforcemovable.com/) sul tuo computer
 1. Seleziona il tuo file `movable.sed` nel campo "Your movable.sed"
-1. Select your DSiWare Backup (`<8-character-id>.bin`) file for the "Your dsiware.bin" field
+1. Seleziona il tuo backup DSiWare (`<ID a 8 caratteri>.bin`) nel campo "Your dsiware.bin"
 1. Supera il captcha "I'm not a robot"
 1. Seleziona "Start"
 1. Attendi il termine del processo
 1. Al termine del processo, scarica il tuo DSiWare modificato dal sito
-  + This file contains 2 dsiware backup files, one clean (unmodified) and one hax (exploited)
-1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` on your SD card
+  + Questo file contiene 2 file di backup DSiWare, quello originale (non modificato) e uno "hax" (che include l'exploit)
+1. Nella tua scheda SD, entra in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`
   + Questo `<ID0>` sarà lo stesso che hai utilizzato in [Seedminer](seedminer)
   + This `<ID1>` folder will be another 32 letter/number folder inside the ID0 folder
   + The `Nintendo DSiWare` folder may need to be created inside the `<ID1>` folder
