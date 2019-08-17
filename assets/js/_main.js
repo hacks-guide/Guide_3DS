@@ -137,9 +137,10 @@ $(document).ready(function(){
     "flashing-ntrboot-(powersaves)": "13",
     "installing-boot9strap-(hardmod)": "14",
     "seedminer": "15",
-    "homebrew-launcher-(pichaxx)": "16",
+    "homebrew-launcher-(steelhax)": "16",
     "installing-boot9strap-(fredtool)": "17",
     "bannerbomb3": "18",
+    "homebrew-launcher-(pichaxx)": "19",
   };
 
   for(var method in methods){
@@ -170,9 +171,10 @@ $(document).ready(function(){
       "13": ["ntrboot", "flashing-ntrboot-(powersaves)", "installing-boot9strap-(ntrboot)", "finalizing-setup"],
       "14": ["installing-boot9strap-(hardmod)", "finalizing-setup"],
       "15": ["seedminer", "multiple-options", "finalizing-setup"],
-      "16": ["seedminer", "homebrew-launcher-(pichaxx)", "installing-boot9strap-(fredtool)", "finalizing-setup"],
+      "16": ["seedminer", "homebrew-launcher-(steelhax)", "installing-boot9strap-(frogtool)", "finalizing-setup"],
       "17": ["seedminer", "multiple-options", "installing-boot9strap-(fredtool)", "finalizing-setup"],
       "18": ["seedminer", "bannerbomb3", "installing-boot9strap-(fredtool)", "finalizing-setup"],
+      "19": ["seedminer", "homebrew-launcher-(pichaxx)", "dsidumper","installing-boot9strap-(fredtool)", "finalizing-setup"],
     };
     unhide = unhide.concat(route[method]);
     if(typeof unhide !== 'undefined' && unhide.length > 0){
