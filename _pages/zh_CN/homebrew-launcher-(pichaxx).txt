@@ -1,0 +1,54 @@
+---
+title: "Homebrew Launcher (PicHaxx)"
+---
+
+{% include toc title="目录内容" %}
+
+### 必读事项
+
+This method of using Seedminer for further exploitation uses your `movable.sed` file to gain access to the Homebrew Launcher using the PicHaxx exploit for the purposes of injecting an exploitable DSiWare title into the DS Download Play application. This method requires you to already own (or download) the free "Pokemon Picross" game from the eShop.
+
+If your device already has access to the Homebrew Launcher (whether through pichaxx or another exploit), you can skip to [DSiWare Dumper](dsidumper)).
+{: .notice--success}
+
+If you already have Pokemon Picross, this process will overwrite your game's save file!
+{: .notice--warning}
+
+### 你需要准备点啥？
+
+* The free eShop game "Pokemon Picross"
+* 你在 [Seedminer](seedminer) 步骤中获得的 `movable.sed` 文件
+* 最新版 [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
+* [otherapp payload](https://deadphoenix8091.github.io/3ds/#otherapp) *(根据你的3DS的区域和版本下载)*
+
+### 操作步骤
+
+#### 第一步 — 准备工作
+
+1. 复制 `boot.3dsx` 到你的 SD 卡根目录
+1. 将下载的 otherapp payload 复制到SD卡的根目录下，并重命名为 `otherapp.bin`
+  + if you do not see the `.bin` extension, do not add it to the end of the filename
+1. 检查 SD 卡的根目录是否存在一个名为 `3ds` 的文件夹，如果没有则手动新建一个
+
+#### Section II - PicHaxx
+
+1. Open [the PicHaxx Injector website](https://bruteforcemovable.com/pichaxx/) on your computer
+1. 上传你的 `movable.sed` 文件
+1. Select "Build and Download"
+1. 等待该过程执行完成。
+1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` on your SD card
+  + 这个 `<ID0>` 和你在[Seedminer](seedminer) 章节中使用的一样
+  + 这个 `<ID1>` 文件夹是 `<ID0>` 文件夹中的另一个 32 个字符与数字混合的文件夹
+1. Copy the new downloaded `00000001.sav` file to the `data` folder on your SD card
+  + 当提示时选择覆盖旧的文件
+1. 将SD卡重新插入你的主机
+1. 启动你的主机
+1. Launch "Pokemon Picross"
+1. 如果漏洞成功执行，你的设备将进入到Homebrew Launcher
+  + 你可能会看到一个没有可用的应用程序的错误信息。
+1. 将设备关机。
+
+___
+
+### 继续至 [DSiWare Dumper](dsidumper)
+{: .notice--primary}
