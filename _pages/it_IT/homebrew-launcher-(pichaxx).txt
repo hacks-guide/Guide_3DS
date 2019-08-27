@@ -1,0 +1,54 @@
+---
+title: "Homebrew Launcher (PicHaxx)"
+---
+
+{% include toc title="Indice" %}
+
+### Lettura necessaria
+
+This method of using Seedminer for further exploitation uses your `movable.sed` file to gain access to the Homebrew Launcher using the PicHaxx exploit for the purposes of injecting an exploitable DSiWare title into the DS Download Play application. This method requires you to already own (or download) the free "Pokemon Picross" game from the eShop.
+
+If your device already has access to the Homebrew Launcher (whether through pichaxx or another exploit), you can skip to [DSiWare Dumper](dsidumper)).
+{: .notice--success}
+
+If you already have Pokemon Picross, this process will overwrite your game's save file!
+{: .notice--warning}
+
+### Cosa serve
+
+* The free eShop game "Pokemon Picross"
+* Il tuo file `movable.sed` dalla sezione [Seedminer](seedminer)
+* L'ultima versione di [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
+* Il file [otherapp payload](https://deadphoenix8091.github.io/3ds/#otherapp) *(adatto alla versione e alla regione della console)*
+
+### Istruzioni
+
+#### Sezione I - Preparazione
+
+1. Copia il file `boot.3dsx` nella directory principale della tua scheda SD
+1. Copia il file otherapp payload nella directory principale della tua scheda SD e rinominalo in `otherapp.bin`
+  + if you do not see the `.bin` extension, do not add it to the end of the filename
+1. Se assente, crea una cartella chiamata `3ds` nella directory principale della tua scheda SD
+
+#### Section II - PicHaxx
+
+1. Open [the PicHaxx Injector website](https://bruteforcemovable.com/pichaxx/) on your computer
+1. Seleziona il tuo file `movable.sed`
+1. Select "Build and Download"
+1. Attendi il termine del processo
+1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` on your SD card
+  + Questo `<ID0>` sarà lo stesso che hai utilizzato in [Seedminer](seedminer)
+  + Questa cartella `<ID1>` all'interno della cartella `<ID0>` avrà un nome di 32 lettere e numeri
+1. Copy the new downloaded `00000001.sav` file to the `data` folder on your SD card
+  + Sovrascrivi il salvataggio precedente quando richiesto
+1. Reinserisci la scheda SD nella tua console
+1. Accendi la console
+1. Launch "Pokemon Picross"
+1. Se l'exploit ha avuto successo, la tua console avrà caricato l'Homebrew Launcher
+  + Potresti riscontrare un errore relativo all'assenza di applicazioni.
+1. Spegni la tua console.
+
+___
+
+### Prosegui con [DSiWare Dumper](dsidumper)
+{: .notice--primary}
