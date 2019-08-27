@@ -1,0 +1,54 @@
+---
+title: "Homebrew Launcher (PicHaxx)"
+---
+
+{% include toc title="Содержание" %}
+
+### Обязательно к прочтению
+
+This method of using Seedminer for further exploitation uses your `movable.sed` file to gain access to the Homebrew Launcher using the PicHaxx exploit for the purposes of injecting an exploitable DSiWare title into the DS Download Play application. This method requires you to already own (or download) the free "Pokemon Picross" game from the eShop.
+
+If your device already has access to the Homebrew Launcher (whether through pichaxx or another exploit), you can skip to [DSiWare Dumper](dsidumper)).
+{: .notice--success}
+
+If you already have Pokemon Picross, this process will overwrite your game's save file!
+{: .notice--warning}
+
+### Что понадобится
+
+* The free eShop game "Pokemon Picross"
+* Ваш файл `movable.sed`, полученный на странице [Seedminer](seedminer)
+* Свежая версия [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
+* The [otherapp payload](https://deadphoenix8091.github.io/3ds/#otherapp) *(for your region and version)*
+
+### Инструкция
+
+#### Часть I - Подготовительные работы
+
+1. Скопируйте `boot.3dsx` в корень SD-карты
+1. Скопируйте otherapp payload в корень вашей SD-карты и переименуйте его в `otherapp.bin`
+  + if you do not see the `.bin` extension, do not add it to the end of the filename
+1. Создайте папку `3ds` в корне SD-карты, если таковой нет
+
+#### Section II - PicHaxx
+
+1. Open [the PicHaxx Injector website](https://bruteforcemovable.com/pichaxx/) on your computer
+1. Выберите свой файл `movable.sed`
+1. Select "Build and Download"
+1. Дождитесь окончания процесса
+1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` on your SD card
+  + Этот `<ID0>` будет таким же, как и на странице [Seedminer](seedminer)
+  + This `<ID1>` folder will be another 32 letter/number folder inside the `<ID0>` folder
+1. Copy the new downloaded `00000001.sav` file to the `data` folder on your SD card
+  + Перезапишите старый файл сохранения при появлении запроса
+1. Вставьте SD-карту обратно в консоль
+1. Включите консоль
+1. Launch "Pokemon Picross"
+1. Если эксплойт сработал корректно, запустится Homebrew Launcher
+  + Может появиться ошибка "no applications found".
+1. Выключите консоль.
+
+___
+
+### Continue to [DSiWare Dumper](dsidumper)
+{: .notice--primary}
