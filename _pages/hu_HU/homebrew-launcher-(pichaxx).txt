@@ -1,0 +1,54 @@
+---
+title: "Homebrew Launcher (PicHaxx)"
+---
+
+{% include toc title="Tartalomjegyzék" %}
+
+### Fontos tudnivalók
+
+This method of using Seedminer for further exploitation uses your `movable.sed` file to gain access to the Homebrew Launcher using the PicHaxx exploit for the purposes of injecting an exploitable DSiWare title into the DS Download Play application. This method requires you to already own (or download) the free "Pokemon Picross" game from the eShop.
+
+If your device already has access to the Homebrew Launcher (whether through pichaxx or another exploit), you can skip to [DSiWare Dumper](dsidumper)).
+{: .notice--success}
+
+If you already have Pokemon Picross, this process will overwrite your game's save file!
+{: .notice--warning}
+
+### Amire szükséged lesz
+
+* The free eShop game "Pokemon Picross"
+* Your `movable.sed` file from completing [Seedminer](seedminer)
+* A [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest) legújabb kiadása
+* The [otherapp payload](https://deadphoenix8091.github.io/3ds/#otherapp) *(for your region and version)*
+
+### Utasítások
+
+#### Első rész - Előkészületek
+
+1. Másold az `boot.3dsx` fájlt az SD kártyád gyökerébe
+1. Másold az otherapp payloadot az SD kártyád gyökerébe, majd nevezd át `otherapp.bin` névre
+  + if you do not see the `.bin` extension, do not add it to the end of the filename
+1. Hozz létre egy mappát `3ds` néven az SD kártyád gyökerében, ha még nem létezik ilyen
+
+#### Section II - PicHaxx
+
+1. Open [the PicHaxx Injector website](https://bruteforcemovable.com/pichaxx/) on your computer
+1. Select your `movable.sed` file
+1. Select "Build and Download"
+1. Várd meg, amíg a folyamat befejeződik
+1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` on your SD card
+  + This `<ID0>` will be the same one that you used in [Seedminer](seedminer)
+  + This `<ID1>` folder will be another 32 letter/number folder inside the `<ID0>` folder
+1. Copy the new downloaded `00000001.sav` file to the `data` folder on your SD card
+  + Overwrite the old save file when prompted
+1. Tedd vissza az SD kártyád a készülékedbe
+1. Kapcsold be a készülékedet
+1. Launch "Pokemon Picross"
+1. Ha az exploit sikeres volt, a készülékednek ezt követően be kell töltenie a Homebrew Launchert
+  + You may see an error stating there are no applications found.
+1. Power off your device.
+
+___
+
+### Continue to [DSiWare Dumper](dsidumper)
+{: .notice--primary}
