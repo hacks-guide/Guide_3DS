@@ -140,6 +140,7 @@ $(document).ready(function(){
     "homebrew-launcher-(steelhax)": "16",
     "installing-boot9strap-(fredtool)": "17",
     "bannerbomb3": "18",
+    "homebrew-launcher-(pichaxx)": "19",
   };
 
   for(var method in methods){
@@ -173,6 +174,7 @@ $(document).ready(function(){
       "16": ["seedminer", "homebrew-launcher-(steelhax)", "installing-boot9strap-(frogtool)", "finalizing-setup"],
       "17": ["seedminer", "multiple-options", "installing-boot9strap-(fredtool)", "finalizing-setup"],
       "18": ["seedminer", "bannerbomb3", "installing-boot9strap-(fredtool)", "finalizing-setup"],
+      "19": ["seedminer", "homebrew-launcher-(pichaxx)", "dsidumper","installing-boot9strap-(fredtool)", "finalizing-setup"],
     };
     unhide = unhide.concat(route[method]);
     if(typeof unhide !== 'undefined' && unhide.length > 0){
