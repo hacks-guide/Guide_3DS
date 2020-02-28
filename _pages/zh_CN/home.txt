@@ -9,7 +9,7 @@ header:
 excerpt: "最完整的 3DS 破解手册，<br /> 教你从原版主机破解成boot9strap。<br />"
 ---
 
-你还可以访问[Hacks.Guide](https://hacks.guide)找到其他设备的自制软件和自制固件完整安装教程。
+你还可以访问 [Hacks.Guide](https://hacks.guide) 找到其他设备的自制软件和自制固件完整安装教程。
 {: .notice--primary}
 
 ___
@@ -19,7 +19,7 @@ ___
 
 {% capture notice-1 %}
 本教程 _仅_ 适用于零售版的3DS（市面上销售的；而非通过任天堂开发者计划获得的）！
-如果你的主机是开发版(代号“PANDA”)的，请参见[Panda 3DS破解手册](https://panda.hacks.guide)。
+如果你的主机是开发版（代号“PANDA”）的，请参见 [Panda 3DS 破解手册](https://panda.hacks.guide)。
 {% endcapture %}
 
 <div class="notice--danger">{{ notice-1 | markdownify }}</div>
@@ -37,28 +37,28 @@ ___
 
 ## 什么是自制程序？
 
-[**自制程序(Homebrew)**](https://wikipedia.org/wiki/List_of_homebrew_video_games) 通常指未经任天堂授权的软件。 比如自制工具、应用、游戏和模拟器。
+[**自制程序（Homebrew）**](https://wikipedia.org/wiki/List_of_homebrew_video_games) 通常指未经任天堂授权的软件。 比如自制工具、应用、游戏和模拟器。
 
-大多数情况下，只需通过3DS的音乐播放器就可以不花钱地运行自制程序。此外，也可以通过部分游戏或主机浏览器中的漏洞运行自制程序。
+大多数情况下，只需通过 3DS 的音乐播放器就可以不花钱地运行自制程序。此外，也可以通过部分游戏或主机浏览器中的漏洞运行自制程序。
 
 ## 什么是自制固件？
 
-**自制固件(Custom Firmware)** ("CFW") 可以使你进行自制程序无法轻易做到的更高级的破解。 例如，签名补丁可以使你安装没有签名的程序，并让它们出现在桌面中。
+**自制固件（Custom Firmware）** （"CFW"） 可以使你进行自制程序无法轻易做到的更高级的破解。 例如，签名补丁可以使你安装没有签名的程序，并让它们出现在桌面中。
 
-任何主机及版本都能够安装自制固件（高于11.3.0版本的系统可能会需要使用其他额外工具）。
+任何主机及版本都能够安装自制固件（高于 11.3.0 版本的系统可能会需要使用其他额外工具）。
 
 ## 本教程将安装什么？
 
 本教程的最终目的，是将一个未经修改过的装有原生系统的3DS
 变成一个基于 boot9strap 自制固件的系统。 在某些版本的机器上，本教程会使用自制程序作为跳板，但是最终目的依然是安装自制固件。
 
-boot9strap是一种最新和最好的引导自制系统的方法，只需启动时几毫秒的时间，就能让你获得几乎全部的系统权限，这有点类似于Wii上面的BootMii。 利用它甚至可以比 arm9loaderhax 更早获得系统控制权，并且 boot9strap 与一般的 sighax 不同，它使用一种 NDMA 覆盖漏洞来使用 Boot9 启动程序。 也就是说，只要设备运行了boot9strap，它就可以dump出每个设备独有的OTP（`OTP.bin`）、ARM11 bootrom（`boot11.bin`）和ARM9 bootrom（`boot9.bin`）。
+boot9strap 是一种最新和最好的引导自制系统的方法，只需启动时几毫秒的时间，就能让你获得几乎全部的系统权限，这有点类似于 Wii 上面的 BootMii。 利用它甚至可以比 arm9loaderhax 更早获得系统控制权，并且 boot9strap 与一般的 sighax 不同，它使用一种 NDMA 覆盖漏洞来使用 Boot9 启动程序。 也就是说，只要设备运行了 boot9strap，它就可以 dump 出每个设备独有的 OTP（`OTP.bin`）、ARM11 bootrom（`boot11.bin`）和 ARM9 bootrom（`boot9.bin`）。
 
 Boot9strap 拥有许多其他自制固件所没有的优点，因此我们推荐您阅读本指南进行破解，而非使用其他依赖一些过时软件（如 menuhax + rxTools，arm9loaderhax 甚至是普通的 sighax）的指南。
 
-想要了解boot9strap的使用方法，请参见[此研究专题](https://arxiv.org/abs/1802.00359)。
+想要了解 boot9strap 的运作方法，请参见[此研究专题](https://arxiv.org/abs/1802.00359)。
 
-[此gist](https://gist.github.com/SciresM/cdd2266efb80175d37eabbe86f9d8c52)列出了已被计算出来的sighax签名。
+[此 gist](https://gist.github.com/SciresM/cdd2266efb80175d37eabbe86f9d8c52) 列出了已被计算出来的sighax签名。
 
 ## 我可以在自制系统上做什么？
 
