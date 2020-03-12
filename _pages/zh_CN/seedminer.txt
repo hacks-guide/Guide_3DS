@@ -8,11 +8,11 @@ title: "Seedminer"
 
 我们利用了 DSiWare 游戏中的一个漏洞来在你的主机上安装 Boot9Starp。
 
-为了做到这点，我们使用了一个叫 Seedminer 的工具来计算你设备的 DSiWare 加密密钥(`movable.sed`)。 然后, 我们使用 DSiWare 加密密钥来解密与漏洞相兼容的 DSiWare 游戏。之后，我们将漏洞植入游戏好让我们运行任何想要运行的程序(漏洞种类视你的主机系统区域而定)。
+为了做到这点，我们使用了一个叫 Seedminer 的工具来计算你设备的 DSiWare 加密密钥（`movable.sed`）。 然后, 我们使用 DSiWare 加密密钥来解密与漏洞相兼容的 DSiWare 游戏。之后，我们将漏洞植入游戏好让我们运行任何想要运行的程序（漏洞种类视你的主机系统区域而定）。
 
-如果这个密钥是完全随机生成的，那么加密密钥将不可能被破解出来。 幸运的是，密钥的前半部分 (`movable_part1.sed`) 与你的设备的朋友代码(Friend code) 有着一些关系，使我们能够破解加密。 如果想要了解Seedminer是怎么工作的，请参见此[介绍资料](https://zoogie.github.io/web/34⅕c3)
+如果这个密钥是完全随机生成的，那么加密密钥将不可能被破解出来。 幸运的是，密钥的前半部分（`movable_part1.sed`）与你的设备的朋友代码（Friend code）有着一些关系，使我们能够破解加密。 如果想要了解 Seedminer 是怎么工作的，请参见此[介绍资料](https://zoogie.github.io/web/34⅕c3)。
 
-本教程需要利用一个高性能的显卡来进行一些计算。 不过有一个志愿者网站可以帮助你做需要显卡的步骤。(不过在中国大陆地区由于无法使用谷歌服务，你需要通过科学上网才能正常使用网站提供的功能)
+本教程需要利用一个高性能的显卡来进行一些计算。 不过有一个志愿者网站可以帮助你做需要显卡的步骤。（不过在中国大陆地区由于无法使用谷歌服务，你需要通过科学上网才能正常使用网站提供的功能）
 
 ### 操作步骤
 
@@ -24,9 +24,9 @@ title: "Seedminer"
 
 #### DS 网络设置测试（用于Fredtool）
 
-1. 进入系统设置，然后进入“互联网设置(Internet Settings)”，然后进入“任天堂 DS 连接(Nintendo DS Connections)”
+1. 进入系统设置，然后进入“互联网设置（Internet Settings）”，然后进入“任天堂 DS 连接（Nintendo DS Connections）”
 1. 点击 “OK”
-1. 如果你的设备进入到了 “任天堂 Wi-Fi 连接设置(Nintendo Wi-Fi Connection Setup)” 菜单中，则此测试成功
+1. 如果你的设备进入到了 “任天堂 Wi-Fi 连接设置（Nintendo Wi-Fi Connection Setup）” 菜单中，则此测试成功
   + 如果屏幕一直黑屏或者看上去似乎死机了，那么测试失败。你将无法使用 bannerbomb3 （因为此漏洞需要能正常使用 DS 网络设置的主机）
 1. 退出此菜单
 
@@ -34,23 +34,23 @@ title: "Seedminer"
 
 1. 将你的 SD 卡插入到电脑
 1. 打开你 SD 卡的 `Nintendo 3DS` 文件夹
-1. 复制你在Nintendo 3DS文件夹内看到的32位字符文件夹的名称
+1. 复制你在 Nintendo 3DS 文件夹内看到的 32 位字符文件夹的名称
   + 不要再点进任何文件夹
   + 如果你在 `Nintendo 3DS` 文件夹中看到多个非常长且随机名称的文件夹（请注意不要再点击进入任何一个文件夹），请执行以下操作：
-  + 将`Nintendo 3DS` 文件夹重命名为`BACKUP_Nintendo 3DS`
+  + 将 `Nintendo 3DS` 文件夹重命名为 `BACKUP_Nintendo 3DS`
   + 重新将 SD 卡插入设备并开机
   + 等待设备生成 SD 卡中的数据
   + 关机并将 SD 卡重新插入你的电脑
   + 打开你 SD 卡的 `Nintendo 3DS` 文件夹
   + 复制你看到的32位字符文件夹的名称
   + 删除 `Nintendo 3DS` 文件夹
-  + 将`BACKUP_Nintendo 3DS` 文件夹重命名为`Nintendo 3DS`
-1. 将这个32位的字符串粘贴到记事本中，等一下会用到它
+  + 将 `BACKUP_Nintendo 3DS` 文件夹重命名为 `Nintendo 3DS`
+1. 将这个 32 位的字符串粘贴到记事本中，等一下会用到它
   + 这个文件夹名也称作 “ID0”
 1. 启动你的主机
-1. 打开你的好友列表 (主菜单中最上方的[橙色的笑脸]({{ "/images/friend-list-icon.png" | absolute_url }}))
-  + 如果出现错误信息并被踢回到主菜单，则你需要创建一个 Mii 形象或你的设备无法连接到任天堂服务器(由于封禁或网络问题)
-1. 找到你的 Mii 个人形象，然后在上屏寻找你的“朋友代码(Friend Code)”
+1. 打开你的好友列表（主菜单中最上方的[橙色的笑脸]({{ "/images/friend-list-icon.png" | absolute_url }})）
+  + 如果出现错误信息并被踢回到主菜单，则你需要创建一个 Mii 形象或你的设备无法连接到任天堂服务器（由于封禁或网络问题）
+1. 找到你的 Mii 个人形象，然后在上屏寻找你的“朋友代码（Friend Code）”
 
 #### 第三步 — Seedminer
 
