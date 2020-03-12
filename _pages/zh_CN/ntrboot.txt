@@ -4,36 +4,36 @@ title: "ntrboot"
 
 {% include toc title="内容目录" %}
 
-如果你的烧录卡里预先已经安装了ntrboot (或者你已经将 ntrboot 漏洞写入了烧录卡)，那么你可以直接转至 [安装boot9strap (通过 ntrboot)](installing-boot9strap-(ntrboot)) 来进行破解。
+如果你的烧录卡里预先已经安装了 ntrboot（或者你已经将 ntrboot 漏洞写入了烧录卡），那么你可以直接转至[安装 boot9strap（通过 ntrboot）](installing-boot9strap-(ntrboot))来进行破解。
 {: .notice--success}
 
 ### 重要事项
 
-若想使用 ntrboot 漏洞来安装 boot9strap，那么你需要一张兼容的 NDS / DSi 烧录卡来将ntrboot 写入烧录卡。 请注意，有一些烧录卡已经预先写入了ntrboot。
+若想使用 ntrboot 漏洞来安装 boot9strap，那么你需要一张兼容的 NDS / DSi 烧录卡来将 ntrboot 写入烧录卡。 请注意，有一些烧录卡已经预先写入了 ntrboot。
 
 3DS 在任何的系统版本下都可以使用 ntrboot 漏洞，不过在将 ntrboot 写入烧录卡之前不一定可以正常使用烧录卡。 因此，你需要根据你的烧录卡支持的版本和设备选择相应的方法。
 
 请注意带有 “Time Bomb” 的烧录卡在检测到设备的系统时间超过了烧录卡固件中设置的某一日期后，将无法正常运行并启动 `.nds` 文件。 绕过这一限制的方法之一是把系统时间调到较早日期。
 
-| 烧录卡名 | 目前价格 | 有无“Time Bomb”？ | 3DS版本？ | DSi版本？ | 备注 |
+| 烧录卡名 | 目前价格 | 有无 “Time Bomb”？ | 3DS版本？ | DSi版本？ | 备注 |
 |-|-:|:-:|:-:|:-:|-|
-| [**R4i-SDHC B9S**](http://www.nds-card.com/ProShow.asp?ProID=574) | $15.99 | 2019年9月3日 | 11.13.0或更低 | 1.4.5或更低 | **自带ntrboot**，可刷回NDS烧录卡。 |
-| [**R4i Gold 3DS Plus**](http://www.nds-card.com/ProShow.asp?ProID=575) | $19.99 | 否 | 11.13.0或更低 | 1.4.5或更低 | **自带ntrboot**（[支持切换ntrboot和NDS模式]({{ "/images/screenshots/r4i-gold-3ds-plus.png" | absolute_url }})），请勿手动刷入ntrboot。 |
+| [**R4i-SDHC B9S**](http://www.nds-card.com/ProShow.asp?ProID=574) | $15.99 | 2019年9月3日 | 11.13.0 或更低 | 1.4.5 或更低 | **自带 ntrboot**，可刷回 NDS 烧录卡。 |
+| [**R4i Gold 3DS Plus**](http://www.nds-card.com/ProShow.asp?ProID=575) | $19.99 | 否 | 11.13.0 或更低 | 1.4.5 或更低 | **自带ntrboot**（[支持切换 ntrboot 和 NDS 模式]({{ "/images/screenshots/r4i-gold-3ds-plus.png" | absolute_url }})），请勿手动刷入 ntrboot。 |
 | [**Acekard 2i**](http://www.nds-card.com/ProShow.asp?ProID=160) | 20.99美元 | 无 | <= 4.3.0 | <= 1.4.4 | |
-| [**DSTT**](http://www.nds-card.com/ProShow.asp?ProID=157) | 9.99美元 | 无 | 无 | 无 | 只有部分 [特殊的芯片烧录卡](https://gist.github.com/yuukieve/6b48f1bb8dd15136403c15c39fafdb42) 才能写入ntrboot。 |
-| [**R4i Gold 3DS**](http://www.nds-card.com/ProShow.asp?ProID=149) | $19.99 | 否 | 11.13.0 或更低| 1.4.5或更低 | 支持所有RTS修订版本。 |
-| [**R4i-SDHC 3DS RTS**](http://www.nds-card.com/ProShow.asp?ProID=146) | $13.99 | 1.87：2019年9月3日 | 11.13.0或更低 | 1.4.5或更低 | |
-| [**R4iSDHC GOLD Pro 20XX**](http://www.nds-card.com/ProShow.asp?ProID=490) | $9.99 | 3.9b：2019年9月3日 | 11.13.0或更低 | 1.4.5或更低 | 所有R4iSDHC 20XX烧录卡相同。 不支持2013版本。 |
-| [**R4iSDHC RTS LITE 20XX**](http://www.nds-card.com/ProShow.asp?ProID=450) | $13.99 | 3.9b：2019年9月3日 | 11.13.0或更低 | 1.4.5或更低 | 所有R4iSDHC 20XX烧录卡相同。 不支持2013版本。 |
-| **Ace3DS X** | | 否 | 11.13.0或更低 | 1.4.5或更低 | **自带ntrboot**（使用外部开关可在ntrboot（“3DS”）和NDS模式间切换，请勿手动刷入ntrboot。 |
-| **Ace3DS Plus** | | 无 | 11.13.0或更低| 1.4.5或更低| |
-| **Gateway Blue** | | 无 | 4.1.0 - 4.5.0 | 1.4.5或更低 | |
-| **Infinity 3 R4i** | | 否 | 11.13.0或更低 | 1.4.5或更低 | |
+| [**DSTT**](http://www.nds-card.com/ProShow.asp?ProID=157) | 9.99 美元 | 无 | 无 | 无 | 只有部分[特殊的芯片烧录卡](https://gist.github.com/yuukieve/6b48f1bb8dd15136403c15c39fafdb42)才能写入ntrboot。 |
+| [**R4i Gold 3DS**](http://www.nds-card.com/ProShow.asp?ProID=149) | $19.99 | 否 | 11.13.0 或更低| 1.4.5 或更低 | 支持所有 RTS 修订版本。 |
+| [**R4i-SDHC 3DS RTS**](http://www.nds-card.com/ProShow.asp?ProID=146) | $13.99 | 1.87：2019年9月3日 | 11.13.0 或更低 | 1.4.5 或更低 | |
+| [**R4iSDHC GOLD Pro 20XX**](http://www.nds-card.com/ProShow.asp?ProID=490) | $9.99 | 3.9b：2019年9月3日 | 11.13.0 或更低 | 1.4.5 或更低 | 所有 R4iSDHC 20XX 烧录卡相同。 不支持 2013 版本。 |
+| [**R4iSDHC RTS LITE 20XX**](http://www.nds-card.com/ProShow.asp?ProID=450) | $13.99 | 3.9b：2019年9月3日 | 11.13.0 或更低 | 1.4.5 或更低 | 所有 R4iSDHC 20XX 烧录卡相同。 不支持 2013 版本。 |
+| **Ace3DS X** | | 否 | 11.13.0 或更低 | 1.4.5 或更低 | **自带 ntrboot**（使用外部开关可在ntrboot（“3DS”）和 NDS 模式间切换，请勿手动刷入 ntrboot。 |
+| **Ace3DS Plus** | | 无 | 11.13.0 或更低| 1.4.5 或更低| |
+| **Gateway Blue** | | 无 | 4.1.0 - 4.5.0 | 1.4.5 或更低 | |
+| **Infinity 3 R4i** | | 否 | 11.13.0 或更低 | 1.4.5 或更低 | |
 | **R4 3D Revolution** | | 无 | 无 | 无 | |
 | **R4i Gold 3DS Deluxe "Starter"** | | 无 | 4.1.0 - 4.5.0 | <= 1.4.5 | |
 | **R4i Ultra** | | 无 | <= 4.3.0 | <= 1.4.5 | |
-| **R4i-SDHC 3DS RTS Deluxe Edition** | | 未知 | 11.13.0或更低 | 1.4.5或更低 | |
-| **R4iSDHC Dual-Core 20XX** | | 3.9b：2019年9月3日 | 11.13.0或更低 | 1.4.5或更低 | 所有R4iSDHC 20XX烧录卡相同。 |
+| **R4i-SDHC 3DS RTS Deluxe Edition** | | 未知 | 11.13.0 或更低 | 1.4.5 或更低 | |
+| **R4iSDHC Dual-Core 20XX** | | 3.9b：2019年9月3日 | 11.13.0 或更低 | 1.4.5 或更低 | 所有 R4iSDHC 20XX 烧录卡相同。 |
 
   ![]({{ "/images/screenshots/ntrboot-flashcarts.png" | absolute_url }})
   {: .notice--info}
@@ -42,14 +42,14 @@ title: "ntrboot"
 
 请注意，某些方法可能有额外的兼容步骤供参阅。
 
-如果你的设备是折叠式 (除了带有睡眠开关的老型号的 2DS 外的所有 3DS 系列机型)，如果你要通过此方法破解，无论你如何写入 ntrboot，你都必须准备一小块磁铁。 这是因为这个漏洞需要在休眠模式按下一些按键。
+如果你的设备是折叠式（除了带有睡眠开关的老型号的 2DS 外的所有 3DS 系列机型），如果你要通过此方法破解，无论你如何写入 ntrboot，你都必须准备一小块磁铁。 这是因为这个漏洞需要在休眠模式按下一些按键。
 
-要确认你的磁铁是否管用，你可以在开机时将磁铁放在A、B、X、Y键上方或附近然后看看你的设备是否黑屏。 如果有用，只要把磁铁在那个位置附近，主机的两个屏幕应该都会熄灭。
+要确认你的磁铁是否管用，你可以在开机时将磁铁放在 A、B、X、Y 键上方或附近然后看看你的设备是否黑屏。 如果有用，只要把磁铁在那个位置附近，主机的两个屏幕应该都会熄灭。
 {: .notice--info}
 
-请注意，在写入 ntrboot 漏洞后你将无法使用烧录卡的正常功能(除了Acekard 2i，其在 *NDS和已破解的3DS上* 仍能正常使用)。 也就是说大部分烧录卡在被写入 ntrboot 后在主菜单中都不会出现。 在写入 ntrboot 后，你可以通过可选步骤将其从烧录卡中移除。
+请注意，在写入 ntrboot 漏洞后你将无法使用烧录卡的正常功能（除了Acekard 2i，其在 * NDS 和已破解的 3DS 上*仍能正常使用）。 也就是说大部分烧录卡在被写入 ntrboot 后在主菜单中都不会出现其图标。 在写入 ntrboot 后，你可以通过可选步骤将其从烧录卡中移除。
 
-请注意，在某些极少见情況下，某些伪劣烧录卡有可能会在破解过程中损坏并且无法恢复。 这是一般不会发生的， 但是无论如何，我们只支持写在兼容表格中的烧录卡。 为了防止买到伪劣烧录卡，建议你从一些知名度较高的网站上购买你需要的烧录卡（如[NDS Card](http://www.nds-card.com/)）。
+请注意，在某些极少见情況下，某些伪劣烧录卡有可能会在破解过程中损坏并且无法恢复。 这是一般不会发生的， 但是无论如何，我们只支持写在兼容表格中的烧录卡。 为了防止买到伪劣烧录卡，建议你从一些知名度较高的网站上购买你需要的烧录卡（如 [NDS Card](http://www.nds-card.com/)）。
 {: .notice--danger}
 
 ___
@@ -59,9 +59,9 @@ ___
 
 #### 使用单台 3DS 写入 ntrboot 到烧录卡
 
-本方法只需一台未破解的 3DS 和一张兼容的烧录卡。 本教程烧录卡将用于在你的 3DS 上运行 ntrboot flasher `.nds` 文件。 这也就是说，若想要在3DS上使用你持有的烧录卡运行 `.nds` 文件，烧录卡必须支持在你的 3DS 系统版本上运行。 请参阅上方的烧录卡兼容列表了解更多。
+本方法只需一台未破解的 3DS 和一张兼容的烧录卡。 本教程烧录卡将用于在你的 3DS 上运行 ntrboot flasher `.nds` 文件。 这也就是说，若想要在 3DS 上使用你持有的烧录卡运行 `.nds` 文件，烧录卡必须支持在你的 3DS 系统版本上运行。 请参阅上方的烧录卡兼容列表了解更多。
 
-继续至[写入ntrboot (通过单台3DS)](flashing-ntrboot-(3ds-single-system))
+继续至[写入ntrboot（通过单台 3DS）](flashing-ntrboot-(3ds-single-system))
 {: .notice--primary}
 
 ___
@@ -70,16 +70,16 @@ ___
 
 本方法会需要暂时用到一台已经破解了 boot9strap 的 3DS 主机， 你的烧录卡在本方法中不受 3DS 系统版本的限制。
 
-继续至[写入 ntrboot(通过多台 3DS)](flashing-ntrboot-(3ds-multi-system))
+继续至[写入 ntrboot（通过多台 3DS）](flashing-ntrboot-(3ds-multi-system))
 {: .notice--primary}
 
 ___
 
 #### 利用 NDS 写入 ntrboot 到 3DS
 
-此方法需要暂时用到支持你烧录卡的NDS或NDS Lite。 烧录卡将用于在你的 NDS 上运行 ntrboot 写入程序的 `.nds` 文件。
+此方法需要暂时用到支持你烧录卡的 NDS 或 NDS Lite。 烧录卡将用于在你的 NDS 上运行 ntrboot 写入程序的 `.nds` 文件。
 
-继续至[写入 ntrboot(通过 NDS)](flashing-ntrboot-(nds))
+继续至[写入 ntrboot（通过 NDS）](flashing-ntrboot-(nds))
 {: .notice--primary}
 
 ___
