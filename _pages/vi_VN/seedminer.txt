@@ -2,102 +2,102 @@
 title: "Seedminer"
 ---
 
-{% include toc title="内容目录" %}
+{% include toc title="Table of Contents" %}
 
-### 必读事项
+### Required Reading
 
-我们利用了 DSiWare 游戏中的一个漏洞来在你的主机上安装 Boot9Starp。
+To install boot9strap on your device, we exploit an oversight in the security restrictions applied to "DSiWare" applications.
 
-为了做到这点，我们使用了一个叫 Seedminer 的工具来计算你设备的 DSiWare 加密密钥（`movable.sed`）。 然后, 我们使用 DSiWare 加密密钥来解密与漏洞相兼容的 DSiWare 游戏。之后，我们将漏洞植入游戏好让我们运行任何想要运行的程序（漏洞种类视你的主机系统区域而定）。
+To accomplish this, we use a tool called Seedminer to calculate the DSiWare encryption key (`movable.sed`) for your device. We then use this DSiWare encryption key to decrypt a compatible DSiWare application and inject an exploit into it to run our own code (the exact exploit used will depend on your device's region).
 
-如果这个密钥是完全随机生成的，那么加密密钥将不可能被破解出来。 幸运的是，密钥的前半部分（`movable_part1.sed`）与你的设备的朋友代码（Friend code）有着一些关系，使我们能够破解加密。 如果想要了解 Seedminer 是怎么工作的，请参见此[介绍资料](https://zoogie.github.io/web/34⅕c3)。
+If this key were completely random, the encryption key would be impossible to break on current computing hardware. Fortunately, the first half of the key (`movable_part1.sed`) is actually mathematically related to your device's Friend Code, allowing us to break the encryption. For information on how Seedminer works, please see [this presentation](https://zoogie.github.io/web/34⅕c3).
 
-本教程需要利用一个高性能的显卡来进行一些计算。 不过有一个志愿者网站可以帮助你做需要显卡的步骤。（不过在中国大陆地区由于无法使用谷歌服务，你需要通过科学上网才能正常使用网站提供的功能）
+This method uses a powerful graphics card to perform the calculations needed. A volunteer-run website is used for the purpose of assisting you with this method.
 
-### 操作步骤
+### Instructions
 
-#### 第一步 — 兼容性测试
+#### Section I - Compatibility Test
 
-虽然这些测试不是为了触发 Seedminer 漏洞而必须要做的。但是如果不进行测试的话可能会因为 Seedminer 漏洞在你的主机失效而白白浪费时间并可能会无法使用其他的漏洞。
+While this test is not strictly necessary to perform the Seedminer exploit, the follow-up exploits to this do require this test to be performed and it would be a waste of time and effort to perform Seedminer without the ability to use the other exploits.
 
-这里有两种方法来构建 Seedminer 漏洞（详情请看本页底端），因此，如果其中一项测试失败，只要另一个测试没有失败，你就可以使用另一个办法。
+There are two different methods for building on the Seedminer exploit (described in more detail at the bottom of this page), so even if this test fails you can still use another method.
 
-#### DS 网络设置测试（用于Fredtool）
+#### DS Internet Settings Test (used for Fredtool)
 
-1. 进入系统设置，然后进入“互联网设置（Internet Settings）”，然后进入“任天堂 DS 连接（Nintendo DS Connections）”
-1. 点击 “OK”
-1. 如果你的设备进入到了 “任天堂 Wi-Fi 连接设置（Nintendo Wi-Fi Connection Setup）” 菜单中，则此测试成功
-  + 如果屏幕一直黑屏或者看上去似乎死机了，那么测试失败。你将无法使用 bannerbomb3 （因为此漏洞需要能正常使用 DS 网络设置的主机）
-1. 退出此菜单
+1. Go to System Settings, then "Internet Settings", then "Nintendo DS Connections"
+1. Press "OK"
+1. If your device loads into a "Nintendo Wi-Fi Connection Setup" menu, the test was successful
+  + If the screen stays black or appears to freeze, the test has failed and you will not be able to use the bannerbomb3 method which requires a functioning DS Internet Settings
+1. Exit this menu
 
-#### 第二步 — 准备工作
+#### Section II - Prep Work
 
-1. 将你的 SD 卡插入到电脑
-1. 打开你 SD 卡的 `Nintendo 3DS` 文件夹
-1. 复制你在 Nintendo 3DS 文件夹内看到的 32 位字符文件夹的名称
-  + 不要再点进任何文件夹
-  + 如果你在 `Nintendo 3DS` 文件夹中看到多个非常长且随机名称的文件夹（请注意不要再点击进入任何一个文件夹），请执行以下操作：
-  + 将 `Nintendo 3DS` 文件夹重命名为 `BACKUP_Nintendo 3DS`
-  + 重新将 SD 卡插入设备并开机
-  + 等待设备生成 SD 卡中的数据
-  + 关机并将 SD 卡重新插入你的电脑
-  + 打开你 SD 卡的 `Nintendo 3DS` 文件夹
-  + 复制你看到的32位字符文件夹的名称
-  + 删除 `Nintendo 3DS` 文件夹
-  + 将 `BACKUP_Nintendo 3DS` 文件夹重命名为 `Nintendo 3DS`
-1. 将这个 32 位的字符串粘贴到记事本中，等一下会用到它
-  + 这个文件夹名也称作 “ID0”
-1. 启动你的主机
-1. 打开你的好友列表（主菜单中最上方的[橙色的笑脸]({{ "/images/friend-list-icon.png" | absolute_url }})）
-  + 如果出现错误信息并被踢回到主菜单，则你需要创建一个 Mii 形象或你的设备无法连接到任天堂服务器（由于封禁或网络问题）
-1. 找到你的 Mii 个人形象，然后在上屏寻找你的“朋友代码（Friend Code）”
+1. Insert your SD card into your computer
+1. Navigate to the `Nintendo 3DS` folder on your SD card
+1. Copy the 32 character long name of the folder you see inside Nintendo 3DS
+  + Do not go inside any more folders
+  + If you see multiple folders with long, random names inside `Nintendo 3DS` without opening any other folders, perform the following:
+  + Rename the `Nintendo 3DS` folder to `BACKUP_Nintendo 3DS`
+  + Reinsert your SD card into your device and power on your device
+  + Wait for the device to generate the SD card data
+  + Power off your device and reinsert your SD card into your computer
+  + Navigate to the `Nintendo 3DS` folder on your SD card
+  + Copy the 32 character long name of the folder you see
+  + Delete the `Nintendo 3DS` folder
+  + Rename the `BACKUP_Nintendo 3DS` folder to `Nintendo 3DS`
+1. Paste your 32 character long folder name into a document you can reference later
+  + This folder name is also known as your "ID0"
+1. Power on your device
+1. Go to your Friend List (the [orange Face Icon]({{ "/images/friend-list-icon.png" | absolute_url }}) in the top row of your Home Menu)
+  + If you receive an error and are kicked out of the menu, you either must create a new Mii or your console cannot connect to Nintendo's servers (due to a ban or connection issues)
+1. Find your Mii profile, then find the "Friend Code" field on the top screen
 
-#### 第三步 — Seedminer
+#### Section III - Seedminer
 
-1. 在你的电脑上打开 [Bruteforce Movable](https://seedminer.hacks.guide/)
-  + 这个网站可以自动替你获取 `movable_part1.sed` 文件（通过一台由机器人操控的 3DS），并破解你主机的 DSiWare 密钥（通过某自愿者的电脑运行 Seedminer 取得）
-  + 如果自助功能无法使用，请加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp) 并使用英文请求帮助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网）你也可以到译者的<a href="https://jq.qq.com/?_wv=1027&k=5CfEA4c">QQ群</a>寻求帮助，群号为 942052497。
-1. 在 “Your friend code” 选项填入你设备的 “朋友代码（Friend Code）”（只要数字，不要填入空格或破折号）
-1. 在 “Your ID0” 栏位粘贴之前复制的 32 位长的字符串
-  + 不要尝试手动输入 ID0， 确保那是你在上一节中复制并粘贴的 ID0 以防复制错了
-1. 完成谷歌的 “人机身份验证” （请注意，如果你身处中国大陆，看到这个选项可能需要科学上网）
-1. 点击 “Go”
-  + 如果网站直接跳到了第四步（step 4），那么就下载 `movable.sed` 并跳到下一部分
-1. 当提示时，在你主机中的“好友注册（Register Friend）”中，添加网页给出的朋友代码
-1. 等待网站更新
-  + 如果一直没有更新，请在刷新网页前等待几分钟。
-1. 一旦网页开始处理你主机的相关信息，你将可以选择“继续（Contiune）”或“破解其他设备 （Do another device）” 点击绿色的 “Continue” 按钮
-1. 等待其完成步骤中的其余部分
-  + 这通常是很快的（1～5 分钟左右），但是在某些情况下可能会需要长达半小时。
-  + 在这个过程中，你之前添加的机器人 3DS 可能不会在你的 3DS 上面展示 不过只要网站还在更新，这就不是个问题。
-  + 如果你已经等待了半个小时，那么请加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp) 并使用英文求助。你也可以到译者的<a href="https://jq.qq.com/?_wv=1027&k=5CfEA4c">QQ群</a>寻求帮助，群号为942052497。
-1. 等待程序自动完成后，从站点下载 `movable.sed` 文件
-  + 你在之后还会用到这个文件，请先把这个文件存起来
+1. Open [Bruteforce Movable](https://seedminer.hacks.guide/) on your computer
+  + This site can automate the retrieval of `movable_part1.sed` (using a bot 3DS console) and the breaking of your device's DSiWare encryption (using a volunteer's computer to run Seedminer)
+  + If the automated service is nonfunctional, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you
+1. Enter your device's Friend Code (with no spaces or dashes) into the "Your friend code" field
+1. Paste your device's 32 character long folder name into the "Your ID0" field
+  + Do not attempt to enter the ID0 by hand. Ensure the ID0 is entered correctly by copying and pasting it from where you saved it in the previous section
+1. Complete the "I'm not a robot" captcha
+1. Select "Go"
+  + If the site immediately goes to step 4, download your `movable.sed` file and continue with the next section.
+1. When prompted, use the "Register Friend" button on your device to add the friend code of the bot 3DS console
+1. Wait for the site to update
+  + If it does not, wait a few minutes before refreshing the page once
+1. Once the site processes your information, you will be given the option to "Continue" or "Do another device". Click the green "Continue" button
+1. Wait for the remainder of the process to complete
+  + This is usually fast (1-5 minutes) but in some cases, can take up to half an hour.
+  + During this process, the bot you added may not show up on your 3ds. As long as the website updates, this is not an issue.
+  + If you are still waiting after half an hour, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you
+1. When the process has completed, download your `movable.sed` file from the site
+  + Keep this file as you will need it in the upcoming pages
 
 ___
-### 方法
+### Methods
 
 ___
 
 #### Seedminer + BannerBomb3 + Fredtool
 
-本章节 Seedminer 将使用你的 `movable.sed` 文件来解密所有的 DSiWare 程序，以便在3DS中内置的 DS 网络设定中注入修改后的 DSiWare 程序。 
+This method of using Seedminer for further exploitation uses your `movable.sed` file to decrypt any DSiWare title for the purposes of injecting an exploitable DSiWare title into the DS Internet Settings application. 
 
-这种方法与所有区域兼容，尽管神游机因为阉割了此部分所需内容并不能执行这个操作
+This method is compatible with all regions, though CHN region is not covered by this guide.
 
-这个方法要求 DS 互联网设置正常运行。请通过此页面顶部的测试确认可以使用后再继续此教程。
+This method requires that the DS Internet Settings be functioning properly (see the test at the top of this page).
 
-继续至 [BannerBomb3](bannerbomb3)
+Continue to [BannerBomb3](bannerbomb3)
 {: .notice--primary}
 
 ___
 
-#### Seedminer + PicHaxx  + DSiDumper + Fredtool
+#### Seedminer + PicHaxx + DSiDumper + Fredtool
 
-本章节 Seedminer 将使用你的 `movable.sed` 文件，通过 PicHaxx 漏洞启动 Homebrew Launcher，以便获得权限来启动 Homebrew Launcher 来导出系统的 DsiWare 软件。 在进行本教程前，你必须先拥有 （或下载） eShop 中的免费的“精灵宝可梦：绘图方块（Pokemon Picross）”游戏。
+This method of using Seedminer for further exploitation uses your `movable.sed` file to gain access to the Homebrew Launcher using the PicHaxx exploit for the purpose of dumping a system DSiWare. This method requires you to already own (or download) the free "Pokemon Picross" game from the eShop.
 
-这个方法只适用于欧版，日版和美版的设备。而且比另一方法稍微复杂一些。 只有当你无法运行 DS 互联网设置时才建议使用此方法。
+This method is only compatible with the EUR, JPN, and USA regions, and is somewhat more complicated than the above method. It is only recommended to use this method if you do not have a functioning DS Internet Settings application.
 
-继续至 [启动 Homebrew Launcher （通过PicHaxx）](homebrew-launcher-(pichaxx))
+Continue to [Homebrew Launcher (PicHaxx)](homebrew-launcher-(pichaxx))
 {: .notice--primary}
 
