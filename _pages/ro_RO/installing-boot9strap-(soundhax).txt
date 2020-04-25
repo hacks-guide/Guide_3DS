@@ -1,85 +1,83 @@
 ---
-title: "Instalând boot9strap (Soundhax)"
+title: "Instalar boot9strap (Soundhax)"
 ---
 
-{% include toc title="Cuprins" %}
+{% include toc title="Tabla de contenidos" %}
 
-### Lectură obligatorie
+### Lectura requerida
 
 Soundhax (when combined with pre9otherapp) is compatible with versions 2.1.0 through 8.1.0 in the EUR, JPN, KOR, and USA regions.
 
 {% capture notice-1 %}
 
-Țineți cont că actualizările cu cardul vor aduce actualizări numai funcțiilor de bază, cum ar fi System Settings, Meniul HOME, etc. actualizările cu cardul de joc nu vor aduce actualizări la Nintendo 3DS Sound și serviciilor de rețea, cum ar fi System Transfer, Internet Browser, StreetPass Mii Plaza, sau eShop.
+Ten en cuenta que las actualizaciones con cartucho sólo actualizarán los elementos claves de la versión, como la Configuración de la consola, el menú HOME, etc. las actualizaciones por cartucho no afectarán a Nintendo 3DS Sound ni a funcionalidades en línea, como la Transferencia de Sistema, el Navegador de internet, la Plaza Mii o la eShop.
 
-This means that using a cartridge update from a version containing an older Nintendo 3DS Sound version *(<2.1.0)* to one that introduced a newer Nintendo 3DS Sound version will break Soundhax! Veţi avea nevoie de o metodă alternativă de a intra în Homebrew Launcher cum ar fi [Instalând boot9strap (Browser)](installing-boot9strap-(browser)) sau [Instalând boot9strap (MSET)](installing-boot9strap-(mset))!
+This means that using a cartridge update from a version containing an older Nintendo 3DS Sound version *(<2.1.0)* to one that introduced a newer Nintendo 3DS Sound version will break Soundhax! ¡Necesitarás un método alternativo para entrar al Homebrew Launcher como [Instalar boot9strap (navegador)](installing-boot9strap-(browser)) o [Instalar boot9strap (MSET)](installing-boot9strap-(mset))!
 {% endcapture %}
-
-Pentru a extrage fişierele `.7z` de pe această pagină, veţi avea nevoie de un arhivator de fişiere ca [7-Zip](http://www.7-zip.org/) sau [The Unarchiver] (https://theunarchiver.com/).
 
 <div class="notice--warning">{{ notice-1 | markdownify }}</div>
 
-### Ce aveți nevoie
+### Qué necesitas
 
-* Ultima versiune de [Soundhax](http://soundhax.com) *(pentru dispozitivul, versiunea și regiunea dumneavoastră)*
-* Cea mai nouă versiune de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
-* Cea mai nouă versiune de [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(boot9strap standard; nu fișierul `devkit`, nici cel `ntr`)*
-* Versiunea 9.1 de [Luma3DS] (https://github.com/AuroraWright/Luma3DS/releases/tag/v9.1)
-* Cea mai nouă versiune de [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
-* Cea mai recentă versiune de [pre9otherapp](https://github.com/Pirater12/otherapp/releases/latest) *(fișierul `.bin` care corespunde versiunii de firmware)*
+* La última versión de [Soundhax](http://soundhax.com) *(correspondiente a tu consola, región y versión)*
+* La última versión de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* La última versión de [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(boot9strap normal; no el archivo `devkit` ni el archivo `ntr`)*
+* La ultima version de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
+* La última versión [del Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
+* La última versión de [pre9otherapp](https://github.com/Pirater12/otherapp/releases/latest) *(el archivo `.bin` correspondiente a tu versión de firmware)*
 
-### Instrucțiuni
+### Instrucciones
 
-#### Secțiunea I - Preparații
+#### Sección I - Preparativos
 
-1. Închideți dispozitivul
-1. Introduceți cardul SD în calculator
-1. Copiați fișierul Soundhax `.m4a` în rădăcina cardului SD
-1. Copiați payload-ul pre9otherapp în rădăcina cardului SD și redenumiți-l în`otherapp.bin`
-1. Copiați `boot.firm` de la Luma3DS `.7z` în rădăcina cardului SD
-1. Copiați `boot.3dsx` în rădăcina cardului SD
-1. Creați un folder numit 'boot9strap' pe rădăcina cardului SD
-1. Copiați `boot9strap.firm` și `boot9strap.firm.sha` din arhiva `.zip` boot9strap în folderul `/boot9strap/` de pe cardul SD
-1. Copiați `arm.bin` de pe arhiva `zip` SafeB9SInstaller în rădăcina cardului SD
-1. Reintroduceți cardul SD în dispozitivul dumneavoastră
-1. Porniți dispozitivul
+1. Apaga tu consola
+1. Inserta tu tarjeta SD en tu computadora
+1. Copia el archivo `.m4a` de Soundhax a la raíz de tu tarjeta SD
+1. Copia el pre9otherapp payload a la raíz de tu tarjeta SD y cambia su nombre a `otherapp.bin`
+1. Copia el archivo `boot.firm` desde el `.zip` de Luma3DS a la raíz de tu tarjeta SD
+1. Copia `boot.3dsx` a la raíz de tu tarjeta SD
+1. Crea una carpeta llamada `boot9strap` en la raíz de tu tarjeta SD
+1. Copia `boot9strap.firm` y `boot9strap.firm.sha` desde el `.zip` de boot9strap a la carpeta `/boot9strap/` en tu tarjeta SD
+1. Copia `arm9.bin` desde el `.zip` de SafeB9SInstaller a la raíz de tu tarjeta SD
+1. Vuelve a insertar tu tarjeta SD en tu consola
+1. Enciende tu consola
 
-#### Secțiunea II - Lansând SafeB9SInstaller
+#### Sección II - Ejecutar SafeB9SInstaller
 
-1. Reintroduceți cardul SD în dispozitivul dumneavoastră
-1. Porniți dispozitivul
-1. Lansați Nintendo 3DS Sound
+1. Vuelve a insertar tu tarjeta SD en tu consola
+1. Enciende tu consola
+1. Inicia Nintendo 3DS Sound
 
     ![]({{ "/images/screenshots/soundhax-welcome.png" | absolute_url }})
     {: .notice--info}
 
-1. Daca nu ați deschis nicioadată Nintendo 3DS Sound înainte și primiți sfaturi de la o iconiță cu o pasăre, citiți toate sfaturile păsării, apoi închideți aplicația în mod normal şi redeschideți-o
-  + În această situație, pornind Soundhax imediat ar face ca aceste sfaturi să apăra de fiecare dată când porniți Nintendo 3DS Sound până când faceți ce vi se cere
-1. Mergeți în `/SDCARD`, apoi apăsați "<3 nedwill 2016"
-  + S-ar putea să fie nevoie să încercați de mai multe ori
-  + Dacă se blochează, închideți dispozitivul forțat ținând apăsat butonul de pornire și încercați din nou
+1. Si nunca has iniciado la aplicación Nintendo 3DS Sound antes y aparecen consejos sobre cómo usarla dados por un pájaro, lee todos los consejos de éste, luego cierra la aplicación y vuelve a abrirla
+  + En esta situación, ejecutar Soundhax inmediatamente causaría que los consejos aparezcan cada vez que se inicie la aplicación hasta realizar lo descrito anteriormente
+1. Ve a `/SDCARD`, y luego reproduce "<3 nedwill 2016"
+  + Esto podría tomar varios intentos
+  + Si se congela, fuerza el apagado de la consola manteniendo presionado el botón para apagarla y luego vuelve a intentar
 
     ![]({{ "/images/screenshots/soundhax-launch.png" | absolute_url }})
     {: .notice--info}
 
-1. Dacă exploit-ul a avut succes, veți porni în SafeB9SInstaller
+1. Si el exploit ha funcionado, habrás iniciado SafeB9SInstaller
 
-#### Secțiunea III - Instalând boot9strap
+#### Sección III - Instalar boot9strap
 
-1. Așteptaţi ca toate verificările de siguranță să fie completate
-1. Când vi se solicită, introduceți combinația de butoane ca să instalați boot9strap
-1. Odată terminat, apăsați (A) pentru a reporni dispozitivul
+1. Espera a que todos los controles de seguridad se completen
+1. Cuando se solicite, introduce la combinación de botones mostrada para instalar boot9strap
+1. Una vez se haya completado, presiona (A) para reiniciar tu consola
 
-#### Secțiunea IV - Configurând Luma3DS
+#### Sección IV - Configurar Luma3DS
 
-1. Dispozitivul dumneavoastră ar trebui să fi repornit în meniul de configurare Luma3DS
-  + Dacă vedeți un ecran negru [urmați acest ghid de depanare](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
-1. Folosiți butonul (A) si D-Pad-ul ca să activați următoarele:
+1. Tu consola debería haber reiniciado en el menú de configuración de Luma3DS
+  + Si la pantalla se queda en negro, [sigue la guía de problemas](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
+1. Utiliza el botón (A) y las flechas direccionales para activar lo siguiente:
   + **"Show NAND or user string in System Settings"**
-1. Apăsați (Start) pentru a salva și reporni
-  + Dacă primiţi o eroare, doar continuați spre pagina următoare
+1. Presiona (Start) para guardar y reiniciar
+  + Si te da error, tan solo continúa en la siguiente página
 
 ___
 
-### Continuați la [Finalizând instalarea](finalizing-setup)
+### Continúa en [Finalizar instalación](finalizing-setup)
 {: .notice--primary}
