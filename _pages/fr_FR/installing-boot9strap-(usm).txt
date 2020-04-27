@@ -6,17 +6,17 @@ title: "Installation de boot9strap (USM)"
 
 ### Lecture requise
 
-In order to exploit the SAFE_MODE firmware of our system, we need to inject an exploited WiFi profile.
+Afin d'exploiter le firmware SAFE_MODE de notre console, nous devons injecter un profil WiFi exploité.
 
-We can do this using an existing exploit, BannerBomb3.
+Nous pouvons le faire en utilisant un exploit existant, BannerBomb3.
 
-To accomplish this, we use your system's encryption key (movable.sed) to build a DSiWare backup that exploits the system in order to inject the exploited WiFi profile to your connections list.
+Pour accomplir cela, nous utilisons la clé de chiffrement de votre console (movable.sed) pour créer une sauvegarde DSiWare qui exploite le système afin d'injecter le profil WiFi exploité dans votre liste de connexions.
 
-Once the WiFi profile has been injected, we will use SAFE_MODE, which is a recovery feature present on all 3DS consoles, to activate the exploited WiFi profile.
+Une fois le profil WiFi injecté, nous utiliserons SAFE_MODE, qui est une fonctionnalité de récupération présente sur toutes les consoles 3DS, pour activer le profil WiFi exploité.
 
 Ces instructions fonctionnent dans les régions USA, Europe, Japon et Corée indiquées par les lettres U, E, J ou K après le numéro de version de la console.
 
-If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, you will need to use a [Legacy Method](legacy-methods). For assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+Si vos boutons (L/R), (Haut sur la croix directionnelle) ou (A) ne fonctionnent pas, vous devrez utiliser une [Ancienne Méthode](legacy-methods). Pour obtenir de l'aide, rejoignez [Nintendo Homebrew sur Discord](https://discord.gg/MWxPgEp) et demandez de l'aide en anglais.
 {: .notice--danger}
 
 ## Ce dont vous avez besoin
@@ -26,20 +26,20 @@ If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, you will n
 
 #### Section I - Préparatifs
 
-1. Open [unSAFE_MODE-bb3 tool](https://usm.bruteforcemovable.com/) on your computer
+1. Ouvrez [unSAFE_MODE-bb3 tool](https://usm.bruteforcemovable.com/) sur votre ordinateur
 1. Téléchargez votre movable.sed en utilisant l'option "Choisir le fichier"
-1. Click "Download unSAFE_MODE-bb3 archive"
-  + This will download an exploit DSiWare called `F00D43D5.bin` and a SAFE_MODE exploit data file called `usm.bin` inside of a zip folder (`unSAFE_MODE-bb3.zip`)
+1. Cliquez sur "Download unSAFE_MODE-bb3 archive"
+  + Ceci va télécharger un exploit DSiWare appelé `F00D43D5.bin` et un fichier d'exploit SAFE_MODE appelé `usm.bin` dans un dossier zip (`unSAFE_MODE-bb3.zip`)
 1. Si votre console est allumée, éteignez-la
 1. Insérez votre carte SD dans votre ordinateur
 1. Copiez `boot.firm` et `boot.3dsx` depuis Luma3DS `.zip`vers la racine de votre carte SD
-1. Copy `usm.bin` from the USM archive (`unSAFE_MODE-bb3.zip`) to the root of your SD card
+1. Copiez `usm.bin` depuis l'archive USM (`unSAFE_MODE-bb3.zip`) vers la racine de votre carte SD
 1. Naviguez vers `Nintendo 3DS` -> `<ID0>` -> `<id-de-32-caractères>` -> `Nintendo DSiWare` sur votre carte SD
   + Cet `<ID0>` sera le même que celui que vous avez utilisé dans [Seedminer](seedminer)
   + Si `Nintendo DSiWare` n'existe pas, créez-le
 1. S'il y a des copies de DSiWare existantes (`<id-de-8-caractères>.bin`) dans ce dossier, déplacez-les sur votre PC
-  + Cela vous laissera avec un dossier Nintendo DSiWare vide. Moving the files to your PC ensures you don't delete any intentional backups
-1. Copy the `F00D43D5.bin` file from the USM archive (`unSAFE_MODE-bb3.zip`) to the `Nintendo DSiWare` folder
+  + Cela vous laissera avec un dossier Nintendo DSiWare vide. Déplacer ces fichiers sur votre PC vous permet de ne pas perdre vos éventuelles sauvegardes existantes
+1. Copiez le fichier `F00D43D5.bin` depuis l'archive USM (`unSAFE_MODE-bb3.zip`) vers le dossier `Nintendo DSiWare`
 
 #### Section II - BannerBomb3
 
@@ -48,41 +48,41 @@ If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, you will n
 1. Lancez les Paramètres de la console
 1. Naviguez vers`Gestion des données` -> `DSiWare`
 1. Cliquez sur l'onglet Carte SD
-  + Your bottom screen should flash Red and then the system will reboot to home menu a few seconds later. This means the exploit profile was successfully copied
+  + Votre écran du bas devrait clignoter en Rouge, puis la console redémarrera sur le menu HOME quelques secondes plus tard. Cela signifie que le profil exploité a été copié avec succès
 1. Éteignez votre 3DS
 
 #### Section III - unSAFE_MODE
 
-1. With your system still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), then press (Power)
-  + Release the buttons after a few seconds. Your console will boot into Safe Mode
-1. Press "OK" to accept the update
-  + There is no update. This is part of the exploit
-1. Press "I accept" to accept the terms and conditions
-1. The update will eventually fail, with error code `003-1099`. This is intended behaviour
-1. When asked "Would you like to configure Internet settings?", select "Yes"
-1. On the following menu, navigate to `Connection 1` -> `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings` -> `Detailed Setup`
-1. Once you see `B9S install SUCCESS` on the top screen, press any button to reboot to Luma Configuration
+1. Votre console toujours éteinte, maintenez enfoncé les boutons suivants : (L) + (R) + (Haut sur la croix directionnelle) + (A), puis appuyez sur (Power)
+  + Relâchez les boutons après quelques secondes. Votre console démarrera en mode sans échec
+1. Appuyez sur "OK" pour accepter la mise à jour
+  + Aucune mise à jour nécessaire. Ceci fait partie de l'exploit
+1. Appuyez sur « J'accepte » pour accepter les termes et conditions
+1. La mise à jour finira par échouer, avec le code d'erreur `003-1099`. Ne vous inquiétez pas, c'est normal
+1. Lorsque votre console vous demande "Paramétrer la connexion Internet de la console ?", sélectionnez "Paramétrer"
+1. Dans le menu suivant, accédez à `Connexion 1` -> `Modifier` -> `Page suivante (flèche de droite)` -> `Serveur proxy` -> `Paramètres avancés`
+1. Une fois que vous voyez `B9S install SUCCESS` sur l'écran du haut, appuyez sur n'importe quel bouton pour redémarrer sur le menu de configuration de Luma
 
 #### Section IV - Configuration de Luma3DS
 
-1. Your device should automatically show the Luma Configuration menu
+1. Votre console devrait afficher automatiquement le menu de configuration de Luma
 1. Utilisez le bouton (A) et la croix directionnelle pour activer les éléments suivants:
   + **"Show NAND or user string in System Settings"**
 1. Appuyez sur (Start) pour enregistrer les modifications et redémarrer
   + Votre console devrait afficher le Menu HOME après un court instant. Si vous avez un écran noir depuis plus de 5 minutes, [suivez ce guide de dépannage](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 
-#### Section V - Restoring WiFi Configuration Profiles
+#### Section V - Restauration des profils de connexion WiFi
 
 1. Lancez les Paramètres de la console
 1. Naviguez vers`Gestion des données` -> `DSiWare`
 1. Cliquez sur l'onglet Carte SD
-  + Your bottom screen should flash Green and then the system will reboot to home menu a few seconds later. This means your WiFi configuration profiles were successfully restored
-1. Power your system off
+  + Votre écran du bas devrait clignoter en Vert, puis la console redémarrera sur le menu HOME quelques secondes plus tard. Cela signifie que vos profils de connexion WiFi ont été restaurés avec succès
+1. Éteignez votre console
 1. Insérez votre carte SD dans votre ordinateur
 1. Naviguez vers `Nintendo 3DS` -> `<ID0>` -> `<id-de-32-caractères>` -> `Nintendo DSiWare` sur votre carte SD
   + Cet `<ID0>` sera le même que celui que vous avez utilisé dans [Seedminer](seedminer)
-1. Delete `F00D43D5.bin` from your Nintendo DSiWare folder
-1. Continue to Finalizing Setup
+1. Supprimez `F00D43D5.bin` de votre dossier Nintendo DSiWare
+1. Continuez vers la finalisation de l'installation
 
 ___
 
