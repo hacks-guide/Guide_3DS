@@ -1,238 +1,241 @@
 ---
-title: "GodMode9 használata"
+title: "Benutzung von GodMode9"
 ---
 
-{% include toc title="Tartalomjegyzék" %}
+{% include toc title="Inhalt" %}
 
-Ha segítségre van szükséged GodMode9-nal kapcsolatban (angol nyelven), legyen az scriptelés, vagy a legfrissebb információk beszerzése, csatlakozz a [GodMode9 Discord szerverhez](https://discord.gg/EGu6Qxw).
+For support (in English) with GodMode9, as well as help with scripting and to get updates and info, join [GodMode9 on Discord](https://discord.gg/EGu6Qxw).
 {: .notice--primary}
 
-### Fontos tudnivalók
+### Lesen erforderlich
 
-A GodMode9 egy teljes hozzáférést biztosító fájlkezelő a Nintendo 3DS konzolhoz, amely hozzáférést ad az SD kártyához, a SysNAND-od és EmuNAND-od FAT partícióihoz, és alapvetően bármi máshoz. Sok más funkció mellett lehetőséged van másolni, törölni, átnevezni fájlokat és létrehozni mappákat.
+GodMode9 ist ein Vollzugriffsdateibrowser für die Nintendo 3DS Konsole und gibt dir Zugriff auf deine SD Karte, auf die FAT Partitionen in deinem SysNAND und EmuNAND und im Grunde alles andere auch. Unter anderem kannst du Dateien kopieren, löschen, umbenennen und Ordner erstellen.
 
-Vedd figyelembe, hogy amennyiben van más payload fájl a `GodMode9.firm` fájlon kívül a `/luma/payloads/`mappában, indításkor a (Start) gombot lenyomva tartva a "chainloader menu" menü fog megjelenni. Itt a D-Pad és az (A) gomb segítségével válaszd a "GodMode9" opciót, hogy az alábbi utasításokat követhesd. 
+Beachte: Sollten noch weitere Payload-Dateien als nur die`GodMode9.firm` Datei im `/luma/payloads/` Ordner auf deiner SD-Karte sein, starte das "Chainloader Menu", indem du beim Starten der Konsole (Start) gedrückt hältst und in welchem du dann das D-Pad und (A) verwenden musst um "GodMode9", für die Anleitung, auszuwählen. 
 
-A GodMode9 egy nagy tudású szoftver, ami képes módosítani alapvetően bármit a konzolodon. Bár ezen módosítások jelentős része zárolva van egy jogosultsági rendszer segítségével, és lehetetlen veszélyes műveleteket végezni csak úgy véletlenül a védelem feloldása nélkül, fontos, hogy pontosan kövesd az utasításokat, és tarts biztonsági másolatokat.
+GodMode9 ist eine mächtige Software, mit dem Potential alles mögliche an der Konsole verändern zu können. Obwohl viele dieser Modifikationen durch ein Berechtigungssystem gesperrt sind, und es unmöglich ist, versehentlich gefährliche Aktionen ausführen, ohne bewusst Berechtigungen zu entsperren, solltest du dennoch die Anweisungen sorgfältig befolgen und Backups für den Notfall bereit haben.
 
-## GodMode9 frissítése
+## GodMode9 aktualisieren
 
-A lentebbi utasítások egy része csak a legfrissebb GodMode9-on érhető el, emiatt előbb ezt a részt kell végigcsinálnod, mielőtt belekezdenél azokba. Írj felül bármi olyan fájlt, ami már létezik.
+Einige der folgenden Anweisungen sind nur in der neuesten Version von GodMode9 zu finden, deshalb solltest diesen Schritten folgen, um deine Version zu aktualisieren, bevor du weiter machst. Ersetze dabei alle bereits existierenden Dateien.
 {: .notice--info}
 
-### Amire szükséged lesz
+### Was du brauchst
 
-* A [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) legújabb kiadása
+* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 
-### Utasítások
+### Anleitung
 
-1. Kapcsold ki a készüléked
-1. Helyezd az SD kártyád a számítógépbe
-1. Másold át a `GodMode9.firm` fájlt a GodMode9 `.zip`-ből az SD kártyád `/luma/payloads/` mappájába
-1. Másold át a `gm9` mappát a GodMode9 `.zip`-ből az SD kártyád gyökerébe
-1. Tedd vissza az SD kártyád a készülékedbe
+1. Schalte deinen 3DS aus
+1. Stecke deine SD-Karte in deinen Computer
+1. Kopiere `GodMode9.firm`von der `GodMode9.zip`-Datei nach /luma/payloads/ auf deiner SD-Karte
+1. Kopiere den Ordner `gm9` aus der GodMode9 `.zip` in das Stammverzeichnis deiner SD-Karte
+1. Stecke deine SD-Karte nun wieder in dein Gerät
 
-## Biztonsági másolat készítése a NAND-ról
+## Erstellen einer NAND-Sicherheitskopie
 
-1. Indítsd el a GodMode9-et a (Start) lenyomva tartásával boot közben
-1. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
-1. Válaszd a "Scripts..." opciót
-1. Válaszd ezt: "GM9Megascript"
-1. Válaszd ezt: "Backup Options"
-1. Válaszd ezt: "SysNAND Backup"
-1. Nyomd meg az (A) gombot a megerősítéshez
-  + Ez a folyamat igénybe vesz majd némi időt
-  + Ha hibát kapsz, győződj meg róla, hogy legalább 1.3 GB szabad hely van az SD kártyádon
-1. Nyomd meg az (A) gombot a folytatáshoz
-1. Nyomd meg a (B) gombot, hogy visszamenj a főmenübe
-1. Válaszd az "Exit" opciót
-1. Nyomd meg az (A) gombot az írási engedélyek visszavonásához
-1. Az SD kártya leválasztásához az (R) gomb lenyomva tartása mellett nyomd meg a (B) gombot
-1. Helyezd az SD kártyád a számítógépbe
-1. Másold a `<dátum>_<sorozatszám>_sysnand_###.bin` és az `essential.exefs` fájlokat az SD kártyád `/gm9/out/` mappájából valami biztonságos helyre a számítógépeden
-  + Tarts belőle biztonsági másolatokat több különböző helyen is (például online tárhelyen)
-  + Ezek a biztonsági mentések fognak megmenteni, ha a későbbiekben brickelődne a konzolod, vagy bármi félresikerülne a jövőben
-1. Töröld a `<dátum>_<sorozatszám>_sysnand_###.bin` és a `<dátum>_<sorozatszám>_sysnand_###.bin.sha` fájlokat az SD kártyád `/gm9/out/` mappájából, miután lemásoltad azokat
-1. Tedd vissza az SD kártyád a készülékedbe
-  + Ha az SD kártyádat nem ismerte fel, csatold fel újra úgy, hogy egyszerre lenyomod az (R) és a (B) gombokat
+1. Starte GodMode9, indem du während dem Starten deiner Konsole die Taste (Start) gedrückt hältst
+1. Drücke (Home), um das Aktionsmenü aufzurufen
+1. Wähle "Scripts"
+1. Select "GM9Megascript"
+1. Select "Backup Options"
+1. Select "SysNAND Backup"
+1. Drücke (A), um zu bestätigen
+  + Dieser Vorgang nimmt einige Zeit in Anspruch
+  + If you get an error, make sure that you have at least 1.3GB of free space on your SD card
+1. Drücke (A), um fortzufahren
+1. Drücke (B), um zum Hauptmenü zurückzukehren
+1. Select "Exit"
+1. Drücke (A), um die Schreibrechte zu deaktivieren, wenn du dazu aufgefordert wirst
+1. Drücke gleichzeitig (R) und (B), um die SD-Karte auszuwerfen
+1. Stecke die SD-Karte in deinen Computer
+1. Kopiere `<date>_<serialnumber>_sysnand_###.bin` und `essential.exefs`vom `/gm9/out/`Ordner der SD-Karte an einen sicheren Ort auf deinem Rechner
+  + Sichere die Dateien an mehreren Orten (Online-Speicher etc.)
+  + Diese Backups werden im Falle eines Bricks benötigt, um Daten aus dem NAND-Image wieder herzustellen, wenn etwas schief gehen sollte
+1. Lösche `<date>_<serialnumber>_sysnand_###.bin` und `<date>_<serialnumber>_sysnand_###.bin.sha`aus dem `/gm9/out/` Ordner der SD-Karte nachdem du diese kopiert hast
+1. Stecke die SD-Karte wieder in deine Konsole
+  + If your SD card was not detected, hold (R) and press (B) at the same time to remount it
 
-## NAND-ról készült bizonsági másolat visszaállítása
+## Wiederherstellen einer NAND-Sicherheitskopie
 
-1. Indítsd el a GodMode9-et a (Start) lenyomva tartásával boot közben
-1. Az SD kártya leválasztásához az (R) gomb lenyomva tartása mellett nyomd meg a (B) gombot
-1. Helyezd az SD kártyád a számítógépbe
-1. Másold a `<date>_<serialnumber>_sysnand_###.bin` fájlt a számítógépedről az SD kártyád `/gm9/out/` mappájába
-1. Tedd vissza az SD kártyád a készülékedbe
-1. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
-1. Válaszd a "Scripts..." opciót
-1. Válaszd ezt: "GM9Megascript"
-1. Válaszd a "Restore Options" opciót
-1. Válaszd a "SysNAND Restore (safe)" opciót
-1. Válaszd ki a NAND-odról készült biztonsági másolatot
-1. Nyomd meg az (A) gombot, hogy feloldd a SysNAND (lvl3) írást, majd sorban nyomd meg a kijelzett gombokat
-  + Ez nem fogja felülírni a boot9strap installációdat
-  + Ez a folyamat igénybe vesz majd némi időt
-1. Nyomd meg az (A) gombot a folytatáshoz
-1. Nyomd meg a (B) gombot, hogy visszamenj a főmenübe
-1. Válaszd az "Exit" opciót
-1. Nyomd meg az (A) gombot az írási engedélyek visszavonásához
+1. Starte GodMode9, indem du während dem Starten deiner Konsole (Start) gedrückt hältst
+1. Drücke gleichzeitig (R) und (B), um die SD-Karte auszuwerfen
+1. Stecke die SD-Karte in deinen Computer
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from your computer to the `/gm9/out/` folder on your SD card
+1. Stecke die SD-Karte wieder in deine Konsole
+1. Drücke (Home), um das Aktionsmenü aufzurufen
+1. Wähle "Scripts..."
+1. Select "GM9Megascript"
+1. Select "Restore Options"
+1. Select "SysNAND Restore (safe)"
+1. Wähle dein NAND backup aus
+1. Drücke (A) um die Schreibrechte für SysNAND (lvl3) zu aktivieren und gibt dann die angezeigte Tastenkombination ein
+  + Die Installation von boot9strap wird dadurch nicht überschrieben
+  + Dieser Vorgang nimmt einige Zeit in Anspruch
+1. Drücke (A), um fortzufahren
+1. Drücke (B), um zum Hauptmenü zurückzukehren
+1. Select "Exit"
+1. Drücke (A), um die Schreibrechte zu deaktivieren, wenn du dazu aufgefordert wirst
 
-## Bármely .CIA alkalmazás "Health & Safety"-be injektálása
+## Injektion einer beliebigen .CIA app in die "Gesundheits- und Sicherheitsinformationen"-App
 
-A rend kedvéért, másold az injektálni kívánt `.cia` fájlt az SD kártyád `/cias/` mappájába
+Für organisatorische Zwecke kopiere die `.cia`-Datei, die du initiieren willst, in den `/cias/`-Ordner auf deiner SD-Karte
 {: .notice--info}
 
-Vedd figyelembe, hogy nem lehetséges a "Health & Safety"-be injektálni nála nagyobb fájlokat (beleértve a játékokat és más, nagy méretű alkalmazásokat)
+Beachte, dass es nicht möglich ist, Dateien in die
+Gesundheit & Sicherheitsinformationen zu injizieren, die größer sind als die eigentliche App (einschließlich Spiele und andere große Anwendungen)
 {: .notice--info}
 
-1. Indítsd el a GodMode9-et a (Start) lenyomva tartásával boot közben
-1. Menj ide: `[0:] SDCARD` -> `cias`
-1. Nyomd meg az (A)-t, amikor a kívánt `.cia` van kijelölve, hogy kiválaszd, majd válaszd a "CIA image options..." opciót, utána pedig a "Mount image to drive" lehetőséget
-1. Nyomd meg az (A)-t, amikor a `.app` fájl van kijelölve, majd válaszd az "NCCH image options", aztán az "Inject to H&S" opciókat
-1. Nyomd meg az (A) gombot, hogy feloldd a SysNAND (lvl1) írást, majd sorban nyomd meg a kijelzett gombokat
-1. Nyomd meg az (A) gombot a folytatáshoz
-1. Nyomd meg az (A) gombot az írási engedélyek visszavonásához
+1. Starte GodMode9, indem du während dem Starten deiner Konsole (Start) gedrückt hältst
+1. Navigiere zu `[0:] SDCARD` ->` cias`
+1. Drücke (A) auf deiner `.cia` um sie auszuwählen, und wähle dann "CIA image otions..." und dann "Mount image to drive"
+1. Drücke (A) auf der `.app`-Datei, dann wähle "NCCH Image options" und danach wählst du "Inject to H&S"
+1. Drücke (A), um die SysNAND (Stufe 1) Bearbeitung zu aktivieren. Gebe dann die angegebene Tastenkombination ein
+1. Drücke (A), um fortzufahren
+1. Drücke (A), um die Schreibrechte zu widerrufen, wenn du dazu aufgefordert wirst
 
-## "Health & Safety" visszaállítása .CIA app injektálása után
+## Wiederherstellen der Gesundheit & Sicherheitsinformationen nach der Initiierung einer .CIA App
 
-Ez csak akkor fog működni, ha az injektálást GodMode9 végezte (nem pedig Decrypt9 vagy Hourglass9).
+Dies wird nur funktionieren, wenn die Injektion in Gesundheit & Sicherheit von GodMode9 durchgeführt wurde (nicht bei Decrypt9 oder Hourglass9).
 {: .notice--info}
 
-1. Indítsd el a GodMode9-et a (Start) lenyomva tartásával boot közben
-1. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
-1. Válaszd ki a "More..." opciót
-1. Válaszd a "Restore H&S" opciót
-1. Nyomd meg az (A) gombot, hogy feloldd a SysNAND (lvl1) írást, majd sorban nyomd meg a kijelzett gombokat
-1. Nyomd meg az (A) gombot az írási engedélyek visszavonásához
+1. Starte GodMode9, indem du während dem Starten deiner Konsole (Start) gedrückt hältst
+1. Drücke (HOME), um das Aktionsmenü aufzurufen
+1. Wähle "More..."
+1. Wähle "Restore H&S"
+1. Drücke (A), um die SysNAND (Stufe 1) Bearbeitung zu aktivieren. Dann gebe die angegebene Tastenkombination ein
+1. Drücke (A), um die Schreibrechte zu deaktivieren, wenn du dazu aufgefordert wirst
 
-## Játékkártya tartalmának kimentése
+## Dumpen einer Spiele-Cartridge
 
 {% capture notice %}
-Helyezd be a készülékedbe a menteni kívánt játékkártyát
-  + A 3DS játékkártyák telepíthető `.cia` formátumba lesznek mentve
-  + Az NDS játékkártyák nem telepíthető `.nds` formátumba lesznek mentve, amely flashkártyákkal és emulátorokkal lesz kompatibilis
+Insert the game cartridge you intend to dump into your device
+  + 3DS Spielecartridges werden in ein installierbares `.cia` Format umgewandelt
+  + NDS-Spielecartridges werden in ein nicht installierbares `.nds`-Format, kompatibel mit Flashcarts und Emulatoren, umgewandelt
 {% endcapture %}
 
 <div class="notice--info">{{ notice | markdownify }}</div>
 
-1. Indítsd el a GodMode9-et a (Start) lenyomva tartásával boot közben
-1. Menj ide: `[C:] GAMECART`
-1. Kövesd az alábbi lépések közül az adott játékkártyához megfelelőt:
-  + **3DS játékkártya:** Nyomd meg az (A)-t a `[TitleID].trim.3ds`fájlon, hogy kijelöld, majd válaszd a "NCSD image options...", aztán a "Build CIA from file" opciókat
-  + **NDS játékkártya:** Nyomd meg az (A)-t a `[TitleID].trim.nds` fájlon, hogy kijelöld, majd válaszd a "Copy to 0:/gm9/out" opciót
-1. A telepíthető `.cia` vagy a nem telepíthető `.nds` formátumú fájlodat az SD kártyád `/gm9/out/` mappájában találod ezután
+1. Starte GodMode9, indem du während dem Starten deiner Konsole (Start) gedrückt hältst
+1. Navigiere zu `[C:] GAMECART`
+1. Befolge die für deine Spielecartridge geltenden Schritte:
+  + ** 3DS Spielecartridge: ** Drücke (A) auf `[TitleID].trim.3ds`, um es auszuwählen, und wähle dann "NCSD image options...", und dann "Build CIA from file"
+  + **NDS Spielcartridge:** Drücke (A) auf `[TitleID].trim.nds` um es auszuwählen und wähle dann "Copy to 0:/gm9/out"
+1. Deine als installierbare `.cia` oder nicht-installierbare `.nds` formatierte Datei wird im Ordner `/gm9/out/` auf deiner SD-Karte ausgegeben
 
-## Telepített alkalmazás kimentése
+## Dumpen eines Titels
 
-1. Indítsd el a GodMode9-et a (Start) lenyomva tartásával boot közben
-1. Válaszd azt a meghajtót, ami a menteni kívánt alkalmazásod típusához tartozik:
-  + **Felhasználó által telepített alkalmazás**: `[A:] SYSNAND SD`
-  + **Rendszeralkalmazás**: `[1:] SYSNAND CTRNAND`
-1. Tartsd lenyomva az (R) gombot, és nyomd meg az (A)-t a meghajtó opciók előhozásához
-1. Válaszd a "Search for titles" opciót
-1. Nyomd meg az (A) gombot a folytatáshoz
-1. Nyomd meg az (A)-t a `.tmd` fájlon, hogy kiválaszd, majd válaszd a "TMD file options...", utána pedig a "Build CIA (standard)" opciókat
-1. A telepíthető `.cia` formátumú fájlodat az SD kártyád `/gm9/out/` mappájában találod ezután
+1. Starte GodMode9, indem du während dem Starten deiner Konsole (Start) gedrückt hältst
+1. Navigiere zu dem Laufwerk, das der Art des Titels entspricht, den du dumpen möchtest:
+  + ** Benutzerinstallierter Titel**: `[A:] SYSNAND SD`
+  + ** Systemtitel **: `[1:] SYSNAND CTRNAND`
+1. Drücke gleichzeitig (R) und (A), um die Laufwerksoptionen zu öffnen
+1. Wähle "Search for titles"
+1. Drücke (A), um fortzufahren
+1. Drücke (A) auf der `.tmd`-Datei, um sie auszuwählen, und wähle dann "TMD file options..." und wähle dann "Build CIA (standard)"
+1. Deine als installierbare `.cia` formatierte Datei wird im Ordner `/gm9/out/` auf deiner SD-Karte ausgegeben
 
-## .3DS konvertálása .CIA formátumba
+## Umwandeln einer .3DS in .CIA
 
 {% capture notice %}
-+ A rend kedvéért, másold a konvertálni kívánt `.3ds` fájljaidat az SD kártyád `/cias/` mappájába
-  + Vedd figyelembe, hogy amennyiben egy olyan `.3ds` fájlt szeretnél konvertálni, ami már megtalálható egy flashkártyán, kövesd inkább a [Játékkártya tartalmának kimentése](#dumping-a-game-cartridge) című részt
++ Für organisatorische Zwecke kopiere alle `.3ds`-Dateien, die du konvertieren möchtest, in den `/cias/`-Ordner auf deiner SD-Karte
+  + Wenn du eine ".3ds" Datei, die bereits auf einer Flashkarte ist, konvertieren möchtest, solltest du mit [Dumpen einer Spielecartridge](#dumping-a-game-cartridge) weitermachen
 {% endcapture %}
 
 <div class="notice--info">{{ notice | markdownify }}</div>
 
-1. Indítsd el a GodMode9-et a (Start) lenyomva tartásával boot közben
-1. Menj ide: `[0:] SDCARD` -> `cias`
-1. Nyomd meg az (A)-t a `.3ds` fájlodon, hogy kijelöld, aztán válaszd az "NCSD image options...", majd a "Build CIA from file" opciókat
-1. A telepíthető `.cia` formátumú fájlodat az SD kártyád `/gm9/out/` mappájában találod ezután
+1. Starte GodMode9, indem du während dem Starten deiner Konsole (Start) gedrückt hältst
+1. Navigiere zu `[0:] SDCARD` ->` cias`
+1. Drücke (A) auf einer ".3ds" datei um sie auszuwählen dann wähle die option "NCSD image options..." gefolgt von "Build CIA from file"
+1. Deine, als installierbare `.cia`, formatierte Datei wird im Ordner `/gm9/out/` auf deiner SD-Karte ausgegeben
 
-## Biztonsági másolat készítése GBA VC mentésekről
+## Sichern von GBA VC Spielständen
 
-A játék az SD kártyád `/gm9/out/` mappájába kerül kimentésre `<TitleID>.gbavc.sav` néven.
+Das Spiel wird auf der SD-Karte unter `/gm9/out/` mit dem Dateinamen `<TitleID>.gbavc.sav` gespeichert.
 {: .notice--info}
 
-Egy `<TitleID>.gbavc.sav` fájl Title ID-jének azonosításához használhatod a Title ID-k listáját, amit a következőképp érhetsz el: menj a `[A:] SYSNAND SD` opcióra, tartsd lenyomva az (R)-t, és nyomd meg az (A)-t, majd válaszd a "Search for titles" opciót.
+Um die passend Title ID einer `<TitleID>.gbavc.sav` Datei zu finden, kannst du dir eine Liste aller Spiele und der zugehörigen Titel IDs der auf dem System installierten Spiele anzeigen lassen. 
+Markiere dazu `[A:] SYSNAND SD` während du (R) und (A) zeitgleich drückst. Danach betätigst du "Search for titles".
 {: .notice--info}
 
-1. Csináld végig az alábbi lépéseket minden egyes GBA VC játékhoz, aminek a mentését másolni szeretnéd:
-  + Indítsd el az adott GBA VC játékot
-  + Lépj ki belőle
-  + Indítsd el a készülékedet a (Start) lenyomva tartásával, hogy megjelenjen a Luma3DS chainloader menü
-  + Indítsd el a GodMode9-et az a (A) gomb megnyomásával
-  + Menj ide: `[S:] SYSNAND VIRTUAL`
-  + Nyomd meg az (A) gombot a `agbsave.bin` fájlon, hogy kijelöld
-  + Válaszd az "AGBSAVE options..." opciót
-  + Válaszd a "Dump GBA VC save" opciót
-  + Nyomd meg az (A) gombot a folytatáshoz
-  + Nyomd meg a (Start) gombot az eszköz újraindításához
+1. Führe die folgenden Schritte für jedes GBA VC Spiel aus, für das du ein Backup erstellen möchtest:
+  + Starte das GBA VC spiel
+  + Verlasse das GBA VC Spiel wieder
+  + Starte dein Gerät während du Start gedrückt hälst um in das Luma3DS Chainloader menü zu kommen
+  + Starte GodMode9 indem du (A) drückst
+  + Navigiere zu `[1:] SYSNAND -> CTRNAND`
+  + Drücke (A), um `agbsave.bin` auszuwählen
+  + Wähle "AGBSAVE options..."
+  + Wähle "Dump GBA VC save"
+  + Drücke (A), um fortzufahren
+  + Drücke (Start), um deine Konsole neu zu starten
 
-## GBA VC mentések visszaállítása
+## Wiederherstellung von GBA VC Spielständen
 
-Egy `<TitleID>.gbavc.sav` fájl Title ID-jének azonosításához használhatod a Title ID-k listáját, amit a következőképp érhetsz el: menj a `[A:] SYSNAND SD` opcióra, tartsd lenyomva az (R)-t, és nyomd meg az (A)-t, majd válaszd a "Search for titles" opciót.
+Um die passend Title ID einer `<TitleID>.gbavc.sav` Datei zu finden, kannst du dir eine Liste aller Spiele und der zugehörigen Titel IDs der auf dem System installierten Spiele anzeigen lassen. 
+Markiere dazu `[A:] SYSNAND SD` während du (R) und (A) zeitgleich drückst. Danach betätigst du "Search for titles".
 {: .notice--info}
 
-1. Csináld végig az alábbi lépéseket minden egyes GBA VC játékhoz, aminek a mentését vissza akarod állítani:
-  + Indítsd el az adott GBA VC játékot
-  + Lépj ki belőle
-  + Indítsd el a készülékedet a (Start) lenyomva tartásával, hogy megjelenjen a Luma3DS chainloader menü
-  + Indítsd el a GodMode9-et az a (A) gomb megnyomásával
-  + Menj ide: `[0:] SDCARD` -> `gm9`
-  + Nyomd meg az (Y) gombot a visszaállítani kívánt `<TitleID>.gbavc.sav` fájlon, hogy kimásold
-  + Nyomd meg a (B) gombot, hogy visszamenj a főmenübe
-  + Menj ide: `[S:] SYSNAND VIRTUAL`
-  + Nyomd meg az (A) gombot a `agbsave.bin` fájlon, hogy kijelöld
-  + Válaszd az "AGBSAVE options..." opciót
-  + Válaszd az "Inject GBA VC save" opciót
-  + Nyomd meg az (A) gombot a folytatáshoz
-  + Nyomd meg a (Start) gombot az eszköz újraindításához
-  + Indítsd el az adott GBA VC játékot
-  + Lépj ki belőle
+1. Führe den folgenden Prozess für jedes GBA VC Spiel durch, bei dem du einen Spielstand wiederherstellen möchtest:
+  + Starte das GBA VC Spiel
+  + Verlasse das GBA VC Spiel wieder
+  + Starte dein Gerät während du (Start) gedrückt hältst, um in das Luma3DS Chainloader-Menü zu gelangen
+  + Starte GodMode9 indem du (A) drückst
+  Navigiere zu `[0:] SDCARD` -> `gm9`
+  + Drücke zur Wiederherstellung die Taste (Y) auf der gewünschten Datei (`<TitleID>.gbavc.sav`)
+  + Drücke (B), um zum Hauptmenü zurückzukehren
+  + Navigiere zu `[S:] SYSNAND VIRTUAL`
+  + Drücke (A), um `agbsave.bin` auszuwählen
+  + Wähle "AGBSAVE options..."
+  + Wähle "Inject GBA VC save"
+  + Drücke (A), um fortzufahren
+  + Drücke (Start), um deine Konsole neu zu starten
+  + Starte das GBA VC Spiel
+  + Verlasse das GBA VC Spiel wieder
 
-## SD kártya formázása
+## Formatieren einer SD-Karte
 
-**Ne feledd, hogy ez minden adatot töröl az SD kártyádról!**
+**Beachte dies wird alles von deiner SD karte entfernen
 {: .notice--danger}
 
-1. Indítsd el a GodMode9-et a (Start) lenyomva tartásával boot közben
-1. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
-1. Válaszd ki a "More..." opciót
-1. Válaszd az "SD format menu" opciót
-1. Válaszd ki azt az EmuNAND opciót, amit használni szeretnél
-  + A legtöbb felhasználó számára a "No EmuNAND" lesz a megfelelő
-1. Válaszd az "Auto" opciót
-1. Nyomd meg az (A) gombot, hogy elfogadd a `GM9SD` címkét
-  + Persze tetszőlegesen megadhatsz más, egyedi nevet is az SD kártyádnak
-1. Ha kéri, akkor nyomd meg sorban azokat a gombokat, amiket kijelez a képernyőn, hogy beleegyezz a formázásba
+1. Starte GodMode9, indem du während dem Starten deiner Konsole (Start) gedrückt hältst
+1. Drücke (HOME), um das Aktionsmenü aufzurufen
+1. Wähle "More..."
+1. Wähle "SD format menu"
+1. Wähle die EmuNand version die du nutzen möchtest
+  + Die meisten Nutzer wollen "No EmuNAND" auswählen
+1. Wähle "Auto"
+1. Drücke nun die (A) taste um den Namen `GM9SD` zu akzeptieren
+  + Alternativ kannst du auch einen eigenen Namen für die SD karte aussuchen
+1. Gib die Tastenkombination zur Bestätigung ein, wenn danach verlangt wird
 
-## .CIA fájl titkosítása / visszafejtése
+## Entschlüsselung / Verschlüsselung von .CIA Dateien
 
-A rend kedvéért, másold a titkosítani vagy visszafejteni kívánt `.cia` fájljaidat az SD kártyád `/cias/` mappájába
+For organizational purposes, copy each `.cia` file you wish to encrypt / decrypt to the `/cias/` folder on your SD card
 {: .notice--info}
 
-1. Indítsd el a GodMode9-et a (Start) lenyomva tartásával boot közben
-1. Menj ide: `[0:] SDCARD` -> `cias`
-1. Nyomd meg az (A)-t a `.cia` fájlon, hogy kijelöld, majd válaszd a "CIA image options..." opciót
-1. Válaszd ki a megfelelő opciót attól függően, hogy mit szeretnél csinálni:
-    + **Encrypt to 0:/gm9/out:** Létrehoz egy titkosított másolatot a kiválasztott `.cia` fájlból az SD kártyád `/gm9/out/` mappájában
-    + **Decrypt to 0:/gm9/out:** Létrehoz egy titkosítatlan másolatot a kiválasztott `.cia` fájlból az SD kártyád `/gm9/out/` mappájában
-    + **Encrypt inplace:** Cseréli a kijelölt `.cia` fájlt a titkosított változatára
-    + **Decrypt inplace:** Cseréli a kijelölt `.cia` fájlt a titkosítatlan változatára
-1. A titkosított / visszafejtett `.cia` fájlodat ezután megtalálod a kívánt helyen
+1. Starte GodMode9, indem du während dem Starten deiner Konsole (Start) gedrückt hältst
+1. Navigiere zu `[0:] SDCARD` ->` cias`
+1. Drücke (A) um die `.cia` datei auszuwählen und wähle dann die option "CIA image options..."
+1. Wähle den Vorgang für die gewünschte funktion:
+    + **Verschlüsseln in 0:/gm9/out:** Erstellt eine verschlüsselte Kopie der ausgewählten `.cia` Datei im Ordner `/gm9/out/` auf der SD-Karte
+    + **Entschlüsseln in 0:/gm9/out:** Erstellt eine entschlüsselte Kopie der ausgewählten `.cia` Datei im Ordner `/gm9/out/` auf der SD-Karte
+    + **Vorhandene verschlüsseln:** Ersetze die ausgewählte `.cia`-Datei mit einer verschlüsselten Version
+    + **Vorhandene entschlüsseln:** Ersetze die ausgewählte `.cia`-Datei mit einer entschlüsselten Version
+1. Deine verschlüsselte / entschlüsselte .cia wird dann an die gewünschte Position ausgegeben
 
-## NNID eltávolítása az eszközöd formázása nélkül
+## Entfernen einer NNID, ohne die Konsole formatieren zu müssen
 
-1. Indítsd el a GodMode9-et a (Start) lenyomva tartásával boot közben
-1. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
-1. Válaszd a "Scripts..." opciót
-1. Válaszd ezt: "GM9Megascript"
-1. Válaszd ezt: "Scripts from Plailect's Guide"
-1. Válaszd a "Remove NNID" opciót
-1. Nyomd meg az (A) gombot a folytatáshoz
-1. Nyomd meg az (A) gombot, hogy feloldd a SysNAND (lvl1) írást, majd sorban nyomd meg a kijelzett gombokat
-1. Nyomd meg az (A) gombot a folytatáshoz
-1. Nyomd meg a (B) gombot, hogy visszamenj a főmenübe
-1. Válaszd az "Exit" opciót
-1. Nyomd meg az (A) gombot az írási engedélyek visszavonásához
-1. Nyomd meg a (Start) gombot az eszköz újraindításához
+1. Starte GodMode9, indem du während dem Starten deiner Konsole (Start) gedrückt hältst
+1. Drücke  (HOME) um das Aktionsmenü aufzurufen
+1. Wähle "Scripts..."
+1. Select "GM9Megascript"
+1. Select "Scripts from Plailect's Guide"
+1. Select "Remove NNID"
+1. Drücke (A), um fortzufahren
+1. Drücke (A), um die SysNAND (Stufe 1) Bearbeitung zu aktivieren. Dann gebe die angegebene Tastenkombination ein
+1. Drücke (A) um fortzufahren
+1. Drücke (B), um zum Hauptmenü zurückzukehren
+1. Select "Exit"
+1. Drücke (A), um die Schreibrechte zu deaktivieren, wenn du dazu aufgefordert wirst
+1. Drücke (Start), um deine Konsole neu zu starten
