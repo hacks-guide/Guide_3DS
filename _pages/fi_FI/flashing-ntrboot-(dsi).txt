@@ -1,48 +1,48 @@
 ---
-title: "ntrboot flashelése (DSi)"
+title: "Ntrbootin asentaminen (DSi)"
 ---
 
-{% include toc title="Tartalomjegyzék" %}
+{% include toc title="Sisällysluettelo" %}
 
-### Fontos tudnivalók
+### Tärkeää tietoa
 
-Mielőtt elkezdenénk, bizonyosodj meg róla, hogy mindent elolvastál az [ntrboot](ntrboot)-tal kapcsolatban
+Varmista ennen jatkamista, että olet lukenut kaikki [ntrbootia koskevat huomautukset](ntrboot).
 
-Ehhez a módszerhez szükséged lesz átmenetileg egy Nintendo DSi készülékre, ami kompatibilis a flashkártyáddal. Ez a módszer a flashkártyát használja, hogy futtassa az ntrboot flashelő `.nds` fájlt a DSi-den. Ez azt jelenti, hogy a flashkártyádnak támogatnia kell `.nds` fájlok futtatását azon a verzión, amin a DSi-d áll. További információkért lásd a táblázatot az [ntrboot](ntrboot) oldalon.
+Tämä menetelmä vaatii tilapäiseen käyttöön flash-korttisi kanssa yhteensopivan Nintendo DSi -konsolin. Tämä menetelmä käyttää flash-korttia ntrboot-asennusohjelman (`.nds`-tiedoston) avaamiseen DSi:lläsi. This means that your flashcart must support launching `.nds` files on your DSi's version. Tutustu [Ntrboot](ntrboot)-sivun flash-korttitaulukkoon lisätietoja varten.
 
-Vedd figyelembe, hogy néhány ritka esetben lehetséges, hogy a flashelési folyamat során **brickelődjön** néhány hamisított flashkártya és végleg használhatatlanná váljon. Ez elég valószínűtlen, azonban éppen emiatt csak eredeti flashkártyákat támogatunk. Ajánlott jó hírű oldalakon vásárolni (mint például az [NDS Card](http://www.nds-card.net/)), hogy elkerüld a hamisított flashkártyákat
+Huomaa, että joissain harvinaisissa yhteensattumissa asennusprosessi saattaa **vioittaa** jäljitelmä-flash-korttia ja tehdä siitä pysyvästi käyttökelvottoman. Vaikka tämä onkin epätodennäköistä, on suositeltavaa käyttää vain alkuperäisiä kortteja. To reduce the chance of receiving a counterfeit card, it is recommended that you use a reputable site to buy your flashcart (such as [NDS Card](http://www.nds-card.net/))
 {: .notice--danger}
 
-### Amire szükséged lesz
+### Tarpeet
 
-* Olyan flashkártya, ami támogatja az ntrboot-ot
-* Két készülék 
-  + **A forrás DSi**: egy Nintendo DSi, ami támogatja a flashkártyádat
-  + **A cél 3DS**: egy eszköz a 3DS családból, ami gyári állapotban van
-* A [ds_ntrboot_flasher](https://github.com/ntrteam/ds_ntrboot_flasher/releases/latest) legújabb verziója *(a `dsi` flasher; nem a sima flasher)*
+* Ntrboot-yhteensopiva flash-korttisi
+* Kaksi konsolia 
+  + **Lähde-DSi**: flash-korttisi kanssa yhteensopiva Nintendo DSi
+  + **Kohde-3DS**: 3DS-perheen konsoli, jolla on vakiolaiteohjelmisto
+* The latest release of [ds_ntrboot_flasher](https://github.com/ntrteam/ds_ntrboot_flasher/releases/latest) *(`dsi` flasher; not the standard flasher)*
 
-### Utasítások
+### Ohjeet
 
-#### Első rész - Előkészületek
+#### Vaihe I – Valmistelut
 
-1. Kapcsold ki a **forrás DSi**-t
-1. Helyezd a flashkártyád SD kártyáját a számítógépbe
-1. Másold a `ds_ntrboot_flasher_dsi.nds` fájlt a flashkártyád SD kártyájára
-1. Helyezd vissza a flashkártyád SD kártyáját a flashkártyádba
-1. Helyezd be az ntrboot kompatibilis DS / DSi flashkártyádat a **forrás DSi**-be
+1. Sammuta **lähde-DSi**
+1. Aseta flash-korttisi SD-kortti tietokoneeseesi
+1. Kopioi `ds_ntrboot_flasher_dsi.nds` flash-korttisi SD-kortille
+1. Aseta SD-kortti takaisin flash-korttiisi
+1. Aseta ntrboot-yhteensopiva DS-/DSi-flash-korttisi **lähde-DSi**:hin
 
-#### Második rész - ntrboot flashelése
+#### Vaihe II – Ntrbootin asentaminen
 
-1. Indítsd el a `ds_ntrboot_flasher_dsi.nds` fájlt **a forrás DSi-n** a flashkártyád segítségével
-1. Nyomd meg az (A) gombot a folytatáshoz
-1. Használd a (Fel) és (Le) gombokat a flashkártyád kiválasztásához
-1. Nyomd meg az (A) gombot a folytatáshoz
-1. Nyomd meg az (A) gombot, hogy elvégezd az "inject ntrboothax" folyamatot
-1. Nyomd meg az (A) gombot, hogy kiválaszd a "RETAIL" opciót
-1. Nyomd meg az (A) gombot a folytatáshoz
-1. Válaszd az "EXIT" opciót
+1. Avaa `ds_ntrboot_flasher_dsi.nds` flash-korttisi avulla **lähde-DSi**-konsolilla
+1. Paina (A):ta jatkaaksesi
+1. Käytä ristiohjainta valitaksesi flash-korttisi
+1. Paina (A):ta jatkaaksesi
+1. Paina (A):ta suorittaaksesi toiminnon "inject ntrboothax"
+1. Paina (A):ta valitaksesi vaihtoehdon "RETAIL"
+1. Paina (A):ta jatkaaksesi
+1. Valitse "EXIT"
 
 ___
 
-### Továbblépés a [boot9strap telepítésére (ntrboot)](installing-boot9strap-(ntrboot))
+### Jatka osioon [Boot9strapin asentaminen (ntrboot)](installing-boot9strap-(ntrboot))
 {: .notice--primary}
