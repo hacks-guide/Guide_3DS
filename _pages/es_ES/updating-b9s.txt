@@ -1,77 +1,77 @@
 ---
-title: "Updating B9S"
+title: "Actualizar B9S" #
 ---
 
-{% include toc title="Table of Contents" %}
+{% include toc title="Tabla de contenidos" %}
 
-### Required Reading
+### Lectura requerida
 
-This page is for existing boot9strap users to update their installation of boot9strap to the latest version.
+Esta página es para ayudar a los usuarios actuales de boot9strap a actualizar su instalación a la última versión.
 
 {% capture notice-1 %}
-There have been reports of a wave of bans being handed out to CFW users by Nintendo. To protect yourself, please do the following steps before starting this guide:
+Ha habido muchos reportes de olas de baneos a usuarios de CFW por parte de Nintendo. Para protegerte, puedes realizar los siguientes pasos antes de seguir esta guía:
 
-1. Go to System Settings, then "Internet Settings", then "SpotPass", then "Sending of System Information"
-1. Disable the "Sending of System Information" option
-1. Exit the System Settings
-1. Go to your Friend List (the [orange Face Icon]({{ "/images/friend-list-icon.png" | absolute_url }}) in the top row of your Home Menu)
-  + If you receive an error and are kicked out of the menu, the Friend List setting is either already disabled or your console cannot connect to Nintendo's servers (due to a ban or connection issues)
-1. Go to the Friend List settings, then "Friend Notification Settings", then "Show friends what you're playing"
-1. Disable the "Show friends what you're playing" option
-1. Exit your Friend List
+1. Ve a Configuración de la consola, luego a "Configuración de internet", luego "Envío de información sobre la consola"
+1. Desactiva la opción "Envío de información sobre la consola"
+1. Sal de la Configuración de la consola
+1. Ve a tu Lista de Amigos (el [Icono Naranja con una cara]({{ "/images/friend-list-icon.png" | absolute_url }}) en la fila superior de tu Menú HOME)
+  + Si recibes un error y eres expulsado del menú, la configuración de la Lista de Amigos ya ha sido deshabilitada o tu consola no se puede conectar a los servidores de Nintendo (debido a un ban o por problemas de conexión)
+1. Ve a la configuración de la Lista de amigos, luego a "Notificaciones entre amigos", y luego "Mostrar qué estás jugando"
+1. Desactiva la opción "Mostrar qué estás jugando"
+1. Sal de tu Lista de amigos
 
 {% endcapture %}
 
 <div class="notice--danger">{{ notice-1 | markdownify }}</div>
 
-### What You Need
+### Qué necesitas
 
-* The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
-* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
-* The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
+* La última versión de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* La última versión de [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(boot9strap normal; no el archivo `devkit` ni el archivo `ntr`)*
+* La ultima version de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
+* La última versión [del Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
 
-### Instructions
+### Instrucciones
 
-#### Section I - Prep Work
+#### Sección I - Preparativos
 
-For all steps in this section, overwrite any existing files on your SD card.
+Para todos los pasos en esta sección, sobreescribe cualquier archivo existente en tu tarjeta SD.
 {: .notice--info}
 
-1. Insert your SD card into your computer
-1. Copy `boot.3dsx` to the root of your SD card
-1. Create a folder named `boot9strap` on the root of your SD card
-1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
-1. Copy `SafeB9SInstaller.firm` from the SafeB9SInstaller `.zip` to the `/luma/payloads/` folder on your SD card
-1. Reinsert your SD card into your device
+1. Inserta tu tarjeta SD en tu computadora
+1. Copia `boot.3dsx` a la raíz de tu tarjeta SD
+1. Crea una carpeta llamada `boot9strap` en la raíz de tu tarjeta SD
+1. Copia `boot9strap.firm` y `boot9strap.firm.sha` desde el `.zip` de boot9strap a la carpeta `/boot9strap/` en tu tarjeta SD
+1. Copia `SafeB9SInstaller.firm` desde el `.zip` de SafeB9SInstaller a la carpeta `/luma/payloads/` en tu tarjeta SD
+1. Vuelve a insertar tu tarjeta SD en tu consola
 
-#### Section II - Installing boot9strap
+#### Sección II - Instalar boot9strap
 
-1. Launch Luma3DS chainloader menu by holding (Start) during boot
-1. Launch SafeB9SInstaller by pressing (A)
-1. Wait for all safety checks to complete
-1. When prompted, input the key combo given to install boot9strap
-1. Once it has completed, hold (Start) while pressing (A) to reboot your device to the Luma3DS chainloader
-  + If you encounter an `argc = 0` error booting your device after the B9S update, just continue to fix it
+1. Inicia el menú de selección de payloads de Luma3DS manteniendo (Start) al encender
+1. Inicia SafeB9SInstaller presionando (A)
+1. Espera a que todos los controles de seguridad se completen
+1. Cuando se solicite, introduce la combinación de botones mostrada para instalar boot9strap
+1. Una vez que se haya completado, mantén presionado (Start) mientras pulsas (A) para reiniciar tu consola en el selector de payloads de Luma3DS
+  + Si se produce un error `argc = 0` al iniciar tu consola luego de actualizar B9S, tan sólo continúa para solucionarlo
 
-#### Section III - Update Luma3DS
+#### Section III - Actualizar Luma3DS
 
-1. Power off your device
-1. Insert your SD card into your computer
-1. Copy `boot.firm` from the Luma3DS `.zip` to the root of your SD card, replacing the existing file
-1. Reinsert your SD card into your device
-1. Power on your device
+1. Apaga tu consola
+1. Inserta tu tarjeta SD en tu computadora
+1. Copia `boot.firm` desde el `.zip` de Luma3DS a la raíz de tu tarjeta SD reemplazando el archivo existente
+1. Vuelve a insertar tu tarjeta SD en tu consola
+1. Enciende tu consola
 
-#### Section IV - Configuring Luma3DS
+#### Sección IV - Configurar Luma3DS
 
-This section is only needed if you are prompted with the Luma3DS configuration menu after the reboot.
+Esta sección es sólo necesaria si se ha mostrado la configuración Luma3DS luego de reiniciar.
 {: .notice--info}
 
-1. In the Luma3DS configuration menu, use the (A) button and the D-Pad to turn on the following:    
+1. En el menú de configuración de Luma3DS, usa el botón (A) y el D-Pad para activar lo siguiente:    
   + **"Show NAND or user string in System Settings"**
-1. Press (Start) to save and reboot
+1. Presiona (Start) para guardar y reiniciar
 
 ___
 
-### Continue to [Finalizing Setup](finalizing-setup)
+### Continúa en [Finalizar instalación](finalizing-setup)
 {: .notice--primary}
