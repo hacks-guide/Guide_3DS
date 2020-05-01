@@ -12,10 +12,6 @@ If the 3DS already recognizes the SD card, this guide is not required.
 
 This page is for Linux users only. If you are not on Linux, check out the [Formatting SD (Windows)](formatting-sd-(Windows)) or [Formatting SD (Mac)](formatting-sd-(mac)) pages.
 
-### What You Need
-
-* The latest version of [guiformat](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm)
-
 ### Instructions
 #### Section I - Determining which slot your SD card is in
 
@@ -36,7 +32,7 @@ GiB)
 
 #### Section II - Formatting the card
 
-![](https://en.wikipedia.org/wiki/Cfdisk#/media/File:Cfdisk_screenshot.png)
+![](https://upload.wikimedia.org/wikipedia/commons/8/85/Cfdisk_screenshot.png)
 
 1. Type in `sudo cfdisk /dev/(device mount point from above)`.
 2. On each partition, hit `Delete`.
