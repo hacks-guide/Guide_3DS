@@ -14,8 +14,31 @@ Ciononostante, i metodi "tradizionali", più vecchi, vengono mantenuti qui per v
 
 Se ti dovesse servire una mano, puoi entrare nel canale [Nintendo Homebrew su Discord](https://discord.gg/MWxPgEp) e chiedere, in inglese.
 
+#### Sezione I - Test di Compatibilità
+
+The following exploits make use of one of two DS-mode applications built into the 3DS: DS Internet Settings and DS Download Play.
+
+If both DS Internet Settings and DS Download Play fail to work, you will have to repair them with [TWLFix-3DS](https://github.com/MechanicalDragon0687/TWLFix-3DS/releases/) using a homebrew entrypoint, such as Pichaxx.
+
+#### Test Connessioni Nintendo DS (usato per Fredtool)
+
+1. Vai su "Impostazioni della console", "Impostazioni Internet", quindi "Connessioni Nintendo DS"
+1. Premi "OK"
+1. Se la tua console carica il menu "Configurazione Nintendo Wi-Fi Connection", il test ha avuto successo
+  + If the screen stays black or appears to freeze, the test has failed
+1. Esci da questo menu
+
+#### Test Modalità Download DS (usato per Frogtool)
+
+1. Avvia l'applicazione "Modalità download" (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
+1. Seleziona "Nintendo DS"
+1. If your device loads into a “Download software via DS Download Play” menu, the test was successful 
+  + If the screen stays black or appears to freeze, the test has failed
+1. Esci da questo menu
+
+___
+
 1. [BannerBomb3](bannerbomb3): Seedminer + BannerBomb3 + Fredtool
-1. [Pichaxx](homebrew-launcher-(pichaxx)): Seedminer + Pichaxx + DSiWare Dumper + Fredtool
-  + Pichaxx ha anche un metodo alternativo: [Frogtool](installing-boot9strap-(frogtool)): Seedminer + Pichaxx + Frogtool
-  
-Tutte queste opzioni dovrebbero condurre al termine alla sezione [Completamento dell'Installazione](finalizing-setup).
+  + This method is recommended if your shoulder buttons do not work
+1. [Pichaxx](homebrew-launcher-(pichaxx)): Seedminer + Pichaxx + Frogtool
+  + This method is recommended if your DSiWare Management menu crashes
