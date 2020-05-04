@@ -14,8 +14,31 @@ However, "legacy" or outdated methods are kept here for various purposes. They w
 
 If you need help, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for assistance.
 
+#### Часть I - Проверка совместимости
+
+The following exploits make use of one of two DS-mode applications built into the 3DS: DS Internet Settings and DS Download Play.
+
+If both DS Internet Settings and DS Download Play fail to work, you will have to repair them with [TWLFix-3DS](https://github.com/MechanicalDragon0687/TWLFix-3DS/releases/) using a homebrew entrypoint, such as Pichaxx.
+
+#### Тест DS Internet Settings (используется для Fredtool)
+
+1. Откройте Системные настройки, затем "Интернет-настройки", затем "Подключения Nintendo DS"
+1. Нажмите "OK"
+1. Если консоль загружает меню "Nintendo Wi-Fi Connection Setup", значит тест пройден успешно
+  + If the screen stays black or appears to freeze, the test has failed
+1. Выйдите из меню
+
+#### Тест DS Download Play (используется для Frogtool)
+
+1. Запустите приложение Загружаемая игра (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
+1. Выберите "Nintendo DS"
+1. If your device loads into a “Download software via DS Download Play” menu, the test was successful 
+  + If the screen stays black or appears to freeze, the test has failed
+1. Выйдите из меню
+
+___
+
 1. [BannerBomb3](bannerbomb3): Seedminer + BannerBomb3 + Fredtool
-1. [Pichaxx](homebrew-launcher-(pichaxx)): Seedminer + Pichaxx + DSiWare Dumper + Fredtool
-  + Pichaxx also has a sub method: [Frogtool](installing-boot9strap-(frogtool)): Seedminer + Pichaxx + Frogtool
-  
-All of these options should also finish with [Finalizing Setup](finalizing-setup).
+  + This method is recommended if your shoulder buttons do not work
+1. [Pichaxx](homebrew-launcher-(pichaxx)): Seedminer + Pichaxx + Frogtool
+  + This method is recommended if your DSiWare Management menu crashes
