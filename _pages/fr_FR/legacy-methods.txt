@@ -14,8 +14,31 @@ Cependant, des méthodes "anciennes" ou périmées sont conservées ici à diver
 
 Si vous avez besoin d'aide, rejoignez [Nintendo Homebrew sur Discord](https://discord.gg/MWxPgEp) et demandez de l'aide en anglais.
 
+#### Section I - Test de compatibilité
+
+The following exploits make use of one of two DS-mode applications built into the 3DS: DS Internet Settings and DS Download Play.
+
+If both DS Internet Settings and DS Download Play fail to work, you will have to repair them with [TWLFix-3DS](https://github.com/MechanicalDragon0687/TWLFix-3DS/releases/) using a homebrew entrypoint, such as Pichaxx.
+
+#### Test des Paramètres Internet DS (utilisé pour Fredtool)
+
+1. Allez dans les Paramètres de la console, puis "Paramètres Internet", puis "Connexions Nintendo DS"
+1. Appuyez sur "OK"
+1. Si votre console charge le menu "Configuration de la connexion Wi-Fi Nintendo", le test a réussi
+  + If the screen stays black or appears to freeze, the test has failed
+1. Quittez ce menu
+
+#### Test du Mode téléchargement (utilisé pour Frogtool)
+
+1. Lancez l'application Mode Téléchargement (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
+1. Sélectionnez "Nintendo DS"
+1. If your device loads into a “Download software via DS Download Play” menu, the test was successful 
+  + If the screen stays black or appears to freeze, the test has failed
+1. Quittez ce menu
+
+___
+
 1. [BannerBomb3](bannerbomb3): Seedminer + BannerBomb3 + Fredtool
-1. [Pichaxx](homebrew-launcher-(pichaxx)): Seedminer + Pichaxx + DSiWare Dumper + Fredtool
-  + Pichaxx a également une sous-méthode : [Frogtool](installing-boot9strap-(frogtool)): Seedminer + Pichaxx + Frogtool
-  
-Toutes ces options devraient également se terminer par [Finalisation de l'installation](finalizing-setup).
+  + This method is recommended if your shoulder buttons do not work
+1. [Pichaxx](homebrew-launcher-(pichaxx)): Seedminer + Pichaxx + Frogtool
+  + This method is recommended if your DSiWare Management menu crashes
