@@ -1,0 +1,56 @@
+### What You Need
+
+* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
+* The latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest)
+
+#### Section I  - slotTool
+1. Copy `boot.firm` and from the Luma3DS `.zip` to the root of your SD card
+1. Copy `slotTool.3dsx` from the unSAFE_MODE archive to the `3ds` folder and `usm.bin` to your sd root
+1. Insert your sd card into your console
+1. Open the Homebrew Launcher using any method
+1. Launch slotTool from the list of homebrew
+1. Select the "INSTALL exploit to wifi slots 1,2,3 & shutdown" option
+  + You will see some on-screen text and then your system will shutdown
+
+#### Section II - unSAFE_MODE
+
+1. With your system still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), then press (Power)
+  + Release the buttons after a few seconds. Your console will boot into Safe Mode
+1. Press "OK" to accept the update
+  + There is no update. This is part of the exploit
+1. Press "I accept" to accept the terms and conditions
+1. The update will eventually fail, with error code `003-1099`. This is intended behaviour
+1. When asked "Would you like to configure Internet settings?", select "Yes"
+1. On the following menu, navigate to `Connection 1` -> `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings` -> `Detailed Setup`
+1. Once you see `B9S install SUCCESS` on the top screen, press any button to reboot to Luma Configuration
+
+#### Section III - Configuring Luma3DS
+
+1. Your device should automatically show the Luma Configuration menu
+1. Use the (A) button and the D-Pad to turn on the following:
+  + **"Show NAND or user string in System Settings"**
+1. Press (Start) to save and reboot
+  + Your device should load the Home Menu after a short delay. If you get a black screen lasting longer than 5 minutes, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
+ 
+ #### Section IV - Restoring WiFi Configuration Profiles
+ 
+ 1. Launch the Download Play application (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
+1. Wait until you see the two buttons
+1. Press (Left Shoulder) + (D-Pad Down) + (Select) at the same time to open the Rosalina menu
+1. Select "Miscellaneous options"
+1. Select "Switch the hb. title to the current app."
+1. Press (B) to continue
+1. Press (B) to return to the Rosalina main menu
+1. Press (B) to exit the Rosalina menu
+1. Press (Home), then close Download Play
+1. Launch the Download Play application
+1. Your device should load the Homebrew Launcher
+1. Launch slotTool from the list of homebrew
+1. Select "RESTORE original wifi slots 1,2,3"
+  + Your console will reboot
+1. Continue to Finalizing Setup
+
+___
+
+### Continue to [Finalizing Setup](finalizing-setup)
+{: .notice--primary}
