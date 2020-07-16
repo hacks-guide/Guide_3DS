@@ -1,21 +1,44 @@
 ---
-title: "Legacy Methods"
+title: "Устаревшие методы"
 ---
 
 {% include toc title="Содержание" %}
 
 ### Обязательно к прочтению
 
-There have been multiple improvements and advancements to methods for installing CFW over the last short while.
+За последнее время было сделано несколько улучшений и усовершенствований в методах установки CFW.
 
-For this reason, it is recommended you use the most up-to-date method found on the [Seedminer](seedminer) page.
+По этой причине рекомендуется использовать наиболее актуальный метод на странице [Seedminer](seedminer).
 
-However, "legacy" or outdated methods are kept here for various purposes. They will require that you have done [Seedminer](seedminer) first.
+Однако, "legacy" или устаревшие методы хранятся здесь для различных целей. Они потребуют, чтобы вы сначала выполнили инструкции на странице [Seedminer](seedminer).
 
-If you need help, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for assistance.
+Если вам нужна помощь, зайдите на сервер [Nintendo Homebrew в Discord](https://discord.gg/MWxPgEp) и попросите (на английском языке) вам помочь.
+
+#### Часть I - Проверка совместимости
+
+Следующие эксплойты используют одно из двух DS приложений, встроенных в 3DS: DS Internet Settings и DS Download Play.
+
+Если оба приложения DS Internet Settings и DS Download Play не работают, то вам придется восстановить их с помощью [TWLFix-3DS](https://github. om/MechanicalDragon0687/TWLFix-3DS/releases/), используя другой способ запуска хоумбрю, например Pichaxx.
+
+#### Тест DS Internet Settings (используется для Fredtool)
+
+1. Откройте Системные настройки, затем "Интернет-настройки", затем "Подключения Nintendo DS"
+1. Нажмите "OK"
+1. Если консоль загружает меню "Nintendo Wi-Fi Connection Setup", значит тест пройден успешно
+  + Если экран остается черным, или консоль зависает, значит тест не удался
+1. Выйдите из меню
+
+#### Тест DS Download Play (используется для Frogtool)
+
+1. Запустите приложение Загружаемая игра (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
+1. Выберите "Nintendo DS"
+1. Если консоль загружает меню “Download software via DS Download Play”, значит тест пройден успешно 
+  + Если экран остается черным, или консоль зависает, значит тест не удался
+1. Выйдите из меню
+
+___
 
 1. [BannerBomb3](bannerbomb3): Seedminer + BannerBomb3 + Fredtool
-1. [Pichaxx](homebrew-launcher-(pichaxx)): Seedminer + Pichaxx + DSiWare Dumper + Fredtool
-  + Pichaxx also has a sub method: [Frogtool](installing-boot9strap-(frogtool)): Seedminer + Pichaxx + Frogtool
-  
-All of these options should also finish with [Finalizing Setup](finalizing-setup).
+  + Этот метод рекомендуется, если боковые кнопки консоли не работают
+1. [Pichaxx](homebrew-launcher-(pichaxx)): Seedminer + Pichaxx + Frogtool
+  + Этот метод рекомендуется, если меню управления DSiWare не работает
