@@ -119,17 +119,16 @@ class exploitList {
 	exportVersionsToSelector(selector) {
 		Array.from(this.versions.keys())
 			.sort((v1, v2) => {
-				if (v1.startsWith("Select an option") && v2.startsWith("Latest")) return 1;
-				if (v2.startsWith("Select an option") && v1.startsWith("Latest")) return -1;
-				if (v1.startsWith("Latest") || v1.startsWith("Select an option")) return 1;
-				if (v2.startsWith("Latest") || v2.startsWith("Select an option")) return -1;
+				if (v1.startsWith("Select an option") && v2.startsWith("Latest")) return -1;
+				if (v2.startsWith("Select an option") && v1.startsWith("Latest")) return 1;
+				if (v1.startsWith("Latest") || v1.startsWith("Select an option")) return -1;
+				if (v2.startsWith("Latest") || v2.startsWith("Select an option")) return 1;
 
 				let split1 = v1.split("."),
 				    split2 = v2.split(".");
 
-				return (split1[0] - split2[0]) || (split1[1] - split2[1]) || (split1[2] - split2[2])
+				return (split2[0] - split1[0]) || (split2[1] - split1[1]) || (split2[2] - split1[2])
 			})
-			.reverse()
 			.forEach(version => {
 				let option = document.createElement("option");
 				option.text = version;
