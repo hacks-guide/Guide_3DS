@@ -46,6 +46,7 @@ There have been reports of a wave of bans being handed out to CFW users by Ninte
 
 ### Version Table
 
+<noscript id="versionTable">
 <table>
   <colgroup>
     <col span="1" style="width: 10%;">
@@ -90,3 +91,83 @@ There have been reports of a wave of bans being handed out to CFW users by Ninte
     </tr>
   </tbody>
 </table>
+</noscript>
+
+<script>
+const selectorContainer = document.createElement("div");
+selectorContainer.innerText = "Please select a firmware version: ";
+
+const defaultOptions = [
+	'<b><a href="ntrboot">ntrboot</a></b> --- (Requires a Compatible Flashcart)',
+	'<b><a href="installing-boot9strap-(hardmod)">Installing boot9strap (Hardmod)</a></b> --- (Requires a Compatible Flashcart)'
+]
+
+class exploitList {
+	constructor() {
+		this.versions = new Map();
+	}
+
+	addInstruction(toDo, versions, defaults = true) {
+		versions.forEach(version => {
+			if (this.versions.has(version))
+				this.versions.get(version).push(toDo)
+			else
+				this.versions.set(version, [toDo].concat(defaults ? defaultOptions : []))
+		})
+	}
+
+	exportVersionsToSelector(selector) {
+		let options = Array.from(this.versions.keys())
+			.filter(element => element !== 'Select an option')
+			.sort((v1, v2) => {
+				if (v1.startsWith("Latest")) return 1;
+				if (v2.startsWith("Latest")) return -1;
+
+				const split1 = v1.split(".");
+				const split2 = v2.split(".");
+
+				return (split1[0] - split2[0]) || (split1[1] - split2[1]) || (split1[2] - split2[2])
+			})
+
+		options.push('Select an option')
+
+		options.reverse().forEach(version => {
+			let option = document.createElement("option");
+			option.text = version;
+			selector.add(option);
+		})
+	}
+
+	returnInstruction (version) {
+		const allOptions = this.versions.get(version);
+		if (allOptions.length == 1 && allOptions[0] == '') return '';
+
+		const numbers = document.createElement("ol");
+		allOptions.forEach(option => {
+			let number = document.createElement("li");
+			number.innerHTML = option;
+			numbers.append(number);
+		})
+		return numbers.outerHTML;
+	}
+}
+
+const exploits = new exploitList();
+exploits.addInstruction('', ['Select an option'], false)
+exploits.addInstruction("Update to the latest version", ['1.0.0', '1.1.0', '2.0.0', '11.4.0', '11.5.0', '11.6.0', '11.7.0', '11.8.0', '11.9.0'])
+exploits.addInstruction('<a href="installing-boot9strap-(soundhax)"><b>Installing boot9strap</b> (Soundhax)</a>', ['2.1.0', '3.0.0', '4.0.0', '4.1.0', '4.2.0', '4.3.0', '4.4.0', '4.5.0', '5.0.0', '5.1.0', '6.0.0', '6.1.0', '6.2.0', '6.3.0', '7.0.0', '7.1.0', '7.2.0', '8.0.0', '8.1.0'])
+exploits.addInstruction('<a href="homebrew-launcher-(soundhax)"><b>Homebrew Launcher</b> (Soundhax)</a>', ['9.1.0', '9.2.0', '9.3.0', '9.4.0', '9.5.0', '9.6.0', '9.7.0', '9.8.0', '9.9.0', '10.0.0', '10.1.0', '10.2.0', '10.3.0', '10.4.0', '10.5.0', '10.6.0', '10.7.0', '11.0.0', '11.1.0', '11.2.0', '11.3.0'])
+exploits.addInstruction('<a href="seedminer"><b>Seedminer</b></a>', ['11.12.0', 'Latest - 11.13.0'])
+
+const selector = document.createElement("select");
+exploits.exportVersionsToSelector(selector);
+
+const selectorResults = document.createElement("div");
+selector.addEventListener("change", () => selectorResults.innerHTML = exploits.returnInstruction(selector.options[selector.selectedIndex].text))
+
+selectorContainer.append(selector);
+selectorContainer.append(selectorResults)
+
+const noScriptTable = document.getElementById("versionTable");
+noScriptTable.insertAdjacentElement('afterend', selectorContainer);
+</script>
