@@ -1,5 +1,5 @@
 ---
-title: "Installing boot9strap (HBL-USM)"
+title: "安装 boot9strap（通过 HBL-USM）"
 ---
 
 {% include toc title="目录内容" %}
@@ -8,13 +8,13 @@ title: "Installing boot9strap (HBL-USM)"
 
 为了破解系统的 SAFE_MODE 固件，我们需要注入一个已被破解的 WiFi 配置文件到主机中。
 
-As we already have Homebrew access, we can use slotTool to do this.
+现在我们能够进入 Homebrew 了，所以接下来我们会使用 slotTool 继续做下去。
 
-This specific method is intended to be used with Homebrew Launcher access through [BrowserHax 2020](homebrew-launcher-(browserhax-2020)).
+你需要需要先做完 [2020 版浏览器破解步骤](homebrew-launcher-(browserhax-2020))才能打开 Homebrew Launcher。
 
-If you have Homebrew Launcher access through another entry point, you should use [Frogtool](installing-boot9strap-(frogtool)).
+如果你是通过其他方式进入 Homebrew Launcher 的，则你应该使用 [Frogtool](installing-boot9strap-(frogtool)) 而不是本方法。
 
-一旦 WiFi 配置文件被注入，我们将会使用到 SAFE_MODE 来继续此教程。SAVE_MODE 是一个所有的 3DS 主机都存在的修复功能，之后它将被用于激活被破解的 WiFi 配置文件。
+一旦 WiFi 配置文件被注入，我们将会使用到 SAFE_MODE 来继续此教程。安全模式（SAVE MODE）是一个所有的 3DS 主机都存在的修复功能，之后它将被用于激活被破解的 WiFi 配置文件。
 
 这些操作可在美、欧、日、韩版的主机上工作，你可通过系统版本号末尾的 U，E，J，K 字符来区分主机版本。
 
@@ -24,36 +24,36 @@ If you have Homebrew Launcher access through another entry point, you should use
 ### 你需要准备点啥？
 
 * 最新版 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
-* The latest release archive for [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest)
+* 最新版 [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest)
 
 #### 第一步 — 准备工作
 
-1. Copy `boot.firm` and `boot.3dsx` from the Luma3DS `.zip` to the root of your SD card, replacing any existing files
-1. Create a folder named 3ds on the root of your SD card if it does not already exist
-1. From the slotTool folder from the unSAFE_MODE `.zip`, copy `slotTool.3dsx` to the `3ds` folder
-1. Copy `usm.bin` from the unSAFE_MODE `.zip` to the root of your SD card
+1. 解压 Luma3DS `.zip` 内的 `boot.firm` 到你 SD 卡的根目录，请覆盖已有文件
+1. 检查 SD 卡的根目录是否存在一个名为 `3ds` 的文件夹，如果没有则手动新建一个
+1. 解压 unSAFE_MODE `.zip` 中的 slotTool 文件夹，然后复制 `slotTool.3dsx` 到 `3ds` 文件夹
+1. 从 unSAFE_MODE `.zip` 复制 `usm.bin` 到 SD 卡的根目录
 
-#### Section II - slotTool
+#### 第二步 — slotTool
 
 1. 启动你的主机
-1. Open the Homebrew Launcher through BrowserHax
-  + This may take a few tries
-1. Launch slotTool from the list of homebrew
-  + If you get stuck on a red screen, forcefully power off the console by holding the power button for fifteen seconds, then retry this section
-1. Select the "INSTALL exploit to wifi slots 1,2,3 & shutdown" option
-  + You will see some on-screen text and then your system will shut down
+1. 通过浏览器破解方法进入 Homebrew Launcher
+  + 有可能需要反复尝试几次
+1. 从自制程序列表中找到并启动 slotTool
+  + 如果你的主机卡在了红屏，请按住电源键 15 秒来强制关机，然后重试本步骤
+1. 选择 “INSTALL exploit to wifi slots 1,2,3 & shutdown” 选项
+  + 你应该会看到屏幕上出现了一些文字，然后你的主机就关机了
 
 #### 第三步 — unSAFE_MODE
 
 1. 将你的主机置于关机状态，按住 L + R + ↑ + A 按键，然后按下电源键
-  + Keep holding the buttons until the console boots into Safe Mode
+  + 按住这几个按钮，直到主机进入安全模式
 1. 点击 “OK” 来允许更新
   + 这个步骤实际上不存在更新。 这只是触发漏洞的一部分
 1. 点击 “I accept（我同意/同意する）”
 1. 更新最终将失败，然后报出 `003-1099` 的错误。 这是剧本中的一部分
 1. 当系统问你“你想要配置互联网设置吗？（Would you like to configure Internet settings?）”时，点击 “Yes”
 1. 在接下来出现的菜单中，移动至 `连接点 1（Connection 1）` -> `更改设置（Change Settings）` -> `下一页（右箭头）` -> `代理设置（Proxy Settings）` -> `详细设置（Detailed Setup）`
-  + Here is a [visual representation](https://uwuu.ca/images/safemode_highlighted.png)
+  + 这里有一份[演示图像](https://uwuu.ca/images/safemode_highlighted.png)
 1. 然后你应该会看到上屏提示 `B9S install SUCCESS`，然后你就可以按下任意键重启到 Luma 设置了
 
 #### 第四步 — 设置 Luma3DS
@@ -68,7 +68,7 @@ If you have Homebrew Launcher access through another entry point, you should use
 
 1. 运行“下载通信(Download Play)”程序
 1. 等到你看到两个按钮
-  + Do not press either of the buttons
+  + 不要按下任意一个按钮
 1. 同时按下 “L” + “↓” + “Select” 键来打开 Rosalina 菜单
 1. 选择 “Miscellaneous options”
 1. 选择 “Switch the hb. title to the current app.”
@@ -76,11 +76,11 @@ If you have Homebrew Launcher access through another entry point, you should use
 1. 按 “B” 键返回 Rosalina 主菜单
 1. 按 “B” 键退出 Rosalina 菜单
 1. 按下 “Home” 键，然后关闭“下载通信(Download Play)”
-1. Relaunch the Download Play application
+1. 重新运行“下载通信（Download Play）”程序
 1. 此时你的主机应该会启动 Homebrew Launcher了
-1. Launch slotTool from the list of homebrew
-1. Select "RESTORE original wifi slots 1,2,3"
-1. Your device will then reboot
+1. 从自制程序列表中找到并启动 slotTool
+1. 选择“RESTORE original wifi slots 1,2,3”
+1. 你的主机将会重启
 
 ___
 
