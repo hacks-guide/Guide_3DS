@@ -1,0 +1,83 @@
+---
+title: "安装 boot9strap（通过 HBL-USM）"
+---
+
+{% include toc title="目录内容" %}
+
+### 必读事项
+
+为了破解系统的 SAFE_MODE 固件，我们需要注入一个已被破解的 WiFi 配置文件到主机中。
+
+现在我们能够进入 Homebrew 了，所以接下来我们会使用 slotTool 继续做下去。
+
+你需要需要先做完 [2020 版浏览器破解步骤](homebrew-launcher-(browserhax-2020))才能打开 Homebrew Launcher。
+
+如果你是通过其他方式进入 Homebrew Launcher 的，则你应该使用 [Frogtool](installing-boot9strap-(frogtool)) 而不是本方法。
+
+一旦 WiFi 配置文件被注入，我们将会使用到 SAFE_MODE 来继续此教程。安全模式（SAVE MODE）是一个所有的 3DS 主机都存在的修复功能，之后它将被用于激活被破解的 WiFi 配置文件。
+
+这些操作可在美、欧、日、韩版的主机上工作，你可通过系统版本号末尾的 U，E，J，K 字符来区分主机版本。
+
+如果你的 L 键、R 键、↑ 键和 A 键中的其中一个按键坏了无法使用，则你只能使用[传统方法](legacy-methods)。 如需帮助，请加入 [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) 并使用英文求助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网），你也可以到译者的 [QQ 群](https://jq.qq.com/?_wv=1027&k=5CfEA4c)寻求帮助，群号为942052497。
+{: .notice--danger}
+
+### 你需要准备点啥？
+
+* 最新版 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
+* 最新版 [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest)
+
+#### 第一步 — 准备工作
+
+1. 你的主机现在应该在本教程的前一部分打开了 Homebrew Launcher 了
+1. 从自制程序列表中找到并启动 slotTool
+  + 如果你的主机卡在了红屏，请按住电源键 15 秒来强制关机，然后重试本步骤
+1. 选择 “INSTALL exploit to wifi slots 1,2,3 & shutdown” 选项
+  + 你应该会看到屏幕上出现了一些文字，然后你的主机就关机了
+1. 从主机拔出 SD 卡，然后将其插入电脑
+1. 解压 Luma3DS `.zip` 内的 `boot.firm` 到你 SD 卡的根目录，请覆盖已有文件
+1. 从 unSAFE_MODE `.zip` 复制 `usm.bin` 到 SD 卡的根目录
+1. 将 SD 卡插回主机
+
+#### 第二步 — unSAFE_MODE
+
+1. 将你的主机置于关机状态，按住 L + R + ↑ + A 按键，然后按下电源键
+  + 按住这几个按钮，直到主机进入安全模式
+1. 点击 “OK” 来允许更新
+  + 这个步骤实际上不存在更新。 这只是触发漏洞的一部分
+1. 点击 “I accept（我同意/同意する）”
+1. 更新最终将失败，然后报出 `003-1099` 的错误。 这是剧本中的一部分
+1. 当系统问你“你想要配置互联网设置吗？（Would you like to configure Internet settings?）”时，点击 “Yes”
+1. 在接下来出现的菜单中，移动至 `连接点 1（Connection 1）` -> `更改设置（Change Settings）` -> `下一页（右箭头）` -> `代理设置（Proxy Settings）` -> `详细设置（Detailed Setup）`
+  + 这里有一份[演示图像](https://uwuu.ca/images/safemode_highlighted.png)
+1. 然后你应该会看到上屏提示 `B9S install SUCCESS`，然后你就可以按下任意键重启到 Luma 设置了
+
+#### 第三步 - 设置 Luma3DS
+
+1. 你的主机应该会自动进入到 Luma 配置菜单
+1. 使用方向键和 “A” 键来启用以下设置：
+  + **“Show NAND or user string in System Settings”**
+1. 按下 “Start” 键保存设置并重启
+  + 你的主机应该在一会后加载到系统桌面。 如果你等了超过五分钟还是黑屏，[请参见此故障排查章节](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
+
+#### 第四步 — 还原 WiFi 配置文件
+
+1. 运行“下载通信(Download Play)”程序
+1. 等到你看到两个按钮
+  + 不要按下任意一个按钮
+1. 同时按下 “L” + “↓” + “Select” 键来打开 Rosalina 菜单
+1. 选择 “Miscellaneous options”
+1. 选择 “Switch the hb. title to the current app.”
+1. 按 “B” 键继续
+1. 按 “B” 键返回 Rosalina 主菜单
+1. 按 “B” 键退出 Rosalina 菜单
+1. 按下 “Home” 键，然后关闭“下载通信(Download Play)”
+1. 重新运行“下载通信（Download Play）”程序
+1. 此时你的主机应该会启动 Homebrew Launcher了
+1. 从自制程序列表中找到并启动 slotTool
+1. 选择“RESTORE original wifi slots 1,2,3”
+1. 你的主机将会重启
+
+___
+
+### 继续至[完成安装](finalizing-setup)
+{: .notice--primary}

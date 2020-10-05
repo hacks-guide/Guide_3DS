@@ -142,6 +142,7 @@ $(document).ready(function(){
     "bannerbomb3": "18",
     "homebrew-launcher-(pichaxx)": "19",
     "installing-boot9strap-(usm)": "20",
+    "installing-boot9strap-(hbl-usm)": "21",
   };
 
   for(var method in methods){
@@ -175,8 +176,9 @@ $(document).ready(function(){
       "16": ["seedminer", "homebrew-launcher-(steelhax)", "installing-boot9strap-(frogtool)", "finalizing-setup"],
       "17": ["seedminer", "multiple-options", "installing-boot9strap-(fredtool)", "finalizing-setup"],
       "18": ["seedminer", "bannerbomb3", "installing-boot9strap-(fredtool)", "finalizing-setup"],
-      "19": ["seedminer", "homebrew-launcher-(pichaxx)", "dsidumper","installing-boot9strap-(fredtool)", "finalizing-setup"],
+      "19": ["seedminer", "homebrew-launcher-(pichaxx)", "installing-boot9strap-(frogtool)", "finalizing-setup"],
       "20": ["seedminer", "installing-boot9strap-(usm)", "finalizing-setup"],
+      "21": ["homebrew-launcher-(browserhax-2020)", "installing-boot9strap-(hbl-usm)", "finalizing-setup"],
     };
     unhide = unhide.concat(route[method]);
     if(typeof unhide !== 'undefined' && unhide.length > 0){

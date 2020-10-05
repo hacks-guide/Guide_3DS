@@ -1,0 +1,66 @@
+---
+title: "Homebrew Launcher (BrowserHax 2020)"
+---
+
+{% include toc title="Table des matières" %}
+
+### Lecture requise
+
+Cette méthode d'accès au Homebrew Launcher se sert de failles dans le Navigateur Internet 3DS natif.
+
+### Tests de compatibilité
+
+Pour pouvoir utiliser cette méthode, votre console doit provenir d'une région compatible avec une version compatible du navigateur.
+
+Vous pouvez vérifier ces informations dans les Paramètres de la console.
+
+1. Ouvrez les Paramètres de la console.
+1. Vous pouvez voir la version du firmware sous la forme de `11.13.0-45x` dans le coin inférieur droit de l'écran supérieur.
+  + Le 45 représente la version du navigateur et la lettre représente la région
+  + If your browser version is less than 45, you will need to update the console through the System Settings "Software Update" option
+  + E designates EUROPE
+  + U designates USA
+  + J designates JAPAN
+  + If your console has a letter other than any of these three, it is not compatible with this method.
+1. Remember your region designation. You will need to know this later.
+
+## Ce dont vous avez besoin
+
+* La dernière version de [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
+* The latest release archive of BrowserHax [[for Old 3DS](https://github.com/zoogie/old-browserhax/releases/latest) / [for New 3DS](https://github.com/zoogie/new-browserhax/releases/latest)]
+  + New/Old refers to the model of your console. If you are unsure of which model you have, consult [this image](https://3ds.eiphax.tech/pic/newold.png)
+* An active WiFi connection on your console
+
+### Instructions
+
+#### Section I - Préparatifs
+
+1. Power off your console and remove the SD card
+1. Connect the SD card to your computer
+1. Copy `boot.3dsx` from the Homebrew Launcher release to the root of your SD card
+  + The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
+1. In the BrowserHax release archive, open the folder corresponding to your console's region
+1. Copy the `3ds` folder, `browserhax_hblauncher_ropbin_payload.bin` and `arm11code.bin` from there to the root of your SD card
+  + You should now have a `Nintendo 3DS` folder, a `3ds` folder and the two `.bin` files on your root directory
+
+#### Section II - BrowserHax
+
+1. Open [this image](https://3ds.eiphax.tech/pic/hax.png) in a new tab or window on your computer
+1. Safely remove your SD card from your computer and put it back in your console
+1. Power on your console and ensure it is connected to an active WiFi network
+1. From the HOME Menu, press the Left Shoulder and Right Shoulder buttons together
+  + This should open a QR Scanner. If it does not, USM (the next part of getting custom firmware) will not work for you. You will need to use a [legacy method](legacy-methods)
+  + If you need to type out the URL, it is `https://zoogie.github.io/web/nbhax/`
+1. Use the QR scanner to scan the QR code you opened in the first step
+1. Tap the "PROCEED TO HAXX" button
+1. Attendez la fin de l'opération
+  + If it displays a yellow screen, power your console off, then try this section again
+1. Si l'exploit a réussi, votre console devrait avoir démarré l'Homebrew Launcher
+  + You may see an error stating that no applications were found. If this occurs, proceed to the next steps
+1. Leave your console on and proceed to the next section below
+
+
+___
+
+### Continue to [Installing boot9strap (HBL-USM)](installing-boot9strap-(hbl-usm))
+{: .notice--primary}
