@@ -105,7 +105,7 @@ class exploitList {
 		this.versions = new Map();
 	}
 
-	addInstruction(toDo, versions, defaults = true) {
+	addInstruction(toDo, versions, defaults = false) {
 		versions.forEach(version => {
 			if (this.versions.has(version))
 				this.versions.get(version).push(toDo)
@@ -135,8 +135,16 @@ class exploitList {
 	}
 
 	returnInstruction (version) {
-		const allOptions = this.versions.get(version);
-		if (allOptions.length == 1 && allOptions[0] == '') return '';
+		let allOptions = this.versions.get(version);
+		let preText = '';
+
+		if (allOptions.length == 1) {
+			if (allOptions[0] == '')
+				return '';
+
+			preText = `<h3 class="notice---primary">Recommended Method: ${allOptions[0]}</h3><br><b>Alternatives</b>`;
+			allOptions = defaultOptions;
+		}
 
 		const numbers = document.createElement("ol");
 		allOptions.forEach(option => {
@@ -144,7 +152,7 @@ class exploitList {
 			number.innerHTML = option;
 			numbers.append(number);
 		})
-		return numbers.outerHTML;
+		return preText + numbers.outerHTML;
 	}
 }
 
