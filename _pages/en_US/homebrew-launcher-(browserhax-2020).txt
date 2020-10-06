@@ -62,5 +62,27 @@ You can check these details from System Settings.
 
 ___
 
-### Continue to [Installing boot9strap (HBL-USM)](installing-boot9strap-(hbl-usm))
-{: .notice--primary}
+<h3 id="continueTo" class="notice--primary">Continue to <a href="installing-boot9strap-(hbl-usm)">Installing boot9strap (HBL-USM)</a></h3>
+<script>
+const checkbox = document.createElement('input');
+checkbox.setAttribute('type', 'checkbox');
+checkbox.setAttribute('checked', 'checked');
+checkbox.setAttribute('onclick', 'changeInstructionText(this)');
+const continueTo = document.getElementById('continueTo');
+function changeInstructionText (checkboxClick) {
+	if (checkboxClick.checked) {
+		continueTo.classList.remove('notice--danger');
+		continueTo.classList.add('notice--primary');
+		continueTo.innerHTML = 'Continue to <a href="installing-boot9strap-(hbl-usm)">Installing boot9strap (HBL-USM)</a>';
+	} else {
+		continueTo.classList.add('notice--danger');
+		continueTo.classList.remove('notice--primary');
+		continueTo.innerHTML = 'You will need to use a <a href="legacy-methods">Legacy Method</a>.' +
+			'<ul><li>For assistance with this matter, join <a href="https://discord.gg/MWxPgEp" target="_blank">Nintendo Homebrew on Discord</a> and ask, in English, for help.</li></ul>';
+	}
+};
+const label = document.createElement('label');
+label.appendChild(checkbox);
+label.innerHTML += ' My shoulder buttons are working';
+continueTo.insertAdjacentElement('beforebegin', label);
+</script>
