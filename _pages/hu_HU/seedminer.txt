@@ -6,29 +6,29 @@ title: "Seedminer"
 
 ### Fontos tudnivalók
 
-To install boot9strap on your device, we exploit an oversight in the security restrictions applied to "DSiWare" applications.
+Ahhoz, hogy telepítsük a boot9strap-et a készülékedre, egy, a "DSiWare" alkalmazásokra vonatkozó biztonsági megkötés hibáját fogjuk kihasználni.
 
-To accomplish this, we use a tool called Seedminer to calculate the DSiWare encryption key (`movable.sed`) for your device. We then use this DSiWare encryption key to decrypt a compatible DSiWare application and inject an exploit into it to run our own code (the exact exploit used will depend on your device's region).
+Ennek eléréséhez egy Seedminer nevű eszközt fogunk használni, hogy kiszámítsuk a készüléked DSiWare titkosítási kulcsát (`movable.sed`). Ezután ezt a DSiWare titkosítási kulcsot használjuk egy kompatibilis DSiWare alkalmazás visszafejtésére, és kihasználjuk azt a saját kódunk futtatásához (a pontos kihasználás az eszköz régiójától függ).
 
-If this key were completely random, the encryption key would be impossible to break on current computing hardware. Fortunately, the first half of the key (`movable_part1.sed`) is actually mathematically related to your device's Friend Code, allowing us to break the encryption. For information on how Seedminer works, please see [this presentation](https://zoogie.github.io/web/34⅕c3).
+Ha ez a kulcs teljesen véletlenszerű lenne, a titkosítási kulcsot lehetetlen lenne feltörni a jelenleg elérhető hardverekkel. Szerencsére a kulcs első fele (`movable_part1.sed`) matematikailag összefüggésben van a készüléked Friend Code-jával, ami lehetővé teszi a titkosítás feltörését. További információért arról, hogyan működik a Seedminer, nézd meg [ezt a prezentációt](https://zoogie.github.io/web/34⅕c3).
 
-This method uses a powerful graphics card to perform the calculations needed. A volunteer-run website is used for the purpose of assisting you with this method.
+Ez a módszer egy erős grafikus kártyát használ a szükséges számítások elvégzéséhez. Egy önkéntes által üzemeltetett webhely segít neked ebben a módszerben.
 
 ### Utasítások
 
-#### Section I - Compatibility Test
+#### I. rész - Kompatibilitás teszt
 
-While this test is not strictly necessary to perform the Seedminer exploit, the follow-up exploits to this do require this test to be performed and it would be a waste of time and effort to perform Seedminer without the ability to use the other exploits.
+Bár ezek a tesztek nem feltétlenül szükségesek a Seedminer kiaknázásához, az azt követő exploitok megkövetelik ennek a tesztnek a végrehajtását, így idő és erőforrás pocsékolás lenne a Seedminer végrehajtása, anélkül, hogy lehetőség lenne a többi exploit kihasználására.
 
-There are several different methods that build on the Seedminer exploit, so even if this test fails you can still use another method.
+Több különöző metódus épít a Seedminer exploitra, így ha ez a teszt sikertelen, még mindig használhatsz másik metódust.
 
-#### DSiWare Management Test (used for unSAFE_MODE)
+#### DSiWare Management Teszt (unSAFE_MODE-hoz használt)
 
-1. Go to System Settings, then "Data Management", then "DSiWare"
-1. If your console does not crash, the test was successful
-  + If the console crashes to the home menu, the test has failed and you will have to use a legacy method at the bottom of this page
-  + If you see a colored screen before the console crashes to the home menu, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you
-1. Exit to home menu
+1. Menj a System Settings-be, majd a "Data Management"-be, utána a "DSiWare"-be
+1. Ha a konzolod nem omlik össze, a teszt sikeres volt
+  +Ha a konzol a home menüre összeomlik, a teszt sikertelen és legacy metódust kell használni az oldal aljáról
+  + Ha színes képernyőt láttál, mielőtt a konzol a home menüre összeomlott, csatlakozz a [Nintendo Homebrew Discord-on](https://discord.gg/MWxPgEp) csatornához, és kérj segítséget (angol nyelven) valakitől
+1. Lépj ki a home menühöz
 
 #### Section II - Prep Work
 
