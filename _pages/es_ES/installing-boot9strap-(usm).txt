@@ -1,89 +1,90 @@
 ---
-title: "Installing boot9strap (USM)"
+title: "Instalar boot9strap (USM)"
 ---
 
 {% include toc title="Tabla de contenidos" %}
 
 ### Lectura requerida
 
-In order to exploit the SAFE_MODE firmware of our system, we need to inject an exploited WiFi profile.
+Para pode aprovechar el exploit del firmware SAFE_MODE de nuestro sistema, necesitamos inyectar un perfil de WiFi con el exploit.
 
-We can do this using an existing exploit, BannerBomb3.
+Podemos hacer esto utilizando un exploit existente, BannerBomb3.
 
-To accomplish this, we use your system's encryption key (movable.sed) to build a DSiWare backup that exploits the system in order to inject the exploited WiFi profile to your connections list.
+Para lograrlo, usamos la llave de cifrado de tu sistema (movable.sed) para crear una copia de seguridad de DSiWare que vulnera el sistema de modo de inyectar el perfil de WiFi con el exploit en tu lista de conexiones.
 
-Once the WiFi profile has been injected, we will use SAFE_MODE, which is a recovery feature present on all 3DS consoles, to activate the exploited WiFi profile.
+Una vez que el perfil de WiFi ha sido inyectado, usaremos SAFE_MODE, que consiste en una función de recuperación presente en todas las consolas, para activar el perfil de WiFi con el exploit.
 
 Estas instrucciones funcionan en consolas de las regiones USA, Europa, Japón y Corea, indicado por las letras U, E, J o K después de la versión del sistema.
 
-If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, you will need to use a [Legacy Method](legacy-methods). For assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+Si tus botones (Right/Left Shoulder), (D-Pad arriba) o (A) no funcionan, deberás utilizar un [Método antiguo](legacy-methods). Para ayuda con este asunto, únete al [Discord de Nintendo Homebrew](https://discord.gg/MWxPgEp) donde puedes pedir, en inglés, que te ayuden.
 {: .notice--danger}
 
 ### Qué necesitas
 
 * Tu archivo `movable.sed` proveniente de haber completado [Seedminer](seedminer)
-* The latest release archive for [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
+* La ultima versión de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
 
 #### Sección I - Preparativos
 
-1. Open [unSAFE_MODE-bb3 tool](https://usm.bruteforcemovable.com/) on your computer
+1. Abre la herramienta [unSAFE_MODE-bb3](https://usm.bruteforcemovable.com/) en tu computadora
+  + Si el sitio no está operativo, intenta con [éste otro](https://3ds.nhnarwhal.com/3dstools/unsafemode.php)
 1. Carga tu movable.sed usando la opción "Choose File"
-1. Click "Download unSAFE_MODE-bb3 archive"
-  + This will download an exploit DSiWare called `F00D43D5.bin` and a SAFE_MODE exploit data file called `usm.bin` inside of a zip folder (`unSAFE_MODE-bb3.zip`)
+1. Haz clic en "Download unSAFE_MODE-bb3 archive"
+  + Esto descargará un exploit de DSiWare llamado `F00D43D5.bin` y un archivo de datos de exploit para SAFE_MODE llamado `usm.bin` dentro de un archivo zip (`unSAFE_MODE-bb3.zip`)
 1. Si tu consola está encendida, apagala
 1. Inserta tu tarjeta SD en tu computadora
 1. Copia los archivos `boot.firm` y `boot.3dsx` desde el `.zip` de Luma3DS a la raíz de tu tarjeta SD
-1. Copy `usm.bin` from the USM archive (`unSAFE_MODE-bb3.zip`) to the root of your SD card
+1. Copia `usm.bin` desde el archivo USM (`unSAFE_MODE-bb3.zip`) a la raíz de tu tarjeta SD
 1. Ve a `Nintendo 3DS` -> `<ID0>` -> `<ID-de-32-caracteres>` -> `Nintendo DSiWare` en tu tarjeta SD
   + La `<ID0>` en cuestión es la misma que usaste en [Seedminer](seedminer)
   + Si `Nintendo DSiWare` no existe, créala
 1. Si ya hay archivos de copias de seguridad existentes de DSiWare (`<id-de-8-caracteres>.bin`) en esta carpeta, muévelos a tu PC
-  + Esto te dejará con una carpeta de Nintendo DSiWare vacía. Moving the files to your PC ensures you don't delete any intentional backups
-1. Copy the `F00D43D5.bin` file from the USM archive (`unSAFE_MODE-bb3.zip`) to the `Nintendo DSiWare` folder
+  + Esto te dejará con una carpeta de Nintendo DSiWare vacía. Mover los archivos a tu PC asegura que no borres ninguna copia de seguridad creada intencionalmente
+1. Copia el archivo `F00D43D5.bin` del archivo USM (`unSAFE_MODE-bb3.zip`) a la carpeta `Nintendo DSiWare`
 
-#### Section II - BannerBomb3
+#### Sección II - BannerBomb3
 
 1. Vuelve a insertar tu tarjeta SD en tu consola
 1. Enciende tu consola
 1. Entra a Configuración de la consola
 1. Ve a `Data Management` -> `DSiWare`
 1. Haz click en la sección de tarjeta SD
-  + Your bottom screen should flash Red and then the system will reboot to home menu a few seconds later. This means the exploit profile was successfully copied
-  + If the bottom screen does not flash Red, the exploit profile was not copied and you will not be able to complete the next section. Ensure that your files are properly placed, then try again
+  + La pantalla inferior debería parpadear en rojo y el sistema se reiniciará en el Menú HOME unos segundos más tarde. Esto significa que el perfil de exploit se ha copiado correctamente
+  + Si la pantalla inferior no parpadea en Rojo por un segundo, el perfil con el exploit no fue copiado y no podrás completar la siguiente sección. Asegúrate de que tus archivos están correctamente colocados, luego vuelve a intentarlo
 1. Apaga tu consola
 
-#### Section III - unSAFE_MODE
+#### Sección III - unSAFE_MODE
 
-1. With your system still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), then press (Power)
-  + Release the buttons after a few seconds. Your console will boot into Safe Mode
-1. Press "OK" to accept the update
-  + There is no update. This is part of the exploit
-1. Press "I accept" to accept the terms and conditions
-1. The update will eventually fail, with error code `003-1099`. This is intended behaviour
-1. When asked "Would you like to configure Internet settings?", select "Yes"
-1. On the following menu, navigate to `Connection 1` -> `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings` -> `Detailed Setup`
-1. Once you see `B9S install SUCCESS` on the top screen, press any button to reboot to Luma Configuration
+1. Con tu consola aún apagada, mantén pulsados los siguientes botones: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), luego presiona (Power)
+  + Suelta los botones después de unos segundos. Tu consola iniciará en modo seguro
+1. Presiona "OK" para aceptar la actualización
+  + No hay actualización. Esto es parte del exploit
+1. Presiona sobre "Acepto" para aceptar los términos y condiciones
+1. La actualización fallará, con el código de error `003-1099`. Este comportamiento es el esperado
+1. Cuando se te pregunte "¿Quieres configurar tu conexión a internet?", selecciona "Aceptar"
+1. En el menú siguiente, navega a `Conexión 1` -> `Modificar ajustes` -> `Siguiente página (flecha derecha)` -> `Servidor proxy` -> `Ajustes avanzados`
+1. Una vez que veas `B9S install SUCCESS` en la pantalla superior, presiona cualquier botón para reiniciar a la configuración de Luma
 
 #### Sección IV - Configurar Luma3DS
 
-1. Your device should automatically show the Luma Configuration menu
+1. Tu consola debería mostrar automáticamente el menú de configuración de Luma
 1. Utiliza el botón (A) y las flechas direccionales para activar lo siguiente:
   + **"Show NAND or user string in System Settings"**
 1. Presiona (Start) para guardar y reiniciar
   + Tu consola deberá cargar el Menú HOME después de un breve momento. Si la pantalla se queda en negro por más de 5 minutos, [sigue la guía de solución de problemas](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 
-#### Section V - Restoring WiFi Configuration Profiles
+#### Sección V - Restaurar los perfiles de configuración WiFi
 
 1. Entra a Configuración de la consola
 1. Ve a `Data Management` -> `DSiWare`
 1. Haz click en la sección de tarjeta SD
-  + Your bottom screen should flash Green and then the system will reboot to home menu a few seconds later. This means your WiFi configuration profiles were successfully restored
-1. Power your system off
+  + La pantalla inferior debería parpadear en verde y el sistema se reiniciará al Menú HOME unos segundos más tarde. Esto significa que los perfiles de configuración WiFi fueron restaurados con éxito
+1. Apaga tu consola
 1. Inserta tu tarjeta SD en tu computadora
 1. Ve a `Nintendo 3DS` -> `<ID0>` -> `<ID-de-32-caracteres>` -> `Nintendo DSiWare` en tu tarjeta SD
   + La `<ID0>` en cuestión es la misma que usaste en [Seedminer](seedminer)
-1. Delete `F00D43D5.bin` from your Nintendo DSiWare folder
-1. Continue to Finalizing Setup
+1. Elimina `F00D43D5.bin` de la carpeta Nintendo DSiWare
+1. Continúa en Finalizar instalación
 
 ___
 

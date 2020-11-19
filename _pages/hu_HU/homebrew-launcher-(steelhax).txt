@@ -6,58 +6,58 @@ title: "Homebrew Launcher (Steelhax)"
 
 ### Fontos tudnivalók
 
-This method of using Seedminer for further exploitation uses your `movable.sed` file to gain access to the Homebrew Launcher using the Steelhax exploit for the purposes of injecting an exploitable DSiWare title into the DS Download Play application. This method requires you to already own (or download) the free "Steel Diver: Sub Wars" game from the eShop.
+Ez a metódusa a Seedminer használatának a további exploitoláshoz használja a `movable.sed` fájlod, hogy hozzáférést szerezzen a Homebrew Launcher-hez a Steelhax exploittal, azzal az céllal, hogy beinjektáljon egy exploitolható DSiWare címet a DS Download Play alkalmazásba. Ehhez a metódushoz szükséges, hogy birtokold (vagy letöltsd) az ingyenes "Steel Diver: Sub Wars" játékot az eShop-ból.
 
-If your device already has access to the Homebrew Launcher (whether through Steelhax or another exploit), you can skip to [DSiWare Dumper](dsidumper)).
+Ha az eszközödnek már van hozzáférése a Homebrew Launcher-hez (mindegy, hogy Steelhax vagy más exploit) akkor tovább léphetsz a [DSiWare Dumper](dsidumper)-re).
 {: .notice--success}
 
-If you already have Steel Diver: Sub Wars, this process will overwrite your game's save file!
+Ha már megvan a Steel Diver: Sub Wars, ez a folyamat felül fogja írni a mentés fájljod!
 {: .notice--warning}
 
 ### Amire szükséged lesz
 
-* The free eShop game "Steel Diver: Sub Wars"
-* Your `movable.sed` file from completing [Seedminer](seedminer)
-* A [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest) legújabb kiadása
-* The latest release of [Steelhax](https://github.com/MechanicalDragon0687/vegaroxas.github.io/releases/download/1.0/steelhax-release.zip)
-* The [otherapp payload](https://deadphoenix8091.github.io/3ds/#otherapp) *(for your region and version)*
+* A "Steel Diver: Sub Wars" ingyenes eShop játékra
+* A `movable.sed` fájlodra a [Seedminer](seedminer)-ből
+* A [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest) legújabb kiadására
+* A [Steelhax](https://github.com/MechanicalDragon0687/vegaroxas.github.io/releases/download/1.0/steelhax-release.zip) legújabb kiadására
+* Az [otherapp payload](https://smealum.github.io/3ds/#otherapp)-ra *(a készüléked verziójának és régiójának megfelelő változatra)*
 
-### Utasítások
+### Lépések
 
-#### Első rész - Előkészületek
+#### I. rész - Előkészületek
 
 1. Hozz létre egy mappát `3ds` néven az SD kártyád gyökerében, ha még nem létezik ilyen
 1. Másold az `boot.3dsx` fájlt az SD kártyád gyökerébe
-1. Copy the `steelhax` folder from the `Steelhax-release.zip` to the root of your SD card
-1. Copy the otherapp payload to the `steelhax` folder on your SD card and rename it to `payload.bin`
+1. Másold át a `steelhax` mappát a Steelhax-release.zip`-ből az SD kártya gyökerébe
+1. Másold az otherapp payloadot az SD kártya gyökerébe, majd nevezd át `payload.bin` névre
 
-#### Section II - Steelminer
+#### II. rész - Steelminer
 
-1. Insert your SD card into your device
-1. Launch "Steel Diver: Sub Wars" once and select a Mii to initialize your save file
-  + Decline the game update when prompted
-  + If you have already updated the game, use the Data Management menu of the System Settings to delete the update
-1. Exit "Steel Diver: Sub Wars"
+1. Tedd vissza az SD kártyát a készülékbe
+1. Indítsd el a "Steel Diver: Sub Wars"-t egyszer és válaszd a Mii-t a mentés fájl inicializálásához
+  + Utasítsd el a frissítést, ha kérdezi
+  + Ha már frissítetted a játékot, akkor a System Settings Data management menüjében töröld a frissítést
+1. Lépj ki a "Steel Diver: Sub Wars"-ból
 1. Kapcsold ki a készüléked
 1. Helyezd az SD kártyád a számítógépbe
-1. Open [the Steelminer Injector website](https://seedminer.hacks.guide/steelhax/) on your computer
-1. Select your `movable.sed` file
+1. Nyisd meg [a Steelminer Injector weboldalát](https://seedminer.hacks.guide/steelhax/) a számítógépeden
+1. Válaszd ki a `movable.sed` fájlod
 1. Nyomd meg a "Start!" gombot
 1. Várd meg, amíg a folyamat befejeződik
-1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<32-character-id>` -> `title` -> `00040000` -> `<8-character-region>` -> `data` on your SD card
-  + **EUR Region**: `000d7e00`
-  + **JPN Region**: `000d7c00`
-  + **USA Region**: `000d7d00`
-1. Copy the new downloaded save file to the `data` folder on your SD card
-  + Overwrite the old save file when prompted
+1. Navigálj a ` `Nintendo 3DS` -> `<ID0>` -> `<32-character-id>` -> `title` -> `00040000` -> `<8-character-region>` -> `data` útvonalra az SD kártyán
+  + **EUR régió**: `000d7e00`
+  + **JPN régió**: `000d7c00`
+  + **USA régió**: `000d7d00`
+1. Másold a frissen letöltött mentés fájlt a `data` könyvtárba az SD kártyán
+  + Írja felül a régi mentés fájlt, ha kérdezi
 1. Tedd vissza az SD kártyád a készülékedbe
 1. Kapcsold be a készülékedet
-1. Launch "Steel Diver: Sub Wars"
+1. Indítsd el "Steel Diver: Sub Wars"-t
 1. Ha az exploit sikeres volt, a készülékednek ezt követően be kell töltenie a Homebrew Launchert
-  + You may see an error stating there are no applications found.
-1. Power off your device.
+  + Elképzelhető, hogy hibát kapsz arról, hogy nem találhatók alkalmazások.
+1. Kapcsold ki a készüléked.
 
 ___
 
-### Continue to [DSiWare Dumper](dsidumper)
+### Folytatás [DSiWare Dumper](dsidumper)-rel
 {: .notice--primary}

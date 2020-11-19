@@ -11,7 +11,7 @@ A következőkben teljes egészében el fogjuk távolítani a CFW-t a készülé
 Ez az esetek többségében nem old meg semmilyen olyan problémát, ami a CFW telepítése közben felmerülhet. Javasolt inkább elolvasnod a [Hibaelhárítás](troubleshooting) oldalt, vagy segítséget kérni (angol nyelven) itt: [Nintendo Homebrew a Discord-on](https://discord.gg/MWxPgEp).
 {: .notice--danger}
 
-Any unsigned (illegitimate) games will be rendered unusable and should be manually removed before starting this process by using the Data Management section of the System Settings. Használj [mentéskezelőt](https://github.com/FlagBrew/Checkpoint/releases/latest), hogy biztonsági másolatot készíts azon (nem eredeti) játékok mentéséről, amik fontosak a számodra.
+Minden aláíratlan (illegitim) játék használhatatlanná válik és kézzel eltávolítandó a folyamat előtt a System settings Data Management szekciójában. Használj [mentéskezelőt](https://github.com/FlagBrew/Checkpoint/releases/latest), hogy biztonsági másolatot készíts azon (nem eredeti) játékok mentéséről, amik fontosak a számodra.
 
 Ez az eljárás nem fogja befolyásolni sem az NNID-det, sem az eredeti játékaidat, sem bármilyen mentést, ami az eredeti, megvásárolt játékaidhoz tartozik.
 
@@ -22,11 +22,11 @@ Vedd figyelembe, hogy amennyiben van más payload fájl a `GodMode9.firm` fájlo
 
 ### Amire szükséged lesz
 
-* A [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) legújabb kiadása
+* A [GodMode9](https://github.com/d0k3/GodMode9/releases/tag/v1.9.2pre1) v1.9.2pre1 kiadása
 
-### Utasítások
+### Lépések
 
-#### Section I - Safety Test
+#### I. rész - Biztonsági teszt
 
 1. Kapcsold ki a készüléked
 1. Helyezd az SD kártyád a számítógépbe
@@ -37,33 +37,33 @@ Vedd figyelembe, hogy amennyiben van más payload fájl a `GodMode9.firm` fájlo
 1. Ha rákérdez arra, hogy csináljon-e egy biztonsági másolatot (essential files backup), akkor nyomd meg az (A) gombot, hogy csináljon, majd amikor végzett, nyomd meg ismét az (A) gombot a folytatáshoz
 1. Ha rákérdez arra, hogy szeretnéd-e a valós dátumot és időt javítani (fix the RTC date&time), nyomd meg az (A) gombot, állítsd be a helyes dátumot és időt, majd nyomd meg az (A) gombot a folytatáshoz
   + Ne feledd, hogy amennyiben ezen a ponton szükséges volt a helyes dátum és idő beállítása, a System Settingsben is be kell majd állítanod a helyes időt az útmutató végén
-1. Navigate to `[1:] SYSNAND CTRNAND > title > 00040138 > (X)0000002 > content`
-  + On a "New" edition console, the (X) will instead be 2
-  + On an "Old" edition console, the (X) will instead be 0
-1. Select the `.app` file
-1. Select `NCCH image options`
-1. Select `Mount image to drive`
-1. In the window that appears, open the `exefs` folder
-1. In this folder, select the `.firm` file
-1. Select "FIRM image options"
-1. Select "Boot FIRM"
-1. When prompted, choose to decrypt and make a copy
-1. You should boot into the regular 3DS Home Menu. If you do, power your device off and continue to the next section
-  + If you do NOT boot into the regular 3DS Home Menu, continuing with these instructions **WILL** brick your device. You should join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you
+1. Navigáljt az `[1:] SYSNAND CTRNAND > title > 00040138 > (X)0000002 > content` útvonalra
+  + Egy "New" verziós konzolon, az (X) helyén 2 áll
+  + Egy Old" verziós konzolon, az (X) helyén 0 áll
+1. Válaszd ki az `.app` fájt
+1. Válaszd az `NCCH image options`-t
+1. Válaszd a `Mount image to drive` opciót
+1. A megjelenő ablakban, válaszd az `exefs` mappát
+1. Ebben a mappában válaszd a `.firm` fájlt
+1. Válaszd az `FIRM image options`-t
+1. Válaszd a "Boot FIRM"-et
+1. Amikor a rendszer kéri, válaszd a dekriptálást és másolat készítését
+1. Be kell bootolnod a normál 3DS Home menübe. Ha így történt, akkor kapcsold ki az eszközt és folytasd a következő résznél
+  + Ha NEM bootolsz a normál 3DS Home menübe, az útmutató folytatása brickelni **FOGJA** az eszközödet. Csatlakozz a [Nintendo Homebrew Discord-on](https://discord.gg/MWxPgEp) csatornához, és kérj segítséget (angol nyelven) valakitől
   
-#### Section II - Prep Work
+#### II. rész - Előkészületek
 
 1. Kapcsold be a készülékedet
-1. Navigate to System Settings > Data Management > Nintendo 3DS > Software
-1. In this list of software, delete any non-Nintendo content you installed while using CFW
-  + This includes common system software such as FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint, and others, along with any non-eShop games
-1. Navigate to Data Management > DSiWare
-1. In this list of software, delete any non-Nintendo content you installed while using CFW
-  + This includes software such as TWiLightMenu++, along with any non-eShop games
-  + Failure to remove all CFW software from both the 3DS and DSiWare sections before uninstalling CFW may prevent or disable access to the Data Management menu after uninstalling CFW
+1. Navigálj el a System Settings > Data Management > Nintendo 3DS > Software menüponthoz
+1. Ebben a szoftver listában törölj minden nem-Nintendo tartalmat, amit telepítettél a CFW használatával
+  + Ebbe bele tartoznak az általános rendszer szoftverek, mint az FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint és egyebek beleértve a non-eShop játékokat is
+1. Navigálj ide: Data Management -> DSiWare
+1. Ebben a szoftver listában törölj minden nem-Nintendo tartalmat, amit telepítettél a CFW használatával
+  + Ebbe bele tartoznak olyan szoftverek, mint az TWiLightMenu++ beleértve a non-eShop játékokat is
+  + A sikertelen eltávolítása minden CFW szoftvernek a 3DS és a DSiWare szekciókban a CFW eltávolítása előtt megakadályozhatja vagy letilthatja a hozzáférést a Data Management menühöz a CFW eltávolítása után
 1. Kapcsold ki a készüléked
 
-#### Section III - Running Uninstall Script
+#### III. rész - Az eltávolító szkript futtatása
 
 1. Indítsd el a GodMode9-et a (Start) lenyomva tartásával boot közben
 1. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü

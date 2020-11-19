@@ -37,7 +37,7 @@ Ennek az útmutatónak a *te* segítségedre is szüksége van, hogy [ezek]({{ "
 
 ## Mi az a Homebrew?
 
-[**Homebrew**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) usually refers to software that is not authorized by Nintendo. Ebbe beleértendők homebrew segédeszközök, alkalmazások, játékok és emulátorok.
+[**Homebrew**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) általában olyan szoftvert jelent, ami nem jóváhagyott a Nintendo által. Ebbe beleértendők homebrew segédeszközök, alkalmazások, játékok és emulátorok.
 
 Sok esetben a homebrew alkalmazások futtatása a készülékeden 100%-ban ingyenesen megoldható csak Nintendo 3DS Sound alkalmazással. Ezen kívül sok más exploit is található játékokban és a böngészőben, amivel futtatható homebrew.
 
@@ -50,7 +50,7 @@ CFW telepíthető bármelyik konzolra, azon belül bármilyen verzióra (de elk�
 ## Mit fogsz telepíteni ezzel az útmutatóval?
 
 Ennek az útmutatónak az a célja, hogy egy teljesen módosítatlan, gyári állapotú 3DS firmware-jét
-bootstrap9 alapú egyedi firmware-re cseréljük. Néhány verzió esetében ez alkalmaz homebrew-t belépési pontként, de ezeknél is az egyedi firmware a végcél.
+boot9strap alapú egyedi firmware-re cseréljük. Néhány verzió esetében ez alkalmaz homebrew-t belépési pontként, de ezeknél is az egyedi firmware a végcél.
 
 A boot9strap a legújabb és legjobb módszer arra, hogy egyedi firmware-t indítsunk a készülékünkön, amivel teljes irányítást szerezhetünk afölött a boot folyamat már első néhány ezredmásodpercében, ami hasonló a BootMii működéséhez a Wii-n. Ez még annál is korábbi irányítást ad nekünk, mint amit az arm9loaderhax biztosított, és ellentétben a szokványos sighax-szel, a boot9strap egy NDMA felülírási exploitot használ arra, hogy átvegye az irányítást a Boot9 kódvégrehajtás fölött. Ez azt jelenti, hogy bármely konzol, ami boot9strap-et futtat, képes kimenteni a konzol egyedi OTP-jét (`OTP.bin`), az ARM11 bootromot (`boot11.bin`), és az ARM9 bootromot (`boot9.bin`).
 
@@ -64,7 +64,7 @@ Az összes kiszámított sighax szignatúra megtalálható [ebben a gist-ben](ht
 
 + Játszhatsz bármilyen játékkártyával és eShop játékkal, régiótól függetlenül
 + Egyedivé teheted a HOME Menüdet más felhasználók által készített [témákkal és nyitóképekkel (splash screen-ekkel)](https://themeplaza.eu/)
-+ Használtod az általad birtokolt játékok "ROM hackeit"
++ Használhatod az általad birtokolt játékok "ROM hackeit"
 + Csinálhatsz játékokról és alkalmazásokról képernyőképet
 + Menthetsz, szerkeszthetsz és visszaállíthatsz mentéseket sok-sok játékhoz
 + Játszhatsz régebbi konzolokhoz készült játékokkal sokféle emulátor segítségével, legyen az a RetroArch, vagy bármely más, önálló emulátor. (Legjobban a New Nintendo 3DS esetén működik.)
@@ -78,12 +78,12 @@ Az összes kiszámított sighax szignatúra megtalálható [ebben a gist-ben](ht
 
 + **Az útmutató megkezdése előtt fontos, hogy ismerd a 3DS hackelésének kockázatait: MINDEN alkalommal, amikor módosítod a rendszeredet, ott van az esélye egy VISSZAFORDÍTHATATLAN brickelődésnek (a konzol használhatatlanná válásának). Ritka az ilyesmi, de annak ellenére lehetséges, tehát mindig bizonyosodj meg róla, hogy MINDEN utasítást PONTOSAN követsz.**
 + Ha hackelted már meg a 3DS-edet korábban, EmuNAND telepítése céljából, és szeretnéd ennek tartalmát az új SysNAND CFW-re áthozni, kövesd ugyanúgy az utasításokat, majd állítsd vissza a már létező EmuNAND-odat, amikor a [telepítés véglegesítésének](finalizing-setup) megfelelő részénél tartasz.
-+ This guide will work on New 3DS, Old 3DS, New 2DS, and Old 2DS in all regions on firmware 11.13.0 or below.
++ Ez az útmutató műkodik New 3DS, Old 3DS, New 2DS, és Old 2DS esetén, minden régiónál, ha a firmware 11.13.0 vagy kisebb.
 + Ha minden a terv szerint halad, nem fogsz semmilyen adatot elveszíteni, és a folyamat végén meglesz minden, ami korábban ott volt (játékok, NNID, mentések, stb. nem fognak elveszni).
 + Tartsd a készülékedet töltőn a teljes folyamat során, hogy elkerüld az adatvesztést vagy bármilyen kárt, ami egy nem várt kikapcsolásból adódhat!
-+ Az SD kártyád partíciós táblájának [MBR, és nem GPT](http://www.howtogeek.com/245610/) formátumúnak kell lennie (a készülékedhez csomagolt SD kártya gyárilag MBR formátumú lesz). The easiest way to test this is to check if the SD card works in your 3DS. If it works, the SD card is MBR.
-+ Ha egy vadonatúj SD kártyát kell formáznod, használhatod a [guiformat](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) nevű programot, a lemezfoglalási egység méretét (Allocation Unit Size) pedig állítsd 32K-ra (32768).
-+ The Old 2DS is essentially identical to the Old 3DS in terms of software, while the New 2DS is essentially identical to the New 3DS in terms of software. Any steps which say "Old 3DS" also apply to Old 2DS, and any steps which say "New 3DS" also apply to New 2DS.
++ Az SD kártyád partíciós táblájának [MBR, és nem GPT](http://www.howtogeek.com/245610/) formátumúnak kell lennie (a készülékedhez csomagolt SD kártya gyárilag MBR formátumú lesz). A legkönnyebb módja ennek tesztelésére, ha kipróbálod, hogy az SD kártya működik-e a 3DS-edben. Ha működik, a kártya MBR.
++ Ha egy vadonatúj SD kártyát kell formáznod, használhatod a [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm) nevű programot, a lemezfoglalási egység méretét (Allocation Unit Size) pedig állítsd 32K-ra (32768).
++ Az Old 2DS tulajdonképpen azonos az Old 3DS-sel a szoftverek tekintetében, míg a New 2DS tulajdonképpen azonos a New 3DS-sel a szoftverek tekintetében. Minden lépés ami "Old 3DS" egyben vonatkozik az Old 2DS-sre és minden lépés ami "New 3DS"-re hivatkozik, vonatkozik a New 2DS-re is.
 
 ___
 

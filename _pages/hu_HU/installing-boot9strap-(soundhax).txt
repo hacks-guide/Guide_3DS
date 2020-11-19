@@ -1,18 +1,18 @@
 ---
-title: "boot9strap telepítése (Soundhax)"
+title: "Boot9strap telepítése (Soundhax)"
 ---
 
 {% include toc title="Tartalomjegyzék" %}
 
 ### Fontos tudnivalók
 
-Soundhax (when combined with pre9otherapp) is compatible with versions 2.1.0 through 8.1.0 in the EUR, JPN, KOR, and USA regions.
+A Soundhax (kobinálva a pre9otherapp-pal) kompatibilis a 2.1.0-8.1.0 verziókkal az EUR, JPN, KOR és USA régiókban.
 
 {% capture notice-1 %}
 
 Vedd figyelembe, hogy a kártyafrissítések csak a legfontosabb dolgokat frissítik, mint például a System Settings, Home Menu, stb. A kártyafrissítések nem fogják frissíteni a Nintendo 3DS Sound alkalmazást és az olyan hálózati funkciókat, mint például a System Transfer, Internet Browser, StreetPass Mii Plaza, vagy az eShop.
 
-This means that using a cartridge update from a version containing an older Nintendo 3DS Sound version *(<2.1.0)* to one that introduced a newer Nintendo 3DS Sound version will break Soundhax! Így alternatív módszerre lesz szükséged a Homebrew Launcher telepítéséhez, mint a [boot9strap telepítése (böngésző)](installing-boot9strap-(browser)) vagy a [boot9strap telepítése (MSET)](installing-boot9strap-(mset))!
+Ez azt jelenti, hogy kártyafrissítés egy olyan verzióról, amelyhez régebbi verziójú Nintendo 3DS Sound alkalmazás tartozott *(<2.1.0)* egy olyan verzióra, amihez újabb Nintendo 3DS Sound tartozik, működésképtelenné teszi a Soundhax-ot! Így alternatív módszerre lesz szükséged a Homebrew Launcher telepítéséhez, mint a [Boot9strap telepítése (böngésző)](installing-boot9strap-(browser)) vagy a [Boot9strap telepítése (MSET)](installing-boot9strap-(mset))!
 {% endcapture %}
 
 <div class="notice--warning">{{ notice-1 | markdownify }}</div>
@@ -22,19 +22,19 @@ This means that using a cartridge update from a version containing an older Nint
 * A [Soundhax](http://soundhax.com) legújabb kiadása *(a régiódnak, készülékednek és rendszer verziódnak megfelelő változat)*
 * A [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest) legújabb kiadása
 * A [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) legújabb kiadása *(a sima boot9strap; nem a `devkit` fájl, nem az `ntr` fájl)*
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
+* A [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) legújabb kiadása
 * A [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest) legújabb kiadása
 * A [pre9otherapp](https://github.com/Pirater12/otherapp/releases/latest) legújabb verziója *(a firmware verziódnak megfelelő `.bin` fájl)*
 
-### Utasítások
+### Lépések
 
-#### Első rész - Előkészületek
+#### I. rész - Előkészületek
 
 1. Kapcsold ki a készüléked
 1. Helyezd az SD kártyád a számítógépbe
 1. Másold a Soundhax `.m4a` fájlját az SD kártyád gyökerébe
 1. Másold a pre9otherapp payloadot az SD kártyád gyökerébe, majd nevezd át `otherapp.bin` névre
-1. Copy `boot.firm` from the Luma3DS `.zip` to the root of your SD card
+1. Másold át a `boot.firm` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
 1. Másold az `boot.3dsx` fájlt az SD kártyád gyökerébe
 1. Hozz létre egy mappát `boot9strap` néven az SD kártya gyökerében
 1. Másold át a `boot9strap.firm` fájlt és a `boot9strap.firm.sha` fájlt a boot9strap `.zip` fájlból az SD kártyád `/boot9strap/` mappájába
@@ -42,7 +42,7 @@ This means that using a cartridge update from a version containing an older Nint
 1. Tedd vissza az SD kártyád a készülékedbe
 1. Kapcsold be a készülékedet
 
-#### Második rész - A SafeB9SInstaller indítása
+#### II. rész - A SafeB9SInstaller indítása
 
 1. Tedd vissza az SD kártyád a készülékedbe
 1. Kapcsold be a készülékedet
@@ -62,13 +62,13 @@ This means that using a cartridge update from a version containing an older Nint
 
 1. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
 
-#### Harmadik rész - boot9strap telepítése
+#### III. rész - boot9strap telepítése
 
 1. Várj, amíg az összes biztonsági ellenőrzés be nem fejeződik
 1. Ha kéri, akkor nyomd meg sorban azokat a gombokat, amiket kijelez a képernyőn, hogy telepíthesd a boot9strap-et
 1. Ha ez elkészült, nyomd meg az (A) gombot az eszközöd újraindításához
 
-#### Negyedik rész - Luma3DS konfigurálása
+#### IV. rész - Luma3DS konfigurálása
 
 1. A készülékednek az előzőekben a Luma3DS-be kellett bootolnia
   + Ha fekete képernyőt kapsz, [nézd át a hibaelhárítási útmutatót](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)

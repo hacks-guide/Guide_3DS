@@ -1,99 +1,99 @@
 ---
-title: "Installing Boot9strap (Fredtool)"
+title: "Boot9strap telepítése (Fredtool)"
 ---
 
 {% include toc title="Tartalomjegyzék" %}
 
 ### Fontos tudnivalók
 
-This method of using Seedminer for further exploitation uses your `movable.sed` file to decrypt any DSiWare title for the purposes of injecting an exploitable DSiWare title into the DS Internet Settings application. This requires you to have a DSiWare backup, for example from BannerBomb or the DSiWare Dumper tool.
+Ez a metódusa a Seedminer használatának a további exploitoláshoz használja a `movable.sed` fájlod, hogy dekriptáljon egy DSiWare címet, azzal az céllal, hogy beinjektáljon egy exploitolható DSiWare címet a DS Download Play alkalmazásba. Ez igényli, hogy rendelkezzél egy DSiWare mentéssel, például a BannerBomb-ból vagy a DSiWare Dumper eszközből.
 
 Ez egy jelenleg működő megvalósítása a "FIRM partitions known-plaintext" néven ismert exploitnak, amiről részletesebben olvashatsz [itt](https://www.3dbrew.org/wiki/3DS_System_Flaws).
 
 ### Amire szükséged lesz
 
-* A DSiWare Backup (such as the one on SD root from [BannerBomb3](bannerbomb3) or [DSiWare Dumper](dsidumper))
-* Your `movable.sed` file from completing [Seedminer](seedminer)
-* The latest release of [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest)
+* Egy DSiWare mentésre (az SD gyökérben a [BannerBomb3](bannerbomb3)-ból vagy [DSiWare Dumper](dsidumper)-ből)
+* A `movable.sed` fájlodra a [Seedminer](seedminer)-ből
+* A [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest) legújabb kiadása
 * A [b9sTool](https://github.com/zoogie/b9sTool/releases/latest) legújabb kiadása
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
+* A [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) legújabb kiadása
 
-#### Első rész - Előkészületek
+#### I. rész - Előkészületek
 
 1. Kapcsold ki a készüléked
 1. Helyezd az SD kártyád a számítógépbe
-1. Copy `boot.firm` and `boot.3dsx` from the Luma3DS `.zip` to the root of your SD card
+1. Másold át a `boot.firm` és `boot.3dsx` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
 1. Másold a `boot.nds` (B9STool) fájlt az SD kártyád gyökerébe
-1. Copy the `private` folder from the Frogminer_save `.zip` to the root of your SD card
+1. Másold át a `private` mappát a Frogminer_save `.zip`-ből az SD kártyád gyökerébe
 
-#### Section II - Fredtool
+#### II. rész - Fredtool
 
-1. Open [Fredtool](https://fredtool.bruteforcemovable.com/) on your computer
-1. Select your `movable.sed` file for the "Your movable.sed" field
-1. Select your DSiWare Backup (`<8-character-id>.bin`) file for the "Your dsiware.bin" field
+1. Nyisd meg a [Fredtool](https://fredtool.bruteforcemovable.com/) oldalt a számítógépeden
+1. Válaszd ki a `movable.sed` fájlodat a "Your movable.sed" mezőben
+1. Válaszd ki a DSiWare mentést (`<8-character-id>.bin`) fájlt a "Your dsiware.bin" mezőben
 1. Teljesítsd a "Nem vagyok robot" captchát
-1. Select "Start"
+1. Válaszd a "Start"-ot
 1. Várd meg, amíg a folyamat befejeződik
-1. When the process has completed, download your modified DSiWare archive from the site
-  + This file contains 2 dsiware backup files, one clean (unmodified) and one hax (exploited)
-1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` on your SD card
-  + This `<ID0>` will be the same one that you used in [Seedminer](seedminer)
-  + This `<ID1>` folder will be another 32 letter/number folder inside the `<ID0>` folder
-  + If the `Nintendo DSiWare` folder does not exist, create it inside the `<ID1>` folder
-1. Copy the `42383841.bin` file from the `output/hax/` folder of the downloaded DSiWare archive (`fredtool_output.zip`) to the `Nintendo DSiWare` folder
+1. Amikor a folyamat befejeződött, töltsd le a módosított DSiWare archívot az oldalról
+  + Ez a fájl két dsiware mentést tartalmaz, egy tisztát (módosítatlan) és egy hax-ot (exploitált)
+1. Navigálj a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` mappába az SD kártyán
+  + Az `<ID0>` ugyanaz, mint amit a [Seedminer](seedminer)-nél használtál
+  + Az `<ID1>` mappa egy másik 32 betű/szám mappa az `<ID0>` mappa belsejében
+  + Ha a `Nintendo DSiWare` mappa nem létezik, hozd létre az `<ID1>` mappában
+1. Másold a `42383841.bin` fájlt az `output/hax/` mappájából a letöltött DSiWare csomagból (`fredtool_output.zip`) a `Nintendo DSiWare` mappába
 1. Tedd vissza az SD kártyád a készülékedbe
 1. Kapcsold be a készülékedet
 1. Lépj be a System Settings-be a készülékeden
 1. Navigálj ide: `Data Management` -> `DSiWare`
-1. Under the "SD Card" section, select the "Haxxxxxxxxx!" title
+1. Az "SD Card" szekcióban válaszd a "Haxxxxxxxxx!" címet
 1. Válaszd a "Copy"-t, majd az "OK"-t
-1. Return to main menu of the System Settings
-1. Navigate to `Internet Settings` -> `Nintendo DS Connections`, then select "OK"
-1. If the exploit was successful, your device will have loaded the JPN version of Flipnote Studio
+1. Térj vissza a System Settings főmenüjébe
+1. Navigálj az `Internet Settings` -> `Nintendo DS Connections` opcióhoz, majd válaszd az "OK"-t
+1. Ha az exploit sikeres volt, a készülékednek ezt követően be kell töltenie a JPN verzióját a Flipnote Studio-nak
 
-#### Section III - Flipnote Exploit
+#### III. rész - Flipnote Exploit
 
-If you would prefer a visual guide to this section, one is available [here](https://zoogie.github.io/web/flipnote_directions/).
+Ha inkább egy vizuális útmutatót szeretnél ehhez a fejezethez, [itt](https://zoogie.github.io/web/flipnote_directions/) elérhető egy.
 {: .notice--info}
 
-1. Complete the initial setup process for the launched game until you reach the main menu
-  + Select the left option whenever prompted during the setup process
-1. Using the touch-screen, select the large left box, then select the box with an SD card icon
-1. Once the menu loads, select the face icon, then the bottom right icon to continue
-1. Press (X) or (UP) on the D-Pad depending on which is shown on the top screen
-1. Select the second button along the top with a film-reel icon
-1. Scroll right until reel "3/3" is selected
-1. Tap the third box with the letter "A" in it
-1. Scroll left until reel "1/3" is selected
-1. Tap the fourth box with the letter "A" in it
-1. If the exploit was successful, your device will have loaded b9sTool
-1. Using the D-Pad, move to "Install boot9strap"
-  + If you miss this step, the system will exit to home menu instead of installing boot9strap and you will need to open Nintendo DS Connections and start over from the beginning of Section III
-1. Press (A), then press START and SELECT at the same time to begin the process
-1. Once completed and the bottom screen says "done.", exit b9sTool, then power off your device
+1. Fejezd be a kezdeti telepítését az elindított játéknak, amíg el nem éri a fő menüt
+  + Válassza a bal opciót, ha kérdezi a telepítési folyamat során
+1. Az érintőképernyőt használva válaszd ki a bal nagy dobozt, majd válaszd a dobozt az SD kártya ikonnal
+1. Ha a menü betöltött válaszd az arc ikont utána, pedig a jobb alsó ikont a folytatáshoz
+1. Nyomj (X)-et vagy (Fel)-t a D-Pad-on, attól függően mi jelenik meg a képernyőn
+1. Válaszd a második gombot a film-szalag ikonnal
+1. Görgess jobbra, amíg a 3/3 filmtekercs kiválasztásra kerül
+1. Nyomd meg a harmadik dobozt benne az "A" betűvel
+1. Görgess balra, amíg a 1/3 filmtekercs kiválasztásra kerül
+1. Nyomd meg a negyedik dobozt benne az "A" betűvel
+1. Ha az exploit sikeres volt, a készülékedek ezt követően be kell töltenie a b9sTool-t
+1. A D-Pad-dal menj az "Install boot9strap" opcióra
+  + Ha kihagytál egy lépést a rendszer a home menübe kerülsz a boot9strap telepítése helyett, és meg kell nyitnod a Nintendo DS Connections-t és elölről kell kezdeni a harmadik rész elejétől
+1. Nyomj (A)-t majd ezt követően START-ot és SELECT-et egyszerre a folyamat elkezdéséhez
+1. Ha végzett és az alsó képernyő azt mondja "done." lépj ki a b9sTool-ból, majd kapcsold ki eszközöd
   + Elképzelhető, hogy kényszerítened kell a leállást a bekapcsológomb lenyomva tartásával
-  + If you see the Luma Configuration screen, continue with the guide without powering off
+  + Ha a Luma konfigurációs képernyőjét látod, folytasd az útmutatót kikapcsolás nélkül
 
-#### Negyedik rész - Luma3DS konfigurálása
+#### IV. rész - Luma3DS konfigurálása
 
 1. Indítsd el a készülékedet a (Select) lenyomva tartásával, hogy megjelenjen a Luma konfigurációs menüje
   + Ha problémába ütközöl a Luma konfigurációs menü elindításakor, [kövesd ezt a hibaelhárítási útmutatót](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)
 1. Használd az (A) gombot és D-Pad-et a következő engedélyezéséhez:
   + **"Show NAND or user string in System Settings"**
 1. Mentéshez és újraindításhoz nyomd meg a (Start) gombot
-  + Your device should load the Home Menu after a short delay. If you get a black screen lasting longer than 5 minutes, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
+  + Az eszközödnek kis várakozás után be kell töltenie a Home menüt. Ha fekete képernyőt kapsz, ami több mint 5 percig tart, [nézd át a hibaelhárítási útmutatót](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 
-#### Section V - Restoring DS Connection Settings
+#### V. rész - A DS Connection Settings visszaállítása
 
 1. Kapcsold ki a készüléked
 1. Helyezd az SD kártyád a számítógépbe
-1. Copy the `42383841.bin` file from the `output/clean/` folder of the downloaded DSiWare archive (`fredtool_output.zip`) to the `Nintendo 3DS/<ID0>/<32-character-id>/Nintendo DSiWare/` folder on your SD card
-  + Replace the existing `42383841.bin` file
+1. Másold a `42383841.bin` fájlt az `output/clean/` mappájából a letöltött DSiWare csomagnak (`fredtool_output.zip`) a `Nintendo 3DS/<ID0>/<32-character-id>/Nintendo DSiWare/` mappába az SD kártyán
+  + Írd felül a létező `42383841.bin` fájlt
 1. Tedd vissza az SD kártyád a készülékedbe
 1. Kapcsold be a készülékedet
 1. Lépj be a System Settings-be a készülékeden
 1. Navigálj ide: `Data Management` -> `DSiWare`
-1. Under the "SD Card" section, select the "Nintendo DSi™" title
+1. Az "SD Card" szekcióban válaszd a ""Nintendo DSi™" címet
 1. Válaszd a "Copy"-t, majd az "OK"-t
 
 ___

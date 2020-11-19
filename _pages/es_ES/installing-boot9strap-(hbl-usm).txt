@@ -1,69 +1,67 @@
 ---
-title: "Installing boot9strap (HBL-USM)"
+title: "Instalar boot9strap (USM)"
 ---
 
 {% include toc title="Tabla de contenidos" %}
 
 ### Lectura requerida
 
-In order to exploit the SAFE_MODE firmware of our system, we need to inject an exploited WiFi profile.
+Para poder aprovechar el exploit del firmware SAFE_MODE de la consola, necesitamos inyectar un perfil de WiFi con el exploit.
 
-As we already have Homebrew access, we can use slotTool to do this.
+Como ya tenemos acceso a Homebrew, podemos utilizar slotTool para hacerlo.
 
-This specific method is intended to be used with Homebrew Launcher access through [BrowserHax 2020](homebrew-launcher-(browserhax-2020)).
+Este método en específico está pensado para ser utilizado con acceso al Homebrew Launcher a través de [BrowserHax 2020](homebrew-launcher-(browserhax-2020)).
 
-If you have Homebrew Launcher access through another entry point, you should use [Frogtool](installing-boot9strap-(frogtool)).
+Si tienes acceso al Homebrew Launcher a través de otro punto de entrada, debes utilizar [Frogtool](installing-boot9strap-(frogtool)).
 
-Once the WiFi profile has been injected, we will use SAFE_MODE, which is a recovery feature present on all 3DS consoles, to activate the exploited WiFi profile.
+Una vez que el perfil de WiFi ha sido inyectado, usaremos SAFE_MODE, que consiste en una función de recuperación presente en todas las consolas, para activar el perfil de WiFi con el exploit.
 
-Estas instrucciones funcionan en consolas de las regiones USA, Europa, Japón y Corea, indicado por las letras U, E, J o K después de la versión del sistema.
-
-If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, you will need to use a [Legacy Method](legacy-methods). For assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+Si tus botones (Right/Left Shoulder), (D-Pad arriba) o (A) no funcionan, deberás utilizar un [Método antiguo](legacy-methods). Para ayuda con este asunto, únete al [Discord de Nintendo Homebrew](https://discord.gg/MWxPgEp) donde puedes pedir, en inglés, que te ayuden.
 {: .notice--danger}
 
 ### Qué necesitas
 
-* The latest release archive for [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
-* The latest release archive for [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest)
+* La ultima versión de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
+* La ultima versión de [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest)
 
 #### Sección I - Preparativos
 
-1. Your console should be powered on and showing the Homebrew Launcher from the previous part of the guide
-1. Launch slotTool from the list of homebrew
-  + If you get stuck on a red screen, forcefully power off the console by holding the power button for fifteen seconds, then retry this section
-1. Select the "INSTALL exploit to wifi slots 1,2,3 & shutdown" option
-  + You will see some on-screen text and then your system will shut down
-1. Remove your SD card from your console and connect it to your computer
-1. Copy `boot.firm` from the Luma3DS `.zip` to the root of your SD card, replacing any existing files
-1. Copy `usm.bin` from the unSAFE_MODE `.zip` to the root of your SD card
-1. Put your SD card back into your console
+1. Tu consola debería estar encendida y mostrando la pantalla del Homebrew Launcher, de la parte anterior de la guía
+1. Inicia slotTool desde la lista de homebrew
+  + Si te quedas atascado en una pantalla roja, fuerza el apagado de la consola manteniendo pulsado el botón de encendido durante 15 segundos e intenta de nuevo esta sección
+1. Selecciona la opción "INSTALL exploit to wifi slots 1,2,3 & shutdown"
+  + Verás algo de texto en pantalla y luego la consola se apagará
+1. Extrae la tarjeta SD de la consola y conéctala en la computadora
+1. Copia el archivo `boot.firm` desde el `.zip` de Luma3DS a la raíz de tu tarjeta SD
+1. Copia el archivo `usm.bin` desde el `.zip` de unSAFE_MODE a la raíz de tu tarjeta SD
+1. Reinserta la tarjeta SD en tu consola
 
-#### Section II - unSAFE_MODE
+#### Sección II - unSAFE_MODE
 
-1. With your system still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), then press (Power)
-  + Keep holding the buttons until the console boots into Safe Mode
-1. Press "OK" to accept the update
-  + There is no update. This is part of the exploit
-1. Press "I accept" to accept the terms and conditions
-1. The update will eventually fail, with error code `003-1099`. This is intended behaviour
-1. When asked "Would you like to configure Internet settings?", select "Yes"
-1. On the following menu, navigate to `Connection 1` -> `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings` -> `Detailed Setup`
-  + Here is a [visual representation](https://uwuu.ca/images/safemode_highlighted.png)
-1. Once you see `B9S install SUCCESS` on the top screen, press any button to reboot to Luma Configuration
+1. Con tu consola aún apagada, mantén pulsados los siguientes botones: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), luego presiona (Power)
+  + Mantén pulsados los botones hasta que la consola encienda en modo seguro
+1. Presiona "OK" para aceptar la actualización
+  + No hay actualización. Esto es parte del exploit
+1. Presiona "Acepto" para aceptar los términos y condiciones
+1. La actualización fallará, con el código de error `003-1099`. Este comportamiento es el esperado
+1. Cuando se te pregunte "¿Quieres configurar tu conexión a internet?", presiona "Aceptar"
+1. En el menú siguiente, navega a `Conexión 1` -> `Modificar ajustes` -> `Siguiente página (flecha derecha)` -> `Servidor proxy` -> `Ajustes avanzados`
+  + Aquí hay una [representación visual](https://uwuu.ca/images/safemode_highlighted.png)
+1. Una vez que veas `B9S install SUCCESS` en la pantalla superior, presiona cualquier botón para reiniciar a la configuración de Luma
 
 #### Sección III - Configuración de Luma3DS
 
-1. Your device should automatically show the Luma Configuration menu
+1. Tu consola debería mostrar automáticamente el menú de configuración de Luma
 1. Utiliza el botón (A) y las flechas direccionales para activar lo siguiente:
   + **"Show NAND or user string in System Settings"**
 1. Presiona (Start) para guardar y reiniciar
   + Tu consola deberá cargar el Menú HOME después de un breve momento. Si la pantalla se queda en negro por más de 5 minutos, [sigue la guía de solución de problemas](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 
-#### Section IV - Restoring WiFi Configuration Profiles
+#### Sección IV - Restaurando los Perfiles de Configuración de Red Inalámbrica
 
 1. Inicia la aplicación de Modo Descarga
 1. Espera hasta que veas los dos botones
-  + Do not press either of the buttons
+  + No presiones ninguno de los botones
 1. Presiona (Left Shoulder) + (Abajo) + (Select) a la vez para abrir el menú de Rosalina
 1. Selecciona "Miscellaneous options"
 1. Selecciona "Switch the hb. title to the current app."
@@ -71,11 +69,11 @@ If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, you will n
 1. Presiona (B) para regresar al menú principal de Rosalina
 1. Presiona (B) para salir del menú de Rosalina
 1. Presiona (Home), luego cierra la aplicación de Modo Descarga
-1. Relaunch the Download Play application
+1. Inicia la aplicación de Modo Descarga otra vez
 1. Tu consola debería cargar el Homebrew Launcher
-1. Launch slotTool from the list of homebrew
-1. Select "RESTORE original wifi slots 1,2,3"
-1. Your device will then reboot
+1. Inicia slotTool desde la lista de homebrew
+1. Selecciona "RESTORE original wifi slots 1,2,3"
+1. Tu consola se reiniciará
 
 ___
 

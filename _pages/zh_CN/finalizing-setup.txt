@@ -8,30 +8,29 @@ title: "完成安装"
 
 `boot.firm` 文件是 boot9strap 在加载 NAND 之后自行启动的文件，它可以是任意有效的、FIRM格式的 arm9 payload。 你可以随时替换此文件，不过 Luma3DS 允许通过引导菜单加载其他 FIRM 格式的 arm9 payload。
 
-本教程中，我们将使用 [AuroraWright](https://github.com/AuroraWright/) 制作的 Luma3DS 来直接启动一个破解过的 SysNAND ，完全不用 EmuNAND 并简化破解3DS系统的步骤和节省 SD.卡的空间。
+本教程中，我们将使用 [AuroraWright](https://github.com/AuroraWright/) 制作的 Luma3DS 来直接启动一个破解过的 SysNAND，完全不用 EmuNAND 并简化破解3DS系统的步骤和节省 SD 卡的空间。
 
 在这个过程当中，我们还会安装像下面所示的几个工具：
 
-+  **FBI** *（用来安装CIA格式的游戏和程序）*
-+  **Anemone3DS** *（安装自定义主题）*
-+ **Checkpoint** *（备份和恢复你 3DS/DS 的游戏存档）*
-+  **Luma3DS Updater** *（用来更新 Luma3DS 固件）*
-+  **GodMode9** *（一款多功能工具，可以处理 NAND 和卡带的相关功能）*
-+ **Homebrew Launcher Loader** *（启动 Homebrew Launcher 的快捷方式）*
-+  **DSP1** *（允许自制程序播放音乐）*
-+  **ctr-no-timeoffset** *（移除 rtc 偏移，让主菜单时间和 rtc 时间匹配）*
++  **FBI（用来安装 CIA 格式的游戏和程序）**
++  **Anemone3DS（安装自定义主题）**
++ **Checkpoint（备份和恢复你 3DS/DS 的游戏存档）**
++  **Luma3DS Updater（用来更新 Luma3DS 固件）**
++  **GodMode9（一款多功能工具，可以处理 NAND 和卡带的相关功能）**
++ **Homebrew Launcher Loader（启动 Homebrew Launcher 的快捷方式）**
++  **DSP1（允许自制程序播放音乐）**
++  **ctr-no-timeoffset（移除 rtc 偏移，让主菜单时间和 rtc 时间匹配）**
 
 ### 你需要准备点啥？
 
-* 最新版 [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) *(下载 `.cia` 文件)*
-* 最新版 [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/latest) *(下载 `.cia` 文件)*
+* 最新版 [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) **（下载 `.cia` 文件）**
+* 最新版 [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/latest) *（下载 `.cia` 文件）*
 * 最新版 [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest)
-* 最新版 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* v1.9.2pre1 版的 [GodMode9](https://github.com/d0k3/GodMode9/releases/tag/v1.9.2pre1)
 * 最新版 [DSP1](https://github.com/zoogie/DSP1/releases/latest)
-* 最新版 [FBI](https://github.com/Steveice10/FBI/releases/latest) *（下载 `.cia` 和 `.3dsx` 文件）*
+* 最新版 [FBI](https://github.com/Steveice10/FBI/releases/latest) **（下载 `.cia` 和 `.3dsx` 文件）**
 * 最新版 [ctr-no-timeoffset](https://github.com/ihaveamac/ctr-no-timeoffset/releases/latest)
-* 最新版 [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *（下载后缀为 `.cia` 的文件）*
-* [DO_NOT_LAUNCH.firm](assets/DO_NOT_LAUNCH.firm)
+* 最新版 [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) **（下载后缀为 `.cia` 的文件）**
 
 ### 操作步骤
 
@@ -51,7 +50,6 @@ title: "完成安装"
 1. 复制 `Checkpoint.cia` 到你 SD 卡的 `/cias/` 文件夹中
 1. 如果 SD 卡的 `luma` 文件夹下没有一个名为 `payloads` 的文件夹，那么请新建一个
 1. 将 GodMode9 `.zip` 中的 `GodMode9.firm` 复制到你SD卡的 `/luma/payloads/` 文件夹中
-1. 复制 `DO_NOT_LAUNCH.firm` 到你内存卡中的 `/luma/payloads/` 文件夹。
 1. 将 GodMode9 `.zip` 中的整个 `gm9` 文件夹复制到 SD 卡的根目录下
 1. 将 SD 卡重新插入设备
 1. 启动你的主机
@@ -104,8 +102,7 @@ title: "完成安装"
 #### 第六步 — 将 Luma3DS 复制到 CTRNAND
 
 1. 将设备关机
-1. 在开机的时候按住 “Start” 键来进入 Luma3DS chainloader
-1. 将红色光标对准 Godmode9，然后按 “A” 键启动它
+1. 开机时按住 “Start” 键启动 GodMode9
 1. 如果提示创建重要文件备份，按下 “A” 键确认，在完成后再次按下 “A” 键来继续。
 1. 如果出现修复 RTC 日期与时间的提示，按 “A” 键执行修复，然后设置好日期和时间，并按 “A” 继续
 1. 按下 “Home” 键来打开功能菜单

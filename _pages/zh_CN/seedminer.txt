@@ -12,25 +12,11 @@ title: "Seedminer"
 
 如果这个密钥是完全随机生成的，那么加密密钥将不可能被破解出来。 幸运的是，密钥的前半部分（`movable_part1.sed`）与你的设备的朋友代码（Friend code）有着一些关系，使我们能够破解加密。 如果想要了解 Seedminer 是怎么工作的，请参见此[介绍资料](https://zoogie.github.io/web/34⅕c3)。
 
-本教程需要利用一个高性能的显卡来进行一些计算。 不过有一个志愿者网站可以帮助你做需要显卡的步骤。（不过在中国大陆地区由于无法使用谷歌服务，你需要通过科学上网才能正常使用网站提供的功能）
+本教程需要利用一个高性能的显卡来进行一些计算。 不过有一个志愿者网站可以帮助你做需要显卡的步骤。
 
 ### 操作步骤
 
-#### 第一步 — 兼容性测试
-
-虽然这些测试不是为了触发 Seedminer 漏洞而必须要做的。但是如果不进行测试的话可能会因为 Seedminer 漏洞在你的主机失效而白白浪费时间并可能会无法使用其他的漏洞。
-
-这里有多种不同的方法启动 Seedminer 漏洞，所以即使这个测试失败了，你仍然可以使用其他的方法
-
-#### DSiWare 数据管理测试（用于 unSAFE_MODE）
-
-1. 转到系统设置，然后点击数据管理（Data Management），然后点击 “DSiWare”
-1. 如果你的主机没有崩溃，那么表示测试成功了
-  + 如果主机发生了崩溃并回到了主菜单， 那么测试失败，你只能使用在本页底部的“传统方法”破解
-  + 如果您在主机闪退到主菜单之前看到了彩色的屏幕，请加入[Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) 并使用英语请求帮助（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网）你也可以到译者的[QQ群](https://jq.qq.com/?_wv=1027&k=5CfEA4c)寻求帮助，群号为 942052497。
-1. 退出至主菜单
-
-#### 第二步 — 准备工作
+#### 第一步 — 准备工作
 
 1. 将你的 SD 卡插入到电脑
 1. 打开你 SD 卡的 `Nintendo 3DS` 文件夹
@@ -52,11 +38,12 @@ title: "Seedminer"
   + 如果出现错误信息并被踢回到主菜单，则你需要创建一个 Mii 形象或你的设备无法连接到任天堂服务器（由于封禁或网络问题）
 1. 找到你的 Mii 个人形象，然后在上屏寻找你的“朋友代码（Friend Code）”
 
-#### 第三步 — Seedminer
+#### 第二步 — Seedminer
 
 1. 在你的电脑上打开 [Bruteforce Movable](https://seedminer.hacks.guide/)
   + 这个网站可以自动替你获取 `movable_part1.sed` 文件（通过一台由机器人操控的 3DS），并破解你主机的 DSiWare 密钥（通过某自愿者的电脑运行 Seedminer 取得）
-  + 如果自助功能无法使用，请加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp) 并使用英文请求帮助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网）你也可以到译者的<a href="https://jq.qq.com/?_wv=1027&k=5CfEA4c">QQ群</a>寻求帮助，群号为 942052497。
+  + 如果这个网站抛锚了，尝试[这个网站](https://bfm.nintendohomebrew.com/)
+  + 如果这两个网站都无法使用了，请加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp) 并使用英文请求帮助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网）你也可以到译者的<a href="https://jq.qq.com/?_wv=1027&k=5CfEA4c">QQ群</a>寻求帮助，群号为 942052497。
 1. 在 “Your friend code” 选项填入你设备的 “朋友代码（Friend Code）”（只要数字，不要填入空格或破折号）
 1. 在 “Your ID0” 栏位粘贴之前复制的 32 位长的字符串
   + 不要尝试手动输入 ID0， 确保那是你在上一节中复制并粘贴的 ID0 以防复制错了
@@ -79,7 +66,7 @@ ___
 
 这种将使用 Seedminer 进行进一步破解的方法使用了你的 `movable.sed` 来利用所有机型都有的 SAFE_MODE 固件来进行破解系统。
 
-这种方法与所有区域兼容，尽管神游机因为阉割了此部分所需内容并不能执行这个操作
+这个方法对除港（台）和神游版机以外的所有区域兼容。
 
 继续至[安装 boot9strap（通过 USM）](installing-boot9strap-(usm))
 {: .notice--primary}
