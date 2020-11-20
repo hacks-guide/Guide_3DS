@@ -8,7 +8,7 @@ title: "Homebrew Launcher (PicHaxx)"
 
 Ez a metódusa a Seedminer használatának a további exploitoláshoz használja a `movable.sed` fájlod, hogy hozzáférést szerezzen a Homebrew Launcher-hez a PicHaxx exploittal, azzal az céllal, hogy beinjektáljon egy exploitolható DSiWare címet a DS Download Play alkalmazásba. Ehhez a metódushoz szükséges, hogy birtokold (vagy letöltsd) az ingyenes "Pokemon Picross" játékot az eShop-ból.
 
-Ha az eszközödnek már van hozzáférése a Homebrew Launcher-hez (mindegy, hogy pichaxx vagy más exploit) akkor tovább léphetsz a [DSiWare Dumper](dsidumper)-re).
+If your device already has access to the Homebrew Launcher (whether through PicHaxx or another exploit), you can skip to [Frogtool](installing-boot9strap-(frogtool)).
 {: .notice--success}
 
 Ha már megvan a Pokemon Picross, ez a folyamat felül fogja írni a mentés fájlod!
@@ -19,7 +19,8 @@ Ha már megvan a Pokemon Picross, ez a folyamat felül fogja írni a mentés fá
 * Az ingyenes "Pokemon Picross" eShop játékra
 * A `movable.sed` fájl a [Seedminer](seedminer)-ből
 * A [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest) legújabb kiadása
-* Az [otherapp payload](https://smealum.github.io/3ds/#otherapp)-ra *(a készüléked verziójának és régiójának megfelelő változatra)*
+* The [otherapp payload](https://deadphoenix8091.github.io/3ds/#otherapp) *(for your region, device, and version)*
+  + If your current version is 11.14.0-46, select 11.13.0-45 for your version
 
 ### Lépések
 
@@ -27,18 +28,17 @@ Ha már megvan a Pokemon Picross, ez a folyamat felül fogja írni a mentés fá
 
 1. Másold az `boot.3dsx` fájlt az SD kártyád gyökerébe
 1. Másold az otherapp payloadot az SD kártyád gyökerébe, majd nevezd át `otherapp.bin` névre
-  +ha nem látja a `.bin` kiterjesztés ne adja kézzel hozzá a fájl végéhez
+  + If you do not see the `.bin` extension, do not add it to the end of the filename
 1. Hozz létre egy mappát `3ds` néven az SD kártyád gyökerében, ha még nem létezik ilyen
 
 #### II. rész - PicHaxx
 
-1. Nyisd meg [a PicHaxx Injector weboldalát](https://seedminer.hacks.guide/pichaxx/) a számítógépen
+1. Open [the PicHaxx Injector website](https://3ds.nhnarwhal.com/3dstools/pichaxx.php) on your computer
 1. Válaszd ki a `movable.sed` fájlod
 1. Válaszd a "Build and Download" menüpontot
 1. Várd meg, amíg a folyamat befejeződik
-1. Navigálj a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` útvonalra az SD kártyán
+1. Navigálj a `Nintendo 3DS` -> `<ID0>` -> `<32 karakter hosszú azonosító>` -> `Nintendo DSiWare` mappába az SD kártyádon
   + Az `<ID0>` ugyanaz, mint amit a [Seedminer](seedminer)-nél használt
-  + Az `<ID1>` mappa egy másik 32 betű/szám mappa az `<ID0>` mappa belsejében
 1. Másold a letöltött `00000001.sav` fájlt a `data` könyvtárba az SD kártyán
   + Írd felül a régi mentés fájlt, ha kérdezi
 1. Tedd vissza az SD kártyád a készülékedbe
