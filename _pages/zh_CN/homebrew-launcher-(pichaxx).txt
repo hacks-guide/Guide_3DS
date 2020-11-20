@@ -8,7 +8,7 @@ title: "启动Homebrew Launcher （通过 PicHaxx）"
 
 本章节 Seedminer 将使用你的 `movable.sed` 文件，通过 PicHaxx 漏洞启动 Homebrew Launcher，以便在 DS Download Play 中注入修改后的 DSiWare 程序。 在进行本教程前，你必须先拥有 （或下载） eShop 中的免费的“精灵宝可梦：绘图方块（Pokemon Picross）”游戏。
 
-如果你的设备已通过如 pichaxx 或其他漏洞启动 Homebrew Launcher，那么你可以跳至 [DSiWare Dumper](dsidumper)。
+If your device already has access to the Homebrew Launcher (whether through PicHaxx or another exploit), you can skip to [Frogtool](installing-boot9strap-(frogtool)).
 {: .notice--success}
 
 如果你之前已经拥有了“精灵宝可梦：绘图方块”游戏，教程中将会覆盖你的游戏存档！
@@ -19,7 +19,8 @@ title: "启动Homebrew Launcher （通过 PicHaxx）"
 * 来自 eShop 的免费游戏 “精灵宝可梦：绘图方块(Pokemon Picross)”
 * 你在 [Seedminer](seedminer) 步骤中获得的 `movable.sed` 文件
 * 最新版 [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
-* [otherapp payload](https://deadphoenix8091.github.io/3ds/#otherapp) *（根据你的 3DS 的区域和版本下载）*
+* The [otherapp payload](https://deadphoenix8091.github.io/3ds/#otherapp) *(for your region, device, and version)*
+  + If your current version is 11.14.0-46, select 11.13.0-45 for your version
 
 ### 操作步骤
 
@@ -27,18 +28,17 @@ title: "启动Homebrew Launcher （通过 PicHaxx）"
 
 1. 复制 `boot.3dsx` 到你的 SD 卡根目录
 1. 将下载的 otherapp payload 复制到 SD 卡的根目录下，并重命名为 `otherapp.bin`
-  + 如果你看不到 otherapp payload 的 `.bin` 扩展名，则请重命名为 `otherapp`
+  + If you do not see the `.bin` extension, do not add it to the end of the filename
 1. 检查 SD 卡的根目录是否存在一个名为 `3ds` 的文件夹，如果没有则手动新建一个
 
 #### 第二步 — PicHaxx
 
-1. 在你的电脑上打开 [PicHaxx 注入器网页](https://seedminer.hacks.guide/pichaxx/)
+1. Open [the PicHaxx Injector website](https://3ds.nhnarwhal.com/3dstools/pichaxx.php) on your computer
 1. 上传你的 `movable.sed` 文件
 1. 选择 “构建并下载（Build and Download）”
 1. 等待该过程执行完成。
-1. 打开你 SD 卡的 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` 文件夹
+1. 移动至 `Nintendo 3DS` -> `<ID0>` -> `<32位字符ID>` -> `Nintendo DSiWare` 文件夹
   + 这个 `<ID0>` 和你在 [Seedminer](seedminer) 章节中打开的一样
-  + 这个 `<ID1>` 文件夹是 `<ID0>` 文件夹中的另一个 32 个字符与数字混合的文件夹
 1. 复制你刚下载的 `00000001.sav` 文件到 `data` 文件夹
   + 当提示时选择覆盖旧的文件
 1. 将 SD 卡重新插入你的主机
