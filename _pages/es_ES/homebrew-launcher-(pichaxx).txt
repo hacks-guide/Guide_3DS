@@ -8,7 +8,7 @@ title: "Homebrew Launcher (PicHaxx)"
 
 Este método de Seedminer utiliza tu archivo `movable.sed` para tener acceso al Homebrew Launcher mediante el exploit PicHaxx, con el objetivo de inyectar un programa de DSiWare dentro de la aplicación de Modo Descarga DS. Éste método requiere de haber conseguido (o descargado) el videojuego gratuito "Pokémon Picross" desde la eShop.
 
-Si tu consola ya tiene acceso al Homebrew Launcher (desde PicHaxx u otro exploit), puedes pasar a [DSiWare Dumper](dsidumper).
+If your device already has access to the Homebrew Launcher (whether through PicHaxx or another exploit), you can skip to [Frogtool](installing-boot9strap-(frogtool)).
 {: .notice--success}
 
 Si ya tienes Pokémon Picross, ¡éste proceso sobreescribirá tu partida guardada!
@@ -19,7 +19,8 @@ Si ya tienes Pokémon Picross, ¡éste proceso sobreescribirá tu partida guarda
 * El juego gratuito "Pokémon Picross" de la eShop
 * Tu archivo `movable.sed` proveniente de haber completado [Seedminer](seedminer)
 * La última versión del [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
-* El [otherapp payload](https://deadphoenix8091.github.io/3ds/#otherapp) *(correspondiente a tu región y versión del sistema)*
+* The [otherapp payload](https://deadphoenix8091.github.io/3ds/#otherapp) *(for your region, device, and version)*
+  + If your current version is 11.14.0-46, select 11.13.0-45 for your version
 
 ### Instrucciones
 
@@ -27,18 +28,17 @@ Si ya tienes Pokémon Picross, ¡éste proceso sobreescribirá tu partida guarda
 
 1. Copia `boot.3dsx` a la raíz de tu tarjeta SD
 1. Copia el otherapp payload a la raíz de tu tarjeta SD y cambia su nombre a `otherapp.bin`
-  + Si no ves la extensión `.bin`, no la añadas al final del nombre del archivo
+  + If you do not see the `.bin` extension, do not add it to the end of the filename
 1. Crea una carpeta llamada `3ds` en la raíz de tu tarjeta SD, si aún no existe
 
 #### Sección II - PicHaxx
 
-1. Abre [la página de PicHaxx Injector](https://seedminer.hacks.guide/pichaxx/) en tu computadora
+1. Open [the PicHaxx Injector website](https://3ds.nhnarwhal.com/3dstools/pichaxx.php) on your computer
 1. Selecciona tu archivo `movable.sed`
 1. Selecciona "Build and Download" (Construir y Descargar)
 1. Espera a que el proceso se complete
-1. En tu tarjeta SD ve a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data`
+1. Ve a `Nintendo 3DS` -> `<ID0>` -> `<ID-de-32-caracteres>` -> `Nintendo DSiWare` en tu tarjeta SD
   + La `<ID0>` en cuestión es la misma que usaste en [Seedminer](seedminer)
-  + La carpeta `<ID1>` será otra carpeta de 32 caracteres dentro de la carpeta `<ID0>`
 1. Copia el archivo `00000001.sav` recién descargado a la carpeta `data` dentro de tu tarjeta SD
   + Sobreescribe el archivo anterior cuando se te pida
 1. Vuelve a insertar tu tarjeta SD en la consola
