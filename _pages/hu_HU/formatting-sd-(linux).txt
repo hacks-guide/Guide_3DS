@@ -10,26 +10,26 @@ Ez egy kiegészítő rész az SD kártya formázásához, hogy az működjön a 
 
 Ha a 3DS már felismeri az SD kártyát, ez az útmutató nem szükséges.
 
-Ez az oldal Linux felhasználókra vonatkozik. If you are not on Linux, check out the [Formatting SD (Windows)](formatting-sd-(Windows)) or [Formatting SD (Mac)](formatting-sd-(mac)) pages.
+Ez az oldal Linux felhasználókra vonatkozik. Ha nem Linux rendszeren vagy, kövesd az [SD formázás (Windows)](formatting-sd-(linux)) vagy [SD formázás (Mac)](formatting-sd-(mac)) útmutatókat.
 
 ### Lépések
-#### Section I - Determining which slot your SD card is in
+#### I. rész - Annak meghatározása, hogy melyik olvasóban található az SD kártya
 
-1. Make sure your SD card is **not** inserted
-1. Launch the Linux Terminal
-1. Type `watch "lsblk"`
-1. Insert your SD card into your PC
-1. Observe the output. It should match something like this:
+1. Gondoskodj arról, hogy az SD kártya **nincs** bedugva
+1. Indítsd el a Linux Terminal-t
+1. Írd be, hogy `watch "lsblk"`
+1. Tedd be az SD kártyád a PC számítógépedbe
+1. Figyeld a kimenetet. Válaszként valami hasonlót kell kapj:
 ```
 NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
 mmcblk0     179:0    0   3,8G  0 disk
 └─mmcblk0p1 179:1    0   3,7G  0 part /run/media/user/FFFF-FFFF
 ```
-1. Take note of the device mount point. In our example above, it was `mmcblk0`
-  + If `RO` is set to 1, make sure the lock switch is not slid down
-1. Hit CTRL + C to exit the menu
+1. Jegyezd fel az eszköz csatolási pontját. A fenti példában ez `mmcblk0` volt
+  + Ha az `RO` 1-re állított, ellenőrizd, hogy a zároló csúszka nincs-e lehúzva
+1. Nyomj CTRL + C-t a menüből kilépéshez
 
-#### Section II - Formatting the card
+#### II. rész - Az SD kártya formázása
 
 ![](https://upload.wikimedia.org/wikipedia/commons/8/85/Cfdisk_screenshot.png)
 
