@@ -14,20 +14,15 @@ title: "升級 A9LH 至 B9S"
 
 若要解壓該頁面中的`.7z`檔案，您將需要一個壓縮檔管理員，如 [7-Zip](http://www.7-zip.org/) 或 [The Unarchiver](https://theunarchiver.com/)。
 
-如果您先前有在 Luma3DS 中設置了安全 PIN 碼，除非您暫時將其關閉，否則 SafeB9SInstaller 安裝包將會出現『OTP Crypto Fail』的錯誤訊息 (您可以在更新後重新設定 PIN 碼)。
-{: .notice--warning}
-
 {% capture notice-1 %}
-近日有許多的自製韌體用戶已經被任天堂封殺，幾乎所有的線上功能都被禁止使用。 為了自保，請在遵循本教學前進行以下防護措施：
+While we believe custom firmware is relatively safe at this time, it is important to note that it will never be "ban free".
 
-1. 進入『系統設定 (System Settings)』、『網路設定 (Internet Settings)』、『SpotPass』、『回傳系統訊息 (Sending of System Information)』
-1. 禁用『回傳系統訊息 (Sending of System Information)』
-1. 退出系統設定
-1. 開啟您的好友清單 (HOME 主選單中最上方的[橘色笑臉圖示]({{ "/images/friend-list-icon.png" | absolute_url }}))
-  + 如果您遇到錯誤訊息且從清單中被踢回主選單，那麼可能您已將好友清單設定關閉或您的主機無法連線至任天堂伺服器 (您可能已被封殺或網路連線之問題)
-1. 進入好友選單設定、『好友提示設定 (Friend Notification Settings)』、『顯示正在遊玩的遊戲 (Show friends what you're playing)』
-1. 禁用『顯示正在遊玩的遊戲 (Show friends what you're playing)』
-1. 退出好友清單
+You should avoid the following actions:
+1. Piracy
+1. Cheating online
+1. Suspicious behaviour on eShop (for example, credit card chargebacks)
+
+We believe SpotPass and StreetPass are also safe for use at this time.
 
 {% endcapture %}
 
@@ -42,11 +37,10 @@ title: "升級 A9LH 至 B9S"
 {: .notice--info}
 
 * <i class="fa fa-magnet" aria-hidden="true" title="這是個種子連結。 請使用一個 BT 下載器來下載此檔案。"></i> - **僅適用於 New 3DS 用戶:** [secret_sector.bin](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce)
-* 最新版本的 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) 
-* 7.0.5 版的 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/tag/v7.0.5) *(`.7z` 檔案)*
+* The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) 
+* The v7.0.5 release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/tag/v7.0.5) *(the `.7z` file)*
 * 最新版的 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * 最新版的 [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(正常版的 boot9strap；非 `devkit` 或 `ntr` 檔案)*
-* 最新版的 [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
 
 ### 操作說明
 
@@ -57,8 +51,7 @@ title: "升級 A9LH 至 B9S"
 
 1. 關閉您的主機
 1. 將 SD 卡插入至電腦中
-1. 將 `boot.3dsx` 複製到 SD 卡根目錄中
-1. 解壓最新版 Luma3DS `.zip` 內的 `boot.firm` 到 SD 卡的根目錄底下
+1. Copy `boot.firm` and `boot.3dsx` from the latest version Luma3DS `.zip` to the root of your SD card
 1. 解壓 v7.0.5 Luma3DS `.7z` 內的 `arm9loaderhax.bin` 到 SD 卡的根目錄底下
 1. 刪除所有在您 SD 卡 `/luma/payloads/` 資料夾中的 `.bin` payload 檔案，因為它們將無法與 boot9strap 版本的 Luma3DS 相容
 1. 解壓 SafeB9SInstaller`.zip` 中的 `SafeB9SInstaller.bin` 到 SD 中的 `/luma/payloads/` 下

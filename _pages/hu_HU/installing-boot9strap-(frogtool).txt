@@ -4,6 +4,9 @@ title: "Boot9strap telepítése (Frogtool)"
 
 {% include toc title="Tartalomjegyzék" %}
 
+Ez az oldal Legacy metódusnak jelölt, mert vannak jobb, gyorsabb és biztonságosabb metódusok. Csak akkor szükséges követned, ha nem sikerült követni a [Boot9strap telepítése (USM)](installing-boot9strap-(usm)) fejezeteit.
+{: .notice--warning}
+
 ### Fontos tudnivalók
 
 A Homebrew Launcher hozzáférést fogjuk használni, hogy futtassuk a Frogtool eszközt, annak érdekében, hogy injektáljuk az exploitolható japán verzióját a "Flipnote Studio" címnek, amit aztán arra használunk, hogy futtassuk a b9sTool-t és telepítsük a boot9strap-et.
@@ -18,14 +21,14 @@ Ahhoz, hogy használhasd a [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme
 * <i class="fa fa-magnet" aria-hidden="true" title="Ez egy mágneslink. Használj torrent klienst a fájl letöltéséhez."></i> - [frogcert.bin](magnet:?xt=urn:btih:d12278ea50bb3574f1fbd327f3d0e2292c70941f&dn=frogcert.bin&tr=https%3a%2f%2ftracker.fastdownload.xyz%3a443%2fannounce&tr=https%3a%2f%2fopentracker.xyz%3a443%2fannounce&tr=http%3a%2f%2fopen.trackerlist.xyz%3a80%2fannounce&tr=http%3a%2f%2ft.nyaatracker.com%3a80%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2fopen.demonii.si%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.port443.xyz%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.vanitycore.co%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&tr=udp%3a%2f%2fthetracker.org%3a80%2fannounce&tr=http%3a%2f%2ftorrent.nwps.ws%3a80%2fannounce&tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.iamhansen.xyz%3a2000%2fannounce&tr=udp%3a%2f%2fbt.xxx-tracker.com%3a2710%2fannounce&tr=http%3a%2f%2f0d.kebhana.mx%3a443%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2ftracker4.itzmx.com%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.justseed.it%3a1337%2fannounce&tr=http%3a%2f%2ftherightsize.net%3a1337%2fannounce&tr=udp%3a%2f%2fretracker.hotplug.ru%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&tr=udp%3a%2f%2f9.rarbg.com%3a2800%2fannounce&tr=https%3a%2f%2f2.track.ga%3a443%2fannounce&tr=udp%3a%2f%2fbigfoot1942.sektori.org%3a6969%2fannounce)
 * A [Frogtool](https://github.com/zoogie/Frogtool/releases/latest) legújabb kiadása
 * A [b9sTool](https://github.com/zoogie/b9sTool/releases/latest) legújabb kiadása
-* A [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) legújabb kiadása
+* Az [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) legújabb verziója
 
 #### I. rész - Előkészületek
 
 1. Helyezd az SD kártyád a számítógépbe
 1. Másold a `movable.sed` fájlod az SD kártyád gyökerébe
 1. Másold át a `boot.firm` és `boot.3dsx` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
-1. Másold át a `boot.nds`-t (B9STool) a `b9sTool release `.zip`-ből az SD kártya gyökerébe
+1. Másold át a `boot.nds`-t (b9sTool) a `b9sTool release `.zip`-ből az SD kártya gyökerébe
 1. Másold a `Frogtool.3dsx` fájlt az SD kártyád `/3ds/` mappájába
 1. Másold az `frogcert.bin` fájlt az SD kártyád gyökerébe
 1. Tedd vissza az SD kártyád a készülékedbe
@@ -73,6 +76,26 @@ Ha inkább egy vizuális útmutatót szeretnél ehhez a fejezethez, [itt](https:
   + **"Show NAND or user string in System Settings"**
 1. Mentéshez és újraindításhoz nyomd meg a (Start) gombot
   + Az eszközödnek kis várakozás után be kell töltenie a Home menüt. Ha fekete képernyőt kapsz, ami több mint 5 percig tart, [nézd át a hibaelhárítási útmutatót](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
+
+#### V. rész - A DS Download Play visszaállítása
+
+1. Indítsd el a Download Play alkalmazást (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
+1. Várj, amíg két gombot nem látsz
+  + Ne nyomd meg egyiket sem
+1. Nyomd le az (L) + (D-Pad le) + (Select) gombokat egyszerre a Rosalina menü megnyitásához
+1. Válaszd ki a "Miscellaneous options"-t
+1. Válaszd a "Switch the hb. title to the current app." opciót
+1. Nyomd meg a (B) gombot a folytatáshoz
+1. Nyomd meg a (B) gombot, hogy visszakerülj a Rosalina főmenüjébe
+1. Nyomd meg a (B) gombot, hogy kilépj a Rosalina menüből
+1. Nyomd meg a (Home) gombot és zárd be a Download Play-t
+1. Indítsd el újra a Download Play alkalmazást
+1. Ekkor a készülékednek be kell töltenie a Homebrew Launchert
+1. Indítsd el az Frogtool-t a homebrew listából
+1. Válaszd az "RESTORE patched DS Download Play" opciót
+1. Ha a művelet lefutott, olvasd el a képernyőket és ellenőrizd, hogy a folyamat sikeres volt
+  + Ha voltak hibák vagy hiányzó fájlok, javítsd a problémát és próbáld újra
+1. Ha a folyamat sikeres volt, érintsd meg a képernyőt, majd nem meg a START gombot a kilépéshez
 
 ___
 

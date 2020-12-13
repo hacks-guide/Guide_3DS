@@ -4,6 +4,9 @@ title: "Installation de Boot9strap (Fredtool)"
 
 {% include toc title="Table des matières" %}
 
+This page has been marked as a Legacy Method because it has been superseded by faster, safer methods. You should only follow it if you are unable to follow [Installing boot9strap (USM)](installing-boot9strap-(usm)).
+{: .notice--warning}
+
 ### Lecture requise
 
 Cette méthode d'utilisation de Seedminer pour une exploitation ultérieure utilise votre fichier `movable.sed` pour déchiffrer n'importe quel titre DSiWare afin d'injecter un titre DSiWare exploitable dans l'application Connexions Nintendo DS. Cela nécessite d'avoir une sauvegarde d'un DSiWare, par exemple à partir de BannerBomb ou de l'outil DSiWare Dumper.
@@ -12,11 +15,11 @@ Ceci est une implémentation de l'exploit "FIRM partitions known-plaintext" qui 
 
 ## Ce dont vous avez besoin
 
-* Une sauvegarde d'un DSiWare (comme celle qui se trouve à la racine de votre carte SD qui provient de [BannerBomb3](bannerbomb3) ou de [DSiWare Dumper](dsidumper))
+* A DSiWare Backup (such as the one on SD root from [BannerBomb3](bannerbomb3))
 * Votre fichier `movable.sed` obtenu grâce à [Seedminer](seedminer)
 * La dernière version de [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest)
 * La dernière version de [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
-* La dernière version de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
+* The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
 
 #### Section I - Préparatifs
 
@@ -28,18 +31,18 @@ Ceci est une implémentation de l'exploit "FIRM partitions known-plaintext" qui 
 
 #### Section II - Fredtool
 
-1. Ouvrez [Fredtool](https://fredtool.bruteforcemovable.com/) sur votre ordinateur
+1. Open [Fredtool](https://3ds.nhnarwhal.com/3dstools/fredtool.php) on your computer
 1. Sélectionnez votre fichier `movable.sed` pour le champ "Your movable.sed"
 1. Sélectionnez votre fichier de sauvegarde DSiWare (`<8-character-id>.bin`) pour le champ "Your dsiware.bin"
 1. Complétez le captcha "Je ne suis pas un robot"
 1. Sélectionnez "Start"
 1. Attendez la fin de l'opération
 1. Une fois le processus terminé, téléchargez votre archive DSiWare modifiée depuis le site
-  + Ce fichier contient 2 fichiers de sauvegarde DSiWare, un propre (non modifié) et un hax (exploité)
+  + This file contains 2 DSiWare backup files, one clean (unmodified) and one hax (exploited)
 1. Naviguez vers `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` sur votre carte SD
-  + Cet `<ID0>` sera le même que celui que vous avez utilisé dans [Seedminer](seedminer)
-  + Ce dossier `<ID1>` sera un autre dossier de 32 lettres/numéros dans le dossier `<ID0>`
-  + Si le dossier `Nintendo DSiWare` n'existe pas, créez-le dans le dossier `<ID1>`
+  + The `<ID0>` will be the same one that you used in [Seedminer](seedminer)
+  + The `<ID1>` is a 32 character long folder inside of the `<ID0>`
+  + If the `Nintendo DSiWare` folder does not exist, create it inside of the `<ID1>`
 1. Copiez le fichier `42383841.bin` depuis le dossier `output/hax/` de l'archive DSiWare téléchargée (`fredtool_output.zip`) vers le dossier `Nintendo DSiWare`
 1. Réinsérez votre carte SD dans votre 3DS
 1. Allumez à présent votre 3DS
@@ -87,7 +90,7 @@ Si vous préférez un guide visuel pour cette section, un tel guide est disponib
 
 1. Éteignez votre 3DS
 1. Insérez votre carte SD dans votre ordinateur
-1. Copiez le fichier `42383841.bin` depuis le dossier `output/clean/` de l'archive DSiWare téléchargée (`fredtool_output.zip`) vers le dossier `Nintendo 3DS/<ID0>/<32-character-id>/Nintendo DSiWare/` sur votre carte SD
+1. Copy the `42383841.bin` file from the `output/clean/` folder of the downloaded DSiWare archive (`fredtool_output.zip`) to the `Nintendo 3DS/<ID0>/<ID1>/Nintendo DSiWare/` folder on your SD card
   + Remplacez le fichier `42383841.bin` existant
 1. Réinsérez votre carte SD dans votre 3DS
 1. Allumez à présent votre 3DS

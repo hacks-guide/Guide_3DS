@@ -4,6 +4,9 @@ title: "Instalând Boot9strap (Frogtool)"
 
 {% include toc title="Cuprins" %}
 
+This page has been marked as a Legacy Method because it has been superseded by faster, safer methods. You should only follow it if you are unable to follow [Installing boot9strap (USM)](installing-boot9strap-(usm)).
+{: .notice--warning}
+
 ### Lectură obligatorie
 
 Acum vom folosi accesul la Homebrew Launcher pentru a porni aplicația Frogtool și injecta versiuna japoneză a titlului "Flipnote Studio", care vom folosi ulterior pentru a porni b9sTool și instala boot9strap.
@@ -18,14 +21,14 @@ Pentru a folosi linkurile [magnetice](https://wikipedia.org/wiki/Magnet_URI_sche
 * <i class="fa fa-magnet" aria-hidden="true" title="Acesta este un link magnetic. Folosiţi un client de torrent pentru a descărca fişierul."></i> - [frogcert.bin](magnet:?xt=urn:btih:d12278ea50bb3574f1fbd327f3d0e2292c70941f&dn=frogcert.bin&tr=https%3a%2f%2ftracker.fastdownload.xyz%3a443%2fannounce&tr=https%3a%2f%2fopentracker.xyz%3a443%2fannounce&tr=http%3a%2f%2fopen.trackerlist.xyz%3a80%2fannounce&tr=http%3a%2f%2ft.nyaatracker.com%3a80%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2fopen.demonii.si%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.port443.xyz%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.vanitycore.co%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&tr=udp%3a%2f%2fthetracker.org%3a80%2fannounce&tr=http%3a%2f%2ftorrent.nwps.ws%3a80%2fannounce&tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.iamhansen.xyz%3a2000%2fannounce&tr=udp%3a%2f%2fbt.xxx-tracker.com%3a2710%2fannounce&tr=http%3a%2f%2f0d.kebhana.mx%3a443%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2ftracker4.itzmx.com%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.justseed.it%3a1337%2fannounce&tr=http%3a%2f%2ftherightsize.net%3a1337%2fannounce&tr=udp%3a%2f%2fretracker.hotplug.ru%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&tr=udp%3a%2f%2f9.rarbg.com%3a2800%2fannounce&tr=https%3a%2f%2f2.track.ga%3a443%2fannounce&tr=udp%3a%2f%2fbigfoot1942.sektori.org%3a6969%2fannounce)
 * Cea mai nouă versiune de [Frogtool](https://github.com/zoogie/Frogtool/releases/latest)
 * Cea mai recentă versiune de [b9sTool] (https://github.com/zoogie/b9sTool/releases/latest)
-* Cea mai recentă versiune de [Luma3DS] (https://github.com/AuroraWright/Luma3DS/releases/latest)
+* The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
 
 #### Secțiunea I - Preparații
 
 1. Introduceți cardul SD în calculator
 1. Copiați fișierul `movable.sed` in rădăcina cardului SD
 1. Copiați `boot.firm` și `boot.3dsx` de la Luma3DS `.zip` pe rădăcina cardului SD
-1. Copiați `boot.nds` (B9STool) de la b9sTool `.zip` pe rădăcina cardului SD
+1. Copy `boot.nds` (b9sTool) from the b9sTool release `.zip` to the root of your SD card
 1. Copiați `Frogtool.3dsx` în folderul `/3ds/` de pe cardul SD
 1. Copiați `frogcert.bin` în rădăcina cardului SD
 1. Reintroduceți cardul SD în dispozitivul dumneavoastră
@@ -73,6 +76,26 @@ Dacă preferați un ghid vizual pentru aceasta secțiune, deja este disponibil u
   + **"Show NAND or user string in System Settings"**
 1. Apăsați (Start) pentru a salva și reporni
   + Dispozitivul ar trebui să încarce meniul HOME după o scurtă vreme. Dacă vedeți un ecran negru mai mult de 5 secunde, [urmați acest ghid de depanare](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
+
+#### Section V - Restoring DS Download Play
+
+1. Lansați aplicația Download Play (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
+1. Așteptați până când vedeți două butoane
+  + Do not press either of the buttons
+1. Press (Left Shoulder) + (D-Pad Down) + (Select) at the same time to open the Rosalina menu
+1. Selectați "Miscellaneous options"
+1. Selectați "Switch the hb. title to the current app"
+1. Apăsați (B) pentru a continua
+1. Apăsați (B) ca să vă întoarceți la meniul principal Rosalina
+1. Apăsați (B) pentru a ieși din meniul Rosalina
+1. Apăsați (Home), apoi închideți Download Play
+1. Relaunch the Download Play application
+1. Dispozitivul dumneavoastră ar trebui să încarce Hombrew Launcher-ul
+1. Lansați Frogtool din lista de homebrew
+1. Select the "RESTORE patched DS Download Play" option
+1. Odată ce operația s-a terminat, citiți ecranele și verificați dacă procesul a avut succes
+  + Dacă există erori sau vreun fișier lipsă, corectați problema și încercați din nou
+1. If the process was successful, tap the touch screen, then press START to exit
 
 ___
 

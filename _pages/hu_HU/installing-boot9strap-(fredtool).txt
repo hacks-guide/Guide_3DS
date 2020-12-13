@@ -4,6 +4,9 @@ title: "Boot9strap telepítése (Fredtool)"
 
 {% include toc title="Tartalomjegyzék" %}
 
+Ez az oldal Legacy metódusnak jelölt, mert vannak jobb, gyorsabb és biztonságosabb metódusok. Csak akkor szükséges követned, ha nem sikerült követni a [Boot9strap telepítése (USM)](installing-boot9strap-(usm)) fejezeteit.
+{: .notice--warning}
+
 ### Fontos tudnivalók
 
 Ez a metódusa a Seedminer használatának a további exploitoláshoz használja a `movable.sed` fájlod, hogy dekriptáljon egy DSiWare címet, azzal az céllal, hogy beinjektáljon egy exploitolható DSiWare címet a DS Download Play alkalmazásba. Ez igényli, hogy rendelkezzél egy DSiWare mentéssel, például a BannerBomb-ból vagy a DSiWare Dumper eszközből.
@@ -12,11 +15,11 @@ Ez egy jelenleg működő megvalósítása a "FIRM partitions known-plaintext" n
 
 ### Amire szükséged lesz
 
-* Egy DSiWare mentésre (az SD gyökérben a [BannerBomb3](bannerbomb3)-ból vagy [DSiWare Dumper](dsidumper)-ből)
+* Egy DSiWare mentésre (az SD gyökérben a [BannerBomb3](bannerbomb3))-ból
 * A `movable.sed` fájlodra a [Seedminer](seedminer)-ből
 * A [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest) legújabb kiadása
 * A [b9sTool](https://github.com/zoogie/b9sTool/releases/latest) legújabb kiadása
-* A [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) legújabb kiadása
+* Az [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) legújabb verziója
 
 #### I. rész - Előkészületek
 
@@ -28,17 +31,17 @@ Ez egy jelenleg működő megvalósítása a "FIRM partitions known-plaintext" n
 
 #### II. rész - Fredtool
 
-1. Nyisd meg a [Fredtool](https://fredtool.bruteforcemovable.com/) oldalt a számítógépeden
+1. Nyisd meg a [Fredtool](https://3ds.nhnarwhal.com/3dstools/fredtool.php)-t a számítógépeden
 1. Válaszd ki a `movable.sed` fájlodat a "Your movable.sed" mezőben
 1. Válaszd ki a DSiWare mentést (`<8-character-id>.bin`) fájlt a "Your dsiware.bin" mezőben
 1. Teljesítsd a "Nem vagyok robot" captchát
 1. Válaszd a "Start"-ot
 1. Várd meg, amíg a folyamat befejeződik
 1. Amikor a folyamat befejeződött, töltsd le a módosított DSiWare archívot az oldalról
-  + Ez a fájl két dsiware mentést tartalmaz, egy tisztát (módosítatlan) és egy hax-ot (exploitált)
+  + Ez a fájl két DSiWare mentést tartalmaz, egy tisztát (módosítatlan) és egy hax-ot (exploitált)
 1. Navigálj a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` mappába az SD kártyán
   + Az `<ID0>` ugyanaz, mint amit a [Seedminer](seedminer)-nél használtál
-  + Az `<ID1>` mappa egy másik 32 betű/szám mappa az `<ID0>` mappa belsejében
+  + Az `<ID1>` egy 32 karakter hosszú nevű mappa az `<ID0>` mappában
   + Ha a `Nintendo DSiWare` mappa nem létezik, hozd létre az `<ID1>` mappában
 1. Másold a `42383841.bin` fájlt az `output/hax/` mappájából a letöltött DSiWare csomagból (`fredtool_output.zip`) a `Nintendo DSiWare` mappába
 1. Tedd vissza az SD kártyád a készülékedbe
@@ -87,7 +90,7 @@ Ha inkább egy vizuális útmutatót szeretnél ehhez a fejezethez, [itt](https:
 
 1. Kapcsold ki a készüléked
 1. Helyezd az SD kártyád a számítógépbe
-1. Másold a `42383841.bin` fájlt az `output/clean/` mappájából a letöltött DSiWare csomagnak (`fredtool_output.zip`) a `Nintendo 3DS/<ID0>/<32-character-id>/Nintendo DSiWare/` mappába az SD kártyán
+1. Másold a `42383841.bin` fájlt az `output/clean/` mappájából a letöltött DSiWare csomagnak (`fredtool_output.zip`) a `Nintendo 3DS/<ID0>/<ID1>/Nintendo DSiWare/` mappába az SD kártyán
   + Írd felül a létező `42383841.bin` fájlt
 1. Tedd vissza az SD kártyád a készülékedbe
 1. Kapcsold be a készülékedet

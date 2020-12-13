@@ -1,0 +1,43 @@
+---
+title: "格式化 SD 卡（通过 Linux 操作系统）"
+---
+
+{% include toc title="目录内容" %}
+
+### 必读事项
+
+这是一个适用于为 3DS 准备的 SD 卡的格式化教程。
+
+如果 3DS 已经识别到了 SD 卡，那么就不需要做这个教程了。
+
+本页教程仅限 Linux 用户。 如果你没有在用 Linux，那么请看看[格式化 SD 卡（通过 Windows 操作系统）](formatting-sd-(Windows))或[格式化 SD 卡（通过 Mac 操作系统）](formatting-sd-(mac)) 。
+
+### 操作步骤
+#### 第一步 – 确定你的 SD 卡在哪个路径中
+
+1. 请确保你的 SD 卡 **未** 被插入电脑
+1. 启动 Linux 终端
+1. 输入 `watch "lsblk"`
+1. 将 SD 卡插入你的电脑
+1. 查看终端输出内容。 输出内容应该与以下内容相似：
+```
+NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+mmcblk0     179:0    0   3,8G  0 disk
+└─mmcblk0p1 179:1    0   3,7G  0 part /run/media/user/FFFF-FFFF
+```
+1. 注意设备的挂载点。 在我们上面的示例中，它是 `mmcblk0`
+  + 如果 `RO` 为 1，请确保写保护开关未被打开
+1. 按下 CTRL + C 退出菜单
+
+#### 第二步 – 格式化 SD 卡
+
+![](https://i.loli.net/2020/12/07/X8Sjt1LIYZhmaGg.png)
+
+1. 输入 `sudo cfdisk /dev/（由之前步骤得知的设备挂载点）`
+1. 对每个分区按下 `Delete`
+1. 创建一个等于你 SD 卡全部容量大小的分区
+  + 这将会从 Linux 文件类型中创建一个新分区
+1. 选择 Type 并查看菜单
+1. 找到 “W95 FAT32” 并记住该文本左侧的代码
+1. 按下任意键，然后输入你在上一步中记住的代码
+1. 按下 Enter 键，然后选择 Quit

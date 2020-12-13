@@ -4,6 +4,9 @@ title: "安装 Boot9strap（通过 Frogtool）"
 
 {% include toc title="目录内容" %}
 
+此页面已被标记为传统方法，因为它已被操作更便捷且更安全的方法所取代。 只有你在无法按照[安装 boot9strap（通过 USM）](installing-boot9strap-(usm))所写的步骤正常进行操作时，才建议你使用此方法。
+{: .notice--warning}
+
 ### 必读事项
 
 我们现在将通过 Homebrew Launcher 来启动 Frogtool 工具。此工具将把可利用漏洞的 “うごくメモ帳（Flipnote Studio）” 游戏注入到主机。之后我们将通过这个游戏的漏洞来启动 b9sTool 并通过其安装 boot9starp。
@@ -18,14 +21,14 @@ title: "安装 Boot9strap（通过 Frogtool）"
 * <i class="fa fa-magnet" aria-hidden="true" title="这是一个磁力链接。 使用 BT 协议下载软件下载此文件。"></i> - [frogcert.bin](magnet:?xt=urn:btih:d12278ea50bb3574f1fbd327f3d0e2292c70941f&dn=frogcert.bin&tr=https%3a%2f%2ftracker.fastdownload.xyz%3a443%2fannounce&tr=https%3a%2f%2fopentracker.xyz%3a443%2fannounce&tr=http%3a%2f%2fopen.trackerlist.xyz%3a80%2fannounce&tr=http%3a%2f%2ft.nyaatracker.com%3a80%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2fopen.demonii.si%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.port443.xyz%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.vanitycore.co%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&tr=udp%3a%2f%2fthetracker.org%3a80%2fannounce&tr=http%3a%2f%2ftorrent.nwps.ws%3a80%2fannounce&tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.iamhansen.xyz%3a2000%2fannounce&tr=udp%3a%2f%2fbt.xxx-tracker.com%3a2710%2fannounce&tr=http%3a%2f%2f0d.kebhana.mx%3a443%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2ftracker4.itzmx.com%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.justseed.it%3a1337%2fannounce&tr=http%3a%2f%2ftherightsize.net%3a1337%2fannounce&tr=udp%3a%2f%2fretracker.hotplug.ru%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&tr=udp%3a%2f%2f9.rarbg.com%3a2800%2fannounce&tr=https%3a%2f%2f2.track.ga%3a443%2fannounce&tr=udp%3a%2f%2fbigfoot1942.sektori.org%3a6969%2fannounce)
 * 最新版 [Frogtool](https://github.com/zoogie/Frogtool/releases/latest)
 * 最新版 [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
-* 最新版 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
+* 最新版 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
 
 #### 第一步 — 准备工作
 
 1. 将你的 SD 卡插入到电脑
 1. 复制 `movable.sed` 文件到你的SD卡根目录
 1. 解压 Luma3DS `.zip` 里的 `boot.firm` 和 `boot.3dsx` 到你 SD 卡的根目录
-1. 从 b9sTool 的 release `.zip` 中复制 `boot.nds`（B9STool）到 SD 卡的根目录
+1. 从 b9sTool 的 release `.zip` 中复制 `boot.nds`（b9sTool）到 SD 卡的根目录
 1. 复制 `Frogtool.3dsx` 到你 SD 卡的 `/3ds/` 文件夹中
 1. 复制 `frogcert.bin` 到你的 SD 卡根目录
 1. 将 SD 卡重新插入你的主机
@@ -73,6 +76,26 @@ title: "安装 Boot9strap（通过 Frogtool）"
   + **“Show NAND or user string in System Settings”**
 1. 按下 “Start” 键保存设置并重启
   + 你的主机应该在一会后加载到系统桌面。 如果你等了超过五分钟还是黑屏，[请参见此故障排查章节](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
+
+#### 第五步 — 还原“下载通信（DS Download Play）”程序
+
+1. 启动“下载通信(Download Play)”程序 (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
+1. 等到你看到两个按钮
+  + 不要按下任意一个按钮
+1. 同时按下 “L” + “↓” + “Select” 键来打开 Rosalina 菜单
+1. 选择 “Miscellaneous options”
+1. 选择 “Switch the hb. title to the current app.”
+1. 按 “B” 键继续
+1. 按 “B” 键返回 Rosalina 主菜单
+1. 按 “B” 键退出 Rosalina 菜单
+1. 按下 “Home” 键，然后关闭“下载通信(Download Play)”
+1. 重新运行“下载通信（Download Play）”程序
+1. 此时你的主机应该会启动 Homebrew Launcher了
+1. 从自制程序列表中找到并启动 Frogtool
+1. 选择 “RESTORE patched DS Download Play” 选项
+1. 一旦此操作完成后请仔细阅读屏幕，并检查是否成功
+  + 如果提示了错误或者丢失文件，请更正问题并重试
+1. 如果操作成功执行，请点一下触摸屏，然后按 START 键退出
 
 ___
 

@@ -4,6 +4,9 @@ title: "Installation de Boot9strap (Frogtool)"
 
 {% include toc title="Table des matières" %}
 
+This page has been marked as a Legacy Method because it has been superseded by faster, safer methods. You should only follow it if you are unable to follow [Installing boot9strap (USM)](installing-boot9strap-(usm)).
+{: .notice--warning}
+
 ### Lecture requise
 
 Nous allons maintenant utiliser notre accès à l'Homebrew Launcher pour exécuter l'utilitaire Frogtool afin d'injecter la version japonaise exploitable du titre "Flipnote Studio", que nous utilisons pour exécuter b9sTool et installer boot9strap.
@@ -18,14 +21,14 @@ Pour utiliser les liens suivants [magnet](https://fr.wikipedia.org/wiki/Magnet_(
 * <i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Utilisez un client de torrent pour télécharger le fichier."></i> - [frogcert.bin](magnet:?xt=urn:btih:d12278ea50bb3574f1fbd327f3d0e2292c70941f&dn=frogcert.bin&tr=https%3a%2f%2ftracker.fastdownload.xyz%3a443%2fannounce&tr=https%3a%2f%2fopentracker.xyz%3a443%2fannounce&tr=http%3a%2f%2fopen.trackerlist.xyz%3a80%2fannounce&tr=http%3a%2f%2ft.nyaatracker.com%3a80%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2fopen.demonii.si%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.port443.xyz%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.vanitycore.co%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&tr=udp%3a%2f%2fthetracker.org%3a80%2fannounce&tr=http%3a%2f%2ftorrent.nwps.ws%3a80%2fannounce&tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.iamhansen.xyz%3a2000%2fannounce&tr=udp%3a%2f%2fbt.xxx-tracker.com%3a2710%2fannounce&tr=http%3a%2f%2f0d.kebhana.mx%3a443%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2ftracker4.itzmx.com%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.justseed.it%3a1337%2fannounce&tr=http%3a%2f%2ftherightsize.net%3a1337%2fannounce&tr=udp%3a%2f%2fretracker.hotplug.ru%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&tr=udp%3a%2f%2f9.rarbg.com%3a2800%2fannounce&tr=https%3a%2f%2f2.track.ga%3a443%2fannounce&tr=udp%3a%2f%2fbigfoot1942.sektori.org%3a6969%2fannounce)
 * La dernière version de [Frogtool](https://github.com/zoogie/Frogtool/releases/latest)
 * La dernière version de [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
-* La dernière version de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
+* The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
 
 #### Section I - Préparatifs
 
 1. Insérez votre carte SD dans votre ordinateur
 1. Copiez votre fichier `movable.sed` à la racine de votre carte SD
 1. Copiez `boot.firm` et `boot.3dsx` depuis le fichier `.zip` de Luma3DS vers la racine de votre carte SD
-1. Copiez `boot.nds` (B9STool) depuis le fichier `.zip` de b9sTool vers la racine de votre carte SD
+1. Copy `boot.nds` (b9sTool) from the b9sTool release `.zip` to the root of your SD card
 1. Copiez `Frogtool.3dsx` dans le dossier `/3ds/` de votre carte SD
 1. Copiez `frogcert.bin` à la racine de votre carte SD
 1. Réinsérez votre carte SD dans votre 3DS
@@ -73,6 +76,26 @@ Si vous préférez un guide visuel pour cette section, un tel guide est disponib
   + **"Show NAND or user string in System Settings"**
 1. Appuyez sur (Start) pour enregistrer les modifications et redémarrer
   + Votre console devrait afficher le Menu HOME après un court instant. Si vous avez un écran noir depuis plus de 5 minutes, [suivez ce guide de dépannage](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
+
+#### Section V - Restoring DS Download Play
+
+1. Lancez l'application Mode Téléchargement (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
+1. Attendez jusqu'à ce que vous voyiez les deux boutons
+  + N'appuyez sur aucun des deux boutons
+1. Appuyez simultanément sur (L) + (Bas sur la croix directionnelle) + (Select) pour ouvrir le menu Rosalina
+1. Sélectionnez "Miscellaneous options"
+1. Sélectionnez "Switch the hb. title to the current app."
+1. Appuyez sur (B) pour continuer
+1. Appuyez sur (B) pour revenir au menu principal de Rosalina
+1. Appuyez sur (B) pour quitter le menu Rosalina
+1. Appuyez sur (Home), puis fermez Mode téléchargement
+1. Relancez l’application Mode téléchargement
+1. Votre console devrait maintenant charger le Homebrew Launcher
+1. Lancez Frogtool depuis la liste des homebrews
+1. Select the "RESTORE patched DS Download Play" option
+1. Une fois cette opération terminée, lisez les écrans et vérifiez si le processus a réussi
+  + S'il y a des erreurs ou des fichiers manquants, corrigez le problème et réessayez
+1. If the process was successful, tap the touch screen, then press START to exit
 
 ___
 
