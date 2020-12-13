@@ -6,16 +6,7 @@ title: "Installazione di boot9strap (Soundhax)"
 
 ### Lettura necessaria
 
-Soundhax (combinato a pre9otherapp) è compatibile con le versioni del software comprese tra 2.1.0 e 8.1.0 nelle regioni EUR, JPN, KOR e USA.
-
-{% capture notice-1 %}
-
-Tieni presente che tramite scheda di gioco vengono aggiornate solamente le applicazioni principali del sistema, come le Impostazioni della console, il menu HOME, ecc. Non vengono invece aggiornate le funzionalità come Sound Nintendo 3DS o le funzionalità che necessitano di Internet, come ad esempio il Trasferimento dati, il Browser Internet, la Piazza Mii StreetPass o l'eShop.
-
-Ciò significa che se aggiorni con una scheda di gioco da una versione avente una versione di Sound Nintendo 3DS obsoleta *(<2.1.0)* ad una versione con la stessa applicazione aggiornata, Soundhax non funzionerà! Ti occorrerà un metodo alternativo per avviare l'Homebrew Launcher, come [Installazione di boot9strap (Browser)](installing-boot9strap-(browser)) o [Installazione di boot9strap (MSET)](installing-boot9strap-(mset))!
-{% endcapture %}
-
-<div class="notice--warning">{{ notice-1 | markdownify }}</div>
+Soundhax (when combined with universal-otherapp) is compatible with versions 1.0.0 through 11.3.0 in all regions.
 
 ### Cosa serve
 
@@ -24,7 +15,7 @@ Ciò significa che se aggiorni con una scheda di gioco da una versione avente un
 * L'ultima versione di [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * L'ultima versione di [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(la versione normale di boot9strap; non il file `devkit`, né il file `ntr`)*
 * L'ultima versione di [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
-* La versione v1.2 di [pre9otherapp](https://github.com/hax0kartik/pre9otherapp/releases/tag/v1.2) *(il file `.bin` corrispondente alla tua versione del software)*
+* The latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)
 
 ### Istruzioni
 
@@ -33,12 +24,11 @@ Ciò significa che se aggiorni con una scheda di gioco da una versione avente un
 1. Spegni il tuo 3DS
 1. Inserisci la scheda SD nel tuo computer
 1. Copia il file `.m4a`di Soundhax nella directory principale della tua scheda SD
-1. Copia il file pre9otherapp payload nella directory principale della tua scheda SD e rinominalo in `otherapp.bin`
-  + Se non vedi l'estensione `.bin`, non aggiungerla alla fine del nome del file
+1. Copy `otherapp.bin` to the root of your SD card
 1. Copia i file `boot.firm` e `boot.3dsx` dall'archivio `.zip` di Luma3DS nella directory principale della tua scheda SD
 1. Crea una cartella chiamata `boot9strap` nella directory principale della tua scheda SD
 1. Copia i file `boot9strap.firm` e `boot9strap.firm.sha` dall'archivio `.zip` di boot9strap nella cartella `/boot9strap/` della tua scheda SD
-1. Copia il file `arm9.bin` dall'archivio `.zip` di SafeB9SInstaller nella directory principale della tua scheda SD
+1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
 1. Reinserisci la scheda SD nella tua console
 1. Accendi la console
 
@@ -56,7 +46,6 @@ Ciò significa che se aggiorni con una scheda di gioco da una versione avente un
 1. Seleziona `/Scheda SD`, quindi avvia "<3 nedwill 2016"
   + Potrebbero essere necessari più tentativi
   + Se la console dovesse bloccarsi, forzane lo spegnimento tenendo premuto il pulsante di accensione, quindi riprova
-  + Se fallisce più di dieci volte, prova a sostituire il tuo `otherapp.bin` con la [versione v2.0 di pre9otherapp](https://github.com/hax0kartik/pre9otherapp/releases/tag/v2.0)
 
     ![]({{ "/images/screenshots/soundhax-launch.png" | absolute_url }})
     {: .notice--info}
