@@ -17,7 +17,7 @@ Notez que si vous avez n’importe quel autre payload que `GodMode9.firm` dans l
 Ce processus déliera votre NNID de votre console, car celui-ci ne sera plus compatible avec. Les NNIDs sont restreints à la région de la console qui les a créés, et ne peuvent pas être transférés dans une autre régions sans [manipulations complexes et avancées](https://gist.githubusercontent.com/yifanlu/e80db121d38aceb8cca0e03cefd5853b/raw/3c4dd89869156ca0f945a2791e699acfdb32b510/gistfile1.txt).
 {: .notice--warning}
 
-A l'issue de ce processus, seules **les New 3DS qui n'ont jamais accédé à l'eshop auparavant** et **toutes les Old 3DS** seront capables d'accéder à l'eshop après avoir créé un nouvel NNID associé à la nouvelle région de la console. Les New 3DS qui ont déjà accédé à l'eshop depuis leur région d'origine ne pourront pas créer un nouvel NNID ni accéder à l'eshop depuis leur nouvelle région!
+After this process, **you will not be able to access the eShop**. This includes any feature that uses an NNID, such as game updates, purchasing DLC, or online play in certain games. Region changing to your original region will usually not fix this issue.
 {: .notice--warning}
 
 Notez que parfois, pour une raison inconnue, l'eshop ne fonctionnera pas même sur une console sur laquelle il devrait. Ceci est entièrement dû aux serveurs de Nintendo, et je n'ai aucun contrôle dessus. Similaire à l’avertissement ci-dessus, notez que parfois l’eShop marchera inexplicablement sur les consoles qui ne devrait pas (par exemple, certaines New 3DS). La cause est actuellement inconnue.
@@ -55,12 +55,34 @@ Vous DEVEZ avoir déjà installé Luma3DS et boot9strap pour utiliser ceci.
 1. Copiez `FBI.3dsx` dans le dossier `/3ds/` de votre carte SD
 1. Réinsérez votre carte SD dans votre 3DS
 
-#### Section II - CTRTransfer
-
+#### Section II - NAND Backup
 1. Ouvrez Godmode9 en maintenant (Start) au démarrage
 1. Si vous êtes invité à créer une sauvegarde de fichiers essentiels, appuyez sur (A) pour le faire, puis appuyez sur (A) pour continuer une fois qu’elle a complété
 1. Si vous êtes invité à régler la date et l'heure du RTC, appuyez sur (A) pour le faire, puis réglez la date et l'heure, puis appuyez sur (A) pour continuer
   Notez que, si vous avez dû régler la date et l'heure du RTC, vous devrez également régler l'heure dans les Paramètres du système après ce guide
+1. Appuyez sur (Home) pour faire apparaître le menu d’actions (action menu)
+1. Sélectionnez "Scripts"
+1. Sélectionnez "GM9Megascript"
+1. Sélectionnez "Backup Options"
+1. Sélectionnez "SysNAND Backup"
+1. Appuyez sur (A) pour confirmer
+  + Ce processus prendra un certain temps
+  + Si une erreur apparaît, vérifiez que vous avez au moins 1,3 Go d'espace libre sur votre carte SD
+1. Appuyez sur (A) pour continuer
+1. Appuyez sur (B) pour revenir au menu principal
+1. Sélectionnez "Exit"
+1. Appuyez (A) pour reverrouiller autorisations en écriture si vous êtes invité
+1. Maintenez (R) et appuyez sur (B) en même temps pour éjecter votre carte SD
+1. Insérez votre carte SD dans votre ordinateur
+1. Copiez `<date>_<serialnumber>_sysnand_###.bin` et `essential.exefs` du dossier `/gm9/out/`de votre carte SD vers un emplacement sûr de votre ordinateur
+  + Faites des sauvegardes dans plusieurs endroits (tels que des stockages de fichiers en ligne par exemple)
+  Ces sauvegardes vous sauveront d'un brick et/ou vous aideront à récupérer des fichiers de l'image de la NAND si quelque chose se passe mal plus tard
+1. Supprimez `<date>_<serialnumber>_sysnand_###.bin` et `<date>_<serialnumber>_sysnand_###.bin.sha` du dossier `/gm9/out/` de votre carte SD après l'avoir copiée
+1. Réinsérez votre carte SD dans votre 3DS
+  + Si votre carte SD n'a pas été détectée, maintenez (R) et appuyez sur (B) pour la remonter
+  
+#### Section III - CTRTransfer
+
 1. Naviguez vers `[0:] SDCARD` -> `gm9`
 1. Appuyez sur (A) sur le `.bin` de CTRTransfer pour le sélectionner
 1. Sélectionnez "CTRNAND options..."
@@ -68,7 +90,7 @@ Vous DEVEZ avoir déjà installé Luma3DS et boot9strap pour utiliser ceci.
 1. Si vous y êtes invité, sélectionnez "Transfer to SysNAND"
   + Cette invitation s’affiche uniquement si vous avez une EmuNAND
 1. Appuyez sur (A) pour autoriser l'écriture sur votre SysNAND, puis entrez la combinaison de touches demandée
-  + Ce processus prendra un certain temps
+  + Ce processus pendra du temps
 1. Une fois le transfert terminé, appuyez sur (A) pour continuer
 1. Appuyez sur (B) pour décliner le verrouillage des autorisations en écriture si vous y êtes invité
 1. Appuyez deux fois sur (B) pour revenir au menu principal
@@ -87,7 +109,7 @@ Vous DEVEZ avoir déjà installé Luma3DS et boot9strap pour utiliser ceci.
   + Mettre à jour tout en ayant B9S + Luma (ce que vous avez) est sans danger
   + Si vous obtenez une erreur, réglez vos paramètres DNS sur "Automatique"
 
-#### Section III - Lancez FBI
+#### Section IV - Launching FBI
 
 1. Lancez l'application Mode téléchargement (cette [icône]({{ "/images/download-play-icon.png" | absolute_url }})
 1. Appuyez simultanément sur (L) + (Bas) + (Select) pour ouvrir le menu Rosalina
@@ -100,7 +122,7 @@ Vous DEVEZ avoir déjà installé Luma3DS et boot9strap pour utiliser ceci.
 1. Lancez l’application Mode téléchargement
 1. Votre console devrait maintenant charger le Homebrew Launcher
 
-#### Section IV - Réinstallation des Tickets
+#### Section V - Reinstalling Tickets
 
 Si le script trouvé qu'aucun ticket utilisateur vous pouvez sautez cette section
 {: .notice--info}
@@ -120,14 +142,14 @@ Si le script trouvé qu'aucun ticket utilisateur vous pouvez sautez cette sectio
   + Appuyez sur (B) pour refuser l'installation des tickets depuis le CDN.
 1. Appuyez sur (Home) pour quitter FBI
 
-#### Section V - Paramètres de région
+#### Section VI - Region settings
 
 1. Ouvrez les Paramètres de la console
 1. Allez dans "Autres paramètres", "Profil", puis "Région"
 1. Sélectionnez un pays dans la région que vous venez de paramétrer
 1. Vous n'avez pas besoin de choisir un État si on vous le demande
 
-#### Section VI - Suppression de l'image CTRTransfer
+#### Section VII - Remove CTRTransfer image
 
 1. Ouvrez Godmode9 en maintenant (Start) au démarrage
 1. Naviguez vers `[0:] SDCARD` -> `gm9`
