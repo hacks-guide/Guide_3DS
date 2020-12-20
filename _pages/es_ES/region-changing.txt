@@ -17,7 +17,7 @@ Ten en cuenta que si tienes archivos de payloads distintos de `GodMode9.firm` en
 Este proceso desvinculará tu NNID del sistema, puesto que ya no será compatible con él. Las NNIDs están restringidas a la región de la consola que la creó y no puede ser transferida entre regiones sin [un proceso muy complejo y avanzado](https://gist.githubusercontent.com/yifanlu/e80db121d38aceb8cca0e03cefd5853b/raw/3c4dd89869156ca0f945a2791e699acfdb32b510/gistfile1.txt) (*En Inglés*).
 {: .notice--warning}
 
-Después de este proceso, sólo las **New 3DS que nunca antes hayan tenido acceso a la eShop** y **todas las Old 3DS** serán capaces de acceder a la eShop después de crear una nueva NNID en su nueva región. ¡Las New 3DS que cambien de región y que hayan accedido a la eShop en su región original, no pueden crear una nueva NNID y acceder a la eShop en su nueva región!
+After this process, **you will not be able to access the eShop**. This includes any feature that uses an NNID, such as game updates, purchasing DLC, or online play in certain games. Region changing to your original region will usually not fix this issue.
 {: .notice--warning}
 
 Ten en cuenta que en ocasiones la eShop inexplicablemente no funcionará para las consolas en las que debería funcionar. Esto es causado por los servidores de Nintendo y realmente no tenemos ningún control sobre ello. Adicionalmente, ten en cuenta que ocasionalmente la eShop de forma inexplicable funcionará en algunas consolas en las que no debería (como algunas New 3DS). La causa para esto es actualmente desconocida.
@@ -55,12 +55,34 @@ Ya DEBES tener instalado Luma3DS y boot9strap para usar esto.
 1. Copia `FBI.3dsx` a la carpeta `/3ds/` de tu tarjeta SD
 1. Vuelve a insertar tu tarjeta SD en tu consola
 
-#### Sección II - CTRTransfer
-
+#### Section II - NAND Backup
 1. Inicia GodMode9 manteniendo presionado (Start) mientras enciendes la consola
 1. Si se te pide crear copias de seguridad de archivos esenciales, presiona (A) para hacerlo y luego presiona (A) para continuar una vez que haya terminado
 1. Si se te pide fijar la fecha y hora RTC, presiona (A) para hacerlo, luego define la fecha y la hora, y después presiona (A) para continuar
   + Ten en cuenta que, si tuviste que cambiar la fecha y hora RTC, también deberás cambiar la hora en la Configuración de la consola después de hacer esta guía
+1. Presiona el botón (Home) para abrir el menú de acción
+1. Selecciona "Scripts..."
+1. Selecciona "GM9Megascript"
+1. Selecciona "Backup Options"
+1. Selecciona "SysNAND Backup"
+1. Presiona (A) para confirmar
+  + Este proceso tomará algún tiempo
+  + Si te aparece un error, asegúrate de que tienes al menos 1.3GB de espacio libre en tu tarjeta SD
+1. Presiona (A) para continuar
+1. Presiona (B) para volver al menú principal
+1. Selecciona "Exit"
+1. Presiona (A) para volver a bloquear los permisos de escritura si se solicita
+1. Mantén (R) y presiona (B) al mismo tiempo para extraer la SD
+1. Inserta tu tarjeta SD en tu computadora
+1. Copia `<fecha>_<númerodeserie>_sysnand###.bin` y `essential.exefs` desde la carpeta `/gm9/out/` en tu tarjeta SD a una ubicación segura en tu computadora
+  + Haz copias de seguridad en múltiples sitios (como por ejemplo, en un pendrive o almacenamiento online)
+  + Estos respaldos podrán prevenir que se inutilice la consola y/o ayudarte a recuperar archivos de la memoria de tu consola si algo sale mal en el futuro
+1. Elimina `<date>_<serialnumber>_sysnand_###.bin` y `<date>_<serialnumber>_sysnand_###.bin.sha` de la carpeta `/gm9/out/` de tu tarjeta SD después de copiarla
+1. Vuelve a insertar tu tarjeta SD en tu consola
+  + Si tu tarjeta SD no fue detectada, mantén presionado (R) y presiona (B) a la vez para volverla a montar
+  
+#### Section III - CTRTransfer
+
 1. Ve a `[0:] SDCARD` -> `gm9`
 1. Presiona (A) sobre el `.bin` del CTRTransfer para seleccionarlo
 1. Selecciona "CTRNAND options..."
@@ -87,7 +109,7 @@ Ya DEBES tener instalado Luma3DS y boot9strap para usar esto.
   + Actualizar la consola teniendo B9S y Luma (lo que acabas de instalar) es seguro
   + Si esto te da un error, ajusta tu configuración de DNS a "obtención automática"
 
-#### Sección III - Iniciar FBI
+#### Section IV - Launching FBI
 
 1. Inicia la aplicación Modo Descarga (este [ícono]({{ "/images/download-play-icon.png" | absolute_url }})
 1. Presiona (L) + (Abajo) + (Select) a la vez para abrir el menú de Rosalina
@@ -100,7 +122,7 @@ Ya DEBES tener instalado Luma3DS y boot9strap para usar esto.
 1. Inicia la aplicación de Modo Descarga
 1. Tu consola debería cargar el Homebrew Launcher
 
-#### Sección IV - Reinstalación de tickets
+#### Section V - Reinstalling Tickets
 
 Si el script que no encontró tickets del usuario te dice que saltes esta sección, entonces salta esta sección
 {: .notice--info}
@@ -120,14 +142,14 @@ Si el script que no encontró tickets del usuario te dice que saltes esta secci�
   + Presiona (B) para rechazar la instalación de tickets desde CDN.
 1. Presiona (Home) para salir de FBI
 
-#### Sección V - Configuración de región
+#### Section VI - Region settings
 
 1. Entra a Configuración de la consola
 1. Ir a "Otros ajustes", "Perfil", y luego "Configuración de la región"
 1. Selecciona un país de la región a la que has cambiado
 1. Si se solicita, no necesitas establecer un estado
 
-#### Sección VI - Eliminar la imagen CTRTransfer
+#### Section VII - Remove CTRTransfer image
 
 1. Inicia GodMode9 manteniendo presionado (Start) mientras enciendes la consola
 1. Ve a `[0:] SDCARD` -> `gm9`
