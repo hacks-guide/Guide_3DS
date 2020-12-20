@@ -17,7 +17,7 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 תהליך זה ינתק את הNNID שלכם מהמערכת, כי הוא לא יהיה תואם איתה. NNID נעולים לאזור של המכשיר שבו יצרתם אותם ולא ניתן להעביר בין אזורים ללא [תהליך מתקדם ומסובך מאוד](https://gist.githubusercontent.com/yifanlu/e80db121d38aceb8cca0e03cefd5853b/raw/3c4dd89869156ca0f945a2791e699acfdb32b510/gistfile1.txt).
 {: .notice--warning}
 
-אחרי תהליך זה, רק ** New 3DS אשר מעולם לא נכנס אל הeShop לפני ** ו ** כל Old 3DS ** יוכלו לגשת לeShop אחרי יצירת NNID חדש על האזור החדש שלהם. New 3DS שכבר נכנס לEshop על האזור המקורי שלהם לא יכולים ליצור NNID חדש באזור החדש ולהיכנס שם לEshop!
+After this process, **you will not be able to access the eShop**. This includes any feature that uses an NNID, such as game updates, purchasing DLC, or online play in certain games. Region changing to your original region will usually not fix this issue.
 {: .notice--warning}
 
 שימו לב שלעתים הeShop עדיין לא יעבוד לקונסולות ששם הוא צריך לעבוד. זה לגמרי קשור בשרתים של נינטנדו ואין לי שליטה על זה. בנוסף, שימו לב שמידי פעם הeShop יעבוד באופן בלתי מוסבר עבור מכשירים שהוא לא אמור (לדוגמת הNew 3DS). הסיבה לכך היא כרגע לא ידועה.
@@ -55,12 +55,34 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 1. תעתיקו את 'FBI.3dsx' לתיקיה '/ 3ds /' על כרטיס הזכרון
 1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
 
-#### חלק II - ביצוע CTRTransfer
-
+#### Section II - NAND Backup
 1. תפתחו את GodMode9 על ידי החזקה של המקש (Start) בעת ההדלקה
 1. אם תתבקשו לעשות גיבוי של קבצים חיוניים, תלחצו (A) כדי לעשות זאת, ואז תלחצו (A) כדי להמשיך אחרי שזה סיים
 1. אם אתם מתבקשים לתקן את זמן ותאריך הRTC, תלחצו (A) כדי לעשות זאת, ואז תלחצו (A) כדי להמשיך
   + שימו לב, אם הייתם צריכים לתקן את תאריך וזמן הRTC, תצטרכו לתקן את הזמן בהגדרות המערכת גם כן אחרי המדריך הזה
+1. תלחצו על (Home) כדי להראות את תפריט הפעולה
+1. תבחרו "Scripts..."
+1. Select "GM9Megascript"
+1. Select "Backup Options"
+1. Select "SysNAND Backup"
+1. תלחצו (A) כדי לאשר
+  + זה ייקח קצת זמן
+  + If you get an error, make sure that you have at least 1.3GB of free space on your SD card
+1. תלחצו (A) כדי להמשיך
+1. תלחצו (B) כדי לחזור לתפריט הראשי
+1. Select "Exit"
+1. תלחצו (A) כדי לנעול הרשאות כתיבה אם תתבקשו
+1. תחזיקו (R) ולחצו (B) באותו הזמן כדי להוציא את הSD
+1. תכניסו את ה-SD שלכם למחשב
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
+  + תיצרו גיבויים במקומות שונים (כמו אחסון בענן)
+  + These backups will save you from a brick and/or help you recover files from the NAND image if anything goes wrong in the future
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` and `<date>_<serialnumber>_sysnand_###.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
+1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
+  + If your SD card was not detected, hold (R) and press (B) at the same time to remount it
+  
+#### Section III - CTRTransfer
+
 1. נווטו אל `[0:] SDCARD` ושם אל `gm9`
 1. תלחצו (A) על קובץ ה`.bin` של הCTRTransfer כדי לבחור בו
 1. תבחרו ב "CTRNAND options..."
@@ -87,7 +109,7 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
   + עדכונים שתבצעו תוך שימוש ב-B9S+Luma (במידה שיש לכם את שניהם) הם בטוחים לחלוטין
   + אם אתם מקבלים שגיאה, שנו את הגדרות ה-DNS שלכם ל-"auto"
 
-#### חלק III - הפעלת FBI
+#### Section IV - Launching FBI
 
 1. Launch the Download Play application (this [icon]({{ "/images/download-play-icon.png" | absolute_url }})
 1. תלחצו (L) + (Down) + (Select) באותו זמן כדי לפתוח את התפריט של Rosalina
@@ -100,7 +122,7 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 1. תפעילו את Download Play
 1. המכשיר שלכם אמור לטעון את הHomebrew Launcher
 
-#### חלק IV - התקנה מחדש של Ticketים
+#### Section V - Reinstalling Tickets
 
 אם הסקריפט אמר לכם "No User Tickets Found" או משהו בסגנון אז תדלגו על החלק הזה
 {: .notice--info}
@@ -120,14 +142,14 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
   + תלחצו (B) כדי לדחות התקנת TICKETים מהCDN.
 1. תלחצו על (Home) כדי לצאת מFBI
 
-#### סעיף V - הגדרות אזור
+#### Section VI - Region settings
 
 1. פתחו את הגדרות המערכת
 1. לכו ל Other settings, אז Profile, ולבסוף Region settings
 1. תבחרו מדינה מהאזור שהחלפתם אליו
 1. אם תתבקשו, אתם לא צריכים להגדיר אזור
 
-#### חלק VI - מחיקת ה CTRTransfer image
+#### Section VII - Remove CTRTransfer image
 
 1. תפתחו את GodMode9 על ידי החזקה של המקש (Start) בעת ההדלקה
 1. נווטו אל `[0:] SDCARD` ושם אל `gm9`
