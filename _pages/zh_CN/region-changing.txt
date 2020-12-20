@@ -17,7 +17,7 @@ title: "区域变更"
 本过程将会把你的设备系统中的 NNID 绑定移除，因为在区域变更后它们将不再兼容。 NNID 在创建后就会被锁定在当前设备所在的区域，除非经过[一个非常复杂且进阶流程](https://gist.githubusercontent.com/yifanlu/e80db121d38aceb8cca0e03cefd5853b/raw/3c4dd89869156ca0f945a2791e699acfdb32b510/gistfile1.txt)，不能在区域间迁移。
 {: .notice--warning}
 
-区域变更后，只有**从未开启过 eShop 的 New 3DS** 和**所有老型号的 3DS** 可以在新的区域创建一个新的 NNID 并访问 eShop。 而已经在原来的区域开启过 eShop 的 New 3DS 将不能创建新的 NNID，并在新的区域上访问 eShop！
+After this process, **you will not be able to access the eShop**. This includes any feature that uses an NNID, such as game updates, purchasing DLC, or online play in certain games. Region changing to your original region will usually not fix this issue.
 {: .notice--warning}
 
 请注意，有时候 eShop 在某些本应该可以访问的设备上还是莫名其妙地无法正常访问。 这完全是任天堂的服务器的问题，我真的背不了这个锅。 而且，有时候 eShop 突然会在照理说不能使用的主机上（比如某些 New 3DS 主机）变得可以使用。 我也不清楚是什么玄学修复的。
@@ -55,12 +55,34 @@ title: "区域变更"
 1. 复制 `FBI.3dsx` 到 SD 卡的 `/3ds/` 目录下
 1. 将 SD 卡重新插入你的设备
 
-#### 第二步 – CTRTransfer
-
+#### Section II - NAND Backup
 1. 开机时按住 “Start” 键启动 GodMode9
 1. 如果提示创建重要文件备份，按下 “A” 键确认，在完成后再次按下 “A” 键来继续。
 1. 如果出现修复 RTC 日期与时间的提示，按 “A” 键执行修复，然后设置好日期和时间，并按 “A” 继续
   + 请注意，如果出现了该提示，则执行完本指南后你还需要在系统设置中重新设置时间
+1. 按下 “Home” 键来打开功能菜单
+1. 选择 “Scripts...”
+1. 选择 “GM9Megascript”
+1. 选择 “Backup Options”
+1. 选择 “SysNAND Backup”
+1. 按下 “A” 键确认
+  + 此过程将花费一些时间
+  + 如果你遇到了错误, 请确保你的 SD 卡上至少有 1.3GB 的可用空间
+1. 按 “A” 键继续
+1. 按下 “B” 键返回到主菜单
+1. 选择 “Exit”
+1. 如果提示重新锁定写入权限，按下 “A” 键来确认
+1. 同时按 “R” 键和“B”键，弹出你的SD卡
+1. 将你的 SD 卡插入到电脑
+1. 从 SD 卡的 `/gm9/out/` 文件夹中复制 `<date>_<serialnumber>_sysnand_###.bin` 和 `essential.exefs` 到电脑中的安全的位置
+  + 请在多处地方备份这些文件（比如网盘等）
+  + 如果以后机器出现任何问题，这些备份文件将是为你提供修复砖机或从 NAND 镜像恢复文件的帮手
+1. 将 `<date>_<serialnumber>_sysnand_###.bin` 和 `<date>_<serialnumber>_sysnand_###.bin.sha` 从你的 SD 卡的 `/gm9/out/` 文件夹中复制出后将其删除
+1. 将SD卡重新插入你的主机
+  + 如果你的 SD 卡没有被工具检测到，请同时按下 “R” + “B” 键来重新将其挂载
+  
+#### Section III - CTRTransfer
+
 1. 移动至 `[0:] SDCARD` -> `gm9`
 1. 在 CTRTransfer `.bin` 上按 “A” 键以选中它
 1. 选择 “CTRNAND options...”
@@ -87,7 +109,7 @@ title: "区域变更"
   + 你使用 B9S 和 Luma 时升级系统是安全的
   + 如果在更新中途出错，请将主机的 DNS 设置改为 “自动(auto)”
 
-#### 第三步 – 启动 FBI 应用
+#### Section IV - Launching FBI
 
 1. 启动“下载通信(Download Play)”程序 (它长[这样]({{ "/images/download-play-icon.png" | absolute_url }})
 1. 同时按下“L”+“下”+“Select” 键来打开 Rosalina 菜单
@@ -100,7 +122,7 @@ title: "区域变更"
 1. 运行“下载通信（Download Play）”程序
 1. 此时你的主机应该会启动 Homebrew Launcher了
 
-#### 第四步 – 重装 Tickets
+#### Section V - Reinstalling Tickets
 
 如果脚本没有找到任何使用者的 tickets 并且告诉你跳过本小节，那么就跳过本小节
 {: .notice--info}
@@ -120,19 +142,19 @@ title: "区域变更"
   + 按 “B” 键来拒绝从 CDN 安装 tickets。
 1. 按 “Home” 键退出 FBI
 
-#### 第五步 – 区域设置
+#### Section VI - Region settings
 
 1. 启动“系统设置（System Settings）”
 1. 选择“其他设置（Other Settings）”，然后点击“个人资料（Profile）”，然后“区域设置（Region Settings）”
 1. 选择你变更区域后的国家
 1. 如果出现提示，州（state）的部分无需设置
 
-#### 第六步 – 删除 CTRTransfer 镜像
+#### Section VII - Remove CTRTransfer image
 
 1. 开机时按住 “Start” 键启动 GodMode9
 1. 移动至 `[0:] SDCARD` -> `gm9`
 1. 在 CTRTransfer `.bin` 上按 “X” 来删除它
-1. 按下 “A” 键确认
+1. 按 “A” 确认
 1. 按 “Start” 键重启你的设备
 
 ___
