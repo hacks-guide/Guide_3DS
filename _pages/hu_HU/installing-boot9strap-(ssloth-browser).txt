@@ -1,0 +1,81 @@
+---
+title: "Installing boot9strap (SSLoth-Browser)"
+---
+
+{% include toc title="Tartalomjegyzék" %}
+
+### Fontos tudnivalók
+
+SSLoth allows users on version 11.13.0 and below to bypass the browser version check, allowing use of new-browserhax or old-browserhax, which can then be used in conjunction with universal-otherapp.
+
+If you have updated your device to your current version using a cartridge, your Internet Browser will be inaccessible. If this is the case, you will need to update your device to the latest version through System Settings and then follow the method for the latest version.
+{: .notice--warning}
+
+### Amire szükséged lesz
+
+* A [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) legújabb kiadása
+* A [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest) legújabb kiadása
+* A [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) legújabb kiadása *(a sima boot9strap; nem a `devkit` fájl, nem az `ntr` fájl)*
+* Az [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) legújabb verziója 
+
+#### I. rész - Előkészületek
+
+1. Kapcsold ki a készüléked
+1. Helyezd az SD kártyád a számítógépbe
+1. Copy `otherapp.bin` to the root of your SD card and rename it to `arm11code.bin`
+  +Ha nem látod a `.bin` kiterjesztést ne add kézzel hozzá a fájl végéhez
+1. Másold át a `boot.firm` és `boot.3dsx` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
+1. Hozz létre egy mappát `boot9strap` néven az SD kártya gyökerében
+1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `boot9strap` folder on your SD card
+1. Másold át a `SafeB9SInstaller.bin` fájlt a SafeB9SInstaller `.zip`-ből az SD kártyád gyökerébe
+1. Tedd vissza az SD kártyád a készülékedbe
+1. Kapcsold be a készülékedet
+
+#### Section II - SSLoth
+1. Launch the System Settings application
+1. Navigate to `Internet Settings` -> `Connection Settings`
+1. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `DNS`
+1. Set "Auto-Obtain DNS" to "No", then click `Detailed Setup`
+1. Set both the Primary DNS and Secondary DNS to `54.38.133.70`
+1. Click OK, then click Save
+1. When prompted, click "Test" to perform the connection test
+	+ The test should succeed
+1. Kapcsold ki a készüléked
+
+#### Section III - Launching SafeB9SInstaller
+1. Launch the browser and go to this URL on your device
+  + `https://zoogie.github.io/web/nbhax`
+1. Nyomj a "PROCEED TO HAXX" gombra
+  + Ha hibát kapsz, [nézd át a hibaelhárítási útmutatót](troubleshooting#a-browser-based-exploit-is-not-working)
+1. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
+
+#### Section IV - Installing boot9strap
+
+1. Várj, amíg az összes biztonsági ellenőrzés be nem fejeződik
+1. Ha kéri, akkor nyomd meg sorban azokat a gombokat, amiket kijelez a képernyőn, hogy telepíthesd a boot9strap-et
+1. Ha ez elkészült, nyomd meg az (A) gombot az eszközöd újraindításához
+
+#### Section V - Configuring Luma3DS
+
+1. A készülékednek az előzőekben a Luma3DS-be kellett bootolnia
+  + Ha fekete képernyőt kapsz, [nézd át a hibaelhárítási útmutatót](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
+1. Használd az (A) gombot és D-Pad-et a következő engedélyezéséhez:
+  + **"Show NAND or user string in System Settings"**
+1. Mentéshez és újraindításhoz nyomd meg a (Start) gombot
+
+#### Section VI - Restoring default DNS
+1. Launch the System Settings application
+1. Navigate to `Internet Settings` -> `Connection Settings`
+1. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `DNS`
+1. Set "Auto-Obtain DNS" to "Yes"
+1. Click OK, then click Save
+1. When prompted, click "Test" to perform the connection test
+	+ The test should succeed
+1. Kapcsold ki a készüléked
+
+___
+
+### Tovább a [telepítés véglegesítésére](finalizing-setup)
+{: .notice--primary}
+
+
