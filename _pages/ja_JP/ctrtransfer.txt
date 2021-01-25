@@ -38,87 +38,87 @@ godmode9.firm以外のペイロードがある場合、
 #### セクション I - 準備
 
 1. 本体の電源を切ります。
-1. パソコンにSDカードを入れます
-1. Create a folder named `3ds` on the root of your SD card if it does not already exist
-1. Create a folder named `cias` on the root of your SD card if it does not already exist
-1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
-1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
-1. Copy the 11.5.0 CTRTransfer image `.bin` from the CTRTransfer `.zip` to the `/gm9/` folder on your SD card
-1. Copy `FBI.3dsx` to the `/3ds/` folder on your SD card
+1. SDカードをPCに挿入します。
+1. SDカードの直下に`3ds`フォルダがない場合、そのフォルダを作成します
+1. SDカード直下に `cias` フォルダが存在しない場合、作成します。
+1. `GodMode9.firm` を GodMode9の `.zip` から取り出し、SDカードの `/luma/payloads/` フォルダにコピーします。
+1. `gm9`フォルダをGodMode9の `.zip`から取り出し、SDカードの直下にコピーします。
+1. 11.5.0 CTRTransferイメージの `.bin` を CTRTransferの `.zip` から取り出し、SDカードの `/gm9/` フォルダにコピーします
+1. `FBI.3dsx`を、SDカードの`/3ds/`フォルダにコピーします。
 1. 再度、SDカードを本体に挿入してください。
 
-#### Section II - CTRTransfer
+#### セクション II - CTRTransfer
 
-1. Launch GodMode9 by holding (Start) during boot
-1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
-1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
-  + Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
-1. Navigate to `[0:] SDCARD` -> `gm9`
-1. Press (A) on the CTRTransfer `.bin` to select it
-1. Select "CTRNAND options..."
-1. Select "Transfer image to CTRNAND"
-1. If prompted, select "Transfer to SysNAND"
-  + This prompt will only appear if you have an EmuNAND
+1. (START)ボタンを押しながらデバイスを起動させ、GodMode9を起動します。
+1. 重要なファイルのバックアップを作成するように求められたら、(A) ボタンを押して実行し、(A) ボタン を押して完了させてください。
+1. RTC日付/時刻を修正するには、(A) ボタンを押し、日付や時刻を設定してください。終わったら、(A) を押して続けてください。
+  +補足 RTCの日付と時刻を修正する必要がある場合は、このガイドの後にシステム設定で時刻を同じように修正する必要があります
+1. `[0:] SDCARD` -> `gm9`へ移動します。
+1. CTRTransfer `.bin` を選択して、 (A) ボタンを押します
+1. "CTRNAND options..." を選択、決定します
+1. "Transfer image to CTRNAND" を選択、決定します
+1. メッセージが表示されたら、 "Transfer to SysNAND" を選択、決定します
+  + お使いのSDカードにEmuNANDが存在する場合のみ表示されます。 EmuNANDからのデータ移行を行う場合、上記の操作を行ってください。
 1. (A) ボタンを押し、表示されるコンボを入力することで、 SysNAND (lvl1) への書き込みを許可します
   + この作業には少し時間がかかります
-1. Once the transfer has completed, press (A) to continue
-1. Press (B) to decline relocking write permissions if prompted
-1. Press (B) twice to return to the main menu
-1. Press (Home) to bring up the action menu
-1. Select "Scripts..."
-1. Select "GM9Megascript"
-1. Select "Scripts from Plailect's Guide"
-1. Select "CTRTransfer Ticket Copy"
-1. When prompted, press (A) to proceed
+1. 作業が完了したら、(A) ボタンを押して続行します
+1. NANDへの書き込みのロックを求められた場合、(B) ボタンを押して拒否してください。
+1. (B) ボタンを2回押してメインメニューに戻ります
+1. (Home) ボタンを押してアクションメニューを呼び出します
+1. "Scripts..."を選択します
+1. "GM9Megascript"を選択します
+1. "Scripts from Plailect's Guide"を選択します
+1. "CTRTransfer Ticket Copy"を選択します
+1. メッセージが表示されたら、(A) ボタンを押して続行します
 1. (A) で続行します
-1. Press (B) to return to the main menu
-1. Select "Exit"
-1. Press (A) to relock write permissions if prompted
-1. Press (Start) to reboot your device
-1. Update your device by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
-  + Updates while using B9S + Luma (what you have) are safe
+1. (B) を押してメインメニューに戻ります
+1. "Exit"を選択します。
+1. (A) ボタンを押すとNANDへの書き込みを再ロックできます
+1. (Start) ボタンを押して本体を再起動します
+1. 「本体設定」→「その他の設定」を開き、最後のページから「本体の更新」を行います
+  + (現在あなたが使用している) B9S + Luma を使用している状態での本体更新は安全です
   + エラーが発生すれば、DNS設定を「自動」に変更してください
 
-#### Section III - Launching FBI
+#### セクション III - FBI を起動
 
-1. Launch the Download Play application (this [icon]({{ "/images/download-play-icon.png" | absolute_url }})
-1. Press (L) + (Down) + (Select) at the same time to open the Rosalina menu
-1. Select "Miscellaneous options"
-1. Select "Switch the hb. title to the current app."
-1. Press (B) to continue
-1. Press (B) to return to the Rosalina main menu
-1. Press (B) to exit the Rosalina menu
-1. Press (Home), then close Download Play
-1. Launch the Download Play application
+1. ダウンロードプレイアプリケーションを開きます (この [アイコン]({{ "/images/download-play-icon.png" | absolute_url }})
+1. L+↓+SelectでRosalinaメニューを開きます。
+1. "Miscellaneous options​"を選びます。
+1. "Switch the hb. title to the current app."を選びます。
+1. (B) ボタンで続行します
+1. (B) を押してRosalinaメインメニューに戻ります
+1. (B) を押してRosalinaメインメニューを終了します。
+1. Homeボタンを押しダウンロードプレイを閉じます。
+1. 再度ダウンロードプレイアプリを開きます。
 1. デバイスでHomebrew Launcherが起動されます
 
-#### Section IV - Reinstalling Tickets
+#### セクション IV - チケットの再インストール
 
-If script found no user tickets told you to skip this section, then skip this section
+スクリプトがユーザーを検出しなかった場合このセクションをスキップしてください。
 {: .notice--info}
 
-1. Launch FBI from the list of homebrew
+1. HomebrewメニューからFBIを起動します。
 1. SDカードのciasフォルダに移動します
-1. Return to the SD directory with (B)
-1. Select "gm9"
-1. Select "out"
-1. Select "ctrtransfer_tickets"
-1. Do the following process for either the `eshop` folder, `unknown` folder, or both
-  + Navigate to the folder
-  + Select "\<current directory>"
-  + Select "Install and delete all tickets"
-  + Wait. フリーズすることがありますが、焦らないようにしてください。
-  + Press (A) to confirm
-  + Press (B) to decline installing tickets from CDN.
-1. Press (Home) to exit FBI
+1. (B) を押して、SDディレクトリに戻ります
+1. "gm9out" を選択します
+1. 「out」を選択します
+1. 「Ctrtransfer_tickets」を選択します
+1. 次の操作を `eshop` フォルダと `unknown` フォルダのいずれか、または両方に対して行います
+  + フォルダに移動します
+  + "\<current directory>" を選択します
+  + "Install and delete all tickets" を選択します
+  + しばらく待ちます。 フリーズすることがありますが、焦らないようにしてください。
+  (A) で確定します
+  + (B) ボタンを押し、CDNから tickets をインストールしないようにします
+1. (Home) ボタンを押してFBIを終了します
 
-#### Section V - Remove CTRTransfer image
+#### セクション V - CTRTransferイメージの削除
 
-1. Launch GodMode9 by holding (Start) during boot
-1. Navigate to `[0:] SDCARD` -> `gm9`
-1. Press (X) on the CTRTransfer image `.bin` to delete it
+1. (START)ボタンを押しながらデバイスを起動させ、GodMode9を起動します。
+1. `[0:] SDCARD` -> `gm9`へ移動します。
+1. 拡張子.binのCTR Transferイメージの上でXキーを押して削除します。
 1. (A) を押して確認します
-1. Press (Start) to reboot your device
+1. (Start) ボタンを押して本体を再起動します
 
 ___
 
