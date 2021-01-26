@@ -1,34 +1,34 @@
 ---
-title: "Finalizing Setup"
+title: "セットアップを完了する"
 ---
 
 {% include toc title="目次" %}
 
-### Required Reading
+### 必ずお読みください
 
-The file `boot.firm` is what is launched by boot9strap itself after it finishes loading off of NAND, and can be any valid arm9 payload in the FIRM format. This file can be replaced at any time, although Luma3DS allows for the launch of other arm9 payloads in the FIRM format using the Luma3DS chainloader.
+`boot.firm` のファイルは、NANDのロードが終了した後にboot9strapによって起動されるもので、どんなarm9データもFIRM形式として有効になります このファイルはいつでも変更することができます。 Luma3DSでは、Luma3DSチェーンローダを使用して他のarm9データをFIRM形式で起動することができます。
 
-In this case, we use Luma3DS by [LumaTeam](https://github.com/LumaTeam/) to boot a patched SysNAND directly, allowing us to completely bypass the need for any kind of EmuNAND, vastly simplifying the usage of a hacked 3DS in addition to saving SD card space.
+本文では、[LumaTeam](https://github.com/LumaTeam/)さんのLuma3DSで直接にパッチしたSysNANDを実行するようにします。これにより、EmuNANDを実行する必要がゼロになったり、改造された3DSの使用を簡単にしたり、SDカードの空き領域を節約したりできます。
 
 手順の一部として、下記のプログラムもインストールします：
 
 +  **FBI** *（CIAフォーマットのゲームとアプリをインストールします）*
-+  **Anemone3DS** *(installs custom themes)*
-+  **Checkpoint** *(backs up and restores save files for 3DS and DS games)*
-+  **GodMode9** *(multipurpose tool which can do NAND and cartridge functions)*
-+  **Homebrew Launcher Loader** *(launches the Homebrew Launcher)*
-+  **DSP1** *(allows homebrew applications to have sound)*
-+  **ctr-no-timeoffset** *(removes the rtc offset so that the home menu and rtc timestamps match)*
++  **Anemone3DS** *(カスタムテーマをインストールできます)*
+**Checkpoint** *(3DSおよびDSゲーム用のセーブファイルの保存と復元ができます)*
++  **Hourglass9** *（NANDやゲームカードに関する機能があります）*
++  **Homebrew Launcher Loader** *(Homebrew Launcherが開けます)*
++ **DSP1** *(homebrewアプリケーションにサウンドを与えます)*
++ **ctr-no-timeoffset** *(ホームメニューとRTCタイムスタンプが一致するようにrtcの差を削除します)*
 
 ### 必要なもの
 
-* The latest release of [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) *(the `.cia` file)*
-* The latest release of [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/latest) *(the `.cia` file)*
-* The latest release of [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest)
-* v1.9.2pre1バージョンのの[GodMode9](https://github.com/d0k3/GodMode9/releases/tag/v1.9.2pre1)
-* The latest release of [DSP1](https://github.com/zoogie/DSP1/releases/latest) *(the `.cia` file)*
-* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) *(the `.cia` and `.3dsx` files)*
-* The latest release of [ctr-no-timeoffset](https://github.com/ihaveamac/ctr-no-timeoffset/releases/latest)
+* 最新の [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) *( `.cia` ファイル)*
+* 最新の [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/latest) *( `.cia` ファイル)*
+* 最新の[Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest)
+* v1.9.2pre1 の[GodMode9](https://github.com/d0k3/GodMode9/releases/tag/v1.9.2pre1)
+* 最新版の [DSP1](https://github.com/zoogie/DSP1/releases/latest) *( `.cia` ファイル)*
+* 最新の[FBI](https://github.com/Steveice10/FBI/releases/latest) *(the `.cia` and `.3dsx` files)*
+* 最新の[ctr-no-timeoffset](https://github.com/ihaveamac/ctr-no-timeoffset/releases/latest)
 
 ### 手順
 
@@ -38,38 +38,38 @@ In this case, we use Luma3DS by [LumaTeam](https://github.com/LumaTeam/) to boot
 1. パソコンにSDカードを入れます
 1. SDカードの直下に`3ds`フォルダがない場合、そのフォルダを作成します
 1. SDカード直下に `cias` フォルダが存在しない場合、作成します。
-1. Copy `ctr-no-timeoffset.3dsx` to the `/3ds/` folder on your SD card
+1. SDカードの`/3ds/`フォルダに `ctr-no-timeoffset.3dsx` をコピーします
 1. `FBI.3dsx`を、SDカードの`/3ds/`フォルダにコピーします。
-1. Copy `Homebrew_Launcher.cia` to the `/cias/` folder on your SD card
-1. Copy `FBI.cia` to the `/cias/` folder on your SD card
-1. Copy `DSP1.cia` to the `/cias/` folder on your SD card
-1. Copy `Anemone3DS.cia` to the `/cias/` folder on your SD card
-1. Copy `Checkpoint.cia` to the `/cias/` folder on your SD card
-1. Create a folder named `payloads` in the `luma` folder on your SD card if it does not already exist
+1. `Homebrew_Launcher.cia`をSDカードの`/cias/`フォルダーへコピーします
+1. SD カードの `/cias/` フォルダーに `FBI.cia` をコピーします
+1. SD カードの `/cias/` フォルダーに `DSP1.cia` をコピーします
+1. SD カードの `/cias/` フォルダーに `Anemone3DS.cia` をコピーします
+1. `Checkpoint.cia`をSDカードの`/cias/`フォルダーへコピーします
+1. `payloads`というフォルダをSDカードの`luma`フォルダの中に存在しない場合は作成します
 1. `GodMode9.firm` を GodMode9の `.zip` から取り出し、SDカードの `/luma/payloads/` フォルダにコピーします。
-1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+1. `gm9`フォルダをGodMode9`.zip`からSDカードのルートにコピーします。
 1. 再度、SDカードを本体に挿入してください。
 1. デバイスの電源を入れます
 
-#### Section II - Updating the System
+#### セクション II - システムの更新
 
-If, while following a previous version of this guide, you CTRTransfered your *New 3DS* to 2.1.0, you should now [restore your NAND backup](godmode9-usage#restoring-a-nand-backup) before doing this section.
+以前のガイドで、*New 3DS*を2.1.0にCTRT転送した場合は、このセクションを実行する前に [NANDバックアップを復元する](godmode9-usage#restoring-a-nand-backup) 必要があります。
 {: .notice--danger}
 
-If, before following this guide, you already had an EmuNAND setup and would like to move the contents of your previous EmuNAND to your new SysNAND CFW, now is the time to [follow Move EmuNAND](move-emunand) before doing this section.
+次の手順に進む前に、EmuNANDを既に導入しており、昔のEmuNANDを新しいSysNAND CFWに移行したい場合は、まず[EmuNANDのデータ移行](move-emunand) をしてください。
 {: .notice--info}
 
-1. 「本体設定」→「その他の設定」を開き、最後のページから「本体の更新」を行います
-  + (現在あなたが使用している) B9S + Luma を使用している状態での本体更新は安全です
-  + The updater may display a message saying "Your system is up to date" instead of updating. This is normal if you are already up to date; continue with the next section
-  + エラーが発生すれば、DNS設定を「自動」に変更してください
-  + If this still gives you an error, [follow CTRTransfer](ctrtransfer), then try updating again
+1. 「本体設定」→「その他の設定」を開き、1番右のページから「本体の更新」を行います
+  + (今使っている) B9S + Luma を使用している状態での本体更新は安全です
+  + 更新はせずに、「この本体は最新です。」と表示されます 本体の更新をすでにしている場合、これは当たり前のことです。次のステップの進んで下さい
+  + エラーが発生した場合は、DNS設定を「自動」に設定してください
+  +引き続きエラーが発生した場合は、[CTRTransfer(ctrtransfer)] をご覧のあと、もう一度アップデートを試してください
 
-#### Section III - Homebrew Launcher
+#### セクション III - Homebrew Launcher
 
-1. Launch the Download Play application (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
-1. Wait until you see the two buttons
-1. Press (Left Shoulder) + (D-Pad Down) + (Select) at the same time to open the Rosalina menu
+1. ダウンロードプレイを開いて下さい (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
+1. 画面が表示されるまで待ちます
+1. (Lボタン) + (十字キー下) + (Select) を同時に押してRosalina menu を開きます
 1. "Miscellaneous options​"を選びます。
 1. "Switch the hb. title to the current app."を選びます。
 1. (B) ボタンで続行します
@@ -77,56 +77,56 @@ If, before following this guide, you already had an EmuNAND setup and would like
 1. (B) を押してRosalinaメインメニューを終了します。
 1. Homeボタンを押しダウンロードプレイを閉じます。
 1. 再度ダウンロードプレイアプリを開きます。
-1. デバイスでHomebrew Launcherが起動されます
-1. Launch ctr-no-timeoffset from the list of homebrew
-1. Press (A) to set the offset to 0
-  + This will set the system clock to match the RTC date&time (which we will set soon)
-1. Press (Start) to return to the Homebrew Launcher
+1. するとHomebrew Launcherが起動されます
+1. Ctr-no-timeoffsetをhomebrewリストから開きます
+1. (A) を押してオフセットを 0 に設定します
+  + これは、システムクロックをRTCの日付と時刻に合わせるように設定します (これはすぐに設定されます)
+1. (Start) を押し、Homebrew Launcherへ戻ります
 1. HomebrewメニューからFBIを起動します。
 
-#### Section IV - Installing CIAs
+#### セクション IV - CIA のインストール
 
 1. SDカードのciasフォルダに移動します
 1. 「\<current directory>」を選択します
-1. Select the "Install and delete all CIAs" option, then press (A) to confirm
+1. 「Install and delete all CIAs」を選択し、(A) を押して確認します
 1. Homeボタンを押しダウンロードプレイを閉じます。
 
-#### Section V - DSP Dump
+#### セクション V - DSP ダンプ
 
-1. Launch the DSP1 application
-1. Once it has completed, press (B) to self-delete the app and return to the home menu
+1. DSP1 を起動します。
+1. 完了したら、(B) を押すとアプリが自動的に削除され、ホームメニューに戻ります
 
-#### Section VI - CTRNAND Luma3DS
+#### セクション VI - CTRNAND Luma3DS
 
 1. 本体の電源を切ります。
-1. (START)ボタンを押しながらデバイスを起動させ、GodMode9を起動します。
-1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
-1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
+1. (START) ボタンを押しながら本体を起動し、GodMode9を起動させます。
+1. 重要なファイルのバックアップを作成するように求められたら、(A) ボタンを押して実行し、(A) ボタン を押して完了させてください。
+1. RTC日付/時刻を修正する場合、(A) ボタンを押し、日付や時刻を設定してください。終わったら、(A) を押してください。
 1. (Home) ボタンを押してアクションメニューを呼び出します
-1. Select "Scripts..."
+1. "Scripts..."を選択します
 1. "GM9Megascript"を選択します
 1. "Scripts from Plailect's Guide"を選択します
-1. Select "Setup Luma3DS to CTRNAND"
-1. When prompted, press (A) to proceed
-1. (A) ボタンを押し、表示されるコンボを入力することで、 SysNAND (lvl1) への書き込みを許可します
+1. "Setup Luma3DS to CTRNAND"を選択します
+1. メッセージが表示されたら、(A) ボタンを押して続行します
+1. (A) を押してSysNAND(lvl1) 書き込みをロック解除し、与えられたキーコンボを入力します
 1. (A) で続行します
 
-#### Section VII - Cleanup SD Card
+#### セクション VII - SD カードのクリーンアップ
 
-1. Select "Cleanup SD Card"
-1. When prompted, press (A) to proceed
+1. "Cleanup SD Card"を選択します
+1. メッセージが表示されたら、(A) ボタンを押して続行します
 1. (A) で続行します
-1. Press (B) to return to the main menu
+1. Bキーを押してメインメニューに戻ります
 
-#### Section VIII - Backup Essential Files
+#### セクション VIII - 重要ファイルのバックアップ
 
-1. Select "Backup Options"
-1. Select "SysNAND Backup"
+1. "Backup Options"を選択します
+1. "SysNAND Backup"を選択します
 1. (A) を押して確認します
   + この作業には少し時間がかかります
   + If you get an error, make sure that you have at least 1.3GB of free space on your SD card
 1. (A) で続行します
-1. Press (B) to return to the main menu
+1. Bキーを押してメインメニューに戻ります
 1. "Exit"を選択します。
 1. (A) ボタンを押すとNANDへの書き込みを再ロックできます
 1. Navigate to `[M:] MEMORY VIRTUAL`
