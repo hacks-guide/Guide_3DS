@@ -1,58 +1,58 @@
 ---
-title: "Flashing ntrboot (3DS Multi System)"
+title: "ntrbootのフラッシュ (3DSマルチシステム)"
 ---
 
 {% include toc title="目次" %}
 
-### Required Reading
+### 必読事項
 
-Before proceeding, ensure you have read all of the information on [ntrboot](ntrboot)
+この後を読む前に、[ntrboot](ntrboot) の情報を全て読んだことを確認してください。
 
-This method requires temporary access to a second 3DS family device that is already running boot9strap. This does not require your flashcart to support either 3DS's version.
+この方法では、すでにboot9strapを実行している第2の3DSファミリデバイスにアクセスする必要があります。 フラッシュカードが3DSのいずれかのバージョンをサポートする必要はありません。
 
-Note that in some rare circumstances, it may be possible for the flashing process to **brick** a counterfeit flashcart and render it permanently unusable. This is unlikely, but nevertheless only original listed flashcarts are supported. To reduce the chance of receiving a counterfeit card, it is recommended that you use a reputable site to buy your flashcart (such as [NDS Card](http://www.nds-card.net/))
+稀ですが、フェイクのフラッシュカードを**文鎮化**する可能性があります。 起きることは稀ですが、リストされたフラッシュカードしか対応していません。 偽造されたカードを受け取る可能性を減らすためには、評判のいいサイトを利用することをおすすめします。(例えば[NDS Card](http://www.nds-card.net/)など)
 {: .notice--danger}
 
 ### 必要なもの
 
-* Your ntrboot compatible flashcart
-* Two 3DS family devices 
-  + **The source 3DS**: the 3DS family device that is already running boot9strap
-  + **The target 3DS**: the device on stock firmware
-* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(`ntr` boot9strap; not the `devkit` file)*
-* The latest release of [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest)
+* ntrbootと互換性のあるフラッシュカード
+* 2台の3DSファミリーの本体 
+  + **ソースとなる3DS**: すでにboot9strapを実行している3DSファミリデバイス
+  + **ターゲットとなる3DS**: ストックファームウェアのデバイス
+* 最新安定版 [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(`ntr` boot9strap; `devkit` ファイルは使用しないでください)*
+* 最新安定版 [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest)
 
 ### 手順
 
 #### セクション I - 準備
 
-1. Power off **the source 3DS**
-1. Insert **the source 3DS**'s SD card into your computer
-1. Create a folder named `ntrboot` on the root of your SD card
-1. Copy `boot9strap_ntr.firm` and `boot9strap_ntr.firm.sha` from the boot9strap ntr `.zip` to the `/ntrboot/` folder on your SD card
-1. Copy `ntrboot_flasher.firm` to the `/luma/payloads/` folder on **the source 3DS**'s SD card
-1. Reinsert **the source 3DS**'s SD card back into **the source 3DS**
-1. Insert your ntrboot compatible DS / DSi flashcart into **the source 3DS**
+1. **ソース3DS**の電源を切ります
+1. **ソース3DS**のSDカードをパソコンに入れます
+1. `ntrboot` というフォルダをSDカードのルートに作成します
+1. `boot9strap_ntr.firm` と `boot9strap_ntr.firm.sha` をboot9strap ntr `.zip` から解凍し、SD カードの`/ntrboot/`フォルダにコピーします。
+1. `ntrboot_flasher.firm` を **ソースとなる3DS**のSDカードの `/luma/payloads` フォルダへコピーします
+1. **ソースとなる3DS**のSDカードを本体へ挿入します
+1. Ntrboot互換のDS / DSiフラッシュカードを **ソースとなる3DS**へ挿入します
 
-#### Section II - Flashing ntrboot
+#### セクション II - ntrbootの書き込み
 
-1. Launch the Luma3DS chainloader by holding (Start) during boot on **the source 3DS**
-1. Select "ntrboot_flasher"
-1. Read the red screen warning
+1. (Start) を押しながら起動し **ソースとなる3DS**のLuma3DSチェーンローダを起動します。
+1. "ntrboot_flasher" を選択します
+1. 赤い画面の警告を読んでください
 1. (A) で続行します
-1. Select your flashcart
-  + If you do not see your flashcart in the list at the top, read the bottom screen for more info on each option
-1. Select "Dump Flash"
+1. フラッシュカードを選択します
+  + 上部にフラッシュカードが表示されない場合は、各オプションの下部の画面をお読みください
+1. "Dump Flash" を選択します
 1. 処理が完了するまで待ちます
 1. (A) で続行します
-1. Press (A) to return to the main menu
-1. Select "Inject Ntrboot"
-1. Press (A) for retail unit ntrboot
+1. (A) を押してメインメニューに戻ります
+1. "Inject Ntrboot" を選択します
+1. (A) を押します
 1. 処理が完了するまで待ちます
-1. Press (A) to return to the main menu
-1. Press (B) to power off **the source 3DS**
+1. (A) を押してメインメニューに戻ります
+1. (B) を押し、**ソースとなる3DS**の電源を切ります
 
 ___
 
-### Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-(ntrboot))
+### 引き続き [boot9strapをインストール (ntrboot)](installing-boot9strap-(ntrboot)) に進んでください。
 {: .notice--primary}
