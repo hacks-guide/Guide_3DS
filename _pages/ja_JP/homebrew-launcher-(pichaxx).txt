@@ -1,5 +1,5 @@
 ---
-title: "Homebrew Launcher (PicHaxx)"
+title: "Homebrew Launcher (PicHaxxx)"
 ---
 
 {% include toc title="目次" %}
@@ -9,50 +9,50 @@ Seedminerベースのメソッドは、より簡単で安全なメソッドに�
 
 ### 必読事項
 
-This method of using Seedminer for further exploitation uses your `movable.sed` file to gain access to the Homebrew Launcher using the PicHaxx exploit for the purposes of injecting an exploitable DSiWare title into the DS Download Play application. This method requires you to already own (or download) the free "Pokemon Picross" game from the eShop.
+この方法は、Seedminer による脆弱性を用いたあなたの `movable.sed` ファイルで、DSiWareタイトルを復号化し、脆弱性のあるDSiWareタイトルを「DSソフト用設定」アプリに挿入するために使用します。 このメソッドは、すでにeShopから無料の「ポケモンピクロス」ゲームを所有している(またはダウンロードする) 必要があります。
 
-If your device already has access to the Homebrew Launcher (whether through PicHaxx or another exploit), you can skip to [Frogtool](installing-boot9strap-(frogtool)).
+お使いのデバイスがすでにHomebrew Launcherにアクセスできている場合(PicHaxxや他の脆弱性を使用している場合)、 [Frogtool](installing-boot9strap-(frogtool)) にスキップすることができます。
 {: .notice--success}
 
-If you already have Pokemon Picross, this process will overwrite your game's save file!
+すでにポケモンピロスをお持ちの場合は、このプロセスはあなたのセーブデータを上書きします!
 {: .notice--warning}
 
 ### 必要なもの
 
-* The free eShop game "Pokemon Picross"
-* Your `movable.sed` file from completing [Seedminer](seedminer)
+*無料のeShopからのゲーム「ポケモンピクロス」
+* [Seedminer](seedminer) より作成した、 `movable.sed` ファイル
 * 最新のリリースの [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
-* The [otherapp payload](https://deadphoenix8091.github.io/3ds/#otherapp) *(for your region, device, and version)*
-  + If your current version is 11.14.0-46, select 11.13.0-45 for your version
+* [otherapp payload](https://deadphiex8091.github.io/3ds/#otherapp) *(お使いの地域、デバイス、バージョン用のものを使用してください。)*
+  + 現在のバージョンが 11.14.0-46 の場合は、 11.13.0-45 を選択してください
 
 ### 手順
 
 #### セクション I - 準備
 
 1. SDカードのルートに`boot.3dsx`をコピーします
-1. Copy the otherapp payload to the root of your SD card and rename it to `otherapp.bin`
-  + If you do not see the `.bin` extension, do not add it to the end of the filename
+1. OtherappペイロードをSDカード直下にコピーし、ファイル名を `otherapp.bin` に変更します
+  + `.bin`拡張子が表示されない場合でも、ファイル名の末尾に追加しないでください
 1. SDカードの直下に`3ds`フォルダがない場合、そのフォルダを作成します
 
-#### Section II - PicHaxx
+#### セクション II - PicHaxx
 
-1. Open [the PicHaxx Injector website](https://3ds.nhnarwhal.com/3dstools/pichaxx.php) on your computer
-1. Select your `movable.sed` file
-1. Select "Build and Download"
-1. Wait for the process to complete
-1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` on your SD card
-  + The `<ID0>` will be the same one that you used in [Seedminer](seedminer)
-  + The `<ID1>` is a 32 character long folder inside of the `<ID0>`
-1. Copy the newly downloaded `00000001.sav` file to the `data` folder on your SD card
-  + Overwrite the old save file when prompted
+1. コンピュータで　[the PicHaxx Injector website](https://3ds.nhnarwhal.com/3dstools/pichaxx.php)を開きます。
+1. `movable.sed`ファイルを選択します
+1. 「Build and Download」を選択します
+1. 処理が完了するまで待ちます
+1. `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `0040000` -> `0017c100` -> `data` へ移動します
+  + ここでいう `<ID0>` は先ほど [Seedminer](seedminer) で使用したものと同じです。
+  + `<ID1>` は `<ID0> ` の中の32文字の長いフォルダのことです。
+1. 新しくダウンロードした`00000001.sav`ファイルをSDカードの`data`フォルダにコピーします
+  + プロンプトが表示されたら古い保存ファイルを上書きします
 1. 再度、SDカードを本体に挿入してください。
 1. デバイスの電源を入れます
-1. Launch "Pokemon Picross"
-1. If the exploit was successful, your device will have loaded the Homebrew Launcher
-  + You may see an error stating there are no applications found
+1. 「ポケモンピクロス」を起動します
+1. Exploitが成功した場合、デバイスはHomebrew Launcherを起動します
+  + アプリケーションが見つからないというエラーが表示されます
 1. 本体の電源を切ります。
 
 ___
 
-### Continue to [Installing boot9strap (Frogtool)](installing-boot9strap-(frogtool))
+引き続き [Installing boot9strap (Fredtool)](installing-boot9strap-(fredtool)) へ進んでください。
 {: .notice--primary}
