@@ -1,5 +1,5 @@
 ---
-title: "Installing Boot9strap (Fredtool)"
+title: "Boot9strap (Fredtool) のインストール"
 ---
 
 {% include toc title="目次" %}
@@ -9,16 +9,16 @@ Seedminerベースのメソッドは、より簡単で安全なメソッドに�
 
 ### 必読事項
 
-This method of using Seedminer for further exploitation uses your `movable.sed` file to decrypt any DSiWare title for the purposes of injecting an exploitable DSiWare title into the DS Internet Settings application. This requires you to have a DSiWare backup, for example from BannerBomb or the DSiWare Dumper tool.
+この方法は、Seedminer による脆弱性を用いたあなたの `movable.sed` ファイルを、DSiWareタイトルを復号化し、脆弱性のあるDSiWareタイトルを「DSソフト用設定」アプリに挿入するために使用します。 ここでは、BannerBomb や the DSiWare Dumper toolなどを利用したDSiWareのバックアップファイルが必要です。
 
-This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+下記の方法はすべて「FIRM partitions known-plaintext」脆弱性の有効な活用です。詳しくは [こちら](https://www.3dbrew.org/wiki/3DS_System_Flaws) 。
 
 ### 必要なもの
 
-* A DSiWare Backup (such as the one on SD root from [BannerBomb3](bannerbomb3))
+* DSiWareバックアップ ( [BannerBomb3](bannerbomb3) のSDルート上のバックアップなど)
 * [Seedminer](seedminer) より作成した、 `movable.sed` ファイル
-* The latest release of [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest)
-* The latest release of [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
+* 最新の [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest)
+* 最新の [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
 * 最新バージョンの[Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest/)
 
 #### セクション I - 準備
@@ -26,8 +26,8 @@ This is a currently working implementation of the "FIRM partitions known-plainte
 1. 本体の電源を切ります。
 1. パソコンにSDカードを入れます
 1. `boot.firm` と `boot.3dsx` をLuma3DSの `.zip` からSDカードのルートにコピーします
-1. Copy `boot.nds` (B9STool) to the root of your SD card
-1. Copy the `private` folder from the Frogminer_save `.zip` to the root of your SD card
+1. SDカードのルートに`boot.nds` (B9STool) をコピーします
+1. Frogminer_save `.zip`から`private`フォルダをSDカードのルートにコピーします
 
 #### Section II - Fredtool
 
@@ -77,11 +77,11 @@ If you would prefer a visual guide to this section, one is available [here](http
   + You may have to force power off by holding the power button
   + If you see the Luma Configuration screen, continue with the guide without powering off
 
-#### Section IV - Configuring Luma3DS
+#### セクション IV - Luma3DSを設定する
 
 1. Boot your device while holding (Select) to launch the Luma configuration menu
   + If you encounter issues launching the Luma configuration menu, [follow this troubleshooting guide](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)
-1. Use the (A) button and the D-Pad to turn on the following:
+1. (A) ボタン とD-Padを使用し、次の設定を有効にします:
   + **「Show NAND or user string in System Settings」**
 1. (Start) を押してセーブして再起動します
   + Your device should load the Home Menu after a short delay. If you get a black screen lasting longer than 5 minutes, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
