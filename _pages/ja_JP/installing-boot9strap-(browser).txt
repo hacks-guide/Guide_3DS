@@ -1,21 +1,21 @@
 ---
-title: "Installing boot9strap (Browser)"
+title: "boot9strapのインストール (ブラウザ)"
 ---
 
 {% include toc title="目次" %}
 
 ### 必読事項
 
-new-browserhax-xl (when combined with universal-otherapp) is compatible with version 11.14.0 on New 3DS and New 2DS in all regions.
+new-browserhax-xl (universal-otherappと組み合わせた場合) は New 3DS および New 2DS のバージョン 11.14.0 と互換性があります。
 
-This exploit will not work on the Old 3DS, Old 3DS XL, or Old 2DS. Please ensure that the device you are modding is a New 3DS, New 3DS XL, or New 2DS XL before continuing.
+このエクスプロイトは、Old 3DS、Old 3DS XL、またはOld 2DSでは動作しません。 お使いのデバイスがNew 3DS、New 3DS XL、またはNew 2DS XLであることを確認してください。
 {: .notice--info}
 
 ### 必要なもの
 
-* The latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)
-* The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
-* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
+* 最新のリリースの [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)
+* 最新安定版 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* 最新安定版[boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; `devkit``ntr`ファイルは使用しないでください)*
 * 最新バージョンの[Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest/) 
 
 ### 手順
@@ -24,29 +24,29 @@ This exploit will not work on the Old 3DS, Old 3DS XL, or Old 2DS. Please ensure
 
 1. 本体の電源を切ります。
 1. パソコンにSDカードを入れます
-1. Copy `otherapp.bin` to the root of your SD card and rename it to `arm11code.bin`
+1. `otherapp.bin`をSDカードのルートにコピーし、`arm11code.bin`に名前を変更します
   + `.bin`拡張子が表示されない場合でも、ファイル名の末尾に追加しないでください
 1. `boot.firm` と `boot.3dsx` をLuma3DSの `.zip` からSDカードのルートにコピーします
 1. `boot9strap`という名前のフォルダをSDカードのルート上に作成します。
-1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `boot9strap` folder on your SD card
-1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
+1. `boot9strap.firm`と`boot9strap.firm.sha`をboot9strap`.zip`からSDカードの`boot9strap`フォルダにコピーします
+1. SafeB9SInstaller `.zip` から`SafeB9SInstaller.bin`をSDカードのルートへコピーします
 1. 再度、SDカードを本体に挿入してください。
 1. デバイスの電源を入れます
 
-#### Section II - Launching SafeB9SInstaller
+#### セクション II - SafeB9SInstallerを起動する
 
 1. デバイスの電源を入れます
-1. On the HOME Menu, press the Left and Right shoulder buttons together to open the camera
-  + If you are unable to open the camera, open the Internet Browser manually type the URL instead (`https://zoogie.github.io/web/nbhax-xl/`)
-1. Scan [this QR code](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax-xl&qzone=1&margin=0&size=400x400&ecc=L)
-  + If you get an error, [follow this troubleshooting guide](troubleshooting#a-browser-based-exploit-is-not-working)
+1. ホームメニューで、LボタンとRボタンを同時に押してカメラを開きます
+  + カメラを開けない場合は、インターネットブラウザを開き、代わりにURLを手動で入力してください (`https://zoogie.github.io/web/nbhax-xl/`)
+1. [このQR code](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax-xl&qzone=1&margin=0&size=400x400&ecc=L)をスキャンしてください
+  + エラーが発生した場合は [トラブルシューティングガイド](troubleshooting#a-browser-based-exploit-is-not-working) をご覧下さい
 1. Exploitが成功すれば、SafeB9SInstallerが起動されます。
 
-#### Section III - Installing boot9strap
+#### セクション III - boot9strapをインストールする
 
-1. Wait for all safety checks to complete
-1. When prompted, input the key combo given to install boot9strap
-1. Once it has completed, press (A) to reboot your device
+1. すべてのセーフティチェックが完了するまで待ちます
+1. プロンプトが表示されたら、boot9strapをインストールするために与えられたキーコンボを入力します。
+1. 完了したら、(A) を押してデバイスを再起動します
 
 #### Section IV - Configuring Luma3DS
 
