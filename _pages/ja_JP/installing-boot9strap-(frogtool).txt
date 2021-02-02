@@ -1,5 +1,5 @@
 ---
-title: "Installing Boot9strap (Frogtool)"
+title: "Boot9strapの導入 (Frogtool)"
 ---
 
 {% include toc title="目次" %}
@@ -9,79 +9,79 @@ Seedminerベースのメソッドは、より簡単で安全なメソッドに�
 
 ### 必読事項
 
-We will now use our Homebrew Launcher access to run the Frogtool utility in order to inject the exploitable Japanese version of the "Flipnote Studio" title, which we then use to run b9sTool and install boot9strap.
+今回はHomebrew LauncherにアクセスしてFrogtool ユーティリティを実行し、日本語版「うごくメモ帳」タイトルを注入します。 b9sToolを実行しboot9strapをインストールするのに使います。
 
-This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+下記の方法はすべて「FIRM partitions known-plaintext」脆弱性の有効な活用です。詳しくは [ここを参考にしてください](https://www.3dbrew.org/wiki/3DS_System_Flaws) 。
 
 このページの [マグネット](https://wikipedia.org/wiki/Magnet_URI_scheme) リンクを使用するには、[Deluge](http://dev.deluge-torrent.org/wiki/Download)のようなTorrentクライアントが必要です。
 
 ### 必要なもの
 
 * [Seedminer](seedminer) より作成した、 `movable.sed` ファイル
-* <i class="fa fa-magnet" aria-hidden="true" title="トレント用のマグネットリンク。 Use a torrent client to download the file."></i> - [frogcert.bin](magnet:?xt=urn:btih:d12278ea50bb3574f1fbd327f3d0e2292c70941f&dn=frogcert.bin&tr=https%3a%2f%2ftracker.fastdownload.xyz%3a443%2fannounce&tr=https%3a%2f%2fopentracker.xyz%3a443%2fannounce&tr=http%3a%2f%2fopen.trackerlist.xyz%3a80%2fannounce&tr=http%3a%2f%2ft.nyaatracker.com%3a80%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2fopen.demonii.si%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.port443.xyz%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.vanitycore.co%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&tr=udp%3a%2f%2fthetracker.org%3a80%2fannounce&tr=http%3a%2f%2ftorrent.nwps.ws%3a80%2fannounce&tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.iamhansen.xyz%3a2000%2fannounce&tr=udp%3a%2f%2fbt.xxx-tracker.com%3a2710%2fannounce&tr=http%3a%2f%2f0d.kebhana.mx%3a443%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2ftracker4.itzmx.com%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.justseed.it%3a1337%2fannounce&tr=http%3a%2f%2ftherightsize.net%3a1337%2fannounce&tr=udp%3a%2f%2fretracker.hotplug.ru%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&tr=udp%3a%2f%2f9.rarbg.com%3a2800%2fannounce&tr=https%3a%2f%2f2.track.ga%3a443%2fannounce&tr=udp%3a%2f%2fbigfoot1942.sektori.org%3a6969%2fannounce)
-* The latest release of [Frogtool](https://github.com/zoogie/Frogtool/releases/latest)
+* <i class="fa fa-magnet" aria-hidden="true" title="トレント用のマグネットリンク。 トレントクライアントを使ってファイルをダウンロードしてください。"></i> - [frogcert.bin](magnet:?xt=urn:btih:d12278ea50bb3574f1fbd327f3d0e2292c70941f&dn=frogcert.bin&tr=https%3a%2f%2ftracker.fastdownload.xyz%3a443%2fannounce&tr=https%3a%2f%2fopentracker.xyz%3a443%2fannounce&tr=http%3a%2f%2fopen.trackerlist.xyz%3a80%2fannounce&tr=http%3a%2f%2ft.nyaatracker.com%3a80%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2fopen.demonii.si%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.port443.xyz%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.vanitycore.co%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&tr=udp%3a%2f%2fthetracker.org%3a80%2fannounce&tr=http%3a%2f%2ftorrent.nwps.ws%3a80%2fannounce&tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.iamhansen.xyz%3a2000%2fannounce&tr=udp%3a%2f%2fbt.xxx-tracker.com%3a2710%2fannounce&tr=http%3a%2f%2f0d.kebhana.mx%3a443%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2ftracker4.itzmx.com%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.justseed.it%3a1337%2fannounce&tr=http%3a%2f%2ftherightsize.net%3a1337%2fannounce&tr=udp%3a%2f%2fretracker.hotplug.ru%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&tr=udp%3a%2f%2f9.rarbg.com%3a2800%2fannounce&tr=https%3a%2f%2f2.track.ga%3a443%2fannounce&tr=udp%3a%2f%2fbigfoot1942.sektori.org%3a6969%2fannounce)
+* 最新の[Frogtool](https://github.com/zoogie/Frogtool/releases/latest)
 * 最新安定版 [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
 * 最新バージョンの[Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest/)
 
 #### セクション I - 準備
 
 1. パソコンにSDカードを入れます
-1. Copy your `movable.sed` file to the root of your SD card
+1. SDカードのルートに`movable.sed`をコピーします
 1. `boot.firm` と `boot.3dsx` をLuma3DSの `.zip` からSDカードのルートにコピーします
-1. Copy `boot.nds` (b9sTool) from the b9sTool release `.zip` to the root of your SD card
-1. Copy `Frogtool.3dsx` to the `/3ds/` folder on your SD card
-1. Copy `frogcert.bin` to the root of your SD card
+1. b9sTool release `.zip` から`boot.nds` (b9sTool) をSDカードのルートにコピーします
+1. `Frogtool.3dsx`をSDカードの`/3ds/`フォルダにコピーします
+1. SDカードのルートに`frogcert.bin`をコピーします
 1. 再度、SDカードを本体に挿入してください。
 1. デバイスの電源を入れます
 
-#### Section II - Patching DS Download Play
+#### セクション II - DS ダウンロードプレイのパッチ
 
-1. Open the Homebrew Launcher using any method
-1. Launch Frogtool from the list of homebrew
-1. Select the "INJECT patched DS Download Play" option
-1. Frogtool will automatically run and inject the JPN version of Flipnote Studio into your DS Download Play
-1. Once this operation has finished, read the screens and check if the process was successful
-  + If there are any errors or missing files, correct the problem and try again
-1. If the process was successful, tap the touch screen, then select "BOOT patched DS Download Play"
-1. If the exploit was successful, your device will have loaded the JPN version of Flipnote Studio
+1. 任意の方法でHomebrew Launcherを開きます
+1. HomebrewのリストからFrogtoolを起動します
+1. "INJECT patched DS Download Play"オプションを選択します。
+1. Frogtoolは自動的に実行され、Flipnote StudioのJPNバージョンをDSダウンロードプレイに注入します
+1. この操作が完了したら、画面を読んでプロセスが成功したかどうかを確認してください
+  + エラーやファイルが見つからない場合は、問題を修正してもう一度やり直してください
+1. 処理が成功した場合は、タッチスクリーンをタップし、「BOOT patched DS Download Play」を選択します。
+1. 完了した場合、日本語のうごくメモ帳が開きます
 
 #### セクション III - "うごくメモ帳" バグ
 
 このセクションのビジュアルガイドをご希望の場合は、 [このリンク](https://zoogie.github.io/web/flipnote_directions/) からご利用いただけます。
 {: .notice--info}
 
-1. Complete the initial setup process for the launched game until you reach the main menu
-  + Select the left option whenever prompted during the setup process
-1. Using the touch-screen, select the large left box, then select the box with an SD card icon
-1. Once the menu loads, select the face icon, then the bottom right icon to continue
-1. Select the frog icon at the bottom left
-  + Alternatively, press (X) or (UP) on the D-Pad depending on which is shown on the top screen
+1. メインメニューに到達するまで、うごくメモ帳の初期設定プロセスを完了します
+  + セットアッププロセス中にプロンプトが表示されるたびに左のオプションを選択します
+1. タッチスクリーンを使用して、大きな左のボックスを選択し、SDカードアイコンのあるボックスを選択します
+1. メニューが読み込まれたら、顔アイコンを選択し、右下アイコンをクリックして続行します
+1. 左下のカエルアイコンを選択してください
+  + 代わりに、上部画面に表示される方向パッドに応じて (X) または (UP) を押すこともできます
 1. フィルムリールアイコン付きの上部にある2番目のボタンを選択します
-1. Scroll right until reel "3/3" is selected
-1. Tap the third box with the letter "A" in it
-1. Scroll left until reel "1/3" is selected
-1. Tap the fourth box with the letter "A" in it
-1. If the exploit was successful, your device will have loaded b9sTool
+1. 「3/3」リールが選択されるまで右にスクロール
+1. 「A」という文字が入った3番目のボックスをタップしてください
+1. "1/3" リールが選択されるまで左にスクロール
+1. 「A」の文字が入った4番目のボックスをタップしてください
+1. エクスプロイトが成功した場合、お使いのデバイスは b9sTool をロードします。
 1. 方向ボタンを使って「boot9strapのインストール(Install boot9strap)」に移動します
 1. (A) を押し、同時にSTARTとSELECTを押してプロセスを開始します
-1. Once complete and the bottom screen says "done.", exit b9sTool, then power off your device
-  + You may have to force power off by holding the power button
-  + If you see the Luma configuration menu, continue without powering off
+1. 完了し、下の画面に「完了」と表示されたら、b9sToolを終了し、デバイスの電源を切ってください
+  + 電源ボタンを長押しして強制的に電源を切る必要があるかもしれません
+  + Luma 設定メニューが表示されたら、電源を切らずに続行します。
 
 #### セクション IV - Luma3DSを設定する
 
-1. Boot your device while holding (Select) to launch the Luma configuration menu
-  + If you encounter issues launching the Luma configuration menu, [follow this troubleshooting guide](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)
+1. (Select) を押したままデバイスを起動し、Luma3DS設定メニューを開きます
+  + Luma設定メニューの起動時に問題が発生した場合は、[このトラブルシューティングガイドに従ってください](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)
 1. (A) ボタン とD-Padを使用し、次の設定を有効にします:
   + **「Show NAND or user string in System Settings」**
 1. (Start) を押してセーブして再起動します
   しばらくしたらホーム画面が表示されます 黒い画面が5分以上続く場合、[このトラブルシューティングガイドに従ってください](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 
-#### Section V - Restoring DS Download Play
+#### セクション V - DSダウンロードプレイを元に戻す
 
 1. ダウンロードプレイを開いて下さい (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
 1. 画面が表示されるまで待ちます
-  + Do not press either of the buttons
+  + どの選択肢も押さないでください
 1. (Lボタン) + (十字キー下) + (Select) を同時に押してRosalina menu を開きます
 1. "Miscellaneous options​"を選びます。
 1. "Switch the hb. title to the current app."を選びます。
@@ -89,13 +89,13 @@ This is a currently working implementation of the "FIRM partitions known-plainte
 1. (B) を押してRosalinaメインメニューに戻ります
 1. (B) を押してRosalinaメインメニューを終了します。
 1. Homeボタンを押しダウンロードプレイを閉じます。
-1. Relaunch the Download Play application
+1. ダウンロードプレイをまた開きます。
 1. デバイスでHomebrew Launcherが起動されます
-1. Launch Frogtool from the list of homebrew
-1. Select the "RESTORE patched DS Download Play" option
-1. Once this operation has finished, read the screens and check if the process was successful
-  + If there are any errors or missing files, correct the problem and try again
-1. If the process was successful, tap the touch screen, then press START to exit
+1. HomebrewのリストからFrogtoolを起動します
+1. "RESTORE patched DS Download Play"オプションを選択します
+1. この操作が完了したら、画面を読んでプロセスが成功したかどうかを確認してください
+  + エラーやファイルが見つからない場合は、問題を修正してもう一度やり直してください
+1. 処理が成功した場合は、タッチスクリーンをタップし、STARTを押して終了します
 
 ___
 
