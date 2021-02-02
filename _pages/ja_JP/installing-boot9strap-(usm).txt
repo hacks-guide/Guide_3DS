@@ -19,75 +19,75 @@ WiFiプロファイルを入れたら、SAFE_MODEを実行します。これは�
 
 これらのガイドは、システムバージョン末尾にある「U、E、J、K」にあるように、米国、欧州、日本、韓国の端末で機能します。
 
-If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, you will need to use a [Legacy Method](legacy-methods). 質問がある場合、[Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)にて英語で質問して下さい。
+(RボタンまたはLボタン), (十字キー上), (Aボタン) が使えない場合[他の方法](legacy-methods) を試して下さい。 質問がある場合、[Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)にて英語で質問して下さい。
 {: .notice--warning}
 
 ### 必要なもの
 
-* [Seedminer](seedminer) より作成した、 `movable.sed` ファイル
+* [Seedminer](seedminer) でダウンロードした `movable.sed` ファイル
 * 最新バージョンの[Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest/)
 
 #### セクション I - 準備
 
-1. If your device is powered on, power off your device
-1. Open [unSAFE_MODE-bb3 tool](https://3ds.nhnarwhal.com/3dstools/unsafemode.php) on your computer
+1. 本体の電源が入っている場合、本体の電源を切ります
+1. コンピュータで [unSAFE_MODE-bb3 tool](https://3ds.nhnarwhal.com/3dstools/unsafemode.php) を開いてください。
 1. "ファイルを選択"から movable.sed ファイルをアップロードします。
-1. Click "Download unSAFE_MODE-bb3 archive"
-  + This will download an exploit DSiWare called `F00D43D5.bin` and a SAFE_MODE exploit data file called `usm.bin` inside of a zip archive (`unSAFE_MODE-bb3.zip`)
+1. "Download unSAFE_MODE-bb3 archive" をクリック
+  + これにより、`F00D437D5.bin`と呼ばれるエクスプロイトDSiWareと、ZIPアーカイブ内の`usm.bin`という名前のSAFE_MODE-bb3.zip`の脆弱性データファイルがダウンロードされます。
 1. パソコンにSDカードを入れます
 1. `boot.firm` と `boot.3dsx` をLuma3DSの `.zip` からSDカードのルートにコピーします
-  + The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
-1. Copy `usm.bin` from `unSAFE_MODE-bb3.zip` to the root of your SD card
+  + SDカードのルートとは、Nintendo 3DSのフォルダなどがある最初の項目のことであり、フォルダの中ではありません。
+1. `unSAFE_MODE-bb3.zip`から`usm.bin`をSDカードのルートにコピーします
 1. SDカードの`Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`へ移動します
   + ここでいう `<ID0>` は先ほど [Seedminer](seedminer) で使用したものと同じです。
   + `<ID1>` は `<ID0> ` の中の32文字の長いフォルダのことです。
-  + If `Nintendo DSiWare` does not exist, create it inside of the `<ID1>`
-1. もし、フォルダ内にDSiWareのバックアップファイル(`<8文字のID>.bin`)がいくつかある場合、PCへ移してください。
-  + これで Nintendo DSiWare フォルダが空になります。 Moving the files to your PC ensures you don't delete any intentional backups
-1. Copy the `F00D43D5.bin` file from `unSAFE_MODE-bb3.zip` to the `Nintendo DSiWare` folder
+  + `Nintendo DSiWare`フォルダが存在しない場合は、<ID1>の中に作成します
+1. もし、このフォルダ内に既存のDSiWareのバックアップファイル(`<8-character-id>.bin`) がいくつかあるなら、それらをPCに移してください
+  + これで Nintendo DSiWare フォルダが空になります。 PCに移すことで、バックアップファイルが削除されることはなくなります。
+1. `F00D43D5.bin` ファイルを `unSAFE_MODE-bb3.zip` から `Nintendo DSiWare` のフォルダにコピーして下さい
 
-#### Section II - BannerBomb3
+#### セクション II - BannerBomb3
 
 1. 再度、SDカードを本体に挿入してください。
-1. デバイスの電源を入れます
+1. 本体の電源を入れます
 1. 「本体設定」を開きます。
-1. `データ管理` -> `DSiWare データ管理` に移動します
+1. `データ管理` -> `DSiWare データ管理` の順に移ります。
 1. SDカードをクリックします。
-  + Your bottom screen should flash Red and then the system will reboot to home menu a few seconds later. This means the exploit profile was successfully copied
-  + If the bottom screen does not flash Red, the exploit profile was not copied and you will not be able to complete the next section. Ensure that your files are properly placed, then try again
+  + 下の画面が赤色になり、数秒後にホームメニューが起動します。 これはプロファイルが正常にコピーされたことを意味します
+  + 下の画面が赤くならない場合、プロファイルはコピーされておらず、次のセクションを遂行することはできません。 ファイルが正しく配置されていることを確認し、もう一度やり直してください
 1. 本体の電源を切ります。
 
-#### Section III - unSAFE_MODE
+#### セクション III - unSAFE_MODE
 
 1. 電源が入っていない状態で、(Lボタン)+(Rボタン)+(十字キー上)+(Aボタン) を同時に押して、そのまま電源をつけます。
   + 本体が起動するまでボタンをそのまま押し続けて下さい
 1. 「OK」を押して更新を承認します
   + アップデートはありません。 そういう仕組みになっています
 1. 「承諾」を押して利用規約に同意します
-1. The update will eventually fail, with error code `003-1099`. This is intended behaviour
-1. When asked "Would you like to configure Internet settings?", select "Yes"
-1. On the following menu, navigate to `Connection 1` -> `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings` -> `Detailed Setup`
-  + This is a [visual representation](https://uwuu.ca/images/safemode_highlighted.png)
-1. Once you see `B9S install SUCCESS` on the top screen, press any button to reboot to Luma Configuration
+1. エラーコード`003-1099`で更新は最終的に失敗します。 これもそうなるように仕込まれています
+1. 「インターネット設定を設定しますか?」と聞かれたら、「はい」を選択します。
+1. 次の画面で、`接続先1`→`設定変更`→`右のページ(右矢印)`→`Proxyの設定`→`詳細設定` の順に進みます
+  + [この画像](https://uwuu.ca/images/safemode_highlighted.png)を参考にして下さい
+1. トップ画面に `B9S install SUCCESS` が表示されたら、いずれかのボタンを押して再起動し、Lumaが立ち上がります。
 
 #### セクション IV - Luma3DSを設定する
 
-1. Your device should automatically show the Luma Configuration menu
+1. Lumaは自動的に表示されます
 1. (A) ボタン とD-Padを使用し、次の設定を有効にします:
   + **「Show NAND or user string in System Settings」**
 1. (Start) を押してセーブして再起動します
   しばらくしたらホーム画面が表示されます 黒い画面が5分以上続く場合、[このトラブルシューティングガイドに従ってください](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 
-#### Section V - Restoring WiFi Configuration Profiles
+#### セクション V - WiFi設定プロファイルの復元
 
 1. 「本体設定」を開きます。
-1. `データ管理` -> `DSiWare データ管理` に移動します
+1. `データ管理` -> `DSiWare データ管理` の順に移ります。
 1. SDカードをクリックします。
-  + Your bottom screen should flash Green and then the system will reboot to home menu a few seconds later. This means your WiFi configuration profiles were successfully restored
+  + 下の画面が緑色になり、数秒後にホームメニューが起動します。 これはWiFi設定のプロファイルが正常に復元されたことを意味します
 1. 本体の電源を切ります。
 1. パソコンにSDカードを入れます
 1. SDカードの`Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`へ移動します
-1. Delete `F00D43D5.bin` from your Nintendo DSiWare folder
+1. Nintendo DSiWareフォルダから`F00D43D5.bin`を削除します
 
 ___
 
