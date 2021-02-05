@@ -4,22 +4,22 @@ title: "ntrboot"
 
 {% include toc title="目次" %}
 
-If your flashcart comes pre-flashed with ntrboot (or you have already flashed ntrboot to your flashcart), you can skip to [Installing boot9strap (ntrboot)](installing-boot9strap-(ntrboot)) for instructions on how to use it.
+フラッシュカードが ntrboot で事前にフラッシュされた場合 (または ntrboot をフラッシュ済み) [boot9strapのインストール (ntrboot)](installing-boot9strap-(ntrboot)) をスキップして使用方法を説明します。
 {: .notice--success}
 
 ### 必読事項
 
-Installing boot9strap with ntrboot requires a compatible NDS / DSi flashcart to flash ntrboot to. Note that some of these flashcarts are sold pre-flashed with ntrboot.
+Ntrbootを使ってboot9strapをインストールするには互換性のあるNDSフラッシュカードが必要です。 これらのフラッシュカートのいくつかはntrbootを事前にフラッシュして販売されていることに注意してください。
 
-While the ntrboot exploit works independently of system version, the ntrboot flasher (which installs the exploit to the cart) is not. This means that, depending on the versions and devices supported by your flashcart, only certain methods may be available to you.
+ntrbootエクスプロイトはシステムバージョンとは独立して動作しますが、ntrbootフラッシャー(カートにエクスプロイトをインストールします) はそうではありません。 つまり、フラッシュカードがサポートするバージョンやデバイスによっては、特定の方法しか利用できない場合があります。
 
-Note that carts with a "Time Bomb" will no longer be able to launch `.nds` files when they detect that the system clock has passed a date determined by the flashcart firmware. One method to bypass this is to set the system clock to an earlier date.
+「Time Bomb」があるカートは、起動できなくなる日付があることに注意してください。 システムクロックがフラッシュカードのファームウェアによって決定された日付に達したことを検出すると、.nds`ファイルが起動できなくなります。 これを避ける1つの方法は、システムクロックを以前の日付に設定することです。
 
-| Flashcart Name | Current Price | "Time Bomb"? | 3DS Versions? | DSi Versions? | Other Notes |
+| フラシュカートの名前 | 現在の価格 | "Time Bomb"? | 3DS Versions? | DSi バージョン? | その他の注意事項 |
 |-|-:|:-:|:-:|:-:|-|
-| [**R4i-SDHC B9S**](http://www.nds-card.com/ProShow.asp?ProID=574) | $15.99 | September 3, 2024 | <= 11.14.0 | <= 1.4.5 | **Comes pre-flashed with ntrboot**; can be flashed back to an NDS flashcart. |
-| [**R4i Gold 3DS Plus**](http://www.nds-card.com/ProShow.asp?ProID=575) | $19.99 | No | <= 11.14.0 | <= 1.4.5 | **Comes pre-flashed with ntrboot** ([internal switch to switch between ntrboot and NDS modes]({{ "/images/screenshots/r4i-gold-3ds-plus.png" | absolute_url }})); do not manually flash with ntrboot. |
-| [**Acekard 2i**](http://www.nds-card.com/ProShow.asp?ProID=160) | $20.99 | No | <= 4.3.0 | <= 1.4.4 | |
+| [**R4i-SDHC B9S**](http://www.nds-card.com/ProShow.asp?ProID=574) | $15.99 | 2024 | <= 11. 4.0 | <= 1.4.5 | **ntrboot**であらかじめフラッシュされています。NDSフラッシュカートに戻すことができます。 |
+| [**R4i Gold 3DS Plus**](http://www.nds-card.com/ProShow.asp?ProID=575) | $19.99 | <= 11.14.0 | <= 1.4. | **comes pre-flashed with ntrboot** ([NDSを起動するモードとntrbootを起動するモードを切り替えるスイッチがあります]({{ "/images/screenshots/r4i-gold-3ds-plus.png" | absolute_url }})); ntrboot で手動でフラッシュしないでください。 |
+| [**Acekard 2i**](http://www.nds-card.com/ProShow.asp?ProID=160) | $20.99 | <= 4.3.0 | <= 1.4.4 | |
 | [**DSTT**](http://www.nds-card.com/ProShow.asp?ProID=157) | $9.99 | No | None | None | Only models with [certain flash chips](https://gist.github.com/aspargas2/fa2a70aed3a7fe33f1f10bc264d9fab6) are compatible with ntrboot. |
 | [**R4i Gold 3DS**](http://www.nds-card.com/ProShow.asp?ProID=149) | $19.99 | No | <= 11.14.0 | <= 1.4.5 | All RTS revisions are compatible. |
 | [**R4i-SDHC 3DS RTS**](http://www.nds-card.com/ProShow.asp?ProID=146) | $13.99 | 1.85b: September 3, 2024 | <= 11.14.0 | <= 1.4.5 | |
