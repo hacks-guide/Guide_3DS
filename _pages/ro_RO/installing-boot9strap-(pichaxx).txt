@@ -1,0 +1,69 @@
+---
+title: "Installing boot9strap (PicHaxx)"
+---
+
+{% include toc title="Cuprins" %}
+
+Seedminer-based methods have been replaced by easier, safer methods. Please return to [Get Started](get-started) unless you have a legitimate reason to follow this page (such as broken shoulder buttons).
+{: .notice--warning}
+
+### Lectură obligatorie
+
+This method of using Seedminer for further exploitation uses your `movable.sed` file to write a custom save file for Pokémon Picross, which can then be used with universal-otherapp to run SafeB9SInstaller.
+
+### Ce aveți nevoie
+
+* The game "Pokémon Picross" (free on eShop)
+* Fișierul 'movable.sed' de la completarea lui [Seedminer](seedminer)
+* Cea mai nouă versiune de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(`boot9strap-1.3.zip`; not the `devkit` file, not the `ntr` file)*
+* The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
+* The latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)
+
+### Instrucțiuni
+
+#### Secțiunea I - Preparații
+
+1. Închideți dispozitivul
+1. Introduceți cardul SD în calculator
+1. Copy `otherapp.bin` to the root of your SD card
+1. Copiați `boot.firm` și `boot.3dsx` de la Luma3DS `.zip` pe rădăcina cardului SD
+1. Creați un folder numit 'boot9strap' pe rădăcina cardului SD
+1. Copiați `boot9strap.firm` și `boot9strap.firm.sha` din arhiva `.zip` boot9strap în folderul `/boot9strap/` de pe cardul SD
+1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
+
+#### Secțiunea II - PicHaxx
+
+1. Open [the PicHaxx Injector website](https://3ds.nhnarwhal.com/3dstools/pichaxx.php) on your computer
+1. Selectaţi fişierul `movable.sed`
+1. Selectați "Build and Download" (Construiește și descarcă)
+1. Așteptați până când procesul este terminat
+1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` on your SD card
+  + The `<ID0>` will be the same one that you used in [Seedminer](seedminer)
+  + The `<ID1>` is a 32 character long folder inside of the `<ID0>`
+1. Copy the newly downloaded `00000001.sav` file to the `data` folder on your SD card
+  + Suprascrieți vechiul fişier de salvare când vi se solicită
+1. Reintroduceți cardul SD în dispozitivul dumneavoastră
+1. Porniți dispozitivul
+1. Porniți "Pokemon Picross"
+1. If the exploit was successful, your device will have booted into SafeB9SInstaller
+
+#### Secțiunea III - Instalând boot9strap
+
+1. Așteptaţi ca toate verificările de siguranță să fie completate
+1. Când vi se solicită, introduceți combinația de butoane ca să instalați boot9strap
+1. Odată terminat, apăsați (A) pentru a reporni dispozitivul
+
+#### Secțiunea IV - Configurând Luma3DS
+
+1. Dispozitivul dumneavoastră ar trebui să fi repornit în meniul de configurare Luma3DS
+  + Dacă vedeți un ecran negru [urmați acest ghid de depanare](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
+1. Folosiți butonul (A) si D-Pad-ul ca să activați următoarele:
+  + **"Show NAND or user string in System Settings"**
+1. Apăsați (Start) pentru a salva și reporni
+  + Dacă primiţi o eroare, doar continuați spre pagina următoare
+
+___
+
+### Continuați la [Finalizând instalarea](finalizing-setup)
+{: .notice--primary}
