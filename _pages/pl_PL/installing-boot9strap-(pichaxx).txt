@@ -1,0 +1,69 @@
+---
+title: "Installing boot9strap (PicHaxx)"
+---
+
+{% include toc title="Spis Treści" %}
+
+Seedminer-based methods have been replaced by easier, safer methods. Please return to [Get Started](get-started) unless you have a legitimate reason to follow this page (such as broken shoulder buttons).
+{: .notice--warning}
+
+### Wymagana Lektura
+
+This method of using Seedminer for further exploitation uses your `movable.sed` file to write a custom save file for Pokémon Picross, which can then be used with universal-otherapp to run SafeB9SInstaller.
+
+### Czego Potrzebujesz
+
+* The game "Pokémon Picross" (free on eShop)
+* Twojego pliku `movable.sed` z ukończenia [Seedminer](seedminer)
+* Najnowszej wersji [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(`boot9strap-1.3.zip`; not the `devkit` file, not the `ntr` file)*
+* The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
+* The latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)
+
+### Instrukcje
+
+#### Sekcja I - Przygotowanie
+
+1. Wyłącz konsolę
+1. Włóż kartę SD do komputera
+1. Copy `otherapp.bin` to the root of your SD card
+1. Copy `boot.firm` and `boot.3dsx` from the Luma3DS `.zip` to the root of your SD card
+1. Stwórz folder o nazwie `boot9strap` w katalogu głównym karty SD
+1. Skopiuj `boot9strap.firm` i `boot9strap.firm.sha` z boot9strap `.zip` do folderu `boot9strap` na karcie SD
+1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
+
+#### Section II - PicHaxx
+
+1. Open [the PicHaxx Injector website](https://3ds.nhnarwhal.com/3dstools/pichaxx.php) on your computer
+1. Wybierz swój plik `movable.sed`
+1. Select "Build and Download"
+1. Poczekaj na zakończenie procesu
+1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` on your SD card
+  + The `<ID0>` will be the same one that you used in [Seedminer](seedminer)
+  + The `<ID1>` is a 32 character long folder inside of the `<ID0>`
+1. Copy the newly downloaded `00000001.sav` file to the `data` folder on your SD card
+  + Jeśli zostaniesz o to poproszony, nadpisz stary plik zapisu
+1. Włóż ponownie kartę SD do konsoli
+1. Włącz konsolę
+1. Launch "Pokemon Picross"
+1. If the exploit was successful, your device will have booted into SafeB9SInstaller
+
+#### Sekcja III - Instalacja boot9strap
+
+1. Poczekaj aż weryfikacja instalacji się zakończy
+1. Kiedy zostaniesz poproszony, wprowadź podaną kombinację klawiszy aby zainstalować boot9strap
+1. Po zakończeniu, naciśnij (A), aby ponownie uruchomić urządzenie
+
+#### Sekcja IV - Konfigurowanie Luma3DS
+
+1. Twoje urządzenie powinno uruchomić się ponownie i załadować menu konfiguracji Luma3DS
+  + Jeśli wyświetli się pusty czarny ekran [przejdź do rozwiązywania problemów](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
+1. Użyj przycisku (A) oraz D-Pada aby zaznaczyć:
+  + **"Show NAND or user string in System Settings"**
+1. Naciśnij (Start) aby zapisać zmiany i uruchomić konsolę ponownie
+  + Jeśli wyświetli się błąd po prostu kontynuuj
+
+___
+
+### Kontynuuj do [Finalizowanie Instalacji](finalizing-setup)
+{: .notice--primary}
