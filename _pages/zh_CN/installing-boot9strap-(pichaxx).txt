@@ -1,0 +1,69 @@
+---
+title: "Installing boot9strap (PicHaxx)"
+---
+
+{% include toc title="目录内容" %}
+
+基于 Seedminer 的方法已被更简单且更安全的方法取代。 除非你有原因（如肩键损坏）而不得不使用本教程，请回到[新手入门(get-started)查阅新的方法。
+{: .notice--warning}
+
+### 必读事项
+
+This method of using Seedminer for further exploitation uses your `movable.sed` file to write a custom save file for Pokémon Picross, which can then be used with universal-otherapp to run SafeB9SInstaller.
+
+### 你需要准备点啥？
+
+* The game "Pokémon Picross" (free on eShop)
+* 你在 [Seedminer](seedminer) 步骤中获得的 `movable.sed` 文件
+* 最新版 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* 最新版 [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) **（下载 `boot9strap-1.3.zip` 压缩包文件，而不是带有 `devkit` 或 `ntr` 名字的文件）**
+* 最新版 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
+* 最新版 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)
+
+### 操作步骤
+
+#### 第一步 – 准备工作
+
+1. 将设备关机
+1. 将你的 SD 卡插入到电脑
+1. 复制 `otherapp.bin` 到你的 SD 卡根目录
+1. 解压 Luma3DS `.zip` 里的 `boot.firm` 和 `boot.3dsx` 到你 SD 卡的根目录
+1. 在 SD 卡根目录创建一个名为 `boot9strap` 的文件夹
+1. 从 boot9strap `.zip` 压缩包中复制 `boot9strap.firm` 和 `boot9strap.firm.sha` 到你 SD 卡的 `/boot9strap/` 文件夹中
+1. 从 SafeB9SInstaller `.zip` 压缩包中复制 `SafeB9SInstaller.bin` 到 SD 卡根目录下
+
+#### 第二步 – PicHaxx
+
+1. 在你的电脑上打开 [PicHaxx 注入器网页](https://3ds.nhnarwhal.com/3dstools/pichaxx.php)
+1. 上传你的 `movable.sed` 文件
+1. 选择 “构建并下载（Build and Download）”
+1. 等待该过程执行完成。
+1. 打开你 SD 卡的 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` 文件夹
+  + 这个 `<ID0>` 和你在 [Seedminer](seedminer) 章节中打开的一样
+  + `<ID1>` 是一个在 `<ID0>` 文件夹内，另一个 32 位字符长的文件夹
+1. 复制你刚下载的 `00000001.sav` 文件到 `data` 文件夹
+  + 当提示时选择覆盖旧的文件
+1. 将SD卡重新插入你的主机
+1. 启动你的主机
+1. 启动“精灵宝可梦：绘图方块(Pokemon Picross)”
+1. If the exploit was successful, your device will have booted into SafeB9SInstaller
+
+#### 第三步 – 安装 boot9strap
+
+1. 等待所有安全检查完成
+1. 出现提示时，按照提示输入按键组合来安装boot9strap
+1. 安装完成后，按下 “A” 键重启设备
+
+#### 第四步 – 设置 Luma3DS
+
+1. 你的主机将会在重启后进入至 Luma3DS 配置菜单中
+  + 如果黑屏，[请参见此故障排查章节](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
+1. 使用方向键和 “A” 键来启用以下设置：
+  + **“Show NAND or user string in System Settings”**
+1. 按下 “Start” 键保存设置并重启
+  + 如果出现错误，继续至下一个页面即可解决
+
+___
+
+### 继续至[完成安装](finalizing-setup)
+{: .notice--primary}
