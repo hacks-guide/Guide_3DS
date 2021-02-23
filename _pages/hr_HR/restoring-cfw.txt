@@ -1,0 +1,34 @@
+---
+title: "Restoring CFW"
+---
+
+{% include toc title="Table of Contents" %}
+
+### Required Reading
+
+This page prepares consoles with an existing modern boot9strap installation for reinstallation of custom firmware applications. It can also be used in the event of a lost or corrupted SD card.
+
+### What You Need
+* The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
+
+### Instructions
+
+#### Section I - Prep Work
+
+1. Insert your SD card into your computer
+1. Copy `boot.3dsx` and `boot.firm` from the Luma3DS `.zip` to the root of your SD card
+  + The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
+1. Reinsert your SD card into your device
+
+#### Section II - Configuring Luma3DS
+
+1. Turn on your device
+	* You should now see a Luma3DS configuration menu
+1. Use the (A) button and the D-Pad to turn on the following:
+	* **"Show NAND or user string in System Settings"**
+1. Press (Start) to save and reboot
+
+___
+
+### Continue to [Finalizing Setup](finalizing-setup)
+{: .notice--primary}
