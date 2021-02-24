@@ -11,11 +11,11 @@ Seedminerベースのメソッドは、より簡単で安全なメソッドに�
 
 To install boot9strap on your device, we derive your device's unique encryption key.
 
-To accomplish this, we use a tool called Seedminer to calculate the DSiWare encryption key (`movable.sed`) for your device. 次に、このDSiWare暗号化キーを使用して互換性のあるDSiWareアプリケーションを復号化し、脆弱性を利用して私達が使用するコードを挿入し実行します(デバイスで利用する脆弱性は国によって異なります)。
+それを実現するために、Seedminerと呼ばれるツールを使用して、3DS内のDSiWare暗号化キー (`movable.sed`) を計算します。 次に、このDSiWare暗号化キーを使用して互換性のあるDSiWareアプリケーションを復号化し、脆弱性を利用して私達が使用するコードを挿入し実行します(デバイスで利用する脆弱性は国によって異なります)。
 
-もしこのキーが完全にランダムなものであれば、現在のコンピューターで暗号化キーを破ることは不可能です。 しかし幸いにも、キー (`movable_part1.sed`) の前半部分については3DSのフレンドコードが関連しているため、暗号化を破ることが可能です。 For information on how Seedminer works, please see [this presentation](https://zoogie.github.io/web/34⅕c3).
+もしこのキーが完全にランダムなものであれば、現在のコンピューターで暗号化キーを破ることは不可能です。 しかし幸いにも、キー (`movable_part1.sed`) の前半部分については3DSのフレンドコードが関連しているため、暗号化を破ることが可能です。 Seedminerの仕組み自体については、こちらの[資料](https://zoogie.github.io/web/34⅕c3)を参照してください。
 
-This method uses a powerful graphics card to perform the calculations needed. A volunteer-run website is used for the purpose of assisting you with this method.
+この方法には、必要な計算を強力なグラフィックボードで行う必要があります。 この方法であなたを支援するために、ボランティアがWebサイトを運営し支援しています。
 
 ### 手順
 
@@ -23,9 +23,9 @@ This method uses a powerful graphics card to perform the calculations needed. A 
 
 1. パソコンにSDカードを入れます
 1. SDカードにある、`Nintendo 3DS` フォルダを開きます。
-1. Copy the 32 character long name of the folder you see inside Nintendo 3DS
-  + Do not go inside any more folders
-  + If you see multiple folders with long, random names inside `Nintendo 3DS` without opening any other folders, perform the following:
+1. 表示されている32文字のフォルダ名をコピーします。
+  + まだそれ以上フォルダを展開しないでください
+  + 他のフォルダを開かずに、長い名前のフォルダが複数ある場合は以下の手順を行ってください。
   + `Nintendo 3DS` というフォルダ名を `BACKUP_Nintendo 3DS` というフォルダ名に変更する。
   + SDカードを3DSに挿入し電源を入れます。
   + デバイスがSDカードにデータを構築し終わるまで待ちます。
@@ -33,27 +33,27 @@ This method uses a powerful graphics card to perform the calculations needed. A 
   + SDカードにある、 `Nintendo 3DS` フォルダを開きます。
   + 表示されている32文字のフォルダ名をコピーします。
   + `Nintendo 3DS` フォルダを削除します。
-  + Rename the `BACKUP_Nintendo 3DS` folder to `Nintendo 3DS`
-1. Paste your 32 character long folder name into a document you can reference later
-  + This folder name is also known as your "ID0"
+  + さきほどリネームした `BACKUP_Nintendo 3DS` フォルダ名を `Nintendo 3DS` に戻します。
+1. コピーした32文字のフォルダ名を、後で分かるようにメモ帳などに貼り付けます。
+  + このフォルダ名のことを一般に "ID0" と呼称します。
 1. デバイスの電源を入れます
-1. Go to your Friend List (the [orange Face Icon]({{ "/images/friend-list-icon.png" | absolute_url }}) in the top row of your Home Menu)
-  + If you receive an error and are kicked out of the menu, you either must create a new Mii or your device cannot connect to Nintendo's servers (due to a ban or connection issues)
-1. Find your Mii profile, then find the "Friend Code" field on the top screen
+1. ホームメニュー上部のフレンドリスト ( [オレンジ色の顔アイコン]({{ "/images/friend-list-icon.png" | absolute_url }}) を開きます)
+  + もしここでエラーが発生し、メニューから追い出された場合、新しいMiiを作成する必要があります。あるいはあなたの3DSは任天堂サーバーにアクセスできない状態です(Banされている、または接続自体の問題)。
+1. 自分のMiiを探し、"フレンドコード"をトップ画面に表示します。
 
-#### Section II - Seedminer
+#### セクション II - Seedminer
 
-1. Open [Bruteforce Movable](https://seedminer.hacks.guide/) on your computer
-  + This site can automate the retrieval of `movable_part1.sed` (using a bot 3DS console) and the breaking of your device's DSiWare encryption (using a volunteer's computer to run Seedminer)
-  + If the site isn't working, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you
-1. Enter your device's Friend Code (with no spaces or dashes) into the "Your friend code" field
-1. Paste your device's 32 character long folder name into the "Your ID0" field
-  + Do not attempt to enter the ID0 by hand. Ensure the ID0 is entered correctly by copying and pasting it from where you saved it in the previous section
+1. パソコンから、 [Bruteforce Movable](https://seedminer.hacks.guide/) を開きます。
+  + このサイトは、 `movable_part1.sed` の検索を(ボット3DS機器を使用して)自動化し、(Seedminerを実行しているボランティアのPCを使用して) 3DSのDSiWareの暗号化を解除することが可能です。
+  + サイトが動作しない場合は、["Nintendo Homebrew"というディスコード](https://discord.gg/MWxPgEp) に参加して、誰かに(英語で)助けてもらいましょう。
+1. "Your friend code" 欄に、あなたのフレンドコードを (空白やハイフン抜きで) 入力します。
+1. 「Your ID0」 欄に、あなたのデバイスにあった32文字の 「ID0」 をコピペします。
+  + 手動で入力するのは止めてください。 前のセクションで保存した場所から「ID0」をコピー＆ペーストし、ID0 が正しく入力されていることを確認してください。
 1. 「Go」を選択します。
-  + If the site immediately goes to step 4, download your `movable.sed` file and continue with the next section
+  + サイトがすぐにステップ4に移動した場合は、`movable.sed`ファイルをダウンロードして次のセクションに進んでください
 1. サイト上にボット用フレンドコードが表示されたら、3DS本体の『フレンドの登録』≫『インターネットでフレンド登録』へ進み、サイト上に表示された「ボット用フレンドコード」を3DSに登録してください。
-1. Wait for the site to update
-  + If it does not, wait a few minutes before refreshing the page once
+1. サイト側が更新されるまで待ちます。
+  + もし変わらない場合、数分待ってからページを１度更新し直します。
 1. サイトがあなたの情報を処理すると、 "Continue" または "Do another device" という選択肢が表示されます。 緑色の "Continue" ボタンをクリックします。
 1. 残りの処理が完了するまで待ちます。
   + This is usually fast (1-5 minutes) but in some cases, can take up to half an hour
