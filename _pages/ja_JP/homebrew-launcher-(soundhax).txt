@@ -2,7 +2,7 @@
 title: "Homebrew Launcher (Soundhax)"
 ---
 
-{% include toc title="Table of Contents" %}
+{% include toc title="目次" %}
 
 ### Required Reading
 
@@ -14,33 +14,34 @@ Ensure your device's Wireless Communication is turned on as udsploit (used in th
 
 {% capture notice-1 %}
 
-Note that cartridge updates will only deliver updates to core features, such as the System Settings, Home Menu, etc. cartridge updates will not deliver updates to Nintendo 3DS Sound and Network features, such as System Transfer, Internet Browser, StreetPass Mii Plaza, or eShop.
+ゲームカード経由のアップデートでは、システム設定、ホーム メニューなどのコア機能のみが更新されますのでご注意ください。 ゲームカード経由の更新ではシステムを転送、インターネット ブラウザー、Mii 広場 e ショップなどのネットワーク機能部分とニンテンドー3DSサウンドの更新は提供されません。
 
-This means that using a cartridge update from a version containing an older Nintendo 3DS Sound version *(<3.0.0)* to one that introduced a newer Nintendo 3DS Sound version will break Soundhax! その場合、[その他の方法](homebrew-launcher-(alternatives))でHomebrew Launcherを実行しなければなりません！
+This means that using a cartridge update from a version containing an older Nintendo 3DS Sound version *(<2.1.0)* to one that introduced a newer Nintendo 3DS Sound version will break Soundhax! その場合、[その他の方法](homebrew-launcher-(alternatives))でHomebrew Launcherを実行しなければなりません！
 {% endcapture %}
 
 <div class="notice--warning">{{ notice-1 | markdownify }}</div>
 
-### What You Need
+### 必要なもの
 
 * The latest release of [Soundhax](http://soundhax.com) *(for your region, device, and version)*
+  + If Soundhax appears in your browser as an unplayable video, press Ctrl+S or Cmd+S to save it to your computer
 * The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
 * The latest release of [safehax](https://github.com/TiniVi/safehax/releases/latest) *(the `.3dsx` file)*
 * The latest release of [udsploit](https://github.com/smealum/udsploit/releases/latest)
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
-* The [otherapp payload](https://smealum.github.io/3ds/#otherapp) *(for your region and version)*
+* The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
+* The [otherapp payload](https://smealum.github.io/3ds/#otherapp) *(for your region, device, and version)*
 
-### Instructions
+### 手順
 
-1. Power off your device
+1. 本体の電源を切ります。
 1. パソコンにSDカードを入れます
 1. Create a folder named `3ds` on the root of your SD card if it does not already exist
 1. Copy the Soundhax `.m4a` to the root of your SD card
 1. Copy the otherapp payload to the root of your SD card and rename it to `otherapp.bin`
 1. Copy `boot.firm` and `boot.3dsx` from the Luma3DS `.zip` to the root of your SD card
-1. Create a folder named `boot9strap` on the root of your SD card
-1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
+1. `boot9strap`という名前のフォルダをSDカードのルート上に作成します。
+1. `boot9strap.firm`と`boot9strap.firm.sha`を boot9strap `.zip` ファイルから解凍し、SD カードのboot9strapフォルダにコピーします。
 1. Copy `safehax.3dsx` to the `/3ds/` folder on your SD card
 1. Copy `udsploit.3dsx` to the `/3ds/` folder on your SD card
 1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card and rename `SafeB9SInstaller.bin` to `safehaxpayload.bin`
@@ -48,8 +49,8 @@ This means that using a cartridge update from a version containing an older Nint
     ![]({{ "/images/screenshots/boot9strap-hb-file-layout.png" | absolute_url }})
     {: .notice--info}
 
-1. Reinsert your SD card into your device
-1. Power on your device
+1. 再度、SDカードを本体に挿入してください。
+1. デバイスの電源を入れます
 1. ニンテンドー3DSサウンドを起動します
 
     ![]({{ "/images/screenshots/soundhax-welcome.png" | absolute_url }})

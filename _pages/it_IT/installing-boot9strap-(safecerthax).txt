@@ -1,0 +1,84 @@
+---
+title: "Installazione di boot9strap (safecerthax)"
+---
+
+{% include toc title="Indice" %}
+
+### Lettura necessaria
+
+safecerthax è compatibile con tutte le console Old 3DS e Old 2DS di tutte le regioni.
+
+Se i tuoi pulsanti (L/R), (Su) o (A) non funzionano, dovrai usare un metodo alternativo, come [Seedminer](seedminer). In questi casi, puoi ricevere assistenza chiedendo, in inglese, nel canale [Nintendo Homebrew su Discord](https://discord.gg/MWxPgEp).
+{: .notice--warning}
+
+Questo exploit non funzionerà su New 3DS, New 3DS XL, o New 2DS XL. Assicurati che la console che stai modificando sia un Old 3DS, Old 3DS XL, o un Old 2DS prima di continuare.
+{: .notice--info}
+
+### Cosa serve
+
+* L'ultima versione di [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* L'ultima versione di [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(la versione normale di boot9strap; non il file `devkit`, né il file `ntr`)*
+* L'ultima versione di [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) 
+
+### Istruzioni
+
+#### Sezione I - Preparazione
+1. Spegni il tuo 3DS
+1. Inserisci la scheda SD nel tuo computer
+1. Copia i file `boot.firm` e `boot.3dsx` dall'archivio `.zip` di Luma3DS nella directory principale della tua scheda SD
+1. Crea una cartella chiamata `boot9strap` nella directory principale della tua scheda SD
+1. Copia i file `boot9strap.firm` e `boot9strap.firm.sha` dall'archivio `.zip` di boot9strap nella cartella `boot9strap` della tua scheda SD
+1. Copia il file `SafeB9SInstaller.bin` dall'archivio `.zip` di SafeB9SInstaller nella directory principale della tua scheda SD
+1. Reinserisci la scheda SD nella tua console
+1. Accendi la console
+
+#### Sezione II - safecerthax DNS
+1. Avvia l'applicazione Impostazioni della console
+1. Entra in `Impostazioni Internet` -> `Impostazioni di collegamento`
+1. Clicca sulla tua connessione wifi e naviga su `Modifica` -> `Pagina Successiva (la freccia a destra)` -> `DNS`
+1. Imposta "Ottieni automaticamente DNS" su "No", quindi clicca su `Impostazioni avanzate`
+1. Imposta sia il DNS primario sia il DNS secondario a `054.038.133.070`
+1. Fai clic su OK, quindi su Salva
+1. Quando richiesto, clicca su "Test" per eseguire il test di connessione
+	+ Il test dovrebbe avere buon fine
+1. Spegni il tuo 3DS
+
+#### Sezione III - safecerthax
+1. Con la console ancora spenta, tieni premuto i pulsanti (L) + (R) + (Su) + (A), dopodiché accendi la console
+  + Mantieni premuti i pulsanti finché la console non si avvia in Safe Mode
+1. Premi "OK" per accettare l'aggiornamento
+  + Non c'è alcun aggiornamento. Fa parte del procedimento
+1. Premi "Accetto" per accettare i termini e le condizioni
+  + L'aggiornamento dovrebbe fallire e dovrebbe apparire un messaggio di errore
+1. Premi "OK" per chiudere il messaggio di errore
+1. Se l'exploit è andato a buon fine, si avvierà SafeB9SInstaller
+  + Se la console si blocca o crasha, forza lo spegnimento della console, quindi ritenta questa sezione
+ 
+#### Sezione IV - Installazione di boot9strap
+
+1. Attendi il termine di tutti i controlli di sicurezza
+1. Quando richiesto, inserisci la combinazione di tasti richiesta a schermo per installare boot9strap
+1. Una volta completato il processo, premi (A) per riavviare la tua console
+
+#### Sezione V - Configurare Luma3DS
+
+1. La tua console dovrebbe riavviarsi all'interno del menu di configurazione di Luma3DS
+  + Se ottieni uno schermo nero, [segui questa guida per risolvere il problema](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
+1. Usa il pulsante (A) e il D-Pad per abilitare le seguenti opzioni:
+  + **"Show NAND or user string in System Settings"**
+1. Premi (Start) per salvare e riavviare il 3DS
+  
+#### Sezione VI - Ripristino del DNS
+1. Avvia l'applicazione Impostazioni della console
+1. Entra in `Impostazioni Internet` -> `Impostazioni di collegamento`
+1. Clicca sulla tua connessione wifi e naviga su `Modifica` -> `Pagina Successiva (la freccia a destra)` -> `DNS`
+1. Imposta "Ottieni automaticamente DNS" su "Sì"
+1. Fai clic su OK, quindi su Salva
+1. Quando richiesto, clicca su "Test" per eseguire il test di connessione
+	+ Il test dovrebbe avere buon fine
+1. Spegni il tuo 3DS
+
+___
+
+### Prosegui con il [Completamento dell'installazione](finalizing-setup)
+{: .notice--primary}

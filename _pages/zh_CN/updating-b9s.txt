@@ -8,44 +8,29 @@ title: "更新 B9S"
 
 本页是给现有 Boot9strap 的用户且想更新 Boot9strap 到最新版本而准备的。
 
-{% capture notice-1 %}
-据消息称，任天堂封禁了大量使用自制系统（CFW）的用户。 为了自保，请在继续教程前先进行如下操作。
-
-1. 进入“系统设置（System Settings）”，点击“互联网设置（Internet Settings）”，然后再点击“SpotPass”，之后再继续点击“发送系统信息（Sending of System Information）”
-1. 关闭“发送系统信息（Sending of System Information）”选项
-1. 退出系统设置
-1. 开启你的好友列表（Home 主菜单中最上方的[橙色的笑脸]({{ "/images/friend-list-icon.png" | absolute_url }})）
-  + 如果出现错误信息并被踢回到主菜单，则好友列表设置可能已被禁用或你的设备无法连接到任天堂服务器（由于封禁或网络问题）
-1. 进入“好友列表设置（Friend List settings）”，然后点击“好友提示设置（Friend Notification Settings）”，再然后点击“展示正在游玩的游戏（Show friends what you're playing）”
-1. 关闭“向好友展示正在玩的游戏（Show friends what you're playing）”选项
-1. 退出好友列表
-
-{% endcapture %}
-
-<div class="notice--danger">{{ notice-1 | markdownify }}</div>
+我们现在相信自制固件可以安全地联网了，不过仍然要提一下：过去的联网封禁大多数是因为作弊和可疑的 eShop 行为造成的。
+{: .notice--warning}
 
 ### 你需要准备点啥？
 
 * 最新版 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * 最新版 [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) **（下载标准的 boot9strap 压缩包文件，而不是带有 `devkit` 或 `ntr` 名字的文件）**
-* 最新版 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
-* 最新版 [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
+* 最新版 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
 
 ### 操作步骤
 
-#### 第一步 — 准备工作
+#### 第一步 – 准备工作
 
 请在本节中的所有步骤中覆盖 SD 卡上的所有现有文件。
 {: .notice--info}
 
 1. 将 SD 卡插入电脑
-1. 复制 `boot.3dsx` 到你的 SD 卡根目录
 1. 在SD卡根目录创建一个名为`boot9strap`的文件夹
 1. 从boot9strap `.zip` 压缩包中复制 `boot9strap.firm` 和 `boot9strap.firm.sha` 到你 SD 卡的 `/boot9strap/` 文件夹中
 1. 从 SafeB9SInstaller `.zip` 压缩包中复制 `SafeB9SInstaller.firm` 到 SD 卡 `/luma/payloads/` 目录中
 1. 将 SD 卡重新插入你的设备
 
-#### 第二步 — 安装 boot9strap
+#### 第二步 – 安装 boot9strap
 
 1. 开机时按住 “Start” 键来启动 Luma3DS chainloader 菜单
 1. 按 “A” 键启动 SafeB9SInstaller
@@ -54,15 +39,15 @@ title: "更新 B9S"
 1. 当完成后，按下 “Start” 键，然后按 “A” 来重启你的设备到 Luma3DS chainloader 菜单
   + 如果你在 B9S 更新后遇到 “argc = 0” 错误， 请忽略并继续教程
 
-#### 第三步 — 升级 Luma3DS
+#### 第三步 – 升级 Luma3DS
 
 1. 将设备关机
 1. 将你的 SD 卡插入到电脑
-1. 解压 Luma3DS `.zip` 内的 `boot.firm` 到你 SD 卡的根目录，请覆盖已有文件
+1. 解压 Luma3DS `.zip` 内的 `boot.firm` 和 `boot.3dsx` 到你 SD 卡的根目录，覆盖已有文件
 1. 将 SD 卡重新插入你的主机
 1. 启动你的主机
 
-#### 第四步 — 配置 Luma3DS
+#### 第四步 – 配置 Luma3DS
 
 本步骤仅在重启时出现 Luma3DS 设置菜单时才需使用。
 {: .notice--info}

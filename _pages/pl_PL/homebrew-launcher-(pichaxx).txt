@@ -4,11 +4,14 @@ title: "Homebrew Launcher (PicHaxx)"
 
 {% include toc title="Spis Treści" %}
 
+Seedminer-based methods have been replaced by easier, safer methods. Please return to [Get Started](get-started) unless you have a legitimate reason to follow this page (such as broken shoulder buttons).
+{: .notice--warning}
+
 ### Wymagana Lektura
 
 This method of using Seedminer for further exploitation uses your `movable.sed` file to gain access to the Homebrew Launcher using the PicHaxx exploit for the purposes of injecting an exploitable DSiWare title into the DS Download Play application. This method requires you to already own (or download) the free "Pokemon Picross" game from the eShop.
 
-If your device already has access to the Homebrew Launcher (whether through pichaxx or another exploit), you can skip to [DSiWare Dumper](dsidumper)).
+If your device already has access to the Homebrew Launcher (whether through PicHaxx or another exploit), you can skip to [Frogtool](installing-boot9strap-(frogtool)).
 {: .notice--success}
 
 If you already have Pokemon Picross, this process will overwrite your game's save file!
@@ -19,7 +22,8 @@ If you already have Pokemon Picross, this process will overwrite your game's sav
 * The free eShop game "Pokemon Picross"
 * Twojego pliku `movable.sed` z ukończenia [Seedminer](seedminer)
 * Najnowszej wersji [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
-* The [otherapp payload](https://deadphoenix8091.github.io/3ds/#otherapp) *(for your region and version)*
+* The [otherapp payload](https://deadphoenix8091.github.io/3ds/#otherapp) *(for your region, device, and version)*
+  + If your current version is 11.14.0-46, select 11.13.0-45 for your version
 
 ### Instrukcje
 
@@ -27,26 +31,26 @@ If you already have Pokemon Picross, this process will overwrite your game's sav
 
 1. Skopiuj plik `boot.3dsx` do katalogu głównego twojej karty SD
 1. Skopiuj pobrany plik otherapp payload do katalogu głównego twojej karty SD i zmień jego nazwę na `otherapp.bin`
-  + if you do not see the `.bin` extension, do not add it to the end of the filename
+  + If you do not see the `.bin` extension, do not add it to the end of the filename
 1. Stwórz folder o nazwie `3ds` w głównym katalogu twojej karty SD, jeśli jeszcze nie istnieje
 
 #### Section II - PicHaxx
 
-1. Open [the PicHaxx Injector website](https://seedminer.hacks.guide/pichaxx/) on your computer
+1. Open [the PicHaxx Injector website](https://3ds.nhnarwhal.com/3dstools/pichaxx.php) on your computer
 1. Wybierz swój plik `movable.sed`
 1. Select "Build and Download"
 1. Poczekaj na zakończenie procesu
 1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` on your SD card
-  + Twoje `<ID0>` będzie takie samo jak te użyte przez Ciebie w [Seedminer](seedminer)
-  + This `<ID1>` folder will be another 32 letter/number folder inside the `<ID0>` folder
-1. Copy the new downloaded `00000001.sav` file to the `data` folder on your SD card
+  + The `<ID0>` will be the same one that you used in [Seedminer](seedminer)
+  + The `<ID1>` is a 32 character long folder inside of the `<ID0>`
+1. Copy the newly downloaded `00000001.sav` file to the `data` folder on your SD card
   + Jeśli zostaniesz o to poproszony, nadpisz stary plik zapisu
 1. Włóż ponownie kartę SD do konsoli
 1. Włącz konsolę
 1. Launch "Pokemon Picross"
 1. Jeśli Soundhax zadziałał, uruchomi się Homebrew Launcher
-  + Możesz zobaczyć błąd informujący o braku aplikacji.
-1. Wyłącz konsolę.
+  + You may see an error stating there are no applications found
+1. Wyłącz konsolę
 
 ___
 

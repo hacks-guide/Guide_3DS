@@ -1,0 +1,84 @@
+---
+title: "Boot9strap telepítése (safecerthax)"
+---
+
+{% include toc title="Tartalomjegyzék" %}
+
+### Fontos tudnivalók
+
+A safecerthax kompatibilis minden Old 3DS and Old 2DS eszközzel minden régióban.
+
+Ha a (Jobb/Bal Váll), (D-Pad Fel) vagy (A) gombjaid nem működnek, egy alternatív metódust kell használnod, mint például a [Seedminer](seedminer). Ha támogatásra van szükséged az anyaggal kapcsolatosan, csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és kérj, angolul, támogatást.
+{: .notice--warning}
+
+Ez az exploit nem működik az New 3DS, New 3DS XL, vagy New 2DS XL verziókon. Mielőtt folytatnád, kérjük ellenőrizd, hogy a moddolandó eszközöd Old 3DS, Old 3DS XL, vagy Old 2DS.
+{: .notice--info}
+
+### Amire szükséged lesz
+
+* A [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest) legújabb kiadása
+* A [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) legújabb kiadása *(a sima boot9strap; nem a `devkit` fájl, nem az `ntr` fájl)*
+* Az [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) legújabb verziója 
+
+### Lépések
+
+#### I. rész - Előkészületek
+1. Kapcsold ki a készüléked
+1. Helyezd az SD kártyád a számítógépbe
+1. Másold át a `boot.firm` és `boot.3dsx` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
+1. Hozz létre egy mappát `boot9strap` néven az SD kártya gyökerében
+1. Másold át a `boot9strap.firm` fájlt és a `boot9strap.firm.sha` fájlt a boot9strap `.zip` fájlból az SD kártyád `boot9strap` mappájába
+1. Másold át a `SafeB9SInstaller.bin` fájlt a SafeB9SInstaller `.zip`-ből az SD kártyád gyökerébe
+1. Tedd vissza az SD kártyád a készülékedbe
+1. Kapcsold be a készülékedet
+
+#### II. rész - safecerthax DNS
+1. Indítsd el a System Settings alkalmazást
+1. Navigálj az `Internet Settings` -> `Connection Settings` opciókhoz
+1. Kattints a saját hálózati kapcsolatodra és navigálj a `Change Settings` -> `Next Page (jobb nyíl)` -> `DNS` opcióhoz
+1. Állítsd az "Auto-Obtain DNS"-t "No"-ra majd kattints a `Detailed Setup`-ra
+1. Állítsd a Primary DNS-t és a Secondary DNS-t az `054.038.133.070` címre
+1. Kattints az OK-ra, majd kattints a Save-re
+1. Amikor kérdezi, kattints a "Test"-re a kapcsolat ellenőrzéséhez
+	+ A tesztnek sikeresnek kell lennie
+1. Kapcsold ki a készüléked
+
+#### III. rész - safecerthax DNS
+1. Az eszközöd kikapcsolt állapotában tartsd nyomva a következő gombokat: (Bal Váll) + (Jobb Váll) + (D-Pad Fel) + (A), majd nyomd meg a (Power)-t
+  + Tartsd nyomva a gombokat, amiíg a konzol be nem bootol a Safe Mode-ba
+1. Nyomj "OK"-ot a frissítés elfogadásához
+  + Nincs frissítés. Ez része az exploitnak
+1. Nyomj az "I accept"-re a feltételek elfogadásához
+  + A frissítésnek sikertelennek kell lennie, és egy üzenetnek kell megjelennie
+1. Nyomj "OK"-ét a hibaüzenet bezárásához
+1. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
+  + Ha a konzol lefagy vagy összeomlik, erőltetve kapcsold ki a konzolt és próbáld újra ezt a részt
+ 
+#### IV. rész - boot9strap telepítése
+
+1. Várj, amíg az összes biztonsági ellenőrzés be nem fejeződik
+1. Ha kéri, akkor nyomd meg sorban azokat a gombokat, amiket kijelez a képernyőn, hogy telepíthesd a boot9strap-et
+1. Ha ez elkészült, nyomd meg az (A) gombot az eszközöd újraindításához
+
+#### V. rész - Luma3DS konfigurálása
+
+1. A készülékednek az előzőekben a Luma3DS-be kellett bootolnia
+  + Ha fekete képernyőt kapsz, [nézd át a hibaelhárítási útmutatót](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
+1. Használd az (A) gombot és D-Pad-et a következő engedélyezéséhez:
+  + **"Show NAND or user string in System Settings"**
+1. Mentéshez és újraindításhoz nyomd meg a (Start) gombot
+  
+#### VI. rész - Az alapértelmezett DNS visszaállítása
+1. Indítsd el a System Settings alkalmazást
+1. Navigálj az `Internet Settings` -> `Connection Settings` opciókhoz
+1. Kattints a saját hálózati kapcsolatodra és navigálj a `Change Settings` -> `Next Page (jobb nyíl)` -> `DNS` opcióhoz
+1. Állítsd az "Auto-Obtain DNS"-t "Yes"-re
+1. Kattints az OK-ra, majd kattints a Save-re
+1. Amikor kérdezi, kattints a "Test"-re a kapcsolat ellenőrzéséhez
+	+ A tesztnek sikeresnek kell lennie
+1. Kapcsold ki a készüléked
+
+___
+
+### Tovább a [telepítés véglegesítésére](finalizing-setup)
+{: .notice--primary}

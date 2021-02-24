@@ -17,7 +17,7 @@ Note that if you have any payload files other than `GodMode9.firm` in the `/luma
 이 작업을 진행하면 NNID가 더이상 시스템과 호환되지 않아 연결이 해제됩니다. NNID's are locked to the region of your device that created them and cannot be transferred between regions without [a very complex and advanced process](https://gist.githubusercontent.com/yifanlu/e80db121d38aceb8cca0e03cefd5853b/raw/3c4dd89869156ca0f945a2791e699acfdb32b510/gistfile1.txt).
 {: .notice--warning}
 
-After this process, only **New 3DSs which have never accessed the eShop before** and **all Old 3DSs** will be able to access the eShop after creating a new NNID on their new region. 기존 지역에서 e숍에 접속한 적이 있는 New 3DS는 지역을 바꾼 후 새로운 NNID를 만들 수 없으며 e숍에도 접속할 수 없습니다!
+After this process, **you will not be able to access the eShop**. This includes any feature that uses an NNID, such as game updates, purchasing DLC, or online play in certain games. Region changing to your original region will usually not fix this issue.
 {: .notice--warning}
 
 간혹 e숍 접속이 가능해야 하는 기기임에도 알 수 없는 이유로 이용이 불가능한 경우도 있음을 참고해 주세요. 이는 전적으로 닌텐도의 서버와 연관된 문제로
@@ -56,12 +56,34 @@ You MUST have already installed Luma3DS and boot9strap to use this.
 1. Copy `FBI.3dsx` to the `/3ds/` folder on your SD card
 1. SD 카드를 기기에 다시 삽입해 주세요.
 
-#### Section II - CTRTransfer
-
+#### Section II - NAND Backup
 1. Launch GodMode9 by holding (Start) during boot
 1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
 1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
   + Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
+1. (Home)을 눌러 작업 메뉴를 띄워 주세요.
+1. Select "Scripts..."
+1. Select "GM9Megascript"
+1. Select "Backup Options"
+1. Select "SysNAND Backup"
+1. (A)를 눌러 주세요.
+  + 이 과정은 시간이 좀 걸릴 것입니다.
+  + If you get an error, make sure that you have at least 1.3GB of free space on your SD card
+1. (A)를 눌러 진행해 주세요.
+1. (B)를 눌러 메인 메뉴로 돌아가 주세요.
+1. Select "Exit"
+1. Press (A) to relock write permissions if prompted
+1. (R) 버튼과 (B)를 동시에 눌러 SD 카드를 뺄 준비를 해 주세요.
+1. SD 카드를 컴퓨터에 삽입해 주세요.
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
+  + 여러 위치에 백업을 해 주세요. (온라인 파일 저장 공간 등)
+  + These backups will save you from a brick and/or help you recover files from the NAND image if anything goes wrong in the future
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` and `<date>_<serialnumber>_sysnand_###.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
+1. SD 카드를 기기에 다시 삽입해 주세요.
+  + If your SD card was not detected, hold (R) and press (B) at the same time to remount it
+  
+#### Section III - CTRTransfer
+
 1. Navigate to `[0:] SDCARD` -> `gm9`
 1. CTRTransfer `.bin`에 (A)를 눌러 선택해 주세요.
 1. "CTRNAND options..."를 선택해 주세요.
@@ -88,7 +110,7 @@ You MUST have already installed Luma3DS and boot9strap to use this.
   + Updates while using B9S + Luma (what you have) are safe
   + 오류가 발생하면 DNS 설정을 "자동"으로 설정해 주세요.
 
-#### Section III - Launching FBI
+#### Section IV - Launching FBI
 
 1. Launch the Download Play application (this [icon]({{ "/images/download-play-icon.png" | absolute_url }})
 1. Press (L) + (Down) + (Select) at the same time to open the Rosalina menu
@@ -101,7 +123,7 @@ You MUST have already installed Luma3DS and boot9strap to use this.
 1. Launch the Download Play application
 1. 성공하면 홈브류 런처가 실행될 것입니다.
 
-#### Section IV - Reinstalling Tickets
+#### Section V - Reinstalling Tickets
 
 If script found no user tickets told you to skip this section, then skip this section
 {: .notice--info}
@@ -121,14 +143,14 @@ If script found no user tickets told you to skip this section, then skip this se
   + (B)를 눌러 CDN에서 티켓 설치를 거절해 주세요.
 1. (Home)을 눌러 FBI를 종료해 주세요.
 
-#### Section V - Region settings
+#### Section VI - Region settings
 
 1. 본체 설정을 실행해 주세요.
 1. "기타 설정", "유저 정보"및 "지역 정보"로 이동해 주세요.
 1. 변경한 지역에 속한 국가를 선택해 주세요.
 1. 메시지가 뜨더라도 '도'까지 설정할 필요는 없습니다.
 
-#### Section VI - Remove CTRTransfer image
+#### Section VII - Remove CTRTransfer image
 
 1. Launch GodMode9 by holding (Start) during boot
 1. Navigate to `[0:] SDCARD` -> `gm9`

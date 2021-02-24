@@ -4,6 +4,9 @@ title: "安装 Boot9strap（通过 Fredtool）"
 
 {% include toc title="目录内容" %}
 
+基于 Seedminer 的方法已被更简单且更安全的方法取代。 除非你有原因（如肩键损坏）而不得不使用本教程，请回到[新手入门(get-started)查阅新的方法。
+{: .notice--warning}
+
 ### 必读事项
 
 本章节 Seedminer 将使用你的 `movable.sed` 文件来解密所有的 DSiWare 程序，以便在3DS中内置的 DS 网络设定中注入修改后的 DSiWare 程序。 这个操作需要你有任何的 DSiWare 备份，比如 BannerBomb 或 DSiWare Dumper 工具导出的。
@@ -12,13 +15,13 @@ title: "安装 Boot9strap（通过 Fredtool）"
 
 ### 你需要准备点啥？
 
-* 一个 DSiWare 备份 （例如从 [BannerBomb3](bannerbomb3) 或 [DSiWare Dumper](dsidumper)导出到 SD 卡根目录的）
+* 一个 DSiWare 备份 （例如从 [BannerBomb3](bannerbomb3) 导出到 SD 卡根目录的）
 * 你在 [Seedminer](seedminer) 步骤中获得的 `movable.sed` 文件
 * 最新版 [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest)
 * 最新版 [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
-* 最新版 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
+* 最新版 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
 
-#### 第一步 — 准备工作
+#### 第一步 – 准备工作
 
 1. 将设备关机
 1. 将你的 SD 卡插入到电脑
@@ -26,20 +29,20 @@ title: "安装 Boot9strap（通过 Fredtool）"
 1. 复制 `boot.nds` （B9STool）到你的 SD 卡根目录
 1. 从 Frogminer_save `.zip` 压缩包中复制 `private` 文件夹到内存卡的根目录
 
-#### 第二步 — Fredtool
+#### 第二步 – Fredtool
 
-1. 在电脑上打开 [Fredtool](https://fredtool.bruteforcemovable.com/)
+1. 在你的电脑上打开 [Fredtool](https://3ds.nhnarwhal.com/3dstools/fredtool.php)
 1. 在 “Your movable.sed” 栏上传你的 `movable.sed` 文件
 1. 点击 “Your dsiware.bin”，然后选择你的 DSiWare 备份（`<八位字符ID>.bin`）上传
 1. 完成谷歌的 “人机身份验证” （请注意，如果你身处中国大陆，看到这个选项可能需要科学上网）
 1. 选择 “Start”
 1. 等待该过程执行完成。
 1. 等待程序自动完成后从站点下载修改后的 DSiware 文件
-  + 这个文件包包含两个 dsiware 备份，一个是 clean（未修改），另一个是 hax （被打入漏洞的文件）
+  + 这个文件包含两个 DSiWare 备份，一个是 clean（未修改的原文件），另一个是 hax （被打入漏洞的文件）
 1. 打开内存卡的 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 文件夹
-  + 这个 `<ID0>` 和你在 [Seedminer](seedminer) 章节中使用的一样
-  + 这个 `<ID1>` 文件夹是 `<ID0>` 文件夹中的另一个 32 个字符与数字混合的文件夹
-  + 如果没有 `Nintendo DSiWare` 文件夹，请在 `<ID1>` 文件夹内创建它
+  + 这个 `<ID0>` 和你在 [Seedminer](seedminer) 章节中打开的一样
+  + `<ID1>` 是一个在 `<ID0>` 文件夹内，另一个 32 位字符长的文件夹
+  + 如果里面没有 `Nintendo DSiWare` 文件夹，请在 `<ID1>` 文件夹内创建它
 1. 从之前下载的 DSiWare 压缩包 （`fredtool_output.zip`） 里的 `output/hax/` 文件夹复制 `42383841.bin` 到 `Nintendo DSiWare` 文件夹
 1. 将 SD 卡重新插入你的主机
 1. 启动你的主机
@@ -51,7 +54,7 @@ title: "安装 Boot9strap（通过 Fredtool）"
 1. 移动到 `“网络设置(Internet Settings)”` -> `“任天堂 DS 连接(Nintendo DS Connections)”`，然后选择 “OK”
 1. 如果漏洞执行成功，你的设备将进入到日版的“うごくメモ帳 (Flipnote Studio)”
 
-#### 第三步 — 触发 Flipnote 漏洞
+#### 第三步 – 触发 Flipnote 漏洞
 
 如果你需要图片帮助，请点击 [这里](https://zoogie.github.io/web/flipnote_directions/)。
 {: .notice--info}
@@ -74,7 +77,7 @@ title: "安装 Boot9strap（通过 Fredtool）"
   + 你可能需要长按电源键强制关机
   + 如果你看到了 Luma 的设置界面，请继续下面的操作而不用强制关机
 
-#### 第四步 — 设置 Luma3DS
+#### 第四步 – 设置 Luma3DS
 
 1. 开机时按住 “Select” 键，进入 Luma3DS 的配置菜单
   + 如果你遇到了问题无法启动 Luma 配置菜单，[请参见此故障排查章节](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)
@@ -83,11 +86,11 @@ title: "安装 Boot9strap（通过 Fredtool）"
 1. 按下 “Start” 键保存设置并重启
   + 你的主机应该在一会后加载到系统桌面。 如果你等了超过五分钟还是黑屏，[请参见此故障排查章节](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 
-#### 第五步 — 还原 “DS 连接设置（DS Connection Settings）”
+#### 第五步 – 还原 “DS 连接设置（DS Connection Settings）”
 
 1. 将设备关机
 1. 将你的 SD 卡插入到电脑
-1. 从刚下载的压缩包（`fredtool_output.zip`）中的 `output/clean/` 文件夹复制出 `42383841.bin`，将其复制进你 SD 卡的 `Nintendo 3DS/<ID0>/<32位字符ID>/Nintendo DSiware/` 文件夹
+1. 从刚下载的压缩包（`fredtool_output.zip`）中的 `output/clean/` 文件夹复制出 `42383841.bin`，将其复制进你 SD 卡的 `Nintendo 3DS/<ID0>/<ID1>/Nintendo DSiware/` 文件夹
   + 请替换现有的 `42383841.bin` 文件
 1. 将SD卡重新插入你的主机
 1. 启动你的主机

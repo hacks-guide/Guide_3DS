@@ -8,14 +8,13 @@ title: "Setup abschließen"
 
 Die Datei "boot.firm", die von boot9strap gestartet wird nachdem es vom NAND geladen wurde kann jeder funktionierende ARM9-Payload sein, wenn er im FIRM-Format ist. Die Datei kann jederzeit ersetzt werden, obwohl Luma3DS bei dem Start anderer ARM9-Payloads im FIRM-Format den Luma3DS-Chainloader benutzt.
 
-In diesem Fall verwendest du Luma3DS von [AuroraWright](https://github.com/AuroraWright/), um direkt einen gepatchten SysNAND zu starten. Dies erlaubt es dir, die Notwendigkeit eines EmuNAND jeglicher Art komplett zu umgehen, was die Nutzung eines gehackten 3DS wesentlich erleichtert, sowie Speicherplatz auf der SD-Karte spart.
+In this case, we use Luma3DS by [LumaTeam](https://github.com/LumaTeam/) to boot a patched SysNAND directly, allowing us to completely bypass the need for any kind of EmuNAND, vastly simplifying the usage of a hacked 3DS in addition to saving SD card space.
 
 Während dieses Prozesses richtest du auch folgende Programme ein:
 
 + **FBI** *(installiert Spiele und Anwendungen im CIA-Format)*
 + **Anemone3DS** *(installiert benutzerdefinierte Themes)*
 +  **Checkpoint** *(Sichern und Wiederherstellen der Speicherdaten von 3DS- und DS-Spielen)*
-+ **Luma3DS Updater** *(aktualisiert deine CFW Installation)*
 + **GodMode9** *(Multifunktionstool, welches NAND- und Cartridge-Funktionen ausführen kann)*
 +  **Homebrew Launcher Loader** *(startet den Homebrew Launcher)*
 +  **DSP1** *(allows homebrew applications to have sound)*
@@ -27,10 +26,9 @@ Während dieses Prozesses richtest du auch folgende Programme ein:
 * The latest release of [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/latest) *(the `.cia` file)*
 * The latest release of [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest)
 * The v1.9.2pre1 release of [GodMode9](https://github.com/d0k3/GodMode9/releases/tag/v1.9.2pre1)
-* The latest release of [DSP1](https://github.com/zoogie/DSP1/releases/latest)
+* The latest release of [DSP1](https://github.com/zoogie/DSP1/releases/latest) *(the `.cia` file)*
 * The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) *(the `.cia` and `.3dsx` files)*
 * The latest release of [ctr-no-timeoffset](https://github.com/ihaveamac/ctr-no-timeoffset/releases/latest)
-* The latest release of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(the `.cia` file)*
 
 ### Anleitung
 
@@ -43,7 +41,6 @@ Während dieses Prozesses richtest du auch folgende Programme ein:
 1. Copy `ctr-no-timeoffset.3dsx` to the `/3ds/` folder on your SD card
 1. Kopiere `FBI.3dsx` in den `/3ds/`Ordner auf deiner SD-Karte
 1. Copy `Homebrew_Launcher.cia` to the `/cias/` folder on your SD card
-1. Kopiere `lumaupdater.cia` in den `/cias/`Ordner auf deiner SD-Karte
 1. Kopiere `FBI.cia` in den `/cias/`Ordner auf der deiner SD-Karte
 1. Kopiere `DSP1.cia` in den `/cias/` Ordner auf deiner SD-Karte
 1. Kopiere `Anemone3DS.cia` in den `/cias/` Ordner auf deiner SD-Karte
@@ -150,18 +147,8 @@ ___
 
 #### Information and Notes
 
-{% capture notice-10 %}
-Ab jetzt kannst du den Luma 3DS Updater verwenden, um Luma3DS auf dem neuesten Stand zu halten. Dafür drücke einfach den (A)-Knopf nach dem Öffnen des Updaters.
-
-Das ist nicht das gleiche wie ein System-Update; der Updater lädt nur die neuesten Dateien für Luma3DS herunter.
-
-This will update the Luma3DS files on your SD card and in CTRNAND, which is what your device boots from when there is no SD card present.
-{% endcapture %}
-
-<div class="notice--info">{{ notice-10 | markdownify }}</div>
-
 {% capture notice-6 %}
-Beim einschalten wird nun standartmäßig Luma3DS CFW SysNAND gebootet.
+You will now boot Luma3DS CFW by default.
 
 Du kannst nun (Select) beim Starten halten, um das Luma3DS Konfigurationsmenü zu öffnen.
 
@@ -177,7 +164,7 @@ Du kannst nun (L) + (Steuerkreuz unten) + (Select) drücken, während das System
 {% capture notice-6 %}
 Wenn du eine größere SD-Karte verwenden möchtest, musst du diese nur in FAT32 formatieren und die Dateien von der alten SD-Karte auf die neue, größere verschieben.
 
-Wenn deine neue SD-Karte größer als 32GB ist, benötigst du zum Formatieren andere Programme, wie [guiformat](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) für Windows, [gparted](http://gparted.org/download.php) für Linux, oder [Disk Utility](https://support.apple.com/en-gb/guide/disk-utility/format-a-disk-for-windows-computers-dskutl1010/mac) für Mac.
+If your new SD card is bigger than 32GB, then you have to use a different tool to format it, such as [guiformat (Windows)](formatting-sd-(windows)), [Disk Utility (Mac)](formatting-sd-(mac)), or [cfdisk (Linux)](formatting-sd-(linux)).
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
@@ -191,7 +178,7 @@ Für mehr Informationen über die Verwendung von GodMode9's verschiedenen Funkti
 Informationen, wie du die verschiedenen Funktionen von Luma3DS nutzen kannst, findest du auf der entsprechenden [Wiki-Seite](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage).
 {: .notice--success}
 
-Für Informationen zur Installation von benutzerdefinierten Designs, Abzeichen und Splash-Screens, schau mal auf [Theme Plaza](https://https://themeplaza.eu/) vorbei.
+For information on installing custom themes and splash screens, check out [Theme Plaza](https://themeplaza.art/).
 {: .notice--success}
 
 For information on using Gateshark cheat codes on Luma3DS, check out [Checkpoint](https://github.com/FlagBrew/Checkpoint).

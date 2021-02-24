@@ -4,6 +4,9 @@ title: "Seedminer"
 
 {% include toc title="Cuprins" %}
 
+Seedminer-based methods have been replaced by easier, safer methods. Please return to [Get Started](get-started) unless you have a legitimate reason to follow this page (such as broken shoulder buttons).
+{: .notice--warning}
+
 ### Lectură obligatorie
 
 Pentru a instala boot9strap pe dispozitivul dumneavoastră, vom exploata o neglijare în restricţiile de securitate ale aplicațiilor "DSiWare".
@@ -16,21 +19,7 @@ Această metodă folosește o placă video puternică pentru a realiza calculele
 
 ### Instrucțiuni
 
-#### Secțiunea I - Teste de compatibilitate
-
-Deși aceste teste nu sunt strict necesare pentru a efectua exploit-ul Seedminer, exploit-urile ulterioare au nevoie ca aceste teste să fie puse în funcțiune și ar fi o pierdere de timp să se pornească Seedminer fără posibilitatea de a porni alte exploit-uri.
-
-There are several different methods that build on the Seedminer exploit, so even if this test fails you can still use another method.
-
-#### DSiWare Management Test (used for unSAFE_MODE)
-
-1. Go to System Settings, then "Data Management", then "DSiWare"
-1. If your console does not crash, the test was successful
-  + If the console crashes to the home menu, the test has failed and you will have to use a legacy method at the bottom of this page
-  + If you see a colored screen before the console crashes to the home menu, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you
-1. Exit to home menu
-
-#### Secțiunea II - Preparații
+#### Secțiunea I - Preparații
 
 1. Introduceți cardul SD în calculator
 1. Navigați către folderul `Nintendo 3DS` pe cardul SD
@@ -49,27 +38,26 @@ There are several different methods that build on the Seedminer exploit, so even
   + Acest nume de folder este de asemenea cunoscut ca "ID0" al dispozitivului
 1. Porniți dispozitivul
 1. Mergeți în Lista de prieteni ([iconița cu fața portocalie]({{ "/images/friend-list-icon.png" | absolute_url }} în rândul superior de pe meniul HOME)
-  + Dacă primiți o eroare și sunteți dat afară din meniu, va trebui să creți un nou Mii sau consola nu se mai poate conecta în serverele Nintendo (din cauza unui ban sau problemelor de conexiune)
+  + If you receive an error and are kicked out of the menu, you either must create a new Mii or your device cannot connect to Nintendo's servers (due to a ban or connection issues)
 1. Găsiți profilul de Mii, apoi găsiţi câmpul "Friend Code" de pe ecranul superior
 
-#### Secțiunea III - Seedminer
+#### Section II - Seedminer
 
 1. Open [Bruteforce Movable](https://seedminer.hacks.guide/) on your computer
   + Acest site poate automatiza extragerea de `movable_part1.sed` (folosind un bot care simulează un 3DS) şi descifrarea criptării DSiWare a dispozitivului (folosind calculatorul unui voluntar pentru a rula Seedminer)
-  + If this site is nonfunctional, try using [this one](https://bfm.nintendohomebrew.com/)
-  + If both of these sites are nonfunctional, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you
+  + If the site isn't working, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you
 1. Introduceți Friend Code-ul dispozitivului (cu fără spaţii sau liniuţe) în câmpul "Your friend code"
 1. Lipiți numele de folder al dispozitvului de 32 de caractere în câmpul "Your ID0"
   + Nu încercați să introduceți ID0-ul de mână. Asigurați-vă că ID0-ul este introdus corect prin copierea și lipirea de unde l-ați salvat în secțiunea anterioară
 1. Selectați "Go"
-  + În cazul în care site-ul se duce imediat la pasul 4, descărcați fişierul `movable.sed` și continuați cu următoarea secţiune.
+  + If the site immediately goes to step 4, download your `movable.sed` file and continue with the next section
 1. Când vi se solicită, folosiți butonul "Register Friend" pe dispozitivul dumneavoastră să adăugaţi codul de prieten al bot-ului care simulează un 3DS
 1. Așteptați ca site-ul să se actualizeze
   + Dacă nu se actualizează, așteptați câteva minute înainte de a reîncărca pagina o dată
 1. Odată ce site-ul vă procesează informațiile, vi se va da opțiunea "Continue" (Continuați) sau "Do another device" (Faceți alt dispozitiv). Faceți click pe butonul verde care scrie "Continue"
 1. Așteptați ca restul procesului să se termine
-  + Acesta este de obicei destul de rapid (1-5 minute) dar în unele cazuri, poate lua până la o jumătate de oră.
-  + În timpul acestui proces, bot-ul care l-ați adăugat s-ar putea să nu apară pe 3DS. Cât timp nu se actualizează website-ul, aceasta nu va fi o problemă.
+  + This is usually fast (1-5 minutes) but in some cases, can take up to half an hour
+  + During this process, the bot you added may not show up on your 3DS. As long as the website updates, this is not an issue
   + În cazul în care încă așteptați după o jumătate de oră, alăturați-vă la [Nintendo Homebrew pe Discord](https://discord.gg/MWxPgEp) şi cereți (în engleză) pentru ca cineva de acolo să vă asiste
 1. Când procesul s-a completat, descărcați fişierul `movable.sed` de pe site
   + Păstrați acest fișier de vreme ce veți avea nevoie de el în următoarele pagini
@@ -80,7 +68,7 @@ ___
 
 This method of using Seedminer for further exploitation uses your `movable.sed` file to take advantage of exploits in the SAFE_MODE firmware present on all 3DS units.
 
-This method is compatible with all regions, though the CHN region is not covered by this guide.
+This method is compatible with all regions except CHN and TWN, and requires working shoulder buttons.
 
 Continue to [Installing boot9strap (USM)](installing-boot9strap-(usm))
 {: .notice--primary}

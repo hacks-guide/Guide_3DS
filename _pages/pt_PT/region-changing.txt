@@ -17,7 +17,7 @@ Note that if you have any payload files other than `GodMode9.firm` in the `/luma
 This process will unlink your NNID from the system, since it will no longer be compatible with it. NNID's are locked to the region of your device that created them and cannot be transferred between regions without [a very complex and advanced process](https://gist.githubusercontent.com/yifanlu/e80db121d38aceb8cca0e03cefd5853b/raw/3c4dd89869156ca0f945a2791e699acfdb32b510/gistfile1.txt).
 {: .notice--warning}
 
-After this process, only **New 3DSs which have never accessed the eShop before** and **all Old 3DSs** will be able to access the eShop after creating a new NNID on their new region. Region changed New 3DSs that have already accessed the eShop on their original region cannot create a new NNID and access the eShop on their new region!
+After this process, **you will not be able to access the eShop**. This includes any feature that uses an NNID, such as game updates, purchasing DLC, or online play in certain games. Region changing to your original region will usually not fix this issue.
 {: .notice--warning}
 
 Note that occasionally the eShop will inexplicably still not work for devices that it should work for. Isto tem a ver totalmente com os servidores da Nintendo, e eu não tenho nenhum controlo sobre isso. Additionally, note that occasionally the eShop will inexplicably work for devices that it should not (such as some New 3DSs). The cause for this is currently unknown.
@@ -55,12 +55,34 @@ You MUST have already installed Luma3DS and boot9strap to use this.
 1. Copy `FBI.3dsx` to the `/3ds/` folder on your SD card
 1. Reinsert your SD card into your device
 
-#### Section II - CTRTransfer
-
+#### Section II - NAND Backup
 1. Launch GodMode9 by holding (Start) during boot
 1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
 1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
   + Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
+1. Press (Home) to bring up the action menu
+1. Select "Scripts..."
+1. Select "GM9Megascript"
+1. Select "Backup Options"
+1. Select "SysNAND Backup"
+1. Pressiona (A) para confirmar
+  + This process will take some time
+  + If you get an error, make sure that you have at least 1.3GB of free space on your SD card
+1. Press (A) to continue
+1. Press (B) to return to the main menu
+1. Select "Exit"
+1. Press (A) to relock write permissions if prompted
+1. Hold (R) and press (B) at the same time to eject your SD card
+1. Insert your SD card into your computer
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
+  + Make backups in multiple locations (such as online file storage)
+  + These backups will save you from a brick and/or help you recover files from the NAND image if anything goes wrong in the future
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` and `<date>_<serialnumber>_sysnand_###.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
+1. Reinsert your SD card into your device
+  + If your SD card was not detected, hold (R) and press (B) at the same time to remount it
+  
+#### Section III - CTRTransfer
+
 1. Navigate to `[0:] SDCARD` -> `gm9`
 1. Press (A) on the CTRTransfer `.bin` to select it
 1. Select "CTRNAND options..."
@@ -87,7 +109,7 @@ You MUST have already installed Luma3DS and boot9strap to use this.
   + Updates while using B9S + Luma (what you have) are safe
   + Se encontrares algum erro, muda as configurações da DNS para "automático"
 
-#### Section III - Launching FBI
+#### Section IV - Launching FBI
 
 1. Launch the Download Play application (this [icon]({{ "/images/download-play-icon.png" | absolute_url }})
 1. Press (L) + (Down) + (Select) at the same time to open the Rosalina menu
@@ -100,7 +122,7 @@ You MUST have already installed Luma3DS and boot9strap to use this.
 1. Launch the Download Play application
 1. Your device should load the Homebrew Launcher
 
-#### Section IV - Reinstalling Tickets
+#### Section V - Reinstalling Tickets
 
 If script found no user tickets told you to skip this section, then skip this section
 {: .notice--info}
@@ -120,14 +142,14 @@ If script found no user tickets told you to skip this section, then skip this se
   + Press (B) to decline installing tickets from CDN.
 1. Press (Home) to exit FBI
 
-#### Section V - Region settings
+#### Section VI - Region settings
 
 1. Launch the System Settings
 1. Vai a "Outras Definições, "Perfil", depois a "Definições de Região"
 1. Select a country from the region you switched to
 1. If prompted, you do not need to set a state
 
-#### Section VI - Remove CTRTransfer image
+#### Section VII - Remove CTRTransfer image
 
 1. Launch GodMode9 by holding (Start) during boot
 1. Navigate to `[0:] SDCARD` -> `gm9`

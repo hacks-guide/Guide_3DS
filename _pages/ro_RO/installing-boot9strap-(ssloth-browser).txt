@@ -1,0 +1,81 @@
+---
+title: "Installing boot9strap (SSLoth-Browser)"
+---
+
+{% include toc title="Cuprins" %}
+
+### Lectură obligatorie
+
+SSLoth allows users on version 11.13.0 and below to bypass the browser version check, allowing use of new-browserhax or old-browserhax, which can then be used in conjunction with universal-otherapp.
+
+If you have updated your device to your current version using a cartridge, your Internet Browser will be inaccessible. If this is the case, you will need to update your device to the latest version through System Settings and then follow the method for the latest version.
+{: .notice--warning}
+
+### Ce aveți nevoie
+
+* The latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)
+* Cea mai nouă versiune de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* Cea mai nouă versiune de [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(boot9strap standard; nu fișierul `devkit`, nici cel `ntr`)*
+* The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) 
+
+#### Secțiunea I - Preparații
+
+1. Închideți dispozitivul
+1. Introduceți cardul SD în calculator
+1. Copy `otherapp.bin` to the root of your SD card and rename it to `arm11code.bin`
+  + If you do not see the `.bin` extension, do not add it to the end of the filename
+1. Copiați `boot.firm` și `boot.3dsx` de la Luma3DS `.zip` pe rădăcina cardului SD
+1. Creați un folder numit 'boot9strap' pe rădăcina cardului SD
+1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `boot9strap` folder on your SD card
+1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
+1. Reintroduceți cardul SD în dispozitivul dumneavoastră
+1. Porniți dispozitivul
+
+#### Section II - SSLoth
+1. Launch the System Settings application
+1. Navigate to `Internet Settings` -> `Connection Settings`
+1. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `DNS`
+1. Set "Auto-Obtain DNS" to "No", then click `Detailed Setup`
+1. Set both the Primary DNS and Secondary DNS to `054.038.133.070`
+1. Click OK, then click Save
+1. When prompted, click "Test" to perform the connection test
+	+ The test should succeed
+1. Închideți dispozitivul
+
+#### Section III - Launching SafeB9SInstaller
+1. Launch the browser and go to this URL on your device
+  + `https://zoogie.github.io/web/nbhax`
+1. Tap the "PROCEED TO HAXX" button
+  + Dacă primiți o eroare, [urmați acest ghid de depanare](troubleshooting#a-browser-based-exploit-is-not-working)
+1. Dacă exploit-ul a avut succes, veți porni în SafeB9SInstaller
+
+#### Section IV - Installing boot9strap
+
+1. Așteptaţi ca toate verificările de siguranță să fie completate
+1. Când vi se solicită, introduceți combinația de butoane ca să instalați boot9strap
+1. Odată terminat, apăsați (A) pentru a reporni dispozitivul
+
+#### Section V - Configuring Luma3DS
+
+1. Dispozitivul dumneavoastră ar trebui să fi repornit în meniul de configurare Luma3DS
+  + Dacă vedeți un ecran negru [urmați acest ghid de depanare](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
+1. Folosiți butonul (A) si D-Pad-ul ca să activați următoarele:
+  + **"Show NAND or user string in System Settings"**
+1. Apăsați (Start) pentru a salva și reporni
+
+#### Section VI - Restoring default DNS
+1. Launch the System Settings application
+1. Navigate to `Internet Settings` -> `Connection Settings`
+1. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `DNS`
+1. Set "Auto-Obtain DNS" to "Yes"
+1. Click OK, then click Save
+1. When prompted, click "Test" to perform the connection test
+	+ The test should succeed
+1. Închideți dispozitivul
+
+___
+
+### Continuați la [Finalizând instalarea](finalizing-setup)
+{: .notice--primary}
+
+

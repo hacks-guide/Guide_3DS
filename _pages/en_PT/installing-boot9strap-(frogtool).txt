@@ -4,6 +4,9 @@ title: "Installing Boot9strap (Frogtool)"
 
 {% include toc title="Table of Contents" %}
 
+Seedminer-based methods have been replaced by easier, safer methods. Please return to [Get Started](get-started) unless you have a legitimate reason to follow this page (such as broken shoulder buttons).
+{: .notice--warning}
+
 ### Required Reading
 
 We will now use our Homebrew Launcher access to run the Frogtool utility in order to inject the exploitable Japanese version of the "Flipnote Studio" title, which we then use to run b9sTool and install boot9strap.
@@ -18,14 +21,14 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 * <i class="fa fa-magnet" aria-hidden="true" title="'Tis be a magnet link. Use a torrent client to download the file."></i> - [frogcert.bin](magnet:?xt=urn:btih:d12278ea50bb3574f1fbd327f3d0e2292c70941f&dn=frogcert.bin&tr=https%3a%2f%2ftracker.fastdownload.xyz%3a443%2fannounce&tr=https%3a%2f%2fopentracker.xyz%3a443%2fannounce&tr=http%3a%2f%2fopen.trackerlist.xyz%3a80%2fannounce&tr=http%3a%2f%2ft.nyaatracker.com%3a80%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2fopen.demonii.si%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.port443.xyz%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.vanitycore.co%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&tr=udp%3a%2f%2fthetracker.org%3a80%2fannounce&tr=http%3a%2f%2ftorrent.nwps.ws%3a80%2fannounce&tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.iamhansen.xyz%3a2000%2fannounce&tr=udp%3a%2f%2fbt.xxx-tracker.com%3a2710%2fannounce&tr=http%3a%2f%2f0d.kebhana.mx%3a443%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2ftracker4.itzmx.com%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.justseed.it%3a1337%2fannounce&tr=http%3a%2f%2ftherightsize.net%3a1337%2fannounce&tr=udp%3a%2f%2fretracker.hotplug.ru%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&tr=udp%3a%2f%2f9.rarbg.com%3a2800%2fannounce&tr=https%3a%2f%2f2.track.ga%3a443%2fannounce&tr=udp%3a%2f%2fbigfoot1942.sektori.org%3a6969%2fannounce)
 * The latest release of [Frogtool](https://github.com/zoogie/Frogtool/releases/latest)
 * The latest release of [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
+* The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
 
 #### Section I - Prep Work
 
 1. Insert ye SD card into ye computer
 1. Copy your `movable.sed` file to the root of your SD card
 1. Copy `boot.firm` and `boot.3dsx` from the Luma3DS `.zip` to the root of your SD card
-1. Copy `boot.nds` (B9STool) from the b9sTool release `.zip` to the root of your SD card
+1. Copy `boot.nds` (b9sTool) from the b9sTool release `.zip` to the root of your SD card
 1. Copy `Frogtool.3dsx` to the `/3ds/` folder on your SD card
 1. Copy `frogcert.bin` to the root of your SD card
 1. Reinsert ye SD card into ye device
@@ -73,6 +76,26 @@ If you would prefer a visual guide to this section, one is available [here](http
   + **"Show NAND or user string in System Settings"**
 1. Press (Start) to save 'n reboot
   + Your device should load the Home Menu after a short delay. If you get a black screen lasting longer than 5 minutes, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
+
+#### Section V - Restoring DS Download Play
+
+1. Launch the Download Play application (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
+1. Wait until you see the two buttons
+  + Do not press either of the buttons
+1. Press (Left Shoulder) + (D-Pad Down) + (Select) at the same time to open the Rosalina menu
+1. Select "Miscellaneous options"
+1. Select "Switch the hb. title to the current app."
+1. Press (B) to continue
+1. Press (B) to return to the Rosalina main menu
+1. Press (B) to exit the Rosalina menu
+1. Press (Home), then close Download Play
+1. Relaunch the Download Play application
+1. Ye device should be loadin' th' Homebrew Launcher
+1. Launch Frogtool from the list of homebrew
+1. Select the "RESTORE patched DS Download Play" option
+1. Once this operation has finished, read the screens and check if the process was successful
+  + If there are any errors or missing files, correct the problem and try again
+1. If the process was successful, tap the touch screen, then press START to exit
 
 ___
 

@@ -8,14 +8,13 @@ title: "Telepítés véglegesítése"
 
 A `boot.firm` nevezetű fájl az, amit maga a boot9strap elindít, amint betöltődik a NAND-ból, és ami bármilyen érvényes arm9 payload lehet, FIRM formátumban. Ezt a fájlt bármikor cserélni lehet, ugyanakkor a Luma3DS lehetővé teszi bármilyen más, FIRM formátumú arm9 payload elindítását a Luma3DS chainloader segítségével.
 
-A mi esetünkben az [AuroraWright](https://github.com/AuroraWright/)-féle Luma3DS-t fogjuk használni, hogy közvetlenül bootolhassunk egy patchelt SysNAND-ot. Ez teljesen szükségtelenné teszi bármiféle EmuNAND használatát, nagy mértékben egyszerűsítve ezzel a hackelt 3DS-ek használatát, a megspórolt SD kártya területről nem is beszélve.
+A mi esetünkben az [LumaTeam](https://github.com/LumaTeam/)-féle Luma3DS-t fogjuk használni, hogy közvetlenül bootolhassunk egy patchelt SysNAND-ot. Ez teljesen szükségtelenné teszi bármiféle EmuNAND használatát, nagy mértékben egyszerűsítve ezzel a hackelt 3DS-ek használatát, a megspórolt SD kártya területről nem is beszélve.
 
 Ezen folyamat közben további programokat is telepítünk, melyek az alábbiak:
 
 + **FBI** *(CIA formátumú játékokat és alkalmazásokat telepít)*
 + **Anemone3DS** *(egyedi témákat telepít)*
 +  **Checkpoint** *(3DS és DS játékok mentéseiről lehet biztonsági mentést készíteni és visszaállítani)*
-+ **Luma3DS Updater** *(egyszerűen frissíthető vele a CFW)*
 + **GodMode9** *(sokféle dologra használható eszköz, például NAND és kártya műveletekre)*
 +  **Homebrew Launcher Loader** *(elindítja a Homebrew Launchert)*
 +  **DSP1** *(lehetővé teszi a homebrew applikációk számára a hangot)*
@@ -27,10 +26,9 @@ Ezen folyamat közben további programokat is telepítünk, melyek az alábbiak:
 * A [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/latest) legújabb kiadása *(a `.cia` fájl)*
 * A [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest) legújabb kiadása
 * A [GodMode9](https://github.com/d0k3/GodMode9/releases/tag/v1.9.2pre1) v1.9.2pre1 kiadása
-* A [DSP1](https://github.com/zoogie/DSP1/releases/latest) legújabb kiadása
+* A [DSP1](https://github.com/zoogie/DSP1/releases/latest) legújabb kiadása *(a `.cia` fájl)*
 * Az [FBI](https://github.com/Steveice10/FBI/releases/latest) legújabb kiadása *(a `.cia` és a `.3dsx` fájl is)*
 * A [ctr-no-timeoffset](https://github.com/ihaveamac/ctr-no-timeoffset/releases/latest) legújabb kiadása
-* A [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) legfrissebb változata *(a `.cia` fájl)*
 
 ### Utasítások
 
@@ -43,7 +41,6 @@ Ezen folyamat közben további programokat is telepítünk, melyek az alábbiak:
 1. Másold a `ctr-no-timeoffset.3dsx`-et az SD kártyád `/3ds/` mappájába
 1. Másold az `FBI.3dsx` fájlt az SD kártyád `/3ds/` mappájába
 1. Másold a `Homebrew_Launcher.cia` fájlt az SD kártyán található `/cias/` mappába
-1. Másold a `lumaupdater.cia` fájlt az SD kártyán található `/cias/` mappába
 1. Másold az `FBI.cia` fájlt az SD kártyád `/cias/` mappájába
 1. Másold a `DSP1.cia` fájlt az SD kártyád `/cias/` mappájába
 1. Másold az `Anemone3DS.cia` fájlt az SD kártyád `/cias/` mappájába
@@ -150,18 +147,8 @@ ___
 
 #### Információk és jegyzetek
 
-{% capture notice-10 %}
-Mostantól bármikor frissítheted a Luma3DS-t a Luma3DS frissítő (Luma3DS Updater) segítségével, ha megnyitod, majd megnyomod az (A) gombot.
-
-Ennek semmi köze a rendszer frissítéséhez (System Update); ez mindössze letölti és kicsomagolja a legfrissebb Luma3DS fájlokat.
-
-Ez frissíteni fogja a Luma3DS fájlokat az SD kártyádon és a CTRNAND-ban, amire az eszköze akkor bootol, ha nincs SD kártya behelyezve.
-{% endcapture %}
-
-<div class="notice--info">{{ notice-10 | markdownify }}</div>
-
 {% capture notice-6 %}
-Mostantól alapértelmezetten a Luma3DS CFW SysNAND fog bootolni.
+Mostantól alapértelmezetten a Luma3DS CFW fog bootolni.
 
 Mostantól indításkor előhozhatod a Luma3DS konfigurációs menüjét a (Select) gomb lenyomva tartásával.
 
@@ -177,7 +164,7 @@ Mostantól lenyomhatod az (L) + (Le) + (Select) kombinációt a rendszer futása
 {% capture notice-6 %}
 Ha szeretnél a későbbiekben nagyobb SD kártyát használni, mindössze annyit kell tenned, hogy az új SD kártyádat FAT32-re formázod, majd átmásolod a régi SD kártyád tartalmát az újra.
 
-Ha az új SD kártyád nagyobb, mint 32 GB, más eszközre lesz szükséged a formázásához. Ilyen a [guiformat](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) Windows-on, a [gparted](http://gparted.org/download.php) Linuxon, illetve a [Lemezkezelő](https://support.apple.com/hu-hu/guide/disk-utility/format-a-disk-for-windows-computers-dskutl1010/mac) Mac-en.
+Ha az új SD kártyád nagyobb mint 32GB akkor egy különleges eszközt kell használnod ahoz, hogy leformázd: [guiformat (Windows)](formatting-sd-(windows)), [Disk Utility (Mac)](formatting-sd-(mac)), vagy [cfdisk (Linux)](formatting-sd-(linux)).
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
@@ -191,7 +178,7 @@ Ha kíváncsi vagy a GodMode9 különféle funkcióira, olvasd el a [GodMode9 ha
 Ha a Luma3DS képességeire vagy kíváncsi, keresd fel a hozzá tartozó [wikit](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage).
 {: .notice--success}
 
-Ha egyedi témákat, nyitóképeket (splash screen-eket) szeretnél telepíteni, látogasd meg a [Theme Plaza](https://themeplaza.eu/) oldalt.
+Egyedi témák és nyitóképek (splash screen-ek) telepítésével kapcsolatos további információért látogasd meg a [Theme Plaza](https://themeplaza.art/) oldalt.
 {: .notice--success}
 
 Ha a Gateshark csalásokat szeretnél Luma3DS-en használni, látogasd meg a következőt: [Checkpoint](https://github.com/FlagBrew/Checkpoint).

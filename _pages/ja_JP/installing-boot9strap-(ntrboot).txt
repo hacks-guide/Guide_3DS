@@ -2,43 +2,43 @@
 title: "Installing boot9strap (ntrboot)"
 ---
 
-{% include toc title="Table of Contents" %}
+{% include toc title="目次" %}
 
 ### Required Reading
 
-To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download).
+このページの [マグネット](https://wikipedia.org/wiki/Magnet_URI_scheme) リンクを使用するには、[Deluge](http://dev.deluge-torrent.org/wiki/Download)のようなTorrentクライアントが必要です。
 
-### What You Need
+### 必要なもの
 
 * A magnet that triggers the sleep mode of your device (if using a folding style device)
 * Your ntrboot flashed flashcart
 * The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) 
+* The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) 
 
-### Instructions
+### 手順
 
-#### Section I - Prep Work
+#### セクション I - 準備
 
-1. Power off your device
-1. Insert your device's SD card into your computer
+1. 本体の電源を切ります。
+1. Insert your console's SD card into your computer
   + This is the SD card from your 3DS, *not* the SD card from your flashcart
-1. Copy `SafeB9SInstaller.firm` to the root of your SD card and rename it to `boot.firm`
-1. Copy `boot.3dsx` from the Luma3DS `.zip` to the root of your SD card
-1. Create a folder named `boot9strap` on the root of your SD card
-1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
+1. Copy `SafeB9SInstaller.firm` to the root of your console's SD card and rename it to `boot.firm`
+1. Copy `boot.3dsx` from the Luma3DS `.zip` to the root of your console's SD card
+1. Create a folder named `boot9strap` on the root of your console's SD card
+1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your console's SD card
 
     ![]({{ "/images/screenshots/boot9strap-ntrboot-file-layout.png" | absolute_url }})
     {: .notice--info}
 
-1. Reinsert your SD card into your device
-1. Power on your device
+1. Reinsert your SD card into your 3DS
+1. デバイスの電源を入れます
 
 #### Section II - ntrboot
 
 1. Use the magnet to find the spot on your device where the sleep sensor is triggered
   + This step is not needed on the old 2DS (which has a sleep mode switch)
-1. Power off your device
+1. 本体の電源を切ります。
 1. Insert your flashcart into your device
 1. Place the magnet on your device to trigger the sleep sensor
   + On old 2DS, you should instead enable the sleep mode switch
@@ -60,8 +60,8 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 1. パソコンにSDカードを入れます
 1. Delete `boot.firm` from the root of your SD card
 1. Copy `boot.firm` from the Luma3DS `.zip` to the root of your SD card
-1. Reinsert your SD card into your device
-1. Power on your device
+1. 再度、SDカードを本体に挿入してください。
+1. デバイスの電源を入れます
 1. Your device should have booted into the Luma3DS configuration menu
   + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 1. Use the (A) button and the D-Pad to turn on the following:
@@ -71,7 +71,7 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 
 ___
 
-### Continue to [Finalizing Setup](finalizing-setup)
+[セットアップを完了する](finalizing-setup) へ進みます
 {: .notice--primary}
 
 ___
@@ -120,14 +120,14 @@ Do not follow this section until you have completed the rest of the instructions
 
 ##### Instructions
 
-1. Power off your device
+1. 本体の電源を切ります。
 1. パソコンにSDカードを入れます
   + This is the SD card from your 3DS, *not* the SD card from your flashcart
 1. Create a folder named `ntrboot` on the root of your SD card
 1. Copy the `.bin` file from your flashrom backup `.zip` to the `/ntrboot/` folder on the root of your SD card
 1. Create a folder named `payloads` in the `luma` folder on your SD card
 1. Copy `ntrboot_flasher.firm` to the `/luma/payloads/` folder on your SD card
-1. Reinsert your SD card into your device
+1. 再度、SDカードを本体に挿入してください。
 1. Insert your ntrboot compatible DS / DSi flashcart into your device
 1. Launch ntrboot_flasher by holding (Start) during boot
 1. Read the red screen warning

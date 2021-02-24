@@ -4,6 +4,9 @@ title: "Seedminer"
 
 {% include toc title="Tartalomjegyzék" %}
 
+A Seedminer alapú metódusok könnyebb, biztonságosabb metódusokkal kerültek helyettesítésre. Menj vissza a [Kezdeti lépések](get-started) oldalra, kivéve, ha valós okod van, ennek az oldalnak a használatára (mint például hibás váll-gombok).
+{: .notice--warning}
+
 ### Fontos tudnivalók
 
 Ahhoz, hogy telepítsük a boot9strap-et a készülékedre, egy, a "DSiWare" alkalmazásokra vonatkozó biztonsági megkötés hibáját fogjuk kihasználni.
@@ -14,23 +17,9 @@ Ha ez a kulcs teljesen véletlenszerű lenne, a titkosítási kulcsot lehetetlen
 
 Ez a módszer egy erős grafikus kártyát használ a szükséges számítások elvégzéséhez. Egy önkéntes által üzemeltetett webhely segít neked ebben a módszerben.
 
-### Utasítások
+### Lépések
 
-#### I. rész - Kompatibilitás teszt
-
-Bár ezek a tesztek nem feltétlenül szükségesek a Seedminer kiaknázásához, az azt követő exploitok megkövetelik ennek a tesztnek a végrehajtását, így idő és erőforrás pocsékolás lenne a Seedminer végrehajtása, anélkül, hogy lehetőség lenne a többi exploit kihasználására.
-
-Több különöző metódus épít a Seedminer exploitra, így ha ez a teszt sikertelen, még mindig használhatsz másik metódust.
-
-#### DSiWare Management Teszt (unSAFE_MODE-hoz használt)
-
-1. Menj a System Settings-be, majd a "Data Management"-be, utána a "DSiWare"-be
-1. Ha a konzolod nem omlik össze, a teszt sikeres volt
-  +Ha a konzol a home menüre összeomlik, a teszt sikertelen és legacy metódust kell használni az oldal aljáról
-  + Ha színes képernyőt láttál, mielőtt a konzol a home menüre összeomlott, csatlakozz a [Nintendo Homebrew Discord-on](https://discord.gg/MWxPgEp) csatornához, és kérj segítséget (angol nyelven) valakitől
-1. Lépj ki a home menühöz
-
-#### II. rész - Előkészületek
+#### I. rész - Előkészületek
 
 1. Helyezd az SD kártyád a számítógépbe
 1. Lépj be az SD kártyád `Nintendo 3DS` könyvtárába
@@ -52,24 +41,23 @@ Több különöző metódus épít a Seedminer exploitra, így ha ez a teszt sik
   + Ha hibaüzenetet kapsz, és visszadob a menübe, vagy új Mii-t kell csinálnod, vagy a konzolod nem tud csatlakozni a Nintendo szervereihez (kitiltás, vagy kapcsolódási hiba miatt)
 1. Keresd meg a Mii profilodat, ott találod a "Friend Code" mezőt a felső képernyőn
 
-#### III. rész - Seedminer
+#### II. rész - Seedminer
 
 1. Nyisd meg a [Bruteforce Movable](https://seedminer.hacks.guide/) oldalt a számítógépeden
   + Ez az oldal képes automatizálni a `movable_part1.sed` előállítását (egy bot 3DS konzol segítségével), illetve a készüléked DSiWare titkosításának feltörését (egy önkéntes számítógépén futtatva a Seedminer-t)
-  + Ha az oldal nem működik, próbáld meg [ezt](https://bfm.nintendohomebrew.com/)
-  + Ha ha egyik oldal sem működik, csatlakozz a [Nintendo Homebrew Discord-on](https://discord.gg/MWxPgEp) csatornához, és kérj segítséget (angol nyelven) valakitől
+  + Ha az oldal nem működik, csatlakozz a [Nintendo Homebrew Discord-on](https://discord.gg/MWxPgEp) csatornához, és kérj segítséget (angol nyelven) valakitől
 1. Írd be a készüléked Friend Code-ját (szóközök és kötőjelek nélkül) a "Your friend code" mezőbe
 1. Illeszd be a készüléked 32 karakter hosszú mappanevét a "Your ID0" mezőbe
   + Ne próbáld meg kézzel beadni az ID0 kódot. Legyél biztos abban, hogy az ID0 helyes, azzal, hogy másolod és beilleszted onnan, ahova az előző részben elmentetted
 1. Nyomd meg a "Go"-t
-  + Ha az oldal azonnal a 4. lépésre ugrik, töltsd le a `movable.sed` fájlt és folytassa a következő szakasszal.
+  + Ha az oldal azonnal a 4. lépésre ugrik, töltsd le a `movable.sed` fájlt és folytasd a következő szakasszal
 1. Ha kéri, használd a "Register Friend" gombot a készülékeden és add hozzá a bot 3DS konzol Friend Code-ját
 1. Várj, amíg az oldal frissül
   + Ha nem így történik, várj néhány percet, mielőtt frissíted az oldalt még egyszer
 1. Ha az oldal feldolgozta az információt, lehetőséged van a folytatásra ("Continue") vagy másik eszközre végrehajtásra ("Do another device"). Kattints az zöld "Continue" gombra
 1. Várj az értesítőre a folyamat befejezéséről
-  + Ez általában gyors (1-5 perc) de néhány esetben fél óra is lehet.
-  + Ez alatt a folyamat alatt, a bot, amit hozzáadtál nem biztos, hogy feltűnik a 3ds-eden. Egészen addig, amíg a weboldal frissít, ez nem probléma.
+  + Ez általában gyors (1-5 perc) de néhány esetben fél óra is lehet
+  + Ez alatt a folyamat alatt, a bot, amit hozzáadtál nem biztos, hogy feltűnik a 3DS-eden. Egészen addig, amíg a weboldal frissít, ez nem probléma
   + Ha egy fél óra után is még mindig várakozol, csatlakozz a [Nintendo Homebrew Discord-on](https://discord.gg/MWxPgEp) csatornához, és kérj segítséget (angol nyelven) valakitől
 1. Amikor a folyamat befejeződött, töltsd le a `movable.sed` fájlodat az oldalról
   + Őrizd meg ezt fájlt, mert szükséged lesz rá a következő oldalkon
@@ -80,7 +68,7 @@ ___
 
 Ez a módszer a Seedminer további kiaknázására használja a `movable.sed` fájlt, hogy kihasználja a SAFE_MODE firmware összes 3DS egységen meglévő exploitjának kihasználását.
 
-Ez a metódus kompatibilis minden régióval, habár a CHN régiót ez az útmutató nem tartalmazza.
+Ez a metódus kompatibilis minden régióval, kivéve a a CHN és TWN régiókat, amik váll gombokat igényelnek.
 
 Tovább a [Boot9strap telepítésére (USM)](installing-boot9strap-(usm))
 {: .notice--primary}

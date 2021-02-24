@@ -4,6 +4,9 @@ title: "安装 boot9strap（通过 USM）"
 
 {% include toc title="目录内容" %}
 
+基于 Seedminer 的方法已被更简单且更安全的方法取代。 除非你有原因而不得不使用本教程，请回到[新手入门(get-started)查阅新的方法。
+{: .notice--warning}
+
 ### 必读事项
 
 为了破解系统的 SAFE_MODE 固件，我们需要注入一个已被破解的 WiFi 配置文件到主机中。
@@ -16,33 +19,34 @@ title: "安装 boot9strap（通过 USM）"
 
 这些操作可在美、欧、日、韩版的主机上工作，你可通过系统版本号末尾的 U，E，J，K 字符来区分主机版本。
 
-如果你的 L 键、R 键、↑ 键和 A 键中的其中一个按键坏了无法使用，则你只能使用[传统方法](legacy-methods)。 如需帮助，请加入 [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) 并使用英文求助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网），你也可以到译者的 [QQ 群](https://jq.qq.com/?_wv=1027&k=5CfEA4c)寻求帮助，群号为942052497。
-{: .notice--danger}
+如果你的 L 键、R 键、↑ 键和 A 键中的其中一个按键坏了无法使用，则你只能使用[传统方法](legacy-methods)。 如需帮助，请加入 [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) 并使用英文求助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497。
+{: .notice--warning}
 
 ### 你需要准备点啥？
 
 * 你在 [Seedminer](seedminer) 步骤中获得的 `movable.sed` 文件
-* 最新版 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
+* 最新版 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
 
-#### 第一步 — 准备工作
+#### 第一步 – 准备工作
 
-1. 在你的电脑上打开 [unSAFE_MODE-bb3 tool](https://usm.bruteforcemovable.com/) 
-  + 如果这个网站抛锚了，尝试[这个网站](https://3ds.nhnarwhal.com/3dstools/unsafemode.php)
+1. 如果你的主机已经被你开机了，那么将其关机
+1. 在你的电脑上打开 [unSAFE_MODE-bb3 tool](https://3ds.nhnarwhal.com/3dstools/unsafemode.php)
 1. 点击 “选择文件” 选项，然后选择你的 movable.sed 上传
 1. 点击 “Download unSAFE_MODE-bb3 archive”
-  + 这将下载一个包含了名为 `F00D43D5.bin` 的已被破解的 DSiWare 备份和一个名为 `usm.bin` 的已被破解的 SAFE_MODE 存档文件的 zip 文件（`unSAFE_MODE-bb3.zip`）到你的电脑上
-1. 如果你的主机已经被你开机了，那么将其关机
+  + 这将下载一个包含了名为 `F00D43D5.bin` 的已被破解的 DSiWare 备份，和一个名为 `usm.bin` 的已被破解的 SAFE_MODE 存档的 zip 文件（`unSAFE_MODE-bb3.zip`）到你的电脑上
 1. 将你的 SD 卡插入到电脑
 1. 解压 Luma3DS `.zip` 里的 `boot.firm` 和 `boot.3dsx` 到你 SD 卡的根目录
-1. 从 USM 压缩文件中（`unSAFE_MODE-bb3.zip`）解压 `usm.bin` 到你 SD 卡的根目录下
-1. 移动至 `Nintendo 3DS` -> `<ID0>` -> `<32位字符ID>` -> `Nintendo DSiWare` 文件夹
-  + 这个 `<ID0>` 和你在 [Seedminer](seedminer) 章节中使用的一样
-  + 如果没有 `Nintendo DSiWare` 文件夹，创建它
+  + 根目录指的是你点进 SD 卡看到的目录，你可以在这个目录下看到 Nintendo 3DS 文件夹，但请不要点进去
+1. 从 `unSAFE_MODE-bb3.zip` 复制 `usm.bin` 到 SD 卡的根目录
+1. 打开内存卡的 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 文件夹
+  + 这个 `<ID0>` 和你在 [Seedminer](seedminer) 章节中打开的一样
+  + `<ID1>` 是一个在 `<ID0>` 文件夹内，另一个 32 位字符长的文件夹
+  + 如果里面没有 `Nintendo DSiWare` 文件夹，请在 `<ID1>` 文件夹内创建它
 1. 如果这文件夹中有其他的 DSiWare 备份文件 (`<8位字符id>.bin`)，将它们移动到你的电脑上备份
   + 这文件夹应该会成为空文件夹。 将这些文件移动到电脑上备份可防止你删除了你有意保留的东西
-1. 从 USM 压缩文件中（`unSAFE_MODE-bb3.zip`）解压 `F00D43D5.bin` 到你 SD 卡的 `Nintendo DSiWare` 文件夹下
+1. 从 `unSAFE_MODE-bb3.zip` 压缩文件中解压 `F00D43D5.bin` 到你 SD 卡的 `Nintendo DSiWare` 文件夹下
 
-#### 第二步 — BannerBomb3
+#### 第二步 – BannerBomb3
 
 1. 将SD卡重新插入你的主机
 1. 启动你的主机
@@ -53,19 +57,20 @@ title: "安装 boot9strap（通过 USM）"
   + 如果你的主机下屏不会闪烁红色，则代表着漏洞配置文件未被复制，在完成复制之前你无法继续接下来的步骤。 请确保你的文件放置在正确的位置，然后重试
 1. 将设备关机
 
-#### 第三步 — unSAFE_MODE
+#### 第三步 – unSAFE_MODE
 
 1. 将你的主机置于关机状态，按住 L + R + ↑ + A 按键，然后按下电源键
-  + 按住几秒后再松手。 你的主机将会启动到安全模式
+  + 按住这几个按钮，直到主机进入安全模式
 1. 点击 “OK” 来允许更新
   + 这个步骤实际上不存在更新。 这只是触发漏洞的一部分
 1. 点击 “I accept（我同意/同意する）”
 1. 更新最终将失败，然后报出 `003-1099` 的错误。 这是剧本中的一部分
 1. 当系统问你“你想要配置互联网设置吗？（Would you like to configure Internet settings?）”时，点击 “Yes”
 1. 在接下来出现的菜单中，移动至 `连接点 1（Connection 1）` -> `更改设置（Change Settings）` -> `下一页（右箭头）` -> `代理设置（Proxy Settings）` -> `详细设置（Detailed Setup）`
+  + 这里有一份[演示图像](https://uwuu.ca/images/safemode_highlighted.png)
 1. 然后你应该会看到上屏提示 `B9S install SUCCESS`，然后你就可以按下任意键重启到 Luma 设置了
 
-#### 第四步 — 设置 Luma3DS
+#### 第四步 – 设置 Luma3DS
 
 1. 你的主机应该会自动进入到 Luma 配置菜单
 1. 使用方向键和 “A” 键来启用以下设置：
@@ -73,18 +78,16 @@ title: "安装 boot9strap（通过 USM）"
 1. 按下 “Start” 键保存设置并重启
   + 你的主机应该在一会后加载到系统桌面。 如果你等了超过五分钟还是黑屏，[请参见此故障排查章节](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 
-#### 第五步 — 还原 WiFi 配置文件
+#### 第五步 – 还原 WiFi 配置文件
 
 1. 启动你主机上的 “系统设置(System settings)”
 1. 移动至 `数据管理(Data Management)` -> `DSiWare`
 1. 点击 SD 卡部分
   + 你的主机下屏应该会开始绿色的闪烁，然后系统将会在稍后重启回到桌面中。 这意味着你的 WiFi 配置文件已成功恢复
-1. 关闭主机
+1. 将设备关机
 1. 将你的 SD 卡插入到电脑
-1. 移动至 `Nintendo 3DS` -> `<ID0>` -> `<32位字符ID>` -> `Nintendo DSiWare` 文件夹
-  + 这个 `<ID0>` 和你在 [Seedminer](seedminer) 章节中使用的一样
+1. 打开内存卡的 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 文件夹
 1. 删除 Nintendo DSiWare 文件夹中的 `F00D43D5.bin` 文件
-1. 继续至完成安装
 
 ___
 

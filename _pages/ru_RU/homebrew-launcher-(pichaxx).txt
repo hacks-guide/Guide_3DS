@@ -4,11 +4,14 @@ title: "Homebrew Launcher (PicHaxx)"
 
 {% include toc title="Содержание" %}
 
+Seedminer-based methods have been replaced by easier, safer methods. Please return to [Get Started](get-started) unless you have a legitimate reason to follow this page (such as broken shoulder buttons).
+{: .notice--warning}
+
 ### Обязательно к прочтению
 
 Этот метод дальнейшей эксплуатации Seedminer использует ваш файл `movable.sed` для получения доступа к Homebrew Launcher при помощи эксплойта PicHaxx в целях инъекции уязвимого тайтла DSiWare в приложение DS Download Play. Этот метод требует, чтобы у вас уже была в наличии (или загружена) бесплатная игра "Pokemon Picross" из eShop.
 
-Если ваша консоль уже имеет доступ к Homebrew Launcher (при помощи pichaxx или другого эксплойта), вы можете перейти к странице [DSiWare Dumper](dsidumper).
+If your device already has access to the Homebrew Launcher (whether through PicHaxx or another exploit), you can skip to [Frogtool](installing-boot9strap-(frogtool)).
 {: .notice--success}
 
 Если у вас уже есть Pokemon Picross, то этот процесс перезапишет сохранение вашей игры!
@@ -19,7 +22,8 @@ title: "Homebrew Launcher (PicHaxx)"
 * Бесплатная игра "Pokemon Picross" из eShop
 * Ваш файл `movable.sed`, полученный на странице [Seedminer](seedminer)
 * Свежая версия [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
-* [Otherapp payload](https://deadphoenix8091.github.io/3ds/#otherapp) *(для вашего региона и версии прошивки)*
+* The [otherapp payload](https://deadphoenix8091.github.io/3ds/#otherapp) *(for your region, device, and version)*
+  + If your current version is 11.14.0-46, select 11.13.0-45 for your version
 
 ### Инструкция
 
@@ -27,26 +31,26 @@ title: "Homebrew Launcher (PicHaxx)"
 
 1. Скопируйте `boot.3dsx` в корень SD-карты
 1. Скопируйте otherapp payload в корень вашей SD-карты и переименуйте его в `otherapp.bin`
-  + Если вы не видите расширение `.bin`, не добавляйте его в конец имени файла
+  + If you do not see the `.bin` extension, do not add it to the end of the filename
 1. Создайте папку `3ds` в корне SD-карты, если таковой нет
 
 #### Часть II - PicHaxx
 
-1. Перейдите по ссылке [PicHaxx Injector](https://seedminer.hacks.guide/pichaxx/) на компьютере
+1. Open [the PicHaxx Injector website](https://3ds.nhnarwhal.com/3dstools/pichaxx.php) on your computer
 1. Выберите свой файл `movable.sed`
 1. Выберите "Build and Download"
 1. Дождитесь окончания процесса
-1. Перейдите в папку `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` на SD-карте
-  + `<ID0>` будет таким же, как и на странице [Seedminer](seedminer)
-  + `<ID1>` будет другой папкой с именем из 32 символов внутри папки `<ID0>`
-1. Скопируйте свой новый скачанный файл `00000001.sav` в папку `data` на SD-карте
+1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` on your SD card
+  + The `<ID0>` will be the same one that you used in [Seedminer](seedminer)
+  + The `<ID1>` is a 32 character long folder inside of the `<ID0>`
+1. Copy the newly downloaded `00000001.sav` file to the `data` folder on your SD card
   + Перезапишите старый файл сохранения при появлении запроса
 1. Вставьте SD-карту обратно в консоль
 1. Включите консоль
 1. Запустите "Pokemon Picross"
 1. Если эксплойт сработал корректно, запустится Homebrew Launcher
-  + Может появиться ошибка "no applications found".
-1. Выключите консоль.
+  + You may see an error stating there are no applications found
+1. Выключите консоль
 
 ___
 

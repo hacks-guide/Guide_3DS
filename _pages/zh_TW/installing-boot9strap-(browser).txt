@@ -4,11 +4,19 @@ title: "安裝 boot9strap (透過網頁瀏覽器)"
 
 {% include toc title="條目內容" %}
 
+### 必讀事項
+
+new-browserhax-xl (when combined with universal-otherapp) is compatible with version 11.14.0 on New 3DS and New 2DS in all regions.
+
+This exploit will not work on the Old 3DS, Old 3DS XL, or Old 2DS. Please ensure that the device you are modding is a New 3DS, New 3DS XL, or New 2DS XL before continuing.
+{: .notice--info}
+
 ### 必備項目
 
+* The latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)
 * 最新版的 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * 最新版的 [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(正常版的 boot9strap；非 `devkit` 或 `ntr` 檔案)*
-* 最新版本的 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) 
+* The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) 
 
 ### 操作說明
 
@@ -16,24 +24,21 @@ title: "安裝 boot9strap (透過網頁瀏覽器)"
 
 1. 關閉您的主機
 1. 將 SD 卡插入至電腦中
+1. Copy `otherapp.bin` to the root of your SD card and rename it to `arm11code.bin`
+  + If you do not see the `.bin` extension, do not add it to the end of the filename
 1. Copy `boot.firm` and `boot.3dsx` from the Luma3DS `.zip` to the root of your SD card
 1. 在 SD 卡的根目錄底下建立一個新的資料夾 `boot9strap`
-1. 解壓 boot9strap `.zip` 的 `boot9strap.firm` 及 `boot9strap.firm.sha` 檔案至 SD 卡的 `/boot9strap/` 資料夾中
-1. 解壓 SafeB9SInstaller `.zip` 的 `SafeB9SInstaller.dat` 及 `Launcher.dat` 至 SD 卡的根目錄中
-
-    ![]({{ "/images/screenshots/boot9strap-browser-file-layout.png" | absolute_url }})
-    {: .notice--info}
-
+1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `boot9strap` folder on your SD card
+1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
 1. 將 SD 卡插回主機中
 1. 啟動您的主機
 
 #### 第二節 — 啟動 SafeB9SInstaller
 
-1. 啟動主機上的網頁瀏覽器，並開啟下列網址的其中之一
-  + `https://dukesrg.github.io/?SafeB9SInstaller.dat`
-  + `http://www.reboot.ms/3ds/load.html?Launcher.dat`
-  + `http://dukesrg.dynu.net/3ds/rop?GW17567.dat&Launcher.dat`
-  + Make sure to try each URL if the first one doesn't work (some versions cannot use the first one, and some versions cannot use the last two)
+1. 啟動您的主機
+1. On the HOME Menu, press the Left and Right shoulder buttons together to open the camera
+  + If you are unable to open the camera, open the Internet Browser manually type the URL instead (`https://zoogie.github.io/web/nbhax-xl/`)
+1. Scan [this QR code](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax-xl&qzone=1&margin=0&size=400x400&ecc=L)
   + 如果遇到錯誤的話， [請依循此疑難排解之步驟](troubleshooting#a-browser-based-exploit-is-not-working)
 1. 如果一切成功的話，您將自動進入 SafeB9SInstaller
 
@@ -50,7 +55,6 @@ title: "安裝 boot9strap (透過網頁瀏覽器)"
 1. 透過方向鍵及『A』以開啟下列選項：
   + **『Show NAND or user string in System Settings』**
 1. 按『Start』鍵以存檔並重新啟動系統
-  + 如果您遇到了錯誤訊息，繼續到下一頁即可
 
 ___
 

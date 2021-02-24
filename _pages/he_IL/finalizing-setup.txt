@@ -8,14 +8,13 @@ title: "סיום התהליך"
 
 הקובץ `boot.firm` הוא מה שמופעל בעת ההדלקה של המכשיר על ידי boot9strap עצמו לאחר שהוא נטען מה-NAND, והוא כל payload של arm9 בפורמט של הFIRM. את הקובץ עצמו אפשר להחליף תמיד, למרות שLuma3DS מאפשר הרצת payload של arm9 בפורמט הFIRM באמצעות הטעינת שרשרת של Luma3DS.
 
-לכן, נשתמש ב-Luma3DS מאת [AuroraWright](https://github.com/AuroraWright/) על מנת לעשות בוט לתוך SysNAND מותאם ישירות, דבר אשר מאפשר לנו לעקוף לחלוטין כל צורך של EmuNAND ובכך לפשט את השימוש ב-3DS פרוץ במקביל לחסכון בנפח ה-SD.
+In this case, we use Luma3DS by [LumaTeam](https://github.com/LumaTeam/) to boot a patched SysNAND directly, allowing us to completely bypass the need for any kind of EmuNAND, vastly simplifying the usage of a hacked 3DS in addition to saving SD card space.
 
 בתהליך זה, גם נתקין את התוכנות הבאות:
 
 + **FBI** *(התקנת משחקים ותוכנות בפורמט CIA)*
 +  **Anemone3DS** *(מתקין ערכות נושא מותאמות אישית)*
 +  **Checkpoint** *(מגבה ומשחזר שמירות למשחקי 3DS וDS)*
-+ **Luma3DS Updater** *(עדכון לCFW בקלות)*
 + **GodMode9** *(כלי רב שימושי אשר מסוגל לבצע פונקציות הקשורות ל-NAND ולקלטות משחק)*
 +  **Homebrew Launcher Loader** *(מפעיל את הHomebrew Launcher)*
 +  **DSP1** *(allows homebrew applications to have sound)*
@@ -27,10 +26,9 @@ title: "סיום התהליך"
 * The latest release of [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/latest) *(the `.cia` file)*
 * The latest release of [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest)
 * The v1.9.2pre1 release of [GodMode9](https://github.com/d0k3/GodMode9/releases/tag/v1.9.2pre1)
-* The latest release of [DSP1](https://github.com/zoogie/DSP1/releases/latest)
+* The latest release of [DSP1](https://github.com/zoogie/DSP1/releases/latest) *(the `.cia` file)*
 * The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) *(the `.cia` and `.3dsx` files)*
 * The latest release of [ctr-no-timeoffset](https://github.com/ihaveamac/ctr-no-timeoffset/releases/latest)
-* The latest release of [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(the `.cia` file)*
 
 ### הנחיות
 
@@ -43,7 +41,6 @@ title: "סיום התהליך"
 1. Copy `ctr-no-timeoffset.3dsx` to the `/3ds/` folder on your SD card
 1. תעתיקו את 'FBI.3dsx' לתיקיה '/ 3ds /' על כרטיס הזכרון
 1. Copy `Homebrew_Launcher.cia` to the `/cias/` folder on your SD card
-1. תעתיקו את הקובץ `lumaupdater.cia` לתוך התיקייה `/cias/` שב-SD שלכם
 1. תעתיקו את הקובץ `FBI.cia` לתוך התיקייה `/cias/` שב-SD שלכם
 1. תעתיקו את הקובץ `DSP1.cia` לתוך התיקייה `/cias/` שב-SD שלכם
 1. תעתיקו את הקובץ `Anemone3DS.cia` לתוך התיקייה `/cias/` שב-SD שלכם
@@ -150,18 +147,8 @@ ___
 
 #### Information and Notes
 
-{% capture notice-10 %}
-אתם כעת יכולים להשתמש ב-Luma3DS Updater על מנת לעדכן את Luma3DS המותקן לקונסולה שלכם בכך שפשוט תפתחו אותו ולחצו על (A).
-
-זה לא אותו דבר כמו עדכון מערכת; זה רק מוריד ומחלץ את הקבצים העדכניים של Luma3DS.
-
-This will update the Luma3DS files on your SD card and in CTRNAND, which is what your device boots from when there is no SD card present.
-{% endcapture %}
-
-<div class="notice--info">{{ notice-10 | markdownify }}</div>
-
 {% capture notice-6 %}
-אתם עכשיו תפעילו את Luma3DS CFW כברירת מחדל.
+You will now boot Luma3DS CFW by default.
 
 אתם יכולים להחזיק את (Select) בזמן הדלקה על מנת להפעיל את תפריט ההגדרות של Luma3DS.
 
@@ -177,7 +164,7 @@ This will update the Luma3DS files on your SD card and in CTRNAND, which is what
 {% capture notice-6 %}
 If you would like to upgrade to a bigger sized SD card, all you have to do is format your new SD card as FAT32 and copy paste the contents of the old SD card onto the new SD card.
 
-If your new SD card is bigger than 32GB, then you have to use a different tool to format it, such as [guiformat](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) for Windows, [gparted](http://gparted.org/download.php) for Linux, or [Disk Utility](https://support.apple.com/en-gb/guide/disk-utility/format-a-disk-for-windows-computers-dskutl1010/mac) for Mac.
+If your new SD card is bigger than 32GB, then you have to use a different tool to format it, such as [guiformat (Windows)](formatting-sd-(windows)), [Disk Utility (Mac)](formatting-sd-(mac)), or [cfdisk (Linux)](formatting-sd-(linux)).
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
@@ -191,7 +178,7 @@ If your new SD card is bigger than 32GB, then you have to use a different tool t
 על מנת לקבל מידע על שימוש ב-Luma3DS ובפונקציות השונות שלו, עברו [לעמוד הויקי שלו](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage).
 {: .notice--success}
 
-לקבלת מידע אודות התקנת ערכות נושא מותאמות אישית ומסכי פתיחה, תלכו אל [Theme Plaza](https://themeplaza.eu/).
+For information on installing custom themes and splash screens, check out [Theme Plaza](https://themeplaza.art/).
 {: .notice--success}
 
 For information on using Gateshark cheat codes on Luma3DS, check out [Checkpoint](https://github.com/FlagBrew/Checkpoint).

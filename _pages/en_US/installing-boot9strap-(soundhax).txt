@@ -6,25 +6,16 @@ title: "Installing boot9strap (Soundhax)"
 
 ### Required Reading
 
-Soundhax (when combined with pre9otherapp) is compatible with versions 2.1.0 through 8.1.0 in the EUR, JPN, KOR, and USA regions.
-
-{% capture notice-1 %}
-
-Note that cartridge updates will only deliver updates to core features, such as the System Settings, Home Menu, etc. cartridge updates will not deliver updates to Nintendo 3DS Sound and Network features, such as System Transfer, Internet Browser, StreetPass Mii Plaza, or eShop.
-
-This means that using a cartridge update from a version containing an older Nintendo 3DS Sound version *(<2.1.0)* to one that introduced a newer Nintendo 3DS Sound version will break Soundhax! You will need an alternate method of entering the Homebrew Launcher such as [Installing boot9strap (Browser)](installing-boot9strap-(browser)) or [Installing boot9strap (MSET)](installing-boot9strap-(mset))!
-{% endcapture %}
-
-<div class="notice--warning">{{ notice-1 | markdownify }}</div>
+Soundhax (when combined with universal-otherapp) is compatible with versions 1.0.0 through 11.3.0 in all regions.
 
 ### What You Need
 
 * The latest release of [Soundhax](http://soundhax.com) *(for your region, device, and version)*
+  + If Soundhax appears in your browser as an unplayable video, press Ctrl+S or Cmd+S to save it to your computer
 * The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
-* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
-* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
-* The latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
-* The latest release of [pre9otherapp](https://github.com/Pirater12/otherapp/releases/latest) *(the `.bin` file corresponding to your firmware version)*
+* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(`boot9strap-1.3.zip`; not the `devkit` file, not the `ntr` file)*
+* The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
+* The latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)
 
 ### Instructions
 
@@ -33,12 +24,11 @@ This means that using a cartridge update from a version containing an older Nint
 1. Power off your device
 1. Insert your SD card into your computer
 1. Copy the Soundhax `.m4a` to the root of your SD card
-1. Copy the pre9otherapp payload to the root of your SD card and rename it to `otherapp.bin`
-1. Copy `boot.firm` from the Luma3DS `.zip` to the root of your SD card
-1. Copy `boot.3dsx` to the root of your SD card
+1. Copy `otherapp.bin` to the root of your SD card
+1. Copy `boot.firm` and `boot.3dsx` from the Luma3DS `.zip` to the root of your SD card
 1. Create a folder named `boot9strap` on the root of your SD card
 1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
-1. Copy `arm9.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
+1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
 1. Reinsert your SD card into your device
 1. Power on your device
 
@@ -55,7 +45,7 @@ This means that using a cartridge update from a version containing an older Nint
   + In this situation, launching Soundhax immediately would cause these tips to appear on every launch of the Nintendo 3DS Sound until this is done
 1. Go to `/SDCARD`, then play "<3 nedwill 2016"
   + This may take many tries
-  + If it freezes, just force the console to power off by holding the power button, then try again
+  + If it freezes, force the console to power off by holding the power button, then try again
 
     ![]({{ "/images/screenshots/soundhax-launch.png" | absolute_url }})
     {: .notice--info}

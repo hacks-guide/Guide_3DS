@@ -14,27 +14,27 @@ title: "安装boot9strap (通过 ntrboot)"
 * 一张已经写入 ntrboot 漏洞的烧录卡
 * 最新版 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * 最新版 [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) **（下载标准的 boot9strap 压缩包文件，而不是带有 `devkit` 或 `ntr` 名字的文件）**
-* 最新版 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) 
+* 最新版 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) 
 
 ### 操作步骤
 
-#### 第一步 — 准备工作
+#### 第一步 – 准备工作
 
 1. 将设备关机
 1. 将你主机的 SD 卡插入你的电脑
   + 这里指的是 3DS 的 SD 卡，**不**是烧录卡中的 SD 卡
-1. 复制 `SafeB9SInstaller.firm` 到 SD 卡的根目录，并重命名为 `boot.firm`
-1. 解压 Luma3DS `.zip` 里的 `boot.3dsx` 到你 SD 卡的根目录
-1. 在SD卡根目录创建一个名为 `boot9strap` 的文件夹
-1. 从 boot9strap `.zip` 压缩包中复制 `boot9strap.firm` 和 `boot9strap.firm.sha` 到你 SD 卡的 `/boot9strap/` 文件夹中
+1. 复制 `SafeB9SInstaller.firm` 到你主机 SD 卡的根目录，并重命名为 `boot.firm`
+1. 解压 Luma3DS `.zip` 里的 `boot.3dsx` 到你主机 SD 卡的根目录
+1. 在你主机 SD 卡根目录创建一个名为 `boot9strap` 的文件夹
+1. 从boot9strap `.zip` 压缩包中复制 `boot9strap.firm` 和 `boot9strap.firm.sha` 到你主机 SD 卡的 `/boot9strap/` 文件夹中
 
     ![]({{ "/images/screenshots/boot9strap-ntrboot-file-layout.png" | absolute_url }})
     {: .notice--info}
 
-1. 将SD卡重新插入你的主机
+1. 将你的 SD 卡插回 3DS
 1. 启动你的主机
 
-#### 第二步 — 触发 ntrboot
+#### 第二步 – 触发 ntrboot
 
 1. 使用磁铁在主机上找到可以触发休眠模式的休眠感应器
   + 老型号的 2DS 可以跳过此步（因为其有独立的休眠开关）
@@ -46,7 +46,7 @@ title: "安装boot9strap (通过 ntrboot)"
   + 你可能要多试几次，因为这些组合键有点难按
 1. 如果一切成功的话，你将自动进入 SafeB9SInstaller
 
-#### 第三步 — 安装 boot9strap
+#### 第三步 – 安装 boot9strap
 
 1. 等待所有安全检查完成
 1. 从你的主机上移开磁铁
@@ -55,12 +55,12 @@ title: "安装boot9strap (通过 ntrboot)"
 1. 完成后，长按电源键强制关机
   + 除非你完成下一节，否则你开机后只能进入 SafeB9SInstaller 中
 
-#### 第四步 — 设置 Luma3DS
+#### 第四步 – 设置 Luma3DS
 
 1. 将你的 SD 卡插入到电脑
 1. 删除 SD 卡根目录下的 `boot.firm` 文件
 1. 解压 Luma3DS `.zip` 里的 `boot.firm` 到你 SD 卡的根目录
-1. 将 SD 卡重新插入你的主机
+1. 将SD卡重新插入你的主机
 1. 启动你的主机
 1. 你的设备应该会在开机后进入 Luma3DS 配置菜单
   + 如果黑屏，[请参见此故障排查章节](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
@@ -82,7 +82,7 @@ ___
 
 请不要在完成以上章节之前进行下面的操作。
 
-#### 第五步 — 移除 ntrboot
+#### 第五步 – 移除 ntrboot
 
 ##### 你需要准备点啥？
 
@@ -127,7 +127,7 @@ ___
 1. 从烧录卡备份 `.zip` 压缩包中复制 `.bin` 文件到你的 SD 卡的 `/ntrboot/` 文件夹
 1. 在SD卡的 `luma` 文件夹里创建 `payloads` 文件夹
 1. 复制 `ntrboot_flasher.firm` 到 SD 卡的 `/luma/payloads/` 文件夹中
-1. 将SD卡重新插入你的主机
+1. 将 SD 卡重新插入你的主机
 1. 把兼容 ntrboot 的 DS / DSi 烧录卡插入设备
 1. 开机时按住 “Start” 键启动 ntrboot_flasher
 1. 请仔细阅读警告信息

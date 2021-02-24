@@ -4,6 +4,9 @@ title: "Installazione di Boot9strap (Fredtool)"
 
 {% include toc title="Indice" %}
 
+I metodi basati su Seedminer sono stati sostituiti da procedimenti più semplici e sicuri. Ritorna a [Cominciamo!](get-started) a meno che non ci siano motivi legittimi per cui tu debba seguire questa pagina (come dei tasti dorsali non funzionanti).
+{: .notice--warning}
+
 ### Lettura necessaria
 
 Seedminer utilizza il tuo file `movable.sed` per decriptare un qualunque titolo DSiWare per iniettare una particolare applicazione DSiWare nell'applicazione Connessioni Nintendo DS. Questo richiede un backup DSiWare, ad esempio da BannerBomb o da DSiWare Dumper.
@@ -12,11 +15,11 @@ Questa è un'implementazione funzionante dell'exploit del "testo in chiaro noto 
 
 ### Cosa serve
 
-* Un backup DSiWare (come quello sulla directory principale della scheda SD proveniente da [BannerBomb3](bannerbomb3) o da [DSiWare Dumper](dsidumper))
+* Un backup DSiWare (come quello sulla directory principale della scheda SD proveniente da [BannerBomb3](bannerbomb3))
 * Il tuo file `movable.sed` dalla sezione [Seedminer](seedminer)
 * L'ultima versione di [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest)
 * L'ultima versione di [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
-* L'ultima versione di [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
+* L'ultima versione di [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
 
 #### Sezione I - Preparazione
 
@@ -28,7 +31,7 @@ Questa è un'implementazione funzionante dell'exploit del "testo in chiaro noto 
 
 #### Sezione II - Fredtool
 
-1. Avvia [Fredtool](https://fredtool.bruteforcemovable.com/) sul tuo computer
+1. Apri [Fredtool](https://3ds.nhnarwhal.com/3dstools/fredtool.php) sul tuo computer
 1. Seleziona il tuo file `movable.sed` nel campo "Your movable.sed"
 1. Seleziona il tuo backup DSiWare (`<ID a 8 caratteri>.bin`) nel campo "Your dsiware.bin"
 1. Supera il captcha "I'm not a robot"
@@ -38,7 +41,7 @@ Questa è un'implementazione funzionante dell'exploit del "testo in chiaro noto 
   + Questo file contiene 2 file di backup DSiWare, quello originale (non modificato) e uno "hax" (che include l'exploit)
 1. Nella tua scheda SD, entra in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`
   + Questo `<ID0>` sarà lo stesso che hai utilizzato in [Seedminer](seedminer)
-  + Questa cartella `<ID1>` all'interno della cartella `<ID0>` avrà un nome di 32 lettere e numeri
+  + `<ID1>` è una cartella dal nome lungo 32 caratteri all'interno di `<ID0>`
   + Se la cartella `Nintendo DSiWare` non esiste, creala all'interno della cartella `<ID1>`
 1. Copia il file `42383841.bin` dalla cartella `output/hax/` dall'archivio DSiWare appena scaricato (`fredtool_output.zip`) nella cartella `Nintendo DSiWare`
 1. Reinserisci la scheda SD nella tua console
@@ -87,7 +90,7 @@ Se desideri una guida visiva per questa parte, è disponibile [qui](https://zoog
 
 1. Spegni il tuo 3DS
 1. Inserisci la scheda SD nel tuo computer
-1. Copia il file `42383841.bin` dalla cartella `output/clean/` dall'archivio DSiWare appena scaricato (`fredtool_output.zip`) nella cartella `Nintendo 3DS/<ID0>/<ID a 32 caratteri>/Nintendo DSiWare/` della tua scheda SD
+1. Copia il file `42383841.bin` dalla cartella `output/clean/` dall'archivio DSiWare appena scaricato (`fredtool_output.zip`) nella cartella `Nintendo 3DS/<ID0>/<ID1>/Nintendo DSiWare/` della tua scheda SD
   + Sostituisci il file `423841.bin` esistente
 1. Reinserisci la scheda SD nella tua console
 1. Accendi la console

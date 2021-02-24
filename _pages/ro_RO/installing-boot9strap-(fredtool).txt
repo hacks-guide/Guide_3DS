@@ -4,6 +4,9 @@ title: "Instalând Boot9strap (Fredtool)"
 
 {% include toc title="Cuprins" %}
 
+Seedminer-based methods have been replaced by easier, safer methods. Please return to [Get Started](get-started) unless you have a legitimate reason to follow this page (such as broken shoulder buttons).
+{: .notice--warning}
+
 ### Lectură obligatorie
 
 Această metodă de a folosi Seedminer pentru mai multă exploatare utilizează fişierul `movable.sed` pentru a decripta orice titlu de DSiWare cu scopul de a injecta un titlu DSiWare exploatabil în aplicaţia DS Internet Settings. Aceasta are nevoie de o copie de rezervă DSiWare, de exemplu de la BannerBomb sau unealta DSiWare Dumper.
@@ -12,11 +15,11 @@ Acest lucru este în prezent o implementare a exploit-ului "Partiții FIRM de te
 
 ### Ce aveți nevoie
 
-* O copie de rezervă DsiWare (precum acela de pe rădăcina cardului SD din [BannerBomb3](bannerbomb3) sau [DSiWare Dumper](dsidumper))
+* A DSiWare Backup (such as the one on SD root from [BannerBomb3](bannerbomb3))
 * Fișierul 'movable.sed' de la completarea lui [Seedminer](seedminer)
 * Cea mai nouă versiune de [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest)
 * Cea mai recentă versiune de [b9sTool] (https://github.com/zoogie/b9sTool/releases/latest)
-* Cea mai recentă versiune de [Luma3DS] (https://github.com/AuroraWright/Luma3DS/releases/latest)
+* The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
 
 #### Secțiunea I - Preparații
 
@@ -28,18 +31,18 @@ Acest lucru este în prezent o implementare a exploit-ului "Partiții FIRM de te
 
 #### Secțiunea II - Fredtool
 
-1. Deschideți [Fredtool](https://fredtool.bruteforcemovable.com/) pe calculatorul dumneavoastră
+1. Open [Fredtool](https://3ds.nhnarwhal.com/3dstools/fredtool.php) on your computer
 1. Selectaţi fişierul `movable.sed` pentru câmpul "Your movable.sed"
 1. Selectați copia de rezervă DsiWare (`<8-character-id>.bin`) în câmpul "Your dsiware.bin"
 1. Finalizați captcha-ul "I'm not a robot"
 1. Selectați "Start"
 1. Așteptați până când procesul este terminat
 1. Când procesul s-a completat, descărcați arhiva modificată DSiWare de pe site
-  + Acest fișier conține 2 fișiere de copie de rezervă DSiWare, una curată (nemodificată) și una modată (exploatată)
+  + This file contains 2 DSiWare backup files, one clean (unmodified) and one hax (exploited)
 1. Navigați spre `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` pe cardul SD
-  + Acest `<ID0>` va fi la fel ca cel care l-ați folosit în [Seedminer](seedminer)
-  + Acest folder `<ID1>` va fi încă un folder de 32 de caractere din interiorul folderului `<ID0>`
-  + Dacă folderul `Nintendo DSiWare` nu există, creați unul în interiorul folderului `<ID1>`
+  + The `<ID0>` will be the same one that you used in [Seedminer](seedminer)
+  + The `<ID1>` is a 32 character long folder inside of the `<ID0>`
+  + If the `Nintendo DSiWare` folder does not exist, create it inside of the `<ID1>`
 1. Copiaţi fişierul `42383841.bin` din folderul `output/hax/` de la DSiWare-ul descărcat (`fredtool_output.zip`) către folderul `Nintendo DSiWare/` de pe cardul SD
 1. Reintroduceți cardul SD în dispozitivul dumneavoastră
 1. Porniți dispozitivul
@@ -87,7 +90,7 @@ Dacă preferați un ghid vizual pentru aceasta secțiune, deja este disponibil u
 
 1. Închideți dispozitivul
 1. Introduceți cardul SD în calculator
-1. Copiaţi fişierul `42383841.bin` din folderul `output/clean/` de la DSiWare-ul descărcat (`fredtool_output.zip`) către folderul `Nintendo 3DS/<ID0>/<id-de-32-caractere>/Nintendo DSiWare/` de pe cardul SD
+1. Copy the `42383841.bin` file from the `output/clean/` folder of the downloaded DSiWare archive (`fredtool_output.zip`) to the `Nintendo 3DS/<ID0>/<ID1>/Nintendo DSiWare/` folder on your SD card
   + Înlocuiţi fişierul existent `42383841.bin
 1. Reintroduceți cardul SD în dispozitivul dumneavoastră
 1. Porniți dispozitivul

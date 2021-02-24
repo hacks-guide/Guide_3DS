@@ -1,0 +1,81 @@
+---
+title: "Installing boot9strap (SSLoth-Browser)"
+---
+
+{% include toc title="Tabla de contenidos" %}
+
+### Lectura requerida
+
+SSLoth allows users on version 11.13.0 and below to bypass the browser version check, allowing use of new-browserhax or old-browserhax, which can then be used in conjunction with universal-otherapp.
+
+If you have updated your device to your current version using a cartridge, your Internet Browser will be inaccessible. If this is the case, you will need to update your device to the latest version through System Settings and then follow the method for the latest version.
+{: .notice--warning}
+
+### Qué necesitas
+
+* The latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)
+* La última versión de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* La última versión de [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(boot9strap normal; no el archivo `devkit` ni el archivo `ntr`)*
+* The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) 
+
+#### Sección I - Preparativos
+
+1. Apaga tu consola
+1. Inserta tu tarjeta SD en tu computadora
+1. Copy `otherapp.bin` to the root of your SD card and rename it to `arm11code.bin`
+  + If you do not see the `.bin` extension, do not add it to the end of the filename
+1. Copia los archivos `boot.firm` y `boot.3dsx` desde el `.zip` de Luma3DS a la raíz de tu tarjeta SD
+1. Crea una carpeta llamada `boot9strap` en la raíz de tu tarjeta SD
+1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `boot9strap` folder on your SD card
+1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
+1. Vuelve a insertar tu tarjeta SD en tu consola
+1. Enciende tu consola
+
+#### Section II - SSLoth
+1. Launch the System Settings application
+1. Navigate to `Internet Settings` -> `Connection Settings`
+1. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `DNS`
+1. Set "Auto-Obtain DNS" to "No", then click `Detailed Setup`
+1. Set both the Primary DNS and Secondary DNS to `054.038.133.070`
+1. Click OK, then click Save
+1. When prompted, click "Test" to perform the connection test
+	+ The test should succeed
+1. Apaga tu consola
+
+#### Section III - Launching SafeB9SInstaller
+1. Launch the browser and go to this URL on your device
+  + `https://zoogie.github.io/web/nbhax`
+1. Pulsa el botón "PROCEED TO HAXX"
+  + Si te sale un error, sigue la [guía de solución de problemas](troubleshooting#a-browser-based-exploit-is-not-working)
+1. Si el exploit ha funcionado, habrás iniciado SafeB9SInstaller
+
+#### Section IV - Installing boot9strap
+
+1. Espera a que todos los controles de seguridad se completen
+1. Cuando se solicite, introduce la combinación de botones mostrada para instalar boot9strap
+1. Una vez se haya completado, presiona (A) para reiniciar tu consola
+
+#### Section V - Configuring Luma3DS
+
+1. Tu consola debería haber reiniciado en el menú de configuración de Luma3DS
+  + Si la pantalla se queda en negro, [sigue la guía de problemas](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
+1. Utiliza el botón (A) y las flechas direccionales para activar lo siguiente:
+  + **"Show NAND or user string in System Settings"**
+1. Presiona (Start) para guardar y reiniciar
+
+#### Section VI - Restoring default DNS
+1. Launch the System Settings application
+1. Navigate to `Internet Settings` -> `Connection Settings`
+1. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `DNS`
+1. Set "Auto-Obtain DNS" to "Yes"
+1. Click OK, then click Save
+1. When prompted, click "Test" to perform the connection test
+	+ The test should succeed
+1. Apaga tu consola
+
+___
+
+### Continúa en [Finalizar instalación](finalizing-setup)
+{: .notice--primary}
+
+

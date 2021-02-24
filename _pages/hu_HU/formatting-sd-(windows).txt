@@ -1,0 +1,43 @@
+---
+title: "SD formázás (Windows)"
+---
+
+{% include toc title="Tartalomjegyzék" %}
+
+### Fontos tudnivalók
+
+Ez egy kiegészítő rész az SD kártya formázásához, hogy az működjön a 3DS-el.
+
+Ha a 3DS már felismeri az SD kártyát, ez az útmutató nem szükséges.
+
+Ez az oldal Windows felhasználókra vonatkozik. Ha nem Windows rendszeren vagy, kövesd az [SD formázás (Linux)](formatting-sd-(linux)) vagy [SD formázás (Mac)](formatting-sd-(mac)) útmutatókat.
+
+### Amire szükséged lesz
+
+* A [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm) legújabb kiadása
+
+### Lépések
+
+1. Helyezd az SD kártyád a számítógépbe
+1. Ha az SD kártya tartalmaz adatot, akkor azokat másold át a számítógépre
+1. Futtasd a `guiformat.exe` alkalmazást
+1. Válaszd ki az SD kártyád betűjelét a "Drive" alatt
+
+	Legyél biztos abban, hogy a jó meghajtó betűt választod, egyébként rossz merevlemezt törölhetsz!
+	{: .notice--danger}
+
+1. Válassz méretet az "Allocation unit size" alatt
+  + Ha az SD kártya 64GB vagy kisebb válaszd a 32768-at
+  + Ha az SD kártya 64GB feletti, válaszd a 65536-ot
+1. Írj be valamit "Volume label"-nek
+1. Ügyelj rá, hogy a "Quick Format" ki legyen választva
+1. Kattints a "Start"-ra
+1. Kattints az "OK"-ra
+1. Várd meg amíg a formázás befejeződik
+1. Kattints a "Close"-ra
+1. Ha az SD kártya tartalmazott adatot a formázás előtt, akkor azokat most másold vissza a számítógépről
+
+### Gyakori hibák
+
+* Failed to open device: GetLastError()=32
+  + Csukj le mindent, ami esetleg használhatja az SD kártyát, mint például bármelyik Fájlkezelő ablak.

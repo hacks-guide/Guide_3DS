@@ -17,7 +17,7 @@ Huomaa, että jos sinulla on muita käynnistystiedostoja kuin `GodMode9.firm` SD
 Tämä prosessi poistaa NNID:si linkityksen konsolistasi, koska se ei alueen vaihdon jälkeen ole enää yhteensopiva. NNID:t ovat lukittuja siihen konsolisi alueeseen, jolla ne luotiin, eikä niitä voi siirtää alueiden välillä ilman [todella monimutkaista ja vaativaa prosessia](https://gist.githubusercontent.com/yifanlu/e80db121d38aceb8cca0e03cefd5853b/raw/3c4dd89869156ca0f945a2791e699acfdb32b510/gistfile1.txt).
 {: .notice--warning}
 
-Tämän prosessin jälkeen ainoastaan **New 3DS:t, joilla ei ole koskaan käyty eShopissa**, sekä **mitkä tahansa vanhat 3DS:t** pääsevät eShopiin, kun uusi NNID on luotu uudelle alueelle. Aluevaihdetut New 3DS:t, joilla on jo käyty eShopissa niiden alkuperäisellä alueella, eivät voi luoda uutta NNID:tä eivätkä pääse eShopiin!
+After this process, **you will not be able to access the eShop**. This includes any feature that uses an NNID, such as game updates, purchasing DLC, or online play in certain games. Region changing to your original region will usually not fix this issue.
 {: .notice--warning}
 
 Huomaa, että toisinaan eShop ei syystä tai toisesta toimi edes niillä konsoleilla, joilla sen pitäisi. Tämä on täysin Nintendon palvelimien vika, enkä minä voi hallita niitä. Joskus saattaa myös käydä toisinpäin: eli eShop voi toimia konsoleilla, joilla sen ei pitäisi (kuten jotkin New 3DS:t). Syytä tälle ei tällä hetkellä tiedetä.
@@ -55,12 +55,34 @@ Sinulla TÄYTYY olla asennettuna sekä Luma3DS että boot9strap käyttääksesi 
 1. Kopioi `FBI.3dsx` SD-korttisi `/3ds/`-kansioon
 1. Aseta SD-korttisi takaisin konsoliisi
 
-#### Vaihe II – CTRTransfer
-
+#### Section II - NAND Backup
 1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
 1. Jos ohjelma kehottaa luomaan varmuuskopion tärkeistä tiedostoista (essential files), paina (A):ta tehdäksesi sen, ja kun varmuuskopio on valmis, paina (A):ta uudelleen jatkaaksesi
 1. Jos sinua kehotetaan korjaamaan RTC-aika ja -päivämäärä, paina (A):ta ja aseta ne oikein, paina sitten (A):ta jatkaaksesi
   + Huomaa, että jos jouduit korjaamaan RTC-ajan ja -päivämäärän, sinun täytyy korjata ne myös järjestelmäasetuksista (System Settings) näiden ohjeiden jälkeen
+1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
+1. Valitse "Scripts..."
+1. Select "GM9Megascript"
+1. Select "Backup Options"
+1. Select "SysNAND Backup"
+1. Paina (A)-painiketta vahvistaaksesi
+  + Tämä prosessi voi kestää jonkin aikaa
+  + If you get an error, make sure that you have at least 1.3GB of free space on your SD card
+1. Paina (A):ta jatkaaksesi
+1. Paina (B):tä palataksesi päävalikkoon
+1. Select "Exit"
+1. Paina (A):ta lukitaksesi kirjoitusoikeudet kehotettaessa
+1. Pidä (R):ää pohjassa ja paina samalla (B):tä irrottaaksesi SD-korttisi
+1. Aseta SD-korttisi tietokoneeseesi
+1. Kopioi `<päivämäärä>_<sarjanumero>_sysnand_###.bin` ja `essential.exefs` SD-korttisi `/gm9/out/`-kansiosta turvalliseen paikkaan tietokoneellasi
+  + Varmuuskopioi useaan eri paikkaan (kuten pilvipalveluihin)
+  + Nämä varmuuskopiot pelastavat sinut konsolin vioittumiselta ja/tai auttavat palauttamaan tiedostoja NAND-näköistiedostosta, jos jokin menee pieleen tulevaisuudessa
+1. Kun olet varmuuskopioinut NANDin, poista `<päivämäärä>_<sarjanumero>_sysnand_###.bin` ja `<päivämäärä>_<sarjanumero>_sysnand_###.bin.sha` SD-korttisi `/gm9/out/`-kansiosta
+1. Aseta SD-korttisi takaisin konsoliisi
+  + If your SD card was not detected, hold (R) and press (B) at the same time to remount it
+  
+#### Section III - CTRTransfer
+
 1. Mene hakemistoon `[0:] SDCARD` → `gm9`
 1. Paina (A):ta CTRTransfer-`.bin`-tiedoston kohdalla valitaksesi sen
 1. Valitse "CTRNAND options..."
@@ -73,7 +95,7 @@ Sinulla TÄYTYY olla asennettuna sekä Luma3DS että boot9strap käyttääksesi 
 1. Paina (B):tä kieltäytyäksesi lukitsemasta kirjoitusoikeuksia kehotettaessa
 1. Paina (B):tä kahdesti palataksesi päävalikkoon
 1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
-1. Valitse "Scripts..."
+1. Select "Scripts..."
 1. Select "GM9Megascript"
 1. Select "Scripts from Plailect's Guide"
 1. Select "CTRTransfer Ticket Copy"
@@ -87,7 +109,7 @@ Sinulla TÄYTYY olla asennettuna sekä Luma3DS että boot9strap käyttääksesi 
   + Päivitykset B9S + Luma -kokoonpanolla (joka sinulla on) ovat turvallisia
   + Jos saat virheen, laita DNS:n automaattinen haku (Auto-Obtain DNS) päälle asetuksista
 
-#### Vaihe III – FBI:n avaaminen
+#### Section IV - Launching FBI
 
 1. Launch the Download Play application (this [icon]({{ "/images/download-play-icon.png" | absolute_url }})
 1. Paina (L)-, (ALAS)- ja (SELECT)-painikkeita samaan aikaan avataksesi Rosalina-valikon
@@ -100,7 +122,7 @@ Sinulla TÄYTYY olla asennettuna sekä Luma3DS että boot9strap käyttääksesi 
 1. Avaa Download Play -sovellus
 1. Konsolisi pitäisi avata Homebrew Launcher
 
-#### Vaihe IV – Tikettien uudelleenasentaminen
+#### Section V - Reinstalling Tickets
 
 Jos ohjelma ei löytänyt käyttäjän asentamia tikettejä käskien ohittamaan tämän vaiheen, ohita tämä vaihe.
 {: .notice--info}
@@ -120,19 +142,19 @@ Jos ohjelma ei löytänyt käyttäjän asentamia tikettejä käskien ohittamaan 
   + Paina (B):tä hylätäksesi tikettien asentamisen CDN:n kautta.
 1. Paina (HOME)-painiketta ja sulje FBI
 
-#### Vaihe V – Alueasetukset
+#### Section VI - Region settings
 
 1. Avaa järjestelmäasetukset (System Settings)
 1. Mene muihin asetuksiin (Other Settings), valitse profiili (Profile) ja sitten alueasetukset (Region Settings)
 1. Valitse maa, joka vastaa sitä aluetta, johon vaihdoit
 1. Aseta kehotettaessa myös osavaltio/lääni
 
-#### Vaihe VI – CTRTransfer-näköistiedoston poistaminen
+#### Section VII - Remove CTRTransfer image
 
 1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
 1. Mene hakemistoon `[0:] SDCARD` → `gm9`
 1. Paina (X):ää CTRTransfer-`.bin`-näköistiedoston kohdalla poistaaksesi sen
-1. Paina (A)-painiketta vahvistaaksesi
+1. Paina (A):ta vahvistaaksesi
 1. Paina (START)-painiketta käynnistääksesi uudelleen
 
 ___

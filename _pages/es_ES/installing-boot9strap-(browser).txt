@@ -4,12 +4,20 @@ title: "Instalar boot9strap (navegador)"
 
 {% include toc title="Tabla de contenidos" %}
 
+### Lectura requerida
+
+new-browserhax-xl (when combined with universal-otherapp) is compatible with version 11.14.0 on New 3DS and New 2DS in all regions.
+
+This exploit will not work on the Old 3DS, Old 3DS XL, or Old 2DS. Please ensure that the device you are modding is a New 3DS, New 3DS XL, or New 2DS XL before continuing.
+{: .notice--info}
+
 ### Qué necesitas
 
+* The latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)
 * La última versión de [SafeB9SInstaller]
 (https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * La última versión de [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(boot9strap normal; no el archivo `devkit` ni el archivo `ntr`)*
-* La ultima version de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) 
+* The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) 
 
 ### Instrucciones
 
@@ -17,24 +25,21 @@ title: "Instalar boot9strap (navegador)"
 
 1. Apaga tu consola
 1. Inserta tu tarjeta SD en tu computadora
+1. Copy `otherapp.bin` to the root of your SD card and rename it to `arm11code.bin`
+  + If you do not see the `.bin` extension, do not add it to the end of the filename
 1. Copia los archivos `boot.firm` y `boot.3dsx` desde el `.zip` de Luma3DS a la raíz de tu tarjeta SD
 1. Crea una carpeta llamada `boot9strap` en la raíz de tu tarjeta SD
-1. Copia `boot9strap.firm` y `boot9strap.firm.sha` desde el `.zip` de boot9strap a la carpeta `/boot9strap/` en tu tarjeta SD
-1. Copia `SafeB9SInstaller.dat` y `Launcher.dat` desde el `.zip` de SafeB9SInstaller a la raíz de tu tarjeta SD
-
-    ![]({{ "/images/screenshots/boot9strap-browser-file-layout.png" | absolute_url }})
-    {: .notice--info}
-
+1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `boot9strap` folder on your SD card
+1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
 1. Vuelve a insertar tu tarjeta SD en tu consola
 1. Enciende tu consola
 
 #### Sección II - Ejecutar SafeB9SInstaller
 
-1. Abre el navegador y ve a cualquiera de estas páginas en tu 3DS
-  + `https://dukesrg.github.io/?SafeB9SInstaller.dat`
-  + `http://www.reboot.ms/3ds/load.html?Launcher.dat`
-  + `http://dukesrg.dynu.net/3ds/rop?GW17567.dat&Launcher.dat`
-  + Asegúrate de probar cada página si la primera no funciona (algunas versiones no pueden usar la primera, otras no pueden las últimas dos)
+1. Enciende tu consola
+1. On the HOME Menu, press the Left and Right shoulder buttons together to open the camera
+  + If you are unable to open the camera, open the Internet Browser manually type the URL instead (`https://zoogie.github.io/web/nbhax-xl/`)
+1. Scan [this QR code](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax-xl&qzone=1&margin=0&size=400x400&ecc=L)
   + Si te sale un error, sigue la [guía de solución de problemas](troubleshooting#a-browser-based-exploit-is-not-working)
 1. Si el exploit ha funcionado, habrás iniciado SafeB9SInstaller
 
@@ -51,7 +56,6 @@ title: "Instalar boot9strap (navegador)"
 1. Utiliza el botón (A) y las flechas direccionales para activar lo siguiente:
   + **"Show NAND or user string in System Settings"**
 1. Presiona (Start) para guardar y reiniciar
-  + Si te da error, tan solo continúa en la siguiente página
 
 ___
 

@@ -6,25 +6,16 @@ title: "Установка boot9strap (Soundhax)"
 
 ### Обязательно к прочтению
 
-Soundhax (в сочетании с pre9otherapp) совместим с версиями прошивки от 2.1.0 до 8.1.0 в регионах EUR, JPN, KOR и USA.
-
-{% capture notice-1 %}
-
-Заметьте, что обновление на картридже позволяет обновить только базовые функции консоли, такие как Системные настройки, меню HOME, и т. п. приложение Звук Nintendo 3DS и сетевые функции, такие как Передача данных, Интернет-браузер, Площадь StreetPass Mii или eShop с картриджа не обновляются.
-
-Это означает, что обновление картриджем с версии, содержащей старое приложение Звук Nintendo 3DS *(<2.1.0)*, до версии с новым приложением Звук Nintendo 3DS сделает невозможной работу Soundhax! Вам понадобится альтернативный метод запуска Homebrew Launcher, такой как [Установка boot9strap (Браузер)](installing-boot9strap-(browser)) или [Установка boot9strap (MSET)](installing-boot9strap-(mset))!
-{% endcapture %}
-
-<div class="notice--warning">{{ notice-1 | markdownify }}</div>
+Soundhax (when combined with universal-otherapp) is compatible with versions 1.0.0 through 11.3.0 in all regions.
 
 ### Что понадобится
 
 * Свежая версия [Soundhax](http://soundhax.com) *(для вашего региона, консоли и версии прошивки)*
+  + If Soundhax appears in your browser as an unplayable video, press Ctrl+S or Cmd+S to save it to your computer
 * Свежая версия [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * Свежая версия [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(стандартный boot9strap; не `devkit-файл`, не `ntr-файл`)*
-* Свежая версия [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
-* Свежая версия [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
-* Свежая версия [pre9otherapp](https://github.com/Pirater12/otherapp/releases/latest) *(`.bin-файл`, соответствующий вашей версии прошивки)*
+* The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
+* The latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)
 
 ### Инструкция
 
@@ -33,12 +24,11 @@ Soundhax (в сочетании с pre9otherapp) совместим с верс�
 1. Выключите консоль
 1. Вставьте SD-карту в компьютер
 1. Скопируйте Soundhax `.m4a` в корень вашей SD-карты
-1. Скопируйте pre9otherapp payload в корень вашей SD-карты и переименуйте его в `otherapp.bin`
-1. Скопируйте файл `boot.firm` из `.zip-архива` Luma3DS в корень SD-карты
-1. Скопируйте `boot.3dsx` в корень SD-карты
+1. Copy `otherapp.bin` to the root of your SD card
+1. Скопируйте файлы `boot.firm` и `boot.3dsx` из `.zip-архива` Luma3DS в корень SD-карты
 1. Создайте папку `boot9strap` в корне SD-карты
 1. Скопируйте `boot9strap.firm` и `boot9strap.firm.sha` из `.zip-архива` boot9strap в папку `/boot9strap/` в корне SD-карты
-1. Скопируйте `arm9.bin` из `.zip-ахрива` SafeB9SInstaller в корень SD-карты
+1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
 1. Вставьте SD-карту обратно в консоль
 1. Включите консоль
 
@@ -55,7 +45,7 @@ Soundhax (в сочетании с pre9otherapp) совместим с верс�
   + Если запустить Soundhax не закрыв приложение, то птичка будет появляться при каждом запуске программы, до тех пор, пока вы не выполните этот пункт
 1. Перейдите в `/SDCARD`, затем начните воспроизведение "<3 nedwill 2016"
   + Может потребоваться несколько попыток
-  + При зависании отключите питание консоли, зажав кнопку питания, и попробуйте снова
+  + If it freezes, force the console to power off by holding the power button, then try again
 
     ![]({{ "/images/screenshots/soundhax-launch.png" | absolute_url }})
     {: .notice--info}

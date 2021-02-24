@@ -8,14 +8,13 @@ title: "完成安裝"
 
 `boot.firm` 這個檔案是 boot9strap 由 NAND 載入自身後所接著加載的，且它可以是任何 FIRM 格式的有效 arm9 payload。 您隨時可以替換這檔案，不過 Luma3DS 本身就有內建加載其他 FIRM 格式的 arm9 payload 檔案的功能。
 
-本節中，我們將使用 [AuroraWright](https://github.com/AuroraWright/) 所做的 Luma3DS 來直接啟動修改後的 SysNAND，完全不必 EmuNAND。這除了大量的簡化使用改機後 3DS 的步驟，還能節省 SD 卡的使用空間。
+In this case, we use Luma3DS by [LumaTeam](https://github.com/LumaTeam/) to boot a patched SysNAND directly, allowing us to completely bypass the need for any kind of EmuNAND, vastly simplifying the usage of a hacked 3DS in addition to saving SD card space.
 
 在這過程中，我們也將安裝下列程式：
 
 + **FBI 管理器** *(安裝 CIA 格式的遊戲及程式)*
 +  **Anemone3DS** *(安裝自訂主題)*
 +  **Checkpoint** *(備份及還原 3DS 及 DS 遊戲之存檔)*
-+ **Luma3DS Updater** *(以便更新 Luma3DS)*
 + **GodMode9** *(多功能工具包，用來處理 NAND 及卡帶的相關功能)*
 +  **Homebrew Launcher Loader** *(用於啟動 Homebrew Launcher)*
 +  **DSP1** *(允許自製程式播放音效)*
@@ -27,10 +26,9 @@ title: "完成安裝"
 * 最新版的 [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/latest)*(`.cia` 檔案)*
 * 最新版的 [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest)
 * The v1.9.2pre1 release of [GodMode9](https://github.com/d0k3/GodMode9/releases/tag/v1.9.2pre1)
-* 最新版的 [DSP1](https://github.com/zoogie/DSP1/releases/latest)
+* The latest release of [DSP1](https://github.com/zoogie/DSP1/releases/latest) *(the `.cia` file)*
 * 最新版的 [FBI 管理器](https://github.com/Steveice10/FBI/releases/latest) *(`.cia` 及 `.3dsx` 檔案)*
 * 最新版本的 [ctr-no-timeoffset](https://github.com/ihaveamac/ctr-no-timeoffset/releases/latest)
-* 最新版的 [Luma3DS Updater](https://github.com/KunoichiZ/lumaupdate/releases/latest) *(`.cia` 檔案)*
 
 ### 操作說明
 
@@ -43,7 +41,6 @@ title: "完成安裝"
 1. 將 `ctr-no-timeoffset.3dsx` 複製到 SD 卡中的 `/3ds/` 資料夾底下
 1. 將 `FBI.3dsx` 複製到 SD 卡中的 `/3ds/` 資料夾底下
 1. 將 `Homebrew_Launcher.cia` 複製到 SD 卡中 `/cias/` 資料夾底下
-1. 複製 `lumaupdater.cia` 檔案至 SD 卡上的 `/cias/` 資料夾中
 1. 將 `FBI.cia` 複製到 SD 卡中 `/cias/` 資料夾底下
 1. 將 `DSP1.cia` 複製到 SD 卡中 `/cias/` 資料夾底下
 1. 將 `Anemone3DS.cia` 複製到 SD 卡中 `/cias/` 資料夾底下
@@ -150,18 +147,8 @@ ___
 
 #### 額外訊息以及注意事項
 
-{% capture notice-10 %}
-您現在可以透過 Luma3DS Updater 來更新您主機中的 Luma3DS，只要將它開啟，再按下『A』即可。
-
-這跟系統更新是不一樣的；這只會下載並解壓最新的 Luma3DS 檔案。
-
-這將更新您的 SD 卡和 CTRNAND 中的 Luma3DS 檔, 在您的裝置沒有 SD 卡時，裝置將自動載入 CTRNAND 中的檔案。
-{% endcapture %}
-
-<div class="notice--info">{{ notice-10 | markdownify }}</div>
-
 {% capture notice-6 %}
-您的主機現在在預設情況下將會自動於開機時啟動基於 SysNAND 的 Luma3DS 自製韌體。
+You will now boot Luma3DS CFW by default.
 
 您現在可以在開機時透過按住『Select』鍵進入 Luma3DS 的設定選單。
 
@@ -177,7 +164,7 @@ ___
 {% capture notice-6 %}
 如果您想要升級到較大的 SD 卡，您只需要將您的 SD 卡格式化為 FAT32 並從您舊的 SD 卡中複製其內容至新的卡中即可。
 
-如果您的 SD 卡大於 32GB，那麼您得使用不同的工具以格式化該記憶卡；工具例如 Windows 上的 [guiformat](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm)、Linux 上的 [gparted](http://gparted.org/download.php)、Mac 上的[磁碟工具程式](https://support.apple.com/en-gb/guide/disk-utility/format-a-disk-for-windows-computers-dskutl1010/mac)。
+If your new SD card is bigger than 32GB, then you have to use a different tool to format it, such as [guiformat (Windows)](formatting-sd-(windows)), [Disk Utility (Mac)](formatting-sd-(mac)), or [cfdisk (Linux)](formatting-sd-(linux)).
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
@@ -191,7 +178,7 @@ ___
 有關如何使用 Luma3DS 的各項功能，請見[他們的 wiki](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage)。
 {: .notice--success}
 
-有關如何安裝自訂主題、及啟動畫面，請見 [Theme Plaza](https://themeplaza.eu/)。
+For information on installing custom themes and splash screens, check out [Theme Plaza](https://themeplaza.art/).
 {: .notice--success}
 
 For information on using Gateshark cheat codes on Luma3DS, check out [Checkpoint](https://github.com/FlagBrew/Checkpoint).

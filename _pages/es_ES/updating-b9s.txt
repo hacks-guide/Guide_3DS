@@ -8,28 +8,14 @@ title: "Actualizar B9S" #
 
 Esta página es para ayudar a los usuarios actuales de boot9strap a actualizar su instalación a la última versión.
 
-{% capture notice-1 %}
-Ha habido reportes de olas de baneos a usuarios de CFW por parte de Nintendo. Para protegerte, puedes realizar los siguientes pasos antes de seguir esta guía:
-
-1. Ve a Configuración de la consola, luego a "Configuración de internet", luego "Envío de información sobre la consola"
-1. Desactiva la opción "Envío de información sobre la consola"
-1. Sal de la Configuración de la consola
-1. Ve a tu Lista de Amigos (el [Icono Naranja con una cara]({{ "/images/friend-list-icon.png" | absolute_url }}) en la fila superior de tu Menú HOME)
-  + Si recibes un error y eres expulsado del menú, la configuración de la Lista de Amigos ya ha sido deshabilitada o tu consola no se puede conectar a los servidores de Nintendo (debido a un ban o por problemas de conexión)
-1. Ve a la configuración de la Lista de amigos, luego a "Notificaciones entre amigos", y luego "Mostrar qué estás jugando"
-1. Desactiva la opción "Mostrar qué estás jugando"
-1. Sal de tu Lista de amigos
-
-{% endcapture %}
-
-<div class="notice--danger">{{ notice-1 | markdownify }}</div>
+While we believe that custom firmware is safe for online use, there have been online network bans in the past, primarily for cheating and suspicious eShop behavior.
+{: .notice--warning}
 
 ### Qué necesitas
 
 * La última versión de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * La última versión de [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(boot9strap normal; no el archivo `devkit` ni el archivo `ntr`)*
-* La ultima version de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest)
-* La última versión [del Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
+* The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
 
 ### Instrucciones
 
@@ -39,9 +25,8 @@ Para todos los pasos en esta sección, sobreescribe cualquier archivo existente 
 {: .notice--info}
 
 1. Inserta tu tarjeta SD en tu computadora
-1. Copia `boot.3dsx` a la raíz de tu tarjeta SD
 1. Crea una carpeta llamada `boot9strap` en la raíz de tu tarjeta SD
-1. Copia `boot9strap.firm` y `boot9strap.firm.sha` desde el `.zip` de boot9strap a la carpeta `/boot9strap/` en tu tarjeta SD
+1. Copia los archivos `boot9strap.firm` y `boot9strap.firm.sha` desde el `.zip` de boot9strap a la carpeta `/boot9strap/` en tu tarjeta SD
 1. Copia `SafeB9SInstaller.firm` desde el `.zip` de SafeB9SInstaller a la carpeta `/luma/payloads/` en tu tarjeta SD
 1. Vuelve a insertar tu tarjeta SD en tu consola
 
@@ -58,7 +43,7 @@ Para todos los pasos en esta sección, sobreescribe cualquier archivo existente 
 
 1. Apaga tu consola
 1. Inserta tu tarjeta SD en tu computadora
-1. Copia `boot.firm` desde el `.zip` de Luma3DS a la raíz de tu tarjeta SD reemplazando el archivo existente
+1. Copy `boot.firm` and `boot.3dsx` from the Luma3DS `.zip` to the root of your SD card, replacing the existing file
 1. Vuelve a insertar tu tarjeta SD en tu consola
 1. Enciende tu consola
 

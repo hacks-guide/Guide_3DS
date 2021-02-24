@@ -14,24 +14,8 @@ title: "С A9LH до B9S"
 
 Чтобы распаковать архивы `.7z`, присутствующие на этой странице, вам понадобится архиватор [7-Zip](http://www.7-zip.org/) или [The Unarchiver](https://theunarchiver.com/).
 
-Если в Luma3DS вы используете PIN-код, то при работе SafeB9SInstaller вы получите ошибку "OTP Crypto Fail". Для решения этой проблемы временно откажитесь от использования PIN-кода (вы сможете включить его обратно после обновления).
+While we believe that custom firmware is safe for online use, there have been online network bans in the past, primarily for cheating and suspicious eShop behavior.
 {: .notice--warning}
-
-{% capture notice-1 %}
-Сообщается о волне банов, выданных Nintendo пользователям CFW. Чтобы защитить себя, выполните следующие шаги перед началом этого руководства:
-
-1. Откройте Системные настройки, затем "Интернет-настройки", затем "SpotPass", затем "Отправка информации о системе"
-1. Отключите опцию "Отправка информации о системе"
-1. Закройте Системные настройки (System settings)
-1. Откройте Список друзей ([оранжевый значок в виде лица]({{ "/images/friend-list-icon.png" | absolute_url }}) на верхней строчке меню HOME)
-  + Если появляется ошибка и вас не пускают в меню, значит либо нужная настройка в Списке друзей уже отключена, либо консоль не может подключиться к серверам Nintendo (по причине бана или проблем с соединением)
-1. Перейдите в настройки Списка друзей, затем "Настройки сообщений друга", затем "Показать друзьям, во что вы играете"
-1. Отключите опцию "Показать друзьям, во что вы играете"
-1. Закройте Список друзей
-
-{% endcapture %}
-
-<div class="notice--danger">{{ notice-1 | markdownify }}</div>
 
 ### Что понадобится
 
@@ -42,11 +26,10 @@ title: "С A9LH до B9S"
 {: .notice--info}
 
 * <i class="fa fa-magnet" aria-hidden="true" title="Это magnet-ссылка. Воспользуйтесь торрент-клиентом, чтобы скачать этот файл."></i> - **Только для пользователей New 3DS:** [secret_sector.bin](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce)
-* Свежая версия [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) 
-* Версия v7.0.5 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/tag/v7.0.5) *(`.7z-архив`)*
+* The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) 
+* The v7.0.5 release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/tag/v7.0.5) *(the `.7z` file)*
 * Свежая версия [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * Свежая версия [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(стандартный boot9strap; не `devkit-файл`, не `ntr-файл`)*
-* Свежая версия [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
 
 ### Инструкция
 
@@ -57,8 +40,7 @@ title: "С A9LH до B9S"
 
 1. Выключите консоль
 1. Вставьте SD-карту в компьютер
-1. Скопируйте `boot.3dsx` в корень SD-карты
-1. Скопируйте файл `boot.firm` из `.zip-архива` со свежей версией Luma3DS в корень SD-карты
+1. Copy `boot.firm` and `boot.3dsx` from the latest version Luma3DS `.zip` to the root of your SD card
 1. Скопируйте файл `arm9loaderhax.bin` из `.7z-архива` Luma3DS версии v7.0.5 в корень SD-карты
 1. Удалите все существующие `.bin` приложения в папке `/luma/payloads/` на SD-карте, так как они не будут совместимы с boot9strap совместимыми версиями Luma3DS
 1. Скопируйте `SafeB9SInstaller.bin` из `.zip-архива` SafeB9SInstaller в папку `/luma/payloads/` на SD-карте

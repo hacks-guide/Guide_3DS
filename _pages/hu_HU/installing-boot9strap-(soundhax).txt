@@ -6,39 +6,29 @@ title: "Boot9strap telepítése (Soundhax)"
 
 ### Fontos tudnivalók
 
-A Soundhax (kobinálva a pre9otherapp-pal) kompatibilis a 2.1.0-8.1.0 verziókkal az EUR, JPN, KOR és USA régiókban.
-
-{% capture notice-1 %}
-
-Vedd figyelembe, hogy a kártyafrissítések csak a legfontosabb dolgokat frissítik, mint például a System Settings, Home Menu, stb. A kártyafrissítések nem fogják frissíteni a Nintendo 3DS Sound alkalmazást és az olyan hálózati funkciókat, mint például a System Transfer, Internet Browser, StreetPass Mii Plaza, vagy az eShop.
-
-Ez azt jelenti, hogy kártyafrissítés egy olyan verzióról, amelyhez régebbi verziójú Nintendo 3DS Sound alkalmazás tartozott *(<2.1.0)* egy olyan verzióra, amihez újabb Nintendo 3DS Sound tartozik, működésképtelenné teszi a Soundhax-ot! Így alternatív módszerre lesz szükséged a Homebrew Launcher telepítéséhez, mint a [Boot9strap telepítése (böngésző)](installing-boot9strap-(browser)) vagy a [Boot9strap telepítése (MSET)](installing-boot9strap-(mset))!
-{% endcapture %}
-
-<div class="notice--warning">{{ notice-1 | markdownify }}</div>
+A Soundhax (amikor universal-otherapp-pal használjuk) kompatibilis az 1.0.0-s verziótól egészen a 11.3.0-ig minden régió esetén.
 
 ### Amire szükséged lesz
 
 * A [Soundhax](http://soundhax.com) legújabb kiadása *(a régiódnak, készülékednek és rendszer verziódnak megfelelő változat)*
+  + Ha a Soundhax a böngésződben nem lejátszható videónak tűnik, nyomj Ctrl+S vagy Cmd+S gombokat a gépedre mentéséhez
 * A [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest) legújabb kiadása
 * A [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) legújabb kiadása *(a sima boot9strap; nem a `devkit` fájl, nem az `ntr` fájl)*
-* A [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) legújabb kiadása
-* A [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest) legújabb kiadása
-* A [pre9otherapp](https://github.com/Pirater12/otherapp/releases/latest) legújabb verziója *(a firmware verziódnak megfelelő `.bin` fájl)*
+* Az [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) legújabb verziója
+* A [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) legújabb kiadása
 
-### Utasítások
+### Lépések
 
 #### I. rész - Előkészületek
 
 1. Kapcsold ki a készüléked
 1. Helyezd az SD kártyád a számítógépbe
 1. Másold a Soundhax `.m4a` fájlját az SD kártyád gyökerébe
-1. Másold a pre9otherapp payloadot az SD kártyád gyökerébe, majd nevezd át `otherapp.bin` névre
-1. Másold át a `boot.firm` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
-1. Másold az `boot.3dsx` fájlt az SD kártyád gyökerébe
+1. Másold az `otherapp.bin` fájlt az SD kártyád gyökerébe
+1. Másold át a `boot.firm` és `boot.3dsx` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
 1. Hozz létre egy mappát `boot9strap` néven az SD kártya gyökerében
 1. Másold át a `boot9strap.firm` fájlt és a `boot9strap.firm.sha` fájlt a boot9strap `.zip` fájlból az SD kártyád `/boot9strap/` mappájába
-1. Másold át az `arm9.bin` fájlt a SafeB9SInstaller `.zip`-ből az SD kártyád gyökerébe
+1. Másold át a `SafeB9SInstaller.bin` fájlt a SafeB9SInstaller `.zip`-ből az SD kártyád gyökerébe
 1. Tedd vissza az SD kártyád a készülékedbe
 1. Kapcsold be a készülékedet
 
