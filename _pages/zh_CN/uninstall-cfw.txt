@@ -6,14 +6,14 @@ title: "卸载自制固件"
 
 ### 必读事项
 
-This will completely remove CFW from your device, including boot9strap and Luma3DS, for the purpose of restoring the device to stock.
+本章节将会教你如何完全把自制固件从你的设备完全移除，为了完全恢复原厂系统，所有的自制固件将被卸载，包括 B9S 和 Luma3DS。
 
-这永远不是可以解决你在破解主机时遇到任何问题的解决方法。 A better idea would be to ask (in English) for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+这永远不是可以解决你在破解主机时遇到任何问题的解决方法。 更好的点子是在[ Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp)上使用英文寻求帮助。（请注意，如果你身处中国大陆，则你可能需要通过科学上网访问 Discord），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497。
 {: .notice--danger}
 
 你将无法游玩任何已安装且未签名（盗版）的游戏，请在开始本章教程之前进入系统设置内的数据管理中将它们全部删除。 你可以使用 [save manager](https://github.com/FlagBrew/Checkpoint/releases/latest) 来备份你想要备份的未签名（盗版）游戏存档。
 
-If you have modified critical system software (such as editing the home menu, unbanning your console, etc), uninstalling CFW WILL BRICK your device! Ensure that you follow all sections of this page.
+如果你之前修改过系统的重要文件（比如修改主菜单，解除你主机的封禁等），卸载自制系统可能会导致你的设备砖机！ 你应确保遵守此页面的所有部分。
 {: .notice--danger}
 
 请注意，如果在SD卡 `/luma/payloads/` 文件夹下，有除了 `GodMode9.firm` 以外的 payload 文件，那么在按住 “Start” 键开机的时候，设备将会进入 “chainloader menu” 菜单。届时请使用方向键和 “A” 键来选择本教程所需的“GodMode9”。 
@@ -21,7 +21,7 @@ If you have modified critical system software (such as editing the home menu, un
 ### 你需要准备点啥？
 
 * 最新版 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* The latest release of [DSiWare Uninstaller](https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest)
+* 最新版 [DSiWare Uninstaller](https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest)
 * [safety_test.gm9]({{ base_path }}/gm9_scripts/safety_test.gm9)
 
 ### 操作步骤
@@ -103,31 +103,31 @@ If you have modified critical system software (such as editing the home menu, un
 {: .notice--warning}
 
 1. 启动你的主机
-1. Open the System Settings application
-1. Navigate to Data Management > Nintendo 3DS > Software
+1. 打开系统设置（本体設定 / System Settings）
+1. 进入到 “数据管理（Data Management）” > “Nintendo 3DS” > “软件（Software）”
 1. 在此列表中，删除你在使用自制系统时安装的任何非来自任天堂的自制程序。
-  + This includes common system software such as FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint, and others, along with any games and titles that you did *not* install from the eShop
+  + 这其中包括常见的自制程序如 FBI、Anemone3DS、Luma Updater、Homebrew Launcher、Checkpoint 等等…和任何非通过 eShop 安装的游戏
 1. 移动至“数据管理（Data Management）” > “DSiWare”
 1. 在此列表中，删除你在使用自制系统时安装的任何非来自任天堂的自制程序。
-  + This includes software such as TWiLightMenu++, along with any games and titles that you did *not* install from the eShop
+  + 这包括诸如 TWiLightMenu++ 之类的软件，和你**非**从 eShop 安装的任何游戏程序
   + 如果无法卸载这些 3DS 和 DSiWare 软件，卸载自制固件可能会导致数据管理无法进入或数据损坏。
-1. Exit the System Settings application
-1. Open the Homebrew Launcher application
-1. Launch DSiWare Uninstaller from the list of homebrew
-1. Follow the prompts and allow the program to uninstall 
-1. Once the process has succeeded, exit the Homebrew Launcher and power off your device
+1. 退出系统设置
+1. 打开 Homebrew Launcher 应用程序
+1. 从自制程序列表中运行 DSiWare Uninstaller
+1. 阅读提示并允许程序卸载 
+1. 一旦完成后，退出 Homebrew Launcher 然后关机
 
-#### Section VI - System Format
-This section will ensure that all illegitimate tickets are removed, allowing eShop to work normally. This will remove all content from the 3DS and log you out of your NNID. Keep in mind that your console's encryption key will be shuffled, meaning that any old data will be rendered inaccessible, even if you have a backup of your SD contents.
+#### 第六步 – 初始化主机
+本步骤将会把所有的非法 ticket 从主机中移除，使 eShop 能够正常工作。 这会移除 3DS 中的所有内容，并登出 NNID。 这会重新生成你的主机解密密钥，意味着你先前的所有数据将会全部不可用，即使你把它们从 SD 卡中备份出来也是如此。
 
 1. 启动你的主机
-1. Open the System Settings application
-1. Navigate to Other Settings -> Next Page (until the final page) -> Format System Memory
-1. Follow the prompts to format your 3DS
+1. 打开系统设置（本体設定 / System Settings）
+1. 进入“其他设置（Other Settings）” -> 右箭头（直到最后一页）-> “初始化系统（Format System Memory）”
+1. 按照提示步骤重置你的 3DS
 
 
-#### Section VII - Running Uninstall Script
-This is your final opportunity to verify that all safety steps above have been followed! Please ensure that you have followed all sections on this page, **especially** `Section III - Safety Test`, before continuing.
+#### 第七步 – 运行卸载脚本
+这是你的最后一次机会来核验所有安全检查步骤是否已正确遵循！ 请确保你已经做完了本页面先前的所有步骤，**特别是** `第三步`。
 {: .notice--warning}
 
 1. 按住 “START” 键，然后将主机开机。 这会启动 GodMode9
