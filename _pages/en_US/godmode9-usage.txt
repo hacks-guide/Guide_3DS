@@ -122,6 +122,19 @@ Insert the game cartridge you intend to dump into your device
   + **NDS Game Cartridge:** Press (A) on `[TitleID].trim.nds` to select it, then select "Copy to 0:/gm9/out"
 1. Your installable `.cia` or non-installable `.nds` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
+## Dumping a Game Cartridges romfs/exefs
+
+1. Insert a game cartrige you wish to dump from
+1. Launch GodMode9 by holding (Start) during boot
+1. Hover over "GAMECART ()"
+1. Press (A), wait (could take up to 20 seconds)
+1. Hover over the bigest file ending with `.3ds` and press (A)
+1. Select "NCCH image options"
+1. Select "Mount image to drive"
+1. Press (A) to continue
+1. Hover over `exefs.bin`, hold (R) and press (A) to open "directory options", select "copy to 0:/gm9/out", do the same with `romfs.bin`
+  + The dumped files will be in `/gm9/out`
+
 ## Dumping a Title
 
 1. Launch GodMode9 by holding (Start) during boot
@@ -129,10 +142,31 @@ Insert the game cartridge you intend to dump into your device
   + **User Installed Title**: `[A:] SYSNAND SD`
   + **System Title**: `[1:] SYSNAND CTRNAND`
 1. Hold (R) and press (A) at the same time to open the drive options
-1. Select "Search for titles"
+1. Select "Open title manager"
 1. Press (A) to continue
 1. Press (A) on the `.tmd` file to select it, then select "TMD file options...", then select "Build CIA (standard)"
 1. Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
+
+## Dumping a Titles romfs/exefs
+
+1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+1. Hover over the drive applicable to the type of title you wish to dump files for:
+  + **User Installed `Title: [A:] SYSNAND SD`
+  + **System Title: `[1:] SYSNAND CTRNAND`
+1. Hold (R) and press (A) at the same time to open the drive options
+1. Select “open title manager”
+1. Press (A) to continue
+1. Press (A) on the game you wish to dump the romfs/exefs from 
+  + accent letters will be a `?`, like the e in pokemon
+1. Press (A) on "open title folder"
+1. Then press (A) on the bigest file ending in `.app`(the file size is on the right of each file in gm9)
+  + `Byte` is smaller than `kb`, `kb` is smaller than `mb`, `mb` is smaller than `gb`. Example: 1.2 gb is bigger than 1.4 mb and so on
+1. Select (A) on "NCCH image options"
+1. Select (A) on "Mount image to drive"
+1. Press (A) to continue
+1. Hover over `exefs.bin`, hold (R) and press (A) to open "directory options", select "copy to 0:/gm9/out". Do the same with `romfs.bin`
+  + The dumped files will be in `/gm9/out`
+
 
 ## Converting a .3DS to .CIA
 
