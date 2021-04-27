@@ -105,91 +105,6 @@ Isto só irá funcionar caso a injeção do Informações sobre saúde e seguran
 1. Aperte (A) para destravar "SysNAND (lvl1) writing", então aperte a sequência de botões solicitada
 1. Se solicitado, aperte (A) para bloquear as permissões de escrita
 
-## Dumping a Game Cartridge
-
-{% capture notice %}
-Insert the game cartridge you intend to dump into your device
-  + Cartuchos de jogos de 3DS serão copiados para um formato instalável `.cia`
-  + Cartuchos de NDS serão copiados para um formato não-instalável `.nds` compatível com flashcarts e emuladores
-{% endcapture %}
-
-<div class="notice--info">{{ notice | markdownify }}</div>
-
-1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
-1. Navegue para `[C:] GAMECART`
-1. Siga os passos aplicáveis para o seu cartucho de jogo:
-  + **Cartucho de jogo de 3DS:** Aperte (A) em `[TitleID].trim.3ds` para selecioná-lo, depois selecione "NCSD image options...", então selecione "Build CIA from file"
-  + **Cartucho de jogo NDS:** Aperte (A) em `[TitleID].trim.nds` para selecioná-lo, depois selecione "Copy to 0:/gm9/out"
-1. Seu `.cia` instalável ou `.nds` não-instalável formatado será gravado na pasta `/gm9/out/` no seu cartão SD
-
-## Dumping a Title
-
-1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
-1. Hover over the drive applicable to the type of title you wish to dump:
-  + **User Installed Title**: `[A:] SYSNAND SD`
-  + **System Title**: `[1:] SYSNAND CTRNAND`
-1. Hold (R) and press (A) at the same time to open the drive options
-1. Select "Search for titles"
-1. Aperte (A) para continuar
-1. Aperte (A) no arquivo `.tmd` para selecioná-lo, depois selecione "TMD file options...", e então selecione "Build CIA (standard)"
-1. Seu `.cia` instalável formatado será gravado na pasta `/gm9/out/` no seu cartão SD
-
-## Converting a .3DS to .CIA
-
-{% capture notice %}
-+ Para fins organizacionais, copie cada arquivo `.3ds` que você deseja converter para a pasta `/cias/` no seu cartão SD
-  + Note that if you wish to convert a `.3ds` file that is already on a flashcart, you should follow [Dumping a Game Cartridge](#dumping-a-game-cartridge)
-{% endcapture %}
-
-<div class="notice--info">{{ notice | markdownify }}</div>
-
-1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
-1. Navegue para `[0:] SDCARD` -> `cias`
-1. Aperte (A) no seu arquivo `.3ds` para selecioná-lo, depois selecione "NCSD image options...", e então selecione "Build CIA from file"
-1. Seu `.cia` instalável formatado será gravado na pasta `/gm9/out/` no seu cartão SD
-
-## Backup GBA VC Saves
-
-The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
-{: .notice--info}
-
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
-{: .notice--info}
-
-1. Faça o seguinte processo para cada jogo de VC de GBA que você deseja fazer backup do save:
-  + Inicie o jogo de VC de GBA
-  + Saia do jogo de VC de GBA
-  + Inicie seu dispositivo enquanto segura (Start) para iniciar o menu do chainloader do Luma3DS
-  + Inicie o GodMode9 apertando (A)
-  + Navegue para `[S:] SYSNAND VIRTUAL`
-  + Press (A) on `agbsave.bin` to select it
-  + Select "AGBSAVE options..."
-  + Select "Dump GBA VC save"
-  + Press (A) to continue
-  + Aperte (Start) para reiniciar seu dispositivo
-
-## Restore GBA VC Saves
-
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
-{: .notice--info}
-
-1. Faça o seguinte processo para cada jogo de VC de GBA que você deseja restaurar o save:
-  + Inicie o jogo de VC de GBA
-  + Saia do jogo de VC de GBA
-  + Inicie seu dispositivo enquanto segura (Start) para iniciar o menu do chainloader do Luma3DS
-  + Inicie o GodMode9 apertando (A)
-  + Navegue para `[0:] SDCARD` -> `gm9`
-  + Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
-  + Aperte (B) para retornar para o menu principal
-  + Navegue para `[S:] SYSNAND VIRTUAL`
-  + Press (A) on `agbsave.bin` to select it
-  + Select "AGBSAVE options..."
-  + Select "Inject GBA VC save"
-  + Press (A) to continue
-  + Aperte (Start) para reiniciar seu dispositivo
-  + Inicie o jogo de VC de GBA
-  + Saia do jogo de VC de GBA
-
 ## Format an SD card
 
 **Note que isto irá apagar o conteúdo do seu cartão SD!**
@@ -205,21 +120,6 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Aperte (A) para aceitar o nome `GM9SD`
   + Opcionalmente, você pode inserir um nome personalizado para o cartão SD
 1. Quando solicitado, aperte a sequência de botões solicitada para confirmar
-
-## Encrypting / Decrypting a .CIA file
-
-For organizational purposes, copy each `.cia` file you wish to encrypt / decrypt to the `/cias/` folder on your SD card
-{: .notice--info}
-
-1. Inicie o GodMode9 segurando (Start) durante a inicialização
-1. Navegue para `[0:] SDCARD` -> `cias`
-1. Aperte (A) no arquivo `.cia` para selecioná-lo, depois selecione "CIA image options..."
-1. Selecione a opção para executar a função desejada:
-    + **Encrypt to 0:/gm9/out:** Cria uma cópia criptografada do arquivo `.cia` selecionado na pasta `/gm9/out/` no seu cartão SD
-    + **Decrypt to 0:/gm9/out:** Cria uma cópia descriptografada do arquivo `.cia` selecionado na pasta `/gm9/out/` no seu cartão SD
-    + **Encrypt inplace:** Substitui o arquivo `.cia` selecionado por uma versão criptografada
-    + **Decrypt inplace:** Substitui o arquivo `.cia` selecionado por uma versão descriptografada
-1. Seu `.cia` criptografado / descriptografado será gravado no local desejado
 
 ## Removing an NNID without formatting your device
 
