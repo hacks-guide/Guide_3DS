@@ -105,91 +105,6 @@ To zadziała tylko wtedy, gdy podmienienie aplikacji Health & Safety zostało wy
 1. Wciśnij (A), aby odblokować zapis do SysNAND (lvl1), a następnie wprowadź przedstawioną kombinację przycisków
 1. Naciśnij (A), aby ponownie zablokować uprawnienia do zapisu, jeśli zostaniesz o to poproszony
 
-## Zrzucanie (Dumping) kartridża z grą
-
-{% capture notice %}
-Włóż kartridż z grą, którą chcesz zrzucić, do swojego urządzenia
-  + Kartridże z grami 3DS zostaną zrzucone do instalowalnego formatu `.cia`
-  + Kartridże z grami NDS zostaną zrzucone do nieinstalowalnego formatu `.nds` kompatybilnego z flashcartami i emulatorami
-{% endcapture %}
-
-<div class="notice--info">{{ notice | markdownify }}</div>
-
-1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
-1. Przejdź do `[C:] GAMECART`
-1. Wykonaj czynności związane z odpowiednim typem kartridża z grą:
-  + **Kartridż z grą 3DS:** Naciśnij (A) na `[TitleID].trim.3ds`, aby ją wybrać, następnie wybierz "NCSD image options...", a następnie wybierz "Build CIA from file"
-  + **Kartridż z grą NDS:** Naciśnij (A) na `[TitleID].trim.nds`, aby ją wybrać, a następnie wybierz "Copy to 0:/gm9/out"
-1. Twój plik instalacyjny `.cia` lub nieinstalowalny plik `.nds` zostanie zapisany w folderze `/gm9/out/` na karcie SD
-
-## Zrzucanie (Dumping) zainstalowanej gry lub aplikacji
-
-1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
-1. Najedź na napęd odpowiedni do typu aplikacji którą chcesz zrzucić:
-  + **Aplikacja Zainstalowana Przez Użytkownika**: `[A:] SYSNAND SD`
-  + **Aplikacja Systemowa**: `[1:] SYSNAND CTRNAND`
-1. Przytrzymaj przycisk (R) i jednocześnie wciśnij (A) aby otworzyć opcje napędu
-1. Wybierz "Search for titles"
-1. Naciśnij (A), aby kontynuować
-1. Naciśnij (A) na pliku `.tmd` aby go wybrać, następnie wybierz "TMD file options...", po czym wybierz "Build CIA (standard)"
-1. Twoja aplikacja / gra zostanie zapisana w formacie `.cia` oraz umieszczona w folderze `/gm9/out/` na twojej karcie SD
-
-## Konwertowanie plików .3DS do .CIA
-
-{% capture notice %}
-+ Dla celów organizacyjnych skopiuj każdy plik `.3ds`, który chcesz skonwertować do folderu `/cias/` na karcie SD
-  + Zauważ, że jeśli chcesz skonwertować plik `.3ds`, który jest już na flashcarcie powinieneś postępować zgodnie z [Zrzucanie (Dumping) kartridża z grą](#dumping-a-game-cartridge)
-{% endcapture %}
-
-<div class="notice--info">{{ notice | markdownify }}</div>
-
-1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
-1. Przejdź do `[0:] SDCARD` -> `cias`
-1. Naciśnij przycisk (A) na pliku `.3ds` aby go wybrać, następnie wybierz "NCSD image options...", po czym wybierz "Build CIA from file"
-1. Twoja aplikacja / gra zostanie zapisana w formacie `.cia` oraz umieszczona w folderze `/gm9/out/` na twojej karcie SD
-
-## Kopia zapasowa zapisów GBA VC
-
-Zapis zostanie umieszczony w folderze `/gm9/out/` na karcie SD i będzie nosił nazwę `<TitleID>.gbavc.sav`.
-{: .notice--info}
-
-Aby zidentyfikować Title ID pliku `<TitleID>.gbavc.sav` możesz zobaczyć listę wszystkich gier na systemie i ich Title ID poprzez najechanie na `[A:] SYSNAND SD`, następnie przytrzymując (R) i jednocześnie naciskając (A), po czym wybrać "Search for titles".
-{: .notice--info}
-
-1. Wykonaj następujący proces dla każdej gry GBA VC dla której chcesz wykonać kopię zapasową zapisu:
-  + Uruchom grę GBA VC
-  + Wyjdź z gry
-  + Uruchom konsolę trzymając (Start) aby uruchomić menu chainloader
-  + Wybierz Godmode9 i uruchom poprzez wciśnięcie (A)
-  + Przejdź do `[S:] SYSNAND VIRTUAL`
-  + Naciśnij (A) na `agbsave.bin` aby go wybrać
-  + Wybierz "AGBSAVE options..."
-  + Wybierz "Dump GBA VC save"
-  + Naciśnij (A), aby kontynuować
-  + Wciśnij (Start) aby zrestartować konsolę
-
-## Przywracanie zapisów GBA VC
-
-Aby zidentyfikować Title ID pliku `<TitleID>.gbavc.sav` możesz zobaczyć listę wszystkich gier na systemie i ich Title ID poprzez najechanie na `[A:] SYSNAND SD`, następnie przytrzymując (R) i jednocześnie naciskając (A), po czym wybrać "Search for titles".
-{: .notice--info}
-
-1. Wykonaj następujący proces dla każdej gry GBA VC dla której chcesz przywrócić zapis:
-  + Uruchom grę GBA VC
-  + Wyjdź z gry
-  + Uruchom konsolę trzymając (Start) aby uruchomić menu chainloader
-  + Wybierz Godmode9 i uruchom poprzez wciśnięcie (A)
-  + Przejdź do `[0:] SDCARD` -> `gm9`
-  + Naciśnij (Y) na pliku `<TitleID>.gbavc.sav` który chcesz chcesz przywrócić aby go skopiować
-  + Wciśnij (B) aby wrócić do menu głównego
-  + Przejdź do `[S:] SYSNAND VIRTUAL`
-  + Naciśnij (A) na `agbsave.bin` aby go wybrać
-  + Wybierz "AGBSAVE options..."
-  + Wybierz "Inject GBA VC save"
-  + Naciśnij (A), aby kontynuować
-  + Wciśnij (Start) aby zrestartować konsolę
-  + Uruchom grę GBA VC
-  + Wyjdź z gry
-
 ## Formatowanie karty SD
 
 **UWAGA! Proces ten usunie całą zawartość twojej karty SD!**
@@ -205,21 +120,6 @@ Aby zidentyfikować Title ID pliku `<TitleID>.gbavc.sav` możesz zobaczyć list�
 1. Naciśnij (A) aby zaakceptować etykietę `GM9SD`
   + Opcjonalnie możesz wprowadzić własną etykietę dla karty SD
 1. Kiedy zostaniesz poproszony, wprowadź podaną kombinację klawiszy
-
-## Szyfrowanie / Odszyfrowywanie pliku .CIA
-
-Dla celów organizacyjnych, skopiuj każdy plik `.cia`, który chcesz zaszyfrować / odszyfrować do folderu `/cias/` na karcie SD
-{: .notice--info}
-
-1. Uruchom GodMode9 poprzez trzymanie przycisku (Start) podczas uruchamiania konsoli
-1. Przejdź do `[0:] SDCARD` -> `cias`
-1. Naciśnij (A) na pliku `.cia` aby go wybrać, następnie wybierz "CIA image options..."
-1. Wybierz odpowiednią opcję w zależności od tego co chcesz zrobić:
-    + **Encrypt to 0:/gm9/out:** Stwórz zaszyfrowaną kopię wybranego pliku `.cia` w folderze `/gm9/out/` na karcie SD
-    + **Decrypt to 0:/gm9/out:** Stwórz odszyfrowaną kopię wybranego pliku `.cia` w folderze `/gm9/out/` na karcie SD
-    + **Encrypt inplace:** Zastąp wybrany plik `.cia` jego zaszyfrowaną wersją
-    + **Decrypt inplace:** Zastąp wybrany plik `.cia` jego odszyfrowaną wersją
-1. Twój zaszyfrowany / odszyfrowany plik `.cia` zostanie zapisany w wybranej lokalizacji
 
 ## Usuwanie NNID bez formatowania konsoli
 
