@@ -105,91 +105,6 @@ Ez csak akkor fog működni, ha az injektálást GodMode9 végezte (nem pedig De
 1. Nyomd meg az (A) gombot, hogy feloldd a SysNAND (lvl1) írást, majd sorban nyomd meg a kijelzett gombokat
 1. Nyomd meg az (A) gombot az írási engedélyek visszavonásához
 
-## Játékkártya tartalmának kimentése
-
-{% capture notice %}
-Helyezd be a készülékedbe a menteni kívánt játékkártyát
-  + A 3DS játékkártyák telepíthető `.cia` formátumba lesznek mentve
-  + Az NDS játékkártyák nem telepíthető `.nds` formátumba lesznek mentve, amely flashkártyákkal és emulátorokkal lesz kompatibilis
-{% endcapture %}
-
-<div class="notice--info">{{ notice | markdownify }}</div>
-
-1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be az eszközödet. Ez elindítja a GodMode9-et
-1. Menj ide: `[C:] GAMECART`
-1. Kövesd az alábbi lépések közül az adott játékkártyához megfelelőt:
-  + **3DS játékkártya:** Nyomd meg az (A)-t a `[TitleID].trim.3ds`fájlon, hogy kijelöld, majd válaszd a "NCSD image options...", aztán a "Build CIA from file" opciókat
-  + **NDS játékkártya:** Nyomd meg az (A)-t a `[TitleID].trim.nds` fájlon, hogy kijelöld, majd válaszd a "Copy to 0:/gm9/out" opciót
-1. A telepíthető `.cia` vagy a nem telepíthető `.nds` formátumú fájlodat az SD kártyád `/gm9/out/` mappájában találod ezután
-
-## Telepített alkalmazás kimentése
-
-1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be az eszközödet. Ez elindítja a GodMode9-et
-1. Válaszd azt a meghajtót, ami a menteni kívánt alkalmazásod típusához tartozik:
-  + **Felhasználó által telepített alkalmazás**: `[A:] SYSNAND SD`
-  + **Rendszeralkalmazás**: `[1:] SYSNAND CTRNAND`
-1. Tartsd lenyomva az (R) gombot, és nyomd meg az (A)-t a meghajtó opciók előhozásához
-1. Válaszd a "Search for titles" opciót
-1. Nyomd meg az (A) gombot a folytatáshoz
-1. Nyomd meg az (A)-t a `.tmd` fájlon, hogy kiválaszd, majd válaszd a "TMD file options...", utána pedig a "Build CIA (standard)" opciókat
-1. A telepíthető `.cia` formátumú fájlodat az SD kártyád `/gm9/out/` mappájában találod ezután
-
-## .3DS konvertálása .CIA formátumba
-
-{% capture notice %}
-+ A rend kedvéért, másold a konvertálni kívánt `.3ds` fájljaidat az SD kártyád `/cias/` mappájába
-  + Vedd figyelembe, hogy amennyiben egy olyan `.3ds` fájlt szeretnél konvertálni, ami már megtalálható egy flashkártyán, kövesd inkább a [Játékkártya tartalmának kimentése](#dumping-a-game-cartridge) című részt
-{% endcapture %}
-
-<div class="notice--info">{{ notice | markdownify }}</div>
-
-1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be az eszközödet. Ez elindítja a GodMode9-et
-1. Menj ide: `[0:] SDCARD` -> `cias`
-1. Nyomd meg az (A)-t a `.3ds` fájlodon, hogy kijelöld, aztán válaszd az "NCSD image options...", majd a "Build CIA from file" opciókat
-1. A telepíthető `.cia` formátumú fájlodat az SD kártyád `/gm9/out/` mappájában találod ezután
-
-## Biztonsági másolat készítése GBA VC mentésekről
-
-A játék az SD kártyád `/gm9/out/` mappájába kerül kimentésre `<TitleID>.gbavc.sav` néven.
-{: .notice--info}
-
-Egy `<TitleID>.gbavc.sav` fájl Title ID-jének azonosításához használhatod a Title ID-k listáját, amit a következőképp érhetsz el: menj a `[A:] SYSNAND SD` opcióra, tartsd lenyomva az (R)-t, és nyomd meg az (A)-t, majd válaszd a "Search for titles" opciót.
-{: .notice--info}
-
-1. Csináld végig az alábbi lépéseket minden egyes GBA VC játékhoz, aminek a mentését másolni szeretnéd:
-  + Indítsd el az adott GBA VC játékot
-  + Lépj ki belőle
-  + Indítsd el a készülékedet a (Start) lenyomva tartásával, hogy megjelenjen a Luma3DS chainloader menü
-  + Indítsd el a GodMode9-et az a (A) gomb megnyomásával
-  + Menj ide: `[S:] SYSNAND VIRTUAL`
-  + Nyomd meg az (A) gombot a `agbsave.bin` fájlon, hogy kijelöld
-  + Válaszd az "AGBSAVE options..." opciót
-  + Válaszd a "Dump GBA VC save" opciót
-  + Nyomd meg az (A) gombot a folytatáshoz
-  + Nyomd meg a (Start) gombot az eszköz újraindításához
-
-## GBA VC mentések visszaállítása
-
-Egy `<TitleID>.gbavc.sav` fájl Title ID-jének azonosításához használhatod a Title ID-k listáját, amit a következőképp érhetsz el: menj a `[A:] SYSNAND SD` opcióra, tartsd lenyomva az (R)-t, és nyomd meg az (A)-t, majd válaszd a "Search for titles" opciót.
-{: .notice--info}
-
-1. Csináld végig az alábbi lépéseket minden egyes GBA VC játékhoz, aminek a mentését vissza akarod állítani:
-  + Indítsd el az adott GBA VC játékot
-  + Lépj ki belőle
-  + Indítsd el a készülékedet a (Start) lenyomva tartásával, hogy megjelenjen a Luma3DS chainloader menü
-  + Indítsd el a GodMode9-et az a (A) gomb megnyomásával
-  + Menj ide: `[0:] SDCARD` -> `gm9`
-  + Nyomd meg az (Y) gombot a visszaállítani kívánt `<TitleID>.gbavc.sav` fájlon, hogy kimásold
-  + Nyomd meg a (B) gombot, hogy visszamenj a főmenübe
-  + Menj ide: `[S:] SYSNAND VIRTUAL`
-  + Nyomd meg az (A) gombot a `agbsave.bin` fájlon, hogy kijelöld
-  + Válaszd az "AGBSAVE options..." opciót
-  + Válaszd az "Inject GBA VC save" opciót
-  + Nyomd meg az (A) gombot a folytatáshoz
-  + Nyomd meg a (Start) gombot az eszköz újraindításához
-  + Indítsd el az adott GBA VC játékot
-  + Lépj ki belőle
-
 ## SD kártya formázása
 
 **Ne feledd, hogy ez minden adatot töröl az SD kártyádról!**
@@ -205,21 +120,6 @@ Egy `<TitleID>.gbavc.sav` fájl Title ID-jének azonosításához használhatod 
 1. Nyomd meg az (A) gombot, hogy elfogadd a `GM9SD` címkét
   + Persze tetszőlegesen megadhatsz más, egyedi nevet is az SD kártyádnak
 1. Ha kéri, akkor nyomd meg sorban azokat a gombokat, amiket kijelez a képernyőn, hogy beleegyezz a formázásba
-
-## .CIA fájl titkosítása / visszafejtése
-
-A rend kedvéért, másold a titkosítani vagy visszafejteni kívánt `.cia` fájljaidat az SD kártyád `/cias/` mappájába
-{: .notice--info}
-
-1. Indítsd el a GodMode9-et a (Start) lenyomva tartásával boot közben
-1. Menj ide: `[0:] SDCARD` -> `cias`
-1. Nyomd meg az (A)-t a `.cia` fájlon, hogy kijelöld, majd válaszd a "CIA image options..." opciót
-1. Válaszd ki a megfelelő opciót attól függően, hogy mit szeretnél csinálni:
-    + **Encrypt to 0:/gm9/out:** Létrehoz egy titkosított másolatot a kiválasztott `.cia` fájlból az SD kártyád `/gm9/out/` mappájában
-    + **Decrypt to 0:/gm9/out:** Létrehoz egy titkosítatlan másolatot a kiválasztott `.cia` fájlból az SD kártyád `/gm9/out/` mappájában
-    + **Encrypt inplace:** Cseréli a kijelölt `.cia` fájlt a titkosított változatára
-    + **Decrypt inplace:** Cseréli a kijelölt `.cia` fájlt a titkosítatlan változatára
-1. A titkosított / visszafejtett `.cia` fájlodat ezután megtalálod a kívánt helyen
 
 ## NNID eltávolítása az eszközöd formázása nélkül
 
