@@ -108,92 +108,6 @@ Health & Safetyよりも大きいファイルをインジェクトすること�
 1. (A) ボタンを押し、表示されるコンボを入力することで、 SysNAND (lvl1) への書き込みを許可します
 1. (A) ボタンを押すとNANDへの書き込みを再ロックできます
 
-## ゲームカードのダンプ
-
-{% capture notice %}
-デバイスにダンプしたいゲームカートリッジを挿入してください
-  + 3DSゲームカートリッジは、インストール可能な `.cia`フォーマットにダンプされます
-  + NDSのゲームカートリッジは、フラッシュカードやエミュレータと互換性のあるインストール不可能な `.nds`フォーマットにダンプされます
-{% endcapture %}
-
-<div class="notice--info">{{ notice | markdownify }}</div>
-
-1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
-1. `[C:] GAMECART`へ移動します
-1. ゲームカートリッジに適用される手順に従ってください:
-  + **3DS ゲームカード:**`[TitleID].trim.3ds` で (A) を押して選択し、"NCSD image options..." から "Build CIA from file" を選択します。
-  + **NDS ゲームカード:** `[TitleID].trim.nds` で(A) を押して選択し "Copy to 0:/gm9/out"を選択します
-1. インストール可能な `.cia`またはインストール不可能な`.nds`形式のファイルは、SDカードの `/gm9/out/`フォルダに出力されます
-
-## タイトルのダンプ
-
-1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
-1. ダンプしたいタイトルに該当するドライブへカーソルを合わせます:
-  + **インストール済みのタイトル**: `[A:] SYSNAND SD`
-  + **システムタイトル**: `[1:] SYSNAND CTRNAND`
-1. (R) と (A) を同時に押してドライブオプションを開きます
-1. "Search for titles"を選択します
-1. (A) で続行します
-1. `.tmd` ファイルを (A) で選択し、"TMD file options..." から "Build CIA (standard)"を選択します
-1. インストール可能な `.cia`形式のファイルは、SDカードの`/gm9/out/`フォルダに出力されます
-
-## .3DS から .CIAへの変換
-
-{% capture notice %}
-+ 変換したい `.3ds` ファイルをSDカードの `/cias/`
- フォルダにコピーしてください
-  + 既にflashcart上にある `.3ds`ファイルを変換する場合は、 [ゲームカードのダンプ](#dumping-a-game-cartridge) へ進んでください
-{% endcapture %}
-
-<div class="notice--info">{{ notice | markdownify }}</div>
-
-1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
-1. `[0:] SDCARD` → `cias` へ移動します
-1. `.3ds` ファイルを (A) で選択し、 "NCSD image options..." から "Build CIA from file"を選択します
-1. インストール可能な `.cia`形式のファイルは、SDカードの`/gm9/out/`フォルダに出力されます
-
-## GBA VCセーブのバックアップ
-
-セーブデータはSDカードの `/gm9/out/` フォルダに`<TitleID>.gbavc.sav`として出力されます
-{: .notice--info}
-
-`<TitleID>.gbavc.sav`ファイルのタイトルIDを特定するには`[A:] SYSNAND SD`で (R) を押しながら(A)を押すことで "Search for titles" を呼び出せます
-{: .notice--info}
-
-1. セーブをバックアップするため、GBA VCゲームごとに以下の処理を行います:
-  + GBA VCゲームを起動します
-  + GBA VCゲームを終了します
-  + (Start) を押しながらluma3dsをブートしてチェインローダーメニューを起動します。
-  + (A) ボタンで GodMode9 を呼び出します
-  + `[S:] SYSNAND VIRTUAL`へ移動します
-  + `agbsave.bin` を(A)で選択します
-  + "AGBSAVE options..."を選択します
-  + "Dump GBA VC save"を選択します
-  + (A) ボタンで続行します
-  + STARTキーを押してデバイスを再起動します。
-
-## GBA VCセーブのリストア
-
-`<TitleID>.gbavc.sav`ファイルのタイトルIDを特定するには`[A:] SYSNAND SD`で (R) を押しながら(A)を押すことで "Search for titles" を呼び出せます
-{: .notice--info}
-
-1. セーブを元に戻すGBA VCゲームごとに以下の処理を行います:
-  + GBA VCゲームを起動します
-  + GBA VCゲームを終了します
-  + (Start) を押しながらluma3dsをブートしてチェインローダーメニューを起動します。
-  + (A) ボタンで GodMode9 を呼び出します
-  + `[0:] SDCARD` -> `gm9`へ移動します。
-  + (Y) を押し `<TitleID>.gbavc.sav` をリストアします
-  + (B) を押してメインメニューに戻ります
-  + `[S:] SYSNAND VIRTUAL`へ移動します
-  + `agbsave.bin` を(A)で選択します
-  + "AGBSAVE options..."を選択します
-  + "Inject GBA VC save"を選択します
-  + (A) ボタンで続行します
-  + STARTキーを押してデバイスを再起動します。
-  + GBA VCゲームを起動します
-  + GBA VCゲームを終了します
-
 ## SDカードのフォーマット
 
 **SDカードの内容が全消去されますのでご注意ください!**
@@ -209,22 +123,6 @@ Health & Safetyよりも大きいファイルをインジェクトすること�
 1. (A) を押し、ラベルを`GM9SD`とします
   + 必要に応じて、SDカードのカスタム名を入力することもできます
 1. ヒントが出る時、表示されているキーコンボを入力し、確認します
-
-## CIAファイルの暗号化 / 復号化
-
-暗号化/復号化したい `.cia`ファイルをSDカードの`/cias/`フォルダにコピーしてください
-{: .notice--info}
-
-1. (START)ボタンを押しながらデバイスを起動させ、GodMode9を起動します。
-1. `[0:] SDCARD` → `cias` へ移動します
-1. `.cia`ファイルを (A) を押して選択し "CIA image options..." を選択してください。
-1. 目的の機能を実行するためのオプションを選択します:
-    + **Encrypt to 0:/gm9/out:** 選択した `.cia`ファイルの暗号化されたコピーをSDカードの
- `/gm9/out/` フォルダに作成します
-    + **Decrypt to 0:/gm9/out:** 選択した `.cia`ファイルの復号化されたコピーをSDカードの` / gm9 / out / `フォルダに作成します
-    + **Encrypt inplace:** 選択した `.cia`ファイルを暗号化されたバージョンに置き換えます
-    + **Decrypt inplace:** 選択した `.cia`ファイルを復号化されたバージョンに置き換えます
-1. 暗号化/復号化された `.cia`が目的の場所に出力されます
 
 ## 初期化せずにNNIDを削除する
 
