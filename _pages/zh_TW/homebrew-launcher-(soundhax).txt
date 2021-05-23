@@ -16,7 +16,7 @@ Soundhax (與 Homebrew Launcher 使用時) 可與韌體版本 9.0.0 至 11.3.0 �
 
 請注意，卡帶更新只會更新系統的核心組件，像是系統設定、HOME 主選單等。 卡帶更新不會更新『任天堂 3DS 音樂 (Nintendo 3DS Sound)』程式或是線上下載的功能，如軟體和資料轉移、網頁瀏覽器、擦身通信 Mii 廣場、或是電子商店 (eShop)。
 
-This means that using a cartridge update from a version containing an older Nintendo 3DS Sound version *(<2.1.0)* to one that introduced a newer Nintendo 3DS Sound version will break Soundhax! 您將會需要透過[另一個方法](homebrew-launcher-(alternatives))才能使用 Homebrew Launcher。
+這也就是說，如果本身系統版本有安裝較舊版的『任天堂 DS 音樂 (Nintendo 3DS Sound)』程式 *(低於 <2.1.0 之版本)* 且透過含有較新版本音樂撥放器的卡帶進行更新，Soundhax 漏洞將無法正常執行！ 您將會需要透過[另一個方法](homebrew-launcher-(alternatives))才能使用 Homebrew Launcher。
 {% endcapture %}
 
 <div class="notice--warning">{{ notice-1 | markdownify }}</div>
@@ -24,13 +24,13 @@ This means that using a cartridge update from a version containing an older Nint
 ### 必備項目
 
 * 最新版的 [Soundhax](http://soundhax.com) *(對應您主機的區域、型號、及版本的檔案)*
-  + If Soundhax appears in your browser as an unplayable video, press Ctrl+S or Cmd+S to save it to your computer
+  + 如果您下載 Soundhax 時，您的瀏覽器顯示了一個不可播放的影片，透過 Ctrl+S 或 Cmd+S 將此檔案存至電腦中
 * 最新版的 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
-* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(`boot9strap-1.3.zip`; not the `devkit` file, not the `ntr` file)*
+* 最新版的 [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(`boot9strap-1.3.zip`; 而非含有 `devkit` 或 `ntr` 檔案)*
 * 最新版的 [safehax](https://github.com/TiniVi/safehax/releases/latest) *(`.3dsx` 檔案)*
 * 最新版的 [udsploit](https://github.com/smealum/udsploit/releases/latest)
-* The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
-* The [otherapp payload](https://smealum.github.io/3ds/#otherapp) *(for your region, device, and version)*
+* 最新版的 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
+* [otherapp payload 檔案](https://smealum.github.io/3ds/#otherapp) *(選擇對應您主機的區域及型號的檔案)*
 
 ### 操作說明
 
@@ -39,7 +39,7 @@ This means that using a cartridge update from a version containing an older Nint
 1. 在 SD 卡的根目錄底下建立一個新資料夾 `3ds`
 1. 複製 Soundhax `.m4a` 至 SD 卡的根目錄底下
 1. 複製 otherapp 啟動程式到 SD 卡的根目錄底下，並重新命名其檔名為 `otherapp.bin`
-1. Copy `boot.firm` and `boot.3dsx` from the Luma3DS `.zip` to the root of your SD card
+1. 解壓 Luma3DS `.zip` 內的 `boot.firm` 及 `boot.3dsx` 到 SD 卡的根目錄底下
 1. 在 SD 卡的根目錄底下建立一個新的資料夾 `boot9strap`
 1. 解壓 boot9strap `.zip` 的 `boot9strap.firm` 及 `boot9strap.firm.sha` 檔案至 SD 卡的 `/boot9strap/` 資料夾中
 1. 將 `safehax.3dsx` 複製到 SD 卡中的 `/3ds/` 資料夾底下
