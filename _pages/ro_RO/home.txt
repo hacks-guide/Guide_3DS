@@ -9,82 +9,32 @@ header:
 excerpt: "Un ghid complet spre firmware personalizat pentru 3DS,<br />de la stoc la boot9strap.<br />" #
 ---
 
-Pentru ghiduri complete de homebrew și firmware personalizat pentru alte console, vedeți [Hacks.Guide](https://hacks.guide).
-{: .notice--primary}
-
-___
-
 Citiți cu atenție toate paginile introductive (inclusiv aceasta!) înainte de a continua.
 {: .notice--warning}
 
-{% capture notice-1 %}
-Acest ghid este _doar_ pentru consolele cumpărate din magazin (nu se aplică pentru cele din Nintendo Developer Program)!
-Dacă aveți un dispozitiv de dezvoltator ("PANDA"), vedeți [ghidul de modare pentru dezvoltatori 3DS](https://panda.hacks.guide).
-{% endcapture %}
+## What is custom firmware?
 
-<div class="notice--danger">{{ notice-1 | markdownify }}</div>
+**Custom firmware** ("CFW") is a full software modification to your 3DS, comparable to "administrator access" on a computer. It allows you to do anything that the 3DS is physically capable of doing, rather than being limited by whatever Nintendo allows you to do.
 
-{% capture notice-1 %}
-Acest ghid este disponibil în alte limbi!
-Faceţi clic pe iconița <i class="fa fa-language" aria-hidden="true"></i> în partea de sus dreapta a paginii pentru a schimba limba.
-Opțional, apăsați [aici](https://crowdin.com/project/3ds-guide) pentru a ajuta spre menține traducerile la zi.
-{% endcapture %}
+Popular uses for custom firmware include:
 
-<div class="notice--success">{{ notice-1 | markdownify }}</div>
-
-Acest ghid are nevoie de ajutorul *vostru* pentru a ajuta la a partaja (seed) [aceste]({{ "rss.xml" | absolute_url }}) torrente!
-{: .notice--primary}
-
-## Ce este Homebrew?
-
-[**Homebrew**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) usually refers to software that is not authorized by Nintendo. Asta include unelte de homebrew, aplicații, jocuri și emulatoare.
-
-În cele mai multe cazuri, rularea de homebrew pe dispozitivul dumneavoastră este 100% gratuită folosind doar aplicația Nintendo 3DS Sound. De asemenea, sunt și alte metode de exploatare pentru anumite jocuri și browserul pentru a rula homebrew.
-
-## Ce este Custom Firmware?
-
-**Custom Firmware** ("CFW") va permite utilizarea unor hack-uri mult mai avansate pe care homebrew-ul simplu nu le poate face. De exemplu, patch-uirea de semnături va permite instalarea titlurilor nesemnate care apar direct în meniul HOME.
-
-CFW poate fi instalat pe orice consolă în orice versiune (dar poate avea nevoie de unelte / acesorii suplimentare pentru versiuni >11.3.0).
+* Bypassing the region lock, allowing you to play games from other regions
+* Home menu customization, using community-created [themes and badges](https://themeplaza.art)
+* Modification of games ("ROM hacks") through [LayeredFS](https://github.com/knight-ryu12/godmode9-layeredfs-usage/wiki/Using-Luma3DS'-layeredfs-(Only-version-8.0-and-higher))
+* Save data editing, backup, and restore
+* Emulation of older consoles, as well as native playback of DS and GBA games
+* Installing your physical cartridges for digital use
 
 ## Ce instalează acest ghid?
 
-Acest ghid are ca scop transformarea unui 3DS complet nemodificat din firmware
-stoc în Custom Firmware cu boot9strap. Pe unele versiuni, homebrew-ul este folosit drept punct de plecare, dar scopul este tot Custom Firmware-ul.
-
-boot9strap este cea mai nouă și mai bună metodă de a rula Custom Firmware care ne dă acces complet la sistem doar de la câteva milisecunde de la pornire, ceea ce are un efect similar cu BootMii pentru Wii. Ea ne dă control chiar mai devreme decât ar fi reușit arm9loaderhax, şi, spre deosebire de sighax obișnuit, boot9strap foloseşte o exploatare de suprascriere de NDMA în scopul de a obţine codul de executare Boot9. Asta înseamnă că orice dispozitiv care rulează boot9strap este capabil de a face copie la un OTP unic pentru dispozitiv ('OTP.bin'), bootrom-ul ARM11 (boot11.bin) şi bootrom-ul ARM9 ('boot9.bin').
-
-Avantajele la boot9strap comparativ cu alte metode de a lansa Custom Firmware sunt numeroase, și de aceea este recomandat să folosiți acest ghid în loc de altul care foloseste software vechi (cum ar fi menuhax + rxTools, arm9loaderhax, sau chiar sighax obișnuit).
-
-Pentru informaţii despre cum funcţionează boot9strap, vă rugăm să consultaţi [această prezentare](https://arxiv.org/abs/1802.00359).
-
-Pentru o listă cu fiecare dintre semnăturile calculate de sighax, vedeți [acest gist](https://gist.github.com/SciresM/cdd2266efb80175d37eabbe86f9d8c52).
-
-## Ce pot face cu Custom Firmware?
-
-+ Puteți juca toate cardurile de joc și jocurile din eShop, indiferent de regiunea lor
-+ Customize your HOME Menu with user-created [themes and splash screens](https://themeplaza.art/)
-+ Puteți să folosiți "Hack-uri de ROM" pentru jocurile pe care le dețineti
-+ Puteți face capturi de ecran la aplicații sau gameplay
-+ Puteți salva, edita și recupera progresul din mai multe jocuri
-+ Puteți juca jocuri pentru console mai vechi prin intermediul emulatoarelor, folosind RetroArch sau altele. (Funcționează cel mai bine pe un New Nintendo 3DS)
-+ Puteți instala titluri homebrew pe sistemul dumneavoastră și să apară în meniul HOME
-+ Puteți să vă copiați jocurile de pe card într-un format care va permite să le instalați și să le jucați fără să aveți nevoie de el
-+ Doar pe un New 3DS sau New 2DS: puteți face difuzări în direct cu gameplay-ul consolei pe PC fără fire cu NTR CFW
-+ Rula multe flashcart-uri vechi pentru Nintendo DS care au fost blocate cu mult timp în urmă sau nu au mers niciodată pe Nintendo 3DS
-+ Puteți face actualizări în siguranță la ultima versiune de sistem fără a avea griji că o să pierdeți accesul la homebrew
+This guide will install **boot9strap + Luma3DS custom firmware** on **unmodified/stock** 3DS/2DS devices. If you have installed custom firmware in the past, you should follow [these instructions](checking-for-cfw) to find the correct upgrade path for your console. A modern, boot9strap/Luma3DS-based setup is preferred over older setups (arm9loaderhax, menuhax) because it is more stable for modern homebrew and continues to be supported by the community.
 
 ## Ce trebuie să știu înainte să încep?
 
-+ **Inainte să începeți acest ghid, trebuie să știți riscurile modării unui 3DS: DE FIECARE DATĂ când vă modificați sistemul, există întotdeauna potențialul de a face un brick IRECUPERABIL. Este rar, dar există o posibilitate așa că aveți grijă să urmați TOATE instrucțiunile cu EXACTITATE.**
-+ Daca v-ați modat deja 3DS-ul înainte pentru a avea o configurare de tip EmuNAND și doriți să mutați conținutul lui pe noul CFW SysNAND, va trebui să urmați toate instrucțiunile și să restaurați EmuNAND-ul vostru existent atunci când ajungeți la [Finalizând instalarea](finalizing-setup).
-+ This guide will work on New 3DS, Old 3DS, New 2DS, and Old 2DS in all regions and all versions, including the latest version (11.14.0).
-+ Dacă totul merge așa cum trebuie, nu o să pierdeți nimic și o să ajungeți să aveți toate lucrurile cu care ați început (jocurile, NNID, salvările, etc. vor fi păstrate).
-+ Țineți dispozitivul conectat și încărcat pe toată durata procedeului pentru a evita pierderea de date sau daune de la o închidere neașteptată!
-+ Cardul SD ar trebui să fie [MBR, nu GPT](http://www.howtogeek.com/245610/) (cardul SD care vine cu dispozitivul va fi MBR). The easiest way to test this is to check if the SD card works in your 3DS. If it works, the SD card is MBR.
-+ If you need to format a brand new SD card, you can format it to FAT32 using [guiformat (Windows)](formatting-sd-(windows)), [Disk Utility (Mac)](formatting-sd-(mac)), or [cfdisk (Linux)](formatting-sd-(linux)).
-+ Old 2DS este, în esenţă, identic cu Old 3DS în ceea ce priveşte software-ul, în timp ce New 2DS este identic cu New 3DS în ceea ce priveşte software-ul. Orice pas care spune "Old 3DS" se aplică de asemenea la Old 2DS, şi orice pas care spune "New 3DS" se aplică de asemenea la New 2DS.
-+ In order to follow this guide, you will need to be able to put files onto the SD card.
+* While the risks of bricking have been minimized over the years, **we are not responsible for anything that goes wrong with your device**. Incorrect file placement will not brick your device, but reckless behavior might.
+* This guide will work on every retail device in the Nintendo 3DS family of consoles (including the New 3DS series and the 2DS), regardless of region or firmware.
+* Following this guide alone should not result in data loss, but SD card corruption is always a possibility. You should make a backup of your SD card contents if you have important data.
+* You will need a working SD card in your 3DS, as well as the ability to write files to the SD card. The 3DS can read SD cards formatted as MBR/FAT32.
 
 ___
 
