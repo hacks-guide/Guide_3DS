@@ -9,82 +9,32 @@ header:
 excerpt: "Kompletna instrukcja instalacji Custom Firmware na konsoli Nintendo 3DS, <br /> od fabrycznej, niezmodyfikowanej wersji do boot9strap.<br />"
 ---
 
-Więcej poradników na temat uzyskiwania Homebrew i Custom Firmware dla innych urządzeń możesz znaleźć na [Hacks.Guide](https://hacks.guide).
-{: .notice--primary}
-
-___
-
 Dokładnie przeczytaj wszystkie strony wprowadzające (także tą!) zanim przejdziesz dalej.
 {: .notice--warning}
 
-{% capture notice-1 %}
-Ta instrukcja przeznaczona jest wyłącznie dla konsol detalicznych (zakupionych przez indywidualnych klientów; nie dla konsol z programu Nintendo Developer)!
-Jeśli posiadasz deweloperski model konsoli ("PANDA"), sprawdź [Panda 3DS Hacks Guide](https://panda.hacks.guide).
-{% endcapture %}
+## What is custom firmware?
 
-<div class="notice--danger">{{ notice-1 | markdownify }}</div>
+**Custom firmware** ("CFW") is a full software modification to your 3DS, comparable to "administrator access" on a computer. It allows you to do anything that the 3DS is physically capable of doing, rather than being limited by whatever Nintendo allows you to do.
 
-{% capture notice-1 %}
-Ten poradnik jest dostępny w innych językach!
-Kliknij <i class="fa fa-language" aria-hidden="true"></i> w prawym górnym rogu strony, aby zmienić język.
-Jeśli chcesz wspomóc tłumaczenie tego poradnika na inne języki kliknij [tutaj](https://crowdin.com/project/3ds-guide).
-{% endcapture %}
+Popular uses for custom firmware include:
 
-<div class="notice--success">{{ notice-1 | markdownify }}</div>
-
-Ten poradnik potrzebuje twojej pomocy w seedowaniu [tych]({{ "rss.xml" | absolute_url }}) torrentów!
-{: .notice--primary}
-
-## Co to jest Homebrew?
-
-[**Homebrew**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) usually refers to software that is not authorized by Nintendo. Obejmuje to narzędzia, aplikacje, gry i emulatory Homebrew.
-
-W wielu przypadkach, uruchamianie Homebrew na twojej konsoli jest w 100% darmowe przy użyciu wyłącznie aplikacji Nintendo 3DS Sound. Istnieją także różnorakie inne luki w komercyjnych grach oraz przeglądarce internetowej Nintendo 3DS, które pozwalają na uruchamianie Homebrew.
-
-## Czym jest Custom Firmware?
-
-**Custom Firmware** ("CFW") pozwala na używanie bardziej zaawansowanych modyfikacji, takich których zwykły dostęp do Homebrew nie może z łatwością zapewnić. Przykładowo, patch podpisów pozwala na instalację niepodpisanych aplikacji, które pojawiają się bezpośrednio w HOME Menu.
-
-CFW można zainstalować na każdej konsoli i na dowolnej wersji (wersje >11.3.0 mogą wymagać użycia dodatkowych narzędzi / akcesoriów).
+* Bypassing the region lock, allowing you to play games from other regions
+* Home menu customization, using community-created [themes and badges](https://themeplaza.art)
+* Modification of games ("ROM hacks") through [LayeredFS](https://github.com/knight-ryu12/godmode9-layeredfs-usage/wiki/Using-Luma3DS'-layeredfs-(Only-version-8.0-and-higher))
+* Save data editing, backup, and restore
+* Emulation of older consoles, as well as native playback of DS and GBA games
+* Installing your physical cartridges for digital use
 
 ## Co jest celem tego poradnika?
 
-Końcowym celem tego poradnika jest przerobienie zupełnie niezmodyfikowanego, fabrycznego firmware konsoli Nintendo 3DS
-na Custom Firmware oparty na boot9strap. W przypadku niektórych wersji firmware, instrukcja wykorzystuje homebrew jako punkt bazowy, jednak Custom Firmware jest nadal jej celem.
-
-boot9strap jest najnowszą i jak dotychczas najlepszą metodą uruchamiania Custom Firmware, która daje niemal pełną kontrolę nad działaniem konsoli już po milisekundach od jej uruchomienia, co jest podobne do działania BootMii dla konsoli Nintendo Wii. To daje nam kontrolę nad systemem nawet na wcześniejszych etapach uruchamiania niż dawał nam arm9loaderhax, i w przeciwieństwie do standardowego sighax, boot9strap używa metody nadpisania NDMA w celu uzyskania możliwości uruchamiania kodu Boot9. Oznacza to, że każda konsola z zainstalowanym boot9strap może zrobić zrzut (dump) unikalnego dla konsoli OTP (`OTP.bin`), bootromu ARM11 (`boot11.bin`), i bootromu ARM9 (`boot9.bin`).
-
-Boot9strap ma bardzo wiele zalet w porównaniu do innych metod uruchamiania Custom Firmware, dlatego używanie tego poradnika zamiast innych (np. takich, które korzystają z menuhax + rxTools, arm9loaderhax, lub zwykłego sighax) jest wskazane.
-
-Aby uzyskać dokładne informacje, na jakiej zasadzie działa boot9strap, zobacz [tę dokumentację](https://arxiv.org/abs/1802.00359).
-
-Aby zobaczyć pełną listę podpisów sighax, zobacz [ten gist](https://gist.github.com/SciresM/cdd2266efb80175d37eabbe86f9d8c52).
-
-## Co mogę zrobić z Custom Firmware?
-
-+ Grać we wszystkie gry, zarówno z kartridżów, jak i wersje eShop, niezależnie od regionu
-+ Customize your HOME Menu with user-created [themes and splash screens](https://themeplaza.art/)
-+ Używać "ROM hacków" dla gier, które posiadasz
-+ Wykonywać zrzuty ekranu gier oraz aplikacji
-+ Tworzyć kopie zapasowe, edytować i przywracać zapisy wielu gier
-+ Uruchamiać gry ze starszych systemów przy użyciu różnorakich emulatorów, bazujących na RetroArch lub innych, niezależnych emulatorów. (Działa najlepiej na New Nintendo 3DS)
-+ Instalować aplikacje homebrew na swojej konsoli i mieć do nich dostęp bezpośrednio z HOME Menu
-+ Wykonać kopie swoich gier na kartridżach, do formatu, który możesz zainstalować, co umożliwi ich uruchamianie bez potrzeby kartridża
-+ Wyłącznie New 3DS/2DS: transmitować bezprzewodowo obraz z gier do swojego PC przy użyciu NTR CFW
-+ Uruchomić wiele flashcartów (w polskiej terminologii nazywanych także programatorami) Nintendo DS, które od dawna są zablokowane i nigdy nie działały na Nintendo 3DS z oryginalnym oprogramowaniem sprzętowym
-+ Bezpiecznie aktualizować oprogramowanie sprzętowe do najnowszej wersji, bez obaw o utratę dostępu do homebrew
+This guide will install **boot9strap + Luma3DS custom firmware** on **unmodified/stock** 3DS/2DS devices. If you have installed custom firmware in the past, you should follow [these instructions](checking-for-cfw) to find the correct upgrade path for your console. A modern, boot9strap/Luma3DS-based setup is preferred over older setups (arm9loaderhax, menuhax) because it is more stable for modern homebrew and continues to be supported by the community.
 
 ## Co powinienem wiedzieć przed rozpoczęciem?
 
-+ **Przed rozpoczęciem wykonywania instrukcji, musisz znać zagrożenia przerabiania Nintendo 3DS: przy KAŻDEJ modyfikacji systemu istnieje potencjalne ryzyko NIEODWRACALNEGO BRICK'A. Są one rzadkie, ale nadal możliwe, więc upewnij się, że wykonałeś WSZYSTKIE kroki DOKŁADNIE.**
-+ Jeśli już wcześniej przerobiłeś swoją konsolę używając EmuNAND, i chcesz przenieść jego zawartość na twój nowy SysNAND CFW, postępuj zwyczajnie według tego poradnika i przenieś swój istniejący EmuNAND, kiedy zostaniesz o to zapytany w rozdziale [Finalizowanie Instalacji](finalizing-setup).
-+ This guide will work on New 3DS, Old 3DS, New 2DS, and Old 2DS in all regions and all versions, including the latest version (11.14.0).
-+ Jeśli wszystko pójdzie zgodnie z planem, nie stracisz żadnych danych i wszystko pozostanie tak, jak przed rozpoczęciem poradnika (gry, NNID, zapisy itp. zostaną zachowane).
-+ Pozostaw swoją konsolę podłączoną do ładowarki i naładowaną podczas całego procesu, aby nie dopuścić do utraty danych, lub uszkodzenia spowodowanego niespodziewanym wyłączeniem konsoli!
-+ Tabelą partycji twojej karty SD powinien być [MBR, nie GPT](http://www.howtogeek.com/245610/) (karta SD, która przychodzi z twoim urządzeniem będzie domyślnie w MBR). The easiest way to test this is to check if the SD card works in your 3DS. If it works, the SD card is MBR.
-+ If you need to format a brand new SD card, you can format it to FAT32 using [guiformat (Windows)](formatting-sd-(windows)), [Disk Utility (Mac)](formatting-sd-(mac)), or [cfdisk (Linux)](formatting-sd-(linux)).
-+ Old 2DS jest niemal identyczny jak Old 3DS pod względem oprogramowania, podczas gdy New 2DS jest zasadniczo identyczny jak New 3DS nowy pod względem oprogramowania. Kroki które mówią o "Old 3DS" można śmiało zastosować do Old 2DS, zaś wszystkie kroki opisane jako "New 3DS" pasują również do New 2DS.
-+ In order to follow this guide, you will need to be able to put files onto the SD card.
+* While the risks of bricking have been minimized over the years, **we are not responsible for anything that goes wrong with your device**. Incorrect file placement will not brick your device, but reckless behavior might.
+* This guide will work on every retail device in the Nintendo 3DS family of consoles (including the New 3DS series and the 2DS), regardless of region or firmware.
+* Following this guide alone should not result in data loss, but SD card corruption is always a possibility. You should make a backup of your SD card contents if you have important data.
+* You will need a working SD card in your 3DS, as well as the ability to write files to the SD card. The 3DS can read SD cards formatted as MBR/FAT32.
 
 ___
 
