@@ -9,82 +9,32 @@ header:
 excerpt: "Полное руководство по прошивке 3DS, <br /> от начала до boot9strap.<br />"
 ---
 
-Полные руководства по хоумбрю и кастомным прошивкам для других консолей читайте здесь: [Hacks.Guide](https://hacks.guide).
-{: .notice--primary}
-
-___
-
 Внимательно прочитайте все вводные страницы (включая эту!) прежде чем продолжить.
 {: .notice--warning}
 
-{% capture notice-1 %}
-Это руководство применимо _только_ для консолей, продающихся в рознице. Приставки для разработчиков невозможно прошить по этой инструкции!
-Если у вас версия для разработчиков ("PANDA"), воспользуйтесь [этой инструкцией](https://panda.hacks.guide) (англ.).
-{% endcapture %}
+## What is custom firmware?
 
-<div class="notice--danger">{{ notice-1 | markdownify }}</div>
+**Custom firmware** ("CFW") is a full software modification to your 3DS, comparable to "administrator access" on a computer. It allows you to do anything that the 3DS is physically capable of doing, rather than being limited by whatever Nintendo allows you to do.
 
-{% capture notice-1 %}
-Это руководство доступно на других языках!
-Нажмите на значок <i class="fa fa-language" aria-hidden="true"></i> в правом верхнем углу страницы, чтобы изменить язык.
-Или же нажмите [сюда](https://crowdin.com/project/3ds-guide), чтобы помочь поддерживать перевод в актуальном состоянии.
-{% endcapture %}
+Popular uses for custom firmware include:
 
-<div class="notice--success">{{ notice-1 | markdownify }}</div>
-
-Руководству необходима *ваша* помощь в раздаче [этих]({{ "rss.xml" | absolute_url }}) файлов!
-{: .notice--primary}
-
-## Что такое Homebrew?
-
-Под словом [**Homebrew (хоумбрю)**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games) (англ.) обычно подразумевают программное обеспечение, не авторизованное Nintendo. Это включает хоумбрю утилиты, приложения, игры и эмуляторы.
-
-В большинстве случаев запуск homebrew абсолютно бесплатен и использует приложение Звук Nintendo 3DS (Nintendo 3DS Sound). Существуют также другие методы запуска, использующие платные игры или браузер.
-
-## Что такое кастомная прошивка (CFW)?
-
-**Кастомная прошивка** ("CFW", "кастом") позволяет использовать более продвинутые инструменты, чем простые homebrew. Например, можно устанавливать неподписанное ПО и запускать его прямо из меню HOME.
-
-Кастомная прошивка может быть установлена на любую консоль с любой прошивкой (для версий прошивки >11.3.0 могут потребоваться дополнительные инструменты / аксессуары).
+* Bypassing the region lock, allowing you to play games from other regions
+* Home menu customization, using community-created [themes and badges](https://themeplaza.art)
+* Modification of games ("ROM hacks") through [LayeredFS](https://github.com/knight-ryu12/godmode9-layeredfs-usage/wiki/Using-Luma3DS'-layeredfs-(Only-version-8.0-and-higher))
+* Save data editing, backup, and restore
+* Emulation of older consoles, as well as native playback of DS and GBA games
+* Installing your physical cartridges for digital use
 
 ## Что устанавливается в этом руководстве?
 
-Конечная цель этого руководства - это установка на не взломанную 3DS
-кастомной прошивки с boot9strap. В некоторых случаях мы используем homebrew как промежуточный шаг для достижения конечной цели - кастомной прошивки.
-
-boot9strap - новейший и наилучший метод запуска кастомной прошивки. Благодаря ему можно получить практически неограниченный доступ к системе спустя несколько миллисекунд после загрузки, что похоже на эффект BootMii для Wii. Это дает еще более ранний контроль над системой, чем arm9loaderhax, и, в отличие от стандартного sighax, boot9strap использует уязвимость перезаписи NDMA, для того чтобы получить выполнение кода с Boot9 привилегиями. Это означает, что любая консоль, использующая boot9strap, имеет возможность сохранения уникального OTP (`OTP.bin`), ARM11 bootrom (`boot11.bin`), и ARM9 bootrom (`boot9.bin`).
-
-Boot9strap имеет множество преимуществ перед другими методами запуска кастомных прошивок. Поэтому он рекомендован к использованию в этом руководстве вместо устаревших программ и методов запуска кастомных прошивок (например, menuhax + rxTools, arm9loaderhax, или даже обычный sighax).
-
-Для получения информации о том, как работает boot9strap, пожалуйста, посмотрите [этот документ](https://arxiv.org/abs/1802.00359) (англ.).
-
-Для получения списка всех вычисленных подписей sighax, обратитесь к [этому gist](https://gist.github.com/SciresM/cdd2266efb80175d37eabbe86f9d8c52) (англ.).
-
-## Что позволяет кастомная прошивка?
-
-+ Играть в любые игры, доступные на картриджах или в eShop, вне зависимости от региона
-+ Customize your HOME Menu with user-created [themes and splash screens](https://themeplaza.art/)
-+ Использовать "ROM hacks" для имеющихся игр
-+ Делать скриншоты игр и приложений
-+ Делать резервные копии, редактировать и восстанавливать сохранения игр
-+ Играть в игры от приставок предыдущих поколений с помощью эмуляторов. (на New 3DS производительность выше)
-+ Устанавливать homebrew-приложения и делать их доступными прямо из меню HOME
-+ Сохранять игры с картриджей в формате, который впоследствии можно установить и играть без картриджа
-+ Только New 3DS или New 2DS: транслировать геймплей на компьютер по беспроводной сети с помощью NTR CFW
-+ Использовать старые флешкартриджи для Nintendo DS, которые были давно заблокированы или не работали на Nintendo 3DS
-+ Безопасно обновляться до актуальных версий прошивок без боязни потерять доступ к homebrew
+This guide will install **boot9strap + Luma3DS custom firmware** on **unmodified/stock** 3DS/2DS devices. If you have installed custom firmware in the past, you should follow [these instructions](checking-for-cfw) to find the correct upgrade path for your console. A modern, boot9strap/Luma3DS-based setup is preferred over older setups (arm9loaderhax, menuhax) because it is more stable for modern homebrew and continues to be supported by the community.
 
 ## Что нужно знать перед тем, как начать?
 
-+ **Перед тем, как начинать прошивку, следует понимать риск взлома 3DS: КАЖДЫЙ раз, модифицируя прошивку консоли, вы рискуете получить НЕВОССТАНОВИМЫЙ брик. Вероятность этого крайне низкая, но шанс всё равно есть. Так что убедитесь что вы СТРОГО следуете всем указаниям.**
-+ Если ранее вы уже взламывали свою 3DS для получения EmuNAND и хотите перенести его содержимое в SysNAND с кастомной прошивкой, просто следуйте руководству пока не дойдете до пункта о восстановлении EmuNAND в разделе [Завершение установки](finalizing-setup).
-+ This guide will work on New 3DS, Old 3DS, New 2DS, and Old 2DS in all regions and all versions, including the latest version (11.14.0).
-+ Если всё пройдет по плану, вы ничего не потеряете и всё останется в первоначальном состоянии (игры, сохранения, NNID).
-+ Держите консоль подключенной к зарядному устройству на протяжении всего процесса, чтобы избежать потери данных или поломки в случае внезапного отключения консоли!
-+ SD-карта должна использовать [MBR, а не GPT](http://www.howtogeek.com/245610/) (англ.) (SD-карта, входящая в комплект, уже использует MBR). The easiest way to test this is to check if the SD card works in your 3DS. If it works, the SD card is MBR.
-+ If you need to format a brand new SD card, you can format it to FAT32 using [guiformat (Windows)](formatting-sd-(windows)), [Disk Utility (Mac)](formatting-sd-(mac)), or [cfdisk (Linux)](formatting-sd-(linux)).
-+ Old 2DS программно в основном идентична Old 3DS, в то время как New 2DS программно в основном идентична New 3DS. Все шаги, предназначенные для "Old 3DS", также применимы к Old 2DS, а все шаги, предназначенные для "New 3DS", также применимы к New 2DS.
-+ In order to follow this guide, you will need to be able to put files onto the SD card.
+* While the risks of bricking have been minimized over the years, **we are not responsible for anything that goes wrong with your device**. Incorrect file placement will not brick your device, but reckless behavior might.
+* This guide will work on every retail device in the Nintendo 3DS family of consoles (including the New 3DS series and the 2DS), regardless of region or firmware.
+* Following this guide alone should not result in data loss, but SD card corruption is always a possibility. You should make a backup of your SD card contents if you have important data.
+* You will need a working SD card in your 3DS, as well as the ability to write files to the SD card. The 3DS can read SD cards formatted as MBR/FAT32.
 
 ___
 
