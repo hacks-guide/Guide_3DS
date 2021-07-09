@@ -9,85 +9,32 @@ header:
 excerpt: "最完整的 3DS 改機教戰手冊，<br />教您如何從原廠主機改成 boot9strap。<br />"
 ---
 
-有關於其他主機的改機手冊，請見 [Hacks.Guide](https://hacks.guide)。
-{: .notice--primary}
-
-___
-
 請在繼續前讀完所有的前言頁面 (包括本頁！)。
 {: .notice--warning}
 
-{% capture notice-1 %}
-此指南 _僅_ 適用於零售機使用 (透過正常管道購買；非任天堂開發者計畫所取得的主機)！
-如果您的主機為開發人員主機 (PANDA)，請見[Panda 3DS 開發者改機手冊](https://panda.hacks.guide)。
-{% endcapture %}
+## What is custom firmware?
 
-<div class="notice--danger">{{ notice-1 | markdownify }}</div>
+**Custom firmware** ("CFW") is a full software modification to your 3DS, comparable to "administrator access" on a computer. It allows you to do anything that the 3DS is physically capable of doing, rather than being limited by whatever Nintendo allows you to do.
 
-{% capture notice-1 %}
-本手冊支持其他語言！
-按下右上角的 <i class="fa fa-language" aria-hidden="true"></i> 圖案以切換語言。
-或者，按一下[這裡](https://crowdin.com/project/3ds-guide)來貢獻您的翻譯以確保其為最新版本。
-{% endcapture %}
+Popular uses for custom firmware include:
 
-<div class="notice--success">{{ notice-1 | markdownify }}</div>
-
-**本指南需要*您*的幫助來作種[這些]({{ "rss.xml" | absolute_url }}) 種子檔案！**
-{: .notice--primary}
-
-## 什麼是自製程式 (Homebrew)？
-
-[**自製程式**](https://en.wikipedia.org/wiki/List_of_homebrew_video_games)
- (Homebrew) 通常是指未經由任天堂所授權之軟體。 這包括自製工具、應用程式、遊戲和模擬器。
-
-在許多情況下，在您主機上運行自製程式是完全免費的，只需要透過 3DS 的音樂播放器就可以了。除此之外，也有其他方式可以用來運行自製程式，像是透過其他遊戲或 3DS 瀏覽器的漏洞。
-
-## 什麼是自製韌體 (Custom Firmware)？
-
-**自製韌體** (CFW) 可以做些使用者空間中自製程式無法輕易做到的更高階的修改及破解。 例如，簽證補丁 (Signature patches) 可以讓您安裝任何為簽證的程式到您的 HOME 主選單中。
-
-任何主機及版本都能夠任意地安裝自製韌體 (但高於 11.3.0 版本的系統可能會需要使用其他額外工具)。
+* Bypassing the region lock, allowing you to play games from other regions
+* Home menu customization, using community-created [themes and badges](https://themeplaza.art)
+* Modification of games ("ROM hacks") through [LayeredFS](https://github.com/knight-ryu12/godmode9-layeredfs-usage/wiki/Using-Luma3DS'-layeredfs-(Only-version-8.0-and-higher))
+* Save data editing, backup, and restore
+* Emulation of older consoles, as well as native playback of DS and GBA games
+* Installing your physical cartridges for digital use
 
 ## 本手冊將安裝些什麼？
 
-此教學的目的是將未改機的 3DS 從原廠
-韌體改為基於 boot9strap 的自製韌體。 在某些版本中，我們會將自製程式當作跳板，但最終目的仍是為了安裝自製韌體。
-
-boot9strap 是目前最新且最棒的自製韌體啟動方式，有點像 Wii 上面的 BootMii 一樣，光是在開機前幾毫秒就能掌握整台主機的控制權。 它跟 arm9loaderhax 相比能更早取得系統控制權，再加上它跟普通的 sighax 不同，boot9strap 使用
- NDMA 複寫漏洞，於 Boot9 中執行程序。 這也就是說，任何已安裝 boot9strap 的主機皆能轉儲主機中的 OTP 金鑰
- (`OTP.bin`)、ARM11 bootrom (`boot11.bin`) 以及 ARM9 bootrom (`boot9.bin`)。
-
-跟其他自製韌體比起來，boot9strap 的優點多太多了。這就是為什麼我們推薦使用本手冊，而非其他還在使用過時軟體 (像是 menuhax + rxTools、arm9loaderhax、或甚至普通的 sighax) 的教學。
-
-如果想了解 boot9strap 如何運作的，請見此[研究專題](https://arxiv.org/abs/1802.00359)。
-
-如果想看各個計算出的 sighax 簽證，請見[此 gist](https://gist.github.com/SciresM/cdd2266efb80175d37eabbe86f9d8c52)。
-
-## 我可以透過自製韌體做些什麼？
-
-+ 遊玩任一區的遊戲卡帶或電子商店 (eShop) 上的遊戲
-+ 透過[社群所製的主題及啟動畫面](https://themeplaza.art/)以個人化您的 HOME 選單
-+ 套用金手指
-+ 遊戲或軟體截圖
-+ 備份、修改、還原許多遊戲的存檔
-+ 用像是 RetroArch 或其他模擬器來玩些其他系統的遊戲 (New 3DS 效果最佳)
-+ 安裝自製軟體，並讓它們出現在您的 HOME 主選單中
-+ 將您的卡帶轉成可安裝的格式；這樣就再也不需要帶著卡帶到處跑了
-+ 僅適用於 New 3DS 和 New 2DS：透過 NTR 自製系統以無線串流的方式，直播畫面到電腦上
-+ 在 3DS 上遊玩早被禁用的 DS 燒錄卡
-+ 未來可以安全地升級到最新版的系統，也不用怕會失去使用自製軟體的功能
+This guide will install **boot9strap + Luma3DS custom firmware** on **unmodified/stock** 3DS/2DS devices. If you have installed custom firmware in the past, you should follow [these instructions](checking-for-cfw) to find the correct upgrade path for your console. A modern, boot9strap/Luma3DS-based setup is preferred over older setups (arm9loaderhax, menuhax) because it is more stable for modern homebrew and continues to be supported by the community.
 
 ## 在開始前我得注意什麼？
 
-+ **在開始前，您一定得注意 3DS 改機的風險：每當您修改系統時，都有可能造成無法挽回的磚機。 這種情況是滿罕見的，但還是有可能的；所以請確實遵守每一個步驟。**
-+ 如果您之前已透過 EmuNAND 的方式改機，而您現在想把您之前的 EmuNAND 移植到您新的 SysNAND 自製韌體底下，您可以在依正常步驟進行，並在[完成安裝](finalizing-setup)這一步中依照提示還原的您 EmuNAND。
-+ 此教學手冊適用於各地區且搭載各版本 (含 11.14.0) 的 New 3DS、舊型 3DS、New 2DS、及舊型 2DS。
-+ 如果一切都順利的話，您將不會失去任何資料 (像是遊戲、NNID、存檔... 等都會被留下)。
-+ 請在充電的情況下改機，以確保途中不會因為電力關係而突然關機造成資料遺失或甚至毀損！
-+ 您的 SD 卡應為 [MBR 格式，而非 GPT](http://www.howtogeek.com/245610/) (原廠 SD 卡一律都是以 MBR 格式出廠)。 如果你想測試你的 SD 卡是否為 MBR 格式，最簡單的方法是將其插入 3DS。 如果 SD 卡能被讀取，那麼它的分區表格式就是 MBR。
-+ 如果您想使用一張全新的 SD 卡，您可透過 [guiformat (Windows)](formatting-sd-(windows)), [Disk Utility (Mac)](formatting-sd-(mac)), 或 [cfdisk (Linux)](formatting-sd-(linux)) 將其格式化為 FAT32。
-+ 舊型 2DS 與舊型 3DS 的軟體是幾乎一樣的；New 2DS 與 New 3DS 也是同樣的道理。 因此，任何提及「舊型 3DS」的步驟將套用於「舊型 2DS」；而任何提及「New 3DS」的步驟也將套用於「New 2DS」。
-+ 本教學手冊中的前提為您必須能將檔案複製到 SD 卡中。
+* While the risks of bricking have been minimized over the years, **we are not responsible for anything that goes wrong with your device**. Incorrect file placement will not brick your device, but reckless behavior might.
+* This guide will work on every retail device in the Nintendo 3DS family of consoles (including the New 3DS series and the 2DS), regardless of region or firmware.
+* Following this guide alone should not result in data loss, but SD card corruption is always a possibility. You should make a backup of your SD card contents if you have important data.
+* You will need a working SD card in your 3DS, as well as the ability to write files to the SD card. The 3DS can read SD cards formatted as MBR/FAT32.
 
 ___
 
