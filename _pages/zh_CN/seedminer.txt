@@ -9,11 +9,11 @@ title: "Seedminer"
 
 ### 必读事项
 
-为了在你的设备上安装 boot9strap，我们需要获得你主机上的唯一加密密钥。
+为了在你的主机上安装 boot9strap，我们需要获得你主机上的唯一加密密钥。
 
-为了做到这点，我们使用了一个叫 Seedminer 的工具来计算你设备的 DSiWare 加密密钥（`movable.sed`）。 然后, 我们使用 DSiWare 加密密钥来解密与漏洞相兼容的 DSiWare 游戏。之后，我们将漏洞植入游戏好让我们运行任何想要运行的程序（漏洞种类视你的主机系统区域而定）。
+为了做到这点，我们使用了一个叫 Seedminer 的工具来计算你主机的 DSiWare 加密密钥（`movable.sed`）。 然后, 我们使用 DSiWare 加密密钥来解密与漏洞相兼容的 DSiWare 游戏。之后，我们将漏洞植入游戏好让我们运行任何想要运行的程序（漏洞种类视你的主机系统区域而定）。
 
-如果这个密钥是完全随机生成的，那么加密密钥将不可能被破解出来。 幸运的是，密钥的前半部分（`movable_part1.sed`）与你的设备的朋友代码（Friend code）有着一些关系，使我们能够破解加密。 如果想要了解 Seedminer 是怎么工作的，请参见此[介绍资料](https://zoogie.github.io/web/34⅕c3)。
+如果这个密钥是完全随机生成的，那么加密密钥将不可能被破解出来。 幸运的是，密钥的前半部分（`movable_part1.sed`）与你的主机的朋友代码（Friend code）有着一些关系，使我们能够破解加密。 如果想要了解 Seedminer 是怎么工作的，请参见此[介绍资料](https://zoogie.github.io/web/34⅕c3)。
 
 本教程需要利用一个高性能的显卡来进行一些计算。 不过有一个志愿者网站可以帮助你做需要显卡的步骤。
 
@@ -27,8 +27,8 @@ title: "Seedminer"
   + 不要再点进任何文件夹
   + 如果你在 `Nintendo 3DS` 文件夹中看到多个非常长且随机名称的文件夹（请注意不要再点击进入任何一个文件夹），请执行以下操作：
   + 将 `Nintendo 3DS` 文件夹重命名为 `BACKUP_Nintendo 3DS`
-  + 重新将 SD 卡插入设备并开机
-  + 等待设备生成 SD 卡中的数据
+  + 重新将 SD 卡插入主机并开机
+  + 等待主机生成 SD 卡中的数据
   + 关机并将 SD 卡重新插入你的电脑
   + 打开你 SD 卡的 `Nintendo 3DS` 文件夹
   + 复制你看到的32位字符文件夹的名称
@@ -38,7 +38,7 @@ title: "Seedminer"
   + 这个文件夹名也称作 “ID0”
 1. 启动你的主机
 1. 打开你的好友列表（主菜单中最上方的[橙色的笑脸]({{ "/images/friend-list-icon.png" | absolute_url }})）
-  + 如果出现错误信息并被踢回到主菜单，则你需要创建一个 Mii 形象或你的设备无法连接到任天堂服务器（由于封禁或网络问题）
+  + 如果出现错误信息并被踢回到主菜单，则你需要创建一个 Mii 形象或你的主机无法连接到任天堂服务器（由于封禁或网络问题）
 1. 找到你的 Mii 个人形象，然后在上屏寻找你的“朋友代码（Friend Code）”
 
 #### 第二步 – Seedminer
@@ -46,7 +46,7 @@ title: "Seedminer"
 1. 在你的电脑上打开 [Bruteforce Movable](https://seedminer.hacks.guide/)
   + 这个网站可以自动替你获取 `movable_part1.sed` 文件（通过一台由机器人操控的 3DS），并破解你主机的 DSiWare 密钥（通过某自愿者的电脑运行 Seedminer 取得）
   + 如果网站功能无法使用，请加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp) 并使用英文请求帮助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网）你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为942052497。
-1. 在 “Your friend code” 选项填入你设备的 “朋友代码（Friend Code）”（只要数字，不要填入空格或破折号）
+1. 在 “Your friend code” 选项填入你主机的 “朋友代码（Friend Code）”（只要数字，不要填入空格或破折号）
 1. 在 “Your ID0” 栏位粘贴之前复制的 32 位长的字符串
   + 不要尝试手动输入 ID0， 确保那是你在上一节中复制并粘贴的 ID0 以防复制错了
 1. 点击 “Go”
@@ -54,7 +54,7 @@ title: "Seedminer"
 1. 当提示时，在你主机中的“好友注册（Register Friend）”中，添加网页给出的朋友代码
 1. 等待网站更新
   + 如果一直没有更新，请在刷新网页前等待几分钟。
-1. 一旦网页开始处理你主机的相关信息，你将可以选择“继续（Contiune）”或“破解其他设备 （Do another device）” 点击绿色的 “Continue” 按钮
+1. 一旦网页开始处理你主机的相关信息，你将可以选择“继续（Contiune）”或“破解其他主机 （Do another device）” 点击绿色的 “Continue” 按钮
 1. 等待其完成步骤中的其余部分
   + 这通常是很快的（1～5 分钟左右），但是在某些情况下可能会需要长达半小时。
   + 在这个过程中，你之前添加的机器人好友可能不会在你的 3DS 上面展示 不过只要网站还在更新，这就不是个问题。
