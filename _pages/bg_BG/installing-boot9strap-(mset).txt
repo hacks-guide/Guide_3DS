@@ -1,0 +1,60 @@
+---
+title: "Installing boot9strap (MSET)"
+---
+
+{% include toc title="Table of Contents" %}
+
+### What You Need
+
+* Any DS flashcart that works on your device version
+* The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(standard boot9strap; not the `devkit` file, not the `ntr` file)*
+* The latest release of [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) 
+
+### Instructions
+
+#### Section I - Prep Work
+
+1. Power off your device
+1. Insert your SD card into your computer
+1. Copy `boot.firm` and `boot.3dsx` from the Luma3DS `.zip` to the root of your SD card
+1. Create a folder named `boot9strap` on the root of your SD card
+1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
+1. Copy `SafeB9SInstaller.dat` from the SafeB9SInstaller `.zip` to the root of your SD card
+
+    ![]({{ "/images/screenshots/boot9strap-mset-file-layout.png" | absolute_url }})
+    {: .notice--info}
+
+1. Reinsert your SD card into your device
+1. Copy `SafeB9SInstaller.nds` from the SafeB9SInstaller `.zip` to your DS flashcart
+1. Power on your device
+
+#### Section II - Launching SafeB9SInstaller
+
+1. Start your DS flashcart from your device
+1. Boot `SafeB9SInstaller.nds` using your flashcart
+1. Select the correct option for your system version
+  + 4.X.X -> "4.x SafeB9SInstaller"
+  + 6.X.X -> "6.x SafeB9SInstaller"
+1. Reboot the system, then go to System Settings, then "Other Settings", then "Profile", then "Nintendo DS Profile"
+1. If the exploit was successful, you will have booted into SafeB9SInstaller
+
+#### Section III - Installing boot9strap
+
+1. Wait for all safety checks to complete
+1. When prompted, input the key combo given to install boot9strap
+1. Once it has completed, press (A) to reboot your device
+
+#### Section IV - Configuring Luma3DS
+
+1. Your device should have rebooted into the Luma3DS configuration menu
+  + If you get a black screen, [follow this troubleshooting guide](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
+1. Use the (A) button and the D-Pad to turn on the following:
+  + **"Show NAND or user string in System Settings"**
+1. Press (Start) to save and reboot
+  + If you get an error, just continue the next page
+
+___
+
+### Continue to [Finalizing Setup](finalizing-setup)
+{: .notice--primary}
