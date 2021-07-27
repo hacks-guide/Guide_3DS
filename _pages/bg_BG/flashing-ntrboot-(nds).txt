@@ -1,0 +1,57 @@
+---
+title: "Flashing ntrboot (NDS)"
+---
+
+{% include toc title="Table of Contents" %}
+
+### Required Reading
+
+Before proceeding, ensure you have read all of the information on [ntrboot](ntrboot)
+
+This method requires temporary access to a Nintendo DS or Nintendo DS Lite that is compatible with your flashcart. This method uses the flashcart to run the ntrboot flasher `.nds` file on your NDS.
+
+Note that in some rare circumstances, it may be possible for the flashing process to **brick** a counterfeit flashcart and render it permanently unusable. This is unlikely, but nevertheless only original listed flashcarts are supported. To reduce the chance of receiving a counterfeit card, it is recommended that you use a reputable site to buy your flashcart (such as [NDS Card](http://www.nds-card.net/))
+{: .notice--danger}
+
+### What You Need
+
+* Your ntrboot compatible flashcart
+* Two devices 
+  + **The source NDS / NDSL**: the Nintendo DS or Nintendo DS Lite which is compatible with your flashcart
+  + **The target 3DS**: the 3DS family device on stock firmware
+* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest) *(`boot9strap-1.3-ntr.zip`; not the `devkit` file)*
+* The latest release of [ntrboot_flasher_nds](https://github.com/jason0597/ntrboot_flasher_nds/releases/latest)
+
+### Instructions
+
+#### Section I - Prep Work
+
+1. Power off **the source NDS / NDSL**
+1. Insert your flashcart's SD card into your computer
+1. Create a folder named `ntrboot` on the root of your flashcart's SD card
+1. Copy `boot9strap_ntr.firm` from the boot9strap ntr `.zip` to the `/ntrboot/` folder on your flashcart's SD card
+1. Copy `ntrboot_flasher_nds.nds` to your flashcart's SD card
+1. Reinsert your flashcart's SD card back into your flashcart
+1. Insert your ntrboot compatible DS / DSi flashcart into **the source NDS / NDSL**
+
+#### Section II - Flashing ntrboot
+
+1. Launch `ntrboot_flasher_nds.nds` on **the source NDS / NDSL** using your flashcart
+1. Press (A) to continue
+1. Use (Up) and (Down) to select your flashcart
+1. Press (A) to continue
+1. Select "Dump flash" to make a backup of your flashcart's memory
+1. Input the key combo given to confirm
+1. Press (A) to continue
+1. Use (Up) and (Down) to select your flashcart
+1. Press (A) to continue
+1. Select "Inject FIRM" to install boot9strap to your flashcart
+1. Input the key combo given to confirm
+1. Press (A) to continue
+1. Power off **the source NDS / NDSL**
+1. Eject your flashcart from **the source NDS / NDSL**
+
+___
+
+### Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-(ntrboot))
+{: .notice--primary}
