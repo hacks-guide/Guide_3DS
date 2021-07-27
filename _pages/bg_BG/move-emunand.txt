@@ -1,0 +1,176 @@
+---
+title: "Move EmuNAND"
+---
+
+{% include toc title="Table of Contents" %}
+
+### Required Reading
+
+This is an add-on section for moving the contents of a previous EmuNAND to your new SysNAND CFW, then removing the old EmuNAND partition. Note that the terms EmuNAND and RedNAND refer to slightly different implementations of [the same concept](http://3dbrew.org/wiki/NAND_Redirection).
+
+Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions.
+
+You MUST have already installed Luma3DS and boot9strap to use this.
+{: .notice--danger}
+
+### What You Need
+
+* An existing EmuNAND
+* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest)
+
+### Instructions
+
+#### Section I - Prep Work
+
+1. Power off your device
+1. Insert your SD card into your computer
+1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
+1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+1. Reinsert your SD card into your device
+
+#### Section II - Backup SysNAND DSiWare Saves
+
+If you do not have any DSiWare games or saves that you care about, skip this section.
+{: .notice--info}
+
+1. Launch GodMode9 by holding (Start) during boot
+1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
+1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
+  + Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
+1. Navigate to `[2:] SYSNAND TWLN` -> `title`
+1. Hold (R) and press (A) at the same time on `00030004` to select the folder, then select "Copy to 0:/gm9/out"
+  + This process may take some time if you have many DSiWare games
+1. Press (B) twice to return to the main menu
+
+#### Section III - Backup GBA VC Saves
+
+If you do not have any GBA VC games or saves that you care about, skip this section.
+{: .notice--info}
+
+Note that this is not necessary for any other kind of Virtual Console games (GBC, NES, etc)
+{: .notice--info}
+
+The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
+{: .notice--info}
+
+To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
+{: .notice--info}
+
+1. Do the following process for each GBA VC game that you want to backup the save for:
+  + Launch the GBA VC game
+  + Exit the GBA VC game
+  + Boot your device while holding (Start) to launch the Luma3DS chainloader menu
+  + Launch GodMode9 by pressing (A)
+  + Navigate to `[S:] SYSNAND VIRTUAL`
+  + Press (A) on `agbsave.bin` to select it
+  + Select "AGBSAVE options..."
+  + Select "Dump GBA VC save"
+  + Press (A) to continue
+  + Press (Start) to reboot your device
+
+#### Section IV - Copy EmuNAND to SysNAND
+
+1. Launch GodMode9 by holding (Start) during boot
+1. Navigate to `[E:] EMUNAND VIRTUAL`
+1. Press (A) on `nand.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
+1. Press (A) to unlock SysNAND overwriting, then input the key combo given
+  + This will not overwrite your boot9strap installation
+1. Input the key combo given to unlock SysNAND (lvl1) writing
+  + This process will take some time
+1. Once it has completed, press (A) to continue
+1. Press (B) to decline relocking write permissions if prompted
+1. Press (B) to return to the main menu
+
+#### Section V - Restore DSiWare Saves
+
+If you did not backup DSiWare Saves earlier, skip this section.
+{: .notice--info}
+
+1. Navigate to `[0:] SDCARD` -> `gm9` -> `out`
+1. Press (Y) on the `00030004` folder to copy it
+1. Press (B) twice to return to the main menu
+1. Navigate to `[2:] SYSNAND TWLN` -> `title`
+1. Press (Y) to paste the `00030004` folder
+1. Select "Copy path(s)"
+1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+1. Select "Overwrite file(s)"
+  + This process may take some time if you have many DSiWare games
+1. Press (B) to decline relocking write permissions if prompted
+1. Press (B) twice to return to the main menu
+
+#### Section VI - Restore GBA VC Saves
+
+If you did not backup GBA VC Saves earlier, skip this section.
+{: .notice--info}
+
+To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by holding (R) and pressing (A) on the GodeMode9 main menu, then selecting "Search for titles".
+{: .notice--info}
+
+1. Hold (R) and press (Start) at the same time to power off your device
+1. Power on your device into SysNAND
+1. Do the following process for each GBA VC game that you want to restore the save for:
+  + Launch the GBA VC game
+  + Exit the GBA VC game
+  + Boot your device while holding (Start) to launch the Luma3DS chainloader menu
+  + Launch GodMode9 by pressing (A)
+  + Navigate to `[0:] SDCARD` -> `gm9`
+  + Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
+  + Press (B) to return to the main menu
+  + Navigate to `[S:] SYSNAND VIRTUAL`
+  + Press (A) on `agbsave.bin` to select it
+  + Select "AGBSAVE options..."
+  + Select "Inject GBA VC save"
+  + Press (A) to continue
+  + Press (Start) to reboot your device
+  + Launch the GBA VC game
+  + Exit the GBA VC game
+1. Launch GodMode9 by holding (Start) during boot
+
+#### Section VII - Backup SysNAND
+
+1. Press (Home) to bring up the action menu
+1. Select "Scripts..."
+1. Select "GM9Megascript"
+1. Select "Backup Options"
+1. Select "SysNAND Backup"
+1. Press (A) to confirm
+  + This process will take some time
+  + If you get an error, make sure that you have at least 1.3GB of free space on your SD card
+1. Press (A) to continue
+1. Press (B) to return to the main menu
+1. Select "Exit"
+1. Press (A) to relock write permissions if prompted
+1. Hold (R) and press (B) at the same time to eject your SD card
+1. Insert your SD card into your computer
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
+  + Make backups in multiple locations (such as online file storage)
+  + These backups will save you from a brick and/or help you recover files from the NAND image if anything goes wrong in the future
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` and `<date>_<serialnumber>_sysnand_###.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
+1. **Backup every file on your SD card to a folder on your computer; all files will be deleted in the following steps**
+
+#### Section VIII - Format SD card
+
+1. Reinsert your SD card into your device
+1. Press (Home) to bring up the action menu
+1. Select "More..."
+1. Select "SD format menu"
+1. Press (A) to confirm
+1. Select "No EmuNAND"
+1. Select "Auto"
+1. Press (A) to accept the label `GM9SD`
+  + Optionally, you may input a custom name for the SD card
+1. When prompted, input the key combo given to confirm
+1. Hold (R) and press (B) at the same time to eject your SD card
+1. Insert your SD card into your computer
+1. Copy all your files back to your SD card
+  + Ensure you replace the `boot.firm` file on your SD card with the one from your backup
+1. Reinsert your SD card into your device
+1. Press (A) to remount your SD card
+1. Press (Start) to reboot
+1. If you get a black screen, [follow this troubleshooting guide](troubleshooting#ts_sys_down)
+
+___
+
+### Return to [Finalizing Setup](finalizing-setup).
+{: .notice--primary}
