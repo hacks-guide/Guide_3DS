@@ -1,0 +1,138 @@
+---
+title: "GodMode9 Usage"
+---
+
+{% include toc title="Table of Contents" %}
+
+For support (in English) with GodMode9, as well as help with scripting and to get updates and info, join [GodMode9 on Discord](https://discord.gg/BRcbvtFxX4).
+{: .notice--primary}
+
+### Required Reading
+
+GodMode9 is a full access file browser for the Nintendo 3DS console, giving you access to your SD card, the FAT partitions inside your SysNAND and EmuNAND, and basically anything else. Among other functionality, you can copy, delete, rename files, and create folders.
+
+Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. 
+
+GodMode9 is powerful software that has the capability to modify essentially anything on your console. Though many of these modifications are locked behind a permissions system, and it is impossible to accidentally perform dangerous actions without deliberately unlocking permissions, you should still follow instructions carefully and keep backups just in case.
+
+## Updating GodMode9
+
+Some of the instructions below are only applicable to the latest version of GodMode9, and as such you should follow this section to update your copy before continuing. Overwrite any existing files.
+{: .notice--info}
+
+### What You Need
+
+* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+
+### Instructions
+
+1. Power off your device
+1. Insert your SD card into your computer
+1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
+1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+1. Reinsert your SD card into your device
+
+## Creating a NAND Backup
+
+1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+1. Press (Home) to bring up the action menu
+1. Select "Scripts..."
+1. Select "GM9Megascript"
+1. Select "Backup Options"
+1. Select "SysNAND Backup"
+1. Press (A) to confirm
+  + This process will take some time
+  + If you get an error, make sure that you have at least 1.3GB of free space on your SD card
+1. Press (A) to continue
+1. Press (B) to return to the main menu
+1. Select "Exit"
+1. Press (A) to relock write permissions if prompted
+1. Hold (R) and press (B) at the same time to eject your SD card
+1. Insert your SD card into your computer
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
+  + Make backups in multiple locations (such as online file storage)
+  + These backups will save you from a brick and/or help you recover files from the NAND image if anything goes wrong in the future
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` and `<date>_<serialnumber>_sysnand_###.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
+1. Reinsert your SD card into your device
+  + If your SD card was not detected, hold (R) and press (B) at the same time to remount it
+
+## Restoring a NAND Backup
+
+1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+1. Hold (R) and press (B) at the same time to eject your SD card
+1. Insert your SD card into your computer
+1. Copy `<date>_<serialnumber>_sysnand_###.bin` from your computer to the `/gm9/out/` folder on your SD card
+1. Reinsert your SD card into your device
+1. Press (Home) to bring up the action menu
+1. Select "Scripts..."
+1. Select "GM9Megascript"
+1. Select "Restore Options"
+1. Select "SysNAND Restore (safe)"
+1. Select your NAND backup
+1. Press (A) to unlock SysNAND (lvl3) writing, then input the key combo given
+  + This will not overwrite your boot9strap installation
+  + This process will take some time
+1. Press (A) to continue
+1. Press (B) to return to the main menu
+1. Select "Exit"
+1. Press (A) to relock write permissions if prompted
+
+## Injecting any .CIA app into Health & Safety
+
+For organizational purposes, copy the `.cia` file you wish to inject to the `/cias/` folder on your SD card
+{: .notice--info}
+
+Note that it is not possible to inject files into Health & Safety that are larger than it (including games and other large applications)
+{: .notice--info}
+
+1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+1. Navigate to `[0:] SDCARD` -> `cias`
+1. Press (A) on your `.cia` to select it, then select "CIA image options...", then select "Mount image to drive"
+1. Press (A) on the `.app` file, then select "NCCH image options", then select "Inject to H&S"
+1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+1. Press (A) to continue
+1. Press (A) to relock write permissions if prompted
+
+## Restoring Health & Safety after injecting a .CIA app
+
+This will only work if the Health & Safety injection was performed by GodMode9 (not Decrypt9 or Hourglass9).
+{: .notice--info}
+
+1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+1. Press (Home) to bring up the action menu
+1. Select "More..."
+1. Select "Restore H&S"
+1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+1. Press (A) to relock write permissions if prompted
+
+## Format an SD card
+
+**Note that this will erase the contents of your SD card!**
+{: .notice--danger}
+
+1. Launch GodMode9 by holding (Start) during boot
+1. Press (Home) to bring up the action menu
+1. Select "More..."
+1. Select "SD format menu"
+1. Select any EmuNAND options you wish to use
+  + Most users will want to select "No EmuNAND"
+1. Select "Auto"
+1. Press (A) to accept the label `GM9SD`
+  + Optionally, you may input a custom name for the SD card
+1. When prompted, input the key combo given to confirm
+
+## Removing an NNID without formatting your device
+
+1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+1. Press (Home) to bring up the action menu
+1. Select "Scripts..."
+1. Select "GM9Megascript"
+1. Select "Scripts from Plailect's Guide"
+1. Select "Remove NNID"
+1. Press (A) to continue
+1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+1. Press (A) to continue
+1. Press (B) to return to the main menu
+1. Select "Exit"
+1. Press (A) to relock write permissions if prompted
+1. Press (Start) to reboot your device
