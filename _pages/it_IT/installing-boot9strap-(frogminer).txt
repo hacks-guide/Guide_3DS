@@ -1,132 +1,59 @@
 ---
-title: "Installazione di boot9strap (Frogminer)"
+title: "Installazione di Boot9strap (Frogtool)"
 ---
 
 {% include toc title="Indice" %}
 
 ### Lettura necessaria
 
-Per installare boot9strap su una console con versione del software 11.9.0 verrà sfruttato un errore nelle restrizioni di sicurezza delle applicazioni "DSiWare".
+Ora utilizzeremo l'Homebrew Launcher per avviare l'applicazione Frogtool e iniettare la versione giapponese di "Flipnote Studios", che a sua volta verrà usata per avviare b9sTool e installare boot9strap.
 
-Utilizzeremo perciò un'applicazione chiamata Seedminer per calcolare la chiave di criptazione (`movable.sed`) dei DSiWare della tua console.
-
-Utilizzeremo poi questa chiave di criptazione DSiWare per decriptare un'applicazione DSiWare compatibile e inserirvi l'exploit che eseguirà il nostro codice.
-
-Se questa chiave fosse completamente casuale, la chiave di criptazione sarebbe impossibile da calcolare con l'hardware correntemente disponibile. Per fortuna, la prima metà (`movable_part1.sed`) è matematicamente correlata al Codice Amico della tua console, e questo ci permette di infrangere la sua sicurezza. Per ulteriori informazioni sul funzionamento di Seedminer, è possibile consultare [questa presentazione](https://zoogie.github.io/web/34⅕c3).
-
-Tieni presente che questo programma richiede un PC con una scheda grafica potente per infrangere la criptazione DSiWare della tua console. Se non ne possiedi uno, esiste un servizio online basato su volontari che forniscono il proprio PC per lo scopo.
+Questa è un'implementazione funzionante dell'exploit del "testo in chiaro noto nelle partizioni FIRM" spiegato [qui](https://www.3dbrew.org/wiki/3DS_System_Flaws).
 
 Per usare i link [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) di questa guida avrai bisogno di un client torrent come [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
 Per estrarre i file `.7z` e `.rar` presenti in questa pagina, avrai bisogno di un gestore di file compressi come [7-Zip](http://www.7-zip.org/) o [The Unarchiver](https://theunarchiver.com/).
 
-Questo processo sovrascriverà il file di salvataggio del tuo gioco!
-{: .notice--warning}
-
 ### Cosa serve
 
-* Il gioco gratuito "Steel Diver: Sub Wars" scaricabile dall'eShop
+* Il tuo file `movable.sed` dalla sezione [Seedminer](seedminer)
 * <i class="fa fa-magnet" aria-hidden="true" title="Questo è un link magnet. Per scaricare il file devi utilizzare un client torrent."></i> - [frogcert.bin](magnet:?xt=urn:btih:d12278ea50bb3574f1fbd327f3d0e2292c70941f&dn=frogcert.bin&tr=https%3a%2f%2ftracker.fastdownload.xyz%3a443%2fannounce&tr=https%3a%2f%2fopentracker.xyz%3a443%2fannounce&tr=http%3a%2f%2fopen.trackerlist.xyz%3a80%2fannounce&tr=http%3a%2f%2ft.nyaatracker.com%3a80%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2fopen.demonii.si%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.port443.xyz%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.vanitycore.co%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&tr=udp%3a%2f%2fthetracker.org%3a80%2fannounce&tr=http%3a%2f%2ftorrent.nwps.ws%3a80%2fannounce&tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.iamhansen.xyz%3a2000%2fannounce&tr=udp%3a%2f%2fbt.xxx-tracker.com%3a2710%2fannounce&tr=http%3a%2f%2f0d.kebhana.mx%3a443%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2ftracker4.itzmx.com%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.justseed.it%3a1337%2fannounce&tr=http%3a%2f%2ftherightsize.net%3a1337%2fannounce&tr=udp%3a%2f%2fretracker.hotplug.ru%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&tr=udp%3a%2f%2f9.rarbg.com%3a2800%2fannounce&tr=https%3a%2f%2f2.track.ga%3a443%2fannounce&tr=udp%3a%2f%2fbigfoot1942.sektori.org%3a6969%2fannounce)
 * L'ultima versione di [Frogtool](https://github.com/zoogie/Frogtool/releases/latest)
-* L'ultima versione di [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
-* L'ultima versione di [Steelhax](https://github.com/VegaRoXas/vegaroxas.github.io/raw/master/files/steelhax-installer.rar)
 * L'ultima versione di [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
 * L'ultima versione di [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(il file `.7z`)*
-* Il file [otherapp payload](https://smealum.github.io/3ds/#otherapp) *(adatto alla versione e alla regione della console)*
-
-### Istruzioni
 
 #### Sezione I - Preparazione
 
-1. Vai su "Impostazioni della console", "Impostazioni Internet", quindi "Connessioni Nintendo DS"
-1. Premi "OK"
-1. Se la tua console carica il menu "Configurazione Nintendo Wi-Fi Connection", esci da questo menu
-  + Se lo schermo rimane nero o sembra bloccarsi, non potrai usare Frogminer; torna a [Cominciamo!](get-started) e seleziona un metodo "Tutte le versioni"
-1. Spegni il tuo 3DS
 1. Inserisci la scheda SD nel tuo computer
-1. Se assente, crea una cartella chiamata `3ds` nella directory principale della tua scheda SD
+1. Copia il tuo file `movable.sed` nella directory principale della tua scheda SD
 1. Copia il file `boot.firm` dall'archivio `.7z` di Luma3DS nella directory principale della tua scheda SD
 1. Copia il file `boot.nds` (B9STool) nella directory principale della tua scheda SD
-1. Copia il file `boot.3dsx` nella directory principale della tua scheda SD
-1. Copia la cartella `steelhax` presente nell'archivio `.rar` di Steelhax nella directory principale della tua scheda SD
-1. Copia il file otherapp payload nella cartella `steelhax` della tua scheda SD e rinominalo in `payload.bin`
 1. Copia il file `Frogtool.3dsx` nella cartella `/3ds/` della tua scheda SD
 1. Copia il file `frogcert.bin` nella directory principale della tua scheda SD
-1. Entra nella cartella `Nintendo 3DS` della tua scheda SD
-1. Copia la stringa di 32 caratteri del nome della cartella qui presente
-  + Se vedi più cartelle dal nome lungo, segui i seguenti passaggi:
-  + Rinomina la cartella `Nintendo 3DS` in `BACKUP_Nintendo 3DS`
-  + Reinserisci la tua scheda SD nella console, e accendila
-  + Attendi che la console generi i dati nella scheda SD
-  + Spegni la console e reinserisci la scheda SD nel tuo computer
-  + Entra nella cartella `Nintendo 3DS` della tua scheda SD
-  + Copia la stringa di 32 caratteri del nome della cartella qui presente
-  + Elimina la cartella `Nintendo 3DS`
-  + Rinomina la cartella `BACKUP_Nintendo 3DS` in `Nintendo 3DS`
-1. Incolla la stringa di 32 caratteri in un documento che potrai consultare più avanti
-  + Il nome di questa cartella è il tuo "ID0"
-1. Reinserisci la scheda SD nella tua console
-1. Accendi la console
-1. Accedi alla lista di amici (l'[icona con un viso arancione]({{ "/images/friend-list-icon.png" | absolute_url }}) nella riga superiore del menu HOME)
-  + Se riscontri un errore e vieni rimandato al menu principale, o devi creare un nuovo Mii o la console non può connettersi ai server Nintendo (a causa di un ban o per problemi di connettività)
-1. Sul tuo profilo Mii cerca il "Codice Amico" sullo schermo superiore
-
-#### Sezione II - Seedminer
-
-1. Avvia [Bruteforce Movable](https://bruteforcemovable.com/) sul tuo computer
-  + Questo sito permette il recupero automatico del file `movable_part1.sed` (utilizzando una console 3DS fittizia) e la decriptazione della chiave DSiWare della tua console (utilizzando Seedminer tramite il computer di un volontario)
-  + Se hai già accesso a un 3DS in grado di avviare l'Homebrew Launcher, puoi recuperare manualmente il tuo `movable_part1.sed` utilizzando quella console seguendo [queste](https://jisagi.github.io/SeedminerGuide/seedminerSelf/#section1) istruzioni
-  + Se hai accesso a un PC con una scheda grafica potente, puoi calcolare manualmente il tuo file `movable.sed` seguendo [queste](https://jisagi.github.io/SeedminerGuide/seedminerSelf/#section2) istruzioni
-  + Se il servizio automatizzato non è attivo e non puoi eseguire alcuna delle procedure manuali, entra nel [canale Nintendo Homebrew su Discord](https://discord.gg/MWxPgEp) (in Inglese) per chiedere supporto
-1. Inserisci il Codice Amico della tua console (senza spazi o trattini) nel campo "Your friend code"
-1. Incolla i 32 caratteri della cartella nel campo "Your ID0"
-1. Supera il captcha "I'm not a robot"
-1. Seleziona "Go"
-1. Quando richiesto, usa il pulsante "Registra Amico" sulla tua console per aggiungere il codice amico della console 3DS fittizia
-1. Attendi l'aggiornamento del sito
-  + Se la pagina non si aggiorna da sola, attendi qualche minuto prima di ricaricarla manualmente una singola volta
-1. Selaziona "Continue"
-1. Attendi il termine del processo
-  + Potrebbe volerci un po' di tempo (anche un'ora)
-  + Se dopo un'ora non è successo, nulla, entra nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) (in Inglese) per richiedere assistenza
-1. Al termine del processo, scarica il tuo file `movable.sed` dal sito
-
-#### Sezione III - Steelminer
-
-1. Avvia "Steel Diver: Sub Wars" e seleziona un Mii per inizializzare il salvataggio
-  + Rifiuta l'aggiornamento di gioco quando richiesto
-  + Se hai già aggiornato il gioco, rimuovi l'aggiornamento tramite il menu Gestione dati nelle Impostazioni della console
-1. Chiudi "Steel Diver: Sub Wars"
-1. Spegni il tuo 3DS
-1. Inserisci la scheda SD nel tuo computer
-1. Apri [il sito di Steelminer](http://steelminer.jisagi.net/#Section_III) sul tuo computer
-1. Seleziona il tuo file `movable.sed`
-1. Seleziona "Start!"
-1. Attendi il termine del processo
-1. Nella tua scheda SD, entra nella cartella `Nintendo 3DS` -> `<ID0>` -> `<ID di 32 caratteri>` -> `title` -> `00040000` -> `<ID di 8 caratteri della regione>` -> `data`
-  + **Regione EUR**: `000d7e00`
-  + **Regione JPN**: `000d7c00`
-  + **Regione USA**: `000d7d00`
-1. Copia il file appena scaricato nella cartella `data` della tua scheda SD
-  + Sovrascrivi il salvataggio precedente quando richiesto
-1. Copia il tuo file `movable.sed` nella directory principale della tua scheda SD
 1. Reinserisci la scheda SD nella tua console
 1. Accendi la console
 
-#### Sezione IV - Flash di NFIRM
+#### Sezione II - Patch della Modalità Download DS
 
-1. Avvia "Steel Diver: Sub Wars"
-1. Se l'exploit ha avuto successo, la tua console avrà caricato l'Homebrew Launcher
+1. Avvia l'Homebrew Launcher tramite un qualunque metodo
 1. Avvia Frogtool dalla lista degli homebrew disponibili
 1. Seleziona l'opzione "INJECT patched DS Download Play"
 1. Frogtool verrà eseguito automaticamente e inietterà la versione JPN di Flipnote Studio nell'applicazione "Modalità download"
 1. Una volta terminata questa operazione, tocca il touchscreen e seleziona "BOOT patched DS Download Play"
 1. Se l'exploit ha avuto successo, la tua console avrà caricato la versione JPN di Flipnote Studio
+
+#### Sezione III - Exploit Flipnote
+
+Se desideri una guida visiva per questa parte, è disponibile [qui](https://zoogie.github.io/web/flipnote_directions/).
+{: .notice--info}
+
 1. Completa la configurazione iniziale del gioco finché non avrai raggiunto il menu principale
   + Seleziona l'opzione di sinistra quando richiesto durante la configurazione
 1. Con il touch screen, seleziona il riquadro grande a sinistra, poi il riquadro con l'icona di una scheda SD
 1. Al termine del caricamento del menu, scegli l'icona col volto, poi premi l'icona in basso a destra per proseguire
-1. Seleziona l'icona della rana in basso a sinistra, poi il secondo pulsante in cima con l'icona di una pellicola
+1. Scegli l'icona della rana in basso a sinistra
+  + Alternativamente, premi (X) o (SU) sul D-Pad a seconda di cosa sia visualizzato sullo schermo superiore
+1. Seleziona il secondo pulsante in cima, con l'icona di una pellicola
 1. Scorri a destra fino a visualizzare la bobina "3/3"
 1. Seleziona il terzo riquadro con la lettera "A" all'interno
 1. Scorri a sinistra fino a visualizzare la bobina "1/3"
@@ -135,8 +62,9 @@ Questo processo sovrascriverà il file di salvataggio del tuo gioco!
 1. Seleziona "Install boot9strap" e conferma
 1. Esci da b9sTool, quindi spegni la tua console
   + Potresti dover forzare lo spegnimento tenendo premuto il pulsante di accensione
+  + Se sei nel menu di configurazione di Luma, continua senza spegnere la console
 
-#### Sezione V - Configurare Luma3DS
+#### Sezione IV - Configurare Luma3DS
 
 1. Avvia la tua console tenendo premuto (Select) per avviare il menu delle opzioni di Luma
   + Se riscontri problemi all'avvio del menu di configurazione di Luma, [segui questa guida per risolvere il problema](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)
