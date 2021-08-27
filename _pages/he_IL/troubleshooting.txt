@@ -215,6 +215,12 @@ Your device had custom firmware in the past, so you were not automatically promp
 The steps detailed here generally assume that your device has a modern custom firmware setup (boot9strap + Luma3DS 8.0 or greater). If your console is running an older homebrew setup (for example, something based on arm9loaderhax or menuhax), you should update your setup before trying these instructions.
 {: .notice--info}
 
+## My device gets stuck on a black light, and the blue light turns off
+
+There is an issue with your `boot.firm` file (it is missing, misplaced, or corrupted). Download the [latest release of Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) and place `boot.firm` on the root of your SD card, replacing any existing file. Make sure you are extracting the ZIP file with any tool other than WinRAR, as it is known to cause issues with 3DS-related files.
+
+If you hear a "popping sound", potentially accompanied with the backlight turning on for a split second, there is a hardware issue with your device (such as a disconnected backlight cable). You may be able to get your device to boot by holding it at certain angles.
+
 ## My device gets stuck on a black screen, with a static blue light
 
 The steps below can be attempted in any order, but are listed from least to most time-consuming.
@@ -263,15 +269,7 @@ ARM11 exception handlers are disabled, or custom firmware is not installed. Try 
 
 Please take a photo of the error and join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
 
----
-
-## My device gets stuck on a black light, and the blue light turns off
-
-There is an issue with your `boot.firm` file (it is missing, misplaced, or corrupted). Download the [latest release of Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) and place `boot.firm` on the root of your SD card, replacing any existing file. Make sure you are extracting the ZIP file with any tool other than WinRAR, as it is known to cause issues with 3DS-related files.
-
-If you hear a "popping sound", potentially accompanied with the backlight turning on for a split second, there is a hardware issue with your device (such as a disconnected backlight cable). You may be able to get your device to boot by holding it at certain angles.
-
-## My device gets stuck on a blue "Bootrom Error" screen
+## Blue "Bootrom Error" screen
 
 Your device is likely hard-bricked. You will need to buy an ntrboot flashcart to reinstall boot9strap in order to attempt to fix your device. This may also indicate a hardware issue which cannot be fixed. In any case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
   + It is also possible that someone has set a boot-time splash screen that just looks like a brick. Try leaving your device powered on, waiting on the blue screen, for five minutes.
