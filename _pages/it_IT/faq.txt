@@ -49,45 +49,45 @@ title: "FAQ"
 **R:** No. Il custom firmware può essere installato gratuitamente sui firmware più recenti senza alcun dispositivo hardware. Peraltro, le flashcart in modalità 3DS come Gateway e Sky3DS non sono consigliate perché obsolete e possono comportare il ban o il rischio di brickare la console.
 
 <a name="faq_cfwhb" />**D:** *Qual è la differenza tra custom firmware e accesso agli homebrew?*    
-**R:** Storicamente, il 3DS aveva accesso in modalità userland agli homebrew tramite exploit vecchi come ninjhax. Il livello di privilegi di sistema concesso in modalità userland permetteva di eseguire homebrew ed emulatori di base, ma non di modificare giochi o scaricare cartucce (facilmente). Era anche molto meno stabile, gli homebrew spesso crashavano e occorreva riavviare la console. Custom firmware grants a far greater level of system access while also being more stable than homebrew-only entrypoints.
+**R:** Storicamente, il 3DS aveva accesso in modalità userland agli homebrew tramite exploit vecchi come ninjhax. Il livello di privilegi di sistema concesso in modalità userland permetteva di eseguire homebrew ed emulatori di base, ma non di modificare giochi o scaricare cartucce (facilmente). Era anche molto meno stabile, gli homebrew spesso crashavano e occorreva riavviare la console. Il custom firmware permette un livello di privilegi di sistema maggiore, oltre che ad essere più stabile di entrypoint esclusivi ad homebrew.
 
-# Post-Installation FAQ
+# FAQ Post-Installazione
 
-<a name="faq_updates" />**Q:** *Is it safe to update my 3DS to the latest version with CFW?*    
-**A:** If you are using Luma3DS, your custom firmware loader (boot9strap) will *never* be removed when performing a system update. There have been updates in the past that have resulted in Luma3DS crashing on boot, so it is a good idea to wait a couple of hours to ensure that the latest update will not temporarily render the device unusable until Luma3DS is updated. System updates can be performed the same way as they are on a stock 3DS: through System Settings, Safe Mode, or the update prompt when the update is automatically downloaded.
+<a name="faq_updates" />**D:** *È sicuro aggiornare all'ultima versione il mio 3DS con un CFW?*    
+**R:** Se stai usando Luma3DS, il loader del tuo custom firmware (boot9strap) non verrà *mai* rimosso con un aggiornamento di sistema. Ci sono stati aggiornamenti in passato che hanno portato al crash di Luma3DS all'avvio, quindi sarebbe meglio aspettare qualche ora per assicurarsi che l'ultimo aggiornamento non renderà temporaneamente inutilizzabile la console fino all'aggiornamento di Luma3DS. Gli aggiornamenti di sistema possono essere eseguiti con le stesse modalità di un normale 3DS: tramite le Impostazioni della console, via Safe Mode o accettando la richiesta allo scaricamento automatico di un aggiornamento.
 
-<a name="faq_movesd" />**Q:** *How do I upgrade my SD card?*    
-**A:** Copy and paste your SD card contents to a new SD card formatted as FAT32. For 128GB cards, an allocation size of 65536 is recommended. SD cards larger than 128GB are not recommended due to known issues with GBA graphics and custom themes.
+<a name="faq_movesd" />**D:** *Come faccio a sostituire la mia scheda SD?*    
+**R:** Copia e incolla il contenuto della tua scheda SD in una nuova scheda SD formattata come FAT32. Per le SD da 128 GB, si raccomanda una dimensione di allocazione di 65536. SD più grandi di 128GB non sono consigliate a causa di problemi noti con la grafica GBA e con i temi personalizzati.
 
-<a name="faq_systransfer" />**Q:** *Can I system transfer with CFW?*    
-**A:** Yes, system transfers can be performed through the official System Transfer function to other consoles with CFW (inconsistencies may occur if the target console is stock). Tickets for illegitimate titles (homebrew) will not transfer, but can be made to reappear with [faketik](https://github.com/ihaveamac/faketik/releases/latest). Make sure that you do not perform a wireless transfer, as this will delete illegitimate titles. CFW will remain on both consoles. 
+<a name="faq_systransfer" />**D:** *Posso eseguire un Trasferimento dati con un CFW?*    
+**R:** Sì, i trasferimenti dati possono essere effettuati tramite la relativa funzione verso altre console con CFW (possono verificarsi inconsistenze se la console di destinazione è invece senza CFW). I ticket di titoli non legittimi (homebrew) non saranno trasferiti, ma possono venire fatti riapparire con [faketik](https://github.com/ihaveamac/faketik/releases/latest). Assicurati di non eseguire un trasferimento via wireless, altrimenti tutti i titoli non legittimi verranno eliminati. Il CFW rimarrà su entrambe le console. 
 
-<a name="faq_language" />**Q:** *How do I change the system language of a Japanese 3DS?*    
-**A:** The only way to change the system language of a Japanese 3DS to a language other than Japanese is to perform a [region change](region-changing). Note that this is very likely to break the Nintendo eShop on your device, which means you will be unable to update your games whether they are in-region or out-of-region.
+<a name="faq_language" />**D:** *Come faccio a cambiare la lingua di sistema di un 3DS giapponese?*    
+**R:** L'unico modo per cambiare la lingua di sistema di un 3DS giapponese in una lingua diversa dal giapponese è tramite un [cambio di regione](region-changing). Presta attenzione al fatto che molto probabilmente questo corromperà il Nintendo eShop della tua console, per cui non potrai aggiornare i tuoi giochi, sia che siano interni sia esterni alla tua regione.
 
-<a name="faq_hbupdates" />**Q:** *How do I update homebrew applications?*    
-**A:** It depends on the format of the homebrew application. Generally speaking:
+<a name="faq_hbupdates" />**D:** *Come faccio ad aggiornare le applicazioni homebrew?*    
+**R:** Dipende dal formato dell'applicazione homebrew. Generalmente:
 
-* Homebrew in **CIA format** can be updated by installing the new CIA, which will usually overwrite the old one. If the old CIA is not overwritten, you can delete the old one from Data Management as you would any other 3DS title.
-* Homebrew in **3DSX format** can be updated by replacing the 3DSX file in `/3ds/` with a fresh copy. If the homebrew application includes additional assets, you may need to place that folder somewhere else. Refer to the documentation of the homebrew application.
-* For updating Luma3DS, see [this page](restoring-updating-cfw). For updating GodMode9, see [this page](godmode9-usage#updating-godmode9).
+* Gli homebrew in **formato CIA** possono venire aggiornati installando il nuovo CIA, che di solito sovrascriverà quello vecchio. Se il vecchio CIA non viene sovrascritto, potrai eliminare quello precedente da Gestione dati, come con qualunque altro titolo 3DS.
+* Gli homebrew in **formato 3DSX** possono venire aggiornati sostituendo il file 3DSX dentro `/3ds/` con la nuova versione. Se l'applicazione include risorse aggiuntive, potresti dover trasferire la relativa cartella da qualche altra parte. Consulta la documentazione dell'homebrew stesso.
+* Per aggiornare Luma3DS, consulta [questa pagina](restoring-updating-cfw). Per aggiornare GodMode9, consulta [questa pagina](godmode9-usage#updating-godmode9).
 
-<a name="faq_oorupdates" />**Q:** *How do I update games from outside of my 3DS region?*    
-**A:** You will need to [dump the updates](dumping-titles-and-game-cartridges) from a 3DS that has the updates installed. The Nintendo eShop only contains updates for the console's region (a Japanese 3DS will only have updates for Japanese games).
+<a name="faq_oorupdates" />**D:** *Come faccio ad aggiornare i giochi esterni alla regione del mio 3DS?*    
+**R:** Dovrai [scaricare gli aggiornamenti](dumping-titles-and-game-cartridges) da un 3DS con tali aggiornamenti installati. Il Nintendo eShop contiene gli aggiornamenti relativi alla regione della console (un 3DS giapponese avrà solo gli aggiornamenti per i giochi giapponesi).
 
 <a name="faq_problem" />**D:** *Aiuto! È successo qualcosa di brutto e ora la console non si avvia più...*    
-**R:** Consulta la sezione [Risoluzione dei problemi](troubleshooting). **Uninstalling CFW when your device is in an unbootable state is not recommended, as it is very likely to lead to a brick**.
+**R:** Consulta la sezione [Risoluzione dei problemi](troubleshooting). **Non è consigliato disinstallare il CFW se la console non è in grado di avviarsi normalmente, poiché è molto probabile che questo causerà un brick**.
 
-# menuhax / A9LH / Gateway FAQ
+# FAQ menuhax / A9LH / Gateway
 
-<a name="faq_existingmod" />**Q:** *I modded my device x years ago. What should I do?*    
-**A:** It is recommended that you upgrade your setup to a modern, boot9strap-based one. Follow the [Checking for CFW](checking-for-cfw) guide to see how to upgrade your setup.
+<a name="faq_existingmod" />**D:** *Ho modificato la mia console x anni fa. Cosa dovrei fare?*    
+**R:** Si consiglia di aggiornare la tua installazione ad una più moderna, basata su boot9strap. Segui la guida [Verifica del CFW](checking-for-cfw) per vedere come aggiornare la tua installazione.
 
-<a name="faq_whyb9s" />**Q:** *My setup works for me. Why should I upgrade it?*    
-**A:** The vast majority of modern homebrew (such as Checkpoint and BootNTR Selector) have only been tested on modern, boot9strap-based setups and may not work entirely (or at all) on older setups based on menuhax, A9LH, or Gateway. In addition, depending on your setup, you may be unable to safely update to the latest firmware. Modern, boot9strap-based setups allow for greater level of system access than previous hacks, including the ability to dump your console's bootrom.
+<a name="faq_whyb9s" />**D:** *La mia installazione funziona. Perché dovrei aggiornarla?*    
+**R:** La stragrande maggioranza degli homebrew moderni (come Checkpoint e BootNTR Selector) è stata testata solo su installazioni moderne, basate su boot9strap, e potrebbero non funzionare completamente (o affatto) su installazioni più vecchie basate su menuhax, A9LH o Gateway. Inoltre, a seconda della tua installazione, potrebbe non essere sicuro aggiornare alla versione del software più recente. Installazioni moderne basate su boot9strap consentono un livello di accesso al sistema maggiore rispetto agli hack precedenti, inclusa la possibilità di scaricare il bootrom della tua console.
 
-<a name="faq_upgradeloss" />**Q:** *Will I lose anything if I upgrade my setup?*    
-**A:** Your old setup (including your EmuNAND, if you have one) can usually be directly migrated to boot9strap with no data loss. If you have data that is particularly important to you, it would be a good idea to make a decrypted backup of your save data before upgrading your setup with a tool like [JKSM](https://github.com/J-D-K/JKSM/releases/tag/12%2F20%2F2018).
+<a name="faq_upgradeloss" />**D:** *Perderò qualcosa se aggiorno la mia installazione?*    
+**R:** La tua vecchia installazione (inclusa la tua EmuNAND, se ne hai una) di solito può essere trasferita direttamente verso boot9strap senza perdite di dati. Se ci sono dati particolarmente importanti, sarebbe meglio prima fare un backup decriptato dei tuoi dati di salvataggio prima di aggiornare la tua installazione usando applicazioni come [JKSM](https://github.com/J-D-K/JKSM/releases/tag/12%2F20%2F2018).
 
-<a name="faq_gatewaysaves" />**Q:** *How do I move saves from an existing Gateway setup to a more modern setup?*    
-**A:** See [this thread](https://gbatemp.net/threads/425743/).
+<a name="faq_gatewaysaves" />**D:** *Come faccio a spostare i salvataggi da un'installazione Gateway esistente a un'installazione più moderna?*    
+**R:** Guarda [questo thread](https://gbatemp.net/threads/425743/).
