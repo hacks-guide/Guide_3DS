@@ -1,0 +1,111 @@
+---
+title: "Seedminer"
+---
+
+{% include toc title="目录内容" %}
+
+### 必读事项
+
+我们利用了 DSiWare 游戏中的一个漏洞来在你的主机上安装 Boot9Starp。
+
+为了做到这点，我们使用了一个叫 Seedminer 的工具来计算你主机的 DSiWare 加密密钥（`movable.sed`）。 然后, 我们使用 DSiWare 加密密钥来解密与漏洞相兼容的 DSiWare 游戏。之后，我们将漏洞植入游戏好让我们运行任何想要运行的程序（漏洞种类视你的主机系统区域而定）。
+
+如果这个密钥是完全随机生成的，那么加密密钥将不可能被破解出来。 幸运的是，密钥的前半部分（`movable_part1.sed`）与你的主机的朋友代码（Friend code）有着一些关系，使我们能够破解加密。 如果想要了解 Seedminer 是怎么工作的，请参见此[介绍资料](https://zoogie.github.io/web/34⅕c3)
+
+请注意，这个工具需要一个带有高性能显卡的电脑来破解 DSiWare 的加密。 如果你没有那样的主机，那你可以使用网络上的自愿服务来破解你的密钥。
+
+### 操作步骤
+
+#### 第一步 – 兼容性测试
+
+虽然这些测试不是为了触发 Seedminer 漏洞而必须要做的。但是如果不进行测试的话可能会因为 Seedminer 漏洞失效而白白浪费时间和精力并可能会无法使用其他的漏洞。
+
+这里有两种方法来构建 Seedminer 漏洞（详情请看本页底端），因此，如果其中一项测试失败，只要另一个测试没有失败，你就可以使用另一个办法。
+
+#### DS 网络设置测试（用于Fredtool）
+
+1. 进入系统设置，然后进入 “互联网设置（Internet Settings）”，然后进入 “任天堂 DS 连接（Nintendo DS Connections）”
+1. 点击 “OK”
+1. 如果你的主机进入到了 “任天堂 Wi-Fi 连接设置（Nintendo Wi-Fi Connection Setup）” 菜单中，则此测试成功
+  + 如果屏幕一直黑屏或者看上去似乎死机了，那么测试失败。你将无法使用 Fredtool（因为此漏洞需要能正常使用 DS 网络设置的主机）
+1. 退出此菜单
+
+#### DS 下载通信测试（用于 Frogtool）
+
+1. 启动“下载通信（Download Play）”程序 (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
+1. 选择 “Nintendo DS”
+1. 如果你的主机正常进入了 DS “下载通信（Download Play）” 程序，那么测试成功。
+  + 如果屏幕一直黑屏或者看上去似乎死机了，那么测试失败。你将无法使用 Frogtool（因为此漏洞需要能正常使用 DS 下载通信的主机）
+1. 退出此菜单
+
+#### 第二步 – 准备工作
+
+1. 将你的 SD 卡插入到电脑
+1. 打开你 SD 卡的 `Nintendo 3DS` 文件夹
+1. 复制你看到的 32 位字符文件夹的名称
+  + 如果你看到多个类似的文件夹，那么请按以下内容做：
+  + 将 `Nintendo 3DS` 文件夹重命名为 `BACKUP_Nintendo 3DS`
+  + 重新将 SD 卡插入主机并开机
+  + 等待主机生成 SD 卡中的数据
+  + 关机并将 SD 卡重新插入你的电脑
+  + 打开你 SD 卡的 `Nintendo 3DS` 文件夹
+  + 复制你看到的 32 位字符文件夹的名称
+  + 删除 `Nintendo 3DS` 文件夹
+  + 将 `BACKUP_Nintendo 3DS` 文件夹重命名为 `Nintendo 3DS`
+1. 将这个 32 位的字符串粘贴到记事本中，等一下会用到它
+  + 这个文件夹名也称作 “ID0”
+1. 启动你的主机
+1. 打开你的好友列表（主菜单中最上方的[橙色的笑脸]({{ "/images/friend-list-icon.png" | absolute_url }})）
+  + 如果出现错误信息并被踢回到主菜单，则你需要创建一个 Mii 形象或你的主机无法连接到任天堂服务器（由于封禁或网络问题）
+1. 找到你的 Mii 个人形象，然后在上屏寻找你的“朋友代码（Friend Code）”
+
+#### 第三步 – Seedminer
+
+1. 在电脑上打开 [Bruteforce Movable](https://bruteforcemovable.com/) 网站
+  + 这个网站可以自动替你获取 `movable_part1.sed` 文件（通过一台由机器人操控的 3DS），并破解你主机的 DSiWare 密钥（通过某自愿者的电脑运行 Seedminer 取得）
+  + 如果自助功能无法使用，请加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp) 并使用英文请求帮助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网）你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497。
+1. 在 “Your friend code” 选项填入你主机的 “朋友代码（Friend Code）”（只要数字，不要填入空格和破折号）
+1. 在 “Your ID0” 栏位粘贴之前复制的 32 位长的字符串
+1. 完成谷歌的 “人机身份验证”（请注意，如果你身处中国大陆，看到这个选项可能需要科学上网）
+1. 点击 “Go”
+  + 如果网站直接跳到了第四步（step 4），那么就下载 `movable.sed` 并跳到下一部分
+1. 当提示时，在你主机中的 “好友注册（Register Friend）”中，添加网页给出的朋友代码
+1. 等待网站更新
+  + 如果一直没有更新，请在刷新网页前等待几分钟。
+1. 一旦网页开始处理你主机的相关信息，你将可以选择“继续（Contiune）”或“破解其他主机（Do another device）” 点击绿色的 “Continue” 按钮
+1. 等待其完成步骤中的其余部分
+  + 这通常是很快的（1～5分钟左右），但是在某些情况下可能会需要长达半小时。
+  + 在这个过程中，你之前添加的机器人 3DS 可能不会在你的 3DS 上面展示 不过只要网站还在更新，这就不是个问题。
+  + 如果你已经等待了半个小时，那么请加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp) 并使用英文求助。你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497。
+1. 等待程序自动完成后，从站点下载 `movable.sed` 文件
+  + 你在之后还会用到这个文件，请先把这个文件存起来
+
+___
+### 方法
+
+___
+
+#### Seedminer + Fredtool
+
+本章节 Seedminer 将使用你的 `movable.sed` 文件来解密所有的来自 eShop 的 DsiWare 程序，以便在 3DS 中内置的 DS 网络设定中注入修改后的 DSiWare 程序。 在使用本教程之前你需要拥有（或下载 / 购买）在eShop 上下载的 DSiWare 软件。
+
+这个方法适用于所有区域的主机，不过只有日版和美版区域的 eShop 内有免费的 DSiWare 游戏。
+
+这个方法要求 DS 互联网设置正常运行。请通过此页面顶部的测试确认可以使用后再继续此教程。
+
+继续至[安装 boot9strap（通过Fredtool）](installing-boot9strap-(fredtool))
+{: .notice--primary}
+
+___
+
+#### Seedminer + Steelhax + Frogtool
+
+Seedminer 将使用你的 `movable.sed` 文件，通过 Steelhax 漏洞启动 Homebrew Launcher，以便在 DS Download Play 中注入修改后的 DSiWare 程序。 在进行本教程前，你必须先拥有（或下载）eShop 中免费的 “Steel Driver: Sub Wars” 游戏。
+
+这个方法只适用于欧版，日版和美版的主机。而且比另一方法稍微复杂一些。 这个方法只建议给不愿花钱买 DSiWare 游戏的欧版主机或使用另一方法无效的人们。
+
+这个方法要求 DS 下载通信正常运行。请通过此页面顶部的测试确认可以使用后再继续此教程。
+
+继续至[启动 Homebrew Launcher（通过Steelhax）](homebrew-launcher-(steelhax))
+{: .notice--primary}
+
