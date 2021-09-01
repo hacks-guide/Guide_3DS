@@ -1,0 +1,111 @@
+---
+title: "Seedminer"
+---
+
+{% include toc title="Indice" %}
+
+### Lettura necessaria
+
+Per installare boot9strap sulla tua console, dovremo approfittare di un errore nelle restrizioni di sicurezza relative alle applicazioni "DSiWare".
+
+Utilizzeremo perciò un'applicazione chiamata Seedminer per calcolare la chiave di criptazione (`movable.sed`) dei DSiWare della tua console. Useremo quindi questa chiave per decriptare un'applicazione DSiWare compatibile, per poi iniettarci un exploit che eseguirà il nostro codice (il tipo di exploit dipenderà dalla regione della tua console).
+
+Se questa chiave fosse completamente casuale, la chiave di criptazione sarebbe impossibile da calcolare con l'hardware correntemente disponibile. Per fortuna, la prima metà (`movable_part1.sed`) è matematicamente correlata al Codice Amico della tua console, e questo ci permette di infrangere la sua sicurezza. Per ulteriori informazioni sul funzionamento di Seedminer, è possibile consultare [questa presentazione](https://zoogie.github.io/web/34⅕c3).
+
+Tieni presente che questo programma richiede un PC con una scheda grafica potente per infrangere la criptazione DSiWare della tua console. Se non ne possiedi uno, esistono diversi servizi online basati su volontari che forniscono il proprio PC per lo scopo.
+
+### Istruzioni
+
+#### Sezione I - Test di Compatibilità
+
+Anche se questi test non sono strettamente necessari per l'esecuzione dell'exploit Seedminer, gli exploit successivi li richiederanno e sarebbe uno spreco di tempo eseguire il primo senza poter poi eseguire i secondi.
+
+Dopo l'esecuzione dell'exploit Seedminer possono essere eseguiti due diversi exploit (descritti in fondo alla pagina), quindi anche se uno dei test dovesse fallire puoi sempre tentare il secondo.
+
+#### Test Connessioni Nintendo DS (usato per Fredtool)
+
+1. Vai su "Impostazioni della console", "Impostazioni Internet", quindi "Connessioni Nintendo DS"
+1. Premi "OK"
+1. Se la tua console carica il menu "Configurazione Nintendo Wi-Fi Connection", il test ha avuto successo
+  + Se lo schermo rimane nero o sembra bloccarsi, il test è fallito e non potrai utilizzare il metodo Fredtool, dato che richiede un menu "Connessioni Nintendo DS" funzionale
+1. Esci da questo menu
+
+#### Test Modalità Download DS (usato per Frogtool)
+
+1. Avvia l'applicazione "Modalità download" (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
+1. Seleziona "Nintendo DS"
+1. Se la console ora mostra la scritta "Scarica software tramite il download DS.", il test ha avuto successo
+  + Se lo schermo rimane nero o sembra bloccarsi, il test è fallito e non potrai utilizzare il metodo Frogtool, dato che richiede una Modalità download DS funzionale
+1. Esci da questo menu
+
+#### Sezione II - Preparazione
+
+1. Inserisci la scheda SD nel tuo computer
+1. Entra nella cartella `Nintendo 3DS` della tua scheda SD
+1. Copia la stringa di 32 caratteri del nome della cartella qui presente
+  + Se vedi più cartelle dal nome lungo, segui i seguenti passaggi:
+  + Rinomina la cartella `Nintendo 3DS` in `BACKUP_Nintendo 3DS`
+  + Reinserisci la tua scheda SD nella console, e accendila
+  + Attendi che la console generi i dati nella scheda SD
+  + Spegni la console e reinserisci la scheda SD nel tuo computer
+  + Entra nella cartella `Nintendo 3DS` della tua scheda SD
+  + Copia la stringa di 32 caratteri del nome della cartella qui presente
+  + Elimina la cartella `Nintendo 3DS`
+  + Rinomina la cartella `BACKUP_Nintendo 3DS` in `Nintendo 3DS`
+1. Incolla la stringa di 32 caratteri in un documento che potrai consultare più avanti
+  + Il nome di questa cartella è il tuo "ID0"
+1. Accendi la console
+1. Accedi alla lista di amici (l'[icona con un viso arancione]({{ "/images/friend-list-icon.png" | absolute_url }}) nella riga superiore del menu HOME)
+  + Se riscontri un errore e vieni rimandato al menu principale, o devi creare un nuovo Mii o la console non può connettersi ai server Nintendo (a causa di un ban o per problemi di connettività)
+1. Sul tuo profilo Mii cerca il "Codice Amico" sullo schermo superiore
+
+#### Sezione III - Seedminer
+
+1. Avvia [Bruteforce Movable](https://bruteforcemovable.com/) sul tuo computer
+  + Questo sito permette il recupero automatico del file `movable_part1.sed` (utilizzando una console 3DS fittizia) e la decriptazione della chiave DSiWare della tua console (utilizzando Seedminer tramite il computer di un volontario)
+  + Se il servizio automatizzato non funziona, entra nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) (in Inglese) per richiedere assistenza
+1. Inserisci il Codice Amico della tua console (senza spazi o trattini) nel campo "Your friend code"
+1. Incolla i 32 caratteri della cartella nel campo "Your ID0"
+1. Supera il captcha "I'm not a robot"
+1. Seleziona "Go"
+  + Se il sito passa direttamente al punto 4, scarica il tuo file `movable.sed` e prosegui con la sezione successiva.
+1. Quando richiesto, usa il pulsante "Registra Amico" sulla tua console per aggiungere il codice amico della console 3DS fittizia
+1. Attendi l'aggiornamento del sito
+  + Se la pagina non si aggiorna da sola, attendi qualche minuto prima di ricaricarla manualmente una singola volta
+1. Quando il sito avrà finito di elaborare le informazioni, potrai continuare premendo "Continue" o effettuare le operazioni su un altra console con "Do another device". Premi il pulsante verde "Continue"
+1. Attendi il termine del processo
+  + Potrebbe terminare in poco tempo (anche meno di cinque minuti) o impiegarci anche mezz'ora.
+  + Durante questo processo, il bot potrebbe non visualizzarsi sul tuo 3DS. Fintantoché il sito si aggiorna, non sarà un problema.
+  + Se dopo mezz'ora non è successo, nulla, entra nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) (in Inglese) per richiedere assistenza
+1. Al termine del processo, scarica il tuo file `movable.sed` dal sito
+  + Conserva questo file in quanto ti servirà nelle pagine successive
+
+___
+### Metodi
+
+___
+
+#### Seedminer + Fredtool
+
+Seedminer utilizza il tuo file `movable.sed` per decriptare un qualunque titolo DSiWare dell'eShop per iniettare una particolare applicazione DSiWare nell'applicazione Impostazioni Internet DS. Questo metodo richiede che tu possegga (o scarichi / compri) un gioco DSiWare dall'eShop.
+
+Il metodo è compatibile con tutte le regioni, anche se soltanto le regioni JPN e USA hanno titoli DSiWare gratuiti scaricabili dall'eShop.
+
+Questo metodo richiede che le Impostazioni Internet DS funzionino regolarmente (vedi il test in cima a questa pagina).
+
++ Prosegui con l'[Installazione di boot9strap (Fredtool)](installing-boot9strap-(fredtool))
+{: .notice--primary}
+
+___
+
+#### Seedminer + Steelhax + Frogtool
+
+Seedminer utilizza il tuo file `movable.sed` per ottenere accesso all'Homebrew Launcher tramite l'exploit Steelhax per iniettare una particolare applicazione DSiWare nell'applicazione DS "Modalità download". Questo metodo richiede il possesso (o lo scaricamento) del gioco gratuito "Steel Diver: Sub Wars" dall'eShop.
+
+Questo metodo è compatibile con le regioni EUR, JPN e USA, ed è leggermente più complicato del precedente. Si raccomanda di usare questo metodo se hai una console EUR e non vuoi comprare un gioco DSiWare, o se il metodo precedente non è eseguibile per qualche motivo.
+
+Questo metodo richiede che la Modalità download DS funzioni correttamente (vedi il test in cima a questa pagina).
+
+Prosegui con l'[Homebrew Launcher (Steelhax)](homebrew-launcher-(steelhax))
+{: .notice--primary}
+
