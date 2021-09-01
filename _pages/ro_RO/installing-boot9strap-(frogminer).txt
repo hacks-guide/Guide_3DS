@@ -1,132 +1,59 @@
 ---
-title: "Instalând boot9strap (Frogminer)"
+title: "Instalând Boot9strap (Frogtool)"
 ---
 
 {% include toc title="Cuprins" %}
 
 ### Lectură obligatorie
 
-Pentru a instala boot9strap pe dispozitivul dumneavoastră cu 11.9.0, putem exploata o neglijare în restricţiile de securitate aplicate aplicațiilor.
+Acum vom folosi accesul la Homebrew Launcher pentru a porni aplicația Frogtool și injecta versiuna japoneză a titlului "Flipnote Studio", care vom folosi ulterior pentru a porni b9sTool și instala boot9strap.
 
-Pentru a realiza acest lucru, vom folosi o unealtă numită Seedminer pentru a calcula cheia de criptare DSiWare (`movable.sed`) pentru dispozitivul dumneavoastră.
-
-Folosim apoi această cheie de criptare DSiWare pentru a decripta o aplicaţie compatibilă DSiWare şi injecta un exploit în el pentru a rula propriul nostru cod.
-
-În cazul în care această cheie ar fi complet întâmplătoare, cheia de criptare ar fi imposibil de decriptat pe hardware-ul de computare existent în prezent. Din fericire, prima jumătate a cheii (`movable_part1.sed`) este de fapt matematic asociată cu Friend Code-ul dispozitivului dumneavoastră, permițând descifrarea criptării. Pentru informaţii despre cum funcţionează Seedminer, vă rugăm să consultaţi [această prezentare](https://zoogie.github.io/web/34⅕c3).
-
-Țineți cont că această unealtă necesită un calculator cu o placă video puternică pentru a descifra criptarea DSiWare a dispozitivului. Dacă nu aveţi acces la una dintre acestea, există un serviciu online de ajutor unde un voluntar care rulează software-ul automat va face asta pentru dumneavoastră.
+Acest lucru este în prezent o implementare a exploit-ului "Partiții FIRM de text simplu" detaliat [aici](https://www.3dbrew.org/wiki/3DS_System_Flaws).
 
 Pentru a folosi linkurile [magnetice](https://wikipedia.org/wiki/Magnet_URI_scheme) de pe această pagină, veți avea nevoie de un client de torrente ca [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
 Pentru a extrage fişierele `.7z` și `.rar` de pe această pagină, veţi avea nevoie de un arhivator de fişiere ca [7-Zip](http://www.7-zip.org/) sau [The Unarchiver](https://theunarchiver.com/).
 
-Acest proces va suprascrie fișierul de salvare a jocului!
-{: .notice--warning}
-
 ### Ce aveți nevoie
 
-* Jocul eShop gratuit "Steel Diver: Sub Wars" de pe eShop
+* Fișierul 'movable.sed' de la completarea lui [Seedminer](seedminer)
 * <i class="fa fa-magnet" aria-hidden="true" title="Acesta este un link magnetic. Folosiţi un client de torrent pentru a descărca fişierul."></i> - [frogcert.bin](magnet:?xt=urn:btih:d12278ea50bb3574f1fbd327f3d0e2292c70941f&dn=frogcert.bin&tr=https%3a%2f%2ftracker.fastdownload.xyz%3a443%2fannounce&tr=https%3a%2f%2fopentracker.xyz%3a443%2fannounce&tr=http%3a%2f%2fopen.trackerlist.xyz%3a80%2fannounce&tr=http%3a%2f%2ft.nyaatracker.com%3a80%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2fopen.demonii.si%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.port443.xyz%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.vanitycore.co%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&tr=udp%3a%2f%2fthetracker.org%3a80%2fannounce&tr=http%3a%2f%2ftorrent.nwps.ws%3a80%2fannounce&tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.iamhansen.xyz%3a2000%2fannounce&tr=udp%3a%2f%2fbt.xxx-tracker.com%3a2710%2fannounce&tr=http%3a%2f%2f0d.kebhana.mx%3a443%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2ftracker4.itzmx.com%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.justseed.it%3a1337%2fannounce&tr=http%3a%2f%2ftherightsize.net%3a1337%2fannounce&tr=udp%3a%2f%2fretracker.hotplug.ru%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&tr=udp%3a%2f%2f9.rarbg.com%3a2800%2fannounce&tr=https%3a%2f%2f2.track.ga%3a443%2fannounce&tr=udp%3a%2f%2fbigfoot1942.sektori.org%3a6969%2fannounce)
 * Cea mai nouă versiune de [Frogtool](https://github.com/zoogie/Frogtool/releases/latest)
-* Cea mai nouă versiune de [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
-* Ultima versiune de [Steelhax](https://github.com/VegaRoXas/vegaroxas.github.io/raw/master/files/steelhax-installer.rar)
 * Cea mai recentă versiune de [b9sTool] (https://github.com/zoogie/b9sTool/releases/latest)
 * Cea mai nouă versiune de [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(fișierul `.7z`)*
-* [Payload-ul otherapp](https://smealum.github.io/3ds/#otherapp) *(pentru versiunea și regiunea dumneavoastră)*
-
-### Instrucțiuni
 
 #### Secțiunea I - Preparații
 
-1. Mergeți la System Settings, apoi "Internet Settings", apoi "Nintendo DS Connections"
-1. Apăsați "OK"
-1. În cazul în care dispozitivul se încarcă într-un meniu de "Nintendo Wi-Fi Connection Setup", ieşiți din acest meniu
-  + În cazul în care ecranul rămâne negru sau pare să îngheţe, nu veți putea folosi Frogminer; reveniți la [Începeți](get-started) şi selectaţi o metodă din "Toate Versiunile"
-1. Închideți dispozitivul
 1. Introduceți cardul SD în calculator
-1. Creați un folder numit `3ds` în rădăcina cardului SD dacă nu există deja
+1. Copiați fișierul `movable.sed` in rădăcina cardului SD
 1. Copiați `boot.firm` de la Luma3DS `.7z` în rădăcina cardului SD
 1. Copiați `boot.nds` (B9STool) în rădăcina cardului SD
-1. Copiați `boot.3dsx` în rădăcina cardului SD
-1. Copiați folderul `steelhax` din arhiva Steelhax `.zip` pe rădăcina cardului SD
-1. Copiați payload-ul otherapp în folderul `steelhax` de pe cardul SD și redenumiți-l în`payload.bin`
 1. Copiați `Frogtool.3dsx` în folderul `/3ds/` de pe cardul SD
 1. Copiați `frogcert.bin` în rădăcina cardului SD
-1. Navigați către folderul `Nintendo 3DS` pe cardul SD
-1. Copiați numele lung de 32 de caractere al folderului care îl vedeți
-  + Dacă vedeți foldere multiple precum astea, faceți următoarele:
-  + Redenumiţi folderul `Nintendo 3DS` către `BACKUP_Nintendo 3DS`
-  + Reintroduceţi cardul SD în dispozitiv și porniți dispozitivul
-  + Aşteptaţi dispozitivul pentru a genera datele de card SD
-  + Închideți dispozitivul și reintroduceți cardul SD înapoi în calculator
-  + Navigați către folderul `Nintendo 3DS` pe cardul SD
-  + Copiați numele lung de 32 de caractere al folderului care îl vedeți
-  + Ștergeți folderul `Nintendo 3DS`
-  + Redenumiţi folderul `BACKUP_Nintendo 3DS` către `Nintendo 3DS`
-1. Lipiţi numele lung al folderului de 32 de caractere într-un document pe care îl puteți referenția mai târziu
-  + Acest nume de folder este de asemenea cunoscut ca "ID0" al dispozitivului
-1. Reintroduceți cardul SD în dispozitivul dumneavoastră
-1. Porniți dispozitivul
-1. Mergeți în Lista de prieteni ([iconița cu fața portocalie]({{ "/images/friend-list-icon.png" | absolute_url }} în rândul superior de pe meniul HOME)
-  + Dacă primiți o eroare și sunteți dat afară din meniu, va trebui să creți un nou Mii sau consola nu se mai poate conecta în serverele Nintendo (din cauza unui ban sau problemelor de conexiune)
-1. Găsiți profilul de Mii, apoi găsiţi câmpul "Friend Code" de pe ecranul superior
-
-#### Secțiunea II - Seedminer
-
-1. Deschideţi [Bruteforce Movable](https://bruteforcemovable.com/) pe calculator
-  + Acest site poate automatiza extragerea de `movable_part1.sed` (folosind un bot care simulează un 3DS) şi descifrarea criptării DSiWare a dispozitivului (folosind calculatorul unui voluntar pentru a rula Seedminer)
-  + În cazul în care aveţi deja acces la un 3DS capabil de a lansa Homebrew Launcher, aveți posibilitatea să obțineți manual `movable_part1.sed` folosind acel dispozitiv, urmărind [aceste](https://jisagi.github.io/SeedminerGuide/seedminerSelf/#section1) instrucțiuni
-  + În cazul în care aveți acces la un calculator cu o placă video puternica, puteți calcula automat `movable.sed` urmărind [aceste](https://jisagi.github.io/SeedminerGuide/seedminerSelf/#section2) instrucțiuni
-  + În cazul în care serviciul automat nu este funcțional și nu puteți face una sau ambele din acestea manual, alăturați-vă la [Nintendo Homebrew pe Discord](https://discord.gg/MWxPgEp) și întrebați (în engleză) pentru a vă ajuta cineva
-1. Introduceți Friend Code-ul dispozitivului (cu fără spaţii sau liniuţe) în câmpul "Your friend code"
-1. Lipiți numele de folder al dispozitvului de 32 de caractere în câmpul "Your ID0"
-1. Finalizați captcha-ul "I'm not a robot"
-1. Selectați "Go"
-1. Când vi se solicită, folosiți butonul "Register Friend" pe dispozitivul dumneavoastră să adăugaţi codul de prieten al bot-ului care simulează un 3DS
-1. Așteptați ca site-ul să se actualizeze
-  + Dacă nu se actualizează, așteptați câteva minute înainte de a reîncărca pagina o dată
-1. Selectaţi "Continue"
-1. Așteptați până când procesul este terminat
-  + Aceasta poate dura o vreme (până la o oră în unele cazuri)
-  + În cazul în care încă așteptați după o oră, alăturați-vă la [Nintendo Homebrew pe Discord] (https://discord.gg/MWxPgEp) şi cereți (în engleză) pentru ca cineva acolo să vă asiste
-1. Când procesul s-a completat, descărcați fişierul `movable.sed` de pe site
-
-#### Secțiunea III - Steelminer
-
-1. Lansați "Steel Diver: Sub Wars" o dată şi selectaţi un Mii pentru a iniția fișierul de salvare
-  + Respingeți actualizarea de joc atunci când vi se solicită
-  + Dacă aţi actualizat deja jocul, folosiți meniul de Data Management de la System Settings pentru a șterge actualizarea
-1. Ieșiți din "Steel Diver: Sub Wars"
-1. Închideți dispozitivul
-1. Introduceți cardul SD în calculator
-1. Deschideţi [website-ul Steelminer](http://steelminer.jisagi.net/#Section_III) pe calculator
-1. Selectaţi fişierul `movable.sed`
-1. Selectați "Start!"
-1. Așteptați până când procesul este terminat
-1. Navigaţi la`Nintendo 3DS` -> `<ID0>` -> `<ID-de-32-caractere>` -> `title` -> `00040000` -> `<regiune-de-8-caractere>` -> `data` pe cardul SD
-  + **Regiunea EUR**: `000d7e00`
-  + **Regiunea JPN**: `000d7c00`
-  + **Regiunea USA**: `000d7d00`
-1. Copiați noul fişier de salvare descărcat în folderul `data` de pe cardul SD
-  + Suprascrieți vechiul fişier de salvare când vi se cere
-1. Copiați `movable.sed` de la dumneavostră în rădăcina cardului SD
 1. Reintroduceți cardul SD în dispozitivul dumneavoastră
 1. Porniți dispozitivul
 
-#### Secțiunea IV - instalând FIRM
+#### Secțiunea II - Patch-uind DS Download Play
 
-1. Lansați "Steel Diver: Sub Wars"
-1. În cazul în care exploit-ul a mers, dispozitivul va încărca Homebrew Launcher
+1. Deschideți Homebrew Launcher folosind orice metodă
 1. Lansați Frogtool din lista de homebrew
 1. Selectați opțiunea "INJECT patched DS Download Play"
 1. Frogtool va rula automat şi va injecta versiunea JPN de Flipnote Studio în DS Download Play
 1. După ce s-a terminat operația, apăsați pe ecranul tactil și selectaţi "BOOT patched DS Download Play"
 1. În cazul în care exploit-ul a mers, dispozitivul va încărca versiunea JPN de Flipnote Studio
+
+#### Secțiunea III - Exploit-ul Flipnote
+
+Dacă preferați un ghid vizual pentru aceasta secțiune, deja este disponibil unul [aici](https://zoogie.github.io/web/flipnote_directions/).
+{: .notice--info}
+
 1. Finalizați procesul de configurare iniţială pentru jocul lansat până când ajungeți la meniul principal
   + Selectaţi opţiunea stângă ori de câte ori se solicită în timpul procesului de instalare
 1. Folosind ecranul tactil, selectaţi căsuța mare din stânga, apoi selectaţi căsuța cu o pictogramă de card SD
 1. Odată ce se încarcă meniul, selectaţi iconița cu o față apoi iconița din dreapta jos pentru a continua
-1. Selectaţi iconița cu broasca în stânga jos, apoi selectaţi al doilea buton de-a lungul pârții de sus cu o iconiță de rolă de film
+1. Selectați iconița cu broasca din colțul de pe stânga jos
+  + Alternativ, apăsați (X) sau (Sus) pe D-Pad în funcție de care este afișat pe ecranul superior
+1. Alegeți al doilea buton de sus cu o iconiță de rolă de film
 1. Derulați dreapta până când este selectat rola "3/3"
 1. Atingeţi căsuța a treia cu litera "A" în ea
 1. Derulați stânga până când este selectat rola "1/3"
@@ -135,8 +62,9 @@ Acest proces va suprascrie fișierul de salvare a jocului!
 1. Selectaţi "Install boot9strap" şi confirmați
 1. Ieșiți din b9sTool, apoi închideți dispozitivul
   + Este posibil să aveţi nevoie să forțați oprirea dispozitivului apăsând butonul de pornire
+  + Dacă vedeți meniul de configurare Luma, continuați fără să închideți dispozitivul
 
-#### Secțiunea V - Configurând Luma3DS
+#### Secțiunea IV - Configurând Luma3DS
 
 1. Porniți dispozitivul în timp ce țineți apăsat (Select) pentru a lansa meniul de configurare Luma
   + În cazul în care găsiți probleme pornind meniul de configurare Luma, [urmați acest ghid de depanare](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)
