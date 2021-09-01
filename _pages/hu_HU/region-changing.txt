@@ -14,7 +14,7 @@ Ahhoz, hogy használhasd a [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme
 
 Vedd figyelembe, hogy amennyiben van más payload fájl a `GodMode9.firm` fájlon kívül a `/luma/payloads/`mappában, indításkor a (Start) gombot lenyomva tartva a "chainloader menu" menü fog megjelenni. Itt a D-Pad és az (A) gomb segítségével válaszd a "GodMode9" opciót, hogy az alábbi utasításokat követhesd.
 
-This process will unlink your NNID from the system because it will no longer be compatible with your NNID. NNIDs are locked to the region of your device that created them and cannot be transferred between regions.
+Ez a folyamat leválasztja az NNID-det a rendszerről, mert többé már nem lesz kompatibilis NNID-del. Az NNID-k az eszközöd régiójához kötöttek, amelyben létre hozta és nem vihetők át régiók között.
 {: .notice--warning}
 
 Ez után, **nem fogod elérni az eShop-ot**. Ebbe beleértett minden szolgáltatás ami használja a NNID-, mint példul frissítések, DLC-k, vagy online játék bizonyos játékokkal. A régió visszaállítása az eredeti régióra többnyire nem fogja javítani ezt a problémát.
@@ -26,6 +26,9 @@ A CTRTransferrel történő régióváltás (amit az alábbi módszer alkalmaz) 
 
 Az alábbiak használatához már telepítened kellett a következőket: Luma3DS és boot9strap.
 {: .notice--danger}
+
+Egy CTRTransfer végrehajtása tönkre teheti a bővített memória módú játékokat (Monster Hunter, Super Smash Bros, Pokemon Sun/Moon) régi 3DS/2DS eszközökön. Ha ez előfordulna, formáznod kell az eszközödet (a TinyFormat vagy a System Settings használatával) a javításhoz.
+{: .notice--warning}
 
 ### Amire szükséged lesz
 
@@ -48,7 +51,6 @@ Az alábbiak használatához már telepítened kellett a következőket: Luma3DS
 1. Kapcsold ki a készüléked
 1. Helyezd az SD kártyád a számítógépbe
 1. Hozz létre egy mappát `3ds` néven az SD kártyád gyökerében, ha még nem létezik ilyen
-1. Hozz létre egy mappát `cias` néven az SD kártyád gyökerében, ha még nem létezik ilyen
 1. Másold át a `GodMode9.firm` fájlt a GodMode9 `.zip`-ből az SD kártyád `/luma/payloads/` mappájába
 1. Másold át a `gm9` mappát a GodMode9 `.zip`-ből az SD kártyád gyökerébe****
 1. Másold át a 11.5.0-s CTRTransfer `.bin` képfájlt a CTRTransfer `.zip`-ből az SD kártyádon található `/gm9/` mappába
@@ -128,8 +130,6 @@ Ha a szkript nem talált egy ticketet sem, és azt írta, hogy hagyd ki ezt a r�
 {: .notice--info}
 
 1. Indítsd el az FBI-t a homebrew listából
-1. Menj ide: `SD` -> `cias`
-1. Lépj vissza az SD könyvtárba a (B) gomb megnyomásával
 1. Válaszd ki ezt: "gm9"
 1. Majd válaszd ezt: "out"
 1. Ott pedig válaszd ezt: "ctrtransfer_tickets"
@@ -158,6 +158,3 @@ Ha a szkript nem talált egy ticketet sem, és azt írta, hogy hagyd ki ezt a r�
 1. Nyomd meg a (Start) gombot az eszköz újraindításához
 
 ___
-
-Az Old 3DS és Old 2DS készülékeken szükség lehet egy formázásra (TinyFormat vagy a System Settings használatával), hogy játszani lehessen a kiterjesztett memória módot használó játékokkal (mint például a Monster Hunter, a Super Smash Bros, vagy a Pokemon Sun/Moon).
-{: .notice--info}
