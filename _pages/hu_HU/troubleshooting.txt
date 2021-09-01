@@ -4,162 +4,177 @@ title: "Hibaelhárítás"
 
 {% include toc title="Tartalomjegyzék" %}
 
-### Fontos tudnivalók
+Ez az oldal hibaelhárítási tanácsokat ad sűrűn előforduló problémákhoz. Ha nem tudod megoldani a problémád az oldal tanácsai alapján, csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és írd le a problémádat és azt is hogy mi az amit már próbáltál.
 
-Ha nem tudod elindítani a készülékedet, keresd meg a rád vonatkozó részt, majd kövesd az ott található utasításokat.
+# Page-related issues on this guide
 
-Ha még így sem tudod megoldani a problémádat, és szeretnél segítséget kérni, először másold át az összes lényeges .log fájl tartalmát az SD kártyádról egy [Gistbe](https://gist.github.com/), majd a problémád részletes leírásával és a kipróbált megoldásokkal együtt fordulj hozzánk segítségért.
+---
 
-Vedd figyelembe, hogy amennyiben van más payload fájl a `GodMode9.firm` fájlon kívül a `/luma/payloads/`mappában, indításkor a (Start) gombot lenyomva tartva a "chainloader menu" menü fog megjelenni. Itt a D-Pad és az (A) gomb segítségével válaszd a "GodMode9" opciót, hogy az alábbi utasításokat követhesd. 
+# Problémák a SafeB9SInstaller-rel
 
-Ahhoz, hogy használhasd a [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) linkeket ezen az oldalon, szükséged lesz egy torrent kliensre, mint például a [Deluge](http://dev.deluge-torrent.org/wiki/Download).
+## SigHaxed FIRM was not installed! Tekintsd meg az alsó képernyőt részletekért.
 
-## Egyes DSi / DS funkciók nem működnek az útmutató végigcsinálása után
+### SigHaxed FIRM - File not found
 
-### Amire szükséged lesz
+Hiányzik a `boot9strap.firm` és a `boot9strap.firm.sha` fájl a `boot9strap` mappából vagy a `boot9strap` mappa neve hibás. Töltsd le a [boot9strap](https://github.com/SciresM/boot9strap/releases/latest), legutolsó kiadását és rakd a `boot9strap.firm` és a `boot9strap.firm.sha` fájlt a `boot9strap` mappába. Legyél biztos abban, hogy jó fájt töltesz le (`boot9strap-1.3.zip`, nem a devkit, nem az ntr).
 
-* A [TWLFix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest) legújabb kiadása *(a .3dsx fájl)*
+### SigHaxed FIRM - invalid FIRM
 
-### Lépések
+Probléma van a `boot9strap.firm` és a `boot9strap.firm.sha` fájlokkal. Töltsd le újra a [boot9strap](https://github.com/SciresM/boot9strap/releases/latest), legutolsó kiadását és rakd a `boot9strap.firm` és a `boot9strap.firm.sha` fájlt a `boot9strap` mappába. Legyél biztos abban, hogy jó fájt töltesz le (`boot9strap-1.3.zip`, nem a devkit, nem az ntr).
 
-#### Első rész - Előkészületek
+### Secret Sector - File not found
 
-1. Kapcsold ki a készüléked
-1. Helyezd az SD kártyád a számítógépbe
-1. Hozz létre egy mappát `3ds` néven az SD kártyád gyökerében, ha még nem létezik ilyen
-1. Másold az `TWLFix-CFW.3dsx` fájlt az SD kártyád `/3ds/` mappájába
-1. Tedd vissza az SD kártyád a készülékedbe
+Hiányzik a `secret_sector.firm` fájl a `boot9strap` mappából vagy a `boot9strap` mappa neve hibás. Töltsd le a [secret_sector.bin](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce) fájlt torrent kliens használatával és rakd a `boot9strap` mappába.
 
-#### II. rész - A TWL javítása
+### Valami más
 
-1. Nyisd meg a Homebrew Lancher-t
-1. Indítsd el a TWLFix-CFW-t a homebrew listából
-1. Nyomj (A)-t a törött TWL címek eltávolításához
-1. Nyomj (Start) gombot az eszköz újraindításához
-1. Frissítsd az eszközödet következőképp. Lépj be a System Settings-be, majd az "Other settings"-be, ahol addig lépkedj jobbra, amíg a végére nem érsz. Itt válaszd a "System Update" opciót
-  + A frissítés észreveszi, hogy lényeges TWL címek kerültek eltávolításra és le fogja tölteni és újratelepíteni azokat
-1. Ha a frissítés kész, érintsd meg az "OK"-ot az eszköz újraindításához 
+Csatlakozz a [Nintendo Homebrew Discord-on](https://discord.gg/MWxPgEp) csatornához segítségért és írd le az üzenetet amit láttál.
 
-## Nem lehet injektálni H&S-be Gateway segítségével downgrade-elt készüléken
+---
 
-Ezt a jelenséget a Gateway eléggé vacakul implementált downgrade eljárása okozza, ami minden alkalmazásból két verziót hagy a rendszeren. Az egyik verzió mindig használaton kívül van, de a H&S injektálást végző rendszert ez megzavarja, ami aztán a rossz verzióba injektál.
+# Seedminer
 
-1. Kapcsold ki a készüléked
-1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be az eszközödet. Ez elindítja a GodMode9-et
-1. Kövesd a `[1:] SYSNAND CTRNAND` -> `title` -> `00040010` útvonalat
-1. Válaszd a készülékednek és a régiódnak megfelelő mappát:
-  + **Old 3DS vagy Old 2DS EUR**: `00022300` -> `content`
-  + **Old 3DS vagy Old 2DS JPN**: `00020300` -> `content`
-  + **Old 3DS vagy Old 2DS USA**: `00021300` -> `content`
-  + **New 3DS vagy New 2DS EUR**: `20022300` -> `content`
-  + **New 3DS vagy New 2DS JPN**: `20020300` -> `content`
-  + **New 3DS vagy New 2DS USA**: `20021300` -> `content`
-1. Figyeljük meg, hogy itt kétféle app és tmd fájl van, az egyik fajta nagybetűs kiterjesztéssel (`.TMD` és`.APP`), a másik fajta kisbetűs kiterjesztéssel (`.tmd` and `.app`)
-1. Az (R) gomb lenyomva tartása mellett nyomd meg az (Y)-t új mappa létrehozásához
-1. Nyomd meg az (A) gombot, hogy elfogadd a `newdir` nevet (nem számít a mappa neve)
-1. Nyomd meg az (A) gombot, hogy feloldd a SysNAND (lvl1) írást, majd sorban nyomd meg a kijelzett gombokat
-1. Nyomd meg a (B) gombot, hogy elutasítsd az írási engedélyek visszavonását, ha kérdezi
-1. Nyomd meg az (L) gombot minden egyes nagybetűs kiterjesztésű fájlon (`.TMD` and `.APP`), hogy megjelöld őket
-1. Nyomd meg az (Y)-t, hogy kimásold a fájlokat
-1. Lépj be a `newdir` mappába
-1. Nyomd meg az (Y) gombot a fájlok beillesztéséhez
-1. Válaszd a "Move path(s)" opciót
-1. A nagybetűs kiterjesztésű fájlok ezután már a `newdir` könyvtárban lesznek megtalálhatók
-1. Nyomd meg a (Start) gombot az eszköz újraindításához
-1. Próbáld újra a H&S injektálást
-1. Ha még így sem működik, helyezd vissza a nagybetűs kiterjesztésű fájlokat a `content` mappába, aztán helyezd át a kisbetűs kiterjesztésűeket a `newdir` mappába, majd próbáld újra az H&S injektálást
+## Bruteforce Movable átugorja a 4. lépést
 
-## Egy böngésző alapú exploit nem működik
+A weboldal már kibányászta a `movable.sed` fájlod friend code-od és az ID0 kombinációjának használatával. Használhatod a `movable.sed`-et amit biztosított számodra.
 
-A böngésző alapú exploitok (mint például a browserhax, vagy az 2xrsa) gyakran instabilak és sokszor lefagynak, de néha megjavíthatók az alábbi lépések végrehajtásával.
+## Important! You have been locked out of the automated part1 dumper system...
 
-1. Indítsd el a böngészőt, majd lépj be a beállításokba (browser settings)
-1. Görgess a legaljára, majd válaszd az "Initialize Savedata" opciót (ami lehet, hogy "Clear All Save Data" néven fut)
-1. Próbáld meg újra végrehajtani az exploitot
+A friend code-od blokkolt friend code bot általi használattól, mert a 3DS-ed nem fogadta el sikeresen a bot friend (barát) kérését. Ellenőrizd, hogy a 3DS-ed megfelelően csatlakozik az internethez, majd csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és kérdezd meg, és kérdezz rá az unlockolásra.
 
-## Fekete képernyő SysNAND-ról való bootoláskor
+## We were unable to successfully complete your bruteforce request. :`(
 
-1. Próbálj meg SD kártya nélkül bootolni, majd helyezd vissza bootolás után
-    1. Kapcsold ki a készüléked
-    1. Vedd ki az SD kártyát a készülékedből
-    1. Kapcsold be a készülékedet
-    1. Amikor a home menu megjelenik, helyezd vissza az SD kártyát a készülékedbe
-    1. Ha ez működött, törölnöd kell a Home Menu extdata-ját az alábbi módon:
-        1. Kapcsold ki a készüléked
-        1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be az eszközödet. Ez elindítja a GodMode9-et
-        1. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
-        1. Válaszd a "Scripts..." opciót
-        1. Válaszd ezt: "GM9Megascript"
-        1. Válaszd ezt: "Scripts from Plailect's Guide"
-        1. Válaszd a "Remove extdata" opciót
-        1. Nyomd meg az (A) gombot a folytatáshoz
-        1. Nyomd meg az (A) gombot, hogy feloldd a SysNAND (lvl1) írást, majd sorban nyomd meg a kijelzett gombokat
-        1. Nyomd meg az (A) gombot a folytatáshoz
-        1. Nyomd meg a (B) gombot, hogy visszamenj a főmenübe
-        1. Válaszd az "Exit" opciót
-        1. Nyomd meg az (A) gombot az írási engedélyek visszavonásához
-        1. Nyomd meg a (Start) gombot az eszköz újraindításához
-1. Próbálj meg játékkártya nélkül bootolni (beleértve a flashkártyákat)
-1. Ha rendelkezel hardmoddal és biztonsági mentéssel a NAND-odról, flasheld vissza a biztonsági mentést a SysNAND-odra
-1. Próbálj meg recovery mode-ba bootolni, majd onnét frissíteni a rendszeredet
-    1. Kapcsold ki a készüléked
-    1. Tartsd lenyomva az (L) + (R) + (A) + (Fel) gombokat
-    1. Kapcsold be a készülékedet
-    1. A safe mode-ba lépve frissítsd a készülékedet
-1. Elképzelhető, hogy brickelted a készülékedet. Segítségért (angol nyelven), fordulj ide: [Nintendo Homebrew a Discord-on](https://discord.gg/MWxPgEp)
+A weboldal úgy találta, hogy a `movable.sed`-ed nem brute-force-olható. Ellenőrizd, hogy helyes ID0-t adtál-e meg a weboldalon. Ha az ID0-d helyes, akkor nem tudod használni a Seedminer-t és egy alternatív metódust kell használnod, ami további játékokat vagy hardvert igényel.
 
-## Home Menu extdata törlése
+---
 
-1. Kapcsold ki a készüléked
-1. Helyezd az SD kártyád a számítógépbe
-1. Navigálj a `/Nintendo 3DS/<32 hosszú azonosító>/<32 hosszú azonosító>/extdata/00000000/` könyvtárba az SD kártyádon
-1. Töröld a régiódnak megfelelő extdata fájlt:
-  + **EUR régió**: `00000098`
-  + **JPN régió**: `00000082`
-  + **USA régió**: `0000008f`
-  + **CHN régió**: `000000A1`
-  + **KOR régió**: `000000A9`
-  + **TWN régió**: `000000B1`
-1. Tedd vissza az SD kártyád a készülékedbe
+# Boot9strap telepítése (PicHaxx)
 
-## Fekete képernyő a SysNAND-ról való bootoláskor a boot9strap telepítése után
+## "An exception occurred" vagy Errdisp a Picross megnyitásakor
 
-1. Bizonyosodj meg róla, hogy rendelkezel működőképes payloaddal
-    1. Ellenőrizd, hogy létezik-e a `boot.firm` fájl az SD kártyád gyökerében.
-1. Próbáld meg alaphelyzetbe rakni a Luma konfigurációját, hogy kijavíthasd a beállításait
-    1. Töröld a `/luma/config.bin` fájlt az SD kártyádról
-    1. Bootolás után végezd el a beállításokat
-1. Próbáld ki, hogy bootol-e a GodMode9
-    1. Tartsd lenyomva a (Start) gombot boot közben Luma3DS-en
-1. Próbáld meg törölni a home menu extdata-ját az alábbi lépésekkel:
-    1. Kapcsold ki a készüléked
-    1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be az eszközödet. Ez elindítja a GodMode9-et
-    1. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
-    1. Válaszd a "Scripts..." opciót
-    1. Válaszd ezt: "GM9Megascript"
-    1. Válaszd ezt: "Scripts from Plailect's Guide"
-    1. Válaszd a "Remove extdata" opciót
-    1. Nyomd meg az (A) gombot a folytatáshoz
-    1. Nyomd meg az (A) gombot, hogy feloldd a SysNAND (lvl1) írást, majd sorban nyomd meg a kijelzett gombokat
-    1. Nyomd meg az (A) gombot a folytatáshoz
-    1. Nyomd meg a (B) gombot, hogy visszamenj a főmenübe
-    1. Válaszd az "Exit" opciót
-    1. Nyomd meg az (A) gombot az írási engedélyek visszavonásához
-    1. Nyomd meg a (Start) gombot az eszköz újraindításához
-1. Próbálj meg játékkártya nélkül bootolni (beleértve a flashkártyákat)
-1. Ha korábban Gateway segítségével downgrade-eltél, bizonyosodj meg róla, hogy a legújabb Luma3DS verziót használod-e
-1. Próbálj meg végrehajtani egy [CTRTransfert](ctrtransfer)
-1. Segítségért (angol nyelven), fordulj ide: [Nintendo Homebrew a Discord-on](https://discord.gg/MWxPgEp)
+Az eszközöd már rendelkezik egyedi firmware-rel. Érdemes elvégezned a [CFW ellenőrzését](checking-for-cfw).
 
-## Kék képernyő bootoláskor (bootrom hiba)
+## "An error has occurred, forcing the software to close..." (fehér üzenet doboz)
 
-1. A készüléked brickelve lett
-1. Szükséged van arra, hogy beszerezz egy ntrboot-kompatibilis flashcart-ot (egyike az [ezen a listán](ntrboot) vagy találhatóknak [hardmod](https://gbatemp.net/threads/414498/) vagy javítsd/kicseréld eszközöd
-1. Segítségért (angol nyelven), fordulj ide: [Nintendo Homebrew a Discord-on](https://discord.gg/MWxPgEp)
+Probléma van az `otherapp.bin` fájloddal. Töltsd le a legutolsó kiadását az [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)-nak és rakd az SD kártyád gyökerébe. Ne add hozzá a `.bin` kiterjesztést, ha nem látod.
 
-## Rendszer frissítési probléma a CFW installálása után
+## "An error has occurred. Hold down the POWER button to turn off the power..." (fekete képernyő szöveggel)
 
- Alkalmanként a frissítések telepítése sikertelen a CFW telepítését követően. Ennek javításához a fejezet minden lépése utána indítsd újra az eszközödet és próbálj meg frissíteni újra.
+A `00000001.sav` és/vagy `otherapp.bin` fájljaid rossz helyre lehettek rakva. Biztosítsd, hogy a `00000001.sav` a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` mappában legyen és az `otherapp.bin` pedig az SD kártyád gyökerében.
+
+Ha a fájljaid jó helyen vannak, hozd létre újra a mentéseket a [PicHaxx Save Tool](https://3ds.nhnarwhal.com/3dstools/pichaxx.php) használatával, majd rakd őket a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` mappába. Ügyelj arra, hogy a fájl pontosan `00000001.sav` nevű legyen és hogy a konzolod `movable.sed`-jét használd a létrehozáshoz. Töltsd le újra a legutolsó kiadását az [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)-nak és rakd az SD kártyád gyökerébe. Ne add hozzá a `.bin` kiterjesztést, ha nem látod.
+
+## A játék normálisan indul
+
+A `00000001.sav` fájlod rossz helyen van, vagy nem a jó `movable.sed` fájlt használtad a létrehozásához. Hozd létre újra a mentéseket a [PicHaxx Save Tool](https://3ds.nhnarwhal.com/3dstools/pichaxx.php) használatával, majd rakd őket a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` mappába.
+
+## Failed to open SafeB9SInstaller.bin
+
+A `SafeB9SInstaller.bin` fájl hiányzik, vagy rossz helyen van. Töltsd le a legutolsó kiadását az [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/tag/v0.0.7)-nek és rakd az SD kártyád gyökerébe. Ne add hozzá a `.bin` kiterjesztést, ha nem látod.
+
+## Lefagyás a "Doing agbhax..." során
+
+Probléma lehet az `otherapp.bin` fájloddal. Töltsd le a legutolsó kiadását az [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)-nak és rakd az SD kártyád gyökerébe. Ne add hozzá a `.bin` kiterjesztést, ha nem látod.
+
+## "PrepareArm9ForTwl returned error c8804631!"
+
+Alternatív metódusra van szükséged. mint például a [BannerBomb3](bannerbomb3).
+
+---
+
+# Boot9strap telepítése (Soundhax)
+
+## Piros/lila/rózsaszín és fehér képernyő a Soundhax futtatása után
+
+Ha a rendszer verziód 9.4.0, 9.5.0, vagy 9.6.0, hibát tapasztalhatsz az universal-otherapp-pal. Kövesd a [Homebrew Launcher (Soundhax)](homebrew-launcher-(soundhax))-t helyette.
+
+Ha nem ezeken a firmware verziókon van az eszközöd, akkor valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvégezned a [CFW ellenőrzését](checking-for-cfw).
+
+## "An error has occurred, forcing the software to close..." (fehér üzenet doboz)
+
+Probléma van a `otherapp.bin` fájloddal (nem jó, hiányzik, rossz helyen van vagy sérült). Töltsd le a legutolsó kiadását az [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)-nak és rakd az SD kártyád gyökerébe.
+
+## "Could not play"
+
+Rossz Soundhax fájlod van az eszközödhöz és a régiódhoz vagy az eszközöd nem kompatibilis a Soundhax-szal. Ez utóbbi esetben frissítsd az eszközöd a legutolsó verzióra és kövesd a [Seedminer](seedminer) lépéseit.
+
+## Failed to open SafeB9SInstaller.bin
+
+A `SafeB9SInstaller.bin` fájl hiányzik, vagy rossz helyen van. Töltsd le a legutolsó kiadását az [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/tag/v0.0.7)-nek és rakd az SD kártyád gyökerébe. Ne add hozzá a `.bin` kiterjesztést, ha nem látod.
+
+## Lefagyás a "Doing agbhax..." során
+
+Probléma lehet az `otherapp.bin` fájloddal. Töltsd le újra a legutolsó kiadását az [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)-nak nevezd át `arm11code.bin`-re és rakd az SD kártyád gyökerébe.
+
+Ha tajvani vagy kínai egységed van (T vagy C a verzió stringben, pl. 11.14.0-##T), csatlakozz a [Nintendo Homebrew-hoz a Discord-on](https://discord.gg/MWxPgEp) segítségért.
+
+## "PrepareArm9ForTwl returned error c8804631!"
+
+Alternatív metódust kell követned. Csatlakozz a [Nintendo Homebrew-hoz a Discord-on](https://discord.gg/MWxPgEp) segítségért.
+
+# BannerBomb3
+
+## A DSiWare Management menü nem omlik össze
+
+Az `F00D43D5.bin` hiányzik a `Nintendo 3DS` -> `<ID0>` `<ID1>` -> `Nintendo DSiWare` mappából. Ellenőrizd, hogy a `Nintendo DSiWare` helyesen írt és szóközölt. Nagybetű/kisbetű nem számít.
+
+## A DSiWare Management egy kérdőjelet mutat
+
+Probléma van az `F00D43D5.bin` fájloddal (hibás vagy másik 3DS-hez tartozik). Hozd létre újra az `F00D43D5.bin`fájlod a [BannerBomb3 tool](https://3ds.nhnarwhal.com/3dstools/bannerbomb3.php) segítségével, biztosítva azt, hogy a konzolod `movable.sed` fájlját használod hozzá.
+
+## A DSiWare Management menü összeomlik lila képernyővel
+
+Biztosítsd, hogy az `F00D43D5.bin` az egyetlen fájl a `Nintendo 3DS` -> `<ID0>` `<ID1>` -> `Nintendo DSiWare` mappában. Ha így van, hozd létre újra a [BannerBomb3 tool](https://3ds.nhnarwhal.com/3dstools/bannerbomb3.php) segítségével. Ha ez sikertelen, az egyedi firmware lehetséges, hogy úgy lett eltávolítva erről az eszközről, hogy lehetetlenné teszi ennek a metódusnak a végrehajtását. Ha ez az eset, csatlakozz a [Nintendo Homebrew-hoz a Discord-on](https://discord.gg/MWxPgEp) segítségért.
+
+---
+
+# boot9strap telepítése (Fredtool)
+
+## Hiba a Fredtool Injector oldalon
+
+Biztosítsd, hogy a `movable.sed` és a DSiWare mentés ugyanarról a konzolról származik. Egy eltérés hibához vezet.
+
+## A "Haxxxxxxxxx!" nem jelenik meg
+
+Probléma van a `42383821.bin` fájloddal (nem jó, hiányzik, rossz helyen van vagy sérült). Hozd létre újra a fájljaid a [Fredtool](https://3ds.nhnarwhal.com/3dstools/fredtool.php) weboldallal és rakd a `42383821.bin` fájlt `output.zip` -> `hax`-ból a `Nintendo 3DS` -> `<ID0>` `<ID1>` -> `Nintendo DSiWare` könyvtárba.
+
+## DS Connection Settings normálisan indul
+
+A `Haxxxxxxxxx!` nem lett átmásolva az SD kártyádról a rendszer memóriába.
+
+## Fekete képernyő a DS Connection Settings indításakor
+
+A DS Connection Settings alkalmazásod sérült, és szükséged van Homebrew Launcher hozzáférésre, hogy javítsd ezt a problémát. Csatlakozz a [Nintendo Homebrew-hoz a Discord-on](https://discord.gg/MWxPgEp) segítségért.
+
+## Az SD kártya kiszürkített
+
+A Flipnote-nak hosszú időre lehet szüksége a kártya indexeléséhez, ha nagy méretű SD kártyád van. Várj még néhány percet.
+
+## Lenny arc nem jelenik meg
+
+Nem másoltad át a `private` mappát a Frogminer_save `.zip`-ből az SD kártyád gyökerébe.
+
+## A Flipnote lefagyott
+
+Véletlenül hozzáértél az érintőképernyőhöz, miközben bent voltál a módosított Flipnote-ban. Add meg újra DS Connection Settings értékeit és próbáld újra, biztosítva azt hogy véletlenül sem használod az érintőképernyőt.
+
+## Zöld képernyő beillesztés után 
+
+A `boot.nds` fájl hiányzik, vagy rossz helyen van. Töltsd le a legutolsó kiadását az [b9stool](https://github.com/zoogie/b9sTool/releases/latest)-nak és rakd a `boot.nds` fájlt az SD kártyád gyökerébe, felülírva a létező fájlt.
+
+## Fehér képernyő beillesztés után
+
+Probléma van az `boot.nds` fájloddal. Töltsd le újra a legutolsó kiadását az [b9stool](https://github.com/zoogie/b9sTool/releases/latest)-nak és rakd a `boot.nds` fájlt az SD kártyád gyökerébe, felülírva a létező fájlt.
+
+## Nem lehetséges a Luma3DS konfigurációs menü megnyitása b9stool futtatása után
+
+Elképzelhető, hogy a boot9strap telepítése sikertelen volt. Kövesd a B fejezetét [ennek az oldalnak](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md).
+
+# Telepítés véglegesítése
+
+## Az eszköz frissítése sikertelen
+
+Az alábbi lépések tetszőleges sorrendben hajthatók végre, azonban a lista a legkönnyebbtől a legnehezebben végrehajthatóig van összeállítva.
 
 1. Állítsd a DNS beállításokat "Auto"-ra
 1. Menj közelebb a WiFi routerhez
@@ -169,4 +184,119 @@ A böngésző alapú exploitok (mint például a browserhax, vagy az 2xrsa) gyak
 1. Csatlakozz egy másik WiFi-hez, mint például egy hotspot
 1. A Nintendo szerverei lehet, hogy nem elérhetők; Próbáld később újra
 1. Ha még mindig hibát kapsz, kövesd a [CTRTransfer](ctrtransfer) című útmutatót, majd próbáld újra
-1. Segítségért (angol nyelven), fordulj ide: [Nintendo Homebrew a Discord-on](https://discord.gg/MWxPgEp)
+1. További segítségért (angol nyelven), fordulj ide: [Nintendo Homebrew a Discord-on](https://discord.gg/MWxPgEp)
+
+## Sikertelen a Rosalina-ba belépés, hibás gomb(ok) miatt
+
+Töltsd le ezt az [alternatív config.bin fájlt](https://cdn.discordapp.com/attachments/196635695958196224/733384123003175074/config.bin) és rakd a `/luma/` mappába. Ez módosítja a Rosalina billentyű kombinációt (Y) + (B)-re.
+
+## "An exception occurred" a Homebrew Launcher Download Play-en keresztüli futtatásának megpróbálásakor
+
+Probléma van a `boot.3dsx` fájloddal (nem jó, hiányzik, rossz helyen van vagy sérült). Töltsd le a legutolsó kiadását a [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)-nek és rakd a `boot.3dsx` fájlt az SD kártyád gyökerébe, felülírva bármilyen létező fájlt. Legyél biztos abban, hogy a ZIP fájlt más eszközzel csomagolod ki, mint a WinRAR, mert ismert, hogy problémái vannak a 3DS-sel kapcsolatos fájlokkal.
+
+## "Scripts directory not found" a GodMode9-ben
+
+Nem másoltad át a `gm9` mappát a GodMode9 `.zip`-ből az SD kártyád gyökerébe. Töltsd le a legutolsó kiadását az [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)-nek és rakd a `gm9` mappát az SD kártyád gyökerébe, egyesítve (mergelve) a létezővel.
+
+## az `essentials.exefs` hiányzik a `/gm9/out/` mappából
+
+Az eszközödnek volt egyedi firmware-je a múltban, így nem lett automatikusan kérve tőled a mentés készítése. Készíts biztonsági mentést kézzel:
+
+1. Tedd vissza az SD kártyád a készülékedbe
+1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be az eszközödet. Ez elindítja a GodMode9-et
+1. Menj ide: `[S:] SYSNAND VIRTUAL`
+1. Válaszd az `essentials.exefs`-t, majd a`Copy to 0:/gm9/out/` opciót
+1. Most már kell hogy legyen `essentials.exefs` a `/gm9/out/` mappában
+
+---
+
+# Bootolással kapcsolatos problémák moddolt eszközökön
+
+Az itt leírt lépések általában feltételezik, hogy az eszközöd modern egyedi firmware telepítéssel rendelkezik (boot9strap + Luma3DS 8.0 vagy nagyobb). Ha a konzolod régebbi homebrew telepítés (például valami ami arm9loaderhax vagy menuhax alapú), frissítened kell a telepítésed, mielőtt kipróbálod ezeket a lépéseket.
+{: .notice--info}
+
+## Az eszközöm fekete képernyőn ragad, és a kék fény kikapcsol
+
+Probléma van a `boot.firm` fájloddal (nem jó, hiányzik, rossz helyen van vagy sérült). Töltsd le a legutolsó kiadását az [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)-nek és rakd a `boot.firm` fájlt az SD kártyád gyökerébe, felülírva bármilyen létező fájlt. Legyél biztos abban, hogy a ZIP fájlt más eszközzel csomagolod ki, mint a WinRAR, mert ismert, hogy problémái vannak a 3DS-sel kapcsolatos fájlokkal.
+
+Ha hallod a "pattanó hangot", ami potenciálisan a háttérvilágítás bekapcsolását kíséri a másodperc egy részéig, akkor hardver problémád van az eszközöddel (mint például lecsatlakozott háttérvilágítás kábel). Lehetséges, hogy be tudod kapcsolni és az eszközödet megfelelő szögben tartva.
+
+## Az eszközöm fekete képernyőn ragad, folyamatos kék fénnyel
+
+Az alábbi lépések tetszőleges sorrendben hajthatók végre, azonban a lista a legrövidebbtől a legtöbb időt igénylőig van összeállítva.
+
+1. Kapcsold ki a készülékedet, vedd ki a játék cartridge-t ha van bennem, majd kapcsold be az eszközöd és vár tíz percet. Ha az eszközöd bebootol tíz percen belül, a probléma elhárult és nem fog valószínűleg újra előfordulni
+1. + Nevezd át a `Nintendo 3DS` mappát az SD kártyádon `Nintendo 3DS_BACKUP` névre és próbálj meg bootolni. Ha az eszközöd sikeresen bootol, problémák vannak a `Nintendo 3DS` könyvtáraddal. Próbáld meg kitakarítani a home menu extdata-t:
+	+ Navigálj a `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` mappába
+	+ Töröld a régiódhoz tartozó extdata fájlt: 
+		+ **EUR régió**: `00000098`
+		+ **JPN régió**: `00000082`
+		+ **USA régió**: `0000008f`
+		+ **CHN régió**: `000000A1`
+		+ **KOR régió**: `000000A9`
+		+ **TWN régió**: `000000B1`
+1. Biztosítsd, hogy az eszközöd ARM11 kivétel kezelése nem tiltott:
+	+ Kapcsold ki a készüléked
+	+ Tartsd nyomva a (Select) gombot
+	+ Kapcsold be az eszközöd, miközben nyomva tartod a (Select) gombot
+	+ Ha a "Disable ARM11 exception handlers" jelölőnégyzet bejelölt, vedd ki a jelölést
+	+ Ha az eszközöd most egy "An exception occured" képernyőre bootol, kövesd az [Az eszközöm hibaképernyőre bootol](troubleshooting#my-device-boots-to-an-error-screen) útmutatót
+1. Próbálj meg recovery mode-ba bootolni, majd onnét frissíteni a rendszeredet:
+	+ Kapcsold ki a készüléked
+	+ Tartsd nyomva a (Bal Váll) + (Jobb Váll) + (D-Pad Fel) + (A) gombokat
+	+ Kapcsold be a készüléked
+	+ Ha sikeres voltál, az eszközöd egy "update your system" képernyőre bootol
+1. Kövesd a [CTRTransfer](ctrtransfer) útmutatót
+1. További támogatásért kérj segítséget a [Nintendo Homebrew-tól a Discord-on](https://discord.gg/MWxPgEp)
+
+---
+
+## Az eszközöm hiba képernyőre bootol
+
+### "An error has occurred: Failed to apply 1 FIRM patch(es)" vagy "An exception has occurred -- Current process: pm"
+
+A Luma3DS verziód régi. Töltsd le a legutolsó kiadását az [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)-nak és rakd a `boot.firm` fájlt az SD kártyád gyökerébe, felülírva bármilyen létező fájlt. Legyél biztos abban, hogy a ZIP fájlt más eszközzel csomagolod ki, mint a WinRAR, mert ismert, hogy problémái vannak a 3DS-sel kapcsolatos fájlokkal.
+
+### "An error has occurred. Hold down the POWER button to turn off the power..."
+
+Az ARM11 kivételkezelők tiltva, vagy az egyedi firmware nincs telepítve. Próbáld meg engedélyezni az ARM11 kivétel kezelőket:
+	+ Kapcsold ki a készüléked
+	+ Tartsd nyomva a (Select) gombot
+	+ Kapcsold be az eszközöd, miközben nyomva tartod a (Select) gombot
+	+ Ha a "Disable ARM11 exception handlers" jelölőnégyzet bejelölt, vedd ki a jelölést
+
+### Egyéb más hibák
+
+Készítsd egy képet a hibáról és csatlakozz a [Nintendo Homebrew-hoz a Discord-on](https://discord.gg/MWxPgEp) segítségért.
+
+## Kék "Bootrom Error" képernyő
+
+A készüléked valószínüleg hard-brickelve lett. Szükséged van egy ntrboot flashcart vásárlására, hogy újra telepítsd a boot9strap-et, hogy megpróbálhasd megjavítani az eszközödet. Ez hardver hibát is jelezhet, ami nem javítható. Bármelyik esetben csatlakozz a [Nintendo Homebrew-hoz a Discord-on](https://discord.gg/MWxPgEp) segítségért.
+  + Az is lehetséges még, hogy valaki beállított egy bootoláskori kezdő képernyőt, ami úgy néz ki mint egy brick. Próbáld meg az eszközödet bekapcsolva hagyni, várva a kék képernyőre, 5 percig.
+
+---
+
+# Funkcionalitással kapcsolatos problémák moddolt eszközökön
+
+## DSi / DS funkcionalitás hibás vagy felcserélt a Flipnote Studio-val
+
+1. Töltsd le a [TWLFix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest) legutolsó kiadását (a `.3dsx` fájlt)
+1. Kapcsold ki a készüléked
+1. Hozz létre egy mappát `3ds` néven az SD kártyád gyökerében, ha még nem létezik ilyen
+1. Másold az `TWLFix-CFW.3dsx` fájlt az SD kártyád `/3ds/` mappájába
+1. Tedd vissza az SD kártyád a készülékedbe
+1. Nyisd meg a Homebrew Lancher-t
+1. Indítsd el a TWLFix-CFW-t a homebrew listából
+1. Nyomj (A)-t a törött TWL címek eltávolításához
+1. Nyomj (Start) gombot az eszköz újraindításához
+1. Frissítsd az eszközödet következőképp. Lépj be a System Settings-be, majd az "Other settings"-be, ahol addig lépkedj jobbra, amíg a végére nem érsz. Itt válaszd a "System Update" opciót
+  + A frissítés észreveszi, hogy lényeges TWL címek kerültek eltávolításra és le fogja tölteni és újratelepíteni azokat
+1. Ha a frissítés kész, érintsd meg az "OK"-ot az eszköz újraindításához 
+
+## GBA Virtual Console és/vagy Safe Mode funkcionalitás hibás
+
+Az eszközöd Luma3DS/AuReiNand 6.6 vagy régebbi verziót futtat, valószínűleg arm9loaderhax-szal. Kövesd az [A9LH-ről B9S-re](a9lh-to-b9s) lépéseit az eszközöd frissítéséhez modern egyedi firmware környezetre.
+
+## Kibővített memória módú (Extended memory mode) játékok hibásak
+
+Ez egy CTRTransfer vagy régió csere után fordulhat elő Old 3DS / 2DS eszközökön. Rendszer formáznod kell az eszközödet javításhoz.
