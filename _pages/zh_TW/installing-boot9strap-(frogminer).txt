@@ -1,147 +1,75 @@
 ---
-title: "Installing boot9strap (Frogminer)"
+title: "安裝 Boot9strap (透過 Frogtool)"
 ---
 
 {% include toc title="條目內容" %}
 
 ### 必讀事項
 
-To install boot9strap on your 11.9.0 device, we exploit an oversight in the security restrictions applied to "DSiWare" applications.
+我們現在將透過 Homebrew Launcher 來啟動 Frogtool。此工具將植入可運行漏洞的『うごくメモ帳 (Flipnote Studio)』遊戲。我們將透過這項安全性漏洞運行 b9sTool 並安裝 boot9strap。
 
-To accomplish this, we use a tool called Seedminer to calculate the DSiWare encryption key (`movable.sed`) for your device.
+此方法是透過『FIRM partitions known-plaintext』漏洞所達成的。詳情請見[此](https://www.3dbrew.org/wiki/3DS_System_Flaws)。
 
-We then use this DSiWare encryption key to decrypt a compatible DSiWare application and inject an exploit into it to run our own code.
+本頁面會有些許的[磁力](https://wikipedia.org/wiki/Magnet_URI_scheme)連結，您將需要個像 [Deluge](http://dev.deluge-torrent.org/wiki/Download). 的 BT 種子下載器來下載磁力連結的檔案。
 
-If this key were completely random, the encryption key would be impossible to break on current computing hardware. Fortunately, the first half of the key (`movable_part1.sed`) is actually mathematically related to your device's Friend Code, allowing us to break the encryption. For information on how Seedminer works, please see [this presentation](https://zoogie.github.io/web/34⅕c3).
-
-Note that this tool requires a PC with a powerful graphics card to break your device's DSiWare encryption. If you do not have access to one of these, there exists an online helper service where a volunteer running automated software will do this for you.
-
-To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download).
-
-To extract the `.7z` and `.rar` files linked on this page, you will need a file archiver like [7-Zip](http://www.7-zip.org/) or [The Unarchiver](https://theunarchiver.com/).
-
-This process will overwrite your game's save file!
-{: .notice--warning}
+若要解壓該頁面中的`.7z` 以及 `.rar` 檔案，您將需要一個壓縮檔管理員，如 [7-Zip](http://www.7-zip.org/) 或 [The Unarchiver](https://theunarchiver.com/)。
 
 ### 必備項目
 
-* The free eShop game "Steel Diver: Sub Wars" from the eShop
-* <i class="fa fa-magnet" aria-hidden="true" title="這是個種子連結。 Use a torrent client to download the file."></i> - [frogcert.bin](magnet:?xt=urn:btih:d12278ea50bb3574f1fbd327f3d0e2292c70941f&dn=frogcert.bin&tr=https%3a%2f%2ftracker.fastdownload.xyz%3a443%2fannounce&tr=https%3a%2f%2fopentracker.xyz%3a443%2fannounce&tr=http%3a%2f%2fopen.trackerlist.xyz%3a80%2fannounce&tr=http%3a%2f%2ft.nyaatracker.com%3a80%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2fopen.demonii.si%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.port443.xyz%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.vanitycore.co%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&tr=udp%3a%2f%2fthetracker.org%3a80%2fannounce&tr=http%3a%2f%2ftorrent.nwps.ws%3a80%2fannounce&tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.iamhansen.xyz%3a2000%2fannounce&tr=udp%3a%2f%2fbt.xxx-tracker.com%3a2710%2fannounce&tr=http%3a%2f%2f0d.kebhana.mx%3a443%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2ftracker4.itzmx.com%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.justseed.it%3a1337%2fannounce&tr=http%3a%2f%2ftherightsize.net%3a1337%2fannounce&tr=udp%3a%2f%2fretracker.hotplug.ru%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&tr=udp%3a%2f%2f9.rarbg.com%3a2800%2fannounce&tr=https%3a%2f%2f2.track.ga%3a443%2fannounce&tr=udp%3a%2f%2fbigfoot1942.sektori.org%3a6969%2fannounce)
-* The latest release of [Frogtool](https://github.com/zoogie/Frogtool/releases/latest)
-* 最新版的 [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest)
-* The latest release of [Steelhax](https://github.com/VegaRoXas/vegaroxas.github.io/raw/master/files/steelhax-installer.rar)
+* 您自 [Seedminer](seedminer) 步驟中所取得的 `movable.sed` 檔案
+* <i class="fa fa-magnet" aria-hidden="true" title="這是個種子連結。 請使用一個 BT 下載器來下載此檔案。"></i> - [frogcert.bin](magnet:?xt=urn:btih:d12278ea50bb3574f1fbd327f3d0e2292c70941f&dn=frogcert.bin&tr=https%3a%2f%2ftracker.fastdownload.xyz%3a443%2fannounce&tr=https%3a%2f%2fopentracker.xyz%3a443%2fannounce&tr=http%3a%2f%2fopen.trackerlist.xyz%3a80%2fannounce&tr=http%3a%2f%2ft.nyaatracker.com%3a80%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2fopen.demonii.si%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.port443.xyz%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.vanitycore.co%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&tr=udp%3a%2f%2fthetracker.org%3a80%2fannounce&tr=http%3a%2f%2ftorrent.nwps.ws%3a80%2fannounce&tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.iamhansen.xyz%3a2000%2fannounce&tr=udp%3a%2f%2fbt.xxx-tracker.com%3a2710%2fannounce&tr=http%3a%2f%2f0d.kebhana.mx%3a443%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2ftracker4.itzmx.com%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.justseed.it%3a1337%2fannounce&tr=http%3a%2f%2ftherightsize.net%3a1337%2fannounce&tr=udp%3a%2f%2fretracker.hotplug.ru%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&tr=udp%3a%2f%2f9.rarbg.com%3a2800%2fannounce&tr=https%3a%2f%2f2.track.ga%3a443%2fannounce&tr=udp%3a%2f%2fbigfoot1942.sektori.org%3a6969%2fannounce)
+* 最新版的 [Frogtool](https://github.com/zoogie/Frogtool/releases/latest)
 * 最新版的 [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
 * 最新版的 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z` 檔案)*
-* [otherapp payload 檔案](https://smealum.github.io/3ds/#otherapp) *(選擇對應您主機的區域及型號的檔案)*
-
-### 操作說明
 
 #### 第一節 — 準備工作
 
-1. Go to System Settings, then "Internet Settings", then "Nintendo DS Connections"
-1. Press "OK"
-1. If your device loads into a "Nintendo Wi-Fi Connection Setup" menu, exit this menu
-  + If the screen stays black or appears to freeze, you will not be able to use Frogminer; return to [Get Started](get-started) and select an "All Versions" method
-1. 關閉您的主機
 1. 將 SD 卡插入至電腦中
-1. 在 SD 卡的根目錄底下建立一個新資料夾 `3ds`
+1. 將 `moving.sed` 檔案複製到 SD 卡的根目錄中
 1. 解壓 Luma3DS `.7z` 內的 `boot.firm` 到 SD 卡的根目錄底下
-1. Copy `boot.nds` (B9STool) to the root of your SD card
-1. 將 `boot.3dsx` 複製到 SD 卡根目錄中
-1. Copy the `steelhax` folder from the Steelhax `.rar` to the root of your SD card
-1. Copy the otherapp payload to the `steelhax` folder on your SD card and rename it to `payload.bin`
-1. Copy `Frogtool.3dsx` to the `/3ds/` folder on your SD card
-1. Copy `frogcert.bin` to the root of your SD card
-1. Navigate to the `Nintendo 3DS` folder on your SD card
-1. Copy the 32 character long name of the folder you see
-  + If you see multiple folders like this, perform the following:
-  + Rename the `Nintendo 3DS` folder to `BACKUP_Nintendo 3DS`
-  + Reinsert your SD card into your device and power on your device
-  + Wait for the device to generate the SD card data
-  + Power off your device and reinsert your SD card into your computer
-  + Navigate to the `Nintendo 3DS` folder on your SD card
-  + Copy the 32 character long name of the folder you see
-  + Delete the `Nintendo 3DS` folder
-  + Rename the `BACKUP_Nintendo 3DS` folder to `Nintendo 3DS`
-1. Paste your 32 character long folder name into a document you can reference later
-  + This folder name is also known as your "ID0"
-1. 將 SD 卡插回主機中
-1. 啟動您的主機
-1. 開啟您的好友清單 (HOME 主選單中最上方的[橘色笑臉圖示]({{ "/images/friend-list-icon.png" | absolute_url }}))
-  + If you receive an error and are kicked out of the menu, you either must create a new Mii or your console cannot connect to Nintendo's servers (due to a ban or connection issues)
-1. Find your Mii profile, then find the "Friend Code" field on the top screen
-
-#### Section II - Seedminer
-
-1. Open [Bruteforce Movable](https://bruteforcemovable.com/) on your computer
-  + This site can automate the retrieval of `movable_part1.sed` (using a bot 3DS console) and the breaking of your device's DSiWare encryption (using a volunteer's computer to run Seedminer)
-  + If you already have access to a 3DS capable of launching the Homebrew Launcher, you can manually retrieve your `movable_part1.sed` using that device by following [these](https://jisagi.github.io/SeedminerGuide/seedminerSelf/#section1) instructions
-  + If you already have access to a PC with a powerful graphics card, you can manually calculate your `movable.sed` using it by following [these](https://jisagi.github.io/SeedminerGuide/seedminerSelf/#section2) instructions
-  + If the automated service is nonfunctional and you cannot do one or both of those manually, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you
-1. Enter your device's Friend Code (with no spaces or dashes) into the "Your friend code" field
-1. Paste your device's 32 character long folder name into the "Your ID0" field
-1. Complete the "I'm not a robot" captcha
-1. Select "Go"
-1. When prompted, use the "Register Friend" button on your device to add the friend code of the bot 3DS console
-1. Wait for the site to update
-  + If it does not, wait a few minutes before refreshing the page once
-1. Select "Continue"
-1. Wait for the process to complete
-  + This can take a while (up to an hour in some cases)
-  + If you are still waiting after an hour, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you
-1. When the process has completed, download your `movable.sed` file from the site
-
-#### Section III - Steelminer
-
-1. Launch "Steel Diver: Sub Wars" once and select a Mii to initialize your save file
-  + Decline the game update when prompted
-  + If you have already updated the game, use the Data Management menu of the System Settings to delete the update
-1. Exit "Steel Diver: Sub Wars"
-1. 關閉您的主機
-1. 將 SD 卡插入至電腦中
-1. Open [the Steelminer website](http://steelminer.jisagi.net/#Section_III) on your computer
-1. Select your `movable.sed` file
-1. Select "Start!"
-1. Wait for the process to complete
-1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<32-character-id>` -> `title` -> `00040000` -> `<8-character-region>` -> `data` on your SD card
-  + **EUR Region**: `000d7e00`
-  + **JPN Region**: `000d7c00`
-  + **USA Region**: `000d7d00`
-1. Copy the new downloaded save file to the `data` folder on your SD card
-  + Overwrite the old save file when prompted
-1. Copy your `movable.sed` to the root of your SD card
+1. 將 `boot.nds` (B9STool) 複製到 SD 卡根目錄中
+1. 將 `Frogtool.3dsx` 複製到 SD 卡中的 `/3ds/` 資料夾底下
+1. 複製 `frogcert.bin` 到 SD 卡根目錄中
 1. 將 SD 卡插回主機中
 1. 啟動您的主機
 
-#### Section IV - Flashing FIRM
+##### 第二節 — 修改『下載通信(Download Play)』程式
 
-1. Launch "Steel Diver: Sub Wars"
-1. 如果漏洞成功執行，您的主機將自動載入 Homebrew Launcher
-1. Launch Frogtool from the list of homebrew
-1. Select the "INJECT patched DS Download Play" option
-1. Frogtool will automatically run and inject the JPN version of Flipnote Studio into your DS Download Play
-1. Once this operation has finished, tap the touchscreen and select "BOOT patched DS Download Play"
-1. If the exploit was successful, your device will have loaded the JPN version of Flipnote Studio
-1. Complete the initial setup process for the launched game until you reach the main menu
-  + Select the left option whenever prompted during the setup process
-1. Using the touch-screen, select the large left box, then select the box with an SD card icon
-1. Once the menu loads, select the face icon, then the bottom right icon to continue
-1. Select the frog icon at the bottom left, then select the second button along the top with a film-reel icon
-1. Scroll right until reel "3/3" is selected
-1. Tap the third box with the letter "A" in it
-1. Scroll left until reel "1/3" is selected
-1. Tap the fourth box with the letter "A" in it
-1. If the exploit was successful, your device will have loaded b9sTool
+1. 透過任意方法執行 Homebrew Launcher
+1. 於 Homebrew 清單內啟動 Frogtool
+1. 選擇『INJECT patched DS Download Play』
+1. Frogtool 將自動植入並運行日版的『うごくメモ帳 (Flipnote Studio)』至您的『下載通信(Download Play)』程式中
+1. 在安裝完成後，透過觸控螢幕選擇『BOOT patched DS Download Play』
+1. 如果漏洞成功執行，您的主機將自動啟動『うごくメモ帳 (Flipnote Studio)』
+
+##### 第三節 — Flipnote 漏洞
+
+如果您需要圖片幫助請見[此](https://zoogie.github.io/web/flipnote_directions/)。
+{: .notice--info}
+
+1. 完成遊戲的初始設定直到出現遊戲主選單為止
+  + 在設定過程中出現提示時，選擇左方的『いらない』選項
+1. 選擇觸控螢幕左方的『メモを見る』並選擇『SD カード』
+1. 在載入選單後，請選擇螢幕上的臉型圖示並選擇右下角的按鈕以繼續
+1. 選擇左上角的青蛙圖案
+  + 或者您也可以依上方螢幕所顯示的選項，透過「X」或「上」按鈕進行選擇
+1. 選擇觸控螢幕上方的底片按鈕
+1. 選擇最後一個底片 (3/3)
+1. 選擇第三項含有字母『A』的選項
+1. 選擇第一個底片 (1/3)
+1. 選擇第四項含有字母『A』的選項
+1. 如果漏洞成功執行，您的主機將自動載入 b9sTool
 1. 選擇『Install boot9strap』並確認
 1. 退出 b9sTool 並關機
   + 您可能得按住電源紐強制關機
+  + 如果您的主機顯示 Luma 設定選單，請繼續下列步驟不必關機
 
-#### Section V - Configuring Luma3DS
+#### 第四節 — 設定 Luma3DS
 
 1. 開機時，按住「Select」鍵啟動 Luma 設定選單
-  + If you encounter issues launching the Luma configuration menu, [follow this troubleshooting guide](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)
+  + 如果您無法順利啟動 Luma 設定選單，請參見此[疑難排解](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)頁面 (英文)。
 1. 透過方向鍵及『A』以開啟下列選項：
-  + **『Show NAND or user string in System Settings』**
+  + **"Show NAND or user string in System Settings"**
 1. 按『Start』鍵以存檔並重新啟動系統
   + 如果黑屏，[請依循本疑難排解之步驟](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 
