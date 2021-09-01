@@ -2,167 +2,179 @@
 title: "Depanare"
 ---
 
-{% include toc title="Cuprins" %}
+{% include toc title="Table of Contents"%}
 
-### Lectură obligatorie
+This page offers troubleshooting advice for commonly encountered issues. If you are unable to solve your issue with the advice on this page, please join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and describe your issue, including what you have already tried.
 
-Dacă nu puteți să porniți dispozitivul, vă rugăm să vă uitați spre secțiunea potrivită pentru dumneavoastră și să urmați instrucțiunile.
+# Page-related issues on this guide
 
-Dacă tot nu puteți să vă rezolvați problema și aveți nevoie de ajutor, rog să inserați conținutul tuturor fișierelor de .log relevante din rădăcina cardului SD în [Gist](https://gist.github.com/), apoi întoarceți-vă după ajutor pregătit cu o descriere detaliată a problemei și ce ați încercat.
+---
 
-Țineți cont că dacă aveți alte payload-uri în afară de `GodMode9.firm` în folderul `/luma/payloads/` de pe cardul SD, apăsând (Start) va lansa un "meniu chainloader" în care va trebui să folosiți D-Pad-ul și butonul (A) ca să selectați "GodMode9" pentru aceste instrucțiuni. 
+# Issues with SafeB9SInstaller
 
-Pentru a folosi linkurile [magnetice](https://wikipedia.org/wiki/Magnet_URI_scheme) de pe această pagină, veți avea nevoie de un client de torrente ca [Deluge](http://dev.deluge-torrent.org/wiki/Download).
+## SigHaxed FIRM was not installed! Check lower screen for more info.
 
-## Funcționalitatea DS / DSi este stricată după completarea ghidului
+### SigHaxed FIRM - File not found
 
-### Ce aveți nevoie
+You are missing `boot9strap.firm` and `boot9strap.firm.sha` from the `boot9strap` folder, or the `boot9strap` folder is misnamed. Download the latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest), and place `boot9strap.firm` and `boot9strap.firm.sha` in the `boot9strap` folder. Make sure to download the correct file (`boot9strap-1.3.zip`, not devkit, not ntr).
 
-* Ultima versiune de [TWLFix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest) *(fișierul .3dsx)*
+### SigHaxed FIRM - invalid FIRM
 
-### Instrucțiuni
+There is an issue with your `boot9strap.firm` and `boot9strap.firm.sha` files. Re-download the latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/latest), and place `boot9strap.firm` and `boot9strap.firm.sha` in the `boot9strap` folder. Make sure to download the correct file (`boot9strap-1.3.zip`, not devkit, not ntr).
 
-#### Secțiunea I - Preparații
+### Secret Sector - File not found
 
-1. Închideți dispozitivul
-1. Introduceți cardul SD în calculator
-1. Creați un folder numit `3ds` în rădăcina cardului SD dacă nu există deja
-1. Copiați `TWLFix-CFW.3dsx` în folderul `/3ds/` de pe cardul SD
-1. Reintroduceți cardul SD în dispozitivul dumneavoastră
+You are missing `secret_sector.firm` from the `boot9strap` folder, or the `boot9strap` folder is misnamed. Download [secret_sector.bin](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce) using a torrent client, and place it in the `boot9strap` folder.
 
-#### Secțiunea II - Reparând TWL
+### Something else
 
-1. Deschideți Homebrew Launcher-ul
-1. Lansați TWLFix-CFW din lista de homebrew
-1. Apăsați (A) pentru a dezinstala titlurile TWL defecte
-1. Apăsați (Start) pentru a reporni dispozitivul
-1. Faceți o actualizare de sistem mergând în System Settings, apoi "Other Settings", apoi mergeți spre colțul drept și folosiți "System Update"
-  + Actualizarea va vedea că titlurile TWL esențiale au fost dezinstalate, și le va redescărca și reinstala
-1. Odată ce actualizarea este completă, apăsaţi "OK" pentru a reporni dispozitivul 
+Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance, and describe the message that you see.
 
-## Nu se poate injecta H&S dispozitivelor retrogradate cu Gateway
+---
 
-Acest lucru este cauzat de implementarea unei metode slabe de a retrograda Gateway-ul, care lasă două versiuni din fiecare aplicație pe sistem. Una dintre ele nu este utilizată, dar creează confuzii sistemului de injecare H&S, cauzând o injectare greșită.
+# Seedminer
 
-1. Închideți dispozitivul
-1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
-1. Navigați spre `[1:] SYSNAND CTRNAND` -> `title` -> `00040010`
-1. Navigați spre folderul pentru dispozitivul și regiunea dumneavoastră:
-  + **Old 3DS sau Old 2DS EUR**: `00022300` -> `content`
-  + **Old 3DS sau Old 2DS JPN**: `00020300` -> `content`
-  + **Old 3DS sau Old 2DS USA**: `00021300` -> `content`
- 
-  + **New 3DS sau New 2DS EUR**: `20022300` -> `content`
- 
-  + **New 3DS sau New 2DS JPN**: `20020300` -> `content`
-  + **New 3DS sau New 2DS USA**: `20021300` -> `content`
- 
-1. Observați că sunt două seturi de fișiere app și tmd, una cu extensia în majuscule (`.TMD` și `.APP`), și una cu extensia în minuscule (`.tmd` și `.app`)
-1. În timp ce țineți apăsat (R), apăsați (Y) pentru a crea un nou folder
-1. Apăsați (A) pentru a confirma numele `newdir` (nu contează cum este numit folderul)
-1. Apăsați (A) ca să deblocați scrierea în SysNAND (lvl1), apoi introduceți combinația de butoane care vi se cere
-1. Apăsați (B) ca să refuzați reblocarea permisiunilor de scriere dacă vi se cere
-1. Apăsați (L) pe fiecare dintre fișierele cu extensie în majuscule (`.TMD` și `.APP`) pentru a le marca
-1. Apăsați (Y) pentru a copia fișierele
-1. Navigați `newdir`
-1. Apăsați (Y) pentru a lipi fisierele
-1. Selectați "Move path(s)"
-1. Extensiile în majuscule se vor muta în folderul 'newdir'
-1. Apăsați (Start) pentru a reporni dispozitivul
-1. Reîncercați injectarea H&S
-1. Dacă tot nu funcționează, mutați fișierele cu extensie în majuscule înapoi în folderul `content`, apoi mutați fișierele cu extensie în minuscule în folderul `newdir`, și reîncercați injectarea H&S
+## Bruteforce Movable skips to step 4
 
-## Un exploit bazat pe browser nu funcționează
+The website has already mined your `movable.sed` using your friend code and ID0 combination. You can use the `movable.sed` that it provides you.
 
-Exploit-uri bazate pe browser (cum ar fi browserhax sau 2xrsa) sunt de obicei instabile și se strică frecvent, dar uneori ele pot fi reparate folosind următorii pași.
+## Important! You have been locked out of the automated part1 dumper system...
 
-1. Lansați browserul, apoi deschideți setările browserului
-1. Mergeți pe jos și selectați Initialize Savedata (s-ar putea numi și Clear All Save Data)
-1. Încercați exploit-ul din nou
+Your friend code was blocked from using the friend code bot because your 3DS did not successfully friend the bot. Ensure your 3DS is properly connected to the Internet, then join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask to be unlocked.
 
-## Ecran negru când se pornește SysNAND
+## We were unable to successfully complete your bruteforce request. :`(
 
-1. Incercați să porniți fără cardul SD, apoi reintroduceți după pornire
-    1. Închideți dispozitivul
-    1. Scoateți cardul SD din dispozitiul dumneavoastră
-    1. Porniți dispozitivul
-    1. Când apare meniul HOME, reintroduceți cardul SD în dispozitiv
-    1. Dacă a funcționat, ar trebui să curățați exdata-ul meniului HOME urmărind aceste instrucțiuni:
-        1. Închideți dispozitivul
-        1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
-        1. Apăsați (Home) pentru a arăta meniul de acțiuni
-        1. Selectați "Scripts..."
-        1. Selectaţi "GM9Megascript"
-        1. Selectaţi "Scripts from Plailect's Guide"
-        1. Selectaţi "Remove extdata"
-        1. Apăsați (A) pentru a continua
-        1. Apăsați (A) ca să deblocați scrierea în SysNAND (lvl1), apoi introduceți combinația de butoane care vi se cere
-        1. Apăsați (A) pentru a continua
-        1. Apăsați (B) ca să vă întoarceți în meniul principal
-        1. Selectaţi "Exit"
-        1. Apăsați (A) ca să reblocați permisiunile de scriere dacă vi se cere
-        1. Apăsați (Start) pentru a reporni dispozitivul
-1. Încercați să porniți fără niciun card de joc introdus (inclusiv flashcart-uri)
-1. Dacă aveți un hardmod și o copie de rezervă NAND, flash-uiți copia înapoi în SysNAND
-1. Încercați să porniți în modul de recuperare și actualizați sistemul
-    1. Închideți dispozitivul
-    1. Țineți apăsat (L) + (R) + (A) + (Sus)
-    1. Porniți dispozitivul
-    1. Dacă intrați în modul de siguranță, actualizați-vă dispozitivul
-1. Dispozitivul dumneavoastră ar putea fi brick-uit. Pentru suport (în engleză), alăturați-vă la [Nintendo Homebrew pe Discord](https://discord.gg/MWxPgEp)
+The website has determined that your `movable.sed` cannot be brute-forced. Ensure that you gave the correct ID0 to the website. If your ID0 is correct, then you will be unable to use Seedminer and you will have to use an alternate method that will require additional games or hardware.
 
-## Curățarea exdata-ului din meniul HOME
+---
 
-1. Închideți dispozitivul
-1. Introduceți cardul SD în calculator
-1. Navigați spre folderul `/Nintendo 3DS/<ID de 32 de caractere>/<ID de 32 de caractere>/extdata/00000000/` de pe cardul SD
-1. Ştergeţi folderul de extdata care corespunde regiunii dumneavoastră:
-  + **Regiunea EUR**: `00000098`
-  + **Regiunea JPN**: `00000082`
-  + **Regiunea USA**: `0000008f`
-  + **Regiunea CHN**: `000000A1`
-  + **Regiunea KOR**: `000000A9`
-  + **Regiunea TWN**: `000000B1`
-1. Reintroduceți cardul SD în dispozitivul dumneavoastră
+# Installing boot9strap (PicHaxx)
 
-## Ecran negru la pornirea SysNAND-ului după ce s-a instalat boot9strap
+## "An exception occurred" or Errdisp when opening Picross
 
-1. Asigurați-vă că aveți un payload funcțional
-    1. Verificați dacă există un `boot.bin` în rădăcina cardului SD.
-1. Încercați să resetați configurarea pe Luma și reparați opțiunile
-    1. Ștergeți `/luma/config.bin` de pe cardul SD
-    1. Selectați opțiunile dumneavoastră când pornește
-1. Verificați pornind GodMode9
-    1. În Luma3DS, țineți apăsat (Start) la pornire
-1. Încercați să ștergeți extdata-ul meniului HOME urmărind aceste instrucțiuni:
-    1. Închideți dispozitivul
-    1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
-    1. Apăsați (Home) pentru a arăta meniul de acțiuni
-    1. Selectați "Scripts..."
-    1. Selectaţi "GM9Megascript"
-    1. Selectaţi "Scripts from Plailect's Guide"
-    1. Selectaţi "Remove extdata"
-    1. Apăsați (A) pentru a continua
-    1. Apăsați (A) ca să deblocați scrierea în SysNAND (lvl1), apoi introduceți combinația de butoane care vi se cere
-    1. Apăsați (A) pentru a continua
-    1. Apăsați (B) ca să vă întoarceți în meniul principal
-    1. Selectaţi "Exit"
-    1. Apăsați (A) ca să reblocați permisiunile de scriere dacă vi se cere
-    1. Apăsați (Start) pentru a reporni dispozitivul
-1. Încercați să porniți fără niciun card de joc introdus (inclusiv flashcart-uri)
-1. Dacă ați făcut în trecut retrogradare cu Gateway, asigurați-vă că folosiți cea mai recentă versiune de Luma3DS
-1. Încercați să urmați [CTRTransfer](ctrtransfer)
-1. Pentru suport (în engleză), alăturați-vă la [Nintendo Homebrew pe Discord](https://discord.gg/MWxPgEp)
+Your device already has custom firmware. You should [check for CFW](checking-for-cfw).
 
-## Ecran albastru la pornire (eroare de bootrom)
+## "An error has occurred, forcing the software to close..." (white message box)
 
-1. Dispozitivul dumneavoastră este brick-uit
-1. Veți avea nevoie de un flashcart compatibil cu ntrboot (una de pe cele din [această listă](ntrboot)) sau să faceți un [hardmod](https://gbatemp.net/threads/414498/), sau să reparați/înlocuiți dispozitivul
-1. Pentru suport (în engleză), alăturați-vă la [Nintendo Homebrew pe Discord](https://discord.gg/MWxPgEp)
+There is an issue with your `otherapp.bin` file. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) and place it on the root of your SD card. Do not add the `.bin` extension if you do not already see it.
 
-## System update error after installing CFW
+## "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
 
- Occasionally, updates may fail to install after installing CFW. To fix this, reboot your device after each step of this section, then try updating again.
+Your `00000001.sav` and/or `otherapp.bin` files may be misplaced. Ensure that `00000001.sav` is in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` and that `otherapp.bin` is on the root of your SD card.
+
+If your files are in the correct locations, re-create the save using the [PicHaxx Save Tool](https://3ds.nhnarwhal.com/3dstools/pichaxx.php), then place it in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data`. Ensure that the file is named exactly `00000001.sav` and that you used your console's `movable.sed` to create it. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) and place it on the root of your SD card. Do not add the `.bin` extension if you do not already see it.
+
+## Game starts normally
+
+Your modified `00000001.sav` file may be misplaced, or you may have used the wrong `movable.sed` when creating it. Re-create the save using the [PicHaxx Save Tool](https://3ds.nhnarwhal.com/3dstools/pichaxx.php), then place it in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data`.
+
+## Failed to open SafeB9SInstaller.bin
+
+The file `SafeB9SInstaller.bin` is missing or misplaced. Download the latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/tag/v0.0.7) and place it on the root of your SD card. Do not add the `.bin`extension if you do not already see it.
+
+## Frozen on "Doing agbhax..."
+
+There may be an issue with your `otherapp.bin` file. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) and place it on the root of your SD card. Do not add the `.bin` extension if you do not already see it.
+
+## "PrepareArm9ForTwl returned error c8804631!"
+
+You will need to follow an alternate method, like [BannerBomb3](bannerbomb3).
+
+---
+
+# Installing boot9strap (Soundhax)
+
+## Red/purple/pink and white screen after running Soundhax
+
+If your device is on system version 9.4.0, 9.5.0, or 9.6.0, you may be encountering a bug with universal-otherapp. Follow [Homebrew Launcher (Soundhax)](homebrew-launcher-(soundhax)) instead.
+
+If your device is not on those firmwares, it likely indicates that you already have custom firmware. You should [check for CFW](checking-for-cfw).
+
+## "An error has occurred, forcing the software to close..." (white message box)
+
+There is an issue with your `otherapp.bin` file (it is missing, misplaced, or corrupted). Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) and place it on the root of your SD card.
+
+## "Could not play"
+
+You have the wrong Soundhax file for your device and region, or your device is incompatible with Soundhax. In the latter case, you should update your device to the latest version and follow [Seedminer](seedminer).
+
+## Failed to open SafeB9SInstaller.bin
+
+The file `SafeB9SInstaller.bin` is missing or misplaced. Download the latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/tag/v0.0.7) and place it on the root of your SD card. Do not add the `.bin`extensoin if you do not already see it.
+
+## Frozen on "Doing agbhax..."
+
+There may be an issue with your `otherapp.bin` file. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), rename it to `arm11code.bin`, and place it on the root of your SD card.
+
+If you have a Taiwanese or Mainland Chinese unit (with a T or C in the version string, ie. 11.14.0-##T), join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+
+## "PrepareArm9ForTwl returned error c8804631!"
+
+You will need to follow an alternate method. Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+
+# BannerBomb3
+
+## DSiWare Management menu does not crash
+
+`F00D43D5.bin` is missing from `Nintendo 3DS` -> `<ID0>` `<ID1>` -> `Nintendo DSiWare`. Make sure that `Nintendo DSiWare` is correctly spelled and spaced. Uppercase/lowercase does not matter.
+
+## DSiWare Management shows a question mark
+
+There may be an issue with your `F00D43D5.bin` file (it may be corrupted or intended for the wrong 3DS). Re-create your `F00D43D5.bin`file with the [BannerBomb3 tool](https://3ds.nhnarwhal.com/3dstools/bannerbomb3.php), ensuring that you use the `movable.sed` file for your console.
+
+## DSiWare Management menu crashes without purple screen
+
+Ensure that `F00D43D5.bin` is the only file in `Nintendo 3DS` -> `<ID0>` `<ID1>` -> `Nintendo DSiWare`. If it is, then re-create it with the [BannerBomb3 tool](https://3ds.nhnarwhal.com/3dstools/bannerbomb3.php). If this fails, then custom firmware may have been uninstalled on this device in a way that makes this method impossible to perform. If this is the case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+
+---
+
+# Installing boot9strap (Fredtool)
+
+## Error on Fredtool Injector page
+
+Ensure that your `movable.sed` and DSiWare backup come from the same console. A mismatch will result in an error.
+
+## "Haxxxxxxxxx!" does not appear
+
+There is an issue with your `42383821.bin` file (it is incorrect, missing, misplaced, or corrupted). Re-create your files with the [Fredtool](https://3ds.nhnarwhal.com/3dstools/fredtool.php) website and ensure that you place the `42383821.bin` file from `output.zip` -> `hax` in `Nintendo 3DS` -> `<ID0>` `<ID1>` -> `Nintendo DSiWare`.
+
+## DS Connection Settings launches normally
+
+`Haxxxxxxxxx!` was not copied from your SD card to your system memory.
+
+## Black screen when launching DS Connection Settings
+
+Your DS Connection Settings application is broken, and you will need Homebrew Launcher access to fix this issue. Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+
+## SD card is grayed out
+
+Flipnote may take a long time to index your card if you have a large SD card. Let it sit for a few minutes.
+
+## Lenny face does not appear
+
+You did not copy the `private` folder from the Frogminer_save `.zip` to the root of your SD card.
+
+## Flipnote is frozen
+
+You may have accidentally touched the touch screen while in the modified Flipnote. Re-enter DS Connection Settings and try again, ensuring that you don't accidentally use the touchscreen.
+
+## Green screen after pasting 
+
+The file `boot.nds` is missing or misplaced. Download the latest release of [b9stool](https://github.com/zoogie/b9sTool/releases/latest) and place `boot.nds` on the root of your SD card, replacing the existing one.
+
+## White screen after pasting
+
+There is an issue with your `boot.nds` file. Re-download the latest release of [b9stool](https://github.com/zoogie/b9sTool/releases/latest) and place `boot.nds` on the root of your SD card, replacing the existing one.
+
+## Unable to open Luma3DS configuration menu after running b9stool
+
+It is possible that boot9strap was not successfully installed. Follow section B of [this page](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md).
+
+# Finalizing Setup
+
+## Unable to update device
+
+The steps below can be attempted in any order, but are listed from easiest to hardest to perform.
 
 1. Set your DNS settings to "Auto"
 1. Move closer to your WiFi router
@@ -172,4 +184,119 @@ Exploit-uri bazate pe browser (cum ar fi browserhax sau 2xrsa) sunt de obicei in
 1. Connect to a different WiFi connection, like a mobile hotspot
 1. Nintendo servers may be down; Try again later
 1. If you still get an error, [follow CTRTransfer](ctrtransfer), then try again
-1. Pentru suport (în engleză), alăturați-vă la [Nintendo Homebrew pe Discord](https://discord.gg/MWxPgEp)
+1. For further support (in English), join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
+
+## Unable to enter Rosalina due to broken button(s)
+
+Download this [alternate config.bin](https://cdn.discordapp.com/attachments/196635695958196224/733384123003175074/config.bin) and place it in `/luma/`. This will change the Rosalina key combination to (Y) + (B).
+
+## "An exception occurred" after trying to launch Homebrew Launcher via Download Play
+
+There is an issue with your `boot.3dsx` file (it is missing, misplaced, or corrupted). Download the latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest) and place `boot.3dsx` on the root of your SD card, replacing any existing file. Make sure you are extracting the ZIP file with any tool other than WinRAR, as it is known to cause issues with 3DS-related files.
+
+## "Scripts directory not found" in GodMode9
+
+You did not copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card. Download the latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) and place the `gm9` folder on the root of your SD card, merging it with the existing one.
+
+## `essentials.exefs` missing from `/gm9/out/`
+
+Your device had custom firmware in the past, so you were not automatically prompted to make a backup. Make a backup manually:
+
+1. Reintroduceți cardul SD în dispozitivul dumneavoastră
+1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+1. Navigate to 	`[S:] SYSNAND VIRTUAL`
+1. Select `essentials.exefs`, then `Copy to 0:/gm9/out/`
+1. You should now have `essentials.exefs` in `/gm9/out/`
+
+---
+
+# Boot-related issues on modded devices
+
+The steps detailed here generally assume that your device has a modern custom firmware setup (boot9strap + Luma3DS 8.0 or greater). If your console is running an older homebrew setup (for example, something based on arm9loaderhax or menuhax), you should update your setup before trying these instructions.
+{: .notice--info}
+
+## My device gets stuck on a black screen, and the blue light turns off
+
+There is an issue with your `boot.firm` file (it is missing, misplaced, or corrupted). Download the [latest release of Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) and place `boot.firm` on the root of your SD card, replacing any existing file. Make sure you are extracting the ZIP file with any tool other than WinRAR, as it is known to cause issues with 3DS-related files.
+
+If you hear a "popping sound", potentially accompanied with the backlight turning on for a split second, there is a hardware issue with your device (such as a disconnected backlight cable). You may be able to get your device to boot by holding it at certain angles.
+
+## My device gets stuck on a black screen, with a static blue light
+
+The steps below can be attempted in any order, but are listed from least to most time-consuming.
+
+1. Power off your device, eject the game cartridge if inserted, power on your device, then wait up to ten minutes. If your device boots within ten minutes, the issue has been fixed and is unlikely to reoccur
+1. Rename the `Nintendo 3DS` folder on your SD card to `Nintendo 3DS_BACKUP`, then attempt to boot. If your device successfully boots, there is some issue within your `Nintendo 3DS` folder. Try clearing home menu extdata:
+	+ Navigate to `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
+	+ Delete the extdata file corresponding to your region: 
+		+ **Regiunea EUR**: `00000098`
+		+ **Regiunea JPN**: `00000082`
+		+ **Regiunea USA**: `0000008f`
+		+ **Regiunea CHN**: `000000A1`
+		+ **Regiunea KOR**: `000000A9`
+		+ **Regiunea TWN**: `000000B1`
+1. Ensure that your device does not have ARM11 exception handlers disabled:
+	+ Power off your device
+	+ Hold (Select)
+	+ Power on your device, while still holding (Select)
+	+ If the "Disable ARM11 exception handlers" box is checked, uncheck it
+	+ If your device now boots to the "An exception occured" screen, follow [My device boots to an error screen](troubleshooting#my-device-boots-to-an-error-screen)
+1. Try booting into recovery mode and updating your system:
+	+ Power off your device
+	+ Hold (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A)
+	+ Power on your device
+	+ If you were successful, the device will boot to an "update your system" screen
+1. Follow the [CTRTransfer](ctrtransfer) guide
+1. For further support, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
+
+---
+
+## My device boots to an error screen
+
+### "An error has occurred: Failed to apply 1 FIRM patch(es)" or "An exception has occurred -- Current process: pm"
+
+Your Luma3DS version is outdated. Download the latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) and place `boot.firm` on the root of your SD card, replacing any existing file. Make sure you are extracting the ZIP file with any tool other than WinRAR, as it is known to cause issues with 3DS-related files.
+
+### "An error has occurred. Hold down the POWER button to turn off the power..."
+
+ARM11 exception handlers are disabled, or custom firmware is not installed. Try enabling ARM11 exception handlers:
+	+ Power off your device
+	+ Hold (Select)
+	+ Power on your device, while still holding (Select)
+	+ If the "Disable ARM11 exception handlers" box is checked, uncheck it
+
+### Some other error
+
+Please take a photo of the error and join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+
+## Blue "Bootrom Error" screen
+
+Your device is likely hard-bricked. You will need to buy an ntrboot flashcart to reinstall boot9strap in order to attempt to fix your device. This may also indicate a hardware issue which cannot be fixed. In any case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+  + It is also possible that someone has set a boot-time splash screen that just looks like a brick. Try leaving your device powered on, waiting on the blue screen, for five minutes.
+
+---
+
+# Functionality-related issues on modded devices
+
+## DSi / DS functionality is broken, or has been replaced with Flipnote Studio
+
+1. Download the latest release of [TWLFix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest) (the `.3dsx` file)
+1. Închideți dispozitivul
+1. Creați un folder numit `3ds` în rădăcina cardului SD dacă nu există deja
+1. Copiați `TWLFix-CFW.3dsx` în folderul `/3ds/` de pe cardul SD
+1. Reintroduceți cardul SD în dispozitivul dumneavoastră
+1. Deschideți Homebrew Launcher-ul
+1. Lansați TWLFix-CFW din lista de homebrew
+1. Apăsați (A) pentru a dezinstala titlurile TWL defecte
+1. Apăsați (Start) pentru a reporni dispozitivul
+1. Faceți o actualizare de sistem mergând în System Settings, apoi "Other Settings", apoi mergeți spre colțul drept și folosiți "System Update"
+  + Actualizarea va vedea că titlurile TWL esențiale au fost dezinstalate, și le va redescărca și reinstala
+1. Odată ce actualizarea este completă, apăsaţi "OK" pentru a reporni dispozitivul 
+
+## GBA Virtual Console and/or Safe Mode functionality is broken
+
+Your device is running Luma3DS/AuReiNand 6.6 or older, likely via arm9loaderhax. You should follow [A9LH to B9S](a9lh-to-b9s) to update your device to a modern custom firmware environment.
+
+## Extended memory mode games are broken
+
+This can occur after a CTRTransfer or region change on Old 3DS / 2DS. You will need to system format your device to fix this issue.
