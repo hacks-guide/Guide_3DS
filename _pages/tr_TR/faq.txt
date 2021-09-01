@@ -2,50 +2,92 @@
 title: "FAQ"
 ---
 
-<a name="faq_latestfw" />**Q:** *I am on the latest system version. Is my device hackable?*    
-**A:** Yes
+{% capture notice-6 %}
+**3DS firmware 11.15.0 was recently released**. Here's what you should know:
 
-<a name="faq_updatecfw" />**S:** *Luma3DS'i nasıl yükseltebilirim?*    
-**A:** Copy the `boot.firm` and `boot.3dsx` files from the [latest release of Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) to the root of the SD card, replacing any existing files.
+- If your device is running *Luma 10.2.1*, it is *100% safe* to update.
+- If your device is on an older Luma version, you should [update Luma](restoring-updating-cfw) before you update your device to 11.15.0.
+- No homebrew titles are known to have been affected by this update. They will work as they did on 11.14.0.
+- If your device is *currently stock on 11.14.0*, you will have to *update your 3DS* to the latest firmware (11.15.0) in order to install custom firmware. The previous method that used the browser no longer works because Nintendo enforces a browser version check that cannot be bypassed on 11.14.0.  
+{% endcapture %}
 
-<a name="faq_gatewaysky" />**Q:** *I heard about this thing I have to pay for (Gateway, Sky3DS, etc). Is that something I need?*    
-**C:** Hayır. boot9strap is a superior method of loading hax that runs early in boot.
+<div class="notice--warning">{{ notice-6 | markdownify }}</div>
 
-<a name="faq_gatewaysaves" />**S:** *Elimdeki Gateway kurulu cihazımdaki oyunlarımın kayıt dosyalarını nasıl aktarbilirim?*    
-**C:** bkz: [burası](https://gbatemp.net/threads/425743/)
+# Pre-Installation FAQ
+
+<a name="faq_latestfw" />**Q:** *I am on the latest system version. Is my device hackable without any external hardware?*    
+**C:** Evet! The latest firmware (11.15.0) has a free method for getting CFW named [Seedminer](seedminer).
+
+<a name="faq_3dstype" />**Q:** *What devices is this guide compatible with?*    
+**A:** The instructions are the same for all retail 3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, and New 2DS XL devices. If your system version string displays as "0.0.0-0", then you may have a developer unit.
 
 <a name="faq_risky" />**S:** *Konsolumu hacklemek ne kadar riskli?*    
-**C:** Tüm güvenlik kontrollerini görmezden gelmediğiniz / atlatmadığınız sürece brick olması *neredeyse* imkansızdır.
+**A:** Bricks are now effectively impossible unless you are purposely trying to brick your device. 
 
 <a name="faq_homebrew" />**S:** *Bununla homebrew ve emülatör'leri çalıştırabilir miyim?*    
-**C:** Evet! Custom Firmware, sadece Homebrew Launcher'a erişim sağlamakla kalmaz, aynı zamanda tüm sürümlerde hack yapabilmenizi mümkün kılar, böylece cihazı güncelleseniz bile sonsuza dek yüklü kalır.
+**C:** Evet! This guide will install a few useful homebrew applications, including [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest), which acts as a homebrew app store.
 
 <a name="faq_regionfree" />**S:** *Bununla farklı bölge oyunlarını oynayabilir miyim?*    
-**C:** Luma3DS bölge kısıtlaması olmadan ve ekstra bir işlem yapmadan herhangi bir bölgeden olan oyunları oynamanızı sağlar.
+**A:** Yes; Luma3DS will automatically ignore the region check for cartridges and installed titles. Some games may need to make use of Luma's [locale emulation feature](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features) in order to work properly on out-of-region devices.
 
-<a name="faq_updates" />**S:** *CFW SysNAND'ı güncellemek güvenli midir?*    
-**C:** Evet. Bu güvenli, daha fazla sormanıza gerek yok.
-
-<a name="faq_support" />**S:** *Destek içim kime, nereye başvurmalıyım?*    
-**A:** For support (in English), ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
-
-<a name="faq_le4gbsd" />**S:** *Bunu 4GB (ya da daha az) kapasiteli bir SD kart kullanarak yapabilir miyim?*    
-**C:** Evet!
-
-<a name="faq_ge128gbsd" />**Q:** *Can I use a 128GB (or larger) SD card?*    
-**C:** Evet, ancak bazı kullanıcılar böyle büyük alanlar kullanırken yavaşlamalar olduğunu rapor ettiler. Kartı exFAT ile formatlayamayacağınızı unutmayın; FAT32 ile biçimlendirmeniz gerekir.
-
-<a name="faq_movesd" />**S:** *Bunun sonunda yeni bir SD karta nasıl geçebilirim?*    
-**C:** Tüm dosyaları yeni SD karta kopyalamanız yeterlidir.
+<a name="faq_loss" />**Q:** *Will I lose any features if I install CFW?*    
+**C:** Hayır. Devices with custom firmware can still use the eShop and run physical cartridges as any other 3DS can.
 
 <a name="faq_NNID" />**S:** *Bu işlem sonunda NNID'mi koruyabilir miyim?*    
-**C:** Bir NNID ile başlar ve her adımı izlerseniz, NNID'nizi en sonunda korumuş olursunuz.
+**A:** Your NNID will not be affected by this guide.
 
-<a name="faq_systransfer" />**S:** * System Transfer'leri nasıl olacak?*    
-**A:** Once you have completed the guide, you can system transfer to and from an B9S 3DS or 2DS exactly like you would a regular stock console or EmuNAND (you will lose any non-legitimate games/themes/DLC in the transfer; saves will stay even for games that are lost).
+<a name="faq_ban" />**Q:** *Will my 3DS be banned for having CFW?*    
+**A:** There was a ban wave in May 2017 that banned CFW users from online play (eShop access, NNIDs, and Nintendo Accounts were unaffected), seemingly at random. A ban wave at such a scale has not been seen since. That being said, we don't know what Nintendo may have in store in the future. At this time, we don't think that bans are something that you need to worry about.
 
 <a name="faq_nopc" />**Q:** *Bu işlemleri bilgisayar kullanmadan (örn. android telefonla) yapma imkanım var mı? *    
-**C:** Tek gerekli olan şey SD karta dosya atabilmeniz!
+**A:** All you need is the ability to put files on a compatible SD card!
+
+<a name="faq_sdsize" />**Q:** *What size SD card can I use?*    
+**A:** You will need at least 1.5GB of free SD card space to follow this guide in its entirety. While the 3DS is officially compatible with SD cards up to 32GB, larger SD cards can be used if they are manually re-formatted as FAT32. It is not recommended to use SD cards greater than 128GB due to known issues with GBA graphics and custom themes.
+
+<a name="faq_payment" />**Q:** *I heard about this thing I have to pay for (Gateway, Sky3DS, ntrboot, R4, etc). Is that something I need?*    
+**C:** Hayır. Custom firmware can be installed for free on the latest firmware without any hardware devices. In fact, 3DS-mode flashcarts like Gateway and Sky3DS are not recommended because they are obsolete and may carry ban or brick risk.
+
+<a name="faq_cfwhb" />**Q:** *What's the difference between custom firmware and homebrew access?*    
+**A:** Historically, the 3DS used to have userland homebrew access through older exploits like ninjhax. The level of system access granted with userland allowed you to run basic homebrew and emulators, but did not allow you to (easily) modify games or dump cartridges. It was also a lot less stable, with homebrew often ungracefully crashing and requiring a full reboot. Custom firmware grants a far greater level of system access while also being more stable than homebrew-only entrypoints.
+
+# Post-Installation FAQ
+
+<a name="faq_updates" />**Q:** *Is it safe to update my 3DS to the latest version with CFW?*    
+**A:** If you are using Luma3DS, your custom firmware loader (boot9strap) will *never* be removed when performing a system update. There have been updates in the past that have resulted in Luma3DS crashing on boot, so it is a good idea to wait a couple of hours to ensure that the latest update will not temporarily render the device unusable until Luma3DS is updated. System updates can be performed the same way as they are on a stock 3DS: through System Settings, Safe Mode, or the update prompt when the update is automatically downloaded.
+
+<a name="faq_movesd" />**Q:** *How do I upgrade my SD card?*    
+**A:** Copy and paste your SD card contents to a new SD card formatted as FAT32. For 128GB cards, an allocation size of 65536 is recommended. SD cards larger than 128GB are not recommended due to known issues with GBA graphics and custom themes.
+
+<a name="faq_systransfer" />**Q:** *Can I system transfer with CFW?*    
+**A:** Yes, system transfers can be performed through the official System Transfer function to other consoles with CFW (inconsistencies may occur if the target console is stock). Tickets for illegitimate titles (homebrew) will not transfer, but can be made to reappear with [faketik](https://github.com/ihaveamac/faketik/releases/latest). Make sure that you do not perform a wireless transfer, as this will delete illegitimate titles. CFW will remain on both consoles. 
+
+<a name="faq_language" />**Q:** *How do I change the system language of a Japanese 3DS?*    
+**A:** The only way to change the system language of a Japanese 3DS to a language other than Japanese is to perform a [region change](region-changing). Note that this is very likely to break the Nintendo eShop on your device, which means you will be unable to update your games whether they are in-region or out-of-region.
+
+<a name="faq_hbupdates" />**Q:** *How do I update homebrew applications?*    
+**A:** It depends on the format of the homebrew application. Generally speaking:
+
+* Homebrew in **CIA format** can be updated by installing the new CIA, which will usually overwrite the old one. If the old CIA is not overwritten, you can delete the old one from Data Management as you would any other 3DS title.
+* Homebrew in **3DSX format** can be updated by replacing the 3DSX file in `/3ds/` with a fresh copy. If the homebrew application includes additional assets, you may need to place that folder somewhere else. Refer to the documentation of the homebrew application.
+* For updating Luma3DS, see [this page](restoring-updating-cfw). For updating GodMode9, see [this page](godmode9-usage#updating-godmode9).
+
+<a name="faq_oorupdates" />**Q:** *How do I update games from outside of my 3DS region?*    
+**A:** You will need to [dump the updates](dumping-titles-and-game-cartridges) from a 3DS that has the updates installed. The Nintendo eShop only contains updates for the console's region (a Japanese 3DS will only have updates for Japanese games).
 
 <a name="faq_problem" />**S:** *Yardım edin! Yanlış birşeyler oldu ve cihaz başlamıyor...*    
-**C:** Lütfen [Sorun Giderme Rehberi](troubleshooting)'ne bakın.
+**C:** Lütfen [Sorun Giderme Rehberi](troubleshooting)'ne bakın. **Uninstalling CFW when your device is in an unbootable state is not recommended, as it is very likely to lead to a brick**.
+
+# menuhax / A9LH / Gateway FAQ
+
+<a name="faq_existingmod" />**Q:** *I modded my device x years ago. What should I do?*    
+**A:** It is recommended that you upgrade your setup to a modern, boot9strap-based one. Follow the [Checking for CFW](checking-for-cfw) guide to see how to upgrade your setup.
+
+<a name="faq_whyb9s" />**Q:** *My setup works for me. Why should I upgrade it?*    
+**A:** The vast majority of modern homebrew (such as Checkpoint and BootNTR Selector) have only been tested on modern, boot9strap-based setups and may not work entirely (or at all) on older setups based on menuhax, A9LH, or Gateway. In addition, depending on your setup, you may be unable to safely update to the latest firmware. Modern, boot9strap-based setups allow for greater level of system access than previous hacks, including the ability to dump your console's bootrom.
+
+<a name="faq_upgradeloss" />**Q:** *Will I lose anything if I upgrade my setup?*    
+**A:** Your old setup (including your EmuNAND, if you have one) can usually be directly migrated to boot9strap with no data loss. If you have data that is particularly important to you, it would be a good idea to make a decrypted backup of your save data before upgrading your setup with a tool like [JKSM](https://github.com/J-D-K/JKSM/releases/tag/12%2F20%2F2018).
+
+<a name="faq_gatewaysaves" />**Q:** *How do I move saves from an existing Gateway setup to a more modern setup?*    
+**A:** See [this thread](https://gbatemp.net/threads/425743/).
