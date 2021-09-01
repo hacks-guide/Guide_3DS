@@ -18,7 +18,17 @@ title: "Boot9strap (Fredtool) のインストール"
 * 最新の [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
 * 最新バージョンの[Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest/)
 
-#### セクション I - 準備
+#### Section I - CFW Check
+
+1. 本体の電源を切ります。
+1. Hold the (Select) button
+1. Power on your device while still holding the (Select) button
+1. If the check was successful, you will boot to the HOME menu and you may proceed with this guide
+
+If you see a configuration menu, you already have CFW and continuing with these instructions may BRICK your device! Follow [Checking for CFW](checking-for-cfw) to upgrade your existing CFW.
+{: .notice--danger}
+
+####セクションⅡ－準備
 
 1. 本体の電源を切ります。
 1. パソコンにSDカードを入れます
@@ -26,7 +36,7 @@ title: "Boot9strap (Fredtool) のインストール"
 1. SDカードのルートに`boot.nds` (B9STool) をコピーします
 1. Frogminer_save `.zip`から`private`フォルダをSDカードのルートにコピーします
 
-#### セクション II - Fredtool
+#### Section III - Fredtool
 
 1. コンピュータで [Fredtool](https://3ds.nhnarwhal.com/3dstools/fredtool.php) を開きます。
 1. "Your movable.sed" フィールドにあなたの `movable.sed` ファイルを選択します。
@@ -51,7 +61,7 @@ title: "Boot9strap (Fredtool) のインストール"
 1. `インターネット設定` -> `Nintendo DS Connections` に移動し、"OK" を選択します。
 1. 完了した場合、日本語のうごくメモ帳が開きます
 
-#### セクション III - "うごくメモ帳" バグ
+#### Section IV - Flipnote Exploit
 
 このセクションのビジュアルガイドをご希望の場合は、 [このリンク](https://zoogie.github.io/web/flipnote_directions/) からご利用いただけます。
 {: .notice--info}
@@ -74,16 +84,19 @@ title: "Boot9strap (Fredtool) のインストール"
   + 電源ボタンを長押しして強制的に電源を切る必要があるかもしれません
   + Luma3dsの設定画面が表示された場合は、電源を切らずにガイドを続けてください
 
-#### セクション IV - Luma3DSを設定する
+#### セクション V - Luma3DSの設定
 
 1. (Select) を押したままデバイスを起動し、Luma3DS設定メニューを開きます
   + Luma設定メニューの起動時に問題が発生した場合は、[このトラブルシューティングガイドに従ってください](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)
 1. (A) ボタン とD-Padを使用し、次の設定を有効にします:
   + **"Show NAND or user string in System Settings"**
 1. (Start) を押してセーブして再起動します
-  しばらくしたらホーム画面が表示されます 黒い画面が5分以上続く場合、[このトラブルシューティングガイドに従ってください](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 
-#### セクション V - DS接続設定の復元
+At this point, your console will boot to Luma3DS by default as long as the SD card is inserted.
+  + Luma3DS does not look any different from the normal HOME menu. If your console has booted into the HOME menu, it is running custom firmware.
+  + On the next page, you will copy Luma3DS to internal memory so that you can boot without an SD card.
+
+#### Section VI - Restoring DS Connection Settings
 
 1. 本体の電源を切ります。
 1. パソコンにSDカードを入れます
