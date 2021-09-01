@@ -18,7 +18,17 @@ Ceci est une implémentation de l'exploit "FIRM partitions known-plaintext" qui 
 * La dernière version de [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
 * La dernière version de [Luma3DS] (https://github.com/LumaTeam/Luma3DS/releases/latest)
 
-#### Section I - Préparatifs
+#### Section I - Vérification de la présence d’un CFW
+
+1. Éteignez votre 3DS
+1. Maintenez le bouton (Select) enfoncé
+1. Allumez votre console tout en maintenant le bouton (Select) enfoncé
+1. Si la vérification s'est déroulée avec succès, le menu HOME s'affiche et vous pouvez poursuivre avec ce guide
+
+Si vous voyez un menu de configuration, vous avez déjà un CFW et continuer avec ces instructions peut BRICKER votre console ! Suivez [Vérifier les CFW](checking-for-cfw) pour mettre à jour votre CFW existant.
+{: .notice--danger}
+
+#### Section II - Préparatifs
 
 1. Éteignez votre 3DS
 1. Insérez votre carte SD dans votre ordinateur
@@ -26,7 +36,7 @@ Ceci est une implémentation de l'exploit "FIRM partitions known-plaintext" qui 
 1. Copiez le fichier `boot.nds`(B9STool) vers la racine de votre carte SD
 1. Copiez le dossier `private` du fichier `.zip` de Frogminer_save vers la racine de votre carte SD
 
-#### Section II - Fredtool
+#### Section III - Fredtool
 
 1. Ouvrez [Fredtool](https://3ds.nhnarwhal.com/3dstools/fredtool.php) sur votre ordinateur
 1. Sélectionnez votre fichier `movable.sed` pour le champ "Your movable.sed"
@@ -51,7 +61,7 @@ Ceci est une implémentation de l'exploit "FIRM partitions known-plaintext" qui 
 1. Naviguez vers `Paramètres Internet` -> `Connexions Nintendo DS`, puis sélectionnez "OK"
 1. Si l'exploit a réussi, votre console devrait avoir démarré la version japonaise de Flipnote Studio
 
-#### Section III - Exploit Flipnote
+#### Section IV - Exploit Flipnote
 
 Si vous préférez un guide visuel pour cette section, un tel guide est disponible [ici](https://zoogie.github.io/web/flipnote_directions/).
 {: .notice--info}
@@ -74,16 +84,19 @@ Si vous préférez un guide visuel pour cette section, un tel guide est disponib
   + Vous allez peut-être devoir forcer la fermeture en maintenant le bouton d’alimentation enfoncé
   + Si vous voyez l'écran de configuration de Luma, continuez de suivre le guide sans éteindre la console
 
-#### Section IV - Configuration de Luma3DS
+#### Section V - Configuration de Luma3DS
 
 1. Démarrez la console en maintenant (Select) enfoncé pour accéder au menu de configuration de Luma3DS
   + Si vous rencontrez des problèmes en lançant le menu de configuration de Luma, [suivez ce guide de dépannage](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)
 1. Utilisez le bouton (A) et la croix directionnelle pour activer les éléments suivants:
   + **"Show NAND or user string in System Settings"**
 1. Appuyez sur (Start) pour enregistrer les modifications et redémarrer
-  + Votre console devrait afficher le Menu HOME après un court instant. Si vous avez un écran noir depuis plus de 5 minutes, [suivez ce guide de dépannage](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 
-#### Section V - Restauration des paramètres de connexion Nintendo DS
+At this point, your console will boot to Luma3DS by default as long as the SD card is inserted.
+  + Luma3DS does not look any different from the normal HOME menu. If your console has booted into the HOME menu, it is running custom firmware.
+  + On the next page, you will copy Luma3DS to internal memory so that you can boot without an SD card.
+
+#### Section VI - Restauration des paramètres de Connexions Nintendo DS
 
 1. Éteignez votre 3DS
 1. Insérez votre carte SD dans votre ordinateur
