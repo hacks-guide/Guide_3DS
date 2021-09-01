@@ -18,7 +18,17 @@ title: "Установка Boot9strap (Fredtool)"
 * Свежая версия [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
 * The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
 
-#### Часть I - Подготовительные работы
+#### Section I - CFW Check
+
+1. Выключите консоль
+1. Hold the (Select) button
+1. Power on your device while still holding the (Select) button
+1. If the check was successful, you will boot to the HOME menu and you may proceed with this guide
+
+If you see a configuration menu, you already have CFW and continuing with these instructions may BRICK your device! Follow [Checking for CFW](checking-for-cfw) to upgrade your existing CFW.
+{: .notice--danger}
+
+#### Часть II - Подготовка
 
 1. Выключите консоль
 1. Вставьте SD-карту в компьютер
@@ -26,7 +36,7 @@ title: "Установка Boot9strap (Fredtool)"
 1. Скопируйте `boot.nds` (B9STool) в корень SD-карты
 1. Скопируйте папку `private` из `.zip-архива` Frogminer_save в корень SD-карты
 
-#### Часть II - Fredtool
+#### Section III - Fredtool
 
 1. Open [Fredtool](https://3ds.nhnarwhal.com/3dstools/fredtool.php) on your computer
 1. Выберите свой файл `movable.sed` в поле "Your movable.sed"
@@ -51,7 +61,7 @@ title: "Установка Boot9strap (Fredtool)"
 1. Перейдите в `Интернет-настройки` -> `Подключения Nintendo DS`, затем нажмите "OK"
 1. Если эксплойт сработал корректно, запустится японская версия Flipnote Studio
 
-#### Часть III - Эксплойт Flipnote
+#### Section IV - Flipnote Exploit
 
 Если вы предпочитаете визуальное руководство вместо этой части, оно доступно [здесь](https://zoogie.github.io/web/flipnote_directions/).
 {: .notice--info}
@@ -74,16 +84,19 @@ title: "Установка Boot9strap (Fredtool)"
   + При необходимости выключите консоль принудительно, удерживая кнопку питания
   + Если вы видите меню настроек Luma, продолжайте выполнять инструкции, не выключая консоль
 
-#### Часть IV - Настройка Luma3DS
+#### Section V - Configuring Luma3DS
 
 1. Включите консоль кнопкой питания, держа нажатой кнопку (Select), чтобы попасть в меню настроек Luma
   + Если вы не можете попасть в меню настроек Luma, [следуйте этим инструкциям](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md) (англ.)
 1. Нажимая (A) выберите следующие пункты:
   + **"Show NAND or user string in System Settings"**
 1. Нажмите (Start), чтобы сохранить настройки и перезагрузиться
-  + После короткой задержки консоль должна загрузить меню HOME. Если экран остаётся чёрным дольше 5 минут, обратитесь к разделу [Проблемы и их решения](troubleshooting#черный-экран-при-загрузке-sysnand-после-установки-boot9strap)
 
-#### Часть V - Восстановление DS Connection Settings
+At this point, your console will boot to Luma3DS by default as long as the SD card is inserted.
+  + Luma3DS does not look any different from the normal HOME menu. If your console has booted into the HOME menu, it is running custom firmware.
+  + On the next page, you will copy Luma3DS to internal memory so that you can boot without an SD card.
+
+#### Section VI - Restoring DS Connection Settings
 
 1. Выключите консоль
 1. Вставьте SD-карту в компьютер
