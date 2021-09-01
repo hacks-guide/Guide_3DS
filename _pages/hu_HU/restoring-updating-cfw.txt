@@ -1,0 +1,60 @@
+---
+title: "CFW visszaállítása / frissítése"
+---
+
+{% include toc title="Tartalomjegyzék" %}
+
+### Fontos tudnivalók
+
+Ez az oldal egy létező modern boot9strap telepítésre mutatja be a custom firmware appok újra telepítését és/vagy frissítését. Továbbá használható abban az esetben is helyreállításra, ha elveszett vagy megsérült az SD kártya.
+
+### Amire szükséged lesz
+* Az [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) legújabb verziója
+* A [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) legújabb kiadása
+
+### Lépések
+
+#### I. rész - Előkészületek
+
+1. Helyezd az SD kártyád a számítógépbe
+1. Másold át a `boot.3dsx` és `boot.firm` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
+  + Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne
+1. Másold át a `GodMode9.firm` fájlt a GodMode9 `.zip`-ből az SD kártyád `/luma/payloads/` mappájába, felülírva a létező fájlt
+  + Ha a `luma` vagy `payloads` mappa nem létezik, hozd létre őket
+1. Másold át a `gm9` mappát a GodMode9 `.zip`-ből az SD kártyád gyökerébe egyesítve bármilyen létező mappával és lecserélve minden létező fájlt
+1. Tedd vissza az SD kártyád a készülékedbe
+
+#### II. rész - Luma3DS konfigurálása
+
+1. Kapcsold be a készüléked
+	* Látnod kell ezt követően a Luma3DS konfigurációs menüt
+1. Használd az (A) gombot és D-Pad-et a következő engedélyezéséhez:
+	* **"Show NAND or user string in System Settings"**
+1. Mentéshez és újraindításhoz nyomd meg a (Start) gombot
+
+#### III. rész - CTRNAND Luma3DS
+
+1. Kapcsold ki a készüléked
+1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be az eszközödet. Ez elindítja a GodMode9-et
+  + Ha nem bootolsz be GodMode9 módba, ellenőrizd, hogy, a GodMode9.firm megtalálható a /luma/payloads/ könyvtárban és hogy a payloads helyesen van írva
+1. Ha rákérdez arra, hogy szeretnéd-e a valós dátumot és időt javítani (fix the RTC date&time), nyomd meg az (A) gombot, állítsd be a helyes dátumot és időt, majd nyomd meg az (A) gombot a folytatáshoz
+1. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
+1. Válaszd a "Scripts..." opciót
+1. Válaszd ezt: "GM9Megascript"
+1. Válaszd ezt: "Scripts from Plailect's Guide"
+1. Válaszd ezt: "Setup Luma3DS to CTRNAND"
+  + Ez be fogja másolni a frissített Luma3DS-t a belső memóriába, így az eszközöd képes bootolni tud SD kártya behelyezése nélkül
+1. Amikor kéri, nyomd meg az (A) gombot a folytatáshoz
+1. Nyomd meg az (A) gombot, hogy feloldd a SysNAND (lvl1) írást, majd sorban nyomd meg a kijelzett gombokat
+1. Nyomd meg az (A) gombot a folytatáshoz
+1. Nyomd meg a (B) gombot, majd navigálj az "Exit"-hez a GM9Megascript-ből kilépéshez
+  + Ha kérdezi, vond vissza az írási engedélyeket
+1. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
+1. Válaszd a "Poweroff system"-et az eszközöd kikapcsolásához
+
+A Luma3DS legfrissebb verziója telepítésre került az SD kártyára és a belső memóriába.
+{: .notice--success}
+___
+
+Ha szeretnél újratelepíteni, vagy frissíteni más homebrew alkalmazásokat, folytasd a [Telepítés véglegesítése](finalizing-setup) oldallal
+{: .notice--primary}
