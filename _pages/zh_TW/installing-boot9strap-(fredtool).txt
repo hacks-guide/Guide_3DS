@@ -18,7 +18,17 @@ Seedminer 將透過您的 `movable.sed` 檔案來解密您主機上任何 DSiWar
 * 最新版的 [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
 * 最新版的 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
 
-#### 第一節 — 準備工作
+#### 第一節 — 檢查自製韌體
+
+1. 關閉您的主機
+1. 按住「Select」鍵
+1. 在開機時按住「Select」鍵
+1. 如果您能正常開機至 Home 主選單的話，則代表檢查通過，您能放心地繼續遵循以下步驟。
+
+如果您看到的是一個看似設定的主選單的話，那則代表您先前已安裝過自製韌體了！若您繼續遵循以下步驟可能會造成磚機！ 前往至 [檢查是否已安裝自製韌體](checking-for-cfw) 以更新您現有的自製韌體。
+{: .notice--danger}
+
+#### 第二節 — 準備工作
 
 1. 關閉您的主機
 1. 將 SD 卡插入至電腦中
@@ -26,7 +36,7 @@ Seedminer 將透過您的 `movable.sed` 檔案來解密您主機上任何 DSiWar
 1. 將 `boot.nds` (B9STool) 複製到 SD 卡根目錄中
 1. 解壓 Frogminer_save `.zip` 中的 `private` 資料夾到 SD 卡的根目錄底下
 
-#### 第二節 — Fredtool
+#### 第三節 — Fredtool
 
 1. 於您的電腦中開啟 [Fredtool](https://3ds.nhnarwhal.com/3dstools/fredtool.php)
 1. 在『Your movable.sed』欄位中選擇您的 `movable.sed` 檔案
@@ -51,7 +61,7 @@ Seedminer 將透過您的 `movable.sed` 檔案來解密您主機上任何 DSiWar
 1. 移動至『網路設定 (Internet Settings)』中的『任天堂 DS 連線 (Nintendo DS Connections)』並選擇『OK』
 1. 如果漏洞成功執行，您的主機將自動啟動『うごくメモ帳 (Flipnote Studio)』
 
-##### 第三節 — Flipnote 漏洞
+##### 第四節 — Flipnote 漏洞
 
 如果您需要圖片幫助請見[此](https://zoogie.github.io/web/flipnote_directions/)。
 {: .notice--info}
@@ -74,16 +84,19 @@ Seedminer 將透過您的 `movable.sed` 檔案來解密您主機上任何 DSiWar
   + 您可能得按住電源紐強制關機
   + 如果您的主機顯示 Luma 設定選單，請繼續下列步驟不必關機
 
-#### 第四節 — 設定 Luma3DS
+#### 第五節 — 設定 Luma3DS
 
 1. 開機時，按住「Select」鍵啟動 Luma 設定選單
   + 如果您無法順利啟動 Luma 設定選單，請參見此[疑難排解](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)頁面 (英文)。
 1. 透過方向鍵及『A』以開啟下列選項：
   + **"Show NAND or user string in System Settings"**
 1. 按『Start』鍵以存檔並重新啟動系統
-  + 你的主機應該會在稍後載入主選單 如果您已等了五分鐘還是黑屏，[請依循本疑難排解之步驟](troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap)
 
-#### 第五節 — 還原 DS 連線設定
+At this point, your console will boot to Luma3DS by default as long as the SD card is inserted.
+  + Luma3DS does not look any different from the normal HOME menu. If your console has booted into the HOME menu, it is running custom firmware.
+  + On the next page, you will copy Luma3DS to internal memory so that you can boot without an SD card.
+
+#### 第六節 — 還原 DS 連線設定
 
 1. 關閉您的主機
 1. 將 SD 卡插入至電腦中
