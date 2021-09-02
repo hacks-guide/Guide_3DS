@@ -1,46 +1,46 @@
 ---
-title: "Finalizing Setup"
+title: "마무리 단계"
 ---
 
 {% include toc title="목차" %}
 
-### Required Reading
+### 중요
 
-The file `boot.firm` is what is launched by boot9strap itself after it finishes loading off of NAND, and can be any valid arm9 payload in the FIRM format. This file can be replaced at any time, although Luma3DS allows for the launch of other arm9 payloads in the FIRM format using the Luma3DS chainloader.
+`boot.firm`은 NAND 로딩이 끝난 후에 boot9strap 자체에 의해 실행되는 파일로, FIRM형식의 유효한 모든 arm9 페이로드로 바꿀 수 있습니다. Luma3DS는 Luma3DS chainloader 메뉴를 통해 FIRM형식의 다른 arm9 페이로드를 실행하는 기능을 지원하므로 필요시 이용이 가능합니다.
 
-In this case, we use Luma3DS by [LumaTeam](https://github.com/LumaTeam/) to boot a patched SysNAND directly, allowing us to completely bypass the need for any kind of EmuNAND, vastly simplifying the usage of a hacked 3DS in addition to saving SD card space.
+여기에서는 [LumaTeam](https://github.com/LumaTeam/)의 Luma3DS를 사용해 패치된 SysNAND를 부팅하므로 EmuNAND를 사용할 필요가 없으며, 해킹된 3DS의 사용을 크게 단순화시키고 사용되는 SD 카드의 공간도 절약할 수 있습니다.
 
 이 과정을 진행하는 동안 다음 프로그램도 설치하게 됩니다:
 
 +  **FBI** *(CIA 형식의 게임 및 애플리케이션 설치)*
-+  **Anemone3DS** *(installs custom themes)*
-+  **Checkpoint** *(backs up and restores save files for 3DS and DS games)*
-+  **Universal-Updater** *(a homebrew app store for downloading homebrew from the 3DS over wifi)*
++  **Anemone3DS** *(사용자 지정 테마 설정)*
++  **Checkpoint** *(3DS와 DS게임의 세이브 파일 백업 및 복구)*
++ **Universal-Updater** *(Wi-Fi를 통해 3DS에 홈브류를 다운로드 하는 앱 스토어)*
 +  **Godmode9** *(NAND와 게임 카드의 기능을 수행할 수 있는 다목적 툴)*
-+  **Homebrew Launcher Loader** *(launches the Homebrew Launcher)*
-+  **DSP1** *(allows homebrew applications to have sound)*
-+  **ctr-no-timeoffset** *(removes the rtc offset so that the home menu and rtc timestamps match)*
++  **Homebrew Launcher Loader** *(홈브류 런처 실행)*
++ **DSP1** *(홈브류 에플리케이션의 소리를 허용함)*
++ **ctr-no-timeoffset** *(HOME 메뉴와 RTC 시간이 RTC offset을 없에 주는 툴)*
 
-### What You Need
+### 준비물
 
-* The latest release of [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) *(the `.cia` file)*
-* The latest release of [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/latest) *(the `.cia` file)*
-* The latest release of [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest) *(the `.cia` file)*
-* The latest release of [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest)
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* The latest release of [DSP1](https://github.com/zoogie/DSP1/releases/latest) *(the `.cia` file)*
-* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) *(the `.cia` and `.3dsx` files)*
-* The latest release of [ctr-no-timeoffset](https://github.com/ihaveamac/ctr-no-timeoffset/releases/latest)
+* 최신 버전의 [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) *(`.cia` 파일)*
+* 최신 버전의 [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/latest) *(`.cia` 파일)*
+* 최신 버전의 [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest) *(`.cia` 파일)*
+* 최신 버전의 [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest)
+* 최신 버전의 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* 최신 버전의 [DSP1](https://github.com/zoogie/DSP1/releases/latest) *(`.cia` 파일)*
+* 최신 버전의 [FBI](https://github.com/Steveice10/FBI/releases/latest) *(`.cia` 와 `.3dsx` 파일들)*
+* 최신 버전의 [ctr-no-timeoffset](https://github.com/ihaveamac/ctr-no-timeoffset/releases/latest)
 
 ### 진행 방법
 
 #### 섹션 I - 준비 작업
 
-1. 기기를 종료해 주세요.
-1. SD 카드를 컴퓨터에 삽입해 주세요.
-1. Create a folder named `3ds` on the root of your SD card if it does not already exist
-    + This folder stores homebrew applications and data; it is different from the `Nintendo 3DS` folder that the device automatically generates
-1. Create a folder named `cias` on the root of your SD card if it does not already exist
+1. 기기를 종료해 주세요
+1. SD 카드를 컴퓨터에 삽입해 주세요
+1. SD 카드의 루트에 `3ds` 폴더가 없을 경우 폴더를 만들어 주세요
+    + 이 폴더는 홈브류 에플리케이션과 데이터가 보관되 있습며, 디바이스가 자동으로 생성하는 `Nintendo 3DS` 폴더와 다릅니다
+1. SD 카드의 루트에 `cias` 폴더가 없을 경우 폴더를 만들어 주세요
 1. Copy `ctr-no-timeoffset.3dsx` to the `/3ds/` folder on your SD card
 1. Copy `FBI.3dsx` to the `/3ds/` folder on your SD card
 1. Copy `Homebrew_Launcher.cia` to the `/cias/` folder on your SD card
@@ -146,7 +146,7 @@ If, before following this guide, you already had an EmuNAND setup and would like
 1. (A)를 눌러 진행해 주세요.
 1. (Home)을 눌러 작업 메뉴를 띄워 주세요.
 1. Select "Poweroff system" to power off your device
-1. SD 카드를 컴퓨터에 삽입해 주세요.
+1. SD 카드를 컴퓨터에 삽입해 주세요
 1. Copy `<date>_<serialnumber>_sysnand_###.bin`, `<date>_<serialnumber>_sysnand_###.bin.sha`, `essential.exefs`, `<serialnumber>_boot9_###.bin`, and `<serialnumber>_boot11_###.bin` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + 여러 위치에 백업을 해 주세요. (온라인 파일 저장 공간 등)
   + These backups will save you from a brick and/or help you recover files from the NAND image if anything goes wrong in the future
