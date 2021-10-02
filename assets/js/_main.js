@@ -167,10 +167,12 @@ $(document).ready(function(){
   }
 
   var device, method;
-  if(!((device = localStorage.getItem('device')) && (method = localStorage.getItem('method')))){
+  if(!(method = localStorage.getItem('method'))){
     sidebar_shown = false;
   }
-
+  if (!(device = localStorage.getItem('device'))) {
+    device = "-1";
+  }
   if(sidebar_shown){
     var unhide = [];
 
@@ -212,6 +214,7 @@ $(document).ready(function(){
       // custom routing here
     });
     var route = {
+      "-1": device_common,
       "0": device_old,
       "1": device_new,
     }
