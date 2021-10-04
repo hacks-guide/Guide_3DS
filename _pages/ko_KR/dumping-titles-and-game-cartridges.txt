@@ -1,5 +1,5 @@
 ---
-title: "Dumping Titles and Game Cartridges"
+title: "타이틀과 게임 카드 추출"
 ---
 
 {% include toc title="목차" %}
@@ -7,7 +7,7 @@ title: "Dumping Titles and Game Cartridges"
 스크립트와 같은 GodMode9의 지원과 업데이트와 정보를 받으려면 [GodMode9 디스코드 서버](https://discord.gg/BRcbvtFxX4)에 가입해 주세요. (영어 전용)
 {: .notice--primary}
 
-### Required Reading
+### 중요
 
 Aside from creating and restoring NAND backups, GodMode9 has the functionality to dump installed titles to an installable `.cia` file, to dump game cartridge data to a `.3ds` ROM file, and to directly install a game cartridge to the system.
 
@@ -25,25 +25,25 @@ These instructions are written for use with GodMode9 v2.0.0 or later. If you hav
 1. 기기를 종료해 주세요
 1. SD 카드를 컴퓨터에 삽입해 주세요
 1. SD 카드의 `/luma/payloads/`폴더에 GodMode9 `.zip`안에 압축되있는 `GodMode9.firm`을 복사해 주세요
-1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+1. GodMode9 `.zip`안에 압축되있는 `gm9` 폴더를 SD 카드의 루트로 복사해 주세요
 1. SD 카드를 기기에 다시 삽입해 주세요
 
-## Dumping a Game Cartridge
+## 게임 카드 추출
 
 {% capture notice %}
-Insert the game cartridge you intend to dump into your device
-  + 3DS game cartridges will be dumped to a `.3ds` format
-  + NDS game cartridges will be dumped to a `.nds` format
+기기에 추출하고자 하는 게임 카드를 삽입해 주세요
+  + 3DS 게임 카드는 `.3ds` 형식으로 추출됩니다
+  + NDS 게임 카드는 `.nds` 형식으로 추출됩니다
 {% endcapture %}
 
 <div class="notice--info">{{ notice | markdownify }}</div>
 
-1. (Start)를 길게 누르고, 이 상태에서 전원을 켜 주세요. GodMode9이 실행 될 겁니다.
+1. (Start)를 길게 누르고, 이 상태에서 전원을 켜 주세요. GodMode9이 실행 될 겁니다
 1. Navigate to `[C:] GAMECART`
 1. Follow the steps applicable to your game cartridge:
   + **3DS Game Cartridge:** Press (A) on `[TitleID].trim.3ds` to select it
   + **NDS Game Cartridge:** Press (A) on `[TitleID].trim.nds` to select it
-1. Select "Copy to 0:/gm9/out"
+1. "Copy to 0:/gm9/out"를 선택해 주세요
 1. Your non-installable `.3ds` or `.nds` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
 ## Installing a Game Cartridge Directly to the System
@@ -131,7 +131,7 @@ For organizational purposes, copy each `.cia` file you wish to encrypt / decrypt
 {: .notice--info}
 
 1. (Start)를 길게 누르고, 이 상태에서 전원을 켜 주세요. GodMode9이 실행 될 겁니다.
-1. `[0:] SDCARD` -> `cias`로 이동해 주세요.
+1. `[0:] SDCARD` -> `cias`로 이동해 주세요
 1. Press (A) on the `.cia` file to select it, then select "CIA image options..."
 1. Select the option to perform the desired function:
     + **Encrypt to 0:/gm9/out:** Create an encrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card
