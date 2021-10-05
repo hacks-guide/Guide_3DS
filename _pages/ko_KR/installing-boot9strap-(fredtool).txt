@@ -4,41 +4,41 @@ title: "boot9strap 설치 (Fredtool)"
 
 {% include toc title="목차" %}
 
-### Required Reading
+### 중요
 
-This method of using Seedminer for further exploitation uses your `movable.sed` file to decrypt any DSiWare title for the purposes of injecting an exploitable DSiWare title into the DS Internet Settings application. This requires you to have a DSiWare backup, for example from BannerBomb or the DSiWare Dumper tool.
+이 방식은 Seedminer에서 얻은 `movable.sed` 파일을 사용해 어느 DSiWare 타이틀을 해독해 익스플로잇 가능한 DSiWare 타이틀을 DS 소프트웨어용 인터넷 설정에 주입합니다. 이 과정은 DSiWare 백업이 필요합니다. (예: BannerBomb3에서 받은 파일)
 
 이 작업은 [이곳](https://www.3dbrew.org/wiki/3DS_System_Flaws)에 자세히 설명되어 있는 "FIRM partitions known-plaintext" 익스플로잇을 구현한 작업입니다.
 
 ### 준비물
 
-* A DSiWare Backup (such as the one on SD root from [BannerBomb3](bannerbomb3))
+* DSiWare 백업 (예: SD 카드 루트에 [BannerBomb3](bannerbomb3) 에서 생성된 파일)
 * [Seedminer](seedminer)에서 받은 `movable.sed` 파일
 * 최신 버전의 [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest)
 * 최신 버전의 [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
 * 최신 버전의 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
 
-#### Section I - CFW Check
+#### 섹션 I - CFW 확인
 
 1. 기기를 종료해 주세요
 1. (Select) 버튼을 길게 눌러 주세요
 1. (Select) 버튼을 계속 눌러 있는 상태에서 기기의 전원을 켜 주세요
-1. If the check was successful, you will boot to the HOME menu and you may proceed with this guide
+1. 만약 HOME 메뉴가 켜지면, 이 확인은 성공적이고, 가이드를 진행하면 됩니다
 
-If you see a configuration menu, you already have CFW and continuing with these instructions may BRICK your device! Follow [Checking for CFW](checking-for-cfw) to upgrade your existing CFW.
+만약 설정 메뉴가 보이면, 이 기기는 이미 커스텀 펌웨어가 설치되어 있고, 이 작업을 진행하면 기기가 벽돌 될수가 있습니다! 이미 존재하는 CFW를 업데이트 할 수 있도록 [CFW 확인](checking-for-cfw)를 진행해 주세요.
 {: .notice--danger}
 
-#### Section II - Prep Work
+#### 섹션 II - 준비 작업
 
 1. 기기를 종료해 주세요
 1. SD 카드를 컴퓨터에 삽입해 주세요
 1. Luma3DS `.zip`안에 있는 `boot.firm`과 `boot.3dsx`를 SD 카드의 루트에 복사해 주세요
-1. Copy `boot.nds` (B9STool) to the root of your SD card
-1. Copy the `private` folder from the Frogminer_save `.zip` to the root of your SD card
+1. 'boot.nds' (B9STool) 파일을 SD 카드의 루트에 복사해 주세요
+1. SD 카드의 루트로 Frogminer_save `.zip`안에 압축이 되있는 `private` 폴더를 복사해 주세요
 
-#### Section III - Fredtool
+##### 섹션 III - Fredtool
 
-1. Open [Fredtool](https://3ds.nhnarwhal.com/3dstools/fredtool.php) on your computer
+1. 컴퓨터에서 [Fredtool](https://3ds.nhnarwhal.com/3dstools/fredtool.php)을 열어 주세요
 1. Select your `movable.sed` file for the "Your movable.sed" field
 1. Select your DSiWare Backup (`<8-character-id>.bin`) file for the "Your dsiware.bin" field
 1. Select "Verify files"
