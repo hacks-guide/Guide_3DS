@@ -4,7 +4,7 @@ title: "EmuNAND 이동"
 
 {% include toc title="목차" %}
 
-### Required Reading
+### 중요
 
 이 페이지는 이전 EmuNAND의 데이터를 새로운 CFW SysNAND로 옮기고 이전 EmuNAND 파티션을 제거하는 방법을 안내하는 부가 섹션입니다. EmuNAND와 RedNAND는 [동일한 개념](http://3dbrew.org/wiki/NAND_Redirection)을 다른 방식으로 구현한 것입니다.
 
@@ -35,15 +35,15 @@ DSiWare 게임이나 저장 데이터에 대해 신경 쓰지 않는다연 이 �
 {: .notice--info}
 
 1. 부팅시 (Start) 를 눌러서 GodMode9을 실행해 주세요
-1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
-1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
-  + Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
-1. `[2:] SYSNAND TWLN` -> `title`로 이동해 주세요.
-1. Hold (R) and press (A) at the same time on `00030004` to select the folder, then select "Copy to 0:/gm9/out"
-  + 이 과정은 기기에 DSiware 게임이 많다면 시간이 좀 걸릴 수 있습니다.
+1. 만약 "Essential files backup not found" 메세지가 표시되면, (A) 룰 눌러서 하세요. 백업이 끝나면 (A) 를 눌러서 진행해 주세요
+1. 만약 "RTC date&time seems to be wrong" 메세지가 표시되면 (A) 버튼을 눌러 하십시오, 그러고 나서 날짜와 시간을 고치고 (A) 버튼을 눌러 계속해 주세요
+  + 만약 RTC 날짜와 시간을 수정해야 했다면, 이 가이드 끝나고 본체 설정에서도 시간을 수정해야 합니다
+1. `[2:] SYSNAND TWLN` -> `title`로 이동해 주세요
+1. `00030004` 폴더에 (R) 을 누른 채 (A) 를 눌러 선택하고 "Copy to 0:/gm9/out"을 선택해 주세요
+  + 이 과정은 기기에 DSiware 게임이 많다면 시간이 좀 걸릴 수 있습니다
 1. (B)를 두 번 눌러 메인 메뉴로 돌아가 주세요
 
-#### Section III - Backup GBA VC Saves
+#### 섹션 III - GBA VC 저장 데이터 백업
 
 GBA VC 게임이나 저장 데이터에 대해 신경 쓰지 않는다면 이 섹션을 건너뛰어 주세요.
 {: .notice--info}
@@ -51,23 +51,23 @@ GBA VC 게임이나 저장 데이터에 대해 신경 쓰지 않는다면 이 �
 다른 종류의 버추얼 콘솔 게임(GBC, FC, 기타)에서 이 과정은 불필요합니다.
 {: .notice--info}
 
-The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
+게임은 `<TitleID>.gbavc.sav`의 이름으로 SD카드의 `/gm9/out/`폴더에 산출될 것입니다.
 {: .notice--info}
 
 To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over `[A:] SYSNAND SD`, holding (R) and pressing (A) at the same time, then selecting "Search for titles".
 {: .notice--info}
 
-1. 과정대로 진행해 백업하고자 하는 GBA VC 게임 저장 데이터를 저장해 주세요.
-  + GBA VC 게임을 실행해 주세요.
-  + GBA VC 게임을 종료해 주세요.
-  + (start)를 누른 채 기기를 시작해 Luma3DS chainloader 메뉴를 실행해 주세요.
-  + (A)를 눌러 GodMode9을 실행해 주세요.
-  + `[S:] SYSNAND VIRTUAL`로 이동해 주세요.
-  + Press (A) on `agbsave.bin` to select it
+1. 과정대로 진행해 백업하고자 하는 GBA VC 게임 저장 데이터를 저장해 주세요
+  + GBA VC 게임을 실행해 주세요
+  + GBA VC 게임을 종료해 주세요
+  + (Start)를 누른 채 기기를 시작해 Luma3DS chainloader 메뉴를 실행해 주세요
+  + (A)를 눌러 GodMode9을 실행해 주세요
+  + `[S:] SYSNAND VIRTUAL` 폴더로 이동해 주세요
+  + `agbsave.bin`에서 (A)를 눌러 선택해 주세요
   + Select "AGBSAVE options..."
   + Select "Dump GBA VC save"
   + Press (A) to continue
-  + (start)를 눌러 기기를 다시 시작해 주세요.
+  + (Start)를 눌러 기기를 다시 시작해 주세요
 
 #### Section IV - Copy EmuNAND to SysNAND
 
@@ -95,7 +95,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. "Copy path(s)"를 선택해 주세요.
 1. (A)를 눌려 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요
 1. "Overwrite file(s)"를 선택해 주세요.
-  + 이 과정은 기기에 DSiware 게임이 많다면 시간이 좀 걸릴 수 있습니다.
+  + 이 과정은 기기에 DSiware 게임이 많다면 시간이 좀 걸릴 수 있습니다
 1. 만약 메세지가 표시되면, (B) 를 눌러서 쓰기잠금을 거부해 주세요
 1. (B)를 두 번 눌러 메인 메뉴로 돌아가 주세요
 
@@ -110,21 +110,21 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. (R)을 누른 채 (start)를 눌러 기기를 종료해 주세요.
 1. 기기를 SysNAND 상태로 시작해 주세요.
 1. Do the following process for each GBA VC game that you want to restore the save for:
-  + GBA VC 게임을 실행해 주세요.
-  + GBA VC 게임을 종료해 주세요.
-  + (start)를 누른 채 기기를 시작해 Luma3DS chainloader 메뉴를 실행해 주세요.
-  + (A)를 눌러 GodMode9을 실행해 주세요.
+  + GBA VC 게임을 실행해 주세요
+  + GBA VC 게임을 종료해 주세요
+  + (Start)를 누른 채 기기를 시작해 Luma3DS chainloader 메뉴를 실행해 주세요
+  + (A)를 눌러 GodMode9을 실행해 주세요
   + Navigate to `[0:] SDCARD` -> `gm9`
   + Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
   + (B)를 눌러 메인 메뉴로 돌아가 주세요.
-  + `[S:] SYSNAND VIRTUAL`로 이동해 주세요.
-  + Press (A) on `agbsave.bin` to select it
+  + `[S:] SYSNAND VIRTUAL` 폴더로 이동해 주세요
+  + `agbsave.bin`에서 (A)를 눌러 선택해 주세요
   + Select "AGBSAVE options..."
   + Select "Inject GBA VC save"
   + Press (A) to continue
-  + (start)를 눌러 기기를 다시 시작해 주세요.
-  + GBA VC 게임을 실행해 주세요.
-  + GBA VC 게임을 종료해 주세요.
+  + (Start)를 눌러 기기를 다시 시작해 주세요
+  + GBA VC 게임을 실행해 주세요
+  + GBA VC 게임을 종료해 주세요
 1. 부팅시 (Start) 를 눌러서 GodMode9을 실행해 주세요
 
 #### Section VII - Backup SysNAND
