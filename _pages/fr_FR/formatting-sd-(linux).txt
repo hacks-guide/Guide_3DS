@@ -13,7 +13,6 @@ Si la 3DS reconnaît déjà la carte SD, il n'est pas nécessaire de suivre ce g
 Cette page est uniquement destinée aux utilisateurs de Linux. Si vous n'êtes pas sur Linux, consultez les pages [Formatage de la carte SD (Windows)](formatting-sd-(windows)) ou [Formatage de la carte SD (Mac)](formatting-sd-(mac)).
 
 ### Instructions
-#### Section I - Déterminer dans quel emplacement se trouve votre carte SD
 
 1. Assurez-vous que votre carte SD n'est **pas** insérée
 1. Lancez le terminal Linux
@@ -28,16 +27,10 @@ mmcblk0     179:0    0   3,8G  0 disk
 1. Prenez note du point de montage de l'appareil. Dans notre exemple ci-dessus, c'était `mmcblk0`
   + Si `RO` est défini sur 1, assurez-vous que le bouton de verrouillage ne soit pas glissé vers le bas
 1. Appuyez sur CTRL + C pour quitter le menu
-
-#### Section II - Formatage de la carte SD
-
-![](https://upload.wikimedia.org/wikipedia/commons/8/85/Cfdisk_screenshot.png)
-
-1. Tapez `sudo cfdisk /dev/(point de montage de l'appareil)`
-1. Sur chaque partition, appuyez sur `Delete`
-1. Créez un nouvelle partition primaire occupant la totalité de votre carte SD
-  + Ceci va créer une nouvelle partition avec le système de fichiers Linux
-1. Sélectionnez le type et jetez un coup d'œil au menu
-1. Trouvez "W95 FAT32" et prenez note du code sur le côté gauche de ce texte
-1. Appuyez sur n'importe quelle touche, puis entrez le code que vous avez noté à l'étape précédente
-1. Appuyez sur Entrer, puis sur Quitter
+1. Type in the following for your SD card:
+    - 2GB or lower: `sudo mkfs.fat /dev/(device mount point from above) -s 64 -F 16` 
+	  - This creates a single FAT16 partition with 32 KB cluster size on the SD card
+    - 4GB - 128GB: `sudo mkfs.fat /dev/(device mount point from above) -s 64 -F 32` 
+	  - This creates a single FAT32 partition with 32 KB cluster size on the SD card
+    - 128GB or higher: `sudo mkfs.fat /dev/(device mount point from above) -s 128 -F 32`
+      - This creates a single FAT32 partition with 64 KB cluster size on the SD card
