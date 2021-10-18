@@ -13,7 +13,6 @@ If the 3DS already recognizes the SD card, this guide is not required.
 Tämä sivu on vain Linux-käyttäjille. If you are not on Linux, check out the [Formatting SD (Windows)](formatting-sd-(windows)) or [Formatting SD (Mac)](formatting-sd-(mac)) pages.
 
 ### Ohjeet
-#### Section I - Determining which slot your SD card is in
 
 1. Make sure your SD card is **not** inserted
 1. Launch the Linux Terminal
@@ -28,16 +27,10 @@ mmcblk0     179:0    0   3,8G  0 disk
 1. Take note of the device mount point. In our example above, it was `mmcblk0`
   + If `RO` is set to 1, make sure the lock switch is not slid down
 1. Hit CTRL + C to exit the menu
-
-#### Section II - Formatting the card
-
-![](https://upload.wikimedia.org/wikipedia/commons/8/85/Cfdisk_screenshot.png)
-
-1. Type in `sudo cfdisk /dev/(device mount point from above)`
-1. On each partition, hit `Delete`
-1. Create a new Primary partition that covers the size of your entire SD card
-  + This will create a new partition with the linux filesystem
-1. Select type and take a look at the menu
-1. Find "W95 FAT32" and take note of the code on the left side of that text
-1. Press any key, then enter the code you took note of in the previous step
-1. Hit enter, then hit Quit
+1. Type in the following for your SD card:
+    - 2GB or lower: `sudo mkfs.fat /dev/(device mount point from above) -s 64 -F 16` 
+	  - This creates a single FAT16 partition with 32 KB cluster size on the SD card
+    - 4GB - 128GB: `sudo mkfs.fat /dev/(device mount point from above) -s 64 -F 32` 
+	  - This creates a single FAT32 partition with 32 KB cluster size on the SD card
+    - 128GB or higher: `sudo mkfs.fat /dev/(device mount point from above) -s 128 -F 32`
+      - This creates a single FAT32 partition with 64 KB cluster size on the SD card
