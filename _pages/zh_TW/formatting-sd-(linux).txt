@@ -13,7 +13,6 @@ title: "格式化 SD 卡（透過 Linux）"
 本教學僅適用於 Linux 使用者。 如果您的系統不是 Linux，請參閱 [格式化 SD 卡 (透過 Windows)](formatting-sd-(windows)) 或 [格式化 (透過 Mac)](formatting-sd-(mac))。
 
 ### 操作說明
-#### 第一節 - 檢查您的 SD 卡位於哪個欄位中
 
 1. 請先確保您的 SD 卡**尚未**被插入至電腦中
 1. 啟動終端機
@@ -28,16 +27,10 @@ mmcblk0     179:0    0   3,8G  0 disk
 1. 將 SD 卡的掛載點記下。 在以上範例中，我們的 SD 卡掛載點是 `mmcblk0`
   + 如果 `RO` 的狀態為 1，請確保 SD 卡上的寫入保護開關尚被開啟
 1. 按下 CTRL + C 退出選單
-
-#### 第二節 — 格式化 SD 卡
-
-![](https://upload.wikimedia.org/wikipedia/commons/8/85/Cfdisk_screenshot.png)
-
-1. 輸入 `sudo cfdisk /dev/(SD 卡的掛載點)`
-1. 對每個分區按下 `Delete` (刪除)
-1. 建立等於您 SD 卡總容量大小的磁區
-  + 這將會建立一個新的 Linux 檔案系統的磁區
-1. 選擇 Type (種類) 並檢視選單中的內容
-1. 在選單中找尋『W95 FAT32』並將其代號記下
-1. 按下任意鍵，然後輸入你在上一步所記下的代號
-1. 按下 Enter 键，然後選擇 Quit
+1. Type in the following for your SD card:
+    - 2GB or lower: `sudo mkfs.fat /dev/(device mount point from above) -s 64 -F 16` 
+	  - This creates a single FAT16 partition with 32 KB cluster size on the SD card
+    - 4GB - 128GB: `sudo mkfs.fat /dev/(device mount point from above) -s 64 -F 32` 
+	  - This creates a single FAT32 partition with 32 KB cluster size on the SD card
+    - 128GB or higher: `sudo mkfs.fat /dev/(device mount point from above) -s 128 -F 32`
+      - This creates a single FAT32 partition with 64 KB cluster size on the SD card
