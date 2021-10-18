@@ -13,7 +13,6 @@ title: "SDをフォーマット (Linux)"
 このページはLinuxユーザー向けです。 If you are not on Linux, check out the [Formatting SD (Windows)](formatting-sd-(windows)) or [Formatting SD (Mac)](formatting-sd-(mac)) pages.
 
 ### 手順
-#### セクション I - SDカードがどのスロットにあるかを調べる
 
 1. SDカードが挿入されていないことを確認してください
 1. Linuxの"端末"を起動します
@@ -28,16 +27,10 @@ mmcblk0     179:0    0   3,8G  0 disk
 1. デバイスのマウントポイントをメモしてください。 上記の例では、 `mmcblk0` でした
   + `RO`が1に設定されている場合、ロックスイッチが下にスライドしないようにしてください
 1. Ctrl + C を押してメニューを終了します
-
-#### セクション II - SDカードのフォーマット
-
-![](https://upload.wikimedia.org/wikipedia/commons/8/85/Cfdisk_screenshot.png)
-
-1. `sudo cfdisk /dev/(上からデバイスマウントポイント)`を入力します
-1. パーティションごとに「削除」を押してください
-1. SDカード全体のサイズと同じ容量な新しいプライマリパーティションを作成します
-  + Linuxファイルシステムを持つ新しいパーティションを作成します
-1. 種類を選択してメニューを見ます
-1. 「W95 FAT32」を見つけて、そのテキストの左側にあるコードをメモしてください
-1. 任意のキーを押して、前のステップでメモしたコードを入力してください
-1. Enterキーを押し、終了を押してください
+1. Type in the following for your SD card:
+    - 2GB or lower: `sudo mkfs.fat /dev/(device mount point from above) -s 64 -F 16` 
+	  - This creates a single FAT16 partition with 32 KB cluster size on the SD card
+    - 4GB - 128GB: `sudo mkfs.fat /dev/(device mount point from above) -s 64 -F 32` 
+	  - This creates a single FAT32 partition with 32 KB cluster size on the SD card
+    - 128GB or higher: `sudo mkfs.fat /dev/(device mount point from above) -s 128 -F 32`
+      - This creates a single FAT32 partition with 64 KB cluster size on the SD card
