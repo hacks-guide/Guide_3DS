@@ -27,10 +27,10 @@ mmcblk0     179:0    0   3,8G  0 disk
 1. Jegyezd fel az eszköz csatolási pontját. A fenti példában ez `mmcblk0` volt
   + Ha az `RO` 1-re állított, ellenőrizd, hogy a zároló csúszka nincs-e lehúzva
 1. Nyomj CTRL + C-t a menüből kilépéshez
-1. Type in the following for your SD card:
-    - 2GB or lower: `sudo mkfs.fat /dev/(device mount point from above) -s 64 -F 16` 
-	  - This creates a single FAT16 partition with 32 KB cluster size on the SD card
-    - 4GB - 128GB: `sudo mkfs.fat /dev/(device mount point from above) -s 64 -F 32` 
-	  - This creates a single FAT32 partition with 32 KB cluster size on the SD card
-    - 128GB or higher: `sudo mkfs.fat /dev/(device mount point from above) -s 128 -F 32`
-      - This creates a single FAT32 partition with 64 KB cluster size on the SD card
+1. Írd be a következőt az SD kártyádhoz:
+    - 2GB vagy kisebb: `sudo mkfs.fat /dev/(az eszköz csatolási pontja fentről) -s 64 -F 16` 
+	  - Ez létrehoz egy FAT16 partíciót 32 KB cluster mérettel az SD kártyán
+    - 4GB - 128GB: `sudo mkfs.fat /dev/(az eszköz csatolási pontja fentről) -s 64 -F 32` 
+	  - Ez létrehoz egy FAT32 partíciót 32 KB cluster mérettel az SD kártyán
+    - 128GB vagy nagyobb: `sudo mkfs.fat /dev/(az eszköz csatolási pontja fentről) -s 128 -F 32`
+      - Ez létrehoz egy FAT32 partíciót 64 KB cluster mérettel az SD kártyán
