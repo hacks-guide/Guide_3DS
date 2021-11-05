@@ -16,7 +16,7 @@ Once the WiFi profile has been injected, we will use SAFE_MODE, which is a recov
 
 These instructions work on USA, Europe, Japan, and Korea region consoles as indicated by the letters U, E, J, or K after the system version.
 
-If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, you will need to use a [Legacy Method](legacy-methods). For assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, you will need to follow [an alternate branch of Seedminer](BannerBomb3). For assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 {: .notice--warning}
 
 ### What You Need
@@ -27,21 +27,21 @@ If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, you will n
 #### Section I - Prep Work
 
 1. If your device is powered on, power off your device
-1. Open [unSAFE_MODE-bb3 tool](https://3ds.nhnarwhal.com/3dstools/unsafemode.php) on your computer
+1. Open [unSAFE_MODE Exploit Injector](https://3ds.nhnarwhal.com/3dstools/unsafemode.php) on your computer
 1. Upload your movable.sed using the "Choose File" option
-1. Click "Download unSAFE_MODE-bb3 archive"
-  + This will download an exploit DSiWare called `F00D43D5.bin` and a SAFE_MODE exploit data file called `usm.bin` inside of a zip archive (`unSAFE_MODE-bb3.zip`)
+1. Click "Build and Download"
+  + This will download an exploit DSiWare called `F00D43D5.bin` and a SAFE_MODE exploit data file called `usm.bin` inside of a zip archive (`unSAFE_MODE.zip`)
 1. Insert your SD card into your computer
 1. Copy `boot.firm` and `boot.3dsx` from the Luma3DS `.zip` to the root of your SD card
   + The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
-1. Copy `usm.bin` from `unSAFE_MODE-bb3.zip` to the root of your SD card
+1. Copy `usm.bin` from `unSAFE_MODE.zip` to the root of your SD card
 1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` on your SD card
   + The `<ID0>` will be the same one that you used in [Seedminer](seedminer)
   + The `<ID1>` is a 32 character long folder inside of the `<ID0>`
   + If `Nintendo DSiWare` does not exist, create it inside of the `<ID1>`
 1. If there are any existing DSiWare backup files (`<8-character-id>.bin`) in this folder, move them to your PC
   + This will leave you with an empty Nintendo DSiWare folder. Moving the files to your PC ensures you don't delete any intentional backups
-1. Copy the `F00D43D5.bin` file from `unSAFE_MODE-bb3.zip` to the `Nintendo DSiWare` folder
+1. Copy the `F00D43D5.bin` file from `unSAFE_MODE.zip` to the `Nintendo DSiWare` folder
 
 #### Section II - BannerBomb3
 
@@ -50,9 +50,9 @@ If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, you will n
 1. Launch System Settings on your device
 1. Navigate to `Data Management` -> `DSiWare`
 1. Click on the SD Card section
-  + Your bottom screen should flash Red and then the system will reboot to home menu a few seconds later. This means the exploit profile was successfully copied
-  + If the bottom screen does not flash Red, the exploit profile was not copied and you will not be able to complete the next section. Ensure that your files are properly placed, then try again
-1. Power off your device
+  + Your device should show a menu with some text
+1. Select "Inject haxx"
+  + Your device will automatically power off
 
 #### Section III - unSAFE_MODE
 
@@ -84,8 +84,9 @@ At this point, your console will boot to Luma3DS by default as long as the SD ca
 1. Launch System Settings on your device
 1. Navigate to `Data Management` -> `DSiWare`
 1. Click on the SD Card section
-  + Your bottom screen should flash Green and then the system will reboot to home menu a few seconds later. This means your WiFi configuration profiles were successfully restored
-1. Power off your device
+  + Your device should show a menu with some text
+1. Select "Restore slots"
+  + Your device will automatically power off
 1. Insert your SD card into your computer
 1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` on your SD card
 1. Delete `F00D43D5.bin` from your Nintendo DSiWare folder
