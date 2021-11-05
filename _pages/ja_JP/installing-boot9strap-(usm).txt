@@ -16,7 +16,7 @@ WiFiプロファイルを入れたら、SAFE_MODEを実行します。これは�
 
 これらのガイドは、システムバージョン末尾にある「U、E、J、K」にあるように、米国、欧州、日本、韓国の端末で機能します。
 
-(RボタンまたはLボタン), (十字キー上), (Aボタン) が使えない場合[他の方法](legacy-methods) を試して下さい。 質問がある場合、[Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)にて英語で質問して下さい。
+If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, you will need to follow [an alternate branch of Seedminer](BannerBomb3). 質問がある場合、[Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)にて英語で質問して下さい。
 {: .notice--warning}
 
 ### 必要なもの
@@ -27,21 +27,21 @@ WiFiプロファイルを入れたら、SAFE_MODEを実行します。これは�
 #### セクション I - 準備
 
 1. 本体の電源が入っている場合、本体の電源を切ります
-1. コンピュータで [unSAFE_MODE-bb3 tool](https://3ds.nhnarwhal.com/3dstools/unsafemode.php) を開いてください。
+1. Open [unSAFE_MODE Exploit Injector](https://3ds.nhnarwhal.com/3dstools/unsafemode.php) on your computer
 1. "ファイルを選択"から movable.sed ファイルをアップロードします。
-1. "Download unSAFE_MODE-bb3 archive" をクリック
-  + これにより、`F00D437D5.bin`と呼ばれるエクスプロイトDSiWareと、ZIPアーカイブ内の`usm.bin`という名前のSAFE_MODE-bb3.zip`の脆弱性データファイルがダウンロードされます。
+1. Click "Build and Download"
+  + This will download an exploit DSiWare called `F00D43D5.bin` and a SAFE_MODE exploit data file called `usm.bin` inside of a zip archive (`unSAFE_MODE.zip`)
 1. パソコンにSDカードを入れます
 1. `boot.firm` と `boot.3dsx` をLuma3DSの `.zip` からSDカードのルートにコピーします
   + SDカードのルートとは、Nintendo 3DSのフォルダなどがある最初の項目のことであり、フォルダの中ではありません。
-1. `unSAFE_MODE-bb3.zip`から`usm.bin`をSDカードのルートにコピーします
+1. Copy `usm.bin` from `unSAFE_MODE.zip` to the root of your SD card
 1. SDカードの`Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`へ移動します
   + ここでいう `<ID0>` は先ほど [Seedminer](seedminer) で使用したものと同じです。
   + `<ID1>` は `<ID0> ` の中の32文字の長いフォルダのことです。
   + `Nintendo DSiWare`フォルダが存在しない場合は、<ID1>の中に作成します
 1. もし、このフォルダ内に既存のDSiWareのバックアップファイル(`<8-character-id>.bin`) がいくつかあるなら、それらをPCに移してください
   + これで Nintendo DSiWare フォルダが空になります。 PCに移すことで、バックアップファイルが削除されることはなくなります。
-1. `F00D43D5.bin` ファイルを `unSAFE_MODE-bb3.zip` から `Nintendo DSiWare` のフォルダにコピーして下さい
+1. Copy the `F00D43D5.bin` file from `unSAFE_MODE.zip` to the `Nintendo DSiWare` folder
 
 #### セクション II - BannerBomb3
 
@@ -50,9 +50,9 @@ WiFiプロファイルを入れたら、SAFE_MODEを実行します。これは�
 1. 「本体設定」を開きます。
 1. `データ管理` -> `DSiWare データ管理` の順に移ります。
 1. SDカードをクリックします。
-  + 下の画面が赤色になり、数秒後にホームメニューが起動します。 これはプロファイルが正常にコピーされたことを意味します
-  + 下の画面が赤くならない場合、プロファイルはコピーされておらず、次のセクションを遂行することはできません。 ファイルが正しく配置されていることを確認し、もう一度やり直してください
-1. 本体の電源を切ります。
+  + Your device should show a menu with some text
+1. Select "Inject haxx"
+  + Your device will automatically power off
 
 #### セクション III - unSAFE_MODE
 
@@ -84,8 +84,9 @@ At this point, your console will boot to Luma3DS by default as long as the SD ca
 1. 「本体設定」を開きます。
 1. `データ管理` -> `DSiWare データ管理` の順に移ります。
 1. SDカードをクリックします。
-  + 下の画面が緑色になり、数秒後にホームメニューが起動します。 これはWiFi設定のプロファイルが正常に復元されたことを意味します
-1. 本体の電源を切ります。
+  + Your device should show a menu with some text
+1. Select "Restore slots"
+  + Your device will automatically power off
 1. パソコンにSDカードを入れます
 1. SDカードの`Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`へ移動します
 1. Nintendo DSiWareフォルダから`F00D43D5.bin`を削除します
