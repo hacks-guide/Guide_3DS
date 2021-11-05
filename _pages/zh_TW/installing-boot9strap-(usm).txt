@@ -16,7 +16,7 @@ title: "安裝 boot9strap (透過 USM)"
 
 這些操作在美、歐、日、韓版可用，可透過系統版本號末尾的 「U、E、J、K」 字符來辨別。
 
-如果你的「L/R」鍵、「上」鍵、「A」鍵中的其中一個按鍵壞了，那您將得使用[傳統方法](legacy-methods) 才能繼續。 若您需要幫助，請加入 [Discord 上的 Nintendo Homebrew 伺服器](https://discord.gg/MWxPgEp) 並使用英文求助。
+If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, you will need to follow [an alternate branch of Seedminer](BannerBomb3). 若您需要幫助，請加入 [Discord 上的 Nintendo Homebrew 伺服器](https://discord.gg/MWxPgEp) 並使用英文求助。
 {: .notice--warning}
 
 ### 必備項目
@@ -27,21 +27,21 @@ title: "安裝 boot9strap (透過 USM)"
 #### 第一節 — 準備工作
 
 1. 如果您的主機正處於開機狀態，那麼請將其關機
-1. 於您的電腦中開啟 [unSAFE_MODE-bb3 tool](https://3ds.nhnarwhal.com/3dstools/unsafemode.php)
+1. Open [unSAFE_MODE Exploit Injector](https://3ds.nhnarwhal.com/3dstools/unsafemode.php) on your computer
 1. 點選「Choose File」，並選取您的 movable.sed 檔案
-1. 點選『Download unSAFE_MODE-bb3 archive』
-  + 這將會下載一個 ZIP 檔，其中應含有名為 `F00D43D5.bin` 的 DSiWare 檔案，及一個名為 `usm.bin` 的 SAFE_MODE 漏洞的資料檔。
+1. Click "Build and Download"
+  + This will download an exploit DSiWare called `F00D43D5.bin` and a SAFE_MODE exploit data file called `usm.bin` inside of a zip archive (`unSAFE_MODE.zip`)
 1. 將 SD 卡插入至電腦中
 1. 解壓 Luma3DS `.zip` 內的 `boot.firm` 與 `boot.3dsx` 到 SD 卡的根目錄底下
   + 「SD 卡的根目錄」指的是你的 SD 卡含有 Nintendo 3DS 資料夾的目錄，而非該資料夾內部
-1. 解壓 `unSAFE_MODE-bb3.zip` 內的 `usm.bin` 到 SD 卡的根目錄底下
+1. Copy `usm.bin` from `unSAFE_MODE.zip` to the root of your SD card
 1. 於您的 SD 卡中，移動至 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`
   + 此 `<ID0>` 字串將與您在 [Seedminer](seedminer) 中所使用的字串一樣
   + 此 `<ID1>` 字串指的是 `<ID0>` 內 32 字元的資料夾名稱
   + 如果您沒有看到 `Nintendo DSiWare` 資料夾，請於 `<ID1>` 資料夾中內建立一個
 1. 如果這資料夾有其他的 DSiWare 備份檔案 (`<8位字符id>.bin`) ，將它們移動至電腦上的資料夾存儲
   + 這樣您的 Nintendo DSiWare 資料夾應該會變成空的。 將這些檔案移至電腦上備份可防止您刪除了您有意保留的東西
-1. 解壓 `unSAFE_MODE-bb3.zip` 內的 `F00D43D5.bin` 到 `Nintendo DSiWare` 資料夾中
+1. Copy the `F00D43D5.bin` file from `unSAFE_MODE.zip` to the `Nintendo DSiWare` folder
 
 #### 第二節 — BannerBomb3
 
@@ -50,9 +50,9 @@ title: "安裝 boot9strap (透過 USM)"
 1. 於您主機上啟動系統設定 (System Settings)
 1. 移動至 `檔案管理 (Data Management)` -> `DSiWare`
 1. 點擊 SD 卡 部分
-  + 您的主機下方的螢幕應該會開始閃紅色，過幾秒後應該會重啟至 Home 主選單中。 這表示著漏洞設定檔已成功複製
-  + 您的主機下方的螢幕未閃紅色，則代表您沒有正確複製漏洞設定檔；在完成複製前您將無法繼續進行接下來的步驟。 請確保您的設定檔已放在正確的位置下，然後重試
-1. 關閉您的主機
+  + Your device should show a menu with some text
+1. Select "Inject haxx"
+  + Your device will automatically power off
 
 #### 第三節 — unSAFE_MODE
 
@@ -84,8 +84,9 @@ At this point, your console will boot to Luma3DS by default as long as the SD ca
 1. 於您主機上啟動系統設定 (System Settings)
 1. 移動至 `檔案管理 (Data Management)` -> `DSiWare`
 1. 點擊 SD 卡 部分
-  + 您的主機下方的螢幕應該會開始閃綠色，過幾秒後應該會重啟至 Home 主選單中。 這意味著您的 WiFi 設定檔已成功復原
-1. 關閉您的主機
+  + Your device should show a menu with some text
+1. Select "Restore slots"
+  + Your device will automatically power off
 1. 將 SD 卡插入至電腦中
 1. 於您的 SD 卡中，移動至 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`
 1. 刪除 Nintendo DSiWare 資料夾下的 `F00D43D5.bin` 檔案
