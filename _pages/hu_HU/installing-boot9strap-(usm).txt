@@ -16,7 +16,7 @@ Amint a WiFi profil injektálásra került, a SAFE_MODE-ot fogjuk használni, am
 
 Az utasítások az Amerikai, Európai, Japán és Koreai régiójú konzolokon működnek, amik a rendszer verzió mögött egy U, E, J vagy K betű jelöl.
 
-Ha a (Jobb/Bal Váll), (D-Pad Fel) vagy (A) gombjaid nem működnek, egy [Legacy metódust](legacy-methods) kell használnod. Ha támogatásra van szükséged az anyaggal kapcsolatosan, csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és kérj, angolul, támogatást.
+If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, you will need to follow [an alternate branch of Seedminer](BannerBomb3). Ha támogatásra van szükséged az anyaggal kapcsolatosan, csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és kérj, angolul, támogatást.
 {: .notice--warning}
 
 ### Amire szükséged lesz
@@ -27,21 +27,21 @@ Ha a (Jobb/Bal Váll), (D-Pad Fel) vagy (A) gombjaid nem működnek, egy [Legacy
 #### I. rész - Előkészületek
 
 1. Ha a konzolod be van kapcsolva, most kapcsold ki
-1. Nyisd meg az [unSAFE_MODE-bb3 tool](https://3ds.nhnarwhal.com/3dstools/unsafemode.php/) oldalt a számítógépeden
+1. Open [unSAFE_MODE Exploit Injector](https://3ds.nhnarwhal.com/3dstools/unsafemode.php) on your computer
 1. Töltsd fel a `movable.sed` fájlod a "Choose File" opcióval
-1. Kattints a "Download unSAFE_MODE-bb3 archive"-ra
-  + Ez letölt egy exploit DSiWare-t `F00D43D5.bin` néven és egy SAFE_MODE exploit adatfájlt `usm.bin` néven egy zip mappán belül (`unSAFE_MODE-bb3.zip`)
+1. Kattints a "Build and Download"-ra
+  + This will download an exploit DSiWare called `F00D43D5.bin` and a SAFE_MODE exploit data file called `usm.bin` inside of a zip archive (`unSAFE_MODE.zip`)
 1. Helyezd az SD kártyád a számítógépbe
 1. Másold át a `boot.firm` és `boot.3dsx` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
   + Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne
-1. Másold át a `usm.bin` fájlt az `unSAFE_MODE-bb3 `.zip`-ből az SD kártya gyökerébe
+1. Copy `usm.bin` from `unSAFE_MODE.zip` to the root of your SD card
 1. Navigálj a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` mappába az SD kártyán
   + Az `<ID0>` ugyanaz, mint amit a [Seedminer](seedminer)-nél használtál
   + Az `<ID1>` egy 32 karakter hosszú nevű mappa az `<ID0>` mappában
   + Ha a `Nintendo DSiWare` mappa nem létezik, hozd létre az `<ID1>` mappában
 1. Ha van más DSiWare mentés fájl (`<8-character-id>.bin`) ebben a mappában, helyezd át őket a számítógépedre
   + Így egy üres DSiWare mappát fogsz kapni. Ha áthelyezed a fájlokat a számítógépedre, az segít abban, hogy ne törölj ki semmilyen fontos mentést
-1. Másold `F00D43D5.bin` fájlt az `unSAFE_MODE-bb3.zip`-ből a `Nintendo DSiWare` mappába
+1. Copy the `F00D43D5.bin` file from `unSAFE_MODE.zip` to the `Nintendo DSiWare` folder
 
 #### II. rész - BannerBomb3
 
@@ -50,9 +50,9 @@ Ha a (Jobb/Bal Váll), (D-Pad Fel) vagy (A) gombjaid nem működnek, egy [Legacy
 1. Lépj be a System Settings-be a készülékeden
 1. Navigálj ide: `Data Management` -> `DSiWare`
 1. Kattints az SD kártya részre
-  + Az alsó képernyődnek pirosan kell villannia, majd a rendszer újraindul a Home menübe egy pár másodperc múlva. Ez azt jelenti, hogy az exploit profil sikeresen másolásra került
-  + Ha az alsó képernyő nem villant pirosan, az exploit profil nem került másolásra és nem fogod tudni befejezni a következő részt. Ellenőrizd, hogy a fájljaid a helyükön vannak, és próbáld újra
-1. Kapcsold ki a készüléked
+  + Your device should show a menu with some text
+1. Select "Inject haxx"
+  + Your device will automatically power off
 
 #### III. rész - unSAFE_MODE
 
@@ -84,8 +84,9 @@ Ezen a ponton a konzolod alapértelmezetten bebootol a Luma3DS-be egészen addig
 1. Lépj be a System Settings-be a készülékeden
 1. Navigálj ide: `Data Management` -> `DSiWare`
 1. Kattints az SD kártya részre
-  + Az alsó képernyőnek zölden kell villannia, majd a rendszer újraindul a Home menübe egy pár másodperc múlva. Ez azt jelenti, hogy a WiFi konfiguráció sikeresen vissza lett állítva
-1. Kapcsold ki a készüléked
+  + Your device should show a menu with some text
+1. Select "Restore slots"
+  + Your device will automatically power off
 1. Helyezd az SD kártyád a számítógépbe
 1. Navigálj a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` mappába az SD kártyán
 1. Töröld `F00D43D5.bin` fájlt a Nintendo DSiWare mappából
