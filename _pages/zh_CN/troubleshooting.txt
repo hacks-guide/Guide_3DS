@@ -52,45 +52,45 @@ You are missing `secret_sector.firm` from the `boot9strap` folder, or the `boot9
 
 你的主机已经破解过了。 你应该[检查一下](checking-for-cfw)。
 
-### "An error has occurred, forcing the software to close..." (white message box)
+### “An error has occurred, forcing the software to close...”（程序被强制关闭，下屏跳出白色的消息框）
 
-There is an issue with your `otherapp.bin` file. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) and place it on the root of your SD card. Do not add the `.bin` extension if you do not already see it.
+这说明你放的 `otherapp.bin` 文件有问题。 下载最新版本的 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) 并将其放在你 SD 卡的根目录中。 不要在没有看到 `.bin` 后缀的时候手动重命名它。
 
-### "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
+### “An error has occurred. Hold down the POWER button to turn off the power..."（黑屏，下屏显示白底的文字）
 
-Your `00000001.sav` and/or `otherapp.bin` files may be misplaced. Ensure that `00000001.sav` is in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` and that `otherapp.bin` is on the root of your SD card.
+你可能把 `00000001.sav` 和（或者） `otherapp.bin` 文件的位置搞错了。 确保 `00000001.sav` 放在了 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` 中，`otherapp.bin` 放在了 SD 卡的根目录中。
 
-If your files are in the correct locations, re-create the save using the [PicHaxx Save Tool](https://3ds.nhnarwhal.com/3dstools/pichaxx.php), then place it in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data`. Ensure that the file is named exactly `00000001.sav` and that you used your console's `movable.sed` to create it. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) and place it on the root of your SD card. Do not add the `.bin` extension if you do not already see it.
+如果你确定一切都在正确的位置上了，那就尝试重新用 [PicHaxx 存档工具](https://3ds.nhnarwhal.com/3dstools/pichaxx.php)创建一份存档，然后把要求的文件重新放到 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` 中。 确保它是用你主机的 `movable.sed` 文件创建的，且文件已经准确命名为了 `00000001.sav`。 重新下载最新版本的 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) 并将其放在你 SD 卡的根目录中。 不要在没有看到 `.bin` 后缀的时候手动重命名它。
 
-### Game starts normally
+### 游戏正常启动了
 
-Your modified `00000001.sav` file may be misplaced, or you may have used the wrong `movable.sed` when creating it. Re-create the save using the [PicHaxx Save Tool](https://3ds.nhnarwhal.com/3dstools/pichaxx.php), then place it in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data`.
+你可能把 `00000001.sav` 放错位置了，或者这个文件不是用这台主机的 `movable.sed` 创建的。 尝试重新用 [PicHaxx 存档工具](https://3ds.nhnarwhal.com/3dstools/pichaxx.php)创建一份存档，然后把要求的文件重新放到 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` 中。
 
 ### Failed to open SafeB9SInstaller.bin
 
-The file `SafeB9SInstaller.bin` is missing or misplaced. Download the latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/tag/v0.0.7) and place it on the root of your SD card. Do not add the `.bin`extension if you do not already see it.
+`SafeB9SInstaller.bin` 文件丢失或放置在了错误的位置。 下载最新版本的 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/tag/v0.0.7) 并将其放在你 SD 卡的根目录中。 不要在没有看到 `.bin` 后缀的时候手动重命名它。
 
-### Frozen on "Doing agbhax..."
+### 卡在了 “Doing agbhax...”
 
-There may be an issue with your `otherapp.bin` file. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) and place it on the root of your SD card. Do not add the `.bin` extension if you do not already see it.
+这可能说明你放的 `otherapp.bin` 文件有问题。 下载最新版本的 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) 并将其放在你 SD 卡的根目录中。 不要在没有看到 `.bin` 后缀的时候手动重命名它。
 
-### "PrepareArm9ForTwl returned error c8804631!"
+### “PrepareArm9ForTwl returned error c8804631!”
 
-You will need to follow an alternate method, like [BannerBomb3](bannerbomb3).
+你需要用其他的替代方法，如 [BannerBomb3](bannerbomb3)。
 
 ---
 
-## Installing boot9strap (Soundhax)
+## 安装 boot9strap（通过 Soundhax）
 
-### Red/purple/pink and white screen after running Soundhax
+### 跑 Soundhax 时卡在了红/紫/粉/白屏
 
-If your device is on system version 9.4.0, 9.5.0, or 9.6.0, you may be encountering a bug with universal-otherapp. Follow [Homebrew Launcher (Soundhax)](homebrew-launcher-(soundhax)) instead.
+如果你的主机系统版本在 9.4.0、9.5.0 和 9.6.0 之间，则你可能是遇到了 universal-otherapp 的一个 bug，请使用[启动 Homebrew Launcher（通过 Soundhax）](homebrew-launcher-(soundhax))替代方法安装自制固件。
 
-If your device is not on those firmwares, it likely indicates that you already have custom firmware. 你应该[检查一下](checking-for-cfw)。
+如果你的系统版本没有在这个区间中，则你的主机可能已经安装过了自制固件。 你应该[检查一下](checking-for-cfw)。
 
-### "An error has occurred, forcing the software to close..." (white message box)
+### “An error has occurred, forcing the software to close...”（程序被强制关闭，下屏跳出白色的消息框）
 
-There is an issue with your `otherapp.bin` file (it is missing, misplaced, or corrupted). Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) and place it on the root of your SD card.
+There is an issue with your `otherapp.bin` file (it is missing, misplaced, or corrupted). 下载最新版本的 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) 并将其放在你 SD 卡的根目录中。
 
 ### "Could not play"
 
@@ -98,15 +98,15 @@ You have the wrong Soundhax file for your device and region, or your device is i
 
 ### Failed to open SafeB9SInstaller.bin
 
-The file `SafeB9SInstaller.bin` is missing or misplaced. Download the latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/tag/v0.0.7) and place it on the root of your SD card. Do not add the `.bin`extensoin if you do not already see it.
+`SafeB9SInstaller.bin` 文件丢失或放置在了错误的位置。 下载最新版本的 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/tag/v0.0.7) 并将其放在你 SD 卡的根目录中。 Do not add the `.bin`extensoin if you do not already see it.
 
-### Frozen on "Doing agbhax..."
+### 卡在了 “Doing agbhax...”
 
-There may be an issue with your `otherapp.bin` file. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), rename it to `arm11code.bin`, and place it on the root of your SD card.
+这可能说明你放的 `otherapp.bin` 文件有问题。 Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), rename it to `arm11code.bin`, and place it on the root of your SD card.
 
 If you have a Taiwanese or Mainland Chinese unit (with a T or C in the version string, ie. 11.14.0-##T), join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
 
-### "PrepareArm9ForTwl returned error c8804631!"
+### “PrepareArm9ForTwl returned error c8804631!”
 
 You will need to follow an alternate method. Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
 
