@@ -49,18 +49,18 @@ title: "常见问题"
 **答：** 不。 自制固件可以不依托任何其他外设在最新版本的系统中安装。 实际上，我们并不推荐使用 3DS 烧录卡（如 Gateway 或 Sky3DS），这些烧录卡现在已经过时，且可能会给你的主机带来 ban 机或砖机的风险。
 
 <a name="faq_cfwhb" />**问：自制固件和自制程序使用权限有什么区别？**    
-**A:** Historically, the 3DS used to have userland homebrew access through older exploits like ninjhax. 这种级别的系统权限能让你运行一些基础的自制程序和模拟器，但不能让你（或较为容易地）修改游戏或导出卡带。 It was also a lot less stable, with homebrew often ungracefully crashing and requiring a full reboot. Custom firmware grants a far greater level of system access while also being more stable than homebrew-only entrypoints.
+**A:** Historically, the 3DS used to have userland homebrew access through older exploits like ninjhax. 这种级别的系统权限能让你运行一些基础的自制程序和模拟器，但不能让你（或较为容易地）修改游戏或导出卡带。 这些漏洞也不是特别稳定，自制程序经常会反复崩溃且必须完全重启整个系统才可恢复。 自制固件能让你获得高等级的系统权限，同时相较那些仅自制程序的漏洞而言更加稳定。
 
-# Post-Installation FAQ
+# 破解后的问题
 
-<a name="faq_updates" />**Q:** *Is it safe to update my 3DS to the latest version with CFW?*    
-**A:** If you are using Luma3DS, your custom firmware loader (boot9strap) will *never* be removed when performing a system update. There have been updates in the past that have resulted in Luma3DS crashing on boot, so it is a good idea to wait a couple of hours to ensure that the latest update will not temporarily render the device unusable until Luma3DS is updated. System updates can be performed the same way as they are on a stock 3DS: through System Settings, Safe Mode, or the update prompt when the update is automatically downloaded.
+<a name="faq_updates" />**问：我破解 3DS 后还可以照常更新系统么？**     
+**答：**如果你正在使用 Luma3DS，你的自制固件加载器（boot9strap）**永远不会**因为更新系统而被移除。 不过前一段时间的更新经常使 Luma3DS 在启动系统时崩溃，所以我们建议你在新版本发布后，先等几个小时看看别人的升级反馈或者 Luma3DS 是否会更新，确认更新不会导致主机暂时无法正常使用后再继续。 更新系统可以直接像未破解的 3DS 那样更新，如：进入系统设置对应选项更新、使用安全模式更新以及等待系统自动下载完成后提醒的更新。
 
-<a name="faq_movesd" />**Q:** *How do I upgrade my SD card?*    
-**A:** Copy and paste your SD card contents to a new SD card formatted as FAT32. For 128GB cards, an allocation size of 65536 is recommended. SD cards larger than 128GB are not recommended due to known issues with GBA graphics and custom themes.
+<a name="faq_movesd" />**问：我该如何更换 SD 卡？**    
+**答：**将新的 SD 卡格式化为 FAT32 后，从你的旧 SD 卡中复制文件到新卡即可。 如果使用的卡大小为 128GB，则建议将分配单元大小设为 65536。 大于 128GB 的内存卡由于已知的 GBA 图像和自制主题问题，不建议使用。
 
-<a name="faq_systransfer" />**Q:** *Can I system transfer with CFW?*    
-**A:** Yes, system transfers can be performed through the official System Transfer function to other consoles with CFW (inconsistencies may occur if the target console is stock). Tickets for illegitimate titles (homebrew) will not transfer, but can be made to reappear with [faketik](https://github.com/ihaveamac/faketik/releases/latest). Make sure that you do not perform a wireless transfer, as this will delete illegitimate titles. CFW will remain on both consoles. 
+<a name="faq_systransfer" />**问：我可以在破解后使用系统迁移吗？**    
+**答：**是的，你可以直接使用官方的系统迁移，将你的数据移到其他破解的主机上（如果迁移目标是没有破解的主机，则可能会出现数据不一致的情况）。 非法应用（自制程序等）的 Ticket 不会被一同迁移，但可以使用 [faketik](https://github.com/ihaveamac/faketik/releases/latest) 伪造，使其重现。 请确保你不使用无线传输迁移，这会删除非法应用。 破解也依然会继续存在于两台主机中。 
 
 <a name="faq_language" />**Q:** *How do I change the system language of a Japanese 3DS?*    
 **A:** The only way to change the system language of a Japanese 3DS to a language other than Japanese is to perform a [region change](region-changing). Note that this is very likely to break the Nintendo eShop on your device, which means you will be unable to update your games whether they are in-region or out-of-region.
