@@ -25,12 +25,12 @@ mmcblk0     179:0    0   3,8G  0 disk
 └─mmcblk0p1 179:1    0   3,7G  0 part /run/media/user/FFFF-FFFF
 ```
 1. Prenez note du point de montage de l'appareil. Dans notre exemple ci-dessus, c'était `mmcblk0`
-  + Si `RO` est défini sur 1, assurez-vous que le bouton de verrouillage ne soit pas glissé vers le bas
+  + Si `RO` vaut 1, assurez-vous que le bouton de verrouillage ne soit pas glissé vers le bas
 1. Appuyez sur CTRL + C pour quitter le menu
-1. Type in the following for your SD card:
-    - 2GB or lower: `sudo mkfs.fat /dev/(device mount point from above) -s 64 -F 16` 
-	  - This creates a single FAT16 partition with 32 KB cluster size on the SD card
-    - 4GB - 128GB: `sudo mkfs.fat /dev/(device mount point from above) -s 64 -F 32` 
-	  - This creates a single FAT32 partition with 32 KB cluster size on the SD card
-    - 128GB or higher: `sudo mkfs.fat /dev/(device mount point from above) -s 128 -F 32`
-      - This creates a single FAT32 partition with 64 KB cluster size on the SD card
+1. Tapez ce qui suit en fonction de votre carte SD :
+    - 2 Go ou moins : `sudo mkfs.fat /dev/(point de montage de l'appareil noté précédemment) -s 64 -F 16` 
+	  - Ceci crée une seule partition FAT16 avec une taille de cluster de 32 Ko sur la carte SD
+    - De 4 à 128 Go : `sudo mkfs.fat /dev/(point de montage de l'appareil noté précédemment) -s 64 -F 32` 
+	  - Ceci crée une seule partition FAT32 avec une taille de cluster de 32 Ko sur la carte SD
+    - 128 Go ou plus : `sudo mkfs.fat /dev/(point de montage de l'appareil noté précédemment) -s 128 -F 32`
+      - Ceci crée une seule partition FAT32 avec une taille de cluster de 64 Ko sur la carte SD
