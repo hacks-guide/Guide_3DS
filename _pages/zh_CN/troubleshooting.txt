@@ -232,33 +232,33 @@ If you hear a "popping sound", potentially accompanied with the backlight turnin
 
 ### 主机开机黑屏，蓝灯常亮
 
-The steps below can be attempted in any order, but are listed from least to most time-consuming.
+你可以把下面所列出的方法都试试，此处将方法从最省时到最耗时的顺序排列。
 
-1. Power off your device, eject the game cartridge if inserted, power on your device, then wait up to ten minutes. If your device boots within ten minutes, the issue has been fixed and is unlikely to reoccur
-1. Rename the `Nintendo 3DS` folder on your SD card to `Nintendo 3DS_BACKUP`, then attempt to boot. If your device successfully boots, there is some issue within your `Nintendo 3DS` folder. Try clearing home menu extdata:
-	+ Navigate to `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
-	+ Delete the extdata file corresponding to your region: 
+1. 将主机强制关机，拔出游戏卡带（若有），然后再次打开主机等待十分钟。 如果你的主机在十分钟内成功开机，则这个问题就自行修复了，且不太会再次发生
+1. 将 SD 卡上的 `Nintendo 3DS` 文件夹重命名为 `Nintendo 3DS_BACKUP`，然后尝试启动主机。 如果成功开机了，则 `Nintendo 3DS` 文件夹有问题。 尝试清理主菜单的 extdata：
+	+ 进入到 `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
+	+ 根据你的系统区域删除对应的文件夹： 
 		+ **欧版**: `00000098`
 		+ **日版**: `000000082`
 		+ **美版**: `000008f`
 		+ **中国版（神游版）**: `000000A1`
 		+ **韩版**: `000000A9`
 		+ **台湾版**: `000000B1`
-1. Ensure that your device does not have ARM11 exception handlers disabled:
+1. 请确保你没有将 Luma 设置中的 “ARM11 exception handlers disabled” 选项打开：
 	+ 将主机关机
-	+ Hold (Select)
-	+ Power on your device, while still holding (Select)
-	+ If the "Disable ARM11 exception handlers" box is checked, uncheck it
-	+ If your device now boots to the "An exception occured" screen, follow [My device boots to an error screen](troubleshooting#my-device-boots-to-an-error-screen)
-1. Try booting into recovery mode and updating your system:
+	+ 按住 “Select” 键
+	+ 在按住 “Select” 键的同时按下电源键开机
+	+ 如果 “ARM11 exception handlers disabled” 已被勾选，则请取消勾选它
+	+ 如果现在开机会出现 “An exception occured” 的报错，请按照 [主机开机报错](troubleshooting#my-device-boots-to-an-error-screen)进行操作
+1. 尝试启动到恢复模式并升级系统：
 	+ 将主机关机
-	+ Hold (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A)
-	+ Power on your device
-	+ If you were successful, the device will boot to an "update your system" screen
-1. Follow the [CTRTransfer](ctrtransfer) guide
-1. For further support, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
+	+ 按住 “L” + “R” + “↑” + "A" 四个键
+	+ 将主机开机
+	+ 如果成功，主机将自动进入“系统更新”界面
+1. 尝试做 [CTRTransfer](trtransfer) 
+1. 如需援助，请加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp)并使用英文求助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup) 寻求帮助，群号为 942052497。
 
-### My device boots to an error screen
+### 主机开机报错
 
 #### "An error has occurred: Failed to apply 1 FIRM patch(es)" or "An exception has occurred -- Current process: pm"
 
@@ -268,9 +268,9 @@ Your Luma3DS version is outdated. Download the latest release of [Luma3DS](https
 
 ARM11 exception handlers are disabled, or custom firmware is not installed. Try enabling ARM11 exception handlers:
 	+ 将主机关机
-	+ Hold (Select)
-	+ Power on your device, while still holding (Select)
-	+ If the "Disable ARM11 exception handlers" box is checked, uncheck it
+	+ 按住 “Select” 键
+	+ 在按住 “Select” 键的同时按下电源键开机
+	+ 如果 “ARM11 exception handlers disabled” 已被勾选，则请取消勾选它
 
 #### Some other error
 
