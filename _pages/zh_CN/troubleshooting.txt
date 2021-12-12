@@ -128,25 +128,25 @@ title: "故障排查"
 
 ### DSiWare 数据管理里面显示了一个问号图标的程序
 
-你放的 `F00D43D5.bin` 文件可能有问题（损坏或被用于错误的 3DS）。 Re-create your `F00D43D5.bin`file with the [BannerBomb3 tool](https://3ds.nhnarwhal.com/3dstools/bannerbomb3.php), ensuring that you use the `movable.sed` file for your console.
+你放的 `F00D43D5.bin` 文件可能有问题（损坏或被用于错误的 3DS）。 使用 [BannerBomb3 Tool](https://3ds.nhnarwhal.com/3dstools/bannerbomb3.php) 重新创建 `F00D43D5.bin`文件，且确保你使用的 `movable.sed` 文件是你这台主机的。
 
-### DSiWare Management menu crashes without purple screen
+### DSiWare 数据管理菜单没有闪烁紫屏就崩溃了
 
-确保 `F00D43D5.bin` 是 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 里面的唯一文件。 If it is, then re-create it with the [BannerBomb3 tool](https://3ds.nhnarwhal.com/3dstools/bannerbomb3.php). 如果还是不行，则可能是因为自制固件在此主机上被卸载过一次，从而导致此方法失效。 如果是这样，请加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp)以寻求帮助。
+确保 `F00D43D5.bin` 是 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 里面的唯一文件。 如果确定没问题的话，尝试重新使用 [BannerBomb3 tool](https://3ds.nhnarwhal.com/3dstools/bannerbomb3.php) 重新创建文件。 如果还是不行，则可能是因为自制固件在此主机上被卸载过一次，从而导致此方法失效。 如果是这样，请加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp)以寻求帮助。
 
 ---
 
-## Installing boot9strap (Fredtool)
+## 安装 boot9strap（通过 Fredtool）
 
-### Error on Fredtool Injector page
+### Fredtool 注入页报错
 
-Ensure that your `movable.sed` and DSiWare backup come from the same console. A mismatch will result in an error.
+请确认 `movable.sed` 和 DSiWare 备份是从同一台主机导出的。 如果不匹配就会报错。
 
-### "Haxxxxxxxxx!" does not appear
+### 没有出现 “Haxxxxxxxxx!”
 
-There is an issue with your `42383821.bin` file (it is incorrect, missing, misplaced, or corrupted). Re-create your files with the [Fredtool](https://3ds.nhnarwhal.com/3dstools/fredtool.php) website and ensure that you place the `42383821.bin` file from `output.zip` -> `hax` in `Nintendo 3DS` -> `<ID0>` `<ID1>` -> `Nintendo DSiWare`.
+你放的 `42383821.bin` 文件有问题（丢失、放错位置或者损坏）。 使用 [Fredtool](https://3ds.nhnarwhal.com/3dstools/fredtool.php) 重新创建文件，确保 `42383821.bin` 是从 `output.zip` -> `hax` 取出来的，且放在了 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 中。
 
-### DS Connection Settings launches normally
+### DS 连接设置正常启动了
 
 `Haxxxxxxxxx!` was not copied from your SD card to your system memory.
 
