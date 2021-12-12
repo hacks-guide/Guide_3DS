@@ -221,14 +221,14 @@ title: "故障排查"
 
 ## 破解主机上与引导相关的问题
 
-The steps detailed here generally assume that your device has a modern custom firmware setup (boot9strap + Luma3DS 8.0 or greater). 如果你的主机还在用旧版的自制固件（例如基于 arm9loaderhax 或 menuhax 的东西），则你应该在继续操作前先升级自制固件。
+此处列出的操作方法将假设你的主机安装了最新的自制固件（boot9strap + Luma3DS 8.0 或更高版本）。 如果你的主机还在用旧版的自制固件（例如基于 arm9loaderhax 或 menuhax 的东西），则你应该在继续操作前先升级自制固件。
 {: .notice--info}
 
 ### 主机开机只闪一下蓝灯
 
 你放的 `boot.firm` 文件有问题（丢失、放错位置或者损坏）。 下载最新版本的 (https://github.com/LumaTeam/Luma3DS/releases/latest) 并将 `boot.firm` 放在你 SD 卡的根目录中，如有存在相同文件请替换。 请不要用 WinRAR 解压 ZIP 文件，我们目前已知这会导致与 3DS 有关的文件出错。
 
-If you hear a "popping sound", potentially accompanied with the backlight turning on for a split second, there is a hardware issue with your device (such as a disconnected backlight cable). 你的主机或许能在开盖特定角度的情况下开机。
+如果你在开机的时候听到了“啪”的一声，然后蓝灯熄灭，则代表你的主机可能有硬件上的问题了。（如：背光排线断开） 你的主机或许能在开盖特定角度的情况下开机。
 
 ### 主机开机黑屏，蓝灯常亮
 
@@ -260,30 +260,30 @@ If you hear a "popping sound", potentially accompanied with the backlight turnin
 
 ### 主机开机报错
 
-#### "An error has occurred: Failed to apply 1 FIRM patch(es)" or "An exception has occurred -- Current process: pm"
+“An error has occurred: Failed to apply 1 FIRM patch(es)” 或 “An exception has occurred -- Current process: pm”
 
-Your Luma3DS version is outdated. Download the latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) and place `boot.firm` on the root of your SD card, replacing any existing file. 请不要用 WinRAR 解压 ZIP 文件，我们目前已知这会导致与 3DS 有关的文件出错。
+你主机的 Luma3DS 版本已过时。 下载最新版本的 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) 并将 `boot.firm` 放在你 SD 卡的根目录中，如有存在相同文件请替换。 请不要用 WinRAR 解压 ZIP 文件，我们目前已知这会导致与 3DS 有关的文件出错。
 
-#### "An error has occurred. Hold down the POWER button to turn off the power..."
+#### “An error has occurred. Hold down the POWER button to turn off the power...”
 
-ARM11 exception handlers are disabled, or custom firmware is not installed. Try enabling ARM11 exception handlers:
+ARM11 异常处理器已被禁用，或主机未安装自制固件。 尝试启用 ARM11 异常处理器：
 	+ 将主机关机
 	+ 按住 “Select” 键
 	+ 在按住 “Select” 键的同时按下电源键开机
 	+ 如果 “ARM11 exception handlers disabled” 已被勾选，则请取消勾选它
 
-#### Some other error
+#### 其他错误
 
-Please take a photo of the error and join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+请对报错拍照，然后加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp)并说英文以获取援助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497。
 
-### Blue "Bootrom Error" screen
+### “Bootrom Error” 蓝屏
 
-Your device is likely hard-bricked. You will need to buy an ntrboot flashcart to reinstall boot9strap in order to attempt to fix your device. This may also indicate a hardware issue which cannot be fixed. In any case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
-  + It is also possible that someone has set a boot-time splash screen that just looks like a brick. Try leaving your device powered on, waiting on the blue screen, for five minutes.
+你的主机可能由于硬件问题变砖了。 你可能需要买一张支持 ntrboot 的烧录卡来重新安装 boot9strap 以尝试修复主机。 这也可能是无法修复的硬件问题。 无论如何，请先加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp) 并说英文求助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497。
+  + 还有可能有人设了一个看上去就像变砖了的开机画面。 尝试将主机开机，在蓝屏上等 5 分钟。
 
 ---
 
-## Functionality-related issues on modded devices
+## 破解主机的功能相关问题
 
 ### DSi / DS functionality is broken, or has been replaced with Flipnote Studio
 
