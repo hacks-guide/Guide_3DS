@@ -195,38 +195,38 @@ title: "故障排查"
 1. 如果仍然提示错误，请进行 [CTRTransfer](ctrtransfer)，然后再尝试一次更新
 1. 如需援助，请加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp)并说英文求助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497。
 
-### Unable to enter Rosalina due to broken button(s)
+### 主机中对应打开 Rosalina 菜单组合键的按钮坏了，无法打开菜单
 
-下载这个[备用 config.bin](https://cdn.discordapp.com/attachments/196635695958196224/733384123003175074/config.bin)，然后将其放在 SD 卡的 `/luma/` 文件夹中。 This will change the Rosalina key combination to (Y) + (B).
+下载这个[备用 config.bin](https://cdn.discordapp.com/attachments/196635695958196224/733384123003175074/config.bin)，然后将其放在 SD 卡的 `/luma/` 文件夹中。 这样会把 Rosalina 菜单组合键改成 “Y” + “B”。
 
-### "An exception occurred" after trying to launch Homebrew Launcher via Download Play
+### 尝试通过下载通信（Download Play）启动 Homebrew Launcher 时出现了 “An exception occurred” 报错
 
-There is an issue with your `boot.3dsx` file (it is missing, misplaced, or corrupted). Download the latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest) and place `boot.3dsx` on the root of your SD card, replacing any existing file. Make sure you are extracting the ZIP file with any tool other than WinRAR, as it is known to cause issues with 3DS-related files.
+你放的 `boot.3dsx` 文件有问题（丢失、放错位置或者损坏）。 下载最新版本的 [Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest) 并将 `boot.3dsx` 放在你 SD 卡的根目录中，如有存在相同文件请替换。 请不要用 WinRAR 解压 ZIP 文件，我们目前已知这会导致与 3DS 有关的文件出错。
 
-### "Scripts directory not found" in GodMode9
+### GodMode9 提示 “Scripts directory not found”
 
-You did not copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card. Download the latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) and place the `gm9` folder on the root of your SD card, merging it with the existing one.
+你没有把 GodMode9 `.zip` 中的整个 `gm9` 文件夹复制到 SD 卡的根目录下。 下载最新版本的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) 并将 `gm9` 文件夹解压至你 SD 卡的根目录中，如有存在相同文件请替换。
 
-### `essentials.exefs` missing from `/gm9/out/`
+### `/gm9/out/` 中缺少 `essentials.exefs` 文件
 
-Your device had custom firmware in the past, so you were not automatically prompted to make a backup. Make a backup manually:
+你的主机曾经安装过自制固件，所以工具没有自动提示进行备份。 手动备份：
 
 1. 将 SD 卡重新插入你的主机
 1. 按住 “START” 键，然后将主机开机。 这会启动 GodMode9
 1. 进入到 `[S:] SYSNAND VIRTUAL`
-1. Select `essentials.exefs`, then `Copy to 0:/gm9/out/`
-1. You should now have `essentials.exefs` in `/gm9/out/`
+1. 选择 `essentials.exefs`，然后选择 `Copy to 0:/gm9/out/`
+1. 现在 `/gm9/out/` 文件夹里应该有 `essentials.exefs` 文件了
 
 ---
 
-## Boot-related issues on modded devices
+## 破解主机上与引导相关的问题
 
 The steps detailed here generally assume that your device has a modern custom firmware setup (boot9strap + Luma3DS 8.0 or greater). If your console is running an older homebrew setup (for example, something based on arm9loaderhax or menuhax), you should update your setup before trying these instructions.
 {: .notice--info}
 
 ### My device gets stuck on a black screen, and the blue light turns off
 
-There is an issue with your `boot.firm` file (it is missing, misplaced, or corrupted). Download the [latest release of Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) and place `boot.firm` on the root of your SD card, replacing any existing file. Make sure you are extracting the ZIP file with any tool other than WinRAR, as it is known to cause issues with 3DS-related files.
+There is an issue with your `boot.firm` file (it is missing, misplaced, or corrupted). Download the [latest release of Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) and place `boot.firm` on the root of your SD card, replacing any existing file. 请不要用 WinRAR 解压 ZIP 文件，我们目前已知这会导致与 3DS 有关的文件出错。
 
 If you hear a "popping sound", potentially accompanied with the backlight turning on for a split second, there is a hardware issue with your device (such as a disconnected backlight cable). You may be able to get your device to boot by holding it at certain angles.
 
@@ -262,7 +262,7 @@ The steps below can be attempted in any order, but are listed from least to most
 
 #### "An error has occurred: Failed to apply 1 FIRM patch(es)" or "An exception has occurred -- Current process: pm"
 
-Your Luma3DS version is outdated. Download the latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) and place `boot.firm` on the root of your SD card, replacing any existing file. Make sure you are extracting the ZIP file with any tool other than WinRAR, as it is known to cause issues with 3DS-related files.
+Your Luma3DS version is outdated. Download the latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) and place `boot.firm` on the root of your SD card, replacing any existing file. 请不要用 WinRAR 解压 ZIP 文件，我们目前已知这会导致与 3DS 有关的文件出错。
 
 #### "An error has occurred. Hold down the POWER button to turn off the power..."
 
