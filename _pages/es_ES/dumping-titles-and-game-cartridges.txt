@@ -4,16 +4,16 @@ title: "Volcar Títulos y Cartuchos de Juegos"
 
 {% include toc title="Tabla de contenidos" %}
 
-Para ayuda (en inglés) con GodMode9, así como ayuda con la creación de scripts y obtener actualizaciones e información, entra al [Discord de GodMode9](https://discord.gg/BRcbvtFxX4).
+Para ayuda (en inglés) con GodMode9, así como ayuda con la creación de scripts y obtener actualizaciones e información, únete al [Discord de Soporte de GodMode9](https://discord.gg/BRcbvtFxX4).
 {: .notice--primary}
 
 ### Lectura requerida
 
-Aside from creating and restoring NAND backups, GodMode9 has the functionality to dump installed titles to an installable `.cia` file, to dump game cartridge data to a `.3ds` ROM file, and to directly install a game cartridge to the system.
+Además de crear y restaurar copias de seguridad de la NAND, GodMode9 tiene la funcionalidad de extraer los juegos instalados en la consola a un archivo de instalación `.cia`, volcar el juego de un cartucho a un archivo `.3ds`, y también directamente instalar el juego de un cartucho en la consola.
 
 ## Actualizar GodMode9
 
-These instructions are written for use with GodMode9 v2.0.0 or later. If you have an older version of GodMode9, follow these instructions to update it.
+Estas instrucciones están escritas para ser usadas con GodMode9 v2.0.0 o superior. Si tienes una versión anterior de GodMode9, sigue estas instrucciones para actualizarlo.
 {: .notice--info}
 
 ### Qué necesitas
@@ -28,43 +28,43 @@ These instructions are written for use with GodMode9 v2.0.0 or later. If you hav
 1. Copia la carpeta `gm9`contenida en el `.zip`de GodMode9 al directorio raíz de tu tarjeta SD
 1. Vuelve a insertar tu tarjeta SD en tu consola
 
-## Dumping a Game Cartridge
+## Volcar un cartucho de juego
 
 {% capture notice %}
-Insert the game cartridge you intend to dump into your device
-  + 3DS game cartridges will be dumped to a `.3ds` format
-  + NDS game cartridges will be dumped to a `.nds` format
+Inserta en la consola el cartucho de juego que deseas extraer
+  + Los cartuchos de 3DS serán extraídos en formato `.3ds`
+  + Los cartuchos de DS serán extraídos en formato `.nds`
 {% endcapture %}
 
 <div class="notice--info">{{ notice | markdownify }}</div>
 
 1. Presiona y mantén el botón (Start), y mientras lo mantienes presionado, enciende tu consola. Esto abrirá GodMode9
-1. Navigate to `[C:] GAMECART`
-1. Follow the steps applicable to your game cartridge:
-    + **3DS Game Cartridge:** Press (A) on `[TitleID].trim.3ds` to select it
-    + **NDS Game Cartridge:** Press (A) on `[TitleID].nds` to select it
-        - Trimmed dumps are not recommended for NDS games in general, as they can cause various playback issues
+1. Ve a `[C:] GAMECART`
+1. Sigue los pasos según tu tipo de cartucho:
+    + **Cartucho de juego de 3DS:** Presiona (A) sobre `[TitleID].trim.3ds` para seleccionarlo
+    +**Cartucho de juego NDS** Presiona (A) sobre `[TitleID].nds` para seleccionarlo
+        - Los volcados con recorte (trimmed) no se recomiendan para los juegos de DS en general, dado que causan problemas varios al utilizarlos luego
 1. Selecciona "Copy to 0:/gm9/out"
-1. Your non-installable `.3ds` or `.nds` formatted file will be outputted to the `/gm9/out/` folder on your SD card
+1. Tu archivo `.3ds` o `.nds` *no instalable* será guardado en la carpeta `/gm9/out/` de tu tarjeta SD
 
-## Installing a Game Cartridge Directly to the System
+## Instalando un cartucho de juego directamente a la consola
 
-This will only work for 3DS games; it is not possible to install an NDS game cartridge to the system as a title.
+Esto solo funciona para juegos de 3DS; no es posible instalar un cartucho de DS como software de 3DS.
 {: .notice--info}
 
 1. Presiona y mantén el botón (Start), y mientras lo mantienes presionado, enciende tu consola. Esto abrirá GodMode9
-1. Navigate to `[C:] GAMECART`
-1. Press (A) on `[TitleID].trim.3ds` to select it, then select "NCSD image options...", then select "Install game image"
+1. Ve a `[C:] GAMECART`
+1. Presiona el botón (A) sobre `[TitleID].trim.3ds` para seleccionarlo, luego selecciona `NCSD image options...`, y luego `Install game image`
 1. Presiona (A) para desbloquear la escritura de SysNAND (lvl1) y después haz la combinación de teclas mostrada
-1. Once the process is complete, your game will show up in the HOME Menu as an installed title.
+1. Una vez el proceso haya sido completado, tu juego aparecerá en el Menú HOME como un ícono.
 
-## Dumping a 3DS Game Cartridge to .CIA
+## Volcando un Cartucho de juego de 3DS a un Archivo .CIA
 
 This should only be used if [Installing a Game Cartridge Directly to the System](#installing-a-game-cartridge-directly-to-the-system) does not work.
 {: .notice--info}
 
 1. Presiona y mantén el botón (Start), y mientras lo mantienes presionado, enciende tu consola. Esto abrirá GodMode9
-1. Navigate to `[C:] GAMECART`
+1. Ve a `[C:] GAMECART`
 1. Press (A) on `[TitleID].trim.3ds` to select it, then select "NCSD image options...", then select "Build CIA from file"
 1. Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
