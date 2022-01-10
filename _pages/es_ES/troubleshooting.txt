@@ -128,23 +128,23 @@ Falta el archivo `F00D43D5.bin` en la carpeta `Nintendo 3DS` -> `<ID0>` `<ID1>` 
 
 ### Gestión de DSiWare muestra un signo de interrogación
 
-Puede haber un problema con el archivo `F00D43D5.bin` (puede estar corrupto o preparado para otra consola 3DS). Re-create your `F00D43D5.bin`file with the [BannerBomb3 tool](https://3ds.nhnarwhal.com/3dstools/bannerbomb3.php), ensuring that you use the `movable.sed` file for your console.
+Puede haber un problema con el archivo `F00D43D5.bin` (puede estar corrupto o preparado para otra consola 3DS). Vuelve a crear el archivo `F00D43D5.bin` con [BannerBomb3](https://3ds.nhnarwhal.com/3dstools/bannerbomb3.php), asegurándote de usar el archivo `movable.sed` correspondiente a tu consola.
 
-### DSiWare Management menu crashes without purple screen
+### El menú de Gestión de DSiWare crashea sin mostrar la pantalla morada
 
-Asegúrate de que el archivo `F00D43D5.bin` es el único archivo presente en `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`. If it is, then re-create it with the [BannerBomb3 tool](https://3ds.nhnarwhal.com/3dstools/bannerbomb3.php). Si sigue fallando, entonces es posible que se haya instalado y desinstalado Custom Firmware en la consola, de una manera que no permite impide ejecutar este método. En este caso, entra al [Discord de Nintendo Homebrew](https://discord.gg/MWxPgEp) para obtener ayuda.
+Asegúrate de que el archivo `F00D43D5.bin` es el único archivo presente en `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`. Si lo es, entonces vuelve a crear el archivo con [BannerBomb3](https://3ds.nhnarwhal.com/3dstools/bannerbomb3.php). Si sigue fallando, entonces es posible que se haya instalado y desinstalado Custom Firmware en la consola, de una manera que no permite impide ejecutar este método. En este caso, entra al [Discord de Nintendo Homebrew](https://discord.gg/MWxPgEp) para obtener ayuda.
 
 ---
 
-## Installing boot9strap (Fredtool)
+## Instalar boot9strap (Fredtool)
 
-### Error on Fredtool Injector page
+### Error en la página de Fredtool Injector
 
-Ensure that your `movable.sed` and DSiWare backup come from the same console. A mismatch will result in an error.
+Asegúrate de que tu archivo `movable.sed` y la copia de seguridad de DSiWare provienen de la misma consola. El error aparece cuando los archivos no coinciden.
 
-### "Haxxxxxxxxx!" does not appear
+### "Haxxxxxxxxx!" no aparece en la pantalla
 
-There is an issue with your `42383821.bin` file (it is incorrect, missing, misplaced, or corrupted). Re-create your files with the [Fredtool](https://3ds.nhnarwhal.com/3dstools/fredtool.php) website and ensure that you place the `42383821.bin` file from `output.zip` -> `hax` in `Nintendo 3DS` -> `<ID0>` `<ID1>` -> `Nintendo DSiWare`.
+Hay un problema con el archivo `42383821.bin` (es incorrecto, no está presente, está mal colocado o está corrupto). Re-create your files with the [Fredtool](https://3ds.nhnarwhal.com/3dstools/fredtool.php) website and ensure that you place the `42383821.bin` file from `output.zip` -> `hax` in `Nintendo 3DS` -> `<ID0>` `<ID1>` -> `Nintendo DSiWare`.
 
 ### DS Connection Settings launches normally
 
@@ -208,68 +208,68 @@ No copiaste la carpeta `gm9` del archivo `.zip` de GodMode9 a la raíz de la tar
 
 ### Falta `essentials.exefs` en `/gm9/out/`
 
-Tu consola tuvo custom firmware en el pasado, por lo que no se te pidió hacer automáticamente un respaldo de la NAND. Hazlo manualmente:
+Tu consola tuvo custom firmware en el pasado, por lo que no se te pidió hacer automáticamente un respaldo de la NAND. Haz un respaldo manualmente:
 
 1. Vuelve a insertar tu tarjeta SD en tu consola
 1. Mantén presionado el botón (Start), y enciende la consola sin soltarlo. Esto iniciará GodMode9
 1. Ve a `[S:] SYSNAND VIRTUAL`
 1. Selecciona `essentials.exefs`, luego `Copy to 0:/gm9/out/`
-1. You should now have `essentials.exefs` in `/gm9/out/`
+1. Ahora debería estar el archivo `essentials.exefs` en `/gm9/out/`
 
 ---
 
-## Boot-related issues on modded devices
+## Problemas de arranque en consolas modificadas
 
-The steps detailed here generally assume that your device has a modern custom firmware setup (boot9strap + Luma3DS 8.0 or greater). If your console is running an older homebrew setup (for example, something based on arm9loaderhax or menuhax), you should update your setup before trying these instructions.
+Los pasos detallados a continuación asumen que tu consola tiene un setup moderno de custom firmware (boot9strap + Luma3DS 8.0 o superior). Si tu consola tiene una configuración antigua (por ejemplo, algo basado en arm9loaderhax o menuhax), deberías actualizar dicha configuración antes de seguir estas instrucciones.
 {: .notice--info}
 
-### My device gets stuck on a black screen, and the blue light turns off
+### La consola se queda con pantalla en negro y la luz azul se apaga
 
-There is an issue with your `boot.firm` file (it is missing, misplaced, or corrupted). Download the [latest release of Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) and place `boot.firm` on the root of your SD card, replacing any existing file. Make sure you are extracting the ZIP file with any tool other than WinRAR, as it is known to cause issues with 3DS-related files.
+Hay un problema con el archivo `boot.firm` (falta, está mal colocado o está corrupto). Descarga la [última versión de Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) y coloca `boot.firm` en la raíz de tu tarjeta SD, reemplazando cualquier archivo existente. Make sure you are extracting the ZIP file with any tool other than WinRAR, as it is known to cause issues with 3DS-related files.
 
-If you hear a "popping sound", potentially accompanied with the backlight turning on for a split second, there is a hardware issue with your device (such as a disconnected backlight cable). You may be able to get your device to boot by holding it at certain angles.
+Si escuchas un "pop", potencialmente acompañado de la luz de la pantalla parpadeando un segundo, hay un problema en el hardware de tu consola (cable de luz de fondo desconectado, por ejemplo). Es posible que tu consola encienda sosteniéndola en distintas orientaciones.
 
-### My device gets stuck on a black screen, with a static blue light
+### La consola se queda con pantalla en negro y luz azul encendida
 
-The steps below can be attempted in any order, but are listed from least to most time-consuming.
+Los pasos siguientes se pueden intentar en cualquier orden, pero están ordenados por cantidad de tiempo que toma realizar.
 
-1. Power off your device, eject the game cartridge if inserted, power on your device, then wait up to ten minutes. If your device boots within ten minutes, the issue has been fixed and is unlikely to reoccur
-1. Rename the `Nintendo 3DS` folder on your SD card to `Nintendo 3DS_BACKUP`, then attempt to boot. If your device successfully boots, there is some issue within your `Nintendo 3DS` folder. Try clearing home menu extdata:
-	+ Navigate to `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
-	+ Delete the extdata file corresponding to your region: 
+1. Apaga tu consola, saca el cartucho si tiene uno puesto, enciende la consola y luego espera hasta diez minutos. Si la consola enciende en los siguientes diez minutos, el problema fue resuelto y es muy improbable que vuelva a ocurrir
+1. Cambia el nombre de la carpeta `Nintendo 3DS` de tu tarjeta SD a `Nintendo 3DS_BACKUP`, luego intenta encenderla. Si la consola enciende sin problemas, hay un problema con tu carpeta `Nintendo 3DS`. Intenta borrar la extdata del Menú HOME:
+	+ Ve a `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
+	+ Elimina la carpeta de extdata correspondiente a tu región: 
 		+ **Región EUR**: `00000098`
 		+ **Región JPN**: `00000082`
 		+ **Región USA**: `0000008f`
 		+ **Región CHN**: `000000A1`
 		+ **Región KOR**: `000000A9`
 		+ **Región TWN**: `000000B1`
-1. Ensure that your device does not have ARM11 exception handlers disabled:
+1. Asegúrate de que tu consola no tiene activada la opción "Disable ARM11 exception handlers":
 	+ Power off your device
-	+ Hold (Select)
-	+ Power on your device, while still holding (Select)
-	+ If the "Disable ARM11 exception handlers" box is checked, uncheck it
+	+ Mantén presionado (Select)
+	+ Enciende la consola mientras mantienes presionado (Select)
+	+ Si la opción "Disable ARM11 exception handlers" está marcada, desmárcala
 	+ If your device now boots to the "An exception occured" screen, follow [My device boots to an error screen](troubleshooting#my-device-boots-to-an-error-screen)
-1. Try booting into recovery mode and updating your system:
+1. Intenta iniciar en modo de recuperación y actualizar tu consola:
 	+ Power off your device
-	+ Hold (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A)
-	+ Power on your device
-	+ If you were successful, the device will boot to an "update your system" screen
-1. Follow the [CTRTransfer](ctrtransfer) guide
-1. For further support, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
+	+ Mantén presionado (L) + (R) + (D-Pad Arriba) + (A)
+	+ Enciende tu consola
+	+ Si lo has hecho correctamente, la consola mostrará una pantalla para "actualizar tu sistema"
+1. Sigue la guía de [CTRTransfer](ctrtransfer)
+1. Para más ayuda, puedes pedir ayuda (*en inglés*) en el [Discord de Nintendo Homebrew](https://discord.gg/MWxPgEp)
 
-### My device boots to an error screen
+### Mi consola muestra pantalla de error al encender
 
-#### "An error has occurred: Failed to apply 1 FIRM patch(es)" or "An exception has occurred -- Current process: pm"
+#### "An error has occurred: Failed to apply 1 FIRM patch(es)" o "An exception has occurred -- Current process: pm"
 
-Your Luma3DS version is outdated. Download the latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) and place `boot.firm` on the root of your SD card, replacing any existing file. Make sure you are extracting the ZIP file with any tool other than WinRAR, as it is known to cause issues with 3DS-related files.
+Tu versión de Luma3DS está desactualizada. Descarga la última versión de [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) y coloca `boot.firm` en la raíz de tu tarjeta SD, reemplazando cualquier archivo existente. Make sure you are extracting the ZIP file with any tool other than WinRAR, as it is known to cause issues with 3DS-related files.
 
-#### "An error has occurred. Hold down the POWER button to turn off the power..."
+#### "Ha ocurrido un error. Hold down the POWER button to turn off the power..."
 
-ARM11 exception handlers are disabled, or custom firmware is not installed. Try enabling ARM11 exception handlers:
+Tienes activada la opción "Disable ARM11 exception handlers", o directamente no tienes custom firmware instalado. Try enabling ARM11 exception handlers:
 	+ Power off your device
-	+ Hold (Select)
-	+ Power on your device, while still holding (Select)
-	+ If the "Disable ARM11 exception handlers" box is checked, uncheck it
+	+ Mantén presionado (Select)
+	+ Enciende la consola mientras mantienes presionado (Select)
+	+ Si la opción "Disable ARM11 exception handlers" está marcada, desmárcala
 
 #### Some other error
 
