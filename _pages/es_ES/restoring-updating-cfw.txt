@@ -1,12 +1,12 @@
 ---
-title: "Restoring / Updating CFW"
+title: "Restaurar / Actualizar CFW"
 ---
 
 {% include toc title="Tabla de contenidos" %}
 
 ### Lectura requerida
 
-This page prepares consoles with an existing modern boot9strap installation for reinstallation and/or updating of custom firmware applications. It can also be used in the event of a lost or corrupted SD card.
+Esta página prepara consolas que tengan hecha una instalación moderna de boot9strap para posterior reinstalación y/o actualización de aplicaciones de custom firmware. También se puede emplear en caso de haber perdido la tarjeta SD o que se haya corrompido.
 
 ### Qué necesitas
 * La versión más reciente de [Luma3DS] (https://github.com/LumaTeam/Luma3DS/releases/latest)
@@ -17,44 +17,44 @@ This page prepares consoles with an existing modern boot9strap installation for 
 #### Sección I - Preparativos
 
 1. Inserta tu tarjeta SD en tu computadora
-1. Copy `boot.3dsx` and `boot.firm` from the Luma3DS `.zip` to the root of your SD card
+1. Copia los archivos `boot.3dsx` y `boot.firm` desde el `.zip` de Luma3DS a la raíz de tu tarjeta SD
   + La raíz de tu tarjeta SD se refiere al primer directorio de la tarjeta, donde puedes ver la carpeta Nintendo 3DS pero no estás dentro de ella
-1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card, replacing any existing file
-  + If the `luma` or `payloads` folder doesn't exist, create them
-1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card, merging it with any existing folder and replacing any existing files
+1. Copia `GodMode9.firm` desde el `.zip` de GodMode9 a la carpeta `/luma/payloads/` de tu tarjeta SD, sobreescribiendo archivo existente si lo hay
+  + Si las carpetas `luma` o `payloads` no existen, créalas apropiadamente
+1. Copia la carpeta `gm9` del archivo `GodMode9.zip` a la raíz de tu tarjeta SD, combinándola con cualquier carpeta existente y sobreescribiendo cualquier archivo existente
 1. Vuelve a insertar tu tarjeta SD en tu consola
 
-#### Section II - Configuring Luma3DS
+#### Sección II - Configurar Luma3DS
 
-1. Turn on your device
-	* You should now see a Luma3DS configuration menu
+1. Enciende tu consola
+	* Ahora deberías ver el menú de configuración de Luma3DS
 1. Utiliza el botón (A) y las flechas direccionales para activar lo siguiente:
 	* **"Show NAND or user string in System Settings"**
 1. Presiona (Start) para guardar y reiniciar
 
-#### Section III - CTRNAND Luma3DS
+#### Sección III - CTRNAND Luma3DS
 
 1. Apaga tu consola
 1. Presiona y mantén el botón (Start), y mientras lo mantienes presionado, enciende tu consola. Esto abrirá GodMode9
-  + If you do not boot into GodMode9, ensure that GodMode9.firm is in /luma/payloads/ and that payloads is correctly spelled
+  + Si GodMode9 no inicia, asegúrate de que `GodMode9.firm` esté en `/luma/payloads/` y de que payloads esté escrito correctamente
 1. Si se te pide fijar la fecha y hora RTC, presiona (A) para hacerlo, luego define la fecha y la hora, y después presiona (A) para continuar
 1. Presiona el botón (Home) para abrir el menú de acción
 1. Selecciona "Scripts..."
 1. Selecciona "GM9Megascript"
 1. Selecciona "Scripts from Plailect's Guide"
 1. Selecciona "Setup Luma3DS to CTRNAND"
-  + This will copy the updated version of Luma3DS to internal memory so that your device will be able to boot without an SD card inserted
+  + Esto copiará la versión actualizada de Luma3DS a la memoria interna de la consola para que esta pueda encender sin una tarjeta SD insertada
 1. Presiona (A) para continuar cuando se te pida
 1. Presiona (A) para desbloquear la escritura de SysNAND (lvl1) y después haz la combinación de teclas mostrada
 1. Presiona (A) para continuar
-1. Press (B), then navigate to "Exit" to exit GM9Megascript
-  + When prompted, relock write permissions
+1. Presiona (B), luego ve a "Exit" para salir de GM9Megascript
+  + Cuando se te pida, vuelve a bloquear los permisos de escritura (relock)
 1. Presiona el botón (Home) para abrir el menú de acción
 1. Selecciona "Poweroff system" para apagar tu consola
 
-The latest version of Luma3DS has been installed on your SD card and on internal memory.
+La última versión de Luma3DS ha sido instalada en tu tarjeta SD y en la memoria interna.
 {: .notice--success}
 ___
 
-If you wish to re-install or update other homebrew applications, continue to [Finalizing Setup](finalizing-setup)
+Si deseas volver a instalar o actualizar otras aplicaciones homebrew, continúa a [Finalizar Instalación](finalizing-setup)
 {: .notice--primary}
