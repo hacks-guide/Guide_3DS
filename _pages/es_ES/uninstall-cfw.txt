@@ -6,17 +6,17 @@ title: "Desinstalar CFW"
 
 ### Lectura requerida
 
-This will completely remove CFW from your device, including boot9strap and Luma3DS, for the purpose of restoring the device to stock.
+Esto removerá completamente el CFW de tu consola, incluyendo boot9strap y Luma3DS, regresando la consola a su estado original.
 
-This is never the solution to fix any issues you may be encountering with your CFW installation. A better idea would be to ask (in English) for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+Esto nunca es la solución para arreglar cualquier problema que puedas encontrar instalando CFW. Una mejor idea es pedir ayuda (en inglés) en el [Discord de Nintendo Homebrew](https://discord.gg/MWxPgEp).
 {: .notice--danger}
 
 Cualquier juego sin firmar (ilegítimo) se volverá inutilizable y debe ser eliminado manualmente antes de comenzar este proceso yendo a la sección Gestión de datos en la Configuración de la consola. Utiliza un [gestor de datos de guardado](https://github.com/FlagBrew/Checkpoint/releases/latest) para respaldar los datos de guardado de cualquier juego sin firmar (ilegítimo) que te sea de importancia conservar.
 
-If you have modified critical system software (such as editing the home menu, unbanning your console, region changing, etc.), uninstalling CFW WILL BRICK your device! Ensure that you follow all sections of this page.
+¡Si has modificado software crítico del sistema (por ejemplo, editar el menú HOME, desbanear tu consola, cambiarle la región, etc.) desinstalar CFW dejará INUTILIZABLE tu consola! Asegúrate de seguir todas las secciones de esta página.
 {: .notice--danger}
 
-These instructions will only work on devices with a Luma3DS version of 8.0 or higher. If you have an older version of Luma, you must upgrade your setup before following these instructions. Follow [this page](checking-for-cfw) to find your upgrade instructions.
+Estas instrucciones sólo funcionarán en consolas con versión de Luma3DS 8.0 o superior. Si tienes una versión anterior de Luma, debes actualizar tu configuración antes de seguir estas instrucciones. Ve a [esta página](checking-for-cfw) para encontrar instrucciones de actualización acordes a tu instalación.
 {: .notice--warning}
 
 Ten en cuenta que si tienes archivos de payloads distintos de `GodMode9.firm` en la carpeta `/luma/payloads/` en tu tarjeta SD, al mantener (Start) al inicio se desplegará un "chainloader menu" donde tendrás que usar el D-Pad y pulsar (A) para seleccionar "GodMode9", para esas instrucciones. 
@@ -25,7 +25,7 @@ Ten en cuenta que si tienes archivos de payloads distintos de `GodMode9.firm` en
 
 * La versión más reciente de [Luma3DS] (https://github.com/LumaTeam/Luma3DS/releases/latest)
 * La última versión de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* The latest release of [DSiWare Uninstaller](https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest)
+* La última versión de [DSiWare Uninstaller](https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest)
 * [safety_test.gm9]({{ base_path }}/gm9_scripts/safety_test.gm9)
 
 ### Instrucciones
@@ -36,33 +36,33 @@ Ten en cuenta que si tienes archivos de payloads distintos de `GodMode9.firm` en
 1. Copia los archivos `boot.firm` y `boot.3dsx` desde el `.zip` de Luma3DS a la raíz de tu tarjeta SD
 1. Copia el archivo `GodMode9.firm` desde el `.zip` de GodMode9 a la carpeta `/luma/payloads/` en tu tarjeta SD
 1. Copia la carpeta `gm9`contenida en el `.zip`de GodMode9 al directorio raíz de tu tarjeta SD
-1. Copy `DSiWareUninstaller.3dsx` to the `/3ds/` folder on your SD card
-1. Copy `safety_test.gm9` to the `/gm9/scripts/` folder on your SD card
+1. Copia `DSiWareUninstaller.3dsx` a la carpeta `/3ds/` de tu tarjeta SD
+1. Copia `safety_test.gm9` a la carpeta `/gm9/scripts/` de tu tarjeta SD
 1. Vuelve a insertar tu tarjeta SD en tu consola
 
-#### Section II - DS Mode Tests
-The purpose of this section is to check whether built-in DS mode applications will continue to work once CFW is uninstalled. If you skip this section, DS mode or its functions may be inaccessible until CFW is reinstalled.
+#### Sección II - Tests del Modo DS
+El propósito de esta sección es comprobar si las aplicaciones integradas del modo DS continuarán funcionando una vez que el CFW esté desinstalado. Si omites esta sección, el modo DS o sus funciones pueden ser inaccesibles hasta que se reinstale el CFW.
 
-##### DS Connection Settings Test
+##### Test de Conexiones de Nintendo DS
 1. Enciende tu consola
-1. Launch the System Settings Application
-1. Navigate to `Internet Settings` -> `Nintendo DS Connection Settings`, then click OK
-1. You should boot into the Nintendo DS Connection Setup menu
-  + If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed
+1. Entra a Configuración de la Consola
+1. Dirígete hacia "Configuración de internet", luego a "Conexiones de Nintendo DS", luego toca en "Aceptar"
+1. Deberías iniciar en el menú de ajuste de Conexiones de Nintendo DS
+  + Si tu consola muestra la versión japonesa de Flipnote Studio, una pantalla en negro, o un mensaje de error; significa que esta prueba ha fallado
 1. Apaga tu consola
 
-##### DS Download Play Test
+##### Prueba de Modo Descarga DS
 1. Enciende tu consola
 1. Ejecuta la aplicación Modo Descarga (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
 1. Selecciona "Nintendo DS"
 1. Si tu consola carga un menú que dice "Download software via DS Download Play", la prueba fue exitosa
-  + If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed
+  + Si tu consola muestra la versión japonesa de Flipnote Studio, una pantalla en negro, o un mensaje de error; significa que esta prueba ha fallado
 1. Apaga tu consola
 
-If either of these tests has failed, DS mode, DS Download Play, and/or DS Connection Settings may be inaccessible once CFW is uninstalled! You should [fix DS mode](troubleshooting#dsi--ds-functionality-is-broken-or-has-been-replaced-with-flipnote-studio) before continuing.
+Si cualquiera de estas pruebas falla, ¡el modo DS, el Modo Descarga DS y/o la Configuración de conexión de DS podrían ser inaccesibles una vez que el CFW sea desinstalado! Deberías [reparar el modo DS](troubleshooting#dsi--ds-functionality-is-broken-or-has-been-replaced-with-flipnote-studio) antes de continuar.
 {: .notice--warning}
 
-#### Section III - Safety Test
+#### Sección III - Prueba de Seguridad
 The purpose of this section is to verify that the console will boot and that critical system functions, like System Settings and the keyboard, will work once CFW is uninstalled. **If you skip this section, you may BRICK your device!**
 
 1. Presiona y mantén el botón (Start), y mientras lo mantienes presionado, enciende tu consola. Esto abrirá GodMode9
@@ -75,7 +75,7 @@ The purpose of this section is to verify that the console will boot and that cri
 1. Read the text on-screen and press (A) to continue
 1. You should boot into the regular 3DS Home Menu (any custom theme is irrelevant). If you do, continue these instructions
   + If you do not boot into the regular 3DS home menu (black screen, error screen, etc.), uninstalling CFW **WILL BRICK YOUR DEVICE!** 
-1. Launch the System Settings Application
+1. Entra a Configuración de la Consola
 	+ If the console crashes at this point, the test has failed
 1. Select "Other Settings"
 1. Select "Profile"
