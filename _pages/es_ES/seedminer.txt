@@ -6,7 +6,7 @@ title: "Seedminer"
 
 ### Lectura requerida
 
-To install boot9strap on your device, we derive your device's unique encryption key. To accomplish this, we use a tool called Seedminer to calculate the data encryption key (movable.sed) for your device, which we can then use to create a custom save file or DSiWare backup to further exploit your device.
+Para instalar boot9strap en tu consola, obtenemos la clave de encriptación exclusiva de la misma. Para lograr esto, empleamos una herramienta llamada Seedminer para calcular la clave de encriptación de datos de la consola (movable.sed), la cual podemos utilizar para crear un archivo de guardado personalizado o un respaldo de software de DSiWare para permitir mayor acceso al software de la consola.
 
 Si esta llave fuese completamente aleatoria, sería imposible calcularla con el hardware de computación que existe actualmente. Afortunadamente, la primera mitad de la clave (`movable_part1.sed`) está relacionada matemáticamente con el código de amigo de tu consola, permitiéndonos romper la encriptación. Para más información sobre cómo funciona Seedminer, por favor echa un vistazo a [esta presentación](https://zoogie.github.io/web/34⅕c3).
 
@@ -33,44 +33,44 @@ Este método utiliza una tarjeta gráfica potente para realizar los cálculos ne
   + Este nombre se conoce también como el "ID0" de tu consola
 1. Enciende tu consola
 1. Ve a tu Lista de Amigos (el [Icono Naranja con una cara]({{ "/images/friend-list-icon.png" | absolute_url }}) en la fila superior de tu Menú HOME)
-  + If you receive an error and are kicked out of the menu, you either must create a new Mii or your device cannot connect to Nintendo's servers (due to a ban or connection issues)
+  + Si recibes un error y eres expulsado del menú, es posible que debas crear un nuevo Mii o que tu consola no se pueda conectar a los servidores de Nintendo (debido a un ban o problemas de conexión)
 1. Encuentra el perfil de tu Mii, luego busca donde dice "Código de amigo" en la pantalla superior
 
-#### Section II - Seedminer
+#### Sección II - Seedminer
 
 1. Entra a [Bruteforce Movable](https://seedminer.hacks.guide/) en tu computadora
   + Este sitio puede automatizar la obtención del `movable_part1.sed` (utilizando un bot que simula una consola 3DS) y la ruptura de la encriptación DSiWare de tu consola (utilizando la computadora de un voluntario para ejecutar Seedminer)
-  + If the site isn't working, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you
+  + Si el sitio no funciona, entra al [Discord de Nintendo Homebrew](https://discord.gg/MWxPgEp) (en inglés) y pide a alguien que te ayude
 1. Ingresa el código de amigo de tu consola (sin espacios ni guiones) en donde dice "Your friend code"
 1. Copia y pega el nombre de 32 caracteres donde dice "Your ID0"
   + No intentes introducir el ID0 a mano. Asegúrate de que el ID0 se introduzca correctamente copiándolo y pegándolo desde donde lo guardaste en la sección anterior
 1. Selecciona "Go"
-  + If the site immediately goes to step 4, download your `movable.sed` file and continue with the next section
+  + Si el sitio pasa automáticamente al paso 4, descarga tu archivo `movable.sed` y continúa con la siguiente sección
 1. Cuando te lo pida, utiliza el botón de "Añadir amigo" en tu consola para añadir el código de amigo del bot que simula una consola 3DS
 1. Espera a que el sitio se actualice
   + Si no lo hace, espera unos minutos antes de recargar la página una vez
-1. Once the site processes your information, the site will continue to `Step 2: Bruteforce` automatically
+1. Una vez que el sitio procese la información, continuará automáticamente a `Step 2: Bruteforce`
 1. Espera a que el resto del proceso termine
-  + This is usually fast (1-5 minutes) but in some cases, can take up to half an hour
-  + During this process, the bot you added may not show up on your 3DS. As long as the website updates, this is not an issue
+  + Esto es generalmente rápido (1-5 minutos) pero en algunos casos, puede tomar hasta media hora
+  + Durante este proceso, el bot que agregaste podría no ser mostrado en tu 3DS. Mientras el sitio se actualice solo, esto no es un problema
   + Si todavía estás esperando luego de media hora, únete al [Discord de Nintendo Homebrew](https://discord.gg/MWxPgEp) (en inglés) y pide ayuda a alguien de allí
 1. Cuando el proceso haya finalizado, descarga tu archivo `movable.sed` desde el sitio
   + Conserva este archivo ya que lo necesitarás en las próximas páginas
 
 ___
 
-#### PicHaxx + universal-otherapp (Recommended)
+#### PicHaxx + universal-otherapp (Recomendado)
 
 This method of using Seedminer for further exploitation uses your `movable.sed` file to write a custom save file for Pokémon Picross, which can then be used in conjunction with universal-otherapp to install custom firmware.
 
-This route requires the Pokémon Picross application (free on eShop), and thus requires eShop access and a 3DS with a region of USA, EUR, or JPN.
+Esta ruta requiere la aplicación Pokémon Picross (Gratis en la eShop), y por lo tanto requiere acceso a la eShop y una 3DS con una región de USA, EUR o JPN.
 
-Continue to [Installing boot9strap (PicHaxx)](installing-boot9strap-(pichaxx))
+Continúa a [Instalar Boot9strap (PicHaxx)](installing-boot9strap-(pichaxx))
 {: .notice--primary}
 
-#### Installing boot9strap (unSAFE_MODE)
+#### Instalar boot9strap (unSAFE_MODE)
 
-This method of using Seedminer for further exploitation uses your `movable.sed` file to take advantage of exploits in the SAFE_MODE firmware present in all 3DS units.
+Éste método que emplea Seedminer para mayor acceso utiliza tu archivo `movable.sed` para tomar ventaja de exploits en el firmware SAFE_MODE presente en todas las consolas 3DS.
 
 This route is only recommended if you are for some reason unable to follow the PicHaxx + universal-otherapp route.
 
