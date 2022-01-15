@@ -9,11 +9,11 @@ title: "타이틀과 게임 카드 추출"
 
 ### 중요
 
-Aside from creating and restoring NAND backups, GodMode9 has the functionality to dump installed titles to an installable `.cia` file, to dump game cartridge data to a `.3ds` ROM file, and to directly install a game cartridge to the system.
+NAND 백업의 작성 및 복구 외에, GodMode9은 3DS 내에 설치된 타이틀을 직접 설치 가능한`.cia` 파일이나, 게임 카트리지 데이터를 `.3ds` 롬 파일으로 추출을 하거나, 직접 카트리지를 SD 카드에 설치할 수 있습니다.
 
 ## GodMode9 업데이트
 
-These instructions are written for use with GodMode9 v2.0.0 or later. If you have an older version of GodMode9, follow these instructions to update it.
+이 절차는 GodMode9 V2.0.0 이상의 버전을 위해 작성되었습니다. 만약 GodMode9의 과거 버전을 갖고 있다면, 이 절차를 따라서 업데이트해 주세요.
 {: .notice--info}
 
 ### 준비물
@@ -24,7 +24,7 @@ These instructions are written for use with GodMode9 v2.0.0 or later. If you hav
 
 1. 기기를 종료해 주세요
 1. SD 카드를 컴퓨터에 삽입해 주세요
-1. SD 카드의 `/luma/payloads/`폴더에 GodMode9 `.zip`안에 압축되있는 `GodMode9.firm`을 복사해 주세요
+1. GodMode9 `.zip`안에 압축되있는 `GodMode9.firm` 파일을 SD 카드의 `/luma/payloads/`폴더에 복사해 주세요
 1. GodMode9 `.zip`안에 압축되있는 `gm9` 폴더를 SD 카드의 루트로 복사해 주세요
 1. SD 카드를 기기에 다시 삽입해 주세요
 
@@ -39,33 +39,33 @@ These instructions are written for use with GodMode9 v2.0.0 or later. If you hav
 <div class="notice--info">{{ notice | markdownify }}</div>
 
 1. (Start)를 길게 누르고, 이 상태에서 전원을 켜 주세요. GodMode9이 실행 될 겁니다
-1. Navigate to `[C:] GAMECART`
-1. Follow the steps applicable to your game cartridge:
-    + **3DS Game Cartridge:** Press (A) on `[TitleID].trim.3ds` to select it
-    + **NDS Game Cartridge:** Press (A) on `[TitleID].nds` to select it
-        - Trimmed dumps are not recommended for NDS games in general, as they can cause various playback issues
+1. `[C:] GAMECART`로 이동해 주세요
+1. 게임 카드에 맞게 해당 과정을 참고해 주세요:
+    + **3DS 게임 카트리지:** `[TitleID].trim.3ds`에서 (A)를 눌러서 선택해 주세요
+    + **NDS 게임 카트리지:** `[TitleID].nds`에서 (A)를 눌러서 선택해 주세요
+        - 여러 플레이 문제가 생기므로, 압축된 파일들(`.trim.nds`)은 일반적으로 NDS 게임은 추천되지 않습니다
 1. "Copy to 0:/gm9/out"를 선택해 주세요
-1. Your non-installable `.3ds` or `.nds` formatted file will be outputted to the `/gm9/out/` folder on your SD card
+1. `.3ds`나 `.nds` 형식의 파일이 SD 카드의 `/gm9/out/` 폴더에 출력됩니다
 
-## Installing a Game Cartridge Directly to the System
+## 게임 카트리지를 시스템에 직접 설치
 
-This will only work for 3DS games; it is not possible to install an NDS game cartridge to the system as a title.
+이것은 3DS 게임으로만 할 수 있습니다; 타이틀로써 NDS 게임들을 시스템에 설치하는 것은 불가능합니다.
 {: .notice--info}
 
 1. (Start)를 길게 누르고, 이 상태에서 전원을 켜 주세요. GodMode9이 실행 될 겁니다
-1. Navigate to `[C:] GAMECART`
-1. Press (A) on `[TitleID].trim.3ds` to select it, then select "NCSD image options...", then select "Install game image"
+1. `[C:] GAMECART`로 이동해 주세요
+1. `[TitleID].trim.3ds`에서 (A)를 눌러 선택하고 "NCSD image options..."를 선택하고 "Install game image"를 선택해 주세요
 1. (A)를 눌려 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요
-1. Once the process is complete, your game will show up in the HOME Menu as an installed title.
+1. 절차가 끝나면, 설치된 타이틀로써 당신의 게임이 HOME 메뉴에 나타날 것입니다
 
-## Dumping a 3DS Game Cartridge to .CIA
+## 3DS 게임 카트리지를 .CIA로 추출하기
 
-This should only be used if [Installing a Game Cartridge Directly to the System](#installing-a-game-cartridge-directly-to-the-system) does not work.
+이것은 [게임 카트리지를 시스템에 직접 설치](#게임-카트리지를-시스템에-직접-설치)가 작동이 안 될 시에만 써야 합니다.
 {: .notice--info}
 
-1. (Start)를 길게 누르고, 이 상태에서 전원을 켜 주세요. GodMode9이 실행 될 겁니다
-1. Navigate to `[C:] GAMECART`
-1. Press (A) on `[TitleID].trim.3ds` to select it, then select "NCSD image options...", then select "Build CIA from file"
+1. (Start)를 길게 누르고, 이 상태에서 전원을 켜 주세요. GodMode9이 실행될 겁니다
+1. `[C:] GAMECART`로 이동해 주세요
+1. `[TitleID].trim.3ds`에서 (A)를 눌러 선택하고 "NCSD image options..."를 선택하고 "Build CIA from file"를 선택해 주세요
 1. Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
 ## Dumping an Installed Title
