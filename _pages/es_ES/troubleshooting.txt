@@ -76,7 +76,13 @@ Puede haber un problema con el archivo `otherapp.bin`. Descarga la última versi
 
 ### "PrepareArm9ForTwl returned error c8804631!"
 
-Tendrás que seguir un método alternativo, como [BannerBomb3](bannerbomb3).
+You will need to follow an alternate method, like [Installing boot9strap (USM)](installing-boot9strap-(usm)).
+
+### Failed to mount the SD card!
+
+Back up your data and reformat your SD card as FAT32 with the recommended tool depending on your operating system ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). MiniTool and the HP formatting tool are known to cause issues with 3DS SD cards.
+
+If this is unsuccessful, try using another SD card.
 
 ---
 
@@ -102,13 +108,19 @@ Falta el archivo `SafeB9SInstaller.bin` o está fuera de lugar. Descarga la últ
 
 ### La pantalla se queda en "Doing agbhax..."
 
-Puede haber un problema con el archivo `otherapp.bin`. Vuelve a descargar la última versión de [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), renombra el archivo a `arm11code.bin` y luego colócalo en la raíz de la tarjeta SD.
+Puede haber un problema con el archivo `otherapp.bin`. Vuelve a descargar la última versión de [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) y coloca el archivo en la raíz de la tarjeta SD.
 
-Si tienes una consola de región china o taiwanesa (con una T o C en la versión, es decir, 11.14.0-##T), únete al [Discord de Nintendo Homebrew](https://discord.gg/MWxPgEp) (en inglés) para obtener ayuda.
+If you have a Taiwanese or Mainland Chinese unit (with a T or C in the version string, ie. 11.3.0-##T), join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
 
 ### "PrepareArm9ForTwl returned error c8804631!"
 
 Tendrás que emplear otro método alternativo. Únete al [Discord de Nintendo Homebrew](https://discord.gg/MWxPgEp) para obtener ayuda.
+
+### Failed to mount the SD card!
+
+Back up your data and reformat your SD card as FAT32 with the recommended tool depending on your operating system ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). MiniTool and the HP formatting tool are known to cause issues with 3DS SD cards.
+
+If this is unsuccessful, try using another SD card.
 
 ---
 
@@ -236,7 +248,7 @@ Los pasos siguientes se pueden intentar en cualquier orden, pero están ordenado
 1. Apaga tu consola, saca el cartucho si tiene uno puesto, enciende la consola y luego espera hasta diez minutos. Si la consola enciende en los siguientes diez minutos, el problema fue resuelto y es muy improbable que vuelva a ocurrir
 1. Cambia el nombre de la carpeta `Nintendo 3DS` de tu tarjeta SD a `Nintendo 3DS_BACKUP`, luego intenta encenderla. Si la consola enciende sin problemas, hay un problema con tu carpeta `Nintendo 3DS`. Intenta borrar la extdata del Menú HOME:
 	+ Ve a `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
-	+ Elimina la carpeta de extdata correspondiente a tu región: 
+	+ Delete the extdata file corresponding to your 3DS region: 
 		+ **Región EUR**: `00000098`
 		+ **Región JPN**: `00000082`
 		+ **Región USA**: `0000008f`
@@ -306,3 +318,32 @@ Tu dispositivo está ejecutando Luma3DS/AuReiNand 6.6 o inferior, probablemente 
 ### Los juegos en modo de memoria extendida no funcionan
 
 Esto puede ocurrir después de un CTRTransfer o al cambiar de región en Old 3DS / 2DS. Necesitarás formatear tu consola para solucionar este problema.
+
+---
+
+## Other troubleshooting
+
+### Clear home menu extdata
+
+1. Apaga tu consola
+1. Inserta tu tarjeta SD en tu computadora
+1. Navigate to the `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` folder on your SD card
+1. Delete the extdata file corresponding to your 3DS region:
+  + **Región EUR**: `00000098`
+  + **Región JPN**: `00000082`
+  + **Región USA**: `0000008f`
+  + **Región CHN**: `000000A1`
+  + **Región KOR**: `000000A9`
+  + **Región TWN**: `000000B1`
+1. Vuelve a insertar tu tarjeta SD en tu consola
+
+### Clear home menu theme data
+
+1. Apaga tu consola
+1. Inserta tu tarjeta SD en tu computadora
+1. Navigate to the following folder on your SD card: /Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/
+2. Delete the corresponding folder for your 3DS region:
+  + **EUR Region**: `000002ce`
+  + **JPN Region**: `000002cc`
+  + **USA Region**: `000002cd`
+1. Vuelve a insertar tu tarjeta SD en tu consola
