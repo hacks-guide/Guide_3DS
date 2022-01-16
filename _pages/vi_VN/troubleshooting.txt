@@ -76,7 +76,13 @@ There may be an issue with your `otherapp.bin` file. Download the latest release
 
 ### "PrepareArm9ForTwl returned error c8804631!"
 
-You will need to follow an alternate method, like [BannerBomb3](bannerbomb3).
+You will need to follow an alternate method, like [Installing boot9strap (USM)](installing-boot9strap-(usm)).
+
+### Failed to mount the SD card!
+
+Back up your data and reformat your SD card as FAT32 with the recommended tool depending on your operating system ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). MiniTool and the HP formatting tool are known to cause issues with 3DS SD cards.
+
+If this is unsuccessful, try using another SD card.
 
 ---
 
@@ -102,13 +108,19 @@ The file `SafeB9SInstaller.bin` is missing or misplaced. Download the latest rel
 
 ### Frozen on "Doing agbhax..."
 
-There may be an issue with your `otherapp.bin` file. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), rename it to `arm11code.bin`, and place it on the root of your SD card.
+There may be an issue with your `otherapp.bin` file. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) and place it on the root of your SD card.
 
-If you have a Taiwanese or Mainland Chinese unit (with a T or C in the version string, ie. 11.14.0-##T), join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+If you have a Taiwanese or Mainland Chinese unit (with a T or C in the version string, ie. 11.3.0-##T), join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
 
 ### "PrepareArm9ForTwl returned error c8804631!"
 
 You will need to follow an alternate method. Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+
+### Failed to mount the SD card!
+
+Back up your data and reformat your SD card as FAT32 with the recommended tool depending on your operating system ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). MiniTool and the HP formatting tool are known to cause issues with 3DS SD cards.
+
+If this is unsuccessful, try using another SD card.
 
 ---
 
@@ -236,7 +248,7 @@ The steps below can be attempted in any order, but are listed from least to most
 1. Power off your device, eject the game cartridge if inserted, power on your device, then wait up to ten minutes. If your device boots within ten minutes, the issue has been fixed and is unlikely to reoccur
 1. Rename the `Nintendo 3DS` folder on your SD card to `Nintendo 3DS_BACKUP`, then attempt to boot. If your device successfully boots, there is some issue within your `Nintendo 3DS` folder. Try clearing home menu extdata:
 	+ Navigate to `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
-	+ Delete the extdata file corresponding to your region: 
+	+ Delete the extdata file corresponding to your 3DS region: 
 		+ **EUR Region**: `00000098`
 		+ **JPN Region**: `00000082`
 		+ **USA Region**: `0000008f`
@@ -306,3 +318,32 @@ Your device is running Luma3DS/AuReiNand 6.6 or older, likely via arm9loaderhax.
 ### Extended memory mode games are broken
 
 This can occur after a CTRTransfer or region change on Old 3DS / 2DS. You will need to system format your device to fix this issue.
+
+---
+
+## Other troubleshooting
+
+### Clear home menu extdata
+
+1. Power off your device
+1. Insert your SD card into your computer
+1. Navigate to the `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` folder on your SD card
+1. Delete the extdata file corresponding to your 3DS region:
+  + **EUR Region**: `00000098`
+  + **JPN Region**: `00000082`
+  + **USA Region**: `0000008f`
+  + **CHN Region**: `000000A1`
+  + **KOR Region**: `000000A9`
+  + **TWN Region**: `000000B1`
+1. Reinsert your SD card into your device
+
+### Clear home menu theme data
+
+1. Power off your device
+1. Insert your SD card into your computer
+1. Navigate to the following folder on your SD card: /Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/
+2. Delete the corresponding folder for your 3DS region:
+  + **EUR Region**: `000002ce`
+  + **JPN Region**: `000002cc`
+  + **USA Region**: `000002cd`
+1. Reinsert your SD card into your device
