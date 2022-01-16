@@ -76,13 +76,13 @@ title: "问题排查"
 
 ### “PrepareArm9ForTwl returned error c8804631!”
 
-You will need to follow an alternate method, like [Installing boot9strap (USM)](installing-boot9strap-(usm)).
+你需要换个方法，比如[安装 boot9strap（通过 USM）](installing-boot9strap-(usm))。
 
-### Failed to mount the SD card!
+### 无法挂载 SD 卡（Failed to mount the SD card!）
 
-Back up your data and reformat your SD card as FAT32 with the recommended tool depending on your operating system ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). MiniTool and the HP formatting tool are known to cause issues with 3DS SD cards.
+备份好你 SD 卡上的文件，然后根据你的操作系统选择一个工具来重新格式化 SD 卡为 FAT32 格式：[Windows](formatting-sd-(windows))、[macOS](formatting-sd-(mac))、[Linux](formatting-sd-(linux))。 目前已知 MiniTool 和 HP 格式化工具格出来的 SD 卡给 3DS 使用会出问题。
 
-If this is unsuccessful, try using another SD card.
+如果还是不行，尝试换一张 SD 卡。
 
 ---
 
@@ -110,17 +110,17 @@ If this is unsuccessful, try using another SD card.
 
 这可能说明你放的 `otherapp.bin` 文件有问题。 重新下载最新版本的 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) 并将其放在你 SD 卡的根目录中。
 
-If you have a Taiwanese or Mainland Chinese unit (with a T or C in the version string, ie. 11.3.0-##T), join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+如果你的主机是港台版或神游版的（系统版本号后缀为 T 或 C，例如：11.3.0-##T），请加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp)使用英文寻求帮助。
 
 ### “PrepareArm9ForTwl returned error c8804631!”
 
 你需要换一种替代方法。 如需帮助，请加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp)。
 
-### Failed to mount the SD card!
+### 无法挂载 SD 卡（Failed to mount the SD card!）
 
-Back up your data and reformat your SD card as FAT32 with the recommended tool depending on your operating system ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). MiniTool and the HP formatting tool are known to cause issues with 3DS SD cards.
+备份好你 SD 卡上的文件，然后根据你的操作系统选择一个工具来重新格式化 SD 卡为 FAT32 格式：[Windows](formatting-sd-(windows))、[macOS](formatting-sd-(mac))、[Linux](formatting-sd-(linux))。 目前已知 MiniTool 和 HP 格式化工具格出来的 SD 卡给 3DS 使用会出问题。
 
-If this is unsuccessful, try using another SD card.
+如果还是不行，尝试换一张 SD 卡。
 
 ---
 
@@ -249,7 +249,7 @@ If this is unsuccessful, try using another SD card.
 1. 将主机强制关机，拔出游戏卡带（若有），然后再次打开主机等待十分钟。 如果你的主机在十分钟内成功开机，则这个问题就自行修复了，且不太会再次发生
 1. 将 SD 卡上的 `Nintendo 3DS` 文件夹重命名为 `Nintendo 3DS_BACKUP`，然后尝试启动主机。 如果成功开机了，则 `Nintendo 3DS` 文件夹有问题。 尝试清理主菜单的 extdata：
 	+ 进入到 `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
-	+ Delete the extdata file corresponding to your 3DS region: 
+	+ 根据你的 3DS 系统区域删除对应的文件夹： 
 		+ **欧版**: `00000098`
 		+ **日版**: `000000082`
 		+ **美版**: `000008f`
@@ -324,12 +324,12 @@ ARM11 异常处理器已被禁用，或主机未安装自制固件。 尝试启�
 
 ## 其他问题
 
-### Clear home menu extdata
+### 清除主菜单的外部存储
 
 1. 将主机关机
 1. 将你的 SD 卡插入到电脑
-1. Navigate to the `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` folder on your SD card
-1. Delete the extdata file corresponding to your 3DS region:
+1. 打开你 SD 卡的 `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` 文件夹
+1. 根据你的 3DS 系统区域删除对应的文件夹：
   + **欧版**: `00000098`
   + **日版**: `000000082`
   + **美版**: `000008f`
@@ -338,13 +338,13 @@ ARM11 异常处理器已被禁用，或主机未安装自制固件。 尝试启�
   + **台湾版**: `000000B1`
 1. 将SD卡重新插入你的主机
 
-### Clear home menu theme data
+### 清除主菜单的主题数据
 
 1. 将主机关机
 1. 将你的 SD 卡插入到电脑
-1. Navigate to the following folder on your SD card: /Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/
-2. Delete the corresponding folder for your 3DS region:
-  + **EUR Region**: `000002ce`
-  + **JPN Region**: `000002cc`
-  + **USA Region**: `000002cd`
+1. 按顺序依次进入你 SD 卡内的文件夹：/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/
+2. 删除对应你的 3DS 区域的文件夹：
+  + **欧版**：`000002ce`
+  + **日版**：`000002cc`
+  + **美版**：`000002cd`
 1. 将SD卡重新插入你的主机
