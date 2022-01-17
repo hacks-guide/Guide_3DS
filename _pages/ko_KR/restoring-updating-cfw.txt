@@ -6,7 +6,7 @@ title: "CFW 복구 / 업데이트"
 
 ### 중요
 
-This page prepares consoles with an existing modern boot9strap installation for reinstallation and/or updating of custom firmware applications. It can also be used in the event of a lost or corrupted SD card.
+이 문서는 boot9strap이 설치되어 있는 기기의 커스텀 펌웨어 소프트웨어 업데이트 또는 재설치를 준비하기 위한 문서입니다. 만약 SD 카드가 없어지거나 데이터가 손상 되어도 이 작업을 하면 됩니다.
 
 ### 준비물
 *최신 버전의 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
@@ -17,44 +17,44 @@ This page prepares consoles with an existing modern boot9strap installation for 
 #### 섹션 I - 준비 작업
 
 1. SD 카드를 컴퓨터에 삽입해 주세요
-1. Copy `boot.3dsx` and `boot.firm` from the Luma3DS `.zip` to the root of your SD card
+1. Luma3DS `.zip`안에 있는 `boot.3dsx`과 `boot.firm`를 SD 카드의 루트에 복사해 주세요
   + The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
-1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card, replacing any existing file
+1. GodMode9 `.zip`안에 압축되있는 `GodMode9.firm` 파일을 SD 카드의 `/luma/payloads/`폴더에 복사해 주세요. 만약 이미 파일이 존재하면 덮어씌워 주세요
   + 'luma' 또는 'payloads' 폴더가 없다면, 만들어 주세요
 1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card, merging it with any existing folder and replacing any existing files
 1. SD 카드를 기기에 다시 삽입해 주세요
 
-#### Section II - Configuring Luma3DS
+#### 섹션 II - Luma3DS 설정
 
-1. Turn on your device
-	* You should now see a Luma3DS configuration menu
+1. 기기를 시작해 주세요
+	* 기기는 Luma3DS 구성 메뉴로 부팅되었을 겁니다
 1. (A) 버튼과 십자 패드을 이용해 다음 설정을 설정해 주세요:
 	* **"Show NAND or user string in System Settings"**
 1. (Start)를 눌러 저장하고 기기를 다시 시작해 주세요
 
-#### Section III - CTRNAND Luma3DS
+#### 섹션 III - CTRNAND Luma3DS
 
 1. 기기를 종료해 주세요
-1. (Start)를 길게 누르고, 이 상태에서 전원을 켜 주세요. GodMode9이 실행 될 겁니다
-  + If you do not boot into GodMode9, ensure that GodMode9.firm is in /luma/payloads/ and that payloads is correctly spelled
+1. (Start) 를 길게 누르고, 이 상태에서 전원을 켜 주세요. GodMode9이 실행 될 겁니다
+  + 만약 GodMode9이 실행되지 않을 경우, `GodMode9.firm`이 `/luma/payloads/` 에 존재를 확인하고, `payloads`가 정확히 쓰여 있음을 확인해 주시기 바랍니다
 1. 만약 "RTC date&time seems to be wrong" 메세지가 표시되면 (A) 버튼을 눌러 하십시오, 그러고 나서 날짜와 시간을 고치고 (A) 버튼을 눌러 계속해 주세요
 1. (Home)을 눌러 작업 메뉴를 열어 주세요
-1. Select "Scripts..."
+1. "Scripts..."를 선택해 주세요
 1. "GM9Megascript"를 선택해 주세요
 1. "Scripts from Plailect's Guide"를 선택해 주세요
 1. "Setup Luma3DS to CTRNAND"를 선택해 주세요
-  + This will copy the updated version of Luma3DS to internal memory so that your device will be able to boot without an SD card inserted
-1. When prompted, press (A) to proceed
+  + 이 작업은 업데이트된 Luma3DS를 내장 메모리로 복사하며, SD 카트 없이 부팅 할수 있도록 구성됩니다
+1. 프롬프트가 뜨면, (A) 를 눌러서 진행해 주세요
 1. (A)를 눌려 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요
 1. (A)를 눌러 진행해 주세요.
-1. Press (B), then navigate to "Exit" to exit GM9Megascript
-  + When prompted, relock write permissions
+1. (B)를 눌르고, "Exit"를 확인해 GM9Megascript를 종료해 주세요
+  + 프롬프트가 뜨면, (A) 를 눌러서 진행해 주세요
 1. (Home)을 눌러 작업 메뉴를 열어 주세요
 1. "Poweroff system"을 선택해 기기의 전원을 꺼 주세요
 
-The latest version of Luma3DS has been installed on your SD card and on internal memory.
+최신 버전의 Luma3DS가 SD 카트와 내장 메모리로 설치되었습니다.
 {: .notice--success}
 ___
 
-If you wish to re-install or update other homebrew applications, continue to [Finalizing Setup](finalizing-setup)
+만약 다른 홈브류를 재설치 또는 업데이트 하고 싶다면, [마무리 단계](finalizing-setup)로 계속합니다
 {: .notice--primary}
