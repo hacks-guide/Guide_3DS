@@ -38,55 +38,55 @@ ntrboot 취약점이 기기 버전과 독립적으로 작동하는 반면에, nt
   ![]({{ "/images/screenshots/ntrboot-flashcarts.png" | absolute_url }})
   {: .notice--info}
 
-Ensure your flashcart is able to launch `.nds` files on your device before beginning. Some flashcarts may require firmware or "kernel" files to be copied to the flashcart SD card. Consult your specific flashcart's instructions for more information.
+시작하기전에 플래시카드가 `.nds` 파일을 실행 할 수 있는지 확인해 주세요. 몇몇 플래시카드는 펌웨어나 "커널"이 플래시카드의 SD 카드에 복사되어 있어야 합니다. 자세한 내용은 당신의 플래시카드의 설명서를 참조해 주시길 바랍니다.
 
-Note that specific methods may have additional compatibility information.
+특정 방법에서는 추가적인 호환성 정보가 있을 수 있습니다.
 
-The usage of this exploit, regardless of flashing method, requires access to a small magnet if the target device is of a folding style (any 3DS family system that is not the old 2DS with a sleep switch). This is because the exploit requires your device to enter sleep mode while still having access to the buttons.
+이 방법을 사용하기 위해서는 작은 자석이 필요합니다. (슬립 스위치가 있는 2DS는 예외) 왜냐하면 이 방법은 슬립 모드 상태에서 버튼을 사용해야 하기 때문입니다.
 
-To test if a magnet will work, hold it on or around the (A)(B)(X)(Y) buttons while the device is powered on to see if it triggers sleep mode. If it does, both displays will go black as long as the magnet is held in that spot.
+자석이 사용 가능한지 확인해 보려면 켜져 있는 상태로 (A)(B)(X)(Y) 버튼 근처에 자석을 대서 슬립 모드로 전환되는지 확인해 보세요. 사용 가능하다면 자석을 대고 있는 동안 화면이 검은색으로 될 것입니다.
 {: .notice--info}
 
-Note that the flashcart will not be able to be used for its standard functions while the ntrboot exploit is installed on it (except for in the case of the Acekard 2i, which remains functional *on NDS and custom firmware 3DS systems only*). This means that, for most flashcarts, it will not even display on the home menu. There are optional steps at the end of the ntrboot flashing instructions to remove it from your flashcart when you are done.
+NTRboot가 플래시 카트리지에 플래싱되어 있는 동안에는 플래시카드의 기능을 사용할 수 없다는 점을 명심하십시오. (단, NDS에서 또는 커스텀 펌웨어가 설치된 3SD 에서 Acekard 2i의 경우는 예외입니다.) 이것은 대부분의 플래시카드가 심지어 홈메뉴에서 표시되지도 않을것을 의미합니다. 작업이 끝난뒤 ntrboot를 제거할 수 있는 방법이 뒤에 제시되어 있습니다.
 
-Note that in some rare circumstances, it may be possible for the flashing process to **brick** a counterfeit flashcart and render it permanently unusable. 그러하기 떄문에 매우 적은 확율이지만 정품 닥터만 지원 됩니다. To reduce the chance of receiving a counterfeit card, it is recommended that you use a reputable site to buy your flashcart (such as [NDS Card](http://www.nds-card.com/))
+아주 드문 경우지만 설치를 시도한 플래시카드가 짝퉁일 경우 설치 과정 중 카트리지가 **벽돌**이 되고 이후 카트리지를 사용할 수 없게되는 경우가 있습니다. 그러하기 떄문에 매우 적은 확율이지만 정품 닥터만 지원 됩니다. 복재품 카드를 주문할 가능성을 줄이기 위하여, [NDS Card](http://www.nds-card.com/)같이 신뢰할 수 있는 사이트를 이용하여 구매 하시길 바랍니다.
 {: .notice--danger}
 
 ___
-### Methods
+### 방법
 
 ___
 
-#### Flashing ntrboot (3DS Single System)
+#### ntrboot 플래싱 (단일 3DS)
 
-이 수단은 순정 3DS와 이와 호환되는 플래시카트 외에는 더를 필요로 하지 않습니다. 이 방법은 플래시카드를 3DS에 삽입해 ntrboot flasher `.nds` 를 실행하는 방법입니다. 그것은 플래시카드가 3DS 버전에서 `.nds` 파일 구동을 지원해야 한다는 의미입니다. See the flashcart table above for more information.
+이 수단은 순정 3DS와 이와 호환되는 플래시카트 외에는 더를 필요로 하지 않습니다. 이 방법은 플래시카드를 3DS에 삽입해 ntrboot flasher `.nds` 를 실행하는 방법입니다. 그것은 플래시카드가 3DS 버전에서 `.nds` 파일 구동을 지원해야 한다는 의미입니다. 자세한 내용은 위에있는 플래시카드 표를 참조해 주시길 바랍니다.
 
-Continue to [Flashing ntrboot (3DS Single System)](flashing-ntrboot-(3ds-single-system))
+[ntrboot 플래싱 (단일 3DS)](flashing-ntrboot-(3ds-single-system)) 로 계속합니다
 {: .notice--primary}
 
 ___
 
-#### Flashing ntrboot (3DS Multi System)
+#### ntrboot 플래싱 (3DS 두 대)
 
-This method requires temporary access to a second 3DS family device that is already running boot9strap. 이 방법은 플래시카드가 두 3DS중에서 어떤 버전도 지원하지 않아도 됩니다.
+이 방법은 이미 boot9strap을 구동하고 있는 2번째 3DS 계열 기기를 일시적으로 사용해야 합니다. 이 방법은 플래시카드가 두 3DS중에서 어떤 버전 모두 지원하지 않아도 됩니다.
 
-Continue to [Flashing ntrboot (3DS Multi System)](flashing-ntrboot-(3ds-multi-system))
+[ntrboot 플래싱 (3DS 두 대)](flashing-ntrboot-(3ds-multi-system)) 로 계속합니다
 {: .notice--primary}
 
 ___
 
-#### Flashing ntrboot (NDS)
+#### ntrboot 플래싱 (NDS)
 
-이 방법은 DS 플래시카트를 실행할 수 있는 DS 혹은 DS Lite가 필요합니다. This method uses the flashcart to run the ntrboot flasher `.nds` file on your NDS.
+이 방법은 DS 플래시카트를 실행할 수 있는 DS 혹은 DS Lite가 필요합니다. 이 방법은 플래시카드를 NDS에 삽입해 ntrboot flasher `.nds` 를 실행하는 방법입니다.
 
-Continue to [Flashing ntrboot (NDS)](flashing-ntrboot-(nds))
+[ntrboot 플래싱 (NDS)](flashing-ntrboot-(nds)) 로 계속합니다
 {: .notice--primary}
 
 ___
 
-#### Flashing ntrboot (DSi)
+#### ntrboot 플래싱 (DSi)
 
-이 수단은 닌텐도 DSi와 이와 호환되는 플래시카트가 필요합니다. This method uses the flashcart to run the ntrboot flasher `.nds` file on your DSi. 이 말은, 플래시 카트리지가 닌텐도 DSi 버전에서 `.nds` 파일 구동을 지원해야 한다는 의미입니다. See the flashcart table above for more information.
+이 수단은 닌텐도 DSi와 이와 호환되는 플래시카트가 필요합니다. 이 방법은 플래시카드를 DSi에 삽입해 ntrboot flasher `.nds` 를 실행하는 방법입니다. 이 말은, 플래시 카트리지가 닌텐도 DSi 버전에서 `.nds` 파일 구동을 지원해야 한다는 의미입니다. 자세한 내용은 위에있는 플래시카드 표를 참조해 주시길 바랍니다.
 
-Continue to [Flashing ntrboot (DSi)](flashing-ntrboot-(dsi))
+[ntrboot 플래싱 (DSi)](flashing-ntrboot-(dsi)) 로 계속합니다
 {: .notice--primary}
