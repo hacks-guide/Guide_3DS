@@ -6,9 +6,9 @@ title: "Telepítés véglegesítése"
 
 ### Fontos tudnivalók
 
-A `boot.firm` nevezetű fájl az, amit maga a boot9strap elindít, amint betöltődik a NAND-ból. In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) to patch the device, allowing it to run homebrew software.
+A `boot.firm` nevezetű fájl az, amit maga a boot9strap elindít, amint betöltődik a NAND-ból. Ebben az esetben a [LumaTeam](https://github.com/LumaTeam/) által készített Luma3DS-t használjuk az eszköz patcheléséhez, hogy tudjon homebrew programokat futtatni.
 
-On this page, we will make critical system file backups and install the following homebrew programs:
+Ezen az oldalon kritikus rendszer mentéseket fogunk csinálni és a következő homebrew alkalmazásokat fogjuk telepíteni:
 
 + **FBI** *(CIA formátumú alkalmazásokat telepít)*
 + **Anemone3DS** *(egyedi témákat telepít)*
@@ -17,29 +17,29 @@ On this page, we will make critical system file backups and install the followin
 + **GodMode9** *(sokféle dologra használható eszköz, például NAND és kártya műveletekre)*
 +  **Homebrew Launcher Loader** *(elindítja a Homebrew Launchert)*
 +  **DSP1** *(lehetővé teszi a homebrew applikációk számára a hangot)*
-+  **ctr-no-timeoffset** *(sets the Home Menu time to match the internal Real-Time Clock)*
++ **ctr-no-timeoffset** *(beállítja, hogy a kezdőlap órája megegyezzen a rendszer valós idejű órájával)*
 
-It is not recommended to skip downloading any of these applications, as many of them will be used later on this page.
+Nem ajánlott ezeket az alkalmazásokat nem letölteni, mert mindegyik még használva lesz ezen az oldalon.
 {: .notice--warning}
 
-If your **New 3DS** was on firmware 2.1.0 before following this guide, you should [restore your NAND backup](godmode9-usage#restoring-a-nand-backup) before continuing.
+Ha az **új 3DS** konzolod a 2.1.0 firmware-en volt, a [NAND-ról készült bizonsági másolatot állítsd vissza](godmode9-usage#nand-ról-készült-bizonsági-másolat-visszaállítása) mielőtt tovább mennél.
 {: .notice--warning}
 
-If your previous CFW setup was EmuNAND-based and you wish to move the contents of your EmuNAND/RedNAND to SysNAND, follow [Move EmuNAND](move-emunand) before following this page. If you don't know what an EmuNAND is, this doesn't apply to you.
+Ha az előző egyedi firmware rendszered EmuNAND alapú volt és szeretnéd az EmuNAND/RedNAND tartalmait a SysNAND-re másolni, kövest az [EmuNAND költöztetése](move-emunand) útmutatót ez az oldal előtt. Ha nem tudod mi az az EmuNAND, ez nem vonatkozik rád.
 {: .notice--info}
 
 ### Amire szükséged lesz
 
-* The latest release of [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) (get the `.cia` file)
-* The v3.7.4 release of [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/tag/v3.7.4) (get the `.cia` file)
-* The latest release of [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest) (get the `.cia` file)
-* The latest release of [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest) (get the `.cia` file)
+* Az [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) legújabb kiadása (a `.cia` fájl kell)
+* A [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/tag/v3.7.4) 3.7.4 verziója (a `.cia` fájl kell)
+* A [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest) legújabb kiadása (a `.cia` fájl kell)
+* Az [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest) legújabb kiadása (a `.cia` fájl kell)
 
-* The latest release of [ctr-no-timeoffset](https://github.com/ihaveamac/ctr-no-timeoffset/releases/latest) (get the `.3dsx` file)
-* The latest release of [DSP1](https://github.com/zoogie/DSP1/releases/latest) (get the `.3dsx` file)
+* Az [ctr-no-timeoffset](https://github.com/ihaveamac/ctr-no-timeoffset/releases/latest) legújabb kiadása (a `.3dsx` fájl kell)
+* A [DSP1](https://github.com/zoogie/DSP1/releases/latest) legújabb kiadása (a `.3dsx` fájl kell)
 
-* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) (get both the `.cia` and `.3dsx` files)
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (get the GodMode9 `.zip` file)
+* Az [FBI](https://github.com/Steveice10/FBI/releases/latest) legújabb kiadása *(a `.cia` és a `.3dsx` fájl is kell)
+* A [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) legújabb kiadása (a GodMode9 `.zip` fájl kell)
 
 ### Utasítások
 
@@ -48,10 +48,10 @@ If your previous CFW setup was EmuNAND-based and you wish to move the contents o
 1. Kapcsold ki a készüléked
 1. Helyezd az SD kártyád a számítógépbe
 1. Hozz létre egy mappát `cias` néven az SD kártyád gyökerében, ha még nem létezik ilyen
-1. Copy all of the CIA files (`Anemone3DS.cia`, `Checkpoint.cia`, `FBI.cia`, `Homebrew_Launcher.cia`, and `Universal-Updater.cia`) to the `/cias/` folder on your SD card
+1. Másold be az összes CIA fájlt (`Anemone3DS.cia`, `Checkpoint.cia`, `FBI.cia`, `Homebrew_Launcher.cia`, és `Universal-Updater.cia`) a `/cias/` mappába az SD kártyádon
 1. Hozz létre egy mappát `3ds` néven az SD kártyád gyökerében, ha még nem létezik ilyen
     + Ez a mappa tárolja a homebrew applikációkat és adataikat; ez mást mint a `Nintendo 3DS` mappa, amit az eszköz automatikusan generál
-1. Copy all of the 3DSX files (`ctr-no-timeoffset.3dsx`, `DSP1.3dsx`, and `FBI.3dsx`) to the `/3ds/` folder on your SD card
+1. Másold be az összes 3DSX fájlt (`ctr-no-timeoffset.3dsx`, `DSP1.3dsx`, és `FBI.3dsx`) a `/3ds/` mappába az SD kártyádon
 1. Hozz létre egy mappát `payloads` néven az SD kártyád `luma` nevezetű mappájában, ha még nem létezik ilyen
 1. Másold át a `GodMode9.firm` fájlt a GodMode9 `.zip`-ből az SD kártyád `/luma/payloads/` mappájába
 1. Másold át a `gm9` mappát a GodMode9 `.zip`-ből az SD kártyád gyökerébe
@@ -156,18 +156,18 @@ If your previous CFW setup was EmuNAND-based and you wish to move the contents o
 
 ___
 
-You're done! Custom firmware is now fully configured on your device.
+Kész vagy! Az egyedi firmware most már teljesen be van állítva az eszközödön.
 {: .notice--success}
 
 #### Információk és jegyzetek
 
 {% capture notice-6 %}
-Here are some keycombos that you should know:
+Néhány billentyű kombináció amit ismerned kell:
 
-- Holding (Select) on boot will launch the Luma3DS configuration menu.
-- Holding (Start) on boot will launch GodMode9, or if you have multiple payloads in `/luma/payloads/`, the Luma3DS chainloader.
-- By default, pressing (Left Shoulder) + (Down D-Pad) + (Select) while in 3DS mode will open the Rosalina menu, where you can check system information, take screenshots, enable cheats, and more. This can be changed from the Rosalina menu.
-- Holding (Start) + (Select) + (X) on boot will dump `boot9.bin`, `boot11.bin`, and `otp.bin` to the `boot9strap` folder on your SD card.
+- Indításkor előhozhatod a Luma3DS konfigurációs menüjét a (Select) gomb lenyomva tartásával.
+- Indításkor előhozhatod a GodMode9-et, vagy ha több payload van a `/luma/payloads/` mappában a Luma3DS chainloader-t a (Select) gomb lenyomva tartásával.
+- Alapból a (Bal váll) + (D-pad le) + (Select) gombok megnyomásával 3DS módban a Rosalina menü megnyílik, ahol többek közt megnézhetsz rendszer információkat, csinálhatsz képernyő képeket, és engedélyezhetsz csalásokat. Ezt lehet módosítani a Rosalina menüben.
+- A (Start) + (Select) + (X) lenyomva tartása indítás közben dumpolni foja a `boot9.bin`, `boot11.bin`, és `otp.bin` fájlokat a `boot9strap` mappába az SD kártyádon.
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
