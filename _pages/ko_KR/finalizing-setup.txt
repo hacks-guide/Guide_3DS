@@ -6,31 +6,40 @@ title: "마무리 단계"
 
 ### 중요
 
-`boot.firm`은 NAND 로딩이 끝난 후에 boot9strap 자체에 의해 실행되는 파일로, FIRM형식의 유효한 모든 arm9 페이로드로 바꿀 수 있습니다. Luma3DS는 Luma3DS chainloader 메뉴를 통해 FIRM형식의 다른 arm9 페이로드를 실행하는 기능을 지원하므로 필요시 이용이 가능합니다.
+The file `boot.firm` is what is launched by boot9strap itself after it finishes loading off of NAND. In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) to patch the device, allowing it to run homebrew software.
 
-여기에서는 [LumaTeam](https://github.com/LumaTeam/)의 Luma3DS를 사용해 패치된 SysNAND를 부팅하므로 EmuNAND를 사용할 필요가 없으며, 해킹된 3DS의 사용을 크게 단순화시키고 사용되는 SD 카드의 공간도 절약할 수 있습니다.
+On this page, we will make critical system file backups and install the following homebrew programs:
 
-이 과정을 진행하는 동안 다음 프로그램도 설치하게 됩니다:
-
-+  **FBI** *(CIA 형식의 게임 및 애플리케이션 설치)*
++  **FBI** *(installs CIA formatted applications)*
 +  **Anemone3DS** *(사용자 지정 테마 설정)*
 +  **Checkpoint** *(3DS와 DS게임의 세이브 파일 백업 및 복구)*
-+ **Universal-Updater** *(Wi-Fi를 통해 3DS에 홈브류를 다운로드 하는 앱 스토어)*
++  **Universal-Updater** *(a homebrew app store for downloading homebrew from the 3DS over Wi-Fi)*
 +  **Godmode9** *(NAND와 게임 카드의 기능을 수행할 수 있는 다목적 툴)*
 +  **Homebrew Launcher Loader** *(홈브류 런처 실행)*
 + **DSP1** *(홈브류 에플리케이션의 소리를 허용함)*
-+ **ctr-no-timeoffset** *(HOME 메뉴와 RTC 시간이 RTC offset을 없에 주는 툴)*
++  **ctr-no-timeoffset** *(sets the Home Menu time to match the internal Real-Time Clock)*
+
+It is not recommended to skip downloading any of these applications, as many of them will be used later on this page.
+{: .notice--warning}
+
+If your **New 3DS** was on firmware 2.1.0 before following this guide, you should [restore your NAND backup](godmode9-usage#restoring-a-nand-backup) before continuing.
+{: .notice--warning}
+
+If your previous CFW setup was EmuNAND-based and you wish to move the contents of your EmuNAND/RedNAND to SysNAND, follow [Move EmuNAND](move-emunand) before following this page. If you don't know what an EmuNAND is, this doesn't apply to you.
+{: .notice--info}
 
 ### 준비물
 
-* 최신 버전의 [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) *(`.cia` 파일)*
-* 3.7.4 버전의 [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/tag/v3.7.4) *(`.cia` 파일)*
-* 최신 버전의 [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest) *(`.cia` 파일)*
-* 최신 버전의 [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest)
-* 최신 버전의 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
-* 최신 버전의 [DSP1](https://github.com/zoogie/DSP1/releases/latest) *(`.cia` 파일)*
-* 최신 버전의 [FBI](https://github.com/Steveice10/FBI/releases/latest) *(`.cia` 와 `.3dsx` 파일들)*
-* 최신 버전의 [ctr-no-timeoffset](https://github.com/ihaveamac/ctr-no-timeoffset/releases/latest)
+* The latest release of [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) (get the `.cia` file)
+* The v3.7.4 release of [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/tag/v3.7.4) (get the `.cia` file)
+* The latest release of [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest) (get the `.cia` file)
+* The latest release of [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest) (get the `.cia` file)
+
+* The latest release of [ctr-no-timeoffset](https://github.com/ihaveamac/ctr-no-timeoffset/releases/latest) (get the `.3dsx` file)
+* The latest release of [DSP1](https://github.com/zoogie/DSP1/releases/latest) (get the `.3dsx` file)
+
+* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) (get both the `.cia` and `.3dsx` files)
+* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (get the GodMode9 `.zip` file)
 
 ### 진행 방법
 
@@ -38,17 +47,11 @@ title: "마무리 단계"
 
 1. 기기를 종료해 주세요
 1. SD 카드를 컴퓨터에 삽입해 주세요
+1. SD 카드의 루트에 `cias` 폴더가 없을 경우 폴더를 만들어 주세요
+1. Copy all of the CIA files (`Anemone3DS.cia`, `Checkpoint.cia`, `FBI.cia`, `Homebrew_Launcher.cia`, and `Universal-Updater.cia`) to the `/cias/` folder on your SD card
 1. SD 카드의 루트에 `3ds` 폴더가 없을 경우 폴더를 만들어 주세요
     + 이 폴더는 홈브류 에플리케이션과 데이터가 보관되 있습며, 디바이스가 자동으로 생성하는 `Nintendo 3DS` 폴더와 다릅니다
-1. SD 카드의 루트에 `cias` 폴더가 없을 경우 폴더를 만들어 주세요
-1. `ctr-no-timeoffset.3dsx` 파일을 SD 카드의 `/3ds/` 폴더에 복사해 주세요
-1. `FBI.3dsx` 파일을 SD 카드의 `/3ds/` 폴더에 복사해 주세요
-1. `Homebrew_Launcher.cia` 파일을 SD 카드의 `/cias/` 폴더에 복사해 주세요
-1. `FBI.cia` 파일을 SD 카드의 `/cias/` 폴더에 복사해 주세요
-1. `DSP1.cia` 파일을 SD 카드의 `/cias/` 폴더에 복사해 주세요
-1. `Anemone3DS.cia` 파일을 SD 카드의 `/cias/` 폴더에 복사해 주세요
-1. `Checkpoint.cia` 파일을 SD 카드의 `/cias/` 폴더에 복사해 주세요
-1. `Universal-Updater.cia` 파일을 SD 카드의 `/cias/` 폴더에 복사해 주세요
+1. Copy all of the 3DSX files (`ctr-no-timeoffset.3dsx`, `DSP1.3dsx`, and `FBI.3dsx`) to the `/3ds/` folder on your SD card
 1. SD 카드 내 `luma` 폴더에 `payloads` 폴더가 없을 경우 폴더를 만들어 주세요
 1. SD 카드의 `/luma/payloads/`폴더에 GodMode9 `.zip`안에 압축되있는 `GodMode9.firm`을 복사해 주세요
 1. SD카드의 루트로 GodMode9 `.zip`안에 압축이 되있는 `gm9` 폴더를 복사해 주세요
@@ -61,12 +64,6 @@ title: "마무리 단계"
     {: .notice--info}
 
 #### 섹션 II - 시스템 업데이트
-
-이 가이드의 이전 버전 을 따르던 중, *New 3DS*를 2.1.0으로 CTRTransfer 하셨다면, 다음 섹션을 하기 전 [NAND 백업 복구](godmode9-usage#restoring-a-nand-backup) 을 해야 합니다.
-{: .notice--danger}
-
-만약 이 설명을 따르기 전에 EmuNAND 셋업이 이미 있었고, 기존 EmuNAND의 요소들을 새로운 SysNAND CFW로 옮기고 싶으시면 이 섹션을 하기 전 [EmuNAND 이동](move-emunand)을 하시면 됩니다.
-{: .notice--info}
 
 1. 본체 설정의 "기타 설정"에서 가장 오른쪽에 있는 "본체 업데이트"를 선택해 기기를 업데이트해 주세요.
   + boot9strap과 Luma을 이용한 (지금 가지고 계신 버전) 업데이트는 안전합니다
@@ -87,23 +84,21 @@ title: "마무리 단계"
 1. (Home) 키를 누르고, 다운로드 플레이를 종료해 주세요
 1. 다운로드 플레이 앱을 실행해 주세요
 1. 성공하면 Homebrew Launcher가 실행될 것입니다
+
+#### Section IV - RTC and DSP Setup
 1. 홈브류 목록에서 ctr-no-timeoffset을 실행해 주세요
 1. (A) 를 눌러 오프셋을 `0`로 설정해 주세요
   + 이것은 시스템 시각을 RTC 날짜와 시간과 맞도록 설정 합니다. (나중에 설정함)
 1. (Start)를 눌러 Homebrew Launcher로 돌아가 주세요
+1. DSP1 프로그램을 실행해 주세요
+1. Once it has completed, press (B) to self-delete the app and return to the Homebrew Launcher
+
+#### Section V - Installing CIAs
 1. 홈브류 목록에서 FBI를 실행해 주세요
-
-#### 섹션 VI - CIA 설치
-
 1. `SD` -> `cias`로 이동해 주세요
 1. "\<current directory>"를 선택해 주세요
 1. "Install and delete all CIAs" 를 선택한 뒤 (A)를 눌러 주세요
 1. (Home) 키를 누르고, 다운로드 플레이를 종료해 주세요
-
-#### 섹션 V - DSP 덤프
-
-1. DSP1 프로그램을 실행해 주세요
-1. 작업이 끝나면, (B) 를 눌러서 프로그램을 자동 삭제 시키고 HOME 메뉴로 돌아와 주세요
 
 #### 섹션 VI - CTRNAND Luma3DS
 
@@ -161,41 +156,24 @@ title: "마무리 단계"
 
 ___
 
+You're done! Custom firmware is now fully configured on your device.
+{: .notice--success}
+
 #### 정보와 메모
 
 {% capture notice-6 %}
-이제 Luma3DS CFW를 기본으로 시작할 것입니다.
+Here are some keycombos that you should know:
 
-앞으로 (Select)를 누른 채 기기를 부팅시키면 Luma3DS 설정 메뉴가 실행됩니다.
-
-이제 부팅시 (Start) 를 눌러서 Luma3DS chainloader 메뉴를 시작할 수 있습니다. (Luma3DS chainloader 메뉴는 한개 이상의 페이로드가 감지 될 때만 표시 된다는 걸 참고해 주세요.)
-
-이제 부팅시 (Start) + (Select) + (X) 를 눌러서 ARM11 부트롬 (`boot11.bin`), ARM9 부트롬(`boot9.bin`)과 기기의 OTP (`OTP.bin`) 를 SD 카드의 `/boot9strap/`폴더에 덤프 하실 수 있습니다. (이 과정은 프롬프트나 메세지가 뜨지 않는 뜨지 않음을 유의해 주세요.)
-
-이제 부팅 후 (L) + (Down) + (Select) 키를 눌러서 Luma3DS에 포함 되있는 Rosalina 메뉴를 열 수 있습니다. Rosalina의 모든 기능을 보시려면, [Luma3DS v8.0 출시](https://github.com/AuroraWright/Luma3DS/releases/tag/v8.0)를 참고해 주세요.
+- Holding (Select) on boot will launch the Luma3DS configuration menu.
+- Holding (Start) on boot will launch GodMode9, or if you have multiple payloads in `/luma/payloads/`, the Luma3DS chainloader.
+- By default, pressing (Left Shoulder) + (Down D-Pad) + (Select) while in 3DS mode will open the Rosalina menu, where you can check system information, take screenshots, enable cheats, and more. This can be changed from the Rosalina menu.
+- Holding (Start) + (Select) + (X) on boot will dump `boot9.bin`, `boot11.bin`, and `otp.bin` to the `boot9strap` folder on your SD card.
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
 
-{% capture notice-6 %}
-만약 더 큰 SD 카드로 옮기고 싶다면, 새 SD 카드를 FAT32로 포맷하고 전 SD 카드의 콘텐츠를 새 SD 카드로 복사하면 됩니다.
+See [here](https://3ds.eiphax.tech/tips.html) for some suggestions on things to do with custom firmware.
+{: .notice--info}
 
-새로운 SD 카드가 32GB보다 더 크다면, 다른 툴로 포맷 해야 됨니다. [guiformat (Windows)](formatting-sd-(windows)), [Disk Utility (macOS)](formatting-sd-(mac)), 아니면 [cfdisk (Linux)](formatting-sd-(linux))를 사용하여 FAT32로 포맷 할 수 있습니다.
-{% endcapture %}
-
-<div class="notice--info">{{ notice-6 | markdownify }}</div>
-
-기기를 다른 지역으로 변경하는 방법에 대해 알아보려면 [지역 변경](region-changing) 페이지를 참고해 주세요.
-{: .notice--success}
-
-GodMode9의 다양한 기능을 알고 싶다면[GodMode9 사용](godmode9-usage) 페이지를 방문해 주세요.
-{: .notice--success}
-
-Luma3DS의 다양한 기능에 대해 알아보려면 [Luma3DS 위키](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage)를 참고해 주세요.
-{: .notice--success}
-
-커스텀 테마와 부팅화면에 대한 정보는 [Theme Plaza](https://themeplaza.art/)를 참고해 주세요.
-{: .notice--success}
-
-Gateshark 치트 코드에 대한 더 자세한 정보는 [Checkpoint](https://github.com/FlagBrew/Checkpoint)에서 확인 할 수 있습니다.
-{: .notice--success}
+For information on using GodMode9's various features, check out the [GodMode9 Usage](godmode9-usage) and [Dumping Titles and Game Cartridges](dumping-titles-and-game-cartridges) pages.
+{: .notice--info}
