@@ -68,7 +68,7 @@ The website has determined that your `movable.sed` cannot be brute-forced. Ensur
 
 ### 打開 Picross 時顯示了「An exception occurred」或 Errdisp 的錯誤訊息
 
-Your device already has custom firmware. You should [check for CFW](checking-for-cfw).
+你的主機已經破解過了。 請先[檢查是否已安裝自製韌體](checking-for-cfw) 。
 
 ### “An error has occurred, forcing the software to close...”（螢幕下方出現強制關閉程式的訊息框）
 
@@ -110,21 +110,21 @@ If this is unsuccessful, try using another SD card.
 
 If your device is on system version 9.4.0, 9.5.0, or 9.6.0, you may be encountering a bug with universal-otherapp. Follow [Homebrew Launcher (Soundhax)](homebrew-launcher-(soundhax)) instead.
 
-If your device is not on those firmwares, it likely indicates that you already have custom firmware. You should [check for CFW](checking-for-cfw).
+If your device is not on those firmwares, it likely indicates that you already have custom firmware. 請先[檢查是否已安裝自製韌體](checking-for-cfw) 。
 
 ### “An error has occurred, forcing the software to close...”（螢幕下方出現強制關閉程式的訊息框）
 
 There is an issue with your `otherapp.bin` file (it is missing, misplaced, or corrupted). Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) and place it on the root of your SD card.
 
-### 出現 "Could not play" 的錯誤訊息
+### 出現『Could not play』的錯誤訊息
 
 You have the wrong Soundhax file for your device and region, or your device is incompatible with Soundhax. In the latter case, you should update your device to the latest version and follow [Seedminer](seedminer).
 
-### Failed to open SafeB9SInstaller.bin
+### 出現『Failed to open SafeB9SInstaller.bin』的錯誤訊息
 
 The file `SafeB9SInstaller.bin` is missing or misplaced. Download the latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/tag/v0.0.7) and place it on the root of your SD card. Do not add the `.bin`extensoin if you do not already see it.
 
-### Frozen on "Doing agbhax..."
+### 卡在『Doing agbhax...』的步驟
 
 There may be an issue with your `otherapp.bin` file. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) and place it on the root of your SD card.
 
@@ -154,31 +154,31 @@ Ensure that `F00D43D5.bin` is the only file in `Nintendo 3DS` -> `<ID0>` `<ID1>`
 
 ### DSiWare 資料管理選單沒有當機
 
-`F00D43D5.bin` is missing from `Nintendo 3DS` -> `<ID0>` `<ID1>` -> `Nintendo DSiWare`. Make sure that `Nintendo DSiWare` is correctly spelled and spaced. Uppercase/lowercase does not matter.
+`F00D43D5.bin` 沒有放進 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`。 請確保 `Nintendo DSiWare` 拼寫和空格位置正確。 請注意大小寫是沒有關係的。
 
 ### DSiWare 資料管理選單裡面出現了一個問號圖案的程式
 
-There may be an issue with your `F00D43D5.bin` file (it may be corrupted or intended for the wrong 3DS). Re-create your `F00D43D5.bin`file with the [BannerBomb3 tool](https://3ds.nhnarwhal.com/3dstools/bannerbomb3.php), ensuring that you use the `movable.sed` file for your console.
+您所使用的 `F00D43D5.bin` 檔案可能有問題（損壞或用於錯誤的 3DS 主機）。 使用 [BannerBomb3 Tool](https://3ds.nhnarwhal.com/3dstools/bannerbomb3.php) 重新創建 `F00D43D5.bin` 檔案，且確保您所使用的 `movable.sed` 檔案是你這台主機的。
 
 ### DSiWare 資料管理選單沒有閃爍紫屏就當機了
 
-Ensure that `F00D43D5.bin` is the only file in `Nintendo 3DS` -> `<ID0>` `<ID1>` -> `Nintendo DSiWare`. If it is, then re-create it with the [BannerBomb3 tool](https://3ds.nhnarwhal.com/3dstools/bannerbomb3.php). If this fails, then custom firmware may have been uninstalled on this device in a way that makes this method impossible to perform. If this is the case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+確保 `F00D43D5.bin` 是 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 裡面的唯一檔案。 如果確定沒問題的話，嘗試重新使用 [BannerBomb3 tool](https://3ds.nhnarwhal.com/3dstools/bannerbomb3.php) 重新建立此檔案。 如果還是不行，則可能是因為自製韌體可能在此主機上被不正確地移除過，導致此方法失效。 若是這樣，請加入 [Discord 上的 Nintendo Homebrew](HTTPs://discord.gg/MWxPgEp) 頻道尋求幫助。
 
 ---
 
 ## 安裝 boot9strap (透過 Fredtool)
 
-### Error on Fredtool Injector page
+### Fredtool 注入頁面顯示錯誤
 
-Ensure that your `movable.sed` and DSiWare backup come from the same console. A mismatch will result in an error.
+請確保您的 `movable.sed` 檔案和 DSiWare 備份是從同一台主機匯出的。 若兩者並不匹配則會跳出錯誤。
 
-### 沒有出現 “Haxxxxxxxxx!”
+### 沒有出現『Haxxxxxxxxx!』
 
-There is an issue with your `42383821.bin` file (it is incorrect, missing, misplaced, or corrupted). Re-create your files with the [Fredtool](https://3ds.nhnarwhal.com/3dstools/fredtool.php) website and ensure that you place the `42383821.bin` file from `output.zip` -> `hax` in `Nintendo 3DS` -> `<ID0>` `<ID1>` -> `Nintendo DSiWare`.
+您所使用的 `42383821.bin` 檔案有問題（有問題、放錯位置或者損壞）。 請重新使用 [Fredtool](https://3ds.nhnarwhal.com/3dstools/fredtool.php) 建立相對應的檔案，並確保 `42383821.bin` 是從 `output.zip` -> `hax` 取出來的，且放在了 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 中。
 
 ### DS 連線設定 (Connection Settings) 正常啟動了
 
-`Haxxxxxxxxx!` was not copied from your SD card to your system memory.
+`Haxxxxxxxxx!` 沒有被從 SD 卡中複製到系統內存中。
 
 ### 啟動 DS 『連線設定 (Connection Settings)』時顯示黑屏
 
