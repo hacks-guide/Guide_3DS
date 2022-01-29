@@ -50,7 +50,7 @@ This occurs when you use your SD card in multiple 3DS devices and is intended to
 1. Delete the `Nintendo 3DS` folder
 1. Rename the `BACKUP_Nintendo 3DS` folder to `Nintendo 3DS`
 
-### Bruteforce Movable skips to step 4
+### Bruteforce Movable 直接跳到了 Step 4
 
 The website has already mined your `movable.sed` using your friend code and ID0 combination. You can use the `movable.sed` that it provides you.
 
@@ -66,15 +66,15 @@ The website has determined that your `movable.sed` cannot be brute-forced. Ensur
 
 ## 寫入 ntrboot 漏洞 (透過 PicHaxx)
 
-### "An exception occurred" or Errdisp when opening Picross
+### 打開 Picross 時顯示了「An exception occurred」或 Errdisp 的錯誤訊息
 
 Your device already has custom firmware. You should [check for CFW](checking-for-cfw).
 
-### "An error has occurred, forcing the software to close..." (white message box)
+### “An error has occurred, forcing the software to close...”（螢幕下方出現強制關閉程式的訊息框）
 
 There is an issue with your `otherapp.bin` file. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) and place it on the root of your SD card. Do not add the `.bin` extension if you do not already see it.
 
-### "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
+### “An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
 
 Your `00000001.sav` and/or `otherapp.bin` files may be misplaced. Ensure that `00000001.sav` is in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` and that `otherapp.bin` is on the root of your SD card.
 
@@ -96,7 +96,7 @@ There may be an issue with your `otherapp.bin` file. Download the latest release
 
 You will need to follow an alternate method, like [Installing boot9strap (USM)](installing-boot9strap-(usm)).
 
-### Failed to mount the SD card!
+### 無法掛載 SD 卡（Failed to mount the SD card!）
 
 Back up your data and reformat your SD card as FAT32 with the recommended tool depending on your operating system ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). MiniTool and the HP formatting tool are known to cause issues with 3DS SD cards.
 
@@ -112,11 +112,11 @@ If your device is on system version 9.4.0, 9.5.0, or 9.6.0, you may be encounter
 
 If your device is not on those firmwares, it likely indicates that you already have custom firmware. You should [check for CFW](checking-for-cfw).
 
-### "An error has occurred, forcing the software to close..." (white message box)
+### “An error has occurred, forcing the software to close...”（螢幕下方出現強制關閉程式的訊息框）
 
 There is an issue with your `otherapp.bin` file (it is missing, misplaced, or corrupted). Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) and place it on the root of your SD card.
 
-### "Could not play"
+### 出現 "Could not play" 的錯誤訊息
 
 You have the wrong Soundhax file for your device and region, or your device is incompatible with Soundhax. In the latter case, you should update your device to the latest version and follow [Seedminer](seedminer).
 
@@ -134,7 +134,7 @@ If you have a Taiwanese or Mainland Chinese unit (with a T or C in the version s
 
 You will need to follow an alternate method. Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
 
-### Failed to mount the SD card!
+### 無法掛載 SD 卡（Failed to mount the SD card!）
 
 Back up your data and reformat your SD card as FAT32 with the recommended tool depending on your operating system ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). MiniTool and the HP formatting tool are known to cause issues with 3DS SD cards.
 
@@ -144,7 +144,7 @@ If this is unsuccessful, try using another SD card.
 
 ## 安裝 boot9strap (透過 USM)
 
-### DSiWare Management menu crashes without showing USM menu
+### DSiWare 資料管理選單沒有顯示 USM 選單就當機了
 
 Ensure that `F00D43D5.bin` is the only file in `Nintendo 3DS` -> `<ID0>` `<ID1>` -> `Nintendo DSiWare`. If it is, then re-create it with the [unSAFE_MODE Exploit Injector](https://3ds.nhnarwhal.com/3dstools/unsafemode.php). If this fails, then custom firmware may have been uninstalled on this device in a way that makes this method impossible to perform. If this is the case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
 
@@ -152,15 +152,15 @@ Ensure that `F00D43D5.bin` is the only file in `Nintendo 3DS` -> `<ID0>` `<ID1>`
 
 ## BannerBomb3
 
-### DSiWare Management menu does not crash
+### DSiWare 資料管理選單沒有當機
 
 `F00D43D5.bin` is missing from `Nintendo 3DS` -> `<ID0>` `<ID1>` -> `Nintendo DSiWare`. Make sure that `Nintendo DSiWare` is correctly spelled and spaced. Uppercase/lowercase does not matter.
 
-### DSiWare Management shows a question mark
+### DSiWare 資料管理選單裡面出現了一個問號圖案的程式
 
 There may be an issue with your `F00D43D5.bin` file (it may be corrupted or intended for the wrong 3DS). Re-create your `F00D43D5.bin`file with the [BannerBomb3 tool](https://3ds.nhnarwhal.com/3dstools/bannerbomb3.php), ensuring that you use the `movable.sed` file for your console.
 
-### DSiWare Management menu crashes without purple screen
+### DSiWare 資料管理選單沒有閃爍紫屏就當機了
 
 Ensure that `F00D43D5.bin` is the only file in `Nintendo 3DS` -> `<ID0>` `<ID1>` -> `Nintendo DSiWare`. If it is, then re-create it with the [BannerBomb3 tool](https://3ds.nhnarwhal.com/3dstools/bannerbomb3.php). If this fails, then custom firmware may have been uninstalled on this device in a way that makes this method impossible to perform. If this is the case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
 
@@ -172,15 +172,15 @@ Ensure that `F00D43D5.bin` is the only file in `Nintendo 3DS` -> `<ID0>` `<ID1>`
 
 Ensure that your `movable.sed` and DSiWare backup come from the same console. A mismatch will result in an error.
 
-### "Haxxxxxxxxx!" does not appear
+### 沒有出現 “Haxxxxxxxxx!”
 
 There is an issue with your `42383821.bin` file (it is incorrect, missing, misplaced, or corrupted). Re-create your files with the [Fredtool](https://3ds.nhnarwhal.com/3dstools/fredtool.php) website and ensure that you place the `42383821.bin` file from `output.zip` -> `hax` in `Nintendo 3DS` -> `<ID0>` `<ID1>` -> `Nintendo DSiWare`.
 
-### DS Connection Settings launches normally
+### DS 連線設定 (Connection Settings) 正常啟動了
 
 `Haxxxxxxxxx!` was not copied from your SD card to your system memory.
 
-### Black screen when launching DS Connection Settings
+### 啟動 DS 『連線設定 (Connection Settings)』時顯示黑屏
 
 Your DS Connection Settings application is broken, and you will need Homebrew Launcher access to fix this issue. Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
 
@@ -228,11 +228,11 @@ The steps below can be attempted in any order, but are listed from easiest to ha
 
 Download this [alternate config.bin](https://cdn.discordapp.com/attachments/196635695958196224/733384123003175074/config.bin) and place it in `/luma/`. This will change the Rosalina key combination to (Y) + (B).
 
-### "An exception occurred" after trying to launch Homebrew Launcher via Download Play
+### 嘗試透過『下載通信 (Download Play)』程式啟動 Homebrew Launcher 時出現了「An exception occurred」的錯誤訊息
 
 There is an issue with your `boot.3dsx` file (it is missing, misplaced, or corrupted). Download the latest release of [the Homebrew Launcher](https://github.com/fincs/new-hbmenu/releases/latest) and place `boot.3dsx` on the root of your SD card, replacing any existing file. Make sure you are extracting the ZIP file with any tool other than WinRAR, as it is known to cause issues with 3DS-related files.
 
-### "Scripts directory not found" in GodMode9
+### GodMode9 提示 “Scripts directory not found”
 
 You did not copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card. Download the latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) and place the `gm9` folder on the root of your SD card, merging it with the existing one.
 
@@ -305,7 +305,7 @@ ARM11 exception handlers are disabled, or custom firmware is not installed. Try 
 
 Please take a photo of the error and join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
 
-### Blue "Bootrom Error" screen
+### 出現『Bootrom Error』的錯誤藍屏
 
 Your device is likely hard-bricked. You will need to buy an ntrboot flashcart to reinstall boot9strap in order to attempt to fix your device. This may also indicate a hardware issue which cannot be fixed. In any case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
   + It is also possible that someone has set a boot-time splash screen that just looks like a brick. Try leaving your device powered on, waiting on the blue screen, for five minutes.
@@ -314,7 +314,7 @@ Your device is likely hard-bricked. You will need to buy an ntrboot flashcart to
 
 ## Functionality-related issues on modded devices
 
-### DSi / DS functionality is broken, or has been replaced with Flipnote Studio
+### DSi / DS 功能損壞，或變成了 Flipnote Studio
 
 1. Download the latest release of [TWLFix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest) (the `.3dsx` file)
 1. 關閉您的主機
@@ -341,7 +341,7 @@ This can occur after a CTRTransfer or region change on Old 3DS / 2DS. You will n
 
 ## 其他疑難排解
 
-### Clear home menu extdata
+### 清除 Home 選單外存
 
 1. 關閉您的主機
 1. 將 SD 卡插入至電腦中
