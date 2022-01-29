@@ -19,13 +19,13 @@ title: "完成安裝"
 +  **DSP1** *(允許自製程式播放音效)*
 +  **ctr-no-timeoffset** *(將 HOME 主選單中的時間與主機內部的時間 (Real-Time Clock) 進行同步)*
 
-It is not recommended to skip downloading any of these applications, as many of them will be used later on this page. At the end of this page, your SD card will be cleaned up to remove unnecessary installation files.
+建議不要跳過下載以上這些自製軟體，因為它們將在此頁面稍後使用。 在本頁結束時，我們將清理 SD 卡以刪除不必要的安裝檔案。
 {: .notice--warning}
 
-If your **New 3DS** was on firmware 2.1.0 before following this guide, you should [restore your NAND backup](godmode9-usage#restoring-a-nand-backup) before continuing.
+如果在執行以下步驟前，您的 **New 3DS** 版本為低於 2.1.0，請您先[還原您的 NAND 備份](godmode9-usage#restoring-a-nand-backup)再行繼續。
 {: .notice--warning}
 
-If your previous CFW setup was EmuNAND-based and you wish to move the contents of your EmuNAND/RedNAND to SysNAND, follow [Move EmuNAND](move-emunand) before following this page. If you don't know what an EmuNAND is, this doesn't apply to you.
+如果您先前的自製韌體為基於 EmuNAND 的系統，且您希望將您的 EmuNAND/RedNAND 移植至 SysNAND，請在繼續前進行 [移植 EmuNAND](move-emunand) 頁面中的指示。 如果您不知道 EmuNAND 是什麼的話，這部分大概不適用於您。
 {: .notice--info}
 
 ### 必備項目
@@ -48,10 +48,10 @@ If your previous CFW setup was EmuNAND-based and you wish to move the contents o
 1. 關閉您的主機
 1. 將 SD 卡插入至電腦中
 1. 在 SD 卡的根目錄底下，建立一個新資料夾 `cias`
-1. Copy all of the CIA files (`Anemone3DS.cia`, `Checkpoint.cia`, `FBI.cia`, `Homebrew_Launcher.cia`, and `Universal-Updater.cia`) to the `/cias/` folder on your SD card
+1. 複製所有的 CIA 檔案 (`Anemone3DS.cia`、`Checkpoint.cia`、`FBI.cia`、`Homebrew_Launcher.cia` 及 `Universal-Updater.cia`) 至 SD 卡中的 `/cias/` 資料夾中
 1. 在 SD 卡的根目錄底下建立一個新資料夾 `3ds`
     + 本資料夾中含有自製程式及其資料；本資料夾與主機自動產生的 `Nintendo 3DS` 不一樣
-1. Copy all of the 3DSX files (`ctr-no-timeoffset.3dsx`, `DSP1.3dsx`, and `FBI.3dsx`) to the `/3ds/` folder on your SD card
+1. 複製所有的 3DSX 檔案 (`ctr-no-timeoffset.3dsx`、`DSP1.3dsx` 及 `FBI.3dsx`) 至 SD 卡中的 `/3ds/` 資料夾中
 1. 在 SD 卡中的 `luma` 資料夾中建立一個另一個新資料夾 `payloads`
 1. 解壓 GodMode9 `.zip` 中的 `GodMode9.firm` 檔案到 SD 卡的 `/luma/payloads/` 資料夾中
 1. 解壓 GodMode9 `.zip` 中的 `gm9` 資料夾到 SD 卡的根目錄底下
@@ -63,7 +63,7 @@ If your previous CFW setup was EmuNAND-based and you wish to move the contents o
     ![]({{ "/images/screenshots/godmode9-location.png" | absolute_url }})
     {: .notice--info}
 
-These screenshots indicate the minimum SD card layout that is required to follow this page. You may have extra files or folders on your SD card, depending on your previous setup or the method that you followed.
+以上截圖為遵循本頁面步驟所需的 SD 卡檔案及資料夾。 您可能在遵循其他頁面指示中會有一些多的資料夾及檔案在您的 SD 卡中。
 
 #### 第二節 — 更新系統
 
@@ -71,12 +71,12 @@ These screenshots indicate the minimum SD card layout that is required to follow
   + 在安裝 B9S + Luma 後，進行系統更新是很安全的
   + 升級程式可能會告訴你『你的主機已經是最新系统了』而不是繼續升級 如您已經升級到了最新的話，這是正常的；請繼續下面的步驟
   + 如果過程中出現錯誤，試試到 DNS 設定底下將設定改成『自動 (auto)』
-  + If this still gives you an error, [follow this troubleshooting guide](troubleshooting#unable-to-update-device)
+  + 如果您仍遇到錯誤，請見[此疑難排解指南](troubleshooting#unable-to-update-device)
 
 #### 第三節 — Homebrew Launcher
 
 1. 啟動『下載通信(Download Play)』程式 (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
-1. Wait until you see the `Nintendo 3DS` and `Nintendo DS` buttons
+1. 等到你看到 `Nintendo 3DS` 和 `Nintendo DS` 按鈕
 1. 同時按下『L』+『下』+『Select』鍵以啟動 Rosalina 選單
 1. 選擇『Miscellaneous options』
 1. 選擇『Switch the hb. title to the current app.』
@@ -87,7 +87,7 @@ These screenshots indicate the minimum SD card layout that is required to follow
 1. 啟動『下載通信 (Download Play)』程式
 1. 您的主機應該就會啟動 Homebrew Launcher 了
 
-#### Section IV - RTC and DSP Setup
+#### 第四節 — 設定內部時間 (RTC) 及 DSP
 1. 透過 Homebrew 清單啟動 ctr-no-timeoffset
 1. 按『A』選擇將數值設成 0
   + 這將會把系統時間設為與 RTC 相同的數值
