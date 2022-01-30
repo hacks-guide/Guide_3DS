@@ -263,29 +263,29 @@ There is an issue with your `boot.3dsx` file (it is missing, misplaced, or corru
 
 以下是可以嘗試的解決方法，按最省時到最耗時的順序排列。
 
-1. Power off your device, eject the game cartridge if inserted, power on your device, then wait up to ten minutes. If your device boots within ten minutes, the issue has been fixed and is unlikely to reoccur
-1. Rename the `Nintendo 3DS` folder on your SD card to `Nintendo 3DS_BACKUP`, then attempt to boot. If your device successfully boots, there is some issue within your `Nintendo 3DS` folder. Try clearing home menu extdata:
-	+ Navigate to `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
-	+ Delete the extdata file corresponding to your 3DS region: 
+1. 將主機強制關機，如果有遊戲卡帶請將其拔出，並再次開機，等待約十分鐘左右。 如果您的主機在十分鐘內成功開機，那就代表這個問題已經自行修復了，且不太可能會再次發生
+1. 將 SD 卡上的 `Nintendo 3DS` 資料夾重命名為 `Nintendo 3DS_BACKUP`，然後試著開機。 如果成功開機了，則 `Nintendo 3DS` 資料夾中的內容是有問題的。 試試看刪除 HOME 主選單的外存 (extdata)：
+	+ 移動至 `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
+	+ 依照您的 3DS 區域刪除下列外存檔案: 
 		+ **歐版**: `00000098`
 		+ **日版**: `00000082`
 		+ **美版**: `0000008f`
 		+ **大陸版**: `000000A1`
 		+ **韓版**: `000000A9`
 		+ **台灣版**: `000000B1`
-1. Ensure that your device does not have ARM11 exception handlers disabled:
+1. 請確保您沒有將 Luma 設定中的『ARM11 exception handlers disabled』選項打開：
 	+ 關閉您的主機
 	+ 按住「Select」鍵
 	+ 在開機時按住「Select」鍵
-	+ If the "Disable ARM11 exception handlers" box is checked, uncheck it
-	+ If your device now boots to the "An exception occured" screen, follow [My device boots to an error screen](troubleshooting#my-device-boots-to-an-error-screen)
-1. Try booting into recovery mode and updating your system:
+	+ 如果『ARM11 exception handlers disabled』已被勾選，請取消勾選
+	+ 如果現在開機出現『An exception occured』的錯誤訊息，請按照 [主機開機發生錯誤](troubleshooting#my-device-boots-to-an-error-screen) 的疑難排解進行操作
+1. 試試看透過還原模式更新您的系統:
 	+ 關閉您的主機
-	+ Hold (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A)
+	+ 按住「L」鍵 +「R」鍵 +「上」鍵 +「A」鍵
 	+ 啟動您的主機
-	+ If you were successful, the device will boot to an "update your system" screen
-1. Follow the [CTRTransfer](ctrtransfer) guide
-1. For further support, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
+	+ 如果成功，主機將自動進入系統更新界面
+1. 遵循[CTRTransfer](ctrtransfer)中的步驟
+1. 請至 [Discord 的 Nintendo Homebrew](https://discord.gg/MWxPgEp) 伺服器中尋求。
 
 ### My device boots to an error screen
 
@@ -299,7 +299,7 @@ ARM11 exception handlers are disabled, or custom firmware is not installed. Try 
   + 關閉您的主機
   + 按住「Select」鍵
   + 在開機時按住「Select」鍵
-  + If the "Disable ARM11 exception handlers" box is checked, uncheck it
+  + 如果『ARM11 exception handlers disabled』已被勾選，請取消勾選
 
 #### Some other error
 
