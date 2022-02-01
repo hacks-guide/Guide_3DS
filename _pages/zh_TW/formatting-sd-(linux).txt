@@ -27,10 +27,10 @@ mmcblk0     179:0    0   3,8G  0 disk
 1. 將 SD 卡的掛載點記下。 在以上範例中，我們的 SD 卡掛載點是 `mmcblk0`
   + 如果 `RO` 的狀態為 1，請確保 SD 卡上的寫入保護開關尚被開啟
 1. 按下 CTRL + C 退出選單
-1. Type in the following for your SD card:
-    - 2GB or lower: `sudo mkfs.fat /dev/(device mount point from above) -s 64 -F 16` 
+1. 根據 SD 卡的容量輸入以下指令：
+    - 2GB 及以下：`sudo mkfs.fat /dev/(先前記下的掛載點) -s 64 -F 16` 
 	  - This creates a single FAT16 partition with 32 KB cluster size on the SD card
-    - 4GB - 128GB: `sudo mkfs.fat /dev/(device mount point from above) -s 64 -F 32` 
+    - 4GB 至 128GB：`sudo mkfs.fat /dev/(先前記下的掛載點) -s 64 -F 32` 
 	  - This creates a single FAT32 partition with 32 KB cluster size on the SD card
-    - 128GB or higher: `sudo mkfs.fat /dev/(device mount point from above) -s 128 -F 32`
+    - 128GB及更高：`sudo mkfs.fat /dev/(先前記下的掛載點) -s 128 -F 32`
       - This creates a single FAT32 partition with 64 KB cluster size on the SD card
