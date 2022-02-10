@@ -10,10 +10,7 @@ excerpt: "3DS 커스텀 펌웨어 완벽 가이드, <br /> 순정에서 boot9str
 ---
 
 진행하기 전에 모든 소개 페이지(이 페이지 포함) 를 철저히 읽어 주세요.
-{: .notice--warning}
-
-현재 최신 시스템 소프트웨어 버전은 11.15.0-47입니다. 이전에 CFW를 설치 하셨다면, [CFW 확인](checking-for-cfw)를 따르며 커스텀 펌웨어를 업데이트 하는 것을 권장합니다.
-{: .notice--warning}
+{: .notice--info}
 
 ## 커스텀 펌웨어란 무엇입니까?
 
@@ -21,6 +18,7 @@ excerpt: "3DS 커스텀 펌웨어 완벽 가이드, <br /> 순정에서 boot9str
 
 커스텀 펌웨어의 대표적인 사용은 이하와 같습니다.
 
+* Running homebrew software and games made for or ported to the Nintendo 3DS
 * 지역 록을 해제하여, 타 국가의 게임을 플레이할 수 있게 됩니다.
 * 타 사용자들이 만든 [테마와 배지](https://themeplaza.art)를 사용하여 HOME 메뉴를 꾸밀 수 있게 됩니다.
 * [LayeredFS](https://github.com/knight-ryu12/godmode9-layeredfs-usage/wiki/Using-Luma3DS'-layeredfs-(Only-version-8.0-and-higher))를 이용한 게임 개조 ("ROM 핵")
@@ -30,16 +28,22 @@ excerpt: "3DS 커스텀 펌웨어 완벽 가이드, <br /> 순정에서 boot9str
 
 ## 이 가이드는 무엇을 설치하는 가이드입니까?
 
-이 가이드는 **boot9strap + Luma3DS 커스텀 펌웨어**를 **미개조** 3DS/3DS 기기에 설치할 것입니다. 만약 과거에 커스텀 펌웨어를 설치했다면, 당신의 콘솔의 정확한 업그레이드 위치를 확인하기 위해 [이 절차](checking-for-cfw)를 따르는 것을 권장합니다. 안정적이며, 커뮤니티가 계속 지원하기 때문에, 최신인, boot9strap/Luma3DS 설치가 과거 설치 (arm9loaderhax, menuhax)보다 권장됩니다.
+This guide will:
+  + Install **boot9strap** and **Luma3DS custom firmware** on unmodified retail 3DS/2DS devices 
+    + Luma3DS will automatically remove the region lock and allow you to run unsigned software
+  + Install various pieces of homebrew software, such as a package installer, save file manager, and a homebrew app store
+  + Make critical system file backups that can help avoid bricks (and recover data in the event of one)
 
 ## 시작하기 전에 무엇을 알고 있어야 합니까?
 
 * 벽돌의 위험성이 시간이 지날수록 떨어지고 있기는 하지만, **당신의 기기에 발생하는 어떤 것에도 저희는 책임을 지지 않습니다.** 잘못된 파일 위치는 벽돌과 상관이 없으나, 무모한 행동은 벽돌로 이어질 수도 있습니다.
-* 이 가이드는 국가나 펌웨어 상관없이, 모든 닌텐도 3DS 시리즈의 기기 (New 3DS 시리즈와 2DS 포함)와 호환됩니다.
+* This guide is compatible with every retail device in the Nintendo 3DS family of consoles (including the New 3DS series and the 2DS), regardless of region or firmware.
 * 이 가이드만을 따라간다면 데이터 손실은 없을 것이지만, SD 카드 파손은 언제나 가능성으로서 남아 있습니다. 만약 중요한 데이터가 있다면, SD 카드의 백업을 하는 것을 추천합니다.
 * 작동하는 SD 카드가 3DS 안에 있어야 하며, SD 카드 내 파일을 이동할 수 있어야 합니다. 3DS는 MBR/FAT32 포맷의 SD 카드를 읽을 수 있습니다.
+  + You may want to check your SD card for errors using [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), or [F3XSwift (Mac)](f3xswift-(mac)).
+* While we believe that custom firmware is safe for online use, there have been online network bans in the past, primarily for cheating and suspicious eShop behavior. 
 
 ___
 
-### [시작하기](get-started) 로 계속합니다
+## Continue to [Get Started](get-started)
 {: .notice--primary}
