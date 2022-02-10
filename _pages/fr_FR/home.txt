@@ -10,10 +10,7 @@ excerpt: "Un guide complet pour le custom firmware de 3DS, <br /> depuis le firm
 ---
 
 Lisez attentivement toutes les pages d'introduction (y compris celle-ci !) avant de continuer.
-{: .notice--warning}
-
-La dernière version du logiciel système est actuellement 11.15.0-47. Si vous aviez installé un CFW par le passé, il est fortement recommandé de suivre [Vérification de la présence d'un CFW](checking-for-cfw) pour vous assurer que votre custom firmware est à jour.
-{: .notice--warning}
+{: .notice--info}
 
 ## Qu'est-ce qu'un custom firmware ?
 
@@ -21,6 +18,7 @@ Un **custom firmware** ("CFW") est une modification complète du logiciel systè
 
 Les utilisations populaires pour un custom firmware sont :
 
+* Running homebrew software and games made for or ported to the Nintendo 3DS
 * Outrepasser le verrouillage de la région, vous permettant de jouer à des jeux d'autres régions
 * Personnalisation du menu HOME, en utilisant des [thèmes et badges](https://themeplaza.art) créés par la communauté
 * Modification de jeux ("ROMs hacks") via [LayeredFS](https://github.com/knight-ryu12/godmode9-layeredfs-usage/wiki/Using-Luma3DS'-layeredfs-(Unily-version-8.0-and-higher))
@@ -30,16 +28,22 @@ Les utilisations populaires pour un custom firmware sont :
 
 ## Qu'est-ce que ce guide me fait installer ?
 
-Ce guide vous fera installer **boot9strap + le custom firmware Luma3DS** sur une 3DS/2DS **non modifiée/stock**. Si vous aviez installé un custom firmware par le passé, vous devriez suivre [ces instructions](checking-for-cfw) pour trouver la méthode de mise à jour correspondante pour votre console. Une configuration moderne basée sur boot9strap/Luma3DS est préférée par rapport aux anciennes configurations (arm9loaderhax, menuhax) parce qu'elle est plus stable pour les homebrews modernes et continue d'être soutenue par la communauté.
+This guide will:
+  + Install **boot9strap** and **Luma3DS custom firmware** on unmodified retail 3DS/2DS devices 
+    + Luma3DS will automatically remove the region lock and allow you to run unsigned software
+  + Install various pieces of homebrew software, such as a package installer, save file manager, and a homebrew app store
+  + Make critical system file backups that can help avoid bricks (and recover data in the event of one)
 
 ## Que faut-il savoir avant de commencer ?
 
 * Bien que les risques de brick aient été minimisés au fil des ans, **nous ne sommes pas responsables de tout ce qui ne va pas avec votre console**. Un placement de fichier incorrect ne briquera pas votre console, mais un comportement imprudent le pourrait.
-* Ce guide fonctionnera sur toutes les console de la famille Nintendo 3DS (y compris la série New 3DS et la 2DS), quelle que soit la région ou le firmware.
+* This guide is compatible with every retail device in the Nintendo 3DS family of consoles (including the New 3DS series and the 2DS), regardless of region or firmware.
 * Suivre ce guide à lui seul ne devrait pas entraîner de perte de données, mais la corruption de la carte SD est toujours une possibilité. Vous devriez faire une sauvegarde du contenu de votre carte SD si vous avez des données importantes.
 * Vous aurez besoin d'une carte SD fonctionnelle dans votre 3DS, ainsi que de la possibilité d'écrire des fichiers sur la carte SD. La 3DS peut lire les cartes SD formatées en MBR/FAT32.
+  + You may want to check your SD card for errors using [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), or [F3XSwift (Mac)](f3xswift-(mac)).
+* While we believe that custom firmware is safe for online use, there have been online network bans in the past, primarily for cheating and suspicious eShop behavior. 
 
 ___
 
-### Continuer vers [Bien Démarrer](get-started)
+## Continue to [Get Started](get-started)
 {: .notice--primary}
