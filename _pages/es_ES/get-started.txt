@@ -4,62 +4,63 @@ title: "Comencemos"
 
 {% include toc title="Tabla de contenidos" %}
 
-### Lectura requerida
+Before starting this guide, we will see if custom firmware is already installed and check the current system version of your device.
 
-Si has hackeado tu 3DS en el pasado, o has comprado tu 3DS de segunda mano, es posible que tu consola ya tenga custom firmware instalado. Deberías [comprobar tu CFW](checking-for-cfw) antes de continuar.
+#### Sección I - Verificación de CFW
+
+1. Apaga tu consola
+1. Mantén pulsado el botón (Select)
+1. Enciende la consola mientras mantienes presionado (Select)
+1. If you do not see an unusual menu (e.g. "Luma3DS Configuration"), you may proceed to the next section
+
+If you see an unusual menu, STOP - you already have custom firmware! Continue from [here](checking-for-cfw#what-to-do-next).
 {: .notice--warning}
 
-Selecciona la casilla apropiada para su versión en la tabla de más abajo. Ten en cuenta que las columnas "desde" y "hasta" son inclusivas.
+#### Section II - System Version Check
 
-La versión de tu consola puede verse en la esquina inferior derecha de la pantalla superior en la Configuración de la consola.
+1. Ve a Configuración de la Consola
+1. Your system version will be displayed on the bottom right of the top screen (e.g. "Ver. 11.15.0-47U")
 
-![]({{ "/images/screenshots/system-version.png" | absolute_url }})
-{: .notice--info}
+#### Section III - Select a Method
 
-¡Antes de comenzar, deberías revisar tu tarjeta SD con [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), o [F3XSwift (Mac)](f3xswift-(mac)) para chequear errores!
-{: .notice--warning}
-
-Si bien se considera seguro el custom firmware para funciones en línea, ha habido baneos de funciones en línea en el pasado, principalmente por trampas y movimientos sospechosos en la eShop.
-{: .notice--warning}
-
-### Tabla de versiones
-
-La letra y el número después de la versión del sistema (por ejemplo, 11.15.0-**47U**) no son relevantes en esta tabla de versiones.
+Use the version table below to select a method. A few things to note:
+  + The version table below is *inclusive*. For example, "from 11.4.0 to 11.14.0" includes 11.4.0, 11.14.0, and all versions in between.
+  + Software versions do not work the same as decimals. Versions 11.10.0 and above are newer than 11.3.0, and are therefore not compatible with Soundhax.
+  + The number and letter after the system version are not important.
 
 <table>
   <colgroup>
-    <col span="1" style="width: 10%;">
-    <col span="1" style="width: 10%;">
+    <col span="1" style="width: 20%;">
     <col span="1" style="width: 40%;">
   </colgroup>
   <thead>
     <tr>
-      <th style="text-align: center"> Desde</th>
-      <th style="text-align: center">Hasta</th>
-      <th style="text-align: center">Acción</th>
+      <th style="text-align: center">System Version</th>
+      <th style="text-align: center">What to do</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center; font-weight: bold;" colspan="2">11.15.0 (versión más reciente)</td>
+      <td style="text-align: center; font-weight: bold;">11.15.0 (latest version)</td>
       <td style="text-align: center; font-weight: bold;"><a href="seedminer">Seedminer</a></td>
     </tr>
 	  <tr>
-      <td style="text-align: center; font-weight: bold;">11.4.0</td>
-      <td style="text-align: center; font-weight: bold;">11.14.0</td>
+      <td style="text-align: center; font-weight: bold;">11.4.0 to 11.14.0</td>
       <td style="text-align: center; font-weight: bold;">Actualiza tu 3DS a la última versión a través de la aplicación Configuración de la consola</td>
     </tr>
     <tr>
-      <td style="text-align: center; font-weight: bold;">1.0.0</td>
-      <td style="text-align: center; font-weight: bold;">11.3.0</td>
+      <td style="text-align: center; font-weight: bold;">1.0.0 to 11.3.0</td>
       <td style="text-align: center; font-weight: bold;"><a href="installing-boot9strap-(soundhax)">Instalar boot9strap (Soundhax)</a></td>
     </tr>
   </tbody>
 </table>
 
 ---
+#### Alternate Methods
 
-Existen métodos que funcionan en todas las versiones, pero requieren recursos de hardware adicionales. De ser posible, deberías seguir uno de los métodos de modificación por software listados arriba.
+If possible, you should follow one of the software methods listed above.
+
+Otherwise, methods that work on all versions are available, but require additional hardware:
 
 1. [Instalar boot9strap (kartdlphax)](installing-boot9strap-(kartdlphax)) - requiere una 3DS con custom firmware y una copia de Mario Kart 7
 1. [ntrboot](ntrboot) - requiere una flashcart de DS compatible
