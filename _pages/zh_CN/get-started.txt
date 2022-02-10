@@ -4,62 +4,63 @@ title: "新手入门"
 
 {% include toc title="目录内容" %}
 
-### 必读事项
+Before starting this guide, we will see if custom firmware is already installed and check the current system version of your device.
 
-如果你先前已经破解了 3DS 或你的 3DS 是二手的，则有可能你的主机已经在运行自制固件了。 你应该在继续操作前[检查一下](checking-for-cfw)。
+#### 第一步 – 检查自制固件
+
+1. 将主机关机
+1. 按住 “Select” 键
+1. 在按住 “Select” 键的同时按下电源键开机
+1. If you do not see an unusual menu (e.g. "Luma3DS Configuration"), you may proceed to the next section
+
+If you see an unusual menu, STOP - you already have custom firmware! Continue from [here](checking-for-cfw#what-to-do-next).
 {: .notice--warning}
 
-请在下表中按照你的系统版本选择对应的页面。 需要注意的是，下文中所述 “从” 和 “到” 的版本号之间的任何版本均在适用范围。
+#### Section II - System Version Check
 
-你可以在系统设置中上屏的右下角找到你的主机版本号。
+1. 打开系统设置（本体設定 / System Settings）
+1. Your system version will be displayed on the bottom right of the top screen (e.g. "Ver. 11.15.0-47U")
 
-![]({{ "/images/screenshots/system-version.png" | absolute_url }})
-{: .notice--info}
+#### Section III - Select a Method
 
-开始之前，如果你想检测一下 SD 卡是否有错误，那么你可以使用 [H2testw (Windows)](h2testw-(windows))，[F3 (Linux)](f3-(linux)) 或 [F3XSwift (Mac)](f3xswift-(mac))。
-{: .notice--warning}
-
-我们现在相信自制固件可以安全地联网了，不过仍然要提一下：过去的联网封禁大多数是因为作弊和可疑的 eShop 行为造成的。
-{: .notice--warning}
-
-### 版本列表
-
-系统版本后的字母和编号（如，11.15.0-**47U**）与本表无关。
+Use the version table below to select a method. A few things to note:
+  + The version table below is *inclusive*. For example, "from 11.4.0 to 11.14.0" includes 11.4.0, 11.14.0, and all versions in between.
+  + Software versions do not work the same as decimals. Versions 11.10.0 and above are newer than 11.3.0, and are therefore not compatible with Soundhax.
+  + The number and letter after the system version are not important.
 
 <table>
   <colgroup>
-    <col span="1" style="width: 10%;">
-    <col span="1" style="width: 10%;">
+    <col span="1" style="width: 20%;">
     <col span="1" style="width: 40%;">
   </colgroup>
   <thead>
     <tr>
-      <th style="text-align: center">从</th>
-      <th style="text-align: center">到</th>
-      <th style="text-align: center">使用方法</th>
+      <th style="text-align: center">System Version</th>
+      <th style="text-align: center">What to do</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center; font-weight: bold;" colspan="2">11.15.0（最新版）</td>
+      <td style="text-align: center; font-weight: bold;">11.15.0 (latest version)</td>
       <td style="text-align: center; font-weight: bold;"><a href="seedminer">Seedminer</a></td>
     </tr>
 	  <tr>
-      <td style="text-align: center; font-weight: bold;">11.4.0</td>
-      <td style="text-align: center; font-weight: bold;">11.14.0</td>
+      <td style="text-align: center; font-weight: bold;">11.4.0 to 11.14.0</td>
       <td style="text-align: center; font-weight: bold;">通过系统设置更新你的 3DS 到最新版本</td>
     </tr>
     <tr>
-      <td style="text-align: center; font-weight: bold;">1.0.0</td>
-      <td style="text-align: center; font-weight: bold;">11.3.0</td>
+      <td style="text-align: center; font-weight: bold;">1.0.0 to 11.3.0</td>
       <td style="text-align: center; font-weight: bold;"><a href="installing-boot9strap-(soundhax)">安装 boot9strap（通过Soundhax）</a></td>
     </tr>
   </tbody>
 </table>
 
 ---
+#### Alternate Methods
 
-所有的系统版本都有可行的一些方法，但是部分办法需要额外的硬件设备才能进行。 所以如果可以的话，你应该先试试只使用软件的办法。
+If possible, you should follow one of the software methods listed above.
+
+Otherwise, methods that work on all versions are available, but require additional hardware:
 
 1. [安装 boot9strap（通过 kartdlphax）](installing-boot9strap-(kartdlphax)) - 需要一台已经破解了的 3DS，且安装了马里奥赛车 7
 1. [ntrboot](ntrboot) - 需要兼容的 DS 烧录卡
