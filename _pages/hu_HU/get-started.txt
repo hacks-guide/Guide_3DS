@@ -4,62 +4,63 @@ title: "Kezdeti lépések"
 
 {% include toc title="Tartalomjegyzék" %}
 
-### Fontos tudnivalók
+Before starting this guide, we will see if custom firmware is already installed and check the current system version of your device.
 
-Ha korábban már hackelted a 3DS-ed a múltban, vagy a 3DS-t másodkézből vetted, akkor elképzelhető, hogy a konzolod már rendelkezik custom firmware-rel. Érdemes megnézned a[CFW ellenőrzését](checking-for-cfw) mielőtt folytatod.
+#### I. rész - CHF ellenőrzés
+
+1. Kapcsold ki a készüléked
+1. Nyomd le és tartsd nyomva (Select) gombot
+1. Kapcsold be az eszközöd, miközben nyomva tartod a (Select) gombot
+1. If you do not see an unusual menu (e.g. "Luma3DS Configuration"), you may proceed to the next section
+
+If you see an unusual menu, STOP - you already have custom firmware! Continue from [here](checking-for-cfw#what-to-do-next).
 {: .notice--warning}
 
-Válaszd ki a te verziódhoz tartozó oldalt a lenti táblázatból. Vedd figyelembe, hogy a "min." és a "max." mezőkbe a határok is beleértendők.
+#### Section II - System Version Check
 
-Az eszközöd verziója megtalálható a System Settings-ben, a felső képernyő jobb alsó sarkában.
+1. Indítsd el a System Settings alkalmazást
+1. Your system version will be displayed on the bottom right of the top screen (e.g. "Ver. 11.15.0-47U")
 
-![]({{ "/images/screenshots/system-version.png" | absolute_url }})
-{: .notice--info}
+#### Section III - Select a Method
 
-Mielőtt elkezdenéd, tanácsos leellenőrizni az SD kártyádat valamelyik programmal az alábbiak közül: [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), vagy [F3XSwift (Mac)](f3xswift-(mac))!
-{: .notice--warning}
-
-Habár hiszünk abban, hogy az egyedi firmware online használata biztonságos, fordultak elő online hálózati bannolások a múltban, elsősorban csalásért, vagy gyanús eShop aktívitásért.
-{: .notice--warning}
-
-### Verziótáblázat
-
-A betű és a szám a rendszer verziót követően (például: 11.15.0-**47U**) nem releváns ebben a verzió táblában.
+Use the version table below to select a method. A few things to note:
+  + The version table below is *inclusive*. For example, "from 11.4.0 to 11.14.0" includes 11.4.0, 11.14.0, and all versions in between.
+  + Software versions do not work the same as decimals. Versions 11.10.0 and above are newer than 11.3.0, and are therefore not compatible with Soundhax.
+  + The number and letter after the system version are not important.
 
 <table>
   <colgroup>
-    <col span="1" style="width: 10%;">
-    <col span="1" style="width: 10%;">
+    <col span="1" style="width: 20%;">
     <col span="1" style="width: 40%;">
   </colgroup>
   <thead>
     <tr>
-      <th style="text-align: center">min.</th>
-      <th style="text-align: center">max.</th>
-      <th style="text-align: center">Művelet</th>
+      <th style="text-align: center">System Version</th>
+      <th style="text-align: center">What to do</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center; font-weight: bold;" colspan="2">11.15.0 (legutolsó verzió)</td>
+      <td style="text-align: center; font-weight: bold;">11.15.0 (latest version)</td>
       <td style="text-align: center; font-weight: bold;"><a href="seedminer">Seedminer</a></td>
     </tr>
 	  <tr>
-      <td style="text-align: center; font-weight: bold;">11.4.0</td>
-      <td style="text-align: center; font-weight: bold;">11.14.0</td>
+      <td style="text-align: center; font-weight: bold;">11.4.0 to 11.14.0</td>
       <td style="text-align: center; font-weight: bold;">Frissítsd a 3DS-ed a legutolsó verzióra a System Settings-en keresztül</td>
     </tr>
     <tr>
-      <td style="text-align: center; font-weight: bold;">1.0.0</td>
-      <td style="text-align: center; font-weight: bold;">11.3.0</td>
+      <td style="text-align: center; font-weight: bold;">1.0.0 to 11.3.0</td>
       <td style="text-align: center; font-weight: bold;"><a href="installing-boot9strap-(soundhax)">Boot9strap telepítése (Soundhax)</a></td>
     </tr>
   </tbody>
 </table>
 
 ---
+#### Alternate Methods
 
-Számos az összes verziónál használható metódus elérhető, de további hardvert igényelnek. Ha lehetséges, kövesd az alábbi metódusok egyikét inkább.
+If possible, you should follow one of the software methods listed above.
+
+Otherwise, methods that work on all versions are available, but require additional hardware:
 
 1. [Boot9strap telepítése (kartdlphax)](installing-boot9strap-(kartdlphax)) - egy 3DS-t igényel egyedi firmware-rel és egy Mario Kart 7 másolatot
 1. [ntrboot](ntrboot) - kompatibilis DS flashcard-ra van szükség hozzá
