@@ -10,13 +10,13 @@ title: "安裝 boot9strap (透過 USM)"
 
 我們可以利用 BannerBomb3 這個現有的漏洞進行以下操作。
 
-為達到這點，我們將使用你主機的系統加密金鑰 (movable.sed) 來建構一個可使用的 DSiWare 系統備份，以便將已修改後的 WiFi 設定檔注入至你的 WiFi 連線清單中。
+To accomplish this, we use your system's encryption key (movable.sed) to build a DSiWare backup that exploits the system in order to inject the exploited WiFi profile into your connections list.
 
 一旦 WiFi 設定檔被注入，我們將會使用到 SAFE_MODE 來繼續此教學。 SAVE_MODE 是一個所有的 3DS 主機都存在的修復功能，我們之後將用它來啟動已修改後的 WiFi 設定檔。
 
 這些操作在美、歐、日、韓版可用，可透過系統版本號末尾的 「U、E、J、K」 字元來辨別。
 
-如果你的「L/R」鍵、「上」鍵、「A」鍵中的其中一個按鍵壞了，那您將得使用[另類的 Seedminer](bannerbomb3) 才能繼續。 若您需要幫助，請加入 [Discord 上的 Nintendo Homebrew 伺服器](https://discord.gg/MWxPgEp) 並使用英文求助。
+If your (Right/Left Shoulder), (D-Pad Up), or (A) buttons do not work, you will need to follow [an alternate branch of Seedminer](bannerbomb3). 若您需要幫助，請加入 [Discord 上的 Nintendo Homebrew 伺服器](https://discord.gg/MWxPgEp) 並使用英文求助。
 {: .notice--warning}
 
 ### 必備項目
@@ -64,7 +64,7 @@ title: "安裝 boot9strap (透過 USM)"
 1. 按下『OK』以允許更新
   + 此步驟將不會進行任何更新， 這只是觸發漏洞的一部分。
 1. 按下「I accept（我同意/同意します）」鍵以接受聲明條款
-1. 更新最終將失敗，並顯示 '003-1099 ' 的錯誤。 這也是觸發漏洞的一部分
+1. The update will eventually fail, with the error code `003-1099`. 這也是觸發漏洞的一部分
 1. 當系統提示您『你想要配置網路設置嗎? (Would you like to configure Internet settings?)』時，點選『Yes』
 1. 在接下來出現的選單中，移動至 `連接點 1(Connection 1)` -> `更改設定(Change Settings)` -> `下一頁 (右箭頭)` -> `代理設置(Proxy Settings)` -> `詳細設置(Detailed Setup)`
   + 如[本圖中所示](https://uwuu.ca/images/safemode_highlighted.png)
@@ -73,13 +73,14 @@ title: "安裝 boot9strap (透過 USM)"
 #### 第四節 — 設定 Luma3DS
 
 1. 您的主機將會重啟至 Luma3DS 設定選單中
+  + You can access the Luma3DS configuration menu at any time by powering off, holding SELECT, then powering on your device while still holding SELECT
   + 如果遇到黑屏，[請參見此疑難排解](troubleshooting#boot-related-issues-on-modded-devices)
 1. 透過方向鍵及『A』以開啟下列選項：
   + **"Show NAND or user string in System Settings"**
 1. 按『Start』鍵以存檔並重新啟動系統
 
 在這之後，您的主機會在插入 SD 卡的情況下自動啟動 Luma3DS。
-  + Luma3DS 不會特別在 HOME 主選單中新增任何特別的東西。 如果你的主機已經啟動到了主選單，這代表自製韌體已經在運行了。
+  + Luma3DS does not look any different from the normal HOME Menu. If your console has booted into the HOME Menu, it is running custom firmware.
   + 在下一頁中，我們將會教你複製 Luma3DS 到內存中，使得主機能在沒有 SD 卡的情況下啟動系統。
 
 #### 第五步 — 還原 WiFi 設定檔
