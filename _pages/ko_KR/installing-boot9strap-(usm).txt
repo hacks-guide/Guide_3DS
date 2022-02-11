@@ -10,13 +10,13 @@ SAFE_MODE 펌웨어를 해킹하기 위해, 익스플로잇이 되어있는 Wi-F
 
 이미 존재하는 BannerBomb3 익스플로잇을 사용해 이걸 할 수 있습니다.
 
-이것은 시스템의 암호화 키 (movable.sed)를 이용해 DSiWare 백업을 만들고, 이걸 사용해 인터넷 설정에 익스플로잇을 설치할 수 있도록 만듭니다.
+To accomplish this, we use your system's encryption key (movable.sed) to build a DSiWare backup that exploits the system in order to inject the exploited WiFi profile into your connections list.
 
 그 후, 시스템 복구 모드, SAFE_MODE를 사용해 인터넷 설정을 활용화 시킵니다.
 
 이 설명서는 미주, 유럽, 일본, 그리고 한국 지역 기기들 (시스템 버전 다음 글짜가 U, E, J, 아니면 K 인 경우) 와 호환됩니다.
 
-만약 L/R 어깨 버튼, 위 십자 패드, 또는 A 버튼이 동작되지 않다면, [다른 Seedminer 방법](bannerbomb3)를 따라야 합니다. 이 방법에 도움이 필요하다면, [Discord의 Nintendo Homebrew](https://discord.gg/MWxPgEp)에서 영어로 도움을 요청해 주세요.
+If your (Right/Left Shoulder), (D-Pad Up), or (A) buttons do not work, you will need to follow [an alternate branch of Seedminer](bannerbomb3). 이 방법에 도움이 필요하다면, [Discord의 Nintendo Homebrew](https://discord.gg/MWxPgEp)에서 영어로 도움을 요청해 주세요.
 {: .notice--warning}
 
 ### 준비물
@@ -64,7 +64,7 @@ SAFE_MODE 펌웨어를 해킹하기 위해, 익스플로잇이 되어있는 Wi-F
 1. Press "OK" to accept the update
   + 실제로 업데이트를 하는 것은 아닙니다. 이것은 익스플로잇의 일부입니다
 1. Press "I accept" to accept the terms and conditions
-1. 이 업데이트는 에러 코드 `003-1099` 와 같이 실패를 할 겁니다. 이것은 의도적 행동입니다
+1. The update will eventually fail, with the error code `003-1099`. 이것은 의도적 행동입니다
 1. When asked "Would you like to configure Internet settings?", select "Yes"
 1. On the following menu, navigate to `Connection 1` -> `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings` -> `Detailed Setup`
   + [이 (영어) 사진](https://uwuu.ca/images/safemode_highlighted.png) 처럼 하시면 됩니다
@@ -73,13 +73,14 @@ SAFE_MODE 펌웨어를 해킹하기 위해, 익스플로잇이 되어있는 Wi-F
 #### 섹션 IV - Luma3DS 설정
 
 1. 기기는 Luma3DS 구성 메뉴로 부팅되었을 겁니다
+  + You can access the Luma3DS configuration menu at any time by powering off, holding SELECT, then powering on your device while still holding SELECT
   + 검은 화면이 보인다면 이 [문제 해결 가이드](troubleshooting#boot-related-issues-on-modded-devices) 를 참고해 주세요
 1. (A) 버튼과 십자 패드을 이용해 다음 설정을 설정해 주세요:
   + **"Show NAND or user string in System Settings"**
 1. (Start)를 눌러 저장하고 기기를 다시 시작해 주세요
 
 이제 기기는 SD 카드가 삽입되 있는 한 Luma3DS를 기본으로 부팅 됩니다.
-  + Luma3DS는 HOME 메뉴하고 똑같이 보입니다. 만약 기기가 HOME 메뉴로 부팅 됬다면 커스텀 펌웨어가 설치되 있습니다.
+  + Luma3DS does not look any different from the normal HOME Menu. If your console has booted into the HOME Menu, it is running custom firmware.
   + 다음 페이지에서는 SD 카드 없이 부팅 할 수 있도록 Luma3DS를 내장 메모리로 설치할 것 입니다.
 
 #### 섹션 V - Wi-Fi 프로필 복구
