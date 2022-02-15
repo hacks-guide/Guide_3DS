@@ -6,17 +6,17 @@ title: "Boot9strap installeren (USM)"
 
 ### Verplicht te lezen
 
-In order to exploit the SAFE_MODE firmware of our system, we need to inject an exploited WiFi profile.
+Om gebruik te kunnen maken van de SAFE_MODE firmware van ons systeem, moeten we een exploit wifi-profiel injecteren.
 
-We can do this using an existing exploit, BannerBomb3.
+We kunnen dit doen met een bestaande exploit, BannerBomb3.
 
-To accomplish this, we use your system's encryption key (movable.sed) to build a DSiWare backup that exploits the system in order to inject the exploited WiFi profile into your connections list.
+Om dit te bereiken, gebruiken we de encryptiesleutel van uw systeem (movable.sed) om een DSiWare back-up te maken die het systeem exploïteert om het wifi-profiel in je connectielijst te injecteren.
 
-Once the WiFi profile has been injected, we will use SAFE_MODE, which is a recovery feature present on all 3DS consoles, to activate the exploited WiFi profile.
+Wanneer het wifi profiel geïnjecteerd is, gebruiken we SAFE_MODE, een herstelfunctie beschikbaar op alle 3DS consoles, om het exploited wifi profiel te activeren.
 
-These instructions work on USA, Europe, Japan, and Korea region consoles as indicated by the letters U, E, J, or K after the system version.
+Deze instructies werken op USA, Europe, Japan, en Korea regio consoles die worden aangeduid met de letters U, E, J, of K na de systeemversie.
 
-If your (Right/Left Shoulder), (D-Pad Up), or (A) buttons do not work, you will need to follow [an alternate branch of Seedminer](bannerbomb3). For assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+Als je (Rechts/Linkse Shoulder), (D-Pad Up) of (A) knoppen niet werken, moet je [een andere versie van Seedminer](bannerbomb3) volgen. Als je hierbij hulp nodig hebt, join de [Nintendo Homebrew Discord](https://discord.gg/MWxPgEp) en vraag, in het Engels, om hulp.
 {: .notice--warning}
 
 ### Wat je nodig hebt
@@ -26,54 +26,54 @@ If your (Right/Left Shoulder), (D-Pad Up), or (A) buttons do not work, you will 
 
 #### Deel I - Voorbereiding
 
-1. If your device is powered on, power off your device
-1. Open [unSAFE_MODE Exploit Injector](https://3ds.nhnarwhal.com/3dstools/unsafemode.php) on your computer
-1. Upload your movable.sed using the "Choose File" option
-1. Click "Build and Download"
-  + This will download an exploit DSiWare called `F00D43D5.bin` and a SAFE_MODE exploit data file called `usm.bin` inside of a zip archive (`unSAFE_MODE.zip`)
+1. Als je 3DS aanstaat, zet hem dan af
+1. Open [unSAFE_MODE Exploit Injector](https://3ds.nhnarwhal.com/3dstools/unsafemode.php) op je computer
+1. Upload jouw movable.sed met de "Choose File" optie
+1. Selecteer "Build and Download"
+  + Dit zal een exploit DSiWare `F00D43D5.bin` en een SAFE_MODE exploit data bestand genaamd `usm.bin` in een zip-archief (`unSAFE_MODE.zip`) downloaden
 1. Plaats je SD kaart in je computer
 1. Kopieer `boot.firm` en `boot.3dsx` van de Luma3DS `.zip` naar de hoofdmap van je SD-kaart
-  + The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
-1. Copy `usm.bin` from `unSAFE_MODE.zip` to the root of your SD card
+  + De hoofdmap van de SD-kaart verwijst naar de bovenste map van de SD-kaart, waarin je alle mappen op de SD-kaart kunt zien, waaronder de Nintendo 3DS map
+1. Kopieer `usm.bin` van de `unSAFE_MODE.zip` naar de hoofdmap van je SD-kaart
 1. Navigeer naar `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` op je SD-kaart
   + `<ID0>` zal dezelfde zijn die je bij deze stap hebt gebruikt: [Seedminer](seedminer)
   + `<ID1>` is een reeks van 32 characters lang en bevindt zich in de map van de `<ID0>`
-  + If `Nintendo DSiWare` does not exist, create it inside of the `<ID1>`
-1. If there are any existing DSiWare backup files (`<8-character-id>.bin`) in this folder, move them to your PC
-  + This will leave you with an empty Nintendo DSiWare folder. Moving the files to your PC ensures you don't delete any intentional backups
-1. Copy the `F00D43D5.bin` file from `unSAFE_MODE.zip` to the `Nintendo DSiWare` folder
+  + Als `Nintendo DSiWare` niet bestaat, creëer het binnen de `<ID1>`
+1. Als er al DSiWare backup bestanden ("<8-character>.bin") in deze folder bestaan, verplaats ze dan naar je PC
+  + Nu heb je een lege Nintendo DSiWare map over. De bestanden verplaatsen naar je PC zal ervoor zorgen dat je niet opzettelijk back-ups verwijdert
+1. Kopieer het `F00D43D5.bin` bestand van `unSAFE_MODE.zip` naar de `Nintendo DSiWare` map
 
     ![]({{ "/images/screenshots/dsiware-save-location.png" | absolute_url }})
     {: .notice--info}
 
-#### Section II - BannerBomb3
+#### Deel II - BannerBomb3
 
-1. Stop je SD kaart terug in je 3DS
+1. Stop je SD-kaart terug in je 3DS
 1. Zet je 3DS aan
-1. Open System Settings op je apparaat
+1. Open Systeeminstellingen op je apparaat
 1. Navigeer naar `Data Management` -> `DSiWare`
-1. Click on the SD Card section
-  + Your device should show a menu with some text
-1. Select "Inject haxx"
+1. Klik op de SD-kaart tab
+  + Je apparaat zou een menu met tekst moeten tonen
+1. Selecteer "Inject haxx"
   + Je apparaat zal automatisch uitschakelen
 
-#### Section III - unSAFE_MODE
+#### Deel III - unSAFE_MODE
 
-1. With your device still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), then press (Power)
-  + Keep holding the buttons until the device boots into Safe Mode
-1. Press "OK" to accept the update
-  + There is no update. This is part of the exploit
-1. Press "I accept" to accept the terms and conditions
-1. The update will eventually fail, with the error code `003-1099`. This is intended behaviour
-1. When asked "Would you like to configure Internet settings?", select "Yes"
-1. On the following menu, navigate to `Connection 1` -> `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings` -> `Detailed Setup`
-  + This is a [visual representation](https://uwuu.ca/images/safemode_highlighted.png)
-1. Once you see `B9S install SUCCESS` on the top screen, press any button to reboot to Luma Configuration
+1. Als je apparaat nog steeds uitgeschakeld is, houd de volgende knoppen ingedrukt: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), en druk daarna op (Power)
+  + Blijf de knoppen ingedrukt houden totdat het apparaat opstart in Safe Mode
+1. Druk op "OK" om de update te accepteren
+  + Er is geen update. Dit is deel van de exploit
+1. Druk op "I accept" om de algemene voorwaarden te accepteren
+1. De update zal uiteindelijk mislukken, met de foutcode `003-1099`. Dit is verwacht gedrag
+1. Wanneer gevraagd wordt "Would you like to configure Internet settings?" selecteer dan "Yes"
+1. In het volgende menu, navigeer naar `Connection 1` -> `Change Settings` -> `Next Page (rechter pijl)` -> `Proxy Settings` -> `Detailed Setup`
+  + Dit is een [visuele weergave](https://uwuu.ca/images/safemode_highlighted.png)
+1. Zodra je `B9S install SUCCESS op het bovenste scherm ziet, druk je op eender welke knop om opnieuw op te starten naar Luma Configuration
 
 #### Deel IV - Luma3DS configureren
 
-1. Your device should have rebooted into the Luma3DS configuration menu
-  + You can access the Luma3DS configuration menu at any time by powering off, holding SELECT, then powering on your device while still holding SELECT
+1. Je apparaat zou opnieuw moeten opgestart zijn naar het configuratiemenu van Luma3DS
+  + Je kunt altijd het Luma3DS configuratiemenu openen door je 3DS uit te schakelen, SELECT ingedrukt houden en het toestel aan te zetten terwijl je SELECT ingedrukt houdt
   + Als je een zwart scherm krijgt, [volg dan deze handleiding voor probleemoplossingen](troubleshooting#boot-related-issues-on-modded-devices)
 1. Selecteer de volgende opties met de D-pad en de (A) knop:
   + **"Show NAND or user string in System Settings"**
@@ -83,17 +83,17 @@ Op dit moment zal je console standaard opstarten naar Luma3DS zolang de SD-kaart
   + Luma3DS ziet er niet anders uit dan het normale HOME Menu. Als je console in het HOME Menu is opgestart, gebruikt hij custom firmware.
   + Op de volgende pagina kopieer je Luma3DS naar het interne geheugen, zodat je het kan opstarten zonder SD-kaart.
 
-#### Section V - Restoring WiFi Configuration Profiles
+#### Deel V - Wifi-configuratie profielen herstellen
 
 1. Open System Settings op je apparaat
-1. Navigeer naar `Data Management` -> `DSiWare`
-1. Click on the SD Card section
-  + Your device should show a menu with some text
-1. Select "Restore slots"
+1. Ga naar `Data Management` -> `DSiWare`
+1. Klik op de SD kaart sectie
+  + Je apparaat zou een menu met tekst moeten tonen
+1. Selecteer "Restore slots"
   + Je apparaat zal automatisch uitschakelen
 1. Plaats je SD kaart in je computer
-1. Navigeer naar `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` op je SD-kaart
-1. Delete `F00D43D5.bin` from your Nintendo DSiWare folder
+1. Ga naar `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` op je SD-kaart
+1. Verwijder `F00D43D5.bin` uit je Nintendo DSiWare map
 
 ___
 
