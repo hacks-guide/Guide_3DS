@@ -6,40 +6,40 @@ title: "完成安装"
 
 ### 必读事项
 
-The file `boot.firm` is what is launched by boot9strap itself after it finishes loading off of NAND. In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) to patch the device, allowing it to run homebrew software.
+boot9strap 将会在 NAND 里的内容加载完成后启动 `boot.firm` 文件。 在这里，我们将使用 [LumaTeam](https://github.com/LumaTeam/) 开发的 Luma3DS 来修改主机，让主机能够运行各种自制程序。
 
-On this page, we will make critical system file backups and install the following homebrew programs:
+在这一页中，我们将教你如何备份关键系统文件，并安装如下所示的自制程序：
 
-+  **FBI** *(installs CIA formatted applications)*
++  **FBI（用来安装 CIA 格式的程序）**
 +  **Anemone3DS（安装自定义主题）**
 + **Checkpoint（备份和恢复你 3DS/DS 的游戏存档）**
-+  **Universal-Updater** *(a homebrew app store for downloading homebrew from the 3DS over Wi-Fi)*
++  **Universal-Updater（一个在 3DS 上用来下载自制程序的商店）**
 +  **GodMode9（一款多功能工具，可以处理 NAND 和卡带的相关功能）**
 + **Homebrew Launcher Loader（启动 Homebrew Launcher 的快捷方式）**
 +  **DSP1（允许自制程序播放音乐）**
-+  **ctr-no-timeoffset** *(sets the HOME Menu time to match the internal Real-Time Clock)*
++  **ctr-no-timeoffset（将主菜单中显示的时间与 RTC 时钟相匹配）**
 
-It is not recommended to skip downloading any of these applications, as many of them will be used later on this page. At the end of this page, your SD card will be cleaned up by removing unnecessary installation files.
+建议不要跳过下载以上列出的任何程序，因为等会就需要用到它们 我们将在本页结尾处清理你在破解过程中产生的无用文件。
 {: .notice--warning}
 
-If your **New 3DS** was on firmware 2.1.0 before following this guide, you should [restore your NAND backup](godmode9-usage#restoring-a-nand-backup) before continuing.
+如果你的 **New 3DS** 在做本手册之前很早一段时间通过一些手段降级到了 2.1.0，则你应该在继续前先[还原你的 NAND 备份](godmode9-usage#restoring-a-nand-backup)。
 {: .notice--warning}
 
-If your previous CFW setup was EmuNAND-based and you wish to move the contents of your EmuNAND/RedNAND to SysNAND, follow [Move EmuNAND](move-emunand) before following this page. If you don't know what an EmuNAND is, this doesn't apply to you.
+如果你的主机先前破解过，且先前的破解是基于 EmuNAND 的，并且现在你希望将你的 EmuNAND/RedNAND 移植至 SysNAND，请在继续前进行[移植 EmuNAND](move-emunand)。 如果你不知道 EmuNAND 是啥的话，大概你也不需要做这个了。
 {: .notice--info}
 
 ### 你需要准备点啥？
 
-* The latest release of [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) (get the `.cia` file)
-* The v3.7.4 release of [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/tag/v3.7.4) (get the `.cia` file)
-* The latest release of [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest) (get the `.cia` file)
-* The latest release of [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest) (get the `.cia` file)
+* 最新版 [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest)（下载 `.cia` 后缀的文件）
+* v3.7.4 版 [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/tag/v3.7.4)（下载 `.cia` 后缀的文件）
+* 最新版 [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest)（下载 `.cia` 后缀的文件）
+* 最新版 [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest)（下载 `.cia` 后缀的文件）
 
-* The latest release of [ctr-no-timeoffset](https://github.com/ihaveamac/ctr-no-timeoffset/releases/latest) (get the `.3dsx` file)
-* The latest release of [DSP1](https://github.com/zoogie/DSP1/releases/latest) (get the `.3dsx` file)
+* 最新版 [ctr-no-timeoffset](https://github.com/ihaveamac/ctr-no-timeoffset/releases/latest)（下载 `.3dsx` 后缀的文件）
+* 最新版 [DSP1](https://github.com/zoogie/DSP1/releases/latest)（下载 `.3dsx` 后缀的文件）
 
-* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) (get both the `.cia` and `.3dsx` files)
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (get the GodMode9 `.zip` file)
+* 最新版 [FBI](https://github.com/Steveice10/FBI/releases/latest)（下载 `.cia` 和 `.3dsx` 后缀的文件）
+* 最新版 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)（下载 GodMode9 `.zip` 文件）
 
 ### 操作步骤
 
@@ -48,10 +48,10 @@ If your previous CFW setup was EmuNAND-based and you wish to move the contents o
 1. 将主机关机
 1. 将你的 SD 卡插入电脑
 1. 检查你的 SD 卡根目录是否有一个叫 `cias` 的文件夹，如果没有则手动新建一个
-1. Copy all of the CIA files (`Anemone3DS.cia`, `Checkpoint.cia`, `FBI.cia`, `Homebrew_Launcher.cia`, and `Universal-Updater.cia`) to the `/cias/` folder on your SD card
+1. 复制所有 CIA 文件（`Anemone3DS.cia`、`Checkpoint.cia`、`FBI.cia`、`Homebrew_Launcher.cia` 和 `Universal-Updater.cia`）到你 SD 卡上的 `/cias/` 文件夹
 1. 检查 SD 卡的根目录是否存在一个名为 `3ds` 的文件夹，如果没有则手动新建一个
     + 这个文件夹是用来存放 Homebrew 自制程序的；和主机自动生成的 `Nintendo 3DS` 文件夹无关。
-1. Copy all of the 3DSX files (`ctr-no-timeoffset.3dsx`, `DSP1.3dsx`, and `FBI.3dsx`) to the `/3ds/` folder on your SD card
+1. 将所有的 3DSX 文件（`ctr-no-timeoffset.3dsx`、`DSP1.3dsx` 和 `FBI.3dsx`) 复制到 SD 卡的 `/3ds/` 文件夹中
 1. 如果 SD 卡的 `luma` 文件夹下没有一个名为 `payloads` 的文件夹，那么请新建一个
 1. 将 GodMode9 `.zip` 中的 `GodMode9.firm` 复制到你SD卡的 `/luma/payloads/` 文件夹中
 1. 将 GodMode9 `.zip` 中的整个 `gm9` 文件夹复制到 SD 卡的根目录下
@@ -63,7 +63,7 @@ If your previous CFW setup was EmuNAND-based and you wish to move the contents o
     ![]({{ "/images/screenshots/godmode9-location.png" | absolute_url }})
     {: .notice--info}
 
-These screenshots indicate the minimum SD card layout that is required to follow this page. You may have extra files or folders on your SD card, depending on your previous setup or the method that you followed.
+以上截图为遵循本页面步骤 SD 卡所需的文件及文件夹。 你的 SD 卡中可能会多出一些文件或者文件夹，取决于你先前做了什么教程。
 
 #### 第二步 – 更新系统
 
@@ -87,15 +87,15 @@ These screenshots indicate the minimum SD card layout that is required to follow
 1. 运行“下载通信(Download Play)”程序
 1. 此时你的主机应该会启动Homebrew Launcher了
 
-#### Section IV - RTC and DSP Setup
+#### 第四步 — 调整 RTC 及 DSP
 1. 从自制程序列表中运行 ctr-no-timeoffset
 1. 按 “A” 键来将偏移设置为 0
   + （之后会设置）这个操作将把 RTC 日期和时间同步为系统时间
 1. 按 “Start” 键返回到 Homebrew Launcher
 1. 启动 DSP1 应用
-1. Once it has completed, press (B) to self-delete the app and return to the Homebrew Launcher
+1. 处理完毕后，按 “B” 键自动删除该应用程序并返回到主菜单
 
-#### Section V - Installing CIAs
+#### 第五步 – 安装CIA
 1. 从自制程序列表中找到并启动 FBI
 1. 进入到 `SD` -> `cias`
 1. 选择 “\<current directory>”
@@ -158,24 +158,24 @@ These screenshots indicate the minimum SD card layout that is required to follow
 
 ___
 
-You're done! Custom firmware is now fully configured on your device.
+搞定！ 你的主机现在已经配置好自制固件了。
 {: .notice--success}
 
 #### 信息与注意事项
 
 {% capture notice-6 %}
-Here are some key combos that you should know:
+以下是你可能会用到的一些快捷键：
 
-- Holding (Select) on boot will launch the Luma3DS configuration menu.
-- Holding (Start) on boot will launch GodMode9, or if you have multiple payloads in `/luma/payloads/`, the Luma3DS chainloader.
-- By default, pressing (Left Shoulder) + (Down D-Pad) + (Select) while in 3DS mode will open the Rosalina menu, where you can check system information, take screenshots, enable cheats, and more. This can be changed from the Rosalina menu.
-- Holding (Start) + (Select) + (X) on boot will dump `boot9.bin`, `boot11.bin`, and `otp.bin` to the `boot9strap` folder on your SD card.
+- 关机时按住 “Select” 键，然后按下电源键开机以进入 Luma3DS 的配置菜单。
+- 关机时按住 “Start” 键，然后按下电源键开机以启动 Godmode9；如果 `/luma/payloads/` 文件夹下有多个 payload 文件，则会自动进入 Luma3DS chainloader。
+- 默认情况下，在主机开机时按下 L + ↓ + SELECT 键将会打开 Rosalina 菜单，它有用来检查系统信息、截屏、开启金手指等等的功能。 Rosalina 菜单的快捷键可以在其中更改。
+- 关机时，按住 START + SELECT + X 键，然后按下电源键开机，这将会导出 `boot9.bin`、`boot11.bin` 和 `otp.bin` 到你的 SD 卡的 `boot9strap` 文件夹中
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
 
-See [here](https://3ds.eiphax.tech/tips.html) for some suggestions on things to do with custom firmware.
+你也可以[参考这里](https://3ds.eiphax.tech/tips.html)来获取一些有关使用自制固件的相关建议。
 {: .notice--info}
 
-For information on using GodMode9's various features, check out the [GodMode9 Usage](godmode9-usage) and [Dumping Titles and Game Cartridges](dumping-titles-and-game-cartridges) pages.
+有关使用 GodMode9 的各种功能的信息，请查阅 [GodMode9 使用教程](godmode9-usage)以及[导出程序和游戏卡带文件](dumping-titles-and-game-cartridges)页。
 {: .notice--info}
