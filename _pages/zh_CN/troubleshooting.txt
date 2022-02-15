@@ -22,7 +22,7 @@ title: "问题排查"
 
 #### Secret Sector - File not found
 
-You are missing `secret_sector.bin` from the `boot9strap` folder, or the `boot9strap` folder is misnamed. Download [secret_sector.bin](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce) using a torrent client, and place it in the `boot9strap` folder.
+你忘记把 `secret_sector.bin` 放进 SD 卡根目录的 `boot9strap` 文件夹了，或是创建 `boot9strap` 文件夹的时候打错了名字。 使用 BT 客户端下载 [secret_sector.bin](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce)，然后把它放到 SD 卡里的 `boot9strap` 文件夹中。
 
 #### 看到了其他的东西
 
@@ -32,23 +32,23 @@ You are missing `secret_sector.bin` from the `boot9strap` folder, or the `boot9s
 
 ## Seedminer
 
-### Multiple long folder names in Nintendo 3DS folder
+### Nintendo 3DS 文件夹内有多个 32 位乱码长的文件夹
 
 ![]({{ "/images/screenshots/multiple-id0.png" | absolute_url }})
 {: .notice--info}
 
-This occurs when you use your SD card in multiple 3DS devices and is intended to prevent inadvertently merging data that would not be valid on other devices. To figure out which long folder name is correct for your 3DS, follow these instructions:
+这通常会在你把 SD 卡插在多台主机上使用过后出现。是任天堂为了防止无意间将其它主机的数据合并在一起而故意设计的。 为了确定哪个文件夹是你 3DS 的，请按照以下步骤做：
 
-1. Rename the `Nintendo 3DS` folder to `BACKUP_Nintendo 3DS`
-1. Reinsert your SD card into your device and power on your device
+1. 将 `Nintendo 3DS` 文件夹重命名为 `BACKUP_Nintendo 3DS`
+1. 重新将 SD 卡插入主机并开机
 1. 等待主机生成存放在 SD 卡中的数据
-	+ Your applications will have disappeared. This is normal and will be resolved shortly
-1. Power off your device and reinsert your SD card into your computer
+	+ 你先前安装的程序会暂时消失。 这是正常的，且接下来就会还原回来。
+1. 关机并将 SD 卡重新插入你的电脑
 1. 打开你 SD 卡的 `Nintendo 3DS` 文件夹
-1. Copy the 32 character long name of the folder you see
-	+ This is your true ID0 that you will use in [Section II of Seedminer](seedminer#section-ii---seedminer)
-1. Delete the `Nintendo 3DS` folder
-1. Rename the `BACKUP_Nintendo 3DS` folder to `Nintendo 3DS`
+1. 复制你看到的 32 位字符文件夹的名称
+	+ 这也就是你在 [Seedminer 第二步](seedminer#section-ii---seedminer) 中需要使用的 ID0
+1. 删除 `Nintendo 3DS` 文件夹
+1. 将 `BACKUP_Nintendo 3DS` 文件夹重命名为 `Nintendo 3DS`
 
 ### Bruteforce Movable 直接跳到了 step 4
 
@@ -74,7 +74,7 @@ This occurs when you use your SD card in multiple 3DS devices and is intended to
 
 这说明你放的 `otherapp.bin` 文件有问题。 下载最新版本的 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) 并将其放在你 SD 卡的根目录中。 不要在没有看到 `.bin` 后缀的时候手动重命名它。
 
-### "An error has occurred. Hold down the POWER button to turn off the power..."（黑屏，下屏显示白底的文字）
+### “An error has occurred. Hold down the POWER button to turn off the power..."（黑屏，下屏显示白底的文字）
 
 你可能把 `00000001.sav` 和（或者） `otherapp.bin` 文件的位置搞错了。 确保 `00000001.sav` 放在了 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` 中，`otherapp.bin` 放在了 SD 卡的根目录中。
 
@@ -146,7 +146,7 @@ This occurs when you use your SD card in multiple 3DS devices and is intended to
 
 ### DSiWare 数据管理菜单崩溃，而非跳转至 USM 菜单
 
-Ensure that `F00D43D5.bin` is the only file in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`. 如果确定没问题的话，尝试重新使用 [unSAFE_MODE 漏洞注入器](https://3ds.nhnarwhal.com/3dstools/unsafemode.php)重新创建文件。 如果还是不行，则可能是因为自制固件在此主机上被卸载过一次，从而导致此方法失效。 如果是这样，请加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp)以寻求帮助。
+确保 `F00D43D5.bin` 是 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 里面的唯一文件。 如果确定没问题的话，尝试重新使用 [unSAFE_MODE 漏洞注入器](https://3ds.nhnarwhal.com/3dstools/unsafemode.php)重新创建文件。 如果还是不行，则可能是因为自制固件在此主机上被卸载过一次，从而导致此方法失效。 如果是这样，请加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp)以寻求帮助。
 
 ---
 
@@ -154,15 +154,15 @@ Ensure that `F00D43D5.bin` is the only file in `Nintendo 3DS` -> `<ID0>` -> `<ID
 
 ### DSiWare 数据管理没有崩溃
 
-`F00D43D5.bin` is missing from `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`. 请确保 `Nintendo DSiWare` 拼写和空格位置正确。 不区分大小写。
+`F00D43D5.bin` 没有放进 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`。 请确保 `Nintendo DSiWare` 拼写和空格位置正确。 不区分大小写。
 
 ### DSiWare 数据管理里面显示了一个问号图标的程序
 
-你放的 `F00D43D5.bin` 文件可能有问题（损坏或被用于错误的 3DS）。 Re-create your `F00D43D5.bin` file with the [BannerBomb3 tool](https://3ds.nhnarwhal.com/3dstools/bannerbomb3.php), ensuring that you use the `movable.sed` file for your console.
+你放的 `F00D43D5.bin` 文件可能有问题（损坏或被用于错误的 3DS）。 使用 [BannerBomb3 Tool](https://3ds.nhnarwhal.com/3dstools/bannerbomb3.php) 重新创建 `F00D43D5.bin` 文件，且确保你使用的 `movable.sed` 文件是你这台主机的。
 
 ### DSiWare 数据管理菜单没有闪烁紫屏就崩溃了
 
-Ensure that `F00D43D5.bin` is the only file in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`. 如果确定没问题的话，尝试重新使用 [BannerBomb3 tool](https://3ds.nhnarwhal.com/3dstools/bannerbomb3.php) 重新创建文件。 如果还是不行，则可能是因为自制固件在此主机上被卸载过一次，从而导致此方法失效。 如果是这样，请加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp)以寻求帮助。
+确保 `F00D43D5.bin` 是 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 里面的唯一文件。 如果确定没问题的话，尝试重新使用 [BannerBomb3 tool](https://3ds.nhnarwhal.com/3dstools/bannerbomb3.php) 重新创建文件。 如果还是不行，则可能是因为自制固件在此主机上被卸载过一次，从而导致此方法失效。 如果是这样，请加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp)以寻求帮助。
 
 ---
 
@@ -174,7 +174,7 @@ Ensure that `F00D43D5.bin` is the only file in `Nintendo 3DS` -> `<ID0>` -> `<ID
 
 ### 没有出现 “Haxxxxxxxxx!”
 
-你放的 `42383821.bin` 文件有问题（丢失、放错位置或者损坏）。 Re-create your files with the [Fredtool](https://3ds.nhnarwhal.com/3dstools/fredtool.php) website and ensure that you place the `42383821.bin` file from `output.zip` -> `hax` in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`.
+你放的 `42383821.bin` 文件有问题（丢失、放错位置或者损坏）。 使用 [Fredtool](https://3ds.nhnarwhal.com/3dstools/fredtool.php) 重新创建文件，确保 `42383821.bin` 是从 `output.zip` -> `hax` 取出来的，且放在了 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 中。
 
 ### DS 连接设置正常启动了
 
@@ -279,7 +279,7 @@ Ensure that `F00D43D5.bin` is the only file in `Nintendo 3DS` -> `<ID0>` -> `<ID
 	+ 按住 “Select” 键
 	+ 在按住 “Select” 键的同时按下电源键开机
 	+ 如果 “ARM11 exception handlers disabled” 已被勾选，则请取消勾选它
-	+ If your device now boots to the "An exception occurred" screen, follow [My device boots to an error screen](troubleshooting#my-device-boots-to-an-error-screen)
+	+ 如果现在开机会出现 “An exception occurred” 的报错，请按照[主机开机报错](troubleshooting#my-device-boots-to-an-error-screen)进行操作
 1. 尝试启动到恢复模式并升级系统：
 	+ 将主机关机
 	+ 按住 “L” + “R” + “↑” + "A" 四个键
@@ -308,14 +308,14 @@ ARM11 异常处理器已被禁用，或主机未安装自制固件。 尝试启�
 
 ### “Bootrom Error” 蓝屏
 
-你的主机可能由于硬件问题变砖了。 你可能需要买一张支持 ntrboot 的烧录卡来重新安装 boot9strap 以尝试修复主机。 This may also indicate a hardware issue that cannot be fixed. 无论如何，请先加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp) 并说英文求助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497。
+你的主机可能由于硬件问题变砖了。 你可能需要买一张支持 ntrboot 的烧录卡来重新安装 boot9strap 以尝试修复主机。 这也可能是无法修复的硬件问题。 无论如何，请先加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp) 并说英文求助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497。
   + 还有可能有人设了一个看上去就像变砖了的开机画面。 尝试将主机开机，在蓝屏上等 5 分钟。
 
 ---
 
 ## 破解主机的功能相关问题
 
-### DSi / DS functionality is broken or has been replaced with Flipnote Studio
+### DSi / DS 功能损坏，或变成了 Flipnote Studio
 
 1. 下载最新版的 [TWLFix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest) （下载 `.3dsx` 文件）
 1. 关闭你的主机的电源
@@ -342,7 +342,7 @@ ARM11 异常处理器已被禁用，或主机未安装自制固件。 尝试启�
 
 ## 其他问题
 
-### Clear HOME Menu extdata
+### 清除主菜单的外部存储文件
 
 1. 将主机关机
 1. 将你的 SD 卡插入到电脑
@@ -356,7 +356,7 @@ ARM11 异常处理器已被禁用，或主机未安装自制固件。 尝试启�
   + **台湾版**: `000000B1`
 1. 将SD卡重新插入你的主机
 
-### Clear HOME Menu theme data
+### 清除主菜单的主题数据
 
 1. 将主机关机
 1. 将你的 SD 卡插入到电脑
