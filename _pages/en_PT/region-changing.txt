@@ -8,29 +8,31 @@ title: "Region Changing"
 
 This is an add-on section for region changing your CFW SysNAND. This is done by installing the 11.15.0 CTRTransfer image for the region you want to switch to.
 
-Note that region changing is almost completely unnecessary since Luma3DS supports out-of-region games and individual title [Locale Emulation](https://github.com/AuroraWright/Luma3DS/wiki/Optional-features). Additionally, running NDS games with alternative out-of-region languages is supported by [TWiLightMenu++](https://github.com/DS-Homebrew/TWiLightMenu/releases).
-
-To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [Deluge](http://dev.deluge-torrent.org/wiki/Download).
+Note that region changing is almost completely unnecessary since Luma3DS supports out-of-region games and individual title [Locale Emulation](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features). Additionally, running NDS games with alternative out-of-region languages is supported by [TWiLightMenu++](https://github.com/DS-Homebrew/TWiLightMenu/releases).
 
 Note that if ye have any payload files other than `GodMode9.firm` in th' `/luma/payloads/` folder on ye SD card, holdin' (Start) on boot gunna display a "chainloader menu" where ye gunna have to use th' D-Pad 'n th' (A) button to select "GodMode9" fer these instructions.
 
-This process will unlink your NNID from the system because it will no longer be compatible with your NNID. NNIDs are locked to the region of your device that created them and cannot be transferred between regions.
-{: .notice--warning}
+{% capture notice-6 %}
+If you change the region of your device:
 
-After this process, **you will not be able to access the eShop**. This includes any feature that uses an NNID, such as game updates, purchasing DLC, or online play in certain games. Region changing to your original region will usually not fix this issue.
-{: .notice--warning}
++ Your NNID, if you have one, will be unlinked. NNIDs are locked to the region that they were created in.
++ You may not be able to access the eShop, even if you [delete your eShop account](https://en-americas-support.nintendo.com/app/answers/detail/a_id/74/~/how-to-delete-a-nintendo-eshop-account) beforehand. This is because certain titles tend to remain linked to the 3DS, even after account deletion (especially on New 3DS).
+	+ The eShop contains not only games, but also game updates and DLC. Updates are usually required for online play.
++ **You will not be able to uninstall custom firmware without bricking the device!** If you intend to uninstall custom firmware in the future, you **MUST** restore your NAND backup that was created before the region change.
+{% endcapture %}
 
-Note that occasionally the eShop will inexplicably still not work for devices that it should work for. This is entirely to do with Nintendo's servers, and I really do not have any control over it. Additionally, note that occasionally the eShop will inexplicably work for devices that it should not (such as some New 3DSs). The cause for this is currently unknown.
-
-Region changing using CTRTransfer (which this method uses) seems to cause reboot patches to break. The cause for this is unknown, but Old 3DS users, for now, will be unable to play extended memory mode games (such as Monster Hunter, Super Smash Bros, and Pokémon Sun / Moon) until they format their devices.
+<div class="notice--danger">{{ notice-6 | markdownify }}</div>
 
 Ye MUST have already installed Luma3DS 'n boot9strap to be usin' 'tis.
 {: .notice--danger}
 
-Performing a CTRTransfer may break extended memory mode games (Monster Hunter, Super Smash Bros, Pokemon Sun/Moon) on Old 3DS/2DS devices. If this occurs, you will need to format the device (using TinyFormat or System Settings) to fix the issue.
+Performing a region change may break extended memory mode games (Monster Hunter, Super Smash Bros, Pokemon Sun/Moon) on Old 3DS/2DS devices. If this occurs, you will need to format the device (using TinyFormat or System Settings) to fix the issue.
 {: .notice--warning}
 
 ### What You Need
+
+The CTRTransfer links require a torrent client to download, like [Deluge](http://dev.deluge-torrent.org/wiki/Download) or [qBitTorrent](https://www.qbittorrent.org/download.php).
+{: .notice--warning}
 
 * The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) *(the`.3dsx` file)*
