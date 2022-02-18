@@ -22,7 +22,7 @@ Terwijl we wel geloven dat custom firmware veilig is voor online gebruik, zijn e
 Note that the following required file named `secret_sector.bin` is the same one that was found in the various `data_input.zip` file versions. If you already have that file on your disk somewhere, you can use that one instead of downloading the one below.
 {: .notice--info}
 
-Note that, only on New 3DS, `secret_sector.bin` is needed to revert the arm9loaderhax exploit, which is why it is not needed for the installation of boot9strap on a stock console. If you do not have a New 3DS, you do not need `secret_sector.bin`.
+Note that, only on New 3DS, `secret_sector.bin` is needed to revert the arm9loaderhax exploit, which is why it is not needed for the installation of boot9strap on a stock console. Als je geen New 3DS hebt, heb je `secret_sector.bin` niet nodig.
 {: .notice--info}
 
 * <i class="fa fa-magnet" aria-hidden="true" title="Dit is een magnet link. Gebruik een torrent client om dit bestand te downloaden."></i> - **Enkel voor New 3DS gebruikers:** [secret_sector.bin](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce)
@@ -41,33 +41,33 @@ Voor alle stappen in dit gedeelte, moet je de bestaande bestanden op je SD-kaart
 1. Plaats je SD-kaart in je computer
 1. Kopieer `boot.firm` en `boot.3dsx` van de nieuwste Luma3DS versie `.zip` naar de hoofdmap van je SD-kaart
   + De hoofdmap van de SD-kaart verwijst naar de bovenste map van de SD-kaart, waarin je alle mappen op de SD-kaart kunt zien, waaronder de Nintendo 3DS map
-1. Copy `arm9loaderhax.bin` from the v7.0.5 Luma3DS `.7z` to the root of your SD card
-1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the `/luma/payloads/` folder on your SD card
-  + If the `luma` or `payloads` folder doesn't exist, create them
-  + Delete any other existing `.bin` payloads (`GodMode9.bin`, `Decrypt9WIP.bin`, `Hourglass9.bin`, etc.) in the `/luma/payloads/` folder on your SD card as they will not be compatible with boot9strap compatible Luma3DS versions
+1. Kopieer `arm9loaderhax.bin` van de v7.0.5 Luma3DS `.zip` naar de hoofdmap van je SD-kaart
+1. Kopieer `SafeB9SInstaller.bin` van de SafeB9SInstaller `.zip` naar de `/luma/payloads/` map op je SD-kaart
+  + Als de `luma` of de `payloads` map niet bestaat, maak ze dan aan
+  + Verwijder alle andere bestaande `.bin` payloads (`GodMode9.bin`, `Decrypt9WIP.bin`, `Hourglass9.bin`, etc.) in de `/luma/payloads/` map op je SD kaart, omdat ze niet compatibel zullen zijn met boot9strap compatibele Luma3DS versies
 1. Maak een map genaamd `boot9strap` op de hoofdmap van je SD-kaart
 1. Kopieer `boot9strap.firm` en `boot9strap.firm.sha` van de boot9strap `.zip` naar de `/boot9strap/` map op je SD-kaart
-1. **New 3DS Users Only:** Copy `secret_sector.bin` to the `/boot9strap/` folder on your SD card
+1. **Enkel voor New 3DS gebruikers:** Kopieer `secret_sector.bin` naar de `/boot9strap/` map op je SD-kaart
 
     ![]({{ "/images/screenshots/a9lh-to-b9s-root-layout.png" | absolute_url }})
     {: .notice--info}
 
 1. Stop je SD-kaart terug in je 3DS
 
-#### Section II - Installing boot9strap
+#### Deel II - Boot9strap installeren
 
-1. Boot your device while holding (Start) to launch SafeB9SInstaller
-  + If you see the luma configuration screen instead of SafeB9SInstaller, simply press (Start), then shut down your 3DS and try again
-  + If this gives you an error, try either using a new SD card or formatting your current SD card (backup existing files first)
-1. Wacht tot alle controles zijn voltooid
+1. Start je 3DS terwijl je (Start) ingedrukt houdt om SafeB9SInstaller te starten
+  + Als je het luma configuratiescherm ziet in plaats van SafeB9SInstaller, druk op de (Start) knop, zet je 3DS uit en probeer het opnieuw
+  + Als je nu een foutmelding krijgt, probeer dan een nieuwe SD-kaart of probeer je SD-kaart te formatteren (maak eerst een backup van bestaande bestanden)
+1. Wacht tot alle veiligheidscontroles zijn voltooid
   + Als je een "OTP Crypto Fail" foutmelding krijgt, download <i class="fa fa-magnet" aria-hidden="true" title="Dit is een magnet link. Gebruik een torrent client om dit bestand te downloaden."></i> - [aeskeydb.bin](magnet:?xt=urn:btih:d25dab06a7e127922d70ddaa4fe896709dc99a1e&dn=aeskeydb.bin&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce), zet het dan in de `/boot9strap/` map op je SD-kaart en probeer dit het nog eens
 1. Wanneer erom gevraagd word druk je de juiste knoppen in om boot9strap te installeren
 1. Zodra het voltooid is, druk op (A) om je apparaat opnieuw op te starten
-  + If your device shuts down on boot, ensure that you have copied `boot.firm` from the Luma3DS `.zip` to the root of your SD card
+  + Als je 3DS uit gaat als je hem opstart, controleer of je `boot.firm` van de Luma3DS `.zip` hebt gekopieerd naar de hoofdmap van je SD-kaart
 
 #### Deel III - Luma3DS configureren
 
-1. In the Luma3DS configuration menu, use the (A) button and the D-Pad to turn on the following:    
+1. In het Luma3DS configuratiemenu, gebruik de (A) knop en de D-Pad om het volgende aan te zetten:    
   + **"Show NAND or user string in System Settings"**
 1. Druk op (Start) om op te slaan en opnieuw op te starten
 
