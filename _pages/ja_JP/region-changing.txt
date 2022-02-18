@@ -8,32 +8,34 @@ title: "リージョンチェンジ"
 
 This is an add-on section for region changing your CFW SysNAND. This is done by installing the 11.15.0 CTRTransfer image for the region you want to switch to.
 
-現在、Luma3DSはリージョンを問わずにゲームを実行でき、タイトル別の[地域のエミュレート](https://github.com/AuroraWright/Luma3DS/wiki/Optional-features)に対応しているため、リージョンチェンジの需要はあまりありません。 また、地域外の言語のNDSゲームを実行するには[TWiLightMenu++](https://github.com/DS-Homebrew/TWiLightMenu/releases)が必要です。
-
-このページの [マグネット](https://wikipedia.org/wiki/Magnet_URI_scheme) リンクを使用するには、[Deluge](http://dev.deluge-torrent.org/wiki/Download)のようなTorrentクライアントが必要です。
+Note that region changing is almost completely unnecessary since Luma3DS supports out-of-region games and individual title [Locale Emulation](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features). また、地域外の言語のNDSゲームを実行するには[TWiLightMenu++](https://github.com/DS-Homebrew/TWiLightMenu/releases)が必要です。
 
 SDカードの/luma/payloadsフォルダに
 godmode9.firm以外のペイロードがある場合、
 起動時に (start) を長押しするとchainloaderメニューが表示されます。
 十字キーでgodmode9を選択して　(A) ボタンを押してください。
 
-This process will unlink your NNID from the system because it will no longer be compatible with your NNID. NNIDs are locked to the region of your device that created them and cannot be transferred between regions.
-{: .notice--warning}
+{% capture notice-6 %}
+If you change the region of your device:
 
-このプロセスが終わると、**eShop**にアクセスできなくなります。 これには、ゲームのアップデート、DLCの購入、特定のゲームのオンラインプレイなど、NNIDを使用する機能が含まれます。 地域を元の地域に変更しても、通常この問題は解決されません。
-{: .notice--warning}
++ Your NNID, if you have one, will be unlinked. NNIDs are locked to the region that they were created in.
++ You may not be able to access the eShop, even if you [delete your eShop account](https://en-americas-support.nintendo.com/app/answers/detail/a_id/74/~/how-to-delete-a-nintendo-eshop-account) beforehand. This is because certain titles tend to remain linked to the 3DS, even after account deletion (especially on New 3DS).
+	+ The eShop contains not only games, but also game updates and DLC. Updates are usually required for online play.
++ **You will not be able to uninstall custom firmware without bricking the device!** If you intend to uninstall custom firmware in the future, you **MUST** restore your NAND backup that was created before the region change.
+{% endcapture %}
 
-でも、上記のeShopにアクセスできるデバイスでも、変更後にアクセスできなくなることがありますので、ご注意ください。 これは任天堂のサーバーに関する事情であり、筆者も制御できません。 さらに、eShopはデバイスでは機能しないことがあります (例えば一部のNew 3DS)。 原因はまだ不明です。
-
-CTRTransferを使ってリージョンを変更すると再起動パッチが壊れてしまいます 原因は不明です。これによって、デバイスをフォーマットする前に、Old 3DSのユーザーは拡張メモリーモードを利用したゲーム (例えば、モンスターハンター、大乱闘スマッシュブラザーズ、またはポケモンサン/ムーン) を起動できなくなります。
+<div class="notice--danger">{{ notice-6 | markdownify }}</div>
 
 これを使用するには、Luma3DSとboot9strapをインストールしている必要があります。
 {: .notice--danger}
 
-Performing a CTRTransfer may break extended memory mode games (Monster Hunter, Super Smash Bros, Pokemon Sun/Moon) on Old 3DS/2DS devices. If this occurs, you will need to format the device (using TinyFormat or System Settings) to fix the issue.
+Performing a region change may break extended memory mode games (Monster Hunter, Super Smash Bros, Pokemon Sun/Moon) on Old 3DS/2DS devices. If this occurs, you will need to format the device (using TinyFormat or System Settings) to fix the issue.
 {: .notice--warning}
 
 ### 必要なもの
+
+The CTRTransfer links require a torrent client to download, like [Deluge](http://dev.deluge-torrent.org/wiki/Download) or [qBitTorrent](https://www.qbittorrent.org/download.php).
+{: .notice--warning}
 
 * The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * 最新版の [FBI](https://github.com/Steveice10/FBI/releases/latest) *(the `.3dsx` file)*
