@@ -8,29 +8,31 @@ title: "區碼變更"
 
 This is an add-on section for region changing your CFW SysNAND. 這是透過安裝所選區域的 11.15.0 CTRTransfer 鏡像檔達成的。
 
-**請注意，區碼變更通常是不需要的，因為 Luma3DS 本身就支援跨區遊玩及程式[語碼模擬](https://github.com/AuroraWright/Luma3DS/wiki/Optional-features)的功能。** 另外，您也可透過[TWiLightMenu++](https://github.com/DS-Homebrew/TWiLightMenu/releases)來運行非支援語系的 NDS 遊戲。
-
-本頁面會有些許的[磁力](https://wikipedia.org/wiki/Magnet_URI_scheme)連結，您將需要個像 [Deluge](http://dev.deluge-torrent.org/wiki/Download). 的 BT 種子下載器來下載磁力連結的檔案。
+Note that region changing is almost completely unnecessary since Luma3DS supports out-of-region games and individual title [Locale Emulation](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features). 另外，您也可透過[TWiLightMenu++](https://github.com/DS-Homebrew/TWiLightMenu/releases)來運行非支援語系的 NDS 遊戲。
 
 請注意，如果您在 SD 卡中的 `/luma/payloads/` 資料夾中放有除了 `GodMode9.firm` 的 payload 檔案，在開機時按住『Start』鍵將會顯示一個『加載選單』，從那裏您得透過方向鍵及按鈕『A』選擇『GodMode9』。
 
-本過程將解除您系統與 NNID 間的綁定，因為在改變區域後它們將不再兼容。 由於 NNID 綁定於您的所在區碼，因此您無法在更動區碼後重新使用同帳號。
-{: .notice--warning}
+{% capture notice-6 %}
+If you change the region of your device:
 
-在進行以下指示後，**您將無法正常使用 eShop**。 這包括任何需要使用 NNID 的功能，如遊戲更新、下載 DLC、或使用某些遊戲的線上服務。 還原至原本的區碼通常無法修正此問題。
-{: .notice--warning}
++ Your NNID, if you have one, will be unlinked. NNIDs are locked to the region that they were created in.
++ You may not be able to access the eShop, even if you [delete your eShop account](https://en-americas-support.nintendo.com/app/answers/detail/a_id/74/~/how-to-delete-a-nintendo-eshop-account) beforehand. This is because certain titles tend to remain linked to the 3DS, even after account deletion (especially on New 3DS).
+	+ The eShop contains not only games, but also game updates and DLC. Updates are usually required for online play.
++ **You will not be able to uninstall custom firmware without bricking the device!** If you intend to uninstall custom firmware in the future, you **MUST** restore your NAND backup that was created before the region change.
+{% endcapture %}
 
-注意有時候電子商店 (eShop) 還是沒辦法在應該可以使用的主機上使用。 這部分就是任天堂伺服器那邊的問題了，我沒辦法解決。 另外，有時候電子商店 (eShop) 突然會在正常來說不能使用的主機上 (比如說某些 New 3DS 主機) 變得可以使用。 目前原因仍未知。
-
-透過 CTRTransfer 所達成的區碼變更似乎會使重啟補丁失效。 目前原因還尚待了解中，目前來說，舊型 3DS 的玩家將無法遊玩需要用到『額外記憶體模式』的遊戲 (像是《魔物獵人》、《任天堂明星大亂鬥》、或《神奇寶貝太陽／月亮版》... 等) 直到您格式化主機為止。
+<div class="notice--danger">{{ notice-6 | markdownify }}</div>
 
 您必須先安裝 Luma3DS 和 boot9strap 才能繼續。
 {: .notice--danger}
 
-請注意，在舊 3DS 及 舊 2DS 主機上進行 CTRTransfer，可能會導致需使用擴充記憶體模式的遊戲無法正常運作 (如魔物獵人、超級瑪利歐、精靈寶可夢月亮/太陽)。 若遇到此情形時，您必須重新格式化您的主機以修正此問題 (透過 TinyFormat 或系統設定)。
+Performing a region change may break extended memory mode games (Monster Hunter, Super Smash Bros, Pokemon Sun/Moon) on Old 3DS/2DS devices. 若遇到此情形時，您必須重新格式化您的主機以修正此問題 (透過 TinyFormat 或系統設定)。
 {: .notice--warning}
 
 ### 必備項目
+
+The CTRTransfer links require a torrent client to download, like [Deluge](http://dev.deluge-torrent.org/wiki/Download) or [qBitTorrent](https://www.qbittorrent.org/download.php).
+{: .notice--warning}
 
 * 最新版的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * 最新版的 [FBI 管理器](https://github.com/Steveice10/FBI/releases/latest) *(`.3dsx` 檔案)*
