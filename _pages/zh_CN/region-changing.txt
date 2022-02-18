@@ -8,29 +8,31 @@ title: "区域变更"
 
 本章节将介绍如何更改 SysNAND 的系统区域。 这是通过安装你想要切换到的地区的 11.15.0 CTRTransfer 镜像而达成的。
 
-请注意，Luma3DS 本身就自带了[区域模拟](https://github.com/AuroraWright/Luma3DS/wiki/Optional-features)的功能，这使得区域变更几乎是没有必要的。 顺带一提，你可以使用 [TWiLightMenu++](https://github.com/DS-Homebrew/TWiLightMenu/releases) 来运行其他区域的 NDS 游戏。
-
-你需要一个支持 BT 协议的下载程序，如 [Deluge](http://dev.deluge-torrent.org/wiki/Download) 来下载本教程中的[磁力链](https://zh.wikipedia.org/wiki/%E7%A3%81%E5%8A%9B%E9%93%BE%E6%8E%A5) 。
+Note that region changing is almost completely unnecessary since Luma3DS supports out-of-region games and individual title [Locale Emulation](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features). 顺带一提，你可以使用 [TWiLightMenu++](https://github.com/DS-Homebrew/TWiLightMenu/releases) 来运行其他区域的 NDS 游戏。
 
 请注意，如果你的 SD 卡中的 `/luma/payloads/` 目录中有 `GodMode9.firm` 以外的 `.firm` 文件，那么你在按住 “Start” 键开机的时候，你的主机将不会直接进入到 Godmode9，而会进入到一个叫做 “chainloader menu” 的菜单，这个时候你需要通过十字键来移动红色光标至 “Godmode9” 来启动教程需要的文件。
 
-本过程将会把你的主机系统中的 NNID 绑定移除，因为在区域变更后旧的 NNID 不会兼容新的区域。 NNID 在创建时即被绑定在你主机的区域中，无法在各个区域之间切换。
-{: .notice--warning}
+{% capture notice-6 %}
+If you change the region of your device:
 
-做完这些步骤之后，**你将无法进入eShop**。 这包括需要使用到 NNID 的任何功能，如：游戏更新、购买 DLC 和在某些游戏中的联机功能。 再改回原区域通常也不会修复这个问题。
-{: .notice--warning}
++ Your NNID, if you have one, will be unlinked. NNIDs are locked to the region that they were created in.
++ You may not be able to access the eShop, even if you [delete your eShop account](https://en-americas-support.nintendo.com/app/answers/detail/a_id/74/~/how-to-delete-a-nintendo-eshop-account) beforehand. This is because certain titles tend to remain linked to the 3DS, even after account deletion (especially on New 3DS).
+	+ The eShop contains not only games, but also game updates and DLC. Updates are usually required for online play.
++ **You will not be able to uninstall custom firmware without bricking the device!** If you intend to uninstall custom firmware in the future, you **MUST** restore your NAND backup that was created before the region change.
+{% endcapture %}
 
-请注意，有时候 eShop 会在某些本应该可以访问的主机上还是会莫名其妙地无法正常访问。 这完全是任天堂的服务器的问题，我真的背不了这个锅。 而且，有时候 eShop 突然会在照理说不能使用的主机上（比如某些 New 3DS 主机）变得可以使用。 我也不清楚是什么玄学修复的。
-
-使用 CTR 转移进行区域变更（本章节使用的就是此法）似乎会造成重启补丁失效，原因未知。 也就是说，做完本章节后老型号的 3DS 将无法运行扩展内存模式的游戏（比如怪物猎人，任天堂明星大乱斗和精灵宝可梦日/月）直到主机恢复出厂设置。
+<div class="notice--danger">{{ notice-6 | markdownify }}</div>
 
 在开始之前，你必须确认你已装好了 Luma3DS 和 boot9strap。
 {: .notice--danger}
 
-做 CTRTransfer 可能会破坏旧版 3DS/2DS 的内存扩展模式（这会导致怪物猎人、任天堂大乱斗和宝可梦日月系列等等游戏无法启动） 如果出现了这个问题，则你得初始化主机（使用 TinyFormat 或者系统设置内的主机初始化）来解决它。
+Performing a region change may break extended memory mode games (Monster Hunter, Super Smash Bros, Pokemon Sun/Moon) on Old 3DS/2DS devices. 如果出现了这个问题，则你得初始化主机（使用 TinyFormat 或者系统设置内的主机初始化）来解决它。
 {: .notice--warning}
 
 ### 你需要准备点啥？
+
+The CTRTransfer links require a torrent client to download, like [Deluge](http://dev.deluge-torrent.org/wiki/Download) or [qBitTorrent](https://www.qbittorrent.org/download.php).
+{: .notice--warning}
 
 * 最新版 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 * 最新版 [FBI](https://github.com/Steveice10/FBI/releases/latest) **（下载 `.3dsx` 文件）**
