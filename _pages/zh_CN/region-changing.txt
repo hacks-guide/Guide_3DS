@@ -8,17 +8,17 @@ title: "区域变更"
 
 本章节将介绍如何更改 SysNAND 的系统区域。 这是通过安装你想要切换到的地区的 11.15.0 CTRTransfer 镜像而达成的。
 
-Note that region changing is almost completely unnecessary since Luma3DS supports out-of-region games and individual title [Locale Emulation](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features). 顺带一提，你可以使用 [TWiLightMenu++](https://github.com/DS-Homebrew/TWiLightMenu/releases) 来运行其他区域的 NDS 游戏。
+注意，Luma3DS 本身就自带了[区域模拟](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features)的功能，这使得变更区域几乎是不必要的。 顺带一提，你可以使用 [TWiLightMenu++](https://github.com/DS-Homebrew/TWiLightMenu/releases) 来运行其他区域的 NDS 游戏。
 
 请注意，如果你的 SD 卡中的 `/luma/payloads/` 目录中有 `GodMode9.firm` 以外的 `.firm` 文件，那么你在按住 “Start” 键开机的时候，你的主机将不会直接进入到 Godmode9，而会进入到一个叫做 “chainloader menu” 的菜单，这个时候你需要通过十字键来移动红色光标至 “Godmode9” 来启动教程需要的文件。
 
 {% capture notice-6 %}
-If you change the region of your device:
+如果你选择变更主机的区域：
 
-+ Your NNID, if you have one, will be unlinked. NNIDs are locked to the region that they were created in.
-+ You may not be able to access the eShop, even if you [delete your eShop account](https://en-americas-support.nintendo.com/app/answers/detail/a_id/74/~/how-to-delete-a-nintendo-eshop-account) beforehand. This is because certain titles tend to remain linked to the 3DS, even after account deletion (especially on New 3DS).
-	+ The eShop contains not only games, but also game updates and DLC. Updates are usually required for online play.
-+ **You will not be able to uninstall custom firmware without bricking the device!** If you intend to uninstall custom firmware in the future, you **MUST** restore your NAND backup that was created before the region change.
++ 你的 NNID（如果有的话）将被解绑。 NNID 在创建时即被锁定在它的创建区域。
++ 主机可能将无法访问 eShop，即使是[删除你的 eShop 账户](https://en-americas-support.nintendo.com/app/answers/detail/a_id/74/~/how-to-delete-a-nintendo-eshop-account) 这是因为 3DS 中的某些应用会在进入时绑定使用区域（特别是 New 3DS 上）。
+	+ eShop 不仅包括游戏，还包括游戏的补丁及 DLC。 联机通常需要将游戏更新至最新。
++ 如果你以后打算卸载自制固件，则你**必须**还原你在变更前的 NAND 备份。**区域变更后的主机无法卸载自制固件，否则主机会变砖！**
 {% endcapture %}
 
 <div class="notice--danger">{{ notice-6 | markdownify }}</div>
@@ -26,12 +26,12 @@ If you change the region of your device:
 在开始之前，你必须确认你已装好了 Luma3DS 和 boot9strap。
 {: .notice--danger}
 
-Performing a region change may break extended memory mode games (Monster Hunter, Super Smash Bros, Pokemon Sun/Moon) on Old 3DS/2DS devices. 如果出现了这个问题，则你得初始化主机（使用 TinyFormat 或者系统设置内的主机初始化）来解决它。
+区域变更可能会破坏旧版 3DS/2DS 的内存扩展模式（这会导致怪物猎人、任天堂大乱斗和宝可梦日月系列等等的游戏无法启动）。 如果出现了这个问题，则你得初始化主机（使用 TinyFormat 或者系统设置内的主机初始化）来解决它。
 {: .notice--warning}
 
 ### 你需要准备点啥？
 
-The CTRTransfer links require a torrent client to download, like [Deluge](http://dev.deluge-torrent.org/wiki/Download) or [qBitTorrent](https://www.qbittorrent.org/download.php).
+CTRTransfer 镜像链接需要一个 BT 客户端来下载，如 [Deluge](http://dev.deluge-torrent.org/wiki/Download) 或 [qBitTorrent](https://www.qbittorrent.org/download.php)。
 {: .notice--warning}
 
 * 最新版 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
