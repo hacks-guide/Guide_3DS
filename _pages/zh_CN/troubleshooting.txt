@@ -66,6 +66,12 @@ title: "问题排查"
 
 ## 安装 boot9strap（通过 PicHaxx）
 
+### “An error has occurred. Hold down the POWER button to turn off the power..."（黑屏，下屏显示白底的文字）
+
+你可能把 `00000001.sav` 和（或者） `otherapp.bin` 文件的位置搞错了。 确保 `00000001.sav` 放在了 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` 中，`otherapp.bin` 放在了 SD 卡的根目录中。
+
+如果你确定一切都在正确的位置上了，那就尝试重新用 [PicHaxx 存档工具](https://3ds.nhnarwhal.com/3dstools/pichaxx.php)创建一份存档，然后把要求的文件重新放到 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` 中。 确保它是用你主机的 `movable.sed` 文件创建的，且文件已经准确命名为了 `00000001.sav`。 重新下载最新版本的 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) 并将其放在你 SD 卡的根目录中。 不要在没有看到 `.bin` 后缀的时候手动重命名它。
+
 ### 打开 Picross 时显示了 “An exception occurred” 或 Errdisp 报错
 
 你的主机已经破解过了。 你应该[检查一下](checking-for-cfw)。
@@ -73,12 +79,6 @@ title: "问题排查"
 ### “An error has occurred, forcing the software to close...”（程序被强制关闭，下屏跳出白色的消息框）
 
 这说明你放的 `otherapp.bin` 文件有问题。 下载最新版本的 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) 并将其放在你 SD 卡的根目录中。 不要在没有看到 `.bin` 后缀的时候手动重命名它。
-
-### “An error has occurred. Hold down the POWER button to turn off the power..."（黑屏，下屏显示白底的文字）
-
-你可能把 `00000001.sav` 和（或者） `otherapp.bin` 文件的位置搞错了。 确保 `00000001.sav` 放在了 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` 中，`otherapp.bin` 放在了 SD 卡的根目录中。
-
-如果你确定一切都在正确的位置上了，那就尝试重新用 [PicHaxx 存档工具](https://3ds.nhnarwhal.com/3dstools/pichaxx.php)创建一份存档，然后把要求的文件重新放到 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` 中。 确保它是用你主机的 `movable.sed` 文件创建的，且文件已经准确命名为了 `00000001.sav`。 重新下载最新版本的 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) 并将其放在你 SD 卡的根目录中。 不要在没有看到 `.bin` 后缀的时候手动重命名它。
 
 ### 游戏正常启动了
 
