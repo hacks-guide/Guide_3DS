@@ -1,0 +1,157 @@
+---
+title: "BannerBomb3 + Fredtool (TWN)"
+---
+
+{% include toc title="目录内容" %}
+
+### 重要事项
+
+我们使用了一个在 3DS 系统设置应用程序的 DSiWare 数据管理窗口中的一个漏洞来导出系统的 DSiWare 软件。
+
+To accomplish this, we use your system's encryption key (movable.sed) to build a DSiWare backup that exploits the system to dump the DSi Internet Settings application to the SD root.
+
+Once you have a DSiWare backup, an exploitable DSiWare title can be injected into DS Download Play, which can be used to install custom firmware.
+
+These instructions are for Taiwanese consoles ONLY (as indicated by a T at the end of the system version, e.g. 11.15.0-39T)! If your console is from any other region, [choose another method](seedminer#next-steps).
+{: .notice--warning}
+
+### What you need
+
+- Your `movable.sed` file completing [Seedminer](seedminer)
+- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
+- The latest release of [b9stool](https://github.com/zoogie/b9sTool/releases/latest)
+- The latest release of [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest)
+
+#### 第一步 – 检查自制固件
+
+1. 将主机关机
+1. 按住 “Select” 键
+1. 在按住 “Select” 键的同时按下电源键开机
+1. 如果主机自动启动到了主菜单，则测试成功，你可以继续做此教程中的余下内容
+
+如果主机进入到了一个配置菜单，那就表示你的主机之前已经安装过自制固件了。**如果继续操作的话可能会导致主机变砖！** 继续至[检查自制固件](checking-for-cfw)来更新你现有的自制固件。
+{: .notice--danger}
+
+#### 第二步 – 准备工作
+
+1. 将主机关机
+1. 将你的 SD 卡插入到电脑
+1. 解压 Luma3DS `.zip` 里的 `boot.firm` 和 `boot.3dsx` 到你 SD 卡的根目录
+    + 根目录指的是你点进 SD 卡看到的目录，你可以在这个目录下看到 Nintendo 3DS 文件夹，但请不要点进去
+1. 复制 `boot.nds` （B9STool）到你的 SD 卡根目录
+1. 从 Frogminer_save `.zip` 压缩包中复制 `private` 文件夹到内存卡的根目录
+1. Keep your SD card in your computer - there are more things to do in the next section
+
+![]({{ "/images/screenshots/fredtool-root-layout.png" | absolute_url }})
+{: .notice--info}
+
+#### Section III - BannerBomb3
+
+1. Open the [DSIHaxInjector V2](https://jenkins.nelthorya.net/job/DSIHaxInjector%20v2/build?delay=0sec) website on your computer
+1. Under the "Username" field, enter any alphanumeric name (no spaces or special characters)
+1. Under the "MovableSed" field, upload your `movable.sed`using the "Browse..." option
+1. Click "Build"
+1. Wait a few seconds, then click "Last build (#number) x sec ago"
+1. Click the "output_(name).zip" link
+1. 打开内存卡的 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 文件夹 
+    +  `<ID0>` is the same as the one you used in Seedminer
+    + `<ID1>` is a 32-character folder inside of `<ID0>`
+    + If the `Nintendo DSiWare` folder does not exist, then create it
+1. If there is anything currently in the `Nintendo DSiWare` folder, move it elsewhere for safekeeping
+1. Open the output_(name) `.zip` file and navigate to `China_Taiwan` -> `output_setup`
+1. Copy all six `.bin` files to the `Nintendo DSiWare` folder
+1. 将SD卡重新插入你的主机
+1. 启动你的主机
+1. 启动你主机上的 “系统设置(System settings)”
+1. Navigate to `Data Management` -> `DSiWare` -> `SD Card` -> (page 2)
+1. Take note of what number is on the DSiWare title on the second page (it will be a number between 1 and 6)
+1. 将主机关机
+1. 将你的 SD 卡插入到电脑
+1. 打开内存卡的 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 文件夹 
+1. Open the output_(name) `.zip` file and navigate to `China_Taiwan` -> `output_hax`
+1. Copy the `.bin` file that is the same number as the one that was on the second page of the DSiWare Management menu to the `Nintendo DSiWare` folder, and overwrite when prompted
+1. 启动你的主机
+1. 启动你主机上的 “系统设置(System settings)”
+1. Navigate to `Data Management` -> `DSiWare` -> `SD Card`
+1. Wait a while
+     + The following should happen, in this order: A progress swirl, a short freeze, the bottom screen turning purple, the music stopping, then the device showing an error message and rebooting
+    + If you did not see the purple screen, then something went wrong
+1. You should now have the file `42383821.bin` on the root of your SD card
+1. 打开内存卡的 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 文件夹 
+1. Delete all of the `.bin` files in the `Nintendo DSiWare` folder
+
+#### Section IV - Fredtool
+
+1. Open the [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec) website on your computer
+1. Under the "Username" field, enter any alphanumeric name (no spaces or special characters)
+    + You might want to put in a different name to differentiate it from BannerBomb3's output
+1. Under the "DSiBin" field, upload your `42383821.bin` file using the first "Browse..." option
+1. Under the "MovableSed" field, upload your `movable.sed` file using the second "Browse..." option
+1. Under the "InjectionTarget" field, set the injection target to `DSdownloadplay`(NOT memorypit)
+1. Click "Build"
+1. Wait a few seconds, then click "Last build (#number) x sec ago"
+1. Click the "output_(name).zip" link
+1. 打开内存卡的 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 文件夹 
+1. Copy the `484E4441.bin`  file from the `hax` folder of the downloaded DSiWare archive (output_(name).zip) to the `Nintendo DSiWare` folder
+1. 将SD卡重新插入你的主机
+1. 启动你的主机
+1. 启动你主机上的 “系统设置(System settings)”
+1. 进入到 `数据管理(Data Management)` -> `DSiWare`
+1. Under the “SD Card” section, select the “Haxxxxxxxxx!” title
+1. Select “Copy”, then select “OK”
+1. Exit System Settings
+1. Launch Download Play on your device (the orange icon with a 3DS on it)
+1. 选择 “Nintendo DS” 
+1. If the exploit was successful, your 3DS will have loaded into the JPN version of Flipnote Studio
+
+#### Section V - Flipnote Exploit
+
+如果你需要图片帮助，请点击 [这里](https://zoogie.github.io/web/flipnote_directions/)。
+{: .notice--info}
+
+1. 完成游戏的初始设置，直到进入主菜单为止
+  + 在出现提示时，选择左边的 “我不需要(いらない)” 选项
+1. 使用触摸屏点击 “メモを見る” 并选择 “SD カード”
+1. 菜单载入后，点击( ͡° ͜ʖ ͡°) 图标，然后点击右下角的按钮继续
+1. 通过上屏所示的选项，通过 “X” 键或十字键的 “↑” 键来选择
+1. 使用触摸屏点击胶卷按钮
+1. 向右移动到 “3/3”
+1. 点击第三个带有 “A” 的框
+1. 向左移动到 “1/3”
+1. 点击第四个带有 “A” 的框
+1. 如果漏洞成功执行，你的主机将会进入到 b9sTool
+1. Using the D-Pad, move to “Install boot9strap”
+    + If you miss this step, the system will exit to home menu instead of installing boot9strap and you will need to open DS Download Play and start over from the beginning of this section
+1. 按下 “A” 键，然后同时按下 START 键和 SELECT 键来开始安装
+1. Once completed and the bottom screen says “done.”, exit b9sTool, then power off your device
+    + 你可能需要长按电源键强制关机
+    + 如果你看到了 Luma 的设置界面，请继续下面的操作而不用强制关机
+
+#### Section VI - Configuring Luma3DS
+
+1. 开机时按住 “Select” 键，进入 Luma3DS 的配置菜单
+    + If you encounter issues launching the Luma configuration menu, follow [this troubleshooting guide](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)
+    + If the blue light on your 3DS powers on and off, you are missing `boot.firm` from the root of your SD card
+1. 使用方向键和 “A” 键来启用以下设置：
+    + “Show NAND or user string in System Settings”
+1. 按下 “Start” 键保存设置并重启
+
+#### Section VII - Restoring DS Download Play
+
+1. 将主机关机
+1. 将你的 SD 卡插入到电脑
+1. 打开内存卡的 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 文件夹 
+1. Copy the `484E4441.bin`  file from the `clean` folder of the downloaded DSiWare archive (output_(name).zip) to the `Nintendo DSiWare` folder
+1. 将SD卡重新插入你的主机
+1. 启动你的主机
+1. 启动你主机上的 “系统设置(System settings)”
+1. 进入到 `数据管理(Data Management)` -> `DSiWare`
+1. Under the “SD Card” section, select the “Haxxxxxxxxx!” title
+1. Select “Copy”, then select “OK”
+1. Exit System Settings
+1. 将主机关机
+
+___
+
+### 继续至[完成安装](finalizing-setup)
+{: .notice--primary}
