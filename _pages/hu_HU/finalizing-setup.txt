@@ -16,8 +16,6 @@ Ezen az oldalon kritikus rendszer mentéseket fogunk csinálni és a következő
 +  **Universal-Updater** *(egy homebrew app store homebrew letöltéséhez a 3DS-re WiFi-n keresztül)*
 + **GodMode9** *(sokféle dologra használható eszköz, például NAND és kártya műveletekre)*
 +  **Homebrew Launcher Loader** *(elindítja a Homebrew Launchert)*
-+  **DSP1** *(lehetővé teszi a homebrew applikációk számára a hangot)*
-+ **ctr-no-timeoffset** *(beállítja, hogy a HOME menü órája megegyezzen a rendszer valós idejű órájával)*
 
 Nem ajánlott ezeket az alkalmazásokat nem letölteni, mert mindegyik még használva lesz ezen az oldalon. Ennek az oldalnak a végén az SD kártyádról el lesznek távolítva a felesleges telepítő fájlok.
 {: .notice--warning}
@@ -34,11 +32,7 @@ Ha az előző egyedi firmware rendszered EmuNAND alapú volt és szeretnéd az E
 * A [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/tag/v3.7.4) 3.7.4 verziója (a `.cia` fájl kell)
 * A [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest) legújabb kiadása (a `.cia` fájl kell)
 * Az [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest) legújabb kiadása (a `.cia` fájl kell)
-
-* Az [ctr-no-timeoffset](https://github.com/ihaveamac/ctr-no-timeoffset/releases/latest) legújabb kiadása (a `.3dsx` fájl kell)
-* A [DSP1](https://github.com/zoogie/DSP1/releases/latest) legújabb kiadása (a `.3dsx` fájl kell)
-
-* Az [FBI](https://github.com/Steveice10/FBI/releases/latest) legújabb kiadása *(a `.cia` és a `.3dsx` fájl is kell)
+* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) (get **both** the `.cia` and `.3dsx` files)
 * A [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) legújabb kiadása (a GodMode9 `.zip` fájl kell)
 
 ### Utasítások
@@ -51,7 +45,7 @@ Ha az előző egyedi firmware rendszered EmuNAND alapú volt és szeretnéd az E
 1. Másold be az összes CIA fájlt (`Anemone3DS.cia`, `Checkpoint.cia`, `FBI.cia`, `Homebrew_Launcher.cia`, és `Universal-Updater.cia`) a `/cias/` mappába az SD kártyádon
 1. Hozz létre egy mappát `3ds` néven az SD kártyád gyökerében, ha még nem létezik ilyen
     + Ez a mappa tárolja a homebrew applikációkat és adataikat; ez mást mint a `Nintendo 3DS` mappa, amit az eszköz automatikusan generál
-1. Másold be az összes 3DSX fájlt (`ctr-no-timeoffset.3dsx`, `DSP1.3dsx`, és `FBI.3dsx`) a `/3ds/` mappába az SD kártyádon
+1. Másold az `FBI.3dsx` fájlt az SD kártyád `/3ds/` mappájába
 1. Hozz létre egy mappát `payloads` néven az SD kártyád `luma` nevezetű mappájában, ha még nem létezik ilyen
 1. Másold át a `GodMode9.firm` fájlt a GodMode9 `.zip`-ből az SD kártyád `/luma/payloads/` mappájába
 1. Másold át a `gm9` mappát a GodMode9 `.zip`-ből az SD kártyád gyökerébe
@@ -88,14 +82,18 @@ Ezek a képernyőképek mutatják az SD kártya minimális elrendezését ahhoz,
 1. Ekkor a készülékednek be kell töltenie a Homebrew Launcher-t
 
 #### IV. rész - RTC és DSP telepítése
-1. Indítsd el a ctr-no-timeoffset-et a homebrew listából
-1. Állítsd az offsetet 0-ra az (A) gombbal
-  + Ez beállítja, hogy a rendszeróra megegyezzen az RTC dátummal és idővel (amit hamarosan beállítunk)
-1. Nyomd meg a (Start) gombot, hogy visszatérj a Homebrew Launcher-be
-1. Indítsd el a DSP1 nevű alkalmazást
-1. Amint végzett, nyomd meg a (B) gombot, hogy az alkalmazás törölje magát és visszatérjen a Homebrew Launcher-be
+
+1. Nyomd le az (L) + (D-Pad le) + (Select) gombokat egyszerre a Rosalina menü megnyitásához
+1. Válaszd ki a "Miscellaneous options"-t
+1. Select "Dump DSP firmware"
+1. Nyomd meg a (B) gombot a folytatáshoz
+1. Select "Nullify user time offset"
+1. Nyomd meg a (B) gombot a folytatáshoz
+1. Nyomd meg a (B) gombot, hogy visszakerülj a Rosalina főmenüjébe
+1. Nyomd meg a (B) gombot, hogy kilépj a Rosalina menüből
 
 #### V. rész - CIA fájlok telepítése
+
 1. Indítsd el az FBI-t a homebrew listából
 1. Menj ide: `SD` -> `cias`
 1. Válaszd ezt: "\<current directory>"
