@@ -16,8 +16,6 @@ boot9strap 将会在 NAND 里的内容加载完成后启动 `boot.firm` 文件�
 +  **Universal-Updater（一个在 3DS 上用来下载自制程序的商店）**
 +  **GodMode9（一款多功能工具，可以处理 NAND 和卡带的相关功能）**
 + **Homebrew Launcher Loader（启动 Homebrew Launcher 的快捷方式）**
-+  **DSP1（允许自制程序播放音乐）**
-+  **ctr-no-timeoffset（将主菜单中显示的时间与 RTC 时钟相匹配）**
 
 建议不要跳过下载以上列出的任何程序，因为等会就需要用到它们 我们将在本页结尾处清理你在破解过程中产生的无用文件。
 {: .notice--warning}
@@ -34,11 +32,7 @@ boot9strap 将会在 NAND 里的内容加载完成后启动 `boot.firm` 文件�
 * v3.7.4 版 [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/tag/v3.7.4)（下载 `.cia` 后缀的文件）
 * 最新版 [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest)（下载 `.cia` 后缀的文件）
 * 最新版 [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest)（下载 `.cia` 后缀的文件）
-
-* 最新版 [ctr-no-timeoffset](https://github.com/ihaveamac/ctr-no-timeoffset/releases/latest)（下载 `.3dsx` 后缀的文件）
-* 最新版 [DSP1](https://github.com/zoogie/DSP1/releases/latest)（下载 `.3dsx` 后缀的文件）
-
-* 最新版 [FBI](https://github.com/Steveice10/FBI/releases/latest)（下载 `.cia` 和 `.3dsx` 后缀的文件）
+* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) (get **both** the `.cia` and `.3dsx` files)
 * 最新版 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)（下载 GodMode9 `.zip` 文件）
 
 ### 操作步骤
@@ -51,7 +45,7 @@ boot9strap 将会在 NAND 里的内容加载完成后启动 `boot.firm` 文件�
 1. 复制所有 CIA 文件（`Anemone3DS.cia`、`Checkpoint.cia`、`FBI.cia`、`Homebrew_Launcher.cia` 和 `Universal-Updater.cia`）到你 SD 卡上的 `/cias/` 文件夹
 1. 检查 SD 卡的根目录是否存在一个名为 `3ds` 的文件夹，如果没有则手动新建一个
     + 这个文件夹是用来存放 Homebrew 自制程序的；和主机自动生成的 `Nintendo 3DS` 文件夹无关。
-1. 将所有的 3DSX 文件（`ctr-no-timeoffset.3dsx`、`DSP1.3dsx` 和 `FBI.3dsx`) 复制到 SD 卡的 `/3ds/` 文件夹中
+1. 复制 `FBI.3dsx` 到SD卡的 `/3ds/` 目录下
 1. 如果 SD 卡的 `luma` 文件夹下没有一个名为 `payloads` 的文件夹，那么请新建一个
 1. 将 GodMode9 `.zip` 中的 `GodMode9.firm` 复制到你SD卡的 `/luma/payloads/` 文件夹中
 1. 将 GodMode9 `.zip` 中的整个 `gm9` 文件夹复制到 SD 卡的根目录下
@@ -88,14 +82,18 @@ boot9strap 将会在 NAND 里的内容加载完成后启动 `boot.firm` 文件�
 1. 此时你的主机应该会启动Homebrew Launcher了
 
 #### 第四步 — 调整 RTC 及 DSP
-1. 从自制程序列表中运行 ctr-no-timeoffset
-1. 按 “A” 键来将偏移设置为 0
-  + （之后会设置）这个操作将把 RTC 日期和时间同步为系统时间
-1. 按 “Start” 键返回到 Homebrew Launcher
-1. 启动 DSP1 应用
-1. 处理完毕后，按 “B” 键自动删除该应用程序并返回到主菜单
+
+1. 同时按下 “L” + “↓” + “Select” 键来打开 Rosalina 菜单
+1. 选择 “Miscellaneous options”
+1. Select "Dump DSP firmware"
+1. 按 “B” 键继续
+1. Select "Nullify user time offset"
+1. 按 “B” 键继续
+1. 按 “B” 键返回 Rosalina 主菜单
+1. 按 “B” 键退出 Rosalina 菜单
 
 #### 第五步 – 安装CIA
+
 1. 从自制程序列表中找到并启动 FBI
 1. 进入到 `SD` -> `cias`
 1. 选择 “\<current directory>”
