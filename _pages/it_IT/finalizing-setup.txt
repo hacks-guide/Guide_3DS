@@ -16,8 +16,6 @@ In questa pagina realizzeremo backup di file di sistema critici e installeremo i
 + **Universal-Updater** *(un'applicazione per scaricare homebrew direttamente sul 3DS tramite Wi-Fi)*
 +  **GodMode9** *(applicazione multifunzione per gestire NAND e schede di gioco)*
 +  **Homebrew Launcher Loader** *(avvia l'Homebrew Launcher)*
-+  **DSP1** *(permette alle applicazioni homebrew di avere il sonoro)*
-+ **ctr-no-timeoffset** *(modifica l'orologio del menu HOME perché corrisponda all'orologio in tempo reale interno)*
 
 È consigliato non saltare il download di alcuna di queste applicazioni, in quanto molte verranno utilizzate successivamente in questa stessa pagina. Al termine di questa pagina, la scheda SD verrà ripulita rimuovendo i file di installazione non più necessari.
 {: .notice--warning}
@@ -34,11 +32,7 @@ Se la tua precedente installazione CFW era basata su EmuNAND e desideri spostare
 * La versione 3.7.4 di [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/tag/v3.7.4) (il file `.cia`)
 * L'ultima versione di [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest) (il file `.cia`)
 * L'ultima versione di [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest) (il file `.cia`)
-
-* L'ultima versione di [ctr-no-timeoffset](https://github.com/ihaveamac/ctr-no-timeoffset/releases/latest) (il file `.3dsx`)
-* L'ultima versione di [DSP1](https://github.com/zoogie/DSP1/releases/latest) (il file `.3dsx`)
-
-* L'ultima versione di [FBI](https://github.com/Steveice10/FBI/releases/latest) (entrambi i file `.cia` e `.3dsx`)
+* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) (get **both** the `.cia` and `.3dsx` files)
 * L'ultima versione di [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (il file `.zip` di GodMode9)
 
 ### Istruzioni
@@ -51,7 +45,7 @@ Se la tua precedente installazione CFW era basata su EmuNAND e desideri spostare
 1. Copia tutti i file CIA (`Anemone3DS.cia`, `Checkpoint.cia`, `FBI.cia`, `Homebrew_Launcher.cia` e `Universal-Updater.cia`) nella cartella `/cias/` della tua scheda SD
 1. Se assente, crea una cartella chiamata `3ds` nella directory principale della tua scheda SD
     + Questa cartella mantiene le applicazioni homebrew e i loro dati; è diversa dalla cartella `Nintendo 3DS` generata automaticamente dalla console
-1. Copia tutti i file 3DSX (`ctr-no-timeoffset.3dsx`, `DSP1.3dsx` e `FBI.3dsx`) nella cartella `/3ds/` della tua scheda SD
+1. Copia il file `FBI.3dsx` nella cartella `/3ds/` nella tua scheda SD
 1. Se assente, crea una cartella chiamata `payloads` nella cartella `luma` della tua scheda SD
 1. Copia il file `GodMode9.firm` dall'archivio `.zip` di GodMode9 dentro la cartella `/luma/payloads/` della tua scheda SD
 1. Copia la cartella `gm9` presente nell'archivio `.zip` di GodMode9 nella directory principale della tua scheda SD
@@ -88,14 +82,18 @@ Questi screenshot indicano la minima struttura che la scheda SD deve avere per p
 1. La console dovrebbe ora avviare l'Homebrew Launcher
 
 #### Sezione IV - Installazione di RTC e DSP
-1. Avvia ctr-no-timeoffset dalla lista degli homebrew disponibili
-1. Premi (A) per impostare l'offset a 0
-  + Questo imposterà l'orologio di sistema identico alla data e all'ora dell'RTC (che regoleremo a breve)
-1. Premi (Start) per ritornare all'Homebrew Launcher
-1. Avviare l'applicazione DSP1
-1. Al termine, premi (B) per auto-rimuovere l'applicazione e ritornare all'Homebrew Launcher
+
+1. Premi simultaneamente i pulsanti (L) + (Giù) + (Select) per aprire il menu di Rosalina
+1. Seleziona "Miscellaneous options"
+1. Select "Dump DSP firmware"
+1. Premi (B) per continuare
+1. Select "Nullify user time offset"
+1. Premi (B) per continuare
+1. Premi (B) per tornare al menu principale di Rosalina
+1. Premi (B) per uscire dal menu di Rosalina
 
 #### Sezione V - Installazione dei CIA
+
 1. Avvia FBI dalla lista degli homebrew disponibili
 1. Entra nella cartella `SD` -> `cias`
 1. Seleziona "\<current directory>"
