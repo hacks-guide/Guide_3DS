@@ -16,8 +16,6 @@ title: "完成安裝"
 +  **Universal-Updater** *(自製程式商店，可在 3DS 上透過 Wi-Fi 下載自製程式)*
 + **GodMode9** *(多功能工具包，用來處理 NAND 及卡帶的相關功能)*
 +  **Homebrew Launcher Loader** *(用於啟動 Homebrew Launcher)*
-+  **DSP1** *(允許自製程式播放音效)*
-+  **ctr-no-timeoffset** *(sets the HOME Menu time to match the internal Real-Time Clock)*
 
 建議不要跳過下載以上這些自製軟體，因為它們將在此頁面稍後使用。 在本頁結束時，我們將清理 SD 卡以刪除不必要的安裝檔案。
 {: .notice--warning}
@@ -34,11 +32,7 @@ title: "完成安裝"
 * v3.7.4 版的 [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/tag/v3.7.4) (選擇 `.cia` 檔案)
 * 最新版的 [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest) (選擇 `.cia` 檔案)
 * 最新版的 [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest) (選擇 `.cia` 檔案)
-
-* 最新版的 [ctr-no-timeoffset](https://github.com/ihaveamac/ctr-no-timeoffset/releases/latest) (選擇 `.3dsx` 檔案)
-* 最新版的 [DSP1](https://github.com/zoogie/DSP1/releases/latest) (選擇 `.3dsx` 檔案)
-
-* 最新版的 [FBI 管理器](https://github.com/Steveice10/FBI/releases/latest) (選擇 `.cia` 及 `.3dsx` 檔案)
+* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) (get **both** the `.cia` and `.3dsx` files)
 * 最新版的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (選擇 GodMode9 `.zip` 檔案)
 
 ### 操作說明
@@ -51,7 +45,7 @@ title: "完成安裝"
 1. 複製所有的 CIA 檔案 (`Anemone3DS.cia`、`Checkpoint.cia`、`FBI.cia`、`Homebrew_Launcher.cia` 及 `Universal-Updater.cia`) 至 SD 卡中的 `/cias/` 資料夾中
 1. 在 SD 卡的根目錄底下建立一個新資料夾 `3ds`
     + 本資料夾中含有自製程式及其資料；本資料夾與主機自動產生的 `Nintendo 3DS` 不一樣
-1. 複製所有的 3DSX 檔案 (`ctr-no-timeoffset.3dsx`、`DSP1.3dsx` 及 `FBI.3dsx`) 至 SD 卡中的 `/3ds/` 資料夾中
+1. 將 `FBI.3dsx` 複製到 SD 卡中的 `/3ds/` 資料夾底下
 1. 在 SD 卡中的 `luma` 資料夾中建立一個另一個新資料夾 `payloads`
 1. 解壓 GodMode9 `.zip` 中的 `GodMode9.firm` 檔案到 SD 卡的 `/luma/payloads/` 資料夾中
 1. 解壓 GodMode9 `.zip` 中的 `gm9` 資料夾到 SD 卡的根目錄底下
@@ -88,14 +82,18 @@ title: "完成安裝"
 1. 您的主機應該就會啟動 Homebrew Launcher 了
 
 #### 第四節 — 設定內部時間 (RTC) 及 DSP
-1. 透過 Homebrew 清單啟動 ctr-no-timeoffset
-1. 按『A』選擇將數值設成 0
-  + 這將會把系統時間設為與 RTC 相同的數值
-1. 按「Start」鍵回到 Homebrew Launcher 中
-1. 啟動 DSP1
-1. 當它處理完畢後，按下『B』將程式刪除並回到 Homebrew Launcher
+
+1. 同時按下『L』+『下』+『Select』鍵以啟動 Rosalina 選單
+1. 選擇『Miscellaneous options』
+1. Select "Dump DSP firmware"
+1. 按『B』繼續
+1. Select "Nullify user time offset"
+1. 按『B』繼續
+1. 按『B』回到 Rosalina 主選單
+1. 按『B』退出 Rosalina 選單
 
 #### 第五節 — 安裝 CIA 檔案
+
 1. 於 Homebrew 清單內啟動 FBI 管理器
 1. 移動至 `SD` -> `cias`
 1. 選擇『\<current directory>』
