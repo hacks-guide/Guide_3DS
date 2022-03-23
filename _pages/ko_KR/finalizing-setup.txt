@@ -16,8 +16,6 @@ On this page, we will make critical system file backups and install the followin
 + **Universal-Updater** *(Wi-Fi를 통해 3DS에 홈브류를 다운로드 하는 앱 스토어)*
 +  **Godmode9** *(NAND와 게임 카드의 기능을 수행할 수 있는 다목적 툴)*
 +  **Homebrew Launcher Loader** *(홈브류 런처 실행)*
-+ **DSP1** *(홈브류 에플리케이션의 소리를 허용함)*
-+  **ctr-no-timeoffset** *(sets the HOME Menu time to match the internal Real-Time Clock)*
 
 It is not recommended to skip downloading any of these applications, as many of them will be used later on this page. At the end of this page, your SD card will be cleaned up by removing unnecessary installation files.
 {: .notice--warning}
@@ -34,11 +32,7 @@ If your previous CFW setup was EmuNAND-based and you wish to move the contents o
 * 3.7.4 버전의 [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/tag/v3.7.4) *(`.cia` 파일)
 * 최신 버전의 [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest) *(`.cia` 파일)
 * 최신 버전의 [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest) *(`.cia` 파일)
-
-* 최신 버전의 [ctr-no-timeoffset](https://github.com/ihaveamac/ctr-no-timeoffset/releases/latest) *(`.3dsx` 파일)
-* 최신 버전의 [DSP1](https://github.com/zoogie/DSP1/releases/latest) *(`.3dsx` 파일)
-
-* 최신 버전의 [FBI](https://github.com/Steveice10/FBI/releases/latest) *(`.cia` 와 `.3dsx` 파일들)
+* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) (get **both** the `.cia` and `.3dsx` files)
 * 최신 버전의 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) *(GodMode9 `.zip` 파일)
 
 ### 진행 방법
@@ -51,7 +45,7 @@ If your previous CFW setup was EmuNAND-based and you wish to move the contents o
 1. Copy all of the CIA files (`Anemone3DS.cia`, `Checkpoint.cia`, `FBI.cia`, `Homebrew_Launcher.cia`, and `Universal-Updater.cia`) to the `/cias/` folder on your SD card
 1. SD 카드의 루트에 `3ds` 폴더가 없을 경우 폴더를 만들어 주세요
     + 이 폴더는 홈브류 에플리케이션과 데이터가 보관되 있습며, 디바이스가 자동으로 생성하는 `Nintendo 3DS` 폴더와 다릅니다
-1. Copy all of the 3DSX files (`ctr-no-timeoffset.3dsx`, `DSP1.3dsx`, and `FBI.3dsx`) to the `/3ds/` folder on your SD card
+1. `FBI.3dsx` 파일을 SD 카드의 `/3ds/` 폴더에 복사해 주세요
 1. SD 카드 내 `luma` 폴더에 `payloads` 폴더가 없을 경우 폴더를 만들어 주세요
 1. SD 카드의 `/luma/payloads/`폴더에 GodMode9 `.zip`안에 압축되있는 `GodMode9.firm`을 복사해 주세요
 1. SD카드의 루트로 GodMode9 `.zip`안에 압축이 되있는 `gm9` 폴더를 복사해 주세요
@@ -88,14 +82,18 @@ These screenshots indicate the minimum SD card layout that is required to follow
 1. 성공하면 Homebrew Launcher가 실행될 것입니다
 
 #### 섹션 IV - RTC 및 DSP 설정
-1. 홈브류 목록에서 ctr-no-timeoffset을 실행해 주세요
-1. (A) 를 눌러 오프셋을 `0`로 설정해 주세요
-  + 이것은 시스템 시각을 RTC 날짜와 시간과 맞도록 설정 합니다. (나중에 설정함)
-1. (Start)를 눌러 Homebrew Launcher로 돌아가 주세요
-1. DSP1 프로그램을 실행해 주세요
-1. 작업이 끝나면, (B) 를 눌러서 프로그램을 자동 삭제 시키고 Homebrew Launcher로 돌아와 주세요
+
+1. (L 어깨) + (십자 Down) + (Select) 을 동시에 눌러서 Rosalina 메뉴를 실행해 주세요
+1. "Miscellaneous options"을 선택해 주세요
+1. Select "Dump DSP firmware"
+1. (B)를 눌러 진행해 주세요
+1. Select "Nullify user time offset"
+1. (B)를 눌러 진행해 주세요
+1. (B)를 눌러 Rosalina 메뉴로 돌아가 주세요
+1. (B)를 눌러 Rosalina 메뉴를 나와 주세요
 
 #### 섹션 V - CIA 설치
+
 1. 홈브류 목록에서 FBI를 실행해 주세요
 1. `SD` -> `cias`로 이동해 주세요
 1. "\<current directory>"를 선택해 주세요
