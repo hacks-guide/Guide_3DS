@@ -6,19 +6,19 @@ title: "지역 변경"
 
 ### 중요
 
-This is an add-on section for region changing your CFW SysNAND. 이 작업은 바꾸고자 하는 지역의 11.15.0 CTRTransfer 이미지를 설치합니다.
+이 페이지는 CFW SysNAND의 지역을 변경하는 방법을 안내하는 부가 섹션입니다. 이 작업은 바꾸고자 하는 지역의 11.15.0 CTRTransfer 이미지를 설치합니다.
 
-Note that region changing is almost completely unnecessary since Luma3DS supports out-of-region games and individual title [Locale Emulation](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features). Additionally, running NDS games with alternative out-of-region languages is supported by [TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu/releases).
+Luma3DS가 지역 외 게임들과 [타이틀별 지역 에뮬레이션](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features)을 지원하기 때문에, 지역 변경은 거의 불필요하다는 점을 참고해 주시기 바랍니다. Additionally, running NDS games with alternative out-of-region languages is supported by [TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu/releases).
 
 만약 여러분의 SD카드의 `/luma/payloads/` 폴더에서 `GodMode9.firm`이 아닌 다른 페이로드 파일이 추가로 있다면, (Start)를 누르고 부팅시에 화면에 표시되는 "chainloader menu" 에서 D패드랑 (A) 버튼으로 조작하여 "GodMode9"을 선택하여야 합니다.
 
 {% capture notice-6 %}
-If you change the region of your device:
+기기의 지역을 바꾸게 된다면:
 
-+ Your NNID, if you have one, will be unlinked. NNIDs are locked to the region that they were created in.
-+ You may not be able to access the eShop, even if you [delete your eShop account](https://en-americas-support.nintendo.com/app/answers/detail/a_id/74/~/how-to-delete-a-nintendo-eshop-account) beforehand. This is because certain titles tend to remain linked to the 3DS, even after account deletion (especially on New 3DS).
-	+ The eShop contains not only games, but also game updates and DLC. Updates are usually required for online play.
-+ **You will not be able to uninstall custom firmware without bricking the device!** If you intend to uninstall custom firmware in the future, you **MUST** restore your NAND backup that was created before the region change.
++ 가지고 있다면, 당신의 NNID가 기기와 링크 해제됩니다. NNID들은 작성된 지역에서만 사용할 수 있습니다.
++ 이전에 [eShop 계정을 지우더라도 (영어)](https://en-americas-support.nintendo.com/app/answers/detail/a_id/74/~/how-to-delete-a-nintendo-eshop-account), eShop에 액세스하지 못할 수 있습니다. 몇몇 타이틀들은, 계정 삭제 후도 3DS 링크를 유지하려는 경향이 있어서입니다 (특히 New 3DS에서).
+	+ eShop은 게임뿐만 아니라, 게임 업데이트와 DLC를 제공합니다. 업데이트들은 보통 온라인 플레이를 할 시 필요합니다.
++ **기기를 벽돌로 하는 것을 감수하지 않고선 커스텀 펌웨어를 지울 수 없습니다!** 만약 미래에 커스텀 펌웨어를 지우려고 생각한다면, **절대로** 지역 변경을 하기 전의 NAND 백업을 복원하고 나서 해야 합니다.
 {% endcapture %}
 
 <div class="notice--danger">{{ notice-6 | markdownify }}</div>
@@ -26,12 +26,12 @@ If you change the region of your device:
 이것은 Luma3DS 및 boot9strap가 이미 설치 되어 있어야 가능합니다.
 {: .notice--danger}
 
-Performing a region change may break extended memory mode games (Monster Hunter, Super Smash Bros, Pokemon Sun/Moon) on Old 3DS/2DS devices. 만약 이게 발생한다면, 이 문제를 고치기 위해 기기를 포맷하셔야 합니다.(TinyFormat이나 본체 설정을 이용해서요.)
+구형 3DS/2DS 기기에서는 지역 변경 후, 추가 메모리 모드 개임을 (예: 대난투 스매시브라더스, 포켓몬스터 썬/문, 몬스터 헌터)를 사용할 수 없게 될 수 있습니다. 만약 이게 발생한다면, 이 문제를 고치기 위해 (TinyFormat 및 본체 설정을 이용해서) 기기를 포맷하셔야 합니다.
 {: .notice--warning}
 
 ### 준비물
 
-The CTRTransfer links require a torrent client to download, like [Deluge](http://dev.deluge-torrent.org/wiki/Download) or [qBitTorrent](https://www.qbittorrent.org/download.php).
+CTRTransfer 링크를 다운로드하려면, [Deluge](http://dev.deluge-torrent.org/wiki/Download) 또는 [qBitTorrent](https://www.qbittorrent.org/download.php) 등의 토렌트 클라이언트가 필요합니다.
 {: .notice--warning}
 
 * 최신 버전의 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
@@ -64,7 +64,7 @@ The CTRTransfer links require a torrent client to download, like [Deluge](http:/
 
 #### 섹션 II - NAND 백업
 1. (Start)를 길게 누르고, 이 상태에서 전원을 켜 주세요. GodMode9이 실행 될 겁니다
-1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it is completed
+1. 만약 "Essential files backup not found" 메세지가 표시되면, (A) 룰 눌러서 백업을 만들고, 끝나면 (A) 를 눌러서 진행해 주세요
 1. 만약 "RTC date&time seems to be wrong" 메세지가 표시되면 (A) 버튼을 눌러 하십시오, 그러고 나서 날짜와 시간을 고치고 (A) 버튼을 눌러 계속해 주세요
   + 만약 RTC 날짜와 시간을 수정해야 했다면, 이 가이드 끝나고 본체 설정에서도 시간을 수정해야 합니다
 1. (Home)을 눌러 작업 메뉴를 열어 주세요
@@ -98,7 +98,7 @@ The CTRTransfer links require a torrent client to download, like [Deluge](http:/
   + 이 메시지는 EmuNAND가 있을 경우에만 나타납니다
 1. (A)를 눌려 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요
   + 이 과정은 시간이 좀 걸릴 것입니다
-1. Once the transfer is completed, press (A) to continue
+1. 작업이 완료되면 (A)를 눌려 계속해 주세요
 1. 만약 메세지가 표시되면, (B) 를 눌러서 쓰기잠금을 거부해 주세요
 1. (B)를 두 번 눌러 메인 메뉴로 돌아가 주세요
 1. (Home)을 눌러 작업 메뉴를 열어 주세요
@@ -131,7 +131,7 @@ The CTRTransfer links require a torrent client to download, like [Deluge](http:/
 
 #### 섹션 V - 티켓 재설치
 
-If the script found no user tickets and told you to skip this section, you can skip this section.
+만약 "No user tickets found" 표시가 되면, 이 부분을 넘기세요.
 {: .notice--info}
 
 1. 홈브류 목록에서 FBI를 실행해 주세요
