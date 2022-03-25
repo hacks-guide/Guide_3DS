@@ -1,23 +1,23 @@
 ---
-title: "BannerBomb3 + Fredtool (TWN)"
+title: "BannerBomb3 + Fredtool (僅限臺版主機)"
 ---
 
 {% include toc title="條目內容" %}
 
 ### 必讀事項
 
-為了導出系統的 DSiWare 軟體， 我們使用了在系統設定內的 DSiWare 數據管理視窗的一個漏洞。
+為了匯出系統的 DSiWare 軟體， 我們使用了在系統設定內的 DSiWare 數據管理的一個漏洞。
 
-To accomplish this, we use your system's encryption key (movable.sed) to build a DSiWare backup that exploits the system to dump the DSi Internet Settings application to the SD root.
+為了做到這一點，我們將使用你裝置的系統加密金鑰 (movable.sed) 來建構一個可使用的 DSiWare 系統備份，以便將 DSi 網路設定程式匯出到 SD 卡的根目錄。
 
 Once you have a DSiWare backup, an exploitable DSiWare title can be injected into DS Download Play, which can be used to install custom firmware.
 
-These instructions are for Taiwanese consoles ONLY (as indicated by a T at the end of the system version, e.g. 11.15.0-39T)! If your console is from any other region, [choose another method](seedminer#next-steps).
+以下指南**僅限**台灣版主機（系統版本號的結尾為 T 的主機，如 11.15.0-39T）！ 如果您的主機為其他區域的主機，請使用[其他方式](seedminer#next-steps) 進行改機。
 {: .notice--warning}
 
-### What you need
+### 必備項目
 
-- Your `movable.sed` file completing [Seedminer](seedminer)
+- 您自 [Seedminer](seedminer) 步驟中所取得的 `movable.sed` 檔案
 - The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
 - The latest release of [b9stool](https://github.com/zoogie/b9sTool/releases/latest)
 - The latest release of [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest)
@@ -73,22 +73,22 @@ If you see a configuration menu, you already have CFW, and continuing with these
 1. 啟動您的主機
 1. 於您主機上啟動系統設定 (System Settings)
 1. Navigate to `Data Management` -> `DSiWare` -> `SD Card`
-1. Wait a while
+1. 稍息等待
      + The following should happen, in this order: A progress swirl, a short freeze, the bottom screen turning purple, the music stopping, then the device showing an error message and rebooting
     + If you did not see the purple screen, then something went wrong
 1. You should now have the file `42383821.bin` on the root of your SD card
 1. 於您的 SD 卡中，移動至 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 
 1. Delete all of the `.bin` files in the `Nintendo DSiWare` folder
 
-#### Section IV - Fredtool
+#### 第四節 — Fredtool
 
-1. Open the [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec) website on your computer
+1. 在電腦上開啟 [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec)
 1. Under the "Username" field, enter any alphanumeric name (no spaces or special characters)
     + You might want to put in a different name to differentiate it from BannerBomb3's output
 1. Under the "DSiBin" field, upload your `42383821.bin` file using the first "Browse..." option
 1. Under the "MovableSed" field, upload your `movable.sed` file using the second "Browse..." option
 1. Under the "InjectionTarget" field, set the injection target to `DSdownloadplay`(NOT memorypit)
-1. Click "Build"
+1. 選擇『Build』
 1. Wait a few seconds, then click "Last build (#number) x sec ago"
 1. Click the "output_(name).zip" link
 1. 於您的 SD 卡中，移動至 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 
@@ -97,14 +97,14 @@ If you see a configuration menu, you already have CFW, and continuing with these
 1. 啟動您的主機
 1. 於您主機上啟動系統設定 (System Settings)
 1. 移動至 `檔案管理 (Data Management)` -> `DSiWare`
-1. Under the “SD Card” section, select the “Haxxxxxxxxx!” title
-1. Select “Copy”, then select “OK”
-1. Exit System Settings
+1. 在 SD 卡欄位中選擇『Haxxxxxxxxx!』程式
+1. 選擇『複製 (Copy)』並選擇『OK』
+1. 退出系統設定
 1. Launch Download Play on your device (the orange icon with a 3DS on it)
 1. 選擇『任天堂 DS (Nintendo DS)』 
-1. If the exploit was successful, your 3DS will have loaded into the JPN version of Flipnote Studio
+1. 如果漏洞成功執行，您的 3DS 將自動啟動『うごくメモ帳 (Flipnote Studio)』
 
-#### Section V - Flipnote Exploit
+##### 第五節 — Flipnote 漏洞
 
 如果您需要圖片幫助請見[此](https://zoogie.github.io/web/flipnote_directions/)。
 {: .notice--info}
@@ -130,13 +130,13 @@ If you see a configuration menu, you already have CFW, and continuing with these
 #### 第六節 — 設定 Luma3DS
 
 1. 開機時，按住「Select」鍵啟動 Luma 設定選單
-    + If you encounter issues launching the Luma configuration menu, follow [this troubleshooting guide](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)
+    + 如果您無法順利啟動 Luma 設定選單，請參見此[疑難排解](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)頁面 (英文)。
     + If the blue light on your 3DS powers on and off, you are missing `boot.firm` from the root of your SD card
 1. 透過方向鍵及『A』以開啟下列選項：
-    + “Show NAND or user string in System Settings”
+    + 『Show NAND or user string in System Settings』
 1. 按『Start』鍵以存檔並重新啟動系統
 
-#### Section VII - Restoring DS Download Play
+##### 第七節 — 還原『下載通信(Download Play)』程式
 
 1. 關閉您的主機
 1. 將 SD 卡插入至電腦中
@@ -146,9 +146,9 @@ If you see a configuration menu, you already have CFW, and continuing with these
 1. 啟動您的主機
 1. 於您主機上啟動系統設定 (System Settings)
 1. 移動至 `檔案管理 (Data Management)` -> `DSiWare`
-1. Under the “SD Card” section, select the “Haxxxxxxxxx!” title
-1. Select “Copy”, then select “OK”
-1. Exit System Settings
+1. 在 SD 卡欄位中選擇『Haxxxxxxxxx!』程式
+1. 選擇『複製 (Copy)』並選擇『OK』
+1. 退出系統設定
 1. 關閉您的主機
 
 ___
