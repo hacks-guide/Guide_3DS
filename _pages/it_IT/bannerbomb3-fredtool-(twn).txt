@@ -8,19 +8,19 @@ title: "BannerBomb3 + Fredtool (TWN)"
 
 Per eseguire un dump dei DSiWare di sistema, approfittiamo di una falla di sicurezza nella sezione Gestione Nintendo DSiWare dell'applicazione Impostazioni della console.
 
-To accomplish this, we use your system's encryption key (movable.sed) to build a DSiWare backup that exploits the system to dump the DSi Internet Settings application to the SD root.
+Per realizzare l'obiettivo, utilizziamo la chiave di cifratura della tua console (movable.sed) per generare un backup DSiWare che induce la console a creare un dump dell'applicazione Impostazioni Internet DSi nella directory principale della scheda SD.
 
-Once you have a DSiWare backup, an exploitable DSiWare title can be injected into DS Download Play, which can be used to install custom firmware.
+Una volta ottenuto un backup DSiWare, si può initiettare nella "Modalità download" un titolo DSiWare utilizzabile per installare un custom firmware.
 
-These instructions are for Taiwanese consoles ONLY (as indicated by a T at the end of the system version, e.g. 11.15.0-39T)! If your console is from any other region, [choose another method](seedminer#next-steps).
+Queste istruzioni sono solo per le console taiwanesi (come indicato da una T alla fine della versione di sistema, ad esempio 11.15.0-39T)! Se la tua console proviene da qualsiasi altra regione, [scegli un altro metodo](seedminer#next-steps).
 {: .notice--warning}
 
-### What you need
+### Cosa serve
 
-- Your `movable.sed` file completing [Seedminer](seedminer)
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
-- The latest release of [b9stool](https://github.com/zoogie/b9sTool/releases/latest)
-- The latest release of [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest)
+- Il tuo file `movable.sed` dalla sezione [Seedminer](seedminer)
+- L'ultima versione di [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
+- L'ultima versione di [b9stool](https://github.com/zoogie/b9sTool/releases/latest)
+- L'ultima versione di [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest)
 
 #### Sezione I - Controllo del CFW
 
@@ -40,19 +40,19 @@ Se visualizzi un menu di configurazione, hai già un CFW e continuando con quest
     + La directory principale della scheda SD è la cartella della tua scheda SD in cui è possibile visualizzare la cartella Nintendo 3DS, ma non il suo interno
 1. Copia il file `boot.nds` (B9STool) nella directory principale della tua scheda SD
 1. Copia la cartella `private` presente nell'archivio `.zip` di Frogminer_save nella directory principale della tua scheda SD
-1. Keep your SD card in your computer - there are more things to do in the next section
+1. Tieni la scheda SD nel tuo computer - ci sono altre cose da fare nella prossima sezione
 
 ![]({{ "/images/screenshots/fredtool-root-layout.png" | absolute_url }})
 {: .notice--info}
 
-#### Section III - BannerBomb3
+#### Sezione III - BannerBomb3
 
-1. Open the [DSIHaxInjector V2](https://jenkins.nelthorya.net/job/DSIHaxInjector%20v2/build?delay=0sec) website on your computer
-1. Under the "Username" field, enter any alphanumeric name (no spaces or special characters)
-1. Under the "MovableSed" field, upload your `movable.sed`using the "Browse..." option
-1. Click "Build"
-1. Wait a few seconds, then click "Last build (#number) x sec ago"
-1. Click the "output_(name).zip" link
+1. Apri il sito [DSIHaxInjector V2](https://jenkins.nelthorya.net/job/DSIHaxInjector%20v2/build?delay=0sec) sul tuo computer
+1. Sotto il campo "Username" inserisci un nome alfanumerico qualunque (senza spazi o caratteri speciali)
+1. Sotto il campo "MovableSed", carica il tuo file `movable.sed` cliccando sull'opzione "Browse..."
+1. Clicca "Build"
+1. Attendi alcuni secondi, quindi fai clic su "Last build (#number) x sec ago"
+1. Clicca il link "output_(name).zip"
 1. Nella tua scheda SD, entra in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 
     +  `<ID0>` is the same as the one you used in Seedminer
     + `<ID1>` is a 32-character folder inside of `<ID0>`
@@ -83,14 +83,14 @@ Se visualizzi un menu di configurazione, hai già un CFW e continuando con quest
 #### Section IV - Fredtool
 
 1. Open the [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec) website on your computer
-1. Under the "Username" field, enter any alphanumeric name (no spaces or special characters)
+1. Sotto il campo "Username" inserisci un nome alfanumerico qualunque (senza spazi o caratteri speciali)
     + You might want to put in a different name to differentiate it from BannerBomb3's output
 1. Under the "DSiBin" field, upload your `42383821.bin` file using the first "Browse..." option
 1. Under the "MovableSed" field, upload your `movable.sed` file using the second "Browse..." option
 1. Under the "InjectionTarget" field, set the injection target to `DSdownloadplay`(NOT memorypit)
-1. Click "Build"
-1. Wait a few seconds, then click "Last build (#number) x sec ago"
-1. Click the "output_(name).zip" link
+1. Clicca "Build"
+1. Attendi alcuni secondi, quindi fai clic su "Last build (#number) x sec ago"
+1. Clicca il link "output_(name).zip"
 1. Nella tua scheda SD, entra in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 
 1. Copy the `484E4441.bin`  file from the `hax` folder of the downloaded DSiWare archive (output_(name).zip) to the `Nintendo DSiWare` folder
 1. Reinserisci la scheda SD nella tua console
