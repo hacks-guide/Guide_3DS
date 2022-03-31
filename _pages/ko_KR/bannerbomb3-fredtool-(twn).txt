@@ -8,19 +8,19 @@ title: "BannerBomb3 + Fredtool (TWN)"
 
 시스템 DSiWare를 덤프 하기 위해, DSiWare 데이터 관리 설정 창에 취약점을 악용합니다.
 
-To accomplish this, we use your system's encryption key (movable.sed) to build a DSiWare backup that exploits the system to dump the DSi Internet Settings application to the SD root.
+이것은 시스템의 암호화 키 (movable.sed)를 이용해 DSiWare 백업을 만들어 DSi 인터넷 설정을 SD 카드 루트에 덤프할 수 있도록 만듭니다.
 
 Once you have a DSiWare backup, an exploitable DSiWare title can be injected into DS Download Play, which can be used to install custom firmware.
 
 These instructions are for Taiwanese consoles ONLY (as indicated by a T at the end of the system version, e.g. 11.15.0-39T)! If your console is from any other region, [choose another method](seedminer#next-steps).
 {: .notice--warning}
 
-### What you need
+### 준비물
 
-- Your `movable.sed` file completing [Seedminer](seedminer)
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
-- The latest release of [b9stool](https://github.com/zoogie/b9sTool/releases/latest)
-- The latest release of [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest)
+- [Seedminer](seedminer)에서 받은 `movable.sed` 파일
+- 최신 버전의 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
+- 최신 버전의 [b9stool](https://github.com/zoogie/b9sTool/releases/latest)
+- 최신 버전의 [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest)
 
 #### 섹션 I - CFW 확인
 
@@ -45,7 +45,7 @@ These instructions are for Taiwanese consoles ONLY (as indicated by a T at the e
 ![]({{ "/images/screenshots/fredtool-root-layout.png" | absolute_url }})
 {: .notice--info}
 
-#### Section III - BannerBomb3
+#### 섹션 III - BannerBomb3
 
 1. Open the [DSIHaxInjector V2](https://jenkins.nelthorya.net/job/DSIHaxInjector%20v2/build?delay=0sec) website on your computer
 1. Under the "Username" field, enter any alphanumeric name (no spaces or special characters)
@@ -55,8 +55,8 @@ These instructions are for Taiwanese consoles ONLY (as indicated by a T at the e
 1. Click the "output_(name).zip" link
 1. SD 카드의 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 폴더로 이동해 주세요 
     +  `<ID0>` is the same as the one you used in Seedminer
-    + `<ID1>` is a 32-character folder inside of `<ID0>`
-    + If the `Nintendo DSiWare` folder does not exist, then create it
+    + 이 `<ID1>`은 `<ID0>` 폴더 안에 존재하는 32자리의 이름을 갖춘 폴더입니다
+    + 만약 `Nintendo DSiWare` 폴더가 존재하지 않다면, 만들어 주세요
 1. If there is anything currently in the `Nintendo DSiWare` folder, move it elsewhere for safekeeping
 1. Open the output_(name) `.zip` file and navigate to `China_Taiwan` -> `output_setup`
 1. Copy all six `.bin` files to the `Nintendo DSiWare` folder
@@ -80,7 +80,7 @@ These instructions are for Taiwanese consoles ONLY (as indicated by a T at the e
 1. SD 카드의 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 폴더로 이동해 주세요 
 1. Delete all of the `.bin` files in the `Nintendo DSiWare` folder
 
-#### Section IV - Fredtool
+##### 섹션 IV - Fredtool
 
 1. Open the [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec) website on your computer
 1. Under the "Username" field, enter any alphanumeric name (no spaces or special characters)
