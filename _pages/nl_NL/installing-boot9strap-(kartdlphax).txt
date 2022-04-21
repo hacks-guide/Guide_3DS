@@ -1,67 +1,67 @@
 ---
-title: "Installing boot9strap (kartdlphax)"
+title: "Boot9strap installeren (kartdlphax)"
 ---
 
 {% include toc title="Inhoudsopgave" %}
 
 ### Verplicht te lezen
 
-kartdlphax is an exploit for the Download Play mode of Mario Kart 7. Het kan worden gebruikt met universal-otherapp om custom firmware te installeren op doelapparaten.
+kartdlphax is een exploit voor de Download Play mode van Mario Kart 7. Het kan worden gebruikt met universal-otherapp om custom firmware te installeren op doelapparaten.
 
-In order to follow these instructions, you will need the following:
+Om deze instructies te volgen, heb je het volgende nodig:
 
-- A second 3DS with custom firmware (the **source 3DS**) that is the same region as the 3DS you are trying to modify (the **target 3DS**)
-- A physical or digital copy of Mario Kart 7 that is the same region as both consoles
-- An SD card for both devices
+- Een tweede 3DS met custom firmware (de **bron 3DS**) die dezelfde regio is als de 3DS die je probeert te veranderen (de **doel 3DS**)
+- Een fysieke of digitale kopie van Mario Kart 7 dat dezelfde regio heeft als beide consoles
+- Een SD-kaart voor beide apparaten
 	
 ### Wat je nodig hebt
 
-On the **source 3DS** (the 3DS with custom firmware):
+Op de **source 3DS** (de 3DS met custom firmware):
 
 * De nieuwste versie van [kartdlphax] (https://github.com/mariohackandglitch/kartdlphax/releases/latest)
 * De nieuwste versie van [Luma3DS 3GX Loader Edition](https://github.com/Nanquitas/Luma3DS/releases/tag/v10.2.1)
 
-On the **target 3DS** (the 3DS that you are trying to modify):
+Op de **target 3DS** (de 3DS die je probeert te wijzigen):
 
 * De nieuwste versie van [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
 * De nieuwste versie van [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3.zip)
 * De nieuwste versie van [standaard Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
 
-#### Section I - Prep Work (source 3DS)
+#### Deel I - Voorbereiding (bron 3DS)
 
-1. Insert the SD card of your **source 3DS** in your computer
+1. Plaats de SD-kaart van je **bron 3DS** in je computer
 1. Kopieer Luma 3GX Loader Edition's `boot.firm` naar de hoofdmap van de **bron 3DS**'s SD-kaart, die elk bestaand bestand vervangt
   + De hoofdmap van de SD-kaart verwijst naar de bovenste map van de SD-kaart, waarin je alle mappen op de SD-kaart kunt zien, waaronder de Nintendo 3DS map, zonder je in de Nintendo 3DS map te bevinden
-1. Copy kartdlphax's `plugin.3gx` to the following directory on the **source 3DS**'s SD card, depending on the **region of your copy of Mario Kart 7**:
+1. Kopieer kartdlphax's `plugin.3gx` naar de volgende map op de **bron 3DS**'s SD-kaart, afhankelijk van de **regio van je kopie van Mario Kart 7**:
   - USA: `luma/plugins/0004000000030800`
   - EUR: `luma/plugins/0004000000030700`
   - JPN: `luma/plugins/0004000000030600`
-  - Create the `plugins` and `00040000...` folders if they do not already exist
-1. Eject the SD card and put it in the **source 3DS**
+  - Maak de `plugins` en `00040000...` mappen aan als ze nog niet bestaan
+1. Haal de SD-kaart uit en stop deze in de **bron 3DS**
 
-#### Section II - Prep Work (target 3DS)
+#### Deel II - Voorbereiding (doel 3DS)
 
-1. Insert the SD card of your **target 3DS** in your computer
-1. Copy `boot.firm` and `boot.3dsx` from the standard Luma3DS `.zip` to the root of your SD card
+1. Plaats de SD-kaart van je **doel 3DS** in je computer
+1. Kopieer `boot.firm` en `boot.3dsx` van de standaard Luma3DS `.zip` naar de hoofdmap van je SD-kaart
 1. Maak een map genaamd `boot9strap` op de hoofdmap van je SD-kaart
 1. Kopieer `boot9strap.firm` en `boot9strap.firm.sha` van de boot9strap `.zip` naar de `/boot9strap/` map op je SD-kaart
 1. Kopieer `SafeB9SInstaller.bin` van de SafeB9SInstaller `.zip` naar de hoofdmap van je SD-kaart
-1. Eject the SD card and put it in the **target 3DS**
+1. Haal de SD-kaart uit en stop deze in de **doel 3DS**
 
-#### Section III - kartdlphax
+#### Deel III - kartdlphax
 
-1. Power on the **source 3DS**
-  - If you are prompted to set up Luma3DS, just press START to save the configuration
-1. Once in the HOME Menu, press (Left Shoulder) + (Down D-Pad) + (Select) to bring up the Rosalina menu
-1. Select "Enable plugin loader"
+1. Zet de **bron 3DS** aan
+  - Als je gevraagd wordt om Luma3DS in te stellen, druk gewoon op START om de configuratie op te slaan
+1. Eenmaal in het HOME Menu, druk op (Left Shoulder) + (Down D-Pad) + (Select) om het Rosalina menu te tonen
+1. Selecteer "Enable plugin loader"
 1. Druk op (B) om het Rosalina menu af te sluiten
-1. Launch Mario Kart 7
-  - Ensure that wireless connectivity is enabled
-  - kartdlphax should tell you that it is running
-1. Navigate to `Local Multiplayer` -> `Create Group`
+1. Start Mario Kart 7
+  - Zorg ervoor dat draadloze verbinding is ingeschakeld
+  - kartdlphax zou je moeten vertellen dat het werkt
+1. Navigeer naar `Local Multiplayer` -> `Create Group`
   - Als de bron 3DS op dit moment bevriest en je een cartridge gebruikt, probeer dan [het cartridge te installeren naar het systeem](dumping-titles-and-game-cartridges#installing-a-game-cartridge-direct naar-het systeem)
-1. Power on the **target 3DS**
-  - Ensure that wireless connectivity is enabled
+1. Zet de **doel 3DS** aan
+  - Zorg ervoor dat draadloze verbinding is ingeschakeld
 1. Op de **doel 3DS**, open de Download Play applicatie (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"}), selecteer dan "Nintendo 3DS"
 1. Word lid van de groep gemaakt door de **bron 3DS**
 1. Selecteer "Start" op de **bron 3DS** zodra de **doel 3DS** is gedetecteerd
