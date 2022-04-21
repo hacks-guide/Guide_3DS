@@ -1,12 +1,12 @@
 ---
-title: "Installing boot9strap (Hardmod)"
+title: "boot9strap installeren (Hardmod)"
 ---
 
 {% include toc title="Inhoudsopgave" %}
 
 ### Verplicht te lezen
 
-An excellent guide to getting a hardmod can be found [here](https://gbatemp.net/threads/414498/).
+Een uitstekende handleiding voor het verkrijgen van een 'hardmod', kan [hier](https://gbatemp.net/threads/414498/) gevonden worden.
 
 Dit is een momenteel werkende uitvoering van de "FIRM partitions known-plaintext" exploit, waarvan je [hier](https://www.3dbrew.org/wiki/3DS_System_Flaws) de details kunt vinden.
 
@@ -14,18 +14,18 @@ Om de [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links op deze pagin
 
 Om de op deze pagina gelinkte `.7z` bestanden uit te pakken zal je een bestandsarchiver zoals [7-Zip](http://www.7-zip.org/) of [The Unarchiver](https://theunarchiver.com/) nodig hebben.
 
-This will work on New 3DS, New 2DS, Old 3DS, and Old 2DS on *all* versions that you have a corresponding `.firm` for.
+Dit werkt op de New 3DS, New 2DS, Old 3DS en Old 2DS op *elke* versie waar je de `.firm` voor hebt.
 
 ### Wat je nodig hebt
 
-* Your NAND image extracted using your [hardmod](https://gbatemp.net/threads/414498/)
+* Jouw NAND bestand die je hebt gekregen met de [hardmod](https://gbatemp.net/threads/414498/)
 * De nieuwste versie van [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3.zip)
 * De nieuwste versie van [hardmod-b9s-installer](https://github.com/ihaveamac/hardmod-b9s-installer/releases/latest)
-  + Windows users can use the compiled `.exe`, while Mac and Linux users will need to have [Python 3](https://www.python.org/downloads/) installed to run the `.py`
+  + Windows gebruikers kunnen de `.exe` kunnen gebruiken, terwijl Mac en Linux gebruiks [Python 3](https://www.python.org/downloads/) nodig zullen hebben om de `.py` te gebruiken
 * De nieuwste versie van [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) 
-* The `.firm` corresponding to your device and version:
+* De `.firm` voor je apparaat en versie:
 
-| Version(s) | Kernel | Old 3DS or Old 2DS | New 3DS or New 2DS |
+| Versie(s) | Kernel | Old 3DS of Old 2DS | New 3DS of New 2DS |
 |-|-|:-:|:-:|
 | 1.0.0 | 2.27-0 | [2.27-0_1.0_OLD.firm](magnet:?xt=urn:btih:5c86edc67a1827991567b3c326a4182b66647d07&dn=2.27-0_1.0_OLD.firm&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce) | - |
 | 1.1.0 | 2.28-0 | [2.28-0_1.1_OLD.firm](magnet:?xt=urn:btih:7c7696ff18e7d83a638b9c80f83052f763fb0fa5&dn=2.28-0_1.1_OLD.firm&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce) | - |
@@ -65,36 +65,36 @@ This will work on New 3DS, New 2DS, Old 3DS, and Old 2DS on *all* versions that 
 1. Schakel je 3DS uit
 1. Plaats je SD kaart in je computer
 1. Kopieer `boot.firm` en `boot.3dsx` van de Luma3DS `.zip` naar de hoofdmap van je SD-kaart
-1. Copy the hardmod-b9s-installer folder from the hardmod-b9s-installer `.zip` to your computer
-1. Copy your downloaded `.firm` to the hardmod-b9s-installer folder on your computer
-1. Rename your downloaded `.firm` in the hardmod-b9s-installer folder on your computer to `current.firm`
-1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the hardmod-b9s-installer folder on your computer
+1. Koppieer de hardmod-b9s-installer map van de hardmod-b9s-installer `.zip` naar je computer
+1. Koppieer je gedownloade `.firm` naar de hardmod-b9s-installer map op uw computer
+1. Hernoem je gedownloade `.firm` in de hardmod-b9s-installer map op je computer naar `current.firm`
+1. Kopieer `boot9strap.firm` en `boot9strap.firm.sha` van de boot9strap `.zip` naar de hardmod-b9s-installer map op je computer
 1. Stop je SD kaart terug in je 3DS
-1. Use your hardmod to create a NAND backup
-1. Move your NAND backup to the hardmod-b9s-installer folder on your computer and rename it to `NAND.bin`
+1. Gebruik je hardmod om een NAND backup te maken
+1. Verplaats je NAND backup naar de hardmod-b9s-installer map op je computer en hernoem het naar `NAND.bin`
 
 #### Deel II - Boot9strap installeren
 
-1. Run hardmod-b9s-installer
-  + Windows Users: Run `install-b9s.exe`
-  + Mac and Linux Users: Run `install-b9s.py`
-1. Flash your outputted `NAND-patched.bin` to your device with your hardmod
+1. Start hardmod-b9s-installer
+  + Windows gebruikers: Start `install-b9s.exe`
+  + Mac en Linux gebruikers: Start `install-b9s.py`
+1. Flash je gemaakt `NAND-patched.bin` naar je apparaat met je hardmod
 1. Schakel je 3DS uit
-1. Disconnect your hardmod
+1. Koppel je hardmod los
 1. Zet je 3DS aan
 
 #### Deel III - Luma3DS configureren
 
-1. Your device should have booted into the Luma3DS configuration menu
+1. Je apparaat zou het Luma3DS configuratie scherm moeten laten zien
   + Als je een zwart scherm krijgt, [volg dan deze handleiding voor probleemoplossingen](troubleshooting#boot-related-issues-on-modded-devices)
 1. Selecteer de volgende opties met de D-pad en de (A) knop:
   + **"Show NAND or user string in System Settings"**
 1. Druk op (Start) om op te slaan en opnieuw op te starten
   + Als je een foutmelding krijgt, ga dan gewoon door naar de volgende pagina
 
-Op dit moment zal je console standaard opstarten naar Luma3DS zolang de SD-kaart geplaatst is.
+Op dit moment zal je console standaard opstarten naar Luma3DS zolang de SD kaart geplaatst is.
   + Luma3DS ziet er niet anders uit dan het normale HOME Menu. Als je console in het HOME Menu is opgestart, gebruikt hij custom firmware.
-  + Op de volgende pagina kopieer je Luma3DS naar het interne geheugen, zodat je het kan opstarten zonder SD-kaart.
+  + Op de volgende pagina kopieer je Luma3DS naar het intern geheugen, zodat je het ook kan opstarten zonder SD kaart.
 
 ___
 
