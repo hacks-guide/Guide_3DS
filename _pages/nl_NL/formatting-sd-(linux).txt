@@ -24,13 +24,13 @@ NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
 mmcblk0     179:0    0   3,8G  0 disk
 └─mmcblk0p1 179:1    0   3,7G  0 part /run/media/user/FFFF-FFFF
 ```
-1. Onthoud het mount point van je SD-kaart. In ons bovenstaande voorbeeld was het `mmcblk0`
+1. Take note of the device name. In our example above, it was `mmcblk0p1`
   + Als `RO` is ingesteld op 1, check dan even of je SD-kaart niet fysiek vergrendelt is
 1. Druk op CTRL + C om het menu te verlaten
 1. Typ het volgende voor jouw overeenkomende SD kaart:
-    - 2GB of lager: `sudo mkfs.fat /dev/(device mount point from above) -s 64 -F 16` 
+    - 2GB or lower: `sudo mkfs.fat /dev/(device name from above) -s 64 -F 16` 
 	  - Dit maakt een FAT16 partitie aan met 32 KB clustergrootte op de SD-kaart
-    - 4GB tot 128GB: `sudo mkfs.fat /dev/(device mount point from above) -s 64 -F 32` 
+    - 4GB - 128GB: `sudo mkfs.fat /dev/(device name from above) -s 64 -F 32` 
 	  - Dit maakt een FAT32 partitie met 32 KB clustergrootte op de SD-kaart
-    - 128GB of hoger: `sudo mkfs.fat /dev/(device mount point from above) -s 128 -F 32`
+    - 128GB or higher: `sudo mkfs.fat /dev/(device name from above) -s 128 -F 32`
       - Dit maakt een FAT32 partitie met 64 KB clustergrootte op de SD-kaart
