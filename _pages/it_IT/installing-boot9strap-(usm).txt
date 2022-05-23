@@ -22,7 +22,10 @@ Se i tuoi pulsanti (L/R), (Su) o (A) non funzionano, dovrai usare [una versione 
 ### Cosa serve
 
 * Il tuo file `movable.sed` dalla sezione [Seedminer](seedminer)
+* L'ultima versione di [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip)
 * L'ultima versione di [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
+
 
 #### Sezione I - Preparazione
 
@@ -34,6 +37,9 @@ Se i tuoi pulsanti (L/R), (Su) o (A) non funzionano, dovrai usare [una versione 
 1. Inserisci la scheda SD nel tuo computer
 1. Copia i file `boot.firm` e `boot.3dsx` dall'archivio `.zip` di Luma3DS nella directory principale della tua scheda SD
   + La directory principale della scheda SD è la cartella della tua scheda SD in cui è possibile visualizzare la cartella Nintendo 3DS, ma non il suo interno
+1. Crea una cartella chiamata `boot9strap` nella directory principale della tua scheda SD
+1. Copia i file `boot9strap.firm` e `boot9strap.firm.sha` dall'archivio `.zip` di boot9strap nella cartella `/boot9strap/` della tua scheda SD
+1. Copia il file `SafeB9SInstaller.bin` dall'archivio `.zip` di SafeB9SInstaller nella directory principale della tua scheda SD
 1. Copia il file `usm.bin` da `unSAFE_MODE.zip` nella directory principale della tua scheda SD
   + ![]({{ "/images/screenshots/usm-root-layout.png" | absolute_url }})
     {: .notice--info}
@@ -71,9 +77,15 @@ Se i tuoi pulsanti (L/R), (Su) o (A) non funzionano, dovrai usare [una versione 
 1. Alla richiesta "Vuoi configurare le Impostazioni internet?", seleziona "Sì"
 1. Nel menu successivo, entra in `Connessione 1` -> `Modifica` -> pagina successiva (la freccia a destra) -> `Impostazioni proxy` -> `Impostazioni avanzate`
   + Ecco una [rappresentazione visiva](https://uwuu.ca/images/safemode_highlighted.png)
-1. Once you see `B9S install SUCCESS` on the top screen, press any button to reboot to Luma Configuration
+1. Se l'exploit è andato a buon fine, la tua console avvierà SafeB9SInstaller
 
-#### Sezione IV - Configurare Luma3DS
+#### Section IV - Installing boot9strap
+
+1. Quando richiesto, inserisci la combinazione di tasti richiesta sullo schermo superiore per installare boot9strap
+  + If the top screen is blank, power off your device and re-do Section III
+1. Una volta completato il processo, premi (A) per riavviare la tua console
+
+#### Sezione V - Configurare Luma3DS
 
 1. La tua console dovrebbe riavviarsi all'interno del menu di configurazione di Luma3DS
   + È possibile accedere al menu di configurazione di Luma3DS in qualsiasi momento spegnendo la console e riaccendendola tenendo premuto il pulsante SELECT
@@ -86,7 +98,7 @@ A questo punto, la console avvierà Luma3DS finché la scheda SD rimane inserita
   + Luma3DS non è diverso dal normale menu HOME. Se la console avvia il menu HOME, vuol dire che sta eseguendo il custom firmware.
   + Nella pagina successiva, copierai Luma3DS nella memoria interna per poter avviarlo senza una scheda SD.
 
-#### Section V - Restoring WiFi Configuration Profiles
+#### Section VI - Restoring WiFi Configuration Profiles
 
 1. Avvia "Impostazioni della console"
 1. Entra in `Gestione dati` -> `DSiWare`
