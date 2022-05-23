@@ -22,7 +22,10 @@ To accomplish this, we use your system's encryption key (movable.sed) to build a
 ### 必備項目
 
 * 您自 [Seedminer](seedminer) 步驟中所取得的 `movable.sed` 檔案
+* 最新版的 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip)
 * 最新版的 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
+
 
 #### 第一節 — 準備工作
 
@@ -34,6 +37,9 @@ To accomplish this, we use your system's encryption key (movable.sed) to build a
 1. 將 SD 卡插入至電腦中
 1. 解壓 Luma3DS `.zip` 內的 `boot.firm` 與 `boot.3dsx` 到 SD 卡的根目錄底下
   + 「SD 卡的根目錄」指的是你的 SD 卡含有 Nintendo 3DS 資料夾的目錄，而非該資料夾內部
+1. 在 SD 卡的根目錄底下建立一個新的資料夾 `boot9strap`
+1. 解壓 boot9strap `.zip` 的 `boot9strap.firm` 及 `boot9strap.firm.sha` 檔案至 SD 卡的 `/boot9strap/` 資料夾中
+1. 將 SafeB9SInstaller `.zip` 中的 `SafeB9SInstaller.bin` 複製到 SD 卡的根目錄
 1. 解壓 `unSAFE_MODE.zip` 內的 `usm.bin` 到 SD 卡的根目錄底下
   + ![]({{ "/images/screenshots/usm-root-layout.png" | absolute_url }})
     {: .notice--info}
@@ -71,9 +77,15 @@ To accomplish this, we use your system's encryption key (movable.sed) to build a
 1. 當系統提示您『你想要配置網路設置嗎? (Would you like to configure Internet settings?)』時，點選『Yes』
 1. 在接下來出現的選單中，移動至 `連接點 1(Connection 1)` -> `更改設定(Change Settings)` -> `下一頁 (右箭頭)` -> `代理設置(Proxy Settings)` -> `詳細設置(Detailed Setup)`
   + 如[本圖中所示](https://uwuu.ca/images/safemode_highlighted.png)
-1. Once you see `B9S install SUCCESS` on the top screen, press any button to reboot to Luma Configuration
+1. 如果一切成功的話，您將自動進入 SafeB9SInstaller
 
-#### 第四節 — 設定 Luma3DS
+#### Section IV - Installing boot9strap
+
+1. 出現提示時，輸入上方螢幕所顯示的按鍵組合以安裝 boot9strap
+  + If the top screen is blank, power off your device and re-do Section III
+1. 過程結束後，按下『A』重啟主機
+
+#### 第五節 — 設定 Luma3DS
 
 1. 您的主機將會重啟至 Luma3DS 設定選單中
   + You can access the Luma3DS configuration menu at any time by powering off, holding SELECT, then powering on your device while still holding SELECT
@@ -86,7 +98,7 @@ To accomplish this, we use your system's encryption key (movable.sed) to build a
   + Luma3DS 不會特別在 HOME 主選單中新增任何特別的東西。 如果你的主機已經啟動到了 HOME 主選單，這代表自製韌體已經在運行了。
   + 在下一頁中，我們將會教你複製 Luma3DS 到內存中，使得主機能在沒有 SD 卡的情況下啟動系統。
 
-#### Section V - Restoring WiFi Configuration Profiles
+#### Section VI - Restoring WiFi Configuration Profiles
 
 1. 於您主機上啟動系統設定 (System Settings)
 1. 移動至 `檔案管理 (Data Management)` -> `DSiWare`
