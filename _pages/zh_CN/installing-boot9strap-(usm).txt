@@ -22,7 +22,10 @@ title: "安装 boot9strap（通过 USM）"
 ### 你需要准备点啥？
 
 * 你在 [Seedminer](seedminer) 步骤中获得的 `movable.sed` 文件
+* 最新版 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip)
 * 最新版 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
+
 
 #### 第一步 – 准备工作
 
@@ -34,6 +37,9 @@ title: "安装 boot9strap（通过 USM）"
 1. 将你的 SD 卡插入到电脑
 1. 解压 Luma3DS `.zip` 里的 `boot.firm` 和 `boot.3dsx` 到你 SD 卡的根目录
   + 根目录指的是你点进 SD 卡看到的目录，你可以在这个目录下看到 Nintendo 3DS 文件夹，但请不要点进去
+1. 在 SD 卡根目录创建一个名为 `boot9strap` 的文件夹
+1. 从boot9strap `.zip` 文件中复制 `boot9strap.firm` 和 `boot9strap.firm.sha` 到你SD卡的 `/boot9strap/` 文件夹中
+1. 从 SafeB9SInstaller `.zip` 压缩包中复制 `SafeB9SInstaller.bin` 到 SD 卡根目录下
 1. 从 `unSAFE_MODE.zip` 复制 `usm.bin` 到 SD 卡的根目录
   + ![]({{ "/images/screenshots/usm-root-layout.png" | absolute_url }})
     {: .notice--info}
@@ -71,9 +77,15 @@ title: "安装 boot9strap（通过 USM）"
 1. 当系统问你“你想要配置互联网设置吗？（Would you like to configure Internet settings?）”时，点击 “Yes”
 1. 在接下来出现的菜单中，进入到 `连接点 1（Connection 1）` -> `更改设置（Change Settings）` -> `下一页（右箭头）` -> `代理设置（Proxy Settings）` -> `详细设置（Detailed Setup）`
   + 这里有一份[演示图像](https://uwuu.ca/images/safemode_highlighted.png)
-1. 然后你应该会看到上屏提示 `B9S install SUCCESS`，然后你就可以按下任意键重启到 Luma 设置了
+1. 如果漏洞执行成功，你的主机将会进入到 SafeB9SInstaller
 
-#### 第四步 – 设置 Luma3DS
+#### Section IV - Installing boot9strap
+
+1. 出现提示时，按照上屏的提示输入按键组合来安装 boot9strap
+  + If the top screen is blank, power off your device and re-do Section III
+1. 安装完成后，按下 “A” 键重启主机
+
+#### 第五步 – 配置 Luma3DS
 
 1. 你的主机将会在重启后进入至 Luma3DS 配置菜单中
   + 你可以随时在主机关机的情况下，按住 SELECT 键，然后按下电源键开机来进入 Luma3DS 配置菜单
@@ -86,7 +98,7 @@ title: "安装 boot9strap（通过 USM）"
   + Luma3DS 不会给正常的主菜单增添任何看上去十分特别的东西。 如果你的主机现在已经启动到主菜单了，说明自制固件已经在运行了。
   + 在下一页中，我们将会教你复制 Luma3DS 到内部存储当中，使得主机能在没有 SD 卡的情况下启动系统。
 
-#### 第五步 – 还原 WiFi 配置文件
+#### Section VI - Restoring WiFi Configuration Profiles
 
 1. 启动你主机上的 “系统设置(System settings)”
 1. 进入到 `数据管理（Data Management）` -> `DSiWare`
