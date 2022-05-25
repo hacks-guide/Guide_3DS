@@ -253,9 +253,17 @@ Back up your data and reformat your SD card as FAT32 with the recommended tool d
 此處列出的步驟將假設你的主機安裝了最新的自製韌體(boot9strap + Luma3DS 8.0 或更高版本)。 如果你的主機還在用舊版的自製韌體(例如基於 arm9loaderhax 或 menuhax 的安裝)，則你應該在繼續操作前先升級自製韌體。
 {: .notice--info}
 
-### 主機開機只閃一下藍燈，且什麼都沒出現
+### My device powers off when I try to turn it on, and/or the notification LED shows a color on boot
 
-您所使用的 `boot.firm` 檔案有問題(如遺失、放錯位置或者損壞)。 下載最新版本的 (https://github.com/LumaTeam/Luma3DS/releases/latest) 並將 `boot.firm` 放在你 SD 卡的根目錄中，如有存在相同檔案請直接覆蓋。 請不要用 WinRAR 解壓 ZIP 檔案；目前已知使用此軟體會導致與 3DS 有關的檔案的問題。
+There is an issue with your `boot.firm` file. If you're running [boot9strap 1.4](https://github.com/SciresM/boot9strap/releases/tag/1.4), your 3DS notification LED may flash a certain color. This color is used to diagnose issues involving your `boot.firm` file on SD card or internal memory. On older versions of boot9strap, the blue light will power off almost immediately when trying to turn on the device.
+
+If the notification LED flashes:
+
+- **White**: Your 3DS was not able to find `boot.firm` on your SD card or on internal memory.
+- **Magenta**: Your 3DS was not able to find `boot.firm` on your SD card. It was able to find `boot.firm` on internal memory, but the file is corrupted.
+- **Red**: Your 3DS was able to find `boot.firm` on both your SD card and on internal memory, but both files are corrupted.
+
+You can get a new `boot.firm` file by downloading the [latest release of Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), extracting it, and placing `boot.firm` on the root of your SD card. If your `boot.firm` file is consistently being detected as corrupted, you may want to check your SD card for errors ([Windows](h2testw-(windows)), [Linux](f3-(linux)), or [macOS](f3xswift-(mac))). Also, note that the 3DS tends to have issues with files extracted using WinRAR.
 
 如果你在開機的時候聽到了“啪”的一聲，然後藍燈熄滅，則代表你的主機可能有硬體上的問題(如：背光排線斷開)。 你的主機或許能在開蓋特定角度的情況下開機。
 
