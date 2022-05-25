@@ -253,9 +253,17 @@ Je console had al custom firmware in het verleden, dus werd je niet automatisch 
 De instructies die hier vermeld worden gaan er van uit dat je console een moderne custom firmware setup heeft (boot9strap + Luma3DS 8.0 of hoger). Als je console een oudere homebrew setup heeft (bijvoorbeeld iets gebaseerd op arm9loaderhax of menuhax), dan moet je updaten voor je deze instructies probeert.
 {: .notice--info}
 
-### Mijn apparaat zit vast op een zwart scherm en het blauwe licht gaat uit
+### My device powers off when I try to turn it on, and/or the notification LED shows a color on boot
 
-Er is een probleem met je `boot.firm` bestand (het ontbreekt, werd misplaatst of is corrupted). Download de nieuwste versie van [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) en plaats `boot.firm` op de hoofdmap van je SD-kaart, ter vervanging van het bestaande bestand. Zorg ervoor dat je het ZIP-bestand uitpakt met een andere tool dan WinRAR, omdat het bekend is dat het problemen veroorzaakt met 3DS-gerelateerde bestanden.
+There is an issue with your `boot.firm` file. If you're running [boot9strap 1.4](https://github.com/SciresM/boot9strap/releases/tag/1.4), your 3DS notification LED may flash a certain color. This color is used to diagnose issues involving your `boot.firm` file on SD card or internal memory. On older versions of boot9strap, the blue light will power off almost immediately when trying to turn on the device.
+
+If the notification LED flashes:
+
+- **White**: Your 3DS was not able to find `boot.firm` on your SD card or on internal memory.
+- **Magenta**: Your 3DS was not able to find `boot.firm` on your SD card. It was able to find `boot.firm` on internal memory, but the file is corrupted.
+- **Red**: Your 3DS was able to find `boot.firm` on both your SD card and on internal memory, but both files are corrupted.
+
+You can get a new `boot.firm` file by downloading the [latest release of Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), extracting it, and placing `boot.firm` on the root of your SD card. If your `boot.firm` file is consistently being detected as corrupted, you may want to check your SD card for errors ([Windows](h2testw-(windows)), [Linux](f3-(linux)), or [macOS](f3xswift-(mac))). Also, note that the 3DS tends to have issues with files extracted using WinRAR.
 
 Als je een "pop" hoort, mogelijks samen met de achtergrondverlichting die eventjes aanschiet, is er een hardware probleem met je console (zoals een achtergrondlicht kabel die niet aangesloten is). Je zou je apparaat kunnen laten opstarten door het op bepaalde hoeken vast te houden.
 
