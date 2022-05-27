@@ -254,17 +254,17 @@ title: "问题排查"
 此处列出的操作方法将假设你的主机安装了最新的自制固件（boot9strap + Luma3DS 8.0 或更高版本）。 如果你的主机还在用旧版的自制固件（例如基于 arm9loaderhax 或 menuhax 的东西），则你应该在继续操作前先升级自制固件。
 {: .notice--info}
 
-### My device powers off when I try to turn it on, and/or the notification LED shows a color on boot
+### 我的机子开机后闪了下蓝灯就关机了（而且通知灯亮了下）
 
-There is an issue with your `boot.firm` file. If you're running [boot9strap 1.4](https://github.com/SciresM/boot9strap/releases/tag/1.4), your 3DS notification LED may flash a certain color. This color is used to diagnose issues involving your `boot.firm` file on SD card or internal memory. On older versions of boot9strap, the blue light will power off almost immediately when trying to turn on the device.
+这说明你放的 `boot.firm` 文件有问题。 如果你的主机正在使用 [boot9strap 1.4](https://github.com/SciresM/boot9strap/releases/tag/1.4) 版，那么你的主机在这种情况下开机后，通知灯就会亮起某种特定的颜色，然后关机。 具体亮起的颜色可用来判断你内存卡或主机内存中的 `boot.firm` 的问题。 如果 boot9strap 是 1.4 以下的版本，则只会闪一下电源灯（蓝灯）就关机。
 
-If the notification LED flashes:
+如果通知灯亮起：
 
 - **白色**：你的 3DS 无法在 SD 卡根目录或内部存储中找到 `boot.firm` 文件。
-- **Magenta**: Your 3DS was not able to find `boot.firm` on your SD card. It was able to find `boot.firm` on internal memory, but the file is corrupted.
-- **Red**: Your 3DS was able to find `boot.firm` on both your SD card and on internal memory, but both files are corrupted.
+- **紫红色**：你的 3DS 无法在 SD 卡根目录中找到 `boot.firm` 文件。 主机内存中可以找到 `boot.firm` 文件，但是文件已损坏。
+- **红色**：你的 3DS 能够在 SD 卡根目录和内部存储中找到 `boot.firm` 文件，但是这两个文件都已损坏。
 
-You can get a new `boot.firm` file by downloading the [latest release of Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), extracting it, and placing `boot.firm` on the root of your SD card. If your `boot.firm` file is consistently being detected as corrupted, you may want to check your SD card for errors ([Windows](h2testw-(windows)), [Linux](f3-(linux)), or [macOS](f3xswift-(mac))). Also, note that the 3DS tends to have issues with files extracted using WinRAR.
+你可以通过下载 [最新版本的 Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)，然后解压，将 `boot.firm` 复制到 SD 卡的根目录。 如果 `boot.firm` 始终被主机判定为损坏，则你可能需要使用一个工具来测试一下你的 SD 卡（[Windows](h2testw-(windows))、[Linux](f3-(linux))、[macOS](f3xswift-(mac))） 另外，最好不要使用 WinRAR 解压文件，解压的文件给 3DS 使用可能会出问题。
 
 如果你在开机的时候听到了“啪”的一声，然后蓝灯熄灭，则代表你的主机可能有硬件上的问题了。（如：背光排线断开） 你的主机或许能在开盖特定角度的情况下开机。
 
