@@ -12,11 +12,8 @@ title: "更新/恢复自制固件"
 
 ### 你需要准备点啥？
 * 最新版 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
-* 最新版 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 
 ### 操作步骤
-
-#### 第一步 – 准备工作
 
 1. 将你的 SD 卡插入到电脑
 1. 解压 Luma3DS `.zip` 内的 `boot.firm` 和 `boot.3dsx` 到你 SD 卡的根目录，请覆盖已有文件
@@ -25,36 +22,10 @@ title: "更新/恢复自制固件"
   + 如果没有 `luma` 或 `payloads` 文件夹，请先创建它们
 1. 从 GodMode9 `.zip` 中复制 `gm9` 文件夹到你 SD 卡的根目录（若出现相同文件的提示，请选择全部替换）
 1. 将SD卡重新插入你的主机
+1. 启动你的主机
+  + If you see the Luma3DS configuration menu, press (Start) to save and reboot
 
-#### 第二步 – 设置 Luma3DS
-
-1. 按住 “SELECT” 键，然后按下电源键开机
-	* 你现在应该会看到 Luma3DS 的配置菜单
-1. 使用方向键和 “A” 键来启用以下设置：
-	* **“Show NAND or user string in System Settings”**
-1. 按下 “Start” 键保存设置并重启
-
-#### 第三步 — 将 Luma3DS 复制到 CTRNAND
-
-1. 将主机关机
-1. 按住 “START” 键，然后将主机开机。 这会启动 GodMode9
-  + 如果没有进入 GodMode9，请确保 GodMode9.firm 放在了 `/luma/payloads/` 中，且创建文件夹时正确拼写了 `payloads`。
-1. 如果出现修复 RTC 日期与时间的提示，按 “A” 键执行修复，然后设置好日期和时间，并按 “A” 继续
-1. 按下 “Home” 键来打开功能菜单
-1. 选择 “Scripts...”
-1. 选择 “GM9Megascript”
-1. 选择 “Scripts from Plailect's Guide”
-1. 选择 “Setup Luma3DS to CTRNAND”
-  + 这将会把 Luma3DS 复制到主机的内部存储中，使你的主机能够在不插 SD 卡的情况下开机
-1. 出现提示时，按 “A” 键继续
-1. 按 “A” 键解锁SysNAND (lvl1) 写入权限，并根据屏幕上的提示依次按下按键
-1. 按 “A” 键继续
-1. 按下 B 键，然后移动到 “Exit” 来退出 GM9Megascript
-  + 如果有重锁写入提示（relock write permissions），请确认重锁
-1. 按下 “Home” 键来打开功能菜单
-1. 选择 “Poweroff system” 来将主机关机
-
-此时 Luma3DS 已经复制到主机的内部存储中。现在你的主机能够在不插 SD 卡的情况下开机了。
+The latest version of Luma3DS has now been installed on your SD card and on internal memory.
 {: .notice--success}
 ___
 
