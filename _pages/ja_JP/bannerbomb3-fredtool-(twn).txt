@@ -125,21 +125,23 @@ If you see a configuration menu, you already have CFW, and continuing with these
 1. (A) を押し、同時にSTARTとSELECTを押してプロセスを開始します
 1. Once completed and the bottom screen says “done.”, exit b9sTool, then power off your device
     + 電源ボタンを長押しして強制的に電源を切る必要があるかもしれません
-    + Luma3dsの設定画面が表示された場合は、電源を切らずにガイドを続けてください
+    + If your device shuts down when you try to power it on, ensure that you have copied `boot.firm` from the Luma3DS `.zip` to the root of your SD card
+    + If you see the Luma Configuration screen, press (Start) to reboot, then continue with the guide
 
-#### Section VI - Configuring Luma3DS
-
-1. (Select) を押したままデバイスを起動し、Luma3DS設定メニューを開きます
-    + If you encounter issues launching the Luma configuration menu, follow [this troubleshooting guide](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)
-    + If the blue light on your 3DS powers on and off, you are missing `boot.firm` from the root of your SD card
-1. (A) ボタン とD-Padを使用し、次の設定を有効にします:
-    + “Show NAND or user string in System Settings”
-1. (Start) を押してセーブして再起動します
-
-#### Section VII - Restoring DS Download Play
+#### Section VI - Luma3DS Verification
 
 1. 本体の電源を切ります。
 1. パソコンにSDカードを入れます
+1. Verify that a `luma` folder exists and that `config.ini` is inside of it
+  + The existence of these folders and files confirms that Luma3DS is installed
+  + If you do not see the `luma` folder or `config.ini`, [follow this troubleshooting guide](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)
+
+At this point, your console will boot to Luma3DS by default.
+  + Luma3DS does not look any different from the normal HOME Menu. If your console has booted into the HOME Menu, it is running custom firmware.
+  + On the next page, you will install useful homebrew applications to complete your setup.
+
+#### Section VII - Restoring DS Download Play
+
 1. SDカードの`Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`へ移動します 
 1. Copy the `484E4441.bin`  file from the `clean` folder of the downloaded DSiWare archive (output_(name).zip) to the `Nintendo DSiWare` folder
 1. 再度、SDカードを本体に挿入してください。
