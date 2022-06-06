@@ -125,21 +125,23 @@ Once you have a DSiWare backup, an exploitable DSiWare title can be injected int
 1. 按下『A』，然後同時按下 START 鍵和 SELECT 鍵
 1. 一旦下方螢幕提示『done.』，則代表已經完成，退出 b9stool 並關閉主機
     + 您可能得按住電源紐強制關機
-    + 如果您的主機顯示 Luma 設定選單，請繼續下列步驟不必關機
+    + If your device shuts down when you try to power it on, ensure that you have copied `boot.firm` from the Luma3DS `.zip` to the root of your SD card
+    + If you see the Luma Configuration screen, press (Start) to reboot, then continue with the guide
 
-#### 第六節 — 設定 Luma3DS
-
-1. 開機時，按住「Select」鍵啟動 Luma 設定選單
-    + 如果您無法順利啟動 Luma 設定選單，請參見此[疑難排解](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)頁面 (英文)。
-    + 如果您的 3DS 主機藍燈亮起但又突然熄掉，則代表您的 SD 卡根目錄中缺少了 `boot.firm` 檔案
-1. 透過方向鍵及『A』以開啟下列選項：
-    + 『Show NAND or user string in System Settings』
-1. 按『Start』鍵以存檔並重新啟動系統
-
-##### 第七節 — 還原『下載通信(Download Play)』程式
+#### Section VI - Luma3DS Verification
 
 1. 關閉您的主機
 1. 將 SD 卡插入至電腦中
+1. Verify that a `luma` folder exists and that `config.ini` is inside of it
+  + The existence of these folders and files confirms that Luma3DS is installed
+  + If you do not see the `luma` folder or `config.ini`, [follow this troubleshooting guide](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)
+
+At this point, your console will boot to Luma3DS by default.
+  + Luma3DS 不會特別在 HOME 主選單中新增任何特別的東西。 如果你的主機已經啟動到了 HOME 主選單，這代表自製韌體已經在運行了。
+  + On the next page, you will install useful homebrew applications to complete your setup.
+
+##### 第七節 — 還原『下載通信(Download Play)』程式
+
 1. 於您的 SD 卡中，移動至 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 
 1. Copy the `484E4441.bin`  file from the `clean` folder of the downloaded DSiWare archive (output_(name).zip) to the `Nintendo DSiWare` folder
 1. 將 SD 卡插回主機中
