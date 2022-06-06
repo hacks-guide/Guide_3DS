@@ -86,24 +86,23 @@ title: "boot9strap 설치 (Fredtool)"
 1. (A) 버튼을 누른 후, START와 SELECT를 동시에 눌러 작업을 실행해 주세요
 1. 완료되고 아래 화면에 "done."이라고 표시되면, b9sTool를 종료하고 기기의 전원을 꺼 주세요
   + 전원버튼을 계속 눌러 강제종료를 해야 할 수도 있습니다
-  + Luma3DS 설정 메뉴가 표시되면, 전원을 끄지 말고 그냥 진행해 주세요
+  + If your device shuts down when you try to power it on, ensure that you have copied `boot.firm` from the Luma3DS `.zip` to the root of your SD card
+  + If you see the Luma Configuration screen, press (Start) to reboot, then continue with the guide
 
-#### 섹션 V - Luma3DS 설정
-
-1. (Select) 를 누른 채 기기를 부팅해 LumaDS 설정 메뉴로 들어가 주세요
-  + 만약 Luma3DS 설정 메뉴가 표시 안되면, [이 문제 해결 가이드 (영어)](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)를 참고해 주시기 바랍니다
-1. (A) 버튼과 십자 패드을 이용해 다음 설정을 설정해 주세요:
-  + **"Show NAND or user string in System Settings"**
-1. (Start)를 눌러 저장하고 기기를 다시 시작해 주세요
-
-이제 기기는 SD 카드가 삽입되 있는 한 Luma3DS를 기본으로 부팅 됩니다.
-  + Luma3DS는 보통 HOME 메뉴와 똑같이 보입니다. 만약 기기가 HOME 메뉴로 부팅되었다면, 커스텀 펌웨어가 설치되어 있습니다.
-  + 다음 페이지에서는 SD 카드 없이 부팅 할 수 있도록 Luma3DS를 내장 메모리로 설치할 것 입니다.
-
-#### 섹션 VI - DS 소프트웨어용 설정 복구
+#### Section V - Luma3DS Verification
 
 1. 기기를 종료해 주세요
 1. SD 카드를 컴퓨터에 삽입해 주세요
+1. Verify that a `luma` folder exists and that `config.ini` is inside of it
+  + The existence of these folders and files confirms that Luma3DS is installed
+  + If you do not see the `luma` folder or `config.ini`, [follow this troubleshooting guide](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)
+
+At this point, your console will boot to Luma3DS by default.
+  + Luma3DS는 보통 HOME 메뉴와 똑같이 보입니다. 만약 기기가 HOME 메뉴로 부팅되었다면, 커스텀 펌웨어가 설치되어 있습니다.
+  + On the next page, you will install useful homebrew applications to complete your setup.
+
+#### 섹션 VI - DS 소프트웨어용 설정 복구
+
 1. `fredtool.zip` 안 `output/clean/` 폴더에 압축되있는 `42383841.bin`을 `Nintendo DSiWare` 폴더로 복사해 주세요
   + 이미 존재하는 `43383841.bin` 파일을 덮어씌워 주세요
 1. SD 카드를 기기에 다시 삽입해 주세요
