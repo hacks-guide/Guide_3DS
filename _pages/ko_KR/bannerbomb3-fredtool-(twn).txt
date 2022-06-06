@@ -125,21 +125,23 @@ These instructions are for Taiwanese consoles ONLY (as indicated by a T at the e
 1. (A) 버튼을 누른 후, START와 SELECT를 동시에 눌러 작업을 실행해 주세요
 1. 완료되고 아래 화면에 "done."이라고 표시되면, b9sTool를 종료하고 기기의 전원을 꺼 주세요
     + 전원버튼을 계속 눌러 강제종료를 해야 할 수도 있습니다
-    + Luma3DS 설정 메뉴가 표시되면, 전원을 끄지 말고 그냥 진행해 주세요
+    + If your device shuts down when you try to power it on, ensure that you have copied `boot.firm` from the Luma3DS `.zip` to the root of your SD card
+    + If you see the Luma Configuration screen, press (Start) to reboot, then continue with the guide
 
-#### 섹션 VI - Luma3DS 설정
-
-1. (Select) 를 누른 채 기기를 부팅해 LumaDS 설정 메뉴로 들어가 주세요
-    + 만약 Luma3DS 설정 메뉴가 표시 안되면, [이 문제 해결 가이드 (영어)](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)를 참고해 주시기 바랍니다
-    + If the blue light on your 3DS powers on and off, you are missing `boot.firm` from the root of your SD card
-1. (A) 버튼과 십자 패드을 이용해 다음 설정을 설정해 주세요:
-    + “Show NAND or user string in System Settings”
-1. (Start)를 눌러 저장하고 기기를 다시 시작해 주세요
-
-#### Section VII - Restoring DS Download Play
+#### Section VI - Luma3DS Verification
 
 1. 기기를 종료해 주세요
 1. SD 카드를 컴퓨터에 삽입해 주세요
+1. Verify that a `luma` folder exists and that `config.ini` is inside of it
+  + The existence of these folders and files confirms that Luma3DS is installed
+  + If you do not see the `luma` folder or `config.ini`, [follow this troubleshooting guide](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)
+
+At this point, your console will boot to Luma3DS by default.
+  + Luma3DS는 보통 HOME 메뉴와 똑같이 보입니다. 만약 기기가 HOME 메뉴로 부팅되었다면, 커스텀 펌웨어가 설치되어 있습니다.
+  + On the next page, you will install useful homebrew applications to complete your setup.
+
+#### Section VII - Restoring DS Download Play
+
 1. SD 카드의 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 폴더로 이동해 주세요 
 1. Copy the `484E4441.bin`  file from the `clean` folder of the downloaded DSiWare archive (output_(name).zip) to the `Nintendo DSiWare` folder
 1. SD 카드를 기기에 다시 삽입해 주세요
