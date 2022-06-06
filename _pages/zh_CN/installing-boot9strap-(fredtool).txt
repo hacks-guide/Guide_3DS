@@ -86,24 +86,23 @@ title: "安装 Boot9strap（通过 Fredtool）"
 1. 按下 “A” 键，然后同时按下 START 键和 SELECT 键来开始安装
 1. 一旦下屏显示 “done.” ，那么安装就已经完成了。退出b9stool ，然后关机
   + 你可能需要长按电源键强制关机
-  + 如果你看到了 Luma 的设置界面，请继续下面的操作而不用强制关机
+  + If your device shuts down when you try to power it on, ensure that you have copied `boot.firm` from the Luma3DS `.zip` to the root of your SD card
+  + If you see the Luma Configuration screen, press (Start) to reboot, then continue with the guide
 
-#### 第五步 – 配置 Luma3DS
-
-1. 开机时按住 “Select” 键，进入 Luma3DS 的配置菜单
-  + 如果你遇到了问题无法启动 Luma 配置菜单，[请参见此故障排查章节](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)
-1. 使用方向键和 “A” 键来启用以下设置：
-  + **"Show NAND or user string in System Settings"**
-1. 按下 “Start” 键保存设置并重启
-
-现在，你的主机会在插入 SD 卡的情况下自动启动 Luma3DS。
-  + Luma3DS 不会给正常的主菜单增添任何看上去十分特别的东西。 如果你的主机现在已经启动到主菜单了，说明自制固件已经在运行了。
-  + 在下一页中，我们将会教你复制 Luma3DS 到内部存储当中，使得主机能在没有 SD 卡的情况下启动系统。
-
-#### 第六步 – 还原 “DS 连接设置（DS Connection Settings）”
+#### Section V - Luma3DS Verification
 
 1. 将主机关机
 1. 将你的 SD 卡插入到电脑
+1. Verify that a `luma` folder exists and that `config.ini` is inside of it
+  + The existence of these folders and files confirms that Luma3DS is installed
+  + If you do not see the `luma` folder or `config.ini`, [follow this troubleshooting guide](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)
+
+At this point, your console will boot to Luma3DS by default.
+  + Luma3DS 不会给正常的主菜单增添任何看上去十分特别的东西。 如果你的主机现在已经启动到主菜单了，说明自制固件已经在运行了。
+  + On the next page, you will install useful homebrew applications to complete your setup.
+
+#### 第六步 – 还原 “DS 连接设置（DS Connection Settings）”
+
 1. 从刚下载的压缩包（`fredtool.zip`）中的 `output/clean/` 文件夹复制出 `42383841.bin`，将其复制进你 SD 卡的 `Nintendo 3DS/<ID0>/<ID1>/Nintendo DSiware/` 文件夹
   + 请替换现有的 `42383841.bin` 文件
 1. 将SD卡重新插入你的主机
