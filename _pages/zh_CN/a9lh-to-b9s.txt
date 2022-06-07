@@ -10,8 +10,6 @@ title: "A9LH 升级 B9S"
 
 未来，Luma3DS 将只以 `.firm` 格式制作，这种格式只与 boot9strap 和 sighax 兼容。 也就是说，如果你想要使用最新版的 Luma3DS 自制固件，就得通过此页面将 A9LH 转为 B9S。
 
-你需要一个支持 BT 协议的下载程序，如 [qBittorrent](https://www.qbittorrent.org/download.php) 或 [Deluge](http://dev.deluge-torrent.org/wiki/Download) 来下载本教程中的[磁力链接](https://zh.wikipedia.org/wiki/%E7%A3%81%E5%8A%9B%E9%93%BE%E6%8E%A5) 。
-
 请使用 [7-Zip](http://www.7-zip.org/) 或 [The Unarchiver](https://theunarchiver.com/) 之类的压缩软件来解压本页面上的 `.7z` 文件。
 
 我们现在相信自制固件可以安全地联网了，不过仍然要提一下：过去的联网封禁大多数是因为作弊和可疑的 eShop 行为造成的。
@@ -19,17 +17,17 @@ title: "A9LH 升级 B9S"
 
 ### 你需要准备点啥？
 
-请注意，在下面所需的文件中名为“secret_sector.bin”的文件可在各版本的“data_input.zip”（这是 arm9loaderhax 破解时期所下载的文件）中找到，并且与下文所给出的文件是一模一样的。 如果你已经在电脑中存储了该文件，你就可以直接使用那个文件而不用再在下面重新下载了。
-{: .notice--info}
+你需要一个支持 BT 协议的下载程序，如 [qBittorrent](https://www.qbittorrent.org/download.php) 或 [Deluge](http://dev.deluge-torrent.org/wiki/Download) 来下载本教程中的[磁力链接](https://zh.wikipedia.org/wiki/%E7%A3%81%E5%8A%9B%E9%93%BE%E6%8E%A5) 。
+{: .notice--warning}
 
 注意，只有在 New 3DS 上，`secret_sector.bin` 才会被用来还原 arm9loaderhax 漏洞，所以这也是为什么在给原厂主机安装 boot9strap 时不需要这个文件。 如果你的主机不是 New 3DS ，则你无需下载 “secret_sector.bin”
 {: .notice--info}
 
-* <i class="fa fa-magnet" aria-hidden="true" title="这是一个磁力链接。 使用 BT 客户端下载此文件。"></i> - **仅 New 3DS 用户：** [secret_sector.bin](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce)
-* 最新版 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) 
-* 7.0.5 版本的 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/tag/v7.0.5) *（`.7z` 文件）*
-* 最新版 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
-* 最新版 [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) 
+* <i class="fa fa-magnet" aria-hidden="true" title="这是一个磁力链接。 Use a torrent client to download the file."></i> - **New 3DS Users Only:** [secret_sector.bin](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce) (magnet link)
+* The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+* The v7.0.5 release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/download/v7.0.5/Luma3DSv7.0.5.7z) (direct download)
+* The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
+* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
 ### 操作步骤
 
 #### 第一步 – 准备工作
