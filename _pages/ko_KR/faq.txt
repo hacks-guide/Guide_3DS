@@ -46,10 +46,10 @@ title: "자주 묻는 질문"
 **A:** 최소한 1.5GB의 용량이 있는 SD 카드를 사용해야 이 가이드를 따를 수 있습니다. 3DS는 공식적으로 32GB까지 호환되지만, FAT32로 포맷하시면 그 이상도 가능합니다. GBA 그래픽과 커스텀 테마 문제 때문에 128GB를 넘기는 SD 카드를 사용하는 것은 권장하지 않습니다.
 
 #### **Q:** * 커펌하려면 따로 지불해야 할게 있다고 들었습니다. (Gateway, Sky3DS, ntrboot, R4, 그 외...). 그것이 필요한가요?*    
-**A:** 아니요. 최신 버전 펌웨어에서는 어떤 외부 기기도 없이 커스텀 펌웨어를 설치 할 수 있습니다. 사실은 Gateway와 Sky3DS같은 플래시카트 3DS 모드들은 불필요하고, 벽돌을 유발할 수 있습니다.
+**A:** 아니요. 최신 버전 펌웨어에서는 어떤 외부 기기도 없이 커스텀 펌웨어를 설치 할 수 있습니다. 오히려 Gateway와 Sky3DS같은 3DS용 플래시카트들은 불필요하고, 벽돌을 유발할 수 있습니다.
 
 #### **Q:** *홈브류 접속과 커스텀 펌웨어 사이에는 어떤 차이점이 있나요?    
-**A:** 예전에는, ninjhax와 같은 오래된 익스플로잇을 통해 3DS 홈브류 사용를 제공 했었습니다. 이들은 사용자레벨에 부여된 제한적인 시스템 권한을 통해 기본 홈브류와 에뮬레이터를 실행시킬 수 있었지만 게임을 (쉽게) 수정하거나 카트리지를 백업할 수 없었습니다. 또한 그건 아주 불안정했어서 홈브류가 자주 다운되고 재부팅 했어야 했죠. 커스텀 펌웨어는 홈브류 전용 진입점보다 더 안정적이면서도 높은 수준의 시스템 엑세스를 제공합니다.
+**A:** 예전에는, ninjhax와 같은 오래된 익스플로잇을 통해 3DS 홈브류 사용를 제공 했었습니다. 이들은 사용자레벨에 부여된 제한적인 시스템 권한을 통해 기본 홈브류와 에뮬레이터를 실행시킬 수 있었지만 게임을 (쉽게) 수정하거나 카트리지를 백업할 수 없었습니다. 또한 그건 아주 불안정했어서 홈브류가 자주 다운되고 재부팅 해야했습니다. 커스텀 펌웨어는 홈브류 전용 진입점보다 더 안정적이면서도 높은 수준의 시스템 엑세스를 제공합니다.
 
 ## 설치 후 자주 묻는 질문
 
@@ -59,21 +59,21 @@ title: "자주 묻는 질문"
 #### **Q:** *SD 카드를 어떻게 업그레이드 할 수 있나요?*    
 **A:** FAT32로 포맷된 새 SD 카드에 기존 SD 카드의 파일들을 복사 하세요. 128GB 카드들의 경우에는 할당량 (allocation size) 을 65536으로 설정하는걸 권장드립니다. SD cards larger than 128GB are not recommended due to known issues with GBA graphics and custom themes.
 
-#### **Q:** *Can I system transfer with CFW?*    
+#### **Q:** *커펌한채로 다른 본체로 저장데이터 이사를 할 수 있나요?*    
 **A:** Yes, system transfers can be performed through the official System Transfer function to other consoles with CFW (inconsistencies may occur if the target console is stock). Tickets for illegitimate titles (homebrew) will not transfer but can be made to reappear with [faketik](https://github.com/ihaveamac/faketik/releases/latest). Make sure that you do not perform a wireless transfer, as this will delete illegitimate titles. CFW will remain on both consoles. 
 
 #### **Q:** *How do I change the system language of a Japanese 3DS?*    
 **A:** The only way to change the system language of a Japanese 3DS to a language other than Japanese is to perform a [region change](region-changing). Note that this is very likely to break the Nintendo eShop on your device, which means you will be unable to update your games whether they are in-region or out-of-region.
 
 #### **Q:** *홈브류 앱들을 어떻게 업데이트 하나요?*    
-**A:** It depends on the format of the homebrew application. Generally speaking:
+**A:** 업데이트 하려고 하는 홈브류 앱의 형식에 따라 다릅니다. Generally speaking:
 
 * Homebrew in **CIA format** can be updated by installing the new CIA, which will usually overwrite the old one. If the old CIA is not overwritten, you can delete the old one from Data Management as you would any other 3DS title.
 * Homebrew in **3DSX format** can be updated by replacing the 3DSX file in `/3ds/` with a fresh copy. If the homebrew application includes additional assets, you may need to place that folder somewhere else. Refer to the documentation of the homebrew application.
-* For updating Luma3DS, see [this page](restoring-updating-cfw). For updating GodMode9, see [this page](godmode9-usage#updating-godmode9).
+* Luma3DS를 업데이트 하는 경우에는 [이 페이지](restoring-updating-cfw)를 확인해 주세요. For updating GodMode9, see [this page](godmode9-usage#updating-godmode9).
 
 #### **Q:** *내 국가코드 외의 게임들은 어떻게 업데이트 하나요?*    
-**A:** You will need to [dump the updates](dumping-titles-and-game-cartridges) from a 3DS that has the updates installed. Nintendo e숍은 해당 기기의 국가코드에 맞는 업데이트만 제공합니다 (일판 3DS는 일판 게임 업데이트만 있습니다).
+**A:** 업데이트가 설치되어있는 3DS로부터 업데이트를 [덤프해야합니다](dumping-titles-and-game-cartridges). Nintendo e숍은 해당 기기의 국가코드에 맞는 업데이트만 제공합니다 (일판 3DS는 일판 게임 업데이트만 있습니다).
 
 #### **A:** *도와주세요! 뭔가 잘못되었는지 시작이 안 돼요...*    
 **A:** [문제 해결 가이드](troubleshooting) 를 참고해 주세요. **기기가 부팅할 수 없는 상태일 때 커스텀 펌웨어를 제거하는 것은 벽돌로 이어질 수 있기 때문에 추천되지 않습니다.**
@@ -81,13 +81,13 @@ title: "자주 묻는 질문"
 ## menuhax / A9LH / Gateway 자주 묻는 질문들
 
 #### **Q:** *내 기기를 n년전에 커펌했어요. 어떻게 해야하죠?*    
-**A:** It is recommended that you upgrade your setup to a modern, boot9strap-based one. Follow the [Checking for CFW](checking-for-cfw) guide to see how to upgrade your setup.
+**A:** boot9strap기반의 새로운 커펌 방식으로 업그레이드 하는 것을 권장합니다. 어떻게 업그레이드하는지 보려면 [커펌확인 방법](checking-for-cfw)을 따라주세요.
 
 #### **Q:** *My setup works for me. Why should I upgrade it?*    
 **A:** The vast majority of modern homebrew (such as Checkpoint and BootNTR Selector) have only been tested on modern, boot9strap-based setups and may not work entirely (or at all) on older setups based on menuhax, A9LH, or Gateway. In addition, depending on your setup, you may be unable to safely update to the latest firmware. Modern, boot9strap-based setups allow for a greater level of system access than previous hacks, including the ability to dump your console's bootrom.
 
-#### **Q:** *Will I lose anything if I upgrade my setup?*    
+#### **Q:** *지금 가지고있는 셋업을 업그레이드하면 잃어버릴게 있을까요?*    
 **A:** Your old setup (including your EmuNAND, if you have one) can usually be directly migrated to boot9strap with no data loss. If you have data that is particularly important to you, it would be a good idea to make a decrypted backup of your save data before upgrading your setup with a tool like [JKSM](https://github.com/J-D-K/JKSM/releases/tag/12%2F20%2F2018).
 
-#### **Q:** *How do I move saves from an existing Gateway setup to a more modern setup?*    
+#### **Q:** *기존 Gateway 셋업의 게임 세이브들을 최신 셋업으로 옮기려면 어떻게 하나요?*    
 **A:** 이 [링크](https://gbatemp.net/threads/425743/)를 참고해 주세요.
