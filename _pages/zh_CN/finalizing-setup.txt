@@ -20,7 +20,7 @@ boot9strap 将会在 NAND 里的内容加载完成后启动 `boot.firm` 文件�
 建议不要跳过下载以上列出的任何程序，因为等会就需要用到它们 我们将在本页结尾处清理你在破解过程中产生的无用文件。
 {: .notice--warning}
 
-If your **New 3DS** was on version 2.1.0 before following this guide, you should [restore your NAND backup](godmode9-usage#restoring-a-nand-backup) before continuing.
+如果你的 **New 3DS** 的系统在很早以前通过某些手段降级到了 2.1.0，则你应该在继续前先[还原你的 NAND 备份](godmode9-usage#restoring-a-nand-backup)。
 {: .notice--warning}
 
 如果你的主机先前破解过，且先前的破解是基于 EmuNAND 的，并且现在你希望将你的 EmuNAND/RedNAND 移植至 SysNAND，请在继续前进行[移植 EmuNAND](move-emunand)。 如果你不知道 EmuNAND 是啥的话，大概你也不需要做这个了。
@@ -28,12 +28,12 @@ If your **New 3DS** was on version 2.1.0 before following this guide, you should
 
 ### 你需要准备点啥？
 
-* The latest release of [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) (the `.cia` file)
-* The v3.7.4 release of [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/tag/v3.7.4) (the `.cia` file)
-* The latest release of [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest) (the `.cia` file)
-* The latest release of [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest) (the `.cia` file)
-* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) (**both** the `.cia` and `.3dsx` files)
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
+* 最新版本的 [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) **（下载 `.cia` 文件）**
+* v3.7.4 版本的 [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/tag/v3.7.4) **（下载 `.cia` 文件）**
+* 最新版本的 [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest)（下载 `.cia` 后缀的文件）
+* 最新版本的 [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest) **（下载 `.cia` 文件）**
+* 最新版本的 [FBI](https://github.com/Steveice10/FBI/releases/latest)**（下载 `.cia` 和 `.3dsx` 后缀的文件）**
+* 最新版本的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)（下载 GodMode9 `.zip` 文件）
 
 ### 操作步骤
 
@@ -142,12 +142,12 @@ If your **New 3DS** was on version 2.1.0 before following this guide, you should
 1. 按下 “Home” 键来打开功能菜单
 1. 选择 “Poweroff system” 来将主机关机
 1. 将你的 SD 卡插入到电脑
-1. Copy the `/luma/backups/` folder on your SD card to a safe location on your computer
-1. Copy `<date>_<serialnumber>_sysnand_###.bin`, `<date>_<serialnumber>_sysnand_###.bin.sha`, and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
-  + Copy these backups to multiple locations (such as online file storage, an external hard drive, etc.)
+1. 将 SD 卡上的 `/luma/backups/` 里面的文件备份到你电脑上安全的地方
+1. 从 SD 卡的 `/gm9/out/` 文件夹中复制 `<date>_<serialnumber>_sysnand_###.bin.sha`，`<date>_<serialnumber>_sysnand_###.bin`，`essential.exefs` 到电脑中的安全的位置
+  + 将这些文件在不同地方备份多次（比如网盘或者移动硬盘等）
   + 如果以后机器出现任何问题，这些备份文件将是为你提供修复砖机或从 NAND 镜像恢复文件的帮手
 1. 将 `<date>_<serialnumber>_sysnand_###.bin` 和 `<date>_<serialnumber>_sysnand_###.bin.sha` 从你的 SD 卡的 `/gm9/out/` 文件夹中复制出后将其删除
-  + The other backup files are negligible in size and may be kept on your SD card for ease of access
+  + 其它的文件占用不了多少空间，更建议保留在 SD 卡上以便将来可能的需要
 1. 将 SD 卡重新插入你的主机
 1. 启动你的主机
 
