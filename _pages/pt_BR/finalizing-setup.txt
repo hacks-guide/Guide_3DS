@@ -6,47 +6,47 @@ title: "Finalizando a instalação"
 
 ### Leitura Obrigatória
 
-The file `boot.firm` is what is launched by boot9strap itself after it finishes loading off of NAND. In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) to patch the device, allowing it to run homebrew software.
+O arquivo `boot.firm` é o que é iniciado pelo boot9strap depois que ele termina de carregar a NAND. Neste caso, estamos usando o Luma3DS por [LumaTeam](https://github.com/LumaTeam/) para alterar o dispositivo, permitindo que ele execute um software de homebrew.
 
-On this page, we will make critical system file backups and install the following homebrew programs:
+Nesta página, faremos backups de arquivos críticos do sistema e instalaremos os seguintes programas de homebrew:
 
-+  **FBI** *(installs CIA formatted applications)*
-+  **Anemone3DS** *(installs custom themes)*
-+  **Checkpoint** *(backs up and restores save files for 3DS and DS games)*
-+  **Universal-Updater** *(a homebrew app store for downloading homebrew from the 3DS over Wi-Fi)*
++ **FBI** *(instala aplicativos com formato CIA)*
++ **Anemone3DS** *(instala temas personalizados)*
++  **Checkpoint** *(faz backups e restaura arquivos de save de jogos de 3DS e DS)*
++ **Universal-Updater** *(uma loja de aplicativos homebrew para baixar aplicativos no 3DS por Wi-Fi)*
 +  **GodMode9** *(Ferramenta multiuso com funções de NAND e cartucho)*
-+  **Homebrew Launcher Loader** *(launches the Homebrew Launcher)*
++  **Homebrew Launcher Loader** *(inicia o Homebrew Launcher)*
 
-It is not recommended to skip downloading any of these applications, as many of them will be used later on this page. At the end of this page, your SD card will be cleaned up by removing unnecessary installation files.
+Não é recomendável ignorar o download de qualquer um desses aplicativos, já que muitos deles serão usados mais tarde nesta página. No final desta página, seu cartão SD será limpo através da remoção arquivos de instalação desnecessários.
 {: .notice--warning}
 
-If your **New 3DS** was on version 2.1.0 before following this guide, you should [restore your NAND backup](godmode9-usage#restoring-a-nand-backup) before continuing.
+Se o seu **New 3DS** estava na versão 2.1.0 antes de seguir este guia, você deve [restaurar o seu backup da NAND](godmode9-usage#restoring-a-nand-backup) antes de continuar.
 {: .notice--warning}
 
-If your previous CFW setup was EmuNAND-based and you wish to move the contents of your EmuNAND/RedNAND to SysNAND, follow [Move EmuNAND](move-emunand) before following this page. If you don't know what an EmuNAND is, this doesn't apply to you.
+Se a sua instalação do CFW anterior era baseada em EmuNAND e você deseja mover o conteúdo da sua EmuNAND/RedNAND para SysNAND, siga [Mover EmuNAND](move-emunand) antes de seguir esta página. Se você não sabe o que é uma EmuNAND, isso não se aplica a você.
 {: .notice--info}
 
-### O que é necessário
+### O que você precisa
 
-* The latest release of [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) (the `.cia` file)
-* The v3.7.4 release of [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/tag/v3.7.4) (the `.cia` file)
-* The latest release of [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest) (the `.cia` file)
-* The latest release of [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest) (the `.cia` file)
-* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) (**both** the `.cia` and `.3dsx` files)
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
+* A versão mais recente do [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) *(o arquivo `.cia`)*
+* A versão 3.7.4 do [Checkpoint](https://github.com/FlagBrew/Checkpoint/releases/tag/v3.7.4) *(o arquivo `.cia`)*
+* A versão mais recente do [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest)
+* A versão mais recente do [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest) *(o arquivo `.cia`)*
+* A versão mais recente do [FBI](https://github.com/Steveice10/FBI/releases/latest) *(os arquivos `.cia` e `.3dsx`)*
+* A versão mais recente do [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (o arquivo `.zip`)
 
-### Instructions
+### Instruções
 
-#### Section I - Prep Work
+#### Seção I - Preparação
 
 1. Desligue seu dispositivo
 1. Insira o cartão SD no seu computador
 1. Crie uma pasta chamada `cias` na raiz do seu cartão SD se ela ainda não existir
-1. Copy all of the CIA files (`Anemone3DS.cia`, `Checkpoint.cia`, `FBI.cia`, `Homebrew_Launcher.cia`, and `Universal-Updater.cia`) to the `/cias/` folder on your SD card
-1. Create a folder named `3ds` on the root of your SD card if it does not already exist
-    + This folder stores homebrew applications and data; it is different from the `Nintendo 3DS` folder that the device automatically generates
+1. Copie todos os arquivos CIA (`Anemone3DS.cia`, `Checkpoint.cia`, `FBI.cia`, `Homebrew_Launcher.cia`, e `Universal-Updater.cia`) para a pasta `/cias/` no seu cartão SD
+1. Crie uma pasta chamada `3ds` na raiz do seu cartão SD se ela ainda não existir
+    + Esta pasta armazena dados e aplicativos homebrew; ela é diferente da pasta `Nintendo 3DS` que o dispositivo gera automaticamente
 1. Copie `FBI.3dsx` para a pasta `/3ds/` no seu cartão SD
-1. Create a folder named `payloads` in the `luma` folder on your SD card if it does not already exist
+1. Crie uma pasta chamada `payloads` na pasta `luma` no seu cartão SD se ela ainda não existe
 1. Copie `GodMode9.firm` do `.zip` do GodMode9 para a pasta `/luma/payloads/` no seu cartão SD
 1. Copie a pasta `gm9` do `.zip` do GodMode9 para a raiz do seu cartão SD
 1. Reinsira seu cartão SD no seu dispositivo
@@ -57,21 +57,21 @@ If your previous CFW setup was EmuNAND-based and you wish to move the contents o
     ![]({{ "/images/screenshots/godmode9-location.png" | absolute_url }})
     {: .notice--info}
 
-These screenshots indicate the minimum SD card layout that is required to follow this page. You may have extra files or folders on your SD card, depending on your previous setup or the method that you followed.
+Estas capturas de tela indicam o layout mínimo do cartão SD que é necessário para seguir esta página. Você pode ter arquivos ou pastas extras no seu cartão SD, dependendo da sua instalação anterior ou do método que você seguiu.
 
-#### Section II - Updating the System
+#### Seção II - Atualização do Sistema
 
 1. Atualize seu dispositivo indo em Configuração do console, depois "Outras Configurações, depois indo para a direita até o final e selecionando "Atualização"
   + Atualizações feitas enquanto usa B9S + Luma (o que você tem) são seguras
-  + The updater may display a message saying "Your system is up to date" instead of updating. This is normal if you are already up to date; continue with the next section
+  + O atualizador pode exibir uma mensagem dizendo "Seu sistema está atualizado" ao invés de atualizar. Isso é normal se você já está atualizado; continue com a próxima seção
   + Se isso der um erro, defina suas configurações de DNS para "Automático"
-  + If this still gives you an error, [follow this troubleshooting guide](troubleshooting#unable-to-update-device)
+  + Se isso ainda lhe der um erro, [siga este guia de troubleshooting](troubleshooting#unable-to-update-device)
 
-#### Section III - Homebrew Launcher
+#### Seção III - Homebrew Launcher
 
-1. Launch the Download Play application (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
-1. Wait until you see the `Nintendo 3DS` and `Nintendo DS` buttons
-1. Press (Left Shoulder) + (D-Pad Down) + (Select) at the same time to open the Rosalina menu
+1. Abra o aplicativo Download Play (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
+1. Aguarde até ver os botões `Nintendo 3DS` e `Nintendo DS`
+1. Aperte (Gatilho Esquerdo) + (D-pad pra baixo) + (Select) ao mesmo tempo para abrir o menu Rosalina
 1. Selecione "Miscellaneous options"
 1. Selecione "Switch the hb. title to the current app."
 1. Aperte (B) para continuar
@@ -81,96 +81,96 @@ These screenshots indicate the minimum SD card layout that is required to follow
 1. Inicie o aplicativo Download Play
 1. Seu dispositivo deve abrir o Homebrew Launcher
 
-#### Section IV - RTC and DSP Setup
+#### Seção IV - Configuração do RTC e DSP
 
-1. Press (Left Shoulder) + (D-Pad Down) + (Select) at the same time to open the Rosalina menu
+1. Aperte (Gatilho Esquerdo) + (D-pad pra baixo) + (Select) ao mesmo tempo para abrir o menu Rosalina
 1. Selecione "Miscellaneous options"
-1. Select "Dump DSP firmware"
+1. Selecione "Dump DSP firmware"
 1. Aperte (B) para continuar
-1. Select "Nullify user time offset"
+1. Selecione "Nullify user time offset"
 1. Aperte (B) para continuar
 1. Aperte (B) para retornar para o menu principal do Rosalina
 1. Aperte (B) para sair do menu do Rosalina
 
-#### Section V - Installing CIAs
+#### Seção V - Instalando CIAs
 
 1. Abra o FBI da lista de homebrews
 1. Navegue para `SD` -> `cias`
 1. Selecione "\<current directory>"
-1. Select the "Install and delete all CIAs" option, then press (A) to confirm
+1. Selecione a opção "Install and delete all CIAs" e, em seguida, aperte (A) para confirmar
 1. Aperte (Home), depois feche o Download Play
 
-#### Section VI - CTRNAND Luma3DS
+#### Seção VI - Luma3DS no CTRNAND
 
 1. Desligue seu dispositivo
-1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
-  + If you do not boot into GodMode9, ensure that `GodMode9.firm` is in `/luma/payloads/` and that `payloads` is correctly spelled
+1. Pressione e segure (Start), e enquanto segura (Start), ligue seu dispositivo. Isso vai inicializar o GodMode9
+  + Se você não inicializar no GodMode9, certifique-se que `GodMode9.firm` esteja em `/luma/payloads/` e que `payloads` esteja corretamente escrito
 1. Se você for solicitado para criar um backup de arquivos essenciais, aperte (A) pra fazê-lo, e depois aperte (A) para continuar quando ele for concluído
-1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
+1. Se você for solicitado para consertar o RTC date&time, pressione (A) para consertar, então insira a data e a hora, depois pressione (A) para continuar
 1. Aperte (Home) para abrir o menu de ações
 1. Selecione "Scripts..."
-1. Select "GM9Megascript"
-1. Select "Scripts from Plailect's Guide"
-1. Select "Setup Luma3DS to CTRNAND"
+1. Selecione "GM9Megascript"
+1. Selecione "Scripts from Plailect's Guide"
+1. Selecione "Setup Luma3DS to CTRNAND"
 1. Quando solicitado, aperte (A) para prosseguir
 1. Aperte (A) para destravar "SysNAND (lvl1) writing", então aperte a sequência de botões solicitada
 1. Aperte (A) para continuar
 
-#### Section VII - Cleanup SD Card
+#### Seção VII - Limpando o cartão SD
 
-1. Select "Cleanup SD Card"
+1. Selecione "Cleanup SD Card"
 1. Quando solicitado, aperte (A) para prosseguir
 1. Aperte (A) para continuar
 1. Aperte (B) para retornar para o menu principal
 
-#### Section VIII - Backup Essential Files
+#### Seção VIII - Backup de arquivos essenciais
 
-1. Select "Backup Options"
-1. Select "SysNAND Backup"
+1. Selecione "Backup Options"
+1. Selecione "SysNAND Backup"
 1. Aperte (A) para confirmar
   + Este processo levará algum tempo
-  + If you get an error, make sure that you have at least 1.3GB of free space on your SD card
+  + Caso você receba um erro, verifique se você tem ao menos 1.3GB de memória livre no seu cartão SD
 1. Aperte (A) para continuar
 1. Aperte (B) para retornar para o menu principal
-1. Select "Exit"
+1. Selecione "Exit"
 1. Se solicitado, aperte (A) para bloquear as permissões de escrita
-1. Navigate to `[S:] SYSNAND VIRTUAL`
-1. Press (A) on `essential.exefs` to select it
-1. Select "Copy to 0:/gm9/out"
-  + If you see "Destination already exists", press (A) on "Overwrite file(s)"
+1. Navegue para `[S:] SYSNAND VIRTUAL`
+1. Aperte (A) no `essential.exefs` para selecioná-lo
+1. Selecione "Copy to 0:/gm9/out''
+  + Se você ver "Destination already exists", aperte (A) em "Overwrite file(s)"
 1. Aperte (A) para continuar
 1. Aperte (Home) para abrir o menu de ações
-1. Select "Poweroff system" to power off your device
+1. Selecione "Poweroff system" para desligar seu dispositivo
 1. Insira o cartão SD no seu computador
-1. Copy the `/luma/backups/` folder on your SD card to a safe location on your computer
-1. Copy `<date>_<serialnumber>_sysnand_###.bin`, `<date>_<serialnumber>_sysnand_###.bin.sha`, and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
-  + Copy these backups to multiple locations (such as online file storage, an external hard drive, etc.)
-  + These backups will save you from a brick and/or help you recover files from the NAND image if anything goes wrong in the future
-1. Delete `<date>_<serialnumber>_sysnand_###.bin` and `<date>_<serialnumber>_sysnand_###.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
-  + The other backup files are negligible in size and may be kept on your SD card for ease of access
+1. Copie a pasta `/luma/backups/` no seu cartão SD para um local seguro no seu computador
+1. Copie `<date>_<serialnumber>_sysnand_###.bin`, `<date>_<serialnumber>_sysnand_###.bin. ha` e `essential.exefs` da pasta `/gm9/out/` no seu cartão SD para um local seguro no seu computador
+  + Copie estes backups para vários lugares (como armazenamento de arquivos online, um disco rígido externo, etc.)
+  + Esses backups irão te salvar de um brick e/ou te ajudarão a recuperar os arquivos da memória NAND caso algo dê errado
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` e `<date>_<serialnumber>_sysnand_###.bin.sha` da pasta `/gm9/out/` no seu cartão de memória depois de copiá-los
+  + Os outros arquivos de backup são insignificantes em tamanho e podem ser mantidos no seu cartão SD para acesso fácil
 1. Reinsira seu cartão SD no seu dispositivo
 1. Ligue o seu dispositivo
 
 ___
 
-You're done! Custom firmware is now fully configured on your device.
+Você terminou! Custom firmware agora está totalmente configurado no seu dispositivo.
 {: .notice--success}
 
-#### Information and Notes
+#### Notas e informações
 
 {% capture notice-6 %}
-Here are some key combos that you should know:
+Aqui estão alguns combos que você deve saber:
 
-- Holding (Select) on boot will launch the Luma3DS configuration menu.
-- Holding (Start) on boot will launch GodMode9, or if you have multiple payloads in `/luma/payloads/`, the Luma3DS chainloader.
-- By default, pressing (Left Shoulder) + (Down D-Pad) + (Select) while in 3DS mode will open the Rosalina menu, where you can check system information, take screenshots, enable cheats, and more. This can be changed from the Rosalina menu.
-- Holding (Start) + (Select) + (X) on boot will make the notification LED show a color for debug purposes. See the [changelog](https://github.com/SciresM/boot9strap/releases/tag/1.4) for a list.
+- Segurar (Select) durante a inicialização vai abrir o menu de configuração do Luma3DS.
+- Segurar (Start) durante a inicialização irá abrir o GodMode9, ou se você tiver vários payloads em `/luma/payloads/`, o chainloader do Luma3DS.
+- Por padrão, pressionar (Gatilho Esquerdo) + (Botão direcional para baixo) + (Select) enquanto no modo 3DS abrirá o menu Rosalina, onde você pode verificar informações do sistema, fazer capturas de tela, habilitar cheats e muito mais. Isto pode ser alterado a partir do menu do Rosalina.
+- Segurar (Start) + (Select) + (X) durante a inicialização fará com que o LED de notificação mostre uma cor para fins de depuração. Veja o [changelog](https://github.com/SciresM/boot9strap/releases/tag/1.4) para uma lista.
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
 
-See [here](https://3ds.eiphax.tech/tips.html) for some suggestions on things to do with custom firmware.
+Veja [aqui](https://3ds.eiphax.tech/tips.html) algumas sugestões sobre coisas a serem feitas com custom firmware.
 {: .notice--info}
 
-For information on using GodMode9's various features, check out the [GodMode9 Usage](godmode9-usage) and [Dumping Titles and Game Cartridges](dumping-titles-and-game-cartridges) pages.
+Para informações sobre como usar os vários recursos do GodMode9, confira as páginas [Uso do GodMode9](godmode9-usage) e [Fazendo Dump de Aplicativos e Jogos de Cartucho](dumping-titles-and-game-cartridges).
 {: .notice--info}
