@@ -1,87 +1,87 @@
 ---
-title: "Installing boot9strap (PicHaxx)"
+title: "Instalando boot9strap (PicHaxx)"
 ---
 
 {% include toc title="Tabela de Conteúdo" %}
 
 ### Leitura Obrigatória
 
-This method of using Seedminer for further exploitation uses your `movable.sed` file to write a custom save file for Pokémon Picross, which can then be used with universal-otherapp to run SafeB9SInstaller.
+Este método de usar o Seedminer para exploiting usa seu `movable.sed` para manipular um arquivo de save personalizado para Pokémon Picross, que pode então ser usado com universal-otherapp para executar o SafeB9SInstaller.
 
-This process will overwrite your Pokémon Picross save file, if you have one. If you wish to preserve your Pokémon Picross game data, you should make a backup of your `00000001.sav` file before overwriting it.
+Esse processo irá substituir seu save de Pokémon Picross, se você tiver um. Se você deseja preservar seus dados, você deve fazer um backup de seu arquivo `00000001.sav` antes de substituí-lo.
 {: .notice--warning}
 
 ### O que é necessário
 
-* The game "Pokémon Picross" (free on eShop) installed on your device
-  + You can scan [this QR code](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=ESHOP://50010000037815&margin=0&qzone=1&size=400x400&ecc=L) using the Nintendo 3DS Camera for a direct link to the eShop app
-  + Your SD card must be inserted in your device to install Pokémon Picross
-* Seu arquivo `movable.sed` de completar [Seedminer](seedminer)
+* O jogo "Pokémon Picross" (grátis na eShop) instalado no seu dispositivo
+  + Você pode escanear [este código QR] (http://api.qrserver.com/v1/create-qr-code/?├000000&bgprocedures, FFFF&data=ESHOP://50010000037815&margin=0&qzone=1&size=400x400&ecc=L) usando a Câmera Nintendo 3DS para um link direto para o aplicativo na eShop
+  + Seu cartão SD deve estar inserido no seu dispositivo para instalar o Pokémon Picross
+* Seu arquivo `movable.sed` obtido por completar [Seedminer](seedminer)
 * A versão mais recente do [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (download direto)
 * A versão mais recente do [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (download direto)
 * A versão mais recente do [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (o arquivo `.zip` do Luma3DS)
-* The latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) (`otherapp.bin`)
+* A versão mais recente do [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) (`otherapp.bin`)
 
 ### Instruções
 
 #### Seção I - Preparação
 
 1. Ligue o seu dispositivo
-1. Open the Nintendo eShop
-1. Tap the Search icon (small magnifying glass)
-1. Search for `picross`
-1. Open the store page for Pokémon Picross
-1. Download Pokémon Picross
-  + You can scan [this QR code](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=ESHOP://50010000037815&margin=0&qzone=1&size=400x400&ecc=L) using the Nintendo 3DS Camera for a direct link to the eShop app
-  + Your SD card must be inserted in your device to install Pokémon Picross
+1. Abra a Nintendo eShop
+1. Toque no ícone Pesquisar (pequena lupa)
+1. Procure por `picross`
+1. Abra a página da loja para Pokémon Picross
+1. Instale Pokémon Picross
+  + Você pode escanear [este código QR] (http://api.qrserver.com/v1/create-qr-code/?├000000&bgprocedures, FFFF&data=ESHOP://50010000037815&margin=0&qzone=1&size=400x400&ecc=L) usando a Câmera Nintendo 3DS para um link direto para o aplicativo na eShop
+  + Seu cartão SD deve estar inserido no seu dispositivo para instalar o Pokémon Picross
 1. Desligue seu dispositivo
 1. Insira o cartão SD no seu computador
-1. Copy `otherapp.bin` to the root of your SD card
+1. Copie `otherapp.bin` para a raiz do seu cartão SD
   + A raiz do cartão SD refere-se ao diretório inicial no seu cartão SD onde você pode ver a pasta Nintendo 3DS, mas não está dentro dela
 1. Copie `boot.firm` e `boot.3dsx` do `.zip` do Luma3DS para a raiz do seu cartão SD
 1. Crie uma pasta chamada `boot9strap` na raiz do seu cartão SD
 1. Copie o `boot9strap.firm` e o `boot9strap.firm.sha` do `.zip` do boot9strap para a pasta `/boot9strap/` no seu cartão SD
-1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
+1. Copie `SafeB9SInstaller.bin` do `.zip` do SafeB9SInstaller para a raiz do seu cartão SD
 
     ![]({{ "/images/screenshots/pichaxx-root-layout.png" | absolute_url }})
     {: .notice--info}
 	
-#### Section II - PicHaxx
+#### Seção II - PicHaxx
 
-1. Open [the PicHaxx Injector website](https://3ds.nhnarwhal.com/3dstools/pichaxx.php) on your computer
-1. Select your `movable.sed` file
+1. Abra [o site do PicHaxx Injector](https://3ds.nhnarwhal.com/3dstools/pichaxx.php) no seu computador
+1. Selecione o seu arquivo `movable.sed`
 1. Selecione "Build and Download"
 1. Espere o processo ser concluído
-1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` on your SD card
+1. Navegue até `Nintendo 3DS` -> `<ID0>-> ` -><ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` em seu cartão SD
   + O `<ID0>` será o mesmo que você usou em [Seedminer](seedminer)
   + O `<ID1>` é uma pasta de 32 caracteres dentro do `<ID0>`
-1. Copy the newly downloaded `00000001.sav` file to the `data` folder on your SD card
-  + Overwrite the old save file when prompted
+1. Copie o arquivo `00000001.sav` recém-baixado para a pasta `data` no seu cartão SD
+  + Sobrescreva o arquivo de save antigo quando solicitado
 
     ![]({{ "/images/screenshots/pichaxx-save-location.png" | absolute_url }})
     {: .notice--info}
 	
 1. Reinsira seu cartão SD no seu dispositivo
 1. Ligue o seu dispositivo
-1. Launch "Pokémon Picross"
-1. If the exploit was successful, your device will have booted into SafeB9SInstaller
-  + If you get an error message, [follow this troubleshooting guide](troubleshooting#installing-boot9strap-pichaxx)
+1. Abra "Pokémon Picross"
+1. Se o exploit for bem sucedido, seu dispositivo será inicializado no SafeB9SInstaller
+  + Se você receber uma mensagem de erro, [siga este guia de troubleshooting](troubleshooting#installing-boot9strap-pichaxx)
 
-#### Section III - Installing boot9strap
+#### Seção III - Instalando o boot9strap
 
-1. When prompted, input the key combo given on the top screen to install boot9strap
-  + If the top screen is blank, reboot your device and re-launch Pokémon Picross
+1. Quando solicitado, aperte a sequência de botões fornecida na tela superior para instalar o boot9strap
+  + Se a tela superior estiver em branco, reinicie seu dispositivo e reinicie o Pokémon Picross
 1. Quando concluído, aperte (A) para reiniciar o seu dispositivo
 1. Seu dispositivo deve ter reiniciado no menu de configuração de Luma3DS
   + Se seu dispositivo desligar quando você tentar ligá-lo, certifique-se de que você copiou `boot.firm` do `.zip` do Luma3DS para a raiz do seu cartão SD
 1. Aperte (Start) para salvar e reiniciar
 
 Neste momento, o seu console iniciará no Luma3DS por padrão.
-  + O Luma3DS não é diferente do Menu HOME normal. Se seu console foi inicializado no HOME Menu, ele está executando custom firmware.
+  + O Luma3DS não é diferente do Menu HOME normal. Se seu console foi inicializado no Menu HOME, ele está executando custom firmware.
   + Na próxima página, você irá instalar aplicativos homebrew úteis para concluir sua instalação.
 
 
-At this point, Pokémon Picross is no longer necessary and can be removed from your device. If you wish to play the game, restore your `00000001.sav` backup or re-download the game from the Nintendo eShop.
+A partir de agora, Pokémon Picross não é mais necessário e pode ser removido do seu dispositivo. Se você deseja jogar o jogo, restaure o seu backup `00000001.sav` ou baixe novamente o jogo na Nintendo eShop.
 {: .notice--info}
 ___
 
