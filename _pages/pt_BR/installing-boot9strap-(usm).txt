@@ -1,27 +1,27 @@
 ---
-title: "Installing boot9strap (USM)"
+title: "Instalando boot9strap (USM)"
 ---
 
 {% include toc title="Tabela de Conteúdo" %}
 
 ### Leitura Obrigatória
 
-In order to exploit the SAFE_MODE firmware of our system, we need to inject an exploited WiFi profile.
+Para executar o exploit no firmware SAFE_MODE do nosso sistema, precisamos injetar um perfil de Wi-Fi exploited.
 
-We can do this using an existing exploit, BannerBomb3.
+Podemos fazê-lo com um exploit existente, BannerBomb3.
 
-To accomplish this, we use your system's encryption key (movable.sed) to build a DSiWare backup that exploits the system in order to inject the exploited WiFi profile into your connections list.
+Para fazer isso, usamos a chave de criptografia do seu sistema (movable.sed) para construir um backup de DSiWare que executa um exploit no sistema para injetar o perfil Wi-Fi exploited na sua lista de conexões.
 
-Once the WiFi profile has been injected, we will use SAFE_MODE, which is a recovery feature present on all 3DS consoles, to activate the exploited WiFi profile.
+Assim que o perfil Wi-Fi for injetado, usaremos o SAFE_MODE, que é um recurso de recuperação presente em todos os consoles 3DS, para ativar o perfil de Wi-Fi exploited.
 
 Essas instruções funcionam nas versões de consoles EUA, Europa, Japão e Coréia, indicadas pelas letras U, E, J ou K após a versão do sistema.
 
-If your (Right/Left Shoulder), (D-Pad Up), or (A) buttons do not work, you will need to follow [an alternate branch of Seedminer](bannerbomb3). For assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+Se os seus botões (Gatilho Esquerdo/Direito), (Botão direcional pra cima), ou (A) não funcionarem, você precisará seguir [um ramo alternativo de Seedminer](bannerbomb3). Para obter ajuda com este assunto, entre no [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) e peça ajuda, em Inglês.
 {: .notice--warning}
 
 ### O que é necessário
 
-* Seu arquivo `movable.sed` de completar [Seedminer](seedminer)
+* Seu arquivo `movable.sed` obtido por completar [Seedminer](seedminer)
 * A versão mais recente do [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (download direto)
 * A versão mais recente do [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (download direto)
 * A versão mais recente do [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (o arquivo `.zip` do Luma3DS)
@@ -29,80 +29,80 @@ If your (Right/Left Shoulder), (D-Pad Up), or (A) buttons do not work, you will 
 
 #### Seção I - Preparação
 
-1. If your device is powered on, power off your device
-1. Open [unSAFE_MODE Exploit Injector](https://3ds.nhnarwhal.com/3dstools/unsafemode.php) on your computer
+1. Se seu dispositivo estiver ligado, desligue seu dispositivo
+1. Abra [unSAFE_MODE Exploit Injector](https://3ds.nhnarwhal.com/3dstools/unsafemode.php) no seu computador
 1. Envie seu movable.sed usando a opção "Choose File"
 1. Clique em "Build and Download"
-  + This will download an exploit DSiWare called `F00D43D5.bin` and a SAFE_MODE exploit data file called `usm.bin` inside of a zip archive (`unSAFE_MODE.zip`)
+  + Isto irá baixar um DSiWare exploit chamado `F00D43D5.bin` e um arquivo de exploit SAFE_MODE chamado `usm.bin` dentro de um arquivo zip (`unSAFE_MODE.zip`)
 1. Insira o cartão SD no seu computador
 1. Copie `boot.firm` e `boot.3dsx` do `.zip` do Luma3DS para a raiz do seu cartão SD
   + A raiz do cartão SD refere-se ao diretório inicial no seu cartão SD onde você pode ver a pasta Nintendo 3DS, mas não está dentro dela
 1. Crie uma pasta chamada `boot9strap` na raiz do seu cartão SD
 1. Copie o `boot9strap.firm` e o `boot9strap.firm.sha` do `.zip` do boot9strap para a pasta `/boot9strap/` no seu cartão SD
-1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
-1. Copy `usm.bin` from `unSAFE_MODE.zip` to the root of your SD card
+1. Copie `SafeB9SInstaller.bin` do `.zip` do SafeB9SInstaller para a raiz do seu cartão SD
+1. Copie `usm.bin` do `unSAFE_MODE.zip` para a raiz do seu cartão SD
   + ![]({{ "/images/screenshots/usm-root-layout.png" | absolute_url }})
     {: .notice--info}
 
 1. Navegue até `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` no seu cartão SD
   + O `<ID0>` será o mesmo que você usou em [Seedminer](seedminer)
   + O `<ID1>` é uma pasta de 32 caracteres dentro do `<ID0>`
-  + If `Nintendo DSiWare` does not exist, create it inside of the `<ID1>`
-1. Se existirem quaisquer arquivos de Backup do DSiWare (`<8-character-id>.bin`) dentro dessa pasta, mova eles para o seu computador
-  + Isso deixará a sua pasta Nintendo DSiWare vazia. Moving the files to your PC ensures you don't delete any intentional backups
-1. Copy the `F00D43D5.bin` file from `unSAFE_MODE.zip` to the `Nintendo DSiWare` folder
+  Se `Nintendo DSiWare` não existir, crie-o dentro do `<ID1>`
+1. Se existirem quaisquer arquivos de backup do DSiWare (`<8-character-id>.bin`) dentro dessa pasta, mova eles para o seu computador
+  + Isso deixará a sua pasta Nintendo DSiWare vazia. Mover os arquivos para seu PC garante que você não exclua nenhum backup intencional
+1. Copie o arquivo `F00D43D5.bin` do `unSAFE_MODE.zip` para a pasta `Nintendo DSiWare`
 
     ![]({{ "/images/screenshots/dsiware-save-location.png" | absolute_url }})
     {: .notice--info}
 
-#### Section II - BannerBomb3
+#### Seção II - BannerBomb3
 
 1. Reinsira seu cartão SD no seu dispositivo
 1. Ligue o seu dispositivo
 1. Abra a Configuração do Console em seu dispositivo
-1. Navegue para `Gerenciamento de Dados` -> `DSiWare`
+1. Navegue para `Gerenciador de Dados` -> `DSiWare`
 1. Clique na seção do cartão SD
-  + Your device should show a menu with some text
-1. Select "Inject haxx"
-  + Your device will automatically power off
+  + Seu dispositivo deve mostrar um menu com algum texto
+1. Selecione "Inject haxx"
+  + Seu dispositivo será desligado automaticamente
 
-#### Section III - unSAFE_MODE
+#### Seção III - unSAFE_MODE
 
-1. With your device still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), then press (Power)
-  + Keep holding the buttons until the device boots into Safe Mode
-1. Press "OK" to accept the update
-  + There is no update. This is part of the exploit
-1. Press "I accept" to accept the terms and conditions
-1. The update will eventually fail, with the error code `003-1099`. This is intended behaviour
-1. When asked "Would you like to configure Internet settings?", select "Yes"
-1. On the following menu, navigate to `Connection 1` -> `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings` -> `Detailed Setup`
-  + This is a [visual representation](https://uwuu.ca/images/safemode_highlighted.png)
-1. If the exploit was successful, your device will have booted into SafeB9SInstaller
+1. Com o seu dispositivo ainda desligado, segure os seguintes botões: (Gatilho Esquerdo) + (Gatilho Direito) + (Botão direcional pra cima) + (A), depois pressione (Power)
+  + Continue segurando os botões até o dispositivo iniciar o Safe Mode
+1. Pressione "OK" para aceitar a atualização
+  + Não há atualização. Isto faz parte do exploit
+1. Pressione "Eu aceito" para aceitar os termos e condições
+1. A atualização eventualmente falhará, com o código de erro `003-1099`. Isto é intencional
+1. Quando solicitado "Você gostaria de configurar as configurações de Internet?", selecione "Sim"
+1. No menu a seguir, navegue até `Conexão 1` -> `Alterar configurações` -> `Próxima página (seta direita)` -> `Configurações de proxy` -> `Configuração Avançada`
+  + Esta é uma [representação visual](https://uwu.ca/images/safemode_highlighted.png)
+1. Se o exploit for bem sucedido, seu dispositivo será inicializado no SafeB9SInstaller
 
-#### Section IV - Installing boot9strap
+#### Seção IV - Instalando o boot9strap
 
-1. When prompted, input the key combo given on the top screen to install boot9strap
-  + If the top screen is blank, power off your device and re-do Section III
+1. Quando solicitado, aperte a sequência de botões fornecida na tela superior para instalar o boot9strap
+  + Se a tela superior estiver vazia, desligue seu dispositivo e refaça a Seção III
 1. Quando concluído, aperte (A) para reiniciar o seu dispositivo
 1. Seu dispositivo deve ter reiniciado no menu de configuração de Luma3DS
   + Se seu dispositivo desligar quando você tentar ligá-lo, certifique-se de que você copiou `boot.firm` do `.zip` do Luma3DS para a raiz do seu cartão SD
 1. Aperte (Start) para salvar e reiniciar
 
 Neste momento, o seu console iniciará no Luma3DS por padrão.
-  + O Luma3DS não é diferente do Menu HOME normal. Se seu console foi inicializado no HOME Menu, ele está executando custom firmware.
+  + O Luma3DS não é diferente do Menu HOME normal. Se seu console foi inicializado no Menu HOME, ele está executando custom firmware.
   + Na próxima página, você irá instalar aplicativos homebrew úteis para concluir sua instalação.
 
-#### Section V - Restoring WiFi Configuration Profiles
+#### Seção V - Restaurando os Perfis de Configuração de Wi-Fi
 
 1. Abra a Configuração do Console em seu dispositivo
-1. Navegue para `Gerenciamento de Dados` -> `DSiWare`
+1. Navegue para `Gerenciador de Dados` -> `DSiWare`
 1. Clique na seção do cartão SD
-  + Your device should show a menu with some text
-1. Select "Restore slots"
-  + Your device will automatically power off
+  + Seu dispositivo deve mostrar um menu com algum texto
+1. Selecione "Restore slots"
+  + Seu dispositivo será desligado automaticamente
 1. Insira o cartão SD no seu computador
 1. Navegue até `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` no seu cartão SD
-1. Delete `F00D43D5.bin` from your Nintendo DSiWare folder
+1. Apague `F00D43D5.bin` da sua pasta Nintendo DSiWare
 
 ___
 
