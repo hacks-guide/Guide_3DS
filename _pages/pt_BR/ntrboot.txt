@@ -4,89 +4,89 @@ title: "ntrboot"
 
 {% include toc title="Tabela de Conteúdo" %}
 
-If your flashcart comes pre-flashed with ntrboot (or you have already flashed ntrboot to your flashcart), you can skip to [Installing boot9strap (ntrboot)](installing-boot9strap-(ntrboot)) for instructions on how to use it.
+Se seu flashcart já veio com o ntrboot (ou você já instalou o ntrboot no seu flashcart), você pode pular para [Instalando boot9strap (ntrboot)](installing-boot9strap-(ntrboot)) para obter instruções sobre como usá-lo.
 {: .notice--success}
 
 ### Leitura Obrigatória
 
-Installing boot9strap with ntrboot requires a compatible NDS / DSi flashcart to flash ntrboot to. Note that some of these flashcarts are sold pre-flashed with ntrboot.
+Instalar o boot9strap com o ntrboot requer um flashcart do DS / DSi compatível com o ntrboot. Note-se que alguns destes flashcarts são vendidos já executando flash em ntrboot.
 
-While the ntrboot exploit works independently of the system version, the ntrboot flasher (which installs the exploit to the cart) is not. This means that, depending on the versions and devices supported by your flashcart, only certain methods may be available to you.
+Enquanto o exploit do ntrboot funciona independentemente da versão do sistema, o ntrboot flasher (o qual instala o exploit no flashcart) não. Isto significa que, dependendo das versões e dispositivos suportados pelo seu flashcart, apenas certos métodos podem estar disponíveis para você.
 
-Note that carts with a "Time Bomb" will no longer be able to launch `.nds` files when they detect that the system clock has passed a date determined by the flashcart firmware. One method to bypass this is to set the system clock to an earlier date.
+Observe que cartões com "Time Bomb" não poderão mais executar arquivos '.nds' quando detectarem que o horário do sistema passou a data determinada pelo firmware do flashcart. Um método de contornar isto é ajustar o relógio do sistema para uma data anterior.
 
-| Flashcart Name | Current Price | "Time Bomb"? | 3DS Versions? | DSi Versions? | Other Notes |
+| Nome do flashcart | Preço atual (em dólares) | "Time Bomb"? | Versões do 3ds? | Versões do DSi? | Outras notas |
 |-|-:|:-:|:-:|:-:|-|
-| [**R4i-SDHC B9S**](http://www.nds-card.com/ProShow.asp?ProID=574) | $15.99 | September 3, 2024 | <= 11.15.0 | <= 1.4.5 | **Comes pre-flashed with ntrboot**; can be flashed back to an NDS flashcart. |
-| [**R4i Gold 3DS Plus**](http://www.nds-card.com/ProShow.asp?ProID=575) | $19.99 | No | <= 11.15.0 | <= 1.4.5 | **Comes pre-flashed with ntrboot** ([internal switch to switch between ntrboot and NDS modes]({{ "/images/screenshots/r4i-gold-3ds-plus.png" | absolute_url }})); do not manually flash with ntrboot. |
-| [**Acekard 2i**](http://www.nds-card.com/ProShow.asp?ProID=160) | $20.99 | No | <= 4.3.0 | <= 1.4.4 | |
-| [**DSTT**](http://www.nds-card.com/ProShow.asp?ProID=157) | $9.99 | No | None | None | Only models with [certain flash chips](https://gist.github.com/aspargas2/fa2a70aed3a7fe33f1f10bc264d9fab6) are compatible with ntrboot. |
-| [**R4i Gold 3DS**](http://www.nds-card.com/ProShow.asp?ProID=149) | $19.99 | No | <= 11.15.0 | <= 1.4.5 | All RTS revisions are compatible. |
-| [**R4i-SDHC 3DS RTS**](http://www.nds-card.com/ProShow.asp?ProID=146) | $13.99 | 1.85b: September 3, 2024 | <= 11.15.0 | <= 1.4.5 | |
-| [**R4iSDHC GOLD Pro 20XX**](http://www.nds-card.com/ProShow.asp?ProID=490) | $9.99 | 4.0b: September 3, 2024 | <= 11.15.0 | <= 1.4.5 | Only r4isdhc **.com** carts marked with a year between 2014 and 2020 are compatible. |
-| [**R4iSDHC RTS LITE 20XX**](http://www.nds-card.com/ProShow.asp?ProID=450) | $13.99 | 4.0b: September 3, 2024 | <= 11.15.0 | <= 1.4.5 | Only r4isdhc **.com** carts marked with a year between 2014 and 2020 are compatible. |
-| **Ace3DS X** | | No | <= 11.15.0 | <= 1.4.5 | **Comes pre-flashed with ntrboot** (external switch to switch between ntrboot ("3DS") and NDS modes); do not manually flash with ntrboot. |
-| **Ace3DS Plus** | | No | <= 11.15.0 | <= 1.4.5 | |
-| **Gateway Blue** | | No | 4.1.0 - 4.5.0 | <= 1.4.5 | |
-| **Infinity 3 R4i** | | No | <= 11.15.0 | <= 1.4.5 | |
-| **R4 3D Revolution** | | No | None | None | |
-| **R4i Gold 3DS Deluxe "Starter"** | | No | 4.1.0 - 4.5.0 | <= 1.4.5 | |
-| **R4i Ultra** | | No | <= 4.3.0 | <= 1.4.5 | |
-| **R4i-SDHC 3DS RTS Deluxe Edition** | | Unknown | <= 11.15.0 | <= 1.4.5 | |
-| **R4iSDHC Dual-Core 20XX** | | 4.0b: September 3, 2024 | <= 11.15.0 | <= 1.4.5 | Only r4isdhc **.com** carts marked with a year between 2014 and 2020 are compatible. |
+| [**R4i-SDHC B9S**](http://www.nds-card.com/ProShow.asp?ProID=574) | $16.99 | 3 de setembro de 2024 | <= 11.15.0 | <= 1.4.5 | *Vem pré configurado com ntrboot**; pode ser configurado de volta para um flashcart de NDS. |
+| [**R4i Gold 3DS Plus**](http://www.nds-card.com/ProShow.asp?ProID=575) | $19.99 | Não | <= 11.15.0 | <= 1.4.5 | **Vem pré-configurado com ntrboot** ([botão interno para alterar entre modo DS e modo ntrboot]({{ "/images/screenshots/r4i-gold-3ds-plus.png" | absolute_url }})); não configurar manualmente com ntrboot. |
+| [**Acekard 2i**](http://www.nds-card.com/ProShow.asp?ProID=160) | $20.99 | Não | <= 4.3.0 | <= 1.4.4 | |
+| [**DSTT**](http://www.nds-card.com/ProShow.asp?ProID=157) | $9.99 | Não | Nenhum | Nenhum | Alguns modelos com [certos chips de flashing](https://gist.github.com/aspargas2/fa2a70aed3a7fe33f1f10bc264d9fab6) são compatíveis com ntrboot. |
+| [**R4i Gold 3DS RTS](http://www.nds-card.com/ProShow.asp?ProID=149) | $19.99 | Não | <= 11.15.0 | <= 1.4.5 | Todas. |
+| [**R4i-SDHC 3DS RTS**](http://www.nds-card.com/ProShow.asp?ProID=146) | $13.99 | 1.85b: 3 de setembro de 2024 | <= 11.15.0 | <= 1.4.5 | |
+| [**R4iSDHC GOLD Pro 20XX**](http://www.nds-card.com/ProShow.asp?ProID=490) | $9.99 | 4.0b: 3 de setembro de 2024 | <= 11.15.0 | <= 1.4.5 | Apenas cartuchos r4isdhc **.com** marcados com um ano entre 2014 e 2020 são compatíveis. |
+| [**R4iSDHC RTS LITE 20XX**](http://www.nds-card.com/ProShow.asp?ProID=450) | $13.99 | 4.0b: 3 de setembro de 2024 | <= 11.15.0 | <= 1.4.5 | Apenas cartuchos r4isdhc **.com** marcados com um ano entre 2014 e 2020 são compatíveis. |
+| **Ace3DS X** | | Não | <= 11.15.0 | <= 1.4.5 | **Pré configurado com ntrboot** (botão externo para alternar entre modo ntrboot ("3DS") e modo DS); não configurar manualmente com ntrboot. |
+| **Ace3DS Plus** | | Não | <= 11.15.0 | <= 1.4.5 | |
+| **Gateway Blue** | | Não | 4.1.0 - 4.5.0 | <= 1.4.5 | |
+| **Infinity 3 R4i** | | Não | <= 11.15.0 | <= 1.4.5 | |
+| **R4 3D Revolution** | | Não | Nenhum | Nenhum | |
+| **R4i Gold 3DS Deluxe "Starter"** | | Não | 4.1.0 - 4.5.0 | <= 1.4.5 | |
+| **R4i Ultra** | | Não | <= 4.3.0 | <= 1.4.5 | |
+| **R4i-SDHC 3DS RTS Deluxe Edition** | | Desconhecido | <= 11.15.0 | <= 1.4.5 | |
+| **R4iSDHC Dual-Core 20XX** | | 4.0b: 3 de setembro de 2024 | <= 11.15.0 | <= 1.4.5 | Apenas cartuchos r4isdhc **.com** marcados com um ano entre 2014 e 2020 são compatíveis. |
 
   ![]({{ "/images/screenshots/ntrboot-flashcarts.png" | absolute_url }})
   {: .notice--info}
 
-Ensure your flashcart is able to launch `.nds` files on your device before beginning. Some flashcarts may require firmware or "kernel" files to be copied to the flashcart SD card. Consult your specific flashcart's instructions for more information.
+Certifique-se de que seu flashcart é capaz de executar arquivos '.nds' em seu dispositivo antes de começar. Alguns flashcarts podem exigir arquivos de firmware ou "kernel" a serem copiados para o cartão SD do flashcart. Consulte as instruções do seu flashcart específico para obter mais informações.
 
-Note that specific methods may have additional compatibility information.
+Observe que os métodos específicos podem ter informações adicionais de compatibilidade.
 
-The usage of this exploit, regardless of the flashing method, requires access to a small magnet if the target device is of a folding style (any 3DS family system that is not the old 2DS with a sleep switch). This is because the exploit requires your device to enter sleep mode while still having access to the buttons.
+O uso desse exploit, independentemente do método requer acesso a um ímã pequeno se o dispositivo de destino puder dobrar (qualquer sistema da família 3DS que não seja o antigo 2DS com um interruptor para o modo de descanso). Isso é porque o exploit requer que o seu dispositivo entre em modo de descanso enquanto ainda tem acesso aos botões.
 
-To test if a magnet will work, hold it on or around the (A)(B)(X)(Y) buttons while the device is powered on to see if it triggers sleep mode. If it does, both displays will go black as long as the magnet is held in that spot.
+Para testar se o ímã funciona, segure no centro, ou ao redor dos botões (A)(B)(X)(Y) enquanto o dispositivo está ligado para ativar o modo de descanso. Caso aconteça, ambas as telas ficarão pretas enquanto o ímã é mantido nesse ponto.
 {: .notice--info}
 
-Note that the flashcart will not be able to be used for its standard functions while the ntrboot exploit is installed on it (except for in the case of the Acekard 2i, which remains functional *on NDS and custom firmware 3DS systems only*). This means that, for most flashcarts, it will not even display on the HOME Menu. Existem etapas opcionais no final das instruções da instalação do ntrboot para removê-lo do seu flashcart após terminar o guia.
+Saiba que o flashcart não será capaz de ser utilizado para a sua funcionalidade padrão enquanto o exploit ntrboot estiver instalado nele (exceto no caso do Acekard 2i, que permanece funcional *apenas em sistemas 3DS com custom firmware *). Isso significa que, para a maioria dos flashcarts, ele nem sequer será exibido no Menu HOME. Existem etapas opcionais no final das instruções da instalação do ntrboot para removê-lo do seu flashcart após terminar o guia.
 
-Note que em algumas raras circunstâncias, pode ser possível que o processo de instalação cause um **brick** em um flashcart falso e torne-o permanentemente inutilizável. Isso é pouco provável, mas, no entanto, apenas os flashcarts originais listados são suportados. To reduce the chance of receiving a counterfeit card, it is recommended that you use a reputable site to buy your flashcart (such as [NDS Card](http://www.nds-card.com/))
+Note que em algumas raras circunstâncias, pode ser possível que o processo de instalação cause um **brick** em um flashcart falso e torne-o permanentemente inutilizável. Isso é pouco provável, mas, no entanto, apenas os flashcarts originais listados são suportados. Para reduzir as chances de receber um flashcart falso, é recomendado que você use um site com uma boa reputação para comprar o seu flashcart, (como o [NDS Card](http://www.nds-card.com/))
 {: .notice--danger}
 
 ___
-### Methods
+### Métodos
 
 ___
 
-#### Flashing ntrboot (3DS Single System)
+### Executar Flash do ntrboot (único sistema 3DS)
 
-Este método não requer nada além de seu 3DS original sem modificações e um cartão flashcart compatível. Este método usa o flashcart para executar o arquivo '.nds' do ntrboot flasher no seu 3DS. Isto significa que seu flashcart deve oferecer suporte a execução de arquivos '.nds' na versão atual do seu 3DS. See the flashcart table above for more information.
+Este modo não requer nada além de seu 3DS original sem modificações e um cartão flashcart compatível. Este método usa o flashcart para executar o arquivo '.nds' que faz o flash do ntrboot no seu 3DS. Isto significa que seu flashcart deve oferecer suporte a execução de arquivos '.nds' na versão atual do seu 3DS. Consulte a tabela de flashcart acima para obter mais informações.
 
-Continue to [Flashing ntrboot (3DS Single System)](flashing-ntrboot-(3ds-single-system))
+Continue em [Executar flash do ntrboot (único sistema 3DS)](flashing-ntrboot-(3ds-single-system))
 {: .notice--primary}
 
 ___
 
-#### Flashing ntrboot (3DS Multi System)
+#### Executar Flash do ntrboot (vários sistemas 3DS)
 
-This method requires temporary access to a second 3DS family device that is already running boot9strap. Isso não requer que seu flashcart suporte nenhuma das versões de ambos 3DS.
+Este método requer acesso temporário a um segundo dispositivo da família de 3DS que já está executando boot9strap. Isso não requer que seu flashcart suporte nenhuma das versões de ambos 3DS.
 
-Continue to [Flashing ntrboot (3DS Multi System)](flashing-ntrboot-(3ds-multi-system))
+Continue para [Executar flash em ntrboot (múltiplos sistemas 3DS)](flashing-ntrboot-(3ds-multi-system))
 {: .notice--primary}
 
 ___
 
-#### Flashing ntrboot (NDS)
+#### Executar Flash do ntrboot (NDS)
 
 Este método requer acesso temporário a um Nintendo DS ou Nintendo DS Lite compatível com seu flashcart. Este método usa o flashcart para executar o arquivo '.nds' que faz o flash do ntrboot no seu NDS.
 
-Continue to [Flashing ntrboot (NDS)](flashing-ntrboot-(nds))
+Continue em [Executar flash do ntrboot (NDS)](flashing-ntrboot-(nds))
 {: .notice--primary}
 
 ___
 
-#### Flashing ntrboot (DSi)
+#### Executar Flash do ntrboot (DSi)
 
-Este método requer acesso temporário a um Nintendo DSi compatível com seu flashcart. Este método usa o flashcart para executar o arquivo '.nds' que faz o flash do ntrboot no seu DSi. Isso significa que seu flashcart deve suportar a execução de arquivos '.nds' na versão do seu DSi. See the flashcart table above for more information.
+Este método requer acesso temporário a um Nintendo DSi compatível com seu flashcart. Este método usa o flashcart para executar o arquivo '.nds' que faz o flash do ntrboot no seu DSi. Isso significa que seu flashcart deve suportar a execução de arquivos '.nds' na versão do seu DSi. Consulte a tabela de flashcart acima para obter mais informações.
 
-Continue to [Flashing ntrboot (DSi)](flashing-ntrboot-(dsi))
+Continue em [Executar flash do ntrboot (DSi)](flashing-ntrboot-(dsi))
 {: .notice--primary}
