@@ -4,28 +4,28 @@ title: "Utilização do GodMode9"
 
 {% include toc title="Tabela de Conteúdo" %}
 
-For information on dumping cartridge or SD card content, see [Dumping Titles and Game Cartridges](dumping-titles-and-game-cartridges).
+Para obter informações sobre fazer dumps de cartuchos ou conteúdo do cartão SD, veja [Fazendo Dump de Aplicativos e Jogos de Cartucho](dumping-titles-and-game-cartridges).
 {: .notice--info}
 
-For support (in English) with GodMode9, as well as help with scripting and to get updates and info, join [GodMode9 on Discord](https://discord.gg/BRcbvtFxX4).
+Para suporte (em inglês) com o GodMode9, bem como ajuda com scripting e obter atualizações e informações, junte-se ao [Discord do GodMode9](https://discord.gg/BRcbvtFxX4).
 {: .notice--primary}
 
 ### Leitura Obrigatória
 
-GodMode9 is a full access file browser for the Nintendo 3DS console, giving you access to your SD card, the FAT partitions inside your SysNAND and EmuNAND, and basically anything else. Among other functionality, you can copy, delete, rename files, and create folders.
+GodMode9 é um gerenciador de arquivos completo para o console Nintendo 3DS, lhe dando acesso ao seu cartão SD, às partições FAT dentro da sua SysNAND e EmuNAND, e a basicamente todo o resto. Dentre outras funcionalidades, você pode copiar, excluir, renomear e criar pastas.
 
 Note que se você tem outros arquivos de payload diferentes do `GodMode9.firm` na pasta `/luma/payloads/` do seu cartão SD, segure (Start) durante a inicialização para exibir um "menu de chainloader" onde você terá que utilizar os botões direcionais e o botão (A) para selecionar "GodMode9" para estas instruções. 
 
-GodMode9 is powerful software that has the capability to modify essentially anything on your console. Though many of these modifications are locked behind a permissions system, and it is impossible to accidentally perform dangerous actions without deliberately unlocking permissions, you should still follow instructions carefully and keep backups just in case.
+GodMode9 é um poderoso software que tem a capacidade de modificar essencialmente qualquer coisa em seu console. Embora muitas destas modificações sejam bloqueadas por trás de um sistema de permissões, e é impossível acidentalmente executar ações perigosas sem deliberadamente desbloquear permissões, você deve ainda seguir as instruções cuidadosamente e manter backups por precaução.
 
-## Updating GodMode9
+## Atualizando o GodMode9
 
-Some of the instructions below are only applicable to the latest version of GodMode9, and as such you should follow this section to update your copy before continuing. Overwrite any existing files.
+Algumas das instruções abaixo só são aplicáveis para a versão mais recente do GodMode9, e como tal deve seguir esta seção para atualizar sua cópia antes de continuar. Substitua quaisquer arquivos existentes.
 {: .notice--info}
 
-### O que é necessário
+### O que você precisa
 
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+* A versão mais recente do [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
 
 ### Instruções
 
@@ -35,7 +35,7 @@ Some of the instructions below are only applicable to the latest version of GodM
 1. Copie a pasta `gm9` do `.zip` do GodMode9 para a raiz do seu cartão SD
 1. Reinsira seu cartão SD no seu dispositivo
 
-## Creating a NAND Backup
+## Criando um Backup da NAND
 
 1. Pressione e segure (Start), e enquanto segura (Start), ligue seu dispositivo. Isso vai inicializar o GodMode9
 1. Aperte (Home) para abrir o menu de ações
@@ -52,25 +52,25 @@ Some of the instructions below are only applicable to the latest version of GodM
 1. Se solicitado, aperte (A) para bloquear as permissões de escrita
 1. Segure (R) e aperte (Start) ao mesmo tempo para desligar o seu dispositivo
 1. Insira o cartão SD no seu computador
-1. Copy `<date>_<serialnumber>_sysnand_###.bin` and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
+1. Copie `<date>_<serialnumber>_sysnand_###.bin` da pasta `/gm9/out/ de seu cartão SD para algum local seguro do seu computador
   + Faça backups em diversos lugares (tais como armazenamento de arquivos online)
   + Esses backups irão te salvar de um brick e/ou te ajudarão a recuperar os arquivos da memória NAND caso algo dê errado
-1. Delete `<date>_<serialnumber>_sysnand_###.bin` e `<date>_<serialnumber>_sysnand_###.bin.sha` da pasta `/gm9/out/` no seu cartão de memória depois de copiá-los
+1. Delete `<date>_<serialnumber>_sysnand_###.bin` e `<date>_<serialnumber>_sysnand_###.bin.sha` da pasta `/gm9/out/` do seu cartão SD depois de copiá-los
 1. Reinsira seu cartão SD no seu dispositivo
 
-## Restoring a NAND Backup
+## Restaurando um Backup da NAND
 
 1. Desligue seu dispositivo
 1. Insira o cartão SD no seu computador
-1. Copy `<date>_<serialnumber>_sysnand_###.bin` from your computer to the `/gm9/out/` folder on your SD card
+1. Copie o arquivo `<data>_<numeroDeSerie>_sysnand_###.bin` de seu computador para a pasta `/gm9/out/` no seu cartão SD
 1. Reinsira seu cartão SD no seu dispositivo
 1. Pressione e segure (Start), e enquanto segura (Start), ligue seu dispositivo. Isso vai inicializar o GodMode9
 1. Aperte (Home) para abrir o menu de ações
 1. Selecione "Scripts..."
 1. Selecione "GM9Megascript"
-1. Select "Restore Options"
-1. Select "SysNAND Restore (safe)"
-1. Select your NAND backup
+1. Selecione "Restore Options"
+1. Selecione "SysNAND Restore (safe)"
+1. Selecione o backup da NAND
 1. Aperte (A) para destravar "SysNAND (lvl3) writing", então aperte a sequência de botões solicitada
   + Isso não irá substituir sua instalação do boot9strap
   + Este processo levará algum tempo
@@ -79,12 +79,12 @@ Some of the instructions below are only applicable to the latest version of GodM
 1. Selecione "Exit"
 1. Se solicitado, aperte (A) para bloquear as permissões de escrita
 
-## Injecting any .CIA app into Health & Safety
+## Injetando qualquer app .CIA no Informações sobre Saúde e Segurança
 
-For organizational purposes, copy the `.cia` file you wish to inject to the `/cias/` folder on your SD card
+Para fins organizacionais, copie o arquivo `.cia` que você deseja injetar para a pasta `/cias/` no seu cartão SD
 {: .notice--info}
 
-Note that it is not possible to inject files into Health & Safety that are larger than it (including games and other large applications)
+Note que não é possível injetar arquivos no Informações sobre Saúde e Segurança que sejam maiores do que ele (incluindo jogos e outras aplicações maiores)
 {: .notice--info}
 
 1. Pressione e segure (Start), e enquanto segura (Start), ligue seu dispositivo. Isso vai inicializar o GodMode9
@@ -95,7 +95,7 @@ Note that it is not possible to inject files into Health & Safety that are large
 1. Aperte (A) para continuar
 1. Se solicitado, aperte (A) para bloquear as permissões de escrita
 
-## Restoring Health & Safety after injecting a .CIA app
+## Restaurando o Informações sobre Saúde e Segurança após injetar um app .CIA
 
 Isto só irá funcionar caso a injeção do Informações sobre saúde e segurança foi feita pelo GodMode9 (não Decrypt9 ou Hourglass9).
 {: .notice--info}
@@ -107,7 +107,7 @@ Isto só irá funcionar caso a injeção do Informações sobre saúde e seguran
 1. Aperte (A) para destravar "SysNAND (lvl1) writing", então aperte a sequência de botões solicitada
 1. Se solicitado, aperte (A) para bloquear as permissões de escrita
 
-## Format an SD card
+## Formatar um cartão SD
 
 **Note que isto irá apagar o conteúdo do seu cartão SD!**
 {: .notice--danger}
@@ -123,14 +123,14 @@ Isto só irá funcionar caso a injeção do Informações sobre saúde e seguran
   + Opcionalmente, você pode inserir um nome personalizado para o cartão SD
 1. Quando solicitado, aperte a sequência de botões solicitada para confirmar
 
-## Removing an NNID without formatting your device
+## Removendo uma NNID sem formatar o seu dispositivo
 
 1. Pressione e segure (Start), e enquanto segura (Start), ligue seu dispositivo. Isso vai inicializar o GodMode9
 1. Aperte (Home) para abrir o menu de ações
 1. Selecione "Scripts..."
 1. Selecione "GM9Megascript"
 1. Selecione "Scripts from Plailect's Guide"
-1. Select "Remove NNID"
+1. Selecione "remove_nnid"
 1. Aperte (A) para continuar
 1. Aperte (A) para destravar "SysNAND (lvl1) writing", então aperte a sequência de botões solicitada
 1. Aperte (A) para continuar
