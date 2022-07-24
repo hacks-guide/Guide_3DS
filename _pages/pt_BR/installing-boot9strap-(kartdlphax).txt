@@ -1,86 +1,86 @@
 ---
-title: "Installing boot9strap (kartdlphax)"
+title: "Instalando boot9strap (kartdlphax)"
 ---
 
 {% include toc title="Tabela de Conteúdo" %}
 
 ### Leitura Obrigatória
 
-kartdlphax is an exploit for the Download Play mode of Mario Kart 7. It can be used with universal-otherapp to install custom firmware on target devices.
+kartdlphax é um exploit para o modo Download Play de Mario Kart 7. Pode ser usado com universal-otherapp para instalar custom firmware no dispositivo de destino.
 
-In order to follow these instructions, you will need the following:
+Para poder seguir estas instruções, você precisará do seguinte:
 
-- A second 3DS with custom firmware (the **source 3DS**) that is the same region as the 3DS you are trying to modify (the **target 3DS**)
-- A physical or digital copy of Mario Kart 7 that is the same region as both consoles
-- An SD card for both devices
+- Um segundo 3DS com custom firmware (o **3DS de origem**) que é a mesma região que o 3DS que você está tentando modificar (o **3DS de destino**)
+- Uma cópia física ou digital de Mario Kart 7 que é a mesma região de ambos os consoles
+- Um cartão SD para ambos os dispositivos
 	
 ### O que é necessário
 
-On the **source 3DS** (the 3DS with custom firmware):
+No **3DS de origem** (o 3DS com custom firmware):
 
-* The latest release of [kartdlphax](https://github.com/mariohackandglitch/kartdlphax/releases/latest) (`plugin.3gx`)
-* The latest release of [Luma3DS 3GX Loader Edition](https://github.com/Nanquitas/Luma3DS/releases/latest) (`boot.firm`)
+* A versão mais recente do [kartdlphax](https://github.com/mariohackandglitch/kartdlphax/releases/latest) (`plugin.3gx`)
+* A versão mais recente do [Luma3DS 3GX Loader Edition](https://github.com/Nanquitas/Luma3DS/releases/latest) (`boot.firm`)
 
-On the **target 3DS** (the 3DS that you are trying to modify):
+No **3DS de destino** (o 3DS que você está tentando modificar):
 
 * A versão mais recente do [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (download direto)
 * A versão mais recente do [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (download direto)
-* The latest release of [standard Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+* A versão mais recente do [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (o arquivo `.zip` do Luma3DS)
 
-#### Section I - Prep Work (source 3DS)
+#### Seção I - Preparação (3DS de origem)
 
-1. Insert the SD card of your **source 3DS** in your computer
-1. Copy Luma 3GX Loader Edition's `boot.firm` to the root of the **source 3DS**'s SD card, replacing any existing file
+1. Insira o cartão SD do seu **3DS de origem** no seu computador
+1. Copie o `boot.firm` do Luma 3GX Loader Edition para a raiz do cartão SD do **3DS de origem**, substituindo qualquer arquivo existente
   + A raiz do cartão SD refere-se ao diretório inicial no seu cartão SD onde você pode ver a pasta Nintendo 3DS, mas não está dentro dela
-1. Copy kartdlphax's `plugin.3gx` to the following directory on the **source 3DS**'s SD card, depending on the **region of your copy of Mario Kart 7**:
-  - USA: `luma/plugins/0004000000030800`
+1. Copie o `plugin.3gx` do kartdlphax para o seguinte diretório no cartão SD do **3DS de origem**, dependendo da **região de sua cópia de Mario Kart 7**:
+  - EUA: `luma/plugins/0004000000030800`
   - EUR: `luma/plugins/0004000000030700`
   - JPN: `luma/plugins/0004000000030600`
-  - Create the `plugins` and `00040000...` folders if they do not already exist
-1. Eject the SD card and put it in the **source 3DS**
+  - Crie as pastas `plugins` e `00040000...` se elas já não existirem
+1. Ejete o cartão SD e coloque-o no **3DS de origem**
 
-#### Section II - Prep Work (target 3DS)
+#### Seção II - Preparação (3DS de destino)
 
-1. Insert the SD card of your **target 3DS** in your computer
-1. Copy `boot.firm` and `boot.3dsx` from the standard Luma3DS `.zip` to the root of your SD card
+1. Insira o cartão SD do seu **3DS de destino** no seu computador
+1. Copie `boot.firm` e `boot.3dsx` do `.zip` padrão Luma3DS para a raiz do seu cartão SD
 1. Crie uma pasta chamada `boot9strap` na raiz do seu cartão SD
 1. Copie o `boot9strap.firm` e o `boot9strap.firm.sha` do `.zip` do boot9strap para a pasta `/boot9strap/` no seu cartão SD
-1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
-1. Eject the SD card and put it in the **target 3DS**
+1. Copie `SafeB9SInstaller.bin` do `.zip` do SafeB9SInstaller para a raiz do seu cartão SD
+1. Ejete o cartão SD e coloque-o no **3DS de destino**
 
-#### Section III - kartdlphax
+#### Seção III - kartdlphax
 
-1. Power on the **source 3DS**
-  - If you are prompted to set up Luma3DS, just press START to save the configuration
-1. Once in the HOME Menu, press (Left Shoulder) + (Down D-Pad) + (Select) to bring up the Rosalina menu
-1. Select "Enable plugin loader"
+1. Ligue o **3DS de origem**
+  - Se você for solicitado a configurar o Luma3DS, basta apertar START para salvar a configuração
+1. No Menu HOME, aperte (Gatilho Esquerdo) + (Botão direcional para baixo) + (Select) para abrir o menu Rosalina
+1. Selecione "Enable plugin loader"
 1. Aperte (B) para sair do menu do Rosalina
-1. Launch Mario Kart 7
-  - Ensure that wireless connectivity is enabled
-  - kartdlphax should tell you that it is running
-1. Navigate to `Local Multiplayer` -> `Create Group`
-  - If the source 3DS freezes at this point and you are using a cartridge, try [installing the cartridge to the system](dumping-titles-and-game-cartridges#installing-a-game-cartridge-directly-to-the-system)
-1. Power on the **target 3DS**
-  - Ensure that wireless connectivity is enabled
-1. On the **target 3DS**, open the Download Play application (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"}), then select "Nintendo 3DS"
-1. Join the group created by the **source 3DS**
-1. Select "Start" on the **source 3DS** once it has detected the **target 3DS**
-1. Once multiplayer has loaded, navigate to `Grand Prix` -> `50cc` -> (any driver) -> `Mushroom Cup` -> `OK`
-1. Wait a while (a percentage should be displayed on the **source 3DS**)
-1. If the exploit was successful, the **target 3DS** will have booted into SafeB9SInstaller
+1. Inicie o Mario Kart 7
+  - Certifique-se de que a conectividade sem fio esteja ativada
+  - kartdlphax deve te dizer que está sendo executado
+1. Navegue até `Local Multiplayer` -> `Create Group`
+  - Se o 3DS de origem congelar neste ponto e você estiver usando um cartucho, tente [instalar o cartucho no sistema](dumping-titles-and-game-cartridges#installing-a-game-cartridge-directly-to-the-system)
+1. Ligue o **3DS de destino**
+  - Certifique-se de que a conectividade sem fio esteja ativada
+1. No **3DS de destino**, abra o aplicativo Download Play (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"}), e então selecione "Nintendo 3DS"
+1. Junte-se ao grupo criado pelo **3DS de origem**
+1. Selecione "Start" no **3DS de origem** uma vez que ele detectou o **3DS de destino**
+1. Assim que o multiplayer tenha carregado, navegue até `Grande Prix` -> `50cc` -> (qualquer personagem) -> `Mushroom Cup` -> `OK`
+1. Aguarde um pouco (um percentual deve ser exibido no **3DS de origem**)
+1. Se o exploit for bem-sucedido, o **3DS de destino** terá inicializado o SafeB9SInstaller
 
-#### Section IV - Installing boot9strap
+#### Seção IV - Instalando o boot9strap
 
-1. When prompted, input the key combo given on the top screen to install boot9strap
+1. Quando solicitado, aperte a sequência de botões fornecida na tela superior para instalar o boot9strap
 1. Quando concluído, aperte (A) para reiniciar o seu dispositivo
-1. Your target 3DS should have rebooted into the Luma3DS configuration menu
-  + If your target 3DS shuts down when you try to power it on, ensure that you have copied `boot.firm` from the Luma3DS `.zip` to the root of your SD card
+1. Seu 3DS de destino deve ter reiniciado no menu de configuração do Luma3DS
+  + Se o seu 3DS de destino desligar quando você tentar ligá-lo, certifique-se de que você copiou `boot.firm` do `.zip` do Luma3DS para a raiz do seu cartão SD
 1. Aperte (Start) para salvar e reiniciar
 
 Neste momento, o seu console iniciará no Luma3DS por padrão.
-  + O Luma3DS não é diferente do Menu HOME normal. Se seu console foi inicializado no HOME Menu, ele está executando custom firmware.
+  + O Luma3DS não é diferente do Menu HOME normal. Se seu console foi inicializado no Menu HOME, ele está executando custom firmware.
   + Na próxima página, você irá instalar aplicativos homebrew úteis para concluir sua instalação.
-  + You will **not** need to use your **source 3DS** to complete any further steps on this guide.
+  + Você **não** precisará usar seu **3DS de origem** para completar quaisquer outras etapas nesse guia.
 
 ___
 
