@@ -57,20 +57,20 @@ title: "자주 묻는 질문"
 **A:** Luma3DS를 사용하고 계신 경우, 커스텀 펌웨어 로더(boot9strap)는 업데이트해도 *절대* 지워지지 않습니다. 과거에 Luma3DS가 부팅 중에 크래시하는 업데이트가 몇 번 존재했습니다. 그러니 최신 업데이트가 Luma3DS를 고장내지 않았는지 확인하기 위해 몇 시간 정도 기다리는 것도 좋은 방법입니다. 시스템 업데이트는 순정 3DS와 같은 방법으로 실행할 수 있습니다. 시스템 설정을 통해서나, 안전 모드, 업데이트가 자동으로 다운로드되었을 때 표시되는 업데이트 알림 등에서 업데이트하시면 됩니다.
 
 #### **Q:** *SD 카드를 어떻게 업그레이드할 수 있나요?*    
-**A:** FAT32로 포맷된 새 SD 카드에 기존 SD 카드의 파일들을 복사하세요. 128GB 카드들의 경우에는 할당량 (allocation size)을 65536으로 설정하는걸 권장드립니다. SD cards larger than 128GB are not recommended due to known issues with GBA graphics and custom themes.
+**A:** FAT32로 포맷된 새 SD 카드에 기존 SD 카드의 파일들을 복사하세요. 128GB 카드들의 경우에는 할당량 (allocation size)을 65536으로 설정하는걸 권장드립니다. GBA 그래픽과 커스텀 테마 문제 때문에 128GB를 넘기는 SD 카드를 사용하는 것은 권장하지 않습니다.
 
 #### **Q:** *커펌한 채로 다른 본체로 저장 데이터 이사를 할 수 있나요?*    
-**A:** Yes, system transfers can be performed through the official System Transfer function to other consoles with CFW (inconsistencies may occur if the target console is stock). Tickets for illegitimate titles (homebrew) will not transfer but can be made to reappear with [faketik](https://github.com/ihaveamac/faketik/releases/latest). Make sure that you do not perform a wireless transfer, as this will delete illegitimate titles. CFW will remain on both consoles. 
+**A:** 네. 공식 이사 기능을 사용해서 다른 커펌된 기기로 저장 데이터 이사를 할 수 있습니다. (순정 타겟 콘솔로의 이사는 문제를 야기할 수 있습니다.) 커펌 소프트웨어들 (홈브류)의 티켓들은 이사되지 않지만, [faketik] (https://github.com/ihaveamac/faketik/releases/latest)을 사용하면 다시 HOME 메뉴에서 실행할 수 있습니다. 무선 데이터 이사는 절대 하지 말아 주세요. 홈브류들을 모두 삭제하게 됩니다. 커펌은 두 콘솔 모두에 남아있을겁니다. 
 
-#### **Q:** *How do I change the system language of a Japanese 3DS?*    
-**A:** The only way to change the system language of a Japanese 3DS to a language other than Japanese is to perform a [region change](region-changing). Note that this is very likely to break the Nintendo eShop on your device, which means you will be unable to update your games whether they are in-region or out-of-region.
+#### **Q:** *일본 3DS에서 시스템 언어를 어떻게 변경하나요?*    
+**A:** 일본어 외의 다른 언어로 일본 3DS의 언어를 바꾸는 유일한 방법은 [지역 변경](region-changing) 뿐입니다. 지역 변경을 하면 닌텐도 e숍을 사용할 수 없게 될 수 있다는 점을 명심해 주세요. 게임을 업데이트할 수 없게 될 수도 있습니다.
 
 #### **Q:** *홈브류 앱들은 어떻게 업데이트하나요?*    
-**A:** 업데이트하려고 하는 홈브류 앱의 형식에 따라 다릅니다. Generally speaking:
+**A:** 업데이트하려고 하는 홈브류 앱의 형식에 따라 다릅니다. 일반적으로는:
 
-* Homebrew in **CIA format** can be updated by installing the new CIA, which will usually overwrite the old one. If the old CIA is not overwritten, you can delete the old one from Data Management as you would any other 3DS title.
-* Homebrew in **3DSX format** can be updated by replacing the 3DSX file in `/3ds/` with a fresh copy. If the homebrew application includes additional assets, you may need to place that folder somewhere else. Refer to the documentation of the homebrew application.
-* Luma3DS를 업데이트하는 경우에는 [이 페이지](restoring-updating-cfw)를 확인해 주세요. For updating GodMode9, see [this page](godmode9-usage#updating-godmode9).
+* **CIA 형식**의 홈브류는 새 CIA를 설치하여 업데이트할 수 있습니다. 이 경우, 기존의 버전을 덮어쓰게 됩니다. 만약 이전 CIA가 덮어쓰기가 안 되어서, 같은 앱이 2개 표시된다면, 다른 3DS 소프트웨어처럼 이전 버전의 앱을 시스템 설정의 데이터 관리 메뉴에서 지울 수 있습니다.
+* **3DSX 형식**의 홈브류는 `/3ds` 폴더 내의 3DSX 파일을 새 파일로 교체하여 업데이트할 수 있습니다. 만약 해당 홈브류 앱이 추가 어셋을 포함하고 있다면, 그 어셋을 다른 폴더에 놓아야 할 수도 있습니다. 자세한 사항은 해당 홈브류 앱의 홈페이지를 확인해 주세요.
+* Luma3DS를 업데이트하는 경우에는 [이 페이지](restoring-updating-cfw)를 확인해 주세요. GodMode9을 업데이트하는 경우에는 [이 페이지](godmode9-usage#updating-godmode9)를 확인해 주세요.
 
 #### **Q:** *제 국가코드/지역 외의 게임들은 어떻게 업데이트하나요?*    
 **A:** 업데이트가 설치되어 있는 3DS로부터 [업데이트를 추출](dumping-titles-and-game-cartridges)해야 합니다. 닌텐도 e숍은 해당 기기의 국가코드에 맞는 업데이트만 제공합니다 (일본 3DS는 일본 게임의 업데이트만 있습니다).
@@ -83,11 +83,11 @@ title: "자주 묻는 질문"
 #### **Q:** *내 기기를 n년전에 커펌했어요. 어떻게 해야하죠?*    
 **A:** boot9strap을 기반으로 한 최신의 커펌 방식으로 업그레이드하는 것을 권장합니다. 어떻게 업그레이드하는지 보려면 [CFW 확인](checking-for-cfw) 페이지를 따라주세요.
 
-#### **Q:** *My setup works for me. Why should I upgrade it?*    
-**A:** The vast majority of modern homebrew (such as Checkpoint and BootNTR Selector) have only been tested on modern, boot9strap-based setups and may not work entirely (or at all) on older setups based on menuhax, A9LH, or Gateway. In addition, depending on your setup, you may be unable to safely update to the latest firmware. Modern, boot9strap-based setups allow for a greater level of system access than previous hacks, including the ability to dump your console's bootrom.
+#### **Q:** *내 셋업은 지금도 잘만 작동하는데 업그레이드는 왜 해야하죠?*    
+**A:** 다수의 현대 홈브류 (Checkpoint나 BootNTR Selector 등)는 boot9strap 기반 셋업인 기기들로만 테스트되어왔기 때문에 menuhax, A9LH, Gateway와 같은 구 셋업 기반 기기에서는 대부분 작동하지 않을 수도 있습니다. 추가로, 자신의 셋업에 따라서, 3DS를 최신 버전으로 안전하게 업데이트하는게 불가능할 수도 있습니다. 현대식인 boot9strap 기반 셋업들은 이전 셋업들보다 훨씬 시스템 권한이 높으며, 콘솔의 bootrom까지도 백업할 수 있습니다.
 
 #### **Q:** *지금 가지고 있는 셋업을 업그레이드하면 잃어버리는 게 있을까요?*    
-**A:** Your old setup (including your EmuNAND, if you have one) can usually be directly migrated to boot9strap with no data loss. If you have data that is particularly important to you, it would be a good idea to make a decrypted backup of your save data before upgrading your setup with a tool like [JKSM](https://github.com/J-D-K/JKSM/releases/tag/12%2F20%2F2018).
+**A:** 오래된 셋업 (EmuNAND 포함)에서의 데이터는 보통 아무 손실 없이 boot9strap으로 옮겨질 수 있습니다. 특별히 중요한 데이터가 있다면, [JKSM](https://github.com/J-D-K/JKSM/releases/tag/12%2F20%2F2018) 등의 도구들을 이용해 백업을 만드는 것도 좋은 방법입니다.
 
 #### **Q:** *기존 Gateway 셋업의 게임 세이브들을 최신 셋업으로 옮기려면 어떻게 하나요?*    
 **A:** [이 링크](https://gbatemp.net/threads/425743/)를 참고해 주세요.
