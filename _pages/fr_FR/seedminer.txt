@@ -6,9 +6,9 @@ title: "Seedminer"
 
 ### Lecture requise
 
-Pour installer boot9strap sur votre 3DS, nous dérivons la clé de chiffrement unique de votre console. To accomplish this, we use a tool called Seedminer to calculate the data encryption key (movable.sed) for your device.
+Pour installer boot9strap sur votre 3DS, nous dérivons la clé de chiffrement unique de votre console. Pour y parvenir, nous allons utiliser un outil nommé Seedminer pour calculer la clé de chiffrement de données (movable.sed) de votre console.
 
-For information on how Seedminer works, see [this presentation](https://zoogie.github.io/web/34⅕c3).
+Pour plus d'informations sur le fonctionnement de Seedminer, regardez [cette présentation](https://zoogie.github.io/web/34⅕c3).
 
 Cette méthode utilise une carte graphique puissante pour effectuer les calculs nécessaires. Un site web géré par des bénévoles est utilisé dans le but de vous aider avec cette méthode.
 
@@ -20,16 +20,16 @@ Cette méthode utilise une carte graphique puissante pour effectuer les calculs 
 1. Naviguez vers le dossier `Nintendo 3DS` de votre carte SD
 1. Copiez le nom du dossier qui fait 32 caractères de long que vous voyez dans Nintendo 3DS
   + N'allez plus dans aucun dossier
-  + If you see multiple 32 character long folders, follow [these instructions](troubleshooting#multiple-long-folder-names-in-nintendo-3ds-folder)
-  + You can ignore the `private` folder if you have it
+  + Si vous voyez plusieurs dossiers de 32 caractères, suivez [ces instructions](troubleshooting#multiple-long-folder-names-in-nintendo-3ds-folder)
+  + Vous pouvez ignorer le dossier `private` si vous l'avez
 
 	![]({{ "/images/screenshots/id0-example.png" | absolute_url }})
 	{: .notice--info}
 1. Collez le nom du dossier (qui fait 32 caractères de long) dans un document pour pouvoir le récupérer plus tard
   + Ce nom de dossier est aussi appelé votre "ID0"
 1. Allumez votre console
-  + Your SD card does not need to be inserted at this point
-1. Go to your Friend List (the [orange Face Icon]({{ "/images/friend-list-icon.png" | absolute_url }}) in the top row of your HOME Menu)
+  + Votre carte SD n'a pas besoin d'être insérée à ce stade
+1. Accédez à votre Liste d’amis (l'[icône avec un visage orange]({{"/images/friend-list-icon.png" | absolute_url}}) dans la rangée du haut de votre Menu HOME)
   + Si vous obtenez une erreur et que vous êtes renvoyé vers le Menu HOME, vous devez soit créer un nouveau Mii, soit votre console ne peut pas se connecter aux serveurs de Nintendo (en raison d'un bannissement ou de problèmes de connexion)
 1. Trouvez le profil de votre Mii, puis trouvez le champ "Code ami" sur l'écran supérieur
 
@@ -42,9 +42,9 @@ Cette méthode utilise une carte graphique puissante pour effectuer les calculs 
 1. Collez le nom du dossier de votre console (qui fait 32 caractères de long) dans le champ "Your ID0"
   + N'essayez pas de saisir l'ID0 à la main. Assurez-vous que l'ID0 est correctement saisi en le copiant et en le collant à partir de l'endroit où vous l'avez sauvegardé dans la section précédente
 1. Sélectionnez "Go"
-  + If the site immediately goes to step 4, the website has already correctly processed your bruteforce request. You can download your `movable.sed` file and continue to the next section. You do not need to re-add the bot
+  + Si le site passe immédiatement à l'étape 4, le site Web a déjà traité correctement votre demande de brute-force. Vous pouvez télécharger votre fichier `movable.sed` et continuer vers la section suivante. Vous n'avez pas besoin de rajouter le bot
 1. Lorsque demandé, utilisez le bouton "Ajouter un ami" sur votre console pour ajouter le code ami de la 3DS bot
-  + The name of the bot does not matter
+  + Le nom du bot n'a pas d'importance
 1. Attendez que le site se mette à jour
   + Si ce n'est pas le cas, patientez quelques minutes avant de rafraîchir la page
 1. Une fois que le site traite vos informations, le site continuera à `Step 2 : Bruteforce` automatiquement
@@ -52,14 +52,14 @@ Cette méthode utilise une carte graphique puissante pour effectuer les calculs 
   + Ceci est généralement rapide (entre 1-5 minutes) mais dans certains cas, cela peut prendre jusqu'à une demi-heure
   + Au cours de ce processus, le bot que vous avez ajouté peut ne pas apparaître sur votre 3DS. Tant que le site se met à jour, ce n'est pas un problème
   + Si vous êtes toujours en train d'attendre après une demi-heure, veuillez rejoindre [Nintendo Homebrew sur Discord](https://discord.gg/MWxPgEp) et demandez (en anglais) à quelqu'un de vous aider
-1. When the process is completed, download your `movable.sed` file from the site
+1. Une fois le processus terminé, téléchargez votre fichier `movable.sed` depuis le site
   + Gardez ce fichier car vous en aurez besoin dans les pages à venir
 
 ___
 
-### Next Steps
+### Prochaînes étapes
 
-Once you have your device's encryption key (`movable.sed`), you will use it in conjunction with other exploits to install custom firmware on your 3DS. Select an exploit below.
+Une fois que vous avez la clé de chiffrement de votre console (`movable.sed`), vous l'utiliserez en conjonction avec d'autres exploits pour installer un custom firmware sur votre 3DS. Sélectionnez un exploit ci-dessous.
 
 #### PicHaxx + universal-otherapp (Recommandé)
 
@@ -74,16 +74,16 @@ Continuer vers [Installation de boot9strap (PicHaxx)](installing-boot9strap-(pic
 
 Cette méthode d'utilisation de Seedminer pour une exploitation plus poussée utilise votre fichier `movable.sed` pour tirer parti d'exploits du firmware SAFE_MODE présent sur toutes les consoles 3DS.
 
-This route is only recommended if you are for some reason unable to follow the PicHaxx + universal-otherapp route, such as lack of eShop access or using a Korean 3DS.
+Cette route n'est recommandée que si vous êtes, pour une raison quelconque, incapable d'utiliser la méthode PicHaxx + universal-otherapp, si vous n'avez pas d'accès à l'eShop ou vous utilisez une 3DS coréenne.
 
 Continuer vers [Installation de boot9strap (USM)](installing-boot9strap-(usm))
 {: .notice--warning}
 
 ___
 
-#### Taiwan consoles only
+#### Uniquement pour les consoles Taïwanaises
 
-If you have a Taiwanese device (indicated with a T at the end of the system version, such as 11.15.0-39**T**), you must follow this route. **Other regions may not follow this route.**
+Si vous avez une console taïwanaise (indiqué avec un T à la fin de la version système, tel que 11.15.0-39**T**), vous devez utiliser cette méthode. **Si votre console n'est pas de cette région, n'utilisez pas cette méthode.**
 
-Continue to [BannerBomb3 + Fredtool (TWN)](bannerbomb3-fredtool-(twn))
+Continuer vers [BannerBomb3 + Fredtool (TWN)](bannerbomb3-fredtool-(twn))
 {: .notice--warning}
