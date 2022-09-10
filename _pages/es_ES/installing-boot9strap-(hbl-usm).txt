@@ -1,0 +1,86 @@
+---
+title: "Installing boot9strap (HBL-USM)"
+---
+
+{% include toc title="Tabla de contenidos" %}
+
+### Lectura requerida
+
+Para pode aprovechar el exploit del firmware SAFE_MODE de nuestro sistema, necesitamos inyectar un perfil de WiFi con el exploit.
+
+As we already have Homebrew access, we can use slotTool to do this.
+
+Una vez que el perfil de WiFi ha sido inyectado, usaremos SAFE_MODE, que consiste en una función de recuperación presente en todas las consolas, para activar el perfil de WiFi con el exploit.
+
+### Qué necesitas
+
+* The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
+* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
+* The latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest)
+  * You may already have this from a prior section of the guide
+
+#### Sección I - Preparativos
+
+1. Your console should be powered on and showing the Homebrew Launcher from the previous part of the guide
+1. Launch slotTool from the list of homebrew
+  + If you get stuck on a red screen, forcefully power off the console by holding the power button for fifteen seconds, then retry this section
+1. Select the "INSTALL exploit to wifi slots 1,2,3 & shutdown" option
+  + You will see some on-screen text and then your system will shut down
+1. Remove your SD card from your console and connect it to your computer
+1. Crea una carpeta llamada `boot9strap` en la raíz de tu tarjeta SD
+1. Copia `boot9strap.firm` y `boot9strap.firm.sha` desde el `.zip` de `boot9strap` a la carpeta `/boot9strap/` en tu tarjeta SD
+1. Copia `SafeB9SInstaller.bin` desde el `.zip` de SafeB9SInstaller a la raíz de tu tarjeta SD
+1. Copy `usm.bin` from the unSAFE_MODE `.zip` to the root of your SD card
+1. Put your SD card back into your console
+
+#### Section II - unSAFE_MODE
+
+If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+{: .notice--danger}
+
+1. Con la consola aún apagada, mantén pulsados los siguientes botones: (L) + (R) + (D-Pad Arriba) + (A), y luego presiona (Power)
+  + Mantén pulsados los botones hasta que la consola encienda en modo seguro
+1. Presiona "OK" para aceptar la actualización
+  + No hay actualización. Esto es parte del exploit
+1. Presiona sobre "Acepto" para aceptar los términos y condiciones
+1. The update will eventually fail, with the error code `003-1099`. Este comportamiento es el esperado
+1. Cuando se te pregunte "¿Quieres configurar tu conexión a internet?", selecciona "Aceptar"
+1. En el menú siguiente, navega a `Conexión 1` -> `Modificar ajustes` -> `Siguiente página (flecha derecha)` -> `Servidor proxy` -> `Ajustes avanzados`
+  + Esto es una [representación visual](https://uwuu.ca/images/safemode_highlighted.png)
+1. Si el exploit ha funcionado, la consola habrá iniciado SafeB9SInstaller
+
+#### Sección III - Instalar boot9strap
+
+1. Cuando se te pida, introduce la combinación de botones mostrada para instalar boot9strap
+  + If the top screen is blank, power off your device and re-do Section III
+1. Once it is complete, press (A) to reboot your device
+1. Tu consola debería haber reiniciado en el menú de configuración de Luma3DS
+  + If your device shuts down when you try to power it on, ensure that you have copied `boot.firm` from the Luma3DS `.zip` to the root of your SD card
+1. Presiona (Start) para guardar y reiniciar
+
+At this point, your console will boot to Luma3DS by default.
+  + Luma3DS does not look any different from the normal HOME Menu. If your console has booted into the HOME Menu, it is running custom firmware.
+  + On the next page, you will install useful homebrew applications to complete your setup.
+
+#### Section IV - Restoring WiFi Configuration Profiles
+
+1. Inicia la aplicación de Modo Descarga
+1. Espera hasta que veas los dos botones
+  + Do not press either of the buttons
+1. Presiona (Left Shoulder) + (Abajo) + (Select) a la vez para abrir el menú de Rosalina
+1. Selecciona "Miscellaneous options"
+1. Selecciona "Switch the hb. title to the current app."
+1. Presiona (B) para continuar
+1. Presiona (B) para regresar al menú principal de Rosalina
+1. Presiona (B) para salir del menú de Rosalina
+1. Presiona (Home), luego cierra la aplicación de Modo Descarga
+1. Relaunch the Download Play application
+1. Tu consola debería cargar el Homebrew Launcher
+1. Launch slotTool from the list of homebrew
+1. Select "RESTORE original wifi slots 1,2,3"
+1. Your device will then reboot
+
+___
+
+### Continúa en [Finalizar instalación](finalizing-setup)
+{: .notice--primary}
