@@ -1,0 +1,86 @@
+---
+title: "Installing boot9strap (HBL-USM)"
+---
+
+{% include toc title="목차" %}
+
+### 중요
+
+SAFE_MODE 펌웨어를 해킹하기 위해, 익스플로잇이 되어있는 Wi-Fi 프로필을 설치해야 합니다.
+
+As we already have Homebrew access, we can use slotTool to do this.
+
+그 후, 시스템 복구 모드, SAFE_MODE를 사용해 인터넷 설정을 활용화 시킵니다.
+
+### 준비물
+
+* 최신 버전의 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (직접 다운로드)
+* 최신 버전의 [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (직접 다운로드)
+* The latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest)
+  * You may already have this from a prior section of the guide
+
+#### 섹션 I - 준비 작업
+
+1. Your console should be powered on and showing the Homebrew Launcher from the previous part of the guide
+1. Launch slotTool from the list of homebrew
+  + If you get stuck on a red screen, forcefully power off the console by holding the power button for fifteen seconds, then retry this section
+1. Select the "INSTALL exploit to wifi slots 1,2,3 & shutdown" option
+  + You will see some on-screen text and then your system will shut down
+1. Remove your SD card from your console and connect it to your computer
+1. SD 카드이 루트에 `boot9strap` 라는 이름으로 새 폴더를 생성해 주세요
+1. SD 카드에 있는 `/boot9strap/` 폴더에 boot9strap `.zip` 파일 안에 압축되있는 `boot9strap.firm`과 `boot9strap.firm.sha`을 복사해 주세요
+1. SafeB9SInstaller `.zip`의 `SafeB9SInstaller.bin`을 SD 카드의 루트로 복사해 주세요
+1. Copy `usm.bin` from the unSAFE_MODE `.zip` to the root of your SD card
+1. Put your SD card back into your console
+
+#### Section II - unSAFE_MODE
+
+If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+{: .notice--danger}
+
+1. 전원이 꺼져 있는 상태에서 (L 어깨) + (R 어깨) + (십자 Up) + (A) 를 길게 눌르고, 누르는 상태에서 (전원)을 눌러 주세요
+  + 안전 모드로 부팅 될 때 까지 버튼들을 눌러 주세요
+1. "OK"를 선택해서 업데이트를 확인해 주세요
+  + 실제로 업데이트를 하는 것은 아닙니다. 이것은 익스플로잇의 일부입니다
+1. "동의함"를 눌러서 이용 약관에 동의해 주세요
+1. 이 업데이트는 에러 코드 `003-1099` 와 같이 실패를 할 겁니다. 이것은 의도적 행동입니다
+1. When asked "Would you like to configure Internet settings?", select "Yes"
+1. 이 화면에서, `접솔 경로 1` -> `설정 변경` -> `다음 페이지 (오른쪽 화살표)` -> `Proxy 설정` -> `세부 설정` 으로 이동해 주세요
+  + [이 (영어) 사진](https://uwuu.ca/images/safemode_highlighted.png)처럼 하시면 됩니다
+1. 익스플로잇이 성공적이었다면 SafeB9SInstaller로 부팅되었을 것입니다
+
+#### 섹션 III - boot9strap 설치하기
+
+1. 메시지가 나타나면, boot9strap을 설치하기 위하여 화면에 주어진 키 조합을 입력해 주세요
+  + 만약 위 화면에 반응이 없다면, 기기의 전원을 꺼 주시고 섹션 III를 다시 시도해 주세요
+1. 작업이 완료되면, (A) 를 눌려 기기를 재부팅해 주세요
+1. 기기는 Luma3DS 구성 메뉴로 부팅되었을 겁니다
+  + If your device shuts down when you try to power it on, ensure that you have copied `boot.firm` from the Luma3DS `.zip` to the root of your SD card
+1. (Start)를 눌러 저장하고 기기를 다시 시작해 주세요
+
+At this point, your console will boot to Luma3DS by default.
+  + Luma3DS는 보통 HOME 메뉴와 똑같이 보입니다. 만약 기기가 HOME 메뉴로 부팅되었다면, 커스텀 펌웨어가 설치되어 있습니다.
+  + On the next page, you will install useful homebrew applications to complete your setup.
+
+#### Section IV - Restoring WiFi Configuration Profiles
+
+1. 다운로드 플레이 앱을 실행해 주세요
+1. 두 가지의 버튼이 화면에 뜰 때까지 기다려 주세요
+  + Do not press either of the buttons
+1. (L 어깨) + (십자 Down) + (Select) 을 동시에 눌러서 Rosalina 메뉴를 실행해 주세요
+1. "Miscellaneous options"을 선택해 주세요
+1. "Switch the hb. title to the current app."를 선택해 주세요
+1. (B)를 눌러 진행해 주세요
+1. (B)를 눌러 Rosalina 메뉴로 돌아가 주세요
+1. (B)를 눌러 Rosalina 메뉴를 나와 주세요
+1. (Home) 키를 누르고, 다운로드 플레이를 종료해 주세요
+1. Relaunch the Download Play application
+1. 성공하면 Homebrew Launcher가 실행될 것입니다
+1. Launch slotTool from the list of homebrew
+1. Select "RESTORE original wifi slots 1,2,3"
+1. Your device will then reboot
+
+___
+
+### [마무리 단계](finalizing-setup) 로 계속합니다
+{: .notice--primary}
