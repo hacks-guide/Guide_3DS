@@ -64,7 +64,7 @@ De website heeft bepaald dat jouw 'movable.sed' niet kan gebruteforced worden. Z
 
 ---
 
-## Boot9strap installeren (PicHaxx)
+## Homebrew Launcher (PicHaxx)
 
 ### "An error has occurred. Hold down the POWER button to turn off the power..." (zwart scherm met deze tekst)
 
@@ -78,29 +78,11 @@ Je apparaat heeft al custom firmware. Je zou best [controleren op CFW](checking-
 
 ## "An error has occured, forcing the software to close..." (wit berichtveld)
 
-Er is een probleem met je `otherapp.bin` bestand. Download de nieuwste versie van [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) en plaats het op de hoofdmap van je SD-kaart. Voeg de `.bin` extensie niet toe als je het nog niet ziet.
+Er is een probleem met je `otherapp.bin` bestand. Download the latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest), place the `.bin` file relevant to your console from the `otherapps_with_CfgS` folder to the root of your SD card, and rename it to `otherapp.bin`. Voeg de `.bin` extensie niet toe als je het nog niet ziet.
 
 ### Spel start normaal op
 
 Je aangepaste `00000001.sav` bestand kan mogelijks op de verkeerde plek staan of je hebt de verkeerde `movable.sed` gebruikt bij het creëren ervan. Maak opnieuw je `movable.sed` via [Bruteforce Movable](https://seedminer.hacks.guide) aan, maak dan opnieuw de save aan met [PicHaxx Save Tool](https://3ds.nhnarwhal.com/3dstools/pichaxx.php) en plaats de gemaakte file (`00000001.sav`) in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data`.
-
-### Kan SafeB9SInstaller.bin niet openen
-
-Het bestand `SafeB9SInstaller.bin` ontbreekt of zit in de verkeerde map. Download de nieuwste versie van [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip), pak het uit en plaats `SafeB9SInstaller.bin` op de hoofdmap van je SD-kaart. Voeg de `.bin` extensie niet toe als je het nog niet ziet.
-
-### Bevroren op "Doing agbhax..."
-
-Het zou kunnen dat er een probleem is met je `otherapp.bin` bestand. Download de nieuwste versie van [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) en plaats het op de hoofdmap van je SD-kaart. Voeg de `.bin` extensie niet toe als je het nog niet ziet.
-
-### "PrepareArm9ForTwl returned error c8804631!"
-
-Je zult een alternatieve methode moeten volgen, zoals [Boot9strap installeren (USM)](installing-boot9strap-(usm)).
-
-### Failed to mount the SD card!
-
-Maak een back-up van je data en herformatteer je SD-kaart als FAT32 met het aanbevolen hulpmiddel afhankelijk van je besturingssysteem: ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)) of [Linux](formatting-sd-(linux))). MiniTool en het formatteer programma van HP zijn ervoor bekend om problemen te veroorzaken met SD-kaarten die gebruikt worden met de 3DS.
-
-Mocht dit niet lukken, gebruik dan een andere SD-kaart.
 
 ---
 
@@ -120,7 +102,7 @@ Er is een probleem met je `otherapp.bin` bestand (het ontbreekt, werd misplaatst
 
 Je hebt het verkeerde Soundhax bestand gebruikt voor je apparaat en regio, of je apparaat is niet compatibel met Soundhax. In het laatste geval moet je je apparaat updaten naar de nieuwste versie en volg [Seedminer](seedminer).
 
-### Failed to open SafeB9SInstaller.bin
+### Kan SafeB9SInstaller.bin niet openen
 
 Het bestand `SafeB9SInstaller.bin` ontbreekt of zit in de verkeerde map. Download de nieuwste versie van [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip), pak het uit en plaats `SafeB9SInstaller.bin` op de hoofdmap van je SD-kaart. Voeg de `.bin` extensie niet toe als je het nog niet ziet.
 
@@ -146,7 +128,11 @@ Mocht dit niet lukken, gebruik dan een andere SD-kaart.
 
 ### DSiWare Management menu crasht zonder het USM menu te tonen
 
-Zorg ervoor dat `F00D43D5.bin` het enige bestand in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` is. Als dat zo is, maak het opnieuw aan met de [unSAFE_MODE Exploit Injector](https://3ds.nhnarwhal.com/3dstools/unsafemode.php). Als dit niet lukt, kan het zijn dat custom firmware op dit apparaat is gedeïnstalleerd op een manier die deze methode niet uitvoerbaar maakt. Als dit het geval is, neem dan deel aan [Nintendo Homebrew op Discord](https://discord.gg/MWxPgEp) voor hulp.
+Zorg ervoor dat `F00D43D5.bin` het enige bestand in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` is. Als dat zo is, maak het opnieuw aan met de [unSAFE_MODE Exploit Injector](https://3ds.nhnarwhal.com/3dstools/unsafemode.php). 
+
+Also, ensure that `usm.bin` is on the root of the SD card. If it is missing, then download the latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest) (the RELEASE `.zip` file), and copy the `usm.bin` file to the root of your SD card.
+
+If neither of these solutions fixes this problem, then custom firmware may have been uninstalled on this device in a way that makes this method impossible to perform. If this is the case, you will need to follow [an alternate branch of Seedminer](homebrew-launcher-(pichaxx)). For assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 
 ---
 
