@@ -1,0 +1,66 @@
+---
+title: "Homebrew Launcher (PicHaxx)"
+---
+
+{% include toc title="目次" %}
+
+### 必読事項
+
+This method of using Seedminer for further exploitation uses your `movable.sed` file to write a custom save file for Pokémon Picross, which can then be used with unSAFE_MODE to run SafeB9SInstaller.
+
+This process will overwrite your Pokémon Picross save file, if you have one. If you wish to preserve your Pokémon Picross game data, you should make a backup of your `00000001.sav` file before overwriting it.
+{: .notice--warning}
+
+### 必要なもの
+
+* The game "Pokémon Picross" (free on eShop) installed on your device
+  + You can scan [this QR code](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=ESHOP://50010000037815&margin=0&qzone=1&size=400x400&ecc=L) using the Nintendo 3DS Camera for a direct link to the eShop app
+  + Your SD card must be inserted in your device to install Pokémon Picross
+* [Seedminer](seedminer) より作成した、 `movable.sed` ファイル
+* The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+* The latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest) (the RELEASE `.zip` file)
+
+### 手順
+
+#### セクション I - 準備
+
+1. デバイスの電源を入れます
+1. Open the Nintendo eShop
+1. Tap the Search icon (small magnifying glass)
+1. Search for `picross`
+1. Open the store page for Pokémon Picross
+1. Download Pokémon Picross
+  + You can scan [this QR code](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=ESHOP://50010000037815&margin=0&qzone=1&size=400x400&ecc=L) using the Nintendo 3DS Camera for a direct link to the eShop app
+  + Your SD card must be inserted in your device to install Pokémon Picross
+1. 本体の電源を切ります。
+1. パソコンにSDカードを入れます
+1. `boot.firm` と `boot.3dsx` をLuma3DSの `.zip` からSDカードのルートにコピーします
+  + SDカードのルートとは、Nintendo 3DSのフォルダなどがある最初の項目のことであり、フォルダの中ではありません。
+1. Create a folder named `3ds` on the root of your SD card
+1. Copy the `slotTool` folder from the unSAFE_MODE `.zip` to the `3ds` folder on your SD card
+
+#### セクション II - PicHaxx
+
+1. コンピュータで　[the PicHaxx Injector website](https://3ds.nhnarwhal.com/3dstools/pichaxx.php)を開きます。
+1. `movable.sed`ファイルを選択します
+1. 「Build and Download」を選択します
+1. 処理が完了するまで待ちます
+1. `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `0040000` -> `0017c100` -> `data` へ移動します
+  + ここでいう `<ID0>` は先ほど [Seedminer](seedminer) で使用したものと同じです。
+  + `<ID1>` は `<ID0> ` の中の32文字の長いフォルダのことです。
+1. 新しくダウンロードした`00000001.sav`ファイルをSDカードの`data`フォルダにコピーします
+  + プロンプトが表示されたら古い保存ファイルを上書きします
+
+    ![]({{ "/images/screenshots/pichaxx-save-location.png" | absolute_url }})
+    {: .notice--info}
+	
+1. 再度、SDカードを本体に挿入してください。
+1. デバイスの電源を入れます
+1. Launch "Pokémon Picross"
+1. If the exploit was successful, your device will have booted into the Homebrew Launcher
+  + If you get an error message, [follow this troubleshooting guide](troubleshooting#homebrew-launcher-pichaxx)
+
+___
+
+### Continue to [Installing boot9strap (HBL-USM)](installing-boot9strap-(hbl-usm))
+{: .notice--primary}
