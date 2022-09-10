@@ -64,7 +64,7 @@ The website has determined that your `movable.sed` cannot be brute-forced. Ensur
 
 ---
 
-## Installing boot9strap (PicHaxx)
+## Homebrew Launcher (PicHaxx)
 
 ### "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
 
@@ -78,29 +78,11 @@ Your device already has custom firmware. You should [check for CFW](checking-for
 
 ### "An error has occurred, forcing the software to close..." (white message box)
 
-There is an issue with your `otherapp.bin` file. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) and place it on the root of your SD card. Do not add the `.bin` extension if you do not already see it.
+There is an issue with your `otherapp.bin` file. Download the latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest), place the `.bin` file relevant to your console from the `otherapps_with_CfgS` folder to the root of your SD card, and rename it to `otherapp.bin`. Do not add the `.bin` extension if you do not already see it.
 
 ### Game starts normally
 
 Your modified `00000001.sav` file may be misplaced, or you may have used the wrong `movable.sed` when creating it. Re-generate your `movable.sed` from [Bruteforce Movable](https://seedminer.hacks.guide), then re-create the save using the [PicHaxx Save Tool](https://3ds.nhnarwhal.com/3dstools/pichaxx.php) and place the resulting file (`00000001.sav`) in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data`.
-
-### Failed to open SafeB9SInstaller.bin
-
-The file `SafeB9SInstaller.bin` is missing or misplaced. Download the latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip), extract it, and place `SafeB9SInstaller.bin` on the root of your SD card. Do not add the `.bin` extension if you do not already see it.
-
-### Frozen on "Doing agbhax..."
-
-There may be an issue with your `otherapp.bin` file. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) and place it on the root of your SD card. Do not add the `.bin` extension if you do not already see it.
-
-### "PrepareArm9ForTwl returned error c8804631!"
-
-You will need to follow an alternate method, like [Installing boot9strap (USM)](installing-boot9strap-(usm)).
-
-### Failed to mount the SD card!
-
-Back up your data and reformat your SD card as FAT32 with the recommended tool depending on your operating system ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). MiniTool and the HP formatting tool are known to cause issues with 3DS SD cards.
-
-If this is unsuccessful, try using another SD card.
 
 ---
 
@@ -146,7 +128,11 @@ If this is unsuccessful, try using another SD card.
 
 ### DSiWare Management menu crashes without showing USM menu
 
-Ensure that `F00D43D5.bin` is the only file in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`. If it is, then re-create it with the [unSAFE_MODE Exploit Injector](https://3ds.nhnarwhal.com/3dstools/unsafemode.php). If this fails, then custom firmware may have been uninstalled on this device in a way that makes this method impossible to perform. If this is the case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+Ensure that `F00D43D5.bin` is the only file in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`. If it is, then re-create it with the [unSAFE_MODE Exploit Injector](https://3ds.nhnarwhal.com/3dstools/unsafemode.php). 
+
+Also, ensure that `usm.bin` is on the root of the SD card. If it is missing, then download the latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest) (the RELEASE `.zip` file), and copy the `usm.bin` file to the root of your SD card.
+
+If neither of these solutions fixes this problem, then custom firmware may have been uninstalled on this device in a way that makes this method impossible to perform. If this is the case, you will need to follow [an alternate branch of Seedminer](homebrew-launcher-(pichaxx)). For assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 
 ---
 
