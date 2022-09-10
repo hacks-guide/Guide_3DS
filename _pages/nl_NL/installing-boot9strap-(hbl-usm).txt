@@ -1,0 +1,86 @@
+---
+title: "Installing boot9strap (HBL-USM)"
+---
+
+{% include toc title="Inhoudsopgave" %}
+
+### Verplicht te lezen
+
+Om gebruik te kunnen maken van de SAFE_MODE firmware van ons systeem, moeten we een exploit wifi-profiel injecteren.
+
+As we already have Homebrew access, we can use slotTool to do this.
+
+Wanneer het wifi profiel geïnjecteerd is, gebruiken we SAFE_MODE, een herstelfunctie beschikbaar op alle 3DS consoles, om het exploited wifi profiel te activeren.
+
+### Wat je nodig hebt
+
+* De nieuwste versie van [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (directe download)
+* De nieuwste versie van [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (directe download)
+* The latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest)
+  * You may already have this from a prior section of the guide
+
+#### Deel I - Voorbereiding
+
+1. Your console should be powered on and showing the Homebrew Launcher from the previous part of the guide
+1. Launch slotTool from the list of homebrew
+  + If you get stuck on a red screen, forcefully power off the console by holding the power button for fifteen seconds, then retry this section
+1. Select the "INSTALL exploit to wifi slots 1,2,3 & shutdown" option
+  + You will see some on-screen text and then your system will shut down
+1. Remove your SD card from your console and connect it to your computer
+1. Maak een map genaamd `boot9strap` op de hoofdmap van je SD-kaart
+1. Kopieer `boot9strap.firm` en `boot9strap.firm.sha` van de boot9strap `.zip` naar de `/boot9strap/` map op je SD-kaart
+1. Kopieer `SafeB9SInstaller.bin` van de SafeB9SInstaller `.zip` naar de hoofdmap van je SD-kaart
+1. Copy `usm.bin` from the unSAFE_MODE `.zip` to the root of your SD card
+1. Put your SD card back into your console
+
+#### Section II - unSAFE_MODE
+
+If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+{: .notice--danger}
+
+1. Als je apparaat nog steeds uitgeschakeld is, houd de volgende knoppen ingedrukt: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), en druk daarna op (Power)
+  + Blijf de knoppen ingedrukt houden totdat het apparaat opstart in Safe Mode
+1. Druk op "OK" om de update te accepteren
+  + Er is geen update. Dit is deel van de exploit
+1. Druk op "I accept" om de algemene voorwaarden te accepteren
+1. De update zal uiteindelijk mislukken, met de foutcode `003-1099`. Dit is verwacht gedrag
+1. Wanneer gevraagd wordt "Would you like to configure Internet settings?" selecteer dan "Yes"
+1. In het volgende menu, navigeer naar `Connection 1` -> `Change Settings` -> `Next Page (rechter pijl)` -> `Proxy Settings` -> `Detailed Setup`
+  + Dit is een [visuele weergave](https://uwuu.ca/images/safemode_highlighted.png)
+1. Als de exploit succesvol was, zal je SafeB9SInstaller hebben opgestart
+
+#### Deel III - Boot9strap installeren
+
+1. Wanneer daarom wordt gevraagd, voer de toetsencombinatie op het bovenste scherm in om boot9strap te installeren
+  + Als het bovenste scherm leeg is, schakel je apparaat uit en herdoe Deel III
+1. Zodra het voltooid is, druk op (A) om je apparaat opnieuw op te starten
+1. Je apparaat zou opnieuw moeten opgestart zijn naar het configuratiemenu van Luma3DS
+  + Als je apparaat afsluit als je het probeert aan te zetten, zorg er dan voor dat je `boot.firm` hebt gekopieerd van de Luma3DS `.zip` naar de hoofdmap van je SD-kaart
+1. Druk op (Start) om op te slaan en opnieuw op te starten
+
+Op dit moment zal je console standaard opstarten naar Luma3DS.
+  + Luma3DS ziet er niet anders uit dan het normale HOME Menu. Als je console in het HOME Menu is opgestart, gebruikt hij custom firmware.
+  + Op de volgende pagina zal je handige homebrew applicaties installeren om je installatie te voltooien.
+
+#### Section IV - Restoring WiFi Configuration Profiles
+
+1. Open de Download Play app
+1. Wacht tot je de twee knoppen ziet
+  + Do not press either of the buttons
+1. Druk tegelijkertijd op (L) + (Down) + (Select) om het Rosalina menu te openen
+1. Selecteer "Miscellaneous options"
+1. Selecteer "Switch the hb. title to the current app."
+1. Druk op (B) om door te gaan
+1. Druk op (B) om terug te gaan naar het Rosalina hoofdmenu
+1. Druk op (B) om het Rosalina menu af te sluiten
+1. Druk op (Home), en sluit dan Download Play af
+1. Relaunch the Download Play application
+1. Nu zou je console de Homebrew Launcher moeten openen
+1. Launch slotTool from the list of homebrew
+1. Select "RESTORE original wifi slots 1,2,3"
+1. Your device will then reboot
+
+___
+
+### Doorgaan naar [Installatie voltooien](finalizing-setup)
+{: .notice--primary}
