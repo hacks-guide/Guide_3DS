@@ -1,5 +1,5 @@
 ---
-title: "Installing boot9strap (HBL-USM)"
+title: "Boot9strap telepítése (HBL-USM)"
 ---
 
 {% include toc title="Tartalomjegyzék" %}
@@ -8,7 +8,7 @@ title: "Installing boot9strap (HBL-USM)"
 
 Ahhoz, hogy a SAFE_MODE-ot exploitálhassuk, be kell injektálnunk egy exploitált WiFi profilt.
 
-As we already have Homebrew access, we can use slotTool to do this.
+Mivel már van Homebrew hozzáférésünk, használhatjuk a slotTool-t erre a célra.
 
 Amint a WiFi profil injektálásra került, a SAFE_MODE-ot fogjuk használni, ami egy helyreállítás szolgáltatás, ami elérhető minden 3DS konzolon, hogy aktiválja az exploitolt WiFi profilt.
 
@@ -16,26 +16,26 @@ Amint a WiFi profil injektálásra került, a SAFE_MODE-ot fogjuk használni, am
 
 * A [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) legfrisseb verziója (közvetlen letöltés)
 * A [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) legfrisseb verziója (közvetlen letöltés)
-* The latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest)
-  * You may already have this from a prior section of the guide
+* A [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest) legújabb kiadása
+  * Lehet, hogy már van ilyened az útmutató egy korábbi fejezete miatt
 
 #### I. rész - Előkészületek
 
-1. Your console should be powered on and showing the Homebrew Launcher from the previous part of the guide
-1. Launch slotTool from the list of homebrew
-  + If you get stuck on a red screen, forcefully power off the console by holding the power button for fifteen seconds, then retry this section
-1. Select the "INSTALL exploit to wifi slots 1,2,3 & shutdown" option
-  + You will see some on-screen text and then your system will shut down
-1. Remove your SD card from your console and connect it to your computer
+1. A konzolodnak bekapcsoltnak kell lennie, és a Homebrew Launchert mutatnia az előző rész alapján
+1. Indítsd el a slotTool-t a homebrew listából
+  + Ha beragadsz a piros képernyőn, kapcsold ki erőltetve a konzolod a bekapcsoló gombjának 15 másodpercig nyomva tartásával, majd próbáld meg újra ezt a részt
+1. Válaszd az "INSTALL exploit to wifi slots 1,2,3 & shutdown" opciót
+  + Ezt követően néhány szöveget fogsz látni a képernyőn, majd a rendszer leáll
+1. Távolítsd el az SD kártyád a konzolodból és csatlakoztasd a számítógépedhez
 1. Hozz létre egy mappát `boot9strap` néven az SD kártya gyökerében
 1. Másold át a `boot9strap.firm` fájlt és a `boot9strap.firm.sha` fájlt a boot9strap `.zip` fájlból az SD kártyád `/boot9strap/` mappájába
 1. Másold át a `SafeB9SInstaller.bin` fájlt a SafeB9SInstaller `.zip`-ből az SD kártyád gyökerébe
-1. Copy `usm.bin` from the unSAFE_MODE `.zip` to the root of your SD card
-1. Put your SD card back into your console
+1. Másold át a `usm.bin` fájlt az unSAFE_MODE `.zip`-ből az SD kártya gyökerébe
+1. Tedd vissza az SD kártyád a készülékedbe
 
-#### Section II - unSAFE_MODE
+#### II. szakasz - unSAFE_MODE
 
-If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+Ha a (Jobb/Bell Vál), (D-Pad Fel) vagy az (A) gombod nem működik, csatlakozz a [Nintendo Homebrew csatornához Discord-on](https://discord.gg/MWxPgEp) és kérj segítséget, angolul.
 {: .notice--danger}
 
 1. Az eszközöd kikapcsolt állapotában tartsd nyomva a következő gombokat: (Bal Váll) + (Jobb Váll) + (D-Pad Fel) + (A), majd nyomd meg a (Power)-t
@@ -62,11 +62,11 @@ Ezen a ponton a konzolod alapértelmezetten bebootol a Luma3DS-be.
   + A Luma3DS nem néz ki másként, mint a normál HOME Menü. Ha a konzolod bebootolt a HOME Menübe, akkor egyedi firmware-t futtat.
   + A következő oldalon hasznos homebrew alkalmaásokat telepítünk, hogy teljessé tegyük a telepítésedet.
 
-#### Section IV - Restoring WiFi Configuration Profiles
+#### IV. rész - A WiFi Configuration Profiles visszaállítása
 
 1. Indítsd el a Download Play alkalmazást
 1. Várj, amíg két gombot nem látsz
-  + Do not press either of the buttons
+  + Ne nyomd meg egyiket sem
 1. Nyomd le az (L) + (D-Pad le) + (Select) gombokat egyszerre a Rosalina menü megnyitásához
 1. Válaszd ki a "Miscellaneous options"-t
 1. Válaszd a "Switch the hb. title to the current app." opciót
@@ -74,11 +74,11 @@ Ezen a ponton a konzolod alapértelmezetten bebootol a Luma3DS-be.
 1. Nyomd meg a (B) gombot, hogy visszakerülj a Rosalina főmenüjébe
 1. Nyomd meg a (B) gombot, hogy kilépj a Rosalina menüből
 1. Nyomd meg a (Home) gombot és zárd be a Download Play-t
-1. Relaunch the Download Play application
+1. Indítsd el újra a Download Play alkalmazást
 1. Ekkor a készülékednek be kell töltenie a Homebrew Launchert
-1. Launch slotTool from the list of homebrew
-1. Select "RESTORE original wifi slots 1,2,3"
-1. Your device will then reboot
+1. Indítsd el a slotTool-t a homebrew listából
+1. Válaszd a "RESTORE original wifi slots 1,2,3" opciót
+1. Az eszközöd újra fog indulni
 
 ___
 
