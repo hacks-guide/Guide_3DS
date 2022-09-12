@@ -1,5 +1,5 @@
 ---
-title: "Installing boot9strap (HBL-USM)"
+title: "安装 boot9strap（通过 HBL-USM）"
 ---
 
 {% include toc title="目录内容" %}
@@ -8,7 +8,7 @@ title: "Installing boot9strap (HBL-USM)"
 
 为了破解系统的 SAFE_MODE 固件，我们需要注入一个已被破解的 WiFi 配置文件到主机中。
 
-As we already have Homebrew access, we can use slotTool to do this.
+现在我们能够使用 Homebrew 程序了，接下来我们会利用它进入 slotTool 继续破解下去。
 
 一旦 WiFi 配置文件被注入，我们将会使用到 SAFE_MODE 来继续此教程。SAVE_MODE 是一个所有的 3DS 主机都存在的修复功能，之后它将用于激活被破解的 WiFi 配置文件。
 
@@ -16,26 +16,26 @@ As we already have Homebrew access, we can use slotTool to do this.
 
 * 最新版本的 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip)（直链）
 * 最新版本的 [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip)（直链）
-* The latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest)
-  * You may already have this from a prior section of the guide
+* 最新版 [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest)
+  * 你可能在前一页的教程中已经下载了这个东西
 
 #### 第一步 – 准备工作
 
-1. Your console should be powered on and showing the Homebrew Launcher from the previous part of the guide
-1. Launch slotTool from the list of homebrew
-  + If you get stuck on a red screen, forcefully power off the console by holding the power button for fifteen seconds, then retry this section
-1. Select the "INSTALL exploit to wifi slots 1,2,3 & shutdown" option
-  + You will see some on-screen text and then your system will shut down
-1. Remove your SD card from your console and connect it to your computer
+1. 你的主机现在应该在本教程的前一部分打开了 Homebrew Launcher 了
+1. 从自制程序列表中找到并启动 slotTool
+  + 如果你的主机卡在了红屏，请长按住电源键来强制关机，然后重试本步骤
+1. 选择 “INSTALL exploit to wifi slots 1,2,3 & shutdown” 选项
+  + 你应该会看到屏幕上出现了一些文字，然后你的主机就关机了
+1. 从主机拔出 SD 卡，然后将其插入电脑
 1. 在 SD 卡根目录创建一个名为 `boot9strap` 的文件夹
 1. 从boot9strap `.zip` 文件中复制 `boot9strap.firm` 和 `boot9strap.firm.sha` 到你SD卡的 `/boot9strap/` 文件夹中
 1. 从 SafeB9SInstaller `.zip` 压缩包中复制 `SafeB9SInstaller.bin` 到 SD 卡根目录下
-1. Copy `usm.bin` from the unSAFE_MODE `.zip` to the root of your SD card
-1. Put your SD card back into your console
+1. 从 unSAFE_MODE `.zip` 复制 `usm.bin` 到 SD 卡的根目录
+1. 将 SD 卡插回主机
 
-#### Section II - unSAFE_MODE
+#### 第二步 – unSAFE_MODE
 
-If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+如果你的 LR↑A 键其中有一个坏掉了，请加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp)然后以英文寻求帮助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网），你也可以到译者的 [QQ 群](https://stray-soul.com/index.php/qqgroup)寻求帮助，群号为 942052497。
 {: .notice--danger}
 
 1. 将你的主机置于关机状态，按住 L + R + ↑ + A 按键，然后按下电源键
@@ -62,11 +62,11 @@ If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, join [Nint
   + Luma3DS 不会给正常的主菜单增添任何看上去十分特别的东西。 如果你的主机现在已经启动到主菜单了，说明自制固件已经在运行了。
   + 在下一页中，我们将会教你安装一些有用的自制程序来完成安装步骤。
 
-#### Section IV - Restoring WiFi Configuration Profiles
+#### 第四步 – 还原 WiFi 配置文件
 
 1. 运行“下载通信(Download Play)”程序
 1. 等到你看到两个按钮
-  + Do not press either of the buttons
+  + 不要按任何按键
 1. 同时按下 “L” + “↓” + “Select” 键来打开 Rosalina 菜单
 1. 选择 “Miscellaneous options”
 1. 选择 “Switch the hb. title to the current app.”
@@ -74,11 +74,11 @@ If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, join [Nint
 1. 按 “B” 键返回 Rosalina 主菜单
 1. 按 “B” 键退出 Rosalina 菜单
 1. 按下 “Home” 键，然后关闭“下载通信(Download Play)”
-1. Relaunch the Download Play application
+1. 重新运行“下载通信（Download Play）”程序
 1. 此时你的主机应该会启动 Homebrew Launcher了
-1. Launch slotTool from the list of homebrew
-1. Select "RESTORE original wifi slots 1,2,3"
-1. Your device will then reboot
+1. 从自制程序列表中找到并启动 slotTool
+1. 选择“RESTORE original wifi slots 1,2,3”
+1. 你的主机将会重启
 
 ___
 
