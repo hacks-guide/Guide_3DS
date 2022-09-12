@@ -1,12 +1,12 @@
 ---
-title: "Homebrew Launcher (PicHaxx)"
+title: "启动 Homebrew Launcher（通过 PicHaxx）"
 ---
 
 {% include toc title="目录内容" %}
 
 ### 重要事项
 
-This method of using Seedminer for further exploitation uses your `movable.sed` file to write a custom save file for Pokémon Picross, which can then be used with unSAFE_MODE to run SafeB9SInstaller.
+此方法使用 Seedminer 来取得你的 `movable.sed` 文件，然后更进一步地利用漏洞，将为《宝可梦：绘图方块》（Pokémon Picross）自制的存档写入游戏，然后利用 unSAFE_MODE 启动 SafeB9SInstaller。
 
 这个操作会覆盖《宝可梦：绘图方块》中的游戏存档。 如果你想保留你的游戏存档，则你应该在覆盖前备份 `00000001.sav` 文件。
 {: .notice--warning}
@@ -18,7 +18,7 @@ This method of using Seedminer for further exploitation uses your `movable.sed` 
   + 你必须插入一张 SD 卡到主机中才能安装《宝可梦：绘图方块》。
 * 你在 [Seedminer](seedminer) 步骤中获得的 `movable.sed` 文件
 * 最新版本的 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)（下载 Luma3DS `.zip` 文件）
-* The latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest) (the RELEASE `.zip` file)
+* 最新版本的 [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest)（下载 RELEASE `.zip` 文件）
 
 ### 操作步骤
 
@@ -36,9 +36,9 @@ This method of using Seedminer for further exploitation uses your `movable.sed` 
 1. 将你的 SD 卡插入到电脑
 1. 解压 Luma3DS `.zip` 里的 `boot.firm` 和 `boot.3dsx` 到你 SD 卡的根目录
   + 根目录指的是你点进 SD 卡看到的目录，你可以在这个目录下看到 Nintendo 3DS 文件夹，但请不要点进去
-1. Create a folder named `3ds` on the root of your SD card
-1. Copy the `slotTool` folder from the unSAFE_MODE `.zip` to the `3ds` folder on your SD card
-1. Copy the otherapp payload for your region/version from the unSAFE_MODE `.zip`'s `otherapps_with_CfgS` folder to the root of your SD card and rename it to `otherapp.bin`
+1. 在你 SD 卡的根目录新建一个叫 `3ds` 的文件夹
+1. 从 unSAFE_MODE `.zip` 中复制出 `slotTool` 文件夹到你的 SD 卡的 `3ds` 文件夹
+1. 下载最新版本的 [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest)，从文件中解压 `otherapps_with_CfgS` 文件夹，然后将里面对应你主机型号和区域的 `.bin`  文件复制到 SD 卡的根目录，并改名为 `otherapp.bin`。 
 
 #### 第二步 – PicHaxx
 
@@ -58,10 +58,10 @@ This method of using Seedminer for further exploitation uses your `movable.sed` 
 1. 将SD卡重新插入你的主机
 1. 启动你的主机
 1. 启动《宝可梦：绘图方块》（Pokémon Picross）
-1. If the exploit was successful, your device will have booted into the Homebrew Launcher
-  + If you get an error message, [follow this troubleshooting guide](troubleshooting#homebrew-launcher-pichaxx)
+1. 如果漏洞成功执行，你的主机将自动启动到 Homebrew Launcher
+  + 如果出现错误，参见[故障排查](troubleshooting#homebrew-launcher-pichaxx)
 
 ___
 
-### Continue to [Installing boot9strap (HBL-USM)](installing-boot9strap-(hbl-usm))
+### 继续至[安装 boot9strap（通过 HBL-USM）](installing-boot9strap-(hbl-usm))
 {: .notice--primary}
