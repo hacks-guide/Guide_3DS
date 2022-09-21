@@ -6,16 +6,16 @@ title: "boot9strap 설치 (kartdlphax)"
 
 ### 중요
 
-이 설명서는 최신 시스템 버전 (11.16.0)와 호환되지 않습니다. 만약 이 페이지로 이동 되었다면, [시작하기](get-started) 페이지로 되돌아가거나, [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp) 에서 영어로 도움을 요청해 주시길 바랍니다.
-{: .notice--warning}
-
-kartdlphax는 마리오 카트 7의 다운로드 플레이 모드를 사용하는 익스플로잇입니다. universal-otherapp과 같이 사용하면, 커스텀 펌웨어를 설치할 수 있습니다.
+kartdlphax는 마리오 카트 7의 다운로드 플레이 모드를 사용하는 익스플로잇입니다. It can be used with unSAFE_MODE to install custom firmware on target devices.
 
 이 가이드를 진행하기 위해서는, 다음이 필요합니다:
 
 - 커스텀 펌웨어를 설치하려고 하는 3DS (**타겟 3DS**)와 지역이 같은, 커스텀 펌웨어가 설치된 제2의 3DS (**소스 3DS**)
 - 두 3DS와 지역이 같은, 마리오 카트 7의 물리적/디지털 버전
 - 두 3DS를 위한 SD 카드
+
+If the (Right/Left Shoulder), (D-Pad Up), or (A) buttons on the **target 3DS** do not work, you will not be able to follow these instructions. For further assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+{: .notice--warning}
 	
 ### 준비물
 
@@ -29,6 +29,7 @@ kartdlphax는 마리오 카트 7의 다운로드 플레이 모드를 사용하�
 * 최신 버전의 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (직접 다운로드)
 * 최신 버전의 [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (직접 다운로드)
 * The latest release of [standard Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+* 최신 버전의 [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest) (RELEASE `.zip` 파일)
 
 #### Section I - Prep Work (source 3DS)
 
@@ -49,6 +50,9 @@ kartdlphax는 마리오 카트 7의 다운로드 플레이 모드를 사용하�
 1. SD 카드이 루트에 `boot9strap` 라는 이름으로 새 폴더를 생성해 주세요
 1. SD 카드에 있는 `/boot9strap/` 폴더에 boot9strap `.zip` 파일 안에 압축되있는 `boot9strap.firm`과 `boot9strap.firm.sha`을 복사해 주세요
 1. SafeB9SInstaller `.zip`의 `SafeB9SInstaller.bin`을 SD 카드의 루트로 복사해 주세요
+1. `unSAFE_MODE.zip` 안에 있는 `usm.bin`을 SD 카드의 루트에 복사해 주세요
+1. Create a folder called `3ds` on the root of your SD card
+1. unSAFE_MODE `.zip`안에 있는 `slotTool` 폴더를 SD 카드의 `3ds` 폴더에 복사해 주세요
 1. Eject the SD card and put it in the **target 3DS**
 
 #### 섹션 III - kartdlphax
@@ -60,8 +64,14 @@ kartdlphax는 마리오 카트 7의 다운로드 플레이 모드를 사용하�
 1. (B)를 눌러 Rosalina 메뉴를 나와 주세요
 1. 마리오 카트 7를 실행해 주세요
   - Ensure that wireless connectivity is enabled
-  - kartdlphax should tell you that it is running
-1. Navigate to `Local Multiplayer` -> `Create Group`
+1. Navigate to `Local Multiplayer`. A menu should pop up
+  - If the screen freezes, hold the power button for fifteen seconds to force power off your device, then try again
+  - If you have launched kartdlphax previously, the last selected settings will be loaded. If they are correct, select `Use settings` and skip the next 3 steps. If they are incorrect, select `Change settings` and proceed.
+1. Select your **target 3DS** device type (Old 3DS family or New 3DS family)
+1. Select the exploit type `3DS ROP xPloit Injector`
+1. A confirmation menu will show up. If the settings shown on the top screen are correct, select `Use settings`
+  - If the settings are not correct, press `Change settings` and modify them accordingly
+1. Select `Create Group`
   - If the source 3DS freezes at this point and you are using a cartridge, try [installing the cartridge to the system](dumping-titles-and-game-cartridges#installing-a-game-cartridge-directly-to-the-system)
 1. **타겟 3DS**의 전원을 켜 주세요
   - Ensure that wireless connectivity is enabled
@@ -70,20 +80,59 @@ kartdlphax는 마리오 카트 7의 다운로드 플레이 모드를 사용하�
 1. Select "Start" on the **source 3DS** once it has detected the **target 3DS**
 1. Once multiplayer has loaded, navigate to `Grand Prix` -> `50cc` -> (any driver) -> `Mushroom Cup` -> `OK`
 1. Wait a while (a percentage should be displayed on the **source 3DS**)
-1. If the exploit was successful, the **target 3DS** will have booted into SafeB9SInstaller
+1. If the exploit was successful, the **target 3DS** will have booted into the 3DS ROP xPloit Injector
+  - If the exploit was not successful, power off the **source 3DS** and **target 3DS** and start again from the beginning of `Section III - kartdlphax`
+1. Press (X) to inject unSAFE_MODE
+1. If the injection was successful, the screen will turn green and the **target 3DS** will automatically power off
+  + If the screen turns red, power off the target 3DS and start again from the beginning of `Section III - kartdlphax`. If this doesn't work, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp))
 
-#### 섹션 IV - boot9strap 설치
+You will **not** need to use your **source 3DS** to complete any further steps on this guide. Any further steps should only be completed on the **target 3DS**.
+{: .notice--info}
+
+#### Section IV - unSAFE_MODE
+
+1. 전원이 꺼져 있는 상태에서 (L 어깨) + (R 어깨) + (십자 Up) + (A) 를 길게 눌르고, 누르는 상태에서 전원을 켜 주세요
+  + 안전 모드로 부팅 될 때 까지 버튼들을 눌러 주세요
+  + If you're unable to get into Safe Mode after multiple attempts, one of your buttons may be failing or broken. If this is the case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+1. "OK"를 선택해서 업데이트를 확인해 주세요
+  + 실제로 업데이트를 하는 것은 아닙니다. 이것은 익스플로잇의 일부입니다
+1. "동의함"를 눌러서 이용 약관에 동의해 주세요
+1. 이 업데이트는 에러 코드 `003-1099` 와 같이 실패를 할 겁니다. 이것은 의도적 행동입니다
+1. When asked "Would you like to configure Internet settings?", select "Yes"
+1. 이 화면에서, `접솔 경로 1` -> `설정 변경` -> `다음 페이지 (오른쪽 화살표)` -> `Proxy 설정` -> `세부 설정` 으로 이동해 주세요
+  + [이 (영어) 사진](https://uwuu.ca/images/safemode_highlighted.png)처럼 하시면 됩니다
+1. 익스플로잇이 성공적이었다면 SafeB9SInstaller로 부팅되었을 것입니다
+
+#### Section V - Installing boot9strap
 
 1. 메시지가 나타나면, boot9strap을 설치하기 위하여 화면에 주어진 키 조합을 입력해 주세요
+  + If the top screen is blank, power off your device and re-do Section IV
 1. 작업이 완료되면, (A) 를 눌려 기기를 재부팅해 주세요
-1. 타겟 기기는 Luma3DS 구성 메뉴로 부팅되었을 겁니다
-  + If your target 3DS shuts down when you try to power it on, ensure that you have copied `boot.firm` from the Luma3DS `.zip` to the root of your SD card
+1. 기기는 Luma3DS 구성 메뉴로 부팅되었을 겁니다
+  + If your device shuts down when you try to power it on, ensure that you have copied `boot.firm` from the Luma3DS `.zip` to the root of your SD card
 1. (Start)를 눌러 저장하고 기기를 다시 시작해 주세요
 
 At this point, your console will boot to Luma3DS by default.
   + Luma3DS는 보통 HOME 메뉴와 똑같이 보입니다. 만약 기기가 HOME 메뉴로 부팅되었다면, 커스텀 펌웨어가 설치되어 있습니다.
   + On the next page, you will install useful homebrew applications to complete your setup.
-  + 이 후 나머지 스텝에선 **소스 3DS**는 필요가 없을 겁니다.
+
+#### Section VI - Restoring WiFi Configuration Profiles
+
+1. 다운로드 플레이 앱을 실행해 주세요
+1. 두 가지의 버튼이 화면에 뜰 때까지 기다려 주세요
+  + Do not press either of the buttons
+1. (L 어깨) + (십자 Down) + (Select) 을 동시에 눌러서 Rosalina 메뉴를 실행해 주세요
+1. "Miscellaneous options"을 선택해 주세요
+1. "Switch the hb. title to the current app."를 선택해 주세요
+1. (B)를 눌러 진행해 주세요
+1. (B)를 눌러 Rosalina 메뉴로 돌아가 주세요
+1. (B)를 눌러 Rosalina 메뉴를 나와 주세요
+1. (Home) 키를 누르고, 다운로드 플레이를 종료해 주세요
+1. 다운로드 플레이 앱을 다시 실행해 주세요
+1. 성공하면 Homebrew Launcher가 실행될 것입니다
+1. 홈브류 목록에서 slotTool를 실행해 주세요
+1. Select "RESTORE original wifi slots 1,2,3"
+1. Your device will then reboot
 
 ___
 
