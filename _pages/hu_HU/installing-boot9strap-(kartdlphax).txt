@@ -6,16 +6,16 @@ title: "Boot9strap telepítése (kartdlphax)"
 
 ### Fontos tudnivalók
 
-A lépések ezen az oldalon nem fognak működni, ha a legutolsó (11.16.0) firmware-en vagy. Ha közvetlenül lettél erre az oldalra linkelve, [térj vissza a Kezdeti lépésekhez](get-started) vagy csatlakozz a [Nintendo Homebrew csatornához a Discord-on](https://discord.gg/MWxPgEp) és kérj angolul segítséget.
-{: .notice--warning}
-
-kartdlphax a Mario Kart 7 Download Play módjának egy exploitja. Az universal-otherapp-pal használhat egyedi firmware telepítésére a cél eszközön.
+kartdlphax a Mario Kart 7 Download Play módjának egy exploitja. It can be used with unSAFE_MODE to install custom firmware on target devices.
 
 Ahhoz, hogy követhesd ezeket a lépéseket, a következőkre van szükséged:
 
 - Egy második 3DS egyedi firmware-rel (a **forrás 3DS**), aminek ugyanaz a régiója, mint annak a 3DS-nek, amit módosítani szeretnél (a **cél 3DS**)
 - Egy fizikai vagy digitális példánya a Mario Kart 7-nek, aminek a régiója egyezik mindkét konzol régiójával
 - Egy SD kártyára mindkét eszközhöz
+
+If the (Right/Left Shoulder), (D-Pad Up), or (A) buttons on the **target 3DS** do not work, you will not be able to follow these instructions. For further assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+{: .notice--warning}
 	
 ### Amire szükséged lesz
 
@@ -29,6 +29,7 @@ A **cél 3DS**-en (a 3DS, amit módosítani szeretnél):
 * A [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) legfrisseb verziója (közvetlen letöltés)
 * A [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) legfrisseb verziója (közvetlen letöltés)
 * A [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) legújabb standard kiadása (a Luma3DS `.zip` fájl)
+* Az [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest) legújabb kiadása (a RELEASE `.zip` fájl)
 
 #### I. rész - Előkészületi munka (forrás 3DS)
 
@@ -49,6 +50,9 @@ A **cél 3DS**-en (a 3DS, amit módosítani szeretnél):
 1. Hozz létre egy mappát `boot9strap` néven az SD kártya gyökerében
 1. Másold át a `boot9strap.firm` fájlt és a `boot9strap.firm.sha` fájlt a boot9strap `.zip` fájlból az SD kártyád `/boot9strap/` mappájába
 1. Másold át a `SafeB9SInstaller.bin` fájlt a SafeB9SInstaller `.zip`-ből az SD kártyád gyökerébe
+1. Másold át a `usm.bin` fájlt az unSAFE_MODE `.zip`-ből az SD kártya gyökerébe
+1. Create a folder called `3ds` on the root of your SD card
+1. Másold át a `slotTool` mappát az unSAFE_MODE `.zip`-ből az SD kártya gyökerében található `3ds` mappába
 1. Távolítsd el az SD kártyát és rakd be a **cél 3DS**-be
 
 #### III. rész - kartdlphax
@@ -60,8 +64,14 @@ A **cél 3DS**-en (a 3DS, amit módosítani szeretnél):
 1. Nyomd meg a (B) gombot, hogy kilépj a Rosalina menüből
 1. Indítsd el a Mario Kart 7-et
   - Ügyelj rá, hogy a vezeték nélküli kapcsolat engedélyezett legyen
-  - a kartdlphax-nak jeleznie kell feléd, hogy fut
-1. Navigálj a `Local Multiplayer` -> `Create Group` opcióhoz
+1. Navigate to `Local Multiplayer`. A menu should pop up
+  - If the screen freezes, hold the power button for fifteen seconds to force power off your device, then try again
+  - If you have launched kartdlphax previously, the last selected settings will be loaded. If they are correct, select `Use settings` and skip the next 3 steps. If they are incorrect, select `Change settings` and proceed.
+1. Select your **target 3DS** device type (Old 3DS family or New 3DS family)
+1. Select the exploit type `3DS ROP xPloit Injector`
+1. A confirmation menu will show up. If the settings shown on the top screen are correct, select `Use settings`
+  - If the settings are not correct, press `Change settings` and modify them accordingly
+1. Select `Create Group`
   - Ha a forrás 3DS lefagy ezen a ponton és egy cartridge-t használsz, próbáld meg [telepíteni a cartridge-t a rendszerbe](dumping-titles-and-game-cartridges#installing-a-game-cartridge-directly-to-the-system)
 1. Kapcsold be a **cél 3DS**-t
   - Ügyelj rá, hogy a vezeték nélküli kapcsolat engedélyezett legyen
@@ -70,20 +80,59 @@ A **cél 3DS**-en (a 3DS, amit módosítani szeretnél):
 1. Válaszd a "Start"-ot a **forrás 3DS**-en, miután észlelte a **cél 3DS**-t
 1. Ha a több játékos üzemmód betöltött, navigálj ide: `Grand Prix` -> `50cc` -> (bármelyik sofőr) -> `Mushroom Cup` -> `OK`
 1. Várj egy kicsit (egy százalék kell megjelenjen a **forrás 3DS**-en)
-1. Ha az exploit sikeres volt, akkor a **cél 3DS** be kell bootoljon a SafeB9SInstaller-be
+1. If the exploit was successful, the **target 3DS** will have booted into the 3DS ROP xPloit Injector
+  - If the exploit was not successful, power off the **source 3DS** and **target 3DS** and start again from the beginning of `Section III - kartdlphax`
+1. Press (X) to inject unSAFE_MODE
+1. If the injection was successful, the screen will turn green and the **target 3DS** will automatically power off
+  + If the screen turns red, power off the target 3DS and start again from the beginning of `Section III - kartdlphax`. If this doesn't work, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp))
 
-#### IV. rész - boot9strap telepítése
+You will **not** need to use your **source 3DS** to complete any further steps on this guide. Any further steps should only be completed on the **target 3DS**.
+{: .notice--info}
+
+#### Section IV - unSAFE_MODE
+
+1. Az eszközöd kikapcsolt állapotában tartsd nyomva a következő gombokat: (Bal Váll) + (Jobb Váll) + (D-Pad Fel) + (A), majd ezen gombok nyomva tartása mellett kapcsold be az eszközöd
+  + Tartsd nyomva a gombokat, amiíg a konzol be nem bootol a Safe Mode-ba
+  + Ha többszöri próbálkozásra sem tudsz bejutni a Safe Mode-ba, valamelyik gombod hibás lehet. Ebben az esetben csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és kérj, támogatást angolul.
+1. Nyomj "OK"-ot a frissítés elfogadásához
+  + Nincs frissítés. Ez része az exploitnak
+1. Nyomj az "I accept"-re a feltételek elfogadásához
+1. A frissítés sikertelen lesz a `003-1099` hibakóddal. Ez az elvárt viselkedés
+1. Amikor megkérdezésre kerül, hogy "Would you like to configure Internet settings?", válassz "Yes"-t
+1. A következő menüben navigálj a `Connection 1` -> `Change Settings` -> `Next Page (jobb nyíl)` -> `Proxy Settings` -> `Detailed Setup` menüponthoz
+  + Ez egy [vizuális reprezentáció](/images/safemode_highlighted.png)
+1. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
+
+#### Section V - Installing boot9strap
 
 1. Ha kéri, akkor nyomd meg sorban azokat a gombokat, amiket kijelez a felső képernyőn, hogy telepíthesd a boot9strap-et
+  + If the top screen is blank, power off your device and re-do Section IV
 1. Ha ez elkészült, nyomd meg az (A) gombot az eszközöd újraindításához
-1. A cél 3DS-eddel újra kell bootolnod a Luma3DS konfigurációs menübe
-  + Ha a cél 3DS kikapcsol amikor bekapcsolod, bizonyosodj meg róla, hogy átmásoltad-e a `boot.firm` fájlt a Luma3DS `.zip` fájlból az SD kártya gyökerébe
+1. A készülékednek az előzőekben a Luma3DS-be kellett bootolnia
+  + Ha a készüléked kikapcsol amikor bekapcsolod, bizonyosodj meg róla, hogy átmásoltad-e a `boot.firm` fájlt a Luma3DS `.zip` fájlból az SD kártya gyökerébe
 1. Mentéshez és újraindításhoz nyomd meg a (Start) gombot
 
 Ezen a ponton a konzolod alapértelmezetten bebootol a Luma3DS-be.
   + A Luma3DS nem néz ki másként, mint a normál HOME Menü. Ha a konzolod bebootolt a HOME Menübe, akkor egyedi firmware-t futtat.
   + A következő oldalon hasznos homebrew alkalmaásokat telepítünk, hogy teljessé tegyük a telepítésedet.
-  + **Nincs** szükséged a **forrás 3DS** használatára a további lépések végrehajtásához ebben az útmutatóban.
+
+#### Section VI - Restoring WiFi Configuration Profiles
+
+1. Indítsd el a Download Play alkalmazást
+1. Várj, amíg két gombot nem látsz
+  + Ne nyomd meg egyiket sem
+1. Nyomd le az (L) + (D-Pad le) + (Select) gombokat egyszerre a Rosalina menü megnyitásához
+1. Válaszd ki a "Miscellaneous options"-t
+1. Válaszd a "Switch the hb. title to the current app." opciót
+1. Nyomd meg a (B) gombot a folytatáshoz
+1. Nyomd meg a (B) gombot, hogy visszakerülj a Rosalina főmenüjébe
+1. Nyomd meg a (B) gombot, hogy kilépj a Rosalina menüből
+1. Nyomd meg a (Home) gombot és zárd be a Download Play-t
+1. Indítsd el újra a Download Play alkalmazást
+1. Ekkor a készülékednek be kell töltenie a Homebrew Launchert
+1. Indítsd el a slotTool-t a homebrew listából
+1. Válaszd a "RESTORE original wifi slots 1,2,3" opciót
+1. Az eszközöd újra fog indulni
 
 ___
 
