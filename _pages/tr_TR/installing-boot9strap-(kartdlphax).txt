@@ -6,16 +6,16 @@ title: "Installing boot9strap (kartdlphax)"
 
 ### Okumanız Gerekli
 
-The instructions on this page do not currently work on the latest firmware (11.16.0). If you were directly linked to this page, [return to Get Started](get-started) or join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
-{: .notice--warning}
-
-kartdlphax is an exploit for the Download Play mode of Mario Kart 7. It can be used with universal-otherapp to install custom firmware on target devices.
+kartdlphax is an exploit for the Download Play mode of Mario Kart 7. It can be used with unSAFE_MODE to install custom firmware on target devices.
 
 In order to follow these instructions, you will need the following:
 
 - A second 3DS with custom firmware (the **source 3DS**) that is the same region as the 3DS you are trying to modify (the **target 3DS**)
 - A physical or digital copy of Mario Kart 7 that is the same region as both consoles
 - An SD card for both devices
+
+If the (Right/Left Shoulder), (D-Pad Up), or (A) buttons on the **target 3DS** do not work, you will not be able to follow these instructions. For further assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+{: .notice--warning}
 	
 ### What You Need
 
@@ -29,6 +29,7 @@ On the **target 3DS** (the 3DS that you are trying to modify):
 * The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
 * The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
 * The latest release of [standard Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+* The latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest) (the RELEASE `.zip` file)
 
 #### Section I - Prep Work (source 3DS)
 
@@ -49,6 +50,9 @@ On the **target 3DS** (the 3DS that you are trying to modify):
 1. Create a folder named `boot9strap` on the root of your SD card
 1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
 1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
+1. Copy `usm.bin` from the unSAFE_MODE `.zip` to the root of your SD card
+1. Create a folder called `3ds` on the root of your SD card
+1. Copy the `slotTool` folder from the unSAFE_MODE `.zip` to the `3ds` folder on your SD card
 1. Eject the SD card and put it in the **target 3DS**
 
 #### Section III - kartdlphax
@@ -60,8 +64,14 @@ On the **target 3DS** (the 3DS that you are trying to modify):
 1. Press (B) to exit the Rosalina menu
 1. Launch Mario Kart 7
   - Ensure that wireless connectivity is enabled
-  - kartdlphax should tell you that it is running
-1. Navigate to `Local Multiplayer` -> `Create Group`
+1. Navigate to `Local Multiplayer`. A menu should pop up
+  - If the screen freezes, hold the power button for fifteen seconds to force power off your device, then try again
+  - If you have launched kartdlphax previously, the last selected settings will be loaded. If they are correct, select `Use settings` and skip the next 3 steps. If they are incorrect, select `Change settings` and proceed.
+1. Select your **target 3DS** device type (Old 3DS family or New 3DS family)
+1. Select the exploit type `3DS ROP xPloit Injector`
+1. A confirmation menu will show up. If the settings shown on the top screen are correct, select `Use settings`
+  - If the settings are not correct, press `Change settings` and modify them accordingly
+1. Select `Create Group`
   - If the source 3DS freezes at this point and you are using a cartridge, try [installing the cartridge to the system](dumping-titles-and-game-cartridges#installing-a-game-cartridge-directly-to-the-system)
 1. Power on the **target 3DS**
   - Ensure that wireless connectivity is enabled
@@ -70,20 +80,59 @@ On the **target 3DS** (the 3DS that you are trying to modify):
 1. Select "Start" on the **source 3DS** once it has detected the **target 3DS**
 1. Once multiplayer has loaded, navigate to `Grand Prix` -> `50cc` -> (any driver) -> `Mushroom Cup` -> `OK`
 1. Wait a while (a percentage should be displayed on the **source 3DS**)
-1. If the exploit was successful, the **target 3DS** will have booted into SafeB9SInstaller
+1. If the exploit was successful, the **target 3DS** will have booted into the 3DS ROP xPloit Injector
+  - If the exploit was not successful, power off the **source 3DS** and **target 3DS** and start again from the beginning of `Section III - kartdlphax`
+1. Press (X) to inject unSAFE_MODE
+1. If the injection was successful, the screen will turn green and the **target 3DS** will automatically power off
+  + If the screen turns red, power off the target 3DS and start again from the beginning of `Section III - kartdlphax`. If this doesn't work, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp))
 
-#### Section IV - Installing boot9strap
+You will **not** need to use your **source 3DS** to complete any further steps on this guide. Any further steps should only be completed on the **target 3DS**.
+{: .notice--info}
+
+#### Section IV - unSAFE_MODE
+
+1. With your device still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your device
+  + Keep holding the buttons until the device boots into Safe Mode
+  + If you're unable to get into Safe Mode after multiple attempts, one of your buttons may be failing or broken. If this is the case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+1. Press "OK" to accept the update
+  + There is no update. This is part of the exploit
+1. Press "I accept" to accept the terms and conditions
+1. The update will eventually fail, with the error code `003-1099`. This is intended behaviour
+1. When asked "Would you like to configure Internet settings?", select "Yes"
+1. On the following menu, navigate to `Connection 1` -> `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings` -> `Detailed Setup`
+  + This is a [visual representation](/images/safemode_highlighted.png)
+1. If the exploit was successful, your device will have booted into SafeB9SInstaller
+
+#### Section V - Installing boot9strap
 
 1. When prompted, input the key combo given on the top screen to install boot9strap
+  + If the top screen is blank, power off your device and re-do Section IV
 1. Once it is complete, press (A) to reboot your device
-1. Your target 3DS should have rebooted into the Luma3DS configuration menu
-  + If your target 3DS shuts down when you try to power it on, ensure that you have copied `boot.firm` from the Luma3DS `.zip` to the root of your SD card
+1. Your device should have rebooted into the Luma3DS configuration menu
+  + If your device shuts down when you try to power it on, ensure that you have copied `boot.firm` from the Luma3DS `.zip` to the root of your SD card
 1. Kaydedip yeniden başlatmak için (Start) basın
 
 At this point, your console will boot to Luma3DS by default.
   + Luma3DS does not look any different from the normal HOME Menu. If your console has booted into the HOME Menu, it is running custom firmware.
   + On the next page, you will install useful homebrew applications to complete your setup.
-  + You will **not** need to use your **source 3DS** to complete any further steps on this guide.
+
+#### Section VI - Restoring WiFi Configuration Profiles
+
+1. Launch the Download Play application
+1. Wait until you see the two buttons
+  + Do not press either of the buttons
+1. Press (Left Shoulder) + (D-Pad Down) + (Select) at the same time to open the Rosalina menu
+1. Select "Miscellaneous options"
+1. Select "Switch the hb. title to the current app."
+1. Press (B) to continue
+1. Press (B) to return to the Rosalina main menu
+1. Press (B) to exit the Rosalina menu
+1. Press (Home), then close Download Play
+1. Relaunch the Download Play application
+1. Your device should load the Homebrew Launcher
+1. Launch slotTool from the list of homebrew
+1. Select "RESTORE original wifi slots 1,2,3"
+1. Your device will then reboot
 
 ___
 
