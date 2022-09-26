@@ -6,7 +6,7 @@ title: "安装 boot9strap（通过 kartdlphax）"
 
 ### 重要事项
 
-kartdlphax 是马里奥赛车 7 中下载通信模式中的一个漏洞。 It can be used with unSAFE_MODE to install custom firmware on target devices.
+kartdlphax 是马里奥赛车 7 中下载通信模式中的一个漏洞。 它可以与 unSAFE_MODE 一起使用，在目标主机上安装自制固件。
 
 如果你想通过此方法安装自制固件，则你需要：
 
@@ -14,7 +14,7 @@ kartdlphax 是马里奥赛车 7 中下载通信模式中的一个漏洞。 It ca
 -  一份与两台主机同区的马里奥赛车 7 实体版或数字版
 - 两张 SD 卡
 
-If the (Right/Left Shoulder), (D-Pad Up), or (A) buttons on the **target 3DS** do not work, you will not be able to follow these instructions. For further assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+如果**目标 3DS** 的 L、R、↑、A 其中一个按键坏了，则你会卡在需要用到这些按键的步骤上。 如需针对此问题的帮助，请加入 [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) 并使用英文求助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497。
 {: .notice--warning}
 	
 ### 你需要准备点啥？
@@ -51,7 +51,7 @@ If the (Right/Left Shoulder), (D-Pad Up), or (A) buttons on the **target 3DS** d
 1. 从boot9strap `.zip` 文件中复制 `boot9strap.firm` 和 `boot9strap.firm.sha` 到你SD卡的 `/boot9strap/` 文件夹中
 1. 从 SafeB9SInstaller `.zip` 压缩包中复制 `SafeB9SInstaller.bin` 到 SD 卡根目录下
 1. 从 unSAFE_MODE `.zip` 复制 `usm.bin` 到 SD 卡的根目录
-1. Create a folder called `3ds` on the root of your SD card
+1. 在你 SD 卡的根目录新建一个叫 `3ds` 的文件夹
 1. 从 unSAFE_MODE `.zip` 中复制出 `slotTool` 文件夹到你的 SD 卡的 `3ds` 文件夹
 1. 取下 SD 卡并将其插回**目标 3DS**
 
@@ -64,14 +64,14 @@ If the (Right/Left Shoulder), (D-Pad Up), or (A) buttons on the **target 3DS** d
 1. 按 “B” 键退出 Rosalina 菜单
 1. 启动马里奥赛车 7
   - 请确保你已经打开了无线连接
-1. Navigate to `Local Multiplayer`. A menu should pop up
-  - If the screen freezes, hold the power button for fifteen seconds to force power off your device, then try again
-  - If you have launched kartdlphax previously, the last selected settings will be loaded. If they are correct, select `Use settings` and skip the next 3 steps. If they are incorrect, select `Change settings` and proceed.
-1. Select your **target 3DS** device type (Old 3DS family or New 3DS family)
-1. Select the exploit type `3DS ROP xPloit Injector`
-1. A confirmation menu will show up. If the settings shown on the top screen are correct, select `Use settings`
-  - If the settings are not correct, press `Change settings` and modify them accordingly
-1. Select `Create Group`
+1. 选择 `本地多人游戏（Local Multiplayer）` 一个菜单应该会弹出来
+  - 如果卡住了，请按住主机的电源键 15 秒来强制关机，然后再试一次
+  - 如果你先前已经启动过了 kartdlphax，则最后选定的设置将会被加载。 如果一切正确，请选中 `Use settings` 然后跳过接下来的 3 个小步骤。 如果不对，请选择 `Change settings` 然后继续操作。
+1. 选择你的**目标 3DS** 的主机类型（旧版 3DS 或新版 3DS 系列）
+1. 将漏洞类型切换至 `3DS ROP xPloit Injector`
+1. 确认菜单将会显示。 如果上屏显示的设置一切正确，请选中 `Use settings`
+  - 如果不正确，请选择 `Change settings` 然后进行相应的修改
+1. 选择 `Create Group`
   - 如果你用的是游戏卡带，且源 3DS 此时卡住了，那么请尝试 [将卡带中的游戏安装到系统中](dumping-titles-and-game-cartridges#installing-a-game-cartridge-directly-to-the-system)
 1. 启动**目标 3DS **
   - 请确保你已经打开了无线连接
@@ -80,16 +80,16 @@ If the (Right/Left Shoulder), (D-Pad Up), or (A) buttons on the **target 3DS** d
 1. 待**源 3DS** 检测到**目标 3DS** 后，点击“开始”
 1. 多人游戏加载完成后，依次点击 `大奖赛` -> `50cc` ->（任何角色）-> `蘑菇杯` -> `OK`
 1. 稍等一会儿（百分比应该会显示在**源 3DS** 上）
-1. If the exploit was successful, the **target 3DS** will have booted into the 3DS ROP xPloit Injector
-  - If the exploit was not successful, power off the **source 3DS** and **target 3DS** and start again from the beginning of `Section III - kartdlphax`
-1. Press (X) to inject unSAFE_MODE
-1. If the injection was successful, the screen will turn green and the **target 3DS** will automatically power off
-  + If the screen turns red, power off the target 3DS and start again from the beginning of `Section III - kartdlphax`. If this doesn't work, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp))
+1. 如果漏洞执行成功，**目标 3DS** 将会启动 3DS ROP xPloit Injector
+  - 如果漏洞没有成功触发，则请将**源 3DS** 和 **目标 3DS** 一起关机，然后从 `第三步 — kartdlphax` 重新开始
+1. 按 X 键来注入 unSAFE_MODE
+1. 如果注入成功，**目标 3DS** 的屏幕闪绿屏，然后自动关机
+  + 如果是闪红屏，则请将目标 3DS 关机，然后从 `第三步 — kartdlphax` 重新开始。 如果依然不行，请于 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp))寻求帮助
 
-You will **not** need to use your **source 3DS** to complete any further steps on this guide. Any further steps should only be completed on the **target 3DS**.
+接下来的步骤中将**不再**需要使用**源 3DS** 来完成。 接下来的步骤应该只能在**目标 3DS**上完成。
 {: .notice--info}
 
-#### Section IV - unSAFE_MODE
+#### 第四步 – unSAFE_MODE
 
 1. 将你的主机置于关机状态，按住 L + R + ↑ + A 四个按键，然后按下电源键
   + 按住这几个按钮，直到主机进入安全模式
@@ -103,10 +103,10 @@ You will **not** need to use your **source 3DS** to complete any further steps o
   + 这里有一份[演示图像](/images/safemode_highlighted.png)
 1. 如果漏洞执行成功，你的主机将会进入到 SafeB9SInstaller
 
-#### Section V - Installing boot9strap
+#### 第五步 – 安装 boot9strap
 
 1. 出现提示时，按照上屏的提示输入按键组合来安装 boot9strap
-  + If the top screen is blank, power off your device and re-do Section IV
+  + 如果上屏白屏，则请强制关机然后重做第四步
 1. 安装完成后，按下 “A” 键重启主机
 1. 你的主机将会在重启后进入至 Luma3DS 配置菜单中
   + 如果你的主机在你尝试开机后自动关机了，请确认你已经从 Luma3DS `.zip` 中复制了 `boot.firm` 文件到你的 SD 卡根目录中
@@ -116,7 +116,7 @@ You will **not** need to use your **source 3DS** to complete any further steps o
   + Luma3DS 不会给正常的主菜单增添任何看上去十分特别的东西。 如果你的主机现在已经启动到主菜单了，说明自制固件已经在运行了。
   + 在下一页中，我们将会教你安装一些有用的自制程序来完成安装步骤。
 
-#### Section VI - Restoring WiFi Configuration Profiles
+#### 第六步 – 还原 WiFi 配置文件
 
 1. 运行“下载通信(Download Play)”程序
 1. 等到你看到两个按钮
