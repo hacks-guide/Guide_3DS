@@ -42,19 +42,22 @@ Als je een configuratiemenu ziet, heb je al CFW en zal het doorgaan met deze ins
 
 #### Deel III - Fredtool
 
-1. Open [Fredtool](https://3ds.nhnarwhal.com/3dstools/fredtool.php) op je computer
-1. Selecteer je 'movable.sed' bestand voor het 'Your movable.sed' veld
-1. Selecteer je DSiWare Backup (`<8-character-id>.bin`) bestand voor het "Your dsiware.bin" veld
-1. Selecteer "Verify files"
-1. Selecteer "Build and Download"
-1. Wacht totdat het proces voltooid is
-1. Wanneer het proces is voltooid, download je aangepaste DSiWare archief van de site
-  + Dit bestand bevat 2 DSiWare backup-bestanden, één schoon (ongewijzigd) en één hax (geëxploiteerd)
+1. Open de [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec) website op je computer
+1. Voer een alfanumerieke naam in onder het "Username" veld (geen spaties of speciale tekens)
+1. Under the "DSiBin" field, upload your `42383841.bin` file using the first "Browse..." option
+1. Onder het veld "MovableSed", upload je `movable.sed` bestand met behulp van de tweede "Browse..." optie
+1. Under the "InjectionTarget" field, set the injection target to `DSinternet` (NOT memorypit)
+1. Klik op "Build"
+  + Wait a few seconds for the build process to complete
+1. In the Build History section on the left, type the Username into the "Filter Builds" field
+1. Click on the first search result
+  + This result should have the latest timestamp
+1. Klik op de "output_(name).zip" link
 1. Navigeer naar `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` op je SD-kaart
   + `<ID0>` zal dezelfde zijn die je bij deze stap hebt gebruikt: [Seedminer](seedminer)
   + `<ID1>` is een reeks van 32 characters lang en bevindt zich in de map van de `<ID0>`
   + Als de `Nintendo DSiWare` map niet bestaat, maak deze dan aan in de `<ID1>`
-1. Kopieer het `42383841.bin` bestand uit de `ouput/hax/` map van het gedownloade DSiWare archief (`fredtool.zip`) naar de `Nintendo DSiWare` map
+1. Copy the `42383841.bin`  file from the `hax` folder of the downloaded DSiWare archive (output_(name).zip) to the `Nintendo DSiWare` folder
 1. Stop je SD kaart terug in je 3DS
 1. Zet je 3DS aan
 1. Open System Settings op je apparaat
@@ -103,7 +106,7 @@ Op dit moment zal je console standaard opstarten naar Luma3DS.
 
 #### Deel VI - DS Connection Settings herstellen
 
-1. Kopieer het `42383841.bin` bestand uit de `ouput/clean/` map van het gedownloade DSiWare archief (`fredtool.zip`) naar de `Nintendo 3DS/<ID0>/<ID1>/Nintendo DSiWare/` map op je SD-kaart
+1. Copy the `42383841.bin` file from the `clean/` folder of the downloaded DSiWare archive (`output_(name).zip`) to the `Nintendo 3DS/<ID0>/<ID1>/Nintendo DSiWare/` folder on your SD card
   + Vervang het bestaande `42383841.bin` bestand
 1. Stop je SD kaart terug in je 3DS
 1. Zet je 3DS aan
