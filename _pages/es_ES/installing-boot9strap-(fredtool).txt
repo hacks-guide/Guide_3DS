@@ -42,19 +42,22 @@ If you see a configuration menu, you already have CFW, and continuing with these
 
 #### Sección III - Fredtool
 
-1. Abre [Fredtool](https://3ds.nhnarwhal.com/3dstools/fredtool.php) en tu computadora
-1. Selecciona tu archivo `movable.sed` para completar el campo "Your movable.sed"
-1. Selecciona tu copia de seguridad de DSiWare (`<ID-de-8-caracteres>.bin`) para completar el campo "Your dsiware.bin"
-1. Selecciona "Verify files"
-1. Selecciona "Build and Download" (Construir y Descargar)
-1. Espera a que el procesos se complete
-1. When the process is completed, download your modified DSiWare archive from the site
-  + Este archivo contiene dos archivos copia de seguridad de DSiWare dentro; uno limpio (sin modificar) y otro modificado (con exploit)
+1. Open the [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec) website on your computer
+1. Under the "Username" field, enter any alphanumeric name (no spaces or special characters)
+1. Under the "DSiBin" field, upload your `42383841.bin` file using the first "Browse..." option
+1. Under the "MovableSed" field, upload your `movable.sed` file using the second "Browse..." option
+1. Under the "InjectionTarget" field, set the injection target to `DSinternet` (NOT memorypit)
+1. Click "Build"
+  + Wait a few seconds for the build process to complete
+1. In the Build History section on the left, type the Username into the "Filter Builds" field
+1. Click on the first search result
+  + This result should have the latest timestamp
+1. Click the "output_(name).zip" link
 1. Ve a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` en tu tarjeta SD
   + La `<ID0>` en cuestión es la misma que usaste en [Seedminer](seedminer)
   + El `<ID1>` es una carpeta con un nombre compuesto por 32 caracteres, dentro de `<ID0>`
   + Si no existe la carpeta `Nintendo DSiWare`, créala dentro de la carpeta `<ID1>`
-1. Copia el archivo `42383841.bin` de la carpeta `output/hax/`, correspondiente al archivo DSiWare que descargaste (`fredtool.zip`), y pégalo en la carpeta `Nintendo DSiWare`
+1. Copy the `42383841.bin`  file from the `hax` folder of the downloaded DSiWare archive (output_(name).zip) to the `Nintendo DSiWare` folder
 1. Vuelve a insertar tu tarjeta SD en tu consola
 1. Enciende tu consola
 1. Entra a Configuración de la consola
@@ -103,7 +106,7 @@ At this point, your console will boot to Luma3DS by default.
 
 #### Sección VI - Restaurar Conexiones de Nintendo DS
 
-1. Copia el archivo `42383841.bin` de la carpeta `output/clean/`, correspondiente al archivo DSiWare que descargaste (`fredtool.zip`), y pégalo en la carpeta `Nintendo 3DS/<ID0>/<ID1>/Nintendo DSiWare/` en tu tarjeta SD
+1. Copy the `42383841.bin` file from the `clean/` folder of the downloaded DSiWare archive (`output_(name).zip`) to the `Nintendo 3DS/<ID0>/<ID1>/Nintendo DSiWare/` folder on your SD card
   + Reemplaza el archivo `42383841.bin` ya existente
 1. Vuelve a insertar tu tarjeta SD en tu consola
 1. Enciende tu consola
