@@ -42,19 +42,22 @@ Ha a konfigurációs menüt látod, már van CFW-d és az útmutató folyatása 
 
 #### III. rész - Fredtool
 
-1. Nyisd meg a [Fredtool](https://3ds.nhnarwhal.com/3dstools/fredtool.php)-t a számítógépeden
-1. Válaszd ki a `movable.sed` fájlodat a "Your movable.sed" mezőben
-1. Válaszd ki a DSiWare mentést (`<8-character-id>.bin`) fájlt a "Your dsiware.bin" mezőben
-1. Válaszd a "Verify files" opciót
-1. Válaszd a "Build and Download" menüpontot
-1. Várd meg, amíg a folyamat befejeződik
-1. Amikor a folyamat befejeződött, töltsd le a módosított DSiWare archívot az oldalról
-  + Ez a fájl két DSiWare mentést tartalmaz, egy tisztát (módosítatlan) és egy hax-ot (exploitált)
+1. Nyisd meg a [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec/) oldalt a számítógépeden
+1. A "Username" mező alatt adj meg egy tetszőleges alfanumerikus nevet (nem lehet benne szóköz vagy speciális karakter)
+1. Under the "DSiBin" field, upload your `42383841.bin` file using the first "Browse..." option
+1. A "MovableSed" mező alatt töltsd fel a `movable.sed` fájlod a második "Browse..." opció használatával
+1. Under the "InjectionTarget" field, set the injection target to `DSinternet` (NOT memorypit)
+1. Kattints a "Build"-re
+  + Wait a few seconds for the build process to complete
+1. In the Build History section on the left, type the Username into the "Filter Builds" field
+1. Click on the first search result
+  + This result should have the latest timestamp
+1. Kattints az "output_(name).zip" linkre
 1. Navigálj a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` mappába az SD kártyán
   + Az `<ID0>` ugyanaz, mint amit a [Seedminer](seedminer)-nél használtál
   + Az `<ID1>` egy 32 karakter hosszú nevű mappa az `<ID0>` mappában
   + Ha a `Nintendo DSiWare` mappa nem létezik, hozd létre az `<ID1>` mappában
-1. Másold a `42383841.bin` fájlt az `output/hax/` mappájából a letöltött DSiWare csomagból (`fredtool.zip`) a `Nintendo DSiWare` mappába
+1. Copy the `42383841.bin`  file from the `hax` folder of the downloaded DSiWare archive (output_(name).zip) to the `Nintendo DSiWare` folder
 1. Tedd vissza az SD kártyád a készülékedbe
 1. Kapcsold be a készülékedet
 1. Lépj be a System Settings-be a készülékeden
@@ -103,7 +106,7 @@ Ezen a ponton a konzolod alapértelmezetten bebootol a Luma3DS-be.
 
 #### VI. rész - A DS Connection Settings visszaállítása
 
-1. Másold a `42383841.bin` fájlt az `output/clean/` mappájából a letöltött DSiWare csomagnak (`fredtool.zip`) a `Nintendo 3DS/<ID0>/<ID1>/Nintendo DSiWare/` mappába az SD kártyán
+1. Copy the `42383841.bin` file from the `clean/` folder of the downloaded DSiWare archive (`output_(name).zip`) to the `Nintendo 3DS/<ID0>/<ID1>/Nintendo DSiWare/` folder on your SD card
   + Írd felül a létező `42383841.bin` fájlt
 1. Tedd vissza az SD kártyád a készülékedbe
 1. Kapcsold be a készülékedet
