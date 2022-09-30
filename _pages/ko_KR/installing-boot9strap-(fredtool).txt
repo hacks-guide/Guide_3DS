@@ -42,19 +42,22 @@ title: "Installing boot9strap (Fredtool)"
 
 ##### 섹션 III - Fredtool
 
-1. 컴퓨터에서 [Fredtool](https://3ds.nhnarwhal.com/3dstools/fredtool.php)을 열어 주세요
-1. "Your movable.sed" 창에서 `movable.sed` 파일을 선택해 주세요
-1. "Your dsiware.bin" 창에서 DSiWare 백업 (`<8-자리-ID>.bin`) 파일을 선택해 주세요
-1. "Verify files"를 선택해 주세요
-1. "Build and Download"를 선택해 주세요
-1. 완료될 때까지 기다려 주세요
-1. 과정이 끝나면, 수정된 DSiWare 파일을 다운로드 해 주세요
-  + 이 파일 안에 2가지의 DSiWare 백업 (변경 전, 변경 후) 파일이 존재 합니다
+1. Open the [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec) website on your computer
+1. "Username"에 영어/숫자를 사용한 이름을 아무거나 입력해 주세요 (스페이스나 특수 문자는 사용 불가)
+1. Under the "DSiBin" field, upload your `42383841.bin` file using the first "Browse..." option
+1. Under the "MovableSed" field, upload your `movable.sed` file using the second "Browse..." option
+1. Under the "InjectionTarget" field, set the injection target to `DSinternet` (NOT memorypit)
+1. Click "Build"
+  + Wait a few seconds for the build process to complete
+1. In the Build History section on the left, type the Username into the "Filter Builds" field
+1. Click on the first search result
+  + This result should have the latest timestamp
+1. Click the "output_(name).zip" link
 1. SD 카드의 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 폴더로 이동해 주세요
   + 이 `<ID0>`는 [Seedminer](seedminer)에서 사용한 것과 같습니다
   + 이 `<ID1>`은 `<ID0>` 폴더 안에 존재하는 32 자리의 이름을 갖춘 폴더 입니다
   + `Nintendo DSiWare` 폴더가 존재하지 않다면, `<ID1>` 폴더 안에 생성해 주세요
-1. `fredtool.zip` 안 `output/hax/` 폴더에 압축되있는 `42383841.bin`을 `Nintendo DSiWare` 폴더로 복사해 주세요
+1. Copy the `42383841.bin`  file from the `hax` folder of the downloaded DSiWare archive (output_(name).zip) to the `Nintendo DSiWare` folder
 1. SD 카드를 기기에 다시 삽입해 주세요
 1. 기기를 시작해 주세요
 1. 기기에서 본체 설정을 열어 주세요
@@ -103,7 +106,7 @@ title: "Installing boot9strap (Fredtool)"
 
 #### 섹션 VI - DS 소프트웨어용 설정 복구
 
-1. `fredtool.zip` 안 `output/clean/` 폴더에 압축되있는 `42383841.bin`을 `Nintendo DSiWare` 폴더로 복사해 주세요
+1. Copy the `42383841.bin` file from the `clean/` folder of the downloaded DSiWare archive (`output_(name).zip`) to the `Nintendo 3DS/<ID0>/<ID1>/Nintendo DSiWare/` folder on your SD card
   + 이미 존재하는 `43383841.bin` 파일을 덮어씌워 주세요
 1. SD 카드를 기기에 다시 삽입해 주세요
 1. 기기를 시작해 주세요
