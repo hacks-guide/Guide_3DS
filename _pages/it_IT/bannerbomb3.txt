@@ -4,11 +4,15 @@ title: "BannerBomb3"
 
 {% include toc title="Indice" %}
 
-### Lettura necessaria
+<details>
+<summary><em>Technical Details (optional)</em></summary>
+<p>To dump system DSiWare, we exploit a flaw in the DSiWare Data Management window of the Settings application.</p>
+<p>To accomplish this, we use your system's encryption key (movable.sed) to build a DSiWare backup that exploits the system in order to dump the DSi Internet Settings application to the SD root.</p>
+<p>For a more technical explanation, see <a href="https://github.com/zoogie/Bannerbomb3">here</a>.</p>
+</details>
+{: .notice--info}
 
-Per eseguire un dump dei DSiWare di sistema, approfittiamo di una falla di sicurezza nella sezione Gestione Nintendo DSiWare dell'applicazione Impostazioni della console.
-
-Per realizzare l'obiettivo, utilizziamo la chiave di cifratura della tua console (movable.sed) per generare un backup DSiWare che induce la console a creare un dump dell'applicazione Impostazioni Internet DSi nella directory principale della scheda SD.
+### Compatibility Notes
 
 Queste istruzioni funzionano su console americane, europee, giapponesi e coreane, indicate rispettivamente dalle lettere U, E, J o K dopo la versione del sistema operativo.
 
@@ -20,6 +24,9 @@ Se hai una console taiwanese (indicata da una T dopo la versione di sistema), se
 * Il tuo file `movable.sed` dalla sezione [Seedminer](seedminer)
 
 #### Sezione I - Preparazione
+
+In this section, you will copy the files needed to trigger the BannerBomb3 exploit onto your device's SD card.
+
 1. Avvia [BannerBomb3 Tool](https://3ds.nhnarwhal.com/3dstools/bannerbomb3.php) sul tuo computer
 1. Carica il tuo file movable.sed scegliendo l'opzione "Choose File"
 1. Seleziona "Build and Download"
@@ -27,28 +34,31 @@ Se hai una console taiwanese (indicata da una T dopo la versione di sistema), se
 1. Se la tua console è accesa, spegnila
 1. Inserisci la scheda SD nel tuo computer
 1. Nella tua scheda SD, entra in `Nintendo 3DS` -> `<ID0>` -> `<ID1>`
-  + Questo `<ID0>` sarà lo stesso che hai utilizzato in [Seedminer](seedminer)
-  + `<ID1>` è una cartella dal nome lungo 32 caratteri all'interno di `<ID0>`
+  + `<ID0>` is the 32-letter folder name that you copied in [Seedminer](seedminer)
+  + `<ID1>` is a 32-letter folder inside of the `<ID0>`
+  ![]({{ "/images/screenshots/bb3/dsiware-location-1.png" | absolute_url }}){: .notice--info}
 1. Crea una cartella chiamata `Nintendo DSiWare` all'interno di `<ID1>`
   + Se hai già la cartella *e* sono già presenti dei file di backup DSiWare (`<id-a-8-caratteri>.bin`) all'interno, copiali sul PC e rimuovili dalla scheda SD
-1. Copia il file `F00D43D5.bin` da `BannerBomb3.zip` nella cartella `Nintendo DSiWare`
+1. Copy the `F00D43D5.bin` file from `BannerBomb3.zip` to the `Nintendo DSiWare` folder
 
-    ![]({{ "/images/screenshots/dsiware-save-location.png" | absolute_url }})
-    {: .notice--info}
+![]({{ "/images/screenshots/bb3/dsiware-location-2.png" | absolute_url }})
+{: .notice--info} 
 
 #### Sezione II - BannerBomb3
+
+In this section, you will trigger the BannerBomb3 exploit using the DSiWare Management menu and copy the resulting file dump to your computer so that you can use it on the next page.
+
 1. Reinserisci la scheda SD nella tua console
 1. Accendi la console
 1. Avvia "Impostazioni della console"
-1. Entra in `Gestione dati` -> `DSiWare`
-1. Clicca sulla sezione Scheda SD
+1. Navigate to `Data Management` -> `DSiWare` -> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
   + Lo schermo della console dovrebbe lampeggiare magenta (rosa/viola), per poi crashare qualche secondo dopo. Ciò significa che l'exploit ha avuto successo
 1. Spegni il tuo 3DS
 1. Inserisci la scheda SD nel tuo computer
-1. Ora dovresti avere il file `42383841.bin` nella directory principale della scheda SD.  Questo è il DSiWare di backup che utilizzerai più avanti nella guida
-1. Nella tua scheda SD, entra in `Nintendo 3DS` -> `<ID0>` -> `<ID a 32 caratteri>` -> `Nintendo DSiWare`
-  + Questo `<ID0>` sarà lo stesso che hai utilizzato in [Seedminer](seedminer)
-1. Elimina il file `F0D43D5.bin` dalla cartella Nintendo DSiWare e dal tuo computer. Questo file non sarà più necessario
+1. You should now have `42383841.bin` on the root of your SD card. Copy this file to somewhere on your computer, as you will use it on the next page
+1. Nella tua scheda SD, entra in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`
+1. Delete `F00D43D5.bin` from your Nintendo DSiWare folder and from your computer. Questo file non sarà più necessario
+
 
 + Prosegui con l'[Installazione di boot9strap (Fredtool)](installing-boot9strap-(fredtool))
 {: .notice--primary}
