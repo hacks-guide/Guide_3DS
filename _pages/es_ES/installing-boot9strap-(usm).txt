@@ -4,15 +4,17 @@ title: "Instalar boot9strap (USM)"
 
 {% include toc title="Tabla de contenidos" %}
 
-### Lectura requerida
+<details>
+<summary><em>Technical Details (optional)</em></summary>
+<p>In order to exploit the SAFE_MODE firmware of our system, we need to inject an exploited WiFi profile.</p>
+<p>We can do this using an existing exploit, BannerBomb3.</p>
+<p>To accomplish this, we use your system's encryption key (movable.sed) to build a DSiWare backup that exploits the system in order to inject the exploited WiFi profile into your connections list.</p>
+<p>Once the WiFi profile has been injected, we will use SAFE_MODE, which is a recovery feature present on all 3DS consoles, to activate the exploited WiFi profile.</p>
+<p>For a more technical explanation, see the following links for information on the BannerBomb3 and unSAFE_MODE exploits: <a href="https://github.com/zoogie/Bannerbomb3">BannerBomb3</a>, <a href="https://github.com/zoogie/unSAFE_MODE/">unSAFE_MODE</a>.</p>
+</details>
+{: .notice--info}
 
-Para pode aprovechar el exploit del firmware SAFE_MODE de nuestro sistema, necesitamos inyectar un perfil de WiFi con el exploit.
-
-Podemos hacer esto utilizando un exploit existente, BannerBomb3.
-
-To accomplish this, we use your system's encryption key (movable.sed) to build a DSiWare backup that exploits the system in order to inject the exploited WiFi profile into your connections list.
-
-Una vez que el perfil de WiFi ha sido inyectado, usaremos SAFE_MODE, que consiste en una función de recuperación presente en todas las consolas, para activar el perfil de WiFi con el exploit.
+### Compatibility Notes
 
 Estas instrucciones funcionan en consolas de las regiones USA, Europa, Japón y Corea, indicado por las letras U, E, J o K después de la versión del sistema.
 
@@ -29,6 +31,8 @@ If your (Right/Left Shoulder), (D-Pad Up), or (A) buttons do not work, you will 
 
 #### Sección I - Preparativos
 
+In this section, you will copy the files needed to trigger the BannerBomb3 and unSAFE_MODE exploits onto your device's SD card.
+
 1. Si tu consola está encendida, apágala
 1. Abre [unSAFE_MODE Exploit Injector](https://3ds.nhnarwhal.com/3dstools/unsafemode.php) en tu computadora
 1. Carga tu movable.sed usando la opción "Choose File"
@@ -41,46 +45,50 @@ If your (Right/Left Shoulder), (D-Pad Up), or (A) buttons do not work, you will 
 1. Copia `boot9strap.firm` y `boot9strap.firm.sha` desde el `.zip` de `boot9strap` a la carpeta `/boot9strap/` en tu tarjeta SD
 1. Copia `SafeB9SInstaller.bin` desde el `.zip` de SafeB9SInstaller a la raíz de tu tarjeta SD
 1. Copia el archivo `usm.bin` desde `unSAFE_MODE.zip` a la raíz de tu tarjeta SD
-  + ![]({{ "/images/screenshots/usm-root-layout.png" | absolute_url }})
-    {: .notice--info}
-
+    ![]({{ "/images/screenshots/bb3/usm-root-layout.png" | absolute_url }}){: .notice--info}
+    ![]({{ "/images/screenshots/boot9strap-folder.png" | absolute_url }}){: .notice--info}
 1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` on your SD card
-  + La `<ID0>` en cuestión es la misma que usaste en [Seedminer](seedminer)
-  + El `<ID1>` es una carpeta con un nombre compuesto por 32 caracteres, dentro de `<ID0>`
+  + `<ID0>` is the 32-letter folder name that you copied in [Seedminer](seedminer)
+  + `<ID1>` is a 32-letter folder inside of the `<ID0>`
+  ![]({{ "/images/screenshots/bb3/dsiware-location-1.png" | absolute_url }}){: .notice--info}
 1. Create a folder named `Nintendo DSiWare` inside of the `<ID1>`
   + If you already had the folder *and* there are any existing DSiWare backup files (`<8-character-id>.bin`) inside, copy them to your PC and remove them from your SD card
 1. Copia el archivo `F00D43D5.bin` desde `unSAFE_MODE.zip` a la carpeta `Nintendo DSiWare`
 
-    ![]({{ "/images/screenshots/dsiware-save-location.png" | absolute_url }})
-    {: .notice--info}
+![]({{ "/images/screenshots/bb3/dsiware-location-2.png" | absolute_url }})
+{: .notice--info} 
 
 #### Sección II - BannerBomb3
+
+In this section, you will trigger the BannerBomb3 exploit using the DSiWare Management menu, which can be used to overwrite your Wi-Fi slots with hacked data. Your Wi-Fi connection settings will be temporarily overwitten while the exploit is active.
 
 1. Vuelve a insertar tu tarjeta SD en tu consola
 1. Enciende tu consola
 1. Entra a Configuración de la consola
-1. Ve a `Data Management` -> `DSiWare`
-1. Haz click en la sección de tarjeta SD
-  + La consola debería mostrar un menú con algo de texto
+1. Navigate to `Data Management` -> `DSiWare`-> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
+  + Your device should show the [Bannerbomb3 menu](/images/screenshots/bb3/usm-menu.png)
   + If this step causes your device to crash, [follow this troubleshooting guide](troubleshooting#dsiware-management-menu-crashes-without-showing-usm-menu)
-1. Selecciona "Inject haxx"
+1. Press (A) to select "Inject haxx"
   + Tu consola se apagará automáticamente
 
 #### Sección III - unSAFE_MODE
 
+In this section, you will enter Safe Mode (a feature available on all 3DS family devices) and navigate to a menu where unSAFE_MODE will be triggered, which will launch you into the boot9strap (custom firmware) installer.
+
 1. With your device still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your device
-  + Mantén pulsados los botones hasta que la consola encienda en modo seguro
+  + Keep holding the buttons until the device boots into Safe Mode (a "system update" menu)
   + If you're unable to get into Safe Mode after multiple attempts, one of your buttons may be failing or broken. If this is the case, you will need to follow [an alternate branch of Seedminer](bannerbomb3). For assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 1. Presiona "OK" para aceptar la actualización
   + No hay actualización. Esto es parte del exploit
 1. Presiona sobre "Acepto" para aceptar los términos y condiciones
 1. The update will eventually fail, with the error code `003-1099`. Este comportamiento es el esperado
 1. Cuando se te pregunte "¿Quieres configurar tu conexión a internet?", selecciona "Aceptar"
-1. En el menú siguiente, navega a `Conexión 1` -> `Modificar ajustes` -> `Siguiente página (flecha derecha)` -> `Servidor proxy` -> `Ajustes avanzados`
-  + This is a [visual representation](/images/safemode_highlighted.png)
+1. On the following menu, navigate to `Connection 1` -> `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings` -> `Detailed Setup` ([image](/images/screenshots/bb3/safemode_highlighted.png))
 1. Si el exploit ha funcionado, la consola habrá iniciado SafeB9SInstaller
 
 #### Section IV - Installing boot9strap
+
+In this section, you will install custom firmware onto your device.
 
 1. Cuando se te pida, introduce la combinación de botones mostrada para instalar boot9strap
   + If the top screen is blank, power off your device and re-do Section III
@@ -95,16 +103,17 @@ At this point, your console will boot to Luma3DS by default.
 
 #### Section V - Restoring WiFi Configuration Profiles
 
+In this section, you will trigger the BannerBomb3 exploit a second time so that you can restore the Wi-Fi connection slots that were overwritten in Section II.
+
 1. Entra a Configuración de la consola
-1. Ve a `Data Management` -> `DSiWare`
-1. Haz click en la sección de tarjeta SD
-  + La consola debería mostrar un menú con algo de texto
-1. Selecciona "Restore slots"
+1. Navigate to `Data Management` -> `DSiWare`-> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
+  + Your device should show the [Bannerbomb3 menu](/images/screenshots/bb3/usm-menu.png)
+1. Use the D-Pad to navigate and press the (A) button to select "Restore slots"
   + Your device will automatically reboot
 1. Apaga tu consola
 1. Inserta tu tarjeta SD en tu computadora
 1. Ve a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` en tu tarjeta SD
-1. Elimina `F00D43D5.bin` de la carpeta Nintendo DSiWare
+1. Delete `F00D43D5.bin` from your Nintendo DSiWare folder and from your computer. Este archivo ya no será necesario
 
 ___
 
