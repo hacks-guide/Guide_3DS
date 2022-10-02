@@ -4,15 +4,17 @@ title: "安裝 boot9strap (透過 USM)"
 
 {% include toc title="條目內容" %}
 
-### 必讀事項
+<details>
+<summary><em>Technical Details (optional)</em></summary>
+<p>In order to exploit the SAFE_MODE firmware of our system, we need to inject an exploited WiFi profile.</p>
+<p>We can do this using an existing exploit, BannerBomb3.</p>
+<p>To accomplish this, we use your system's encryption key (movable.sed) to build a DSiWare backup that exploits the system in order to inject the exploited WiFi profile into your connections list.</p>
+<p>Once the WiFi profile has been injected, we will use SAFE_MODE, which is a recovery feature present on all 3DS consoles, to activate the exploited WiFi profile.</p>
+<p>For a more technical explanation, see the following links for information on the BannerBomb3 and unSAFE_MODE exploits: <a href="https://github.com/zoogie/Bannerbomb3">BannerBomb3</a>, <a href="https://github.com/zoogie/unSAFE_MODE/">unSAFE_MODE</a>.</p>
+</details>
+{: .notice--info}
 
-為了破解系統的 SAFE_MODE 韌體，我們需先注入一個已被破解的 WiFi 設定檔至主機中。
-
-我們可以利用 BannerBomb3 這個現有的漏洞進行以下操作。
-
-To accomplish this, we use your system's encryption key (movable.sed) to build a DSiWare backup that exploits the system in order to inject the exploited WiFi profile into your connections list.
-
-一旦 WiFi 設定檔被注入，我們將會使用到 SAFE_MODE 來繼續此教學。 SAVE_MODE 是一個所有的 3DS 主機都存在的修復功能，我們之後將用它來啟動已修改後的 WiFi 設定檔。
+### Compatibility Notes
 
 這些操作在美、歐、日、韓版可用，可透過系統版本號末尾的 「U、E、J、K」 字元來辨別。
 
@@ -29,6 +31,8 @@ If your (Right/Left Shoulder), (D-Pad Up), or (A) buttons do not work, you will 
 
 #### 第一節 — 準備工作
 
+In this section, you will copy the files needed to trigger the BannerBomb3 and unSAFE_MODE exploits onto your device's SD card.
+
 1. 如果您的主機正處於開機狀態，那麼請將其關機
 1. 於您的電腦中開啟 [unSAFE_MODE Exploit Injector](https://3ds.nhnarwhal.com/3dstools/unsafemode.php)
 1. 點選「Choose File」，並選取您的 movable.sed 檔案
@@ -41,46 +45,50 @@ If your (Right/Left Shoulder), (D-Pad Up), or (A) buttons do not work, you will 
 1. 解壓 boot9strap `.zip` 的 `boot9strap.firm` 及 `boot9strap.firm.sha` 檔案至 SD 卡的 `/boot9strap/` 資料夾中
 1. 將 SafeB9SInstaller `.zip` 中的 `SafeB9SInstaller.bin` 複製到 SD 卡的根目錄
 1. 解壓 `unSAFE_MODE.zip` 內的 `usm.bin` 到 SD 卡的根目錄底下
-  + ![]({{ "/images/screenshots/usm-root-layout.png" | absolute_url }})
-    {: .notice--info}
-
+    ![]({{ "/images/screenshots/bb3/usm-root-layout.png" | absolute_url }}){: .notice--info}
+    ![]({{ "/images/screenshots/boot9strap-folder.png" | absolute_url }}){: .notice--info}
 1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` on your SD card
-  + 此 `<ID0>` 字串將與您在 [Seedminer](seedminer) 中所使用的字串一樣
-  + 此 `<ID1>` 字串指的是 `<ID0>` 內 32 字元的資料夾名稱
+  + `<ID0>` is the 32-letter folder name that you copied in [Seedminer](seedminer)
+  + `<ID1>` is a 32-letter folder inside of the `<ID0>`
+  ![]({{ "/images/screenshots/bb3/dsiware-location-1.png" | absolute_url }}){: .notice--info}
 1. Create a folder named `Nintendo DSiWare` inside of the `<ID1>`
   + If you already had the folder *and* there are any existing DSiWare backup files (`<8-character-id>.bin`) inside, copy them to your PC and remove them from your SD card
 1. 解壓 `unSAFE_MODE.zip` 內的 `F00D43D5.bin` 到 `Nintendo DSiWare` 資料夾中
 
-    ![]({{ "/images/screenshots/dsiware-save-location.png" | absolute_url }})
-    {: .notice--info}
+![]({{ "/images/screenshots/bb3/dsiware-location-2.png" | absolute_url }})
+{: .notice--info} 
 
 #### 第二節 — BannerBomb3
+
+In this section, you will trigger the BannerBomb3 exploit using the DSiWare Management menu, which can be used to overwrite your Wi-Fi slots with hacked data. Your Wi-Fi connection settings will be temporarily overwitten while the exploit is active.
 
 1. 將 SD 卡插回主機中
 1. 啟動您的主機
 1. 於您主機上啟動系統設定 (System Settings)
-1. 移動至 `檔案管理 (Data Management)` -> `DSiWare`
-1. 點擊 SD 卡 部分
-  + 主機應該會顯示一個選單
+1. Navigate to `Data Management` -> `DSiWare`-> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
+  + Your device should show the [Bannerbomb3 menu](/images/screenshots/bb3/usm-menu.png)
   + If this step causes your device to crash, [follow this troubleshooting guide](troubleshooting#dsiware-management-menu-crashes-without-showing-usm-menu)
-1. 選擇『Inject haxx』
+1. Press (A) to select "Inject haxx"
   + 主機將會自動關機
 
 #### 第三節 — unSAFE_MODE
 
+In this section, you will enter Safe Mode (a feature available on all 3DS family devices) and navigate to a menu where unSAFE_MODE will be triggered, which will launch you into the boot9strap (custom firmware) installer.
+
 1. With your device still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your device
-  + 持續按住按鈕直到主機重啟至安全模式中
+  + Keep holding the buttons until the device boots into Safe Mode (a "system update" menu)
   + If you're unable to get into Safe Mode after multiple attempts, one of your buttons may be failing or broken. If this is the case, you will need to follow [an alternate branch of Seedminer](bannerbomb3). For assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 1. 按下『OK』以允許更新
   + 此步驟將不會進行任何更新， 這只是觸發漏洞的一部分。
 1. 按下「I accept(我同意/同意します)」鍵以接受聲明條款
 1. The update will eventually fail, with the error code `003-1099`. 這也是觸發漏洞的一部分
 1. 當系統提示您『你想要配置網路設置嗎? (Would you like to configure Internet settings?)』時，點選『Yes』
-1. 在接下來出現的選單中，移動至 `連接點 1(Connection 1)` -> `更改設定(Change Settings)` -> `下一頁 (右箭頭)` -> `代理設置(Proxy Settings)` -> `詳細設置(Detailed Setup)`
-  + This is a [visual representation](/images/safemode_highlighted.png)
+1. On the following menu, navigate to `Connection 1` -> `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings` -> `Detailed Setup` ([image](/images/screenshots/bb3/safemode_highlighted.png))
 1. 如果一切成功的話，您將自動進入 SafeB9SInstaller
 
 #### Section IV - Installing boot9strap
+
+In this section, you will install custom firmware onto your device.
 
 1. 出現提示時，輸入上方螢幕所顯示的按鍵組合以安裝 boot9strap
   + If the top screen is blank, power off your device and re-do Section III
@@ -95,16 +103,17 @@ At this point, your console will boot to Luma3DS by default.
 
 #### Section V - Restoring WiFi Configuration Profiles
 
+In this section, you will trigger the BannerBomb3 exploit a second time so that you can restore the Wi-Fi connection slots that were overwritten in Section II.
+
 1. 於您主機上啟動系統設定 (System Settings)
-1. 移動至 `檔案管理 (Data Management)` -> `DSiWare`
-1. 點擊 SD 卡 部分
-  + 主機應該會顯示一個選單
-1. 選擇『Restore slots』
+1. Navigate to `Data Management` -> `DSiWare`-> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
+  + Your device should show the [Bannerbomb3 menu](/images/screenshots/bb3/usm-menu.png)
+1. Use the D-Pad to navigate and press the (A) button to select "Restore slots"
   + Your device will automatically reboot
 1. 關閉您的主機
 1. 將 SD 卡插入至電腦中
 1. 於您的 SD 卡中，移動至 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`
-1. 刪除 Nintendo DSiWare 資料夾下的 `F00D43D5.bin` 檔案
+1. Delete `F00D43D5.bin` from your Nintendo DSiWare folder and from your computer. 這個檔案之後不再需要了
 
 ___
 
