@@ -4,21 +4,24 @@ title: "安装 boot9strap（通过 Fredtool）"
 
 {% include toc title="目录内容" %}
 
-### 重要事项
-
-本章节 Seedminer 将使用你的 `movable.sed` 文件来解密所有的 DSiWare 程序，以便在3DS中内置的 DS 网络设定中注入修改后的 DSiWare 程序。 这个操作需要你有任何的 DSiWare 备份，比如 BannerBomb 或 DSiWare Dumper 工具导出的。
-
-本教程是使用 “FIRM partitions known-plaintext” 漏洞来进行破解的， 欲知相关资料请查阅[这里](https://www.3dbrew.org/wiki/3DS_System_Flaws)。
+<details>
+<summary><em>Technical Details (optional)</em></summary>
+<p>This method of using Seedminer for further exploitation uses your <code>movable.sed</code> file to decrypt any DSiWare title for the purposes of injecting an exploitable DSiWare title into the DS Internet Settings application. This requires you to have a DSiWare backup, which you should have gotten in the previous section.</p>
+<p>This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed <a href="https://www.3dbrew.org/wiki/3DS_System_Flaws">here</a>.</p>
+</details>
+{: .notice--info}
 
 ### 你需要准备点啥？
 
-* 一个 DSiWare 备份文件（你在做完 [BannerBomb3](bannerbomb3) 之后根目录应该有了一个）
+* A DSiWare Backup, normally `42383841.bin` (You should have one on the root of your SD card from following [BannerBomb3](bannerbomb3))
 * 你在 [Seedminer](seedminer) 步骤中获得的 `movable.sed` 文件
 * 最新版本的 [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest)（下载 `Frogminer_save.zip`）
 * 最新版本的 [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)（下载 `boot.nds`）
 * 最新版本的 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)（下载 Luma3DS `.zip` 文件）
 
 #### 第一步 – 检查自制固件
+
+As an additional safety measure, we will perform an additional check for custom firmware. This is because using this method when custom firmware is already installed has a risk of bricking the console (rendering it unusable without recovery methods like [ntrboot](ntrboot)).
 
 1. 将主机关机
 1. 按住 “Select” 键
@@ -30,17 +33,7 @@ title: "安装 boot9strap（通过 Fredtool）"
 
 #### 第二步 – 准备工作
 
-1. 将主机关机
-1. 将你的 SD 卡插入到电脑
-1. 解压 Luma3DS `.zip` 里的 `boot.firm` 和 `boot.3dsx` 到你 SD 卡的根目录
-  + 根目录指的是你点进 SD 卡看到的目录，你可以在这个目录下看到 Nintendo 3DS 文件夹，但请不要点进去
-1. 复制 `boot.nds` （B9STool）到你的 SD 卡根目录
-1. 从 Frogminer_save `.zip` 压缩包中复制 `private` 文件夹到内存卡的根目录
-
-    ![]({{ "/images/screenshots/fredtool-root-layout.png" | absolute_url }})
-    {: .notice--info}
-
-#### 第三步 – Fredtool
+In this section, you will copy the files necessary to temporarily replace DS Connection Settings with Flipnote Studio, which is used to launch the boot9strap (custom firmware) installer.
 
 1. 在电脑上打开 [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec) 站点
 1. 于“Username”一行，填入一个你的英文名（不带空格或特殊字符）
@@ -53,25 +46,39 @@ title: "安装 boot9strap（通过 Fredtool）"
 1. 点击第一个搜索结果
   + 它应该是所有显示的结果中时间最新的那一个
 1. 点击 "output_(<你的名字>).zip" 的链接
+1. 将你的 SD 卡插入到电脑
 1. 打开内存卡的 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 文件夹
-  + 这个 `<ID0>` 和你在 [Seedminer](seedminer) 章节中打开的一样
-  + `<ID1>` 是一个在 `<ID0>` 文件夹内，另一个 32 位字符长的文件夹
-  + 如果里面没有 `Nintendo DSiWare` 文件夹，请在 `<ID1>` 文件夹内创建它
+  + `<ID0>` is the 32-letter folder name that you copied in [Seedminer](seedminer)
+  + `<ID1>` is a 32-letter folder inside of the `<ID0>` 
 1. 从下载的 DSiWare 压缩包 （`output_(<你的名字>).zip`） 里的 `hax` 文件夹复制 `42383841.bin` 到 `Nintendo DSiWare` 文件夹
-1. 将 SD 卡重新插入你的主机
+  ![]({{ "/images/screenshots/bb3/dsiware-location-4.png" | absolute_url }}){: .notice--info} 
+1. 解压 Luma3DS `.zip` 里的 `boot.firm` 和 `boot.3dsx` 到你 SD 卡的根目录
+  + 根目录指的是你点进 SD 卡看到的目录，你可以在这个目录下看到 Nintendo 3DS 文件夹，但请不要点进去
+1. 复制 `boot.nds` （B9STool）到你的 SD 卡根目录
+1. 从 Frogminer_save `.zip` 压缩包中复制 `private` 文件夹到内存卡的根目录
+
+    ![]({{ "/images/screenshots/fredtool-root-layout.png" | absolute_url }})
+    {: .notice--info}
+
+#### Section III - Overwriting DS Connection Settings
+
+In this section, you will copy the hacked DS Connection Settings DSiWare to internal memory, which will temporarily replace it with Flipnote Studio.
+
 1. 启动你的主机
 1. 启动你主机上的 “系统设置(System settings)”
-1. 进入到 `数据管理（Data Management）` -> `DSiWare`
-1. 在 “SD Card” 一栏，选择 “Haxxxxxxxxx!” 应用
+1. Navigate to `Data Management` -> `DSiWare`-> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
+1. Select the "Haxxxxxxxxx!" title
 1. 选择 “Copy” ，然后选择 “OK”
 1. 返回系统设置的主菜单
-1. 移动到 `“网络设置(Internet Settings)”` -> `“任天堂 DS 连接(Nintendo DS Connections)”`，然后选择 “OK”
+1. Navigate to `Internet Settings` -> `Nintendo DS Connections`, then select "OK" ([image](/images/screenshots/fredtool/dsconnection.png))
 1. 如果漏洞执行成功，你的主机将进入到日版的“うごくメモ帳 (Flipnote Studio)”
 
 #### 第四步 – 触发 Flipnote 漏洞
 
 如果你需要图片帮助，请点击 [这里](https://zoogie.github.io/web/flipnote_directions/)。
 {: .notice--info}
+
+In this section, you will perform a series of very specific steps within Flipnote Studio that, when performed correctly, will launch the boot9strap (custom firmware) installer.
 
 1. 完成游戏的初始设置，直到进入主菜单为止
   + 在出现提示时，选择左边的 “我不需要(いらない)” 选项
@@ -85,7 +92,7 @@ title: "安装 boot9strap（通过 Fredtool）"
 1. 点击第四个带有 “A” 的框
 1. 如果漏洞成功执行，你的主机将会进入到 b9sTool
 1. 使用十字键将光标移动至“Install boot9starp”
-  + 如果你漏了这步，系统将重启到桌面而非安装 boot9strap，你需要重新从本页教程第三步下的第12步开始
+  + If you miss this step, the system will exit to HOME Menu instead of installing boot9strap and you will need to open System Settings, then start over from Step 7 of Section III
 1. 按下 “A” 键，然后同时按下 START 键和 SELECT 键来开始安装
 1. 一旦下屏显示 “done.” ，那么安装就已经完成了。退出b9stool ，然后关机
   + 你可能需要长按电源键强制关机
@@ -93,6 +100,8 @@ title: "安装 boot9strap（通过 Fredtool）"
   + 如果你看到主机显示了 Luma 配置菜单，请按下 START 键重启然后继续教程
 
 #### 第五步 – 验证 Luma3DS
+
+Due to the nature of the exploit used, it is occasionally (but rarely) possible for boot9strap to not actually get installed. This section will therefore verify that boot9strap was successfully installed by seeing if some files that are normally automatically generated by Luma3DS were created.
 
 1. 将主机关机
 1. 将你的 SD 卡插入到电脑
@@ -106,13 +115,15 @@ title: "安装 boot9strap（通过 Fredtool）"
 
 #### 第六步 – 还原 “DS 连接设置（DS Connection Settings）”
 
-1. 从刚下载的压缩包（`output_(<你的名字>).zip`）中的 `clean/` 文件夹复制出 `42383841.bin`，将其复制进你 SD 卡的 `Nintendo 3DS/<ID0>/<ID1>/Nintendo DSiWare/` 文件夹
-  + 请替换现有的 `42383841.bin` 文件
-1. 将SD卡重新插入你的主机
+In this section, you will restore DS Connection Settings to the way it was before it was temporarily replaced with Flipnote Studio in Section III.
+
+1. 打开内存卡的 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 文件夹
+1. Copy the `42383841.bin`  file from the `clean` folder of the downloaded DSiWare archive (output_(name).zip) to the `Nintendo DSiWare` folder, replacing the existing one
+1. 将 SD 卡重新插入你的主机
 1. 启动你的主机
 1. 启动你主机上的 “系统设置(System settings)”
-1. 进入到 `数据管理（Data Management）` -> `DSiWare`
-1. 在 “SD卡(SD Card)” 一栏，选择 “Nintendo DSi™” 应用
+1. Navigate to `Data Management` -> `DSiWare`-> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
+1. Select the "Nintendo DSi™" title
 1. 选择 “Copy” ，然后选择 “OK”
 
 ___
