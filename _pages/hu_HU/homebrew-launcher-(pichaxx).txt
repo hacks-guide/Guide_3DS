@@ -4,9 +4,17 @@ title: "Homebrew Launcher (PicHaxx)"
 
 {% include toc title="Tartalomjegyzék" %}
 
-### Fontos tudnivalók
+<details>
+<summary><em>Technical Details (optional)</em></summary>
+This method of using Seedminer for further exploitation uses your <code>movable.sed</code> file to write a custom save file for Pokémon Picross, which can then be used with unSAFE_MODE (via Homebrew Launcher) to run SafeB9SInstaller. For information on PicHaxx itself, see <a href="https://github.com/zoogie/pichaxx">here</a>.
+</details>
+{: .notice--info}
 
-Ez a metódusa Seedminer használatának további exploitolás céljából használja a `movable.sed` fájlt, hogy egy egyedi Pokémon Picross mentés fájlt írjon, amit már használhat az unSAFE_MODE a SafeB9Installer futtatására.
+### Compatibility Notes
+
+These instructions work on USA, Europe, and Japan consoles as indicated by the letters U, E, or J after the system version.
+
+You will need a Nintendo Network ID to download Pokémon Picross.
 
 Ennek a folyamatnak a során a Pokémon Picross mentése felülírásra kerül, ha rendelkezel ilyennel. Ha szeretnéd megőrizni a Pokémon Picross játék adatod, készítened kell egy mentést a `00000001.sav` fájlról, mielőtt felülírnád.
 {: .notice--warning}
@@ -24,15 +32,8 @@ Ennek a folyamatnak a során a Pokémon Picross mentése felülírásra kerül, 
 
 #### I. rész - Előkészületek
 
-1. Kapcsold be a készülékedet
-1. Nyisd meg a Nintendo eShop-ot
-1. Koppints a Search ikonra (kis nagyító)
-1. Keress a `picross`-ra
-1. Nyisd meg a Pokémon Picross áruház oldalát
-1. Töltsd le a Pokémon Picross-t
-  + Beolvashatod [ezt a QR kódot](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=ESHOP://50010000037815&margin=0&qzone=1&size=400x400&ecc=L) a Nintendo 3DS Camera appal egy közvetlen linkért az eShop app-ra
-  + Az SD kártyád be kell legyen helyezve az eszközödbe a Pokémon Picross telepítéséhez
-1. Kapcsold ki a készüléked
+In this section, you will copy some of the files that will be used to launch the Homebrew Launcher.
+
 1. Helyezd az SD kártyád a számítógépbe
 1. Másold át a `boot.firm` és `boot.3dsx` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
   + Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne
@@ -40,8 +41,16 @@ Ennek a folyamatnak a során a Pokémon Picross mentése felülírásra kerül, 
 1. Másold át a `slotTool` mappát az unSAFE_MODE `.zip`-ből az SD kártya gyökerében található `3ds` mappába
 1. Másold a régiódhoz tartozó otherapp payloadot az unSAFE_MODE `.zip` `otherapps_with_CfgS` mappájából az SD kártya gyökerébe, majd nevezd át `otherapp.bin` névre
 
+![]({{ "/images/screenshots/hblpichaxx-root-layout.png" | absolute_url }})
+{: .notice--info}
+
+![]({{ "/images/screenshots/slottool-folder.png" | absolute_url }})
+{: .notice--info}
+
+
 #### II. rész - PicHaxx
 
+In this section, you will create a hacked Pokémon Picross save file that, when used, will load the Homebrew Launcher on your device.
 1. Nyisd meg [a PicHaxx Injector weboldalát](nhnarwhal.com/3dstools/pichaxx.php/) a számítógépen
 1. Válaszd ki a `movable.sed` fájlod
 1. Válaszd a "Build and Download" menüpontot
