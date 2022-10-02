@@ -20,6 +20,8 @@ On this page, we will make critical system file backups and install the followin
 It is not recommended to skip downloading any of these applications, as many of them will be used later on this page. At the end of this page, your SD card will be cleaned up by removing unnecessary installation files.
 {: .notice--warning}
 
+### Compatibility Notes
+
 If your **New 3DS** was on version 2.1.0 before following this guide, you should [restore your NAND backup](godmode9-usage#restoring-a-nand-backup) before continuing.
 {: .notice--warning}
 
@@ -39,6 +41,8 @@ If your previous CFW setup was EmuNAND-based and you wish to move the contents o
 
 #### Schritt I - Vorbereitungen
 
+In this section, you will copy the files necessary to follow the rest of the instructions on this page.
+
 1. Schalte dein Gerät aus
 1. Stecke deine SD-Karte in deinen Computer
 1. Erstelle einen Ordner namens `cias` im Stammverzeichnis deiner SD-Karte falls er noch nicht existiert
@@ -52,14 +56,19 @@ If your previous CFW setup was EmuNAND-based and you wish to move the contents o
 1. Stecke deine SD-Karte wieder in dein Gerät
 1. Schalte deine Konsole an
 
-    ![]({{ "/images/screenshots/finalizing-root-layout.png" | absolute_url }})
-    {: .notice--info}
-    ![]({{ "/images/screenshots/godmode9-location.png" | absolute_url }})
-    {: .notice--info}
+The screenshots below indicate the minimum SD card layout that is required to follow this page. You may have extra files or folders on your SD card, depending on your previous setup or the method that you followed.
 
-These screenshots indicate the minimum SD card layout that is required to follow this page. You may have extra files or folders on your SD card, depending on your previous setup or the method that you followed.
+![]({{ "/images/screenshots/finalizing-root-layout.png" | absolute_url }})
+{: .notice--info}
+
+![]({{ "/images/screenshots/godmode9-location.png" | absolute_url }})
+{: .notice--info}
+
+
 
 #### Schritt II - Aktualisierung des Systems
+
+In this section, you will update your system to the latest version, which is safe to do with custom firmware.
 
 1. Aktualisiere deine Konsole indem du zu den Systemeinstellungen wechselst, danach "Allgemeine Einstellungen" auswählst, ganz nach rechts navigierst (letzter Punkt im unteren Bildschirm) und dann das "System-Update" startest
   + Updates mit B9S + Luma (welches du hast) sind sicher
@@ -68,6 +77,8 @@ These screenshots indicate the minimum SD card layout that is required to follow
   + If this still gives you an error, [follow this troubleshooting guide](troubleshooting#unable-to-update-device)
 
 #### Section III - Homebrew Launcher
+
+In this section, you will temporarily replace Download Play with Homebrew Launcher (which we need to launch FBI). Download Play will automatically go back to normal once you reboot your device.
 
 1. Launch the Download Play application (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
 1. Wait until you see the `Nintendo 3DS` and `Nintendo DS` buttons
@@ -83,6 +94,8 @@ These screenshots indicate the minimum SD card layout that is required to follow
 
 #### Section IV - RTC and DSP Setup
 
+In this section, you will sync your 3DS internal clock with the actual time and dump the sound firmware (which is necesssary for some homebrew software to use sound properly).
+
 1. Press (Left Shoulder) + (D-Pad Down) + (Select) at the same time to open the Rosalina menu
 1. Wähle "Miscellaneous options"
 1. Select "Dump DSP firmware"
@@ -94,6 +107,8 @@ These screenshots indicate the minimum SD card layout that is required to follow
 
 #### Section V - Installing CIAs
 
+In this section, you will install several useful homebrew applications to HOME Menu.
+
 1. Starte FBI aus der Liste des Homebrews
 1. Navigiere zu `SD` -> `cias`
 1. Wähle "\<current directory>"
@@ -101,6 +116,8 @@ These screenshots indicate the minimum SD card layout that is required to follow
 1. Drücke (Home) und schließe die Download-Spiel Anwendung
 
 #### Schritt VI - CTRNAND Luma3DS
+
+In this section, you will use a script to copy some of Luma3DS's files to internal memory so that they can be accessed, even without an SD card inserted.
 
 1. Schalte deinen 3DS aus
 1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
@@ -118,12 +135,16 @@ These screenshots indicate the minimum SD card layout that is required to follow
 
 #### Section VII - Cleanup SD Card
 
+In this section, you will use a script to remove some unnecessary files from your SD card.
+
 1. Select "Cleanup SD Card"
 1. Drücke (A), wenn du dazu aufgefordert wirst, um fortzufahren
 1. Drücke (A) um fortzufahren
 1. Drücke (B), um zum Hauptmenü zurückzukehren
 
 #### Section VIII - Backup Essential Files
+
+In this section, you will make backups of flies that can be used to recover from softwaer bricks or to recover data.
 
 1. Select "Backup Options"
 1. Select "SysNAND Backup"
@@ -159,7 +180,7 @@ You're done! Custom firmware is now fully configured on your device.
 Hello! We're looking for feedback on the overall experience of following our guide. If you'd like to help out, check out the survey [here](https://forms.gle/vZNoc4QLCz5MEXCK7) (only available in English). Thanks!
 {: .notice--info}
 
-#### Information and Notes
+### Information and Notes
 
 {% capture notice-6 %}
 Here are some key combos that you should know:
