@@ -4,13 +4,16 @@ title: "boot9strap 설치 (HBL-USM)"
 
 {% include toc title="목차" %}
 
-### 중요
+<details>
+<summary><em>Technical Details (optional)</em></summary>
+<p>In order to exploit the SAFE_MODE firmware of our system, we need to inject an exploited WiFi profile.</p>
+<p>As we already have Homebrew access, we can use slotTool to do this.</p>
+<p>Once the WiFi profile has been injected, we will use SAFE_MODE, which is a recovery feature present on all 3DS consoles, to activate the exploited WiFi profile.</p>
+<p>For a more technical explanation, see <a href="https://github.com/zoogie/unSAFE_MODE/">here</a> for information about the unSAFE_MODE exploit.</p>
+</details>
+{: .notice--info}
 
-SAFE_MODE 펌웨어를 해킹하기 위해, 익스플로잇이 되어있는 Wi-Fi 프로필을 설치해야 합니다.
-
-As we already have Homebrew access, we can use slotTool to do this.
-
-그 후, 시스템 복구 모드, SAFE_MODE를 사용해 인터넷 설정을 활용화 시킵니다.
+### Compatibility Notes
 
 If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 {: .notice--danger}
@@ -24,7 +27,10 @@ If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, join [Nint
 
 #### 섹션 I - 준비 작업
 
+In this section, you will use Homebrew Launcher to launch slotTool, which will overwrite your Wi-Fi slots with hacked data. Then, you will copy the files needed to trigger the unSAFE_MODE exploit onto your device's SD card. Your Wi-Fi connection settings will be temporarily overwritten while the exploit is active.
+
 1. Your console should be powered on and showing the Homebrew Launcher from the previous part of the guide
+  + If not, power on your console and enter Homebrew Launcher through your method of choice (likely Pokémon Picross)
 1. 홈브류 목록에서 slotTool를 실행해 주세요
   + If you get stuck on a red screen, forcefully power off the console by holding the power button for fifteen seconds, then retry this section
 1. Select the "INSTALL exploit to wifi slots 1,2,3 & shutdown" option
@@ -36,21 +42,30 @@ If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, join [Nint
 1. `unSAFE_MODE.zip` 안에 있는 `usm.bin`을 SD 카드의 루트에 복사해 주세요
 1. SD 카드를 기기에 다시 삽입해 주세요
 
+![]({{ "/images/screenshots/hblusm-root-layout.png" | absolute_url }})
+{: .notice--info}
+
+![]({{ "/images/screenshots/boot9strap-folder.png" | absolute_url }})
+{: .notice--info}
+
 #### 섹션 II - unSAFE_MODE
 
+In this section, you will enter Safe Mode (a feature available on all 3DS family devices) and navigate to a menu where unSAFE_MODE will be triggered, which will launch you into the boot9strap (custom firmware) installer.
+
 1. 전원이 꺼져 있는 상태에서 (L 어깨) + (R 어깨) + (십자 Up) + (A) 를 길게 눌르고, 누르는 상태에서 전원을 켜 주세요
-  + 안전 모드로 부팅 될 때 까지 버튼들을 눌러 주세요
+  + Keep holding the buttons until the device boots into Safe Mode (a "system update" menu)
   + If you're unable to get into Safe Mode after multiple attempts, one of your buttons may be failing or broken. If this is the case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 1. "OK"를 선택해서 업데이트를 확인해 주세요
   + 실제로 업데이트를 하는 것은 아닙니다. 이것은 익스플로잇의 일부입니다
 1. "동의함"를 눌러서 이용 약관에 동의해 주세요
 1. 이 업데이트는 에러 코드 `003-1099` 와 같이 실패를 할 겁니다. 이것은 의도적 행동입니다
 1. When asked "Would you like to configure Internet settings?", select "Yes"
-1. 이 화면에서, `접솔 경로 1` -> `설정 변경` -> `다음 페이지 (오른쪽 화살표)` -> `Proxy 설정` -> `세부 설정` 으로 이동해 주세요
-  + [이 (영어) 사진](https://uwuu.ca/images/safemode_highlighted.png)처럼 하시면 됩니다
+1. On the following menu, navigate to `Connection 1` -> `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings` -> `Detailed Setup` ([image](/images/screenshots/bb3/safemode_highlighted.png))
 1. 익스플로잇이 성공적이었다면 SafeB9SInstaller로 부팅되었을 것입니다
 
 #### 섹션 III - boot9strap 설치하기
+
+In this section, you will install custom firmware onto your device.
 
 1. 메시지가 나타나면, boot9strap을 설치하기 위하여 화면에 주어진 키 조합을 입력해 주세요
   + 만약 위 화면에 반응이 없다면, 기기의 전원을 꺼 주시고 섹션 III를 다시 시도해 주세요
@@ -64,6 +79,8 @@ If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, join [Nint
   + 다음 페이지에서는 커펌에 유용한 홈브류를 설치해 기기 준비를 완료할 것 입니다.
 
 #### 섹션 IV - Wi-Fi 프로필 복구
+
+In this section, you will enter the Homebrew Launcher (this time using custom firmware) so that you can restore the Wi-Fi connection slots that were overwritten in Section II.
 
 1. 다운로드 플레이 앱을 실행해 주세요
 1. 두 가지의 버튼이 화면에 뜰 때까지 기다려 주세요
