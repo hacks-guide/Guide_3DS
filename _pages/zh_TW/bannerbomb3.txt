@@ -4,11 +4,15 @@ title: "BannerBomb3"
 
 {% include toc title="條目內容" %}
 
-### 必讀事項
+<details>
+<summary><em>Technical Details (optional)</em></summary>
+<p>To dump system DSiWare, we exploit a flaw in the DSiWare Data Management window of the Settings application.</p>
+<p>To accomplish this, we use your system's encryption key (movable.sed) to build a DSiWare backup that exploits the system in order to dump the DSi Internet Settings application to the SD root.</p>
+<p>For a more technical explanation, see <a href="https://github.com/zoogie/Bannerbomb3">here</a>.</p>
+</details>
+{: .notice--info}
 
-為了導出系統的 DSiWare 軟體， 我們使用了在系統設定內的 DSiWare 數據管理視窗的一個漏洞。
-
-為了做到這一點，我們將使用你裝置的系統加密金鑰 (movable.sed) 來建構一個可使用的 DSiWare 系統備份，以便將 DSi 網路設定程式導出到 SD 卡的根目錄。
+### Compatibility Notes
 
 這些操作在美、歐、日、韓版可用，可透過系統版本號末尾的 「U、E、J、K」 字元來辨別。
 
@@ -20,6 +24,9 @@ title: "BannerBomb3"
 * 您自 [Seedminer](seedminer) 步驟中所取得的 `movable.sed` 檔案
 
 #### 第一節 — 準備工作
+
+In this section, you will copy the files needed to trigger the BannerBomb3 exploit onto your device's SD card.
+
 1. 於您的電腦中開啟 [BannerBomb3 Tool](https://3ds.nhnarwhal.com/3dstools/bannerbomb3.php)
 1. 點選「Choose File」，並選取您的 movable.sed 檔案
 1. 點選『Build and Download』
@@ -27,28 +34,31 @@ title: "BannerBomb3"
 1. 如果您的主機正處於開機狀態，那麼請將其關機
 1. 將 SD 卡插入至電腦中
 1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` on your SD card
-  + 此 `<ID0>` 字串將與您在 [Seedminer](seedminer) 中所使用的字串一樣
-  + 此 `<ID1>` 字串指的是 `<ID0>` 內 32 字元的資料夾名稱
+  + `<ID0>` is the 32-letter folder name that you copied in [Seedminer](seedminer)
+  + `<ID1>` is a 32-letter folder inside of the `<ID0>`
+  ![]({{ "/images/screenshots/bb3/dsiware-location-1.png" | absolute_url }}){: .notice--info}
 1. Create a folder named `Nintendo DSiWare` inside of the `<ID1>`
   + If you already had the folder *and* there are any existing DSiWare backup files (`<8-character-id>.bin`) inside, copy them to your PC and remove them from your SD card
-1. 解壓 `BannerBomb3.zip` 內的 `F00D43D5.bin` 到 `Nintendo DSiWare` 資料夾中
+1. Copy the `F00D43D5.bin` file from `BannerBomb3.zip` to the `Nintendo DSiWare` folder
 
-    ![]({{ "/images/screenshots/dsiware-save-location.png" | absolute_url }})
-    {: .notice--info}
+![]({{ "/images/screenshots/bb3/dsiware-location-2.png" | absolute_url }})
+{: .notice--info} 
 
 #### 第二節 — BannerBomb3
+
+In this section, you will trigger the BannerBomb3 exploit using the DSiWare Management menu and copy the resulting file dump to your computer so that you can use it on the next page.
+
 1. 將 SD 卡插回主機中
 1. 啟動您的主機
 1. 於您主機上啟動系統設定 (System Settings)
-1. 移動至 `檔案管理 (Data Management)` -> `DSiWare`
-1. 點擊 SD 卡 部分
+1. Navigate to `Data Management` -> `DSiWare` -> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
   + 您的主機螢幕應該會開始品紅色(粉色 / 紫色)的閃爍，隨後幾秒當機並重啟。 這代表此漏洞成功執行了。
 1. 關閉您的主機
 1. 將 SD 卡插入至電腦中
-1. 現在您主機的 SD 卡根目錄下應該會出現一個叫做 `42383841.bin` 的檔案。  這是 DSiWare 的備份，您將在之後用到它
-1. 於您的 SD 卡中，移動至 `Nintendo 3DS` -> `<ID0>` -> `<32-character-id>` -> `Nintendo DSiWare`
-  + 此 `<ID0>` 字串將與您在 [Seedminer](seedminer) 中所使用的字串一樣
-1. 從 Nintendo DSiWare 資料夾與您的電腦上刪除 `F00D43D5.bin` 檔案。 這個檔案之後不再需要了
+1. You should now have `42383841.bin` on the root of your SD card. Copy this file to somewhere on your computer, as you will use it on the next page
+1. 於您的 SD 卡中，移動至 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`
+1. Delete `F00D43D5.bin` from your Nintendo DSiWare folder and from your computer. 這個檔案之後不再需要了
+
 
 繼續至[安裝 boot9strap (透過 Fredtool)](installing-boot9strap-(fredtool))
 {: .notice--primary}
