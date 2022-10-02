@@ -4,21 +4,24 @@ title: "Installazione di boot9strap (Fredtool)"
 
 {% include toc title="Indice" %}
 
-### Lettura necessaria
-
-Seedminer utilizza il tuo file `movable.sed` per decriptare un qualunque titolo DSiWare per iniettare una particolare applicazione DSiWare nell'applicazione Connessioni Nintendo DS. Questo richiede un backup DSiWare, ad esempio da BannerBomb o da DSiWare Dumper.
-
-Questa è un'implementazione funzionante dell'exploit del "testo in chiaro noto nelle partizioni FIRM" spiegato [qui](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+<details>
+<summary><em>Technical Details (optional)</em></summary>
+<p>This method of using Seedminer for further exploitation uses your <code>movable.sed</code> file to decrypt any DSiWare title for the purposes of injecting an exploitable DSiWare title into the DS Internet Settings application. This requires you to have a DSiWare backup, which you should have gotten in the previous section.</p>
+<p>This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed <a href="https://www.3dbrew.org/wiki/3DS_System_Flaws">here</a>.</p>
+</details>
+{: .notice--info}
 
 ### Cosa serve
 
-* Un backup DSiWare (dovresti averne uno nella directory principale della tua scheda SD per aver seguito [BannerBomb3](bannerbomb3))
+* A DSiWare Backup, normally `42383841.bin` (You should have one on the root of your SD card from following [BannerBomb3](bannerbomb3))
 * Il tuo file `movable.sed` dalla sezione [Seedminer](seedminer)
 * L'ultima versione di [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest) (`Frogminer_save.zip`)
 * L'ultima versione di [b9sTool](https://github.com/zoogie/b9sTool/releases/latest) (`boot.nds`)
 * L'ultima versione di [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (il file `.zip` di Luma3DS)
 
 #### Sezione I - Controllo del CFW
+
+As an additional safety measure, we will perform an additional check for custom firmware. This is because using this method when custom firmware is already installed has a risk of bricking the console (rendering it unusable without recovery methods like [ntrboot](ntrboot)).
 
 1. Spegni il tuo 3DS
 1. Premi il pulsante (Select)
@@ -30,17 +33,7 @@ Se visualizzi un menu di configurazione, hai già un CFW e continuando con quest
 
 #### Sezione II - Preparazione
 
-1. Spegni il tuo 3DS
-1. Inserisci la scheda SD nel tuo computer
-1. Copia i file `boot.firm` e `boot.3dsx` dall'archivio `.zip` di Luma3DS nella directory principale della tua scheda SD
-  + La directory principale della scheda SD è la cartella della tua scheda SD in cui è possibile visualizzare la cartella Nintendo 3DS, ma non il suo interno
-1. Copia il file `boot.nds` (B9STool) nella directory principale della tua scheda SD
-1. Copia la cartella `private` presente nell'archivio `.zip` di Frogminer_save nella directory principale della tua scheda SD
-
-    ![]({{ "/images/screenshots/fredtool-root-layout.png" | absolute_url }})
-    {: .notice--info}
-
-#### Sezione III - Fredtool
+In this section, you will copy the files necessary to temporarily replace DS Connection Settings with Flipnote Studio, which is used to launch the boot9strap (custom firmware) installer.
 
 1. Apri il sito [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec) sul tuo computer
 1. Sotto il campo "Username" inserisci un nome alfanumerico qualunque (senza spazi o caratteri speciali)
@@ -53,25 +46,39 @@ Se visualizzi un menu di configurazione, hai già un CFW e continuando con quest
 1. Clicca sul primo risultato della ricerca
   + Dovrebbe avere la data più recente
 1. Clicca il link "output_(name).zip"
+1. Inserisci la scheda SD nel tuo computer
 1. Nella tua scheda SD, entra in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`
-  + Questo `<ID0>` sarà lo stesso che hai utilizzato in [Seedminer](seedminer)
-  + `<ID1>` è una cartella dal nome lungo 32 caratteri all'interno di `<ID0>`
-  + Se la cartella `Nintendo DSiWare` non esiste, creala all'interno della cartella `<ID1>`
+  + `<ID0>` is the 32-letter folder name that you copied in [Seedminer](seedminer)
+  + `<ID1>` is a 32-letter folder inside of the `<ID0>` 
 1. Copia il file `42383841.bin` dalla cartella `hax` dall'archivio DSiWare appena scaricato (`output_(name).zip`) nella cartella `Nintendo DSiWare`
-1. Reinserisci la scheda SD nella tua console
+  ![]({{ "/images/screenshots/bb3/dsiware-location-4.png" | absolute_url }}){: .notice--info} 
+1. Copia i file `boot.firm` e `boot.3dsx` dall'archivio `.zip` di Luma3DS nella directory principale della tua scheda SD
+  + La directory principale della scheda SD è la cartella della tua scheda SD in cui è possibile visualizzare la cartella Nintendo 3DS, ma non il suo interno
+1. Copia il file `boot.nds` (B9STool) nella directory principale della tua scheda SD
+1. Copia la cartella `private` presente nell'archivio `.zip` di Frogminer_save nella directory principale della tua scheda SD
+
+    ![]({{ "/images/screenshots/fredtool-root-layout.png" | absolute_url }})
+    {: .notice--info}
+
+#### Section III - Overwriting DS Connection Settings
+
+In this section, you will copy the hacked DS Connection Settings DSiWare to internal memory, which will temporarily replace it with Flipnote Studio.
+
 1. Accendi la console
 1. Avvia "Impostazioni della console"
-1. Entra in `Gestione dati` -> `DSiWare`
-1. Nella sezione "Scheda SD", scegli il titolo "Haxxxxxxxxx!"
+1. Navigate to `Data Management` -> `DSiWare`-> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
+1. Select the "Haxxxxxxxxx!" title
 1. Seleziona "Copia", quindi "OK"
 1. Ritorna al menu principale delle Impostazioni della console
-1. Vai su `Impostazioni Internet` -> `Connessioni Nintendo DS`, quindi seleziona "OK"
+1. Navigate to `Internet Settings` -> `Nintendo DS Connections`, then select "OK" ([image](/images/screenshots/fredtool/dsconnection.png))
 1. Se l'exploit ha avuto successo, la tua console avrà caricato la versione JPN di Flipnote Studio
 
 #### Sezione IV - Exploit Flipnote
 
 Se desideri una guida visiva per questa parte, è disponibile [qui](https://zoogie.github.io/web/flipnote_directions/).
 {: .notice--info}
+
+In this section, you will perform a series of very specific steps within Flipnote Studio that, when performed correctly, will launch the boot9strap (custom firmware) installer.
 
 1. Completa la configurazione iniziale del gioco finché non avrai raggiunto il menu principale
   + Seleziona l'opzione di sinistra quando richiesto durante la configurazione
@@ -85,7 +92,7 @@ Se desideri una guida visiva per questa parte, è disponibile [qui](https://zoog
 1. Seleziona il quarto riquadro con la lettera "A" all'interno
 1. Se l'exploit ha avuto successo, la tua console avrà caricato b9sTool
 1. Usando il D-Pad, vai su "Install boot9strap"
-  + Se salti questo passaggio, la console si riavvierà nel menu HOME senza aver installato boot9strap, e sarà necessario ricominciare dal passo 12 della Sezione III
+  + If you miss this step, the system will exit to HOME Menu instead of installing boot9strap and you will need to open System Settings, then start over from Step 7 of Section III
 1. Premi (A), quindi premi START e SELECT contemporaneamente per avviare il processo
 1. Al termine lo schermo inferiore presenterà la scritta "done.". Esci da b9sTool, quindi spegni la console
   + Potresti dover forzare lo spegnimento tenendo premuto il pulsante di accensione
@@ -93,6 +100,8 @@ Se desideri una guida visiva per questa parte, è disponibile [qui](https://zoog
   + Se vedi la schermata di configurazione di Luma, premi (Start) per riavviare la console, quindi continua con la guida
 
 #### Sezione V - Verifica di Luma3DS
+
+Due to the nature of the exploit used, it is occasionally (but rarely) possible for boot9strap to not actually get installed. This section will therefore verify that boot9strap was successfully installed by seeing if some files that are normally automatically generated by Luma3DS were created.
 
 1. Spegni il tuo 3DS
 1. Inserisci la scheda SD nel tuo computer
@@ -106,13 +115,15 @@ A questo punto, la console avvierà sempre Luma3DS.
 
 #### Sezione VI - Ripristino delle Impostazioni di Connessione DS
 
-1. Copia il file `42383841.bin` dalla cartella `clean/` dall'archivio DSiWare appena scaricato (`output_(name).zip`) nella cartella `Nintendo 3DS/<ID0>/<ID1>/Nintendo DSiWare/` della tua scheda SD
-  + Sostituisci il file `423841.bin` esistente
+In this section, you will restore DS Connection Settings to the way it was before it was temporarily replaced with Flipnote Studio in Section III.
+
+1. Nella tua scheda SD, entra in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`
+1. Copy the `42383841.bin`  file from the `clean` folder of the downloaded DSiWare archive (output_(name).zip) to the `Nintendo DSiWare` folder, replacing the existing one
 1. Reinserisci la scheda SD nella tua console
 1. Accendi la console
 1. Avvia "Impostazioni della console"
-1. Entra in `Gestione dati` -> `DSiWare`
-1. Nella sezione "Scheda SD", scegli il titolo "Nintendo DSi™"
+1. Navigate to `Data Management` -> `DSiWare`-> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
+1. Select the "Nintendo DSi™" title
 1. Seleziona "Copia", quindi "OK"
 
 ___
