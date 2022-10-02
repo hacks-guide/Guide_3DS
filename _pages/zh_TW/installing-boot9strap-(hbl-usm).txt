@@ -4,13 +4,16 @@ title: "Installing boot9strap (HBL-USM)"
 
 {% include toc title="條目內容" %}
 
-### 必讀事項
+<details>
+<summary><em>Technical Details (optional)</em></summary>
+<p>In order to exploit the SAFE_MODE firmware of our system, we need to inject an exploited WiFi profile.</p>
+<p>As we already have Homebrew access, we can use slotTool to do this.</p>
+<p>Once the WiFi profile has been injected, we will use SAFE_MODE, which is a recovery feature present on all 3DS consoles, to activate the exploited WiFi profile.</p>
+<p>For a more technical explanation, see <a href="https://github.com/zoogie/unSAFE_MODE/">here</a> for information about the unSAFE_MODE exploit.</p>
+</details>
+{: .notice--info}
 
-為了破解系統的 SAFE_MODE 韌體，我們需先注入一個已被破解的 WiFi 設定檔至主機中。
-
-As we already have Homebrew access, we can use slotTool to do this.
-
-一旦 WiFi 設定檔被注入，我們將會使用到 SAFE_MODE 來繼續此教學。 SAVE_MODE 是一個所有的 3DS 主機都存在的修復功能，我們之後將用它來啟動已修改後的 WiFi 設定檔。
+### Compatibility Notes
 
 If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 {: .notice--danger}
@@ -24,7 +27,10 @@ If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, join [Nint
 
 #### 第一節 — 準備工作
 
+In this section, you will use Homebrew Launcher to launch slotTool, which will overwrite your Wi-Fi slots with hacked data. Then, you will copy the files needed to trigger the unSAFE_MODE exploit onto your device's SD card. Your Wi-Fi connection settings will be temporarily overwritten while the exploit is active.
+
 1. Your console should be powered on and showing the Homebrew Launcher from the previous part of the guide
+  + If not, power on your console and enter Homebrew Launcher through your method of choice (likely Pokémon Picross)
 1. Launch slotTool from the list of homebrew
   + If you get stuck on a red screen, forcefully power off the console by holding the power button for fifteen seconds, then retry this section
 1. Select the "INSTALL exploit to wifi slots 1,2,3 & shutdown" option
@@ -36,21 +42,30 @@ If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, join [Nint
 1. Copy `usm.bin` from the unSAFE_MODE `.zip` to the root of your SD card
 1. Put your SD card back into your console
 
+![]({{ "/images/screenshots/hblusm-root-layout.png" | absolute_url }})
+{: .notice--info}
+
+![]({{ "/images/screenshots/boot9strap-folder.png" | absolute_url }})
+{: .notice--info}
+
 #### Section II - unSAFE_MODE
 
+In this section, you will enter Safe Mode (a feature available on all 3DS family devices) and navigate to a menu where unSAFE_MODE will be triggered, which will launch you into the boot9strap (custom firmware) installer.
+
 1. With your device still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your device
-  + 持續按住按鈕直到主機重啟至安全模式中
+  + Keep holding the buttons until the device boots into Safe Mode (a "system update" menu)
   + If you're unable to get into Safe Mode after multiple attempts, one of your buttons may be failing or broken. If this is the case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 1. 按下『OK』以允許更新
   + 此步驟將不會進行任何更新， 這只是觸發漏洞的一部分。
 1. 按下「I accept(我同意/同意します)」鍵以接受聲明條款
 1. The update will eventually fail, with the error code `003-1099`. 這也是觸發漏洞的一部分
 1. 當系統提示您『你想要配置網路設置嗎? (Would you like to configure Internet settings?)』時，點選『Yes』
-1. 在接下來出現的選單中，移動至 `連接點 1(Connection 1)` -> `更改設定(Change Settings)` -> `下一頁 (右箭頭)` -> `代理設置(Proxy Settings)` -> `詳細設置(Detailed Setup)`
-  + 如[本圖中所示](https://uwuu.ca/images/safemode_highlighted.png)
+1. On the following menu, navigate to `Connection 1` -> `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings` -> `Detailed Setup` ([image](/images/screenshots/bb3/safemode_highlighted.png))
 1. 如果一切成功的話，您將自動進入 SafeB9SInstaller
 
 #### 第三節 — 安裝 boot9strap
+
+In this section, you will install custom firmware onto your device.
 
 1. 出現提示時，輸入上方螢幕所顯示的按鍵組合以安裝 boot9strap
   + If the top screen is blank, power off your device and re-do Section III
@@ -64,6 +79,8 @@ At this point, your console will boot to Luma3DS by default.
   + On the next page, you will install useful homebrew applications to complete your setup.
 
 #### Section IV - Restoring WiFi Configuration Profiles
+
+In this section, you will enter the Homebrew Launcher (this time using custom firmware) so that you can restore the Wi-Fi connection slots that were overwritten in Section II.
 
 1. 啟動『下載通信 (Download Play)』程式
 1. 等到你看到兩個按鍵
