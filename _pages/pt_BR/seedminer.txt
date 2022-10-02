@@ -4,52 +4,54 @@ title: "Seedminer"
 
 {% include toc title="Tabela de Conteúdo" %}
 
-### Leitura Obrigatória
+<details>
+<summary><em>Technical Details (optional)</em></summary>
+<p>To install boot9strap on your device, we derive your device's unique encryption key. To accomplish this, we use a tool called Seedminer to calculate the data encryption key (movable.sed) for your device.</p>
+<p>For information on how Seedminer works, see <a href="https://zoogie.github.io/web/34⅕c3">this presentation</a>.</p>
+<p>This method uses a powerful graphics card to perform the calculations needed. A volunteer-run website is used for the purpose of assisting you with this method.</p>
+</details>
+{: .notice--info}
 
-Para instalar o boot9strap em seu dispositivo, nós derivamos a chave de criptografia exclusiva do seu dispositivo. Para fazer isso, usamos uma ferramenta chamada Seedminer para calcular a chave de criptografia de dados (movable.sed) do seu dispositivo.
+### Section I - Prep Work
 
-Para mais informações sobre como Seedminer funciona, veja [esta apresentação](https://zoogie.github.io/web/34⅕c3).
-
-Esse método usufrui de uma poderosa placa de vídeo para realizar os cálculos necessários. Um website voluntário é utilizado com o propósito de te ajudar com esse método.
-
-### Instruções
-
-#### Seção I - Preparação
+In this section, you will get the necessary details from your 3DS that are required to figure out your device's encryption key.
 
 1. Insira o cartão SD no seu computador
 1. Vá até a pasta `Nintendo 3DS` no seu cartão SD
-1. Copie o nome de 32 caracteres da pasta que você vê imediatamente após abrir a pasta Nintendo 3DS
-  + Não entre em mais pastas depois dessa
-  + Se você ver múltiplas pastas longas de 32 caracteres, siga [estas instruções](troubleshooting#multiple-folder-names-in-nintendo-3ds-folder)
+  + If you don't have a `Nintendo 3DS` folder, put your SD card into your 3DS and power it on so that the folder can be created
+1. Copy the name of the 32-letter folder you see directly inside Nintendo 3DS
+  + This 32-letter name is system-specific and will be different for each console
+  + If you see multiple 32-letter folders, follow [these instructions](troubleshooting#multiple-long-folder-names-in-nintendo-3ds-folder)
   + Você pode ignorar a pasta `private` se ela está presente
 
-	![]({{ "/images/screenshots/id0-example.png" | absolute_url }})
+	![]({{ "/images/screenshots/seedminer/id0-example.png" | absolute_url }})
 	{: .notice--info}
-1. Copie o nome de 32 caracteres dessa pasta em um lugar seguro onde você possa acessar mais tarde
-  + Esse nome também é conhecido como o seu "ID0"
+1. Paste your 32 character long folder name into [a document](/images/screenshots/seedminer/text-document.png) you can reference later
+  + This folder is known as your "ID0". Take note of this as this guide will refer to it as such later
 1. Ligue o seu dispositivo
   + Seu cartão SD não precisa ser inserido neste momento
 1. Vá para sua lista de amigos (o [ícone de rosto laranja]({{ "/images/friend-list-icon.png" | absolute_url }}) na linha superior do seu Menu HOME)
   + Se você receber um erro e for expulso do menu, você deve criar um novo Mii ou seu dispositivo não pode se conectar aos servidores da Nintendo (devido a um banimento ou problemas de conexão)
 1. Vá até o perfil do seu Mii e então encontre o seu Código de Amigo na tela superior
 
-#### Seção II - Seedminer
+### Section II - Seedminer
+
+In this section, you will use the Bruteforce Movable website to retrieve your device's encryption key in the form of `movable.sed`.
 
 1. Abra [Bruteforce Movable](https://seedminer.hacks.guide/) no seu computador
-  + Este site pode automatizar a obtenção do arquivo `movable_part1.sed` (usando o console 3DS de um robô) e a quebra da encriptação do DSiWare do seu dispositivo (usando o computador de um voluntário para rodar o Seedminer)
   + Se o site não estiver funcionando, entre no [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) e pergunte (em Inglês) para alguém lá te ajudar
 1. Insira o Código de Amigo do seu dispositivo (sem espaços ou traços) dentro do campo "Your friend code"
 1. Cole o nome da pasta de 32 caracteres do seu dispositivo no campo "Your ID0"
-  + Não tente escrever o seu ID0 à mão. Assegure-se de que o seu ID0 esteja inserido corretamente copiando-o e colando-o de onde você o salvou na seção anterior
+  + Do not attempt to enter the ID0 manually, as it is easy to make a mistake. Assegure-se de que o seu ID0 esteja inserido corretamente copiando-o e colando-o de onde você o salvou na seção anterior
 1. Selecione "Go"
   + Se o site ir imediatamente para a "Step 4", o site já processou corretamente sua solicitação de bruteforce. Você pode baixar o seu arquivo `movable.sed` e continuar para a próxima seção. Você não precisa adicionar novamente o bot
-1. Use o botão "Registrar Amigo" no seu dispositivo para adicionar o friend code do bot conforme dado pelo site
+1. Use the ["Register Friend" button](/images/screenshots/seedminer/register-friend.png) on your device to add the bot's friend code as given by the website
   + Se for solicitado, o nome que você dá ao amigo não importa
 1. Espere que o site atualize
   + Se não atualizar, espere mais alguns minutos antes de recarregar a página
 1. Assim que o site processar suas informações, o site continuará para `Step 2: Bruteforce` automaticamente
 1. Aguarde a finalização do restante do processo
-  + Isso é geralmente rápido (1-5 minutos), mas em alguns casos, pode levar até meia hora
+  + This is usually fast (1-5 minutes)
   + Durante esse processo, o bot que você adicionou poderá não aparecer no seu 3DS. Enquanto o site atualizar, isso não é um problema
   + Se você ainda está esperando após o período de meia hora, entre no [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) e pergunte (em Inglês) para alguém te ajudar
 1. Quando o processo for concluído, baixe seu arquivo `movable.sed` do site
@@ -57,7 +59,7 @@ Esse método usufrui de uma poderosa placa de vídeo para realizar os cálculos 
 
 ___
 
-### Próximos passos
+### Next steps: Choose an exploit
 
 Assim que você tiver a chave de criptografia do seu dispositivo (`movable.sed`), você o usará em conjunto com outros exploits para instalar custom firmware no seu 3DS.
 
