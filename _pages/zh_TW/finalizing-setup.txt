@@ -20,6 +20,8 @@ title: "完成安裝"
 建議不要跳過下載以上這些自製軟體，因為它們將在此頁面稍後使用。 在本頁結束時，我們將清理 SD 卡以刪除不必要的安裝檔案。
 {: .notice--warning}
 
+### Compatibility Notes
+
 If your **New 3DS** was on version 2.1.0 before following this guide, you should [restore your NAND backup](godmode9-usage#restoring-a-nand-backup) before continuing.
 {: .notice--warning}
 
@@ -39,6 +41,8 @@ If your **New 3DS** was on version 2.1.0 before following this guide, you should
 
 #### 第一節 — 準備工作
 
+In this section, you will copy the files necessary to follow the rest of the instructions on this page.
+
 1. 關閉您的主機
 1. 將 SD 卡插入至電腦中
 1. 在 SD 卡的根目錄底下，建立一個新資料夾 `cias`
@@ -52,14 +56,19 @@ If your **New 3DS** was on version 2.1.0 before following this guide, you should
 1. 將 SD 卡插回主機中
 1. 啟動您的主機
 
-    ![]({{ "/images/screenshots/finalizing-root-layout.png" | absolute_url }})
-    {: .notice--info}
-    ![]({{ "/images/screenshots/godmode9-location.png" | absolute_url }})
-    {: .notice--info}
+The screenshots below indicate the minimum SD card layout that is required to follow this page. 您可能在遵循其他頁面指示中會有一些多的資料夾及檔案在您的 SD 卡中。
 
-以上截圖為遵循本頁面步驟所需的 SD 卡檔案及資料夾。 您可能在遵循其他頁面指示中會有一些多的資料夾及檔案在您的 SD 卡中。
+![]({{ "/images/screenshots/finalizing-root-layout.png" | absolute_url }})
+{: .notice--info}
+
+![]({{ "/images/screenshots/godmode9-location.png" | absolute_url }})
+{: .notice--info}
+
+
 
 #### 第二節 — 更新系統
+
+In this section, you will update your system to the latest version, which is safe to do with custom firmware.
 
 1. 到主機主選單中更新您的主機，到『系統設置 (System Settings)』、『其他設置 (Other Settings)』底下選擇『系統更新 (System Update)』
   + 在安裝 B9S + Luma 後，進行系統更新是很安全的
@@ -68,6 +77,8 @@ If your **New 3DS** was on version 2.1.0 before following this guide, you should
   + 如果您仍遇到錯誤，請見[此疑難排解指南](troubleshooting#unable-to-update-device)
 
 #### 第三節 — Homebrew Launcher
+
+In this section, you will temporarily replace Download Play with Homebrew Launcher (which we need to launch FBI). Download Play will automatically go back to normal once you reboot your device.
 
 1. 啟動『下載通信(Download Play)』程式 (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
 1. 等到你看到 `Nintendo 3DS` 和 `Nintendo DS` 按鈕
@@ -83,6 +94,8 @@ If your **New 3DS** was on version 2.1.0 before following this guide, you should
 
 #### 第四節 — 設定內部時間 (RTC) 及 DSP
 
+In this section, you will sync your 3DS internal clock with the actual time and dump the sound firmware (which is necesssary for some homebrew software to use sound properly).
+
 1. 同時按下『L』+『下』+『Select』鍵以啟動 Rosalina 選單
 1. 選擇『Miscellaneous options』
 1. 選擇『Dump DSP firmware』
@@ -94,6 +107,8 @@ If your **New 3DS** was on version 2.1.0 before following this guide, you should
 
 #### 第五節 — 安裝 CIA 檔案
 
+In this section, you will install several useful homebrew applications to HOME Menu.
+
 1. 於 Homebrew 清單內啟動 FBI 管理器
 1. 移動至 `SD` -> `cias`
 1. 選擇『\<current directory>』
@@ -101,6 +116,8 @@ If your **New 3DS** was on version 2.1.0 before following this guide, you should
 1. 按『Home』鍵，並關閉『下載通信 (Download Play)』程式
 
 #### 第六節 — 安裝 Luma3DS 至 CTRNAND
+
+In this section, you will use a script to copy some of Luma3DS's files to internal memory so that they can be accessed, even without an SD card inserted.
 
 1. 關閉您的主機
 1. 按下並按住「Start」鍵，按住按鈕的同時，將您的主機開機。 這將會啟動 GodMode9
@@ -118,12 +135,16 @@ If your **New 3DS** was on version 2.1.0 before following this guide, you should
 
 #### 第七節 — 清理 SD 卡
 
+In this section, you will use a script to remove some unnecessary files from your SD card.
+
 1. 選擇『Cleanup SD Card』
 1. 如提示時，按下『A』繼續
 1. 按『A』 繼續
 1. 按『B』回到主選單
 
 #### 第八節 — 備份重要檔案
+
+In this section, you will make backups of flies that can be used to recover from softwaer bricks or to recover data.
 
 1. 選擇『Backup Options』
 1. 選擇『SysNAND Backup』
@@ -159,7 +180,7 @@ ___
 Hello! We're looking for feedback on the overall experience of following our guide. If you'd like to help out, check out the survey [here](https://forms.gle/vZNoc4QLCz5MEXCK7) (only available in English). Thanks!
 {: .notice--info}
 
-#### 額外訊息以及注意事項
+### Information and Notes
 
 {% capture notice-6 %}
 以下是你該注意的快捷鍵：
