@@ -4,21 +4,24 @@ title: "Boot9strap telepítése (Fredtool)"
 
 {% include toc title="Tartalomjegyzék" %}
 
-### Fontos tudnivalók
-
-Ez a metódusa a Seedminer használatának a további exploitoláshoz használja a `movable.sed` fájlod, hogy dekriptáljon egy DSiWare címet, azzal az céllal, hogy beinjektáljon egy exploitolható DSiWare címet a DS Download Play alkalmazásba. Ez igényli, hogy rendelkezzél egy DSiWare mentéssel, például a BannerBomb-ból vagy a DSiWare Dumper eszközből.
-
-Ez egy jelenleg működő megvalósítása a "FIRM partitions known-plaintext" néven ismert exploitnak, amiről részletesebben olvashatsz [itt](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+<details>
+<summary><em>Technical Details (optional)</em></summary>
+<p>This method of using Seedminer for further exploitation uses your <code>movable.sed</code> file to decrypt any DSiWare title for the purposes of injecting an exploitable DSiWare title into the DS Internet Settings application. This requires you to have a DSiWare backup, which you should have gotten in the previous section.</p>
+<p>This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed <a href="https://www.3dbrew.org/wiki/3DS_System_Flaws">here</a>.</p>
+</details>
+{: .notice--info}
 
 ### Amire szükséged lesz
 
-* Egy DSiWare mentésre (Kell, hogy legyen egy az SD kártya gyökerében a [BannerBomb3](bannerbomb3) lépesek alapján)
+* A DSiWare Backup, normally `42383841.bin` (You should have one on the root of your SD card from following [BannerBomb3](bannerbomb3))
 * A `movable.sed` fájlodra a [Seedminer](seedminer)-ből
 * A [Frogminer_save] legújabb kiadása (https://github.com/zoogie/Frogminer/releases/latest) (`Frogminer_save.zip`)
 * A [b9sTool] legújabb kiadása (https://github.com/zoogie/b9sTool/releases/latest) (`boot.nds`)
 * A [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) legújabb kiadása (a Luma3DS `.zip` fájl)
 
 #### I. rész - CHF ellenőrzés
+
+As an additional safety measure, we will perform an additional check for custom firmware. This is because using this method when custom firmware is already installed has a risk of bricking the console (rendering it unusable without recovery methods like [ntrboot](ntrboot)).
 
 1. Kapcsold ki a készüléked
 1. Nyomd le és tartsd nyomva (Select) gombot
@@ -30,17 +33,7 @@ Ha a konfigurációs menüt látod, már van CFW-d és az útmutató folyatása 
 
 #### II. rész - Előkészületek
 
-1. Kapcsold ki a készüléked
-1. Helyezd az SD kártyád a számítógépbe
-1. Másold át a `boot.firm` és `boot.3dsx` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
-  + Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne
-1. Másold a `boot.nds` (B9STool) fájlt az SD kártyád gyökerébe
-1. Másold át a `private` mappát a Frogminer_save `.zip`-ből az SD kártyád gyökerébe
-
-    ![]({{ "/images/screenshots/fredtool-root-layout.png" | absolute_url }})
-    {: .notice--info}
-
-#### III. rész - Fredtool
+In this section, you will copy the files necessary to temporarily replace DS Connection Settings with Flipnote Studio, which is used to launch the boot9strap (custom firmware) installer.
 
 1. Nyisd meg a [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec/) oldalt a számítógépeden
 1. A "Username" mező alatt adj meg egy tetszőleges alfanumerikus nevet (nem lehet benne szóköz vagy speciális karakter)
@@ -53,25 +46,39 @@ Ha a konfigurációs menüt látod, már van CFW-d és az útmutató folyatása 
 1. Kattints az első keresési találatra
   + Ennek kell a legutolsó időbélyeggel rendelkeznie
 1. Kattints az "output_(name).zip" linkre
+1. Helyezd az SD kártyád a számítógépbe
 1. Navigálj a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` mappába az SD kártyán
-  + Az `<ID0>` ugyanaz, mint amit a [Seedminer](seedminer)-nél használtál
-  + Az `<ID1>` egy 32 karakter hosszú nevű mappa az `<ID0>` mappában
-  + Ha a `Nintendo DSiWare` mappa nem létezik, hozd létre az `<ID1>` mappában
+  + `<ID0>` is the 32-letter folder name that you copied in [Seedminer](seedminer)
+  + `<ID1>` is a 32-letter folder inside of the `<ID0>` 
 1. Másold a `42383841.bin` fájlt az `hax` mappájából a letöltött DSiWare csomagból (output_(name).zip) a `Nintendo DSiWare` mappába
-1. Tedd vissza az SD kártyád a készülékedbe
+  ![]({{ "/images/screenshots/bb3/dsiware-location-4.png" | absolute_url }}){: .notice--info} 
+1. Másold át a `boot.firm` és `boot.3dsx` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
+  + Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne
+1. Másold a `boot.nds` (B9STool) fájlt az SD kártyád gyökerébe
+1. Másold át a `private` mappát a Frogminer_save `.zip`-ből az SD kártyád gyökerébe
+
+    ![]({{ "/images/screenshots/fredtool-root-layout.png" | absolute_url }})
+    {: .notice--info}
+
+#### Section III - Overwriting DS Connection Settings
+
+In this section, you will copy the hacked DS Connection Settings DSiWare to internal memory, which will temporarily replace it with Flipnote Studio.
+
 1. Kapcsold be a készülékedet
 1. Lépj be a System Settings-be a készülékeden
-1. Navigálj ide: `Data Management` -> `DSiWare`
-1. Az "SD Card" szekcióban válaszd a "Haxxxxxxxxx!" címet
+1. Navigate to `Data Management` -> `DSiWare`-> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
+1. Select the "Haxxxxxxxxx!" title
 1. Válaszd a "Copy"-t, majd az "OK"-t
 1. Térj vissza a System Settings főmenüjébe
-1. Navigálj az `Internet Settings` -> `Nintendo DS Connections` opcióhoz, majd válaszd az "OK"-t
+1. Navigate to `Internet Settings` -> `Nintendo DS Connections`, then select "OK" ([image](/images/screenshots/fredtool/dsconnection.png))
 1. Ha az exploit sikeres volt, a készülékednek ezt követően be kell töltenie a JPN verzióját a Flipnote Studio-nak
 
 #### IV. rész - Flipnote Exploit
 
 Ha inkább egy vizuális útmutatót szeretnél ehhez a fejezethez, [itt](https://zoogie.github.io/web/flipnote_directions/) elérhető egy.
 {: .notice--info}
+
+In this section, you will perform a series of very specific steps within Flipnote Studio that, when performed correctly, will launch the boot9strap (custom firmware) installer.
 
 1. Fejezd be a kezdeti telepítését az elindított játéknak, amíg el nem éri a fő menüt
   + Válassza a bal opciót, ha kérdezi a telepítési folyamat során
@@ -85,7 +92,7 @@ Ha inkább egy vizuális útmutatót szeretnél ehhez a fejezethez, [itt](https:
 1. Nyomd meg a negyedik dobozt benne az "A" betűvel
 1. Ha az exploit sikeres volt, a készülékedek ezt követően be kell töltenie a b9sTool-t
 1. A D-Pad-dal menj az "Install boot9strap" opcióra
-  + Ha kihagytad ezt a lépést a rendszer a HOME Menübe kerülsz a boot9strap telepítése helyett, és elölről kell kezdened a 12. lépéstől a III. részben
+  + If you miss this step, the system will exit to HOME Menu instead of installing boot9strap and you will need to open System Settings, then start over from Step 7 of Section III
 1. Nyomj (A)-t majd ezt követően START-ot és SELECT-et egyszerre a folyamat elkezdéséhez
 1. Ha végzett és az alsó képernyő azt mondja "done." lépj ki a b9sTool-ból, majd kapcsold ki eszközöd
   + Elképzelhető, hogy kényszerítened kell a leállást a bekapcsológomb lenyomva tartásával
@@ -93,6 +100,8 @@ Ha inkább egy vizuális útmutatót szeretnél ehhez a fejezethez, [itt](https:
   + Ha a Luma konfigurációs képernyőjét látod, nyomj (Start) gombot a reboot-hoz, majd folytasd az útmutatót
 
 #### V. rész - Luma3DS ellenőrzés
+
+Due to the nature of the exploit used, it is occasionally (but rarely) possible for boot9strap to not actually get installed. This section will therefore verify that boot9strap was successfully installed by seeing if some files that are normally automatically generated by Luma3DS were created.
 
 1. Kapcsold ki a készüléked
 1. Helyezd az SD kártyád a számítógépbe
@@ -106,13 +115,15 @@ Ezen a ponton a konzolod alapértelmezetten bebootol a Luma3DS-be.
 
 #### VI. rész - A DS Connection Settings visszaállítása
 
-1. Másold a `42383841.bin` fájlt az `clean/` mappájából a letöltött DSiWare csomagnak (`output_(name).zip`) a `Nintendo 3DS/<ID0>/<ID1>/Nintendo DSiWare/` mappába az SD kártyán
-  + Írd felül a létező `42383841.bin` fájlt
+In this section, you will restore DS Connection Settings to the way it was before it was temporarily replaced with Flipnote Studio in Section III.
+
+1. Navigálj a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` mappába az SD kártyán
+1. Copy the `42383841.bin`  file from the `clean` folder of the downloaded DSiWare archive (output_(name).zip) to the `Nintendo DSiWare` folder, replacing the existing one
 1. Tedd vissza az SD kártyád a készülékedbe
 1. Kapcsold be a készülékedet
 1. Lépj be a System Settings-be a készülékeden
-1. Navigálj ide: `Data Management` -> `DSiWare`
-1. Az "SD Card" szekcióban válaszd a ""Nintendo DSi™" címet
+1. Navigate to `Data Management` -> `DSiWare`-> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
+1. Select the "Nintendo DSi™" title
 1. Válaszd a "Copy"-t, majd az "OK"-t
 
 ___
