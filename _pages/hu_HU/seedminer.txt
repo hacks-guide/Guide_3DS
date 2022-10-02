@@ -4,52 +4,54 @@ title: "Seedminer"
 
 {% include toc title="Tartalomjegyzék" %}
 
-### Fontos tudnivalók
+<details>
+<summary><em>Technical Details (optional)</em></summary>
+<p>To install boot9strap on your device, we derive your device's unique encryption key. To accomplish this, we use a tool called Seedminer to calculate the data encryption key (movable.sed) for your device.</p>
+<p>For information on how Seedminer works, see <a href="https://zoogie.github.io/web/34⅕c3">this presentation</a>.</p>
+<p>This method uses a powerful graphics card to perform the calculations needed. A volunteer-run website is used for the purpose of assisting you with this method.</p>
+</details>
+{: .notice--info}
 
-A boot9strap telepítéséhez az eszközödre, megfejtjük az eszköz egyedi titkosító kulcsát. Ennek eléréséhez egy Seedminer nevű eszközt fogunk használni, hogy kiszámítsuk a készüléked adat titkosítási kulcsát (movable.sed).
+### Section I - Prep Work
 
-További információért arról, hogyan működik a Seedminer, nézd meg [ezt a prezentációt](https://zoogie.github.io/web/34⅕c3).
-
-Ez a módszer egy erős grafikus kártyát használ a szükséges számítások elvégzéséhez. Egy önkéntes által üzemeltetett webhely segít neked ebben a módszerben.
-
-### Lépések
-
-#### I. rész - Előkészületek
+In this section, you will get the necessary details from your 3DS that are required to figure out your device's encryption key.
 
 1. Helyezd az SD kártyád a számítógépbe
 1. Lépj be az SD kártyád `Nintendo 3DS` könyvtárába
-1. Másold le a 32 karakter hosszú nevét annak a mappának, amit látsz
-  + Nem menj beljebb több mappát
-  + Ha több 32 karakter hosszú nevű mappát látsz, kövesd [ezeket a lépéseket](troubleshooting#multiple-long-folder-names-in-nintendo-3ds-folder)
+  + If you don't have a `Nintendo 3DS` folder, put your SD card into your 3DS and power it on so that the folder can be created
+1. Copy the name of the 32-letter folder you see directly inside Nintendo 3DS
+  + This 32-letter name is system-specific and will be different for each console
+  + If you see multiple 32-letter folders, follow [these instructions](troubleshooting#multiple-long-folder-names-in-nintendo-3ds-folder)
   + Figyelmen kívül hagyhatod a `private` mappát, ha rendelkezel vele
 
-	![]({{ "/images/screenshots/id0-example.png" | absolute_url }})
+	![]({{ "/images/screenshots/seedminer/id0-example.png" | absolute_url }})
 	{: .notice--info}
-1. Illeszd be a 32 karakter hosszú mappanevet egy tetszőleges fájlba, amit később elérsz
-  + Ez a mappa "ID0" néven is ismert
+1. Paste your 32 character long folder name into [a document](/images/screenshots/seedminer/text-document.png) you can reference later
+  + This folder is known as your "ID0". Take note of this as this guide will refer to it as such later
 1. Kapcsold be a készülékedet
   + Az SD kártyádnak nem kell behelyzve lennie ennél a pontnál
 1. Válaszd a Friend List opciót (a [narancsszínű fej ikon]({{ "/images/friend-list-icon.png" | absolute_url }}) a HOME Menü felső sávján)
   + Ha hibaüzenetet kapsz, és visszadob a menübe, vagy új Mii-t kell csinálnod, vagy a konzolod nem tud csatlakozni a Nintendo szervereihez (kitiltás, vagy kapcsolódási hiba miatt)
 1. Keresd meg a Mii profilodat, ott találod a "Friend Code" mezőt a felső képernyőn
 
-#### II. rész - Seedminer
+### Section II - Seedminer
+
+In this section, you will use the Bruteforce Movable website to retrieve your device's encryption key in the form of `movable.sed`.
 
 1. Nyisd meg a [Bruteforce Movable](https://seedminer.hacks.guide/) oldalt a számítógépeden
-  + Ez az oldal képes automatizálni a `movable_part1.sed` előállítását (egy bot 3DS konzol segítségével), illetve a készüléked DSiWare titkosításának feltörését (egy önkéntes számítógépén futtatva a Seedminer-t)
   + Ha az oldal nem működik, csatlakozz a [Nintendo Homebrew Discord-on](https://discord.gg/MWxPgEp) csatornához, és kérj segítséget (angol nyelven) valakitől
 1. Írd be a készüléked Friend Code-ját (szóközök és kötőjelek nélkül) a "Your friend code" mezőbe
 1. Illeszd be a készüléked 32 karakter hosszú mappanevét a "Your ID0" mezőbe
-  + Ne próbáld meg kézzel beadni az ID0 kódot. Legyél biztos abban, hogy az ID0 helyes, azzal, hogy másolod és beilleszted onnan, ahova az előző részben elmentetted
+  + Do not attempt to enter the ID0 manually, as it is easy to make a mistake. Legyél biztos abban, hogy az ID0 helyes, azzal, hogy másolod és beilleszted onnan, ahova az előző részben elmentetted
 1. Nyomd meg a "Go"-t
   + Ha az oldal azonnal a 4. lépésre ugrik, a weboldal már feldolgozta helyesen a bruteforce kérésedet. Letöltheted a `movable.sed` fájlod és folytathatod a következő fejezettel. Nem szükséges újra hozzáadnod a bot-ot
-1. Használd a "Register Friend" gombot a készülékeden és add hozzá a bot weboldalon megadott Friend Code-ját
+1. Use the ["Register Friend" button](/images/screenshots/seedminer/register-friend.png) on your device to add the bot's friend code as given by the website
   + Ha kérdezi a rendszer, a név amit megadsz a barátnak, az nem számít
 1. Várj, amíg az oldal frissül
   + Ha nem így történik, várj néhány percet, mielőtt frissíted az oldalt még egyszer
 1. Ha az oldal feldolgozta az információd, az oldal folytatni fogja a `Step 2: Bruteforce` lépéssel automatikusan
 1. Várj a maradék folyamat befejezésére
-  + Ez általában gyors (1-5 perc) de néhány esetben fél óra is lehet
+  + This is usually fast (1-5 minutes)
   + Ez alatt a folyamat alatt, a bot, amit hozzáadtál nem biztos, hogy feltűnik a 3DS-eden. Egészen addig, amíg a weboldal frissül, ez nem probléma
   + Ha egy fél óra után is még mindig várakozol, csatlakozz a [Nintendo Homebrew Discord-on](https://discord.gg/MWxPgEp) csatornához, és kérj segítséget (angol nyelven) valakitől
 1. Amikor a folyamat befejeződött, töltsd le a `movable.sed` fájlodat az oldalról
@@ -57,7 +59,7 @@ Ez a módszer egy erős grafikus kártyát használ a szükséges számítások 
 
 ___
 
-### Következő lépések
+### Next steps: Choose an exploit
 
 Ha meg van az eszközöd titkosítási kulcsa (`movable.sed`) más exploitokkal együtt fogod használni az egyedi firmware telepítéséhez.
 
