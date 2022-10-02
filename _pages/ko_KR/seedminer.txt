@@ -4,52 +4,54 @@ title: "Seedminer"
 
 {% include toc title="목차" %}
 
-### 중요
+<details>
+<summary><em>Technical Details (optional)</em></summary>
+<p>To install boot9strap on your device, we derive your device's unique encryption key. To accomplish this, we use a tool called Seedminer to calculate the data encryption key (movable.sed) for your device.</p>
+<p>For information on how Seedminer works, see <a href="https://zoogie.github.io/web/34⅕c3">this presentation</a>.</p>
+<p>This method uses a powerful graphics card to perform the calculations needed. A volunteer-run website is used for the purpose of assisting you with this method.</p>
+</details>
+{: .notice--info}
 
-boot9Strap을 설치하려면 우선 각 기기의 고유 암호화 키를 알아내야합니다. 그러기 위해서 이 가이드에서는 Seedminer을 사용해 그 암호화 키 (movable.sed) 를 계산해낼 것입니다.
+### Section I - Prep Work
 
-Seedminer이 정확히 어떻게 작동하는지 더 배우고싶다면 [이 프레젠테이션](https://zoogie.github.io/web/34⅕c3) 을 참고할 수 있습니다.
-
-이 방법은 원래 혼자 할 경우 강력한 계산력을 가진 그래픽카드를 사용해야 합니다. 이 가이드에서는 다른 사람들이 기부하는 계산력을 제공하는 웹사이트를 사용할 것입니다.
-
-### 진행 방법
-
-#### 섹션 I - 준비 작업
+In this section, you will get the necessary details from your 3DS that are required to figure out your device's encryption key.
 
 1. SD 카드를 컴퓨터에 삽입해 주세요
 1. SD 카드의 `Nintendo 3DS` 폴더를 열어 주세요
-1. `Nintendo 3DS` 폴더 내 32글자의 폴더 이름을 복사해 주세요
-  + 다른 폴더 안에 들어가지 마세요
-  + 만약 32-자리 폴더가 여러 개 보인다면 [이 설명서](troubleshooting#multiple-long-folder-names-in-nintendo-3ds-folder) 를 따르세요.
+  + If you don't have a `Nintendo 3DS` folder, put your SD card into your 3DS and power it on so that the folder can be created
+1. Copy the name of the 32-letter folder you see directly inside Nintendo 3DS
+  + This 32-letter name is system-specific and will be different for each console
+  + If you see multiple 32-letter folders, follow [these instructions](troubleshooting#multiple-long-folder-names-in-nintendo-3ds-folder)
   + `private` 이라는 폴더가 있다면 무시하세요.
 
-	![]({{ "/images/screenshots/id0-example.png" | absolute_url }})
+	![]({{ "/images/screenshots/seedminer/id0-example.png" | absolute_url }})
 	{: .notice--info}
-1. 32글자 폴더 이름을 문서 어딘가에 저장해 주세요 (나중에 사용하도록)
-  + 이 이름을 "ID0"라고도 부릅니다
+1. Paste your 32 character long folder name into [a document](/images/screenshots/seedminer/text-document.png) you can reference later
+  + This folder is known as your "ID0". Take note of this as this guide will refer to it as such later
 1. 기기를 시작해 주세요
   + SD 카드는 아직 삽입할 필요는 없습니다
 1. 친구 목록 (홈 메뉴 맨 위에 있는 [노란 얼굴 아이콘]({{ "/images/friend-list-icon.png" | absolute_url }})) 을 눌러 주세요
   + 만일 오류가 발생하고 메뉴 밖으로 튕겨져 나갔더라면, 기기가 닌텐도의 서버에 연결하지 못했기 때문입니다.(기기 밴 또는 연결 문제로 인하여)
 1. 본인에 Mii 프로필로 이동하고, 위 화면에 "친구 코드"를 확인해 주세요
 
-#### 섹션 II - Seedminer
+### Section II - Seedminer
+
+In this section, you will use the Bruteforce Movable website to retrieve your device's encryption key in the form of `movable.sed`.
 
 1. 컴퓨터에서 [Bruteforce Movable](https://seedminer.hacks.guide/)를 열어 주세요
-  + 이 웹사이트는 자원봉사자들의 계산력을 이용해 자동으로 `movable_part1.sed` 를 찾아내서 해당 기기의 암호화된 DSiWare를 뚫습니다
   + 만약 이 사이트가 안된다면, [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)에서 영어로 물어보세요. "Bruteforce Movable is not working. Could someone help me?"정도 질문이 적당할 것 입니다
 1. 기기의 친구 코드 (스페이스 및 대시 없이) 를 "Your friend code" 입력란에 입력해 주세요
 1. 이전 단계들 중에서 찾았던 32글자짜리 폴더의 이름을 "Your ID0" 칸에 입력해 주세요
-  + 그 ID0를 손으로 입력하지 말아 주세요. 그 ID0가 확실하게 정확히 들어갔다고 확신할수있도록 그 ID0를 그대로 복사 붙여넣기 해 주세요
+  + Do not attempt to enter the ID0 manually, as it is easy to make a mistake. 그 ID0가 확실하게 정확히 들어갔다고 확신할수있도록 그 ID0를 그대로 복사 붙여넣기 해 주세요
 1. "Go"를 선택해 주세요
   + 만약 사이트가 그대로 4단계로 진행했다면, 이미 사이트가 요청을 처리 했다는 의미 입니다. `movable.sed` 파일을 다운로드 하고 다음 섹션으로 진행하시면 됩니다. 봇을 추가 할 필요는 없습니다
-1. Use the "Register Friend" button on your device to add the bot's friend code as given by the website
+1. Use the ["Register Friend" button](/images/screenshots/seedminer/register-friend.png) on your device to add the bot's friend code as given by the website
   + If prompted, the name that you give to the friend does not matter
 1. 사이트가 업데이트 할 때까지 기다려 주세요
   + 만약 업데이트가 않되면, 몇 분 정도 기다린 후 페이지를 새로 고쳐 주세요
 1. 사이트가 정보를 수집한 후, 자동으로 `Step 2: Bruteforce`로 진행할 것 입니다
 1. 나머지 과정이 완료될 때까지 기다려 주세요
-  + 이 작업은 보통 1-5분 정도 걸리는데, 상황에 따라 30분 걸릴 수도 있습니다
+  + This is usually fast (1-5 minutes)
   + 이 과정을 하는 동안 봇이 기기에 표시가 안 될수도 있습니다. 웹사이트가 계속 업데이트 하는 경우, 이것은 문제가 아닙니다
   + 만약 30분이 지나서도 완료가 안된다면, [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)에서 영어로 물어보세요. "Bruteforce Movable is not working. Could someone help me?"정도 질문이 적당할 것 입니다
 1. 과정이 끝나면, `movable.sed` 파일을 다운로드 해 주세요
@@ -57,7 +59,7 @@ Seedminer이 정확히 어떻게 작동하는지 더 배우고싶다면 [이 프
 
 ___
 
-### 다음 단계
+### Next steps: Choose an exploit
 
 기기의 암호화 키 (`movable.sed`)를 구한 후, 이것을 다른 익스플로잇하고 함깨 사용해 커스텀 펌웨어를 설치할 것 입니다.
 
