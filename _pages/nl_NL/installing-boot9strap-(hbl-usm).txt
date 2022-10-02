@@ -4,13 +4,16 @@ title: "Installing boot9strap (HBL-USM)"
 
 {% include toc title="Inhoudsopgave" %}
 
-### Verplicht te lezen
+<details>
+<summary><em>Technical Details (optional)</em></summary>
+<p>In order to exploit the SAFE_MODE firmware of our system, we need to inject an exploited WiFi profile.</p>
+<p>As we already have Homebrew access, we can use slotTool to do this.</p>
+<p>Once the WiFi profile has been injected, we will use SAFE_MODE, which is a recovery feature present on all 3DS consoles, to activate the exploited WiFi profile.</p>
+<p>For a more technical explanation, see <a href="https://github.com/zoogie/unSAFE_MODE/">here</a> for information about the unSAFE_MODE exploit.</p>
+</details>
+{: .notice--info}
 
-Om gebruik te kunnen maken van de SAFE_MODE firmware van ons systeem, moeten we een exploit wifi-profiel injecteren.
-
-As we already have Homebrew access, we can use slotTool to do this.
-
-Wanneer het wifi profiel geïnjecteerd is, gebruiken we SAFE_MODE, een herstelfunctie beschikbaar op alle 3DS consoles, om het exploited wifi profiel te activeren.
+### Compatibility Notes
 
 If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 {: .notice--danger}
@@ -24,7 +27,10 @@ If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, join [Nint
 
 #### Deel I - Voorbereiding
 
+In this section, you will use Homebrew Launcher to launch slotTool, which will overwrite your Wi-Fi slots with hacked data. Then, you will copy the files needed to trigger the unSAFE_MODE exploit onto your device's SD card. Your Wi-Fi connection settings will be temporarily overwritten while the exploit is active.
+
 1. Your console should be powered on and showing the Homebrew Launcher from the previous part of the guide
+  + If not, power on your console and enter Homebrew Launcher through your method of choice (likely Pokémon Picross)
 1. Launch slotTool from the list of homebrew
   + If you get stuck on a red screen, forcefully power off the console by holding the power button for fifteen seconds, then retry this section
 1. Select the "INSTALL exploit to wifi slots 1,2,3 & shutdown" option
@@ -36,21 +42,30 @@ If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, join [Nint
 1. Copy `usm.bin` from the unSAFE_MODE `.zip` to the root of your SD card
 1. Put your SD card back into your console
 
+![]({{ "/images/screenshots/hblusm-root-layout.png" | absolute_url }})
+{: .notice--info}
+
+![]({{ "/images/screenshots/boot9strap-folder.png" | absolute_url }})
+{: .notice--info}
+
 #### Section II - unSAFE_MODE
 
+In this section, you will enter Safe Mode (a feature available on all 3DS family devices) and navigate to a menu where unSAFE_MODE will be triggered, which will launch you into the boot9strap (custom firmware) installer.
+
 1. With your device still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your device
-  + Blijf de knoppen ingedrukt houden totdat het apparaat opstart in Safe Mode
+  + Keep holding the buttons until the device boots into Safe Mode (a "system update" menu)
   + If you're unable to get into Safe Mode after multiple attempts, one of your buttons may be failing or broken. If this is the case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 1. Druk op "OK" om de update te accepteren
   + Er is geen update. Dit is deel van de exploit
 1. Druk op "I accept" om de algemene voorwaarden te accepteren
 1. De update zal uiteindelijk mislukken, met de foutcode `003-1099`. Dit is verwacht gedrag
 1. Wanneer gevraagd wordt "Would you like to configure Internet settings?" selecteer dan "Yes"
-1. In het volgende menu, navigeer naar `Connection 1` -> `Change Settings` -> `Next Page (rechter pijl)` -> `Proxy Settings` -> `Detailed Setup`
-  + Dit is een [visuele weergave](https://uwuu.ca/images/safemode_highlighted.png)
+1. On the following menu, navigate to `Connection 1` -> `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings` -> `Detailed Setup` ([image](/images/screenshots/bb3/safemode_highlighted.png))
 1. Als de exploit succesvol was, zal je SafeB9SInstaller hebben opgestart
 
 #### Deel III - Boot9strap installeren
+
+In this section, you will install custom firmware onto your device.
 
 1. Wanneer daarom wordt gevraagd, voer de toetsencombinatie op het bovenste scherm in om boot9strap te installeren
   + Als het bovenste scherm leeg is, schakel je apparaat uit en herdoe Deel III
@@ -64,6 +79,8 @@ Op dit moment zal je console standaard opstarten naar Luma3DS.
   + Op de volgende pagina zal je handige homebrew applicaties installeren om je installatie te voltooien.
 
 #### Section IV - Restoring WiFi Configuration Profiles
+
+In this section, you will enter the Homebrew Launcher (this time using custom firmware) so that you can restore the Wi-Fi connection slots that were overwritten in Section II.
 
 1. Open de Download Play app
 1. Wacht tot je de twee knoppen ziet
