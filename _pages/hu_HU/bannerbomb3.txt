@@ -5,14 +5,14 @@ title: "BannerBomb3"
 {% include toc title="Tartalomjegyzék" %}
 
 <details>
-<summary><em>Technical Details (optional)</em></summary>
+<summary><em>Technikai részletek (opcionális)</em></summary>
 <p>To dump system DSiWare, we exploit a flaw in the DSiWare Data Management window of the Settings application.</p>
 <p>To accomplish this, we use your system's encryption key (movable.sed) to build a DSiWare backup that exploits the system in order to dump the DSi Internet Settings application to the SD root.</p>
 <p>For a more technical explanation, see <a href="https://github.com/zoogie/Bannerbomb3">here</a>.</p>
 </details>
 {: .notice--info}
 
-### Compatibility Notes
+### Kompatibilitási megjegyzések
 
 Az utasítások az Amerikai, Európai, Japán és Koreai régiójú konzolokon működnek, amik a rendszer verzió mögött egy U, E, J vagy K betű jelöl.
 
@@ -25,7 +25,7 @@ Ha tajvani konzolod van (amit T betű jelez a rendszer verzió mögött), akkor 
 
 #### I. rész - Előkészületek
 
-In this section, you will copy the files needed to trigger the BannerBomb3 exploit onto your device's SD card.
+Ebben a fejezetben fel fogod másolni azokat a fájlokat az eszközöd SD kártyájára, amik ahhoz szükségesek, hogy kiváltsák a BannerBomb3 exploit-ot.
 
 1. Nyisd meg a [BannerBomb3 Tool](https://3ds.nhnarwhal.com/3dstools/bannerbomb3.php) oldalt a számítógépeden
 1. Töltsd fel a `movable.sed` fájlod a "Choose File" opcióval
@@ -39,7 +39,7 @@ In this section, you will copy the files needed to trigger the BannerBomb3 explo
   ![]({{ "/images/screenshots/bb3/dsiware-location-1.png" | absolute_url }}){: .notice--info}
 1. Hozz létre egy `Nintendo DSiWare` nevű mappát az `<ID1>` mappában
   + Ha már van mappád *és* van benne DSiWare mentés fájl (`<8-character-id>.bin`), másold őket a számítógépedre és töröld őket az SD kártyáról
-1. Copy the `F00D43D5.bin` file from `BannerBomb3.zip` to the `Nintendo DSiWare` folder
+1. Másold az `F00D43D5.bin` fájlt a `BannerBomb3.zip`-ből a `Nintendo DSiWare` mappába
 
 ![]({{ "/images/screenshots/bb3/dsiware-location-2.png" | absolute_url }})
 {: .notice--info} 
@@ -51,13 +51,13 @@ In this section, you will trigger the BannerBomb3 exploit using the DSiWare Mana
 1. Helyezd vissza az SD kártyát a készülékedbe
 1. Kapcsold be a készüléked
 1. Lépj be a "System Settings"-be a készülékeden
-1. Navigate to `Data Management` -> `DSiWare` -> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
+1. Navigálj ide: `Data Management` -> `DSiWare` -> `SD Card` ([kép](/images/screenshots/bb3/dsiware-management.png))
   + A rendszer most Magenta (rózsaszín/lila) színen fog világítani, és össze fog omlani. Ez azt jelenti, hogy működött
 1. Kapcsold ki a készüléked
 1. Helyezd az SD kártyád a számítógépbe
-1. You should now have `42383841.bin` on the root of your SD card. Copy this file to somewhere on your computer, as you will use it on the next page
+1. Most a `42383841.bin` fájlnak ott kell lennie az SD kártya gyökerében. Másold ezt valahova a számítógépeden, mert használni fogod a következő oldalon
 1. Navigálj a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` mappába az SD kártyán
-1. Delete `F00D43D5.bin` from your Nintendo DSiWare folder and from your computer. Ez nem fog kelleni többet
+1. Töröld ki a `F00D43D5.bin` fájlt a Nintendo DSiWare mappádból és a számítógépedről. Ez nem fog kelleni többet
 
 
 Továbblépés a [Boot9strap telepítésére (Fredtool)](installing-boot9strap-(fredtool))
