@@ -6,10 +6,10 @@ title: "Boot9strap telepítése (USM)"
 
 <details>
 <summary><em>Technikai részletek (opcionális)</em></summary>
-<p>In order to exploit the SAFE_MODE firmware of our system, we need to inject an exploited WiFi profile.</p>
-<p>We can do this using an existing exploit, BannerBomb3.</p>
-<p>To accomplish this, we use your system's encryption key (movable.sed) to build a DSiWare backup that exploits the system in order to inject the exploited WiFi profile into your connections list.</p>
-<p>Once the WiFi profile has been injected, we will use SAFE_MODE, which is a recovery feature present on all 3DS consoles, to activate the exploited WiFi profile.</p>
+<p>Ahhoz, hogy a SAFE_MODE-ot exploitálhassuk, be kell injektálnunk egy exploitált WiFi profilt.</p>
+<p>Ezt megtenni egy másik létező exploittal, a BannerBomb3-mal tudjuk.</p>
+<p>Hogy ezt elérjük, a rendszer titkosítási kulcsoddal (movable.sed) újra építünk egy DSiWare mentést, ami exploitolja a rendszert annak érdekében, hogy be tudjuk injektálni az exploitolt WiFi profilt a kapcsolatok listájára.</p>
+<p>Amint a WiFi profil injektálásra került, a SAFE_MODE-ot fogjuk használni, ami egy helyreállítás szolgáltatás, ami elérhető minden 3DS konzolon, hogy aktiválja az exploitolt WiFi profilt.</p>
 <p>For a more technical explanation, see the following links for information on the BannerBomb3 and unSAFE_MODE exploits: <a href="https://github.com/zoogie/Bannerbomb3">BannerBomb3</a>, <a href="https://github.com/zoogie/unSAFE_MODE/">unSAFE_MODE</a>.</p>
 </details>
 {: .notice--info}
@@ -48,8 +48,8 @@ In this section, you will copy the files needed to trigger the BannerBomb3 and u
     ![]({{ "/images/screenshots/bb3/usm-root-layout.png" | absolute_url }}){: .notice--info}
     ![]({{ "/images/screenshots/boot9strap-folder.png" | absolute_url }}){: .notice--info}
 1. Navigálj a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` mappába az SD kártyádon
-  + `<ID0>` is the 32-letter folder name that you copied in [Seedminer](seedminer)
-  + `<ID1>` is a 32-letter folder inside of the `<ID0>`
+  + Az `<ID0>` egy 32 karakter hosszú mappanév, amit a [Seedminer](seedminer)-nél másoltál
+  + Az `<ID1>` egy 32 karakter hosszú nevű mappa az `<ID0>` mappában
   ![]({{ "/images/screenshots/bb3/dsiware-location-1.png" | absolute_url }}){: .notice--info}
 1. Hozz létre egy `Nintendo DSiWare` nevű mappát az `<ID1>` mappában
   + Ha már van mappád *és* van benne DSiWare mentés fájl (`<8-character-id>.bin`), másold őket a számítógépedre és töröld őket az SD kártyáról
@@ -68,7 +68,7 @@ In this section, you will trigger the BannerBomb3 exploit using the DSiWare Mana
 1. Navigálj ide: `Data Management` -> `DSiWare` -> `SD Card` ([kép](/images/screenshots/bb3/dsiware-management.png))
   + Your device should show the [Bannerbomb3 menu](/images/screenshots/bb3/usm-menu.png)
   + Ha ez a lépés összeomlasztja az eszközödet, [folytasd a hibaelhárítási útmutatóval](troubleshooting#dsiware-management-menu-crashes-without-showing-usm-menu)
-1. Press (A) to select "Inject haxx"
+1. Nyomd meg az (A) gombot, az "Inject haxx" kiválasztásához
   + Az eszközöd automatikusan ki fog kapcsolni
 
 #### III. rész - unSAFE_MODE
@@ -88,7 +88,7 @@ In this section, you will enter Safe Mode (a feature available on all 3DS family
 
 #### IV. rész - boot9strap telepítése
 
-In this section, you will install custom firmware onto your device.
+Ebben a fejezetben egyedi firmware-t fogsz telepíteni az eszközödre.
 
 1. Ha kéri, akkor nyomd meg sorban azokat a gombokat, amiket kijelez a felső képernyőn, hogy telepíthesd a boot9strap-et
   + Ha felső képernyő üres, kapcsold ki az eszközödet, majd csináld újra a III. részt
