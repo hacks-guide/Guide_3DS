@@ -7,10 +7,10 @@ title: "Instalando boot9strap (USM)"
 <details>
 <summary><em>Detalhes técnicos (opcional)</em></summary>
 <p>Para explorar o firmware SAFE_MODE do nosso sistema, precisamos injetar um perfil de WiFi com exploit.</p>
-<p>We can do this using an existing exploit, BannerBomb3.</p>
-<p>To accomplish this, we use your system's encryption key (movable.sed) to build a DSiWare backup that exploits the system in order to inject the exploited WiFi profile into your connections list.</p>
+<p>Podemos fazer isso usando um exploit existente, BannerBomb3.</p>
+<p>Para fazer isso, usamos a chave de criptografia do seu sistema (movable.sed) para construir um backup de DSiWare que faz exploit no sistema para injetar o perfil Wi-Fi exploited na sua lista de conexões.</p>
 <p>Assim que o perfil WiFi for injetado, usaremos o SAFE_MODE, que é um recurso de recuperação presente em todos os consoles 3DS, para ativar o perfil de Wi-Fi com exploit.</p>
-<p>For a more technical explanation, see the following links for information on the BannerBomb3 and unSAFE_MODE exploits: <a href="https://github.com/zoogie/Bannerbomb3">BannerBomb3</a>, <a href="https://github.com/zoogie/unSAFE_MODE/">unSAFE_MODE</a>.</p>
+<p>Para uma explicação mais técnica, veja os seguintes links para informações sobre as características do BannerBomb3 e unSAFE_MODE: <a href="https://github.com/zoogie/Bannerbomb3">BannerBomb3</a>, <a href="https://github.com/zoogie/unSAFE_MODE/">unSAFE_MODE</a>.</p>
 </details>
 {: .notice--info}
 
@@ -31,7 +31,7 @@ Se os seus botões (Gatilho Esquerdo/Direito), (Botão direcional pra cima), ou 
 
 #### Seção I - Preparação
 
-In this section, you will copy the files needed to trigger the BannerBomb3 and unSAFE_MODE exploits onto your device's SD card.
+Em seguida, você copiará os arquivos necessários para acionar o exploit BannerBomb3 e unSAFE_MODE no cartão SD do seu dispositivo.
 
 1. Se seu dispositivo estiver ligado, desligue seu dispositivo
 1. Abra [unSAFE_MODE Exploit Injector](https://3ds.nhnarwhal.com/3dstools/unsafemode.php) no seu computador
@@ -60,15 +60,15 @@ In this section, you will copy the files needed to trigger the BannerBomb3 and u
 
 #### Seção II - BannerBomb3
 
-In this section, you will trigger the BannerBomb3 exploit using the DSiWare Management menu, which can be used to overwrite your Wi-Fi slots with hacked data. Your Wi-Fi connection settings will be temporarily overwitten while the exploit is active.
+Nesta seção, você irá acionar o exploit BannerBomb3 usando o menu de Gerenciamento de DSiWare, que pode ser usado para substituir seus slots de Wi-Fi por dados modificados. Suas configurações de conexão Wi-Fi serão temporariamente sobrescritas enquanto o exploit estiver ativo.
 
 1. Reinsira seu cartão SD no seu dispositivo
 1. Ligue o seu dispositivo
 1. Abra a Configuração do Console em seu dispositivo
-1. Navigate to `Data Management` -> `DSiWare`-> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
-  + Your device should show the [Bannerbomb3 menu](/images/screenshots/bb3/usm-menu.png)
+1. Navegue para `Gerenciamento de Dados` -> `DSiWare` -> `Cartão SD` ([imagem](/images/screenshots/bb3/dsiware-management.png))
+  + Seu dispositivo deve mostrar o menu [do BannerBomb3](/images/screenshots/bb3/usm-menu.png)
   + Se esta etapa fazer com que seu dispositivo trave, [siga este guia de troubleshooting](troubleshooting#dsiware-management-menu-crashes-without-showing-usm-menu)
-1. Press (A) to select "Inject haxx"
+1. Aperte (A) para selecionar "Inject haxx"
   + Seu dispositivo será desligado automaticamente
 
 #### Seção III - unSAFE_MODE
@@ -103,12 +103,12 @@ Neste momento, o seu console iniciará no Luma3DS por padrão.
 
 #### Seção V - Restaurando os Perfis de Configuração de Wi-Fi
 
-In this section, you will trigger the BannerBomb3 exploit a second time so that you can restore the Wi-Fi connection slots that were overwritten in Section II.
+Nesta seção, ativará o exploit BannerBomb3 pela segunda vez para restaurar os slots de conexão Wi-Fi que foram substituídos na Seção II.
 
 1. Abra a Configuração do Console em seu dispositivo
-1. Navigate to `Data Management` -> `DSiWare`-> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
-  + Your device should show the [Bannerbomb3 menu](/images/screenshots/bb3/usm-menu.png)
-1. Use the D-Pad to navigate and press the (A) button to select "Restore slots"
+1. Navegue para `Gerenciamento de Dados` -> `DSiWare` -> `Cartão SD` ([imagem](/images/screenshots/bb3/dsiware-management.png))
+  + Seu dispositivo deve mostrar o menu [do BannerBomb3](/images/screenshots/bb3/usm-menu.png)
+1. Use os botões direcionais para navegar e pressione o botão (A) para selecionar "Restore slots"
   + Seu dispositivo será reiniciado automaticamente
 1. Desligue seu dispositivo
 1. Insira o cartão SD no seu computador
