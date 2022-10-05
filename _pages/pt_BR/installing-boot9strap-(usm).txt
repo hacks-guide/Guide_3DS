@@ -6,10 +6,10 @@ title: "Instalando boot9strap (USM)"
 
 <details>
 <summary><em>Detalhes técnicos (opcional)</em></summary>
-<p>In order to exploit the SAFE_MODE firmware of our system, we need to inject an exploited WiFi profile.</p>
+<p>Para explorar o firmware SAFE_MODE do nosso sistema, precisamos injetar um perfil de WiFi com exploit.</p>
 <p>We can do this using an existing exploit, BannerBomb3.</p>
 <p>To accomplish this, we use your system's encryption key (movable.sed) to build a DSiWare backup that exploits the system in order to inject the exploited WiFi profile into your connections list.</p>
-<p>Once the WiFi profile has been injected, we will use SAFE_MODE, which is a recovery feature present on all 3DS consoles, to activate the exploited WiFi profile.</p>
+<p>Assim que o perfil WiFi for injetado, usaremos o SAFE_MODE, que é um recurso de recuperação presente em todos os consoles 3DS, para ativar o perfil de Wi-Fi com exploit.</p>
 <p>For a more technical explanation, see the following links for information on the BannerBomb3 and unSAFE_MODE exploits: <a href="https://github.com/zoogie/Bannerbomb3">BannerBomb3</a>, <a href="https://github.com/zoogie/unSAFE_MODE/">unSAFE_MODE</a>.</p>
 </details>
 {: .notice--info}
@@ -73,22 +73,22 @@ In this section, you will trigger the BannerBomb3 exploit using the DSiWare Mana
 
 #### Seção III - unSAFE_MODE
 
-In this section, you will enter Safe Mode (a feature available on all 3DS family devices) and navigate to a menu where unSAFE_MODE will be triggered, which will launch you into the boot9strap (custom firmware) installer.
+Nesta seção, você entrará no Safe Mode (uma funcionalidade disponível em todos os dispositivos da família 3DS) e navegar até um menu onde unSAFE_MODE será acionado, que irá iniciar você no instalador do boot9strap (custom firmware).
 
 1. Com o seu dispositivo ainda desligado, segure os seguintes botões: (Gatilho Esquerdo) + (Gatilho Direito) + (Botão Direcional para Cima) + (A), e enquanto segura esses botões juntos, ligue seu dispositivo
-  + Keep holding the buttons until the device boots into Safe Mode (a "system update" menu)
+  + Continue segurando os botões até o dispositivo iniciar o Safe Mode (um menu de "atualização do sistema")
   + Caso não consiga entrar no Modo de Segurança após várias tentativas, um de seus botões pode estar falhando ou quebrado. Se esse for o caso, você precisará seguir [um ramo alternativo de Seedminer](bannerbomb3). Para obter ajuda com isso, entre no [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) e peça, em inglês, por ajuda.
 1. Pressione "OK" para aceitar a atualização
   + Não há atualização. Isto faz parte do exploit
 1. Pressione "Eu aceito" para aceitar os termos e condições
 1. A atualização eventualmente falhará, com o código de erro `003-1099`. Isto é intencional
 1. Quando solicitado "Você gostaria de configurar as configurações de Internet?", selecione "Sim"
-1. On the following menu, navigate to `Connection 1` -> `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings` -> `Detailed Setup` ([image](/images/screenshots/bb3/safemode_highlighted.png))
+1. No menu a seguir, navegue até `Conexão 1` -> `Alterar configurações` -> `Próxima página (seta direita)` -> `Configurações de proxy` -> `Configurações Avançadas` ([imagem](/images/screenshots/bb3/safemode_highlighted.png))
 1. Se o exploit for bem sucedido, seu dispositivo será inicializado no SafeB9SInstaller
 
 #### Seção IV - Instalando o boot9strap
 
-In this section, you will install custom firmware onto your device.
+Nesta seção, você instalará custom firmware no seu dispositivo.
 
 1. Quando solicitado, aperte a sequência de botões fornecida na tela superior para instalar o boot9strap
   + Se a tela superior estiver vazia, desligue seu dispositivo e refaça a Seção III
