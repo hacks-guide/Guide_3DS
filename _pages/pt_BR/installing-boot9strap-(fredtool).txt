@@ -6,14 +6,14 @@ title: "Instalando boot9strap (Fredtool)"
 
 <details>
 <summary><em>Detalhes técnicos (opcional)</em></summary>
-<p>This method of using Seedminer for further exploitation uses your <code>movable.sed</code> file to decrypt any DSiWare title for the purposes of injecting an exploitable DSiWare title into the DS Internet Settings application. This requires you to have a DSiWare backup, which you should have gotten in the previous section.</p>
-<p>This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed <a href="https://www.3dbrew.org/wiki/3DS_System_Flaws">here</a>.</p>
+<p>Este método de usar o Seedminer para exploiting usa seu arquivo <code>`movable.sed`</code> para descriptografar qualquer aplicativo DSiWare para fins de injetar um título de DSiWare exploitable nas Configurações de Internet do DS. Isso requer que você tenha um backup de DSiWare, que você deveria ter obtido na seção anterior.</p>
+<p>Esta é uma implementação atualmente funcional do exploit "FIRM partitions known-plaintext" detalhado <a href="https://www.3dbrew.org/wiki/3DS_System_Flaws">aqui</a>.</p>
 </details>
 {: .notice--info}
 
 ### O que é necessário
 
-* A DSiWare Backup, normally `42383841.bin` (You should have one on the root of your SD card from following [BannerBomb3](bannerbomb3))
+* Um backup de DSiWare, normalmente `42383841.bin` (Você deve ter um na raiz do seu cartão SD após [BannerBomb3](bannerbomb3))
 * Seu arquivo `movable.sed` de completar [Seedminer](seedminer)
 * A versão mais recente do [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest) (`Frogminer_save.zip`)
 * A versão mais recente do [b9sTool](https://github.com/zoogie/b9sTool/releases/latest) (`boot.nds`)
@@ -21,7 +21,7 @@ title: "Instalando boot9strap (Fredtool)"
 
 #### Seção I - Checando por CFW
 
-As an additional safety measure, we will perform an additional check for custom firmware. This is because using this method when custom firmware is already installed has a risk of bricking the console (rendering it unusable without recovery methods like [ntrboot](ntrboot)).
+Como uma medida de segurança adicional, realizaremos uma verificação adicional de custom firmware. Isso é porque usar esse método quando custom firmware já está instalado tem o risco de danificar o console (renderizando-o sem métodos de recuperação como [ntrboot](ntrboot)).
 
 1. Desligue seu dispositivo
 1. Segure o botão (Select)
@@ -33,13 +33,13 @@ Se você ver um menu de configuração, você já tem CFW e continuar com estas 
 
 ### Seção II - Preparação
 
-In this section, you will copy the files necessary to temporarily replace DS Connection Settings with Flipnote Studio, which is used to launch the boot9strap (custom firmware) installer.
+Nesta seção, você copiará os arquivos necessários para substituir temporariamente as Configurações de Conexões Nintendo DS com Flipnote Studio, que é usado para iniciar o instalador boot9strap (custom firmware).
 
 1. Abra o site [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec) no seu computador
 1. Sob o campo "Username", digite qualquer nome alfanumérico (sem espaços ou caracteres especiais)
-1. Under the "DSiBin" field, upload your `42383841.bin` file using the first "Browse..." option
+1. Sob o campo "DSiBin", faça upload do seu arquivo `42383841.bin` usando a primeira opção "Browse..."
 1. Sob o campo "MovableSed", coloque seu arquivo `movable.sed` usando a segunda opção "Browse..."
-1. Under the "InjectionTarget" field, set the injection target to `DSinternet` (NOT memorypit)
+1. Sob o campo "InjectionTarget", defina o alvo de injeção como `DSinternet` (NÃO o memorypit)
 1. Clique em "Build"
   + Aguarde alguns segundos para que o processo de compilação termine
 1. Na seção Build History à esquerda, digite o nome de usuário no campo "Filter Builds"
@@ -50,7 +50,7 @@ In this section, you will copy the files necessary to temporarily replace DS Con
 1. Navegue até `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` no seu cartão SD
   + `<ID0>` é o nome da pasta 32 letras que você copiou em [Seedminer](seedminer)
   + `<ID1>` é uma pasta de 32 letras dentro da pasta `<ID0>` 
-1. Copy the `42383841.bin`  file from the `hax` folder of the downloaded DSiWare archive (output_(name).zip) to the `Nintendo DSiWare` folder
+1. Copie o arquivo `42383841.bin` da pasta `hax` do arquivo DSiWare baixado (output_(nome).zip) para a pasta `Nintendo DSiWare`
   ![]({{ "/images/screenshots/bb3/dsiware-location-4.png" | absolute_url }}){: .notice--info} 
 1. Copie `boot.firm` e `boot.3dsx` do `.zip` do Luma3DS para a raiz do seu cartão SD
   + A raiz do cartão SD refere-se ao diretório inicial no seu cartão SD onde você pode ver a pasta Nintendo 3DS, mas não está dentro dela
@@ -60,7 +60,7 @@ In this section, you will copy the files necessary to temporarily replace DS Con
     ![]({{ "/images/screenshots/fredtool-root-layout.png" | absolute_url }})
     {: .notice--info}
 
-#### Section III - Overwriting DS Connection Settings
+#### Seção III - Substituindo as Configurações de Conexão Nintendo DS
 
 In this section, you will copy the hacked DS Connection Settings DSiWare to internal memory, which will temporarily replace it with Flipnote Studio.
 
