@@ -6,14 +6,14 @@ title: "Installazione di boot9strap (Fredtool)"
 
 <details>
 <summary><em>Dettagli Tecnici (opzionale)</em></summary>
-<p>This method of using Seedminer for further exploitation uses your <code>movable.sed</code> file to decrypt any DSiWare title for the purposes of injecting an exploitable DSiWare title into the DS Internet Settings application. This requires you to have a DSiWare backup, which you should have gotten in the previous section.</p>
-<p>This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed <a href="https://www.3dbrew.org/wiki/3DS_System_Flaws">here</a>.</p>
+<p>Seedminer utilizza il tuo file <code>movable.sed</code> per decriptare un qualunque titolo DSiWare ed iniettare una particolare applicazione DSiWare nell'applicazione Connessioni Nintendo DS. Questo richiede di avere un backup DSiWare, che dovresti aver ottenuto nella sezione precedente.</p>
+<p>Utilizzeremo una falla, attualmente funzionante, denominata "FIRM partitions known-plaintext" <a href="https://www.3dbrew.org/wiki/3DS_System_Flaws">qui</a>.</p>
 </details>
 {: .notice--info}
 
 ### Cosa serve
 
-* A DSiWare Backup, normally `42383841.bin` (You should have one on the root of your SD card from following [BannerBomb3](bannerbomb3))
+* Un backup DSiWare, di solito `42383841.bin` (dovresti averne uno nella directory principale della tua scheda SD dopo aver seguito [BannerBomb3](bannerbomb3))
 * Il tuo file `movable.sed` dalla sezione [Seedminer](seedminer)
 * L'ultima versione di [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest) (`Frogminer_save.zip`)
 * L'ultima versione di [b9sTool](https://github.com/zoogie/b9sTool/releases/latest) (`boot.nds`)
@@ -21,7 +21,7 @@ title: "Installazione di boot9strap (Fredtool)"
 
 #### Sezione I - Controllo del CFW
 
-As an additional safety measure, we will perform an additional check for custom firmware. This is because using this method when custom firmware is already installed has a risk of bricking the console (rendering it unusable without recovery methods like [ntrboot](ntrboot)).
+Come precauzione aggiuntiva, controlleremo anche la presenza di un custom firmware. È necessario poiché se un custom firmware fosse già installato, questo metodo rischierebbe di brickare la console (rendendola inutilizzabile in assenza di metodi di ripristino come [ntrboot](ntrboot)).
 
 1. Spegni il tuo 3DS
 1. Premi il pulsante (Select)
@@ -33,7 +33,7 @@ Se visualizzi un menu di configurazione, hai già un CFW e continuando con quest
 
 #### Sezione II - Preparazione
 
-In this section, you will copy the files necessary to temporarily replace DS Connection Settings with Flipnote Studio, which is used to launch the boot9strap (custom firmware) installer.
+In questa sezione copierai i file necessari per sostituire temporaneamente "Impostazioni di collegamento" con Flipnote Studio, usato per lanciare l'installer di boot9strap (custom firmware).
 
 1. Apri il sito [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec) sul tuo computer
 1. Sotto il campo "Username" inserisci un nome alfanumerico qualunque (senza spazi o caratteri speciali)
