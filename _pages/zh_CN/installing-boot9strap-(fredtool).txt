@@ -6,14 +6,13 @@ title: "安装 boot9strap（通过 Fredtool）"
 
 <details>
 <summary><em>Technical Details (optional)</em></summary>
-<p>This method of using Seedminer for further exploitation uses your <code>movable.sed</code> file to decrypt any DSiWare title for the purposes of injecting an exploitable DSiWare title into the DS Internet Settings application. This requires you to have a DSiWare backup, which you should have gotten in the previous section.</p>
+<p>This method of using Seedminer for further exploitation uses your <code>movable.sed</code> file to decrypt any DSiWare title for the purposes of injecting an exploitable DSiWare title into the DS Internet Settings application.</p>
 <p>This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed <a href="https://www.3dbrew.org/wiki/3DS_System_Flaws">here</a>.</p>
 </details>
 {: .notice--info}
 
 ### 你需要准备点啥？
 
-* A DSiWare Backup, normally `42383841.bin` (You should have one on the root of your SD card from following [BannerBomb3](bannerbomb3))
 * 你在 [Seedminer](seedminer) 步骤中获得的 `movable.sed` 文件
 * 最新版本的 [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest)（下载 `Frogminer_save.zip`）
 * 最新版本的 [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)（下载 `boot.nds`）
@@ -27,17 +26,32 @@ As an additional safety measure, we will perform an additional check for custom 
 1. 按住 “Select” 键
 1. 在按住 “Select” 键的同时按下电源键开机
 1. 如果主机自动启动到了主菜单，则测试成功，你可以继续做此教程中的余下内容
+1. 将主机关机
 
-如果主机进入到了一个配置菜单，那就表示你的主机之前已经安装过自制固件了。**如果继续操作的话可能会导致主机变砖！** 继续至[检查自制固件](checking-for-cfw)来更新你现有的自制固件。
+If you see a configuration menu or the console immediately powers off, you already have CFW, and continuing with these instructions may BRICK your device! 继续至[检查自制固件](checking-for-cfw)来更新你现有的自制固件。
 {: .notice--danger}
+    
+#### 第二步 – BannerBomb3
 
-#### 第二步 – 准备工作
+In this section, you will trigger the BannerBomb3 exploit using the DSiWare Management menu and copy the resulting file dump to your computer so that you can use it on the next section.
+
+1. 将 SD 卡重新插入你的主机
+1. 启动你的主机
+1. 启动你主机上的 “系统设置(System settings)”
+1. Navigate to `Data Management` -> `DSiWare`-> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
+  + Your device should show the BB3 multihax menu
+  + If this step causes your device to crash, [follow this troubleshooting guide](troubleshooting#dsiware-management-menu-crashes-without-showing-bb3-multihax-menu-fredtool)
+1. Use the D-Pad to navigate and press the (A) button to select "Dump DSiWare"
+  + 主机将会自动关机
+  
+#### Section III - Prep Work
 
 In this section, you will copy the files necessary to temporarily replace DS Connection Settings with Flipnote Studio, which is used to launch the boot9strap (custom firmware) installer.
 
+1. 将你的 SD 卡插入到电脑
 1. 在电脑上打开 [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec) 站点
 1. 于“Username”一行，填入一个你的英文名（不带空格或特殊字符）
-1. 于 “DSiBin” 一行，点击“Browse...”（选择文件）来上传先前的 `42383841.bin` 文件
+1. Under the "DSiBin" field, upload your `42383841.bin` file from the root of your SD card using the first "Browse..." option
 1. 于“MovableSed”一行，点击“Browse...”（选择文件）上传你的 `movable.sed` 文件
 1. 于“InjectionTarget”一行，设置注入对象为 `DSinternet`（**不是带有** memorypit 字串的那个）
 1. 点击 “Build”
@@ -46,7 +60,6 @@ In this section, you will copy the files necessary to temporarily replace DS Con
 1. 点击第一个搜索结果
   + 它应该是所有显示的结果中时间最新的那一个
 1. 点击 "output_(<你的名字>).zip" 的链接
-1. 将你的 SD 卡插入到电脑
 1. 打开内存卡的 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 文件夹
   + `<ID0>` is the 32-letter folder name that you copied in [Seedminer](seedminer)
   + `<ID1>` is a 32-letter folder inside of the `<ID0>` 
@@ -60,7 +73,7 @@ In this section, you will copy the files necessary to temporarily replace DS Con
     ![]({{ "/images/screenshots/fredtool-root-layout.png" | absolute_url }})
     {: .notice--info}
 
-#### Section III - Overwriting DS Connection Settings
+#### Section IV - Overwriting DS Connection Settings
 
 In this section, you will copy the hacked DS Connection Settings DSiWare to internal memory, which will temporarily replace it with Flipnote Studio.
 
@@ -73,7 +86,7 @@ In this section, you will copy the hacked DS Connection Settings DSiWare to inte
 1. Navigate to `Internet Settings` -> `Nintendo DS Connections`, then select "OK" ([image](/images/screenshots/fredtool/dsconnection.png))
 1. 如果漏洞执行成功，你的主机将进入到日版的“うごくメモ帳 (Flipnote Studio)”
 
-#### 第四步 – 触发 Flipnote 漏洞
+#### 第五步 – 触发 Flipnote 漏洞
 
 如果你需要图片帮助，请点击 [这里](https://zoogie.github.io/web/flipnote_directions/)。
 {: .notice--info}
@@ -99,7 +112,7 @@ In this section, you will perform a series of very specific steps within Flipnot
   + 如果你的主机在你尝试开机后自动关机了，请确认你已经从 Luma3DS `.zip` 中复制了 `boot.firm` 文件到你的 SD 卡根目录中
   + 如果你看到主机显示了 Luma 配置菜单，请按下 START 键重启然后继续教程
 
-#### 第五步 – 验证 Luma3DS
+#### 第六步 – 验证 Luma3DS
 
 Due to the nature of the exploit used, it is occasionally (but rarely) possible for boot9strap to not actually get installed. This section will therefore verify that boot9strap was successfully installed by seeing if some files that are normally automatically generated by Luma3DS were created.
 
@@ -113,13 +126,13 @@ Due to the nature of the exploit used, it is occasionally (but rarely) possible 
   + Luma3DS 不会给正常的主菜单增添任何看上去十分特别的东西。 如果你的主机现在已经启动到主菜单了，说明自制固件已经在运行了。
   + 在下一页中，我们将会教你安装一些有用的自制程序来完成安装步骤。
 
-#### 第六步 – 还原 “DS 连接设置（DS Connection Settings）”
+#### Section VII - Restoring DS Connection Settings
 
-In this section, you will restore DS Connection Settings to the way it was before it was temporarily replaced with Flipnote Studio in Section III.
+In this section, you will restore DS Connection Settings to the way it was before it was temporarily replaced with Flipnote Studio in Section IV.
 
 1. 打开内存卡的 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 文件夹
 1. Copy the `42383841.bin`  file from the `clean` folder of the downloaded DSiWare archive (output_(name).zip) to the `Nintendo DSiWare` folder, replacing the existing one
-1. 将 SD 卡重新插入你的主机
+1. 将SD卡重新插入你的主机
 1. 启动你的主机
 1. 启动你主机上的 “系统设置(System settings)”
 1. Navigate to `Data Management` -> `DSiWare`-> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
