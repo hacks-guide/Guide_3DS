@@ -6,8 +6,8 @@ title: "BannerBomb3"
 
 <details>
 <summary><em>Technical Details (optional)</em></summary>
-<p>To dump system DSiWare, we exploit a flaw in the DSiWare Data Management window of the Settings application.</p>
-<p>To accomplish this, we use your system's encryption key (movable.sed) to build a DSiWare backup that exploits the system in order to dump the DSi Internet Settings application to the SD root.</p>
+<p>To launch custom code, we exploit a flaw in the DSiWare Data Management window of the Settings application.</p>
+<p>To accomplish this, we use your system's encryption key (movable.sed) to build a DSiWare backup that exploits the system.</p>
 <p>For a more technical explanation, see <a href="https://github.com/zoogie/Bannerbomb3">here</a>.</p>
 </details>
 {: .notice--info}
@@ -27,38 +27,43 @@ title: "BannerBomb3"
 
 In this section, you will copy the files needed to trigger the BannerBomb3 exploit onto your device's SD card.
 
-1. 在你的电脑上打开 [BannerBomb3 Tool](https://3ds.nhnarwhal.com/3dstools/bannerbomb3.php)
-1. 点击 “选择文件” 选项，然后选择你的 movable.sed 上传
-1. 点击 “Build and Download”
-  + 这个操作将下载一个 zip 文件（`BannerBomb3.zip`），解压后可得到一个叫做 `F00D43D5.bin` 的文件，此文件用来利用 DSiWare 漏洞
-1. 如果你的主机已经被你开机了，那么将其关机
+1. 将主机关机
 1. 将你的 SD 卡插入到电脑
+1. Open [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen) on your computer
+1. Upload your movable.sed using the “Choose File” option
+1. Click “Build and Download”
+  + This will download an exploit DSiWare called `F00D43D5.bin` and a payload called `bb3.bin` inside of a zip archive (`DSIWARE_EXPLOIT.zip`)
+1. Copy `bb3.bin` from `DSIWARE_EXPLOIT.zip` to the root of your SD card
+  + 根目录指的是你点进 SD 卡看到的目录，你可以在这个目录下看到 Nintendo 3DS 文件夹，但请不要点进去
 1. 打开内存卡的 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` 文件夹
   + `<ID0>` is the 32-letter folder name that you copied in [Seedminer](seedminer)
   + `<ID1>` is a 32-letter folder inside of the `<ID0>`
   ![]({{ "/images/screenshots/bb3/dsiware-location-1.png" | absolute_url }}){: .notice--info}
 1. 在 `<ID1>` 文件夹内创建一个名为 `Nintendo DSiWare` 的文件夹
   + 如果这个位置已经存在了这个文件夹，**且**有一些名为 `<8位ID>.bin` 文件（DSiWare 备份文件）在里面，请将它们备份到电脑上，然后从 SD 卡中移除这些文件
-1. Copy the `F00D43D5.bin` file from `BannerBomb3.zip` to the `Nintendo DSiWare` folder
+1. Copy the `F00D43D5.bin` file from `DSIWARE_EXPLOIT.zip` to the `Nintendo DSiWare` folder
 
 ![]({{ "/images/screenshots/bb3/dsiware-location-2.png" | absolute_url }})
 {: .notice--info} 
 
-#### 第二步 – BannerBomb3
+#### Section II - Hardware Button Check
 
-In this section, you will trigger the BannerBomb3 exploit using the DSiWare Management menu and copy the resulting file dump to your computer so that you can use it on the next page.
+In this section, you will test the SAFE_MODE function of your device. This will determine which method you will follow in the next page.
 
-1. 将 SD 卡重新插入你的主机
-1. 启动你的主机
-1. 启动你主机上的 “系统设置(System settings)”
-1. Navigate to `Data Management` -> `DSiWare` -> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
-  + 你的主机屏幕应该会开始品红色（粉色 / 紫色）的闪烁，然后在几秒钟后崩溃。 这意味着它生效了
+1. 将你的主机置于关机状态，按住 L + R + ↑ + A 四个按键，然后按下电源键
+  + Keep holding the buttons until the device boots into Safe Mode (a "system update" menu)
+1. If prompted to update, press Cancel
+  + If the device boots to the HOME Menu, just continue to the next step
 1. 将主机关机
-1. 将你的 SD 卡插入到电脑
-1. You should now have `42383841.bin` on the root of your SD card. Copy this file to somewhere on your computer, as you will use it on the next page
-1. 打开内存卡的 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 文件夹
-1. Delete `F00D43D5.bin` from your Nintendo DSiWare folder and from your computer. 此文件之后不再需要使用
 
+___
 
-继续至[安装 boot9strap（通过Fredtool）](installing-boot9strap-(fredtool))
+### Next steps: Choose an exploit
+
+If your device booted into Safe Mode and prompted to you to do a system update in Section II, Safe Mode is working on your device.
+
+If your device booted into Safe Mode, continue to [Installing boot9strap (USM)](installing-boot9strap-(usm))
 {: .notice--primary}
+
+If your device did NOT boot into Safe Mode, continue to [Installing boot9strap (Fredtool)](installing-boot9strap-(fredtool))
+{: .notice--warning}
