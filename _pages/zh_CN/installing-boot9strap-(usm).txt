@@ -18,45 +18,28 @@ title: "安装 boot9strap（通过 USM）"
 
 这些操作可在美、欧、日、韩版的主机上工作，你可通过系统版本号末尾的 U，E，J，K 字符来区分主机版本。
 
-如果你的主机 L 键、R 键、↑ 键和 A 键中有一个坏了无法使用，则你只能使用[替代方法](bannerbomb3)。 如需帮助，请加入 [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) 并使用英文求助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497。
+If your (Right/Left Shoulder), (D-Pad Up), or (A) buttons do not work, you will need to follow [an alternate branch of Seedminer](installing-boot9strap-(fredtool)). 如需帮助，请加入 [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) 并使用英文求助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497。
 {: .notice--warning}
 
 ### 你需要准备点啥？
 
-* 你在 [Seedminer](seedminer) 步骤中获得的 `movable.sed` 文件
 * 最新版本的 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip)（直链）
 * 最新版本的 [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip)（直链）
 * 最新版本的 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)（下载 Luma3DS `.zip` 文件）
+* The latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/download/v1.3/usm.bin) (direct download)
 
 
 #### 第一步 – 准备工作
 
-In this section, you will copy the files needed to trigger the BannerBomb3 and unSAFE_MODE exploits onto your device's SD card.
+In this section, you will copy the files needed to trigger the unSAFE_MODE exploit onto your device's SD card.
 
-1. 如果你的主机已经被你开机了，那么将其关机
-1. 在你的电脑上打开 [unSAFE_MODE Exploit Injector](https://3ds.nhnarwhal.com/3dstools/unsafemode.php)
-1. 点击 “选择文件” 选项，然后选择你的 movable.sed 上传
-1. 点击 “Build and Download”
-  + 这将下载一个包含了名为 `F00D43D5.bin` 的 DSiWare 备份和一个名为 `usm.bin` 的 SAFE_MODE 存档的 zip 文件（`unSAFE_MODE.zip`）到你的电脑上
-1. 将你的 SD 卡插入到电脑
+1. Your SD card should be inserted in your computer
 1. 解压 Luma3DS `.zip` 里的 `boot.firm` 和 `boot.3dsx` 到你 SD 卡的根目录
   + 根目录指的是你点进 SD 卡看到的目录，你可以在这个目录下看到 Nintendo 3DS 文件夹，但请不要点进去
 1. 在 SD 卡根目录创建一个名为 `boot9strap` 的文件夹
 1. 从boot9strap `.zip` 文件中复制 `boot9strap.firm` 和 `boot9strap.firm.sha` 到你SD卡的 `/boot9strap/` 文件夹中
 1. 从 SafeB9SInstaller `.zip` 压缩包中复制 `SafeB9SInstaller.bin` 到 SD 卡根目录下
-1. 从 `unSAFE_MODE.zip` 复制 `usm.bin` 到 SD 卡的根目录
-    ![]({{ "/images/screenshots/bb3/usm-root-layout.png" | absolute_url }}){: .notice--info}
-    ![]({{ "/images/screenshots/boot9strap-folder.png" | absolute_url }}){: .notice--info}
-1. 打开内存卡的 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` 文件夹
-  + `<ID0>` is the 32-letter folder name that you copied in [Seedminer](seedminer)
-  + `<ID1>` is a 32-letter folder inside of the `<ID0>`
-  ![]({{ "/images/screenshots/bb3/dsiware-location-1.png" | absolute_url }}){: .notice--info}
-1. 在 `<ID1>` 文件夹内创建一个名为 `Nintendo DSiWare` 的文件夹
-  + 如果这个位置已经存在了这个文件夹，**且**有一些名为 `<8位ID>.bin` 文件（DSiWare 备份文件）在里面，请将它们备份到电脑上，然后从 SD 卡中移除这些文件
-1. 从 `unSAFE_MODE.zip` 压缩文件中解压 `F00D43D5.bin` 到 `Nintendo DSiWare` 文件夹下
-
-![]({{ "/images/screenshots/bb3/dsiware-location-2.png" | absolute_url }})
-{: .notice--info} 
+1. Copy `usm.bin` to the root of your SD card
 
 #### 第二步 – BannerBomb3
 
@@ -66,9 +49,9 @@ In this section, you will trigger the BannerBomb3 exploit using the DSiWare Mana
 1. 启动你的主机
 1. 启动你主机上的 “系统设置(System settings)”
 1. Navigate to `Data Management` -> `DSiWare`-> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
-  + Your device should show the [Bannerbomb3 menu](/images/screenshots/bb3/usm-menu.png)
-  + 如果做完这步之后你的主机崩溃了，[请参照此故障排查](troubleshooting#dsiware-management-menu-crashes-without-showing-usm-menu)。
-1. Press (A) to select "Inject haxx"
+  + Your device should show the BB3 multihax menu
+  + If this step causes your device to crash, [follow this troubleshooting guide](troubleshooting#dsiware-management-menu-crashes-without-showing-bb3-multihax-menu-usm)
+1. Use the D-Pad to navigate and press the (A) button to select "Install unSAFE_MODE"
   + 主机将会自动关机
 
 #### 第三步 – unSAFE_MODE
@@ -77,7 +60,7 @@ In this section, you will enter Safe Mode (a feature available on all 3DS family
 
 1. 将你的主机置于关机状态，按住 L + R + ↑ + A 四个按键，然后按下电源键
   + Keep holding the buttons until the device boots into Safe Mode (a "system update" menu)
-  + 如果你试了很多次依然无法进入安全模式，则也许这四个按键中有一个按错了，或是坏掉了。 如果确实如此，则请更换 [Seedminer 的另一种方法](bannerbomb3)。 如需帮助，请加入 [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) 并使用英文求助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497。
+  + 如果你试了很多次依然无法进入安全模式，则也许这四个按键中有一个按错了，或是坏掉了。 If this is the case, you will need to follow [an alternate branch of BannerBomb3](installing-boot9strap-(fredtool)). 如需帮助，请加入 [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) 并使用英文求助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497。
 1. 点击 “OK” 来允许更新
   + 这个步骤实际上不存在更新。 这只是触发漏洞的一部分
 1. 点击 “I accept（我同意/同意する）”
@@ -107,8 +90,7 @@ In this section, you will trigger the BannerBomb3 exploit a second time so that 
 
 1. 启动你主机上的 “系统设置(System settings)”
 1. Navigate to `Data Management` -> `DSiWare`-> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
-  + Your device should show the [Bannerbomb3 menu](/images/screenshots/bb3/usm-menu.png)
-1. Use the D-Pad to navigate and press the (A) button to select "Restore slots"
+1. Use the D-Pad to navigate and press the (A) button to select "Uninstall unSAFE_MODE"
   + 主机将会自动重启
 1. 将主机关机
 1. 将你的 SD 卡插入到电脑
