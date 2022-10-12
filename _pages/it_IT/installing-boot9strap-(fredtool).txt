@@ -6,14 +6,13 @@ title: "Installazione di boot9strap (Fredtool)"
 
 <details>
 <summary><em>Dettagli Tecnici (opzionale)</em></summary>
-<p>Seedminer utilizza il tuo file <code>movable.sed</code> per decriptare un qualunque titolo DSiWare ed iniettare una particolare applicazione DSiWare nell'applicazione Connessioni Nintendo DS. Questo richiede di avere un backup DSiWare, che dovresti aver ottenuto nella sezione precedente.</p>
+<p>This method of using Seedminer for further exploitation uses your <code>movable.sed</code> file to decrypt any DSiWare title for the purposes of injecting an exploitable DSiWare title into the DS Internet Settings application.</p>
 <p>Utilizzeremo una falla, attualmente funzionante, denominata "FIRM partitions known-plaintext" <a href="https://www.3dbrew.org/wiki/3DS_System_Flaws">qui</a>.</p>
 </details>
 {: .notice--info}
 
 ### Cosa serve
 
-* Un backup DSiWare, di solito `42383841.bin` (dovresti averne uno nella directory principale della tua scheda SD dopo aver seguito [BannerBomb3](bannerbomb3))
 * Il tuo file `movable.sed` dalla sezione [Seedminer](seedminer)
 * L'ultima versione di [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest) (`Frogminer_save.zip`)
 * L'ultima versione di [b9sTool](https://github.com/zoogie/b9sTool/releases/latest) (`boot.nds`)
@@ -27,17 +26,32 @@ Come precauzione aggiuntiva, controlleremo anche la presenza di un custom firmwa
 1. Premi il pulsante (Select)
 1. Accendi la tua console continuando a tenere premuto il pulsante (Select)
 1. Se il controllo è andato a buon fine, verrà avviato il menu HOME e potrai procedere con questa guida
+1. Spegni il tuo 3DS
 
-Se visualizzi un menu di configurazione, hai già un CFW e continuando con queste istruzioni potresti BRICKARE la tua console! Procedi con la [Verifica del CFW](checking-for-cfw) per aggiornare il tuo CFW esistente.
+If you see a configuration menu or the console immediately powers off, you already have CFW, and continuing with these instructions may BRICK your device! Procedi con la [Verifica del CFW](checking-for-cfw) per aggiornare il tuo CFW esistente.
 {: .notice--danger}
+    
+#### Sezione II - BannerBomb3
 
-#### Sezione II - Preparazione
+In this section, you will trigger the BannerBomb3 exploit using the DSiWare Management menu and copy the resulting file dump to your computer so that you can use it on the next section.
+
+1. Reinserisci la scheda SD nella tua console
+1. Accendi la console
+1. Avvia "Impostazioni della console"
+1. Entra in `Gestione dati` -> `DSiWare` -> `Scheda SD` ([image](/images/screenshots/bb3/dsiware-management.png))
+  + Your device should show the BB3 multihax menu
+  + If this step causes your device to crash, [follow this troubleshooting guide](troubleshooting#dsiware-management-menu-crashes-without-showing-bb3-multihax-menu-fredtool)
+1. Use the D-Pad to navigate and press the (A) button to select "Dump DSiWare"
+  + La tua console si spegnerà automaticamente
+  
+#### Section III - Prep Work
 
 In questa sezione copierai i file necessari per sostituire temporaneamente "Impostazioni di collegamento" con Flipnote Studio, usato per lanciare l'installer di boot9strap (custom firmware).
 
+1. Inserisci la scheda SD nel tuo computer
 1. Apri il sito [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec) sul tuo computer
 1. Sotto il campo "Username" inserisci un nome alfanumerico qualunque (senza spazi o caratteri speciali)
-1. Sul il campo "DSiBin", carica il tuo file `42383841.bin` usando la prima opzione "Browse..."
+1. Under the "DSiBin" field, upload your `42383841.bin` file from the root of your SD card using the first "Browse..." option
 1. Sul campo "MovableSed", carica il tuo file `movable.sed` usando la seconda opzione "Browse..."
 1. Sul campo "InjectionTarget", imposta l'obiettivo dell'iniezione su `DSinternet` (NON memorypit)
 1. Clicca "Build"
@@ -46,7 +60,6 @@ In questa sezione copierai i file necessari per sostituire temporaneamente "Impo
 1. Clicca sul primo risultato della ricerca
   + Dovrebbe avere la data più recente
 1. Clicca il link "output_(name).zip"
-1. Inserisci la scheda SD nel tuo computer
 1. Nella tua scheda SD, entra in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`
   + `<ID0>` è il nome a 32 lettere della cartella che hai copiato in [Seedminer](seedminer)
   + `<ID1>` è una cartella dal nome lungo 32 caratteri all'interno di `<ID0>` 
@@ -60,7 +73,7 @@ In questa sezione copierai i file necessari per sostituire temporaneamente "Impo
     ![]({{ "/images/screenshots/fredtool-root-layout.png" | absolute_url }})
     {: .notice--info}
 
-#### Sezione III - Sovrascrittura delle Impostazioni di collegamento DS
+#### Section IV - Overwriting DS Connection Settings
 
 In questa sezione copierai il DSiWare modificato "Impostazioni di collegamento DS" nella memoria interna, che verrà così temporaneamente sostituito da Flipnote Studio.
 
@@ -73,7 +86,7 @@ In questa sezione copierai il DSiWare modificato "Impostazioni di collegamento D
 1. Entra in `Impostazioni Internet` -> `Connessioni Nintendo DS`, quindi seleziona "OK" ([image](/images/screenshots/fredtool/dsconnection.png))
 1. Se l'exploit ha avuto successo, la tua console avrà caricato la versione JPN di Flipnote Studio
 
-#### Sezione IV - Exploit Flipnote
+#### Sezione V - Exploit Flipnote
 
 Se desideri una guida visiva per questa parte, è disponibile [qui](https://zoogie.github.io/web/flipnote_directions/).
 {: .notice--info}
@@ -99,7 +112,7 @@ In questa sezione eseguirai una serie di passaggi molto specifici all'interno di
   + Se la console dovesse spegnersi quando provi ad accenderla, assicurati di aver copiato il file `boot.firm` dall'archivio `.zip` di Luma3DS nella directory principale della tua scheda SD
   + Se vedi la schermata di configurazione di Luma, premi (Start) per riavviare la console, quindi continua con la guida
 
-#### Sezione V - Verifica di Luma3DS
+#### Sezione VI - Verifica di Luma3DS
 
 A causa della natura dell'exploit utilizzato, è, seppur raramente, possibile che boot9strap non venga effettivamente installato. Questa sezione verificherà quindi che boot9strap sia stato installato con successo verificando la presenza di file generati automaticamente da Luma3DS.
 
@@ -113,9 +126,9 @@ A questo punto, la console avvierà sempre Luma3DS.
   + Luma3DS non è diverso dal normale menu HOME. Se la console avvia il menu HOME, vuol dire che sta eseguendo il custom firmware.
   + Nella pagina successiva installerai applicazioni homebrew utili per completare la tua installazione.
 
-#### Sezione VI - Ripristino delle Impostazioni di Connessione DS
+#### Section VII - Restoring DS Connection Settings
 
-In questa sezione ripristinerai "Impostazioni di collegamento DS" nel modo in cui era prima che fosse temporaneamente sostituito con Flipnote Studio nella Sezione III.
+In this section, you will restore DS Connection Settings to the way it was before it was temporarily replaced with Flipnote Studio in Section IV.
 
 1. Nella tua scheda SD, entra in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`
 1. Copia il file `42383841.bin` dalla cartella `clean` dall'archivio DSiWare appena scaricato (`output_(name).zip`) nella cartella `Nintendo DSiWare`, sostituendo quello preesistente
