@@ -18,45 +18,28 @@ title: "Boot9strap installeren (USM)"
 
 Deze instructies werken aan de consoles van de VS, Europa, Japan en Korea zoals aangegeven in de letters U, E, J, of K na de systeemversie.
 
-If your (Right/Left Shoulder), (D-Pad Up), or (A) buttons do not work, you will need to follow [an alternate branch of Seedminer](bannerbomb3). For assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+If your (Right/Left Shoulder), (D-Pad Up), or (A) buttons do not work, you will need to follow [an alternate branch of Seedminer](installing-boot9strap-(fredtool)). For assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 {: .notice--warning}
 
 ### Wat je nodig hebt
 
-* je `movable.sed` bestand van het voltooien van [Seedminer](seedminer)
 * De nieuwste versie van [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (directe download)
 * De nieuwste versie van [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (directe download)
 * De nieuwste versie van [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (het Luma3DS `.zip` bestand)
+* The latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/download/v1.3/usm.bin) (direct download)
 
 
 #### Deel I - Voorbereiding
 
-In this section, you will copy the files needed to trigger the BannerBomb3 and unSAFE_MODE exploits onto your device's SD card.
+In this section, you will copy the files needed to trigger the unSAFE_MODE exploit onto your device's SD card.
 
-1. Als je 3DS aanstaat, zet hem dan af
-1. Open [unSAFE_MODE Exploit Injector](https://3ds.nhnarwhal.com/3dstools/unsafemode.php) op je computer
-1. Upload je movable.sed met de "Choose File" optie
-1. Selecteer "Build and Download"
-  + Dit zal een exploit DSiWare `F00D43D5.bin` en een SAFE_MODE exploit data bestand genaamd `usm.bin` in een zip-archief (`unSAFE_MODE.zip`) downloaden
-1. Plaats je SD kaart in je computer
+1. Your SD card should be inserted in your computer
 1. Kopieer `boot.firm` en `boot.3dsx` van de Luma3DS `.zip` naar de hoofdmap van je SD-kaart
   + De hoofdmap van de SD-kaart verwijst naar de bovenste map van de SD-kaart, waarin je alle mappen op de SD-kaart kunt zien, waaronder de Nintendo 3DS map, zonder je in de Nintendo 3DS map te bevinden
 1. Maak een map genaamd `boot9strap` op de hoofdmap van je SD-kaart
 1. Kopieer `boot9strap.firm` en `boot9strap.firm.sha` van de boot9strap `.zip` naar de `/boot9strap/` map op je SD-kaart
 1. Kopieer `SafeB9SInstaller.bin` van de SafeB9SInstaller `.zip` naar de hoofdmap van je SD-kaart
-1. Kopieer `usm.bin` van de `unSAFE_MODE.zip` naar de hoofdmap van je SD-kaart
-    ![]({{ "/images/screenshots/bb3/usm-root-layout.png" | absolute_url }}){: .notice--info}
-    ![]({{ "/images/screenshots/boot9strap-folder.png" | absolute_url }}){: .notice--info}
-1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` on your SD card
-  + `<ID0>` is the 32-letter folder name that you copied in [Seedminer](seedminer)
-  + `<ID1>` is a 32-letter folder inside of the `<ID0>`
-  ![]({{ "/images/screenshots/bb3/dsiware-location-1.png" | absolute_url }}){: .notice--info}
-1. Create a folder named `Nintendo DSiWare` inside of the `<ID1>`
-  + If you already had the folder *and* there are any existing DSiWare backup files (`<8-character-id>.bin`) inside, copy them to your PC and remove them from your SD card
-1. Kopieer het `F00D43D5.bin` bestand van `unSAFE_MODE.zip` naar de `Nintendo DSiWare` map
-
-![]({{ "/images/screenshots/bb3/dsiware-location-2.png" | absolute_url }})
-{: .notice--info} 
+1. Copy `usm.bin` to the root of your SD card
 
 #### Deel II - BannerBomb3
 
@@ -66,9 +49,9 @@ In this section, you will trigger the BannerBomb3 exploit using the DSiWare Mana
 1. Zet je 3DS aan
 1. Open Systeeminstellingen op je apparaat
 1. Navigate to `Data Management` -> `DSiWare`-> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
-  + Your device should show the [Bannerbomb3 menu](/images/screenshots/bb3/usm-menu.png)
-  + If this step causes your device to crash, [follow this troubleshooting guide](troubleshooting#dsiware-management-menu-crashes-without-showing-usm-menu)
-1. Press (A) to select "Inject haxx"
+  + Your device should show the BB3 multihax menu
+  + If this step causes your device to crash, [follow this troubleshooting guide](troubleshooting#dsiware-management-menu-crashes-without-showing-bb3-multihax-menu-usm)
+1. Use the D-Pad to navigate and press the (A) button to select "Install unSAFE_MODE"
   + Je apparaat zal automatisch uitschakelen
 
 #### Deel III - unSAFE_MODE
@@ -77,7 +60,7 @@ In this section, you will enter Safe Mode (a feature available on all 3DS family
 
 1. With your device still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your device
   + Keep holding the buttons until the device boots into Safe Mode (a "system update" menu)
-  + If you're unable to get into Safe Mode after multiple attempts, one of your buttons may be failing or broken. If this is the case, you will need to follow [an alternate branch of Seedminer](bannerbomb3). For assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+  + If you're unable to get into Safe Mode after multiple attempts, one of your buttons may be failing or broken. If this is the case, you will need to follow [an alternate branch of BannerBomb3](installing-boot9strap-(fredtool)). For assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 1. Druk op "OK" om de update te accepteren
   + Er is geen update. Dit is deel van de exploit
 1. Druk op "I accept" om de algemene voorwaarden te accepteren
@@ -107,8 +90,7 @@ In this section, you will trigger the BannerBomb3 exploit a second time so that 
 
 1. Open System Settings op je apparaat
 1. Navigate to `Data Management` -> `DSiWare`-> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
-  + Your device should show the [Bannerbomb3 menu](/images/screenshots/bb3/usm-menu.png)
-1. Use the D-Pad to navigate and press the (A) button to select "Restore slots"
+1. Use the D-Pad to navigate and press the (A) button to select "Uninstall unSAFE_MODE"
   + Your device will automatically reboot
 1. Schakel je 3DS uit
 1. Plaats je SD kaart in je computer
