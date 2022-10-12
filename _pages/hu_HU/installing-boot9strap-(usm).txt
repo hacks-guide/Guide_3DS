@@ -18,45 +18,28 @@ title: "Boot9strap telepítése (USM)"
 
 Az utasítások az Amerikai, Európai, Japán és Koreai régiójú konzolokon működnek, amik a rendszer verzió mögött egy U, E, J vagy K betű jelöl.
 
-Ha a (Jobb/Bal Váll), (D-Pad Fel) vagy (A) gombjaid nem működnek, [a Seedminer egy alternatív ágát](bannerbomb3) kell követned. Ha támogatásra van szükséged az anyaggal kapcsolatosan, csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és kérj, angolul, támogatást.
+If your (Right/Left Shoulder), (D-Pad Up), or (A) buttons do not work, you will need to follow [an alternate branch of Seedminer](installing-boot9strap-(fredtool)). Ha támogatásra van szükséged az anyaggal kapcsolatosan, csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és kérj, angolul, támogatást.
 {: .notice--warning}
 
 ### Amire szükséged lesz
 
-* A `movable.sed` fájlodra a [Seedminer](seedminer)-ből
 * A [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) legfrisseb verziója (közvetlen letöltés)
 * A [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) legfrisseb verziója (közvetlen letöltés)
 * A [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) legújabb kiadása (a Luma3DS `.zip` fájl)
+* The latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/download/v1.3/usm.bin) (direct download)
 
 
 #### I. rész - Előkészületek
 
-Ebben a fejezetben fel fogod másolni azokat a fájlokat az eszközöd SD kártyájára, amik ahhoz szükségesek, hogy kiváltsák a BannerBomb3 és az unSAFE_MODE exploit-okat.
+In this section, you will copy the files needed to trigger the unSAFE_MODE exploit onto your device's SD card.
 
-1. Ha a konzolod be van kapcsolva, most kapcsold ki
-1. Nyisd meg az [unSAFE_MODE Exploit Injector](https://3ds.nhnarwhal.com/3dstools/unsafemode.php/) oldalt a számítógépeden
-1. Töltsd fel a `movable.sed` fájlod a "Choose File" opcióval
-1. Kattints a "Build and Download"-ra
-  + Ez letölt egy exploit DSiWare-t `F00D43D5.bin` néven és egy SAFE_MODE exploit adatfájlt `usm.bin` néven egy zip mappán belül (`unSAFE_MODE.zip`)
-1. Helyezd az SD kártyád a számítógépbe
+1. Your SD card should be inserted in your computer
 1. Másold át a `boot.firm` és `boot.3dsx` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
   + Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne
 1. Hozz létre egy mappát `boot9strap` néven az SD kártya gyökerében
 1. Másold át a `boot9strap.firm` fájlt és a `boot9strap.firm.sha` fájlt a boot9strap `.zip` fájlból az SD kártyád `/boot9strap/` mappájába
 1. Másold át a `SafeB9SInstaller.bin` fájlt a SafeB9SInstaller `.zip`-ből az SD kártyád gyökerébe
-1. Másold át a `usm.bin` fájlt az `unSAFE_MODE.zip`-ből az SD kártya gyökerébe
-    ![]({{ "/images/screenshots/bb3/usm-root-layout.png" | absolute_url }}){: .notice--info}
-    ![]({{ "/images/screenshots/boot9strap-folder.png" | absolute_url }}){: .notice--info}
-1. Navigálj a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` mappába az SD kártyádon
-  + Az `<ID0>` egy 32 karakter hosszú mappanév, amit a [Seedminer](seedminer)-nél másoltál
-  + Az `<ID1>` egy 32 karakter hosszú nevű mappa az `<ID0>` mappában
-  ![]({{ "/images/screenshots/bb3/dsiware-location-1.png" | absolute_url }}){: .notice--info}
-1. Hozz létre egy `Nintendo DSiWare` nevű mappát az `<ID1>` mappában
-  + Ha már van mappád *és* van benne DSiWare mentés fájl (`<8-character-id>.bin`), másold őket a számítógépedre és töröld őket az SD kártyáról
-1. Másold `F00D43D5.bin` fájlt az `unSAFE_MODE.zip`-ből a `Nintendo DSiWare` mappába
-
-![]({{ "/images/screenshots/bb3/dsiware-location-2.png" | absolute_url }})
-{: .notice--info} 
+1. Copy `usm.bin` to the root of your SD card
 
 #### II. rész - BannerBomb3
 
@@ -66,9 +49,9 @@ Ebben a fejezetben elő fogod idézni a BannerBomb3 exploit-ot a DSIWare Managem
 1. Kapcsold be a készülékedet
 1. Lépj be a System Settings-be a készülékeden
 1. Navigálj ide: `Data Management` -> `DSiWare` -> `SD Card` ([kép](/images/screenshots/bb3/dsiware-management.png))
-  + Az eszközödnek meg kell jelenítenie a [Bannerbomb3 menüt](/images/screenshots/bb3/usm-menu.png)
-  + Ha ez a lépés összeomlasztja az eszközödet, [folytasd a hibaelhárítási útmutatóval](troubleshooting#dsiware-management-menu-crashes-without-showing-usm-menu)
-1. Nyomd meg az (A) gombot, az "Inject haxx" kiválasztásához
+  + Your device should show the BB3 multihax menu
+  + If this step causes your device to crash, [follow this troubleshooting guide](troubleshooting#dsiware-management-menu-crashes-without-showing-bb3-multihax-menu-usm)
+1. Use the D-Pad to navigate and press the (A) button to select "Install unSAFE_MODE"
   + Az eszközöd automatikusan ki fog kapcsolni
 
 #### III. rész - unSAFE_MODE
@@ -77,7 +60,7 @@ Ebben a fejezetben be fogsz lépni a Safe Mode-ba (egy funkció, ami elérhető 
 
 1. Az eszközöd kikapcsolt állapotában tartsd nyomva a következő gombokat: (Bal Váll) + (Jobb Váll) + (D-Pad Fel) + (A), majd ezen gombok nyomva tartása mellett kapcsold be az eszközöd
   + Tartsd nyomva a gombokat, amíg az eszköz be nem bootol a Safe Mode-ba (a "system update" menübe)
-  + Ha többszöri próbálkozásra sem tudsz bejutni a Safe Mode-ba, valamelyik gombod hibás lehet. Ha ez a helyzet, akkor [a Seedminer alternatív ágát](bannerbomb3) kell követned. Ha támogatásra van szükséged az anyaggal kapcsolatosan, csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és kérj, angolul, támogatást.
+  + Ha többszöri próbálkozásra sem tudsz bejutni a Safe Mode-ba, valamelyik gombod hibás lehet. If this is the case, you will need to follow [an alternate branch of BannerBomb3](installing-boot9strap-(fredtool)). Ha támogatásra van szükséged az anyaggal kapcsolatosan, csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és kérj, angolul, támogatást.
 1. Nyomj "OK"-ot a frissítés elfogadásához
   + Nincs frissítés. Ez része az exploitnak
 1. Nyomj az "I accept"-re a feltételek elfogadásához
@@ -107,8 +90,7 @@ Ebben a fejezetben elő fogod idézni a BannerBomb3 exploit-ot egy második alka
 
 1. Lépj be a System Settings-be a készülékeden
 1. Navigálj ide: `Data Management` -> `DSiWare` -> `SD Card` ([kép](/images/screenshots/bb3/dsiware-management.png))
-  + Az eszközödnek meg kell jelenítenie a [Bannerbomb3 menüt](/images/screenshots/bb3/usm-menu.png)
-1. Használd a D-Pad-et a navigáláshoz, és nyomd meg az (A) gombot a "Restore slots" kiválasztásához
+1. Use the D-Pad to navigate and press the (A) button to select "Uninstall unSAFE_MODE"
   + Az eszközöd automatikusan újra fog indulni
 1. Kapcsold ki a készüléked
 1. Helyezd az SD kártyád a számítógépbe
