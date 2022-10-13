@@ -124,19 +124,15 @@ Back up your data and reformat your SD card as FAT32 with the recommended tool d
 
 ---
 
-## 安裝 boot9strap (透過 USM)
+## BannerBomb3
 
-### DSiWare Management menu crashes without showing BB3 multihax menu (USM)
+### DSiWare Management menu crashes without showing BB3 multihax menu
 
 確保 `F00D43D5.bin` 是 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 裡面的唯一檔案。 If it is, then re-create it with the [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen). 
 
 Also, ensure that `bb3.bin` is on the root of the SD card. If it is missing, then download the latest release of [Bannerbomb3](https://github.com/lifehackerhansol/Bannerbomb3/releases/download/v3.0-lhs1/bb3.bin) (direct download), and copy the `bb3.bin` file to the root of your SD card.
 
-If neither of these solutions fixes this problem, then custom firmware may have been uninstalled on this device in a way that makes this method impossible to perform. If this is the case, you will need to follow [an alternate branch of Seedminer](homebrew-launcher-(pichaxx)). For assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
-
----
-
-## BannerBomb3
+If neither of these solutions fixes this problem, then custom firmware may have been uninstalled on this device in a way that makes this method impossible to perform. If this is the case and Safe Mode works, you will need to follow [an alternate branch of Seedminer](homebrew-launcher-(pichaxx)). If Safe Mode doesn't work or you need assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 
 ### DSiWare 資料管理選單沒有當機
 
@@ -146,25 +142,41 @@ If neither of these solutions fixes this problem, then custom firmware may have 
 
 您所使用的 `F00D43D5.bin` 檔案可能有問題(損壞或用於錯誤的 3DS 主機)。 Re-create your `F00D43D5.bin` file with the [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen), ensuring that you use the `movable.sed` file for your console.
 
-### DSiWare 資料管理選單沒有閃爍紫屏就當機了
+---
 
-確保 `F00D43D5.bin` 是 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 裡面的唯一檔案。 If it is, then re-create it with the [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen). 如果還是不行，則可能是因為自製韌體可能在此主機上被不正確地移除過，導致此方法失效。 若是這樣，請加入 [Discord 上的 Nintendo Homebrew](https://discord.gg/MWxPgEp) 頻道尋求幫助。
+## 安裝 boot9strap (透過 USM)
+
+### Update doesn't fail with error code `003-1099`
+
+unSAFE_MODE is not installed. Follow the instructions on your page to install unSAFE_MODE again. 
+
+### Red screen when selecting detailed setup
+
+The file `usm.bin` is missing or misplaced. Download the latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/download/v1.3/usm.bin) and place `usm.bin` on the root of your SD card. 如果您的電腦沒有顯示 `.bin` 的副檔名，請勿手動新增。
+
+There is also a possibility that the console doesn't read your SD card. Make sure it is inserted and formatted correctly.
+
+### 出現『Failed to open SafeB9SInstaller.bin』的錯誤訊息
+
+`SafeB9SInstaller.bin` 檔案遺失或放在了錯誤的位置。 Download the latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip), extract it, and place `SafeB9SInstaller.bin` on the root of your SD card. 如果您的電腦沒有顯示 `.bin` 的副檔名，請勿手動新增。
+
+### 無法掛載 SD 卡(Failed to mount the SD card!)
+
+Back up your data and reformat your SD card as FAT32 with the recommended tool depending on your operating system ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). MiniTool Partition Wizard and the HP formatting tool (HPUSBDisk) are known to cause issues with 3DS SD cards.
+
+若仍無法正常使用，請試著使用另一張 SD 卡。
 
 ---
 
 ## 安裝 boot9strap (透過 Fredtool)
 
-### DSiWare Management menu crashes without showing BB3 multihax menu (Fredtool)
-
-確保 `F00D43D5.bin` 是 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 裡面的唯一檔案。 If it is, then re-create it with the [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen). 
-
-Also, ensure that `bb3.bin` is on the root of the SD card. If it is missing, then download the latest release of [Bannerbomb3](https://github.com/lifehackerhansol/Bannerbomb3/releases/download/v3.0-lhs1/bb3.bin) (direct download), and copy the `bb3.bin` file to the root of your SD card.
-
-If neither of these solutions fixes this problem, then custom firmware may have been uninstalled on this device in a way that makes this method impossible to perform. If this is the case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
-
 ### Fredtool 注入頁面顯示錯誤
 
 請確保您的 `movable.sed` 檔案和 DSiWare 備份是從同一台主機匯出的。 若兩者並不匹配則會跳出錯誤。
+
+### Unable to select the "Haxxxxxxxxx!" title because of the BB3 multihax menu
+
+You forgot to delete `F00D43D5.bin` from the SD card. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` on your SD card and delete the `F00D43D5.bin` file.
 
 ### 沒有出現『Haxxxxxxxxx!』
 
@@ -201,6 +213,8 @@ If neither of these solutions fixes this problem, then custom firmware may have 
 ### 執行 b9stool 後無法打開 Luma3DS 設定選單
 
 可能是因為 boot9strap 沒有成功安裝。 請遵循[此頁面](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)的 B 章節。
+
+---
 
 ## 完成安裝
 
