@@ -124,19 +124,15 @@ title: "问题排查"
 
 ---
 
-## 安装 boot9strap（通过 USM）
+## BannerBomb3
 
-### DSiWare Management menu crashes without showing BB3 multihax menu (USM)
+### DSiWare Management menu crashes without showing BB3 multihax menu
 
 确保 `F00D43D5.bin` 是 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 里面的唯一文件。 If it is, then re-create it with the [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen). 
 
 Also, ensure that `bb3.bin` is on the root of the SD card. If it is missing, then download the latest release of [Bannerbomb3](https://github.com/lifehackerhansol/Bannerbomb3/releases/download/v3.0-lhs1/bb3.bin) (direct download), and copy the `bb3.bin` file to the root of your SD card.
 
-如果还是不行，则可能是因为曾经这台主机安装过自制固件，且后来又卸载了自制固件，从而导致此方法失效。 如果确实如此，则请更换 [Seedminer 的另一种方法](homebrew-launcher-(pichaxx))。 如需帮助，请加入 [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) 并使用英文求助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497。
-
----
-
-## BannerBomb3
+如果还是不行，则可能是因为曾经这台主机安装过自制固件，且后来又卸载了自制固件，从而导致此方法失效。 If this is the case and Safe Mode works, you will need to follow [an alternate branch of Seedminer](homebrew-launcher-(pichaxx)). If Safe Mode doesn't work or you need assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 
 ### DSiWare 数据管理没有崩溃
 
@@ -146,25 +142,41 @@ Also, ensure that `bb3.bin` is on the root of the SD card. If it is missing, the
 
 你放的 `F00D43D5.bin` 文件可能有问题（损坏或被用于错误的 3DS）。 Re-create your `F00D43D5.bin` file with the [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen), ensuring that you use the `movable.sed` file for your console.
 
-### DSiWare 数据管理菜单没有闪烁紫屏就崩溃了
+---
 
-确保 `F00D43D5.bin` 是 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 里面的唯一文件。 If it is, then re-create it with the [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen). 如果还是不行，则可能是因为自制固件在此主机上被卸载过一次，从而导致此方法失效。 如果是这样，请加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp)以寻求帮助。
+## 安装 boot9strap（通过 USM）
+
+### Update doesn't fail with error code `003-1099`
+
+unSAFE_MODE is not installed. Follow the instructions on your page to install unSAFE_MODE again. 
+
+### Red screen when selecting detailed setup
+
+The file `usm.bin` is missing or misplaced. Download the latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/download/v1.3/usm.bin) and place `usm.bin` on the root of your SD card. 不要在没有看到 `.bin` 后缀的时候手动重命名它。
+
+There is also a possibility that the console doesn't read your SD card. Make sure it is inserted and formatted correctly.
+
+### Failed to open SafeB9SInstaller.bin
+
+`SafeB9SInstaller.bin` 文件丢失或放置在了错误的位置。 下载最新版本的 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) 然后解压它，将 `SafeB9SInstaller.bin` 放在你 SD 卡的根目录中。 不要在没有看到 `.bin` 后缀的时候手动重命名它。
+
+### 无法挂载 SD 卡（Failed to mount the SD card!）
+
+备份好你 SD 卡上的文件，然后根据你的操作系统选择一个工具来重新格式化 SD 卡为 FAT32 格式：[Windows](formatting-sd-(windows))、[macOS](formatting-sd-(mac))、[Linux](formatting-sd-(linux))。 目前已知 MiniTool Partition Wizard 和惠普格式化工具（HPUSBDisk）格出来的 SD 卡给 3DS 使用会出问题。
+
+如果还是不行，尝试换一张 SD 卡。
 
 ---
 
 ## 安装 boot9strap（通过 Fredtool）
 
-### DSiWare Management menu crashes without showing BB3 multihax menu (Fredtool)
-
-确保 `F00D43D5.bin` 是 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 里面的唯一文件。 If it is, then re-create it with the [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen). 
-
-Also, ensure that `bb3.bin` is on the root of the SD card. If it is missing, then download the latest release of [Bannerbomb3](https://github.com/lifehackerhansol/Bannerbomb3/releases/download/v3.0-lhs1/bb3.bin) (direct download), and copy the `bb3.bin` file to the root of your SD card.
-
-如果还是不行，则可能是因为曾经这台主机安装过自制固件，且后来又卸载了自制固件，从而导致此方法失效。 如果确实如此，请加入 [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) 并使用英文求助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497。
-
 ### Fredtool 注入页报错
 
 请确认 `movable.sed` 和 DSiWare 备份是从同一台主机导出的。 如果不匹配就会报错。
+
+### Unable to select the "Haxxxxxxxxx!" title because of the BB3 multihax menu
+
+You forgot to delete `F00D43D5.bin` from the SD card. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` on your SD card and delete the `F00D43D5.bin` file.
 
 ### 没有出现 “Haxxxxxxxxx!”
 
@@ -202,6 +214,8 @@ Also, ensure that `bb3.bin` is on the root of the SD card. If it is missing, the
 ### 运行 b9stool 后无法打开  Luma3DS 配置菜单
 
 可能是因为 Boot9strap 没有成功安装。 请查阅[此页面](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)的 B 章节。
+
+---
 
 ## 完成安装
 
