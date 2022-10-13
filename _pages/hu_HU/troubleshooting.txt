@@ -124,19 +124,15 @@ Ha ez sikertelen, próbálkozz egy másik SD kártyával.
 
 ---
 
-## Boot9strap telepítése (USM)
+## BannerBomb3
 
-### A DSiWare Management menü összeomlik a BB3 multihax menü megjelenése nélkül (USM)
+### DSiWare Management menu crashes without showing BB3 multihax menu
 
 Biztosítsd, hogy az `F00D43D5.bin` az egyetlen fájl a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` mappában. Ha így van, hozd létre újra a [BannerBomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen) segítségével. 
 
 Továbbá légy biztos abban, hogy a `bb3.bin` fájl megtalálható az SD kártyád gyökerében. Ha hiányzik, töltsd le a legutolsó kiadását az [Bannerbomb3](https://github.com/lifehackerhansol/Bannerbomb3/releases/download/v3.0-lhs1/bb3.bin)-nak (közvetlen letöltés), és másold a `bb3.bin` fájlt az SD kártyád gyökerébe.
 
-Ha ezen megoldások egyike sem javítja ezt a probélmát, akkor az egyedi firmware eltávolításra kerülhetett erről az eszközről, úgy, hogy az lehetetlenné teszi ennek a metódusnak a végrehajtását. Ha ez a helyzet, akkor [a Seedminer alternatív ágát](homebrew-launcher-(pichaxx)) kell követned. Ha támogatásra van szükséged az anyaggal kapcsolatosan, csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és kérj, angolul, támogatást.
-
----
-
-## BannerBomb3
+Ha ezen megoldások egyike sem javítja ezt a probélmát, akkor az egyedi firmware eltávolításra kerülhetett erről az eszközről, úgy, hogy az lehetetlenné teszi ennek a metódusnak a végrehajtását. If this is the case and Safe Mode works, you will need to follow [an alternate branch of Seedminer](homebrew-launcher-(pichaxx)). If Safe Mode doesn't work or you need assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 
 ### A DSiWare Management menü nem omlik össze
 
@@ -146,25 +142,41 @@ Az `F00D43D5.bin` hiányzik a `Nintendo 3DS` -> `<ID0>` - > `<ID1>` -> `Nintendo
 
 Probléma van az `F00D43D5.bin` fájloddal (hibás vagy másik 3DS-hez tartozik). Hozd létre újra az `F00D43D5.bin` fájlod a [BannerBomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen) segítségével, biztosítva azt, hogy a konzolod `movable.sed` fájlját használod hozzá.
 
-### A DSiWare Management menü összeomlik lila képernyővel
+---
 
-Biztosítsd, hogy az `F00D43D5.bin` az egyetlen fájl a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` mappában. Ha így van, hozd létre újra a [BannerBomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen) segítségével. Ha ez sikertelen, az egyedi firmware lehetséges, hogy úgy lett eltávolítva erről az eszközről, hogy lehetetlenné teszi ennek a metódusnak a végrehajtását. Ha ez az eset, csatlakozz a [Nintendo Homebrew-hoz a Discord-on](https://discord.gg/MWxPgEp) segítségért.
+## Boot9strap telepítése (USM)
+
+### Update doesn't fail with error code `003-1099`
+
+unSAFE_MODE is not installed. Follow the instructions on your page to install unSAFE_MODE again. 
+
+### Red screen when selecting detailed setup
+
+The file `usm.bin` is missing or misplaced. Download the latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/download/v1.3/usm.bin) and place `usm.bin` on the root of your SD card. Ne add hozzá a `.bin` kiterjesztést, ha nem látod.
+
+There is also a possibility that the console doesn't read your SD card. Make sure it is inserted and formatted correctly.
+
+### Failed to open SafeB9SInstaller.bin
+
+A `SafeB9SInstaller.bin` fájl hiányzik, vagy rossz helyen van. Töltsd le a legutolsó kiadását az [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip)-nek csomagold ki és rakd az SD kártyád gyökerébe. Ne add hozzá a `.bin` kiterjesztést, ha nem látod.
+
+### Failed to mount the SD card!
+
+Mentsd az adataidat, majd formázd újra az SD kártyád FAT32 formátumra, az ajánlott alkalmazással az operációs rendszerednek megfelelően. ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). A MiniTool Partition Wizard-ról és a HP formázó eszközről (HPUSBDisk) ismert, hogy problémákat okoznak a 3DS SD kártyákkal.
+
+Ha ez sikertelen, próbálkozz egy másik SD kártyával.
 
 ---
 
 ## Boot9strap telepítése (Fredtool)
 
-### A DSiWare Management menü összeomlik a BB3 multihax menü megjelenése nélkül (Fredtool)
-
-Biztosítsd, hogy az `F00D43D5.bin` az egyetlen fájl a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` mappában. Ha így van, hozd létre újra a [BannerBomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen) segítségével. 
-
-Továbbá légy biztos abban, hogy a `bb3.bin` fájl megtalálható az SD kártyád gyökerében. Ha hiányzik, töltsd le a legutolsó kiadását az [Bannerbomb3](https://github.com/lifehackerhansol/Bannerbomb3/releases/download/v3.0-lhs1/bb3.bin)-nak (közvetlen letöltés), és másold a `bb3.bin` fájlt az SD kártyád gyökerébe.
-
-Ha ezen megoldások egyike sem javítja ezt a probélmát, akkor az egyedi firmware eltávolításra kerülhetett erről az eszközről, úgy, hogy az lehetetlenné teszi ennek a metódusnak a végrehajtását. Ebben az esetben csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és kérj, támogatást angolul.
-
 ### Hiba a Fredtool Injector oldalon
 
 Biztosítsd, hogy a `movable.sed` és a DSiWare mentés ugyanarról a konzolról származik. Egy eltérés hibához vezet.
+
+### Unable to select the "Haxxxxxxxxx!" title because of the BB3 multihax menu
+
+You forgot to delete `F00D43D5.bin` from the SD card. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` on your SD card and delete the `F00D43D5.bin` file.
 
 ### A "Haxxxxxxxxx!" nem jelenik meg
 
@@ -201,6 +213,8 @@ Probléma van az `boot.nds` fájloddal. Töltsd le újra a legutolsó kiadását
 ### Nem lehetséges a Luma3DS konfigurációs menü megnyitása b9stool futtatása után
 
 Elképzelhető, hogy a boot9strap telepítése sikertelen volt. Kövesd a B fejezetét [ennek az oldalnak](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md).
+
+---
 
 ## Telepítés véglegesítése
 
