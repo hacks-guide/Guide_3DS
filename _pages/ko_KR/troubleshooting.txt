@@ -18,7 +18,7 @@ title: "문제 해결"
 
 #### SigHaxed FIRM - invalid FIRM
 
-There is an issue with your `boot9strap.firm` and `boot9strap.firm.sha` files. [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip)의 최신 버전을 다운로드하여, `boot9strap.firm`과 `boot9strap.firm.sha`를 `boot9strap` 폴더로 복사해 주세요.
+`boot9strap.firm`과 `boot9strap.firm.sha` 파일에 문제가 있습니다. [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip)의 최신 버전을 다운로드하여, `boot9strap.firm`과 `boot9strap.firm.sha`를 `boot9strap` 폴더로 복사해 주세요.
 
 #### Secret Sector - File not found
 
@@ -32,12 +32,12 @@ There is an issue with your `boot9strap.firm` and `boot9strap.firm.sha` files. [
 
 ## Seedminer
 
-### Multiple long folder names in Nintendo 3DS folder
+### Nintendo 3DS 폴더 내에 있는 이름이 긴 여러 폴더
 
 ![]({{ "/images/screenshots/multiple-id0.png" | absolute_url }})
 {: .notice--info}
 
-This occurs when you use your SD card in multiple 3DS devices and is intended to prevent inadvertently merging data that would not be valid on other devices. To figure out which long folder name is correct for your 3DS, follow these instructions:
+이것은 한 SD 카드를 여러 3DS 장치에 이용할 때 다른 장치에 유효하지 않은 데이터가 섞이는 것을 막기 위한 의도된 현상입니다. 이름이 긴 폴더 중 무엇이 해당 장치와 맞는지 확인하려면, 다음을 따르십시오:
 
 1. `Nintendo 3DS` 폴더를 `BACKUP_Nintendo 3DS` 폴더로 이름을 변경해 주세요
 1. SD 카드를 기기에 다시 삽입하고 기기를 시작해 주세요
@@ -46,21 +46,21 @@ This occurs when you use your SD card in multiple 3DS devices and is intended to
 1. 전원을 끄고 SD 카드를 컴퓨터에 삽입해 주세요
 1. SD 카드의 `Nintendo 3DS` 폴더를 열어 주세요
 1. `Nintendo 3DS` 폴더 내 32글자의 폴더 이름을 복사해 주세요
-	+ This is your true ID0 that you will use in [Section II of Seedminer](seedminer#section-ii---seedminer)
+	+ 이것이 [Seedminer의 섹션 II](seedminer#section-ii---seedminer)에서 사용할 진짜 ID0입니다
 1. `Nintendo 3DS` 폴더를 삭제해 주세요
 1. `BACKUP_Nintendo 3DS` 폴더를 `Nintendo 3DS` 폴더로 이름을 변경해 주세요
 
-### Bruteforce Movable skips to step 4
+### Bruteforce Movable이 step 4로 건너뛰어집니다
 
-The website has already mined your `movable.sed` using your friend code and ID0 combination. You can use the `movable.sed` that it provides you.
+웹사이트에서 이미 친구 코드와 ID0로 `movable.sed`를 만들어냈습니다. 제공되는 `movable.sed`를 그대로 이용하시면 됩니다.
 
 ### Important! You have been locked out of the automated part1 dumper system...
 
-Your friend code was blocked from using the friend code bot because your 3DS did not successfully friend the bot. Ensure your 3DS is properly connected to the Internet, then join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask to be unlocked.
+3DS에서 친구 등록이 적절하게 완료되지 않아 친구 코드가 차단되었습니다. 3DS가 인터넷에 적절하게 연결되어 있는지 확인해 주시고, [Nintendo Homebrew 디스코드](https://discord.gg/MWxPgEp)에 들어와 차단 해제를 요청해주세요.
 
 ### We were unable to successfully complete your bruteforce request. :`(
 
-The website has determined that your `movable.sed` cannot be brute-forced. Ensure that you gave the correct ID0 to the website. If your ID0 is correct, then you will be unable to use Seedminer and you will have to use an alternate method that will require additional games or hardware.
+웹사이트에서 `movable.sed` 파일을 해킹할 수 없다고 확정했습니다. 정확한 ID0를 제공했는지 확인해주세요. 만약 ID0가 정확하다면, Seedminer를 통한 방법은 불가능하며 다른 게임이나 하드웨어가 필요한 방법을 이용해야 합니다.
 
 ---
 
@@ -68,9 +68,9 @@ The website has determined that your `movable.sed` cannot be brute-forced. Ensur
 
 ### "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
 
-Your `00000001.sav` and/or `otherapp.bin` files may be misplaced. Ensure that `00000001.sav` is in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` and that `otherapp.bin` is on the root of your SD card.
+`00000001.sav` 또는 `otherapp.bin` 파일이 잘못 들어갔습니다. `00000000.sav`가 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00004000` -> 0017c100` -> `data` 안에 있고 `otherapp.bin`이 SD카드 최상위 디렉토리에 있는지 다시 한 번 확인해주세요.
 
-If your files are in the correct locations, re-create the save using the [PicHaxx Save Tool](https://3ds.nhnarwhal.com/3dstools/pichaxx.php), then place it in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data`. Ensure that the file is named exactly `00000001.sav` and that you used your console's `movable.sed` to create it. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) and place it on the root of your SD card. Do not add the `.bin` extension if you do not already see it.
+만약 위치가 정확하다면, [PicHaxx Save Tool](https://3ds.nhnarwhal.com/3dstools/pichaxx.php)을 이용해 세이브를 다시 생성한 후, `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` 폴더 안에 다시 복사해주세요. 반드시 파일의 이름이 `00000001.sav`이고 기기의 `movable.sed`를 이용해야 합니다. 최신 버전의 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)을 다시 내려받아 SD 카드의 최상위 디렉토리에 복사해주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
 
 ### Picross 열을 시 "An exception occurred" or Errdisp
 
@@ -78,93 +78,93 @@ If your files are in the correct locations, re-create the save using the [PicHax
 
 ### "An error has occurred, forcing the software to close..." (white message box)
 
-There is an issue with your `otherapp.bin` file. Download the latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest), place the `.bin` file relevant to your console from the `otherapps_with_CfgS` folder to the root of your SD card, and rename it to `otherapp.bin`. Do not add the `.bin` extension if you do not already see it.
+`otherapp.bin` 파일에 문제가 있습니다. 최신 버전의 [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest)를 다운받아, `otherapps_with_CfgS` 폴더 안에 있는 기기에 맞는 `.bin` 파일을 SD 카드의 최상위 디렉토리로 복사해 `otherapp.bin`으로 이름을 변경해주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
 
 ### 게임이 정상적으로 시작됨
 
-Your modified `00000001.sav` file may be misplaced, or you may have used the wrong `movable.sed` when creating it. Re-generate your `movable.sed` from [Bruteforce Movable](https://seedminer.hacks.guide), then re-create the save using the [PicHaxx Save Tool](https://3ds.nhnarwhal.com/3dstools/pichaxx.php) and place the resulting file (`00000001.sav`) in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data`.
+수정된 `00000001.sav` 파일이 잘못 들어갔거나, 다른 `movable.sed` 파일로 생성했습니다. [Bruteforce Movable](https://seedminer.hacks.guide)에서 `movable.sed`를 다시 생성해, [PicHaxx Save Tool](https://3ds.nhnarwhal.com/3dstools/pichaxx.php)에서 세이브 파일을 다시 생성, 결과 파일(`00000001.sav`)을 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00004000` -> `0017c100` -> `data`에 복사해 주세요.
 
 ---
 
 ## boot9strap 설치 (Soundhax)
 
-### Red/purple/pink and white screen after running Soundhax
+### Soundhax 실행 시 빨간색, 보라색, 또는 분홍색과 하얀색 화면이 표시됨
 
-If your device is on system version 9.4.0, 9.5.0, or 9.6.0, you may be encountering a bug with an old version of universal-otherapp. Download the latest version from [here](https://github.com/TuxSH/universal-otherapp/releases/latest).
+기기가 시스템 버전 9.4.0 ~ 9.6.0이라면, universal-otherapp의 구버전에서 발생하는 오류가 발생했을 가능성이 큽니다. [여기](https://github.com/TuxSH/universal-otherapp/releases/latest)에서 최신 버전으로 다운로드해주세요.
 
-If your device is not on those firmwares, it likely indicates that you already have custom firmware. [CFW 확인](checking-for-cfw) 을 하는 것을 권장합니다.
+펌웨어 버전이 이게 아니라면, 이미 커펌이 설치되었을 수 있습니다. [CFW 확인](checking-for-cfw) 을 하는 것을 권장합니다.
 
 ### "An error has occurred, forcing the software to close..." (white message box)
 
-There is an issue with your `otherapp.bin` file (it is missing, misplaced, or corrupted). Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) and place it on the root of your SD card.
+`otherapp.bin` 파일에 문제가 있습니다. (없거나, 잘못 들어갔거나, 혹은 잘못된 파일) 최신 버전의 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)을 다시 내려받아 SD 카드의 최상위 디렉토리에 복사해주세요.
 
 ### "Could not play"
 
-You have the wrong Soundhax file for your device and region, or your device is incompatible with Soundhax. In the latter case, you should update your device to the latest version and follow [Seedminer](seedminer).
+기기와 지역 조합과 다른 Soundhax 파일을 이용하고 있거나, 기기가 Soundhax와 호환되지 않습니다. 후자라면, 기기를 최신 버전으로 업데이트한 후 [Seedminer](seedminer) 방식을 따라야 합니다.
 
 ### Failed to open SafeB9SInstaller.bin
 
-The file `SafeB9SInstaller.bin` is missing or misplaced. Download the latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip), extract it, and place `SafeB9SInstaller.bin` on the root of your SD card. Do not add the `.bin` extension if you do not already see it.
+`SafeB9SInstaller.bin` 파일이 없거나 잘못 들어갔습니다. 최신 버전의 [SafeB9Installer](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInst20170605-122940.zip)을 다운받아 압축을 풀고, SD 카드의 최상위 디렉토리에 `SafeB9Installer.bin`을 복사해주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
 
 ### "Doing agbhax..."에서 화면 정지됨
 
-There may be an issue with your `otherapp.bin` file. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) and place it on the root of your SD card.
+`otherapp.bin`에 문제가 있을 수 있습니다. 최신 버전의 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)을 다시 내려받아 SD 카드의 최상위 디렉토리에 복사해주세요.
 
-If you have a Taiwanese or Mainland Chinese unit (with a T or C in the version string, ie. 11.3.0-##T), join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+태국 혹은 중국 본토발 기기(버전이 T나 C로 끝남, 예: `11.3.0-##T`)를 이용하고 계신다면, [Discord의 Nintendo Homebrew](https://discord.com/MWxPgEp)로 오셔서 도움을 요청하세요.
 
 ### "PrepareArm9ForTwl returned error c8804631!"
 
-You will need to follow an alternate method. Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+다른 방식을 이용해야 합니다. [Nintendo Homebrew 디스코드](https://discord.gg.MWxPgEp)에 오셔서 도움을 요청하세요.
 
 ### Failed to mount the SD card!
 
-Back up your data and reformat your SD card as FAT32 with the recommended tool depending on your operating system ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). MiniTool Partition Wizard and the HP formatting tool (HPUSBDisk) are known to cause issues with 3DS SD cards.
+데이터를 모두 백업하고 시스템별로 권장되는 프로그램을 이용해 SD카드를 FAT32로 다시 포맷해 주세요. ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))) MiniTool Partition Wizard나 HP formatting tool(HPUSBDisk)는 3DS용 SD 카드에 문제를 발생시킨다는 것이 알려져 있습니다.
 
-If this is unsuccessful, try using another SD card.
+만약 해결되지 않는다면, 다른 SD 카드를 이용해 보세요.
 
 ---
 
 ## BannerBomb3
 
-### DSiWare Management menu crashes without showing BB3 multihax menu
+### DSiWare 관리 메뉴가 BB3 multihax 메뉴를 표시하지 않고 깨짐
 
-Ensure that `F00D43D5.bin` is the only file in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`. If it is, then re-create it with the [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen). 
+`F00D43D5.bin`이 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 폴더 내에 있는 유일한 파일이어야 합니다. 만약 그렇다면, [BannerBomb3 툴](https://3ds.nhnarwhal.com/#/bb3gen)에서 다시 생성해 주세요. 
 
-Also, ensure that `bb3.bin` is on the root of the SD card. If it is missing, then download the latest release of [Bannerbomb3](https://github.com/lifehackerhansol/Bannerbomb3/releases/download/v3.0-lhs1/bb3.bin) (direct download), and copy the `bb3.bin` file to the root of your SD card.
+또한, `bb3.bin`이 SD 카드의 최상위 디렉토리에 있어야 합니다. 만약 없다면, [Bannerbomb3](https://github.com/lifehackerhansol/Bannerbomb3/releases/download/v3.0-lhs1/bb3.bin)의 최신 버전 (직접 다운로드)을 다운받아 `bb3.bin` 파일을 SD 카드의 최상위 디렉토리로 복사해 주세요.
 
-If neither of these solutions fixes this problem, then custom firmware may have been uninstalled on this device in a way that makes this method impossible to perform. If this is the case and Safe Mode works, you will need to follow [an alternate branch of Seedminer](homebrew-launcher-(pichaxx)). If Safe Mode doesn't work or you need assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+만약 이 방법이 모두 안 된다면, 이 방식 자체를 차단하는 방법으로 커펌이 지워졌을 수 있습니다. If this is the case and Safe Mode works, you will need to follow [an alternate branch of Seedminer](homebrew-launcher-(pichaxx)). If Safe Mode doesn't work or you need assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 
-### DSiWare Management menu does not crash
+### DSiWare 관리 메뉴가 의도한 대로 작동함
 
-`F00D43D5.bin` is missing from `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`. Make sure that `Nintendo DSiWare` is correctly spelled and spaced. Uppercase/lowercase does not matter.
+`F00D43D5.bin`이 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 폴더 내에 없습니다. 폴더 `Nintendo DSiWare`의 이름에 오타가 있는지 확인해 주세요. 대소문자는 구분하지 않습니다.
 
-### DSiWare Management shows a question mark
+### DSiWare 관리 메뉴가 물음표를 표시함
 
-There may be an issue with your `F00D43D5.bin` file (it may be corrupted or intended for the wrong 3DS). Re-create your `F00D43D5.bin` file with the [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen), ensuring that you use the `movable.sed` file for your console.
+`F00D43D5.bin` 파일에 문제가 있습니다. (잘못된 파일이거나 다른 3DS용 파일) 해당 기기의 `movable.sed` 파일을 이용해, [BannerBomb3 툴](https://3ds.nhnarwhal.com/#/bb3gen)에서 `F00D43D5.bin` 파일을 다시 생성해 주세요.
 
 ---
 
 ## boot9strap 설치 (USM)
 
-### Update doesn't fail with error code `003-1099`
+### 업데이트 시 `003-1099` 에러 코드가 발생하지 않음
 
-unSAFE_MODE is not installed. Follow the instructions on your page to install unSAFE_MODE again. 
+unSAFE_MODE가 설치되지 않았습니다. Follow the instructions on your page to install unSAFE_MODE again. 
 
 ### Red screen when selecting detailed setup
 
-The file `usm.bin` is missing or misplaced. Download the latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/download/v1.3/usm.bin) and place `usm.bin` on the root of your SD card. Do not add the `.bin` extension if you do not already see it.
+`usm.bin` 파일이 없거나 잘못 들어갔습니다. 최신 버전의 [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/download/v1.3/usm.bin)을 다시 내려받고 `usm.bin` 파일을 SD 카드의 최상위 디렉토리에 복사해주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
 
 There is also a possibility that the console doesn't read your SD card. Make sure it is inserted and formatted correctly.
 
 ### Failed to open SafeB9SInstaller.bin
 
-The file `SafeB9SInstaller.bin` is missing or misplaced. Download the latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip), extract it, and place `SafeB9SInstaller.bin` on the root of your SD card. Do not add the `.bin` extension if you do not already see it.
+`SafeB9SInstaller.bin` 파일이 없거나 잘못 들어갔습니다. 최신 버전의 [SafeB9Installer](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInst20170605-122940.zip)을 다운받아 압축을 풀고, SD 카드의 최상위 디렉토리에 `SafeB9Installer.bin`을 복사해주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
 
 ### Failed to mount the SD card!
 
-Back up your data and reformat your SD card as FAT32 with the recommended tool depending on your operating system ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). MiniTool Partition Wizard and the HP formatting tool (HPUSBDisk) are known to cause issues with 3DS SD cards.
+데이터를 모두 백업하고 시스템별로 권장되는 프로그램을 이용해 SD카드를 FAT32로 다시 포맷해 주세요. ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))) MiniTool Partition Wizard나 HP formatting tool(HPUSBDisk)는 3DS용 SD 카드에 문제를 발생시킨다는 것이 알려져 있습니다.
 
-If this is unsuccessful, try using another SD card.
+만약 해결되지 않는다면, 다른 SD 카드를 이용해 보세요.
 
 ---
 
@@ -176,7 +176,7 @@ Ensure that your `movable.sed` and DSiWare backup come from the same console. A 
 
 ### Unable to select the "Haxxxxxxxxx!" title because of the BB3 multihax menu
 
-You forgot to delete `F00D43D5.bin` from the SD card. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` on your SD card and delete the `F00D43D5.bin` file.
+You forgot to delete `F00D43D5.bin` from the SD card. SD 카드의 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 폴더로 이동하고 `F00D43D5.bin` 파일을 삭제해 주세요.
 
 ### "Haxxxxxxxxx!" 표시가 않됨
 
@@ -188,7 +188,7 @@ There is an issue with your `42383821.bin` file (it is incorrect, missing, mispl
 
 ### Black screen when launching DS Connection Settings
 
-Your DS Connection Settings application is broken, and you will need Homebrew Launcher access to fix this issue. Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+Your DS Connection Settings application is broken, and you will need Homebrew Launcher access to fix this issue. [Nintendo Homebrew 디스코드](https://discord.gg.MWxPgEp)에 오셔서 도움을 요청하세요.
 
 ### SD card is grayed out
 
