@@ -6,7 +6,7 @@ title: "Installazione di boot9strap (Fredtool)"
 
 <details>
 <summary><em>Dettagli Tecnici (opzionale)</em></summary>
-<p>This method of using Seedminer for further exploitation uses your <code>movable.sed</code> file to decrypt any DSiWare title for the purposes of injecting an exploitable DSiWare title into the DS Internet Settings application.</p>
+<p>Seedminer utilizza il tuo file <code>movable.sed</code> per decriptare un qualunque titolo DSiWare e iniettare una particolare applicazione DSiWare nell'applicazione Connessioni Nintendo DS.</p>
 <p>Utilizzeremo una falla, attualmente funzionante, denominata "FIRM partitions known-plaintext" <a href="https://www.3dbrew.org/wiki/3DS_System_Flaws">qui</a>.</p>
 </details>
 {: .notice--info}
@@ -28,30 +28,30 @@ Come precauzione aggiuntiva, controlleremo anche la presenza di un custom firmwa
 1. Se il controllo è andato a buon fine, verrà avviato il menu HOME e potrai procedere con questa guida
 1. Spegni il tuo 3DS
 
-If you see a configuration menu or the console immediately powers off, you already have CFW, and continuing with these instructions may BRICK your device! Procedi con la [Verifica del CFW](checking-for-cfw) per aggiornare il tuo CFW esistente.
+Se visualizzi un menu di configurazione o la console si spegne immediatamente, hai già un CFW e continuando con queste istruzioni potresti BRICKARE la tua console! Procedi con la [Verifica del CFW](checking-for-cfw) per aggiornare il tuo CFW esistente.
 {: .notice--danger}
     
 #### Sezione II - BannerBomb3
 
-In this section, you will trigger the BannerBomb3 exploit using the DSiWare Management menu and copy the resulting file dump to your computer so that you can use it on the next section.
+In questa sezione attiverai l'exploit BannerBomb3 utilizzando il menu Gestione Nintendo DSiWare e copierai il file dump risultante sul computer per poterlo utilizzare nella sezione successiva.
 
 1. Reinserisci la scheda SD nella tua console
 1. Accendi la console
 1. Avvia "Impostazioni della console"
 1. Entra in `Gestione dati` -> `DSiWare` -> `Scheda SD` ([image](/images/screenshots/bb3/dsiware-management.png))
-  + Your device should show the BB3 multihax menu
-  + If this step causes your device to crash, [follow this troubleshooting guide](troubleshooting#dsiware-management-menu-crashes-without-showing-bb3-multihax-menu-fredtool)
-1. Use the D-Pad to navigate and press the (A) button to select "Dump DSiWare"
+  + La tua console dovrebbe mostrare il menu BB3 multihax
+  + Se questo passaggio causa il crash della tua console, [segui questa guida per risolvere il problema](troubleshooting#dsiware-management-menu-crashes-without-showing-bb3-multihax-menu-fredtool)
+1. Usa il D-Pad per spostarti sul menu "Dump DSiWare", quindi premi il pulsante (A)
   + La tua console si spegnerà automaticamente
   
-#### Section III - Prep Work
+#### Sezione III - Preparazione
 
 In questa sezione copierai i file necessari per sostituire temporaneamente "Impostazioni di collegamento" con Flipnote Studio, usato per lanciare l'installer di boot9strap (custom firmware).
 
 1. Inserisci la scheda SD nel tuo computer
 1. Apri il sito [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec) sul tuo computer
 1. Sotto il campo "Username" inserisci un nome alfanumerico qualunque (senza spazi o caratteri speciali)
-1. Under the "DSiBin" field, upload your `42383841.bin` file from the root of your SD card using the first "Browse..." option
+1. Sul il campo "DSiBin", carica il tuo file `42383841.bin` presente nella directory principale della tua scheda SD usando la prima opzione "Browse..."
 1. Sul campo "MovableSed", carica il tuo file `movable.sed` usando la seconda opzione "Browse..."
 1. Sul campo "InjectionTarget", imposta l'obiettivo dell'iniezione su `DSinternet` (NON memorypit)
 1. Clicca "Build"
@@ -63,7 +63,7 @@ In questa sezione copierai i file necessari per sostituire temporaneamente "Impo
 1. Nella tua scheda SD, entra in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`
   + `<ID0>` è il nome a 32 lettere della cartella che hai copiato in [Seedminer](seedminer)
   + `<ID1>` è una cartella dal nome lungo 32 caratteri all'interno di `<ID0>` 
-1. Delete `F00D43D5.bin` from your Nintendo DSiWare folder
+1. Elimina il file `F0D43D5.bin` dalla cartella Nintendo DSiWare
 1. Copia il file `42383841.bin` dalla cartella `hax` dall'archivio DSiWare appena scaricato (`output_(name).zip`) nella cartella `Nintendo DSiWare`
   ![]({{ "/images/screenshots/bb3/dsiware-location-4.png" | absolute_url }}){: .notice--info} 
 1. Copia i file `boot.firm` e `boot.3dsx` dall'archivio `.zip` di Luma3DS nella directory principale della tua scheda SD
@@ -74,7 +74,7 @@ In questa sezione copierai i file necessari per sostituire temporaneamente "Impo
     ![]({{ "/images/screenshots/fredtool-root-layout.png" | absolute_url }})
     {: .notice--info}
 
-#### Section IV - Overwriting DS Connection Settings
+#### Sezione IV - Sovrascrittura delle Impostazioni di collegamento DS
 
 In questa sezione copierai il DSiWare modificato "Impostazioni di collegamento DS" nella memoria interna, che verrà così temporaneamente sostituito da Flipnote Studio.
 
@@ -127,9 +127,9 @@ A questo punto, la console avvierà sempre Luma3DS.
   + Luma3DS non è diverso dal normale menu HOME. Se la console avvia il menu HOME, vuol dire che sta eseguendo il custom firmware.
   + Nella pagina successiva installerai applicazioni homebrew utili per completare la tua installazione.
 
-#### Section VII - Restoring DS Connection Settings
+#### Sezione VII - Ripristino delle Impostazioni di Connessione DS
 
-In this section, you will restore DS Connection Settings to the way it was before it was temporarily replaced with Flipnote Studio in Section IV.
+In questa sezione ripristinerai "Impostazioni di collegamento DS" nel modo in cui era prima che fosse temporaneamente sostituito con Flipnote Studio nella Sezione IV.
 
 1. Nella tua scheda SD, entra in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`
 1. Copia il file `42383841.bin` dalla cartella `clean` dall'archivio DSiWare appena scaricato (`output_(name).zip`) nella cartella `Nintendo DSiWare`, sostituendo quello preesistente
