@@ -1,13 +1,13 @@
 ---
-title: "Installing boot9strap (Fredtool)"
+title: "boot9strap 설치 (Fredtool)"
 ---
 
 {% include toc title="목차" %}
 
 <details>
 <summary><em>기술적 상세 정보 (선택 사항)</em></summary>
-<p>This method of using Seedminer for further exploitation uses your <code>movable.sed</code> file to decrypt any DSiWare title for the purposes of injecting an exploitable DSiWare title into the DS Internet Settings application.</p>
-<p>This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed <a href="https://www.3dbrew.org/wiki/3DS_System_Flaws">here</a>.</p>
+<p>이 방식은 Seedminer에서 얻은 <code>movable.sed</code> 파일을 사용해 어느 DSiWare 타이틀을 해독해 익스플로잇 가능한 DSiWare 타이틀을 DS 소프트웨어용 인터넷 설정에 주입합니다.</p>
+<p>이 작업은 <a href="https://www.3dbrew.org/wiki/3DS_System_Flaws">이곳</a>에 자세히 설명되어 있는 "FIRM partitions known-plaintext" 익스플로잇을 구현한 작업입니다.</p>
 </details>
 {: .notice--info}
 
@@ -28,7 +28,7 @@ As an additional safety measure, we will perform an additional check for custom 
 1. 만약 HOME 메뉴가 켜지면, 이 확인은 성공적이고, 가이드를 진행하면 됩니다
 1. 기기를 종료해 주세요
 
-If you see a configuration menu or the console immediately powers off, you already have CFW, and continuing with these instructions may BRICK your device! 이미 존재하는 CFW를 업데이트 할 수 있도록 [CFW 확인](checking-for-cfw)를 진행해 주세요.
+만약 설정 메뉴가 보이거나 기기의 전원이 바로 종료된다면, 이 기기는 이미 커스텀 펌웨어가 설치되어 있고, 이 작업을 진행하면 기기가 벽돌 될수가 있습니다! 이미 존재하는 CFW를 업데이트 할 수 있도록 [CFW 확인](checking-for-cfw)를 진행해 주세요.
 {: .notice--danger}
     
 #### 섹션 II - BannerBomb3
@@ -38,22 +38,22 @@ In this section, you will trigger the BannerBomb3 exploit using the DSiWare Mana
 1. SD 카드를 기기에 다시 삽입해 주세요
 1. 기기를 시작해 주세요
 1. 기기에서 본체 설정을 열어 주세요
-1. Navigate to `Data Management` -> `DSiWare`-> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
+1. `데이터 관리` -> `DSiWare` -> `SD 카드`로 들어가주세요 ([사진](/images/screenshots/bb3/dsiware-management.png))
   + Your device should show the BB3 multihax menu
   + If this step causes your device to crash, [follow this troubleshooting guide](troubleshooting#dsiware-management-menu-crashes-without-showing-bb3-multihax-menu)
 1. Use the D-Pad to navigate and press the (A) button to select "Dump DSiWare"
   + 기기가 자동으로 종료될 겁니다
   
-#### Section III - Prep Work
+#### 섹션 III - 준비 작업
 
 In this section, you will copy the files necessary to temporarily replace DS Connection Settings with Flipnote Studio, which is used to launch the boot9strap (custom firmware) installer.
 
 1. SD 카드를 컴퓨터에 삽입해 주세요
 1. 컴퓨터에서 [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec) 웹사이트를 열어 주세요
 1. "Username"에 영어/숫자를 사용한 이름을 아무거나 입력해 주세요 (스페이스나 특수 문자는 사용 불가)
-1. Under the "DSiBin" field, upload your `42383841.bin` file from the root of your SD card using the first "Browse..." option
+1. "DSIBin" 란에, "Browse..."옵션을 이용해 `42383841.bin` 파일을 업로드해 주세요
 1. "MovableSed" 란에, "Browse..." 옵션을 이용해 `movable.sed` 파일을 업로드해 주세요
-1. Under the "InjectionTarget" field, set the injection target to `DSinternet` (NOT memorypit)
+1. "InjectionTarget" 란에서, 주입 목표를 `DSinternet`(memorypit 아님)로 설정해 주세요
 1. "Build"를 클릭해 주세요
   + 빌드 과정이 완료될 때까지 잠시 기다려 주세요
 1. 왼쪽의 Build History 영역에 유저네임을 입력해 주세요
@@ -63,8 +63,8 @@ In this section, you will copy the files necessary to temporarily replace DS Con
 1. SD 카드의 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 폴더로 이동해 주세요
   + `<ID0>`은 [Seedminer](seedminer)에서 복사한 32글자 폴더명 입니다
   + `<ID1>`은 `<ID0>` 안에 있는 32글자 폴더명입니다 
-1. Delete `F00D43D5.bin` from your Nintendo DSiWare folder
-1. Copy the `42383841.bin`  file from the `hax` folder of the downloaded DSiWare archive (output_(name).zip) to the `Nintendo DSiWare` folder
+1. `Nintendo DSiWare` 폴더 내 `F00D43D5.bin` 파일을 삭제해 주세요
+1. 다운로드한 DSiWare 압축 파일(output_(이름).zip)에서, `hax` 폴더 안에 있는 `42383841.bin` 파일을 `Nintendo DSiWare` 폴더로 복사해 주세요
   ![]({{ "/images/screenshots/bb3/dsiware-location-4.png" | absolute_url }}){: .notice--info} 
 1. Luma3DS `.zip`안에 있는 `boot.firm`과 `boot.3dsx`를 SD 카드의 루트에 복사해 주세요
   + SD 카드의 루트는 SD 카드를 열 때 보이는 디렉토리이고, Nintendo 3DS 폴더가 보이지만 그 안에 않 들어가 있는 상태의 폴더 입니다
@@ -80,8 +80,8 @@ In this section, you will copy the hacked DS Connection Settings DSiWare to inte
 
 1. 기기를 시작해 주세요
 1. 기기에서 본체 설정을 열어 주세요
-1. Navigate to `Data Management` -> `DSiWare`-> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
-1. Select the "Haxxxxxxxxx!" title
+1. `데이터 관리` -> `DSiWare` -> `SD 카드`로 들어가주세요 ([사진](/images/screenshots/bb3/dsiware-management.png))
+1. "Haxxxxxxxxx!" 타이틀을 선택해 주세요
 1. "Copy"를 선택한 후 "OK"를 선택해 주세요
 1. 본체 설정의 메인 메뉴로 돌아가 주세요
 1. Navigate to `Internet Settings` -> `Nintendo DS Connections`, then select "OK" ([image](/images/screenshots/fredtool/dsconnection.png))
@@ -106,7 +106,7 @@ In this section, you will perform a series of very specific steps within Flipnot
 1. "A"가 들어가 있는 네 번째 버튼을 눌러 주세요
 1. 익스플로잇이 성공적이었다면 b9sTool을 실행했을 것입니다
 1. 십자 패드를 사용해서, "Install boot9strap"으로 이동해 주세요.
-  + If you miss this step, the system will exit to HOME Menu instead of installing boot9strap and you will need to open System Settings, then start over from Step 7 of Section III
+  + 이 스텝을 놓쳤다면, 시스템은 boot9strap을 설치하는 대신 HOME 메뉴로 나갈 것이고, 다시 DS 소프트웨어용 설정을 열어서 섹션 III의 7번 단계부터 시작해야 할 것입니다
 1. (A) 버튼을 누른 후, START와 SELECT를 동시에 눌러 작업을 실행해 주세요
 1. 완료되고 아래 화면에 "done."이라고 표시되면, b9sTool를 종료하고 기기의 전원을 꺼 주세요
   + 전원버튼을 계속 눌러 강제종료를 해야 할 수도 있습니다
@@ -127,16 +127,16 @@ Due to the nature of the exploit used, it is occasionally (but rarely) possible 
   + Luma3DS는 보통 HOME 메뉴와 똑같이 보입니다. 만약 기기가 HOME 메뉴로 부팅되었다면, 커스텀 펌웨어가 설치되어 있습니다.
   + 다음 페이지에서는 커펌에 유용한 홈브류를 설치해 기기 준비를 완료할 것 입니다.
 
-#### Section VII - Restoring DS Connection Settings
+#### 섹션 VII - DS 소프트웨어용 설정 복구
 
 In this section, you will restore DS Connection Settings to the way it was before it was temporarily replaced with Flipnote Studio in Section IV.
 
 1. SD 카드의 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 폴더로 이동해 주세요
-1. Copy the `42383841.bin`  file from the `clean` folder of the downloaded DSiWare archive (output_(name).zip) to the `Nintendo DSiWare` folder, replacing the existing one
+1. 다운로드한 DSiWare 압축 파일(output_(이름).zip)에서, `clean` 폴더 안에 있는 `42383841.bin` 파일을 `Nintendo DSiWare` 폴더로 복사해 주세요
 1. SD 카드를 기기에 다시 삽입해 주세요
 1. 기기를 시작해 주세요
 1. 기기에서 본체 설정을 열어 주세요
-1. Navigate to `Data Management` -> `DSiWare`-> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
+1. `데이터 관리` -> `DSiWare` -> `SD 카드`로 들어가주세요 ([사진](/images/screenshots/bb3/dsiware-management.png))
 1. Select the "Nintendo DSi™" title
 1. "Copy"를 선택한 후 "OK"를 선택해 주세요
 
