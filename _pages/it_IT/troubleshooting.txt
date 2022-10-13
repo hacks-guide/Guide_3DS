@@ -124,19 +124,15 @@ Se il problema non si risolve, prova ad usare un'altra scheda SD.
 
 ---
 
-## Installazione di boot9strap (USM)
+## BannerBomb3
 
-### Il menu di Gestione Nintendo DSiWare crasha senza mostrare il menu BB3 multihax (USM)
+### DSiWare Management menu crashes without showing BB3 multihax menu
 
 Assicurati che il file `F00D43D5.bin` sia l'unico file presente in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`. In tal caso, ricrealo con [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen). 
 
 Inoltre, assicurati che il file `bb3.bin` sia nella directory principale dela tua scheda SD. Se manca, scarica l'ultima versione di [Bannerbomb3](https://github.com/lifehackerhansol/Bannerbomb3/releases/download/v3.0-lhs1/bb3.bin) (download diretto), e copia il file `bb3.bin` nella directory principale della tua scheda SD.
 
-Se nessuna di queste soluzioni dovesse risolvere il problema, allora un custom firmware potrebbe essere già stato disinstallato da questa console in modo tale da rendere questo metodo impossibile. In questo caso, dovrai seguire [un metodo alternativo di Seedminer](homebrew-launcher-(pichaxx)). In questi casi, puoi ricevere assistenza chiedendo, in inglese, nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp).
-
----
-
-## BannerBomb3
+Se nessuna di queste soluzioni dovesse risolvere il problema, allora un custom firmware potrebbe essere già stato disinstallato da questa console in modo tale da rendere questo metodo impossibile. If this is the case and Safe Mode works, you will need to follow [an alternate branch of Seedminer](homebrew-launcher-(pichaxx)). If Safe Mode doesn't work or you need assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 
 ### Il menu di Gestione Nintendo DSiWare non crasha
 
@@ -146,25 +142,41 @@ Manca il file `F00D43D5.bin` da `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintend
 
 Potrebbe esserci un problema con il tuo file `F00D43D5.bin` (potrebbe essere corrotto o per un diverso 3DS). Ri-crea il tuo file `F00D43D5.bin` con [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen), assicurandoti di utilizzare il file `movable.sed` della tua console.
 
-### Il menu di Gestione Nintendo DSiWare crasha senza schermata viola
+---
 
-Assicurati che il file `F00D43D5.bin` sia l'unico file presente in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`. In tal caso, ricrealo con [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen). Se dovesse di nuovo fallire, potrebbe essere già stato disinstallato un custom firmware su questa console in modo tale da rendere questo metodo impossibile. In tal caso, entra nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) per chiedere assistenza.
+## Installazione di boot9strap (USM)
+
+### Update doesn't fail with error code `003-1099`
+
+unSAFE_MODE is not installed. Follow the instructions on your page to install unSAFE_MODE again. 
+
+### Red screen when selecting detailed setup
+
+The file `usm.bin` is missing or misplaced. Download the latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/download/v1.3/usm.bin) and place `usm.bin` on the root of your SD card. Non aggiungere l'estensione `.bin` se non la vedi presente.
+
+There is also a possibility that the console doesn't read your SD card. Make sure it is inserted and formatted correctly.
+
+### Impossibile avviare SafeB9SInstaller.bin
+
+Il file `SafeB9SInstaller.bin` è mancante o mal posizionato. Scarica l'ultima versione di [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip), estraila e posiziona il file 'SafeB9SInstaller.bin' della directory principale della tua scheda SD. Non aggiungere l'estensione `.bin` se non la vedi presente.
+
+### Impossibile caricare la scheda SD!
+
+Effettua il backup dei tuoi dati e riformatta la tua scheda SD come FAT32 con lo strumento consigliato a seconda del sistema operativo ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). MiniTool Partition Wizard e lo strumento di formattazione HP (HPUSBDisk) sono noti per causare problemi con schede SD 3DS.
+
+Se il problema non si risolve, prova ad usare un'altra scheda SD.
 
 ---
 
 ## Installazione di boot9strap (Fredtool)
 
-### Il menu di Gestione Nintendo DSiWare crasha senza mostrare il menu BB3 multihax (Fredtool)
-
-Assicurati che il file `F00D43D5.bin` sia l'unico file presente in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`. In tal caso, ricrealo con [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen). 
-
-Inoltre, assicurati che il file `bb3.bin` sia nella directory principale dela tua scheda SD. Se manca, scarica l'ultima versione di [Bannerbomb3](https://github.com/lifehackerhansol/Bannerbomb3/releases/download/v3.0-lhs1/bb3.bin) (download diretto), e copia il file `bb3.bin` nella directory principale della tua scheda SD.
-
-Se nessuna di queste soluzioni dovesse risolvere il problema, allora un custom firmware potrebbe essere già stato disinstallato da questa console in modo tale da rendere questo metodo impossibile. In tal caso, puoi ricevere assistenza chiedendo, in inglese, nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp).
-
 ### Errore nella pagina Fredtool Injector
 
 Assicurati che il file `movable.sed` e il backup DSiWare provengano dalla stessa console. La mancata corrispondenza comporterà un errore.
+
+### Unable to select the "Haxxxxxxxxx!" title because of the BB3 multihax menu
+
+You forgot to delete `F00D43D5.bin` from the SD card. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` on your SD card and delete the `F00D43D5.bin` file.
 
 ### "Haxxxxxxxxx!" non appare
 
@@ -201,6 +213,8 @@ C'è un problema con il tuo file `boot.nds`. Ri-scarica l'ultima versione di [b9
 ### Impossibile aprire il menu di configurazione di Luma3DS dopo aver eseguito b9stool
 
 È possibile che boot9strap non sia stato installato correttamente. Segui la sezione B di [questa pagina](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md).
+
+---
 
 ## Completamento dell'installazione
 
