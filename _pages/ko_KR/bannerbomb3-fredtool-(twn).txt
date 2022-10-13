@@ -49,20 +49,20 @@ DSiWare 백업이 있으면, DS 다운로드 플레이에 취약한 DSiWare 타�
 
 1. [DSIHaxInjector V2](https://jenkins.nelthorya.net/job/DSIHaxInjector%20v2/build?delay=0sec) 사이트를 컴퓨터에서 여세요
 1. "Username"에 영어/숫자를 사용한 이름을 아무거나 입력해 주세요 (스페이스나 특수 문자는 사용 불가)
-1. Under the "MovableSed" field, upload your `movable.sed`using the "Browse..." option
-1. Click "Build"
-  + Wait a few seconds for the build process to complete
-1. In the Build History section on the left, type the Username into the "Filter Builds" field
-1. Click on the first search result
-  + This result should have the latest timestamp
-1. Click the "output_(name).zip" link
-1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` on your SD card
+1. "MovableSed" 란에, "Browse..." 옵션을 이용해 `movable.sed` 파일을 업로드해 주세요
+1. "Build"를 클릭해 주세요
+  + 빌드 과정이 완료될 때까지 잠시 기다려 주세요
+1. 왼쪽의 Build History 영역에 유저네임을 입력해 주세요
+1. 첫 번째 검색 결과를 선택해 주세요
+  + 날짜가 가장 최신이어야 합니다
+1. "output_(name).zip" 링크를 클릭하여 다운로드해 주세요
+1. SD 카드의 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` 폴더로 이동해 주세요
   + 이 `<ID0>`는 [Seedminer](seedminer)에서 사용한 것과 같습니다
   + 이 `<ID1>`은 `<ID0>` 폴더 안에 존재하는 32 자리의 이름을 갖춘 폴더 입니다
-1. Create a folder named `Nintendo DSiWare` inside of the `<ID1>`
-  + If you already had the folder *and* there are any existing DSiWare backup files (`<8-character-id>.bin`) inside, copy them to your PC and remove them from your SD card
-1. Open the output_(name) `.zip` file and navigate to `China_Taiwan` -> `output_setup`
-1. Copy all six `.bin` files to the `Nintendo DSiWare` folder
+1. `<ID1>` 폴더에 `Nintendo DSiWare` 폴더를 생성해 주세요
+  + 만약 그 폴더가 *있고* 내부에 DSiWare 백업 파일(`<8-character-id>.bin`)이 있다면, PC로 모두 복사해 두고 SD 카드에서 삭제해 주세요
+1. output_(name) `.zip` 파일을 열고 `China_Taiwan` -> `output_setup`으로 이동해주세요
+1. 6개의 `.bin` 파일을 모두 `Nintendo DSiWare` 폴더로 복사해 주세요
 1. SD 카드를 기기에 다시 삽입해 주세요
 1. 기기를 시작해 주세요
 1. 기기에서 본체 설정을 열어 주세요
@@ -71,34 +71,34 @@ DSiWare 백업이 있으면, DS 다운로드 플레이에 취약한 DSiWare 타�
 1. 기기를 종료해 주세요
 1. SD 카드를 컴퓨터에 삽입해 주세요
 1. SD 카드의 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 폴더로 이동해 주세요 
-1. Open the output_(name) `.zip` file and navigate to `China_Taiwan` -> `output_hax`
+1. output_(name) `.zip` 파일을 열어 `China_Taiwan` -> `output_hax`로 이동해 주세요
 1. Copy the `.bin` file that is the same number as the one that was on the second page of the DSiWare Management menu to the `Nintendo DSiWare` folder, and overwrite when prompted
 1. 기기를 시작해 주세요
 1. 기기에서 본체 설정을 열어 주세요
 1. Navigate to `Data Management` -> `DSiWare` -> `SD Card`
-1. Wait a while
-     + The following should happen, in this order: A progress swirl, a short freeze, the bottom screen turning purple, the music stopping, then the device showing an error message and rebooting
-    + If you did not see the purple screen, then something went wrong
-1. You should now have the file `42383821.bin` on the root of your SD card
+1. 잠시 기다려 주세요
+     + 다음이 순서대로 발생할 것입니다: 진행도 바퀴가 표시되었다가 기기가 멎고, 하단 스크린이 보라색으로 바뀌며 음악이 멈추고, 그 후에 장치에서 오류 메시지를 표시한 후 재부팅 됩니다
+    + 보라색 화면이 뜨지 않았다면, 뭔가가 잘못된 겁니다
+1. 이제 SD 카드 최상위 폴더에 `42383821.bin` 파일이 있을 겁니다
 1. SD 카드의 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 폴더로 이동해 주세요 
-1. Delete all of the `.bin` files in the `Nintendo DSiWare` folder
+1. `Nintendo DSiWare` 폴더의 모든 `.bin` 파일을 삭제해 주세요
 
 ##### 섹션 IV - Fredtool
 
-1. Open the [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec) website on your computer
+1. 컴퓨터에서 [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec) 웹사이트를 열어 주세요
 1. "Username"에 영어/숫자를 사용한 이름을 아무거나 입력해 주세요 (스페이스나 특수 문자는 사용 불가)
-    + You might want to put in a different name to differentiate it from BannerBomb3's output
-1. Under the "DSiBin" field, upload your `42383821.bin` file using the first "Browse..." option
-1. Under the "MovableSed" field, upload your `movable.sed` file using the second "Browse..." option
-1. Under the "InjectionTarget" field, set the injection target to `DSdownloadplay`(NOT memorypit)
-1. Click "Build"
-  + Wait a few seconds for the build process to complete
-1. In the Build History section on the left, type the Username into the "Filter Builds" field
-1. Click on the first search result
-  + This result should have the latest timestamp
-1. Click the "output_(name).zip" link
+    + BannerBomb3의 출력과 차이를 두려면 다른 이름을 넣어야 할 수 있습니다
+1. "DSIBin" 란에, "Browse..."옵션을 이용해 `42383821.bin` 파일을 업로드해 주세요
+1. "MovableSed" 란에, "Browse..." 옵션을 이용해 `movable.sed` 파일을 업로드해 주세요
+1. "InjectionTarget" 란에서, 주입 목표를 `DSdownloadplay`(memorypit 아님)로 설정해 주세요
+1. "Build"를 클릭해 주세요
+  + 빌드 과정이 완료될 때까지 잠시 기다려 주세요
+1. 왼쪽의 Build History 영역에 유저네임을 입력해 주세요
+1. 첫 번째 검색 결과를 선택해 주세요
+  + 날짜가 가장 최신이어야 합니다
+1. "output_(name).zip" 링크를 클릭하여 다운로드해 주세요
 1. SD 카드의 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 폴더로 이동해 주세요 
-1. Copy the `484E4441.bin`  file from the `hax` folder of the downloaded DSiWare archive (output_(name).zip) to the `Nintendo DSiWare` folder
+1. 다운로드한 DSiWare 압축 파일(output_(이름).zip)에서, `hax` 폴더 안에 있는 `484E4441.bin` 파일을 `Nintendo DSiWare` 폴더로 복사해 주세요
 1. SD 카드를 기기에 다시 삽입해 주세요
 1. 기기를 시작해 주세요
 1. 기기에서 본체 설정을 열어 주세요
@@ -106,7 +106,7 @@ DSiWare 백업이 있으면, DS 다운로드 플레이에 취약한 DSiWare 타�
 1. "SD 카드" 섹션에서 "Haxxxxxxxxx!" 타이틀을 선택해 주세요
 1. "Copy"를 선택한 후 "OK"를 선택해 주세요
 1. 본체 설정을 종료해 주세요
-1. Launch Download Play on your device (the orange icon with a 3DS on it)
+1. 장치에서 다운로드 플레이 앱(3DS가 그려져 있는 주황색 아이콘)을 실행해 주세요
 1. "Nintendo DS"를 선택해 주세요 
 1. 만약 익스플로잇이 성공적이었다면, 기기는 JPN 버전의 Flipnote Studio를 실행할 겁니다
 
@@ -126,30 +126,30 @@ DSiWare 백업이 있으면, DS 다운로드 플레이에 취약한 DSiWare 타�
 1. "1/3"이 선택될 때까지 왼쪽으로 스크롤해 주세요
 1. "A"가 들어가 있는 네 번째 버튼을 눌러 주세요
 1. 익스플로잇이 성공적이었다면 b9sTool을 실행했을 것입니다
-1. Using the D-Pad, move to “Install boot9strap”
+1. 십자 패드를 사용해서, "Install boot9strap"으로 이동해 주세요
     + 이 댄계을 놓쳤다면, 시스템은 boot9strap을 설치하는 대신 HOME 메뉴로 나갈 것이고, 다시 DS 다운로드 플레이를 열어서 섹션 V의 처음부터 시작해야 할 것입니다
 1. (A) 버튼을 누른 후, START와 SELECT를 동시에 눌러 작업을 실행해 주세요
 1. 완료되고 아래 화면에 "done."이라고 표시되면, b9sTool를 종료하고 기기의 전원을 꺼 주세요
     + 전원버튼을 계속 눌러 강제종료를 해야 할 수도 있습니다
-    + If your device shuts down when you try to power it on, ensure that you have copied `boot.firm` from the Luma3DS `.zip` to the root of your SD card
-    + If you see the Luma Configuration screen, press (Start) to reboot, then continue with the guide
+    + 만약 기기가 부팅시에 꺼진다면 Luma3DS `.zip` 파일 안에 압축 되있는 `boot.firm`을 SD 카드의 루트로 복사 했는지 확인해 주세요
+    + Luma Configuration 화면이 표시된다면, Start 버튼을 눌러 다시 시작해, 이 가이드를 계속 따라와 주세요
 
-#### Section VI - Luma3DS Verification
+#### 섹션 VI - Luma3DS 검증
 
 1. 기기를 종료해 주세요
 1. SD 카드를 컴퓨터에 삽입해 주세요
-1. Verify that a `luma` folder exists and that `config.ini` is inside of it
-  + The existence of these folders and files confirms that Luma3DS is installed
-  + If you do not see the `luma` folder or `config.ini`, [follow this troubleshooting guide](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)
+1. `luma` 폴더가 있고, 안에 `config.ini` 파일이 있는지 확인해 주세요
+  + 해당 폴더와 파일이 모두 있는 것은 Luma3DS가 정상적으로 설치됨을 검증하는 것입니다
+  + `luma` 폴더나 `config.ini` 파일이 보이지 않는다면, [이 문제 해결 가이드(영어)](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)를 참고해 주시기 바랍니다
 
-At this point, your console will boot to Luma3DS by default.
+이제 기기는 Luma3DS를 기본으로 부팅 됩니다.
   + Luma3DS는 보통 HOME 메뉴와 똑같이 보입니다. 만약 기기가 HOME 메뉴로 부팅되었다면, 커스텀 펌웨어가 설치되어 있습니다.
-  + On the next page, you will install useful homebrew applications to complete your setup.
+  + 다음 페이지에서는 커펌에 유용한 홈브류를 설치해 기기 준비를 완료할 것 입니다.
 
-#### Section VII - Restoring DS Download Play
+#### 섹션 VII - DS 다운로드 플레이 복구
 
 1. SD 카드의 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 폴더로 이동해 주세요 
-1. Copy the `484E4441.bin`  file from the `clean` folder of the downloaded DSiWare archive (output_(name).zip) to the `Nintendo DSiWare` folder
+1. 다운로드한 DSiWare 압축 파일(output_(이름).zip)에서, `clean` 폴더 안에 있는 `484E4441.bin` 파일을 `Nintendo DSiWare` 폴더로 복사해 주세요
 1. SD 카드를 기기에 다시 삽입해 주세요
 1. 기기를 시작해 주세요
 1. 기기에서 본체 설정을 열어 주세요
