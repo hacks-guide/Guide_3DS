@@ -5,14 +5,14 @@ title: "BannerBomb3"
 {% include toc title="목차" %}
 
 <details>
-<summary><em>Technical Details (optional)</em></summary>
+<summary><em>기술적 상세 정보 (선택 사항)</em></summary>
 <p>To launch custom code, we exploit a flaw in the DSiWare Data Management window of the Settings application.</p>
 <p>To accomplish this, we use your system's encryption key (movable.sed) to build a DSiWare backup that exploits the system.</p>
-<p>For a more technical explanation, see <a href="https://github.com/zoogie/Bannerbomb3">here</a>.</p>
+<p>더 자세한 기술 정보를 확인하려면, <a hrev="https://github.com/zoogie/Bannerbomb3">이 페이지 (영문)</a>을 확인해 주세요.</p>
 </details>
 {: .notice--info}
 
-### Compatibility Notes
+### 호환성 안내
 
 이 설명서는 미주, 유럽, 일본, 그리고 한국 지역 기기들 (시스템 버전 다음 글짜가 U, E, J, 아니면 K 인 경우) 와 호환됩니다.
 
@@ -25,7 +25,7 @@ title: "BannerBomb3"
 
 #### 섹션 I - 준비 작업
 
-In this section, you will copy the files needed to trigger the BannerBomb3 exploit onto your device's SD card.
+이 섹션에서는 기기의 SD 카드에 BannerBomb3 취약점을 실행하기 위한 파일을 복사하게 됩니다.
 
 1. 기기를 종료해 주세요
 1. SD 카드를 컴퓨터에 삽입해 주세요
@@ -35,13 +35,13 @@ In this section, you will copy the files needed to trigger the BannerBomb3 explo
   + This will download an exploit DSiWare called `F00D43D5.bin` and a payload called `bb3.bin` inside of a zip archive (`DSIWARE_EXPLOIT.zip`)
 1. Copy `bb3.bin` from `DSIWARE_EXPLOIT.zip` to the root of your SD card
   + SD 카드의 루트는 SD 카드를 열 때 보이는 디렉토리이고, Nintendo 3DS 폴더가 보이지만 그 안에 않 들어가 있는 상태의 폴더 입니다
-1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` on your SD card
-  + `<ID0>` is the 32-letter folder name that you copied in [Seedminer](seedminer)
-  + `<ID1>` is a 32-letter folder inside of the `<ID0>`
+1. SD 카드의 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` 폴더로 이동해 주세요
+  + `<ID0>`은 [Seedminer](seedminer)에서 복사한 32글자 폴더명 입니다
+  + `<ID1>`은 `<ID0>` 안에 있는 32글자 폴더명입니다
   ![]({{ "/images/screenshots/bb3/dsiware-location-1.png" | absolute_url }}){: .notice--info}
-1. Create a folder named `Nintendo DSiWare` inside of the `<ID1>`
-  + If you already had the folder *and* there are any existing DSiWare backup files (`<8-character-id>.bin`) inside, copy them to your PC and remove them from your SD card
-1. Copy the `F00D43D5.bin` file from `DSIWARE_EXPLOIT.zip` to the `Nintendo DSiWare` folder
+1. `<ID1>` 폴더에 `Nintendo DSiWare` 폴더를 생성해 주세요
+  + 만약 그 폴더가 *있고* 내부에 DSiWare 백업 파일(`<8-character-id>.bin`)이 있다면, PC로 모두 복사해 두고 SD 카드에서 삭제해 주세요
+1. `F00D43D5.bin` 파일을 `DSIWARE_EXPLOIT.zip` 에서 `Nintendo DSiWare` 폴더로 복사해 주세요
 
 ![]({{ "/images/screenshots/bb3/dsiware-location-2.png" | absolute_url }})
 {: .notice--info} 
@@ -51,14 +51,14 @@ In this section, you will copy the files needed to trigger the BannerBomb3 explo
 In this section, you will test the SAFE_MODE function of your device. This will determine which method you will follow in the next page.
 
 1. 전원이 꺼져 있는 상태에서 (L 어깨) + (R 어깨) + (십자 Up) + (A) 를 길게 눌르고, 누르는 상태에서 전원을 켜 주세요
-  + Keep holding the buttons until the device boots into Safe Mode (a "system update" menu)
+  + 안전 모드로 부팅 될 때 까지 버튼들을 눌러 주세요 ("시스템 업데이트" 메뉴)
 1. If prompted to update, press Cancel
   + If the device boots to the HOME Menu, just continue to the next step
 1. 기기를 종료해 주세요
 
 ___
 
-### Next steps: Choose an exploit
+### 다음 단계: 익스플로잇 선택
 
 If your device booted into Safe Mode and prompted to you to do a system update in Section II, Safe Mode is working on your device.
 
