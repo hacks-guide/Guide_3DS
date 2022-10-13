@@ -6,7 +6,7 @@ title: "Boot9strap telepítése (Fredtool)"
 
 <details>
 <summary><em>Technikai részletek (opcionális)</em></summary>
-<p>This method of using Seedminer for further exploitation uses your <code>movable.sed</code> file to decrypt any DSiWare title for the purposes of injecting an exploitable DSiWare title into the DS Internet Settings application.</p>
+<p>Ez a metódusa a Seedminer használatának a további exploitoláshoz használja a <code>movable.sed</code> fájlod, hogy dekriptáljon egy DSiWare címet, azzal az céllal, hogy beinjektáljon egy exploitolható DSiWare címet a DS Internet Settings alkalmazásba.</p>
 <p>Ez egy jelenleg működő megvalósítása a "FIRM partitions known-plaintext" néven ismert exploitnak, amiről részletesebben olvashatsz <a href="https://www.3dbrew.org/wiki/3DS_System_Flaws">itt</a>.</p>
 </details>
 {: .notice--info}
@@ -28,30 +28,30 @@ További biztonsági lépésként további ellenőrzést végzünk egyedi firmwa
 1. Ha az ellenőrzés sikeres volt, be fogsz bootolni a HOME Menübe és végrehajthatod ezt az útmutatót
 1. Kapcsold ki a készüléked
 
-If you see a configuration menu or the console immediately powers off, you already have CFW, and continuing with these instructions may BRICK your device! Kövesd a [CFW ellenőrzését](checking-for-cfw) a már meglévő CFW-d frissítéséhez.
+Ha a konfigurációs menüt látod vagy a konzolod azonnal kikapcsol, már van CFW-d és az útmutató folyatása BRICKELHETI az eszközödet! Kövesd a [CFW ellenőrzését](checking-for-cfw) a már meglévő CFW-d frissítéséhez.
 {: .notice--danger}
     
 #### II. rész - BannerBomb3
 
-In this section, you will trigger the BannerBomb3 exploit using the DSiWare Management menu and copy the resulting file dump to your computer so that you can use it on the next section.
+Ebben a fejezetben elő fogod idézni a BannerBomb3 exploit-ot a DSIWare Management menü használatával és lemásolni az eredmény dump fájlt a számítógépedre, hogy fel tudd használni a következő fejezetben.
 
 1. Tedd vissza az SD kártyád a készülékedbe
 1. Kapcsold be a készülékedet
 1. Lépj be a System Settings-be a készülékeden
 1. Navigálj ide: `Data Management` -> `DSiWare` -> `SD Card` ([kép](/images/screenshots/bb3/dsiware-management.png))
-  + Your device should show the BB3 multihax menu
-  + If this step causes your device to crash, [follow this troubleshooting guide](troubleshooting#dsiware-management-menu-crashes-without-showing-bb3-multihax-menu-fredtool)
-1. Use the D-Pad to navigate and press the (A) button to select "Dump DSiWare"
+  + Az eszközödnek a BB3 multihax menüt kell mutatnia
+  + Ha ez a lépés összeomlasztja az eszközödet, [folytasd a hibaelhárítási útmutatóval](troubleshooting#dsiware-management-menu-crashes-without-showing-bb3-multihax-menu-fredtool)
+1. Használd a D-Pad-et a navigáláshoz, és nyomd meg az (A) gombot a "Dump DSiWare" kiválasztásához
   + Az eszközöd automatikusan ki fog kapcsolni
   
-#### Section III - Prep Work
+#### III. rész - Előkészületek
 
 Ebben a fejezetben fel fogod másolni azokat a fájlokat, amik átmenetileg lecserélik a DS Connection Settings-t a Flipnote Studio-val, ami arra használt, hogy elindítsa a boot9strap (egyedi firmware) telepítőt.
 
 1. Helyezd az SD kártyád a számítógépbe
 1. Nyisd meg a [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec/) oldalt a számítógépeden
 1. A "Username" mező alatt adj meg egy tetszőleges alfanumerikus nevet (nem lehet benne szóköz vagy speciális karakter)
-1. Under the "DSiBin" field, upload your `42383841.bin` file from the root of your SD card using the first "Browse..." option
+1. A "DSiBin" mező alatt töltsd fel a `42383841.bin` fájlodat az SD kártyád gyökeréről az első "Browse..." opció használatával
 1. A "MovableSed" mező alatt töltsd fel a `movable.sed` fájlod a második "Browse..." opció használatával
 1. Az "InjectionTarget" mező alatt válaszd ki az injection target-et `DSinternet`-re (NEM memorypit)
 1. Kattints a "Build"-re
@@ -63,7 +63,7 @@ Ebben a fejezetben fel fogod másolni azokat a fájlokat, amik átmenetileg lecs
 1. Navigálj a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` mappába az SD kártyán
   + Az `<ID0>` egy 32 karakter hosszú mappanév, amit a [Seedminer](seedminer)-nél másoltál
   + Az `<ID1>` egy 32 karakter hosszú nevű mappa az `<ID0>` mappában 
-1. Delete `F00D43D5.bin` from your Nintendo DSiWare folder
+1. Töröld `F00D43D5.bin` fájlt a Nintendo DSiWare mappából
 1. Másold a `42383841.bin` fájlt az `hax` mappájából a letöltött DSiWare csomagból (output_(name).zip) a `Nintendo DSiWare` mappába
   ![]({{ "/images/screenshots/bb3/dsiware-location-4.png" | absolute_url }}){: .notice--info} 
 1. Másold át a `boot.firm` és `boot.3dsx` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
@@ -74,7 +74,7 @@ Ebben a fejezetben fel fogod másolni azokat a fájlokat, amik átmenetileg lecs
     ![]({{ "/images/screenshots/fredtool-root-layout.png" | absolute_url }})
     {: .notice--info}
 
-#### Section IV - Overwriting DS Connection Settings
+#### IV. rész - A DS Connection Settings felülírása
 
 Ebben a fejezetben másolni fogod a hackelt DS Connection Settings DSiWare-t a belső memóriába, ami átmenetileg lecseréli azt a Flipnote Studio-val.
 
@@ -127,9 +127,9 @@ Ezen a ponton a konzolod alapértelmezetten bebootol a Luma3DS-be.
   + A Luma3DS nem néz ki másként, mint a normál HOME Menü. Ha a konzolod bebootolt a HOME Menübe, akkor egyedi firmware-t futtat.
   + A következő oldalon hasznos homebrew alkalmaásokat telepítünk, hogy teljessé tegyük a telepítésedet.
 
-#### Section VII - Restoring DS Connection Settings
+#### VII. rész - A DS Connection Settings visszaállítása
 
-In this section, you will restore DS Connection Settings to the way it was before it was temporarily replaced with Flipnote Studio in Section IV.
+Ebben a fejezetben vissza fogod állítano a DS Connection Settings-et az az előtti állapotára, mielőtt lecserélésre került a Flipnote Studio-ra a IV. részben.
 
 1. Navigálj a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` mappába az SD kártyán
 1. Másold a `42383841.bin` fájlt az `clean` mappájából a letöltött DSiWare csomagból (output_(name).zip) a `Nintendo DSiWare` mappába, felülírva az ott találhatót
