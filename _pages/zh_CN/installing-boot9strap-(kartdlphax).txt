@@ -4,24 +4,33 @@ title: "安装 boot9strap（通过 kartdlphax）"
 
 {% include toc title="目录内容" %}
 
-### 重要事项
+<details>
+<summary><em>Technical Details (optional)</em></summary>
+<p>In order to exploit the SAFE_MODE firmware of our system, we need to inject an exploited WiFi profile.</p>
+<p>To accomplish this, we can use the Download Play functionality of the game Mario Kart 7, using a 3DS with custom firmware already installed along with a custom game plugin.</p>
+<p>This custom plugin will send a hacked payload to an unhacked console, which then exploits the system in order to inject the exploited WiFi profile into your connections list.</p>
+<p>Once the WiFi profile has been injected, we will use SAFE_MODE, which is a recovery feature present on all 3DS consoles, to activate the exploited WiFi profile.</p>
+<p>For a more technical explanation, see the following links for information on the kartdlphax and unSAFE_MODE exploits: <a href="https://github.com/PabloMK7/kartdlphax">kartdlphax</a>, <a href="https://github.com/zoogie/unSAFE_MODE/">unSAFE_MODE</a>.</p>
+</details>
+{: .notice--info}
 
-kartdlphax 是马里奥赛车 7 中下载通信模式中的一个漏洞。 它可以与 unSAFE_MODE 一起使用，在目标主机上安装自制固件。
+### Compatibility Notes
 
 如果你想通过此方法安装自制固件，则你需要：
 
 - 一台已安装自制固件的 3DS （**源 3DS**），它与你要破解的主机（**目标 3DS**）系统为同一区域
+  - The consoles must be USA, JPN, or EUR region consoles
 -  一份与两台主机同区的马里奥赛车 7 实体版或数字版
 - 两张 SD 卡
 
 如果**目标 3DS** 的 L、R、↑、A 其中一个按键坏了，则你会卡在需要用到这些按键的步骤上。 如需针对此问题的帮助，请加入 [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) 并使用英文求助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497。
 {: .notice--warning}
-	
+
 ### 你需要准备点啥？
 
 在**源 3DS**（已安装自制固件的 3DS）上操作以下步骤：
 
-* 最新版本的 [kartdlphax](https://github.com/mariohackandglitch/kartdlphax/releases/latest)（下载 `plugin.3gx`）
+* The latest release of [kartdlphax](https://github.com/PabloMK7/kartdlphax/releases/latest) (`plugin.3gx`)
 * 最新版本的 [Luma3DS 3GX Loader 修改版](https://github.com/Nanquitas/Luma3DS/releases/latest)（下载 `boot.firm`）
 
 在**目标 3DS**（你试图破解的 3DS）上：
@@ -32,6 +41,8 @@ kartdlphax 是马里奥赛车 7 中下载通信模式中的一个漏洞。 它�
 * 最新版本的 [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest)（下载 RELEASE `.zip` 文件）
 
 #### 第一步 – 准备工作（源 3DS）
+
+In this section, you will set up your source 3DS (the 3DS with custom firmware) for delivery of the exploit data to the target 3DS.
 
 1. 在你的电脑中插入你的**源 3DS** 的 SD 卡
 1. 复制 Luma 3GX Loader Edition 的 `boot.firm` 到**源 3DS** 的 SD 卡根目录，替换当前已有的文件
@@ -45,6 +56,8 @@ kartdlphax 是马里奥赛车 7 中下载通信模式中的一个漏洞。 它�
 
 #### 第二步 – 准备工作（目标 3DS）
 
+In this section, you will copy the files needed to trigger the unSAFE_MODE exploit onto your target 3DS (the 3DS that you are trying to modify)'s SD card.
+
 1. 在你的电脑中插入你的**目标 3DS** 的 SD 卡
 1. 复制 Luma3DS `.zip` 里的 `boot.firm` 和 `boot.3dsx` 到你 SD 卡的根目录
 1. 在 SD 卡根目录创建一个名为 `boot9strap` 的文件夹
@@ -56,6 +69,8 @@ kartdlphax 是马里奥赛车 7 中下载通信模式中的一个漏洞。 它�
 1. 取下 SD 卡并将其插回**目标 3DS**
 
 #### 第三步 – kartdlphax
+
+In this section, you will use Download Play to transfer the exploit data from the source 3DS to the target 3DS, which can be used to overwrite your Wi-Fi slots with hacked data. Your Wi-Fi connection settings will be temporarily overwitten while the exploit is active.
 
 1. 启动 **源 3DS **
   - 若主机提示设置 Luma3DS，则你可以直接按下 START 键来保存配置
@@ -91,22 +106,25 @@ kartdlphax 是马里奥赛车 7 中下载通信模式中的一个漏洞。 它�
 
 #### 第四步 – unSAFE_MODE
 
+In this section, you will enter Safe Mode (a feature available on all 3DS family devices) and navigate to a menu where unSAFE_MODE will be triggered, which will launch you into the boot9strap (custom firmware) installer.
+
 1. 将你的主机置于关机状态，按住 L + R + ↑ + A 四个按键，然后按下电源键
-  + 按住这几个按钮，直到主机进入安全模式
+  + Keep holding the buttons until the device boots into Safe Mode (a "system update" menu)
   + 如果你试了很多次依然无法进入安全模式，则也许这四个按键中有一个按错了，或是坏掉了。 如果确实如此，请加入 [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) 并使用英文求助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497。
 1. 点击 “OK” 来允许更新
   + 这个步骤实际上不存在更新。 这只是触发漏洞的一部分
 1. 点击 “I accept（我同意/同意する）”
 1. 更新最终将失败，然后报出 `003-1099` 的错误。 这是剧本中的一部分
 1. 当系统问你“你想要配置互联网设置吗？（Would you like to configure Internet settings?）”时，点击 “Yes”
-1. 在接下来出现的菜单中，进入到 `连接点 1（Connection 1）` -> `更改设置（Change Settings）` -> `下一页（右箭头）` -> `代理设置（Proxy Settings）` -> `详细设置（Detailed Setup）`
-  + 这里有一份[演示图像](/images/safemode_highlighted.png)
+1. On the following menu, navigate to `Connection 1` -> `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings` -> `Detailed Setup` ([image](/images/screenshots/bb3/safemode_highlighted.png))
 1. 如果漏洞执行成功，你的主机将会进入到 SafeB9SInstaller
 
 #### 第五步 – 安装 boot9strap
 
+In this section, you will install custom firmware onto your device.
+
 1. 出现提示时，按照上屏的提示输入按键组合来安装 boot9strap
-  + 如果上屏白屏，则请强制关机然后重做第四步
+  + 如果上屏白屏，则请强制关机然后重做第三步
 1. 安装完成后，按下 “A” 键重启主机
 1. 你的主机将会在重启后进入至 Luma3DS 配置菜单中
   + 如果你的主机在你尝试开机后自动关机了，请确认你已经从 Luma3DS `.zip` 中复制了 `boot.firm` 文件到你的 SD 卡根目录中
@@ -117,6 +135,8 @@ kartdlphax 是马里奥赛车 7 中下载通信模式中的一个漏洞。 它�
   + 在下一页中，我们将会教你安装一些有用的自制程序来完成安装步骤。
 
 #### 第六步 – 还原 WiFi 配置文件
+
+In this section, you will enter the Homebrew Launcher so that you can restore the Wi-Fi connection slots that were overwritten in Section III.
 
 1. 运行“下载通信(Download Play)”程序
 1. 等到你看到两个按钮
