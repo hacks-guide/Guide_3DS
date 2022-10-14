@@ -4,14 +4,18 @@ title: "Instalând boot9strap (Hardmod)" #
 
 {% include toc title="Cuprins" %}
 
-### Lectură obligatorie
+<details>
+<summary><em>Technical Details (optional)</em></summary>
+<p>An excellent guide to getting a hardmod can be found <a href="https://gbatemp.net/threads/414498/">here</a>.</p>
+<p>This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed <a href="https://www.3dbrew.org/wiki/3DS_System_Flaws">here</a>.</p>
+<p>Using a hardmod, we can dump the NAND image, install custom firmware to the NAND image, then re-install the hacked NAND image to the console.</p>
+</details>
+{: .notice--info}
+
+### Compatibility Notes
 
 The instructions on this page do not currently work on the latest firmware (11.16.0). If you were directly linked to this page, [return to Get Started](get-started) or join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 {: .notice--warning}
-
-Un ghid excelent pentru a face un hardmod poate fi găsit [aici](https://gbatemp.net/threads/414498/).
-
-Acest lucru este în prezent o implementare a exploit-ului "Partiții FIRM de text simplu" detaliat [aici](https://www.3dbrew.org/wiki/3DS_System_Flaws).
 
 To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
@@ -65,6 +69,8 @@ Aceasta va funcționa pe New 3DS, New 2DS, Old 3DS și Old 2DS pe *toate* versiu
 
 #### Secțiunea I - Preparații
 
+In this section, you will download the necessary files for the hardmod and dump the NAND image in preparation to install custom firmware.
+
 1. Închideți dispozitivul
 1. Introduceți cardul SD în calculator
 1. Copiați `boot.firm` și `boot.3dsx` de la Luma3DS `.zip` pe rădăcina cardului SD
@@ -77,6 +83,8 @@ Aceasta va funcționa pe New 3DS, New 2DS, Old 3DS și Old 2DS pe *toate* versiu
 1. Mutați copia NAND-ului în folderul hardmod-b9s-installer de pe calculator și redenumiți ca `NAND.bin`
 
 #### Secțiunea II - Instalând boot9strap
+
+In this section, you will install custom firmware to the dumped NAND image, and then install this NAND image back onto the device to install custom firmware on it.
 
 1. Porniți hardmod-b9s-installer
   + Utilizatorii Windows: Porniți `install-b9s.exe`
