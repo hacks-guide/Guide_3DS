@@ -4,15 +4,18 @@ title: "Boot9strapin asentaminen (laitteistomodaus)"
 
 {% include toc title="Sisällysluettelo" %}
 
-### Tärkeää tietoa
+<details>
+<summary><em>Technical Details (optional)</em></summary>
+<p>An excellent guide to getting a hardmod can be found <a href="https://gbatemp.net/threads/414498/">here</a>.</p>
+<p>This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed <a href="https://www.3dbrew.org/wiki/3DS_System_Flaws">here</a>.</p>
+<p>Using a hardmod, we can dump the NAND image, install custom firmware to the NAND image, then re-install the hacked NAND image to the console.</p>
+</details>
+{: .notice--info}
+
+### Compatibility Notes
 
 The instructions on this page do not currently work on the latest firmware (11.16.0). If you were directly linked to this page, [return to Get Started](get-started) or join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 {: .notice--warning}
-
-Mainion oppaan konsolisi laitteistomodaamiseen löydät [täältä](https://gbatemp.net/threads/414498/)
- (englanniksi).
-
-Tämä menetelmä käyttää FIRM-osioiden salaamatonta muotoa (known-plaintext, selitetty [täällä](https://www.3dbrew.org/wiki/3DS_System_Flaws)) hyödyntävää haavoittuvuutta.
 
 To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
@@ -66,6 +69,8 @@ Tämä toimii *kaikilla* versioilla New 3DS:llä, New 2DS:llä, vanhalla 3DS:ll�
 
 #### Vaihe I – Valmistelut
 
+In this section, you will download the necessary files for the hardmod and dump the NAND image in preparation to install custom firmware.
+
 1. Sammuta konsolisi
 1. Aseta SD-korttisi tietokoneeseesi
 1. Copy `boot.firm` and `boot.3dsx` from the Luma3DS `.zip` to the root of your SD card
@@ -78,6 +83,8 @@ Tämä toimii *kaikilla* versioilla New 3DS:llä, New 2DS:llä, vanhalla 3DS:ll�
 1. Siirrä NAND-varmuuskopiosi hardmod-b9s-installer-kansioon tietokoneellasi ja uudelleennimeä se siellä muotoon `NAND.bin`
 
 #### Vaihe II – Boot9strapin asentaminen
+
+In this section, you will install custom firmware to the dumped NAND image, and then install this NAND image back onto the device to install custom firmware on it.
 
 1. Suorita hardmod-b9s-installer
   + Windows-käyttäjät: Avaa `install-b9s.exe`
