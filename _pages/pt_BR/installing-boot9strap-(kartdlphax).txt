@@ -7,10 +7,10 @@ title: "Instalando boot9strap (kartdlphax)"
 <details>
 <summary><em>Detalhes técnicos (opcional)</em></summary>
 <p>Para explorar o firmware SAFE_MODE do nosso sistema, precisamos injetar um perfil de WiFi com exploit.</p>
-<p>To accomplish this, we can use the Download Play functionality of the game Mario Kart 7, using a 3DS with custom firmware already installed along with a custom game plugin.</p>
-<p>This custom plugin will send a hacked payload to an unhacked console, which then exploits the system in order to inject the exploited WiFi profile into your connections list.</p>
+<p>Para fazer isso, podemos usar a funcionalidade Download Play do jogo Mario Kart 7, usando um 3DS com custom firmware já instalado junto com um plugin personalizado de jogo.</p>
+<p>Este plugin personalizado enviará um payload com hack para um console sem hack, que depois faz exploit do sistema para injetar o perfil WiFi exploited na sua lista de conexões.</p>
 <p>Assim que o perfil WiFi for injetado, usaremos o SAFE_MODE, que é um recurso de recuperação presente em todos os consoles 3DS, para ativar o perfil de Wi-Fi com exploit.</p>
-<p>For a more technical explanation, see the following links for information on the kartdlphax and unSAFE_MODE exploits: <a href="https://github.com/PabloMK7/kartdlphax">kartdlphax</a>, <a href="https://github.com/zoogie/unSAFE_MODE/">unSAFE_MODE</a>.</p>
+<p>Para uma explicação mais técnica, veja os seguintes links para informações sobre os exploits kartdlphax e unSAFE_MODE: <a href="https://github.com/PabloMK7/kartdlphax">kartdlphax</a>, <a href="https://github.com/zoogie/unSAFE_MODE/">unSAFE_MODE</a>.</p>
 </details>
 {: .notice--info}
 
@@ -19,7 +19,7 @@ title: "Instalando boot9strap (kartdlphax)"
 Para poder seguir estas instruções, você precisará do seguinte:
 
 - Um segundo 3DS com custom firmware (o **3DS de origem**) que é a mesma região que o 3DS que você está tentando modificar (o **3DS de destino**)
-  - The consoles must be USA, JPN, or EUR region consoles
+  - Os consoles devem ser consoles de região EUA, JPN, ou EUR
 - Uma cópia física ou digital de Mario Kart 7 que é a mesma região de ambos os consoles
 - Um cartão SD para ambos os dispositivos
 
@@ -30,7 +30,7 @@ Se os botões (Gatilho Esquerdo/Direito), (Botão Direcional para Cima), ou (A) 
 
 No **3DS de origem** (o 3DS com custom firmware):
 
-* The latest release of [kartdlphax](https://github.com/PabloMK7/kartdlphax/releases/latest) (`plugin.3gx`)
+* A versão mais recente do [kartdlphax](https://github.com/PabloMK7/kartdlphax/releases/latest) (`plugin.3gx`)
 * A versão mais recente do [Luma3DS 3GX Loader Edition](https://github.com/Nanquitas/Luma3DS/releases/latest) (`boot.firm`)
 
 No **3DS de destino** (o 3DS que você está tentando modificar):
@@ -42,7 +42,7 @@ No **3DS de destino** (o 3DS que você está tentando modificar):
 
 #### Seção I - Preparação (3DS de origem)
 
-In this section, you will set up your source 3DS (the 3DS with custom firmware) for delivery of the exploit data to the target 3DS.
+Nesta seção, você irá configurar seu 3DS de origem (o 3DS com custom firmware) para a entrega dos dados do exploit ao 3DS de destino.
 
 1. Insira o cartão SD do seu **3DS de origem** no seu computador
 1. Copie o `boot.firm` do Luma 3GX Loader Edition para a raiz do cartão SD do **3DS de origem**, substituindo qualquer arquivo existente
@@ -56,7 +56,7 @@ In this section, you will set up your source 3DS (the 3DS with custom firmware) 
 
 #### Seção II - Preparação (3DS de destino)
 
-In this section, you will copy the files needed to trigger the unSAFE_MODE exploit onto your target 3DS (the 3DS that you are trying to modify)'s SD card.
+Nesta seção, você copiará os arquivos necessários para acionar o exploit unSAFE_MODE no 3DS de destino (o 3DS que está tentando modificar) no cartão SD.
 
 1. Insira o cartão SD do seu **3DS de destino** no seu computador
 1. Copie `boot.firm` e `boot.3dsx` do `.zip` padrão Luma3DS para a raiz do seu cartão SD
@@ -70,7 +70,7 @@ In this section, you will copy the files needed to trigger the unSAFE_MODE explo
 
 #### Seção III - kartdlphax
 
-In this section, you will use Download Play to transfer the exploit data from the source 3DS to the target 3DS, which can be used to overwrite your Wi-Fi slots with hacked data. Suas configurações de conexão Wi-Fi serão temporariamente sobrescritas enquanto o exploit estiver ativo.
+Nesta seção, você usará o Download Play para transferir os dados do exploit do 3DS de origem para o 3DS de destino, que pode ser usado para substituir seus slots de Wi-Fi por dados com hack. Suas configurações de conexão Wi-Fi serão temporariamente sobrescritas enquanto o exploit estiver ativo.
 
 1. Ligue o **3DS de origem**
   - Se você for solicitado a configurar o Luma3DS, basta apertar START para salvar a configuração
@@ -136,7 +136,7 @@ Neste momento, o seu console iniciará no Luma3DS por padrão.
 
 #### Seção VI - Restaurando os Perfis de Configuração de Wi-Fi
 
-In this section, you will enter the Homebrew Launcher so that you can restore the Wi-Fi connection slots that were overwritten in Section III.
+Nesta seção, você entrará no Homebrew Launcher para que você possa restaurar os slots de conexão Wi-Fi que foram substituídos na Seção III.
 
 1. Inicie o aplicativo Download Play
 1. Aguarde até que você veja os dois botões
