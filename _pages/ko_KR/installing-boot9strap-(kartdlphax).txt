@@ -4,36 +4,47 @@ title: "boot9strap 설치 (kartdlphax)"
 
 {% include toc title="목차" %}
 
-### 중요
+<details>
+<summary><em>기술적 상세 정보 (선택 사항)</em></summary>
+<p>SAFE_MODE 펌웨어를 해킹하기 위해, 익스플로잇이 되어있는 Wi-Fi 프로필을 설치해야 합니다.</p>
+<p>To accomplish this, we can use the Download Play functionality of the game Mario Kart 7, using a 3DS with custom firmware already installed along with a custom game plugin.</p>
+<p>This custom plugin will send a hacked payload to an unhacked console, which then exploits the system in order to inject the exploited WiFi profile into your connections list.</p>
+<p>그 후, 시스템 복구 모드, SAFE_MODE를 사용해 인터넷 설정을 활용화 시킵니다.</p>
+<p>For a more technical explanation, see the following links for information on the kartdlphax and unSAFE_MODE exploits: <a href="https://github.com/PabloMK7/kartdlphax">kartdlphax</a>, <a href="https://github.com/zoogie/unSAFE_MODE/">unSAFE_MODE</a>.</p>
+</details>
+{: .notice--info}
 
-kartdlphax는 마리오 카트 7의 다운로드 플레이 모드를 사용하는 익스플로잇입니다. It can be used with unSAFE_MODE to install custom firmware on target devices.
+### 호환성 안내
 
 이 가이드를 진행하기 위해서는, 다음이 필요합니다:
 
 - 커스텀 펌웨어를 설치하려고 하는 3DS (**타겟 3DS**)와 지역이 같은, 커스텀 펌웨어가 설치된 제2의 3DS (**소스 3DS**)
+  - The consoles must be USA, JPN, or EUR region consoles
 - 두 3DS와 지역이 같은, 마리오 카트 7의 물리적/디지털 버전
 - 두 3DS를 위한 SD 카드
 
 If the (Right/Left Shoulder), (D-Pad Up), or (A) buttons on the **target 3DS** do not work, you will not be able to follow these instructions. For further assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 {: .notice--warning}
-	
+
 ### 준비물
 
 **소스 3DS** (커스텀 펌웨어가 설치된 3DS)에서:
 
-* The latest release of [kartdlphax](https://github.com/mariohackandglitch/kartdlphax/releases/latest) (`plugin.3gx`)
-* The latest release of [Luma3DS 3GX Loader Edition](https://github.com/Nanquitas/Luma3DS/releases/latest) (`boot.firm`)
+* The latest release of [kartdlphax](https://github.com/PabloMK7/kartdlphax/releases/latest) (`plugin.3gx`)
+* 최신 버전의 [Luma3DS 3GX Loader 버전](https://github.com/Nanquitas/Luma3DS/releases/latest`) (`boot.firm`)
 
 **타겟 3DS** (커스텀 펌웨어를 설치하려고 하는 3DS)에서:
 
 * 최신 버전의 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (직접 다운로드)
 * 최신 버전의 [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (직접 다운로드)
-* The latest release of [standard Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+* 최신 버전의 [일반 Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (Luma3DS `.zip` 파일)
 * 최신 버전의 [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest) (RELEASE `.zip` 파일)
 
-#### Section I - Prep Work (source 3DS)
+#### 섹션 I - 준비 작업 (소스 3DS)
 
-1. Insert the SD card of your **source 3DS** in your computer
+In this section, you will set up your source 3DS (the 3DS with custom firmware) for delivery of the exploit data to the target 3DS.
+
+1. **소스 3DS**의 SD 카드를 컴퓨터에 삽입해 주세요
 1. Copy Luma 3GX Loader Edition's `boot.firm` to the root of the **source 3DS**'s SD card, replacing any existing file
   + SD 카드의 루트는 SD 카드를 열 때 보이는 디렉토리이고, Nintendo 3DS 폴더가 보이지만 그 안에 않 들어가 있는 상태의 폴더 입니다
 1. Copy kartdlphax's `plugin.3gx` to the following directory on the **source 3DS**'s SD card, depending on the **region of your copy of Mario Kart 7**:
@@ -43,19 +54,23 @@ If the (Right/Left Shoulder), (D-Pad Up), or (A) buttons on the **target 3DS** d
   - Create the `plugins` and `00040000...` folders if they do not already exist
 1. Eject the SD card and put it in the **source 3DS**
 
-#### Section II - Prep Work (target 3DS)
+#### 섹션 II - 준비 작업 (타겟 3DS)
 
-1. Insert the SD card of your **target 3DS** in your computer
-1. Copy `boot.firm` and `boot.3dsx` from the standard Luma3DS `.zip` to the root of your SD card
+In this section, you will copy the files needed to trigger the unSAFE_MODE exploit onto your target 3DS (the 3DS that you are trying to modify)'s SD card.
+
+1. **타겟 3DS**의 SD 카드를 컴퓨터에 삽입해 주세요
+1. 일반 Luma3DS `.zip`안에 있는 `boot.firm`과 `boot.3dsx`를 SD 카드의 루트에 복사해 주세요
 1. SD 카드이 루트에 `boot9strap` 라는 이름으로 새 폴더를 생성해 주세요
 1. SD 카드에 있는 `/boot9strap/` 폴더에 boot9strap `.zip` 파일 안에 압축되있는 `boot9strap.firm`과 `boot9strap.firm.sha`을 복사해 주세요
 1. SafeB9SInstaller `.zip`의 `SafeB9SInstaller.bin`을 SD 카드의 루트로 복사해 주세요
 1. `unSAFE_MODE.zip` 안에 있는 `usm.bin`을 SD 카드의 루트에 복사해 주세요
-1. Create a folder called `3ds` on the root of your SD card
+1. SD 카드의 루트에 '3ds' 폴더를 생성해 주세요
 1. unSAFE_MODE `.zip`안에 있는 `slotTool` 폴더를 SD 카드의 `3ds` 폴더에 복사해 주세요
 1. Eject the SD card and put it in the **target 3DS**
 
 #### 섹션 III - kartdlphax
+
+In this section, you will use Download Play to transfer the exploit data from the source 3DS to the target 3DS, which can be used to overwrite your Wi-Fi slots with hacked data. Your Wi-Fi connection settings will be temporarily overwitten while the exploit is active.
 
 1. **소스 3DS**의 전원을 켜 주세요
   - If you are prompted to set up Luma3DS, just press START to save the configuration
@@ -89,24 +104,27 @@ If the (Right/Left Shoulder), (D-Pad Up), or (A) buttons on the **target 3DS** d
 You will **not** need to use your **source 3DS** to complete any further steps on this guide. Any further steps should only be completed on the **target 3DS**.
 {: .notice--info}
 
-#### Section IV - unSAFE_MODE
+#### 섹션 IV - unSAFE_MODE
+
+In this section, you will enter Safe Mode (a feature available on all 3DS family devices) and navigate to a menu where unSAFE_MODE will be triggered, which will launch you into the boot9strap (custom firmware) installer.
 
 1. 전원이 꺼져 있는 상태에서 (L 어깨) + (R 어깨) + (십자 Up) + (A) 를 길게 눌르고, 누르는 상태에서 전원을 켜 주세요
-  + 안전 모드로 부팅 될 때 까지 버튼들을 눌러 주세요
-  + If you're unable to get into Safe Mode after multiple attempts, one of your buttons may be failing or broken. 위 옵션 외의 증상이 벌어진다면, [Discord의 Nintendo Homebrew](https://discord.gg/MWxPgEp)에서 (영어로) 도움을 요청해 주세요.
+  + 안전 모드로 부팅 될 때 까지 버튼들을 눌러 주세요 ("시스템 업데이트" 메뉴)
+  + 만약 여러번 시도해도 안전 모드로 부팅이 않된다면, 기기의 버튼 중 하나가 고장 나 있을수 있습니다. 이 경우, [Nintendo Homebrew 디스코드](https://discord.gg.MWxPgEp)에 오셔서 도움을 요청하세요.
 1. "OK"를 선택해서 업데이트를 확인해 주세요
   + 실제로 업데이트를 하는 것은 아닙니다. 이것은 익스플로잇의 일부입니다
 1. "동의함"를 눌러서 이용 약관에 동의해 주세요
 1. 이 업데이트는 에러 코드 `003-1099` 와 같이 실패를 할 겁니다. 이것은 의도적 행동입니다
 1. When asked "Would you like to configure Internet settings?", select "Yes"
-1. 이 화면에서, `접솔 경로 1` -> `설정 변경` -> `다음 페이지 (오른쪽 화살표)` -> `Proxy 설정` -> `세부 설정` 으로 이동해 주세요
-  + [이 (영어) 사진](https://uwuu.ca/images/safemode_highlighted.png)처럼 하시면 됩니다
+1. 이 화면에서, `접속 경로 1` -> `설정 변경` -> `다음 페이지 (오른쪽 화살표)` -> `Proxy 설정` -> `세부 설정` 으로 이동해 주세요 ([사진 (영어)](/images/screenshots/bb3/safemode_highlighted.png))
 1. 익스플로잇이 성공적이었다면 SafeB9SInstaller로 부팅되었을 것입니다
 
 #### Section V - Installing boot9strap
 
+이 섹션에서는, 커스텀 펌웨어를 설치할 것입니다.
+
 1. 메시지가 나타나면, boot9strap을 설치하기 위하여 화면에 주어진 키 조합을 입력해 주세요
-  + If the top screen is blank, power off your device and re-do Section IV
+  + 만약 위 화면에 반응이 없다면, 기기의 전원을 꺼 주시고 섹션 III를 다시 시도해 주세요
 1. 작업이 완료되면, (A) 를 눌려 기기를 재부팅해 주세요
 1. 기기는 Luma3DS 구성 메뉴로 부팅되었을 겁니다
   + 만약 기기가 부팅시에 꺼진다면 Luma3DS `.zip` 파일 안에 압축 되있는 `boot.firm`을 SD 카드의 루트로 복사 했는지 확인해 주세요
@@ -117,6 +135,8 @@ You will **not** need to use your **source 3DS** to complete any further steps o
   + 다음 페이지에서는 커펌에 유용한 홈브류를 설치해 기기 준비를 완료할 것 입니다.
 
 #### Section VI - Restoring WiFi Configuration Profiles
+
+In this section, you will enter the Homebrew Launcher so that you can restore the Wi-Fi connection slots that were overwritten in Section III.
 
 1. 다운로드 플레이 앱을 실행해 주세요
 1. 두 가지의 버튼이 화면에 뜰 때까지 기다려 주세요
