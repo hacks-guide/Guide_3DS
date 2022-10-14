@@ -4,14 +4,18 @@ title: "安装 boot9strap（通过硬改）"
 
 {% include toc title="目录内容" %}
 
-### 重要事项
+<details>
+<summary><em>Technical Details (optional)</em></summary>
+<p>An excellent guide to getting a hardmod can be found <a href="https://gbatemp.net/threads/414498/">here</a>.</p>
+<p>This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed <a href="https://www.3dbrew.org/wiki/3DS_System_Flaws">here</a>.</p>
+<p>Using a hardmod, we can dump the NAND image, install custom firmware to the NAND image, then re-install the hacked NAND image to the console.</p>
+</details>
+{: .notice--info}
+
+### Compatibility Notes
 
 The instructions on this page do not currently work on the latest firmware (11.16.0). If you were directly linked to this page, [return to Get Started](get-started) or join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 {: .notice--warning}
-
-[这里](https://gbatemp.net/threads/414498/)有一个进行硬改的绝佳教程。
-
-本教程是使用 “FIRM partitions known-plaintext” 漏洞来进行破解的， 欲知相关资料请查阅[这里](https://www.3dbrew.org/wiki/3DS_System_Flaws)。
 
 你需要一个支持 BT 协议的下载程序，如 [qBittorrent](https://www.qbittorrent.org/download.php) 或 [Deluge](http://dev.deluge-torrent.org/wiki/Download) 来下载本教程中的[磁力链接](https://zh.wikipedia.org/wiki/%E7%A3%81%E5%8A%9B%E9%93%BE%E6%8E%A5) 。
 
@@ -65,6 +69,8 @@ The instructions on this page do not currently work on the latest firmware (11.1
 
 #### 第一步 – 准备工作
 
+In this section, you will download the necessary files for the hardmod and dump the NAND image in preparation to install custom firmware.
+
 1. 将主机关机
 1. 将你的 SD 卡插入到电脑
 1. 解压 Luma3DS `.zip` 里的 `boot.firm` 和 `boot.3dsx` 到你 SD 卡的根目录
@@ -77,6 +83,8 @@ The instructions on this page do not currently work on the latest firmware (11.1
 1. 将你的 NAND 备份移动至你电脑中的 hardmod-b9s-installer 文件夹中，并将其重新命名为 `NAND.bin`
 
 #### 第二步 – 安装 boot9strap
+
+In this section, you will install custom firmware to the dumped NAND image, and then install this NAND image back onto the device to install custom firmware on it.
 
 1. 启动 hardmod-b9s-installer
   + Windows用户：请运行 `install-b9s.exe` 程序
