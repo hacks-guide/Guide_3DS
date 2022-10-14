@@ -6,8 +6,8 @@ title: "BannerBomb3"
 
 <details>
 <summary><em>기술적 상세 정보 (선택 사항)</em></summary>
-<p>To launch custom code, we exploit a flaw in the DSiWare Data Management window of the Settings application.</p>
-<p>To accomplish this, we use your system's encryption key (movable.sed) to build a DSiWare backup that exploits the system.</p>
+<p>사용자 정의의 코드를 실행하기 위해 DSiWare 데이터 관리 설정 창의 취약점을 악용합니다.</p>
+<p>이것을 할수 있도록, 기기의 암호화 키 (movable.sed)를 이용해 기기를 익스플로잇 할 DSiWare 백업을 생성 합니다.</p>
 <p>더 자세한 기술 정보를 확인하려면, <a hrev="https://github.com/zoogie/Bannerbomb3">이 페이지 (영문)</a>을 확인해 주세요.</p>
 </details>
 {: .notice--info}
@@ -29,11 +29,11 @@ title: "BannerBomb3"
 
 1. 기기를 종료해 주세요
 1. SD 카드를 컴퓨터에 삽입해 주세요
-1. Open [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen) on your computer
-1. Upload your movable.sed using the “Choose File” option
-1. Click “Build and Download”
-  + This will download an exploit DSiWare called `F00D43D5.bin` and a payload called `bb3.bin` inside of a zip archive (`DSIWARE_EXPLOIT.zip`)
-1. Copy `bb3.bin` from `DSIWARE_EXPLOIT.zip` to the root of your SD card
+1. 컴퓨터에서 [BannerBomb3 Injector](https://3ds.nhnarwhal.com/#/bb3gen)를 열어 주세요
+1. "Choose File"를 선택하여 `movable.sed`를 업로드 해 주세요
+1. "Build and Download"를 선택해 주세요
+  + 이 작업은 `F00D43D5.bin` DSiWare 파일과 `bb3.bin` 익스플로잇 데이터를 zip 파일로 다운로드 합니다 (`DSIWARE_EXPLOIT.zip`)
+1. `DSIWARE_EXPLOIT.zip` 안에 있는 `bb3.bin`을 SD 카드의 루트에 복사해 주세요
   + SD 카드의 루트는 SD 카드를 열 때 보이는 디렉토리이고, Nintendo 3DS 폴더가 보이지만 그 안에 않 들어가 있는 상태의 폴더 입니다
 1. SD 카드의 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` 폴더로 이동해 주세요
   + `<ID0>`은 [Seedminer](seedminer)에서 복사한 32글자 폴더명 입니다
@@ -46,24 +46,24 @@ title: "BannerBomb3"
 ![]({{ "/images/screenshots/bb3/dsiware-location-2.png" | absolute_url }})
 {: .notice--info} 
 
-#### Section II - Hardware Button Check
+#### 섹션 II - 하드웨어 버튼 작동 확인
 
-In this section, you will test the SAFE_MODE function of your device. This will determine which method you will follow in the next page.
+이 섹션에서는 기기의 SAFE_MODE (안전 모드) 기능을 테스트할 것 입니다. 이 테스트는 다음 페이지에 어떤 방법을 취할지 결정합니다.
 
 1. 전원이 꺼져 있는 상태에서 (L 어깨) + (R 어깨) + (십자 Up) + (A) 를 길게 눌르고, 누르는 상태에서 전원을 켜 주세요
   + 안전 모드로 부팅 될 때 까지 버튼들을 눌러 주세요 ("시스템 업데이트" 메뉴)
 1. If prompted to update, press Cancel
-  + If the device boots to the HOME Menu, just continue to the next step
+  + 만약 기기가 HOME 메뉴로 부팅 한다면, 그냥 다음 단계로 넘어가 주세요
 1. 기기를 종료해 주세요
 
 ___
 
 ### 다음 단계: 익스플로잇 선택
 
-If your device booted into Safe Mode and prompted to you to do a system update in Section II, Safe Mode is working on your device.
+만약 Section II에서 기기가 안전 모드로 부팅하고 시스템 업데이트 메세지가 표시 되었다면, 안전 모드는 제대로 작동하고 있습니다.
 
-If your device booted into Safe Mode, continue to [Installing boot9strap (USM)](installing-boot9strap-(usm))
+기기가 안전 모드로 부팅 되었다면, [boot9strap 설치 (USM)](installing-boot9strap-(usm))으로 계속합니다
 {: .notice--primary}
 
-If your device did NOT boot into Safe Mode, continue to [Installing boot9strap (Fredtool)](installing-boot9strap-(fredtool))
+기기가 안전 모드로 부팅되지 **않았다면**, [boot9strap 설치 (Fredtool)](installing-boot9strap-(fredtool))로 계속합니다
 {: .notice--warning}
