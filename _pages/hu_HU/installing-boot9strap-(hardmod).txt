@@ -4,14 +4,18 @@ title: "Boot9strap telepítése (Hardmod)"
 
 {% include toc title="Tartalomjegyzék" %}
 
-### Fontos tudnivalók
+<details>
+<summary><em>Technikai részletek (opcionális)</em></summary>
+<p>An excellent guide to getting a hardmod can be found <a href="https://gbatemp.net/threads/414498/">here</a>.</p>
+<p>Ez egy jelenleg működő megvalósítása a "FIRM partitions known-plaintext" néven ismert exploitnak, amiről részletesebben olvashatsz <a href="https://www.3dbrew.org/wiki/3DS_System_Flaws">itt</a>.</p>
+<p>Using a hardmod, we can dump the NAND image, install custom firmware to the NAND image, then re-install the hacked NAND image to the console.</p>
+</details>
+{: .notice--info}
+
+### Kompatibilitási megjegyzések
 
 A lépések ezen az oldalon nem fognak működni, ha a legutolsó (11.16.0) firmware-en. Ha közvetlenül lettél erre az oldalra linkelve, [térj vissza a Kezdeti lépésekhez](get-started) vagy csatlakozz a [Nintendo Homebrew csatornához a Discord-on](https://discord.gg/MWxPgEp) és kérj angolul segítséget.
 {: .notice--warning}
-
-[Itt](https://gbatemp.net/threads/414498/) található egy kiváló útmutató arról, hogyan hajtsd végre a hardmodot (hardveres módosítást).
-
-Ez egy jelenleg működő megvalósítása a "FIRM partitions known-plaintext" néven ismert exploitnak, amiről részletesebben olvashatsz [itt](https://www.3dbrew.org/wiki/3DS_System_Flaws).
 
 Ahhoz, hogy használhasd a [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) linkeket ezen az oldalon, szükséged lesz egy torrent kliensre, mint például a [qBittorrent](https://www.qbittorrent.org/download.php) vagy a [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
@@ -65,6 +69,8 @@ Ez működni fog a New 3DS, a New 2DS, az Old 3DS, és az Old 2DS konzolok *öss
 
 #### I. rész - Előkészületek
 
+In this section, you will download the necessary files for the hardmod and dump the NAND image in preparation to install custom firmware.
+
 1. Kapcsold ki a készüléked
 1. Helyezd az SD kártyád a számítógépbe
 1. Másold át a `boot.firm` és `boot.3dsx` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
@@ -77,6 +83,8 @@ Ez működni fog a New 3DS, a New 2DS, az Old 3DS, és az Old 2DS konzolok *öss
 1. Másold a NAND biztonsági mentésedet a számítógépeden lévő hardmod-b9s-installer mappába és nevezd át `NAND.bin` névre
 
 #### II. rész - boot9strap telepítése
+
+In this section, you will install custom firmware to the dumped NAND image, and then install this NAND image back onto the device to install custom firmware on it.
 
 1. Futtasd a hardmod-b9s-installer-t
   + Windows felhasználóknak: Futtasd az `install-b9s.exe` fájlt
