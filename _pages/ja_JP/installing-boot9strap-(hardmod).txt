@@ -4,14 +4,18 @@ title: "boot9strapの導入 (Hardmod)"
 
 {% include toc title="目次" %}
 
-### 必読事項
+<details>
+<summary><em>Technical Details (optional)</em></summary>
+<p>An excellent guide to getting a hardmod can be found <a href="https://gbatemp.net/threads/414498/">here</a>.</p>
+<p>This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed <a href="https://www.3dbrew.org/wiki/3DS_System_Flaws">here</a>.</p>
+<p>Using a hardmod, we can dump the NAND image, install custom firmware to the NAND image, then re-install the hacked NAND image to the console.</p>
+</details>
+{: .notice--info}
+
+### Compatibility Notes
 
 The instructions on this page do not currently work on the latest firmware (11.16.0). If you were directly linked to this page, [return to Get Started](get-started) or join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 {: .notice--warning}
-
-[here](https://gbatemp.net/threads/414498/) ではhardmodを取得する分かりやすいガイドがあります。
-
-下記の方法はすべて「FIRM partitions known-plaintext」脆弱性の有効な活用です。詳しくは [ここを参考にしてください](https://www.3dbrew.org/wiki/3DS_System_Flaws) 。
 
 To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
@@ -65,6 +69,8 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 
 #### セクション I - 準備
 
+In this section, you will download the necessary files for the hardmod and dump the NAND image in preparation to install custom firmware.
+
 1. 本体の電源を切ります。
 1. パソコンにSDカードを入れます
 1. `boot.firm` と `boot.3dsx` をLuma3DSの `.zip` からSDカードのルートにコピーします
@@ -77,6 +83,8 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 1. コンピュータのhardmod-b9s-installerフォルダにNANDバックアップを移動し、`NAND.bin`に名前を変更します
 
 #### セクション II - boot9strapをインストールする
+
+In this section, you will install custom firmware to the dumped NAND image, and then install this NAND image back onto the device to install custom firmware on it.
 
 1. hardmod-b9s-installerを実行します
   + Windows ユーザー: `install-b9s.exe` を実行する
