@@ -4,14 +4,18 @@ title: "boot9strap 설치 (하드모드)"
 
 {% include toc title="목차" %}
 
-### 중요
+<details>
+<summary><em>기술적 상세 정보 (선택 사항)</em></summary>
+<p>An excellent guide to getting a hardmod can be found <a href="https://gbatemp.net/threads/414498/">here</a>.</p>
+<p>이 작업은 <a href="https://www.3dbrew.org/wiki/3DS_System_Flaws">이곳</a>에 자세히 설명되어 있는 "FIRM partitions known-plaintext" 익스플로잇을 구현한 작업입니다.</p>
+<p>Using a hardmod, we can dump the NAND image, install custom firmware to the NAND image, then re-install the hacked NAND image to the console.</p>
+</details>
+{: .notice--info}
+
+### 호환성 안내
 
 이 설명서는 최신 시스템 버전 (11.16.0)와 호환되지 않습니다. 만약 이 페이지로 이동 되었다면, [시작하기](get-started) 페이지로 되돌아가거나, [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp) 에서 영어로 도움을 요청해 주시길 바랍니다.
 {: .notice--warning}
-
-좋은 하드모드 가이드는 [여기에서](https://gbatemp.net/threads/414498/) 볼 수 있습니다.
-
-하드모드 다운그레이드는 현재 [이곳](https://www.3dbrew.org/wiki/3DS_System_Flaws)에 자세히 설명되어 있는 "FIRM partitions known-plaintext" 익스플로잇을 구현한 것입니다.
 
 이 페이지의 [마그넷](https://wikipedia.org/wiki/Magnet_URI_scheme)링크를 사용하려면
  [qBittorrent](https://www.qbittorrent.org/download.php) 또는 [Deluge](http://dev.deluge-torrent.org/wiki/Download)와 같은 토렌트 클라이언트가 필요합니다.
@@ -66,6 +70,8 @@ title: "boot9strap 설치 (하드모드)"
 
 #### 섹션 I - 준비 작업
 
+In this section, you will download the necessary files for the hardmod and dump the NAND image in preparation to install custom firmware.
+
 1. 기기를 종료해 주세요
 1. SD 카드를 컴퓨터에 삽입해 주세요
 1. Luma3DS `.zip`안에 있는 `boot.firm`과 `boot.3dsx`를 SD 카드의 루트에 복사해 주세요
@@ -78,6 +84,8 @@ title: "boot9strap 설치 (하드모드)"
 1. NAND 백업을 컴퓨터에 있는 hardmod-b9s-installer 폴더에 옮기고 'NAND.bin'로 이름을 변경해 주세요
 
 #### 섹션 II - boot9strap 설치하기
+
+In this section, you will install custom firmware to the dumped NAND image, and then install this NAND image back onto the device to install custom firmware on it.
 
 1. hardmod-b9s-installer를 실행해 주세요
   + Windows 사용자: `install-b9s.exe`을 실행해 주세요
