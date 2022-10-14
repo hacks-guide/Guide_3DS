@@ -4,14 +4,18 @@ title: "安裝 boot9strap (透過硬改)"
 
 {% include toc title="條目內容" %}
 
-### 必讀事項
+<details>
+<summary><em>Technical Details (optional)</em></summary>
+<p>An excellent guide to getting a hardmod can be found <a href="https://gbatemp.net/threads/414498/">here</a>.</p>
+<p>This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed <a href="https://www.3dbrew.org/wiki/3DS_System_Flaws">here</a>.</p>
+<p>Using a hardmod, we can dump the NAND image, install custom firmware to the NAND image, then re-install the hacked NAND image to the console.</p>
+</details>
+{: .notice--info}
+
+### Compatibility Notes
 
 The instructions on this page do not currently work on the latest firmware (11.16.0). If you were directly linked to this page, [return to Get Started](get-started) or join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 {: .notice--warning}
-
-您可以在[這裡](https://gbatemp.net/threads/414498/)找到硬改的相關資訊。
-
-此方法是透過『FIRM partitions known-plaintext』漏洞所達成的。詳情請見[此](https://www.3dbrew.org/wiki/3DS_System_Flaws)。
 
 To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
@@ -65,6 +69,8 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 
 #### 第一節 — 準備工作
 
+In this section, you will download the necessary files for the hardmod and dump the NAND image in preparation to install custom firmware.
+
 1. 關閉您的主機
 1. 將 SD 卡插入至電腦中
 1. 解壓 Luma3DS `.zip` 內的 `boot.firm` 及 `boot.3dsx` 到 SD 卡的根目錄底下
@@ -77,6 +83,8 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 1. 將您的 NAND 備份移動至您電腦中的 hardmod-b9s-installer 資料夾中，並將其檔案重新命名為 `NAND.bin`
 
 #### 第二節 — 安裝 boot9strap
+
+In this section, you will install custom firmware to the dumped NAND image, and then install this NAND image back onto the device to install custom firmware on it.
 
 1. 啟動 hardmod-b9s-installer
   + Windows 使用者：請執行 `install-b9s.exe` 檔案
