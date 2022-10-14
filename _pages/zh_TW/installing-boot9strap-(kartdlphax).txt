@@ -4,24 +4,33 @@ title: "安裝 boot9strap (透過 kartdlphax)"
 
 {% include toc title="條目內容" %}
 
-### 必讀事項
+<details>
+<summary><em>Technical Details (optional)</em></summary>
+<p>In order to exploit the SAFE_MODE firmware of our system, we need to inject an exploited WiFi profile.</p>
+<p>To accomplish this, we can use the Download Play functionality of the game Mario Kart 7, using a 3DS with custom firmware already installed along with a custom game plugin.</p>
+<p>This custom plugin will send a hacked payload to an unhacked console, which then exploits the system in order to inject the exploited WiFi profile into your connections list.</p>
+<p>Once the WiFi profile has been injected, we will use SAFE_MODE, which is a recovery feature present on all 3DS consoles, to activate the exploited WiFi profile.</p>
+<p>For a more technical explanation, see the following links for information on the kartdlphax and unSAFE_MODE exploits: <a href="https://github.com/PabloMK7/kartdlphax">kartdlphax</a>, <a href="https://github.com/zoogie/unSAFE_MODE/">unSAFE_MODE</a>.</p>
+</details>
+{: .notice--info}
 
-kartdlphax 是瑪莉歐賽車 7 中下載通信模式中的一個漏洞。 It can be used with unSAFE_MODE to install custom firmware on target devices.
+### Compatibility Notes
 
 如果你想通過此方法安裝自製韌體，則你需要：
 
 - A second 3DS with custom firmware (the **source 3DS**) that is the same region as the 3DS you are trying to modify (the **target 3DS**)
+  - The consoles must be USA, JPN, or EUR region consoles
 - 一份與兩台主機同區的馬利歐賽車 7 (實體或數位版皆可)
 - 兩張 SD 卡
 
 If the (Right/Left Shoulder), (D-Pad Up), or (A) buttons on the **target 3DS** do not work, you will not be able to follow these instructions. For further assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 {: .notice--warning}
-	
+
 ### 必備項目
 
 On the **source 3DS** (the 3DS with custom firmware):
 
-* The latest release of [kartdlphax](https://github.com/mariohackandglitch/kartdlphax/releases/latest) (`plugin.3gx`)
+* The latest release of [kartdlphax](https://github.com/PabloMK7/kartdlphax/releases/latest) (`plugin.3gx`)
 * The latest release of [Luma3DS 3GX Loader Edition](https://github.com/Nanquitas/Luma3DS/releases/latest) (`boot.firm`)
 
 On the **target 3DS** (the 3DS that you are trying to modify):
@@ -32,6 +41,8 @@ On the **target 3DS** (the 3DS that you are trying to modify):
 * The latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest) (the RELEASE `.zip` file)
 
 #### 第一步 – 準備工作(目標 3DS)
+
+In this section, you will set up your source 3DS (the 3DS with custom firmware) for delivery of the exploit data to the target 3DS.
 
 1. Insert the SD card of your **source 3DS** in your computer
 1. Copy Luma 3GX Loader Edition's `boot.firm` to the root of the **source 3DS**'s SD card, replacing any existing file
@@ -45,6 +56,8 @@ On the **target 3DS** (the 3DS that you are trying to modify):
 
 #### 第二步 – 準備工作(目標 3DS)
 
+In this section, you will copy the files needed to trigger the unSAFE_MODE exploit onto your target 3DS (the 3DS that you are trying to modify)'s SD card.
+
 1. Insert the SD card of your **target 3DS** in your computer
 1. 解壓 Luma3DS `.zip` 內的 `boot.firm` 及 `boot.3dsx` 到 SD 卡的根目錄底下
 1. 在 SD 卡的根目錄底下建立一個新的資料夾 `boot9strap`
@@ -56,6 +69,8 @@ On the **target 3DS** (the 3DS that you are trying to modify):
 1. Eject the SD card and put it in the **target 3DS**
 
 #### 第三節 — kartdlphax
+
+In this section, you will use Download Play to transfer the exploit data from the source 3DS to the target 3DS, which can be used to overwrite your Wi-Fi slots with hacked data. Your Wi-Fi connection settings will be temporarily overwitten while the exploit is active.
 
 1. Power on the **source 3DS**
   - If you are prompted to set up Luma3DS, just press START to save the configuration
@@ -91,22 +106,25 @@ You will **not** need to use your **source 3DS** to complete any further steps o
 
 #### Section IV - unSAFE_MODE
 
+In this section, you will enter Safe Mode (a feature available on all 3DS family devices) and navigate to a menu where unSAFE_MODE will be triggered, which will launch you into the boot9strap (custom firmware) installer.
+
 1. With your device still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your device
-  + 持續按住按鈕直到主機重啟至安全模式中
+  + Keep holding the buttons until the device boots into Safe Mode (a "system update" menu)
   + If you're unable to get into Safe Mode after multiple attempts, one of your buttons may be failing or broken. If this is the case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 1. 按下『OK』以允許更新
   + 此步驟將不會進行任何更新， 這只是觸發漏洞的一部分。
 1. 按下「I accept(我同意/同意します)」鍵以接受聲明條款
 1. The update will eventually fail, with the error code `003-1099`. 這也是觸發漏洞的一部分
 1. 當系統提示您『你想要配置網路設置嗎? (Would you like to configure Internet settings?)』時，點選『Yes』
-1. 在接下來出現的選單中，移動至 `連接點 1(Connection 1)` -> `更改設定(Change Settings)` -> `下一頁 (右箭頭)` -> `代理設置(Proxy Settings)` -> `詳細設置(Detailed Setup)`
-  + This is a [visual representation](/images/safemode_highlighted.png)
+1. On the following menu, navigate to `Connection 1` -> `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings` -> `Detailed Setup` ([image](/images/screenshots/bb3/safemode_highlighted.png))
 1. 如果一切成功的話，您將自動進入 SafeB9SInstaller
 
 #### Section V - Installing boot9strap
 
+In this section, you will install custom firmware onto your device.
+
 1. 出現提示時，輸入上方螢幕所顯示的按鍵組合以安裝 boot9strap
-  + If the top screen is blank, power off your device and re-do Section IV
+  + If the top screen is blank, power off your device and re-do Section III
 1. 過程結束後，按下『A』重啟主機
 1. 您的主機將會重啟至 Luma3DS 設定選單中
   + If your device shuts down when you try to power it on, ensure that you have copied `boot.firm` from the Luma3DS `.zip` to the root of your SD card
@@ -117,6 +135,8 @@ At this point, your console will boot to Luma3DS by default.
   + On the next page, you will install useful homebrew applications to complete your setup.
 
 #### Section VI - Restoring WiFi Configuration Profiles
+
+In this section, you will enter the Homebrew Launcher so that you can restore the Wi-Fi connection slots that were overwritten in Section III.
 
 1. 啟動『下載通信 (Download Play)』程式
 1. 等到你看到兩個按鍵
