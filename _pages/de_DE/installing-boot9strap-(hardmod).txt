@@ -4,14 +4,18 @@ title: "Installieren von boot9strap (Hardmod)"
 
 {% include toc title="Inhalt" %}
 
-### Required Reading
+<details>
+<summary><em>Technical Details (optional)</em></summary>
+<p>An excellent guide to getting a hardmod can be found <a href="https://gbatemp.net/threads/414498/">here</a>.</p>
+<p>This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed <a href="https://www.3dbrew.org/wiki/3DS_System_Flaws">here</a>.</p>
+<p>Using a hardmod, we can dump the NAND image, install custom firmware to the NAND image, then re-install the hacked NAND image to the console.</p>
+</details>
+{: .notice--info}
+
+### Compatibility Notes
 
 The instructions on this page do not currently work on the latest firmware (11.16.0). If you were directly linked to this page, [return to Get Started](get-started) or join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 {: .notice--warning}
-
-Eine exzellente Anleitung (auf Englisch) für einen Hardmod kannst du [hier](https://gbatemp.net/threads/414498/) finden.
-
-Dies ist eine zurzeit funktionierende Implementation des "FIRM Partitions Known-Plaintext"-Exploits. Details findest du [hier](https://www.3dbrew.org/wiki/3DS_System_Flaws).
 
 To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
@@ -65,6 +69,8 @@ Dies funktioniert auf mit New 3DS, New 2DS, Old 3DS und Old 2DS auf *allen* Vers
 
 #### Schritt I - Vorbereitungen
 
+In this section, you will download the necessary files for the hardmod and dump the NAND image in preparation to install custom firmware.
+
 1. Schalte deinen 3DS aus
 1. Stecke deine SD-Karte in deinen Computer
 1. Copy `boot.firm` and `boot.3dsx` from the Luma3DS `.zip` to the root of your SD card
@@ -77,6 +83,8 @@ Dies funktioniert auf mit New 3DS, New 2DS, Old 3DS und Old 2DS auf *allen* Vers
 1. Kopiere dein NAND-Backup in den Ordner `hardmod-b9s-installer` auf deinem Computer und benenne es um in `NAND.bin`
 
 #### Schritt II - Installation von boot9strap
+
+In this section, you will install custom firmware to the dumped NAND image, and then install this NAND image back onto the device to install custom firmware on it.
 
 1. Starte den hardmod-b9s-installer
   + Windows Nutzer: Führe `install-b9s.exe` aus
