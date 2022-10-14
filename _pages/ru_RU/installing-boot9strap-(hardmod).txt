@@ -4,14 +4,18 @@ title: "Установка boot9strap (Hardmod)"
 
 {% include toc title="Содержание" %}
 
-### Обязательно к прочтению
+<details>
+<summary><em>Technical Details (optional)</em></summary>
+<p>An excellent guide to getting a hardmod can be found <a href="https://gbatemp.net/threads/414498/">here</a>.</p>
+<p>This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed <a href="https://www.3dbrew.org/wiki/3DS_System_Flaws">here</a>.</p>
+<p>Using a hardmod, we can dump the NAND image, install custom firmware to the NAND image, then re-install the hacked NAND image to the console.</p>
+</details>
+{: .notice--info}
+
+### Compatibility Notes
 
 The instructions on this page do not currently work on the latest firmware (11.16.0). If you were directly linked to this page, [return to Get Started](get-started) or join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 {: .notice--warning}
-
-Отличное руководство по пайке хардмода находится [здесь](https://gbatemp.net/threads/414498/) (англ.).
-
-Это рабочая реализация эксплойта "FIRM partitions known-plaintext". Подробнее о нем [здесь](https://www.3dbrew.org/wiki/3DS_System_Flaws) (англ.).
 
 To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
@@ -65,6 +69,8 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 
 #### Часть I - Подготовительные работы
 
+In this section, you will download the necessary files for the hardmod and dump the NAND image in preparation to install custom firmware.
+
 1. Выключите консоль
 1. Вставьте SD-карту в компьютер
 1. Скопируйте файлы `boot.firm` и `boot.3dsx` из `.zip-архива` Luma3DS в корень SD-карты
@@ -77,6 +83,8 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 1. Переместите бэкап NAND в папку hardmod-b9s-installer на вашем компьютере и переименуйте его в `NAND.bin`
 
 #### Часть II - Установка boot9strap
+
+In this section, you will install custom firmware to the dumped NAND image, and then install this NAND image back onto the device to install custom firmware on it.
 
 1. Запустите hardmod-b9s-installer
   + Пользователи Windows: Запустите `install-b9s.exe`
