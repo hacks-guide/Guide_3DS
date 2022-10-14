@@ -214,7 +214,8 @@ $(document).ready(function() {
 	  "homebrew-launcher-(pichaxx)": "11",
     "installing-boot9strap-(kartdlphax)": "12",
 	  "bannerbomb3-fredtool-(twn)": "13",
-    "installing-boot9strap-(hbl-usm)": "14"
+    "installing-boot9strap-(hbl-usm)": "14",
+    "installing-boot9strap-(ssloth-browser)": "15"
   };
 
   for(var device in devices){
@@ -260,7 +261,8 @@ $(document).ready(function() {
       "11": ["seedminer", "homebrew-launcher-(pichaxx)", "installing-boot9strap-(hbl-usm)", "finalizing-setup"],
       "12": ["installing-boot9strap-(kartdlphax)", "finalizing-setup"],
       "13": ["seedminer", "bannerbomb3-fredtool-(twn)", "finalizing-setup"],
-      "14": ["seedminer", "homebrew-launcher-(pichaxx)", "installing-boot9strap-(hbl-usm)", "finalizing-setup"]
+      "14": ["seedminer", "homebrew-launcher-(pichaxx)", "installing-boot9strap-(hbl-usm)", "finalizing-setup"],
+      "15": ["installing-boot9strap-(ssloth-browser)", "finalizing-setup"]
     }
     // Can add custom routing if necessary but currently both routes are identical
     var device_old =  Object.assign({}, device_common,{
