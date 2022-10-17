@@ -232,27 +232,27 @@ The steps below can be attempted in any order, but are listed from easiest to ha
 1. If you still get an error, [follow CTRTransfer](ctrtransfer), then try again
 1. For further support (in English), join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
 
-### Unable to enter Rosalina due to broken button(s)
+### 고장난 버튼 때문에 Rosalina 사용 불가
 
 Download this [alternate config.ini](https://cdn.discordapp.com/attachments/196635695958196224/982798396265988186/config.ini) and place it in `/luma/`. This will change the Rosalina key combination to (X) + (Y).
 
-### "An exception occurred" after trying to launch Homebrew Launcher via Download Play
+### 다운로드 플레이로 Homebrew Launcher 실행 시 "An exception occurred" 화면이 표시됨
 
-There is an issue with your `boot.3dsx` file (it is missing, misplaced, or corrupted). Download the latest release of [the Homebrew Launcher](https://github.com/devkitPro/3ds-hbmenu/releases/latest) and place `boot.3dsx` on the root of your SD card, replacing any existing file. Make sure you are extracting the ZIP file with any tool other than WinRAR, as it is known to cause issues with 3DS-related files.
+`boot.3dsx` 파일에 문제가 있습니다. (없거나, 잘못 들어갔거나, 혹은 잘못된 파일) 최신 버전의 [Homebrew Launcher](https://github.com/devkitPro/3ds-hbmenu/releases/latest)을 다시 내려받고 `boot.3dsx` 파일을 SD 카드의 최상위 디렉토리에 복사해주세요. 이미 파일이 있으면 덮어씌워 주세요. Make sure you are extracting the ZIP file with any tool other than WinRAR, as it is known to cause issues with 3DS-related files.
 
 ### GodMode9에서 "Scripts directory not found"
 
-You did not copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card. Download the latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) and place the `gm9` folder on the root of your SD card, merging it with the existing one.
+GodMode9 `.zip`안에 압축이 되있는 `gm9` 폴더를 SD 카드의 루트로 복사하지 않았습니다. 최신 버전의 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)을 다시 내려받고 `gm9` 폴더를 SD 카드의 최상위 디렉토리에 복사해주세요. 이미 폴더가 있으면 합병해 주세요.
 
 ### `/gm9/out/` 폴더에 `essentials.exefs`가 없음
 
-Your device had custom firmware in the past, so you were not automatically prompted to make a backup. Make a backup manually:
+이 기기는 이미 커스텀 펌웨어가 설치 된 역사가 있어서 백업 메세지가 표시되지 않았습니다. 수동으로 백업해 주세요:
 
 1. SD 카드를 기기에 다시 삽입해 주세요
 1. (Start)를 길게 누르고, 이 상태에서 전원을 켜 주세요. GodMode9이 실행 될 겁니다
 1. `[S:] SYSNAND VIRTUAL` 폴더로 이동해 주세요
-1. Select `essentials.exefs`, then `Copy to 0:/gm9/out/`
-1. You should now have `essentials.exefs` in `/gm9/out/`
+1. `essential.exefs`를 선택하고, `Copy to 0:/gm9/out/`를 선택해 주세요
+1. `/gm9/out/` 폴더에 `essential.exefs` 파일이 있을 겁니다
 
 ---
 
@@ -295,7 +295,7 @@ The steps below can be attempted in any order, but are listed from least to most
 	+ (Select) 버튼을 계속 눌러 있는 상태에서 기기의 전원을 켜 주세요
 	+ If the "Disable ARM11 exception handlers" box is checked, uncheck it
 	+ If your device now boots to the "An exception occurred" screen, follow [My device boots to an error screen](troubleshooting#my-device-boots-to-an-error-screen)
-1. Try booting into recovery mode and updating your system:
+1. 복구 모드로 부팅하여 시스템을 업데이트해 보세요:
 	+ 기기를 종료해 주세요
 	+ Hold (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A)
 	+ 기기를 시작해 주세요
@@ -303,11 +303,11 @@ The steps below can be attempted in any order, but are listed from least to most
 1. [CTRTransfer](ctrtransfer) 설명서를 따라 주세요
 1. 지원이 필요하면 Discord에서 [Nintendo Homebrew](https://discord.gg/MWxPgEp)에 (영어로) 지원을 요청해 주세요
 
-### My device boots to an error screen
+### 기기 부팅시 에러 화면이 표시됨
 
 #### "An error has occurred: Failed to apply 1 FIRM patch(es)" or "An exception has occurred -- Current process: pm"
 
-Your Luma3DS version is outdated. Download the latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) and place `boot.firm` on the root of your SD card, replacing any existing file. Make sure you are extracting the ZIP file with any tool other than WinRAR, as it is known to cause issues with 3DS-related files.
+Luma3DS 구 버전이 설치되있습니다. 최신 버전의 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)을 다시 내려받고 `boot.firm` 파일을 SD 카드의 최상위 디렉토리에 복사해주세요. 이미 파일이 있으면 덮어씌워 주세요. Make sure you are extracting the ZIP file with any tool other than WinRAR, as it is known to cause issues with 3DS-related files.
 
 #### "에러가 발생했습니다. Hold down the POWER button to turn off the power..."
 
@@ -317,31 +317,31 @@ ARM11 exception handlers are disabled, or custom firmware is not installed. Try 
   + (Select) 버튼을 계속 눌러 있는 상태에서 기기의 전원을 켜 주세요
   + If the "Disable ARM11 exception handlers" box is checked, uncheck it
 
-#### Some other error
+#### 다른 에러
 
-Please take a photo of the error and join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+에러 사진을 찍고 [Nintendo Homebrew 디스코드](https://discord.gg.MWxPgEp)에 오셔서 도움을 요청하세요.
 
-### Blue "Bootrom Error" screen
+### 파란색 "Bootrom Error" 화면
 
-Your device is likely hard-bricked. You will need to buy an ntrboot flashcart to reinstall boot9strap in order to attempt to fix your device. This may also indicate a hardware issue that cannot be fixed. In any case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+이 기기는 벽돌 상태입니다. You will need to buy an ntrboot flashcart to reinstall boot9strap in order to attempt to fix your device. This may also indicate a hardware issue that cannot be fixed. In any case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
   + It is also possible that someone has set a boot-time splash screen that just looks like a brick. Try leaving your device powered on, waiting on the blue screen, for five minutes.
 
 ---
 
-## Functionality-related issues on modded devices
+## 해킹 된 기기에 기능 문제
 
-### DSi / DS functionality is broken or has been replaced with Flipnote Studio
+### DSi / DS 기능이 오작동 하거나 Flipnote Studio가 대신 표시됨
 
 1. 최신 버전의 [TWLFix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest) (`.3dsx` 파일)을 다운로드해 주세요
 1. 기기를 종료해 주세요
 1. SD 카드의 루트에 `3ds` 폴더가 없을 경우 폴더를 만들어 주세요
 1. `TWLFix-CFW.3dsx` 파일을 SD 카드의 `/3ds/` 폴더에 복사해 주세요
 1. SD 카드를 기기에 다시 삽입해 주세요
-1. Open the Homebrew Launcher
-1. Launch TWLFix-CFW from the list of homebrew
-1. Press (A) to uninstall the broken TWL titles
-1. Press (Start) to reboot the device
-1. Perform a System Update by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
+1. Homebrew Launcher를 실행해 주세요
+1. 홈브류 목록에서 TWLFix-CFW를 실행해 주세요
+1. (A)를 눌러 문제의 TWL 타이틀을 제거해 주세요
+1. (Start)를 눌러 기기를 다시 시작해 주세요
+1. 본체 설정의 "기타 설정"에서 가장 오른쪽에 있는 "본체 업데이트"를 선택해 기기를 업데이트해 주세요
   + The update will see that the essential TWL titles have been uninstalled, and will redownload and reinstall them
 1. Once the update is complete, tap "OK" to reboot the device 
 
