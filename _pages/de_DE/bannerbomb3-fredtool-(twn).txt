@@ -17,44 +17,44 @@ Diese Anleitung ist NUR für taiwanesische Konsolen (erkennbar an dem T am Ende 
 
 ### Was du benötigst
 
-- Your `movable.sed` file completing [Seedminer](seedminer)
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
-- The latest release of [b9stool](https://github.com/zoogie/b9sTool/releases/latest) (`boot.nds`)
-- The latest release of [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest) (`Frogminer_save.zip`)
+* Deinen `movable.sed`-Key, welchen du durch den [Seedminer](seedminer) runtergeladen hast
+- Die neueste Version von [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (die Luma3DS `.zip` Datei)
+- Die neuste Version von [b9stool](https://github.com/zoogie/b9sTool/releases/latest) (`boot.nds`)
+- Die neuste Version von [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest) (`Frogminer_save.zip`)
 
-#### Section I - CFW Check
+#### Schritt I - CFW Check
 
 1. Schalte deinen 3DS aus
-1. Hold the (Select) button
-1. Power on your device while still holding the (Select) button
-1. If the check was successful, you will boot to the HOME Menu and you may proceed with this guide
+1. Halte den (Select)-Knopf
+1. Schalte deine Konsole an, während du den (Select)-Knopf hältst
+1. Wenn der Check erfolgreich war, wirst du in das HOME-Menü starten und kannst mit der Anleitung fortfahren
 
-If you see a configuration menu, you already have CFW, and continuing with these instructions may BRICK your device! Follow [Checking for CFW](checking-for-cfw) to upgrade your existing CFW.
+Wenn du ein Konfigurations-Menü siehst, hast du schon Custom Firmware und wenn du jetzt mit der Anleitung fortfährst, kann das dein Gerät BRICKEN! Follow [Checking for CFW](checking-for-cfw) to upgrade your existing CFW.
 {: .notice--danger}
 
-#### Section II - Prep Work
+#### Schritt II - Vorbereitungen
 
 1. Schalte deinen 3DS aus
 1. Stecke deine SD-Karte in deinen Computer
-1. Copy `boot.firm` and `boot.3dsx` from the Luma3DS `.zip` to the root of your SD card
-    + The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
-1. Copy `boot.nds` (B9STool) to the root of your SD card
-1. Copy the `private` folder from the Frogminer_save `.zip` to the root of your SD card
-1. Keep your SD card in your computer - there are more things to do in the next section
+1. Kopiere `boot.firm` und `boot.3dsx` von der Luma3DS `.zip` in das Stammverzeichnis deiner SD-Karte
+    + Das Stammverzeichnis der SD-Karte bezieht sich auf das ursprüngliche Verzeichnis deiner SD-Karte, wo du den Nintendo 3DS Ordner sehen kannst, aber nicht in ihm drin bist
+1. Kopiere die "boot.nds"-Datei (B9STool) in das Stammverzeichnis deiner SD-Karte
+1. Kopiere den `private` Ordner von der Frogminer_save `.zip` in das Stammverzeichnis deiner SD-Karte
+1. Behalte deine SD-Karte in deinem Computer - im nächsten Abschnitt geht es weiter
 
 ![]({{ "/images/screenshots/fredtool-root-layout.png" | absolute_url }})
 {: .notice--info}
 
-#### Section III - BannerBomb3
+#### Abschnitt III - BannerBomb3
 
-1. Open the [DSIHaxInjector V2](https://jenkins.nelthorya.net/job/DSIHaxInjector%20v2/build?delay=0sec) website on your computer
-1. Under the "Username" field, enter any alphanumeric name (no spaces or special characters)
-1. Under the "MovableSed" field, upload your `movable.sed`using the "Browse..." option
-1. Click "Build"
-  + Wait a few seconds for the build process to complete
-1. In the Build History section on the left, type the Username into the "Filter Builds" field
-1. Click on the first search result
-  + This result should have the latest timestamp
+1. Öffne die [DSIHaxInjector V2](https://jenkins.nelthorya.net/job/DSIHaxInjector%20v2/build?delay=0sec) Webseite auf deinem Computer
+1. Bei dem "Username" Feld, gib irgendeinen normalen Namen (keine Leerzeichen oder Sonderzeichen) an
+1. Beim "MovableSed" Feld, lade deine `movable.sed` Datei mit der "Browse..." Option hoch
+1. Drücke auf "Build"
+  + Warte ein paar Sekunden, bis der Erstellungsprozess abgeschlossen ist
+1. Gib im Abschnitt Build-Verlauf links den Benutzernamen in das "suchen" Feld ein
+1. Klicke das erste Suchergebnis
+  + Dieses Ergebnis sollte das neuste sein
 1. Click the "output_(name).zip" link
 1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` on your SD card
   + The `<ID0>` will be the same one that you used in [Seedminer](seedminer)
@@ -86,16 +86,16 @@ If you see a configuration menu, you already have CFW, and continuing with these
 #### Section IV - Fredtool
 
 1. Open the [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec) website on your computer
-1. Under the "Username" field, enter any alphanumeric name (no spaces or special characters)
+1. Bei dem "Username" Feld, gib irgendeinen normalen Namen (keine Leerzeichen oder Sonderzeichen) an
     + You might want to put in a different name to differentiate it from BannerBomb3's output
 1. Under the "DSiBin" field, upload your `42383821.bin` file using the first "Browse..." option
 1. Under the "MovableSed" field, upload your `movable.sed` file using the second "Browse..." option
 1. Under the "InjectionTarget" field, set the injection target to `DSdownloadplay`(NOT memorypit)
-1. Click "Build"
-  + Wait a few seconds for the build process to complete
-1. In the Build History section on the left, type the Username into the "Filter Builds" field
-1. Click on the first search result
-  + This result should have the latest timestamp
+1. Drücke auf "Build"
+  + Warte ein paar Sekunden, bis der Erstellungsprozess abgeschlossen ist
+1. Gib im Abschnitt Build-Verlauf links den Benutzernamen in das "suchen" Feld ein
+1. Klicke das erste Suchergebnis
+  + Dieses Ergebnis sollte das neuste sein
 1. Click the "output_(name).zip" link
 1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` on your SD card 
 1. Copy the `484E4441.bin`  file from the `hax` folder of the downloaded DSiWare archive (output_(name).zip) to the `Nintendo DSiWare` folder
