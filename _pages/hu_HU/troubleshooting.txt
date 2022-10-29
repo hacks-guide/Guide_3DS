@@ -106,11 +106,43 @@ Rossz Soundhax fájlod van az eszközödhöz és a régiódhoz vagy az eszközö
 
 A `SafeB9SInstaller.bin` fájl hiányzik, vagy rossz helyen van. Töltsd le a legutolsó kiadását az [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip)-nek csomagold ki és rakd az SD kártyád gyökerébe. Ne add hozzá a `.bin` kiterjesztést, ha nem látod.
 
+### Failed to mount the SD card!
+
+Mentsd az adataidat, majd formázd újra az SD kártyád FAT32 formátumra, az ajánlott alkalmazással az operációs rendszerednek megfelelően. ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). A MiniTool Partition Wizard-ról és a HP formázó eszközről (HPUSBDisk) ismert, hogy problémákat okoznak a 3DS SD kártyákkal.
+
+Ha ez sikertelen, próbálkozz egy másik SD kártyával.
+
+---
+
+## Installing boot9strap (SSLoth-Browser)
+
+### Red/purple/pink and white screen after running browserhax
+
+This likely indicates that you already have custom firmware. Érdemes elvégezned a [CFW ellenőrzését](checking-for-cfw).
+
+### Opening the browserhax QR code or URL crashes
+
+Browser based exploits (such as this one) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
+
+1. Launch the browser, then launch the browser settings
+1. Scroll to the bottom and Initialize Savedata (it also may be called Clear All Save Data)
+1. Try the exploit again
+
+### Opening the browser prompts for a system update instead
+
+The SSLoth proxy was incorrectly configured. Re-do the SSLoth section on the page.
+
+### Failed to open SafeB9SInstaller.bin
+
+A `SafeB9SInstaller.bin` fájl hiányzik, vagy rossz helyen van. Töltsd le a legutolsó kiadását az [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip)-nek csomagold ki és rakd az SD kártyád gyökerébe. Ne add hozzá a `.bin` kiterjesztést, ha nem látod.
+
 ### Lefagyás a "Doing agbhax..." során
 
-Probléma lehet az `otherapp.bin` fájloddal. Töltsd le újra a legutolsó kiadását az [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)-nak és rakd az SD kártyád gyökerébe.
+There may be an issue with your `arm11code.bin` file. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place it on the root of your SD card, and rename it to `arm11code.bin`. Ne add hozzá a `.bin` kiterjesztést, ha nem látod.
 
-Ha tajvani vagy kínai egységed van (T vagy C a verzió stringben, pl. 11.3.0-##T), csatlakozz a [Nintendo Homebrew-hoz a Discord-on](https://discord.gg/MWxPgEp) segítségért.
+If you have a Taiwanese unit (with a T in the version string, ie. 11.3.0-##T), you will not be able to follow these instructions, and you will need to update your console and follow [Seedminer](seedminer) instead.
+
+If you have a Mainland Chinese unit (with a C in the version string, ie. 11.3.0-##C), join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
 
 ### "PrepareArm9ForTwl returned error c8804631!"
 
