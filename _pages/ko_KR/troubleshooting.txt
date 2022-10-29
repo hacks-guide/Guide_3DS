@@ -106,11 +106,43 @@ title: "문제 해결"
 
 `SafeB9SInstaller.bin` 파일이 없거나 잘못 들어갔습니다. 최신 버전의 [SafeB9Installer](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInst20170605-122940.zip)을 다운받아 압축을 풀고, SD 카드의 최상위 디렉토리에 `SafeB9Installer.bin`을 복사해주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
 
+### Failed to mount the SD card!
+
+데이터를 모두 백업하고 시스템별로 권장되는 프로그램을 이용해 SD카드를 FAT32로 다시 포맷해 주세요. ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))) MiniTool Partition Wizard나 HP formatting tool(HPUSBDisk)는 3DS용 SD 카드에 문제를 발생시킨다는 것이 알려져 있습니다.
+
+만약 해결되지 않는다면, 다른 SD 카드를 이용해 보세요.
+
+---
+
+## Installing boot9strap (SSLoth-Browser)
+
+### Red/purple/pink and white screen after running browserhax
+
+This likely indicates that you already have custom firmware. [CFW 확인](checking-for-cfw) 을 하는 것을 권장합니다.
+
+### Opening the browserhax QR code or URL crashes
+
+Browser based exploits (such as this one) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
+
+1. Launch the browser, then launch the browser settings
+1. Scroll to the bottom and Initialize Savedata (it also may be called Clear All Save Data)
+1. Try the exploit again
+
+### Opening the browser prompts for a system update instead
+
+The SSLoth proxy was incorrectly configured. Re-do the SSLoth section on the page.
+
+### Failed to open SafeB9SInstaller.bin
+
+`SafeB9SInstaller.bin` 파일이 없거나 잘못 들어갔습니다. 최신 버전의 [SafeB9Installer](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInst20170605-122940.zip)을 다운받아 압축을 풀고, SD 카드의 최상위 디렉토리에 `SafeB9Installer.bin`을 복사해주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
+
 ### "Doing agbhax..."에서 화면 정지됨
 
-`otherapp.bin`에 문제가 있을 수 있습니다. 최신 버전의 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)을 다시 내려받아 SD 카드의 최상위 디렉토리에 복사해주세요.
+There may be an issue with your `arm11code.bin` file. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place it on the root of your SD card, and rename it to `arm11code.bin`. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
 
-태국 혹은 중국 본토발 기기(버전이 T나 C로 끝남, 예: `11.3.0-##T`)를 이용하고 계신다면, [Discord의 Nintendo Homebrew](https://discord.com/MWxPgEp)로 오셔서 도움을 요청하세요.
+If you have a Taiwanese unit (with a T in the version string, ie. 11.3.0-##T), you will not be able to follow these instructions, and you will need to update your console and follow [Seedminer](seedminer) instead.
+
+If you have a Mainland Chinese unit (with a C in the version string, ie. 11.3.0-##C), join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
 
 ### "PrepareArm9ForTwl returned error c8804631!"
 
