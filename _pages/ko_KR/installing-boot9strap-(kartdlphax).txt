@@ -45,14 +45,14 @@ title: "boot9strap 설치 (kartdlphax)"
 이 섹션에서는, 소스 3DS (커스텀 펌웨어가 설치 되어 있는 기기)를 익스플로잇 데이터를 타겟 3DS로 전송할 수 있도록 설정합니다.
 
 1. **소스 3DS**의 SD 카드를 컴퓨터에 삽입해 주세요
-1. Copy Luma 3GX Loader Edition's `boot.firm` to the root of the **source 3DS**'s SD card, replacing any existing file
+1. Luma3DS 3GX Loader 버전의 `boot.firm`을 **소스 3DS**의 SD 카드에 복사해 주세요. 파일이 있다면 교체해 주세요
   + SD 카드의 루트는 SD 카드를 열 때 보이는 디렉토리이고, Nintendo 3DS 폴더가 보이지만 그 안에 않 들어가 있는 상태의 폴더 입니다
-1. Copy kartdlphax's `plugin.3gx` to the following directory on the **source 3DS**'s SD card, depending on the **region of your copy of Mario Kart 7**:
+1. kartdlphax의 `plugin.3gx`을 **가지고 계신 마리오 카트 7의 지역**에 맞추어 **소스 3DS**의 SD 카드의 다음 경로에 복사해 주세요
   - USA: `luma/plugins/0004000000030800`
   - EUR: `luma/plugins/0004000000030700`
   - JPN: `luma/plugins/0004000000030600`
-  - Create the `plugins` and `00040000...` folders if they do not already exist
-1. Eject the SD card and put it in the **source 3DS**
+  - `plugins` 폴더와 `00040000...` 폴더가 없으면 만들어 주세요
+1. SD 카드를 분리해 **소스 3DS**에 장착해 주세요
 
 #### 섹션 II - 준비 작업 (타겟 3DS)
 
@@ -66,42 +66,42 @@ title: "boot9strap 설치 (kartdlphax)"
 1. `unSAFE_MODE.zip` 안에 있는 `usm.bin`을 SD 카드의 루트에 복사해 주세요
 1. SD 카드의 루트에 '3ds' 폴더를 생성해 주세요
 1. unSAFE_MODE `.zip`안에 있는 `slotTool` 폴더를 SD 카드의 `3ds` 폴더에 복사해 주세요
-1. Eject the SD card and put it in the **target 3DS**
+1. SD 카드를 분리해 **타겟 3DS**에 장착해 주세요
 
 #### 섹션 III - kartdlphax
 
-In this section, you will use Download Play to transfer the exploit data from the source 3DS to the target 3DS, which can be used to overwrite your Wi-Fi slots with hacked data. 이 취약점을 실행함으로서, 기기의 Wi-Fi 연결 설정은 일시적으로 덮어씌워집니다.
+이 섹션에서는, **소스 3DS**에서 **타겟 3DS**로 Wi-Fi 슬롯을 덮어씌우기 위한 익스플로잇 데이터를 다운로드 플레이를 통해 전송합니다. 이 취약점을 실행함으로서, 기기의 Wi-Fi 연결 설정은 일시적으로 덮어씌워집니다.
 
 1. **소스 3DS**의 전원을 켜 주세요
-  - If you are prompted to set up Luma3DS, just press START to save the configuration
-1. Once in the HOME Menu, press (Left Shoulder) + (Down D-Pad) + (Select) to bring up the Rosalina menu
+  + Luma3DS를 설정하는 창이 표시되면, START를 눌러 저장해 주세요
+1. HOME 메뉴에 도달하면, (L 버튼) + (십자키 아래) + (Select)를 눌러 Rosalina 메뉴를 띄워 주세요
 1. "Enable plugin loader"를 활성화 해 주세요
 1. (B)를 눌러 Rosalina 메뉴를 나와 주세요
 1. 마리오 카트 7를 실행해 주세요
-  - Ensure that wireless connectivity is enabled
-1. Navigate to `Local Multiplayer`. A menu should pop up
-  - If the screen freezes, hold the power button for fifteen seconds to force power off your device, then try again
-  - If you have launched kartdlphax previously, the last selected settings will be loaded. If they are correct, select `Use settings` and skip the next 3 steps. If they are incorrect, select `Change settings` and proceed.
-1. Select your **target 3DS** device type (Old 3DS family or New 3DS family)
-1. Select the exploit type `3DS ROP xPloit Injector`
-1. A confirmation menu will show up. If the settings shown on the top screen are correct, select `Use settings`
-  - If the settings are not correct, press `Change settings` and modify them accordingly
-1. Select `Create Group`
-  - If the source 3DS freezes at this point and you are using a cartridge, try [installing the cartridge to the system](dumping-titles-and-game-cartridges#installing-a-game-cartridge-directly-to-the-system)
+  - 실행하기 전 무선 연결이 활성화되어 있는지 확인해 주세요
+1. `로컬 멀티플레이어`로 진입해 주세요. (언어별로 메뉴 이름이 다를 수 있음) 메뉴가 표시될 것입니다
+  + 화면이 멎는다면, 전원 버튼을 약 15초간 길게 눌러 전원을 강제 종료하고, 다시 시도해 주세요
+  - 이전에 kartdlphax를 실행한 적이 있다면, 마지막으로 지정한 설정이 로드됩니다. 그 설정이 맞다면, `Use settings`를 누르고 다음 세 과정을 건너뛰어주세요. 설정이 다르다면 `Change settings`를 눌러 계속해 주세요
+1. **타겟 3DS**의 장치 종류를 선택해 주세요 (`Old 3DS family` 또는 `New 3DS family`)
+1. Exploit type `3DS ROP xPloit Injector`를 선택해 주세요
+1. 확인 메뉴가 표시됩니다. 설정이 맞다면, `Use settings`를 선택해 주세요
+  - 표시된 설정이 맞지 않다면, `Change settings`를 눌러 알맞게 조정해 주세요
+1. `방 만들기`를 눌러 주세요 (언어별로 메뉴 이름이 다를 수 있음)
+  - 소스 3DS가 여기서 멎으며 카트리지를 이용하고 있다면, [카트리지를 시스템에 설치](dumping-titles-and-game-cartridges#installing-a-game-cartridge-directly-to-the-system)해보세요
 1. **타겟 3DS**의 전원을 켜 주세요
-  - Ensure that wireless connectivity is enabled
-1. On the **target 3DS**, open the Download Play application (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"}), then select "Nintendo 3DS"
-1. Join the group created by the **source 3DS**
-1. Select "Start" on the **source 3DS** once it has detected the **target 3DS**
-1. Once multiplayer has loaded, navigate to `Grand Prix` -> `50cc` -> (any driver) -> `Mushroom Cup` -> `OK`
-1. Wait a while (a percentage should be displayed on the **source 3DS**)
-1. If the exploit was successful, the **target 3DS** will have booted into the 3DS ROP xPloit Injector
-  - If the exploit was not successful, power off the **source 3DS** and **target 3DS** and start again from the beginning of `Section III - kartdlphax`
-1. Press (X) to inject unSAFE_MODE
-1. If the injection was successful, the screen will turn green and the **target 3DS** will automatically power off
-  + If the screen turns red, power off the target 3DS and start again from the beginning of `Section III - kartdlphax`. If this doesn't work, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp))
+  - 실행하기 전 무선 연결이 활성화되어 있는지 확인해 주세요
+1. **타겟 3DS**에서 다운로드 플레이 앱을 실행해 (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"}), "Nintendo 3DS"를 선택해 주세요
+1. **소스 3DS**에서 만든 방으로 들어가 주세요
+1. **타겟 3DS**가 인식되면, **소스 3DS**에서 "Start"를 선택해 주세요
+1. 멀티플레이어가 로드되면, `Grand Prix` -> `50cc` -> (아무 드라이버) -> `버섯 컵` -> `OK`를 선택해 주세요 (언어별로 명칭이 달라질 수 있음)
+1. 잠시 기다려 주세요 (**소스 3DS**에 진행도가 표시됩니다)
+1. 익스플로잇이 성공했다면, **타겟 3DS**가 3DS ROP xPloit Injector로 부팅됩니다
+  - 익스플로잇이 실패했다면, 두 3DS 기기를 모두 종료한 후 `섹션 III - kartdlphax`의 처음부터 다시 시작해 주세요
+1. X 키를 눌러 unSAFE_MODE를 주입해 주세요
+1. 주입이 성공하면, **타겟 3DS**의 화면이 초록색으로 바뀌었다가 자동으로 전원이 종료됩니다
+  + 화면이 빨간색으로 바뀌었다면, 두 3DS 기기를 모두 종료한 후 `섹션 III - kartdlphax`의 처음부터 다시 진행해 주세요. 만약 그래도 진행되지 않는다면, [디스코드의 Nintendo Homebrew](https://discord.gg/MWxPgEp)에 영어로 도움을 요청하세요
 
-You will **not** need to use your **source 3DS** to complete any further steps on this guide. Any further steps should only be completed on the **target 3DS**.
+이후 과정을 완료할 때에는, **소스 3DS**가 필요하지 **않습니다**. 이후 과정은 **타겟 3DS**만 이용하여 완료할 수 있습니다.
 {: .notice--info}
 
 #### 섹션 IV - unSAFE_MODE
