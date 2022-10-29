@@ -106,11 +106,43 @@ You have the wrong Soundhax file for your device and region, or your device is i
 
 `SafeB9SInstaller.bin` 檔案遺失或放在了錯誤的位置。 Download the latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip), extract it, and place `SafeB9SInstaller.bin` on the root of your SD card. 如果您的電腦沒有顯示 `.bin` 的副檔名，請勿手動新增。
 
+### 無法掛載 SD 卡(Failed to mount the SD card!)
+
+Back up your data and reformat your SD card as FAT32 with the recommended tool depending on your operating system ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). MiniTool Partition Wizard and the HP formatting tool (HPUSBDisk) are known to cause issues with 3DS SD cards.
+
+若仍無法正常使用，請試著使用另一張 SD 卡。
+
+---
+
+## Installing boot9strap (SSLoth-Browser)
+
+### Red/purple/pink and white screen after running browserhax
+
+This likely indicates that you already have custom firmware. 請先[檢查是否已安裝自製韌體](checking-for-cfw) 。
+
+### Opening the browserhax QR code or URL crashes
+
+Browser based exploits (such as this one) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
+
+1. Launch the browser, then launch the browser settings
+1. Scroll to the bottom and Initialize Savedata (it also may be called Clear All Save Data)
+1. Try the exploit again
+
+### Opening the browser prompts for a system update instead
+
+The SSLoth proxy was incorrectly configured. Re-do the SSLoth section on the page.
+
+### 出現『Failed to open SafeB9SInstaller.bin』的錯誤訊息
+
+`SafeB9SInstaller.bin` 檔案遺失或放在了錯誤的位置。 Download the latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip), extract it, and place `SafeB9SInstaller.bin` on the root of your SD card. 如果您的電腦沒有顯示 `.bin` 的副檔名，請勿手動新增。
+
 ### 卡在『Doing agbhax...』的步驟
 
-There may be an issue with your `otherapp.bin` file. 重新下載最新版本的 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) 並將其放在你 SD 卡的根目錄中。
+There may be an issue with your `arm11code.bin` file. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place it on the root of your SD card, and rename it to `arm11code.bin`. 如果您的電腦沒有顯示 `.bin` 的副檔名，請勿手動新增。
 
-如果您的主機版本為台灣版或大陸版 (版本號含有 T 或 C，如11.3.0-##T)，請加入 [Discord 上的 Nintendo Homebrew 伺服器](https://discord.gg/MWxPgEp) 以尋求幫助。
+If you have a Taiwanese unit (with a T in the version string, ie. 11.3.0-##T), you will not be able to follow these instructions, and you will need to update your console and follow [Seedminer](seedminer) instead.
+
+If you have a Mainland Chinese unit (with a C in the version string, ie. 11.3.0-##C), join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
 
 ### "PrepareArm9ForTwl returned error c8804631!"
 
