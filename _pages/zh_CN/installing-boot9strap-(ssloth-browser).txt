@@ -1,0 +1,102 @@
+---
+title: "Installing boot9strap (SSLoth-Browser)"
+---
+
+{% include toc title="目录内容" %}
+
+<details>
+<summary><em>Technical Details (optional)</em></summary>
+<p>In order to exploit the Browser application, we need to bypass the browser version check, which is designed to disallow the use of the browser without updating to the latest system version.</p>
+<p>A public proxy server is available, which, with the help of the SSLoth exploit, can bypass this check.</p>
+<p>Once the bypass is active, an exploit webpage will be accessible which will do the rest of the job.</p>
+<p>For technical details on the exploits that you will be using on this page, see <a href="https://github.com/MrNbaYoh/3ds-ssloth">here</a> (SSLoth) and <a href="https://github.com/TuxSH/universal-otherapp/">here</a> (universal-otherapp).</p>
+</details>
+{: .notice--info}
+
+### Compatibility Notes
+
+SSLoth allows users on version 11.13.0 and below to bypass the browser version check, allowing use of new-browserhax or old-browserhax (compatible with versions 11.4.0 through 11.13.0 in all regions), which can then be used in conjunction with universal-otherapp.
+
+If you have updated your device to your current version using a cartridge, your Internet Browser will be inaccessible. If this is the case, you will need to update your device to the latest version through System Settings and then follow the method for the latest version.
+{: .notice--warning}
+
+### 你需要准备点啥？
+
+* 最新版本的 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip)（直链）
+* 最新版本的 [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip)（直链）
+* 最新版本的 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)（下载 Luma3DS `.zip` 文件）
+* 最新版本的 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)（下载 `otherapp.bin`）
+
+#### 第一步 – 准备工作
+
+In this section, you will copy the files needed to trigger both browserhax and universal-otherapp.
+
+1. 将主机关机
+1. 将你的 SD 卡插入到电脑
+1. Copy `otherapp.bin` to the root of your SD card and rename it to `arm11code.bin`
+  + 根目录指的是你点进 SD 卡看到的目录，你可以在这个目录下看到 Nintendo 3DS 文件夹，但请不要点进去
+  + If you do not see the `.bin` extension, do not add it to the end of the filename
+1. 解压 Luma3DS `.zip` 里的 `boot.firm` 和 `boot.3dsx` 到你 SD 卡的根目录
+1. 在 SD 卡根目录创建一个名为 `boot9strap` 的文件夹
+1. 从boot9strap `.zip` 文件中复制 `boot9strap.firm` 和 `boot9strap.firm.sha` 到你SD卡的 `/boot9strap/` 文件夹中
+1. 从 SafeB9SInstaller `.zip` 压缩包中复制 `SafeB9SInstaller.bin` 到 SD 卡根目录下
+1. 将SD卡重新插入你的主机
+1. 启动你的主机
+
+#### Section II - SSLoth
+
+In this section, you will change your Internet connection settings to use a proxy network designed to bypass the browser version check, allowing the browser to function without a system update. This will allow you to access the browser exploit webpage in the next section.
+
+1. Launch the System Settings application
+1. Navigate to `Internet Settings` -> `Connection Settings`
+1. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
+1. Set "Proxy Settings" to "Yes", then click `Detailed Setup`
+1. Set the Proxy Server to `192.9.234.11`, and the Port to `8080`
+1. Click OK, then click Save
+1. When prompted, click "Test" to perform the connection test
+  + The test should succeed
+1. Click "OK" to continue
+1. Press "Back" twice, then "Close" to go back to the HOME Menu
+
+#### Section III - Launching SafeB9SInstaller
+
+In this section, you will visit the browser exploit webpage, which will use universal-otherapp to launch the boot9strap (custom firmware) installer.
+
+1. On the HOME Menu, press the Left and Right shoulder buttons together to open the camera
+    + If you are unable to open the camera, open the Internet Browser and manually type the URL instead (`https://zoogie.github.io/web/nbhax/`)
+1. Tap the QR code button and scan [this QR code](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax&qzone=1&margin=0&size=400x400&ecc=L)
+  + If you get an error, [follow this troubleshooting guide](troubleshooting#installing-boot9strap-ssloth-browser)
+1. 如果一切成功的话，你将自动进入 SafeB9SInstaller
+
+#### 第四步 – 安装 boot9strap
+
+In this section, you will install custom firmware onto your device.
+
+1. 出现提示时，按照上屏的提示输入按键组合来安装 boot9strap
+1. 安装完成后，按下 “A” 键重启主机
+1. 你的主机将会在重启后进入至 Luma3DS 配置菜单中
+  + 如果你的主机在你尝试开机后自动关机了，请确认你已经从 Luma3DS `.zip` 中复制了 `boot.firm` 文件到你的 SD 卡根目录中
+1. 按下 “Start” 键保存设置并重启
+  + 如果出现错误，继续至下一个页面即可解决
+
+这时，你的主机默认将会自动启动 Luma3DS。
+  + Luma3DS 不会给正常的主菜单增添任何看上去十分特别的东西。 如果你的主机现在已经启动到主菜单了，说明自制固件已经在运行了。
+  + 在下一页中，我们将会教你安装一些有用的自制程序来完成安装步骤。
+
+#### Section V - Restoring default proxy
+
+In this section, you will restore the Internet settings back to normal.
+
+1. Launch the System Settings application
+1. Navigate to `Internet Settings` -> `Connection Settings`
+1. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
+1. Set "Proxy Settings" to "No"
+1. Click OK, then click Save
+1. When prompted, click "Test" to perform the connection test
+	+ The test should succeed
+1. 将主机关机
+
+___
+
+### 继续至[完成安装](finalizing-setup)
+{: .notice--primary}
