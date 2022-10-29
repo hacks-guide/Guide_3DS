@@ -106,11 +106,43 @@ title: "问题排查"
 
 `SafeB9SInstaller.bin` 文件丢失或放置在了错误的位置。 下载最新版本的 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) 然后解压它，将 `SafeB9SInstaller.bin` 放在你 SD 卡的根目录中。 如果你下到的东西看不到 `.bin` 后缀，请不要重命名它。
 
+### 无法挂载 SD 卡（Failed to mount the SD card!）
+
+备份好你 SD 卡上的文件，然后根据你的操作系统选择一个工具来重新格式化 SD 卡为 FAT32 格式：[Windows](formatting-sd-(windows))、[macOS](formatting-sd-(mac))、[Linux](formatting-sd-(linux))。 目前已知 MiniTool Partition Wizard 和惠普格式化工具（HPUSBDisk）格出来的 SD 卡给 3DS 使用会出问题。
+
+如果还是不行，尝试换一张 SD 卡。
+
+---
+
+## Installing boot9strap (SSLoth-Browser)
+
+### Red/purple/pink and white screen after running browserhax
+
+This likely indicates that you already have custom firmware. 你应该[检查一下](checking-for-cfw)。
+
+### Opening the browserhax QR code or URL crashes
+
+Browser based exploits (such as this one) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
+
+1. Launch the browser, then launch the browser settings
+1. Scroll to the bottom and Initialize Savedata (it also may be called Clear All Save Data)
+1. Try the exploit again
+
+### Opening the browser prompts for a system update instead
+
+The SSLoth proxy was incorrectly configured. Re-do the SSLoth section on the page.
+
+### Failed to open SafeB9SInstaller.bin
+
+`SafeB9SInstaller.bin` 文件丢失或放置在了错误的位置。 下载最新版本的 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) 然后解压它，将 `SafeB9SInstaller.bin` 放在你 SD 卡的根目录中。 如果你下到的东西看不到 `.bin` 后缀，请不要重命名它。
+
 ### 卡在了 “Doing agbhax...”
 
-这可能说明你放的 `otherapp.bin` 文件有问题。 重新下载最新版本的 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) 并将其放在你 SD 卡的根目录中。
+There may be an issue with your `arm11code.bin` file. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place it on the root of your SD card, and rename it to `arm11code.bin`. 如果你下到的东西看不到 `.bin` 后缀，请不要重命名它。
 
-如果你的主机是港台版或神游版的（系统版本号后缀为 T 或 C，例如：11.3.0-##T），请加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp)使用英文寻求帮助。
+If you have a Taiwanese unit (with a T in the version string, ie. 11.3.0-##T), you will not be able to follow these instructions, and you will need to update your console and follow [Seedminer](seedminer) instead.
+
+If you have a Mainland Chinese unit (with a C in the version string, ie. 11.3.0-##C), join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
 
 ### “PrepareArm9ForTwl returned error c8804631!”
 
