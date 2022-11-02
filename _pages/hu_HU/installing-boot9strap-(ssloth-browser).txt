@@ -1,5 +1,5 @@
 ---
-title: "Installing boot9strap (SSLoth-Browser)"
+title: "Boot9strap telepítése (SSLoth-Browser)"
 ---
 
 {% include toc title="Tartalomjegyzék" %}
@@ -29,13 +29,13 @@ If you have updated your device to your current version using a cartridge, your 
 
 #### I. rész - Előkészületek
 
-In this section, you will copy the files needed to trigger both browserhax and universal-otherapp.
+Ebben a fejezetben fel fogod másolni a fájlokat, amik a browserhax és az universal-otherapp kiváltásához szükségesek.
 
 1. Kapcsold ki a készüléked
 1. Helyezd az SD kártyád a számítógépbe
-1. Copy `otherapp.bin` to the root of your SD card and rename it to `arm11code.bin`
+1. Másold az `otherapp.bin`-t az SD kártyád gyökerébe, majd nevezd át `arm11code.bin` névre
   + Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne
-  + If you do not see the `.bin` extension, do not add it to the end of the filename
+  +Ha nem látod a `.bin` kiterjesztést ne add kézzel hozzá a fájl végéhez
 1. Másold át a `boot.firm` és `boot.3dsx` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
 1. Hozz létre egy mappát `boot9strap` néven az SD kártya gyökerében
 1. Másold át a `boot9strap.firm` fájlt és a `boot9strap.firm.sha` fájlt a boot9strap `.zip` fájlból az SD kártyád `/boot9strap/` mappájába
@@ -43,29 +43,29 @@ In this section, you will copy the files needed to trigger both browserhax and u
 1. Tedd vissza az SD kártyád a készülékedbe
 1. Kapcsold be a készülékedet
 
-#### Section II - SSLoth
+#### II. rész - SSLoth
 
 In this section, you will change your Internet connection settings to use a proxy network designed to bypass the browser version check, allowing the browser to function without a system update. This will allow you to access the browser exploit webpage in the next section.
 
-1. Launch the System Settings application
-1. Navigate to `Internet Settings` -> `Connection Settings`
-1. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
-1. Set "Proxy Settings" to "Yes", then click `Detailed Setup`
-1. Set the Proxy Server to `192.9.234.11`, and the Port to `8080`
-1. Click OK, then click Save
-1. When prompted, click "Test" to perform the connection test
-  + The test should succeed
-1. Click "OK" to continue
-1. Press "Back" twice, then "Close" to go back to the HOME Menu
+1. Indítsd el a System Settings alkalmazást
+1. Navigálj az `Internet Settings` -> `Connection Settings` opciókhoz
+1. Kattints a saját hálózati kapcsolatodra és navigálj a `Change Settings` -> `Next Page (jobb nyíl)` -> `Proxy Settings` opcióhoz
+1. Állítsd az "Proxy Settings"-t "Yes"-re majd kattints a `Detailed Setup`-ra
+1. Állítsd be a Proxy Server-t `192.9.234.11`-re, és a Port-ot `8080`-ra
+1. Kattints az OK-ra, majd kattints a Save-re
+1. Amikor kérdezi, kattints a "Test"-re a kapcsolat ellenőrzéséhez
+  + A tesztnek sikeresnek kell lennie
+1. Kattintson az OK gombra a folytatáshoz
+1. Nyomj a "Back"-re kétszer, majd a "Close"-ra, hogy visszajuszz a HOME Menübe
 
-#### Section III - Launching SafeB9SInstaller
+#### III. rész - A SafeB9SInstaller indítása
 
 In this section, you will visit the browser exploit webpage, which will use universal-otherapp to launch the boot9strap (custom firmware) installer.
 
-1. On the HOME Menu, press the Left and Right shoulder buttons together to open the camera
-    + If you are unable to open the camera, open the Internet Browser and manually type the URL instead (`https://zoogie.github.io/web/nbhax/`)
-1. Tap the QR code button and scan [this QR code](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax&qzone=1&margin=0&size=400x400&ecc=L)
-  + If you get an error, [follow this troubleshooting guide](troubleshooting#installing-boot9strap-ssloth-browser)
+1. A HOME menüben nyomd meg a bal és jobb váll gombokat egyszerre, hogy megnyisd a kamerát
+    + Ha nem tudod megnyitni a kamerát, nyisd meg az Internet Browser-t kézzel, és írd be az URL-t e helyett. (`https://zoogie.github.io/web/nbhax/`)
+1. Érintsd meg a QR Code gombot és olvasd le [ezt a QR kódot](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax&qzone=1&margin=0&size=400x400&ecc=L)
+  + Ha hibát kapsz, [nézd át ezt a hibaelhárítási útmutatót](troubleshooting#installing-boot9strap-ssloth-browser)
 1. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
 
 #### IV. rész - boot9strap telepítése
@@ -87,13 +87,13 @@ Ezen a ponton a konzolod alapértelmezetten bebootol a Luma3DS-be.
 
 In this section, you will restore the Internet settings back to normal.
 
-1. Launch the System Settings application
-1. Navigate to `Internet Settings` -> `Connection Settings`
-1. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
+1. Indítsd el a System Settings alkalmazást
+1. Navigálj az `Internet Settings` -> `Connection Settings` opciókhoz
+1. Kattints a saját hálózati kapcsolatodra és navigálj a `Change Settings` -> `Next Page (jobb nyíl)` -> `Proxy Settings` opcióhoz
 1. Set "Proxy Settings" to "No"
-1. Click OK, then click Save
-1. When prompted, click "Test" to perform the connection test
-	+ The test should succeed
+1. Kattints az OK-ra, majd kattints a Save-re
+1. Amikor kérdezi, kattints a "Test"-re a kapcsolat ellenőrzéséhez
+	+ A tesztnek sikeresnek kell lennie
 1. Kapcsold ki a készüléked
 
 ___
