@@ -1,23 +1,23 @@
 ---
-title: "Installing boot9strap (SSLoth-Browser)"
+title: "安装 boot9strap（通过 SSLoth-浏览器破解）"
 ---
 
 {% include toc title="目录内容" %}
 
 <details>
-<summary><em>Technical Details (optional)</em></summary>
-<p>In order to exploit the Browser application, we need to bypass the browser version check, which is designed to disallow the use of the browser without updating to the latest system version.</p>
-<p>A public proxy server is available, which, with the help of the SSLoth exploit, can bypass this check.</p>
-<p>Once the bypass is active, an exploit webpage will be accessible which will do the rest of the job.</p>
-<p>For technical details on the exploits that you will be using on this page, see <a href="https://github.com/MrNbaYoh/3ds-ssloth">here</a> (SSLoth) and <a href="https://github.com/TuxSH/universal-otherapp/">here</a> (universal-otherapp).</p>
+<summary><em>技术细节（选看）</em></summary>
+<p>为了通过浏览器进行破解，我们需要通过一些手段来绕过系统版本检查，因为它会阻止版本非为最新的系统使用浏览器。</p>
+<p>这里有一个公共的代理服务器可供使用，它将会利用 SSLoth 漏洞来绕过版本检查。</p>
+<p>一旦更新检查被成功绕过，我们就可以通过一个漏洞页面来完成接下来的任务。</p>
+<p>关于本页所使用漏洞的技术细节，请见<a href="https://github.com/MrNbaYoh/3ds-ssloth">这里（SSLoth）</a>和<a href="https://github.com/TuxSH/universal-otherapp/">这里（universal-otherapp）</a>。</p>
 </details>
 {: .notice--info}
 
-### Compatibility Notes
+### 兼容性注意
 
-SSLoth allows users on version 11.13.0 and below to bypass the browser version check, allowing the use of new-browserhax or old-browserhax (compatible with versions 11.4.0 through 11.13.0 in all regions), which can then be used in conjunction with universal-otherapp.
+SSLoth 允许目前系统版本在 11.13.0 及其以下的主机绕过浏览器版本检查，然后就可以使用到利用 universal-otherapp 的方法了，如 new-browserhax 或 old-browserhax（兼容 11.4.0 至 11.13.0 的所有区域主机）
 
-If you have updated your device to your current version using a cartridge, your Internet Browser will be inaccessible. If this is the case, you will need to update your device to the latest version through System Settings and then follow the method for the latest version.
+如果你使用过卡带更新，则你的浏览器将无法打开。 如果是这样，则你需要通过系统更新将你的主机更新到最新版本，并按照最新版本的操作进行破解。
 {: .notice--warning}
 
 ### 你需要准备点啥？
@@ -29,13 +29,13 @@ If you have updated your device to your current version using a cartridge, your 
 
 #### 第一步 – 准备工作
 
-In this section, you will copy the files needed to trigger both browserhax and universal-otherapp.
+本节中，你将会复制一些触发 browserhax 和 universal-otherapp 所需要的文件。
 
 1. 将主机关机
 1. 将你的 SD 卡插入到电脑
-1. Copy `otherapp.bin` to the root of your SD card and rename it to `arm11code.bin`
+1. 复制 `otherapp.bin` 到你 SD 卡的根目录下，然后重命名为 `arm11code.bin`
   + 根目录指的是你点进 SD 卡看到的目录，你可以在这个目录下看到 Nintendo 3DS 文件夹，但请不要点进去
-  + If you do not see the `.bin` extension, do not add it to the end of the filename
+  + 如果你没看到 `.bin` 后缀，则请**不要**手动加上 `.bin` 后缀
 1. 解压 Luma3DS `.zip` 里的 `boot.firm` 和 `boot.3dsx` 到你 SD 卡的根目录
 1. 在 SD 卡根目录创建一个名为 `boot9strap` 的文件夹
 1. 从boot9strap `.zip` 文件中复制 `boot9strap.firm` 和 `boot9strap.firm.sha` 到你SD卡的 `/boot9strap/` 文件夹中
@@ -43,34 +43,34 @@ In this section, you will copy the files needed to trigger both browserhax and u
 1. 将SD卡重新插入你的主机
 1. 启动你的主机
 
-#### Section II - SSLoth
+#### 第二步 – SSLoth
 
-In this section, you will change your Internet connection settings to use a proxy network designed to bypass the browser version check, allowing the browser to function without a system update. This will allow you to access the browser exploit webpage in the next section.
+本节中，你将更改主机的网络连接设置，设置一个代理服务器来绕过浏览器的版本检查，允许浏览器在系统没有更新至最新的情况下运行。 这将让你能够在下一步中访问浏览器漏洞页面。
 
-1. Launch the System Settings application
-1. Navigate to `Internet Settings` -> `Connection Settings`
-1. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
-1. Set "Proxy Settings" to "Yes", then click `Detailed Setup`
-1. Set the Proxy Server to `192.9.234.11`, and the Port to `8080`
-1. Click OK, then click Save
-1. When prompted, click "Test" to perform the connection test
-  + The test should succeed
-1. Click "OK" to continue
-1. Press "Back" twice, then "Close" to go back to the HOME Menu
+1. 打开系统设置（本体設定 / System Settings）
+1. 进入到 `互联网设置（インターネット設定 / Internet Settings）` -> `连接设置（インターネット接続設定 / Connection Settings）`
+1. 点击你目前在用的连接点槽位，然后进入到 `设置变更（設定変更 / Change Settings）` -> `下一页（右箭头）` -> `代理设置（Proxy）`
+1. 设置“代理服务器 （Proxy）”为“是（する / Yes）”，然后点击`详细设置（詳細設定 / Detailed Setup）`
+1. 设置代理服务器为 `192.9.234.11`，端口为 `8080`
+1. 点击 OK，然后点击保存（保存する / Save）
+1. 当提示时，点击“测试（テスト / Test）”进行连接测试
+  + 测试应该会成功
+1. 点击 “OK” 继续
+1. 点两次 “返回”，然后点“关闭”来返回主菜单。
 
-#### Section III - Launching SafeB9SInstaller
+#### 第三步 – 启动 SafeB9SInstaller
 
-In this section, you will visit the browser exploit webpage, which will use universal-otherapp to launch the boot9strap (custom firmware) installer.
+本节中，你将启动浏览器破解漏洞，它将使用 universal-otherapp 启动 boot9strap（自制固件）安装程序。
 
-1. On the HOME Menu, press the Left and Right shoulder buttons together to open the camera
-    + If you are unable to open the camera, open the Internet Browser and manually type the URL instead (`https://zoogie.github.io/web/nbhax/`)
-1. Tap the QR code button and scan [this QR code](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax&qzone=1&margin=0&size=400x400&ecc=L)
-  + If you get an error, [follow this troubleshooting guide](troubleshooting#installing-boot9strap-ssloth-browser)
+1. 在主菜单中，同时按下 L 和 R 键来打开摄像头
+    + 如果你无法打开摄像头，请直接进入 3DS 自带的浏览器然后输入链接访问（`https://zoogie.github.io/web/nbhax/`）
+1. 扫描[这个二维码（点击这里查看）](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax&qzone=1&margin=0&size=400x400&ecc=L)
+  + 如果出现错误，参见[故障排查](troubleshooting#ts_browser)
 1. 如果一切成功的话，你将自动进入 SafeB9SInstaller
 
 #### 第四步 – 安装 boot9strap
 
-In this section, you will install custom firmware onto your device.
+本节中，你将会把自制固件安装到你的主机中。
 
 1. 出现提示时，按照上屏的提示输入按键组合来安装 boot9strap
 1. 安装完成后，按下 “A” 键重启主机
@@ -83,17 +83,17 @@ In this section, you will install custom firmware onto your device.
   + Luma3DS 不会给正常的主菜单增添任何看上去十分特别的东西。 如果你的主机现在已经启动到主菜单了，说明自制固件已经在运行了。
   + 在下一页中，我们将会教你安装一些有用的自制程序来完成安装步骤。
 
-#### Section V - Restoring default proxy
+#### 第五步 – 还原默认的 DNS
 
-In this section, you will restore the Internet settings back to normal.
+本节中，你将会还原你主机的网络设置到原先的状态。
 
-1. Launch the System Settings application
-1. Navigate to `Internet Settings` -> `Connection Settings`
-1. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
-1. Set "Proxy Settings" to "No"
-1. Click OK, then click Save
-1. When prompted, click "Test" to perform the connection test
-	+ The test should succeed
+1. 打开系统设置（本体設定 / System Settings）
+1. 进入到 `互联网设置（インターネット設定 / Internet Settings）` -> `连接设置（インターネット接続設定 / Connection Settings）`
+1. 点击你目前在用的连接点槽位，然后进入到 `设置变更（設定変更 / Change Settings）` -> `下一页（右箭头）` -> `代理设置（Proxy）`
+1. 将 “代理设置（Proxy）”设置为 “否（No/しない）”
+1. 点击 OK，然后点击保存（保存する / Save）
+1. 当提示时，点击“测试（テスト / Test）”进行连接测试
+	+ 测试应该会成功
 1. 将主机关机
 
 ___
