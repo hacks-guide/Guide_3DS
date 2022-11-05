@@ -5,53 +5,53 @@ title: "Seedminer"
 {% include toc title="内容目录" %}
 
 <details>
-<summary><em>Technical Details (optional)</em></summary>
-<p>To install boot9strap on your device, we derive your device's unique encryption key. To accomplish this, we use a tool called Seedminer to calculate the data encryption key (movable.sed) for your device.</p>
-<p>For information on how Seedminer works, see <a href="https://zoogie.github.io/web/34⅕c3">this presentation</a>.</p>
-<p>This method uses a powerful graphics card to perform the calculations needed. A volunteer-run website is used for the purpose of assisting you with this method.</p>
+<summary><em>技术细节（选看）</em></summary>
+<p>为了在你的主机上安装 boot9strap，我们需要获得你主机上的唯一加密密钥。 为了做到这点，我们使用了一个叫 Seedminer 的工具来计算你主机的数据加密密钥（movable.sed）。</p>
+<p>有关 Seedminer 是如何运作的详细过程，请看<a href="https://zoogie.github.io/web/34⅕c3">此演示</a>。</p>
+<p>本教程需要利用一个高性能的显卡来进行一些计算。 不过有一个志愿者网站可以帮助你做需要显卡的步骤。</p>
 </details>
 {: .notice--info}
 
-### Section I - Prep Work
+### 第一步 – 准备工作
 
-In this section, you will get the necessary details from your 3DS that are required to figure out your device's encryption key.
+本节中，为了得到加密密钥，你将需要从你的 3DS 中获取必要的信息。
 
 1. 将你的 SD 卡插入到电脑
 1. 打开你 SD 卡的 `Nintendo 3DS` 文件夹
-  + If you don't have a `Nintendo 3DS` folder, put your SD card into your 3DS and power it on so that the folder can be created
-1. Copy the name of the 32-letter folder you see directly inside Nintendo 3DS
-  + This 32-letter name is system-specific and will be different for each console
-  + If you see multiple 32-letter folders, follow [these instructions](troubleshooting#multiple-long-folder-names-in-nintendo-3ds-folder)
+  + 如果你的 SD 卡中并没有 `Nintendo 3DS` 文件夹，请确保你已经将其插入 3DS 中开机一次以便创建文件夹。
+1. 从 Nintendo 3DS 文件夹里面复制里面的一个 32 位长名字的文件夹的名称
+  + 这个 32 位字符长的文件夹是每台主机唯一使用的
+  + 如果你看到了多个 32 位字符长的文件夹，请[参考这些步骤](troubleshooting#multiple-long-folder-names-in-nintendo-3ds-folder)来解决
   + 如果只是多了个 `private` 文件夹，则你可以忽略它
 
 	![]({{ "/images/screenshots/seedminer/id0-example.png" | absolute_url }})
 	{: .notice--info}
-1. Paste your 32-letter folder name into [a document](/images/screenshots/seedminer/text-document.png) you can reference later
-  + This folder is known as your "ID0". Take note of this as this guide will refer to it as such later
+1. 将这 32 位字符长的名字复制到一个[文档](/images/screenshots/seedminer/text-document.png)中，以便在后面的操作中使用
+  + 这个文件夹名也称作 “ID0”。 请注意这个东西，本教程将在稍后提及它
 1. 启动你的主机
   + 此时不需要插入 SD 卡
 1. 开启你的好友列表（主菜单中最上方的[橙色的笑脸]({{ "/images/friend-list-icon.png" | absolute_url }})）
   + 如果出现错误信息并被踢回到主菜单，则你需要创建一个 Mii 形象或你的主机无法连接到任天堂服务器（由于封禁或网络问题）
 1. 找到你的 Mii 个人形象，然后在上屏寻找你的“朋友代码（Friend Code）”
 
-### Section II - Seedminer
+### 第二步 – Seedminer
 
-In this section, you will use the Bruteforce Movable website to retrieve your device's encryption key in the form of `movable.sed`.
+本节中，你将会使用 Bruteforce Movable 网站来获取你主机的加密密钥（`movable.sed`）。
 
 1. 在你的电脑上打开 [Bruteforce Movable](https://seedminer.hacks.guide/)
   + 如果网站功能无法使用，请加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp) 并使用英文请求帮助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网）你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为942052497
 1. 在 “Your friend code” 选项填入你主机的 “好友代码（Friend Code）”（只要数字，不要填入空格或破折号）
 1. 在 “Your ID0” 栏位粘贴之前复制的 32 位长的文件夹名
-  + Do not attempt to enter the ID0 manually, as it is easy to make a mistake. 确保那是你在上一节中复制并粘贴的 ID0 以防复制错了
+  + 不要尝试手动输入 ID0，因为很容易输错。 确保那是你在上一节中复制并粘贴的 ID0 以防复制错了
 1. 点击 “Go”
   + 如果网站直接跳到了 step 4，则代表网站先前已经完成过你的破解请求了。 你可以直接下载 `movable.sed` 然后继续下一步。 你无需再次添加机器人
-1. Use the ["Register Friend" button](/images/screenshots/seedminer/register-friend.png) on your device to add the bot's friend code as given by the website
+1. 使用主机上的[“好友注册”按钮](/images/screenshots/seedminer/register-friend.png)来添加网站给出的机器人的好友代码
   + 如果提示输入一个昵称，请随便输入一个
 1. 等待网站更新
   + 如果一直没有更新，请在刷新网页前等待几分钟。
 1. 处理信息完毕后，网页将自动进行至 “`Step 2: Brutefforce`”
 1. 等待其完成步骤中的其余部分
-  + This is usually fast (1-5 minutes)
+  + 这通常很快（1-5分钟）
   + 在这个过程中，你之前添加的机器人好友可能不会在你的 3DS 上面展示 不过只要网站还在更新，这就不是个问题
   + 如果你已经等待了半个小时，那么请加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp) 并使用英文求助。你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497
 1. 等待程序自动完成后，从站点下载 `movable.sed` 文件
@@ -60,15 +60,15 @@ In this section, you will use the Bruteforce Movable website to retrieve your de
 
 ___
 
-### Next steps: Choose an exploit
+### 下一步：选择漏洞
 
 一旦得到了你主机的加密密钥（`movable.sed`）后，你将需要选一个方法使用它来触发 3DS 系统漏洞，并利用漏洞来安装自制固件。 
 
 #### BannerBomb3
 
-This method of using Seedminer for further exploitation uses your `movable.sed` file to take advantage of exploits in the System Settings application.
+这种 Seedminer 方法使用了你的 `movable.sed` 来利用系统设置里面的漏洞来进行破解系统。
 
-Continue to [BannerBomb3](bannerbomb3)
+继续至 [BannerBomb3](bannerbomb3)
 {: .notice--primary}
 
 ___
