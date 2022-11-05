@@ -20,7 +20,7 @@ boot9strap 将会在 NAND 里的内容加载完成后启动 `boot.firm` 文件�
 建议不要跳过下载以上列出的任何程序，因为等会就需要用到它们 我们将在本页结尾处清理你在破解过程中产生的无用文件。
 {: .notice--warning}
 
-### Compatibility Notes
+### 兼容性注意
 
 如果你的 **New 3DS** 的系统在很早以前通过某些手段降级到了 2.1.0，则你应该在继续前先[还原你的 NAND 备份](godmode9-usage#restoring-a-nand-backup)。
 {: .notice--warning}
@@ -41,7 +41,7 @@ boot9strap 将会在 NAND 里的内容加载完成后启动 `boot.firm` 文件�
 
 #### 第一步 – 准备工作
 
-In this section, you will copy the files necessary to follow the rest of the instructions on this page.
+本节中，你将需要复制所需的文件到段落提示的指定位置。
 
 1. 将主机关机
 1. 将你的 SD 卡插入电脑
@@ -56,7 +56,7 @@ In this section, you will copy the files necessary to follow the rest of the ins
 1. 将 SD 卡重新插入主机
 1. 启动你的主机
 
-The screenshots below indicate the minimum SD card layout that is required to follow this page. 由于你可能在之前做了一些其他的操作，你的 SD 卡中可能会多出一些文件或者文件夹。
+以下截图为遵循本步骤后 SD 卡应有的文件及文件夹。 由于你可能在之前做了一些其他的操作，你的 SD 卡中可能会多出一些文件或者文件夹。
 
 ![]({{ "/images/screenshots/finalizing-root-layout.png" | absolute_url }})
 {: .notice--info}
@@ -68,17 +68,17 @@ The screenshots below indicate the minimum SD card layout that is required to fo
 
 #### 第二步 – 更新系统
 
-In this section, you will update your system to the latest version, which is safe to do with custom firmware.
+本节中，你将会把主机更新至最新版本。（自制固件兼容最新版本的系统，直接升级是安全的）
 
 1. 进入 “系统设置(System Settings)”，接着点击“其他设置(Other Settings)”，然后移动到最右边，点击“系统升级(System Update)”来升级你的主机
   + 你使用 B9S 和 Luma 时升级系统是安全的
   + 更新程序可能会提示“你的系统已经是最新了”而不会继续更新 如果你已经更新到了最新，这是正常的；请继续下一节
-  + If this gives you an error, set both your DNS settings and Proxy settings to "auto"
+  + 如果在更新中途出错，请将主机连接的网络的 DNS 设置和代理设置改为 “auto（自动）”
   + 如果你仍然遇到了错误，请参考 [故障排查](troubleshooting#system-update-error-after-installing-cfw)
 
 #### 第三步 – 进入 Homebrew Launcher
 
-In this section, you will temporarily replace Download Play with Homebrew Launcher (which we need to launch FBI). Download Play will automatically go back to normal once you reboot your device.
+本节中，为了启动 FBI 应用程序，你将需要临时把主机的“下载通信（Download Play）”应用程序替换为 Homebrew Launcher。 下载通信应用程序将会在重启主机后自动恢复正常。
 
 1. 启动“下载通信(Download Play)”程序 (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
 1. 等到你看到 `Nintendo 3DS` 和 `Nintendo DS` 按钮
@@ -94,7 +94,7 @@ In this section, you will temporarily replace Download Play with Homebrew Launch
 
 #### 第四步 — 调整 RTC 及 DSP
 
-In this section, you will sync your 3DS internal clock with the actual time and dump the sound firmware (which is necesssary for some homebrew software to use sound properly).
+本节中，你将会把主机的内部时钟同步现实时间，并导出声卡的固件（部分自制程序需要使用它来正确发声）。
 
 1. 同时按下 “L” + “↓” + “Select” 键来打开 Rosalina 菜单
 1. 选择 “Miscellaneous options”
@@ -107,7 +107,7 @@ In this section, you will sync your 3DS internal clock with the actual time and 
 
 #### 第五步 – 安装CIA
 
-In this section, you will install several useful homebrew applications to HOME Menu.
+本节中，你将会安装几个实用的自制程序到主菜单。
 
 1. 从自制程序列表中找到并启动 FBI
 1. 进入到 `SD` -> `cias`
@@ -117,7 +117,7 @@ In this section, you will install several useful homebrew applications to HOME M
 
 #### 第六步 – 将 Luma3DS 复制到 CTRNAND
 
-In this section, you will use a script to copy some of Luma3DS's files to internal memory so that they can be accessed, even without an SD card inserted.
+本节中，你将会使用到一个脚本来复制 Luma3DS 的文件到主机的内部储存空间中，以便在拔出 SD 卡后依然能够读取这些文件。
 
 1. 将主机关机
 1. 按住 “START” 键，然后将主机开机。 这会启动 GodMode9
@@ -135,7 +135,7 @@ In this section, you will use a script to copy some of Luma3DS's files to intern
 
 #### 第七步 – 清理 SD 卡
 
-In this section, you will use a script to remove some unnecessary files from your SD card.
+本节中，你将会使用到一个脚本来清理内存卡的一些无用文件。
 
 1. 选择 “Cleanup SD Card”
 1. 出现提示时，按 “A” 键继续
@@ -144,7 +144,7 @@ In this section, you will use a script to remove some unnecessary files from you
 
 #### 第七节 – 备份基础文件
 
-In this section, you will make backups of files that can be used to recover from software bricks or to recover data.
+本节中，你将会从主机备份一些重要文件，以便在主机软砖时进行恢复数据。
 
 1. 选择 “Backup Options”
 1. 选择 “SysNAND Backup”
@@ -180,7 +180,7 @@ ___
 你好呀！~ 我们正在探索提升整体手册体验的方法。 如果你愿意帮助我们，请在[这里](https://forms.gle/vZNoc4QLCz5MEXCK7)填写一份问卷调查（仅限使用英文）。 谢谢！
 {: .notice--info}
 
-### Information and Notes
+### 信息与注意事项
 
 {% capture notice-6 %}
 以下是你可能会用到的一些快捷键：
