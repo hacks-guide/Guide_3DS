@@ -114,23 +114,23 @@ title: "问题排查"
 
 ---
 
-## Installing boot9strap (SSLoth-Browser)
+## 安装 boot9strap（通过 SSLoth-Browser）
 
-### Red/purple/pink and white screen after running browserhax
+### 跑 browserhax 时卡在了红/紫/粉/白屏
 
-This likely indicates that you already have custom firmware. 你应该[检查一下](checking-for-cfw)。
+这可能代表着你的主机已经安装过了自制固件。 你应该[检查一下](checking-for-cfw)。
 
-### Opening the browserhax QR code or URL crashes
+### 打开浏览器破解二维码或链接后崩溃了
 
-Browser based exploits (such as this one) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
+基于浏览器的破解漏洞（例如你正在使用的这个）不稳定并经常崩溃，你可以尝试按照下面的步骤修复：
 
-1. Launch the browser, then launch the browser settings
-1. Scroll to the bottom and Initialize Savedata (it also may be called Clear All Save Data)
-1. Try the exploit again
+1. 打开浏览器，进入浏览器设置页面
+1. 移动到页面最底端，选择“Initialize Savedata（初始化缓存）” （有时也会叫做“清除所有缓存（Clear All Save Data）”）
+1. 再次尝试触发漏洞
 
-### Opening the browser prompts for a system update instead
+### 打开浏览器后提示需要系统更新
 
-The SSLoth proxy was incorrectly configured. Re-do the SSLoth section on the page.
+你可能没有正确配置 SSLoth 代理服务器。 尝试重做页面上的 SSLoth 部分内容。
 
 ### Failed to open SafeB9SInstaller.bin
 
@@ -138,11 +138,11 @@ The SSLoth proxy was incorrectly configured. Re-do the SSLoth section on the pag
 
 ### 卡在了 “Doing agbhax...”
 
-There may be an issue with your `arm11code.bin` file. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place it on the root of your SD card, and rename it to `arm11code.bin`. 如果你下到的东西看不到 `.bin` 后缀，请不要重命名它。
+这可能说明你放的 `arm11code.bin` 文件有问题。 重新下载最新版本的 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) 并将其放在你 SD 卡的根目录中，然后重命名为 `arm11code.bin`。 如果你下到的东西看不到 `.bin` 后缀，请不要重命名它。
 
-If you have a Taiwanese unit (with a T in the version string, ie. 11.3.0-##T), you will not be able to follow these instructions, and you will need to update your console and follow [Seedminer](seedminer) instead.
+如果你的机子是港台版的（系统版本号为 T 结尾，例如11.3.0-##T），则你无法使用本教程。你需要更新系统至最新，然后使用 [Seedminer](seedminer) 进行破解。
 
-If you have a Mainland Chinese unit (with a C in the version string, ie. 11.3.0-##C), join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+如果你的主机是神游版的（系统版本号后缀为 C，例如：11.3.0-##C），请加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp)使用英文寻求帮助。
 
 ### “PrepareArm9ForTwl returned error c8804631!”
 
@@ -158,13 +158,13 @@ If you have a Mainland Chinese unit (with a C in the version string, ie. 11.3.0-
 
 ## BannerBomb3
 
-### DSiWare Management menu crashes without showing BB3 multihax menu
+### DSiWare 数据管理菜单崩溃，而非跳转至 BB3 multihax 菜单
 
-确保 `F00D43D5.bin` 是 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 里面的唯一文件。 If it is, then re-create it with the [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen). 
+确保 `F00D43D5.bin` 是 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 里面的唯一文件。 如果确定没问题的话，尝试重新使用 [Bannerbomb3 注入器](http://3dstools.nhnarwhal.com/#/bb3gen)重新创建文件。 
 
-Also, ensure that `bb3.bin` is on the root of the SD card. If it is missing, then download the latest release of [Bannerbomb3](https://github.com/lifehackerhansol/Bannerbomb3/releases/download/v3.0-lhs1/bb3.bin) (direct download), and copy the `bb3.bin` file to the root of your SD card.
+另外，请确保 `bb3.bin` 已正确放置在 SD 卡的根目录下。 如果缺失了这个文件，请下载最新版本的 [Bannerbomb3](https://github.com/lifehackerhansol/Bannerbomb3/releases/download/v3.0-lhs1/bb3.bin)（直链），然后将 `bb3.bin` 复制到内存卡的根目录中。
 
-如果还是不行，则可能是因为曾经这台主机安装过自制固件，且后来又卸载了自制固件，从而导致此方法失效。 If this is the case and Safe Mode works, you will need to follow [an alternate branch of Seedminer](homebrew-launcher-(pichaxx)). If Safe Mode doesn't work or you need assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+如果还是不行，则可能是因为曾经这台主机安装过自制固件，且后来又卸载了自制固件，从而导致此方法失效。 如果确实如此，而且安全模式能够正常启动，则请更换 [Seedminer 的另一种方法](homebrew-launcher-(pichaxx))。 如果安全模式不能够正常启动，且你需要帮助，请加入 [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) 并使用英文求助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497。
 
 ### DSiWare 数据管理没有崩溃
 
@@ -172,21 +172,21 @@ Also, ensure that `bb3.bin` is on the root of the SD card. If it is missing, the
 
 ### DSiWare 数据管理里面显示了一个问号图标的程序
 
-你放的 `F00D43D5.bin` 文件可能有问题（损坏或被用于错误的 3DS）。 Re-create your `F00D43D5.bin` file with the [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen), ensuring that you use the `movable.sed` file for your console.
+你放的 `F00D43D5.bin` 文件可能有问题（损坏或被用于错误的 3DS）。 使用 [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen) 重新创建 `F00D43D5.bin` 文件，且确保你使用的 `movable.sed` 文件是你这台主机的。
 
 ---
 
 ## 安装 boot9strap（通过 USM）
 
-### Update doesn't fail with error code `003-1099`
+### 更新没有失败，也没有出现 `003-1099`
 
-unSAFE_MODE is not installed. Follow the instructions on your page to install unSAFE_MODE again. 
+unSAFE_MODE 没有成功安装上。 请按照你安装 unSAFE_MODE 的步骤页面重试一遍。 
 
-### Red screen when selecting detailed setup
+### 选择详细设置后卡红屏了
 
-The file `usm.bin` is missing or misplaced. Download the latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/download/v1.3/usm.bin) and place `usm.bin` on the root of your SD card. 如果你下到的东西看不到 `.bin` 后缀，请不要重命名它。
+`usm.bin` 文件丢失或位置错误。 下载最新版本的 [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/download/v1.3/usm.bin) 并将 `usm.bin` 放在你 SD 卡的根目录中。 如果你下到的东西看不到 `.bin` 后缀，请不要重命名它。
 
-There is also a possibility that the console isn't reading your SD card. Make sure it is inserted and formatted correctly.
+或许主机没有读到你的 SD 卡也是有可能的。 请确定你已经正确插入其至主机，且格式化正确。
 
 ### Failed to open SafeB9SInstaller.bin
 
@@ -206,13 +206,13 @@ There is also a possibility that the console isn't reading your SD card. Make su
 
 请确认 `movable.sed` 和 DSiWare 备份是从同一台主机导出的。 如果不匹配就会报错。
 
-### Unable to select the "Haxxxxxxxxx!" title because of the BB3 multihax menu
+### 因为弹出了 BB3 multihax 菜单，选择不了 “Haxxxxxxxxx!” 程序
 
-You forgot to delete `F00D43D5.bin` from the SD card. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` on your SD card and delete the `F00D43D5.bin` file.
+你忘记从 SD 卡中删掉 `F00D43D5.bin` 文件了。 打开内存卡的 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 文件夹，然后删除 `F00D43D5.bin` 文件。
 
 ### 没有出现 “Haxxxxxxxxx!”
 
-你放的 `42383821.bin` 文件有问题（丢失、放错位置或者损坏）。 Re-create your files with the [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec) website and ensure that you place the `42383821.bin` file from `output.zip` -> `hax` in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`.
+你放的 `42383821.bin` 文件有问题（丢失、放错位置或者损坏）。 使用 [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec) 重新创建文件，确保 `42383821.bin` 是从 `output.zip` -> `hax` 取出来的，且放在了 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 中。
 
 ### DS 连接设置正常启动了
 
