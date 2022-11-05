@@ -5,14 +5,14 @@ title: "BannerBomb3"
 {% include toc title="目录内容" %}
 
 <details>
-<summary><em>Technical Details (optional)</em></summary>
-<p>To launch custom code, we exploit a flaw in the DSiWare Data Management window of the Settings application.</p>
-<p>To accomplish this, we use your system's encryption key (movable.sed) to build a DSiWare backup that exploits the system.</p>
-<p>For a more technical explanation, see <a href="https://github.com/zoogie/Bannerbomb3">here</a>.</p>
+<summary><em>技术细节（选看）</em></summary>
+<p>我们使用了 3DS 系统设置中的 DSiWare 数据管理中的一个漏洞来启动自制代码。</p>
+<p>为达到此目的，我们将使用你主机系统中的加密密钥（movable.sed）来构建一个带有漏洞的 DSiWare 备份。</p>
+<p>若想知道更多技术细节，请见<a href="https://github.com/zoogie/Bannerbomb3">这里</a>。</p>
 </details>
 {: .notice--info}
 
-### Compatibility Notes
+### 兼容性注意
 
 这些操作可在美、欧、日、韩版的主机上工作，你可通过系统版本号末尾的 U，E，J，K 字符来区分主机版本。
 
@@ -25,46 +25,46 @@ title: "BannerBomb3"
 
 #### 第一步 – 准备工作
 
-In this section, you will copy the files needed to trigger the BannerBomb3 exploit onto your device's SD card.
+本节中，你需要把触发 BannerBomb3 漏洞所需的文件复制到主机的 SD 卡上。
 
 1. 将主机关机
 1. 将你的 SD 卡插入到电脑
-1. Open [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen) on your computer
-1. Upload your movable.sed using the “Choose File” option
-1. Click “Build and Download”
-  + This will download an exploit DSiWare called `F00D43D5.bin` and a payload called `bb3.bin` inside of a zip archive (`DSIWARE_EXPLOIT.zip`)
-1. Copy `bb3.bin` from `DSIWARE_EXPLOIT.zip` to the root of your SD card
+1. 在你的电脑上打开 [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen)
+1. 点击 “选择文件” 选项，然后选择你的 movable.sed 上传
+1. 点击 “Build and Download”
+  + 这将下载一个包含名为 `F00D43D5.bin` 的 DSiWare 漏洞文件和一个名为 `bb3.bin` 的 zip 文件（`DSIWARE_EXPLOIT.zip`）到你的电脑上
+1. 从 `DSIWARE_EXPLOIT.zip` 中，将 `bb3.bin` 解压到你的 SD 卡根目录
   + 根目录指的是你点进 SD 卡看到的目录，你可以在这个目录下看到 Nintendo 3DS 文件夹，但请不要点进去
   ![]({{ "/images/screenshots/bb3/bb3-root-layout.png" | absolute_url }}){: .notice--info}
 1. 打开内存卡的 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` 文件夹
-  + `<ID0>` is the 32-letter folder name that you copied in [Seedminer](seedminer)
-  + `<ID1>` is a 32-letter folder inside of the `<ID0>`
+  + `<ID0>` 是你在 [Seedminer](seedminer) 部分中复制的 32 位字母长的文件夹名称
+  + `<ID1>` 是一个在 `<ID0>` 文件夹内，另一个 32 位字母长的文件夹
   ![]({{ "/images/screenshots/bb3/dsiware-location-1.png" | absolute_url }}){: .notice--info}
 1. 在 `<ID1>` 文件夹内创建一个名为 `Nintendo DSiWare` 的文件夹
   + 如果这个位置已经存在了这个文件夹，**且**有一些名为 `<8位ID>.bin` 文件（DSiWare 备份文件）在里面，请将它们备份到电脑上，然后从 SD 卡中移除这些文件
-1. Copy the `F00D43D5.bin` file from `DSIWARE_EXPLOIT.zip` to the `Nintendo DSiWare` folder
+1. 从 `DSIWARE_EXPLOIT.zip` 压缩文件中解压 `F00D43D5.bin` 到 `Nintendo DSiWare` 文件夹下
 
 ![]({{ "/images/screenshots/bb3/dsiware-location-2.png" | absolute_url }})
 {: .notice--info} 
 
-#### Section II - Hardware Button Check
+#### 第二步 – 按键检查
 
-In this section, you will test the SAFE_MODE function of your device. This will determine which method you will follow in the next page.
+本节中，你将要测试主机的 SAFE_MODE 功能。 这将决定你在下一页将采用哪种方法。
 
 1. 将你的主机置于关机状态，按住 L + R + ↑ + A 四个按键，然后按下电源键
-  + Keep holding the buttons until the device boots into Safe Mode (a "system update" menu)
-1. If prompted to update, press Cancel
-  + Your device will power off
-  + If the device boots to the HOME Menu, just power off your device
+  + 按住这几个键，直到主机进入安全模式（一个“系统更新”菜单）
+1. 如果提示更新，请点击取消
+  + 主机将关机
+  + 如果主机启动到了主菜单，则请关机
 
 ___
 
-### Next steps: Choose an exploit
+### 下一步：选择漏洞
 
-If your device booted into Safe Mode and prompted to you to do a system update in Section II, Safe Mode is working on your device.
+如果你的主机成功在第二步启动到了安全模式，则代表你的主机能够正常启动安全模式。
 
-If your device booted into Safe Mode, continue to [Installing boot9strap (USM)](installing-boot9strap-(usm))
+如果你的主机正确启动到了安全模式，请使用[安装 boot9strap（通过 USM）](installing-boot9strap-(usm))
 {: .notice--primary}
 
-If your device did NOT boot into Safe Mode, continue to [Installing boot9strap (Fredtool)](installing-boot9strap-(fredtool))
+如果你的主机**没有**正常启动到安全模式，请使用[安装 boot9strap（通过 Fredtool）](installing-boot9strap-(fredtool))。
 {: .notice--warning}
