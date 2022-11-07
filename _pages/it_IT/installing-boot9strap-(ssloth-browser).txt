@@ -17,7 +17,7 @@ title: "Installazione di boot9strap (SSLoth-Browser)"
 
 SSLoth consente agli utenti alla versione di sistema 11.13.0 e precedenti di bypassare il controllo sulla versione del browser, permettendo l'uso di new-browserhax o old-browserhax (compatibile con tutte le versioni da 11.4.0 a 11.13.0 di ogni regionalità), che può quindi essere utilizzato in combinazione con universal-otherapp.
 
-If you have updated your device to your current version using a cartridge, your Internet Browser will be inaccessible. If this is the case, you will need to update your device to the latest version through System Settings and then follow the method for the latest version.
+Se hai aggiornato la tua console alla versione corrente utilizzando una cartuccia, il tuo Browser Internet sarà inaccessibile. In tal caso, dovrai aggiornare la tua console all'ultima versione tramite Impostazioni della console, quindi seguire il metodo per la versione più recente.
 {: .notice--warning}
 
 ### Cosa serve
@@ -29,13 +29,13 @@ If you have updated your device to your current version using a cartridge, your 
 
 #### Sezione I - Preparazione
 
-In this section, you will copy the files needed to trigger both browserhax and universal-otherapp.
+In questa sezione copierai i file necessari per attivare sia browserhax che universal-otherapp.
 
 1. Spegni il tuo 3DS
 1. Inserisci la scheda SD nel tuo computer
-1. Copy `otherapp.bin` to the root of your SD card and rename it to `arm11code.bin`
+1. Copia il file `otherapp.bin` nella directory principale della tua scheda SD e rinominalo in `arm11code.bin`
   + La directory principale della scheda SD è la cartella della tua scheda SD in cui è possibile visualizzare la cartella Nintendo 3DS, ma non il suo interno
-  + If you do not see the `.bin` extension, do not add it to the end of the filename
+  + Se non vedi l'estensione `.bin`, non aggiungerla alla fine del nome del file
 1. Copia i file `boot.firm` e `boot.3dsx` dall'archivio `.zip` di Luma3DS nella directory principale della tua scheda SD
 1. Crea una cartella chiamata `boot9strap` nella directory principale della tua scheda SD
 1. Copia i file `boot9strap.firm` e `boot9strap.firm.sha` dall'archivio `.zip` di boot9strap nella cartella `/boot9strap/` della tua scheda SD
@@ -43,28 +43,28 @@ In this section, you will copy the files needed to trigger both browserhax and u
 1. Reinserisci la scheda SD nella tua console
 1. Accendi la console
 
-#### Section II - SSLoth
+#### Sezione II - SSLoth
 
-In this section, you will change your Internet connection settings to use a proxy network designed to bypass the browser version check, allowing the browser to function without a system update. This will allow you to access the browser exploit webpage in the next section.
+In questa sezione cambierai le impostazioni di collegamento ad Internet per utilizzare una rete proxy progettata per aggirare il controllo della versione del browser, permettendo al browser di funzionare senza un aggiornamento di sistema. Questo ti permetterà di accedere alla pagina web dell'exploit del browser nella prossima sezione.
 
-1. Launch the System Settings application
-1. Navigate to `Internet Settings` -> `Connection Settings`
-1. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
-1. Set "Proxy Settings" to "Yes", then click `Detailed Setup`
-1. Set the Proxy Server to `192.9.234.11`, and the Port to `8080`
-1. Click OK, then click Save
+1. Avvia l'applicazione Impostazioni della console
+1. Entra in `Impostazioni Internet` -> `Impostazioni di collegamento`
+1. Clicca sulla tua connessione wifi e naviga su `Modifica` -> `Pagina Successiva (la freccia a destra)` -> `Impostazioni proxy`
+1. Imposta "Impostazioni proxy" su "Sì", quindi clicca su `Impostazioni avanzate`
+1. Imposta il Server proxy su `192.9.234.11`, e la Porta su `8080`
+1. Fai clic su OK, quindi su Salva
 1. Quando richiesto, clicca su "Test" per eseguire il test di connessione
   + Il test dovrebbe andare a buon fine
 1. Clicca "OK" per continuare
-1. Press "Back" twice, then "Close" to go back to the HOME Menu
+1. Premi "Indietro" due volte, poi "Chiudi" per tornare al menu HOME
 
-#### Section III - Launching SafeB9SInstaller
+#### Sezione III - Avvio di SafeB9SInstaller
 
-In this section, you will visit the browser exploit webpage, which will use universal-otherapp to launch the boot9strap (custom firmware) installer.
+In questa sezione visiterai la pagina web dell'exploit del browser, che userà universal-otherapp per avviare il programma di installazione di boot9strap (custom firmware).
 
-1. On the HOME Menu, press the Left and Right shoulder buttons together to open the camera
-    + If you are unable to open the camera, open the Internet Browser and manually type the URL instead (`https://zoogie.github.io/web/nbhax/`)
-1. Tap the QR code button and scan [this QR code](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax&qzone=1&margin=0&size=400x400&ecc=L)
+1. Nel menu HOME, premi i pulsanti dorsali L e R per avviare la fotocamera
+    + Se non riesci ad avviare la fotocamera, avvia il Browser Internet e raggiungi manualmente l'URL (`https://zoogie.github.io/web/nbhax/`)
+1. Tocca il pulsante Codice QR e scansiona [questo codice QR](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax&qzone=1&margin=0&size=400x400&ecc=L)
   + Se ottieni un errore, [segui questa guida per risolvere il problema](troubleshooting#installing-boot9strap-ssloth-browser)
 1. Se l'exploit è andato a buon fine, si avvierà SafeB9SInstaller
 
@@ -83,15 +83,15 @@ A questo punto, la console avvierà sempre Luma3DS.
   + Luma3DS non è diverso dal normale menu HOME. Se la console avvia il menu HOME, vuol dire che sta eseguendo il custom firmware.
   + Nella pagina successiva installerai applicazioni homebrew utili per completare la tua installazione.
 
-#### Section V - Restoring default proxy
+#### Sezione V - Ripristino proxy di default
 
-In this section, you will restore the Internet settings back to normal.
+In questa sezione ripristinerai le impostazioni di Internet alla normalità.
 
-1. Launch the System Settings application
-1. Navigate to `Internet Settings` -> `Connection Settings`
-1. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
-1. Set "Proxy Settings" to "No"
-1. Click OK, then click Save
+1. Avvia l'applicazione Impostazioni della console
+1. Entra in `Impostazioni Internet` -> `Impostazioni di collegamento`
+1. Clicca sulla tua connessione wifi e naviga su `Modifica` -> `Pagina Successiva (la freccia a destra)` -> `Impostazioni proxy`
+1. Imposta "Impostazioni proxy" su "No"
+1. Fai clic su OK, quindi su Salva
 1. Quando richiesto, clicca su "Test" per eseguire il test di connessione
 	+ Il test dovrebbe andare a buon fine
 1. Spegni il tuo 3DS
