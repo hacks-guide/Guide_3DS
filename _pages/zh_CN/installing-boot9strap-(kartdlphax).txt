@@ -4,14 +4,21 @@ title: "安装 boot9strap（通过 kartdlphax）"
 
 {% include toc title="目录内容" %}
 
-<details>
+{% capture technical_info %}
 <summary><em>技术细节（选看）</em></summary>
-<p>为了破解系统的 SAFE_MODE 固件，我们需要注入一个已被破解的 WiFi 配置文件到主机中。</p>
-<p>为了做到这一点，我们将用一台已安装了自制固件的 3DS 安装一个插件，然后利用马里奥赛车 7 这个游戏中的下载通信功能进行一些操作。</p>
-<p>这个插件将会发送带有漏洞的代码到未破解的主机中，然后它将会向未破解的主机中注入带有漏洞的配置文件到 WiFi 连接点列表。</p>
-<p>一旦 WiFi 配置文件被注入，我们将会使用到 SAFE_MODE 来继续此教程。SAVE_MODE 是一个所有的 3DS 主机都存在的修复功能，之后它将用于激活被破解的 WiFi 配置文件。</p>
-<p>如果想知道更多的技术细节，请参阅以下链接：<a href="https://github.com/PabloMK7/kartdlphax">kartdlphax</a>、<a href="https://github.com/zoogie/unSAFE_MODE/">unSAFE_MODE</a>。</p>
-</details>
+
+In order to exploit the SAFE_MODE firmware of our system, we need to inject an exploited WiFi profile.
+
+To accomplish this, we can use the Download Play functionality of the game Mario Kart 7, using a 3DS with custom firmware already installed along with a custom game plugin.
+
+This custom plugin will send a hacked payload to an unhacked console, which then exploits the system in order to inject the exploited WiFi profile into your connections list.
+
+Once the WiFi profile has been injected, we will use SAFE_MODE, which is a recovery feature present on all 3DS consoles, to activate the exploited WiFi profile.
+
+For a more technical explanation, see the following links for information on the kartdlphax and unSAFE_MODE exploits: [kartdlphax](https://github.com/PabloMK7/kartdlphax), [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/).
+
+{% endcapture %}
+<details>{{ technical_info | markdownify }}</details>
 {: .notice--info}
 
 ### 兼容性注意
