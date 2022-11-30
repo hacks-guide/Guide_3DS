@@ -4,11 +4,15 @@ title: "安装 boot9strap（通过 Fredtool）"
 
 {% include toc title="目录内容" %}
 
-<details>
+{% capture technical_info %}
 <summary><em>技术细节（选看）</em></summary>
-<p>本章节 Seedminer 将使用你的 <code>movable.sed</code> 文件来解密所有的 DSiWare 程序，以便在主机内置的 DS 网络设置中注入修改后的 DSiWare 程序。</p>
-<p>本教程是使用 “FIRM partitions known-plaintext” 漏洞来进行破解的，欲知相关资料请查阅<a href="https://www.3dbrew.org/wiki/3DS_System_Flaws">这里</a>。</p>
-</details>
+
+This method of using Seedminer for further exploitation uses your `movable.sed` file to decrypt any DSiWare title for the purposes of injecting an exploitable DSiWare title into the DS Internet Settings application.
+
+This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+
+{% endcapture %}
+<details>{{ technical_info | markdownify }}</details>
 {: .notice--info}
 
 ### 你需要准备点啥？
@@ -71,7 +75,7 @@ title: "安装 boot9strap（通过 Fredtool）"
   + 根目录指的是你点进 SD 卡看到的目录，你可以在这个目录下看到 Nintendo 3DS 文件夹，但请不要点进去
 1. 复制 `boot.nds` （B9STool）到你的 SD 卡根目录
 1. 从 Frogminer_save `.zip` 压缩包中复制 `private` 文件夹到内存卡的根目录
-1. 将 SD 卡重新插入你的主机
+1. 将SD卡重新插入你的主机
 1. 启动你的主机
 
     ![]({{ "/images/screenshots/fredtool/fredtool-root-layout.png" | absolute_url }})
