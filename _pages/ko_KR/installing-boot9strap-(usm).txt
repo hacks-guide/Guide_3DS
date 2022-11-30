@@ -4,14 +4,21 @@ title: "boot9strap 설치 (USM)"
 
 {% include toc title="목차" %}
 
-<details>
+{% capture technical_info %}
 <summary><em>기술적 상세 정보 (선택 사항)</em></summary>
-<p>SAFE_MODE 펌웨어를 해킹하기 위해, 익스플로잇이 되어있는 Wi-Fi 프로필을 설치해야 합니다.</p>
-<p>이미 존재하는 BannerBomb3 익스플로잇을 사용해 이걸 할 수 있습니다.</p>
-<p>이것은 시스템의 암호화 키 (movable.sed)를 이용해 DSiWare 백업을 만들고, 이걸 사용해 인터넷 설정에 익스플로잇을 설치할 수 있도록 만듭니다.</p>
-<p>그 후, 시스템 복구 모드, SAFE_MODE를 사용해 인터넷 설정을 활용화 시킵니다.</p>
-<p>BannerBomb3와 unSAFE_MODE의 더 자세한 설명은 다음 (영어) 페이지를 참고해 주세요: <a href="https://github.com/zoogie/Bannerbomb3">BannerBomb3</a>, <a href="https://github.com/zoogie/unSAFE_MODE/">unSAFE_MODE</a>.</p>
-</details>
+
+In order to exploit the SAFE_MODE firmware of our system, we need to inject an exploited WiFi profile.
+
+We can do this using an existing exploit, BannerBomb3.
+
+To accomplish this, we use your system's encryption key (movable.sed) to build a DSiWare backup that exploits the system in order to inject the exploited WiFi profile into your connections list.
+
+Once the WiFi profile has been injected, we will use SAFE_MODE, which is a recovery feature present on all 3DS consoles, to activate the exploited WiFi profile.
+
+For a more technical explanation, see the following links for information on the BannerBomb3 and unSAFE_MODE exploits: [BannerBomb3](https://github.com/zoogie/Bannerbomb3), [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/).
+
+{% endcapture %}
+<details>{{ technical_info | markdownify }}</details>
 {: .notice--info}
 
 ### 호환성 안내
