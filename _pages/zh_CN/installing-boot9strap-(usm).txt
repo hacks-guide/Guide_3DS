@@ -4,14 +4,21 @@ title: "安装 boot9strap（通过 USM）"
 
 {% include toc title="目录内容" %}
 
-<details>
+{% capture technical_info %}
 <summary><em>技术细节（选看）</em></summary>
-<p>为了破解系统的 SAFE_MODE 固件，我们需要注入一个已被破解的 WiFi 配置文件到主机中。</p>
-<p>我们可以利用 BannerBomb3 这个现有的漏洞进行以下操作。</p>
-<p>为了做到这一点，我们使用了你的主机系统中的加密密钥（movable.sed）来构建一个 DSiWare 备份，以便于将被破解的 WiFi 配置文件注入到 WiFi 接入点列表。</p>
-<p>一旦 WiFi 配置文件被注入，我们将会使用到 SAFE_MODE 来继续此教程。SAVE_MODE 是一个所有的 3DS 主机都存在的修复功能，之后它将用于激活被破解的 WiFi 配置文件。</p>
-<p>如果想知道更多 BannerBomb3 和 unSAFE_MODE 的技术细节，请参阅以下链接：<a href="https://github.com/zoogie/Bannerbomb3">BannerBomb3</a>、<a href="https://github.com/zoogie/unSAFE_MODE/">unSAFE_MODE</a>。</p>
-</details>
+
+In order to exploit the SAFE_MODE firmware of our system, we need to inject an exploited WiFi profile.
+
+We can do this using an existing exploit, BannerBomb3.
+
+To accomplish this, we use your system's encryption key (movable.sed) to build a DSiWare backup that exploits the system in order to inject the exploited WiFi profile into your connections list.
+
+Once the WiFi profile has been injected, we will use SAFE_MODE, which is a recovery feature present on all 3DS consoles, to activate the exploited WiFi profile.
+
+For a more technical explanation, see the following links for information on the BannerBomb3 and unSAFE_MODE exploits: [BannerBomb3](https://github.com/zoogie/Bannerbomb3), [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/).
+
+{% endcapture %}
+<details>{{ technical_info | markdownify }}</details>
 {: .notice--info}
 
 ### 兼容性注意
