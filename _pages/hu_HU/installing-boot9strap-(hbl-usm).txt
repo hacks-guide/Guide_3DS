@@ -4,13 +4,19 @@ title: "Boot9strap telepítése (HBL-USM)"
 
 {% include toc title="Tartalomjegyzék" %}
 
-<details>
+{% capture technical_info %}
 <summary><em>Technikai részletek (opcionális)</em></summary>
-<p>Ahhoz, hogy a SAFE_MODE-ot exploitálhassuk, be kell injektálnunk egy exploitált WiFi profilt.</p>
-<p>Mivel már van Homebrew hozzáférésünk, használhatjuk a slotTool-t erre a célra.</p>
-<p>Amint a WiFi profil injektálásra került, a SAFE_MODE-ot fogjuk használni, ami egy helyreállítás szolgáltatás, ami elérhető minden 3DS konzolon, hogy aktiválja az exploitolt WiFi profilt.</p>
-<p>További technikai információkért az unSAFE_MODE exploit-ról látogass el <a href="https://github.com/zoogie/unSAFE_MODE/">ide</a>.</p>
-</details>
+
+In order to exploit the SAFE_MODE firmware of our system, we need to inject an exploited WiFi profile.
+
+As we already have Homebrew access, we can use slotTool to do this.
+
+Once the WiFi profile has been injected, we will use SAFE_MODE, which is a recovery feature present on all 3DS consoles, to activate the exploited WiFi profile.
+
+For a more technical explanation, see [here](https://github.com/zoogie/unSAFE_MODE/) for information about the unSAFE_MODE exploit.
+
+{% endcapture %}
+<details>{{ technical_info | markdownify }}</details>
 {: .notice--info}
 
 ### Kompatibilitási megjegyzések
