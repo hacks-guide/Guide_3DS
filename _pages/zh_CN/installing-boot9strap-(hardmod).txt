@@ -4,12 +4,17 @@ title: "安装 boot9strap（通过硬改）"
 
 {% include toc title="目录内容" %}
 
-<details>
+{% capture technical_info %}
 <summary><em>技术细节（选看）</em></summary>
-<p><a href="https://gbatemp.net/threads/414498/">这里</a>有一个进行硬改的绝佳教程。</p>
-<p>本教程是使用 “FIRM partitions known-plaintext” 漏洞来进行破解的，欲知相关资料请查阅<a href="https://www.3dbrew.org/wiki/3DS_System_Flaws">这里</a>。</p>
-<p>利用硬改，我们可以直接导出主机的 NAND 镜像，然后直接将自制固件打进 NAND 镜像中，并重新导入回主机。</p>
-</details>
+
+An excellent guide to getting a hardmod can be found [here](https://gbatemp.net/threads/414498/).
+
+This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+
+Using a hardmod, we can dump the NAND image, install custom firmware to the NAND image, then re-install the hacked NAND image to the console.
+
+{% endcapture %}
+<details>{{ technical_info | markdownify }}</details>
 {: .notice--info}
 
 ### 兼容性注意
