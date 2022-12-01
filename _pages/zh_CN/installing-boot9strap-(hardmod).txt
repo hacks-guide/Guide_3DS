@@ -7,11 +7,11 @@ title: "安装 boot9strap（通过硬改）"
 {% capture technical_info %}
 <summary><em>技术细节（选看）</em></summary>
 
-An excellent guide to getting a hardmod can be found [here](https://gbatemp.net/threads/414498/).
+[这里](https://gbatemp.net/threads/414498/)有一个进行硬件修改的绝佳教程。
 
-This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+本教程是使用 “FIRM partitions known-plaintext” 漏洞来进行破解的， 欲知相关资料请查阅[这里](https://www.3dbrew.org/wiki/3DS_System_Flaws)。
 
-Using a hardmod, we can dump the NAND image, install custom firmware to the NAND image, then re-install the hacked NAND image to the console.
+利用硬改，我们可以直接导出主机的 NAND 镜像，然后直接将自制固件打进 NAND 镜像中，并重新导入回主机。
 
 {% endcapture %}
 <details>{{ technical_info | markdownify }}</details>
@@ -99,8 +99,8 @@ Using a hardmod, we can dump the NAND image, install custom firmware to the NAND
 1. 移除你的硬改
 1. 启动你的主机
 1. 你的主机应该会在重新启动后进入 Luma3DS 配置菜单
-  + Luma3DS configuration menu are settings for the Luma3DS custom firmware. Many of these settings may be useful for customization or debugging
-  + For the purpose of this guide, these settings will be left on default settings
+  + Luma3DS 配置菜单用于设置 Luma3DS 自制固件的可选功能 其中有许多功能可用于个性化或调试
+  + 由于配合本手册的用途，我们将直接按照默认配置保存
   + 如果你的主机在你尝试开机后自动关机了，请确认你已经从 Luma3DS `.zip` 中复制了 `boot.firm` 文件到你的 SD 卡根目录中
 1. 按下 “Start” 键保存设置并重启
   + 如果出现错误，继续至下一个页面即可解决
