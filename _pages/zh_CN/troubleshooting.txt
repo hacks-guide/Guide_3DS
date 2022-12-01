@@ -70,7 +70,7 @@ title: "问题排查"
 
 你可能把 `00000001.sav` 和（或者） `otherapp.bin` 文件的位置搞错了。 确保 `00000001.sav` 放在了 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` 中，`otherapp.bin` 放在了 SD 卡的根目录中。
 
-如果你确定一切都在正确的位置上了，那就尝试重新用 [PicHaxx 存档工具](https://3dstools.nhnarwhal.com/#/pichaxx)创建一份存档，然后把要求的文件重新放到 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` 中。 确保它是用你主机的 `movable.sed` 文件创建的，且文件已经准确命名为了 `00000001.sav`。 Re-download the latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest), place the `.bin` file relevant to your console from the `otherapps_with_CfgS` folder to the root of your SD card, and rename it to `otherapp.bin`. 如果你下到的东西看不到 `.bin` 后缀，请不要重命名它。
+如果你确定一切都在正确的位置上了，那就尝试重新用 [PicHaxx 存档工具](https://3dstools.nhnarwhal.com/#/pichaxx)创建一份存档，然后把要求的文件重新放到 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` 中。 确保它是用你主机的 `movable.sed` 文件创建的，且文件已经准确命名为了 `00000001.sav`。 重新下载最新版本的 [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest)，从文件中解压 `otherapps_with_CfgS` 文件夹，然后将里面对应你主机型号和区域的 `.bin`  文件复制到 SD 卡的根目录，并改名为 `otherapp.bin`。  如果你下到的东西看不到 `.bin` 后缀，请不要重命名它。
 
 ### 打开 Picross 时显示了 “An exception occurred” 或 Errdisp 报错
 
@@ -122,11 +122,11 @@ title: "问题排查"
 
 ### “An error has occurred. Hold down the POWER button to turn off the power..."（黑屏，下屏显示白底的文字）
 
-The file `arm11code.bin` is missing or misplaced. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. 如果你下到的东西看不到 `.bin` 后缀，请不要重命名它。
+`arm11code.bin` 文件丢失或位置错误。 下载最新版本的 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) 并将其放在你 SD 卡的根目录中，然后重命名为 `arm11code.bin`。 如果你下到的东西看不到 `.bin` 后缀，请不要重命名它。
 
 ### “An error has occurred, forcing the software to close...”（程序被强制关闭，下屏跳出白色的消息框）
 
-There is an issue with your `arm11code.bin` file. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. 如果你下到的东西看不到 `.bin` 后缀，请不要重命名它。
+这说明你放的 `arm11code.bin` 文件有问题。 下载最新版本的 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) 并将其放在你 SD 卡的根目录中，然后重命名为 `arm11code.bin`。 如果你下到的东西看不到 `.bin` 后缀，请不要重命名它。
 
 ### 打开浏览器破解二维码或链接后崩溃了
 
@@ -140,9 +140,9 @@ There is an issue with your `arm11code.bin` file. Download the latest release of
 
 你可能没有正确配置 SSLoth 代理服务器。 尝试重做页面上的 SSLoth 部分内容。
 
-### Error 032-0420 when trying to open the browser
+### 打开浏览器后报出了 032-0420 错误
 
-Follow these steps in order:
+按照以下步骤操作：
 
 1. 打开系统设置（本体設定 / System Settings）
 1. 进入到 `互联网设置（インターネット設定 / Internet Settings）` -> `连接设置（インターネット接続設定 / Connection Settings）`
@@ -153,10 +153,10 @@ Follow these steps in order:
   + 测试应该会成功
 1. 点击 “OK” 继续
 1. 点两次 “返回”，然后点“关闭”来返回主菜单。
-1. Open the Internet Browser once
-1. If prompted about a system update, press OK
-  + This won't actually update the system
-1. Start again from [Section II](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth)
+1. 打开浏览器
+1. 如果它提示需要系统更新，点击 OK
+  + 这实际不会将系统更新
+1. 重新从[第二步](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth)开始
 
 ### Failed to open SafeB9SInstaller.bin
 
