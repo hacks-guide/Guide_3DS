@@ -7,15 +7,15 @@ title: "安装 boot9strap（通过 USM）"
 {% capture technical_info %}
 <summary><em>技术细节（选看）</em></summary>
 
-In order to exploit the SAFE_MODE firmware of our system, we need to inject an exploited WiFi profile.
+为了破解系统的 SAFE_MODE 固件，我们需要注入一个写入了漏洞的 WiFi 配置文件到主机中。
 
-We can do this using an existing exploit, BannerBomb3.
+我们可以利用 BannerBomb3 这个现有的漏洞进行以下操作。
 
-To accomplish this, we use your system's encryption key (movable.sed) to build a DSiWare backup that exploits the system in order to inject the exploited WiFi profile into your connections list.
+为了做到这一点，我们使用了你的主机系统中的加密密钥（movable.sed）来构建一个 DSiWare 备份，以便于将被破解的 WiFi 配置文件注入到 WiFi 接入点列表。
 
-Once the WiFi profile has been injected, we will use SAFE_MODE, which is a recovery feature present on all 3DS consoles, to activate the exploited WiFi profile.
+一旦 WiFi 配置文件被注入，我们将会使用到 SAFE_MODE 来继续此教程。SAVE_MODE 是一个所有的 3DS 主机都存在的修复功能，之后它将用于激活被破解的 WiFi 配置文件。
 
-For a more technical explanation, see the following links for information on the BannerBomb3 and unSAFE_MODE exploits: [BannerBomb3](https://github.com/zoogie/Bannerbomb3), [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/).
+如果想知道更多 BannerBomb3 和 unSAFE_MODE 的技术细节，请参阅以下链接：[BannerBomb3](https://github.com/zoogie/Bannerbomb3)、[unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/)。
 
 {% endcapture %}
 <details>{{ technical_info | markdownify }}</details>
@@ -91,8 +91,8 @@ For a more technical explanation, see the following links for information on the
   + 如果上屏白屏，则请强制关机然后重做第三步
 1. 安装完成后，按下 “A” 键重启主机
 1. 你的主机将会在重启后进入至 Luma3DS 配置菜单中
-  + Luma3DS configuration menu are settings for the Luma3DS custom firmware. Many of these settings may be useful for customization or debugging
-  + For the purpose of this guide, these settings will be left on default settings
+  + Luma3DS 配置菜单用于设置 Luma3DS 自制固件的可选功能 其中有许多功能可用于个性化或调试
+  + 由于配合本手册的用途，我们将直接按照默认配置保存
   + 如果你的主机在你尝试开机后自动关机了，请确认你已经从 Luma3DS `.zip` 中复制了 `boot.firm` 文件到你的 SD 卡根目录中
 1. 按下 “Start” 键保存设置并重启
 
