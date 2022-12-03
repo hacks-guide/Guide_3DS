@@ -8,18 +8,34 @@ title: "卸載自製韌體"
 
 本章節將從您的主機中完全移除自製韌體。為了將主機完全地回復至原廠設定，軟體如 boot9strap、Luma3DS 也將會被移除。
 
-請別認為這能解決您在安裝自製韌體時所遇到的任何問題。 更好的解決方法應該是前往我們[Discord 上的 Nintendo Homebrew 伺服器](https://discord.gg/MWxPgEp)請求協助。
-{: .notice--danger}
+Any unsigned (illegitimate) games will be rendered unusable and will be removed during this process. Use a [save manager](https://github.com/FlagBrew/Checkpoint/releases/latest) to back up any saves that you care about.
 
-Any unsigned (illegitimate) games will be rendered unusable and will be removed during this process. 建議您先使用[存檔管理器](https://github.com/FlagBrew/Checkpoint/releases/latest)將您較在乎的遊戲存檔備份起來。
+{% capture notice-6 %}
+If you're removing CFW because:
 
-If you have modified critical system software (such as installing a custom HOME Menu CIA, unbanning your console, region changing, etc.), uninstalling CFW WILL BRICK your device! 請確保您遵守下列所有的指示。
-{: .notice--danger}
+* You want to re-install it
+* One of your games is broken
+* One of your system applications is broken
+* Your console is unable to boot to HOME Menu
+
+<u><strong>STOP!!!</strong></u> Uninstalling custom firmware is an unnecessary risk that will at best waste your time and at worst <u><strong>BRICK</strong></u> your console. A better idea would be to ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+{% endcapture %}
+<div class="notice--danger">{{ notice-6 | markdownify }}</div>
+
+{% capture notice-6 %}
+If you have done ANY of the following:
+* [Changed the region](region-changing) of the console
+* Installed a custom keyboard
+* Installed a custom HOME Menu (*not* a custom theme)
+* Manually changed the encryption key (`movable.sed`) of the console
+* Unbanned the console
+
+then uninstalling CFW <u><strong>WILL BRICK YOUR CONSOLE</strong></u>. If this applies to you, [restore a clean NAND backup](godmode9-usage#restoring-a-nand-backup) before continuing.
+{% endcapture %}
+<div class="notice--danger">{{ notice-6 | markdownify }}</div>
 
 以下指示僅適用於搭載 Luma3DS 8.0 或較新版本的主機。 如果您所安裝的 Luma 版本較舊，您必須先更新您的 Luma3DS 再繼續。 您可遵循[這個教學](checking-for-cfw)進行更新。
 {: .notice--warning}
-
-請注意，如果您在 SD 卡中的 `/luma/payloads/` 資料夾中放有除了 `GodMode9.firm` 的 payload 檔案，在開機時按住『Start』鍵將會顯示一個『加載選單』，從那裏您得透過方向鍵及按鈕『A』選擇『GodMode9』。 
 
 ### 必備項目
 
@@ -115,7 +131,7 @@ If you have modified critical system software (such as installing a custom HOME 
 1. 移動至檔案管理 (Data Management) > DSiWare
 1. 在此列表中，刪除您在使用自製韌體時安裝的所有非來自於任天堂的自製程式
   + 這也包括 TWiLightMenu++ 這類的軟體，以及其他您透過 eShop 以外安裝的軟體或遊戲
-  + 如果在按照上述步驟試圖移除這些軟體 (3DS及DSiWare的自製軟體) 時失敗了，卸載自製韌體後，可能會導致無法正常存取『資料管理 (Data Management)』選單
+  + Failure to remove all CFW software from both the 3DS and DSiWare sections before uninstalling CFW may prevent or disable access to the Data Management menu after uninstalling CFW, which will make it difficult to re-install CFW in the future
 1. 離開系統設定
 1. 啟動『下載通信(Download Play)』程式 (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
 1. 等到你看到兩個按鍵
@@ -146,6 +162,7 @@ If you have modified critical system software (such as installing a custom HOME 
 {: .notice--warning}
 
 1. 按下並按住「Start」鍵，按住按鈕的同時，將您的主機開機。 這將會啟動 GodMode9
+  + If you instead see the Luma3DS chainloader, use the D-Pad and the (A) button to select GodMode9
 1. 按『Home』鍵以叫出主選單
 1. 選擇『Scripts...』
 1. 選擇『GM9Megascript』
