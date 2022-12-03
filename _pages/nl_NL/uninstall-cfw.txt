@@ -8,18 +8,34 @@ title: "CFW verwijderen"
 
 Dit zal CFW volledig verwijderen van je apparaat, inclusief boot9strap en Luma3DS, om het apparaat terug te zetten naar stock.
 
-Dit is nooit de oplossing om problemen op te lossen die je mogelijks tegenkomt met je CFW-installatie. Een beter idee zou zijn om hulp te vragen op de [Nintendo Homebrew Discord](https://discord.gg/MWxPgEp).
-{: .notice--danger}
+Alle ongetekende (onwettige) spellen zullen onbruikbaar worden en worden verwijderd tijdens dit proces. Use a [save manager](https://github.com/FlagBrew/Checkpoint/releases/latest) to back up any saves that you care about.
 
-Alle ongetekende (onwettige) spellen zullen onbruikbaar worden en worden verwijderd tijdens dit proces. Gebruik een [save manager](https://github.com/FlagBrew/Checkpoint/releases/latest) om de saves van deze niet-gesigneerde (illegale) games te back-uppen.
+{% capture notice-6 %}
+If you're removing CFW because:
 
-Als je kritische systeem software hebt gewijzigd (zoals het installen van een custom HOME Menu CIA, het unbannen van je console, het veranderen van de regio, enz.), zal het verwijderen van CFW JE APPARAAT BRICKEN! Zorg ervoor da je alle secties van deze pagina volgt.
-{: .notice--danger}
+* You want to re-install it
+* One of your games is broken
+* One of your system applications is broken
+* Your console is unable to boot to HOME Menu
+
+<u><strong>STOP!!!</strong></u> Uninstalling custom firmware is an unnecessary risk that will at best waste your time and at worst <u><strong>BRICK</strong></u> your console. A better idea would be to ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+{% endcapture %}
+<div class="notice--danger">{{ notice-6 | markdownify }}</div>
+
+{% capture notice-6 %}
+If you have done ANY of the following:
+* [Changed the region](region-changing) of the console
+* Installed a custom keyboard
+* Installed a custom HOME Menu (*not* a custom theme)
+* Manually changed the encryption key (`movable.sed`) of the console
+* Unbanned the console
+
+then uninstalling CFW <u><strong>WILL BRICK YOUR CONSOLE</strong></u>. If this applies to you, [restore a clean NAND backup](godmode9-usage#restoring-a-nand-backup) before continuing.
+{% endcapture %}
+<div class="notice--danger">{{ notice-6 | markdownify }}</div>
 
 Deze instructies werken alleen op apparaten met een Luma3DS versie van 8.0 of hoger. Als je een oudere versie van Luma heeft, moet je de setup upgraden voordat je deze instructies kunt volgen. Volg [deze pagina](checking-for-cfw) om je upgrade instructies te vinden.
 {: .notice--warning}
-
-Merk op dat als je andere payload bestanden dan `GodMode9.firm` in de `/luma/payloads/` map op je SD-kaart hebt, je bij het ingedrukt houden van (Start) bij het opstarten een "chainloader menu" opent die je kan navigeren met de D-Pad en met de (A) knop "GodMode9" kaHin selecteren. Dit geld voor al deze instructies. 
 
 ### Wat je nodig hebt
 
@@ -115,7 +131,7 @@ Dit deel zal onwettige inhoud verwijderen, zoals homebrew en gedumpte cartridges
 1. Ga naar Geheugenbeheer > DSiWare
 1. Verwijder in deze lijst van software elke niet-Nintendo content die je hebt geïnstalleerd tijdens het gebruik van CFW
   + Dit omvat software zoals TWiLightMenu++, samen met spellen en titels die je *niet* hebt geïnstalleerd vanuit de eShop
-  + Het niet verwijderen van alle CFW software van de 3DS en DSiWare tabladen voor het verwijderen van CFW kan ervoor zorgen dat je later niet meer in het Geheugenbeheer menu kan komen na het verwijderen van CFW
+  + Failure to remove all CFW software from both the 3DS and DSiWare sections before uninstalling CFW may prevent or disable access to the Data Management menu after uninstalling CFW, which will make it difficult to re-install CFW in the future
 1. Sluit de System Settings app
 1. Start de Download Play applicatie (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
 1. Wacht tot je de twee knoppen ziet
@@ -146,6 +162,7 @@ Dit is je laatste kans om te controleren of alle bovenstaande veiligheidsstappen
 {: .notice--warning}
 
 1. Terwijl je (Start) ingedrukt houdt, zet je jouw apparaat aan. Dit zal GodMode9 starten
+  + If you instead see the Luma3DS chainloader, use the D-Pad and the (A) button to select GodMode9
 1. Druk op de (Home) knop om het actiemenu te openen
 1. Selecteer "Scripts..."
 1. Selecteer "GM9Megascript"
