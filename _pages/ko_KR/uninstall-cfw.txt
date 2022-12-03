@@ -8,18 +8,34 @@ title: "CFW 제거하기"
 
 이것은 기기를 순정 상태 로 되돌리기위하여 boot9strap 이나 Luma3DS을 포함한 CFW을 완벽히 제거합니다.
 
-이것은 커스텀 펌웨어 설치도중 발생한 어떤 에러도 해결하지 않습니다. 지원이 필요하면 Discord에서 [Nintendo Homebrew](https://discord.gg/MWxPgEp)에 (영어로) 지원을 요청하여주세요.
-{: .notice--danger}
+모든 서명되지 않은 (비정상적인) 게임은 사용하지 못하며 이 과정에서 삭제됩니다. Use a [save manager](https://github.com/FlagBrew/Checkpoint/releases/latest) to back up any saves that you care about.
 
-모든 서명되지 않은 (비정상적인) 게임은 사용하지 못하며 이 과정에서 삭제됩니다. 만약 서명되지않은(불법) 게임중 신경 쓰는 것들이 있다면, 이 [저장 데이터 매니저](https://github.com/FlagBrew/Checkpoint/releases/latest)를 이용하여 저장 데이터를 백업 시켜주세요.
+{% capture notice-6 %}
+If you're removing CFW because:
 
-만약 중요한 시스템 소프트웨어를 편집하셨다면 (커스텀 HOME 메뉴 CIA 설치, 콘솔 언밴, 지역 변경 등), CFW를 제거하면 기기가 **벽돌이 됩니다**! 본 페이지의 모든 섹션을 제대로 따라 주세요.
-{: .notice--danger}
+* You want to re-install it
+* One of your games is broken
+* One of your system applications is broken
+* Your console is unable to boot to HOME Menu
+
+<u><strong>STOP!!!</strong></u> Uninstalling custom firmware is an unnecessary risk that will at best waste your time and at worst <u><strong>BRICK</strong></u> your console. A better idea would be to ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+{% endcapture %}
+<div class="notice--danger">{{ notice-6 | markdownify }}</div>
+
+{% capture notice-6 %}
+If you have done ANY of the following:
+* [Changed the region](region-changing) of the console
+* Installed a custom keyboard
+* Installed a custom HOME Menu (*not* a custom theme)
+* Manually changed the encryption key (`movable.sed`) of the console
+* Unbanned the console
+
+then uninstalling CFW <u><strong>WILL BRICK YOUR CONSOLE</strong></u>. If this applies to you, [restore a clean NAND backup](godmode9-usage#restoring-a-nand-backup) before continuing.
+{% endcapture %}
+<div class="notice--danger">{{ notice-6 | markdownify }}</div>
 
 이 절차들은 버전 8.0 이상의 Luma3DS를 사용하고 있는 기기에서만 작동합니다. 만약 Luma의 구 버전을 사용하고 계신다면, Luma3DS를 업그레이드하시고 나서 이 절차를 따라야 합니다. 업그레이드를 하려면 [이 페이지](checking-for-cfw)를 따라 주세요.
 {: .notice--warning}
-
-만약 여러분의 SD 카드의 `/luma/payloads/` 폴더에 `GodMode9.firm` 외의 페이로드 파일이 있다면, (Start)를 누르면서 부팅할 시에 화면에 표시되는 "chainloader menu" 에서 십자 패드와 (A) 버튼으로 조작하여 "GodMode9"을 선택하여야 합니다. 
 
 ### 준비물
 
@@ -115,7 +131,7 @@ title: "CFW 제거하기"
 1. `데이터 관리` -> `DSiWare` 메뉴를 열어 주세요
 1. 소프트웨어 목록에서, 커펌 사용 중 설치한 닌텐도 제품이 아닌 콘텐츠를 모두 지워주세요
   + 이것은 TWiLightMenu++와 같은 소프트웨어와, eShop을 통해 설치하지 *않은* 게임 혹은 타이틀을 모두 포함합니다
-  + 커펌 이후 설치한 소프트웨어를 3DS와 DSiWare 섹션에서 모두 지우지 못하면, 커펌 삭제 이후 데이터 관리 메뉴에 접근하지 못하게 될 수 있습니다
+  + Failure to remove all CFW software from both the 3DS and DSiWare sections before uninstalling CFW may prevent or disable access to the Data Management menu after uninstalling CFW, which will make it difficult to re-install CFW in the future
 1. 본체 설정 에플리케이션을 종료해 주세요
 1. 다운로드 플레이 앱을 실행해 주세요 (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
 1. 두 가지의 버튼이 화면에 뜰 때까지 기다려 주세요
@@ -146,6 +162,7 @@ title: "CFW 제거하기"
 {: .notice--warning}
 
 1. (Start)를 길게 누르고, 이 상태에서 전원을 켜 주세요. GodMode9이 실행 될 겁니다
+  + If you instead see the Luma3DS chainloader, use the D-Pad and the (A) button to select GodMode9
 1. (Home)을 눌러 작업 메뉴를 열어 주세요
 1. "Scripts..."를 선택해 주세요
 1. "GM9Megascript"를 선택해 주세요
