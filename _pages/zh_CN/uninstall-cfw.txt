@@ -8,18 +8,34 @@ title: "卸载自制固件"
 
 本章节将会教你如何完全把自制固件从你的主机完全移除，为了完全恢复原厂系统，所有的自制固件将被卸载，包括 B9S 和 Luma3DS。
 
-这永远不是可以解决你在破解主机时遇到任何问题的解决方法。 更好的点子是在[ Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp)上使用英文寻求帮助。（请注意，如果你身处中国大陆，则你可能需要通过科学上网访问 Discord），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497。
-{: .notice--danger}
+任何未签名（盗版）游戏都将被标记为不可用，并将在此过程中被删除。 Use a [save manager](https://github.com/FlagBrew/Checkpoint/releases/latest) to back up any saves that you care about.
 
-任何未签名（盗版）游戏都将被标记为不可用，并将在此过程中被删除。 你可以使用一个[存档管理器](https://github.com/FlagBrew/Checkpoint/releases/latest)来备份你想要备份的未签名（盗版）游戏存档。
+{% capture notice-6 %}
+If you're removing CFW because:
 
-如果你之前修改过系统的重要文件（比如安装自制主菜单 CIA[如汉化系统]、解 ban 或区域变更等），卸载自制固件可能会导致你的主机变砖！ 你应确保遵守此页面的所有部分。
-{: .notice--danger}
+* You want to re-install it
+* One of your games is broken
+* One of your system applications is broken
+* Your console is unable to boot to HOME Menu
+
+<u><strong>STOP!!!</strong></u> Uninstalling custom firmware is an unnecessary risk that will at best waste your time and at worst <u><strong>BRICK</strong></u> your console. A better idea would be to ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+{% endcapture %}
+<div class="notice--danger">{{ notice-6 | markdownify }}</div>
+
+{% capture notice-6 %}
+If you have done ANY of the following:
+* [Changed the region](region-changing) of the console
+* Installed a custom keyboard
+* Installed a custom HOME Menu (*not* a custom theme)
+* Manually changed the encryption key (`movable.sed`) of the console
+* Unbanned the console
+
+then uninstalling CFW <u><strong>WILL BRICK YOUR CONSOLE</strong></u>. If this applies to you, [restore a clean NAND backup](godmode9-usage#restoring-a-nand-backup) before continuing.
+{% endcapture %}
+<div class="notice--danger">{{ notice-6 | markdownify }}</div>
 
 这些步骤仅适用于 Luma3DS 版本在 8.0 或以上的主机。 如果你的主机 Luma 版本比要求的旧，则你必须先升级版本再做这些操作。 请参考[这个页面](checking-for-cfw)来找到适合你主机的升级操作。
 {: .notice--warning}
-
-请注意，如果在SD卡 `/luma/payloads/` 文件夹下，有除了 `GodMode9.firm` 以外的 payload 文件，那么在按住 “Start” 键开机的时候，主机将会进入 “chainloader menu” 菜单。届时请使用方向键和 “A” 键来选择本教程所需的“GodMode9”。 
 
 ### 你需要准备点啥？
 
@@ -115,7 +131,7 @@ title: "卸载自制固件"
 1. 进入到“数据管理（Data Management）” > “DSiWare”
 1. 在此列表中，删除你在使用自制系统时安装的任何非来自任天堂的自制程序。
   + 这包括诸如 TWiLightMenu++ 之类的软件，和你**非**从 eShop 安装的任何游戏程序
-  + 如果无法卸载这些 3DS 和 DSiWare 软件，卸载自制固件可能会导致数据管理无法进入或数据损坏。
+  + Failure to remove all CFW software from both the 3DS and DSiWare sections before uninstalling CFW may prevent or disable access to the Data Management menu after uninstalling CFW, which will make it difficult to re-install CFW in the future
 1. 退出系统设置
 1. 启动“下载通信(Download Play)”程序 (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
 1. 等到你看到两个按钮
@@ -146,6 +162,7 @@ title: "卸载自制固件"
 {: .notice--warning}
 
 1. 按住 “START” 键，然后将主机开机。 这会启动 GodMode9
+  + If you instead see the Luma3DS chainloader, use the D-Pad and the (A) button to select GodMode9
 1. 按下 “Home” 键来打开功能菜单
 1. 选择 “Scripts...”
 1. 选择 “GM9Megascript”
