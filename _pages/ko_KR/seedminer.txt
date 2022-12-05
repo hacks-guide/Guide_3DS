@@ -7,11 +7,11 @@ title: "Seedminer"
 {% capture technical_info %}
 <summary><em>기술적 상세 정보 (선택 사항)</em></summary>
 
-boot9strap을 설치하려면 우선 각 기기의 고유 암호화 키를 알아내야 합니다. 그러기 위해서 이 가이드에서는 Seedminer을 사용해 그 암호화 키 (movable.sed) 를 계산해낼 것입니다.
+boot9strap을 설치하려면 우선 각 기기의 고유 암호화 키를 알아내야 합니다. 이를 위해, 이 가이드에서는 Seedminer을 사용해 그 암호화 키 (movable.sed)를 계산해 낼 것입니다.
 
-Seedminer이 정확히 어떻게 작동하는지 더 배우고싶다면 [이 프레젠테이션](https://zoogie.github.io/web/34⅕c3) 을 참고할 수 있습니다.
+Seedminer이 정확히 어떻게 작동하는지 배우고 싶다면 [이 프레젠테이션](https://zoogie.github.io/web/34⅕c3)을 참고할 수 있습니다.
 
-이 방법은 원래 혼자 할 경우 필요한 연산을 위해 강력한 그래픽카드를 사용해야 합니다. 이 가이드에서는 이 방법을 돕기 위해 다른 사람들이 무료로 제공하는 웹사이트를 사용하게 됩니다.
+이 방법은 원래 혼자 할 경우, 계산을 위해 강력한 그래픽 카드를 사용해야 합니다. 이 가이드에서는 이 방법을 돕기 위해 다른 사람들이 무료로 제공하는 웹사이트를 사용하게 됩니다.
 
 {% endcapture %}
 <details>{{ technical_info | markdownify }}</details>
@@ -19,29 +19,29 @@ Seedminer이 정확히 어떻게 작동하는지 더 배우고싶다면 [이 프
 
 ### 섹션 I - 준비 작업
 
-이 섹션에서는 암호화 키를 알아내기 위한 정보를 3DS로부터 수집 합니다.
+이 섹션에서는 암호화 키를 알아내기 위한 정보를 3DS로부터 수집합니다.
 
 1. SD 카드를 컴퓨터에 삽입해 주세요
 1. SD 카드의 `Nintendo 3DS` 폴더를 열어 주세요
-  + `Nintendo 3DS` 폴더가 없다면, SD 카드를 3DS 삽입하고 기기를 시작하면 생성됩니다
-1. Nintendo 3DS 폴더에 바로 보이는 32자리 폴더 이름을 복사해 주세요
+  + `Nintendo 3DS` 폴더가 없다면, SD 카드를 3DS에 삽입하고 기기를 시작하여 폴더를 생성해 주세요
+1. Nintendo 3DS 폴더 안에 있는 32자리 폴더 이름을 복사해 주세요
   + 이 32자리 이름은 기기마다 다릅니다
-  + If you see multiple 32-letter folders, follow [these instructions](troubleshooting#seedminer)
-  + `private` 이라는 폴더가 있다면 무시하세요.
+  + If you see multiple 32-letter folders, follow [these instructions](troubleshooting#multiple-long-folder-names-in-nintendo-3ds-folder)
+  + `private`이라는 폴더가 있다면 무시해 주세요
 
 	![]({{ "/images/screenshots/seedminer/id0-example.png" | absolute_url }})
 	{: .notice--info}
 1. 나중에 사용하기 위해 이 32자리 이름을 [문서에](/images/screenshots/seedminer/text-document.png) 저장해 주세요
-  + 이 이름을 "ID0"라고 부릅니다 이 후 가이드는 ID0라고 부르니, 참고해 주시기 바랍니다
+  + 이 폴더의 이름을 "ID0"라고 부릅니다. 이 가이드는 이후 이 이름을 ID0으로 호칭하니, 참고해 주시기 바랍니다
 1. 기기를 시작해 주세요
   + SD 카드는 아직 삽입할 필요는 없습니다
-1. 친구 목록 (홈 메뉴 맨 위에 있는 [노란 얼굴 아이콘]({{ "/images/friend-list-icon.png" | absolute_url }})) 을 눌러 주세요
+1. 친구 목록 (홈 메뉴 맨 위에 있는 [노란 얼굴 아이콘]({{ "/images/friend-list-icon.png" | absolute_url }}))으로 이동해 주세요
   + 만일 오류가 발생하고 메뉴 밖으로 튕겨져 나갔더라면, 기기가 닌텐도의 서버에 연결하지 못했기 때문입니다.(기기 밴 또는 연결 문제로 인하여)
-1. 본인에 Mii 프로필로 이동하고, 위 화면에 "친구 코드"를 확인해 주세요
+1. 본인의 Mii 프로필로 이동하고, 위 화면에 있는 "친구 코드"를 확인해 주세요
 
 ### 섹션 II - Seedminer
 
-이 섹션에서는 Bruteforce Movable 웹사이트를 이용하여 기기의 암호화 키를 브루트 포스를 하고, 이것을 `movable.sed` 파일로 저장 합니다.
+이 섹션에서는 Bruteforce Movable 웹사이트를 이용하여 기기의 암호화 키를 계산하고, 이것을 `movable.sed` 파일로 저장합니다.
 
 1. 컴퓨터에서 [Bruteforce Movable](https://seedminer.hacks.guide/)를 열어 주세요
   + 만약 이 사이트가 안된다면, [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)에서 영어로 물어보세요. "Bruteforce Movable is not working. Could someone help me?"정도 질문이 적당할 것 입니다
