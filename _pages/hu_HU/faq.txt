@@ -14,80 +14,174 @@ title: "GYIK"
 
 ## Telepítés előtti GYIK
 
-#### **K:** *A legújabb verziójú rendszeren vagyok. Hackelhető a rendszerem külső hardver nélkül?*    
-**V:** Igen! Az utolsó firmware (11.16.0) rendelkezik ingyenes metódussal a CFW beszerzéséhez, amit [Seedminer](seedminer)-nek hívnak.
+{% capture compat %}
+<summary><u>I am on the latest system version. Is my device hackable without any external hardware?</u></summary>
 
-#### **K:** *Milyen eszközökkel kompatibilis ez az útmutató?*    
-**V:** A lépések azonosak minden kereskedelmi 3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, és New 2DS XL eszközhöz. Ha a rendszered verziója "0.0.0-0", akkor fejlesztői rendszered van.
+Yes! Az utolsó firmware (11.16.0) rendelkezik ingyenes metódussal a CFW beszerzéséhez, amit [Seedminer](seedminer)-nek hívnak.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
 
-#### **K:** *Mennyire kockázatos a konzolom meghackelése?*    
-**V:** A brickelés alapvetően lehetetlen, kivéve ha szándékosan szeretnéd brickelni az eszközödet. 
+{% capture compat %}
+<summary><u>What devices is this guide compatible with?</u></summary>
 
-#### **K:** *Ezzel lehet futtatni azokat a király homebrew alkalmazásokat és emulátorokat?*    
-**V:** Igen! Ez az útmutató telepít néhány hasznos homebrew alkalmazást, beleértve az [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest)-t, ami homebrew alkalmazás boltként működik.
+The instructions are the same for all retail 3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, and New 2DS XL devices. Ha a rendszered verziója "0.0.0-0", akkor fejlesztői rendszered van.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
 
-#### **K:** *Használhatom ezt arra, hogy más régióból származó játékokkal tudjak játszani?*    
-**V:** Igen; a Luma3DS automatikusan figyelmen kívül hagyja a régió ellenőrzést a cartridge-ek és a telepített címek esetében. Néhány játék igényli a Luma's [nyelvi emulációs funkcióját](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features) a működéshez, ha régión kívüli eszközökön fut.
+{% capture compat %}
+<summary><u>How risky is hacking my console?</u></summary>
 
-#### **K:** *El fogok veszteni bármilyen szolgáltatást, ha CFW-t telepítek?*    
-**V:** Nem. Egyedi firmware-rel ellátott eszközökkel ugyanúgy használhatod az eShop-ot és futtathatsz fizikai cartridge-eket, amiket minden más 3DS futtatni tud.
+Bricks are now effectively impossible unless you are purposely trying to brick your device. 
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
 
-#### **K:** *Megtarthatom a NNID-met?*    
-**V:** Az NNID-et (ha van) nem befolyásolja az útmutató végrehajtása. A KOR, CHN vagy TWN régiós eszközök nem rendelkeznek alaphelyzetben NNID funkcionalitással, így ezek az eszközök nem érintettek.
+{% capture compat %}
+<summary><u>Can I run awesome homebrew and emulators with this?</u></summary>
 
-#### **K:** *Bannolva lesz a 3DS-em, ha CFW-m van telepítve?*    
-**V:** 2017 májusában volt egy ban hullám ami jellemzően véletlen alapon kitiltotta a CFW felhasználókat az online játékból (az eShop hozzáférés, az NNID-k és a Nintendo fiókok nem voltak érintettek). Azóta nem volt ilyen mértékű ban hullám. Ez azt jelenti, hogy nem tudjuk mit tervez a Nintendo a jövőben. Jelenleg nem gondoljuk azt, hogy a ban olyan dolog, ami miatt aggódnod kellene.
+Yes! Ez az útmutató telepít néhány hasznos homebrew alkalmazást, beleértve az [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest)-t, ami homebrew alkalmazás boltként működik.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
 
-#### **K:** *Meg tudom ezt csinálni számítógép nélkül (pl. egy androidos telefonnal)?*    
-**V:** Egyedül arra van szükséged, hogy fájlokat tudj másolni egy kompatibilis SD kártyára!
+{% capture compat %}
+<summary><u>Can I use this to play games from other regions?</u></summary>
 
-#### **K:** *Milyen méretű SD kártyát használhatok?*    
-**V:** Legalább 1.5GB szabad hely kell az SD kártyán az útmutató teljes végrehajtásához. Habár a 3DS hivatalosan 32GB SD kártya méretig kompatibilis, nagyobb SD kártyák is használhatók, miután kézzel újra formázásra kerültek FAT32 fájlrendszerre. Nem javasoltak 128GB-nál nagyobb SD kártyák, az ismert problémák miatt a GBA grafikával és az egyedi témákkal.
+Yes; Luma3DS will automatically ignore the region check for cartridges and installed titles. Néhány játék igényli a Luma's [nyelvi emulációs funkcióját](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features) a működéshez, ha régión kívüli eszközökön fut.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
 
-#### **K:** *Hallottam erről a dologról (Gateway, Sky3DS, ntrboot, R4, stb), amiért fizetnem kell. Szükségem lesz ilyesmire?*    
-**V:** Nem. Egyedi firmware telepíthető ingyen a legutolsó firmware-re bármilyen hardver eszköz nélkül. Gyakorlatban a 3DS-mód flashcart-ok, mint a Gateway és a Sky3DS nem ajánlottak, mert elavultak és a ban vagy brick kockázatát hordják magukban.
+{% capture compat %}
+<summary><u>Will I lose any features if I install CFW?</u></summary>
 
-#### **K:** *Mi a különbség az egyedi firmware és a homebrew hozzáférés között?*    
-**V:** Történetileg a 3DS felhasználói szintű homebrew hozzáférése régi exploitokon keresztül történt, mint a ninjahax. A rendszer hozzáférés szintje felhasználói, ami lehetővé tette hogy futtass alap homebrew alkalmazásokat és emulátorokat, de nem tette lehetővé (könnyedén) a játékok módosítását vagy cartridge-ek dumpolását. Továbbá kevésbé volt stabil, a homebrew alkalmazások sűrűn összeomlottak, teljes újra indítást igényelve. Az egyedi firmware nagyobb szintű hozzáférést engedélye a rendszerhez, miközben stabilabb, mint a csak-homebrew belépési pontok.
+No. Egyedi firmware-rel ellátott eszközökkel ugyanúgy használhatod az eShop-ot és futtathatsz fizikai cartridge-eket, amiket minden más 3DS futtatni tud.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Can I keep my NNID?</u></summary>
+
+Your NNID (if you have one) will not be affected by this guide. A KOR, CHN vagy TWN régiós eszközök nem rendelkeznek alaphelyzetben NNID funkcionalitással, így ezek az eszközök nem érintettek.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Will my 3DS be banned for having CFW?</u></summary>
+
+There was a ban wave in May 2017 that banned CFW users from online play (eShop access, NNIDs, and Nintendo Accounts were unaffected), seemingly at random. Azóta nem volt ilyen mértékű ban hullám. Ez azt jelenti, hogy nem tudjuk mit tervez a Nintendo a jövőben. Jelenleg nem gondoljuk azt, hogy a ban olyan dolog, ami miatt aggódnod kellene.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Can I do this without a computer (e.g. an Android phone)?</u></summary>
+
+Yes! All you need is the ability to put files on a compatible SD card.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>What size SD card can I use?</u></summary>
+
+You will need at least 1.5GB of free SD card space to follow this guide in its entirety. Habár a 3DS hivatalosan 32GB SD kártya méretig kompatibilis, nagyobb SD kártyák is használhatók, miután kézzel újra formázásra kerültek FAT32 fájlrendszerre. Nem javasoltak 128GB-nál nagyobb SD kártyák, az ismert problémák miatt a GBA grafikával és az egyedi témákkal.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>I heard about this thing I have to pay for (Gateway, Sky3DS, ntrboot, R4, etc). Is that something I need?</u></summary>
+
+No. Egyedi firmware telepíthető ingyen a legutolsó firmware-re bármilyen hardver eszköz nélkül. Gyakorlatban a 3DS-mód flashcart-ok, mint a Gateway és a Sky3DS nem ajánlottak, mert elavultak és a ban vagy brick kockázatát hordják magukban.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>What's the difference between custom firmware and homebrew?</u></summary>
+
+Historically, the 3DS used to have userland homebrew access through older exploits like ninjhax. A rendszer hozzáférés szintje felhasználói, ami lehetővé tette hogy futtass alap homebrew alkalmazásokat és emulátorokat, de nem tette lehetővé (könnyedén) a játékok módosítását vagy cartridge-ek dumpolását. Továbbá kevésbé volt stabil, a homebrew alkalmazások sűrűn összeomlottak, teljes újra indítást igényelve. Az egyedi firmware nagyobb szintű hozzáférést engedélye a rendszerhez, miközben stabilabb, mint a csak-homebrew belépési pontok.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
 
 ## Telepítés utáni GYIK
 
-#### **K:** *Biztonságos frissíteni a legutolsó verzióra a CFW 3DS-em?*    
-**V:** Ha Luma3DS-t használsz, az egyedi firmware loader (boot9strap) *soha* nem kerül eltávolításra egy rendszer frissítés során. Korábban voltak olyan frissítések, amik a Luma3DS összeomlását eredményezték bootoláskor, így jó ötlet várni egy pár órát, hogy biztos legyél, hogy a legutolsó frissítés átmenetileg nem teszi-e használhatatlanná a rendszered, mielőtt a Luma3DS frissítésre kerül. A rendszer frissítések úgy történnek, mint egy alap 3DS-en: a System Settings-en, Safe Mode-on vagy a felugró frissítési üzeneten keresztül, amikor a frissítések automatikusan letöltődtek.
+{% capture compat %}
+<summary><u>Is it safe to update my 3DS to the latest version with CFW?</u></summary>
 
-#### **K:** *Hogyan bővíthetem az SD kártyám?*    
-**V:** Másold át az SD kártyád tartalmát egy új FAT32-re formázott SD kártyára. A 128GB-os kártyák esetén a 65536 allokációs méret javasolt. 128GB-nál nagyobb SD kártyák nem javasoltak az ismert problémák miatt a GBA grafikával és az egyedi témákkal.
+If you are using Luma3DS, your custom firmware loader (boot9strap) will *never* be removed when performing a system update. Korábban voltak olyan frissítések, amik a Luma3DS összeomlását eredményezték bootoláskor, így jó ötlet várni egy pár órát, hogy biztos legyél, hogy a legutolsó frissítés átmenetileg nem teszi-e használhatatlanná a rendszered, mielőtt a Luma3DS frissítésre kerül. A rendszer frissítések úgy történnek, mint egy alap 3DS-en: a System Settings-en, Safe Mode-on vagy a felugró frissítési üzeneten keresztül, amikor a frissítések automatikusan letöltődtek.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
 
-#### **K:** *Tudok rendszer átvitelt (System Transfer) végezni CFW-vel?*    
-**V:** Igen, a rendszer átvitel végrehajtható a hivatalos System Transfer funkcióval más CFW-vel rendelkező konzolokra (inkonzisztenciák előfordulhatnak, ha a cél egy alap konzol). Az illegitim címek (homebrew) jegyei (ticket) nem kerülnek átvitelre, de a [faketik](https://github.com/ihaveamac/faketik/releases/latest)-kel újra megjeleníthetők. Ügyelj arra, hogy ne használj vezeték nélküli átvitelt, mert az törli az illegitim címeket. A CFW megmarad minkét konzolon. 
+{% capture compat %}
+<summary><u>How do I upgrade my SD card?</u></summary>
 
-#### **K:** *Hogyan módosíthatom a rendszer nyelvét egy japán 3DS-nek?*    
-**V:** Az egyetlen módja a rendszer nyelv módosításának egy japán 3DS esetében más nyelvre a [régió csere](region-changing). Fontos megjegyezni, hogy ez erősen valószínű, hogy elrontja a Nintendo eShop-ot a készülékeden, így nem fogsz tudni frissíteni játékokat, függetlenül attól, hogy régión belüli vagy kívüli.
+Copy and paste your SD card contents to a new SD card formatted as FAT32. A 128GB-os kártyák esetén a 65536 allokációs méret javasolt. 128GB-nál nagyobb SD kártyák nem javasoltak az ismert problémák miatt a GBA grafikával és az egyedi témákkal.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
 
-#### **K:** *Hogyan frissíthetem a homebrew alkalmazásokat?*    
-**V:** Ez elsősorban a formátumától függ a homebrew alkalmazásnak. Általánosságban beszélve:
+{% capture compat %}
+<summary><u>Can I system transfer with CFW?</u></summary>
+
+Yes, system transfers can be performed through the official System Transfer function to other consoles with CFW (inconsistencies may occur if the target console is stock). Az illegitim címek (homebrew) jegyei (ticket) nem kerülnek átvitelre, de a [faketik](https://github.com/ihaveamac/faketik/releases/latest)-kel újra megjeleníthetők. Ügyelj arra, hogy ne használj vezeték nélküli átvitelt, mert az törli az illegitim címeket. A CFW megmarad minkét konzolon.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>How do I change the system language of a Japanese 3DS?</u></summary>
+
+The only way to change the system language of a Japanese 3DS to a language other than Japanese is to perform a [region change](region-changing). Fontos megjegyezni, hogy ez erősen valószínű, hogy elrontja a Nintendo eShop-ot a készülékeden, így nem fogsz tudni frissíteni játékokat, függetlenül attól, hogy régión belüli vagy kívüli.
+ {% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>How do I update homebrew applications?</u></summary>
+
+It depends on the format of the homebrew application. Általánosságban beszélve:
 
 * Homebrew **CIA formátumban** frissíthető egy új CIA telepítésével, ami felül írja a régebbi verziót. Ha a régi CIA nem kerül felülírásra, törölheted a régit a Data Management-ből, mint más 3DS címnél tennéd.
 * Homebrew **3DSX formátumban** frissíthető a 3DSX fájl újra cseréjével a `/3ds/` mappában. Ha a homebrew app további fájlokat tartalmaz, azokat valahova máshova kell raknod. Tekintsd meg a homebrew alkalmazás dokumentációját.
 * A Luma3DS frissítéséhez tekintsd meg [ezt az oldalt](restoring-updating-cfw). A GodMode9 frissítéséhez tekintsd meg [ezt az oldalt](godmode9-usage#updating-godmode9).
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
 
-#### **K:** *Hogyan frissíthetem a 3DS régión kívüli játékokat?*    
-**V:** [Dumpolnod kell a frissítéseket](dumping-titles-and-game-cartridges) egy 3DS-ről, amire azok telepítésre kerültek. A Nintendo eShop csak a konzol régiójának megfelelő frissítéseket tartalmazzák (egy japán 3DS csak japán játékokhoz kap frissítéseket).
+{% capture compat %}
+<summary><u>How do I update my games?</u></summary>
 
-#### **K:** *Segíts! Valami rossz dolog történt és most nem tudok bootolni...*    
-**V:** Kérjük, nézd meg a [hibaelhárítási útmutatót](troubleshooting). **A CFW eltávolítása, amikor az eszközöd nem bootható nem ajánlott, mert nagyon 
+You can continue to download game updates from the Nintendo eShop, even after the 2023 shutdown.
+
+If the game is not from the same region as the console, you will need to [dump the updates](dumping-titles-and-game-cartridges) from a 3DS that has the updates installed. A Nintendo eShop csak a konzol régiójának megfelelő frissítéseket tartalmazzák (egy japán 3DS csak japán játékokhoz kap frissítéseket).
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Help! Something bad happened and my 3DS won't boot to HOME Menu...</u></summary>
+
+Please look at the [troubleshooting guide](troubleshooting#boot-issues-on-devices-with-custom-firmware). **A CFW eltávolítása, amikor az eszközöd nem bootható nem ajánlott, mert nagyon 
  valószínű, hogy brickeli az eszközödet**.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
 
 ## menuhax / A9LH / Gateway GYIK
 
-#### **K:** *Évekkel ezelőtt moddoltam az eszközömet. Mit kell tennem?*    
-**V:** Ajánlott, hogy frissítsd egy modern, boot9strap alapúra. Kövesd a [CFW ellenőrzését](checking-for-cfw), hogy megtudd, hogyan frissítheted.
+{% capture compat %}
+<summary><u>I modded my device (x) years ago, so it already has some sort of homebrew. What should I do?</u></summary>
 
-#### **K:** *A konfigurációm működik nekem. Miért kellene frissítenem?*    
-**V:** A modern homebrew jelentős része (mint pédául a Checkpoint és a BootNTR Selector) csak modern, boot9strap alapú rendszeren tesztelt, és lehet nem fog teljesen (vagy egyáltalán nem) működni régebbi menuhax, A9LH, vagy Gateway alapú konfigurációkon. Továbbá, a konfigurációdtól függően, lehet, hogy nem tudsz biztonságosan frissítani a legutolsó firmware-re. A modern, boot9strap alapú rendszerek magasabb szintű rendszer hozzáféréssel rendelkeznek, mint a a korábbiak, beleértve a konzol bootrom-jának dumpolásának képességét.
+It is recommended that you upgrade your setup to a modern, boot9strap-based one. Kövesd a [CFW ellenőrzését](checking-for-cfw), hogy megtudd, hogyan frissítheted.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
 
-#### **K:** *El fogok veszteni bármit, ha frissítem a rendszeremet?*    
-**V:** A régi konfigurációd (beleértve az EmuNAND-od, ha van ilyened) általában közvetlenül migrálható boot9strap-re adatvesztés nélkül. Ha van számodra különösen fontos adat, jó ötlet lehet frissítés előtt egy decryptált mentés készítése a mentés adatodról, olyan eszközzel, mint például a [JKSM](https://github.com/J-D-K/JKSM/releases/tag/12%2F20%2F2018).
+{% capture compat %}
+<summary><u>My setup works for me. Why should I upgrade it?</u></summary>
 
-#### **K:** *Hogyan mozgathatom át a mentéseimet egy létező Gateway konfigurációról egy modern konfigurációra?*    
+The vast majority of modern homebrew (such as Checkpoint and BootNTR Selector) have only been tested on modern, boot9strap-based setups and may not work entirely (or at all) on older setups based on menuhax, A9LH, or Gateway. Továbbá, a konfigurációdtól függően, lehet, hogy nem tudsz biztonságosan frissítani a legutolsó firmware-re. A modern, boot9strap alapú rendszerek magasabb szintű rendszer hozzáféréssel rendelkeznek, mint a a korábbiak, beleértve a konzol bootrom-jának dumpolásának képességét.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Will I lose anything if I upgrade my setup?</u></summary>
+
+Your old setup (including your EmuNAND, if you have one) can usually be directly migrated to boot9strap with no data loss. Ha van számodra különösen fontos adat, jó ötlet lehet frissítés előtt egy decryptált mentés készítése a mentés adatodról, olyan eszközzel, mint például a [JKSM](https://github.com/J-D-K/JKSM/releases/tag/12%2F20%2F2018).
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>How do I move saves from an existing Gateway setup to a more modern setup?</u></summary>
+
 **V:** Nézd meg [ezt az üzenetszálat](https://gbatemp.net/threads/425743/).
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
