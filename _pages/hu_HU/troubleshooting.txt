@@ -69,7 +69,7 @@ Csatlakozz a [Nintendo Homebrew Discord-on](https://discord.gg/MWxPgEp) csatorn�
 ![]({{ "/images/screenshots/multiple-id0.png" | absolute_url }})
 {: .notice--info}
 
-Ez akkor fordul elő, ha az SD kártyáda több 3DS eszközben használod, és a célja, hogy megakadályozza a nem szándékos adat egyesítést olyan adattal, ami nem lenne érvényes másik eszközön. Ahhoz, hogy megtaláld melyik hosszú mappa név a helyes a 3DS-edhez, kövesd a következő lépéseket:
+Ez akkor fordul elő, ha az SD kártyádat több 3DS eszközben használod, és a célja, hogy megakadályozza a nem szándékos adat egyesítést olyan adattal, ami nem lenne érvényes másik eszközön. Ahhoz, hogy megtaláld melyik hosszú mappa név a helyes a 3DS-edhez, kövesd a következő lépéseket:
 
 1. Nevezd át a `Nintendo 3DS` mappát `BACKUP_Nintendo 3DS` névre
 1. Tedd vissza az SD kártyát a készülékedbe, és kapcsold be
@@ -85,7 +85,7 @@ Ez akkor fordul elő, ha az SD kártyáda több 3DS eszközben használod, és a
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Bruteforce Movable skips to step 4</u></summary>
+<summary><u>Bruteforce Movable a 4. lépésre ugrik</u></summary>
 
 A weboldal már kibányászta a `movable.sed` fájlod friend code-od és az ID0 kombinációjának használatával. Használhatod a `movable.sed`-et amit biztosított számodra.
 {% endcapture %}
@@ -108,7 +108,7 @@ A weboldal úgy találta, hogy a `movable.sed`-ed nem brute-force-olható. Ellen
 ## BannerBomb3
 
 {% capture compat %}
-<summary><u>DSiWare Management menu crashes without showing BB3 multihax menu</u></summary>
+<summary><u>A DSiWare Management menü összeomlik a BB3 multihax menü megjelenése nélkül</u></summary>
 Biztosítsd, hogy az `F00D43D5.bin` az egyetlen fájl a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` mappában. Ha így van, hozd létre újra a [BannerBomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen) segítségével. 
 
 Továbbá légy biztos abban, hogy a `bb3.bin` fájl megtalálható az SD kártyád gyökerében. Ha hiányzik, töltsd le a legutolsó kiadását az [Bannerbomb3](https://github.com/lifehackerhansol/Bannerbomb3/releases/download/v3.0-lhs1/bb3.bin)-nak (közvetlen letöltés), és másold a `bb3.bin` fájlt az SD kártyád gyökerébe.
@@ -118,14 +118,14 @@ Ha ezen megoldások egyike sem javítja ezt a probélmát, akkor az egyedi firmw
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>DSiWare Management menu does not crash</u></summary>
+<summary><u>A DSiWare Management menü nem omlik össze</u></summary>
 
 Az `F00D43D5.bin` hiányzik a `Nintendo 3DS` -> `<ID0>` - > `<ID1>` -> `Nintendo DSiWare` mappából. Ellenőrizd, hogy a `Nintendo DSiWare` helyesen írt és szóközölt. Nagybetű/kisbetű nem számít.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>DSiWare Management shows a question mark</u></summary>
+<summary><u>A DSiWare Management egy kérdőjelet mutat</u></summary>
 
 Probléma van az `F00D43D5.bin` fájloddal (hibás vagy másik 3DS-hez tartozik). Hozd létre újra az `F00D43D5.bin` fájlod a [BannerBomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen) segítségével, biztosítva azt, hogy a konzolod `movable.sed` fájlját használod hozzá.
 {% endcapture %}
@@ -168,7 +168,7 @@ Ha ez sikertelen, próbálkozz egy másik SD kártyával.
 ## Boot9strap telepítése (Fredtool)
 
 {% capture compat %}
-<summary><u>Error on Fredtool Injector page</u></summary>
+<summary><u>Hiba a Fredtool Injector oldalon</u></summary>
 
 Biztosítsd, hogy a `movable.sed` és a DSiWare mentés ugyanarról a konzolról származik. Egy eltérés hibához vezet.
 {% endcapture %}
@@ -534,7 +534,7 @@ A készüléked valószínüleg hard-brickelve lett. Szükséged van egy ntrboot
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Some other error</u></summary>
+<summary><u>Valami más hiba</u></summary>
 
 Készítsd egy képet a hibáról és csatlakozz a [Nintendo Homebrew-hoz a Discord-on](https://discord.gg/MWxPgEp) segítségért.
 {% endcapture %}
@@ -561,14 +561,14 @@ Készítsd egy képet a hibáról és csatlakozz a [Nintendo Homebrew-hoz a Disc
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>GBA Virtual Console and/or Safe Mode functionality is broken</u></summary>
+<summary><u>GBA Virtual Console és/vagy Safe Mode funkcionalitás hibás</u></summary>
 
-Your device is running Luma3DS 6.6 or older, likely via arm9loaderhax. Kövesd az [A9LH-ről B9S-re](a9lh-to-b9s) lépéseit az eszközöd frissítéséhez modern egyedi firmware környezetre.
+Az eszközöd Luma3DS 6.6 vagy régebbi verziót futtat, valószínűleg arm9loaderhax-szal. Kövesd az [A9LH-ről B9S-re](a9lh-to-b9s) lépéseit az eszközöd frissítéséhez modern egyedi firmware környezetre.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Extended memory mode games (Pokemon Sun/Moon, Smash, etc.) don't work</u></summary>
+<summary><u>Bővített memória módú játékok (Pokemon Sun/Moon, Smash, etc.) nem működnek</u></summary>
 
 Ez egy CTRTransfer vagy régió csere után fordulhat elő Old 3DS / 2DS eszközökön. Rendszer formáznod kell az eszközödet javításhoz.
 {% endcapture %}
@@ -579,7 +579,7 @@ Ez egy CTRTransfer vagy régió csere után fordulhat elő Old 3DS / 2DS eszköz
 ## Egyéb hibaelhárítás
 
 {% capture compat %}
-<summary><u>Clear HOME Menu extdata</u></summary>
+<summary><u>A HOME Menu extdata takarítása</u></summary>
 
 1. Kapcsold ki a készüléked
 1. Helyezd az SD kártyád a számítógépbe
@@ -596,7 +596,7 @@ Ez egy CTRTransfer vagy régió csere után fordulhat elő Old 3DS / 2DS eszköz
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Clear HOME Menu theme data</u></summary>
+<summary><u>A HOME Menu téma adat takarítása</u></summary>
 
 1. Kapcsold ki a készüléked
 1. Helyezd az SD kártyád a számítógépbe
