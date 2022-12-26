@@ -134,14 +134,14 @@ Probléma van az `F00D43D5.bin` fájloddal (hibás vagy másik 3DS-hez tartozik)
 ## Boot9strap telepítése (USM)
 
 {% capture compat %}
-<summary><u>Safe Mode system update succeeds instead of giving error 003-1099</u></summary>
+<summary><u>A Safe Mode rendszer frissítés sikerül a 003-1099 hiba helyett</u></summary>
 
-unSAFE_MODE nincs telepítve. [Follow the instructions](installing-boot9strap-(usm)] to install it.
+unSAFE_MODE nincs telepítve. [Kövesd a lépéseket](installing-boot9strap-(usm)] a teleptéséhez.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Red screen after selecting "Detailed Setup"</u></summary>
+<summary><u>Piros képernyő a "Detailed Setup" kiválasztását követően</u></summary>
 
 A `usm.bin` fájl hiányzik, vagy rossz helyen van. Töltsd le a legutolsó kiadását az [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/download/v1.3/usm.bin)-nek és rakd `usm.bin` fájlt az SD kártyád gyökerébe. Ne add hozzá a `.bin` kiterjesztést, ha nem látod.
 
@@ -175,35 +175,35 @@ Biztosítsd, hogy a `movable.sed` és a DSiWare mentés ugyanarról a konzolról
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Unable to select "Haxxxxxxxxx!" because the BB3 multihax menu appears</u></summary>
+<summary><u>Nem lehetséges a "Haxxxxxxxxx!" kiválasztása, mert a BB3 multihax menü jelenik meg</u></summary>
 
 Elfelejtetted törölni az `F00D43D5.bin` az SD kártyáról. Navigálj a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` mappába az SD kártyán és töröld az `F00D43D5.bin` fájlt.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>"Haxxxxxxxxx!" does not appear</u></summary>
+<summary><u>A "Haxxxxxxxxx!" nem jelenik meg</u></summary>
 
 Probléma van a `42383821.bin` fájloddal (nem jó, hiányzik, rossz helyen van vagy sérült). Hozd létre újra a fájljaid a [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec) weboldallal és rakd a `42383821.bin` fájlt `output.zip` -> `hax`-ból a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` könyvtárba.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>DS Connection Settings launches normally</u></summary>
+<summary><u>DS Connection Settings normálisan indul</u></summary>
 
 A `Haxxxxxxxxx!` nem lett átmásolva az SD kártyádról a rendszer memóriába.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Black screen when launching DS Connection Settings</u></summary>
+<summary><u>Fekete képernyő a DS Connection Settings indításakor</u></summary>
 
 A DS Connection Settings alkalmazásod sérült, és szükséged van Homebrew Launcher hozzáférésre, hogy javítsd ezt a problémát. Csatlakozz a [Nintendo Homebrew-hoz a Discord-on](https://discord.gg/MWxPgEp) segítségért.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>SD card is grayed out in Flipnote</u></summary>
+<summary><u>Az SD kártya kiszürkített a Flipnote-ban</u></summary>
 
 A Flipnote-nak hosszú időre lehet szüksége a kártya indexeléséhez, ha nagy méretű SD kártyád van. Várj még néhány percet.
 {% endcapture %}
@@ -447,7 +447,7 @@ Probléma van a `boot.3dsx` fájloddal (nem jó, hiányzik, rossz helyen van vag
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>"Scripts directory not found" in GodMode9</u></summary>
+<summary><u>"Scripts directory not found" a GodMode9-ben</u></summary>
 
 Nem másoltad át a `gm9` mappát a GodMode9 `.zip`-ből az SD kártyád gyökerébe. Töltsd le a legutolsó kiadását az [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)-nek és rakd a `gm9` mappát az SD kártyád gyökerébe, egyesítve (mergelve) a létezővel.
 {% endcapture %}
@@ -455,15 +455,15 @@ Nem másoltad át a `gm9` mappát a GodMode9 `.zip`-ből az SD kártyád gyöker
 
 ---
 
-## Boot issues on devices with custom firmware
+## Boot problémák egyedi firmware-rel rendelkező eszközökön
 
 Az itt leírt lépések általában feltételezik, hogy az eszközöd modern egyedi firmware telepítéssel rendelkezik (boot9strap + Luma3DS 8.0 vagy nagyobb). Ha a konzolod régebbi homebrew telepítés (például valami ami arm9loaderhax vagy menuhax alapú), frissítened kell a telepítésed, mielőtt kipróbálod ezeket a lépéseket.
 {: .notice--info}
 
-### Power/notification light indicators
+### Táp/értesítő LED fény indikátorok
 
 {% capture compat %}
-<summary><u>My device powers off when I try to turn it on, and/or the notification LED shows a color on boot</u></summary>
+<summary><u>Az eszközöm kikapcsol, ha megpróbálom bekapcsolni és/vagy az értesítő LED egy színt mutat bootoláskor</u></summary>
 
 Probléma van az `boot.firm` fájloddal. Ha [boot9strap 1.4](https://github.com/SciresM/boot9strap/releases/tag/1.4)-et futtatsz, akkor a 3DS-ed értestő LED-je egy adott sznt villogtat. Ez a szín a `boot.firm` problémák diagnosztizálását segíti az SD kártyán vagy a belső memóriában. Régebbi boot9strap verziókon a kék fény azonnal kikapcsol, ha megpróbálod bekapcsolni az eszközt.
 
@@ -480,11 +480,11 @@ Ha hallod a "pattanó hangot", ami potenciálisan a háttérvilágítás bekapcs
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>My device gets stuck on a black screen with blue power light staying on</u></summary>
+<summary><u>Az eszközöm fekete képernyőn ragad, a kék power led bekapcsolva marad</u></summary>
 
 Az alábbi lépések tetszőleges sorrendben hajthatók végre, azonban a lista a legrövidebbtől a legtöbb időt igénylőig van összeállítva.
 
-1. Power off your device, remove the SD card, re-insert it, then power on your device.
+1. Kapcsold ki a készülékedet, vedd ki majd tedd vissz az SD kártyát, majd kapcsold be újra az eszközöd.
 1. Kapcsold ki a készülékedet, vedd ki a játék cartridge-t ha van bennem, majd kapcsold be az eszközöd és vár tíz percet. Ha az eszközöd bebootol tíz percen belül, a probléma elhárult és nem fog valószínűleg újra előfordulni
 1. + Nevezd át a `Nintendo 3DS` mappát az SD kártyádon `Nintendo 3DS_BACKUP` névre és próbálj meg bootolni. Ha az eszközöd sikeresen bootol, problémák vannak a `Nintendo 3DS` könyvtáraddal. Próbáld meg kitakarítani a HOME menu extdata-t:
 	+ Navigálj a `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` mappába
@@ -505,10 +505,10 @@ Az alábbi lépések tetszőleges sorrendben hajthatók végre, azonban a lista 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-### Error message on boot
+### Hibaüzenet bootoláskor
 
 {% capture compat %}
-<summary><u>"An error has occurred: Failed to apply 1 FIRM patch(es)" or "An exception has occurred -- Current process: pm"</u></summary>
+<summary><u> "An error has occurred: Failed to apply 1 FIRM patch(es)" vagy "An exception has occurred -- Current process: pm"</u></summary>
 
 A Luma3DS verziód régi. Töltsd le a legutolsó kiadását az [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)-nak és rakd a `boot.firm` fájlt az SD kártyád gyökerébe, felülírva bármilyen létező fájlt. Legyél biztos abban, hogy a ZIP fájlt más eszközzel csomagolod ki, mint a WinRAR, mert ismert, hogy problémái vannak a 3DS-sel kapcsolatos fájlokkal.
 {% endcapture %}
@@ -526,7 +526,7 @@ Az ARM11 kivételkezelők tiltva, vagy az egyedi firmware nincs telepítve. Pró
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Blue "BOOTROM ERROR" screen</u></summary>
+<summary><u>Kék "BOOTROM ERROR" képernyő</u></summary>
 
 A készüléked valószínüleg hard-brickelve lett. Szükséged van egy ntrboot flashcart vásárlására, hogy újra telepítsd a boot9strap-et, hogy megpróbálhasd megjavítani az eszközödet. Ez hardver hibát is jelezhet, ami nem javítható. Bármelyik esetben csatlakozz a [Nintendo Homebrew-hoz a Discord-on](https://discord.gg/MWxPgEp) segítségért.
   + Az is lehetséges még, hogy valaki beállított egy bootoláskori kezdő képernyőt, ami úgy néz ki mint egy brick. Próbáld meg az eszközödet bekapcsolva hagyni, várva a kék képernyőre, 5 percig.
@@ -540,10 +540,10 @@ Készítsd egy képet a hibáról és csatlakozz a [Nintendo Homebrew-hoz a Disc
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-## Software issues on devices with custom firmware
+## Szoftver problémák egyedi firmware-rel rendelkező eszközökön
 
 {% capture compat %}
-<summary><u>DSi / DS functionality is broken or has been replaced with Flipnote Studio</u></summary>
+<summary><u>DSi / DS funkcionalitás hibás vagy felcserélt a Flipnote Studio-val</u></summary>
 
 1. Töltsd le a [TWLFix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest) legutolsó kiadását (a `.3dsx` fájlt)
 1. Kapcsold ki a készüléked
