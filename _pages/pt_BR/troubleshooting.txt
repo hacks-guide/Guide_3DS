@@ -5,25 +5,25 @@ title: "Troubleshooting"
 Esta página oferece troubleshooting para problemas comuns. Se você não consegue resolver seu problema com o conselho nesta página, por favor entre no [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp) e descreva o seu problema, incluindo o que você já tentou.
 
 {% capture compat %}
-<summary>Table of Contents</summary>
+<summary>Tabela de Conteúdo</summary>
 
-Used on multiple pages:
+Usado em múltiplas páginas:
 * [SafeB9SInstaller](#issues-with-safeb9sinstaller)
 
-Guide pages:
+Páginas do guia:
 * [Seedminer](#seedminer)
   * [BannerBomb3](#bannerbomb3)
-  * [Installing boot9strap (USM)](#installing-boot9strap-usm)
-  * [Installing boot9strap (Fredtool)](#installing-boot9strap-fredtool)
+  * [Instalando boot9strap (USM)](#installing-boot9strap-usm)
+  * [Instalando boot9strap (Fredtool)](#installing-boot9strap-fredtool)
   * [Homebrew Launcher (PicHaxx)](#homebrew-launcher-pichaxx)
-* [Installing boot9strap (Soundhax)](#installing-boot9strap-soundhax)
-* [Installing boot9strap (SSLoth-Browser)](#installing-boot9strap-ssloth-browser)
+* [Instalando boot9strap (Soundhax)](#installing-boot9strap-soundhax)
+* [Instalando boot9strap (SSLoth-Browser)](#installing-boot9strap-ssloth-browser)
 
-* [Finalizing Setup](#finalizing-setup)
+* [Finalizando a instalação](#finalizing-setup)
 
-Issues after installation:
-* [Boot issues](#boot-issues-on-devices-with-custom-firmware)
-* [Software issues](#software-issues-on-devices-with-custom-firmware)
+Erros após a instalação:
+* [Problemas na inicialização](#boot-issues-on-devices-with-custom-firmware)
+* [Problemas de software](#software-issues-on-devices-with-custom-firmware)
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -55,7 +55,7 @@ Você não tem o `secret_sector.bin` da pasta `boot9strap`, ou a pasta `boot9str
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Something else</u></summary>
+<summary><u>Outra coisa</u></summary>
 
 Entre no [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) para obter ajuda, e descreva a mensagem que você vê.
 {% endcapture %}
@@ -64,7 +64,7 @@ Entre no [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) para obter a
 ## Seedminer
 
 {% capture compat %}
-<summary><u>Multiple long folder names in Nintendo 3DS folder</u></summary>
+<summary><u>Várias pastas de nome longo na pasta Nintendo 3DS</u></summary>
 
 ![]({{ "/images/screenshots/multiple-id0.png" | absolute_url }})
 {: .notice--info}
@@ -85,7 +85,7 @@ Isso ocorre quando você usa o seu cartão SD em vários dispositivos 3DS e isso
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Bruteforce Movable skips to step 4</u></summary>
+<summary><u>Bruteforce Movable pula para o Step 4</u></summary>
 
 O site já minerou seu `movable.sed` usando seu friend code e a combinação do ID0. Você pode usar o `movable.sed` que ele te fornece.
 {% endcapture %}
@@ -108,7 +108,7 @@ O site determinou que seu `movable.sed` não pode ser brute-forced. Certifique-s
 ## BannerBomb3
 
 {% capture compat %}
-<summary><u>DSiWare Management menu crashes without showing BB3 multihax menu</u></summary>
+<summary><u>Menu de Gerenciamento de DSiWare mostra um crash sem mostrar o menu multihax do BB3</u></summary>
 Certifique-se de que `F00D43D5.bin` seja o único arquivo em `Nintendo 3DS` -> `<ID0>` -><ID1>` -> `Nintendo DSiWare`. Se for o caso, re-crie-o com o [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen). 
 
 Além disso, certifique-se de que o `bb3.bin` está na raiz do cartão SD. Caso esteja faltando, baixe a versão mais recente do [Bannerbomb3](https://github.com/lifehackerhansol/Bannerbomb3/releases/download/v3. -lhs1/bb3.bin) (download direto) e copie o arquivo `bb3.bin` para a raiz do seu cartão SD.
@@ -118,14 +118,14 @@ Se nenhuma destas soluções resolver o problema, então custom firmware pode te
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>DSiWare Management menu does not crash</u></summary>
+<summary><u>O Gerenciamento de DSiWare não teve um crash</u></summary>
 
 `F00D43D5.bin` está ausente em `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`. Certifique-se de que `Nintendo DSiWare` esteja corretamente escrito e espaçado. Letras maiúsculas ou minúsculas não importam.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>DSiWare Management shows a question mark</u></summary>
+<summary><u>O Gerenciamento de DSiWare mostra um ponto de interrogação</u></summary>
 
 Pode haver um problema com o seu arquivo `F00D43D5.bin` (pode estar corrompido ou destinado ao 3DS errado). Crie novamente seu arquivo `F00D43D5.bin` com o [Bannerbomb3 Injector](https://3ds.nhnarwhal.com/#/bb3gen), garantindo que você utilize o arquivo `movable.sed` do seu console.
 {% endcapture %}
@@ -134,14 +134,14 @@ Pode haver um problema com o seu arquivo `F00D43D5.bin` (pode estar corrompido o
 ## Instalando boot9strap (USM)
 
 {% capture compat %}
-<summary><u>Safe Mode system update succeeds instead of giving error 003-1099</u></summary>
+<summary><u>A atualização do sistema no Modo de Segurança é bem-sucedida em vez de dar o erro 003-1099</u></summary>
 
-unSAFE_MODE não está instalado. [Follow the instructions](installing-boot9strap-(usm)] to install it.
+unSAFE_MODE não está instalado. [Siga as instruções](installing-boot9strap-(usm)] para instalá-lo.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Red screen after selecting "Detailed Setup"</u></summary>
+<summary><u>Tela vermelha após selecionar "Configuração Avançada"</u></summary>
 
 O arquivo `usm.bin` está faltando ou está deslocado. Baixe a última versão do [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/download/v1.3/usm.bin) e coloque `usm.bin` na raiz do seu cartão SD. Não adicione a extensão `.bin` se você não a vê.
 
@@ -168,63 +168,63 @@ Se isso falhar, tente usar outro cartão SD.
 ## Instalando boot9strap (Fredtool)
 
 {% capture compat %}
-<summary><u>Error on Fredtool Injector page</u></summary>
+<summary><u>Erro na página Fredtool Injector</u></summary>
 
 Certifique-se de que o seu `movable.sed` e backup de DSiWare venham do mesmo console. Uma incompatibilidade resultará em erro.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Unable to select "Haxxxxxxxxx!" because the BB3 multihax menu appears</u></summary>
+<summary><u>Não é possível selecionar "Haxxxxxxx!" porque o menu multihax BB3 aparece</u></summary>
 
 Você esqueceu de deletar `F00D43D5.bin` do cartão SD. Navegue até `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` no seu cartão SD e apague o arquivo `F00D43D5.bin`.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>"Haxxxxxxxxx!" does not appear</u></summary>
+<summary><u>"Haxxxxxxxxx!" não aparece</u></summary>
 
 Há um problema com seu arquivo `42383821.bin` (ele está incorreto, faltando, colocado no lugar errado ou corrompido). Recrie seus arquivos com o site [DSIHaxInjector_new](https://3ds.https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec) e certifique-se de colocar o arquivo `42383821.bin` do `output.zip` -> `hax` em `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>DS Connection Settings launches normally</u></summary>
+<summary><u>Configurações de Internet DS iniciam normalmente</u></summary>
 
 `Haxxxxxxxxxxx!` não foi copiado do cartão SD para a memória do sistema.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Black screen when launching DS Connection Settings</u></summary>
+<summary><u>Tela preta ao iniciar Configurações de Internet DS</u></summary>
 
 Seu aplicativo das Conexões Nintendo DS está quebrado, e você precisará de acesso ao Homebrew Launcher para corrigir esse problema. Entre no [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) para obter ajuda.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>SD card is grayed out in Flipnote</u></summary>
+<summary><u>O cartão SD está cinza no Flipnote</u></summary>
 
 O Flipnote pode levar um bom tempo para indexar o seu cartão se você tiver um cartão SD grande. Deixe-o por alguns minutos.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Lenny face does not appear in SD card section</u></summary>
+<summary><u>O Lenny face não aparece na seção do cartão SD</u></summary>
 
 Você não copiou a pasta `private` do Frogminer_save `.zip` para a raiz do seu cartão SD.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Flipnote freezes</u></summary>
+<summary><u>O Flipnote congela</u></summary>
 
 Você pode ter tocado acidentalmente na tela enquanto estava no Flipnote modificado. Entre novamente nas Conexões Nintendo DS e tente novamente, garantindo que você não use acidentalmente a touchscreen.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Green screen after pasting</u></summary>
+<summary><u>Tela verde após colar</u></summary>
 
 O arquivo `boot.nds` está faltando ou está fora do lugar apropriado. Baixe a versão mais recente do [b9stool](https://github.com/zoogie/b9sTool/releases/latest) e coloque `boot.nds` na raiz do seu cartão SD, substituindo o existente.
 {% endcapture %}
@@ -232,13 +232,13 @@ O arquivo `boot.nds` está faltando ou está fora do lugar apropriado. Baixe a v
 
 
 {% capture compat %}
-<summary><u>White screen after pasting</u></summary>
+<summary><u>Tela branca após colar</u></summary>
 Há um problema com o seu arquivo `boot.nds`. Baixe novamente a versão mais recente do [b9stool](https://github.com/zoogie/b9sTool/releases/latest) e coloque `boot.nds` na raiz do seu cartão SD, substituindo o existente.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Unable to open Luma3DS configuration menu after running B9STool</u></summary>
+<summary><u>Não é possível abrir o menu de configuração do Luma3DS depois de executar B9STool</u></summary>
 
 É possível que o boot9strap não tenha sido instalado corretamente. Siga a seção B [desta página](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md).
 {% endcapture %}
@@ -247,7 +247,7 @@ Há um problema com o seu arquivo `boot.nds`. Baixe novamente a versão mais rec
 ## Homebrew Launcher (PicHaxx)
 
 {% capture compat %}
-<summary><u>"An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)</u></summary>
+<summary><u>"Ocorreu um erro. Segure o botão POWER para desligar..." (tela preta com texto)</u></summary>
 
 Seus arquivos `00000001.sav` e/ou `otherapp.bin` podem estar fora do local apropriado. Certifique-se de que `00000001. av` está em `Nintendo 3DS` -> `<ID0>` -><ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` e que `otherapp.bin` está na raiz do seu cartão SD.
 
@@ -256,21 +256,21 @@ Se seus arquivos estiverem nos locais corretos, re-crie o save usando a [PicHaxx
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>"An exception occurred" or Errdisp when opening Picross</u></summary>
+<summary><u>"An exception occurred" ou Errdisp ao abrir o Picross</u></summary>
 
 Seu dispositivo já possui custom firmware. Você deve [checar por CFW](checking-for-cfw).
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>"An error has occurred, forcing the software to close..." (white message box)</u></summary>
+<summary><u>"Um erro ocorreu, forçando o fechamento do software..." (caixa de mensagens branca)</u></summary>
 
 Há um problema com seu arquivo `otherapp.bin`. Baixe a última versão do [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest), posicione o arquivo `.bin` relevante para o seu console a partir da pasta `otherapps_with_CfgS` para a raiz do seu cartão SD, e renomeie-o para `otherapp.bin`. Não adicione a extensão `.bin` se você não a vê.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Game starts normally</u></summary>
+<summary><u>O jogo começa normalmente</u></summary>
 
 Seu arquivo `00000001.sav` modificado pode estar fora do local apropriado, ou você pode ter usado o `movable.sed` errado ao criá-lo. Regere seu `movable.sed` de [Bruteforce Movable](https://seedminer.hacks.guide), e re-crie o save usando a [PicHaxx Save Tool](https://3dstools.nhnarwhal. om/#/pichaxx) e coloque o arquivo resultante (`00000001.sav`) em `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data`.
 {% endcapture %}
@@ -279,7 +279,7 @@ Seu arquivo `00000001.sav` modificado pode estar fora do local apropriado, ou vo
 ## Instalando boot9strap (Soundhax)
 
 {% capture compat %}
-<summary><u>Red/purple/pink and white screen after running Soundhax</u></summary>
+<summary><u>Tela vermelha/roxa/rosa e branca após executar o Soundhax</u></summary>
 
 Se o seu dispositivo está na versão 9.4.0, 9.5.0, ou 9.6.0, você pode estar encontrando um bug com uma versão antiga de universal-otherapp. Baixe a versão mais recente [daqui](https://github.com/TuxSH/universal-otherapp/releases/latest).
 
@@ -288,14 +288,14 @@ Se seu dispositivo não está em algum desses firmwares, isso provavelmente indi
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>"An error has occurred, forcing the software to close..." (white message box)</u></summary>
+<summary><u>"Um erro ocorreu, forçando o fechamento do software..." (caixa de mensagens branca)</u></summary>
 
 Há um problema com seu arquivo `otherapp.bin` (ele está faltando, colocado no lugar errado ou corrompido). Baixe a última versão do [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) e coloque-a na raiz do seu cartão SD.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>"Could not play"</u></summary>
+<summary><u>"Não foi possível tocar"</u></summary>
 
 Você tem o arquivo Soundhax errado para seu dispositivo e região, ou seu dispositivo é incompatível com Soundhax. No último caso, você deve atualizar seu dispositivo para a versão mais recente e continuar com o [Seedminer](seedminer).
 {% endcapture %}
@@ -319,14 +319,14 @@ Se isso falhar, tente usar outro cartão SD.
 ## Instalando boot9strap (SSLoth-Browser)
 
 {% capture compat %}
-<summary><u>Red/purple/pink and white screen after running Browserhax</u></summary>
+<summary><u>Tela vermelha/roxa/roxa e branca após executar o Browserhax</u></summary>
 
 Isso provavelmente indica que você já possui custom firmware. Você deve [checar por CFW](checking-for-cfw).
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>"An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)</u></summary>
+<summary><u>"Ocorreu um erro. Segure o botão POWER para desligar..." (tela preta com texto)</u></summary>
 
 O arquivo `arm11code.bin` está faltando ou está deslocado. Baixe a última versão do [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), coloque `otherapp.bin` na raiz do seu cartão SD e renomeie-o para `arm11code.bin`. Não adicione a extensão `.bin` se você não a vê.
 {% endcapture %}
@@ -334,14 +334,14 @@ O arquivo `arm11code.bin` está faltando ou está deslocado. Baixe a última ver
 
 
 {% capture compat %}
-<summary><u>"An error has occurred, forcing the software to close..." (white message box)</u></summary>
+<summary><u>"Um erro ocorreu, forçando o fechamento do software..." (caixa de mensagens branca)</u></summary>
 
 Há um problema com o seu arquivo `arm11code.bin`. Baixe a última versão do [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), coloque `otherapp.bin` na raiz do seu cartão SD e renomeie-o para `arm11code.bin`. Não adicione a extensão `.bin` se você não a vê.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Opening the browserhax QR code or URL crashes</u></summary>
+<summary><u>Abrindo o código QR ou URL do browserhax causa um crash</u></summary>
 
 Exploits de navegador (como este) são muitas vezes instáveis e caem com frequência, mas em alguns casos eles podem ser consertados seguindo as seguintes etapas.
 
@@ -352,14 +352,14 @@ Exploits de navegador (como este) são muitas vezes instáveis e caem com frequ�
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>System Update prompt when opening browser</u></summary>
+<summary><u>Pedido para atualizar o sistema ao abrir o navegador</u></summary>
 
 O proxy SSLoth está configurado incorretamente. Refaça a seção SSLoth na página.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Error 032-0420 when opening browser</u></summary>
+<summary><u>Erro 032-0420 ao abrir o navegador</u></summary>
 
 Siga estes passos em ordem:
 
@@ -387,7 +387,7 @@ O arquivo `SafeB9SInstaller.bin` está ausente ou fora do lugar apropriado. Baix
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Frozen on "Doing agbhax..."</u></summary>
+<summary><u>Congelado em "Doing agbhax..."</u></summary>
 Pode haver um problema com o seu arquivo `arm11code.bin`. Baixe novamente a versão mais recente do [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), coloque-o na raiz do seu cartão SD e renomeie-o para `arm11code.bin`. Não adicione a extensão `.bin` se você não a vê.
 
 Se tiver uma unidade de Taiwan (com um T na linha de versão, por exemplo, 11.3.0-##T), você não será capaz de seguir estas instruções, e precisará atualizar o seu console e seguir [Seedminer](seedminer).
@@ -416,7 +416,7 @@ Se isso falhar, tente usar outro cartão SD.
 ## Finalizando a instalação
 
 {% capture compat %}
-<summary><u>Unable to update device</u></summary>
+<summary><u>Não é possível atualizar o dispositivo</u></summary>
 
 As etapas abaixo podem ser tentadas em qualquer ordem, mas são listadas de maneira mais fácil para maneira mais difícil de realizar.
 
@@ -433,21 +433,21 @@ As etapas abaixo podem ser tentadas em qualquer ordem, mas são listadas de mane
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Unable to enter Rosalina menu due to broken Left Shoulder / Down D-Pad / Select button(s)</u></summary>
+<summary><u>Não é possível acessar o Rosalina Menu porque o Gatilho Esquerdo/D-Pad para Baixo/Select está quebrado</u></summary>
 
 Baixe este [config.ini alternativo](https://cdn.discordapp.com/attachments/196635695958196224/982798396265988186/config.ini) e coloque-o em `/luma/`. Isso vai mudar a combinação de botões do Rosalina para (X) + (Y).
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>"An exception occurred" after trying to launch Homebrew Launcher from Download Play</u></summary>
+<summary><u>"An exception occurred" após tentar abrir o Homebrew Launcher a partir do Download Play</u></summary>
 
 Há um problema com o seu arquivo `boot.3dsx` (ele está faltando, colocado no lugar errado ou corrompido). Baixe a versão mais recente do [Homebrew Launcher](https://github.com/devkitPro/3ds-hbmenu/releases/latest) e coloque `boot.3dsx` na raiz do seu cartão SD, substituindo qualquer arquivo existente. Certifique-se de estar extraindo o arquivo ZIP com qualquer outra ferramenta que não seja o WinRAR, pois é conhecido por causar problemas com arquivos relacionados ao 3DS.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>"Scripts directory not found" in GodMode9</u></summary>
+<summary><u>"Scripts directory not found" no GodMode9</u></summary>
 
 Você não copiou a pasta `gm9` do GodMode9 `.zip` para a raiz do seu cartão SD. Baixe a versão mais recente do [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) e coloque a pasta `gm9` na raiz do seu cartão SD, combinando-a com a atual.
 {% endcapture %}
@@ -455,15 +455,15 @@ Você não copiou a pasta `gm9` do GodMode9 `.zip` para a raiz do seu cartão SD
 
 ---
 
-## Boot issues on devices with custom firmware
+## Problemas de inicialização em dispositivos com custom firmware
 
 As etapas detalhadas aqui geralmente assumem que o seu dispositivo tem uma instalação moderna de custom firmware (boot9strap + Luma3DS 8.0 ou adiante). Se o seu console está executando uma instalação homebrew mais antiga (por exemplo, algo baseado em arm9loaderhax ou menuhax), você deve atualizar sua configuração antes de tentar essas instruções.
 {: .notice--info}
 
-### Power/notification light indicators
+### Indicadores de luz de notificação ou liga/desliga
 
 {% capture compat %}
-<summary><u>My device powers off when I try to turn it on, and/or the notification LED shows a color on boot</u></summary>
+<summary><u>Meu dispositivo desliga quando eu tento ligá-lo, e/ou o LED de notificação mostra uma cor na inicialização</u></summary>
 
 Há um problema com o seu arquivo `boot.firm`. Se você estiver executando [boot9strap 1.4](https://github.com/SciresM/boot9strap/releases/tag/1.4), seu LED de notificação do 3DS poderá terá uma certa cor. Esta cor é usada para diagnosticar problemas que envolvem seu arquivo `boot.firm` no cartão SD ou na memória interna. Em versões mais antigas do boot9strap, a luz azul será desligada quase imediatamente quando tentar ligar o dispositivo.
 
@@ -480,11 +480,11 @@ Se você ouvir um "pop", potencialmente acompanhado com a tela ativando por um s
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>My device gets stuck on a black screen with blue power light staying on</u></summary>
+<summary><u>Meu dispositivo fica preso em uma tela preta com a luz azul ligada</u></summary>
 
 As etapas abaixo podem ser tentadas em qualquer ordem, mas são listadas de menos para mais demorada.
 
-1. Power off your device, remove the SD card, re-insert it, then power on your device.
+1. Desligue seu dispositivo, remova o cartão SD, insira-o novamente e ligue seu dispositivo.
 1. Desligue seu dispositivo, ejete o cartucho se houver algum inserido, ligue seu dispositivo e espere até dez minutos. Se o seu dispositivo inicializar dentro de dez minutos, o problema foi corrigido e é improvável que ocorra novamente
 1. Renomeie a pasta `Nintendo 3DS` no seu cartão SD para `Nintendo 3DS_BACKUP`, depois tente inicializar. Se o seu dispositivo for inicializado com sucesso, há algum problema com a pasta `Nintendo 3DS`. Tente limpar a extdata do Menu HOME:
 	+ Navegue até `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
@@ -505,17 +505,17 @@ As etapas abaixo podem ser tentadas em qualquer ordem, mas são listadas de meno
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-### Error message on boot
+### Mensagem de erro ao inicializar
 
 {% capture compat %}
-<summary><u>"An error has occurred: Failed to apply 1 FIRM patch(es)" or "An exception has occurred -- Current process: pm"</u></summary>
+<summary><u>"An error has occurred: Failed to apply 1 FIRM patch(es)" ou "An exception has occurred -- Current process: pm"</u></summary>
 
 Sua versão do Luma3DS está desatualizada. Baixe a versão mais recente do [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) e coloque `boot.firm` na raiz do seu cartão SD, substituindo qualquer arquivo existente. Certifique-se de estar extraindo o arquivo ZIP com qualquer outra ferramenta que não seja o WinRAR, pois é conhecido por causar problemas com arquivos relacionados ao 3DS.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>"An error has occurred. Hold down the POWER button to turn off the power..."</u></summary>
+<summary><u>"Ocorreu um erro. Segure o botão POWER para desligar..."</u></summary>
 
 Os ARM11 exception handlers estão desabilitados, ou custom firmware não está instalado. Tente habilitar os ARM11 exception handlers:
   + Desligue seu dispositivo
@@ -526,7 +526,7 @@ Os ARM11 exception handlers estão desabilitados, ou custom firmware não está 
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Blue "BOOTROM ERROR" screen</u></summary>
+<summary><u>Tela azul "BOOTROM ERROR"</u></summary>
 
 Seu dispositivo provavelmente está hard-bricked. Você precisará comprar um flashcart de ntrboot para reinstalar o boot9strap para tentar corrigir seu dispositivo. Isso também pode indicar um problema de hardware que não pode ser corrigido. De qualquer forma, entre no [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) para obter ajuda.
   + Também é possível que alguém tenha definido um splash (tela que mostra uma imagem assim que o 3DS inicia) que se pareça com um brick. Tente deixar seu dispositivo ligado, esperando na tela azul por cinco minutos.
@@ -534,16 +534,16 @@ Seu dispositivo provavelmente está hard-bricked. Você precisará comprar um fl
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Some other error</u></summary>
+<summary><u>Outro erro</u></summary>
 
 Por favor, tire uma foto do erro e entre no [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) para obter ajuda.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-## Software issues on devices with custom firmware
+## Problemas de software em dispositivos com custom firmware
 
 {% capture compat %}
-<summary><u>DSi / DS functionality is broken or has been replaced with Flipnote Studio</u></summary>
+<summary><u>A funcionalidade DSi / DS está quebrada ou foi substituída pelo Flipnote Studio</u></summary>
 
 1. Baixe a versão mais recente do [TWLFix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest) (o arquivo `.3dsx`)
 1. Desligue seu dispositivo
@@ -561,14 +561,14 @@ Por favor, tire uma foto do erro e entre no [Discord do Nintendo Homebrew](https
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>GBA Virtual Console and/or Safe Mode functionality is broken</u></summary>
+<summary><u>A funcionalidade de Console Virtual e/ou Modo de Segurança está quebrada</u></summary>
 
-Your device is running Luma3DS 6.6 or older, likely via arm9loaderhax. Você deve seguir [A9LH para B9S](a9lh-to-b9s) para atualizar seu dispositivo para um ambiente moderno de custom firmware.
+O seu dispositivo está executando o Luma3DS 6.6 ou inferior, provavelmente através do arm9loaderhax. Você deve seguir [A9LH para B9S](a9lh-to-b9s) para atualizar seu dispositivo para um ambiente moderno de custom firmware.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Extended memory mode games (Pokemon Sun/Moon, Smash, etc.) don't work</u></summary>
+<summary><u>Jogos no modo de extended memory (Pokemon Sun/Moon, Smash, etc.) não funcionam</u></summary>
 
 Isso pode ocorrer após uma CTRTransfer ou mudança de região no Old 3DS / 2DS. Você precisará formatar seu dispositivo para corrigir esse problema.
 {% endcapture %}
@@ -579,7 +579,7 @@ Isso pode ocorrer após uma CTRTransfer ou mudança de região no Old 3DS / 2DS.
 ## Outros problemas
 
 {% capture compat %}
-<summary><u>Clear HOME Menu extdata</u></summary>
+<summary><u>Limpar extdata do Menu HOME</u></summary>
 
 1. Desligue seu dispositivo
 1. Insira o cartão SD no seu computador
@@ -596,7 +596,7 @@ Isso pode ocorrer após uma CTRTransfer ou mudança de região no Old 3DS / 2DS.
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Clear HOME Menu theme data</u></summary>
+<summary><u>Limpar dados de tema do Menu HOME</u></summary>
 
 1. Desligue seu dispositivo
 1. Insira o cartão SD no seu computador
