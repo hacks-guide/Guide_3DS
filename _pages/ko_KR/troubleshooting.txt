@@ -5,25 +5,25 @@ title: "문제 해결"
 이 페이지는 흔히 일어나는 문제에 관한 해결책을 기재합니다. 만약 이 페이지의 해결책만으로 문제를 해결할 수 없다면, [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp)에 들어가서 당신의 문제와 시도한 해결책을 설명해 주세요.
 
 {% capture compat %}
-<summary>Table of Contents</summary>
+<summary>목차</summary>
 
-Used on multiple pages:
+여러 페이지에서 사용:
 * [SafeB9SInstaller](#issues-with-safeb9sinstaller)
 
-Guide pages:
+가이드 페이지:
 * [Seedminer](#seedminer)
   * [BannerBomb3](#bannerbomb3)
-  * [Installing boot9strap (USM)](#installing-boot9strap-usm)
-  * [Installing boot9strap (Fredtool)](#installing-boot9strap-fredtool)
+  * [boot9strap 설치 (USM)](#installing-boot9strap-usm)
+  * [boot9strap 설치 (Fredtool)](#installing-boot9strap-fredtool)
   * [Homebrew Launcher (PicHaxx)](#homebrew-launcher-pichaxx)
-* [Installing boot9strap (Soundhax)](#installing-boot9strap-soundhax)
-* [Installing boot9strap (SSLoth-Browser)](#installing-boot9strap-ssloth-browser)
+* [boot9strap 설치 (Soundhax)](#installing-boot9strap-soundhax)
+* [boot9strap 설치 (SSLoth-Browser)](#installing-boot9strap-ssloth-browser)
 
-* [Finalizing Setup](#finalizing-setup)
+* [마무리 단계](#finalizing-setup)
 
-Issues after installation:
-* [Boot issues](#boot-issues-on-devices-with-custom-firmware)
-* [Software issues](#software-issues-on-devices-with-custom-firmware)
+설치 이후 문제:
+* [부팅 문제](#boot-issues-on-devices-with-custom-firmware)
+* [소프트웨어 문제](#software-issues-on-devices-with-custom-firmware)
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -55,7 +55,7 @@ Issues after installation:
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Something else</u></summary>
+<summary><u>기타</u></summary>
 
 [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp)에서 도움을 요청하여, 자신이 본 메시지를 같이 보내 주세요.
 {% endcapture %}
@@ -64,7 +64,7 @@ Issues after installation:
 ## Seedminer
 
 {% capture compat %}
-<summary><u>Multiple long folder names in Nintendo 3DS folder</u></summary>
+<summary><u>Nintendo 3DS 폴더 내에 여러 개의 긴 이름 폴더가 있습니다</u></summary>
 
 ![]({{ "/images/screenshots/multiple-id0.png" | absolute_url }})
 {: .notice--info}
@@ -85,7 +85,7 @@ Issues after installation:
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Bruteforce Movable skips to step 4</u></summary>
+<summary><u>Bruteforce Movable이 step 4로 건너뜁니다</u></summary>
 
 웹사이트에서 이미 친구 코드와 ID0로 `movable.sed`를 만들어냈습니다. 제공되는 `movable.sed`를 그대로 이용하시면 됩니다.
 {% endcapture %}
@@ -108,7 +108,7 @@ Issues after installation:
 ## BannerBomb3
 
 {% capture compat %}
-<summary><u>DSiWare Management menu crashes without showing BB3 multihax menu</u></summary>
+<summary><u>DSiWare 관리 메뉴가 BB3 multihax 메뉴를 표시하지 않고 깨짐</u></summary>
 `F00D43D5.bin`이 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 폴더 내에 있는 유일한 파일이어야 합니다. 만약 그렇다면, [BannerBomb3 툴](https://3ds.nhnarwhal.com/#/bb3gen)에서 다시 생성해 주세요. 
 
 또한, `bb3.bin`이 SD 카드의 최상위 디렉토리에 있어야 합니다. 만약 없다면, [Bannerbomb3](https://github.com/lifehackerhansol/Bannerbomb3/releases/download/v3.0-lhs1/bb3.bin)의 최신 버전 (직접 다운로드)을 다운받아 `bb3.bin` 파일을 SD 카드의 최상위 디렉토리로 복사해 주세요.
@@ -118,14 +118,14 @@ Issues after installation:
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>DSiWare Management menu does not crash</u></summary>
+<summary><u>DSiWare 관리 메뉴가 스스로 꺼지지 않습니다</u></summary>
 
 `F00D43D5.bin`이 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 폴더 내에 없습니다. 폴더 `Nintendo DSiWare`의 이름에 오타가 있는지 확인해 주세요. 대소문자는 구분하지 않습니다.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>DSiWare Management shows a question mark</u></summary>
+<summary><u>DSiWare 관리 메뉴에서 물음표가 표시됩니다</u></summary>
 
 `F00D43D5.bin` 파일에 문제가 있습니다. (잘못된 파일이거나 다른 3DS용 파일) 해당 기기의 `movable.sed` 파일을 이용해, [BannerBomb3 툴](https://3ds.nhnarwhal.com/#/bb3gen)에서 `F00D43D5.bin` 파일을 다시 생성해 주세요.
 {% endcapture %}
@@ -134,14 +134,14 @@ Issues after installation:
 ## boot9strap 설치 (USM)
 
 {% capture compat %}
-<summary><u>Safe Mode system update succeeds instead of giving error 003-1099</u></summary>
+<summary><u>안전 모드의 본체 업데이트가 오류 003-1099를 표시하지 않고 성공합니다</u></summary>
 
-unSAFE_MODE가 설치되지 않았습니다. [Follow the instructions](installing-boot9strap-(usm)] to install it.
+unSAFE_MODE가 설치되지 않았습니다. [이 설명](installing-boot9strap-(usm)]을 따라 설치해주세요.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Red screen after selecting "Detailed Setup"</u></summary>
+<summary><u>"Detailed Setup"을 선택했을 때 빨간 화면이 표시됩니다</u></summary>
 
 `usm.bin` 파일이 없거나 잘못 들어갔습니다. 최신 버전의 [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/download/v1.3/usm.bin)을 다시 내려받고 `usm.bin` 파일을 SD 카드의 최상위 디렉토리에 복사해주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
 
@@ -168,63 +168,63 @@ unSAFE_MODE가 설치되지 않았습니다. [Follow the instructions](installin
 ## boot9strap 설치 (Fredtool)
 
 {% capture compat %}
-<summary><u>Error on Fredtool Injector page</u></summary>
+<summary><u>Fredtool Injector 페이지에서 오류가 발생합니다</u></summary>
 
 `movable.sed`와 DSiWare 백업 파일이 동일 기기에서 추출한 것인지 확인해 주세요. 서로 다르면 오류가 발생합니다.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Unable to select "Haxxxxxxxxx!" because the BB3 multihax menu appears</u></summary>
+<summary><u>BB3 multihax 메뉴가 표시돼 "Haxxxxxxxxx!"를 선택할 수 없습니다</u></summary>
 
 `F00D43D5.bin` 파일을 삭제하지 않았습니다. SD 카드의 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 폴더로 이동하고 `F00D43D5.bin` 파일을 삭제해 주세요.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>"Haxxxxxxxxx!" does not appear</u></summary>
+<summary><u>"Haxxxxxxxxx!"가 표시되지 않습니다</u></summary>
 
 `42383821.bin` 파일에 문제가 있습니다. (없거나, 잘못 들어갔거나, 혹은 잘못된 파일) [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec) 웹사이트에서 파일을 다시 만들어 `output.zip` -> `hax`에 있는 `42383821.bin` 파일을 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`에 정확하게 배치해 주세요.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>DS Connection Settings launches normally</u></summary>
+<summary><u>DS 소프트웨어용 설정이 정상적으로 실행됩니다</u></summary>
 
 `Haxxxxxxxxx!`가 SD 카드에서 시스템 메모리로 복사되지 않았습니다.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Black screen when launching DS Connection Settings</u></summary>
+<summary><u>DS 소프트웨어용 설정을 실행하면 검은 화면이 표시됩니다</u></summary>
 
 DS 소프트웨어용 설정 앱이 고장났으며, 고치기 위해서는 Homebrew Launcher 앱에 접근해야 합니다. [Nintendo Homebrew Discord 서버](https://discord.gg.MWxPgEp)에 오셔서 도움을 요청하세요.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>SD card is grayed out in Flipnote</u></summary>
+<summary><u>Flipnote에서 SD 카드가 회색으로 표시됩니다</u></summary>
 
 만약 큰 SD 카드를 사용하신다면, Flipnote가 오래 걸릴 수 있습니다. 몇 분 정도 기다려 주세요.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Lenny face does not appear in SD card section</u></summary>
+<summary><u>SD카드 선택에서 Lenny face가 표시되지 않습니다</u></summary>
 
 SD 카드 루트에 Frogminer_save `.zip` 안에 있는 `private` 폴더를 복사하지 않았습니다.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Flipnote freezes</u></summary>
+<summary><u>Flipnote가 멎었습니다</u></summary>
 
 수정된 Flipnote에서 실수로 터치 스크린을 건드렸을 수 있습니다. DS 소프트웨어용 설정에 다시 들어가 다시 시도하되, 터치 스크린을 실수로 누르지 않도록 주의해주세요.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Green screen after pasting</u></summary>
+<summary><u>붙여넣기 후 파란 화면이 표시됩니다</u></summary>
 
 `boot.nds` 파일이 없거나 잘못 들어갔습니다. 최신 버전의 [b9stool](https://github.com/zoogie/b9sTool/releases/latest)을 다시 내려받고 `boot.nds` 파일을 SD 카드의 최상위 디렉토리에 복사해주세요. 이미 파일이 있으면 덮어씌워 주세요.
 {% endcapture %}
@@ -232,13 +232,13 @@ SD 카드 루트에 Frogminer_save `.zip` 안에 있는 `private` 폴더를 복�
 
 
 {% capture compat %}
-<summary><u>White screen after pasting</u></summary>
+<summary><u>붙여넣기 후 하얀 화면이 표시됩니다</u></summary>
 `boot.nds` 파일에 문제가 있습니다. 최신 버전의 [b9stool](https://github.com/zoogie/b9sTool/releases/latest)을 다시 내려받고 `boot.nds` 파일을 SD 카드의 최상위 디렉토리에 복사해주세요. 이미 파일이 있으면 덮어씌워 주세요.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Unable to open Luma3DS configuration menu after running B9STool</u></summary>
+<summary><u>B9STool을 실행한 후 Luma3DS 설정 메뉴를 실행할 수 없습니다</u></summary>
 
 boot9strap이 정상적으로 설치되지 않았을 수 있습니다. [이 페이지](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)의 섹션 B를 따라주세요.
 {% endcapture %}
@@ -247,7 +247,7 @@ boot9strap이 정상적으로 설치되지 않았을 수 있습니다. [이 페�
 ## Homebrew Launcher (PicHaxx)
 
 {% capture compat %}
-<summary><u>"An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)</u></summary>
+<summary><u>에러가 발생했습니다. 본체의 전원 버튼을 길게 눌러 전원을 끈 후..." (검은 화면에 텍스트)</u></summary>
 
 `00000001.sav` 또는 `otherapp.bin` 파일이 잘못 들어갔습니다. `00000000.sav`가 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00004000` -> 0017c100` -> `data` 안에 있고 `otherapp.bin`이 SD카드 최상위 디렉토리에 있는지 다시 한 번 확인해주세요.
 
@@ -256,21 +256,21 @@ boot9strap이 정상적으로 설치되지 않았을 수 있습니다. [이 페�
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>"An exception occurred" or Errdisp when opening Picross</u></summary>
+<summary><u>피크로스 실행 중 "An exception occurred" 또는 오류 화면이 표시됩니다</u></summary>
 
 이 기기는 이미 커스텀 펌웨어가 설치되어 있습니다. [CFW 확인](checking-for-cfw) 을 하는 것을 권장합니다.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>"An error has occurred, forcing the software to close..." (white message box)</u></summary>
+<summary><u>"에러가 발생하여 소프트웨어를 종료합니다..." (하얀 메시지 창)</u></summary>
 
 `otherapp.bin` 파일에 문제가 있습니다. 최신 버전의 [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest)를 다운받아, `otherapps_with_CfgS` 폴더 안에 있는 기기에 맞는 `.bin` 파일을 SD 카드의 최상위 디렉토리로 복사해 `otherapp.bin`으로 이름을 변경해주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Game starts normally</u></summary>
+<summary><u>게임이 정상적으로 실행됩니다</u></summary>
 
 수정된 `00000001.sav` 파일이 잘못 들어갔거나, 다른 `movable.sed` 파일로 생성했습니다. [Bruteforce Movable](https://seedminer.hacks.guide)에서 `movable.sed`를 다시 생성해, [PicHaxx Save Tool](https://3dstools.nhnarwhal.com/#/pichaxx)에서 세이브 파일을 다시 생성, 결과 파일(`00000001.sav`)을 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00004000` -> `0017c100` -> `data`에 복사해 주세요.
 {% endcapture %}
@@ -279,7 +279,7 @@ boot9strap이 정상적으로 설치되지 않았을 수 있습니다. [이 페�
 ## boot9strap 설치 (Soundhax)
 
 {% capture compat %}
-<summary><u>Red/purple/pink and white screen after running Soundhax</u></summary>
+<summary><u>Soundhax를 실행하면 빨간색/보라색/분홍색 혹은 하얀색 화면이 표시됩니다</u></summary>
 
 기기가 시스템 버전 9.4.0 ~ 9.6.0이라면, universal-otherapp의 구버전에서 발생하는 오류가 발생했을 가능성이 큽니다. [여기](https://github.com/TuxSH/universal-otherapp/releases/latest)에서 최신 버전으로 다운로드해주세요.
 
@@ -288,7 +288,7 @@ boot9strap이 정상적으로 설치되지 않았을 수 있습니다. [이 페�
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>"An error has occurred, forcing the software to close..." (white message box)</u></summary>
+<summary><u>"에러가 발생하여 소프트웨어를 종료합니다..." (하얀 메시지 창)</u></summary>
 
 `otherapp.bin` 파일에 문제가 있습니다. (없거나, 잘못 들어갔거나, 혹은 잘못된 파일) 최신 버전의 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)을 다시 내려받아 SD 카드의 최상위 디렉토리에 복사해주세요.
 {% endcapture %}
@@ -326,7 +326,7 @@ boot9strap이 정상적으로 설치되지 않았을 수 있습니다. [이 페�
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>"An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)</u></summary>
+<summary><u>에러가 발생했습니다. 본체의 전원 버튼을 길게 눌러 전원을 끈 후..." (검은 화면에 텍스트)</u></summary>
 
 `arm11code.bin` 파일이 없거나 잘못 들어갔습니다. 최신 버전의 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)을 내려받아 `otherapp.bin` 파일을 SD 카드의 최상위 디렉토리에 복사하고, 이름을 `arm11code.bin`으로 변경해 주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
 {% endcapture %}
@@ -334,7 +334,7 @@ boot9strap이 정상적으로 설치되지 않았을 수 있습니다. [이 페�
 
 
 {% capture compat %}
-<summary><u>"An error has occurred, forcing the software to close..." (white message box)</u></summary>
+<summary><u>"에러가 발생하여 소프트웨어를 종료합니다..." (하얀 메시지 창)</u></summary>
 
 `arm11code.bin`에 문제가 있습니다. 최신 버전의 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)을 내려받아 `otherapp.bin` 파일을 SD 카드의 최상위 디렉토리에 복사하고, 이름을 `arm11code.bin`으로 변경해 주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
 {% endcapture %}
@@ -515,7 +515,7 @@ Luma3DS 구 버전이 설치되있습니다. 최신 버전의 [Luma3DS](https://
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>"An error has occurred. Hold down the POWER button to turn off the power..."</u></summary>
+<summary><u>에러가 발생했습니다. Hold down the POWER button to turn off the power..."</u></summary>
 
 ARM11 오류 핸들러가 꺼져있거나, 커스텀 펌웨어가 정상적으로 설치되지 않았습니다. ARM11 오류 핸들러를 활성화해보세요:
   + 기기를 종료해 주세요
