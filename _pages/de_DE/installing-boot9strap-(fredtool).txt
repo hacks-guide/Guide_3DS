@@ -24,17 +24,8 @@ This is a currently working implementation of the "FIRM partitions known-plainte
 
 #### Abschnitt I - CFW Check
 
-As an additional safety measure, we will perform an additional check for custom firmware. This is because using this method when custom firmware is already installed has a risk of bricking the console (rendering it unusable without recovery methods like [ntrboot](ntrboot)).
+{% include_relative include/cfw-check-fredtool.txt %}
 
-1. Schalte deinen 3DS aus
-1. Hold the (Select) button
-1. Power on your device while still holding the (Select) button
-1. If the check was successful, you will boot to the HOME Menu and you may proceed with this guide
-1. Schalte deinen 3DS aus
-
-If you see a configuration menu or the console immediately powers off, you already have CFW, and continuing with these instructions may BRICK your device! Folge [Überprüfen nach CFW](checking-for-cfw), um deine bestehende CFW zu aktualisieren.
-{: .notice--danger}
-    
 #### Section II - BannerBomb3
 
 In this section, you will trigger the BannerBomb3 exploit using the DSiWare Management menu and copy the resulting file dump to your computer so that you can use it on the next section.
@@ -95,29 +86,7 @@ In this section, you will copy the hacked DS Connection Settings DSiWare to inte
 
 #### Abschnitt V - Flipnote Exploit
 
-If you would prefer a visual guide to this section, one is available [here](https://zoogie.github.io/web/flipnote_directions/).
-{: .notice--info}
-
-In this section, you will perform a series of very specific steps within Flipnote Studio that, when performed correctly, will launch the boot9strap (custom firmware) installer.
-
-1. Complete the initial setup process for the launched game until you reach the main menu
-  + Select the left option whenever prompted during the setup process
-1. Using the touch-screen, select the large left box, then select the box with an SD card icon
-1. Once the menu loads, select the face icon, then the bottom right icon to continue
-1. Press (X) or (UP) on the D-Pad depending on which is shown on the top screen
-1. Select the second button along the top with a film-reel icon
-1. Scroll right until reel "3/3" is selected
-1. Tap the third box with the letter "A" in it
-1. Scroll left until reel "1/3" is selected
-1. Tap the fourth box with the letter "A" in it
-1. If the exploit was successful, your device will have loaded b9sTool
-1. Using the D-Pad, move to "Install boot9strap"
-  + If you miss this step, the system will exit to HOME Menu instead of installing boot9strap and you will need to open System Settings, then start over from Step 6 of Section IV
-1. Press (A), then press START and SELECT at the same time to begin the process
-1. Once completed and the bottom screen says "done.", exit b9sTool, then power off your device
-  + Unter Umständen musst du das Ausschalten der Konsole erzwingen indem du den Power-Knopf gedrückt hälst
-  + If your device shuts down when you try to power it on, ensure that you have copied `boot.firm` from the Luma3DS `.zip` to the root of your SD card
-  + If you see the Luma Configuration screen, power off your device and continue to the next section
+{% include_relative include/install-boot9strap-b9stool.txt method="dsinternet" %}
 
 #### Section VI - Luma3DS Configuration
 
@@ -127,9 +96,7 @@ In this section, you will perform a series of very specific steps within Flipnot
   + If you boot to HOME Menu, [follow this troubleshooting guide](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)
 1. Drücke (Start) zum Speichern und neustarten
 
-At this point, your console will boot to Luma3DS by default.
-  + Luma3DS does not look any different from the normal HOME Menu. If your console has booted into the HOME Menu, it is running custom firmware.
-  + On the next page, you will install useful homebrew applications to complete your setup.
+{% include_relative include/luma3ds-installed-note.txt %}
 
 #### Section VII - Restoring DS Connection Settings
 
