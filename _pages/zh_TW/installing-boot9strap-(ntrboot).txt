@@ -46,14 +46,12 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 1. 按住『電源』鍵 +『Start』鍵 +『Select』鍵+『X』鍵個幾秒，並放開
   + 您可能得多試幾次，因為這組合有些難按
 1. 如果一切成功的話，您將自動進入 SafeB9SInstaller
+1. 從您的主機上移開磁鐵
+  + 舊型 2DS 可直接關閉睡眠模式開關
 
 #### 第三節 — 安裝 boot9strap
 
-1. 從您的主機上移開磁鐵
-  + 舊型 2DS 可直接關閉睡眠模式開關
-1. 出現提示時，輸入上方螢幕所顯示的按鍵組合以安裝 boot9strap
-1. 完成後，透過長按電源紐以強制關機
-  + 除非您完成下節，否則您只能開機至 SafeB9SInstaller 中
+{% include_relative include/install-boot9strap-safeb9sinstaller.txt isbootfirm="true" %}
 
 #### 第四節 — 設定 Luma3DS
 
@@ -62,16 +60,9 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 1. 解壓 Luma3DS `.zip` 內的 `boot.firm` 到 SD 卡的根目錄底下
 1. 將 SD 卡插回主機中
 1. 啟動您的主機
-1. 您的主機將會啟動至 Luma3DS 設定選單中
-  + Luma3DS configuration menu are settings for the Luma3DS custom firmware. Many of these settings may be useful for customization or debugging
-  + For the purpose of this guide, these settings will be left on default settings
-  + If your device shuts down when you try to power it on, ensure that you have copied `boot.firm` from the Luma3DS `.zip` to the root of your SD card
-1. 按『Start』鍵以存檔並重新啟動系統
-  + 如果您遇到了錯誤訊息，繼續到下一頁即可
+{%- include_relative include/configure-luma3ds.txt %}
 
-At this point, your console will boot to Luma3DS by default.
-  + Luma3DS 不會特別在 HOME 主選單中新增任何特別的東西。 如果你的主機已經啟動到了 HOME 主選單，這代表自製韌體已經在運行了。
-  + On the next page, you will install useful homebrew applications to complete your setup.
+{% include_relative include/luma3ds-installed-note.txt %}
 
 
 ___
