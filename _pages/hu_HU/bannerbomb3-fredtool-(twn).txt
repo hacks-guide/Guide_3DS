@@ -24,13 +24,7 @@ Ezek a lépések CSAK tajvani konzolokhoz jók (amit T betű jelez a rendszer ve
 
 #### I. rész - CFW ellenőrzés
 
-1. Kapcsold ki a készüléked
-1. Nyomd le és tartsd nyomva (Select) gombot
-1. Kapcsold be az eszközöd, miközben nyomva tartod a (Select) gombot
-1. Ha az ellenőrzés sikeres volt, be fogsz bootolni a HOME Menübe és végrehajthatod ezt az útmutatót
-
-Ha a konfigurációs menüt látod, már van CFW-d és az útmutató folyatása BRICKELHETI az eszközödet! Kövesd a [CFW ellenőrzését](checking-for-cfw) a már meglévő CFW-d frissítéséhez.
-{: .notice--danger}
+{% include_relative include/cfw-check-fredtool.txt %}
 
 #### II. rész - Előkészületek
 
@@ -42,7 +36,7 @@ Ha a konfigurációs menüt látod, már van CFW-d és az útmutató folyatása 
 1. Másold át a `private` mappát a Frogminer_save `.zip`-ből az SD kártyád gyökerébe
 1. Maradjon az SD kártya a számítógépedben - további teendő lesznek még vele a következő fejezetben
 
-![]({{ "/images/screenshots/fredtool-root-layout.png" | absolute_url }})
+![]({{ "/images/screenshots/fredtool/fredtool-twn-root-layout.png" | absolute_url }})
 {: .notice--info}
 
 #### III. rész - BannerBomb3
@@ -112,27 +106,7 @@ Ha a konfigurációs menüt látod, már van CFW-d és az útmutató folyatása 
 
 #### V. rész - Flipnote Exploit
 
-Ha inkább egy vizuális útmutatót szeretnél ehhez a fejezethez, [itt](https://zoogie.github.io/web/flipnote_directions/) elérhető egy.
-{: .notice--info}
-
-1. Fejezd be a kezdeti telepítését az elindított játéknak, amíg el nem éri a fő menüt
-  + Válassza a bal opciót, ha kérdezi a telepítési folyamat során
-1. Az érintőképernyőt használva válaszd ki a bal nagy dobozt, majd válaszd a dobozt az SD kártya ikonnal
-1. Ha a menü betöltött válaszd az arc ikont utána, pedig a jobb alsó ikont a folytatáshoz
-1. Nyomj (X)-et vagy (Fel)-t a D-Pad-on, attól függően mi jelenik meg a képernyőn
-1. Válaszd a második gombot a film-szalag ikonnal
-1. Görgess jobbra, amíg a 3/3 filmtekercs kiválasztásra kerül
-1. Nyomd meg a harmadik dobozt benne az "A" betűvel
-1. Görgess balra, amíg a 1/3 filmtekercs kiválasztásra kerül
-1. Nyomd meg a negyedik dobozt benne az "A" betűvel
-1. Ha az exploit sikeres volt, a készülékedek ezt követően be kell töltenie a b9sTool-t
-1. A D-Pad-dal menj az "Install boot9strap" opcióra
-    + Ha kihagytad ez a lépést a rendszer a home menübe kerülsz a boot9strap telepítése helyett, és meg kell nyitnod a S Download Play-t és elölről kell kezdened a ennek a résznek az elejétől
-1. Nyomj (A)-t majd ezt követően START-ot és SELECT-et egyszerre a folyamat elkezdéséhez
-1. Ha végzett és az alsó képernyő azt mondja "done.", lépj ki a b9sTool-ból, majd kapcsold ki eszközöd
-    + Elképzelhető, hogy kényszerítened kell a leállást a bekapcsológomb lenyomva tartásával
-    + Ha a készüléked kikapcsol amikor bekapcsolod, bizonyosodj meg róla, hogy átmásoltad-e a `boot.firm` fájlt a Luma3DS `.zip` fájlból az SD kártya gyökerébe
-  + Ha a Luma konfigurációs képernyőjét látod, kapcsold ki az eszközöd, majd folytasd a következő résszel
+{% include_relative include/install-boot9strap-b9stool.txt method="dsdlp" %}
 
 #### VI. rész - Luma3DS beállítás
 
