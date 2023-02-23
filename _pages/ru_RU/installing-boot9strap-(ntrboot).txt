@@ -46,14 +46,12 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 1. На несколько секунд зажмите кнопки (Start) + (Select) + (X) + (Power), затем отпустите
   + Может потребоваться несколько попыток, поскольку позиционирование неудобное
 1. Если эксплойт сработал, запустится SafeB9SInstaller
+1. Уберите магнит с вашей консоли
+  + На консоли old 2DS вместо этого выключите переключатель режима ожидания
 
 #### Часть III - Установка boot9strap
 
-1. Уберите магнит с вашей консоли
-  + На консоли old 2DS вместо этого выключите переключатель режима ожидания
-1. When prompted, input the key combo given on the top screen to install boot9strap
-1. Once it is completed, force your device to power off by holding down the power button
-  + Ваша консоль будет загружаться только в SafeB9SInstaller до выполнения следующей части
+{% include_relative include/install-boot9strap-safeb9sinstaller.txt isbootfirm="true" %}
 
 #### Часть IV - Настройка Luma3DS
 
@@ -62,16 +60,9 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 1. Скопируйте файл `boot.firm` из `.zip-архива` Luma3DS в корень SD-карты
 1. Вставьте SD-карту обратно в консоль
 1. Включите консоль
-1. Ваша консоль должна загрузиться в меню конфигурации Luma3DS
-  + Luma3DS configuration menu are settings for the Luma3DS custom firmware. Many of these settings may be useful for customization or debugging
-  + For the purpose of this guide, these settings will be left on default settings
-  + If your device shuts down when you try to power it on, ensure that you have copied `boot.firm` from the Luma3DS `.zip` to the root of your SD card
-1. Нажмите (Start), чтобы сохранить настройки и перезагрузиться
-  + If you get an error, just continue to the next page
+{%- include_relative include/configure-luma3ds.txt %}
 
-At this point, your console will boot to Luma3DS by default.
-  + Luma3DS does not look any different from the normal HOME Menu. If your console has booted into the HOME Menu, it is running custom firmware.
-  + On the next page, you will install useful homebrew applications to complete your setup.
+{% include_relative include/luma3ds-installed-note.txt %}
 
 
 ___
