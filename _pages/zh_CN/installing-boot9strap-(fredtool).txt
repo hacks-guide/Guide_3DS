@@ -24,17 +24,8 @@ title: "安装 boot9strap（通过 Fredtool）"
 
 #### 第一步 – 检查自制固件
 
-我们将预先检查主机是否安装了自制固件，以确保安装能够安全进行。 因为如果主机已经安装了自制固件，使用此方法再次安装可能会导致主机变砖（导致其无法开机，只能使用 [ntrboot](ntrboot) 之类的方法恢复。）
+{% include_relative include/cfw-check-fredtool.txt %}
 
-1. 将主机关机
-1. 按住 “Select” 键
-1. 在按住 “Select” 键的同时按下电源键开机
-1. 如果主机自动启动到了主菜单，则测试成功，你可以继续做此教程中的余下内容
-1. 将主机关机
-
-如果主机进入到了一个配置菜单或者直接关机了，那就表示你的主机之前已经安装过自制固件了。**如果继续操作的话可能会导致主机变砖！** 继续至[检查自制固件](checking-for-cfw)来更新你现有的自制固件。
-{: .notice--danger}
-    
 #### 第二步 – BannerBomb3
 
 本节中，你将会使用 DSiWare 数据管理菜单触发 BannerBomb3 漏洞，并利用它导出一个在下一个步骤中需要使用的文件。
@@ -75,7 +66,7 @@ title: "安装 boot9strap（通过 Fredtool）"
   + 根目录指的是你点进 SD 卡看到的目录，你可以在这个目录下看到 Nintendo 3DS 文件夹，但请不要点进去
 1. 复制 `boot.nds` （B9STool）到你的 SD 卡根目录
 1. 从 Frogminer_save `.zip` 压缩包中复制 `private` 文件夹到内存卡的根目录
-1. 将 SD 卡重新插入你的主机
+1. 将SD卡重新插入你的主机
 1. 启动你的主机
 
     ![]({{ "/images/screenshots/fredtool/fredtool-root-layout.png" | absolute_url }})
@@ -95,29 +86,7 @@ title: "安装 boot9strap（通过 Fredtool）"
 
 #### 第五步 – 触发 Flipnote 漏洞
 
-如果你需要图片帮助，请点击 [这里](https://zoogie.github.io/web/flipnote_directions/)。
-{: .notice--info}
-
-本节中，你将要在 Flipnote Studio 中进行一些非常特殊的步骤，一旦全部操作正确，你将直接进入 boot9strap（自制固件）安装器。
-
-1. 完成游戏的初始设置，直到进入主菜单为止
-  + 在出现提示时，选择左边的 “我不需要(いらない)” 选项
-1. 使用触摸屏点击 “メモを見る” 并选择 “SD カード”
-1. 菜单载入后，点击( ͡° ͜ʖ ͡°) 图标，然后点击右下角的按钮继续
-1. 通过上屏所示的选项，通过 “X” 键或十字键的 “↑” 键来选择
-1. 使用触摸屏点击胶卷按钮
-1. 向右移动到 “3/3”
-1. 点击第三个带有 “A” 的框
-1. 向左移动到 “1/3”
-1. 点击第四个带有 “A” 的框
-1. 如果漏洞成功执行，你的主机将会进入到 b9sTool
-1. 使用十字键将光标移动至“Install boot9starp”
-  + 如果你漏了这步，系统将重启到桌面而非安装 boot9strap，你需要重新打开系统设置，然后从本页教程第四步下的第6步开始
-1. 按下 “A” 键，然后同时按下 START 键和 SELECT 键来开始安装
-1. 一旦下屏显示 “done.” ，那么安装就已经完成了。退出b9stool ，然后关机
-  + 你可能需要长按电源键强制关机
-  + 如果你的主机在你尝试开机后自动关机了，请确认你已经从 Luma3DS `.zip` 中复制了 `boot.firm` 文件到你的 SD 卡根目录中
-  + 如果你看到了 Luma 的配置菜单，请关机然后继续下一个大步骤
+{% include_relative include/install-boot9strap-b9stool.txt method="dsinternet" %}
 
 #### 第四部分 — 配置 Luma3DS
 
@@ -127,9 +96,7 @@ title: "安装 boot9strap（通过 Fredtool）"
   + 如果你的主机直接启动到了主菜单，则请[参见此故障排查手册](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)
 1. 按下 “Start” 键保存设置并重启
 
-这时，你的主机默认将会自动启动 Luma3DS。
-  + Luma3DS 不会给正常的主菜单增添任何看上去十分特别的东西。 如果你的主机现在已经启动到主菜单了，说明自制固件已经在运行了。
-  + 在下一页中，我们将会教你安装一些有用的自制程序来完成安装步骤。
+{% include_relative include/luma3ds-installed-note.txt %}
 
 #### 第七步 – 还原 “DS 连接设置（DS Connection Settings）”
 
