@@ -1,20 +1,20 @@
 ---
-title: "Key Information"
+title: "주요 내용"
 ---
 
 {% include toc title="목차" %}
 
-If this is your first time modding a 3DS (or you're unfamiliar with technology), keep reading! Otherwise, if you have prior experience and know what you're doing, continue to [Get Started](get-started).
+만약 이번이 3DS를 처음으로 모딩하는 것 (혹은 모딩에 익숙하지 않다면) 이라면, 계속 정독하세요! 반면, 사전에 모딩을 해봤거나 할 줄 안다면, [시작하기](get-started) 페이지로 계속하세요.
 {: .notice--info}
 
-This page covers some of the base computer terminology and 3DS-specific information that you should know before following this guide.
+이 페이지는 일부 컴퓨터 용어를 다루고, 이 가이드를 따르기 전에 당신이 알아야 할 3DS의 특정한 정보가 담겨있습니다.
 
-Each section is collapsed by default. Click or tap on the name of the section to open it.
+각 섹션은 기본으로 축소되어 있습니다. 섹션 이름을 탭하거나 클릭해서 여십시오.
 
-## Things you should know about the 3DS
+## 3DS에 대해 알고 있어야 할 것들
 
 {% capture compat %}
-<summary><strong>3DS/2DS compatibility</strong></summary>
+<summary><strong>3DS/2DS 호환성</strong></summary>
 ![]({{ "/images/screenshots/onboarding/compatible.png" | absolute_url }})
 {: .notice--info}
 
@@ -24,7 +24,7 @@ This guide works with every retail device in the Nintendo 3DS family of consoles
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><strong>Computer compatibility</strong></summary>
+<summary><strong>컴퓨터 호환성</strong></summary>
 ![]({{ "/images/screenshots/onboarding/os.jpg" | absolute_url }})
 {: .notice--info}
 You can follow this guide as long as you are able to download files from the Internet and copy them to your SD card. Depending on your computer/phone/electronic device, you may need to purchase a USB to SD card adapter to allow your computer to read your SD card.
@@ -33,16 +33,16 @@ You can follow this guide as long as you are able to download files from the Int
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><strong>SD card location, type, and capacity</strong></summary>
+<summary><strong>SD카드 경로, 종류, 용량</strong></summary>
 ![]({{ "/images/screenshots/onboarding/sdcard.jpg" | absolute_url }})
 {: .notice--info}
 
-The location of the SD card slot and the type of SD card that is accepted depends on the model of your 3DS. More information can be found on [Nintendo's official support page](https://en-americas-support.nintendo.com/app/answers/detail/a_id/271/~/how-to-insert-an-sd-card-or-microsd-card).
+3DS 모델에 따라 SD카드 슬롯의 위치나 호환되는 종류가 다릅니다. More information can be found on [Nintendo's official support page](https://en-americas-support.nintendo.com/app/answers/detail/a_id/271/~/how-to-insert-an-sd-card-or-microsd-card).
 
 
 The 3DS can read SD cards of any capacity (even those larger than 32GB), but the card must be formatted as FAT32 (**not** exFAT or NTFS). You can use one of the following tools to format your SD card, depending on your operating system: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)).
 
-To follow this guide, you'll need an SD card with a capacity of at least **2GB**.
+이 가이드를 따르려면, 적어도 **2GB**용량의 SD 카드를 사용해야 합니다.
 {: .notice--warning}
 
 If you want, you can check your SD card for errors before following this guide using [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), or [F3XSwift (Mac)](f3xswift-(mac))
@@ -52,57 +52,57 @@ If you want, you can check your SD card for errors before following this guide u
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><strong>Potential risks</strong></summary>
+<summary><strong>잠재적 위험성</strong></summary>
 
-By modding your device, you subject it to the remote (but non-zero) possibility of the device being banned from online play or bricked (rendered non-functional). ___Incorrect file placement will NOT brick your device___, but purposely skipping instructions might. Similarly, the last ban wave occurred over five years ago, but there is no guarantee that another one will not occur in the future.
+기기를 수정함으로서, 여러분은 온라인 플레이로부터 차단되거나 벽돌이 되는 것(기기가 작동하지 않는 현상)에 대한 희박한, 하지만 0은 아닌 가능성을 염두에 두어야 합니다. __파일을 잘못 넣는다고 기기가 벽돌이 되지는 않지만__, 의도적으로 순서를 건너뛴다면 벽돌이 될 수도 있습니다. 비슷하게, 마지막 대량 밴은 5년 이상 전에 진행되었지만, 미래에 그런 일이 절대로 벌어지지 않는다고 단정지을 수 없습니다.
 
-In short: Modding your device is safe, but it's ___your responsibility___ if something goes wrong.
+요약하자면: 기기를 수정하는 것은 안전하지만, 뭔가 잘못되었다면 그것은 __여러분의 책임__입니다.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 {: .notice--warning}
 
-## Things you need to do on your computer
+## 컴퓨터에서 해야 할 일
 
 {% capture compat %}
-<summary><strong>Downloading and copying files</strong></summary>
+<summary><strong>파일 다운로드 및 복사</strong></summary>
 ![]({{ "/images/screenshots/onboarding/github.png" | absolute_url }})
 {: .notice--info}
 
-In this guide, you will copy files that are downloaded on your computer/phone to your 3DS SD card. Many of these files come from GitHub, so refer to the above screenshot if you're unfamiliar with how to download files from there.
+이 가이드를 통해, 여러분은 컴퓨터나 핸드폰으로 다운받은 파일을 3DS의 SD 카드로 복사하게 됩니다. 많은 파일은 GitHub에서 받게 되니, 그곳에서 파일을 어떻게 받는지에 익숙하지 않다면 위 스크린샷을 숙지해주세요.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><strong>Opening/extracting files</strong></summary>
+<summary><strong>파일 열기 및 압축 해제</strong></summary>
 ![]({{ "/images/screenshots/onboarding/zipfiles.png" | absolute_url }})
 {: .notice--info}
 
-Some of the files that you will be asked to download come in the `.zip` file format, which is used to package multiple files into one file.
+다운로드받을 몇몇 파일은 여러 파일을 하나로 묶기 위한 `.zip` 파일 형식입니다.
 
-When you are told to "copy (file) from (file).zip", that means that you need to open (or "extract") the ZIP file. Inside the ZIP file will be the file you're looking for, after which you can copy it to the specified location on your SD card.
+"(파일).zip에서 (파일)을 복사하세요"와 같은 말이 나오면, 이것은 해당 ZIP 파일을 열어야(혹은 "압축 해제"해야) 함을 뜻합니다. ZIP 파일 내에서 파일을 찾으면, 그 파일을 SD 카드의 특정 위치로 복사하면 됩니다.
 
-On most operating systems, you can extract files by double-clicking the file. If this doesn't work, you can install a reputable third-party extraction tool like [7-zip](https://7-zip.org/) instead.
+대부분의 환경에서는 파일을 두 번 클릭하는 것으로 파일 추출이 가능합니다. If this doesn't work, you can install a reputable third-party extraction tool like [7-zip](https://7-zip.org/) instead.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><strong>(Windows only) File extensions</strong></summary>
+<summary><strong>(Windows에서) 파일 확장자</strong></summary>
 ![]({{ "/images/screenshots/onboarding/fileext.png" | absolute_url }})
 {: .notice--info}
 
-If your computer is running Windows, file extensions may be hidden by default, which may make it harder to find the files you're looking for. To enable file extensions, follow [these instructions](file-extensions-(windows)).
+만약 Windows를 사용하고 있다면, 파일 확장자는 기본적으로 숨겨져 있으며 이 때문에 파일을 찾기가 더욱 어렵습니다. 파일 확장자를 표시하려면, [이 설명](file-extensions-(windows))을 따라주세요.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-## Getting help
+## 도움 받기
 
-If you experience an issue while following this guide, there are many ways that you can get help!
+만약 이 가이드를 따라가다 문제가 발생했다면, 도움을 받을 수 있는 경로도 여러 가지입니다!
 
 - If you have any questions that haven't been answered on this page, their answers might be in the [Pre-Installation FAQ](faq#pre-installation-faq).
 - If you experience an issue while following this guide, you can check the [Troubleshooting](troubleshooting) page for a solution.
-- If the resources we've provided here aren't helping, you can get one-on-one support over at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+- 제공해드리는 정보들이 딱히 도움이 되지 않는다면, [Discord의 Nintendo Homebrew](https://discord.gg/MWxPgEp)에서 (영어로) 1:1 지원을 요청할 수 있습니다.
 
-Continue to [Get Started](get-started)
+[시작하기](get-started)로 계속합니다
 {: .notice--primary}
