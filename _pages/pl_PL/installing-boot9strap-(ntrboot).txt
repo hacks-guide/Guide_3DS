@@ -46,14 +46,12 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 1. Wciśnij i przytrzymaj (Start) + (Select) + (X) oraz przycisk zasilania na kilka sekund a następnie puść przyciski
   + Może to zająć kilka prób ponieważ pozycja przycisków jest niewygodna
 1. Jeśli operacja zakończyła się pomyślnie, uruchomi się SafeB9SInstaller
+1. Zdejmij magnes ze swojego urządzenia
+  + Na Old 2DS, zamiast tego powinieneś zablokować przełącznik sleep mode
 
 #### Sekcja III - Instalacja boot9strap
 
-1. Zdejmij magnes ze swojego urządzenia
-  + Na Old 2DS, zamiast tego powinieneś zablokować przełącznik sleep mode
-1. When prompted, input the key combo given on the top screen to install boot9strap
-1. Once it is completed, force your device to power off by holding down the power button
-  + Twoje urządzenie będzie teraz uruchamiać tylko SafeB9SInstaller dopóki nie wykonasz następnej sekcji
+{% include_relative include/install-boot9strap-safeb9sinstaller.txt isbootfirm="true" %}
 
 #### Sekcja IV - Konfigurowanie Luma3DS
 
@@ -62,16 +60,9 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 1. Copy `boot.firm` from the Luma3DS `.zip` to the root of your SD card
 1. Włóż ponownie kartę SD do konsoli
 1. Włącz konsolę
-1. Twoje urządzenie powinno uruchomić się i załadować menu konfiguracji Luma3DS
-  + Luma3DS configuration menu are settings for the Luma3DS custom firmware. Many of these settings may be useful for customization or debugging
-  + For the purpose of this guide, these settings will be left on default settings
-  + If your device shuts down when you try to power it on, ensure that you have copied `boot.firm` from the Luma3DS `.zip` to the root of your SD card
-1. Naciśnij (Start) aby zapisać zmiany i uruchomić konsolę ponownie
-  + If you get an error, just continue to the next page
+{%- include_relative include/configure-luma3ds.txt %}
 
-At this point, your console will boot to Luma3DS by default.
-  + Luma3DS does not look any different from the normal HOME Menu. If your console has booted into the HOME Menu, it is running custom firmware.
-  + On the next page, you will install useful homebrew applications to complete your setup.
+{% include_relative include/luma3ds-installed-note.txt %}
 
 
 ___
