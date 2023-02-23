@@ -113,55 +113,18 @@ title: "安装 boot9strap（通过 kartdlphax）"
 
 #### 第四步 – unSAFE_MODE
 
-本节中，你将会进入安全模式（一个所有 3DS 系列主机都有的功能），然后进入一个会触发 unSAFE_MODE 漏洞的菜单，并启动 boot9strap（自制固件）安装器。
-
-1. 将你的主机置于关机状态，按住 L + R + ↑ + A 四个按键，然后按下电源键
-  + 按住这几个按钮，直到主机进入安全模式（一个“系统更新”菜单）
-  + 如果你试了很多次依然无法进入安全模式，则也许这四个按键中有一个按错了，或是坏掉了。 如果确实如此，请加入 [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) 并使用英文求助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497。
-1. 点击 “OK” 来允许更新
-  + 这个步骤实际上不存在更新。 这只是触发漏洞的一部分
-1. 点击 “I accept（我同意/同意する）”
-1. 更新最终将失败，然后报出 `003-1099` 的错误。 这是剧本中的一部分
-1. 当系统问你“你想要配置互联网设置吗？（Would you like to configure Internet settings?）”时，点击 “Yes”
-1. 在菜单中，依次进入 `连接点 1（接線先1/Connection 1）` -> `更改设置（設定変更/Change Settings）` -> `下一页（右箭头）` -> `代理设置（Proxy/Proxy Settings）` -> `详细设置（詳細設定/Detailed Setup）`（[例图](/images/screenshots/bb3/safemode_highlighted.png)）
-1. 如果漏洞执行成功，你的主机将会进入到 SafeB9SInstaller
+{% include_relative include/exploit-usm.txt method="kartdlphax" %}
 
 #### 第五步 – 安装 boot9strap
 
-本节中，你将会把自制固件安装到你的主机中。
+{% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
+{%- include_relative include/configure-luma3ds.txt %}
 
-1. 出现提示时，按照上屏的提示输入按键组合来安装 boot9strap
-  + 如果上屏白屏，则请强制关机然后重做第三步
-1. 安装完成后，按下 “A” 键重启主机
-1. 你的目标 3DS 应该已经重启到 Luma3DS 的配置菜单中
-  + Luma3DS 配置菜单用于设置 Luma3DS 自制固件的可选功能 其中有许多功能可用于个性化或调试
-  + 由于配合本手册的用途，我们将直接按照默认配置保存
-  + 如果你的主机在你尝试开机后自动关机了，请确认你已经从 Luma3DS `.zip` 中复制了 `boot.firm` 文件到你的 SD 卡根目录中
-1. 按下 “Start” 键保存设置并重启
-
-这时，你的主机默认将会自动启动 Luma3DS。
-  + Luma3DS 不会给正常的主菜单增添任何看上去十分特别的东西。 如果你的主机现在已经启动到主菜单了，说明自制固件已经在运行了。
-  + 在下一页中，我们将会教你安装一些有用的自制程序来完成安装步骤。
+{% include_relative include/luma3ds-installed-note.txt %}
 
 #### 第六步 – 还原 WiFi 配置文件
 
-本节中，你将会进入 Homebrew Launcher，然后还原第三步中被覆盖的 Wi-Fi 设置。
-
-1. 运行“下载通信(Download Play)”程序
-1. 等到你看到两个按钮
-  + 不要按任何按键
-1. 同时按下 “L” + “↓” + “Select” 键来打开 Rosalina 菜单
-1. 选择 “Miscellaneous options”
-1. 选择 “Switch the hb. title to the current app.”
-1. 按 “B” 键继续
-1. 按 “B” 键返回 Rosalina 主菜单
-1. 按 “B” 键退出 Rosalina 菜单
-1. 按下 “Home” 键，然后关闭“下载通信(Download Play)”
-1. 重新运行“下载通信（Download Play）”程序
-1. 此时你的主机应该会启动 Homebrew Launcher了
-1. 从自制程序列表中找到并启动 slotTool
-1. 选择“RESTORE original wifi slots 1,2,3”
-1. 你的主机将会重启
+{% include_relative include/remove-usm-slottool.txt %}
 
 ___
 
