@@ -24,17 +24,8 @@ Questa è un'implementazione funzionante dell'exploit del "testo in chiaro noto 
 
 #### Sezione I - Controllo del CFW
 
-Come precauzione aggiuntiva, controlleremo anche la presenza di un custom firmware. È necessario poiché se un custom firmware fosse già installato, questo metodo rischierebbe di brickare la console (rendendola inutilizzabile in assenza di metodi di ripristino come [ntrboot](ntrboot)).
+{% include_relative include/cfw-check-fredtool.txt %}
 
-1. Spegni il tuo 3DS
-1. Premi il pulsante (Select)
-1. Accendi la tua console continuando a tenere premuto il pulsante (Select)
-1. Se il controllo è andato a buon fine, verrà avviato il menu HOME e potrai procedere con questa guida
-1. Spegni il tuo 3DS
-
-Se visualizzi un menu di configurazione o la console si spegne immediatamente, hai già un CFW e continuando con queste istruzioni potresti BRICKARE la tua console! Procedi con la [Verifica del CFW](checking-for-cfw) per aggiornare il tuo CFW esistente.
-{: .notice--danger}
-    
 #### Sezione II - BannerBomb3
 
 In questa sezione attiverai l'exploit BannerBomb3 utilizzando il menu Gestione Nintendo DSiWare e copierai il file dump risultante sul computer per poterlo utilizzare nella sezione successiva.
@@ -95,29 +86,7 @@ In questa sezione copierai il DSiWare modificato "Impostazioni di collegamento D
 
 #### Sezione V - Exploit Flipnote
 
-Se desideri una guida visiva per questa parte, è disponibile [qui](https://zoogie.github.io/web/flipnote_directions/).
-{: .notice--info}
-
-In questa sezione eseguirai una serie di passaggi molto specifici all'interno di Flipnote Studio che, eseguiti correttamente, avvieranno l'installazione di boot9strap (custom firmware).
-
-1. Completa la configurazione iniziale del gioco finché non avrai raggiunto il menu principale
-  + Seleziona l'opzione di sinistra quando richiesto durante la configurazione
-1. Con il touch screen, seleziona il riquadro grande a sinistra, poi il riquadro con l'icona di una scheda SD
-1. Al termine del caricamento del menu, scegli l'icona col volto, poi premi l'icona in basso a destra per proseguire
-1. Premi (X) o (SU) sul D-Pad a seconda di cosa sia visualizzato sullo schermo superiore
-1. Seleziona il secondo pulsante in cima, con l'icona di una pellicola
-1. Scorri a destra fino a visualizzare la bobina "3/3"
-1. Seleziona il terzo riquadro con la lettera "A" all'interno
-1. Scorri a sinistra fino a visualizzare la bobina "1/3"
-1. Seleziona il quarto riquadro con la lettera "A" all'interno
-1. Se l'exploit ha avuto successo, la tua console avrà caricato b9sTool
-1. Usando il D-Pad, vai su "Install boot9strap"
-  + Se salti questo passaggio, la console si riavvierà nel menu HOME senza aver installato boot9strap, e dovrai avviare "Impostazioni della console" per poi ricominciare dal passo 6 della Sezione IV
-1. Premi (A), quindi premi START e SELECT contemporaneamente per avviare il processo
-1. Al termine lo schermo inferiore presenterà la scritta "done.". Esci da b9sTool, quindi spegni la console
-  + Potresti dover forzare lo spegnimento tenendo premuto il pulsante di accensione
-  + Se la console dovesse spegnersi quando provi ad accenderla, assicurati di aver copiato il file `boot.firm` dall'archivio `.zip` di Luma3DS nella directory principale della tua scheda SD
-  + Se vedi la schermata di Configurazione Luma, spegni la tua console e procedi alla sezione successiva
+{% include_relative include/install-boot9strap-b9stool.txt method="dsinternet" %}
 
 #### Sezione VI - Configurazione di Luma3DS
 
@@ -127,9 +96,7 @@ In questa sezione eseguirai una serie di passaggi molto specifici all'interno di
   + Se viene avviato il menu HOME [segui questa guida per risolvere il problema](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)
 1. Premi (Start) per salvare e riavviare il 3DS
 
-A questo punto, la console avvierà sempre Luma3DS.
-  + Luma3DS non è diverso dal normale menu HOME. Se la console avvia il menu HOME, vuol dire che sta eseguendo il custom firmware.
-  + Nella pagina successiva installerai applicazioni homebrew utili per completare la tua installazione.
+{% include_relative include/luma3ds-installed-note.txt %}
 
 #### Sezione VII - Ripristino delle Impostazioni di Connessione DS
 
