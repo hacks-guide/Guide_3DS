@@ -47,14 +47,12 @@ title: "boot9strap 설치 (ntrboot)"
 1. (Start) + (Select) + (X) + (전원) 버튼을 몇초간 누르고 놓아 주세요
   + 이 작업을 하는데에 자세가 불편해서 여러번 시도해야 할 수 있습니다
 1. 익스플로잇이 성공적이었다면 SafeB9SInstaller로 부팅되었을 것입니다
+1. 자석을 3DS로 부터 제거해 주세요
+  + 구형 2DS에서는, 이것 대신 슬립모드 스위치를 꺼 주세요
 
 #### 섹션 III - boot9strap 설치하기
 
-1. 자석을 3DS로 부터 제거해 주세요
-  + 구형 2DS에서는, 이것 대신 슬립모드 스위치를 꺼 주세요
-1. 메시지가 나타나면, boot9strap을 설치하기 위하여 화면에 주어진 키 조합을 입력해 주세요
-1. 이 작업이 끝나면, 전원 버튼을 길게 눌러 기기를 종료해 주세요
-  + 다음 작업이 완료되기 전까지는 기기는 SafeB9SInstaller로만 부팅 됩니다
+{% include_relative include/install-boot9strap-safeb9sinstaller.txt isbootfirm="true" %}
 
 #### 섹션 IV - Luma3DS 설정
 
@@ -63,16 +61,9 @@ title: "boot9strap 설치 (ntrboot)"
 1. Luma3DS `.zip`안에 있는 `boot.firm`을 SD 카드의 루트에 복사해 주세요
 1. SD 카드를 기기에 다시 삽입해 주세요
 1. 기기를 시작해 주세요
-1. 기기는 Luma3DS 구성 메뉴로 부팅되었을 겁니다
-  + Luma3DS 구성 메뉴는 Luma3DS 커스텀 펌웨어의 설정들 입니다. 이 설정들은 디버깅 또는 맞춤화의 유용합니다
-  + 이 가이드에서는 기본 설정으로 남길 겁니다
-  + 만약 기기가 부팅시에 꺼진다면 Luma3DS `.zip` 파일 안에 압축 되있는 `boot.firm`을 SD 카드의 루트로 복사 했는지 확인해 주세요
-1. (Start)를 눌러 저장하고 기기를 다시 시작해 주세요
-  + 만약 오류가 나더라도 그냥 다음으로 넘어가 주세요
+{%- include_relative include/configure-luma3ds.txt %}
 
-이제 기기는 Luma3DS를 기본으로 부팅 됩니다.
-  + Luma3DS는 보통 HOME 메뉴와 똑같이 보입니다. 만약 기기가 HOME 메뉴로 부팅되었다면, 커스텀 펌웨어가 설치되어 있습니다.
-  + 다음 페이지에서는 커펌에 유용한 홈브류를 설치해 기기 준비를 완료할 것 입니다.
+{% include_relative include/luma3ds-installed-note.txt %}
 
 
 ___
