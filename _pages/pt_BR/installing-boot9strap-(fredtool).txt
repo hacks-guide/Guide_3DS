@@ -24,17 +24,8 @@ Esta é uma implementação funcional do exploit "FIRM partitions known-plaintex
 
 #### Seção I - Checando por CFW
 
-Como uma medida de segurança adicional, realizaremos uma verificação adicional de custom firmware. Isso é porque usar esse método quando custom firmware já está instalado tem o risco de danificar o console (renderizando-o sem métodos de recuperação como [ntrboot](ntrboot)).
+{% include_relative include/cfw-check-fredtool.txt %}
 
-1. Desligue seu dispositivo
-1. Segure o botão (Select)
-1. Ligue seu dispositivo enquanto segura o botão (Select)
-1. Se a verificação foi bem-sucedida, você iniciará no Menu HOME e poderá prosseguir com este guia
-1. Desligue seu dispositivo
-
-Se você ver um menu de configuração ou o console imediatamente desliga, você já tem CFW e continuar com estas instruções pode causar um BRICK em seu dispositivo! Siga [Checando por CFW](checking-for-cfw) para atualizar o seu CFW existente.
-{: .notice--danger}
-    
 #### Seção II - BannerBomb3
 
 Nesta seção, você irá acionar o exploit do BannerBomb3 usando o Menu de Gerenciamento de DSiWare e copiará o dump de arquivos resultantes para o seu computador para que você possa usá-lo na próxima seção.
@@ -95,29 +86,7 @@ Nesta seção, você irá copiar as Configurações de DS do DSiWare para a mem�
 
 #### Seção V - Flipnote Exploit
 
-Caso você prefira um guia visual para esta seção, há um disponível [aqui](https://zoogie.github.io/web/flipnote_directions/).
-{: .notice--info}
-
-Nesta seção, você executará uma série de passos muito específicos dentro do Flipnote Studio, que quando executado corretamente, irá iniciar o instalador boot9strap (custom firmware).
-
-1. Complete o processo inicial para o jogo até você chegar no menu principal
-  + Selecione a opção da esquerda sempre que solicitado durante o processo de instalação
-1. Usando a touch-screen, selecione a caixa grande da esquerda, então selecione uma caixa com um ícone que parece um cartão SD
-1. Quando o menu carregar, selecione o ícone do rosto, então o ícone na parte inferior direita para continuar
-1. Aperte (X) ou (Cima) no direcional dependendo do que for mostrado na tela superior
-1. Selecione o segundo botão no topo com um ícone de rolo de filme
-1. Role até o rolo "3/3" for selecionado
-1. Toque na terceira caixa com a letra "A" nela
-1. Role à esquerda até o rolo "1/3" for selecionado
-1. Toque na quarta caixa com a letra "A" nela
-1. Se o exploit for bem sucedido, seu dispositivo irá abrir o b9sTool
-1. Usando os botões direcionais, mova para "Install boot9strap"
-  + Se você perder esta etapa, o sistema vai sair para o Menu HOME ao invés de instalar o boot9strap e você precisará abrir as Configurações do Sistema, entao começar novamente a partir do Passo 6 da seção IV
-1. Pressione (A), depois pressione START e SELECT ao mesmo tempo para iniciar o processo
-1. Quando for concluído e a tela inferior dizer "done", saia do b9sTool, então desligue o seu dispositivo
-  + Você pode ter que forçar o desligamento segurando o botão power
-  + Se seu dispositivo desligar quando você tentar ligá-lo, certifique-se de que você copiou `boot.firm` do `.zip` do Luma3DS para a raiz do seu cartão SD
-  + Se você ver a tela de configuração do Luma, desligue seu dispositivo e continue para a próxima seção
+{% include_relative include/install-boot9strap-b9stool.txt method="dsinternet" %}
 
 #### Seção VI - Configuração do Luma3DS
 
@@ -127,9 +96,7 @@ Nesta seção, você executará uma série de passos muito específicos dentro d
   + Se você inicializar no Menu HOME, [siga este guia de troubleshooting](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)
 1. Aperte (Start) para salvar e reiniciar
 
-Neste momento, o seu console iniciará no Luma3DS por padrão.
-  + O Luma3DS não é diferente do Menu HOME normal. Se seu console foi inicializado no HOME Menu, ele está executando custom firmware.
-  + Na próxima página, você irá instalar aplicativos homebrew úteis para concluir sua instalação.
+{% include_relative include/luma3ds-installed-note.txt %}
 
 #### Seção VII - Restaurando as Configurações de Conexão DS
 
