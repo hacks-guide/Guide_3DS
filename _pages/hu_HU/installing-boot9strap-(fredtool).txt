@@ -24,17 +24,8 @@ Ez egy jelenleg működő megvalósítása a "FIRM partitions known-plaintext" n
 
 #### I. rész - CHF ellenőrzés
 
-További biztonsági lépésként további ellenőrzést végzünk egyedi firmware-re. Ez azért szükséges, mert ha ezt a metóust használjuk már telepített egyedi firmware esetén, meg van a kockázata, hogy brikeljük a konzolt (ami használhatatlanna teszi helyreállítási metódusok nélkül, mint az [ntrboot](ntrboot)).
+{% include_relative include/cfw-check-fredtool.txt %}
 
-1. Kapcsold ki a készüléked
-1. Nyomd le és tartsd nyomva (Select) gombot
-1. Kapcsold be az eszközöd, miközben nyomva tartod a (Select) gombot
-1. Ha az ellenőrzés sikeres volt, be fogsz bootolni a HOME Menübe és végrehajthatod ezt az útmutatót
-1. Kapcsold ki a készüléked
-
-Ha a konfigurációs menüt látod vagy a konzolod azonnal kikapcsol, már van CFW-d és az útmutató folyatása BRICKELHETI az eszközödet! Kövesd a [CFW ellenőrzését](checking-for-cfw) a már meglévő CFW-d frissítéséhez.
-{: .notice--danger}
-    
 #### II. rész - BannerBomb3
 
 Ebben a fejezetben elő fogod idézni a BannerBomb3 exploit-ot a DSIWare Management menü használatával és lemásolni az eredmény dump fájlt a számítógépedre, hogy fel tudd használni a következő fejezetben.
@@ -95,29 +86,7 @@ Ebben a fejezetben másolni fogod a hackelt DS Connection Settings DSiWare-t a b
 
 #### V. rész - Flipnote Exploit
 
-Ha inkább egy vizuális útmutatót szeretnél ehhez a fejezethez, [itt](https://zoogie.github.io/web/flipnote_directions/) elérhető egy.
-{: .notice--info}
-
-Ebben a fejezetben végrehajtasz egy specifikus lépés sorozatot a Flipnote Studio-val, ami ha helyesen került végrehajtásra, elindítja a boot9strap (egyedi firmware) telepítőt.
-
-1. Fejezd be a kezdeti telepítését az elindított játéknak, amíg el nem éri a fő menüt
-  + Válassza a bal opciót, ha kérdezi a telepítési folyamat során
-1. Az érintőképernyőt használva válaszd ki a bal nagy dobozt, majd válaszd a dobozt az SD kártya ikonnal
-1. Ha a menü betöltött válaszd az arc ikont utána, pedig a jobb alsó ikont a folytatáshoz
-1. Nyomj (X)-et vagy (Fel)-t a D-Pad-on, attól függően mi jelenik meg a képernyőn
-1. Válaszd a második gombot a film-szalag ikonnal
-1. Görgess jobbra, amíg a 3/3 filmtekercs kiválasztásra kerül
-1. Nyomd meg a harmadik dobozt benne az "A" betűvel
-1. Görgess balra, amíg a 1/3 filmtekercs kiválasztásra kerül
-1. Nyomd meg a negyedik dobozt benne az "A" betűvel
-1. Ha az exploit sikeres volt, a készülékedek ezt követően be kell töltenie a b9sTool-t
-1. A D-Pad-dal menj az "Install boot9strap" opcióra
-  + Ha kihagytad ezt a lépést a rendszer a HOME Menübe kerülsz a boot9strap telepítése helyett, ekkor meg kell nyitnod a "System Settings-et, majd elölről kell kezdened a 6. lépéstől a IV. részben
-1. Nyomj (A)-t majd ezt követően START-ot és SELECT-et egyszerre a folyamat elkezdéséhez
-1. Ha végzett és az alsó képernyő azt mondja "done." lépj ki a b9sTool-ból, majd kapcsold ki eszközöd
-  + Elképzelhető, hogy kényszerítened kell a leállást a bekapcsológomb lenyomva tartásával
-  + Ha a készüléked kikapcsol amikor bekapcsolod, bizonyosodj meg róla, hogy átmásoltad-e a `boot.firm` fájlt a Luma3DS `.zip` fájlból az SD kártya gyökerébe
-  + Ha a Luma konfigurációs képernyőjét látod, kapcsold ki az eszközöd, majd folytasd a következő résszel
+{% include_relative include/install-boot9strap-b9stool.txt method="dsinternet" %}
 
 #### VI. rész - Luma3DS beállítás
 
@@ -127,9 +96,7 @@ Ebben a fejezetben végrehajtasz egy specifikus lépés sorozatot a Flipnote Stu
   +Ha a HOME Menübe bootolsz, [kövesd ezt a hibaelhárítási útmutatót](https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md)
 1. Mentéshez és újraindításhoz nyomd meg a (Start) gombot
 
-Ezen a ponton a konzolod alapértelmezetten bebootol a Luma3DS-be.
-  + A Luma3DS nem néz ki másként, mint a normál HOME Menü. Ha a konzolod bebootolt a HOME Menübe, akkor egyedi firmware-t futtat.
-  + A következő oldalon hasznos homebrew alkalmaásokat telepítünk, hogy teljessé tegyük a telepítésedet.
+{% include_relative include/luma3ds-installed-note.txt %}
 
 #### VII. rész - A DS Connection Settings visszaállítása
 
