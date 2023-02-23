@@ -70,36 +70,14 @@ In this section, you will trigger the BannerBomb3 exploit using the DSiWare Mana
 
 #### 第三節 — unSAFE_MODE
 
-In this section, you will enter Safe Mode (a feature available on all 3DS family devices) and navigate to a menu where unSAFE_MODE will be triggered, which will launch you into the boot9strap (custom firmware) installer.
-
-1. With your device still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your device
-  + Keep holding the buttons until the device boots into Safe Mode (a "system update" menu)
-  + If you're unable to get into Safe Mode after multiple attempts, one of your buttons may be failing or broken. If this is the case, you will need to follow [an alternate branch of BannerBomb3](installing-boot9strap-(fredtool)). For assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
-1. 按下『OK』以允許更新
-  + 此步驟將不會進行任何更新， 這只是觸發漏洞的一部分。
-1. 按下「I accept(我同意/同意します)」鍵以接受聲明條款
-1. The update will eventually fail, with the error code `003-1099`. 這也是觸發漏洞的一部分
-1. 當系統提示您『你想要配置網路設置嗎? (Would you like to configure Internet settings?)』時，點選『Yes』
-1. On the following menu, navigate to `Connection 1` -> `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings` -> `Detailed Setup` ([image](/images/screenshots/usm/safemode_highlighted.png))
-1. 如果一切成功的話，您將自動進入 SafeB9SInstaller
-  + If your device instead shows a red screen, you are missing `usm.bin` from the root of your SD card
+{% include_relative include/exploit-usm.txt method="bb3" %}
 
 #### Section IV - Installing boot9strap
 
-In this section, you will install custom firmware onto your device.
+{% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
+{%- include_relative include/configure-luma3ds.txt %}
 
-1. 出現提示時，輸入上方螢幕所顯示的按鍵組合以安裝 boot9strap
-  + If the top screen is blank, power off your device and re-do Section III
-1. 過程結束後，按下『A』重啟主機
-1. 您的主機將會重啟至 Luma3DS 設定選單中
-  + Luma3DS configuration menu are settings for the Luma3DS custom firmware. Many of these settings may be useful for customization or debugging
-  + For the purpose of this guide, these settings will be left on default settings
-  + If your device shuts down when you try to power it on, ensure that you have copied `boot.firm` from the Luma3DS `.zip` to the root of your SD card
-1. 按『Start』鍵以存檔並重新啟動系統
-
-At this point, your console will boot to Luma3DS by default.
-  + Luma3DS 不會特別在 HOME 主選單中新增任何特別的東西。 如果你的主機已經啟動到了 HOME 主選單，這代表自製韌體已經在運行了。
-  + On the next page, you will install useful homebrew applications to complete your setup.
+{% include_relative include/luma3ds-installed-note.txt %}
 
 #### Section V - Restoring WiFi Configuration Profiles
 
