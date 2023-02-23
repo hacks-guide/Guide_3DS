@@ -46,14 +46,12 @@ title: "安装boot9strap (通过 ntrboot)"
 1. 按住 “Start” + “Select” + “X” + “电源键” 几秒钟，然后放开
   + 你可能要多试几次，因为这些组合键有点难按
 1. 如果一切成功的话，你将自动进入 SafeB9SInstaller
+1. 从你的主机上移开磁铁
+  + 老型号的 2DS 将休眠模式开关关闭即可
 
 #### 第三步 – 安装 boot9strap
 
-1. 从你的主机上移开磁铁
-  + 老型号的 2DS 将休眠模式开关关闭即可
-1. 出现提示时，按照上屏的提示输入按键组合来安装 boot9strap
-1. 完成后，长按电源键强制关机
-  + 请继续做下一步，否则主机开机只会再次进到 SafeB9SInstaller 中
+{% include_relative include/install-boot9strap-safeb9sinstaller.txt isbootfirm="true" %}
 
 #### 第四步 – 设置 Luma3DS
 
@@ -62,16 +60,9 @@ title: "安装boot9strap (通过 ntrboot)"
 1. 解压 Luma3DS `.zip` 里的 `boot.firm` 到你 SD 卡的根目录
 1. 将SD卡重新插入你的主机
 1. 启动你的主机
-1. 你的主机应该会在开机后进入 Luma3DS 配置菜单
-  + Luma3DS 配置菜单用于设置 Luma3DS 自制固件的可选功能 其中有许多功能可用于个性化或调试
-  + 由于配合本手册的用途，我们将直接按照默认配置保存
-  + 如果你的主机在你尝试开机后自动关机了，请确认你已经从 Luma3DS `.zip` 中复制了 `boot.firm` 文件到你的 SD 卡根目录中
-1. 按下 “Start” 键保存设置并重启
-  + 如果出现错误，继续至下一个页面即可解决
+{%- include_relative include/configure-luma3ds.txt %}
 
-这时，你的主机默认将会自动启动 Luma3DS。
-  + Luma3DS 不会给正常的主菜单增添任何看上去十分特别的东西。 如果你的主机现在已经启动到主菜单了，说明自制固件已经在运行了。
-  + 在下一页中，我们将会教你安装一些有用的自制程序来完成安装步骤。
+{% include_relative include/luma3ds-installed-note.txt %}
 
 
 ___
