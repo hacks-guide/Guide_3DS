@@ -24,13 +24,7 @@ These instructions are for Taiwanese consoles ONLY (as indicated by a T at the e
 
 #### Section I - CFW Check
 
-1. Выключите консоль
-1. Hold the (Select) button
-1. Power on your device while still holding the (Select) button
-1. If the check was successful, you will boot to the HOME Menu and you may proceed with this guide
-
-If you see a configuration menu, you already have CFW, and continuing with these instructions may BRICK your device! Follow [Checking for CFW](checking-for-cfw) to upgrade your existing CFW.
-{: .notice--danger}
+{% include_relative include/cfw-check-fredtool.txt %}
 
 #### Часть II - Подготовка
 
@@ -42,7 +36,7 @@ If you see a configuration menu, you already have CFW, and continuing with these
 1. Скопируйте папку `private` из `.zip-архива` Frogminer_save в корень SD-карты
 1. Keep your SD card in your computer - there are more things to do in the next section
 
-![]({{ "/images/screenshots/fredtool-root-layout.png" | absolute_url }})
+![]({{ "/images/screenshots/fredtool/fredtool-twn-root-layout.png" | absolute_url }})
 {: .notice--info}
 
 #### Section III - BannerBomb3
@@ -112,27 +106,7 @@ If you see a configuration menu, you already have CFW, and continuing with these
 
 #### Section V - Flipnote Exploit
 
-Если вы предпочитаете визуальное руководство вместо этой части, оно доступно [здесь](https://zoogie.github.io/web/flipnote_directions/).
-{: .notice--info}
-
-1. Пройдите процесс первоначальной настройки в запущенной игре, пока не попадете в главное меню
-  + Выберите опцию слева при появлении запроса во время процесса настройки
-1. С помощью сенсорного экрана нажмите на большой значок слева, затем на значок с SD-картой
-1. После того, как загрузится меню, нажмите на значок с лицом, а затем на кнопку справа внизу, чтобы продолжить
-1. Нажмите (X) или (Вверх) в зависимости от того, какая из кнопок отображается на верхнем экране
-1. Нажмите на вторую кнопку в верхнем ряду со значком кинопленки
-1. Прокрутите вправо, чтобы выбрать кадр "3/3"
-1. Нажмите на третий значок с буквой "A"
-1. Прокрутите влево, чтобы выбрать кадр "1/3"
-1. Нажмите на четвертый значок с буквой "A"
-1. Если эксплойт сработал корректно, запустится b9sTool
-1. Using the D-Pad, move to “Install boot9strap”
-    + If you miss this step, the system will exit to home menu instead of installing boot9strap and you will need to open DS Download Play and start over from the beginning of this section
-1. Нажмите (A), затем нажмите START и SELECT одновременно, чтобы начать процесс
-1. Once completed and the bottom screen says “done.”, exit b9sTool, then power off your device
-    + При необходимости выключите консоль принудительно, удерживая кнопку питания
-    + If your device shuts down when you try to power it on, ensure that you have copied `boot.firm` from the Luma3DS `.zip` to the root of your SD card
-  + If you see the Luma Configuration screen, power off your device and continue to the next section
+{% include_relative include/install-boot9strap-b9stool.txt method="dsdlp" %}
 
 #### Section VI - Luma3DS Configuration
 
