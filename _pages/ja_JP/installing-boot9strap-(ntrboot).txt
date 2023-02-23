@@ -46,14 +46,12 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 1. (Start) + (Select) + (X) + (Power) を数秒間押し続け、ボタンを離します
   + これを動作させるには何度かやり直す必要がある場合があります。
 1. Exploitが成功すれば、SafeB9SInstallerが起動されます。
+1. 端末から磁石を取り外します
+  + old2DSでは、代わりにスリープモードスイッチを無効にする必要があります
 
 #### セクション III - boot9strapをインストールする
 
-1. 端末から磁石を取り外します
-  + old2DSでは、代わりにスリープモードスイッチを無効にする必要があります
-1. When prompted, input the key combo given on the top screen to install boot9strap
-1. Once it is completed, force your device to power off by holding down the power button
-  + 次のセクションが完了するまで、デバイスは SafeB9SInstaller 画面のみ起動します
+{% include_relative include/install-boot9strap-safeb9sinstaller.txt isbootfirm="true" %}
 
 #### セクション IV - Luma3DSを設定する
 
@@ -62,16 +60,9 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 1. Luma3DS `.zip` から `boot.firm` をSDカードのルートにコピーします
 1. 再度、SDカードを本体に挿入してください。
 1. デバイスの電源を入れます
-1. お使いのデバイスはLuma3DS設定メニューを起動しているはずです
-  + Luma3DS configuration menu are settings for the Luma3DS custom firmware. Many of these settings may be useful for customization or debugging
-  + For the purpose of this guide, these settings will be left on default settings
-  + If your device shuts down when you try to power it on, ensure that you have copied `boot.firm` from the Luma3DS `.zip` to the root of your SD card
-1. (Start) を押してセーブして再起動します
-  + If you get an error, just continue to the next page
+{%- include_relative include/configure-luma3ds.txt %}
 
-At this point, your console will boot to Luma3DS by default.
-  + Luma3DS does not look any different from the normal HOME Menu. If your console has booted into the HOME Menu, it is running custom firmware.
-  + On the next page, you will install useful homebrew applications to complete your setup.
+{% include_relative include/luma3ds-installed-note.txt %}
 
 
 ___
