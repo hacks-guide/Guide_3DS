@@ -46,14 +46,12 @@ Ahhoz, hogy használhasd a [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme
 1. Tartsd lenyomva a (Start) + (Select) + (X) + (Bekapcsológomb) kombinációt pár másodpercig, majd engedd fel őket
   + Elképzelhető, hogy ez csak sokadjára sikerül csak a gombok elhelyezése miatt
 1. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
+1. Vedd le a mágnest a készülékedről
+  + Old 2DS készülék esetében egyszerűen csak deaktiváld az alvó üzemmódot a kapcsolóval
 
 #### III. rész - boot9strap telepítése
 
-1. Vedd le a mágnest a készülékedről
-  + Old 2DS készülék esetében egyszerűen csak deaktiváld az alvó üzemmódot a kapcsolóval
-1. Ha kéri, akkor nyomd meg sorban azokat a gombokat, amiket kijelez a felső képernyőn, hogy telepíthesd a boot9strap-et
-1. Ha ez elkészült, kényszerítsd a készülékedet leállásra a bekapcsológomb lenyomva tartásával
-  + A készüléked csak addig fog a SafeB9SInstaller képernyőre bootolni, amíg a következő részt be nem fejezed
+{% include_relative include/install-boot9strap-safeb9sinstaller.txt isbootfirm="true" %}
 
 #### IV. rész - Luma3DS konfigurálása
 
@@ -62,16 +60,9 @@ Ahhoz, hogy használhasd a [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme
 1. Másold át a `boot.firm` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
 1. Tedd vissza az SD kártyád a készülékedbe
 1. Kapcsold be a készülékedet
-1. A készülékednek az előzőekben a Luma3DS-be kellett bootolnia
-  + A Luma3DS konfigurációs menü a beállítások a Luma3DS egyedi firmverhez. Sok ezek közül a beállítások közül hasznos az egyedivé tételhez vagy a debuggoláshoz
-  + Az útmutató céljának megfeleléshez ezen beállítások alapértelmezett állapoton lesznek hagyva
-  + Ha a készüléked kikapcsol amikor bekapcsolod, bizonyosodj meg róla, hogy átmásoltad-e a `boot.firm` fájlt a Luma3DS `.zip` fájlból az SD kártya gyökerébe
-1. Mentéshez és újraindításhoz nyomd meg a (Start) gombot
-  + Ha ezen a ponton hibát kapsz, csak folytasd az útmutatót a következő oldalon
+{%- include_relative include/configure-luma3ds.txt %}
 
-Ezen a ponton a konzolod alapértelmezetten bebootol a Luma3DS-be.
-  + A Luma3DS nem néz ki másként, mint a normál HOME Menü. Ha a konzolod bebootolt a HOME Menübe, akkor egyedi firmware-t futtat.
-  + A következő oldalon hasznos homebrew alkalmaásokat telepítünk, hogy teljessé tegyük a telepítésedet.
+{% include_relative include/luma3ds-installed-note.txt %}
 
 
 ___
