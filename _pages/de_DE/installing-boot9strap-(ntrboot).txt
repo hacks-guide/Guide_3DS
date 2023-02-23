@@ -46,14 +46,12 @@ Um die [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme)-Links auf dieser S
 1. Halte (Start) + (Select) + (X) + (Powerknopf) für mehrere Sekunden gedrückt und lass sie danach wieder los
   + Es kann ein paar Versuche brauchen bis das funktioniert, da die Positionierung ungünstig ist
 1. Wenn der Exploit erfolgreich war, wird SafeBS9Installer gestartet
+1. Entferne den Magnet von deinem System
+  + Auf dem alten 2DS solltest du stattdessen den Schlafmodus-Schalter ausmachen
 
 #### Schritt III - boot9strap installieren
 
-1. Entferne den Magnet von deinem System
-  + Auf dem alten 2DS solltest du stattdessen den Schlafmodus-Schalter ausmachen
-1. When prompted, input the key combo given on the top screen to install boot9strap
-1. Once it is completed, force your device to power off by holding down the power button
-  + Deine Konsole wird solange nur zum SafeB9SInstaller-Bildschirm starten bis die nächste Sektion abgeschlossen wurde
+{% include_relative include/install-boot9strap-safeb9sinstaller.txt isbootfirm="true" %}
 
 #### Schritt IV - Luma3DS konfigurieren
 
@@ -62,16 +60,9 @@ Um die [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme)-Links auf dieser S
 1. Copy `boot.firm` from the Luma3DS `.zip` to the root of your SD card
 1. Stecke deine SD-Karte wieder in deine Konsole
 1. Schalte deine Konsole an
-1. Dein Gerät sollte neu starten und die Luma3DS Konfiguration anzeigen
-  + Luma3DS configuration menu are settings for the Luma3DS custom firmware. Many of these settings may be useful for customization or debugging
-  + For the purpose of this guide, these settings will be left on default settings
-  + If your device shuts down when you try to power it on, ensure that you have copied `boot.firm` from the Luma3DS `.zip` to the root of your SD card
-1. Drücke (Start) um zu Speichern und neu zu starten
-  + If you get an error, just continue to the next page
+{%- include_relative include/configure-luma3ds.txt %}
 
-At this point, your console will boot to Luma3DS by default.
-  + Luma3DS does not look any different from the normal HOME Menu. If your console has booted into the HOME Menu, it is running custom firmware.
-  + On the next page, you will install useful homebrew applications to complete your setup.
+{% include_relative include/luma3ds-installed-note.txt %}
 
 
 ___
@@ -125,14 +116,14 @@ Folge diesen Schritten erst, wenn du den Rest der Anweisungen auf dieser Seite a
 
 ##### Anleitung
 
-1. Schalte deine Konsole aus
+1. Schalte deinen 3DS aus
 1. Stecke deine SD-Karte in deinen Computer
   + Die SD-Karte deines 3DS, *nicht* die SD-Karte deiner Flashkarte
 1. Erstelle einen Ordner mit dem Namen `ntrboot` im Stammverzeichnis deiner SD-Karte
 1. Kopiere die `.bin`-Datei von deiner Flashrom-Backup `.zip` in den Ordner `/ntrboot/` auf dem Stammverzeichnis der SD-Karte
 1. Erstelle einen Ordner mit dem Namen `payloads` im `luma`-Ordner auf deiner SD-Karte
 1. Kopiere `ntrboot_flasher.firm` in den `/luma/payloads` Ordner der SD-Karte
-1. Stecke deine SD-Karte wieder in deine Konsole
+1. Stecke deine SD-Karte nun wieder in deinen 3DS
 1. Stecke die ntrboot-kompatible DS / DSi Flashkarte in deine Konsole
 1. Starte ntrboot_flasher, indem du während dem Starten deiner Konsole die Taste (Start) gedrückt hältst
 1. Lies die Warnung auf dem roten Bildschirm
