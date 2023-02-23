@@ -56,55 +56,18 @@ Ebben a fejezetben a Homebrew Launcher-t fogod használni a slotTool indításá
 
 #### II. szakasz - unSAFE_MODE
 
-Ebben a fejezetben be fogsz lépni a Safe Mode-ba (egy funkció, ami elérhető minden 3DS családba tartozó eszközön) és elnavigálsz egy menübe ahol az unSAFE_MODE kiváltásra kerül, ami a boot9strap (egyedi firmware) telepítőt indítja.
-
-1. Az eszközöd kikapcsolt állapotában tartsd nyomva a következő gombokat: (Bal Váll) + (Jobb Váll) + (D-Pad Fel) + (A), majd ezen gombok nyomva tartása mellett kapcsold be az eszközöd
-  + Tartsd nyomva a gombokat, amíg az eszköz be nem bootol a Safe Mode-ba (a "system update" menübe)
-  + Ha többszöri próbálkozásra sem tudsz bejutni a Safe Mode-ba, valamelyik gombod hibás lehet. Ebben az esetben csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és kérj, támogatást angolul.
-1. Nyomj "OK"-ot a frissítés elfogadásához
-  + Nincs frissítés. Ez része az exploitnak
-1. Nyomj az "I accept"-re a feltételek elfogadásához
-1. A frissítés sikertelen lesz a `003-1099` hibakóddal. Ez az elvárt viselkedés
-1. Amikor megkérdezésre kerül, hogy "Would you like to configure Internet settings?", válassz "Yes"-t
-1. A következő menüben navigálj a `Connection 1` -> `Change Settings` -> `Next Page (jobb nyíl)` -> `Proxy Settings` -> `Detailed Setup` menüponthoz ([kép](/images/screenshots/usm/safemode_highlighted.png))
-1. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
+{% include_relative include/exploit-usm.txt method="hbl" %}
 
 #### III. rész - boot9strap telepítése
 
-Ebben a fejezetben egyedi firmware-t fogsz telepíteni az eszközödre.
+{% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
+{%- include_relative include/configure-luma3ds.txt %}
 
-1. Ha kéri, akkor nyomd meg sorban azokat a gombokat, amiket kijelez a felső képernyőn, hogy telepíthesd a boot9strap-et
-  + Ha felső képernyő üres, kapcsold ki az eszközödet, majd csináld újra a III. részt
-1. Ha ez elkészült, nyomd meg az (A) gombot az eszközöd újraindításához
-1. A készülékednek az előzőekben a Luma3DS-be kellett bootolnia
-  + A Luma3DS konfigurációs menü a beállítások a Luma3DS egyedi firmverhez. Sok ezek közül a beállítások közül hasznos az egyedivé tételhez vagy a debuggoláshoz
-  + Az útmutató céljának megfeleléshez ezen beállítások alapértelmezett állapoton lesznek hagyva
-  + Ha a készüléked kikapcsol amikor bekapcsolod, bizonyosodj meg róla, hogy átmásoltad-e a `boot.firm` fájlt a Luma3DS `.zip` fájlból az SD kártya gyökerébe
-1. Mentéshez és újraindításhoz nyomd meg a (Start) gombot
-
-Ezen a ponton a konzolod alapértelmezetten bebootol a Luma3DS-be.
-  + A Luma3DS nem néz ki másként, mint a normál HOME Menü. Ha a konzolod bebootolt a HOME Menübe, akkor egyedi firmware-t futtat.
-  + A következő oldalon hasznos homebrew alkalmazásokat telepítünk, hogy teljessé tegyük a telepítésedet.
+{% include_relative include/luma3ds-installed-note.txt %}
 
 #### IV. rész - A WiFi Configuration Profiles visszaállítása
 
-Ebben a fejezetben be fogsz lépni a Homebrew Launcher-be (ezen alkalommal egyedi firmware-rel) így helyreállíthatod a Wi-Fi kapcsolat slot-okat, amelyeket felülírtunk a I. részben.
-
-1. Indítsd el a Download Play alkalmazást
-1. Várj, amíg két gombot nem látsz
-  + Ne nyomd meg egyiket sem
-1. Nyomd le az (Bal Váll) + (D-Pad le) + (Select) gombokat egyszerre a Rosalina menü megnyitásához
-1. Válaszd ki a "Miscellaneous options"-t
-1. Válaszd a "Switch the hb. title to the current app." opciót
-1. Nyomd meg a (B) gombot a folytatáshoz
-1. Nyomd meg a (B) gombot, hogy visszakerülj a Rosalina főmenüjébe
-1. Nyomd meg a (B) gombot, hogy kilépj a Rosalina menüből
-1. Nyomd meg a (Home) gombot és zárd be a Download Play-t
-1. Indítsd el újra a Download Play alkalmazást
-1. Ekkor a készülékednek be kell töltenie a Homebrew Launchert
-1. Indítsd el a slotTool-t a homebrew listából
-1. Válaszd a "RESTORE original wifi slots 1,2,3" opciót
-1. Az eszközöd újra fog indulni
+{% include_relative include/remove-usm-slottool.txt %}
 
 ___
 
