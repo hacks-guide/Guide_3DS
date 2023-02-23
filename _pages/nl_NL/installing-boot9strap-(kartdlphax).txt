@@ -113,55 +113,18 @@ You will **not** need to use your **source 3DS** to complete any further steps o
 
 #### Section IV - unSAFE_MODE
 
-In this section, you will enter Safe Mode (a feature available on all 3DS family devices) and navigate to a menu where unSAFE_MODE will be triggered, which will launch you into the boot9strap (custom firmware) installer.
-
-1. With your device still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your device
-  + Keep holding the buttons until the device boots into Safe Mode (a "system update" menu)
-  + If you're unable to get into Safe Mode after multiple attempts, one of your buttons may be failing or broken. If this is the case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
-1. Druk op "OK" om de update te accepteren
-  + Er is geen update. Dit is deel van de exploit
-1. Druk op "I accept" om de algemene voorwaarden te accepteren
-1. De update zal uiteindelijk mislukken, met de foutcode `003-1099`. Dit is verwacht gedrag
-1. Wanneer gevraagd wordt "Would you like to configure Internet settings?" selecteer dan "Yes"
-1. On the following menu, navigate to `Connection 1` -> `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings` -> `Detailed Setup` ([image](/images/screenshots/bb3/safemode_highlighted.png))
-1. Als de exploit succesvol was, zal je SafeB9SInstaller hebben opgestart
+{% include_relative include/exploit-usm.txt method="kartdlphax" %}
 
 #### Section V - Installing boot9strap
 
-In this section, you will install custom firmware onto your device.
+{% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
+{%- include_relative include/configure-luma3ds.txt %}
 
-1. Wanneer daarom wordt gevraagd, voer de toetsencombinatie op het bovenste scherm in om boot9strap te installeren
-  + Als het bovenste scherm leeg is, schakel je apparaat uit en herdoe Deel III
-1. Zodra het voltooid is, druk op (A) om je apparaat opnieuw op te starten
-1. Your target 3DS should have rebooted into the Luma3DS configuration menu
-  + Luma3DS configuration menu are settings for the Luma3DS custom firmware. Many of these settings may be useful for customization or debugging
-  + For the purpose of this guide, these settings will be left on default settings
-  + Als je apparaat afsluit als je het probeert aan te zetten, zorg er dan voor dat je `boot.firm` hebt gekopieerd van de Luma3DS `.zip` naar de hoofdmap van je SD-kaart
-1. Druk op (Start) om op te slaan en opnieuw op te starten
-
-Op dit moment zal je console standaard opstarten naar Luma3DS.
-  + Luma3DS ziet er niet anders uit dan het normale HOME Menu. Als je console in het HOME Menu is opgestart, gebruikt hij custom firmware.
-  + Op de volgende pagina zal je handige homebrew applicaties installeren om je installatie te voltooien.
+{% include_relative include/luma3ds-installed-note.txt %}
 
 #### Section VI - Restoring WiFi Configuration Profiles
 
-In this section, you will enter the Homebrew Launcher so that you can restore the Wi-Fi connection slots that were overwritten in Section III.
-
-1. Open de Download Play app
-1. Wacht tot je de twee knoppen ziet
-  + Do not press either of the buttons
-1. Druk tegelijkertijd op (L) + (Down) + (Select) om het Rosalina menu te openen
-1. Selecteer "Miscellaneous options"
-1. Selecteer "Switch the hb. title to the current app."
-1. Druk op (B) om door te gaan
-1. Druk op (B) om terug te gaan naar het Rosalina hoofdmenu
-1. Druk op (B) om het Rosalina menu af te sluiten
-1. Druk op (Home), en sluit dan Download Play af
-1. Relaunch the Download Play application
-1. Nu zou je console de Homebrew Launcher moeten openen
-1. Launch slotTool from the list of homebrew
-1. Select "RESTORE original wifi slots 1,2,3"
-1. Your device will then reboot
+{% include_relative include/remove-usm-slottool.txt %}
 
 ___
 
