@@ -118,7 +118,7 @@ If neither of these solutions fixes this problem, then custom firmware may have 
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>DSiWare Management menu does not crash</u></summary>
+<summary><u>DSiWare Management menu does not crash or "No accessible software data."</u></summary>
 
 `F00D43D5.bin` is missing from `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`. Make sure that `Nintendo DSiWare` is correctly spelled and spaced. Uppercase/lowercase does not matter.
 {% endcapture %}
@@ -130,6 +130,7 @@ If neither of these solutions fixes this problem, then custom firmware may have 
 There may be an issue with your `F00D43D5.bin` file (it may be corrupted or intended for the wrong 3DS). Re-create your `F00D43D5.bin` file with the [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen), ensuring that you use the `movable.sed` file for your console.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
+
 
 ## Installing boot9strap (USM)
 
@@ -453,6 +454,24 @@ You did not copy the `gm9` folder from the GodMode9 `.zip` to the root of your S
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
+{% capture compat %}
+<summary><u>"Backup failed" or "Error: Could not open directory" when attempting a NAND backup</u></summary>
+Make sure you have at least 1.3GB available in your SD card. If you don't have enough space, follow the steps:
+1. Power off your console
+1. Remove the SD card and insert it into your computer
+1. Copy the Nintendo 3DS folder from the root of your SD card to your computer
+1. Delete it from the SD card
+1. Load GodMode9 by holding START
+1. Perform the NAND Backup
+1. Copy the files in gm9/out on your SD to a safe spot on your computer
+1. Delete the files from the SD card
+1. Copy the Nintendo 3DS folder to your SD card root from your computer
+1. Delete the Nintendo 3DS folder from your computer
+
+If you have enough space on your SD card, your SD might be corrupted or faulty. Check your SD card for any errors by following the guide according to your system: [Windows](h2testw-(windows), [Linux](f3-(linux)), [macOS](f3xswift-(mac)).
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
 ---
 
 ## Boot issues on devices with custom firmware
@@ -505,12 +524,30 @@ The steps below can be attempted in any order, but are listed from least to most
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
+{% capture compat %}
+<summary><u>My device does not show any of my apps on the HOME Menu</u></summary>
+This could be caused by various reasons, but mostly because your SD card is not being read by the system
+You can check if your SD is not being read by holding SELECT on boot and checking the yellow text on the bottom screen; If it says "Booted from CTRNAND via B9S", then your system is booting from the internal memory and not from the SD card.
+Attempt the steps below in any order:
+1. Power off your device, remove the SD card, re-insert it, then power on your device.
+1. Power off your device, remove the SD card, insert it on your PC and format your SD card according to your system: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)).
+1. Test your SD card by following the guide according to your system: [Windows](h2testw-(windows), [Linux](f3-(linux)), [macOS](f3xswift-(mac)). If your SD card is marked as faulty, then you will have to replace your SD card.
+1. Your SD card slot is broken. Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for further assistance.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
 ### Error message on boot
 
 {% capture compat %}
 <summary><u>"An error has occurred: Failed to apply 1 FIRM patch(es)" or "An exception has occurred -- Current process: pm"</u></summary>
 
 Your Luma3DS version is outdated. Download the latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) and place `boot.firm` on the root of your SD card, replacing any existing file. Make sure you are extracting the ZIP file with any tool other than WinRAR, as it is known to cause issues with 3DS-related files.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>"Unable to mount CTRNAND or load the CTRNAND FIRM. Please use an external one."</u></summary>
+There is a number of reasons this could be happening. In any case, this error should be fixed by following the [CTRTransfer](ctrtransfer) guide.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -524,6 +561,15 @@ ARM11 exception handlers are disabled, or custom firmware is not installed. Try 
   + If the "Disable ARM11 exception handlers" box is checked, uncheck it
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>My device gives me an exception screen when booting/loading an app</u></summary>
+
+Look for your exception screen in [this page](https://wiki.hacks.guide/wiki/3DS:Error_screens/Luma3DS_exception_screen).
+If you weren't able to find your error or you, for some reason, couldn't follow the given instructions, join blah [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for further assistance.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
 
 {% capture compat %}
 <summary><u>Blue "BOOTROM ERROR" screen</u></summary>
@@ -606,6 +652,21 @@ This can occur after a CTRTransfer or region change on Old 3DS / 2DS. You will n
   + **JPN Region**: `000002cc`
   + **USA Region**: `000002cd`
 1. Reinsert your SD card into your device
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+
+<summary><u>Turning off Parental Controls</u></summary>
+
+If a Parental Controls PIN is stopping you from accessing the device's settings, you will need to disable it. In order to do this, you need to obtain your device's master key (mkey):
+1. Access [this website](https://mkey.eiphax.tech/)
+1. Fill the following spaces with the information:
++ Device Type: The console you are currently using
++ System Date: The day and month your console's clock is set to
++ Inquiry Number: Can be obtained by pressing "Forgot PIN" then "I Forgot" in the Parental Controls screen
+1. After you have obtained your mkey, press OK on the screen you have obtained your Inquiry Number, then input the master key
+1. Press "Clear Settings", then "Delete" to remove all Parental Controls data
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
