@@ -5,23 +5,23 @@ title: "BannerBomb3"
 {% include toc title="Table des matières" %}
 
 {% capture technical_info %}
-<summary><em>Technical Details (optional)</em></summary>
+<summary><em>Détails techniques (facultatif)</em></summary>
 
-To launch custom code, we exploit a flaw in the DSiWare Data Management window of the Settings application.
+Pour lancer du code personnalisé, nous exploitons une faille dans la fenêtre de Gestion des Nintendo DSiWare de l'application Paramètres de la console.
 
-To accomplish this, we use your system's encryption key (movable.sed) to build a DSiWare backup that exploits the system.
+Pour ce faire, nous utilisons la clé de chiffrement de votre console (movable.sed) pour créer une sauvegarde DSiWare qui exploite le système.
 
-For a more technical explanation, see [here](https://github.com/zoogie/Bannerbomb3).
+Pour une explication plus technique, consultez [cette page](https://github.com/zoogie/Bannerbomb3).
 {% endcapture %}
 
 <details>{{ technical_info | markdownify }}</details>
 {: .notice--info}
 
-### Compatibility Notes
+### Notes de compatibilité
 
-Ces instructions fonctionnent dans les régions USA, Europe, Japon et Corée indiquées par les lettres U, E, J ou K après le numéro de version de la console.
+Ces instructions fonctionnent sur les consoles des régions USA, Europe, Japon et Corée, comme indiqué par les lettres U, E, J ou K après la version du logiciel système de la console.
 
-If you have a Taiwanese console (indicated by a T after the system version), follow [this page](bannerbomb3-fredtool-(twn)) instead.
+Si vous possédez une console taïwanaise (indiquée par un T après la version du logiciel système de la console), suivez [cette page](bannerbomb3-fredtool-(twn)) à la place.
 {: .notice--warning}
 
 ### Ce dont vous avez besoin
@@ -30,46 +30,46 @@ If you have a Taiwanese console (indicated by a T after the system version), fol
 
 #### Section I - Préparatifs
 
-In this section, you will copy the files needed to trigger the BannerBomb3 exploit onto your device's SD card.
+Dans cette section, vous allez copier les fichiers nécessaires pour déclencher l'exploit BannerBomb3 sur la carte SD de votre console.
 
-1. Éteignez votre 3DS
+1. Éteignez votre console
 1. Insérez votre carte SD dans votre ordinateur
-1. Open [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen) on your computer
-1. Upload your movable.sed using the “Choose File” option
-1. Click “Build and Download”
-  + This will download an exploit DSiWare called `F00D43D5.bin` and a payload called `bb3.bin` inside of a zip archive (`DSIWARE_EXPLOIT.zip`)
-1. Copy `bb3.bin` from `DSIWARE_EXPLOIT.zip` to the root of your SD card
+1. Ouvrez [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen) sur votre ordinateur
+1. Téléchargez votre movable.sed en utilisant l'option « Choisir un fichier »
+1. Cliquez sur "Build and Download"
+  + Ceci va télécharger un exploit DSiWare appelé `F00D43D5.bin` et un payload appelé `bb3.bin` à l'intérieur d'une archive zip (`DSIWARE_EXPLOIT.zip`)
+1. Copiez `bb3.bin` de `DSIWARE_EXPLOIT.zip` à la racine de votre carte SD
   + La racine de la carte SD représente le répertoire initial de la carte SD où vous pouvez voir le dossier Nintendo 3DS, mais ce n'est pas à l'intérieur de ce dernier
   ![]({{ "/images/screenshots/bb3/bb3-root-layout.png" | absolute_url }}){: .notice--info}
-1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` on your SD card
-  + `<ID0>` is the 32-letter folder name that you copied in [Seedminer](seedminer)
-  + `<ID1>` is a 32-letter folder inside of the `<ID0>`
+1. Naviguez vers `Nintendo 3DS` -> `<ID0>` -> `<ID1>` sur votre carte SD
+  + `<ID0>` est le nom du dossier à 32 lettres que vous avez copié dans [Seedminer](seedminer)
+  + `<ID1>` est un dossier de 32 caractères à l'intérieur de `<ID0>`
   ![]({{ "/images/screenshots/bb3/dsiware-location-1.png" | absolute_url }}){: .notice--info}
-1. Create a folder named `Nintendo DSiWare` inside of the `<ID1>`
-  + If you already had the folder *and* there are any existing DSiWare backup files (`<8-character-id>.bin`) inside, copy them to your PC and remove them from your SD card
-1. Copy the `F00D43D5.bin` file from `DSIWARE_EXPLOIT.zip` to the `Nintendo DSiWare` folder
+1. Créez un dossier nommé `Nintendo DSiWare` à l'intérieur de `<ID1>`
+  + Si vous aviez déjà le dossier *et* qu'il y a des fichiers de sauvegarde DSiWare existants (`<8-character-id>.bin`) à l'intérieur, copiez-les sur votre PC et retirez-les de votre carte SD
+1. Copiez le fichier `F00D43D5.bin` depuis `DSIWARE_EXPLOIT.zip` vers le dossier `Nintendo DSiWare`
 
 ![]({{ "/images/screenshots/bb3/dsiware-location-2.png" | absolute_url }})
 {: .notice--info} 
 
-#### Section II - Hardware Button Check
+#### Section II - Contrôle du bon fonctionnement des boutons
 
-In this section, you will test the SAFE_MODE function of your device. This will determine which method you will follow in the next page.
+Dans cette section, vous testerez la fonction SAFE_MODE de votre appareil. Cela déterminera la méthode que vous allez suivre dans la page suivante.
 
-1. With your device still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your device
-  + Keep holding the buttons until the device boots into Safe Mode (a "system update" menu)
-1. If prompted to update, press Cancel
-  + Your device will power off
-  + If the device boots to the HOME Menu, just power off your device
+1. Lorsque votre console est encore éteinte, maintenez les boutons suivants : (L) + (R) + (Haut sur la croix directionnelle) + (A), et tout en maintenant ces boutons enfoncés, allumez votre console
+  + Maintenez les boutons enfoncés jusqu'à ce que la console démarre en mode sans échec (menu "Mise à jour")
+1. Si vous êtes invité à faire une mise à jour, appuyez sur Annuler
+  + Votre console va s'éteindre
+  + Si la console démarre à partir du menu HOME, éteignez simplement votre console
 
 ___
 
-### Next steps: Choose an exploit
+### Étape suivante : Choisissez un exploit
 
-If your device booted into Safe Mode and prompted to you to do a system update in Section II, Safe Mode is working on your device.
+Si votre console a démarré en mode sans échec et vous a demandé de faire une mise à jour du système dans la Section II, le mode sans échec est bien fonctionnel sur votre console.
 
-If your device booted into Safe Mode, continue to [Installing boot9strap (USM)](installing-boot9strap-(usm))
+Si votre console a démarré en mode sans échec, continuez vers [Installer boot9strap (USM)](installing-boot9strap-(usm))
 {: .notice--primary}
 
-If your device did NOT boot into Safe Mode, continue to [Installing boot9strap (Fredtool)](installing-boot9strap-(fredtool))
+Si votre console n'a PAS démarré en mode sans échec, continuez vers [Installer boot9strap (Fredtool)](installing-boot9strap-(fredtool))
 {: .notice--warning}
