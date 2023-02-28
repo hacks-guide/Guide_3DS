@@ -36,7 +36,7 @@ Probleme nach der Installation:
 {% capture compat %}
 <summary><u>SigHaxed FIRM - File not found</u></summary>
 
-You are missing `boot9strap.firm` and `boot9strap.firm.sha` from the `boot9strap` folder, or the `boot9strap` folder is misnamed. Download the latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip), and place `boot9strap.firm` and `boot9strap.firm.sha` in the `boot9strap` folder.
+Dir fehlt die `boot9strap.firm` und die `boot9strap.firm.sha` Datei im `boot9strap` Ordner, oder der `boot9strap` Ordner ist falsch bennant. Lade dir neuste Version von [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) herunter und platziere `boot9strap.firm` und `boot9strap.firm.sha` in deinen `boot9strap` Ordner.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -55,97 +55,98 @@ Dir fehlt die `secret_sector.bin` Datei im `boot9strap` Ordner, oder dein `boot9
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Something else</u></summary>
+<summary><u>Etwas anderes</u></summary>
 
-Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance, and describe the message that you see.
+Tritt [Nintendo Homebrew auf Discord](https://discord.gg/MWxPgEp) bei und beschreibe die Nachricht, die du siehst.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 ## Seedminer
 
 {% capture compat %}
-<summary><u>Multiple long folder names in Nintendo 3DS folder</u></summary>
+<summary><u>Mehrere Ordner mit langem Namen im Nintendo 3DS Ordner</u></summary>
 
 ![]({{ "/images/screenshots/multiple-id0.png" | absolute_url }})
 {: .notice--info}
 
-This occurs when you use your SD card in multiple 3DS devices and is intended to prevent inadvertently merging data that would not be valid on other devices. To figure out which long folder name is correct for your 3DS, follow these instructions:
+Das passiert, wenn du deine SD-Karte in mehreren 3DS-Konsolen benutzt und existiert, um das Zusammenprallen von Daten zu verhindern, die dein Gerät nicht benutzen kann. Um herauszufinden, welcher der langen Ordner der richtige ist, folge diesen Anweisungen:
 
-1. Rename the `Nintendo 3DS` folder to `BACKUP_Nintendo 3DS`
-1. Reinsert your SD card into your device and power on your device
-1. Wait for the device to generate the SD card data
-	+ Your applications will have disappeared. This is normal and will be resolved shortly
-1. Power off your device and reinsert your SD card into your computer
-1. Navigiere zum `Nintendo 3DS` Ordner auf deiner SD-Karte
-1. Copy the 32 character long name of the folder you see
-	+ This is your true ID0 that you will use in [Section II of Seedminer](seedminer#section-ii---seedminer)
-1. Delete the `Nintendo 3DS` folder
-1. Rename the `BACKUP_Nintendo 3DS` folder to `Nintendo 3DS`
+1. Benenne den `Nintendo 3DS` Ordner zu `BACKUP_Nintendo 3DS` um
+1. Stecke deine SD-Karte in deine Konsole und schalte sie an
+1. Warte bis die Konsole die SD-Karten Daten erstellt hat
+	+ Deine Apps werden verschwunden sein. Das ist normal und wird gleich behoben
+1. Schalte deine Konsole aus und stecke deine SD-Karte wieder in deinen Computer
+1. Navigiere zum "Nintendo 3DS"-Ordner auf deiner SD-Karte
+1. Kopiere den 32 Buchstaben langen Ordnernamen von dem Ordner, den du siehst
+	+ Das ist deine richtige ID0, die du in [Schritt II von Seedminer](seedminer#section-ii---seedminer)
+verwenden wirst
+1. Lösche den `Nintendo 3DS` Ordner
+1. Benenne den `BACKUP_Nintendo 3DS` Ordner zu `Nintendo 3DS` um
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Bruteforce Movable skips to step 4</u></summary>
+<summary><u>Bruteforce Movable springt zu Schritt 4</u></summary>
 
-The website has already mined your `movable.sed` using your friend code and ID0 combination. You can use the `movable.sed` that it provides you.
+Die Webseite hat deine `movable.sed` mit deiner Freundescode- und ID0-Kombination bereits herausgefunden. Du kannst die `movable.sed` Datei benutzen, die dir die Seite gibt.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
 <summary><u>Important! You have been locked out of the automated part1 dumper system...</u></summary>
 
-Your friend code was blocked from using the friend code bot because your 3DS did not successfully friend the bot. Ensure your 3DS is properly connected to the Internet, then join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask to be unlocked.
+Dein Freundescode wurde von dem Bot blockiert, da dein 3DS es nicht geschafft hat, den Bot als Freund hinzuzufügen. Stell sicher, dass dein 3DS korrekt mit dem Internet verbunden ist, und bitte in [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) auf Englisch um eine Entperrung.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
 <summary><u>We were unable to successfully complete your bruteforce request. :`(</u></summary>
 
-The website has determined that your `movable.sed` cannot be brute-forced. Ensure that you gave the correct ID0 to the website. If your ID0 is correct, then you will be unable to use Seedminer and you will have to use an alternate method that will require additional games or hardware.
+Die Webseite hat festgestellt, dass deine `movable.sed` nicht brute-forcebar ist. Stell sicher, dass du der Seite die richtige ID0 gegeben hast. Wenn deine ID0 korrekt ist, dann kannst Du Seedminer nicht verwenden und musst eine alternative Methode verwenden, die zusätzliche Spiele oder Geräte erfordert.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 ## BannerBomb3
 
 {% capture compat %}
-<summary><u>DSiWare Management menu crashes without showing BB3 multihax menu</u></summary>
-Ensure that `F00D43D5.bin` is the only file in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`. If it is, then re-create it with the [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen). 
+<summary><u>DSiWare Management Menü stürzt ab, ohne BB3 multihax menu anzuzeigen</u></summary>
+Stelle sicher, dass `F00D43D5.bin` die einzige Datei in `Nintendo 3DS` -> `<ID0>` -> `<ID1>-> `Nintendo DSiWare` ist. Falls ja, dann erstelle sie mit dem [Bannerbomb3 Injektor](http://3dstools.nhnarwhal.com/#/bb3gen) erneut. 
 
-Also, ensure that `bb3.bin` is on the root of the SD card. If it is missing, then download the latest release of [Bannerbomb3](https://github.com/lifehackerhansol/Bannerbomb3/releases/download/v3.0-lhs1/bb3.bin) (direct download), and copy the `bb3.bin` file to the root of your SD card.
+Stelle außerdem sicher, dass `bb3.bin` im Stammverzeichnis der SD-Karte liegt. Wenn es fehlt, dann lade die neuste Version von [Bannerbomb3](https://github.com/lifehackerhansol/Bannerbomb3/releases/download/v3.0-lhs1/bb3.bin) herunter (direkter Download) und kopiere die `bb3.bin` Datei in das Stammverzeichnis deiner SD-Karte.
 
-If neither of these solutions fixes this problem, then custom firmware may have been uninstalled on this device in a way that makes this method impossible to perform. If this is the case and Safe Mode works, you will need to follow [an alternate branch of Seedminer](homebrew-launcher-(pichaxx)). If Safe Mode doesn't work or you need assistance with this matter, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+Wenn keine dieser Lösungen dieses Problem behebt, dann wurde auf dieser Konsole möglicherweise Custom Firmware auf eine Weise deinstalliert, die diese Methode unmöglich macht. Wenn dies der Fall ist und der Safe Mode funktioniert, kannst du [einem alternativen Zweig von Seedminer](homebrew-launcher-(pichaxx)) folgen. Falls der Safe Mode nicht funktioniert oder du Hilfe bei diesem Problem brauchst, trete [Nintendo Homebrew auf Discord](https://discord.gg/MWxPgEp) bei und frage auf Englisch nach Hilfe.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>DSiWare Management menu displays "No accessible software data."</u></summary>
+<summary><u>Nintendo DSiWare-Datenverwaltung zeigt "Es wurden keine Softwaredaten gefunden."</u></summary>
 
-`F00D43D5.bin` is missing from `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`. Make sure that `Nintendo DSiWare` is correctly spelled and spaced. Uppercase/lowercase does not matter.
+`F00D43D5.bin` fehlt in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`. Stelle sicher, dass `Nintendo DSiWare` korrekt geschrieben und Leerzeichen enthält. Groß-/Kleinschreibung spielt hierbei keine Rolle.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>DSiWare Management shows a question mark</u></summary>
+<summary><u>Nintendo DSiWare-Datenverwaltung zeigt ein Fragezeichen</u></summary>
 
-There may be an issue with your `F00D43D5.bin` file (it may be corrupted or intended for the wrong 3DS). Re-create your `F00D43D5.bin` file with the [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen), ensuring that you use the `movable.sed` file for your console.
+Möglicherweise gibt es ein Problem mit deiner `F00D43D5.bin` Datei (sie kann beschädigt oder für den falschen 3DS bestimmt sein). Erstelle deine `F00D43D5.bin` Datei mit dem [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen) neu, und stelle sicher, dass du die `movable.sed` Datei für deine Konsole benutzt.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-## Installing boot9strap (USM)
+## boot9strap installieren (USM)
 
 {% capture compat %}
-<summary><u>Safe Mode system update succeeds instead of giving error 003-1099</u></summary>
+<summary><u>Safe Mode System Update funktioniert, anstatt den Fehler 003-1099 zu zeigen</u></summary>
 
-unSAFE_MODE is not installed. [Follow the instructions](installing-boot9strap-(usm)) to install it.
+unSAFE_MODE ist nicht installiert. [Folge der Anleitung](installing-boot9strap-(usm)) um es zu installieren.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Red screen after selecting "Detailed Setup"</u></summary>
+<summary><u>Roter Bildschirm nach dem Drücken auf "detailliertes Setup"</u></summary>
 
-The file `usm.bin` is missing or misplaced. Download the latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/download/v1.3/usm.bin) and place `usm.bin` on the root of your SD card. Füge die `.bin` Erweiterung nicht hinzu, wenn du sie noch nicht siehst.
+Die Datei `usm.bin` fehlt oder ist falsch platziert. Lade die neueste Version von [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/download/v1.3/usm.bin) herunter und platziere `usm.bin` im Stammverzeichnis deiner SD-Karte. Füge die `.bin` Erweiterung nicht hinzu, wenn du sie noch nicht siehst.
 
-There is also a possibility that the console isn't reading your SD card. Make sure it is inserted and formatted correctly.
+Es besteht auch die Möglichkeit, dass die Konsole deine SD-Karte nicht liest. Stelle sicher, dass sie korrekt hineingesteckt und formatiert ist.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
