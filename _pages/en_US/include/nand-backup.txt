@@ -1,4 +1,6 @@
+{%- if include.is-powered-off == "true" %}
 1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+{%- endif %}
 1. Press (Home) to bring up the action menu
 1. Select "Scripts..."
 1. Select "GM9Megascript"
@@ -11,7 +13,11 @@
 1. Press (B) to return to the main menu
 1. Select "Exit"
 1. Press (A) to relock write permissions if prompted
+{%- if include.no-power-off == "true" %}
+1. Hold (R) and press (B) at the same time to eject your SD card
+{%- else %}
 1. Hold (R) and press (Start) at the same time to power off your device
+{%- endif %}
 1. Insert your SD card into your computer
 1. Copy `<date>_<serialnumber>_sysnand_##.bin` and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Make backups in multiple locations (such as online file storage)
