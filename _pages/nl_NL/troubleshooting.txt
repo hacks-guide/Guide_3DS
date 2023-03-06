@@ -380,6 +380,35 @@ Follow these steps in order:
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
+<summary><u>"To use the Internet Browser, please update your system using the System Update option in the System Settings."</u></summary>
+
+First, make sure you entered the correct proxy for the connection you're using. If not, go back to [Section II](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth). If the proxy is correct, then your device has been cart-updated, which means an alternate exploit will need to be used.
+
+<u>Method 1</u><br>
+If the two numbers before the region in the system version string is equal to or less than 36 (e.g. Ver. 11.14.0-**36**U), you can follow [Soundhax](installing-boot9strap-(soundhax)). When prompted to select a firmware to generate the sound file, use:
+
+* 1.x - 2.1 if the number is between 0 and 2
+* 2.1 - 2.2 if the number is between 3 and 4
+* 3.x - 4.x if the number is between 5 and 10
+* 5.x - 11.3 if the number is between 11 and 36
+
+<u>Method 2 (Old 3DS only)</u><br>
+If you have an Old 3DS / Old 3DS XL / 2DS, you can try a Safe Mode update, which will trigger an alternate exploit:
+
+1. Ensure that the proxy that you used for SSLoth is still actively applied to your internet connection
+1. With your device powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your device
+  + Keep holding the buttons until the device boots into Safe Mode (a "system update" menu)
+1. Press "OK" to accept the update
+1. If everything worked correctly, the update will fail and the 3DS will boot into SafeB9SInstaller. If it did, then continue from [Section IV](installing-boot9strap-(ssloth-browser)#section-iv---installing-boot9strap).
+
+---
+
+If these methods didn't work (or do not apply to you), update your device to the latest version and follow [Seedminer](seedminer).
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
 <summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
 
 Het bestand `SafeB9SInstaller.bin` ontbreekt of zit in de verkeerde map. Download de nieuwste versie van [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip), pak het uit en plaats `SafeB9SInstaller.bin` op de hoofdmap van je SD-kaart. Voeg de `.bin` extensie niet toe als je het nog niet ziet.
@@ -523,20 +552,6 @@ De volgende stappen kunnen in elke volgorde uitgevoerd worden, maar zijn gesorte
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-{% capture compat %}
-<summary><u>My device does not show any of my apps on the HOME Menu</u></summary>
-
-This could be caused by various reasons, but mostly because your SD card is not being read by the system.
-You can check if your SD is not being read by holding SELECT on boot and checking the yellow text on the bottom screen; if it says "Booted from CTRNAND via B9S", then your system is booting from the internal memory and not from the SD card.
-Attempt the steps below, which are listed from easiest to hardest:
-1. Power off your device, remove the SD card, re-insert it, then power on your device
-1. Power off your device, remove the SD card, insert it on your PC, download the latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), extract `boot.firm` from the `Luma3DS.zip` and place it on the root of your SD card (replace it if it already exists)
-1. Power off your device, remove the SD card, insert it on your PC and reformat your SD card (this will wipe your SD card data) according to your computer's operating system: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))
-1. Test your SD card for errors by following the guide according to your computer's operating system: [Windows](h2testw-(windows), [Linux](f3-(linux)), [macOS](f3xswift-(mac)). If your SD card is marked as faulty, then you will have to replace your SD card
-1. Your SD card slot may be broken. Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for further assistance
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
 ### Error message on boot
 
 {% capture compat %}
@@ -564,10 +579,16 @@ ARM11 exception handlers zijn uitgeschakeld of custom firmware is niet geïnstal
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Exception screen when booting/loading an application</u></summary>
+<summary><u>HOME Menu is missing installed applications</u></summary>
 
-Look for your exception screen in [this page](https://wiki.hacks.guide/wiki/3DS:Error_screens/Luma3DS_exception_screen).
-If you weren't able to find your error or the instructions didn't work, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for further assistance.
+This could be caused by various reasons, but most likely because your SD card is not being read by the system.
+You can check if your SD is being read by holding SELECT on boot and checking the yellow text on the bottom screen; if it says "Booted from CTRNAND via B9S", then your device is booting from the internal memory and not from the SD card.
+If this is the case, attempt the steps below, which are listed from easiest to hardest:
+1. Power off your device, remove the SD card, re-insert it, then power on your device
+1. Power off your device, remove the SD card, insert it on your PC, download the latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), extract `boot.firm` from the `Luma3DS.zip` and place it on the root of your SD card (replacing any existing file)
+1. Power off your device, remove the SD card, insert it on your PC and reformat your SD card according to your computer's operating system: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)) *(this will wipe your SD card data)*
+1. Test your SD card for errors by following the guide according to your computer's operating system: [Windows](h2testw-(windows)), [Linux](f3-(linux)), [macOS](f3xswift-(mac)). If your SD card is marked as faulty, then you will have to replace your SD card
+1. Your SD card slot may be broken. Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for further assistance
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -617,6 +638,14 @@ Your device is running Luma3DS 6.6 or older, likely via arm9loaderhax. Volg [A9L
 <summary><u>Extended memory mode games (Pokemon Sun/Moon, Smash, etc.) don't work</u></summary>
 
 Dit kan gebeuren na een CTRTransfer of regio verandering op Old 3DS / 2DS. Je moet je apparaat formatteren om dit probleem op te lossen.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Exception screen when booting/loading an application</u></summary>
+
+Look for your exception screen in [this page](https://wiki.hacks.guide/wiki/3DS:Error_screens/Luma3DS_exception_screen).
+If you weren't able to find your error or the instructions didn't work, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for further assistance.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
