@@ -380,6 +380,35 @@ SSLoth 프록시 설정이 잘못 설정되었습니다. 페이지의 SSLoth 섹
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
+<summary><u>"To use the Internet Browser, please update your system using the System Update option in the System Settings."</u></summary>
+
+First, make sure you entered the correct proxy for the connection you're using. If not, go back to [Section II](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth). If the proxy is correct, then your device has been cart-updated, which means an alternate exploit will need to be used.
+
+<u>Method 1</u><br>
+If the two numbers before the region in the system version string is equal to or less than 36 (e.g. Ver. 11.14.0-**36**U), you can follow [Soundhax](installing-boot9strap-(soundhax)). When prompted to select a firmware to generate the sound file, use:
+
+* 1.x - 2.1 if the number is between 0 and 2
+* 2.1 - 2.2 if the number is between 3 and 4
+* 3.x - 4.x if the number is between 5 and 10
+* 5.x - 11.3 if the number is between 11 and 36
+
+<u>Method 2 (Old 3DS only)</u><br>
+If you have an Old 3DS / Old 3DS XL / 2DS, you can try a Safe Mode update, which will trigger an alternate exploit:
+
+1. Ensure that the proxy that you used for SSLoth is still actively applied to your internet connection
+1. With your device powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your device
+  + 안전 모드로 부팅 될 때 까지 버튼들을 눌러 주세요 ("시스템 업데이트" 메뉴)
+1. "OK"를 선택해서 업데이트를 확인해 주세요
+1. If everything worked correctly, the update will fail and the 3DS will boot into SafeB9SInstaller. If it did, then continue from [Section IV](installing-boot9strap-(ssloth-browser)#section-iv---installing-boot9strap).
+
+---
+
+If these methods didn't work (or do not apply to you), update your device to the latest version and follow [Seedminer](seedminer).
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
 <summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
 
 `SafeB9SInstaller.bin` 파일이 없거나 잘못 들어갔습니다. 최신 버전의 [SafeB9Installer](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInst20170605-122940.zip)을 다운받아 압축을 풀고, SD 카드의 최상위 디렉토리에 `SafeB9Installer.bin`을 복사해주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
@@ -523,20 +552,6 @@ If you have enough space on your SD card, your SD might be corrupted or faulty. 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-{% capture compat %}
-<summary><u>My device does not show any of my apps on the HOME Menu</u></summary>
-
-This could be caused by various reasons, but mostly because your SD card is not being read by the system.
-You can check if your SD is not being read by holding SELECT on boot and checking the yellow text on the bottom screen; if it says "Booted from CTRNAND via B9S", then your system is booting from the internal memory and not from the SD card.
-Attempt the steps below, which are listed from easiest to hardest:
-1. Power off your device, remove the SD card, re-insert it, then power on your device
-1. Power off your device, remove the SD card, insert it on your PC, download the latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), extract `boot.firm` from the `Luma3DS.zip` and place it on the root of your SD card (replace it if it already exists)
-1. Power off your device, remove the SD card, insert it on your PC and reformat your SD card (this will wipe your SD card data) according to your computer's operating system: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))
-1. Test your SD card for errors by following the guide according to your computer's operating system: [Windows](h2testw-(windows), [Linux](f3-(linux)), [macOS](f3xswift-(mac)). If your SD card is marked as faulty, then you will have to replace your SD card
-1. Your SD card slot may be broken. Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for further assistance
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
 ### 부팅 중에 에러 메시지가 표시됩니다
 
 {% capture compat %}
@@ -564,10 +579,16 @@ ARM11 오류 핸들러가 꺼져있거나, 커스텀 펌웨어가 정상적으�
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Exception screen when booting/loading an application</u></summary>
+<summary><u>HOME Menu is missing installed applications</u></summary>
 
-Look for your exception screen in [this page](https://wiki.hacks.guide/wiki/3DS:Error_screens/Luma3DS_exception_screen).
-If you weren't able to find your error or the instructions didn't work, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for further assistance.
+This could be caused by various reasons, but most likely because your SD card is not being read by the system.
+You can check if your SD is being read by holding SELECT on boot and checking the yellow text on the bottom screen; if it says "Booted from CTRNAND via B9S", then your device is booting from the internal memory and not from the SD card.
+If this is the case, attempt the steps below, which are listed from easiest to hardest:
+1. Power off your device, remove the SD card, re-insert it, then power on your device
+1. Power off your device, remove the SD card, insert it on your PC, download the latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), extract `boot.firm` from the `Luma3DS.zip` and place it on the root of your SD card (replacing any existing file)
+1. Power off your device, remove the SD card, insert it on your PC and reformat your SD card according to your computer's operating system: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)) *(this will wipe your SD card data)*
+1. Test your SD card for errors by following the guide according to your computer's operating system: [Windows](h2testw-(windows)), [Linux](f3-(linux)), [macOS](f3xswift-(mac)). If your SD card is marked as faulty, then you will have to replace your SD card
+1. Your SD card slot may be broken. Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for further assistance
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -617,6 +638,14 @@ If you weren't able to find your error or the instructions didn't work, join [Ni
 <summary><u>확장 메모리 모드 게임 (포켓몬 썬/문, 스매시 브라더스 등)이 정상 작동하지 않습니다</u></summary>
 
 이 문제는 구 3DS / 2DS 기기의 지역을 변경하거자 CTRTransfer를 한 이후 나타날 수 있는 상황입니다. 이를 해결하려면 본체 초기화를 해야 합니다.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Exception screen when booting/loading an application</u></summary>
+
+Look for your exception screen in [this page](https://wiki.hacks.guide/wiki/3DS:Error_screens/Luma3DS_exception_screen).
+If you weren't able to find your error or the instructions didn't work, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for further assistance.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
