@@ -211,15 +211,13 @@ $(document).ready(function() {
     "installing-boot9strap-(fredtool)": "8",
     "bannerbomb3": "9",
     "installing-boot9strap-(usm)": "10",
-	  "homebrew-launcher-(pichaxx)": "11",
-    "installing-boot9strap-(kartdlphax)": "12",
-	  "bannerbomb3-fredtool-(twn)": "13",
-    "installing-boot9strap-(hbl-usm)": "14",
-    "installing-boot9strap-(ssloth-browser)": "15",
-	  "key-information": "16",
-    "installing-boot9strap-(soundhax-sp)": "17",
-    "installing-boot9strap-(soundhax-sp-kor)": "18",
-    "seedminer-(twn)": "19"
+    "installing-boot9strap-(kartdlphax)": "11",
+	  "bannerbomb3-fredtool-(twn)": "12",
+    "installing-boot9strap-(ssloth-browser)": "13",
+	  "key-information": "14",
+    "installing-boot9strap-(soundhax-sp)": "15",
+    "installing-boot9strap-(soundhax-sp-kor)": "16",
+    "seedminer-(twn)": "17"
   };
 
   for(var device in devices){
@@ -262,15 +260,13 @@ $(document).ready(function() {
       "8": ["seedminer", "bannerbomb3", "installing-boot9strap-(fredtool)", "finalizing-setup"],
       "9": ["seedminer", "bannerbomb3", "multiple-options", "finalizing-setup"],
       "10": ["seedminer", "bannerbomb3", "installing-boot9strap-(usm)", "finalizing-setup"],
-      "11": ["seedminer", "homebrew-launcher-(pichaxx)", "installing-boot9strap-(hbl-usm)", "finalizing-setup"],
-      "12": ["installing-boot9strap-(kartdlphax)", "finalizing-setup"],
-      "13": ["seedminer-(twn)", "bannerbomb3-fredtool-(twn)", "finalizing-setup"],
-      "14": ["seedminer", "homebrew-launcher-(pichaxx)", "installing-boot9strap-(hbl-usm)", "finalizing-setup"],
-      "15": ["installing-boot9strap-(ssloth-browser)", "finalizing-setup"],
-	    "16": ["multiple-options", "finalizing-setup"],
-      "17": ["installing-boot9strap-(soundhax-sp)", "finalizing-setup"],
-      "18": ["installing-boot9strap-(soundhax-sp-kor)", "finalizing-setup"],
-      "19": ["seedminer-(twn)", "bannerbomb3-fredtool-(twn)", "finalizing-setup"]
+      "11": ["installing-boot9strap-(kartdlphax)", "finalizing-setup"],
+      "12": ["seedminer-(twn)", "bannerbomb3-fredtool-(twn)", "finalizing-setup"],
+      "13": ["installing-boot9strap-(ssloth-browser)", "finalizing-setup"],
+	    "14": ["multiple-options", "finalizing-setup"],
+      "15": ["installing-boot9strap-(soundhax-sp)", "finalizing-setup"],
+      "16": ["installing-boot9strap-(soundhax-sp-kor)", "finalizing-setup"],
+      "17": ["seedminer-(twn)", "bannerbomb3-fredtool-(twn)", "finalizing-setup"]
     }
     // Can add custom routing if necessary but currently both routes are identical
     var device_old =  Object.assign({}, device_common,{
