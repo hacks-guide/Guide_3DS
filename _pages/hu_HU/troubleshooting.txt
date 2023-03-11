@@ -108,6 +108,18 @@ A weboldal úgy találta, hogy a `movable.sed`-ed nem brute-force-olható. Ellen
 ## BannerBomb3
 
 {% capture compat %}
+<summary><u>Multiple ID1 folders inside of ID0</u></summary>
+
+![]({{ "/images/screenshots/multiple-id0.png" | absolute_url }})
+
+This can occur if you've used multiple SD cards on a 3DS and then merged the contents of the SD cards together. This is done to prevent conflicting, valid data from being merged together.
+
+To fix this, you will need to determine which folder contains your data. Usually, this will be the larger (or largest) of the folders. Backup and delete the smaller one(s), then create a `Nintendo DSiWare` folder in the one that remains and move `F00D43D5.bin` to that location.
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
 <summary><u>A DSiWare Management menü összeomlik a BB3 multihax menü megjelenése nélkül</u></summary>
 Biztosítsd, hogy az `F00D43D5.bin` az egyetlen fájl a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` mappában. Ha így van, hozd létre újra a [BannerBomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen) segítségével. 
 
