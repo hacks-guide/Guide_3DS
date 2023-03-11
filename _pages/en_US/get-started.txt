@@ -24,12 +24,14 @@ If you see an unusual menu, STOP - you already have custom firmware! Continue fr
 #### Section III - Select a Method
 
 To find the correct method for your device, please enter the system version you found in Section II.
-
+<div class="selectversion">
+<br>
 <select id="mySelecti">
     <option>Ver.</option>
     <option>other</option>
 </select>
 <select id="mySelect">
+  <option>0</option>
   <option>1</option>
   <option>2</option>
   <option>3</option>
@@ -41,8 +43,7 @@ To find the correct method for your device, please enter the system version you 
   <option>9</option>
   <option>10</option>
   <option>11</option>
-</select>.
-<select id="mySelec">
+</select>.<select id="mySelec">
     <option>0</option>
     <option>1</option>
     <option>2</option>
@@ -60,11 +61,9 @@ To find the correct method for your device, please enter the system version you 
     <option>14</option>
     <option>15</option>
     <option>16</option>
-</select>.
-<select id="mySele">
+</select>.<select id="mySele">
   <option>0</option>
-</select>-
-<select id="mySel">
+</select>-<select id="mySel">
     <option>0</option>
     <option>1</option>
     <option>2</option>
@@ -115,8 +114,7 @@ To find the correct method for your device, please enter the system version you 
     <option>47</option>
     <option>48</option>
     <option>49</option>
-</select>
-<select id="mySe">
+</select><select id="mySe">
   <option>E</option>
   <option>U</option>
   <option>J</option>
@@ -124,9 +122,9 @@ To find the correct method for your device, please enter the system version you 
   <option>T</option>
   <option>C</option>
 </select>
-
+<br>
 <input type="button" onclick="redirect()" value="Let's Go!">
-
+</div>
 <p id="result"></p>
 <noscript>Please enable JavaScript to continue with the guide.</noscript>
 
@@ -143,6 +141,7 @@ Otherwise, methods that work on all versions are available, but require addition
 
 
 <script>
+
 function sslothable(s, n) {
   if  
       (
@@ -171,7 +170,10 @@ function redirect() {
     var smallver = document.getElementById("mySelec");
     var nver = document.getElementById("mySel");
     var region = document.getElementById("mySe");
-    if (cfw.value === "other") {
+    if (mainver.value == 0) {
+        document.getElementById("result").innerText = "\"Ver. 0.0.0-0\" indicates a developer unit. This guide is only for retail units.";
+    }
+    else if (cfw.value === "other") {
         window.location.href = "checking-for-cfw";
     }
     else if (mainver.value < 11 || smallver.value < 4) {
