@@ -23,42 +23,116 @@ Ha egy szokatlan menüt látsz ÁLLJ MEG - már vagy egyedi firmwared! Folytasd 
 
 #### III. rész - Metódus választása
 
-Használd a lenti verzió táblát egy metódus kiválasztásához. Néhány fontos megjegyzés:
-  + A lenti verzió tábla *inkluzív*. Például a "11.4.0-tól 11.15.0-ig" magába foglalja a 11.4.0, 11.15.0, és az összes köztes verziót is.
-  + Szoftver verziók nem úgy működnek mint a tizedes jegyek. 11.10.0 és későbbi verziók újjabbak mint 11.3.0, és ezért nem kompatibilisak a Soundhax-el.
-  + A szám és betű a rendszer verzió mögött nem fontos.
-  + Nem számít melyik metódust követed, a végeremény ugyanaz (boot9strap+Luma3DS egyedi firmware telepítés a legutolsó firmware-re).
+To find the correct method for your device, please enter the system version you found in Section II.
+<div class="selectversion">
+<br>
+<select id="mySelect">
+  <option>0</option>
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+  <option>6</option>
+  <option>7</option>
+  <option>8</option>
+  <option>9</option>
+  <option>10</option>
+  <option>11</option>
+</select>.<select id="mySelec">
+    <option>0</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+    <option>11</option>
+    <option>12</option>
+    <option>13</option>
+    <option>14</option>
+    <option>15</option>
+    <option>16</option>
+</select>.<select id="mySele">
+  <option>0</option>
+</select>-<select id="mySel">
+    <option>0</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+    <option>11</option>
+    <option>12</option>
+    <option>13</option>
+    <option>14</option>
+    <option>15</option>
+    <option>16</option>
+    <option>17</option>
+    <option>18</option>
+    <option>19</option>
+    <option>20</option>
+    <option>21</option>
+    <option>22</option>
+    <option>23</option>
+    <option>24</option>
+    <option>25</option>
+    <option>26</option>
+    <option>27</option>
+    <option>28</option>
+    <option>29</option>
+    <option>30</option>
+    <option>31</option>
+    <option>32</option>
+    <option>33</option>
+    <option>34</option>
+    <option>35</option>
+    <option>36</option>
+    <option>37</option>
+    <option>38</option>
+    <option>39</option>
+    <option>40</option>
+    <option>41</option>
+    <option>42</option>
+    <option>43</option>
+    <option>44</option>
+    <option>45</option>
+    <option>46</option>
+    <option>47</option>
+    <option>48</option>
+    <option>49</option>
+</select><select id="mySe">
+  <option>E</option>
+  <option>U</option>
+  <option>J</option>
+  <option>K</option>
+  <option>T</option>
+  <option>C</option>
+</select>
+<br>
+<input type="button" onclick="redirect()" value="Confirm">
+</div>
 
-<table>
-  <colgroup>
-    <col span="1" style="width: 20%;">
-    <col span="1" style="width: 40%;">
-  </colgroup>
-  <thead>
-    <tr>
-      <th style="text-align: center">Rendszer verzió</th>
-      <th style="text-align: center">Tennivaló</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center; font-weight: bold;">11.16.0 (legutolsó verzió)</td>
-      <td style="text-align: center; font-weight: bold;"><a href="seedminer">Seedminer</a></td>
-    </tr>
-	  <tr>
-      <td style="text-align: center; font-weight: bold;">11.14.0-től 11.15.0-ig</td>
-      <td style="text-align: center; font-weight: bold;">Frissítsd a 3DS-ed a legutolsó verzióra a System Settings-en keresztül</td>
-    </tr>
-    <tr>
-      <td style="text-align: center; font-weight: bold;">11.4.0-től 11.13.0-ig</td>
-      <td style="text-align: center; font-weight: bold;"><a href="installing-boot9strap-(ssloth-browser)">Boot9strap telepítése (SSLoth-Browser)</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: center; font-weight: bold;">1.0.0-tól 11.3.0-ig</td>
-      <td style="text-align: center; font-weight: bold;"><a href="installing-boot9strap-(soundhax)">Boot9strap telepítése (Soundhax)</a></td>
-    </tr>
-  </tbody>
-</table>
+{% capture invalidVersion %}
+This doesn't seem to be a valid system version version.
+{% endcapture %}
+
+{% capture methodUnavailable %}
+You currently cannot hack your 3DS on this version using the main methods. If you want to hack your console, you have to use ntrboot.
+{% endcapture %}
+
+<p id="result_invalidVersion" style="display:none">{{ invalidVersion }}</p>
+<p id="result_methodUnavailable" style="display:none">{{ methodUnavailable }}</p>
+<noscript>Please enable JavaScript to continue with the guide.</noscript>
 
 ---
 #### Alternatív metódusok
@@ -70,3 +144,5 @@ Egyéb esetekben más, az összes verziónál használható metódus elérhető,
 1. [kartdlphax](installing-boot9strap-(kartdlphax)) - egy második 3DS-t igényel egyedi firmware-rel és egy Mario Kart 7 másolatot
 1. [ntrboot](ntrboot) - kompatibilis DS flashcard-ra van szükség hozzá
 1. [Boot9strap telepítése (Hardmod)](installing-boot9strap-(hardmod)) - forrasztást igényel
+
+<script src="assets/js/selecting.js"></script>
