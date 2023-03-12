@@ -1,5 +1,5 @@
 function isSSLothable(v) {
-	var m = v.major;
+	var m = v.minor;
 	var n = v.nver;
 	return (
 		(m == 4 && n == 37) ||
