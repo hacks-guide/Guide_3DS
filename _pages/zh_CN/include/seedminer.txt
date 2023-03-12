@@ -1,0 +1,68 @@
+{% capture technical_info %}
+<summary><em>技术细节（选看）</em></summary>
+
+为了在你的主机上安装 boot9strap，我们需要获得你主机上的唯一加密密钥。 为了做到这点，我们使用了一个叫 Seedminer 的工具来计算你主机的数据加密密钥（movable.sed）。
+
+如果想要了解 Seedminer 是怎么工作的，请参见此[介绍资料](https://zoogie.github.io/web/34⅕c3)。
+
+本教程需要利用高性能的显卡来进行一些计算。 不过有一个志愿者网站可以帮助你做需要显卡的步骤。
+
+{% endcapture %}
+<details>{{ technical_info | markdownify }}</details>
+{: .notice--info}
+
+
+### Section I - Updating the System
+
+In this section, you will update your system to the latest version, which is necessary for Seedminer.
+
+1. 进入 “系统设置(System Settings)”，接着点击“其他设置(Other Settings)”，然后移动到最右边，点击“系统升级(System Update)”来升级你的主机
+  + 更新程序可能会提示“你的系统已经是最新了”而不会继续更新 This is normal if you are already up to date; continue to the next section
+  + If this gives you an error, set both your DNS settings and Proxy settings to "Auto"
+
+### Section II - Prep Work
+
+本节中，为了得到加密密钥，你将需要从你的 3DS 中获取必要的信息。
+
+1. 将主机关机
+1. 将你的 SD 卡插入到电脑
+1. 打开你 SD 卡的 `Nintendo 3DS` 文件夹
+  + 如果你的 SD 卡中并没有 `Nintendo 3DS` 文件夹，请确保你已经将其插入 3DS 中开机一次以便创建文件夹。
+1. 从 Nintendo 3DS 文件夹里面复制里面的一个 32 位长名字的文件夹的名称
+  + 这个 32 位字符长的文件夹是每台主机唯一使用的
+  + If you see multiple 32-letter folders, follow [these instructions](troubleshooting#seedminer)
+  + 如果只是多了个 `private` 文件夹，则你可以忽略它
+
+	![]({{ "/images/screenshots/seedminer/id0-example.png" | absolute_url }})
+	{: .notice--info}
+1. 将这 32 位字符长的名字复制到一个[文档](/images/screenshots/seedminer/text-document.png)中，以便在后面的操作中使用
+  + 这个文件夹名也称作 “ID0”。 请注意这个东西，本教程将在稍后提及它
+1. 启动你的主机
+  + 此时不需要插入 SD 卡
+1. 开启你的好友列表（主菜单中最上方的[橙色的笑脸]({{ "/images/friend-list-icon.png" | absolute_url }})）
+  + 如果出现错误信息并被踢回到主菜单，则你需要创建一个 Mii 形象或你的主机无法连接到任天堂服务器（由于封禁或网络问题）
+1. 找到你的 Mii 个人形象，然后在上屏寻找你的“朋友代码（Friend Code）”
+
+### Section III - Seedminer
+
+本节中，你将会使用 Bruteforce Movable 网站来获取你主机的加密密钥（`movable.sed`）。
+
+1. 在你的电脑上打开 [Bruteforce Movable](https://seedminer.hacks.guide/)
+  + 如果网站功能无法使用，请加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp) 并使用英文请求帮助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网）你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为942052497
+1. 在 “Your friend code” 选项填入你主机的 “好友代码（Friend Code）”（只要数字，不要填入空格或破折号）
+1. 在 “Your ID0” 栏位粘贴之前复制的 32 位长的文件夹名
+  + 不要尝试手动输入 ID0，因为很容易输错。 确保那是你在上一节中复制并粘贴的 ID0 以防复制错了
+1. 点击 “Go”
+  + 如果网站直接跳到了 step 4，则代表网站先前已经完成过你的破解请求了。 你可以直接下载 `movable.sed` 然后继续下一步。 You do not need to (re-)add the bot
+1. 使用主机上的[“好友注册”按钮](/images/screenshots/seedminer/register-friend.png)来添加网站给出的机器人的好友代码
+  + 如果提示输入一个昵称，请随便输入一个
+1. 等待网站更新
+  + 如果一直没有更新，请在刷新网页前等待几分钟。
+1. 处理信息完毕后，网页将自动进行至 “`Step 2: Brutefforce`”
+1. 等待其完成步骤中的其余部分
+  + 这通常很快（1-5分钟）
+  + 在这个过程中，你之前添加的机器人好友可能不会在你的 3DS 上面展示 不过只要网站还在更新，这就不是个问题
+  + 如果你已经等待了半个小时，那么请加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp) 并使用英文求助。你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497
+1. 等待程序自动完成后，从站点下载 `movable.sed` 文件
+  + Keep this file as you will need it in the upcoming page
+1. 将主机关机
