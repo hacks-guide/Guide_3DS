@@ -17,7 +17,7 @@ function isSSLothable(v) {
 
 function getResultText(v) {
 	if (v.major == 0) {
-		return "Ver. 0.0.0-0 indicates a developer unit. This guide only works with retail units.";
+		return "This doesn't seem to be a valid system version version.";
 	}
 	if (v.region == "C") {
 		return "You currently cannot hack your 3DS on this version using the main methods. If you want to hack your console, you have to use ntrboot.";
@@ -26,9 +26,6 @@ function getResultText(v) {
 }
 
 function getRedirect(v) {
-	if (v.string == "other") {
-		return "checking-for-cfw";
-	}
 	if (v.major < 11 || v.minor < 4) {
 		return "installing-boot9strap-(soundhax)";
 	}
@@ -46,7 +43,6 @@ function getRedirect(v) {
 
 function redirect() {
 	var v = {
-		string: document.getElementById("mySelecti").value,
 		major: document.getElementById("mySelect").value,
 		minor: document.getElementById("mySelec").value,
 		nver: document.getElementById("mySel").value,
