@@ -23,42 +23,116 @@ title: "新手入门"
 
 #### 第三步 – 选一个方法
 
-根据下面的版本表格，选择一个与你主机当前情况匹配的一个方法。 需要注意的一些事：
-  + 下面的表格**包含**中间版本。 举个例子：“从 11.4.0 到 11.15.0” 包括 11.4.0、11.15.0 以及这两个版本之间所有的版本。
-  + 系统版本号不是十进制的。 也就是说，11.10.0 比 11.3.0 更新，因此无法使用 Soundhax 进行破解。
-  + 系统版本后的数字和字母不重要。
-  + 无论你选择哪种方法，最后都会得到一样的结果（boot9strap + 安装了 Luma3DS 自制固件的最新版本系统）
+To find the correct method for your device, please enter the system version you found in Section II.
+<div class="selectversion">
+<br>
+<select id="mySelect">
+  <option>0</option>
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+  <option>6</option>
+  <option>7</option>
+  <option>8</option>
+  <option>9</option>
+  <option>10</option>
+  <option>11</option>
+</select>.<select id="mySelec">
+    <option>0</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+    <option>11</option>
+    <option>12</option>
+    <option>13</option>
+    <option>14</option>
+    <option>15</option>
+    <option>16</option>
+</select>.<select id="mySele">
+  <option>0</option>
+</select>-<select id="mySel">
+    <option>0</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+    <option>11</option>
+    <option>12</option>
+    <option>13</option>
+    <option>14</option>
+    <option>15</option>
+    <option>16</option>
+    <option>17</option>
+    <option>18</option>
+    <option>19</option>
+    <option>20</option>
+    <option>21</option>
+    <option>22</option>
+    <option>23</option>
+    <option>24</option>
+    <option>25</option>
+    <option>26</option>
+    <option>27</option>
+    <option>28</option>
+    <option>29</option>
+    <option>30</option>
+    <option>31</option>
+    <option>32</option>
+    <option>33</option>
+    <option>34</option>
+    <option>35</option>
+    <option>36</option>
+    <option>37</option>
+    <option>38</option>
+    <option>39</option>
+    <option>40</option>
+    <option>41</option>
+    <option>42</option>
+    <option>43</option>
+    <option>44</option>
+    <option>45</option>
+    <option>46</option>
+    <option>47</option>
+    <option>48</option>
+    <option>49</option>
+</select><select id="mySe">
+  <option>E</option>
+  <option>U</option>
+  <option>J</option>
+  <option>K</option>
+  <option>T</option>
+  <option>C</option>
+</select>
+<br>
+<input type="button" onclick="redirect()" value="Confirm">
+</div>
 
-<table>
-  <colgroup>
-    <col span="1" style="width: 20%;">
-    <col span="1" style="width: 40%;">
-  </colgroup>
-  <thead>
-    <tr>
-      <th style="text-align: center">系统版本</th>
-      <th style="text-align: center">使用方法</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center; font-weight: bold;">11.16.0（最新版）</td>
-      <td style="text-align: center; font-weight: bold;"><a href="seedminer">Seedminer</a></td>
-    </tr>
-	  <tr>
-      <td style="text-align: center; font-weight: bold;">从 11.14.0 到 11.15.0</td>
-      <td style="text-align: center; font-weight: bold;">通过系统设置更新你的 3DS 到最新版本</td>
-    </tr>
-    <tr>
-      <td style="text-align: center; font-weight: bold;">从 11.4.0 到 11.13.0</td>
-      <td style="text-align: center; font-weight: bold;"><a href="installing-boot9strap-(ssloth-browser)">安装 boot9strap（通过 SSLoth-浏览器）</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: center; font-weight: bold;">从 1.0.0 到 11.3.0</td>
-      <td style="text-align: center; font-weight: bold;"><a href="installing-boot9strap-(soundhax)">安装 boot9strap（通过Soundhax）</a></td>
-    </tr>
-  </tbody>
-</table>
+{% capture invalidVersion %}
+This doesn't seem to be a valid system version version.
+{% endcapture %}
+
+{% capture methodUnavailable %}
+You currently cannot hack your 3DS on this version using the main methods. If you want to hack your console, you have to use ntrboot.
+{% endcapture %}
+
+<p id="result_invalidVersion" style="display:none">{{ invalidVersion }}</p>
+<p id="result_methodUnavailable" style="display:none">{{ methodUnavailable }}</p>
+<noscript>Please enable JavaScript to continue with the guide.</noscript>
 
 ---
 #### 其他方法
@@ -70,3 +144,5 @@ title: "新手入门"
 1. [kartdlphax](installing-boot9strap-(kartdlphax)) - 需要另一部已破解的 3DS 并已安装了《马里奥 赛车 7》（Mario Kart 7）
 1. [ntrboot](ntrboot) - 需要兼容的 DS 烧录卡
 1. [安装 boot9strap（通过硬件修改）](installing-boot9strap-(hardmod)) - 需要焊接工具
+
+<script src="assets/js/selecting.js"></script>
