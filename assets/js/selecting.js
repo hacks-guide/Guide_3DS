@@ -29,7 +29,7 @@ function getRedirect(v) {
 	if (v.major < 11 || v.minor < 4) {
 		return "installing-boot9strap-(soundhax)";
 	}
-	if (v.nver < 36 && v.minor < 16) {
+	if (v.nver < 37 && v.minor < 16) {
 		return "installing-boot9strap-(soundhax-sp)";
 	}
 	if (isSSLothable(v)) {
