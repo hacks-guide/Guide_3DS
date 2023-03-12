@@ -23,42 +23,116 @@ If you see an unusual menu, STOP - you already have custom firmware! Continue fr
 
 #### Section III - Select a Method
 
-Use the version table below to select a method. A few things to note:
-  + The version table below is *inclusive*. For example, "from 11.4.0 to 11.15.0" includes 11.4.0, 11.15.0, and all versions in between.
-  + Software versions do not work the same as decimals. Versions 11.10.0 and above are newer than 11.3.0, and are therefore not compatible with Soundhax.
-  + The number and letter after the system version are not important.
-  + No matter the method you follow, the end result is the same (boot9strap+Luma3DS custom firmware setup on the latest firmware).
+To find the correct method for your device, please enter the system version you found in Section II.
+<div class="selectversion">
+<br>
+<select id="mySelect">
+  <option>0</option>
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+  <option>6</option>
+  <option>7</option>
+  <option>8</option>
+  <option>9</option>
+  <option>10</option>
+  <option>11</option>
+</select>.<select id="mySelec">
+    <option>0</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+    <option>11</option>
+    <option>12</option>
+    <option>13</option>
+    <option>14</option>
+    <option>15</option>
+    <option>16</option>
+</select>.<select id="mySele">
+  <option>0</option>
+</select>-<select id="mySel">
+    <option>0</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+    <option>11</option>
+    <option>12</option>
+    <option>13</option>
+    <option>14</option>
+    <option>15</option>
+    <option>16</option>
+    <option>17</option>
+    <option>18</option>
+    <option>19</option>
+    <option>20</option>
+    <option>21</option>
+    <option>22</option>
+    <option>23</option>
+    <option>24</option>
+    <option>25</option>
+    <option>26</option>
+    <option>27</option>
+    <option>28</option>
+    <option>29</option>
+    <option>30</option>
+    <option>31</option>
+    <option>32</option>
+    <option>33</option>
+    <option>34</option>
+    <option>35</option>
+    <option>36</option>
+    <option>37</option>
+    <option>38</option>
+    <option>39</option>
+    <option>40</option>
+    <option>41</option>
+    <option>42</option>
+    <option>43</option>
+    <option>44</option>
+    <option>45</option>
+    <option>46</option>
+    <option>47</option>
+    <option>48</option>
+    <option>49</option>
+</select><select id="mySe">
+  <option>E</option>
+  <option>U</option>
+  <option>J</option>
+  <option>K</option>
+  <option>T</option>
+  <option>C</option>
+</select>
+<br>
+<input type="button" onclick="redirect()" value="Confirm">
+</div>
 
-<table>
-  <colgroup>
-    <col span="1" style="width: 20%;">
-    <col span="1" style="width: 40%;">
-  </colgroup>
-  <thead>
-    <tr>
-      <th style="text-align: center">System Version</th>
-      <th style="text-align: center">What to do</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center; font-weight: bold;">11.16.0 (latest version)</td>
-      <td style="text-align: center; font-weight: bold;"><a href="seedminer">Seedminer</a></td>
-    </tr>
-	  <tr>
-      <td style="text-align: center; font-weight: bold;">11.14.0 to 11.15.0</td>
-      <td style="text-align: center; font-weight: bold;">Update your 3DS to the latest version through System Settings</td>
-    </tr>
-    <tr>
-      <td style="text-align: center; font-weight: bold;">11.4.0 to 11.13.0</td>
-      <td style="text-align: center; font-weight: bold;"><a href="installing-boot9strap-(ssloth-browser)">Installing boot9strap (SSLoth-Browser)</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: center; font-weight: bold;">1.0.0 to 11.3.0</td>
-      <td style="text-align: center; font-weight: bold;"><a href="installing-boot9strap-(soundhax)">boot9strapのインストール (Soundhax)</a></td>
-    </tr>
-  </tbody>
-</table>
+{% capture invalidVersion %}
+This doesn't seem to be a valid system version version.
+{% endcapture %}
+
+{% capture methodUnavailable %}
+You currently cannot hack your 3DS on this version using the main methods. If you want to hack your console, you have to use ntrboot.
+{% endcapture %}
+
+<p id="result_invalidVersion" style="display:none">{{ invalidVersion }}</p>
+<p id="result_methodUnavailable" style="display:none">{{ methodUnavailable }}</p>
+<noscript>Please enable JavaScript to continue with the guide.</noscript>
 
 ---
 #### Alternate Methods
@@ -70,3 +144,5 @@ Otherwise, methods that work on all versions are available, but require addition
 1. [kartdlphax](installing-boot9strap-(kartdlphax)) - requires a second hacked 3DS and a copy of Mario Kart 7
 1. [ntrboot](ntrboot) - requires compatible DS flashcart
 1. [Installing boot9strap (Hardmod)](installing-boot9strap-(hardmod)) - requires soldering
+
+<script src="assets/js/selecting.js"></script>
