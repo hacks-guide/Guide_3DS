@@ -23,42 +23,116 @@ title: "시작하기"
 
 #### 섹션 III - 방법 선택
 
-다음 표를 사용해 방법을 선택해 주세요. 몇 가지 참고할 점이 있습니다:
-  + 이 버전 표은 포함적입니다. "11.4.0에서 11.15.0까지" 는 11.4.0, 11.15.0, 그리고 그 사이에 있는 모든 버전을 포함합니다.
-  + 소프트웨어 버전은 소수점이 아닙니다. 버전 11.10.0 이상은 11.3.0보다 더 새로우며, Soundhax와 호환되지 않습니다.
-  + 시스템 버전 이후의 번호 및 글자는 중요하지 않습니다.
-  + 어떠한 방법을 선택해도 결과는 똑같습니다. (boot9strap + Luma3DS 커스텀 펌웨어와 최신 시스템 버전)
+To find the correct method for your device, please enter the system version you found in Section II.
+<div class="selectversion">
+<br>
+<select id="mySelect">
+  <option>0</option>
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+  <option>6</option>
+  <option>7</option>
+  <option>8</option>
+  <option>9</option>
+  <option>10</option>
+  <option>11</option>
+</select>.<select id="mySelec">
+    <option>0</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+    <option>11</option>
+    <option>12</option>
+    <option>13</option>
+    <option>14</option>
+    <option>15</option>
+    <option>16</option>
+</select>.<select id="mySele">
+  <option>0</option>
+</select>-<select id="mySel">
+    <option>0</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+    <option>11</option>
+    <option>12</option>
+    <option>13</option>
+    <option>14</option>
+    <option>15</option>
+    <option>16</option>
+    <option>17</option>
+    <option>18</option>
+    <option>19</option>
+    <option>20</option>
+    <option>21</option>
+    <option>22</option>
+    <option>23</option>
+    <option>24</option>
+    <option>25</option>
+    <option>26</option>
+    <option>27</option>
+    <option>28</option>
+    <option>29</option>
+    <option>30</option>
+    <option>31</option>
+    <option>32</option>
+    <option>33</option>
+    <option>34</option>
+    <option>35</option>
+    <option>36</option>
+    <option>37</option>
+    <option>38</option>
+    <option>39</option>
+    <option>40</option>
+    <option>41</option>
+    <option>42</option>
+    <option>43</option>
+    <option>44</option>
+    <option>45</option>
+    <option>46</option>
+    <option>47</option>
+    <option>48</option>
+    <option>49</option>
+</select><select id="mySe">
+  <option>E</option>
+  <option>U</option>
+  <option>J</option>
+  <option>K</option>
+  <option>T</option>
+  <option>C</option>
+</select>
+<br>
+<input type="button" onclick="redirect()" value="Confirm">
+</div>
 
-<table>
-  <colgroup>
-    <col span="1" style="width: 20%;">
-    <col span="1" style="width: 40%;">
-  </colgroup>
-  <thead>
-    <tr>
-      <th style="text-align: center">시스템 버전</th>
-      <th style="text-align: center">방법</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center; font-weight: bold;">11.16.0 (최신 버전)</td>
-      <td style="text-align: center; font-weight: bold;"><a href="seedminer">Seedminer</a></td>
-    </tr>
-	  <tr>
-      <td style="text-align: center; font-weight: bold;">11.14.0에서 11.15.0까지</td>
-      <td style="text-align: center; font-weight: bold;">시스템을 최신 버전으로 업데이트 해 주세요</td>
-    </tr>
-    <tr>
-      <td style="text-align: center; font-weight: bold;">11.4.0에서 11.13.0까지</td>
-      <td style="text-align: center; font-weight: bold;"><a href="installing-boot9strap-(ssloth-browser)">boot9strap 설치 (SSLoth-Browser)</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: center; font-weight: bold;">1.0.0 에서 11.3.0까지</td>
-      <td style="text-align: center; font-weight: bold;"><a href="installing-boot9strap-(soundhax)">boot9strap 설치 (Soundhax)</a></td>
-    </tr>
-  </tbody>
-</table>
+{% capture invalidVersion %}
+This doesn't seem to be a valid system version version.
+{% endcapture %}
+
+{% capture methodUnavailable %}
+You currently cannot hack your 3DS on this version using the main methods. If you want to hack your console, you have to use ntrboot.
+{% endcapture %}
+
+<p id="result_invalidVersion" style="display:none">{{ invalidVersion }}</p>
+<p id="result_methodUnavailable" style="display:none">{{ methodUnavailable }}</p>
+<noscript>Please enable JavaScript to continue with the guide.</noscript>
 
 ---
 #### 다른 방법
@@ -70,3 +144,5 @@ title: "시작하기"
 1. [kartdlphax](installing-boot9strap-(kartdlphax)) - 커펌된 다른 3DS 본체와 마리오 카트 7 필요
 1. [ntrboot](ntrboot) - 호환되는 DS 플래시카드 필요
 1. [boot9strap 설치 (하드모드)](installing-boot9strap-(hardmod)) - 납땜 필요
+
+<script src="assets/js/selecting.js"></script>
