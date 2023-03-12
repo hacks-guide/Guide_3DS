@@ -121,7 +121,17 @@ To find the correct method for your device, please enter the system version you 
 <br>
 <input type="button" onclick="redirect()" value="Confirm">
 </div>
-<p id="result"></p>
+
+{% capture invalidVersion %}
+This doesn't seem to be a valid system version version.
+{% endcapture %}
+
+{% capture methodUnavailable %}
+You currently cannot hack your 3DS on this version using the main methods. If you want to hack your console, you have to use ntrboot.
+{% endcapture %}
+
+<p id="result_invalidVersion" style="display:none">{{ invalidVersion }}</p>
+<p id="result_methodUnavailable" style="display:none">{{ methodUnavailable }}</p>
 <noscript>Please enable JavaScript to continue with the guide.</noscript>
 
 ---

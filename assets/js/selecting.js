@@ -17,10 +17,10 @@ function isSSLothable(v) {
 
 function getResultText(v) {
 	if (v.major == 0) {
-		return "This doesn't seem to be a valid system version version.";
+		return 1;
 	}
 	if (v.region == "C") {
-		return "You currently cannot hack your 3DS on this version using the main methods. If you want to hack your console, you have to use ntrboot.";
+		return 2;
 	}
 	return undefined;
 }
@@ -50,7 +50,19 @@ function redirect() {
 	};
 	var result = getResultText(v);
 	if (result !== undefined) {
-		document.getElementById("result").innerText = result;
+		document.getElementById("result_invalidVersion").style.display = "none";
+		document.getElementById("result_methodUnavailable").style.display = "none";
+
+		switch(result) {
+			case 1:
+				document.getElementById("result_invalidVersion").style.display = "block";
+				break;
+			case 2:
+				document.getElementById("result_methodUnavailable").style.display = "block";
+				break;
+			default:
+				break;
+		}
 	} else {
 		window.location.href = getRedirect(v);
 	}
