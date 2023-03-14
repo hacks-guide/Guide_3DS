@@ -26,7 +26,7 @@ function sslothable(s, n) {
       var nver = document.getElementById("mySel");
       var region = document.getElementById("mySe");
       document.getElementById("result_invalidVersion").style.display = "none";
-		  document.getElementById("result_methodUnavailable").style.display = "none"
+		  document.getElementById("result_methodUnavailable").style.display = "none";
       if (mainver.value == 0) {
         document.getElementById("result_invalidVersion").style.display = "block";
       }
