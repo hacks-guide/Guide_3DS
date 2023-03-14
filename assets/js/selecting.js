@@ -28,9 +28,6 @@ function sslothable(s, n) {
       if (mainver.value == 0) {
         document.getElementById("result_invalidVersion").style.display = "block";
       }
-      else if (cfw.value === "other") {
-          window.location.href = "checking-for-cfw";
-      }
       else if (mainver.value < 11 || smallver.value < 4) {
           window.location.href = "installing-boot9strap-(soundhax)";
       }
