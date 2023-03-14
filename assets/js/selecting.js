@@ -36,7 +36,7 @@ function getRedirect(v) {
 		return "installing-boot9strap-(ssloth-browser)";
 	}
 	if (v.region == "T") {
-		return "seedminer(twn)";
+		return "seedminer-(twn)";
 	}
 	return "seedminer";
 }
