@@ -8,8 +8,13 @@ import datetime
 
 import bencodepy
 
+
 dir = os.path.join(os.getcwd(), "torrents")
 rss = os.path.join(os.getcwd(), "rss.xml")
+
+
+items = []
+
 
 with open(rss, "w") as xml:
     xml.write("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n")
@@ -40,32 +45,36 @@ with open(rss, "w") as xml:
                 length = tor[b"info"][b"length"]
                 name = tor[b"info"][b"name"].decode("utf-8")
                 ts = tor[b"creation date"]
+                items.append({"name": name, "infohash": infohash, "length": length, "ts": ts, "trackers": trackers})
 
-            pubdate = datetime.datetime.utcfromtimestamp(int(ts))
-            xml.write("\t\t<item>\n")
-            xml.write("\t\t\t<title>{0}</title>\n".format(name))
-            xml.write("\t\t\t<description>{0}</description>\n".format(name))
-            xml.write("\t\t\t<guid>{0}</guid>\n".format(infohash))
-            xml.write("\t\t\t<link>magnet:?xt=urn:btih:{0}</link>\n".format(infohash))
-            xml.write("\t\t\t<pubDate>{0}</pubDate>\n".format(pubdate.strftime("%a, %d %b %Y %X +0000")))
-            xml.write("\t\t\t<contentLength>{0}</contentLength>\n".format(length))
-            xml.write("\t\t\t<infoHash>{0}</infoHash>\n".format(infohash))
-            xml.write("\t\t\t<magnetURI>magnet:?xt=urn:btih:{0}</magnetURI>\n".format(infohash))
-            #xml.write("\t\t\t<fileName>{0}</fileName><fileName>\n".format(name))
-            xml.write("\t\t\t<enclosure url=\"magnet:?xt=urn:btih:{0}\" type=\"application/x-bittorrent\" />\n".format(infohash))
+    items = sorted(items, key=lambda d: d['ts'], reverse=True)
 
-            if trackers:
-                xml.write("\t\t\t<trackers>\n")
-                xml.write("\t\t\t\t<group order=\"random\">\n")
+    for i in items:
+        pubdate = datetime.datetime.utcfromtimestamp(int(i["ts"]))
+        xml.write("\t\t<item>\n")
+        xml.write("\t\t\t<title>{0}</title>\n".format(i["name"]))
+        xml.write("\t\t\t<description>{0}</description>\n".format(i["name"]))
+        xml.write("\t\t\t<guid>{0}</guid>\n".format(i["infohash"]))
+        xml.write("\t\t\t<link>magnet:?xt=urn:btih:{0}</link>\n".format(i["infohash"]))
+        xml.write("\t\t\t<pubDate>{0}</pubDate>\n".format(pubdate.strftime("%a, %d %b %Y %X +0000")))
+        xml.write("\t\t\t<contentLength>{0}</contentLength>\n".format(i["length"]))
+        xml.write("\t\t\t<infoHash>{0}</infoHash>\n".format(i["infohash"]))
+        xml.write("\t\t\t<magnetURI>magnet:?xt=urn:btih:{0}</magnetURI>\n".format(i["infohash"]))
+        #xml.write("\t\t\t<fileName>{0}</fileName><fileName>\n".format(name))
+        xml.write("\t\t\t<enclosure url=\"magnet:?xt=urn:btih:{0}\" type=\"application/x-bittorrent\" />\n".format(i["infohash"]))
 
-                for tracker in trackers:
-                  xml.write("\t\t\t\t\t<tracker>\n")
-                  xml.write("\t\t\t\t\t\t{0}\n".format(tracker))
-                  xml.write("\t\t\t\t\t</tracker>\n")
+        if i["trackers"]:
+            xml.write("\t\t\t<trackers>\n")
+            xml.write("\t\t\t\t<group order=\"random\">\n")
 
-                xml.write("\t\t\t\t</group>\n")
-                xml.write("\t\t\t</trackers>\n")
+            for tracker in i["trackers"]:
+                xml.write("\t\t\t\t\t<tracker>\n")
+                xml.write("\t\t\t\t\t\t{0}\n".format(tracker))
+                xml.write("\t\t\t\t\t</tracker>\n")
 
-            xml.write("\t\t</item>\n")
+            xml.write("\t\t\t\t</group>\n")
+            xml.write("\t\t\t</trackers>\n")
+
+        xml.write("\t\t</item>\n")
     xml.write("\t</channel>\n")
     xml.write("</rss>")
