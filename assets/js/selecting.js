@@ -95,7 +95,7 @@ function redirect() {
             if (major.value < 11 || minor.value < 4) { //soundhax works on all consoles for 1.0-11.3
                 window.location.href = "installing-boot9strap-(soundhax)";
             }
-            else if (nver.value < 36) { //if the nver is below 36 its a cartupdate from below 11.3, which makes soundhax possible
+            else if (nver.value < 33) { //if the nver is below 36 its a cartupdate from below 11.3, which makes soundhax possible
                 window.location.href = "installing-boot9strap-(soundhax-sp-kor)";
             }
             else if (sslothablekor(minor.value, nver.value)) { //check for versions that are not cartupdated, cartupdated consoles cannot access the browser, see troubleshooting for solution
