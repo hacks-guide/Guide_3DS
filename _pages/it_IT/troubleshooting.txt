@@ -108,13 +108,13 @@ Il sito ha stabilito che il tuo file `movable.sed` non può essere decriptato. A
 ## BannerBomb3
 
 {% capture compat %}
-<summary><u>Multiple ID1 folders inside of ID0</u></summary>
+<summary><u>Più cartelle ID1 all'interno di ID0</u></summary>
 
 ![]({{ "/images/screenshots/multiple-id1.png" | absolute_url }})
 
-This can occur if you've used multiple SD cards on a 3DS and then merged the contents of the SD cards together. This is done to prevent conflicting, valid data from being merged together.
+Questo può accadere se hai usato più schede SD su un 3DS e poi unito il contenuto delle diverse schede SD. Questo accade per evitare che dati validi in conflitto vengano uniti assieme.
 
-To fix this, you will need to determine which folder contains your data. Usually, this will be the larger (or largest) of the folders. Backup and delete the smaller one(s), then create a `Nintendo DSiWare` folder in the one that remains and move `F00D43D5.bin` to that location.
+Per risolvere questo problema, è necessario determinare quale cartella contiene i tuoi dati. Di solito, è la più grande tra le cartelle. Fai un backup ed elimina le cartelle più piccole, quindi crea una cartella `Nintendo DSiWare` in quella che rimane e sposta il file `F00D43D5.bin` in questa nuova cartella.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -392,20 +392,20 @@ Segui in ordine questi passaggi:
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>"To use the Internet Browser, please update your system using the System Update option in the System Settings."</u></summary>
+<summary><u>"Per usare il Browser Internet, aggiorna la tua versione di sistema usando l'opzione Aggiornamento nelle Impostazioni della console."</u></summary>
 
-First, make sure you entered the correct proxy for the connection you're using. If not, go back to [Section II](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth). If the proxy is correct, then your device has been cart-updated, which means an alternate exploit will need to be used.
+Innanzitutto, assicurati di aver inserito il proxy corretto per la connessione che stai utilizzando. In caso contrario, torna alla [Sezione II](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth). Se il proxy è corretto, la console è stata aggiornata con una scheda di gioco, per cui dovrà essere utilizzato un exploit alternativo.
 
-<u>Method 1</u><br>
-If the two numbers before the region in the system version string is equal to or less than 36 (e.g. Ver. 11.14.0-**36**U), you can follow [Soundhax](installing-boot9strap-(soundhax)). When prompted to select a firmware to generate the sound file, use:
+<u>Metodo 1</u><br>
+Se i le due cifre prima della regione nella stringa della versione di sistema sono minori o uguali ad a 36 (ad esempio Ver. 11.14.0-**36**U), puoi seguire [Soundhax](installing-boot9strap-(soundhax)). Quando viene richiesto di selezionare un firmware per generare il file audio, usa:
 
-* 1.x - 2.1 if the number is between 0 and 2
-* 2.1 - 2.2 if the number is between 3 and 4
-* 3.x - 4.x if the number is between 5 and 10
-* 5.x - 11.3 if the number is between 11 and 36
+* 1.x - 2.1 se il numero è compreso tra 0 e 2
+* 2.1 - 2.2 se il numero è compreso tra 3 e 4
+* 3.x - 4.x se il numero è compreso tra 5 e 10
+* 5.x - 11.3 se il numero è compreso tra 11 e 36
 
-<u>Method 2 (Old 3DS only)</u><br>
-If you have an Old 3DS / Old 3DS XL / 2DS, you can try a Safe Mode update, which will trigger an alternate exploit:
+<u>Metodo 2 (solo per Old 3DS)</u><br>
+Se hai un Old 3DS / Old 3DS XL / 2DS, è possibile provare un aggiornamento tramite la Modalità Provvisoria, per attivare un exploit alternativo:
 
 1. Ensure that the proxy that you used for SSLoth is still actively applied to your internet connection
 1. With your device powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your device
@@ -591,15 +591,15 @@ I gestori di eccezione ARM11 sono disabilitati, o un custom firware non è insta
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>HOME Menu is missing installed applications</u></summary>
+<summary><u>Al menu HOME mancano delle applicazioni installate</u></summary>
 
-This could be caused by various reasons, but most likely because your SD card is not being read by the system.
-You can check if your SD is being read by holding SELECT on boot and checking the yellow text on the bottom screen; if it says "Booted from CTRNAND via B9S", then your device is booting from the internal memory and not from the SD card.
-If this is the case, attempt the steps below, which are listed from easiest to hardest:
+Questo potrebbe essere causato da vari motivi, ma principalmente perché la scheda SD non viene letta dal sistema.
+Puoi controllare se la tua SD non viene letta tenendo premuto SELECT all'avvio e controllando il testo giallo nella schermata inferiore; se dice "Booted from CTRNAND via B9S", la console si sta avviando dalla memoria interna e non dalla scheda SD.
+Se è questo il caso, prova a seguire i seguenti passaggi, indicati dal più semplice al più complesso:
 1. Spegni la console, rimuovi la scheda SD, reinseriscila, quindi accendi la tua console
-1. Power off your device, remove the SD card, insert it on your PC, download the latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), extract `boot.firm` from the `Luma3DS.zip` and place it on the root of your SD card (replacing any existing file)
-1. Power off your device, remove the SD card, insert it on your PC and reformat your SD card according to your computer's operating system: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)) *(this will wipe your SD card data)*
-1. Test your SD card for errors by following the guide according to your computer's operating system: [Windows](h2testw-(windows)), [Linux](f3-(linux)), [macOS](f3xswift-(mac)). Se la tua scheda SD è contrassegnata come difettosa, allora dovrai sostituirla
+1. Spegni la console, rimuovi la scheda SD, inseriscila sul tuo PC, scarica l'ultima versione di [Luma3DS](https://github. om/LumaTeam/Luma3DS/releases/latest), estrai il file `boot.firm` dall'archivio `Luma3DS.zip` e posizionalo nella directory principale della tua scheda SD (sostituendo qualunque file preesistente)
+1. Spegni la console, rimuovi la scheda SD, inseriscila sul tuo PC e formatta la scheda SD secondo il sistema operativo del computer: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)) *(questo cancellerà i dati della tua scheda SD)*
+1. Verifica la presenza di eventuali errori nella tua scheda SD seguendo la guida corretta per il sistema operativo del tuo computer: [Windows](h2testw-(windows)), [Linux](f3-(linux)), [macOS](f3xswift-(mac)). Se la tua scheda SD è contrassegnata come difettosa, allora dovrai sostituirla
 1. Lo slot della tua scheda SD potrebbe essere rotto. Entra nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) per chiedere assistenza
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
