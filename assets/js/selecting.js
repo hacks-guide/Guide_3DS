@@ -48,7 +48,7 @@ function redirect() {
     if (major.value == 0) {
         document.getElementById("result_invalidVersion").style.display = "block";
     }
-    else { //only do shit if major isnt 0, which would be invalid
+    else { //only do things if major isnt 0, which would be invalid
         if (region.value === "E") { //europe things
             if (major.value < 11 || minor.value < 4) { //soundhax works on all consoles for 1.0-11.3
                 window.location.href = "installing-boot9strap-(soundhax)";
