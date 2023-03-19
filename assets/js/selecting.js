@@ -1,5 +1,5 @@
 function sslothable(s, n) {
-    if  
+    if
         (
         (s == 4 && n == 37) ||
         (s == 5 && n == 38) ||
@@ -20,7 +20,7 @@ function sslothable(s, n) {
 }
 
 function sslothablekor(s, n) {
-    if  
+    if
         (
         (s == 4 && n == 33) ||
         (s == 5 && n == 34) ||
@@ -63,7 +63,7 @@ function redirect() {
             else { //seedminer does still work for the latest version on E/U/J/K/T/C, but can only be chained on E/U/J/K/T
                 window.location.href = "seedminer";
             }
-        } 
+        }
         else if (region.value === "K") { //korea stuff
             if (major.value < 11 || minor.value < 4) { //soundhax works on all consoles for 1.0-11.3
                 window.location.href = "installing-boot9strap-(soundhax)";
@@ -77,7 +77,7 @@ function redirect() {
             else { //seedminer does still work for the latest version on E/U/J/K/T/C, but can only be chained on E/U/J/K/T
                 window.location.href = "seedminer";
             }
-        } 
+        }
         else if (region.value === "T") { //taiwan stuff
             if (major.value < 11 || minor.value < 4) { //soundhax works on all consoles for 1.0-11.3
                 window.location.href = "installing-boot9strap-(soundhax)";
@@ -91,7 +91,7 @@ function redirect() {
             else { //seedminer does still work for the latest version on E/U/J/K/T/C, but can only be chained on E/U/J/K/T
                 window.location.href = "seedminer";
             }
-        }   
+        }
         else if (region.value === "C") { //chn stuff
             if (major.value < 11 || minor.value < 4) { //soundhax works on all consoles for 1.0-11.3
                 window.location.href = "installing-boot9strap-(soundhax)";
@@ -102,6 +102,6 @@ function redirect() {
             else { //seedminer does still work for the latest version on E/U/J/K/T/C, but can only be chained on E/U/J/K/T, so CHN cannot be modded atm without additional hardware
                 document.getElementById("result_methodUnavailable").style.display = "block";
             }
-        } 
+        }
     }
 }
