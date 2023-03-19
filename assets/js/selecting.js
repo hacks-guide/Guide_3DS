@@ -50,38 +50,10 @@ function redirect() {
         document.getElementById("result_invalidVersion").style.display = "block";
     }
     else { //only do things if major isnt 0, which would be invalid
-        if (region.value === "E") { //europe things
+        if (["U", "E", "J"].includes(region.value)) { // USA/EUR/JPN things
             if (major.value < 11 || minor.value < 4) { //soundhax works on all consoles for 1.0-11.3
                 window.location.href = "installing-boot9strap-(soundhax)";
             }
-            else if (nver.value < 36) { //if the nver is below 36 its a cartupdate from below 11.3, which makes soundhax possible
-                window.location.href = "installing-boot9strap-(soundhax-sp)";
-            }
-            else if (sslothable(minor.value, nver.value)) { //check for versions that are not cartupdated, cartupdated consoles cannot access the browser, see troubleshooting for solution
-                window.location.href = "installing-boot9strap-(ssloth-browser)";
-            }
-            else { //seedminer does still work for the latest version on E/U/J/K/T/C, but can only be chained on E/U/J/K/T
-                window.location.href = "seedminer";
-            }
-        } 
-        else if (region.value === "U") { //usa stuff
-            if (major.value < 11 || minor.value < 4) { //soundhax works on all consoles for 1.0-11.3
-                window.location.href = "installing-boot9strap-(soundhax)";
-            }
-            else if (nver.value < 36) { //if the nver is below 36 its a cartupdate from below 11.3, which makes soundhax possible
-                window.location.href = "installing-boot9strap-(soundhax-sp)";
-            }
-            else if (sslothable(minor.value, nver.value)) { //check for versions that are not cartupdated, cartupdated consoles cannot access the browser, see troubleshooting for solution
-                window.location.href = "installing-boot9strap-(ssloth-browser)";
-            }
-            else { //seedminer does still work for the latest version on E/U/J/K/T/C, but can only be chained on E/U/J/K/T
-                window.location.href = "seedminer";
-            }
-        } 
-        else if (region.value === "J") { //japan stuff
-            if (major.value < 11 || minor.value < 4) { //soundhax works on all consoles for 1.0-11.3
-                window.location.href = "installing-boot9strap-(soundhax)";
-           }
             else if (nver.value < 36) { //if the nver is below 36 its a cartupdate from below 11.3, which makes soundhax possible
                 window.location.href = "installing-boot9strap-(soundhax-sp)";
             }
