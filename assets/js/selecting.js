@@ -17,9 +17,9 @@ function sslothable(s, n) {
     else {
         return false;
     }
-  
-  }
-  function sslothablekor(s, n) {
+}
+
+function sslothablekor(s, n) {
     if  
         (
         (s == 4 && n == 33) ||
@@ -37,7 +37,8 @@ function sslothable(s, n) {
     else {
         return false;
     }
-  }
+}
+
 function redirect() {
     var major = document.getElementById("major");
     var minor = document.getElementById("minor");
