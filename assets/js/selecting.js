@@ -64,7 +64,7 @@ function redirect() {
                 window.location.href = "seedminer";
             }
         } 
-        if (region.value === "U") { //usa stuff
+        else if (region.value === "U") { //usa stuff
             if (major.value < 11 || minor.value < 4) { //soundhax works on all consoles for 1.0-11.3
                 window.location.href = "installing-boot9strap-(soundhax)";
             }
@@ -78,7 +78,7 @@ function redirect() {
                 window.location.href = "seedminer";
             }
         } 
-        if (region.value === "J") { //japan stuff
+        else if (region.value === "J") { //japan stuff
             if (major.value < 11 || minor.value < 4) { //soundhax works on all consoles for 1.0-11.3
                 window.location.href = "installing-boot9strap-(soundhax)";
            }
@@ -92,7 +92,7 @@ function redirect() {
                 window.location.href = "seedminer";
             }
         } 
-        if (region.value === "K") { //korea stuff
+        else if (region.value === "K") { //korea stuff
             if (major.value < 11 || minor.value < 4) { //soundhax works on all consoles for 1.0-11.3
                 window.location.href = "installing-boot9strap-(soundhax)";
             }
@@ -106,7 +106,7 @@ function redirect() {
                 window.location.href = "seedminer";
             }
         } 
-        if (region.value === "T") { //taiwan stuff
+        else if (region.value === "T") { //taiwan stuff
             if (major.value < 11 || minor.value < 4) { //soundhax works on all consoles for 1.0-11.3
                 window.location.href = "installing-boot9strap-(soundhax)";
             }
@@ -120,7 +120,7 @@ function redirect() {
                 window.location.href = "seedminer";
             }
         }   
-        if (region.value === "C") { //chn stuff
+        else if (region.value === "C") { //chn stuff
             if (major.value < 11 || minor.value < 4) { //soundhax works on all consoles for 1.0-11.3
                 window.location.href = "installing-boot9strap-(soundhax)";
             }
