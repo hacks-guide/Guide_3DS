@@ -24,103 +24,6 @@ Ha egy szokatlan menüt látsz ÁLLJ MEG - már vagy egyedi firmwared! Folytasd 
 #### III. rész - Metódus választása
 
 A korrrekt metódushoz az eszközödhöz, kérjük add meg azt a rendszer verziót, amit a II. részben találtál.
-<div class="selectversion">
-<br>
-<select id="major">
-  <option>0</option>
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
-  <option>6</option>
-  <option>7</option>
-  <option>8</option>
-  <option>9</option>
-  <option>10</option>
-  <option>11</option>
-</select>.<select id="minor">
-    <option>0</option>
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-    <option>5</option>
-    <option>6</option>
-    <option>7</option>
-    <option>8</option>
-    <option>9</option>
-    <option>10</option>
-    <option>11</option>
-    <option>12</option>
-    <option>13</option>
-    <option>14</option>
-    <option>15</option>
-    <option>16</option>
-</select>.<select id="whydidnintendodecidetodothingslikethis">
-  <option>0</option>
-</select>-<select id="nver">
-    <option>0</option>
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-    <option>5</option>
-    <option>6</option>
-    <option>7</option>
-    <option>8</option>
-    <option>9</option>
-    <option>10</option>
-    <option>11</option>
-    <option>12</option>
-    <option>13</option>
-    <option>14</option>
-    <option>15</option>
-    <option>16</option>
-    <option>17</option>
-    <option>18</option>
-    <option>19</option>
-    <option>20</option>
-    <option>21</option>
-    <option>22</option>
-    <option>23</option>
-    <option>24</option>
-    <option>25</option>
-    <option>26</option>
-    <option>27</option>
-    <option>28</option>
-    <option>29</option>
-    <option>30</option>
-    <option>31</option>
-    <option>32</option>
-    <option>33</option>
-    <option>34</option>
-    <option>35</option>
-    <option>36</option>
-    <option>37</option>
-    <option>38</option>
-    <option>39</option>
-    <option>40</option>
-    <option>41</option>
-    <option>42</option>
-    <option>43</option>
-    <option>44</option>
-    <option>45</option>
-    <option>46</option>
-    <option>47</option>
-    <option>48</option>
-    <option>49</option>
-</select><select id="region">
-  <option>E</option>
-  <option>U</option>
-  <option>J</option>
-  <option>K</option>
-  <option>T</option>
-  <option>C</option>
-</select>
-<br>
-<input type="button" onclick="redirect()" value="Confirm">
-</div>
 
 {% capture invalidVersion %}
 Ez nem tűnik egy érvényes rendszer verziónak.
@@ -130,9 +33,7 @@ Ez nem tűnik egy érvényes rendszer verziónak.
 Jelenleg nem tudod hackelni a 3DS-ed ezen a verzión a fő metódusokkal. Ha szeretnéd hackelni a konzolod, ntrbootot kell használnod.
 {% endcapture %}
 
-<p id="result_invalidVersion" style="display:none">{{ invalidVersion }}</p>
-<p id="result_methodUnavailable" style="display:none">{{ methodUnavailable }}</p>
-<noscript>Kérjük engedélyezd a JavaScript-et az útmutató folytatásához.</noscript>
+{% include consoleVersionSelect.html invalidVersion=invalidVersion methodUnavailable=methodUnavailable %}
 
 ---
 #### Alternatív metódusok
@@ -144,5 +45,3 @@ Egyéb esetekben más, az összes verziónál használható metódus elérhető,
 1. [kartdlphax](installing-boot9strap-(kartdlphax)) - egy második 3DS-t igényel egyedi firmware-rel és egy Mario Kart 7 másolatot
 1. [ntrboot](ntrboot) - kompatibilis DS flashcard-ra van szükség hozzá
 1. [Boot9strap telepítése (Hardmod)](installing-boot9strap-(hardmod)) - forrasztást igényel
-
-<script src="/assets/js/selecting.js"></script>
