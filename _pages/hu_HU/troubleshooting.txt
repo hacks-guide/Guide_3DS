@@ -394,10 +394,10 @@ Kövesd az alábbi lépéseket:
 {% capture compat %}
 <summary><u>"To use the Internet Browser, please update your system using the System Update option in the System Settings."</u></summary>
 
-First, make sure you entered the correct proxy for the connection you're using. If not, go back to [Section II](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth). If the proxy is correct, then your device has been cart-updated, which means an alternate exploit will need to be used.
+Először győződj meg arról, hogy a megfelelő proxy-t adtad meg a kapcsolathoz amit használsz. Ha nem, menj vissza a [II. részhez](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth). Ha a proxy helyes, akkor az eszközöd kártya-frissített, ami azt jelenti, hogy egy alternatív exploit-ot kell használnod.
 
 <u>1. metódus</u><br>
-If the two numbers before the region in the system version string is equal to or less than 36 (e.g. Ver. 11.14.0-**36**U), you can follow [Soundhax](installing-boot9strap-(soundhax)). When prompted to select a firmware to generate the sound file, use:
+Ha a szám a régió előtt kisebb vagy egyenlő 36-tal (pl. Ver. 11.14.0-**36**U), akkor követheted a [Soundhax](installing-boot9strap-(soundhax)) metódust. Amikor kérdezi, válassz és használj egy firmware-t a hangfájl generáláshoz:
 
 * 1.x - 2.1 ha a szám 0 és 2 közötti
 * 2.1 - 2.2 ha a szám 3 és 4 közötti
@@ -405,17 +405,17 @@ If the two numbers before the region in the system version string is equal to or
 * 5.x - 11.3 ha a szám 11 és 36 közötti
 
 <u>2. metódus (csak Old 3DS)</u><br>
-If you have an Old 3DS / Old 3DS XL / 2DS, you can try a Safe Mode update, which will trigger an alternate exploit:
+Ha Old 3DS / Old 3DS XL / 2DS -ed van kipróbálhatod a Safe Mode frissítést, ami kivált egy alternatív exploitot:
 
-1. Ensure that the proxy that you used for SSLoth is still actively applied to your internet connection
-1. With your device powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your device
+1. Bizonyosodj meg róla, hogy a proxy amit az SSLoth-hoz használtál még aktívan az internet kapcsolatodra
+1. Az eszközöd kikapcsolt állapotában tartsd nyomva a következő gombokat: (Bal Váll) + (Jobb Váll) + (D-Pad Fel) + (A), majd ezen gombok nyomva tartása mellett kapcsold be az eszközöd
   + Tartsd nyomva a gombokat, amíg az eszköz be nem bootol a Safe Mode-ba (a "system update" menübe)
 1. Nyomj "OK"-ot a frissítés elfogadásához
-1. If everything worked correctly, the update will fail and the 3DS will boot into SafeB9SInstaller. If it did, then continue from [Section IV](installing-boot9strap-(ssloth-browser)#section-iv---installing-boot9strap).
+1. Ha minden megfelelő volt, akkor a frissítésnek nem kell sikerülnie és a 3DS be fog bootolni a SafeB9SInstaller-be. Ha így történt, folytasd a [IV. résszel](installing-boot9strap-(ssloth-browser)#section-iv---installing-boot9strap).
 
 ---
 
-If these methods didn't work (or do not apply to you), update your device to the latest version and follow [Seedminer](seedminer).
+HA ezek a metódusok nem működnek (vagy nem vonatkoznak rád) frissítsd az eszközöd a legutolsó verzióra és kövesd a [Seedminer](seedminer) lépéseit.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -495,20 +495,20 @@ Nem másoltad át a `gm9` mappát a GodMode9 `.zip`-ből az SD kártyád gyöker
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>"Backup failed" or "Error: Could not open directory" when attempting a NAND backup</u></summary>
-Make sure you have at least 1.3GB available in your SD card. If you don't have enough space, follow these steps:
-1. Power off your console
-1. Remove the SD card and insert it into your computer
-1. Copy the `Nintendo 3DS` folder from the root of your SD card to your computer
-1. Delete the Nintendo 3DS folder from the SD card
-1. Power off your console, hold START and power on still holding START to boot on GodMode9
-1. Perform a [NAND Backup](godmode9-usage#creating-a-nand-backup)
-1. Copy the files in `gm9/out` on your SD to a safe location on your computer
-1. Delete the `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` files from the SD card, keeping essential.exefs in `/gm9/out/`
-1. Copy the `Nintendo 3DS` folder from your computer to the root of your SD card
-1. Delete the `Nintendo 3DS` folder from your computer
+<summary><u>"Backup failed" vagy "Error: Could not open directory" a NAND backup készítésének megpróbálásakor</u></summary>
+Győződj meg róla, hogy legalább 1.3 GB szabad hely van az SD kártyádon. Ha nincs elég szabad helyed, kövesd ezeket a lépéseket:
+1. Kapcsold ki a konzolod
+1. Távolítsd el az SD kártyád, majd csatlakoztasd a számítógépedhez
+1. Másold a `Nintendo 3DS` mappát az SD kártya gyökeréből a számítógépedre
+1. Töröld a Nintendo 3DS mappát az SD kártyáról
+1. Kapcsold ki a konzolod, tartsd nyomva a START és power gombokat, továbbra is nyomva a START gombot a GodMode9-be bootoláshoz
+1. Hajts végre egy [NAND Backup](godmode9-usage#creating-a-nand-backup)-ot
+1. Másold a `gm9/out` mappát az SD kártyádról egy biztonságos helyre a számítógépeden
+1. Töröld a `<date>_<serialnumber>_sysnand_##.bin` és a `<date>_<serialnumber>_sysnand_##.bin.sha` fájlokat az SD kártyád `/gm9/out/` mappájából, megtartva az essential.exefs-t a `/gm9/out/` -ban
+1. Másold a `Nintendo 3DS` mappát a számítógépedről az SD kártyád gyökerébe
+1. Töröld a `Nintendo 3DS` mappát a számítógépedről
 
-If you have enough space on your SD card, your SD might be corrupted or faulty. Check your SD card for any errors by following the guide according to your computer's operating system: [Windows](h2testw-(windows)), [Linux](f3-(linux)), [macOS](f3xswift-(mac)).
+Ha van elég szabad hely az SD kártyádon, az SD kártya lehet sérült vagy hibás. Ellenőrizd az SD kártyádat hibákra valamelyik programmal az alábbiak közül az operációs rendszerednek megfelelően: [Windows](h2testw-(windows)), [Linux](f3-(linux)), [macOS](f3xswift-(mac)).
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -575,7 +575,7 @@ A Luma3DS verziód régi. Töltsd le a legutolsó kiadását az [Luma3DS](https:
 
 {% capture compat %}
 <summary><u>"Unable to mount CTRNAND or load the CTRNAND FIRM. Please use an external one."</u></summary>
-There are a number of reasons as to why this could be happening. In any case, this error can usually be fixed by following the [CTRTransfer](ctrtransfer) guide.
+Számos oka lehet, hogy miért történik így. Bármelyik esetben, ez a hiba általában javítható a [CTRTransfer](ctrtransfer) útmutató követésével.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -697,17 +697,17 @@ If you weren't able to find your error or the instructions didn't work, join [Ni
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Turning off Parental Controls</u></summary>
+<summary><u>A szülői felügyelet kikapcsolása</u></summary>
 
-You can disable the Parental Controls feature by going to System Settings -> Parental Controls and inserting the PIN, then pressing "Clear Settings", then "Delete" to remove it.
-However, if you do not know the PIN and therefore cannot access the device's settings, you will need to disable it. In order to do this, you need to obtain your device's master key (mkey):
-1. Go to [this website](https://mkey.eiphax.tech/)
-1. Fill the following boxes with the information:
-+ Device Type: Select "3DS" (the same applies if you are using a 2DS, New 3DS (XL/LL) or New 2DS (XL/LL))
-+ System Date: The day and month your console's clock is set to
-+ Inquiry Number: Can be obtained by pressing "Forgot PIN" then "I Forgot" in the Parental Controls screen
-1. After you have obtained your mkey, press OK on the screen you have obtained your Inquiry Number, then input the master key
-1. Press "Clear Settings", then "Delete" to remove all Parental Controls data
+Letilthatod a szülői felügyeletet (Parental Controls) a System Settings -> Parental Controls-hoz navigálással és a PIN megadásával, majd a "Clear Settings" megnyomásával. Ezt követően a "Delete"-tel törölheted azt.
+Azonban, ha nem tudod a PIN-t így nem tudsz hozzáférni az eszköz beállításokhoz, akkor le kell tiltanod. Ahhoz hogy megtehesd ezt, szükséges megszerezned az eszközöd mester kulcsát (mkey):
+1. Menj [erre a weboldalra](https://mkey.eiphax.tech/)
+1. Töltsd ki a következő dobozokat az információval:
++ Device Type: Válaszd a "3DS"-t (ugyanez vonatkozik, ha 2DS, New 3DS (XL/LL) vagy New 2DS (XL/LL) típusod van)
++ System Date: A nap és a hónap a konzolod óráján beállított
++ Inquiry Number: Beszerezhető a "Forgot PIN" majd az "I Forgot" gombbal a Parental Controls képernyőn
+1. Ha megszerezted az mkey-edet, nyomj OK gombot azon a képernyőn, ahol megkaptad az Inquiry Number számod, és add meg a mester kulcsot
+1. Nyomj "Clear Settings"-et, majd "Delete"-et a minden Parental Controls adat eltávolításához
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
