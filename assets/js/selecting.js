@@ -83,7 +83,7 @@ function redirect() {
                 window.location.href = "installing-boot9strap-(soundhax)";
             }
             else if (nver.value < 32) { //if the nver is below 32 its a cartupdate from below 11.3, which makes soundhax possible
-                window.location.href = "installing-boot9strap-(soundhax-sp)";
+                window.location.href = "installing-boot9strap-(soundhax-sp-twn)";
             }
             //else if (sslothable(minor.value, nver.value)) { //check for versions that are not cartupdated, cartupdated consoles cannot access the browser, see troubleshooting for solution
             //    window.location.href = "installing-boot9strap-(ssloth-browser)"; //OTHERAPP BROKEN FOR TWN/CHN 11.4+ ATM
