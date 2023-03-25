@@ -54,7 +54,7 @@ function redirect() {
             if (major.value < 11 || minor.value < 4) { //soundhax works on all consoles for 1.0-11.3
                 window.location.href = "installing-boot9strap-(soundhax)";
             }
-            else if (nver.value > 10 && nver.value < 37) { //if the nver is between 11 and 36 its a cartupdate from below 11.3, which makes soundhax possible, but need at least 11 as we need compatible agb_firm
+            else if (nver.value > 10 && nver.value < 37) { //if the nver is between 11 and 36 (both inclusive), its a cartupdate from below 11.3, which makes soundhax possible, but need at least 11 as we need compatible agb_firm
                 window.location.href = "installing-boot9strap-(soundhax-sp)";
             }
             else if (sslothable(minor.value, nver.value)) { //check for versions that are not cartupdated, cartupdated consoles cannot access the browser, see troubleshooting for solution
@@ -68,7 +68,7 @@ function redirect() {
             if (major.value < 11 || minor.value < 4) { //soundhax works on all consoles for 1.0-11.3
                 window.location.href = "installing-boot9strap-(soundhax)";
             }
-            else if (nver.value > 10 && nver.value < 33) { //if the nver is between 11 and 32 its a cartupdate from below 11.3, which makes soundhax possible, but need at least 11 as we need compatible agb_firm
+            else if (nver.value > 10 && nver.value < 33) { //if the nver is between 11 and 32 (both inclusive), its a cartupdate from below 11.3, which makes soundhax possible, but need at least 11 as we need compatible agb_firm
                 window.location.href = "installing-boot9strap-(soundhax-sp)";
             }
             else if (sslothablekor(minor.value, nver.value)) { //check for versions that are not cartupdated, cartupdated consoles cannot access the browser, see troubleshooting for solution
