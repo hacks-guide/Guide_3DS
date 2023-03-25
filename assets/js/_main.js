@@ -218,8 +218,7 @@ $(document).ready(function() {
     "installing-boot9strap-(ssloth-browser)": "15",
 	  "key-information": "16",
     "installing-boot9strap-(soundhax-sp)": "17",
-    "installing-boot9strap-(soundhax-sp-kor)": "18",
-    "seedminer-(twn)": "19"
+    "seedminer-(twn)": "18"
   };
 
   for(var device in devices){
@@ -269,8 +268,7 @@ $(document).ready(function() {
       "15": ["installing-boot9strap-(ssloth-browser)", "finalizing-setup"],
 	    "16": ["multiple-options", "finalizing-setup"],
       "17": ["installing-boot9strap-(soundhax-sp)", "finalizing-setup"],
-      "18": ["installing-boot9strap-(soundhax-sp-kor)", "finalizing-setup"],
-      "19": ["seedminer-(twn)", "bannerbomb3-fredtool-(twn)", "finalizing-setup"]
+      "18": ["seedminer-(twn)", "bannerbomb3-fredtool-(twn)", "finalizing-setup"]
     }
     // Can add custom routing if necessary but currently both routes are identical
     var device_old =  Object.assign({}, device_common,{
