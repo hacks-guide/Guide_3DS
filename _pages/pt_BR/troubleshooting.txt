@@ -15,7 +15,6 @@ Páginas do guia:
   * [BannerBomb3](#bannerbomb3)
   * [Instalando boot9strap (USM)](#instalando-boot9strap-usm)
   * [Instalando boot9strap (Fredtool)](#instalando-boot9strap-fredtool)
-  * [Homebrew Launcher (PicHaxx)](#homebrew-launcher-pichaxx)
 * [Instalando boot9strap (Soundhax)](#instalando-boot9strap-soundhax)
 * [Instalando boot9strap (SSLoth-Browser)](#instalando-boot9strap-ssloth-browser)
 
@@ -125,7 +124,7 @@ Certifique-se de que `F00D43D5.bin` seja o único arquivo em `Nintendo 3DS` -> `
 
 Além disso, certifique-se de que o `bb3.bin` está na raiz do cartão SD. Caso esteja faltando, baixe a versão mais recente do [Bannerbomb3](https://github.com/lifehackerhansol/Bannerbomb3/releases/download/v3. -lhs1/bb3.bin) (download direto) e copie o arquivo `bb3.bin` para a raiz do seu cartão SD.
 
-Se nenhuma destas soluções resolver o problema, então custom firmware pode ter sido desinstalado no seu dispositivo de uma forma que torna esse método impossível de executar. Se este for o caso e o Modo de Segurança funcionar, você precisará seguir [um ramo alternativo de Seedminer](homebrew-launcher-(pichaxx)). Se o Modo de Segurança não funcionar ou você precisa de ajuda com este assunto, junte-se ao [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) e pergunte, em inglês, para obter ajuda.
+Se nenhuma destas soluções resolver o problema, então custom firmware pode ter sido desinstalado no seu dispositivo de uma forma que torna esse método impossível de executar. Se for esse o caso, junte-se ao [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) e peça ajuda, em Inglês.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -253,38 +252,6 @@ Há um problema com o seu arquivo `boot.nds`. Baixe novamente a versão mais rec
 <summary><u>Não é possível abrir o menu de configuração do Luma3DS depois de executar B9STool</u></summary>
 
 Entre no [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) e explique o que aconteceu.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-## Homebrew Launcher (PicHaxx)
-
-{% capture compat %}
-<summary><u>"Ocorreu um erro. Segure o botão POWER para desligar..." (tela preta com texto)</u></summary>
-
-Seus arquivos `00000001.sav` e/ou `otherapp.bin` podem estar fora do local apropriado. Certifique-se de que `00000001. av` está em `Nintendo 3DS` -> `<ID0>` -><ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` e que `otherapp.bin` está na raiz do seu cartão SD.
-
-Se seus arquivos estiverem nos locais corretos, re-crie o save usando a [PicHaxx Save Tool](https://3dstools.nhnarwhal. om/#/pichaxx), então coloque-o em `Nintendo 3DS` -> `<ID0>` -><ID1>` -> `title` -> `00040000` -> `0017c100` -> `data`. Certifique-se de que o arquivo tem exatamente o nome de `00000001.sav` e que você usou o `movable.sed` do seu console para criá-lo. Baixe novamente a última versão do [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest), coloque o arquivo `.bin` relevante para o seu console da pasta `otherapps_with_CfgS` na raiz do seu cartão SD, e renomeie-o para `otherapp.bin`. Não adicione a extensão `.bin` se você não a vê.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>"An exception occurred" ou Errdisp ao abrir o Picross</u></summary>
-
-Seu dispositivo já possui custom firmware. Você deve [checar por CFW](checking-for-cfw).
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>"Um erro ocorreu, forçando o fechamento do software..." (caixa de mensagens branca)</u></summary>
-
-Há um problema com seu arquivo `otherapp.bin`. Baixe a última versão do [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest), posicione o arquivo `.bin` relevante para o seu console a partir da pasta `otherapps_with_CfgS` para a raiz do seu cartão SD, e renomeie-o para `otherapp.bin`. Não adicione a extensão `.bin` se você não a vê.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>O jogo começa normalmente</u></summary>
-
-Seu arquivo `00000001.sav` modificado pode estar fora do local apropriado, ou você pode ter usado o `movable.sed` errado ao criá-lo. Regere seu `movable.sed` de [Bruteforce Movable](https://seedminer.hacks.guide), e re-crie o save usando a [PicHaxx Save Tool](https://3dstools.nhnarwhal. om/#/pichaxx) e coloque o arquivo resultante (`00000001.sav`) em `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data`.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
