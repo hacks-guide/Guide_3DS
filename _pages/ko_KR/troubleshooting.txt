@@ -15,7 +15,6 @@ title: "문제 해결"
   * [BannerBomb3](#bannerbomb3)
   * [boot9strap 설치 (USM)](#installing-boot9strap-usm)
   * [boot9strap 설치 (Fredtool)](#installing-boot9strap-fredtool)
-  * [Homebrew Launcher (PicHaxx)](#homebrew-launcher-pichaxx)
 * [boot9strap 설치 (Soundhax)](#installing-boot9strap-soundhax)
 * [boot9strap 설치 (SSLoth-Browser)](#installing-boot9strap-ssloth-browser)
 
@@ -125,7 +124,7 @@ To fix this, you will need to determine which folder contains your data. Usually
 
 또한, `bb3.bin`이 SD 카드의 최상위 디렉토리에 있어야 합니다. 만약 없다면, [Bannerbomb3](https://github.com/lifehackerhansol/Bannerbomb3/releases/download/v3.0-lhs1/bb3.bin)의 최신 버전 (직접 다운로드)을 다운받아 `bb3.bin` 파일을 SD 카드의 최상위 디렉토리로 복사해 주세요.
 
-만약 이 방법이 모두 안 된다면, 이 방식 자체를 차단하는 방법으로 커펌이 지워졌을 수 있습니다. 이 경우에, 만약 안전 모드가 작동된다면, [Seedminer의 다른 브랜치](homebrew-launcher-(pichaxx))를 이용해야 합니다. 만약 안전 모드가 작동되지 않거나 다른 도움이 필요하다면, [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp)에서 영어로 도움을 요청해 주세요.
+만약 이 방법이 모두 안 된다면, 이 방식 자체를 차단하는 방법으로 커펌이 지워졌을 수 있습니다. 이 경우, [Nintendo Homebrew Discord 서버](https://discord.gg.MWxPgEp)에 오셔서 도움을 요청하세요.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -253,38 +252,6 @@ SD 카드 루트에 Frogminer_save `.zip` 안에 있는 `private` 폴더를 복�
 <summary><u>B9STool을 실행한 후 Luma3DS 설정 메뉴를 실행할 수 없습니다</u></summary>
 
 Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and explain what has happened.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-## Homebrew Launcher (PicHaxx)
-
-{% capture compat %}
-<summary><u>에러가 발생했습니다. 본체의 전원 버튼을 길게 눌러 전원을 끈 후..." (검은 화면에 텍스트)</u></summary>
-
-`00000001.sav` 또는 `otherapp.bin` 파일이 잘못 들어갔습니다. `00000000.sav`가 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00004000` -> 0017c100` -> `data` 안에 있고 `otherapp.bin`이 SD카드 최상위 디렉토리에 있는지 다시 한 번 확인해주세요.
-
-만약 위치가 정확하다면, [PicHaxx Save Tool](https://3dstools.nhnarwhal.com/#/pichaxx)을 이용해 세이브를 다시 생성한 후, `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` 폴더 안에 다시 복사해주세요. 반드시 파일의 이름이 `00000001.sav`이고 기기의 `movable.sed`를 이용해야 합니다. 최신 버전의 [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest)를 다시 다운받아, `otherapps_with_CfgS` 폴더 안에 있는 기기에 맞는 `.bin` 파일을 SD 카드의 최상위 디렉토리로 복사해 `otherapp.bin`으로 이름을 변경해주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>피크로스 실행 중 "An exception occurred" 또는 오류 화면이 표시됩니다</u></summary>
-
-이 기기는 이미 커스텀 펌웨어가 설치되어 있습니다. [CFW 확인](checking-for-cfw) 을 하는 것을 권장합니다.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>"에러가 발생하여 소프트웨어를 종료합니다..." (하얀 메시지 창)</u></summary>
-
-`otherapp.bin` 파일에 문제가 있습니다. 최신 버전의 [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest)를 다운받아, `otherapps_with_CfgS` 폴더 안에 있는 기기에 맞는 `.bin` 파일을 SD 카드의 최상위 디렉토리로 복사해 `otherapp.bin`으로 이름을 변경해주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>게임이 정상적으로 실행됩니다</u></summary>
-
-수정된 `00000001.sav` 파일이 잘못 들어갔거나, 다른 `movable.sed` 파일로 생성했습니다. [Bruteforce Movable](https://seedminer.hacks.guide)에서 `movable.sed`를 다시 생성해, [PicHaxx Save Tool](https://3dstools.nhnarwhal.com/#/pichaxx)에서 세이브 파일을 다시 생성, 결과 파일(`00000001.sav`)을 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00004000` -> `0017c100` -> `data`에 복사해 주세요.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
