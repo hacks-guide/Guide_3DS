@@ -15,7 +15,6 @@ Több oldalon használt:
   * [BannerBomb3](#bannerbomb3)
   * [Boot9strap telepítése (USM)](#installing-boot9strap-usm)
   * [Boot9strap telepítése (Fredtool)](#installing-boot9strap-fredtool)
-  * [Homebrew Launcher (PicHaxx)](#homebrew-launcher-pichaxx)
 * [Boot9strap telepítése (Soundhax)](#installing-boot9strap-soundhax)
 * [Boot9strap telepítése (SSLoth-Browser)](#installing-boot9strap-ssloth-browser)
 
@@ -125,7 +124,7 @@ Biztosítsd, hogy az `F00D43D5.bin` az egyetlen fájl a `Nintendo 3DS` -> `<ID0>
 
 Továbbá légy biztos abban, hogy a `bb3.bin` fájl megtalálható az SD kártyád gyökerében. Ha hiányzik, töltsd le a legutolsó kiadását az [Bannerbomb3](https://github.com/lifehackerhansol/Bannerbomb3/releases/download/v3.0-lhs1/bb3.bin)-nak (közvetlen letöltés), és másold a `bb3.bin` fájlt az SD kártyád gyökerébe.
 
-Ha ezen megoldások egyike sem javítja ezt a probélmát, akkor az egyedi firmware eltávolításra kerülhetett erről az eszközről, úgy, hogy az lehetetlenné teszi ennek a metódusnak a végrehajtását. Ha ez a helyzet és a Safe Mode működik, akkor [egy alternatív ágát kell követned a Seedminer-nek](homebrew-launcher-(pichaxx)). Ha a Safe Mode nem működik, vagy támogatásra van szükséged ezzel kapcsolatosan, csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és kérj, angolul, támogatást.
+Ha ezen megoldások egyike sem javítja ezt a probélmát, akkor az egyedi firmware eltávolításra kerülhetett erről az eszközről, úgy, hogy az lehetetlenné teszi ennek a metódusnak a végrehajtását. Ebben az esetben csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és kérj, támogatást angolul.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -253,38 +252,6 @@ Probléma van az `boot.nds` fájloddal. Töltsd le újra a legutolsó kiadását
 <summary><u>Nem lehetséges a Luma3DS konfigurációs menü megnyitása B9STool futtatása után</u></summary>
 
 Csatlakozz a [Nintendo Homebrew-hoz a Discord-on](https://discord.gg/MWxPgEp) és írd le, hogy mi történt.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-## Homebrew Launcher (PicHaxx)
-
-{% capture compat %}
-<summary><u>"An error has occurred. Hold down the POWER button to turn off the power..." (fekete képernyő szöveggel)</u></summary>
-
-A `00000001.sav` és/vagy `otherapp.bin` fájljaid rossz helyre lehettek rakva. Biztosítsd, hogy a `00000001.sav` a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` mappában legyen és az `otherapp.bin` pedig az SD kártyád gyökerében.
-
-Ha a fájljaid jó helyen vannak, hozd létre újra a mentéseket a [PicHaxx Save Tool](https://3dstools.nhnarwhal.com/#/pichaxx) használatával, majd rakd őket a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` mappába. Ügyelj arra, hogy a fájl pontosan `00000001.sav` nevű legyen és hogy a konzolod `movable.sed`-jét használd a létrehozáshoz. Töltsd le újra a legutolsó kiadását az [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest)-nak és rakd a konzolodra releváns `.bin` fájlt az `otherapps_with_CfgS` mappából az SD kártyád gyökerébe, majd nevezd át `otherapp.bin`-re. Ne add hozzá a `.bin` kiterjesztést, ha nem látod.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>"An exception occurred" vagy Errdisp a Picross megnyitásakor</u></summary>
-
-Az eszközöd már rendelkezik egyedi firmware-rel. Érdemes elvégezned a [CFW ellenőrzését](checking-for-cfw).
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>"An error has occurred, forcing the software to close..." (fehér üzenet doboz)</u></summary>
-
-Probléma van az `otherapp.bin` fájloddal. Töltsd le a legutolsó kiadását az [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest)-nak és rakd a konzolodra releváns `.bin` fájlt az `otherapps_with_CfgS` mappából az SD kártyád gyökerébe, majd nevezd át `otherapp.bin`-re. Ne add hozzá a `.bin` kiterjesztést, ha nem látod.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>A játék normálisan indul</u></summary>
-
-A `00000001.sav` fájlod rossz helyen van, vagy nem a jó `movable.sed` fájlt használtad a létrehozásához. Generáld újra a `movable.sed` állományod a [Bruteforce Movable](https://seedminer.hacks.guide)-vel, tmajd hozd létre újra a mentést [PicHaxx Save Tool](https://3dstools.nhnarwhal.com/#/pichaxx) eszközzel és rakd az eredmény fájlt (`00000001.sav`) a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` mappába.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
