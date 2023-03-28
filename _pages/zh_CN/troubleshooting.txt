@@ -15,7 +15,6 @@ Guide pages:
   * [BannerBomb3](#bannerbomb3)
   * [Installing boot9strap (USM)](#installing-boot9strap-usm)
   * [Installing boot9strap (Fredtool)](#installing-boot9strap-fredtool)
-  * [Homebrew Launcher (PicHaxx)](#homebrew-launcher-pichaxx)
 * [Installing boot9strap (Soundhax)](#installing-boot9strap-soundhax)
 * [Installing boot9strap (SSLoth-Browser)](#installing-boot9strap-ssloth-browser)
 
@@ -125,7 +124,7 @@ To fix this, you will need to determine which folder contains your data. Usually
 
 另外，请确保 `bb3.bin` 已正确放置在 SD 卡的根目录下。 如果缺失了这个文件，请下载最新版本的 [Bannerbomb3](https://github.com/lifehackerhansol/Bannerbomb3/releases/download/v3.0-lhs1/bb3.bin)（直链），然后将 `bb3.bin` 复制到内存卡的根目录中。
 
-如果还是不行，则可能是因为曾经这台主机安装过自制固件，且后来又卸载了自制固件，从而导致此方法失效。 如果确实如此，而且安全模式能够正常启动，则请更换 [Seedminer 的另一种方法](homebrew-launcher-(pichaxx))。 如果安全模式不能够正常启动，且你需要帮助，请加入 [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) 并使用英文求助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497。
+如果还是不行，则可能是因为曾经这台主机安装过自制固件，且后来又卸载了自制固件，从而导致此方法失效。 If this is the case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -254,38 +253,6 @@ unSAFE_MODE 没有成功安装上。 [Follow the instructions](installing-boot9s
 <summary><u>Unable to open Luma3DS configuration menu after running B9STool</u></summary>
 
 Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and explain what has happened.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-## 启动 Homebrew Launcher（通过 PicHaxx）
-
-{% capture compat %}
-<summary><u>"An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)</u></summary>
-
-你可能把 `00000001.sav` 和（或者） `otherapp.bin` 文件的位置搞错了。 确保 `00000001.sav` 放在了 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` 中，`otherapp.bin` 放在了 SD 卡的根目录中。
-
-如果你确定一切都在正确的位置上了，那就尝试重新用 [PicHaxx 存档工具](https://3dstools.nhnarwhal.com/#/pichaxx)创建一份存档，然后把要求的文件重新放到 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` 中。 确保它是用你主机的 `movable.sed` 文件创建的，且文件已经准确命名为了 `00000001.sav`。 重新下载最新版本的 [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest)，从文件中解压 `otherapps_with_CfgS` 文件夹，然后将里面对应你主机型号和区域的 `.bin`  文件复制到 SD 卡的根目录，并改名为 `otherapp.bin`。  如果你下到的东西看不到 `.bin` 后缀，请不要重命名它。
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>"An exception occurred" or Errdisp when opening Picross</u></summary>
-
-你的主机已经破解过了。 你应该[检查一下](checking-for-cfw)。
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>"An error has occurred, forcing the software to close..." (white message box)</u></summary>
-
-这说明你放的 `otherapp.bin` 文件有问题。 下载最新版本的 [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest)，从文件中解压 `otherapps_with_CfgS` 文件夹，然后将里面对应你主机型号和区域的 `.bin`  文件复制到 SD 卡的根目录，并改名为 `otherapp.bin`。  如果你下到的东西看不到 `.bin` 后缀，请不要重命名它。
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Game starts normally</u></summary>
-
-你可能把 `00000001.sav` 放错位置了，或者这个文件不是用这台主机的 `movable.sed` 创建的。 用 [Bruteforce Movable](https://seedminer.hacks.guide) 重新生成你的 `movable.sed` ，然后用 [PicHaxx Save Tool](https://3ds.nhnarwhal.com/#/pichaxx) 重新创建存档并将生成的文件（`00000001.sav`）移动至 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data`。
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
