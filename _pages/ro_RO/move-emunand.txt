@@ -25,7 +25,7 @@ TREBUIE să aveți deja instalat Luma3DS şi boot9strap pentru a-l folosi.
 
 1. Închideți dispozitivul
 1. Introduceți cardul SD în calculator
-1. Copiați `GodMode9.firm` din arhiva `.zip` GodMode9 în folderul `/luma/payloads/` de pe cardul SD
+1. Copiați `GodMode9.firm` de pe fișierul `.zip` GodMode9 către folderul `/luma/payloads/` de pe cardul SD
 1. Copiați folderul `gm9` din arhiva `.zip` GodMode9 în rădăcina cardului SD
 1. Reintroduceți cardul SD în dispozitivul dumneavoastră
 
@@ -34,7 +34,7 @@ TREBUIE să aveți deja instalat Luma3DS şi boot9strap pentru a-l folosi.
 Dacă nu aveți niciun joc DSiWare sau date de salvare de care vă interesează, săriți peste această secțiune.
 {: .notice--info}
 
-1. Lansați GodMode9 ținând apăsat (Start) în timpul pornirii
+1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
 1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it is completed
 1. Dacă vi se cere să reparați dara și ora RTC, apăsați (A) pentru a efectua, apoi setați data și ora, apoi apăsați (A) pentru a continua
   + Țineți cont că, dacă trebuiați să reparați data și ora, va trebui să reparați ora în System Settings de asemenea după completarea acestui ghid
@@ -71,7 +71,7 @@ Pentru a identifica ID-ul de titlu al fișierului `<TitleID>.gbavc.sav`, puteți
 
 #### Secțiunea IV - Copiind EmuNAND pe SysNAND
 
-1. Lansați GodMode9 ținând apăsat (Start) în timpul pornirii
+1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
 1. Navigați spre `[E:] EMUNAND VIRTUAL`
 1. Apăsați (A) pe `nand.bin` pentru a-l selecta, apoi selectați "NAND image options...", apoi selectați "Restore SysNAND (safe)"
 1. Apăsați (A) pentru a debloca rescrierea în SysNAND, apoi introduceți combinația de butoane care vi se cere
@@ -125,42 +125,17 @@ Pentru a identifica ID-ul de titlu al fișierului `<TitleID>.gbavc.sav`, puteți
   + Apăsați (Start) pentru a reporni dispozitivul
   + Lansați jocul VC GBA
   + Ieșiți din jocul VC GBA
-1. Lansați GodMode9 ținând apăsat (Start) în timpul pornirii
 
 #### Secțiunea VII - Copie de rezervă SysNAND
 
-1. Apăsați (Home) pentru a arăta meniul de acțiuni
-1. Selectați "Scripts..."
-1. Selectaţi "GM9Megascript"
-1. Selectaţi "Backup Options"
-1. Selecciona "SysNAND Backup"
-1. Apăsați (A) pentru a confirma
-  + Acest proces va lua ceva timp
-  + Dacă primiţi o eroare, asiguraţi-vă că aveţi cel puţin 1.3GB de spaţiu liber pe cardul SD
-1. Apăsați (A) pentru a continua
-1. Apăsați (B) ca să vă întoarceți în meniul principal
-1. Selectaţi "Exit"
-1. Apăsați (A) ca să reblocați permisiunile de scriere dacă vi se cere
-1. Țineți apăsat (R) și apăsați (B) în același timp pentru a scoate cardul SD
-1. Introduceți cardul SD în calculator
-1. Copy `<date>_<serialnumber>_sysnand_##.bin` and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
-  + Faceți copii de rezervă în mai multe locații (cum ar fi stocări online ale fișierelor)
-  + Aceste copii de rezervă vă va salva de un brick și/sau vă va ajuta să recuperați fișierele dintr-o imagine NAND dacă ceva merge în neregulă pe viitor
-1. Delete `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
+1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+{% include_relative include/nand-backup.txt -%}
 1. **Faceți copii de rezervă la fiecare fișier de pe cardul SD într-un folder din calculator; toate fișierele vor fi șterse în pașii următori**
 
 #### Secțiunea VIII - Formatarea cardului SD
 
-1. Reintroduceți cardul SD în dispozitivul dumneavoastră
-1. Apăsați (Home) pentru a arăta meniul de acțiuni
-1. Selectați "More..."
-1. Selectați "SD format menu"
-1. Apăsați (A) pentru a confirma
-1. Selectați "No EmuNAND"
-1. Selectaţi "Auto"
-1. Apăsați (A) ca să acceptați eticheta `GM9SD`
-  + Opțional, puteți scrie un nume personalizat cardului SD
-1. Când vi se solicită, introduceți combinația de butoane care vi se cere ca să confirmați
+1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+{% include_relative include/format-sd-gm9.txt -%}
 1. Țineți apăsat (R) și apăsați (B) în același timp pentru a scoate cardul SD
 1. Introduceți cardul SD în calculator
 1. Copiați toate fișierele înapoi pe cardul SD
