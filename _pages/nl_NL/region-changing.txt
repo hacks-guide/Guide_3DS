@@ -53,96 +53,24 @@ Om de [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links op deze pagin
 
 #### Deel I - Voorbereiding
 
-1. Schakel je 3DS uit
-1. Plaats je SD kaart in je computer
-1. Maak een map genaamd "3ds" op de hoofdmap van je SD-kaart als die nog niet bestaat
-1. Kopieer `GodMode9.firm` van de GodMode9 `.zip` naar de `/luma/payloads/` map op je SD-kaart
-1. Kopieer de `gm9` map uit de GodMode9 `.zip` naar de hoofdmap van je SD-kaart
-1. Kopieer de 11.15.0 CTRTransfer image `.bin` van de CTRTransfer `.zip` naar de `/gm9/` map op je SD-kaart
-1. Kopieer `FBI.3dsx` naar de `/3ds/` map op je SD-kaart
-1. Stop je SD kaart terug in je 3DS
+{% include_relative include/ctrtransfer-prep.txt %}
 
 #### Deel II - NAND back-up
+
 1. Terwijl je (Start) ingedrukt houdt, zet je jouw apparaat aan. Dit zal GodMode9 starten
-1. Als je gevraagd wordt om essentiële bestanden te back-uppen, druk dan op (A) om dit te doen, druk vervolgens op (A) om verder te gaan zodra het voltooid is
-1. Als er wordt gevraagd om de RTC datum en tijd goed te zetten, duk op (A) om dat te doen, stel dan de datum en tijd in en druk op (A) om door te gaan
-  + Houd er rekening mee dat je de RTC datum en tijd weer moet aanpassen, dit kun je doen in de systeem instellingen na deze uitleg
-1. Druk op de (Home) knop om het actiemenu te openen
-1. Selecteer "Scripts..."
-1. Selecteer "GM9Megascript"
-1. Selecteer "Back-up Options"
-1. Selecteer "SysNAND Backup"
-1. Druk op (A) om het te bevestigen
-  + Dit proces zal enige tijd duren
-  + Als je een error krijgt, controleer of je ten minste 1.3GB vrije ruimte hebt op je SD-kaart
-1. Druk op (A) om door te gaan
-1. Druk op (B) om terug te gaan naar het hoofdmenu
-1. Selecteer "Exit"
-1. Druk op (A) om schrijfrechten te vergrendelen als dit gevraagd wordt
-1. Houd (R) en (B) gelijkertijd ingedrukt om je SD kaart uit te werpen
-1. Plaats je SD kaart in je computer
-1. Copy `<date>_<serialnumber>_sysnand_##.bin` and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
-  + Maak back-ups in verschillende locaties (zoals een online bestandsopslag)
-  + Deze backups kunnen je redden van een brick en/of kunnen je helpen om bestanden te herstellen van de NAND als er iets fout gaat in de toekomst
-1. Delete `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
-1. Stop je SD kaart terug in je 3DS
-  + Als je SD-kaart niet werd gedetecteerd, houd (R) ingedrukt en druk op (B) op hetzelfde moment om deze opnieuw te koppelen
-  
+{% include_relative include/nand-backup.txt %}
+
 #### Deel III - CTRTransfer
 
-1. Navigeer naar `[0:] SDCARD`-> `gm9`
-1. Druk op (A) op de CTRTransfer `.bin` om deze te selecteren
-1. Selecteer "CTRNAND options..."
-1. Selecteer "Transfer image to CTRNAND"
-1. Wanneer gevraagd, selecteer "Transfer to SysNAND"
-  + Deze vraag verschint alleen als je een EmuNAND hebt
-1. Druk op (A) om SysNAND (lvl1) writing te ontgrendelen en voer daarna de toetsencombinatie in die wordt gegeven
-  + Dit proces zal enige tijd duren
-1. Zodra de overdracht is voltooid, druk op (A) om door te gaan
-1. Druk op (B) om het opnieuw vergrendelen van schrijfrechten te weigeren als dit gevraagd wordt
-1. Druk twee keer op (B) om terug te gaan naar het hoofdmenu
-1. Druk op de (Home) knop om het actiemenu te openen
-1. Selecteer "Scripts..."
-1. Selecteer "GM9Megascript"
-1. Selecteer "Scripts from Plailect's Guide"
-1. Selecteer "CTRTransfer Ticket Copy"
-1. Wanneer dit gevraagd wordt, druk op (A) om verder te gaan
-1. Druk op (A) om door te gaan
-1. Druk op (B) om terug te gaan naar het hoofdmenu
-1. Selecteer "Exit"
-1. Druk op (A) om schrijfrechten te vergrendelen als dit gevraagd wordt
-1. Druk op (Start) om je 3DS opnieuw op te starten
-1. Update je 3DS door naar System Settings en dan naar "Algemene Instellingen" te gaan. Ga in dat menu helemaal naar rechts en klik op "Systeemupdate"
-  + Updaten terwijl je gebruik maakt van B9S + Luma (wat jij hebt) is veilig
-  + Als dit je een foutmelding geeft, zet dan je DNS instellingen op "auto"
+{% include_relative include/ctrtransfer-main.txt %}
 
 #### Deel IV - FBI starten
 
-1. Start de Download Play applicatie (dit [icoon]({{ "/images/download-play-icon.png" | absolute_url }}))
-1. Druk tegelijkertijd op (L) + (Down) + (Select) om het Rosalina menu te openen
-1. Selecteer "Miscellaneous options"
-1. Selecteer "Switch the hb. title to the current app."
-1. Druk op (B) om door te gaan
-1. Druk op (B) om terug te gaan naar het Rosalina hoofdmenu
-1. Druk op (B) om het Rosalina menu af te sluiten
-1. Druk op (Home), en sluit dan Download Play af
-1. Open de Download Play app
-1. Nu zou je console de Homebrew Launcher moeten openen
+{% include_relative include/launch-hbl-dlp.txt %}
 
 #### Deel V - Tickets opnieuw installeren
 
-Als het script geen user tickets heeft gevonden en je heeft verteld dit gedeelte over te slaan, kunt je het overslaan.
-{: .notice--info}
-
-1. Start FBI uit de lijst met homebrew
-1. Navigate to `SD` -> `gm9` -> `out` -> `ctrtransfer_tickets`
-1. Doe het volgende proces voor de `eshop`, `unknown` of beide mappen
-  + Navigeer naar de map
-  + Selecteer "\<current directory>"
-  + Selecteer "Install and delete all tickets"
-  + Wacht. Het systeem lijkt misschien vast te lopen, maar geef het wat tijd.
-  + Druk op (A) om het te bevestigen
-1. Druk op (Home) om FBI af te sluiten
+{% include_relative include/ctrtransfer-ticket-copy.txt %}
 
 #### Deel VI - Regio instellingen
 
@@ -153,10 +81,6 @@ Als het script geen user tickets heeft gevonden en je heeft verteld dit gedeelte
 
 #### Deel VII - Verwijder de CTRTransfer image
 
-1. Terwijl je (Start) ingedrukt houdt, zet je jouw apparaat aan. Dit zal GodMode9 starten
-1. Navigeer naar `[0:] SDCARD`-> `gm9`
-1. Druk op (X) om de CTRTransfer image `.bin` te verwijderen
-1. Druk op (A) om te bevestigen
-1. Druk op (Start) om je 3DS opnieuw op te starten
+{% include_relative include/ctrtransfer-cleanup.txt %}
 
 ___
