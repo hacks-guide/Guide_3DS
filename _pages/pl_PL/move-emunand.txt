@@ -34,7 +34,7 @@ MUSISZ mieć już zainstalowany Luma3DS i boot9strap żeby to wykonać.
 Jeśli nie masz żadnych gier DSiWare ani zapisów które cię obchodzą, pomiń tą sekcje.
 {: .notice--info}
 
-1. Uruchom GodMode9 poprzez trzymanie przycisku (Start) podczas uruchamiania konsoli
+1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
 1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it is completed
 1. Jeśli zostaniesz poproszony o ustawienie czasu RTC, naciśnij (A) aby to zrobić, następnie ustaw datę i czas, oraz naciśnij (A) aby kontynuować
   + Pamiętaj, że, jeśli musiałeś ustawić datę i czas RTC, będziesz musiał ustawić je w Ustawieniach Systemu po skończeniu tego poradniku
@@ -71,7 +71,7 @@ Aby zidentyfikować Title ID pliku `<TitleID>.gbavc.sav` możesz zobaczyć list�
 
 #### Sekcja IV - Kopiowanie EmuNAND do SysNAND
 
-1. Uruchom GodMode9 poprzez trzymanie przycisku (Start) podczas uruchamiania konsoli
+1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
 1. Przejdź do `[E;] EMUNAND VIRTUAL`
 1. Wciśnij (A) na pliku `nand.bin` aby go wybrać, następnie wybierz "NAND image options...", po czym wybierz "Restore SysNAND (safe)"
 1. Wciśnij (A) aby odblokować nadpisywanie SysNAND, następnie wprowadź wyświetloną sekwencję klawiszy
@@ -97,7 +97,7 @@ Jeśli nie zrobiłeś kopii zapasowej zapisów DSiWare wcześniej, pomiń tą se
 1. Wybierz "Overwrite file(s)"
   + Ten proces może zająć trochę czasu jeśli masz wiele gier DSiWare
 1. Naciśnij (B) aby odmówić `relocking write permissions` jeżeli zostaniesz o to poproszony
-1. Wciśnij dwukrotnie (B), aby wrócić do menu głównego
+1. Wciśnij (B) dwa razy aby wrócić do menu głównego
 
 #### Sekcja VI - Przywracanie zapisów GBA VC
 
@@ -125,47 +125,22 @@ Aby zidentyfikować Title ID pliku `<TitleID>.gbavc.sav` możesz zobaczyć list�
   + Wciśnij (Start) aby zrestartować konsolę
   + Uruchom grę GBA VC
   + Wyjdź z gry
-1. Uruchom GodMode9 poprzez trzymanie przycisku (Start) podczas uruchamiania konsoli
 
 #### Sekcja VII - Kopia Zapasowa SysNAND
 
-1. Wciśnij (Home) aby przywołać menu akcji
-1. Wybierz "Scripts..."
-1. Wybierz "GM9Megascript"
-1. Wybierz "Backup Options"
-1. Wybierz "SysNAND Backup"
-1. Naciśnij (A) aby potwierdzić
-  + Ten proces zajmie trochę czasu
-  + Jeśli otrzymasz błąd, upewnij się, że masz przynajmniej 1.3GB wolnego miejsca na karcie SD
-1. Naciśnij (A), aby kontynuować
-1. Wciśnij (B) aby wrócić do menu głównego
-1. Wybierz "Exit"
-1. Naciśnij (A), aby ponownie zablokować uprawnienia do zapisu, jeśli zostaniesz o to poproszony
-1. Przytrzymaj przycisk (R) i jednocześnie naciśnij przycisk (B), aby bezpiecznie wyjąć kartę SD
-1. Włóż kartę SD do komputera
-1. Copy `<date>_<serialnumber>_sysnand_##.bin` and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
-  + Zrób backupy w wielu lokacjach (np. dysku w chmurze)
-  + Te kopie zapasowe uratują cię przed "brickiem" i/lub pomogą ci odzyskać pliki z NAND jeśli coś pójdzie nie tak w przyszłości
-1. Delete `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
+1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+{% include_relative include/nand-backup.txt -%}
 1. **Utwórz kopię zapasową wszystkich plików na karcie SD do folderu na swoim komputerze. Wszystkie pliki znajdujące się obecnie na karcie SD zostaną usunięte w następnym kroku**
 
 #### Sekcja VIII - Formatowanie karty SD
 
-1. Włóż kartę SD do konsoli
-1. Wciśnij (Home), aby przywołać menu akcji
-1. Wybierz "More..."
-1. Wybierz "SD format menu"
-1. Naciśnij (A) aby potwierdzić
-1. Wybierz "No EmuNAND"
-1. Wybierz opcję "Auto"
-1. Naciśnij (A) aby zaakceptować etykietę `GM9SD`
-  + Opcjonalnie możesz wprowadzić własną etykietę dla karty SD
-1. Kiedy zostaniesz poproszony, wprowadź podaną kombinację klawiszy
+1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+{% include_relative include/format-sd-gm9.txt -%}
 1. Przytrzymaj przycisk (R) i jednocześnie naciśnij przycisk (B), aby bezpiecznie wyjąć kartę SD
 1. Włóż kartę SD do komputera
 1. Skopiuj wszystkie pliki z powrotem na kartę SD
   + Upewnij się, że plik `boot.firm` na karcie SD pochodzi z kopii zapasowej
-1. Włóż ponownie kartę SD do konsoli
+1. Włóż kartę SD do konsoli
 1. Naciśnij przycisk (A), aby ponownie zamontować swoją kartę SD
 1. Naciśnij przycisk (Start) aby uruchomić konsolę ponownie
 
