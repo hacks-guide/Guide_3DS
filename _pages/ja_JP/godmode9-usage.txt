@@ -31,41 +31,23 @@ GodMode9は、本体のファイルを操作できる強力なソフトウェア
 
 ### 手順
 
-1. 本体の電源を切ります。
+1. デバイスの電源を切ります
 1. パソコンにSDカードを入れます
 1. `GodMode9.firm` を GodMode9の `.zip` から取り出し、SDカードの `/luma/payloads/` フォルダにコピーします。
 1. `gm9`フォルダをGodMode9`.zip`からSDカードのルートにコピーします。
-1. 再度、SDカードを本体に挿入してください。
+1. デバイスにSDカードを入れます
 
 ## NANDバックアップの作成
 
 1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
-1. (Home) ボタンを押してアクションメニューを呼び出します
-1. "Scripts..."を選択します
-1. "GM9Megascript"を選択します
-1. "Backup Options"を選択します
-1. "SysNAND Backup"を選択します
-1. (A) を押して確認します
-  + この作業には少し時間がかかります
-  + If you get an error, look for your issue in the [troubleshooting guide](troubleshooting#finalizing-setup)
-1. (A) で続行します
-1. Bキーを押してメインメニューに戻ります
-1. "Exit"を選択します。
-1. (A) ボタンを押すとNANDへの書き込みを再ロックできます
-1. (R) を押したまま(Start) を押し、電源を切ります
-1. パソコンにSDカードを入れます
-1. Copy `<date>_<serialnumber>_sysnand_##.bin` and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
-  オンラインストレージ等任意の場所にファイルのバックアップをするといいです。
-  + これらのバックアップはブリックした場合に、NANDイメージからファイルを復元することができます。
-1. Delete `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
-1. 再度、SDカードを本体に挿入してください。
+{% include_relative include/nand-backup.txt %}
 
 ## NANDバックアップの復元
 
-1. 本体の電源を切ります。
+1. デバイスの電源を切ります
 1. パソコンにSDカードを入れます
 1. Copy `<date>_<serialnumber>_sysnand_##.bin` from your computer to the `/gm9/out/` folder on your SD card
-1. 再度、SDカードを本体に挿入してください。
+1. デバイスにSDカードを入れます
 1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
 1. (Home) ボタンを押してアクションメニューを呼び出します
 1. "Scripts..."を選択します
@@ -115,16 +97,8 @@ Health & Safetyよりも大きいファイルをインジェクトすること�
 **SDカードの内容が全消去されますのでご注意ください!**
 {: .notice--danger}
 
-1. (START)ボタンを押しながらデバイスを起動させ、GodMode9を起動します。
-1. (Home) ボタンを押してアクションメニューを呼び出します
-1. 「More...」を選択します
-1. 「SD format menu」を選択します
-1. 使用するEmuNANDオプションを選択します。
-  + ほとんどのユーザーは "No EmuNAND" を選択してください
-1. 「Auto」を選択します
-1. (A) を押し、ラベルを`GM9SD`とします
-  + 必要に応じて、SDカードのカスタム名を入力することもできます
-1. ヒントが出る時、表示されているキーコンボを入力し、確認します
+1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+{% include_relative include/format-sd-gm9.txt %}
 
 ## 初期化せずにNNIDを削除する
 
@@ -140,4 +114,4 @@ Health & Safetyよりも大きいファイルをインジェクトすること�
 1. Bキーを押してメインメニューに戻ります
 1. "Exit"を選択します。
 1. (A) ボタンを押すとNANDへの書き込みを再ロックできます
-1. (Start) ボタンを押して本体を再起動します
+1. STARTキーを押してデバイスを再起動します
