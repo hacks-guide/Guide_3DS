@@ -34,7 +34,7 @@ Je MOET Luma3ds en boot9strap al geïnstalleerd hebben om dit te kunnen gebruike
 Als je geen DSiWare spellen of saves hebt die je wilt behouden, kan je dit deel overslaan.
 {: .notice--info}
 
-1. Open GodMode9 door (Start) ingedrukt te houden bij het opstarten van je 3DS
+1. Terwijl je (Start) ingedrukt houdt, zet je jouw apparaat aan. Dit zal GodMode9 starten
 1. Als je gevraagd wordt om essentiële bestanden te back-uppen, druk dan op (A) om dit te doen, druk vervolgens op (A) om verder te gaan zodra het voltooid is
 1. Als er wordt gevraagd om de RTC datum en tijd goed te zetten, duk op (A) om dat te doen, stel dan de datum en tijd in en druk op (A) om door te gaan
   + Houd er rekening mee dat je de RTC datum en tijd weer moet aanpassen, dit kun je doen in de systeem instellingen na deze uitleg
@@ -71,7 +71,7 @@ Om te weten van welk spel een `<TitleID>.gbavc.sav` is kan je een lijst van spel
 
 #### Deel IV - EmuNAND naar SysNAND kopiëren
 
-1. Open GodMode9 door (Start) ingedrukt te houden bij het opstarten van je 3DS
+1. Terwijl je (Start) ingedrukt houdt, zet je jouw apparaat aan. Dit zal GodMode9 starten
 1. Navigeer naar `[E:] EMUNAND VIRTUAL`
 1. Druk op (A) op `nand.bin` om het te selecteren, selecteer vervolgens "NAND image options...", en selecteer dan "Restore SysNAND (safe)"
 1. Druk op (A) om SysNAND overwriting te ontgrendelen en voer daarna de toetsencombinatie in die wordt gegeven
@@ -96,7 +96,7 @@ Als je geen backup DSiWare Saves hebt gemaakt, kan je dit overslaan.
 1. Druk op (A) om SysNAND (lvl1) writing te ontgrendelen en voer daarna de toetsencombinatie in die wordt gegeven
 1. Selecteer "Overwrite file(s)"
   + Dit proces kan even duren als je veel DSiWare spellen hebt
-1. Druk op (B) om het opnieuw vergrendelen van schrijfrechten te weigeren
+1. Druk op (B) om het opnieuw vergrendelen van schrijfrechten te weigeren als dit gevraagd wordt
 1. Druk twee keer op (B) om terug te gaan naar het hoofdmenu
 
 #### Deel VI - GBA VC saves herstellen
@@ -125,42 +125,17 @@ Om te weten van welk spel een `<TitleID>.gbavc.sav` is kan je een lijst van spel
   + Druk op (Start) om je 3DS opnieuw op te starten
   + Start het GBA VC spel
   + Sluit het spel af
-1. Open GodMode9 door (Start) ingedrukt te houden bij het opstarten van je 3DS
 
 #### Deel VII - Backup SysNAND
 
-1. Druk op de (Home) knop om het actiemenu te openen
-1. Selecteer "Scripts..."
-1. Selecteer "GM9Megascript"
-1. Selecteer "Back-up Options"
-1. Selecteer "SysNAND Backup"
-1. Druk op (A) om het te bevestigen
-  + Dit proces zal enige tijd duren
-  + Als je een error krijgt, controleer of je ten minste 1.3GB vrije ruimte hebt op je SD-kaart
-1. Druk op (A) om door te gaan
-1. Druk op (B) om terug te gaan naar het hoofdmenu
-1. Selecteer "Exit"
-1. Druk op (A) om schrijfrechten te vergrendelen als dit gevraagd wordt
-1. Houd (R) en (B) gelijkertijd ingedrukt om je SD kaart uit te werpen
-1. Plaats je SD kaart in je computer
-1. Copy `<date>_<serialnumber>_sysnand_##.bin` and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
-  + Maak back-ups in verschillende locaties (zoals een online bestandsopslag)
-  + Deze backups kunnen je redden van een brick en/of kunnen je helpen om bestanden te herstellen van de NAND als er iets fout gaat in de toekomst
-1. Delete `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
+1. Terwijl je (Start) ingedrukt houdt, zet je jouw apparaat aan. Dit zal GodMode9 starten
+{% include_relative include/nand-backup.txt -%}
 1. **Maak een backup van elk bestand op je SD kaart naar een map op je computer; alle bestanden zullen verwijderd worden in de volgende stappen**
 
 #### Deel VIII - SD-kaart formatteren
 
-1. Stop je SD kaart terug in je 3DS
-1. Druk op de (Home) knop om het actiemenu te openen
-1. Selecteer "More..."
-1. Selecteer "SD format menu"
-1. Druk op (A) om te bevestigen
-1. Selecteer "NO EmuNAND"
-1. Selecteer "Auto"
-1. Druk op (A) om het label `GM9SD` te accepteren
-  + Optioneel kan je een aangepaste naam voor de SD kaart invoeren
-1. Wanneer er om gevraagd wordt, voer de gegeven combinatie van knoppen in om te bevestigen
+1. Terwijl je (Start) ingedrukt houdt, zet je jouw apparaat aan. Dit zal GodMode9 starten
+{% include_relative include/format-sd-gm9.txt -%}
 1. Houd (R) en (B) gelijkertijd ingedrukt om je SD kaart uit te werpen
 1. Plaats je SD kaart in je computer
 1. Kopieer alle bestanden terug naar je SD kaart
