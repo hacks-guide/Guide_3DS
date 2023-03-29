@@ -41,86 +41,23 @@ Ahhoz, hogy használhasd a [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme
 
 #### I. rész - Előkészületek
 
-1. Kapcsold ki a készüléked
-1. Helyezd az SD kártyád a számítógépbe
-1. Hozz létre egy mappát `3ds` néven az SD kártyád gyökerében, ha még nem létezik ilyen
-1. Másold át a `GodMode9.firm` fájlt a GodMode9 `.zip`-ből az SD kártyádon található `/luma/payloads/` mappába
-1. Másold át a `gm9` mappát a GodMode9 `.zip`-ből az SD kártyád gyökerébe
-1. Másold át a 11.15.0-s CTRTransfer `.bin` képfájlt a CTRTransfer `.zip`-ből az SD kártyádon található `/gm9/` mappába
-1. Másold az `FBI.3dsx` fájlt az SD kártyád `/3ds/` mappájába
-1. Tedd vissza az SD kártyád a készülékedbe
+{% include_relative include/ctrtransfer-prep.txt %}
 
 #### II. rész - CTRTransfer
 
-1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be az eszközödet. Ez elindítja a GodMode9-et
-1. Ha rákérdez arra, hogy csináljon-e egy biztonsági másolatot (essential files backup), akkor nyomd meg az (A) gombot, hogy csináljon, majd amikor végzett, nyomd meg ismét az (A) gombot a folytatáshoz
-1. Ha rákérdez arra, hogy szeretnéd-e a valós dátumot és időt javítani (fix the RTC date&time), nyomd meg az (A) gombot, állítsd be a helyes dátumot és időt, majd nyomd meg az (A) gombot a folytatáshoz
-  + Ne feledd, hogy amennyiben ezen a ponton szükséges volt a helyes dátum és idő beállítása, a System Settingsben is be kell majd állítanod a helyes időt az útmutató végén
-1. Menj ide: `[0:] SDCARD` -> `gm9`
-1. Nyomd meg az (A) gombot, miközben a CTRTransfer `.bin` van kijelölve, hogy kiválaszd
-1. Válaszd a "CTRNAND options..." opciót
-1. Válaszd a "Transfer image to CTRNAND" opciót
-1. Ha kéri, akkor válaszd a "Transfer to SysNAND" opciót
-  + Ez csak akkor jelenik meg, ha van EmuNAND-od
-1. Nyomd meg az (A) gombot, hogy feloldd a SysNAND (lvl1) írást, majd sorban nyomd meg a kijelzett gombokat
-  + Ez a folyamat igénybe vesz majd némi időt
-1. Miután az átvitel befejeződött, nyomd meg az (A) gombot a folytatáshoz
-1. Nyomd meg a (B) gombot, hogy elutasítsd az írási engedélyek visszavonását, ha kérdezi
-1. Nyomd meg a (B) gombot kétszer, hogy visszamenj a főmenübe
-1. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
-1. Válaszd a "Scripts..." opciót
-1. Válaszd ezt: "GM9Megascript"
-1. Válaszd ezt: "Scripts from Plailect's Guide"
-1. Válaszd ezt: "CTRTransfer Ticket Copy"
-1. Amikor kérdezi, nyomd meg az (A) gombot a folytatáshoz
-1. Nyomd meg az (A) gombot a folytatáshoz
-1. Nyomd meg a (B) gombot, hogy visszamenj a főmenübe
-1. Válaszd az "Exit" opciót
-1. Nyomd meg az (A) gombot az írási engedélyek visszavonásához
-1. Nyomd meg a (Start) gombot az eszköz újraindításához
-1. Frissítsd az eszközödet a következőképp. Lépj be a System Settings-be, majd az "Other settings"-be, ahol addig lépkedj jobbra, amíg a végére nem érsz. Itt válaszd a "System Update" opciót.
-  + B9S és Luma használatakor (mint esetedben) biztonságosak a rendszerfrissítések
-  + Ha ez hibát ad, akkor állítsd a DNS beállításodat "auto"-ra
+{% include_relative include/ctrtransfer-main.txt %}
 
 #### III. rész - FBI elindítása
 
-1. Indítsd el a Download Play alkalmazást (ez az [ikon]({{ "/images/download-play-icon.png" | absolute_url }}))
-1. Nyomd meg az (L) + (Le) + (Select) gombokat egyszerre, hogy a Rosalina menü megnyitásához
-1. Válaszd ki a "Miscellaneous options"-t
-1. Válaszd a "Switch the hb. title to the current app." opciót
-1. Nyomd meg a (B) gombot a folytatáshoz
-1. Nyomd meg a (B) gombot, hogy visszakerülj a Rosalina főmenüjébe
-1. Nyomd meg a (B) gombot, hogy kilépj a Rosalina menüből
-1. Nyomd meg a (Home) gombot, majd zárd be a Download Play-t
-1. Indítsd el a Download Play alkalmazást
-1. Ekkor a készülékednek be kell töltenie a Homebrew Launchert
+{% include_relative include/launch-hbl-dlp.txt %}
 
 #### IV. rész - Ticketek újratelepítése
 
-Ha a szkript nem talált egy felhasználói ticketet sem és azt írta, hogy hagyd ki ezt a rész, akkor hagyd is ki.
-{: .notice--info}
-
-1. Indítsd el az FBI-t a homebrew listából
-1. Válaszd ki az "SD"-t
-1. Válaszd ki ezt: "gm9"
-1. Majd válaszd ezt: "out"
-1. Ott pedig válaszd ezt: "ctrtransfer_tickets"
-1. Végezd el a következő folyamatot vagy az `eshop` mappára, vagy az `unknown` mappára, vagy mindkettőre
-  + Menj a mappába
-  + Válaszd ezt: "\<current directory>"
-  + Válaszd az "Install and delete all tickets" opciót
-  + Várj. Itt úgy tűnhet, hogy a rendszer lefagyott, de csak időre van szüksége.
-  + Nyomd meg az (A) gombot a megerősítéshez
-  + Nyomd meg a (B) gombot, hogy elutasítsd a ticketek CDN-ről történő telepítését.
-1. Nyomd meg a (Home) gombot az FBI-ból való kilépéshez
+{% include_relative include/ctrtransfer-ticket-copy.txt %}
 
 #### V. rész - CTRTransfer képfájl eltávolítása
 
-1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be az eszközödet. Ez elindítja a GodMode9-et
-1. Menj ide: `[0:] SDCARD` -> `gm9`
-1. Nyomd meg az (X) gombot, miközben a CTRTransfer `.bin` van kijelölve, hogy kitöröld
-1. Nyomd meg az (A) gombot a megerősítéshez
-1. Nyomd meg a (Start) gombot az eszköz újraindításához
+{% include_relative include/ctrtransfer-cleanup.txt %}
 
 ___
 
