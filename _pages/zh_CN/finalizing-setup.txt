@@ -49,7 +49,7 @@ boot9strap 将会在 NAND 里的内容加载完成后启动 `boot.firm` 文件�
 1. 复制所有 CIA 文件（`Anemone3DS.cia`、`Checkpoint.cia`、`FBI.cia`、`Homebrew_Launcher.cia` 和 `Universal-Updater.cia`）到你 SD 卡上的 `/cias/` 文件夹
 1. 检查 SD 卡的根目录是否存在一个名为 `3ds` 的文件夹，如果没有则手动新建一个
     + 这个文件夹是用来存放 Homebrew 自制程序的；和主机自动生成的 `Nintendo 3DS` 文件夹无关。
-1. 复制 `FBI.3dsx` 到SD卡的 `/3ds/` 目录下
+1. 复制 `FBI.3dsx` 到 SD 卡的 `/3ds/` 目录下
 1. 如果 SD 卡的 `luma` 文件夹下没有一个名为 `payloads` 的文件夹，那么请新建一个
 1. 将 GodMode9 `.zip` 中的 `GodMode9.firm` 复制到你SD卡的 `/luma/payloads/` 文件夹中
 1. 将 GodMode9 `.zip` 中的整个 `gm9` 文件夹复制到 SD 卡的根目录下
@@ -80,18 +80,7 @@ boot9strap 将会在 NAND 里的内容加载完成后启动 `boot.firm` 文件�
 
 本节中，为了启动 FBI 应用程序，你将需要临时把主机的“下载通信（Download Play）”应用程序替换为 Homebrew Launcher。 下载通信应用程序将会在重启主机后自动恢复正常。
 
-1. 启动“下载通信(Download Play)”程序 (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
-1. 等到你看到 `Nintendo 3DS` 和 `Nintendo DS` 按钮
-1. 同时按下 “L” + “↓” + “Select” 键来打开 Rosalina 菜单
-1. 选择 “Miscellaneous options”
-1. 选择 “Switch the hb. title to the current app.”
-1. 按 “B” 键继续
-1. 按 “B” 键返回 Rosalina 主菜单
-1. 按 “B” 键退出 Rosalina 菜单
-1. 按下 “Home” 键，然后关闭“下载通信(Download Play)”
-1. 运行“下载通信(Download Play)”程序
-1. 此时你的主机应该会启动Homebrew Launcher了
-  + If your device is stuck on the loading splash screen, you are missing `boot.3dsx` from the root of your SD card
+{% include_relative include/launch-hbl-dlp.txt %}
 
 #### 第四步 — 调整 RTC 及 DSP
 
@@ -149,7 +138,7 @@ boot9strap 将会在 NAND 里的内容加载完成后启动 `boot.firm` 文件�
 
 1. 选择 “Backup Options”
 1. 选择 “SysNAND Backup”
-1. 按 “A” 确认
+1. 按下 “A” 键确认
   + 此过程将花费一些时间
   + If you get an error, look for your issue in the [troubleshooting guide](troubleshooting#finalizing-setup)
 1. 按 “A” 键继续
@@ -163,14 +152,14 @@ boot9strap 将会在 NAND 里的内容加载完成后启动 `boot.firm` 文件�
 1. 按 “A” 键继续
 1. 按下 “Home” 键来打开功能菜单
 1. 选择 “Poweroff system” 来将主机关机
-1. 将你的 SD 卡插入到电脑
+1. 将你的 SD 卡插入电脑
 1. Copy `<date>_<serialnumber>_sysnand_##.bin`, `<date>_<serialnumber>_sysnand_##.bin.sha`, and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + 将这些文件在不同地方备份多次（比如网盘或者移动硬盘等）
   + 如果以后机器出现任何问题，这些备份文件将是为你提供修复砖机或从 NAND 镜像恢复文件的帮手
 1. Delete `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
   + 其它的文件占用不了多少空间，更建议保留在 SD 卡上以便将来可能的需要
 1. 如果 SD 卡上有 `/luma/backups/` 文件夹，那么请将里面的文件备份到你电脑上安全的地方
-1. 将SD卡重新插入你的主机
+1. 将 SD 卡重新插入主机
 1. 启动你的主机
 
 ___
