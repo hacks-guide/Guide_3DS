@@ -38,25 +38,7 @@ Jotkin alla olevista ohjeista pätevät vain GodMode9:n viimeisimpään versioon
 ## NAND-varmuuskopion luominen
 
 1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
-1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
-1. Select "Scripts..."
-1. Select "GM9Megascript"
-1. Select "Backup Options"
-1. Select "SysNAND Backup"
-1. Paina (A):ta vahvistaaksesi
-  + Tämä prosessi voi kestää jonkin aikaa
-  + If you get an error, look for your issue in the [troubleshooting guide](troubleshooting#finalizing-setup)
-1. Paina (A):ta jatkaaksesi
-1. Paina (B):tä palataksesi päävalikkoon
-1. Select "Exit"
-1. Paina (A):ta lukitaksesi kirjoitusoikeudet kehotettaessa
-1. Pidä (R):ää pohjassa ja paina samalla (START)-painiketta sammuttaaksesi konsolisi
-1. Aseta SD-korttisi tietokoneeseesi
-1. Copy `<date>_<serialnumber>_sysnand_##.bin` and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
-  + Varmuuskopioi useaan eri paikkaan (kuten pilvipalveluihin)
-  + Nämä varmuuskopiot pelastavat sinut konsolin vioittumiselta ja/tai auttavat palauttamaan tiedostoja NAND-näköistiedostosta, jos jokin menee pieleen tulevaisuudessa
-1. Delete `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
-1. Aseta SD-korttisi takaisin konsoliisi
+{% include_relative include/nand-backup.txt %}
 
 ## NAND-varmuuskopion palauttaminen
 
@@ -112,16 +94,8 @@ Tämä toimii vain, jos Health & Safety -injektio tehtiin GodMode9:n avulla (eik
 **Huomaa, että tämä tyhjentää SD-korttisi sisällön!**
 {: .notice--danger}
 
-1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
-1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
-1. Valitse "More..."
-1. Valitse "SD format menu"
-1. Valitse haluamasi EmuNAND-asetus
-  + Luultavasti järkevin valinta sinulle on "No EmuNAND"
-1. Valitse "Auto"
-1. Paina (A):ta käyttääksesi nimeä `GM9SD`
-  + Voit myös halutessasi syöttää jonkin muun nimen SD-kortille
-1. Syötä kehotettaessa annettu painikeyhdistelmä
+1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+{% include_relative include/format-sd-gm9.txt %}
 
 ## NNID:n poistaminen ilman konsolin alustamista
 
