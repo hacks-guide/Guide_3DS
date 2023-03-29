@@ -41,86 +41,23 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 
 #### Vaihe I – Valmistelut
 
-1. Sammuta konsolisi
-1. Aseta SD‑korttisi tietokoneeseesi
-1. Luo `3ds`‑niminen kansio SD‑korttisi juureen, jos sitä ei jo ole olemassa
-1. Kopioi GodMode9‑`.zip`‑pakkauksesta `GodMode9.firm` SD-korttisi `/luma/payloads/`‑kansioon
-1. Kopioi GodMode9‑`.zip`‑pakkauksesta `gm9`‑kansio SD‑korttisi juureen
-1. Copy the 11.15.0 CTRTransfer image `.bin` from the CTRTransfer `.zip` to the `/gm9/` folder on your SD card
-1. Kopioi `FBI.3dsx` SD-korttisi `/3ds/`-kansioon
-1. Aseta SD-korttisi takaisin konsoliisi
+{% include_relative include/ctrtransfer-prep.txt %}
 
 #### Vaihe II – CTRTransfer
 
-1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
-1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it is completed
-1. Jos sinua kehotetaan korjaamaan RTC-aika ja -päivämäärä, paina (A):ta ja aseta ne oikein, paina sitten (A):ta jatkaaksesi
-  + Huomaa, että jos jouduit korjaamaan RTC-ajan ja -päivämäärän, sinun täytyy korjata ne myös järjestelmäasetuksista (System Settings) näiden ohjeiden jälkeen
-1. Mene hakemistoon `[0:] SDCARD` → `gm9`
-1. Paina (A):ta CTRTransfer-`.bin`-tiedoston kohdalla valitaksesi sen
-1. Valitse "CTRNAND options..."
-1. Valitse "Transfer image to CTRNAND"
-1. Valitse kehotettessa "Transfer to SysNAND"
-  + Tämä kehotus esiintyy vain, jos sinulla on EmuNAND
-1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1) ja syötä annettu painikeyhdistelmä
-  + Tämä prosessi voi kestää jonkin aikaa
-1. Once the transfer is completed, press (A) to continue
-1. Paina (B):tä kieltäytyäksesi lukitsemasta kirjoitusoikeuksia kehotettaessa
-1. Paina (B):tä kahdesti palataksesi päävalikkoon
-1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
-1. Valitse "Scripts..."
-1. Select "GM9Megascript"
-1. Select "Scripts from Plailect's Guide"
-1. Select "CTRTransfer Ticket Copy"
-1. Paina (A):ta jatkaaksesi kehotettaessa
-1. Paina (A):ta jatkaaksesi
-1. Paina (B):tä palataksesi päävalikkoon
-1. Select "Exit"
-1. Paina (A):ta lukitaksesi kirjoitusoikeudet kehotettaessa
-1. Paina (START)-painiketta käynnistääksesi uudelleen
-1. Päivitä konsolisi menemällä järjestelmäasetuksiin (System Settings), valitse muut asetukset (Other Settings) ja sitten järjestelmäpäivitys (System Update) aivan oikeasta reunasta
-  + Päivitykset B9S + Luma -kokoonpanolla (joka sinulla on) ovat turvallisia
-  + Jos saat virheen, laita DNS:n automaattinen haku (Auto-Obtain DNS) päälle asetuksista
+{% include_relative include/ctrtransfer-main.txt %}
 
 #### Vaihe III – FBI:n avaaminen
 
-1. Launch the Download Play application (this [icon]({{ "/images/download-play-icon.png" | absolute_url }}))
-1. Paina (L)-, (ALAS)- ja (SELECT)-painikkeita samaan aikaan avataksesi Rosalina-valikon
-1. Valitse "Miscellaneous options"
-1. Valitse "Switch the hb. title to the current app."
-1. Paina (B):tä jatkaaksesi
-1. Paina (B):tä palataksesi Rosalinan päävalikkoon
-1. Paina (B):tä poistuaksesi Rosalinan valikosta
-1. Paina (HOME)-painiketta ja sulje Download Play
-1. Avaa Download Play -sovellus
-1. Konsolisi pitäisi avata Homebrew Launcher
+{% include_relative include/launch-hbl-dlp.txt %}
 
 #### Vaihe IV – Tikettien uudelleenasentaminen
 
-If the script found no user tickets and told you to skip this section, you can skip this section.
-{: .notice--info}
-
-1. Avaa FBI homebrew-listasta
-1. Select "SD"
-1. Valitse "gm9"
-1. Valitse "out"
-1. Valitse "ctrtransfer_tickets"
-1. Tee seuraavat toimet `eshop`- tai `unknown`-kansiolle (tai molemmille, jos sinulla oli kummatkin)
-  + Mene kansioon
-  + Valitse "\<current directory>"
-  + Valitse "Install and delete all tickets"
-  + Odota. Järjestelmä saattaa vaikuttaa jumittuneelta, anna sen viedä aikansa.
-  + Paina (A):ta vahvistaaksesi
-  + Paina (B):tä hylätäksesi tikettien asentamisen CDN:n kautta.
-1. Paina (HOME)-painiketta ja sulje FBI
+{% include_relative include/ctrtransfer-ticket-copy.txt %}
 
 #### Vaihe V – CTRTransfer-näköistiedoston poistaminen
 
-1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
-1. Mene hakemistoon `[0:] SDCARD` → `gm9`
-1. Paina (X):ää CTRTransfer-`.bin`-näköistiedoston kohdalla poistaaksesi sen
-1. Paina (A):ta vahvistaaksesi
-1. Paina (START)-painiketta käynnistääksesi uudelleen
+{% include_relative include/ctrtransfer-cleanup.txt %}
 
 ___
 
