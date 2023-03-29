@@ -31,32 +31,14 @@ Unele dintre instrucțiunile de mai jos se aplică doar la ultima versiune de Go
 
 1. Închideți dispozitivul
 1. Introduceți cardul SD în calculator
-1. Copiați `GodMode9.firm` din arhiva `.zip` GodMode9 în folderul `/luma/payloads/` de pe cardul SD
+1. Copiați `GodMode9.firm` de pe fișierul `.zip` GodMode9 către folderul `/luma/payloads/` de pe cardul SD
 1. Copiați folderul `gm9` din fișierul `.zip` GodMode9 în rădăcina cardului SD
 1. Reintroduceți cardul SD în dispozitivul dumneavoastră
 
 ## Creând o copie de rezervă NAND
 
 1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
-1. Apăsați (Home) pentru a arăta meniul de acțiuni
-1. Selectați "Scripts..."
-1. Selectaţi "GM9Megascript"
-1. Selectaţi "Backup Options"
-1. Selecciona "SysNAND Backup"
-1. Apăsați (A) pentru a confirma
-  + Acest proces va lua ceva timp
-  + If you get an error, look for your issue in the [troubleshooting guide](troubleshooting#finalizing-setup)
-1. Apăsați (A) pentru a continua
-1. Apăsați (B) ca să vă întoarceți în meniul principal
-1. Selectaţi "Exit"
-1. Apăsați (A) ca să reblocați permisiunile de scriere dacă vi se cere
-1. Țineți apăsat (R) și apăsați (Start) în același timp pentru a închide dispozitivul
-1. Introduceți cardul SD în calculator
-1. Copy `<date>_<serialnumber>_sysnand_##.bin` and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
-  Faceți copii de rezervă în mai multe locații (cum ar fi stocări online ale fișierelor)
-  + Aceste copii de rezervă vă va salva de un brick și/sau vă va ajuta să recuperați fișierele dintr-o imagine NAND dacă ceva merge în neregulă pe viitor
-1. Delete `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
-1. Reintroduceți cardul SD în dispozitivul dumneavoastră
+{% include_relative include/nand-backup.txt %}
 
 ## Restaurând o copie de rezervă NAND
 
@@ -112,16 +94,8 @@ Aceasta va funcţiona doar dacă injectarea Health & Safety a fost efectuată de
 **Țineți cont că asta va elimina complet conținutul cardului SD!**
 {: .notice--danger}
 
-1. Lansați GodMode9 ținând apăsat (Start) în timpul pornirii
-1. Apăsați (Home) pentru a arăta meniul de acțiuni
-1. Selectați "More..."
-1. Selectați "SD format menu"
-1. Selectați opțiunile de EmuNAND care vreți să le folosiți
-  + Majoritatea utilizatorilor vor dori să selecteze "No EmuNAND"
-1. Selectaţi "Auto"
-1. Apăsați (A) ca să acceptați eticheta 'GM9SD'
-  + Opțional, puteți scrie un nume personalizat cardului SD
-1. Când vi se solicită, introduceți combinația de butoane ca să confirmați
+1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+{% include_relative include/format-sd-gm9.txt %}
 
 ## Scoaterea NNID-ului fără a formata dispozitivul dumneavoastră
 
