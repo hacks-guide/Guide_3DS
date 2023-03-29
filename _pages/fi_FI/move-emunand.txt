@@ -34,7 +34,7 @@ Sinulla TÄYTYY olla asennettuna sekä Luma3DS että boot9strap käyttääksesi 
 Jos sinulla ei ole yhtäkään DSiWare-peliä tai -tallennusta, voit ohittaa tämän vaiheen.
 {: .notice--info}
 
-1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
+1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
 1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it is completed
 1. Jos sinua kehotetaan korjaamaan RTC-aika ja -päivämäärä, paina (A):ta ja aseta ne oikein, paina sitten (A):ta jatkaaksesi
   + Huomaa, että jos jouduit korjaamaan RTC-ajan ja -päivämäärän, sinun täytyy korjata ne myös järjestelmäasetuksista (System Settings) näiden ohjeiden jälkeen
@@ -71,7 +71,7 @@ Jotta voisit tunnistaa `<sovellustunnus>.gbavc.sav`-tiedoston pelin, voit näytt
 
 #### Vaihe IV – EmuNANDin kopioiminen SysNANDiin
 
-1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
+1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
 1. Mene hakemistoon `[E:] SYSNAND VIRTUAL`
 1. Paina (A):ta `nand.bin`-tiedoston kohdalla, valitse "NAND image options..." ja sitten "Restore SysNAND (safe)"
 1. Paina (A):ta ottaaksesi käyttöön SysNANDin ylikirjoittamisen ja syötä annettu painikeyhdistelmä
@@ -125,42 +125,17 @@ Jotta voisit tunnistaa `<sovellustunnus>.gbavc.sav`-tiedoston pelin, voit näytt
   + Paina (START)-painiketta käynnistääksesi uudelleen
   + Avaa peli
   + Sulje peli
-1. Avaa GodMode9 pitämällä (START)-painiketta pohjassa konsolin käynnistyessä
 
 #### Vaihe VII – SysNANDin varmuuskopiointi
 
-1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
-1. Select "Scripts..."
-1. Select "GM9Megascript"
-1. Select "Backup Options"
-1. Select "SysNAND Backup"
-1. Paina (A):ta vahvistaaksesi
-  + Tämä prosessi voi kestää jonkin aikaa
-  + If you get an error, make sure that you have at least 1.3GB of free space on your SD card
-1. Paina (A):ta jatkaaksesi
-1. Paina (B):tä palataksesi päävalikkoon
-1. Select "Exit"
-1. Paina (A):ta lukitaksesi kirjoitusoikeudet kehotettaessa
-1. Pidä (R):ää pohjassa ja paina samalla (B):tä irrottaaksesi SD-korttisi
-1. Aseta SD-korttisi tietokoneeseesi
-1. Copy `<date>_<serialnumber>_sysnand_##.bin` and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
-  + Varmuuskopioi useaan eri paikkaan (kuten pilvipalveluihin)
-  + Nämä varmuuskopiot pelastavat sinut konsolin vioittumiselta ja/tai auttavat palauttamaan tiedostoja NAND-näköistiedostosta, jos jokin menee pieleen tulevaisuudessa
-1. Delete `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
+1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+{% include_relative include/nand-backup.txt -%}
 1. **Varmuuskopioi SD-korttisi kaikki tiedostot tietokoneellesi; kaikki tiedostot poistetaan seuraavaksi**
 
 #### Vaihe VIII – SD-kortin alustaminen
 
-1. Aseta SD-korttisi takaisin konsoliisi
-1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
-1. Valitse "More..."
-1. Valitse "SD format menu"
-1. Paina (A):ta vahvistaaksesi
-1. Valitse "No EmuNAND"
-1. Valitse "Auto"
-1. Paina (A):ta käyttääksesi nimeä `GM9SD`
-  + Voit myös halutessasi syöttää jonkin muun nimen SD-kortille
-1. Syötä kehotettaessa annettu painikeyhdistelmä
+1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+{% include_relative include/format-sd-gm9.txt -%}
 1. Pidä (R):ää pohjassa ja paina samalla (B):tä irrottaaksesi SD-korttisi
 1. Aseta SD-korttisi tietokoneeseesi
 1. Kopioi kaikki tiedostosi takaisin SD-kortillesi
