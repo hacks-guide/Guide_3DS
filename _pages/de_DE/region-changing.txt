@@ -53,96 +53,24 @@ Um die [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme)-Links auf dieser S
 
 #### Abschnitt I - Vorbereitungen
 
-1. Schalte deine Konsole aus
-1. Stecke deine SD-Karte in deinen Computer
-1. Erstelle einen Ordner namens `3ds` im Stammverzeichnis deiner SD-Karte falls er noch nicht existiert
-1. Kopiere `GodMode9.firm`von der `GodMode9.zip`-Datei nach /luma/payloads/ auf deiner SD-Karte
-1. Kopiere den Ordner `gm9` aus der GodMode9 `.zip` in das Stammverzeichnis deiner SD-Karte
-1. Kopiere die 11.15.0 CTRTransfer Image `.bin` Datei von der CTRTransfer `.zip` zum `/gm9/` Ordner auf deiner SD-Karte
-1. Kopiere `FBI.3dsx` in den `/3ds/`-Ordner auf deiner SD-Karte
-1. Stecke deine SD-Karte nun wieder in deinen 3DS
+{% include_relative include/ctrtransfer-prep.txt %}
 
 #### Section II - NAND Backup
+
 1. Drücke und halte (Start), und während du (Start) hältst, schalte deinen 3DS an. This will launch GodMode9
-1. Wenn du aufgefordert wirst, ein "essential files backup" durchzuführen, drücke (A). Drücke erneut (A) nachdem es abgeschlossen ist
-1. Wenn du aufgefordert wirst Datum und Uhrzeit der "RTC" (Real Time Clock, Echtzeituhr) zu korrigieren, drücke (A), stelle Datum und Uhrzeit ein und drücke (A) um fortzufahren
-  + Bitte beachte, falls du die RTC korrigieren musstest, dass du nach beenden der Anleitung auch Datum und Uhrzeit in den Systemeinstellungen korrigieren musst
-1. Drücke  (HOME) um das Aktionsmenü aufzurufen
-1. Wähle "Scripts"
-1. Wähle "GM9Megascript" aus
-1. Wähle "Backup Options" aus
-1. Wähle "SysNAND Backup" aus
-1. Drücke (A) um zu bestätigen
-  + Dieser Prozess kann einige Zeit in Anspruch nehmen
-  + If you get an error, make sure that you have at least 1.3GB of free space on your SD card
-1. Drücke (A) um fortzufahren
-1. Drücke (B), um zum Hauptmenü zurückzukehren
-1. Wähle "Exit" aus
-1. Drücke (A), um die Schreibrechte zu deaktivieren, wenn du dazu aufgefordert wirst
-1. Drücke (R) und (B) gleichzeitig um die SD-Karte auszuwerfen
-1. Stecke deine SD-Karte in deinen Computer
-1. Copy `<date>_<serialnumber>_sysnand_##.bin` and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
-  + Erstelle Backup Dateien an mehreren Orten (USB-Stick, PC, Externe Festplatte, Online-Speicher, etc.)
-  + Diese Backups werden im Falle eines Bricks benötigt, um Daten aus dem NAND-Image wieder herzustellen, wenn etwas schief gehen sollte
-1. Delete `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
-1. Stecke deine SD-Karte nun wieder in deinen 3DS
-  + If your SD card was not detected, hold (R) and press (B) at the same time to remount it
-  
+{% include_relative include/nand-backup.txt %}
+
 #### Section III - CTRTransfer
 
-1. Navigiere zu `[0:] SDCARD` -> `gm9`
-1. Drücke (A) auf der CTRTrasnfer `.bin`, um diese auszuwählen
-1. Wähle "CTRNAND Options..." aus
-1. Wähle "Transfer image to CTRNAND"
-1. Sollte eine Aufforderung erscheinen, so wähle "Transfer to SysNAND"
-  + Diese Aufforderung erscheint nur, wenn du eine EmuNAND besitzt
-1. Drücke (A), um die SysNAND (Stufe 1) Bearbeitung zu aktivieren. Dann gebe die angegebene Tastenkombination ein
-  + Dieser Vorgang nimmt einige Zeit in Anspruch
-1. Sobald der Transfer abgeschlossen wurde, drücke (A) um fortzufahren
-1. Drücke (B), um die Schreibrechte nicht zu deaktiveren
-1. Drücke zweimal (B), um zurück in das Hauptmenü zu gelangen
-1. Drücke  (HOME) um das Aktionsmenü aufzurufen
-1. Wähle "Scripts"
-1. Wähle "GM9Megascript" aus
-1. Wähle "Scripts from Plailect's Guide" aus
-1. Wähle "CTRTransfer Ticket Copy" aus
-1. Drücke (A), wenn du dazu aufgefordert wirst, um fortzufahren
-1. Drücke (A) um fortzufahren
-1. Drücke (B), um zum Hauptmenü zurückzukehren
-1. Wähle "Exit" aus
-1. Drücke (A), um die Schreibrechte zu deaktivieren, wenn du dazu aufgefordert wirst
-1. Drücke (Start) um deinen 3DS neu zu starten
-1. Aktualisiere deinen 3DS, indem zu zu den Systemeinstellungen gehst, dann "Allgemeine Einstellungen" auswählst und dann "System-Update" startest
-  + Updates mit B9S + Luma (welches du hast) sind sicher
-  + Wenn eine Fehlermeldung auftaucht, musst du in den DNS-Einstellungen die Option "Ja" auswählen, wenn du gefragt wirst, ob die DNS automatisch bezogen werden soll
+{% include_relative include/ctrtransfer-main.txt %}
 
 #### Section IV - Launching FBI
 
-1. Starte die Download-Spiel Anwendung (dieses [Icon]({{ "/images/download-play-icon.png" | absolute_url }}))
-1. Drücke gleichzeitig (L) + (Steuerkreuz unten) + (Select) um das Rosalina Menü zu öffnen
-1. Wähle "Miscellaneous options"
-1. Wähle "Switch the hb. title to the current app."
-1. Drücke (B) um fortzufahren
-1. Drücke (B), um zum Rosalina-Hauptmenü zurückzukehren
-1. Drücke (B), um das Rosalina-Menü zu schließen
-1. Drücke (Home) und schließe die Download-Spiel Anwendung
-1. Starte die Download-Spiel Anwendung
-1. Deine Konsole sollte den Homebrew Launcher laden
+{% include_relative include/launch-hbl-dlp.txt %}
 
 #### Section V - Reinstalling Tickets
 
-Falls das Skript keine User-Tickets gefunden hat und dir sagt, dass du diesen Abschnitt überspringen sollst, kannst du ihn überspringen.
-{: .notice--info}
-
-1. Starte FBI aus der Liste des Homebrews
-1. Navigate to `SD` -> `gm9` -> `out` -> `ctrtransfer_tickets`
-1. Mache den folgenden Prozess für entweder den `eshop` Ordner, `unknown` Ordner, oder für beide
-  + Navigiere zu dem Ordner
-  + Wähle "\<current directory>"
-  + Wähle "Install and delete all tickets"
-  + Warte. Es könnte so aussehen, als ob sich deine Konsole aufgehangen hat. Warte einfach ab.
-  + Drücke (A) um fortzufahren
-1. Drücke (HOME), um FBI zu verlassen
+{% include_relative include/ctrtransfer-ticket-copy.txt %}
 
 #### Section VI - Region settings
 
@@ -153,10 +81,6 @@ Falls das Skript keine User-Tickets gefunden hat und dir sagt, dass du diesen Ab
 
 #### Section VII - Remove CTRTransfer image
 
-1. Drücke und halte (Start), und während du (Start) hältst, schalte deinen 3DS an. This will launch GodMode9
-1. Navigiere zu `[0:] SDCARD` -> `gm9`
-1. Drücke (X) auf die CTRTransfer-Abbild `.bin` um es zu löschen
-1. Drücke (A), um zu bestätigen
-1. Drücke (Start) um deinen 3DS neu zu starten
+{% include_relative include/ctrtransfer-cleanup.txt %}
 
 ___
