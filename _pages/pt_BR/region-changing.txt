@@ -54,96 +54,24 @@ Para utilizar os [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links de
 
 #### Seção I - Preparação
 
-1. Desligue seu dispositivo
-1. Insira o cartão SD no seu computador
-1. Crie uma pasta chamada `3ds` na raiz do seu cartão SD se ela ainda não existir
-1. Copie `GodMode9.firm` do `.zip` do GodMode9 para a pasta `/luma/payloads/` no seu cartão SD
-1. Copie a pasta `gm9` do `.zip` do GodMode9 para a raiz do seu cartão SD
-1. Copie a imagem CTRTransfer 11.15.0 `.bin` do CTRTransfer `.zip` para a pasta `/gm9/` no seu cartão SD
-1. Copie `FBI.3dsx` para a pasta `/3ds/` no seu cartão SD
-1. Reinsira seu cartão SD no seu dispositivo
+{% include_relative include/ctrtransfer-prep.txt %}
 
 #### Seção II - Backup da NAND
+
 1. Pressione e segure (Start), e enquanto segura (Start), ligue seu dispositivo. Isso vai inicializar o GodMode9
-1. Se você for solicitado para criar backups de arquivos essenciais, aperte (A) para fazê-lo, então aperte (A) novamente para continuar quando o backup for concluído
-1. Se você for solicitado para consertar o RTC date&time, pressione (A) para consertar, então insira a data e a hora, depois pressione (A) para continuar
-  + Note que, se você teve que consertar o RTC date&time, você precisará consertar a hora na Configuração do Console também depois que acabar o guia
-1. Aperte (Home) para abrir o menu de ações
-1. Selecione "Scripts..."
-1. Selecione "GM9Megascript"
-1. Selecione "Backup Options"
-1. Selecione "SysNAND Backup"
-1. Aperte (A) para confirmar
-  + Este processo levará algum tempo
-  + Caso você receba um erro, verifique se você tem ao menos 1.3GB de memória livre no seu cartão SD
-1. Aperte (A) para continuar
-1. Aperte (B) para retornar para o menu principal
-1. Selecione "Exit"
-1. Se solicitado, aperte (A) para bloquear as permissões de escrita
-1. Segure (R) e aperte (B) ao mesmo tempo para ejetar o cartão SD
-1. Insira o cartão SD no seu computador
-1. Copie `<date>_<serialnumber>_sysnand_##.bin` e `essential.exefs` da pasta `/gm9/out/` em seu cartão SD para um local seguro em seu computador
-  + Faça backups em diversos lugares (tais como armazenamento de arquivos online)
-  + Esses backups irão te salvar de um brick e/ou te ajudarão a recuperar os arquivos da memória NAND caso algo dê errado
-1. Delete `<date>_<serialnumber>_sysnand_##.bin` e `<date>_<serialnumber>_sysnand_##.bin.sha` da pasta `/gm9/out/` no seu cartão SD após copiá-lo
-1. Reinsira seu cartão SD no seu dispositivo
-  + Se o seu cartão SD não foi detectado, segure (Gatilho Direito) e aperte (B) ao mesmo tempo para montá-lo
-  
+{% include_relative include/nand-backup.txt %}
+
 #### Seção III - CTRTransfer
 
-1. Navegue para `[0:] SDCARD` -> `gm9`
-1. Aperte (A) no `.bin` da CTRTransfer para selecioná-lo
-1. Selecione "CTRNAND options..."
-1. Selecione "Transfer image to CTRNAND"
-1. Se solicitado, selecione "Transfer to SysNAND"
-  + Este aviso só irá aparecer se você tiver uma EmuNAND
-1. Aperte (A) para destravar "SysNAND (lvl1) writing", então aperte a sequência de botões solicitada
-  + Este processo levará algum tempo
-1. Quando a transferência for completa, aperte (A) para continuar
-1. Se solicitado, aperte (B) para recusar o bloqueio da permissão de escrita
-1. Aperte (B) duas vezes para retornar para o menu principal
-1. Aperte (Home) para abrir o menu de ações
-1. Selecione "Scripts..."
-1. Selecione "GM9Megascript"
-1. Selecione "Scripts from Plailect's Guide"
-1. Selecione "CTRTransfer Ticket Copy"
-1. Quando solicitado, aperte (A) para prosseguir
-1. Aperte (A) para continuar
-1. Aperte (B) para retornar para o menu principal
-1. Selecione "Exit"
-1. Se solicitado, aperte (A) para bloquear as permissões de escrita
-1. Aperte (Start) para reiniciar seu dispositivo
-1. Atualize seu dispositivo indo em Configuração do console, depois "Outras Configurações, depois indo para a direita até o final e selecionando "Atualização"
-  + Atualizações feitas enquanto usa B9S + Luma (o que você tem) são seguras
-  + Se isso der um erro, defina suas configurações de DNS para "Automático"
+{% include_relative include/ctrtransfer-main.txt %}
 
 #### Seção IV - Iniciando o FBI
 
-1. Abra o aplicativo Download Play (este [ícone]({{ "/images/download-play-icon.png" | absolute_url }}))
-1. Aperte (L) + (Baixo) + (Select) ao mesmo tempo para abrir o menu do Rosalina
-1. Selecione "Miscellaneous options"
-1. Selecione "Switch the hb. title to the current app."
-1. Aperte (B) para continuar
-1. Aperte (B) para retornar para o menu principal do Rosalina
-1. Aperte (B) para sair do menu do Rosalina
-1. Aperte (Home), depois feche o Download Play
-1. Inicie o aplicativo Download Play
-1. Seu dispositivo deve abrir o Homebrew Launcher
+{% include_relative include/launch-hbl-dlp.txt %}
 
 #### Seção V - Reinstalando Tickets
 
-Se o script não encontrou nenhum user tickets e falou para você pular essa sessão, você pode pular essa sessão.
-{: .notice--info}
-
-1. Abra o FBI da lista de homebrews
-1. Navegue até `SD` -> `gm9` -> `out` -> `ctrtransfer_tickets`
-1. Faça o seguinte processo para a pasta `eshop`, `unknown`, ou ambas
-  + Navegue até a pasta
-  + Selecione "\<current directory>"
-  + Selecione "Install and delete all tickets"
-  + Aguarde. O sistema pode parecer estar congelado, apenas dê-lhe tempo.
-  + Aperte (A) para confirmar
-1. Aperte (Home) para sair do FBI
+{% include_relative include/ctrtransfer-ticket-copy.txt %}
 
 #### Seção VI - Configurações de região
 
@@ -154,10 +82,6 @@ Se o script não encontrou nenhum user tickets e falou para você pular essa ses
 
 #### Seção VII - Removendo a imagem CTRTransfer
 
-1. Pressione e segure (Start), e enquanto segura (Start), ligue seu dispositivo. Isso vai inicializar o GodMode9
-1. Navegue para `[0:] SDCARD` -> `gm9`
-1. Aperte (X) na imagem `.bin` da CTRTransfer para apagá-la
-1. Aperte (A) para confirmar
-1. Aperte (Start) para reiniciar seu dispositivo
+{% include_relative include/ctrtransfer-cleanup.txt %}
 
 ___
