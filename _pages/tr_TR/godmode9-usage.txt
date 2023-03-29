@@ -29,41 +29,23 @@ Some of the instructions below are only applicable to the latest version of GodM
 
 ### Instructions
 
-1. Cihazınızı kapatın
+1. Power off your device
 1. SD kartınızı bilgisayarınıza takın
 1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
-1. SD kartınızı cihazınıza tekrar takın
+1. Reinsert your SD card into your device
 
 ## Creating a NAND Backup
 
 1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
-1. Press (Home) to bring up the action menu
-1. Select "Scripts..."
-1. Select "GM9Megascript"
-1. Select "Backup Options"
-1. Select "SysNAND Backup"
-1. Onaylamak için (A) basın
-  + This process will take some time
-  + If you get an error, look for your issue in the [troubleshooting guide](troubleshooting#finalizing-setup)
-1. Devam etmek için (A) basın
-1. Press (B) to return to the main menu
-1. Select "Exit"
-1. Press (A) to relock write permissions if prompted
-1. Hold (R) and press (Start) at the same time to power off your device
-1. SD kartınızı bilgisayarınıza takın
-1. Copy `<date>_<serialnumber>_sysnand_##.bin` and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
-  + Make backups in multiple locations (such as online file storage)
-  + These backups will save you from a brick and/or help you recover files from the NAND image if anything goes wrong in the future
-1. Delete `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
-1. SD kartınızı cihazınıza tekrar takın
+{% include_relative include/nand-backup.txt %}
 
 ## Restoring a NAND Backup
 
-1. Cihazınızı kapatın
+1. Power off your device
 1. SD kartınızı bilgisayarınıza takın
 1. Copy `<date>_<serialnumber>_sysnand_##.bin` from your computer to the `/gm9/out/` folder on your SD card
-1. SD kartınızı cihazınıza tekrar takın
+1. Reinsert your SD card into your device
 1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
 1. Press (Home) to bring up the action menu
 1. Select "Scripts..."
@@ -74,7 +56,7 @@ Some of the instructions below are only applicable to the latest version of GodM
 1. Press (A) to unlock SysNAND (lvl3) writing, then input the key combo given
   + This will not overwrite your boot9strap installation
   + This process will take some time
-1. Devam etmek için (A)'ya basın
+1. Devam etmek için (A) basın
 1. Press (B) to return to the main menu
 1. Select "Exit"
 1. Press (A) to relock write permissions if prompted
@@ -112,16 +94,8 @@ This will only work if the Health & Safety injection was performed by GodMode9 (
 **Note that this will erase the contents of your SD card!**
 {: .notice--danger}
 
-1. Launch GodMode9 by holding (Start) during boot
-1. Press (Home) to bring up the action menu
-1. Select "More..."
-1. "SD format menu" seçin
-1. Select any EmuNAND options you wish to use
-  + Most users will want to select "No EmuNAND"
-1. "Auto" seçin
-1. Press (A) to accept the label `GM9SD`
-  + Optionally, you may input a custom name for the SD card
-1. When prompted, input the key combo given to confirm
+1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+{% include_relative include/format-sd-gm9.txt %}
 
 ## Removing an NNID without formatting your device
 
@@ -131,7 +105,7 @@ This will only work if the Health & Safety injection was performed by GodMode9 (
 1. Select "GM9Megascript"
 1. Select "Scripts from Plailect's Guide"
 1. Select "Remove NNID"
-1. Devam etmek için (A) basın
+1. Devam etmek için (A)'ya basın
 1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
 1. Devam etmek için (A) basın
 1. Press (B) to return to the main menu
