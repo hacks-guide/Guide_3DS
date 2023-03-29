@@ -34,7 +34,7 @@ Du MUSST bereits eine installierte Version von Luma3DS und boot9strap haben um d
 Wenn du noch keine DSiWare-Spiele oder Spielstände hast, überspringe diesen Abschnitt.
 {: .notice--info}
 
-1. Starte GodMode9, indem du während dem Starten deiner Konsole die Taste (Start) gedrückt hältst
+1. Drücke und halte (Start), und während du (Start) hältst, schalte deinen 3DS an. This will launch GodMode9
 1. Wenn du aufgefordert wirst, ein "essential files backup" durchzuführen, drücke (A). Drücke erneut (A) nachdem es abgeschlossen ist
 1. Wenn du aufgefordert wirst Datum und Uhrzeit der "RTC" (Real Time Clock, Echtzeituhr) zu korrigieren, drücke (A), stelle Datum und Uhrzeit ein und drücke (A) um fortzufahren
   + Bitte beachte, falls du die RTC korrigieren musstest, dass du nach beenden der Anleitung auch Datum und Uhrzeit in den Systemeinstellungen korrigieren musst
@@ -72,7 +72,7 @@ Markiere dazu `[A:] SYSNAND SD` während du (R) und (A) zeitgleich drückst. Dan
 
 #### Schritt IV - EmuNAND auf SysNAND kopieren
 
-1. Starte GodMode9, indem du während dem Starten deiner Konsole die Taste (Start) gedrückt hältst
+1. Drücke und halte (Start), und während du (Start) hältst, schalte deinen 3DS an. This will launch GodMode9
 1. Navigiere zu `[E:] EMUNAND VIRTUAL`
 1. Drücke (A) auf `nand.bin`, um es auszuwählen, wähle dann "NAND image options...", dann wähle "Restore SysNAND (safe)"
 1. Drücke (A), um SysNAND-Änderungen zu aktivieren. Gib danach die angezeigte Tastenkombination ein
@@ -127,42 +127,17 @@ Betätige dazu zeitgleich die Tasten (R) und (A) im GodMode9 Hauptmenü und wäh
   + Drücke (Start) um deinen 3DS neu zu starten
   + Starte das GBA VC spiel
   Verlasse das GBA VC Spiel wieder
-1. Starte GodMode9, indem du während dem Starten deiner Konsole die Taste (Start) gedrückt hältst
 
 #### Schritt VII - Backup vom SysNAND erstellen
 
-1. Drücke  (HOME) um das Aktionsmenü aufzurufen
-1. Wähle "Scripts"
-1. Wähle "GM9Megascript" aus
-1. Wähle "Backup Options" aus
-1. Wähle "SysNAND Backup" aus
-1. Drücke (A) um zu bestätigen
-  + Dieser Vorgang nimmt einige Zeit in Anspruch
-  + If you get an error, make sure that you have at least 1.3GB of free space on your SD card
-1. Drücke (A) um fortzufahren
-1. Drücke (B), um zum Hauptmenü zurückzukehren
-1. Wähle "Exit" aus
-1. Drücke (A), um die Schreibrechte zu deaktivieren, wenn du dazu aufgefordert wirst
-1. Drücke (R) und (B) gleichzeitig um die SD-Karte auszuwerfen
-1. Stecke deine SD-Karte in deinen Computer
-1. Copy `<date>_<serialnumber>_sysnand_##.bin` and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
-  + Erstelle Backup Dateien an mehreren Orten (USB-Stick, PC, Externe Festplatte, Online-Speicher, etc.)
-  + Diese Backups werden im Falle eines Bricks benötigt, um Daten aus dem NAND-Image wieder herzustellen, wenn etwas schief gehen sollte
-1. Delete `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
+1. Drücke und halte (Start), und während du (Start) hältst, schalte deinen 3DS an. This will launch GodMode9
+{% include_relative include/nand-backup.txt -%}
 1. ** Sichere jede Datei von deiner SD-Karte in einem Ordner auf deinem Computer, da in den nächsten Schritten alle Dateien gelöscht werden **
 
 #### Schritt VIII - SD-Karte formatieren
 
-1. Stecke deine SD-Karte nun wieder in deinen 3DS
-1. Drücke  (HOME) um das Aktionsmenü aufzurufen
-1. Wähle "More..."
-1. Wähle "SD format menu"
-1. Drücke (A), um zu bestätigen
-1. Wähle "No EmuNAND"
-1. Wähle "Auto"
-1. Drücke (A), um den Namen `GM9SD` zu akzeptieren
-  + Alternativ kannst du auch einen benutzerdefinierten Namen für deine SD-Karte eingeben
-1. Gib die Schlüsselkombination zur Bestätigung ein, wenn danach verlangt wird
+1. Drücke und halte (Start), und während du (Start) hältst, schalte deinen 3DS an. This will launch GodMode9
+{% include_relative include/format-sd-gm9.txt -%}
 1. Drücke (R) und (B) gleichzeitig um die SD-Karte auszuwerfen
 1. Stecke deine SD-Karte in deinen Computer
 1. Kopiere alle Dateien zurück auf deine SD-Karte
