@@ -38,34 +38,16 @@ Niektóre z poniższych instrukcji mają zastosowanie tylko do najnowszej wersji
 ## Tworzenie kopii zapasowej NAND
 
 1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
-1. Wciśnij (Home), aby przywołać menu akcji
-1. Wybierz "Scripts..."
-1. Wybierz "GM9Megascript"
-1. Wybierz "Backup Options"
-1. Wybierz "SysNAND Backup"
-1. Naciśnij (A) aby potwierdzić
-  + Ten proces zajmie trochę czasu
-  + If you get an error, look for your issue in the [troubleshooting guide](troubleshooting#finalizing-setup)
-1. Naciśnij (A), aby kontynuować
-1. Wciśnij (B) aby wrócić do menu głównego
-1. Wybierz "Exit"
-1. Naciśnij (A), aby ponownie zablokować uprawnienia do zapisu, jeśli zostaniesz o to poproszony
-1. Przytrzymaj (R) i wciśnij (Start) w tym samym momencie aby wyłączyć konsolę
-1. Włóż kartę SD do komputera
-1. Copy `<date>_<serialnumber>_sysnand_##.bin` and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
-  + Zrób backupy w wielu lokacjach (np. dysku w chmurze)
-  + Te kopie zapasowe uratują cię przed "brickiem" i/lub pomogą ci odzyskać pliki z NAND jeśli coś pójdzie nie tak w przyszłości
-1. Delete `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
-1. Włóż ponownie kartę SD do konsoli
+{% include_relative include/nand-backup.txt %}
 
 ## Przywracanie kopii zapasowej NAND
 
 1. Wyłącz konsolę
 1. Włóż kartę SD do komputera
 1. Copy `<date>_<serialnumber>_sysnand_##.bin` from your computer to the `/gm9/out/` folder on your SD card
-1. Włóż ponownie kartę SD do konsoli
+1. Włóż kartę SD do konsoli
 1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
-1. Wciśnij (Home), aby przywołać menu akcji
+1. Wciśnij (Home) aby przywołać menu akcji
 1. Wybierz "Scripts..."
 1. Wybierz "GM9Megascript"
 1. Wybierz "Restore Options"
@@ -91,7 +73,7 @@ Pamiętaj że aplikacji Health & Safety nie można podmienić na większe pliki 
 1. Przejdź do `[0:] SDCARD` -> `cias`
 1. Wciśnij (A) na twojej aplikacji `.cia` aby ją wybrać, następnie wybierz "CIA image options...", a następnie wybierz "Mount image to drive"
 1. Wciśnij (A) na pliku `.app`, następnie wybierz "NCCH image options" i wybierz "Inject to H&S"
-1. Wciśnij (A), aby odblokować zapis do SysNAND (lvl1), a następnie wprowadź przedstawioną kombinację przycisków
+1. Naciśnij (A) żeby odblokować możliwość zapisu do SysNAND (lvl1), a następnie wprowadź wyświetloną sekwencję klawiszy
 1. Naciśnij (A), aby kontynuować
 1. Naciśnij (A), aby ponownie zablokować uprawnienia do zapisu, jeśli zostaniesz o to poproszony
 
@@ -101,10 +83,10 @@ To zadziała tylko wtedy, gdy podmienienie aplikacji Health & Safety zostało wy
 {: .notice--info}
 
 1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
-1. Wciśnij (Home), aby przywołać menu akcji
+1. Wciśnij (Home) aby przywołać menu akcji
 1. Wybierz "More..."
 1. Wybierz "Restore H&S"
-1. Wciśnij (A), aby odblokować zapis do SysNAND (lvl1), a następnie wprowadź przedstawioną kombinację przycisków
+1. Naciśnij (A) żeby odblokować możliwość zapisu do SysNAND (lvl1), a następnie wprowadź wyświetloną sekwencję klawiszy
 1. Naciśnij (A), aby ponownie zablokować uprawnienia do zapisu, jeśli zostaniesz o to poproszony
 
 ## Formatowanie karty SD
@@ -112,27 +94,19 @@ To zadziała tylko wtedy, gdy podmienienie aplikacji Health & Safety zostało wy
 **UWAGA! Proces ten usunie całą zawartość twojej karty SD!**
 {: .notice--danger}
 
-1. Uruchom GodMode9 poprzez trzymanie przycisku (Start) podczas uruchamiania konsoli
-1. Wciśnij (Home), aby przywołać menu akcji
-1. Wybierz "More..."
-1. Wybierz "SD format menu"
-1. Wybierz odpowiednie opcje EmuNAND, których chcesz użyć
-  + Większość użytkowników będzie chciała wybrać "No EmuNAND"
-1. Wybierz opcję "Auto"
-1. Naciśnij (A) aby zaakceptować etykietę `GM9SD`
-  + Opcjonalnie możesz wprowadzić własną etykietę dla karty SD
-1. Kiedy zostaniesz poproszony, wprowadź podaną kombinację klawiszy
+1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+{% include_relative include/format-sd-gm9.txt %}
 
 ## Usuwanie NNID bez formatowania konsoli
 
 1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
-1. Wciśnij (Home), aby przywołać menu akcji
+1. Wciśnij (Home) aby przywołać menu akcji
 1. Wybierz "Scripts..."
 1. Wybierz "GM9Megascript"
 1. Wybierz "Scripts from Plailect's Guide"
 1. Wybierz "Remove NNID"
 1. Naciśnij (A), aby kontynuować
-1. Wciśnij (A), aby odblokować zapis do SysNAND (lvl1), a następnie wprowadź przedstawioną kombinację przycisków
+1. Naciśnij (A) żeby odblokować możliwość zapisu do SysNAND (lvl1), a następnie wprowadź wyświetloną sekwencję klawiszy
 1. Naciśnij (A), aby kontynuować
 1. Wciśnij (B) aby wrócić do menu głównego
 1. Wybierz "Exit"
