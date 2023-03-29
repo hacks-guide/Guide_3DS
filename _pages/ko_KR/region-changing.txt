@@ -54,96 +54,24 @@ Luma3DS가 지역 외 게임들과 [타이틀별 지역 에뮬레이션](https:/
 
 #### 섹션 I - 준비 작업
 
-1. 기기를 종료해 주세요
-1. SD 카드를 컴퓨터에 삽입해 주세요
-1. SD 카드의 루트에 `3ds` 폴더가 없을 경우 폴더를 만들어 주세요
-1. SD 카드의 `/luma/payloads/`폴더에 GodMode9 `.zip`안에 압축되있는 `GodMode9.firm`을 복사해 주세요
-1. SD 카드의 루트로 GodMode9 `.zip`안에 압축이 되있는 `gm9` 폴더를 복사해 주세요
-1. SD 카드의 `/gm9/` 폴더에 CTRTransfer `.zip`안에 압축되어 있는 11.15.0 CTRTransfer 이미지 `.bin`을 복사해 주세요
-1. `FBI.3dsx` 파일을 SD 카드의 `/3ds/` 폴더에 복사해 주세요
-1. SD 카드를 기기에 다시 삽입해 주세요.
+{% include_relative include/ctrtransfer-prep.txt %}
 
 #### 섹션 II - NAND 백업
+
 1. (Start)를 길게 누르고, 이 상태에서 전원을 켜 주세요. GodMode9이 실행 될 겁니다
-1. 만약 "Essential files backup not found" 메세지가 표시되면, (A) 룰 눌러서 백업을 만들고, 끝나면 (A) 를 눌러서 진행해 주세요
-1. 만약 "RTC date&time seems to be wrong" 메세지가 표시되면 (A) 버튼을 눌러 하십시오, 그러고 나서 날짜와 시간을 고치고 (A) 버튼을 눌러 계속해 주세요
-  + 만약 RTC 날짜와 시간을 수정해야 했다면, 이 가이드 끝나고 본체 설정에서도 시간을 수정해야 합니다
-1. (Home)을 눌러 작업 메뉴를 열어 주세요
-1. "Scripts..."를 선택해 주세요
-1. "GM9Megascript"를 선택해 주세요
-1. "Backup Options"를 선택해 주세요
-1. "SysNAND Backup"을 선택해 주세요
-1. (A)를 눌러 확인해 주세요
-  + 이 과정은 시간이 좀 걸릴 것입니다
-  + 만일 에러 발생시, SD 카드의 용량이 최소 1.3GB가 남아 있는지 확인 하세요
-1. (A)를 눌러 진행해 주세요
-1. (B)를 눌러 메인 메뉴로 돌아가 주세요
-1. "Exit"를 선택해 주세요
-1. 메세지가 표시되면, (A)를 눌러서 쓰기잠금을 확인해 주세요
-1. (R) 버튼과 (B)를 동시에 눌러 SD 카드를 뺄 준비를 해 주세요
-1. SD 카드를 컴퓨터에 삽입해 주세요
-1. SD 카드`/gm9/out/` 폴더의 `<날짜>_<일련번호>_nandmin_##.bin`과 'essential.exefs' 를 컴퓨터의 안전한 위치에 복사해 주세요
-  + 여러 위치에 백업을 해 주세요 (온라인 파일 저장 공간 등)
-  + 이 백업들은 기기를 벽돌로부터 지켜줄 것이고 만약 나중에 문제가 생겼을 때 NAND 이미지로부터 파일을 복구하는 것을 도울 것입니다
-1. SD 카드에 있는 `/gm9/out/`의 `<날짜>_<일련번호>_sysnand_##.bin` 과`<날짜>_<일련번호>_sysnand_##.bin.sha' 파일을 복사 후에 지워 주세요
-1. SD 카드를 기기에 다시 삽입해 주세요
-  + SD 카드가 감지되지 않으면, (R)를 길게 눌르며 (B)를 눌러 다시 마운트해 주세요
-  
+{% include_relative include/nand-backup.txt %}
+
 #### 섹션 III - CTRTransfer
 
-1. `[0:] SDCARD` -> `gm9`으로 이동해 주세요
-1. CTRTransfer `.bin`에 (A)를 눌러 선택해 주세요
-1. "CTRNAND options..."를 선택해 주세요
-1. "Transfer image to CTRNAND"를 선택해 주세요
-1. 메시지가 나타나면 "Transfer to SysNAND"를 선택해 주세요
-  + 이 메시지는 EmuNAND가 있을 경우에만 나타납니다
-1. (A)를 눌려 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요
-  + 이 과정은 시간이 좀 걸릴 것입니다
-1. 작업이 완료되면 (A)를 눌려 계속해 주세요
-1. 만약 메세지가 표시되면, (B) 를 눌러서 쓰기잠금을 거부해 주세요
-1. (B)를 두 번 눌러 메인 메뉴로 돌아가 주세요
-1. (Home)을 눌러 작업 메뉴를 열어 주세요
-1. "Scripts..."를 선택해 주세요
-1. "GM9Megascript"를 선택해 주세요
-1. "Scripts from Plailect's Guide"를 선택해 주세요
-1.  "CTRTransfer Ticket Copy"를 선택해 주세요
-1. 프롬프트가 뜨면, (A) 를 눌러서 진행해 주세요
-1. (A)를 눌러 진행해 주세요.
-1. (B)를 눌러 메인 메뉴로 돌아가 주세요
-1. "Exit"를 선택해 주세요
-1. 메세지가 표시되면, (A)를 눌러서 쓰기잠금을 확인해 주세요
-1. (Start)를 눌러 기기를 다시 시작해 주세요
-1. 본체 설정의 "기타 설정"에서 가장 오른쪽에 있는 "본체 업데이트"를 선택해 기기를 업데이트해 주세요
-  + boot9strap과 Luma을 이용한 (지금 가지고 계신 버전) 업데이트는 안전합니다
-  + 오류가 발생하면 DNS 설정을 "자동"으로 설정해 주세요
+{% include_relative include/ctrtransfer-main.txt %}
 
 #### 섹션 IV - FBI 실행
 
-1. 다운로드 플레이 앱을 실행해 주세요 (이 [icon]({{ "/images/download-play-icon.png" | absolute_url }}))
-1. (L) + (Down) + (Select) 을 동시에 눌러서 Rosalina 메뉴를 실행해 주세요
-1. "Miscellaneous options"을 선택해 주세요
-1. "Switch the hb. title to the current app."를 선택해 주세요
-1. (B)를 눌러 진행해 주세요
-1. (B)를 눌러 Rosalina 메뉴로 돌아가 주세요
-1. (B)를 눌러 Rosalina 메뉴를 나와 주세요
-1. (Home) 키를 누르고, 다운로드 플레이를 종료해 주세요
-1. 다운로드 플레이 앱을 실행해 주세요
-1. 성공하면 Homebrew Launcher가 실행될 것입니다
+{% include_relative include/launch-hbl-dlp.txt %}
 
 #### 섹션 V - 티켓 재설치
 
-만약 "No user tickets found" 표시가 되면, 이 부분을 넘기세요.
-{: .notice--info}
-
-1. 홈브류 목록에서 FBI를 실행해 주세요
-1. Navigate to `SD` -> `gm9` -> `out` -> `ctrtransfer_tickets`
-1. `eshop` 폴더와 `unknown` 폴더 중 1개 이상의 폴더에 다음 과정을 수행해 주세요.
-  + 그 폴더로 이동해 주세요
-  + "\<current directory>"를 선택해 주세요
-  + "Install and delete all tickets"를 선택해 주세요
-  + 잠시 기다려 주세요. 시스템이 멈춘 것 같아 보여도 기다려 주세요
-  + (A)를 눌러 확인해 주세요
-1. (Home)을 눌러 FBI를 종료해 주세요
+{% include_relative include/ctrtransfer-ticket-copy.txt %}
 
 #### 섹션 VI - 지역 설정
 
@@ -154,10 +82,6 @@ Luma3DS가 지역 외 게임들과 [타이틀별 지역 에뮬레이션](https:/
 
 #### 섹션 VII - CTRTransfer 이미지 제거
 
-1. (Start)를 길게 누르고, 이 상태에서 전원을 켜 주세요. GodMode9이 실행 될 겁니다
-1. `[0:] SDCARD` -> `gm9`으로 이동해 주세요
-1. CTRTransfer 이미지 `.bin`에 (X)를 눌러 삭제해 주세요
-1. (A)를 눌러 확인해 주세요
-1. (Start)를 눌러 기기를 다시 시작해 주세요
+{% include_relative include/ctrtransfer-cleanup.txt %}
 
 ___
