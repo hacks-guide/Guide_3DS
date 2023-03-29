@@ -34,7 +34,7 @@ title: "Перенос EmuNAND"
 Если у вас нет игр DSiWare или важных для вас сохранений, пропустите эту часть.
 {: .notice--info}
 
-1. Запустите GodMode9, держа нажатой кнопку (Start) во время загрузки
+1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
 1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it is completed
 1. Если вам предложат выставить RTC дату и время, нажмите кнопку (A) чтобы сделать это, настройте дату и время, затем нажмите (A) чтобы продолжить
   + Обратите внимание, что если вы выставили RTC дату и время, вам также придется исправить время в Системных настройках после завершения руководства
@@ -71,7 +71,7 @@ title: "Перенос EmuNAND"
 
 #### Часть IV - Копирование EmuNAND в SysNAND
 
-1. Запустите GodMode9, держа нажатой кнопку (Start) во время загрузки
+1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
 1. Перейдите в `[E:] EMUNAND VIRTUAL`
 1. Нажмите (A) чтобы выбрать файл `nand.bin`, затем выберите "NAND image options...", затем "Restore SysNAND (safe)"
 1. Нажмите (A), чтобы разрешить запись в SysNAND и введите указанную комбинацию кнопок
@@ -125,42 +125,17 @@ title: "Перенос EmuNAND"
   + Нажмите (Start) для перезагрузки
   + Запустите игру GBA VC
   + Выйдите из игры GBA VC
-1. Запустите GodMode9, держа нажатой кнопку (Start) во время загрузки
 
 #### Часть VII - Создание бэкапа SysNAND
 
-1. Нажмите кнопку (Home) для вызова меню
-1. Выберите "Scripts..."
-1. Выберите "GM9Megascript"
-1. Выберите "Backup Options"
-1. Выберите "SysNAND Backup"
-1. Нажмите (A) для подтверждения
-  + Этот процесс займет некоторое время
-  + Если появляется ошибка, убедитесь, что у вас есть по крайней мере 1,3 ГБ свободного места на SD-карте
-1. Нажмите (A), чтобы продолжить
-1. Нажмите (B) для возврата в главное меню
-1. Выберите "Exit"
-1. Нажмите (A) чтобы восстановить запрет на запись, если появится запрос
-1. Удерживая (R) нажмите (B) для того, чтобы извлечь SD-карту
-1. Вставьте SD-карту в компьютер
-1. Copy `<date>_<serialnumber>_sysnand_##.bin` and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
-  + Сделайте несколько резервных копий в нескольких местах (например в облачном хранилище)
-  + Эти бэкапы позволят восстановить консоль и/или извлечь файлы из образа NAND, если что-то пойдёт не так
-1. Delete `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
+1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+{% include_relative include/nand-backup.txt -%}
 1. **Сделайте резервную копию всех файлов на SD-карте, поскольку в следующих шагах карта будет отформатирована.**
 
 #### Часть VIII - Форматирование SD-карты
 
-1. Вставьте SD-карту обратно в консоль
-1. Нажмите кнопку (Home) для вызова меню
-1. Выберите "More..."
-1. Выберите "SD format menu"
-1. Нажмите (A) для подтверждения
-1. Выберите "No EmuNAND"
-1. Выберите "Auto"
-1. Нажмите (A), чтобы подтвердить метку `GM9SD`
-  + При необходимости вы можете ввести другую метку для SD-карты
-1. При появлении запроса, введите указанную комбинацию кнопок
+1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+{% include_relative include/format-sd-gm9.txt -%}
 1. Удерживая (R) нажмите (B) для того, чтобы извлечь SD-карту
 1. Вставьте SD-карту в компьютер
 1. Скопируйте все ваши файлы обратно на SD-карту
