@@ -38,25 +38,7 @@ Some of the instructions below are only applicable to the latest version of GodM
 ## Creating a NAND Backup
 
 1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
-1. Press (Home) to bring up the action menu
-1. Select "Scripts..."
-1. Select "GM9Megascript"
-1. Select "Backup Options"
-1. Select "SysNAND Backup"
-1. Premeu (A) per confirmar
-  + This process will take some time
-  + If you get an error, look for your issue in the [troubleshooting guide](troubleshooting#finalizing-setup)
-1. Press (A) to continue
-1. Press (B) to return to the main menu
-1. Select "Exit"
-1. Press (A) to relock write permissions if prompted
-1. Hold (R) and press (Start) at the same time to power off your device
-1. Insert your SD card into your computer
-1. Copy `<date>_<serialnumber>_sysnand_##.bin` and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
-  + Make backups in multiple locations (such as online file storage)
-  + These backups will save you from a brick and/or help you recover files from the NAND image if anything goes wrong in the future
-1. Delete `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
-1. Reinsert your SD card into your device
+{% include_relative include/nand-backup.txt %}
 
 ## Restoring a NAND Backup
 
@@ -112,16 +94,8 @@ This will only work if the Health & Safety injection was performed by GodMode9 (
 **Note that this will erase the contents of your SD card!**
 {: .notice--danger}
 
-1. Launch GodMode9 by holding (Start) during boot
-1. Press (Home) to bring up the action menu
-1. Select "More..."
-1. Select "SD format menu"
-1. Select any EmuNAND options you wish to use
-  + Most users will want to select "No EmuNAND"
-1. Select "Auto"
-1. Press (A) to accept the label `GM9SD`
-  + Optionally, you may input a custom name for the SD card
-1. When prompted, input the key combo given to confirm
+1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+{% include_relative include/format-sd-gm9.txt %}
 
 ## Removing an NNID without formatting your device
 
