@@ -34,7 +34,7 @@ Az alábbiak használatához már telepítened kellett a következőket: Luma3DS
 Ha nincs egy DSiWare játékod vagy mentésed sem, ami fontos lenne számodra, akkor hagyd ki ezt a részt.
 {: .notice--info}
 
-1. Indítsd el a GodMode9-et a (Start) lenyomva tartásával boot közben
+1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be az eszközödet. Ez elindítja a GodMode9-et
 1. Ha rákérdez arra, hogy csináljon-e egy biztonsági másolatot (essential files backup), akkor nyomd meg az (A) gombot, hogy csináljon, majd amikor végzett, nyomd meg ismét az (A) gombot a folytatáshoz
 1. Ha rákérdez arra, hogy szeretnéd-e a valós dátumot és időt javítani (fix the RTC date&time), nyomd meg az (A) gombot, állítsd be a helyes dátumot és időt, majd nyomd meg az (A) gombot a folytatáshoz
   + Ne feledd, hogy amennyiben ezen a ponton szükséges volt a helyes dátum és idő beállítása, a System Settingsben is be kell majd állítanod a helyes időt az útmutató végén
@@ -71,7 +71,7 @@ Egy `<TitleID>.gbavc.sav` fájl Title ID-jének azonosításához használhatod 
 
 #### IV. rész - EmuNAND másolása a SysNAND-ba
 
-1. Indítsd el a GodMode9-et a (Start) lenyomva tartásával boot közben
+1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be az eszközödet. Ez elindítja a GodMode9-et
 1. Menj ide: `[E:] EMUNAND VIRTUAL`
 1. Nyomd meg az (A) gombot, amikor a `nand.bin` van kijelölve, hogy kiválaszd, majd válaszd a "NAND image options..." opciót, utána pedig a "Restore SysNAND (safe)" lehetőséget
 1. Nyomd meg az (A) gombot, hogy feloldd a SysNAND felülírást, majd sorban nyomd meg a kijelzett gombokat
@@ -125,42 +125,17 @@ Egy `<TitleID>.gbavc.sav` fájl Title ID-jének azonosításához használhatod 
   + Nyomd meg a (Start) gombot az eszköz újraindításához
   + Indítsd el az adott GBA VC játékot
   + Lépj ki belőle
-1. Indítsd el a GodMode9-et a (Start) lenyomva tartásával boot közben
 
 #### VII. rész - SysNAND biztonsági mentése
 
-1. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
-1. Válaszd a "Scripts..." opciót
-1. Válaszd ezt: "GM9Megascript"
-1. Válaszd ezt: "Backup Options"
-1. Válaszd ezt: "SysNAND Backup"
-1. Nyomd meg az (A) gombot a megerősítéshez
-  + Ez a folyamat igénybe vesz majd némi időt
-  + Ha hibát kapsz, győződj meg róla, hogy legalább 1.3 GB szabad hely van az SD kártyádon
-1. Nyomd meg az (A) gombot a folytatáshoz
-1. Nyomd meg a (B) gombot, hogy visszamenj a főmenübe
-1. Válaszd az "Exit" opciót
-1. Nyomd meg az (A) gombot az írási engedélyek visszavonásához
-1. Az SD kártya leválasztásához az (R) gomb lenyomva tartása mellett nyomd meg a (B) gombot
-1. Helyezd az SD kártyád a számítógépbe
-1. Másold a `<date>_<serialnumber>_sysnand_##.bin` és az `essential.exefs` fájlokat az SD kártyád `/gm9/out/` mappájából valami biztonságos helyre a számítógépeden
-  + Tarts belőle biztonsági másolatokat több különböző helyen is (például online tárhelyen)
-  + Ezek a biztonsági mentések fognak megmenteni, ha a későbbiekben brickelődne a konzolod, vagy bármi félresikerülne a jövőben
-1. Töröld a `<dátum>_<sorozatszám>_sysnand_##.bin` és a `<dátum>_<sorozatszám>_sysnand_##.bin.sha` fájlokat az SD kártyád `/gm9/out/` mappájából, miután lemásoltad azokat
+1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be az eszközödet. Ez elindítja a GodMode9-et
+{% include_relative include/nand-backup.txt -%}
 1. **Készíts az SD kártyádon található fájlokról biztonsági másolatot a számítógépedre; a következő lépésekben minden fájl törlődni fog róla**
 
 #### VIII. rész - SD kártya formázása
 
-1. Tedd vissza az SD kártyád a készülékedbe
-1. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
-1. Válaszd ki a "More..." opciót
-1. Válaszd az "SD format menu" opciót
-1. Nyomd meg az (A) gombot a megerősítéshez
-1. Válaszd a "No EmuNAND" opciót
-1. Válaszd az "Auto" opciót
-1. Nyomd meg az (A) gombot, hogy elfogadd a `GM9SD` címkét
-  + Persze tetszőlegesen megadhatsz más, egyedi nevet is az SD kártyádnak
-1. Ha kéri, akkor nyomd meg sorban azokat a gombokat, amiket kijelez a képernyőn, hogy beleegyezz a formázásba
+1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be az eszközödet. Ez elindítja a GodMode9-et
+{% include_relative include/format-sd-gm9.txt -%}
 1. Az SD kártya leválasztásához az (R) gomb lenyomva tartása mellett nyomd meg a (B) gombot
 1. Helyezd az SD kártyád a számítógépbe
 1. Másolj vissza minden fájlt az SD kártyádra
