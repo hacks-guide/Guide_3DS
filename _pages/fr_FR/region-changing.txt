@@ -54,96 +54,24 @@ Pour utiliser les liens [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) s
 
 #### Section I - Préparatifs
 
-1. Éteignez votre 3DS
-1. Insérez votre carte SD dans votre ordinateur
-1. Créez un dossier nommé `3ds` à la racine de votre carte SD si celui ci n'existe pas
-1. Copiez le fichier `GodMode9.firm` de l'archive `.zip` de GodMode9 dans le dossier `/luma/payloads/` sur votre carte SD
-1. Copiez le dossier `gm9` de GodMode9 `.zip` à la racine de votre carte SD
-1. Copiez l'image 11.15.0 CTRTransfer `.bin` depuis le `.zip` de CTRTransfer dans le dossier `/gm9/` sur votre carte SD
-1. Copiez `FBI.3dsx` dans le dossier `/3ds/` de votre carte SD
-1. Réinsérez votre carte SD dans votre 3DS
+{% include_relative include/ctrtransfer-prep.txt %}
 
 #### Section II - Sauvegarde de la NAND
+
 1. Appuyez sur le bouton (START) et maintenez le enfoncé tout en allumant votre console. Ceci lancera GodMode9
-1. Si vous êtes invité à créer une sauvegarde des fichiers essentiels, appuyez sur (A) pour le faire, puis appuyez sur (A) pour continuer une fois qu'elle est terminée
-1. Si vous êtes invité à régler la date et l'heure du RTC, appuyez sur (A) pour le faire, puis réglez la date et l'heure, puis appuyez sur (A) pour continuer
-  Notez que, si vous avez dû régler la date et l'heure du RTC, vous devrez également régler l'heure dans les Paramètres du système après ce guide
-1. Appuyez sur (Home) pour faire apparaître le menu d’actions (action menu)
-1. Sélectionnez "Scripts"
-1. Sélectionnez "GM9Megascript"
-1. Sélectionnez "Backup Options"
-1. Sélectionnez "SysNAND Backup"
-1. Appuyez sur (A) pour confirmer
-  + Ce processus prendra un certain temps
-  + Si une erreur apparaît, vérifiez que vous avez au moins 1,3 Go d'espace libre sur votre carte SD
-1. Appuyez sur (A) pour continuer
-1. Appuyez sur (B) pour revenir au menu principal
-1. Sélectionnez "Exit"
-1. Appuyez (A) pour reverrouiller autorisations en écriture si vous êtes invité
-1. Maintenez (R) et appuyez sur (B) en même temps pour éjecter votre carte SD
-1. Insérez votre carte SD dans votre ordinateur
-1. Copy `<date>_<serialnumber>_sysnand_##.bin` and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
-  + Faites des sauvegardes dans plusieurs endroits (tels que des stockages de fichiers en ligne par exemple)
-  Ces sauvegardes vous sauveront d'un brick et/ou vous aideront à récupérer des fichiers de l'image de la NAND si quelque chose se passe mal plus tard
-1. Delete `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
-1. Réinsérez votre carte SD dans votre 3DS
-  + Si votre carte SD n'a pas été détectée, maintenez (R) et appuyez sur (B) pour la remonter
-  
+{% include_relative include/nand-backup.txt %}
+
 #### Section III - CTRTransfer
 
-1. Naviguez vers `[0:] SDCARD` -> `gm9`
-1. Appuyez sur (A) sur le `.bin` de CTRTransfer pour le sélectionner
-1. Sélectionnez "CTRNAND options..."
-1. Sélectionnez "Transfer image to CTRNAND"
-1. Si vous y êtes invité, sélectionnez "Transfer to SysNAND"
-  + Cette invitation s’affiche uniquement si vous avez une EmuNAND
-1. Appuyez sur (A) pour autoriser l'écriture sur votre SysNAND, puis entrez la combinaison de touches demandée
-  + Ce processus pendra du temps
-1. Une fois le transfert terminé, appuyez sur (A) pour continuer
-1. Appuyez sur (B) pour décliner le verrouillage des autorisations en écriture si vous y êtes invité
-1. Appuyez deux fois sur (B) pour revenir au menu principal
-1. Appuyez sur (Home) pour faire apparaître le menu d’actions (action menu)
-1. Sélectionnez "Scripts"
-1. Sélectionnez "GM9Megascript"
-1. Sélectionnez "Scripts from Plailect's Guide"
-1. Sélectionnez "CTRTransfer Ticket Copy"
-1. Lorsque vous êtes invité, appuyez sur (A)
-1. Appuyez sur (A) pour continuer
-1. Appuyez sur (B) pour revenir au menu principal
-1. Sélectionnez "Exit"
-1. Appuyez (A) pour reverrouiller autorisations en écriture si vous êtes invité
-1. Appuyez sur (Start) pour redémarrer votre système
-1. Mettez à jour votre console en vous rendant dans les Paramètres de la console, puis "Autres paramètres", puis tout à droite sur l'option "Mise à jour du Système"
-  + Mettre à jour tout en ayant B9S + Luma (ce que vous avez) est sans danger
-  + Si vous obtenez une erreur, réglez vos paramètres DNS sur "Automatique"
+{% include_relative include/ctrtransfer-main.txt %}
 
 #### Section IV - Lancement de FBI
 
-1. Lancez l'application Mode Téléchargement (cette [icône]({{ "/images/download-play-icon.png" | absolute_url }}))
-1. Appuyez simultanément sur (L) + (Bas) + (Select) pour ouvrir le menu Rosalina
-1. Sélectionnez "Miscellaneous options"
-1. Sélectionnez "Switch the hb. title to the current app."
-1. Appuyez sur (B) pour continuer
-1. Appuyez sur (B) pour revenir au menu principal de Rosalina
-1. Appuyez sur (B) pour quitter le menu Rosalina
-1. Appuyez sur (Home), puis fermez Mode téléchargement
-1. Lancez l’application Mode téléchargement
-1. Votre console devrait maintenant charger le Homebrew Launcher
+{% include_relative include/launch-hbl-dlp.txt %}
 
 #### Section V - Réinstallation des Tickets
 
-Si le script n'a trouvé aucun ticket utilisateur et vous a demandé d'ignorer cette section, vous pouvez ignorer cette section.
-{: .notice--info}
-
-1. Lancez FBI que vous trouverez dans la liste des homebrews
-1. Navigate to `SD` -> `gm9` -> `out` -> `ctrtransfer_tickets`
-1. Effectuez la manipulation suivante pour le dossier `eshop`, ou le dossier `unknown`, ou bien les deux si vous avez les deux
-  + Accédez au dossier
-  + Sélectionnez "\<current directory>"
-  + Sélectionnez "Install and delete all tickets"
-  + Attendez. Votre console aura l'air d'avoir freeze, laissez-lui du temps.
-  + Appuyez sur (A) pour confirmer
-1. Appuyez sur (Home) pour quitter FBI
+{% include_relative include/ctrtransfer-ticket-copy.txt %}
 
 #### Section VI - Paramètres de région
 
@@ -154,10 +82,6 @@ Si le script n'a trouvé aucun ticket utilisateur et vous a demandé d'ignorer c
 
 #### Section VII - Suppression de l'image de CTRTransfer
 
-1. Appuyez sur le bouton (START) et maintenez le enfoncé tout en allumant votre console. Ceci lancera GodMode9
-1. Naviguez vers `[0:] SDCARD` -> `gm9`
-1. Pressez (X) sur le `.bin` de l'image CTRTransfer pour le supprimer
-1. Appuyez sur (A) pour confirmer
-1. Appuyez sur (Start) pour redémarrer votre système
+{% include_relative include/ctrtransfer-cleanup.txt %}
 
 ___
