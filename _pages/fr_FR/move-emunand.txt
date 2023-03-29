@@ -34,8 +34,8 @@ Vous DEVEZ avoir déjà installé Luma3DS et boot9strap pour utiliser ceci.
 SI vous n'avez pas de DSiWares ou de sauvegardes (de DSiwares) auxquels vous tenez, vous pouvez ignorer cette section.
 {: .notice--info}
 
-1. Ouvrez Godmode9 en maintenant (Start) au démarrage
-1. Si vous êtes invité à créer une sauvegarde des fichiers essentiels, appuyez sur (A) pour le faire, puis appuyez sur (A) pour continuer une fois qu'elle est terminée
+1. Appuyez sur le bouton (START) et maintenez le enfoncé tout en allumant votre console. Ceci lancera GodMode9
+1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it is completed
 1. Si vous êtes invité à régler la date et l'heure du RTC, appuyez sur (A) pour le faire, puis réglez la date et l'heure, puis appuyez sur (A) pour continuer
   Notez que, si vous avez dû régler la date et l'heure du RTC, vous devrez également régler l'heure dans les Paramètres du système après ce guide
 1. Naviguez vers `[2:] SYSNAND TWLN` -> `title`
@@ -71,7 +71,7 @@ Pour identifier le Title ID d'un fichier `<TitleID>.gbavc.sav`, vous pouvez obte
 
 #### Section IV - Copier votre EmuNAND sur votre SysNAND
 
-1. Ouvrez Godmode9 en maintenant (Start) au démarrage
+1. Appuyez sur le bouton (START) et maintenez le enfoncé tout en allumant votre console. Ceci lancera GodMode9
 1. Naviguez vers `[E:] EMUNAND VIRTUAL`
 1. Appuyez sur (A) sur `nand.bin` pour le sélectionner, puis choisissez "NAND image options...", puis "Restore SysNAND (safe)"
 1. Appuyez sur (A) pour débloquer l'écriture sur votre SysNAND, puis entrez la combinaison de touches demandée
@@ -125,47 +125,22 @@ Pour identifier le Title ID d'un fichier `<TitleID>.gbavc.sav`, vous pouvez obte
   + Appuyez sur (Start) pour redémarrer votre système
   + Lancez le jeu VC GBA
   + Quittez le jeu GBA VC
-1. Ouvrez Godmode9 en maintenant (Start) au démarrage
 
 #### Section VII - Sauvegarder votre SysNAND
 
-1. Appuyez sur (Home) pour faire apparaître le menu d’actions (action menu)
-1. Sélectionnez "Scripts"
-1. Sélectionnez "GM9Megascript"
-1. Sélectionnez "Backup Options"
-1. Sélectionnez "SysNAND Backup"
-1. Appuyez sur (A) pour confirmer
-  + Ce processus pendra du temps
-  + Si une erreur apparaît, vérifiez que vous avez au moins 1,3 Go d'espace libre sur votre carte SD
-1. Appuyez sur (A) pour continuer
-1. Appuyez sur (B) pour revenir au menu principal
-1. Sélectionnez "Exit"
-1. Appuyez (A) pour reverrouiller autorisations en écriture si vous êtes invité
-1. Maintenez (R) et appuyez sur (B) en même temps pour éjecter votre carte SD
-1. Insérez votre carte SD dans votre ordinateur
-1. Copy `<date>_<serialnumber>_sysnand_##.bin` and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
-  + Faites des sauvegardes dans plusieurs endroits (tels que des stockages de fichiers en ligne par exemple)
-  Ces sauvegardes vous sauveront d'un brick et/ou vous aideront à récupérer des fichiers de l'image de la NAND si quelque chose se passe mal plus tard
-1. Delete `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
+1. Appuyez sur le bouton (START) et maintenez le enfoncé tout en allumant votre console. Ceci lancera GodMode9
+{% include_relative include/nand-backup.txt -%}
 1. **Faites une copie de tous les fichiers présents sur votre carte SD dans un dossier sur votre ordinateur ; les étapes suivantes effaceront tous les fichiers de votre carte SD**
 
 #### Section VIII - Formater la Carte SD
 
-1. Retirez la carte SD de votre ordinateur et réinsérez-là dans votre 3DS
-1. Appuyez sur (Home) pour faire apparaître le menu d’actions (action menu)
-1. Sélectionnez "More..."
-1. Sélectionnez "SD format menu"
-1. Appuyez sur (A) pour confirmer
-1. Sélectionnez "No EmuNAND"
-1. Sélectionnez "Auto"
-1. Appuyez sur (A) pour accepter l’étiquette `GM9SD`
-  + En option, vous pouvez saisir un nom personnalisé pour la carte SD
-1. Lorsque cela vous est demandé, entrez la combinaison de touches demandée pour confirmer
+1. Appuyez sur le bouton (START) et maintenez le enfoncé tout en allumant votre console. Ceci lancera GodMode9
+{% include_relative include/format-sd-gm9.txt -%}
 1. Maintenez (R) et appuyez sur (B) en même temps pour éjecter votre carte SD
 1. Insérez votre carte SD dans votre ordinateur
 1. Copier tous vos fichiers sur votre carte SD
   + Assurez-vous de remplacer le fichier `boot.firm` sur votre carte SD avec le 'boot.firm' de votre sauvegarde
-1. Réinsérez votre carte SD dans votre 3DS
+1. Retirez la carte SD de votre ordinateur et réinsérez-là dans votre 3DS
 1. Appuyez sur (A) pour remonter votre carte SD
 1. Appuyez sur (Start) pour redémarrer
 
