@@ -41,15 +41,11 @@ This exploit will not work on the New 3DS, New 3DS XL, or New 2DS XL. Please ens
 1. Reinsert your SD card into your device
 1. Power on your device
 
-#### Section II - safecerthax DNS
-1. Launch the System Settings application
-1. Navigate to `Internet Settings` -> `Connection Settings`
-1. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `DNS`
-1. Set "Auto-Obtain DNS" to "No", then click `Detailed Setup`
-1. Set both the Primary DNS and Secondary DNS to `054.038.133.070`
-1. Click OK, then click Save
-1. When prompted, click "Test" to perform the connection test
-	+ The test should succeed
+#### Section II - safecerthax Proxy
+
+In this section, you will change your Internet connection settings to use a proxy network designed to exploit the System Update feature of your device.
+
+{% include_relative include/addproxy.txt %}
 1. Power off your device
 
 #### Section III - safecerthax
@@ -73,16 +69,10 @@ In this section, you will enter Safe Mode (a feature available on all 3DS family
 {%- include_relative include/configure-luma3ds.txt %}
 
 {% include_relative include/luma3ds-installed-note.txt %}
+  
+#### Section V - Restoring default proxy
 
-#### Section V - Restoring default DNS
-1. Launch the System Settings application
-1. Navigate to `Internet Settings` -> `Connection Settings`
-1. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `DNS`
-1. Set "Auto-Obtain DNS" to "Yes"
-1. Click OK, then click Save
-1. When prompted, click "Test" to perform the connection test
-	+ The test should succeed
-1. Power off your device
+{% include_relative include/rmproxy.txt %}
 
 ___
 
