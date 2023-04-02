@@ -6,11 +6,15 @@ title: "區碼變更"
 
 ### 必讀事項
 
-This is an add-on section for region changing your CFW SysNAND. 這是透過安裝所選區域的 11.15.0 CTRTransfer 鏡像檔達成的。 After installing the image, you can update your device normally to the latest firmware (11.16.0).
+This is an add-on section for region changing your device. 這是透過安裝所選區域的 11.15.0 CTRTransfer 鏡像檔達成的。 After installing the image, you can update your device normally to the latest firmware (11.16.0).
 
-**請注意，區碼變更通常是不需要的，因為 Luma3DS 本身就支援跨區遊玩及程式[語碼模擬](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features)的功能。** 另外，您也可透過[TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu/releases)來運行非支援語系的 NDS 遊戲。
+**請注意，區碼變更通常是不需要的，因為 Luma3DS 本身就支援跨區遊玩及程式[語碼模擬](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features)的功能。** 另外，您也可透過[TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu/releases)來運行非支援語系的 NDS 遊戲。 You should only perform a region change if you wish to have your system UI is in a language that is not available on your console's current region.
 
-請注意，如果您在 SD 卡中的 `/luma/payloads/` 資料夾中放有除了 `GodMode9.firm` 的 payload 檔案，在開機時按住『Start』鍵將會顯示一個『加載選單』，從那裏您得透過方向鍵及按鈕『A』選擇『GodMode9』。
+This page assumes that you have already installed Luma3DS and boot9strap. If you followed this website to the end (Finalizing Setup), you have Luma3DS and boot9strap.
+{: .notice--info}
+
+As a part of this process, your system configuration will be reset to its defaults. This includes things such as your username, country, and language. Installed games and their save data will not be affected.
+{: .notice--warning}
 
 {% capture notice-6 %}
 If you change the region of your device:
@@ -18,20 +22,16 @@ If you change the region of your device:
 + You will not be able to use your NNID (if you have one). NNIDs are locked to the region that they were created in.
 + You may not be able to access the eShop, even if you [delete your eShop account](https://en-americas-support.nintendo.com/app/answers/detail/a_id/74/~/how-to-delete-a-nintendo-eshop-account) beforehand. This is because certain titles tend to remain linked to the 3DS, even after account deletion (especially on New 3DS).
 	+ While purchases can no longer be made on eShop, game updates can still be downloaded. Updates are usually required for online play.
+	+ This logic extends to system transfers, meaning you would not be able to perform a system transfer from a USA 3DS to a region-changed JPN-to-USA 3DS. 
+	+ That being said, system transfer and game updates are region locked anyway (e.g. Japanese eShop only has Japanese game updates).
 + **You will not be able to uninstall custom firmware without bricking the device!** If you intend to uninstall custom firmware in the future, you **MUST** restore your NAND backup that was created before the region change.
 {% endcapture %}
 
 <div class="notice--danger">{{ notice-6 | markdownify }}</div>
 
-您必須先安裝 Luma3DS 和 boot9strap 才能繼續。
-{: .notice--danger}
-
-請注意，在舊 3DS 及 舊 2DS 主機上進行區碼變更，可能會導致需使用擴充記憶體模式的遊戲無法正常運作 (如魔物獵人、超級瑪利歐、精靈寶可夢月亮/太陽)。 若遇到此情形時，您必須重新格式化您的主機以修正此問題 (透過 TinyFormat 或系統設定)。
-{: .notice--warning}
-
 ### 必備項目
 
-To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download).
+To download the CTRTransfer images on this page, you will need a torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 {: .notice--warning}
 
 * 最新版的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (選擇 GodMode9 `.zip` 檔案)
@@ -72,15 +72,11 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 
 {% include_relative include/ctrtransfer-ticket-copy.txt %}
 
-#### 第六節 — 區域設定
+#### Section VI - Deleting system save data
 
-1. 進入系統設定 (System Settings)
-1. 進入『其他設定(Other Settings)』、『個人檔案(Profile)』中的『區域設定(Region Settings)』
-1. 選擇您想改成的國家
-1. 若提示時，州的部分不必設定
-
-#### 第七節 — 移除 CTRTransfer 鏡像檔
-
-{% include_relative include/ctrtransfer-cleanup.txt %}
+{% include_relative include/ctrnand-datayeet.txt %}
 
 ___
+
+Your 3DS has successfully been region changed!
+{: .notice--success}
