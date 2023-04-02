@@ -6,11 +6,15 @@ title: "Régióváltás"
 
 ### Fontos tudnivalók
 
-Ez egy kiegészítő rész, amelyben régióváltást végzünk a CFW SysNAND-on. Ezt úgy hajtjuk végre, hogy telepítünk egy olyan 11.15.0-s CTRTransfer képfájlt, ami az általad kívánt régiójú. A képfájl telepítését követően frissítheted az eszközödet a szokásos módon a legutolsó firmware-re (11.16.0).
+This is an add-on section for region changing your device. Ezt úgy hajtjuk végre, hogy telepítünk egy olyan 11.15.0-s CTRTransfer képfájlt, ami az általad kívánt régiójú. A képfájl telepítését követően frissítheted az eszközödet a szokásos módon a legutolsó firmware-re (11.16.0).
 
-Fontos, hogy tudd, hogy a régióváltás majdnem teljesen felesleges, mivel a Luma3DS támogatja a régiódon kívüli játékokat, illetve a játékonkénti [lokalizáció emulációt](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features) is. Ezen felül, NDS játékok futtatása más, régión kívüli nyelveken is támogatott [TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu/releases) segítségével.
+Fontos, hogy tudd, hogy a régióváltás majdnem teljesen felesleges, mivel a Luma3DS támogatja a régiódon kívüli játékokat, illetve a játékonkénti [lokalizáció emulációt](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features) is. Ezen felül, NDS játékok futtatása más, régión kívüli nyelveken is támogatott [TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu/releases) segítségével. You should only perform a region change if you wish to have your system UI is in a language that is not available on your console's current region.
 
-Vedd figyelembe, hogy amennyiben van más payload fájl a `GodMode9.firm` fájlon kívül a `/luma/payloads/`mappában, indításkor a (Start) gombot lenyomva tartva a "chainloader menu" menü fog megjelenni. Itt a D-Pad és az (A) gomb segítségével válaszd a "GodMode9" opciót, hogy az alábbi utasításokat követhesd.
+This page assumes that you have already installed Luma3DS and boot9strap. If you followed this website to the end (Finalizing Setup), you have Luma3DS and boot9strap.
+{: .notice--info}
+
+As a part of this process, your system configuration will be reset to its defaults. This includes things such as your username, country, and language. Installed games and their save data will not be affected.
+{: .notice--warning}
 
 {% capture notice-6 %}
 Ha módosítod a régióját az eszközödnek:
@@ -18,20 +22,16 @@ Ha módosítod a régióját az eszközödnek:
 + Nem fogod tudni használni az NNID azonosítód (ha van ilyened). Az NNID-k ahhoz a régióhoz kötöttek, ahol létre lettek hozva.
 + Elképzelhető, hogy nem fogod elérni az eShop-ot, még akkor sem ha [törlöd az eShop fiókod](https://en-americas-support.nintendo.com/app/answers/detail/a_id/74/~/how-to-delete-a-nintendo-eshop-account) előtte. Ez azért van, mert néhány cím linkelt marad a 3DS-hez, még akkor is ha a fiók törlésre kerül (különösen New 3DS-en).
 	+ Habár az eShop-ban már nem lehet vásárolni, a játék frissítések továbbra is letölthetők. A frissítések többnyire szükségesek az online játékhoz.
+	+ This logic extends to system transfers, meaning you would not be able to perform a system transfer from a USA 3DS to a region-changed JPN-to-USA 3DS. 
+	+ That being said, system transfer and game updates are region locked anyway (e.g. Japanese eShop only has Japanese game updates).
 + **Nem fogod tudni eltávolítani az egyedi firmware-t az eszköz brickelése nélkül!** Ha szeretnéd eltávolítanp az egyedi firmware-t a jövőben, vissza **KELL** állítanod a NAND mentésed, amit a régió módosítás előtt készítettél.
 {% endcapture %}
 
 <div class="notice--danger">{{ notice-6 | markdownify }}</div>
 
-Az alábbiak használatához már telepítened kellett a következőket: Luma3DS és boot9strap.
-{: .notice--danger}
-
-Egy régió váltás végrehajtása tönkre teheti a bővített memória módú játékokat (Monster Hunter, Super Smash Bros, Pokemon Sun/Moon) régi 3DS/2DS eszközökön. Ha ez előfordulna, formáznod kell az eszközödet (a TinyFormat vagy a System Settings használatával) a javításhoz.
-{: .notice--warning}
-
 ### Amire szükséged lesz
 
-Ahhoz, hogy használhasd a [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) linkeket ezen az oldalon, szükséged lesz egy torrent kliensre, mint például a [qBittorrent](https://www.qbittorrent.org/download.php) vagy a [Deluge](http://dev.deluge-torrent.org/wiki/Download).
+To download the CTRTransfer images on this page, you will need a torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 {: .notice--warning}
 
 * A [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) legújabb kiadása (a GodMode9 `.zip` fájl)
@@ -72,15 +72,11 @@ Ahhoz, hogy használhasd a [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme
 
 {% include_relative include/ctrtransfer-ticket-copy.txt %}
 
-#### VI. rész - Régió beállítások
+#### Section VI - Deleting system save data
 
-1. Indítsd el a System Settings-et
-1. Válaszd az "Other Settings", majd a "Profile", végül a "Region Settings" opciót
-1. Válassz egy olyan országot, ami abba a régióba tartozik, amibe váltottál
-1. Nem szükséges államot beállítanod, ha kérdezné
-
-#### VII. rész - CTRTransfer képfájl eltávolítása
-
-{% include_relative include/ctrtransfer-cleanup.txt %}
+{% include_relative include/ctrnand-datayeet.txt %}
 
 ___
+
+Your 3DS has successfully been region changed!
+{: .notice--success}
