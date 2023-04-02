@@ -6,11 +6,15 @@ title: "지역 변경"
 
 ### 중요
 
-이 페이지는 CFW SysNAND의 지역을 변경하는 방법을 안내하는 부가 섹션입니다. 이 작업은 바꾸고자 하는 지역의 11.15.0 CTRTransfer 이미지를 설치합니다. 이미지 설치 후, 장치를 최신 펌웨어 버전(11.16.0)으로 업데이트할 수 있습니다.
+This is an add-on section for region changing your device. 이 작업은 바꾸고자 하는 지역의 11.15.0 CTRTransfer 이미지를 설치합니다. 이미지 설치 후, 장치를 최신 펌웨어 버전(11.16.0)으로 업데이트할 수 있습니다.
 
-Luma3DS가 지역 외 게임들과 [타이틀별 지역 에뮬레이션](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features)을 지원하기 때문에, 지역 변경은 거의 불필요하다는 점을 참고해 주시기 바랍니다. 또한, 다른 지역의 NDS게임을 실행하는 것 또한 [TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu/releases)에 의해 지원됩니다.
+Luma3DS가 지역 외 게임들과 [타이틀별 지역 에뮬레이션](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features)을 지원하기 때문에, 지역 변경은 거의 불필요하다는 점을 참고해 주시기 바랍니다. 또한, 다른 지역의 NDS게임을 실행하는 것 또한 [TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu/releases)에 의해 지원됩니다. You should only perform a region change if you wish to have your system UI is in a language that is not available on your console's current region.
 
-만약 여러분의 SD 카드의 `/luma/payloads/` 폴더에 `GodMode9.firm` 외의 페이로드 파일이 있다면, (Start)를 누르면서 부팅할 시에 화면에 표시되는 "chainloader menu" 에서 십자 패드와 (A) 버튼으로 조작하여 "GodMode9"을 선택하여야 합니다.
+This page assumes that you have already installed Luma3DS and boot9strap. If you followed this website to the end (Finalizing Setup), you have Luma3DS and boot9strap.
+{: .notice--info}
+
+As a part of this process, your system configuration will be reset to its defaults. This includes things such as your username, country, and language. Installed games and their save data will not be affected.
+{: .notice--warning}
 
 {% capture notice-6 %}
 기기의 지역을 바꾸게 된다면:
@@ -18,21 +22,16 @@ Luma3DS가 지역 외 게임들과 [타이틀별 지역 에뮬레이션](https:/
 + (만약 있다면) Nintendo 네트워크 ID를 이용할 수 없게 됩니다. NNID들은 작성된 지역에서만 사용할 수 있습니다.
 + 이전에 [eShop 계정을 지우더라도 (영어)](https://en-americas-support.nintendo.com/app/answers/detail/a_id/74/~/how-to-delete-a-nintendo-eshop-account), eShop에 접속하지 못할 수 있습니다. 몇몇 타이틀들은, 계정 삭제 후도 3DS 링크를 유지하려는 경향이 있어서입니다 (특히 New 3DS에서).
 	+ While purchases can no longer be made on eShop, game updates can still be downloaded. 업데이트들은 보통 온라인 플레이를 할 시 필요합니다.
+	+ This logic extends to system transfers, meaning you would not be able to perform a system transfer from a USA 3DS to a region-changed JPN-to-USA 3DS. 
+	+ That being said, system transfer and game updates are region locked anyway (e.g. Japanese eShop only has Japanese game updates).
 + **기기를 벽돌로 하는 것을 감수하지 않고선 커스텀 펌웨어를 지울 수 없습니다!** 만약 미래에 커스텀 펌웨어를 지우려고 생각한다면, **절대로** 지역 변경을 하기 전의 NAND 백업을 복원하고 나서 해야 합니다.
 {% endcapture %}
 
 <div class="notice--danger">{{ notice-6 | markdownify }}</div>
 
-이것은 Luma3DS 및 boot9strap가 이미 설치되어 있어야 가능합니다.
-{: .notice--danger}
-
-구형 3DS/2DS 기기에서는 지역 변경 후, 추가 메모리 모드 개임을 (예: 대난투 스매시브라더스, 포켓몬스터 썬/문, 몬스터 헌터)를 사용할 수 없게 될 수 있습니다. 만약 이게 발생한다면, 이 문제를 고치기 위해 (TinyFormat 및 본체 설정을 이용해서) 기기를 포맷하셔야 합니다.
-{: .notice--warning}
-
 ### 준비물
 
-이 페이지의 [마그넷](https://wikipedia.org/wiki/Magnet_URI_scheme)링크를 사용하려면
- [qBittorrent](https://www.qbittorrent.org/download.php) 또는 [Deluge](http://dev.deluge-torrent.org/wiki/Download)와 같은 토렌트 클라이언트가 필요합니다.
+To download the CTRTransfer images on this page, you will need a torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 {: .notice--warning}
 
 * 최신 버전의 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (`.zip` 파일)
@@ -73,15 +72,11 @@ Luma3DS가 지역 외 게임들과 [타이틀별 지역 에뮬레이션](https:/
 
 {% include_relative include/ctrtransfer-ticket-copy.txt %}
 
-#### 섹션 VI - 지역 설정
+#### Section VI - Deleting system save data
 
-1. 본체 설정을 실행해 주세요
-1. "기타 설정", "유저 정보"및 "지역 정보"로 이동해 주세요
-1. 변경한 지역에 속한 국가를 선택해 주세요
-1. 메시지가 뜨더라도 '도'까지 설정할 필요는 없습니다
-
-#### 섹션 VII - CTRTransfer 이미지 제거
-
-{% include_relative include/ctrtransfer-cleanup.txt %}
+{% include_relative include/ctrnand-datayeet.txt %}
 
 ___
+
+Your 3DS has successfully been region changed!
+{: .notice--success}
