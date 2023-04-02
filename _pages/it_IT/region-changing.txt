@@ -6,11 +6,15 @@ title: "Cambiare regione"
 
 ### Lettura necessaria
 
-In questa sezione aggiuntiva verrà spiegato come cambiare regionalità su SysNAND con CFW. Per questo scopo, verrà eseguito un CTRTransfer alla versione 11.15.0 della regione alla quale si desidera passare. Dopo aver installato l'immagine, potrai aggiornare normalmente la console al firmware più recente (11.16.0).
+This is an add-on section for region changing your device. Per questo scopo, verrà eseguito un CTRTransfer alla versione 11.15.0 della regione alla quale si desidera passare. Dopo aver installato l'immagine, potrai aggiornare normalmente la console al firmware più recente (11.16.0).
 
-Tuttavia, il cambio della regione è quasi completamente inutile in quanto Luma3DS supporta l'avvio di giochi di altre regioni e l'[Emulazione Regionale](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features) su titoli individuali. Inoltre, è possibile avviare giochi NDS con lingue alternative [TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu/releases).
+Tuttavia, il cambio della regione è quasi completamente inutile in quanto Luma3DS supporta l'avvio di giochi di altre regioni e l'[Emulazione Regionale](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features) su titoli individuali. Inoltre, è possibile avviare giochi NDS con lingue alternative [TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu/releases). You should only perform a region change if you wish to have your system UI is in a language that is not available on your console's current region.
 
-Tieni presente che se hai altri file payload oltre a `GodMode9.firm` nella cartella `/luma/payloads/` della tua scheda SD, per seguire le istruzioni riportate dovrai avviare la console tenendo (Start); apparirà un "menu chainloader" dove dovrai selezionare "GodMode9" tramite il D-Pad e il pulsante (A).
+This page assumes that you have already installed Luma3DS and boot9strap. If you followed this website to the end (Finalizing Setup), you have Luma3DS and boot9strap.
+{: .notice--info}
+
+As a part of this process, your system configuration will be reset to its defaults. This includes things such as your username, country, and language. Installed games and their save data will not be affected.
+{: .notice--warning}
 
 {% capture notice-6 %}
 Se cambi la regione della tua console:
@@ -18,20 +22,16 @@ Se cambi la regione della tua console:
 + Non potrai utilizzare il tuo NNID (se ne hai uno). I NNID sono assegnati alla regione in cui sono stati creati.
 + Potresti non essere in grado di accedere all'eShop, anche se [elimini il tuo account eShop](https://en-americas-support.nintendo.com/app/answers/detail/a_id/74/~/how-to-delete-a-nintendo-eshop-account). Questo accade perché alcuni titoli rimangono collegati al 3DS, anche dopo la cancellazione dell'account (specialmente su New 3DS).
 	+ Anche se non è più possibile fare acquisti sull'eShop, è ancora possibile scaricare aggiornamenti dei giochi. Gli aggiornamenti sono di solito necessari per il gioco online.
+	+ This logic extends to system transfers, meaning you would not be able to perform a system transfer from a USA 3DS to a region-changed JPN-to-USA 3DS. 
+	+ That being said, system transfer and game updates are region locked anyway (e.g. Japanese eShop only has Japanese game updates).
 + **Non sarai in grado di disinstallare un custom firmware senza brickare la console!** Se hai intenzione di disinstallare il custom firmware in futuro, **DEVI** ripristinare il backup della NAND creato prima del cambiamento di regione.
 {% endcapture %}
 
 <div class="notice--danger">{{ notice-6 | markdownify }}</div>
 
-DEVI aver già installato Luma3DS e boot9strap per poter proseguire.
-{: .notice--danger}
-
-Un cambio di regione potrebbe rendere inutilizzabili i giochi in modalità memoria estesa (Monster Hunter, Super Smash Bros, Pokemon Sole/Luna) su console Old 3DS/2DS. Se dovesse accadere, sarà necessario formattare la console (tramite TinyFormat o Impostazioni della console) per risolvere il problema.
-{: .notice--warning}
-
 ### Cosa serve
 
-Per usare i link [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) di questa guida avrai bisogno di un client torrent come [qBittorrent](https://www.qbittorrent.org/download.php) o [Deluge](http://dev.deluge-torrent.org/wiki/Download).
+To download the CTRTransfer images on this page, you will need a torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 {: .notice--warning}
 
 * L'ultima versione di [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (il file `.zip` di GodMode9)
@@ -72,15 +72,11 @@ Per usare i link [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) di quest
 
 {% include_relative include/ctrtransfer-ticket-copy.txt %}
 
-#### Section VI - Area di residenza
+#### Section VI - Deleting system save data
 
-1. Avvia le Impostazioni della console
-1. Vai su "Impostazioni generali", poi "Profilo", quindi "Area di residenza"
-1. Seleziona un paese relativo alla regione verso cui hai appena effettuato il cambio
-1. Se richiesto, non è necessario selezionare uno stato
-
-#### Sezione VII - Rimozione del file immagine del CTRTransfer
-
-{% include_relative include/ctrtransfer-cleanup.txt %}
+{% include_relative include/ctrnand-datayeet.txt %}
 
 ___
+
+Your 3DS has successfully been region changed!
+{: .notice--success}
