@@ -25,6 +25,10 @@ Als je een ongebruikelijk menu ziet, STOP - je hebt al custom firmware! Ga verde
 
 To find the correct method for your device, please enter the system version you found in Section II.
 
+{% capture noneSelected %}
+System model is required.
+{% endcapture %}
+
 {% capture invalidVersion %}
 This doesn't seem to be a valid system version.
 {% endcapture %}
@@ -33,7 +37,7 @@ This doesn't seem to be a valid system version.
 You currently cannot hack your 3DS on this version using the main methods. If you want to hack your console, you have to use ntrboot.
 {% endcapture %}
 
-{% include consoleVersionSelect.html invalidVersion=invalidVersion methodUnavailable=methodUnavailable %}
+{% include consoleVersionSelect.html noneSelected=noneSelected invalidVersion=invalidVersion methodUnavailable=methodUnavailable %}
 
 ---
 #### Alternatieve methoden
