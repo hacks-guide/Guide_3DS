@@ -1,0 +1,87 @@
+---
+title: "Installing boot9strap (Frogtool)"
+---
+
+{% include toc title="Tabela de Conteúdo" %}
+
+{% capture technical_info %}
+<summary><em>Detalhes técnicos (opcional)</em></summary>
+For technical details on the exploits that you will be using on this page, see "DSiWare_Exports CTCert verification" and "FIRM partitions known-plaintext" [here](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+
+{% endcapture %}
+<details>{{ technical_info | markdownify }}</details>
+{: .notice--info}
+
+
+To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) link for `frogcert.bin` on this page, you will need a torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download). \
+If you are unable to install one, follow [Bannerbomb3](bannerbomb3) instead. 
+{: .notice--warning}
+
+### O que é necessário
+
+* Your `movable.sed` file from completing Seedminer or nimhax on the root of your SD card
+* <i class="fa fa-magnet" aria-hidden="true" title="Este é um link magnético. Use a torrent client to download the file."></i> [frogcert.bin](magnet:?xt=urn:btih:d12278ea50bb3574f1fbd327f3d0e2292c70941f&dn=frogcert.bin&tr=https%3a%2f%2ftracker.fastdownload.xyz%3a443%2fannounce&tr=https%3a%2f%2fopentracker.xyz%3a443%2fannounce&tr=http%3a%2f%2fopen.trackerlist.xyz%3a80%2fannounce&tr=http%3a%2f%2ft.nyaatracker.com%3a80%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2fopen.demonii.si%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.port443.xyz%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.vanitycore.co%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&tr=udp%3a%2f%2fthetracker.org%3a80%2fannounce&tr=http%3a%2f%2ftorrent.nwps.ws%3a80%2fannounce&tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.iamhansen.xyz%3a2000%2fannounce&tr=udp%3a%2f%2fbt.xxx-tracker.com%3a2710%2fannounce&tr=http%3a%2f%2f0d.kebhana.mx%3a443%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2ftracker4.itzmx.com%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.justseed.it%3a1337%2fannounce&tr=http%3a%2f%2ftherightsize.net%3a1337%2fannounce&tr=udp%3a%2f%2fretracker.hotplug.ru%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&tr=udp%3a%2f%2f9.rarbg.com%3a2800%2fannounce&tr=https%3a%2f%2f2.track.ga%3a443%2fannounce&tr=udp%3a%2f%2fbigfoot1942.sektori.org%3a6969%2fannounce) (magnet link) 
+* The latest release of [Frogtool](https://github.com/zoogie/Frogtool/releases/latest)
+* The latest release of [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
+
+#### Seção I - Checando por CFW
+
+{% include_relative include/cfw-check-fredtool.txt %}
+
+### Seção II - Preparação
+
+1. Desligue seu dispositivo
+1. Insira o cartão SD no seu computador
+1. Copie `boot.firm` e `boot.3dsx` do `.zip` do Luma3DS para a raiz do seu cartão SD
+1. Copy `boot.nds` (b9sTool) from the b9sTool release `.zip` to the root of your SD card
+1. Copy `Frogtool.3dsx` to the `/3ds/` folder on your SD card
+1. Copy `frogcert.bin` to the root of your SD card
+1. Reinsira seu cartão SD no seu dispositivo
+1. Ligue o seu dispositivo
+
+#### Section III - Patching DS Download Play
+
+1. Open the Homebrew Launcher through your method of choice (likely the Internet Browser)
+1. Launch Frogtool from the list of homebrew
+1. Select the "INJECT patched DS Download Play" option
+1. Frogtool will automatically run and inject the JPN version of Flipnote Studio into your DS Download Play
+1. Once this operation has finished, read the screens and check if the process was successful
+1. Tap the touch screen, then select "BOOT patched DS Download Play"
+1. Se o exploit foi bem sucedido, seu dispositivo irá abrir a versão JPN do Flipnote Studio
+    + If you get stuck on a black screen, follow [this](https://wiki.hacks.guide/wiki/3DS:TWLFix#Homebrew_Launcher-0) page, then try again
+
+#### Section IV - Flipnote Exploit
+
+{% include_relative include/install-boot9strap-b9stool.txt method="dsinternet" %}
+
+#### Seção VI - Configuração do Luma3DS
+
+{% include_relative include/configure-luma3ds.txt onboot="true" %}
+
+{% include_relative include/luma3ds-installed-note.txt %}
+
+#### Seção VII - Restaurando as Configurações de Conexão DS
+
+1. Inicie o aplicativo Download Play
+1. Aguarde até que você veja os dois botões
+    + Não pressione nenhum dos botões
+1. Aperte (Gatilho Esquerdo) + (D-pad pra baixo) + (Select) ao mesmo tempo para abrir o menu Rosalina
+1. Selecione "Miscellaneous options"
+1. Selecione "Switch the hb. title to the current app."
+1. Aperte (B) para continuar
+1. Aperte (B) para retornar para o menu principal do Rosalina
+1. Aperte (B) para sair do menu do Rosalina
+1. Aperte (Home), depois feche o Download Play
+1. Reinicie o aplicativo Download Play
+1. Seu dispositivo deve abrir o Homebrew Launcher
+1. Launch Frogtool from the list of homebrew
+1. Select the "RESTORE patched DS Download Play" option
+1. Once this operation has finished, read the screens and check if the process was successful
+    + If there are any errors or missing files, correct the problem and try again
+1. If the process was successful, tap the touch screen, then press START to exit
+1. Desligue seu dispositivo
+
+___
+
+### Continue para [Finalizando a instalação](finalizing-setup)
+{: .notice--primary}
