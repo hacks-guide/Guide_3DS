@@ -53,25 +53,14 @@ Ebben a fejezetben fel fogod másolni a fájlokat, amik a browserhax és az univ
 
 Ebben a fejezetben módosítani fogod az Internet kapcsolat beállításokat hogy egy proxy hálózatot használj, ami úgy lett megtervezve, hogy kikerülje a browser verzió ellenőrzést, lehetővé téve a browser műlödését rendszer frissítés nélkül. Ez lehetővé teszi, hogy hozzáférj a browser exploit weboldalhoz a következő fejezetben.
 
-Ha még nenm történt meg, biztosítsd, hogy legyen működő Internet kapcsolata a konzolodnak.
-{: .notice--info}
-
-1. Indítsd el a System Settings alkalmazást
-1. Navigálj az `Internet Settings` -> `Connection Settings` opciókhoz
-1. Kattints a saját hálózati kapcsolatodra és navigálj a `Change Settings` -> `Next Page (jobb nyíl)` -> `Proxy Settings` opcióhoz
-1. Állítsd az "Proxy Settings"-t "Yes"-re majd kattints a `Detailed Setup`-ra
-1. Állítsd be a Proxy Server-t `192.9.234.11`-re, és a Port-ot `8080`-ra
-1. Kattints az OK-ra, majd kattints a Save-re
-1. Amikor kérdezi, kattints a "Test"-re a kapcsolat ellenőrzéséhez
-  + A tesztnek sikeresnek kell lennie
-1. Kattintson az OK gombra a folytatáshoz
+{% include_relative include/addproxy.txt %}
 1. Nyomj a "Back"-re kétszer, majd a "Close"-ra, hogy visszajuszz a HOME Menübe
 
 #### III. rész - A SafeB9SInstaller indítása
 
 Ebben a fejezetben meg fogod látogatni a browser exploit weboldalt, ami az universal-otherapp-ot fogja használni a boot9strap (egyedi firmware) telepítő indításához.
 
-1. A HOME menüben nyomd meg a bal és jobb váll gombokat egyszerre, hogy megnyisd a kamerát
+1. On the HOME Menu, press the Left and Right shoulder buttons at the same time to open the camera
     + Ha nem tudod megnyitni a kamerát, nyisd meg az Internet Browser-t kézzel, és írd be az URL-t e helyett. (`https://zoogie.github.io/web/nbhax/`)
 1. Érintsd meg a QR Code gombot és olvasd le [ezt a QR kódot](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax&qzone=1&margin=0&size=400x400&ecc=L)
   + Ha hibát kapsz, [nézd át ezt a hibaelhárítási útmutatót](troubleshooting#installing-boot9strap-ssloth-browser)
@@ -88,16 +77,7 @@ Ebben a fejezetben meg fogod látogatni a browser exploit weboldalt, ami az univ
 
 #### V. rész - A Proxy beállítás alaphelyzetbe állítása
 
-Ebben a fejezetben vissza fogod állítani az internet beállításokat a normálisra.
-
-1. Indítsd el a System Settings alkalmazást
-1. Navigálj az `Internet Settings` -> `Connection Settings` opciókhoz
-1. Kattints a saját hálózati kapcsolatodra és navigálj a `Change Settings` -> `Next Page (jobb nyíl)` -> `Proxy Settings` opcióhoz
-1. Állítsd a "Proxy Settings"-t "No"-ra
-1. Kattints az OK-ra, majd kattints a Save-re
-1. Amikor kérdezi, kattints a "Test"-re a kapcsolat ellenőrzéséhez
-	+ A tesztnek sikeresnek kell lennie
-1. Kapcsold ki a készüléked
+{% include_relative include/rmproxy.txt %}
 
 ___
 
