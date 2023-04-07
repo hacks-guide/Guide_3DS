@@ -1,0 +1,84 @@
+---
+title: "Homebrew Launcher (super-skaterhax)"
+---
+
+{% include toc title="Tartalomjegyzék" %}
+
+{% capture technical_info %}
+<summary><em>Technikai részletek (opcionális)</em></summary>
+For technical details on the exploits that you will be using on this page, see [here](https://github.com/zoogie/super-skaterhax).
+
+{% endcapture %}
+<details>{{ technical_info | markdownify }}</details>
+{: .notice--info}
+
+### Kompatibilitási megjegyzések
+
+Super-skaterhax (when used to launch the Homebrew Launcher) is compatible with New models on version 11.16.0 in all regions except TWN/CHN.
+
+The instructions provided only apply to the New 3DS, New 3DS XL, and New 2DS XL. Please ensure that the device you are modding is a New 3DS, New 3DS XL, or New 2DS XL before continuing.
+{: .notice--warning}
+
+### Amire szükséged lesz
+
+* A [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) legújabb kiadása (a Luma3DS `.zip` fájl)
+* The latest release of [super-skaterhax](https://github.com/zoogie/super-skaterhax/releases) (the release `.zip` file)
+
+#### Section I - Updating the System
+
+{% include_relative include/sysupdate.txt cfw="false" %}
+
+#### II. rész - Előkészületek
+
+In this section, you will copy the files needed to trigger both super-skaterhax and the Homebrew Launcher.
+
+1. Kapcsold ki a készüléked
+1. Helyezd az SD kártyád a számítógépbe
+1. Másold át a `boot.firm` és `boot.3dsx` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
+  + Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne
+1. Copy all files inside the folder for your device's region in the super-skaterhax `.zip` to the root of your SD card
+1. Tedd vissza az SD kártyád a készülékedbe
+1. Kapcsold be a készülékedet
+
+#### Section III - super-skaterhax
+
+In this section, you will visit the browser exploit webpage, which will launch the Homebrew Launcher.
+
+If you haven't already, make sure you have a working Internet connection set up on your device.
+{: .notice--info}
+
+1. On the HOME Menu, press the Left and Right shoulder buttons at the same time to open the camera
+  + If you are unable to open the camera, open the Internet Browser and manually type the URL instead (`https://zoogie.github.io/web/super/` for EUR/USA/JPN, `https://zoogie.github.io/web/korea` for KOR)
+1. Tap the QR code button and scan one of the following QR codes for your device's region [here](https://user-images.githubusercontent.com/28328903/226086338-585bfdac-0aac-44c0-b413-89206d2815d8.png)
+  + Ha hibát kapsz, [nézd át ezt a hibaelhárítási útmutatót](troubleshooting#installing-boot9strap-ssloth-browser)
+  + Ha tanúsítvány figyelmeztetést kapsz, nyomd meg az (A) gombot a kapcsolat engedélyezéséhez
+1. Press the (Select) button to open the bookmark tab
+  + If your (Select) button does not respond, tap the star icon on the bottom-left corner of the screen
+1. Tap "Bookmark this page"
+1. Press (B) once to return to the browser
+1. Press (Start) to open the context menu
+  + If your (Start) button does not respond, tap the 3-line menu on the bottom-right corner of the screen
+1. Tap on "Settings"
+1. Tap on "Delete Cookies"
+1. Nyomd meg az (A) gombot a folytatáshoz
+1. Press (Home) to return to the HOME Menu, then immediately press (A) to launch the browser again
+1. Select the "GO GO!" button on the top screen
+  + If any prompts appear, approve all of them
+1. If the exploit was successful, your device will have booted into the Homebrew Launcher
+1. Kapcsold ki a készüléked
+
+#### Section IV - Hardware Button Check 
+
+{% include_relative include/safemodecheck.txt %}
+
+___
+
+### Next step: Choose an exploit
+
+Ha láttad a rendszer frissítés képernyőt az előző részben, a Safe Mode működik az eszközödön.
+
+If your device booted into Safe Mode, continue to [Installing boot9strap (HBL-USM)](installing-boot9strap-(hbl-usm))
+{: .notice--primary}
+
+If your device did NOT boot into Safe Mode, continue to [Dumping Movable (nimhax)](dumping-movable-(nimhax))
+{: .notice--info}
