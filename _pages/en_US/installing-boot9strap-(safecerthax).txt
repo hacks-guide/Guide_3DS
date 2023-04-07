@@ -16,9 +16,6 @@ For technical details on the exploit that you will be using on this page, see [h
 
 safecerthax is compatible with all Old 3DS and Old 2DS devices in all regions on system versions 1.0.0 through 11.14.0. 
 
-If your (Right/Left Shoulder), (D-Pad Up) or (A) buttons do not work, or your ISP is rerouting DNS changes, you will need to use an alternate method, like [Installing boot9strap (Browser)](installing-boot9strap-(browser)).
-{: .notice--warning}
-
 This exploit will not work on the New 3DS, New 3DS XL, or New 2DS XL. Please ensure that the device you are modding is an Old 3DS, Old 3DS XL, or Old 2DS before continuing.
 {: .notice--info}
 
@@ -30,8 +27,17 @@ This exploit will not work on the New 3DS, New 3DS XL, or New 2DS XL. Please ens
 
 ### Instructions
 
-#### Section I - Prep Work
-1. Power off your device
+#### Section I - Hardware Button Check
+
+{% include_relative include/safemodecheck.txt %}
+
+If you do not boot into Safe Mode, the system update menu after multiple attempts, you cannot follow this method. If this is the case, use [Seedminer](seedminer) instead.
+{: .notice--warning}
+
+#### Section II - Prep Work
+
+In this section, you will copy the files needed to trigger the safecerthax exploit.
+
 1. Insert your SD card into your computer
 1. Copy `boot.firm` and `boot.3dsx` from the Luma3DS `.zip` to the root of your SD card
   + The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
@@ -41,14 +47,14 @@ This exploit will not work on the New 3DS, New 3DS XL, or New 2DS XL. Please ens
 1. Reinsert your SD card into your device
 1. Power on your device
 
-#### Section II - safecerthax Proxy
+#### Section III - safecerthax proxy
 
 In this section, you will change your Internet connection settings to use a proxy network designed to exploit the System Update feature of your device.
 
 {% include_relative include/addproxy.txt %}
 1. Power off your device
 
-#### Section III - safecerthax
+#### Section IV - safecerthax
 
 In this section, you will enter Safe Mode (a feature available on all 3DS family devices) where safecerthax will be triggered, which will launch you into the boot9strap (custom firmware) installer.
 
@@ -63,14 +69,14 @@ In this section, you will enter Safe Mode (a feature available on all 3DS family
 1. If the exploit was successful, you will have booted into SafeB9SInstaller
   + If the device freezes or crashes, force power off the device, then retry this section
 
-#### Section IV - Installing boot9strap
+#### Section V - Installing boot9strap
 
 {% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
 {%- include_relative include/configure-luma3ds.txt %}
 
 {% include_relative include/luma3ds-installed-note.txt %}
-  
-#### Section V - Restoring default proxy
+
+#### Section VI - Restoring default proxy
 
 {% include_relative include/rmproxy.txt %}
 
