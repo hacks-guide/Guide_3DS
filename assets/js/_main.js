@@ -212,10 +212,15 @@ $(document).ready(function() {
     "bannerbomb3": "9",
     "installing-boot9strap-(usm)": "10",
     "installing-boot9strap-(kartdlphax)": "11",
-	  "bannerbomb3-fredtool-(twn)": "12",
+    "bannerbomb3-fredtool-(twn)": "12",
     "installing-boot9strap-(ssloth-browser)": "13",
-	  "key-information": "14",
-    "seedminer-(twn)": "15"
+    "key-information": "14",
+    "seedminer-(twn)": "15",
+    "installing-boot9strap-(frogtool)": "16",
+    "installing-boot9strap-(hbl-usm)": "17",
+    "homebrew-launcher-(super-skaterhax)": "18",
+    "dumping-movable-(nimhax)": "19",
+    "installing-boot9strap-(safecerthax)": "20"
   };
 
   for(var device in devices){
@@ -261,8 +266,13 @@ $(document).ready(function() {
       "11": ["installing-boot9strap-(kartdlphax)", "finalizing-setup"],
       "12": ["seedminer-(twn)", "bannerbomb3-fredtool-(twn)", "finalizing-setup"],
       "13": ["installing-boot9strap-(ssloth-browser)", "finalizing-setup"],
-	    "14": ["multiple-options", "finalizing-setup"],
-      "15": ["seedminer-(twn)", "bannerbomb3-fredtool-(twn)", "finalizing-setup"]
+      "14": ["multiple-options", "finalizing-setup"],
+      "15": ["seedminer-(twn)", "bannerbomb3-fredtool-(twn)", "finalizing-setup"],
+      "16": ["homebrew-launcher-(super-skaterhax)", "dumping-movable-(nimhax)", "installing-boot9strap-(frogtool)", "finalizing-setup"],
+      "17": ["homebrew-launcher-(super-skaterhax)", "installing-boot9strap-(hbl-usm)", "finalizing-setup"],
+      "18": ["homebrew-launcher-(super-skaterhax)", "multiple-options", "finalizing-setup"],
+      "19": ["homebrew-launcher-(super-skaterhax)", "dumping-movable-(nimhax)", "multiple-options", "finalizing-setup"],
+      "20": ["installing-boot9strap-(safecerthax)", "finalizing-setup"]
     }
     // Can add custom routing if necessary but currently both routes are identical
     var device_old =  Object.assign({}, device_common,{
@@ -279,7 +289,7 @@ $(document).ready(function() {
     }
     unhide = unhide.concat(route[device][method]);
     if(typeof unhide !== 'undefined' && unhide.length > 0){
-	  unhide.push("key-information")
+      unhide.push("key-information")
       unhide.push("get-started");
       var ol = $('.sidebar.sticky .nav__list .nav__items ol');
       for (var i = 0; i < unhide.length; i++){
