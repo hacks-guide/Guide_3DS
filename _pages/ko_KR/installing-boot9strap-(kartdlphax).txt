@@ -30,9 +30,6 @@ kartdlphax와 unSAFE_MODE의 더 자세한 설명은 다음 (영어) 페이지�
 - 두 3DS와 지역이 같은, 마리오 카트 7의 물리적/디지털 버전
 - 두 3DS를 위한 SD 카드
 
-만약 **타겟 3DS**의 (L/R 어깨 버튼), (위 십자 패드), 또는 (A) 버튼이 동작되지 않다면, 이 설명서를 따를 수 없습니다. 이 경우, [Nintendo Homebrew Discord 서버](https://discord.gg.MWxPgEp)에 오셔서 도움을 요청하세요.
-{: .notice--warning}
-
 ### 준비물
 
 **소스 3DS** (커스텀 펌웨어가 설치된 3DS)에서:
@@ -47,7 +44,14 @@ kartdlphax와 unSAFE_MODE의 더 자세한 설명은 다음 (영어) 페이지�
 * 최신 버전의 [일반 Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (Luma3DS `.zip` 파일)
 * 최신 버전의 [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest) (RELEASE `.zip` 파일)
 
-#### 섹션 I - 준비 작업 (소스 3DS)
+#### Section I - Hardware Button Check (target 3DS)
+
+{% include_relative include/safemodecheck.txt %}
+
+If you do not boot into Safe Mode, the system update menu after multiple attempts, you cannot follow this method. 이 경우, [Nintendo Homebrew Discord 서버](https://discord.gg.MWxPgEp)에 오셔서 도움을 요청하세요.
+{: .notice--warning}
+
+#### Section II - Prep Work (source 3DS)
 
 이 섹션에서는, 소스 3DS (커스텀 펌웨어가 설치 되어 있는 기기)를 익스플로잇 데이터를 타겟 3DS로 전송할 수 있도록 설정합니다.
 
@@ -61,7 +65,7 @@ kartdlphax와 unSAFE_MODE의 더 자세한 설명은 다음 (영어) 페이지�
   - `plugins` 폴더와 `00040000...` 폴더가 없으면 만들어 주세요
 1. SD 카드를 분리해 **소스 3DS**에 장착해 주세요
 
-#### 섹션 II - 준비 작업 (타겟 3DS)
+#### Section III - Prep Work (target 3DS)
 
 이 섹션에서는, 타겟 3DS (커스텀 펌웨어를 설치 할 기기)에서 unSAFE_MODE 익스플로잇을 실행할 수 있는 파일을 SD 카드로 복사합니다.
 
@@ -75,7 +79,7 @@ kartdlphax와 unSAFE_MODE의 더 자세한 설명은 다음 (영어) 페이지�
 1. unSAFE_MODE `.zip`안에 있는 `slotTool` 폴더를 SD 카드의 `3ds` 폴더에 복사해 주세요
 1. SD 카드를 분리해 **타겟 3DS**에 장착해 주세요
 
-#### 섹션 III - kartdlphax
+#### Section IV - kartdlphax
 
 이 섹션에서는, **소스 3DS**에서 **타겟 3DS**로 Wi-Fi 슬롯을 덮어씌우기 위한 익스플로잇 데이터를 다운로드 플레이를 통해 전송합니다. 이 취약점을 실행함으로서, 기기의 Wi-Fi 연결 설정은 일시적으로 덮어씌워집니다.
 
@@ -111,18 +115,18 @@ kartdlphax와 unSAFE_MODE의 더 자세한 설명은 다음 (영어) 페이지�
 이후 과정을 완료할 때에는, **소스 3DS**가 필요하지 **않습니다**. 이후 과정은 **타겟 3DS**만 이용하여 완료할 수 있습니다.
 {: .notice--info}
 
-#### 섹션 IV - unSAFE_MODE
+#### Section V - unSAFE_MODE
 
-{% include_relative include/exploit-usm.txt method="kartdlphax" %}
+{% include_relative include/exploit-usm.txt %}
 
-#### 섹션 V - boot9strap 설치
+#### Section VI - Installing boot9strap
 
 {% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
 {%- include_relative include/configure-luma3ds.txt %}
 
 {% include_relative include/luma3ds-installed-note.txt %}
 
-#### 섹션 VI - Wi-Fi 프로필 복구
+#### Section VII - Restoring WiFi Configuration Profiles
 
 {% include_relative include/remove-usm-slottool.txt %}
 
