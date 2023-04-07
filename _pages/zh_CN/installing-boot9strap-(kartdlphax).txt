@@ -30,9 +30,6 @@ title: "安装 boot9strap（通过 kartdlphax）"
 -  一份与两台主机同区的马里奥赛车 7 实体版或数字版
 - 两张 SD 卡
 
-如果**目标 3DS** 的 L、R、↑、A 其中一个按键坏了，则你会卡在需要用到这些按键的步骤上。 如需针对此问题的帮助，请加入 [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) 并使用英文求助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497。
-{: .notice--warning}
-
 ### 你需要准备点啥？
 
 在**源 3DS**（已安装自制固件的 3DS）上操作以下步骤：
@@ -47,7 +44,14 @@ title: "安装 boot9strap（通过 kartdlphax）"
 * 最新版本的 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)（下载 Luma3DS `.zip` 文件）
 * 最新版本的 [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest)（下载 RELEASE `.zip` 文件）
 
-#### 第一步 – 准备工作（源 3DS）
+#### Section I - Hardware Button Check (target 3DS)
+
+{% include_relative include/safemodecheck.txt %}
+
+If you do not boot into Safe Mode, the system update menu after multiple attempts, you cannot follow this method. If this is the case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+{: .notice--warning}
+
+#### Section II - Prep Work (source 3DS)
 
 为了向目标 3DS 传输带有漏洞的数据，你将需要按照以下内容配置源 3DS（已安装了自制固件的 3DS）。
 
@@ -61,7 +65,7 @@ title: "安装 boot9strap（通过 kartdlphax）"
   如果 `plugins` 和 `00040000...` 文件夹不存在，请先创建它们
 1. 弹出 SD 卡并将其插回**源 3DS**
 
-#### 第二步 – 准备工作（目标 3DS）
+#### Section III - Prep Work (target 3DS)
 
 为了修改目标 3DS（你正在破解的 3DS），你需要复制一些文件到目标 3DS 的 SD 卡中。
 
@@ -75,7 +79,7 @@ title: "安装 boot9strap（通过 kartdlphax）"
 1. 从 unSAFE_MODE `.zip` 中复制出 `slotTool` 文件夹到你的 SD 卡的 `3ds` 文件夹
 1. 取下 SD 卡并将其插回**目标 3DS**
 
-#### 第三步 – kartdlphax
+#### Section IV - kartdlphax
 
 本节中，你将使用下载通信程序来从源 3DS 传输带有漏洞的数据到目标 3DS，它将会用带有漏洞的数据覆盖你的 Wi-Fi 连接点设置槽。 你自己设置的 Wi-Fi 链接点将在这个过程中被暂时覆盖。 
 
@@ -111,18 +115,18 @@ title: "安装 boot9strap（通过 kartdlphax）"
 接下来的步骤中将**不再**需要使用**源 3DS** 来完成。 接下来的步骤应该只能在**目标 3DS**上完成。
 {: .notice--info}
 
-#### 第四步 – unSAFE_MODE
+#### Section V - unSAFE_MODE
 
-{% include_relative include/exploit-usm.txt method="kartdlphax" %}
+{% include_relative include/exploit-usm.txt %}
 
-#### 第五步 – 安装 boot9strap
+#### Section VI - Installing boot9strap
 
 {% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
 {%- include_relative include/configure-luma3ds.txt %}
 
 {% include_relative include/luma3ds-installed-note.txt %}
 
-#### 第六步 – 还原 WiFi 配置文件
+#### Section VII - Restoring WiFi Configuration Profiles
 
 {% include_relative include/remove-usm-slottool.txt %}
 
