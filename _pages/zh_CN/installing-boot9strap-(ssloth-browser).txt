@@ -53,25 +53,14 @@ SSLoth 允许目前系统版本在 11.13.0 及其以下的主机绕过浏览器�
 
 本节中，你将更改主机的网络连接设置，设置一个代理服务器来绕过浏览器的版本检查，允许浏览器在系统没有更新至最新的情况下运行。 这将让你能够在下一步中访问浏览器漏洞页面。
 
-If you haven't already, make sure you have a working Internet connection set up on your console.
-{: .notice--info}
-
-1. 打开系统设置（本体設定 / System Settings）
-1. 进入到 `互联网设置（インターネット設定 / Internet Settings）` -> `连接设置（インターネット接続設定 / Connection Settings）`
-1. 点击你目前在用的连接点槽位，然后进入到 `设置变更（設定変更 / Change Settings）` -> `下一页（右箭头）` -> `代理设置（Proxy）`
-1. 设置“代理服务器 （Proxy）”为“是（する / Yes）”，然后点击`详细设置（詳細設定 / Detailed Setup）`
-1. 设置代理服务器为 `192.9.234.11`，端口为 `8080`
-1. 点击 OK，然后点击保存（保存する / Save）
-1. 当提示时，点击“测试（テスト / Test）”进行连接测试
-  + 测试应该会成功
-1. 点击 “OK” 继续
+{% include_relative include/addproxy.txt %}
 1. 点两次 “返回”，然后点“关闭”来返回主菜单。
 
 #### 第三步 – 启动 SafeB9SInstaller
 
 本节中，你将启动浏览器破解漏洞，它将使用 universal-otherapp 启动 boot9strap（自制固件）安装程序。
 
-1. 在主菜单中，同时按下 L 和 R 键来打开摄像头
+1. On the HOME Menu, press the Left and Right shoulder buttons at the same time to open the camera
     + 如果你无法打开摄像头，请直接进入 3DS 自带的浏览器然后输入链接访问（`https://zoogie.github.io/web/nbhax/`）
 1. 扫描[这个二维码（点击这里查看）](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax&qzone=1&margin=0&size=400x400&ecc=L)
   + 如果出现错误，参见[故障排查](troubleshooting#ts_browser)
@@ -88,16 +77,7 @@ If you haven't already, make sure you have a working Internet connection set up 
 
 #### 第五步 – 还原默认的 DNS
 
-本节中，你将会还原你主机的网络设置到原先的状态。
-
-1. 打开系统设置（本体設定 / System Settings）
-1. 进入到 `互联网设置（インターネット設定 / Internet Settings）` -> `连接设置（インターネット接続設定 / Connection Settings）`
-1. 点击你目前在用的连接点槽位，然后进入到 `设置变更（設定変更 / Change Settings）` -> `下一页（右箭头）` -> `代理设置（Proxy）`
-1. 将 “代理设置（Proxy）”设置为 “否（No/しない）”
-1. 点击 OK，然后点击保存（保存する / Save）
-1. 当提示时，点击“测试（テスト / Test）”进行连接测试
-	+ 测试应该会成功
-1. 将主机关机
+{% include_relative include/rmproxy.txt %}
 
 ___
 
