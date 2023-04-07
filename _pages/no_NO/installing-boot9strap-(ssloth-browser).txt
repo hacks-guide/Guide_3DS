@@ -53,25 +53,14 @@ In this section, you will copy the files needed to trigger both browserhax and u
 
 In this section, you will change your Internet connection settings to use a proxy network designed to bypass the browser version check, allowing the browser to function without a system update. This will allow you to access the browser exploit webpage in the next section.
 
-If you haven't already, make sure you have a working Internet connection set up on your console.
-{: .notice--info}
-
-1. Launch the System Settings application
-1. Navigate to `Internet Settings` -> `Connection Settings`
-1. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
-1. Set "Proxy Settings" to "Yes", then click `Detailed Setup`
-1. Set the Proxy Server to `192.9.234.11`, and the Port to `8080`
-1. Click OK, then click Save
-1. When prompted, click "Test" to perform the connection test
-  + The test should succeed
-1. Click "OK" to continue
+{% include_relative include/addproxy.txt %}
 1. Press "Back" twice, then "Close" to go back to the HOME Menu
 
 #### Section III - Launching SafeB9SInstaller
 
 In this section, you will visit the browser exploit webpage, which will use universal-otherapp to launch the boot9strap (custom firmware) installer.
 
-1. On the HOME Menu, press the Left and Right shoulder buttons together to open the camera
+1. On the HOME Menu, press the Left and Right shoulder buttons at the same time to open the camera
     + If you are unable to open the camera, open the Internet Browser and manually type the URL instead (`https://zoogie.github.io/web/nbhax/`)
 1. Tap the QR code button and scan [this QR code](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax&qzone=1&margin=0&size=400x400&ecc=L)
   + If you get an error, [follow this troubleshooting guide](troubleshooting#installing-boot9strap-ssloth-browser)
@@ -88,16 +77,7 @@ In this section, you will visit the browser exploit webpage, which will use univ
 
 #### Section V - Restoring default proxy
 
-In this section, you will restore the Internet settings back to normal.
-
-1. Launch the System Settings application
-1. Navigate to `Internet Settings` -> `Connection Settings`
-1. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
-1. Set "Proxy Settings" to "No"
-1. Click OK, then click Save
-1. When prompted, click "Test" to perform the connection test
-	+ The test should succeed
-1. Slå av enheten
+{% include_relative include/rmproxy.txt %}
 
 ___
 
