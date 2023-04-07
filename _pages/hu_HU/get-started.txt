@@ -25,6 +25,10 @@ Ha egy szokatlan menüt látsz ÁLLJ MEG - már vagy egyedi firmwared! Folytasd 
 
 A korrrekt metódushoz az eszközödhöz, kérjük add meg azt a rendszer verziót, amit a II. részben találtál.
 
+{% capture noneSelected %}
+System model is required.
+{% endcapture %}
+
 {% capture invalidVersion %}
 Ez nem tűnik egy érvényes rendszer verziónak.
 {% endcapture %}
@@ -33,7 +37,7 @@ Ez nem tűnik egy érvényes rendszer verziónak.
 Jelenleg nem tudod hackelni a 3DS-ed ezen a verzión a fő metódusokkal. Ha szeretnéd hackelni a konzolod, ntrbootot kell használnod.
 {% endcapture %}
 
-{% include consoleVersionSelect.html invalidVersion=invalidVersion methodUnavailable=methodUnavailable %}
+{% include consoleVersionSelect.html noneSelected=noneSelected invalidVersion=invalidVersion methodUnavailable=methodUnavailable %}
 
 ---
 #### Alternatív metódusok
