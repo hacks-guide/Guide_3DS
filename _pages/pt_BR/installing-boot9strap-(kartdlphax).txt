@@ -30,9 +30,6 @@ Para poder seguir estas instruções, você precisará do seguinte:
 - Uma cópia física ou digital de Mario Kart 7 que é a mesma região de ambos os consoles
 - Um cartão SD para ambos os dispositivos
 
-Se os botões (Gatilho Esquerdo/Direito), (Botão Direcional para Cima), ou (A) no **3DS de destino** não funcionar, você não poderá seguir essas instruções. Para assistência adicional com este assunto, junte-se ao [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) e peça ajuda, em Inglês.
-{: .notice--warning}
-
 ### O que é necessário
 
 No **3DS de origem** (o 3DS com custom firmware):
@@ -47,7 +44,14 @@ No **3DS de destino** (o 3DS que você está tentando modificar):
 * A versão mais recente do [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (o arquivo `.zip` do Luma3DS)
 * A versão mais recente do [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest) (o arquivo RELEASE `.zip`)
 
-#### Seção I - Preparação (3DS de origem)
+#### Section I - Hardware Button Check (target 3DS)
+
+{% include_relative include/safemodecheck.txt %}
+
+If you do not boot into Safe Mode, the system update menu after multiple attempts, you cannot follow this method. Se for esse o caso, junte-se ao [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) e peça ajuda, em Inglês.
+{: .notice--warning}
+
+#### Section II - Prep Work (source 3DS)
 
 Nesta seção, você irá configurar seu 3DS de origem (o 3DS com custom firmware) para a entrega dos dados do exploit ao 3DS de destino.
 
@@ -61,7 +65,7 @@ Nesta seção, você irá configurar seu 3DS de origem (o 3DS com custom firmwar
   - Crie as pastas `plugins` e `00040000...` se elas já não existirem
 1. Ejete o cartão SD e coloque-o no **3DS de origem**
 
-#### Seção II - Preparação (3DS de destino)
+#### Section III - Prep Work (target 3DS)
 
 Nesta seção, você copiará os arquivos necessários para acionar o exploit unSAFE_MODE no 3DS de destino (o 3DS que está tentando modificar) no cartão SD.
 
@@ -75,7 +79,7 @@ Nesta seção, você copiará os arquivos necessários para acionar o exploit un
 1. Copie a pasta `slotTool` do `.zip` unSAFE_MODE para a pasta `3ds` no seu cartão SD
 1. Ejete o cartão SD e coloque-o no **3DS de destino**
 
-#### Seção III - kartdlphax
+#### Section IV - kartdlphax
 
 Nesta seção, você usará o Download Play para transferir os dados do exploit do 3DS de origem para o 3DS de destino, que pode ser usado para substituir seus slots de Wi-Fi por dados com hack. Suas configurações de conexão Wi-Fi serão temporariamente sobrescritas enquanto o exploit estiver ativo.
 
@@ -111,18 +115,18 @@ Nesta seção, você usará o Download Play para transferir os dados do exploit 
 Você **não** precisará usar seu **3DS de origem** para completar quaisquer etapas deste guia a partir de agora. Quaisquer outras etapas só devem ser feitas no **3DS de destino**.
 {: .notice--info}
 
-#### Seção IV - unSAFE_MODE
+#### Section V - unSAFE_MODE
 
-{% include_relative include/exploit-usm.txt method="kartdlphax" %}
+{% include_relative include/exploit-usm.txt %}
 
-#### Seção V - Instalando boot9strap
+#### Section VI - Installing boot9strap
 
 {% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
 {%- include_relative include/configure-luma3ds.txt %}
 
 {% include_relative include/luma3ds-installed-note.txt %}
 
-#### Seção VI - Restaurando os Perfis de Configuração de Wi-Fi
+#### Section VII - Restoring WiFi Configuration Profiles
 
 {% include_relative include/remove-usm-slottool.txt %}
 
