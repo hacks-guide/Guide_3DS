@@ -7,7 +7,7 @@ title: "Dumping Movable (nimhax)"
 {% capture technical_info %}
 <summary><em>Technical Details (optional)</em></summary>
 
-To install boot9strap on your device, we derive your device's unique encryption key. To accomplish this, we use a tool called nimhax (along with another exploit to run nimhax) to dump the data encryption key (movable.sed) from your device.
+To install boot9strap on your device, we derive your device's unique encryption key. To accomplish this, we use the Homebrew Launcher to launch nimhax and dump the data encryption key (movable.sed) from your device.
 
 For a more technical explanation, see [here](https://github.com/luigoalma/nimhax/) for information about the nimhax exploit.
 
@@ -25,8 +25,7 @@ For a more technical explanation, see [here](https://github.com/luigoalma/nimhax
 
 1. Power off your device
 1. Insert your SD card into your computer
-1. Create a folder named `3ds` on the root of your SD card, if it does not already exist
-1. Copy the `nimhax` folder from your nimhax `.zip` to the `/3ds/` folder on your SD card
+1. Copy the `nimhax` folder from the nimhax `.zip` to the `/3ds/` folder on your SD card
 1. Reinsert your SD card into your device
 1. Power on your device
 
@@ -34,11 +33,21 @@ For a more technical explanation, see [here](https://github.com/luigoalma/nimhax
 
 1. Open the Homebrew Launcher through your method of choice (likely the Internet Browser)
 1. Launch nimhax from the list of homebrew
-1. If the exploit was successful, a `movable.sed` file will be available on the root of your SD card.
+1. If the exploit was successful, a `movable.sed` file will appear on the root of your SD card
 
-### Next step: BannerBomb3
+### Next step: Choose an exploit
 
-Once you have your device's encryption key (`movable.sed`), you will use it in conjunction with BannerBomb3, which uses your `movable.sed` file to take advantage of exploits in the System Settings application.
+#### Bannerbomb3 (recommended)
+
+Once you have your device's encryption key (`movable.sed`), you can use it in conjunction with BannerBomb3, which uses your `movable.sed` file to take advantage of exploits in the System Settings application.
 
 Continue to [BannerBomb3](bannerbomb3)
-{: .notice--primary}
+{: .notice--info}
+
+#### Frogtool
+
+Once you have your device's encryption key (`movable.sed`), you can use it in conjunction with Frogtool, which uses your `movable.sed` file to inject and take advantage of JPN Flipnote Studio. \
+While this method is faster, it requires downloading a file with a torrent client. Do not follow this method if you're unable to use a torrent client.
+
+Continue to [Installing boot9strap (Frogtool)](installing-boot9strap-(frogtool))
+{: .notice--warning}
