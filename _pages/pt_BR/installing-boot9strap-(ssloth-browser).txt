@@ -53,25 +53,14 @@ Nesta seção, você irá copiar os arquivos necessários para acionar ambos bro
 
 Nesta seção, você vai alterar suas configurações de conexão Internet para usar uma rede proxy criada para ignorar a verificação da versão do navegador, permitindo que o navegador funcione sem uma atualização do sistema. Isso permitirá que você acesse a página de exploit do navegador na próxima seção.
 
-Se você ainda não tem, certifique-se de que você tem uma conexão de Internet ativa configurada em seu console.
-{: .notice--info}
-
-1. Saia do aplicativo Configuração do Console
-1. Navegue para `Configurações da Internet` -> `Configurações de Conexão`
-1. Clique no seu slot de conexão da rede e navegue para `Alterar configurações` -> `Próxima página (seta direita)` -> `Configurações de proxy`
-1. Defina "Configurações do proxy" como "Sim" e, em seguida, clique em `Configuração Detalhada`
-1. Defina o Servidor Proxy para `192.9.234.11`, e a Porta para `8080`
-1. Clique em OK, e depois clique em Salvar
-1. Quando solicitado, clique em "Testar" para executar o teste de conexão
-  + O teste deve ser bem-sucedido
-1. Clique em "OK" para continuar
+{% include_relative include/addproxy.txt %}
 1. Pressione "Voltar" duas vezes e, em seguida, "Fechar" para voltar ao Menu HOME
 
 #### Seção III - Iniciando o SafeB9SInstaller
 
 Nesta seção, você vai visitar a página de exploit do navegador, que usará ouniversal-otherapp para iniciar o instalador boot9strap (custom firmware).
 
-1. No Menu HOME, pressione o gatilho Esquerdo e Direito juntos para abrir a câmera
+1. On the HOME Menu, press the Left and Right shoulder buttons at the same time to open the camera
     + Se você não conseguir abrir a câmera, abra o Navegador de Internet e digite manualmente a URL (`https://zoogie.github.io/web/nbhax/`)
 1. Toque no botão do código QR e escaneie [este código QR](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax&qzone=1&margin=0&size=400x400&ecc=L)
   + Se você receber um erro, [siga este guia de troubleshooting](troubleshooting#installing-boot9strap-ssloth-browser)
@@ -88,16 +77,7 @@ Nesta seção, você vai visitar a página de exploit do navegador, que usará o
 
 #### Seção V - Restaurando o proxy padrão
 
-Nesta seção, você irá restaurar as configurações de internet ao normal.
-
-1. Saia do aplicativo Configuração do Console
-1. Navegue para `Configurações da Internet` -> `Configurações de Conexão`
-1. Clique no seu slot de conexão da rede e navegue para `Alterar configurações` -> `Próxima página (seta direita)` -> `Configurações de proxy`
-1. Defina "Configurações de proxy" para "Não"
-1. Clique em OK, e depois clique em Salvar
-1. Quando solicitado, clique em "Testar" para executar o teste de conexão
-	+ O teste deve ser bem-sucedido
-1. Desligue seu dispositivo
+{% include_relative include/rmproxy.txt %}
 
 ___
 
