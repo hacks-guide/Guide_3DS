@@ -14,16 +14,23 @@ jobs:
         with:
           persist-credentials: false
 
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
+
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
 
       - name: Install dependencies
-        run: bundle install
+        run: |
+          bundle install
+          npm install
 
-      - name: Run Jekyll
-        # Build the site using Jekyll
-        run: bundle exec jekyll build
+      - name: Build main.min.js and run Jekyll
+        run: |
+          npm run build:js
+          bundle exec jekyll build
 
         # Copy (or touch) other needed files
         # .nojekyll: to tell GH Pages to not rebuild (lol)
