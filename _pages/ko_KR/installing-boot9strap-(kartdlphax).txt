@@ -35,7 +35,7 @@ kartdlphax와 unSAFE_MODE의 더 자세한 설명은 다음 (영어) 페이지�
 **소스 3DS** (커스텀 펌웨어가 설치된 3DS)에서:
 
 * 최신 버전의 [kartdlphax](https://github.com/PabloMK7/kartdlphax/releases/latest`) (`plugin.3gx`)
-* The latest release of [Luma3DS 3GX Loader Edition](https://github.com/PabloMK7/Luma3DS_3GX/releases/latest) (`boot.firm`)
+* 최신 버전의 [Luma3DS 3GX Loader 버전](https://github.com/PabloMK7/Luma3DS_3GX/releases/latest`) (`boot.firm`)
 
 **타겟 3DS** (커스텀 펌웨어를 설치하려고 하는 3DS)에서:
 
@@ -44,14 +44,14 @@ kartdlphax와 unSAFE_MODE의 더 자세한 설명은 다음 (영어) 페이지�
 * 최신 버전의 [일반 Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (Luma3DS `.zip` 파일)
 * 최신 버전의 [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest) (RELEASE `.zip` 파일)
 
-#### Section I - Hardware Button Check (target 3DS)
+#### 섹션 I - 하드웨어 버튼 작동 확인 (타겟 3DS)
 
 {% include_relative include/safemodecheck.txt %}
 
 If you do not boot into Safe Mode, the system update menu after multiple attempts, you cannot follow this method. 이 경우, [Nintendo Homebrew Discord 서버](https://discord.gg.MWxPgEp)에 오셔서 도움을 요청하세요.
 {: .notice--warning}
 
-#### Section II - Prep Work (source 3DS)
+#### 섹션 II - 준비 작업 (소스 3DS)
 
 이 섹션에서는, 소스 3DS (커스텀 펌웨어가 설치 되어 있는 기기)를 익스플로잇 데이터를 타겟 3DS로 전송할 수 있도록 설정합니다.
 
@@ -65,7 +65,7 @@ If you do not boot into Safe Mode, the system update menu after multiple attempt
   - `plugins` 폴더와 `00040000...` 폴더가 없으면 만들어 주세요
 1. SD 카드를 분리해 **소스 3DS**에 장착해 주세요
 
-#### Section III - Prep Work (target 3DS)
+#### 섹션 III - 준비 작업 (타겟 3DS)
 
 이 섹션에서는, 타겟 3DS (커스텀 펌웨어를 설치 할 기기)에서 unSAFE_MODE 익스플로잇을 실행할 수 있는 파일을 SD 카드로 복사합니다.
 
@@ -79,7 +79,7 @@ If you do not boot into Safe Mode, the system update menu after multiple attempt
 1. unSAFE_MODE `.zip`안에 있는 `slotTool` 폴더를 SD 카드의 `3ds` 폴더에 복사해 주세요
 1. SD 카드를 분리해 **타겟 3DS**에 장착해 주세요
 
-#### Section IV - kartdlphax
+#### 섹션 IV - kartdlphax
 
 이 섹션에서는, **소스 3DS**에서 **타겟 3DS**로 Wi-Fi 슬롯을 덮어씌우기 위한 익스플로잇 데이터를 다운로드 플레이를 통해 전송합니다. 이 취약점을 실행함으로서, 기기의 Wi-Fi 연결 설정은 일시적으로 덮어씌워집니다.
 
@@ -115,18 +115,18 @@ If you do not boot into Safe Mode, the system update menu after multiple attempt
 이후 과정을 완료할 때에는, **소스 3DS**가 필요하지 **않습니다**. 이후 과정은 **타겟 3DS**만 이용하여 완료할 수 있습니다.
 {: .notice--info}
 
-#### Section V - unSAFE_MODE
+#### 섹션 V - unSAFE_MODE
 
 {% include_relative include/exploit-usm.txt %}
 
-#### Section VI - Installing boot9strap
+#### 섹션 VI - boot9strap 설치
 
 {% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
 {%- include_relative include/configure-luma3ds.txt %}
 
 {% include_relative include/luma3ds-installed-note.txt %}
 
-#### Section VII - Restoring WiFi Configuration Profiles
+#### 섹션 VII - Wi-Fi 프로필 복구
 
 {% include_relative include/remove-usm-slottool.txt %}
 
