@@ -130,7 +130,7 @@ To fix this, you will need to determine which folder contains your data. Usually
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>DSiWare Management menu displays "No accessible software data."</u></summary>
+<summary><u>DSiWare 관리 메뉴가 "소프트웨어 데이터에 접근할 수 없습니다."를 표시합니다</u></summary>
 
 `F00D43D5.bin`이 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 폴더 내에 없습니다. 폴더 `Nintendo DSiWare`의 이름에 오타가 있는지 확인해 주세요. 대소문자는 구분하지 않습니다.
 {% endcapture %}
@@ -252,7 +252,7 @@ SD 카드 루트에 Frogminer_save `.zip` 안에 있는 `private` 폴더를 복�
 {% capture compat %}
 <summary><u>B9STool을 실행한 후 Luma3DS 설정 메뉴를 실행할 수 없습니다</u></summary>
 
-Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and explain what has happened.
+[Nintendo Homebrew Discord 서버](https://discord.gg.MWxPgEp)에 오셔서 무슨 일이 발생했는지 설명해주세요.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -488,20 +488,20 @@ GodMode9 `.zip`안에 압축이 되있는 `gm9` 폴더를 SD 카드의 루트로
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>"Backup failed" or "Error: Could not open directory" when attempting a NAND backup</u></summary>
-Make sure you have at least 1.3GB available in your SD card. 빈 공간이 부족하다면 다음 단계를 따르세요.
-1. Power off your console
-1. Remove the SD card and insert it into your computer
-1. Copy the `Nintendo 3DS` folder from the root of your SD card to your computer
-1. Delete the Nintendo 3DS folder from the SD card
-1. Power off your console, hold START and power on still holding START to boot on GodMode9
+<summary><u>NAND 백업을 실행할 때 "Backup failed" 또는 "Error: Could not open directory"가 표시됩니다</u></summary>
+SD 카드에 1.3GB 이상의 빈 공간이 있는지 확인해주세요. 빈 공간이 부족하다면 다음 단계를 따르세요.
+1. 기기를 종료해 주세요
+1. SD 카드를 분리해 컴퓨터에 장착해주세요
+1. SD 카드의 루트에 있는 `Nintendo 3DS` 폴더를 컴퓨터에 복사해주세요
+1. SD 카드에서 `Nintendo 3DS` 폴더를 지워주세요
+1. 기기의 전원을 끄고, START 버튼을 누른 채 전원을 켜 GodMode9로 진입하세요
 1. [NAND 백업](godmode9-usage#creating-a-nand-backup)을 실행하세요
-1. Copy the files in `gm9/out` on your SD to a safe location on your computer
-1. Delete the `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` files from the SD card, keeping essential.exefs in `/gm9/out/`
-1. Copy the `Nintendo 3DS` folder from your computer to the root of your SD card
-1. Delete the `Nintendo 3DS` folder from your computer
+1. SD 카드의 `gm9/out` 폴더 내 파일을 컴퓨터의 안전한 위치에 복사해 주세요
+1. SD 카드의 `/gm9/out` 폴더에서 essential.exefs는 남기고 `<date>_<serialnumber>_sysnand_##.bin` 및 `<date>_<serialnumber>_sysnand_##.bin.sha` 파일을 삭제해주세요
+1. 컴퓨터에서 SD 카드의 루트로 복사해 두었던 `Nintendo 3DS` 폴더를 다시 복사해 주세요
+1. 컴퓨터에서 `Nintendo 3DS` 폴더를 지워주세요
 
-If you have enough space on your SD card, your SD might be corrupted or faulty. Check your SD card for any errors by following the guide according to your computer's operating system: [Windows](h2testw-(windows)), [Linux](f3-(linux)), [macOS](f3xswift-(mac)).
+SD 카드의 용량이 충분하다면, SD 카드가 손상되었거나 불량일 수 있습니다. 컴퓨터의 운영 체제에 따라 SD 카드에 오류가 있는지를 확인해주세요: [Windows](h2testw-(windows)), [Linux](f3-(linux)), [macOS](f3xswift-(mac)).
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -568,7 +568,7 @@ Luma3DS 구 버전이 설치되있습니다. 최신 버전의 [Luma3DS](https://
 
 {% capture compat %}
 <summary><u>"Unable to mount CTRNAND or load the CTRNAND FIRM. Please use an external one."</u></summary>
-There are a number of reasons as to why this could be happening. In any case, this error can usually be fixed by following the [CTRTransfer](ctrtransfer) guide.
+이러한 문제가 발생하는 경우의 수는 여러 가지가 있습니다. 어느 경우가 됐던, 일반적으로 [CTRTransfer](ctrtransfer) 가이드를 통해 고칠 수 있습니다.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -589,11 +589,11 @@ ARM11 오류 핸들러가 꺼져있거나, 커스텀 펌웨어가 정상적으�
 This could be caused by various reasons, but most likely because your SD card is not being read by the system.
 You can check if your SD is being read by holding SELECT on boot and checking the yellow text on the bottom screen; if it says "Booted from CTRNAND via B9S", then your device is booting from the internal memory and not from the SD card.
 If this is the case, attempt the steps below, which are listed from easiest to hardest:
-1. Power off your device, remove the SD card, re-insert it, then power on your device
+1. 장치의 전원을 종료하고, SD 카드를 분리한 뒤, 다시 장착하고 전원을 켜 보세요
 1. Power off your device, remove the SD card, insert it on your PC, download the latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), extract `boot.firm` from the `Luma3DS.zip` and place it on the root of your SD card (replacing any existing file)
 1. Power off your device, remove the SD card, insert it on your PC and reformat your SD card according to your computer's operating system: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)) *(this will wipe your SD card data)*
-1. Test your SD card for errors by following the guide according to your computer's operating system: [Windows](h2testw-(windows)), [Linux](f3-(linux)), [macOS](f3xswift-(mac)). If your SD card is marked as faulty, then you will have to replace your SD card
-1. Your SD card slot may be broken. Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for further assistance
+1. Test your SD card for errors by following the guide according to your computer's operating system: [Windows](h2testw-(windows)), [Linux](f3-(linux)), [macOS](f3xswift-(mac)). SD 카드에 오류가 있다고 표시되면, SD 카드를 교체해야 합니다
+1. SD 카드 슬롯이 파손되었을 수 있습니다. [Nintendo Homebrew Discord 서버](https://discord.gg.MWxPgEp)에 오셔서 도움을 요청하세요
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -647,10 +647,10 @@ If this is the case, attempt the steps below, which are listed from easiest to h
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Exception screen when booting/loading an application</u></summary>
+<summary><u>앱을 실행할 때 오류 화면이 표시됩니다</u></summary>
 
-Look for your exception screen in [this page](https://wiki.hacks.guide/wiki/3DS:Error_screens/Luma3DS_exception_screen).
-If you weren't able to find your error or the instructions didn't work, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for further assistance.
+[여기 (영어)](https://wiki.hacks.guide/wiki/3DS:Error_screens/Luma3DS_exception_screen)에서 오류 화면을 찾아보세요.
+해당 오류를 찾지 못했거나 설명으로 해결되지 않은 경우, [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp)에서 도움을 요청하세요.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
