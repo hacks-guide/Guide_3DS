@@ -6,23 +6,23 @@ title: "Installing boot9strap (Frogtool)"
 
 {% capture technical_info %}
 <summary><em>Detalhes técnicos (opcional)</em></summary>
-For technical details on the exploits that you will be using on this page, see "DSiWare_Exports CTCert verification" and "FIRM partitions known-plaintext" [here](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+Para obter detalhes técnicos sobre os exploits que você estará usando nesta página, consulte "DSiWare_Exports CTCert verification" e "FIRM partitions known-plaintext" [aqui](https://www.3dbrew.org/wiki/3DS_System_Flaws).
 
 {% endcapture %}
 <details>{{ technical_info | markdownify }}</details>
 {: .notice--info}
 
 
-To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) link for `frogcert.bin` on this page, you will need a torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download). \
-If you are unable to install one, follow [Bannerbomb3](bannerbomb3) instead. 
+Para usar o link [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) para `frogcert.bin` nesta página, você precisará de um cliente de torrent como [qBittorrent](https://www.qbittorrent.org/download.php) ou [Deluge](http://dev.deluge-torrent.org/wiki/Download). \
+Caso não seja possível instalar um, siga [Bannerbomb3](bannerbomb3). 
 {: .notice--warning}
 
 ### O que é necessário
 
-* Your `movable.sed` file from completing Seedminer or nimhax on the root of your SD card
-* <i class="fa fa-magnet" aria-hidden="true" title="Este é um link magnético. Use a torrent client to download the file."></i> [frogcert.bin](magnet:?xt=urn:btih:d12278ea50bb3574f1fbd327f3d0e2292c70941f&dn=frogcert.bin&tr=https%3a%2f%2ftracker.fastdownload.xyz%3a443%2fannounce&tr=https%3a%2f%2fopentracker.xyz%3a443%2fannounce&tr=http%3a%2f%2fopen.trackerlist.xyz%3a80%2fannounce&tr=http%3a%2f%2ft.nyaatracker.com%3a80%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2fopen.demonii.si%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.port443.xyz%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.vanitycore.co%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&tr=udp%3a%2f%2fthetracker.org%3a80%2fannounce&tr=http%3a%2f%2ftorrent.nwps.ws%3a80%2fannounce&tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.iamhansen.xyz%3a2000%2fannounce&tr=udp%3a%2f%2fbt.xxx-tracker.com%3a2710%2fannounce&tr=http%3a%2f%2f0d.kebhana.mx%3a443%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2ftracker4.itzmx.com%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.justseed.it%3a1337%2fannounce&tr=http%3a%2f%2ftherightsize.net%3a1337%2fannounce&tr=udp%3a%2f%2fretracker.hotplug.ru%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&tr=udp%3a%2f%2f9.rarbg.com%3a2800%2fannounce&tr=https%3a%2f%2f2.track.ga%3a443%2fannounce&tr=udp%3a%2f%2fbigfoot1942.sektori.org%3a6969%2fannounce) (magnet link) 
-* The latest release of [Frogtool](https://github.com/zoogie/Frogtool/releases/latest)
-* The latest release of [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
+* Seu arquivo `movable.sed` de completar o Seedminer ou nimhax na raiz do seu cartão SD
+* <i class="fa fa-magnet" aria-hidden="true" title="Este é um link magnético. Use um client de torrent para baixar o arquivo."></i> [frogcert.bin](magnet:?xt=urn:btih:d12278ea50bb3574f1fbd327f3d0e2292c70941f&dn=frogcert.bin&tr=https%3a%2f%2ftracker.fastdownload.xyz%3a443%2fannounce&tr=https%3a%2f%2fopentracker.xyz%3a443%2fannounce&tr=http%3a%2f%2fopen.trackerlist.xyz%3a80%2fannounce&tr=http%3a%2f%2ft.nyaatracker.com%3a80%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2fopen.demonii.si%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.port443.xyz%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.vanitycore.co%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&tr=udp%3a%2f%2fthetracker.org%3a80%2fannounce&tr=http%3a%2f%2ftorrent.nwps.ws%3a80%2fannounce&tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.iamhansen.xyz%3a2000%2fannounce&tr=udp%3a%2f%2fbt.xxx-tracker.com%3a2710%2fannounce&tr=http%3a%2f%2f0d.kebhana.mx%3a443%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2ftracker4.itzmx.com%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.justseed.it%3a1337%2fannounce&tr=http%3a%2f%2ftherightsize.net%3a1337%2fannounce&tr=udp%3a%2f%2fretracker.hotplug.ru%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&tr=udp%3a%2f%2f9.rarbg.com%3a2800%2fannounce&tr=https%3a%2f%2f2.track.ga%3a443%2fannounce&tr=udp%3a%2f%2fbigfoot1942.sektori.org%3a6969%2fannounce) (magnet link) 
+* A versão mais recente do [Frogtool](https://github.com/zoogie/Frogtool/releases/latest)
+* A versão mais recente do [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
 
 #### Seção I - Checando por CFW
 
@@ -33,24 +33,24 @@ If you are unable to install one, follow [Bannerbomb3](bannerbomb3) instead.
 1. Desligue seu dispositivo
 1. Insira o cartão SD no seu computador
 1. Copie `boot.firm` e `boot.3dsx` do `.zip` do Luma3DS para a raiz do seu cartão SD
-1. Copy `boot.nds` (b9sTool) from the b9sTool release `.zip` to the root of your SD card
-1. Copy `Frogtool.3dsx` to the `/3ds/` folder on your SD card
-1. Copy `frogcert.bin` to the root of your SD card
+1. Copie `boot.nds` (b9sTool) do b9sTool `.zip` para a raiz do seu cartão SD
+1. Copie `Frogtool.3dsx` para a pasta `/3ds/` no seu cartão SD
+1. Copie `frogcert.bin` para a raiz do seu cartão SD
 1. Reinsira seu cartão SD no seu dispositivo
 1. Ligue o seu dispositivo
 
-#### Section III - Patching DS Download Play
+#### Seção III - Aplicando patches no DS Download Play
 
 1. Abra o Homebrew Launcher através do seu método de escolha (provavelmente o Navegador de Internet)
-1. Launch Frogtool from the list of homebrew
-1. Select the "INJECT patched DS Download Play" option
-1. Frogtool will automatically run and inject the JPN version of Flipnote Studio into your DS Download Play
-1. Once this operation has finished, read the screens and check if the process was successful
-1. Tap the touch screen, then select "BOOT patched DS Download Play"
+1. Abra o Frogtool da lista de homebrew
+1. Selecione a opção "INJECT patched DS Download Play"
+1. Frogtool irá automaticamente rodar e injetar a versão JPN do Flipnote Studio em seu DS Download Play
+1. Quando esta operação terminar, leia as telas e verifique se o processo foi bem sucedido
+1. Toque na tela de toque e então selecione "BOOT patched DS Download Play"
 1. Se o exploit foi bem sucedido, seu dispositivo irá abrir a versão JPN do Flipnote Studio
-    + If you get stuck on a black screen, follow [this](https://wiki.hacks.guide/wiki/3DS:TWLFix#Homebrew_Launcher-0) page, then try again
+    + Se você ficar preso em uma tela preta, siga [esta](https://wiki.hacks.guide/wiki/3DS:TWLFix#Homebrew_Launcher-0) página e tente novamente
 
-#### Section IV - Flipnote Exploit
+#### Seção IV - Exploit do Flipnote
 
 {% include_relative include/install-boot9strap-b9stool.txt method="dsinternet" %}
 
@@ -74,11 +74,11 @@ If you are unable to install one, follow [Bannerbomb3](bannerbomb3) instead.
 1. Aperte (Home), depois feche o Download Play
 1. Reinicie o aplicativo Download Play
 1. Seu dispositivo deve abrir o Homebrew Launcher
-1. Launch Frogtool from the list of homebrew
-1. Select the "RESTORE patched DS Download Play" option
-1. Once this operation has finished, read the screens and check if the process was successful
-    + If there are any errors or missing files, correct the problem and try again
-1. If the process was successful, tap the touch screen, then press START to exit
+1. Abra o Frogtool da lista de homebrew
+1. Selecione a opção "RESTORE patched DS Download Play"
+1. Quando esta operação terminar, leia as telas e verifique se o processo foi bem sucedido
+    + Se houver erros ou arquivos faltando, corrija o problema e tente novamente
+1. Se o processo foi bem sucedido, toque na tela e pressione START para sair
 1. Desligue seu dispositivo
 
 ___
