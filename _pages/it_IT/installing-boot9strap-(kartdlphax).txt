@@ -35,7 +35,7 @@ Per seguire queste istruzioni, avrai bisogno di:
 Sul **3DS di partenza** (il 3DS con custom firmware):
 
 * L'ultima versione di [kartdlphax](https://github.com/PabloMK7/kartdlphax/releases/latest) (`plugin.3gx`)
-* The latest release of [Luma3DS 3GX Loader Edition](https://github.com/PabloMK7/Luma3DS_3GX/releases/latest) (`boot.firm`)
+* L'ultima versione di [Luma3DS 3GX Loader Edition](https://github.com/PabloMK7/Luma3DS_3GX/releases/latest) (`boot.firm`)
 
 Sul **3DS di destinazione** (il 3DS che stai cercando di modificare):
 
@@ -44,14 +44,14 @@ Sul **3DS di destinazione** (il 3DS che stai cercando di modificare):
 * L'ultima versione di [Luma3DS standard](https://github.com/LumaTeam/Luma3DS/releases/latest) (il file `.zip` di Luma3DS)
 * L'ultima versione di [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest) (il file RELEASE `.zip`)
 
-#### Section I - Hardware Button Check (target 3DS)
+#### Sezione I - Verifica Pulsanti Hardware (3DS di destinazione)
 
 {% include_relative include/safemodecheck.txt %}
 
 Se non si riesce ad avviare la Modalità Provvisoria, il menu di aggiornamento di sistema, dopo più tentativi, non è possibile seguire questo metodo. In tal caso, puoi ricevere assistenza chiedendo, in inglese, nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp).
 {: .notice--warning}
 
-#### Section II - Prep Work (source 3DS)
+#### Sezione II - Preparazione (3DS di partenza)
 
 In questa sezione configurerai il tuo 3DS di partenza (il 3DS con custom firmware) per inviare i dati dell'exploit verso il 3DS di destinazione.
 
@@ -65,7 +65,7 @@ In questa sezione configurerai il tuo 3DS di partenza (il 3DS con custom firmwar
   - Crea le cartelle `plugins` e `00040000...` se non sono già esistenti
 1. Rimuovi la scheda SD e inseriscila nel **3DS di partenza**
 
-#### Section III - Prep Work (target 3DS)
+#### Sezione III - Preparazione (3DS di destinazione)
 
 In questa sezione copierai i file necessari per attivare l'exploit unSAFE_MODE sulla scheda SD del 3DS di destinazione (il 3DS che stai cercando di modificare).
 
@@ -79,7 +79,7 @@ In questa sezione copierai i file necessari per attivare l'exploit unSAFE_MODE s
 1. Copia la cartella `slotTool` dall'archivio `.zip` di unSAFE_MODE nella cartella `3ds` della tua scheda SD
 1. Rimuovi la scheda SD e inseriscila nel **3DS di destinazione**
 
-#### Section IV - kartdlphax
+#### Sezione IV - kartdlphax
 
 In questa sezione utilizzerai la "Modalità download" per trasferire i dati dell'exploit dal 3DS di partenza al 3DS di destinazione, per sovrascrivere i tuoi profili di connessione Wi-Fi con dati modificati. Le tue impostazioni Wi-Fi rimarranno temporaneamente sovrascritte finché l'exploit sarà attivo.
 
@@ -115,18 +115,18 @@ In questa sezione utilizzerai la "Modalità download" per trasferire i dati dell
 **Non** dovrai più usare il tuo **3DS di partenza** per completare qualsiasi ulteriore passo in questa guida. Eventuali ulteriori istruzioni devono essere completate solo sul **3DS di destinazione**.
 {: .notice--info}
 
-#### Section V - unSAFE_MODE
+#### Sezione V - unSAFE_MODE
 
 {% include_relative include/exploit-usm.txt %}
 
-#### Section VI - Installing boot9strap
+#### Sezione VI - Installazione di boot9strap
 
 {% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
 {%- include_relative include/configure-luma3ds.txt %}
 
 {% include_relative include/luma3ds-installed-note.txt %}
 
-#### Section VII - Restoring WiFi Configuration Profiles
+#### Sezione VII - Ripristino dei Profili di Connessione WiFi
 
 {% include_relative include/remove-usm-slottool.txt %}
 
