@@ -2,16 +2,16 @@
 title: "Riconoscimenti"
 ---
 
-**Special thanks to Plailect, the original creator and maintainer of the guide!**
+**Un ringraziamento speciale a Plailect, il creatore e manutentore originale della guida!**
 {: .notice--primary}
 
-**Special thanks to all of [#Cakey on Freenode](http://webchat.freenode.net/?channels=%23Cakey) for being awesome!**
+**Un ringraziamento speciale a tutti gli utenti di [#Cakey su Freenode](http://webchat.freenode.net/?channels=%23Cakey)! Siete fantastici!**
 {: .notice--primary}
 
-**Special thanks to all of [the translators](https://crowdin.com/project/3ds-guide) for being awesome!**
+**Un ringraziamento speciale a tutti [i traduttori](https://crowdin.com/project/3ds-guide)! Siete fantastici!**
 {: .notice--primary}
 
-If I forgot you here, contact me and I'll add your name.
+Se ho dimenticato di inserirti in questa lista, contattami e ti aggiungerò.
 
 {% capture notice-1 %}
 
