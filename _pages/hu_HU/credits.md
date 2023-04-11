@@ -2,16 +2,16 @@
 title: "Készítők"
 ---
 
-**Special thanks to Plailect, the original creator and maintainer of the guide!**
+**Külön köszönet Plailect-nek, a guide eredeti készítőjének és karbantartójának!**
 {: .notice--primary}
 
-**Special thanks to all of [#Cakey on Freenode](http://webchat.freenode.net/?channels=%23Cakey) for being awesome!**
+**Külön köszönet mindenkinek [#Cakey-n Freenode-on](http://webchat.freenode.net/?channels=%23Cakey) a királyságért!**
 {: .notice--primary}
 
-**Special thanks to all of [the translators](https://crowdin.com/project/3ds-guide) for being awesome!**
+**Külön köszönet minden [fordítónak](https://crowdin.com/project/3ds-guide), amiért ilyen királyok!**
 {: .notice--primary}
 
-If I forgot you here, contact me and I'll add your name.
+Ha kihagytunk volna innen, lépj kapcsolatba velünk, és hozzáadjuk a neved.
 
 {% capture notice-1 %}
 
