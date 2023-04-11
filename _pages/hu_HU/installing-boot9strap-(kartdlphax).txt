@@ -44,14 +44,14 @@ A **cél 3DS**-en (a 3DS, amit módosítani szeretnél):
 * A [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) legújabb standard kiadása (a Luma3DS `.zip` fájl)
 * Az [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest) legújabb kiadása (a RELEASE `.zip` fájl)
 
-#### Section I - Hardware Button Check (target 3DS)
+#### I. rész - Fizikai gombok ellenőrzése (cél 3DS)
 
 {% include_relative include/safemodecheck.txt %}
 
 If you do not boot into Safe Mode, the system update menu after multiple attempts, you cannot follow this method. Ebben az esetben csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és kérj, támogatást angolul.
 {: .notice--warning}
 
-#### Section II - Prep Work (source 3DS)
+#### II. rész - Előkészületi munka (forrás 3DS)
 
 Ebben a fejezetben befogod állítani a forrás 3DS-ed (a 3DS egyedi firmware-rel), hogy küldje az exploit adatot a cél 3DS-nek.
 
@@ -65,7 +65,7 @@ Ebben a fejezetben befogod állítani a forrás 3DS-ed (a 3DS egyedi firmware-re
   - Hozd létre a `plugins` és `00040000...` mappákat, ha nem léteznek
 1. Távolítsd el az SD kártyát és rakd be a **forrás 3DS**-be
 
-#### Section III - Prep Work (target 3DS)
+#### III. rész - Előkészületi munka (cél 3DS)
 
 Ebben a fejezetben fel fogod másolni azokat a fájlokat, amik ahhoz szükségesek, hogy kiváltsák az unSAFE_MODE exploit-ot a cél 3DS (a 3DS, amit módosítani szeretnél) SD kártyájára.
 
@@ -79,7 +79,7 @@ Ebben a fejezetben fel fogod másolni azokat a fájlokat, amik ahhoz szükséges
 1. Másold át a `slotTool` mappát az unSAFE_MODE `.zip`-ből az SD kártya gyökerében található `3ds` mappába
 1. Távolítsd el az SD kártyát és rakd be a **cél 3DS**-be
 
-#### Section IV - kartdlphax
+#### IV. rész - kartdlphax
 
 Ebben a fejelzetben a Download Play-t fogod használni, hogy átvidd az exploit adatot a forrás 3DS-ről a cél 3DS-re, ami arra használható, hogy felülírd a Wi-Fi slotjaid a hackelt adattal. A Wi-Fi kapcsolat beállításaid átmenetileg felülírásra kerülnek, amíg az exploit aktív.
 
@@ -115,18 +115,18 @@ Ebben a fejelzetben a Download Play-t fogod használni, hogy átvidd az exploit 
 **Nincs** szükséged a **forrás 3DS** használatára a további lépések végrehajtásához ebben az útmutatóban. Minden további lépést a **cél 3DS**-en kell végre hajtani.
 {: .notice--info}
 
-#### Section V - unSAFE_MODE
+#### V. rész - unSAFE_MODE
 
 {% include_relative include/exploit-usm.txt %}
 
-#### Section VI - Installing boot9strap
+#### VI. rész - boot9strap telepítése
 
 {% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
 {%- include_relative include/configure-luma3ds.txt %}
 
 {% include_relative include/luma3ds-installed-note.txt %}
 
-#### Section VII - Restoring WiFi Configuration Profiles
+#### VII. rész - A WiFi Configuration Profiles visszaállítása
 
 {% include_relative include/remove-usm-slottool.txt %}
 
