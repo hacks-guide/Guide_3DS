@@ -75,15 +75,15 @@ function redirect() {
     var minor = document.getElementById("minor");
     var nver = document.getElementById("nver");
     var region = document.getElementById("region");
-    var isN3DS = document.getElementById("new3DS").checked;
-    var isO3DS = document.getElementById("old3DS").checked;
+    //var isN3DS = document.getElementById("new3DS").checked;
+    //var isO3DS = document.getElementById("old3DS").checked;
     document.getElementById("result_noneSelected").style.display = "none";
     document.getElementById("result_invalidVersion").style.display = "none";
     document.getElementById("result_methodUnavailable").style.display = "none";
-    if ((!isN3DS) && (!isO3DS)) {
-        document.getElementById("result_noneSelected").style.display = "block";
-    }
-    else if (major.value == 0) {
+    //if ((!isN3DS) && (!isO3DS)) {
+    //    document.getElementById("result_noneSelected").style.display = "block";
+    //}
+    if (major.value == 0) {
         document.getElementById("result_invalidVersion").style.display = "block";
     }
     // only do things if major isnt 0, which would be invalid
@@ -102,9 +102,11 @@ function redirect() {
                 window.location.href = "installing-boot9strap-(safecerthax)";
             }
             // new browserhax for latest version
+            /*
             else if (isN3DS) {
                 window.location.href = "homebrew-launcher-(super-skaterhax)";
             }
+            */
             // seedminer does still work for the latest version on E/U/J/K/T/C, but can only be chained on E/U/J/K/T
             else {
                 window.location.href = "seedminer";
@@ -123,9 +125,12 @@ function redirect() {
             else if (minor.value < 15 && isO3DS) {
                 window.location.href = "installing-boot9strap-(safecerthax)";
             }
+            // new browserhax for latest version
+            /*
             else if (isN3DS) {
                 window.location.href = "homebrew-launcher-(super-skaterhax)";
             }
+            */
             // seedminer does still work for the latest version on E/U/J/K/T/C, but can only be chained on E/U/J/K/T
             else {
                 window.location.href = "seedminer";
