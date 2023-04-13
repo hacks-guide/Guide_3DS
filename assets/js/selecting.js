@@ -94,14 +94,13 @@ function redirect() {
             if (major.value < 11 || minor.value < 4) {
                 window.location.href = "installing-boot9strap-(soundhax)";
             }
-            else if (minor.value < 15 && isO3DS) {
-                window.location.href = "installing-boot9strap-(safecerthax)";
-            }
             // check for versions that are not cartupdated, cartupdated consoles cannot access the browser, see troubleshooting for solution
             else if (sslothable(minor.value, nver.value)) {
                 window.location.href = "installing-boot9strap-(ssloth-browser)";
             }
-            
+            else if (minor.value < 15 && isO3DS) {
+                window.location.href = "installing-boot9strap-(safecerthax)";
+            }
             // new browserhax for latest version
             /*
             else if (isN3DS) {
@@ -119,14 +118,13 @@ function redirect() {
             if (major.value < 11 || minor.value < 4) {
                 window.location.href = "installing-boot9strap-(soundhax)";
             }
-            else if (minor.value < 15 && isO3DS) {
-                window.location.href = "installing-boot9strap-(safecerthax)";
-            }
             // check for versions that are not cartupdated, cartupdated consoles cannot access the browser, see troubleshooting for solution
             else if (sslothablekor(minor.value, nver.value)) {
                 window.location.href = "installing-boot9strap-(ssloth-browser)";
             }
-            
+            else if (minor.value < 15 && isO3DS) {
+                window.location.href = "installing-boot9strap-(safecerthax)";
+            }
             // new browserhax for latest version
             /*
             else if (isN3DS) {
@@ -144,9 +142,6 @@ function redirect() {
             if (major.value < 11 || minor.value < 4) {
                 window.location.href = "installing-boot9strap-(soundhax)";
             }
-            else if (minor < 15 && isO3DS) {
-                window.location.href = "installing-boot9strap-(safecerthax)";
-            }
             // check for versions that are not cartupdated, cartupdated consoles cannot access the browser, see troubleshooting for solution
             // OTHERAPP BROKEN FOR TWN/CHN 11.4+ ATM
             /*
@@ -154,7 +149,9 @@ function redirect() {
                 window.location.href = "installing-boot9strap-(ssloth-browser)";
             }
             */
-            
+            else if (minor < 15 && isO3DS) {
+                window.location.href = "installing-boot9strap-(safecerthax)";
+            }
             else { //seedminer does still work for the latest version on E/U/J/K/T/C, but can only be chained on E/U/J/K/T
                 window.location.href = "seedminer-(twn)";
             }
@@ -165,9 +162,6 @@ function redirect() {
             if (major.value < 11 || minor.value < 4) {
                 window.location.href = "installing-boot9strap-(soundhax)";
             }
-            else if (minor < 15 && isO3DS) {
-                window.location.href = "installing-boot9strap-(safecerthax)";
-            }
             // check for versions that are not cartupdated, cartupdated consoles cannot access the browser, see troubleshooting for solution
             // OTHERAPP BROKEN FOR TWN/CHN 11.4+ ATM
             /*
@@ -175,6 +169,9 @@ function redirect() {
                 window.location.href = "installing-boot9strap-(ssloth-browser)";
             }
             */
+            else if (minor < 15 && isO3DS) {
+                window.location.href = "installing-boot9strap-(safecerthax)";
+            }
             // seedminer itself works on CHN. But no exploit *chain* supports CHN
             // so at this point there is no supported method
             else {
