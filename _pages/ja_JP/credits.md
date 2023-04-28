@@ -1,5 +1,5 @@
 ---
-title: "Credits"
+title: "謝辞"
 ---
 
 **Special thanks to Plailect, the original creator and maintainer of the guide!**
