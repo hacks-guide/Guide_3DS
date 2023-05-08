@@ -1,46 +1,46 @@
 {% capture technical_info %}
 <summary><em>Détails techniques (facultatif)</em></summary>
 
-To install boot9strap on your device, we derive your device's unique encryption key. To accomplish this, we use a tool called Seedminer to calculate the data encryption key (movable.sed) for your device.
+Pour installer boot9strap sur votre 3DS, nous dérivons la clé de chiffrement unique de votre console. Pour ce faire, nous utilisons un outil appelé Seedminer pour calculer la clé de chiffrement des données (movable.sed) de votre console.
 
-For information on how Seedminer works, see [this presentation](https://zoogie.github.io/web/34⅕c3).
+Pour plus d'informations sur le fonctionnement de Seedminer, regardez [cette présentation](https://zoogie.github.io/web/34⅕c3).
 
-This method uses a powerful graphics card to perform the calculations needed. A volunteer-run website is used for the purpose of assisting you with this method.
+Cette méthode utilise une carte graphique puissante pour effectuer les calculs nécessaires. Un site Web géré par des bénévoles est utilisé pour vous aider à utiliser cette méthode.
 
 {% endcapture %}
 <details>{{ technical_info | markdownify }}</details>
 {: .notice--info}
 
 
-### Section I - Updating the System
+### Section I - Mise à jour de la console
 
-In this section, you will update your system to the latest version, which is necessary for Seedminer.
+Dans cette section, vous mettrez à jour votre console vers la dernière version, nécessaire pour Seedminer.
 
 1. Mettez à jour votre console en vous rendant dans les Paramètres de la console, puis "Autres paramètres", puis tout à droite sur l'option "Mise à jour"
-  + La console peut afficher un message disant "Aucune mise à jour nécessaire" au lieu de faire une mise à jour. This is normal if you are already up to date; continue to the next section
-  + If this gives you an error, set both your DNS settings and Proxy settings to "Auto"
+  + La console peut afficher un message disant "Aucune mise à jour nécessaire" au lieu de faire une mise à jour. Ceci est normal si vous êtes déjà à jour ; passez à la section suivante.
+  + Si vous obtenez une erreur, réglez vos paramètres DNS et proxy sur « Automatique »
 
-### Section II - Prep Work
+### Section II - Préparatifs
 
-In this section, you will get the necessary details from your 3DS that are required to figure out your device's encryption key.
+Dans cette section, vous obtiendrez de votre 3DS les informations nécessaires pour déterminer la clé de chiffrement de votre console.
 
-Before following this section:
-+ Ensure that you have turned on your console with the SD card inserted at least once to generate the necessary data
-+ Ensure that your console is connected to the Internet (you should see a blue "Internet" indicator on the top-left corner of the HOME screen)
+Avant de suivre cette section :
++ Assurez-vous d'avoir allumé votre console avec la carte SD insérée au moins une fois pour générer les données nécessaires
++ Assurez-vous que votre console est connectée à Internet (vous devriez voir un indicateur bleu « Internet » dans le coin supérieur gauche du Menu HOME)
 {: .notice--info}
 
 1. Éteignez votre 3DS
 1. Insérez votre carte SD dans votre ordinateur
 1. Naviguez vers le dossier `Nintendo 3DS` de votre carte SD
-1. Copy the name of the 32-letter folder you see directly inside Nintendo 3DS
-  + This 32-letter name is system-specific and will be different for each console
-  + If you see multiple 32-letter folders, follow [these instructions](troubleshooting#seedminer)
-  + Vous pouvez ignorer le dossier `private` si vous l'avez
+1. Copiez le nom du dossier de 32 lettres que vous voyez directement à l'intérieur du dossier Nintendo 3DS
+  + Ce nom de 32 lettres est propre à votre console et sera différent pour chaque console
+  + Si vous voyez plusieurs dossiers de 32 lettres, suivez [ces instructions](troubleshooting#seedminer)
+  + Vous pouvez ignorer le dossier `private` si vous en avez un
 
 	![]({{ "/images/screenshots/seedminer/id0-example.png" | absolute_url }})
 	{: .notice--info}
-1. Paste your 32-letter folder name into [a document](/images/screenshots/seedminer/text-document.png) you can reference later
-  + This folder is known as your "ID0". Take note of this as this guide will refer to it as such later
+1. Collez votre nom de dossier de 32 lettres dans [un document](/images/screenshots/seedminer/text-document.png) auquel vous pourrez vous référer ultérieurement
+  + Ce dossier représente votre "ID0". Prenez note de cela car ce guide y fera référence plus tard
 1. Allumez votre console
   + Votre carte SD n'a pas besoin d'être insérée à ce stade
 1. Accédez à votre Liste d’amis (l'[icône avec un visage orange]({{"/images/friend-list-icon.png" | absolute_url}}) dans la rangée du haut de votre Menu HOME)
@@ -49,10 +49,10 @@ Before following this section:
 
 ### Section III - Seedminer
 
-In this section, you will use the Bruteforce Movable website to retrieve your device's encryption key in the form of `movable.sed`.
+Dans cette section, vous utiliserez le site Web Bruteforce Movable pour récupérer la clé de chiffrement de votre console sous la forme d'un fichier `movable.sed`.
 
-1. Open [Bruteforce Movable](https://seedminer.hacks.guide/) on your computer
-  + If the site isn't working, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you
+1. Ouvrez [Bruteforce Movable](https://seedminer.hacks.guide/) sur votre ordinateur
+  + Si le site ne fonctionne pas, rejoignez [Nintendo Homebrew sur Discord](https://discord.gg/MWxPgEp) et demandez (en anglais) que quelqu'un vous aide
 1. Enter your device's Friend Code (with no spaces or dashes) into the "Your friend code" field
 1. Paste your device's 32 character long folder name into the "Your ID0" field
   + Do not attempt to enter the ID0 manually, as it is easy to make a mistake. Ensure the ID0 is entered correctly by copying and pasting it from where you saved it in the previous section
