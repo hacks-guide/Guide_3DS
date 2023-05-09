@@ -53,7 +53,7 @@ Dans cette section, vous copierez les fichiers nécessaires pour suivre le reste
 1. Créez un dossier nommé `payloads` dans le dossier `luma` sur votre carte SD, si il n’existe pas déjà
 1. Copiez le fichier `GodMode9.firm` de l'archive `.zip` de GodMode9 dans le dossier `/luma/payloads/` sur votre carte SD
 1. Copiez le dossier `gm9` de GodMode9 `.zip` à la racine de votre carte SD
-1. Réinsérez votre carte SD dans votre 3DS
+1. Réinsérez votre carte SD dans votre console
 1. Allumez votre console
 
 Ces captures d'écran montrent l'arborescence de la carte SD requise pour suivre cette page. Il est possible que vous ayez des fichiers ou des dossiers supplémentaires sur votre carte SD, selon votre configuration précédente ou la méthode que vous avez suivie.
@@ -80,20 +80,20 @@ Dans cette section, vous allez temporairement remplacer Mode téléchargement pa
 
 #### Section IV - Configuration RTC et DSP
 
-In this section, you will sync your 3DS internal clock with the actual time and dump the sound firmware (which is necesssary for some homebrew software to use sound properly).
+Dans cette section, vous synchroniserez l'horloge interne de votre 3DS avec l'heure réelle et allez dumper le firmware du son (ce qui est nécessaire pour que certains logiciels homebrew utilisent correctement le son).
 
 1. Appuyez simultanément sur (L) + (Bas sur la croix directionnelle) + (Select) pour ouvrir le menu Rosalina
 1. Sélectionnez "Miscellaneous options"
-1. Select "Dump DSP firmware"
+1. Sélectionnez "Dump DSP firmware"
 1. Appuyez sur (B) pour continuer
-1. Select "Nullify user time offset"
+1. Sélectionnez "Nullify user time offset"
 1. Appuyez sur (B) pour continuer
 1. Appuyez sur (B) pour revenir au menu principal de Rosalina
 1. Appuyez sur (B) pour quitter le menu Rosalina
 
-#### Section V - Installing CIAs
+#### Section V - Installation des CIAs
 
-In this section, you will install several useful homebrew applications to HOME Menu.
+Dans cette section, vous installerez plusieurs applications homebrew utiles dans le Menu HOME.
 
 1. Lancez FBI que vous trouverez dans la liste des homebrews
 1. Naviguez vers `SD` -> `cias`
@@ -103,40 +103,40 @@ In this section, you will install several useful homebrew applications to HOME M
 
 #### Section VI - CTRNAND Luma3DS
 
-In this section, you will use a script to copy some of Luma3DS's files to internal memory so that they can be accessed, even without an SD card inserted.
+Dans cette section, vous utiliserez un script pour copier certains fichiers de Luma3DS vers la mémoire interne afin qu'ils soient accessibles, même sans carte SD insérée.
 
 1. Éteignez votre console
 1. Appuyez sur le bouton (START) et maintenez le enfoncé tout en allumant votre console. Ceci lancera GodMode9
   + Si votre console ne démarre pas sur GodMode9, assurez-vous que le fichier `GodMode9.firm` est présent dans `/luma/payloads/` et que `payloads` est correctement écrit
 1. Si vous êtes invité à créer une sauvegarde de fichiers essentiels, appuyez sur (A) pour le faire, puis appuyez sur (A) pour continuer une fois terminé
 1. Si vous êtes invité à régler la date et l'heure du RTC, appuyez sur (A) pour le faire, puis réglez la date et l'heure, puis appuyez sur (A) pour continuer
-1. Appuyez sur (Home) pour faire apparaître le menu d’actions (action menu)
+1. Appuyez sur (HOME) pour faire apparaître le menu d’actions
 1. Sélectionnez "Scripts"
 1. Sélectionnez "GM9Megascript"
 1. Sélectionnez "Scripts from Plailect's Guide"
 1. Sélectionnez "Setup Luma3DS to CTRNAND"
-1. Lorsque vous êtes invité, appuyez sur (A)
+1. Lorsque vous y êtes invité, appuyez sur (A)
 1. Appuyez sur (A) pour autoriser l'écriture sur votre SysNAND, puis entrez la combinaison de touches demandée
 1. Appuyez sur (A) pour continuer
 
 #### Section VII - Nettoyage de la carte SD
 
-In this section, you will use a script to remove some unnecessary files from your SD card.
+Dans cette section, vous utiliserez un script pour supprimer des fichiers inutiles de votre carte SD.
 
 1. Sélectionnez "Cleanup SD Card"
-1. Lorsque vous êtes invité, appuyez sur (A)
+1. Lorsque vous y êtes invité, appuyez sur (A)
 1. Appuyez sur (A) pour continuer
 1. Appuyez sur (B) pour revenir au menu principal
 
 #### Section VIII - Sauvegarde des fichiers essentiels
 
-In this section, you will make backups of files that can be used to recover from software bricks or to recover data.
+Dans cette section, vous ferez des sauvegardes de fichiers qui peuvent être utilisés pour réparer un brick logiciel ou pour récupérer des données.
 
 1. Sélectionnez "Backup Options"
 1. Sélectionnez "SysNAND Backup"
 1. Appuyez sur (A) pour confirmer
   + Ce processus prendra un certain temps
-  + If you get an error, look for your issue in the [troubleshooting guide](troubleshooting#finalizing-setup)
+  + En cas d'erreur, recherchez votre problème dans le [guide de dépannage](troubleshooting#finalizing-setup)
 1. Appuyez sur (A) pour continuer
 1. Appuyez sur (B) pour revenir au menu principal
 1. Sélectionnez "Exit"
@@ -146,41 +146,41 @@ In this section, you will make backups of files that can be used to recover from
 1. Sélectionnez "Copy to 0:/gm9/out"
   + Si vous voyez "Destination already exists", appuyez sur (A) sur "Overwrite file(s)"
 1. Appuyez sur (A) pour continuer
-1. Appuyez sur (Home) pour faire apparaître le menu d’actions (action menu)
+1. Appuyez sur (HOME) pour faire apparaître le menu d’actions
 1. Sélectionnez "Poweroff system" pour éteindre votre appareil
 1. Insérez votre carte SD dans votre ordinateur
-1. Copy `<date>_<serialnumber>_sysnand_##.bin`, `<date>_<serialnumber>_sysnand_##.bin.sha`, and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
-  + Copy these backups to multiple locations (such as online file storage, an external hard drive, etc.)
+1. Copiez `<date>_<serialnumber>_sysnand_##.bin`, `<date>_<serialnumber>_sysnand_##.bin.sha`, et `essentiel.exefs` du dossier `/gm9/out/` de votre carte SD vers un emplacement sûr sur votre ordinateur
+  + Copiez ces sauvegardes vers plusieurs emplacements (comme un cloud, un disque dur externe, etc.)
   Ces sauvegardes vous sauveront d'un brick et/ou vous aideront à récupérer des fichiers de l'image de la NAND si quelque chose se passe mal plus tard
 1. Supprimez `<date>_<serialnumber>_sysnand_##.bin` et `<date>_<serialnumber>_sysnand_##.bin.sha` du dossier `/gm9/out/` de votre carte SD après l'avoir copié
-  + The other backup files are negligible in size and may be kept on your SD card for ease of access
-1. If you have it, copy the `/luma/backups/` folder on your SD card to a safe location on your computer
-1. Réinsérez votre carte SD dans votre 3DS
+  + Les autres fichiers de sauvegarde sont négligeables en taille et peuvent être conservés sur votre carte SD pour un accès facilité
+1. Si vous l'avez, copiez le dossier `/luma/backups/` de votre carte SD vers un endroit sûr sur votre ordinateur
+1. Réinsérez votre carte SD dans votre console
 1. Allumez votre console
 
 ___
 
-You're done! Custom firmware is now fully configured on your device.
+Vous avez terminé! Le custom firmware est maintenant entièrement installé et configuré sur votre console.
 {: .notice--success}
 
-Hello! We're looking for feedback on the overall experience of following our guide. If you'd like to help out, check out the survey [here](https://forms.gle/vZNoc4QLCz5MEXCK7) (only available in English). Thanks!
+Bonjour ! Nous cherchons à obtenir des commentaires sur l'expérience globale vécue en suivant notre guide. Si vous souhaitez nous aider, consultez le sondage [ici](https://forms.gle/vZNoc4QLCz5MEXCK7) (uniquement disponible en anglais). Merci !
 {: .notice--info}
 
-### Information and Notes
+### Informations et notes
 
 {% capture notice-6 %}
-Here are some key combos that you should know:
+Voici quelques combinaisons de touches que vous devriez connaître :
 
-- Holding (Select) on boot will launch the Luma3DS configuration menu.
-- Holding (Start) on boot will launch GodMode9, or if you have multiple payloads in `/luma/payloads/`, the Luma3DS chainloader.
-- By default, pressing (Left Shoulder) + (Down D-Pad) + (Select) while in 3DS mode will open the Rosalina menu, where you can check system information, take screenshots, enable cheats, and more. This can be changed from the Rosalina menu.
-- Holding (Start) + (Select) + (X) on boot will make the notification LED show a color for debug purposes. See the [changelog](https://github.com/SciresM/boot9strap/releases/tag/1.4) for a list.
+- Maintenir (Select) au démarrage lancera le menu de configuration de Luma3DS.
+- Maintenir (Start) au démarrage lancera GodMode9, ou si vous avez plusieurs payloads dans `/luma/payloads/`, le chainloader Luma3DS.
+- Par défaut, appuyez sur (L) + (Bas sur la croix directionnelle) + (Select) en mode 3DS pour ouvrir le menu Rosalina, où vous pouvez vérifier les informations de la console, prendre des captures d'écran, activer des codes de triche, etc. Cela peut être modifié à partir du menu Rosalina.
+- Maintenir (Start) + (Select) + (X) au démarrage fera apparaître une couleur dans la LED de notification à des fins de débogage. Pour une liste de ces combinaisons, lisez le [changelog](https://github.com/SciresM/boot9strap/releases/tag/1.4).
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
 
-See [here](https://3ds.eiphax.tech/tips.html) for some suggestions on things to do with custom firmware.
+Voir [ici](https://3ds.eiphax.tech/tips.html) pour quelques suggestions sur les choses à faire avec le custom firmware.
 {: .notice--info}
 
-For information on using GodMode9's various features, check out the [GodMode9 Usage](godmode9-usage) and [Dumping Titles and Game Cartridges](dumping-titles-and-game-cartridges) pages.
+Pour plus d'informations sur l'utilisation des différentes fonctionnalités de GodMode9, consultez les pages [Utilisation de GodMode9](godmode9-usage) et [Dumper des titres et des cartes de jeu](dumping-titles-and-game-cartridges).
 {: .notice--info}
