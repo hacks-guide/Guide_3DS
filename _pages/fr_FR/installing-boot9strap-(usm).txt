@@ -7,13 +7,13 @@ title: "Installation de boot9strap (USM)"
 {% capture technical_info %}
 <summary><em>Détails techniques (facultatif)</em></summary>
 
-In order to exploit the SAFE_MODE firmware of our system, we need to inject an exploited WiFi profile.
+Afin d'exploiter le firmware SAFE_MODE de votre console, nous devons injecter un profil Wi-Fi exploité.
 
 We can do this using an existing exploit, BannerBomb3.
 
 To accomplish this, we use your system's encryption key (movable.sed) to build a DSiWare backup that exploits the system in order to inject the exploited WiFi profile into your connections list.
 
-Once the WiFi profile has been injected, we will use SAFE_MODE, which is a recovery feature present on all 3DS consoles, to activate the exploited WiFi profile.
+Une fois le profil Wi-Fi injecté, nous utiliserons SAFE_MODE, qui est une fonctionnalité de récupération présente sur toutes les consoles 3DS, pour activer le profil Wi-Fi exploité.
 
 For a more technical explanation, see the following links for information on the BannerBomb3 and unSAFE_MODE exploits: [BannerBomb3](https://github.com/zoogie/Bannerbomb3), [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/).
 
@@ -33,7 +33,7 @@ If your (Right/Left Shoulder), (D-Pad Up), or (A) buttons do not work, you will 
 * La dernière version de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (téléchargement direct)
 * La dernière version de [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (téléchargement direct)
 * La dernière version de [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (le fichier `.zip' de Luma3DS)
-* [usm.bin](https://github.com/zoogie/unSAFE_MODE/releases/download/v1.3/usm.bin) (direct download)
+* [usm.bin](https://github.com/zoogie/unSAFE_MODE/releases/download/v1.3/usm.bin) (téléchargement direct)
 
 
 #### Section I - Préparatifs
@@ -41,7 +41,7 @@ If your (Right/Left Shoulder), (D-Pad Up), or (A) buttons do not work, you will 
 In this section, you will copy the files needed to trigger the unSAFE_MODE exploit onto your device's SD card.
 
 1. Your SD card should be inserted in your computer
-1. Copy `usm.bin` to the root of your SD card
+1. Copiez `usm.bin` à la racine de votre carte SD
 1. Copiez `boot.firm` et `boot.3dsx` depuis Luma3DS `.zip`vers la racine de votre carte SD
   + La racine de la carte SD représente le répertoire initial de la carte SD où vous pouvez voir le dossier Nintendo 3DS, mais ce n'est pas à l'intérieur de ce dernier
 1. Créez un dossier à la racine de votre carte SD nommé `boot9strap`
@@ -56,13 +56,13 @@ In this section, you will copy the files needed to trigger the unSAFE_MODE explo
 
 #### Section II - BannerBomb3
 
-In this section, you will trigger the BannerBomb3 exploit using the DSiWare Management menu, which can be used to overwrite your Wi-Fi slots with hacked data. Your Wi-Fi connection settings will be temporarily overwritten while the exploit is active.
+In this section, you will trigger the BannerBomb3 exploit using the DSiWare Management menu, which can be used to overwrite your Wi-Fi slots with hacked data. Vos paramètres de connexion Wi-Fi seront temporairement remplacés pendant que l'exploit sera actif.
 
 1. Retirez la carte SD de votre ordinateur et réinsérez-là dans votre 3DS
 1. Allumez votre console
 1. Lancez les Paramètres de la console
-1. Navigate to `Data Management` -> `DSiWare`-> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
-  + Your device should show the BB3 multihax menu
+1. Naviguez vers `Gestion des données` -> `DSiWare`-> `Carte SD` ([image](/images/screenshots/bb3/dsiware-management.png))
+  + Votre console devrait afficher le menu BB3 multihax
   + If this step causes your device to crash, [follow this troubleshooting guide](troubleshooting#bannerbomb3)
   + If the BB3 multihax menu says "cfw installed already", you already have custom firmware and should continue from [here](checking-for-cfw)
 1. Use the D-Pad to navigate and press the (A) button to select "Install unSAFE_MODE"
@@ -84,10 +84,10 @@ In this section, you will trigger the BannerBomb3 exploit using the DSiWare Mana
 In this section, you will trigger the BannerBomb3 exploit a second time so that you can restore the Wi-Fi connection slots that were overwritten in Section II.
 
 1. Lancez les Paramètres de la console
-1. Navigate to `Data Management` -> `DSiWare`-> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
+1. Naviguez vers `Gestion des données` -> `DSiWare`-> `Carte SD` ([image](/images/screenshots/bb3/dsiware-management.png))
 1. Use the D-Pad to navigate and press the (A) button to select "Uninstall unSAFE_MODE"
-  + Your device will automatically reboot
-1. Éteignez votre 3DS
+  + Votre console redémarrera automatiquement
+1. Éteignez votre console
 1. Insérez votre carte SD dans votre ordinateur
 1. Naviguez vers `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` sur votre carte SD
 1. Delete `F00D43D5.bin` from your Nintendo DSiWare folder and from your computer. Ce fichier ne sera plus nécessaire
