@@ -58,75 +58,75 @@ Dans cette section, vous allez configurer votre 3DS source (la 3DS avec un custo
 1. Insérez la carte SD de la **3DS source** dans votre ordinateur
 1. Copiez le fichier `boot.firm` de Luma 3GX Loader Edition à la racine de la carte SD de la **3DS source**, en remplaçant tout fichier existant
   + La racine de la carte SD représente le répertoire initial de la carte SD où vous pouvez voir le dossier Nintendo 3DS, mais ce n'est pas à l'intérieur de ce dernier
-1. Copy kartdlphax's `plugin.3gx` to the following directory on the **source 3DS**'s SD card, depending on the **region of your copy of Mario Kart 7**:
+1. Copiez également le fichier `plugin.3gx` dans le répertoire indiqué ci-dessous (**en fonction de la région de votre copie de Mario Kart 7**):
   - USA: `luma/plugins/0004000000030800`
   - EUR: `luma/plugins/0004000000030700`
-  - JPN: `luma/plugins/0004000000030600`
-  - Create the `plugins` and `00040000...` folders if they do not already exist
-1. Eject the SD card and put it in the **source 3DS**
+  - JAP: `luma/plugins/0004000000030600`
+  - Créez les dossiers `plugins` et `00040000...` s'il n'existent pas déjà
+1. Retirez la carte SD de l'ordinateur et réinsérez-la dans la **3DS source**
 
-#### Section III - Prep Work (target 3DS)
+#### Section III - Préparatifs (3DS cible)
 
-In this section, you will copy the files needed to trigger the unSAFE_MODE exploit onto your target 3DS (the 3DS that you are trying to modify)'s SD card.
+Dans cette section, vous copierez les fichiers nécessaires pour déclencher l'exploit unSAFE_MODE sur votre 3DS cible (la 3DS que vous essayez de modifier) la carte SD.
 
-1. Insert the SD card of your **target 3DS** in your computer
-1. Copy `boot.firm` and `boot.3dsx` from the standard Luma3DS `.zip` to the root of your SD card
-1. Créez un dossier à la racine de votre carte SD nommé `boot9strap`
+1. Insérez la carte SD de la **3DS cible** dans votre ordinateur
+1. Copiez les fichiers `boot.firm` et `boot.3dsx` de l'archive `.zip` de la version standard de Luma3DS vers la racine de votre carte SD
+1. Créez un dossier nommé `boot9strap` à la racine de votre carte SD
 1. Copiez `boot9strap.firm` et `boot9strap.firm.sha` depuis le fichier ".zip" de boot9strap vers le dossier `/boot9strap/` sur votre carte SD
 1. Copiez `SafeB9SInstaller.bin` depuis le fichier `.zip` de SafeB9SInstaller à la racine de votre carte SD
-1. Copy `usm.bin` from the unSAFE_MODE `.zip` to the root of your SD card
-1. Create a folder called `3ds` on the root of your SD card
-1. Copy the `slotTool` folder from the unSAFE_MODE `.zip` to the `3ds` folder on your SD card
-1. Eject the SD card and put it in the **target 3DS**
+1. Copiez `usm.bin` de l'archive unSAFE_MODE `.zip` vers la racine de votre carte SD
+1. Créez un dossier nommé `3ds` à la racine de votre carte SD
+1. Copiez le dossier `slotTool` du fichier `.zip` unSAFE_MODE vers le dossier `3ds` de votre carte SD
+1. Éjectez la carte SD et réinsérez-la dans la **3DS cible**
 
 #### Section IV - kartdlphax
 
-In this section, you will use Download Play to transfer the exploit data from the source 3DS to the target 3DS, which can be used to overwrite your Wi-Fi slots with hacked data. Vos paramètres de connexion Wi-Fi seront temporairement remplacés pendant que l'exploit sera actif.
+Dans cette section, vous utiliserez Mode téléchargement pour transférer les données d'exploit de la 3DS source vers la 3DS cible, qui peut être utilisé pour remplacer vos emplacements Wi-Fi par des données hackées. Vos paramètres de connexion Wi-Fi seront temporairement remplacés pendant que l'exploit sera actif.
 
-1. Power on the **source 3DS**
-  - If you are prompted to set up Luma3DS, just press START to save the configuration
-1. Once in the HOME Menu, press (Left Shoulder) + (Down D-Pad) + (Select) to bring up the Rosalina menu
-1. Select "Enable plugin loader"
+1. Allumez la **3DS source**
+  - S'il vous est demandé de configurer Luma3DS, appuyez simplement sur START pour sauvegarder la configuration actuelle
+1. Une fois dans le Menu HOME, appuyez sur (L) + (Bas sur la croix directionnelle) + (Select) pour afficher le menu Rosalina
+1. Sélectionnez "Enable plugin loader"
 1. Appuyez sur (B) pour quitter le menu Rosalina
-1. Launch Mario Kart 7
-  - Ensure that wireless connectivity is enabled
-1. Navigate to `Local Multiplayer`. A menu should pop up
-  - If the screen freezes, hold the power button for fifteen seconds to force power off your device, then try again
-  - If you have launched kartdlphax previously, the last selected settings will be loaded. If they are correct, select `Use settings` and skip the next 3 steps. If they are incorrect, select `Change settings` and proceed.
-1. Select your **target 3DS** device type (Old 3DS family or New 3DS family)
-1. Select the exploit type `3DS ROP xPloit Injector`
-1. A confirmation menu will show up. If the settings shown on the top screen are correct, select `Use settings`
-  - If the settings are not correct, press `Change settings` and modify them accordingly
-1. Select `Create Group`
-  - If the source 3DS freezes at this point and you are using a cartridge, try [installing the cartridge to the system](dumping-titles-and-game-cartridges#installing-a-game-cartridge-directly-to-the-system)
-1. Power on the **target 3DS**
-  - Ensure that wireless connectivity is enabled
-1. On the **target 3DS**, open the Download Play application (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"}), then select "Nintendo 3DS"
-1. Join the group created by the **source 3DS**
-1. Select "Start" on the **source 3DS** once it has detected the **target 3DS**
-1. Once multiplayer has loaded, navigate to `Grand Prix` -> `50cc` -> (any driver) -> `Mushroom Cup` -> `OK`
-1. Wait a while (a percentage should be displayed on the **source 3DS**)
-1. If the exploit was successful, the **target 3DS** will have booted into the 3DS ROP xPloit Injector
-  - If the exploit was not successful, power off the **source 3DS** and **target 3DS** and start again from the beginning of `Section III - kartdlphax`
-1. Press (X) to inject unSAFE_MODE
-1. If the injection was successful, the screen will turn green and the **target 3DS** will automatically power off
-  + If the screen turns red, power off the target 3DS and start again from the beginning of `Section III - kartdlphax`. If this doesn't work, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp))
+1. Lancez Mario Kart 7
+  - Vérifiez que la connexion sans-fil de la console est activée
+1. Naviguez vers `Multijoueur local`. Un menu devrait apparaître
+  - Si l'écran se bloque, maintenez le bouton POWER pendant quinze secondes pour forcer la mise hors tension de votre console, puis réessayez
+  - Si vous avez lancé kartdlphax précédemment, les derniers paramètres sélectionnés seront chargés. S'ils sont corrects, sélectionnez `Use settings` et sautez les 3 prochaines étapes. S'ils sont incorrects, sélectionnez `Change settings` et continuez.
+1. Sélectionnez votre type de console **3DS cible** (famille Old 3DS ou famille New 3DS)
+1. Sélectionnez le type d'exploit `3DS ROP xPloit Injector`
+1. Un menu de confirmation s'affichera. Si les paramètres affichés sur l'écran supérieur sont corrects, sélectionnez `Use settings`
+  - Si les paramètres ne sont pas corrects, appuyez sur `Change settings` et modifiez-les en conséquence
+1. Sélectionnez `Créer un groupe`
+  - Si la 3DS source se fige à ce stade et que vous utilisez une carte de jeu, essayez [d'installer une carte de jeu directement sur la console](dumping-titles-and-game-cartridges#installing-a-game-cartridge-directly-to-the-system)
+1. Allumez la **3DS cible**
+  - Vérifiez que la connexion sans-fil de la console est activée
+1. Sur la **3DS cible**, ouvrez l'application Mode téléchargement (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"}), puis sélectionnez "Nintendo 3DS"
+1. Rejoignez le groupe de la **3DS source**
+1. Une fois que la **3DS cible** a été détectée par la **3DS source**, sélectionnez "Commencer" sur celle-ci
+1. Une fois le multijoueur chargé, accédez à `Grand Prix` -> `50cc` -> (n'importe quel pilote) -> `Coupe champignon` -> `OK`
+1. Attendez un moment (un pourcentage devrait s'afficher sur la **3DS source**)
+1. Si l'exploit a réussi, la **3DS cible** aura démarré dans l'injecteur 3DS ROP xPloit
+  - Si l'exploit n'a pas réussi, éteignez la **3DS source** et la **3DS cible** et recommencez à partir du début de `Section III - kartdlphax`
+1. Appuyez sur (X) pour injecter unSAFE_MODE
+1. Si l'injection a réussi, l'écran deviendra vert et la **3DS cible** s'éteindra automatiquement
+  + Si l'écran devient rouge, éteignez la 3DS cible et recommencez depuis le début de la `Section III - kartdlphax`. Si cela ne fonctionne pas, demandez de l'aide (en anglais) sur le [serveur Discord de Nintendo Homebrew](https://discord.gg/MWxPgEp))
 
-You will **not** need to use your **source 3DS** to complete any further steps on this guide. Any further steps should only be completed on the **target 3DS**.
+Vous **n'aurez plus besoin** de la **3DS source** pour continuer à suivre le guide. Toute autre étape ne doit être effectuée que sur la **3DS cible**.
 {: .notice--info}
 
 #### Section V - unSAFE_MODE
 
 {% include_relative include/exploit-usm.txt %}
 
-#### Section VI - Installing boot9strap
+#### Section VI - Installation de boot9strap
 
 {% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
 {%- include_relative include/configure-luma3ds.txt %}
 
 {% include_relative include/luma3ds-installed-note.txt %}
 
-#### Section VII - Restoring WiFi Configuration Profiles
+#### Section VII - Restauration des profils de configuration Wi-Fi
 
 {% include_relative include/remove-usm-slottool.txt %}
 
