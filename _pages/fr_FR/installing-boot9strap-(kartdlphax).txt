@@ -9,13 +9,13 @@ title: "Installation de boot9strap (kartdlphax)"
 
 Afin d'exploiter le firmware SAFE_MODE de votre console, nous devons injecter un profil Wi-Fi exploité.
 
-To accomplish this, we can use the Download Play functionality of the game Mario Kart 7, using a 3DS with custom firmware already installed along with a custom game plugin.
+Pour cela, nous pouvons utiliser le mode téléchargement du jeu Mario Kart 7 en utilisant une 3DS avec un custom firmware déjà installé avec un plugin de jeu personnalisé.
 
-This custom plugin will send a hacked payload to an unhacked console, which then exploits the system in order to inject the exploited WiFi profile into your connections list.
+Ce plugin personnalisé enverra un payload hacké à une console non hackée, qui exploite ensuite le système afin d'injecter le profil Wi-Fi exploité dans votre liste de connexions.
 
 Une fois le profil Wi-Fi injecté, nous utiliserons SAFE_MODE, qui est une fonctionnalité de récupération présente sur toutes les consoles 3DS, pour activer le profil Wi-Fi exploité.
 
-For a more technical explanation, see the following links for information on the kartdlphax and unSAFE_MODE exploits: [kartdlphax](https://github.com/PabloMK7/kartdlphax), [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/).
+Pour une explication plus technique, voir les liens suivants pour des informations sur les exploits kartdlphax et unSAFE_MODE : [kartdlphax](https://github.com/PabloMK7/kartdlphax), [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/).
 
 {% endcapture %}
 <details>{{ technical_info | markdownify }}</details>
@@ -26,7 +26,7 @@ For a more technical explanation, see the following links for information on the
 Pour suivre ces instructions, vous aurez besoin de ceci :
 
 - Une seconde 3DS avec un firmware custom (la **3DS source**) qui est la même région que la 3DS que vous essayez de modifier (la **3DS cible**)
-  - The consoles must be USA, JPN, or EUR region consoles
+  - Les consoles doivent être des consoles USA, JPN, ou EUR
 - Une copie physique ou numérique de Mario Kart 7 qui est de la même région que les deux consoles
 - Une carte SD pour les deux consoles
 
@@ -34,29 +34,29 @@ Pour suivre ces instructions, vous aurez besoin de ceci :
 
 Sur la **3DS source** (la 3DS avec un firmware custom) :
 
-* The latest release of [kartdlphax](https://github.com/PabloMK7/kartdlphax/releases/latest) (`plugin.3gx`)
-* The latest release of [Luma3DS 3GX Loader Edition](https://github.com/PabloMK7/Luma3DS_3GX/releases/latest) (`boot.firm`)
+* La dernière version de [kartdlphax](https://github.com/PabloMK7/kartdlphax/releases/latest) (`plugin.3gx`)
+* La dernière version de [Luma3DS 3GX Loader Edition](https://github.com/PabloMK7/Luma3DS_3GX/releases/latest) (`boot.firm`)
 
 Sur la **3DS cible** (la 3DS que vous essayez de modifier):
 
 * La dernière version de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (téléchargement direct)
 * La dernière version de [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (téléchargement direct)
-* The latest release of [standard Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
-* The latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest) (the RELEASE `.zip` file)
+* La dernière version [standard de Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (le fichier Luma3DS `.zip`)
+* La dernière version de [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest) (le fichier RELEASE `.zip`)
 
-#### Section I - Hardware Button Check (target 3DS)
+#### Section I - Contrôle matériel des boutons (3DS cible)
 
 {% include_relative include/safemodecheck.txt %}
 
-If you do not boot into Safe Mode, the system update menu after multiple attempts, you cannot follow this method. Si c'est le cas, rejoignez [Nintendo Homebrew sur Discord](https://discord.gg/MWxPgEp) et demandez de l'aide, en anglais.
+Si vous ne démarrez pas en mode sans échec, le menu de mise à jour de la console après plusieurs tentatives, vous ne pouvez pas suivre cette méthode. Si c'est le cas, rejoignez [Nintendo Homebrew sur Discord](https://discord.gg/MWxPgEp) et demandez de l'aide, en anglais.
 {: .notice--warning}
 
-#### Section II - Prep Work (source 3DS)
+#### Section II - Préparatifs (3DS source)
 
-In this section, you will set up your source 3DS (the 3DS with custom firmware) for delivery of the exploit data to the target 3DS.
+Dans cette section, vous allez configurer votre 3DS source (la 3DS avec un custom firmware) pour l'envoi des données d'exploit à la 3DS cible.
 
-1. Insert the SD card of your **source 3DS** in your computer
-1. Copy Luma 3GX Loader Edition's `boot.firm` to the root of the **source 3DS**'s SD card, replacing any existing file
+1. Insérez la carte SD de la **3DS source** dans votre ordinateur
+1. Copiez le fichier `boot.firm` de Luma 3GX Loader Edition à la racine de la carte SD de la **3DS source**, en remplaçant tout fichier existant
   + La racine de la carte SD représente le répertoire initial de la carte SD où vous pouvez voir le dossier Nintendo 3DS, mais ce n'est pas à l'intérieur de ce dernier
 1. Copy kartdlphax's `plugin.3gx` to the following directory on the **source 3DS**'s SD card, depending on the **region of your copy of Mario Kart 7**:
   - USA: `luma/plugins/0004000000030800`
