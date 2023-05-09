@@ -6,48 +6,47 @@ title: "Finalisation de l'installation"
 
 ### Lecture requise
 
-The file `boot.firm` is what is launched by boot9strap itself after it finishes loading off of NAND. In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) to patch the device, allowing it to run homebrew software.
+Le fichier `boot.firm` est exécuté par boot9strap lui-même, après avoir terminé le chargement de la NAND. Dans ce cas, nous utilisons Luma3DS de [LumaTeam](https://github.com/LumaTeam/) pour patcher la console, lui permettant d'exécuter des homebrew.
 
-On this page, we will make critical system file backups and install the following homebrew programs:
+Sur cette page, nous ferons des sauvegardes des fichiers système critiques et installerons les homebrew suivants :
 
-+  **FBI** *(installs CIA formatted applications)*
++ **FBI** *(installe les applications au format CIA)*
 + **Anemone3DS** *(Permet d'installer des thèmes personnalisés)*
 + **Checkpoint** *(Sauvegarde et restaure des fichiers de sauvegarde pour les jeux NDS et 3DS) *
-+  **Universal-Updater** *(a homebrew app store for downloading homebrew from the 3DS over Wi-Fi)*
-+  **GodMode9** *(Programme multifonction qui peut effectuer des opérations relatives à la NAND et aux cartouches)*
++ **Universal-Updater** *(une boutique d'applications homebrew pour télécharger des homebrews depuis la 3DS via Wi-Fi)*
++  **GodMode9** *(Programme multifonction qui peut effectuer des opérations relatives à la NAND et aux cartes de jeu)*
 + **Homebrew Launcher Loader** *(lance le Homebrew Launcher) *
 
-It is not recommended to skip downloading any of these applications, as many of them will be used later on this page. At the end of this page, your SD card will be cleaned up by removing unnecessary installation files.
+Il n'est pas recommandé d'ignorer le téléchargement de ces applications, car nombre d'entre elles seront utilisées plus tard sur cette page. À la fin de cette page, votre carte SD sera nettoyée en supprimant les fichiers d'installation inutiles.
 {: .notice--warning}
 
 ### Notes de compatibilité
 
-If your **New 3DS** was on version 2.1.0 before following this guide, you should [restore your NAND backup](godmode9-usage#restoring-a-nand-backup) before continuing. This likely doesn't apply to you unless you were following this guide in 2017.
+Si votre **New 3DS** était en version 2.1.0 avant de suivre les instructions ce guide, vous devriez [restaurer votre sauvegarde NAND](godmode9-usage#restoring-a-nand-backup) avant de continuer. Cela ne s'applique probablement pas à vous à moins que vous ne suiviez ce guide en 2017.
 {: .notice--warning}
 
-If your previous CFW setup was EmuNAND-based and you wish to move the contents of your EmuNAND/RedNAND to SysNAND, follow [Move EmuNAND](move-emunand) before following this page. If you don't know what an EmuNAND is, this doesn't apply to you.
+Si votre configuration CFW précédente était basée sur EmuNAND et que vous souhaitez déplacer le contenu de votre EmuNAND/RedNAND vers SysNAND, suivez [Transférer votre EmuNAND](move-emunand) avant de suivre cette page. Si vous ne savez pas ce qu'est une EmuNAND, cela ne s'applique pas à vous.
 {: .notice--info}
 
 ## Ce dont vous avez besoin
 
-* The latest release of [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) (the `.cia` file)
-* The v3.7.4 release of [Checkpoint](https://github.com/BernardoGiordano/Checkpoint/releases/tag/v3.7.4) (the `.cia` file)
-* The latest release of [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest) (the `.cia` file)
-* The latest release of [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest) (the `.cia` file)
-* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) (**both** the `.cia` and `.3dsx` files)
-* La dernière version de [GodMode9]
-(https://github.com/d0k3/GodMode9/releases/latest) (le fichier GodMode9 `.zip`)
+* La dernière version d'[Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) (le fichier `.cia`)
+* La version 3.7.4 de [Checkpoint](https://github.com/BernardoGiordano/Checkpoint/releases/tag/v3.7.4) (le fichier `.cia`)
+* La dernière version du [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest) (le fichier `.cia`)
+* La dernière version de [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest) (le fichier `.cia`)
+* La dernière version de [FBI](https://github.com/Steveice10/FBI/releases/latest) (**les deux fichiers** : `.cia` et `.3dsx`)
+* La dernière version de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (le fichier GodMode9 `.zip`)
 
 ### Instructions
 
 #### Section I - Préparatifs
 
-In this section, you will copy the files necessary to follow the rest of the instructions on this page.
+Dans cette section, vous copierez les fichiers nécessaires pour suivre le reste des instructions de cette page.
 
-1. Éteignez votre 3DS
+1. Éteignez votre console
 1. Insérez votre carte SD dans votre ordinateur
 1. Créez un dossier nommé `cias` à la racine de votre carte SD si celui ci n'existe pas
-1. Copy all of the CIA files (`Anemone3DS.cia`, `Checkpoint.cia`, `FBI.cia`, `Homebrew_Launcher.cia`, and `Universal-Updater.cia`) to the `/cias/` folder on your SD card
+1. Copiez tous les fichiers CIA (`Anemone3DS.cia`, `Checkpoint.cia`, `FBI.cia`, `Homebrew_Launcher.cia` et `Universal-Updater.cia`) dans le dossier `/cias/` de votre carte SD
 1. Créez un dossier nommé `3ds` à la racine de votre carte SD si celui ci n'existe pas
     + Ce dossier stocke les applications homebrew et leurs données; il est différent du dossier `Nintendo 3DS` que la console génère automatiquement
 1. Copiez `FBI.3dsx` dans le dossier `/3ds/` de votre carte SD
@@ -57,7 +56,7 @@ In this section, you will copy the files necessary to follow the rest of the ins
 1. Réinsérez votre carte SD dans votre 3DS
 1. Allumez votre console
 
-The screenshots below indicate the minimum SD card layout that is required to follow this page. You may have extra files or folders on your SD card, depending on your previous setup or the method that you followed.
+Ces captures d'écran montrent l'arborescence de la carte SD requise pour suivre cette page. Il est possible que vous ayez des fichiers ou des dossiers supplémentaires sur votre carte SD, selon votre configuration précédente ou la méthode que vous avez suivie.
 
 ![]({{ "/images/screenshots/finalizing-root-layout.png" | absolute_url }})
 {: .notice--info}
@@ -67,19 +66,19 @@ The screenshots below indicate the minimum SD card layout that is required to fo
 
 
 
-#### Section II - Mise à jour du système
+#### Section II - Mise à jour de la console
 
-In this section, you will update your system to the latest version, which is safe to do with custom firmware.
+Dans cette section, vous allez mettre à jour votre console vers la dernière version, ce qui est sans danger avec le custom firmware.
 
 {% include_relative include/sysupdate.txt cfw="true" %}
 
 #### Section III - Homebrew Launcher
 
-In this section, you will temporarily replace Download Play with Homebrew Launcher (which we need to launch FBI). Download Play will automatically go back to normal once you reboot your device.
+Dans cette section, vous allez temporairement remplacer Mode téléchargement par Homebrew Launcher (dont nous avons besoin pour lancer FBI). L'application Mode téléchargement reviendra automatiquement à la normale une fois que vous redémarrerez votre console.
 
 {% include_relative include/launch-hbl-dlp.txt %}
 
-#### Section IV - RTC and DSP Setup
+#### Section IV - Configuration RTC et DSP
 
 In this section, you will sync your 3DS internal clock with the actual time and dump the sound firmware (which is necesssary for some homebrew software to use sound properly).
 
@@ -106,7 +105,7 @@ In this section, you will install several useful homebrew applications to HOME M
 
 In this section, you will use a script to copy some of Luma3DS's files to internal memory so that they can be accessed, even without an SD card inserted.
 
-1. Éteignez votre 3DS
+1. Éteignez votre console
 1. Appuyez sur le bouton (START) et maintenez le enfoncé tout en allumant votre console. Ceci lancera GodMode9
   + Si votre console ne démarre pas sur GodMode9, assurez-vous que le fichier `GodMode9.firm` est présent dans `/luma/payloads/` et que `payloads` est correctement écrit
 1. Si vous êtes invité à créer une sauvegarde de fichiers essentiels, appuyez sur (A) pour le faire, puis appuyez sur (A) pour continuer une fois terminé
