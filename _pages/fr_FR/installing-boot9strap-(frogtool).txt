@@ -1,28 +1,28 @@
 ---
-title: "Installing boot9strap (Frogtool)"
+title: "Installer boot9strap (Frogtool)"
 ---
 
 {% include toc title="Table des matières" %}
 
 {% capture technical_info %}
 <summary><em>Détails techniques (facultatif)</em></summary>
-For technical details on the exploits that you will be using on this page, see "DSiWare_Exports CTCert verification" and "FIRM partitions known-plaintext" [here](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+Pour des détails techniques sur les exploits que vous utiliserez sur cette page, voir "Vérification CTCert DSiWare_Exports" et "FIRM partitions known-plaintext" [ici](https://www.3dbrew.org/wiki/3DS_System_Flaws).
 
 {% endcapture %}
 <details>{{ technical_info | markdownify }}</details>
 {: .notice--info}
 
 
-To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) link for `frogcert.bin` on this page, you will need a torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download). \
-If you are unable to install one, follow [Bannerbomb3](bannerbomb3) instead. 
+Pour utiliser le lien [magnet](https://fr.wikipedia.org/wiki/Magnet_(standard)) pour `frogcert.bin` sur cette page, vous aurez besoin d'un client torrent comme [qBittorrent](https://www.qbittorrent.org/download.php) ou [Deluge](http://dev.deluge-torrent.org/wiki/Download). \
+Si vous ne pouvez pas en installer un, suivez [Bannerbomb3](bannerbomb3) à la place. 
 {: .notice--warning}
 
 ## Ce dont vous avez besoin
 
-* Your `movable.sed` file from completing Seedminer or nimhax on the root of your SD card
-* <i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Use a torrent client to download the file."></i> [frogcert.bin](magnet:?xt=urn:btih:d12278ea50bb3574f1fbd327f3d0e2292c70941f&dn=frogcert.bin&tr=https%3a%2f%2ftracker.fastdownload.xyz%3a443%2fannounce&tr=https%3a%2f%2fopentracker.xyz%3a443%2fannounce&tr=http%3a%2f%2fopen.trackerlist.xyz%3a80%2fannounce&tr=http%3a%2f%2ft.nyaatracker.com%3a80%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2fopen.demonii.si%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.port443.xyz%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.vanitycore.co%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&tr=udp%3a%2f%2fthetracker.org%3a80%2fannounce&tr=http%3a%2f%2ftorrent.nwps.ws%3a80%2fannounce&tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.iamhansen.xyz%3a2000%2fannounce&tr=udp%3a%2f%2fbt.xxx-tracker.com%3a2710%2fannounce&tr=http%3a%2f%2f0d.kebhana.mx%3a443%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2ftracker4.itzmx.com%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.justseed.it%3a1337%2fannounce&tr=http%3a%2f%2ftherightsize.net%3a1337%2fannounce&tr=udp%3a%2f%2fretracker.hotplug.ru%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&tr=udp%3a%2f%2f9.rarbg.com%3a2800%2fannounce&tr=https%3a%2f%2f2.track.ga%3a443%2fannounce&tr=udp%3a%2f%2fbigfoot1942.sektori.org%3a6969%2fannounce) (magnet link) 
-* The latest release of [Frogtool](https://github.com/zoogie/Frogtool/releases/latest)
-* The latest release of [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
+* Votre fichier `movable.sed` obtenu grâce à Seedminer ou nimhax, à la racine de votre carte SD
+* <i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Utilisez un client torrent pour télécharger le fichier."></i> [frogcert.bin](magnet:?xt=urn:btih:d12278ea50bb3574f1fbd327f3d0e2292c70941f&dn=frogcert.bin&tr=https%3a%2f%2ftracker.fastdownload.xyz%3a443%2fannounce&tr=https%3a%2f%2fopentracker.xyz%3a443%2fannounce&tr=http%3a%2f%2fopen.trackerlist.xyz%3a80%2fannounce&tr=http%3a%2f%2ft.nyaatracker.com%3a80%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2fopen.demonii.si%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.port443.xyz%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.vanitycore.co%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&tr=udp%3a%2f%2fthetracker.org%3a80%2fannounce&tr=http%3a%2f%2ftorrent.nwps.ws%3a80%2fannounce&tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.iamhansen.xyz%3a2000%2fannounce&tr=udp%3a%2f%2fbt.xxx-tracker.com%3a2710%2fannounce&tr=http%3a%2f%2f0d.kebhana.mx%3a443%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2ftracker4.itzmx.com%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.justseed.it%3a1337%2fannounce&tr=http%3a%2f%2ftherightsize.net%3a1337%2fannounce&tr=udp%3a%2f%2fretracker.hotplug.ru%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&tr=udp%3a%2f%2f9.rarbg.com%3a2800%2fannounce&tr=https%3a%2f%2f2.track.ga%3a443%2fannounce&tr=udp%3a%2f%2fbigfoot1942.sektori.org%3a6969%2fannounce) (lien magnet) 
+* La dernière version de [Frogtool](https://github.com/zoogie/Frogtool/releases/latest)
+* La dernière version de [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
 
 #### Section I - Vérification de la présence d’un CFW
 
@@ -30,27 +30,27 @@ If you are unable to install one, follow [Bannerbomb3](bannerbomb3) instead.
 
 #### Section II - Préparatifs
 
-1. Éteignez votre 3DS
+1. Éteignez votre console
 1. Insérez votre carte SD dans votre ordinateur
 1. Copiez `boot.firm` et `boot.3dsx` depuis Luma3DS `.zip`vers la racine de votre carte SD
-1. Copy `boot.nds` (b9sTool) from the b9sTool release `.zip` to the root of your SD card
-1. Copy `Frogtool.3dsx` to the `/3ds/` folder on your SD card
-1. Copy `frogcert.bin` to the root of your SD card
+1. Copiez `boot.nds` (b9sTool) depuis le fichier `.zip` de b9sTool vers la racine de votre carte SD
+1. Copiez `Frogtool.3dsx` dans le dossier `/3ds/` de votre carte SD
+1. Copiez `frogcert.bin` à la racine de votre carte SD
 1. Retirez la carte SD de votre ordinateur et réinsérez-là dans votre 3DS
 1. Allumez votre console
 
-#### Section III - Patching DS Download Play
+#### Section III - Patchage de Mode téléchargement
 
-1. Ouvrez l'Homebrew Launcher par la méthode de votre choix (probablement le navigateur Internet)
-1. Launch Frogtool from the list of homebrew
-1. Select the "INJECT patched DS Download Play" option
-1. Frogtool will automatically run and inject the JPN version of Flipnote Studio into your DS Download Play
-1. Once this operation has finished, read the screens and check if the process was successful
-1. Tap the touch screen, then select "BOOT patched DS Download Play"
+1. Ouvrez l'Homebrew Launcher par la méthode de votre choix (probablement le Navigateur Internet)
+1. Lancez Frogtool depuis la liste des homebrews
+1. Sélectionnez l'option "INJECT patched DS Download Play"
+1. Frogtool va se lancer automatiquement et injecter la version JPN de Flipnote Studio dans l'application Mode téléchargement
+1. Une fois cette opération terminée, lisez les écrans et vérifiez si le processus a réussi
+1. Appuyez sur l'écran tactile, puis sélectionnez "BOOT patched DS Download Play"
 1. Si l'exploit a réussi, votre console devrait avoir démarré la version japonaise de Flipnote Studio
-    + If you get stuck on a black screen, follow [this](https://wiki.hacks.guide/wiki/3DS:TWLFix#Homebrew_Launcher-0) page, then try again
+    + Si vous êtes coincé sur un écran noir, suivez [ceci](https://wiki.hacks.guide/wiki/3DS:TWLFix#Homebrew_Launcher-0) page, puis réessayez
 
-#### Section IV - Flipnote Exploit
+#### Section IV - Exploit Flipnote
 
 {% include_relative include/install-boot9strap-b9stool.txt method="dsinternet" %}
 
@@ -60,7 +60,7 @@ If you are unable to install one, follow [Bannerbomb3](bannerbomb3) instead.
 
 {% include_relative include/luma3ds-installed-note.txt %}
 
-#### Section VII - Restoring DS Connection Settings
+#### Section VII - Restauration des paramètres de Connexions Nintendo DS
 
 1. Lancez l’application Mode téléchargement
 1. Attendez jusqu'à ce que vous voyiez les deux boutons
@@ -74,12 +74,12 @@ If you are unable to install one, follow [Bannerbomb3](bannerbomb3) instead.
 1. Appuyez sur (Home), puis fermez Mode téléchargement
 1. Relancez l’application Mode téléchargement
 1. Votre console devrait maintenant charger le Homebrew Launcher
-1. Launch Frogtool from the list of homebrew
-1. Select the "RESTORE patched DS Download Play" option
-1. Once this operation has finished, read the screens and check if the process was successful
-    + If there are any errors or missing files, correct the problem and try again
-1. If the process was successful, tap the touch screen, then press START to exit
-1. Éteignez votre 3DS
+1. Lancez Frogtool depuis la liste des homebrews
+1. Sélectionnez l'option "RESTORE patched DS Download Play"
+1. Une fois cette opération terminée, lisez les écrans et vérifiez si le processus a réussi
+    + S'il y a des erreurs ou des fichiers manquants, corrigez le problème et réessayez
+1. Si le processus a réussi, appuyez sur l'écran tactile, puis appuyez sur START pour quitter
+1. Éteignez votre console
 
 ___
 
