@@ -7,7 +7,7 @@ title: "Installer boot9strap (Soundhax)"
 {% capture technical_info %}
 <summary><em>Détails techniques (facultatif)</em></summary>
 
-For technical details on the exploits that you will be using on this page, see [here](https://github.com/nedwill/soundhax) (Soundhax) and [here](https://github.com/TuxSH/universal-otherapp) (universal-otherapp).
+Pour des détails techniques sur les exploits que vous utiliserez sur cette page, voir [ici](https://github.com/nedwill/soundhax) (Soundhax) et [ici](https://github.com/TuxSH/universal-otherapp) (universal-otherapp).
 
 {% endcapture %}
 <details>{{ technical_info | markdownify }}</details>
@@ -23,24 +23,24 @@ Soundhax (quand combiné avec pre9otherapp) est compatible avec les versions com
 * La dernière version de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (téléchargement direct)
 * La dernière version de [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (téléchargement direct)
 * La dernière version de [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (le fichier `.zip' de Luma3DS)
-* The latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) (`otherapp.bin`)
+* La dernière version de [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) (`otherapp.bin`)
 
 ### Instructions
 
 #### Section I - Préparatifs
 
-In this section, you will copy the files needed to trigger both Soundhax and universal-otherapp.
+Dans cette section, vous copierez les fichiers nécessaires pour déclencher Soundhax et universal-otherapp.
 
-1. Éteignez votre 3DS
+1. Éteignez votre console
 1. Insérez votre carte SD dans votre ordinateur
 1. Copiez le fichier SoundHax `.m4a` à la racine de votre carte SD
   + La racine de la carte SD représente le répertoire initial de la carte SD où vous pouvez voir le dossier Nintendo 3DS, mais ce n'est pas à l'intérieur de ce dernier
 1. Copiez `otherapp.bin` à la racine de votre carte SD
 1. Copiez `boot.firm` et `boot.3dsx` depuis Luma3DS `.zip`vers la racine de votre carte SD
-1. Créez un dossier à la racine de votre carte SD nommé `boot9strap`
+1. Créez un dossier nommé `boot9strap` à la racine de votre carte SD
 1. Copiez `boot9strap.firm` et `boot9strap.firm.sha` depuis le fichier ".zip" de boot9strap vers le dossier `/boot9strap/` sur votre carte SD
 1. Copiez `SafeB9SInstaller.bin` depuis le fichier `.zip` de SafeB9SInstaller à la racine de votre carte SD
-1. Retirez la carte SD de votre ordinateur et réinsérez-là dans votre 3DS
+1. Retirez la carte SD de votre ordinateur et réinsérez-la dans votre console
 1. Allumez votre console
 
 ![]({{ "/images/screenshots/uosoundhax-root-layout.png" | absolute_url }})
@@ -51,26 +51,26 @@ In this section, you will copy the files needed to trigger both Soundhax and uni
 
 #### Section II - Lancer SafeB9SInstaller
 
-In this section, you will launch Soundhax through the Nintendo 3DS Sound app, which will use universal-otherapp to launch the boot9strap (custom firmware) installer.
+Dans cette section, vous lancerez Soundhax au travers de l'application Studio son Nintendo 3DS qui utilisera universal-otherapp pour lancer l'installateur de boot9strap (custom firmware).
 
-1. Retirez la carte SD de votre ordinateur et réinsérez-là dans votre 3DS
+1. Retirez la carte SD de votre ordinateur et réinsérez-la dans votre console
 1. Allumez votre console
 1. Lancez l'application Studio Son Nintendo 3DS
 
     ![]({{ "/images/screenshots/soundhax-welcome.png" | absolute_url }})
     {: .notice--info}
 
-1. Si vous n'aviez jamais ouvert le Studio Son Nintendo 3DS avant et obtenez des conseils d'un oiseau, passez toutes ses explications, puis fermez l'application normalement et relancez-la
-  + Lancer SoundHax immédiatement ferait réapparaitre le tutoriel à chaque lancement de Studio Son Nintendo 3DS jusqu'à ce qu'il soit correctement complété
-1. Naviguez vers `/SDCARD`, puis lisez le fichier "<3 nedwill 2016"
-  + This may take many (up to 10) tries
-  + If you see the message "Could not play", you are either on a system version incompatible with Soundhax or downloaded the wrong Soundhax release
-  + Si la console ne répond plus, forcez-la simplement à s'éteindre en maintenant le bouton Power, puis réessayez
+1. Si vous n'aviez jamais ouvert le Studio son Nintendo 3DS auparavant et obtenez des conseils d'un oiseau, passez toutes ses explications, puis fermez l'application normalement et relancez-la
+  + Lancer SoundHax immédiatement ferait réapparaitre le tutoriel à chaque lancement de Studio son Nintendo 3DS jusqu'à ce qu'il soit correctement complété
+1. Naviguez vers `/Carte SD`, puis lisez le fichier "<3 nedwill 2016"
+  + Il se peut que cela nécessite plusieurs tentatives (jusqu'à 10)
+  + Si vous voyez le message "Lecture impossible", vous êtes soit sur une version du système incompatible avec Soundhax ou vous avez téléchargé la mauvaise version de Soundhax
+  + Si la console ne répond plus, forcez-la simplement à s'éteindre en maintenant le bouton POWER, puis réessayez
 
     ![]({{ "/images/screenshots/soundhax-launch.png" | absolute_url }})
     {: .notice--info}
 
-1. Si l'exploit a réussit, vous devriez avoir démarré dans SafeB9SInstaller
+1. Si l'exploit a réussi, votre console devrait avoir démarré dans SafeB9SInstaller
 
 #### Section III - Installation de boot9strap
 
