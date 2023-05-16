@@ -1,12 +1,12 @@
 ---
-title: "Installing boot9strap (safecerthax)"
+title: "Installation de boot9strap (safecerthax)"
 ---
 
 {% include toc title="Table des matières" %}
 
 {% capture technical_info %}
 <summary><em>Détails techniques (facultatif)</em></summary>
-For technical details on the exploit that you will be using on this page, see [here](https://github.com/MrNbaYoh/safecerthax).
+Pour des détails techniques sur l'exploit que vous utiliserez sur cette page, voir [ici](https://github.com/MrNbaYoh/safecerthax).
 
 {% endcapture %}
 <details>{{ technical_info | markdownify }}</details>
@@ -14,49 +14,49 @@ For technical details on the exploit that you will be using on this page, see [h
 
 ### Notes de compatibilité
 
-safecerthax is compatible with all Old 3DS and Old 2DS devices in all regions on system versions 1.0.0 through 11.14.0. 
+safecerthax est compatible avec toutes les consoles Old 3DS et Old 2DS de toutes les régions des versions du système 1.0.0 à 11.14.0. 
 
-This exploit will not work on the New 3DS, New 3DS XL, or New 2DS XL. Please ensure that the device you are modding is an Old 3DS, Old 3DS XL, or Old 2DS before continuing.
+Cet exploit ne fonctionnera pas sur les New 3DS, New 3DS XL ou New 2DS. Veuillez vous assurer que la console que vous moddez est une Old 3DS, Old 3DS XL ou Old 2DS avant de continuer.
 {: .notice--info}
 
 ## Ce dont vous avez besoin
 
 * La dernière version de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (téléchargement direct)
 * La dernière version de [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (téléchargement direct)
-* The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS .zip file)
+* La dernière version de [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (le fichier Luma3DS.zip)
 
 ### Instructions
 
-#### Section I - Hardware Button Check
+#### Section I - Contrôle matériel des boutons
 
 {% include_relative include/safemodecheck.txt %}
 
-If you do not boot into Safe Mode, the system update menu after multiple attempts, you cannot follow this method. If this is the case, use [Seedminer](seedminer) instead.
+Si votre console ne démarre pas en mode sans échec (le menu de mise à jour de la console) après plusieurs tentatives, vous ne pouvez pas suivre cette méthode. Si c'est le cas, utilisez [Seedminer](seedminer) à la place.
 {: .notice--warning}
 
 #### Section II - Préparatifs
 
-In this section, you will copy the files needed to trigger the safecerthax exploit.
+Dans cette section, vous copierez les fichiers nécessaires pour déclencher l'exploit safecerthax.
 
 1. Insérez votre carte SD dans votre ordinateur
 1. Copiez `boot.firm` et `boot.3dsx` depuis Luma3DS `.zip`vers la racine de votre carte SD
   + La racine de la carte SD représente le répertoire initial de la carte SD où vous pouvez voir le dossier Nintendo 3DS, mais ce n'est pas à l'intérieur de ce dernier
-1. Créez un dossier à la racine de votre carte SD nommé `boot9strap`
+1. Créez un dossier nommé `boot9strap` à la racine de votre carte SD
 1. Copiez `boot9strap.firm` et `boot9strap.firm.sha` depuis le fichier ".zip" de boot9strap vers le dossier `/boot9strap/` sur votre carte SD
 1. Copiez `SafeB9SInstaller.bin` depuis le fichier `.zip` de SafeB9SInstaller à la racine de votre carte SD
-1. Retirez la carte SD de votre ordinateur et réinsérez-là dans votre 3DS
+1. Retirez la carte SD de votre ordinateur et réinsérez-la dans votre console
 1. Allumez votre console
 
-#### Section III - safecerthax proxy
+#### Section III - Proxy safecerthax
 
-In this section, you will change your Internet connection settings to use a proxy network designed to exploit the System Update feature of your device.
+Dans cette section, vous allez modifier vos paramètres de connexion Internet pour utiliser un réseau proxy conçu pour exploiter la fonctionnalité de Mise à jour de la console.
 
 {% include_relative include/addproxy.txt %}
-1. Éteignez votre 3DS
+1. Éteignez votre console
 
 #### Section IV - safecerthax
 
-In this section, you will enter Safe Mode (a feature available on all 3DS family devices) where safecerthax will be triggered, which will launch you into the boot9strap (custom firmware) installer.
+Dans cette section, vous entrerez en mode sans échec (une fonctionnalité disponible sur toutes les consoles de la famille 3DS) où le safecerthax sera déclenché, qui lancera l'installateur de boot9strap (custom firmware).
 
 1. Lorsque votre console encore éteinte, maintenez enfoncés les boutons suivants : (L) + (R) + (Haut sur la croix directionnelle) + (A), et tout en maintenant ces boutons enfoncés, allumez votre console
   + Maintenez les boutons enfoncés jusqu'à ce que la console démarre en mode sans échec (menu "Mise à jour")
@@ -64,18 +64,18 @@ In this section, you will enter Safe Mode (a feature available on all 3DS family
   + Aucune mise à jour n'est nécessaire. Ceci fait partie de l'exploit
 1. Appuyez sur « J'accepte » pour accepter les conditions
 1. La mise à jour finira par échouer, avec le code d'erreur `003-1099`. Ne vous inquiétez pas, c'est normal.
-1. Press "OK" to close the error message
+1. Appuyez sur "OK" pour fermer le message d'erreur
 1. Si l'exploit a réussit, vous devriez avoir démarré dans SafeB9SInstaller
-  + If the device freezes or crashes, force power off the device, then retry this section
+  + Si la console se bloque ou plante, forcez l'arrêt de la console, puis recommencez cette section
 
-#### Section V - Installing boot9strap
+#### Section V - Installation de boot9strap
 
 {% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
 {%- include_relative include/configure-luma3ds.txt %}
 
 {% include_relative include/luma3ds-installed-note.txt %}
 
-#### Section VI - Restoring default proxy
+#### Section VI - Restauration du proxy par défaut
 
 {% include_relative include/rmproxy.txt %}
 
