@@ -65,20 +65,34 @@ Ces captures d'écran montrent l'arborescence de la carte SD requise pour suivre
 {: .notice--info}
 
 
+#### Section II - CFW Check
 
-#### Section II - Mise à jour de la console
+Comme mesure de sécurité supplémentaire, nous effectuerons une vérification supplémentaire de la présence d'un custom firmware. If custom firmware is not installed by this point for any reason, the next section may render your console unable to be hacked without external hardware.
+
+1. Éteignez votre console
+1. Maintenez le bouton (Select) enfoncé
+1. Allumez votre console tout en maintenant le bouton (Select) enfoncé
+1. If the check was successful, your device should have booted into the Luma3DS configuration menu
+1. Appuyez sur (Start) pour enregistrer les modifications et redémarrer
+1. Éteignez votre console
+
+If you do NOT boot into the Luma3DS configuration menu, custom firmware was not installed on your device. Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+{: .notice--danger}
+
+
+#### Section III - Updating the System
 
 Dans cette section, vous allez mettre à jour votre console vers la dernière version, ce qui est sans danger avec le custom firmware.
 
 {% include_relative include/sysupdate.txt cfw="true" %}
 
-#### Section III - Homebrew Launcher
+#### Section IV - Homebrew Launcher
 
 Dans cette section, vous allez temporairement remplacer Mode téléchargement par Homebrew Launcher (dont nous avons besoin pour lancer FBI). L'application Mode téléchargement reviendra automatiquement à la normale une fois que vous redémarrerez votre console.
 
 {% include_relative include/launch-hbl-dlp.txt %}
 
-#### Section IV - Configuration RTC et DSP
+#### Section V - RTC and DSP Setup
 
 Dans cette section, vous synchroniserez l'horloge interne de votre 3DS avec l'heure réelle et allez dumper le firmware du son (ce qui est nécessaire pour que certains logiciels homebrew utilisent correctement le son).
 
@@ -91,7 +105,7 @@ Dans cette section, vous synchroniserez l'horloge interne de votre 3DS avec l'he
 1. Appuyez sur (B) pour revenir au menu principal de Rosalina
 1. Appuyez sur (B) pour quitter le menu Rosalina
 
-#### Section V - Installation des CIAs
+#### Section VI - Installing CIAs
 
 Dans cette section, vous installerez plusieurs applications homebrew utiles dans le Menu HOME.
 
@@ -101,7 +115,7 @@ Dans cette section, vous installerez plusieurs applications homebrew utiles dans
 1. Sélectionnez l'option "install and delete all CIAs" (installer et effacer tous les CIAs), appuyez ensuite sur (A) pour confirmer votre choix
 1. Appuyez sur (Home), puis fermez Mode téléchargement
 
-#### Section VI - CTRNAND Luma3DS
+#### Section VII - CTRNAND Luma3DS
 
 Dans cette section, vous utiliserez un script pour copier certains fichiers de Luma3DS vers la mémoire interne afin qu'ils soient accessibles, même sans carte SD insérée.
 
@@ -119,16 +133,16 @@ Dans cette section, vous utiliserez un script pour copier certains fichiers de L
 1. Appuyez sur (A) pour autoriser l'écriture sur votre SysNAND, puis entrez la combinaison de touches demandée
 1. Appuyez sur (A) pour continuer
 
-#### Section VII - Nettoyage de la carte SD
+#### Section VIII - Cleanup SD Card
 
 Dans cette section, vous utiliserez un script pour supprimer des fichiers inutiles de votre carte SD.
 
 1. Sélectionnez "Cleanup SD Card"
-1. Lorsque vous y êtes invité, appuyez sur (A)
+1. Lorsque vous êtes invité, appuyez sur (A)
 1. Appuyez sur (A) pour continuer
 1. Appuyez sur (B) pour revenir au menu principal
 
-#### Section VIII - Sauvegarde des fichiers essentiels
+#### Section IX - Backup Essential Files
 
 Dans cette section, vous ferez des sauvegardes de fichiers qui peuvent être utilisés pour réparer un brick logiciel ou pour récupérer des données.
 
@@ -146,7 +160,7 @@ Dans cette section, vous ferez des sauvegardes de fichiers qui peuvent être uti
 1. Sélectionnez "Copy to 0:/gm9/out"
   + Si vous voyez "Destination already exists", appuyez sur (A) sur "Overwrite file(s)"
 1. Appuyez sur (A) pour continuer
-1. Appuyez sur (HOME) pour faire apparaître le menu d’actions
+1. Appuyez sur (Home) pour faire apparaître le menu d’actions (action menu)
 1. Sélectionnez "Poweroff system" pour éteindre votre appareil
 1. Insérez votre carte SD dans votre ordinateur
 1. Copiez `<date>_<serialnumber>_sysnand_##.bin`, `<date>_<serialnumber>_sysnand_##.bin.sha`, et `essentiel.exefs` du dossier `/gm9/out/` de votre carte SD vers un emplacement sûr sur votre ordinateur
@@ -155,7 +169,7 @@ Dans cette section, vous ferez des sauvegardes de fichiers qui peuvent être uti
 1. Supprimez `<date>_<serialnumber>_sysnand_##.bin` et `<date>_<serialnumber>_sysnand_##.bin.sha` du dossier `/gm9/out/` de votre carte SD après l'avoir copié
   + Les autres fichiers de sauvegarde sont négligeables en taille et peuvent être conservés sur votre carte SD pour un accès facilité
 1. Si vous l'avez, copiez le dossier `/luma/backups/` de votre carte SD vers un endroit sûr sur votre ordinateur
-1. Réinsérez votre carte SD dans votre console
+1. Retirez la carte SD de votre ordinateur et réinsérez-la dans votre console
 1. Allumez votre console
 
 ___
