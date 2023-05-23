@@ -65,20 +65,34 @@ boot9strap 将会在 NAND 里的内容加载完成后启动 `boot.firm` 文件�
 {: .notice--info}
 
 
+#### Section II - CFW Check
 
-#### 第二步 – 更新系统
+As an additional safety measure, we will perform an additional check for custom firmware. If custom firmware is not installed by this point for any reason, the next section may render your console unable to be hacked without external hardware.
+
+1. 将主机关机
+1. 按住 “Select” 键
+1. 在按住 “Select” 键的同时按下电源键开机
+1. If the check was successful, your device should have booted into the Luma3DS configuration menu
+1. 按下 “Start” 键保存设置并重启
+1. 将主机关机
+
+If you do NOT boot into the Luma3DS configuration menu, custom firmware was not installed on your device. Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+{: .notice--danger}
+
+
+#### Section III - Updating the System
 
 本节中，你将会把主机更新至最新版本。（自制固件兼容最新版本的系统，直接升级是安全的）
 
 {% include_relative include/sysupdate.txt cfw="true" %}
 
-#### 第三步 – 进入 Homebrew Launcher
+#### Section IV - Homebrew Launcher
 
 本节中，为了启动 FBI 应用程序，你将需要临时把主机的“下载通信（Download Play）”应用程序替换为 Homebrew Launcher。 下载通信应用程序将会在重启主机后自动恢复正常。
 
 {% include_relative include/launch-hbl-dlp.txt %}
 
-#### 第四步 — 调整 RTC 及 DSP
+#### Section V - RTC and DSP Setup
 
 本节中，你将会把主机的内部时钟同步现实时间，并导出声卡的固件（部分自制程序需要使用它来正确发声）。
 
@@ -91,7 +105,7 @@ boot9strap 将会在 NAND 里的内容加载完成后启动 `boot.firm` 文件�
 1. 按 “B” 键返回 Rosalina 主菜单
 1. 按 “B” 键退出 Rosalina 菜单
 
-#### 第五步 – 安装CIA
+#### Section VI - Installing CIAs
 
 本节中，你将会安装几个实用的自制程序到主菜单。
 
@@ -101,7 +115,7 @@ boot9strap 将会在 NAND 里的内容加载完成后启动 `boot.firm` 文件�
 1. 选择“安装和删除所有 CIA(Install and delete all CIAs)”选项，并按 “A” 键确认
 1. 按下 “Home” 键，然后关闭“下载通信(Download Play)”
 
-#### 第六步 – 将 Luma3DS 复制到 CTRNAND
+#### Section VII - CTRNAND Luma3DS
 
 本节中，你将会使用到一个脚本来复制 Luma3DS 的文件到主机的内部储存空间中，以便在拔出 SD 卡后依然能够读取这些文件。
 
@@ -119,7 +133,7 @@ boot9strap 将会在 NAND 里的内容加载完成后启动 `boot.firm` 文件�
 1. 按 “A” 键解锁SysNAND (lvl1) 写入权限，并根据屏幕上的提示依次按下按键
 1. 按 “A” 键继续
 
-#### 第七步 – 清理 SD 卡
+#### Section VIII - Cleanup SD Card
 
 本节中，你将会使用到一个脚本来清理内存卡的一些无用文件。
 
@@ -128,7 +142,7 @@ boot9strap 将会在 NAND 里的内容加载完成后启动 `boot.firm` 文件�
 1. 按 “A” 键继续
 1. 按 “B” 键返回到主菜单
 
-#### 第七节 – 备份基础文件
+#### Section IX - Backup Essential Files
 
 本节中，你将会从主机备份一些重要文件，以便在主机软砖时进行恢复数据。
 
@@ -138,7 +152,7 @@ boot9strap 将会在 NAND 里的内容加载完成后启动 `boot.firm` 文件�
   + 此过程将花费一些时间
   + If you get an error, look for your issue in the [troubleshooting guide](troubleshooting#finalizing-setup)
 1. 按 “A” 键继续
-1. 按 “B” 键返回到主菜单
+1. 按下 “B” 键返回到主菜单
 1. 选择 “Exit”
 1. 如果提示重新锁定写入权限，按下 “A” 键来确认
 1. 进入到 `[S:] SYSNAND VIRTUAL`
@@ -148,14 +162,14 @@ boot9strap 将会在 NAND 里的内容加载完成后启动 `boot.firm` 文件�
 1. 按 “A” 键继续
 1. 按下 “Home” 键来打开功能菜单
 1. 选择 “Poweroff system” 来将主机关机
-1. 将你的 SD 卡插入电脑
+1. 将你的 SD 卡插入到电脑
 1. Copy `<date>_<serialnumber>_sysnand_##.bin`, `<date>_<serialnumber>_sysnand_##.bin.sha`, and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + 将这些文件在不同地方备份多次（比如网盘或者移动硬盘等）
   + 如果以后机器出现任何问题，这些备份文件将是为你提供修复砖机或从 NAND 镜像恢复文件的帮手
 1. Delete `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
   + 其它的文件占用不了多少空间，更建议保留在 SD 卡上以便将来可能的需要
 1. 如果 SD 卡上有 `/luma/backups/` 文件夹，那么请将里面的文件备份到你电脑上安全的地方
-1. 将 SD 卡重新插入主机
+1. 将 SD 卡重新插入你的主机
 1. 启动你的主机
 
 ___
