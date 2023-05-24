@@ -1,18 +1,18 @@
 ---
-title: "Updating Firmware (KOR/TWN)"
+title: "Atualizando o Firmware (KOR/TWN)"
 ---
 
-### Required Reading
+### Leitura Necessária
 
-To use the Seedminer exploit, you must update your device to the latest system version.
+Para usar o exploit Seedminer, você deve atualizar seu dispositivo para a versão mais recente do sistema.
 
-### What you need
+### O que você precisa
 
-* An internet connection on your device
+* Uma conexão com a internet no seu dispositivo
 
-#### Section I - Updating the System
+#### Seção I - Atualizando o Sistema
 
 {% include_relative include/sysupdate.txt cfw="false" %}
 
-Continue to [Seedminer](seedminer)
+Continue em [Seedminer](seedminer)
 {: .notice--primary}
