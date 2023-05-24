@@ -199,17 +199,13 @@ function redirect() {
     var model = 0;
     if(isN3DS) model = 1;
 
-    let redirected = false;
-    // Start validation
-    redirected = can_soundhax(major.value, minor.value, nver.value, region.value, model);
-    if (redirected) return true;
-    redirected = can_ssloth(major.value, minor.value, nver.value, region.value, model);
-    if (redirected) return true;
-    redirected = can_safecerthax(major.value, minor.value, nver.value, region.value, model);
-    if (redirected) return true;
-    redirected = can_seedminer(major.value, minor.value, nver.value, region.value, model);
-    if (redirected) return true;
-    redirected = can_superskaterhax(major.value, minor.value, nver.value, region.value, model);
+    let redirected = [
+      can_soundhax,
+      can_ssloth,
+      can_safecerthax,
+      can_seedminer,
+      can_superskaterhax,
+    ].some(func => func(major.value, minor.value, nver.value, region.value, model));
     if (redirected) return true;
 
     // if it actually got to this point, there is no exploit available.
