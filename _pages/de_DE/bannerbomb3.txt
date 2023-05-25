@@ -30,29 +30,7 @@ Falls du eine Taiwanesische Konsole besitzen solltest (gekennzeichnet durch ein 
 
 #### Abschnitt I - Vorbereitungen
 
-In diesem Schritt wirst du die Dateien, die zum Auslösen des Bannerbomb3 Exploits benutzt werden, auf die SD-Karte deiner Konsole kopieren.
-
-1. Schalte deine Konsole aus
-1. Stecke deine SD-Karte in deinen Computer
-1. Öffne den [BannerBomb3 Injector](https://3dstools.nhnarwhal.com/#/bb3gen) auf deinem Computer
-1. Lade deine movable.sed mit der "Choose File" Option hoch
-1. Klicke "Build and Download"
-  + Dies wird ein DSiWare-Backup namens `F00D43D5.bin` und einen Payload namens `bb3.bin` in einer zip Datei herunterladen (`DSIWARE_EXPLOIT.zip`)
-1. Kopiere `bb3.bin` von der `DSIWARE_EXPLOIT.zip` in das Stammverzeichnis der SD-Karte
-  + Das Stammverzeichnis der SD-Karte bezieht sich auf das ursprüngliche Verzeichnis deiner SD-Karte, wo du den Nintendo 3DS Ordner sehen kannst, aber nicht in ihm drin bist
-  + This file does not need to be opened or extracted
-  ![]({{ "/images/screenshots/bb3/bb3-root-layout.png" | absolute_url }}){: .notice--info}
-1. Gehe zu `Nintendo 3DS` -> `<ID0>` -> `<ID1>` auf deiner SD-Karte
-  + Diese `<ID0>` ist die, die du beim [Seedminer](seedminer) verwendet hast
-  + Die `<ID1>` ist ein 32 Zeichen langer Ordner in der `<ID0>`
-  + If you have multiple `<ID1>` folders, follow the instructions [here](troubleshooting#bannerbomb3)
-  ![]({{ "/images/screenshots/bb3/dsiware-location-1.png" | absolute_url }}){: .notice--info}
-1. Erstelle einen Ordner mit dem Namen `Nintendo DSiWare` innerhalb der `<ID1>`
-  Wenn du bereits den Ordner hattest, *und* du hast schon DSiWare Backup Dateien darin hast (`<8-Charakter-ID>.bin`), kopiere sie zu deinem Computer und lösche sie von deiner SD-Karte
-1. Kopiere die `F00D43D5.bin` Datei aus `DSIWARE_EXPLOIT.zip` in den `Nintendo DSiWare` Ordner
-
-![]({{ "/images/screenshots/bb3/dsiware-location-2.png" | absolute_url }})
-{: .notice--info}
+{% include_relative include/bb3-prep.md %}
 
 #### Abschnitt II - Tastenfunktionalität überprüfen
 
