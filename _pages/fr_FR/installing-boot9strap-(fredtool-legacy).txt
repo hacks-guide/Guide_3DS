@@ -1,0 +1,77 @@
+---
+title: "Installing boot9strap (Fredtool, Legacy)"
+---
+
+{% include toc title="Table des matières" %}
+
+{% capture technical_info %}
+<summary><em>Détails techniques (facultatif)</em></summary>
+
+Pour extraire un DSiWare système, nous exploitons une faille dans l'onglet de gestion des données DSiWare présent dans les paramètres système.
+
+Pour ce faire, nous utilisons la clé de chiffrement de votre console (movable.sed) pour créer une sauvegarde DSiWare qui exploite le système pour dumper l'application DSi Internet Settings à la racine SD.
+
+Once we have a DSiWare backup, we can inject it into the DS Internet Settings application.
+
+Ceci est une implémentation de l'exploit "FIRM partitions known-plaintext" qui est décrit [ici](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+
+{% endcapture %}
+<details>{{ technical_info | markdownify }}</details>
+{: .notice--info}
+
+You should only be able to get to this page if you are running version 11.15.0 or 11.14.0. If you are on any firmware other than 11.15.0 or 11.14.0, STOP as these instructions WILL LEAD TO A BRICK on other firmwares!!
+{: .notice--warning}
+
+## Ce dont vous avez besoin
+
+* Your `movable.sed` file from completing [Seedminer (Mii)](seedminer-(mii))
+* La dernière version de [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest) (`Frogminer_save.zip`)
+* **11.15.0 and 11.14.0 users only**: The v6.0.1 release of [b9sTool](https://github.com/zoogie/b9sTool/releases/tag/v6.0.1) (direct download)
+* La dernière version de [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (le fichier `.zip' de Luma3DS)
+
+#### Section I - Vérification de la présence d’un CFW
+
+{% include_relative include/cfw-check-fredtool.txt %}
+
+#### Section II - BannerBomb3
+
+Dans cette section, vous allez déclencher l'exploit BannerBomb3 à l'aide du menu de Gestion des Nintendo DSiWare et copier le fichier dumpé sur votre ordinateur afin de pouvoir l'utiliser dans la section suivante.
+
+1. Retirez la carte SD de votre ordinateur et réinsérez-la dans votre console
+1. Allumez votre console
+1. Lancez les Paramètres de la console
+1. Naviguez vers `Gestion des données` -> `DSiWare`-> `Carte SD` ([image](/images/screenshots/bb3/dsiware-management.png))
+  + Votre console devrait afficher le menu BB3 multihax
+  + Si cette étape provoque un plantage de votre console, [suivez ce guide de dépannage](troubleshooting#installing-boot9strap-fredtool)
+1. Utilisez la croix directionnelle pour naviguer et appuyez sur le bouton (A) pour sélectionner "Dump DSiWare"
+  + Votre console redémarrera automatiquement
+1. Éteignez votre console
+  
+#### Section III - Préparatifs
+
+{% include_relative include/fredtool-prep.txt %}
+
+#### Section IV - Écrasement de Connexions Nintendo DS
+
+{% include_relative include/fredtool-write-flipnote.txt %}
+
+#### Section V - Exploit Flipnote
+
+{% include_relative include/install-boot9strap-b9stool.txt method="dsinternet" %}
+
+#### Section VI - Configuration de Luma3DS
+
+1. Appuyez sur le bouton (Select) et maintenez-le, et tout en maintenant le bouton (Select), allumez votre console. Ceci va lancer la configuration de Luma3DS
+{% include_relative include/configure-luma3ds.txt %}
+
+{% include_relative include/luma3ds-installed-note.txt %}
+
+#### Section VII - Restauration des paramètres de Connexions Nintendo DS
+
+{% include_relative include/fredtool-restore-dsconn.txt %}
+
+___
+
+
+### Continuer vers [Finalisation de l'installation](finalizing-setup)
+{: .notice--primary}
