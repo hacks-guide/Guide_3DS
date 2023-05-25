@@ -1,0 +1,50 @@
+---
+title: "BannerBomb3 (Legacy)"
+---
+
+{% include toc title="목차" %}
+
+{% capture technical_info %}
+<summary><em>기술적 상세 정보 (선택 사항)</em></summary>
+
+사용자 정의의 코드를 실행하기 위해 DSiWare 데이터 관리 설정 창의 취약점을 이용합니다.
+
+이것을 할 수 있도록, 기기의 암호화 키 (movable.sed)를 이용해 취약점을 이용할 DSiWare 백업을 생성합니다.
+
+더 자세한 기술 정보를 확인하려면, [이 페이지 (영문)](https://github.com/zoogie/Bannerbomb3)를 확인해 주세요.
+{% endcapture %}
+
+<details>{{ technical_info | markdownify }}</details>
+{: .notice--info}
+
+### 호환성 안내
+
+이 설명서는 미주, 유럽, 일본, 그리고 한국 지역 기기들 (시스템 버전 다음 글짜가 U, E, J, 아니면 K 인 경우) 와 호환됩니다.
+
+### 준비물
+
+* Seedminer 또는 nimhax에서 받은 `movable.sed` 파일
+
+#### 섹션 I - 준비 작업
+
+{% include_relative include/bb3-prep.txt %}
+
+#### 섹션 II - 하드웨어 버튼 작동 확인
+
+In this section, you will see whether you can access Safe Mode on your device. This will determine which method you will follow on the next page.
+
+Your SD card should remain in your computer while you perform this check.
+
+{% include_relative include/safemodecheck.txt %}
+
+___
+
+### 다음 단계: 익스플로잇 선택
+
+If the camera appeared in the previous section, Safe Mode is likely to be working on your device.
+
+If the camera appeared, continue to [Installing boot9strap (USM)](installing-boot9strap-(usm))
+{: .notice--primary}
+
+If the camera did NOT appear, continue to [Installing boot9strap (Fredtool, Legacy)](installing-boot9strap-(fredtool-legacy))
+{: .notice--info}
