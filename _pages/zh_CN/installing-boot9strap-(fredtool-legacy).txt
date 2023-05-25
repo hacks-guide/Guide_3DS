@@ -1,0 +1,77 @@
+---
+title: "Installing boot9strap (Fredtool, Legacy)"
+---
+
+{% include toc title="目录内容" %}
+
+{% capture technical_info %}
+<summary><em>技术细节（选看）</em></summary>
+
+我们使用了一个在 3DS 系统设置应用程序的 DSiWare 数据管理窗口中的一个漏洞来导出系统的 DSiWare 软件。
+
+为了做到它，我们将使用你主机的系统加密密钥（movable.sed）来构建一个可被利用的 DSiWare 系统备份，以便将 DSi 互联网设置应用程序导出到 SD 卡的根目录。
+
+Once we have a DSiWare backup, we can inject it into the DS Internet Settings application.
+
+本教程是使用 “FIRM partitions known-plaintext” 漏洞来进行破解的， 欲知相关资料请查阅[这里](https://www.3dbrew.org/wiki/3DS_System_Flaws)。
+
+{% endcapture %}
+<details>{{ technical_info | markdownify }}</details>
+{: .notice--info}
+
+You should only be able to get to this page if you are running version 11.15.0 or 11.14.0. If you are on any firmware other than 11.15.0 or 11.14.0, STOP as these instructions WILL LEAD TO A BRICK on other firmwares!!
+{: .notice--warning}
+
+### 你需要准备点啥？
+
+* Your `movable.sed` file from completing [Seedminer (Mii)](seedminer-(mii))
+* 最新版本的 [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest)（下载 `Frogminer_save.zip`）
+* **11.15.0 and 11.14.0 users only**: The v6.0.1 release of [b9sTool](https://github.com/zoogie/b9sTool/releases/tag/v6.0.1) (direct download)
+* 最新版本的 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)（下载 Luma3DS `.zip` 文件）
+
+#### 第一步 – 检查自制固件
+
+{% include_relative include/cfw-check-fredtool.txt %}
+
+#### 第二步 – BannerBomb3
+
+本节中，你将会使用 DSiWare 数据管理菜单触发 BannerBomb3 漏洞，并利用它导出一个在下一个步骤中需要使用的文件。
+
+1. 将 SD 卡重新插入你的主机
+1. 启动你的主机
+1. 启动你主机上的 “系统设置(System settings)”
+1. 依次点击 `数据管理（データ管理/Data Management）` -> `DSiWare 数据管理（DSiWareデータ管理/DSiWare）` -> `SD卡（micro SDカード/SDカード/SD/microSD）`（[例图](/images/screenshots/bb3/dsiware-management.png)）
+  + 你的主机将会打开 BB3 multihax 菜单
+  + If this step causes your device to crash, [follow this troubleshooting guide](troubleshooting#installing-boot9strap-fredtool)
+1. 使用十字键移动至 “Dump DSiWare” ，然后按下 A 键
+  + 主机将会自动重启
+1. 将主机关机
+  
+#### 第三步 – 准备工作
+
+{% include_relative include/fredtool-prep.txt %}
+
+#### 第四步 – 覆盖 “DS 连接设置（DS Connection Settings）”
+
+{% include_relative include/fredtool-write-flipnote.txt %}
+
+#### 第五步 – 触发 Flipnote 漏洞
+
+{% include_relative include/install-boot9strap-b9stool.txt method="dsinternet" %}
+
+#### 第四部分 — 配置 Luma3DS
+
+1. 按住 “SELECT” 键，然后按下电源键开机。 这将会启动 Luma3DS 配置菜单
+{% include_relative include/configure-luma3ds.txt %}
+
+{% include_relative include/luma3ds-installed-note.txt %}
+
+#### 第七步 – 还原 “DS 连接设置（DS Connection Settings）”
+
+{% include_relative include/fredtool-restore-dsconn.txt %}
+
+___
+
+
+### 继续至[完成安装](finalizing-setup)
+{: .notice--primary}
