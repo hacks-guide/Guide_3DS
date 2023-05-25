@@ -1,0 +1,29 @@
+이 섹션에서는, boot9strap (커스텀 펌웨어) 설치 도구를 실행할 수 있는 Flipnote Studio를 DS 소프트웨어용 설정에 덮어씌울수 있도록 필요한 파일을 복사합니다.
+
+1. SD 카드를 컴퓨터에 삽입해 주세요
+1. 컴퓨터에서 [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec) 웹사이트를 열어 주세요
+1. "Username"에 영어/숫자를 사용한 이름을 아무거나 입력해 주세요 (스페이스나 특수 문자는 사용 불가)
+1. Under the "DSiBin" field, upload your DSiWare backup file (e.g. 42383841.bin) from the root of your SD card using the first "Browse..." option
+1. "MovableSed" 란에, "Browse..." 옵션을 이용해 `movable.sed` 파일을 업로드해 주세요
+1. Under the "InjectionTarget" field, set the injection target to `DSinternet` (NOT memorypit)
+1. "Build"를 클릭해 주세요
+  + 빌드 과정이 완료될 때까지 잠시 기다려 주세요
+1. 왼쪽의 Build History 영역에 유저네임을 입력해 주세요
+1. 첫 번째 검색 결과를 선택해 주세요
+  + 날짜가 가장 최신이어야 합니다
+1. "output_(name).zip" 링크를 클릭하여 다운로드해 주세요
+1. SD 카드의 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 폴더로 이동해 주세요
+  + `<ID0>` is the 32-letter folder name that you copied in [Seedminer](seedminer)
+  + `<ID1>` is a 32-letter folder inside of the `<ID0>` 
+1. Delete `F00D43D5.bin` from your Nintendo DSiWare folder
+1. Copy the `42383841.bin`  file from the `hax` folder of the downloaded DSiWare archive (output_(name).zip) to the `Nintendo DSiWare` folder
+  ![]({{ "/images/screenshots/bb3/dsiware-location-4.png" | absolute_url }}){: .notice--info} 
+1. Luma3DS `.zip`안에 있는 `boot.firm`과 `boot.3dsx`를 SD 카드의 루트에 복사해 주세요
+  + SD 카드의 루트는 SD 카드를 열 때 보이는 디렉토리이고, Nintendo 3DS 폴더가 보이지만 그 안에 않 들어가 있는 상태의 폴더 입니다
+1. Copy `boot.nds` (B9STool) from the release `.zip` to the root of your SD card
+1. SD 카드의 루트로 Frogminer_save `.zip`안에 압축이 되있는 `private` 폴더를 복사해 주세요
+1. SD 카드를 기기에 다시 삽입해 주세요
+1. 기기를 시작해 주세요
+
+    ![]({{ "/images/screenshots/fredtool/fredtool-root-layout.png" | absolute_url }})
+    {: .notice--info}
