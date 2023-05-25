@@ -15,11 +15,14 @@ title: "安装 boot9strap（通过 Fredtool）"
 <details>{{ technical_info | markdownify }}</details>
 {: .notice--info}
 
+You should only be able to get to this page if you are running version 11.16.0. If you are on any firmware other than 11.17.0 or 11.16.0, STOP as these instructions WILL LEAD TO A BRICK on other firmwares!!
+{: .notice--warning}
+
 ### 你需要准备点啥？
 
 * 你在 [Seedminer](seedminer) 步骤中获得的 `movable.sed` 文件
 * 最新版本的 [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest)（下载 `Frogminer_save.zip`）
-* The latest release of [b9sTool](https://github.com/zoogie/b9sTool/releases/download/v6.1.1/release_6.1.1.zip) (direct download)
+* **11.16.0 or 11.17.0 users**: The v6.1.1 release of [b9sTool](https://github.com/zoogie/b9sTool/releases/download/v6.1.1/release_6.1.1.zip) (direct download)
 * 最新版本的 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)（下载 Luma3DS `.zip` 文件）
 
 #### 第一步 – 检查自制固件
@@ -42,49 +45,11 @@ title: "安装 boot9strap（通过 Fredtool）"
   
 #### 第三步 – 准备工作
 
-本节中，你将会临时将 DS 连接设置（DS Connection Settings）程序临时替换为 Flipnote Studio，用来启动 boot9strap（自制固件）安装器。
-
-1. 将你的 SD 卡插入到电脑
-1. 在电脑上打开 [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec) 站点
-1. 于“Username”一行，填入一个你的英文名（不带空格或特殊字符）
-1. 于 “DSiBin” 一行，点击“Browse...”（选择文件）来上传根目录中的 `42383841.bin` 文件
-1. 于“MovableSed”一行，点击“Browse...”（选择文件）上传你的 `movable.sed` 文件
-1. 于“InjectionTarget”一行，设置注入对象为 `DSinternet`（**不是带有** memorypit 字串的那个）
-1. 点击 “Build”
-  + 等待片刻，直到构建完成
-1. 将你的名字输入左边的 Build History 菜单中的 Filter Builds 一栏
-1. 点击第一个搜索结果
-  + 它应该是所有显示的结果中时间最新的那一个
-1. 点击 "output_(<你的名字>).zip" 的链接
-1. 打开内存卡的 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 文件夹
-  + `<ID0>` 是你在 [Seedminer](seedminer) 部分中复制的 32 位字母长的文件夹名称
-  + `<ID1>` 是一个在 `<ID0>` 文件夹内，另一个 32 位字母长的文件夹 
-1. 删除 Nintendo DSiWare 文件夹中的 `F00D43D5.bin` 文件
-1. 从下载的 DSiWare 压缩包 （`output_(<你的名字>).zip`） 里的 `hax` 文件夹复制 `42383841.bin` 到 `Nintendo DSiWare` 文件夹
-  ![]({{ "/images/screenshots/bb3/dsiware-location-4.png" | absolute_url }}){: .notice--info} 
-1. 解压 Luma3DS `.zip` 里的 `boot.firm` 和 `boot.3dsx` 到你 SD 卡的根目录
-  + 根目录指的是你点进 SD 卡看到的目录，你可以在这个目录下看到 Nintendo 3DS 文件夹，但请不要点进去
-1. Copy `boot.nds` (B9STool) from the release `.zip` to the root of your SD card
-1. 从 Frogminer_save `.zip` 压缩包中复制 `private` 文件夹到内存卡的根目录
-1. 将 SD 卡重新插入你的主机
-1. 启动你的主机
-
-    ![]({{ "/images/screenshots/fredtool/fredtool-root-layout.png" | absolute_url }})
-    {: .notice--info}
+{% include_relative include/fredtool-prep.md %}
 
 #### 第四步 – 覆盖 “DS 连接设置（DS Connection Settings）”
 
-本节中，你将把被修改过的 DS 连接设置应用程序复制进内部存储，这将临时替换其为 Flipnote Studio。
-
-1. 启动你主机上的 “系统设置(System settings)”
-1. 依次点击 `数据管理（データ管理/Data Management）` -> `DSiWare 数据管理（DSiWareデータ管理/DSiWare）` -> `SD卡（micro SDカード/SDカード/SD/microSD）`（[例图](/images/screenshots/bb3/dsiware-management.png)）
-1. 选择 “Haxxxxxxxxx!”
-  + If you are unable to select the "Haxxxxxxxxx" title, [follow this troubleshooting guide](troubleshooting#installing-boot9strap-fredtool)
-1. 选择 “Copy” ，然后选择 “OK”
-1. 返回系统设置的主菜单
-1. 进入至 `网络设置（インターネツト設定/Internet Settings）` -> `DS 连接设置（DSソフト用設定/Nintendo DS Connections）`，然后点击 “OK”（[例图](/images/screenshots/fredtool/dsconnection.png)）
-1. 如果漏洞执行成功，你的主机将进入到日版的“うごくメモ帳 (Flipnote Studio)”
-  + If your device does not load the JPN version of Flipnote Studio, [follow this troubleshooting guide](troubleshooting#installing-boot9strap-fredtool)
+{% include_relative include/fredtool-write-flipnote.md %}
 
 #### 第五步 – 触发 Flipnote 漏洞
 
@@ -99,18 +64,10 @@ title: "安装 boot9strap（通过 Fredtool）"
 
 #### 第七步 – 还原 “DS 连接设置（DS Connection Settings）”
 
-本节中，你将会把之前第四步中被替换为 Flipnote Studio 的 DS 连接设置程序还原回原来的状态。
-
-1. 打开内存卡的 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 文件夹
-1. 下载的 DSiWare 压缩包 （`output_(<你的名字>).zip`） 里的 `clean` 文件夹复制 `42383841.bin` 到 `Nintendo DSiWare` 文件夹，替换已有文件
-1. 将 SD 卡重新插入你的主机
-1. 启动你的主机
-1. 启动你主机上的 “系统设置(System settings)”
-1. 依次点击 `数据管理（データ管理/Data Management）` -> `DSiWare 数据管理（DSiWareデータ管理/DSiWare）` -> `SD卡（micro SDカード/SDカード/SD/microSD）`（[例图](/images/screenshots/bb3/dsiware-management.png)）
-1. 选择 “Nintendo DSi™”
-1. 选择 “Copy” ，然后选择 “OK”
+{% include_relative include/fredtool-restore-dsconn.md %}
 
 ___
+
 
 ### 继续至[完成安装](finalizing-setup)
 {: .notice--primary}
