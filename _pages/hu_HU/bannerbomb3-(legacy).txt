@@ -1,0 +1,50 @@
+---
+title: "BannerBomb3 (Legacy)"
+---
+
+{% include toc title="Tartalomjegyzék" %}
+
+{% capture technical_info %}
+<summary><em>Technikai részletek (opcionális)</em></summary>
+
+Ahhoz, hogy saját kódot futtassunk, kihasználunk egy hibát a DSiWare Data Management ablakában, a Settings alkalmazásban.
+
+Ahhoz, hogy ezt elérjük, szükségünk van a rendszer titkosítási kulcsára (movable.sed), hogy újra építsünk egy DSiWare mentést, amivel exploit-olni tudjuk a rendszert.
+
+További technikai információkért látogass el [ide](https://github.com/zoogie/Bannerbomb3).
+{% endcapture %}
+
+<details>{{ technical_info | markdownify }}</details>
+{: .notice--info}
+
+### Kompatibilitási megjegyzések
+
+Az utasítások az Amerikai, Európai, Japán és Koreai régiójú konzolokon működnek, amik a rendszer verzió mögött egy U, E, J vagy K betű jelöl.
+
+### Amire szükséged lesz
+
+* A `movable.sed` fájlodra a Seedminer vagy a nimhax végrehajtásából
+
+#### I. rész - Előkészületek
+
+{% include_relative include/bb3-prep.txt %}
+
+#### II. rész - Fizikai gombok ellenőrzése
+
+In this section, you will see whether you can access Safe Mode on your device. This will determine which method you will follow on the next page.
+
+Your SD card should remain in your computer while you perform this check.
+
+{% include_relative include/safemodecheck.txt %}
+
+___
+
+### Következő lépések: Válassz egy exploit-ot
+
+Ha a kamera megjelent az előző szakaszban, a Safe Mode valószínűleg működik az eszközödön.
+
+Ha a kamera megjelent, folytasd a [boot9strap telepítésével (USM)](installing-boot9strap-(usm))
+{: .notice--primary}
+
+If the camera did NOT appear, continue to [Installing boot9strap (Fredtool, Legacy)](installing-boot9strap-(fredtool-legacy))
+{: .notice--info}
