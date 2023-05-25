@@ -1,0 +1,23 @@
+Ebben a fejezetben fel fogod másolni azokat a fájlokat az eszközöd SD kártyájára, amik ahhoz szükségesek, hogy kiváltsák a BannerBomb3 exploit-ot.
+
+1. Kapcsold ki a készüléked
+1. Helyezd az SD kártyád a számítógépbe
+1. Open [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen) on your computer
+1. Töltsd fel a `movable.sed` fájlod a "Choose File" opcióval
+1. Kattints a "Build and Download"-ra
+  + This will download an exploit DSiWare called `F00D43D5.bin` and a payload called `bb3.bin` inside of a zip archive (`DSIWARE_EXPLOIT.zip`)
+1. Copy `bb3.bin` from `DSIWARE_EXPLOIT.zip` to the root of your SD card
+  + Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne
+  + This file does not need to be opened or extracted
+  ![]({{ "/images/screenshots/bb3/bb3-root-layout.png" | absolute_url }}){: .notice--info}
+1. Navigálj a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` mappába az SD kártyádon
+  + `<ID0>` is the 32-letter folder name that you copied in [Seedminer](seedminer)
+  + `<ID1>` is a 32-letter folder inside of the `<ID0>`
+  + If you have multiple `<ID1>` folders, follow the instructions [here](troubleshooting#bannerbomb3)
+  ![]({{ "/images/screenshots/bb3/dsiware-location-1.png" | absolute_url }}){: .notice--info}
+1. Hozz létre egy `Nintendo DSiWare` nevű mappát az `<ID1>` mappában
+  + Ha már van mappád *és* van benne DSiWare mentés fájl (`<8-character-id>.bin`), másold őket a számítógépedre és töröld őket az SD kártyáról
+1. Copy the `F00D43D5.bin` file from `DSIWARE_EXPLOIT.zip` to the `Nintendo DSiWare` folder
+
+![]({{ "/images/screenshots/bb3/dsiware-location-2.png" | absolute_url }})
+{: .notice--info}
