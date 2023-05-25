@@ -1,0 +1,23 @@
+Dans cette section, vous allez copier les fichiers nécessaires pour déclencher l'exploit BannerBomb3 sur la carte SD de votre console.
+
+1. Éteignez votre console
+1. Insérez votre carte SD dans votre ordinateur
+1. Open [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen) on your computer
+1. Téléchargez votre movable.sed en utilisant l'option « Choisir un fichier »
+1. Cliquez sur "Build and Download"
+  + This will download an exploit DSiWare called `F00D43D5.bin` and a payload called `bb3.bin` inside of a zip archive (`DSIWARE_EXPLOIT.zip`)
+1. Copy `bb3.bin` from `DSIWARE_EXPLOIT.zip` to the root of your SD card
+  + La racine de la carte SD représente le répertoire initial de la carte SD où vous pouvez voir le dossier Nintendo 3DS, mais ce n'est pas à l'intérieur de ce dernier
+  + This file does not need to be opened or extracted
+  ![]({{ "/images/screenshots/bb3/bb3-root-layout.png" | absolute_url }}){: .notice--info}
+1. Naviguez vers `Nintendo 3DS` -> `<ID0>` -> `<ID1>` sur votre carte SD
+  + `<ID0>` is the 32-letter folder name that you copied in [Seedminer](seedminer)
+  + `<ID1>` is a 32-letter folder inside of the `<ID0>`
+  + If you have multiple `<ID1>` folders, follow the instructions [here](troubleshooting#bannerbomb3)
+  ![]({{ "/images/screenshots/bb3/dsiware-location-1.png" | absolute_url }}){: .notice--info}
+1. Créez un dossier nommé `Nintendo DSiWare` à l'intérieur de `<ID1>`
+  + Si vous aviez déjà le dossier *et* qu'il y a des fichiers de sauvegarde DSiWare existants (`<8-character-id>. in`) à l'intérieur, copiez-les sur votre PC et retirez-les de votre carte SD
+1. Copy the `F00D43D5.bin` file from `DSIWARE_EXPLOIT.zip` to the `Nintendo DSiWare` folder
+
+![]({{ "/images/screenshots/bb3/dsiware-location-2.png" | absolute_url }})
+{: .notice--info}
