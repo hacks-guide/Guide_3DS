@@ -30,29 +30,7 @@ title: "BannerBomb3"
 
 #### 第一步 – 准备工作
 
-本节中，你需要把触发 BannerBomb3 漏洞所需的文件复制到主机的 SD 卡上。
-
-1. 将主机关机
-1. 将你的 SD 卡插入到电脑
-1. 在你的电脑上打开 [Bannerbomb3 Injector](http://3dstools.nhnarwhal.com/#/bb3gen)
-1. 点击 “选择文件” 选项，然后选择你的 movable.sed 上传
-1. 点击 “Build and Download”
-  + 这将下载一个包含名为 `F00D43D5.bin` 的 DSiWare 漏洞文件和一个名为 `bb3.bin` 的 zip 文件（`DSIWARE_EXPLOIT.zip`）到你的电脑上
-1. 从 `DSIWARE_EXPLOIT.zip` 中，将 `bb3.bin` 解压到你的 SD 卡根目录
-  + 根目录指的是你点进 SD 卡看到的目录，你可以在这个目录下看到 Nintendo 3DS 文件夹，但请不要点进去
-  + This file does not need to be opened or extracted
-  ![]({{ "/images/screenshots/bb3/bb3-root-layout.png" | absolute_url }}){: .notice--info}
-1. 打开内存卡的 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` 文件夹
-  + `<ID0>` 是你在 [Seedminer](seedminer) 部分中复制的 32 位字母长的文件夹名称
-  + `<ID1>` 是一个在 `<ID0>` 文件夹内，另一个 32 位字母长的文件夹
-  + If you have multiple `<ID1>` folders, follow the instructions [here](troubleshooting#bannerbomb3)
-  ![]({{ "/images/screenshots/bb3/dsiware-location-1.png" | absolute_url }}){: .notice--info}
-1. 在 `<ID1>` 文件夹内创建一个名为 `Nintendo DSiWare` 的文件夹
-  + 如果这个位置已经存在了这个文件夹，**且**有一些名为 `<8位ID>.bin` 文件（DSiWare 备份文件）在里面，请将它们备份到电脑上，然后从 SD 卡中移除这些文件
-1. 从 `DSIWARE_EXPLOIT.zip` 压缩文件中解压 `F00D43D5.bin` 到 `Nintendo DSiWare` 文件夹下
-
-![]({{ "/images/screenshots/bb3/dsiware-location-2.png" | absolute_url }})
-{: .notice--info}
+{% include_relative include/bb3-prep.md %}
 
 #### 第二步 – 按键检查
 
