@@ -1,0 +1,77 @@
+---
+title: "Installing boot9strap (Fredtool, Legacy)"
+---
+
+{% include toc title="Tartalomjegyzék" %}
+
+{% capture technical_info %}
+<summary><em>Technikai részletek (opcionális)</em></summary>
+
+Ahhoz, hogy a rendszerből kinyerjük a DSiWare adatokat, egy hibát használunk ki a DSiWare adat kezelési ablakában, a rendszer beállításokban.
+
+Hogy ezt elérjük, szükségünk van a rendszer titkosítási kulcsára (movable.sed), hogy újra építsünk egy DSiWare mentést, aminek segítségével ki tudjuk nyerni a DSi Internet beállítások alkalmazást az SD kártyára.
+
+Once we have a DSiWare backup, we can inject it into the DS Internet Settings application.
+
+Ez egy jelenleg működő megvalósítása a "FIRM partitions known-plaintext" néven ismert exploitnak, amiről részletesebben olvashatsz [itt](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+
+{% endcapture %}
+<details>{{ technical_info | markdownify }}</details>
+{: .notice--info}
+
+You should only be able to get to this page if you are running version 11.15.0 or 11.14.0. If you are on any firmware other than 11.15.0 or 11.14.0, STOP as these instructions WILL LEAD TO A BRICK on other firmwares!!
+{: .notice--warning}
+
+### Amire szükséged lesz
+
+* Your `movable.sed` file from completing [Seedminer (Mii)](seedminer-(mii))
+* A [Frogminer_save] legújabb kiadása (https://github.com/zoogie/Frogminer/releases/latest) (`Frogminer_save.zip`)
+* **11.15.0 and 11.14.0 users only**: The v6.0.1 release of [b9sTool](https://github.com/zoogie/b9sTool/releases/tag/v6.0.1) (direct download)
+* A [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) legújabb kiadása (a Luma3DS `.zip` fájl)
+
+#### I. rész - CHF ellenőrzés
+
+{% include_relative include/cfw-check-fredtool.txt %}
+
+#### II. rész - BannerBomb3
+
+Ebben a fejezetben elő fogod idézni a BannerBomb3 exploit-ot a DSIWare Management menü használatával és lemásolni az eredmény dump fájlt a számítógépedre, hogy fel tudd használni a következő fejezetben.
+
+1. Tedd vissza az SD kártyád a készülékedbe
+1. Kapcsold be a készülékedet
+1. Lépj be a System Settings-be a készülékeden
+1. Navigálj ide: `Data Management` -> `DSiWare` -> `SD Card` ([kép](/images/screenshots/bb3/dsiware-management.png))
+  + Az eszközödnek a BB3 multihax menüt kell mutatnia
+  + Ha összeomlik a rendszered ebben a lépésben, [kövesd ezt a hibaelhárítási útmutatót](troubleshooting#installing-boot9strap-fredtool)
+1. Használd a D-Pad-et a navigáláshoz, és nyomd meg az (A) gombot a "Dump DSiWare" kiválasztásához
+  + Az eszközöd automatikusan újra fog indulni
+1. Kapcsold ki a készüléked
+  
+#### III. rész - Előkészületek
+
+{% include_relative include/fredtool-prep.txt %}
+
+#### IV. rész - A DS Connection Settings felülírása
+
+{% include_relative include/fredtool-write-flipnote.txt %}
+
+#### V. rész - Flipnote Exploit
+
+{% include_relative include/install-boot9strap-b9stool.txt method="dsinternet" %}
+
+#### VI. rész - Luma3DS beállítás
+
+1. Nyomd le és tartsd nyomva a (Select) gombot, és a (Select) nyomva tartása mellett kapcsold be az eszközödet. Ez el fogja indítani a Luma3DS beállításokat
+{% include_relative include/configure-luma3ds.txt %}
+
+{% include_relative include/luma3ds-installed-note.txt %}
+
+#### VII. rész - A DS Connection Settings visszaállítása
+
+{% include_relative include/fredtool-restore-dsconn.txt %}
+
+___
+
+
+### Tovább a [telepítés véglegesítésére](finalizing-setup)
+{: .notice--primary}
