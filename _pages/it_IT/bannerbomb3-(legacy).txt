@@ -1,0 +1,50 @@
+---
+title: "BannerBomb3 (Legacy)"
+---
+
+{% include toc title="Indice" %}
+
+{% capture technical_info %}
+<summary><em>Dettagli Tecnici (opzionale)</em></summary>
+
+Per avviare codice non ufficiale, approfittiamo di una falla di sicurezza nella sezione Gestione Nintendo DSiWare dell'applicazione Impostazioni della console.
+
+A questo scopo, useremo la chiave di crittografia della tua console (movable.sed) per generare un backup DSiWare che possa essere avviato dalla console.
+
+Per una spiegazione più tecnica, vedi [qui](https://github.com/zoogie/Bannerbomb3).
+{% endcapture %}
+
+<details>{{ technical_info | markdownify }}</details>
+{: .notice--info}
+
+### Note di Compatibilità
+
+Queste istruzioni funzionano su console americane, europee, giapponesi e coreane, indicate rispettivamente dalle lettere U, E, J o K dopo la versione del sistema operativo.
+
+### Cosa serve
+
+* Il tuo file `movable.sed` ottenuto completando Seedminer o nimhax
+
+#### Sezione I - Preparazione
+
+{% include_relative include/bb3-prep.txt %}
+
+#### Sezione II - Verifica Pulsanti Hardware
+
+In this section, you will see whether you can access Safe Mode on your device. This will determine which method you will follow on the next page.
+
+Your SD card should remain in your computer while you perform this check.
+
+{% include_relative include/safemodecheck.txt %}
+
+___
+
+### Passaggi successivi: Scelta di un exploit
+
+If the camera appeared in the previous section, Safe Mode is likely to be working on your device.
+
+If the camera appeared, continue to [Installing boot9strap (USM)](installing-boot9strap-(usm))
+{: .notice--primary}
+
+If the camera did NOT appear, continue to [Installing boot9strap (Fredtool, Legacy)](installing-boot9strap-(fredtool-legacy))
+{: .notice--info}
