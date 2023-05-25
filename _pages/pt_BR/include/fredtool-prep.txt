@@ -1,0 +1,29 @@
+Nesta seção, você copiará os arquivos necessários para substituir temporariamente as Configurações de Conexões Nintendo DS com Flipnote Studio, que é usado para iniciar o instalador boot9strap (custom firmware).
+
+1. Insira o cartão SD no seu computador
+1. Abra o site [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec) no seu computador
+1. Sob o campo "Username", digite qualquer nome alfanumérico (sem espaços ou caracteres especiais)
+1. Under the "DSiBin" field, upload your DSiWare backup file (e.g. 42383841.bin) from the root of your SD card using the first "Browse..." option
+1. Sob o campo "MovableSed", coloque seu arquivo `movable.sed` usando a segunda opção "Browse..."
+1. Under the "InjectionTarget" field, set the injection target to `DSinternet` (NOT memorypit)
+1. Clique em "Build"
+  + Aguarde alguns segundos para que o processo de compilação termine
+1. Na seção Build History à esquerda, digite o nome de usuário no campo "Filter Builds"
+1. Clique no primeiro resultado da pesquisa
+  + Esse resultado deve ter a última marcação de tempo
+1. Clique no link "output_(nome).zip"
+1. Navegue até `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` no seu cartão SD
+  + `<ID0>` is the 32-letter folder name that you copied in [Seedminer](seedminer)
+  + `<ID1>` is a 32-letter folder inside of the `<ID0>` 
+1. Delete `F00D43D5.bin` from your Nintendo DSiWare folder
+1. Copy the `42383841.bin`  file from the `hax` folder of the downloaded DSiWare archive (output_(name).zip) to the `Nintendo DSiWare` folder
+  ![]({{ "/images/screenshots/bb3/dsiware-location-4.png" | absolute_url }}){: .notice--info} 
+1. Copie `boot.firm` e `boot.3dsx` do `.zip` do Luma3DS para a raiz do seu cartão SD
+  + A raiz do cartão SD refere-se ao diretório inicial no seu cartão SD onde você pode ver a pasta Nintendo 3DS, mas não está dentro dela
+1. Copie `boot.nds` (B9STool) do `.zip` para a raiz do seu cartão SD
+1. Copie a pasta `private` do `.zip` do Frogminer_save para a raiz do seu cartão SD
+1. Reinsira seu cartão SD no seu dispositivo
+1. Ligue o seu dispositivo
+
+    ![]({{ "/images/screenshots/fredtool/fredtool-root-layout.png" | absolute_url }})
+    {: .notice--info}
