@@ -1,0 +1,29 @@
+In questa sezione copierai i file necessari per sostituire temporaneamente "Impostazioni di collegamento" con Flipnote Studio, usato per lanciare l'installer di boot9strap (custom firmware).
+
+1. Inserisci la scheda SD nel tuo computer
+1. Apri il sito [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec) sul tuo computer
+1. Sotto il campo "Username" inserisci un nome alfanumerico qualunque (senza spazi o caratteri speciali)
+1. Under the "DSiBin" field, upload your DSiWare backup file (e.g. 42383841.bin) from the root of your SD card using the first "Browse..." option
+1. Sul campo "MovableSed", carica il tuo file `movable.sed` usando la seconda opzione "Browse..."
+1. Under the "InjectionTarget" field, set the injection target to `DSinternet` (NOT memorypit)
+1. Clicca "Build"
+  + Attendi qualche secondo che termini il processo di compilazione
+1. Nella sezione "Build History" a sinistra, inserisci l'Username nel campo "Filter Builds"
+1. Clicca sul primo risultato della ricerca
+  + Dovrebbe avere la data più recente
+1. Clicca il link "output_(name).zip"
+1. Nella tua scheda SD, entra in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`
+  + `<ID0>` is the 32-letter folder name that you copied in [Seedminer](seedminer)
+  + `<ID1>` is a 32-letter folder inside of the `<ID0>` 
+1. Delete `F00D43D5.bin` from your Nintendo DSiWare folder
+1. Copy the `42383841.bin`  file from the `hax` folder of the downloaded DSiWare archive (output_(name).zip) to the `Nintendo DSiWare` folder
+  ![]({{ "/images/screenshots/bb3/dsiware-location-4.png" | absolute_url }}){: .notice--info} 
+1. Copia i file `boot.firm` e `boot.3dsx` dall'archivio `.zip` di Luma3DS nella directory principale della tua scheda SD
+  + La directory principale della scheda SD è la cartella della tua scheda SD in cui è possibile visualizzare la cartella Nintendo 3DS, ma non il suo interno
+1. Copia il file `boot.nds` (B9STool) dall'archivio `.zip` di b9sTool nella directory principale della tua scheda SD
+1. Copia la cartella `private` presente nell'archivio `.zip` di Frogminer_save nella directory principale della tua scheda SD
+1. Reinserisci la scheda SD nella tua console
+1. Accendi la console
+
+    ![]({{ "/images/screenshots/fredtool/fredtool-root-layout.png" | absolute_url }})
+    {: .notice--info}
