@@ -1,5 +1,5 @@
 ---
-title: "Installing boot9strap (Fredtool, Legacy)"
+title: "Installazione di boot9strap (Fredtool, Legacy)"
 ---
 
 {% include toc title="Indice" %}
@@ -11,7 +11,7 @@ Per eseguire un dump dei DSiWare di sistema, approfittiamo di una falla di sicur
 
 Per realizzare l'obiettivo, utilizziamo la chiave di cifratura della tua console (movable.sed) per generare un backup DSiWare che induce la console a creare un dump dell'applicazione Impostazioni Internet DSi nella directory principale della scheda SD.
 
-Once we have a DSiWare backup, we can inject it into the DS Internet Settings application.
+Una volta ottenuto un backup DSiWare, possiamo iniettarlo nell'applicazione Connessioni Nintendo DS.
 
 Questa è un'implementazione funzionante dell'exploit del "testo in chiaro noto nelle partizioni FIRM" spiegato [qui](https://www.3dbrew.org/wiki/3DS_System_Flaws).
 
@@ -19,14 +19,14 @@ Questa è un'implementazione funzionante dell'exploit del "testo in chiaro noto 
 <details>{{ technical_info | markdownify }}</details>
 {: .notice--info}
 
-You should only be able to get to this page if you are running version 11.15.0 or 11.14.0. If you are on any firmware other than 11.15.0 or 11.14.0, STOP as these instructions WILL LEAD TO A BRICK on other firmwares!!
+Dovresti essere arrivato a questa pagina solo se esegui la versione 11.15.0 o 11.14.0. Se hai una versione del software diversa da 11.15.0 o 11.14.0, FERMATI SUBITO poiché queste istruzioni BRICKERANNO LA TUA CONSOLE con altri firmware!!
 {: .notice--warning}
 
 ### Cosa serve
 
-* Your `movable.sed` file from completing [Seedminer (Mii)](seedminer-(mii))
+* Il tuo file `movable.sed` dalla sezione [Seedminer (Mii)](seedminer-(mii))
 * L'ultima versione di [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest) (`Frogminer_save.zip`)
-* **11.15.0 and 11.14.0 users only**: The v6.0.1 release of [b9sTool](https://github.com/zoogie/b9sTool/releases/tag/v6.0.1) (direct download)
+* **Solo utenti con 11.15.0 o 11.14.0**: La versione v6.0.1 di [b9sTool](https://github.com/zoogie/b9sTool/releases/tag/v6.0.1) (download diretto)
 * L'ultima versione di [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (il file `.zip` di Luma3DS)
 
 #### Sezione I - Controllo del CFW
