@@ -45,11 +45,11 @@ function can_ssloth(major, minor, native, region, model) {
         } else if (region == "K") {
             if
                 (
-                (!model && minor == 4 && native == 33) ||
-                (!model && minor == 5 && native == 34) ||
-                (!model && minor == 6 && native == 35) ||
-                (!model && minor == 7 && native == 35) ||
-                (!model && minor == 8 && native == 35) ||
+                (model && minor == 4 && native == 33) ||
+                (model && minor == 5 && native == 34) ||
+                (model && minor == 6 && native == 35) ||
+                (model && minor == 7 && native == 35) ||
+                (model && minor == 8 && native == 35) ||
                 (minor == 9 && native == 36) ||
                 (minor == 10 && native == 37) ||
                 (minor == 12 && native == 38) ||
