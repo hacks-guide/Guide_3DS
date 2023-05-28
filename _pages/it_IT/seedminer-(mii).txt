@@ -48,39 +48,39 @@ In questa sezione imposterai Seedminer e otterrai i file della tua console neces
   + Se il comando restituisce l'errore `No module named pip`, devi installare pip manualmente. Troverai le relative istruzioni in [questa pagina](https://pip.pypa.io/en/stable/installation/).
 1. Accendi la console con la scheda SD inserita
 1. Apri l'applicazione Centro di creazione Mii
-1. Tap the "QR Code/Image Options" button
-1. Tap "Save Mii as QR Code"
-1. Select any Mii Character (make a new one first if you don't have any), and press "OK"
-1. Turn the console off
-1. Put the console's SD card into your computer, navigate to the `Nintendo 3DS` folder on the SD, and copy the name of the 32-character-long folder directly inside
-  + This folder, known as the ID0, is system-specific. Only one should be present. If you see multiple, follow [these instructions](troubleshooting#seedminer)
-  + Once you have the ID0, paste it into a document so you can reference it later
-1. Navigate to the `DCIM` folder on the SD card
-1. Look for the QR Code, which will be a `.JPG` file starting with `HNI`
-  + You may have many other files in here already if you use the Nintendo 3DS Camera app
-1. Copy this file to the Seedminer folder on your PC
+1. Tocca il pulsante "QR Code e immagini"
+1. Tocca "Salva QR Code"
+1. Scegli un qualunque Mii (creane uno nuovo se non ne hai), e premi "OK"
+1. Spegni la console
+1. Inserisci la scheda SD della console nel tuo computer, entra nella cartella `Nintendo 3DS` sulla scheda SD, e copia il nome della cartella lunga 32 caratteri qui presente
+  + Questa cartella, conosciuta anche come ID0, è univoca. Dovrebbe essercene solo una. Se vedi più cartelle, segui [queste istruzioni](troubleshooting#seedminer)
+  + Una volta ottenuto l'ID0, incollalo su un documento per averlo a portata di mano più tardi
+1. Entra nella cartella `DCIM` della scheda SD
+1. Cerca il codice QR, che sarà un file `.JPG` che comincia con `HNI`
+  + Potresti trovare altri file se hai già utilizzato l'applicazione Fotocamera Nintendo 3DS
+1. Copia questo file nella cartella Seedminer sul tuo PC
 
-### Section II - Processing Mii QR and Mining
+### Sezione II - Elaborazione del QR Mii e Mining
 
-In this section, you will turn the Mii QR code into a usable file and mine `movable.sed` with it.
+In questa sezione trasformerai il codice QR Mii in un file utilizzabile e con esso minerai il file `movable.sed`.
 
-1. Open the [editMii](https://zoogie.github.io/web/miiqr/) website on your computer
-1. Click on "Import from...", then select "QR Code" and upload the Mii QR code from earlier
-1. Click on "Export to...", then select "encrypted (.bin)"
-  + This will download a file named `input.bin`
-1. Copy this `input.bin` to the Seedminer folder
-1. Open the terminal/PowerShell/Command Prompt window from earlier
-1. Inside this window, enter the command `py -3 seedminer_launcher3.py id0 <id0>`
-  + Replace `<id0>` with the ID0 you copied into a document
-  + Do not include the angle brackets
-1. Once it completes, enter the command `py -3 seedminer_launcher3.py mii <model> <year>`
-  + Replace `<model>` with the model of your console (`new` or `old`) - if you aren't sure, only models with the ZL/ZR buttons and C-Stick are new
-  + Replace `<year>` with the year the 3DS was made (you often find this on the backplate) - leave this empty if you aren't sure, in which case it will start from the middle
-  + If this fails with an error of `input.bin is invalid size`, remake the `input.bin` using your QR Code. If it *still* fails, open a different browser and remake the `input.bin` there
-  + If you see the message `"LFCS has been left blank`, use the opposite console model (e.g. `mii old` instead of `mii new`)
-  + The mining process will usually take up to 90 minutes, depending on luck and your GPU's strength
-  + If the second stage (`movable_part2.sed generation success`) gets past offset 100, Verify that you input the correct ID0. If your ID0 is correct, you cannot use this method and will have to update to the latest version and see if a non-Seedminer method is available for you [here](https://troubleshoot.uwuu.ca/seventeen)
-1. When it finishes, a file called `movable.sed` will appear in the Seedminer folder
+1. Apri il sito [editMii](https://zoogie.github.io/web/miiqr/) sul tuo computer
+1. Clicca su "Import from...", quindi seleziona "QR Code" e carica il codice QR Mii ottenuto prima
+1. Clicca su "Export to...", quindi seleziona "encrypted (.bin)"
+  + Verrà scaricato un file chiamato `input.bin`
+1. Copia questo file `input.bin` nella cartella Seedminer
+1. Apri la finestra del terminale/PowerShell/Prompt dei comandi di prima
+1. In questa finestra, inserisci il comando `py -3 seedminer_launcher3.py id0 <id0>`
+  + Sostituisci `<id0>` con l'ID0 che hai copiato precedentemente nel documento
+  + Non includere le parentesi angolate
+1. Al termine, inserisci il comando `py -3 seedminer_launcher3.py mii <modello> <anno>`
+  + Sostituisci `<modello>` con il modello della tua console (`new` o `old`) - se non ne sei sicuro, solo i modelli con i pulsanti ZL/ZR e C-Stick sono `new`
+  + Sostituisci `<anno>` con l'anno di produzione del 3DS (spesso lo trovi sul lato posteriore) - lascia vuoto se non ne sei sicuro, nel qual caso partirà da un valore predefinito
+  + Se ottieni un errore `input.bin is invalid size`, ricrea il file `input.bin` utilizzando il tuo codice QR. Se fallisce *di nuovo*, apri un browser diverso e ricrea il file `input.bin`
+  + Se ottieni il messaggio `"LFCS has been left blank`, utilizza il modello di console opposto (ad es. `mii old` al posto di `mii new`)
+  + Il processo di mining richiede solitamente fino a 90 minuti, a seconda della fortuna e della potenza della tua GPU
+  + Se la seconda fase (`movable_part2.sed generation success`) oltrepassa l'offset 100, verifica di aver inserito l'ID0 corretto. Se il tuo ID0 è corretto, non puoi usare questo metodo e dovrai aggiornare all'ultima versione e controllare se è disponibile per te un metodo non-Seedminer [qui](https://troubleshoot.uwuu.ca/seventeen)
+1. Al termine, apparirà un file `movable.sed` nella cartella Seedminer
 
 Prosegui con [BannerBomb3 (Legacy)](bannerbomb3-(legacy))
 {: .notice--primary}
