@@ -1,0 +1,59 @@
+---
+title: "Installing boot9strap (Fredtool-Inject)"
+---
+
+{% include toc title="Indice" %}
+
+{% capture technical_info %}
+<summary><em>Dettagli Tecnici (opzionale)</em></summary>
+
+Seedminer utilizza il tuo file `movable.sed` per decriptare un qualunque titolo DSiWare per iniettare una particolare applicazione DSiWare nell'applicazione Connessioni Nintendo DS.
+
+Questa è un'implementazione funzionante dell'exploit del "testo in chiaro noto nelle partizioni FIRM" spiegato [qui](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+
+{% endcapture %}
+<details>{{ technical_info | markdownify }}</details>
+{: .notice--info}
+
+You should only be able to get to this page if you are running version 11.17.0. Se hai una versione del software diversa da 11.17.0 o 11.16.0, FERMATI SUBITO poiché queste istruzioni BRICKERANNO LA TUA CONSOLE con altri firmware!!
+{: .notice--warning}
+
+### Cosa serve
+
+* Your `movable.sed` file from completing [Seedminer](seedminer-(alternate))
+* Your DSiWare backup from completing [Dumping eShop DSiWare](dumping-eshop-dsiware)
+* L'ultima versione di [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest) (`Frogminer_save.zip`)
+* **11.16.0 or 11.17.0 users**: The v6.1.1 release of [b9sTool](https://github.com/zoogie/b9sTool/releases/download/v6.1.1/release_6.1.1.zip)
+  * Make **absolutely sure** that you download the right file, as using the incorrect file may lead to a BRICK
+* L'ultima versione di [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (il file `.zip` di Luma3DS)
+
+#### Sezione I - Controllo del CFW
+
+{% include_relative include/cfw-check-fredtool.txt %}
+
+#### Sezione II - Preparazione
+
+{% include_relative include/fredtool-prep.txt %}
+
+#### Section III - Overwriting DS Connection Settings
+
+{% include_relative include/fredtool-write-flipnote.txt %}
+
+#### Sezione IV - Exploit Flipnote
+
+{% include_relative include/install-boot9strap-b9stool.txt method="dsinternet" %}
+
+#### Section V - Luma3DS Configuration
+
+1. Premi (Select) e accendi la console continuando a tenerlo premuto. Verrà avviata la configurazione di Luma3DS
+{% include_relative include/configure-luma3ds.txt %}
+
+{% include_relative include/luma3ds-installed-note.txt %}
+
+#### Section VI - Restoring DS Connection Settings
+
+{% include_relative include/fredtool-restore-dsconn.txt %}
+___
+
+### Prosegui con il [Completamento dell'installazione](finalizing-setup)
+{: .notice--primary}
