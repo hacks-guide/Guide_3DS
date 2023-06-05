@@ -15,6 +15,7 @@ Páginas do guia:
   * [BannerBomb3](#bannerbomb3)
   * [Instalando boot9strap (USM)](#instalando-boot9strap-usm)
   * [Instalando boot9strap (Fredtool)](#instalando-boot9strap-fredtool)
+  * [Homebrew Launcher (PicHaxx)](#homebrew-launcher-pichaxx)
 * [Instalando boot9strap (Soundhax)](#instalando-boot9strap-soundhax)
 * [Instalando boot9strap (SSLoth-Browser)](#instalando-boot9strap-ssloth-browser)
 * [Homebrew Launcher (super-skaterhax)](#homebrew-launcher-super-skaterhax)
@@ -256,6 +257,38 @@ Há um problema com o seu arquivo `boot.nds`. Baixe novamente a versão mais rec
 <summary><u>Não é possível abrir o menu de configuração do Luma3DS depois de executar B9STool</u></summary>
 
 Entre no [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) e explique o que aconteceu.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+## Homebrew Launcher (PicHaxx)
+
+{% capture compat %}
+<summary><u>"Ocorreu um erro. Segure o botão POWER para desligar..." (tela preta com texto)</u></summary>
+
+Your `00000001.sav` and/or `otherapp.bin` files may be misplaced. Ensure that `00000001.sav` is in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` and that `otherapp.bin` is on the root of your SD card.
+
+If your files are in the correct locations, re-create the save using the [PicHaxx Save Tool](https://3dstools.nhnarwhal.com/#/pichaxx), then place it in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data`. Ensure that the file is named exactly `00000001.sav` and that you used your console's `movable.sed` to create it. Re-download [otherapps.zip](/assets/otherapps.zip), place the `.bin` file relevant to your console to the root of your SD card, and rename it to `otherapp.bin`. Não adicione a extensão `.bin` se você não a vê.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>"An exception occurred" or Errdisp when opening Picross</u></summary>
+
+Your device already has custom firmware. Você deve [checar por CFW](checking-for-cfw).
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>"Um erro ocorreu, forçando o fechamento do software..." (caixa de mensagens branca)</u></summary>
+
+There is an issue with your `otherapp.bin` file. Download [otherapps.zip](/assets/otherapps.zip), place the `.bin` file relevant to your console to the root of your SD card, and rename it to `otherapp.bin`. Não adicione a extensão `.bin` se você não a vê.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Game starts normally</u></summary>
+
+Your modified `00000001.sav` file may be misplaced, or you may have used the wrong `movable.sed` when creating it. Re-generate your `movable.sed` from [Bruteforce Movable](https://seedminer.hacks.guide), then re-create the save using the [PicHaxx Save Tool](https://3dstools.nhnarwhal.com/#/pichaxx) and place the resulting file (`00000001.sav`) in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data`.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -580,7 +613,7 @@ Há uma série de razões para que isto possa estar acontecendo. Em qualquer cas
 <summary><u>"Ocorreu um erro. Segure o botão POWER para desligar..."</u></summary>
 
 Os ARM11 exception handlers estão desabilitados, ou custom firmware não está instalado. Tente habilitar os ARM11 exception handlers:
-  + Desligue o seu dispositivo
+  + Desligue seu dispositivo
   + Segure (Select)
   + Ligue seu dispositivo enquanto segura o botão (Select)
   + Se a caixa "Disable ARM11 exception handlers" estiver marcada, desmarque a opção
