@@ -27,25 +27,27 @@ unSAFE_MODE의 더 자세한 설명은 [여기 (영문)](https://github.com/zoog
 ### 준비물
 
 * 최신 버전의 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (직접 다운로드)
-* 최신 버전의 [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (직접 다운로드)
-* [usm.bin](https://github.com/zoogie/unSAFE_MODE/releases/download/v1.3/usm.bin) (직접 다운로드)
+* The latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/download/v1.3/RELEASE_v1.3.zip) (direct download)
 
 #### 섹션 I - 준비 작업
 
-이 섹션에서는, Homebrew Launcher 메뉴에서 slotTool을 실행해, Wi-Fi 연결 슬롯을 수정된 데이터로 덮어씌웁니다. 그 다음, 기기의 SD 카드에 unSAFE_MODE 취약점을 실행하기 위한 파일을 복사하게 됩니다. 이 취약점을 실행함으로서, 기기의 Wi-Fi 연결 설정은 일시적으로 덮어씌워집니다.
+이 섹션에서는 기기의 SD 카드에 unSAFE_MODE 취약점을 실행하기 위한 파일을 복사하게 됩니다. Then, you will use Homebrew Launcher to launch slotTool, which will overwrite your Wi-Fi slots with hacked data. 이 취약점을 실행함으로서, 기기의 Wi-Fi 연결 설정은 일시적으로 덮어씌워집니다.
 
+1. SD 카드를 컴퓨터에 삽입해 주세요
+1. SD 카드이 루트에 `boot9strap` 라는 이름으로 새 폴더를 생성해 주세요
+1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the RELEASE `.zip` to the `/boot9strap/` folder on your SD card
+1. SD 카드의 루트에 `3ds` 폴더가 없을 경우 폴더를 만들어 주세요
+    + 이 폴더에는 홈브류 에플리케이션과 데이터가 보관되어 있으며, 기기가 자동으로 생성하는 `Nintendo 3DS` 폴더와 다른 폴더입니다
+1. Copy the `slotTool` folder from the RELEASE `.zip` to the `/3ds/` folder on your SD card
+1. Copy `usm.bin` from the RELEASE `.zip` to the root folder on your SD card
+1. SafeB9SInstaller `.zip`의 `SafeB9SInstaller.bin`을 SD 카드의 루트로 복사해 주세요
+1. SD 카드를 기기에 다시 삽입해 주세요
 1. 기기를 시작해 주세요
 1. 아무 방법을 사용해 Homebrew Launcher를 실행해 주세요 (아마 인터넷 브라우저일 겁니다)
 1. 홈브류 목록에서 slotTool를 실행해 주세요
   + 여기서 붉은 화면이 표시되면, 전원 버튼을 15초 눌러 기기를 강제로 종료하고, 이 섹션을 다시 시도해 주세요
 1. "INSTALL exploit to wifi slots 1,2,3 & shutdown" 옵션을 선택해 주세요
   + 화면에 텍스트가 표시되고, 그 다음 기기가 자동으료 종료될 겁니다
-1. SD 카드를 컴퓨터에 삽입해 주세요
-1. SD 카드이 루트에 `boot9strap` 라는 이름으로 새 폴더를 생성해 주세요
-1. SD 카드에 있는 `/boot9strap/` 폴더에 boot9strap `.zip` 파일 안에 압축되있는 `boot9strap.firm`과 `boot9strap.firm.sha`을 복사해 주세요
-1. SafeB9SInstaller `.zip`의 `SafeB9SInstaller.bin`을 SD 카드의 루트로 복사해 주세요
-1. 'usm.bin' 파일을 SD 카드의 루트에 복사해 주세요
-1. SD 카드를 기기에 다시 삽입해 주세요
 
 ![]({{ "/images/screenshots/hblusm-root-layout.png" | absolute_url }})
 {: .notice--info}
