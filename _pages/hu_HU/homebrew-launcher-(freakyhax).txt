@@ -1,0 +1,54 @@
+---
+title: "Homebrew Launcher (freakyhax)"
+---
+
+{% include toc title="Tartalomjegyzék" %}
+
+{% capture technical_info %}
+<summary><em>Technikai részletek (opcionális)</em></summary>
+[freakyhax](https://plutooo.github.io/freakyhax/) is an exploit for the game Freakyforms Deluxe discovered and released by [plutooo](https://github.com/plutooo). It works on versions 9.0.0 through 11.17.0 on EUR, USA and JPN region devices.
+
+{% endcapture %}
+<details>{{ technical_info | markdownify }}</details>
+{: .notice--info}
+
+This method requires a working 3DS camera.
+{: .notice--info}
+
+## What you need
+
++ A EUR/USA/JPN copy of Freakyforms Deluxe (eShop or cartridge)
++ The latest release of [freakyhax](https://github.com/plutooo/freakyhax/releases/latest)
++ The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
++ [otherapps.zip]({{ base_path }}/assets/otherapps.zip) (direct download)
+
+## Lépések
+
+### I. rész - Előkészületek
+
+1. Kapcsold ki a készüléked
+1. Helyezd az SD kártyád a számítógépbe
+1. Copy all files and folders inside the `/build/<your console and region>/exploit/` folder from the freakyhax `.zip` to the root of your SD card
+  + Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne
+1. Copy the otherapp payload for your model/region/version from `otherapps.zip` to the root of your SD card, then rename the payload to `otherapp.bin`
+  + Do not add the `.bin` extension if you do not already see it
+1. Másold át a `boot.firm` és `boot.3dsx` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
+1. Tedd vissza az SD kártyád a készülékedbe
+1. Kapcsold be a készülékedet
+
+### Section II - freakyhax
+
+1. Tedd vissza az SD kártyád a készülékedbe
+1. Kapcsold be a készülékedet
+1. Launch Freakyforms Deluxe
+1. In the game menu, select `Play -> Camera -> Load a QR code`
+1. Select the QR code
+1. If the exploit was successful, your device will have loaded the Homebrew Launcher
+
+### Section III - Hardware Button Check
+
+{% include_relative include/safemodecheck.txt %}
+
+___
+
+{% include_relative include/hbl-common-exploits.txt %}
