@@ -1,0 +1,59 @@
+---
+title: "Installing boot9strap (Fredtool-Inject)"
+---
+
+{% include toc title="Содержание" %}
+
+{% capture technical_info %}
+<summary><em>Technical Details (optional)</em></summary>
+
+This method of using Seedminer for further exploitation uses your `movable.sed` file to decrypt any DSiWare title for the purposes of injecting an exploitable DSiWare title into the DS Internet Settings application.
+
+This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+
+{% endcapture %}
+<details>{{ technical_info | markdownify }}</details>
+{: .notice--info}
+
+You should only be able to get to this page if you are running version 11.17.0. If you are on any firmware other than 11.17.0 or 11.16.0, STOP as these instructions WILL LEAD TO A BRICK on other firmwares!!
+{: .notice--warning}
+
+### Что понадобится
+
+* Your `movable.sed` file from completing [Seedminer](seedminer-(alternate))
+* Your DSiWare backup from completing [Dumping eShop DSiWare](dumping-eshop-dsiware)
+* The latest release of [Frogminer_save](https://github.com/zoogie/Frogminer/releases/latest) (`Frogminer_save.zip`)
+* **11.16.0 or 11.17.0 users**: The v6.1.1 release of [b9sTool](https://github.com/zoogie/b9sTool/releases/download/v6.1.1/release_6.1.1.zip)
+  * Make **absolutely sure** that you download the right file, as using the incorrect file may lead to a BRICK
+* The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+
+#### Section I - CFW Check
+
+{% include_relative include/cfw-check-fredtool.txt %}
+
+#### Часть II - Подготовка
+
+{% include_relative include/fredtool-prep.txt %}
+
+#### Section III - Overwriting DS Connection Settings
+
+{% include_relative include/fredtool-write-flipnote.txt %}
+
+#### Section IV - Flipnote Exploit
+
+{% include_relative include/install-boot9strap-b9stool.txt method="dsinternet" %}
+
+#### Section V - Luma3DS Configuration
+
+1. Press and hold (Select), and while holding (Select), power on your device. This will launch Luma3DS configuration
+{% include_relative include/configure-luma3ds.txt %}
+
+{% include_relative include/luma3ds-installed-note.txt %}
+
+#### Section VI - Restoring DS Connection Settings
+
+{% include_relative include/fredtool-restore-dsconn.txt %}
+___
+
+### Следующий шаг: [Завершение установки](finalizing-setup)
+{: .notice--primary}
