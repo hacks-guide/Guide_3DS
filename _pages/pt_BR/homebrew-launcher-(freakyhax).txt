@@ -1,0 +1,54 @@
+---
+title: "Homebrew Launcher (freakyhax)"
+---
+
+{% include toc title="Tabela de Conteúdo" %}
+
+{% capture technical_info %}
+<summary><em>Detalhes técnicos (opcional)</em></summary>
+[freakyhax](https://plutooo.github.io/freakyhax/) is an exploit for the game Freakyforms Deluxe discovered and released by [plutooo](https://github.com/plutooo). It works on versions 9.0.0 through 11.17.0 on EUR, USA and JPN region devices.
+
+{% endcapture %}
+<details>{{ technical_info | markdownify }}</details>
+{: .notice--info}
+
+This method requires a working 3DS camera.
+{: .notice--info}
+
+## What you need
+
++ A EUR/USA/JPN copy of Freakyforms Deluxe (eShop or cartridge)
++ The latest release of [freakyhax](https://github.com/plutooo/freakyhax/releases/latest)
++ The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
++ [otherapps.zip]({{ base_path }}/assets/otherapps.zip) (direct download)
+
+## Instruções
+
+### Seção I - Preparação
+
+1. Desligue seu dispositivo
+1. Insira o cartão SD no seu computador
+1. Copy all files and folders inside the `/build/<your console and region>/exploit/` folder from the freakyhax `.zip` to the root of your SD card
+  + A raiz do cartão SD refere-se ao diretório inicial no seu cartão SD onde você pode ver a pasta Nintendo 3DS, mas não está dentro dela
+1. Copy the otherapp payload for your model/region/version from `otherapps.zip` to the root of your SD card, then rename the payload to `otherapp.bin`
+  + Do not add the `.bin` extension if you do not already see it
+1. Copie `boot.firm` e `boot.3dsx` do `.zip` do Luma3DS para a raiz do seu cartão SD
+1. Reinsira seu cartão SD no seu dispositivo
+1. Ligue o seu dispositivo
+
+### Section II - freakyhax
+
+1. Reinsira seu cartão SD no seu dispositivo
+1. Ligue o seu dispositivo
+1. Launch Freakyforms Deluxe
+1. In the game menu, select `Play -> Camera -> Load a QR code`
+1. Select the QR code
+1. If the exploit was successful, your device will have loaded the Homebrew Launcher
+
+### Section III - Hardware Button Check
+
+{% include_relative include/safemodecheck.txt %}
+
+___
+
+{% include_relative include/hbl-common-exploits.txt %}
