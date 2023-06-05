@@ -1,0 +1,54 @@
+---
+title: "Homebrew Launcher (freakyhax)"
+---
+
+{% include toc title="목차" %}
+
+{% capture technical_info %}
+<summary><em>기술적 상세 정보 (선택 사항)</em></summary>
+[freakyhax](https://plutooo.github.io/freakyhax/) is an exploit for the game Freakyforms Deluxe discovered and released by [plutooo](https://github.com/plutooo). It works on versions 9.0.0 through 11.17.0 on EUR, USA and JPN region devices.
+
+{% endcapture %}
+<details>{{ technical_info | markdownify }}</details>
+{: .notice--info}
+
+This method requires a working 3DS camera.
+{: .notice--info}
+
+## What you need
+
++ A EUR/USA/JPN copy of Freakyforms Deluxe (eShop or cartridge)
++ The latest release of [freakyhax](https://github.com/plutooo/freakyhax/releases/latest)
++ The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
++ [otherapps.zip]({{ base_path }}/assets/otherapps.zip) (direct download)
+
+## 진행 방법
+
+### 섹션 I - 준비 작업
+
+1. 기기를 종료해 주세요
+1. SD 카드를 컴퓨터에 삽입해 주세요
+1. Copy all files and folders inside the `/build/<your console and region>/exploit/` folder from the freakyhax `.zip` to the root of your SD card
+  + SD 카드의 루트는 SD 카드를 열 때 보이는 디렉토리이고, Nintendo 3DS 폴더가 보이지만 그 안에 않 들어가 있는 상태의 폴더 입니다
+1. Copy the otherapp payload for your model/region/version from `otherapps.zip` to the root of your SD card, then rename the payload to `otherapp.bin`
+  + Do not add the `.bin` extension if you do not already see it
+1. Luma3DS `.zip`안에 있는 `boot.firm`과 `boot.3dsx`를 SD 카드의 루트에 복사해 주세요
+1. SD 카드를 기기에 다시 삽입해 주세요
+1. 기기를 시작해 주세요
+
+### Section II - freakyhax
+
+1. SD 카드를 기기에 다시 삽입해 주세요
+1. 기기를 시작해 주세요
+1. Launch Freakyforms Deluxe
+1. In the game menu, select `Play -> Camera -> Load a QR code`
+1. Select the QR code
+1. If the exploit was successful, your device will have loaded the Homebrew Launcher
+
+### Section III - Hardware Button Check
+
+{% include_relative include/safemodecheck.txt %}
+
+___
+
+{% include_relative include/hbl-common-exploits.txt %}
