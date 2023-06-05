@@ -1,0 +1,68 @@
+---
+title: "Homebrew Launcher (smilehax-IIe)"
+---
+
+{% include toc title="Sisällysluettelo" %}
+
+This set of instructions does not support the Japanese version of SmileBASIC.
+{: .notice--warning}
+
+{% capture technical_info %}
+<summary><em>Technical Details (optional)</em></summary>
+[smilehax-IIe](https://github.com/zoogie/smilehax-IIe) is an exploit for the game "SmileBASIC" made by zoogie, compatible with system versions 9.0.0 through 11.17.0 for USA/EUR/JPN region consoles.
+{% endcapture %}
+<details>{{ technical_info | markdownify }}</details>
+{: .notice--info}
+
+## What You Need 
++ The game "SmileBASIC" installed on your device
+  + If you have downloaded it before, you can [redownload it](https://en-americas-support.nintendo.com/app/answers/detail/a_id/607/~/how-to-download-or-redownload-content-in-nintendo-3ds-eshop)
+  + Your SD card must be inserted in your device to install SmileBASIC
++ Your `movable.sed` file from completing [Seedminer](seedminer)
++ The latest release of [smilehax-IIe](https://github.com/zoogie/smilehax-IIe/releases/download/v1.0/Release_sh2e_v1.0.zip) (direct download) 
++ The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
++ [otherapps.zip]({{ base_path }}/assets/otherapps.zip) (direct download)
+
+
+## Instructions
+
+### Section I - Prep Work
+
+1. Sammuta konsolisi
+1. Aseta SD-korttisi tietokoneeseesi
+1. Copy `boot.firm` and `boot.3dsx` from the Luma3DS `.zip` to the root of your SD card
+  + The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
+1. Copy the otherapp payload for your model/region/version from `otherapps.zip` to the root of your SD card, then rename the payload to `otherapp.bin`
+  + Do not add the `.bin` extension if you do not already see it
+1. Transfer the `.wav` for your region from the Release_sh2e `.zip` to a device that can play `.wav` files, for example a phone
+1. Copy the petitcom `.icn` for your region to the root of your SD card
+
+### Section II - smilehax
+
+1. Launch SmileBASIC
+  + Update the game if prompted
+1. Select the "Publish/Download Projects" option
+1. Select the "Download (Receive) using Public Key" option
+1. Press the "Yes" button
+1. Enter the Public Key "NJEQK3A4" using the on-screen keyboard
+1. Press the "Yes" button to confirm the download of PMODEM141
+1. Press "OK", then "Back", then "Browse Projects"
+1. Select PMODEM141, then press "Select File"
+1. Select PMODEM141.PRG, then Press "OK", then "Yes" to execute it
+1. Select RECEIVE FILE SIMPLEX
+1. Prepare the device you use to play the `.wav` file
+1. Keep your console about a foot from the `.wav` file playing devices' speaker and use a reasonable (not loud) volume to play the`.wav`
+1. Now select 300BPS, then play the `.wav` file
+1. When it finishes, Press "Yes", then press "OK"
+1. Press the START button
+1. Select the SH2E-xxx.TXT file, then press OK, then "Yes" to execute it
+  + If you get kicked back into menu, make sure you're using the latest version of SmileBASIC
+1. Your device should load into the Homebrew Launcher
+
+### Section III - Hardware Button Check
+
+{% include_relative include/safemodecheck.txt %}
+
+___
+
+{% include_relative include/hbl-common-exploits.txt %}
