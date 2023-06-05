@@ -1,0 +1,54 @@
+---
+title: "Homebrew Launcher (freakyhax)"
+---
+
+{% include toc title="Indice" %}
+
+{% capture technical_info %}
+<summary><em>Dettagli Tecnici (opzionale)</em></summary>
+[freakyhax](https://plutooo.github.io/freakyhax/) is an exploit for the game Freakyforms Deluxe discovered and released by [plutooo](https://github.com/plutooo). It works on versions 9.0.0 through 11.17.0 on EUR, USA and JPN region devices.
+
+{% endcapture %}
+<details>{{ technical_info | markdownify }}</details>
+{: .notice--info}
+
+This method requires a working 3DS camera.
+{: .notice--info}
+
+## What you need
+
++ A EUR/USA/JPN copy of Freakyforms Deluxe (eShop or cartridge)
++ The latest release of [freakyhax](https://github.com/plutooo/freakyhax/releases/latest)
++ The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
++ [otherapps.zip]({{ base_path }}/assets/otherapps.zip) (direct download)
+
+## Istruzioni
+
+### Sezione I - Preparazione
+
+1. Spegni il tuo 3DS
+1. Inserisci la scheda SD nel tuo computer
+1. Copy all files and folders inside the `/build/<your console and region>/exploit/` folder from the freakyhax `.zip` to the root of your SD card
+  + La directory principale della scheda SD è la cartella della tua scheda SD in cui è possibile visualizzare la cartella Nintendo 3DS, ma non il suo interno
+1. Copy the otherapp payload for your model/region/version from `otherapps.zip` to the root of your SD card, then rename the payload to `otherapp.bin`
+  + Do not add the `.bin` extension if you do not already see it
+1. Copia i file `boot.firm` e `boot.3dsx` dall'archivio `.zip` di Luma3DS nella directory principale della tua scheda SD
+1. Reinserisci la scheda SD nella tua console
+1. Accendi la console
+
+### Section II - freakyhax
+
+1. Reinserisci la scheda SD nella tua console
+1. Accendi la console
+1. Launch Freakyforms Deluxe
+1. In the game menu, select `Play -> Camera -> Load a QR code`
+1. Select the QR code
+1. If the exploit was successful, your device will have loaded the Homebrew Launcher
+
+### Section III - Hardware Button Check
+
+{% include_relative include/safemodecheck.txt %}
+
+___
+
+{% include_relative include/hbl-common-exploits.txt %}
