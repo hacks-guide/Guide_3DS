@@ -74,12 +74,13 @@ In questa sezione trasformerai il codice QR Mii in un file utilizzabile e con es
   + Sostituisci `<id0>` con l'ID0 che hai copiato precedentemente nel documento
   + Non includere le parentesi angolate
 1. Al termine, inserisci il comando `py -3 seedminer_launcher3.py mii <modello> <anno>`
-  + Sostituisci `<modello>` con il modello della tua console (`new` o `old`) - se non ne sei sicuro, solo i modelli con i pulsanti ZL/ZR e C-Stick sono `new`
-  + Sostituisci `<anno>` con l'anno di produzione del 3DS (spesso lo trovi sul lato posteriore) - lascia vuoto se non ne sei sicuro, nel qual caso partirà da un valore predefinito
-  + Se ottieni un errore `input.bin is invalid size`, ricrea il file `input.bin` utilizzando il tuo codice QR. Se fallisce *di nuovo*, apri un browser diverso e ricrea il file `input.bin`
-  + Se ottieni il messaggio `"LFCS has been left blank`, utilizza il modello di console opposto (ad es. `mii old` al posto di `mii new`)
+  + Replace `<model>` with the model of your console (`new` or `old`) - if you aren't sure, only models with the ZL/ZR buttons and C-Stick are "new"
+  + Replace `<year>` with the year the 3DS was made (you often find this behind the backplate) - leave this empty if you aren't sure, in which case it will start from the middle
   + Il processo di mining richiede solitamente fino a 90 minuti, a seconda della fortuna e della potenza della tua GPU
-  + Se la seconda fase (`movable_part2.sed generation success`) oltrepassa l'offset 100, verifica di aver inserito l'ID0 corretto. Se il tuo ID0 è corretto, non puoi usare questo metodo e dovrai aggiornare all'ultima versione e controllare se è disponibile per te un metodo non-Seedminer [qui](https://troubleshoot.uwuu.ca/seventeen)
+  + The first stage will likely max out at roughly offset 1500, depending on console model
+  + If the second stage (after seeing `movable_part2.sed generation success`) gets past offset 100, verify that you input the correct ID0. If your ID0 is correct, you cannot use this method and will have to update to the latest version and see if a non-Seedminer method is available for you [here](alternate-exploits)
+  + If you see the message `input.bin is invalid size`, remake the `input.bin` using your QR Code. Se fallisce *di nuovo*, apri un browser diverso e ricrea il file `input.bin`
+  + If you see the message `LFCS has been left blank`, use the opposite console model (e.g. `mii old` al posto di `mii new`)
 1. Al termine, apparirà un file `movable.sed` nella cartella Seedminer
 
 Prosegui con [BannerBomb3 (Legacy)](bannerbomb3-(legacy))
