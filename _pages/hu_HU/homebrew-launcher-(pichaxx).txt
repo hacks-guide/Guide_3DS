@@ -30,15 +30,15 @@ This process will overwrite your Pokémon Picross save file, if you have one. If
 
 #### I. rész - Előkészületek
 
-In this section, you will copy some of the files that will be used to launch the Homebrew Launcher.
+Ebben a fejezetben fel fogod másolni a fájlokat, amik a Homebrew Launcher indításához szükségesek.
 
 1. Kapcsold ki a készüléked
 1. Helyezd az SD kártyád a számítógépbe
 1. Másold át a `boot.firm` és `boot.3dsx` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
   + Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne
-1. Copy the otherapp payload for your model/region/version from `otherapps.zip` to the root of your SD card, then rename the payload to `otherapp.bin`
-  + Do not add the `.bin` extension if you do not already see it
-1. Copy `movable.sed` from your computer to the root of your SD card
+1. Másold a modelledhez/régiódhoz/verziódhoz tartozó otherapp payloadot az `otherapps.zip` fájlból a az SD kártyád gyökerébe, majd nevezd át `otherapp.bin` névre
+  + Ne add hozzá a `.bin` kiterjesztést, ha nem látod
+1. Másold át a `movable.sed` a számítógépedről az SD kártyád gyökerébe
 
 ![]({{ "/images/screenshots/hblpichaxx-root-layout.png" | absolute_url }})
 {: .notice--info}
@@ -47,28 +47,28 @@ In this section, you will copy some of the files that will be used to launch the
 {: .notice--info}
 
 
-#### Section II - PicHaxx
+#### II. rész - PicHaxx
 
-In this section, you will create a hacked Pokémon Picross save file that, when loaded, will run the Homebrew Launcher on your device.
+Ebben a fejezetben létre fogsz hozni egy hackelt Pokémon Picross mentés fájlt, ami használatakor betölti a Homebrew Launcher-t az eszközödön.
 
-1. Open [the PicHaxx Injector website](https://3dstools.nhnarwhal.com/#/pichaxx) on your computer
-1. Select your `movable.sed` file
-1. Select "Build and Download"
-1. Wait for the process to complete
-1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` on your SD card
-  + The `<ID0>` will be the same one that you used in Seedminer
+1. Nyisd meg [a PicHaxx Injector weboldalát](https://3dstools.nhnarwhal.com/#/pichaxx) a számítógépen
+1. Válaszd ki a `movable.sed` fájlod
+1. Válaszd a "Build and Download" menüpontot
+1. Várja meg, amíg a folyamat befejeződik
+1. Navigálj a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` útvonalra az SD kártyán
+  + Az `<ID0>` ugyanaz, mint amit a Seedminer-nél használtál
   + Az `<ID1>` egy 32 karakter hosszú nevű mappa az `<ID0>` mappában
-1. Copy the newly downloaded `00000001.sav` file to the `data` folder on your SD card
-  + Overwrite the old save file when prompted
+1. Másold az épp letöltött `00000001.sav` fájlt a `data` könyvtárba az SD kártyán
+  + Írd felül a régi mentés fájlt, ha kérdezi
 
     ![]({{ "/images/screenshots/pichaxx-save-location.png" | absolute_url }})
     {: .notice--info}
 
 1. Tedd vissza az SD kártyád a készülékedbe
 1. Kapcsold be a készülékedet
-1. Launch "Pokémon Picross"
+1. Indítsd el a "Pokémon Picross"-t
 1. Ha az exploit sikeres volt, a készülékének ezt követően be kell bootolnia a Homebrew Launcherbe
-  + If you get an error message, [follow this troubleshooting guide](troubleshooting#homebrew-launcher-pichaxx)
+  + Ha hiba üzenetet kapsz, [nézd át ezt a hibaelhárítási útmutatót](troubleshooting#homebrew-launcher-pichaxx)
 
 #### III. rész - Fizikai gombok ellenőrzése
 
