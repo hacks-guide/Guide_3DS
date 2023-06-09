@@ -6,7 +6,7 @@ title: "Finalizând instalarea"
 
 ### Lectură obligatorie
 
-The file `boot.firm` is what is launched by boot9strap itself after it finishes loading off of NAND. In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) to patch the device, allowing it to run homebrew software.
+The file `boot.firm` is what is launched by boot9strap itself after it finishes loading off of NAND. In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) to patch the console, allowing it to run homebrew software.
 
 On this page, we will make critical system file backups and install the following homebrew programs:
 
@@ -43,18 +43,18 @@ If your previous CFW setup was EmuNAND-based and you wish to move the contents o
 
 In this section, you will copy the files necessary to follow the rest of the instructions on this page.
 
-1. Închideți dispozitivul
+1. Power off your console
 1. Introduceți cardul SD în calculator
 1. Creați un folder numit `cias` în rădăcina cardului SD dacă nu există deja
 1. Copy all of the CIA files (`Anemone3DS.cia`, `Checkpoint.cia`, `FBI.cia`, `Homebrew_Launcher.cia`, and `Universal-Updater.cia`) to the `/cias/` folder on your SD card
 1. Creați un folder numit `3ds` în rădăcina cardului SD dacă nu există deja
-    + This folder stores homebrew applications and data; it is different from the `Nintendo 3DS` folder that the device automatically generates
+    + This folder stores homebrew applications and data; it is different from the `Nintendo 3DS` folder that the console automatically generates
 1. Copiați `FBI.3dsx` în folderul `/3ds/` de pe cardul SD
 1. Creați un folder numit `payloads` în folderul `luma` de rădăcina cardului SD dacă nu există deja
 1. Copiați `GodMode9.firm` din arhiva `.zip` GodMode9 în folderul `/luma/payloads/` de pe cardul SD
 1. Copiați folderul `gm9` din fișierul `.zip` GodMode9 în rădăcina cardului SD
-1. Reintroduceți cardul SD în dispozitivul dumneavoastră
-1. Porniți dispozitivul
+1. Reinsert your SD card into your console
+1. Power on your console
 
 The screenshots below indicate the minimum SD card layout that is required to follow this page. You may have extra files or folders on your SD card, depending on your previous setup or the method that you followed.
 
@@ -69,14 +69,14 @@ The screenshots below indicate the minimum SD card layout that is required to fo
 
 As an additional safety measure, we will perform an additional check for custom firmware. If custom firmware is not installed by this point for any reason, the next section may render your console unable to be hacked without external hardware.
 
-1. Închideți dispozitivul
+1. Power off your console
 1. Hold the (Select) button
-1. Power on your device while still holding the (Select) button
-1. If the check was successful, your device should have booted into the Luma3DS configuration menu
+1. Power on your console while still holding the (Select) button
+1. If the check was successful, your console should have booted into the Luma3DS configuration menu
 1. Apăsați (Start) pentru a salva și reporni
-1. Închideți dispozitivul
+1. Power off your console
 
-If you do NOT boot into the Luma3DS configuration menu, custom firmware was not installed on your device. Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+If you do NOT boot into the Luma3DS configuration menu, custom firmware was not installed on your console. Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 {: .notice--danger}
 
 
@@ -88,7 +88,7 @@ In this section, you will update your system to the latest version, which is saf
 
 #### Section IV - Homebrew Launcher
 
-In this section, you will temporarily replace Download Play with Homebrew Launcher (which we need to launch FBI). Download Play will automatically go back to normal once you reboot your device.
+In this section, you will temporarily replace Download Play with Homebrew Launcher (which we need to launch FBI). Download Play will automatically go back to normal once you reboot your console.
 
 {% include_relative include/launch-hbl-dlp.txt %}
 
@@ -119,8 +119,8 @@ In this section, you will install several useful homebrew applications to HOME M
 
 In this section, you will use a script to copy some of Luma3DS's files to internal memory so that they can be accessed, even without an SD card inserted.
 
-1. Închideți dispozitivul
-1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+1. Power off your console
+1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
   + If you do not boot into GodMode9, ensure that `GodMode9.firm` is in `/luma/payloads/` and that `payloads` is correctly spelled
 1. Când vi se cere să faceți o copie de rezervă a fișierelor esențiale, apăsați (A) pentru a o realiza, apoi apăsați (A) ca să continuați după ce s-a terminat
 1. Dacă vi se cere să reparați dara și ora RTC, apăsați (A) pentru a efectua, apoi setați data și ora, apoi apăsați (A) pentru a continua
@@ -161,7 +161,7 @@ In this section, you will make backups of files that can be used to recover from
   + If you see "Destination already exists", press (A) on "Overwrite file(s)"
 1. Apăsați (A) pentru a continua
 1. Apăsați (Home) pentru a arăta meniul de acțiuni
-1. Selectați "Poweroff system" pentru a închide dispozitivul
+1. Select "Poweroff system" to power off your console
 1. Introduceți cardul SD în calculator
 1. Copy `<date>_<serialnumber>_sysnand_##.bin`, `<date>_<serialnumber>_sysnand_##.bin.sha`, and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Copy these backups to multiple locations (such as online file storage, an external hard drive, etc.)
@@ -169,12 +169,12 @@ In this section, you will make backups of files that can be used to recover from
 1. Delete `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
   + The other backup files are negligible in size and may be kept on your SD card for ease of access
 1. If you have it, copy the `/luma/backups/` folder on your SD card to a safe location on your computer
-1. Reintroduceți cardul SD în dispozitivul dumneavoastră
-1. Porniți dispozitivul
+1. Reinsert your SD card into your console
+1. Power on your console
 
 ___
 
-You're done! Custom firmware is now fully configured on your device.
+You're done! Custom firmware is now fully configured on your console.
 {: .notice--success}
 
 ### Information and Notes
