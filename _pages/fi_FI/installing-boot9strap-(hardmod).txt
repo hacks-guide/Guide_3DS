@@ -32,7 +32,7 @@ Tämä toimii *kaikilla* versioilla New 3DS:llä, New 2DS:llä, vanhalla 3DS:ll�
 * The latest version of [hardmod-b9s-installer](https://github.com/ihaveamac/hardmod-b9s-installer/releases/latest)
   + Windows-käyttäjät voivat käyttää käännettyä `.exe`-tiedostoa, Mac- ja Linux-käyttäjät taas tarvitsevat [Python 3](https://www.python.org/downloads/):n suorittaakseen `.py`-tiedoston
 * The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file that isn't source code)
-* Konsolisi mallin ja alueen mukainen `.firm`-tiedosto:
+* The `.firm` corresponding to your console and version:
 
 | Versio(t) | Käyttö­järjestelmä­ydin| Vanha 3DS tai vanha 2DS | New 3DS tai New 2DS |
 |-|-|:-:|:-:|
@@ -74,28 +74,28 @@ Tämä toimii *kaikilla* versioilla New 3DS:llä, New 2DS:llä, vanhalla 3DS:ll�
 
 In this section, you will download the necessary files for the hardmod and dump the NAND image in preparation to install custom firmware.
 
-1. Sammuta konsolisi
+1. Power off your console
 1. Aseta SD-korttisi tietokoneeseesi
 1. Copy `boot.firm` and `boot.3dsx` from the Luma3DS `.zip` to the root of your SD card
 1. Kopioi hardmod-b9s-installer-`.zip`-pakkauksesta hardmod-b9s-installer-kansio tietokoneellesi
 1. Kopioi lataamasi `.firm`-tiedosto tietokoneesi hardmod-b9s-installer-kansioon
 1. Uudelleennimeä tietokoneesi hardmod-b9s-installer-kansiossa oleva `.firm` muotoon `current.firm`
 1. Kopioi boot9strap-`.zip`-pakkauksesta `boot9strap.firm` ja `boot9strap.firm.sha` tietokoneesi `hardmod-b9s-installer`-kansioon
-1. Aseta SD-korttisi takaisin konsoliisi
+1. Reinsert your SD card into your console
 1. Käytä laitteistomodaustasi NAND-varmuuskopion luomiseen
 1. Siirrä NAND-varmuuskopiosi hardmod-b9s-installer-kansioon tietokoneellasi ja uudelleennimeä se siellä muotoon `NAND.bin`
 
 #### Vaihe II – Boot9strapin asentaminen
 
-In this section, you will install custom firmware to the dumped NAND image, and then install this NAND image back onto the device to install custom firmware on it.
+In this section, you will install custom firmware to the dumped NAND image, and then install this NAND image back onto the console to install custom firmware on it.
 
 1. Suorita hardmod-b9s-installer
   + Windows-käyttäjät: Avaa `install-b9s.exe`
   + Mac- ja Linux-käyttäjät: Suorita `install-b9s.py`
-1. Asenna ohjelman luoma `NAND-patched.bin` konsoliisi laitteistomodauksesi avulla
-1. Sammuta konsolisi
+1. Flash your outputted `NAND-patched.bin` to your console with your hardmod
+1. Power off your console
 1. Irrota laitteistomodauksesi
-1. Press and hold (Select), and while holding (Select), power on your device
+1. Press and hold (Select), and while holding (Select), power on your console
 {% include_relative include/configure-luma3ds.txt %}
 
 {% include_relative include/luma3ds-installed-note.txt %}
