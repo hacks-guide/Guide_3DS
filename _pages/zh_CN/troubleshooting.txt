@@ -23,8 +23,8 @@ Guide pages:
 * [Finalizing Setup](#finalizing-setup)
 
 Issues after installation:
-* [Boot issues](#boot-issues-on-devices-with-custom-firmware)
-* [Software issues](#software-issues-on-devices-with-custom-firmware)
+* [Boot issues](#boot-issues-on-consoles-with-custom-firmware)
+* [Software issues](#software-issues-on-consoles-with-custom-firmware)
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -70,13 +70,13 @@ Issues after installation:
 ![]({{ "/images/screenshots/multiple-id0.png" | absolute_url }})
 {: .notice--info}
 
-这通常会在你把 SD 卡插在多台主机上使用过后出现。是任天堂为了防止无意间将其它主机的数据合并在一起而故意设计的。 为了确定哪个文件夹是你 3DS 的，请按照以下步骤做：
+This occurs when you use your SD card in multiple 3DS consoles and is intended to prevent inadvertently merging data that would not be valid on other consoles. 为了确定哪个文件夹是你 3DS 的，请按照以下步骤做：
 
 1. 将 `Nintendo 3DS` 文件夹重命名为 `BACKUP_Nintendo 3DS`
-1. 重新将 SD 卡插入主机并开机
-1. 等待主机生成存放在 SD 卡中的数据
+1. Reinsert your SD card into your console and power on your console
+1. Wait for the console to generate the SD card data
 	+ 你先前安装的程序会暂时消失。 这是正常的，且接下来就会还原回来。
-1. 关机并将 SD 卡重新插入你的电脑
+1. Power off your console and reinsert your SD card into your computer
 1. 打开你 SD 卡的 `Nintendo 3DS` 文件夹
 1. 复制你看到的 32 位字符文件夹的名称
 	+ 这也就是你在 [Seedminer 第二步](seedminer#section-ii---seedminer) 中需要使用的 ID0
@@ -129,7 +129,7 @@ To fix this, you will need to determine which folder contains your data. Usually
 
 另外，请确保 `bb3.bin` 已正确放置在 SD 卡的根目录下。 如果缺失了这个文件，请下载最新版本的 [Bannerbomb3](https://github.com/lifehackerhansol/Bannerbomb3/releases/download/v3.0-lhs1/bb3.bin)（直链），然后将 `bb3.bin` 复制到内存卡的根目录中。
 
-如果还是不行，则可能是因为曾经这台主机安装过自制固件，且后来又卸载了自制固件，从而导致此方法失效。 If this is the case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+If neither of these solutions fixes this problem, then custom firmware may have been uninstalled on this console in a way that makes this method impossible to perform. If this is the case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -275,7 +275,7 @@ If your files are in the correct locations, re-create the save using the [PicHax
 {% capture compat %}
 <summary><u>"An exception occurred" or Errdisp when opening Picross</u></summary>
 
-Your device already has custom firmware. 你应该[检查一下](checking-for-cfw)。
+Your console already has custom firmware. 你应该[检查一下](checking-for-cfw)。
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -298,9 +298,9 @@ Your modified `00000001.sav` file may be misplaced, or you may have used the wro
 {% capture compat %}
 <summary><u>Red/purple/pink and white screen after running Soundhax</u></summary>
 
-如果你的主机系统版本为 9.4.0 或 9.5.0 或 9.6.0，则可能你会遇到旧版 universal-otherapp 的 bug 而无法继续教程。请在[这里](https://github.com/TuxSH/universal-otherapp/releases/latest)下载最新版本的 universal-otherapp。
+If your console is on system version 9.4.0, 9.5.0, or 9.6.0, you may be encountering a bug with an old version of universal-otherapp. Download the latest version from [here](https://github.com/TuxSH/universal-otherapp/releases/latest).
 
-如果你的系统版本没有在这个区间中，则你的主机可能已经安装过了自制固件。 你应该[检查一下](checking-for-cfw)。
+If your console is not on those firmwares, it likely indicates that you already have custom firmware. 你应该[检查一下](checking-for-cfw)。
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -314,7 +314,7 @@ Your modified `00000001.sav` file may be misplaced, or you may have used the wro
 {% capture compat %}
 <summary><u>"Could not play"</u></summary>
 
-你放的 Soundhax 文件与主机的型号或区域不符，或者是你的主机不兼容Soundhax。 在后者情况下，你应该更新你的主机到最新版本，然后使用 [Seedminer](seedminer) 安装自制固件。
+You have the wrong Soundhax file for your console and region, or your console is incompatible with Soundhax. In the latter case, you should update your console to the latest version and follow [Seedminer](seedminer).
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -380,7 +380,7 @@ Your modified `00000001.sav` file may be misplaced, or you may have used the wro
 
 按照以下步骤操作：
 
-1. 启动你主机上的 “系统设置(System settings)”
+1. Launch System Settings on your console
 1. 进入到 `互联网设置（インターネット設定 / Internet Settings）` -> `连接设置（インターネット接続設定 / Connection Settings）`
 1. 点击你目前在用的连接点槽位，然后进入到 `设置变更（設定変更 / Change Settings）` -> `下一页（右箭头）` -> `代理设置（Proxy）`
 1. 将 “代理设置（Proxy）”设置为 “否（No/しない）”
@@ -399,7 +399,7 @@ Your modified `00000001.sav` file may be misplaced, or you may have used the wro
 {% capture compat %}
 <summary><u>"To use the Internet Browser, please update your system using the System Update option in the System Settings."</u></summary>
 
-First, make sure you entered the correct proxy for the connection you're using. If not, go back to [Section II](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth). If the proxy is correct, then your device has been cart-updated, which means an alternate exploit will need to be used.
+First, make sure you entered the correct proxy for the connection you're using. If not, go back to [Section II](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth). If the proxy is correct, then your console has been cart-updated, which means an alternate exploit will need to be used.
 
 <u>Method 1</u><br>
 If the two numbers before the region in the system version string is equal to or less than 36 (e.g. Ver. 11.14.0-**36**U), you can follow [Soundhax](installing-boot9strap-(soundhax)). When prompted to select a firmware to generate the sound file, use:
@@ -413,14 +413,14 @@ If the two numbers before the region in the system version string is equal to or
 If you have an Old 3DS / Old 3DS XL / 2DS, you can try a Safe Mode update, which will trigger an alternate exploit:
 
 1. Ensure that the proxy that you used for SSLoth is still actively applied to your internet connection
-1. With your device powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your device
-  + 按住这几个键，直到主机进入安全模式（一个“系统更新”菜单）
+1. With your console powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your console
+  + Keep holding the buttons until the console boots into Safe Mode (a "system update" menu)
 1. Press "OK" to accept the update
 1. If everything worked correctly, the update will fail and the 3DS will boot into SafeB9SInstaller. If it did, then continue from [Section IV](installing-boot9strap-(ssloth-browser)#section-iv---installing-boot9strap).
 
 ---
 
-If these methods didn't work (or do not apply to you), update your device to the latest version and follow [Seedminer](seedminer).
+If these methods didn't work (or do not apply to you), update your console to the latest version and follow [Seedminer](seedminer).
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -487,7 +487,7 @@ If the problem persists and you have a system version ending in E, and the langu
 ## 完成安装
 
 {% capture compat %}
-<summary><u>Unable to update device</u></summary>
+<summary><u>Unable to update console</u></summary>
 
 以下是可以尝试的解决方法，按从简单到困难的顺序排列。
 
@@ -545,17 +545,17 @@ If you have enough space on your SD card, your SD might be corrupted or faulty. 
 
 ---
 
-## Boot issues on devices with custom firmware
+## Boot issues on consoles with custom firmware
 
-此处列出的操作方法将假设你的主机安装了最新的自制固件（boot9strap + Luma3DS 8.0 或更高版本）。 如果你的主机还在用旧版的自制固件（例如基于 arm9loaderhax 或 menuhax 的东西），则你应该在继续操作前先升级自制固件。
+The steps detailed here generally assume that your console has a modern custom firmware setup (boot9strap + Luma3DS 8.0 or greater). 如果你的主机还在用旧版的自制固件（例如基于 arm9loaderhax 或 menuhax 的东西），则你应该在继续操作前先升级自制固件。
 {: .notice--info}
 
 ### Power/notification light indicators
 
 {% capture compat %}
-<summary><u>My device powers off when I try to turn it on, and/or the notification LED shows a color on boot</u></summary>
+<summary><u>My console powers off when I try to turn it on, and/or the notification LED shows a color on boot</u></summary>
 
-这说明你放的 `boot.firm` 文件有问题。 如果你的主机正在使用 [boot9strap 1.4](https://github.com/SciresM/boot9strap/releases/tag/1.4) 版，那么你的主机在这种情况下开机后，通知灯就会亮起某种特定的颜色，然后关机。 具体亮起的颜色可用来判断你内存卡或主机内存中的 `boot.firm` 的问题。 如果 boot9strap 是 1.4 以下的版本，则只会闪一下电源灯（蓝灯）就关机。
+这说明你放的 `boot.firm` 文件有问题。 如果你的主机正在使用 [boot9strap 1.4](https://github.com/SciresM/boot9strap/releases/tag/1.4) 版，那么你的主机在这种情况下开机后，通知灯就会亮起某种特定的颜色，然后关机。 具体亮起的颜色可用来判断你内存卡或主机内存中的 `boot.firm` 的问题。 On older versions of boot9strap, the blue light will power off almost immediately when trying to turn on the console.
 
 如果通知灯亮起：
 
@@ -565,18 +565,18 @@ If you have enough space on your SD card, your SD might be corrupted or faulty. 
 
 你可以通过下载 [最新版本的 Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)，然后解压，将 `boot.firm` 复制到 SD 卡的根目录。 如果 `boot.firm` 始终被主机判定为损坏，则你可能需要使用一个工具来测试一下你的 SD 卡（[Windows](h2testw-(windows))、[Linux](f3-(linux))、[macOS](f3xswift-(mac))） 另外，最好不要使用 WinRAR 解压文件，解压的文件给 3DS 使用可能会出问题。
 
-如果你在开机的时候听到了“啪”的一声，然后蓝灯熄灭，则代表你的主机可能有硬件上的问题了。（如：背光排线断开） 你的主机或许能在开盖特定角度的情况下开机。
+If you hear a "popping sound", potentially accompanied with the backlight turning on for a split second, there is a hardware issue with your console (such as a disconnected backlight cable). You may be able to get your console to boot by holding it at certain angles.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>My device gets stuck on a black screen with blue power light staying on</u></summary>
+<summary><u>My console gets stuck on a black screen with blue power light staying on</u></summary>
 
 你可以把下面所列出的方法都试试，此处将方法从最省时到最耗时的顺序排列。
 
-1. Power off your device, remove the SD card, re-insert it, then power on your device.
-1. 将主机强制关机，拔出游戏卡带（若有），然后再次打开主机等待十分钟。 如果你的主机在十分钟内成功开机，则这个问题就自行修复了，且不太会再次发生
-1. 将 SD 卡上的 `Nintendo 3DS` 文件夹重命名为 `Nintendo 3DS_BACKUP`，然后尝试启动主机。 如果成功开机了，则 `Nintendo 3DS` 文件夹有问题。 尝试清理主菜单的外部存储文件：
+1. Power off your console, remove the SD card, re-insert it, then power on your console.
+1. Power off your console, eject the game cartridge if inserted, power on your console, then wait up to ten minutes. If your console boots within ten minutes, the issue has been fixed and is unlikely to reoccur
+1. 将 SD 卡上的 `Nintendo 3DS` 文件夹重命名为 `Nintendo 3DS_BACKUP`，然后尝试启动主机。 If your console successfully boots, there is some issue within your `Nintendo 3DS` folder. 尝试清理主菜单的外部存储文件：
 	+ 进入到 `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
   + 删除对应你的 3DS 区域的文件夹：
 		+ **欧版**: `00000098`
@@ -586,10 +586,10 @@ If you have enough space on your SD card, your SD might be corrupted or faulty. 
 		+ **韩版**: `000000A9`
 		+ **台湾版**: `000000B1`
 1. 尝试启动到恢复模式并升级系统：
-	+ 将主机关机
+	+ Power off your console
 	+ 按住 “L” + “R” + “↑” + "A" 四个键
-	+ 将主机开机
-	+ 如果成功，主机将自动进入“系统更新”界面
+	+ Power on your console
+	+ If you were successful, the console will boot to an "update your system" screen
 1. 尝试做 [CTRTransfer](trtransfer) 
 1. 如需援助，请加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp)并使用英文求助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup) 寻求帮助，群号为 942052497。
 {% endcapture %}
@@ -614,9 +614,9 @@ There are a number of reasons as to why this could be happening. In any case, th
 <summary><u>"An error has occurred. Hold down the POWER button to turn off the power..."</u></summary>
 
 ARM11 异常处理器已被禁用，或主机未安装自制固件。 尝试启用 ARM11 异常处理器：
-  + 将主机关机
+  + Power off your console
   + 按住 “Select” 键
-  + 在按住 “Select” 键的同时按下电源键开机
+  + Power on your console, while still holding (Select)
   + 如果 “ARM11 exception handlers disabled” 已被勾选，则请取消勾选它
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -625,11 +625,11 @@ ARM11 异常处理器已被禁用，或主机未安装自制固件。 尝试启�
 <summary><u>HOME Menu is missing installed applications</u></summary>
 
 This could be caused by various reasons, but most likely because your SD card is not being read by the system.
-You can check if your SD is being read by holding SELECT on boot and checking the yellow text on the bottom screen; if it says "Booted from CTRNAND via B9S", then your device is booting from the internal memory and not from the SD card.
+You can check if your SD is being read by holding SELECT on boot and checking the yellow text on the bottom screen; if it says "Booted from CTRNAND via B9S", then your console is booting from the internal memory and not from the SD card.
 If this is the case, attempt the steps below, which are listed from easiest to hardest:
-1. Power off your device, remove the SD card, re-insert it, then power on your device
-1. Power off your device, remove the SD card, insert it on your PC, download the latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), extract `boot.firm` from the `Luma3DS.zip` and place it on the root of your SD card (replacing any existing file)
-1. Power off your device, remove the SD card, insert it on your PC and reformat your SD card according to your computer's operating system: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)) *(this will wipe your SD card data)*
+1. Power off your console, remove the SD card, re-insert it, then power on your console
+1. Power off your console, remove the SD card, insert it on your PC, download the latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), extract `boot.firm` from the `Luma3DS.zip` and place it on the root of your SD card (replacing any existing file)
+1. Power off your console, remove the SD card, insert it on your PC and reformat your SD card according to your computer's operating system: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)) *(this will wipe your SD card data)*
 1. Test your SD card for errors by following the guide according to your computer's operating system: [Windows](h2testw-(windows)), [Linux](f3-(linux)), [macOS](f3xswift-(mac)). If your SD card is marked as faulty, then you will have to replace your SD card
 1. Your SD card slot may be broken. Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for further assistance
 {% endcapture %}
@@ -638,8 +638,8 @@ If this is the case, attempt the steps below, which are listed from easiest to h
 {% capture compat %}
 <summary><u>Blue "BOOTROM ERROR" screen</u></summary>
 
-你的主机可能由于硬件问题变砖了。 你可能需要买一张支持 ntrboot 的烧录卡来重新安装 boot9strap 以尝试修复主机。 这也可能是无法修复的硬件问题。 无论如何，请先加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp) 并说英文求助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497。
-  + 还有可能有人设了一个看上去就像变砖了的开机画面。 尝试将主机开机，在蓝屏上等 5 分钟。
+Your console is likely hard-bricked. You will need to buy an ntrboot flashcart to reinstall boot9strap in order to attempt to fix your console. 这也可能是无法修复的硬件问题。 无论如何，请先加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp) 并说英文求助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497。
+  + 还有可能有人设了一个看上去就像变砖了的开机画面。 Try leaving your console powered on, waiting on the blue screen, for five minutes.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -650,37 +650,37 @@ If this is the case, attempt the steps below, which are listed from easiest to h
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-## Software issues on devices with custom firmware
+## Software issues on consoles with custom firmware
 
 {% capture compat %}
 <summary><u>DSi / DS functionality is broken or has been replaced with Flipnote Studio</u></summary>
 
 1. 下载最新版本的 [TWLFix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest) （下载 `.3dsx` 文件）
-1. 关闭你的主机的电源
+1. Power off your console
 1. 检查 SD 卡的根目录是否存在一个名为 `3ds` 的文件夹，如果没有则手动新建一个
 1. 复制 `TWLFix-CFW.3dsx` 到你内存卡的 `/3ds/` 文件夹
-1. 将 SD 卡重新插入你的主机
+1. Reinsert your SD card into your console
 1. 启动 Homebrew Launcher
 1. 在自制程序列表中找到 TWLFix-CFW
 1. 按下 “A” 键来卸载损坏的 TWL 程序
-1. 按 “Start” 键重启你的主机
+1. Press (Start) to reboot the console
 1. 进入 “系统设置（System Settings）”，接着点击“其他设置（Other Settings）”，然后移动到最右边，点击“系统升级（System Update）”来升级你的主机
   + 更新程序将检查到你主机基本的 TWL 程序被卸载，然后它将重新安装它们
-1. 更新完成后，点击 “OK” 来重启主机
+1. Once the update is complete, tap "OK" to reboot the console
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
 <summary><u>GBA Virtual Console and/or Safe Mode functionality is broken</u></summary>
 
-Your device is running Luma3DS 6.6 or older, likely via arm9loaderhax. 你应该按照 [A9LH 升级 B9S](a9lh-to-b9s) 将主机更新到最新的自制固件环境。
+Your console is running Luma3DS 6.6 or older, likely via arm9loaderhax. You should follow [A9LH to B9S](a9lh-to-b9s) to update your console to a modern custom firmware environment.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
 <summary><u>Extended memory mode games (Pokemon Sun/Moon, Smash, etc.) don't work</u></summary>
 
-旧版 3DS / 2DS 在做完 CTRTransfer 或区域变更之后可能会出现这个问题。 你需要初始化主机才能解决这个问题。
+旧版 3DS / 2DS 在做完 CTRTransfer 或区域变更之后可能会出现这个问题。 You will need to system format your console to fix this issue.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -699,7 +699,7 @@ If you weren't able to find your error or the instructions didn't work, join [Ni
 {% capture compat %}
 <summary><u>Clear HOME Menu extdata</u></summary>
 
-1. 关闭你的主机的电源
+1. Power off your console
 1. 将你的 SD 卡插入到电脑
 1. 打开你 SD 卡的 `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` 文件夹
 1. 删除对应你的 3DS 区域的文件夹：
@@ -709,21 +709,21 @@ If you weren't able to find your error or the instructions didn't work, join [Ni
   + **中国版（神游版）**: `000000A1`
   + **韩版**: `000000A9`
   + **台湾版**: `000000B1`
-1. 将 SD 卡重新插入你的主机
+1. Reinsert your SD card into your console
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
 <summary><u>Clear HOME Menu theme data</u></summary>
 
-1. 将主机关机
+1. Power off your console
 1. 将你的 SD 卡插入到电脑
 1. 打开你 SD 卡的 `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` 文件夹
 1. 删除对应你的 3DS 区域的文件夹：
   + **欧版**：`000002ce`
   + **日版**：`000002cc`
   + **美版**：`000002cd`
-1. 将 SD 卡重新插入你的主机
+1. Reinsert your SD card into your console
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -731,10 +731,10 @@ If you weren't able to find your error or the instructions didn't work, join [Ni
 <summary><u>Turning off Parental Controls</u></summary>
 
 You can disable the Parental Controls feature by going to System Settings -> Parental Controls and inserting the PIN, then pressing "Clear Settings", then "Delete" to remove it.
-However, if you do not know the PIN and therefore cannot access the device's settings, you will need to disable it. In order to do this, you need to obtain your device's master key (mkey):
+However, if you do not know the PIN and therefore cannot access the console's settings, you will need to disable it. In order to do this, you need to obtain your console's master key (mkey):
 1. Go to [this website](https://mkey.eiphax.tech/)
 1. Fill the following boxes with the information:
-+ Device Type: Select "3DS" (the same applies if you are using a 2DS, New 3DS (XL/LL) or New 2DS (XL/LL))
++ Console Type: Select "3DS" (the same applies if you are using a 2DS, New 3DS (XL/LL) or New 2DS (XL/LL))
 + System Date: The day and month your console's clock is set to
 + Inquiry Number: Can be obtained by pressing "Forgot PIN" then "I Forgot" in the Parental Controls screen
 1. After you have obtained your mkey, press OK on the screen you have obtained your Inquiry Number, then input the master key
