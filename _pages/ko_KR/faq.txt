@@ -14,7 +14,7 @@ e숍이 해지되었어도 **커스텀 펌웨어를 설치할 수 있습니다.*
 ## 설치 전 자주 묻는 질문
 
 {% capture compat %}
-<summary><u>제 기기는 최신 버전입니다, Is my console hackable without any external hardware/prerequisites?</u></summary>
+<summary><u>제 기기는 최신 버전입니다, 외부 하드웨어나 전제 조건 없이 내 콘솔을 해킹할 수 있습니까?</u></summary>
 
 본체 모델에 따라 다릅니다. At the moment, New 3DS / New 3DS XL / New 2DS XL is able to be modded on 11.17.0 without any prerequisites (e.g. eShop titles, physical items), while 3DS / 3DS XL / 2DS is not.
 
@@ -22,16 +22,16 @@ e숍이 해지되었어도 **커스텀 펌웨어를 설치할 수 있습니다.*
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>What consoles is this guide compatible with?</u></summary>
+<summary><u>이 가이드를 어느 콘솔에 사용할 수 있나요?</u></summary>
 
-The instructions are the same for all retail 3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, and New 2DS XL consoles. 만약 시스템 버전이 "0.0.0-0"으로 표시된다면, 개발자 기기를 가지고 있는 것일 수 있습니다.
+이 가이드는 3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, New 2DS XL과 호환됩니다. 만약 시스템 버전이 "0.0.0-0"으로 표시된다면, 개발자 기기를 가지고 있는 것일 수 있습니다.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
 <summary><u>제 콘솔을 커펌하는 것이 얼마나 위험한가요?</u></summary>
 
-Bricks are now effectively impossible unless you are purposely trying to brick your console.
+의도적으로 콘솔을 벽돌로 하려고 하지 않는 이상, 벽돌은 사실상 불가능합니다.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -45,21 +45,21 @@ Bricks are now effectively impossible unless you are purposely trying to brick y
 {% capture compat %}
 <summary><u>이걸로 다른 지역에서 발매된 게임을 즐길 수 있나요?</u></summary>
 
-네, Luma3DS는 자동으로 카트리지와 설치된 타이틀의 지역제한을 무시합니다. Some games may need to make use of Luma's [locale emulation feature](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features) in order to work properly on out-of-region consoles.
+네, Luma3DS는 자동으로 카트리지와 설치된 타이틀의 지역제한을 무시합니다. 일부 타 지역 게임들은 Luma3DS의 [로캘 에뮬레이션 기능](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features)를 사용해야만 작동할 수도 있습니다.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
 <summary><u>커펌 후에 없어지는 기능이 있나요?</u></summary>
 
-아니오. Consoles with custom firmware can still play online and run physical cartridges as any other 3DS can.
+아니오. 커스텀 펌웨어가 된 콘솔들도 온라인 플레이나 카트리지 사용 등에 아무 제한이 없습니다.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
 <summary><u>제 NNID를 유지할 수 있나요?</u></summary>
 
-NNID는 닌텐도 네트워크 ID의 약칭이며, 본 가이드에서 NNID 걱정은 하지 않아도 됩니다. Consoles with a region of KOR, CHN, or TWN do not have NNID functionality to begin with and are thus unaffected.
+NNID는 닌텐도 네트워크 ID의 약칭이며, 본 가이드에서 NNID 걱정은 하지 않아도 됩니다. 한국 (KOR), 중국 (CHN), 타이완 (TWN) 콘솔들에는 NNID 기능이 존재하지 않습니다. 만약 북미, 호주, 유럽 등 다른 지역의 기기를 한국으로 [지역 변경](region-changing) 할 계획이라면 시리얼 번호를 유심히 보고 해당 문서의 주의사항을 각별히 읽은 후 진행하세요.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -106,7 +106,7 @@ NNID는 닌텐도 네트워크 ID의 약칭이며, 본 가이드에서 NNID 걱�
 {% capture compat %}
 <summary><u>커펌이 설치된 3DS를 최신 버전으로 업데이트해도 괜찮은가요?</u></summary>
 
-Luma3DS를 사용하고 계신 경우, 커스텀 펌웨어 로더(boot9strap)는 업데이트해도 *절대* 지워지지 않습니다. There have been updates in the past that have resulted in Luma3DS crashing on boot, so it is a good idea to wait a couple of hours to ensure that the latest update will not temporarily render the console unusable until Luma3DS is updated. 본체 업데이트는 순정 3DS와 같은 방법으로 실행할 수 있습니다. 본체 설정을 통해서나, 안전 모드, 업데이트가 자동으로 다운로드되었을 때 표시되는 업데이트 알림 등에서 업데이트하시면 됩니다.
+Luma3DS를 사용하고 계신 경우, 커스텀 펌웨어 로더(boot9strap)는 업데이트해도 *절대* 지워지지 않습니다. 과거에 Luma3DS가 부팅 중에 크래시하는 업데이트가 몇 번 존재했습니다. 그러니 최신 업데이트가 Luma3DS를 고장내지 않았는지 확인하기 위해 몇 시간 정도 기다리는 것도 좋은 방법입니다. 본체 업데이트는 순정 3DS와 같은 방법으로 실행할 수 있습니다. 본체 설정을 통해서나, 안전 모드, 업데이트가 자동으로 다운로드되었을 때 표시되는 업데이트 알림 등에서 업데이트하시면 됩니다.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -127,7 +127,7 @@ FAT32로 포맷된 새 SD 카드에 기존 SD 카드의 파일들을 복사하�
 {% capture compat %}
 <summary><u>어떻게 하면 일본 3DS에서 시스템 언어를 다른 언어로 변경할 수 있나요?</u></summary>
 
-일본어 외의 다른 언어로 일본 3DS의 언어를 바꾸는 유일한 방법은 [지역 변경](region-changing) 뿐입니다. Note that this is very likely to break the Nintendo eShop on your console, which means you will be unable to update your games whether they are in-region or out-of-region.
+일본어 외의 다른 언어로 일본 3DS의 언어를 바꾸는 유일한 방법은 [지역 변경](region-changing) 뿐입니다. 지역 변경을 하면 닌텐도 e숍을 사용할 수 없게 될 수 있다는 점을 명심해 주세요. 게임을 업데이트할 수 없게 될 수도 있습니다.
  {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -154,14 +154,14 @@ FAT32로 포맷된 새 SD 카드에 기존 SD 카드의 파일들을 복사하�
 {% capture compat %}
 <summary><u>도와주세요! 뭔가 잘못됐는지 3DS가 HOME 메뉴로 부팅되지 않아요...</u></summary>
 
-Please look at the [troubleshooting guide](troubleshooting#boot-issues-on-consoles-with-custom-firmware). **Uninstalling CFW when your console is in an unbootable state is not recommended, as it is very likely to lead to a brick**.
+이 [문제 해결 가이드](troubleshooting#boot-issues-on-consoles-with-custom-firmware)를 참고해 주세요. **콘솔이 부팅할 수 없는 상태일 때 커스텀 펌웨어를 제거하는 것은 벽돌로 이어질 수 있기 때문에 추천되지 않습니다.**
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 ## menuhax / A9LH / Gateway 관련의 자주 묻는 질문들
 
 {% capture compat %}
-<summary><u>I modded my console (x) years ago, so it already has some sort of homebrew. 어떻게 해야 하나요?</u></summary>
+<summary><u>콘솔을 수 년 전에 커펌해서, 이미 커펌 비슷한 게 깔려 있습니다. 어떻게 해야 하나요?</u></summary>
 
 boot9strap을 기반으로 한 최신의 커펌 방식으로 업그레이드하는 것을 권장합니다. 어떻게 업그레이드하는지 보려면 [CFW 확인](checking-for-cfw) 페이지를 따라주세요.
 {% endcapture %}
