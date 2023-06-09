@@ -23,18 +23,18 @@ title: "Перенос EmuNAND"
 
 #### Часть I - Подготовительные работы
 
-1. Выключите консоль
+1. Power off your console
 1. Вставьте SD-карту в компьютер
 1. Скопируйте `GodMode9.firm` из `.zip-архива` GodMode9 в папку `/luma/payloads/` на SD-карте
 1. Скопируйте папку `gm9` из `.zip-архива` GodMode9 в корень SD-карты
-1. Вставьте SD-карту обратно в консоль
+1. Reinsert your SD card into your console
 
 #### Часть II - Бэкап сохранений DSiWare из SysNAND
 
 Если у вас нет игр DSiWare или важных для вас сохранений, пропустите эту часть.
 {: .notice--info}
 
-1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
 1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it is completed
 1. Если вам предложат выставить RTC дату и время, нажмите кнопку (A) чтобы сделать это, настройте дату и время, затем нажмите (A) чтобы продолжить
   + Обратите внимание, что если вы выставили RTC дату и время, вам также придется исправить время в Системных настройках после завершения руководства
@@ -60,18 +60,18 @@ title: "Перенос EmuNAND"
 1. Do the following process for each GBA VC game that you want to back up the save for:
   + Запустите игру GBA VC
   + Выйдите из игры GBA VC
-  + Включите консоль кнопкой питания, держа нажатой кнопку (Start), чтобы запустить меню Luma3DS chainloader
+  + Boot your console while holding (Start) to launch the Luma3DS chainloader menu
   + Запустите GodMode9, нажав кнопку (A)
   + Перейдите в `[S:] SYSNAND VIRTUAL`
   + Нажмите (A) чтобы выбрать файл `agbsave.bin`
   + Выберите "AGBSAVE options..."
   + Выберите "Dump GBA VC save"
   + Нажмите (A), чтобы продолжить
-  + Нажмите (Start) для перезагрузки
+  + Press (Start) to reboot your console
 
 #### Часть IV - Копирование EmuNAND в SysNAND
 
-1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
 1. Перейдите в `[E:] EMUNAND VIRTUAL`
 1. Нажмите (A) чтобы выбрать файл `nand.bin`, затем выберите "NAND image options...", затем "Restore SysNAND (safe)"
 1. Нажмите (A), чтобы разрешить запись в SysNAND и введите указанную комбинацию кнопок
@@ -107,12 +107,12 @@ title: "Перенос EmuNAND"
 Чтобы идентифицировать Title ID в имени файла `<TitleID>.gbavc.sav`, вы можете посмотреть список всех установленных игр и соответствующих им Title ID. Удерживая (R), нажмите (A) в главном меню GodeMode9, затем выберите "Search for titles".
 {: .notice--info}
 
-1. Удерживая (R), нажмите (Start) чтобы выключить консоль
-1. Загрузитесь в SysNAND консоли
+1. Hold (R) and press (Start) at the same time to power off your console
+1. Power on your console into SysNAND
 1. Выполните нижеуказанные действия для каждой игры GBA VC, для которой вы хотите восстановить сохранения из резервной копии:
   + Запустите игру GBA VC
   + Выйдите из игры GBA VC
-  + Включите консоль кнопкой питания, держа нажатой кнопку (Start), чтобы запустить меню Luma3DS chainloader
+  + Boot your console while holding (Start) to launch the Luma3DS chainloader menu
   + Запустите GodMode9, нажав кнопку (A)
   + Перейдите в `[0:] SDCARD` -> `gm9`
   + Нажмите (Y) чтобы скопировать файл сохранения `<TitleID>.gbavc.sav`, который вы хотите восстановить
@@ -122,25 +122,25 @@ title: "Перенос EmuNAND"
   + Выберите "AGBSAVE options..."
   + Выберите "Inject GBA VC save"
   + Нажмите (A), чтобы продолжить
-  + Нажмите (Start) для перезагрузки
+  + Press (Start) to reboot your console
   + Запустите игру GBA VC
   + Выйдите из игры GBA VC
 
 #### Часть VII - Создание бэкапа SysNAND
 
-1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
 {% include_relative include/nand-backup.txt -%}
 1. **Сделайте резервную копию всех файлов на SD-карте, поскольку в следующих шагах карта будет отформатирована.**
 
 #### Часть VIII - Форматирование SD-карты
 
-1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
 {% include_relative include/format-sd-gm9.txt -%}
 1. Удерживая (R) нажмите (B) для того, чтобы извлечь SD-карту
 1. Вставьте SD-карту в компьютер
 1. Скопируйте все ваши файлы обратно на SD-карту
   + Убедитесь, что вы заменили `boot.firm` его версией из сохраненных ранее файлов
-1. Вставьте SD-карту обратно в консоль
+1. Reinsert your SD card into your console
 1. Нажмите (A), чтобы смонтировать SD-карту
 1. Нажмите (Start) для перезагрузки
 
