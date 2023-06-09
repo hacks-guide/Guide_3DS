@@ -23,18 +23,18 @@ title: "移植 EmuNAND"
 
 #### 第一節 — 準備工作
 
-1. 關閉您的主機
+1. Power off your console
 1. 將 SD 卡插入至電腦中
 1. 解壓 GodMode9 `.zip` 中的 `GodMode9.firm` 檔案到 SD 卡的 `/luma/payloads/` 資料夾中
 1. 解壓 GodMode9 `.zip` 中的 `gm9` 資料夾到 SD 卡的根目錄底下
-1. 將 SD 卡插回主機中
+1. Reinsert your SD card into your console
 
 #### 第二節 — 備份 SysNAND 中的 DSiWare 存檔
 
 如果您沒有安裝任何 DSiWare 遊戲或您認為重要的存檔，跳過本節。
 {: .notice--info}
 
-1. 按下並按住「Start」鍵，按住按鈕的同時，將您的主機開機。 這將會啟動 GodMode9
+1. Press and hold (Start), and while holding (Start), power on your console. 這將會啟動 GodMode9
 1. 當提示重要檔案備份時，按下『A』繼續，並在完畢後按下『A』繼續
 1. 當提示修正 RTC 日期及時間時，按『A』繼續並設定日期及時間，再按『A』繼續
   + 請注意，若您被提示說要修正 RTC 日期及時間，這表示您得在遵循完下列步驟後進入您的系統設定重新設定時間
@@ -60,18 +60,18 @@ title: "移植 EmuNAND"
 1. 為各個想備份的 GBA 虛擬主機遊戲重複下列步驟：
   + 啟動您所想要備份存檔的 GBA 虛擬主機遊戲
   + 退出遊戲
-  + 開機時，按住『Start』鍵進入 Luma3DS 選單
+  + Boot your console while holding (Start) to launch the Luma3DS chainloader menu
   + 按『A』啟動 GodMode9
   + 移動至 `[S:] SYSNAND VIRTUAL`
   + 選擇 `agbsave.bin`，並按『A』選擇
   + 選擇『AGBSAVE options...』
   + 選擇『Dump GBA VC save』
   + 按『A』 繼續
-  + 按下『Start』鍵重啟您的主機
+  + Press (Start) to reboot your console
 
 #### 第四節 — 複製 EmuNAND 至 SysNAND 中
 
-1. 按下並按住「Start」鍵，按住按鈕的同時，將您的主機開機。 這將會啟動 GodMode9
+1. Press and hold (Start), and while holding (Start), power on your console. 這將會啟動 GodMode9
 1. 移動至 `[E:] EMUNAND VIRTUAL`
 1. 透過『A』選取 `nand.bin`，並選擇『NAND image options...』，再選『Restore SysNAND (safe)』
 1. 按『A』解鎖 SysNAND 的複寫保護，然後按下提示的按鍵組合
@@ -107,12 +107,12 @@ title: "移植 EmuNAND"
 若想找出 `<TitleID>.gbavc.sav` 遊戲檔案的 Title ID，您可以在 GodMode9 的主選單中按住『R』鍵並按下『A』並選擇 『Search for titles』以列出所有已安裝於系統的遊戲及對應的 Title ID。
 {: .notice--info}
 
-1. 按住『R』並按下『Start』鍵關機
-1. 啟動您的主機至 SysNAND 中
+1. Hold (R) and press (Start) at the same time to power off your console
+1. Power on your console into SysNAND
 1. 為各個想還原的 GBA 虛擬主機 遊戲重複下列步驟：
   + 啟動您所想要備份存檔的 GBA 虛擬主機遊戲
   + 退出遊戲
-  + 開機時，按住『Start』鍵進入 Luma3DS 選單
+  + Boot your console while holding (Start) to launch the Luma3DS chainloader menu
   + 按『A』啟動 GodMode9
   + 移動至 `[0:] SDCARD` -> `gm9`
   + 選擇所想要還原的 `<TitleID>.gbavc.sav` 並按下『A』複製
@@ -122,25 +122,25 @@ title: "移植 EmuNAND"
   + 選擇『AGBSAVE options...』
   + 選擇『Inject GBA VC save』
   + 按『A』 繼續
-  + 按下『Start』鍵重啟您的主機
+  + Press (Start) to reboot your console
   + 啟動您所想要備份存檔的 GBA 虛擬主機遊戲
   + 退出遊戲
 
 #### 第七節 — 備份 SysNAND
 
-1. 按下並按住「Start」鍵，按住按鈕的同時，將您的主機開機。 這將會啟動 GodMode9
+1. Press and hold (Start), and while holding (Start), power on your console. 這將會啟動 GodMode9
 {% include_relative include/nand-backup.txt -%}
 1. **在繼續前，請先將 SD 卡中的所有檔案在電腦上備份起來；接下來的步驟將會刪除所有卡上的檔案**
 
 #### 第八節 — 格式化 SD 卡
 
-1. 按下並按住「Start」鍵，按住按鈕的同時，將您的主機開機。 這將會啟動 GodMode9
+1. Press and hold (Start), and while holding (Start), power on your console. 這將會啟動 GodMode9
 {% include_relative include/format-sd-gm9.txt -%}
 1. 同時按住『R』及『B』以卸除 SD 卡
 1. 將 SD 卡插入至電腦中
 1. 將所有檔案複製回 SD 卡中
   + 記得以您先前備份的檔案中替代 SD 卡中的 `boot.firm` 檔案
-1. 將 SD 卡插回主機中
+1. Reinsert your SD card into your console
 1. 按『A』重新載入 SD 卡
 1. 按『開始鍵 (Start)』以重新啟動系統
 
