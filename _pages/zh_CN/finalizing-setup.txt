@@ -6,7 +6,7 @@ title: "完成安装"
 
 ### 必读事项
 
-boot9strap 将会在 NAND 里的内容加载完成后启动 `boot.firm` 文件。 在这里，我们将使用 [LumaTeam](https://github.com/LumaTeam/) 开发的 Luma3DS 来修改主机，让主机能够运行各种自制程序。
+boot9strap 将会在 NAND 里的内容加载完成后启动 `boot.firm` 文件。 In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) to patch the console, allowing it to run homebrew software.
 
 在这一页中，我们将教你如何备份关键系统文件，并安装如下所示的自制程序：
 
@@ -43,18 +43,18 @@ boot9strap 将会在 NAND 里的内容加载完成后启动 `boot.firm` 文件�
 
 本节中，你将需要复制所需的文件到段落提示的指定位置。
 
-1. 将主机关机
+1. Power off your console
 1. 将你的 SD 卡插入电脑
 1. 检查你的 SD 卡根目录是否有一个叫 `cias` 的文件夹，如果没有则手动新建一个
 1. 复制所有 CIA 文件（`Anemone3DS.cia`、`Checkpoint.cia`、`FBI.cia`、`Homebrew_Launcher.cia` 和 `Universal-Updater.cia`）到你 SD 卡上的 `/cias/` 文件夹
 1. 检查 SD 卡的根目录是否存在一个名为 `3ds` 的文件夹，如果没有则手动新建一个
-    + 这个文件夹是用来存放 Homebrew 自制程序的；和主机自动生成的 `Nintendo 3DS` 文件夹无关。
+    + This folder stores homebrew applications and data; it is different from the `Nintendo 3DS` folder that the console automatically generates
 1. 复制 `FBI.3dsx` 到 SD 卡的 `/3ds/` 目录下
 1. 如果 SD 卡的 `luma` 文件夹下没有一个名为 `payloads` 的文件夹，那么请新建一个
 1. 将 GodMode9 `.zip` 中的 `GodMode9.firm` 复制到你SD卡的 `/luma/payloads/` 文件夹中
 1. 将 GodMode9 `.zip` 中的整个 `gm9` 文件夹复制到 SD 卡的根目录下
-1. 将 SD 卡重新插入主机
-1. 启动你的主机
+1. Reinsert your SD card into your console
+1. Power on your console
 
 以下截图为遵循本步骤后 SD 卡应有的文件及文件夹。 由于你可能在之前做了一些其他的操作，你的 SD 卡中可能会多出一些文件或者文件夹。
 
@@ -69,14 +69,14 @@ boot9strap 将会在 NAND 里的内容加载完成后启动 `boot.firm` 文件�
 
 As an additional safety measure, we will perform an additional check for custom firmware. If custom firmware is not installed by this point for any reason, the next section may render your console unable to be hacked without external hardware.
 
-1. 将主机关机
+1. Power off your console
 1. 按住 “Select” 键
-1. 在按住 “Select” 键的同时按下电源键开机
-1. If the check was successful, your device should have booted into the Luma3DS configuration menu
+1. Power on your console while still holding the (Select) button
+1. If the check was successful, your console should have booted into the Luma3DS configuration menu
 1. 按下 “Start” 键保存设置并重启
-1. 将主机关机
+1. Power off your console
 
-If you do NOT boot into the Luma3DS configuration menu, custom firmware was not installed on your device. Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+If you do NOT boot into the Luma3DS configuration menu, custom firmware was not installed on your console. Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 {: .notice--danger}
 
 
@@ -88,7 +88,7 @@ If you do NOT boot into the Luma3DS configuration menu, custom firmware was not 
 
 #### Section IV - Homebrew Launcher
 
-本节中，为了启动 FBI 应用程序，你将需要临时把主机的“下载通信（Download Play）”应用程序替换为 Homebrew Launcher。 下载通信应用程序将会在重启主机后自动恢复正常。
+本节中，为了启动 FBI 应用程序，你将需要临时把主机的“下载通信（Download Play）”应用程序替换为 Homebrew Launcher。 Download Play will automatically go back to normal once you reboot your console.
 
 {% include_relative include/launch-hbl-dlp.txt %}
 
@@ -119,8 +119,8 @@ If you do NOT boot into the Luma3DS configuration menu, custom firmware was not 
 
 本节中，你将会使用到一个脚本来复制 Luma3DS 的文件到主机的内部储存空间中，以便在拔出 SD 卡后依然能够读取这些文件。
 
-1. 将主机关机
-1. 按住 “START” 键，然后将主机开机。 这会启动 GodMode9
+1. Power off your console
+1. Press and hold (Start), and while holding (Start), power on your console. 这会启动 GodMode9
   + 如果没有进入 GodMode9，请确保 `GodMode9.firm` 放在了 `/luma/payloads/` 中，并确保 `payloads` 正确拼写。
 1. 如果提示创建重要文件备份，按下 “A” 键确认，在完成后再次按下 “A” 键来继续。
 1. 如果出现修复 RTC 日期与时间的提示，按 “A” 键执行修复，然后设置好日期和时间，并按 “A” 继续
@@ -152,7 +152,7 @@ If you do NOT boot into the Luma3DS configuration menu, custom firmware was not 
   + 此过程将花费一些时间
   + If you get an error, look for your issue in the [troubleshooting guide](troubleshooting#finalizing-setup)
 1. 按 “A” 键继续
-1. 按 “B” 键返回到主菜单
+1. 按下 “B” 键返回到主菜单
 1. 选择 “Exit”
 1. 如果提示重新锁定写入权限，按下 “A” 键来确认
 1. 进入到 `[S:] SYSNAND VIRTUAL`
@@ -161,20 +161,20 @@ If you do NOT boot into the Luma3DS configuration menu, custom firmware was not 
   + 如果你看到“Destination already exists（位置已存在文件）”，那么请移动到“Overwrite file(s)（覆盖文件）”然后按下 A 键。
 1. 按 “A” 键继续
 1. 按下 “Home” 键来打开功能菜单
-1. 选择 “Poweroff system” 来将主机关机
-1. 将你的 SD 卡插入电脑
+1. Select "Poweroff system" to power off your console
+1. 将你的 SD 卡插入到电脑
 1. Copy `<date>_<serialnumber>_sysnand_##.bin`, `<date>_<serialnumber>_sysnand_##.bin.sha`, and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + 将这些文件在不同地方备份多次（比如网盘或者移动硬盘等）
   + 如果以后机器出现任何问题，这些备份文件将是为你提供修复砖机或从 NAND 镜像恢复文件的帮手
 1. Delete `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
   + 其它的文件占用不了多少空间，更建议保留在 SD 卡上以便将来可能的需要
 1. 如果 SD 卡上有 `/luma/backups/` 文件夹，那么请将里面的文件备份到你电脑上安全的地方
-1. 将 SD 卡重新插入主机
-1. 启动你的主机
+1. Reinsert your SD card into your console
+1. Power on your console
 
 ___
 
-搞定！ 你的主机现在已经配置好自制固件了。
+搞定！ Custom firmware is now fully configured on your console.
 {: .notice--success}
 
 ### 信息与注意事项
