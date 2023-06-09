@@ -23,18 +23,18 @@ title: "הזזת EmuNAND"
 
 #### חלק I - הכנות
 
-1. תכבו את המכשיר
+1. Power off your console
 1. תכניסו את ה-SD שלכם למחשב
 1. העתיקו את `GodMode9.firm` מהזיפ של GodMode9 אל תיקיית /luma/payloads/ ב- SD שלכם
 1. תעתיקו את התיקייה `gm9` מתוך ה`.zip` של GodMode9 ל-SD שלכם
-1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
+1. Reinsert your SD card into your console
 
 #### Section II - גיבוי שמירות DSiWare מהSysNAND
 
 אם אין לכם שמירות או משחקי DSiWare שאכפת לכם מהם, תדלגו על החלק הזה.
 {: .notice--info}
 
-1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
 1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it is completed
 1. אם אתם מתבקשים לתקן את זמן ותאריך הRTC, תלחצו (A) כדי לעשות זאת, ואז תלחצו (A) כדי להמשיך
   + שימו לב, אם הייתם צריכים לתקן את תאריך וזמן הRTC, תצטרכו לתקן את הזמן בהגדרות המערכת גם כן אחרי המדריך הזה
@@ -60,18 +60,18 @@ title: "הזזת EmuNAND"
 1. Do the following process for each GBA VC game that you want to back up the save for:
   + תפעילו את המשחק
   + תצאו מהמשחק
-  + תפעילו את הקונסולה בזמן שאתם מחזיקים (Start) במהלך האתחול כדי להפעיל את תפריט הטעינה של Luma3DS
+  + Boot your console while holding (Start) to launch the Luma3DS chainloader menu
   + תפעילו את GodMode9 על ידי לחיצת (A)
   + נווטו אל `[S:] SYSNAND VIRTUAL`
   + תלחצו (A) על `agbsave.bin` כדי לבחור בו
   + תבחרו ב "AGBSAVE options..."
   + תבחרו ב "Dump GBA VC save"
   + תלחצו (A) כדי להמשיך
-  + תלחצו (Start) כדי לאתחל את המכשיר
+  + Press (Start) to reboot your console
 
 #### חלק IV - העתקת EmuNAND אל SysNAND
 
-1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
 1. נווטו אל `[E:] EMUNAND VIRTUAL`
 1. תלחצו (A) על `nand.bin` כדי לבחור בו, ואז תבחרו ב "NAND image options...", ושם ב "Restore SysNAND (safe)"
 1. לחצו (A) כדי לפתוח גישת שכתוב לSysNAND, ואז תלחצו על המקשים בסדר הנכון
@@ -107,12 +107,12 @@ title: "הזזת EmuNAND"
 כדי לזהות את ה Title ID של קובץ`<TitleID>.gbavc.sav`, אתם יכולים לקבל רשימה של כל המשחקים על המערכת וה Title IDים המתאימים על ידי החזקת (R) ולחיצת (A) על התפריט הראשי של GodMode9, ואז לבחור ב "Search for titles".
 {: .notice--info}
 
-1. תחזיקו (R) ולחצו (Start) באותו הזמן כדי לכבות את המכשיר
-1. תפעילו את המכשיר אל SysNAND
+1. Hold (R) and press (Start) at the same time to power off your console
+1. Power on your console into SysNAND
 1. תעשו את התהליך הבא בשביל כל משחק GBA VC שאתם רוצים לשחזר לו את השמירה:
   + תפעילו את המשחק
   + תצאו מהמשחק
-  + תפעילו את הקונסולה בזמן שאתם מחזיקים (Start) במהלך האתחול כדי להפעיל את תפריט הטעינה של Luma3DS
+  + Boot your console while holding (Start) to launch the Luma3DS chainloader menu
   + תפעילו את GodMode9 על ידי לחיצת (A)
   + נווטו אל `[0:] SDCARD` ושם אל `gm9`
   + תלחצו (Y) על קובץ ה `<TitleID>.gbavc.sav` שאתם רוצים לשחזר כדי להעתיק אותו
@@ -122,25 +122,25 @@ title: "הזזת EmuNAND"
   + תבחרו ב "AGBSAVE options..."
   + תבחרו ב "Inject GBA VC save"
   + תלחצו (A) כדי להמשיך
-  + תלחצו (Start) כדי לאתחל את המכשיר
+  + Press (Start) to reboot your console
   + תפעילו את המשחק
   + תצאו מהמשחק
 
 #### חלק VII - גיבוי SysNAND
 
-1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
 {% include_relative include/nand-backup.txt -%}
 1. ** תגבו את כל הקבצים על הSD לתיקייה במחשב שלכם, כי כל הקבצים יימחקו בצעדים הבאים **
 
 #### חלק VIII - פרמוט ה SD
 
-1. Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9
+1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
 {% include_relative include/format-sd-gm9.txt -%}
 1. תחזיקו (R) ולחצו (B) באותו הזמן כדי להוציא את הSD
 1. תכניסו את ה-SD שלכם למחשב
 1. תעתיקו מחדש את הקבצים לכרטיס זיכרון
   + תוודאו שאתם מחליפים את הקובץ 'boot.firm' על כרטיס ה-SD עם האחד מהגיבוי שלכם
-1. תכניסו מחדש את כרטיס הSD שלכם לתוך המכשיר שלכם
+1. Reinsert your SD card into your console
 1. תלחצו A כדי לגרום לתוכנה לקלוט שהSD חזר
 1. לחצו על (Start) על מנת להפעיל מחדש
 
