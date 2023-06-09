@@ -11,7 +11,7 @@ title: "ntrboot"
 
 Ntrbootを使ってboot9strapをインストールするには互換性のあるNDSフラッシュカードが必要です。 これらのフラッシュカートのいくつかはntrbootを事前にフラッシュして販売されていることに注意してください。
 
-While the ntrboot exploit works independently of the system version, the ntrboot flasher (which installs the exploit to the cart) is not. つまり、フラッシュカードがサポートするバージョンやデバイスによっては、特定の方法しか利用できない場合があります。
+While the ntrboot exploit works independently of the system version, the ntrboot flasher (which installs the exploit to the cart) is not. This means that, depending on the versions and consoles supported by your flashcart, only certain methods may be available to you.
 
 「Time Bomb」があるカートは、起動できなくなる日付があることに注意してください。 システムクロックがフラッシュカードのファームウェアによって決定された日付に達したことを検出すると、.nds`ファイルが起動できなくなります。 これを避ける1つの方法は、システムクロックを以前の日付に設定することです。
 
@@ -37,13 +37,13 @@ While the ntrboot exploit works independently of the system version, the ntrboot
   ![]({{ "/images/screenshots/ntrboot-flashcarts.png" | absolute_url }})
   {: .notice--info}
 
-フラッシュカードがデバイスで `.nds` ファイルを起動できることを確認してください。 フラッシュカードによっては、ファームウェアまたはカーネルファイルをフラッシュカードのSDカードにコピーする必要がある場合があります。 詳細については、特定のフラッシュカートの手順を参照してください。
+Ensure your flashcart is able to launch `.nds` files on your console before beginning. フラッシュカードによっては、ファームウェアまたはカーネルファイルをフラッシュカードのSDカードにコピーする必要がある場合があります。 詳細については、特定のフラッシュカートの手順を参照してください。
 
 特定のメソッドは追加の互換性情報を持つ可能性があることに注意してください。
 
-The usage of this exploit, regardless of the flashing method, requires access to a small magnet if the target device is of a folding style (any 3DS family system that is not the old 2DS with a sleep switch). このexploitでは、ボタンにアクセスしながらデバイスがスリープモードに入る必要があるためです.
+The usage of this exploit, regardless of the flashing method, requires access to a small magnet if the target console is of a folding style (any 3DS family system that is not the old 2DS with a sleep switch). This is because the exploit requires your console to enter sleep mode while still having access to the buttons.
 
-磁石が動作するかどうかをテストするには デバイスの電源がオンになっている間、(A)(B)(X)(Y) ボタンの周りを押したままにして、スリープモードのトリガーを確認します。 その場合、磁石がその場所にある限り、両方のディスプレイは黒くなります。
+To test if a magnet will work, hold it on or around the (A)(B)(X)(Y) buttons while the console is powered on to see if it triggers sleep mode. その場合、磁石がその場所にある限り、両方のディスプレイは黒くなります。
 {: .notice--info}
 
 ntrbootエクスプロイトがインストールされている間は、フラッシュカードは標準機能では使用できないことに注意してください(Acekard 2iの場合を除く)。 NDSとカスタムファームウェア3DSシステムのみ*で機能し続けます。 This means that, for most flashcarts, it will not even display on the HOME Menu. 完了したら、ntrbootのインストール手順の最後にオプションの手順を実行して、フラッシュカードから削除する手順があります。
@@ -67,7 +67,7 @@ ___
 
 #### ntrbootのフラッシュ (3DSマルチシステム)
 
-この方法では、すでにboot9strapを実行している第2の3DSファミリデバイスにアクセスする必要があります。 フラッシュカードが3DSのいずれかのバージョンをサポートする必要はありません。
+This method requires temporary access to a second 3DS family console that is already running boot9strap. フラッシュカードが3DSのいずれかのバージョンをサポートする必要はありません。
 
 [ntrbootのフラッシュ (3DSマルチシステム)](flashing-ntrboot-(3ds-multi-system)) へ進んでください
 {: .notice--primary}
