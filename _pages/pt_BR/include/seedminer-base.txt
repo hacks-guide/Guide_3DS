@@ -1,7 +1,7 @@
 {% capture technical_info %}
 <summary><em>Detalhes técnicos (opcional)</em></summary>
 
-Para instalar boot9strap em seu dispositivo, nós derivamos a chave de criptografia exclusiva do seu dispositivo. Para fazer isso, usamos uma ferramenta chamada Seedminer para calcular a chave de criptografia de dados (movable.sed) do seu dispositivo.
+To install boot9strap on your console, we derive your console's unique encryption key. To accomplish this, we use a tool called Seedminer to calculate the data encryption key (movable.sed) for your console.
 
 Para mais informações sobre como Seedminer funciona, veja [esta apresentação](https://zoogie.github.io/web/34⅕c3).
 
@@ -13,7 +13,7 @@ Esse método usufrui de uma poderosa placa de vídeo para realizar os cálculos 
 
 ### Seção I - Preparação
 
-Nesta seção, você receberá os detalhes necessários no seu 3DS que são necessários para descobrir a chave de criptografia do seu dispositivo.
+In this section, you will get the necessary details from your 3DS that are required to figure out your console's encryption key.
 
 {% capture console_state_info %}
 Antes de seguir esta seção:
@@ -22,7 +22,7 @@ Antes de seguir esta seção:
 {% endcapture %}
 <div class="notice--info">{{ console_state_info | markdownify }}</div>
 
-1. Desligue seu dispositivo
+1. Desligue seu console
 1. Insira o cartão SD no seu computador
 1. Vá até a pasta `Nintendo 3DS` no seu cartão SD
 1. Copie o nome da pasta de 32 letras que você vê diretamente dentro de Nintendo 3DS
@@ -34,24 +34,24 @@ Antes de seguir esta seção:
 	{: .notice--info}
 1. Cole o nome da sua pasta de 32 letras em um [documento](/images/screenshots/seedminer/text-document.png) que você possa referenciar mais tarde
   + Esta pasta é conhecida como seu "ID0". Tome nota disso já que este guia irá referir-se a ele como tal mais tarde
-1. Ligue o seu dispositivo
+1. Power on your console
   + Seu cartão SD não precisa ser inserido neste momento
 1. Vá para sua lista de amigos (o [ícone de rosto laranja]({{ "/images/friend-list-icon.png" | absolute_url }}) na linha superior do seu Menu HOME)
-  + Se você receber um erro e for expulso do menu, você deve criar um novo Mii ou seu dispositivo não pode se conectar aos servidores da Nintendo (devido a um banimento ou problemas de conexão)
+  + If you receive an error and are kicked out of the menu, you either must create a new Mii or your console cannot connect to Nintendo's servers (due to a ban or connection issues)
 1. Vá até o perfil do seu Mii e então encontre o seu Código de Amigo na tela superior
 
 ### Seção II - Seedminer
 
-Nesta seção, você usará o site Bruteforce Movable para obter a chave de criptografia do seu dispositivo na forma de `movable.sed`.
+In this section, you will use the Bruteforce Movable website to retrieve your console's encryption key in the form of `movable.sed`.
 
 1. Abra [Bruteforce Movable](https://seedminer.hacks.guide/) no seu computador
   + Se o site não estiver funcionando, entre no [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) e pergunte (em Inglês) para alguém lá te ajudar
-1. Insira o Código de Amigo do seu dispositivo (sem espaços ou traços) dentro do campo "Your friend code"
-1. Cole o nome da pasta de 32 caracteres do seu dispositivo no campo "Your ID0"
+1. Enter your console's Friend Code (with no spaces or dashes) into the "Your friend code" field
+1. Paste your console's 32 character long folder name into the "Your ID0" field
   + Não tente inserir o ID0 manualmente, já que é fácil cometer um erro. Assegure-se de que o seu ID0 esteja inserido corretamente copiando-o e colando-o de onde você o salvou na seção anterior
 1. Selecione "Go"
   + Se o site ir imediatamente para a "Step 4", o site já processou corretamente sua solicitação de bruteforce. Você pode baixar o seu arquivo `movable.sed` e continuar para a próxima seção. Você não precisa (re)adicionar o bot
-1. Use o [botão "Registrar Amigo"](/images/screenshots/seedminer/register-friend.png) no seu dispositivo para adicionar o código de amigo do bot conforme dado pelo site
+1. Use the ["Register Friend" button](/images/screenshots/seedminer/register-friend.png) on your console to add the bot's friend code as given by the website
   + Se for solicitado, o nome que você dá ao amigo não importa
 1. Espere que o site atualize
   + Se não atualizar, espere mais alguns minutos antes de recarregar a página
@@ -62,4 +62,4 @@ Nesta seção, você usará o site Bruteforce Movable para obter a chave de crip
   + Se você ainda está esperando após o período de meia hora, entre no [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) e pergunte (em Inglês) para alguém te ajudar
   + Se você receber "We were unable to successfully complete your bruteforce request. :`(", siga o [guia de troubleshooting para este problema](troubleshooting#seedminer)
   + Guarde esse arquivo em um lugar seguro pois você precisará dele nas páginas seguintes
-1. Desligue seu dispositivo
+1. Desligue seu console
