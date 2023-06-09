@@ -11,7 +11,7 @@ title: "ntrboot"
 
 透過 ntrboot 的 boot9strap 安裝將需要使用可相容的 NDS / DSi 燒錄卡。 請注意，某些燒錄卡已預先搭載 ntrboot。
 
-雖然 ntrboot 漏洞可在任意系統版本執行，但寫入 ntrboot 至燒錄卡用的燒錄軟體卻不行。 也就是說，依據您燒錄卡所支援的系統版本及主機，您能使用的方法可能有限。
+雖然 ntrboot 漏洞可在任意系統版本執行，但寫入 ntrboot 至燒錄卡用的燒錄軟體卻不行。 This means that, depending on the versions and consoles supported by your flashcart, only certain methods may be available to you.
 
 請注意，有標記『Time Bomb』的燒錄卡在其偵測到系統時間超過卡中內定的特定時間後將無法再運行任何 `.nds` 檔案。 目前的解決方法是將系統時間調至更早期的時段。
 
@@ -37,13 +37,13 @@ title: "ntrboot"
   ![]({{ "/images/screenshots/ntrboot-flashcarts.png" | absolute_url }})
   {: .notice--info}
 
-請在繼續前確保您的燒錄卡可在您的主機上啟動 `.nds` 檔案。 某些燒錄卡可能得在使用前複製某些韌體或內核檔案至其 SD 卡中。 若有疑問，請參閱您燒錄卡之說明書。
+Ensure your flashcart is able to launch `.nds` files on your console before beginning. 某些燒錄卡可能得在使用前複製某些韌體或內核檔案至其 SD 卡中。 若有疑問，請參閱您燒錄卡之說明書。
 
 於各項方法中可能會有額外的相容性資訊可供參閱。
 
-The usage of this exploit, regardless of the flashing method, requires access to a small magnet if the target device is of a folding style (any 3DS family system that is not the old 2DS with a sleep switch). 這是因為本漏洞需要在您的主機於睡眠狀態中按下這些按鈕。
+The usage of this exploit, regardless of the flashing method, requires access to a small magnet if the target console is of a folding style (any 3DS family system that is not the old 2DS with a sleep switch). This is because the exploit requires your console to enter sleep mode while still having access to the buttons.
 
-您可以在主機仍於使用狀態中拿塊小磁鐵在 A、B、X、Y 按鈕旁，看主機會不會進入睡眠模式。 如果磁鐵可用的話，您主機的兩個螢幕應該都會變黑，直到您將磁鐵拿走為止。
+To test if a magnet will work, hold it on or around the (A)(B)(X)(Y) buttons while the console is powered on to see if it triggers sleep mode. 如果磁鐵可用的話，您主機的兩個螢幕應該都會變黑，直到您將磁鐵拿走為止。
 {: .notice--info}
 
 請注意，只要您的燒錄卡仍裝著 ntrboot 漏洞，它將失去原卡的功用 (除了 Acekard 2i 外，它仍能於*NDS 或已安裝自製韌體的 3DS 上正常運作*) 。 This means that, for most flashcarts, it will not even display on the HOME Menu. 若有需要，本節最後會附帶些解除安裝此漏洞的步驟。
@@ -67,7 +67,7 @@ ___
 
 #### 寫入 ntrboot 漏洞 (透過多台 3DS 系統)
 
-本方法將暫時需要用到另一台已安裝 boot9strap 的 3DS 系列主機。 您的燒錄卡在本方法中不必支援任兩台的 3DS 系統版本。
+This method requires temporary access to a second 3DS family console that is already running boot9strap. 您的燒錄卡在本方法中不必支援任兩台的 3DS 系統版本。
 
 繼續至[寫入 ntrboot 漏洞 (透過多台 3DS 系統)](flashing-ntrboot-(3ds-multi-system))
 {: .notice--primary}
