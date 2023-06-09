@@ -6,7 +6,7 @@ title: "Completamento dell'installazione"
 
 ### Lettura necessaria
 
-Il file `boot.firm` è il file avviato da boot9strap stesso al termine del caricamento dalla NAND. In questo caso, stiamo usando Luma3DS di [LumaTeam](https://github.com/LumaTeam/) per modificare la console, consentendogli di eseguire software homebrew.
+Il file `boot.firm` è il file avviato da boot9strap stesso al termine del caricamento dalla NAND. In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) to patch the console, allowing it to run homebrew software.
 
 In questa pagina realizzeremo backup di file di sistema critici e installeremo i seguenti programmi homebrew:
 
@@ -43,18 +43,18 @@ Se la tua precedente installazione CFW era basata su EmuNAND e desideri spostare
 
 In questa sezione, copierai i file necessari per seguire le rimanenti istruzioni in questa pagina.
 
-1. Spegni il tuo 3DS
+1. Spegni la tua console
 1. Inserisci la scheda SD nel tuo computer
 1. Se assente, crea una cartella chiamata `cias` nella directory principale della tua scheda SD
 1. Copia tutti i file CIA (`Anemone3DS.cia`, `Checkpoint.cia`, `FBI.cia`, `Homebrew_Launcher.cia` e `Universal-Updater.cia`) nella cartella `/cias/` della tua scheda SD
 1. Se assente, crea una cartella chiamata `3ds` nella directory principale della tua scheda SD
-    + Questa cartella mantiene le applicazioni homebrew e i loro dati; è diversa dalla cartella `Nintendo 3DS` generata automaticamente dalla console
+    + This folder stores homebrew applications and data; it is different from the `Nintendo 3DS` folder that the console automatically generates
 1. Copia il file `FBI.3dsx` nella cartella `/3ds/` nella tua scheda SD
 1. Se assente, crea una cartella chiamata `payloads` nella cartella `luma` della tua scheda SD
 1. Copia il file `GodMode9.firm` dall'archivio `.zip` di GodMode9 dentro la cartella `/luma/payloads/` della tua scheda SD
 1. Copia la cartella `gm9` presente nell'archivio `.zip` di GodMode9 nella directory principale della tua scheda SD
 1. Reinserisci la scheda SD nella tua console
-1. Accendi la console
+1. Power on your console
 
 I successivi screenshot indicano la struttura minima che la scheda SD deve avere per proseguire in questa pagina. Potresti avere file o cartelle ulteriori nella tua scheda SD, a seconda della tua precedente configurazione o del metodo che hai seguito.
 
@@ -69,14 +69,14 @@ I successivi screenshot indicano la struttura minima che la scheda SD deve avere
 
 Come precauzione aggiuntiva, controlleremo anche la presenza di un custom firmware. Se per qualche motivo non è ancora stato installato un custom firmware, la sezione successiva potrebbe rendere impossibile modificare la console senza hardware esterno.
 
-1. Spegni il tuo 3DS
+1. Spegni la tua console
 1. Premi il pulsante (Select)
-1. Accendi la tua console continuando a tenere premuto il pulsante (Select)
-1. Se il controllo è andato a buon fine, la tua console dovrebbe aver avviato il menu di configurazione di Luma3DS
+1. Power on your console while still holding the (Select) button
+1. If the check was successful, your console should have booted into the Luma3DS configuration menu
 1. Premi (Start) per salvare e riavviare il 3DS
-1. Spegni il tuo 3DS
+1. Spegni la tua console
 
-Se NON viene avviato il menu di configurazione di Luma3DS, il custom firmware non è stato installato sulla tua console. Entra nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) e chiedi aiuto in inglese.
+If you do NOT boot into the Luma3DS configuration menu, custom firmware was not installed on your console. Entra nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) e chiedi aiuto in inglese.
 {: .notice--danger}
 
 
@@ -88,7 +88,7 @@ In questa sezione, aggiornerai il tuo sistema all'ultima versione, tranquillamen
 
 #### Sezione IV - Homebrew Launcher
 
-In questa sezione, sostituirai temporaneamente la "Modalità download" con l'Homebrew Launcher (necessario per avviare FBI). "Modalità download" tornerà automaticamente quello originale al riavvio della console.
+In questa sezione, sostituirai temporaneamente la "Modalità download" con l'Homebrew Launcher (necessario per avviare FBI). Download Play will automatically go back to normal once you reboot your console.
 
 {% include_relative include/launch-hbl-dlp.txt %}
 
@@ -119,8 +119,8 @@ In questa sezione, installerai diverse applicazioni homebrew utili nel menu HOME
 
 In questa sezione, userai uno script per copiare alcuni file di Luma3DS nella memoria interna in modo che possano essere acceduti anche senza una scheda SD inserita.
 
-1. Spegni il tuo 3DS
-1. Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9
+1. Spegni la tua console
+1. Press and hold (Start), and while holding (Start), power on your console. Verrà avviato GodMode9
   + Se GodMode9 non viene avviato, assicurati che il file `GodMode9.firm` sia in `/luma/payloads/` e che `payloads` sia scritto correttamente
 1. Se ti viene richiesto di creare un backup dei file essenziali, premi (A) per accettare, e al termine di nuovo (A) per proseguire
 1. Se ti viene chiesto di reimpostare la data e l'ora dell'RTC, premi (A) per farlo, poi imposta la data e l'ora, infine premi (A) per continuare
@@ -161,7 +161,7 @@ In questa sezione, farai backup di file che possono essere utilizzati per il rip
   + Se appare "Destination already exists", premi (A) su "Overwrite file(s)"
 1. Premi il pulsante (A) per continuare
 1. Premi il pulsante HOME per far apparire il menu delle azioni
-1. Seleziona "Poweroff system" per spegnere la console
+1. Select "Poweroff system" to power off your console
 1. Inserisci la scheda SD nel tuo computer
 1. Copia i file `<data>_<codiceseriale>_sysnand_##.bin`, `<data>_<codiceseriale>_sysnand_##.bin.sha` ed `essential.exefs` dalla cartella `/gm9/out/` della tua scheda SD in una posizione sicura sul tuo computer
   + Copia questi backup in più posti (ad esempio un archivio online, un disco rigido esterno, ecc.)
@@ -170,11 +170,11 @@ In questa sezione, farai backup di file che possono essere utilizzati per il rip
   + Gli altri file di backup sono di dimensioni trascurabili e possono essere conservati sulla tua scheda SD per comodità di accesso
 1. Se presente, copia la cartella `/luma/backups/` dalla tua scheda SD in una posizione sicura sul tuo computer
 1. Reinserisci la scheda SD nella tua console
-1. Accendi la console
+1. Power on your console
 
 ___
 
-Hai finito! Il custom firmware nella tua console è stato completamente configurato.
+Hai finito! Custom firmware is now fully configured on your console.
 {: .notice--success}
 
 ### Informazioni e Note
