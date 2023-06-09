@@ -6,7 +6,7 @@ title: "卸載自製韌體"
 
 ### 必讀事項
 
-本章節將從您的主機中完全移除自製韌體。為了將主機完全地回復至原廠設定，軟體如 boot9strap、Luma3DS 也將會被移除。
+This will completely remove CFW from your console, including boot9strap and Luma3DS, for the purpose of restoring the console to stock.
 
 Any unsigned (illegitimate) games will be rendered unusable and will be removed during this process. Use a [save manager](https://github.com/FlagBrew/Checkpoint/releases/latest) to back up any saves that you care about.
 
@@ -34,7 +34,7 @@ then uninstalling CFW <u><strong>WILL BRICK YOUR CONSOLE</strong></u>. If this a
 {% endcapture %}
 <div class="notice--danger">{{ notice-6 | markdownify }}</div>
 
-以下指示僅適用於搭載 Luma3DS 8.0 或較新版本的主機。 如果您所安裝的 Luma 版本較舊，您必須先更新您的 Luma3DS 再繼續。 您可遵循[這個教學](checking-for-cfw)進行更新。
+These instructions will only work on consoles with a Luma3DS version of 8.0 or higher. 如果您所安裝的 Luma 版本較舊，您必須先更新您的 Luma3DS 再繼續。 您可遵循[這個教學](checking-for-cfw)進行更新。
 {: .notice--warning}
 
 ### 必備項目
@@ -47,41 +47,41 @@ then uninstalling CFW <u><strong>WILL BRICK YOUR CONSOLE</strong></u>. If this a
 ### 操作說明
 
 #### 第一節 — 準備工作
-1. 關閉您的主機
+1. Power off your console
 1. 將 SD 卡插入至電腦中
 1. 解壓 Luma3DS `.zip` 內的 `boot.firm` 及 `boot.3dsx` 到 SD 卡的根目錄底下
 1. 解壓 GodMode9 `.zip` 中的 `GodMode9.firm` 檔案到 SD 卡的 `/luma/payloads/` 資料夾中
 1. 解壓 GodMode9 `.zip` 中的 `gm9` 資料夾到 SD 卡的根目錄底下
 1. 在 SD 卡上，將 `DSiWareUninstaller.3dsx` 複製到 `/3ds/` 資料夾底下
 1. 複製 `safety_test.gm9` 到 SD 卡中的 `/gm9/scripts/` 資料夾
-1. 將 SD 卡插回主機中
+1. Reinsert your SD card into your console
 
 #### 第二節 — DS 模式測試
 本章節將會檢查內建的 DS 模式是否能在自製韌體卸載後正常運行。 如果您跳過此章節，在您重新安裝自製韌體前，DS 模式可能無法正常運行。
 
 ##### DS 連線設定 Test
-1. 啟動您的主機
-1. 於您主機上啟動系統設定 (System Settings)
+1. Power on your console
+1. Launch System Settings on your console
 1. 移動至『網路設定 (Internet Settings)』中的『任天堂 DS 連線 (Nintendo DS Connections)』並選擇『OK』
 1. 你的主機應該會開起至『任天堂 DS 網路 (Nintendo DS Connections)』的設定選單
   + 如果你的主機出現的是日版的『うごくメモ帳 (Flipnote Studio)』、黑屏、或者錯誤訊息，則代表測試失敗
-1. 關閉您的主機
+1. Power off your console
 
 ##### DS『下載通信 (Download Play)』程式測試
-1. 啟動您的主機
+1. Power on your console
 1. 啟動『下載通信(Download Play)』程式 (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
 1. 選擇『任天堂 DS (Nintendo DS)』
-1. 如果您的主機可正常進入 DS『下載通信(Download Play)』程式，則代表測試成功
+1. If your console loads into a "Download software via DS Download Play" menu, the test was successful
   + 如果你的主機出現的是日版的『うごくメモ帳 (Flipnote Studio)』、黑屏、或者錯誤訊息，則代表測試失敗
-1. 關閉您的主機
+1. Power off your console
 
-如果任何一個測試失敗了，那麼移除自製韌體後，您可能將會無法正常使用 DS 模式、DS『下載通信 (Download Play)』程式、或者 DS 連線設定 (Connection Settings)！ You should [fix DS mode](troubleshooting#software-issues-on-devices-with-custom-firmware) before continuing.
+如果任何一個測試失敗了，那麼移除自製韌體後，您可能將會無法正常使用 DS 模式、DS『下載通信 (Download Play)』程式、或者 DS 連線設定 (Connection Settings)！ You should [fix DS mode](troubleshooting#software-issues-on-consoles-with-custom-firmware) before continuing.
 {: .notice--warning}
 
 #### 第三節 — 安全性測試
-本節的目的是為了檢查主機是否能在移除自製韌體後正常開機，並確保核心系統元件 (如系統設定及螢幕小鍵盤) 能夠正常運作。 **如果您跳過此章節可能會造成磚機！**
+本節的目的是為了檢查主機是否能在移除自製韌體後正常開機，並確保核心系統元件 (如系統設定及螢幕小鍵盤) 能夠正常運作。 **If you skip this section, you may BRICK your console!**
 
-1. 按下並按住「Start」鍵，按住按鈕的同時，將您的主機開機。 這將會啟動 GodMode9
+1. Press and hold (Start), and while holding (Start), power on your console. 這將會啟動 GodMode9
 1. 當提示重要檔案備份時，按下『A』繼續，並在完畢後按下『A』繼續
 1. 當提示修正 RTC 日期及時間時，按『A』繼續並設定日期及時間，再按『A』繼續
   + 請注意，若您被提示說要修正 RTC 日期及時間，這表示您得在遵循完下列步驟後進入您的系統設定重新設定時間
@@ -90,22 +90,22 @@ then uninstalling CFW <u><strong>WILL BRICK YOUR CONSOLE</strong></u>. If this a
 1. 選擇『safety_test』
 1. 閱讀螢幕上所出現的警示，並按下「A」鍵繼續
 1. 您應該會進入正常的 3DS HOME 主選單中 (自訂主題不在此範圍內)。 如果是這樣，請繼續進行以下操作
-  如果你在開機後無法進入正常的 3DS HOME 主選單 (如出現黑屏、錯誤訊息... 等)，移除自製韌體**將會造成磚機**！
-1. 於您主機上啟動系統設定 (System Settings)
+  + If you do not boot into the regular 3DS HOME Menu (black screen, error screen, etc.), uninstalling CFW **WILL BRICK YOUR CONSOLE!**
+1. Launch System Settings on your console
 	+ 如果你的主機在這步驟死當，則代表測試失敗
 1. 選擇『其他設定 (Other Settings)』
 1. 選擇『個人檔案 (Profile)』
 1. 選擇『用戶名 (User Name)』
 1. 如果你能正常輸入一個新的用戶名，則代表測試成功
 	+ 如果螢幕鍵盤沒有出現、螢幕卡住、或者主機死當，則代表測試失敗
-1. 關閉您的主機
+1. Power off your console
 
 如果你在開機後無法進入正常的 3DS HOME 主選單、無法進入系統設定、或者螢幕小鍵盤無法正常使用，**請不要繼續進行以下步驟**！ 請加入 [Discord 中的 Nintendo Homebrew 伺服器](https://discord.gg/MWxPgEp) 並使用英文尋求協助。
 {: .notice--danger}
 
 #### 第四節 — 備份 NAND
 
-1. 按下並按住「Start」鍵，按住按鈕的同時，將您的主機開機。 這將會啟動 GodMode9
+1. Press and hold (Start), and while holding (Start), power on your console. 這將會啟動 GodMode9
 1. 按『Home』鍵以叫出主選單
 1. 選擇『Scripts...』
 1. 選擇『GM9Megascript』
@@ -117,14 +117,14 @@ then uninstalling CFW <u><strong>WILL BRICK YOUR CONSOLE</strong></u>. If this a
 1. 按『B』回到主選單
 1. 選擇『Exit』
 1. 按『Home』鍵以叫出主選單
-1. 選擇『Poweroff system』關機
+1. Select “Poweroff system” to power off your console
 
 #### 第五節－移除所有非法內容
 本章節將會移除任何非法內容，如自製程式及轉存的遊戲卡帶。 如果你有任何您特別在意的存檔，請先透過存檔管理員將其備份再行繼續。
 {: .notice--warning}
 
-1. 啟動您的主機
-1. 於您主機上啟動系統設定 (System Settings)
+1. Power on your console
+1. Launch System Settings on your console
 1. 移動至 `資料管理 (Data Management)` -> `任天堂 3DS` -> `軟體 (Software)`
 1. 在此列表中，刪除您在使用自製韌體時安裝的所有非來自於任天堂的自製程式
   + 這其中包括常見的自製程式如 FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint 等等… ，和任何非通過 eShop 安裝的遊戲及軟體
@@ -143,16 +143,16 @@ then uninstalling CFW <u><strong>WILL BRICK YOUR CONSOLE</strong></u>. If this a
 1. 按『B』退出 Rosalina 選單
 1. 按『Home』鍵，並關閉『下載通信 (Download Play)』程式
 1. 啟動『下載通信 (Download Play)』程式
-1. 您的主機應該就會啟動 Homebrew Launcher 了
+1. Your console should load the Homebrew Launcher
 1. 透過 Homebrew 清單啟動 DSiWare Uninstaller
 1. 按照提示並允許程式進行卸載
-1. 運行完畢後，退出 Homebrew Launcher 並關機
+1. Once the process has succeeded, exit the Homebrew Launcher and power off your console
 
 #### 第六節 — 格式化系統
 本節將確保所有非法 tickets 已被刪除，讓 eShop 能夠正常運行。 這將從您的 3DS 中刪除所有內容並登出您的 NNID。 請注意，您主機的加密金鑰將會被洗掉，也就是說您將無法使用任何先前的資料，即使你先前已備份了你的 SD 卡。
 
-1. 啟動您的主機
-1. 於您主機上啟動系統設定 (System Settings)
+1. Power on your console
+1. Launch System Settings on your console
 1. 移動至 『其他設定 (Other Settings)』-> 下一頁 (直到最後一頁) ->『格式化系統 (Format System Memory)』
 1. 依循所示步驟以格式化您的主機
 
@@ -161,7 +161,7 @@ then uninstalling CFW <u><strong>WILL BRICK YOUR CONSOLE</strong></u>. If this a
 這是檢查您是否已遵守上述所有安全步驟的最後機會！ 請再繼續前確保您以遵守以上所有的章節，**尤其是**`第三節 — 安全性測試`。
 {: .notice--warning}
 
-1. 按下並按住「Start」鍵，按住按鈕的同時，將您的主機開機。 這將會啟動 GodMode9
+1. Press and hold (Start), and while holding (Start), power on your console. 這將會啟動 GodMode9
   + If you instead see the Luma3DS chainloader, use the D-Pad and the (A) button to select GodMode9
 1. 按『Home』鍵以叫出主選單
 1. 選擇『Scripts...』
@@ -174,11 +174,11 @@ then uninstalling CFW <u><strong>WILL BRICK YOUR CONSOLE</strong></u>. If this a
 1. 按『B』回到主選單
 1. 選擇『Exit』
 1. 如提示時，按下『A』取消檔案寫入鎖定
-1. 按下『Start』鍵重啟您的主機
+1. Press (Start) to reboot your console
 
 ___
 
-所有的自製韌體已從您的主機中移除。
+All custom firmware has been removed from your console.
 {: .notice--success}
 
 您現在可以將所有*非* `Nintendo 3DS`、`DCIM`、或 `private` 的資料夾及檔案刪除。
