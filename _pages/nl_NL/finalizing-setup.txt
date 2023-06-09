@@ -6,7 +6,7 @@ title: "Installatie voltooien"
 
 ### Verplicht te lezen
 
-Het `boot.firm` bestand wordt opgestart door boot9strap nadat het klaar is met laden van de NAND. In dit geval gebruiken we Luma3DS door [LumaTeam](https://github.com/LumaTeam/) om apparaten te patchen zodat ze homebrew software kunnen gebruiken.
+Het `boot.firm` bestand wordt opgestart door boot9strap nadat het klaar is met laden van de NAND. In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) to patch the console, allowing it to run homebrew software.
 
 Op deze pagina zullen we een belangrijke back-up maken van de systeembestanden en de volgende homebrew programma's installeren:
 
@@ -43,18 +43,18 @@ Als je vorige CFW setup was gebaseerd op EmuNAND en je wilt de inhoud van je Emu
 
 In this section, you will copy the files necessary to follow the rest of the instructions on this page.
 
-1. Schakel je 3DS uit
+1. Power off your console
 1. Plaats je SD kaart in je computer
 1. Maak een nieuwe map genaamd `cias` in de hooofdmap van je SD kaart, indien deze nog niet aanwezig is
 1. Kopieer alle CIA bestanden (`Anemone3DS.cia`, `Checkpoint.cia`, `FBI.cia`, `Homebrew_Launcher.cia`, en `Universal-Updater.cia`) naar de `/cias/` map op je SD-kaart
 1. Maak een map genaamd "3ds" op de hoofdmap van je SD-kaart als die nog niet bestaat
-    + Deze map bewaart homebrew applicaties en gegevens; het is anders dan de `Nintendo 3DS` map die je 3DS automatisch genereert
+    + This folder stores homebrew applications and data; it is different from the `Nintendo 3DS` folder that the console automatically generates
 1. Kopieer `FBI.3dsx` naar de `/3ds/` map op je SD-kaart
 1. Maak een map genaamd `payloads` aan in de `luma` folder in je SD-kaart als deze nog niet bestaat
 1. Kopieer `GodMode9.firm` van de GodMode9 `.zip` naar de `/luma/payloads/` map op je SD-kaart
 1. Kopieer de `gm9` map uit de GodMode9 `.zip` naar de hoofdmap van je SD-kaart
-1. Stop je SD kaart terug in je 3DS
-1. Zet je 3DS aan
+1. Reinsert your SD card into your console
+1. Power on your console
 
 The screenshots below indicate the minimum SD card layout that is required to follow this page. Je hebt mogelijk extra bestanden of mappen op je SD-kaart, afhankelijk van je vorige setup of de methode die je hebt gevolgd.
 
@@ -69,14 +69,14 @@ The screenshots below indicate the minimum SD card layout that is required to fo
 
 As an additional safety measure, we will perform an additional check for custom firmware. If custom firmware is not installed by this point for any reason, the next section may render your console unable to be hacked without external hardware.
 
-1. Schakel je 3DS uit
+1. Power off your console
 1. Houd de (Select) knop ingedrukt
-1. Zet je 3DS aan terwijl je de (Select) knop ingedrukt houdt
-1. If the check was successful, your device should have booted into the Luma3DS configuration menu
+1. Power on your console while still holding the (Select) button
+1. If the check was successful, your console should have booted into the Luma3DS configuration menu
 1. Druk op (Start) om op te slaan en opnieuw op te starten
-1. Schakel je 3DS uit
+1. Power off your console
 
-If you do NOT boot into the Luma3DS configuration menu, custom firmware was not installed on your device. Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+If you do NOT boot into the Luma3DS configuration menu, custom firmware was not installed on your console. Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
 {: .notice--danger}
 
 
@@ -88,7 +88,7 @@ In this section, you will update your system to the latest version, which is saf
 
 #### Section IV - Homebrew Launcher
 
-In this section, you will temporarily replace Download Play with Homebrew Launcher (which we need to launch FBI). Download Play will automatically go back to normal once you reboot your device.
+In this section, you will temporarily replace Download Play with Homebrew Launcher (which we need to launch FBI). Download Play will automatically go back to normal once you reboot your console.
 
 {% include_relative include/launch-hbl-dlp.txt %}
 
@@ -119,8 +119,8 @@ In this section, you will install several useful homebrew applications to HOME M
 
 In this section, you will use a script to copy some of Luma3DS's files to internal memory so that they can be accessed, even without an SD card inserted.
 
-1. Schakel je 3DS uit
-1. Terwijl je (Start) ingedrukt houdt, zet je jouw apparaat aan. Dit zal GodMode9 starten
+1. Power off your console
+1. Press and hold (Start), and while holding (Start), power on your console. Dit zal GodMode9 starten
   + Als je niet in GodMode9 opstart, zorg er dan voor dat `GodMode9.firm` in `/luma/payloads/` is en dat `payloads` correct gespeld is
 1. Als je gevraagd word om essentiële bestanden te back-uppen, druk dan op (A) om dat te doen, druk dan op (A) als dit voltooid is
 1. Als er wordt gevraagd om de RTC date&time goed te zetten, duk op (A) om dat te doen, stel dan de datum en tijd in en druk op (A) om door te gaan
@@ -161,7 +161,7 @@ In this section, you will make backups of files that can be used to recover from
   + Als je "Destination already exists" ziet, druk op (A) op "Overwrite file(s)"
 1. Druk op (A) om door te gaan
 1. Druk op de (Home) knop om het actiemenu te openen
-1. Selecteer "Poweroff system" om je 3DS uit te zetten
+1. Select "Poweroff system" to power off your console
 1. Plaats je SD kaart in je computer
 1. Copy `<date>_<serialnumber>_sysnand_##.bin`, `<date>_<serialnumber>_sysnand_##.bin.sha`, and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
   + Kopieer deze back-ups naar meerdere locaties (zoals een online bestandsopslag, een externe harde schijf, etc.)
@@ -169,12 +169,12 @@ In this section, you will make backups of files that can be used to recover from
 1. Delete `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
   + De andere back-upbestanden zijn te verwaarlozen in grootte en kunnen worden bewaard op je SD-kaart, zodat ze gemakkelijk te gebruiken zijn
 1. If you have it, copy the `/luma/backups/` folder on your SD card to a safe location on your computer
-1. Stop je SD kaart terug in je 3DS
-1. Zet je 3DS aan
+1. Reinsert your SD card into your console
+1. Power on your console
 
 ___
 
-Je bent klaar! Custom firmware is nu volledig geconfigureerd op je apparaat.
+Je bent klaar! Custom firmware is now fully configured on your console.
 {: .notice--success}
 
 ### Information and Notes
