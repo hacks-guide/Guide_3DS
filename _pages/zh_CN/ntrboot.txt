@@ -11,7 +11,7 @@ title: "ntrboot"
 
 若想使用 ntrboot 漏洞来安装 boot9strap，那么你需要一张兼容的 NDS / DSi 烧录卡来将 ntrboot 写入烧录卡。 请注意，有一些烧录卡已经预先写入了 ntrboot。
 
-3DS 在任何的系统版本下都可以使用 ntrboot 漏洞，不过在将 ntrboot 写入烧录卡之前不一定可以正常使用烧录卡。 因此，你需要根据你的烧录卡支持的版本和主机选择相应的方法。
+3DS 在任何的系统版本下都可以使用 ntrboot 漏洞，不过在将 ntrboot 写入烧录卡之前不一定可以正常使用烧录卡。 This means that, depending on the versions and consoles supported by your flashcart, only certain methods may be available to you.
 
 请注意带有 “Time Bomb” 的烧录卡在检测到主机的系统时间超过了烧录卡固件中设置的某一日期后，将无法正常运行并启动 `.nds` 文件。 绕过这一限制的方法之一是把系统时间调到较早日期。
 
@@ -37,13 +37,13 @@ title: "ntrboot"
   ![]({{ "/images/screenshots/ntrboot-flashcarts.png" | absolute_url }})
   {: .notice--info}
 
-在开始前，请确认你的烧录卡可以在你的主机上使用并运行 `.nds` 文件。 某些烧录卡可能需要其 SD 卡内含有固件或“内核”文件。 请阅读你的烧录卡的说明书来了解更多细节。
+Ensure your flashcart is able to launch `.nds` files on your console before beginning. 某些烧录卡可能需要其 SD 卡内含有固件或“内核”文件。 请阅读你的烧录卡的说明书来了解更多细节。
 
 请注意，某些方法可能有额外的兼容步骤供参阅。
 
-如果你的主机是折叠式（除了带有睡眠开关的老型号的 2DS 外的所有 3DS 系列机型），且你要通过此方法破解，则你必须准备一小块磁铁。 这是因为这个漏洞需要在主机进入休眠模式后再按下组合键。
+The usage of this exploit, regardless of the flashing method, requires access to a small magnet if the target console is of a folding style (any 3DS family system that is not the old 2DS with a sleep switch). This is because the exploit requires your console to enter sleep mode while still having access to the buttons.
 
-你可以在开机时将磁铁放在 A、B、X、Y 键上方或附近然后看看你的主机是否黑屏。 如果会的话，只要把磁铁在那个位置附近，主机的两个屏幕就应该都会变黑。
+To test if a magnet will work, hold it on or around the (A)(B)(X)(Y) buttons while the console is powered on to see if it triggers sleep mode. 如果会的话，只要把磁铁在那个位置附近，主机的两个屏幕就应该都会变黑。
 {: .notice--info}
 
 请注意，在写入 ntrboot 漏洞后你将无法使用烧录卡的正常功能（除了Acekard 2i，其在 **NDS 和已破解的 3DS 上**仍能正常使用）。 也就是说大部分烧录卡在被写入 ntrboot 后在主菜单中都不会出现其图标。 在写入 ntrboot 后，你可以通过可选步骤将其从烧录卡中移除。
@@ -67,7 +67,7 @@ ___
 
 #### 通过多台 3DS 写入 ntrboot 至烧录卡
 
-本方法会需要暂时用到一台已经破解了 boot9strap 的 3DS 主机， 你的烧录卡在本方法中不受 3DS 系统版本的限制。
+This method requires temporary access to a second 3DS family console that is already running boot9strap. 你的烧录卡在本方法中不受 3DS 系统版本的限制。
 
 继续至[写入 ntrboot（通过多台 3DS）](flashing-ntrboot-(3ds-multi-system))
 {: .notice--primary}
