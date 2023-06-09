@@ -32,7 +32,7 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 [hardmod-b9s-installer](https://github.com/ihaveamac/hardmod-b9s-installer/releases/latest)の最新のバージョン
   + Windowsユーザーはコンパイルされた`.exe`を使用できますが、MacとLinuxユーザーは`.py`を実行するには[Python 3](https://www.python.org/downloads/)をインストールする必要があります。
 * The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file that isn't source code)
-* デバイスとバージョンに対応する `.firm`:
+* The `.firm` corresponding to your console and version:
 
 | バージョン | Kernel | Old 3DS or Old 2DS | New 3DS or New 2DS |
 |-|-|:-:|:-:|
@@ -74,28 +74,28 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 
 In this section, you will download the necessary files for the hardmod and dump the NAND image in preparation to install custom firmware.
 
-1. デバイスの電源を切ります
+1. Power off your console
 1. パソコンにSDカードを入れます
 1. `boot.firm` と `boot.3dsx` をLuma3DSの `.zip` からSDカードのルートにコピーします
 1. hardmod-b9s-installer `.zip`からhardmod-b9s-installerフォルダをコンピュータにコピーします
 1. ダウンロードした`.firm`を、コンピュータのhardmod-b9s-installerフォルダにコピーします
 1. コンピュータのhardmod-b9s-installerフォルダにあるダウンロードした`.firm`の名前を`current.firm`に変更します
 1. `boot9strap.firm`と`boot9strap.firm.sha`をboot9strap`.zip`からコンピュータのhardmod-b9s-installerフォルダにコピーします
-1. デバイスにSDカードを入れます
+1. Reinsert your SD card into your console
 1. Hardmodを使用してNANDバックアップを作成します
 1. コンピュータのhardmod-b9s-installerフォルダにNANDバックアップを移動し、`NAND.bin`に名前を変更します
 
 #### セクション II - boot9strapをインストールする
 
-In this section, you will install custom firmware to the dumped NAND image, and then install this NAND image back onto the device to install custom firmware on it.
+In this section, you will install custom firmware to the dumped NAND image, and then install this NAND image back onto the console to install custom firmware on it.
 
 1. hardmod-b9s-installerを実行します
   + Windows ユーザー: `install-b9s.exe` を実行する
   + MacとLinuxユーザー: `install-b9s.py`を実行します
-1. Hardmodで出力された`NAND-patched.bin`をデバイスにフラッシュする
-1. デバイスの電源を切ります
+1. Flash your outputted `NAND-patched.bin` to your console with your hardmod
+1. Power off your console
 1. hardmodの接続を解除
-1. Press and hold (Select), and while holding (Select), power on your device
+1. Press and hold (Select), and while holding (Select), power on your console
 {% include_relative include/configure-luma3ds.txt %}
 
 {% include_relative include/luma3ds-installed-note.txt %}
