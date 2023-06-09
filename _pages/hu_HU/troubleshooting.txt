@@ -23,8 +23,8 @@ Több oldalon használt:
 * [Telepítés véglegesítése](#finalizing-setup)
 
 Problémák telepítést követően:
-* [Boot problémák](#boot-issues-on-devices-with-custom-firmware)
-* [Szoftver problémák](#software-issues-on-devices-with-custom-firmware)
+* [Boot issues](#boot-issues-on-consoles-with-custom-firmware)
+* [Software issues](#software-issues-on-consoles-with-custom-firmware)
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -70,13 +70,13 @@ Csatlakozz a [Nintendo Homebrew Discord-on](https://discord.gg/MWxPgEp) csatorn�
 ![]({{ "/images/screenshots/multiple-id0.png" | absolute_url }})
 {: .notice--info}
 
-Ez akkor fordul elő, ha az SD kártyádat több 3DS eszközben használod, és a célja, hogy megakadályozza a nem szándékos adat egyesítést olyan adattal, ami nem lenne érvényes másik eszközön. Ahhoz, hogy megtaláld melyik hosszú mappa név a helyes a 3DS-edhez, kövesd a következő lépéseket:
+This occurs when you use your SD card in multiple 3DS consoles and is intended to prevent inadvertently merging data that would not be valid on other consoles. Ahhoz, hogy megtaláld melyik hosszú mappa név a helyes a 3DS-edhez, kövesd a következő lépéseket:
 
 1. Nevezd át a `Nintendo 3DS` mappát `BACKUP_Nintendo 3DS` névre
-1. Tedd vissza az SD kártyát a készülékedbe, és kapcsold be
-1. Várd meg, amíg a készüléked legenerálja az SD kártyára az adatokat
+1. Reinsert your SD card into your console and power on your console
+1. Wait for the console to generate the SD card data
 	+ Az alkalmazásaidnak el kell tűnniük. Ez normális, hamarosan megoldjuk
-1. Kapcsold ki a készülékedet, és helyezd vissza az SD kártyádat a számítógépedbe
+1. Power off your console and reinsert your SD card into your computer
 1. Lépj be az SD kártyád `Nintendo 3DS` könyvtárába
 1. Másold le a 32 karakter hosszú nevét annak a mappának, amit látsz
 	+ Ez a te valódi ID0-d, amit használni fogsz a [II. részben a Seedminer-nél](seedminer#section-ii---seedminer)
@@ -129,7 +129,7 @@ Biztosítsd, hogy az `F00D43D5.bin` az egyetlen fájl a `Nintendo 3DS` -> `<ID0>
 
 Továbbá légy biztos abban, hogy a `bb3.bin` fájl megtalálható az SD kártyád gyökerében. Ha hiányzik, töltsd le a legutolsó kiadását az [Bannerbomb3](https://github.com/lifehackerhansol/Bannerbomb3/releases/download/v3.0-lhs1/bb3.bin)-nak (közvetlen letöltés), és másold a `bb3.bin` fájlt az SD kártyád gyökerébe.
 
-Ha ezen megoldások egyike sem javítja ezt a probélmát, akkor az egyedi firmware eltávolításra kerülhetett erről az eszközről, úgy, hogy az lehetetlenné teszi ennek a metódusnak a végrehajtását. Ebben az esetben csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és kérj, támogatást angolul.
+If neither of these solutions fixes this problem, then custom firmware may have been uninstalled on this console in a way that makes this method impossible to perform. Ebben az esetben csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és kérj, támogatást angolul.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -274,7 +274,7 @@ Ha a fájljaid jó helyen vannak, hozd létre újra a mentéseket a [PicHaxx Sav
 {% capture compat %}
 <summary><u>"An exception occurred" vagy Errdisp a Picross megnyitásakor</u></summary>
 
-Az eszközöd már rendelkezik egyedi firmware-rel. Érdemes elvégezned a [CFW ellenőrzését](checking-for-cfw).
+Your console already has custom firmware. Érdemes elvégezned a [CFW ellenőrzését](checking-for-cfw).
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -297,9 +297,9 @@ A `00000001.sav` fájlod valószínüleg rossz helyen van, vagy nem a jó `movab
 {% capture compat %}
 <summary><u>Piros/lila/rózsaszín és fehér képernyő a Soundhax futtatása után</u></summary>
 
-Ha a rendszer verziód 9.4.0, 9.5.0, vagy 9.6.0, hibát tapasztalhatsz az universal-otherapp egy régebbi verziójával. Töltsd le a legfrissebb verziót [innen](https://github.com/TuxSH/universal-otherapp/releases/latest).
+If your console is on system version 9.4.0, 9.5.0, or 9.6.0, you may be encountering a bug with an old version of universal-otherapp. Download the latest version from [here](https://github.com/TuxSH/universal-otherapp/releases/latest).
 
-Ha nem ezeken a firmware verziókon van az eszközöd, akkor valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvégezned a [CFW ellenőrzését](checking-for-cfw).
+If your console is not on those firmwares, it likely indicates that you already have custom firmware. Érdemes elvégezned a [CFW ellenőrzését](checking-for-cfw).
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -313,7 +313,7 @@ Probléma van a `otherapp.bin` fájloddal (nem jó, hiányzik, rossz helyen van 
 {% capture compat %}
 <summary><u>"Could not play"</u></summary>
 
-Rossz Soundhax fájlod van az eszközödhöz és a régiódhoz vagy az eszközöd nem kompatibilis a Soundhax-szal. Ez utóbbi esetben frissítsd az eszközöd a legutolsó verzióra és kövesd a [Seedminer](seedminer) lépéseit.
+You have the wrong Soundhax file for your console and region, or your console is incompatible with Soundhax. In the latter case, you should update your console to the latest version and follow [Seedminer](seedminer).
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -379,7 +379,7 @@ Az SSLoth proxy nem lett megfelelően konfigurálva. Csináld újra az SSLoth fe
 
 Kövesd az alábbi lépéseket:
 
-1. Lépj be a System Settings-be a készülékeden
+1. Launch System Settings on your console
 1. Navigálj az `Internet Settings` -> `Connection Settings` opciókhoz
 1. Kattints a saját hálózati kapcsolatodra és navigálj a `Change Settings` -> `Next Page (jobb nyíl)` -> `Proxy Settings` opcióhoz
 1. Állítsd a "Proxy Settings"-t "No"-ra
@@ -398,7 +398,7 @@ Kövesd az alábbi lépéseket:
 {% capture compat %}
 <summary><u>"To use the Internet Browser, please update your system using the System Update option in the System Settings."</u></summary>
 
-Először győződj meg arról, hogy a megfelelő proxy-t adtad meg a kapcsolathoz amit használsz. Ha nem, menj vissza a [II. részhez](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth). Ha a proxy helyes, akkor az eszközöd kártya-frissített, ami azt jelenti, hogy egy alternatív exploit-ot kell használnod.
+Először győződj meg arról, hogy a megfelelő proxy-t adtad meg a kapcsolathoz amit használsz. Ha nem, menj vissza a [II. részhez](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth). If the proxy is correct, then your console has been cart-updated, which means an alternate exploit will need to be used.
 
 <u>1. metódus</u><br>
 Ha a szám a régió előtt kisebb vagy egyenlő 36-tal (pl. Ver. 11.14.0-**36**U), akkor követheted a [Soundhax](installing-boot9strap-(soundhax)) metódust. Amikor kérdezi, válassz és használj egy firmware-t a hangfájl generáláshoz:
@@ -412,14 +412,14 @@ Ha a szám a régió előtt kisebb vagy egyenlő 36-tal (pl. Ver. 11.14.0-**36**
 Ha Old 3DS / Old 3DS XL / 2DS -ed van kipróbálhatod a Safe Mode frissítést, ami kivált egy alternatív exploitot:
 
 1. Bizonyosodj meg róla, hogy a proxy amit az SSLoth-hoz használtál még aktívan az internet kapcsolatodra
-1. Az eszközöd kikapcsolt állapotában tartsd nyomva a következő gombokat: (Bal Váll) + (Jobb Váll) + (D-Pad Fel) + (A), majd ezen gombok nyomva tartása mellett kapcsold be az eszközöd
-  + Tartsd nyomva a gombokat, amíg az eszköz be nem bootol a Safe Mode-ba (a "system update" menübe)
+1. With your console powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your console
+  + Keep holding the buttons until the console boots into Safe Mode (a "system update" menu)
 1. Nyomj "OK"-ot a frissítés elfogadásához
 1. Ha minden megfelelő volt, akkor a frissítésnek nem kell sikerülnie és a 3DS be fog bootolni a SafeB9SInstaller-be. Ha így történt, folytasd a [IV. résszel](installing-boot9strap-(ssloth-browser)#section-iv---installing-boot9strap).
 
 ---
 
-HA ezek a metódusok nem működnek (vagy nem vonatkoznak rád) frissítsd az eszközöd a legutolsó verzióra és kövesd a [Seedminer](seedminer) lépéseit.
+If these methods didn't work (or do not apply to you), update your console to the latest version and follow [Seedminer](seedminer).
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -486,7 +486,7 @@ Ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvége
 ## Telepítés véglegesítése
 
 {% capture compat %}
-<summary><u>Sikertelen az eszköz frissítése</u></summary>
+<summary><u>Unable to update console</u></summary>
 
 Az alábbi lépések tetszőleges sorrendben hajthatók végre, azonban a lista a legkönnyebbtől a legnehezebben végrehajthatóig van összeállítva.
 
@@ -544,17 +544,17 @@ Ha van elég szabad hely az SD kártyádon, az SD kártya lehet sérült vagy hi
 
 ---
 
-## Boot problémák egyedi firmware-rel rendelkező eszközökön
+## Boot issues on consoles with custom firmware
 
-Az itt leírt lépések általában feltételezik, hogy az eszközöd modern egyedi firmware telepítéssel rendelkezik (boot9strap + Luma3DS 8.0 vagy nagyobb). Ha a konzolod régebbi homebrew telepítés (például valami ami arm9loaderhax vagy menuhax alapú), frissítened kell a telepítésed, mielőtt kipróbálod ezeket a lépéseket.
+The steps detailed here generally assume that your console has a modern custom firmware setup (boot9strap + Luma3DS 8.0 or greater). Ha a konzolod régebbi homebrew telepítés (például valami ami arm9loaderhax vagy menuhax alapú), frissítened kell a telepítésed, mielőtt kipróbálod ezeket a lépéseket.
 {: .notice--info}
 
 ### Táp/értesítő LED fény indikátorok
 
 {% capture compat %}
-<summary><u>Az eszközöm kikapcsol, ha megpróbálom bekapcsolni és/vagy az értesítő LED egy színt mutat bootoláskor</u></summary>
+<summary><u>My console powers off when I try to turn it on, and/or the notification LED shows a color on boot</u></summary>
 
-Probléma van az `boot.firm` fájloddal. Ha [boot9strap 1.4](https://github.com/SciresM/boot9strap/releases/tag/1.4)-et futtatsz, akkor a 3DS-ed értestő LED-je egy adott sznt villogtat. Ez a szín a `boot.firm` problémák diagnosztizálását segíti az SD kártyán vagy a belső memóriában. Régebbi boot9strap verziókon a kék fény azonnal kikapcsol, ha megpróbálod bekapcsolni az eszközt.
+Probléma van az `boot.firm` fájloddal. Ha [boot9strap 1.4](https://github.com/SciresM/boot9strap/releases/tag/1.4)-et futtatsz, akkor a 3DS-ed értestő LED-je egy adott sznt villogtat. Ez a szín a `boot.firm` problémák diagnosztizálását segíti az SD kártyán vagy a belső memóriában. On older versions of boot9strap, the blue light will power off almost immediately when trying to turn on the console.
 
 Ha az értesítő LED villog:
 
@@ -564,18 +564,18 @@ Ha az értesítő LED villog:
 
 Beszerezhetsz `boot.firm` fájlt a [Luma3DS legfrissebb kiadásának letöltésével](https://github.com/LumaTeam/Luma3DS/releases/latest) és annak kicsomagolásával, majd a `boot.firm` fájlnak az SD kártyád gyökerébe helyezésével. Ha a `boot.firm` fájlod folyamatosan sérültnek érzékelt, szükség lehet az SD kártyád hibákra ellenőrzésére ([Windows](h2testw-(windows)), [Linux](f3-(linux)), vagy [macOS](f3xswift-(mac))). Azt is vedd figyelembe, hogy a 3DS-nek problémái lehetnek olyan fájlokkal, amit WinRAR-ral csomagoltak ki.
 
-Ha hallod a "pattanó hangot", ami potenciálisan a háttérvilágítás bekapcsolását kíséri a másodperc egy részéig, akkor hardver problémád van az eszközöddel (mint például lecsatlakozott háttérvilágítás kábel). Lehetséges, hogy be tudod kapcsolni és az eszközödet megfelelő szögben tartva.
+If you hear a "popping sound", potentially accompanied with the backlight turning on for a split second, there is a hardware issue with your console (such as a disconnected backlight cable). You may be able to get your console to boot by holding it at certain angles.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Az eszközöm fekete képernyőn ragad, a kék power led bekapcsolva marad</u></summary>
+<summary><u>My console gets stuck on a black screen with blue power light staying on</u></summary>
 
 Az alábbi lépések tetszőleges sorrendben hajthatók végre, azonban a lista a legrövidebbtől a legtöbb időt igénylőig van összeállítva.
 
-1. Kapcsold ki a készülékedet, vedd ki majd tedd vissz az SD kártyát, majd kapcsold be újra az eszközöd.
-1. Kapcsold ki a készülékedet, vedd ki a játék cartridge-t ha van bennem, majd kapcsold be az eszközöd és vár tíz percet. Ha az eszközöd bebootol tíz percen belül, a probléma elhárult és nem fog valószínűleg újra előfordulni
-1. + Nevezd át a `Nintendo 3DS` mappát az SD kártyádon `Nintendo 3DS_BACKUP` névre és próbálj meg bootolni. Ha az eszközöd sikeresen bootol, problémák vannak a `Nintendo 3DS` könyvtáraddal. Próbáld meg kitakarítani a HOME menu extdata-t:
+1. Power off your console, remove the SD card, re-insert it, then power on your console.
+1. Power off your console, eject the game cartridge if inserted, power on your console, then wait up to ten minutes. If your console boots within ten minutes, the issue has been fixed and is unlikely to reoccur
+1. + Nevezd át a `Nintendo 3DS` mappát az SD kártyádon `Nintendo 3DS_BACKUP` névre és próbálj meg bootolni. If your console successfully boots, there is some issue within your `Nintendo 3DS` folder. Próbáld meg kitakarítani a HOME menu extdata-t:
 	+ Navigálj a `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` mappába
   + Töröld a 3DS régiódhoz tartozó mappát:
 		+ **EUR régió**: `00000098`
@@ -585,10 +585,10 @@ Az alábbi lépések tetszőleges sorrendben hajthatók végre, azonban a lista 
 		+ **KOR régió**: `000000A9`
 		+ **TWN régió**: `000000B1`
 1. Próbálj meg recovery mode-ba bootolni, majd onnét frissíteni a rendszeredet:
-	+ Kapcsold ki a készüléked
+	+ Power off your console
 	+ Tartsd nyomva a (Bal Váll) + (Jobb Váll) + (D-Pad Fel) + (A) gombokat
-	+ Kapcsold be a készüléked
-	+ Ha sikeres voltál, az eszközöd egy "update your system" képernyőre bootol
+	+ Power on your console
+	+ If you were successful, the console will boot to an "update your system" screen
 1. Kövesd a [CTRTransfer](ctrtransfer) útmutatót
 1. További támogatásért kérj segítséget a [Nintendo Homebrew-tól a Discord-on](https://discord.gg/MWxPgEp)
 {% endcapture %}
@@ -613,9 +613,9 @@ Számos oka lehet, hogy miért történik így. Bármelyik esetben, ez a hiba á
 <summary><u>"An error has occurred. Hold down the POWER button to turn off the power..."</u></summary>
 
 Az ARM11 kivételkezelők tiltva, vagy az egyedi firmware nincs telepítve. Próbáld meg engedélyezni az ARM11 kivétel kezelőket:
-  + Kapcsold ki a készüléked
+  + Power off your console
   + Tartsd nyomva a (Select) gombot
-  + Kapcsold be az eszközöd, miközben nyomva tartod a (Select) gombot
+  + Power on your console, while still holding (Select)
   + Ha a "Disable ARM11 exception handlers" jelölőnégyzet bejelölt, vedd ki a jelölést
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -624,11 +624,11 @@ Az ARM11 kivételkezelők tiltva, vagy az egyedi firmware nincs telepítve. Pró
 <summary><u>A HOME Menüből hiányoznak telepített alkalmazások</u></summary>
 
 Ez különböző okokból is előfordulhat, de leginkább azért, mert az SD kártyád nem került beolvasásra a rendszer által.
-Ellenőrizheted, hogy az SD kártyád olvasásra kerül-e a SELECT gomb nyomva tartásával bootoláskor, és az alsó képernyőn megjelenő sárga szöveg ellenőrzésével; ha azt mondja, hogy "Booted from CTRNAND via B9S", akkor az eszközöd a belős memóriáról bootolt, nem az SD kártyáról.
+You can check if your SD is being read by holding SELECT on boot and checking the yellow text on the bottom screen; if it says "Booted from CTRNAND via B9S", then your console is booting from the internal memory and not from the SD card.
 Ha ez a helyzet, próbáld meg a lépéseket alább, ami a legkönnyebbtől a legnehezebbig került felsorolásra:
-1. Kapcsold ki a készülékedet, vedd ki majd tedd vissza az SD kártyád, majd kapcsold be újra az eszközöd
-1. Kapcsold ki az eszközöd, távolítsd el az SD kártyád, majd csatlakoztasd a PC-dhez. Töltsd le a legutolsó kiadását az [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)-nek és csomagold ki a `Luma3DS.zip` fájlból a `boot.firm` fájlt, majd rakd az SD kártyád gyökerébe (felülírva bármilyen létező fájlt)
-1. Kapcsold ki az eszközöde, távolítsd el az SD kártyát, csatlakoztasd a PC-dhez és formázd újra az SD kártyád az operációs rendszerednek megfelelően: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)) *(ez törölni fogja az SD kártya adatait)*
+1. Power off your console, remove the SD card, re-insert it, then power on your console
+1. Power off your console, remove the SD card, insert it on your PC, download the latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), extract `boot.firm` from the `Luma3DS.zip` and place it on the root of your SD card (replacing any existing file)
+1. Power off your console, remove the SD card, insert it on your PC and reformat your SD card according to your computer's operating system: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)) *(this will wipe your SD card data)*
 1. Teszteld az SD kártyádat hibákra az operációs rendszerednek megfelelő útmutató szerint haladva: [Windows](h2testw-(windows)), [Linux](f3-(linux)), [macOS](f3xswift-(mac)). Ha az SD kártyád hibásnak jelölt, cserélned kell az SD kártyádat
 1. Az SD kártya foglalatod is lehet hibás. Csatlakozz a[Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) további segítségért
 {% endcapture %}
@@ -637,8 +637,8 @@ Ha ez a helyzet, próbáld meg a lépéseket alább, ami a legkönnyebbtől a le
 {% capture compat %}
 <summary><u>Kék "BOOTROM ERROR" képernyő</u></summary>
 
-A készüléked valószínüleg hard-brickelve lett. Szükséged van egy ntrboot flashcart vásárlására, hogy újra telepítsd a boot9strap-et, hogy megpróbálhasd megjavítani az eszközödet. Ez hardver hibát is jelezhet, ami nem javítható. Bármelyik esetben csatlakozz a [Nintendo Homebrew-hoz a Discord-on](https://discord.gg/MWxPgEp) segítségért.
-  + Az is lehetséges még, hogy valaki beállított egy bootoláskori kezdő képernyőt, ami úgy néz ki mint egy brick. Próbáld meg az eszközödet bekapcsolva hagyni, várva a kék képernyőre, 5 percig.
+Your console is likely hard-bricked. You will need to buy an ntrboot flashcart to reinstall boot9strap in order to attempt to fix your console. Ez hardver hibát is jelezhet, ami nem javítható. Bármelyik esetben csatlakozz a [Nintendo Homebrew-hoz a Discord-on](https://discord.gg/MWxPgEp) segítségért.
+  + Az is lehetséges még, hogy valaki beállított egy bootoláskori kezdő képernyőt, ami úgy néz ki mint egy brick. Try leaving your console powered on, waiting on the blue screen, for five minutes.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -649,37 +649,37 @@ Készítsd egy képet a hibáról és csatlakozz a [Nintendo Homebrew-hoz a Disc
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-## Szoftver problémák egyedi firmware-rel rendelkező eszközökön
+## Software issues on consoles with custom firmware
 
 {% capture compat %}
 <summary><u>DSi / DS funkcionalitás hibás vagy felcserélt a Flipnote Studio-val</u></summary>
 
 1. Töltsd le a [TWLFix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest) legutolsó kiadását (a `.3dsx` fájlt)
-1. Kapcsold ki a készüléked
+1. Kapcsold ki a konzolod
 1. Hozz létre egy mappát `3ds` néven az SD kártyád gyökerében, ha még nem létezik ilyen
 1. Másold az `TWLFix-CFW.3dsx` fájlt az SD kártyád `/3ds/` mappájába
-1. Tedd vissza az SD kártyád a készülékedbe
+1. Tedd vissza az SD kártyád a konzoldba
 1. Nyisd meg a Homebrew Lancher-t
 1. Indítsd el a TWLFix-CFW-t a homebrew listából
 1. Nyomj (A)-t a törött TWL címek eltávolításához
-1. Nyomj (Start) gombot az eszköz újraindításához
+1. Press (Start) to reboot the console
 1. Frissítsd az eszközödet következőképp. Lépj be a System Settings-be, majd az "Other settings"-be, ahol addig lépkedj jobbra, amíg a végére nem érsz. Itt válaszd a "System Update" opciót
   + A frissítés észreveszi, hogy lényeges TWL címek kerültek eltávolításra és le fogja tölteni és újratelepíteni azokat
-1. Ha a frissítés kész, érintsd meg az "OK"-ot az eszköz újraindításához
+1. Once the update is complete, tap "OK" to reboot the console
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
 <summary><u>GBA Virtual Console és/vagy Safe Mode funkcionalitás hibás</u></summary>
 
-Az eszközöd Luma3DS 6.6 vagy régebbi verziót futtat, valószínűleg arm9loaderhax-szal. Kövesd az [A9LH-ről B9S-re](a9lh-to-b9s) lépéseit az eszközöd frissítéséhez modern egyedi firmware környezetre.
+Your console is running Luma3DS 6.6 or older, likely via arm9loaderhax. You should follow [A9LH to B9S](a9lh-to-b9s) to update your console to a modern custom firmware environment.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
 <summary><u>Bővített memória módú játékok (Pokemon Sun/Moon, Smash, etc.) nem működnek</u></summary>
 
-Ez egy CTRTransfer vagy régió csere után fordulhat elő Old 3DS / 2DS eszközökön. Rendszer formáznod kell az eszközödet javításhoz.
+Ez egy CTRTransfer vagy régió csere után fordulhat elő Old 3DS / 2DS eszközökön. You will need to system format your console to fix this issue.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -698,7 +698,7 @@ Ha nem sikerült megtalálni a hibádat, vagy a lépések nem működnek, csatla
 {% capture compat %}
 <summary><u>A HOME Menu extdata takarítása</u></summary>
 
-1. Kapcsold ki a készüléked
+1. Kapcsold ki a konzolod
 1. Helyezd az SD kártyád a számítógépbe
 1. Navigálj a `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` könyvtárba az SD kártyádon
 1. Töröld a 3DS régiódhoz tartozó mappát:
@@ -708,21 +708,21 @@ Ha nem sikerült megtalálni a hibádat, vagy a lépések nem működnek, csatla
   + **CHN régió**: `000000A1`
   + **KOR régió**: `000000A9`
   + **TWN régió**: `000000B1`
-1. Tedd vissza az SD kártyád a készülékedbe
+1. Tedd vissza az SD kártyád a konzoldba
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
 <summary><u>A HOME Menu téma adat takarítása</u></summary>
 
-1. Kapcsold ki a készüléked
+1. Kapcsold ki a konzolod
 1. Helyezd az SD kártyád a számítógépbe
 1. Navigálj a `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` könyvtárba az SD kártyádon
 1. Töröld a 3DS régiódhoz tartozó mappát:
   + **EUR régió**: `000002ce`
   + **JPN régió**: `000002cc`
   + **USA régió**: `000002cd`
-1. Tedd vissza az SD kártyád a készülékedbe
+1. Tedd vissza az SD kártyád a konzoldba
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -730,10 +730,10 @@ Ha nem sikerült megtalálni a hibádat, vagy a lépések nem működnek, csatla
 <summary><u>A szülői felügyelet kikapcsolása</u></summary>
 
 Letilthatod a szülői felügyeletet (Parental Controls) a System Settings -> Parental Controls-hoz navigálással és a PIN megadásával, majd a "Clear Settings" megnyomásával. Ezt követően a "Delete"-tel törölheted azt.
-Azonban, ha nem tudod a PIN-t így nem tudsz hozzáférni az eszköz beállításokhoz, akkor le kell tiltanod. Ahhoz hogy megtehesd ezt, szükséges megszerezned az eszközöd mester kulcsát (mkey):
+However, if you do not know the PIN and therefore cannot access the console's settings, you will need to disable it. In order to do this, you need to obtain your console's master key (mkey):
 1. Menj [erre a weboldalra](https://mkey.eiphax.tech/)
 1. Töltsd ki a következő dobozokat az információval:
-+ Device Type: Válaszd a "3DS"-t (ugyanez vonatkozik, ha 2DS, New 3DS (XL/LL) vagy New 2DS (XL/LL) típusod van)
++ Console Type: Select "3DS" (the same applies if you are using a 2DS, New 3DS (XL/LL) or New 2DS (XL/LL))
 + System Date: A nap és a hónap a konzolod óráján beállított
 + Inquiry Number: Beszerezhető a "Forgot PIN" majd az "I Forgot" gombbal a Parental Controls képernyőn
 1. Ha megszerezted az mkey-edet, nyomj OK gombot azon a képernyőn, ahol megkaptad az Inquiry Number számod, és add meg a mester kulcsot
