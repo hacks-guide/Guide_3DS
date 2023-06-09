@@ -6,7 +6,7 @@ title: "CFW verwijderen"
 
 ### Verplicht te lezen
 
-Dit zal CFW volledig verwijderen van je apparaat, inclusief boot9strap en Luma3DS, om het apparaat terug te zetten naar stock.
+This will completely remove CFW from your console, including boot9strap and Luma3DS, for the purpose of restoring the console to stock.
 
 Alle ongetekende (onwettige) spellen zullen onbruikbaar worden en worden verwijderd tijdens dit proces. Use a [save manager](https://github.com/FlagBrew/Checkpoint/releases/latest) to back up any saves that you care about.
 
@@ -34,7 +34,7 @@ then uninstalling CFW <u><strong>WILL BRICK YOUR CONSOLE</strong></u>. If this a
 {% endcapture %}
 <div class="notice--danger">{{ notice-6 | markdownify }}</div>
 
-Deze instructies werken alleen op apparaten met een Luma3DS versie van 8.0 of hoger. Als je een oudere versie van Luma heeft, moet je de setup upgraden voordat je deze instructies kunt volgen. Volg [deze pagina](checking-for-cfw) om je upgrade instructies te vinden.
+These instructions will only work on consoles with a Luma3DS version of 8.0 or higher. Als je een oudere versie van Luma heeft, moet je de setup upgraden voordat je deze instructies kunt volgen. Volg [deze pagina](checking-for-cfw) om je upgrade instructies te vinden.
 {: .notice--warning}
 
 ### Wat je nodig hebt
@@ -47,41 +47,41 @@ Deze instructies werken alleen op apparaten met een Luma3DS versie van 8.0 of ho
 ### Instructies
 
 #### Deel I - Voorbereiding
-1. Schakel je 3DS uit
+1. Power off your console
 1. Plaats je SD kaart in je computer
 1. Kopieer `boot.firm` en `boot.3dsx` van de Luma3DS `.zip` naar de hoofdmap van je SD-kaart
 1. Kopieer `GodMode9.firm` van de GodMode9 `.zip` naar de `/luma/payloads/` map op je SD-kaart
 1. Kopieer de `gm9` map uit de GodMode9 `.zip` naar de hoofdmap van de SD-kaart
 1. Kopieer `DSiWareUninstaller.3dsx` naar de `/3ds/` map op je SD-kaart
 1. Kopieer `safety_test.gm9` naar de `/gm9/scripts/` map op je SD-kaart
-1. Stop je SD-kaart terug in je 3DS
+1. Reinsert your SD card into your console
 
 #### Deel II - DS Mode tests
 Het doel van dit deel is om te controleren of ingebouwde DS mode applicaties zullen blijven werken zodra CFW is verwijderd. Als je dit gedeelte overslaat, zou het kunnen dat de DS mode of de bijbehorende functies niet toegankelijk zijn totdat CFW opnieuw wordt geïnstalleerd.
 
 ##### DS Connection Settings test
-1. Zet je 3DS aan
-1. Open System Settings op je apparaat
+1. Power on your console
+1. Launch System Settings on your console
 1. Navigeer naar `Internet Settings` -> `Nintendo DS Connection Settings`, selecteer dan "OK
 1. Je zou moeten opstarten in het Nintendo DS Connection Setup menu
   + Als je console de Japanse versie van Flipnote Studio toont, een zwart scherm of een error bericht dan is de test mislukt
-1. Schakel je 3DS uit
+1. Power off your console
 
 ##### DS Download Play test
-1. Zet je 3DS aan
+1. Power on your console
 1. Start de Download Play applicatie (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
 1. Selecteer "Nintendo DS"
-1. Als je 3DS laadt in een "Download software via het DS Download Play" menu, is de test geslaagd
+1. If your console loads into a "Download software via DS Download Play" menu, the test was successful
   + Als je console de Japanse versie van Flipnote Studio toont, een zwart scherm of een error bericht dan is de test mislukt
-1. Schakel je 3DS uit
+1. Power off your console
 
-Als een van deze tests is mislukt, is de DS mode, DS Download Play, en/of DS Connection Settings mogelijks niet toegankelijk zodra CFW is verwijderd! You should [fix DS mode](troubleshooting#software-issues-on-devices-with-custom-firmware) before continuing.
+Als een van deze tests is mislukt, is de DS mode, DS Download Play, en/of DS Connection Settings mogelijks niet toegankelijk zodra CFW is verwijderd! You should [fix DS mode](troubleshooting#software-issues-on-consoles-with-custom-firmware) before continuing.
 {: .notice--warning}
 
 #### Deel III - Veiligheidstest
-Het doel van dit deel is om te controleren of de console opstart en dat kritieke systeem functies, zoals System Settings en het toetsenbord, zullen werken zodra CFW is verwijderd. **Als je dit gedeelte overslaat, kun je jouw apparaat BRICKEN!**
+Het doel van dit deel is om te controleren of de console opstart en dat kritieke systeem functies, zoals System Settings en het toetsenbord, zullen werken zodra CFW is verwijderd. **If you skip this section, you may BRICK your console!**
 
-1. Terwijl je (Start) ingedrukt houdt, zet je jouw apparaat aan. Dit zal GodMode9 starten
+1. Press and hold (Start), and while holding (Start), power on your console. Dit zal GodMode9 starten
 1. Als je gevraagd wordt om essentiële bestanden te back-uppen, druk dan op (A) om dit te doen, druk dan op (A) om verder te gaan zodra het voltooid is
 1. Als er wordt gevraagd om de RTC datum en tijd goed te zetten, duk op (A) om dat te doen, stel dan de datum en tijd in en druk op (A) om door te gaan
   + Houd er rekening mee dat je de RTC datum en tijd weer moet aanpassen, dit kun je doen in de System Settings na het volgen van deze handleiding
@@ -90,22 +90,22 @@ Het doel van dit deel is om te controleren of de console opstart en dat kritieke
 1. Selecteer "safety_test"
 1. Lees de tekst op het scherm en druk op (A) om verder te gaan
 1. Je zou naar het normale 3DS HOME Menu moeten opstarten (elk aangepast thema is niet relevant). Als dat zo is, ga dan verder met deze instructies
-  + Als je niet opstart in het normale 3DS HOME Menu (zwart scherm, foutscherm, enz.), dan zal CFW verwijderen je **APPARAAT BRICKEN!**
-1. Open System Settings op je apparaat
+  + If you do not boot into the regular 3DS HOME Menu (black screen, error screen, etc.), uninstalling CFW **WILL BRICK YOUR CONSOLE!**
+1. Launch System Settings on your console
 	+ Als de console op dit moment crasht is de test mislukt
 1. Selecteer "Other Settings"
 1. Selecteer "Profile"
 1. Selecteer "User Name"
 1. Als je een nieuwe gebruikersnaam kunt invoeren, dan was de test succesvol
 	+ Als het toetsenbord niet verschijnt, het scherm bevriest, of de console crasht, is de test mislukt
-1. Schakel je 3DS uit
+1. Power off your console
 
 Als je NIET opstart in het normale 3DS HOME Menu, of System Setting / je toetsenbord is niet toegankelijk, **ga NIET verder met deze instructies**! Je zou de [Nintendo Homebrew Discord](https://discord.gg/MWxPgEp) moeten joinen en in het Engels vragen of iemand je kan helpen.
 {: .notice--danger}
 
 #### Deel IV - NAND back-up
 
-1. Terwijl je (Start) ingedrukt houdt, zet je jouw apparaat aan. Dit zal GodMode9 starten
+1. Press and hold (Start), and while holding (Start), power on your console. Dit zal GodMode9 starten
 1. Druk op de (Home) knop om het actiemenu te openen
 1. Selecteer "Scripts..."
 1. Selecteer "GM9Megascript"
@@ -117,14 +117,14 @@ Als je NIET opstart in het normale 3DS HOME Menu, of System Setting / je toetsen
 1. Druk op (B) om terug te gaan naar het hoofdmenu
 1. Selecteer "Exit"
 1. Druk op de (Home) knop om het actiemenu te openen
-1. Selecteer "Poweroff system" om je 3DS uit te zetten
+1. Select “Poweroff system” to power off your console
 
 #### Deel V - Verwijderen van onwettige inhoud
 Dit deel zal onwettige inhoud verwijderen, zoals homebrew en gedumpte cartridges. Als je gegevens hebt waar je om geeft, zoals gamesaves, maak dan een backup met een save manager voordat je doorgaat!
 {: .notice--warning}
 
-1. Zet je 3DS aan
-1. Open System Settings op je apparaat
+1. Power on your console
+1. Launch System Settings on your console
 1. Navigeer naar Data Management > Nintendo 3DS > Software
 1. Verwijder in deze lijst van software elke niet-Nintendo content die je hebt geïnstalleerd tijdens het gebruik van CFW
   + Dit houdt ook de vaakst voorkomende software in zoals FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint, en anderen, samen met elk spel en andere titel die je niet geïnstalleerd hebt via de eShop
@@ -143,16 +143,16 @@ Dit deel zal onwettige inhoud verwijderen, zoals homebrew en gedumpte cartridges
 1. Druk op (B) om het Rosalina menu af te sluiten
 1. Druk op (Home), en sluit dan Download Play af
 1. Open de Download Play app
-1. Nu zou je console de Homebrew Launcher moeten openen
+1. Your console should load the Homebrew Launcher
 1. Start DSiWare Uninstaller uit de lijst met homebrew
 1. Volg de aanwijzingen en laat het programma deïnstalleren
-1. Zodra het proces is geslaagd, sluit je de Homebrew Launcher uit en schakel je jouw apparaat uit
+1. Once the process has succeeded, exit the Homebrew Launcher and power off your console
 
 #### Deel VI - Systeem formatteren
 Deze sectie zorgt ervoor dat alle onwettige tickets worden verwijderd, waardoor de eShop normaal kan werken. Dit zal de volledige inhoud van je 3DS verwijderen en je uitloggen uit je NNID. Hou in gedachten dat de encryptiesleutel van je console verandert worden, dit betekent dat alle oude gegevens als ontoegankelijk zullen worden weergegeven, zelfs als je een back-up van je SD-kaart inhoud hebt.
 
-1. Zet je 3DS aan
-1. Open System Settings op je apparaat
+1. Power on your console
+1. Launch System Settings on your console
 1. Navigeer naar Other Settings -> Next Page (tot de laatste pagina) -> Format System Memory
 1. Volg de aanwijzingen om je 3DS te formatteren
 
@@ -161,7 +161,7 @@ Deze sectie zorgt ervoor dat alle onwettige tickets worden verwijderd, waardoor 
 Dit is je laatste kans om te controleren of alle bovenstaande veiligheidsstappen zijn gevolgd! Zorg ervoor dat je alle delen van deze pagina hebt gevolgd, **vooral** `Deel III - Safety Test`, voordat je doorgaat.
 {: .notice--warning}
 
-1. Terwijl je (Start) ingedrukt houdt, zet je jouw apparaat aan. Dit zal GodMode9 starten
+1. Press and hold (Start), and while holding (Start), power on your console. Dit zal GodMode9 starten
   + If you instead see the Luma3DS chainloader, use the D-Pad and the (A) button to select GodMode9
 1. Druk op de (Home) knop om het actiemenu te openen
 1. Selecteer "Scripts..."
@@ -174,11 +174,11 @@ Dit is je laatste kans om te controleren of alle bovenstaande veiligheidsstappen
 1. Druk op (B) om terug te gaan naar het hoofdmenu
 1. Selecteer "Exit"
 1. Druk op (A) om schrijfrechten te vergrendelen als dit gevraagd wordt
-1. Druk op (Start) om je 3DS opnieuw op te starten
+1. Press (Start) to reboot your console
 
 ___
 
-Alle CFW is nu van je apparaat verwijderd.
+All custom firmware has been removed from your console.
 {: .notice--success}
 
 Je kunt nu alle extra bestanden en mappen verwijderen van de hoofdmap van je SD-kaart die *niet* de `Nintendo 3DS`, `DCIM` of `private` mappen zijn.
