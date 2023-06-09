@@ -32,7 +32,7 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 * 最新版的 [hardmod-b9s-installer](https://github.com/ihaveamac/hardmod-b9s-installer/releases/latest)
   + Windows 使用者可使用已編譯的 `.exe` 檔，而 Mac 及 Linux 使用者得先安裝 [Python 3](https://www.python.org/downloads/) 才能執行 `.py` 檔
 * The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file that isn't source code)
-* 對應您主機型號及版本的 `.firm` 檔案：
+* The `.firm` corresponding to your console and version:
 
 | 系統版本 | 內核版本 | 舊型 3DS 或 舊型 2DS | New 3DS 或 New 2DS |
 |-|-|:-:|:-:|
@@ -74,28 +74,28 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 
 In this section, you will download the necessary files for the hardmod and dump the NAND image in preparation to install custom firmware.
 
-1. 關閉您的主機
+1. Power off your console
 1. 將 SD 卡插入至電腦中
 1. 解壓 Luma3DS `.zip` 內的 `boot.firm` 及 `boot.3dsx` 到 SD 卡的根目錄底下
 1. 解壓 hardmod-b9s-installer `.zip` 中的 hardmod-b9s-installer 資料夾至電腦中
 1. 複製您所下載的 `.firm` 檔案至電腦的 hardmod-b9s-installer 資料夾中
 1. 在 hardmod-b9s-installer 資料夾中，將您所下載的 `.firm` 檔案重新命名為 `current.firm`
 1. 解壓 boot9strap `.zip` 的 `boot9strap.firm` 及 `boot9strap.firm.sha` 檔案至電腦的 hardmod-b9s-installer 資料夾中
-1. 將 SD 卡插回主機中
+1. Reinsert your SD card into your console
 1. 透過您的硬改建立一個新的 NAND 備份
 1. 將您的 NAND 備份移動至您電腦中的 hardmod-b9s-installer 資料夾中，並將其檔案重新命名為 `NAND.bin`
 
 #### 第二節 — 安裝 boot9strap
 
-In this section, you will install custom firmware to the dumped NAND image, and then install this NAND image back onto the device to install custom firmware on it.
+In this section, you will install custom firmware to the dumped NAND image, and then install this NAND image back onto the console to install custom firmware on it.
 
 1. 啟動 hardmod-b9s-installer
   + Windows 使用者：請執行 `install-b9s.exe` 檔案
   + Mac and Linux 使用者：請執行 `install-b9s.py` 檔案
-1. 透過硬改刷入剛生成的 `NAND-patched.bin` 檔案至您的主機
-1. 關閉您的主機
+1. Flash your outputted `NAND-patched.bin` to your console with your hardmod
+1. Power off your console
 1. 移除您的硬改
-1. Press and hold (Select), and while holding (Select), power on your device
+1. Press and hold (Select), and while holding (Select), power on your console
 {% include_relative include/configure-luma3ds.txt %}
 
 {% include_relative include/luma3ds-installed-note.txt %}
