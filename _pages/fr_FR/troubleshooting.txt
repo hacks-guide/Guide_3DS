@@ -23,8 +23,8 @@ Pages du guide :
 * [Finalisation de l'installation](#finalizing-setup)
 
 Problèmes après l'installation :
-* [Problèmes de démarrage](#boot-issues-on-devices-with-custom-firmware)
-* [Problèmes de logiciel](#software-issues-on-devices-with-custom-firmware)
+* [Boot issues](#boot-issues-on-consoles-with-custom-firmware)
+* [Software issues](#software-issues-on-consoles-with-custom-firmware)
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -70,13 +70,13 @@ Rejoignez [Nintendo Homebrew sur Discord](https://discord.gg/MWxPgEp) pour obten
 ![]({{ "/images/screenshots/multiple-id0.png" | absolute_url }})
 {: .notice--info}
 
-Cela se produit lorsque vous utilisez votre carte SD dans plusieurs consoles 3DS et vise à empêcher la fusion par inadvertance de données qui ne seraient pas valides sur d'autres consoles. Pour déterminer quel nom de dossier long correspond à votre 3DS, suivez ces instructions :
+This occurs when you use your SD card in multiple 3DS consoles and is intended to prevent inadvertently merging data that would not be valid on other consoles. Pour déterminer quel nom de dossier long correspond à votre 3DS, suivez ces instructions :
 
 1. Renommez le dossier `Nintendo 3DS` en `BACKUP_Nintendo 3DS`
-1. Réinsérez votre carte SD dans votre console et allumez-la
-1. Patientez le temps que votre console génère les données sur la carte SD
+1. Reinsert your SD card into your console and power on your console
+1. Wait for the console to generate the SD card data
 	+ Vos applications auront disparu. Ceci est normal et sera résolu plus tard
-1. Éteignez votre console et réinsérez votre carte SD dans votre ordinateur
+1. Power off your console and reinsert your SD card into your computer
 1. Naviguez vers le dossier `Nintendo 3DS` de votre carte SD
 1. Copiez le nom du dossier qui fait 32 caractères de long que vous voyez
 	+ Ceci est votre véritable ID0 que vous utiliserez dans [Section II de Seedminer](seedminer#section-ii---seedminer)
@@ -129,7 +129,7 @@ Assurez-vous que `F00D43D5.bin` est le seul fichier dans `Nintendo 3DS` -> `<ID0
 
 Assurez-vous également que `bb3.bin` est à la racine de la carte SD. S'il est absent, téléchargez la dernière version de [Bannerbomb3](https://github.com/lifehackerhansol/Bannerbomb3/releases/download/v3. -lhs1/bb3.bin) (téléchargement direct) et copiez le fichier `bb3.bin` vers la racine de votre carte SD.
 
-Si aucune de ces solutions ne résout ce problème, alors il est possible qu'un custom firmware précédemment installé sur cette console ait été désinstallé de telle sorte que cela rends impossible l'utilisation de la méthode actuelle. Si c'est le cas, rejoignez [Nintendo Homebrew sur Discord](https://discord.gg/MWxPgEp) et demandez de l'aide, en anglais.
+If neither of these solutions fixes this problem, then custom firmware may have been uninstalled on this console in a way that makes this method impossible to perform. Si c'est le cas, rejoignez [Nintendo Homebrew sur Discord](https://discord.gg/MWxPgEp) et demandez de l'aide, en anglais.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -274,7 +274,7 @@ If your files are in the correct locations, re-create the save using the [PicHax
 {% capture compat %}
 <summary><u>"An exception occurred" or Errdisp when opening Picross</u></summary>
 
-Your device already has custom firmware. Vous devriez [vérifier la présence d'un CFW](checking-for-cfw).
+Your console already has custom firmware. Vous devriez [vérifier la présence d'un CFW](checking-for-cfw).
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -297,9 +297,9 @@ Your modified `00000001.sav` file may be misplaced, or you may have used the wro
 {% capture compat %}
 <summary><u>Écran rouge/violet/rose et blanc après avoir exécuté Soundhax</u></summary>
 
-Si votre console est sur la version 9.4.0, 9.5.0 ou 9.6.0 du logiciel système, vous pouvez rencontrer un bug avec une ancienne version de universal-otherapp. Téléchargez la dernière version [ici](https://github.com/TuxSH/universal-otherapp/releases/latest).
+If your console is on system version 9.4.0, 9.5.0, or 9.6.0, you may be encountering a bug with an old version of universal-otherapp. Download the latest version from [here](https://github.com/TuxSH/universal-otherapp/releases/latest).
 
-Si votre console n'est pas sur ces versions du logiciel système, cela indique probablement que vous disposez déjà d'un custom firmware. Vous devriez [vérifier la présence d'un CFW](checking-for-cfw).
+If your console is not on those firmwares, it likely indicates that you already have custom firmware. Vous devriez [vérifier la présence d'un CFW](checking-for-cfw).
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -313,7 +313,7 @@ Il y a un problème avec votre fichier `otherapp.bin` (il est absent, mal placé
 {% capture compat %}
 <summary><u>"Lecture impossible."</u></summary>
 
-Le fichier Soundhax que vous avez ne correspond pas à votre console ni à sa région ou votre console est incompatible avec Soundhax. Dans ce dernier cas, vous devez mettre à jour votre console vers la dernière version du logiciel système et suivre [Seedminer](seedminer).
+You have the wrong Soundhax file for your console and region, or your console is incompatible with Soundhax. In the latter case, you should update your console to the latest version and follow [Seedminer](seedminer).
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -379,7 +379,7 @@ Le proxy SSLoth a été mal configuré. Refaites la section SSLoth de la page.
 
 Suivez ces étapes dans l'ordre :
 
-1. Lancez les Paramètres de la console
+1. Launch System Settings on your console
 1. Naviguez vers `Paramètres Internet` -> `Paramètres de connexion`
 1. Cliquez sur votre emplacement de connexion réseau et allez dans `Modifier` -> `Page suivante (flèche à droite)` -> `Serveur proxy"
 1. Réglez "Serveur proxy" sur "Non"
@@ -398,7 +398,7 @@ Suivez ces étapes dans l'ordre :
 {% capture compat %}
 <summary><u>"Vous devez mettre la console à jour pour utiliser le Navigateur Internet. Accédez aux paramètres de la console, puis sélectionnez Autres paramètres ⇒ Mise à jour."</u></summary>
 
-Tout d'abord, assurez-vous d'avoir entré le bon proxy pour la connexion que vous utilisez. Sinon, revenez à la [Section II](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth). Si le proxy est correct, alors votre console a été mise à jour à l'aide d'une carte de jeu, cela signifie qu'un autre exploit devra être utilisé.
+Tout d'abord, assurez-vous d'avoir entré le bon proxy pour la connexion que vous utilisez. Sinon, revenez à la [Section II](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth). If the proxy is correct, then your console has been cart-updated, which means an alternate exploit will need to be used.
 
 <u>Méthode 1</u><br>
 Si les deux nombres avant la région dans la chaîne de version du système sont égaux ou inférieurs à 36 (par exemple, Ver. 11.14.0-**36**U), vous pouvez suivre [Soundhax](installing-boot9strap-(soundhax)). Quand vous êtes invité à sélectionner un firmware pour générer le fichier son, sélectionnez :
@@ -412,14 +412,14 @@ Si les deux nombres avant la région dans la chaîne de version du système sont
 Si vous avez une Old 3DS / Old 3DS XL / 2DS, vous pouvez essayer de faire une mise à jour de la console depuis le mode sans échec, ce qui déclenchera un exploit alternatif :
 
 1. Assurez-vous que le proxy que vous avez utilisé pour SSLoth est toujours activement appliqué à votre connexion internet
-1. Lorsque votre console est éteinte, maintenez les boutons suivants : (L) + (R) + (Haut sur la croix directionnelle) + (A), et tout en maintenant ces boutons enfoncés, allumez votre console
-  + Maintenez les boutons enfoncés jusqu'à ce que la console démarre en mode sans échec (menu "Mise à jour")
+1. With your console powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your console
+  + Keep holding the buttons until the console boots into Safe Mode (a "system update" menu)
 1. Appuyez sur "OK" pour accepter la mise à jour
 1. Si tout a fonctionné correctement, la mise à jour échouera et la 3DS lancera SafeB9SInstaller. Si c'est le cas, continuez depuis la [Section IV](installing-boot9strap-(ssloth-browser)#section-iv---installing-boot9strap).
 
 ---
 
-Si ces méthodes n'ont pas fonctionné (ou ne s'appliquent pas à vous), mettez à jour votre console vers la dernière version du logiciel système et suivez [Seedminer](seedminer).
+If these methods didn't work (or do not apply to you), update your console to the latest version and follow [Seedminer](seedminer).
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -486,7 +486,7 @@ Cela indique que vous avez probablement déjà un custom firmware. Vous devriez 
 ## Finalisation de l'installation
 
 {% capture compat %}
-<summary><u>Une erreur est survenue. La mise à jour a échoué.</u></summary>
+<summary><u>Unable to update console</u></summary>
 
 Les étapes ci-dessous peuvent être tentées dans n'importe quel ordre, mais sont répertoriées de la plus facile à la plus difficile à exécuter.
 
@@ -544,17 +544,17 @@ Si vous avez assez d'espace sur votre carte SD, votre carte SD pourrait être co
 
 ---
 
-## Problèmes de démarrage sur les consoles avec un custom firmware
+## Boot issues on consoles with custom firmware
 
-Les étapes détaillées ici supposent généralement que votre console dispose d'un custom firmware moderne (boot9strap + Luma3DS 8.0 ou supérieur). Si votre console exécute une ancienne configuration homebrew (par exemple, quelque chose basé sur arm9loaderhax ou menuhax), vous devez mettre à jour votre configuration avant d'essayer ces instructions.
+The steps detailed here generally assume that your console has a modern custom firmware setup (boot9strap + Luma3DS 8.0 or greater). Si votre console exécute une ancienne configuration homebrew (par exemple, quelque chose basé sur arm9loaderhax ou menuhax), vous devez mettre à jour votre configuration avant d'essayer ces instructions.
 {: .notice--info}
 
 ### LEDs d'alimentation/de notification
 
 {% capture compat %}
-<summary><u>Ma console s'éteint lorsque j'essaie de l'allumer et/ou la LED de notification affiche une couleur au démarrage</u></summary>
+<summary><u>My console powers off when I try to turn it on, and/or the notification LED shows a color on boot</u></summary>
 
-Il y a un problème avec votre fichier `boot.firm`. Si vous utilisez [boot9strap 1.4](https://github.com/SciresM/boot9strap/releases/tag/1.4), votre LED de notification devrait clignoter d'une certaine couleur. Cette couleur est utilisée pour diagnostiquer des problèmes concernant votre fichier `boot.firm` sur la carte SD ou la mémoire interne. Sur des versions plus anciennes de boot9strap, la LED bleue s'éteindra presque immédiatement quand vous essaierez d'allumer votre console.
+Il y a un problème avec votre fichier `boot.firm`. Si vous utilisez [boot9strap 1.4](https://github.com/SciresM/boot9strap/releases/tag/1.4), votre LED de notification devrait clignoter d'une certaine couleur. Cette couleur est utilisée pour diagnostiquer des problèmes concernant votre fichier `boot.firm` sur la carte SD ou la mémoire interne. On older versions of boot9strap, the blue light will power off almost immediately when trying to turn on the console.
 
 Si la LED de notification clignote :
 
@@ -564,18 +564,18 @@ Si la LED de notification clignote :
 
 Vous pouvez obtenir un nouveau fichier `boot.firm` en téléchargeant la [dernière version de Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), extrayez l'archive et placez le fichier `boot.firm` à la racine de votre carte SD. Si votre fichier `boot.firm` est constamment détecté comme corrompu, vous devriez vérifier si votre carte SD est corrompue ([Windows](h2testw-(windows)), [Linux](f3-(linux)), ou [macOS](f3xswift-(mac))). Notez également que la 3DS a tendance à avoir des problèmes avec les fichiers extraits à l'aide de WinRAR.
 
-Si vous entendez un bruit "sec", éventuellement accompagné d'un rétroéclairage allumé pendant une fraction de seconde, il y a un problème matériel avec votre appareil (comme un câble de rétroéclairage déconnecté). Vous pourrez peut-être faire démarrer votre console en la tenant à certains angles.
+If you hear a "popping sound", potentially accompanied with the backlight turning on for a split second, there is a hardware issue with your console (such as a disconnected backlight cable). You may be able to get your console to boot by holding it at certain angles.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Ma console est coincée sur un écran noir avec la LED d'alimentation allumée en bleu fixe.</u></summary>
+<summary><u>My console gets stuck on a black screen with blue power light staying on</u></summary>
 
 Les étapes ci-dessous peuvent être tentées dans n'importe quel ordre, mais sont répertoriées de la moins longue à la plus longue.
 
-1. Éteignez votre console, retirez la carte SD, réinsérez-la, puis allumez votre console.
-1. Éteignez votre console, éjectez la carte de jeu si elle est insérée, allumez votre console, puis attendez jusqu'à dix minutes. Si votre console démarre dans les dix minutes, le problème a été résolu et il est peu probable qu'il se reproduise
-1. Renommez le dossier `Nintendo 3DS` sur votre carte SD en `Nintendo 3DS_BACKUP`, puis essayez de démarrer. Si votre console démarre avec succès, il y a un problème dans votre dossier `Nintendo 3DS`. Essayez d'effacer les données "extdata" du Menu HOME :
+1. Power off your console, remove the SD card, re-insert it, then power on your console.
+1. Power off your console, eject the game cartridge if inserted, power on your console, then wait up to ten minutes. If your console boots within ten minutes, the issue has been fixed and is unlikely to reoccur
+1. Renommez le dossier `Nintendo 3DS` sur votre carte SD en `Nintendo 3DS_BACKUP`, puis essayez de démarrer. If your console successfully boots, there is some issue within your `Nintendo 3DS` folder. Essayez d'effacer les données "extdata" du Menu HOME :
 	+ Naviguez vers `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
   + Supprimez le dossier correspondant à la région de votre 3DS :
 		+ **Région EUR** : `00000098`
@@ -585,10 +585,10 @@ Les étapes ci-dessous peuvent être tentées dans n'importe quel ordre, mais so
 		+ **Région KOR** : `000000A9`
 		+ **Région TWN** : `000000B1`
 1. Essayez de démarrer en mode de récupération et de mettre à jour votre console :
-	+ Éteignez votre console
+	+ Power off your console
 	+ Maintenez (L) + (R) + (Haut sur la croix directionnelle) + (A)
-	+ Allumez votre console
-	+ Si vous avez réussi, la console démarrera sur un écran de "Mise à jour"
+	+ Power on your console
+	+ If you were successful, the console will boot to an "update your system" screen
 1. Suivez le guide [CTRTransfer](ctrtransfer)
 1. Pour plus d'assistance, demandez de l'aide sur [Nintendo Homebrew sur Discord](https://discord.gg/MWxPgEp)
 {% endcapture %}
@@ -613,9 +613,9 @@ Plusieurs raisons peuvent expliquer pourquoi cela pourrait se produire. Dans tou
 <summary><u>"Une erreur est survenue. Maintenez le bouton POWER enfoncé pour éteindre la console..."</u></summary>
 
 Les gestionnaires d'exceptions ARM11 sont désactivés ou le custom firmware n'est pas installé. Essayez d'activer le gestionnaire d'exceptions ARM11 :
-  + Éteignez votre console
+  + Power off your console
   + Maintenez (Select) appuyé
-  + Allumez votre console, tout en maintenant (Select) enfoncé
+  + Power on your console, while still holding (Select)
   + Si la case "Disable ARM11 exception handlers" est cochée, décochez-la
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -624,11 +624,11 @@ Les gestionnaires d'exceptions ARM11 sont désactivés ou le custom firmware n'e
 <summary><u>Le Menu HOME ne contient pas les applications installées</u></summary>
 
 Cela peut être causé par diverses raisons, mais probablement parce que votre carte SD n'est pas lue par la console.
-Vous pouvez vérifier si votre SD est lue en maintenant SELECT au démarrage et en vérifiant le texte jaune sur l'écran du bas ; s'il dit « Booted from CTRNAND via B9S », alors votre console démarre à partir de la mémoire interne et non à partir de la carte SD.
+You can check if your SD is being read by holding SELECT on boot and checking the yellow text on the bottom screen; if it says "Booted from CTRNAND via B9S", then your console is booting from the internal memory and not from the SD card.
 Si c'est le cas, essayez les étapes ci-dessous, qui sont listées du plus simple au plus difficile :
-1. Éteignez votre console, retirez la carte SD, réinsérez-la, puis allumez votre console
-1. Éteignez votre console, retirez la carte SD, insérez-la dans votre PC, téléchargez la dernière version de [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), extrayez le fichier `boot.firm` de l'archive `Luma3DS.zip` et placez-le à la racine de votre carte SD (en remplaçant n'importe quel fichier existant)
-1. Éteignez votre console, retirez la carte SD, insérez-la dans votre PC et reformatez votre carte SD en suivant le guide correspondant au système d'exploitation de votre ordinateur : [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)) *(cela effacera les données de votre carte SD)*
+1. Power off your console, remove the SD card, re-insert it, then power on your console
+1. Power off your console, remove the SD card, insert it on your PC, download the latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), extract `boot.firm` from the `Luma3DS.zip` and place it on the root of your SD card (replacing any existing file)
+1. Power off your console, remove the SD card, insert it on your PC and reformat your SD card according to your computer's operating system: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)) *(this will wipe your SD card data)*
 1. Testez votre carte SD en suivant le guide correspondant au système d'exploitation de votre ordinateur : [Windows](h2testw-(windows)), [Linux](f3-(linux)), [macOS](f3xswift-(mac)). Si votre carte SD est marquée comme défectueuse, vous devrez remplacer votre carte SD
 1. Il est possible que votre port carte SD soit cassé. Rejoignez [Nintendo Homebrew sur Discord](https://discord.gg/MWxPgEp) pour obtenir une aide approfondie
 {% endcapture %}
@@ -637,8 +637,8 @@ Si c'est le cas, essayez les étapes ci-dessous, qui sont listées du plus simpl
 {% capture compat %}
 <summary><u>Écran bleu "BOOTROM ERROR"</u></summary>
 
-Votre appareil est probablement brickée matériellement. Vous devrez acheter un linker ntrboot pour réinstaller boot9strap afin de tenter de réparer votre console. Cela peut également indiquer un problème matériel qui ne peut pas être résolu. Dans tous les cas, rejoignez [Nintendo Homebrew sur Discord](https://discord.gg/MWxPgEp) pour obtenir de l'aide.
-  + Il est également possible que quelqu'un ait défini un écran de démarrage qui ressemble à un brick. Essayez de laisser votre console sous tension, en attendant sur l'écran bleu, pendant cinq minutes.
+Your console is likely hard-bricked. You will need to buy an ntrboot flashcart to reinstall boot9strap in order to attempt to fix your console. Cela peut également indiquer un problème matériel qui ne peut pas être résolu. Dans tous les cas, rejoignez [Nintendo Homebrew sur Discord](https://discord.gg/MWxPgEp) pour obtenir de l'aide.
+  + Il est également possible que quelqu'un ait défini un écran de démarrage qui ressemble à un brick. Try leaving your console powered on, waiting on the blue screen, for five minutes.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -649,7 +649,7 @@ Veuillez prendre une photo de l'erreur et rejoindre [Nintendo Homebrew sur Disco
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-## Problèmes de logiciel sur les consoles avec un custom firmware
+## Software issues on consoles with custom firmware
 
 {% capture compat %}
 <summary><u>La fonctionnalité DSi / DS est cassée ou a été remplacée par Flipnote Studio</u></summary>
@@ -658,28 +658,28 @@ Veuillez prendre une photo de l'erreur et rejoindre [Nintendo Homebrew sur Disco
 1. Éteignez votre console
 1. Créez un dossier nommé `3ds` à la racine de votre carte SD si celui ci n'existe pas
 1. Copiez `TWLFix-CFW.3dsx` dans le dossier `/3ds/` de votre carte SD
-1. Retirez la carte SD de votre ordinateur et réinsérez-la dans votre console
+1. Réinsérez votre carte SD dans votre console
 1. Ouvrez le Homebrew Launcher
 1. Lancez TWLFix-CFW que vous trouverez dans la liste des homebrews
 1. Appuyez sur (A) pour désinstaller les titres TWL corrompus
-1. Appuyez sur (Start) pour redémarrer la console
+1. Press (Start) to reboot the console
 1. Effectuez une Mise à jour du Système en vous rendant dans les Paramètres de la console, puis "Autres paramètres", puis tout à droite sur l'option "Mise à jour du Système"
   + Le processus de mise à jour verra que les titres TWL essentiels ont été désinstallés, et va les re-télécharger et les réinstaller
-1. Une fois la mise à jour terminée, appuyez sur "OK" pour redémarrer la console
+1. Once the update is complete, tap "OK" to reboot the console
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
 <summary><u>La fonctionnalité Console Virtuelle GBA et/ou mode sans échec est cassée</u></summary>
 
-Votre console exécute Luma3DS 6.6 ou une version antérieure, probablement via arm9loaderhax. Vous devez suivre [A9LH à B9S](a9lh-to-b9s) pour mettre à jour votre console vers un custom firmware moderne.
+Your console is running Luma3DS 6.6 or older, likely via arm9loaderhax. You should follow [A9LH to B9S](a9lh-to-b9s) to update your console to a modern custom firmware environment.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
 <summary><u>Les jeux en mode mémoire étendue (Pokémon Soleil/Lune, Smash, etc.) ne fonctionnent pas</u></summary>
 
-Cela peut se produire après un CTRTransfer ou un changement de région sur Old 3DS / 2DS. Vous devrez formater votre console pour résoudre ce problème.
+Cela peut se produire après un CTRTransfer ou un changement de région sur Old 3DS / 2DS. You will need to system format your console to fix this issue.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -708,7 +708,7 @@ Si vous n'avez pas pu trouver votre message erreur ou si les instructions n'ont 
   + **Région CHN** : `000000A1`
   + **Région KOR** : `000000A9`
   + **Région TWN** : `000000B1`
-1. Retirez la carte SD de votre ordinateur et réinsérez-la dans votre console
+1. Réinsérez votre carte SD dans votre console
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -722,7 +722,7 @@ Si vous n'avez pas pu trouver votre message erreur ou si les instructions n'ont 
   + **Région EUR** : `000002ce`
   + **Région JPN** : `000002cc`
   + **Région USA** : `000002cd`
-1. Retirez la carte SD de votre ordinateur et réinsérez-la dans votre console
+1. Réinsérez votre carte SD dans votre console
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -730,10 +730,10 @@ Si vous n'avez pas pu trouver votre message erreur ou si les instructions n'ont 
 <summary><u>Désactivation du Contrôle parental</u></summary>
 
 Vous pouvez désactiver la fonction Contrôle parental en allant dans Paramètres de la console -> Contrôle parental et en insérant le PIN, puis appuyez sur "Effacer les paramètres", puis "Effacer" pour le désactiver.
-Cependant, si vous ne connaissez pas le code PIN et ne pouvez donc pas accéder aux Paramètres de la console, vous devrez le désactiver. Pour cela, vous devez obtenir le code général de votre console (mkey) :
+However, if you do not know the PIN and therefore cannot access the console's settings, you will need to disable it. In order to do this, you need to obtain your console's master key (mkey):
 1. Allez sur [ce site web](https://mkey.eiphax.tech/)
 1. Remplissez les champs avec les informations suivantes :
-+ Device type : Sélectionnez "3DS" (la même chose s'applique si vous utilisez une 2DS, une New 3DS (XL/LL) ou une New 2DS (XL/LL))
++ Console Type: Select "3DS" (the same applies if you are using a 2DS, New 3DS (XL/LL) or New 2DS (XL/LL))
 + System date : Le jour et le mois de l'horloge sur laquelle votre console est réglée
 + Inquiry number : (Code d'assistance) Peut être obtenu en appuyant sur "Code PIN oublié" puis "J'ai oublié" dans l'écran du Contrôle parental
 1. Une fois que vous avez obtenu votre code général, appuyez sur OK sur l'écran sur lequel vous avez obtenu votre code d'assistance, puis saisissez le code général
