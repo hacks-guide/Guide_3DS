@@ -6,7 +6,7 @@ title: "CFW eltávolítása"
 
 ### Fontos tudnivalók
 
-A következőkben teljes egészében el fogjuk távolítani a CFW-t a készülékedről, beleértve a boot9strap-et és a Luma3DS-t azzal a céllal, hogy visszaállítsuk a készüléket gyári állapotra.
+This will completely remove CFW from your console, including boot9strap and Luma3DS, for the purpose of restoring the console to stock.
 
 Minden aláíratlan (nem eredeti) játék használhatatlanná fog válni és eltávolításra fog kerülni ezen folyamat során. Használj [mentéskezelőt](https://github.com/FlagBrew/Checkpoint/releases/latest), hogy biztonsági másolatot készíts azon játékok mentéséről, amik fontosak a számodra.
 
@@ -34,7 +34,7 @@ akkor a CFW eltávolítása <u><strong>BRICKELNI FOGJA A KONZOLODAT</strong></u>
 {% endcapture %}
 <div class="notice--danger">{{ notice-6 | markdownify }}</div>
 
-Ezek a lépések csak olyan eszközökkel működnek, amint a Luma3DS verziója 8.0 vagy magasabb. Ha a Luma korábbi verzió van a rendszereden, először frissítened kell a következő lépésekkel. Kövesd [ezt az oldalt](checking-for-cfw), hogy megtaláld a frissítési lépéseid.
+These instructions will only work on consoles with a Luma3DS version of 8.0 or higher. Ha a Luma korábbi verzió van a rendszereden, először frissítened kell a következő lépésekkel. Kövesd [ezt az oldalt](checking-for-cfw), hogy megtaláld a frissítési lépéseid.
 {: .notice--warning}
 
 ### Amire szükséged lesz
@@ -47,41 +47,41 @@ Ezek a lépések csak olyan eszközökkel működnek, amint a Luma3DS verziója 
 ### Lépések
 
 #### I. rész - Előkészületek
-1. Kapcsold ki a készüléked
+1. Kapcsold ki a konzolod
 1. Helyezd az SD kártyád a számítógépbe
 1. Másold át a `boot.firm` és `boot.3dsx` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
 1. Másold át a `GodMode9.firm` fájlt a GodMode9 `.zip`-ből az SD kártyád `/luma/payloads/` mappájába
 1. Másold át a `gm9` mappát a GodMode9 `.zip`-ből az SD kártyád gyökerébe
 1. Másold a `DSiWareUninstaller.3dsx`-et az SD kártyád `/3ds/` mappájába
 1. Másold a `safety_test.gm9` fájlt az SD kártyád `/gm9/scripts/` mappájába
-1. Tedd vissza az SD kártyád a készülékedbe
+1. Tedd vissza az SD kártyád a konzoldba
 
 #### II. rész - DS mód tesztek
 Ennek a fejezetnek a célja, hogy ellenőrizzük, a beépített DS mód alkalmazások működni fognak-e ha egyszer a CFW eltávolításra került. Ha ezt a fejezetet átugrod, a DS mód és funkciói elképzelhető, hogy elérhetetlenné válnak, a CFW eltávolítása után.
 
 ##### DS Connection Settings teszt
-1. Kapcsold be a készülékedet
-1. Lépj be a System Settings-be a készülékeden
+1. Power on your console
+1. Launch System Settings on your console
 1. Navigálj az `Internet Settings` -> `Nintendo DS Connections` opcióhoz, majd válaszd az "OK"-t
 1. Be kell bootolnod a Nintendo DS Connection Setup menübe
   + Ha a konzolod a japán verzió Flipnote Studio-ját jeleníti meg vagy fekete képernyőt vagy hibaüzenetet, a teszt sikertelen
-1. Kapcsold ki a készüléked
+1. Kapcsold ki a konzolod
 
 ##### DS Download Play teszt
-1. Kapcsold be a készülékedet
+1. Power on your console
 1. Indítsd el a Download Play alkalmazást (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
 1. Válaszd "Nintendo DS"-t
-1. Ha az eszközöd a “Download software via DS Download Play” menübe tölt be, a teszt sikeres volt
+1. If your console loads into a "Download software via DS Download Play" menu, the test was successful
   + Ha a konzolod a japán verzió Flipnote Studio-ját jeleníti meg vagy fekete képernyőt vagy hibaüzenetet, a teszt sikertelen
-1. Kapcsold ki a készüléked
+1. Kapcsold ki a konzolod
 
-Ha ezen tesztek valamelyike sikertelen, a DS mód, a DS Download Play és/vagy DS Connection Settings előfordulhat, hogy nem lesz elérhető a CFW eltávolítását követően! Ki kell [javítanod a DS módot](troubleshooting#software-issues-on-devices-with-custom-firmware) mielőtt folytatnád.
+Ha ezen tesztek valamelyike sikertelen, a DS mód, a DS Download Play és/vagy DS Connection Settings előfordulhat, hogy nem lesz elérhető a CFW eltávolítását követően! You should [fix DS mode](troubleshooting#software-issues-on-consoles-with-custom-firmware) before continuing.
 {: .notice--warning}
 
 #### III. rész - Biztonsági teszt
-Ennek a résznek az a célja, hogy ellenőrizd, hogy a konzolod be fog-e bootolni és hogy a kritikus rendszer funkciók, mint a System Settings és a billentyűzet működni fog-e, miután eltávolítottad a CFW-t. **Ha ezt a fejezetet átugrod, BRICK-elheted az eszközöd!**
+Ennek a résznek az a célja, hogy ellenőrizd, hogy a konzolod be fog-e bootolni és hogy a kritikus rendszer funkciók, mint a System Settings és a billentyűzet működni fog-e, miután eltávolítottad a CFW-t. **If you skip this section, you may BRICK your console!**
 
-1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be az eszközödet. Ez elindítja a GodMode9-et
+1. Press and hold (Start), and while holding (Start), power on your console. Ez elindítja a GodMode9-et
 1. Ha rákérdez arra, hogy csináljon-e egy biztonsági másolatot (essential files backup), akkor nyomd meg az (A) gombot, hogy csináljon, majd amikor végzett, nyomd meg ismét az (A) gombot a folytatáshoz
 1. Ha rákérdez arra, hogy szeretnéd-e a valós dátumot és időt javítani (fix the RTC date&time), nyomd meg az (A) gombot, állítsd be a helyes dátumot és időt, majd nyomd meg az (A) gombot a folytatáshoz
   + Ne feledd, hogy amennyiben ezen a ponton szükséges volt a helyes dátum és idő beállítása, a System Settingsben is be kell majd állítanod a helyes időt az útmutató végrehajtása után
@@ -90,22 +90,22 @@ Ennek a résznek az a célja, hogy ellenőrizd, hogy a konzolod be fog-e bootoln
 1. Válaszd "safety_test"-et
 1. Olvasd el a képernyőn látható szöveget, majd nyomj (A) gombot a folytatáshoz
 1. Be kell bootolnod a normál 3DS HOME Menübe (bármilyen egyéni téma irreleváns). Ha sikerült, folytasd ezeket a lépéseket
-  + Ha nem sikerül bebootolni a hagyományos 3DS HOME Menübe (fekete képernyő, hiba képernyő, stb.), a CFW eltávolítása **BRICK-ELNI FOGJA AZ ESZKÖZÖD!**
-1. Lépj be a System Settings-be a készülékeden
+  + If you do not boot into the regular 3DS HOME Menu (black screen, error screen, etc.), uninstalling CFW **WILL BRICK YOUR CONSOLE!**
+1. Launch System Settings on your console
 	+ Ha a konzol összeomlik ezen a ponton, a teszt sikertelen
 1. Válaszd az "Other Settings"-t
 1. Válaszd ki a "Profile"-t
 1. Válaszd ki a "User Name"-t
 1. Ha képes vagy beírni egy új felhasználó nevet, a teszt sikeres
 	+ Ha a billentyűzet nem jelenik meg, a képernyő lefagy, vagy a konzol összeomlik, a teszt sikertelen
-1. Kapcsold ki a készüléked
+1. Kapcsold ki a konzolod
 
 Ha NEM sikerül a hagyományos 3DS HOME Menübe bootolni, vagy a System Settings / billentyűzet nem elérhető, **NE FOLYTASD ezeket a lépéseket**! Csatlakozz a [Nintendo Homebrew Discord-on](https://discord.gg/MWxPgEp) csatornához, és kérj segítséget (angol nyelven) valakitől.
 {: .notice--danger}
 
 #### IV. rész - NAND mentés
 
-1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be az eszközödet. Ez elindítja a GodMode9-et
+1. Press and hold (Start), and while holding (Start), power on your console. Ez elindítja a GodMode9-et
 1. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
 1. Válaszd a "Scripts..." opciót
 1. Válaszd ezt: "GM9Megascript"
@@ -117,14 +117,14 @@ Ha NEM sikerül a hagyományos 3DS HOME Menübe bootolni, vagy a System Settings
 1. Nyomd meg a (B) gombot, hogy visszamenj a főmenübe
 1. Válaszd az "Exit" opciót
 1. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
-1. Válaszd a "Poweroff system"-et az eszközöd kikapcsolásához
+1. Select “Poweroff system” to power off your console
 
 #### V. rész - Az illegitim tartalom eltávolítása
 Ez a rész az illegitim tartalom eltávolításáról szól, mint a homebrew vagy a dumpolt cartridge-ek. Ha olyan mentés adatod van, amire szükséged van, mentsd le egy mentés kezelővel, mielőtt folytatod!
 {: .notice--warning}
 
-1. Kapcsold be a készülékedet
-1. Lépj be a System Settings-be a készülékeden
+1. Power on your console
+1. Launch System Settings on your console
 1. Navigálj a következőhöz: Data Management -> Nintendo 3DS -> Software
 1. Ebben a szoftver listában törölj minden nem-Nintendo tartalmat, amit telepítettél a CFW használatával
   + Ebbe bele tartoznak az általános rendszer szoftverek, mint az FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint és minden játék és cím, amit *nem* az eShop-ból telepítettél
@@ -143,16 +143,16 @@ Ez a rész az illegitim tartalom eltávolításáról szól, mint a homebrew vag
 1. Nyomd meg a (B) gombot, hogy kilépj a Rosalina menüből
 1. Nyomd meg a (Home) gombot és zárd be a Download Play-t
 1. Indítsd el a Download Play alkalmazást
-1. A készülékednek ezek után be kell töltenie a Homebrew Launchert
+1. Your console should load the Homebrew Launcher
 1. Indítsd el a DSiWare Uninstaller-t a homebrew listából
 1. Kövesd at utasításokat és engedélyezd a programnak az eltávolítást
-1. Ha a folyamat sikeres volt, lép ki a Homebrew Launcher-ből és kapcsold ki az eszközödet
+1. Once the process has succeeded, exit the Homebrew Launcher and power off your console
 
 #### VI. rész - Rendszer formázás
 Ez a rész biztosítja, hogy az illegitim ticket-ek eltávolításra kerüljenek, így az eShop normálisan tud működni. Ez eltávolít minden tartalmat a 3DS-ről és kiléptet az NNID-dből. Tartsd észben, hogy a konzol titkosító kulcsa meg lesz keverve, ami azt jelenti, hogy minden régi adat elérhetetlenné válik, még akkor is, ha van mentésed az SD kártyád tartalmáról.
 
-1. Kapcsold be a készülékedet
-1. Lépj be a System Settings-be a készülékeden
+1. Power on your console
+1. Launch System Settings on your console
 1. Navigálj az Other Settings -> Next Page (az utolsó oldalig) -> Format System Memory opcióhoz
 1. Kövesd az utasításokat a 3DS-ed formázásához
 
@@ -161,7 +161,7 @@ Ez a rész biztosítja, hogy az illegitim ticket-ek eltávolításra kerüljenek
 Ez az utolsó lehetőséged, hogy ellenőrizd, hogy minden fenti biztonsági lépést végrehajtottál! Legyél biztos benne, hogy minden lépést végrehajtottál ezen oldal összes részéből, **kifejezetten** a `III. rész - Biztonsági teszt`-et, mielőtt folytatnád.
 {: .notice--warning}
 
-1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be az eszközödet. Ez elindítja a GodMode9-et
+1. Press and hold (Start), and while holding (Start), power on your console. Ez elindítja a GodMode9-et
   + Ha helyette a Luma3DS chainloader-t látod, használd a D-Pad-et és az (A) gombot a GodMode9 kiválasztásához
 1. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
 1. Válaszd a "Scripts..." opciót
@@ -174,11 +174,11 @@ Ez az utolsó lehetőséged, hogy ellenőrizd, hogy minden fenti biztonsági lé
 1. Nyomd meg a (B) gombot, hogy visszamenj a főmenübe
 1. Válaszd az "Exit" opciót
 1. Nyomd meg az (A) gombot az írási engedélyek visszavonásához
-1. Nyomd meg a (Start) gombot az eszköz újraindításához
+1. Press (Start) to reboot your console
 
 ___
 
-Ezt követően már nem lesz egyedi firmware telepítve a készülékeden.
+All custom firmware has been removed from your console.
 {: .notice--success}
 
 Most már eltávolíthatsz minden olyan fájlt és mappát az SD kártyád gyökeréből, ami *nem* a `Nintendo 3DS`, a `DCIM` vagy a `private` mappa.
