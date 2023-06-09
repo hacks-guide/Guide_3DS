@@ -14,9 +14,9 @@ A technikai részletei az ezen az oldalon használt exploit-nak [itt](https://gi
 
 ### Kompatibilitási megjegyzések
 
-A safecerthax kompatibilis minden Old 3DS and Old 2DS eszközzel minden régióban az 1.0.0 verziótól a 11.14.0-ig.
+safecerthax is compatible with all Old 3DS and Old 2DS consoles in all regions on system versions 1.0.0 through 11.14.0.
 
-Ez az exploit nem működik az New 3DS, New 3DS XL, vagy New 2DS XL készülékeken. Mielőtt folytatnád, kérjük ellenőrizd, hogy a moddolandó eszközöd Old 3DS, Old 3DS XL, vagy Old 2DS.
+Ez az exploit nem működik az New 3DS, New 3DS XL, vagy New 2DS XL készülékeken. Please ensure that the console you are modding is an Old 3DS, Old 3DS XL, or Old 2DS before continuing.
 {: .notice--info}
 
 ### Amire szükséged lesz
@@ -44,29 +44,29 @@ Ebben a fejezetben fel fogod másolni a fájlokat, amik a safecerthax exploit ki
 1. Hozz létre egy mappát `boot9strap` néven az SD kártya gyökerében
 1. Másold át a `boot9strap.firm` fájlt és a `boot9strap.firm.sha` fájlt a boot9strap `.zip` fájlból az SD kártyád `/boot9strap/` mappájába
 1. Másold át a `SafeB9SInstaller.bin` fájlt a SafeB9SInstaller `.zip`-ből az SD kártyád gyökerébe
-1. Tedd vissza az SD kártyád a készülékedbe
-1. Kapcsold be a készülékedet
+1. Tedd vissza az SD kártyád a konzoldba
+1. Power on your console
 
 #### III. rész - safecerthax proxy
 
-Ebben a fejezetben módosítani fogod az Internet kapcsolat beállításokat hogy egy proxy hálózatot használj, ami úgy lett megtervezve, hogy exploitolja a System update szolgáltatását az eszközödnek.
+In this section, you will change your Internet connection settings to use a proxy network designed to exploit the System Update feature of your console.
 
 {% include_relative include/addproxy.txt %}
-1. Kapcsold ki a készüléked
+1. Kapcsold ki a konzolod
 
 #### IV. rész - safecerthax
 
-Ebben a fejezetben be fogsz lépni a Safe Mode-ba (egy funkció, ami elérhető minden 3DS családba tartozó eszközön) ahol a safecerthax kiváltásra kerül, ami a boot9strap (egyedi firmware) telepítőt indítja.
+In this section, you will enter Safe Mode (a feature available on all 3DS family consoles) where safecerthax will be triggered, which will launch you into the boot9strap (custom firmware) installer.
 
-1. Az eszközöd kikapcsolt állapotában tartsd nyomva a következő gombokat: (Bal Váll) + (Jobb Váll) + (D-Pad Fel) + (A), majd ezen gombok nyomva tartása mellett kapcsold be az eszközöd
-  + Tartsd nyomva a gombokat, amíg az eszköz be nem bootol a Safe Mode-ba (a "system update" menübe)
+1. With your console still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your console
+  + Keep holding the buttons until the console boots into Safe Mode (a "system update" menu)
 1. Nyomj "OK"-ot a frissítés elfogadásához
   + Nincs frissítés. Ez része az exploitnak
 1. Nyomj az "I accept"-re a feltételek elfogadásához
 1. A frissítés sikertelen lesz a `003-1099` hibakóddal. Ez az elvárt viselkedés
 1. Nyomj "OK"-ét a hibaüzenet bezárásához
 1. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
-  + Ha az eszköz lefagy vagy összeomlik, erőltetve kapcsold ki az eszközt és próbáld újra ezt a részt
+  + If the console freezes or crashes, force power off the console, then retry this section
 
 #### V. rész - boot9strap telepítése
 
