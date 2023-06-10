@@ -23,8 +23,8 @@ Pagine guida:
 * [Completamento dell'installazione](#finalizing-setup)
 
 Problemi dopo l’installazione:
-* [Boot issues](#boot-issues-on-consoles-with-custom-firmware)
-* [Software issues](#software-issues-on-consoles-with-custom-firmware)
+* [Problemi di avvio](#boot-issues-on-consoles-with-custom-firmware)
+* [Problemi software](#software-issues-on-consoles-with-custom-firmware)
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -70,11 +70,11 @@ Entra nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) per 
 ![]({{ "/images/screenshots/multiple-id0.png" | absolute_url }})
 {: .notice--info}
 
-This occurs when you use your SD card in multiple 3DS consoles and is intended to prevent inadvertently merging data that would not be valid on other consoles. Per capire quale cartella dal nome lungo sia quella corretta per il tuo 3DS, segui queste istruzioni:
+Questo si verifica quando si utilizza la scheda SD in più console 3DS ed accade per prevenire l'unione involontaria di dati non validi su console diverse. Per capire quale cartella dal nome lungo sia quella corretta per il tuo 3DS, segui queste istruzioni:
 
 1. Rinomina la cartella `Nintendo 3DS` in `BACKUP_Nintendo 3DS`
 1. Reinserisci la tua scheda SD nella tua console, e accendila
-1. Wait for the console to generate the SD card data
+1. Attendi che la console generi i dati nella scheda SD
 	+ Le tue applicazioni saranno scomparse. È normale e verrà risolto a breve
 1. Spegni la tua console e reinserisci la scheda SD nel tuo computer
 1. Entra nella cartella `Nintendo 3DS` della tua scheda SD
@@ -129,7 +129,7 @@ Assicurati che il file `F00D43D5.bin` sia l'unico file presente in `Nintendo 3DS
 
 Inoltre, assicurati che il file `bb3.bin` sia nella directory principale dela tua scheda SD. Se manca, scarica l'ultima versione di [Bannerbomb3](https://github.com/lifehackerhansol/Bannerbomb3/releases/download/v3.0-lhs1/bb3.bin) (download diretto), e copia il file `bb3.bin` nella directory principale della tua scheda SD.
 
-If neither of these solutions fixes this problem, then custom firmware may have been uninstalled on this console in a way that makes this method impossible to perform. In tal caso, puoi ricevere assistenza chiedendo, in inglese, nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp).
+Se nessuna di queste soluzioni dovesse risolvere il problema, allora un custom firmware potrebbe essere già stato disinstallato da questa console in modo tale da rendere questo metodo impossibile. In tal caso, puoi ricevere assistenza chiedendo, in inglese, nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp).
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -265,30 +265,30 @@ Entra nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) e sp
 {% capture compat %}
 <summary><u>"Si è verificato un errore. Tieni premuto il pulsante POWER per spegnere la console..." (schermo nero con testo)</u></summary>
 
-Your `00000001.sav` and/or `otherapp.bin` files may be misplaced. Ensure that `00000001.sav` is in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` and that `otherapp.bin` is on the root of your SD card.
+I tuoi file `00000001.sav` e/o `otherapp.bin` potrebbero essere mal posizionati. Assicurati che il file `00000001.sav` sia in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` e che il file `otherapp.bin` sia nella directory principale della tua scheda SD.
 
-If your files are in the correct locations, re-create the save using the [PicHaxx Save Tool](https://3dstools.nhnarwhal.com/#/pichaxx), then place it in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data`. Ensure that the file is named exactly `00000001.sav` and that you used your console's `movable.sed` to create it. Re-download [otherapps.zip](/assets/otherapps.zip), place the `.bin` file relevant to your console to the root of your SD card, and rename it to `otherapp.bin`. Non aggiungere l'estensione `.bin` se non la vedi presente.
+Se i tuoi file sono nelle posizioni corrette, ricrea il salvataggio usando [PicHaxx Save Tool](https://3dstools.nhnarwhal.com/#/pichaxx), poi posizionalo in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data`. Assicurati che il file sia chiamato esattamente `00000001.sav` e che tu abbia usato il file `movable.sed` della tua console per crearlo. Scarica nuovamente [otherapps.zip](/assets/otherapps.zip), posiziona il file `.bin` relativo alla tua console nella directory principale della tua scheda SD e rinominalo in `otherapp.bin`. Non aggiungere l'estensione `.bin` se non la vedi presente.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>"An exception occurred" or Errdisp when opening Picross</u></summary>
+<summary><u>"An exception occurred" o Errdisp avviando Picross</u></summary>
 
-Your console already has custom firmware. Dovresti [verificare la presenza di un CFW](checking-for-cfw).
+La tua console ha già un custom firmware. Dovresti [verificare la presenza di un CFW](checking-for-cfw).
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
 <summary><u>"Si è verificato un errore che ha provocato la chiusura del software..." (messaggio su riquadro bianco)</u></summary>
 
-There is an issue with your `otherapp.bin` file. Download [otherapps.zip](/assets/otherapps.zip), place the `.bin` file relevant to your console to the root of your SD card, and rename it to `otherapp.bin`. Non aggiungere l'estensione `.bin` se non la vedi presente.
+C'è un problema con il tuo file `otherapp.bin`. Scarica [otherapps.zip](/assets/otherapps.zip), posiziona il file `.bin` relativo alla tua console nella directory principale della tua scheda SD e rinominalo in `otherapp.bin`. Non aggiungere l'estensione `.bin` se non la vedi presente.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Game starts normally</u></summary>
+<summary><u>Il gioco si avvia normalmente</u></summary>
 
-Your modified `00000001.sav` file may be misplaced, or you may have used the wrong `movable.sed` when creating it. Re-generate your `movable.sed` from [Bruteforce Movable](https://seedminer.hacks.guide), then re-create the save using the [PicHaxx Save Tool](https://3dstools.nhnarwhal.com/#/pichaxx) and place the resulting file (`00000001.sav`) in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data`.
+Il tuo file `00000001.sav` modificato potrebbe essere mal posizionato, o potresti aver usato il file `movable.sed` errato per la sua creazione. Rigenera il tuo file `movable.sed` da [Bruteforce Movable](https://seedminer.hacks.guide), quindi ricrea il salvataggio usando [PicHaxx Save Tool](https://3dstools.nhnarwhal.com/#/pichaxx) e posiziona il file risultante (`00000001.sav`) in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data`.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -297,9 +297,9 @@ Your modified `00000001.sav` file may be misplaced, or you may have used the wro
 {% capture compat %}
 <summary><u>Schermata rossa/viola/rosa e bianca dopo aver eseguito Soundhax</u></summary>
 
-If your console is on system version 9.4.0, 9.5.0, or 9.6.0, you may be encountering a bug with an old version of universal-otherapp. Download the latest version from [here](https://github.com/TuxSH/universal-otherapp/releases/latest).
+Se la tua console è alla versione di sistema 9.4.0, 9.5.0 o 9.6.0, potresti riscontrare problemi usando una vecchia versione di universal-otherapp. Scarica l'ultima versione da [qui](https://github.com/TuxSH/universal-otherapp/releases/latest).
 
-If your console is not on those firmwares, it likely indicates that you already have custom firmware. Dovresti [verificare la presenza di un CFW](checking-for-cfw).
+Se la tua console non ha queste versioni di sistema, probabilmente hai già un custom firmware. Dovresti [verificare la presenza di un CFW](checking-for-cfw).
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -313,7 +313,7 @@ C'è un problema con il tuo file `otherapp.bin` (è mancante, mal posizionato o 
 {% capture compat %}
 <summary><u>"Impossibile riprodurre"</u></summary>
 
-You have the wrong Soundhax file for your console and region, or your console is incompatible with Soundhax. In the latter case, you should update your console to the latest version and follow [Seedminer](seedminer).
+Hai il file Soundhax sbagliato per la tua console e regione, o la tua console è incompatibile con Soundhax. Nell'ultimo caso, dovresti aggiornare la tua console all'ultima versione e seguire [Seedminer](seedminer).
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -398,7 +398,7 @@ Segui in ordine questi passaggi:
 {% capture compat %}
 <summary><u>"Per usare il Browser Internet, aggiorna la tua versione di sistema usando l'opzione Aggiornamento nelle Impostazioni della console."</u></summary>
 
-Innanzitutto, assicurati di aver inserito il proxy corretto per la connessione che stai utilizzando. In caso contrario, torna alla [Sezione II](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth). If the proxy is correct, then your console has been cart-updated, which means an alternate exploit will need to be used.
+Innanzitutto, assicurati di aver inserito il proxy corretto per la connessione che stai utilizzando. In caso contrario, torna alla [Sezione II](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth). Se il proxy è corretto, la console è stata aggiornata con una scheda di gioco, per cui dovrà essere utilizzato un exploit alternativo.
 
 <u>Metodo 1</u><br>
 Se i le due cifre prima della regione nella stringa della versione di sistema sono minori o uguali ad a 36 (ad esempio Ver. 11.14.0-**36**U), puoi seguire [Soundhax](installing-boot9strap-(soundhax)). Quando viene richiesto di selezionare un firmware per generare il file audio, usa:
@@ -419,7 +419,7 @@ Se hai un Old 3DS / Old 3DS XL / 2DS, è possibile provare un aggiornamento tram
 
 ---
 
-If these methods didn't work (or do not apply to you), update your console to the latest version and follow [Seedminer](seedminer).
+Se questi metodi non hanno funzionato (o non ti riguardano), aggiorna la tua console all'ultima versione e segui [Seedminer](seedminer).
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -486,7 +486,7 @@ Probabilmente significa che hai già un custom firmware. Dovresti [verificare la
 ## Completamento dell'installazione
 
 {% capture compat %}
-<summary><u>Unable to update console</u></summary>
+<summary><u>Impossibile aggiornare la console</u></summary>
 
 I passaggi qui sotto possono essere seguiti in qualsiasi ordine, ma sono elencati dal più facile al più difficile da eseguire.
 
@@ -544,17 +544,17 @@ Se riieni di avere abbastanza spazio sulla tua scheda SD, questa potrebbe essere
 
 ---
 
-## Boot issues on consoles with custom firmware
+## Problemi di avvio su console con custom firmware
 
-The steps detailed here generally assume that your console has a modern custom firmware setup (boot9strap + Luma3DS 8.0 or greater). Se la tua console sta eseguendo una vecchia configurazione (ad esempio, qualcosa basato su arm9loaderhax o menuhax), dovresti aggiornare la tua installazione prima di seguire queste istruzioni.
+I passaggi qui dettagliati generalmente presuppongono che la tua console abbia un'installazione moderna del custom firmware (boot9strap + Luma3DS 8.0 o superiore). Se la tua console sta eseguendo una vecchia configurazione (ad esempio, qualcosa basato su arm9loaderhax o menuhax), dovresti aggiornare la tua installazione prima di seguire queste istruzioni.
 {: .notice--info}
 
 ### Indicatori luminosi di accensione/notifica
 
 {% capture compat %}
-<summary><u>My console powers off when I try to turn it on, and/or the notification LED shows a color on boot</u></summary>
+<summary><u>La mia console si spegne quando provo ad accenderla, e/o il LED di notifica mostra un colore all'accensione</u></summary>
 
-C'è un problema con il tuo file `boot.firm`. Se stai usando [boot9strap 1.4](https://github.com/SciresM/boot9strap/releases/tag/1.4), il tuo LED di notifica 3DS potrebbe lampeggiare di un certo colore. Questo colore è usato per diagnosticare problemi riguardanti il tuo file `boot.firm` nella scheda SD o nella memoria interna. On older versions of boot9strap, the blue light will power off almost immediately when trying to turn on the console.
+C'è un problema con il tuo file `boot.firm`. Se stai usando [boot9strap 1.4](https://github.com/SciresM/boot9strap/releases/tag/1.4), il tuo LED di notifica 3DS potrebbe lampeggiare di un certo colore. Questo colore è usato per diagnosticare problemi riguardanti il tuo file `boot.firm` nella scheda SD o nella memoria interna. Su versioni molto vecchie di boot9strap, la luce blu si spegne quasi subito quando si tenta di accendere la console.
 
 Se il LED di notifica lampeggia:
 
@@ -564,18 +564,18 @@ Se il LED di notifica lampeggia:
 
 Puoi ottenere un nuovo file `boot.firm` scaricando l'[ultima versione di Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), estraendola e posizionando il file `boot.firm` nella directory principale della tua scheda SD. Se il tuo file `boot.firm` continua a risultare corrotto, potresti dover verificare la presenza di errori nella tua scheda SD ([Windows](h2testw-(windows)), [Linux](f3-(linux)), o [macOS](f3xswift-(mac))). Inoltre, tieni presente che il 3DS tende ad avere problemi con file estratti usando WinRAR.
 
-If you hear a "popping sound", potentially accompanied with the backlight turning on for a split second, there is a hardware issue with your console (such as a disconnected backlight cable). You may be able to get your console to boot by holding it at certain angles.
+Se si sente un "suono scoppiettante", potenzialmente seguito dalla retroilluminazione accendersi per un istante, c'è un problema hardware con la tua console (come un cavo della retroilluminazione disconnesso). Potresti riuscire ad accendere la console tenendola in determinate posizioni.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>My console gets stuck on a black screen with blue power light staying on</u></summary>
+<summary><u>La mia console si blocca con una schermata nera e la luce di accensione rimane blu</u></summary>
 
 I passaggi qui sotto possono essere seguiti in qualsiasi ordine, ma sono elencati dal più rapido al più lungo da eseguire.
 
 1. Spegni la tua console, rimuovi la scheda SD, reinseriscila, quindi accendi la tua console.
-1. Spegni la tua console, estrai la cartuccia di gioco se inserita, accendi la tua console, quindi attendi fino a dieci minuti. If your console boots within ten minutes, the issue has been fixed and is unlikely to reoccur
-1. Rinomina la cartella `Nintendo 3DS` sulla tua scheda SD in `Nintendo 3DS_BACKUP`, poi tenta l'avvio. If your console successfully boots, there is some issue within your `Nintendo 3DS` folder. Prova a cancellare gli extdata del menu HOME:
+1. Spegni la tua console, estrai la cartuccia di gioco se inserita, accendi la tua console, quindi attendi fino a dieci minuti. Se la tua console si avvia entro dieci minuti, il problema è stato risolto e probabilmente non avverrà più
+1. Rinomina la cartella `Nintendo 3DS` sulla tua scheda SD in `Nintendo 3DS_BACKUP`, poi tenta l'avvio. Se la tua console si avvia correttamente, c'è qualche problema con la tua cartella `Nintendo 3DS`. Prova a cancellare gli extdata del menu HOME:
 	+ Entra nella cartella `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
   + Elimina la cartella corrispondente alla regione del tuo 3DS:
 		+ **Regione EUR**: Elimina `00000098`
@@ -588,7 +588,7 @@ I passaggi qui sotto possono essere seguiti in qualsiasi ordine, ma sono elencat
 	+ Spegni la tua console
 	+ Tieni premuti i pulsanti (L) + (R) + (Su) + (A)
 	+ Accendi la tua console
-	+ If you were successful, the console will boot to an "update your system" screen
+	+ Se hai avuto successo, la console si avvierà mostrando la schermata "Aggiornamento"
 1. Segui la guida [CTRTransfer](ctrtransfer)
 1. Se hai bisogno di aiuto, chiedi pure nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp)
 {% endcapture %}
@@ -624,7 +624,7 @@ I gestori di eccezione ARM11 sono disabilitati, o un custom firware non è insta
 <summary><u>Al menu HOME mancano delle applicazioni installate</u></summary>
 
 Questo potrebbe essere causato da vari motivi, ma principalmente perché la scheda SD non viene letta dal sistema.
-You can check if your SD is being read by holding SELECT on boot and checking the yellow text on the bottom screen; if it says "Booted from CTRNAND via B9S", then your console is booting from the internal memory and not from the SD card.
+Puoi controllare se la tua SD non viene letta tenendo premuto SELECT all'avvio e controllando il testo giallo nella schermata inferiore; se dice "Booted from CTRNAND via B9S", la console si sta avviando dalla memoria interna e non dalla scheda SD.
 Se è questo il caso, prova a seguire i seguenti passaggi, indicati dal più semplice al più complesso:
 1. Spegni la tua console, rimuovi la scheda SD, reinseriscila, quindi accendi la tua console
 1. Spegni la console, rimuovi la scheda SD, inseriscila sul tuo PC, scarica l'ultima versione di [Luma3DS](https://github. om/LumaTeam/Luma3DS/releases/latest), estrai il file `boot.firm` dall'archivio `Luma3DS.zip` e posizionalo nella directory principale della tua scheda SD (sostituendo qualunque file preesistente)
@@ -637,7 +637,7 @@ Se è questo il caso, prova a seguire i seguenti passaggi, indicati dal più sem
 {% capture compat %}
 <summary><u>Schermata "BOOTROM ERROR" blu</u></summary>
 
-Your console is likely hard-bricked. You will need to buy an ntrboot flashcart to reinstall boot9strap in order to attempt to fix your console. Potrebbe anche indicare un problema hardware non risolvibile. In ogni caso, entra nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) per chiedere assistenza.
+La tua console è probabilmente brickata. Dovrai acquistare una flashcart ntrboot per reinstallare boot9strap e tentare riparare la tua console. Potrebbe anche indicare un problema hardware non risolvibile. In ogni caso, entra nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) per chiedere assistenza.
   + È anche possibile che qualcuno abbia impostato una schermata di avvio a tempo che assomigli al messaggio di errore. Prova a lasciare la tua console accesa sulla schermata blu per cinque minuti.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -649,7 +649,7 @@ Per favore scatta una foto dell'errore ed entra nel [canale Discord di Nintendo 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-## Software issues on consoles with custom firmware
+## Problemi software su console con custom firmware
 
 {% capture compat %}
 <summary><u>La funzionalità DSi / DS è corrotta o è stata sostituita con Flipnote Studio</u></summary>
@@ -662,24 +662,24 @@ Per favore scatta una foto dell'errore ed entra nel [canale Discord di Nintendo 
 1. Avvia l'Homebrew Launcher
 1. Avvia TWLFix-CFW dalla lista degli homebrew disponibili
 1. Premi il pulsante (A) per disinstallare i titoli TWL corrotti
-1. Press (Start) to reboot the console
+1. Premi (Start) per riavviare la console
 1. Aggiorna la console andando su Impostazioni della console, poi "Impostazioni generali", infine scorri a destra e seleziona "Aggiornamento"
   + L'aggiornamento si occuperà di disinstallare i principali titoli TWL, per riscaricarli e reinstallarli
-1. Once the update is complete, tap "OK" to reboot the console
+1. Al termine dell'aggiornamento, premi "OK" per riavviare la console
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
 <summary><u>La funzionalità GBA Virtual Console e/o Modalità Provvisoria è corrotta</u></summary>
 
-Your console is running Luma3DS 6.6 or older, likely via arm9loaderhax. You should follow [A9LH to B9S](a9lh-to-b9s) to update your console to a modern custom firmware environment.
+La tua console sta eseguendo Luma3DS 6.6 o precedente, probabilmente tramite arm9loaderhax. Dovresti seguire [Da A9LH a B9S](a9lh-to-b9s) per aggiornare la tua console con un custom firmware moderno.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
 <summary><u>I giochi in modalità memoria estesa (Pokemon Sole/Luna, Smash, ecc.) non funzionano</u></summary>
 
-Questo può verificarsi dopo un CTRTransfer o dopo un cambio di regione su Old 3DS / 2DS. You will need to system format your console to fix this issue.
+Questo può verificarsi dopo un CTRTransfer o dopo un cambio di regione su Old 3DS / 2DS. Dovrai formattare la tua console per risolvere il problema.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -730,10 +730,10 @@ Se non sei stato in grado di trovare il tuo errore o le istruzioni non funzionan
 <summary><u>Disattivare il Filtro famiglia</u></summary>
 
 È possibile disattivare la funzione Filtro famiglia entrando in Impostazioni della console -> Filtro famiglia e inserendo il PIN, quindi premendo "Cancella impostazioni", e infine "Cancella" per rimuoverlo.
-However, if you do not know the PIN and therefore cannot access the console's settings, you will need to disable it. In order to do this, you need to obtain your console's master key (mkey):
+Tuttavia, se non conosci il PIN e quindi non puoi accedere alle impostazioni della console, dovrai disabilitarlo. A tal scopo, dovrai ottenere la master key della tua console (mkey):
 1. Vai su [questo sito](https://mkey.eiphax.tech/)
 1. Riempi le caselle con le seguenti informazioni:
-+ Console Type: Select "3DS" (the same applies if you are using a 2DS, New 3DS (XL/LL) or New 2DS (XL/LL))
++ Device Type: Seleziona "3DS" (vale anche se stai usando un 2DS, New 3DS (XL/LL) o New 2DS (XL/LL))
 + System Date: Il giorno e il mese impostati nella tua console
 + Inquiry Number: Si può ottenere premendo "Ho dimenticato il PIN" e poi "L'ho dimenticato" nella schermata Filtro famiglia
 1. Dopo aver ottenuto il tuo mkey, premi OK sulla schermata in cui hai ottenuto il tuo Inquiry Number, quindi inserisci la master key
