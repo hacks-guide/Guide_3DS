@@ -11,9 +11,9 @@ title: "ntrboot"
 
 ntrboot로 boot9strap을 설치하기 위해서는 호환되는 DS/ DSi 가 필요합니다. 이러한 플래시 카드 중 몇몇은 이미 ntrboot이 플래싱 되어 있습니다.
 
-ntrboot 취약점이 기기 버전과 독립적으로 작동하는 반면에, ntrboot 플래싱 프로그램(카트리지에 ntrboot을 설치하는 프로그램) 은 그렇지 않습니다. This means that, depending on the versions and consoles supported by your flashcart, only certain methods may be available to you.
+ntrboot 취약점이 콘솔 버전과 독립적으로 작동하는 반면에, ntrboot 플래싱 프로그램(카트리지에 ntrboot을 설치하는 프로그램) 은 그렇지 않습니다. 이것은 플래시카드가 지원하는 콘솔과 콘솔 버전에 따라 오로지 특정한 방법만 가능할 수도 있습니다.
 
-"시한폭탄"이 있는 카드는 플래시카드 펌웨어에 저장된 특정 날짜를 기기 시간이 지난것을 감지하면 더 이상 '.nds'파일을 실행 할 수 없습니다. 이것을 우회하는 방법은 기기시간을 앞으로 되돌리는 것입니다.
+"시한폭탄"이 있는 카드는 플래시카드 펌웨어에 저장된 특정 날짜를 콘솔 시간이 지난것을 감지하면 더 이상 `.nds` 파일을 실행 할 수 없습니다. 이것을 우회하는 방법은 콘솔의 시간을 앞으로 되돌리는 것입니다.
 
 | 플래시카드 이름 | 현재 가격 | "시한폭탄"여부 | 3DS 버전 호환 여부 | DSi 버전 호환 여부 | 기타 |
 |-|-:|:-:|:-:|:-:|-|
@@ -37,13 +37,13 @@ ntrboot 취약점이 기기 버전과 독립적으로 작동하는 반면에, nt
   ![]({{ "/images/screenshots/ntrboot-flashcarts.png" | absolute_url }})
   {: .notice--info}
 
-Ensure your flashcart is able to launch `.nds` files on your console before beginning. 몇몇 플래시카드는 펌웨어나 "커널"이 플래시카드의 SD 카드에 복사되어 있어야 합니다. 자세한 내용은 당신의 플래시카드의 설명서를 참조해 주시길 바랍니다.
+시작하기 전에 플래시카드가 `.nds` 파일을 실행 할 수 있는지 확인해 주세요. 몇몇 플래시카드는 펌웨어나 "커널"이 플래시카드의 SD 카드에 복사되어 있어야 합니다. 자세한 내용은 당신의 플래시카드의 설명서를 참조해 주시길 바랍니다.
 
 특정 방법에서는 추가적인 호환성 정보가 있을 수 있습니다.
 
-The usage of this exploit, regardless of the flashing method, requires access to a small magnet if the target console is of a folding style (any 3DS family system that is not the old 2DS with a sleep switch). This is because the exploit requires your console to enter sleep mode while still having access to the buttons.
+이 방법을 사용하기 위해서는 작은 자석이 필요합니다. (슬립 스위치가 있는 2DS는 예외) 왜냐하면 이 방법은 슬립 모드 상태에서 버튼을 사용해야 하기 때문입니다.
 
-To test if a magnet will work, hold it on or around the (A)(B)(X)(Y) buttons while the console is powered on to see if it triggers sleep mode. 사용 가능하다면 자석을 대고 있는 동안 화면이 검은색으로 될 것입니다.
+자석이 사용 가능한지 확인해 보려면 켜져 있는 상태로 (A)(B)(X)(Y) 버튼 근처에 자석을 대서 슬립 모드로 전환되는지 확인해 보세요. 사용 가능하다면 자석을 대고 있는 동안 화면이 검은색으로 될 것입니다.
 {: .notice--info}
 
 NTRboot가 플래시 카트리지에 플래싱되어 있는 동안에는 플래시카드의 기능을 사용할 수 없다는 점을 명심하십시오. (단, NDS에서 또는 커스텀 펌웨어가 설치된 3SD 에서 Acekard 2i의 경우는 예외입니다.) 이것은 대부분의 플래시카드가 심지어 홈 메뉴에서 표시되지도 않을것을 의미합니다. 작업이 끝난뒤 ntrboot를 제거할 수 있는 방법이 뒤에 제시되어 있습니다.
