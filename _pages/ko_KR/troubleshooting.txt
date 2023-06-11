@@ -267,14 +267,14 @@ SD 카드 루트에 Frogminer_save `.zip` 안에 있는 `private` 폴더를 복�
 {% capture compat %}
 <summary><u>에러가 발생했습니다. 본체의 전원 버튼을 길게 눌러 전원을 끈 후..." (검은 화면에 텍스트)</u></summary>
 
-Your `00000001.sav` and/or `otherapp.bin` files may be misplaced. Ensure that `00000001.sav` is in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` and that `otherapp.bin` is on the root of your SD card.
+`00000001.sav` 또는 `otherapp.bin` 파일이 잘못 들어갔습니다. `00000000.sav`가 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00004000` -> 0017c100` -> `data` 안에 있고 `otherapp.bin`이 SD 카드 루트에 있는지 다시 한 번 확인해 주세요.
 
-If your files are in the correct locations, re-create the save using the [PicHaxx Save Tool](https://3dstools.nhnarwhal.com/#/pichaxx), then place it in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data`. Ensure that the file is named exactly `00000001.sav` and that you used your console's `movable.sed` to create it. Re-download [otherapps.zip](/assets/otherapps.zip), place the `.bin` file relevant to your console to the root of your SD card, and rename it to `otherapp.bin`. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
+만약 위치가 정확하다면, [PicHaxx Save Tool](https://3dstools.nhnarwhal.com/#/pichaxx)을 이용해 세이브를 다시 생성한 후, `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` 폴더 안에 다시 복사해 주세요. 반드시 파일의 이름이 `00000001.sav`이고 기기의 `movable.sed`를 이용해야 합니다. Re-download [otherapps.zip](/assets/otherapps.zip), place the `.bin` file relevant to your console to the root of your SD card, and rename it to `otherapp.bin`. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>"An exception occurred" or Errdisp when opening Picross</u></summary>
+<summary><u>피크로스 실행 중 "An exception occurred" 또는 오류 화면이 표시됩니다</u></summary>
 
 이 콘솔은 이미 커스텀 펌웨어가 설치되어 있습니다. [CFW 확인](checking-for-cfw) 을 하는 것을 권장합니다.
 {% endcapture %}
@@ -283,14 +283,14 @@ If your files are in the correct locations, re-create the save using the [PicHax
 {% capture compat %}
 <summary><u>"에러가 발생하여 소프트웨어를 종료합니다..." (하얀 메시지 창)</u></summary>
 
-There is an issue with your `otherapp.bin` file. Download [otherapps.zip](/assets/otherapps.zip), place the `.bin` file relevant to your console to the root of your SD card, and rename it to `otherapp.bin`. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
+`otherapp.bin` 파일에 문제가 있습니다. Download [otherapps.zip](/assets/otherapps.zip), place the `.bin` file relevant to your console to the root of your SD card, and rename it to `otherapp.bin`. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Game starts normally</u></summary>
+<summary><u>게임이 정상적으로 실행됩니다</u></summary>
 
-Your modified `00000001.sav` file may be misplaced, or you may have used the wrong `movable.sed` when creating it. Re-generate your `movable.sed` from [Bruteforce Movable](https://seedminer.hacks.guide), then re-create the save using the [PicHaxx Save Tool](https://3dstools.nhnarwhal.com/#/pichaxx) and place the resulting file (`00000001.sav`) in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data`.
+수정된 `00000001.sav` 파일이 잘못 들어갔거나, 다른 `movable.sed` 파일로 생성했습니다. [Bruteforce Movable](https://seedminer.hacks.guide)에서 `movable.sed`를 다시 생성해, [PicHaxx Save Tool](https://3dstools.nhnarwhal.com/#/pichaxx)에서 세이브 파일을 다시 생성, 결과 파일(`00000001.sav`)을 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00004000` -> `0017c100` -> `data`에 복사해 주세요.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -625,13 +625,13 @@ ARM11 오류 핸들러가 꺼져있거나, 커스텀 펌웨어가 정상적으�
 {% capture compat %}
 <summary><u>HOME Menu is missing installed applications</u></summary>
 
-This could be caused by various reasons, but most likely because your SD card is not being read by the system.
+여러 이유가 있을 수 있지만, 대부분 시스템이 SD 카드를 읽지 못해 발생합니다.
 SD 카드가 읽혔는지 확인하려면 SELECT를 누른 채 부팅해 아래 화면의 노란색 문구를 확인하세요: "Booted from CTRNAND via B9S"가 표시된다면 SD 카드가 읽히지 않아 내부 메모리에서 부팅되었음을 의미합니다.
 If this is the case, attempt the steps below, which are listed from easiest to hardest:
 1. 콘솔의 전원을 종료하고, SD 카드를 분리한 뒤, 다시 장착하고 전원을 켜 보세요
 1. 콘솔의 전원을 종료하고, SD 카드를 분리한 뒤, PC에 장착하세요. 최신 버전의 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)를 다운받아 `Luma3DS.zip`에서 `boot.firm` 파일을 복사해 SD 카드의 루트에 넣어주세요. 이미 있다면 덮어씌워주세요
-1. Power off your console, remove the SD card, insert it on your PC and reformat your SD card according to your computer's operating system: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)) *(this will wipe your SD card data)*
-1. Test your SD card for errors by following the guide according to your computer's operating system: [Windows](h2testw-(windows)), [Linux](f3-(linux)), [macOS](f3xswift-(mac)). SD 카드에 오류가 있다고 표시되면, SD 카드를 교체해야 합니다
+1. 콘솔의 전원을 끄고, SD 카드를 분리한 뒤, PC에 장착해 운영 체제에 따른 방식으로 포멧해 주세요: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)). *(이 과정은 SD 카드의 데이터를 모두 삭제합니다)*
+1. 컴퓨터의 운영 체제에 따라 SD 카드에 오류가 있는지를 확인해주세요: [Windows](h2testw-(windows)), [Linux](f3-(linux)), [macOS](f3xswift-(mac)). SD 카드에 오류가 있다고 표시되면, SD 카드를 교체해야 합니다
 1. SD 카드 슬롯이 파손되었을 수 있습니다. [Nintendo Homebrew Discord 서버](https://discord.gg.MWxPgEp)에 오셔서 도움을 요청하세요
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
