@@ -44,17 +44,25 @@ In this section, you will set up Seedminer and obtain your console's files that 
 1. Extract the contents of the Seedminer `.zip` and move the folder with your operating systeem's name to anywhere on your PC
   + Keep this location handy, as this Seedminer folder will be where multiple other files are placed
 1. In the Seedminer folder, hold SHIFT and right-click anywhere in the folder's empty space, then click the option that opens Terminal, PowerShell, or Command Prompt
-1. In the command line window, type `py -3 -mpip install pycryptodomex`, hit ENTER, and allow it to install
+1. In the command line window, type `py -3 -m pip install pycryptodomex`, hit ENTER, and allow it to install
   + If this command fails with the error `No module named pip`, you must manually install pip. The methods to do this can be found on [this page](https://pip.pypa.io/en/stable/installation/).
-1. Turn your console on while the SD card is inserted
+1. Power on your console while the SD card is inserted
 1. Nyisd meg a Mii készítő (Mii Maker) alkalmazást
 1. Érintsd meg a "QR Code/Image Options" gombot
 1. Tap "Save Mii as QR Code"
 1. Select any Mii Character (make a new one first if you don't have any), and press "OK"
-1. Turn the console off
-1. Put the console's SD card into your computer, navigate to the `Nintendo 3DS` folder on the SD, and copy the name of the 32-character-long folder directly inside
-  + This folder, known as the ID0, is system-specific. Only one should be present. Ha többet látsz, kövesd [ezeket a lépéseket](troubleshooting#seedminer)
-  + Once you have the ID0, paste it into a document so you can reference it later
+1. Kapcsold ki a konzolod
+1. Helyezd az SD kártyád a számítógépbe
+1. Lépj be az SD kártyád `Nintendo 3DS` könyvtárába
+1. Másold le a 32 karakter hosszú nevét annak a mappának, amit látsz a Nintendo 3DS mappán belül
+  + Ez a 32 karakter hosszú név rendszer specifikus és eltérő minden konzolnál
+  + Ha több 32 karakter hosszú nevű mappát látsz, kövesd [ezeket a lépéseket](troubleshooting#seedminer)
+  + Figyelmen kívül hagyhatod a `private` mappát, ha rendelkezel vele
+
+	![]({{ "/images/screenshots/seedminer/id0-example.png" | absolute_url }})
+	{: .notice--info}
+1. Illesztd be a te 32-karakteres mappa neved [egy dokumentumba](/images/screenshots/seedminer/text-document.png) amit megtalálsz később
+  + Ez a mappa a te "ID0" mappád. Jegyezd fel ezt, mert az útmutató később hivatkozni fog rá
 1. Navigate to the `DCIM` folder on the SD card
 1. Look for the QR Code, which will be a `.JPG` file starting with `HNI`
   + You may have many other files in here already if you use the Nintendo 3DS Camera app
@@ -73,6 +81,7 @@ In this section, you will turn the Mii QR code into a usable file and mine `mova
 1. Ebbe az ablakba írd be a `py -3 seedminer_launcher3.py id0 <id0>` parancsot
   + Helyettesítsd az `<id0>`-t az ID0+val amit a dokumentumba másoltál
   + Ne legyenek benne a kacsacsőrök
+  + Ne próbáld meg kézzel beadni az ID0 kódot, mert könnyű hibázni. Legyél biztos abban, hogy az ID0 helyes, azzal, hogy másolod és beilleszted onnan, ahova az előző részben elmentetted
 1. Ha végzett írd be a `py -3 seedminer_launcher3.py mii <model> <year>` parancsot
   + Replace `<model>` with the model of your console (`new` or `old`) - if you aren't sure, only models with the ZL/ZR buttons and C-Stick are "new"
   + Replace `<year>` with the year the 3DS was made (you often find this behind the backplate) - leave this empty if you aren't sure, in which case it will start from the middle
