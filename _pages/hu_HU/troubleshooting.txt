@@ -23,8 +23,8 @@ Több oldalon használt:
 * [Telepítés véglegesítése](#finalizing-setup)
 
 Problémák telepítést követően:
-* [Boot issues](#boot-issues-on-consoles-with-custom-firmware)
-* [Software issues](#software-issues-on-consoles-with-custom-firmware)
+* [Boot problémák](#boot-issues-on-consoles-with-custom-firmware)
+* [Szoftver problémák](#software-issues-on-consoles-with-custom-firmware)
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -74,7 +74,7 @@ This occurs when you use your SD card in multiple 3DS consoles and is intended t
 
 1. Nevezd át a `Nintendo 3DS` mappát `BACKUP_Nintendo 3DS` névre
 1. Tedd vissza az SD kártyád a konzoldba
-1. Power on your console
+1. Kapcsold be a konzolod
 1. Wait for the console to generate the SD card data
 	+ Az alkalmazásaidnak el kell tűnniük. Ez normális, hamarosan megoldjuk
 1. Kapcsold ki a konzolod
@@ -131,7 +131,7 @@ Biztosítsd, hogy az `F00D43D5.bin` az egyetlen fájl a `Nintendo 3DS` -> `<ID0>
 
 Továbbá légy biztos abban, hogy a `bb3.bin` fájl megtalálható az SD kártyád gyökerében. Ha hiányzik, töltsd le a legutolsó kiadását az [Bannerbomb3](https://github.com/lifehackerhansol/Bannerbomb3/releases/download/v3.0-lhs1/bb3.bin)-nak (közvetlen letöltés), és másold a `bb3.bin` fájlt az SD kártyád gyökerébe.
 
-If neither of these solutions fixes this problem, then custom firmware may have been uninstalled on this console in a way that makes this method impossible to perform. Ebben az esetben csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és kérj, támogatást angolul.
+Ha ezen megoldások egyike sem javítja ezt a problémát, akkor az egyedi firmware eltávolításra kerülhetett erről a konzolról, úgy, hogy az lehetetlenné teszi ennek a metódusnak a végrehajtását. Ebben az esetben csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és kérj, támogatást angolul.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -299,9 +299,9 @@ A `00000001.sav` fájlod valószínüleg rossz helyen van, vagy nem a jó `movab
 {% capture compat %}
 <summary><u>Piros/lila/rózsaszín és fehér képernyő a Soundhax futtatása után</u></summary>
 
-If your console is on system version 9.4.0, 9.5.0, or 9.6.0, you may be encountering a bug with an old version of universal-otherapp. Download the latest version from [here](https://github.com/TuxSH/universal-otherapp/releases/latest).
+Ha a konzol rendszer verziód 9.4.0, 9.5.0, vagy 9.6.0, hibát tapasztalhatsz az universal-otherapp egy régebbi verziójával. Töltsd le a legfrissebb verziót [innen](https://github.com/TuxSH/universal-otherapp/releases/latest).
 
-If your console is not on those firmwares, it likely indicates that you already have custom firmware. Érdemes elvégezned a [CFW ellenőrzését](checking-for-cfw).
+Ha nem ezeken a firmware verziókon van a konzolod, akkor ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvégezned a [CFW ellenőrzését](checking-for-cfw).
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -315,7 +315,7 @@ Probléma van a `otherapp.bin` fájloddal (nem jó, hiányzik, rossz helyen van 
 {% capture compat %}
 <summary><u>"Could not play"</u></summary>
 
-You have the wrong Soundhax file for your console and region, or your console is incompatible with Soundhax. In the latter case, you should update your console to the latest version and follow [Seedminer](seedminer).
+Rossz Soundhax fájlod van a konzolodhoz és a régiódhoz vagy az eszközöd nem kompatibilis a Soundhax-szal. Ez utóbbi esetben frissítsd a konzolod a legutolsó verzióra és kövesd a [Seedminer](seedminer) lépéseit.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -381,7 +381,7 @@ Az SSLoth proxy nem lett megfelelően konfigurálva. Csináld újra az SSLoth fe
 
 Kövesd az alábbi lépéseket:
 
-1. Launch System Settings on your console
+1. Lépj be a "System Settings"-be a konzolodon
 1. Navigálj az `Internet Settings` -> `Connection Settings` opciókhoz
 1. Kattints a saját hálózati kapcsolatodra és navigálj a `Change Settings` -> `Next Page (jobb nyíl)` -> `Proxy Settings` opcióhoz
 1. Állítsd a "Proxy Settings"-t "No"-ra
@@ -400,7 +400,7 @@ Kövesd az alábbi lépéseket:
 {% capture compat %}
 <summary><u>"To use the Internet Browser, please update your system using the System Update option in the System Settings."</u></summary>
 
-Először győződj meg arról, hogy a megfelelő proxy-t adtad meg a kapcsolathoz amit használsz. Ha nem, menj vissza a [II. részhez](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth). If the proxy is correct, then your console has been cart-updated, which means an alternate exploit will need to be used.
+Először győződj meg arról, hogy a megfelelő proxy-t adtad meg a kapcsolathoz amit használsz. Ha nem, menj vissza a [II. részhez](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth). Ha a proxy helyes, akkor a konzolodhoz kártya-frissített, ami azt jelenti, hogy egy alternatív exploit-ot kell használnod.
 
 <u>1. metódus</u><br>
 Ha a szám a régió előtt kisebb vagy egyenlő 36-tal (pl. Ver. 11.14.0-**36**U), akkor követheted a [Soundhax](installing-boot9strap-(soundhax)) metódust. Amikor kérdezi, válassz és használj egy firmware-t a hangfájl generáláshoz:
@@ -587,7 +587,7 @@ Az alábbi lépések tetszőleges sorrendben hajthatók végre, azonban a lista 
 		+ **KOR régió**: `000000A9`
 		+ **TWN régió**: `000000B1`
 1. Próbálj meg recovery mode-ba bootolni, majd onnét frissíteni a rendszeredet:
-	+ Power off your console
+	+ Kapcsold ki a konzolod
 	+ Tartsd nyomva a (Bal Váll) + (Jobb Váll) + (D-Pad Fel) + (A) gombokat
 	+ Power on your console
 	+ If you were successful, the console will boot to an "update your system" screen
@@ -615,7 +615,7 @@ Számos oka lehet, hogy miért történik így. Bármelyik esetben, ez a hiba á
 <summary><u>"An error has occurred. Hold down the POWER button to turn off the power..."</u></summary>
 
 Az ARM11 kivételkezelők tiltva, vagy az egyedi firmware nincs telepítve. Próbáld meg engedélyezni az ARM11 kivétel kezelőket:
-  + Power off your console
+  + Kapcsold ki a konzolod
   + Tartsd nyomva a (Select) gombot
   + Power on your console, while still holding (Select)
   + Ha a "Disable ARM11 exception handlers" jelölőnégyzet bejelölt, vedd ki a jelölést
@@ -665,7 +665,7 @@ Készítsd egy képet a hibáról és csatlakozz a [Nintendo Homebrew-hoz a Disc
 1. Indítsd el a TWLFix-CFW-t a homebrew listából
 1. Nyomj (A)-t a törött TWL címek eltávolításához
 1. Press (Start) to reboot the console
-1. Update your console by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
+1. Frissítsd a konzolod következőképp: Lépj be a System Settings-be, majd az "Other settings"-be, ahol addig lépkedj jobbra, amíg a végére nem érsz. Itt válaszd a "System Update" opciót
   + A frissítés észreveszi, hogy lényeges TWL címek kerültek eltávolításra és le fogja tölteni és újratelepíteni azokat
 1. Once the update is complete, tap "OK" to reboot the console
 {% endcapture %}
