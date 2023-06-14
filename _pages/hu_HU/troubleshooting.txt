@@ -70,12 +70,12 @@ Csatlakozz a [Nintendo Homebrew Discord-on](https://discord.gg/MWxPgEp) csatorn�
 ![]({{ "/images/screenshots/multiple-id0.png" | absolute_url }})
 {: .notice--info}
 
-This occurs when you use your SD card in multiple 3DS consoles and is intended to prevent inadvertently merging data that would not be valid on other consoles. Ahhoz, hogy megtaláld melyik hosszú mappa név a helyes a 3DS-edhez, kövesd a következő lépéseket:
+Ez akkor fordul elő, ha az SD kártyádat több 3DS konzolban használod, és a célja, hogy megakadályozza a nem szándékos adat egyesítést olyan adattal, ami nem lenne érvényes másik konzolon. Ahhoz, hogy megtaláld melyik hosszú mappa név a helyes a 3DS-edhez, kövesd a következő lépéseket:
 
 1. Nevezd át a `Nintendo 3DS` mappát `BACKUP_Nintendo 3DS` névre
 1. Tedd vissza az SD kártyád a konzoldba
 1. Kapcsold be a konzolod
-1. Wait for the console to generate the SD card data
+1. Várd meg, amíg a konzolod legenerálja az SD kártyára az adatokat
 	+ Az alkalmazásaidnak el kell tűnniük. Ez normális, hamarosan megoldjuk
 1. Kapcsold ki a konzolod
 1. Helyezd az SD kártyád a számítógépbe
@@ -276,7 +276,7 @@ Ha a fájljaid jó helyen vannak, hozd létre újra a mentéseket a [PicHaxx Sav
 {% capture compat %}
 <summary><u>"An exception occurred" vagy Errdisp a Picross megnyitásakor</u></summary>
 
-Your console already has custom firmware. Érdemes elvégezned a [CFW ellenőrzését](checking-for-cfw).
+A konzolod már rendelkezik egyedi firmware-rel. Érdemes elvégezned a [CFW ellenőrzését](checking-for-cfw).
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -517,17 +517,17 @@ Ha van elég szabad hely az SD kártyádon, az SD kártya lehet sérült vagy hi
 
 ---
 
-## Boot issues on consoles with custom firmware
+## Boot problémák egyedi firmware-rel rendelkező konzolokon
 
-The steps detailed here generally assume that your console has a modern custom firmware setup (boot9strap + Luma3DS 8.0 or greater). Ha a konzolod régebbi homebrew telepítés (például valami ami arm9loaderhax vagy menuhax alapú), frissítened kell a telepítésed, mielőtt kipróbálod ezeket a lépéseket.
+Az itt leírt lépések általában feltételezik, hogy a konzolod modern egyedi firmware telepítéssel rendelkezik (boot9strap + Luma3DS 8.0 vagy nagyobb). Ha a konzolod régebbi homebrew telepítés (például valami ami arm9loaderhax vagy menuhax alapú), frissítened kell a telepítésed, mielőtt kipróbálod ezeket a lépéseket.
 {: .notice--info}
 
 ### Táp/értesítő LED fény indikátorok
 
 {% capture compat %}
-<summary><u>My console powers off when I try to turn it on, and/or the notification LED shows a color on boot</u></summary>
+<summary><u>A konzolom kikapcsol, ha megpróbálom bekapcsolni és/vagy az értesítő LED egy színt mutat bootoláskor</u></summary>
 
-Probléma van az `boot.firm` fájloddal. Ha [boot9strap 1.4](https://github.com/SciresM/boot9strap/releases/tag/1.4)-et futtatsz, akkor a 3DS-ed értestő LED-je egy adott sznt villogtat. Ez a szín a `boot.firm` problémák diagnosztizálását segíti az SD kártyán vagy a belső memóriában. On older versions of boot9strap, the blue light will power off almost immediately when trying to turn on the console.
+Probléma van az `boot.firm` fájloddal. Ha [boot9strap 1.4](https://github.com/SciresM/boot9strap/releases/tag/1.4)-et futtatsz, akkor a 3DS-ed értestő LED-je egy adott sznt villogtat. Ez a szín a `boot.firm` problémák diagnosztizálását segíti az SD kártyán vagy a belső memóriában. Régebbi boot9strap verziókon a kék fény azonnal kikapcsol, ha megpróbálod bekapcsolni a konzolt.
 
 Ha az értesítő LED villog:
 
@@ -537,18 +537,18 @@ Ha az értesítő LED villog:
 
 Beszerezhetsz `boot.firm` fájlt a [Luma3DS legfrissebb kiadásának letöltésével](https://github.com/LumaTeam/Luma3DS/releases/latest) és annak kicsomagolásával, majd a `boot.firm` fájlnak az SD kártyád gyökerébe helyezésével. Ha a `boot.firm` fájlod folyamatosan sérültnek érzékelt, szükség lehet az SD kártyád hibákra ellenőrzésére ([Windows](h2testw-(windows)), [Linux](f3-(linux)), vagy [macOS](f3xswift-(mac))). Azt is vedd figyelembe, hogy a 3DS-nek problémái lehetnek olyan fájlokkal, amit WinRAR-ral csomagoltak ki.
 
-If you hear a "popping sound", potentially accompanied with the backlight turning on for a split second, there is a hardware issue with your console (such as a disconnected backlight cable). You may be able to get your console to boot by holding it at certain angles.
+Ha hallod a "pattanó hangot", ami potenciálisan a háttérvilágítás bekapcsolását kíséri a másodperc egy részéig, akkor hardver problémád van a konzoloddal (mint például lecsatlakozott háttérvilágítás kábel). Lehetséges, hogy be tudod kapcsolni a konzolodat megfelelő szögben tartva.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>My console gets stuck on a black screen with blue power light staying on</u></summary>
+<summary><u>A konzolom fekete képernyőn ragad, a kék power led bekapcsolva marad</u></summary>
 
 Az alábbi lépések tetszőleges sorrendben hajthatók végre, azonban a lista a legrövidebbtől a legtöbb időt igénylőig van összeállítva.
 
-1. Power off your console, remove the SD card, re-insert it, then power on your console.
-1. Power off your console, eject the game cartridge if inserted, power on your console, then wait up to ten minutes. If your console boots within ten minutes, the issue has been fixed and is unlikely to reoccur
-1. + Nevezd át a `Nintendo 3DS` mappát az SD kártyádon `Nintendo 3DS_BACKUP` névre és próbálj meg bootolni. If your console successfully boots, there is some issue within your `Nintendo 3DS` folder. Próbáld meg kitakarítani a HOME menu extdata-t:
+1. Kapcsold ki a konzolod, vedd ki majd tedd vissz az SD kártyát, majd kapcsold be újra a konzolod.
+1. Kapcsold ki a konzolod, vedd ki a játék cartridge-t ha van benne, majd kapcsold be a konzolod és várj tíz percet. Ha a konzolod bebootol tíz percen belül, a probléma elhárult és nem fog valószínűleg újra előfordulni
+1. + Nevezd át a `Nintendo 3DS` mappát az SD kártyádon `Nintendo 3DS_BACKUP` névre és próbálj meg bootolni. Ha a konzolod sikeresen bootol, problémák vannak a `Nintendo 3DS` könyvtáraddal. Próbáld meg kitakarítani a HOME menu extdata-t:
 	+ Navigálj a `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` mappába
   + Töröld a 3DS régiódhoz tartozó mappát:
 		+ **EUR régió**: `00000098`
@@ -560,8 +560,8 @@ Az alábbi lépések tetszőleges sorrendben hajthatók végre, azonban a lista 
 1. Próbálj meg recovery mode-ba bootolni, majd onnét frissíteni a rendszeredet:
 	+ Kapcsold ki a konzolod
 	+ Tartsd nyomva a (Bal Váll) + (Jobb Váll) + (D-Pad Fel) + (A) gombokat
-	+ Power on your console
-	+ If you were successful, the console will boot to an "update your system" screen
+	+ Kapcsold be a konzolod
+	+ Ha sikeres voltál, a konzolod egy "update your system" képernyőre bootol
 1. Kövesd a [CTRTransfer](ctrtransfer) útmutatót
 1. További támogatásért kérj segítséget a [Nintendo Homebrew-tól a Discord-on](https://discord.gg/MWxPgEp)
 {% endcapture %}
@@ -588,7 +588,7 @@ Számos oka lehet, hogy miért történik így. Bármelyik esetben, ez a hiba á
 Az ARM11 kivételkezelők tiltva, vagy az egyedi firmware nincs telepítve. Próbáld meg engedélyezni az ARM11 kivétel kezelőket:
   + Kapcsold ki a konzolod
   + Tartsd nyomva a (Select) gombot
-  + Power on your console, while still holding (Select)
+  + Kapcsold be a konzolod, miközben nyomva tartod a (Select) gombot
   + Ha a "Disable ARM11 exception handlers" jelölőnégyzet bejelölt, vedd ki a jelölést
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -597,11 +597,11 @@ Az ARM11 kivételkezelők tiltva, vagy az egyedi firmware nincs telepítve. Pró
 <summary><u>A HOME Menüből hiányoznak telepített alkalmazások</u></summary>
 
 Ez különböző okokból is előfordulhat, de leginkább azért, mert az SD kártyád nem került beolvasásra a rendszer által.
-You can check if your SD is being read by holding SELECT on boot and checking the yellow text on the bottom screen; if it says "Booted from CTRNAND via B9S", then your console is booting from the internal memory and not from the SD card.
+Ellenőrizheted, hogy az SD kártyád olvasásra kerül-e a SELECT gomb nyomva tartásával bootoláskor, és az alsó képernyőn megjelenő sárga szöveg ellenőrzésével; ha azt mondja, hogy "Booted from CTRNAND via B9S", akkor a konzolod a belső memóriáról bootolt, nem az SD kártyáról.
 Ha ez a helyzet, próbáld meg a lépéseket alább, ami a legkönnyebbtől a legnehezebbig került felsorolásra:
-1. Power off your console, remove the SD card, re-insert it, then power on your console
-1. Power off your console, remove the SD card, insert it on your PC, download the latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), extract `boot.firm` from the `Luma3DS.zip` and place it on the root of your SD card (replacing any existing file)
-1. Power off your console, remove the SD card, insert it on your PC and reformat your SD card according to your computer's operating system: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)) *(this will wipe your SD card data)*
+1. Kapcsold ki a konzolod, vedd ki majd tedd vissz az SD kártyát, majd kapcsold be újra a konzolod
+1. Kapcsold ki a konzolod, távolítsd el az SD kártyád, majd csatlakoztasd a PC-dhez. Töltsd le a legutolsó kiadását az [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)-nek és csomagold ki a `Luma3DS.zip` fájlból a `boot.firm` fájlt, majd rakd az SD kártyád gyökerébe (felülírva bármilyen létező fájlt)
+1. Kapcsold ki a konzolod, távolítsd el az SD kártyát, csatlakoztasd a PC-dhez és formázd újra az SD kártyád az operációs rendszerednek megfelelően: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)) *(ez törölni fogja az SD kártya adatait)*
 1. Teszteld az SD kártyádat hibákra az operációs rendszerednek megfelelő útmutató szerint haladva: [Windows](h2testw-(windows)), [Linux](f3-(linux)), [macOS](f3xswift-(mac)). Ha az SD kártyád hibásnak jelölt, cserélned kell az SD kártyádat
 1. Az SD kártya foglalatod is lehet hibás. Csatlakozz a[Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) további segítségért
 {% endcapture %}
