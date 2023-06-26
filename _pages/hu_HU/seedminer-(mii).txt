@@ -5,11 +5,11 @@ title: "Seedminer (Mii)"
 {% include toc title="Tartalomjegyzék" %}
 
 {% capture gpu_warning %}
-Ez a metódus egy ésszerűen erős GPU-t igényel (bármilyen dedikált grafikus kártya, amit az elmúlt években készítettek) és a parancssor használatának képességét. If you don't know what those are or do not have the hardware necessary, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp), open the "#mii-mining-assistance" channel and provide the following:
-+ Your Mii QR code, uploaded directly to Discord (do not take a screenshot or a photo of the image, just send the HNI_XXXX.JPG image itself)
-+ Your console's ID0 (the name of the 32-character folder directly inside of Nintendo 3DS - see [this troubleshooting section](https://3ds.hacks.guide/troubleshooting#seedminer) if you have multiple)
-+ Your console model (e.g. 3DS, 3DS XL, 2DS, New3DS, New3DS XL, New2DS XL)
-+ Your console's approximate year of manufacturing (it may be present behind the frontplate or backplate; if you don't know, just guess - it's not super important)
+Ez a metódus egy ésszerűen erős GPU-t igényel (bármilyen dedikált grafikus kártya, amit az elmúlt években készítettek) és a parancssor használatának képességét. Ha nem tudod mik ezek vagy nem rendelkezel a szükséges hardverrel, csatlakozz a [Nintendo Homebrew-ra Discord-on](https://discord.gg/MWxPgEp), és nyisd meg a "#mii-mining-assistance" csatornát, majd add meg a következőket:
++ A Mii QR kódod, közvetlenül feltöltve a Discord-ra (ne készíts képernyő képet vagy fotót a képről, csak küld el a HNI_XXXX.JPG képet magát)
++ A konzolod ID0 azonosítója (a 32 karakter hosszú nevű mappa közvetlenül a Nintendo 3DS mappában - tekintsd meg [ezt a hibaelhárítási útmutatót](https://3ds.hacks.guide/troubleshooting#seedminer) ha több is van)
++ A konzolod modellje (pl. 3DS, 3DS XL, 2DS, New3DS, New3DS XL, New2DS XL)
++ A konzolod becsült gyártási éve (talán megtalálható az elő vagy hátlap alatt; ha nem tudod, tippelj - nem szuper fontos)
 {% endcapture %}
 <div class="notice--warning">{{ gpu_warning | markdownify }}</div>
 
@@ -41,7 +41,7 @@ Ha Linux-ot vagy macOS-t használsz, cseréld ki a `py -3`-at `python3`-mal az �
 
 Ebben a fejezetben a telepíteni fogjuk a Seedminer-t és beszerezzük a konzolod azon fájljait, amik a bányászáshoz szükségesek.
 
-1. Extract the contents of the Seedminer `.zip` and move the folder with your operating system's name to anywhere on your PC
+1. Csomagold ki a Seedminer `.zip` tartalmát és mozgasd ebből az operációs rendszereddel egyező nevű mappát bárhova a PC-dre
   + Legyen ez a hely kéznél, mert ebbe a Seedminer mappába további fájlok kerülnek
 1. A Seedminer mappában tartsd lenyomva a SHIFT gombot, majd jobb gombbal kattints bárhova a mappában, ahol üres hely van, és válaszd azt az opciót, ami megnyitja a Terminal-t, PowerShell-t vagy a parancssort (Command Prompt-ot)
 1. A parancssori ablakba írd be a `py -3 -m pip install pycryptodomex` parancsot, majd nyomj ENTER-t és engedélyezd (allow) a telepítését
@@ -88,9 +88,9 @@ Ebben a fejezetben a Mii QR kódodból egy használható fájl amivel kibányás
   + A bányászási folyamat általában 90 percet igényel, függően a szerencétől és a GPU erősségétől
   + Az első szakasz a konzolmodelltől függően valószínűleg nagyjából 1500 offset-nél maximális
   + Ha a második fázis (miután látható volt a `movable_part2.sed generation success` üzenet) túljutott a 100-as offset-en, ellenőrizd, hogy helyes ID0-t adtál-e meg. Ha az ID0 értéked korrekt, nem tudod használni ezt a metódust és frissítened kell a legutols verzióra és meg kell nézned, hogy egy nem-Seedminer metódus elérhető-e számodra [itt](alternate-exploits)
-  + If you see the message `input.bin is invalid size`, remake the `input.bin` using your QR Code. If it *still* fails, open a different browser and remake the `input.bin` there
-  + If you see the message `LFCS has been left blank`, use the opposite console model (e.g. `mii old` instead of `mii new`)
-1. When it finishes, a file called `movable.sed` will appear in the Seedminer folder
+  + Ha az `input.bin is invalid size` üzenetet látod, csinád újra az `input.bin` fájlt a QR kódodat használva. Ha *még mindig* hibára fut, nyiss meg egy másik böngészőt és készítsd újra az `input.bin` fájlt ott
+  + Ha a `LFCS has been left blank` üzenetet látod, használd az ellentétes konzol modelt (pl. `mii old` helyett `mii new`)
+1. Ha végzett, egy fájl `movable.sed` névvel megjelenik a Seedminer mappában
 
 + Folytasd a [BannerBomb3 (régi verziók)-al](bannerbomb3-(legacy))
 {: .notice--primary}
