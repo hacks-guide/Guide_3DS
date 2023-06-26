@@ -6,7 +6,7 @@ title: "boot9strap 설치 (Frogtool)"
 
 {% capture technical_info %}
 <summary><em>기술적 상세 정보 (선택 사항)</em></summary>
-For technical details on the exploits that you will be using on this page, see "DSiWare_Exports CTCert verification" and "FIRM partitions known-plaintext" [here](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+이 페이지에서 사용하게 될 취약점에 대한 기술적 세부 정보는 [여기 (영어)](https://www.3dbrew.org/wiki/3DS_System_Flaws)에 "DSiWare_Exports CTCert verification" 및 "FIRM partitions known-plaintext" 관련 글을 참조하세요.
 
 {% endcapture %}
 <details>{{ technical_info | markdownify }}</details>
@@ -20,7 +20,7 @@ For technical details on the exploits that you will be using on this page, see "
 ### 준비물
 
 * Your `movable.sed` file from completing Seedminer or nimhax on the root of your SD card
-* <i class="fa fa-magnet" aria-hidden="true" title="이것은 마그넷 링크입니다. Use a torrent client to download the file."></i> [frogcert.bin](magnet:?xt=urn:btih:d12278ea50bb3574f1fbd327f3d0e2292c70941f&dn=frogcert.bin&tr=https%3a%2f%2ftracker.fastdownload.xyz%3a443%2fannounce&tr=https%3a%2f%2fopentracker.xyz%3a443%2fannounce&tr=http%3a%2f%2fopen.trackerlist.xyz%3a80%2fannounce&tr=http%3a%2f%2ft.nyaatracker.com%3a80%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2fopen.demonii.si%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.port443.xyz%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.vanitycore.co%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&tr=udp%3a%2f%2fthetracker.org%3a80%2fannounce&tr=http%3a%2f%2ftorrent.nwps.ws%3a80%2fannounce&tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.iamhansen.xyz%3a2000%2fannounce&tr=udp%3a%2f%2fbt.xxx-tracker.com%3a2710%2fannounce&tr=http%3a%2f%2f0d.kebhana.mx%3a443%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2ftracker4.itzmx.com%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.justseed.it%3a1337%2fannounce&tr=http%3a%2f%2ftherightsize.net%3a1337%2fannounce&tr=udp%3a%2f%2fretracker.hotplug.ru%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&tr=udp%3a%2f%2f9.rarbg.com%3a2800%2fannounce&tr=https%3a%2f%2f2.track.ga%3a443%2fannounce&tr=udp%3a%2f%2fbigfoot1942.sektori.org%3a6969%2fannounce) (magnet link)
+* <i class="fa fa-magnet" aria-hidden="true" title="이것은 마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드 해주세요."></i> [frogcert.bin](magnet:?xt=urn:btih:d12278ea50bb3574f1fbd327f3d0e2292c70941f&dn=frogcert.bin&tr=https%3a%2f%2ftracker.fastdownload.xyz%3a443%2fannounce&tr=https%3a%2f%2fopentracker.xyz%3a443%2fannounce&tr=http%3a%2f%2fopen.trackerlist.xyz%3a80%2fannounce&tr=http%3a%2f%2ft.nyaatracker.com%3a80%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2fopen.demonii.si%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.port443.xyz%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.vanitycore.co%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&tr=udp%3a%2f%2fthetracker.org%3a80%2fannounce&tr=http%3a%2f%2ftorrent.nwps.ws%3a80%2fannounce&tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.iamhansen.xyz%3a2000%2fannounce&tr=udp%3a%2f%2fbt.xxx-tracker.com%3a2710%2fannounce&tr=http%3a%2f%2f0d.kebhana.mx%3a443%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2ftracker4.itzmx.com%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.justseed.it%3a1337%2fannounce&tr=http%3a%2f%2ftherightsize.net%3a1337%2fannounce&tr=udp%3a%2f%2fretracker.hotplug.ru%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&tr=udp%3a%2f%2f9.rarbg.com%3a2800%2fannounce&tr=https%3a%2f%2f2.track.ga%3a443%2fannounce&tr=udp%3a%2f%2fbigfoot1942.sektori.org%3a6969%2fannounce) (magnet link)
 * 최신 버전의 [Frogtool](https://github.com/zoogie/Frogtool/releases/latest)
 * 최신 버전의 [b9sTool](https://github.com/zoogie/b9sTool/releases/latest)
 
@@ -39,14 +39,14 @@ For technical details on the exploits that you will be using on this page, see "
 1. SD 카드를 콘솔에 다시 삽입해 주세요
 1. 콘솔을 시작해 주세요
 
-#### Section III - Patching DS Download Play
+#### 섹션 III - DS 다운로드 플레이 패치
 
 1. 아무 방법을 사용해 Homebrew Launcher를 실행해 주세요 (아마 인터넷 브라우저일 겁니다)
 1. 홈브류 목록에서 Frogtool를 실행해 주세요
-1. Select the "INJECT patched DS Download Play" option
-1. Frogtool will automatically run and inject the JPN version of Flipnote Studio into your DS Download Play
+1. "INJECT patched DS Download Play" 옵션을 선택해 주세요
+1. Frogtool이 자동으로 Flipnote Studio의 JPN 버전을 DS 다운로드 플레이에 삽입할 것입니다
 1. 작업이 완료되면, 위 화면을 읽고 문제가 없는지 확인해 주세요
-1. Tap the touch screen, then select "BOOT patched DS Download Play"
+1. 터치 스크린을 탭하고, "BOOT patched DS Download Play" 을 선택해 주세요
 1. 만약 익스플로잇이 성공적이었다면, 콘솔은 JPN 버전의 Flipnote Studio를 실행할 겁니다
     + If you get stuck on a black screen, follow [this](https://wiki.hacks.guide/wiki/3DS:TWLFix#Homebrew_Launcher-0) page, then try again
 
@@ -76,10 +76,10 @@ For technical details on the exploits that you will be using on this page, see "
 1. 다운로드 플레이 앱을 다시 실행해 주세요
 1. 성공하면 Homebrew Launcher가 실행될 것입니다
 1. 홈브류 목록에서 Frogtool를 실행해 주세요
-1. Select the "RESTORE clean DS Download Play" option
+1. "RESTORE clean DS Download Play"을 선택해 주세요
 1. 작업이 완료되면, 위 화면을 읽고 문제가 없는지 확인해 주세요
     + If there are any errors or missing files, correct the problem and try again
-1. If the process was successful, tap the touch screen, then press START to exit
+1. 작업을 성공적으로 마치면 화연을 탭한 후 스타트 버튼(START) 를 눌러서 나가 주세요
 1. 콘솔을 종료해 주세요
 
 ___
