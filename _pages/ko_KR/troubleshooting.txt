@@ -490,28 +490,69 @@ If the problem persists:
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>L 버튼, 십자 패드 (아래), Select 버튼 중 하나 이상이 고장나 Rosalina 메뉴로 들어갈 수 없습니다</u></summary>
+<summary><u>Error #01: No Nintendo 3DS folder</u></summary>
 
-Download this [alternate config.ini](/assets/config.ini) and place it in `/luma/`. 이 파일은 Rosalina 키 조합을 (X) + (Y)로 바꿉니다.
+Your SD card does not have the `Nintendo 3DS` folder. Power on your device with your SD card inserted, then wait for the device to show a message box that says "Creating HOME Menu management information". Once the message box disappears, power off your device and try again.
+
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>다운로드 플레이로 Homebrew Launcher 실행 시 로딩이 멈추지 않거나 "An exception occurred" 화면이 표시됩니다</u></summary>
+<summary><u>Error #02: Missing essential.exefs</u></summary>
 
-`boot.3dsx` 파일에 문제가 있습니다. (없거나, 잘못 들어갔거나, 혹은 잘못된 파일) 최신 버전의 [Homebrew Launcher](https://github.com/devkitPro/3ds-hbmenu/releases/latest)을 다시 내려받고 `boot.3dsx` 파일을 SD 카드의 최상위 디렉토리에 복사해주세요. 이미 파일이 있으면 덮어씌워 주세요.
+You said 'No' to the "Make essential files backup?" prompt in GodMode9. Power off your device, power it on while holding (Start) to re-enter GodMode9, say 'Yes' to the prompt, then try again.
+
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>GodMode9에서 "Scripts directory not found"가 표시됩니다</u></summary>
 
-GodMode9 `.zip`안에 압축이 되있는 `gm9` 폴더를 SD 카드의 루트로 복사하지 않았습니다. 최신 버전의 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)을 다시 내려받고 `gm9` 폴더를 SD 카드의 최상위 디렉토리에 복사해주세요. 이미 폴더가 있으면 합병해 주세요.
+<summary><u>Unable to open GodMode9 or Error #03: Missing files</u></summary>
+
+You did not copy everything from `finalize.zip` to the root of your SD card. Remember, your SD card should have at least these files:
+
+![]({{ "/images/screenshots/finalizing-root-layout.png" | absolute_url }})
+{: .notice--info}
+
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>NAND 백업을 실행할 때 "Backup failed" 또는 "Error: Could not open directory"가 표시됩니다</u></summary>
+
+<summary><u>Error #04: No space</u></summary>
+
+You need at least 1.3GB of free space to perform the NAND backup, which is apart of the script. 빈 공간이 부족하다면 다음 단계를 따르세요.
+
+1. 콘솔을 종료해 주세요
+1. SD 카드를 분리해 컴퓨터에 장착해주세요
+1. SD 카드의 루트에 있는 `Nintendo 3DS` 폴더를 컴퓨터에 복사해주세요
+1. SD 카드에서 `Nintendo 3DS` 폴더를 지워주세요
+1. SD 카드를 콘솔에 다시 삽입해 주세요
+1. 콘솔의 전원을 끄고, START 버튼을 누른 채 전원을 켜 GodMode9로 진입하세요
+1. "Scripts..."를 선택해 주세요
+1. Select "finalize"
+1. Follow the prompts in the script, answering each question that you are asked
+1. SD 카드의 `gm9/out` 폴더 내 파일을 컴퓨터의 안전한 위치에 복사해 주세요
+1. SD 카드의 `/gm9/out` 폴더에서 essential.exefs는 남기고 `<date>_<serialnumber>_sysnand_##.bin` 및 `<date>_<serialnumber>_sysnand_##.bin.sha` 파일을 삭제해주세요
+1. 컴퓨터에서 SD 카드의 루트로 복사해 두었던 `Nintendo 3DS` 폴더를 다시 복사해 주세요
+1. 컴퓨터에서 `Nintendo 3DS` 폴더를 지워주세요
+
+Once done, re-run the script.
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Error #05: No title database</u></summary>
+
+Press (A) to create a title database, follow the prompts [here](/images/screenshots/database-reset.jpg), then re-run the script.
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Error #06 or "Error: Could not open directory" when attempting a NAND backup</u></summary>
+
 SD 카드에 1.3GB 이상의 빈 공간이 있는지 확인해주세요. 빈 공간이 부족하다면 다음 단계를 따르세요.
 1. 콘솔을 종료해 주세요
 1. SD 카드를 분리해 컴퓨터에 장착해주세요
@@ -526,6 +567,14 @@ SD 카드에 1.3GB 이상의 빈 공간이 있는지 확인해주세요. 빈 공
 1. 컴퓨터에서 `Nintendo 3DS` 폴더를 지워주세요
 
 SD 카드의 용량이 충분하다면, SD 카드가 손상되었거나 불량일 수 있습니다. 컴퓨터의 운영 체제에 따라 SD 카드에 오류가 있는지를 확인해주세요: [Windows](h2testw-(windows)), [Linux](f3-(linux)), [macOS](f3xswift-(mac)).
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Error #08: Dummy title database</u></summary>
+
+You didn't delete the dummy title database that was created by Error #05. Follow the prompts [here](/images/screenshots/database-reset.jpg), then re-run the script.
+
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
