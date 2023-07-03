@@ -490,28 +490,69 @@ Az alábbi lépések tetszőleges sorrendben hajthatók végre, azonban a lista 
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Nem sikerül belépni a Rosalina menübe, hibás Bal váll / D-Pad Le / Select gomb(ok) miatt</u></summary>
+<summary><u>Error #01: No Nintendo 3DS folder</u></summary>
 
-Töltsd le [ezt az alternatív config.ini fájlt](/assets/config.ini) és rakd a `/luma/` mappába. Ez módosítja a Rosalina billentyű kombinációt (X) + (Y)-ra.
+Your SD card does not have the `Nintendo 3DS` folder. Power on your device with your SD card inserted, then wait for the device to show a message box that says "Creating HOME Menu management information". Once the message box disappears, power off your device and try again.
+
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>"An exception occurred" vagy végtelen "Nintendo 3DS" képernyő, miután megpróbálom elindítani a Homebrew Launcher-t a Download Play-ből</u></summary>
+<summary><u>Error #02: Missing essential.exefs</u></summary>
 
-Probléma van a `boot.3dsx` fájloddal (nem jó, hiányzik, rossz helyen van vagy sérült). Töltsd le a legutolsó kiadását a [Homebrew Launcher](https://github.com/devkitPro/3ds-hbmenu/releases/latest)-nek és rakd a `boot.3dsx` fájlt az SD kártyád gyökerébe, felülírva bármilyen létező fájlt.
+You said 'No' to the "Make essential files backup?" prompt in GodMode9. Power off your device, power it on while holding (Start) to re-enter GodMode9, say 'Yes' to the prompt, then try again.
+
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>"Scripts directory not found" a GodMode9-ben</u></summary>
 
-Nem másoltad át a `gm9` mappát a GodMode9 `.zip`-ből az SD kártyád gyökerébe. Töltsd le a legutolsó kiadását az [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)-nek és rakd a `gm9` mappát az SD kártyád gyökerébe, egyesítve (mergelve) a létezővel.
+<summary><u>Unable to open GodMode9 or Error #03: Missing files</u></summary>
+
+You did not copy everything from `finalize.zip` to the root of your SD card. Remember, your SD card should have at least these files:
+
+![]({{ "/images/screenshots/finalizing-root-layout.png" | absolute_url }})
+{: .notice--info}
+
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>"Backup failed" vagy "Error: Could not open directory" a NAND backup készítésének megpróbálásakor</u></summary>
+
+<summary><u>Error #04: No space</u></summary>
+
+You need at least 1.3GB of free space to perform the NAND backup, which is apart of the script. Ha nincs elég szabad helyed, kövesd ezeket a lépéseket:
+
+1. Kapcsold ki a konzolod
+1. Távolítsd el az SD kártyád, majd csatlakoztasd a számítógépedhez
+1. Másold a `Nintendo 3DS` mappát az SD kártya gyökeréből a számítógépedre
+1. Töröld a Nintendo 3DS mappát az SD kártyáról
+1. Tedd vissza az SD kártyád a konzoldba
+1. Kapcsold ki a konzolod, tartsd nyomva a START és power gombokat, továbbra is nyomva a START gombot a GodMode9-be bootoláshoz
+1. Válaszd a "Scripts..." opciót
+1. Select "finalize"
+1. Follow the prompts in the script, answering each question that you are asked
+1. Másold a `gm9/out` mappát az SD kártyádról egy biztonságos helyre a számítógépeden
+1. Töröld a `<date>_<serialnumber>_sysnand_##.bin` és a `<date>_<serialnumber>_sysnand_##.bin.sha` fájlokat az SD kártyád `/gm9/out/` mappájából, megtartva az essential.exefs-t a `/gm9/out/` -ban
+1. Másold a `Nintendo 3DS` mappát a számítógépedről az SD kártyád gyökerébe
+1. Töröld a `Nintendo 3DS` mappát a számítógépedről
+
+Once done, re-run the script.
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Error #05: No title database</u></summary>
+
+Press (A) to create a title database, follow the prompts [here](/images/screenshots/database-reset.jpg), then re-run the script.
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Error #06 or "Error: Could not open directory" when attempting a NAND backup</u></summary>
+
 Győződj meg róla, hogy legalább 1.3 GB szabad hely van az SD kártyádon. Ha nincs elég szabad helyed, kövesd ezeket a lépéseket:
 1. Kapcsold ki a konzolod
 1. Távolítsd el az SD kártyád, majd csatlakoztasd a számítógépedhez
@@ -526,6 +567,14 @@ Győződj meg róla, hogy legalább 1.3 GB szabad hely van az SD kártyádon. Ha
 1. Töröld a `Nintendo 3DS` mappát a számítógépedről
 
 Ha van elég szabad hely az SD kártyádon, az SD kártya lehet sérült vagy hibás. Ellenőrizd az SD kártyádat hibákra valamelyik programmal az alábbiak közül az operációs rendszerednek megfelelően: [Windows](h2testw-(windows)), [Linux](f3-(linux)), [macOS](f3xswift-(mac)).
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Error #08: Dummy title database</u></summary>
+
+You didn't delete the dummy title database that was created by Error #05. Follow the prompts [here](/images/screenshots/database-reset.jpg), then re-run the script.
+
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
