@@ -8,20 +8,20 @@ title: "Completamento dell'installazione"
 
 Il file `boot.firm` è il file avviato da boot9strap stesso al termine del caricamento dalla NAND. In questo caso, stiamo usando Luma3DS di [LumaTeam](https://github.com/LumaTeam/) per modificare la console, consentendogli di eseguire software homebrew.
 
-On this page, we will make critical system file backups and install some homebrew programs. Most of these steps will be automated using a script that you will run on your console.
+In questa pagina realizzeremo backup di file di sistema critici e installeremo i alcuni programmi homebrew. La maggior parte di questi passaggi sarà automatizzata utilizzando uno script che verrà eseguito sulla tua console.
 
 {% capture compat %}
-<summary>List of homebrew applications that will be installed</summary>
+<summary>Elenco delle applicazioni homebrew che saranno installate</summary>
 
-Click the links to view the GitHub repository of each application. (Give them a star if you appreciate them!)
+Clicca sui collegamenti per visualizzare il repository GitHub di ogni applicazione. (Lasciagli una stella se li ritieni utili!)
 
-+  **[FBI](https://github.com/Steveice10/FBI)** *(installs CIA formatted applications)*
-+  **[Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)** *(launches the Homebrew Launcher)*
-+  **[Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)** *(installs custom themes)*
-+  **[Checkpoint](https://github.com/FlagBrew/Checkpoint)** *(backs up and restores save files for 3DS and DS games)*
-+  **[ftpd](https://github.com/mtheall/ftpd)** *(access your 3DS SD card wirelessly)*
-+  **[Universal-Updater](https://github.com/Universal-Team/Universal-Updater/)** *(a homebrew app store for downloading homebrew from the 3DS over Wi-Fi)*
-+  **[GodMode9](https://github.com/d0k3/GodMode9)** *(multipurpose tool which can do NAND and cartridge functions)*
++  **[FBI](https://github.com/Steveice10/FBI)** **(installa applicazioni in formato CIA)*
++  **[Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)** *(avvia l'Homebrew Launcher)*
++  **[Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)** *(installa temi personalizzati)*
++  **[Checkpoint](https://github.com/FlagBrew/Checkpoint)** *(salva e ripristina file di salvataggio per giochi 3DS e DS)*
++  **[ftpd](https://github.com/mtheall/ftpd)** *(accede alla scheda SD del tuo 3DS via wireless)*
++  **[Universal-Updater](https://github.com/Universal-Team/Universal-Updater/)** *(un app store per applicazioni homebrew per scaricare homebrew dal 3DS via Wi-Fi)*
++  **[GodMode9](https://github.com/d0k3/GodMode9)** *(strumento multiuso per gestire la NAND e le schede di gioco)*
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -37,7 +37,7 @@ Se la tua precedente installazione CFW era basata su EmuNAND e desideri spostare
 
 ### Cosa serve
 
-* [finalize.zip]({{ base_path }}/assets/finalize.zip) (direct download)
+* [finalize.zip]({{ base_path }}/assets/finalize.zip) (download diretto)
 
 ### Istruzioni
 
@@ -47,10 +47,10 @@ In questa sezione, copierai i file necessari per seguire le rimanenti istruzioni
 
 1. Spegni la tua console
 1. Inserisci la scheda SD nel tuo computer
-1. Copy the contents of `finalize.zip` to the root of your SD card, merging/replacing any existing folders if prompted
-1. Insert your SD card into your console
+1. Copia il contenuto dell'archivio `finalize.zip` nella directory principale della tua scheda SD, unendo/sostituendo eventuali cartelle preesistenti se richiesto
+1. Inserisci la scheda SD nella tua console
 
-The screenshot below indicates the minimum SD card layout that is required to follow this page. Potresti avere file o cartelle ulteriori nella tua scheda SD, a seconda della tua precedente configurazione o del metodo che hai seguito.
+Il seguente screenshot indica la struttura minima che la scheda SD deve avere per proseguire in questa pagina. Potresti avere file o cartelle ulteriori nella tua scheda SD, a seconda della tua precedente configurazione o del metodo che hai seguito.
 
 ![]({{ "/images/screenshots/finalizing-root-layout.png" | absolute_url }})
 {: .notice--info}
@@ -76,12 +76,12 @@ In questa sezione, aggiornerai il tuo sistema all'ultima versione, tranquillamen
 
 {% include_relative include/sysupdate.txt cfw="true" %}
 
-#### Section IV - RTC and DSP setup
+#### Sezione IV - Installazione di RTC e DSP
 
 In questa sezione, sincronizzerai l'orologio interno del tuo 3DS con l'ora reale e scaricherai il firmware audio (necessario per permettere ad alcuni software homebrew di usare correttamente i suoni).
 
 1. Premi simultaneamente i pulsanti (L) + (Giù) + (Select) per aprire il menu di Rosalina
-  + If one of these buttons is broken, download [config.ini]({{ base_path }}/assets/config.ini) and put it in your `luma` folder, replacing the existing one. This will change the Rosalina menu key combination to (X) + (Y)
+  + Se uno di questi pulsanti è rotto, scarica [config.ini]({{ base_path }}/assets/config.ini) e mettilo nella tua cartella `luma`, sostituendo il file preesistente. Questo cambierà la combinazione di tasti del menù Rosalina in (X) + (Y)
 1. Seleziona "Miscellaneous options"
 1. Seleziona "Dump DSP firmware"
 1. Premi (B) per continuare
@@ -90,9 +90,9 @@ In questa sezione, sincronizzerai l'orologio interno del tuo 3DS con l'ora reale
 1. Premi (B) per tornare al menu principale di Rosalina
 1. Premi (B) per uscire dal menu di Rosalina
 
-#### Section V - Setup Script
+#### Sezione V - Installazione dello Script
 
-In this section, you will use a script to automate homebrew installation, SD card cleanup, and system file backup.
+In questa sezione, userai uno script per automatizzare l'installazione di homebrew, la pulizia della scheda SD e il backup dei file di sistema.
 
 1. Spegni la tua console
 1. Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9
@@ -101,15 +101,15 @@ In this section, you will use a script to automate homebrew installation, SD car
 1. Se ti viene chiesto di reimpostare la data e l'ora dell'RTC, premi (A) per farlo, poi imposta la data e l'ora, infine premi (A) per continuare
 1. Premi il pulsante HOME per far apparire il menu delle azioni
 1. Seleziona "Scripts..."
-1. Select "finalize"
-1. Follow the prompts in the script, answering each question that you are asked
-  + If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting#finalizing-setup) page
-1. Once the script says "Setup complete!", press (A) to power off the device
+1. Seleziona "finalize"
+1. Segui le istruzioni dello script, rispondendo ad ogni domanda che ti viene posta
+  + Se riscontri un errore, segui le istruzioni riportate nel messaggio di errore o consulta la pagina [Risoluzione dei problemi](troubleshooting#finalizing-setup)
+1. Quando lo script mostrerà "Setup complete!", premi (A) per spegnere la console
 1. Inserisci la scheda SD nel tuo computer
-1. Copy the `/gm9/out/` folder to a safe location on your computer
-  + This folder contains critical file backups and should be backed up to multiple locations (i.e. cloud storage) if possible
-  + The two SysNAND files are your NAND backup and can be used to revert your console to a working state if it is bricked by a software issue
-  + The `essential.exefs` file contains your console's system-unique files and can be used to recover your data in the event of a hardware failure
+1. Copia la cartella `gm9/out` in una posizione sicura sul tuo computer
+  + Questa cartella contiene backup dei file critici e dovrebbe essere salvata in più posizioni (es. in cloud) se possibile
+  + I due file SysNAND sono il backup della NAND e possono essere utilizzati per ripristinare la console ad uno stato funzionante se viene resa inutilizzabile con un errore software
+  + Il file `essential.exefs` contiene i file univoci di sistema della tua console e può essere utilizzato per recuperare i tuoi dati in caso di guasto hardware
 
 ___
 
