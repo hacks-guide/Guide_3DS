@@ -8,17 +8,24 @@ title: "Завершение установки"
 
 The file `boot.firm` is what is launched by boot9strap itself after it finishes loading off of NAND. In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) to patch the console, allowing it to run homebrew software.
 
-On this page, we will make critical system file backups and install the following homebrew programs:
+On this page, we will make critical system file backups and install some homebrew programs. Most of these steps will be automated using a script that you will run on your console.
 
-+  **FBI** *(installs CIA formatted applications)*
-+  **Anemone3DS** *(установка пользовательских тем)*
-+  **Checkpoint** *(создание и восстановление резервных копий сохранений 3DS и DS игр)*
-+  **Universal-Updater** *(a homebrew app store for downloading homebrew from the 3DS over Wi-Fi)*
-+  **GodMode9** *(многофункциональная утилита для работы с NAND и картриджами)*
-+  **Homebrew Launcher Loader** *(запуск Homebrew Launcher)*
+{% capture compat %}
+<summary>List of homebrew applications that will be installed</summary>
 
-It is not recommended to skip downloading any of these applications, as many of them will be used later on this page. At the end of this page, your SD card will be cleaned up by removing unnecessary installation files.
-{: .notice--warning}
+Click the links to view the GitHub repository of each application. (Give them a star if you appreciate them!)
+
++  **[FBI](https://github.com/Steveice10/FBI)** *(installs CIA formatted applications)*
++  **[Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)** *(launches the Homebrew Launcher)*
++  **[Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)** *(installs custom themes)*
++  **[Checkpoint](https://github.com/FlagBrew/Checkpoint)** *(backs up and restores save files for 3DS and DS games)*
++  **[ftpd](https://github.com/mtheall/ftpd)** *(access your 3DS SD card wirelessly)*
++  **[Universal-Updater](https://github.com/Universal-Team/Universal-Updater/)** *(a homebrew app store for downloading homebrew from the 3DS over Wi-Fi)*
++  **[GodMode9](https://github.com/d0k3/GodMode9)** *(multipurpose tool which can do NAND and cartridge functions)*
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+{: .notice--info}
 
 ### Compatibility Notes
 
@@ -30,12 +37,7 @@ If your previous CFW setup was EmuNAND-based and you wish to move the contents o
 
 ### Что понадобится
 
-* The latest release of [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) (the `.cia` file)
-* The v3.7.4 release of [Checkpoint](https://github.com/BernardoGiordano/Checkpoint/releases/tag/v3.7.4) (the `.cia` file)
-* The latest release of [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest) (the `.cia` file)
-* The latest release of [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest) (the `.cia` file)
-* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) (**both** the `.cia` and `.3dsx` files)
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
+* [finalize.zip]({{ base_path }}/assets/finalize.zip) (direct download)
 
 ### Инструкция
 
@@ -45,25 +47,12 @@ In this section, you will copy the files necessary to follow the rest of the ins
 
 1. Power off your console
 1. Вставьте SD-карту в компьютер
-1. Создайте папку `cias` в корне SD-карты, если таковой нет
-1. Copy all of the CIA files (`Anemone3DS.cia`, `Checkpoint.cia`, `FBI.cia`, `Homebrew_Launcher.cia`, and `Universal-Updater.cia`) to the `/cias/` folder on your SD card
-1. Создайте папку `3ds` в корне SD-карты, если таковой нет
-    + This folder stores homebrew applications and data; it is different from the `Nintendo 3DS` folder that the console automatically generates
-1. Скопируйте `FBI.3dsx` в папку `/3ds/` на SD-карте
-1. Создайте папку `payloads` внутри папки `luma` на SD-карте, если таковой нет
-1. Скопируйте `GodMode9.firm` из `.zip-архива` GodMode9 в папку `/luma/payloads/` на SD-карте
-1. Скопируйте папку `gm9` из `.zip-архива` GodMode9 в корень SD-карты
-1. Reinsert your SD card into your console
-1. Power on your console
+1. Copy the contents of `finalize.zip` to the root of your SD card, merging/replacing any existing folders if prompted
 
-The screenshots below indicate the minimum SD card layout that is required to follow this page. You may have extra files or folders on your SD card, depending on your previous setup or the method that you followed.
+The screenshot below indicates the minimum SD card layout that is required to follow this page. You may have extra files or folders on your SD card, depending on your previous setup or the method that you followed.
 
 ![]({{ "/images/screenshots/finalizing-root-layout.png" | absolute_url }})
 {: .notice--info}
-
-![]({{ "/images/screenshots/godmode9-location.png" | absolute_url }})
-{: .notice--info}
-
 
 #### Section II - CFW Check
 
@@ -86,17 +75,12 @@ In this section, you will update your system to the latest version, which is saf
 
 {% include_relative include/sysupdate.txt cfw="true" %}
 
-#### Section IV - Homebrew Launcher
-
-In this section, you will temporarily replace Download Play with Homebrew Launcher (which we need to launch FBI). Download Play will automatically go back to normal once you reboot your console.
-
-{% include_relative include/launch-hbl-dlp.txt %}
-
-#### Section V - RTC and DSP Setup
+#### Section IV - RTC and DSP setup
 
 In this section, you will sync your 3DS internal clock with the actual time and dump the sound firmware (which is necesssary for some homebrew software to use sound properly).
 
 1. Нажмите (L) + (Вниз) + (Select) одновременно чтобы открыть меню Rosalina
+  + If one of these buttons is broken, download [config.ini]({{ base_path }}/assets/config.ini) and put it in your `luma` folder, replacing the existing one. This will change the Rosalina menu key combination to (X) + (Y)
 1. Выберите "Miscellaneous options"
 1. Select "Dump DSP firmware"
 1. Нажмите (B), чтобы продолжить
@@ -105,19 +89,9 @@ In this section, you will sync your 3DS internal clock with the actual time and 
 1. Нажмите (B) для возврата в главное меню Rosalina
 1. Нажмите (B) для выхода из главного меню Rosalina
 
-#### Section VI - Installing CIAs
+#### Section V - Setup Script
 
-In this section, you will install several useful homebrew applications to HOME Menu.
-
-1. Выберите FBI в списке homebrew
-1. Перейдите в `SD` -> `cias`
-1. Выберите "\<current directory>"
-1. Выберите "Install and delete all CIAs", нажмите (A) для подтверждения
-1. Нажмите (Home), затем закройте приложение Загружаемая игра
-
-#### Section VII - CTRNAND Luma3DS
-
-In this section, you will use a script to copy some of Luma3DS's files to internal memory so that they can be accessed, even without an SD card inserted.
+In this section, you will use a script to automate homebrew installation, SD card cleanup, and system file backup.
 
 1. Power off your console
 1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
@@ -126,51 +100,10 @@ In this section, you will use a script to copy some of Luma3DS's files to intern
 1. Если вам предложат выставить RTC дату и время, нажмите кнопку (A) чтобы сделать это, настройте дату и время, затем нажмите (A) чтобы продолжить
 1. Нажмите кнопку (Home) для вызова меню
 1. Выберите "Scripts..."
-1. Выберите "GM9Megascript"
-1. Выберите "Scripts from Plailect's Guide"
-1. Выберите "Setup Luma3DS to CTRNAND"
-1. При появлении запроса, нажмите (A) для продолжения
-1. Нажмите (A), чтобы разрешить запись в SysNAND (lvl1) и введите указанную комбинацию кнопок
-1. Нажмите (A), чтобы продолжить
-
-#### Section VIII - Cleanup SD Card
-
-In this section, you will use a script to remove some unnecessary files from your SD card.
-
-1. Выберите "Cleanup SD Card"
-1. При появлении запроса, нажмите (A) для продолжения
-1. Нажмите (A), чтобы продолжить
-1. Нажмите (B) для возврата в главное меню
-
-#### Section IX - Backup Essential Files
-
-In this section, you will make backups of files that can be used to recover from software bricks or to recover data.
-
-1. Выберите "Backup Options"
-1. Выберите "SysNAND Backup"
-1. Нажмите (A) для подтверждения
-  + Этот процесс займет некоторое время
-  + If you get an error, look for your issue in the [troubleshooting guide](troubleshooting#finalizing-setup)
-1. Нажмите (A), чтобы продолжить
-1. Нажмите (B) для возврата в главное меню
-1. Выберите "Exit"
-1. Нажмите (A) чтобы восстановить запрет на запись, если появится запрос
-1. Navigate to `[S:] SYSNAND VIRTUAL`
-1. Press (A) on `essential.exefs` to select it
-1. Выберите "Copy to 0:/gm9/out"
-  + If you see "Destination already exists", press (A) on "Overwrite file(s)"
-1. Нажмите (A), чтобы продолжить
-1. Нажмите кнопку (Home) для вызова меню
-1. Select "Poweroff system" to power off your console
-1. Вставьте SD-карту в компьютер
-1. Copy `<date>_<serialnumber>_sysnand_##.bin`, `<date>_<serialnumber>_sysnand_##.bin.sha`, and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
-  + Copy these backups to multiple locations (such as online file storage, an external hard drive, etc.)
-  + Эти бэкапы позволят восстановить консоль и/или извлечь файлы из образа NAND, если что-то пойдёт не так
-1. Delete `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
-  + The other backup files are negligible in size and may be kept on your SD card for ease of access
-1. If you have it, copy the `/luma/backups/` folder on your SD card to a safe location on your computer
-1. Reinsert your SD card into your console
-1. Power on your console
+1. Select "finalize"
+1. Follow the prompts in the script, answering each question that you are asked
+  + If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting#finalizing-setup) page
+1. Once the script says "Setup complete!", press (A) to power off the device
 
 ___
 
