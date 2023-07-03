@@ -8,17 +8,24 @@ title: "完成安裝"
 
 在載入完 NAND 的內容後，boot9strap 會自動加載 `boot.firm` 中的內容。 In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) to patch the console, allowing it to run homebrew software.
 
-於本頁面中，我們將替關鍵的系統檔案進行備份並安裝以下自製程式：
+On this page, we will make critical system file backups and install some homebrew programs. Most of these steps will be automated using a script that you will run on your console.
 
-+ **FBI 管理器** *(安裝 CIA 格式的程式)*
-+  **Anemone3DS** *(安裝自訂主題)*
-+  **Checkpoint** *(備份及還原 3DS 及 DS 遊戲之存檔)*
-+  **Universal-Updater** *(自製程式商店，可在 3DS 上透過 Wi-Fi 下載自製程式)*
-+ **GodMode9** *(多功能工具包，用來處理 NAND 及卡帶的相關功能)*
-+  **Homebrew Launcher Loader** *(用於啟動 Homebrew Launcher)*
+{% capture compat %}
+<summary>List of homebrew applications that will be installed</summary>
 
-建議不要跳過下載以上這些自製軟體，因為它們將在此頁面稍後使用。 在本頁結束時，我們將清理 SD 卡以刪除不必要的安裝檔案。
-{: .notice--warning}
+Click the links to view the GitHub repository of each application. (Give them a star if you appreciate them!)
+
++  **[FBI](https://github.com/Steveice10/FBI)** *(installs CIA formatted applications)*
++  **[Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)** *(launches the Homebrew Launcher)*
++  **[Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)** *(installs custom themes)*
++  **[Checkpoint](https://github.com/FlagBrew/Checkpoint)** *(backs up and restores save files for 3DS and DS games)*
++  **[ftpd](https://github.com/mtheall/ftpd)** *(access your 3DS SD card wirelessly)*
++  **[Universal-Updater](https://github.com/Universal-Team/Universal-Updater/)** *(a homebrew app store for downloading homebrew from the 3DS over Wi-Fi)*
++  **[GodMode9](https://github.com/d0k3/GodMode9)** *(multipurpose tool which can do NAND and cartridge functions)*
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+{: .notice--info}
 
 ### 相容性資訊
 
@@ -30,12 +37,7 @@ If your **New 3DS** was on version 2.1.0 before following this guide, you should
 
 ### 必備項目
 
-* The latest release of [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) (the `.cia` file)
-* The v3.7.4 release of [Checkpoint](https://github.com/BernardoGiordano/Checkpoint/releases/tag/v3.7.4) (the `.cia` file)
-* The latest release of [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest) (the `.cia` file)
-* The latest release of [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest) (the `.cia` file)
-* The latest release of [FBI](https://github.com/Steveice10/FBI/releases/latest) (**both** the `.cia` and `.3dsx` files)
-* 最新版的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (選擇 GodMode9 `.zip` 檔案)
+* [finalize.zip]({{ base_path }}/assets/finalize.zip) (direct download)
 
 ### 操作說明
 
@@ -45,25 +47,12 @@ In this section, you will copy the files necessary to follow the rest of the ins
 
 1. Power off your console
 1. 將 SD 卡插入至電腦中
-1. 在 SD 卡的根目錄底下，建立一個新資料夾 `cias`
-1. 複製所有的 CIA 檔案 (`Anemone3DS.cia`、`Checkpoint.cia`、`FBI.cia`、`Homebrew_Launcher.cia` 及 `Universal-Updater.cia`) 至 SD 卡中的 `/cias/` 資料夾中
-1. 在 SD 卡的根目錄底下建立一個新資料夾 `3ds`
-    + This folder stores homebrew applications and data; it is different from the `Nintendo 3DS` folder that the console automatically generates
-1. 將 `FBI.3dsx` 複製到 SD 卡中的 `/3ds/` 資料夾底下
-1. 在 SD 卡中的 `luma` 資料夾中建立一個另一個新資料夾 `payloads`
-1. 解壓 GodMode9 `.zip` 中的 `GodMode9.firm` 檔案到 SD 卡的 `/luma/payloads/` 資料夾中
-1. 解壓 GodMode9 `.zip` 中的 `gm9` 資料夾到 SD 卡的根目錄底下
-1. Reinsert your SD card into your console
-1. Power on your console
+1. Copy the contents of `finalize.zip` to the root of your SD card, merging/replacing any existing folders if prompted
 
-The screenshots below indicate the minimum SD card layout that is required to follow this page. 您可能在遵循其他頁面指示中會有一些多的資料夾及檔案在您的 SD 卡中。
+The screenshot below indicates the minimum SD card layout that is required to follow this page. 您可能在遵循其他頁面指示中會有一些多的資料夾及檔案在您的 SD 卡中。
 
 ![]({{ "/images/screenshots/finalizing-root-layout.png" | absolute_url }})
 {: .notice--info}
-
-![]({{ "/images/screenshots/godmode9-location.png" | absolute_url }})
-{: .notice--info}
-
 
 #### Section II - CFW Check
 
@@ -86,17 +75,12 @@ In this section, you will update your system to the latest version, which is saf
 
 {% include_relative include/sysupdate.txt cfw="true" %}
 
-#### Section IV - Homebrew Launcher
-
-In this section, you will temporarily replace Download Play with Homebrew Launcher (which we need to launch FBI). Download Play will automatically go back to normal once you reboot your console.
-
-{% include_relative include/launch-hbl-dlp.txt %}
-
-#### Section V - RTC and DSP Setup
+#### Section IV - RTC and DSP setup
 
 In this section, you will sync your 3DS internal clock with the actual time and dump the sound firmware (which is necesssary for some homebrew software to use sound properly).
 
 1. 同時按下『L』+『下』+『Select』鍵以啟動 Rosalina 選單
+  + If one of these buttons is broken, download [config.ini]({{ base_path }}/assets/config.ini) and put it in your `luma` folder, replacing the existing one. This will change the Rosalina menu key combination to (X) + (Y)
 1. 選擇『Miscellaneous options』
 1. 選擇『Dump DSP firmware』
 1. 按『B』繼續
@@ -105,19 +89,9 @@ In this section, you will sync your 3DS internal clock with the actual time and 
 1. 按『B』回到 Rosalina 主選單
 1. 按『B』退出 Rosalina 選單
 
-#### Section VI - Installing CIAs
+#### Section V - Setup Script
 
-In this section, you will install several useful homebrew applications to HOME Menu.
-
-1. 於 Homebrew 清單內啟動 FBI 管理器
-1. 移動至 `SD` -> `cias`
-1. 選擇『\<current directory>』
-1. 選擇『Install and delete all CIAs』(安裝並刪除所有的 CIA 檔)，並按下『A』確認
-1. 按『Home』鍵，並關閉『下載通信 (Download Play)』程式
-
-#### Section VII - CTRNAND Luma3DS
-
-In this section, you will use a script to copy some of Luma3DS's files to internal memory so that they can be accessed, even without an SD card inserted.
+In this section, you will use a script to automate homebrew installation, SD card cleanup, and system file backup.
 
 1. Power off your console
 1. Press and hold (Start), and while holding (Start), power on your console. 這將會啟動 GodMode9
@@ -126,51 +100,10 @@ In this section, you will use a script to copy some of Luma3DS's files to intern
 1. 當提示修正 RTC 日期及時間時，按『A』繼續並設定日期及時間，再按『A』繼續
 1. 按『Home』鍵以叫出主選單
 1. 選擇『Scripts...』
-1. 選擇『GM9Megascript』
-1. 選擇『Scripts from Plailect's Guide』
-1. 選擇『Setup Luma3DS to CTRNAND』
-1. 如提示時，按下『A』繼續
-1. 按『A』解鎖 SysNAND(lvl1)的寫入保護，然後按下提示的按鍵組合
-1. 按『A』 繼續
-
-#### Section VIII - Cleanup SD Card
-
-In this section, you will use a script to remove some unnecessary files from your SD card.
-
-1. 選擇『Cleanup SD Card』
-1. 如提示時，按下『A』繼續
-1. 按『A』 繼續
-1. 按『B』回到主選單
-
-#### Section IX - Backup Essential Files
-
-In this section, you will make backups of files that can be used to recover from software bricks or to recover data.
-
-1. 選擇『Backup Options』
-1. 選擇『SysNAND Backup』
-1. 按 『A』 確認
-  + 此過程將花費一些時間
-  + If you get an error, look for your issue in the [troubleshooting guide](troubleshooting#finalizing-setup)
-1. 按『A』 繼續
-1. 按『B』回到主選單
-1. 選擇『Exit』
-1. 如提示時，按下『A』取消檔案寫入鎖定
-1. 移動至 `[S:] SYSNAND VIRTUAL`
-1. 選擇 `essential.exefs`，並按『A』選擇
-1. 選擇『Copy to 0:/gm9/out』
-  + 如果你看到『Destination already exists (目的地有相同檔名的檔案)』，那麼請選擇『Overwrite file(s) (覆寫檔案)』並按下「A」鍵
-1. 按『A』 繼續
-1. 按『Home』鍵以叫出主選單
-1. Select "Poweroff system" to power off your console
-1. 將 SD 卡插入至電腦中
-1. Copy `<date>_<serialnumber>_sysnand_##.bin`, `<date>_<serialnumber>_sysnand_##.bin.sha`, and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
-  + Copy these backups to multiple locations (such as online file storage, an external hard drive, etc.)
-  + 這些備份檔案可於未來您磚機時用來修復系統檔案
-1. Delete `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
-  + The other backup files are negligible in size and may be kept on your SD card for ease of access
-1. If you have it, copy the `/luma/backups/` folder on your SD card to a safe location on your computer
-1. Reinsert your SD card into your console
-1. Power on your console
+1. Select "finalize"
+1. Follow the prompts in the script, answering each question that you are asked
+  + If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting#finalizing-setup) page
+1. Once the script says "Setup complete!", press (A) to power off the device
 
 ___
 
