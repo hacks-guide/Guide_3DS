@@ -490,28 +490,69 @@ I passaggi qui sotto possono essere seguiti in qualsiasi ordine, ma sono elencat
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Impossibile avviare il menu Rosalina per guasto ai pulsanti L / D-Pad Giù / Select </u></summary>
+<summary><u>Error #01: No Nintendo 3DS folder</u></summary>
 
-Scarica questo [config.ini alternativo](/assets/config.ini) e posizionalo in `/luma/`. Questo cambierà la combinazione di tasti del menù Rosalina in (X) + (Y).
+Your SD card does not have the `Nintendo 3DS` folder. Power on your device with your SD card inserted, then wait for the device to show a message box that says "Creating HOME Menu management information". Once the message box disappears, power off your device and try again.
+
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>All'avvio dell'Homebrew Launcher dalla "Modalità download" compare la scritta "Si è verificato un errore" o rimane fissa la schermata di caricamento "Nintendo 3DS"</u></summary>
+<summary><u>Error #02: Missing essential.exefs</u></summary>
 
-C'è un problema con il tuo file `boot.3dsx` (è mancante, mal posizionato o corrotto). Scarica l'ultima versione dell'[Homebrew Launcher](https://github.com/devkitPro/3ds-hbmenu/releases/latest) e posiziona il file `boot.3dsx` nella directory principale della tua scheda SD, sostituendo qualunque file preesistente.
+You said 'No' to the "Make essential files backup?" prompt in GodMode9. Power off your device, power it on while holding (Start) to re-enter GodMode9, say 'Yes' to the prompt, then try again.
+
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>"Scripts directory not found" in GodMode9</u></summary>
 
-Non hai copiato la cartella `gm9` presente nell'archivio `.zip` di GodMode9 nella directory principale della tua scheda SD. Scarica l'ultima versione di [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) e posiziona la cartella `gm9` nella directory principale della tua scheda SD, unendola a quella preesistente.
+<summary><u>Unable to open GodMode9 or Error #03: Missing files</u></summary>
+
+You did not copy everything from `finalize.zip` to the root of your SD card. Remember, your SD card should have at least these files:
+
+![]({{ "/images/screenshots/finalizing-root-layout.png" | absolute_url }})
+{: .notice--info}
+
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>"Backup failed" o "Error: Could not open directory" durante il backup della NAND</u></summary>
+
+<summary><u>Error #04: No space</u></summary>
+
+You need at least 1.3GB of free space to perform the NAND backup, which is apart of the script. Se non hai abbastanza spazio, segui questi passaggi:
+
+1. Spegni la tua console
+1. Rimuovi la scheda SD e inseriscila nel tuo computer
+1. Copia la cartella `Nintendo 3DS` dalla directory principale della tua scheda SD al tuo computer
+1. Elimina la cartella `Nintendo 3DS` dalla scheda SD
+1. Reinserisci la scheda SD nella tua console
+1. Spegni la tua console, dopodiché riaccendila tenendo premuto il tasto START per avviare GodMode9
+1. Seleziona "Scripts..."
+1. Select "finalize"
+1. Follow the prompts in the script, answering each question that you are asked
+1. Copia i file in `gm9/out` sulla tua SD in una posizione sicura sul tuo computer
+1. Elimina i file `<data>_<seriale>_sysnand_##.bin` e `<data>_<seriale>_sysnand_##.bin.sha` dalla scheda SD, mantenendo il file `essential.exefs` in `/gm9/out/`
+1. Copia la cartella `Nintendo 3DS` dal tuo computer nella directory principale della tua scheda SD
+1. Elimina la cartella `Nintendo 3DS` dal tuo computer
+
+Once done, re-run the script.
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Error #05: No title database</u></summary>
+
+Press (A) to create a title database, follow the prompts [here](/images/screenshots/database-reset.jpg), then re-run the script.
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Error #06 or "Error: Could not open directory" when attempting a NAND backup</u></summary>
+
 Assicurati di avere almeno 1.3GB disponibili nella tua scheda SD. Se non hai abbastanza spazio, segui questi passaggi:
 1. Spegni la tua console
 1. Rimuovi la scheda SD e inseriscila nel tuo computer
@@ -526,6 +567,14 @@ Assicurati di avere almeno 1.3GB disponibili nella tua scheda SD. Se non hai abb
 1. Elimina la cartella `Nintendo 3DS` dal tuo computer
 
 Se riieni di avere abbastanza spazio sulla tua scheda SD, questa potrebbe essere danneggiata o difettosa. Verifica la presenza di eventuali errori nella tua scheda SD seguendo la guida corretta per il sistema operativo del tuo computer: [Windows](h2testw-(windows)), [Linux](f3-(linux)), [macOS](f3xswift-(mac)).
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Error #08: Dummy title database</u></summary>
+
+You didn't delete the dummy title database that was created by Error #05. Follow the prompts [here](/images/screenshots/database-reset.jpg), then re-run the script.
+
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
