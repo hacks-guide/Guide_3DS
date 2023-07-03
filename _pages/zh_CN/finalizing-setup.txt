@@ -8,17 +8,24 @@ title: "完成安装"
 
 boot9strap 将会在 NAND 里的内容加载完成后启动 `boot.firm` 文件。 In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) to patch the console, allowing it to run homebrew software.
 
-在这一页中，我们将教你如何备份关键系统文件，并安装如下所示的自制程序：
+On this page, we will make critical system file backups and install some homebrew programs. Most of these steps will be automated using a script that you will run on your console.
 
-+  **FBI（用来安装 CIA 格式的程序）**
-+  **Anemone3DS（安装自定义主题）**
-+ **Checkpoint（备份和恢复你 3DS/DS 的游戏存档）**
-+  **Universal-Updater（一个在 3DS 上用来下载自制程序的商店）**
-+  **GodMode9（一款多功能工具，可以处理 NAND 和卡带的相关功能）**
-+ **Homebrew Launcher Loader（启动 Homebrew Launcher 的快捷方式）**
+{% capture compat %}
+<summary>List of homebrew applications that will be installed</summary>
 
-建议不要跳过下载以上列出的任何程序，因为等会就需要用到它们 我们将在本页结尾处清理你在破解过程中产生的无用文件。
-{: .notice--warning}
+Click the links to view the GitHub repository of each application. (Give them a star if you appreciate them!)
+
++  **[FBI](https://github.com/Steveice10/FBI)** *(installs CIA formatted applications)*
++  **[Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)** *(launches the Homebrew Launcher)*
++  **[Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)** *(installs custom themes)*
++  **[Checkpoint](https://github.com/FlagBrew/Checkpoint)** *(backs up and restores save files for 3DS and DS games)*
++  **[ftpd](https://github.com/mtheall/ftpd)** *(access your 3DS SD card wirelessly)*
++  **[Universal-Updater](https://github.com/Universal-Team/Universal-Updater/)** *(a homebrew app store for downloading homebrew from the 3DS over Wi-Fi)*
++  **[GodMode9](https://github.com/d0k3/GodMode9)** *(multipurpose tool which can do NAND and cartridge functions)*
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+{: .notice--info}
 
 ### 兼容性注意
 
@@ -30,12 +37,7 @@ boot9strap 将会在 NAND 里的内容加载完成后启动 `boot.firm` 文件�
 
 ### 你需要准备点啥？
 
-* 最新版本的 [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS/releases/latest) **（下载 `.cia` 文件）**
-* The v3.7.4 release of [Checkpoint](https://github.com/BernardoGiordano/Checkpoint/releases/tag/v3.7.4) (the `.cia` file)
-* 最新版本的 [Homebrew Launcher Wrapper](https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest)（下载 `.cia` 后缀的文件）
-* 最新版本的 [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest) **（下载 `.cia` 文件）**
-* 最新版本的 [FBI](https://github.com/Steveice10/FBI/releases/latest)**（下载 `.cia` 和 `.3dsx` 后缀的文件）**
-* 最新版本的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)（下载 GodMode9 `.zip` 文件）
+* [finalize.zip]({{ base_path }}/assets/finalize.zip) (direct download)
 
 ### 操作步骤
 
@@ -45,25 +47,12 @@ boot9strap 将会在 NAND 里的内容加载完成后启动 `boot.firm` 文件�
 
 1. Power off your console
 1. 将你的 SD 卡插入电脑
-1. 检查你的 SD 卡根目录是否有一个叫 `cias` 的文件夹，如果没有则手动新建一个
-1. 复制所有 CIA 文件（`Anemone3DS.cia`、`Checkpoint.cia`、`FBI.cia`、`Homebrew_Launcher.cia` 和 `Universal-Updater.cia`）到你 SD 卡上的 `/cias/` 文件夹
-1. 检查 SD 卡的根目录是否存在一个名为 `3ds` 的文件夹，如果没有则手动新建一个
-    + This folder stores homebrew applications and data; it is different from the `Nintendo 3DS` folder that the console automatically generates
-1. 复制 `FBI.3dsx` 到 SD 卡的 `/3ds/` 目录下
-1. 如果 SD 卡的 `luma` 文件夹下没有一个名为 `payloads` 的文件夹，那么请新建一个
-1. 将 GodMode9 `.zip` 中的 `GodMode9.firm` 复制到你SD卡的 `/luma/payloads/` 文件夹中
-1. 将 GodMode9 `.zip` 中的整个 `gm9` 文件夹复制到 SD 卡的根目录下
-1. Reinsert your SD card into your console
-1. Power on your console
+1. Copy the contents of `finalize.zip` to the root of your SD card, merging/replacing any existing folders if prompted
 
-以下截图为遵循本步骤后 SD 卡应有的文件及文件夹。 由于你可能在之前做了一些其他的操作，你的 SD 卡中可能会多出一些文件或者文件夹。
+The screenshot below indicates the minimum SD card layout that is required to follow this page. 由于你可能在之前做了一些其他的操作，你的 SD 卡中可能会多出一些文件或者文件夹。
 
 ![]({{ "/images/screenshots/finalizing-root-layout.png" | absolute_url }})
 {: .notice--info}
-
-![]({{ "/images/screenshots/godmode9-location.png" | absolute_url }})
-{: .notice--info}
-
 
 #### Section II - CFW Check
 
@@ -86,17 +75,12 @@ If you do NOT boot into the Luma3DS configuration menu, custom firmware was not 
 
 {% include_relative include/sysupdate.txt cfw="true" %}
 
-#### Section IV - Homebrew Launcher
-
-本节中，为了启动 FBI 应用程序，你将需要临时把主机的“下载通信（Download Play）”应用程序替换为 Homebrew Launcher。 Download Play will automatically go back to normal once you reboot your console.
-
-{% include_relative include/launch-hbl-dlp.txt %}
-
-#### Section V - RTC and DSP Setup
+#### Section IV - RTC and DSP setup
 
 本节中，你将会把主机的内部时钟同步现实时间，并导出声卡的固件（部分自制程序需要使用它来正确发声）。
 
 1. 同时按下 “L” + “↓” + “Select” 键来打开 Rosalina 菜单
+  + If one of these buttons is broken, download [config.ini]({{ base_path }}/assets/config.ini) and put it in your `luma` folder, replacing the existing one. This will change the Rosalina menu key combination to (X) + (Y)
 1. 选择 “Miscellaneous options”
 1. 选择“Dump DSP firmware”
 1. 按 “B” 键继续
@@ -105,19 +89,9 @@ If you do NOT boot into the Luma3DS configuration menu, custom firmware was not 
 1. 按 “B” 键返回 Rosalina 主菜单
 1. 按 “B” 键退出 Rosalina 菜单
 
-#### Section VI - Installing CIAs
+#### Section V - Setup Script
 
-本节中，你将会安装几个实用的自制程序到主菜单。
-
-1. 从自制程序列表中找到并启动 FBI
-1. 进入到 `SD` -> `cias`
-1. 选择 “\<current directory>”
-1. 选择“安装和删除所有 CIA(Install and delete all CIAs)”选项，并按 “A” 键确认
-1. 按下 “Home” 键，然后关闭“下载通信(Download Play)”
-
-#### Section VII - CTRNAND Luma3DS
-
-本节中，你将会使用到一个脚本来复制 Luma3DS 的文件到主机的内部储存空间中，以便在拔出 SD 卡后依然能够读取这些文件。
+In this section, you will use a script to automate homebrew installation, SD card cleanup, and system file backup.
 
 1. Power off your console
 1. Press and hold (Start), and while holding (Start), power on your console. 这会启动 GodMode9
@@ -126,51 +100,10 @@ If you do NOT boot into the Luma3DS configuration menu, custom firmware was not 
 1. 如果出现修复 RTC 日期与时间的提示，按 “A” 键执行修复，然后设置好日期和时间，并按 “A” 继续
 1. 按下 “Home” 键来打开功能菜单
 1. 选择 “Scripts...”
-1. 选择 “GM9Megascript”
-1. 选择 “Scripts from Plailect's Guide”
-1. 选择 “Setup Luma3DS to CTRNAND”
-1. 出现提示时，按 “A” 键继续
-1. 按 “A” 键解锁SysNAND (lvl1) 写入权限，并根据屏幕上的提示依次按下按键
-1. 按 “A” 键继续
-
-#### Section VIII - Cleanup SD Card
-
-本节中，你将会使用到一个脚本来清理内存卡的一些无用文件。
-
-1. 选择 “Cleanup SD Card”
-1. 出现提示时，按 “A” 键继续
-1. 按 “A” 键继续
-1. 按 “B” 键返回到主菜单
-
-#### Section IX - Backup Essential Files
-
-本节中，你将会从主机备份一些重要文件，以便在主机软砖时进行恢复数据。
-
-1. 选择 “Backup Options”
-1. 选择 “SysNAND Backup”
-1. 按下 “A” 键确认
-  + 此过程将花费一些时间
-  + If you get an error, look for your issue in the [troubleshooting guide](troubleshooting#finalizing-setup)
-1. 按 “A” 键继续
-1. 按下 “B” 键返回到主菜单
-1. 选择 “Exit”
-1. 如果提示重新锁定写入权限，按下 “A” 键来确认
-1. 进入到 `[S:] SYSNAND VIRTUAL`
-1. 移动到 `essential.exefs` 上按 “A” 键选中
-1. 选择 “Copy to 0:/gm9/out”
-  + 如果你看到“Destination already exists（位置已存在文件）”，那么请移动到“Overwrite file(s)（覆盖文件）”然后按下 A 键。
-1. 按 “A” 键继续
-1. 按下 “Home” 键来打开功能菜单
-1. Select "Poweroff system" to power off your console
-1. 将你的 SD 卡插入到电脑
-1. Copy `<date>_<serialnumber>_sysnand_##.bin`, `<date>_<serialnumber>_sysnand_##.bin.sha`, and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
-  + 将这些文件在不同地方备份多次（比如网盘或者移动硬盘等）
-  + 如果以后机器出现任何问题，这些备份文件将是为你提供修复砖机或从 NAND 镜像恢复文件的帮手
-1. Delete `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
-  + 其它的文件占用不了多少空间，更建议保留在 SD 卡上以便将来可能的需要
-1. 如果 SD 卡上有 `/luma/backups/` 文件夹，那么请将里面的文件备份到你电脑上安全的地方
-1. Reinsert your SD card into your console
-1. Power on your console
+1. Select "finalize"
+1. Follow the prompts in the script, answering each question that you are asked
+  + If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting#finalizing-setup) page
+1. Once the script says "Setup complete!", press (A) to power off the device
 
 ___
 
