@@ -503,7 +503,7 @@ The steps below can be attempted in any order, but are listed from easiest to ha
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Error #01: No Nintendo 3DS folder</u></summary>
+<summary><u>Warning #01: No Nintendo 3DS folder</u></summary>
 
 Your SD card does not have the `Nintendo 3DS` folder. Power on your device with your SD card inserted, then wait for the device to show a message box that says "Creating HOME Menu management information". Once the message box disappears, power off your device and try again.
 
@@ -541,22 +541,35 @@ You need at least 1.3GB of free space to perform the NAND backup, which is a par
 1. Copy the `Nintendo 3DS` folder from the root of your SD card to your computer
 1. Delete the Nintendo 3DS folder from the SD card
 1. Reinsert your SD card into your console
-1. Power off your console, hold START and power on still holding START to boot on GodMode9
+1. Power off your console
+1. Hold START and power on still holding START to open GodMode9
+1. Press the (Home) button
 1. Wybierz "Scripts..."
 1. Select "finalize"
-1. Follow the prompts in the script, answering each question that you are asked
-1. Copy the files in `gm9/out` on your SD to a safe location on your computer
-1. Delete the `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` files from the SD card, keeping essential.exefs in `/gm9/out/`
+1. Press (A) to create a NAND backup
+  + This may take around fifteen minutes
+1. Press (A) again
+  + The console should automatically power off
+1. Włóż kartę SD do komputera
+1. Copy the files in `/gm9/backups/` on your SD to a safe location on your computer
+1. Delete the `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` files from the SD card
 1. Copy the `Nintendo 3DS` folder from your computer to the root of your SD card
 1. Delete the `Nintendo 3DS` folder from your computer
 
-Once done, re-run the script.
+Now that you have your NAND backup in a safe place:
+
+1. Insert your SD card into your console
+1. Hold START and power on still holding START to open GodMode9
+1. Press the (Home) button
+1. Wybierz "Scripts..."
+1. Select "finalize"
+1. Continue the script as normal
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Error #05: No title database</u></summary>
+<summary><u>Information #05: No title database</u></summary>
 
 Press (A) to create a title database, unlock SysNAND writing by entering the buttons on-screen, follow the prompts [here](/images/screenshots/database-reset.jpg), then re-run the script.
 
@@ -590,6 +603,24 @@ You didn't delete the dummy title database that was created by Error #05. Follow
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Error #09: Unsupported GodMode9 version</u></summary>
+
+You are somehow running a version of GodMode9 not packaged with the script. Make sure you copied the contents of `finalize.zip` to the root of your SD card and that you are holding START while powering on your console.
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Information #11: NAND backup flag detected</u></summary>
+
+You most likely already made a NAND backup on this console. If you did not make a backup or lost access to your backup, select "1. Make Another NAND Backup". Otherwise, select "2. Skip NAND Backup".
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+
 
 ---
 
