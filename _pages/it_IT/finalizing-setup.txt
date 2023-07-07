@@ -10,10 +10,8 @@ Il file `boot.firm` è il file avviato da boot9strap stesso al termine del caric
 
 In questa pagina realizzeremo backup di file di sistema critici e installeremo i alcuni programmi homebrew. La maggior parte di questi passaggi sarà automatizzata utilizzando uno script che verrà eseguito sulla tua console.
 
-{% capture compat %}
-<summary>Elenco delle applicazioni homebrew che saranno installate</summary>
-
-Clicca sui collegamenti per visualizzare il repository GitHub di ogni applicazione. (Lasciagli una stella se li ritieni utili!)
+{% capture notice-6 %}
+The script will install the following applications:
 
 +  **[FBI](https://github.com/Steveice10/FBI)** **(installa applicazioni in formato CIA)*
 +  **[Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)** *(avvia l'Homebrew Launcher)*
@@ -22,10 +20,8 @@ Clicca sui collegamenti per visualizzare il repository GitHub di ogni applicazio
 +  **[ftpd](https://github.com/mtheall/ftpd)** *(accede alla scheda SD del tuo 3DS via wireless)*
 +  **[Universal-Updater](https://github.com/Universal-Team/Universal-Updater/)** *(un app store per applicazioni homebrew per scaricare homebrew dal 3DS via Wi-Fi)*
 +  **[GodMode9](https://github.com/d0k3/GodMode9)** *(strumento multiuso per gestire la NAND e le schede di gioco)*
-
 {% endcapture %}
-<details>{{ compat | markdownify }}</details>
-{: .notice--info}
+<div class="notice--info">{{ notice-6 | markdownify }}</div>
 
 ### Note di Compatibilità
 
@@ -102,17 +98,17 @@ In questa sezione, userai uno script per automatizzare l'installazione di homebr
 1. Premi il pulsante HOME per far apparire il menu delle azioni
 1. Seleziona "Scripts..."
 1. Seleziona "finalize"
-1. Follow the prompts in the script, answering any questions that you are asked
+1. Segui le istruzioni dello script, rispondendo alle domande che ti vengono poste
   + Se riscontri un errore, segui le istruzioni riportate nel messaggio di errore o consulta la pagina [Risoluzione dei problemi](troubleshooting#finalizing-setup)
 1. Quando lo script mostrerà "Setup complete!", premi (A) per spegnere la console
   + Se NON vedi il messaggio "Setup complete!", lo script non ha avuto successo e dovrai ripetere questa sezione
 1. Inserisci la scheda SD nel tuo computer
-1. Copy the `/gm9/backups/` folder to a safe location on your computer
+1. Copia la cartella `/gm9/backups/` in una posizione sicura sul tuo computer
   + Questa cartella contiene backup dei file critici e dovrebbe essere salvata in più posizioni (es. in cloud) se possibile
   + I due file SysNAND sono il backup della NAND e possono essere utilizzati per ripristinare la console ad uno stato funzionante se viene resa inutilizzabile con un errore software
   + Il file `essential.exefs` contiene i file univoci di sistema della tua console e può essere utilizzato per recuperare i tuoi dati in caso di guasto hardware
-1. If you still have them, delete the two `SysNAND` files from the `/gm9/backups/` folder from your SD card
-  + The `essential.exefs` file is small and may be kept on your SD card for ease of access
+1. Se li hai ancora, elimina i due file `SysNAND` dalla cartella `/gm9/backups/` dalla tua scheda SD
+  + Il file `essential.exefs` è piccolo e può essere tenuto sulla tua scheda SD per facilità di accesso
 
 ___
 
