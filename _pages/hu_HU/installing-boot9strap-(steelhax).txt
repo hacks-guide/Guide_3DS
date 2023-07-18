@@ -1,0 +1,92 @@
+---
+title: "Installing boot9strap (Steelhax)"
+---
+
+{% include toc title="Tartalomjegyzék" %}
+
+{% capture technical_info %}
+<summary><em>Technikai részletek (opcionális)</em></summary>
+Ez a metódusa Seedminer használatának további exploitolás céljából használja a `movable.sed` fájlt, hogy egy egyedi Steel Diver: Sub Wars mentés fájlt írjon, ami felhasználható a Homebrew Launcher indítására.
+{% endcapture %}
+<details>{{ technical_info | markdownify }}</details>
+{: .notice--info}
+
+Ez a folyamat felülírja a Steel Diver: Sub Wars mentés fájlt, ha rendelkezel ilyennel. Ha szeretnéd megőrizni a Steel Diver: Sub Wars játék adatod, készítened kell egy mentést a `00000001.sav` fájlról, mielőtt felülírnád.
+{: .notice--warning}
+
+### Amire szükséged lesz
+
++ A "Steel Diver: Sub Wars" játék telepítve az eszközödre
+  + Ha korábban letöltötted, [letöltheted újra](https://en-americas-support.nintendo.com/app/answers/detail/a_id/607/~/how-to-download-or-redownload-content-in-nintendo-3ds-eshop)
+  + Az SD kártyád be kell legyen helyezve az eszközödbe a Steel Diver: Sub Wars telepítéséhez
++ Your `movable.sed` file from completing [Seedminer](seedminer-(alternate))
++ A [Steelhax](/assets/steelhax-release.zip) legfrissebb verziója (közvetlen letöltés)
++ The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
++ The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
++ The latest release of [nimdsphax](https://github.com/luigoalma/nimdsphax/releases/download/v1.0/nimdsphax_v1.0.zip) (direct download)
++ A [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) legújabb kiadása (a Luma3DS `.zip` fájl)
++ The latest release of [HBL otherapps](https://github.com/zoogie/ninjhax2.x/releases/download/v11.17/otherapps_with_CfgS_11.17.zip) (direct download)
+
+### Lépések
+
+#### I. rész - Előkészületek
+
+Ebben a fejezetben fel fogod másolni a fájlokat, amik a Homebrew Launcher indításához szükségesek.
+
+1. Kapcsold ki a konzolod
+1. Helyezd az SD kártyád a számítógépbe
+1. Másold át a `boot.firm` és `boot.3dsx` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
+  + Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne
+1. Hozz létre egy mappát `boot9strap` néven az SD kártya gyökerében
+1. Másold át a `boot9strap.firm` fájlt és a `boot9strap.firm.sha` fájlt a boot9strap `.zip` fájlból az SD kártyád `/boot9strap/` mappájába
+1. Másold át a `SafeB9SInstaller.bin` fájlt a SafeB9SInstaller `.zip`-ből az SD kártyád gyökerébe
+1. Másold át a `steelhax` mappát a Steelhax-release.zip`-ből az SD kártya gyökerébe
+1. Copy the otherapp payload for your model/region/version from `otherapps_with_CfgS_11.17.zip` to the root of your SD card, then rename the payload to `otherapp.bin`
+  + Ne add hozzá a `.bin` kiterjesztést, ha nem látod
+1. Másold át a `movable.sed` a számítógépedről az SD kártyád gyökerébe
+1. Hozz létre egy mappát `3ds` néven az SD kártyád gyökerében, ha még nem létezik ilyen
+  + Ez a mappa tárolja a homebrew applikációkat és adataikat; ez mást mint a `Nintendo 3DS` mappa, amit a konzol automatikusan generál
+1. Copy the `nimdsphax` folder from the nimdsphax `.zip` to the `/3ds/` folder on your SD card
+1. Tedd vissza az SD kártyád a konzoldba
+1. Kapcsold be a konzolod
+
+#### II. rész - Steelminer
+
+Ebben a fejezetben létre fogsz hozni egy hackelt Steel Diver: Sub Wars mentés fájlt, ami használatakor betölti a Homebrew Launcher-t a konzolodon.
+
+1. Indítsd el a "Steel Diver: Sub Wars"-t egyszer és válaszd a Mii-t a mentés fájl inicializálásához
+  + Utasítsd el a játék frissítést, ha kérdezi
+  + Ha már frissítetted a játékot, akkor a System Settings Data management menüjében töröld a frissítést
+1. Lépj ki a "Steel Diver: Sub Wars"-ból
+1. Kapcsold ki a konzolod
+1. Helyezd az SD kártyád a számítógépbe
+1. Nyisd meg [a SteelHax Save Tool weboldalát](https://3dstools.nhnarwhal.com/#/steelhax) a számítógépeden
+1. Válaszd ki a `movable.sed` fájlod
+1. Válaszd ki a konzolodnak megfelelő régiót
+1. Válaszd a "Build and Download" menüpontot
+1. Várd meg, amíg a folyamat befejeződik
+1. Navigálj a `Nintendo 3DS` -> `<ID0>` -> <ID1>` -> `title` -> `00040000` -> `<8-character-region>` -> `data` útvonalra az SD kártyán
+  + **EUR régió**: `000d7e00`
+  + **JPN régió**: `000d7c00`
+  + **USA régió**: `000d7d00`
+1. Másold az épp letöltött `00000001.sav` fájlt a `data` könyvtárba az SD kártyán
+  + Írd felül a régi mentés fájlt, ha kérdezi
+1. Tedd vissza az SD kártyád a konzoldba
+1. Kapcsold be a konzolod
+1. Indítsd el "Steel Diver: Sub Wars"-t
+1. Your console will have booted into the Homebrew Launcher
+1. Launch nimdsphax from the list of homebrew
+1. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
+  + If your console freezes on a red screen, hold the POWER button until it turns off, then retry this section
+
+#### III. rész - boot9strap telepítése
+
+{% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
+{%- include_relative include/configure-luma3ds.txt %}
+
+{% include_relative include/luma3ds-installed-note.txt %}
+
+___
+
+### Tovább a [telepítés véglegesítésére](finalizing-setup)
+{: .notice--primary}
