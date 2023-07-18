@@ -13,12 +13,11 @@ Több oldalon használt:
 Útmutató oldalak:
 * [Seedminer](#seedminer)
   * [BannerBomb3](#bannerbomb3)
-  * [Boot9strap telepítése (USM)](#installing-boot9strap-usm)
-  * [Boot9strap telepítése (Fredtool)](#installing-boot9strap-fredtool)
-  * [Homebrew Launcher (PicHaxx)](#homebrew-launcher-pichaxx)
+  * [Installing boot9strap (Fredtool-Inject)](#installing-boot9strap-fredtool-inject)
+  * [Installing boot9strap (PicHaxx)](#installing-boot9strap-pichaxx)
 * [Boot9strap telepítése (Soundhax)](#installing-boot9strap-soundhax)
 * [Boot9strap telepítése (SSLoth-Browser)](#installing-boot9strap-ssloth-browser)
-* [Homebrew Launcher (super-skaterhax)](#homebrew-launcher-super-skaterhax)
+* [Installing boot9strap (super-skaterhax)](#installing-boot9strap-super-skaterhax)
 
 * [Telepítés véglegesítése](#finalizing-setup)
 
@@ -31,6 +30,15 @@ Problémák telepítést követően:
 {: .notice--info}
 
 ## Problémák a SafeB9SInstaller-rel
+
+### Before opening SafeB9SInstaller
+
+{% capture compat %}
+<summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
+
+A `SafeB9SInstaller.bin` fájl hiányzik, vagy rossz helyen van. Töltsd le a legutolsó kiadását az [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip)-nek csomagold ki és rakd az SD kártyád gyökerébe. Ne add hozzá a `.bin` kiterjesztést, ha nem látod.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
 
 ### SigHaxed FIRM was not installed! Tekintsd meg az alsó képernyőt részletekért.
 
@@ -114,7 +122,7 @@ A friend code-od blokkolt friend code bot általi használattól, mert a 3DS-ed 
 
 A weboldal úgy találta, hogy a `movable.sed`-ed nem brute-force-olható. Ellenőrizd, hogy helyes ID0-t adtál-e meg a weboldalon. Ha az ID0-d helyes, akkor nem tudod használni a Seedminer-t és egy alternatív metódust kell használnod.
 
-Ha a konzolod New 3DS / New 3DS XL / New 2DS XL (amit a 4 váll gomb hátul és a C-Stick jobb oldalon jelez), követheted a [Homebrew Launcher (super-skaterhax)](homebrew-launcher-(super-skaterhax)) lépéseit. Egyébként egy olyan másik metódust kell használnod ami további játékokat és hardvert igényel.
+If you have a New 3DS / New 3DS XL / New 2DS XL (as indicated by the four shoulder buttons on the back and the C-Stick on the right), you can follow [Installing boot9strap (super-skaterhax)](installing-boot9strap-(super-skaterhax)). Egyébként egy olyan másik metódust kell használnod ami további játékokat és hardvert igényel.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -157,53 +165,12 @@ Probléma van az `F00D43D5.bin` fájloddal (hibás vagy másik 3DS-hez tartozik)
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-## Boot9strap telepítése (USM)
+## Installing boot9strap (Fredtool-Inject)
 
 {% capture compat %}
-<summary><u>A Safe Mode rendszer frissítés sikerül a 003-1099 hiba helyett</u></summary>
-
-unSAFE_MODE nincs telepítve. [Kövesd a lépéseket](installing-boot9strap-(usm)) a telepítéséhez.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Piros képernyő a "Detailed Setup" kiválasztását követően</u></summary>
-
-A `usm.bin` fájl hiányzik, vagy rossz helyen van. Töltsd le a legutolsó kiadását az [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/download/v1.3/usm.bin)-nek és rakd `usm.bin` fájlt az SD kártyád gyökerébe. Ne add hozzá a `.bin` kiterjesztést, ha nem látod.
-
-Előfordulhat, hogy a konzolod nem olvassa az SD kártyád. Légy biztos abban, hogy megfelelően be van rakva és formázott.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
-
-A `SafeB9SInstaller.bin` fájl hiányzik, vagy rossz helyen van. Töltsd le a legutolsó kiadását az [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip)-nek csomagold ki és rakd az SD kártyád gyökerébe. Ne add hozzá a `.bin` kiterjesztést, ha nem látod.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Failed to mount the SD card!</u></summary>
-
-Mentsd az adataidat, majd formázd újra az SD kártyád FAT32 formátumra, az ajánlott alkalmazással az operációs rendszerednek megfelelően. ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). A MiniTool Partition Wizard-ról és a HP formázó eszközről (HPUSBDisk) ismert, hogy problémákat okoznak a 3DS SD kártyákkal.
-
-Ha ez sikertelen, próbálkozz egy másik SD kártyával.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-## Boot9strap telepítése (Fredtool)
-
-{% capture compat %}
-<summary><u>Hiba a Fredtool Injector oldalon</u></summary>
+<summary><u>Error on DSiHaxInjector page</u></summary>
 
 Biztosítsd, hogy a `movable.sed` és a DSiWare mentés ugyanarról a konzolról származik. Egy eltérés hibához vezet.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Nem lehetséges a "Haxxxxxxxxx!" kiválasztása, mert a BB3 multihax menü jelenik meg</u></summary>
-
-Elfelejtetted törölni az `F00D43D5.bin` az SD kártyáról. Navigálj a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` mappába az SD kártyán és töröld az `F00D43D5.bin` fájlt.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -215,16 +182,9 @@ Probléma van a `42383821.bin` fájloddal (nem jó, hiányzik, rossz helyen van 
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>DS Connection Settings normálisan indul</u></summary>
+<summary><u>DSiWare launches normally</u></summary>
 
 A `Haxxxxxxxxx!` nem lett átmásolva az SD kártyádról a rendszer memóriába.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Fekete képernyő a DS Connection Settings indításakor</u></summary>
-
-A DS Connection Settings alkalmazásod sérült, és szükséged van Homebrew Launcher hozzáférésre, hogy javítsd ezt a problémát. Csatlakozz a [Nintendo Homebrew-hoz a Discord-on](https://discord.gg/MWxPgEp) segítségért.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -256,7 +216,6 @@ A `boot.nds` fájl hiányzik, vagy rossz helyen van. Töltsd le a legutolsó kia
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-
 {% capture compat %}
 <summary><u>Fehér képernyő beillesztés után</u></summary>
 Probléma van az `boot.nds` fájloddal. Töltsd le újra a legutolsó kiadását az [b9stool](https://github.com/zoogie/b9sTool/releases/latest)-nak és rakd a `boot.nds` fájlt az SD kártyád gyökerébe, felülírva a létező fájlt.
@@ -270,14 +229,14 @@ Csatlakozz a [Nintendo Homebrew-hoz a Discord-on](https://discord.gg/MWxPgEp) é
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-## Homebrew Launcher (PicHaxx)
+## Installing boot9strap (PicHaxx)
 
 {% capture compat %}
 <summary><u>"An error has occurred. Hold down the POWER button to turn off the power..." (fekete képernyő szöveggel)</u></summary>
 
 A `00000001.sav` és/vagy `otherapp.bin` fájljaid rossz helyre lehettek rakva. Biztosítsd, hogy a `00000001.sav` a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` mappában legyen és az `otherapp.bin` pedig az SD kártyád gyökerében.
 
-Ha a fájljaid jó helyen vannak, hozd létre újra a mentéseket a [PicHaxx Save Tool](https://3dstools.nhnarwhal.com/#/pichaxx) használatával, majd rakd őket a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` mappába. Ügyelj arra, hogy a fájl pontosan `00000001.sav` nevű legyen és hogy a konzolod `movable.sed`-jét használd a létrehozáshoz. Töltsd le újra az [otherapps.zip](otherapps.zip)-et és rakd a konzolod SD kártyájára a releváns `.bin` fájlt, majd nevezd át `otherapp.bin`-re. Ne add hozzá a `.bin` kiterjesztést, ha nem látod.
+Ha a fájljaid jó helyen vannak, hozd létre újra a mentéseket a [PicHaxx Save Tool](https://3dstools.nhnarwhal.com/#/pichaxx) használatával, majd rakd őket a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` mappába. Ügyelj arra, hogy a fájl pontosan `00000001.sav` nevű legyen és hogy a konzolod `movable.sed`-jét használd a létrehozáshoz. Re-download [HBL otherapps](https://github.com/zoogie/ninjhax2.x/releases/download/v11.17/otherapps_with_CfgS_11.17.zip), place the `.bin` file relevant to your console to the root of your SD card, and rename it to `otherapp.bin`. Ne add hozzá a `.bin` kiterjesztést, ha nem látod.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -291,7 +250,7 @@ A konzolod már rendelkezik egyedi firmware-rel. Érdemes elvégezned a [CFW ell
 {% capture compat %}
 <summary><u>"An error has occurred, forcing the software to close..." (fehér üzenet doboz)</u></summary>
 
-Probléma van az `otherapp.bin` fájloddal. Töltsd le az [otherapps.zip](otherapps.zip)-et és rakd a konzolod SD kártyájára a releváns `.bin` fájlt, majd nevezd át `otherapp.bin`-re. Ne add hozzá a `.bin` kiterjesztést, ha nem látod.
+Probléma van az `otherapp.bin` fájloddal. Download [HBL otherapps](https://github.com/zoogie/ninjhax2.x/releases/download/v11.17/otherapps_with_CfgS_11.17.zip), place the `.bin` file relevant to your console to the root of your SD card, and rename it to `otherapp.bin`. Ne add hozzá a `.bin` kiterjesztést, ha nem látod.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -324,13 +283,6 @@ Probléma van a `otherapp.bin` fájloddal (nem jó, hiányzik, rossz helyen van 
 <summary><u>"Could not play"</u></summary>
 
 Rossz Soundhax fájlod van a konzolodhoz és a régiódhoz vagy az eszközöd nem kompatibilis a Soundhax-szal. Később, azt, hogy mit kell csinálnod, attól függ, hog milyen verzión van a 3DS-ed jelenleg. Csatlakozz a [Nintendo Homebrew-hoz a Discord-on](https://discord.gg/MWxPgEp) segítségért.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
-
-A `SafeB9SInstaller.bin` fájl hiányzik, vagy rossz helyen van. Töltsd le a legutolsó kiadását az [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip)-nek csomagold ki és rakd az SD kártyád gyökerébe. Ne add hozzá a `.bin` kiterjesztést, ha nem látod.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -406,13 +358,6 @@ Kövesd az alábbi lépéseket:
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
-
-A `SafeB9SInstaller.bin` fájl hiányzik, vagy rossz helyen van. Töltsd le a legutolsó kiadását az [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip)-nek csomagold ki és rakd az SD kártyád gyökerébe. Ne add hozzá a `.bin` kiterjesztést, ha nem látod.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
 <summary><u>Lefagyás a "Doing agbhax..." üzenetnél</u></summary>
 Probléma lehet az arm11code.bin` fájloddal. Töltsd le újra a legutolsó kiadását az [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)-nak és rakd a fájlt az SD kártyád gyökerébe, majd nevezd át `arm11code.bin`-re. Ne add hozzá a `.bin` kiterjesztést, ha nem látod.
 {% endcapture %}
@@ -434,7 +379,7 @@ Ha ez sikertelen, próbálkozz egy másik SD kártyával.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-## Homebrew Launcher (super-skaterhax)
+## Installing boot9strap (super-skaterhax)
 
 {% capture compat %}
 <summary><u>"An error has occurred. Please save your data in any software currently in use, then restart the system."</u></summary>
