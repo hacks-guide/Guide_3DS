@@ -1,0 +1,71 @@
+---
+title: "Installing boot9strap (freakyhax)"
+---
+
+{% include toc title="Indice" %}
+
+{% capture technical_info %}
+<summary><em>Dettagli Tecnici (opzionale)</em></summary>
+[freakyhax](https://plutooo.github.io/freakyhax/) è un exploit per il gioco Freakyforms Deluxe scoperto e rilasciato da [plutooo](https://github.com/plutooo). Funziona sulle versioni da 9.0.0 a 11.17.0 su console EUR, USA e JPN.
+
+{% endcapture %}
+<details>{{ technical_info | markdownify }}</details>
+{: .notice--info}
+
+Questo metodo richiede una fotocamera 3DS funzionante.
+{: .notice--info}
+
+### Cosa serve
+
++ Una copia EUR/USA/JPN di Freakyforms Deluxe (da eShop o scheda di gioco)
++ L'ultima versione di [freakyhax](https://github.com/plutooo/freakyhax/releases/latest)
++ The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
++ The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
++ The latest release of [nimdsphax](https://github.com/luigoalma/nimdsphax/releases/download/v1.0/nimdsphax_v1.0.zip) (direct download)
++ L'ultima versione di [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (il file `.zip` di Luma3DS)
++ The latest release of [HBL otherapps](https://github.com/zoogie/ninjhax2.x/releases/download/v11.17/otherapps_with_CfgS_11.17.zip) (direct download)
+
+### Istruzioni
+
+#### Sezione I - Preparazione
+
+1. Spegni la tua console
+1. Inserisci la scheda SD nel tuo computer
+1. Copia tutti i file e le cartelle all'interno della cartella `/build/<la tua console e regione>/exploit/` dall'archivio `.zip` di freakyhax nella directory principale della tua scheda SD
+  + La directory principale della scheda SD è la cartella della tua scheda SD in cui è possibile visualizzare la cartella Nintendo 3DS, ma non il suo interno
+1. Copy the otherapp payload for your model/region/version from `otherapps_with_CfgS_11.17.zip` to the root of your SD card, then rename the payload to `otherapp.bin`
+  + Non aggiungere l'estensione `.bin` se non la vedi presente
+1. Copia i file `boot.firm` e `boot.3dsx` dall'archivio `.zip` di Luma3DS nella directory principale della tua scheda SD
+  + La directory principale della scheda SD è la cartella della tua scheda SD in cui è possibile visualizzare la cartella Nintendo 3DS, ma non il suo interno
+1. Crea una cartella chiamata `boot9strap` nella directory principale della tua scheda SD
+1. Copia i file `boot9strap.firm` e `boot9strap.firm.sha` dall'archivio `.zip` di boot9strap nella cartella `/boot9strap/` della tua scheda SD
+1. Copia il file `SafeB9SInstaller.bin` dall'archivio `.zip` di SafeB9SInstaller nella directory principale della tua scheda SD
+1. Se assente, crea una cartella chiamata `3ds` nella directory principale della tua scheda SD
+  + Questa cartella mantiene le applicazioni homebrew e i loro dati; è diversa dalla cartella `Nintendo 3DS` generata automaticamente dalla console
+1. Copy the `nimdsphax` folder from the nimdsphax `.zip` to the `/3ds/` folder on your SD card
+1. Reinserisci la scheda SD nella tua console
+1. Accendi la tua console
+
+#### Sezione II - freakyhax
+
+1. Reinserisci la scheda SD nella tua console
+1. Accendi la tua console
+1. Avvia Freakyforms Deluxe
+1. Nel menu di gioco, seleziona `Play -> Camera -> Load a QR code`
+1. Seleziona il codice QR
+1. Your console will have booted into the Homebrew Launcher
+1. Launch nimdsphax from the list of homebrew
+1. Se l'exploit è andato a buon fine, si avvierà SafeB9SInstaller
+  + If your console freezes on a red screen, hold the POWER button until it turns off, then retry this section
+
+#### Sezione III - Installazione di boot9strap
+
+{% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
+{%- include_relative include/configure-luma3ds.txt %}
+
+{% include_relative include/luma3ds-installed-note.txt %}
+
+___
+
+### Prosegui con il [Completamento dell'installazione](finalizing-setup)
+{: .notice--primary}
