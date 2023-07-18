@@ -13,12 +13,11 @@ title: "문제 해결"
 가이드 페이지:
 * [Seedminer](#seedminer)
   * [BannerBomb3](#bannerbomb3)
-  * [boot9strap 설치 (USM)](#installing-boot9strap-usm)
-  * [boot9strap 설치 (Fredtool)](#installing-boot9strap-fredtool)
-  * [Homebrew Launcher (PicHaxx)](#homebrew-launcher-pichaxx)
+  * [Installing boot9strap (Fredtool-Inject)](#installing-boot9strap-fredtool-inject)
+  * [Installing boot9strap (PicHaxx)](#installing-boot9strap-pichaxx)
 * [boot9strap 설치 (Soundhax)](#installing-boot9strap-soundhax)
 * [boot9strap 설치 (SSLoth-Browser)](#installing-boot9strap-ssloth-browser)
-* [Homebrew Launcher (super-skaterhax)](#homebrew-launcher-super-skaterhax)
+* [Installing boot9strap (super-skaterhax)](#installing-boot9strap-super-skaterhax)
 
 * [마무리 단계](#finalizing-setup)
 
@@ -31,6 +30,15 @@ title: "문제 해결"
 {: .notice--info}
 
 ## SafeB9SInstaller와의 문제
+
+### Before opening SafeB9SInstaller
+
+{% capture compat %}
+<summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
+
+`SafeB9SInstaller.bin` 파일이 없거나 잘못 들어갔습니다. 최신 버전의 [SafeB9Installer](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInst20170605-122940.zip)을 다운받아 압축을 풀고, SD 카드의 최상위 디렉토리에 `SafeB9Installer.bin`을 복사해주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
 
 ### SigHaxed FIRM was not installed! Check lower screen for more info.
 
@@ -114,7 +122,7 @@ Your SD card is most likely acting weird. Try reformatting your SD card ([Window
 
 웹사이트에서 `movable.sed` 파일을 해킹할 수 없다고 확정했습니다. 정확한 ID0를 제공했는지 확인해주세요. 만약 ID0가 정확하다면, Seedminer를 통한 방법은 불가능하며 다른 방법을 이용해야 합니다.
 
-만약 New 3DS / New 3DS XL / New 2DS XL (뒤에 4개의 어깨 버튼과 함께 오른쪽에 C-스틱이 달린 것들) 을 가지고 계시다면, [Homebrew Launcher (super-skaterhax)](homebrew-launcher-(super-skaterhax)) 방법을 따라해볼 수 있습니다. 그 외에는 추가 하드웨어가 필요한 방법을 시도해야 할 수 있습니다.
+If you have a New 3DS / New 3DS XL / New 2DS XL (as indicated by the four shoulder buttons on the back and the C-Stick on the right), you can follow [Installing boot9strap (super-skaterhax)](installing-boot9strap-(super-skaterhax)). 그 외에는 추가 하드웨어가 필요한 방법을 시도해야 할 수 있습니다.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -157,53 +165,12 @@ To fix this, you will need to determine which folder contains your data. 이것�
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-## boot9strap 설치 (USM)
+## Installing boot9strap (Fredtool-Inject)
 
 {% capture compat %}
-<summary><u>안전 모드의 본체 업데이트가 오류 003-1099를 표시하지 않고 성공합니다</u></summary>
-
-unSAFE_MODE가 설치되지 않았습니다. [이 설명](installing-boot9strap-(usm))을 따라 설치해주세요.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>"Detailed Setup"을 선택했을 때 빨간 화면이 표시됩니다</u></summary>
-
-`usm.bin` 파일이 없거나 잘못 들어갔습니다. 최신 버전의 [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/download/v1.3/usm.bin)을 다시 내려받고 `usm.bin` 파일을 SD 카드의 최상위 디렉토리에 복사해주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
-
-또는, 콘솔이 SD 카드를 인식 못 했을 가능성도 있습니다. 장착이 되있고 제대로 포맷이 되었다는걸 확인해 주세요.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
-
-`SafeB9SInstaller.bin` 파일이 없거나 잘못 들어갔습니다. 최신 버전의 [SafeB9Installer](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInst20170605-122940.zip)을 다운받아 압축을 풀고, SD 카드의 최상위 디렉토리에 `SafeB9Installer.bin`을 복사해주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Failed to mount the SD card!</u></summary>
-
-데이터를 모두 백업하고 시스템별로 권장되는 프로그램을 이용해 SD카드를 FAT32로 다시 포맷해 주세요. ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))) MiniTool Partition Wizard나 HP formatting tool(HPUSBDisk)는 3DS용 SD 카드에 문제를 발생시킨다는 것이 알려져 있습니다.
-
-만약 해결되지 않는다면, 다른 SD 카드를 이용해 보세요.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-## boot9strap 설치 (Fredtool)
-
-{% capture compat %}
-<summary><u>Fredtool Injector 페이지에서 오류가 발생합니다</u></summary>
+<summary><u>Error on DSiHaxInjector page</u></summary>
 
 `movable.sed`와 DSiWare 백업 파일이 동일 기기에서 추출한 것인지 확인해 주세요. 서로 다르면 오류가 발생합니다.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>BB3 multihax 메뉴가 표시돼 "Haxxxxxxxxx!"를 선택할 수 없습니다</u></summary>
-
-`F00D43D5.bin` 파일을 삭제하지 않았습니다. SD 카드의 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 폴더로 이동하고 `F00D43D5.bin` 파일을 삭제해 주세요.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -215,16 +182,9 @@ unSAFE_MODE가 설치되지 않았습니다. [이 설명](installing-boot9strap-
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>DS 소프트웨어용 설정이 정상적으로 실행됩니다</u></summary>
+<summary><u>DSiWare launches normally</u></summary>
 
 `Haxxxxxxxxx!`가 SD 카드에서 시스템 메모리로 복사되지 않았습니다.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>DS 소프트웨어용 설정을 실행하면 검은 화면이 표시됩니다</u></summary>
-
-DS 소프트웨어용 설정 앱이 고장났으며, 고치기 위해서는 Homebrew Launcher 앱에 접근해야 합니다. [Nintendo Homebrew Discord 서버](https://discord.gg.MWxPgEp)에 오셔서 도움을 요청하세요.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -256,7 +216,6 @@ SD 카드 루트에 Frogminer_save `.zip` 안에 있는 `private` 폴더를 복�
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-
 {% capture compat %}
 <summary><u>붙여넣기 후 하얀 화면이 표시됩니다</u></summary>
 `boot.nds` 파일에 문제가 있습니다. 최신 버전의 [b9stool](https://github.com/zoogie/b9sTool/releases/latest)을 다시 내려받고 `boot.nds` 파일을 SD 카드의 최상위 디렉토리에 복사해주세요. 이미 파일이 있으면 덮어씌워 주세요.
@@ -270,14 +229,14 @@ SD 카드 루트에 Frogminer_save `.zip` 안에 있는 `private` 폴더를 복�
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-## Homebrew Launcher (PicHaxx)
+## Installing boot9strap (PicHaxx)
 
 {% capture compat %}
 <summary><u>에러가 발생했습니다. 본체의 전원 버튼을 길게 눌러 전원을 끈 후..." (검은 화면에 텍스트)</u></summary>
 
 `00000001.sav` 또는 `otherapp.bin` 파일이 잘못 들어갔습니다. `00000000.sav`가 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00004000` -> 0017c100` -> `data` 안에 있고 `otherapp.bin`이 SD 카드 루트에 있는지 다시 한 번 확인해 주세요.
 
-만약 위치가 정확하다면, [PicHaxx Save Tool](https://3dstools.nhnarwhal.com/#/pichaxx)을 이용해 세이브를 다시 생성한 후, `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` 폴더 안에 다시 복사해 주세요. 반드시 파일의 이름이 `00000001.sav`이고 기기의 `movable.sed`를 이용해야 합니다. [otherapps.zip](/assets/otherapps.zip)를 다운로드하고, 콘솔에 맞는 `.bin` 파일를 SD 카드의 루트로 복사하고, 이 파일을 `otherapp.bin`으로 이름을 바꿔 주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
+만약 위치가 정확하다면, [PicHaxx Save Tool](https://3dstools.nhnarwhal.com/#/pichaxx)을 이용해 세이브를 다시 생성한 후, `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` 폴더 안에 다시 복사해 주세요. 반드시 파일의 이름이 `00000001.sav`이고 기기의 `movable.sed`를 이용해야 합니다. Re-download [HBL otherapps](https://github.com/zoogie/ninjhax2.x/releases/download/v11.17/otherapps_with_CfgS_11.17.zip), place the `.bin` file relevant to your console to the root of your SD card, and rename it to `otherapp.bin`. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -291,7 +250,7 @@ SD 카드 루트에 Frogminer_save `.zip` 안에 있는 `private` 폴더를 복�
 {% capture compat %}
 <summary><u>"에러가 발생하여 소프트웨어를 종료합니다..." (하얀 메시지 창)</u></summary>
 
-`otherapp.bin` 파일에 문제가 있습니다. [otherapps.zip](/assets/otherapps.zip)를 다운로드하고, 콘솔에 맞는 `.bin` 파일를 SD 카드의 루트로 복사하고, 이 파일을 `otherapp.bin`으로 이름을 바꿔 주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
+`otherapp.bin` 파일에 문제가 있습니다. Download [HBL otherapps](https://github.com/zoogie/ninjhax2.x/releases/download/v11.17/otherapps_with_CfgS_11.17.zip), place the `.bin` file relevant to your console to the root of your SD card, and rename it to `otherapp.bin`. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -324,13 +283,6 @@ SD 카드 루트에 Frogminer_save `.zip` 안에 있는 `private` 폴더를 복�
 <summary><u>"Could not play"</u></summary>
 
 콘솔과 지역 조합과 다른 Soundhax 파일을 이용하고 있거나, 콘솔이 Soundhax와 호환되지 않습니다. In the latter case, your course of action will determine on what version your 3DS is currently on. [Nintendo Homebrew Discord 서버](https://discord.gg.MWxPgEp)에 오셔서 도움을 요청하세요.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
-
-`SafeB9SInstaller.bin` 파일이 없거나 잘못 들어갔습니다. 최신 버전의 [SafeB9Installer](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInst20170605-122940.zip)을 다운받아 압축을 풀고, SD 카드의 최상위 디렉토리에 `SafeB9Installer.bin`을 복사해주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -406,13 +358,6 @@ SSLoth 프록시 설정이 잘못 설정되었습니다. 페이지의 SSLoth 섹
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
-
-`SafeB9SInstaller.bin` 파일이 없거나 잘못 들어갔습니다. 최신 버전의 [SafeB9Installer](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInst20170605-122940.zip)을 다운받아 압축을 풀고, SD 카드의 최상위 디렉토리에 `SafeB9Installer.bin`을 복사해주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
 <summary><u>"Doing agbhax..."에서 멈춥니다</u></summary>
 `arm11code.bin`에 문제가 있을 수 있습니다. 최신 버전의 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)을 다시 내려받아 SD 카드의 최상위 디렉토리에 복사하고, 이름을 `arm11code.bin`으로 변경해주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
 {% endcapture %}
@@ -434,7 +379,7 @@ SSLoth 프록시 설정이 잘못 설정되었습니다. 페이지의 SSLoth 섹
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-## Homebrew Launcher (super-skaterhax)
+## Installing boot9strap (super-skaterhax)
 
 {% capture compat %}
 <summary><u>에러가 발생했습니다. Please save your data in any software currently in use, then restart the system."</u></summary>
