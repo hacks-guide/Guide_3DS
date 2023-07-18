@@ -13,12 +13,11 @@ Utilisé sur plusieurs pages :
 Pages du guide :
 * [Seedminer](#seedminer)
   * [BannerBomb3](#bannerbomb3)
-  * [Installation de boot9strap (USM)](#installing-boot9strap-usm)
-  * [Installation de boot9strap (Fredtool)](#installing-boot9strap-fredtool)
-  * [Homebrew Launcher (PicHaxx)](#homebrew-launcher-pichaxx)
+  * [Installing boot9strap (Fredtool-Inject)](#installing-boot9strap-fredtool-inject)
+  * [Installing boot9strap (PicHaxx)](#installing-boot9strap-pichaxx)
 * [Installation de boot9strap (Soundhax)](#installing-boot9strap-soundhax)
 * [Installation de boot9strap (SSLoth-Browser)](#installing-boot9strap-ssloth-browser)
-* [Homebrew Launcher (super-skaterhax)](#homebrew-launcher-super-skaterhax)
+* [Installing boot9strap (super-skaterhax)](#installing-boot9strap-super-skaterhax)
 
 * [Finalisation de l'installation](#finalizing-setup)
 
@@ -31,6 +30,15 @@ Problèmes après l'installation :
 {: .notice--info}
 
 ## Problèmes avec SafeB9SInstaller
+
+### Before opening SafeB9SInstaller
+
+{% capture compat %}
+<summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
+
+Le fichier `SafeB9SInstaller.bin` est absent ou mal placé. Téléchargez la dernière version de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip), extrayez-le et placez `SafeB9SInstaller.bin` à la racine de votre carte SD. N'ajoutez pas l'extension `.bin` si vous ne la voyez pas déjà.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
 
 ### SigHaxed FIRM was not installed! Check lower screen for more info.
 
@@ -114,7 +122,7 @@ Votre code ami a été bloqué par le bot car votre 3DS n'a pas réussi à ajout
 
 Le site Web a déterminé que votre `movable.sed` ne peut pas être forcé. Assurez-vous que vous avez donné le bon ID0 au site Web. Si votre ID0 est correct, vous ne pourrez pas utiliser Seedminer et vous devrez utiliser une autre méthode.
 
-Si vous possédez une New 3DS / New 3DS XL / New 2DS XL (comme indiqué par les quatre boutons gâchettes à l'arrière et le stick C à droite), vous pouvez suivre [Homebrew Launcher (super-skaterhax)](homebrew-launcher-(super-skaterhax)). Sinon, vous devrez suivre une méthode qui nécessite des jeux ou du matériel supplémentaires.
+If you have a New 3DS / New 3DS XL / New 2DS XL (as indicated by the four shoulder buttons on the back and the C-Stick on the right), you can follow [Installing boot9strap (super-skaterhax)](installing-boot9strap-(super-skaterhax)). Sinon, vous devrez suivre une méthode qui nécessite des jeux ou du matériel supplémentaires.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -157,53 +165,12 @@ Il y a peut-être un problème avec votre fichier `F00D43D5.bin` (il peut être 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-## Installation de boot9strap (USM)
+## Installing boot9strap (Fredtool-Inject)
 
 {% capture compat %}
-<summary><u>La mise à jour de la console en mode sans échec s'exécute correctement au lieu de donner l'erreur 003-1099</u></summary>
-
-unSAFE_MODE n'est pas installé. [Suivez les instructions](installing-boot9strap-(usm)) pour l'installer.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Écran rouge après avoir sélectionné "Paramètres avancés"</u></summary>
-
-Le fichier `usm.bin` est absent ou mal placé. Téléchargez la dernière version de [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/download/v1.3/usm.bin) et placez `usm.bin` à la racine de votre carte SD. N'ajoutez pas l'extension `.bin` si vous ne la voyez pas déjà.
-
-Il est également possible que la console ne lise pas votre carte SD. Assurez-vous qu'elle est bien insérée et formatée correctement.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
-
-Le fichier `SafeB9SInstaller.bin` est absent ou mal placé. Téléchargez la dernière version de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip), extrayez-le et placez `SafeB9SInstaller.bin` à la racine de votre carte SD. N'ajoutez pas l'extension `.bin` si vous ne la voyez pas déjà.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Failed to mount the SD card!</u></summary>
-
-Sauvegardez vos données et reformatez votre carte SD en FAT32 avec l'outil recommandé en fonction de votre système d'exploitation ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). MiniTool Partition Wizard et l'outil de formatage d'HP (HPUSBDisk) sont connus pour causer des problèmes avec les cartes SD des 3DS.
-
-Si cela échoue, essayez d'utiliser une autre carte SD.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-## Installation de boot9strap (Fredtool)
-
-{% capture compat %}
-<summary><u>Erreur sur la page de l'injecteur de Fredtool</u></summary>
+<summary><u>Error on DSiHaxInjector page</u></summary>
 
 Assurez-vous que votre `movable.sed` et votre sauvegarde de DSiWare proviennent de la même console. Une incohérence entraînera une erreur.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Impossible de sélectionner "Haxxxxxxxxx!" car le menu multihax BB3 apparaît</u></summary>
-
-Vous avez oublié de supprimer `F00D43D5.bin` de la carte SD. Naviguez vers `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` sur votre carte SD et supprimez le fichier `F00D43D5.bin`.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -215,16 +182,9 @@ Il y a un problème avec votre fichier `42383821.bin` (il est incorrect, manquan
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Les paramètres de Connexions Nintendo DS s'exécutent normalement</u></summary>
+<summary><u>DSiWare launches normally</u></summary>
 
 `Haxxxxxxxxx!` n'a pas été copié depuis votre carte SD vers la mémoire de votre console.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Écran noir lors du lancement des paramètres de Connexions Nintendo DS</u></summary>
-
-Votre application Connexions Nintendo DS est endommagée et vous aurez besoin d'un accès à l'Homebrew Launcher pour résoudre ce problème. Rejoignez [Nintendo Homebrew sur Discord](https://discord.gg/MWxPgEp) pour obtenir de l'aide.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -256,7 +216,6 @@ Le fichier `boot.nds` est absent ou mal placé. Téléchargez la dernière versi
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-
 {% capture compat %}
 <summary><u>Écran blanc après avoir collé</u></summary>
 Il y a un problème avec votre fichier `boot.nds`. Re-téléchargez la dernière version de [b9stool](https://github.com/zoogie/b9sTool/releases/latest) et placez `boot.nds` à la racine de votre carte SD, en remplaçant l'ancien.
@@ -270,14 +229,14 @@ Rejoignez [Nintendo Homebrew sur Discord](https://discord.gg/MWxPgEp) et expliqu
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-## Homebrew Launcher (PicHaxx)
+## Installing boot9strap (PicHaxx)
 
 {% capture compat %}
 <summary><u>"Une erreur est survenue. Maintenez le bouton POWER enfoncé pour éteindre la console..." (écran noir avec texte)</u></summary>
 
 Your `00000001.sav` and/or `otherapp.bin` files may be misplaced. Ensure that `00000001.sav` is in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` and that `otherapp.bin` is on the root of your SD card.
 
-If your files are in the correct locations, re-create the save using the [PicHaxx Save Tool](https://3dstools.nhnarwhal.com/#/pichaxx), then place it in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data`. Ensure that the file is named exactly `00000001.sav` and that you used your console's `movable.sed` to create it. Re-download [otherapps.zip](/assets/otherapps.zip), place the `.bin` file relevant to your console to the root of your SD card, and rename it to `otherapp.bin`. N'ajoutez pas l'extension `.bin` si vous ne la voyez pas déjà.
+If your files are in the correct locations, re-create the save using the [PicHaxx Save Tool](https://3dstools.nhnarwhal.com/#/pichaxx), then place it in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data`. Ensure that the file is named exactly `00000001.sav` and that you used your console's `movable.sed` to create it. Re-download [HBL otherapps](https://github.com/zoogie/ninjhax2.x/releases/download/v11.17/otherapps_with_CfgS_11.17.zip), place the `.bin` file relevant to your console to the root of your SD card, and rename it to `otherapp.bin`. N'ajoutez pas l'extension `.bin` si vous ne la voyez pas déjà.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -291,7 +250,7 @@ Your console already has custom firmware. Vous devriez [vérifier la présence d
 {% capture compat %}
 <summary><u>"Le logiciel a été arrêté car une erreur est survenue. La console va redémarrer." (boîte de message blanche)</u></summary>
 
-There is an issue with your `otherapp.bin` file. Download [otherapps.zip](/assets/otherapps.zip), place the `.bin` file relevant to your console to the root of your SD card, and rename it to `otherapp.bin`. N'ajoutez pas l'extension `.bin` si vous ne la voyez pas déjà.
+There is an issue with your `otherapp.bin` file. Download [HBL otherapps](https://github.com/zoogie/ninjhax2.x/releases/download/v11.17/otherapps_with_CfgS_11.17.zip), place the `.bin` file relevant to your console to the root of your SD card, and rename it to `otherapp.bin`. N'ajoutez pas l'extension `.bin` si vous ne la voyez pas déjà.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -324,13 +283,6 @@ Il y a un problème avec votre fichier `otherapp.bin` (il est absent, mal placé
 <summary><u>"Lecture impossible."</u></summary>
 
 You have the wrong Soundhax file for your console and region, or your console is incompatible with Soundhax. In the latter case, your course of action will determine on what version your 3DS is currently on. Rejoignez [Nintendo Homebrew sur Discord](https://discord.gg/MWxPgEp) pour obtenir de l'aide.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
-
-Le fichier `SafeB9SInstaller.bin` est absent ou mal placé. Téléchargez la dernière version de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip), extrayez-le et placez `SafeB9SInstaller.bin` à la racine de votre carte SD. N'ajoutez pas l'extension `.bin` si vous ne la voyez pas déjà.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -406,13 +358,6 @@ Suivez ces étapes dans l'ordre :
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
-
-Le fichier `SafeB9SInstaller.bin` est absent ou mal placé. Téléchargez la dernière version de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip), extrayez-le et placez `SafeB9SInstaller.bin` à la racine de votre carte SD. N'ajoutez pas l'extension `.bin` si vous ne la voyez pas déjà.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
 <summary><u>Plantage sur "Doing agbhax..."</u></summary>
 Il y a peut-être un problème avec votre fichier `arm11code.bin`. Re-téléchargez la dernière version de [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), placez le fichier à la racine de votre carte SD et renommez-le en `arm11code.bin`. N'ajoutez pas l'extension `.bin` si vous ne la voyez pas déjà.
 {% endcapture %}
@@ -434,7 +379,7 @@ Si cela échoue, essayez d'utiliser une autre carte SD.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-## Homebrew Launcher (super-skaterhax)
+## Installing boot9strap (super-skaterhax)
 
 {% capture compat %}
 <summary><u>"Une erreur est survenue. Veuillez sauvegarder les données de tout logiciel en cours d'utilisation et redémarrer la console."</u></summary>
