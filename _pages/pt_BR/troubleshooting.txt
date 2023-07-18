@@ -13,12 +13,11 @@ Usado em múltiplas páginas:
 Páginas do guia:
 * [Seedminer](#seedminer)
   * [BannerBomb3](#bannerbomb3)
-  * [Instalando boot9strap (USM)](#installing-boot9strap-usm)
-  * [Instalando boot9strap (Fredtool)](#installing-boot9strap-fredtool)
-  * [Homebrew Launcher (PicHaxx)](#homebrew-launcher-pichaxx)
+  * [Installing boot9strap (Fredtool-Inject)](#installing-boot9strap-fredtool-inject)
+  * [Installing boot9strap (PicHaxx)](#installing-boot9strap-pichaxx)
 * [Instalando boot9strap (Soundhax)](#installing-boot9strap-soundhax)
 * [Instalando boot9strap (SSLoth-Browser)](#installing-boot9strap-ssloth-browser)
-* [Homebrew Launcher (super-skaterhax)](#homebrew-launcher-super-skaterhax)
+* [Installing boot9strap (super-skaterhax)](#installing-boot9strap-super-skaterhax)
 
 * [Finalizando a instalação](#finalizando-a-instalação)
 
@@ -31,6 +30,15 @@ Erros após a instalação:
 {: .notice--info}
 
 ## Problemas com o SafeB9SInstaller
+
+### Before opening SafeB9SInstaller
+
+{% capture compat %}
+<summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
+
+O arquivo `SafeB9SInstaller.bin` está ausente ou fora do lugar apropriado. Baixe a última versão do [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip), extraia e coloque `SafeB9SInstaller.bin` na raiz do seu cartão SD. Não adicione a extensão `.bin` se você não a vê.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
 
 ### SigHaxed FIRM was not installed! Check lower screen for more info.
 
@@ -114,7 +122,7 @@ Seu friend code foi bloqueado de usar o bot porque o seu 3DS falhou em adicionar
 
 O site determinou que seu `movable.sed` não pode ser brute-forced. Certifique-se de que você deu o ID0 correto para o site. Se o seu ID0 estiver correto, então você não poderá usar o Seedminer e precisará usar um método alternativo.
 
-Se você tem um New 3DS / New 3DS XL / New 2DS XL (como indicado pelos quatro gatilhos na parte traseira e o C-Stick na direita), você pode seguir [Homebrew Launcher (superskaterhax)](homebrew-launcher-(superskaterhax)). Caso contrário, você precisará seguir um método que requer jogos ou hardware adicionais.
+If you have a New 3DS / New 3DS XL / New 2DS XL (as indicated by the four shoulder buttons on the back and the C-Stick on the right), you can follow [Installing boot9strap (super-skaterhax)](installing-boot9strap-(super-skaterhax)). Caso contrário, você precisará seguir um método que requer jogos ou hardware adicionais.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -157,53 +165,12 @@ Pode haver um problema com o seu arquivo `F00D43D5.bin` (pode estar corrompido o
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-## Instalando boot9strap (USM)
+## Installing boot9strap (Fredtool-Inject)
 
 {% capture compat %}
-<summary><u>A atualização do sistema no Modo de Segurança é bem-sucedida em vez de dar o erro 003-1099</u></summary>
-
-unSAFE_MODE não está instalado. [Siga as instruções](installing-boot9strap-(usm)) para instalá-lo.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Tela vermelha após selecionar "Configuração Avançada"</u></summary>
-
-O arquivo `usm.bin` está faltando ou está deslocado. Baixe a última versão do [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/download/v1.3/usm.bin) e coloque `usm.bin` na raiz do seu cartão SD. Não adicione a extensão `.bin` se você não a vê.
-
-Há também a possibilidade de o console não estar lendo seu cartão SD. Certifique-se de que está inserido e formatado corretamente.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
-
-O arquivo `SafeB9SInstaller.bin` está ausente ou fora do lugar apropriado. Baixe a última versão do [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip), extraia e coloque `SafeB9SInstaller.bin` na raiz do seu cartão SD. Não adicione a extensão `.bin` se você não a vê.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Failed to mount the SD card!</u></summary>
-
-Faça o backup de seus dados e formate novamente seu cartão SD como FAT32 com a ferramenta recomendada dependendo do seu sistema operacional ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). MiniTool Partition Wizard e a ferramenta de formatação da HP (HPUSBDisk) são conhecidas por causar problemas com cartões SD para 3DS.
-
-Se isso falhar, tente usar outro cartão SD.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-## Instalando boot9strap (Fredtool)
-
-{% capture compat %}
-<summary><u>Erro na página Fredtool Injector</u></summary>
+<summary><u>Error on DSiHaxInjector page</u></summary>
 
 Certifique-se de que o seu `movable.sed` e backup de DSiWare venham do mesmo console. Uma incompatibilidade resultará em erro.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Não é possível selecionar "Haxxxxxxx!" porque o menu multihax BB3 aparece</u></summary>
-
-Você esqueceu de deletar `F00D43D5.bin` do cartão SD. Navegue até `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` no seu cartão SD e apague o arquivo `F00D43D5.bin`.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -215,16 +182,9 @@ Há um problema com seu arquivo `42383821.bin` (ele está incorreto, faltando, c
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Configurações de Internet DS iniciam normalmente</u></summary>
+<summary><u>DSiWare launches normally</u></summary>
 
 `Haxxxxxxxxxxx!` não foi copiado do cartão SD para a memória do sistema.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Tela preta ao iniciar Configurações de Internet DS</u></summary>
-
-Seu aplicativo das Conexões Nintendo DS está quebrado, e você precisará de acesso ao Homebrew Launcher para corrigir esse problema. Entre no [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) para obter ajuda.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -256,7 +216,6 @@ O arquivo `boot.nds` está faltando ou está fora do lugar apropriado. Baixe a v
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-
 {% capture compat %}
 <summary><u>Tela branca após colar</u></summary>
 Há um problema com o seu arquivo `boot.nds`. Baixe novamente a versão mais recente do [b9stool](https://github.com/zoogie/b9sTool/releases/latest) e coloque `boot.nds` na raiz do seu cartão SD, substituindo o existente.
@@ -270,14 +229,14 @@ Entre no [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) e explique o
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-## Homebrew Launcher (PicHaxx)
+## Installing boot9strap (PicHaxx)
 
 {% capture compat %}
 <summary><u>"Ocorreu um erro. Segure o botão POWER para desligar..." (tela preta com texto)</u></summary>
 
 Seus arquivos `00000001.sav` e/ou `otherapp.bin` podem estar fora do local apropriado. Certifique-se de que `00000001.sav` está em `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` e que `otherapp. em` está na raiz do seu cartão SD.
 
-Se seus arquivos estiverem nos locais corretos, re-crie o save usando a [PicHaxx Save Tool](https://3dstools.nhnarwhal. om/#/pichaxx), então coloque-o em `Nintendo 3DS` -> `<ID0>` -><ID1>` -> `title` -> `00040000` -> `0017c100` -> `data`. Certifique-se de que o arquivo tem exatamente o nome de `00000001.sav` e que você usou o `movable.sed` do seu console para criá-lo. Rebaixe [otherapps.zip](/assets/otherapps.zip), coloque o arquivo `.bin` relevante para o seu console na raiz do seu cartão SD e renomee-o para `otherapp.bin`. Não adicione a extensão `.bin` se você não a vê.
+Se seus arquivos estiverem nos locais corretos, re-crie o save usando a [PicHaxx Save Tool](https://3dstools.nhnarwhal. om/#/pichaxx), então coloque-o em `Nintendo 3DS` -> `<ID0>` -><ID1>` -> `title` -> `00040000` -> `0017c100` -> `data`. Certifique-se de que o arquivo tem exatamente o nome de `00000001.sav` e que você usou o `movable.sed` do seu console para criá-lo. Re-download [HBL otherapps](https://github.com/zoogie/ninjhax2.x/releases/download/v11.17/otherapps_with_CfgS_11.17.zip), place the `.bin` file relevant to your console to the root of your SD card, and rename it to `otherapp.bin`. Não adicione a extensão `.bin` se você não a vê.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -291,7 +250,7 @@ Seu console já possui custom firmware. Você deve [checar por CFW](checking-for
 {% capture compat %}
 <summary><u>"Um erro ocorreu, forçando o fechamento do software..." (caixa de mensagens branca)</u></summary>
 
-Há um problema com seu arquivo `otherapp.bin`. Baixe [otherapps.zip](/assets/otherapps.zip), coloque o arquivo `.bin` relevante para o seu console na raiz do seu cartão SD e renomee-o para `otherapp.bin`. Não adicione a extensão `.bin` se você não a vê.
+Há um problema com seu arquivo `otherapp.bin`. Download [HBL otherapps](https://github.com/zoogie/ninjhax2.x/releases/download/v11.17/otherapps_with_CfgS_11.17.zip), place the `.bin` file relevant to your console to the root of your SD card, and rename it to `otherapp.bin`. Não adicione a extensão `.bin` se você não a vê.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -324,13 +283,6 @@ Há um problema com seu arquivo `otherapp.bin` (ele está faltando, colocado no 
 <summary><u>"Não foi possível tocar"</u></summary>
 
 Você tem o arquivo Soundhax errado para o seu console e região, ou seu console é incompatível com o Soundhax. No último caso, seu curso de ação irá determinar em qual versão o seu 3DS está no momento. Entre no [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) para obter ajuda.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
-
-O arquivo `SafeB9SInstaller.bin` está ausente ou fora do lugar apropriado. Baixe a última versão do [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip), extraia e coloque `SafeB9SInstaller.bin` na raiz do seu cartão SD. Não adicione a extensão `.bin` se você não a vê.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -406,13 +358,6 @@ Siga estes passos em ordem:
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
-
-O arquivo `SafeB9SInstaller.bin` está ausente ou fora do lugar apropriado. Baixe a última versão do [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip), extraia e coloque `SafeB9SInstaller.bin` na raiz do seu cartão SD. Não adicione a extensão `.bin` se você não a vê.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
 <summary><u>Congelado em "Doing agbhax..."</u></summary>
 Pode haver um problema com o seu arquivo `arm11code.bin`. Baixe novamente a versão mais recente do [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), coloque-o na raiz do seu cartão SD e renomeie-o para `arm11code.bin`. Não adicione a extensão `.bin` se você não a vê.
 {% endcapture %}
@@ -434,7 +379,7 @@ Se isso falhar, tente usar outro cartão SD.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-## Homebrew Launcher (super-skaterhax)
+## Installing boot9strap (super-skaterhax)
 
 {% capture compat %}
 <summary><u>"Ocorreu um erro. Salve seus dados em qualquer software atualmente em uso e reinicie o sistema."</u></summary>
