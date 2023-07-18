@@ -1,5 +1,5 @@
 ---
-title: "Installing boot9strap (menuhax)"
+title: "Installing boot9strap (menuhax, Legacy)"
 ---
 
 {% include toc title="目录内容" %}
@@ -7,23 +7,19 @@ title: "Installing boot9strap (menuhax)"
 {% capture technical_info %}
 <summary><em>技术细节（选看）</em></summary>
 
-We use BannerBomb3 to install menuhax67, which lets us access the Homebrew Launcher. From there, we launch uloader which launches SafeB9SInstaller. 
+We use BannerBomb3 to install menuhax67, which lets us access the Homebrew Launcher. From there, we launch nimdsphax which launches SafeB9SInstaller. 
 
-See [here](https://github.com/zoogie/uloader) for information about uloader and [here](https://github.com/zoogie/menuhax67) for information about menuhax67.
+See [here](https://github.com/luigoalma/nimdsphax) for information about nimdsphax and [here](https://github.com/zoogie/menuhax67) for information about menuhax67.
 
 {% endcapture %}
 <details>{{ technical_info | markdownify }}</details>
 {: .notice--info}
 
-You should only be able to get to this page if you are running version 11.15.0 or 11.14.0. If you are on any firmware above 11.15.0, uloader will fail. 
-{: .notice--warning}
-
 ### 你需要准备点啥？
 
 * 最新版本的 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip)（直链）
 * 最新版本的 [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip)（直链）
-* The latest release of [BannerBomb3](https://github.com/zoogie/Bannerbomb3/releases/download/v3.0/Release_v3.0.zip) (direct download)
-* The latest release of [uloader](https://github.com/zoogie/uloader/releases/download/1.0/uloader.3dsx) (direct download)
+* The latest release of [nimdsphax](https://github.com/luigoalma/nimdsphax/releases/download/v1.0/nimdsphax_v1.0.zip) (direct download)
 * 最新版本的 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)（下载 Luma3DS `.zip` 文件）
 
 #### 第一步 – 准备工作
@@ -34,54 +30,32 @@ You should only be able to get to this page if you are running version 11.15.0 o
 1. 在 SD 卡根目录创建一个名为 `boot9strap` 的文件夹
 1. 从boot9strap `.zip` 文件中复制 `boot9strap.firm` 和 `boot9strap.firm.sha` 到你SD卡的 `/boot9strap/` 文件夹中
 1. 从 SafeB9SInstaller `.zip` 压缩包中复制 `SafeB9SInstaller.bin` 到 SD 卡根目录下
-1. Copy `bb3.bin` from the Release `.zip` to the root of your SD card, replacing the current file
-1. Copy `Launcher.dat` from the folder for your model and region inside the Release `.zip` to the root of your SD card
 1. 检查 SD 卡的根目录是否存在一个名为 `3ds` 的文件夹，如果没有则手动新建一个
     + This folder stores homebrew applications and data; it is different from the `Nintendo 3DS` folder that the console automatically generates
-1. Copy `uloader.3dsx` to the `/3ds/` folder on your SD card
+1. Copy the `nimdsphax` folder from the nimdsphax `.zip` to the `/3ds/` folder on your SD card
 1. Reinsert your SD card into your console
 
-#### 第二步 – BannerBomb3
+#### Section II - menuhax67
 
-In this section, you will trigger the BannerBomb3 exploit using the DSiWare Management menu and use it to install the menuhax67 exploit.
-
-1. Power on your console
-1. Launch System Settings on your console
-1. Navigate to `Data Management` -> `DSiWare` -> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
-  + Your console should show the BB3 multihax menu
-1. Use the D-Pad to navigate and press the (A) button to select "Install *hax"
-  + Your console will automatically reboot
-
-#### Section III - menuhax67
-
-In this section you will use the menuhax67 exploit installed earlier to launch uloader, which will load SafeB9SInstaller.
+In this section you will use the menuhax67 exploit installed earlier to launch nimdsphax, which will load SafeB9SInstaller.
 
 1. Tap on the small HOME Menu settings icon in the top left of the bottom screen (![]({{ "/images/homemenuicon.png" | absolute_url }}){: height="32px" width="52px"})
   + If the console freezes for a while and then crashes, make sure you have Launcher.dat on the root of your SD card
 1. If the exploit was successful, your console will have booted into the Homebrew Launcher
-1. Launch uloader from the list of homebrew
+1. Launch nimdsphax from the list of homebrew
 1. 如果一切成功的话，你将自动进入 SafeB9SInstaller
-  + If the console freezes or crashes, force power off the console, then retry this section
+  + If your console freezes on a red screen, hold the POWER button until it turns off, then retry this section
 
-#### 第四步 – 安装 boot9strap
+#### 第三步 – 安装 boot9strap
 
 {% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
 {%- include_relative include/configure-luma3ds.txt %}
 
 {% include_relative include/luma3ds-installed-note.txt %}
 
-#### Section V - Removing menuhax67
+#### Section IV - Removing menuhax67
 
-In this section, you will trigger the BannerBomb3 exploit a second time so that you can uninstall the menuhax67 exploit you installed in Section II. This will allow you to use the HOME Menu settings normally again.
-
-1. Launch System Settings on your console
-1. Navigate to `Data Management` -> `DSiWare` -> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
-1. Use the D-Pad to navigate and press the (A) button to select "Uninstall *hax"
-  + Your console will automatically reboot
-1. Power off your console
-1. 将你的 SD 卡插入到电脑
-1. 打开内存卡的 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 文件夹
-1. 从 Nintento DSiWare 文件夹和电脑中删除 `F00D43D5.bin`。 此文件之后不再需要使用
+{% include_relative include/remove-menuhax67.txt %}
 
 ___
 
