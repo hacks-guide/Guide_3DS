@@ -1,0 +1,85 @@
+---
+title: "Installing boot9strap (smilehax-IIe)"
+---
+
+{% include toc title="Indice" %}
+
+Questa guida non supporta la versione Giapponese di SmileBASIC.
+{: .notice--warning}
+
+{% capture technical_info %}
+<summary><em>Dettagli Tecnici (opzionale)</em></summary>
+[smilehax-IIe](https://github.com/zoogie/smilehax-IIe) è un exploit per il gioco "SmileBASIC" realizzato da zoogie, compatibile con le versioni di sistema da 9.0.0 a 11.17.0 per le console USA/EUR/JPN.
+{% endcapture %}
+<details>{{ technical_info | markdownify }}</details>
+{: .notice--info}
+
+### Cosa serve 
++ Il gioco "SmileBASIC" installato sulla tua console
+  + Se lo hai già scaricato in passato, puoi [riscaricarlo](https://en-americas-support.nintendo.com/app/answers/detail/a_id/607/~/how-to-download-or-redownload-content-in-nintendo-3ds-eshop)
+  + La scheda SD deve essere inserita nella console per poter installare SmileBASIC
++ L'ultima versione di [smilehax-IIe](https://github.com/zoogie/smilehax-IIe/releases/download/v1.1/Release_sh2e_v1.1.zip) (download diretto) 
++ The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
++ The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
++ The latest release of [nimdsphax](https://github.com/luigoalma/nimdsphax/releases/download/v1.0/nimdsphax_v1.0.zip) (direct download)
++ L'ultima versione di [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (il file `.zip` di Luma3DS)
++ The latest release of [HBL otherapps](https://github.com/zoogie/ninjhax2.x/releases/download/v11.17/otherapps_with_CfgS_11.17.zip) (direct download)
+
+
+### Istruzioni
+
+#### Sezione I - Preparazione
+
+1. Spegni la tua console
+1. Inserisci la scheda SD nel tuo computer
+1. Copia i file `boot.firm` e `boot.3dsx` dall'archivio `.zip` di Luma3DS nella directory principale della tua scheda SD
+  + La directory principale della scheda SD è la cartella della tua scheda SD in cui è possibile visualizzare la cartella Nintendo 3DS, ma non il suo interno
+1. Crea una cartella chiamata `boot9strap` nella directory principale della tua scheda SD
+1. Copia i file `boot9strap.firm` e `boot9strap.firm.sha` dall'archivio `.zip` di boot9strap nella cartella `/boot9strap/` della tua scheda SD
+1. Copia il file `SafeB9SInstaller.bin` dall'archivio `.zip` di SafeB9SInstaller nella directory principale della tua scheda SD
+1. Copy the otherapp payload for your model/region/version from `otherapps_with_CfgS_11.17.zip` to the root of your SD card, then rename the payload to `otherapp.bin`
+  + Non aggiungere l'estensione `.bin` se non la vedi presente
+1. Trasferisci il file `.wav` per la tua regione dall'archivio `.zip` di Release_sh2e a un dispositivo in grado di riprodurre i file `.wav`, ad esempio un telefono
+1. Copia il file petitcom `.icn` per la tua regione nella directory principale della tua scheda SD
+1. Se assente, crea una cartella chiamata `3ds` nella directory principale della tua scheda SD
+  + Questa cartella mantiene le applicazioni homebrew e i loro dati; è diversa dalla cartella `Nintendo 3DS` generata automaticamente dalla console
+1. Copy the `nimdsphax` folder from the nimdsphax `.zip` to the `/3ds/` folder on your SD card
+1. Reinserisci la scheda SD nella tua console
+1. Accendi la tua console
+
+#### Sezione II - smilehax
+
+1. Avvia SmileBASIC
+  + Aggiorna il gioco se richiesto
+1. Seleziona l'opzione "Publish/Download Projects"
+1. Seleziona l'opzione "Download (Receive) using Public Key"
+1. Premi il pulsante "Yes"
+1. Inserisci la Public Key "NJEQK3A4" usando la tastiera a schermo
+1. Premi il pulsante "Sì" per confermare il download di PMODEM141
+1. Premi "OK", poi "Back", poi "Browse Projects"
+1. Seleziona PMODEM141, quindi premi "Select File"
+1. Seleziona PMODEM141.PRG, premi "OK", quindi "Yes" per eseguirlo
+1. Seleziona RECEIVE FILE SIMPLEX
+1. Prepara il dispositivo per riprodurre il file `.wav`
+1. Mantieni la tua console a 30cm dall'altoparlante del dispositivo che usi per riprodurre il file `.wav` e usa un volume ragionevole (non alto) per riprodurlo
+1. Ora seleziona 300BPS, quindi riproduci il file `.wav`
+1. Al termine, premi "Yes", quindi premi "OK"
+1. Premi il tasto START
+1. Seleziona il file SH2E-xxx.TXT, premi OK, quindi "YES" per eseguirlo
+  + Se ritorni al menu, assicurati di usare l'ultima versione di SmileBASIC
+1. Your console will have booted into the Homebrew Launcher
+1. Launch nimdsphax from the list of homebrew
+1. Se l'exploit è andato a buon fine, si avvierà SafeB9SInstaller
+  + If your console freezes on a red screen, hold the POWER button until it turns off, then retry this section
+
+#### Sezione III - Installazione di boot9strap
+
+{% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
+{%- include_relative include/configure-luma3ds.txt %}
+
+{% include_relative include/luma3ds-installed-note.txt %}
+
+___
+
+### Prosegui con il [Completamento dell'installazione](finalizing-setup)
+{: .notice--primary}
