@@ -13,12 +13,11 @@ Used on multiple pages:
 Guide pages:
 * [Seedminer](#seedminer)
   * [BannerBomb3](#bannerbomb3)
-  * [Installing boot9strap (USM)](#installing-boot9strap-usm)
-  * [Installing boot9strap (Fredtool)](#installing-boot9strap-fredtool)
-  * [Homebrew Launcher (PicHaxx)](#homebrew-launcher-pichaxx)
+  * [Installing boot9strap (Fredtool-Inject)](#installing-boot9strap-fredtool-inject)
+  * [Installing boot9strap (PicHaxx)](#installing-boot9strap-pichaxx)
 * [Installing boot9strap (Soundhax)](#installing-boot9strap-soundhax)
 * [Installing boot9strap (SSLoth-Browser)](#installing-boot9strap-ssloth-browser)
-* [Homebrew Launcher (super-skaterhax)](#homebrew-launcher-super-skaterhax)
+* [Installing boot9strap (super-skaterhax)](#installing-boot9strap-super-skaterhax)
 
 * [Finalizing Setup](#finalizing-setup)
 
@@ -31,6 +30,15 @@ Issues after installation:
 {: .notice--info}
 
 ## 關於 SafeB9SInstaller 的問題
+
+### Before opening SafeB9SInstaller
+
+{% capture compat %}
+<summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
+
+`SafeB9SInstaller.bin` 檔案遺失或放在了錯誤的位置。 Download the latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip), extract it, and place `SafeB9SInstaller.bin` on the root of your SD card. 如果您的電腦沒有顯示 `.bin` 的副檔名，請勿手動新增。
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
 
 ### 『SigHaxed FIRM was not installed!』 Check lower screen for more info.
 
@@ -114,7 +122,7 @@ This occurs when you use your SD card in multiple 3DS consoles and is intended t
 
 The website has determined that your `movable.sed` cannot be brute-forced. Ensure that you gave the correct ID0 to the website. If your ID0 is correct, then you will be unable to use Seedminer and you will have to use an alternate method.
 
-If you have a New 3DS / New 3DS XL / New 2DS XL (as indicated by the four shoulder buttons on the back and the C-Stick on the right), you can follow [Homebrew Launcher (super-skaterhax)](homebrew-launcher-(super-skaterhax)). Otherwise, you will need to follow a method that requires additional games or hardware.
+If you have a New 3DS / New 3DS XL / New 2DS XL (as indicated by the four shoulder buttons on the back and the C-Stick on the right), you can follow [Installing boot9strap (super-skaterhax)](installing-boot9strap-(super-skaterhax)). Otherwise, you will need to follow a method that requires additional games or hardware.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -157,53 +165,12 @@ If neither of these solutions fixes this problem, then custom firmware may have 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-## 安裝 boot9strap (透過 USM)
+## Installing boot9strap (Fredtool-Inject)
 
 {% capture compat %}
-<summary><u>Safe Mode system update succeeds instead of giving error 003-1099</u></summary>
-
-unSAFE_MODE is not installed. [Follow the instructions](installing-boot9strap-(usm)) to install it.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Red screen after selecting "Detailed Setup"</u></summary>
-
-The file `usm.bin` is missing or misplaced. Download the latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/download/v1.3/usm.bin) and place `usm.bin` on the root of your SD card. 如果您的電腦沒有顯示 `.bin` 的副檔名，請勿手動新增。
-
-There is also a possibility that the console isn't reading your SD card. Make sure it is inserted and formatted correctly.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
-
-`SafeB9SInstaller.bin` 檔案遺失或放在了錯誤的位置。 Download the latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip), extract it, and place `SafeB9SInstaller.bin` on the root of your SD card. 如果您的電腦沒有顯示 `.bin` 的副檔名，請勿手動新增。
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Failed to mount the SD card!</u></summary>
-
-Back up your data and reformat your SD card as FAT32 with the recommended tool depending on your operating system ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). MiniTool Partition Wizard and the HP formatting tool (HPUSBDisk) are known to cause issues with 3DS SD cards.
-
-若仍無法正常使用，請試著使用另一張 SD 卡。
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-## 安裝 boot9strap (透過 Fredtool)
-
-{% capture compat %}
-<summary><u>Error on Fredtool Injector page</u></summary>
+<summary><u>Error on DSiHaxInjector page</u></summary>
 
 請確保您的 `movable.sed` 檔案和 DSiWare 備份是從同一台主機匯出的。 若兩者並不匹配則會跳出錯誤。
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Unable to select "Haxxxxxxxxx!" because the BB3 multihax menu appears</u></summary>
-
-You forgot to delete `F00D43D5.bin` from the SD card. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` on your SD card and delete the `F00D43D5.bin` file.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -215,16 +182,9 @@ You forgot to delete `F00D43D5.bin` from the SD card. Navigate to `Nintendo 3DS`
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>DS Connection Settings launches normally</u></summary>
+<summary><u>DSiWare launches normally</u></summary>
 
 `Haxxxxxxxxx!` 沒有被從 SD 卡中複製到系統內存中。
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Black screen when launching DS Connection Settings</u></summary>
-
-你主機的 DS『連線設定 (Connection Settings)』已損壞；您得需要想辦法獲得啟動 Homebrew Launcher 的權限才能正確將其修復。 請加入 [Discord 上的 Nintendo Homebrew](https://discord.gg/MWxPgEp) 頻道尋求幫助。
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -256,7 +216,6 @@ You forgot to delete `F00D43D5.bin` from the SD card. Navigate to `Nintendo 3DS`
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-
 {% capture compat %}
 <summary><u>White screen after pasting</u></summary>
 這代表您所使用的 `boot.nds` 檔案有問題。 重新下載最新版本的 [b9stool](https://github.com/zoogie/b9sTool/releases/latest) 並將 `boot.nds` 放在你 SD 卡的根目錄中，如有存在相同檔案請替換。
@@ -270,14 +229,14 @@ Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and explain what
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-## Homebrew Launcher (PicHaxx)
+## Installing boot9strap (PicHaxx)
 
 {% capture compat %}
 <summary><u>"An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)</u></summary>
 
 Your `00000001.sav` and/or `otherapp.bin` files may be misplaced. Ensure that `00000001.sav` is in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` and that `otherapp.bin` is on the root of your SD card.
 
-If your files are in the correct locations, re-create the save using the [PicHaxx Save Tool](https://3dstools.nhnarwhal.com/#/pichaxx), then place it in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data`. Ensure that the file is named exactly `00000001.sav` and that you used your console's `movable.sed` to create it. Re-download [otherapps.zip](/assets/otherapps.zip), place the `.bin` file relevant to your console to the root of your SD card, and rename it to `otherapp.bin`. 如果您的電腦沒有顯示 `.bin` 的副檔名，請勿手動新增。
+If your files are in the correct locations, re-create the save using the [PicHaxx Save Tool](https://3dstools.nhnarwhal.com/#/pichaxx), then place it in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data`. Ensure that the file is named exactly `00000001.sav` and that you used your console's `movable.sed` to create it. Re-download [HBL otherapps](https://github.com/zoogie/ninjhax2.x/releases/download/v11.17/otherapps_with_CfgS_11.17.zip), place the `.bin` file relevant to your console to the root of your SD card, and rename it to `otherapp.bin`. 如果您的電腦沒有顯示 `.bin` 的副檔名，請勿手動新增。
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -291,7 +250,7 @@ Your console already has custom firmware. 請先[檢查是否已安裝自製韌�
 {% capture compat %}
 <summary><u>"An error has occurred, forcing the software to close..." (white message box)</u></summary>
 
-There is an issue with your `otherapp.bin` file. Download [otherapps.zip](/assets/otherapps.zip), place the `.bin` file relevant to your console to the root of your SD card, and rename it to `otherapp.bin`. 如果您的電腦沒有顯示 `.bin` 的副檔名，請勿手動新增。
+There is an issue with your `otherapp.bin` file. Download [HBL otherapps](https://github.com/zoogie/ninjhax2.x/releases/download/v11.17/otherapps_with_CfgS_11.17.zip), place the `.bin` file relevant to your console to the root of your SD card, and rename it to `otherapp.bin`. 如果您的電腦沒有顯示 `.bin` 的副檔名，請勿手動新增。
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -324,13 +283,6 @@ If your console is not on those firmwares, it likely indicates that you already 
 <summary><u>"Could not play"</u></summary>
 
 You have the wrong Soundhax file for your console and region, or your console is incompatible with Soundhax. In the latter case, your course of action will determine on what version your 3DS is currently on. 請加入 [Discord 上的 Nintendo Homebrew](https://discord.gg/MWxPgEp) 頻道尋求幫助。
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
-
-`SafeB9SInstaller.bin` 檔案遺失或放在了錯誤的位置。 Download the latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip), extract it, and place `SafeB9SInstaller.bin` on the root of your SD card. 如果您的電腦沒有顯示 `.bin` 的副檔名，請勿手動新增。
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -406,13 +358,6 @@ Follow these steps in order:
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
-
-`SafeB9SInstaller.bin` 檔案遺失或放在了錯誤的位置。 Download the latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip), extract it, and place `SafeB9SInstaller.bin` on the root of your SD card. 如果您的電腦沒有顯示 `.bin` 的副檔名，請勿手動新增。
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
 <summary><u>Frozen on "Doing agbhax..."</u></summary>
 There may be an issue with your `arm11code.bin` file. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place it on the root of your SD card, and rename it to `arm11code.bin`. 如果您的電腦沒有顯示 `.bin` 的副檔名，請勿手動新增。
 {% endcapture %}
@@ -434,7 +379,7 @@ Back up your data and reformat your SD card as FAT32 with the recommended tool d
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-## Homebrew Launcher (super-skaterhax)
+## Installing boot9strap (super-skaterhax)
 
 {% capture compat %}
 <summary><u>"An error has occurred. Please save your data in any software currently in use, then restart the system."</u></summary>
