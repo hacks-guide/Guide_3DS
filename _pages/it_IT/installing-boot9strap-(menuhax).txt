@@ -1,5 +1,5 @@
 ---
-title: "Installazione di boot9strap (menuhax)"
+title: "Installing boot9strap (menuhax, Legacy)"
 ---
 
 {% include toc title="Indice" %}
@@ -7,23 +7,19 @@ title: "Installazione di boot9strap (menuhax)"
 {% capture technical_info %}
 <summary><em>Dettagli Tecnici (opzionale)</em></summary>
 
-Usiamo BannerBomb3 per installare menuhax67, che ci permette di accedere all'Homebrew Launcher. Da qui, eseguiremo uloader per avviare SafeB9SInstaller. 
+Usiamo BannerBomb3 per installare menuhax67, che ci permette di accedere all'Homebrew Launcher. From there, we launch nimdsphax which launches SafeB9SInstaller. 
 
-Leggi [qui](https://github.com/zoogie/uloader) per informazioni su uloader e [qui](https://github.com/zoogie/menuhax67) per informazioni su menuhax67.
+See [here](https://github.com/luigoalma/nimdsphax) for information about nimdsphax and [here](https://github.com/zoogie/menuhax67) for information about menuhax67.
 
 {% endcapture %}
 <details>{{ technical_info | markdownify }}</details>
 {: .notice--info}
 
-Dovresti essere arrivato a questa pagina solo se esegui la versione 11.15.0 o 11.14.0. Se hai una versione del software maggiore di 11.15.0, uloader fallirà. 
-{: .notice--warning}
-
 ### Cosa serve
 
 * L'ultima versione di [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (download diretto)
 * L'ultima versione di [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (download diretto)
-* L'ultima versione di [BannerBomb3](https://github.com/zoogie/Bannerbomb3/releases/download/v3.0/Release_v3.0.zip) (download diretto)
-* L'ultima versione di [uloader](https://github.com/zoogie/uloader/releases/download/1.0/uloader.3dsx) (download diretto)
+* The latest release of [nimdsphax](https://github.com/luigoalma/nimdsphax/releases/download/v1.0/nimdsphax_v1.0.zip) (direct download)
 * L'ultima versione di [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (il file `.zip` di Luma3DS)
 
 #### Sezione I - Preparazione
@@ -34,54 +30,32 @@ Dovresti essere arrivato a questa pagina solo se esegui la versione 11.15.0 o 11
 1. Crea una cartella chiamata `boot9strap` nella directory principale della tua scheda SD
 1. Copia i file `boot9strap.firm` e `boot9strap.firm.sha` dall'archivio `.zip` di boot9strap nella cartella `/boot9strap/` della tua scheda SD
 1. Copia il file `SafeB9SInstaller.bin` dall'archivio `.zip` di SafeB9SInstaller nella directory principale della tua scheda SD
-1. Copia il file `bb3.bin` dall'archivio Release `.zip` nella directory principale della tua scheda SD, sovrascrivendo il file esistente
-1. Copia il file `Launcher.dat` dalla cartella per il modello e la regione della tua console all'interno dell'archivio Release `.zip` nella directory principale della tua scheda SD
 1. Se assente, crea una cartella chiamata `3ds` nella directory principale della tua scheda SD
     + Questa cartella mantiene le applicazioni homebrew e i loro dati; è diversa dalla cartella `Nintendo 3DS` generata automaticamente dalla console
-1. Copia il file `uloader.3dsx` nella cartella `/3ds/` della tua scheda SD
+1. Copy the `nimdsphax` folder from the nimdsphax `.zip` to the `/3ds/` folder on your SD card
 1. Reinserisci la scheda SD nella tua console
 
-#### Sezione II - BannerBomb3
+#### Section II - menuhax67
 
-In questa sezione attiverai l'exploit BannerBomb3 utilizzando il menu Gestione Nintendo DSiWare con il quale installerai l'exploit menuhax67.
-
-1. Accendi la tua console
-1. Avvia le Impostazioni di sistema sulla tua console
-1. Entra in `Gestione dati` -> `DSiWare` -> `Scheda SD` ([image](/images/screenshots/bb3/dsiware-management.png))
-  + La tua console dovrebbe mostrare il menu BB3 multihax
-1. Usa il D-Pad per spostarti sul menu "Install *hax", quindi premi il pulsante (A)
-  + La tua console si riavvierà automaticamente
-
-#### Sezione III - menuhax67
-
-In questa sezione utilizzerai l'exploit menuhax67 appena installato per avviare uloader, che caricherà SafeB9SInstaller.
+In this section you will use the menuhax67 exploit installed earlier to launch nimdsphax, which will load SafeB9SInstaller.
 
 1. Clicca sull'icona di impostazioni del menu HOME nell'angolo in alto a sinistra dello schermo inferiore (![]({{ "/images/homemenuicon.png" | absolute_url }}){: height="32px" width="52px"})
   + Se la console si blocca per un po' e poi crasha, assicurati di avere il file Launcher.dat nella directory principale della tua scheda SD
 1. Se l'exploit ha avuto successo, la tua console avrà avviato l'Homebrew Launcher
-1. Avvia uloader dalla lista degli homebrew disponibili
+1. Launch nimdsphax from the list of homebrew
 1. Se l'exploit è andato a buon fine, si avvierà SafeB9SInstaller
-  + Se la console si blocca o crasha, forza lo spegnimento della console, quindi ritenta questa sezione
+  + If your console freezes on a red screen, hold the POWER button until it turns off, then retry this section
 
-#### Sezione IV - Installazione di boot9strap
+#### Sezione III - Installazione di boot9strap
 
 {% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
 {%- include_relative include/configure-luma3ds.txt %}
 
 {% include_relative include/luma3ds-installed-note.txt %}
 
-#### Sezione V - Rimozione di menuhax67
+#### Section IV - Removing menuhax67
 
-In questa sezione avvierai l'exploit BannerBomb3 una seconda volta per poter disinstallare l'exploit menuhax67 che hai installato nella Sezione II. Questo renderà nuovamente possibile utilizzare normalmente le impostazioni del menu HOME.
-
-1. Avvia le Impostazioni di sistema sulla tua console
-1. Entra in `Gestione dati` -> `DSiWare` -> `Scheda SD` ([image](/images/screenshots/bb3/dsiware-management.png))
-1. Usa il D-Pad per spostarti sul menu "Uninstall *hax", quindi premi il pulsante (A)
-  + La tua console si riavvierà automaticamente
-1. Spegni la tua console
-1. Inserisci la scheda SD nel tuo computer
-1. Nella tua scheda SD, entra in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`
-1. Elimina il file `F0D43D5.bin` dalla cartella Nintendo DSiWare e dal tuo computer. Questo file non sarà più necessario
+{% include_relative include/remove-menuhax67.txt %}
 
 ___
 
