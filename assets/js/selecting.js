@@ -125,8 +125,8 @@ function can_safecerthax(major, minor, native, region, model) {
 }
 
 // super-skaterhax
-// EUR/JPN/USA: 11.17 only
-// KOR: 11.16 only, KOR does not have 11.17 (Do seedminer first though)
+// EUR/JPN/USA: 11.16 and 11.17
+// KOR: 11.16 only, KOR does not have 11.17
 // CHN/TWN has no N3DS
 function can_superskaterhax(major, minor, native, region, model) {
     let do_redirect_sysupdate = false;
@@ -185,18 +185,25 @@ function can_miimine(major, minor, native, region, model) {
 function can_seedminer(major, minor, native, region, model) {
     let do_redirect_sysupdate_twn = false;
     let do_redirect_sysupdate_kor = false;
+    let do_redirect_sysupdate = false;
     let do_redirect_twn = false;
     let do_redirect = false;
-    // 11.16 should always do seedminer on 3DS
+    // O3DS 11.16 should always do seedminer on 3DS
     if (major == 11 && minor == 16) {
-        if (["U", "E", "J", "K"].includes(region)) do_redirect = true;
+        if (model == DEVICE_O3DS) {
+            if (["U", "E", "J", "K"].includes(region)) do_redirect = true;
         else if (region == "T") do_redirect_twn = true;
     }
     // KOR on any version should update to 11.16
-    else if (region == "K") do_redirect_sysupdate_kor = true;
+    else if (model == DEVICE_O3DS && region == "K") do_redirect_sysupdate_kor = true;
+    else if (model == DEVICE_N3DS && region == "K") do_redirect_sysupdate = true;
     // TWN on any version should update to 11.16
     else if (region == "T") do_redirect_sysupdate_twn = true;
 
+    if (do_redirect_sysupdate) {
+        window.location.href = "updating-firmware-(new-3ds)";
+        return true;
+    }
     if (do_redirect_sysupdate_twn) {
         window.location.href = "updating-firmware-(twn)";
         return true;
@@ -245,13 +252,13 @@ function is_o3ds_1117(major, minor, native, region, model) {
     - O3DS & 11.4 - 11.14 & any cart-updated FW between said version:
         - safecerthax, compatible in all regions, O3DS only
         - This way O3DS still gets an easy way to install something if browser isn't functional
-    - N3DS & 11.14 - 11.15 (EUR / JPN / USA) 
-        - Update and do 11.17 guide
+    - N3DS & 11.14 - 11.15 (EUR / JPN / USA / KOR) 
+        - Update and do 11.16/11.17 guide
     - O3DS & 11.15:
         - Mii mine
-    - 11.16:
+    - O3DS & 11.16:
         - Seedminer
-    - N3DS & 11.17 (EUR / JPN / USA):
+    - N3DS & 11.16 - 11.17 (EUR / JPN / USA / KOR):
         - super-skaterhax
     - O3DS & 11.17:
         - Use alternate exploits; can't hack without any extra stuff
@@ -286,8 +293,8 @@ function redirect() {
       can_ssloth,
       can_safecerthax,
       can_miimine,
-      can_seedminer,
       can_superskaterhax,
+      can_seedminer,
       is_o3ds_1117
     ].some(func => func(major, minor, nver, region, model));
     if (redirected) return true;
