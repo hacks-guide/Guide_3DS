@@ -44,7 +44,6 @@ Você pode seguir este guia, contanto que possa baixar arquivos da Internet e co
 
 O local do cartão SD e o tipo de cartão SD que é aceito dependem do modelo do seu 3DS. Mais informações podem ser encontradas na [página de suporte oficial da Nintendo](https://en-americas-support.nintendo.com/app/answers/detail/a_id/271/~/how-to-insert-an-sd-card-or-microsd-card) (disponível apenas em Inglês).
 
-
 O 3DS pode ler cartões SD de qualquer capacidade (mesmo aqueles maiores que 32GB), mas o cartão deve ser formatado como FAT32 (**não** exFAT ou NTFS). Se o seu cartão SD ainda não estiver formatado corretamente, use uma dessas páginas para formatá-lo, dependendo do seu sistema operacional: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)). Cartões SD maiores que **128GB** não são recomendados devido a problemas conhecidos com temas personalizados e gráficos do GBA/DS.
 
 Para seguir este guia, você precisará de um cartão SD com capacidade de pelo menos **2GB**.
@@ -57,7 +56,7 @@ Se você quiser, você pode verificar se há erros no seu cartão SD antes de se
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><strong>Possíveis riscos</strong></summary>
+<summary><strong>Potential risks (Disclaimer)</strong></summary>
 
 Ao modificar seu console, você o sujeita à possibilidade remota (mas não-zero) do console ser banido de jogos on-line ou de ter um brick (renderizado não-funcional). ___O posicionamento de arquivos incorreto NÃO irá causar um brick em seu console___, mas pular as instruções propositalmente talvez o cause. Similarmente, a última onda de banimento ocorreu há mais de cinco anos, mas não há qualquer garantia de que uma outra não ocorrerá no futuro.
 
@@ -70,11 +69,31 @@ Resumindo: Modificar o seu console é seguro, mas é ___sua responsabilidade___ 
 ## Coisas que você precisa fazer no seu computador
 
 {% capture compat %}
-<summary><strong>Baixando e copiando arquivos</strong></summary>
+<summary><strong>File placement terminology (e.g. "root of SD")</strong></summary>
+![]({{ "/images/screenshots/onboarding/sdroot.png" | absolute_url }})
+{: .notice--info}
+
+When copying files to the SD card, it is important to copy them to the right location - otherwise, the console will not detect the file and the exploit or software you are trying to use will not work. A term you will see frequently on this guide is **root of the SD card**, which means you are not inside any folder on your SD card. The directory that appears when you first open your SD card on your computer is called the 'root'.
+
+You may also see folder names indicated like this: `/folder/`. The slashes are used to indicate directories and are not part of the name of the folder. For example, `/folder1/folder2/` would refer to `folder2` inside of `folder1`:
+
+![]({{ "/images/screenshots/onboarding/folders.png" | absolute_url }})
+{: .notice--info}
+
+**Angle brackets** (\< and \>) are also occasionally used to refer to system-specific identifiers. For example, if the guide says `<ID0>`, it is referring to the system-specific identifier inside of the `Nintendo 3DS` folder, rather than a folder literally named "ID0":
+
+![]({{ "/images/screenshots/onboarding/anglebrackets.png" | absolute_url }})
+{: .notice--info}
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><strong>Downloading files from GitHub</strong></summary>
 ![]({{ "/images/screenshots/onboarding/github.png" | absolute_url }})
 {: .notice--info}
 
-Neste guia, você irá copiar arquivos que foram baixados no seu computador/telefone para o cartão SD do seu 3DS. Muitos desses arquivos vêm do GitHub, então consulte a captura de tela acima se você não estiver familiarizado com como baixar arquivos de lá.
+In this guide, you will copy files that are downloaded on your computer/phone to your console's SD card. Many of these files come from GitHub, which is a website used by developers to publish their open-source releases. When downloading files from GitHub, you should download the file that *isn't* source code.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
