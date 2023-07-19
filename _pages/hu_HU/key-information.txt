@@ -44,7 +44,6 @@ Követheted ezt az útmutatót egészen addig, amíg képes vagy letölteni fáj
 
 Az SD kártyá slot helye és az SD kártya típusa amit elfogad a 3DS modelledtől függ. További infromációk találhatók erről a [Nintendo hivatalos támogatási oldalán](https://en-americas-support.nintendo.com/app/answers/detail/a_id/271/~/how-to-insert-an-sd-card-or-microsd-card).
 
-
 A 3DS bármilyen kapacitású SD kártyát tud olvasni (még akkor is, ha nagyobb, mint 32GB), de a kártyának FAT32-re kell formatálva lennie (**nem** exFAT vagy NTFS). A következő eszközöket használhatod az SD kártyád formázására, az operációs rendszeredtől függően: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)). **128GB**-nál nagyobb SD kártyák nem javasoltak az ismert problémák miatt az egyedi témákkal és a GBA grafikával.
 
 Ahhoz, hogy követhesd ezt az útmutatót szükséged van egy legalább **2GB** kapacitású SD kártyára.
@@ -57,7 +56,7 @@ Ha szeretnéd, leellenőrizheted az SD kártyádat valamelyik programmal az alá
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><strong>Potencionális kockázatok</strong></summary>
+<summary><strong>Potential risks (Disclaimer)</strong></summary>
 
 A konzolod moddolásával, van egy nagyon kicsi (de nem nulla) esélye a konzol bannolásának az online játékokból vagy hogy brickelődik (nem működővé válik). ___A rossz helyre rakott fájlok NEM brickelik a konzolodat___, de szándékosan kihagyott lépések elképzelhető, hogy igen. Hasonlóan, a legutolsó ban hullám 5 évvel ezelőtt történt, de nincs garancia arra, hogy ne fordulna elő egy a jövőben.
 
@@ -70,11 +69,31 @@ Röviden: A konzolod moddolása biztonságos, de a ___te felelősséged___ ha va
 ## Dolgok, amiket a számítógépeden kell csinálnod
 
 {% capture compat %}
-<summary><strong>Fájlok letöltése és másolása</strong></summary>
+<summary><strong>File placement terminology (e.g. "root of SD")</strong></summary>
+![]({{ "/images/screenshots/onboarding/sdroot.png" | absolute_url }})
+{: .notice--info}
+
+When copying files to the SD card, it is important to copy them to the right location - otherwise, the console will not detect the file and the exploit or software you are trying to use will not work. A term you will see frequently on this guide is **root of the SD card**, which means you are not inside any folder on your SD card. The directory that appears when you first open your SD card on your computer is called the 'root'.
+
+You may also see folder names indicated like this: `/folder/`. The slashes are used to indicate directories and are not part of the name of the folder. For example, `/folder1/folder2/` would refer to `folder2` inside of `folder1`:
+
+![]({{ "/images/screenshots/onboarding/folders.png" | absolute_url }})
+{: .notice--info}
+
+**Angle brackets** (\< and \>) are also occasionally used to refer to system-specific identifiers. For example, if the guide says `<ID0>`, it is referring to the system-specific identifier inside of the `Nintendo 3DS` folder, rather than a folder literally named "ID0":
+
+![]({{ "/images/screenshots/onboarding/anglebrackets.png" | absolute_url }})
+{: .notice--info}
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><strong>Downloading files from GitHub</strong></summary>
 ![]({{ "/images/screenshots/onboarding/github.png" | absolute_url }})
 {: .notice--info}
 
-Ebben az útmutatóban másolni fogsz fájlokat, amik letöltésre kerültek a számítógépedre/telefonodra a 3DS-ed SD kártyájára. Ezen fájlok többsége a GitHub-ról jön, így gondolj a fenti képernyőképre, ha nem ismerős számodra, hogyan tölts le onnan fájlokat.
+In this guide, you will copy files that are downloaded on your computer/phone to your console's SD card. Many of these files come from GitHub, which is a website used by developers to publish their open-source releases. When downloading files from GitHub, you should download the file that *isn't* source code.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
