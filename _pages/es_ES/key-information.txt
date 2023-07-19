@@ -44,7 +44,6 @@ Puedes seguir esta guía siempre y cuando puedas descargar archivos de Internet 
 
 The location of the SD card slot and the type of SD card that is accepted depends on the model of your 3DS. More information can be found on [Nintendo's official support page](https://en-americas-support.nintendo.com/app/answers/detail/a_id/271/~/how-to-insert-an-sd-card-or-microsd-card).
 
-
 The 3DS can read SD cards of any capacity (even those larger than 32GB), but the card must be formatted as FAT32 (**not** exFAT or NTFS). You can use one of the following tools to format your SD card, depending on your operating system: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)). SD cards larger than **128GB** are not recommended due to known issues with custom themes and GBA/DS graphics.
 
 To follow this guide, you'll need an SD card with a capacity of at least **2GB**.
@@ -57,7 +56,7 @@ Si quieres, puedes comprobar si tu tarjeta SD tiene errores antes de seguir esta
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><strong>Potential risks</strong></summary>
+<summary><strong>Potential risks (Disclaimer)</strong></summary>
 
 By modding your console, you subject it to the remote (but non-zero) possibility of the console being banned from online play or bricked (rendered non-functional). ___Incorrect file placement will NOT brick your console___, but purposely skipping instructions might. Similarly, the last ban wave occurred over five years ago, but there is no guarantee that another one will not occur in the future.
 
@@ -70,11 +69,31 @@ In short: Modding your console is safe, but it's ___your responsibility___ if so
 ## Cosas que necesitas hacer en tu computadora
 
 {% capture compat %}
-<summary><strong>Downloading and copying files</strong></summary>
+<summary><strong>File placement terminology (e.g. "root of SD")</strong></summary>
+![]({{ "/images/screenshots/onboarding/sdroot.png" | absolute_url }})
+{: .notice--info}
+
+When copying files to the SD card, it is important to copy them to the right location - otherwise, the console will not detect the file and the exploit or software you are trying to use will not work. A term you will see frequently on this guide is **root of the SD card**, which means you are not inside any folder on your SD card. The directory that appears when you first open your SD card on your computer is called the 'root'.
+
+You may also see folder names indicated like this: `/folder/`. The slashes are used to indicate directories and are not part of the name of the folder. For example, `/folder1/folder2/` would refer to `folder2` inside of `folder1`:
+
+![]({{ "/images/screenshots/onboarding/folders.png" | absolute_url }})
+{: .notice--info}
+
+**Angle brackets** (\< and \>) are also occasionally used to refer to system-specific identifiers. For example, if the guide says `<ID0>`, it is referring to the system-specific identifier inside of the `Nintendo 3DS` folder, rather than a folder literally named "ID0":
+
+![]({{ "/images/screenshots/onboarding/anglebrackets.png" | absolute_url }})
+{: .notice--info}
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><strong>Downloading files from GitHub</strong></summary>
 ![]({{ "/images/screenshots/onboarding/github.png" | absolute_url }})
 {: .notice--info}
 
-In this guide, you will copy files that are downloaded on your computer/phone to your 3DS SD card. Many of these files come from GitHub, so refer to the above screenshot if you're unfamiliar with how to download files from there.
+In this guide, you will copy files that are downloaded on your computer/phone to your console's SD card. Many of these files come from GitHub, which is a website used by developers to publish their open-source releases. When downloading files from GitHub, you should download the file that *isn't* source code.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
