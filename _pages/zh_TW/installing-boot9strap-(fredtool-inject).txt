@@ -33,11 +33,50 @@ You should only be able to get to this page if you are running version 11.17.0. 
 
 #### 第二節 — 準備工作
 
-{% include_relative include/fredtool-prep.txt %}
+In this section, you will copy the files necessary to temporarily replace DS Connection Settings with Flipnote Studio, which is used to launch the boot9strap (custom firmware) installer.
+
+1. 將 SD 卡插入至電腦中
+1. 在電腦上開啟 [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec)
+1. Under the "Username" field, enter any alphanumeric name (no spaces or special characters)
+1. Under the "DSiBin" field, upload your DSiWare backup file (e.g. 42383841.bin) from the root of your SD card using the first "Browse..." option
+1. Under the "MovableSed" field, upload your `movable.sed` file using the second "Browse..." option
+1. Under the "InjectionTarget" field, set the injection target to `DSinternet` (NOT memorypit)
+1. 選擇『Build』
+  + Wait a few seconds for the build process to complete
+1. In the Build History section on the left, type the Username into the "Filter Builds" field
+1. Click on the first search result
+  + This result should have the latest timestamp
+1. Click the "output_(name).zip" link
+1. 於您的 SD 卡中，移動至 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`
+  + `<ID0>` is the 32-letter folder name that you copied in [Seedminer](seedminer)
+  + `<ID1>` is a 32-letter folder inside of the `<ID0>`
+1. Delete `F00D43D5.bin` from your Nintendo DSiWare folder
+1. Copy the `42383841.bin`  file from the `hax` folder of the downloaded DSiWare archive (output_(name).zip) to the `Nintendo DSiWare` folder
+  ![]({{ "/images/screenshots/bb3/dsiware-location-4.png" | absolute_url }}){: .notice--info}
+1. 解壓 Luma3DS `.zip` 內的 `boot.firm` 及 `boot.3dsx` 到 SD 卡的根目錄底下
+  + 「SD 卡的根目錄」指的是你的 SD 卡含有 Nintendo 3DS 資料夾的目錄，而非該資料夾內部
+1. Copy `boot.nds` (B9STool) from the release `.zip` to the root of your SD card
+1. 解壓 Frogminer_save `.zip` 中的 `private` 資料夾到 SD 卡的根目錄底下
+1. Reinsert your SD card into your console
+1. Power on your console
+
+    ![]({{ "/images/screenshots/fredtool/fredtool-root-layout.png" | absolute_url }})
+    {: .notice--info}
+
 
 #### Section III - Overwriting DS Connection Settings
 
-{% include_relative include/fredtool-write-flipnote.txt %}
+In this section, you will copy the hacked DS Connection Settings DSiWare to internal memory, which will temporarily replace it with Flipnote Studio.
+
+1. Launch System Settings on your console
+1. Navigate to `Data Management` -> `DSiWare` -> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
+1. Select the "Haxxxxxxxxx!" title
+  + If you are unable to select the "Haxxxxxxxxx" title, [follow this troubleshooting guide](troubleshooting#installing-boot9strap-fredtool)
+1. 選擇『複製 (Copy)』並選擇『OK』
+1. 回到系統設定主選單
+1. Navigate to `Internet Settings` -> `Nintendo DS Connections`, then select "OK" ([image](/images/screenshots/fredtool/dsconnection.png))
+1. If the exploit was successful, your console will have loaded the JPN version of Flipnote Studio
+  + If your console does not load the JPN version of Flipnote Studio, [follow this troubleshooting guide](troubleshooting#installing-boot9strap-fredtool)
 
 #### Section IV - Flipnote Exploit
 
@@ -52,7 +91,17 @@ You should only be able to get to this page if you are running version 11.17.0. 
 
 #### Section VI - Restoring DS Connection Settings
 
-{% include_relative include/fredtool-restore-dsconn.txt %}
+In this section, you will restore DS Connection Settings to the way it was before it was temporarily replaced with Flipnote Studio in an earlier section.
+
+1. 於您的 SD 卡中，移動至 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`
+1. Copy the `42383841.bin`  file from the `clean` folder of the downloaded DSiWare archive (output_(name).zip) to the `Nintendo DSiWare` folder, replacing the existing one
+1. Reinsert your SD card into your console
+1. Power on your console
+1. Launch System Settings on your console
+1. Navigate to `Data Management` -> `DSiWare` -> `SD Card` ([image](/images/screenshots/bb3/dsiware-management.png))
+1. Select the "Nintendo DSi™" title
+1. 選擇『複製 (Copy)』並選擇『OK』
+
 ___
 
 ### 繼續至[完成安裝](finalizing-setup)
