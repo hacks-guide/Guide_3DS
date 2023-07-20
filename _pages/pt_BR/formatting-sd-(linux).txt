@@ -25,12 +25,12 @@ mmcblk0     179:0    0   3,8G  0 disk
 └─mmcblk0p1 179:1    0   3,7G  0 part /run/media/user/FFFF-FFFF
 ```
 1. Lembre-se do nome do dispositivo. No nosso exemplo acima, era `mmcblk0p1`
-  + Se `RO` estiver com o valor 1, tenha certeza que a trava do cartão SD está para baixo
+    + Se `RO` estiver com o valor 1, tenha certeza que a trava do cartão SD está para baixo
 1. Pressione CRTL + C para sair do do menu
 1. Digite o seguinte para o seu cartão SD:
     - 2GB ou inferior: `sudo mkfs.fat /dev/(nome do dispositivo acima) -s 64 -F 16`
-	  - Isso cria uma única partição FAT16 com cluster de 32 KB no cartão SD
+	    - Isso cria uma única partição FAT16 com cluster de 32 KB no cartão SD
     - 4GB - 128GB: `sudo mkfs.fat /dev/(nome do dispositivo acima) -s 64 -F 32`
-	  - Isso cria uma única partição FAT32 com cluster de 32 KB no cartão SD
+	    - Isso cria uma única partição FAT32 com cluster de 32 KB no cartão SD
     - 128GB ou superior: `sudo mkfs.fat /dev/(nome do dispositivo acima) -s 128 -F 32`
-      - Isso cria uma única partição FAT32 com cluster de 64 KB no cartão SD
+        - Isso cria uma única partição FAT32 com cluster de 64 KB no cartão SD
