@@ -35,17 +35,17 @@ Se você estiver no Linux ou macOS, substitua `py -3` por `python3` em todos os 
 
 + A versão mais recente do [Seedminer](https://github.com/zoogie/seedminer/releases/latest) (o Seedminer .zip)
 + Qualquer versão 3.x de [Python](https://www.python.org/downloads/) instalada
-  + Se você estiver no Linux, você provavelmente já tem Python 3. Verifique abrindo um terminal e digitando `python3 -V`. Se este retornar um número de versão, ele funcionará para este guia.
+    + Se você estiver no Linux, você provavelmente já tem Python 3. Verifique abrindo um terminal e digitando `python3 -V`. Se este retornar um número de versão, ele funcionará para este guia.
 
 ### Seção I - Preparação
 
 Nesta seção, você vai configurar o Seedminer e obter os arquivos do seu console que são necessários para mining.
 
 1. Extraia o conteúdo do `.zip` do Seedminer e mova a pasta com o nome do seu sistema operacional para qualquer lugar do seu PC
-  + Mantenha esse local de fácil acesso, pois esta pasta Seedminer será onde múltiplos outros arquivos serão colocados
+    + Mantenha esse local de fácil acesso, pois esta pasta Seedminer será onde múltiplos outros arquivos serão colocados
 1. Na pasta Seedminer, segure SHIFT e o botão direito do mouse em qualquer lugar vazio da pasta e, em seguida, clique na opção que abre o Terminal, PowerShell ou Prompt de Comando
 1. Na janela de linha de comando, digite `py -3 -m pip install pycryptodomex`, pressione ENTER, e permita a instalação
-  + Se este comando falhar com o erro `No module named pip`, você precisa instalar manualmente o pip. Os métodos para fazer isso podem ser encontrados [nesta página](https://pip.pypa.io/en/stable/installation/).
+    + Se este comando falhar com o erro `No module named pip`, você precisa instalar manualmente o pip. Os métodos para fazer isso podem ser encontrados [nesta página](https://pip.pypa.io/en/stable/installation/).
 1. Ligue o seu console enquanto o cartão SD estiver inserido
 1. Abrir o aplicativo do Mii Maker
 1. Toque no botão "QR Code/Opções de Imagem"
@@ -55,17 +55,17 @@ Nesta seção, você vai configurar o Seedminer e obter os arquivos do seu conso
 1. Insira o cartão SD no seu computador
 1. Vá até a pasta `Nintendo 3DS` no seu cartão SD
 1. Copie o nome da pasta de 32 letras que você vê diretamente dentro de Nintendo 3DS
-  + Este nome de 32 letras é específico do sistema e será diferente para cada console
-  + Se você ver várias pastas de 32 letras, siga [estas instruções](troubleshooting#seedminer)
-  + Você pode ignorar a pasta `private` se ela está presente
+    + Este nome de 32 letras é específico do sistema e será diferente para cada console
+    + Se você ver várias pastas de 32 letras, siga [estas instruções](troubleshooting#seedminer)
+    + Você pode ignorar a pasta `private` se ela está presente
 
 	![]({{ "/images/screenshots/seedminer/id0-example.png" | absolute_url }})
 	{: .notice--info}
 1. Cole o nome da sua pasta de 32 letras em um [documento](/images/screenshots/seedminer/text-document.png) que você possa referenciar mais tarde
-  + Esta pasta é conhecida como seu "ID0". Tome nota disso já que este guia irá referir-se a ele como tal mais tarde
+    + Esta pasta é conhecida como seu "ID0". Tome nota disso já que este guia irá referir-se a ele como tal mais tarde
 1. Navegue até a pasta `DCIM` no cartão SD
 1. Procure pelo código QR, que será um arquivo `.JPG` começando com `HNI`
-  + Você pode ter muitos outros arquivos aqui se você usa o aplicativo Câmera Nintendo 3DS
+    + Você pode ter muitos outros arquivos aqui se você usa o aplicativo Câmera Nintendo 3DS
 1. Copie este arquivo para a pasta Seedminer em seu PC
 
 ### Seção II - Processando o QR do Mii e Mining
@@ -75,21 +75,21 @@ Nesta seção, você vai transformar o Código QR do seu Mii em um arquivo utili
 1. Abra o site [editMii](https://zoogie.github.io/web/miiqr/) no seu computador
 1. Clique em "Import from...", então selecione "QR Code" e envie o código QR do seu Mii de antes
 1. Clique em "Export to...", depois selecione "encrypted (.bin)"
-  + Isto irá baixar um arquivo chamado `input.bin`
+    + Isto irá baixar um arquivo chamado `input.bin`
 1. Copie este `input.bin` para a pasta Seedminer
 1. Abra a janela do terminal/PowerShell/Prompt de Comando de antes
 1. Dentro desta janela, digite o comando `py -3 seedminer_launcher3.py id0 <id0>`
-  + Substitua `<id0>` pelo ID0 que você copiou para um documento
-  + Não inclua os parênteses angulares
-  + Não tente inserir o ID0 manualmente, já que é fácil cometer um erro. Assegure-se de que o seu ID0 esteja inserido corretamente copiando-o e colando-o de onde você o salvou na seção anterior
+    + Substitua `<id0>` pelo ID0 que você copiou para um documento
+    + Não inclua os parênteses angulares
+    + Não tente inserir o ID0 manualmente, já que é fácil cometer um erro. Assegure-se de que o seu ID0 esteja inserido corretamente copiando-o e colando-o de onde você o salvou na seção anterior
 1. Quando concluído, digite o comando `py -3 seedminer_launcher3.py mii <modelo> <ano>`
-  + Substitua `<model>` pelo modelo do seu console (`new` ou `old`) - se você não tiver certeza, apenas modelos com os botões ZL/ZR e C-Stick são "new"
-  + Substitua `<year>` pelo ano em que o 3DS foi feito (você geralmente encontra isto atrás da backplate) - deixe isto vazio se não tiver certeza, no caso em que o início será a partir do meio
-  + O processo de mining geralmente levará até 90 minutos, dependendo da sua sorte e da potência da sua GPU
-  + A primeira etapa provavelmente irá maximizar aproximadamente no offset 1500, dependendo do modelo do console
-  + Se a segunda fase (depois de ver `movable_part2.sed generation success`) chega a passar o offset 100, verifique se você inseriu o ID0 correto. Se o seu ID0 estiver correto, você não pode usar este método e precisa atualizar para a versão mais recente e ver se um método não-Seedminer está disponível para você [aqui](alternativa-exploits)
-  + Se você ver a mensagem `input.bin is invalid size`, faça o `input.bin` usando seu código QR. Se *ainda* falhar, abra um navegador diferente e faça o `input.bin` lá
-  + Se você ver a mensagem `LFCS has been left blank`, use o modelo do console oposto (por exemplo, `mii old` em vez de `mii new`)
+    + Substitua `<model>` pelo modelo do seu console (`new` ou `old`) - se você não tiver certeza, apenas modelos com os botões ZL/ZR e C-Stick são "new"
+    + Substitua `<year>` pelo ano em que o 3DS foi feito (você geralmente encontra isto atrás da backplate) - deixe isto vazio se não tiver certeza, no caso em que o início será a partir do meio
+    + O processo de mining geralmente levará até 90 minutos, dependendo da sua sorte e da potência da sua GPU
+    + A primeira etapa provavelmente irá maximizar aproximadamente no offset 1500, dependendo do modelo do console
+    + Se a segunda fase (depois de ver `movable_part2.sed generation success`) chega a passar o offset 100, verifique se você inseriu o ID0 correto. Se o seu ID0 estiver correto, você não pode usar este método e precisa atualizar para a versão mais recente e ver se um método não-Seedminer está disponível para você [aqui](alternativa-exploits)
+    + Se você ver a mensagem `input.bin is invalid size`, faça o `input.bin` usando seu código QR. Se *ainda* falhar, abra um navegador diferente e faça o `input.bin` lá
+    + Se você ver a mensagem `LFCS has been left blank`, use o modelo do console oposto (por exemplo, `mii old` em vez de `mii new`)
 1. Quando terminar, um arquivo chamado `movable.sed` aparecerá na pasta Seedminer
 
 Continue em [BannerBomb3](bannerbomb3)
