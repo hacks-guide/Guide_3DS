@@ -25,12 +25,12 @@ mmcblk0     179:0    0   3,8G  0 disk
 └─mmcblk0p1 179:1    0   3,7G  0 part /run/media/user/FFFF-FFFF
 ```
 1. Take note of the device name. In our example above, it was `mmcblk0p1`
-  + Si `RO` está establecido en 1, asegúrate que el interruptor de bloqueo de la tarjeta no se deslizó hacia abajo
+    + Si `RO` está establecido en 1, asegúrate que el interruptor de bloqueo de la tarjeta no se deslizó hacia abajo
 1. Presiona CTRL + C para salir del menú
 1. Escribe lo siguiente según tu tarjeta SD:
     - 2GB or lower: `sudo mkfs.fat /dev/(device name from above) -s 64 -F 16`
-	  - Esto crea una sola partición FAT16 con un tamaño de clúster de 32 KB en la tarjeta SD
+	    - Esto crea una sola partición FAT16 con un tamaño de clúster de 32 KB en la tarjeta SD
     - 4GB - 128GB: `sudo mkfs.fat /dev/(device name from above) -s 64 -F 32`
-	  - Esto crea una sola partición FAT32 con un tamaño de clúster de 32 KB en la tarjeta SD
+	    - Esto crea una sola partición FAT32 con un tamaño de clúster de 32 KB en la tarjeta SD
     - 128GB or higher: `sudo mkfs.fat /dev/(device name from above) -s 128 -F 32`
-      - Esto crea una sola partición FAT32 con un tamaño de clúster de 64 KB en la tarjeta SD
+        - Esto crea una sola partición FAT32 con un tamaño de clúster de 64 KB en la tarjeta SD
