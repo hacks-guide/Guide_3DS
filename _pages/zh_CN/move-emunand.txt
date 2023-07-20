@@ -37,10 +37,10 @@ title: "迁移EmuNAND数据"
 1. Press and hold (Start), and while holding (Start), power on your console. 这会启动 GodMode9
 1. 如果工具提示是否需要创建重要文件备份，请按下 “A” 键确认。完成后再次按下 “A” 键来继续。
 1. 如果出现修复 RTC 日期与时间的提示，按 “A” 键执行修复，然后设置好日期和时间，并按 “A” 继续
-  + 请注意，如果出现了该提示，则执行完本指南后你还需要在系统设置中重新设置时间
+    + 请注意，如果出现了该提示，则执行完本指南后你还需要在系统设置中重新设置时间
 1. 进入到 `[2:] SYSNAND TWLN` -> `title`
 1. 将光标移动至 `00030004` 目录，然后同时按 “R” + “A” 键 ，然后选择 “Copy to 0:/gm9/out”
-  + 如果你有很多的 DSiWare 游戏，那么此过程可能会花一些时间。
+    + 如果你有很多的 DSiWare 游戏，那么此过程可能会花一些时间。
 1. 按两次 “B” 键返回到主菜单
 
 #### 第三步 – 备份 GBA VC 的存档
@@ -58,16 +58,16 @@ title: "迁移EmuNAND数据"
 {: .notice--info}
 
 1. 依次对每个想备份存档的 GBA VC 游戏进行如下操作：
-  + 启动 GBA VC 游戏
-  + 退出游戏并关机
-  + Boot your console while holding (Start) to launch the Luma3DS chainloader menu
-  + 按 “A” 键启动 GodMode9
-  + 进入到 `[S:] SYSNAND VIRTUAL`
-  + 在 `agbsave.bin` 上按 “A” 键选中
-  + 选择 “AGBSAVE options...”
-  + 选择 “Dump GBA VC save”
-  + 按 “A” 键继续
-  + Press (Start) to reboot your console
+    + 启动 GBA VC 游戏
+    + 退出游戏并关机
+    + Boot your console while holding (Start) to launch the Luma3DS chainloader menu
+    + 按 “A” 键启动 GodMode9
+    + 进入到 `[S:] SYSNAND VIRTUAL`
+    + 在 `agbsave.bin` 上按 “A” 键选中
+    + 选择 “AGBSAVE options...”
+    + 选择 “Dump GBA VC save”
+    + 按 “A” 键继续
+    + Press (Start) to reboot your console
 
 #### 第四步 – 复制 EmuNAND 到 SysNAND
 
@@ -75,9 +75,9 @@ title: "迁移EmuNAND数据"
 1. 进入到 `[E:] EMUNAND VIRTUAL`
 1. 将光标移动到 `nand.bin` 上，然后按下A键。然后选择“NAND image options...”，再然后选择 “Restore SysNAND (safe)”
 1. 按 “A” 键解锁 SysNAND 写入权限，并依次输入屏幕上给出的的按键
-  + 这不会覆盖你已安装好的 boot9strap
+    + 这不会覆盖你已安装好的 boot9strap
 1. 依次输入屏幕上的按键来解锁 SysNAND (lv1) 的写入权限
-  + 此过程将花费一些时间
+    + 此过程将花费一些时间
 1. 完成后，按下 “A” 键以继续
 1. 如果弹出重新锁定写入权限的提示，按下 “B” 键来拒绝。
 1. 按下 “B” 键返回到主菜单
@@ -95,7 +95,7 @@ title: "迁移EmuNAND数据"
 1. 选择 “Copy path(s)”
 1. 按 “A” 键解锁SysNAND (lvl1) 写入权限，并根据屏幕上的提示依次按下按键
 1. 选择 “Overwrite file(s)”
-  + 如果你有很多的 DSiWare 游戏，那么此过程可能会花一些时间。
+    + 如果你有很多的 DSiWare 游戏，那么此过程可能会花一些时间。
 1. 如果弹出重新锁定写入权限的提示，按下 “B” 键来拒绝。
 1. 按两次 “B” 键返回到主菜单
 
@@ -110,21 +110,21 @@ title: "迁移EmuNAND数据"
 1. Hold (R) and press (Start) at the same time to power off your console
 1. Power on your console into SysNAND
 1. 对每个 GBA VC 依次执行下列步骤来恢复它们的存档：
-  + 启动 GBA VC 游戏
-  + 退出游戏并关机
-  + Boot your console while holding (Start) to launch the Luma3DS chainloader menu
-  + 按 “A” 键启动 GodMode9
-  + 进入到 `[0:] SDCARD` -> `gm9`
-  + 选择你想要恢复的 `<TitleID>.gbavc.sav` 并按 “Y” 键复制
-  + 按下 “B” 键返回到主菜单
-  + 进入到 `[S:] SYSNAND VIRTUAL`
-  + 在 `agbsave.bin` 上按 “A” 键选中
-  + 选择 “AGBSAVE options...”
-  + 选择 “Inject GBA VC save”
-  + 按 “A” 键继续
-  + Press (Start) to reboot your console
-  + 启动 GBA VC 游戏
-  + 退出游戏并关机
+    + 启动 GBA VC 游戏
+    + 退出游戏并关机
+    + Boot your console while holding (Start) to launch the Luma3DS chainloader menu
+    + 按 “A” 键启动 GodMode9
+    + 进入到 `[0:] SDCARD` -> `gm9`
+    + 选择你想要恢复的 `<TitleID>.gbavc.sav` 并按 “Y” 键复制
+    + 按下 “B” 键返回到主菜单
+    + 进入到 `[S:] SYSNAND VIRTUAL`
+    + 在 `agbsave.bin` 上按 “A” 键选中
+    + 选择 “AGBSAVE options...”
+    + 选择 “Inject GBA VC save”
+    + 按 “A” 键继续
+    + Press (Start) to reboot your console
+    + 启动 GBA VC 游戏
+    + 退出游戏并关机
 
 #### 第七步 – 备份 SysNAND
 
@@ -137,9 +137,9 @@ title: "迁移EmuNAND数据"
 1. Press and hold (Start), and while holding (Start), power on your console. 这会启动 GodMode9
 {% include_relative include/format-sd-gm9.txt -%}
 1. 同时按 “R” 键和“B”键，弹出你的SD卡
-1. 将SD卡插入电脑
+1. 将你的 SD 卡插入到电脑
 1. 将之前备份的所有文件复制到你的 SD 卡
-  + 请确保你替换到 SD 卡中的 `boot.firm` 文件是从你 SD 卡备份中复制的
+    + 请确保你替换到 SD 卡中的 `boot.firm` 文件是从你 SD 卡备份中复制的
 1. Reinsert your SD card into your console
 1. 按 “A” 键重新装载你的 SD 卡
 1. 按下 “Start” 键来重启
