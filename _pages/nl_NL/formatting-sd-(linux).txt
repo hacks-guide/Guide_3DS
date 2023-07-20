@@ -25,12 +25,12 @@ mmcblk0     179:0    0   3,8G  0 disk
 └─mmcblk0p1 179:1    0   3,7G  0 part /run/media/user/FFFF-FFFF
 ```
 1. Noteer de naam van je apparaat. In ons voorbeeld hierboven, was het `mmcblk0p1`
-  + Als `RO` is ingesteld op 1, check dan even of je SD-kaart niet fysiek vergrendelt is
+    + Als `RO` is ingesteld op 1, check dan even of je SD-kaart niet fysiek vergrendelt is
 1. Druk op CTRL + C om het menu te verlaten
 1. Typ het volgende voor jouw overeenkomende SD kaart:
     - 2GB of lager: `sudo mkfs.fat /dev/(apparaatnaam van vanboven) -s 64 -F 16`
-	  - Dit maakt een FAT16 partitie aan met 32 KB clustergrootte op de SD-kaart
+	    - Dit maakt een FAT16 partitie aan met 32 KB clustergrootte op de SD-kaart
     - 4GB - 128GB: `sudo mkfs.fat /dev/(apparaatnaam van vanboven) -s 64 -F 32`
-	  - Dit maakt een FAT32 partitie met 32 KB clustergrootte op de SD-kaart
+	    - Dit maakt een FAT32 partitie met 32 KB clustergrootte op de SD-kaart
     - 128GB of hoger: `sudo mkfs.fat /dev/(apparaatnaam van vanboven) -s 128 -F 32`
-      - Dit maakt een FAT32 partitie met 64 KB clustergrootte op de SD-kaart
+        - Dit maakt een FAT32 partitie met 64 KB clustergrootte op de SD-kaart
