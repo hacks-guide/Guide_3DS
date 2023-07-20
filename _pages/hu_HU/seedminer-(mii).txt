@@ -35,17 +35,17 @@ Ha Linux-ot vagy macOS-t használsz, cseréld ki a `py -3`-at `python3`-mal az �
 
 + Az [Seedminer](https://github.com/zoogie/seedminer/releases/latest) legújabb kiadása (a Seedminer.zip)
 + Bármelyik telepített 3.x verziója a [Python](https://www.python.org/downloads/)-nak
-  + Ha Linux-ot használsz valószínűleg már van Python 3-ad. Ellenőrizd egy terminál megnyitásával, majd a `python3 -V` parancs megadásával. Ha ez egy verziószámot ad vissza, működni fog ezzel az útmutatóval.
+    + Ha Linux-ot használsz valószínűleg már van Python 3-ad. Ellenőrizd egy terminál megnyitásával, majd a `python3 -V` parancs megadásával. Ha ez egy verziószámot ad vissza, működni fog ezzel az útmutatóval.
 
 ### I. rész - Előkészületek
 
 Ebben a fejezetben a telepíteni fogjuk a Seedminer-t és beszerezzük a konzolod azon fájljait, amik a bányászáshoz szükségesek.
 
 1. Csomagold ki a Seedminer `.zip` tartalmát és mozgasd ebből az operációs rendszereddel egyező nevű mappát bárhova a PC-dre
-  + Legyen ez a hely kéznél, mert ebbe a Seedminer mappába további fájlok kerülnek
+    + Legyen ez a hely kéznél, mert ebbe a Seedminer mappába további fájlok kerülnek
 1. A Seedminer mappában tartsd lenyomva a SHIFT gombot, majd jobb gombbal kattints bárhova a mappában, ahol üres hely van, és válaszd azt az opciót, ami megnyitja a Terminal-t, PowerShell-t vagy a parancssort (Command Prompt-ot)
 1. A parancssori ablakba írd be a `py -3 -m pip install pycryptodomex` parancsot, majd nyomj ENTER-t és engedélyezd (allow) a telepítését
-  + Ha ez a parancs hibára fut a `No module named pip` hibaüzenettel, akkor kézzel kell telepítened a pip-et. Ennek a módja megtalálható [ezen az oldalon](https://pip.pypa.io/en/stable/installation/).
+    + Ha ez a parancs hibára fut a `No module named pip` hibaüzenettel, akkor kézzel kell telepítened a pip-et. Ennek a módja megtalálható [ezen az oldalon](https://pip.pypa.io/en/stable/installation/).
 1. + Kapcsold be a konzolod, miközben az SD kártya be van helyezve
 1. Nyisd meg a Mii készítő (Mii Maker) alkalmazást
 1. Érintsd meg a "QR Code/Image Options" gombot
@@ -55,17 +55,17 @@ Ebben a fejezetben a telepíteni fogjuk a Seedminer-t és beszerezzük a konzolo
 1. Helyezd az SD kártyád a számítógépbe
 1. Lépj be az SD kártyád `Nintendo 3DS` könyvtárába
 1. Másold le a 32 karakter hosszú nevét annak a mappának, amit látsz a Nintendo 3DS mappán belül
-  + Ez a 32 karakter hosszú név rendszer specifikus és eltérő minden konzolnál
-  + Ha több 32 karakter hosszú nevű mappát látsz, kövesd [ezeket a lépéseket](troubleshooting#seedminer)
-  + Figyelmen kívül hagyhatod a `private` mappát, ha rendelkezel vele
+    + Ez a 32 karakter hosszú név rendszer specifikus és eltérő minden konzolnál
+    + Ha több 32 karakter hosszú nevű mappát látsz, kövesd [ezeket a lépéseket](troubleshooting#seedminer)
+    + Figyelmen kívül hagyhatod a `private` mappát, ha rendelkezel vele
 
 	![]({{ "/images/screenshots/seedminer/id0-example.png" | absolute_url }})
 	{: .notice--info}
 1. Illesztd be a te 32-karakteres mappa neved [egy dokumentumba](/images/screenshots/seedminer/text-document.png) amit megtalálsz később
-  + Ez a mappa a te "ID0" mappád. Jegyezd fel ezt, mert az útmutató később hivatkozni fog rá
+    + Ez a mappa a te "ID0" mappád. Jegyezd fel ezt, mert az útmutató később hivatkozni fog rá
 1. Lépj be az SD kártyád `DCIM` könyvtárába
 1. Keresd meg a QR kódot, ami egy `.JPG` fájl lesz, aminek a neve `HNI`-vel kezdődik
-  + Lehet, hogy még más fájlokat is talász itt ha használod a Nintendo 3DS Camera appot
+    + Lehet, hogy még más fájlokat is talász itt ha használod a Nintendo 3DS Camera appot
 1. Másold át ezt a fájlt a Seedminer mappába a PC-den
 
 ### II. rész - A Mii QR feldolgozásáa és bányászat
@@ -75,21 +75,21 @@ Ebben a fejezetben a Mii QR kódodból egy használható fájl amivel kibányás
 1. Nyisd meg a [editMii](https://zoogie.github.io/web/miiqr/) weboldalt a számítógépeden
 1. Kattints az "Import from..."-ra, majd válaszd a "QR Code" opciót és töltsd fel Mii QR kódot korábbról
 1. Kattints az "Export to..."-ra, majd válaszd az "encrypted (.bin)"-t
-  + Ez le fog tölteni egy `input.bin` nevü fájlt
+    + Ez le fog tölteni egy `input.bin` nevü fájlt
 1. Másold ezt az `input.bin`-t a Seedminer mappájába
 1. Nyisd meg a terminál/PowerShell/Command Prompt ablakot korábbról
 1. Ebbe az ablakba írd be a `py -3 seedminer_launcher3.py id0 <id0>` parancsot
-  + Helyettesítsd az `<id0>`-t az ID0+val amit a dokumentumba másoltál
-  + Ne legyenek benne a kacsacsőrök
-  + Ne próbáld meg kézzel beadni az ID0 kódot, mert könnyű hibázni. Legyél biztos abban, hogy az ID0 helyes, azzal, hogy másolod és beilleszted onnan, ahova az előző részben elmentetted
+    + Helyettesítsd az `<id0>`-t az ID0+val amit a dokumentumba másoltál
+    + Ne legyenek benne a kacsacsőrök
+    + Ne próbáld meg kézzel beadni az ID0 kódot, mert könnyű hibázni. Legyél biztos abban, hogy az ID0 helyes, azzal, hogy másolod és beilleszted onnan, ahova az előző részben elmentetted
 1. Ha végzett írd be a `py -3 seedminer_launcher3.py mii <model> <year>` parancsot
-  + Helyettesítsd a `<model>`-t a konzol modeljével (`new` vagy `old`) - ha nem vagy biztos benne, azok a modellek amik rendselkeznek ZL/ZR gombokkal és C-Stick-kel azok újak (new)
-  + Helyettesítsd a `<year>`-t az évvel, amikor a 3DS készült (gyakaran megtalálható a hátlap mögött) - hagyd ezt üresen, ha nem vagy biztos benne, ekkor középről kezdjük
-  + A bányászási folyamat általában 90 percet igényel, függően a szerencétől és a GPU erősségétől
-  + Az első szakasz a konzolmodelltől függően valószínűleg nagyjából 1500 offset-nél maximális
-  + Ha a második fázis (miután látható volt a `movable_part2.sed generation success` üzenet) túljutott a 100-as offset-en, ellenőrizd, hogy helyes ID0-t adtál-e meg. Ha az ID0 értéked korrekt, nem tudod használni ezt a metódust és frissítened kell a legutols verzióra és meg kell nézned, hogy egy nem-Seedminer metódus elérhető-e számodra [itt](alternate-exploits)
-  + Ha az `input.bin is invalid size` üzenetet látod, csinád újra az `input.bin` fájlt a QR kódodat használva. Ha *még mindig* hibára fut, nyiss meg egy másik böngészőt és készítsd újra az `input.bin` fájlt ott
-  + Ha a `LFCS has been left blank` üzenetet látod, használd az ellentétes konzol modelt (pl. `mii old` helyett `mii new`)
+    + Helyettesítsd a `<model>`-t a konzol modeljével (`new` vagy `old`) - ha nem vagy biztos benne, azok a modellek amik rendselkeznek ZL/ZR gombokkal és C-Stick-kel azok újak (new)
+    + Helyettesítsd a `<year>`-t az évvel, amikor a 3DS készült (gyakaran megtalálható a hátlap mögött) - hagyd ezt üresen, ha nem vagy biztos benne, ekkor középről kezdjük
+    + A bányászási folyamat általában 90 percet igényel, függően a szerencétől és a GPU erősségétől
+    + Az első szakasz a konzolmodelltől függően valószínűleg nagyjából 1500 offset-nél maximális
+    + Ha a második fázis (miután látható volt a `movable_part2.sed generation success` üzenet) túljutott a 100-as offset-en, ellenőrizd, hogy helyes ID0-t adtál-e meg. Ha az ID0 értéked korrekt, nem tudod használni ezt a metódust és frissítened kell a legutols verzióra és meg kell nézned, hogy egy nem-Seedminer metódus elérhető-e számodra [itt](alternate-exploits)
+    + Ha az `input.bin is invalid size` üzenetet látod, csinád újra az `input.bin` fájlt a QR kódodat használva. Ha *még mindig* hibára fut, nyiss meg egy másik böngészőt és készítsd újra az `input.bin` fájlt ott
+    + Ha a `LFCS has been left blank` üzenetet látod, használd az ellentétes konzol modelt (pl. `mii old` helyett `mii new`)
 1. Ha végzett, egy fájl `movable.sed` névvel megjelenik a Seedminer mappában
 
 Folytatás a [BannerBomb3](bannerbomb3)-mal
