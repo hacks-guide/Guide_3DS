@@ -31,7 +31,30 @@ Ha tajvani konzolod van (amit T betű jelez a rendszer verzió mögött), akkor 
 
 #### I. rész - Előkészületek
 
-{% include_relative include/bb3-prep.txt %}
+Ebben a fejezetben fel fogod másolni azokat a fájlokat a konzolod SD kártyájára, amik ahhoz szükségesek, hogy kiváltsák a BannerBomb3 exploit-ot.
+
+1. Kapcsold ki a konzolod
+1. Helyezd az SD kártyád a számítógépbe
+1. Open [Bannerbomb3 Injector](https://zoogie.github.io/web/bb3/) on your computer
+1. Töltsd fel a `movable.sed` fájlod a "Choose File" opcióval
+1. Kattints a "Build and Download"-ra
+    + This will download an exploit DSiWare called `F00D43D5.bin` and a payload called `bb3.bin` inside of a zip archive (`BannerBomb3.zip`)
+1. Copy `bb3.bin` from `Release_v3.0.zip` to the root of your SD card
+    + Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne
+    + Ezt a fájlt nem kell megnyitni, vagy kicsomagolni
+    ![]({{ "/images/screenshots/bb3/bb3-root-layout.png" | absolute_url }}){: .notice--info}
+1. Copy `Launcher.dat` from the folder for your model and region inside the Release `.zip` to the root of your SD card
+1. Navigálj a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` mappába az SD kártyádon
+    + Az `<ID0>` egy 32 karakter hosszú mappanév, amit a [Seedminer](seedminer)-nél másoltál
+    + Az `<ID1>` egy 32 karakter hosszú nevű mappa az `<ID0>` mappában
+    + Ha több `<ID1>` nevű mappát látsz, kövesd [ezeket a lépéseket](troubleshooting#bannerbomb3)
+    ![]({{ "/images/screenshots/bb3/dsiware-location-1.png" | absolute_url }}){: .notice--info}
+1. Hozz létre egy `Nintendo DSiWare` nevű mappát az `<ID1>` mappában
+    + Ha már van mappád *és* van benne DSiWare mentés fájl (`<8-character-id>.bin`), másold őket a számítógépedre és töröld őket az SD kártyáról
+1. Copy the `F00D43D5.bin` file from `BannerBomb3.zip` to the `Nintendo DSiWare` folder
+
+![]({{ "/images/screenshots/bb3/dsiware-location-2.png" | absolute_url }})
+{: .notice--info}
 
 #### II. rész - BannerBomb3
 
