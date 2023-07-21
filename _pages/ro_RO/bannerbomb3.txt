@@ -31,7 +31,30 @@ If you have a Taiwanese console (indicated by a T after the system version), fol
 
 #### Secțiunea I - Preparații
 
-{% include_relative include/bb3-prep.txt %}
+In this section, you will copy the files needed to trigger the BannerBomb3 exploit onto your console's SD card.
+
+1. Power off your console
+1. Introduceți cardul SD în calculator
+1. Open [Bannerbomb3 Injector](https://zoogie.github.io/web/bb3/) on your computer
+1. Upload your movable.sed using the “Choose File” option
+1. Click “Build and Download”
+    + This will download an exploit DSiWare called `F00D43D5.bin` and a payload called `bb3.bin` inside of a zip archive (`BannerBomb3.zip`)
+1. Copy `bb3.bin` from `Release_v3.0.zip` to the root of your SD card
+    + The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
+    + This file does not need to be opened or extracted
+    ![]({{ "/images/screenshots/bb3/bb3-root-layout.png" | absolute_url }}){: .notice--info}
+1. Copy `Launcher.dat` from the folder for your model and region inside the Release `.zip` to the root of your SD card
+1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` on your SD card
+    + `<ID0>` is the 32-letter folder name that you copied in [Seedminer](seedminer)
+    + `<ID1>` is a 32-letter folder inside of the `<ID0>`
+    + If you have multiple `<ID1>` folders, follow the instructions [here](troubleshooting#bannerbomb3)
+    ![]({{ "/images/screenshots/bb3/dsiware-location-1.png" | absolute_url }}){: .notice--info}
+1. Create a folder named `Nintendo DSiWare` inside of the `<ID1>`
+    + If you already had the folder *and* there are any existing DSiWare backup files (`<8-character-id>.bin`) inside, copy them to your PC and remove them from your SD card
+1. Copy the `F00D43D5.bin` file from `BannerBomb3.zip` to the `Nintendo DSiWare` folder
+
+![]({{ "/images/screenshots/bb3/dsiware-location-2.png" | absolute_url }})
+{: .notice--info}
 
 #### Section II - BannerBomb3
 
