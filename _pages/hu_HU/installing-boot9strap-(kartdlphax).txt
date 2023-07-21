@@ -33,15 +33,9 @@ Ahhoz, hogy követhesd ezeket a lépéseket, a következőkre van szükséged:
 
 ### Amire szükséged lesz
 
-A **forrás 3DS**-en (a 3DS egyedi firmware-rel):
-
 * A [kartdlphax] legújabb kiadása (https://github.com/PabloMK7/kartdlphax/releases/latest) (`plugin.3gx`)
-* A [Luma3DS 3GX Loader Edition](https://github.com/PabloMK7/Luma3DS_3GX/releases/latest) legújabb kiadása (`boot.firm`)
-
-A **cél 3DS**-en (a 3DS, amit módosítani szeretnél):
-
 * A [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) legfrisseb verziója (közvetlen letöltés)
-* A [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) legújabb standard kiadása (a Luma3DS `.zip` fájl)
+* A [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) legújabb kiadása (a Luma3DS `.zip` fájl)
 * Az [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest) legújabb kiadása (a RELEASE `.zip` fájl)
 
 #### I. rész - Fizikai gombok ellenőrzése (cél 3DS)
@@ -56,7 +50,7 @@ Ha a kamera nem nyílik meg, nem tudod követni ezt a metódust. Ebben az esetbe
 Ebben a fejezetben befogod állítani a forrás 3DS-ed (a 3DS egyedi firmware-rel), hogy küldje az exploit adatot a cél 3DS-nek.
 
 1. Csatlakoztasd a **forrás 3DS** SD kártyáját a számítógépedhez
-1. Másold a Luma 3GX Loader Edition `boot.firm`-jét a **forrás 3DS** SD kártyájának gyökerébe, felülírva bármilyen létező fájlt
+1. Copy `boot.firm` from the Luma3DS `.zip` to the root of the **source 3DS**'s SD card, replacing any existing file
     + Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne
 1. Másold a kartdlphax `plugin.3gx` fájlját a **forrás 3DS** SD kártyájának következő könyvtárába függően **a régiójától Mario Kart 7 példányodnak**:
     - USA: `luma/plugins/0004000000030800`
@@ -70,7 +64,7 @@ Ebben a fejezetben befogod állítani a forrás 3DS-ed (a 3DS egyedi firmware-re
 Ebben a fejezetben fel fogod másolni azokat a fájlokat, amik ahhoz szükségesek, hogy kiváltsák az unSAFE_MODE exploit-ot a cél 3DS (a 3DS, amit módosítani szeretnél) SD kártyájára.
 
 1. Csatlakoztasd a **cél 3DS** SD kártyáját a számítógépedhez
-1. Másold át a `boot.firm` és `boot.3dsx` fájlt a standard Luma3DS `.zip`-ből az SD kártya gyökerébe
+1. Copy `boot.firm` and `boot.3dsx` from the Luma3DS `.zip` to the root of the **target 3DS's** SD card
 1. Hozz létre egy mappát `boot9strap` néven az SD kártya gyökerében
 1. Másold át a `boot9strap.firm` fájlt és a `boot9strap.firm.sha` fájlt a RELEASE `.zip` fájlból az SD kártyád `/boot9strap/` mappájába
 1. Másold át a `SafeB9SInstaller.bin` fájlt a SafeB9SInstaller `.zip`-ből az SD kártyád gyökerébe
