@@ -31,7 +31,30 @@ title: "BannerBomb3"
 
 #### 섹션 I - 준비 작업
 
-{% include_relative include/bb3-prep.txt %}
+이 섹션에서는 콘솔의 SD 카드에 BannerBomb3 취약점을 실행하기 위한 파일을 복사하게 됩니다.
+
+1. 콘솔의 전원을 꺼 주세요
+1. SD 카드를 컴퓨터에 삽입해 주세요
+1. Open [Bannerbomb3 Injector](https://zoogie.github.io/web/bb3/) on your computer
+1. "Choose File"를 선택하여 `movable.sed`를 업로드 해 주세요
+1. "Build and Download"를 선택해 주세요
+    + This will download an exploit DSiWare called `F00D43D5.bin` and a payload called `bb3.bin` inside of a zip archive (`BannerBomb3.zip`)
+1. Copy `bb3.bin` from `Release_v3.0.zip` to the root of your SD card
+    + SD 카드의 루트는 SD 카드를 열 때 보이는 디렉토리이고, Nintendo 3DS 폴더가 보이지만 그 안에 들어가 있지 않은 상태의 폴더입니다
+    + 이 파일은 열거나 압축 풀기를 할 필요가 없습니다
+    ![]({{ "/images/screenshots/bb3/bb3-root-layout.png" | absolute_url }}){: .notice--info}
+1. Copy `Launcher.dat` from the folder for your model and region inside the Release `.zip` to the root of your SD card
+1. SD 카드의 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` 폴더로 이동해 주세요
+    + `<ID0>`은 [Seedminer](seedminer)에서 복사한 32글자 폴더명 입니다
+    + `<ID1>`은 `<ID0>` 안에 있는 32글자 폴더명입니다
+    + 여러 개의 `<ID1>` 폴더가 보인다면, [이 안내](troubleshooting#bannerbomb3)를 따라주세요
+    ![]({{ "/images/screenshots/bb3/dsiware-location-1.png" | absolute_url }}){: .notice--info}
+1. `<ID1>` 폴더에 `Nintendo DSiWare` 폴더를 생성해 주세요
+    + 만약 그 폴더가 *있고* 내부에 DSiWare 백업 파일(`<8-character-id>.bin`)이 있다면, PC로 모두 복사해 두고 SD 카드에서 삭제해 주세요
+1. Copy the `F00D43D5.bin` file from `BannerBomb3.zip` to the `Nintendo DSiWare` folder
+
+![]({{ "/images/screenshots/bb3/dsiware-location-2.png" | absolute_url }})
+{: .notice--info}
 
 #### 섹션 II - BannerBomb3
 
