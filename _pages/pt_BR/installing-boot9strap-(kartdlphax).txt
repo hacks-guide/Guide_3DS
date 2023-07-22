@@ -7,15 +7,15 @@ title: "Instalando boot9strap (kartdlphax)"
 {% capture technical_info %}
 <summary><em>Detalhes técnicos (opcional)</em></summary>
 
-Para executar o exploit no firmware SAFE_MODE do nosso sistema, precisamos injetar um perfil de Wi-Fi exploited.
+In order to install custom firmware on our console, we need to get Homebrew Launcher access.
 
 Para fazer isso, podemos usar a funcionalidade Download Play do jogo Mario Kart 7, usando um 3DS com custom firmware já instalado junto com um plugin personalizado de jogo.
 
-Este plugin personalizado enviará um payload com hack para um console sem hack, que depois aproveita de um exploit do sistema para injetar o perfil WiFi exploited na sua lista de conexões.
+This custom plugin will send a hacked payload to an unhacked console, which then exploits the system in order to inject menuhax67, which will allow us to get Homebrew Launcher access.
 
-Assim que o perfil Wi-Fi for injetado, usaremos o SAFE_MODE, que é um recurso de recuperação presente em todos os consoles 3DS, para ativar o perfil de Wi-Fi exploited.
+Once we have Homebrew Launcher access, we can run nimdsphax to install boot9strap.
 
-Para mais uma explicação técnica, consulte os seguintes links para informações sobre os exploits kartdlphax e unSAFE_MODE: [kartdlphax](https://github.com/PabloMK7/kartdlphax), [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/).
+See [here](https://github.com/PabloMK7/kartdlphax) for information about kartdlphax, [here](https://github.com/zoogie/menuhax67) for information about menuhax67, and [here](https://github.com/luigoalma/nimdsphax) for information about nimdsphax.
 
 {% endcapture %}
 <details>{{ technical_info | markdownify }}</details>
@@ -36,16 +36,10 @@ Para poder seguir estas instruções, você precisará do seguinte:
 * A versão mais recente do [kartdlphax](https://github.com/PabloMK7/kartdlphax/releases/latest) (`plugin.3gx`)
 * A versão mais recente do [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (download direto)
 * A versão mais recente do [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (o arquivo `.zip` do Luma3DS)
-* A versão mais recente do [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest) (o arquivo RELEASE `.zip`)
+* The latest release of [menuhax67](https://github.com/zoogie/menuhax67/releases/latest)
+* The latest release of [nimdsphax](https://github.com/luigoalma/nimdsphax/releases/latest)
 
-#### Seção I - Verificação de botões (3DS de destino)
-
-{% include_relative include/safemodecheck.txt %}
-
-Se a câmera não abrir, você não pode seguir este método. Se for esse o caso, junte-se ao [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) e peça ajuda, em Inglês.
-{: .notice--warning}
-
-#### Seção II - Preparação (3DS de origem)
+#### Section I - Prep Work (source 3DS)
 
 Nesta seção, você irá configurar seu 3DS de origem (o 3DS com custom firmware) para a entrega dos dados do exploit ao 3DS de destino.
 
@@ -59,23 +53,31 @@ Nesta seção, você irá configurar seu 3DS de origem (o 3DS com custom firmwar
     - Crie as pastas `plugins` e `00040000...` se elas já não existirem
 1. Ejete o cartão SD e coloque-o no **3DS de origem**
 
-#### Seção III - Preparação (3DS de destino)
+#### Section II - Prep Work (target 3DS)
 
-Nesta seção, você copiará os arquivos necessários para acionar o exploit unSAFE_MODE no 3DS de destino (o 3DS que está tentando modificar) no cartão SD.
+In this section, you will set up the files that the target 3DS will need to install custom firmware.
 
 1. Insira o cartão SD do seu **3DS de destino** no seu computador
 1. Copie o `boot.firm` e `boot.3dsx` do `.zip` do Luma3DS para a raiz do cartão SD do **3DS de destino**
 1. Crie uma pasta chamada `boot9strap` na raiz do seu cartão SD
 1. Copie `boot9strap.firm` e `boot9strap.firm.sha` do `.zip` RELEASE para a pasta `/boot9strap/` no seu cartão SD
 1. Copie `SafeB9SInstaller.bin` do `.zip` do SafeB9SInstaller para a raiz do seu cartão SD
-1. Copie `usm.bin` do `.zip` do RELEASE para a raiz do seu cartão SD
-1. Crie uma pasta chamada `3ds` na raiz do seu cartão SD
-1. Copie o `slotTool.3dsx` da pasta `slotTool` dentro do `.zip` RELEASE para a pasta `/3ds/` do seu cartão SD
+1. Crie uma pasta chamada `3ds` na raiz do seu cartão SD se ela ainda não existir
+  * This folder stores homebrew applications and data; it is different from the `Nintendo 3DS` folder that the console automatically generates
+1. Copy the `nimdsphax` folder from the nimdsphax`.zip` to the `/3ds/` folder on your SD card
+1. Copy `menuhax67_installer.3dsx` from the menuhax `.zip` to the `/3ds/` folder on your SD card
+1. Copy Launcher.dat from the folder for your model and region inside the menuhax `.zip` to the root of your SD card
 1. Ejete o cartão SD e coloque-o no **3DS de destino**
 
-#### Seção IV - kartdlphax
+![]({{ "/images/screenshots/kart-root-layout.png" | absolute_url }})
+{: .notice--info}
 
-Nesta seção, você usará o Download Play para transferir os dados do exploit do 3DS de origem para o 3DS de destino, que pode ser usado para substituir seus slots de Wi-Fi por dados com hack. Suas configurações de conexão Wi-Fi serão temporariamente sobrescritas enquanto o exploit estiver ativo.
+![]({{ "/images/screenshots/kart-3ds-layout.png" | absolute_url }})
+{: .notice--info}
+
+#### Section III - kartdlphax
+
+In this section, you will use Download Play to transfer the exploit data from the source 3DS to the target 3DS, which can be used to install menuhax67, a Homebrew Launcher entrypoint. Your HOME Menu settings will be temporarily inaccessible on the target 3DS while this exploit is active.
 
 1. Ligue o **3DS de origem**
     - Se você for solicitado a configurar o Luma3DS, basta apertar START para salvar a configuração
@@ -104,27 +106,26 @@ Nesta seção, você usará o Download Play para transferir os dados do exploit 
 1. Aguarde um pouco (um percentual deve ser exibido no **3DS de origem**)
 1. Se o exploit foi bem sucedido, o **3DS de destino** terá sido inicializado no 3DS ROP xPloit Injector
     - Se o exploit falhar, desligue o **3DS de origem** e o **3DS de destino** e comece novamente desde o início da `Seção III - kartdlphax`
-1. Aperte (X) para injetar unSAFE_MODE
-1. Se a injeção foi bem-sucedida, a tela irá ficar verde e o **3DS de destino** irá desligar automaticamente
-    + Se a tela for apagada, desligue o 3DS de destino e inicie novamente a partir do início da `Seção III - kartdlphax`. Se isso não funcionar, peça ajuda no [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp))
 
-Você **não** precisará usar seu **3DS de origem** para completar quaisquer etapas deste guia a partir de agora. Quaisquer outras etapas só devem ser feitas no **3DS de destino**.
-{: .notice--info}
+#### Section IV - Installing menuhax67
 
-#### Seção V - unSAFE_MODE
+{% include_relative include/menuhax67-install.txt %}
 
-{% include_relative include/exploit-usm.txt %}
-
-#### Seção VI - Instalando o boot9strap
+#### Seção V - Instalando boot9strap
 
 {% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
 {%- include_relative include/configure-luma3ds.txt %}
 
 {% include_relative include/luma3ds-installed-note.txt %}
 
-#### Seção VII - Restaurando os perfis de configuração de Wi-Fi
+#### Section VI - Removing menuhax67
 
-{% include_relative include/remove-usm-slottool.txt %}
+In this section, you will use the Homebrew Launcher to remove menuhax67, which will let you access the HOME Menu Settings option normally.
+
+{% include_relative include/launch-hbl-dlp.txt %}
+1. Launch menuhax67_installer from the list of homebrew
+1. Select REMOVE menuhax67
+1. When you see "done.", press (A), then press (A) on "EXIT to menu"
 
 ___
 
