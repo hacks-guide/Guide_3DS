@@ -7,15 +7,15 @@ title: "安装 boot9strap（通过 kartdlphax）"
 {% capture technical_info %}
 <summary><em>技术细节（选看）</em></summary>
 
-为了破解系统的 SAFE_MODE 固件，我们需要注入一个写入了漏洞的 WiFi 配置文件到主机中。
+In order to install custom firmware on our console, we need to get Homebrew Launcher access.
 
 为了做到这一点，我们将用一台已安装了自制固件的 3DS 安装一个插件，然后利用马里奥赛车 7 这个游戏中的下载通信功能进行一些操作。
 
-这个插件将会发送带有漏洞的代码到未破解的主机中，然后它将会向未破解的主机中注入带有漏洞的配置文件到 WiFi 连接点列表。
+This custom plugin will send a hacked payload to an unhacked console, which then exploits the system in order to inject menuhax67, which will allow us to get Homebrew Launcher access.
 
-一旦 WiFi 配置文件被注入，我们将会使用到 SAFE_MODE 来继续此教程。SAVE_MODE 是一个所有的 3DS 主机都存在的修复功能，之后它将用于激活被破解的 WiFi 配置文件。
+Once we have Homebrew Launcher access, we can run nimdsphax to install boot9strap.
 
-如果想知道更多的技术细节，请参阅以下链接：[kartdlphax](https://github.com/PabloMK7/kartdlphax)、[unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/)。
+See [here](https://github.com/PabloMK7/kartdlphax) for information about kartdlphax, [here](https://github.com/zoogie/menuhax67) for information about menuhax67, and [here](https://github.com/luigoalma/nimdsphax) for information about nimdsphax.
 
 {% endcapture %}
 <details>{{ technical_info | markdownify }}</details>
@@ -36,16 +36,10 @@ title: "安装 boot9strap（通过 kartdlphax）"
 * 最新版本的 [kartdlphax](https://github.com/PabloMK7/kartdlphax/releases/latest)（下载 `plugin.3gx`）
 * 最新版本的 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip)（直链）
 * 最新版本的 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)（下载 Luma3DS `.zip` 文件）
-* 最新版本的 [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest)（下载 RELEASE `.zip` 文件）
+* The latest release of [menuhax67](https://github.com/zoogie/menuhax67/releases/latest)
+* The latest release of [nimdsphax](https://github.com/luigoalma/nimdsphax/releases/latest)
 
-#### Section I - Hardware Button Check (target 3DS)
-
-{% include_relative include/safemodecheck.txt %}
-
-If the camera does not open, you cannot follow this method. If this is the case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
-{: .notice--warning}
-
-#### Section II - Prep Work (source 3DS)
+#### Section I - Prep Work (source 3DS)
 
 为了向目标 3DS 传输带有漏洞的数据，你将需要按照以下内容配置源 3DS（已安装了自制固件的 3DS）。
 
@@ -59,23 +53,31 @@ If the camera does not open, you cannot follow this method. If this is the case,
     如果 `plugins` 和 `00040000...` 文件夹不存在，请先创建它们
 1. 弹出 SD 卡并将其插回**源 3DS**
 
-#### Section III - Prep Work (target 3DS)
+#### Section II - Prep Work (target 3DS)
 
-为了修改目标 3DS（你正在破解的 3DS），你需要复制一些文件到目标 3DS 的 SD 卡中。
+In this section, you will set up the files that the target 3DS will need to install custom firmware.
 
 1. 在你的电脑中插入你的**目标 3DS** 的 SD 卡
 1. Copy `boot.firm` and `boot.3dsx` from the Luma3DS `.zip` to the root of the **target 3DS's** SD card
 1. 在 SD 卡根目录创建一个名为 `boot9strap` 的文件夹
 1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the RELEASE `.zip` to the `/boot9strap/` folder on your SD card
 1. 从 SafeB9SInstaller `.zip` 压缩包中复制 `SafeB9SInstaller.bin` 到 SD 卡根目录下
-1. Copy `usm.bin` from the RELEASE `.zip` to the root of your SD card
-1. 在你 SD 卡的根目录新建一个叫 `3ds` 的文件夹
-1. Copy `slotTool.3dsx` from the `slotTool` folder inside the RELEASE `.zip` to the `/3ds/` folder on your SD card
+1. 检查 SD 卡的根目录是否存在一个名为 `3ds` 的文件夹，如果没有则手动新建一个
+  * This folder stores homebrew applications and data; it is different from the `Nintendo 3DS` folder that the console automatically generates
+1. Copy the `nimdsphax` folder from the nimdsphax`.zip` to the `/3ds/` folder on your SD card
+1. Copy `menuhax67_installer.3dsx` from the menuhax `.zip` to the `/3ds/` folder on your SD card
+1. Copy Launcher.dat from the folder for your model and region inside the menuhax `.zip` to the root of your SD card
 1. 取下 SD 卡并将其插回**目标 3DS**
 
-#### Section IV - kartdlphax
+![]({{ "/images/screenshots/kart-root-layout.png" | absolute_url }})
+{: .notice--info}
 
-本节中，你将使用下载通信程序来从源 3DS 传输带有漏洞的数据到目标 3DS，它将会用带有漏洞的数据覆盖你的 Wi-Fi 连接点设置槽。 你自己设置的 Wi-Fi 链接点将在这个过程中被暂时覆盖。 
+![]({{ "/images/screenshots/kart-3ds-layout.png" | absolute_url }})
+{: .notice--info}
+
+#### Section III - kartdlphax
+
+In this section, you will use Download Play to transfer the exploit data from the source 3DS to the target 3DS, which can be used to install menuhax67, a Homebrew Launcher entrypoint. Your HOME Menu settings will be temporarily inaccessible on the target 3DS while this exploit is active.
 
 1. 启动 **源 3DS **
     - 若主机提示设置 Luma3DS，则你可以直接按下 START 键来保存配置
@@ -104,27 +106,26 @@ If the camera does not open, you cannot follow this method. If this is the case,
 1. 稍等一会儿（百分比应该会显示在**源 3DS** 上）
 1. 如果漏洞执行成功，**目标 3DS** 将会启动 3DS ROP xPloit Injector
     - 如果漏洞没有成功触发，则请将**源 3DS** 和 **目标 3DS** 一起关机，然后从 `第三步 — kartdlphax` 重新开始
-1. 按 X 键来注入 unSAFE_MODE
-1. 如果注入成功，**目标 3DS** 的屏幕闪绿屏，然后自动关机
-    + 如果是闪红屏，则请将目标 3DS 关机，然后从 `第三步 — kartdlphax` 重新开始。 如果依然不行，请于 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp))寻求帮助
 
-接下来的步骤中将**不再**需要使用**源 3DS** 来完成。 接下来的步骤应该只能在**目标 3DS**上完成。
-{: .notice--info}
+#### Section IV - Installing menuhax67
 
-#### Section V - unSAFE_MODE
+{% include_relative include/menuhax67-install.txt %}
 
-{% include_relative include/exploit-usm.txt %}
-
-#### Section VI - Installing boot9strap
+#### 第五步 – 安装 boot9strap
 
 {% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
 {%- include_relative include/configure-luma3ds.txt %}
 
 {% include_relative include/luma3ds-installed-note.txt %}
 
-#### Section VII - Restoring WiFi Configuration Profiles
+#### Section VI - Removing menuhax67
 
-{% include_relative include/remove-usm-slottool.txt %}
+In this section, you will use the Homebrew Launcher to remove menuhax67, which will let you access the HOME Menu Settings option normally.
+
+{% include_relative include/launch-hbl-dlp.txt %}
+1. Launch menuhax67_installer from the list of homebrew
+1. Select REMOVE menuhax67
+1. When you see "done.", press (A), then press (A) on "EXIT to menu"
 
 ___
 
