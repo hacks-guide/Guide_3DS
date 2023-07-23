@@ -7,15 +7,15 @@ title: "boot9strap 설치 (kartdlphax)"
 {% capture technical_info %}
 <summary><em>기술적 상세 정보 (선택 사항)</em></summary>
 
-In order to install custom firmware on our console, we need to get Homebrew Launcher access.
+In order to exploit the SAFE_MODE firmware of our system, we need to inject an exploited WiFi profile.
 
 이 취약점을 사용하기 위해, 마리오 카트 7 게임에 존재하는 다운로드 플레이 기능, 이미 커스텀 펌웨어가 설치되어 있는 콘솔, 그리고 어떤 게임 플러그인을 사용합니다.
 
-This custom plugin will send a hacked payload to an unhacked console, which then exploits the system in order to inject menuhax67, which will allow us to get Homebrew Launcher access.
+This custom plugin will send a hacked payload to an unhacked console, which then exploits the system in order to inject the exploited WiFi profile into your connections list.
 
-Once we have Homebrew Launcher access, we can run nimdsphax to install boot9strap.
+Once the WiFi profile has been injected, we will use SAFE_MODE, which is a recovery feature present on all 3DS consoles, to activate the exploited WiFi profile.
 
-See [here](https://github.com/PabloMK7/kartdlphax) for information about kartdlphax, [here](https://github.com/zoogie/menuhax67) for information about menuhax67, and [here](https://github.com/luigoalma/nimdsphax) for information about nimdsphax.
+For a more technical explanation, see the following links for information on the kartdlphax and unSAFE_MODE exploits: [kartdlphax](https://github.com/PabloMK7/kartdlphax), [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/).
 
 {% endcapture %}
 <details>{{ technical_info | markdownify }}</details>
@@ -34,13 +34,18 @@ See [here](https://github.com/PabloMK7/kartdlphax) for information about kartdlp
 ### 준비물
 
 * 최신 버전의 [kartdlphax](https://github.com/PabloMK7/kartdlphax/releases/latest`) (`plugin.3gx`)
-* 최신 버전의 [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (직접 다운로드)
 * 최신 버전의 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (직접 다운로드)
-+ 최신 버전의 [nimdsphax](https://github.com/luigoalma/nimdsphax/releases/download/v1.0/nimdsphax_v1.0.zip) (직접 다운로드)
-* 최신 버전의 [menuhax67](https://github.com/zoogie/menuhax67/releases/latest)
 * 최신 버전의 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (`.zip` 파일)
+* The latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest) (the RELEASE `.zip` file)
 
-#### Section I - Prep Work (source 3DS)
+#### Section I - Hardware Button Check (target 3DS)
+
+{% include_relative include/safemodecheck.txt %}
+
+If the camera does not open, you cannot follow this method. 이 경우, [Nintendo Homebrew Discord 서버](https://discord.gg.MWxPgEp)에 오셔서 도움을 요청하세요.
+{: .notice--warning}
+
+#### Section II - Prep Work (source 3DS)
 
 이 섹션에서는, 소스 3DS (커스텀 펌웨어가 설치 되어 있는 콘솔)을 익스플로잇 데이터를 타겟 3DS로 전송할 수 있도록 설정합니다.
 
@@ -54,31 +59,23 @@ See [here](https://github.com/PabloMK7/kartdlphax) for information about kartdlp
     - `plugins` 폴더와 `00040000...` 폴더가 없으면 만들어 주세요
 1. SD 카드를 분리해 **소스 3DS**에 장착해 주세요
 
-#### Section II - Prep Work (target 3DS)
+#### Section III - Prep Work (target 3DS)
 
-In this section, you will set up the files that the target 3DS will need to install custom firmware.
+In this section, you will copy the files needed to trigger the unSAFE_MODE exploit onto your target 3DS (the 3DS that you are trying to modify)'s SD card.
 
 1. **타겟 3DS**의 SD 카드를 컴퓨터에 삽입해 주세요
 1. Copy `boot.firm` and `boot.3dsx` from the Luma3DS `.zip` to the root of the **target 3DS's** SD card
 1. SD 카드이 루트에 `boot9strap` 라는 이름으로 새 폴더를 생성해 주세요
-1. SD 카드에 있는 `/boot9strap/` 폴더에 boot9strap `.zip` 파일 안에 압축되있는 `boot9strap.firm`과 `boot9strap.firm.sha`을 복사해 주세요
+1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the RELEASE `.zip` to the `/boot9strap/` folder on your SD card
 1. SafeB9SInstaller `.zip`의 `SafeB9SInstaller.bin`을 SD 카드의 루트로 복사해 주세요
-1. SD 카드의 루트에 `3ds` 폴더가 없을 경우 폴더를 만들어 주세요
-  * This folder stores homebrew applications and data; it is different from the `Nintendo 3DS` folder that the console automatically generates
-1. Copy the `nimdsphax` folder from the nimdsphax`.zip` to the `/3ds/` folder on your SD card
-1. Copy `menuhax67_installer.3dsx` from the menuhax `.zip` to the `/3ds/` folder on your SD card
-1. Copy Launcher.dat from the folder for your model and region inside the menuhax `.zip` to the root of your SD card
+1. Copy `usm.bin` from the RELEASE `.zip` to the root of your SD card
+1. Create a folder called `3ds` on the root of your SD card
+1. Copy `slotTool.3dsx` from the `slotTool` folder inside the RELEASE `.zip` to the `/3ds/` folder on your SD card
 1. SD 카드를 분리해 **타겟 3DS**에 장착해 주세요
 
-![]({{ "/images/screenshots/kart-root-layout.png" | absolute_url }})
-{: .notice--info}
+#### Section IV - kartdlphax
 
-![]({{ "/images/screenshots/kart-3ds-layout.png" | absolute_url }})
-{: .notice--info}
-
-#### 섹션 III - kartdlphax
-
-In this section, you will use Download Play to transfer the exploit data from the source 3DS to the target 3DS, which can be used to install menuhax67, a Homebrew Launcher entrypoint. Your HOME Menu settings will be temporarily inaccessible on the target 3DS while this exploit is active.
+In this section, you will use Download Play to transfer the exploit data from the source 3DS to the target 3DS, which can be used to overwrite your Wi-Fi slots with hacked data. Your Wi-Fi connection settings will be temporarily overwritten while the exploit is active.
 
 1. **소스 3DS**의 전원을 켜 주세요
     + Luma3DS를 설정하는 창이 표시되면, START를 눌러 저장해 주세요
@@ -107,26 +104,45 @@ In this section, you will use Download Play to transfer the exploit data from th
 1. 잠시 기다려 주세요 (**소스 3DS**에 진행도가 표시됩니다)
 1. 익스플로잇이 성공했다면, **타겟 3DS**가 3DS ROP xPloit Injector로 부팅됩니다
     - 익스플로잇이 실패했다면, 두 3DS 콘솔 모두 종료한 후 `섹션 III - kartdlphax`의 처음부터 다시 시작해 주세요
+1. Press (X) to inject unSAFE_MODE
+1. If the injection was successful, the screen will turn green and the **target 3DS** will automatically power off
+    + If the screen turns red, power off the target 3DS and start again from the beginning of `Section III - kartdlphax`. If this doesn't work, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp))
 
-#### 섹션 IV - menuhax67 설치
+You will **not** need to use your **source 3DS** to complete any further steps on this guide. Any further steps should only be completed on the **target 3DS**.
+{: .notice--info}
 
-{% include_relative include/menuhax67-install.txt %}
+#### Section V - unSAFE_MODE
 
-#### 섹션 V - boot9strap 설치
+In this section, you will enter Safe Mode (a feature available on all 3DS family consoles) and navigate to a menu where unSAFE_MODE will be triggered, which will launch you into the boot9strap (custom firmware) installer.
+
+1. 전원이 꺼져 있는 상태에서 (L 어깨) + (R 어깨) + (십자 Up) + (A) 를 길게 눌르고, 누르는 상태에서 전원을 켜 주세요
+    + 안전 모드로 부팅 될 때 까지 버튼들을 눌러 주세요 ("본체 업데이트" 메뉴)
+1. "OK"를 선택해서 업데이트를 확인해 주세요
+    + 실제로 업데이트를 하는 것은 아닙니다. 이것은 익스플로잇의 일부입니다
+1. "동의함"를 눌러서 이용 약관에 동의해 주세요
+1. 이 업데이트는 에러 코드 `003-1099` 와 같이 실패를 할 겁니다. 이것은 의도적 행동입니다
+1. When asked "Would you like to configure Internet settings?", select "Yes"
+1. On the following menu, navigate to `Connection 1` -> `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings` -> `Detailed Setup` ([image](/images/screenshots/usm/safemode_highlighted.png))
+1. If the exploit was successful, your console will have booted into SafeB9SInstaller
+    + If your console instead freezes on a white screen, hold the POWER button until it turns off, then retry this section
+    + If your console instead freezes on a red screen, you are missing `usm.bin` from the root of your SD card
+    + If you get a different error, [follow this troubleshooting guide](troubleshooting#installing-boot9strap-usm)
+
+#### 섹션 VI - boot9strap 설치
 
 {% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
 {%- include_relative include/configure-luma3ds.txt %}
 
 {% include_relative include/luma3ds-installed-note.txt %}
 
-#### 섹션 VI - menuhax67 제거
+#### Section VII - Restoring WiFi Configuration Profiles
 
-In this section, you will use the Homebrew Launcher to remove menuhax67, which will let you access the HOME Menu Settings option normally.
+In this section, you will enter the Homebrew Launcher (using custom firmware) so that you can restore the Wi-Fi connection slots that were overwritten in Section I.
 
 {% include_relative include/launch-hbl-dlp.txt %}
-1. Launch menuhax67_installer from the list of homebrew
-1. Select REMOVE menuhax67
-1. When you see "done.", press (A), then press (A) on "EXIT to menu"
+1. Launch slotTool from the list of homebrew
+1. Select "RESTORE original wifi slots 1,2,3"
+1. Your console will then reboot
 
 ___
 
