@@ -92,12 +92,12 @@ This occurs when you use your SD card in multiple 3DS consoles and is intended t
 1. Reinsert your SD card into your console
 1. Power on your console
 1. Wait for the console to generate the SD card data
-	+ 你先前安装的程序会暂时消失。 这是正常的，且接下来就会还原回来。
+    + 你先前安装的程序会暂时消失。 这是正常的，且接下来就会还原回来。
 1. Power off your console
 1. 将你的 SD 卡插入到电脑
 1. 打开你 SD 卡的 `Nintendo 3DS` 文件夹
 1. 复制你看到的 32 位字符文件夹的名称
-	+ 这也就是你在 [Seedminer 第二步](seedminer#section-ii---seedminer) 中需要使用的 ID0
+    + 这也就是你在 [Seedminer 第二步](seedminer#section-ii---seedminer) 中需要使用的 ID0
 1. 删除 `Nintendo 3DS` 文件夹
 1. 将 `BACKUP_Nintendo 3DS` 文件夹重命名为 `Nintendo 3DS`
 {% endcapture %}
@@ -403,14 +403,14 @@ The date is set incorrectly. To set it correctly, follow these steps:
 
 If the problem persists:
 
-- Ensure that `arm11code.bin`, `browserhax_hblauncher_ropbin_payload.bin`, and `boot.3dsx` are on the root of the SD card (not inside of any folder)
-- Ensure that you selected the correct payload for your region AND system version
-- Ensure that your region settings look [like this](/images/screenshots/skater_lang.png)
-- Try resetting your browser data:
-  1. 打开浏览器，进入浏览器设置页面
-  1. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initilize Save Data" or "Clear All Save Data")
-  1. 再次尝试触发漏洞
-- Try changing the system language to something other than the current language
++ Ensure that `arm11code.bin`, `browserhax_hblauncher_ropbin_payload.bin`, and `boot.3dsx` are on the root of the SD card (not inside of any folder)
++ Ensure that you selected the correct payload for your region AND system version
++ Ensure that your region settings look [like this](/images/screenshots/skater_lang.png)
++ Try resetting your browser data:
+    1. 打开浏览器，进入浏览器设置页面
+    1. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initilize Save Data" or "Clear All Save Data")
+    1. 再次尝试触发漏洞
++ Try changing the system language to something other than the current language
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -591,9 +591,9 @@ The steps detailed here generally assume that your console has a modern custom f
 
 如果通知灯亮起：
 
-- **白色**：你的 3DS 无法在 SD 卡根目录或内部存储中找到 `boot.firm` 文件。
-- **紫红色**：你的 3DS 无法在 SD 卡根目录中找到 `boot.firm` 文件。 主机内存中可以找到 `boot.firm` 文件，但是文件已损坏。
-- **红色**：你的 3DS 能够在 SD 卡根目录和内部存储中找到 `boot.firm` 文件，但是这两个文件都已损坏。
++ **White**: Your 3DS was not able to find `boot.firm` on your SD card or on internal memory.
++ **Magenta**: Your 3DS was not able to find `boot.firm` on your SD card. 主机内存中可以找到 `boot.firm` 文件，但是文件已损坏。
++ **Red**: Your 3DS was able to find `boot.firm` on both your SD card and on internal memory, but both files are corrupted.
 
 你可以通过下载 [最新版本的 Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)，然后解压，将 `boot.firm` 复制到 SD 卡的根目录。 如果 `boot.firm` 始终被主机判定为损坏，则你可能需要使用一个工具来测试一下你的 SD 卡（[Windows](h2testw-(windows))、[Linux](f3-(linux))、[macOS](f3xswift-(mac))） 另外，最好不要使用 WinRAR 解压文件，解压的文件给 3DS 使用可能会出问题。
 
@@ -609,19 +609,19 @@ If you hear a "popping sound", potentially accompanied with the backlight turnin
 1. Power off your console, remove the SD card, re-insert it, then power on your console.
 1. Power off your console, eject the game cartridge if inserted, power on your console, then wait up to ten minutes. If your console boots within ten minutes, the issue has been fixed and is unlikely to reoccur
 1. 将 SD 卡上的 `Nintendo 3DS` 文件夹重命名为 `Nintendo 3DS_BACKUP`，然后尝试启动主机。 If your console successfully boots, there is some issue within your `Nintendo 3DS` folder. 尝试清理主菜单的外部存储文件：
-	+ 进入到 `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
+    + 进入到 `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
     + 删除对应你的 3DS 区域的文件夹：
-		+ **欧版**: `00000098`
-		+ **日版**: `000000082`
-		+ **美版**: `000008f`
-		+ **中国版（神游版）**: `000000A1`
-		+ **韩版**: `000000A9`
-		+ **台湾版**: `000000B1`
+        + **欧版**: `00000098`
+        + **日版**: `000000082`
+        + **美版**: `000008f`
+        + **中国版（神游版）**: `000000A1`
+        + **韩版**: `000000A9`
+        + **台湾版**: `000000B1`
 1. 尝试启动到恢复模式并升级系统：
-	+ Power off your console
-	+ 按住 “L” + “R” + “↑” + "A" 四个键
-	+ Power on your console
-	+ If you were successful, the console will boot to an "update your system" screen
+    + Power off your console
+    + 按住 “L” + “R” + “↑” + "A" 四个键
+    + Power on your console
+    + If you were successful, the console will boot to an "update your system" screen
 1. 尝试做 [CTRTransfer](trtransfer) 
 1. 如需援助，请加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp)并使用英文求助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup) 寻求帮助，群号为 942052497。
 {% endcapture %}
@@ -790,4 +790,3 @@ However, if you do not know the PIN and therefore cannot access the console's se
 1. Press "Clear Settings", then "Delete" to remove all Parental Controls data
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
-
