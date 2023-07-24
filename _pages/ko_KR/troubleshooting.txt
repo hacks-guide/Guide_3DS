@@ -13,11 +13,11 @@ title: "문제 해결"
 가이드 페이지:
 * [Seedminer](#seedminer)
     * [BannerBomb3](#bannerbomb3)
-    * [Installing boot9strap (Fredtool-Inject)](#installing-boot9strap-fredtool-inject)
-    * [Installing boot9strap (PicHaxx)](#installing-boot9strap-pichaxx)
+    * [boot9strap 설치 (Fredtool-Inject)](#installing-boot9strap-fredtool-inject)
+    * [boot9strap 설치 (PicHaxx)](#installing-boot9strap-pichaxx)
 * [boot9strap 설치 (Soundhax)](#installing-boot9strap-soundhax)
 * [boot9strap 설치 (SSLoth-Browser)](#installing-boot9strap-ssloth-browser)
-* [Installing boot9strap (super-skaterhax)](#installing-boot9strap-super-skaterhax)
+* [boot9strap 설치 (super-skaterhax)](#installing-boot9strap-super-skaterhax)
 
 * [마무리 단계](#finalizing-setup)
 
@@ -165,12 +165,12 @@ To fix this, you will need to determine which folder contains your data. 이것�
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-## Installing boot9strap (Fredtool-Inject)
+## boot9strap 설치 (Fredtool-Inject)
 
 {% capture compat %}
-<summary><u>Error on DSiHaxInjector page</u></summary>
+<summary><u>DSiHaxInjector 페이지에서 오류가 발생합니다</u></summary>
 
-`movable.sed`와 DSiWare 백업 파일이 동일 기기에서 추출한 것인지 확인해 주세요. 서로 다르면 오류가 발생합니다.
+`movable.sed`와 DSiWare 백업 파일이 동일한 콘솔에서 추출한 것인지 확인해 주세요. 서로 다르면 오류가 발생합니다.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -182,7 +182,7 @@ To fix this, you will need to determine which folder contains your data. 이것�
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>DSiWare launches normally</u></summary>
+<summary><u>게임이 정상적으로 실행됩니다</u></summary>
 
 `Haxxxxxxxxx!`가 SD 카드에서 시스템 메모리로 복사되지 않았습니다.
 {% endcapture %}
@@ -229,14 +229,14 @@ SD 카드 루트에 Frogminer_save `.zip` 안에 있는 `private` 폴더를 복�
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-## Installing boot9strap (PicHaxx)
+## boot9strap 설치 (PicHaxx)
 
 {% capture compat %}
 <summary><u>에러가 발생했습니다. 본체의 전원 버튼을 길게 눌러 전원을 끈 후..." (검은 화면에 텍스트)</u></summary>
 
 `00000001.sav` 또는 `otherapp.bin` 파일이 잘못 들어갔습니다. `00000000.sav`가 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00004000` -> 0017c100` -> `data` 안에 있고 `otherapp.bin`이 SD 카드 루트에 있는지 다시 한 번 확인해 주세요.
 
-만약 위치가 정확하다면, [PicHaxx Save Tool](https://3dstools.nhnarwhal.com/#/pichaxx)을 이용해 세이브를 다시 생성한 후, `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` 폴더 안에 다시 복사해 주세요. 반드시 파일의 이름이 `00000001.sav`이고 기기의 `movable.sed`를 이용해야 합니다. Re-download [HBL otherapps](https://github.com/zoogie/ninjhax2.x/releases/download/v11.17/otherapps_with_CfgS_11.17.zip), place the `.bin` file relevant to your console to the root of your SD card, and rename it to `otherapp.bin`. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
+만약 위치가 정확하다면, [PicHaxx Save Tool](https://3dstools.nhnarwhal.com/#/pichaxx)을 이용해 세이브를 다시 생성한 후, `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` 폴더 안에 다시 복사해 주세요. 반드시 파일의 이름이 `00000001.sav`이고 콘솔의 `movable.sed`를 이용해야 합니다. Re-download [HBL otherapps](https://github.com/zoogie/ninjhax2.x/releases/download/v11.17/otherapps_with_CfgS_11.17.zip), place the `.bin` file relevant to your console to the root of your SD card, and rename it to `otherapp.bin`. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -501,7 +501,7 @@ You need at least 1.3GB of free space to perform the NAND backup, which is a par
 1. Press (A) to create a NAND backup
     + This may take around fifteen minutes
 1. Press (A) again
-    + The console should automatically power off
+    + 콘솔의 전윈이 자동으로 꺼질 겁니다
 1. SD 카드를 컴퓨터에 삽입해 주세요
 1. Copy the files in `/gm9/backups/` on your SD to a safe location on your computer
 1. Delete the `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` files from the SD card
@@ -510,7 +510,7 @@ You need at least 1.3GB of free space to perform the NAND backup, which is a par
 
 Now that you have your NAND backup in a safe place:
 
-1. Insert your SD card into your console
+1. SD 카드를 콘솔에 다시 삽입해 주세요
 1. Hold START and power on still holding START to open GodMode9
 1. Press the (Home) button
 1. "Scripts..."를 선택해 주세요
