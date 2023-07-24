@@ -25,11 +25,11 @@ For a more technical explanation, see the following links for information on the
 
 Para seguir estas instrucciones, necesitarás lo siguiente:
 
-- Una segunda 3DS con custom firmware (la **3DS de origen**) que sea de la misma región que la 3DS que estás intentando modificar (la **3DS de destino**)
-    - The consoles must be USA, JPN, or EUR region consoles
-    - The source 3DS can be [region changed](region-changing) to match the target 3DS if necessary
-- Una copia física o digital de Mario Kart 7 de la misma región que ambas consolas
-- An SD card for both consoles
++ A second 3DS with custom firmware (the **source 3DS**) that is the same region as the 3DS you are trying to modify (the **target 3DS**)
+    + The consoles must be USA, JPN, or EUR region consoles
+    + The source 3DS can be [region changed](region-changing) to match the target 3DS if necessary
++ A physical or digital copy of Mario Kart 7 that is the same region as both consoles
++ An SD card for both consoles
 
 ### Qué necesitas
 
@@ -53,10 +53,10 @@ In this section, you will set up your source 3DS (the 3DS with custom firmware) 
 1. Copy `boot.firm` from the Luma3DS `.zip` to the root of the **source 3DS**'s SD card, replacing any existing file
     + La raíz de tu tarjeta SD se refiere al primer directorio de la tarjeta, donde puedes ver la carpeta Nintendo 3DS pero no estás dentro de ella
 1. Copia el archivo `plugin.3gx` de kartdlphax al siguiente directorio en la tarjeta SD de la **3DS de origen**, dependiendo de la **región de tu copia de Mario Kart 7**:
-    - USA: `luma/plugins/0004000000030800`
-    - EUR: `luma/plugins/0004000000030700`
-    - JPN: `luma/plugins/0004000000030600`
-    - Crea las carpetas `plugins` y `00040000...` si no existen
+    + USA: `luma/plugins/0004000000030800`
+    + EUR: `luma/plugins/0004000000030700`
+    + JPN: `luma/plugins/0004000000030600`
+    + Create the `plugins` and `00040000...` folders if they do not already exist
 1. Saca la tarjeta SD de la computadora y ponla en la **3DS de origen**
 
 #### Section III - Prep Work (target 3DS)
@@ -78,32 +78,32 @@ In this section, you will copy the files needed to trigger the unSAFE_MODE explo
 In this section, you will use Download Play to transfer the exploit data from the source 3DS to the target 3DS, which can be used to overwrite your Wi-Fi slots with hacked data. Your Wi-Fi connection settings will be temporarily overwritten while the exploit is active.
 
 1. Enciende la **3DS de origen**
-    - Si te le pide que configures Luma3DS, pulsa START para guardar la configuración
+    + If you are prompted to set up Luma3DS, just press START to save the configuration
 1. Once in the HOME Menu, press (Left Shoulder) + (Down D-Pad) + (Select) to bring up the Rosalina menu
 1. Selecciona "Enable plugin loader"
 1. Presiona (B) para salir del menú de Rosalina
 1. Inicia Mario Kart 7
-    - Asegúrate de que la conectividad inalámbrica está habilitada
+    + Ensure that wireless connectivity is enabled
 1. Navigate to `Local Multiplayer`. A menu should pop up
-    - If the screen freezes, hold the power button for fifteen seconds to force power off your console, then try again
-    - If you have launched kartdlphax previously, the last selected settings will be loaded. If they are correct, select `Use settings` and skip the next 3 steps. If they are incorrect, select `Change settings` and proceed.
+    + If the screen freezes, hold the power button for fifteen seconds to force power off your console, then try again
+    + If you have launched kartdlphax previously, the last selected settings will be loaded. If they are correct, select `Use settings` and skip the next 3 steps. If they are incorrect, select `Change settings` and proceed.
 1. Select your **target 3DS** console type (Old 3DS family or New 3DS family)
 1. Select the following exploit type depending on your system version:
-    - 11.16.0: select `xPloitInjector (11.16)`
-    - 11.17.0: select `xPloitInjector (11.17)`
+    + 11.16.0: select `xPloitInjector (11.16)`
+    + 11.17.0: select `xPloitInjector (11.17)`
 1. A confirmation menu will show up. If the settings shown on the top screen are correct, select `Use settings`
-    - If the settings are not correct, press `Change settings` and modify them accordingly
+    + If the settings are not correct, press `Change settings` and modify them accordingly
 1. Select `Create Group`
-    - If the source 3DS freezes at this point and you are using a cartridge, try [installing the cartridge to the system](dumping-titles-and-game-cartridges#installing-a-game-cartridge-directly-to-the-system)
+    + If the source 3DS freezes at this point and you are using a cartridge, try [installing the cartridge to the system](dumping-titles-and-game-cartridges#installing-a-game-cartridge-directly-to-the-system)
 1. Enciende la **3DS de destino**
-    - Asegúrate de que la conectividad inalámbrica está habilitada
+    + Ensure that wireless connectivity is enabled
 1. En la **3DS de destino**, abre la aplicación de Modo Descarga (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"}), luego selecciona "Nintendo 3DS"
 1. Entra al grupo creado por la **3DS de origen**
 1. Selecciona "Start" en la **3DS de origen** una vez detectada la **3DS de destino**
 1. Once multiplayer has loaded, navigate to `Grand Prix` -> `50cc` -> (any driver) -> `Mushroom Cup` -> `OK`
 1. Espera un rato (se debería mostrar un porcentaje en la **3DS de origen**)
 1. If the exploit was successful, the **target 3DS** will have booted into the 3DS ROP xPloit Injector
-    - If the exploit was not successful, power off the **source 3DS** and **target 3DS** and start again from the beginning of `Section III - kartdlphax`
+    + If the exploit was not successful, power off the **source 3DS** and **target 3DS** and start again from the beginning of `Section III - kartdlphax`
 1. Press (X) to inject unSAFE_MODE
 1. If the injection was successful, the screen will turn green and the **target 3DS** will automatically power off
     + If the screen turns red, power off the target 3DS and start again from the beginning of `Section III - kartdlphax`. If this doesn't work, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp))
