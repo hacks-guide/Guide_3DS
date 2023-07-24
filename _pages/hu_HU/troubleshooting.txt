@@ -92,12 +92,12 @@ Ez akkor fordul elő, ha az SD kártyádat több 3DS konzolban használod, és a
 1. Tedd vissza az SD kártyád a konzoldba
 1. Kapcsold be a konzolod
 1. Várd meg, amíg a konzolod legenerálja az SD kártyára az adatokat
-	+ Az alkalmazásaidnak el kell tűnniük. Ez normális, hamarosan megoldjuk
+    + Az alkalmazásaidnak el kell tűnniük. Ez normális, hamarosan megoldjuk
 1. Kapcsold ki a konzolod
 1. Helyezd az SD kártyád a számítógépbe
 1. Lépj be az SD kártyád `Nintendo 3DS` könyvtárába
 1. Másold le a 32 karakter hosszú nevét annak a mappának, amit látsz
-	+ Ez a te valódi ID0-d, amit használni fogsz a [II. részben a Seedminer-nél](seedminer#section-ii---seedminer)
+    + Ez a te valódi ID0-d, amit használni fogsz a [II. részben a Seedminer-nél](seedminer#section-ii---seedminer)
 1. Töröld a `Nintendo 3DS` mappát
 1. + Nevezd át a `BACKUP_Nintendo 3DS` mappát `Nintendo 3DS` névre
 {% endcapture %}
@@ -402,14 +402,14 @@ A dátum nincs megfelelően beállítva. A helyes beállításokhoz kövesd ezek
 
 Ha a probléma továbbra is fennáll:
 
-- Legyél biztos abban, hogy az `arm11code.bin`, `browserhax_hblauncher_ropbin_payload.bin`, és a `boot.3dsx` fájlok megtalálhatók az SD kártya gyökerében (nem pedig egy mappában)
-- Legyél biztos abban, hogy a régiódnak ÉS a rendszerednek megfelel payload-ot választottad
-- Legyél biztos abban, hogy a régiós beállításaid [így néznek ki](/images/screenshots/skater_lang.png)
-- Próbáld meg törölni a böngésző adatot:
-  1. Indítsd el a böngészőt, majd lépj be a beállításokba (browser settings)
-  1. Görgess a legaljára, majd válaszd a "Reset Save Data" opciót (ami lehet, hogy "Initialize Savedata" vagy "Clear All Save Data" néven fut")
-  1. Próbáld meg újra végrehajtani az exploitot
-- Próbáld meg módosítani a rendszer nyelvét valami másra mint az aktuális nyelv
++ Ensure that `arm11code.bin`, `browserhax_hblauncher_ropbin_payload.bin`, and `boot.3dsx` are on the root of the SD card (not inside of any folder)
++ Ensure that you selected the correct payload for your region AND system version
++ Ensure that your region settings look [like this](/images/screenshots/skater_lang.png)
++ Try resetting your browser data:
+    1. Indítsd el a böngészőt, majd lépj be a beállításokba (browser settings)
+    1. Görgess a legaljára, majd válaszd a "Reset Save Data" opciót (ami lehet, hogy "Initialize Savedata" vagy "Clear All Save Data" néven fut")
+    1. Próbáld meg újra végrehajtani az exploitot
++ Try changing the system language to something other than the current language
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -590,9 +590,9 @@ Probléma van az `boot.firm` fájloddal. Ha [boot9strap 1.4](https://github.com/
 
 Ha az értesítő LED villog:
 
-- **Fehér**: A 3DS-ed nem találta a `boot.firm`-et sem az SD kártyádon, sem a belső memóriában.
-- **Magenta**: A 3DS-ed nem találta a `boot.firm`-et az SD kártyádon. Megtalálta a `boot.firm`-et a belső memóriában, de az a fájl sérült.
-- **Piros**: A 3DS-ed megtalálta a `boot.firm`-et az SD kártyádon és a belső memóriában, de mindkét fájl sérült.
++ **White**: Your 3DS was not able to find `boot.firm` on your SD card or on internal memory.
++ **Magenta**: Your 3DS was not able to find `boot.firm` on your SD card. Megtalálta a `boot.firm`-et a belső memóriában, de az a fájl sérült.
++ **Red**: Your 3DS was able to find `boot.firm` on both your SD card and on internal memory, but both files are corrupted.
 
 Beszerezhetsz `boot.firm` fájlt a [Luma3DS legfrissebb kiadásának letöltésével](https://github.com/LumaTeam/Luma3DS/releases/latest) és annak kicsomagolásával, majd a `boot.firm` fájlnak az SD kártyád gyökerébe helyezésével. Ha a `boot.firm` fájlod folyamatosan sérültnek érzékelt, szükség lehet az SD kártyád hibákra ellenőrzésére ([Windows](h2testw-(windows)), [Linux](f3-(linux)), vagy [macOS](f3xswift-(mac))). Azt is vedd figyelembe, hogy a 3DS-nek problémái lehetnek olyan fájlokkal, amit WinRAR-ral csomagoltak ki.
 
@@ -608,19 +608,19 @@ Az alábbi lépések tetszőleges sorrendben hajthatók végre, azonban a lista 
 1. Kapcsold ki a konzolod, vedd ki majd tedd vissz az SD kártyát, majd kapcsold be újra a konzolod.
 1. Kapcsold ki a konzolod, vedd ki a játék cartridge-t ha van benne, majd kapcsold be a konzolod és várj tíz percet. Ha a konzolod bebootol tíz percen belül, a probléma elhárult és nem fog valószínűleg újra előfordulni
 1. + Nevezd át a `Nintendo 3DS` mappát az SD kártyádon `Nintendo 3DS_BACKUP` névre és próbálj meg bootolni. Ha a konzolod sikeresen bootol, problémák vannak a `Nintendo 3DS` könyvtáraddal. Próbáld meg kitakarítani a HOME menu extdata-t:
-	+ Navigálj a `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` mappába
+    + Navigálj a `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` mappába
     + Töröld a 3DS régiódhoz tartozó mappát:
-		+ **EUR régió**: `00000098`
-		+ **JPN régió**: `00000082`
-		+ **USA régió**: `0000008f`
-		+ **CHN régió**: `000000A1`
-		+ **KOR régió**: `000000A9`
-		+ **TWN régió**: `000000B1`
+        + **EUR régió**: `00000098`
+        + **JPN régió**: `00000082`
+        + **USA régió**: `0000008f`
+        + **CHN régió**: `000000A1`
+        + **KOR régió**: `000000A9`
+        + **TWN régió**: `000000B1`
 1. Próbálj meg recovery mode-ba bootolni, majd onnét frissíteni a rendszeredet:
-	+ Kapcsold ki a konzolod
-	+ Tartsd nyomva a (Bal Váll) + (Jobb Váll) + (D-Pad Fel) + (A) gombokat
-	+ Kapcsold be a konzolod
-	+ Ha sikeres voltál, a konzolod egy "update your system" képernyőre bootol
+    + Kapcsold ki a konzolod
+    + Tartsd nyomva a (Bal Váll) + (Jobb Váll) + (D-Pad Fel) + (A) gombokat
+    + Kapcsold be a konzolod
+    + Ha sikeres voltál, a konzolod egy "update your system" képernyőre bootol
 1. Kövesd a [CTRTransfer](ctrtransfer) útmutatót
 1. További támogatásért kérj segítséget a [Nintendo Homebrew-tól a Discord-on](https://discord.gg/MWxPgEp)
 {% endcapture %}
@@ -789,4 +789,3 @@ Azonban, ha nem tudod a PIN-t így nem tudsz hozzáférni az konzol beállítás
 1. Nyomj "Clear Settings"-et, majd "Delete"-et a minden Parental Controls adat eltávolításához
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
-
