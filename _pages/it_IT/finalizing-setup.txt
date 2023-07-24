@@ -36,25 +36,11 @@ Se la tua precedente installazione CFW era basata su EmuNAND e desideri spostare
 ### Cosa serve
 
 * [finalizing.zip]({{ base_path }}/assets/finalizing.zip) (download diretto)
+* The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
 
 ### Istruzioni
 
-#### Sezione I - Preparazione
-
-In questa sezione, copierai i file necessari per seguire le rimanenti istruzioni in questa pagina.
-
-1. Spegni la tua console
-1. Inserisci la scheda SD nel tuo computer
-1. Copia il contenuto dell'archivio `finalizing.zip` (`finalize`, `gm9`, e `luma`) nella directory principale della tua scheda SD, unendo/sostituendo eventuali cartelle preesistenti se richiesto
-    + Se stai usando un Mac, tieni premuto il tasto Opzione durante il trascinamento delle cartelle nella directory principale della scheda SD, quindi fai clic su "Unisci"
-1. Inserisci la scheda SD nella tua console
-
-Il seguente screenshot indica la struttura minima che la scheda SD deve avere per proseguire in questa pagina. Potresti avere file o cartelle ulteriori nella tua scheda SD, a seconda della tua precedente configurazione o del metodo che hai seguito.
-
-![]({{ "/images/screenshots/finalizing-root-layout.png" | absolute_url }})
-{: .notice--info}
-
-#### Sezione II - Controllo del CFW
+#### Sezione I - Controllo del CFW
 
 Come precauzione aggiuntiva, controlleremo anche la presenza di un custom firmware. Se per qualche motivo non è ancora stato installato un custom firmware, la sezione successiva potrebbe rendere impossibile modificare la console senza hardware esterno.
 
@@ -69,11 +55,28 @@ Se NON viene avviato il menu di configurazione di Luma3DS, il custom firmware no
 {: .notice--danger}
 
 
-#### Sezione III - Aggiornare il Sistema
+#### Section II - Updating the System
 
 In questa sezione, aggiornerai il tuo sistema all'ultima versione, tranquillamente fattibile con il custom firmware.
 
 {% include_relative include/sysupdate.txt cfw="true" %}
+
+#### Section III - Prep Work
+
+In questa sezione, copierai i file necessari per seguire le rimanenti istruzioni in questa pagina.
+
+1. Spegni la tua console
+1. Inserisci la scheda SD nel tuo computer
+1. Copia il contenuto dell'archivio `finalizing.zip` (`finalize`, `gm9`, e `luma`) nella directory principale della tua scheda SD, unendo/sostituendo eventuali cartelle preesistenti se richiesto
+    + Se stai usando un Mac, tieni premuto il tasto Opzione durante il trascinamento delle cartelle nella directory principale della scheda SD, quindi fai clic su "Unisci"
+1. Delete `boot.firm` and `boot.3dsx` from the root of the SD card
+1. Copy `boot.firm` and `boot.3dsx` from the latest Luma3DS `.zip` (the one you just downloaded) to the root of the SD card, replacing any existing files if prompted
+1. Inserisci la scheda SD nella tua console
+
+Il seguente screenshot indica la struttura minima che la scheda SD deve avere per proseguire in questa pagina. Potresti avere file o cartelle ulteriori nella tua scheda SD, a seconda della tua precedente configurazione o del metodo che hai seguito.
+
+![]({{ "/images/screenshots/finalizing-root-layout.png" | absolute_url }})
+{: .notice--info}
 
 #### Sezione IV - Installazione di RTC e DSP
 
