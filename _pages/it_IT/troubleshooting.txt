@@ -92,12 +92,12 @@ Questo si verifica quando si utilizza la scheda SD in più console 3DS ed accade
 1. Reinserisci la scheda SD nella tua console
 1. Accendi la tua console
 1. Attendi che la console generi i dati nella scheda SD
-	+ Le tue applicazioni saranno scomparse. È normale e verrà risolto a breve
+    + Le tue applicazioni saranno scomparse. È normale e verrà risolto a breve
 1. Spegni la tua console
 1. Inserisci la scheda SD nel tuo computer
 1. Entra nella cartella `Nintendo 3DS` della tua scheda SD
 1. Copia la stringa di 32 caratteri del nome della cartella qui presente
-	+ Questo è il tuo ID0 corretto che userai nella [Sezione II di Seedminer](seedminer#section-ii---seedminer)
+    + Questo è il tuo ID0 corretto che userai nella [Sezione II di Seedminer](seedminer#section-ii---seedminer)
 1. Elimina la cartella `Nintendo 3DS`
 1. Rinomina la cartella `BACKUP_Nintendo 3DS` in `Nintendo 3DS`
 {% endcapture %}
@@ -402,14 +402,14 @@ La data non è corretta. Per correggerla, segui questi passaggi:
 
 Se il problema persiste:
 
-- Assicurati che i file `arm11code.bin`, `browserhax_hblauncher_ropbin_payload.bin` e `boot.3dsx` siano nella directory principale della scheda SD (non all'interno di una cartella)
-- Assicurati di aver selezionato il payload corretto per la tua regione E la versione di sistema
-- Assicurati che le impostazioni "Area di residenza" siano [così](/images/screenshots/skater_lang.png)
-- Prova a reimpostare i dati del browser:
-  1. Avvia il browser internet, quindi apri le sue impostazioni
-  1. Scorri verso il basso e seleziona "Reimposta tutti i dati salvati" (può avere nomi simili come "Inizializza i dati di salvataggio" o "Elimina tutti i dati salvati")
-  1. Riprova ad eseguire l'exploit
-- Prova a cambiare la lingua di sistema in una lingua diversa da quella corrente
++ Ensure that `arm11code.bin`, `browserhax_hblauncher_ropbin_payload.bin`, and `boot.3dsx` are on the root of the SD card (not inside of any folder)
++ Ensure that you selected the correct payload for your region AND system version
++ Ensure that your region settings look [like this](/images/screenshots/skater_lang.png)
++ Try resetting your browser data:
+    1. Avvia il browser internet, quindi apri le sue impostazioni
+    1. Scorri verso il basso e seleziona "Reimposta tutti i dati salvati" (può avere nomi simili come "Inizializza i dati di salvataggio" o "Elimina tutti i dati salvati")
+    1. Riprova ad eseguire l'exploit
++ Try changing the system language to something other than the current language
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -590,9 +590,9 @@ C'è un problema con il tuo file `boot.firm`. Se stai usando [boot9strap 1.4](ht
 
 Se il LED di notifica lampeggia:
 
-- **Bianco**: Il tuo 3DS non è stato in grado di trovare il file `boot.firm` nella tua scheda SD o nella memoria interna.
-- **Magenta**: Il tuo 3DS non è stato in grado di trovare il file `boot.firm` nella tua scheda SD. È stato in grado di trovare il file `boot.firm` nella memoria interna, tuttavia il file è corrotto.
-- **Rosso**: Il tuo 3DS è stato in grado di trovare il file `boot.firm` sia nella tua scheda SD sia nella memoria interna, tuttavia entrambi i file sono corrotti.
++ **White**: Your 3DS was not able to find `boot.firm` on your SD card or on internal memory.
++ **Magenta**: Your 3DS was not able to find `boot.firm` on your SD card. È stato in grado di trovare il file `boot.firm` nella memoria interna, tuttavia il file è corrotto.
++ **Red**: Your 3DS was able to find `boot.firm` on both your SD card and on internal memory, but both files are corrupted.
 
 Puoi ottenere un nuovo file `boot.firm` scaricando l'[ultima versione di Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), estraendola e posizionando il file `boot.firm` nella directory principale della tua scheda SD. Se il tuo file `boot.firm` continua a risultare corrotto, potresti dover verificare la presenza di errori nella tua scheda SD ([Windows](h2testw-(windows)), [Linux](f3-(linux)), o [macOS](f3xswift-(mac))). Inoltre, tieni presente che il 3DS tende ad avere problemi con file estratti usando WinRAR.
 
@@ -608,19 +608,19 @@ I passaggi qui sotto possono essere seguiti in qualsiasi ordine, ma sono elencat
 1. Spegni la tua console, rimuovi la scheda SD, reinseriscila, quindi accendi la tua console.
 1. Spegni la tua console, estrai la cartuccia di gioco se inserita, accendi la tua console, quindi attendi fino a dieci minuti. Se la tua console si avvia entro dieci minuti, il problema è stato risolto e probabilmente non avverrà più
 1. Rinomina la cartella `Nintendo 3DS` sulla tua scheda SD in `Nintendo 3DS_BACKUP`, poi tenta l'avvio. Se la tua console si avvia correttamente, c'è qualche problema con la tua cartella `Nintendo 3DS`. Prova a cancellare gli extdata del menu HOME:
-	+ Entra nella cartella `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
+    + Entra nella cartella `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
     + Elimina la cartella corrispondente alla regione del tuo 3DS:
-		+ **Regione EUR**: Elimina `00000098`
-		+ **Regione JPN**: Elimina `00000082`
-		+ **Regione USA**: Elimina `0000008f`
-		+ **Regione CHN**: Elimina `000000A1`
-		+ **Regione KOR**: Elimina `000000A9`
-		+ **Regione TWN**: Elimina `000000A1`
+        + **Regione EUR**: Elimina `00000098`
+        + **Regione JPN**: Elimina `00000082`
+        + **Regione USA**: Elimina `0000008f`
+        + **Regione CHN**: Elimina `000000A1`
+        + **Regione KOR**: Elimina `000000A9`
+        + **Regione TWN**: Elimina `000000A1`
 1. Prova ad avviare la modalità di ripristino e ad aggiornare la console:
-	+ Spegni la tua console
-	+ Tieni premuti i pulsanti (L) + (R) + (Su) + (A)
-	+ Accendi la tua console
-	+ Se hai avuto successo, la console si avvierà mostrando la schermata "Aggiornamento"
+    + Spegni la tua console
+    + Tieni premuti i pulsanti (L) + (R) + (Su) + (A)
+    + Accendi la tua console
+    + Se hai avuto successo, la console si avvierà mostrando la schermata "Aggiornamento"
 1. Segui la guida [CTRTransfer](ctrtransfer)
 1. Se hai bisogno di aiuto, chiedi pure nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp)
 {% endcapture %}
@@ -789,4 +789,3 @@ Tuttavia, se non conosci il PIN e quindi non puoi accedere alle impostazioni del
 1. Premi "Cancella le impostazioni", quindi "Cancella" per rimuovere tutti i dati del Filtro famiglia
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
-
