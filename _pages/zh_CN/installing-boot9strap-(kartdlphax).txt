@@ -25,11 +25,11 @@ For a more technical explanation, see the following links for information on the
 
 如果你想通过此方法安装自制固件，则你需要：
 
-- 一台已安装自制固件的 3DS （**源 3DS**），它与你要破解的主机（**目标 3DS**）系统为同一区域
-    + 必须是美版、日版或欧版机
-    - The source 3DS can be [region changed](region-changing) to match the target 3DS if necessary
--  一份与两台主机同区的马里奥赛车 7 实体版或数字版
-- An SD card for both consoles
++ A second 3DS with custom firmware (the **source 3DS**) that is the same region as the 3DS you are trying to modify (the **target 3DS**)
+    + The consoles must be USA, JPN, or EUR region consoles
+    + The source 3DS can be [region changed](region-changing) to match the target 3DS if necessary
++ A physical or digital copy of Mario Kart 7 that is the same region as both consoles
++ An SD card for both consoles
 
 ### 你需要准备点啥？
 
@@ -53,10 +53,10 @@ If the camera does not open, you cannot follow this method. If this is the case,
 1. Copy `boot.firm` from the Luma3DS `.zip` to the root of the **source 3DS**'s SD card, replacing any existing file
     + 根目录指的是你点进 SD 卡看到的目录，你可以在这个目录下看到 Nintendo 3DS 文件夹，但请不要点进去
 1. 复制 kartdlphax 的 `plugin.3gx` 到**源3DS** 的 SD 卡上对应你所拥有的马里奥赛车 7 区域版本的文件夹：
-    - 美版： `luma/plugins/0004000000030800`
-    - 欧版： `luma/plugins/0004000000030700`
-    - 日版： `luma/plugins/0004000000030600`
-    如果 `plugins` 和 `00040000...` 文件夹不存在，请先创建它们
+    + USA: `luma/plugins/0004000000030800`
+    + EUR: `luma/plugins/0004000000030700`
+    + JPN: `luma/plugins/0004000000030600`
+    + Create the `plugins` and `00040000...` folders if they do not already exist
 1. 弹出 SD 卡并将其插回**源 3DS**
 
 #### Section III - Prep Work (target 3DS)
@@ -78,32 +78,32 @@ In this section, you will copy the files needed to trigger the unSAFE_MODE explo
 In this section, you will use Download Play to transfer the exploit data from the source 3DS to the target 3DS, which can be used to overwrite your Wi-Fi slots with hacked data. Your Wi-Fi connection settings will be temporarily overwritten while the exploit is active.
 
 1. 启动 **源 3DS **
-    - 若主机提示设置 Luma3DS，则你可以直接按下 START 键来保存配置
+    + If you are prompted to set up Luma3DS, just press START to save the configuration
 1. 进入主菜单后，同时按下 “L” + “↓” + “Select” 键调出 Rosalina 菜单
 1. 选择 “Enable plugin loader”
 1. 按 “B” 键退出 Rosalina 菜单
 1. 启动马里奥赛车 7
-    - 请确保你已经打开了无线连接
+    + Ensure that wireless connectivity is enabled
 1. 选择 `本地多人游戏（Local Multiplayer）` 一个菜单应该会弹出来
-    - If the screen freezes, hold the power button for fifteen seconds to force power off your console, then try again
-    - 如果你先前已经启动过了 kartdlphax，则最后选定的设置将会被加载。 如果一切正确，请选中 `Use settings` 然后跳过接下来的 3 个小步骤。 如果不对，请选择 `Change settings` 然后继续操作。
+    + If the screen freezes, hold the power button for fifteen seconds to force power off your console, then try again
+    + If you have launched kartdlphax previously, the last selected settings will be loaded. 如果一切正确，请选中 `Use settings` 然后跳过接下来的 3 个小步骤。 如果不对，请选择 `Change settings` 然后继续操作。
 1. Select your **target 3DS** console type (Old 3DS family or New 3DS family)
 1. Select the following exploit type depending on your system version:
-    - 11.16.0: select `xPloitInjector (11.16)`
-    - 11.17.0: select `xPloitInjector (11.17)`
+    + 11.16.0: select `xPloitInjector (11.16)`
+    + 11.17.0: select `xPloitInjector (11.17)`
 1. 确认菜单将会显示。 如果上屏显示的设置一切正确，请选中 `Use settings`
-    - 如果不正确，请选择 `Change settings` 然后进行相应的修改
+    + If the settings are not correct, press `Change settings` and modify them accordingly
 1. 选择 `Create Group`
-    - 如果你用的是游戏卡带，且源 3DS 此时卡住了，那么请尝试 [将卡带中的游戏安装到系统中](dumping-titles-and-game-cartridges#installing-a-game-cartridge-directly-to-the-system)
+    + If the source 3DS freezes at this point and you are using a cartridge, try [installing the cartridge to the system](dumping-titles-and-game-cartridges#installing-a-game-cartridge-directly-to-the-system)
 1. 启动**目标 3DS **
-    - 请确保你已经打开了无线连接
+    + Ensure that wireless connectivity is enabled
 1. 在**目标 3DS**上，打开下载通信（Download Play）应用 (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})，然后选择 “Nintendo 3DS”
 1. 加入由**源 3DS** 创建的群组
 1. 待**源 3DS** 检测到**目标 3DS** 后，点击“开始”
 1. 多人游戏加载完成后，依次点击 `大奖赛` -> `50cc` ->（任何角色）-> `蘑菇杯` -> `OK`
 1. 稍等一会儿（百分比应该会显示在**源 3DS** 上）
 1. 如果漏洞执行成功，**目标 3DS** 将会启动 3DS ROP xPloit Injector
-    - 如果漏洞没有成功触发，则请将**源 3DS** 和 **目标 3DS** 一起关机，然后从 `第三步 — kartdlphax` 重新开始
+    + If the exploit was not successful, power off the **source 3DS** and **target 3DS** and start again from the beginning of `Section III - kartdlphax`
 1. Press (X) to inject unSAFE_MODE
 1. If the injection was successful, the screen will turn green and the **target 3DS** will automatically power off
     + If the screen turns red, power off the target 3DS and start again from the beginning of `Section III - kartdlphax`. If this doesn't work, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp))
