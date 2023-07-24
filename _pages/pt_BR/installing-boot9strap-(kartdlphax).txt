@@ -7,15 +7,15 @@ title: "Instalando boot9strap (kartdlphax)"
 {% capture technical_info %}
 <summary><em>Detalhes técnicos (opcional)</em></summary>
 
-In order to exploit the SAFE_MODE firmware of our system, we need to inject an exploited WiFi profile.
+Para executar o exploit no firmware SAFE_MODE do nosso sistema, precisamos injetar um perfil de Wi-Fi com exploit.
 
 Para fazer isso, podemos usar a funcionalidade Download Play do jogo Mario Kart 7, usando um 3DS com custom firmware já instalado junto com um plugin personalizado de jogo.
 
-This custom plugin will send a hacked payload to an unhacked console, which then exploits the system in order to inject the exploited WiFi profile into your connections list.
+Este plugin personalizado enviará um payload com hack para um console sem hack, que depois aproveita de um exploit do sistema para injetar o perfil WiFi com exploit na sua lista de conexões.
 
-Once the WiFi profile has been injected, we will use SAFE_MODE, which is a recovery feature present on all 3DS consoles, to activate the exploited WiFi profile.
+Assim que o perfil WiFi for injetado, usaremos o SAFE_MODE, que é um recurso de recuperação presente em todos os consoles 3DS, para ativar o perfil de Wi-Fi com exploit.
 
-For a more technical explanation, see the following links for information on the kartdlphax and unSAFE_MODE exploits: [kartdlphax](https://github.com/PabloMK7/kartdlphax), [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/).
+Para mais uma explicação técnica, consulte os seguintes links para informações sobre os exploits kartdlphax e unSAFE_MODE: [kartdlphax](https://github.com/PabloMK7/kartdlphax), [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/).
 
 {% endcapture %}
 <details>{{ technical_info | markdownify }}</details>
@@ -36,16 +36,16 @@ Para poder seguir estas instruções, você precisará do seguinte:
 * A versão mais recente do [kartdlphax](https://github.com/PabloMK7/kartdlphax/releases/latest) (`plugin.3gx`)
 * A versão mais recente do [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (download direto)
 * A versão mais recente do [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (o arquivo `.zip` do Luma3DS)
-* The latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest) (the RELEASE `.zip` file)
+* A versão mais recente do [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest) (o arquivo RELEASE `.zip`)
 
-#### Section I - Hardware Button Check (target 3DS)
+#### Seção I - Verificação de botões (3DS de destino)
 
 {% include_relative include/safemodecheck.txt %}
 
-If the camera does not open, you cannot follow this method. Se for esse o caso, junte-se ao [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) e peça ajuda, em Inglês.
+Se a câmera não abrir, você não pode seguir este método. Se for esse o caso, junte-se ao [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) e peça ajuda, em Inglês.
 {: .notice--warning}
 
-#### Section II - Prep Work (source 3DS)
+#### Seção II - Preparação (3DS de origem)
 
 Nesta seção, você irá configurar seu 3DS de origem (o 3DS com custom firmware) para a entrega dos dados do exploit ao 3DS de destino.
 
@@ -59,23 +59,23 @@ Nesta seção, você irá configurar seu 3DS de origem (o 3DS com custom firmwar
     - Crie as pastas `plugins` e `00040000...` se elas já não existirem
 1. Ejete o cartão SD e coloque-o no **3DS de origem**
 
-#### Section III - Prep Work (target 3DS)
+#### Seção III - Preparação (3DS de destino)
 
-In this section, you will copy the files needed to trigger the unSAFE_MODE exploit onto your target 3DS (the 3DS that you are trying to modify)'s SD card.
+Nesta seção, você copiará os arquivos necessários para acionar o exploit unSAFE_MODE no 3DS de destino (o 3DS que está tentando modificar) no cartão SD.
 
 1. Insira o cartão SD do seu **3DS de destino** no seu computador
 1. Copie o `boot.firm` e `boot.3dsx` do `.zip` do Luma3DS para a raiz do cartão SD do **3DS de destino**
 1. Crie uma pasta chamada `boot9strap` na raiz do seu cartão SD
-1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the RELEASE `.zip` to the `/boot9strap/` folder on your SD card
+1. Copie `boot9strap.firm` e `boot9strap.firm.sha` do `.zip` RELEASE para a pasta `/boot9strap/` no seu cartão SD
 1. Copie `SafeB9SInstaller.bin` do `.zip` do SafeB9SInstaller para a raiz do seu cartão SD
-1. Copy `usm.bin` from the RELEASE `.zip` to the root of your SD card
-1. Create a folder called `3ds` on the root of your SD card
-1. Copy `slotTool.3dsx` from the `slotTool` folder inside the RELEASE `.zip` to the `/3ds/` folder on your SD card
+1. Copie `usm.bin` do `.zip` do RELEASE para a raiz do seu cartão SD
+1. Crie uma pasta chamada `3ds` na raiz do seu cartão SD
+1. Copie o `slotTool.3dsx` da pasta `slotTool` dentro do `.zip` RELEASE para a pasta `/3ds/` do seu cartão SD
 1. Ejete o cartão SD e coloque-o no **3DS de destino**
 
-#### Section IV - kartdlphax
+#### Seção IV - kartdlphax
 
-In this section, you will use Download Play to transfer the exploit data from the source 3DS to the target 3DS, which can be used to overwrite your Wi-Fi slots with hacked data. Your Wi-Fi connection settings will be temporarily overwritten while the exploit is active.
+Nesta seção, você usará o Download Play para transferir os dados do exploit do 3DS de origem para o 3DS de destino, que pode ser usado para substituir seus slots de Wi-Fi por dados com hack. Suas configurações de conexão Wi-Fi serão temporariamente sobrescritas enquanto o exploit estiver ativo.
 
 1. Ligue o **3DS de origem**
     - Se você for solicitado a configurar o Luma3DS, basta apertar START para salvar a configuração
@@ -104,16 +104,16 @@ In this section, you will use Download Play to transfer the exploit data from th
 1. Aguarde um pouco (um percentual deve ser exibido no **3DS de origem**)
 1. Se o exploit foi bem sucedido, o **3DS de destino** terá sido inicializado no 3DS ROP xPloit Injector
     - Se o exploit falhar, desligue o **3DS de origem** e o **3DS de destino** e comece novamente desde o início da `Seção III - kartdlphax`
-1. Press (X) to inject unSAFE_MODE
-1. If the injection was successful, the screen will turn green and the **target 3DS** will automatically power off
-    + If the screen turns red, power off the target 3DS and start again from the beginning of `Section III - kartdlphax`. If this doesn't work, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp))
+1. Aperte (X) para injetar unSAFE_MODE
+1. Se a injeção foi bem-sucedida, a tela irá ficar verde e o **3DS de destino** irá desligar automaticamente
+    + Se a tela ficar vermelha, desligue o 3DS de destino e inicie novamente a partir do início da `Seção III - kartdlphax`. Se isso não funcionar, peça ajuda no [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp))
 
-You will **not** need to use your **source 3DS** to complete any further steps on this guide. Any further steps should only be completed on the **target 3DS**.
+Você **não** precisará usar seu **3DS de origem** para completar quaisquer etapas deste guia a partir de agora. Quaisquer outras etapas só devem ser feitas no **3DS de destino**.
 {: .notice--info}
 
-#### Section V - unSAFE_MODE
+#### Seção V - unSAFE_MODE
 
-In this section, you will enter Safe Mode (a feature available on all 3DS family consoles) and navigate to a menu where unSAFE_MODE will be triggered, which will launch you into the boot9strap (custom firmware) installer.
+Nesta seção, você entrará no Modo de Segurança (uma funcionalidade disponível em todos os consoles da linha 3DS) e navegar até um menu onde unSAFE_MODE será acionado, que irá iniciar você no instalador do boot9strap (custom firmware).
 
 1. Com o seu console ainda desligado, segure os seguintes botões: (Gatilho Esquerdo) + (Gatilho Direito) + (D-Pad para Cima) + (A), e enquanto segura esses botões juntos, ligue seu console
     + Continue segurando os botões até o console iniciar no Modo de Segurança (um menu de "atualização do sistema")
@@ -121,12 +121,12 @@ In this section, you will enter Safe Mode (a feature available on all 3DS family
     + Não há atualização. Isto faz parte do exploit
 1. Pressione "Eu aceito" para aceitar os termos e condições
 1. A atualização eventualmente falhará, com o código de erro `003-1099`. Isto é intencional
-1. When asked "Would you like to configure Internet settings?", select "Yes"
-1. On the following menu, navigate to `Connection 1` -> `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings` -> `Detailed Setup` ([image](/images/screenshots/usm/safemode_highlighted.png))
-1. If the exploit was successful, your console will have booted into SafeB9SInstaller
-    + If your console instead freezes on a white screen, hold the POWER button until it turns off, then retry this section
-    + If your console instead freezes on a red screen, you are missing `usm.bin` from the root of your SD card
-    + If you get a different error, [follow this troubleshooting guide](troubleshooting#installing-boot9strap-usm)
+1. Quando solicitado "Você gostaria de configurar as configurações de Internet?", selecione "Sim"
+1. No menu a seguir, navegue até `Conexão 1` -> `Alterar configurações` -> `Próxima página (seta direita)` -> `Configurações do proxy` -> `Configuração Avançada` ([imagem](/images/screenshots/usm/safemode_highlighted.png))
+1. Se o exploit foi bem sucedido, seu console irá iniciar no SafeB9SInstaller
+    + Se seu console, em vez disso, congelar em uma tela branca, segure o botão POWER até que ele desligue, então tente esta seção novamente
+    + Se o seu console congela numa tela vermelha, você está sem `usm.bin` na raiz do seu cartão SD
+    + Se você receber um erro diferente, [siga este guia de troubleshooting](troubleshooting#installing-boot9strap-usm)
 
 #### Seção VI - Instalando o boot9strap
 
@@ -135,14 +135,14 @@ In this section, you will enter Safe Mode (a feature available on all 3DS family
 
 {% include_relative include/luma3ds-installed-note.txt %}
 
-#### Section VII - Restoring WiFi Configuration Profiles
+#### Seção VII - Restaurando os perfis de configuração de Wi-Fi
 
-In this section, you will enter the Homebrew Launcher (using custom firmware) so that you can restore the Wi-Fi connection slots that were overwritten in Section I.
+Nesta seção, você entrará no Homebrew Launcher (desta vez usando custom firmware) para que você possa restaurar os slots de conexão Wi-Fi que foram substituídos na Seção I.
 
 {% include_relative include/launch-hbl-dlp.txt %}
-1. Launch slotTool from the list of homebrew
-1. Select "RESTORE original wifi slots 1,2,3"
-1. Your console will then reboot
+1. Abra o slotTool da lista de homebrew
+1. Selecione "RESTORE original wifi slots 1,2,3"
+1. Seu console irá reiniciar
 
 ___
 
