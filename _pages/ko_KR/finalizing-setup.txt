@@ -36,25 +36,11 @@ If you don't want one of these applications, you can remove them after you have 
 ### 준비물
 
 * [finalizing.zip]({{ base_path }}/assets/finalizing.zip) (직접 다운로드)
+* The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
 
 ### 진행 방법
 
-#### 섹션 I - 준비 작업
-
-이 섹션에서는 이 페이지의 남은 과정을 따라가기 위한 나머지 필수 파일을 복사하게 됩니다.
-
-1. 콘솔의 전원을 꺼 주세요
-1. SD 카드를 컴퓨터에 삽입해 주세요
-1. Copy the contents of `finalizing.zip` (`finalize`, `gm9`, and `luma`) to the root of your SD card, merging/replacing any existing folders if prompted
-    + If you are using a Mac, hold the Option key while dragging the folders to the root of your SD card, then click "Merge"
-1. Insert your SD card into your console
-
-The screenshot below indicates the minimum SD card layout that is required to follow this page. 이전에 따른 방법에 따라, SD 카드에 추가 파일과 폴더가 있을 수 있습니다.
-
-![]({{ "/images/screenshots/finalizing-root-layout.png" | absolute_url }})
-{: .notice--info}
-
-#### 섹션 II - CFW 확인
+#### 섹션 I - CFW 확인
 
 여기서 기기의 안전을 위해 커스텀 펌웨어가 설치되어 있는지 확인합니다. If custom firmware is not installed by this point for any reason, the next section may render your console unable to be hacked without external hardware.
 
@@ -69,11 +55,28 @@ Luma3DS 구성 메뉴로 부팅되지 않았다면 콘솔에 커스텀 펌웨어
 {: .notice--danger}
 
 
-#### 섹션 III - 본체 업데이트
+#### Section II - Updating the System
 
 이 섹션에서는 커스텀 펌웨어가 설치된 콘솔에서도 안전하게 이용 가능한 최신 버전의 펌웨어로 본체를 업데이트합니다.
 
 {% include_relative include/sysupdate.txt cfw="true" %}
+
+#### Section III - Prep Work
+
+이 섹션에서는 이 페이지의 남은 과정을 따라가기 위한 나머지 필수 파일을 복사하게 됩니다.
+
+1. 콘솔의 전원을 꺼 주세요
+1. SD 카드를 컴퓨터에 삽입해 주세요
+1. Copy the contents of `finalizing.zip` (`finalize`, `gm9`, and `luma`) to the root of your SD card, merging/replacing any existing folders if prompted
+    + If you are using a Mac, hold the Option key while dragging the folders to the root of your SD card, then click "Merge"
+1. Delete `boot.firm` and `boot.3dsx` from the root of the SD card
+1. Copy `boot.firm` and `boot.3dsx` from the latest Luma3DS `.zip` (the one you just downloaded) to the root of the SD card, replacing any existing files if prompted
+1. Insert your SD card into your console
+
+The screenshot below indicates the minimum SD card layout that is required to follow this page. 이전에 따른 방법에 따라, SD 카드에 추가 파일과 폴더가 있을 수 있습니다.
+
+![]({{ "/images/screenshots/finalizing-root-layout.png" | absolute_url }})
+{: .notice--info}
 
 #### 섹션 IV - RTC 및 DSP 설정
 
