@@ -36,25 +36,11 @@ Ha az előző egyedi firmware rendszered EmuNAND alapú volt és szeretnéd az E
 ### Amire szükséged lesz
 
 * [finalizing.zip]({{ base_path }}/assets/finalizing.zip) (közvetlen letöltés)
+* The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)
 
 ### Utasítások
 
-#### I. rész - Előkészületek
-
-Ebben a fejezetben fel fogod másolni az ahhoz szükséges fájlokat, hogy kövesd a lépéseket ezen az oldalon.
-
-1. Kapcsold ki a konzolod
-1. Helyezd az SD kártyád a számítógépbe
-1. Copy the contents of `finalizing.zip` (`finalize`, `gm9`, and `luma`) to the root of your SD card, merging/replacing any existing folders if prompted
-    + If you are using a Mac, hold the Option key while dragging the folders to the root of your SD card, then click "Merge"
-1. Helyezd az SD kártyád a konzolodba
-
-Az alábbi képernyőképek mutatják az SD kártya minimális elrendezését ahhoz, hogy ezt az útmutatót követni tudd. Lehetnek extra fájljaid és mappáid az SD kártyádon, függően a korábbi telepítésedtől vagy metódustól, amit követtél.
-
-![]({{ "/images/screenshots/finalizing-root-layout.png" | absolute_url }})
-{: .notice--info}
-
-#### II. rész - CFW ellenőrzés
+#### I. rész - CHF ellenőrzés
 
 További biztonsági lépésként további ellenőrzést végzünk egyedi firmware-re. Ha egyedi firmware nem kerül telepítésre ezen a ponton bármilyen okból, a következő szakasz a konzolodat külső hardver nélkül hackelhetetlenné teszi.
 
@@ -69,11 +55,28 @@ Ha az eszközöd NEM a Luma3DS konfigurációs menübe bootolt, az egyedi firmwa
 {: .notice--danger}
 
 
-#### III. rész - A rendszer frissítése
+#### Section II - Updating the System
 
 Ebben a fejezetben frissíteni fogod a rendszered a legutolsó verzióra, ami biztonságos az egyedi firmware-rel.
 
 {% include_relative include/sysupdate.txt cfw="true" %}
+
+#### Section III - Prep Work
+
+Ebben a fejezetben fel fogod másolni az ahhoz szükséges fájlokat, hogy kövesd a lépéseket ezen az oldalon.
+
+1. Kapcsold ki a konzolod
+1. Helyezd az SD kártyád a számítógépbe
+1. Copy the contents of `finalizing.zip` (`finalize`, `gm9`, and `luma`) to the root of your SD card, merging/replacing any existing folders if prompted
+    + If you are using a Mac, hold the Option key while dragging the folders to the root of your SD card, then click "Merge"
+1. Delete `boot.firm` and `boot.3dsx` from the root of the SD card
+1. Copy `boot.firm` and `boot.3dsx` from the latest Luma3DS `.zip` (the one you just downloaded) to the root of the SD card, replacing any existing files if prompted
+1. Helyezd az SD kártyád a konzolodba
+
+Az alábbi képernyőképek mutatják az SD kártya minimális elrendezését ahhoz, hogy ezt az útmutatót követni tudd. Lehetnek extra fájljaid és mappáid az SD kártyádon, függően a korábbi telepítésedtől vagy metódustól, amit követtél.
+
+![]({{ "/images/screenshots/finalizing-root-layout.png" | absolute_url }})
+{: .notice--info}
 
 #### IV. rész - RTC és DSP telepítése
 
