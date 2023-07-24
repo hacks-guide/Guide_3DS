@@ -1,5 +1,5 @@
 ---
-title: "Installing boot9strap (Kartminer7)"
+title: "Instalando boot9strap (Kartminer7)"
 ---
 
 {% include toc title="Tabela de Conteúdo" %}
@@ -9,11 +9,11 @@ title: "Installing boot9strap (Kartminer7)"
 
 Para instalar o boot9strap no seu console, nós derivamos a chave de criptografia exclusiva do seu console. Para fazer isso, usamos uma ferramenta chamada Seedminer para calcular a chave de criptografia de dados (movable.sed) para o seu console.
 
-Once we have `movable.sed`, we can edit the SD card data of the game Mario Kart 7 to install menuhax67, which will allow us to get Homebrew Launcher access.
+Uma vez que temos `movable.sed`, podemos editar os dados do cartão SD do jogo Mario Kart 7 para instalar menuhax67, que nos permitirá ter acesso ao Homebrew Launcher.
 
-Once we have Homebrew Launcher access, we can run nimdsphax to install boot9strap.
+Assim que tivermos acesso ao Homebrew Launcher, podemos executar o nimdsphax para instalar o boot9strap.
 
-See [here](https://github.com/zoogie/kartminer7) for information about Kartminer7, [here](https://github.com/zoogie/menuhax67) for information about menuhax67, and [here](https://github.com/luigoalma/nimdsphax) for information about nimdsphax.
+Veja [aqui](https://github.com/zoogie/kartminer7) para informações sobre Kartminer7, [aqui](https://github.com/zoogie/menuhax67) para informações sobre menuhax67 e [aqui](https://github.com/luigoalma/nimdsphax) para informações sobre o nimdsphax.
 
 {% endcapture %}
 <details>{{ technical_info | markdownify }}</details>
@@ -21,44 +21,44 @@ See [here](https://github.com/zoogie/kartminer7) for information about Kartminer
 
 ### O que é necessário
 
-* A physical or digital copy of Mario Kart 7 updated to the latest version (v1.2)
-    * You can update Mario Kart 7 from eShop or by following the update prompt when you launch the game
-* A Windows computer
+* Uma cópia física ou digital de Mario Kart 7 atualizada para a versão mais recente (v1.2)
+    * Você pode atualizar Mario Kart 7 a partir do eShop ou seguindo a mensagem de atualização quando você abrir o jogo
+* Um computador Windows
 * Seu arquivo `movable.sed` de completar Seedminer
-* The latest release of [Kartminer7](https://github.com/zoogie/Kartminer7/releases/latest)
+* A versão mais recente do [Kartminer7](https://github.com/zoogie/Kartminer7/releases/latest)
 * A versão mais recente do [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (download direto)
 * A versão mais recente do [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (download direto)
 + A versão mais recente do [nimdsphax](https://github.com/luigoalma/nimdsphax/releases/download/v1.0/nimdsphax_v1.0.zip) (download direto)
-* The latest release of [menuhax67](https://github.com/zoogie/menuhax67/releases/latest)
+* A versão mais recente do [menuhax67](https://github.com/zoogie/menuhax67/releases/latest)
 * A versão mais recente do [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (o arquivo `.zip` do Luma3DS)
 
-#### Section I - Preparing Mario Kart 7 data
+#### Seção I - Preparando os dados do Mario Kart 7
 
-In this section, you will have the 3DS generate some data in Mario Kart 7 that will be used to install the exploit in a later section.
+Nesta seção, você fará com que o 3DS gere alguns dados no Mario Kart 7 que serão usados para instalar o exploit em uma seção posterior.
 
 1. Insira seu cartão SD no seu console
-1. Open Mario Kart 7
-1. Tap the "Mario Kart Channel" button on the bottom
-1. If you are prompted to, hit "Next" and "OK" to all of the prompts that you see
-1. Tap the "StreetPass List" button on the bottom of the screen, in the middle
-1. Press the (Home) button to suspend Mario Kart 7
-1. Disable wireless connections by flicking the wireless switch on the side of the console or by navigating to HOME Menu Settings (top left) -> Wireless Communication -> OFF
+1. Inicie o Mario Kart 7
+1. Toque no botão "Mario Kart Channel" na parte inferior
+1. Se você for solicitado, aperte "Next" e "OK" para todos os alertas que você ver
+1. Toque no botão "StreetPass List" na parte inferior da tela, no meio
+1. Aperte o botão (Home) para suspender o Mario Kart 7
+1. Desative as conexões sem fio desligando o interruptor wireless do lado do console ou navegando para as Configurações do Menu HOME (canto superior esquerdo) -> Comunicação sem fio -> OFF
 1. Desligue seu console
 
-#### Section II - SD Card Prep Work
+#### Seção II - Preparação do Cartão SD
 
 1. Insira o cartão SD no seu computador
 1. Copie `boot.firm` e `boot.3dsx` do `.zip` do Luma3DS para a raiz do seu cartão SD
-    * The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
+    * A raiz do cartão SD refere-se ao diretório inicial no seu cartão SD onde você pode ver a pasta Nintendo 3DS, mas não está dentro dela
 1. Crie uma pasta chamada `boot9strap` na raiz do seu cartão SD
 1. Copie o `boot9strap.firm` e o `boot9strap.firm.sha` do `.zip` do boot9strap para a pasta `/boot9strap/` no seu cartão SD
-1. Copy `SafeB9SInstaller.bin` to the root of your SD card
+1. Copie `SafeB9SInstaller.bin` para a raiz do seu cartão SD
 1. Crie uma pasta chamada `3ds` na raiz do seu cartão SD se ela ainda não existir
-    * This folder stores homebrew applications and data; it is different from the `Nintendo 3DS` folder that the console automatically generates
+    * Esta pasta armazena dados e aplicativos homebrew; é diferente da pasta `Nintendo 3DS` que o console gera automaticamente
 1. Copie a pasta `nimdsphax` do nimdsphax `.zip` para a pasta `/3ds/` no seu cartão SD
-1. Copy `menuhax67_installer.3dsx` from the menuhax `.zip` to the `/3ds/` folder on your SD card
-1. Copy Launcher.dat from the folder for your model and region inside the menuhax `.zip` to the root of your SD card
-1. Keep your SD card inserted in your computer, as it is still required in the next section
+1. Copie `menuhax67_installer.3dsx` do `.zip` menuhax para a pasta `/3ds/` no seu cartão SD
+1. Copie o Launcher.dat da pasta para seu modelo e região dentro do `.zip` do menuhax para a raiz do seu cartão SD
+1. Mantenha seu cartão SD inserido no seu computador, como ainda é necessário na próxima seção
 
 ![]({{ "/images/screenshots/kart-root-layout.png" | absolute_url }})
 {: .notice--info}
@@ -66,33 +66,33 @@ In this section, you will have the 3DS generate some data in Mario Kart 7 that w
 ![]({{ "/images/screenshots/kart-3ds-layout.png" | absolute_url }})
 {: .notice--info}
 
-#### Section III - Installing Kartminer7
+#### Seção III - Instalando Kartminer7
 
-1. Extract the Release_BETA_mk7 `.zip` to **somewhere on your computer** (i.e. your desktop)
-1. Copy your `movable.sed` file to the `resources` folder of the Release_BETA_mk7 folder
-    * Ensure that the file is named exactly `movable.sed`
-1. Open the `backup` folder inside of the Release_BETA_mk7 folder
-1. Double-click on the BACKUP `.bat` file corresponding to your console's region (e.g. backup_USA.bat if you have a USA copy of Mario Kart 7)
-    * If you are unsure of your console region, you can check System Settings. U = USA; E = EUR, J = JPN
-    * If you get a message from Windows Defender, click "More info", "Run anyway", then press any key to continue
-    * If the backup was successful, you should see a new folder appear
-    * If you wish to restore this data at a later date (after finishing this guide), insert your SD card and double-click on the RESTORE `.bat` file corresponding to your console's region
-1. Go back to the Release_BETA_mk7 folder, then double-click on the `.bat` file corresponding to your console's region (e.g. USA.bat if you have a USA copy of Mario Kart 7)
+1. Extraia o `.zip` do Release_BETA_mk7 para **algum lugar no seu computador** (por exemplo, sua área de trabalho)
+1. Copie seu arquivo `movable.sed` para a pasta `resources` da pasta Release_BETA_mk7
+    * Certifique-se de que o arquivo tem o nome exato de `movable.sed`
+1. Abra a pasta `backup` dentro da pasta Release_BETA_mk7
+1. Clique duas vezes no arquivo BACKUP `.bat` correspondente à região do seu console (por exemplo, backup_USA.bat se você tiver uma cópia EUA de Mario Kart 7)
+    * Se você não tem certeza da região do seu console, você pode verificar nas Configurações do Sistema. U = EUA; E = EUR, J = JPN
+    * Se você receber uma mensagem do Windows Defender, clique em "Mais informações", "Executar mesmo assim" e pressione qualquer tecla para continuar
+    * Se o backup foi bem-sucedido, você verá uma nova pasta aparecer.
+    * Se você deseja restaurar estes dados em outro momento (depois de terminar este guia), insira seu cartão SD e clique duas vezes no arquivo RESTORE `.bat` correspondente à região do seu console
+1. Volte para a pasta Release_BETA_mk7, depois clique duas vezes no arquivo `.bat` correspondente à região do seu console (por exemplo, USA.bat, se você tiver uma cópia EUA do Mario Kart 7)
 1. Reinsira o cartão SD no seu console
 
-#### Section IV - Kartminer7
+#### Seção IV - Kartminer7
 
 1. Ligue o seu console
-1. Open Mario Kart 7
-1. Tap the "Mario Kart Channel" button on the bottom
-1. Tap the "StreetPass List" button on the bottom of the screen, in the middle
-1. Press (A) over and over again
-    * The colours on the bottom screen should change from red, to blue, to white
-    * If you see the red/blue/white screens but the 3DS crashes, just reboot and try again
-    * If you don't see ANY colours, change your system language (if possible), then try the exploit again
-1. If the exploit was successful, the 3DS will have booted into the 3DS ROP xPloit Injector
+1. Inicie o Mario Kart 7
+1. Toque no botão "Mario Kart Channel" na parte inferior
+1. Toque no botão "StreetPass List" na parte inferior da tela, no meio
+1. Aperte (A) várias vezes
+    * As cores na tela inferior devem mudar de vermelho para azul para branco
+    * Se você ver as telas vermelho/azul/branco mas o 3DS ter um crash, reinicie e tente novamente
+    * Se você não vê QUAISQUER cores, mude o idioma do seu sistema (se possível), então tente o exploit novamente
+1. Se o exploit foi bem sucedido, o **3DS de destino** terá sido inicializado no 3DS ROP xPloit Injector
 
-#### Section V - Installing menuhax67
+#### Seção V - Instalando menuhax67
 
 {% include_relative include/menuhax67-install.txt %}
 
@@ -103,17 +103,17 @@ In this section, you will have the 3DS generate some data in Mario Kart 7 that w
 
 {% include_relative include/luma3ds-installed-note.txt %}
 
-#### Section VII - Removing menuhax67
+#### Seção VII - Removendo menuhax67
 
-In this section, you will use the Homebrew Launcher to remove menuhax67, which will let you access the HOME Menu Settings option normally.
+Nesta seção, você usará o Homebrew Launcher para remover o menuhax67, que permitirá que você acesse a opção Configurações do Menu HOME normalmente.
 
 {% include_relative include/launch-hbl-dlp.txt %}
-1. Launch menuhax67_installer from the list of homebrew
-1. Select REMOVE menuhax67
-1. When you see "done.", press (A), then press (A) on "EXIT to menu"
+1. Abra o menuhax67_installer da lista de homebrew
+1. Selecione REMOVE menuhax67
+1. Quando você ver "done.", aperte (A), depois aperte (A) em "EXIT to menu"
 
 ___
 
-Continue to [Finalizing Setup](finalizing-setup)
+Continue em [Finalizando a instalação](finalizing-setup)
 {: .notice-primary}
 
