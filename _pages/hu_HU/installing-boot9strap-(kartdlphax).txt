@@ -7,15 +7,15 @@ title: "Boot9strap telepítése (kartdlphax)"
 {% capture technical_info %}
 <summary><em>Technikai részletek (opcionális)</em></summary>
 
-In order to exploit the SAFE_MODE firmware of our system, we need to inject an exploited WiFi profile.
+Ahhoz, hogy a SAFE_MODE-ot exploitálhassuk, be kell injektálnunk egy exploitált WiFi profilt.
 
 Ennek eléréséhez a Download Play funkcionalitását használjuk a Mario Kart 7-nek, egy egyedi firmware-rel, valamint egy egyedi játék pluginnel már telepített 3DS használatával.
 
-This custom plugin will send a hacked payload to an unhacked console, which then exploits the system in order to inject the exploited WiFi profile into your connections list.
+Ez az egyedi plugin egy hackelt payload-ot küld a nem hackelt konzolra, ami exploitolja a rendszert, azért, hogy injektálja az exploitolt WiFi profilt a kapcsolatok listájába.
 
-Once the WiFi profile has been injected, we will use SAFE_MODE, which is a recovery feature present on all 3DS consoles, to activate the exploited WiFi profile.
+Amint a WiFi profil injektálásra került, a SAFE_MODE-ot fogjuk használni, ami egy helyreállítás szolgáltatás, ami elérhető minden 3DS konzolon, hogy aktiválja az exploitolt WiFi profilt.
 
-For a more technical explanation, see the following links for information on the kartdlphax and unSAFE_MODE exploits: [kartdlphax](https://github.com/PabloMK7/kartdlphax), [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/).
+További technikai információkért a kartdlphax és az unSAFE_MODE exploit-ról látogass el ide: [kartdlphax](https://github.com/PabloMK7/kartdlphax), [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/).
 
 {% endcapture %}
 <details>{{ technical_info | markdownify }}</details>
@@ -36,16 +36,16 @@ Ahhoz, hogy követhesd ezeket a lépéseket, a következőkre van szükséged:
 * A [kartdlphax] legújabb kiadása (https://github.com/PabloMK7/kartdlphax/releases/latest) (`plugin.3gx`)
 * A [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) legfrisseb verziója (közvetlen letöltés)
 * A [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) legújabb kiadása (a Luma3DS `.zip` fájl)
-* The latest release of [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest) (the RELEASE `.zip` file)
+* Az [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE/releases/latest) legújabb kiadása (a RELEASE `.zip` fájl)
 
-#### Section I - Hardware Button Check (target 3DS)
+#### I. rész - Fizikai gombok ellenőrzése (cél 3DS)
 
 {% include_relative include/safemodecheck.txt %}
 
-If the camera does not open, you cannot follow this method. Ebben az esetben csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és kérj, támogatást angolul.
+Ha a kamera nem nyílik meg, nem tudod követni ezt a metódust. Ebben az esetben csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és kérj, támogatást angolul.
 {: .notice--warning}
 
-#### Section II - Prep Work (source 3DS)
+#### II. rész - Előkészületi munka (forrás 3DS)
 
 Ebben a fejezetben befogod állítani a forrás 3DS-ed (a 3DS egyedi firmware-rel), hogy küldje az exploit adatot a cél 3DS-nek.
 
