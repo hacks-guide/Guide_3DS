@@ -7,15 +7,15 @@ title: "Installazione di boot9strap (kartdlphax)"
 {% capture technical_info %}
 <summary><em>Dettagli Tecnici (opzionale)</em></summary>
 
-In order to install custom firmware on our console, we need to get Homebrew Launcher access.
+Per installare un custom firmware sulla nostra console, abbiamo bisogno di ottenere l'accesso a Homebrew Launcher.
 
 Per farlo possiamo utilizzare la funzionalità "Modalità download" del gioco Mario Kart 7, utilizzando un 3DS con custom firmware già installato insieme a un plugin di gioco personalizzato.
 
-This custom plugin will send a hacked payload to an unhacked console, which then exploits the system in order to inject menuhax67, which will allow us to get Homebrew Launcher access.
+Questo plugin personalizzato invierà un payload modificato ad una console non modificata, che sfrutterà una falla di sistema per l'iniezione di menuhax67, per permetterci di accedere all'Homebrew Launcher.
 
-Once we have Homebrew Launcher access, we can run nimdsphax to install boot9strap.
+Una volta ricevuto l'accesso all'Homebrew Launcher, potremo eseguire nimdsphax per installare boot9strap.
 
-See [here](https://github.com/PabloMK7/kartdlphax) for information about kartdlphax, [here](https://github.com/zoogie/menuhax67) for information about menuhax67, and [here](https://github.com/luigoalma/nimdsphax) for information about nimdsphax.
+Vedi [qui](https://github.com/PabloMK7/kartdlphax) per informazioni su kartdlphax, [qui](https://github.com/zoogie/menuhax67) per informazioni su menuhax67, e [qui](https://github.com/luigoalma/nimdsphax) per informazioni su nimdsphax.
 
 {% endcapture %}
 <details>{{ technical_info | markdownify }}</details>
@@ -25,49 +25,49 @@ See [here](https://github.com/PabloMK7/kartdlphax) for information about kartdlp
 
 Per seguire queste istruzioni, avrai bisogno di:
 
-+ A second 3DS with custom firmware (the **source 3DS**) that is the same region as the 3DS you are trying to modify (the **target 3DS**)
-    + The consoles must be USA, JPN, or EUR region consoles
-    + The source 3DS can be [region changed](region-changing) to match the target 3DS if necessary
-+ A physical or digital copy of Mario Kart 7 that is the same region as both consoles
-+ An SD card for both consoles
++ Un secondo 3DS con custom firmware (il **3DS di partenza**) della stessa regione del 3DS che stai cercando di modificare (il **3DS di destinazione**)
+    + Le console devono essere di regionalità USA, JPN o EUR
+    + Se necessario, si può [cambiare la regionalità](region-changing) del 3DS di partenza perché corrisponda al 3DS di destinazione
++ Una copia fisica o digitale di Mario Kart della stessa regione di entrambe le console
++ Una scheda SD per entrambe le console
 
 ### Cosa serve
 
 * L'ultima versione di [kartdlphax](https://github.com/PabloMK7/kartdlphax/releases/latest) (`plugin.3gx`)
 * L'ultima versione di [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (download diretto)
 * L'ultima versione di [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (download diretto)
-* The latest release of [nimdsphax](https://github.com/luigoalma/nimdsphax/releases/download/v1.0/nimdsphax_v1.0.zip) (direct download)
-* The latest release of [menuhax67](https://github.com/zoogie/menuhax67/releases/latest)
+* L'ultima versione di [nimdsphax](https://github.com/luigoalma/nimdsphax/releases/download/v1.0/nimdsphax_v1.0.zip) (download diretto)
+* L'ultima versione di [menuhax67](https://github.com/zoogie/menuhax67/releases/latest)
 * L'ultima versione di [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (il file `.zip` di Luma3DS)
 
-#### Section I - Prep Work (source 3DS)
+#### Sezione I - Preparazione (3DS di partenza)
 
 In questa sezione configurerai il tuo 3DS di partenza (il 3DS con custom firmware) per inviare i dati dell'exploit verso il 3DS di destinazione.
 
 1. Inserisci la scheda SD del tuo **3DS di partenza** nel computer
-1. Copy `boot.firm` from the Luma3DS `.zip` to the root of the **source 3DS**'s SD card, replacing any existing file
+1. Copia il file `boot.firm` dall'archivio `.zip` di Luma3DS nella directory principale della scheda SD del **3DS di partenza**, sovrascrivendo i file già esistenti
     + La directory principale della scheda SD è la cartella della tua scheda SD in cui è possibile visualizzare la cartella Nintendo 3DS, ma non il suo interno
 1. Copia il file `plugin.3gx` di kartdlphax nella seguente cartella sulla scheda SD del **3DS di partenza**, a seconda della **regione della tua versione di Mario Kart 7**:
     + USA: `luma/plugins/0004000000030800`
     + EUR: `luma/plugins/0004000000030700`
     + JPN: `luma/plugins/0004000000030600`
-    + Create the `plugins` and `00040000...` folders if they do not already exist
+    + Crea le cartelle `plugins` e `00040000...` se non sono già esistenti
 1. Rimuovi la scheda SD e inseriscila nel **3DS di partenza**
 
-#### Section II - Prep Work (target 3DS)
+#### Sezione II - Preparazione (3DS di destinazione)
 
-In this section, you will set up the files that the target 3DS will need to install custom firmware.
+In questa sezione configurerai i file di cui il 3DS di destinazione avrà bisogno per installare un custom firmware.
 
 1. Inserisci la scheda SD del tuo **3DS di destinazione** nel computer
-1. Copy `boot.firm` and `boot.3dsx` from the Luma3DS `.zip` to the root of the **target 3DS's** SD card
+1. Copia i file `boot.firm` e `boot.3dsx` dall'archivio `.zip` di Luma3DS nella directory principale della scheda SD del **3DS di destinazione**
 1. Crea una cartella chiamata `boot9strap` nella directory principale della tua scheda SD
 1. Copia i file `boot9strap.firm` e `boot9strap.firm.sha` dall'archivio `.zip` di boot9strap nella cartella `/boot9strap/` della tua scheda SD
 1. Copia il file `SafeB9SInstaller.bin` dall'archivio `.zip` di SafeB9SInstaller nella directory principale della tua scheda SD
 1. Se assente, crea una cartella chiamata `3ds` nella directory principale della tua scheda SD
     + Questa cartella mantiene le applicazioni homebrew e i loro dati; è diversa dalla cartella `Nintendo 3DS` generata automaticamente dalla console
 1. Copia la cartella `nimdsphax` dall'archivio `.zip` di nimdsphax nella cartella `/3ds/` della tua scheda SD
-1. Copy `menuhax67_installer.3dsx` from the menuhax `.zip` to the `/3ds/` folder on your SD card
-1. Copy Launcher.dat from the folder for your model and region inside the menuhax `.zip` to the root of your SD card
+1. Copia il file `menuhax67_installer.3dsx` dall'archivio `.zip` di menuhax nella cartella `/3ds/` della tua scheda SD
+1. Copia il file `Launcher.dat` dalla cartella per il modello e la regione della tua console dell'archivio `.zip` di menuhax nella directory principale della tua scheda SD
 1. Rimuovi la scheda SD e inseriscila nel **3DS di destinazione**
 
 ![]({{ "/images/screenshots/kart-root-layout.png" | absolute_url }})
@@ -76,39 +76,39 @@ In this section, you will set up the files that the target 3DS will need to inst
 ![]({{ "/images/screenshots/kart-3ds-layout.png" | absolute_url }})
 {: .notice--info}
 
-#### Section III - kartdlphax
+#### Sezione III - kartdlphax
 
-In this section, you will use Download Play to transfer the exploit data from the source 3DS to the target 3DS, which can be used to install menuhax67, a Homebrew Launcher entrypoint. Your HOME Menu settings will be temporarily inaccessible on the target 3DS while this exploit is active.
+In questa sezione utilizzerai la "Modalità download" per trasferire i dati dell'exploit dal 3DS di partenza al 3DS di destinazione, che verranno usati per installare menuhax67, un punto di ingresso per l'Homebrew Launcher. Le impostazioni del menu HOME saranno temporaneamente inaccessibili sul 3DS di destinazione fiché questo exploit sarà attivo.
 
 1. Accendi il **3DS di partenza**
-    + If you are prompted to set up Luma3DS, just press START to save the configuration
+    + Se ti viene richiesto di configurare Luma3DS, premi START per salvare la configurazione
 1. Arrivato nel menu HOME, premi (L) + (Giù) + (Select) per mostrare il menu di Rosalina
 1. Seleziona "Enable plugin loader"
 1. Premi (B) per uscire dal menu di Rosalina
 1. Avvia Mario Kart 7
-    + Ensure that wireless connectivity is enabled
+    + Assicurati che la connettività wireless sia abilitata
 1. Seleziona `Più giocatori (locale)`. Dovrebbe apparire un menu
-    + If the screen freezes, hold the power button for fifteen seconds to force power off your console, then try again
-    + If you have launched kartdlphax previously, the last selected settings will be loaded. Se è corretta, seleziona `Use settings` e salta i prossimi 3 passaggi. Se non è corretta, seleziona `Change settings` e prosegui.
+    + Se la schermata si blocca, tieni premuto il pulsante di accensione per quindici secondi per forzare lo spegnimento della console, quindi riprova
+    + Se hai già lanciato kartdlphax in precedenza, verrà caricata l'ultima configurazione utilizzata. Se è corretta, seleziona `Use settings` e salta i prossimi 3 passaggi. Se non è corretta, seleziona `Change settings` e prosegui.
 1. Seleziona la tipologia del **3DS di destinazione** (Old 3DS o New 3DS)
 1. Scegli uno degli exploit seguenti a seconda della tua versione del software:
-    + 11.16.0: select `xPloitInjector (11.16)`
-    + 11.17.0: select `xPloitInjector (11.17)`
+    + 11.16.0: seleziona `xPloitInjector (11.16)`
+    + 11.17.0: seleziona `xPloitInjector (11.17)`
 1. Verrà visualizzato un menu di conferma. Se le impostazioni visualizzate nella schermata superiore sono corrette, seleziona `Use settings`
-    + If the settings are not correct, press `Change settings` and modify them accordingly
+    + Se le impostazioni non sono corrette, premi `Change settings` e modificale di conseguenza
 1. Seleziona `Create Group`
-    + If the source 3DS freezes at this point and you are using a cartridge, try [installing the cartridge to the system](dumping-titles-and-game-cartridges#installing-a-game-cartridge-directly-to-the-system)
+    + Se il 3DS di partenza si blocca in questo frangente e stai usando una cartuccia, prova a [installare la cartuccia nel sistema](dumping-titles-and-game-cartridges#installing-a-game-cartridge-directly-to-the-system)
 1. Accendi il **3DS di destinazione**
-    + Ensure that wireless connectivity is enabled
+    + Assicurati che la connettività wireless sia abilitata
 1. Sul **3DS di destinazione**, apri l'applicazione "Modalità download" (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"}), quindi seleziona "Nintendo 3DS"
 1. Unisciti al gruppo creato dal **3DS di partenza**
 1. Seleziona "Inizia" sul **3DS di partenza** una volta rilevato il **3DS di destinazione**
 1. Una volta avviata la modalità multigiocatore, vai su `Gran Premio` -> `50cc` -> (qualunque personaggio) -> `Trofeo Fungo` -> `OK`
 1. Attendi un po' (dovresti visualizzare una percentuale sul **3DS di partenza**)
 1. Se l'exploit è andato a buon fine, il **3DS di destinazione** avrà avviato 3DS ROP xPloit Injector
-    + If the exploit was not successful, power off the **source 3DS** and **target 3DS** and start again from the beginning of `Section III - kartdlphax`
+    + Se l'exploit non ha avuto successo, spegni il **3DS di partenza** e il **3DS di destinazione** e ricomincia dall'inizio di `Sezione III - kartdlphax`
 
-#### Section IV - Installing menuhax67
+#### Sezione IV - Installazione di menuhax67
 
 {% include_relative include/menuhax67-install.txt %}
 
@@ -119,14 +119,14 @@ In this section, you will use Download Play to transfer the exploit data from th
 
 {% include_relative include/luma3ds-installed-note.txt %}
 
-#### Section VI - Removing menuhax67
+#### Sezione VI - Rimozione di menuhax67
 
-In this section, you will use the Homebrew Launcher to remove menuhax67, which will let you access the HOME Menu Settings option normally.
+In questa sezione userai l'Homebrew Launcher per rimuovere menuhax67, ed ottenere nuovamente l'accesso alle impostazioni del menu HOME.
 
 {% include_relative include/launch-hbl-dlp.txt %}
-1. Launch menuhax67_installer from the list of homebrew
-1. Select REMOVE menuhax67
-1. When you see "done.", press (A), then press (A) on "EXIT to menu"
+1. Avvia menuhax67_installer dalla lista degli homebrew
+1. Seleziona REMOVE menuhax67
+1. Quando vedi "done.", premi (A), poi premi (A) su "EXIT to menu"
 
 ___
 
