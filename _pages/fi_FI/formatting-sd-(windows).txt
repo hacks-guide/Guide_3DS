@@ -58,10 +58,13 @@ Tämä sivu on vain Windows-käyttäjille. If you are not on Windows, check out 
 1. Click "Close"
 1. If the SD card had any files and folders on it before the format, copy everything back from your computer
 
-### Common Errors using guiformat
+### Troubleshooting
 
-* Failed to open device: GetLastError()=32
+* guiformat shows the error "Failed to open device: GetLastError()=32"
     + Close everything that may be using the SD card, such as any File Explorer windows.
 
-* GetLastError()=1117
+* guiformat shows the error "GetLastError()=1117"
     + Your SD card write-protection switch may be [enabled](/images/sdlock.png). The lock must be flipped upwards to allow writing to the SD card (including formatting).
+
+* SD card remains undetected by console or continues to display the wrong capacity after formatting
+    + Your SD card may be partitioned or have unallocated space. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Windows) to reformat your SD card.
