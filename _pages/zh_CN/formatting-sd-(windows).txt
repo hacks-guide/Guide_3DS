@@ -58,10 +58,13 @@ title: "格式化 SD 卡（通过 Windows 操作系统）"
 1. 点击“Close”
 1. 如果先前你从 SD 卡上复制了一些文件或文件夹到电脑上，请将它们全部复制回 SD 卡
 
-### 使用 guiformat 的常见错误
+### Troubleshooting
 
-* Failed to open device: GetLastError()=32
+* guiformat shows the error "Failed to open device: GetLastError()=32"
     + 关闭任何可能会使用到 SD 卡的东西，例如资源管理器窗口。
 
-* GetLastError()=1117
+* guiformat shows the error "GetLastError()=1117"
     + 你的 SD 卡可能打开了[写保护开关](/images/sdlock.png)。 你必须把滑片向上拨才能允许向 SD 卡写入数据（包括格式化）。
+
+* SD card remains undetected by console or continues to display the wrong capacity after formatting
+    + Your SD card may be partitioned or have unallocated space. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Windows) to reformat your SD card.
