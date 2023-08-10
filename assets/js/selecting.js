@@ -264,7 +264,7 @@ function redirect() {
     document.getElementById("result_invalidVersion").style.display = "none";
     document.getElementById("result_methodUnavailable").style.display = "none";
     if ((!isN3DS) && (!isO3DS)) {
-        document.getElementById("result_noneSelected").style.display = "block";
+        alert(document.getElementById("result_noneSelected").innerText);
         return;
     }
 
@@ -274,7 +274,7 @@ function redirect() {
     else if(isN3DS) model = DEVICE_N3DS;
 
     if (!validate_version(major, minor, nver, region, model)) {
-        document.getElementById("result_invalidVersion").style.display = "block";
+        alert(document.getElementById("result_invalidVersion").innerText);
         return;
     }
 
@@ -290,6 +290,6 @@ function redirect() {
     if (redirected) return true;
 
     // if it actually got to this point, there is no exploit available.
-    document.getElementById("result_methodUnavailable").style.display = "block";
+    alert(document.getElementById("result_methodUnavailable").innerText);
     return false;
 }
