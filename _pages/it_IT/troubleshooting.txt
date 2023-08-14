@@ -143,9 +143,9 @@ Per risolvere questo problema, è necessario determinare quale cartella contiene
 
 {% capture compat %}
 <summary><u>Il menu Gestione Nintendo DSiWare crasha senza visualizzare il menu BB3 multihax</u></summary>
-Assicurati che il file `F00D43D5.bin` sia l'unico file presente in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`. If it is, then re-create it with the [Bannerbomb3 Injector](https://zoogie.github.io/web/bb3).
+Assicurati che il file `F00D43D5.bin` sia l'unico file presente in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`. In tal caso, ricrealo con [Bannerbomb3 Injector](https://zoogie.github.io/web/bb3).
 
-Inoltre, assicurati che il file `bb3.bin` sia nella directory principale dela tua scheda SD. If it is missing, then download the latest release of [Bannerbomb3](https://github.com/zoogie/Bannerbomb3/releases/download/v3.0/Release_v3.0.zip) (direct download), and copy the `bb3.bin` file from the Release `.zip` to the root of your SD card.
+Inoltre, assicurati che il file `bb3.bin` sia nella directory principale dela tua scheda SD. Se manca, scarica l'ultima versione di [Bannerbomb3](https://github.com/zoogie/Bannerbomb3/releases/download/v3.0/Release_v3.0.zip) (download diretto), e copia il file `bb3.bin` dall'arcivhio `.zip` di Release nella directory principale della tua scheda SD.
 
 Se nessuna di queste soluzioni dovesse risolvere il problema, allora un custom firmware potrebbe essere già stato disinstallato da questa console in modo tale da rendere questo metodo impossibile. In tal caso, puoi ricevere assistenza chiedendo, in inglese, nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp).
 {% endcapture %}
@@ -161,7 +161,7 @@ Manca il file `F00D43D5.bin` da `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintend
 {% capture compat %}
 <summary><u>Il menu Gestione Nintendo DSiWare mostra un punto di domanda</u></summary>
 
-Potrebbe esserci un problema con il tuo file `F00D43D5.bin` (potrebbe essere corrotto o per un diverso 3DS). Re-create your `F00D43D5.bin` file with the [Bannerbomb3 Injector](https://zoogie.github.io/web/bb3), ensuring that you use the `movable.sed` file for your console.
+Potrebbe esserci un problema con il tuo file `F00D43D5.bin` (potrebbe essere corrotto o per un diverso 3DS). Ri-crea il tuo file `F00D43D5.bin` con [Bannerbomb3 Injector](https://zoogie.github.io/web/bb3), assicurandoti di utilizzare il file `movable.sed` della tua console.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -402,14 +402,14 @@ La data non è corretta. Per correggerla, segui questi passaggi:
 
 Se il problema persiste:
 
-+ Assicurati che i file `arm11code.bin`, `browserhax_hblauncher_ropbin_payload.bin` e `boot.3dsx` siano nella directory principale della scheda SD (non all'interno di una cartella)
-+ Assicurati di aver selezionato il payload corretto per la tua regione E la versione di sistema
-+ Assicurati che le impostazioni "Area di residenza" siano [così](/images/screenshots/skater_lang.png)
-+ Prova a reimpostare i dati del browser:
++ Ensure that `arm11code.bin`, `browserhax_hblauncher_ropbin_payload.bin`, and `boot.3dsx` are on the root of the SD card (not inside of any folder)
++ Ensure that you selected the correct payload for your region AND system version
++ Ensure that your region settings look [like this](/images/screenshots/skater_lang.png)
++ Try resetting your browser data:
     1. Avvia il browser internet, quindi apri le sue impostazioni
     1. Scorri verso il basso e seleziona "Reimposta tutti i dati salvati" (può avere nomi simili come "Inizializza i dati di salvataggio" o "Elimina tutti i dati salvati")
     1. Riprova ad eseguire l'exploit
-+ Prova a cambiare la lingua di sistema in una lingua diversa da quella corrente
++ Try changing the system language to something other than the current language
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -590,9 +590,9 @@ C'è un problema con il tuo file `boot.firm`. Se stai usando [boot9strap 1.4](ht
 
 Se il LED di notifica lampeggia:
 
-+ **Bianco**: Il tuo 3DS non è stato in grado di trovare il file `boot.firm` nella tua scheda SD o nella memoria interna.
-+ **Magenta**: Il tuo 3DS non è stato in grado di trovare il file `boot.firm` nella tua scheda SD. È stato in grado di trovare il file `boot.firm` nella memoria interna, tuttavia il file è corrotto.
-+ **Rosso**: Il tuo 3DS è stato in grado di trovare il file `boot.firm` sia nella tua scheda SD sia nella memoria interna, tuttavia entrambi i file sono corrotti.
++ **White**: Your 3DS was not able to find `boot.firm` on your SD card or on internal memory.
++ **Magenta**: Your 3DS was not able to find `boot.firm` on your SD card. È stato in grado di trovare il file `boot.firm` nella memoria interna, tuttavia il file è corrotto.
++ **Red**: Your 3DS was able to find `boot.firm` on both your SD card and on internal memory, but both files are corrupted.
 
 Puoi ottenere un nuovo file `boot.firm` scaricando l'[ultima versione di Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), estraendola e posizionando il file `boot.firm` nella directory principale della tua scheda SD. Se il tuo file `boot.firm` continua a risultare corrotto, potresti dover verificare la presenza di errori nella tua scheda SD ([Windows](h2testw-(windows)), [Linux](f3-(linux)), o [macOS](f3xswift-(mac))). Inoltre, tieni presente che il 3DS tende ad avere problemi con file estratti usando WinRAR.
 
