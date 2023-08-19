@@ -9,7 +9,7 @@ Questo metodo richiede una GPU ragionevolmente potente (una qualsiasi scheda gra
 + Il tuo codice QR Mii, caricato direttamente su Discord (non scattare uno screenshot o una foto dell'immagine, basta inviare l'immagine HNI_XXXX.JPG stessa)
 + ID0 della tua console (il nome della cartella a 32 caratteri dentro la cartella Nintendo 3DS - consulta [questa sezione](https://3ds.hacks.guide/troubleshooting#seedminer) se ne hai più di uno)
 + Il modello della tua console (ad es. 3DS, 3DS XL, 2DS, New3DS, New3DS XL, New2DS XL)
-+ L'anno approssimativo di produzione della tua console (può essere presente dietro la copertura anteriore o posteriore; se non la sai puoi indovinarla - non è super importante)
++ Your console's year of manufacturing; if you don't know, don't say it - it's not super important
 {% endcapture %}
 <div class="notice--warning">{{ gpu_warning | markdownify }}</div>
 
@@ -84,7 +84,9 @@ In questa sezione trasformerai il codice QR Mii in un file utilizzabile e con es
     + Non tentare di inserire l'ID0 manualmente, poiché è facile commettere un errore. Assicurati che l'ID0 sia inserito correttamente copiandolo e incollandolo da dove lo hai salvato nella sezione precedente
 1. Al termine, inserisci il comando `py -3 seedminer_launcher3.py mii <modello> <anno>`
     + Sostituisci `<modello>` con il modello della tua console (`new` o `old`) - se non ne sei sicuro, solo i modelli con i pulsanti ZL/ZR e C-Stick sono "new"
-    + Sostituisci `<anno>` con l'anno di produzione del 3DS (spesso lo trovi dietro la cover posteriore) - lascia vuoto se non ne sei sicuro, nel qual caso partirà da un valore predefinito
+    + Replace `<year>` with the year the 3DS was made (On Old 3DS consoles, the years on the backplate, (M)2010/(C)2011, are always the same and NOT an indicator) - if you aren't sure, see below
+    + Estimate manufacturing years are: Old 3DS 2011, Old 3DS XL 2013, Old 2DS 2015, New 3DS 2016, New 3DS XL 2016, New 2DS XL 2017
+    + You can also leave the year empty, which will make it start in the middle
     + Il processo di mining richiede solitamente fino a 90 minuti, a seconda della fortuna e della potenza della tua GPU
     + La prima fase terminerà probabilmente attorno l'offset 1500, a seconda del modello di console
     + Se la seconda fase (dopo il messaggio `movable_part2.sed generation success`) oltrepassa l'offset 100, verifica di aver inserito l'ID0 corretto. Se il tuo ID0 è corretto, non puoi usare questo metodo e dovrai aggiornare all'ultima versione e controllare se è disponibile per te un metodo non-Seedminer [qui](alternate-exploits)
