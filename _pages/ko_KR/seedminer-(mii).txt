@@ -9,7 +9,7 @@ This method requires a reasonably powerful GPU (any dedicated graphics card made
 + Your Mii QR code, uploaded directly to Discord (do not take a screenshot or a photo of the image, just send the HNI_XXXX.JPG image itself)
 + Your console's ID0 (the name of the 32-character folder directly inside of Nintendo 3DS - see [this troubleshooting section](https://3ds.hacks.guide/troubleshooting#seedminer) if you have multiple)
 + Your console model (e.g. 3DS, 3DS XL, 2DS, New3DS, New3DS XL, New2DS XL)
-+ Your console's approximate year of manufacturing (it may be present behind the frontplate or backplate; if you don't know, just guess - it's not super important)
++ Your console's year of manufacturing; if you don't know, don't say it - it's not super important
 {% endcapture %}
 <div class="notice--warning">{{ gpu_warning | markdownify }}</div>
 
@@ -84,7 +84,9 @@ In this section, you will turn the Mii QR code into a usable file and mine `mova
     + ID0을 수동으로 입력하지 마세요. 실수하기 아주 쉽습니다. 그 ID0가 확실하게 정확히 들어갔다고 확신할수있도록 그 ID0를 그대로 복사 붙여넣기 해 주세요
 1. Once it completes, enter the command `py -3 seedminer_launcher3.py mii <model> <year>`
     + Replace `<model>` with the model of your console (`new` or `old`) - if you aren't sure, only models with the ZL/ZR buttons and C-Stick are "new"
-    + Replace `<year>` with the year the 3DS was made (you often find this behind the backplate) - leave this empty if you aren't sure, in which case it will start from the middle
+    + Replace `<year>` with the year the 3DS was made (On Old 3DS consoles, the years on the backplate, (M)2010/(C)2011, are always the same and NOT an indicator) - if you aren't sure, see below
+    + Estimate manufacturing years are: Old 3DS 2011, Old 3DS XL 2013, Old 2DS 2015, New 3DS 2016, New 3DS XL 2016, New 2DS XL 2017
+    + You can also leave the year empty, which will make it start in the middle
     + The mining process will usually take up to 90 minutes, depending on luck and your GPU's strength
     + The first stage will likely max out at roughly offset 1500, depending on console model
     + If the second stage (after seeing `movable_part2.sed generation success`) gets past offset 100, verify that you input the correct ID0. If your ID0 is correct, you cannot use this method and will have to update to the latest version and see if a non-Seedminer method is available for you [here](alternate-exploits)
