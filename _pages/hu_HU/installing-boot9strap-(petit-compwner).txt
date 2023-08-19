@@ -1,0 +1,72 @@
+---
+title: "Installing boot9strap (petit-compwner)"
+---
+
+{% include toc title="Tartalomjegyzék" %}
+
+{% capture technical_info %}
+<summary><em>Technikai részletek (opcionális)</em></summary>
+
+We use petit-compwner to launch b9sTool, which installs boot9strap.  
+
+See [here](https://github.com/zoogie/petit-compwner) for more information about petit-compwner.
+
+{% endcapture %}
+<details>{{ technical_info | markdownify }}</details>
+{: .notice--info}
+
+Csak akkor szabad erre az oldalra jutnod, ha 11.17.0 verziót futtatsz. Ha más firmware-en vagy mint 11.17.0 vagy 11.16.0, akkor ÁLLJ MEG, ez az útmutató BRICKELNI FOG más firmware-en!!
+{: .notice--warning}
+
+### Amire szükséged lesz
+
+* **11.16.0 vagy 11.17.0 használók**: A [b9sTool](https://github.com/zoogie/b9sTool/releases/download/v6.1.1/release_6.1.1.zip) v6.1.1 verziója
+    * Legyél **abszolút biztos** abban, hogy ezek közül valamelyik firmware-a jó fájlt töltöd le, mert rossz fájl használata BRICKELÉSHEZ vezet
+* A [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) legújabb kiadása (a Luma3DS `.zip` fájl)
+
+#### I. rész - CHF ellenőrzés
+
+{% include_relative include/cfw-check-fredtool.txt %}
+
+#### II. rész - Előkészületek
+
+In this section, you will copy the files necessary to launch b9sTool, which is used to launch the boot9strap (custom firmware) installer.
+
+1. Helyezd az SD kártyád a számítógépbe
+1. Copy the `boot.nds` file from the release `.zip` folder to the root of your SD card.
+    + Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne
+1. Copy the `boot.firm` and `boot.3dsx` files from the Luma3DS `.zip` to the root of your SD card.
+1. Tedd vissza az SD kártyád a konzoldba
+1. Kapcsold be a konzolod
+
+    ![]({{ "/images/screenshots/petit-compwner-root-layout.png" | absolute_url }})
+
+#### Section III - petit-compwner
+
+In this section, you will scan the QR codes needed to trigger the petit-compwner exploit.
+
+1. Open the latest release of [petit-compwner](https://github.com/zoogie/petit-compwner/releases/tag/v1.0) on your computer.
+1. On your 3DS, Launch Petit Computer
+1. Select File Management
+1. Select Read QR Codes
+1. Scan each QR code in order, from 1/5 to 5/5
+1. Once you have scanned all the QR codes, exit File Management
+1. Select View Gallery
+1. Launch the PWN program
+1. Ha az exploit sikeres volt, a konzolodnak ezt követően be kell töltenie a b9sTool-t
+
+#### IV. rész - boot9strap telepítése
+
+{% include_relative include/install-boot9strap-b9stool.txt %}
+
+#### Section V - Luma3DS Configuration
+
+1. Nyomd le és tartsd nyomva a (Select) gombot, és a (Select) nyomva tartása mellett kapcsold be a konzolod
+{% include_relative include/configure-luma3ds.txt %}
+
+{% include_relative include/luma3ds-installed-note.txt %}
+
+___
+
+### Tovább a [telepítés véglegesítésére](finalizing-setup)
+{: .notice--primary}
