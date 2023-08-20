@@ -1,5 +1,5 @@
 ---
-title: "Installing boot9strap (petit-compwner)"
+title: "Installazione di boot9strap (petit-compwner)"
 ---
 
 {% include toc title="Indice" %}
@@ -7,9 +7,9 @@ title: "Installing boot9strap (petit-compwner)"
 {% capture technical_info %}
 <summary><em>Dettagli Tecnici (opzionale)</em></summary>
 
-We use petit-compwner to launch b9sTool, which installs boot9strap.  
+Useremo petit-compwner per avviare b9sTool, che installerà boot9strap.  
 
-See [here](https://github.com/zoogie/petit-compwner) for more information about petit-compwner.
+Vedi [qui](https://github.com/zoogie/petit-compwner) per maggiori informazioni su petit-compwner.
 
 {% endcapture %}
 <details>{{ technical_info | markdownify }}</details>
@@ -30,36 +30,36 @@ Dovresti essere arrivato a questa pagina solo se esegui la versione di sistema 1
 
 #### Sezione II - Preparazione
 
-In this section, you will copy the files necessary to launch b9sTool, which is used to launch the boot9strap (custom firmware) installer.
+In questa sezione copierai i file necessari per avviare b9sTool, che viene utilizzato per avviare il programma di installazione di boot9strap (custom firmware).
 
 1. Inserisci la scheda SD nel tuo computer
-1. Copy the `boot.nds` file from the release `.zip` folder to the root of your SD card.
+1. Copia il file `boot.nds` (B9STool) dall'archivio `.zip` di b9sTool nella directory principale della tua scheda SD
     + La directory principale della scheda SD è la cartella della tua scheda SD in cui è possibile visualizzare la cartella Nintendo 3DS, ma non il suo interno
-1. Copy the `boot.firm` and `boot.3dsx` files from the Luma3DS `.zip` to the root of your SD card.
+1. Copia i file `boot.firm` e `boot.3dsx` dall'archivio `.zip` di Luma3DS nella directory principale della tua scheda SD
 1. Reinserisci la scheda SD nella tua console
 1. Accendi la tua console
 
     ![]({{ "/images/screenshots/petit-compwner-root-layout.png" | absolute_url }})
 
-#### Section III - petit-compwner
+#### Sezione III - petit-compwner
 
-In this section, you will scan the QR codes needed to trigger the petit-compwner exploit.
+In questa sezione scansionerai i codici QR necessari per attivare l'exploit petit-compwner.
 
-1. Open the latest release of [petit-compwner](https://github.com/zoogie/petit-compwner/releases/tag/v1.0) on your computer.
-1. On your 3DS, Launch Petit Computer
-1. Select File Management
-1. Select Read QR Codes
-1. Scan each QR code in order, from 1/5 to 5/5
-1. Once you have scanned all the QR codes, exit File Management
-1. Select View Gallery
-1. Launch the PWN program
+1. Open the latest release of [petit-compwner](https://github.com/zoogie/petit-compwner/releases/tag/v1.0) on your computer
+1. On your console, launch Petit Computer
+1. Seleziona File Management
+1. Seleziona Read QR Codes
+1. Scansiona ogni codice QR in ordine, da 1/5 a 5/5
+1. Una volta scansionati tutti i codici QR, esci da File Management
+1. Seleziona View Gallery
+1. Avvia il programma PWN
 1. Se l'exploit ha funzionato, la tua console avvierà b9sTool
 
 #### Sezione IV - Installazione di boot9strap
 
 {% include_relative include/install-boot9strap-b9stool.txt %}
 
-#### Section V - Luma3DS Configuration
+#### Sezione V - Configurazione di Luma3DS
 
 1. Premi (Select) e accendi la tua console continuando a tenerlo premuto
 {% include_relative include/configure-luma3ds.txt %}
