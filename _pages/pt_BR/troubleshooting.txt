@@ -143,9 +143,9 @@ Para corrigir isso, você precisará determinar qual pasta contém seus dados. N
 
 {% capture compat %}
 <summary><u>Menu de Gerenciamento de DSiWare mostra um crash sem mostrar o menu multihax do BB3</u></summary>
-Certifique-se de que `F00D43D5.bin` seja o único arquivo em `Nintendo 3DS` -> `<ID0>` -><ID1>` -> `Nintendo DSiWare`. If it is, then re-create it with the [Bannerbomb3 Injector](https://zoogie.github.io/web/bb3).
+Certifique-se de que `F00D43D5.bin` seja o único arquivo em `Nintendo 3DS` -> `<ID0>` -><ID1>` -> `Nintendo DSiWare`. Se for o caso, re-crie-o com o [Bannerbomb3 Injector](https://zoogie.github.io/web/bb3).
 
-Além disso, certifique-se de que o `bb3.bin` está na raiz do cartão SD. If it is missing, then download the latest release of [Bannerbomb3](https://github.com/zoogie/Bannerbomb3/releases/download/v3.0/Release_v3.0.zip) (direct download), and copy the `bb3.bin` file from the Release `.zip` to the root of your SD card.
+Além disso, certifique-se de que o `bb3.bin` está na raiz do cartão SD. Caso esteja faltando, baixe a última versão do [Bannerbomb3](https://github.com/zoogie/Bannerbomb3/releases/download/v3.0/Release_v3.0.zip) (download direto) e copie o arquivo `bb3.bin` do `.zip` para a raiz do seu cartão SD.
 
 Se nenhuma destas soluções resolver este problema, então custom firmware pode ter sido desinstalado nesse console de uma forma que torna esse método impossível de executar. Se for esse o caso, junte-se ao [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) e peça ajuda, em Inglês.
 {% endcapture %}
@@ -161,7 +161,7 @@ Se nenhuma destas soluções resolver este problema, então custom firmware pode
 {% capture compat %}
 <summary><u>O Gerenciamento de DSiWare mostra um ponto de interrogação</u></summary>
 
-Pode haver um problema com o seu arquivo `F00D43D5.bin` (pode estar corrompido ou destinado ao 3DS errado). Re-create your `F00D43D5.bin` file with the [Bannerbomb3 Injector](https://zoogie.github.io/web/bb3), ensuring that you use the `movable.sed` file for your console.
+Pode haver um problema com o seu arquivo `F00D43D5.bin` (pode estar corrompido ou destinado ao 3DS errado). Recrie seu arquivo `F00D43D5.bin` com o [Bannerbomb3 Injector](https://zoogie.github.io/web/bb3), garantindo que você use o arquivo `movable.sed` para o seu console.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -457,7 +457,7 @@ As etapas abaixo podem ser tentadas em qualquer ordem, mas são listadas de mane
 {% capture compat %}
 <summary><u>Error #02: Missing essential.exefs</u></summary>
 
-Você disse 'No' para a mensagem "Make essential files backup?" no GodMode9. Power off your console, power it on while holding (Start) to re-enter GodMode9, say 'Yes' to the prompt, then try again.
+Você disse 'No' para a mensagem "Make essential files backup?" no GodMode9. Desligue seu dispositivo, ligue-o enquanto segura (Start) para entrar novamente no GodMode9, diga 'Yes' para a mensagem, e então tente novamente.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -507,7 +507,7 @@ Agora que você tem seu backup da NAND em um lugar seguro:
 1. Selecione "Scripts..."
 1. Selecione "finalize"
 1. Continue o script normalmente
-    + The NAND backup will be automatically skipped
+    + O backup da NAND será automaticamente pulado
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -515,7 +515,7 @@ Agora que você tem seu backup da NAND em um lugar seguro:
 {% capture compat %}
 <summary><u>Information #05: No title database</u></summary>
 
-Press (A) to import a title database, unlock SysNAND writing by entering the buttons on-screen, then continue the script as normal.
+Aperte (A) para importar um title database, desbloqueie SysNAND apertando os botões na tela, e depois continue o script normalmente.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -562,7 +562,7 @@ Você não copiou tudo do `finalize.zip` para a raiz do seu cartão SD. Lembre-s
 {% capture compat %}
 <summary><u>Error #12: Copy (file).db fail</u></summary>
 
-Ensure that your SD card is not [locked](/images/sdlock.png). If the SD card is not locked and you continue to get this error, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+Certifique-se de que seu cartão SD não esteja [bloqueado](/images/sdlock.png). Se o cartão SD não estiver bloqueado e você continuar a receber este erro, junte-se ao [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp) para assistência.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -570,14 +570,14 @@ Ensure that your SD card is not [locked](/images/sdlock.png). If the SD card is 
 {% capture compat %}
 <summary><u>Information #17: Duplicate NAND backup</u></summary>
 
-The script has detected that the Nintendo 3DS folder is missing AND that you have already made a NAND backup before. If you intend to install homebrew applications, you should do the following:
+O script detectou que a pasta Nintendo 3DS está faltando e que você já fez um backup da NAND antes. Se você pretende instalar o homebrew, você deve fazer o seguinte:
 
-1. Press (B) to cancel making another NAND backup
+1. Aperte (B) para cancelar outro backup da NAND
 1. Segure (R) e aperte (Start) ao mesmo tempo para desligar seu console
-1. Copy the contents of `/gm9/backups/` to a safe location on your computer
-1. Delete `/gm9/backups/` from your SD card
-1. If you moved your Nintendo 3DS folder off of your SD card to get to this point, copy it back to your SD card
-    + If you do not have a Nintendo 3DS folder, boot into the HOME Menu at least once with the SD card inserted to automatically generate it
+1. Copie os arquivos em `/gm9/backups/` do seu SD para um local seguro no seu computador
+1. Apague `/gm9/backups/` do seu cartão SD
+1. Se você moveu sua pasta Nintendo 3DS para fora do seu cartão SD para chegar a este ponto, copie-a de volta para o seu cartão SD
+    + Se você não possui uma pasta Nintendo 3DS, Inicie no Menu HOME pelo menos uma vez com o cartão SD inserido para gerá-la automaticamente
 1. Aperte e segure (Start), e enquanto segura (Start), ligue seu console. Isso vai inicializar o GodMode9
 1. Aperte (Home) para abrir o menu de ações
 1. Selecione "Scripts..."
