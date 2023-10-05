@@ -1,5 +1,5 @@
 ---
-title: "Installing boot9strap (Kartminer7)"
+title: "boot9strap 설치 (Kartminer7)"
 ---
 
 {% include toc title="목차" %}
@@ -25,7 +25,7 @@ See [here](https://github.com/zoogie/kartminer7) for information about Kartminer
     * You can update Mario Kart 7 from eShop or by following the update prompt when you launch the game
 * A Windows computer
 * Seedminer에서 받은 `movable.sed` 파일
-* The latest release of [Kartminer7](https://github.com/zoogie/Kartminer7/releases/latest)
+* 최신 버전의 [Kartminer7](https://github.com/zoogie/Kartminer7/releases/latest)
 * 최신 버전의 [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (직접 다운로드)
 * 최신 버전의 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (직접 다운로드)
 * 최신 버전의 [nimdsphax](https://github.com/luigoalma/nimdsphax/releases/download/v1.0/nimdsphax_v1.0.zip) (직접 다운로드)
@@ -37,7 +37,7 @@ See [here](https://github.com/zoogie/kartminer7) for information about Kartminer
 In this section, you will have the 3DS generate some data in Mario Kart 7 that will be used to install the exploit in a later section.
 
 1. SD 카드를 콘솔에 다시 삽입해 주세요
-1. Open Mario Kart 7
+1. 마리오 카트 7을 실행해 주세요
 1. Tap the "Mario Kart Channel" button on the bottom
 1. If you are prompted to, hit "Next" and "OK" to all of the prompts that you see
 1. Tap the "StreetPass List" button on the bottom of the screen, in the middle
@@ -52,12 +52,12 @@ In this section, you will have the 3DS generate some data in Mario Kart 7 that w
     + SD 카드의 루트는 SD 카드를 열 때 보이는 디렉토리이고, Nintendo 3DS 폴더가 보이지만 그 안에 들어가 있지 않은 상태의 폴더입니다
 1. SD 카드이 루트에 `boot9strap` 라는 이름으로 새 폴더를 생성해 주세요
 1. SD 카드에 있는 `/boot9strap/` 폴더에 boot9strap `.zip` 파일 안에 압축되있는 `boot9strap.firm`과 `boot9strap.firm.sha`을 복사해 주세요
-1. Copy `SafeB9SInstaller.bin` to the root of your SD card
+1. SafeB9SInstaller `.zip`의 `SafeB9SInstaller.bin`을 SD 카드의 루트로 복사해 주세요
 1. SD 카드의 루트에 `3ds` 폴더가 없을 경우 폴더를 만들어 주세요
     + 이 폴더에는 홈브류 에플리케이션과 데이터가 보관되어 있으며, 콘솔이 자동으로 생성하는 `Nintendo 3DS` 폴더와 다른 폴더입니다
 1. nimdsphax `.zip`안에 있는 `nimdsphax` 폴더를 SD 카드의 `/3ds/` 폴더에 복사해 주세요
 1. Copy `menuhax67_installer.3dsx` from the menuhax `.zip` to the `/3ds/` folder on your SD card
-1. Copy Launcher.dat from the folder for your model and region inside the menuhax `.zip` to the root of your SD card
+1. menuhax '.zip' 파일에서, 모델과 국적에 맞는 폴더를 찾아 들어가, Launcher.dat 파일을 복사해 SD 카드의 최상단에 복사해 주세요
 1. Keep your SD card inserted in your computer, as it is still required in the next section
 
 ![]({{ "/images/screenshots/kart-root-layout.png" | absolute_url }})
@@ -80,10 +80,10 @@ In this section, you will have the 3DS generate some data in Mario Kart 7 that w
 1. Go back to the Release_BETA_mk7 folder, then double-click on the `.bat` file corresponding to your console's region (e.g. USA.bat if you have a USA copy of Mario Kart 7)
 1. SD 카드를 콘솔에 다시 삽입해 주세요
 
-#### Section IV - Kartminer7
+#### 섹션 IV - Kartminer7
 
 1. 콘솔의 전원을 켜 주세요
-1. Open Mario Kart 7
+1. 마리오 카트 7을 실행해 주세요
 1. Tap the "Mario Kart Channel" button on the bottom
 1. Tap the "StreetPass List" button on the bottom of the screen, in the middle
 1. Press (A) over and over again
@@ -92,7 +92,7 @@ In this section, you will have the 3DS generate some data in Mario Kart 7 that w
     + If you don't see ANY colours, change your system language (if possible), then try the exploit again
 1. If the exploit was successful, the 3DS will have booted into the 3DS ROP xPloit Injector
 
-#### Section V - Installing menuhax67
+#### 섹션 V - menuhax67 설치
 
 {% include_relative include/menuhax67-install.txt %}
 
@@ -103,13 +103,13 @@ In this section, you will have the 3DS generate some data in Mario Kart 7 that w
 
 {% include_relative include/luma3ds-installed-note.txt %}
 
-#### Section VII - Removing menuhax67
+#### 섹션 VII - menuhax67 제거
 
-In this section, you will use the Homebrew Launcher to remove menuhax67, which will let you access the HOME Menu Settings option normally.
+이 섹션에서, 홈브류 런처를 사용해 menuhax67을 제거합니다. 이 작업을 통해 HOME 메뉴 설정이 정상적으로 복구될 것입니다.
 
 {% include_relative include/launch-hbl-dlp.txt %}
-1. Launch menuhax67_installer from the list of homebrew
-1. Select REMOVE menuhax67
+1. 홈브류 목록에서 menuhax67_installer를 실행해 주세요
+1. REMOVE menuhax67를 선택해 주세요
 1. When you see "done.", press (A), then press (A) on "EXIT to menu"
 
 At this point, you can re-enable wireless communications.
@@ -117,5 +117,5 @@ At this point, you can re-enable wireless communications.
 
 ___
 
-Continue to [Finalizing Setup](finalizing-setup)
+### [마무리 단계](finalizing-setup) 로 계속합니다
 {: .notice-primary}
