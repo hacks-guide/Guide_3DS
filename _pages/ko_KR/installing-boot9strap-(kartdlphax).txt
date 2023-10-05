@@ -25,11 +25,11 @@ See [here](https://github.com/PabloMK7/kartdlphax) for information about kartdlp
 
 이 가이드를 진행하기 위해서는, 다음이 필요합니다:
 
-+ A second 3DS with custom firmware (the **source 3DS**) that is the same region as the 3DS you are trying to modify (the **target 3DS**)
-    + The consoles must be USA, JPN, or EUR region consoles
++ 커스텀 펌웨어를 설치하려고 하는 3DS (**타겟 3DS**)와 지역이 같은, 커스텀 펌웨어가 설치된 제2의 3DS (**소스 3DS**)
+    + 양 콘솔들은 USA, JPN, or EUR 지역 콘솔들이어야 합니다
     + The source 3DS can be [region changed](region-changing) to match the target 3DS if necessary
-+ A physical or digital copy of Mario Kart 7 that is the same region as both consoles
-+ An SD card for both consoles
++ 두 3DS와 지역이 같은, 마리오 카트 7의 물리적/디지털 버전
++ 두 콘솔을 위한 SD 카드
 
 ### 준비물
 
@@ -67,7 +67,7 @@ In this section, you will set up the files that the target 3DS will need to inst
     + 이 폴더에는 홈브류 에플리케이션과 데이터가 보관되어 있으며, 콘솔이 자동으로 생성하는 `Nintendo 3DS` 폴더와 다른 폴더입니다
 1. nimdsphax `.zip`안에 있는 `nimdsphax` 폴더를 SD 카드의 `/3ds/` 폴더에 복사해 주세요
 1. Copy `menuhax67_installer.3dsx` from the menuhax `.zip` to the `/3ds/` folder on your SD card
-1. Copy Launcher.dat from the folder for your model and region inside the menuhax `.zip` to the root of your SD card
+1. menuhax '.zip' 파일에서, 모델과 국적에 맞는 폴더를 찾아 들어가, Launcher.dat 파일을 복사해 SD 카드의 최상단에 복사해 주세요
 1. SD 카드를 분리해 **타겟 3DS**에 장착해 주세요
 
 ![]({{ "/images/screenshots/kart-root-layout.png" | absolute_url }})
@@ -81,32 +81,32 @@ In this section, you will set up the files that the target 3DS will need to inst
 In this section, you will use Download Play to transfer the exploit data from the source 3DS to the target 3DS, which can be used to install menuhax67, a Homebrew Launcher entrypoint. Your HOME Menu settings will be temporarily inaccessible on the target 3DS while this exploit is active.
 
 1. **소스 3DS**의 전원을 켜 주세요
-    + If you are prompted to set up Luma3DS, just press START to save the configuration
+    + Luma3DS를 설정하는 창이 표시되면, START를 눌러 저장해 주세요
 1. HOME 메뉴에 도달하면, (L 버튼) + (십자키 아래) + (Select)를 눌러 Rosalina 메뉴를 띄워 주세요
 1. "Enable plugin loader"를 활성화 해 주세요
 1. (B)를 눌러 Rosalina 메뉴를 나와 주세요
 1. 마리오 카트 7를 실행해 주세요
-    + Ensure that wireless connectivity is enabled
+    + 실행하기 전 무선 연결이 활성화되어 있는지 확인해 주세요
 1. `로컬 통신 플레이`로 진입해 주세요. (언어별로 메뉴 이름이 다를 수 있음) 메뉴가 표시될 것입니다
-    + If the screen freezes, hold the power button for fifteen seconds to force power off your console, then try again
-    + If you have launched kartdlphax previously, the last selected settings will be loaded. 그 설정이 맞다면, `Use settings`를 누르고 다음 세 과정을 건너뛰어주세요. 설정이 다르다면 `Change settings`를 눌러 계속해 주세요
+    + 화면이 멎는다면, 전원 버튼을 약 15초간 길게 눌러 전원을 강제 종료하고, 다시 시도해 주세요
+    + 이전에 kartdlphax를 실행한 적이 있다면, 마지막으로 지정한 설정이 로드됩니다. 그 설정이 맞다면, `Use settings`를 누르고 다음 세 과정을 건너뛰어주세요. 설정이 다르다면 `Change settings`를 눌러 계속해 주세요
 1. **타겟 3DS**의 콘솔 종류를 선택해 주세요 (`Old 3DS family` 또는 `New 3DS family`)
 1. 시스템 버전에 따라 다음 취약점을 선택해 주세요:
     + 11.16.0: select `xPloitInjector (11.16)`
     + 11.17.0: select `xPloitInjector (11.17)`
 1. 확인 메뉴가 표시됩니다. 설정이 맞다면, `Use settings`를 선택해 주세요
-    + If the settings are not correct, press `Change settings` and modify them accordingly
+    + 표시된 설정이 맞지 않다면, `Change settings`를 눌러 알맞게 조정해 주세요
 1. `방 만들기`를 눌러 주세요 (언어별로 메뉴 이름이 다를 수 있음)
-    + If the source 3DS freezes at this point and you are using a cartridge, try [installing the cartridge to the system](dumping-titles-and-game-cartridges#installing-a-game-cartridge-directly-to-the-system)
+    + 소스 3DS가 여기서 멎으며 카트리지를 이용하고 있다면, [카트리지를 시스템에 설치](dumping-titles-and-game-cartridges#installing-a-game-cartridge-directly-to-the-system)해보세요
 1. **타겟 3DS**의 전원을 켜 주세요
-    + Ensure that wireless connectivity is enabled
+    + 실행하기 전 무선 연결이 활성화되어 있는지 확인해 주세요
 1. **타겟 3DS**에서 다운로드 플레이 앱을 실행해 (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"}), "Nintendo 3DS"를 선택해 주세요
 1. **소스 3DS**에서 만든 방으로 들어가 주세요
 1. **타겟 3DS**가 인식되면, **소스 3DS**에서 "Start"를 선택해 주세요
 1. 멀티플레이어가 로드되면, `Grand Prix` -> `50cc` -> (아무 드라이버) -> `버섯 컵` -> `OK`를 선택해 주세요 (언어별로 명칭이 달라질 수 있음)
 1. 잠시 기다려 주세요 (**소스 3DS**에 진행도가 표시됩니다)
 1. 익스플로잇이 성공했다면, **타겟 3DS**가 3DS ROP xPloit Injector로 부팅됩니다
-    + If the exploit was not successful, power off the **source 3DS** and **target 3DS** and start again from the beginning of `Section III - kartdlphax`
+    + 익스플로잇이 실패했다면, 두 3DS 콘솔 모두 종료한 후 `섹션 III - kartdlphax`의 처음부터 다시 시작해 주세요
 
 #### 섹션 IV - menuhax67 설치
 
@@ -121,11 +121,11 @@ In this section, you will use Download Play to transfer the exploit data from th
 
 #### 섹션 VI - menuhax67 제거
 
-In this section, you will use the Homebrew Launcher to remove menuhax67, which will let you access the HOME Menu Settings option normally.
+이 섹션에서, 홈브류 런처를 사용해 menuhax67을 제거합니다. 이 작업을 통해 HOME 메뉴 설정이 정상적으로 복구될 것입니다.
 
 {% include_relative include/launch-hbl-dlp.txt %}
-1. Launch menuhax67_installer from the list of homebrew
-1. Select REMOVE menuhax67
+1. 홈브류 목록에서 menuhax67_installer를 실행해 주세요
+1. REMOVE menuhax67를 선택해 주세요
 1. When you see "done.", press (A), then press (A) on "EXIT to menu"
 
 ___
