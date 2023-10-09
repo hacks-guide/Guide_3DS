@@ -45,7 +45,7 @@ title: "문제 해결"
 {% capture compat %}
 <summary><u>MicroSD Card - init failed</u></summary>
 
-Your SD card is most likely acting weird. Try reformatting your SD card ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). If this doesn't work, try another SD card.
+SD 카드에 이상이 있을 가능성이 높습니다. 다시 포맷해 보세요 ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). 이렇게까지 했는데도 효과가 없으면, 다른 SD 카드로 시도해보세요.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -143,7 +143,7 @@ To fix this, you will need to determine which folder contains your data. 이것�
 
 {% capture compat %}
 <summary><u>DSiWare 관리 메뉴가 BB3 multihax 메뉴를 표시하지 않고 깨짐</u></summary>
-`F00D43D5.bin`이 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 폴더 내에 있는 유일한 파일이어야 합니다. If it is, then re-create it with the [Bannerbomb3 Injector](https://zoogie.github.io/web/bb3).
+`F00D43D5.bin`이 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 폴더 내에 있는 유일한 파일이어야 합니다. 만약 그렇다면, [BannerBomb3 툴](https://zoogie.github.io/web/bb3)에서 다시 생성해 주세요.
 
 또한, `bb3.bin`이 SD 카드의 최상위 디렉토리에 있어야 합니다. If it is missing, then download the latest release of [Bannerbomb3](https://github.com/zoogie/Bannerbomb3/releases/download/v3.0/Release_v3.0.zip) (direct download), and copy the `bb3.bin` file from the Release `.zip` to the root of your SD card.
 
@@ -161,7 +161,7 @@ To fix this, you will need to determine which folder contains your data. 이것�
 {% capture compat %}
 <summary><u>DSiWare 관리 메뉴에서 물음표가 표시됩니다</u></summary>
 
-`F00D43D5.bin` 파일에 문제가 있습니다. (잘못된 파일이거나 다른 3DS용 파일) Re-create your `F00D43D5.bin` file with the [Bannerbomb3 Injector](https://zoogie.github.io/web/bb3), ensuring that you use the `movable.sed` file for your console.
+`F00D43D5.bin` 파일에 문제가 있습니다. (잘못된 파일이거나 다른 3DS용 파일) 해당 콘솔의 `movable.sed` 파일을 이용해, [BannerBomb3 툴](https://zoogie.github.io/web/bb3)에서 `F00D43D5.bin` 파일을 다시 생성해 주세요.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -328,7 +328,7 @@ You can also try resetting your browser save data:
 {% capture compat %}
 <summary><u>Browserhax QR 코드나 URL을 열면 브라우저가 꺼집니다</u></summary>
 
-이러한 브라우저 기반의 익스플로잇은 불안정하고 자주 종료됩니다. 그러나 종종 다음 단계를 수행하면 고쳐질 수 있습니다.
+이러한 브라우저 기반의 취약점은 불안정하고 자주 종료됩니다. 그러나 종종 다음 단계를 수행하면 고쳐질 수 있습니다.
 
 1. 브라우저를 실행하고 브라우저 설정을 실행해 주세요
 1. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
@@ -400,16 +400,16 @@ SSLoth 프록시 설정이 잘못 설정되었습니다. 페이지의 SSLoth 섹
 1. Tap Up/Down Arrows to set the correct Day, Month and Year.
 1. Select OK to confirm.
 
-If the problem persists:
+문제가 지속될 경우:
 
 + Ensure that `arm11code.bin`, `browserhax_hblauncher_ropbin_payload.bin`, and `boot.3dsx` are on the root of the SD card (not inside of any folder)
-+ Ensure that you selected the correct payload for your region AND system version
-+ Ensure that your region settings look [like this](/images/screenshots/skater_lang.png)
-+ Try resetting your browser data:
++ 올바른 지역과 시스템 버전을 선택했는지 다시 확인해 보세요
++ 지역 설정이 제대로 되어 있는지 확인해 주세요 [참고 이미지](/images/screenshots/skater_lang.png)
++ 브라우저 데이터 삭제를 시도해 보세요:
     1. 브라우저를 실행하고 브라우저 설정을 실행해 주세요
     1. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initilize Save Data" or "Clear All Save Data")
     1. 익스플로잇을 다시 시도해 주세요
-+ Try changing the system language to something other than the current language
++ 시스템 언어를 현재 언어가 아닌 다른 언어로 변경해 보세요
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -428,7 +428,7 @@ If the problem persists:
 
 
 {% capture compat %}
-<summary><u>An exception occured or "DLL_HEAP_INFORMATION" when pressing GO! </u></summary>
+<summary><u>"GO! GO!" 선택 시 "An exception occurred" 또는 오류 화면이 표시됩니다 </u></summary>
 
 이미 커스텀 펌웨어가 설치되어 있을 수 있습니다. [CFW 확인](checking-for-cfw) 을 하는 것을 권장합니다.
 
@@ -562,7 +562,7 @@ You did not copy everything from `finalize.zip` to the root of your SD card. Rem
 {% capture compat %}
 <summary><u>Error #12: Copy (file).db fail</u></summary>
 
-Ensure that your SD card is not [locked](/images/sdlock.png). If the SD card is not locked and you continue to get this error, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+Ensure that your SD card is not [locked](/images/sdlock.png). 이 상태가 아님에도 문제가 지속될 경우, [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp) 에 연락해 도움을 청하세요.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -582,7 +582,7 @@ The script has detected that the Nintendo 3DS folder is missing AND that you hav
 1. (Home)을 눌러 작업 메뉴를 열어 주세요
 1. "Scripts..."를 선택해 주세요
 1. "finalize"를 선택해 주세요
-1. Follow the prompts in the script, answering any questions that you are asked 
+1. 스크립트 표시에 따라 필요한 행동을 취해주세요 
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -603,9 +603,9 @@ The script has detected that the Nintendo 3DS folder is missing AND that you hav
 
 알림 LED가 깜빡인다면:
 
-+ **White**: Your 3DS was not able to find `boot.firm` on your SD card or on internal memory.
-+ **Magenta**: Your 3DS was not able to find `boot.firm` on your SD card. 내부 메모리에 있는 `boot.firm`을 확인했으나, 파일이 손상되었습니다.
-+ **Red**: Your 3DS was able to find `boot.firm` on both your SD card and on internal memory, but both files are corrupted.
++ **하얀색**: SD 카드 혹은 내부 메모리에서 `boot.firm`을 찾지 못했습니다.
++ **다홍색**: SD 카드에서 `boot.firm`을 찾지 못했습니다. 내부 메모리에 있는 `boot.firm`을 확인했으나, 파일이 손상되었습니다.
++ **빨간색**: `boot.firm` 파일을 찾았지만, SD 카드와 내부 메모리에 있는 파일 모두가 손상되었습니다.
 
 [Luma3DS의 최신 버전](https://github.com/LumaTeam/Luma3DS/releases/latest)을 다운받아 압축을 해제해, 새 `boot.firm` 파일을 SD 카드의 루트 디렉토리에 넣어주세요. (파일이 이미 있다면 덮어씌워주세요.) `boot.firm` 파일이 계속 문제가 있는 것으로 인식된다면, SD 카드에 문제가 있는지 확인해야 할 수 있습니다: ([Windows](h2testw-(windows)), [Linux](f3-(linux)), or [macOS](f3xswift-(mac))) 또, WinRAR로 압축 해제한 파일은 3DS에서 문제를 자주 일으키는 것으로 알려져 있습니다.
 
@@ -737,9 +737,9 @@ SD 카드가 읽혔는지 확인하려면 SELECT를 누른 채 부팅해 아래 
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Opening the HOME Menu settings crashes the console or loads the Homebrew Launcher</u></summary>
+<summary><u>HOME 메뉴 실행시 크래시가 발생하거나 Homebrew Launcher가 실행될 경우</u></summary>
 
-Your console likely still has menuhax67 installed. To uninstall menuhax67, download the latest release of [menuhax67](https://github.com/zoogie/menuhax67/releases/latest) (the menuhax `.zip`), then follow the ["Uninstall menuhax67" section](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits/menuhax67#Uninstall_menuhax67) here.
+menuhax67가 여전히 설치되어 있는 듯합니다. To uninstall menuhax67, download the latest release of [menuhax67](https://github.com/zoogie/menuhax67/releases/latest) (the menuhax `.zip`), then follow the ["Uninstall menuhax67" section](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits/menuhax67#Uninstall_menuhax67) here.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -779,9 +779,9 @@ Your console likely still has menuhax67 installed. To uninstall menuhax67, downl
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Manually entering Homebrew Launcher</u></summary>
+<summary><u>Homebrew Launcher 수동 접근</u></summary>
 
-If you are missing the Homebrew Launcher application from your HOME Menu, you can follow these instructions to manually enter the Homebrew Launcher. (You will need [boot.3dsx and boot.firm](https://github.com/LumaTeam/Luma3DS/releases/latest) on the root of your SD card.)
+HOME 메뉴를 통해 Homebrew Launcher 애플리케이션에 접근이 불가능할 경우, 다음 방법을 통해 수동으로 Homebrew Launcher에 접근할 수 있습니다. (You will need [boot.3dsx and boot.firm](https://github.com/LumaTeam/Luma3DS/releases/latest) on the root of your SD card.)
 
 {% include_relative include/launch-hbl-dlp.txt %}
 
@@ -789,7 +789,7 @@ If you are missing the Homebrew Launcher application from your HOME Menu, you ca
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Turning off Parental Controls</u></summary>
+<summary><u>청소년 보호 기능 끄기</u></summary>
 
 You can disable the Parental Controls feature by going to System Settings -> Parental Controls and inserting the PIN, then pressing "Clear Settings", then "Delete" to remove it.
 However, if you do not know the PIN and therefore cannot access the console's settings, you will need to disable it. In order to do this, you need to obtain your console's master key (mkey):
