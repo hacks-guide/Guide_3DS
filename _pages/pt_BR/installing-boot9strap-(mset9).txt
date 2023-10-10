@@ -1,12 +1,12 @@
 ---
-title: "Installing boot9strap (MSET9)"
+title: "Instalando boot9strap (MSET9)"
 ---
 
 {% include toc title="Tabela de Conteúdo" %}
 
 {% capture technical_info %}
 <summary><em>Detalhes técnicos (opcional)</em></summary>
-[MSET9](https://github.com/zoogie/MSET9) is an exploit for the System Settings application developed by [zoogie](https://github.com/zoogie). It exploits a flaw where the ID1 (the second 32-character folder name inside of the Nintendo 3DS folder, inside of the ID0) can be *any* name as long as it is 32 characters. Performing a specific sequence of actions results in the console executing the instructions that are encoded into the ID1 folder name, which can be used to grant full control over the 3DS.
+[MSET9](https://github.com/zoogie/MSET9) é um exploit para o aplicativo de Configurações do Sistema desenvolvido por [zoogie](https://github.com/zoogie). Ele faz uso de um erro onde a ID1 (a pasta de 32 caractéres dentro da pasta Nintendo 3DS, dentro de ID0) pode ter *qualquer* nome desde que seja composto por 32 caractéres. Fazer uma sequência de ações específicas resultará no console executando instruções que estão codificadas no nome da pasta da ID1, que pode ser utilizada para garantir controle total sobre o 3DS.
 
 {% endcapture %}
 <details>{{ technical_info | markdownify }}</details>
@@ -14,29 +14,29 @@ title: "Installing boot9strap (MSET9)"
 
 ### Notas de Compatibilidade
 
-This method requires a computer running Windows or Linux. macOS is NOT supported, nor are phones or tablets. If you do not have access to Windows or Linux, you will need to use an [alternate exploit](alternate-exploits).
+Esse método requer um computador executando Windows ou Linux. macOS NÃO é suportado, nem celulares ou tablets. Se você não tem acesso a Windows ou Linux, você vai precisar usar um [exploit alternativo](alternate-exploits).
 {: .notice--warning}
 
 ### O que é necessário
 
-* The latest release of [MSET9](https://github.com/zoogie/MSET9/releases/latest) (the Release `.zip` file)
-* Any 3.x version of [Python](https://www.python.org/downloads/) **installed on your computer**
-    + If you are on Linux, you likely already have Python 3. Verifique abrindo um terminal e digitando `python3 -V`. Se este retornar um número de versão, ele funcionará para este guia.
+* A versão mais recente do [MSET9](https://github.com/zoogie/MSET9/releases/latest) (o arquivo `.zip`)
+* Qualquer versão 3.x de [Python](https://www.python.org/downloads/) **instalada no seu computador**
+    + Se você estiver em Linux, você provavelmente já tem Python 3. Verifique abrindo um terminal e digitando `python3 -V`. Se este retornar um número de versão, ele funcionará para este guia.
 
 ### Instruções
 
 #### Seção I - Preparação
 
-In this section, you will prepare the SD card data necessary for the MSET9 exploit to trigger.
+Nesta seção, você irá preparar os dados no seu cartão SD necessários para que o exploit MSET9 possa ser ativado.
 
-1. Power on your console **with your SD card inserted**
-1. Open Mii Maker
-1. Wait for your console to reach the "Welcome to Mii Maker" screen, then exit Mii Maker
-    + You may see [this screen](/images/screenshots/mset9/mii-extdata.png), which indicates the necessary data has been created
-    + If you just reach the normal Mii Maker screen, exit Mii Maker and continue to the next step
+1. Ligue o seu console **com o cartão SD inserido**
+1. Abra o Mii Maker
+1. Espere seu console chegar a tela "Bem-vindo ao Mii Maker", então saia do Mii Maker
+    + Talvez você veja [esta tela](/images/screenshots/mset9/mii-extdata.png),o que indica que os dados necessários já foram criados
+    + Se você só chegou na tela normal do Mii Maker, saia do Mii Maker e continue para o próximo passo
 1. Desligue seu console
 1. Insira o cartão SD no seu computador
-1. Copy everything from the Release `.zip` to the root of your SD card, overwriting any existing files
+1. Copie tudo do Release `.zip` para a raiz do seu cartão SD, substituindo quaisquer arquivos existentes
 
     ![MSET9 root layout](/images/screenshots/mset9/mset9-root-layout.png)
     {: .notice--info}
