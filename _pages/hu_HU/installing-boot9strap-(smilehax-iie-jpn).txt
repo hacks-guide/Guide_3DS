@@ -1,10 +1,10 @@
 ---
-title: "Installing boot9strap (smilehax-IIe-JPN)"
+title: "Boot9strap telepítése (smilehax-IIe-JPN)"
 ---
 
 {% include toc title="Tartalomjegyzék" %}
 
-This set of instructions does not support the USA and EUR versions of SmileBASIC. The guide for those versions can be found [here](installing-boot9strap-(smilehax-iie)).
+Ezek a lépések nem támogatják a SmileBASIC USA vagy EUR verzióját. Az útmutató ezen a verziókhoz [itt](installing-boot9strap-(smilehax-iie)) található.
 {: .notice--warning}
 
 {% capture technical_info %}
@@ -28,7 +28,7 @@ A [smilehax-IIe](https://github.com/zoogie/smilehax-IIe) egy exploit a "SmileBAS
 ### Lépések
 
 #### I. rész - Előkészületek
-1. Make sure SmileBASIC is updated to the latest version
+1. Ellenőrizd, hogy a SmileBASIC a legutolsó verzióra frissített
 1. Kapcsold ki a konzolod
 1. Helyezd az SD kártyád a számítógépbe
 1. Másold át a `boot.firm` és `boot.3dsx` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
@@ -36,14 +36,15 @@ A [smilehax-IIe](https://github.com/zoogie/smilehax-IIe) egy exploit a "SmileBAS
 1. Hozz létre egy mappát `boot9strap` néven az SD kártya gyökerében
 1. Másold át a `boot9strap.firm` fájlt és a `boot9strap.firm.sha` fájlt a boot9strap `.zip` fájlból az SD kártyád `/boot9strap/` mappájába
 1. Másold át a `SafeB9SInstaller.bin` fájlt a SafeB9SInstaller `.zip`-ből az SD kártyád gyökerébe
-1. Copy `new3ds_JPN.bin` or `old3ds_JPN.bin` (depending on your model) from `otherapps_with_CfgS_11.17.zip` to the root of your SD card, then rename the payload to `otherapp.bin`
+1. Másold a `new3ds_JPN.bin` vagy az `old3ds_JPN.bin` fájlt (függően a modelledtől) az `otherapps_with_CfgS_11.17.zip` fájlból a az SD kártyád gyökerébe, majd nevezd át `otherapp.bin` névre
     + Ne add hozzá a `.bin` kiterjesztést, ha nem látod
-1. Transfer `SH2E-JPN.300.wav` from the Release_sh2e `.zip` to a device that can play `.wav` files, for example a phone
+1. Vidd át a `SH2E-JPN.300.wav` fajlt a Release_sh2e `.zip`-ből egy eszközre, ami le tud játszani 
+ `.wav` fájlokat, például egy telefonra
 1. Hozz létre egy mappát `3ds` néven az SD kártyád gyökerében, ha még nem létezik ilyen
     + Ez a mappa tárolja a homebrew applikációkat és adataikat; ez mást mint a `Nintendo 3DS` mappa, amit a konzol automatikusan generál
 1. Másold át a `nimdsphax` mappát a nimdsphax `.zip`-ből az SD kártya gyökerében található `3ds` mappába
-1. Navigate to `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `0004000e`
-1. Rename the `00117200` folder to `_00117200`
+1. Navigálj a `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `0004000e` mappába az SD kártyádon`
+1. Nevezd át a `00117200` mappát `_00117200`-ra
 1. Tedd vissza az SD kártyád a konzoldba
 1. Kapcsold be a konzolod
 
@@ -60,7 +61,7 @@ A [smilehax-IIe](https://github.com/zoogie/smilehax-IIe) egy exploit a "SmileBAS
 #### II. rész - smilehax
 
 1. Indítsd el az SmileBASIC alkalmazást
-    + DO NOT update the game if prompted
+    + NE FRISSÍTSD a játékot, ha felajánlja
 1. Válaszd a "Publish/Download Projects" opciót
 1. SVálaszd a "Download (Receive) using Public Key" opciót
 1. Nyomd meg a "Yes" gombot
@@ -75,7 +76,7 @@ A [smilehax-IIe](https://github.com/zoogie/smilehax-IIe) egy exploit a "SmileBAS
 1. Válaszd a 300BPS-t majd játszd le a `.wav` fájlt
 1. Ha végzett nyomd meg a "Yes"-t majd az "OK"-t
 1. Nyomd meg a START gombot
-1. Select the SH2E-JPN.TXT file, then press OK, then "Yes" to execute it
+1. Válaszd a SH2E-JPN.TXT fájlt, majd nyomj "OK"-t, azután "Yes"-t a végrehajtásához
 1. Ekkor a konzolodnak be kell bootolnia a Homebrew Launcher-be
 1. Indítsd el a nimdsphax-et a homebrew listájáról
 1. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
