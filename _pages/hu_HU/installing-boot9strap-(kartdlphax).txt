@@ -7,15 +7,15 @@ title: "Boot9strap telepítése (kartdlphax)"
 {% capture technical_info %}
 <summary><em>Technikai részletek (opcionális)</em></summary>
 
-In order to install custom firmware on our console, we need to get Homebrew Launcher access.
+Az egyedi firmware telepítéshez a konzolodra, szükséged van Homebrew Launcher hozzáférésre.
 
 Ennek eléréséhez a Download Play funkcionalitását használjuk a Mario Kart 7-nek, egy egyedi firmware-rel, valamint egy egyedi játék pluginnel már telepített 3DS használatával.
 
-This custom plugin will send a hacked payload to an unhacked console, which then exploits the system in order to inject menuhax67, which will allow us to get Homebrew Launcher access.
+Ez az egyedi plugin egy hackelt payload-ot küld a nem hackelt konzolra, ami exploitolja a rendszert, azért, hogy injektálja a menuhax67-et, ami Homebrew hozzáférést biztosít.
 
-Once we have Homebrew Launcher access, we can run nimdsphax to install boot9strap.
+Ha már van Homebrew Launcher hozzáférésünk, tudjuk futtatni a nimdsphax-t a boot9strap telepítéséhez.
 
-See [here](https://github.com/PabloMK7/kartdlphax) for information about kartdlphax, [here](https://github.com/zoogie/menuhax67) for information about menuhax67, and [here](https://github.com/luigoalma/nimdsphax) for information about nimdsphax.
+További információt kartdlphax-ról [itt](https://github.com/PabloMK7/kartdlphax), a menuhax67-ről [itt](https://github.com/zoogie/menuhax67), a nimdsphax-ról [itt](https://github.com/luigoalma/nimdsphax) találsz.
 
 {% endcapture %}
 <details>{{ technical_info | markdownify }}</details>
@@ -25,11 +25,11 @@ See [here](https://github.com/PabloMK7/kartdlphax) for information about kartdlp
 
 Ahhoz, hogy követhesd ezeket a lépéseket, a következőkre van szükséged:
 
-+ A second 3DS with custom firmware (the **source 3DS**) that is the same region as the 3DS you are trying to modify (the **target 3DS**)
-    + The consoles must be USA, JPN, or EUR region consoles
-    + The source 3DS can be [region changed](region-changing) to match the target 3DS if necessary
-+ A physical or digital copy of Mario Kart 7 that is the same region as both consoles
-+ An SD card for both consoles
++ Egy második 3DS egyedi firmware-rel (a **forrás 3DS**), aminek ugyanaz a régiója, mint annak a 3DS-nek, amit módosítani szeretnél (a **cél 3DS**)
+    + A konzoloknak USA, JPN, vagy EUR régiós konzoloknak kell lenniük
+    + A forrás 3DS lehet [regió cserélt](region-changing), hogy egyezzen a cél 3DS-sel, ha szükséges
++ Egy fizikai vagy digitális példánya a Mario Kart 7-nek, aminek a régiója egyezik mindkét konzol régiójával
++ Egy SD kártyára mindkét konzolhoz
 
 ### Amire szükséged lesz
 
@@ -37,15 +37,15 @@ Ahhoz, hogy követhesd ezeket a lépéseket, a következőkre van szükséged:
 * A [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) legfrisseb verziója (közvetlen letöltés)
 * A [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) legfrisseb verziója (közvetlen letöltés)
 * A [nimdsphax](https://github.com/luigoalma/nimdsphax/releases/download/v1.0/nimdsphax_v1.0.zip) legfrissebb verziója (közvetlen letöltés)
-* The latest release of [menuhax67](https://github.com/zoogie/menuhax67/releases/latest)
+* A [menuhax67](https://github.com/zoogie/menuhax67/releases/latest) legújabb kiadása
 * A [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) legújabb kiadása (a Luma3DS `.zip` fájl)
 
-#### Section I - Prep Work (source 3DS)
+#### I. rész - Előkészületi munka (forrás 3DS)
 
 Ebben a fejezetben befogod állítani a forrás 3DS-ed (a 3DS egyedi firmware-rel), hogy küldje az exploit adatot a cél 3DS-nek.
 
 1. Csatlakoztasd a **forrás 3DS** SD kártyáját a számítógépedhez
-1. Copy `boot.firm` from the Luma3DS `.zip` to the root of the **source 3DS**'s SD card, replacing any existing file
+1. Másold át a `boot.firm` fájlt a Luma3DS `.zip`-ből a **cél 3DS** SD kártyája gyökerébe, lecserélve bármilyen már meglévő fájlt
     + Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne
 1. Másold a kartdlphax `plugin.3gx` fájlját a **forrás 3DS** SD kártyájának következő könyvtárába függően **a régiójától Mario Kart 7 példányodnak**:
     + USA: `luma/plugins/0004000000030800`
@@ -56,7 +56,7 @@ Ebben a fejezetben befogod állítani a forrás 3DS-ed (a 3DS egyedi firmware-re
 
 #### II. rész - Előkészületi munka (cél 3DS)
 
-In this section, you will set up the files that the target 3DS will need to install custom firmware.
+Ebben a fejezetben le fogod tölteni a szükséges fájlokat amire a cél 3DS-nek szüksége van az egyedi firmware telepítéséhez.
 
 1. Csatlakoztasd a **cél 3DS** SD kártyáját a számítógépedhez
 1. Másold át a `boot.firm` és `boot.3dsx` fájlt a Luma3DS `.zip`-ből a **cél 3DS** SD kártyája gyökerébe
@@ -66,8 +66,8 @@ In this section, you will set up the files that the target 3DS will need to inst
 1. Hozz létre egy mappát `3ds` néven az SD kártyád gyökerében, ha még nem létezik ilyen
     + Ez a mappa tárolja a homebrew applikációkat és adataikat; ez mást mint a `Nintendo 3DS` mappa, amit a konzol automatikusan generál
 1. Másold át a `nimdsphax` mappát a nimdsphax `.zip`-ből az SD kártya gyökerében található `3ds` mappába
-1. Copy `menuhax67_installer.3dsx` from the menuhax `.zip` to the `/3ds/` folder on your SD card
-1. Copy Launcher.dat from the folder for your model and region inside the menuhax `.zip` to the root of your SD card
+1. Másold át a `menuhax67_installer.3dsx`+t a menuhax `.zip`-ből az SD kártya gyökerében található `3ds` mappába
+1. Másold át a ´Launcher.dat´ fájlt a konzolod modellnek és régiónak megfelelő mappából a menuhax `.zip` fájlból az SD kártyád gyökerébe
 1. Távolítsd el az SD kártyát és rakd be a **cél 3DS**-be
 
 ![]({{ "/images/screenshots/kart-root-layout.png" | absolute_url }})
@@ -76,9 +76,9 @@ In this section, you will set up the files that the target 3DS will need to inst
 ![]({{ "/images/screenshots/kart-3ds-layout.png" | absolute_url }})
 {: .notice--info}
 
-#### Section III - kartdlphax
+#### III. rész - kartdlphax
 
-In this section, you will use Download Play to transfer the exploit data from the source 3DS to the target 3DS, which can be used to install menuhax67, a Homebrew Launcher entrypoint. Your HOME Menu settings will be temporarily inaccessible on the target 3DS while this exploit is active.
+Ebben a fejelzetben a Download Play-t fogod használni, hogy átvidd az exploit adatot a forrás 3DS-ről a cél 3DS-re, ami arra használható, hogy telepítsd a menuhax67-et, egy Homebrew Launcher belépési pontot. A HOME Menu beállításaid átmenetileg felülírásra kerülnek a cél 3DS-en, amíg az exploit aktív.
 
 1. Kapcsold be a **forrás 3DS**-t
     + Ha rákérdez arra, hogy állítsd be a Luma3DS-t, csak nyomj START-ot, hogy mentse a konfigurációt
@@ -108,7 +108,7 @@ In this section, you will use Download Play to transfer the exploit data from th
 1. Ha az exploit sikeres volt, akkor a **cél 3DS** be kell bootoljon a 3DS ROP xPloit Injector-ba
     + Ha az exploit nem volt sikeres, kapcsold ki a **forrás 3DS**-t és a **cél 3DS**-t, és kezd újra a `III. rész - kartdlphax` kezdetétől
 
-#### Section IV - Installing menuhax67
+#### IV. rész- A menuhax67 telepítése
 
 {% include_relative include/menuhax67-install.txt %}
 
@@ -117,14 +117,14 @@ In this section, you will use Download Play to transfer the exploit data from th
 {% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
 {%- include_relative include/configure-luma3ds.txt %}
 
-#### Section VI - Removing menuhax67
+#### VI. rész- A menuhax67 eltávolítása
 
-In this section, you will use the Homebrew Launcher to remove menuhax67, which will let you access the HOME Menu Settings option normally.
+Ebben a fejezetben a Homebrew Launcher-t fogod használni a menuhax67 eltávolítására, ami lehetővé teszi a HOME Menu beállítások opcióinak normális elérését.
 
 {% include_relative include/launch-hbl-dlp.txt %}
 1. Indítsd el a menuhax67_installer-t a homebrew listából
-1. Select REMOVE menuhax67
-1. When you see "done.", press (A), then press (A) on "EXIT to menu"
+1. Válaszd a REMOVE menuhax67 opciót
+1. Ha azt látod, hogy "done.", nyomj (A) gombot, majd ismét (A)-t az "EXIT to menu" opción
 
 {% include_relative include/luma3ds-installed-note.txt %}
 ___
