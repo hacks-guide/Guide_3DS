@@ -123,7 +123,7 @@ Il tuo codice amico non può più usare il bot perché il tuo 3DS non ha accetta
 
 Il sito ha stabilito che il tuo file `movable.sed` non può essere decriptato. Assicurati di aver dato l'ID0 corretto al sito web. Se il tuo ID0 è corretto, allora non potrai utilizzare Seedminer e dovrai utilizzare un metodo alternativo.
 
-New 3DS users can follow [Installing boot9strap (super-skaterhax)](installing-boot9strap-(super-skaterhax)), while Old 3DS users can follow [Installing boot9strap (MSET9)](installing-boot9strap-(mset9)). If you cannot do MSET9 for any reason, you will need to follow a method that requires additional games or hardware.
+Gli utenti di New 3DS possono seguire l'[Installazione di boot9strap (super-skaterhax)](installing-boot9strap-(super-skaterhax)), mentre gli utenti di Old 3DS possono seguire l'[Installazione di boot9strap (MSET9)](installing-boot9strap-(mset9)). Se per qualche motivo non puoi eseguire MSET9, dovrai seguire un metodo che richiede ulteriori giochi o dispositivi.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -436,24 +436,24 @@ Probabilmente significa che hai già un custom firmware. Dovresti [verificare la
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-## Installing boot9strap (MSET9)
+## Installazione di boot9strap (MSET9)
 
 {% capture compat %}
 <summary><u>(title/import).db does not exist, create them now?" / invalid database</u></summary>
 
-Full error messages:
+Messaggi di errore completi:
 * "Nintendo 3DS/\<ID0>/\<ID1>/dbs/\<import.db and/or title.db> does not exist on SD card! Create them now? (type yes/no)"
 * "Invalid database"
 
-This happens when no valid title database is present, usually because you never installed any titles from eShop on this SD card.
+Questo accade quando non è presente alcun database valido dei titoli, di solito perché non hai mai installato alcun titolo da eShop su questa scheda SD.
 
-1. Type "yes", then press Enter
-1. Insert the SD card into your console
+1. Digita "yes", quindi premi Invio
+1. Inserisci la scheda SD nella tua console
 1. Accendi la tua console
-1. Navigate to System Settings -> Data Management -> Nintendo 3DS -> Software -> Reset ([visual instructions](/images/screenshots/database-reset.jpg))
+1. Entra in Impostazioni della console -> Gestione dati -> Nintendo 3DS -> Software -> Reset ([istruzioni visive](/images/screenshots/database-reset.jpg))
 1. Spegni la tua console
-1. Insert the SD card into your computer
-1. Return to [Section I Step 7](installing-boot9strap-(mset9)#section-i---prep-work)
+1. Inserisci la scheda SD nel tuo computer
+1. Ritorna alla [Sezione I Passo 7](installing-boot9strap-(mset9)#section-i---prep-work)
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -461,7 +461,7 @@ This happens when no valid title database is present, usually because you never 
 {% capture compat %}
 <summary><u>[WinError 5] Access is denied</u></summary>
 
-The SD card may be write-locked. If you are using a full-size SD card, ensure that the lock is flipped in the [upright position](/images/sdlock.png). Otherwise, try ejecting and reinserting your SD card.
+La scheda SD può essere protetta dalla scrittura. Se stai utilizzando una scheda SD standard, assicurati che il blocco sia impostato [verso l'alto](/images/sdlock.png). Altrimenti, prova a espellere e reinserire la scheda SD.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -470,27 +470,27 @@ The SD card may be write-locked. If you are using a full-size SD card, ensure th
 {% capture compat %}
 <summary><u>UnboundLocalError: cannot access local variable 'haxid1_path'</u></summary>
 
-This can happen when Option 1 stopped because of an error and there is an incomplete installation.
+Questo può accadere quando l'opzione 1 viene interrotta a causa di un errore e ora si trova un'installazione incompleta.
 
-1. Close the script window
-1. Execute the `mset9.py` script on the root of the SD card
+1. Chiudi la finestra dello script
+1. Esegui lo script `mset9.py` nella directory principale della tua scheda SD
     + **Windows**: Doppio click su `mset9.bat`
-        +If this doesn't work: hold SHIFT and right-click anywhere in the SD card window, then click the option that opens Terminal, PowerShell, or Command Prompt, then type `py -3 mset9.py` and press Enter
+        +Se non funziona: tieni premuto Maiusc e fai clic con il tasto destro del mouse in qualsiasi punto della finestra della scheda SD, quindi fai clic sull'opzione che apre il terminale, PowerShell o Prompt dei comandi, quindi digita `py -3 mset9. y` e premi Invio
     + **Linux**: apri una finestra del terminale, `cd` nella directory principale della tua scheda SD, quindi digita `python3 mset9.py` e premi Invio
     + Dovresti vedere una finestra con scritto "MSET9 ... SETUP by zoogie"
 1. Digita il numero corrispondente al modello di console e alla versione, quindi premi Invio
-1. Type `4`, then press Enter to remove MSET9
-1. Return to the [beginning of Section I](installing-boot9strap-(mset9)#section-i---prep-work)
+1. Digita `4`, quindi premi Invio per rimuovere MSET9
+1. Ritorna all'[inizio della Sezione I](installing-boot9strap-(mset9)#section-i---prep-work)
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Red screen after reinserting SD card (Section II Step 11)</u></summary>
+<summary><u>Schermata rossa dopo il reinserimento della scheda SD (Sezione II Passo 11)</u></summary>
 
-You may be missing `SafeB9S.bin` from the root of your SD card, or the file may be corrupted. Copy it from the `SDMC` folder in the MSET9 `.zip`, replacing any existing files.
+Potrebbe mancarti il file `SafeB9S.bin` dalla directory principale della tua scheda SD, o il file potrebbe essere danneggiato. Copialo dalla cartella `SDMC` dell'archivio `.zip` di MSET9, sostituendo qualsiasi file esistente.
 
-Alternatively, your SD card may be improperly formatted or partitioned. Try reformatting your SD card: [Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)) *(this will wipe your SD card data)*
+Altrimenti, la scheda SD potrebbe essere formattata o partizionata in modo errato. Prova a riformattare la tua scheda SD: [Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)) *(questo cancellerà i dati della tua scheda SD)*
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -498,7 +498,7 @@ Alternatively, your SD card may be improperly formatted or partitioned. Try refo
 {% capture compat %}
 <summary><u>assert(id0_count == 1) AssertionError</u></summary>
 
-You have multiple ID0 folders. To determine the correct folder, follow these instructions:
+Hai più cartelle ID0. Per determinare la cartella corretta, segui queste istruzioni:
 
 1. Rinomina la cartella `Nintendo 3DS` in `BACKUP_Nintendo 3DS`
 1. Reinserisci la scheda SD nella tua console
@@ -508,13 +508,13 @@ You have multiple ID0 folders. To determine the correct folder, follow these ins
 1. Spegni la tua console
 1. Inserisci la scheda SD nel tuo computer
 1. Entra nella cartella `Nintendo 3DS` della tua scheda SD
-1. Write down the first few characters of the folder you see
-    + This is your true ID0, which we will keep in the real Nintendo 3DS folder
-1. Delete the ID0 from the current `Nintendo 3DS` folder
-1. Move the true ID0 folder from the `BACKUP_Nintendo 3DS` folder to the `Nintendo 3DS` folder
-1. If it exists, move the `Private` folder from the `BACKUP_Nintendo 3DS` folder to the `Nintendo 3DS` folder
+1. Trascrivi i primi caratteri della cartella che vedi
+    + Questo è il tuo vero ID0, che manterremo nella cartella Nintendo 3DS reale
+1. Elimina la cartella ID0 dalla cartella `Nintendo 3DS` corrente
+1. Sposta la vera cartella ID0 dalla cartella `BACKUP_Nintendo 3DS` nella cartella `Nintendo 3DS`
+1. Se esiste, sposta la cartella `Private` dalla cartella `BACKUP_Nintendo 3DS` nella cartella `Nintendo 3DS`
 
-Once you've done this, continue from [Section I Step 7](installing-boot9strap-(mset9)#section-i---prep-work).
+Al termine, continua dalla [Sezione I Passo 7](installing-boot9strap-(mset9)#section-i---prep-work).
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -522,61 +522,61 @@ Once you've done this, continue from [Section I Step 7](installing-boot9strap-(m
 {% capture compat %}
 <summary><u>assert(mii_ok==1) AssertionError</u></summary>
 
-Your SD card does not have Mii Maker Data, which is necessary for this exploit to run.
+La tua scheda SD non ha i dati del Centro di creazione Mii, necessari per il funzionamento di questo exploit.
 
-1. Close the script window
-1. Execute the `mset9.py` script on the root of the SD card
+1. Chiudi la finestra dello script
+1. Esegui lo script `mset9.py` nella directory principale della tua scheda SD
     + **Windows**: Doppio click su `mset9.bat`
         + Se non funziona: tieni premuto Maiusc e fai clic con il tasto destro del mouse in qualsiasi punto della finestra della scheda SD, quindi fai clic sull'opzione che apre il terminale, PowerShell o Prompt dei comandi, quindi digita `py -3 mset9. y` e premi Invio
     + **Linux**: apri una finestra del terminale, `cd` nella directory principale della tua scheda SD, quindi digita `python3 mset9.py` e premi Invio
     + Dovresti vedere una finestra con scritto "MSET9 ... SETUP by zoogie"
 1. Digita il numero corrispondente al modello di console e alla versione, quindi premi Invio
-1. Type `4`, then press Enter to remove MSET9
-1. Insert the SD card into your console
+1. Digita `4`, quindi premi Invio per rimuovere MSET9
+1. Inserisci la scheda SD nella tua console
 1. Accendi la tua console
-1. Launch Mii Maker
+1. Avvia il Centro di creazione Mii
 1. Attendi che la console raggiunga la schermata "Benvenuto nel Centro di creazione Mii", quindi esci dall'applicazione
 1. Spegni la tua console
-1. Insert the SD card into your computer
-1. Return to [Section I Step 7](installing-boot9strap-(mset9)#section-i---prep-work)
+1. Inserisci la scheda SD nel tuo computer
+1. Ritorna alla [Sezione I Passo 7](installing-boot9strap-(mset9)#section-i---prep-work)
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>System Settings loading infinitely after reinserting the SD card</u></summary>
+<summary><u>Caricamento infinito delle Impostazioni della console dopo il reinserimento della scheda SD</u></summary>
 
-You most likely did something different from the MSET9 instructions, or selected the wrong model or version.
+Molto probabilmente hai fatto qualcosa di diverso dalle istruzioni di MSET9 fornite, o hai selezionato il modello o la versione sbagliata di console.
 
-1. Close the script window
-1. Execute the `mset9.py` script on the root of the SD card
+1. Chiudi la finestra dello script
+1. Esegui lo script `mset9.py` nella directory principale della tua scheda SD
     + **Windows**: Doppio click su `mset9.bat`
         + Se non funziona: tieni premuto Maiusc e fai clic con il tasto destro del mouse in qualsiasi punto della finestra della scheda SD, quindi fai clic sull'opzione che apre il terminale, PowerShell o Prompt dei comandi, quindi digita `py -3 mset9. y` e premi Invio
     + **Linux**: apri una finestra del terminale, `cd` nella directory principale della tua scheda SD, quindi digita `python3 mset9.py` e premi Invio
     + Dovresti vedere una finestra con scritto "MSET9 ... SETUP by zoogie"
 1. Digita il numero corrispondente al modello di console e alla versione, quindi premi Invio
-1. Type `3`, then press Enter
-1. Once the window says "Deleting... done.", insert the SD card into your console
+1. Digita `3`, quindi premi Invio
+1. Quando la finestra mostra il messaggio "Deleting... done.", inserisci la scheda SD nella tua console
 1. Accendi la tua console
-1. Return to [Section II Step 1](installing-boot9strap-(mset9)#section-ii---mset9)
+1. Ritorna alla [Sezione II Passo 1](installing-boot9strap-(mset9)#section-ii---mset9)
 
-If you continue to have this issue and are sure that you did everything correctly, it's possible that there's something wrong with your Mii Maker extdata. Follow these instructions to reset it:
+Se continui a riscontrare questo problema e sei sicuro di aver seguito tutto correttamente, potrebbe esserci qualcosa di sbagliato negli extdata del tuo Centro di creazione Mii. Segui queste istruzioni per resettarli:
 
-1. Close the script window
-1. Execute the `mset9.py` script on the root of the SD card
+1. Chiudi la finestra dello script
+1. Esegui lo script `mset9.py` nella directory principale della tua scheda SD
     + **Windows**: Doppio click su `mset9.bat`
         + Se non funziona: tieni premuto Maiusc e fai clic con il tasto destro del mouse in qualsiasi punto della finestra della scheda SD, quindi fai clic sull'opzione che apre il terminale, PowerShell o Prompt dei comandi, quindi digita `py -3 mset9. y` e premi Invio
     + **Linux**: apri una finestra del terminale, `cd` nella directory principale della tua scheda SD, quindi digita `python3 mset9.py` e premi Invio
     + Dovresti vedere una finestra con scritto "MSET9 ... SETUP by zoogie"
 1. Digita il numero corrispondente al modello di console e alla versione, quindi premi Invio
-1. Type `4`, then press Enter to remove MSET9
-1. Insert the SD card into your console
+1. Digita `4`, quindi premi Invio per rimuovere MSET9
+1. Inserisci la scheda SD nella tua console
 1. Accendi la tua console
-1. Launch Mii Maker
+1. Avvia il Centro di creazione Mii
 1. Attendi che la console raggiunga la schermata "Benvenuto nel Centro di creazione Mii", quindi esci dall'applicazione
 1. Spegni la tua console
-1. Insert the SD card into your computer
-1. Return to [Section I Step 7](installing-boot9strap-(mset9)#section-i---prep-work)
+1. Inserisci la scheda SD nel tuo computer
+1. Ritorna alla [Sezione I Passo 7](installing-boot9strap-(mset9)#section-i---prep-work)
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
