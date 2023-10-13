@@ -439,6 +439,30 @@ This likely indicates that you already have custom firmware. You should [check f
 ## Installing boot9strap (MSET9)
 
 {% capture compat %}
+<summary><u>assert(id0_count == 1) AssertionError</u></summary>
+
+You have multiple ID0 folders. To determine the correct folder, follow these instructions:
+
+1. Rename the `Nintendo 3DS` folder to `BACKUP_Nintendo 3DS`
+1. Reinsert your SD card into your console
+1. Power on your console
+1. Wait for the console to generate the SD card data
+    + Your applications will have disappeared. This is normal and will be resolved shortly
+1. Power off your console
+1. Insert your SD card into your computer
+1. Navigate to the `Nintendo 3DS` folder on your SD card
+1. Write down the first few characters of the folder you see
+    + This is your true ID0, which we will keep in the real Nintendo 3DS folder
+1. Delete the ID0 from the current `Nintendo 3DS` folder
+1. Move the true ID0 folder from the `BACKUP_Nintendo 3DS` folder to the `Nintendo 3DS` folder
+1. If it exists, move the `Private` folder from the `BACKUP_Nintendo 3DS` folder to the `Nintendo 3DS` folder
+
+Once you've done this, continue from [Section I Step 7](installing-boot9strap-(mset9)#section-i---prep-work).
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
 <summary><u>(title/import).db does not exist, create them now?" / invalid database</u></summary>
 
 Full error messages:
@@ -491,30 +515,6 @@ This can happen when Option 1 stopped because of an error and there is an incomp
 You may be missing `SafeB9S.bin` from the root of your SD card, or the file may be corrupted. Copy it from the `SDMC` folder in the MSET9 `.zip`, replacing any existing files.
 
 Alternatively, your SD card may be improperly formatted or partitioned. Try reformatting your SD card: [Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)) *(this will wipe your SD card data)*
-
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>assert(id0_count == 1) AssertionError</u></summary>
-
-You have multiple ID0 folders. To determine the correct folder, follow these instructions:
-
-1. Rename the `Nintendo 3DS` folder to `BACKUP_Nintendo 3DS`
-1. Reinsert your SD card into your console
-1. Power on your console
-1. Wait for the console to generate the SD card data
-    + Your applications will have disappeared. This is normal and will be resolved shortly
-1. Power off your console
-1. Insert your SD card into your computer
-1. Navigate to the `Nintendo 3DS` folder on your SD card
-1. Write down the first few characters of the folder you see
-    + This is your true ID0, which we will keep in the real Nintendo 3DS folder
-1. Delete the ID0 from the current `Nintendo 3DS` folder
-1. Move the true ID0 folder from the `BACKUP_Nintendo 3DS` folder to the `Nintendo 3DS` folder
-1. If it exists, move the `Private` folder from the `BACKUP_Nintendo 3DS` folder to the `Nintendo 3DS` folder
-
-Once you've done this, continue from [Section I Step 7](installing-boot9strap-(mset9)#section-i---prep-work).
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -729,6 +729,14 @@ The script has detected that the Nintendo 3DS folder is missing AND that you hav
 1. Select "Scripts..."
 1. Select "finalize"
 1. Follow the prompts in the script, answering any questions that you are asked 
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Error #18: MSET9 detected</u></summary>
+
+You didn't remove MSET9 when prompted to. Follow [Section IV - Removing MSET9](installing-boot9strap-(mset9)#section-iv---removing-mset9), then re-run the script.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
