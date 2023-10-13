@@ -439,6 +439,30 @@ SSLoth 프록시 설정이 잘못 설정되었습니다. 페이지의 SSLoth 섹
 ## Installing boot9strap (MSET9)
 
 {% capture compat %}
+<summary><u>assert(id0_count == 1) AssertionError</u></summary>
+
+You have multiple ID0 folders. To determine the correct folder, follow these instructions:
+
+1. `Nintendo 3DS` 폴더를 `BACKUP_Nintendo 3DS` 폴더로 이름을 변경해 주세요
+1. SD 카드를 콘솔에 다시 삽입해 주세요
+1. 콘솔의 전원을 켜 주세요
+1. 콘솔이 SD 카드 데이터를 생성할 때까지 기다려 주세요
+    + 당신의 앱들이 사라졌을 것입니다. 이는 정상이며, 잠시 후에 고쳐질 것입니다.
+1. 콘솔의 전원을 꺼 주세요
+1. SD 카드를 컴퓨터에 삽입해 주세요
+1. SD 카드의 `Nintendo 3DS` 폴더를 열어 주세요
+1. Write down the first few characters of the folder you see
+    + This is your true ID0, which we will keep in the real Nintendo 3DS folder
+1. Delete the ID0 from the current `Nintendo 3DS` folder
+1. Move the true ID0 folder from the `BACKUP_Nintendo 3DS` folder to the `Nintendo 3DS` folder
+1. If it exists, move the `Private` folder from the `BACKUP_Nintendo 3DS` folder to the `Nintendo 3DS` folder
+
+Once you've done this, continue from [Section I Step 7](installing-boot9strap-(mset9)#section-i---prep-work).
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
 <summary><u>(title/import).db does not exist, create them now?" / invalid database</u></summary>
 
 Full error messages:
@@ -491,30 +515,6 @@ This can happen when Option 1 stopped because of an error and there is an incomp
 You may be missing `SafeB9S.bin` from the root of your SD card, or the file may be corrupted. Copy it from the `SDMC` folder in the MSET9 `.zip`, replacing any existing files.
 
 Alternatively, your SD card may be improperly formatted or partitioned. Try reformatting your SD card: [Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)) *(this will wipe your SD card data)*
-
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>assert(id0_count == 1) AssertionError</u></summary>
-
-You have multiple ID0 folders. To determine the correct folder, follow these instructions:
-
-1. `Nintendo 3DS` 폴더를 `BACKUP_Nintendo 3DS` 폴더로 이름을 변경해 주세요
-1. SD 카드를 콘솔에 다시 삽입해 주세요
-1. 콘솔의 전원을 켜 주세요
-1. 콘솔이 SD 카드 데이터를 생성할 때까지 기다려 주세요
-    + 당신의 앱들이 사라졌을 것입니다. 이는 정상이며, 잠시 후에 고쳐질 것입니다.
-1. 콘솔의 전원을 꺼 주세요
-1. SD 카드를 컴퓨터에 삽입해 주세요
-1. SD 카드의 `Nintendo 3DS` 폴더를 열어 주세요
-1. Write down the first few characters of the folder you see
-    + This is your true ID0, which we will keep in the real Nintendo 3DS folder
-1. Delete the ID0 from the current `Nintendo 3DS` folder
-1. Move the true ID0 folder from the `BACKUP_Nintendo 3DS` folder to the `Nintendo 3DS` folder
-1. If it exists, move the `Private` folder from the `BACKUP_Nintendo 3DS` folder to the `Nintendo 3DS` folder
-
-Once you've done this, continue from [Section I Step 7](installing-boot9strap-(mset9)#section-i---prep-work).
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -729,6 +729,14 @@ The script has detected that the Nintendo 3DS folder is missing AND that you hav
 1. "Scripts..."를 선택해 주세요
 1. "finalize"를 선택해 주세요
 1. 스크립트 표시에 따라 필요한 행동을 취해주세요 
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Error #18: MSET9 detected</u></summary>
+
+You didn't remove MSET9 when prompted to. Follow [Section IV - Removing MSET9](installing-boot9strap-(mset9)#section-iv---removing-mset9), then re-run the script.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
