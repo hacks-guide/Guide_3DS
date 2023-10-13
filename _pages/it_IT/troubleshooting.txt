@@ -439,6 +439,30 @@ Probabilmente significa che hai già un custom firmware. Dovresti [verificare la
 ## Installazione di boot9strap (MSET9)
 
 {% capture compat %}
+<summary><u>assert(id0_count == 1) AssertionError</u></summary>
+
+Hai più cartelle ID0. Per determinare la cartella corretta, segui queste istruzioni:
+
+1. Rinomina la cartella `Nintendo 3DS` in `BACKUP_Nintendo 3DS`
+1. Reinserisci la scheda SD nella tua console
+1. Accendi la tua console
+1. Attendi che la console generi i dati nella scheda SD
+    + Le tue applicazioni saranno scomparse. È normale e verrà risolto a breve
+1. Spegni la tua console
+1. Inserisci la scheda SD nel tuo computer
+1. Entra nella cartella `Nintendo 3DS` della tua scheda SD
+1. Trascrivi i primi caratteri della cartella che vedi
+    + Questo è il tuo vero ID0, che manterremo nella cartella Nintendo 3DS reale
+1. Elimina la cartella ID0 dalla cartella `Nintendo 3DS` corrente
+1. Sposta la vera cartella ID0 dalla cartella `BACKUP_Nintendo 3DS` nella cartella `Nintendo 3DS`
+1. Se esiste, sposta la cartella `Private` dalla cartella `BACKUP_Nintendo 3DS` nella cartella `Nintendo 3DS`
+
+Al termine, continua dalla [Sezione I Passo 7](installing-boot9strap-(mset9)#section-i---prep-work).
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
 <summary><u>(title/import).db does not exist, create them now?" / invalid database</u></summary>
 
 Messaggi di errore completi:
@@ -491,30 +515,6 @@ Questo può accadere quando l'opzione 1 viene interrotta a causa di un errore e 
 Potrebbe mancarti il file `SafeB9S.bin` dalla directory principale della tua scheda SD, o il file potrebbe essere danneggiato. Copialo dalla cartella `SDMC` dell'archivio `.zip` di MSET9, sostituendo qualsiasi file esistente.
 
 Altrimenti, la scheda SD potrebbe essere formattata o partizionata in modo errato. Prova a riformattare la tua scheda SD: [Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)) *(questo cancellerà i dati della tua scheda SD)*
-
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>assert(id0_count == 1) AssertionError</u></summary>
-
-Hai più cartelle ID0. Per determinare la cartella corretta, segui queste istruzioni:
-
-1. Rinomina la cartella `Nintendo 3DS` in `BACKUP_Nintendo 3DS`
-1. Reinserisci la scheda SD nella tua console
-1. Accendi la tua console
-1. Attendi che la console generi i dati nella scheda SD
-    + Le tue applicazioni saranno scomparse. È normale e verrà risolto a breve
-1. Spegni la tua console
-1. Inserisci la scheda SD nel tuo computer
-1. Entra nella cartella `Nintendo 3DS` della tua scheda SD
-1. Trascrivi i primi caratteri della cartella che vedi
-    + Questo è il tuo vero ID0, che manterremo nella cartella Nintendo 3DS reale
-1. Elimina la cartella ID0 dalla cartella `Nintendo 3DS` corrente
-1. Sposta la vera cartella ID0 dalla cartella `BACKUP_Nintendo 3DS` nella cartella `Nintendo 3DS`
-1. Se esiste, sposta la cartella `Private` dalla cartella `BACKUP_Nintendo 3DS` nella cartella `Nintendo 3DS`
-
-Al termine, continua dalla [Sezione I Passo 7](installing-boot9strap-(mset9)#section-i---prep-work).
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -729,6 +729,14 @@ Lo script ha rilevato che manca la cartella Nintendo 3DS E che hai precedentemen
 1. Seleziona "Scripts..."
 1. Seleziona "finalize"
 1. Segui le istruzioni dello script, rispondendo alle domande che ti vengono poste 
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Error #18: MSET9 detected</u></summary>
+
+You didn't remove MSET9 when prompted to. Follow [Section IV - Removing MSET9](installing-boot9strap-(mset9)#section-iv---removing-mset9), then re-run the script.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
