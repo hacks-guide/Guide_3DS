@@ -183,7 +183,7 @@ $(document).ready(function() {
   var sidebar_hidden_pages = ["404", "a9lh-to-b9s", "credits", "donations", "dumping-titles-and-game-cartridges",
                               "f3-(linux)", "f3xswift-(mac)", "faq", "file-extensions-(windows)",
                               "godmode9-usage", "h2testw-(windows)", "region-changing", "site-navigation", "troubleshooting",
-                              "uninstall-cfw","updating-b9s", "why-ads", "privacy-policy", "checking-for-cfw"];
+                              "uninstall-cfw","updating-b9s", "privacy-policy", "checking-for-cfw", "restoring-updating-cfw"];
 
   for(var i = 0; i < sidebar_hidden_pages.length; i++){
     if(window.location.href.indexOf(sidebar_hidden_pages[i]) > -1) {
