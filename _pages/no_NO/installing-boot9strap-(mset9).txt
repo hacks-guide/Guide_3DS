@@ -25,6 +25,9 @@ This method requires a computer running Windows or Linux. macOS is NOT supported
 
 ### Instructions
 
+On this page, you will use the MSET9 script, which is used to trigger MSET9. If you get a numbered error (e.g. Error 01) when running the script, the solution to that error can most likely be found on the [troubleshooting](troubleshooting#installing-boot9strap-mset9) page.
+{: .notice--info}
+
 #### Section I - Prep Work
 
 In this section, you will prepare the SD card data necessary for the MSET9 exploit to trigger.
@@ -41,12 +44,9 @@ In this section, you will prepare the SD card data necessary for the MSET9 explo
     ![MSET9 root layout](/images/screenshots/mset9/mset9-root-layout.png)
     {: .notice--info}
 
-1. Execute the `mset9.py` script on the root of your SD card
+1. Run the MSET9 script:
     + **Windows**: Double-click `mset9.bat`
-        + If this doesn't work: hold SHIFT and right-click anywhere in the SD card window, then click the option that opens Terminal, PowerShell, or Command Prompt, then type `py -3 mset9.py` and press Enter
     + **Linux**: open a Terminal window, `cd` to the root of your SD card, then type `python3 mset9.py` and press Enter
-    + You should see a window that says "MSET9 ... SETUP by zoogie"
-    + You should keep this window open until the end of this page, but if you close it by accident, you can open it again by redoing this step
 
     ![Image: MSET9 setup](/images/screenshots/mset9/mset9-select.png)
     {: .notice--info}
@@ -58,20 +58,9 @@ In this section, you will prepare the SD card data necessary for the MSET9 explo
     {: .notice--info}
 
     + Ensure that the correct console model and version is displayed
-
-1. Type `1`, then press Enter to setup MSET9
-    + If you see "(title.db/import.db) does not exist on SD card!":
-        + Type "yes", then press Enter
-        + Close the MSET9 window
-        + Safely eject your SD from your computer
-        + Insert your SD card into your console
-        + Power on your console
-        + Navigate to System Settings -> Data Management -> Nintendo 3DS -> Software -> Reset ([visual instructions](/images/screenshots/database-reset.jpg))
-        + Power off your console
-        + Insert your SD card into your computer
-        + Go back to Step 7 ("Execute the `mset9.py` script")
-1. Once the window says "Setting up... done", safely eject your SD card from your computer
-    + Keep the MSET9 window open
+1. Type `1`, then press Enter to ensure your console is prepared for MSET9
+    + If you get an error, check the [troubleshooting](troubleshooting#installing-boot9strap-mset9), then try again
+1. If you see the message "Everything appears to be functional!", MSET9 is ready to be injected. Press Enter to close the MSET9 script
 1. Reinsert your SD card into your console
 1. Power on your console
 
@@ -89,11 +78,14 @@ These instructions must be followed **EXACTLY**, so double-check EVERYTHING you 
 1. **Do not press any buttons or touch the screen** - ensure that you see the Mii Maker icon
 1. **With the console STILL ON, and without pressing any buttons or touching the screen**, remove your SD card from your console
     + The menu will refresh and say that no SD card is inserted, which is expected
-1. Insert your SD card into your computer, then wait a few seconds
-1. In the MSET9 window, type `2`, then press Enter to trigger MSET9
-    + You should see "Injecting... done."
-1. Safely eject your SD card from your computer
-    + Keep the MSET9 window open
+1. Sett inn SD-kortet i datamaskinen din
+1. Run the MSET9 script:
+    + **Windows**: Double-click `mset9.bat`
+    + **Linux**: open a Terminal window, `cd` to the root of your SD card, then type `python3 mset9.py` and press Enter
+1. Type the number corresponding to your console model and version, then press Enter
+1. In the MSET9 window, type `2`, then press Enter to inject MSET9
+    + You should see "MSET9 successfully injected!"
+1. Press Enter to close the MSET9 script
 1. Reinsert your SD card into your console **without pressing any buttons or touching the screen**
 1. If the exploit was successful, you will have booted into SafeB9SInstaller 
     + If you get a red screen, follow the [troubleshooting guide](troubleshooting#installing-boot9strap-mset9)
@@ -107,14 +99,18 @@ These instructions must be followed **EXACTLY**, so double-check EVERYTHING you 
 
 In this section, you will remove MSET9 to prevent further issues. (This will not remove the custom firmware that you just installed.)
 
-Do NOT skip this section! If you do, applications may crash unexpectedly and you may encounter errors on the next page!
+Do NOT skip this section! If you skip it, applications may crash unexpectedly and you will encounter errors on the next page!
 {: .notice--danger}
 
 1. Power off your console
-1. Insert your SD card into your computer, then wait a few seconds
-1. In the MSET9 window, type `4`, then press Enter to remove MSET9
-    + You should see "Removing... done"
-1. Close the MSET9 window; you will not need it for any of the upcoming steps
+1. Sett inn SD-kortet i datamaskinen din
+1. Run the MSET9 script:
+    + **Windows**: Double-click `mset9.bat`
+    + **Linux**: open a Terminal window, `cd` to the root of your SD card, then type `python3 mset9.py` and press Enter
+1. Type the number corresponding to your console model and version, then press Enter
+1. In the MSET9 window, type `3`, then press Enter to remove MSET9
+    + You should see "Successfully removed MSET9!"
+1. Press Enter to close the MSET9 script
 
 {% include_relative include/luma3ds-installed-note.txt %}
 ___
