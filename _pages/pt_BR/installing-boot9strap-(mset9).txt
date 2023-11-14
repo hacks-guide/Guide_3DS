@@ -14,18 +14,18 @@ title: "Instalando boot9strap (MSET9)"
 
 ### Notas de Compatibilidade
 
-Esse método requer um computador executando Windows ou Linux. macOS NÃO é suportado, nem celulares ou tablets. Se você não tem acesso a Windows ou Linux, você vai precisar usar um [exploit alternativo](alternate-exploits).
+Este método requer um computador executando Windows, Linux ou macOS. Telefones ou tablets NÃO são suportados atualmente. Se você não tiver acesso a um computador, você precisará usar um [exploit alternativo](alternate-exploits).
 {: .notice--warning}
 
 ### O que é necessário
 
 * A versão mais recente do [MSET9](https://github.com/zoogie/MSET9/releases/latest) (o arquivo `.zip`)
 * Qualquer versão 3.x de [Python](https://www.python.org/downloads/) **instalada no seu computador**
-    + Se você estiver em Linux, você provavelmente já tem Python 3. Verifique abrindo um terminal e digitando `python3 -V`. Se este retornar um número de versão, ele funcionará para este guia.
+    + Se você estiver no Linux ou macOS, você já pode ter Python 3. Verifique abrindo uma janela terminal e digitando `python3 -V`. Se este retornar um número de versão, ele funcionará para este guia.
 
 ### Instruções
 
-On this page, you will use the MSET9 script, which is used to trigger MSET9. If you get a numbered error (e.g. Error 01) when running the script, the solution to that error can most likely be found on the [troubleshooting](troubleshooting#installing-boot9strap-mset9) page.
+Nesta página, você usará o script MSET9, que é usado para acionar o MSET9. Se você receber um erro numerado (por exemplo, Error 01) ao executar o script, a solução para esse erro provavelmente pode ser encontrada na página [troubleshooting](troubleshooting#installing-boot9strap-mset9).
 {: .notice--info}
 
 #### Seção I - Preparação
@@ -44,8 +44,9 @@ Nesta seção, você irá preparar os dados no seu cartão SD necessários para 
     ![MSET9 root layout](/images/screenshots/mset9/mset9-root-layout.png)
     {: .notice--info}
 
-1. Run the MSET9 script:
+1. Execute o script MSET9:
     + **Windows**: Clique duas vezes em `mset9.bat`
+    + **macOS**: Clique duas vezes em `mset9.command`
     + **Linux**: Abra uma janela do Terminal, use `cd` até o root do seu cartão SD, então digite `python3 mset9.py` e pressione Enter
 
     ![Image: MSET9 setup](/images/screenshots/mset9/mset9-select.png)
@@ -58,9 +59,9 @@ Nesta seção, você irá preparar os dados no seu cartão SD necessários para 
     {: .notice--info}
 
     + Certifique-se de que o modelo e a versão do console estão sendo mostrados
-1. Type `1`, then press Enter to ensure your console is prepared for MSET9
-    + If you get an error, check the [troubleshooting](troubleshooting#installing-boot9strap-mset9), then try again
-1. If you see the message "Everything appears to be functional!", MSET9 is ready to be injected. Press Enter to close the MSET9 script
+1. Digite `1` e pressione Enter para garantir que seu console esteja preparado para MSET9
+    + Se você receber um erro, verifique o [troubleshooting](troubleshooting#installing-boot9strap-mset9), e tente novamente
+1. Se você ver a mensagem "Everything appears to be functional!", o MSET9 está pronto para ser injetado. Pressione Enter para fechar o script MSET9
 1. Reinsira o cartão SD no seu console
 1. Ligue o seu console
 
@@ -79,43 +80,45 @@ Estas instruções devem ser seguidas **EXATAMENTE** como estão, então confira
 1. **Com o console AINDA LIGADO, e sem pressionar nenhum dos botões ou a tela de toque**, remova seu cartão SD do seu console
     + O menu vai recarregar e dizer que não há cartão SD inserido, o que é esperado
 1. Insira o cartão SD no seu computador
-1. Run the MSET9 script:
+1. Execute o script MSET9:
     + **Windows**: Clique duas vezes em `mset9.bat`
+    + **macOS**: Clique duas vezes em `mset9.command`
     + **Linux**: Abra uma janela do Terminal, use `cd` até o root do seu cartão SD, então digite `python3 mset9.py` e pressione Enter
 1. Digite o número correspondente ao modelo do seu console e a versão, então pressione Enter
-1. In the MSET9 window, type `2`, then press Enter to inject MSET9
-    + You should see "MSET9 successfully injected!"
-1. Press Enter to close the MSET9 script
+1. Na janela MSET9, digite `2` e pressione Enter para injetar o MSET9
+    + Você deve ver "MSET9 successfully injected!"
+1. Pressione Enter para fechar o script MSET9
 1. Reinsira o cartão SD no seu console **sem pressionar nenhum botão ou tocar a tela de toque**
 1. Se o exploit for bem-sucedido, você terá entrado no SafeB9SInstaller 
-    + Se você obter uma tela vermelha, siga o [guia de troubleshooting](troubleshooting#installing-boot9strap-mset9)
+    + If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting#installing-boot9strap-mset9)
 
 #### Seção III - Instalando o boot9strap
 
 {% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
 {%- include_relative include/configure-luma3ds.txt %}
 
-#### Section IV - Removing MSET9
+#### Seção IV - Removendo o MSET9
 
 Nesta seção, você irá remover o MSET9 para evitar erros futuros. (Isto não irá remover o custom firmware que você acabou de instalar.)
 
-NÃO pule esta seção! If you skip it, applications may crash unexpectedly and you will encounter errors on the next page!
+NÃO pule esta seção! Se você pular isso, os aplicativos podem ter um crash inesperado e você encontrará erros na próxima página!
 {: .notice--danger}
 
 1. Desligue seu console
 1. Insira o cartão SD no seu computador
-1. Run the MSET9 script:
+1. Execute o script MSET9:
     + **Windows**: Clique duas vezes em `mset9.bat`
+    + **macOS**: Clique duas vezes em `mset9.command`
     + **Linux**: Abra uma janela do Terminal, use `cd` até o root do seu cartão SD, então digite `python3 mset9.py` e pressione Enter
 1. Digite o número correspondente ao modelo do seu console e a versão, então pressione Enter
-1. In the MSET9 window, type `3`, then press Enter to remove MSET9
-    + You should see "Successfully removed MSET9!"
-1. Press Enter to close the MSET9 script
+1. Na janela MSET9, digite `3` e pressione Enter para remover o MSET9
+    + Você deve ver "Successfully removed MSET9!"
+1. Pressione Enter para fechar o script MSET9
 
 {% include_relative include/luma3ds-installed-note.txt %}
 ___
 
-Did you follow Section IV (Removing MSET9)? That section is MANDATORY!
+Você seguiu a Seção IV (Removendo o MSET9)? Essa seção é MANDATÓRIA!
 {: .notice--danger}
 
 ### Continue em [Finalizando a instalação](finalizing-setup)
