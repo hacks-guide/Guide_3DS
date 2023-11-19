@@ -9,7 +9,7 @@ title: "Installing boot9strap (SSLoth-Browser)"
 
 In order to exploit the Browser application, we need to bypass the browser version check, which is designed to disallow the use of the browser without updating to the latest system version.
 
-A public proxy server is available, which, with the help of the SSLoth exploit, can bypass this check.
+A public DNS server is available, which, with the help of the SSLoth exploit, can bypass this check.
 
 Once the bypass is active, an exploit webpage will be accessible which will do the rest of the job.
 
@@ -48,9 +48,20 @@ In this section, you will copy the files needed to trigger both browserhax and u
 
 #### Section II - SSLoth
 
-In this section, you will change your Internet connection settings to use a proxy network designed to bypass the browser version check, allowing the browser to function without a system update. This will allow you to access the browser exploit webpage in the next section.
+In this section, you will change your Internet connection settings to use a DNS resolver designed to bypass the browser version check, allowing the browser to function without a system update. This will allow you to access the browser exploit webpage in the next section.
 
-{% include_relative include/addproxy.txt %}
+If you haven't already, make sure you have a working Internet connection set up on your console.
+{: .notice--info}
+
+1. Launch the System Settings application
+1. Navigate to `Internet Settings` -> `Connection Settings`
+1. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `DNS`
+1. Set "Auto-Obtain DNS" to "No", then click `Detailed Setup`
+1. Set both the Primary DNS and Secondary DNS to `192.009.242.004`
+1. Click OK, then click Save
+1. When prompted, click "Test" to perform the connection test
+    + The test should succeed
+1. Click "OK" to continue
 1. Press "Back" twice, then "Close" to go back to the HOME Menu
 
 #### Section III - Launching SafeB9SInstaller
@@ -71,9 +82,18 @@ In this section, you will visit the browser exploit webpage, which will use univ
 {% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
 {%- include_relative include/configure-luma3ds.txt %}
 
-#### Section V - Restoring default proxy
+#### Section V - Restoring default DNS
 
-{% include_relative include/rmproxy.txt %}
+In this section, you will restore the Internet settings back to normal.
+
+1. Launch the System Settings application
+1. Navigate to `Internet Settings` -> `Connection Settings`
+1. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `DNS`
+1. Set "Auto-Obtain DNS" to "Yes"
+1. Click OK, then click Save
+1. When prompted, click "Test" to perform the connection test
+	+ The test should succeed
+1. Power off your device
 
 {% include_relative include/luma3ds-installed-note.txt %}
 ___
