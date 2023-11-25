@@ -11,15 +11,10 @@ title: "문제 해결"
 * [SafeB9SInstaller](#issues-with-safeb9sinstaller)
 
 가이드 페이지:
-* [Seedminer](#seedminer)
-    * [BannerBomb3](#bannerbomb3)
-    * [boot9strap 설치 (Fredtool-Inject)](#installing-boot9strap-fredtool-inject)
-    * [boot9strap 설치 (PicHaxx)](#installing-boot9strap-pichaxx)
 * [boot9strap 설치 (Soundhax)](#installing-boot9strap-soundhax)
+* [Installing boot9strap (MSET9)](#installing-boot9strap-mset9)
 * [boot9strap 설치 (SSLoth-Browser)](#installing-boot9strap-ssloth-browser)
 * [boot9strap 설치 (super-skaterhax)](#installing-boot9strap-super-skaterhax)
-* [Installing boot9strap (MSET9)](#installing-boot9strap-mset9)
-
 * [마무리 단계](#finalizing-setup)
 
 설치 이후 문제:
@@ -79,187 +74,6 @@ SD 카드에 이상이 있을 가능성이 높습니다. 다시 포맷해 보세
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-## Seedminer
-
-{% capture compat %}
-<summary><u>Nintendo 3DS 폴더 내에 여러 개의 긴 이름 폴더가 있습니다</u></summary>
-
-![]({{ "/images/screenshots/multiple-id0.png" | absolute_url }})
-{: .notice--info}
-
-이것은 한 SD 카드를 여러 3DS 콘솔에 이용할 때 다른 콘솔에 유효하지 않은 데이터가 섞이는 것을 막기 위한 의도된 현상입니다. 이름이 긴 폴더 중 무엇이 해당 장치와 맞는지 확인하려면, 다음을 따르십시오:
-
-1. `Nintendo 3DS` 폴더를 `BACKUP_Nintendo 3DS` 폴더로 이름을 변경해 주세요
-1. SD 카드를 콘솔에 다시 삽입해 주세요
-1. 콘솔의 전원을 켜 주세요
-1. 콘솔이 SD 카드 데이터를 생성할 때까지 기다려 주세요
-    + 당신의 앱들이 사라졌을 것입니다. 이는 정상이며, 잠시 후에 고쳐질 것입니다.
-1. 콘솔의 전원을 꺼 주세요
-1. SD 카드를 컴퓨터에 삽입해 주세요
-1. SD 카드의 `Nintendo 3DS` 폴더를 열어 주세요
-1. `Nintendo 3DS` 폴더 내 32글자의 폴더 이름을 복사해 주세요
-    + 이것이 [Seedminer의 섹션 II](seedminer#section-ii---seedminer)에서 사용할 진짜 ID0입니다
-1. `Nintendo 3DS` 폴더를 삭제해 주세요
-1. `BACKUP_Nintendo 3DS` 폴더를 `Nintendo 3DS` 폴더로 이름을 변경해 주세요
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Bruteforce Movable이 step 4로 건너뜁니다</u></summary>
-
-웹사이트에서 이미 친구 코드와 ID0로 `movable.sed`를 만들어냈습니다. 제공되는 `movable.sed`를 그대로 이용하시면 됩니다.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Important! You have been locked out of the automated part1 dumper system...</u></summary>
-
-3DS에서 친구 등록이 적절하게 완료되지 않아 친구 코드가 차단되었습니다. 3DS가 인터넷에 적절하게 연결되어 있는지 확인해 주시고, [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp)에 들어와 차단 해제를 요청해주세요.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>We were unable to successfully complete your bruteforce request. :`(</u></summary>
-
-웹사이트에서 `movable.sed` 파일을 해킹할 수 없다고 확정했습니다. 정확한 ID0를 제공했는지 확인해주세요. 만약 ID0가 정확하다면, Seedminer를 통한 방법은 불가능하며 다른 방법을 이용해야 합니다.
-
-New 3DS users can follow [Installing boot9strap (super-skaterhax)](installing-boot9strap-(super-skaterhax)), while Old 3DS users can follow [Installing boot9strap (MSET9)](installing-boot9strap-(mset9)). If you cannot do MSET9 for any reason, you will need to follow a method that requires additional games or hardware.
-
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-## BannerBomb3
-
-{% capture compat %}
-<summary><u>ID0 폴더 안에 여러 개의 ID1 폴더가 존재함</u></summary>
-
-![]({{ "/images/screenshots/multiple-id1.png" | absolute_url }})
-
-{% include_relative include/id1-check.txt %}
-
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>DSiWare 관리 메뉴가 BB3 multihax 메뉴를 표시하지 않고 깨짐</u></summary>
-`F00D43D5.bin`이 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 폴더 내에 있는 유일한 파일이어야 합니다. 만약 그렇다면, [BannerBomb3 툴](https://zoogie.github.io/web/bb3)에서 다시 생성해 주세요.
-
-또한, `bb3.bin`이 SD 카드의 최상위 디렉토리에 있어야 합니다. If it is missing, then download the latest release of [Bannerbomb3](https://github.com/zoogie/Bannerbomb3/releases/download/v3.0/Release_v3.0.zip) (direct download), and copy the `bb3.bin` file from the Release `.zip` to the root of your SD card.
-
-만약 이 방법이 모두 안 된다면, 이 방식 자체를 차단하는 방법으로 커펌이 지워졌을 수 있습니다. 이 경우, [Nintendo Homebrew Discord 서버](https://discord.gg.MWxPgEp)에 오셔서 도움을 요청하세요.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>DSiWare 관리 메뉴가 "소프트웨어 데이터에 접근할 수 없습니다."를 표시합니다</u></summary>
-
-`F00D43D5.bin`이 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare` 폴더 내에 없습니다. 폴더 `Nintendo DSiWare`의 이름에 오타가 있는지 확인해 주세요. 대소문자는 구분하지 않습니다.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>DSiWare 관리 메뉴에서 물음표가 표시됩니다</u></summary>
-
-`F00D43D5.bin` 파일에 문제가 있습니다. (잘못된 파일이거나 다른 3DS용 파일) 해당 콘솔의 `movable.sed` 파일을 이용해, [BannerBomb3 툴](https://zoogie.github.io/web/bb3)에서 `F00D43D5.bin` 파일을 다시 생성해 주세요.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-## boot9strap 설치 (Fredtool-Inject)
-
-{% capture compat %}
-<summary><u>DSiHaxInjector 페이지에서 오류가 발생합니다</u></summary>
-
-`movable.sed`와 DSiWare 백업 파일이 동일한 콘솔에서 추출한 것인지 확인해 주세요. 서로 다르면 오류가 발생합니다.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>"Haxxxxxxxxx!"가 표시되지 않습니다</u></summary>
-
-`42383821.bin` 파일에 문제가 있습니다. (없거나, 잘못 들어갔거나, 혹은 잘못된 파일) [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec) 웹사이트에서 파일을 다시 만들어 `output.zip` -> `hax`에 있는 `42383821.bin` 파일을 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`에 정확하게 배치해 주세요.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>게임이 정상적으로 실행됩니다</u></summary>
-
-`Haxxxxxxxxx!`가 SD 카드에서 시스템 메모리로 복사되지 않았습니다.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Flipnote에서 SD 카드가 회색으로 표시됩니다</u></summary>
-
-만약 큰 SD 카드를 사용하신다면, Flipnote가 오래 걸릴 수 있습니다. 몇 분 정도 기다려 주세요.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>SD카드 선택에서 Lenny face가 표시되지 않습니다</u></summary>
-
-SD 카드 루트에 Frogminer_save `.zip` 안에 있는 `private` 폴더를 복사하지 않았습니다.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Flipnote가 멎었습니다</u></summary>
-
-수정된 Flipnote에서 실수로 터치 스크린을 건드렸을 수 있습니다. DS 소프트웨어용 설정에 다시 들어가 다시 시도하되, 터치 스크린을 실수로 누르지 않도록 주의해주세요.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>붙여넣기 후 파란 화면이 표시됩니다</u></summary>
-
-`boot.nds` 파일이 없거나 잘못 들어갔습니다. 최신 버전의 [b9stool](https://github.com/zoogie/b9sTool/releases/latest)을 다시 내려받고 `boot.nds` 파일을 SD 카드의 최상위 디렉토리에 복사해주세요. 이미 파일이 있으면 덮어씌워 주세요.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>붙여넣기 후 하얀 화면이 표시됩니다</u></summary>
-`boot.nds` 파일에 문제가 있습니다. 최신 버전의 [b9stool](https://github.com/zoogie/b9sTool/releases/latest)을 다시 내려받고 `boot.nds` 파일을 SD 카드의 최상위 디렉토리에 복사해주세요. 이미 파일이 있으면 덮어씌워 주세요.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>B9STool을 실행한 후 Luma3DS 설정 메뉴를 실행할 수 없습니다</u></summary>
-
-[Nintendo Homebrew Discord 서버](https://discord.gg.MWxPgEp)에 오셔서 무슨 일이 발생했는지 설명해주세요.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-## boot9strap 설치 (PicHaxx)
-
-{% capture compat %}
-<summary><u>에러가 발생했습니다. 본체의 전원 버튼을 길게 눌러 전원을 끈 후..." (검은 화면에 텍스트)</u></summary>
-
-`00000001.sav` 또는 `otherapp.bin` 파일이 잘못 들어갔습니다. `00000000.sav`가 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00004000` -> 0017c100` -> `data` 안에 있고 `otherapp.bin`이 SD 카드 루트에 있는지 다시 한 번 확인해 주세요.
-
-만약 위치가 정확하다면, [PicHaxx Save Tool](https://3dstools.nhnarwhal.com/#/pichaxx)을 이용해 세이브를 다시 생성한 후, `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` 폴더 안에 다시 복사해 주세요. 반드시 파일의 이름이 `00000001.sav`이고 콘솔의 `movable.sed`를 이용해야 합니다. Re-download [HBL otherapps](https://github.com/zoogie/ninjhax2.x/releases/download/v11.17/otherapps_with_CfgS_11.17.zip), place the `.bin` file relevant to your console to the root of your SD card, and rename it to `otherapp.bin`. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>피크로스 실행 중 "An exception occurred" 또는 오류 화면이 표시됩니다</u></summary>
-
-이 콘솔은 이미 커스텀 펌웨어가 설치되어 있습니다. [CFW 확인](checking-for-cfw) 을 하는 것을 권장합니다.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>"에러가 발생하여 소프트웨어를 종료합니다..." (하얀 메시지 창)</u></summary>
-
-`otherapp.bin` 파일에 문제가 있습니다. Download [HBL otherapps](https://github.com/zoogie/ninjhax2.x/releases/download/v11.17/otherapps_with_CfgS_11.17.zip), place the `.bin` file relevant to your console to the root of your SD card, and rename it to `otherapp.bin`. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>게임이 정상적으로 실행됩니다</u></summary>
-
-수정된 `00000001.sav` 파일이 잘못 들어갔거나, 다른 `movable.sed` 파일로 생성했습니다. [Bruteforce Movable](https://seedminer.hacks.guide)에서 `movable.sed`를 다시 생성해, [PicHaxx Save Tool](https://3dstools.nhnarwhal.com/#/pichaxx)에서 세이브 파일을 다시 생성, 결과 파일(`00000001.sav`)을 `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00004000` -> `0017c100` -> `data`에 복사해 주세요.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
 ## boot9strap 설치 (Soundhax)
 
 {% capture compat %}
@@ -290,147 +104,6 @@ SD 카드 루트에 Frogminer_save `.zip` 안에 있는 `private` 폴더를 복�
 데이터를 모두 백업하고 시스템별로 권장되는 프로그램을 이용해 SD카드를 FAT32로 다시 포맷해 주세요. ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))) MiniTool Partition Wizard나 HP formatting tool(HPUSBDisk)는 3DS용 SD 카드에 문제를 발생시킨다는 것이 알려져 있습니다.
 
 만약 해결되지 않는다면, 다른 SD 카드를 이용해 보세요.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-## boot9strap 설치 (SSLoth-Browser)
-
-{% capture compat %}
-<summary><u>Browserhax를 실행하면 빨간색/보라색/분홍색 혹은 하얀색 화면이 표시됩니다</u></summary>
-
-이미 커스텀 펌웨어가 설치되어 있을 수 있습니다. [CFW 확인](checking-for-cfw) 을 하는 것을 권장합니다.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>에러가 발생했습니다. 본체의 전원 버튼을 길게 눌러 전원을 끈 후..." (검은 화면에 텍스트)</u></summary>
-
-`arm11code.bin` 파일이 없거나 잘못 들어갔습니다. 최신 버전의 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)을 내려받아 `otherapp.bin` 파일을 SD 카드의 최상위 디렉토리에 복사하고, 이름을 `arm11code.bin`으로 변경해 주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-
-{% capture compat %}
-<summary><u>"에러가 발생하여 소프트웨어를 종료합니다..." (하얀 메시지 창)</u></summary>
-
-`arm11code.bin`에 문제가 있을 수 있습니다. 최신 버전의 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)을 내려받아 `otherapp.bin` 파일을 SD 카드의 최상위 디렉토리에 복사하고, 이름을 `arm11code.bin`으로 변경해 주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
-
-You can also try resetting your browser save data:
-
-1. 브라우저를 실행하고 브라우저 설정을 실행해 주세요
-1. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-1. 익스플로잇을 다시 시도해 주세요
-
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Browserhax QR 코드나 URL을 열면 브라우저가 꺼집니다</u></summary>
-
-이러한 브라우저 기반의 취약점은 불안정하고 자주 종료됩니다. 그러나 종종 다음 단계를 수행하면 고쳐질 수 있습니다.
-
-1. 브라우저를 실행하고 브라우저 설정을 실행해 주세요
-1. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-1. 익스플로잇을 다시 시도해 주세요
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>브라우저를 열면 시스템 업데이트 창이 표시됩니다</u></summary>
-
-SSLoth 프록시 설정이 잘못 설정되었습니다. 페이지의 SSLoth 섹션을 다시 진행해주세요.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>브라우저를 열면 오류 032-0420이 표시됩니다</u></summary>
-
-다음 과정을 순서대로 진행해주세요:
-
-1. 콘솔에서 본체 설정을 열어 주세요
-1. `인터넷 설정` -> `인터넷 접속 설정`으로 이동해 주세요
-1. 네트워크 접속 경로을 클릭해, `설정 변경` -> `다음 페이지 (오른쪽 화살표)` -> `Proxy 설정`으로 이동해 주세요
-1. "Proxy 설정"을 "아니요"로 설정해 주세요
-1. OK하고 저장을 차례로 눌러주세요
-1. 접속 테스트 안내문이 표시되면, `예`를 눌러 인터넷 접속 테스트를 진행해 주세요
-    + 이 테스트가 성공적일 겁니다
-1. "OK"을 눌러 진행해 주세요
-1. "뒤로"을 두 번 누르고 "종료"를 눌러 HOME 메뉴로 돌아가 주세요
-1. 인터넷 브라우저를 한 번 열어주세요
-1. 시스템 업데이트에 관한 창이 표시되면, 'OK'을 눌러주세요
-    + 실제로 시스템이 업데이트되지는 않습니다
-1. [섹션 II](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth)로 돌아가 다시 진행해주세요
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>"Doing agbhax..."에서 멈춥니다</u></summary>
-`arm11code.bin`에 문제가 있을 수 있습니다. 최신 버전의 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)을 다시 내려받아 SD 카드의 최상위 디렉토리에 복사하고, 이름을 `arm11code.bin`으로 변경해주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>"PrepareArm9ForTwl returned error c8804631!"</u></summary>
-
-[Nintendo Homebrew Discord 서버](https://discord.gg.MWxPgEp)에 오셔서 도움을 요청하세요.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Failed to mount the SD card!</u></summary>
-
-데이터를 모두 백업하고 시스템별로 권장되는 프로그램을 이용해 SD카드를 FAT32로 다시 포맷해 주세요. ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))) MiniTool Partition Wizard나 HP formatting tool(HPUSBDisk)는 3DS용 SD 카드에 문제를 발생시킨다는 것이 알려져 있습니다.
-
-만약 해결되지 않는다면, 다른 SD 카드를 이용해 보세요.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-## Installing boot9strap (super-skaterhax)
-
-{% capture compat %}
-<summary><u>에러가 발생했습니다. Please save your data in any software currently in use, then restart the system."</u></summary>
-
-날짜가 잘못 설정되어 있습니다. 날짜를 수정하려면 다음 단계를 따라 주세요:
-
-1. Select the System Settings icon on the HOME Menu, and tap Open.
-1. Tap Other Settings.
-1. Tap Date & Time.
-1. Tap Today's date.
-1. Tap Up/Down Arrows to set the correct Day, Month and Year.
-1. Select OK to confirm.
-
-문제가 지속될 경우:
-
-+ Ensure that `arm11code.bin`, `browserhax_hblauncher_ropbin_payload.bin`, and `boot.3dsx` are on the root of the SD card (not inside of any folder)
-+ 올바른 지역과 시스템 버전을 선택했는지 다시 확인해 보세요
-+ 지역 설정이 제대로 되어 있는지 확인해 주세요 [참고 이미지](/images/screenshots/skater_lang.png)
-+ 브라우저 데이터 삭제를 시도해 보세요:
-    1. 브라우저를 실행하고 브라우저 설정을 실행해 주세요
-    1. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initilize Save Data" or "Clear All Save Data")
-    1. 익스플로잇을 다시 시도해 주세요
-+ 시스템 언어를 현재 언어가 아닌 다른 언어로 변경해 보세요
-
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-
-{% capture compat %}
-<summary><u>에러가 발생했습니다. 본체의 전원 버튼을 길게 눌러 전원을 끈 후..." (검은 화면에 텍스트)</u></summary>
-
-`arm11code.bin` 파일이 없거나 잘못 들어갔습니다. Make sure to copy the files of the [latest version of super-skaterhax](https://github.com/zoogie/super-skaterhax/releases/latest) for your region and version to the root of your SD card (not inside of a folder).
-
-![]({{ "/images/screenshots/skater-root-layout.png" | absolute_url }})
-{: .notice--info}
-
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-
-{% capture compat %}
-<summary><u>"GO! GO!" 선택 시 "An exception occurred" 또는 오류 화면이 표시됩니다 </u></summary>
-
-이미 커스텀 펌웨어가 설치되어 있을 수 있습니다. [CFW 확인](checking-for-cfw) 을 하는 것을 권장합니다.
-
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -603,6 +276,147 @@ If you continue to have this issue and are sure that you did everything correctl
 After finishing the MSET9 page, you should switch back to your old SD card before continuing to Finalizing Setup.
 {: .notice--warning}
 
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+## Installing boot9strap (super-skaterhax)
+
+{% capture compat %}
+<summary><u>에러가 발생했습니다. Please save your data in any software currently in use, then restart the system."</u></summary>
+
+날짜가 잘못 설정되어 있습니다. 날짜를 수정하려면 다음 단계를 따라 주세요:
+
+1. Select the System Settings icon on the HOME Menu, and tap Open.
+1. Tap Other Settings.
+1. Tap Date & Time.
+1. Tap Today's date.
+1. Tap Up/Down Arrows to set the correct Day, Month and Year.
+1. Select OK to confirm.
+
+문제가 지속될 경우:
+
++ Ensure that `arm11code.bin`, `browserhax_hblauncher_ropbin_payload.bin`, and `boot.3dsx` are on the root of the SD card (not inside of any folder)
++ 올바른 지역과 시스템 버전을 선택했는지 다시 확인해 보세요
++ 지역 설정이 제대로 되어 있는지 확인해 주세요 [참고 이미지](/images/screenshots/skater_lang.png)
++ 브라우저 데이터 삭제를 시도해 보세요:
+    1. 브라우저를 실행하고 브라우저 설정을 실행해 주세요
+    1. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initilize Save Data" or "Clear All Save Data")
+    1. 익스플로잇을 다시 시도해 주세요
++ 시스템 언어를 현재 언어가 아닌 다른 언어로 변경해 보세요
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+
+{% capture compat %}
+<summary><u>에러가 발생했습니다. 본체의 전원 버튼을 길게 눌러 전원을 끈 후..." (검은 화면에 텍스트)</u></summary>
+
+`arm11code.bin` 파일이 없거나 잘못 들어갔습니다. Make sure to copy the files of the [latest version of super-skaterhax](https://github.com/zoogie/super-skaterhax/releases/latest) for your region and version to the root of your SD card (not inside of a folder).
+
+![]({{ "/images/screenshots/skater-root-layout.png" | absolute_url }})
+{: .notice--info}
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+
+{% capture compat %}
+<summary><u>"GO! GO!" 선택 시 "An exception occurred" 또는 오류 화면이 표시됩니다 </u></summary>
+
+이미 커스텀 펌웨어가 설치되어 있을 수 있습니다. [CFW 확인](checking-for-cfw) 을 하는 것을 권장합니다.
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+## boot9strap 설치 (SSLoth-Browser)
+
+{% capture compat %}
+<summary><u>Browserhax를 실행하면 빨간색/보라색/분홍색 혹은 하얀색 화면이 표시됩니다</u></summary>
+
+이미 커스텀 펌웨어가 설치되어 있을 수 있습니다. [CFW 확인](checking-for-cfw) 을 하는 것을 권장합니다.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>에러가 발생했습니다. 본체의 전원 버튼을 길게 눌러 전원을 끈 후..." (검은 화면에 텍스트)</u></summary>
+
+`arm11code.bin` 파일이 없거나 잘못 들어갔습니다. 최신 버전의 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)을 내려받아 `otherapp.bin` 파일을 SD 카드의 최상위 디렉토리에 복사하고, 이름을 `arm11code.bin`으로 변경해 주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+
+{% capture compat %}
+<summary><u>"에러가 발생하여 소프트웨어를 종료합니다..." (하얀 메시지 창)</u></summary>
+
+`arm11code.bin`에 문제가 있을 수 있습니다. 최신 버전의 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)을 내려받아 `otherapp.bin` 파일을 SD 카드의 최상위 디렉토리에 복사하고, 이름을 `arm11code.bin`으로 변경해 주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
+
+You can also try resetting your browser save data:
+
+1. 브라우저를 실행하고 브라우저 설정을 실행해 주세요
+1. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
+1. 익스플로잇을 다시 시도해 주세요
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Browserhax QR 코드나 URL을 열면 브라우저가 꺼집니다</u></summary>
+
+이러한 브라우저 기반의 취약점은 불안정하고 자주 종료됩니다. 그러나 종종 다음 단계를 수행하면 고쳐질 수 있습니다.
+
+1. 브라우저를 실행하고 브라우저 설정을 실행해 주세요
+1. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
+1. 익스플로잇을 다시 시도해 주세요
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>브라우저를 열면 시스템 업데이트 창이 표시됩니다</u></summary>
+
+SSLoth 프록시 설정이 잘못 설정되었습니다. 페이지의 SSLoth 섹션을 다시 진행해주세요.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>브라우저를 열면 오류 032-0420이 표시됩니다</u></summary>
+
+다음 과정을 순서대로 진행해주세요:
+
+1. 콘솔에서 본체 설정을 열어 주세요
+1. `인터넷 설정` -> `인터넷 접속 설정`으로 이동해 주세요
+1. 네트워크 접속 경로을 클릭해, `설정 변경` -> `다음 페이지 (오른쪽 화살표)` -> `Proxy 설정`으로 이동해 주세요
+1. "Proxy 설정"을 "아니요"로 설정해 주세요
+1. OK하고 저장을 차례로 눌러주세요
+1. 접속 테스트 안내문이 표시되면, `예`를 눌러 인터넷 접속 테스트를 진행해 주세요
+    + 이 테스트가 성공적일 겁니다
+1. "OK"을 눌러 진행해 주세요
+1. "뒤로"을 두 번 누르고 "종료"를 눌러 HOME 메뉴로 돌아가 주세요
+1. 인터넷 브라우저를 한 번 열어주세요
+1. 시스템 업데이트에 관한 창이 표시되면, 'OK'을 눌러주세요
+    + 실제로 시스템이 업데이트되지는 않습니다
+1. [섹션 II](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth)로 돌아가 다시 진행해주세요
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>"Doing agbhax..."에서 멈춥니다</u></summary>
+`arm11code.bin`에 문제가 있을 수 있습니다. 최신 버전의 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)을 다시 내려받아 SD 카드의 최상위 디렉토리에 복사하고, 이름을 `arm11code.bin`으로 변경해주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>"PrepareArm9ForTwl returned error c8804631!"</u></summary>
+
+[Nintendo Homebrew Discord 서버](https://discord.gg.MWxPgEp)에 오셔서 도움을 요청하세요.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Failed to mount the SD card!</u></summary>
+
+데이터를 모두 백업하고 시스템별로 권장되는 프로그램을 이용해 SD카드를 FAT32로 다시 포맷해 주세요. ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))) MiniTool Partition Wizard나 HP formatting tool(HPUSBDisk)는 3DS용 SD 카드에 문제를 발생시킨다는 것이 알려져 있습니다.
+
+만약 해결되지 않는다면, 다른 SD 카드를 이용해 보세요.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
