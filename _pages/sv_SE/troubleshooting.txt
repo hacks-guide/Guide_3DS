@@ -11,15 +11,10 @@ Used on multiple pages:
 * [SafeB9SInstaller](#issues-with-safeb9sinstaller)
 
 Guide pages:
-* [Seedminer](#seedminer)
-    * [BannerBomb3](#bannerbomb3)
-    * [Installing boot9strap (Fredtool-Inject)](#installing-boot9strap-fredtool-inject)
-    * [Installing boot9strap (PicHaxx)](#installing-boot9strap-pichaxx)
 * [Installing boot9strap (Soundhax)](#installing-boot9strap-soundhax)
+* [Installing boot9strap (MSET9)](#installing-boot9strap-mset9)
 * [Installing boot9strap (SSLoth-Browser)](#installing-boot9strap-ssloth-browser)
 * [Installing boot9strap (super-skaterhax)](#installing-boot9strap-super-skaterhax)
-* [Installing boot9strap (MSET9)](#installing-boot9strap-mset9)
-
 * [Finalizing Setup](#finalizing-setup)
 
 Issues after installation:
@@ -79,187 +74,6 @@ Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance, 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
-## Seedminer
-
-{% capture compat %}
-<summary><u>Multiple long folder names in Nintendo 3DS folder</u></summary>
-
-![]({{ "/images/screenshots/multiple-id0.png" | absolute_url }})
-{: .notice--info}
-
-This occurs when you use your SD card in multiple 3DS consoles and is intended to prevent inadvertently merging data that would not be valid on other consoles. To figure out which long folder name is correct for your 3DS, follow these instructions:
-
-1. Rename the `Nintendo 3DS` folder to `BACKUP_Nintendo 3DS`
-1. Reinsert your SD card into your console
-1. Power on your console
-1. Wait for the console to generate the SD card data
-    + Your applications will have disappeared. This is normal and will be resolved shortly
-1. Power off your console
-1. Insert your SD card into your computer
-1. Navigate to the `Nintendo 3DS` folder on your SD card
-1. Copy the 32 character long name of the folder you see
-    + This is your true ID0 that you will use in [Section II of Seedminer](seedminer#section-ii---seedminer)
-1. Delete the `Nintendo 3DS` folder
-1. Rename the `BACKUP_Nintendo 3DS` folder to `Nintendo 3DS`
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Bruteforce Movable skips to step 4</u></summary>
-
-The website has already mined your `movable.sed` using your friend code and ID0 combination. You can use the `movable.sed` that it provides you.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Important! You have been locked out of the automated part1 dumper system...</u></summary>
-
-Your friend code was blocked from using the friend code bot because your 3DS did not successfully friend the bot. Ensure your 3DS is properly connected to the Internet, then join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask to be unlocked.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>We were unable to successfully complete your bruteforce request. :`(</u></summary>
-
-The website has determined that your `movable.sed` cannot be brute-forced. Ensure that you gave the correct ID0 to the website. If your ID0 is correct, then you will be unable to use Seedminer and you will have to use an alternate method.
-
-New 3DS users can follow [Installing boot9strap (super-skaterhax)](installing-boot9strap-(super-skaterhax)), while Old 3DS users can follow [Installing boot9strap (MSET9)](installing-boot9strap-(mset9)). If you cannot do MSET9 for any reason, you will need to follow a method that requires additional games or hardware.
-
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-## BannerBomb3
-
-{% capture compat %}
-<summary><u>Multiple ID1 folders inside of ID0</u></summary>
-
-![]({{ "/images/screenshots/multiple-id1.png" | absolute_url }})
-
-{% include_relative include/id1-check.txt %}
-
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>DSiWare Management menu crashes without showing BB3 multihax menu</u></summary>
-Ensure that `F00D43D5.bin` is the only file in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`. If it is, then re-create it with the [Bannerbomb3 Injector](https://zoogie.github.io/web/bb3).
-
-Also, ensure that `bb3.bin` is on the root of the SD card. If it is missing, then download the latest release of [Bannerbomb3](https://github.com/zoogie/Bannerbomb3/releases/download/v3.0/Release_v3.0.zip) (direct download), and copy the `bb3.bin` file from the Release `.zip` to the root of your SD card.
-
-If neither of these solutions fixes this problem, then custom firmware may have been uninstalled on this console in a way that makes this method impossible to perform. If this is the case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>DSiWare Management menu displays "No accessible software data."</u></summary>
-
-`F00D43D5.bin` is missing from `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`. Make sure that `Nintendo DSiWare` is correctly spelled and spaced. Uppercase/lowercase does not matter.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>DSiWare Management shows a question mark</u></summary>
-
-There may be an issue with your `F00D43D5.bin` file (it may be corrupted or intended for the wrong 3DS). Re-create your `F00D43D5.bin` file with the [Bannerbomb3 Injector](https://zoogie.github.io/web/bb3), ensuring that you use the `movable.sed` file for your console.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-## Installing boot9strap (Fredtool-Inject)
-
-{% capture compat %}
-<summary><u>Error on DSiHaxInjector page</u></summary>
-
-Ensure that your `movable.sed` and DSiWare backup come from the same console. A mismatch will result in an error.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>"Haxxxxxxxxx!" does not appear</u></summary>
-
-There is an issue with your `42383821.bin` file (it is incorrect, missing, misplaced, or corrupted). Re-create your files with the [DSIHaxInjector_new](https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec) website and ensure that you place the `42383821.bin` file from `output.zip` -> `hax` in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `Nintendo DSiWare`.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>DSiWare launches normally</u></summary>
-
-`Haxxxxxxxxx!` was not copied from your SD card to your system memory.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>SD card is grayed out in Flipnote</u></summary>
-
-Flipnote may take a long time to index your card if you have a large SD card. Let it sit for a few minutes.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Lenny face does not appear in SD card section</u></summary>
-
-You did not copy the `private` folder from the Frogminer_save `.zip` to the root of your SD card.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Flipnote freezes</u></summary>
-
-You may have accidentally touched the touch screen while in the modified Flipnote. Re-enter DS Connection Settings and try again, ensuring that you don't accidentally use the touchscreen.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Green screen after pasting</u></summary>
-
-The file `boot.nds` is missing or misplaced. Download the latest release of [b9stool](https://github.com/zoogie/b9sTool/releases/latest) and place `boot.nds` on the root of your SD card, replacing the existing one.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>White screen after pasting</u></summary>
-There is an issue with your `boot.nds` file. Re-download the latest release of [b9stool](https://github.com/zoogie/b9sTool/releases/latest) and place `boot.nds` on the root of your SD card, replacing the existing one.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Unable to open Luma3DS configuration menu after running B9STool</u></summary>
-
-Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and explain what has happened.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-## Installing boot9strap (PicHaxx)
-
-{% capture compat %}
-<summary><u>"An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)</u></summary>
-
-Your `00000001.sav` and/or `otherapp.bin` files may be misplaced. Ensure that `00000001.sav` is in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data` and that `otherapp.bin` is on the root of your SD card.
-
-If your files are in the correct locations, re-create the save using the [PicHaxx Save Tool](https://3dstools.nhnarwhal.com/#/pichaxx), then place it in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data`. Ensure that the file is named exactly `00000001.sav` and that you used your console's `movable.sed` to create it. Re-download [HBL otherapps](https://github.com/zoogie/ninjhax2.x/releases/download/v11.17/otherapps_with_CfgS_11.17.zip), place the `.bin` file relevant to your console to the root of your SD card, and rename it to `otherapp.bin`. Do not add the `.bin` extension if you do not already see it.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>"An exception occurred" or Errdisp when opening Picross</u></summary>
-
-Your console already has custom firmware. You should [check for CFW](checking-for-cfw).
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>"An error has occurred, forcing the software to close..." (white message box)</u></summary>
-
-There is an issue with your `otherapp.bin` file. Download [HBL otherapps](https://github.com/zoogie/ninjhax2.x/releases/download/v11.17/otherapps_with_CfgS_11.17.zip), place the `.bin` file relevant to your console to the root of your SD card, and rename it to `otherapp.bin`. Do not add the `.bin` extension if you do not already see it.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Game starts normally</u></summary>
-
-Your modified `00000001.sav` file may be misplaced, or you may have used the wrong `movable.sed` when creating it. Re-generate your `movable.sed` from [Bruteforce Movable](https://seedminer.hacks.guide), then re-create the save using the [PicHaxx Save Tool](https://3dstools.nhnarwhal.com/#/pichaxx) and place the resulting file (`00000001.sav`) in `Nintendo 3DS` -> `<ID0>` -> `<ID1>` -> `title` -> `00040000` -> `0017c100` -> `data`.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
 ## Installing boot9strap (Soundhax)
 
 {% capture compat %}
@@ -290,147 +104,6 @@ You have the wrong Soundhax file for your console and region, or your console is
 Back up your data and reformat your SD card as FAT32 with the recommended tool depending on your operating system ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). MiniTool Partition Wizard and the HP formatting tool (HPUSBDisk) are known to cause issues with 3DS SD cards.
 
 If this is unsuccessful, try using another SD card.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-## Installing boot9strap (SSLoth-Browser)
-
-{% capture compat %}
-<summary><u>Red/purple/pink and white screen after running Browserhax</u></summary>
-
-This likely indicates that you already have custom firmware. You should [check for CFW](checking-for-cfw).
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>"An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)</u></summary>
-
-The file `arm11code.bin` is missing or misplaced. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Do not add the `.bin` extension if you do not already see it.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-
-{% capture compat %}
-<summary><u>"An error has occurred, forcing the software to close..." (white message box)</u></summary>
-
-There may be an issue with your `arm11code.bin` file. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Do not add the `.bin` extension if you do not already see it.
-
-You can also try resetting your browser save data:
-
-1. Launch the browser, then launch the browser settings
-1. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-1. Try the exploit again
-
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Opening the browserhax QR code or URL crashes</u></summary>
-
-Browser based exploits (such as this one) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
-
-1. Launch the browser, then launch the browser settings
-1. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-1. Try the exploit again
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>System Update prompt when opening browser</u></summary>
-
-The SSLoth proxy was incorrectly configured. Re-do the SSLoth section on the page.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Error 032-0420 when opening browser</u></summary>
-
-Follow these steps in order:
-
-1. Launch System Settings on your console
-1. Navigate to `Internet Settings` -> `Connection Settings`
-1. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
-1. Set "Proxy Settings" to "No"
-1. Click OK, then click Save
-1. When prompted, click "Test" to perform the connection test
-    + The test should succeed
-1. Click "OK" to continue
-1. Press "Back" twice, then "Close" to go back to the HOME Menu
-1. Open the Internet Browser once
-1. If prompted about a system update, press OK
-    + This won't actually update the system
-1. Start again from [Section II](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth)
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Frozen on "Doing agbhax..."</u></summary>
-There may be an issue with your `arm11code.bin` file. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place it on the root of your SD card, and rename it to `arm11code.bin`. Do not add the `.bin` extension if you do not already see it.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>"PrepareArm9ForTwl returned error c8804631!"</u></summary>
-
-Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Failed to mount the SD card!</u></summary>
-
-Back up your data and reformat your SD card as FAT32 with the recommended tool depending on your operating system ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). MiniTool Partition Wizard and the HP formatting tool (HPUSBDisk) are known to cause issues with 3DS SD cards.
-
-If this is unsuccessful, try using another SD card.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-## Installing boot9strap (super-skaterhax)
-
-{% capture compat %}
-<summary><u>"An error has occurred. Please save your data in any software currently in use, then restart the system."</u></summary>
-
-The date is set incorrectly. To set it correctly, follow these steps:
-
-1. Select the System Settings icon on the HOME Menu, and tap Open.
-1. Tap Other Settings.
-1. Tap Date & Time.
-1. Tap Today's date.
-1. Tap Up/Down Arrows to set the correct Day, Month and Year.
-1. Select OK to confirm.
-
-If the problem persists:
-
-+ Ensure that `arm11code.bin`, `browserhax_hblauncher_ropbin_payload.bin`, and `boot.3dsx` are on the root of the SD card (not inside of any folder)
-+ Ensure that you selected the correct payload for your region AND system version
-+ Ensure that your region settings look [like this](/images/screenshots/skater_lang.png)
-+ Try resetting your browser data:
-    1. Launch the browser, then launch the browser settings
-    1. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initilize Save Data" or "Clear All Save Data")
-    1. Try the exploit again
-+ Try changing the system language to something other than the current language
-
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-
-{% capture compat %}
-<summary><u>"An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)</u></summary>
-
-The file `arm11code.bin` is missing or misplaced. Make sure to copy the files of the [latest version of super-skaterhax](https://github.com/zoogie/super-skaterhax/releases/latest) for your region and version to the root of your SD card (not inside of a folder).
-
-![]({{ "/images/screenshots/skater-root-layout.png" | absolute_url }})
-{: .notice--info}
-
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-
-{% capture compat %}
-<summary><u>An exception occured or "DLL_HEAP_INFORMATION" when pressing GO! GO!</u></summary>
-
-This likely indicates that you already have custom firmware. You should [check for CFW](checking-for-cfw).
-
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -603,6 +276,147 @@ If you continue to have this issue and are sure that you did everything correctl
 After finishing the MSET9 page, you should switch back to your old SD card before continuing to Finalizing Setup.
 {: .notice--warning}
 
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+## Installing boot9strap (super-skaterhax)
+
+{% capture compat %}
+<summary><u>"An error has occurred. Please save your data in any software currently in use, then restart the system."</u></summary>
+
+The date is set incorrectly. To set it correctly, follow these steps:
+
+1. Select the System Settings icon on the HOME Menu, and tap Open.
+1. Tap Other Settings.
+1. Tap Date & Time.
+1. Tap Today's date.
+1. Tap Up/Down Arrows to set the correct Day, Month and Year.
+1. Select OK to confirm.
+
+If the problem persists:
+
++ Ensure that `arm11code.bin`, `browserhax_hblauncher_ropbin_payload.bin`, and `boot.3dsx` are on the root of the SD card (not inside of any folder)
++ Ensure that you selected the correct payload for your region AND system version
++ Ensure that your region settings look [like this](/images/screenshots/skater_lang.png)
++ Try resetting your browser data:
+    1. Launch the browser, then launch the browser settings
+    1. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initilize Save Data" or "Clear All Save Data")
+    1. Try the exploit again
++ Try changing the system language to something other than the current language
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+
+{% capture compat %}
+<summary><u>"An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)</u></summary>
+
+The file `arm11code.bin` is missing or misplaced. Make sure to copy the files of the [latest version of super-skaterhax](https://github.com/zoogie/super-skaterhax/releases/latest) for your region and version to the root of your SD card (not inside of a folder).
+
+![]({{ "/images/screenshots/skater-root-layout.png" | absolute_url }})
+{: .notice--info}
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+
+{% capture compat %}
+<summary><u>An exception occured or "DLL_HEAP_INFORMATION" when pressing GO! GO!</u></summary>
+
+This likely indicates that you already have custom firmware. You should [check for CFW](checking-for-cfw).
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+## Installing boot9strap (SSLoth-Browser)
+
+{% capture compat %}
+<summary><u>Red/purple/pink and white screen after running Browserhax</u></summary>
+
+This likely indicates that you already have custom firmware. You should [check for CFW](checking-for-cfw).
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>"An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)</u></summary>
+
+The file `arm11code.bin` is missing or misplaced. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Do not add the `.bin` extension if you do not already see it.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+
+{% capture compat %}
+<summary><u>"An error has occurred, forcing the software to close..." (white message box)</u></summary>
+
+There may be an issue with your `arm11code.bin` file. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Do not add the `.bin` extension if you do not already see it.
+
+You can also try resetting your browser save data:
+
+1. Launch the browser, then launch the browser settings
+1. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
+1. Try the exploit again
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Opening the browserhax QR code or URL crashes</u></summary>
+
+Browser based exploits (such as this one) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
+
+1. Launch the browser, then launch the browser settings
+1. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
+1. Try the exploit again
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>System Update prompt when opening browser</u></summary>
+
+The SSLoth proxy was incorrectly configured. Re-do the SSLoth section on the page.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Error 032-0420 when opening browser</u></summary>
+
+Follow these steps in order:
+
+1. Launch System Settings on your console
+1. Navigate to `Internet Settings` -> `Connection Settings`
+1. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
+1. Set "Proxy Settings" to "No"
+1. Click OK, then click Save
+1. When prompted, click "Test" to perform the connection test
+    + The test should succeed
+1. Click "OK" to continue
+1. Press "Back" twice, then "Close" to go back to the HOME Menu
+1. Open the Internet Browser once
+1. If prompted about a system update, press OK
+    + This won't actually update the system
+1. Start again from [Section II](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth)
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Frozen on "Doing agbhax..."</u></summary>
+There may be an issue with your `arm11code.bin` file. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place it on the root of your SD card, and rename it to `arm11code.bin`. Do not add the `.bin` extension if you do not already see it.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>"PrepareArm9ForTwl returned error c8804631!"</u></summary>
+
+Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Failed to mount the SD card!</u></summary>
+
+Back up your data and reformat your SD card as FAT32 with the recommended tool depending on your operating system ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). MiniTool Partition Wizard and the HP formatting tool (HPUSBDisk) are known to cause issues with 3DS SD cards.
+
+If this is unsuccessful, try using another SD card.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
