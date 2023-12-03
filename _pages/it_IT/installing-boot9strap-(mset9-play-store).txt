@@ -1,0 +1,110 @@
+---
+title: "Installing boot9strap (MSET9 Play Store)"
+---
+
+{% include toc title="Indice" %}
+
+{% capture technical_info %}
+<summary><em>Dettagli Tecnici (opzionale)</em></summary>
+[MSET9](https://github.com/zoogie/MSET9) è un exploit per l'applicazione "Impostazioni della console" sviluppata da [zoogie](https://github.com/zoogie). Sfrutta una falla per cui l'ID1 (la seconda cartella a 32 caratteri all'interno di Nintendo 3DS, all'interno di ID0) può essere *qualsiasi* nome a condizione che sia lungo 32 caratteri. L'esecuzione di una sequenza specifica di azioni determina nella console l'esecuzione delle istruzioni codificate nel nome della cartella ID1, che può essere utilizzato per garantire pieno controllo del 3DS.
+
+{% endcapture %}
+<details>{{ technical_info | markdownify }}</details>
+{: .notice--info}
+
+### Note di Compatibilità
+
+This page requires an Android phone/tablet or a Chromebook. If you have a computer running Windows, macOS, or Linux, follow [Installing boot9strap (MSET9)](installing-boot9strap-(mset9)) instead. If you do not have access to any of these devices, you will need to use an [alternate exploit](alternate-exploits).
+{: .notice--warning}
+
+On Android phones/tablets, the minimum Android version required is 6.0 (Marshmallow).
+{: .notice--warning}
+
+### Cosa serve
+
+* The following applications installed from the Google Play Store:
+    * [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)
+    * [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)
+    * If you wish, you can sideload these applications instead
+* L'ultima versione di [MSET9](https://github.com/zoogie/MSET9/releases/latest) (il file Release `.zip`)
+
+### Istruzioni
+
+#### Sezione I - Preparazione
+
+In questa sezione preparerai i dati della scheda SD necessari per attivare l'exploit MSET9.
+
+1. Accendi la console **con la scheda SD inserita**
+1. Avvia il Centro di creazione Mii
+1. Attendi che la console raggiunga la schermata "Benvenuto nel Centro di creazione Mii", quindi esci dall'applicazione
+    + Potresti vedere [questa schermata](/images/screenshots/mset9/mii-extdata.png), che indica che i dati necessari sono stati creati
+    + Se raggiungi la schermata principale del Centro di creazione Mii, esci dall'applicazione e continua al passo successivo
+1. Spegni la tua console
+1. Insert your SD card into your phone/tablet/computer
+1. Copy everything from the Release `.zip` to the root of your SD card, overwriting any existing files:
+    + Open ZArchiver
+    + If prompted, [allow ZArchiver to access files on your SD card](/images/screenshots/mset9/zarchiver-allow.png)
+    + Navigate to where the downloaded MSET9 Release `.zip` is located ([likely in the Downloads folder](/images/screenshots/mset9/zarchiver-zip-location.png))
+    + Select the Release `.zip`, then select "Extract..." ([image](/images/screenshots/mset9/zarchiver-extract-1.png))
+    + Navigate to your SD card, then tap the blue 'down arrow' icon to extract the files to the root of your SD card ([image](/images/screenshots/mset9/zarchiver-extract-2.png))
+
+    ![MSET9 root layout](/images/screenshots/mset9/mset9-root-layout-android.png)
+    {: .notice--info}
+
+1. Run the [MSET9 Installer application](/images/screenshots/mset9/mset9-setup-android.png)
+1. Tap on `Select "Nintendo 3DS" Folder`, then navigate to your `Nintendo 3DS` folder on your SD card ([image](/images/screenshots/mset9/select-mset9-folder-1.png))
+1. Once inside the `Nintendo 3DS` folder, tap on "Use this folder", then "Allow" if asked ([image](/images/screenshots/mset9/select-mset9-folder-2.png))
+1. If "Setup MSET9" is [highlighted](/images/screenshots/mset9/setup-mset9-highlighted.png), MSET9 is ready to be injected. Close the MSET9 Installer for now
+    + If "Check Again" is highlighted, there is a problem that you need to resolve before you can use MSET9. Refer to the [troubleshooting](troubleshooting#installing-boot9strap-mset9)
+1. Reinserisci la scheda SD nella tua console
+1. Accendi la tua console
+
+#### Sezione II - MSET9
+
+In questa sezione attiverai MSET9 per avviare SafeB9SInstaller (l'installer del custom firmware).
+
+Queste istruzioni vanno eseguite **ALLA LETTERA**, quindi ricontrolla TUTTO quello che farai per evitare errori!
+{: .notice--danger}
+
+1. **[Passa sopra](/images/screenshots/mset9/hover-settings.png)** l'icona di "Impostazioni della console" con il D-Pad (senza selezionarlo)
+1. Spegni, quindi riaccendi la tua console
+1. Premi (A) per avviare le Impostazioni della console
+1. Entra in `Gestione dati` -> `Nintendo 3DS` -> `Dati aggiuntivi` ([immagine](/images/screenshots/bb3/settings-extdata.png))
+1. **Non premere alcun pulsante o toccare lo schermo** - assicurati di vedere l'icona del Centro di creazione Mii
+1. **Con la console ANCORA ACCESA e senza premere alcun pulsante o toccare lo schermo**, rimuovi la tua scheda SD dalla console
+    + Il menu si aggiornerà e dirà che non è presente alcuna scheda SD, il che è normale
+1. Insert your SD card into your phone/tablet/computer
+1. Open the MSET9 Installer application
+1. Tap "Setup MSET9"
+1. Tap on the photo corresponding to your console model, then on the button corresponding to your current firmware version
+    + If the injection was successful, all buttons should become grayed out except for "Remove MSET9"
+1. Reinserisci la scheda SD nella console **senza premere alcun pulsante o toccare lo schermo**
+1. Se l'exploit è andato a buon fine, si avvierà SafeB9SInstaller 
+    + Se vedi una schermata rossa o se la console si blocca ad una schermata di caricamento, [segui questa guida per risolvere il problema](troubleshooting#installing-boot9strap-mset9)
+
+#### Sezione III - Installazione di boot9strap
+
+{% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
+{%- include_relative include/configure-luma3ds.txt %}
+
+#### Sezione IV - Disinstallare MSET9
+
+In questa sezione rimuoverai MSET9 per evitare problemi successivi. (Questo non rimuoverà il custom firmware che hai appena installato.)
+
+NON saltare questa sezione! Se lo salti, le applicazioni potrebbero inaspettatamente crashare e riscontrerai errori nella pagina successiva!
+{: .notice--danger}
+
+1. Spegni la tua console
+1. Insert your SD card into your phone/tablet/computer
+1. Open the MSET9 Installer application
+1. Tap "Remove MSET9"
+1. Close the MSET9 Installer application
+
+{% include_relative include/luma3ds-installed-note.txt %}
+___
+
+Hai seguito la Sezione IV (Disinstallare MSET9)? Quella sezione è OBBLIGATORIA!
+{: .notice--danger}
+
+### Prosegui con il [Completamento dell'installazione](finalizing-setup)
+{: .notice--primary}
