@@ -6,7 +6,7 @@ title: "Boot9strap telepítése (MSET9 CLI)"
 
 {% capture technical_info %}
 <summary><em>Technikai részletek (opcionális)</em></summary>
-[MSET9](https://github.com/zoogie/MSET9) is an exploit for the System Settings application developed by [zoogie](https://github.com/zoogie). It exploits a flaw where the ID1 (the second 32-character folder name inside of the Nintendo 3DS folder, inside of the ID0) can be *any* name as long as it is 32 characters. Performing a specific sequence of actions results in the console executing the instructions that are encoded into the ID1 folder name, which can be used to grant full control over the 3DS.
+Az [MSET9](https://github.com/zoogie/MSET9) egy exploit a System Setting alkalmazáshoz, amit [zoogie](https://github.com/zoogie) készített. Kihasznál egy hibát, ahol az ID1 (a második 32 karakteres mappanév a Nintendo 3DS mappán belül, az ID0-n belül) lehet *minden* név, amíg 32 karakteres. Egy adott műveletsor végrehajtása azt eredményezi, hogy a konzol végrehajtja az ID1 mappanévbe kódolt utasításokat, amelyek segítségével teljes körű irányítást szerez a 3DS felett.
 
 {% endcapture %}
 <details>{{ technical_info | markdownify }}</details>
@@ -14,7 +14,7 @@ title: "Boot9strap telepítése (MSET9 CLI)"
 
 ### Kompatibilitási megjegyzések
 
-Ez a metódus Windows, Linux vagy MacOS számítógépet igényel. Ha Android telefonod/tableted vagy Chromebook-od van, kövesd a [Boot9strap telepítése (MSET9 Play Store)](installing-boot9strap-(mset9-play-store)) oldalt helyette. IHa nem férsz hozzá ezen eszközök egyikéhez sem, akkor [alternatív exploit](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits) kell használnod.
+Ez a metódus Windows, Linux vagy MacOS számítógépet igényel. Ha Android telefonod/tableted vagy Chromebook-od van, kövesd a [Boot9strap telepítése (MSET9 Play Store)](installing-boot9strap-(mset9-play-store)) oldalt helyette. Ha nem férsz hozzá ezen eszközök egyikéhez sem, akkor [alternatív exploit](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits) kell használnod.
 {: .notice--warning}
 
 ### Amire szükséged lesz
@@ -33,13 +33,13 @@ On this page, you will use the MSET9 script, which is used to trigger MSET9. If 
 In this section, you will prepare the SD card data necessary for the MSET9 exploit to trigger.
 
 1. Kapcsold be a konzolod, miközben **az SD kártya be van helyezve**
-1. Open Mii Maker
-1. Wait for your console to reach the "Welcome to Mii Maker" screen, then exit Mii Maker
+1. Nyisd meg a Mii Maker alkalmazást
+1. Várj amíg a konzolod elérí a "Welcome to Mii Maker" képernyőt, majd lépj ki a Mii Maker-ből
     + You may see [this screen](/images/screenshots/mset9/mii-extdata.png), which indicates the necessary data has been created
     + If you just reach the normal Mii Maker screen, exit Mii Maker and continue to the next step
 1. Kapcsold ki a konzolod
 1. Helyezd az SD kártyád a számítógépbe
-1. Copy everything from the Release `.zip` to the root of your SD card, overwriting any existing files
+1. Másolj át a mindent a Release `.zip`-ből az SD kártyád gyökerébe, felülírva minden már ott lévő fájlt
 
     ![MSET9 root layout](/images/screenshots/mset9/mset9-root-layout.png)
     {: .notice--info}
@@ -65,7 +65,7 @@ In this section, you will prepare the SD card data necessary for the MSET9 explo
 1. Tedd vissza az SD kártyád a konzoldba
 1. Kapcsold be a konzolod
 
-#### Section II - MSET9
+#### II. rész - MSET9
 
 In this section, you will trigger MSET9 to launch SafeB9SInstaller (the custom firmware installer).
 
@@ -73,10 +73,10 @@ These instructions must be followed **EXACTLY**, so double-check EVERYTHING you 
 {: .notice--danger}
 
 1. **[Hover over](/images/screenshots/mset9/hover-settings.png)** the System Settings icon using the D-Pad (do not select it yet)
-1. Power off, then power on your console
-1. Press (A) to launch System Settings
-1. Navigate to `Data Management` -> `Nintendo 3DS` -> `Extra Data` ([image](/images/screenshots/mset9/settings-extdata.png))
-1. **Do not press any buttons or touch the screen** - ensure that you see the Mii Maker icon
+1. Kapcsold ki, majd vissza a konzolod
+1. Nyomj (A) gombot a System Settings indításához
+1. Navigálj ide: `Data Management` -> `Nintendo 3DS` -> `Extra Data` ([image](/images/screenshots/mset9/settings-extdata.png))
+1. **Ne nyomj semmilyen gombot vagy érintsd meg a képernyőt** - legyél biztos abban, hogy látod a Mii Maker ikonját
 1. **With the console STILL ON, and without pressing any buttons or touching the screen**, remove your SD card from your console
     + The menu will refresh and say that no SD card is inserted, which is expected
 1. Helyezd az SD kártyád a számítógépbe
@@ -87,7 +87,7 @@ These instructions must be followed **EXACTLY**, so double-check EVERYTHING you 
 1. Írd be a konzolod modelljéhez és verziójához tartozó számot, és nyomj Enter-t
 1. In the MSET9 window, type `2`, then press Enter to inject MSET9
     + You should see "MSET9 successfully injected!"
-1. Press Enter to close the MSET9 script
+1. Nyomj Enter-t az MSET9 szkript bezárásához
 1. Reinsert your SD card into your console **without pressing any buttons or touching the screen**
 1. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert 
     + If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting#installing-boot9strap-mset9)
