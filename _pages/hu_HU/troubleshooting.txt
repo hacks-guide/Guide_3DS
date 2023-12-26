@@ -81,7 +81,7 @@ Csatlakozz a [Nintendo Homebrew Discord-on](https://discord.gg/MWxPgEp) csatorn�
 
 Ha a konzol rendszer verziód 9.4.0, 9.5.0, vagy 9.6.0, hibát tapasztalhatsz az universal-otherapp egy régebbi verziójával. Töltsd le a legfrissebb verziót [innen](https://github.com/TuxSH/universal-otherapp/releases/latest).
 
-Ha nem ezeken a firmware verziókon van a konzolod, akkor ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvégezned a [CFW ellenőrzését](checking-for-cfw).
+Ha nem ezeken a firmware verziókon van a konzolod, akkor ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. You should [check for CFW](checking-for-cfw).
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -188,7 +188,7 @@ Több ID0 mappád van. Ahhoz, hogy meghatározd melyik a helyes mappa, a követk
 1. Kapcsold be a konzolod
 1. Várd meg, amíg a konzolod legenerálja az SD kártyára az adatokat
     + Az alkalmazásaidnak el kell tűnniük. Ez normális, hamarosan megoldjuk
-1. Power off your console
+1. Kapcsold ki a konzolod
 1. Helyezd az SD kártyád a számítógépbe
 1. Lépj be az SD kártyád `Nintendo 3DS` könyvtárába
 1. Írd le az első pár karakterét a mappának amit látsz
@@ -213,13 +213,13 @@ Egy vagy több fájl, amire az MSET9-nek szüksége van a futáshoz, hiányzik v
 {% capture compat %}
 <summary><u>Error 10: Database(s) malformed or missing!</u></summary>
 
-This happens when no valid title database is present, usually because you never installed any titles from eShop on this SD card.
+Ez akkor történik, ha nincs cím adatbázis, általában azért, mert nem telepítettél semmilyen címet az eShop-ból erre az SD kártyára.
 
 1. Ha még nem tetted meg, nyomj Enter-t az MSET9 szkript bezárásához
 1. Helyezd az SD kártyád a konzolodba
 1. Kapcsold be a konzolod
 1. Navigálj ide: `System Settings -> Data Management -> Nintendo 3DS -> Software -> Reset ([vizuális útmutató](/images/screenshots/database-reset.jpg))
-1. Power off your console
+1. Kapcsold ki a konzolod
 1. Helyezd az SD kártyád a számítógépedbe
 1. Térj vissza az [I. rész 7. lépéséhez](installing-boot9strap-(mset9-cli)#section-i---prep-work)
 
@@ -235,39 +235,39 @@ This happens when no valid title database is present, usually because you never 
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Red screen after reinserting SD card (Section II Step 11)</u></summary>
+<summary><u>Piros képernyő az SD kártya visszaillesztése után (II. rész 11. lépés)</u></summary>
 
-You may be missing `SafeB9S.bin` from the root of your SD card, or the file may be corrupted. Copy it from the MSET9 `.zip`, replacing any existing files.
+Valószínüleg hiányzik a `SafeB9S.bin` az SD kártyád gyökeréből vagy sérült. Másold ki az MSET9 `.zip` fájlból felülírva a létező fájlokat.
 
-Alternatively, your SD card may be improperly formatted or partitioned. Próbáld meg újraformázni az SD kártyád ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)) *(ez töröl minden adatot az SD kártyádról)*
+Alternatíva, az SD kártyád nem megfelelően formázott vagy partícionált. Próbáld meg újraformázni az SD kártyád ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)) *(ez töröl minden adatot az SD kártyádról)*
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>System Settings loading infinitely after reinserting the SD card</u></summary>
+<summary><u>A System Settings a végtelenségig tölt az SD kártya visszahelyezését követően</u></summary>
 
-You most likely did something different from the MSET9 instructions, or selected the wrong model or version.
+Vagy eltértél az MSET9 lépésektől, vagy rossz modelt vagy verziót választottál.
 
 1. Zárd be a szkript ablakát
 1. Futtasd az `mset9.py` szkriptet az SD kártya gyökerén
     + **Windows**: Dupla kattintás az `mset9.bat`-on
     + **Linux**: nyiss meg egy Terminal ablakot, majd `cd`-z az SD kártyád gyökerébe, és írd be, a `python3 mset9.py` parancsot és nyomj Enter-t
     + Látnod kell egy ablakot, ami ezt mondja "MSET9 ... SETUP by zoogie"
-1. Type the number corresponding to your console model and version, then press Enter
-1. Type `3`, then press Enter
-1. Once the window says "Successfully removed MSET9!", reinsert the SD card into your console
+1. Írd be a konzolod modelljéhez és verziójához tartozó számot, és nyomj Enter-t
+1. Írj `3`-at és nyomj Enter-t
+1. Amikor az ablak azt mondja, hogy "Successfully removed MSET9!", helyezd vissza az SD kártyádat a konzolodba
 1. Kapcsold be a konzolod
-1. Return to [Section II Step 1](installing-boot9strap-(mset9-cli)#section-ii---mset9)
+1. Térj vissza az [II. rész 1. lépéséhez](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
-If you continue to have this issue and are sure that you did everything correctly, it's possible that there's something wrong with your Mii Maker extdata. Follow these instructions to reset it:
+Ha továbbra is megmarad ez a hiba és biztos vagy benne, hogy mindent jól csináltál, előfordulhat, hogy probléma van a konzolod Mii Maker extdata-jával. Kövesd az alábbi lépéseket a helyreállításához:
 
 1. Zárd be a szkript ablakát
-1. Run the MSET9 script
+1. Futtasd az MSET9 szkriptet
     + **Windows**: Dupla kattintás az `mset9.bat`-on
     + **Linux**: nyiss meg egy Terminal ablakot, majd `cd`-z az SD kártyád gyökerébe, és írd be, a `python3 mset9.py` parancsot és nyomj Enter-t
     + Látnod kell egy ablakot, ami ezt mondja "MSET9 ... SETUP by zoogie"
-1. Type the number corresponding to your console model and version, then press Enter
+1. Írd be a konzolod modelljéhez és verziójához tartozó számot, és nyomj Enter-t
 1. Írj `3`-at és nyomj Enter-t az MSET9 eltávolításához
 1. Ha lehetséges használj új SD kártyát; egyébként, mentsd és for, ázd újra a meglévő SD kártyád FAT 32-re ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
 1. Helyezd a formázott, üres SD kártyád a konzolodba
@@ -280,9 +280,9 @@ Az MSET9 oldal befejezése után érdemes visszaváltanod a régi SD kártyádra
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>An exception occured after triggering MSET9</u></summary>
+<summary><u>Kivétel történt (exception occured) az MSET9 kiváltását követően</u></summary>
 
-Ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvégezned a [CFW ellenőrzését](checking-for-cfw).
+Ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. You should [check for CFW](checking-for-cfw).
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -331,7 +331,7 @@ A `arm11code.bin` fájl hiányzik, vagy rossz helyen van. Biztosítsd, hogy [sup
 {% capture compat %}
 <summary><u>Egy exception történik vagy "DLL_HEAP_INFORMATION" a GO! megnyomásakor! GO!</u></summary>
 
-Ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvégezned a [CFW ellenőrzését](checking-for-cfw).
+Ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. You should [check for CFW](checking-for-cfw).
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -341,7 +341,7 @@ Ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvége
 {% capture compat %}
 <summary><u>Piros/lila/rózsaszín és fehér képernyő a browserhax futtatása után</u></summary>
 
-Ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvégezned a [CFW ellenőrzését](checking-for-cfw).
+Ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. You should [check for CFW](checking-for-cfw).
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
@@ -473,7 +473,7 @@ Nem másoltál mindent a `finalize.zip`-ből az SD kártyád gyökerébe. Emlék
 
 Legalább 1,33 GB szabad hely kell a NAND mentés végrehajtásához, ami a szkript része. Ha nincs elég szabad helyed, kövesd ezeket a lépéseket:
 
-1. Power off your console
+1. Kapcsold ki a konzolod
 1. Helyezd az SD kártyád a számítógépbe
 1. Másold a `Nintendo 3DS` mappát az SD kártya gyökeréből a számítógépedre
 1. Töröld a Nintendo 3DS mappát az SD kártyáról
@@ -517,7 +517,7 @@ Nyomj (A)-t a cím adatbázis importálásához, old fel a SysNAND írást a ké
 <summary><u>Error #06 "Backup failed" vagy "Error: Could not open directory" a NAND backup készítésének megpróbálásakor</u></summary>
 
 Győződj meg róla, hogy legalább 1.3 GB szabad hely van az SD kártyádon. Ha nincs elég szabad helyed, kövesd ezeket a lépéseket:
-1. Power off your console
+1. Kapcsold ki a konzolod
 1. Helyezd az SD kártyád a számítógépbe
 1. Másold a `Nintendo 3DS` mappát az SD kártya gyökeréből a számítógépedre
 1. Töröld a Nintendo 3DS mappát az SD kártyáról
@@ -701,7 +701,7 @@ Készítsd egy képet a hibáról és csatlakozz a [Nintendo Homebrew-hoz a Disc
 <summary><u>DSi / DS funkcionalitás hibás vagy felcserélt a Flipnote Studio-val</u></summary>
 
 1. Töltsd le a [TWLFix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest) legutolsó kiadását (a `.3dsx` fájlt)
-1. Power off your console
+1. Kapcsold ki a konzolod
 1. Hozz létre egy mappát `3ds` néven az SD kártyád gyökerében, ha még nem létezik ilyen
 1. Másold az `TWLFix-CFW.3dsx` fájlt az SD kártyád `/3ds/` mappájába
 1. Tedd vissza az SD kártyád a konzoldba
@@ -752,7 +752,7 @@ A konzolodon még mindig van menuhax67 telepítve. A menuhax67 eltávolításáh
 {% capture compat %}
 <summary><u>A HOME Menu extdata takarítása</u></summary>
 
-1. Power off your console
+1. Kapcsold ki a konzolod
 1. Helyezd az SD kártyád a számítógépbe
 1. Navigálj a `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` könyvtárba az SD kártyádon
 1. Töröld a 3DS régiódhoz tartozó mappát:
@@ -769,7 +769,7 @@ A konzolodon még mindig van menuhax67 telepítve. A menuhax67 eltávolításáh
 {% capture compat %}
 <summary><u>A HOME Menu téma adat takarítása</u></summary>
 
-1. Power off your console
+1. Kapcsold ki a konzolod
 1. Helyezd az SD kártyád a számítógépbe
 1. Navigálj a `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` könyvtárba az SD kártyádon
 1. Töröld a 3DS régiódhoz tartozó mappát:
