@@ -35,7 +35,8 @@ If your previous CFW setup was EmuNAND-based and you wish to move the contents o
 
 ### What You Need
 
-* [finalizing.zip]({{ base_path }}/assets/finalizing.zip) (direct download)
+* [finalize_helper.firm]({{ base_path }}/assets/finalize_helper.firm) (direct download)
+* [finalize.romfs]({{ base_path }}/assets/finalize.romfs) (direct download)
 
 ### הנחיות
 
@@ -45,8 +46,9 @@ In this section, you will copy the files necessary to follow the rest of the ins
 
 1. Power off your console
 1. תכניסו את ה-SD שלכם למחשב
-1. Copy the contents of `finalizing.zip` (`finalize`, `gm9`, and `luma`) to the root of your SD card, merging/replacing any existing folders if prompted
-    + If you are using a Mac, hold the Option key while dragging the folders to the root of your SD card, then click "Merge"
+1. Copy `finalize.romfs` to the root of your SD card
+1. Open the `luma` folder and create a folder named `payloads` inside, if it does not already exist
+1. Copy `finalize_helper.firm` to the `payloads` folder
 1. Reinsert your SD card into your console
 
 The screenshot below indicates the minimum SD card layout that is required to follow this page. You may have extra files or folders on your SD card, depending on your previous setup or the method that you followed.
@@ -54,27 +56,16 @@ The screenshot below indicates the minimum SD card layout that is required to fo
 ![]({{ "/images/screenshots/finalizing-root-layout.png" | absolute_url }})
 {: .notice--info}
 
-#### Section II - CFW Check
+![]({{ "/images/screenshots/finalizing-luma-payloads.png" | absolute_url }})
+{: .notice--info}
 
-As an additional safety measure, we will perform an additional check for custom firmware. If custom firmware is not installed by this point for any reason, the next section may render your console unable to be hacked without external hardware.
-
-1. Power off your console
-1. Hold the (Select) button
-1. Power on your console while still holding the (Select) button
-1. If the check was successful, your console should have booted into the Luma3DS configuration menu
-1. לחצו על (Start) על מנת לשמור ולהפעיל מחדש
-
-If you do NOT boot into the Luma3DS configuration menu, custom firmware was not installed on your console. Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
-{: .notice--danger}
-
-
-#### Section III - Updating the System
+#### Section II - Updating the System
 
 In this section, you will update your system to the latest version, which is safe to do with custom firmware.
 
 {% include_relative include/sysupdate.txt cfw="true" %}
 
-#### Section IV - RTC and DSP setup
+#### Section III - RTC and DSP setup
 
 In this section, you will sync your 3DS internal clock with the actual time and dump the sound firmware (which is necesssary for some homebrew software to use sound properly).
 
@@ -88,13 +79,18 @@ In this section, you will sync your 3DS internal clock with the actual time and 
 1. תלחצו (B) כדי לחזור לתפריט הראשי של Rosalina
 1. תלחצו (B) כדי לצאת מהתפריט של Rosalina
 
-#### Section V - Setup Script
+#### Section IV - Setup Script
 
-In this section, you will use a script to automate homebrew installation, SD card cleanup, and system file backup.
+In this section, you will use a series of scripts to automate homebrew installation, SD card cleanup, and system file backup.
 
 1. Power off your console
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-    + If you do not boot into GodMode9, ensure that you copied the three folders from `finalizing.zip` to the root of your SD card and that the folders are not misnamed (e.g. `luma (1)`)
+1. Press and hold (Start), and while holding (Start), power on your console. This will launch the Finalizing Setup Helper
+    + If you boot to the Luma3DS configuration menu, you held SELECT instead of START
+    + If you boot to the HOME Menu, your `payloads` folder may be incorrectly spelled or in the wrong location
+    + If you see a "Luma3DS Chainloader" menu, use the D-Pad and (A) buttons to navigate to and select `finalize_helper` from the list
+    + If you encounter an error, consult the [troubleshooting](troubleshooting#finalizing-setup) page
+1. If the Helper was successful, your console will boot into GodMode9
+    + From this point forward, you can access GodMode9 by holding START while powering on your console
 1. אם תתבקשו לעשות גיבוי של קבצים חיוניים, תלחצו (A) כדי לעשות זאת, ואז תלחצו (A) כדי להמשיך אחרי שזה סיים
 1. אם אתם מתבקשים לתקן את זמן ותאריך הRTC, תלחצו (A) כדי לעשות זאת, ואז תלחצו (A) כדי להמשיך
 1. תלחצו על (Home) כדי להראות את תפריט הפעולה
@@ -103,7 +99,7 @@ In this section, you will use a script to automate homebrew installation, SD car
 1. Follow the prompts in the script, answering any questions that you are asked
     + If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting#finalizing-setup) page
 1. Once the script says "Setup complete!", press (A) to power off the device
-    + If you do NOT see the message "Setup complete!", the script was not successful and you will need to redo this section
+    + If you do NOT see the message "Setup complete!", the script was not successful and you will need to redo this section from Step 3
 1. תכניסו את ה-SD שלכם למחשב
 1. Copy the `/gm9/backups/` folder to a safe location on your computer
     + This folder contains critical file backups and should be backed up to multiple locations (i.e. cloud storage) if possible
@@ -117,10 +113,10 @@ ___
 You're done! Custom firmware is now fully configured on your console.
 {: .notice--success}
 
-### Information and Notes
-
 Trying to figure out what to do with your newly modded device? Visit [our wiki](https://wiki.hacks.guide/wiki/3DS:Things_to_do)!
 {: .notice--info}
+
+### Information and Notes
 
 {% capture notice-6 %}
 Here are some key combos that you should know:
