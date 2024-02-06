@@ -448,21 +448,34 @@ The steps below can be attempted in any order, but are listed from easiest to ha
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Error #02: Missing essential.exefs</u></summary>
+<summary><u>Error #22: finalize.romfs is invalid</u></summary>
 
-You said 'No' to the "Make essential files backup?" prompt in GodMode9. Power off your console, power it on while holding (Start) to re-enter GodMode9, say 'Yes' to the prompt, then try again.
+The file `finalize.romfs` is corrupt or unreadable. [Re-download it](/assets/finalize.romfs) and copy it to the root of the SD card, replacing any existing copy, then try again.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
+<summary><u>Information #23: finalize.romfs in wrong location</u></summary>
 
-<summary><u>Unable to open GodMode9 or Error #03: Missing files</u></summary>
+The file `finalize.romfs` was placed in the wrong location (the `Nintendo 3DS` folder instead of root of SD). The script will attempt to resolve this, but requires your permission to do so. Press (A) on the next few prompts to continue.
 
-You did not copy everything from `finalize.zip` to the root of your SD card. Remember, your SD card should have at least these files:
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
 
-![]({{ "/images/screenshots/finalizing-root-layout.png" | absolute_url }})
-{: .notice--info}
+{% capture compat %}
+<summary><u>Error #24: SD is write-protected</u></summary>
+
+Ensure that your SD card is not [locked](/images/sdlock.png). If the SD card is not locked and you continue to get this error, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+
+{% capture compat %}
+<summary><u>Error #02: Missing essential.exefs</u></summary>
+
+You said 'No' to the "Make essential files backup?" prompt in GodMode9. Power off your console, power it on while holding (Start) to re-enter GodMode9, say 'Yes' to the prompt, then try again.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -530,25 +543,6 @@ Make sure you have at least 1.3GB available in your SD card. If you don't have e
 1. Delete the `Nintendo 3DS` folder from your computer
 
 If you have enough space on your SD card, your SD might be corrupted or faulty. Check your SD card for any errors by following the guide according to your computer's operating system: [Windows](h2testw-(windows)), [Linux](f3-(linux)), [macOS](f3xswift-(mac)).
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Error #09: Unsupported GodMode9 version</u></summary>
-
-You are somehow running a version of GodMode9 not packaged with the script. Make sure you copied the contents of `finalize.zip` to the root of your SD card and that you are holding START while powering on your console.
-
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Error #11: Missing donor database</u></summary>
-
-You did not copy everything from `finalize.zip` to the root of your SD card. Remember, your SD card should have at least these files:
-
-![]({{ "/images/screenshots/finalizing-root-layout.png" | absolute_url }})
-{: .notice--info}
-
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
