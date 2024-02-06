@@ -35,7 +35,8 @@ title: "마무리 단계"
 
 ### 준비물
 
-* [finalizing.zip]({{ base_path }}/assets/finalizing.zip) (직접 다운로드)
+* [finalize_helper.firm]({{ base_path }}/assets/finalize_helper.firm) (direct download)
+* [finalize.romfs]({{ base_path }}/assets/finalize.romfs) (direct download)
 
 ### 진행 방법
 
@@ -45,8 +46,9 @@ title: "마무리 단계"
 
 1. 콘솔의 전원을 꺼 주세요
 1. SD 카드를 컴퓨터에 삽입해 주세요
-1. Copy the contents of `finalizing.zip` (`finalize`, `gm9`, and `luma`) to the root of your SD card, merging/replacing any existing folders if prompted
-    + If you are using a Mac, hold the Option key while dragging the folders to the root of your SD card, then click "Merge"
+1. Copy `finalize.romfs` to the root of your SD card
+1. Open the `luma` folder and create a folder named `payloads` inside, if it does not already exist
+1. Copy `finalize_helper.firm` to the `payloads` folder
 1. SD 카드를 콘솔에 다시 삽입해 주세요
 
 이 스크린샷들은 이 가이드를 따랐을 때의 최소한의 SD 카드 레이아웃을 표시합니다. 이전에 따른 방법에 따라, SD 카드에 추가 파일과 폴더가 있을 수 있습니다.
@@ -54,27 +56,16 @@ title: "마무리 단계"
 ![]({{ "/images/screenshots/finalizing-root-layout.png" | absolute_url }})
 {: .notice--info}
 
-#### 섹션 II - CFW 확인
+![]({{ "/images/screenshots/finalizing-luma-payloads.png" | absolute_url }})
+{: .notice--info}
 
-여기서 콘솔의 안전을 위해 커스텀 펌웨어가 설치되어 있는지 확인합니다. If custom firmware is not installed by this point for any reason, the next section may render your console unable to be hacked without external hardware.
-
-1. 콘솔의 전원을 꺼 주세요
-1. (Select) 버튼을 길게 눌러 주세요
-1. (Select) 버튼을 계속 눌러 있는 상태에서 콘솔의 전원을 켜 주세요
-1. 점검이 성공적으로 이뤄진다면, 콘솔이 Luma3DS 구성 메뉴로 부팅될 것입니다
-1. (Start)를 눌러 저장하고 콘솔을 다시 시작해 주세요
-
-Luma3DS 구성 메뉴로 부팅되지 않았다면 콘솔에 커스텀 펌웨어가 설치되지 않았습니다. [Nintendo Homebrew Discord 서버](https://discord.gg.MWxPgEp)에 오셔서 도움을 요청하세요.
-{: .notice--danger}
-
-
-#### 섹션 III - 본체 업데이트
+#### Section II - Updating the System
 
 이 섹션에서는 커스텀 펌웨어가 설치된 콘솔에서도 안전하게 이용 가능한 최신 버전의 펌웨어로 본체를 업데이트합니다.
 
 {% include_relative include/sysupdate.txt cfw="true" %}
 
-#### 섹션 IV - RTC 및 DSP 설정
+#### Section III - RTC and DSP setup
 
 이 섹션에서는 3DS 내부 시계를 실제 시각과 맞추고, 홈브류 소프트웨어에서 음성을 적절하게 이용하기 위해 사운드 펌웨어를 백업합니다.
 
@@ -88,13 +79,18 @@ Luma3DS 구성 메뉴로 부팅되지 않았다면 콘솔에 커스텀 펌웨어
 1. (B)를 눌러 Rosalina 메뉴로 돌아가 주세요
 1. (B)를 눌러 Rosalina 메뉴를 나와 주세요
 
-#### 섹션 V - 스크립트 실행
+#### Section IV - Setup Script
 
-In this section, you will use a script to automate homebrew installation, SD card cleanup, and system file backup.
+In this section, you will use a series of scripts to automate homebrew installation, SD card cleanup, and system file backup.
 
 1. 콘솔의 전원을 꺼 주세요
-1. (Start) 를 길게 누르고, 이 상태에서 콘솔의 전원을 켜 주세요. GodMode9이 실행될 겁니다
-    + If you do not boot into GodMode9, ensure that you copied the three folders from `finalizing.zip` to the root of your SD card and that the folders are not misnamed (e.g. 'luma (1)')
+1. (Start) 를 길게 누르고, 이 상태에서 콘솔의 전원을 켜 주세요. This will launch the Finalizing Setup Helper
+    + If you boot to the Luma3DS configuration menu, you held SELECT instead of START
+    + If you boot to the HOME Menu, your `payloads` folder may be incorrectly spelled or in the wrong location
+    + If you see a "Luma3DS Chainloader" menu, use the D-Pad and (A) buttons to navigate to and select `finalize_helper` from the list
+    + If you encounter an error, consult the [troubleshooting](troubleshooting#finalizing-setup) page
+1. If the Helper was successful, your console will boot into GodMode9
+    + From this point forward, you can access GodMode9 by holding START while powering on your console
 1. 만약 "Essential files backup not found" 메세지가 표시되면, (A) 룰 눌러서 하세요. 백업이 끝나면 (A) 를 눌러서 진행해 주세요
 1. 만약 "RTC date&time seems to be wrong" 메세지가 표시되면 (A) 버튼을 눌러 하고, 날짜와 시간을 고친 다음 (A) 버튼을 눌러 계속해 주세요
 1. (Home)을 눌러 작업 메뉴를 열어 주세요
@@ -103,7 +99,7 @@ In this section, you will use a script to automate homebrew installation, SD car
 1. 스크립트 표시에 따라 필요한 행동을 취해주세요
     + If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting#finalizing-setup) page
 1. "Setup Complete!" 가 떴을 경우, (A) 버튼을 눌러 전원을 꺼 주세요
-    + If you do NOT see the message "Setup complete!", the script was not successful and you will need to redo this section
+    + If you do NOT see the message "Setup complete!", the script was not successful and you will need to redo this section from Step 3
 1. SD 카드를 컴퓨터에 삽입해 주세요
 1. SD 카드의 `/gm9/backups/` 폴더 내 파일을 컴퓨터의 안전한 위치에 복사해 주세요
     + This folder contains critical file backups and should be backed up to multiple locations (i.e. cloud storage) if possible
@@ -117,10 +113,10 @@ ___
 모든 작업이 끝났습니다! 이제 커스텀 펌웨어는 완벽하게 설정되었습니다.
 {: .notice--success}
 
-### 정보와 메모
-
 개조된 콘솔로 뭘 할 수 있는지 알고 싶으시다면 [위키](https://wiki.hacks.guide/wiki/3DS:Things_to_do)를 방문해 보세요!
 {: .notice--info}
+
+### 정보와 메모
 
 {% capture notice-6 %}
 알아야 할 몇몇 버튼 콤보들이 있습니다:
