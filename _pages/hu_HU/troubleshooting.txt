@@ -448,21 +448,34 @@ Az alábbi lépések tetszőleges sorrendben hajthatók végre, azonban a lista 
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Error #02: Missing essential.exefs</u></summary>
+<summary><u>Error #22: finalize.romfs is invalid</u></summary>
 
-'No'-t válaszoltál a "Make essential files backup?" kérdésre a GodMode9-ben. Kapcsold kia konzolod, majd be a (Start) gomb nyomva tartása mellet, hogy újra belép a GodMode9-be és válaszold a 'Yes'-t a kérdésnél, majd próbáld újra.
+The file `finalize.romfs` is corrupt or unreadable. [Re-download it](/assets/finalize.romfs) and copy it to the root of the SD card, replacing any existing copy, then try again.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
+<summary><u>Information #23: finalize.romfs in wrong location</u></summary>
 
-<summary><u>Nem sikerült elindítani a GodMode9-et vagy Error #03: Missing files hibaüzenet</u></summary>
+The file `finalize.romfs` was placed in the wrong location (the `Nintendo 3DS` folder instead of root of SD). The script will attempt to resolve this, but requires your permission to do so. Press (A) on the next few prompts to continue.
 
-Nem másoltál mindent a `finalize.zip`-ből az SD kártyád gyökerébe. Emlékezz, az SD kártyádon legalább ezen fájloknak kell lennie:
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
 
-![]({{ "/images/screenshots/finalizing-root-layout.png" | absolute_url }})
-{: .notice--info}
+{% capture compat %}
+<summary><u>Error #24: SD is write-protected</u></summary>
+
+Ellenőrizd, hogy SD kártyád nem [zárolt-e](/images/sdlock.png). Ha az SD kártyád nem zárolt, és továbbra is ezt a hibát kapod, csatlakozz a [Nintendo Homebrew-hoz a Discord-on](https://discord.gg/MWxPgEp) segítségért.
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+
+{% capture compat %}
+<summary><u>Error #02: Missing essential.exefs</u></summary>
+
+'No'-t válaszoltál a "Make essential files backup?" kérdésre a GodMode9-ben. Kapcsold kia konzolod, majd be a (Start) gomb nyomva tartása mellet, hogy újra belép a GodMode9-be és válaszold a 'Yes'-t a kérdésnél, majd próbáld újra.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -530,25 +543,6 @@ Győződj meg róla, hogy legalább 1.3 GB szabad hely van az SD kártyádon. Ha
 1. Töröld a `Nintendo 3DS` mappát a számítógépedről
 
 Ha van elég szabad hely az SD kártyádon, az SD kártya lehet sérült vagy hibás. Ellenőrizd az SD kártyádat hibákra valamelyik programmal az alábbiak közül az operációs rendszerednek megfelelően: [Windows](h2testw-(windows)), [Linux](f3-(linux)), [macOS](f3xswift-(mac)).
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Error #09: Unsupported GodMode9 version</u></summary>
-
-Valahogy egy olyan GodMode9-et futtatsz ami nem volt a szkripthez csomagolva. Ellenőrizd, hogy bemásoltad-e a `finalize.zip` tartalmát az SD kártyád gyökerébe és hogy nyomva tartod START gombot, miközben bekapcsolod a konzolod.
-
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Error #11: Missing donor database</u></summary>
-
-Nem másoltál mindent a `finalize.zip`-ből az SD kártyád gyökerébe. Emlékezz, az SD kártyádon legalább ezen fájloknak kell lennie:
-
-![]({{ "/images/screenshots/finalizing-root-layout.png" | absolute_url }})
-{: .notice--info}
-
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
