@@ -35,7 +35,8 @@ Se la tua precedente installazione CFW era basata su EmuNAND e desideri spostare
 
 ### Cosa serve
 
-* [finalizing.zip]({{ base_path }}/assets/finalizing.zip) (download diretto)
+* [finalize_helper.firm]({{ base_path }}/assets/finalize_helper.firm) (direct download)
+* [finalize.romfs]({{ base_path }}/assets/finalize.romfs) (direct download)
 
 ### Istruzioni
 
@@ -45,8 +46,9 @@ In questa sezione, copierai i file necessari per seguire le rimanenti istruzioni
 
 1. Spegni la tua console
 1. Inserisci la scheda SD nel tuo computer
-1. Copia il contenuto dell'archivio `finalizing.zip` (`finalize`, `gm9`, e `luma`) nella directory principale della tua scheda SD, unendo/sostituendo eventuali cartelle preesistenti se richiesto
-    + Se stai usando un Mac, tieni premuto il tasto Opzione durante il trascinamento delle cartelle nella directory principale della scheda SD, quindi fai clic su "Unisci"
+1. Copy `finalize.romfs` to the root of your SD card
+1. Open the `luma` folder and create a folder named `payloads` inside, if it does not already exist
+1. Copy `finalize_helper.firm` to the `payloads` folder
 1. Reinserisci la scheda SD nella tua console
 
 Il seguente screenshot indica la struttura minima che la scheda SD deve avere per proseguire in questa pagina. Potresti avere file o cartelle ulteriori nella tua scheda SD, a seconda della tua precedente configurazione o del metodo che hai seguito.
@@ -54,27 +56,16 @@ Il seguente screenshot indica la struttura minima che la scheda SD deve avere pe
 ![]({{ "/images/screenshots/finalizing-root-layout.png" | absolute_url }})
 {: .notice--info}
 
-#### Sezione II - Controllo del CFW
+![]({{ "/images/screenshots/finalizing-luma-payloads.png" | absolute_url }})
+{: .notice--info}
 
-Come precauzione aggiuntiva, controlleremo anche la presenza di un custom firmware. Se per qualche motivo non è ancora stato installato un custom firmware, la sezione successiva potrebbe rendere impossibile modificare la console senza hardware esterno.
-
-1. Spegni la tua console
-1. Premi il pulsante (Select)
-1. Accendi la tua console continuando a tenere premuto il pulsante (Select)
-1. Se il controllo è andato a buon fine, la tua console dovrebbe aver avviato il menu di configurazione di Luma3DS
-1. Premi (Start) per salvare e riavviare il 3DS
-
-Se NON viene avviato il menu di configurazione di Luma3DS, il custom firmware non è stato installato sulla tua console. Entra nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) e chiedi aiuto in inglese.
-{: .notice--danger}
-
-
-#### Sezione III - Aggiornare il Sistema
+#### Section II - Updating the System
 
 In questa sezione, aggiornerai il tuo sistema all'ultima versione, tranquillamente fattibile con il custom firmware.
 
 {% include_relative include/sysupdate.txt cfw="true" %}
 
-#### Sezione IV - Installazione di RTC e DSP
+#### Section III - RTC and DSP setup
 
 In questa sezione, sincronizzerai l'orologio interno del tuo 3DS con l'ora reale e scaricherai il firmware audio (necessario per permettere ad alcuni software homebrew di usare correttamente i suoni).
 
@@ -88,13 +79,18 @@ In questa sezione, sincronizzerai l'orologio interno del tuo 3DS con l'ora reale
 1. Premi (B) per tornare al menu principale di Rosalina
 1. Premi (B) per uscire dal menu di Rosalina
 
-#### Sezione V - Installazione dello Script
+#### Section IV - Setup Script
 
-In questa sezione, userai uno script per automatizzare l'installazione di homebrew, la pulizia della scheda SD e il backup dei file di sistema.
+In this section, you will use a series of scripts to automate homebrew installation, SD card cleanup, and system file backup.
 
 1. Spegni la tua console
-1. Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9
-    + Se GodMode9 non viene avviato, assicurati di aver copiato le tre cartelle dall'archivio `finalizing.zip` nella directory principale della tua scheda SD e che le cartelle non abbiano il nome errato (ad es. `luma (1)`)
+1. Premi (Start) e accendi la console continuando a tenerlo premuto. This will launch the Finalizing Setup Helper
+    + If you boot to the Luma3DS configuration menu, you held SELECT instead of START
+    + If you boot to the HOME Menu, your `payloads` folder may be incorrectly spelled or in the wrong location
+    + If you see a "Luma3DS Chainloader" menu, use the D-Pad and (A) buttons to navigate to and select `finalize_helper` from the list
+    + If you encounter an error, consult the [troubleshooting](troubleshooting#finalizing-setup) page
+1. If the Helper was successful, your console will boot into GodMode9
+    + From this point forward, you can access GodMode9 by holding START while powering on your console
 1. Se ti viene richiesto di creare un backup dei file essenziali, premi (A) per accettare, e al termine di nuovo (A) per proseguire
 1. Se ti viene chiesto di reimpostare la data e l'ora dell'RTC, premi (A) per farlo, poi imposta la data e l'ora, infine premi (A) per continuare
 1. Premi il pulsante HOME per far apparire il menu delle azioni
@@ -103,7 +99,7 @@ In questa sezione, userai uno script per automatizzare l'installazione di homebr
 1. Segui le istruzioni dello script, rispondendo alle domande che ti vengono poste
     + Se riscontri un errore, segui le istruzioni riportate nel messaggio di errore o consulta la pagina [Risoluzione dei problemi](troubleshooting#finalizing-setup)
 1. Quando lo script mostrerà "Setup complete!", premi (A) per spegnere la console
-    + Se NON vedi il messaggio "Setup complete!", lo script non ha avuto successo e dovrai ripetere questa sezione
+    + If you do NOT see the message "Setup complete!", the script was not successful and you will need to redo this section from Step 3
 1. Inserisci la scheda SD nel tuo computer
 1. Copia la cartella `/gm9/backups/` in una posizione sicura sul tuo computer
     + Questa cartella contiene backup dei file critici e dovrebbe essere salvata in più posizioni (es. in cloud) se possibile
@@ -117,10 +113,10 @@ ___
 Hai finito! Il custom firmware nella tua console è stato completamente configurato.
 {: .notice--success}
 
-### Informazioni e Note
-
 Stai cercando di capire cosa fare con la tua console appena modificata? Visita [la nostra wiki](https://wiki.hacks.guide/wiki/3DS:Things_to_do)!
 {: .notice--info}
+
+### Informazioni e Note
 
 {% capture notice-6 %}
 Ecco alcune combinazioni di tasti che dovresti conoscere:
