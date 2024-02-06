@@ -35,7 +35,8 @@ Ha az előző egyedi firmware rendszered EmuNAND alapú volt és szeretnéd az E
 
 ### Amire szükséged lesz
 
-* [finalizing.zip]({{ base_path }}/assets/finalizing.zip) (közvetlen letöltés)
+* [finalize_helper.firm]({{ base_path }}/assets/finalize_helper.firm) (direct download)
+* [finalize.romfs]({{ base_path }}/assets/finalize.romfs) (direct download)
 
 ### Utasítások
 
@@ -45,8 +46,9 @@ Ebben a fejezetben fel fogod másolni az ahhoz szükséges fájlokat, hogy köve
 
 1. Kapcsold ki a konzolod
 1. Helyezd az SD kártyád a számítógépbe
-1. Másold a `finalizing.zip` tartalmát (`finalize`, `gm9`, és `luma`) az SD kártya gyökerébe, egyesítve/lecserélve az ott lévő mappákat, ha kérdezi
-    + Ha Mac-et használsz, tartsd nyomva az Option gombot, miközben húzod a mappákat az SD kártyád gyökerébe és kattints a "Merge" opcióra
+1. Copy `finalize.romfs` to the root of your SD card
+1. Open the `luma` folder and create a folder named `payloads` inside, if it does not already exist
+1. Copy `finalize_helper.firm` to the `payloads` folder
 1. Tedd vissza az SD kártyád a konzoldba
 
 Az alábbi képernyőképek mutatják az SD kártya minimális elrendezését ahhoz, hogy ezt az útmutatót követni tudd. Lehetnek extra fájljaid és mappáid az SD kártyádon, függően a korábbi telepítésedtől vagy metódustól, amit követtél.
@@ -54,27 +56,16 @@ Az alábbi képernyőképek mutatják az SD kártya minimális elrendezését ah
 ![]({{ "/images/screenshots/finalizing-root-layout.png" | absolute_url }})
 {: .notice--info}
 
-#### II. rész - CFW ellenőrzés
+![]({{ "/images/screenshots/finalizing-luma-payloads.png" | absolute_url }})
+{: .notice--info}
 
-További biztonsági lépésként további ellenőrzést végzünk egyedi firmware-re. Ha egyedi firmware nem kerül telepítésre ezen a ponton bármilyen okból, a következő szakasz a konzolodat külső hardver nélkül hackelhetetlenné teszi.
-
-1. Kapcsold ki a konzolod
-1. Nyomd le és tartsd nyomva (Select) gombot
-1. Kapcsold be a konzolod, miközben nyomva tartod a (Select) gombot
-1. Ha az ellenőrzés sikeres volt a konzolodnak a Luma3DS konfigurációs menüjébe kellett bootolnia
-1. Mentéshez és újraindításhoz nyomd meg a (Start) gombot
-
-Ha az eszközöd NEM a Luma3DS konfigurációs menübe bootolt, az egyedi firmware nem került telepítésre a konzolodra. Csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és kérj támogatást angolul.
-{: .notice--danger}
-
-
-#### III. rész - A rendszer frissítése
+#### Section II - Updating the System
 
 Ebben a fejezetben frissíteni fogod a rendszered a legutolsó verzióra, ami biztonságos az egyedi firmware-rel.
 
 {% include_relative include/sysupdate.txt cfw="true" %}
 
-#### IV. rész - RTC és DSP telepítése
+#### Section III - RTC and DSP setup
 
 Ebben a fejezetben szinkronizálni fogod a 3DS belső óráját az aktuális időhöz és dumpolni a hang firmware-t (ami szükséges néhány homebrew alkalmazáshoz, hogy a hangot megfelelően használja).
 
@@ -88,13 +79,18 @@ Ebben a fejezetben szinkronizálni fogod a 3DS belső óráját az aktuális id�
 1. Nyomd meg a (B) gombot, hogy visszakerülj a Rosalina főmenüjébe
 1. Nyomd meg a (B) gombot, hogy kilépj a Rosalina menüből
 
-#### V. rész - Telepítő szkript
+#### Section IV - Setup Script
 
-Ebben a fejezetben egy szkriptet fogsz használni arra, hogy automatizáld a homebrew telepítést, az SD kártya takarítást és a rendszer mentést.
+In this section, you will use a series of scripts to automate homebrew installation, SD card cleanup, and system file backup.
 
 1. Kapcsold ki a konzolod
-1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et
-    + Ha nem bootolsz be GodMode9-be, biztosítsd, hogy a három mappa `finalizing.zip`-ből ki lett másolva az SD kártya gyökerébe, és a mappák nem neve nem elrontott (pl. `luma (1)`)
+1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. This will launch the Finalizing Setup Helper
+    + If you boot to the Luma3DS configuration menu, you held SELECT instead of START
+    + If you boot to the HOME Menu, your `payloads` folder may be incorrectly spelled or in the wrong location
+    + If you see a "Luma3DS Chainloader" menu, use the D-Pad and (A) buttons to navigate to and select `finalize_helper` from the list
+    + If you encounter an error, consult the [troubleshooting](troubleshooting#finalizing-setup) page
+1. If the Helper was successful, your console will boot into GodMode9
+    + From this point forward, you can access GodMode9 by holding START while powering on your console
 1. Ha rákérdez arra, hogy csináljon-e egy biztonsági másolatot (essential files backup), akkor nyomd meg az (A) gombot, hogy csináljon, majd amikor végzett, nyomd meg ismét az (A) gombot a folytatáshoz
 1. Ha rákérdez arra, hogy szeretnéd-e a valós dátumot és időt javítani (fix the RTC date&time), nyomd meg az (A) gombot, állítsd be a helyes dátumot és időt, majd nyomd meg az (A) gombot a folytatáshoz
 1. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
@@ -103,7 +99,7 @@ Ebben a fejezetben egy szkriptet fogsz használni arra, hogy automatizáld a hom
 1. Kövesd a script utasításait és válaszolj meg minden kérdést
     + Ha hibát kapsz, kövesd a hibaüzenet lépéseti vagy tekintsd meg a [hibaelhárítás](troubleshooting#finalizing-setup) oldalt
 1. Ha a szkript a "Setup complete!" üzenetet írja, nyomj (A) gombot az eszköz kikapcsolásához
-    + Ha NEM láttad a "Setup complete!" üzenetet, akkor a szkript nem volt sikeres és újra kell csinálnod ezt a részt
+    + If you do NOT see the message "Setup complete!", the script was not successful and you will need to redo this section from Step 3
 1. Helyezd az SD kártyád a számítógépbe
 1. Másold a `/gm9/backups/` mappát az SD kártyádról egy biztonságos helyre a számítógépeden
     + Ez a mappa tartalmazza a kritkus mentés fájlokat és célszerű több helyre menteni (pl. felhős tárolás) ha lehetséges
@@ -117,10 +113,10 @@ ___
 Kész vagy! Az egyedi firmware most már teljesen be van állítva a konzolodon.
 {: .notice--success}
 
-### Információk és megjegyzések
-
 Próbálod kitalálni, mit tegyél a frissen módosított eszközöddel? Látogasd meg a [wiki-nket](https://wiki.hacks.guide/wiki/3DS:Things_to_do)!
 {: .notice--info}
+
+### Információk és megjegyzések
 
 {% capture notice-6 %}
 Néhány billentyű kombináció amit ismerned kell:
