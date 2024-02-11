@@ -35,10 +35,16 @@ GodMode9 היא תוכנה חזקה שיש ביכולתה לשנות בעצם ה
 1. תעתיקו את התיקייה `gm9` מתוך ה`.zip` של GodMode9 ל-SD שלכם
 1. Reinsert your SD card into your console
 
+GodMode9 is now up to date.
+{: .notice--success}
+
 ## יצירת גיבוי NAND
 
 1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
 {% include_relative include/nand-backup.txt %}
+
+Your NAND backup has been successfully created.
+{: .notice--success}
 
 ## שחזור גיבוי NAND
 
@@ -54,28 +60,35 @@ GodMode9 היא תוכנה חזקה שיש ביכולתה לשנות בעצם ה
 1. Select "SysNAND Restore (safe)"
 1. תבחרו בגיבוי הNAND שלכם
 1. לחצו (A) כדי לפתוח גישת כתיבת (lvl3) לSysNAND, ואז תלחצו על המקשים בסדר הנכון
-    + זה לא ישכתב את התקנת boot9strap שלכם
+    + This will **not** overwrite your boot9strap installation
     + זה ייקח קצת זמן
 1. תלחצו (A) כדי להמשיך
 1. תלחצו (B) כדי לחזור לתפריט הראשי
 1. Select "Exit"
 1. תלחצו (A) כדי לנעול הרשאות כתיבה אם תתבקשו
 
-## הזרקת כל תוכנת .CIA אל Health & Safety
+Your NAND backup has been successfully restored. You can now delete `<date>_<serialnumber>_sysnand_###.bin` from your SD card.
+{: .notice--success}
 
-למטרות ארגוניות, תעתיקו את קובץ ה`.cia` שאתם רוצים להזריק לתיקיה '/cias/' על כרטיס הSD
-{: .notice--info}
+## הזרקת כל תוכנת .CIA אל Health & Safety
 
 שימו לב שזה לא אפשרי להזריק קבצים אל Health & Safety שיותר גדולים ממנו (כולל משחקים ותוכנות אחרות גדולות)
 {: .notice--info}
 
 1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
 1. נווטו אל `[0:] SDCARD` ושם אל `cias`
-1. תלחצו (A) על ה`.cia` שלכם כדי לבחור בו, ואז תבחרו ב "CIA image options...", ושם ב "Mount image to drive"
-1. תלחצו (A) על קובץ ה `.app`, ואז תבחרו "NCCH image options", ושם "Inject to H&S"
+1. Press (A) on your `.cia` to select it
+1. Select "CIA image options..."
+1. Select "Mount image to drive"
+1. Press (A) on the `.app` file
+1. Select "NCCH image options"
+1. Select "Inject to H&S"
 1. לחצו (A) כדי לפתוח גישת כתיבת lvl1 לSysNAND, ואז תלחצו על המקשים בסדר הנכון
 1. תלחצו (A) כדי להמשיך
 1. תלחצו (A) כדי לנעול הרשאות כתיבה אם תתבקשו
+
+Your desired application has now been injected into Health & Safety.
+{: .notice--success}
 
 ## שחזור Health & Safety אחרי הזרקת תוכנת .CIA
 
@@ -89,15 +102,26 @@ GodMode9 היא תוכנה חזקה שיש ביכולתה לשנות בעצם ה
 1. לחצו (A) כדי לפתוח גישת כתיבת lvl1 לSysNAND, ואז תלחצו על המקשים בסדר הנכון
 1. תלחצו (A) כדי לנעול הרשאות כתיבה אם תתבקשו
 
+Health & Safety has been reverted to normal.
+{: .notice--success}
+
 ## פרמוט כרטיס SD
 
 **שימו לב שזה ימחוק את תוכן הכרטיס שלכם!**
 {: .notice--danger}
 
 1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+1. Press (Right Shoulder) + (B) to unmount the current SD card and insert the one you want to format
+    + If GodMode9 shows an initialization error when inserting the SD Card to be formatted, it can safely be dismissed
 {% include_relative include/format-sd-gm9.txt %}
 
+Your SD card has successfully been formatted for use with the console.
+{: .notice--success}
+
 ## Removing an NNID without formatting your console
+
+This process will only log you out of your NNID. You will still not be able to use the NNID on another console, as the NNID remains linked to the console.
+{: .notice--info}
 
 1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
 1. תלחצו על (Home) כדי להראות את תפריט הפעולה
@@ -112,3 +136,6 @@ GodMode9 היא תוכנה חזקה שיש ביכולתה לשנות בעצם ה
 1. Select "Exit"
 1. תלחצו (A) כדי לנעול הרשאות כתיבה אם תתבקשו
 1. Press (Start) to reboot your console
+
+You have now been logged out of your NNID.
+{: .notice--success}
