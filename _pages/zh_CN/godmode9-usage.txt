@@ -35,15 +35,21 @@ GodMode9 几乎可以修改你主机上的任何东西。 虽然更改系统文�
 1. 将 GodMode9 `.zip` 中的整个 `gm9` 文件夹复制到 SD 卡的根目录下
 1. Reinsert your SD card into your console
 
+GodMode9 is now up to date.
+{: .notice--success}
+
 ## 创建 NAND 备份
 
 1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
 {% include_relative include/nand-backup.txt %}
 
+Your NAND backup has been successfully created.
+{: .notice--success}
+
 ## 还原 NAND
 
 1. 将主机关机
-1. 将 SD 卡插入电脑
+1. 将你的 SD 卡插入到电脑
 1. Copy `<date>_<serialnumber>_sysnand_##.bin` from your computer to the `/gm9/out/` folder on your SD card
 1. Reinsert your SD card into your console
 1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
@@ -54,28 +60,35 @@ GodMode9 几乎可以修改你主机上的任何东西。 虽然更改系统文�
 1. 选择 “SysNAND Restore (safe)”
 1. 选择你的 NAND 备份
 1. 按 “A” 键解锁 SysNAND (lvl3) 写入权限，并根据屏幕上的提示依次按下按键
-    + 这不会覆盖你已安装好的 boot9strap
+    + This will **not** overwrite your boot9strap installation
     + 此过程将花费一些时间
 1. 按 “A” 键继续
 1. 按 “B” 键返回到主菜单
 1. 选择 “Exit”
 1. 如果提示重新锁定写入权限，按下 “A” 键来确认
 
-## 将任意 .CIA 应用注入 “健康与安全提示(Health & Safety)” 软件
+Your NAND backup has been successfully restored. You can now delete `<date>_<serialnumber>_sysnand_###.bin` from your SD card.
+{: .notice--success}
 
-为了避免文件混乱，请将你要注入的 `.cia` 文件复制到SD卡上的 `/cias/` 目录
-{: .notice--info}
+## 将任意 .CIA 应用注入 “健康与安全提示(Health & Safety)” 软件
 
 请注意，你无法注入比 “健康与安全提示(Health & Safety)” 软件大的文件（包括游戏及其他大型应用程序）
 {: .notice--info}
 
 1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
 1. 进入到 `[0:] SDCARD` -> `cias`
-1. 按 “A” 键选中你的 `.cia` 文件，在弹出窗口中依次选择 “CIA image options...” ， “Mount image to drive” 选项
-1. 选中 `.app` 文件后按下 “A” 键，选择 “NCCH image options” ，并选择 “Inject to H&S”
+1. Press (A) on your `.cia` to select it
+1. Select "CIA image options..."
+1. Select "Mount image to drive"
+1. Press (A) on the `.app` file
+1. Select "NCCH image options"
+1. Select "Inject to H&S"
 1. 按 “A” 键解锁SysNAND (lvl1) 写入权限，并根据屏幕上的提示依次按下按键
 1. 按 “A” 键继续
 1. 如果提示重新锁定写入权限，按下 “A” 键来确认
+
+Your desired application has now been injected into Health & Safety.
+{: .notice--success}
 
 ## 恢复被注入 .CIA 程序的 “健康与安全提示(Health & Safety)” 软件
 
@@ -89,15 +102,26 @@ GodMode9 几乎可以修改你主机上的任何东西。 虽然更改系统文�
 1. 按 “A” 键解锁SysNAND (lvl1) 写入权限，并根据屏幕上的提示依次按下按键
 1. 如果提示重新锁定写入权限，按下 “A” 键来确认
 
+Health & Safety has been reverted to normal.
+{: .notice--success}
+
 ## 格式化SD卡
 
 **请注意，该操作会清除你SD卡上的所有文件！**
 {: .notice--danger}
 
 1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+1. Press (Right Shoulder) + (B) to unmount the current SD card and insert the one you want to format
+    + If GodMode9 shows an initialization error when inserting the SD Card to be formatted, it can safely be dismissed
 {% include_relative include/format-sd-gm9.txt %}
 
+Your SD card has successfully been formatted for use with the console.
+{: .notice--success}
+
 ## Removing an NNID without formatting your console
+
+This process will only log you out of your NNID. You will still not be able to use the NNID on another console, as the NNID remains linked to the console.
+{: .notice--info}
 
 1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
 1. 按下 “Home” 键来打开功能菜单
@@ -112,3 +136,6 @@ GodMode9 几乎可以修改你主机上的任何东西。 虽然更改系统文�
 1. 选择 “Exit”
 1. 如果提示重新锁定写入权限，按下 “A” 键来确认
 1. Press (Start) to reboot your console
+
+You have now been logged out of your NNID.
+{: .notice--success}
