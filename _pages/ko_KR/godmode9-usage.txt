@@ -35,10 +35,16 @@ GodMode9은 콘솔에 있는 무엇이든 수정할 수 있는 강력한 소프�
 1. SD 카드의 루트로 GodMode9 `.zip`안에 압축이 되있는 `gm9` 폴더를 복사해 주세요
 1. SD 카드를 콘솔에 다시 삽입해 주세요
 
+GodMode9 is now up to date.
+{: .notice--success}
+
 ## NAND 백업 생성
 
 1. (Start) 를 길게 누르고, 이 상태에서 콘솔의 전원을 켜 주세요. GodMode9이 실행될 겁니다
 {% include_relative include/nand-backup.txt %}
+
+Your NAND backup has been successfully created.
+{: .notice--success}
 
 ## NAND 백업 복구
 
@@ -54,28 +60,35 @@ GodMode9은 콘솔에 있는 무엇이든 수정할 수 있는 강력한 소프�
 1. "SysNAND Restore (safe)"를 선택해 주세요
 1. NAND 백업 파일을 선택해 주세요
 1. (A) 를 눌려 SysNAND (lvl3) 쓰기 잠금을 풀고 화면에 표시된 키 조합을 입력해 주세요
-    + 이 과정은 boot9strap를 덮어쓰지 않습니다
+    + This will **not** overwrite your boot9strap installation
     + 이 과정은 시간이 좀 걸릴 것입니다
 1. (A)를 눌러 진행해 주세요
 1. (B)를 눌러 메인 메뉴로 돌아가 주세요
 1. "Exit"를 선택해 주세요
 1. 메세지가 표시되면, (A)를 눌러서 쓰기잠금을 확인해 주세요
 
-## .CIA 앱을 안전을 위한 주의사항에 주입
+Your NAND backup has been successfully restored. You can now delete `<date>_<serialnumber>_sysnand_###.bin` from your SD card.
+{: .notice--success}
 
-작업에 앞서, 주입하고자 하는 `.cia` 파일을 SD 카드의 `/cias/` 폴더에 복사해 주세요.
-{: .notice--info}
+## .CIA 앱을 안전을 위한 주의사항에 주입
 
 안전을 위한 주의사항 앱보다 용량이 큰 파일은 주입할 수 없습니다. (용량이 큰 게임과 다른 큰 어플리케이션 등)
 {: .notice--info}
 
 1. (Start) 를 길게 누르고, 이 상태에서 콘솔의 전원을 켜 주세요. GodMode9이 실행될 겁니다
 1. `[0:] SDCARD` -> `cias`로 이동해 주세요
-1. `.cia`에 (A)를 눌러 선택하고 "CIA image options..."를 선택하고 "Mount image to drive"를 선택해 주세요
-1. `.app` 파일에 (A)를 부르고 "NCCH image options"를 선택하고 "Inject to H&S"를 선택해 주세요
+1. Press (A) on your `.cia` to select it
+1. Select "CIA image options..."
+1. Select "Mount image to drive"
+1. Press (A) on the `.app` file
+1. Select "NCCH image options"
+1. Select "Inject to H&S"
 1. (A)를 눌려 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요
 1. (A)를 눌러 진행해 주세요
 1. 메세지가 표시되면, (A)를 눌러서 쓰기잠금을 확인해 주세요
+
+Your desired application has now been injected into Health & Safety.
+{: .notice--success}
 
 ## .CIA 앱 주입 이후 안전을 위한 주의사항 복구
 
@@ -89,15 +102,26 @@ GodMode9은 콘솔에 있는 무엇이든 수정할 수 있는 강력한 소프�
 1. (A)를 눌려 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요
 1. 메세지가 표시되면, (A)를 눌러서 쓰기잠금을 확인해 주세요
 
+Health & Safety has been reverted to normal.
+{: .notice--success}
+
 ## SD 카드 포맷
 
 **이 과정 중 SD 카드의 모든 정보가 지워진다는 것을 명심해 주세요!**
 {: .notice--danger}
 
 1. (Start) 를 길게 누르고, 이 상태에서 콘솔의 전원을 켜 주세요. GodMode9이 실행될 겁니다
+1. Press (Right Shoulder) + (B) to unmount the current SD card and insert the one you want to format
+    + If GodMode9 shows an initialization error when inserting the SD Card to be formatted, it can safely be dismissed
 {% include_relative include/format-sd-gm9.txt %}
 
+Your SD card has successfully been formatted for use with the console.
+{: .notice--success}
+
 ## 콘솔을 포맷하지 않고 NNID 제거하기
+
+This process will only log you out of your NNID. You will still not be able to use the NNID on another console, as the NNID remains linked to the console.
+{: .notice--info}
 
 1. (Start) 를 길게 누르고, 이 상태에서 콘솔의 전원을 켜 주세요. GodMode9이 실행될 겁니다
 1. (Home)을 눌러 작업 메뉴를 열어 주세요
@@ -112,3 +136,6 @@ GodMode9은 콘솔에 있는 무엇이든 수정할 수 있는 강력한 소프�
 1. "Exit"를 선택해 주세요
 1. 메세지가 표시되면, (A)를 눌러서 쓰기잠금을 확인해 주세요
 1. (Start)를 눌러 콘솔을 다시 시작해 주세요
+
+You have now been logged out of your NNID.
+{: .notice--success}
