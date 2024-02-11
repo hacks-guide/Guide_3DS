@@ -35,10 +35,16 @@ Jotkin alla olevista ohjeista pätevät vain GodMode9:n viimeisimpään versioon
 1. Kopioi GodMode9-`.zip`-pakkauksesta `gm9`-kansio SD-korttisi juureen
 1. Reinsert your SD card into your console
 
+GodMode9 is now up to date.
+{: .notice--success}
+
 ## NAND-varmuuskopion luominen
 
 1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
 {% include_relative include/nand-backup.txt %}
+
+Your NAND backup has been successfully created.
+{: .notice--success}
 
 ## NAND-varmuuskopion palauttaminen
 
@@ -54,28 +60,35 @@ Jotkin alla olevista ohjeista pätevät vain GodMode9:n viimeisimpään versioon
 1. Select "SysNAND Restore (safe)"
 1. Valitse NAND-varmuuskopiosi
 1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl3) ja syötä annettu painikeyhdistelmä
-    + Tämä ei ylikirjoita boot9strap-asennustasi
+    + This will **not** overwrite your boot9strap installation
     + Tämä prosessi voi kestää jonkin aikaa
 1. Paina (A):ta jatkaaksesi
 1. Paina (B):tä palataksesi päävalikkoon
 1. Select "Exit"
 1. Paina (A):ta lukitaksesi kirjoitusoikeudet kehotettaessa
 
-## CIA-sovellusten injektoiminen Health & Safety -sovellukseen
+Your NAND backup has been successfully restored. You can now delete `<date>_<serialnumber>_sysnand_###.bin` from your SD card.
+{: .notice--success}
 
-Kun sinulla on `.cia`-tiedosto, jonka haluat injektoida, kopioi se käytännöllisyyden vuoksi SD-korttisi `/cias/`-kansioon
-{: .notice--info}
+## CIA-sovellusten injektoiminen Health & Safety -sovellukseen
 
 Huomaa, että Health & Safety -sovellusta isompia tiedostoja ei ole mahdollista injektoida (mukaan lukien pelit ja muut isokokoiset sovellukset)
 {: .notice--info}
 
 1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
 1. Mene hakemistoon `[0:] SDCARD` → `cias`
-1. Paina (A):ta `.cia`-tiedostosi kohdalla, valitse "CIA image options..." ja sitten "Mount image to drive"
-1. Paina (A):ta `.app`-tiedoston kohdalla valitaksesi sen, valitse "NCCH image options" ja sitten "Inject to H&S"
+1. Press (A) on your `.cia` to select it
+1. Select "CIA image options..."
+1. Select "Mount image to drive"
+1. Press (A) on the `.app` file
+1. Select "NCCH image options"
+1. Select "Inject to H&S"
 1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1) ja syötä annettu painikeyhdistelmä
 1. Paina (A):ta jatkaaksesi
 1. Paina (A):ta lukitaksesi kirjoitusoikeudet kehotettaessa
+
+Your desired application has now been injected into Health & Safety.
+{: .notice--success}
 
 ## Health & Safetyn palauttaminen .CIA-sovelluksen injektoimisen jälkeen
 
@@ -89,15 +102,26 @@ Tämä toimii vain, jos Health & Safety -injektio tehtiin GodMode9:n avulla (eik
 1. Paina (A):ta ottaaksesi käyttöön SysNANDiin kirjoittamisen (lvl1) ja syötä annettu painikeyhdistelmä
 1. Paina (A):ta lukitaksesi kirjoitusoikeudet kehotettaessa
 
+Health & Safety has been reverted to normal.
+{: .notice--success}
+
 ## SD-kortin alustaminen
 
 **Huomaa, että tämä tyhjentää SD-korttisi sisällön!**
 {: .notice--danger}
 
 1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+1. Press (Right Shoulder) + (B) to unmount the current SD card and insert the one you want to format
+    + If GodMode9 shows an initialization error when inserting the SD Card to be formatted, it can safely be dismissed
 {% include_relative include/format-sd-gm9.txt %}
 
+Your SD card has successfully been formatted for use with the console.
+{: .notice--success}
+
 ## Removing an NNID without formatting your console
+
+This process will only log you out of your NNID. You will still not be able to use the NNID on another console, as the NNID remains linked to the console.
+{: .notice--info}
 
 1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
 1. Paina (HOME)-painiketta näyttääksesi toimintovalikon
@@ -112,3 +136,6 @@ Tämä toimii vain, jos Health & Safety -injektio tehtiin GodMode9:n avulla (eik
 1. Select "Exit"
 1. Paina (A):ta lukitaksesi kirjoitusoikeudet kehotettaessa
 1. Press (Start) to reboot your console
+
+You have now been logged out of your NNID.
+{: .notice--success}
