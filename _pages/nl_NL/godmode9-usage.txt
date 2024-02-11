@@ -35,10 +35,16 @@ Sommige van deze instructies zijn alleen toepasbaar op de nieuwste versie van Go
 1. Kopieer de `gm9` map uit de GodMode9 `.zip` naar de hoofdmap van je SD-kaart
 1. Stop je SD-kaart terug in je console
 
+GodMode9 is now up to date.
+{: .notice--success}
+
 ## Een NAND back-up maken
 
 1. Houd (Start) ingedrukt en terwijl je (Start) ingedrukt houdt, zet je je console aan. Dit zal GodMode9 starten
 {% include_relative include/nand-backup.txt %}
+
+Your NAND backup has been successfully created.
+{: .notice--success}
 
 ## Een NAND back-up herstellen
 
@@ -54,28 +60,35 @@ Sommige van deze instructies zijn alleen toepasbaar op de nieuwste versie van Go
 1. Selecteer "SysNAND Restore (safe)"
 1. Selecteer je NAND back-up
 1. Druk op (A) om SysNAND (lvl3) writing te ontgrendelen en voer daarna de toetsencombinatie in die wordt gegeven
-    + Dit zal niet je boot9strap installatie overschrijven
+    + This will **not** overwrite your boot9strap installation
     + Dit proces zal enige tijd duren
 1. Druk op (A) om door te gaan
 1. Druk op (B) om terug te gaan naar het hoofdmenu
 1. Selecteer "Exit"
 1. Druk op (A) om schrijfrechten te vergrendelen als dit gevraagd wordt
 
-## Een .CIA app in veiligheid- en gezondheidsinformatie injecteren
+Your NAND backup has been successfully restored. You can now delete `<date>_<serialnumber>_sysnand_###.bin` from your SD card.
+{: .notice--success}
 
-Voor organisatorische redenen, kopieer het `.cia` bestand dat je wilt injecteren naar de `/cias/` map op je SD kaart
-{: .notice--info}
+## Een .CIA app in veiligheid- en gezondheidsinformatie injecteren
 
 Het niet mogelijk is om bestanden groter dan veiligheid- en gezondheidsinformatie te injecteren (zoals spellen en andere grote apps)
 {: .notice--info}
 
 1. Houd (Start) ingedrukt en terwijl je (Start) ingedrukt houdt, zet je je console aan. Dit zal GodMode9 starten
 1. Navigeer naar `[0:] SDCARD`-> `cias`
-1. Druk op (A) op je `FBI.cia` om deze te selecteren, selecteer vervolgens "CIA image options...", en selecteer dan "Mount image to drive"
-1. Druk op (A) op het `.app` bestand, selecteer vervolgens "NCCH image options", en selecteer dan "Inject to H&S"
+1. Press (A) on your `.cia` to select it
+1. Select "CIA image options..."
+1. Select "Mount image to drive"
+1. Press (A) on the `.app` file
+1. Select "NCCH image options"
+1. Select "Inject to H&S"
 1. Druk op (A) om SysNAND (lvl1) writing te ontgrendelen en voer daarna de toetsencombinatie in die wordt gegeven
 1. Druk op (A) om door te gaan
 1. Druk op (A) om schrijfrechten te vergrendelen als dit gevraagd wordt
+
+Your desired application has now been injected into Health & Safety.
+{: .notice--success}
 
 ## Veiligheid- en gezondheidsinformatie herstellen na een injectie van een .CIA app
 
@@ -89,15 +102,26 @@ Dit werkt alleen als veiligheid- en gezondheidsinformatie was geïnjecteerd door
 1. Druk op (A) om SysNAND (lvl1) writing te ontgrendelen en voer daarna de toetsencombinatie in die wordt gegeven
 1. Druk op (A) om schrijfrechten te vergrendelen als dit gevraagd wordt
 
+Health & Safety has been reverted to normal.
+{: .notice--success}
+
 ## Een SD-kaart formatteren
 
 **Dit zal alle inhoud van je SD kaart verwijderen!**
 {: .notice--danger}
 
 1. Houd (Start) ingedrukt en terwijl je (Start) ingedrukt houdt, zet je je console aan. Dit zal GodMode9 starten
+1. Press (Right Shoulder) + (B) to unmount the current SD card and insert the one you want to format
+    + If GodMode9 shows an initialization error when inserting the SD Card to be formatted, it can safely be dismissed
 {% include_relative include/format-sd-gm9.txt %}
 
+Your SD card has successfully been formatted for use with the console.
+{: .notice--success}
+
 ## Removing an NNID without formatting your console
+
+This process will only log you out of your NNID. You will still not be able to use the NNID on another console, as the NNID remains linked to the console.
+{: .notice--info}
 
 1. Houd (Start) ingedrukt en terwijl je (Start) ingedrukt houdt, zet je je console aan. Dit zal GodMode9 starten
 1. Druk op de (Home) knop om het actiemenu te openen
@@ -112,3 +136,6 @@ Dit werkt alleen als veiligheid- en gezondheidsinformatie was geïnjecteerd door
 1. Selecteer "Exit"
 1. Druk op (A) om schrijfrechten te vergrendelen als dit gevraagd wordt
 1. Press (Start) to reboot your console
+
+You have now been logged out of your NNID.
+{: .notice--success}
