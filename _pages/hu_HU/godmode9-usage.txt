@@ -35,10 +35,16 @@ A lentebbi utasítások egy része csak a legfrissebb GodMode9-on érhető el, e
 1. Másold át a `gm9` mappát a GodMode9 `.zip`-ből az SD kártyád gyökerébe
 1. Tedd vissza az SD kártyád a konzoldba
 
+GodMode9 is now up to date.
+{: .notice--success}
+
 ## Biztonsági másolat készítése a NAND-ról
 
 1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et
 {% include_relative include/nand-backup.txt %}
+
+Your NAND backup has been successfully created.
+{: .notice--success}
 
 ## NAND-ról készült bizonsági másolat visszaállítása
 
@@ -54,28 +60,35 @@ A lentebbi utasítások egy része csak a legfrissebb GodMode9-on érhető el, e
 1. Válaszd a "SysNAND Restore (safe)" opciót
 1. Válaszd ki a NAND-odról készült biztonsági másolatot
 1. Nyomd meg az (A) gombot, hogy feloldd a SysNAND (lvl3) írást, majd sorban nyomd meg a kijelzett gombokat
-    + Ez nem fogja felülírni a boot9strap installációdat
+    + This will **not** overwrite your boot9strap installation
     + Ez a folyamat igénybe vesz majd némi időt
 1. Nyomd meg az (A) gombot a folytatáshoz
 1. Nyomd meg a (B) gombot, hogy visszamenj a főmenübe
 1. Válaszd az "Exit" opciót
 1. Nyomd meg az (A) gombot az írási engedélyek visszavonásához
 
-## Bármely .CIA alkalmazás "Health & Safety"-be injektálása
+Your NAND backup has been successfully restored. You can now delete `<date>_<serialnumber>_sysnand_###.bin` from your SD card.
+{: .notice--success}
 
-A rend kedvéért, másold az injektálni kívánt `.cia` fájlt az SD kártyád `/cias/` mappájába
-{: .notice--info}
+## Bármely .CIA alkalmazás "Health & Safety"-be injektálása
 
 Vedd figyelembe, hogy nem lehetséges a "Health & Safety"-be injektálni nála nagyobb fájlokat (beleértve a játékokat és más, nagy méretű alkalmazásokat)
 {: .notice--info}
 
 1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et
 1. Menj ide: `[0:] SDCARD` -> `cias`
-1. Nyomd meg az (A)-t, amikor a kívánt `.cia` van kijelölve, hogy kiválaszd, majd válaszd a "CIA image options..." opciót, utána pedig a "Mount image to drive" lehetőséget
-1. Nyomd meg az (A)-t, amikor a `.app` fájl van kijelölve, majd válaszd az "NCCH image options", aztán az "Inject to H&S" opciókat
+1. Press (A) on your `.cia` to select it
+1. Select "CIA image options..."
+1. Select "Mount image to drive"
+1. Press (A) on the `.app` file
+1. Select "NCCH image options"
+1. Select "Inject to H&S"
 1. Nyomd meg az (A) gombot, hogy feloldd a SysNAND (lvl1) írást, majd sorban nyomd meg a kijelzett gombokat
 1. Nyomd meg az (A) gombot a folytatáshoz
 1. Nyomd meg az (A) gombot az írási engedélyek visszavonásához
+
+Your desired application has now been injected into Health & Safety.
+{: .notice--success}
 
 ## "Health & Safety" visszaállítása .CIA app injektálása után
 
@@ -89,15 +102,26 @@ Ez csak akkor fog működni, ha az injektálást GodMode9 végezte (nem pedig De
 1. Nyomd meg az (A) gombot, hogy feloldd a SysNAND (lvl1) írást, majd sorban nyomd meg a kijelzett gombokat
 1. Nyomd meg az (A) gombot az írási engedélyek visszavonásához
 
+Health & Safety has been reverted to normal.
+{: .notice--success}
+
 ## SD kártya formázása
 
 **Ne feledd, hogy ez minden adatot töröl az SD kártyádról!**
 {: .notice--danger}
 
 1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et
+1. Press (Right Shoulder) + (B) to unmount the current SD card and insert the one you want to format
+    + If GodMode9 shows an initialization error when inserting the SD Card to be formatted, it can safely be dismissed
 {% include_relative include/format-sd-gm9.txt %}
 
+Your SD card has successfully been formatted for use with the console.
+{: .notice--success}
+
 ## NNID eltávolítása a konzolodról annak formázása nélkül
+
+This process will only log you out of your NNID. You will still not be able to use the NNID on another console, as the NNID remains linked to the console.
+{: .notice--info}
 
 1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et
 1. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
@@ -112,3 +136,6 @@ Ez csak akkor fog működni, ha az injektálást GodMode9 végezte (nem pedig De
 1. Válaszd az "Exit" opciót
 1. Nyomd meg az (A) gombot az írási engedélyek visszavonásához
 1. Nyomd meg a (Start) gombot a konzolod újraindításához
+
+You have now been logged out of your NNID.
+{: .notice--success}
