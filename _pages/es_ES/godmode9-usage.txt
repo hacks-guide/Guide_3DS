@@ -35,10 +35,16 @@ Algunas de las siguientes instrucciones sólo son aplicables a la última versi�
 1. Copia la carpeta `gm9`contenida en el `.zip`de GodMode9 al directorio raíz de tu tarjeta SD
 1. Reinsert your SD card into your console
 
+GodMode9 is now up to date.
+{: .notice--success}
+
 ## Crear una copia de seguridad de la NAND
 
 1. Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
 {% include_relative include/nand-backup.txt %}
+
+Your NAND backup has been successfully created.
+{: .notice--success}
 
 ## Restaurar una copia de seguridad de la NAND
 
@@ -54,28 +60,35 @@ Algunas de las siguientes instrucciones sólo son aplicables a la última versi�
 1. Selecciona "SysNAND Restore (safe)"
 1. Selecciona tu copia de seguridad de NAND
 1. Presiona (A) para desbloquear la escritura de SysNAND (lvl3) y después introduce la combinación de teclas mostrada
-    + Esto no sobreescribirá tu instalación de boot9strap
+    + This will **not** overwrite your boot9strap installation
     + Este proceso tomará un tiempo
 1. Presiona (A) para continuar
 1. Presiona (B) para volver al menú principal
 1. Selecciona "Exit"
 1. Presiona (A) para volver a bloquear los permisos de escritura si se solicita
 
-## Inyectar cualquier aplicación .CIA en Salud y Seguridad
+Your NAND backup has been successfully restored. You can now delete `<date>_<serialnumber>_sysnand_###.bin` from your SD card.
+{: .notice--success}
 
-Para mantener el orden, copia el archivo `.cia` que deseas inyectar a la carpeta `/cias/` en tu tarjeta SD
-{: .notice--info}
+## Inyectar cualquier aplicación .CIA en Salud y Seguridad
 
 Ten en cuenta que no es posible inyectar archivos en Salud y Seguridad que sean más grandes que esta aplicación (incluyendo juegos y otras aplicaciones de gran tamaño)
 {: .notice--info}
 
 1. Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
 1. Ve a `[0:] SDCARD` -> `cias`
-1. Presiona (A) sobre tu archivo `.cia` para seleccionarlo, después selecciona "CIA image options...", y luego selecciona "Mount image to drive"
-1. Presiona (A) en el archivo `.app`, después selecciona "NCCH image options", y luego selecciona "Inject to H&S"
+1. Press (A) on your `.cia` to select it
+1. Select "CIA image options..."
+1. Select "Mount image to drive"
+1. Press (A) on the `.app` file
+1. Select "NCCH image options"
+1. Select "Inject to H&S"
 1. Presiona (A) para desbloquear la escritura de la SysNAND (lvl1) y después ingresa la combinación de teclas mostrada
 1. Presiona (A) para continuar
 1. Presiona (A) para volver a bloquear los permisos de escritura si se solicita
+
+Your desired application has now been injected into Health & Safety.
+{: .notice--success}
 
 ## Restaurar Salud y Seguridad luego de inyectar una aplicación .CIA
 
@@ -89,15 +102,26 @@ Esto sólo funcionará si la inyección sobre Salud y Seguridad fue realizada co
 1. Presiona (A) para desbloquear la escritura de la SysNAND (lvl1) y después ingresa la combinación de teclas mostrada
 1. Presiona (A) para volver a bloquear los permisos de escritura si se solicita
 
+Health & Safety has been reverted to normal.
+{: .notice--success}
+
 ## Formatear una tarjeta SD
 
 **¡Ten en cuenta que esto eliminará el contenido de tu tarjeta SD!**
 {: .notice--danger}
 
 1. Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
+1. Press (Right Shoulder) + (B) to unmount the current SD card and insert the one you want to format
+    + If GodMode9 shows an initialization error when inserting the SD Card to be formatted, it can safely be dismissed
 {% include_relative include/format-sd-gm9.txt %}
 
+Your SD card has successfully been formatted for use with the console.
+{: .notice--success}
+
 ## Removing an NNID without formatting your console
+
+This process will only log you out of your NNID. You will still not be able to use the NNID on another console, as the NNID remains linked to the console.
+{: .notice--info}
 
 1. Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
 1. Presiona el botón (Home) para abrir el menú de acción
@@ -112,3 +136,6 @@ Esto sólo funcionará si la inyección sobre Salud y Seguridad fue realizada co
 1. Selecciona "Exit"
 1. Presiona (A) para volver a bloquear los permisos de escritura si se solicita
 1. Press (Start) to reboot your console
+
+You have now been logged out of your NNID.
+{: .notice--success}
