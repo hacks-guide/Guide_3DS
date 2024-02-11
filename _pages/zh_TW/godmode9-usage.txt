@@ -35,10 +35,16 @@ GodMode9 是個強大且可修改您主機的資料的一套軟體。 雖然您�
 1. 解壓 GodMode9 `.zip` 中的 `gm9` 資料夾到 SD 卡的根目錄底下
 1. Reinsert your SD card into your console
 
+GodMode9 is now up to date.
+{: .notice--success}
+
 ## 建立 NAND 備份
 
 1. Press and hold (Start), and while holding (Start), power on your console. 這將會啟動 GodMode9
 {% include_relative include/nand-backup.txt %}
+
+Your NAND backup has been successfully created.
+{: .notice--success}
 
 ## 還原 NAND 備份
 
@@ -54,28 +60,35 @@ GodMode9 是個強大且可修改您主機的資料的一套軟體。 雖然您�
 1. 選擇『SysNAND Restore (safe)』
 1. 選擇您的 NAND 備份
 1. 按『A』解鎖 SysNAND(lvl3)的寫入保護，然後按下提示的按鍵組合
-    + 這不會複寫您的 boot9strap 安裝
+    + This will **not** overwrite your boot9strap installation
     + 此過程將花費一些時間
 1. 按『A』 繼續
 1. 按『B』回到主選單
 1. 選擇『Exit』
 1. 如提示時，按下『A』取消檔案寫入鎖定
 
-## 植入任何 .CIA 程式至『健康與警示』程式中
+Your NAND backup has been successfully restored. You can now delete `<date>_<serialnumber>_sysnand_###.bin` from your SD card.
+{: .notice--success}
 
-為了整潔，請將您所想要植入的 `.cia` 檔複製至 SD 卡的 `/cias/` 資料夾中
-{: .notice--info}
+## 植入任何 .CIA 程式至『健康與警示』程式中
 
 請注意，您將無法植入比『健康與警示』程式還大的檔案 (包括遊戲以及其他較大的程式)
 {: .notice--info}
 
 1. Press and hold (Start), and while holding (Start), power on your console. 這將會啟動 GodMode9
 1. 移動至 `[0:] SDCARD` -> `cias`
-1. 按『A』選取您的 `.cia` 檔案，並選擇『CIA image options...』，再選『Mount image to drive』
-1. 按『A』選取 `.app` 結尾的檔案，並選擇『NCCH image options』，再選『Inject to H&S』
+1. Press (A) on your `.cia` to select it
+1. Select "CIA image options..."
+1. Select "Mount image to drive"
+1. Press (A) on the `.app` file
+1. Select "NCCH image options"
+1. Select "Inject to H&S"
 1. 按『A』解鎖 SysNAND(lvl1)的寫入保護，然後按下提示的按鍵組合
 1. 按『A』 繼續
 1. 如提示時，按下『A』取消檔案寫入鎖定
+
+Your desired application has now been injected into Health & Safety.
+{: .notice--success}
 
 ## 還原植入前的『健康與警示』程式
 
@@ -89,15 +102,26 @@ GodMode9 是個強大且可修改您主機的資料的一套軟體。 雖然您�
 1. 按『A』解鎖 SysNAND(lvl1)的寫入保護，然後按下提示的按鍵組合
 1. 如提示時，按下『A』取消檔案寫入鎖定
 
+Health & Safety has been reverted to normal.
+{: .notice--success}
+
 ## 格式化 SD 卡
 
 **請注意，這將清除您 SD 卡的所有資料！**
 {: .notice--danger}
 
 1. Press and hold (Start), and while holding (Start), power on your console. 這將會啟動 GodMode9
+1. Press (Right Shoulder) + (B) to unmount the current SD card and insert the one you want to format
+    + If GodMode9 shows an initialization error when inserting the SD Card to be formatted, it can safely be dismissed
 {% include_relative include/format-sd-gm9.txt %}
 
+Your SD card has successfully been formatted for use with the console.
+{: .notice--success}
+
 ## Removing an NNID without formatting your console
+
+This process will only log you out of your NNID. You will still not be able to use the NNID on another console, as the NNID remains linked to the console.
+{: .notice--info}
 
 1. Press and hold (Start), and while holding (Start), power on your console. 這將會啟動 GodMode9
 1. 按『Home』鍵以叫出主選單
@@ -112,3 +136,6 @@ GodMode9 是個強大且可修改您主機的資料的一套軟體。 雖然您�
 1. 選擇『Exit』
 1. 如提示時，按下『A』取消檔案寫入鎖定
 1. Press (Start) to reboot your console
+
+You have now been logged out of your NNID.
+{: .notice--success}
