@@ -13,7 +13,7 @@ Nesta página, faremos backups de arquivos críticos do sistema e instalaremos o
 {% capture notice-6 %}
 O script irá instalar os seguintes aplicativos:
 
-+  **[FBI](https://github.com/lifehackerhansol/FBI)** *(installs CIA formatted applications)*
++ **[FBI](https://github.com/lifehackerhansol/FBI)** *(instala aplicativos formatados em CIA)*
 + **[Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)** *(inicia o Homebrew Launcher)*
 + **[Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)** *(instala temas personalizados)*
 + **[Checkpoint](https://github.com/FlagBrew/Checkpoint)** *(faz backup e restaura arquivos de saves para jogos de 3DS e DS)*
@@ -35,8 +35,8 @@ Se a sua instalação do CFW anterior era baseada em EmuNAND e você deseja move
 
 ### O que você precisa
 
-* [finalize_helper.firm]({{ base_path }}/assets/finalize_helper.firm) (direct download)
-* [finalize.romfs]({{ base_path }}/assets/finalize.romfs) (direct download)
+* [finalize_helper.firm]({{ base_path }}/assets/finalize_helper.firm) (download direto)
+* [finalize.romfs]({{ base_path }}/assets/finalize.romfs) (download direto)
 
 ### Instruções
 
@@ -46,9 +46,9 @@ Nesta seção, você copiará os arquivos necessários para seguir o resto das i
 
 1. Desligue seu console
 1. Insira o cartão SD no seu computador
-1. Copy `finalize.romfs` to the root of your SD card
-1. Open the `luma` folder on your SD card and create a folder named `payloads` inside, if it does not already exist
-1. Copy `finalize_helper.firm` to the `payloads` folder
+1. Copie `finalize.romfs` para a raiz do seu cartão SD
+1. Abra a pasta `luma` no seu cartão SD e crie uma pasta chamada `payloads` dentro, se já não existir
+1. Copie o `finalize_helper.firm` para a pasta `payloads`
 1. Reinsira o cartão SD no seu console
 
 As capturas de tela abaixo indicam o layout mínimo do cartão SD que é necessário para seguir esta página. Você pode ter arquivos ou pastas extras no seu cartão SD, dependendo da sua instalação anterior ou do método que você seguiu.
@@ -59,18 +59,18 @@ As capturas de tela abaixo indicam o layout mínimo do cartão SD que é necess�
 ![]({{ "/images/screenshots/finalizing-luma-payloads.png" | absolute_url }})
 {: .notice--info}
 
-#### Section II - Updating the System
+#### Seção II - Atualizando o Sistema
 
 Nesta seção, você atualizará seu sistema para a versão mais recente, que é seguro de fazer com custom firmware.
 
 {% include_relative include/sysupdate.txt cfw="true" %}
 
-#### Section III - RTC and DSP setup
+#### Seção III - Configuração RTC e DSP
 
 Nesta seção, você irá sincronizar o relógio interno do seu 3DS com a hora real e descarregar o firmware de som (que é necessário para que alguns softwares de homebrew utilizem o som corretamente).
 
 1. Aperte (Gatilho Esquerdo) + (D-pad pra baixo) + (Select) ao mesmo tempo para abrir o menu Rosalina
-    + If one of these buttons is broken, download [config.ini]({{ base_path }}/assets/config.ini){:download="config.ini"} and put it in your `luma` folder, replacing the existing one. Isso vai mudar a combinação de botões do Rosalina menu para (X) + (Y)
+    + Se um destes botões estiver quebrado, baixe [config.ini]({{ base_path }}/assets/config.ini) e coloque em sua pasta `luma`, substituindo o já existente. Isso vai mudar a combinação de botões do Rosalina menu para (X) + (Y)
 1. Selecione "Miscellaneous options"
 1. Selecione "Dump DSP firmware"
 1. Aperte (B) para continuar
@@ -79,9 +79,9 @@ Nesta seção, você irá sincronizar o relógio interno do seu 3DS com a hora r
 1. Aperte (B) para retornar para o menu principal do Rosalina
 1. Aperte (B) para sair do menu do Rosalina
 
-#### Section IV - Setup Script
+#### Seção IV - Preparando o Script
 
-In this section, you will use a series of scripts to automate homebrew installation, SD card cleanup, and system file backup.
+Nesta seção, você usará uma série de scripts para automatizar a instalação de homebrews, limpeza de cartão SD e backup de arquivos do sistema.
 
 1. Desligue seu console
 1. Aperte e segure (Start), e enquanto segura (Start), ligue seu console. This will launch the Finalizing Setup Helper
