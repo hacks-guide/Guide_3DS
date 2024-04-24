@@ -1,0 +1,57 @@
+name: Import translations from Crowdin
+
+on:
+  schedule:
+    - cron: "0 0 1,15 * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - uses: actions/setup-node@v4
+
+      - name: Setup Crowdin CLI
+        run: |
+          npm i -g @crowdin/cli
+
+      - name: Pull from Crowdin
+        run: |
+          CROWDIN_TOKEN=${{ secrets.CROWDIN_TOKEN }} ./crowdin-pull.sh
+
+      - name: Pull origin
+        run: git pull origin main --ff-only # Pull origin in case a commit has been done while updating
+
+      # Build the site using Jekyll
+      # This makes sure that the site actually builds before pushing to Crowdin
+      - name: Test site build via Jekyll
+        run: JEKYLL_ENV=production bundle exec jekyll build
+
+      - name: Push changes
+        run: |
+          git config user.email "flamekat54@aol.com"
+          git config user.name "TWLBot"
+
+          echo "machine github.com" > "$HOME/.netrc"
+          echo "  login TWLBot" >> "$HOME/.netrc"
+          echo "  password ${{ secrets.TWLBOT_TOKEN }}" >> "$HOME/.netrc"
+
+          echo "machine api.github.com" >> "$HOME/.netrc"
+          echo "  login TWLBot" >> "$HOME/.netrc"
+          echo "  password ${{ secrets.TWLBOT_TOKEN }}" >> "$HOME/.netrc"
+
+          git checkout main
+          git stage .
+          if git commit -m "Automatic translation import"; then
+            git push origin main
+          fi
