@@ -1,0 +1,34 @@
+name: Upload source files to Crowdin
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '_pages/en_US/**.txt'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+        # Build the site using Jekyll
+        # No point pushing to Crowdin if the site build is failing
+      - name: Test site build via Jekyll
+        run: JEKYLL_ENV=production bundle exec jekyll build
+
+      - name: Push to Crowdin
+        uses: crowdin/github-action@v2
+        with:
+          upload_sources: true
+        env:
+          CROWDIN_TOKEN: ${{ secrets.CROWDIN_TOKEN }}
