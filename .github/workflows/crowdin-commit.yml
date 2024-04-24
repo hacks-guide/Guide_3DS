@@ -1,0 +1,57 @@
+name: Import translations from Crowdin
+
+on:
+  schedule:
+    - cron: "0 0 1,15 * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          submodules: recursive
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Setup Crowdin CLI
+        run: |
+          npm i -g @crowdin/cli
+
+      - name: Pull from Crowdin
+        env:
+          CROWDIN_TOKEN: ${{ secrets.CROWDIN_TOKEN }}
+        run: |
+          crowdin download
+
+      - name: Pull origin
+        run: git pull origin master --ff-only # Pull origin in case a commit has been done while updating
+
+      # This makes sure that the site actually builds before pushing to the repo
+      - name: Build site
+        run: npm run docs:build
+
+      - name: Commit changes
+        run: |
+          git config user.name 'Faris NyanNyan'
+          git config user.email 'nnfaris@flashcarts.net'
+
+          git checkout master
+          git stage .
+          git commit -m "Automatic translation import"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.RUMIHO_TOKEN }}
+          branch: master
