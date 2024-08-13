@@ -109,10 +109,71 @@ Se isso falhar, tente usar outro cartão SD.
 
 ## Instalando boot9strap (MSET9)
 
+{% capture mset9-chorus %}
+    + **Windows**: Double-click `MSET9-Windows.bat`
+    + **macOS**: Double-click `MSET9-macOS.command` and enter your password if prompted
+    + **Linux**: Abra uma janela do Terminal, use `cd` até o root do seu cartão SD, então digite `python3 mset9.py` e pressione Enter
+{% endcapture %}
+
 {% capture compat %}
 <summary><u>Python 3 não está instalado</u></summary>
 
 O Python não está instalado no computador que você está usando. Baixe-o do [site do Python](https://www.python.org/downloads/), clique duas vezes no instalador e siga as instruções para instalar o Python. Quando o Python estiver instalado, tente novamente.
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>HOME Menu extdata: Missing!</u></summary>
+
+Please power on your console with your SD inserted, then check the MSET9 status again.
+
+If this does not work, your SD card needs to be formatted:
+
+1. Copy everything off the SD Card to your PC
+1. Format the SD Card ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
+1. Copy everything back
+1. Start again from [Section I Step 7](installing-boot9strap-(mset9-cli)#section-i---prep-work)
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Mii Maker extdata: Missing!</u></summary>
+
+Dados do Mii Maker não foram encontrados no cartão SD. Please power on your console with your SD inserted, then launch Mii Maker, then check the MSET9 status again.
+
+If this does not work, your SD card needs to be formatted:
+
+1. Copy everything off the SD Card to your PC
+1. Format the SD Card ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
+1. Copy everything back
+1. Start again from [Section I Step 8](installing-boot9strap-(mset9-cli)#section-i---prep-work).
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Title database: Not initialized!</u></summary>
+
+Ensure that you have reset the title database.
+    + Please power on your console with your SD inserted 
+    + Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
+        + This will not wipe any of your data
+    + If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-(mset9-cli)#section-i---prep-work)
+
+If you do *not* getting a reset prompt, your SD card needs to be formatted:
+
+1. Copy everything off the SD Card to your PC
+1. Format the SD Card ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
+1. Copy everything back
+1. Execute o script MSET9:
+    {{ mset9-chorus }}
+1. Digite o número correspondente ao modelo do seu console e a versão, então pressione Enter
+1. Type `2` then press enter to check the MSET9 status
+    + This will create the dummy databases again
+1. Close the MSET9 script window
+1. Start again from [Section I Step 12](installing-boot9strap-(mset9-cli)#section-i---prep-work).
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -127,7 +188,12 @@ Lembre-se, seu cartão SD deve ficar assim:
 ![MSET9 root layout](/images/screenshots/mset9/mset9-root-layout.png)
 {: .notice--info}
 
-Se o layout do seu cartão SD estiver correto, então provavelmente o cartão SD não está sendo lido pelo console. Reformate-o ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac))), e então comece novamente desde o início de [Seção I](installing-boot9strap-(mset9-cli)#section-i---prep-work).
+If your SD card layout is correct, then your SD card most likely isn't being read by your console and needs to be formatted:
+
+1. Copy everything off the SD Card to your PC
+1. Format the SD Card ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
+1. Copy everything back
+1. Start again from the beginning of [Section I](installing-boot9strap-(mset9-cli)#section-i---prep-work)
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -141,45 +207,7 @@ A proteção contra gravação está ativada neste cartão SD. Se você está us
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Error 03: Don't change console version</u></summary>
-
-Você digitou um número diferente entre diferentes execuções do MSET9 (por exemplo, você selecionou inicialmente a opção 1 para "Old 3DS, 11.8 - 11.17" e depois selecionou a opção 2 para "New 3DS, 11.8 - 11.17").
-
-Se isso aconteceu ao tentar desinstalar o MSET9, o script removeu automaticamente o MSET9 para você e você pode continuar para a próxima página. Caso contrário, comece novamente no início da [Seção I](installing-boot9strap-(mset9-cli)#section-i---prep-work).
-
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Error 04: No HOME Menu Extdata.</u></summary>
-
-Seu cartão SD não está formatado corretamente.
-
-Copie tudo do cartão SD para seu PC, reformate-o ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)), copie tudo de volta, e então comece novamente desde o início da [Seção I](installing-boot9strap-(mset9-cli)#section-i---prep-work).
-
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Error 05: No Mii Maker Data!</u></summary>
-
-Dados do Mii Maker não foram encontrados no cartão SD. Comece novamente no início da [Seção I](installing-boot9strap-(mset9-cli)#section-i---prep-work).
-
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Error 06: You need at least 16MB free</u></summary>
-
-Seu cartão SD não possui espaço suficiente para acionar o MSET9. Libere um pouco de espaço e tente novamente.
-
-No final deste guia, você precisará de pelo menos 1,3GB para fazer um backup da NAND, então é melhor liberar pelo menos isso.
-
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Error 07: You don't have 1 ID0, you have (#)!</u></summary>
+<summary><u>Error 04: You don't have 1 ID0, you have (#)!</u></summary>
 
 Você tem múltiplas pastas ID0. Para determinar a pasta correta, siga estas instruções:
 
@@ -197,37 +225,13 @@ Você tem múltiplas pastas ID0. Para determinar a pasta correta, siga estas ins
 1. Mova a pasta do verdadeiro ID0 da pasta `BACKUP_Nintendo 3DS` para a pasta `Nintendo 3DS`
 1. Se existir, mova a pasta `Private` da pasta `BACKUP_Nintendo 3DS` para a pasta `Nintendo 3DS`
 
-Assim que você fizer isso, continue a partir da [Seção I Passo 7](installing-boot9strap-(mset9-cli)#section-i---prep-work).
+Once you've done this, continue from [Section I Step 3](installing-boot9strap-(mset9-cli)#section-i---prep-work).
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Error 08: One or more files are missing or malformed!</u></summary>
-
-Um ou mais arquivos que o MSET9 precisa executar estão ausentes ou corrompidos. Rebaixe o [`.zip` MSET9 Release](https://github.com/zoogie/MSET9/releases/latest) e extraia-o para a raiz do seu cartão SD, substituindo todos os arquivos existentes e tente novamente.
-
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Error 10: Database(s) malformed or missing!</u></summary>
-
-Isto acontece por que nenhuma title database está presente, normalmente porque você nunca instalou nenhum aplicativo da eShop com este cartão SD.
-
-1. Se você ainda não o fez, pressione Enter para fechar o script MSET9
-1. Insira seu cartão SD no seu console
-1. Ligue o seu console
-1. Navegue para Configurações do Sistema -> Gerenciamento de Dados -> Nintendo 3DS -> Software -> Reiniciar ([instruções visuais](/images/screenshots/database-reset.jpg))
-1. Desligue seu console
-1. Insira seu cartão SD no seu computador
-1. Retorne à [Seção I Passo 7](installing-boot9strap-(mset9-cli)#section-i---prep-work)
-
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Error 12: You don't have 1 ID1, you have (#)!</u></summary>
+<summary><u>Error 05: You don't have 1 ID1, you have (#)!</u></summary>
 
 {% include_relative include/id1-check.txt %}
 
@@ -235,11 +239,55 @@ Isto acontece por que nenhuma title database está presente, normalmente porque 
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
+<summary><u>Error 06: You need at least 16MB free</u></summary>
+
+Seu cartão SD não possui espaço suficiente para acionar o MSET9. Libere um pouco de espaço e tente novamente.
+
+No final deste guia, você precisará de pelo menos 1,3GB para fazer um backup da NAND, então é melhor liberar pelo menos isso.
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Error 07: One or more files are missing or malformed!</u></summary>
+
+Um ou mais arquivos que o MSET9 precisa executar estão ausentes ou corrompidos. Re-download the [MSET9 Release `.zip`](https://github.com/hacks-guide/MSET9/releases/latest) and extract it to the root of your SD card, replacing all existing files, then try again.
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Error 18: Windows Locale Settings are broken!</u></summary>
+
+{% include_relative include/winerror234.txt %}
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
 <summary><u>Tela vermelha após reinserir cartão SD (Seção II Passo 11)</u></summary>
 
-Talvez você esteja sem o `SafeB9S.bin` na raiz do seu cartão SD, ou o arquivo pode estar corrompido. Copie-o do `.zip` do MSET9, substituindo quaisquer arquivos existentes.
+Talvez você esteja sem o `SafeB9S.bin` na raiz do seu cartão SD, ou o arquivo pode estar corrompido. Copy it from the MSET9 `.zip`, replacing any existing files then follow these instructions to remove the trigger file:
 
-Alternativamente, seu cartão SD pode estar sem a formatação apropriada ou mal particionado. Tente reformatar seu cartão SD: [Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)) *(isto irá apagar tudo em seu cartão SD)*
+1. Force power off your console by holding the Power button for 20 seconds
+1. Insira o cartão SD no seu computador
+1. Execute o script MSET9:
+    {{ mset9-chorus }}
+1. Digite o número correspondente ao modelo do seu console e a versão, então pressione Enter
+    + The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
+    + If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you may [retry Section II](installing-boot9strap-(mset9-cli)#section-ii---mset9)
+1. Type `4`, then press Enter
+1. Once the window says "Removed trigger file", type `0` and then press Enter
+1. Reinsert the SD card into your console
+1. Ligue o seu console
+1. Retorne à [Seção II Passo 1](installing-boot9strap-(mset9-cli)#section-ii---mset9)
+
+Alternativamente, seu cartão SD pode estar sem a formatação apropriada ou mal particionado. After removing the trigger file, format it:
+
+1. Copy everything off the SD Card to your PC
+1. Format the SD Card ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
+1. Copy everything back
+1. Start again from from [Section II Step 1](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -247,40 +295,35 @@ Alternativamente, seu cartão SD pode estar sem a formatação apropriada ou mal
 {% capture compat %}
 <summary><u>Configurações do Sistema carregando infinitamente após reinserir o cartão SD</u></summary>
 
-É bem provável que você tenha feito algo de diferente das instruções do MSET9, ou selecionou o modelo ou versão errada.
+You most likely did something different from the MSET9 instructions, selected the wrong model/version, or your SD card needs to be formatted. Ensure you are choosing the correct [model](/images/3dsmodels.png) and firmware version when opening the script.
 
-1. Feche a janela do script
-1. Execute o script `mset9.py` na raiz do seu cartão SD
-    + **Windows**: Clique duas vezes em `mset9.bat`
-    + **Linux**: Abra uma janela do Terminal, use `cd` até o root do seu cartão SD, então digite `python3 mset9.py` e pressione Enter
-    + Você deve ver uma janela que diz "MSET9 ... SETUP by zoogie"
+Follow these instructions to remove the trigger file and to retry Section II:
+
+1. Force power off your console by holding the Power button for 20 seconds
+1. Insira o cartão SD no seu computador
+1. 1. Execute o script MSET9:
+    {{ mset9-chorus }}
 1. Digite o número correspondente ao modelo do seu console e a versão, então pressione Enter
-1. Digite `3`, então presione Enter
-1. Assim que a janela disser "Successfully removed MSET9!", reinsira o cartão SD no seu console
+    + The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
+    + If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you are ready to retry Section II
+1. Type `4`, then press Enter
+1. Once the window says "Removed trigger file", type `0` and then press Enter
+1. Reinsert the SD card into your console
 1. Ligue o seu console
 1. Retorne à [Seção II Passo 1](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
-Se o erro persistir e você ter certeza que fez tudo corretamente, é possível que tenha algo de errado com os dados extdata do Mii Maker. Siga estas instruções para redefini-los:
+If you continue to have this issue and are sure that you did everything correctly, ensure the trigger file is removed and format your SD card:
 
-1. Feche a janela do script
-1. Execute o script MSET9
-    + **Windows**: Clique duas vezes em `mset9.bat`
-    + **Linux**: Abra uma janela do Terminal, use `cd` até o root do seu cartão SD, então digite `python3 mset9.py` e pressione Enter
-    + Você deve ver uma janela que diz "MSET9 ... SETUP by zoogie"
-1. Digite o número correspondente ao modelo do seu console e a versão, então pressione Enter
-1. Digite `3` e pressione Enter para remover o MSET9
-1. Se possível, use um cartão SD novo; de outro modo, faça um backup de seu cartão SD e reformate-o como FAT32 ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
-1. Insira o cartão SD formatado e vazio no seu console
-1. Retorne à [Seção I Etapa 1](installing-boot9strap-(mset9-cli)#section-i---prep-work)
-
-Depois de terminar a página MSET9, você deve voltar para o seu antigo cartão SD antes de terminar a instalação.
-{: .notice--warning}
+1. Copy everything off the SD Card to your PC
+1. Format the SD Card ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
+1. Copy everything back
+1. Start again from from [Section II Step 1](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Erro "An exception occured" após acionar MSET9</u></summary>
+<summary><u>An exception occurred after triggering MSET9</u></summary>
 
 Isso provavelmente indica que você já possui custom firmware. Você deve [checar por CFW](checking-for-cfw).
 
