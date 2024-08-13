@@ -19,35 +19,32 @@ Esta página requer um computador rodando Windows, Linux ou macOS. Se você tem 
 
 ### O que é necessário
 
-* A versão mais recente do [MSET9](https://github.com/zoogie/MSET9/releases/latest) (o arquivo `.zip`)
+* The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (the MSET9 `.zip` file)
 * Qualquer versão 3.x de [Python](https://www.python.org/downloads/) **instalada no seu computador**
     + Se você estiver no Linux ou macOS, você já pode ter Python 3. Verifique abrindo uma janela terminal e digitando `python3 -V`. Se este retornar um número de versão, ele funcionará para este guia.
 
 ### Instruções
 
-Nesta página, você usará o script MSET9, que é usado para acionar o MSET9. Se você receber um erro numerado (por exemplo, Error 01) ao executar o script, a solução para esse erro provavelmente pode ser encontrada na página [troubleshooting](troubleshooting#installing-boot9strap-mset9).
+Nesta página, você usará o script MSET9, que é usado para acionar o MSET9. While the script is in progress, user data will temporarily disappear but will return upon the completion of this page. If you get an error when running the script, the solution to that error can most likely be found on the [troubleshooting](troubleshooting#installing-boot9strap-mset9) page.
 {: .notice--info}
 
 #### Seção I - Preparação
 
-Nesta seção, você irá preparar os dados no seu cartão SD necessários para que o exploit MSET9 possa ser ativado.
+In this section, you will prepare the MSET9 exploit by **temporarily** creating a new HOME Menu profile with no user data, and then setting up that profile with only the minimum data required for MSET9 to trigger. Your existing user data will disappear, but will come back when you are finished with this page.
 
-1. Ligue o seu console **com o cartão SD inserido**
-1. Abra o Mii Maker
-1. Espere seu console chegar a tela "Bem-vindo ao Mii Maker", então saia do Mii Maker
-    + Talvez você veja [esta tela](/images/screenshots/mset9/mii-extdata.png),o que indica que os dados necessários já foram criados
-    + Se você só chegou na tela normal do Mii Maker, saia do Mii Maker e continue para o próximo passo
-1. Desligue seu console
 1. Insira o cartão SD no seu computador
-1. Copie tudo do Release `.zip` para a raiz do seu cartão SD, substituindo quaisquer arquivos existentes
+1. Copy everything from the MSET9 `.zip` to the root of your SD card, overwriting any existing files
 
     ![MSET9 root layout](/images/screenshots/mset9/mset9-root-layout.png)
     {: .notice--info}
 
 1. Execute o script MSET9:
-    + **Windows**: Clique duas vezes em `mset9.bat`
-    + **macOS**: Clique duas vezes em `mset9.command` e digite sua senha se solicitado
+{% capture mset9-chorus %}
+    + **Windows**: Double-click `MSET9-Windows.bat`
+    + **macOS**: Double-click `MSET9-macOS.command` and enter your password if prompted
     + **Linux**: Abra uma janela do Terminal, use `cd` até o root do seu cartão SD, então digite `python3 mset9.py` e pressione Enter
+{% endcapture %}
+    {{ mset9-chorus }}
 
     ![Image: MSET9 setup](/images/screenshots/mset9/mset9-select.png)
     {: .notice--info}
@@ -55,16 +52,41 @@ Nesta seção, você irá preparar os dados no seu cartão SD necessários para 
 1. Digite o número correspondente ao modelo do seu console e a versão, então pressione Enter
     + A janela deve mudar para isto:
 
-    ![Image: MSET9 setup](/images/screenshots/mset9/mset9-setup.png)
+    ![Image: MSET9 setup](/images/screenshots/mset9/mset9-setup-notcreated.png)
     {: .notice--info}
 
     + Certifique-se de que o modelo e a versão do console estão sendo mostrados
-1. Digite `1` e pressione Enter para garantir que seu console esteja preparado para MSET9
+1. Type `1`, then press Enter to begin the process of creating the MSET9 ID1
+1. After reviewing the disclaimer, type `1` again and press Enter to accept it
     + Se você receber um erro, verifique o [troubleshooting](troubleshooting#installing-boot9strap-mset9), e tente novamente
-    + Se você receber "Error 10: Database(s) malformed or missing!", siga as instruções [aqui](/images/screenshots/database-reset.jpg), e então volte ao Passo 7 desta seção
-1. Se você ver a mensagem "Everything appears to be functional!", pressione Enter para fechar o script do MSET9
+1. If you see the message "Created hacked ID1.", press Enter to close the MSET9 script
+    + Your 3DS will appear to have no data / no user-installed apps on HOME Menu. **This is expected.** Your data will come back at a later step
 1. Reinsira o cartão SD no seu console
 1. Ligue o seu console
+1. Abra o Mii Maker
+1. Wait for your console to reach the [Welcome to Mii Maker](/images/screenshots/mset9/mii-welcome.png) screen, then exit Mii Maker and return to the Home Screen
+    + You should see [this screen](/images/screenshots/mset9/mii-extdata.png), which indicates the necessary data has been created
+    + If you just reach the [normal](/images/screenshots/mset9/mii-existing.png) Mii Maker screen, exit Mii Maker and continue to the next step
+1. Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
+    + This will not wipe any of your data
+1. Power off your console by pressing the power button then tapping Power Off on the lower screen
+1. Insira o cartão SD no seu computador
+1. Execute o script MSET9:
+
+    {{ mset9-chorus }}
+
+1. Digite o número correspondente ao modelo do seu console e a versão, então pressione Enter
+    + The window should change to this and display `Ready`:
+
+    ![Image: MSET9 setup](/images/screenshots/mset9/mset9-ready.png)
+    {: .notice--info}
+
+    + If the window says [Not ready - check MSET9 status for more details](/images/screenshots/mset9/mset9-not-ready.png):
+        + Type `2`, then press Enter to check the MSET9 status and follow the directions indicated
+        + Once you have resolved the issue, return to Section I Step 14
+        + For more information, check the [troubleshooting](troubleshooting#installing-boot9strap-mset9) page
+1. Type `0`, then press Enter to close the script
+1. Reinsira o cartão SD no seu console
 
 #### Seção II - MSET9
 
@@ -73,20 +95,18 @@ Nestã seção, você vai attivar o MSET9 para iniciar o SafeB9SInstaller (o ins
 Estas instruções devem ser seguidas **EXATAMENTE** como estão, então confira TUDO que você está fazendo para evitar erros!
 {: .notice--danger}
 
-1. **[Paire sobre](/images/screenshots/mset9/hover-settings.png)** o ícone das Configurações do Sistema usando o D-Pad (não o selecione ainda)
-1. Desligue, então ligue seu console
+1. Power on your console, ensuring System Settings is selected
+    + If System Settings is not selected, **[hover over](/images/screenshots/mset9/hover-settings.png)** the System Settings icon using the D-Pad, power your console off, then back on
 1. Pressione (A) para iniciar as Configurações do Sistema
 1. Navegue para `Gerenciamento de Dados` -> `Nintendo 3DS` -> `Extra Data` ([imagem](/images/screenshots/mset9/settings-extdata.png))
 1. **Não pressione nenhum botão ou toque na tela**
 1. **Com o console AINDA LIGADO, e sem pressionar nenhum dos botões ou a tela de toque**, remova seu cartão SD do seu console
-    + O menu vai recarregar e dizer que não há cartão SD inserido, o que é esperado
+    + The menu will refresh and say that no SD card is inserted
 1. Insira o cartão SD no seu computador
 1. Execute o script MSET9:
-    + **Windows**: Clique duas vezes em `mset9.bat`
-    + **macOS**: Clique duas vezes em `mset9.command` e digite sua senha se solicitado
-    + **Linux**: Abra uma janela do Terminal, use `cd` até o root do seu cartão SD, então digite `python3 mset9.py` e pressione Enter
+    {{ mset9-chorus }}
 1. Digite o número correspondente ao modelo do seu console e a versão, então pressione Enter
-1. Na janela MSET9, digite `2` e pressione Enter para injetar o MSET9
+1. In the MSET9 window, type `3`, then press Enter to inject MSET9
     + Você deve ver "MSET9 successfully injected!"
 1. Pressione Enter para fechar o script MSET9
 1. Reinsira o cartão SD no seu console **sem pressionar nenhum botão ou tocar a tela de toque**
@@ -100,7 +120,7 @@ Estas instruções devem ser seguidas **EXATAMENTE** como estão, então confira
 
 #### Seção IV - Removendo o MSET9
 
-Nesta seção, você irá remover o MSET9 para evitar erros futuros. (Isto não irá remover o custom firmware que você acabou de instalar.)
+In this section, you will remove MSET9 to prevent further issues and to restore your user data (games, themes, etc). (This will not remove the custom firmware that you have just installed.)
 
 NÃO pule esta seção! Se você pular isso, os aplicativos podem ter um crash inesperado e você encontrará erros na próxima página!
 {: .notice--danger}
@@ -108,11 +128,13 @@ NÃO pule esta seção! Se você pular isso, os aplicativos podem ter um crash i
 1. Desligue seu console
 1. Insira o cartão SD no seu computador
 1. Execute o script MSET9:
-    + **Windows**: Clique duas vezes em `mset9.bat`
-    + **macOS**: Clique duas vezes em `mset9.command` e digite sua senha se solicitado
-    + **Linux**: Abra uma janela do Terminal, use `cd` até o root do seu cartão SD, então digite `python3 mset9.py` e pressione Enter
+    {{ mset9-chorus }}
 1. Digite o número correspondente ao modelo do seu console e a versão, então pressione Enter
-1. Na janela MSET9, digite `3` e pressione Enter para remover o MSET9
+    + The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
+    + If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), skip to Step 6
+1. Type `4`, then press Enter to remove the trigger file
+    + You should see "Removed trigger file."
+1. Type `5`, then press Enter to remove MSET9
     + Você deve ver "Successfully removed MSET9!"
 1. Pressione Enter para fechar o script MSET9
 
