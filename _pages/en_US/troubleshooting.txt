@@ -124,7 +124,7 @@ Python is not installed on the computer you are using. Download it from the [Pyt
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>HOME menu extdata: Missing!</u></summary>
+<summary><u>HOME Menu extdata: Missing!</u></summary>
 
 Please power on your console with your SD inserted, then check the MSET9 status again.
 
@@ -133,7 +133,7 @@ If this does not work, your SD card needs to be formatted:
 1. Copy everything off the SD Card to your PC
 1. Format the SD Card ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
 1. Copy everything back
-1. Start again from [Section I Step 7](installing-boot9strap-(mset9-cli)#section-i---prep-work).
+1. Start again from [Section I Step 7](installing-boot9strap-(mset9-cli)#section-i---prep-work)
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -156,13 +156,13 @@ If this does not work, your SD card needs to be formatted:
 {% capture compat %}
 <summary><u>Title database: Not initialized!</u></summary>
 
-Ensure you have reset the databases. 
+Ensure that you have reset the title database.
     + Please power on your console with your SD inserted 
-    + Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` and press Reset ([image](/images/screenshots/database-reset.jpg))
-    + This will not actually wipe your data
-    + If you get a reset prompt, after resetting, power off your 3DS and start again from [Section I Step 14](installing-boot9strap-(mset9-cli)#section-i---prep-work).
+    + Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
+        + This will not wipe any of your data
+    + If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-(mset9-cli)#section-i---prep-work)
 
-If you are not getting a reset prompt, your SD card needs to be formatted:
+If you do *not* getting a reset prompt, your SD card needs to be formatted:
 
 1. Copy everything off the SD Card to your PC
 1. Format the SD Card ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
@@ -251,7 +251,7 @@ At the end of this guide, you will need at least 1.3GB to make a NAND backup, so
 {% capture compat %}
 <summary><u>Error 07: One or more files are missing or malformed!</u></summary>
 
-One or more files that MSET9 needs to run is missing or corrupted. Re-download the [MSET9 Release `.zip`](https://github.com/zoogie/MSET9/releases/latest) and extract it to the root of your SD card, replacing all existing files, then try again.
+One or more files that MSET9 needs to run is missing or corrupted. Re-download the [MSET9 Release `.zip`](https://github.com/hacks-guide/MSET9/releases/latest) and extract it to the root of your SD card, replacing all existing files, then try again.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -275,14 +275,14 @@ You may be missing `SafeB9S.bin` from the root of your SD card, or the file may 
     {{ mset9-chorus }}
 1. Type the number corresponding to your console model and version, then press Enter
     + The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
-    + If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you are ready to retry Section II
+    + If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you may [retry Section II](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 1. Type `4`, then press Enter
 1. Once the window says "Removed trigger file", type `0` and then press Enter
 1. Reinsert the SD card into your console
 1. Power on your console
 1. Return to [Section II Step 1](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
-Alternatively, your SD card may be improperly formatted or partitioned, after removing the trigger file, format it:
+Alternatively, your SD card may be improperly formatted or partitioned. After removing the trigger file, format it:
 
 1. Copy everything off the SD Card to your PC
 1. Format the SD Card ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
@@ -295,9 +295,9 @@ Alternatively, your SD card may be improperly formatted or partitioned, after re
 {% capture compat %}
 <summary><u>System Settings loading infinitely after reinserting the SD card</u></summary>
 
-You most likely did something different from the MSET9 instructions, selected the wrong model/version or your SD card needs to be formatted. Ensure you are choosing the correct [model](/images/3dsmodels.png) and firmware version option when opening the script.
+You most likely did something different from the MSET9 instructions, selected the wrong model/version, or your SD card needs to be formatted. Ensure you are choosing the correct [model](/images/3dsmodels.png) and firmware version when opening the script.
 
-Follow these instructions to remove the trigger file then try Section II again:
+Follow these instructions to remove the trigger file and to retry Section II:
 
 1. Force power off your console by holding the Power button for 20 seconds
 1. Insert your SD card into your computer
@@ -323,7 +323,7 @@ If you continue to have this issue and are sure that you did everything correctl
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>An exception occured after triggering MSET9</u></summary>
+<summary><u>An exception occurred after triggering MSET9</u></summary>
 
 This likely indicates that you already have custom firmware. You should [check for CFW](checking-for-cfw).
 
