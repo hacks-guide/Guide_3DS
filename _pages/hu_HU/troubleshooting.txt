@@ -109,10 +109,71 @@ Ha ez sikertelen, próbálkozz egy másik SD kártyával.
 
 ## Boot9strap telepítése (MSET9)
 
+{% capture mset9-chorus %}
+    + **Windows**: Double-click `MSET9-Windows.bat`
+    + **macOS**: Double-click `MSET9-macOS.command` and enter your password if prompted
+    + **Linux**: nyiss meg egy Terminal ablakot, majd `cd`-z az SD kártyád gyökerébe, és írd be, a `python3 mset9.py` parancsot és nyomj Enter-t
+{% endcapture %}
+
 {% capture compat %}
 <summary><u>Python 3 is not installed</u></summary>
 
 A Python nincs telepítve arra a számítógépre, amit használsz. Töltsd le a [Python weboldaláról](https://www.python.org/downloads/), majd duplán kattintva a telepítőn kövesd a lépéseket a Python telepítéséhez. Ha a Python települt próbáld újra.
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>HOME Menu extdata: Missing!</u></summary>
+
+Please power on your console with your SD inserted, then check the MSET9 status again.
+
+If this does not work, your SD card needs to be formatted:
+
+1. Copy everything off the SD Card to your PC
+1. Format the SD Card ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
+1. Copy everything back
+1. Start again from [Section I Step 7](installing-boot9strap-(mset9-cli)#section-i---prep-work)
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Mii Maker extdata: Missing!</u></summary>
+
+A Mii Maker adat nem található az SD kártyán. Please power on your console with your SD inserted, then launch Mii Maker, then check the MSET9 status again.
+
+If this does not work, your SD card needs to be formatted:
+
+1. Copy everything off the SD Card to your PC
+1. Format the SD Card ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
+1. Copy everything back
+1. Start again from [Section I Step 8](installing-boot9strap-(mset9-cli)#section-i---prep-work).
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Title database: Not initialized!</u></summary>
+
+Ensure that you have reset the title database.
+    + Please power on your console with your SD inserted 
+    + Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
+        + This will not wipe any of your data
+    + If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-(mset9-cli)#section-i---prep-work)
+
+If you do *not* getting a reset prompt, your SD card needs to be formatted:
+
+1. Copy everything off the SD Card to your PC
+1. Format the SD Card ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
+1. Copy everything back
+1. Futtasd az MSET9 szkriptet:
+    {{ mset9-chorus }}
+1. Írd be a konzolod modelljéhez és verziójához tartozó számot, és nyomj Enter-t
+1. Type `2` then press enter to check the MSET9 status
+    + This will create the dummy databases again
+1. Close the MSET9 script window
+1. Start again from [Section I Step 12](installing-boot9strap-(mset9-cli)#section-i---prep-work).
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -127,7 +188,12 @@ Emlékezz, az SD kártyádnak hasonlóan kell kinéznie:
 ![MSET9 root layout](/images/screenshots/mset9/mset9-root-layout.png)
 {: .notice--info}
 
-Ha az SD kártyád kiosztása megfelelő, akkor az SD kártyád valószínűleg nem olvasható a konzolod által. Formázd újra ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac))), majd kezd újra az [I. rész elejétől](installing-boot9strap-(mset9-cli)#section-i---prep-work).
+If your SD card layout is correct, then your SD card most likely isn't being read by your console and needs to be formatted:
+
+1. Copy everything off the SD Card to your PC
+1. Format the SD Card ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
+1. Copy everything back
+1. Start again from the beginning of [Section I](installing-boot9strap-(mset9-cli)#section-i---prep-work)
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -141,45 +207,7 @@ Az írásvédelem bekapcsolt ezen az SD kártyán. Ha teljes méretű SD kárty�
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Error 03: Don't change console version</u></summary>
-
-Különböző számokat adtál meg az MSET9 különböző futásainál (például, kezdetben kiválaszotttad az 1-es opciót az "Old 3DS, 11.8 - 11.17" verzióhoz, később azonban a 2-es opciót a "New 3DS, 11.8 - 11.17" verzióhoz).
-
-Ha ez történt akkor, amikor az MSET9-et eltávolítani próbáltad, a szkript automatikusan eltávolította neked az MSET9-et és folytathatod a következő oldallal. Egyébként kezd újra az [I. rész elejétől](installing-boot9strap-(mset9-cli)#section-i---prep-work).
-
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Error 04: No HOME Menu Extdata.</u></summary>
-
-Az SD kártyád nem megfelelően formázott.
-
-Másolj mindent az SD kártyádról a PC-dre, formázd újra ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac))), másolj mindent vissza, majd kezd el újra az [I. rész elejétől](installing-boot9strap-(mset9-cli)#section-i---prep-work).
-
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Error 05: No Mii Maker Data!</u></summary>
-
-A Mii Maker adat nem található az SD kártyán. Kezd újra az [I. rész elejétől](installing-boot9strap-(mset9-cli)#section-i---prep-work).
-
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Error 06: You need at least 16MB free</u></summary>
-
-Az SD kártyádon nincs elég hely az MSET9 kiváltásához. Szabadíts fel egy kevés helyet és próbáld újra.
-
-Az útmutató végére, 1,3 GB szükséges a NAND mentés elkészítéséhez, így az a legjobb, ha rögtön ennyi helyet szabadítsz fel.
-
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Error 07: You don't have 1 ID0, you have (#)!</u></summary>
+<summary><u>Error 04: You don't have 1 ID0, you have (#)!</u></summary>
 
 Több ID0 mappád van. Ahhoz, hogy meghatározd melyik a helyes mappa, a következő lépéseket kell követned:
 
@@ -197,37 +225,13 @@ Több ID0 mappád van. Ahhoz, hogy meghatározd melyik a helyes mappa, a követk
 1. Mozgasd a valódi ID0 mappát a `BACKUP_Nintendo 3DS` mappából a `Nintendo 3DS` mappába
 1. Ha létezik, mozgasd a `Private` mappát a `BACKUP_Nintendo 3DS` mappából a `Nintendo 3DS` mappába
 
-Ha ez kész, folytasd az [I. rész 7. lépésével](installing-boot9strap-(mset9-cli)#section-i---prep-work).
+Once you've done this, continue from [Section I Step 3](installing-boot9strap-(mset9-cli)#section-i---prep-work).
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Error 08: One or more files are missing or malformed!</u></summary>
-
-Egy vagy több fájl, amire az MSET9-nek szüksége van a futáshoz, hiányzik vagy sérült. Töltsd le újra az [MSET9 Release `.zip`](https://github.com/zoogie/MSET9/releases/latest) fájlt, csomagold ki az SD kártyád gyökerébe, felülírva a létező fájlokat, majd próbáld újra.
-
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Error 10: Database(s) malformed or missing!</u></summary>
-
-Ez akkor történik, ha nincs cím adatbázis, általában azért, mert nem telepítettél semmilyen címet az eShop-ból erre az SD kártyára.
-
-1. Ha még nem tetted meg, nyomj Enter-t az MSET9 szkript bezárásához
-1. Helyezd az SD kártyád a konzolodba
-1. Kapcsold be a konzolod
-1. Navigálj ide: `System Settings -> Data Management -> Nintendo 3DS -> Software -> Reset ([vizuális útmutató](/images/screenshots/database-reset.jpg))
-1. Kapcsold ki a konzolod
-1. Helyezd az SD kártyád a számítógépedbe
-1. Térj vissza az [I. rész 7. lépéséhez](installing-boot9strap-(mset9-cli)#section-i---prep-work)
-
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-
-{% capture compat %}
-<summary><u>Error 12: You don't have 1 ID1, you have (#)!</u></summary>
+<summary><u>Error 05: You don't have 1 ID1, you have (#)!</u></summary>
 
 {% include_relative include/id1-check.txt %}
 
@@ -235,11 +239,55 @@ Ez akkor történik, ha nincs cím adatbázis, általában azért, mert nem tele
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
+<summary><u>Error 06: You need at least 16MB free</u></summary>
+
+Az SD kártyádon nincs elég hely az MSET9 kiváltásához. Szabadíts fel egy kevés helyet és próbáld újra.
+
+Az útmutató végére, 1,3 GB szükséges a NAND mentés elkészítéséhez, így az a legjobb, ha rögtön ennyi helyet szabadítsz fel.
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Error 07: One or more files are missing or malformed!</u></summary>
+
+Egy vagy több fájl, amire az MSET9-nek szüksége van a futáshoz, hiányzik vagy sérült. Re-download the [MSET9 Release `.zip`](https://github.com/hacks-guide/MSET9/releases/latest) and extract it to the root of your SD card, replacing all existing files, then try again.
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
+<summary><u>Error 18: Windows Locale Settings are broken!</u></summary>
+
+{% include_relative include/winerror234.txt %}
+
+{% endcapture %}
+<details>{{ compat | markdownify }}</details>
+
+{% capture compat %}
 <summary><u>Piros képernyő az SD kártya visszaillesztése után (II. rész 11. lépés)</u></summary>
 
-Valószínüleg hiányzik a `SafeB9S.bin` az SD kártyád gyökeréből vagy sérült. Másold ki az MSET9 `.zip` fájlból felülírva a létező fájlokat.
+Valószínüleg hiányzik a `SafeB9S.bin` az SD kártyád gyökeréből vagy sérült. Copy it from the MSET9 `.zip`, replacing any existing files then follow these instructions to remove the trigger file:
 
-Alternatíva, az SD kártyád nem megfelelően formázott vagy partícionált. Próbáld meg újraformázni az SD kártyád ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)) *(ez töröl minden adatot az SD kártyádról)*
+1. Force power off your console by holding the Power button for 20 seconds
+1. Helyezd az SD kártyád a számítógépbe
+1. Futtasd az MSET9 szkriptet:
+    {{ mset9-chorus }}
+1. Írd be a konzolod modelljéhez és verziójához tartozó számot, és nyomj Enter-t
+    + The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
+    + If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you may [retry Section II](installing-boot9strap-(mset9-cli)#section-ii---mset9)
+1. Type `4`, then press Enter
+1. Once the window says "Removed trigger file", type `0` and then press Enter
+1. Reinsert the SD card into your console
+1. Kapcsold be a konzolod
+1. Térj vissza az [II. rész 1. lépéséhez](installing-boot9strap-(mset9-cli)#section-ii---mset9)
+
+Alternatíva, az SD kártyád nem megfelelően formázott vagy partícionált. After removing the trigger file, format it:
+
+1. Copy everything off the SD Card to your PC
+1. Format the SD Card ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
+1. Copy everything back
+1. Start again from from [Section II Step 1](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -247,40 +295,35 @@ Alternatíva, az SD kártyád nem megfelelően formázott vagy partícionált. P
 {% capture compat %}
 <summary><u>A System Settings a végtelenségig tölt az SD kártya visszahelyezését követően</u></summary>
 
-Vagy eltértél az MSET9 lépésektől, vagy rossz modelt vagy verziót választottál.
+You most likely did something different from the MSET9 instructions, selected the wrong model/version, or your SD card needs to be formatted. Ensure you are choosing the correct [model](/images/3dsmodels.png) and firmware version when opening the script.
 
-1. Zárd be a szkript ablakát
-1. Futtasd az `mset9.py` szkriptet az SD kártya gyökerén
-    + **Windows**: Dupla kattintás az `mset9.bat`-on
-    + **Linux**: nyiss meg egy Terminal ablakot, majd `cd`-z az SD kártyád gyökerébe, és írd be, a `python3 mset9.py` parancsot és nyomj Enter-t
-    + Látnod kell egy ablakot, ami ezt mondja "MSET9 ... SETUP by zoogie"
+Follow these instructions to remove the trigger file and to retry Section II:
+
+1. Force power off your console by holding the Power button for 20 seconds
+1. Helyezd az SD kártyád a számítógépbe
+1. 1. Futtasd az MSET9 szkriptet:
+    {{ mset9-chorus }}
 1. Írd be a konzolod modelljéhez és verziójához tartozó számot, és nyomj Enter-t
-1. Írj `3`-at és nyomj Enter-t
-1. Amikor az ablak azt mondja, hogy "Successfully removed MSET9!", helyezd vissza az SD kártyádat a konzolodba
+    + The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
+    + If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you are ready to retry Section II
+1. Type `4`, then press Enter
+1. Once the window says "Removed trigger file", type `0` and then press Enter
+1. Reinsert the SD card into your console
 1. Kapcsold be a konzolod
 1. Térj vissza az [II. rész 1. lépéséhez](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
-Ha továbbra is megmarad ez a hiba és biztos vagy benne, hogy mindent jól csináltál, előfordulhat, hogy probléma van a konzolod Mii Maker extdata-jával. Kövesd az alábbi lépéseket a helyreállításához:
+If you continue to have this issue and are sure that you did everything correctly, ensure the trigger file is removed and format your SD card:
 
-1. Zárd be a szkript ablakát
-1. Futtasd az MSET9 szkriptet
-    + **Windows**: Dupla kattintás az `mset9.bat`-on
-    + **Linux**: nyiss meg egy Terminal ablakot, majd `cd`-z az SD kártyád gyökerébe, és írd be, a `python3 mset9.py` parancsot és nyomj Enter-t
-    + Látnod kell egy ablakot, ami ezt mondja "MSET9 ... SETUP by zoogie"
-1. Írd be a konzolod modelljéhez és verziójához tartozó számot, és nyomj Enter-t
-1. Írj `3`-at és nyomj Enter-t az MSET9 eltávolításához
-1. Ha lehetséges használj új SD kártyát; egyébként, mentsd és for, ázd újra a meglévő SD kártyád FAT 32-re ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
-1. Helyezd a formázott, üres SD kártyád a konzolodba
-1. Térj vissza az [I. rész 1. lépéséhez](installing-boot9strap-(mset9-cli)#section-i---prep-work)
-
-Az MSET9 oldal befejezése után érdemes visszaváltanod a régi SD kártyádra, mielőtt folytatnád a Telepítés véglegesítését.
-{: .notice--warning}
+1. Copy everything off the SD Card to your PC
+1. Format the SD Card ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
+1. Copy everything back
+1. Start again from from [Section II Step 1](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>Kivétel történt (exception occured) az MSET9 kiváltását követően</u></summary>
+<summary><u>An exception occurred after triggering MSET9</u></summary>
 
 Ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvégezned a [CFW ellenőrzését](checking-for-cfw).
 
