@@ -148,7 +148,7 @@ Ha ez nem működik, az SD kártyád formázni kell:
 1. Másolj mindent az SD kártyádról a PC-dre
 1. Formázd az SD kártyád ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)))
 1. Másolj mindent vissza
-1. Start again from [Section I Step 8](installing-boot9strap-(mset9-cli)#section-i---prep-work).
+1. Kezd újra az [I. rész 8. lépésével](installing-boot9strap-(mset9-cli)#section-i---prep-work).
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -156,13 +156,13 @@ Ha ez nem működik, az SD kártyád formázni kell:
 {% capture compat %}
 <summary><u>Title database: Not initialized!</u></summary>
 
-Ensure that you have reset the title database.
-    + Please power on your console with your SD inserted 
-    + Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
-        + This will not wipe any of your data
-    + If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-(mset9-cli)#section-i---prep-work)
+Biztosítsd, hogy a cím adatbázisod resetelve legyen:
+    + Kérjük kapcsold be a konzolod, miközben az SD kártya be van helyezve 
+    + Idítsd el a System Settings-et és naviálg ide: `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
+        + Ez nem fogja törölni az adataidat
+    + Ha reset prompt-ot kapsz reset után, kapcsold ki a konzolod, majd kezd újra az [I. rész 14. lépésétől](installing-boot9strap-(mset9-cli)#section-i---prep-work)
 
-If you do *not* getting a reset prompt, your SD card needs to be formatted:
+Ha nem kapsz reset promptot, az SD kártyádat formázni kell:
 
 1. Másolj mindent az SD kártyádról a PC-dre
 1. Formázd az SD kártyád ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)))
@@ -170,10 +170,10 @@ If you do *not* getting a reset prompt, your SD card needs to be formatted:
 1. Futtasd az MSET9 szkriptet:
     {{ mset9-chorus }}
 1. Írd be a konzolod modelljéhez és verziójához tartozó számot, és nyomj Enter-t
-1. Type `2` then press enter to check the MSET9 status
-    + This will create the dummy databases again
-1. Close the MSET9 script window
-1. Start again from [Section I Step 12](installing-boot9strap-(mset9-cli)#section-i---prep-work).
+1. Írj `2`-öt és nyomj Enter-t az MSET9 állapotának ellenőrzéséhez
+    + Ez létre fogja hozni a dummy adatbázisokat újra
+1. Zárd be az MSET9 szkript ablakát
+1. Kezd újra az [I. rész 12. lépésével](installing-boot9strap-(mset9-cli)#section-i---prep-work).
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -225,7 +225,7 @@ Több ID0 mappád van. Ahhoz, hogy meghatározd melyik a helyes mappa, a követk
 1. Mozgasd a valódi ID0 mappát a `BACKUP_Nintendo 3DS` mappából a `Nintendo 3DS` mappába
 1. Ha létezik, mozgasd a `Private` mappát a `BACKUP_Nintendo 3DS` mappából a `Nintendo 3DS` mappába
 
-Once you've done this, continue from [Section I Step 3](installing-boot9strap-(mset9-cli)#section-i---prep-work).
+Ha ez kész, folytasd az [I. rész 3. lépésével](installing-boot9strap-(mset9-cli)#section-i---prep-work).
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -251,7 +251,7 @@ Az útmutató végére, 1,3 GB szükséges a NAND mentés elkészítéséhez, í
 {% capture compat %}
 <summary><u>Error 07: One or more files are missing or malformed!</u></summary>
 
-Egy vagy több fájl, amire az MSET9-nek szüksége van a futáshoz, hiányzik vagy sérült. Re-download the [MSET9 Release `.zip`](https://github.com/hacks-guide/MSET9/releases/latest) and extract it to the root of your SD card, replacing all existing files, then try again.
+Egy vagy több fájl, amire az MSET9-nek szüksége van a futáshoz, hiányzik vagy sérült. Töltsd le újra az [MSET9 Release `.zip`](https://github.com/hacks-guide/MSET9/releases/latest) fájlt, csomagold ki az SD kártyád gyökerébe, felülírva a létező fájlokat, majd próbáld újra.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -267,27 +267,27 @@ Egy vagy több fájl, amire az MSET9-nek szüksége van a futáshoz, hiányzik v
 {% capture compat %}
 <summary><u>Piros képernyő az SD kártya visszaillesztése után (II. rész 11. lépés)</u></summary>
 
-Valószínüleg hiányzik a `SafeB9S.bin` az SD kártyád gyökeréből vagy sérült. Copy it from the MSET9 `.zip`, replacing any existing files then follow these instructions to remove the trigger file:
+Valószínüleg hiányzik a `SafeB9S.bin` az SD kártyád gyökeréből vagy sérült. Másold ki az MSET9 `.zip` fájlból felülírva a létező fájlokat, majd kövesd ezeket a lépésket a trigger fájl eltávolításához:
 
-1. Force power off your console by holding the Power button for 20 seconds
+1. Kapcsold ki erőltetve a konzold a Power gomb 20 másodpercig nyomva tartásával
 1. Helyezd az SD kártyád a számítógépbe
 1. Futtasd az MSET9 szkriptet:
     {{ mset9-chorus }}
 1. Írd be a konzolod modelljéhez és verziójához tartozó számot, és nyomj Enter-t
-    + The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
-    + If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you may [retry Section II](installing-boot9strap-(mset9-cli)#section-ii---mset9)
-1. Type `4`, then press Enter
-1. Once the window says "Removed trigger file", type `0` and then press Enter
-1. Reinsert the SD card into your console
+    + Az aktuális állapot [Injected](/images/screenshots/mset9/mset9-injected.png)-et kell mutasson
+    + IfHa már eltávolítottad a trigger fájlt (vagy soha nem injektáltad), az aktuális állapot [Ready](/images/screenshots/mset9/mset9-ready.png)-t fog mutatni és megpróbálhatod [újracsinálni a II. részt](installing-boot9strap-(mset9-cli)#section-ii---mset9)
+1. Írj `4`-et és nyomj Enter-t
+1. Amikor az ablak azt mondja, hogy Removed trigger file", írj `0`-t majd nyomj Entert
+1. Tedd vissza az SD kártyát a konzoldba
 1. Kapcsold be a konzolod
 1. Térj vissza az [II. rész 1. lépéséhez](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
-Alternatíva, az SD kártyád nem megfelelően formázott vagy partícionált. After removing the trigger file, format it:
+Alternatíva, az SD kártyád nem megfelelően formázott vagy partícionált. A trigger fájl eltávolítását követően formázd:
 
 1. Másolj mindent az SD kártyádról a PC-dre
 1. Formázd az SD kártyád ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)))
 1. Másolj mindent vissza
-1. Start again from from [Section II Step 1](installing-boot9strap-(mset9-cli)#section-ii---mset9)
+1. Kezd újra az [II. rész 1. lépésével](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -295,35 +295,35 @@ Alternatíva, az SD kártyád nem megfelelően formázott vagy partícionált. A
 {% capture compat %}
 <summary><u>A System Settings a végtelenségig tölt az SD kártya visszahelyezését követően</u></summary>
 
-You most likely did something different from the MSET9 instructions, selected the wrong model/version, or your SD card needs to be formatted. Ensure you are choosing the correct [model](/images/3dsmodels.png) and firmware version when opening the script.
+Vagy eltértél az MSET9 lépésektől, vagy rossz modelt/verziót választottál vagy az SD kártyád formázni kell. Biztosítsd, hogy jó [modellt](/images/3dsmodels.png) és firmware verziót válassz a szkript megnyitásakor.
 
-Follow these instructions to remove the trigger file and to retry Section II:
+Kövesd a következő lépéseket a trigger fájl ettávolításához, majd próbáld újra a II. részt:
 
-1. Force power off your console by holding the Power button for 20 seconds
+1. Kapcsold ki erőltetve a konzold a Power gomb 20 másodpercig nyomva tartásával
 1. Helyezd az SD kártyád a számítógépbe
 1. 1. Futtasd az MSET9 szkriptet:
     {{ mset9-chorus }}
 1. Írd be a konzolod modelljéhez és verziójához tartozó számot, és nyomj Enter-t
-    + The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
-    + If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you are ready to retry Section II
-1. Type `4`, then press Enter
-1. Once the window says "Removed trigger file", type `0` and then press Enter
-1. Reinsert the SD card into your console
+    + Az aktuális állapot [Injected](/images/screenshots/mset9/mset9-injected.png)-et kell mutasson
+    + IfHa már eltávolítottad a trigger fájlt (vagy soha nem injektáltad), az aktuális állapot [Ready](/images/screenshots/mset9/mset9-ready.png)-t fog mutatni és megpróbálhatod újracsinálni a II. részt
+1. Írj `4`-et és nyomj Enter-t
+1. Amikor az ablak azt mondja, hogy Removed trigger file", írj `0`-t majd nyomj Entert
+1. Tedd vissza az SD kártyát a konzoldba
 1. Kapcsold be a konzolod
 1. Térj vissza az [II. rész 1. lépéséhez](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
-If you continue to have this issue and are sure that you did everything correctly, ensure the trigger file is removed and format your SD card:
+Ha továbbra is megmarad ez a hiba és biztos vagy benne, hogy mindent jól csináltál, akkor biztosítsd, hogy a trigger fájl eltávolításra kerüljön és formázd az SD kártyád:
 
 1. Másolj mindent az SD kártyádról a PC-dre
 1. Formázd az SD kártyád ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)))
 1. Másolj mindent vissza
-1. Start again from from [Section II Step 1](installing-boot9strap-(mset9-cli)#section-ii---mset9)
+1. Kezd újra az [II. rész 1. lépésével](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
-<summary><u>An exception occurred after triggering MSET9</u></summary>
+<summary><u>Kivétel történt (exception occured) az MSET9 kiváltását követően</u></summary>
 
 Ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvégezned a [CFW ellenőrzését](checking-for-cfw).
 
