@@ -156,13 +156,13 @@ Se non funziona, la scheda SD deve essere formattata:
 {% capture compat %}
 <summary><u>Title database: Not initialized!</u></summary>
 
-Ensure that you have reset the title database.
-    + Please power on your console with your SD inserted 
+Assicurati di aver resettato il database dei titoli.
+    + Accendi la console con la scheda SD inserita 
     + Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
-        + This will not wipe any of your data
-    + If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-(mset9-cli)#section-i---prep-work)
+        + Non verranno cancellati i tuoi dati
+    + Se ricevi una conferma di ripristino, al termine spegni e riaccendi la console e ricomincia dalla [Sezione I Passo 14](installing-boot9strap-(mset9-cli)#section-i---prep-work)
 
-If you do *not* getting a reset prompt, your SD card needs to be formatted:
+Se *non* ricevi una conferma di ripristino, la tua scheda SD deve essere formattata:
 
 1. Copia tutto dalla scheda SD sul tuo PC
 1. Formatta la scheda SD ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
@@ -170,10 +170,10 @@ If you do *not* getting a reset prompt, your SD card needs to be formatted:
 1. Esegui lo script di MSET9:
     {{ mset9-chorus }}
 1. Digita il numero corrispondente al modello di console e alla versione, quindi premi Invio
-1. Type `2` then press enter to check the MSET9 status
-    + This will create the dummy databases again
-1. Close the MSET9 script window
-1. Start again from [Section I Step 12](installing-boot9strap-(mset9-cli)#section-i---prep-work).
+1. Digita `2` quindi premi Invio per controllare lo stato di MSET9
+    + Verranno ricreati nuovamente i database fittizi
+1. Chiudi la finestra dello script MSET9
+1. Ricomincia dalla [Sezione I Passo 12](installing-boot9strap-(mset9-cli)#section-i---prep-work).
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -188,12 +188,12 @@ Ricorda, la tua scheda SD dovrebbe assomigliare a questo:
 ![MSET9 root layout](/images/screenshots/mset9/mset9-root-layout.png)
 {: .notice--info}
 
-If your SD card layout is correct, then your SD card most likely isn't being read by your console and needs to be formatted:
+Se il contenuto della scheda SD è corretto, la scheda SD molto probabilmente non sta venendo letta dalla console e deve essere formattata:
 
 1. Copia tutto dalla scheda SD sul tuo PC
 1. Formatta la scheda SD ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
 1. Ricopia tutto nella scheda SD
-1. Start again from the beginning of [Section I](installing-boot9strap-(mset9-cli)#section-i---prep-work)
+1. Ricomincia dall'inizio della [Sezione I](installing-boot9strap-(mset9-cli)#section-i---prep-work)
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -225,7 +225,7 @@ Hai più cartelle ID0. Per determinare la cartella corretta, segui queste istruz
 1. Sposta la vera cartella ID0 dalla cartella `BACKUP_Nintendo 3DS` nella cartella `Nintendo 3DS`
 1. Se esiste, sposta la cartella `Private` dalla cartella `BACKUP_Nintendo 3DS` nella cartella `Nintendo 3DS`
 
-Once you've done this, continue from [Section I Step 3](installing-boot9strap-(mset9-cli)#section-i---prep-work).
+Al termine, continua dalla [Sezione I Passo 3](installing-boot9strap-(mset9-cli)#section-i---prep-work).
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -251,7 +251,7 @@ Al termine di questa guida avrai bisogno di almeno 1.3GB di spazio per fare un b
 {% capture compat %}
 <summary><u>Error 07: One or more files are missing or malformed!</u></summary>
 
-Uno o più file necessari all'esecuzione di MSET9 mancano o sono corrotti. Re-download the [MSET9 Release `.zip`](https://github.com/hacks-guide/MSET9/releases/latest) and extract it to the root of your SD card, replacing all existing files, then try again.
+Uno o più file necessari all'esecuzione di MSET9 mancano o sono corrotti. Ri-scarica il file [Release `.zip` di MSET9](https://github.com/hacks-guide/MSET9/releases/latest) ed estrailo nella directory principale della tua scheda SD, sostituendo tutti i file esistenti, quindi riprova.
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -267,27 +267,27 @@ Uno o più file necessari all'esecuzione di MSET9 mancano o sono corrotti. Re-do
 {% capture compat %}
 <summary><u>Schermata rossa dopo il reinserimento della scheda SD (Sezione II Passo 11)</u></summary>
 
-Potrebbe mancarti il file `SafeB9S.bin` dalla directory principale della tua scheda SD, o il file potrebbe essere danneggiato. Copy it from the MSET9 `.zip`, replacing any existing files then follow these instructions to remove the trigger file:
+Potrebbe mancarti il file `SafeB9S.bin` dalla directory principale della tua scheda SD, o il file potrebbe essere danneggiato. Copialo dal'archivio `.zip` di MSET9, sostituendo qualsiasi file esistente, quindi segui queste istruzioni per rimuovere il file scatenante:
 
-1. Force power off your console by holding the Power button for 20 seconds
+1. Forza lo spegnimento della console tenendo premuto il pulsante d'accensione per 20 secondi
 1. Inserisci la scheda SD nel tuo computer
 1. Esegui lo script di MSET9:
     {{ mset9-chorus }}
 1. Digita il numero corrispondente al modello di console e alla versione, quindi premi Invio
-    + The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
-    + If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you may [retry Section II](installing-boot9strap-(mset9-cli)#section-ii---mset9)
-1. Type `4`, then press Enter
-1. Once the window says "Removed trigger file", type `0` and then press Enter
-1. Reinsert the SD card into your console
+    + Lo stato attuale dovrebbe visualizzare [Injected](/images/screenshots/mset9/mset9-injected.png)
+    + Se hai già rimosso il file scatenante (o non l'hai mai iniettato), lo stato attuale mostrerà [Ready](/images/screenshots/mset9/mset9-ready.png), e puoi [riprovare la Sezione II](installing-boot9strap-(mset9-cli)#section-ii---mset9)
+1. Digita `4`, quindi premi Invio
+1. Una volta che la finestra dice "Removed trigger file", digita `0` quindi premi Invio
+1. Reinserisci la scheda SD nella console
 1. Accendi la tua console
 1. Ritorna alla [Sezione II Passo 1](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
-Altrimenti, la scheda SD potrebbe essere formattata o partizionata in modo errato. After removing the trigger file, format it:
+Altrimenti, la scheda SD potrebbe essere formattata o partizionata in modo errato. Dopo aver rimosso il file scatenante, formattala:
 
 1. Copia tutto dalla scheda SD sul tuo PC
 1. Formatta la scheda SD ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
 1. Ricopia tutto nella scheda SD
-1. Start again from from [Section II Step 1](installing-boot9strap-(mset9-cli)#section-ii---mset9)
+1. Ricomincia dalla [Sezione II Passo 1](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
@@ -295,29 +295,29 @@ Altrimenti, la scheda SD potrebbe essere formattata o partizionata in modo errat
 {% capture compat %}
 <summary><u>Caricamento infinito delle Impostazioni della console dopo il reinserimento della scheda SD</u></summary>
 
-You most likely did something different from the MSET9 instructions, selected the wrong model/version, or your SD card needs to be formatted. Ensure you are choosing the correct [model](/images/3dsmodels.png) and firmware version when opening the script.
+Molto probabilmente hai fatto qualcosa di diverso dalle istruzioni di MSET9, selezionato il modello/versione sbagliata, o la scheda SD deve essere formattata. Assicurati di aver scelto il [modello](/images/3dsmodels.png) e versione del sistema corretti all'apertura dello script.
 
-Follow these instructions to remove the trigger file and to retry Section II:
+Segui queste istruzioni per rimuovere il file scatenante e riprova la Sezione II:
 
-1. Force power off your console by holding the Power button for 20 seconds
+1. Forza lo spegnimento della console tenendo premuto il pulsante d'accensione per 20 secondi
 1. Inserisci la scheda SD nel tuo computer
 1. 1. Esegui lo script di MSET9:
     {{ mset9-chorus }}
 1. Digita il numero corrispondente al modello di console e alla versione, quindi premi Invio
-    + The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
-    + If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you are ready to retry Section II
-1. Type `4`, then press Enter
-1. Once the window says "Removed trigger file", type `0` and then press Enter
-1. Reinsert the SD card into your console
+    + Lo stato attuale dovrebbe visualizzare [Injected](/images/screenshots/mset9/mset9-injected.png)
+    + Se hai già rimosso il file scatenante (o non l'hai mai iniettato), lo stato attuale mostrerà [Ready](/images/screenshots/mset9/mset9-ready.png), e puoi riprovare la Sezione II
+1. Digita `4`, quindi premi Invio
+1. Una volta che la finestra dice "Removed trigger file", digita `0` quindi premi Invio
+1. Reinserisci la scheda SD nella console
 1. Accendi la tua console
 1. Ritorna alla [Sezione II Passo 1](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
-If you continue to have this issue and are sure that you did everything correctly, ensure the trigger file is removed and format your SD card:
+Se continui ad avere questo problema e sei sicuro di avere fatto tutto correttamente, assicurati che il file scatenante sia stato rimosso e formatta la tua scheda SD:
 
 1. Copia tutto dalla scheda SD sul tuo PC
 1. Formatta la scheda SD ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
 1. Ricopia tutto nella scheda SD
-1. Start again from from [Section II Step 1](installing-boot9strap-(mset9-cli)#section-ii---mset9)
+1. Ricomincia dalla [Sezione II Passo 1](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
