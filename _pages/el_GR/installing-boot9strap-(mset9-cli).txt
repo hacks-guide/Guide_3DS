@@ -5,19 +5,19 @@ title: "Installing boot9strap (MSET9 CLI)"
 {% include toc title="Πίνακας περιεχομένων" %}
 
 {% capture technical_info %}
-<summary><em>Technical Details (optional)</em></summary>
+<summary><em>Τεχνικές λεπτομέρειες (προαιρετικό)</em></summary>
 [MSET9](https://github.com/zoogie/MSET9) is an exploit for the System Settings application developed by [zoogie](https://github.com/zoogie). It exploits a flaw where the ID1 (the second 32-character folder name inside of the Nintendo 3DS folder, inside of the ID0) can be *any* name as long as it is 32 characters. Performing a specific sequence of actions results in the console executing the instructions that are encoded into the ID1 folder name, which can be used to grant full control over the 3DS.
 
 {% endcapture %}
 <details>{{ technical_info | markdownify }}</details>
 {: .notice--info}
 
-### Compatibility Notes
+### Σημειώσεις συμβατότητας
 
 This page requires a computer running Windows, Linux, or macOS. If you have an Android phone/tablet or a Chromebook, follow [Installing boot9strap (MSET9 Play Store)](installing-boot9strap-(mset9-play-store)) instead. If you do not have access to any of these devices, you will need to use an [alternate exploit](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits).
 {: .notice--warning}
 
-### What You Need
+### Τι χρειάζεστε
 
 * The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest)
 * Any 3.x version of [Python](https://www.python.org/downloads/) **installed on your computer**
@@ -40,7 +40,7 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 
 1. Run the MSET9 script:
 {% capture mset9-chorus %}
-    + **Windows**: Double-click `MSET9-Windows.bat`
+    + **Windows**: Κάντε διπλό κλικ στο `MSET9-Windows.bat`
     + **macOS**: Double-click `MSET9-macOS.command` and enter your password if prompted
     + **Linux**: open a Terminal window, `cd` to the root of your SD card, then type `python3 mset9.py` and press Enter
 {% endcapture %}
@@ -62,7 +62,7 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 1. If you see the message "Created hacked ID1.", press Enter to close the MSET9 script
     + Your 3DS will appear to have no data / no user-installed apps on HOME Menu. **This is expected.** Your data will come back at a later step
 1. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
-1. Power on your console
+1. Ενεργοποιήστε την κονσόλα σας
 1. Open Mii Maker
 1. Wait for your console to reach the [Welcome to Mii Maker](/images/screenshots/mset9/mii-welcome.png) screen, then exit Mii Maker and return to the HOME Menu
     + You may see [this screen](/images/screenshots/mset9/mii-extdata.png), which indicates the necessary data has been created
@@ -88,7 +88,7 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 1. Type `0`, then press Enter to close the script
 1. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 
-#### Section II - MSET9
+#### Ενότητα II - MSET9
 
 In this section, you will trigger MSET9 to launch SafeB9SInstaller (the custom firmware installer).
 
@@ -113,7 +113,7 @@ These instructions must be followed **EXACTLY**, so double-check EVERYTHING you 
 1. If the exploit was successful, you will have booted into SafeB9SInstaller 
     + If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting#installing-boot9strap-mset9)
 
-#### Section III - Installing boot9strap
+#### Ενότητα II - Εγκατάσταση του boot9strap
 
 {% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
 {%- include_relative include/configure-luma3ds.txt %}
@@ -122,7 +122,7 @@ These instructions must be followed **EXACTLY**, so double-check EVERYTHING you 
 
 In this section, you will remove MSET9 to prevent further issues and to restore your user data (games, themes, etc). (This will not remove the custom firmware that you have just installed.)
 
-Do NOT skip this section! If you skip it, applications may crash unexpectedly and you will encounter errors on the next page!
+ΜΗΝ παραλείψετε αυτήν την ενότητα! If you skip it, applications may crash unexpectedly and you will encounter errors on the next page!
 {: .notice--danger}
 
 1. Απενεργοποιήστε την κονσόλα σας
@@ -141,7 +141,7 @@ Do NOT skip this section! If you skip it, applications may crash unexpectedly an
 {% include_relative include/luma3ds-installed-note.txt %}
 ___
 
-Did you follow Section IV (Removing MSET9)? That section is MANDATORY!
+Did you follow Section IV (Removing MSET9)? Η ενότητα αυτή είναι ΥΠΟΧΡΕΩΤΙΚΗ!
 {: .notice--danger}
 
 ### Continue to [Finalizing Setup](finalizing-setup)
