@@ -1,33 +1,33 @@
 ---
-title: "Troubleshooting"
+title: "Επίλυση προβλημάτων"
 ---
 
-This page offers troubleshooting advice for commonly encountered issues. If you are unable to solve your issue with the advice on this page, please join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and describe your issue, including what you have already tried.
+Αυτή η σελίδα παρέχει συμβουλές για την επίλυση κοινών προβλημάτων. If you are unable to solve your issue with the advice on this page, please join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and describe your issue, including what you have already tried.
 
 {% capture compat %}
-<summary>Table of Contents</summary>
+<summary>Πίνακας περιεχομένων</summary>
 
 Used on multiple pages:
 * [SafeB9SInstaller](#issues-with-safeb9sinstaller)
 
-Guide pages:
+Σελίδες οδηγού:
 * [Installing boot9strap (Soundhax)](#installing-boot9strap-soundhax)
 * [Installing boot9strap (MSET9)](#installing-boot9strap-mset9)
 * [Installing boot9strap (SSLoth-Browser)](#installing-boot9strap-ssloth-browser)
 * [Installing boot9strap (super-skaterhax)](#installing-boot9strap-super-skaterhax)
-* [Finalizing Setup](#finalizing-setup)
+* [Ολοκλήρωση εγκατάστασης](#finalizing-setup)
 
-Issues after installation:
-* [Boot issues](#boot-issues-on-consoles-with-custom-firmware)
-* [Software issues](#software-issues-on-consoles-with-custom-firmware)
+Ζητήματα μετά την εγκατάσταση:
+* [Ζητήματα εκκίνησης](#boot-issues-on-consoles-with-custom-firmware)
+* [Ζητήματα λογισμικού](#software-issues-on-consoles-with-custom-firmware)
 
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 {: .notice--info}
 
-## Issues with SafeB9SInstaller
+## Ζητήματα με το SafeB9SInstaller
 
-### Before opening SafeB9SInstaller
+### Πριν από το άνοιγμα του SafeB9SInstaller
 
 {% capture compat %}
 <summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
@@ -212,12 +212,12 @@ Write-protection is enabled on this SD card. If you are using a full-size SD car
 You have multiple ID0 folders. To determine the correct folder, follow these instructions:
 
 1. Rename the `Nintendo 3DS` folder to `BACKUP_Nintendo 3DS`
-1. Reinsert your SD card into your console
+1. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 1. Power on your console
 1. Wait for the console to generate the SD card data
     + Your applications will have disappeared. This is normal and will be resolved shortly
-1. Power off your console
-1. Εισάγετε την κάρτα SD στον υπολογιστή σας
+1. Απενεργοποιήστε την κονσόλα σας
+1. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
 1. Navigate to the `Nintendo 3DS` folder on your SD card
 1. Write down the first few characters of the folder you see
     + This is your true ID0, which we will keep in the real Nintendo 3DS folder
@@ -270,7 +270,7 @@ One or more files that MSET9 needs to run is missing or corrupted. Re-download t
 You may be missing `SafeB9S.bin` from the root of your SD card, or the file may be corrupted. Copy it from the MSET9 `.zip`, replacing any existing files then follow these instructions to remove the trigger file:
 
 1. Force power off your console by holding the Power button for 20 seconds
-1. Εισάγετε την κάρτα SD στον υπολογιστή σας
+1. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
 1. Run the MSET9 script:
     {{ mset9-chorus }}
 1. Type the number corresponding to your console model and version, then press Enter
@@ -300,7 +300,7 @@ You most likely did something different from the MSET9 instructions, selected th
 Follow these instructions to remove the trigger file and to retry Section II:
 
 1. Force power off your console by holding the Power button for 20 seconds
-1. Εισάγετε την κάρτα SD στον υπολογιστή σας
+1. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
 1. 1. Run the MSET9 script:
     {{ mset9-chorus }}
 1. Type the number corresponding to your console model and version, then press Enter
@@ -529,12 +529,12 @@ You said 'No' to the "Make essential files backup?" prompt in GodMode9. Power of
 
 You need at least 1.3GB of free space to perform the NAND backup, which is a part of the script. If you don't have enough space, follow these steps:
 
-1. Power off your console
-1. Εισάγετε την κάρτα SD στον υπολογιστή σας
+1. Απενεργοποιήστε την κονσόλα σας
+1. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
 1. Copy the `Nintendo 3DS` folder from the root of your SD card to your computer
 1. Delete the Nintendo 3DS folder from the SD card
-1. Reinsert your SD card into your console
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+1. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
+1. Press and hold (Start), and while holding (Start), power on your console. Αυτή η ενέργεια θα εκκινήσει το GodMode9
 1. Press the (Home) button
 1. Select "Scripts..."
 1. Select "finalize"
@@ -542,7 +542,7 @@ You need at least 1.3GB of free space to perform the NAND backup, which is a par
     + This may take around fifteen minutes
 1. Press (A) again
     + The console should automatically power off
-1. Εισάγετε την κάρτα SD στον υπολογιστή σας
+1. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
 1. Copy the files in `/gm9/backups/` on your SD to a safe location on your computer
 1. Delete the `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` files from the SD card
 1. Copy the `Nintendo 3DS` folder from your computer to the root of your SD card
@@ -550,11 +550,11 @@ You need at least 1.3GB of free space to perform the NAND backup, which is a par
 
 Now that you have your NAND backup in a safe place:
 
-1. Reinsert your SD card into your console
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+1. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
+1. Press and hold (Start), and while holding (Start), power on your console. Αυτή η ενέργεια θα εκκινήσει το GodMode9
 1. Press the (Home) button
-1. Select "Scripts..."
-1. Select "finalize"
+1. Επιλέξτε «Scripts...»
+1. Επιλέξτε «finalize»
 1. Continue the script as normal
     + The NAND backup will be automatically skipped
 
@@ -573,12 +573,12 @@ Press (A) to import a title database, unlock SysNAND writing by entering the but
 <summary><u>Error #06 or "Error: Could not open directory" when attempting a NAND backup</u></summary>
 
 Make sure you have at least 1.3GB available in your SD card. If you don't have enough space, follow these steps:
-1. Power off your console
-1. Εισάγετε την κάρτα SD στον υπολογιστή σας
+1. Απενεργοποιήστε την κονσόλα σας
+1. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
 1. Copy the `Nintendo 3DS` folder from the root of your SD card to your computer
 1. Delete the Nintendo 3DS folder from the SD card
-1. Reinsert your SD card into your console
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+1. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
+1. Press and hold (Start), and while holding (Start), power on your console. Αυτή η ενέργεια θα εκκινήσει το GodMode9
 1. Perform a [NAND Backup](godmode9-usage#creating-a-nand-backup)
 1. Copy the files in `gm9/out` on your SD to a safe location on your computer
 1. Delete the `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` files from the SD card, keeping essential.exefs in `/gm9/out/`
@@ -608,8 +608,8 @@ The script has detected that the Nintendo 3DS folder is missing AND that you hav
 1. Delete `/gm9/backups/` from your SD card
 1. If you moved your Nintendo 3DS folder off of your SD card to get to this point, copy it back to your SD card
     + If you do not have a Nintendo 3DS folder, boot into the HOME Menu at least once with the SD card inserted to automatically generate it
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-1. Press (Home) to bring up the action menu
+1. Press and hold (Start), and while holding (Start), power on your console. Αυτή η ενέργεια θα εκκινήσει το GodMode9
+1. Πατήστε το (Home) για να εμφανίσετε το μενού ενεργειών
 1. Select "Scripts..."
 1. Select "finalize"
 1. Follow the prompts in the script, answering any questions that you are asked 
@@ -738,10 +738,10 @@ Please take a photo of the error and join [Nintendo Homebrew on Discord](https:/
 <summary><u>DSi / DS functionality is broken or has been replaced with Flipnote Studio</u></summary>
 
 1. Download the latest release of [TWLFix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest) (the `.3dsx` file)
-1. Power off your console
+1. Απενεργοποιήστε την κονσόλα σας
 1. Create a folder named `3ds` on the root of your SD card if it does not already exist
 1. Copy `TWLFix-CFW.3dsx` to the `/3ds/` folder on your SD card
-1. Reinsert your SD card into your console
+1. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 1. Open the Homebrew Launcher
 1. Launch TWLFix-CFW from the list of homebrew
 1. Press (A) to uninstall the broken TWL titles
@@ -788,31 +788,31 @@ Your console likely still has menuhax67 installed. To uninstall menuhax67, downl
 {% capture compat %}
 <summary><u>Clear HOME Menu extdata</u></summary>
 
-1. Power off your console
-1. Εισάγετε την κάρτα SD στον υπολογιστή σας
+1. Απενεργοποιήστε την κονσόλα σας
+1. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
 1. Navigate to the `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` folder on your SD card
 1. Delete the corresponding folder for your 3DS region:
-    + **EUR Region**: `00000098`
-    + **JPN Region**: `00000082`
-    + **USA Region**: `0000008f`
-    + **CHN Region**: `000000A1`
-    + **KOR Region**: `000000A9`
-    + **TWN Region**: `000000B1`
-1. Reinsert your SD card into your console
+    + **Περιοχή EUR**: `00000098`
+    + **Περιοχή JPN**: `00000082`
+    + **Περιοχή USA**: `0000008f`
+    + **Περιοχή CHN**: `000000A1`
+    + **Περιοχή KOR**: `000000A9`
+    + **Περιοχή TWN**: `000000B1`
+1. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
 <summary><u>Clear HOME Menu theme data</u></summary>
 
-1. Power off your console
-1. Εισάγετε την κάρτα SD στον υπολογιστή σας
+1. Απενεργοποιήστε την κονσόλα σας
+1. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
 1. Navigate to the `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` folder on your SD card
 1. Delete the corresponding folder for your 3DS region:
     + **EUR Region**: `000002ce`
     + **JPN Region**: `000002cc`
     + **USA Region**: `000002cd`
-1. Reinsert your SD card into your console
+1. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
