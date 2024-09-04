@@ -14,7 +14,7 @@ title: "Διαμόρφωση της SD (Linux)"
 
 ### Οδηγίες
 
-1. Make sure your SD card is **not** inserted
+1. Βεβαιωθείτε ότι η κάρτα SD σας **δεν** έχει εισαχθεί
 1. Εκκινήστε το τερματικό του Linux
 1. Πληκτρολογήστε `watch "lsblk"`
 1. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
@@ -26,7 +26,7 @@ mmcblk0     179:0    0   3,8G  0 disk
 ```
 1. Σημειώστε το όνομα συσκευής. Στο παραπάνω παράδειγμα, ήταν `mmcblk0p1`
     + Εάν το `RO` έχει οριστεί σε 1, βεβαιωθείτε ότι ο διακόπτης κλειδώματος δεν έχει μετακινηθεί προς τα κάτω
-1. Hit CTRL + C to exit the menu
+1. Πατήστε CTRL + C για να κλείσετε το μενού
 1. Πληκτρολογήστε τα εξής για την κάρτα SD σας:
     + 2GB or lower: `sudo mkfs.fat /dev/(device name from above) -s 64 -F 16`
         + This creates a single FAT16 partition with 32 KB cluster size on the SD card
