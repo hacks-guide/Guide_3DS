@@ -6,7 +6,7 @@ title: "Εγκατάσταση του boot9strap (MSET9 CLI)"
 
 {% capture technical_info %}
 <summary><em>Τεχνικές λεπτομέρειες (προαιρετικό)</em></summary>
-Το [MSET9](https://github.com/zoogie/MSET9) είναι ένα exploit για την εφαρμογή «System Settings», το οποίο αναπτύσσεται από τον [zoogie](https://github.com/zoogie). It exploits a flaw where the ID1 (the second 32-character folder name inside of the Nintendo 3DS folder, inside of the ID0) can be *any* name as long as it is 32 characters. Performing a specific sequence of actions results in the console executing the instructions that are encoded into the ID1 folder name, which can be used to grant full control over the 3DS.
+Το [MSET9](https://github.com/zoogie/MSET9) είναι ένα exploit για την εφαρμογή «System Settings», το οποίο αναπτύσσεται από τον [zoogie](https://github.com/zoogie). Εκμεταλλεύεται ένα ελάττωμα όπου το ID1 (το όνομα του δεύτερου φακέλου, που αποτελείται από 32 χαρακτήρες, μέσα στον φάκελο «Nintendo 3DS», εντός του ID0) μπορεί να είναι *οποιοδήποτε* όνομα εφόσον είναι 32 χαρακτήρες. Η εκτέλεση μιας συγκεκριμένης ακολουθίας ενεργειών έχει ως αποτέλεσμα την εκτέλεση των οδηγιών από την κονσόλα, οι οποίες κωδικοποιούνται στο όνομα του φακέλου ID1, πράγμα που μπορεί να χρησιμοποιηθεί για την παροχή πλήρους ελέγχου επί του 3DS.
 
 {% endcapture %}
 <details>{{ technical_info | markdownify }}</details>
@@ -14,26 +14,26 @@ title: "Εγκατάσταση του boot9strap (MSET9 CLI)"
 
 ### Σημειώσεις συμβατότητας
 
-This page requires a computer running Windows, Linux, or macOS. If you have an Android phone/tablet or a Chromebook, follow [Installing boot9strap (MSET9 Play Store)](installing-boot9strap-(mset9-play-store)) instead. Εάν δεν έχετε πρόσβαση σε καμία από αυτές τις συσκευές, θα πρέπει να χρησιμοποιήσετε ένα [εναλλακτικό exploit](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits).
+Αυτή η σελίδα απαιτεί έναν υπολογιστή με Windows, Linux ή macOS. Εάν διαθέτετε ένα τηλέφωνο ή tablet με Android ή ένα Chromebook, ακολουθήστε τις οδηγίες της ενότητας [Εγκατάσταση του boot9strap (MSET9 Play Store)](installing-boot9strap-(mset9-play-store)). Εάν δεν έχετε πρόσβαση σε καμία από αυτές τις συσκευές, θα πρέπει να χρησιμοποιήσετε ένα [εναλλακτικό exploit](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits).
 {: .notice--warning}
 
 ### Τι χρειάζεστε
 
 * Την πιο πρόσφατη έκδοση του [MSET9](https://github.com/hacks-guide/MSET9/releases/latest)
 * Οποιαδήποτε έκδοση 3.x της [Python](https://www.python.org/downloads/), **εγκατεστημένη στον υπολογιστή σας**
-    + Εάν χρησιμοποιείτε Linux ή macOS, ενδέχεται να διαθέτετε ήδη την Python 3. Check by opening a Terminal window and entering `python3 -V`. If this returns a version number, it will work for this guide.
+    + Εάν χρησιμοποιείτε Linux ή macOS, ενδέχεται να διαθέτετε ήδη την Python 3. Για να το διαπιστώσετε, ανοίξτε ένα παράθυρο τερματικού και πληκτρολογήστε `python3 -V`. Εάν η εντολή επιστρέψει έναν αριθμό έκδοσης, τότε μπορείτε να ακολουθήσετε αυτόν τον οδηγό.
 
 ### Οδηγίες
 
-On this page, you will use the MSET9 script, which is used to trigger MSET9. While the script is in progress, user data will temporarily disappear but will return upon the completion of this page. If you get an error when running the script, the solution to that error can most likely be found on the [troubleshooting](troubleshooting#installing-boot9strap-mset9) page.
+Σε αυτήν τη σελίδα, θα χρησιμοποιήσετε το script «MSET9», το οποίο χρησιμοποιείται για την ενεργοποίηση του MSET9. Όσο η εκτέλεση του script είναι σε εξέλιξη, τα δεδομένα του χρήστη θα εξαφανιστούν προσωρινά, αλλά θα επιστρέψουν μετά την ολοκλήρωση των βημάτων αυτής της σελίδας. Εάν λάβετε κάποιο σφάλμα κατά την εκτέλεση του script, η λύση σε αυτό θα βρίσκεται πιθανότατα στη σελίδα [επίλυσης προβλημάτων](troubleshooting#installing-boot9strap-mset9).
 {: .notice--info}
 
 #### Ενότητα I - Προετοιμασία
 
-In this section, you will prepare the MSET9 exploit by **temporarily** creating a new HOME Menu profile with no user data, and then setting up that profile with only the minimum data required for MSET9 to trigger. Your existing user data will disappear, but will come back when you are finished with this page.
+Σε αυτήν την ενότητα, θα προετοιμάσετε το exploit «MSET9» δημιουργώντας **προσωρινά** ένα νέο προφίλ για το μενού «HOME» χωρίς δεδομένα χρήστη. Στη συνέχεια, θα διαμορφώσετε αυτό το προφίλ μόνο με τα ελάχιστα δεδομένα που απαιτούνται για την ενεργοποίηση του MSET9. Τα υπάρχοντα δεδομένα χρήστη θα εξαφανιστούν, αλλά θα επανέλθουν όταν τελειώσετε με τις οδηγίες αυτής της σελίδας.
 
 1. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
-1. Copy everything from the MSET9 `.zip` to the root of your SD card, overwriting any existing files
+1. Αντιγράψτε τα πάντα από το αρχείο `.zip` του MSET9 στη ρίζα της κάρτας SD σας, αντικαθιστώντας τυχόν υπάρχοντα αρχεία
 
     ![MSET9 root layout](/images/screenshots/mset9/mset9-root-layout.png)
     {: .notice--info}
@@ -41,8 +41,8 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 1. Εκτελέστε το script «MSET9»:
 {% capture mset9-chorus %}
     + **Windows**: Κάντε διπλό κλικ στο `MSET9-Windows.bat`
-    + **macOS**: Double-click `MSET9-macOS.command` and enter your password if prompted
-    + **Linux**: open a Terminal window, `cd` to the root of your SD card, then type `python3 mset9.py` and press Enter
+    + **macOS**: Κάντε διπλό κλικ στο `MSET9-macOS.command` και εισαγάγετε τον κωδικό πρόσβασής σας εάν σας ζητηθεί
+    + **Linux**: Ανοίξτε ένα παράθυρο τερματικού και μεταβείτε μέσω της εντολής `cd` στη ρίζα της κάρτας SD σας. Στη συνέχεια, πληκτρολογήστε `python3 mset9.py` και πατήστε το Enter
 {% endcapture %}
     {{ mset9-chorus }}
 
@@ -50,39 +50,39 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
     {: .notice--info}
 
 1. Πληκτρολογήστε τον αριθμό που αντιστοιχεί στο μοντέλο και την έκδοση της κονσόλας σας και πατήστε το Enter
-    + The window should change to this:
+    + Το παράθυρο θα πρέπει να αλλάξει σε αυτό:
 
     ![Image: MSET9 setup](/images/screenshots/mset9/mset9-setup-notcreated.png)
     {: .notice--info}
 
-    + Ensure that the correct console model and version is displayed
-1. Type `1`, then press Enter to begin the process of creating the MSET9 ID1
-1. After reviewing the disclaimer, type `1` again and press Enter to accept it
-    + If you get an error, check the [troubleshooting](troubleshooting#installing-boot9strap-mset9), then try again
-1. If you see the message "Created hacked ID1.", press Enter to close the MSET9 script
-    + Your 3DS will appear to have no data / no user-installed apps on HOME Menu. **This is expected.** Your data will come back at a later step
+    + Βεβαιωθείτε ότι εμφανίζεται το σωστό μοντέλο κονσόλας και η σωστή έκδοση
+1. Πληκτρολογήστε `1` και πατήστε το Enter για να ξεκινήσει η διαδικασία δημιουργίας του ID1 του MSET9
+1. Αφού διαβάσετε το μήνυμα αποποίησης ευθυνών, πληκτρολογήστε ξανά `1` και πατήστε το Enter για να το αποδεχτείτε
+    + Εάν λάβετε κάποιο σφάλμα, ελέγξτε τη σελίδα [επίλυσης προβλημάτων](troubleshooting#installing-boot9strap-mset9) και δοκιμάστε ξανά
+1. Εάν δείτε το μήνυμα «Created hacked ID1.», πατήστε το Enter για να κλείσετε το script «MSET9»
+    + Το 3DS σας θα φαίνεται σαν να μη διαθέτει καμία εγκατεστημένη εφαρμογή από τον χρήστη στο μενού «HOME». **Αυτό είναι αναμενόμενο.** Τα δεδομένα σας θα επιστρέψουν σε ένα μεταγενέστερο βήμα
 1. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 1. Ενεργοποιήστε την κονσόλα σας
 1. Ανοίξτε το Mii Maker
-1. Wait for your console to reach the [Welcome to Mii Maker](/images/screenshots/mset9/mii-welcome.png) screen, then exit Mii Maker and return to the HOME Menu
+1. Περιμένετε μέχρι η κονσόλα σας να φτάσει στην οθόνη [Welcome to Mii Maker](/images/screenshots/mset9/mii-welcome.png) και έπειτα, κλείστε το Mii Maker και επιστρέψτε στο μενού «HOME»
     + Ενδέχεται να δείτε [αυτήν την οθόνη](/images/screenshots/mset9/mii-extdata.png), η οποία υποδεικνύει ότι έχουν δημιουργηθεί τα απαραίτητα δεδομένα
-    + If you just reach the [normal](/images/screenshots/mset9/mii-existing.png) Mii Maker screen, then the data already exists. Exit Mii Maker and return to the HOME Menu
-1. Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
+    + Εάν οδηγηθείτε απλώς στην [κανονική](/images/screenshots/mset9/mii-existing.png) οθόνη του Mii Maker, τότε τα δεδομένα υπάρχουν ήδη. Κλείστε το Mii Maker και επιστρέψτε στο μενού «HOME»
+1. Εκκινήστε την εφαρμογή «System Settings» και μεταβείτε στο `Data Management` -> `Nintendo 3DS` -> `Software` -> «Reset» ([εικόνα](/images/screenshots/database-reset.jpg))
     + Αυτή η ενέργεια δεν θα διαγράψει τα δεδομένα σας
-1. Power off your console by pressing the power button then tapping Power Off on the lower screen
+1. Απενεργοποιήστε την κονσόλα σας πατώντας το κουμπί ισχύος και επιλέγοντας «Power Off» στην κάτω οθόνη
 1. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
 1. Εκτελέστε το script «MSET9»:
 
     {{ mset9-chorus }}
 
 1. Πληκτρολογήστε τον αριθμό που αντιστοιχεί στο μοντέλο και την έκδοση της κονσόλας σας και πατήστε το Enter
-    + The window should change to this and display `Ready`:
+    + Το παράθυρο θα πρέπει να αλλάξει στο εξής και να εμφανίσει την ένδειξη `Ready`:
 
     ![Image: MSET9 setup](/images/screenshots/mset9/mset9-ready.png)
     {: .notice--info}
 
-    + If the window says [Not ready - check MSET9 status for more details](/images/screenshots/mset9/mset9-not-ready.png):
-        + Type `2`, then press Enter to check the MSET9 status and follow the directions indicated
+    + Εάν το παράθυρο δηλώνει [Not ready - check MSET9 status for more details](/images/screenshots/mset9/mset9-not-ready.png):
+        + Πληκτρολογήστε `2` και πατήστε το Enter για να ελέγξετε την κατάσταση του MSET9 και ακολουθήστε τις οδηγίες
         + Μόλις επιλύσετε το ζήτημα, επιστρέψτε στο Βήμα 14 της Ενότητας Ι
         + Για περισσότερες πληροφορίες, ελέγξτε τη σελίδα [επίλυσης προβλημάτων](troubleshooting#installing-boot9strap-mset9)
 1. Πληκτρολογήστε `0` και πατήστε το Enter για να κλείσετε το script
@@ -90,28 +90,28 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 
 #### Ενότητα II - MSET9
 
-In this section, you will trigger MSET9 to launch SafeB9SInstaller (the custom firmware installer).
+Σε αυτήν την ενότητα, θα ενεργοποιήσετε το MSET9 για να εκκινηθεί το SafeB9SInstaller (το πρόγραμμα εγκατάστασης του custom firmware).
 
-These instructions must be followed **EXACTLY**, so double-check EVERYTHING you are doing to avoid errors!
+Θα πρέπει να ακολουθήσετε αυτές τις οδηγίες **ΚΑΤΑ ΓΡΑΜΜΑ**, οπότε ελέγξτε ξανά προσεκτικά ΟΛΑ όσα κάνετε για να αποφύγετε τυχόν σφάλματα!
 {: .notice--danger}
 
-1. Power on your console, ensuring System Settings is selected
-    + If System Settings is not selected, **[hover over](/images/screenshots/mset9/hover-settings.png)** the System Settings icon using the D-Pad, power your console off, then back on
+1. Ενεργοποιήστε την κονσόλα σας, εξασφαλίζοντας ότι έχει επιλεχθεί η εφαρμογή «System Settings»
+    + Εάν δεν έχει επιλεχθεί η εφαρμογή «System Settings», **[επισημάνετε](/images/screenshots/mset9/hover-settings.png)** το εικονίδιο «System Settings» με το D-Pad, απενεργοποιήστε την κονσόλα σας και έπειτα, ενεργοποιήστε την ξανά
 1. Πατήστε το (A) για να εκκινήσετε την εφαρμογή «System Settings»
 1. Μεταβείτε στο `Data Management` -> `Nintendo 3DS` -> `Extra Data` ([εικόνα](/images/screenshots/mset9/settings-extdata.png))
-1. **Μην πατήσετε κανένα πλήκτρο και μην αγγίξτε την οθόνη**
-1. **With the console STILL ON, and without pressing any buttons or touching the screen**, remove your SD card from your console
-    + The menu will refresh and say that no SD card is inserted
+1. **Μην πατήσετε κανένα κουμπί και μην αγγίξτε την οθόνη**
+1. **Ενώ η κονσόλα είναι ΑΚΟΜΑ ΕΝΕΡΓΗ και χωρίς να πατήσετε κανένα κουμπί ή να αγγίξετε την οθόνη**, αφαιρέστε την κάρτα SD από την κονσόλα σας
+    + Το μενού θα ανανεωθεί και θα δηλώσει ότι δεν έχει εισαχθεί κάρτα SD
 1. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
 1. Εκτελέστε το script «MSET9»:
     {{ mset9-chorus }}
 1. Πληκτρολογήστε τον αριθμό που αντιστοιχεί στο μοντέλο και την έκδοση της κονσόλας σας και πατήστε το Enter
-1. In the MSET9 window, type `3`, then press Enter to inject MSET9
+1. Στο παράθυρο του MSET9, πληκτρολογήστε `3` και πατήστε το Enter για να εισαγάγετε το MSET9
     + Θα πρέπει να δείτε το μήνυμα «MSET9 successfully injected!»
 1. Πατήστε το Enter για να κλείσετε το script «MSET9»
-1. Reinsert your SD card into your console **without pressing any buttons or touching the screen**
+1. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας **χωρίς να πατήσετε οποιοδήποτε πλήκτρο ή να αγγίξετε την οθόνη**
 1. Εάν το exploit ήταν επιτυχές, θα έχει γίνει εκκίνηση στο SafeB9SInstaller 
-    + If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting#installing-boot9strap-mset9)
+    + Εάν λάβετε μια κόκκινη οθόνη ή αν «κολλήσει» η κονσόλα σε κάποια οθόνη φόρτωσης, ακολουθήστε τον [οδηγό επίλυσης προβλημάτων](troubleshooting#installing-boot9strap-mset9)
 
 #### Ενότητα II - Εγκατάσταση του boot9strap
 
