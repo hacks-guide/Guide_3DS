@@ -24,8 +24,8 @@ You MUST have already installed Luma3DS and boot9strap to use this.
 
 1. Απενεργοποιήστε την κονσόλα σας
 1. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
-1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
-1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+1. Αντιγράψτε το `GodMode9.firm` από το αρχείο `.zip` του GodMode9 στον φάκελο `/luma/payloads/` της κάρτας SD σας
+1. Αντιγράψτε τον φάκελο `gm9` από το αρχείο `.zip` του GodMode9 στη ρίζα της κάρτας SD σας
 1. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 
 #### Section II - Backup SysNAND DSiWare Saves
@@ -34,10 +34,10 @@ If you do not have any DSiWare games or saves that you care about, skip this sec
 {: .notice--info}
 
 1. Κρατήστε πατημένο το (Start) και ταυτόχρονα, ενεργοποιήστε την κονσόλα σας. Αυτή η ενέργεια θα εκκινήσει το GodMode9
-1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it is completed
-1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
-    + Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
-1. Navigate to `[2:] SYSNAND TWLN` -> `title`
+1. Εάν σας ζητηθεί να δημιουργήσετε ένα απαραίτητο αντίγραφο ασφαλείας, πατήστε το (A) ώστε να πραγματοποιηθεί και έπειτα, πατήστε το (A) για να συνεχίσετε μόλις ολοκληρωθεί η διαδικασία
+1. Εάν σας ζητηθεί να διορθώσετε την ημερομηνία και την ώρα RTC, πατήστε το (A) για να το κάνετε και έπειτα, ορίστε την ημερομηνία και την ώρα. Τέλος, πατήστε το (A) για να συνεχίσετε
+    + Σημειώστε ότι, αν έπρεπε να διορθώσετε την ημερομηνία και την ώρα RTC, θα χρειαστεί να διορθώσετε την ώρα και στην εφαρμογή «System Settings», αφού ακολουθήσετε αυτόν τον οδηγό
+1. Μεταβείτε στο `[2:] SYSNAND TWLN` -> `title`
 1. Hold (R) and press (A) at the same time on `00030004` to select the folder, then select "Copy to 0:/gm9/out"
     + This process may take some time if you have many DSiWare games
 1. Πατήστε δύο φορές το (B) για να επιστρέψετε στο κύριο μενού
@@ -50,19 +50,19 @@ If you do not have any GBA VC games or saves that you care about, skip this sect
 Note that this is not necessary for any other kind of Virtual Console games (GBC, NES, etc)
 {: .notice--info}
 
-The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
+Το παιχνίδι θα εξαχθεί στον φάκελο `/ gm9 / out /` της κάρτας SD σας με το όνομα `<TitleID>.gbavc.sav`.
 {: .notice--info}
 
 Για να προσδιορίσετε το Title ID (αναγνωριστικό τίτλου) ενός αρχείου `<TitleID>.gbavc.sav`, μπορείτε να δείτε μια λίστα με όλα τα παιχνίδια του συστήματος και τα αντίστοιχα Title ID, ως εξής: πατήστε το (Home) για να εμφανιστεί το μενού ενεργειών, επιλέξτε `Title manager` και τέλος, `[A:] SD CARD`.
 {: .notice--info}
 
 1. Ακολουθήστε την παρακάτω διαδικασία για να δημιουργήσετε αντίγραφο ασφαλείας των αποθηκευμένων δεδομένων για όποιο παιχνίδι GBA της VC επιθυμείτε:
-    + Launch the GBA VC game
-    + Exit the GBA VC game
-    + Boot your console while holding (Start) to launch the Luma3DS chainloader menu
-    + Launch GodMode9 by pressing (A)
-    + Navigate to `[S:] SYSNAND VIRTUAL`
-    + Press (A) on `agbsave.bin` to select it
+    + Εκκινήστε το παιχνίδι GBA στη VC
+    + Τερματίστε το παιχνίδι GBA
+    + Εκκινήστε την κονσόλα σας κρατώντας πατημένο το (Start) για να ανοίξει το μενού του chainloader του Luma3DS
+    + Εκκινήστε το GodMode9 πατώντας το (A)
+    + Μεταβείτε στο `[S:] SYSNAND VIRTUAL`
+    + Πατήστε το (A) στο 'agbsave.bin` για να το επιλέξετε
     + Επιλέξτε «AGBSAVE options...»
     + Επιλέξτε «Dump GBA VC save»
     + Πατήστε το (A) για να συνεχίσετε
@@ -71,14 +71,14 @@ The game will be outputted to the `/gm9/out/` folder on your SD card with the na
 #### Ενότητα IV - Αντιγραφή της EmuNAND στη SysNAND
 
 1. Κρατήστε πατημένο το (Start) και ταυτόχρονα, ενεργοποιήστε την κονσόλα σας. Αυτή η ενέργεια θα εκκινήσει το GodMode9
-1. Navigate to `[E:] EMUNAND VIRTUAL`
+1. Μεταβείτε στο `[E:] EMUNAND VIRTUAL`
 1. Press (A) on `nand.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
 1. Press (A) to unlock SysNAND overwriting, then input the key combo given
     + This will not overwrite your boot9strap installation
 1. Input the key combo given to unlock SysNAND (lvl1) writing
     + This process will take some time
 1. Μόλις ολοκληρωθεί, πατήστε το (Α) για να συνεχίσετε
-1. Press (B) to decline relocking write permissions if prompted
+1. Πατήστε το (B) για να αρνηθείτε το κλείδωμα των δικαιωμάτων εγγραφής εάν σας ζητηθεί
 1. Πατήστε το (B) για να επιστρέψετε στο κύριο μενού
 
 #### Section V - Restore DSiWare Saves
@@ -86,16 +86,16 @@ The game will be outputted to the `/gm9/out/` folder on your SD card with the na
 If you did not backup DSiWare Saves earlier, skip this section.
 {: .notice--info}
 
-1. Navigate to `[0:] SDCARD` -> `gm9` -> `out`
-1. Press (Y) on the `00030004` folder to copy it
+1. Μεταβείτε στο `[0:] SDCARD` -> `gm9` -> `out`
+1. Πατήστε το (Y) στον φάκελο `00030004` για να τον αντιγράψετε
 1. Πατήστε δύο φορές το (B) για να επιστρέψετε στο κύριο μενού
-1. Navigate to `[2:] SYSNAND TWLN` -> `title`
+1. Μεταβείτε στο `[2:] SYSNAND TWLN` -> `title`
 1. Πατήστε το (Y) για να επικολλήσετε τον φάκελο `00030004`
 1. Επιλέξτε «Copy path(s)»
 1. Πατήστε το (A) για να ξεκλειδώσετε την εγγραφή στη SysNAND (lvl1) και έπειτα, εισαγάγετε τον συνδυασμό πλήκτρων που θα σας δοθεί
 1. Επιλέξτε «Overwrite file(s)»
     + This process may take some time if you have many DSiWare games
-1. Press (B) to decline relocking write permissions if prompted
+1. Πατήστε το (B) για να αρνηθείτε το κλείδωμα των δικαιωμάτων εγγραφής εάν σας ζητηθεί
 1. Πατήστε δύο φορές το (B) για να επιστρέψετε στο κύριο μενού
 
 #### Section VI - Restore GBA VC Saves
@@ -107,23 +107,23 @@ If you did not backup GBA VC Saves earlier, skip this section.
 {: .notice--info}
 
 1. Κρατήστε πατημένο το (R) και πατήστε ταυτόχρονα το (Start) για να απενεργοποιήσετε την κονσόλα σας
-1. Power on your console into SysNAND
-1. Do the following process for each GBA VC game that you want to restore the save for:
-    + Launch the GBA VC game
-    + Exit the GBA VC game
-    + Boot your console while holding (Start) to launch the Luma3DS chainloader menu
+1. Ενεργοποιήστε την κονσόλα σας στη SysNAND
+1. Ακολουθήστε την παρακάτω διαδικασία για να επαναφέρετε τα αποθηκευμένα δεδομένα για όποιο παιχνίδι GBA της VC επιθυμείτε:
+    + Εκκινήστε το παιχνίδι GBA στη VC
+    + Τερματίστε το παιχνίδι GBA
+    + Εκκινήστε την κονσόλα σας κρατώντας πατημένο το (Start) για να ανοίξει το μενού του chainloader του Luma3DS
     + Εκκινήστε το GodMode9 πατώντας το (A)
-    + Navigate to `[0:] SDCARD` -> `gm9`
-    + Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
+    + Μεταβείτε στο `[0:] SDCARD` -> `gm9`
+    + Πατήστε το (Y) στο αρχείο `<TitleID>.gbavc.sav` που επιθυμείτε να επαναφέρετε για να το αντιγράψετε
     + Πατήστε το (B) για να επιστρέψετε στο κύριο μενού
-    + Navigate to `[S:] SYSNAND VIRTUAL`
-    + Press (A) on `agbsave.bin` to select it
+    + Μεταβείτε στο `[S:] SYSNAND VIRTUAL`
+    + Πατήστε το (A) στο 'agbsave.bin` για να το επιλέξετε
     + Επιλέξτε «AGBSAVE options...»
     + Επιλέξτε «Inject GBA VC save»
     + Πατήστε το (A) για να συνεχίσετε
     + Πατήστε το (Start) για να επανεκκινήσετε την κονσόλα σας
-    + Launch the GBA VC game
-    + Exit the GBA VC game
+    + Εκκινήστε το παιχνίδι GBA στη VC
+    + Τερματίστε το παιχνίδι GBA
 
 #### Ενότητα VII - Αντίγραφο ασφαλείας της SysNAND
 
@@ -135,10 +135,10 @@ If you did not backup GBA VC Saves earlier, skip this section.
 
 1. Κρατήστε πατημένο το (Start) και ταυτόχρονα, ενεργοποιήστε την κονσόλα σας. Αυτή η ενέργεια θα εκκινήσει το GodMode9
 {% include_relative include/format-sd-gm9.txt -%}
-1. Κρατήστε πατημένο το (R) και πατήστε ταυτόχρονα το (B) για να αφαιρέσετε την κάρτα SD
+1. Κρατήστε πατημένο το (R) και πατήστε ταυτόχρονα το (B) για να αφαιρέσετε την κάρτα SD σας
 1. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
 1. Copy all your files back to your SD card
-    + Ensure you replace the `boot.firm` file on your SD card with the one from your backup
+    + Βεβαιωθείτε ότι αντικαταστήσατε το αρχείο `boot.firm` στην κάρτα SD σας με αυτό του αντιγράφου ασφαλείας
 1. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 1. Πατήστε το (A) για να προσαρτήσετε ξανά την κάρτα SD σας
 1. Πατήστε το (Start) για επανεκκίνηση
