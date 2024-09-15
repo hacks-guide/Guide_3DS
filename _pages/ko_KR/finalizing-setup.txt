@@ -35,8 +35,8 @@ title: "마무리 단계"
 
 ### 준비물
 
-* [x_finalize_helper.firm](https://github.com/hacks-guide/finalize/releases/latest/download/x_finalize_helper.firm) (direct download)
-* [finalize.romfs](https://github.com/hacks-guide/finalize/releases/latest/download/finalize.romfs) (direct download)
+* [x_finalize_helper.firm](https://github.com/hacks-guide/finalize/releases/latest/download/x_finalize_helper.firm) (직접 다운로드)
+* [finalize.romfs](https://github.com/hacks-guide/finalize/releases/latest/download/finalize.romfs) (직접 다운로드)
 
 ### 진행 방법
 
@@ -46,9 +46,9 @@ title: "마무리 단계"
 
 1. 콘솔의 전원을 꺼 주세요
 1. SD 카드를 컴퓨터에 삽입해 주세요
-1. Copy `finalize.romfs` to the root of your SD card
+1. 'finalize.romfs' 파일을 SD 카드의 루트에 복사해 주세요
 1. Open the `luma` folder on your SD card and create a folder named `payloads` inside, if it does not already exist
-1. Copy `x_finalize_helper.firm` to the `payloads` folder
+1. `x_finalize_helper.firm` 파일을 `payloads` 폴더에 복사해 주세요
 1. SD 카드를 콘솔에 다시 삽입해 주세요
 
 이 스크린샷들은 이 가이드를 따랐을 때의 최소한의 SD 카드 레이아웃을 표시합니다. 이전에 따른 방법에 따라, SD 카드에 추가 파일과 폴더가 있을 수 있습니다.
@@ -59,13 +59,13 @@ title: "마무리 단계"
 ![]({{ "/images/screenshots/finalizing-luma-payloads.png" | absolute_url }})
 {: .notice--info}
 
-#### Section II - Updating the System
+#### 섹션 II - 본체 업데이트
 
 이 섹션에서는 커스텀 펌웨어가 설치된 콘솔에서도 안전하게 이용 가능한 최신 버전의 펌웨어로 본체를 업데이트합니다.
 
 {% include_relative include/sysupdate.txt cfw="true" %}
 
-#### Section III - RTC and DSP setup
+#### 섹션 III - RTC 및 DSP 설정
 
 이 섹션에서는 3DS 내부 시계를 실제 시각과 맞추고, 홈브류 소프트웨어에서 음성을 적절하게 이용하기 위해 사운드 펌웨어를 백업합니다.
 
@@ -79,15 +79,15 @@ title: "마무리 단계"
 1. (B)를 눌러 Rosalina 메뉴로 돌아가 주세요
 1. (B)를 눌러 Rosalina 메뉴를 나와 주세요
 
-#### Section IV - Setup Script
+#### 섹션 IV - 설치 스크립트
 
 In this section, you will use a series of scripts to automate homebrew installation, SD card cleanup, and system file backup.
 
 1. 콘솔의 전원을 꺼 주세요
-1. Press and hold (X), and while holding (X), power on your console. This will launch the Finalizing Setup Helper
-    + If you boot to the HOME Menu, your `payloads` folder may be incorrectly spelled or in the wrong location
-    + If you encounter an error, consult the [troubleshooting](troubleshooting#finalizing-setup) page
-1. If the Helper was successful, your console will boot into GodMode9
+1. (X) 를 길게 누르고, 이 상태에서 콘솔의 전원을 켜 주세요. 최종 설치 도우미가 실행됩니다
+    + HOME 메뉴가 실행된 경우, 'payloads' 폴더의 이름이나 위치가 잘못되었을 수 있습니다
+    + 오류가 발생했을 경우, [문제 해결](troubleshooting#finalizing-setup) 페이지를 참고해 주세요
+1. 도우미가 정상적으로 작동했을 경우, GodMode9으로 부팅될 것입니다.
     + From this point forward, you can access GodMode9 by holding START while powering on your console
 1. 만약 "Essential files backup not found" 메세지가 표시되면, (A) 룰 눌러서 하세요. 백업이 끝나면 (A) 를 눌러서 진행해 주세요
 1. 만약 "RTC date&time seems to be wrong" 메세지가 표시되면 (A) 버튼을 눌러 하고, 날짜와 시간을 고친 다음 (A) 버튼을 눌러 계속해 주세요
@@ -95,7 +95,7 @@ In this section, you will use a series of scripts to automate homebrew installat
 1. "Scripts..."를 선택해 주세요
 1. "finalize"를 선택해 주세요
 1. 스크립트 표시에 따라 필요한 행동을 취해주세요
-    + If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting#finalizing-setup) page
+    만일 오류가 발생할 경우, 오류 메세지에 나온 안내를 따르거나 [troubleshooting](troubleshooting#finalizing-setup) 페이지를 참고해 주세요
 1. "Setup Complete!" 가 떴을 경우, (A) 버튼을 눌러 전원을 꺼 주세요
     + If you do NOT see the message "Setup complete!", the script was not successful and you will need to redo this section from Step 3
 1. SD 카드를 컴퓨터에 삽입해 주세요
