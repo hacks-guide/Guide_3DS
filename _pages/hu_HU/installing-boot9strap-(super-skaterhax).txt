@@ -21,11 +21,7 @@ A megadott lépések csak a New 3DS, New 3DS XL és New 2DS XL típusokra vonatk
 
 ### Amire szükséged lesz
 
-* A [super-skaterhax](https://github.com/zoogie/super-skaterhax/releases) legújabb kiadása (a kiadás`.zip` fájl)
-* A [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) legfrisseb verziója (közvetlen letöltés)
-* A [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) legfrisseb verziója (közvetlen letöltés)
-* A [nimdsphax](https://github.com/luigoalma/nimdsphax/releases/download/v1.0/nimdsphax_v1.0.zip) legfrissebb verziója (közvetlen letöltés)
-* A [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) legújabb kiadása (a Luma3DS `.zip` fájl)
+* The [super-skaterhax](https://toxicaven.dev/skater) zip for your console's region and system version
 
 #### I. rész - Előkészületek
 
@@ -33,21 +29,24 @@ Ebben a fejezetben fel fogod másolni a fájlokat, amik a super-skaterhax és a 
 
 1. Kapcsold ki a konzolod
 1. Helyezd az SD kártyád a számítógépbe
-1. Másold át a `boot.firm` és `boot.3dsx` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
-    + Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne
-1. Másolj mindent át a konzolod régiójának megfelelő mappájából (`arm11code.bin` és `browserhax_hblauncher_ropbin_payload.bin`) a release_new3ds `.zip`-nek az SD kártyád gyökerébe
-1. Hozz létre egy mappát `boot9strap` néven az SD kártya gyökerében
-1. Másold át a `boot9strap.firm` fájlt és a `boot9strap.firm.sha` fájlt a boot9strap `.zip` fájlból az SD kártyád `/boot9strap/` mappájába
-1. Másold át a `SafeB9SInstaller.bin` fájlt a SafeB9SInstaller `.zip`-ből az SD kártyád gyökerébe
-1. Hozz létre egy mappát `3ds` néven az SD kártyád gyökerében, ha még nem létezik ilyen
-    + Ez a mappa tárolja a homebrew applikációkat és adataikat; ez mást mint a `Nintendo 3DS` mappa, amit a konzol automatikusan generál
-1. Másold át a `nimdsphax` mappát a nimdsphax `.zip`-ből az SD kártya gyökerében található `3ds` mappába
+1. Copy everything from the sk8rhax `.zip` to the root of your SD card, overwriting any existing files
+
+    ![]({{ "/images/screenshots/skater-root-layout.png" | absolute_url }})
+    {: .notice--info}
+
 1. Tedd vissza az SD kártyád a konzoldba
 1. Kapcsold be a konzolod
-
-![]({{ "/images/screenshots/skater-root-layout.png" | absolute_url }})
-{: .notice--info}
-
+1. Launch System Settings
+1. Válaszd az "Other Settings"-t
+1. Navigate to "Profile" -> "Region Settings"
+    + If you get a [warning](/images/screenshots/skaterhax/country-change-notice.png) that tells you that you will lose access to Nintendo Network ID features, you can safely select OK to continue
+    + After completing this page, you can restore the region settings back to normal
+1. Select the following options according to your console's region ([image](/images/screenshots/skaterhax/skater-lang.png))
+    + USA: United States, Do Not Set
+    + EUR: United Kingdom, Do Not Set
+    + JPN: 日本, 設定しない
+    + KOR: 대한민국, 설정하지 않음
+1. Exit System Settings
 
 #### II. rész - super-skaterhax
 
@@ -56,24 +55,19 @@ Ebben a fejezetben meg fogod látogatni a browser exploit weboldalt, ami elindí
 Ha még nem történt meg, biztosítsd, hogy legyen működő Internet kapcsolata a konzolodnak.
 {: .notice--info}
 
-{% capture set_date %}
-<summary>Ha a rendszer dátumod inkorrekt, ez az exploit nem fog működni.<br>Kérjük kövesd az alábbi lépéseket a helyes rendszer dátum beállításához.</summary>
-1. Lépj be a "System Settings"-be a konzolodon
-1. Válaszd az "Other Settings"-t
-1. Navigálj ide: "Date & Time" -> "Today's date"
-1. A fel/le nyilakkal állítsd be a helyes napot, hónapot és évet
-1. Nyomj OK-t a jóváhagyáshoz
-{% endcapture %}
-<details>{{ set_date | markdownify }}</details>
-{: .notice--info}
-
 1. A HOME menüben nyomd meg a bal és jobb váll gombokat egyszerre, hogy megnyisd a kamerát
-    + Ha nem tudod megnyitni a kamerát, nyisd meg az Internet Browser-t kézzel, és írd be az URL-t e helyett. (`https://zoogie.github.io/web/super/` az EUR/USA/JPN régiókhoz, `https://zoogie.github.io/web/korea` a KOR régióhoz)
+    + If you are unable to open the camera, open the Internet Browser and manually type the URL instead (`https://uwu.tax/super/` for EUR/USA/JPN, `https://uwu.tax/korea/` for KOR)
 1. Nyomd meg a QR kód gombot és olvasd be a következő QR kódok egyikét, ami megfelel a konzol régiódnak, [itt](https://user-images.githubusercontent.com/28328903/226086338-585bfdac-0aac-44c0-b413-89206d2815d8.png)
-    + Ha tanúsítvány figyelmeztetést kapsz, nyomd meg az (A) gombot a kapcsolat engedélyezéséhez
-1. Nyomd meg a (Select) gombot a könyvjelző fül megnyitásához
+    + If you get a security certificate warning, please ensure that the system date is correct
+1. Press (Select) to open the bookmark tab
     + Ha a (Select) gombod nem reagál, akkor érintsd meg a csillag ikont a bal alsó sarkában a képernyőnek
 1. Éríntsd meg a "Bookmark this page" feliratot
+1. Nyomd meg a (B) gombot egyszer, hogy visszatérj a böngészőhöz
+1. Press (ZR) to open the tab list
+    + If your (ZR) button does not respond, tap the two overlapped squares near the bottom-right corner of the screen
+1. Make sure that the only tab open is the super-skaterhax website
+    + This tab should be highlighted in blue on the tab list
+    + If other tabs are open, close them
 1. Nyomd meg a (B) gombot egyszer, hogy visszatérj a böngészőhöz
 1. Nyomd meg a (START) gombot, hogy megnyisd a helyérzékeny menüt
     + Ha a (Start) gombod nem reagál, akkor érintsd meg 3-vonal menüt a jobb alsó sarkában a képernyőnek
@@ -81,11 +75,11 @@ Ha még nem történt meg, biztosítsd, hogy legyen működő Internet kapcsolat
 1. Érintsd meg a "Delete Cookies"-t
 1. Nyomd meg az (A) gombot a folytatáshoz
 1. Nyomj (Home) gombot a HOME Menübe visszatéréshez, majd nyomj azonnal egy (A)-t a böngésző ismételt elindításához
-1. Válaszd a "GO GO!" gombot a felső képernyőn
-    + Ha bármilyen kérdés előjön, fogadd el mind
+1. Select the "GO GO!" button on the top of the bottom screen
+1. Press (A) to dismiss the [popup](/images/screenshots/skaterhax/skater-popup.png)
     + Ha a konzolod lefagy egy sárga képernyőn, tartsd nyomva a POWER gombot, amíg ki nem kapcsol, és próbáld újra ezt a részt
     + Ha a konzolod lefagy egy piros képernyőn, tartsd nyomva a POWER gombot, amíg ki nem kapcsol, csináld újra a 3. lépést a II. részben, majd próbáld újra ezt a részt
-    + Ha a konzolod "Text"-et jelenít meg az alsó képernyőn, akkor Old 3DS-ed van és ez az exploit **nem fog működni az eszközödön**. Ha ez az eset, használd az [MSET9](installing-boot9strap-(mset9))-et helyette
+    + If your console [shows the word Text on the top-left corner of the bottom screen](/images/screenshots/skaterhax/skater-old3ds.png), you have an Old 3DS and this exploit **will not work on your device**. Ha ez az eset, használd az [MSET9](installing-boot9strap-(mset9))-et helyette
     + Ha más hibát kapsz, próbáld meg 5x, és ha még minden nem megy [kövesd ezt a hibaelhárítási útmutatót](troubleshooting#installing-boot9strap-super-skaterhax)
 1. Ekkor a konzolodnak be kell bootolni a Homebrew Launcher-be
 1. Indítsd el a nimdsphax-et a homebrew listájáról
@@ -101,6 +95,9 @@ Ha még nem történt meg, biztosítsd, hogy legyen működő Internet kapcsolat
 {% include_relative include/luma3ds-installed-note.txt %}
 
 ___
+
+You may now restore your region settings back to normal.
+{: .notice--info}
 
 ### Tovább a [telepítés véglegesítésére](finalizing-setup)
 {: .notice--primary}
