@@ -1,65 +1,92 @@
----
-title: "SDをフォーマット (Mac)"
----
+# Formatting SD (Mac)
 
-{% include toc title="目次" %}
-
-### 必読事項
+## Required Reading
 
 これは3DSで機能するようにSDカードをフォーマットするものです。
 
 3DSがすでにSDカードを認識している場合は、この操作は必要ありません。
 
-このページはMacユーザー向けです。 Macをお使いでない場合は、[Formatting-sd-(windows)](formatting-sd-(windows)) または [Formatting-sd-(Linux)](formatting-sd-(linux)) のページをご覧ください。
+このページはMacユーザー向けです。 Macをお使いでない場合は、[Formatting-sd-(windows)](formatting-sd-\(windows\)) または [Formatting-sd-(Linux)](formatting-sd-\(linux\)) のページをご覧ください。
 
-### 手順
+## Instructions
 
-#### OS X El Capitan (10.11) 以降
-
-1. パソコンにSDカードを入れます
-1. SDカードにファイルとフォルダがある場合は、コンピュータ上のフォルダにすべてをコピーしてください
-1. ディスクユーティリティアプリを実行します
-1. 左上の「表示」メニューで「すべてのデバイスを表示」を選択します
-1. 左側のパネルでSDカードを選択してください
-
-    誤って間違ったドライブを消去する可能性があります。正しいデバイスを選択してください。
-    {: .notice--danger}
-
-1. 上部の「消去」をクリックします
-1. 名前を入力してください
-1. 「フォーマット」が「MS-DOS (FAT)」に設定されていることを確認してください
-1. Ensure that "Scheme" is set to "Master Boot Record"
-    + 「Scheme」が表示されない場合は、「キャンセル」をクリックし、ボリュームの代わりにデバイスを選択してください
-1. 「消去」をクリックします
-1. フォーマットが完了するのを待ちます
-1. 「閉じる」をクリックします
-1. フォーマット前に、SDカードにファイルとフォルダがあった場合は、コンピュータからすべてをコピーして戻して下さい。
-
-#### OS X Yosemete (10.10) 以下
+### OS X El Capitan (10.11) and later
 
 1. パソコンにSDカードを入れます
-1. SDカードにファイルとフォルダがある場合は、コンピュータ上のフォルダにすべてをコピーしてください
-1. ディスクユーティリティアプリを実行します
-1. 左側のパネルでSDカードを選択してください
 
-    誤って間違ったドライブを消去する可能性があります。正しいデバイスを選択してください。
-    {: .notice--danger}
+2. SDカードにファイルとフォルダがある場合は、コンピュータ上のフォルダにすべてをコピーしてください
 
-1. 上部の「パーティション」をクリックします
-    + 「パーティション」が表示されない場合は、ボリュームの代わりにデバイスを選択してください
-1. 「パーティションレイアウト」が「1 パーティション」に設定されていることを確認します。
-1. 名前を入力してください
-1. 「フォーマット」が「MS-DOS (FAT)」に設定されていることを確認してください
-1. パーティションテーブルの下にある「オプション」をクリックします
-1. "マスターブートレコード"を選択
-1. OK をクリックします
-1. 「適用」をクリックします。
-1. パーティションをクリックします。
-1. フォーマットが完了するのを待ちます
-1. ディスクユーティリティを閉じます
-1. フォーマット前に、SDカードにファイルとフォルダがあった場合は、コンピュータからすべてをコピーして戻して下さい。
+3. ディスクユーティリティアプリを実行します
 
-### Troubleshooting
+4. 左上の「表示」メニューで「すべてのデバイスを表示」を選択します
 
-* SD card remains undetected by console or continues to display the wrong capacity after formatting
-    + Your SD card may be partitioned or have unallocated space. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Mac) to reformat your SD card.
+5. 左側のパネルでSDカードを選択してください
+
+   ::: danger
+
+   誤って間違ったドライブを消去する可能性があります。正しいデバイスを選択してください。
+
+   :::
+
+6. 上部の「消去」をクリックします
+
+7. 名前を入力してください
+
+8. 「フォーマット」が「MS-DOS (FAT)」に設定されていることを確認してください
+
+9. Ensure that "Scheme" is set to "Master Boot Record"
+   - If "Scheme" does not appear, click "Cancel" and make sure to choose the device instead of a volume
+
+10. 「消去」をクリックします
+
+11. フォーマットが完了するのを待ちます
+
+12. 「閉じる」をクリックします
+
+13. フォーマット前に、SDカードにファイルとフォルダがあった場合は、コンピュータからすべてをコピーして戻して下さい。
+
+### OS X Yosemite (10.10) and earlier
+
+1. パソコンにSDカードを入れます
+
+2. SDカードにファイルとフォルダがある場合は、コンピュータ上のフォルダにすべてをコピーしてください
+
+3. ディスクユーティリティアプリを実行します
+
+4. 左側のパネルでSDカードを選択してください
+
+   ::: danger
+
+   誤って間違ったドライブを消去する可能性があります。正しいデバイスを選択してください。
+
+   :::
+
+5. 上部の「パーティション」をクリックします
+   - If "Partition" does not appear, make sure to choose the device instead of a volume
+
+6. 「パーティションレイアウト」が「1 パーティション」に設定されていることを確認します。
+
+7. 名前を入力してください
+
+8. 「フォーマット」が「MS-DOS (FAT)」に設定されていることを確認してください
+
+9. パーティションテーブルの下にある「オプション」をクリックします
+
+10. "マスターブートレコード"を選択
+
+11. OK をクリックします
+
+12. 「適用」をクリックします。
+
+13. パーティションをクリックします。
+
+14. フォーマットが完了するのを待ちます
+
+15. ディスクユーティリティを閉じます
+
+16. フォーマット前に、SDカードにファイルとフォルダがあった場合は、コンピュータからすべてをコピーして戻して下さい。
+
+## トラブルシューティング
+
+- SD card remains undetected by console or continues to display the wrong capacity after formatting
+  - Your SD card may be partitioned or have unallocated space. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Mac) to reformat your SD card.
