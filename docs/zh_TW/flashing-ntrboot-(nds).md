@@ -1,57 +1,59 @@
----
-title: "寫入 ntrboot 漏洞 (透過 NDS)"
----
+# Flashing ntrboot (NDS)
 
-{% include toc title="條目內容" %}
-
-### 必讀事項
+## Required Reading
 
 在開始前，請先確保您已閱讀完 [ntrboot](ntrboot) 頁面。
 
 本方法將會暫時用到一台相容於您燒錄卡的 NDS 或 NDSL 主機。 本方法將透過燒錄卡於您的 NDS 中啟動 ntrboot 寫入程式之 `.nds` 檔案。
 
+::: danger
+
 請注意，在某些特殊情況下，某些冒牌的燒錄卡很有可能會在過程中變磚，使得燒錄卡變得無法使用。 這是不大可能的，但不論如何，我們只支援在相容清單中的燒錄卡。 To reduce the chance of receiving a counterfeit card, it is recommended that you use a reputable site to buy your flashcart (such as [NDS Card](https://www.nds-card.com/)).
-{: .notice--danger}
 
-### 必備項目
+:::
 
-* 一張相容於 ntrboot 的燒錄卡
-* Two consoles
-    * **The source NDS / NDSL**: the Nintendo DS or Nintendo DS Lite which is compatible with your flashcart
-    * **The target 3DS**: the 3DS family console on stock firmware
-* v1.3 的 [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (直接下載連結)
-* The latest release of [ntrboot_flasher_nds](https://github.com/jason0597/ntrboot_flasher_nds/releases/latest) (`ntrboot_flasher_nds.nds`)
+## What You Need
 
-### 操作說明
+- Your ntrboot compatible flashcart
+- Two consoles
+  - **The source NDS / NDSL**: the Nintendo DS or Nintendo DS Lite which is compatible with your flashcart
+  - **The target 3DS**: the 3DS family console on stock firmware
+- The v1.3 release of [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (direct download)
+- The latest release of [ntrboot_flasher_nds](https://github.com/jason0597/ntrboot_flasher_nds/releases/latest) (`ntrboot_flasher_nds.nds`)
 
-#### 第一節 — 準備工作
+## Instructions
+
+### Section I - Prep Work
 
 1. 將 **NDS / NDSL 始源機** 關機
-1. 將燒錄卡的 SD 卡插入電腦
-1. 在燒錄卡的 SD 卡的根目錄底下建立一個新的資料夾 `ntrboot`
-1. 解壓 boot9strap `.zip` 的 `boot9strap_ntr.firm` 檔案至燒錄卡的 SD 卡的 `/ntrboot/` 資料夾中
-1. 將 `ntrboot_flasher_nds.nds` 複製到您燒錄卡的 SD 卡中
-1. 重新插入 SD 卡進您的燒錄卡中
-1. 將相容於 ntrboot 的 DS / DSi 燒錄卡插入於 **NDS / NDSL 始源機** 中
+2. 將燒錄卡的 SD 卡插入電腦
+3. 在燒錄卡的 SD 卡的根目錄底下建立一個新的資料夾 `ntrboot`
+4. 解壓 boot9strap `.zip` 的 `boot9strap_ntr.firm` 檔案至燒錄卡的 SD 卡的 `/ntrboot/` 資料夾中
+5. 將 `ntrboot_flasher_nds.nds` 複製到您燒錄卡的 SD 卡中
+6. 重新插入 SD 卡進您的燒錄卡中
+7. 將相容於 ntrboot 的 DS / DSi 燒錄卡插入於 **NDS / NDSL 始源機** 中
 
-#### 第二節 — 寫入 ntrboot
+### Section II - Flashing ntrboot
 
 1. 透過您的燒錄卡在 **NDS / NDSL 始源機** 上啟動 `ntrboot_flasher_nds.nds`
-1. 按『A』 繼續
-1. 透過『上』『下』鍵選擇您的燒錄卡
-1. 按『A』 繼續
-1. 選擇『Dump flash』以備份您燒錄卡的記憶體
-1. 輸入提示的按鍵組合
-1. 按『A』 繼續
-1. 透過『上』『下』鍵選擇您的燒錄卡
-1. 按『A』 繼續
-1. 選擇『Inject FIRM』以安裝 boot9strap 至您的燒錄卡中
-1. 輸入提示的按鍵組合
-1. 按『A』 繼續
-1. 將 **NDS / NDSL 始源機** 關機
-1. 從您的 **NDS / NDSL 始源機**中退出燒錄卡
+2. 按『A』 繼續
+3. 透過『上』『下』鍵選擇您的燒錄卡
+4. 按『A』 繼續
+5. 選擇『Dump flash』以備份您燒錄卡的記憶體
+6. 輸入提示的按鍵組合
+7. 按『A』 繼續
+8. 透過『上』『下』鍵選擇您的燒錄卡
+9. 按『A』 繼續
+10. 選擇『Inject FIRM』以安裝 boot9strap 至您的燒錄卡中
+11. 輸入提示的按鍵組合
+12. 按『A』 繼續
+13. 將 **NDS / NDSL 始源機** 關機
+14. 從您的 **NDS / NDSL 始源機**中退出燒錄卡
 
 ___
 
-### 繼續至[安裝 boot9strap (透過 ntrboot)](installing-boot9strap-(ntrboot))
-{: .notice--primary}
+::: tip
+
+Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
+
+:::
