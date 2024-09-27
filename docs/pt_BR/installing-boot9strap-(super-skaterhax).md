@@ -1,106 +1,125 @@
----
-title: "Instalando boot9strap (super-skaterhax)"
----
+# Instalando boot9strap (superskaterhax)
 
-{% include toc title="Tabela de Conteúdo" %}
+:::details Technical Details (optional)
 
-{% capture technical_info %}
-<summary><em>Detalhes técnicos (opcional)</em></summary>
 Para detalhes técnicos sobre os exploits que você usará nesta página, consulte [aqui](https://github.com/zoogie/super-skaterhax).
 
-{% endcapture %}
-<details>{{ technical_info | markdownify }}</details>
-{: .notice--info}
+:::
 
-### Notas de Compatibilidade
+### Compatibility Notes
 
 Super-skaterhax (quando usado para iniciar o Homebrew Launcher) é compatível com modelos New na versão 11.15.0 e acima em todas as regiões.
 
+::: warning
+
 As instruções fornecidas só se aplicam ao New 3DS, New 3DS XL e ao New 2DS XL. Por favor, certifique-se de que o console que você está modificando é um New 3DS, New 3DS XL, ou New 2DS XL antes de continuar.
-{: .notice--warning}
 
-### O que é necessário
+:::
 
-* A versão mais recente do [super-skaterhax](https://github.com/zoogie/super-skaterhax/releases) (o arquivo release `.zip`)
-* A versão mais recente do [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (download direto)
-* A versão mais recente do [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (download direto)
-* A versão mais recente do [nimdsphax](https://github.com/luigoalma/nimdsphax/releases/download/v1.0/nimdsphax_v1.0.zip) (download direto)
-* A versão mais recente do [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (o arquivo `.zip` do Luma3DS)
+### What You Need
 
-#### Seção I - Preparação
+- The [super-skaterhax](https://toxicaven.dev/skater) zip for your console's region and system version
+
+#### Section I - Prep Work
 
 Nesta seção, você irá copiar os arquivos necessários para acionar tanto superskaterhax quanto o Homebrew Launcher.
 
 1. Desligue seu console
-1. Insira o cartão SD no seu computador
-1. Copie `boot.firm` e `boot.3dsx` do `.zip` do Luma3DS para a raiz do seu cartão SD
-    + A raiz do cartão SD refere-se ao diretório inicial no seu cartão SD onde você pode ver a pasta Nintendo 3DS, mas não está dentro dela
-1. Copy everything inside the folder for your console's region and version (`arm11code.bin` and `browserhax_hblauncher_ropbin_payload.bin`) in the release_new3ds `.zip` to the root of your SD card
-1. Crie uma pasta chamada `boot9strap` na raiz do seu cartão SD
-1. Copie o `boot9strap.firm` e o `boot9strap.firm.sha` do `.zip` do boot9strap para a pasta `/boot9strap/` no seu cartão SD
-1. Copie `SafeB9SInstaller.bin` do `.zip` do SafeB9SInstaller para a raiz do seu cartão SD
-1. Crie uma pasta chamada `3ds` na raiz do seu cartão SD se ela ainda não existir
-    + Esta pasta armazena aplicativos homebrew e dados; é diferente da pasta `Nintendo 3DS` que o console gera automaticamente
-1. Copie a pasta `nimdsphax` do nimdsphax `.zip` para a pasta `/3ds/` no seu cartão SD
-1. Reinsira o cartão SD no seu console
-1. Ligue o seu console
 
-![]({{ "/images/screenshots/skater-root-layout.png" | absolute_url }})
-{: .notice--info}
+2. Insira o cartão SD no seu computador
 
+3. Copy everything from the sk8rhax `.zip` to the root of your SD card, overwriting any existing files
 
-#### Seção II - super-skaterhax
+   ::: info
+
+   ![](/images/screenshots/skater-root-layout.png)
+
+   :::
+
+4. Reinsira o cartão SD no seu console
+
+5. Ligue o seu console
+
+6. Launch System Settings
+
+7. Selecione "Outras Configurações"
+
+8. Navigate to "Profile" -> "Region Settings"
+   - If you get a [warning](/images/screenshots/skaterhax/country-change-notice.png) that tells you that you will lose access to Nintendo Network ID features, you can safely select OK to continue
+   - After completing this page, you can restore the region settings back to normal
+
+9. Select the following options according to your console's region ([image](/images/screenshots/skaterhax/skater-lang.png))
+   - USA: United States, Do Not Set
+   - EUR: United Kingdom, Do Not Set
+   - JPN: 日本, 設定しない
+   - KOR: 대한민국, 설정하지 않음
+
+10. Exit System Settings
+
+#### Section II - super-skaterhax
 
 Nesta seção, você visitará a página web contendo o exploit, que iniciará o Homebrew Launcher.
 
-Se você ainda não tem, certifique-se de que você tem uma conexão de Internet ativa configurada em seu console.
-{: .notice--info}
+::: info
 
-{% capture set_date %}
-<summary>Se a data do sistema estiver incorreta, este método não irá funcionar.<br>Siga os passos abaixo para definir a data correta.</summary>
-1. Abra as Configurações do Sistema no seu console
-1. Selecione "Outras Configurações"
-1. Navegue até "Data e Hora" -> "Data de hoje"
-1. Use as setas para cima/baixo para definir o dia, mês e ano correto
-1. Selecione OK para confirmar
-{% endcapture %}
-<details>{{ set_date | markdownify }}</details>
-{: .notice--info}
+Se você ainda não tem, certifique-se de que você tem uma conexão de Internet ativa configurada em seu console.
+
+:::
 
 1. No Menu HOME, pressione os gatilhos da Esquerda e da Direita ao mesmo tempo para abrir a câmera
-    + Se você não consegue abrir a câmera, abra o Navegador de Internet e digite manualmente a URL (`https://zoogie.github.io/web/super/` para EUR/USA/JPN, `https://zoogie.github.io/web/korea` para KOR)
-1. Toque no botão do código QR e digitalize um dos seguintes códigos QR para a região do seu console [aqui](https://user-images.githubusercontent.com/28328903/226086338-585bfdac-0aac-44c0-b413-89206d2815d8.png)
-    + Se você receber um aviso de certificado de segurança, aperte (A) para permitir a conexão
-1. Pressione o botão (Select) para abrir a aba de favoritos
-    + Se o seu botão (Select) não responder, toque no ícone de estrela no canto inferior esquerdo da tela
-1. Toque em "Adicionar aos favoritos"
-1. Aperte (B) uma vez para retornar ao navegador
-1. Aperte (Start) para abrir o menu de contexto
-    + Se o seu botão (Start) não responder, toque no menu de 3 linhas no canto inferior direito da tela
-1. Toque em "Configurações"
-1. Toque em "Excluir Cookies"
-1. Aperte (A) para continuar
-1. Aperte (Home) para retornar ao Menu HOME, depois aperte (A) imediatamente para iniciar o navegador novamente
-1. Selecione o botão "GO GO!" na tela superior
-    + Se qualquer prompt aparecer, aprove todos eles
-    + Se o seu console congela em uma tela amarela, segure o botão POWER até que ele desligue e tente esta seção novamente
-    + Se o seu console congela numa tela vermelha, segure o botão POWER até que ele desligue, refaça o passo 3 da Seção II e tente novamente esta seção
-    + Se seu console mostra "Text" na tela de baixo, você tem um Old 3DS e este método **não irá funcionar em seu dispositivo**. Se este for o caso, siga [Instalando boot9strap (MSET9)](installing-boot9strap-(mset9)) ao invés disso
-    + Se você receber outro erro, tente novamente até 5 vezes e, se ainda não funcionar, [siga este guia de troubleshooting](troubleshooting#installing-boot9strap-super-skaterhax)
-1. Seu console terá inicializado o Homebrew Launcher
-1. Abra o nimdsphax da lista de homebrews
-1. Se o exploit for bem-sucedido, você terá entrado no SafeB9SInstaller
-    + Se o seu console congelar em uma tela vermelha ou verde, segure o botão POWER até que ele desligue, então tente esta seção novamente
-    + Isso pode levar até cinco tentativas
+   - If you are unable to open the camera, open the Internet Browser and manually type the URL instead (`https://zoogie.github.io/web/super/` for EUR/USA/JPN, `https://zoogie.github.io/web/korea` for KOR)
+2. Toque no botão do código QR e digitalize um dos seguintes códigos QR para a região do seu console [aqui](https://user-images.githubusercontent.com/28328903/226086338-585bfdac-0aac-44c0-b413-89206d2815d8.png)
+   - If you get a security certificate warning, please ensure that the system date is today's
+3. Press (Select) to open the bookmark tab
+   - If your (Select) button does not respond, tap the star icon on the bottom-left corner of the screen
+4. Toque em "Adicionar aos favoritos"
+5. Aperte (B) uma vez para retornar ao navegador
+6. Press (ZR) to open the tab list
+   - If your (ZR) button does not respond, tap the two overlapped squares near the bottom-right corner of the screen
+7. Make sure that the only tab open is the super-skaterhax website
+   - This tab should be highlighted in blue on the tab list
+   - If other tabs are open, close them
+8. Aperte (B) uma vez para retornar ao navegador
+9. Aperte (Start) para abrir o menu de contexto
+   - If your (Start) button does not respond, tap the 3-line menu on the bottom-right corner of the screen
+10. Toque em "Configurações"
+11. Toque em "Excluir Cookies"
+12. Aperte (A) para continuar
+13. Aperte (Home) para retornar ao Menu HOME, depois aperte (A) imediatamente para iniciar o navegador novamente
+14. Select the "GO GO!" button on the top of the bottom screen
+15. Press (A) to dismiss the [popup](/images/screenshots/skaterhax/skater-popup.png)
+    - If your console freezes on a yellow screen, hold the POWER button until it turns off, then retry this section
+    - If your console freezes on a red screen, hold the POWER button until it turns off, redo step 3 of Section II, then retry this section
+    - If your console [shows the word Text on the top-left corner of the bottom screen](/images/screenshots/skaterhax/skater-old3ds.png), you have an Old 3DS and this exploit **will not work on your device**. Se este for o caso, siga [Instalando boot9strap (MSET9)](installing-boot9strap-\(mset9\)) ao invés disso
+    - If you get another error, try again up to 5 times, and if it still doesn't work, [follow this troubleshooting guide](troubleshooting#installing-boot9strap-super-skaterhax)
+16. Seu console terá inicializado o Homebrew Launcher
+17. Abra o nimdsphax da lista de homebrews
+18. Se o exploit for bem-sucedido, você terá entrado no SafeB9SInstaller
+    - If your console freezes on a red or green screen, hold the POWER button until it turns off, then retry this section
+    - This may take up to five attempts
 
-#### Seção III - Instalando o boot9strap
+#### Section III - Installing boot9strap
 
-{% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
-{%- include_relative include/configure-luma3ds.txt %}
+Nesta seção, você instalará custom firmware no seu console.
 
-{% include_relative include/luma3ds-installed-note.txt %}
+1. Quando solicitado, aperte a sequência de botões fornecida na tela superior para instalar o boot9strap
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+2. Quando concluído, aperte (A) para reiniciar o seu console
+
+<!--@include: ./_include/configure-luma3ds.md -->
+
+<!--@include: ./_include/luma3ds-installed-note.md -->
 
 ___
 
-### Continue para [Finalizando a instalação](finalizing-setup)
-{: .notice--primary}
+::: info
+
+You may now restore your region settings back to normal.
+
+:::
+
+::: tip
+
+Continue to [Finalizing Setup](finalizing-setup)
+
+:::
