@@ -1,40 +1,48 @@
----
-title: "F3XSwift (Mac)"
----
+# F3XSwift (Mac)
 
-{% include toc title="Tabla de contenidos" %}
+## Required Reading
 
-### Lectura requerida
+This is an add-on section for checking your SD card for errors using F3XSwift.
 
-Esta es una sección adicional para buscar errores en tu tarjeta SD usando F3XSwift.
+Depending on the size of your SD card and the speed of your computer, this process can take up to several hours!
 
-Dependiendo del tamaño de tu tarjeta SD y la velocidad de tu computadora, ¡este proceso podría tardar varias horas!
+This page is for Mac users only. If you are not on Mac, check out the [H2testw (Windows)](h2testw-\(windows\)) or [F3 (Linux)](f3-\(linux\)) pages.
 
-Esta página es sólo para usuarios de Mac. Si no eres usuario de Mac, revisa las páginas [H2testw (Windows)](h2testw-(windows)) o [F3 (Linux)](f3-(linux)).
+::: info
 
-F3XSwift sólo es compatible con macOS 10.13 (High Sierra) o superior. Si tienes una versión anterior de macOS, sigue [F3X (Mac)](f3x-(mac)).
-{: .notice--primary}
+F3XSwift is only compatible with macOS 10.13 (High Sierra) and above. If you have an older version of macOS, follow [F3X (Mac)](f3x-\(mac\)) instead.
 
-### Qué necesitas
+:::
 
-* La última versión de [F3XSwift](https://github.com/vrunkel/F3XSwift/releases/latest)
+## What You Need
 
-### Instrucciones
+- The latest release of [F3XSwift](https://github.com/vrunkel/F3XSwift/releases/latest)
 
-1. Inserta tu tarjeta SD en tu computadora
-1. Ejecuta la aplicación F3XSwift
-1. Selecciona tu tarjeta SD de la lista de volúmenes
-1. Haz clic en "Test"
-1. Haz clic en "Open" para confirmar la escritura de tu tarjeta SD
-1. Espera hasta que se complete el proceso
+## Instructions
+
+1. Insert your SD card into your computer
+2. Run the F3XSwift app
+3. Select your SD card from the list of volumes
+4. Click "Test"
+5. Click "Open" to confirm writing to your SD card
+6. Wait until the process is complete
 
 ___
 
-Si la comprobación muestra el resultado `Success! Your card is ok!`, your SD card is good and you can delete all `.h2w` files on your SD card.
-{: .notice--success}
+::: tip
 
-Si la comprobación muestra otro tipo de resultado, ¡tu tarjeta SD puede estar corrupta o dañada y tendrás que reemplazarla!
-{: .notice--danger}
+If the test shows the result `Success! Your card is ok!`, your SD card is good and you can delete all `.h2w` files on your SD card.
 
-### Regresa a [Comencemos](get-started)
-{: .notice--primary}
+:::
+
+::: danger
+
+If the test shows any other results, your SD card may be corrupted or damaged and you may have to replace it!
+
+:::
+
+::: tip
+
+Return to [Get Started](get-started)
+
+:::
