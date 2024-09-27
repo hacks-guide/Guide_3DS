@@ -1,49 +1,62 @@
----
-title: "Extensiones de archivo (Windows)"
----
+# File Extensions (Windows)
 
-{% include toc title="Tabla de contenidos" %}
+## Required Reading
 
-### Lectura requerida
+This is an add-on section for disabling Windows's default behavior of hiding file extensions.
 
-Esta es una sección adicional para desactivar el comportamiento por defecto de Windows de ocultar las extensiones de archivos.
+This will make it easier for you to find the referenced files in the rest of this guide.
 
-Esto te facilitará encontrar los archivos referenciados en el resto de esta guía.
+## Instructions
 
-### Instrucciones
+### Windows 11
 
-#### Windows 11
+1. Launch File Explorer by opening any directory, such as your SD card directory
+2. Click the "View" option in the toolbar
+3. Go to "Show"
+4. Click "File name extensions" to enable it
 
-1. Inicia el explorador de archivos abriendo cualquier carpeta, como la de tu tarjeta SD
-1. Click the "View" option in the toolbar
-1. Go to "Show"
-1. Click "File name extensions" to enable it
+   ::: info
 
-    ![]({{ "/images/screenshots/windows-11-file-extensions.png" | absolute_url }})
-    {: .notice--info}
+   ![](/images/screenshots/windows-11-file-extensions.png)
 
-#### Windows 10 / 8.1 / 8
+   :::
 
-1. Inicia el explorador de archivos abriendo cualquier carpeta, como la de tu tarjeta SD
-1. Haz clic en la opción "Ver" en el menú de cinta
-1. Marca la casilla que dice "Extensiones de nombre de archivo"
+### Windows 10 / 8.1 / 8
 
-    ![]({{ "/images/screenshots/windows-10-file-extensions.png" | absolute_url }})
-    {: .notice--info}
+1. Launch File Explorer by opening any directory, such as your SD card directory
+2. Click the "View" option on the ribbon menu
+3. Check the box labeled "File name extensions"
 
-#### Windows 7
+   ::: info
 
-1. Abre el menú Inicio haciendo clic en él o usando la tecla Windows
-1. Busca "Opciones de carpeta" y selecciona el resultado con el mismo nombre
+   ![](/images/screenshots/windows-10-file-extensions.png)
 
-    ![]({{ "/images/screenshots/windows-7-folder-options-start-menu.png" | absolute_url }})
-    {: .notice--info}
+   :::
 
-1. Selecciona la pestaña "Ver" en la parte superior del menú que acaba de aparecer
-1. Desmarca la casilla que dice "Ocultar las extensiones de archivo para tipos de archivo conocidos"
+### Windows 7
 
-    ![]({{ "/images/screenshots/windows-7-folder-options.png" | absolute_url }})
-    {: .notice--info}
+1. Open the start menu by clicking on it or using the Windows key
 
-### Continue to [Get Started](get-started)
-{: .notice--primary}
+2. Search for "Folder Options" and select the corresponding result
+
+   ::: info
+
+   ![](/images/screenshots/windows-7-folder-options-start-menu.png)
+
+   :::
+
+3. Click the "View" option at the top of the Folder Options menu
+
+4. Uncheck the box labeled "Hide extensions for known file types"
+
+   ::: info
+
+   ![](/images/screenshots/windows-7-folder-options.png)
+
+   :::
+
+::: tip
+
+Continue to [Get Started](get-started)
+
+:::
