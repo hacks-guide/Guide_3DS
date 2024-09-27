@@ -1,6 +1,4 @@
----
-title: "Créditos"
----
+# Créditos
 
 Este guia é mantido atualmente por: **lifehackerhansol, lilyuwuu, eip618, ihaveamac, e adrot**, com contribuições significativas adicionais de **Gruetzig, danny8376, MechanicalDragon0687 e os vários membros da #community-resources** que fornecem dados valiosos.
 
@@ -8,85 +6,88 @@ Este guia usa softwares homebrew desenvolvidos por **SciresM, TuxSH, AuroraWrigh
 
 Se esquecemos de adicionar você a essa lista de créditos, [nos informe](https://github.com/hacks-guide/Guide_3DS/issues)!
 
-{% capture notice-6 %}
-**Agradecimentos especiais a:**
-+ **Plailect**, o criador e mantenedor original deste guia
-+ [Os tradutores deste guia](https://crowdin.com/project/3ds-guide), que tornam este guia mais acessível em todo o mundo
-+ Qualquer pessoa que já tenha enviado um issue, pull request ou de outra forma nos informou sobre problemas neste guia
-+ Os contribuintes históricos deste guia, sem o qual este guia não existiria hoje
-{% endcapture %}
-<div class="notice--primary">{{ notice-6 | markdownify }}</div>
+::: info
 
-{% capture old_credits %}
-<summary><em>Contribuidores históricos</em></summary>
-    + #Cakey no freenode
-    + Al3x_10m
-    + aliaspider
-    + AngelSL
-    + ashinnblunts
-    + AuroraWright
-    + b1l1s
-    + BernardoGiordano
-    + Cartman123
-    + Cell9
-    + coder65535
-    + Cruel
-    + d0k3
-    + dank101
-    + Dazzozo
-    + DeadPhoenix
-    + Delebile
-    + DinohScene
-    + dukesrg
-    + elementalcode
-    + elSeledonio
-    + erman1337
-    + felipejfc
-    + figgyc
-    + fox8091
-    + Frozen_Chen
-    + Gelex
-    + Hamcha
-    + icecream
-    + ihaveamac
-    + IngeniousDefault
-    + J-D-K
-    + Jisagi
-    + jkcgs
-    + kartik
-    + LordBass
-    + mid-kid
-    + MrNbaYoh
-    + Mrrraou
-    + Night_Fallen_Wolf
-    + Normmatt
-    + Plailect
-    + plutooo
-    + Psi-Hate
-    + RandallHoffman
-    + Raugo
-    + Reboot.ms
-    + s_99
-    + SciresM
-    + Shadowtrance
-    + shinyquagsire23
-    + skiptirengu
-    + smealum
-    + Steveice10
-    + stuckpixel
-    + Syphurith
-    + Tech0verlord
-    + TiniVi
-    + TuxSH
-    + Urbanshadow
-    + Vappy
-    + vegaroxas
-    + Wolfvak
-    + WulfyStylez
-    + xy2_
-    + yellows8
-    + yifan_lu
-    + zoogie
-{% endcapture %}
-<details>{{ old_credits | markdownify }}</details>
-{: .notice--info}
+**Agradecimentos especiais a:**
+
+- **Plailect**, the original creator and maintainer of this guide
+- [The guide translators](https://crowdin.com/project/3ds-guide), who make this guide more accessible around the world
+- Anyone who has ever submitted an issue, pull request, or otherwise informed us about problems on this guide
+- The historical contributors to this guide, without whom this guide would not exist today
+
+:::
+
+:::details Historical contributors
+
+```
++ #Cakey on freenode
++ Al3x_10m
++ aliaspider
++ AngelSL
++ ashinnblunts
++ AuroraWright
++ b1l1s
++ BernardoGiordano
++ Cartman123
++ Cell9
++ coder65535
++ Cruel
++ d0k3
++ dank101
++ Dazzozo
++ DeadPhoenix
++ Delebile
++ DinohScene
++ dukesrg
++ elementalcode
++ elSeledonio
++ erman1337
++ felipejfc
++ figgyc
++ fox8091
++ Frozen_Chen
++ Gelex
++ Hamcha
++ icecream
++ ihaveamac
++ IngeniousDefault
++ J-D-K
++ Jisagi
++ jkcgs
++ kartik
++ LordBass
++ mid-kid
++ MrNbaYoh
++ Mrrraou
++ Night_Fallen_Wolf
++ Normmatt
++ Plailect
++ plutooo
++ Psi-Hate
++ RandallHoffman
++ Raugo
++ Reboot.ms
++ s_99
++ SciresM
++ Shadowtrance
++ shinyquagsire23
++ skiptirengu
++ smealum
++ Steveice10
++ stuckpixel
++ Syphurith
++ Tech0verlord
++ TiniVi
++ TuxSH
++ Urbanshadow
++ Vappy
++ vegaroxas
++ Wolfvak
++ WulfyStylez
++ xy2_
++ yellows8
++ yifan_lu
++ zoogie
+```
+
+:::
