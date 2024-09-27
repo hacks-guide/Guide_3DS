@@ -1,47 +1,46 @@
 ---
-title: "Começando"
+noneSelected: Modelo do sistema é necessário.
+invalidVersion: Esta não parece ser uma versão válida de sistema.
+head:
+  - - script
+    - src: /assets/js/selecting.js
 ---
 
-{% include toc title="Tabela de Conteúdo" %}
+# Começando
 
 Antes de iniciar este guia, veremos se o custom firmware já está instalado e verificaremos a versão atual do sistema do seu console.
 
-#### Seção I - Checando por CFW
+### Section I - CFW Check
 
 1. Desligue seu console
-1. Segure o botão (Select)
-1. Ligue o seu console enquanto ainda segura o botão (Select)
-1. Se você não ver um menu personalizado (seu console apenas inicia no Menu HOME), você pode prosseguir para a próxima seção
+2. Segure o botão (Select)
+3. Ligue o seu console enquanto ainda segura o botão (Select)
+4. Se você não ver um menu personalizado (seu console apenas inicia no Menu HOME), você pode prosseguir para a próxima seção
+
+::: warning
 
 Se você ver a tela de configuração do Luma3DS ou qualquer outro menu personalizado (por exemplo, GodMode9, Decrypt9WIP), PARE - você já tem custom firmware! Continue [daqui](verifique-por-cfw#what-to-do-next).
-{: .notice--warning}
 
-#### Seção II - Verificação da Versão do Sistema
+:::
+
+### Section II - System Version Check
 
 1. Abra as Configurações do Sistema no seu console
-1. A versão do seu sistema será exibida na parte inferior direita da tela superior (por exemplo, "Ver. 11.17.0-50U")
+2. Your system version will be displayed on the bottom right of the top screen (e.g. "Ver. 11.17.0-50U")
 
-#### Seção III - Selecione um Método
+### Section III - Select a Method
 
 Para encontrar o método correto para o seu console, selecione o modelo do seu console e a versão do sistema que encontrou na Seção II.
 
-{% capture noneSelected %}
-Modelo do sistema é necessário.
-{% endcapture %}
-
-{% capture invalidVersion %}
-Esta não parece ser uma versão válida de sistema.
-{% endcapture %}
-
-{% include consoleVersionSelect.html noneSelected=noneSelected invalidVersion=invalidVersion methodUnavailable=methodUnavailable %}
+<!--@include: @/_internal/consoleVersionSelect.html -->
 
 ---
 
-#### Métodos alternativos
+#### Alternate Methods
 
 Se possível, você deve seguir o método fornecido pelo prompt acima.
 
 Caso contrário, métodos que funcionam em todas as versões estão disponíveis, mas requerem hardware adicional:
 
 1. [ntrboot](ntrboot) - requer um flashcart de DS compatível
-1. [Instalando boot9strap (Hardmod)](installing-boot9strap-(hardmod)) - requer soldagem
+2. [Instalando boot9strap (Hardmod)](installing-boot9strap-\(hardmod\)) - requer soldagem
