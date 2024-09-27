@@ -1,48 +1,50 @@
----
-title: "Flashear ntrboot (DSi)"
----
+# Flashing ntrboot (DSi)
 
-{% include toc title="Tabla de contenidos" %}
+## Required Reading
 
-### Lectura requerida
+Before proceeding, ensure you have read all of the information on [ntrboot](ntrboot)
 
-Antes de continuar, asegúrate de haber leído toda la información en [ntrboot](ntrboot)
+This method requires temporary access to a Nintendo DSi that is compatible with your flashcart. This method uses the flashcart to run the ntrboot flasher `.nds` file on your DSi. This means that your flashcart must support launching `.nds` files on your DSi's version. See the flashcart table on [ntrboot](ntrboot) for more information.
 
-Este método requiere de acceso temporal a una consola Nintendo DSi que sea compatible con la flashcart a utilizar. Este método utiliza la flashcart para ejecutar el archivo `.nds` del flasher de ntrboot en tu DSi. Esto significa que tu flashcart debe ser capaz de ejecutar archivos `.nds` en la versión de firmware de tu DSi. Consulta la tabla de flashcarts en [ntrboot](ntrboot) para más información.
+::: danger
 
-Ten en cuenta que en raras ocasiones, es posible que realizar el proceso de flasheo en un clon de flashcart podría dejarla **permanentemente inutilizable**. This is unlikely, but nevertheless, only original listed flashcarts are supported. To reduce the chance of receiving a counterfeit card, it is recommended that you use a reputable site to buy your flashcart (such as [NDS Card](https://www.nds-card.com/)).
-{: .notice--danger}
+Note that in some rare circumstances, it may be possible for the flashing process to **brick** a counterfeit flashcart and render it permanently unusable. This is unlikely, but nevertheless, only original listed flashcarts are supported. To reduce the chance of receiving a counterfeit card, it is recommended that you use a reputable site to buy your flashcart (such as [NDS Card](https://www.nds-card.com/)).
 
-### Qué necesitas
+:::
 
-* Tu flashcart compatible con ntrboot
-* Two consoles
-    * **The source DSi**: the Nintendo DSi which is compatible with your flashcart
-    * **The target 3DS**: the 3DS family console on stock firmware
-* The latest release of [ds_ntrboot_flasher](https://github.com/ntrteam/ds_ntrboot_flasher/releases/latest) (`ds_ntrboot_flasher_dsi.nds`)
+## What You Need
 
-### Instrucciones
+- Your ntrboot compatible flashcart
+- Two consoles
+  - **The source DSi**: the Nintendo DSi which is compatible with your flashcart
+  - **The target 3DS**: the 3DS family console on stock firmware
+- The latest release of [ds_ntrboot_flasher](https://github.com/ntrteam/ds_ntrboot_flasher/releases/latest) (`ds_ntrboot_flasher_dsi.nds`)
 
-#### Sección I - Preparativos
+## Instructions
 
-1. Apaga **la DSi de origen**
-1. Inserta la tarjeta SD de tu flashcart en tu computadora
-1. Copia `ds_ntrboot_flasher_dsi.nds` a la tarjeta SD de tu flashcart
-1. Reinserta la tarjeta SD de tu flashcart de regreso a ella
-1. Inserta tu flashcart de DS / DSi compatible con ntrboot en la **DSi de origen**
+### Section I - Prep Work
 
-#### Sección II - Flashear ntrboot
+1. Power off **the source DSi**
+2. Insert your flashcart's SD card into your computer
+3. Copy `ds_ntrboot_flasher_dsi.nds` to your flashcart's SD card
+4. Reinsert your flashcart's SD card back into your flashcart
+5. Insert your ntrboot compatible DS / DSi flashcart into **the source DSi**
 
-1. Ejecuta `ds_ntrboot_flasher_dsi.nds` en **la DSi de origen** usando tu flashcart
-1. Presiona (A) para continuar
-1. Usa (Arriba) y (Abajo) en el D-Pad para seleccionar tu flashcart
-1. Presiona (A) para continuar
-1. Presiona (A) para ejecutar la acción "inject ntrboothax"
-1. Presiona (A) para seleccionar "RETAIL"
-1. Presiona (A) para continuar
-1. Selecciona "EXIT"
+### Section II - Flashing ntrboot
+
+1. Launch `ds_ntrboot_flasher_dsi.nds` on **the source DSi** using your flashcart
+2. Press (A) to continue
+3. Use (Up) and (Down) to select your flashcart
+4. Press (A) to continue
+5. Press (A) to "inject ntrboothax"
+6. Press (A) to select "RETAIL"
+7. Press (A) to continue
+8. Select "EXIT"
 
 ___
 
-### Continúa a [Instalar boot9strap (ntrboot)](installing-boot9strap-(ntrboot))
-{: .notice--primary}
+::: tip
+
+Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
+
+:::
