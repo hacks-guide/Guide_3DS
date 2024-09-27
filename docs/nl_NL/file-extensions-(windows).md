@@ -1,49 +1,62 @@
----
-title: "Bestandsextensies (Windows)"
----
+# File Extensions (Windows)
 
-{% include toc title="Inhoudsopgave" %}
-
-### Verplicht te lezen
+## Required Reading
 
 Dit is een extra gedeelte voor het uitschakelen van het automatisch verbergen van bestandsextensies op Windows.
 
 Dit zal het gemakkelijker maken om de verwezen bestanden in de rest van deze handleiding te vinden.
 
-### Instructies
+## Instructions
 
-#### Windows 11
-
-1. Start Windows Verkenner door een map te openen, zoals je SD-kaart
-1. Klik op de "View" optie in het lintmenu
-1. Ga naar "Show"
-1. Klik op "File name extensions" om het te activeren
-
-    ![]({{ "/images/screenshots/windows-11-file-extensions.png" | absolute_url }})
-    {: .notice--info}
-
-#### Windows 10 / 8.1 / 8
+### Windows 11
 
 1. Start Windows Verkenner door een map te openen, zoals je SD-kaart
-1. Klik op de "View" optie in het lintmenu
-1. Check de box met het label "File name extensions" of 'Bestandsnaam extensies"
+2. Klik op de "View" optie in het lintmenu
+3. Ga naar "Show"
+4. Klik op "File name extensions" om het te activeren
 
-    ![]({{ "/images/screenshots/windows-10-file-extensions.png" | absolute_url }})
-    {: .notice--info}
+   ::: info
 
-#### Windows 7
+   ![](/images/screenshots/windows-11-file-extensions.png)
+
+   :::
+
+### Windows 10 / 8.1 / 8
+
+1. Start Windows Verkenner door een map te openen, zoals je SD-kaart
+2. Klik op de "View" optie in het lintmenu
+3. Check de box met het label "File name extensions" of 'Bestandsnaam extensies"
+
+   ::: info
+
+   ![](/images/screenshots/windows-10-file-extensions.png)
+
+   :::
+
+### Windows 7
 
 1. Open het start menu door erop te klikken of gebruik de Windows knop
-1. Zoek naar "Folder Options" of "Folder Opties" en selecteer het overeenkomstige resultaat
 
-    ![]({{ "/images/screenshots/windows-7-folder-options-start-menu.png" | absolute_url }})
-    {: .notice--info}
+2. Zoek naar "Folder Options" of "Folder Opties" en selecteer het overeenkomstige resultaat
 
-1. Klik op de "View" of "Beeld" optie bovenaan het Folder Opties menu
-1. Uncheck de box met label "Verberg extensies van bekende bestandsstypen"
+   ::: info
 
-    ![]({{ "/images/screenshots/windows-7-folder-options.png" | absolute_url }})
-    {: .notice--info}
+   ![](/images/screenshots/windows-7-folder-options-start-menu.png)
 
-### Ga verder naar het [Begin](get-started)
-{: .notice--primary}
+   :::
+
+3. Klik op de "View" of "Beeld" optie bovenaan het Folder Opties menu
+
+4. Uncheck de box met label "Verberg extensies van bekende bestandsstypen"
+
+   ::: info
+
+   ![](/images/screenshots/windows-7-folder-options.png)
+
+   :::
+
+::: tip
+
+Ga verder naar het [Begin](get-started)
+
+:::
