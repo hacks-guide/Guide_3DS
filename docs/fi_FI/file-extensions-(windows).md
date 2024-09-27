@@ -1,49 +1,62 @@
----
-title: "Tiedostotunnisteet (Windows)"
----
+# File Extensions (Windows)
 
-{% include toc title="Sisällysluettelo" %}
-
-### Tärkeää tietoa
+## Required Reading
 
 Tämä lisäosio opastaa sinua ottamaan pois käytöstä Windowsissa oletuksena olevan tiedostotunnisteiden piilottamisen.
 
 Tämä auttaa sinua löytämään helpommin tiedostot, joihin tässä oppaassa viitataan.
 
-### Ohjeet
+## Instructions
 
-#### Windows 11
-
-1. Avaa Resurssienhallinta avaamalla mikä tahansa kansio, kuten SD-korttisi hakemisto
-1. Click the "View" option in the toolbar
-1. Go to "Show"
-1. Click "File name extensions" to enable it
-
-    ![]({{ "/images/screenshots/windows-11-file-extensions.png" | absolute_url }})
-    {: .notice--info}
-
-#### Windows 10/8.1/8
+### Windows 11
 
 1. Avaa Resurssienhallinta avaamalla mikä tahansa kansio, kuten SD-korttisi hakemisto
-1. Napsauta "Näytä"-kohtaa valintanauhalta
-1. Aseta "Tiedostotunnisteet"-kohdan valintaruutu valituksi
+2. Click the "View" option in the toolbar
+3. Go to "Show"
+4. Click "File name extensions" to enable it
 
-    ![]({{ "/images/screenshots/windows-10-file-extensions.png" | absolute_url }})
-    {: .notice--info}
+   ::: info
 
-#### Windows 7
+   ![](/images/screenshots/windows-11-file-extensions.png)
+
+   :::
+
+### Windows 10 / 8.1 / 8
+
+1. Avaa Resurssienhallinta avaamalla mikä tahansa kansio, kuten SD-korttisi hakemisto
+2. Napsauta "Näytä"-kohtaa valintanauhalta
+3. Aseta "Tiedostotunnisteet"-kohdan valintaruutu valituksi
+
+   ::: info
+
+   ![](/images/screenshots/windows-10-file-extensions.png)
+
+   :::
+
+### Windows 7
 
 1. Avaa Käynnistä-valikko napsauttamalla sitä tai painamalla Windows-näppäintä
-1. Hae "Kansion asetukset" ja valitse se hakutuloksista
 
-    ![]({{ "/images/screenshots/windows-7-folder-options-start-menu.png" | absolute_url }})
-    {: .notice--info}
+2. Hae "Kansion asetukset" ja valitse se hakutuloksista
 
-1. Valitse "Näytä"-välilehti yläreunasta
-1. Ota valinta pois "Piilota tunnettujen tiedostotyyppien tunnisteet" -kohdan valintaruudusta
+   ::: info
 
-    ![]({{ "/images/screenshots/windows-7-folder-options.png" | absolute_url }})
-    {: .notice--info}
+   ![](/images/screenshots/windows-7-folder-options-start-menu.png)
 
-### Continue to [Get Started](get-started)
-{: .notice--primary}
+   :::
+
+3. Valitse "Näytä"-välilehti yläreunasta
+
+4. Ota valinta pois "Piilota tunnettujen tiedostotyyppien tunnisteet" -kohdan valintaruudusta
+
+   ::: info
+
+   ![](/images/screenshots/windows-7-folder-options.png)
+
+   :::
+
+::: tip
+
+Continue to [Get Started](get-started)
+
+:::
