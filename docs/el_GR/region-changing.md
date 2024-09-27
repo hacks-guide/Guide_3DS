@@ -1,73 +1,80 @@
----
-title: "Αλλαγή περιοχής"
----
+# Αλλαγή περιοχής
 
-{% include toc title="Πίνακας περιεχομένων" %}
-
-### Απαραίτητη ανάγνωση
+## Required Reading
 
 Αυτή είναι μια πρόσθετη ενότητα σχετικά με την αλλαγή της περιοχής της κονσόλας σας. Αυτό επιτυγχάνεται με την εγκατάσταση του ειδώλου του CTRTransfer 11.15.0 για την επιθυμητή περιοχή. Αφού εγκαταστήσετε το είδωλο, μπορείτε να ενημερώσετε κανονικά την κονσόλα σας στο πιο πρόσφατο firmware (11.17.0).
 
 Σημειώστε ότι η αλλαγή περιοχής είναι σχεδόν πάντα περιττή, καθώς το Luma3DS υποστηρίζει παιχνίδια από άλλες περιοχές και [εξομοίωση περιοχής](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features) για μεμονωμένους τίτλους. Επιπλέον, το [TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu/releases) υποστηρίζει την εκτέλεση παιχνιδιών NDS με εναλλακτικές γλώσσες από άλλες περιοχές. Θα πρέπει να εκτελέσετε μια αλλαγή περιοχής μόνο εάν επιθυμείτε να χρησιμοποιήσετε το γραφικό περιβάλλον (UI) του συστήματός σας σε μια γλώσσα που δεν είναι διαθέσιμη στην τρέχουσα περιοχή της κονσόλας σας.
 
+::: info
+
 Αυτή η σελίδα υποθέτει ότι έχετε ήδη εγκαταστήσει το Luma3DS και το boot9strap. Εάν ακολουθήσατε αυτόν τον ιστότοπο μέχρι το τέλος (Ολοκλήρωση εγκατάστασης), διαθέτετε το Luma3DS και το boot9strap.
-{: .notice--info}
+
+:::
+
+::: warning
 
 Στα πλαίσια αυτής της διαδικασίας, θα γίνει επαναφορά των ρυθμίσεων του συστήματός σας στις προεπιλογές. Αυτές περιλαμβάνουν στοιχεία, όπως το όνομα χρήστη, τη χώρα και τη γλώσσα σας. **Τα εγκατεστημένα παιχνίδια και τα αποθηκευμένα δεδομένα τους δεν θα επηρεαστούν.**
-{: .notice--warning}
 
-{% capture notice-6 %}
+:::
+
+::: danger
+
 Εάν αλλάξετε την περιοχή της κονσόλας σας:
 
-+ Δεν θα μπορείτε να χρησιμοποιήσετε το NNID σας (εάν διαθέτετε). Τα NNID είναι κλειδωμένα στην περιοχή όπου δημιουργήθηκαν.
-+ Ενδέχεται να χάσετε την πρόσβαση στο eShop, ακόμα κι αν [διαγράψετε τον λογαριασμό σας στο eShop](https://en-americas-support.nintendo.com/app/answers/detail/a_id/74/~/how-to-delete-a-nintendo-eshop-account) εκ των προτέρων. Αυτό οφείλεται στο γεγονός ότι ορισμένοι τίτλοι τείνουν να παραμένουν συνδεδεμένοι με το 3DS, ακόμα και μετά τη διαγραφή του λογαριασμού (ειδικά στο New 3DS).
-    + Αυτό εξακολουθεί να έχει σημασία καθώς, ενώ δεν είναι πλέον δυνατές οι αγορές από το eShop, παρέχονται ακόμα ενημερώσεις παιχνιδιών. Οι ενημερώσεις μπορεί να παρέχουν επιπλέον περιεχόμενο ή να διορθώνουν σφάλματα.
-    + Αυτή η λογική ισχύει και για τις μεταφορές συστήματος, δηλαδή δεν μπορείτε να εκτελέσετε μια μεταφορά συστήματος από ένα 3DS με περιοχή USA σε ένα 3DS που υπέστη αλλαγή περιοχής από JPN σε USA.
-    + Η εφαρμογή «Pokémon Bank» απαιτεί επίσης λειτουργική πρόσβαση στο eShop.
-    + Βέβαια, η μεταφορά συστήματος και οι ενημερώσεις παιχνιδιών είναι κλειδωμένες ούτως ή άλλως βάσει περιοχής (π.χ. το ιαπωνικό eShop διαθέτει ενημερώσεις μόνο για τις ιαπωνικές εκδόσεις των παιχνιδιών).
-+ **Δεν θα μπορέσετε να αφαιρέσετε το custom firmware χωρίς να καταστεί μη λειτουργική η κονσόλα!** Εάν σκοπεύετε να αφαιρέσετε το custom firmware στο μέλλον, **ΠΡΕΠΕΙ* να επαναφέρετε το αντίγραφο ασφαλείας της NAND που δημιουργήθηκε πριν από την αλλαγή της περιοχής.
-{% endcapture %}
+- You will not be able to use your NNID (if you have one). Τα NNID είναι κλειδωμένα στην περιοχή όπου δημιουργήθηκαν.
+- You may not be able to access the eShop, even if you [delete your eShop account](https://en-americas-support.nintendo.com/app/answers/detail/a_id/74/~/how-to-delete-a-nintendo-eshop-account) beforehand. Αυτό οφείλεται στο γεγονός ότι ορισμένοι τίτλοι τείνουν να παραμένουν συνδεδεμένοι με το 3DS, ακόμα και μετά τη διαγραφή του λογαριασμού (ειδικά στο New 3DS).
+  - This is still relevant because, while purchases can no longer be made on eShop, game updates are still being provided. Οι ενημερώσεις μπορεί να παρέχουν επιπλέον περιεχόμενο ή να διορθώνουν σφάλματα.
+  - This logic extends to system transfers, meaning you would not be able to perform a system transfer from a USA 3DS to a region-changed JPN-to-USA 3DS.
+  - Pokémon Bank also requires working eShop access.
+  - That being said, system transfer and game updates are region locked anyway (e.g. Japanese eShop only has Japanese game updates).
+- **You will not be able to uninstall custom firmware without bricking the console!** If you intend to uninstall custom firmware in the future, you **MUST** restore your NAND backup that was created before the region change.
 
-<div class="notice--danger">{{ notice-6 | markdownify }}</div>
+:::
 
-### Τι χρειάζεστε
+## What You Need
 
-* Την πιο πρόσφατη έκδοση του [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (το αρχείο `.zip` του GodMode9)
-* Την πιο πρόσφατη έκδοση του [FBI](https://github.com/lifehackerhansol/FBI/releases/download/2.6.1/FBI.3dsx) (απευθείας λήψη)
-* Την πιο πρόσφατη έκδοση του [faketik](https://github.com/ihaveamac/faketik/releases/latest) *(το αρχείο `.3dsx`)*
-* Ένα πρόγραμμα torrent, όπως το [qBittorrent](https://www.qbittorrent.org/download.php) ή το [Deluge](http://dev.deluge-torrent.org/wiki/Download)
-    * Εάν διαθέτετε ήδη κάποιο πρόγραμμα torrent, δεν χρειάζεται να κάνετε λήψη ενός νέου
-* Το είδωλο του CTRTransfer 11.15.0 για τον τύπο της κονσόλας σας και την επιθυμητή περιοχή (π.χ. Κάντε λήψη του «New 3DS ή 2DS - USA» αν έχετε ένα New 3DS και θέλετε να αλλάξετε την περιοχή σας σε USA)
-{% include_relative include/ctrtransfer-images.txt %}
+- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
+- The latest release of [FBI](https://github.com/lifehackerhansol/FBI/releases/download/2.6.1/FBI.3dsx) (direct download)
+- The latest release of [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(the `.3dsx` file)_
+- A torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+  - If you already have a torrent client, you do not need to download a new one
+- The 11.15.0 CTRTransfer image for your console type of the region that you want to change to (e.g. Download "New 3DS or 2DS - USA" if you have a New 3DS and want to change your region to USA)
 
-### Οδηγίες
+<!--@include: ./_include/ctrtransfer-images.md -->
 
-#### Ενότητα I - Προετοιμασία
+## Instructions
 
-{% include_relative include/ctrtransfer-prep.txt %}
+### Section I - Prep Work
 
-#### Ενότητα II - Αντίγραφο ασφαλείας NAND
+<!--@include: ./_include/ctrtransfer-prep.md -->
+
+### Section II - NAND Backup
 
 1. Κρατήστε πατημένο το (Start) και ταυτόχρονα, ενεργοποιήστε την κονσόλα σας. Αυτή η ενέργεια θα εκκινήσει το GodMode9
-{% include_relative include/nand-backup.txt %}
 
-#### Ενότητα III - CTRTransfer
+<!--@include: ./_include/nand-backup.md -->
 
-{% include_relative include/ctrtransfer-main.txt %}
+### Section III - CTRTransfer
 
-#### Ενότητα IV - Εκκίνηση του FBI
+<!--@include: ./_include/ctrtransfer-main.md -->
 
-{% include_relative include/launch-hbl-dlp.txt %}
+### Section IV - Launching FBI
 
-#### Ενότητα V - Εκ νέου εγκατάσταση των ticket
+<!--@include: ./_include/launch-hbl-dlp.md -->
 
-{% include_relative include/ctrtransfer-ticket-copy.txt %}
+### Section V - Reinstalling Tickets
 
-#### Ενότητα VI - Διόρθωση ζητημάτων περιοχής
+<!--@include: ./_include/ctrtransfer-ticket-copy.md -->
 
-{% include_relative include/ctrnand-datayeet.txt %}
+### Section VI - Fixing locale-related issues
+
+<!--@include: ./_include/ctrnand-datayeet.md -->
 
 ___
 
+::: tip
+
 Έχετε αλλάξει επιτυχώς την περιοχή του 3DS σας!
-{: .notice--success}
+
+:::
