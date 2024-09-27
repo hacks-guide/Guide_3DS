@@ -1,90 +1,97 @@
----
-title: "Installing boot9strap (safecerthax)"
----
+# Installing boot9strap (safecerthax)
 
-{% include toc title="目录内容" %}
+:::details Technical Details (optional)
 
-{% capture technical_info %}
-<summary><em>技术细节（选看）</em></summary>
-For technical details on the exploit that you will be using on this page, see [here](https://github.com/MrNbaYoh/safecerthax).
+:::
 
-{% endcapture %}
-<details>{{ technical_info | markdownify }}</details>
-{: .notice--info}
-
-### 兼容性注意
+## Compatibility Notes
 
 safecerthax is compatible with all Old 3DS and Old 2DS consoles in all regions on system versions 1.0.0 through 11.14.0.
 
+::: info
+
 This exploit will not work on the New 3DS, New 3DS XL, or New 2DS XL. Please ensure that the console you are modding is an Old 3DS, Old 3DS XL, or Old 2DS before continuing.
-{: .notice--info}
 
-### 你需要准备点啥？
+:::
 
-* 最新版本的 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip)（直链）
-* 最新版本的 [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip)（直链）
-* 最新版本的 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)（下载 Luma3DS `.zip` 文件）
+## What You Need
 
-### 操作步骤
+- The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
+- The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
+- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
 
-#### Section I - Hardware Button Check
+## Instructions
+
+### Section I - Hardware Button Check
 
 In this section, you will see whether your shoulder buttons are working on your console. This will determine whether your console is compatible with this method.
 
 1. Power on your console
-1. Once you see the HOME Menu, press the (Left Shoulder) and (Right Shoulder) buttons at the same time
-    + The camera applet should appear
-1. 将主机关机
+2. Once you see the HOME Menu, press the (Left Shoulder) and (Right Shoulder) buttons at the same time
+   - The camera applet should appear
+3. 将主机关机
 
-If the camera did NOT appear, you cannot follow this method. If this is the case, use [Installing boot9strap (MSET9)](installing-boot9strap-(mset9)) instead.
-{: .notice--warning}
+::: warning
 
-#### 第二步 – 准备工作
+If the camera did NOT appear, you cannot follow this method. If this is the case, use [Installing boot9strap (MSET9)](installing-boot9strap-\(mset9\)) instead.
+
+:::
+
+### Section II - Prep Work
 
 In this section, you will copy the files needed to trigger the safecerthax exploit.
 
 1. 将你的 SD 卡插入到电脑
-1. 解压 Luma3DS `.zip` 里的 `boot.firm` 和 `boot.3dsx` 到你 SD 卡的根目录
-    + 根目录指的是你点进 SD 卡看到的目录，你可以在这个目录下看到 Nintendo 3DS 文件夹，但请不要点进去
-1. 在 SD 卡根目录创建一个名为 `boot9strap` 的文件夹
-1. 从boot9strap `.zip` 文件中复制 `boot9strap.firm` 和 `boot9strap.firm.sha` 到你SD卡的 `/boot9strap/` 文件夹中
-1. 从 SafeB9SInstaller `.zip` 压缩包中复制 `SafeB9SInstaller.bin` 到 SD 卡根目录下
-1. Reinsert your SD card into your console
-1. Power on your console
+2. 解压 Luma3DS `.zip` 里的 `boot.firm` 和 `boot.3dsx` 到你 SD 卡的根目录
+   - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
+3. 在 SD 卡根目录创建一个名为 `boot9strap` 的文件夹
+4. 从boot9strap `.zip` 文件中复制 `boot9strap.firm` 和 `boot9strap.firm.sha` 到你SD卡的 `/boot9strap/` 文件夹中
+5. 从 SafeB9SInstaller `.zip` 压缩包中复制 `SafeB9SInstaller.bin` 到 SD 卡根目录下
+6. Reinsert your SD card into your console
+7. Power on your console
 
-#### Section III - safecerthax proxy
+### Section III - safecerthax proxy
 
 In this section, you will change your Internet connection settings to use a proxy network designed to exploit the System Update feature of your console.
 
-{% include_relative include/addproxy.txt %}
+<!--@include: ./_include/addproxy.md -->
+
 1. 将主机关机
 
-#### Section IV - safecerthax
+### Section IV - safecerthax
 
 In this section, you will enter Safe Mode (a feature available on all 3DS family consoles) where safecerthax will be triggered, which will launch you into the boot9strap (custom firmware) installer.
 
 1. With your console still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your console
-    + Keep holding the buttons until the console boots into Safe Mode (a "system update" menu)
-1. Press "OK" to accept the update
-    + There is no update. This is part of the exploit
-1. Press "I accept" to accept the terms and conditions
-1. The update will eventually fail, with the error code `003-1099`. This is intended behaviour
-1. Press "OK" to close the error message
-1. 如果一切成功的话，你将自动进入 SafeB9SInstaller
-    + If the console freezes or crashes, force power off the console, then retry this section
+   - Keep holding the buttons until the console boots into Safe Mode (a "system update" menu)
+2. Press "OK" to accept the update
+   - There is no update. This is part of the exploit
+3. Press "I accept" to accept the terms and conditions
+4. The update will eventually fail, with the error code `003-1099`. This is intended behaviour
+5. Press "OK" to close the error message
+6. 如果一切成功的话，你将自动进入 SafeB9SInstaller
+   - If the console freezes or crashes, force power off the console, then retry this section
 
-#### 第五步 – 安装 boot9strap
+### Section V - Installing boot9strap
 
-{% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
-{%- include_relative include/configure-luma3ds.txt %}
+In this section, you will install custom firmware onto your console.
 
-{% include_relative include/luma3ds-installed-note.txt %}
+1. When prompted, input the key combo given on the top screen to install boot9strap
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+2. Once it is complete, press (A) to reboot your console
 
-#### Section VI - Restoring default proxy
+<!--@include: ./_include/configure-luma3ds.md -->
 
-{% include_relative include/rmproxy.txt %}
+<!--@include: ./_include/luma3ds-installed-note.md -->
+
+### Section VI - Restoring default proxy
+
+<!--@include: ./_include/rmproxy.md -->
 
 ___
 
-### 继续至[完成安装](finalizing-setup)
-{: .notice--primary}
+::: tip
+
+Continue to [Finalizing Setup](finalizing-setup)
+
+:::
