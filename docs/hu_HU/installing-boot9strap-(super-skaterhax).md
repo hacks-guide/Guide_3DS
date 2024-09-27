@@ -1,106 +1,125 @@
----
-title: "Boot9strap telepítése (super-skaterhax)"
----
+# Boot9strap telepítése (super-skaterhax)
 
-{% include toc title="Tartalomjegyzék" %}
+:::details Technical Details (optional)
 
-{% capture technical_info %}
-<summary><em>Technikai részletek (opcionális)</em></summary>
 A technikai részletei az ezen az oldalon használt exploit-oknak [itt](https://github.com/zoogie/super-skaterhax) találhatók.
 
-{% endcapture %}
-<details>{{ technical_info | markdownify }}</details>
-{: .notice--info}
+:::
 
-### Kompatibilitási megjegyzések
+### Compatibility Notes
 
 A super-skaterhax (ami a Homebrew Launcher indítására használt) kompatibilis a 11.15.0 és a feletti verziós New modellekkel minden régióban.
 
+::: warning
+
 A megadott lépések csak a New 3DS, New 3DS XL és New 2DS XL típusokra vonatkoznak. Mielőtt folytatnád, kérjük ellenőrizd, hogy a moddolandó konzolod New 3DS, New 3DS XL, vagy New 2DS XL.
-{: .notice--warning}
 
-### Amire szükséged lesz
+:::
 
-* A [super-skaterhax](https://github.com/zoogie/super-skaterhax/releases) legújabb kiadása (a kiadás`.zip` fájl)
-* A [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) legfrisseb verziója (közvetlen letöltés)
-* A [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) legfrisseb verziója (közvetlen letöltés)
-* A [nimdsphax](https://github.com/luigoalma/nimdsphax/releases/download/v1.0/nimdsphax_v1.0.zip) legfrissebb verziója (közvetlen letöltés)
-* A [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) legújabb kiadása (a Luma3DS `.zip` fájl)
+### What You Need
 
-#### I. rész - Előkészületek
+- The [super-skaterhax](https://toxicaven.dev/skater) zip for your console's region and system version
+
+#### Section I - Prep Work
 
 Ebben a fejezetben fel fogod másolni a fájlokat, amik a super-skaterhax és a Homebrew Launcher triggereléshez szükségesek.
 
 1. Kapcsold ki a konzolod
-1. Helyezd az SD kártyád a számítógépbe
-1. Másold át a `boot.firm` és `boot.3dsx` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
-    + Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne
-1. Másolj mindent át a konzolod régiójának megfelelő mappájából (`arm11code.bin` és `browserhax_hblauncher_ropbin_payload.bin`) a release_new3ds `.zip`-nek az SD kártyád gyökerébe
-1. Hozz létre egy mappát `boot9strap` néven az SD kártya gyökerében
-1. Másold át a `boot9strap.firm` fájlt és a `boot9strap.firm.sha` fájlt a boot9strap `.zip` fájlból az SD kártyád `/boot9strap/` mappájába
-1. Másold át a `SafeB9SInstaller.bin` fájlt a SafeB9SInstaller `.zip`-ből az SD kártyád gyökerébe
-1. Hozz létre egy mappát `3ds` néven az SD kártyád gyökerében, ha még nem létezik ilyen
-    + Ez a mappa tárolja a homebrew applikációkat és adataikat; ez mást mint a `Nintendo 3DS` mappa, amit a konzol automatikusan generál
-1. Másold át a `nimdsphax` mappát a nimdsphax `.zip`-ből az SD kártya gyökerében található `3ds` mappába
-1. Tedd vissza az SD kártyád a konzoldba
-1. Kapcsold be a konzolod
 
-![]({{ "/images/screenshots/skater-root-layout.png" | absolute_url }})
-{: .notice--info}
+2. Helyezd az SD kártyád a számítógépbe
 
+3. Másolj át a mindent a sk8rhax `.zip`-ből az SD kártyád gyökerébe, felülírva minden már ott lévő fájlt
 
-#### II. rész - super-skaterhax
+   ::: info
+
+   ![](/images/screenshots/skater-root-layout.png)
+
+   :::
+
+4. Tedd vissza az SD kártyád a konzoldba
+
+5. Kapcsold be a konzolod
+
+6. Indítsd el a System Settings-et
+
+7. Válaszd az "Other Settings"-t
+
+8. Navigálj a "Profile" -> "Region Settings" opcióhoz
+   - If you get a [warning](/images/screenshots/skaterhax/country-change-notice.png) that tells you that you will lose access to Nintendo Network ID features, you can safely select OK to continue
+   - After completing this page, you can restore the region settings back to normal
+
+9. Válaszd ki a következő opciókat a konzolod régiójának megfelelően ([kép](/images/screenshots/skaterhax/skater-lang.png))
+   - USA: United States, Do Not Set
+   - EUR: United Kingdom, Do Not Set
+   - JPN: 日本, 設定しない
+   - KOR: 대한민국, 설정하지 않음
+
+10. Lépj ki a System Settings-ből
+
+#### Section II - super-skaterhax
 
 Ebben a fejezetben meg fogod látogatni a browser exploit weboldalt, ami elindítja a Homebrew Launcher-t.
 
-Ha még nem történt meg, biztosítsd, hogy legyen működő Internet kapcsolata a konzolodnak.
-{: .notice--info}
+::: info
 
-{% capture set_date %}
-<summary>Ha a rendszer dátumod inkorrekt, ez az exploit nem fog működni.<br>Kérjük kövesd az alábbi lépéseket a helyes rendszer dátum beállításához.</summary>
-1. Lépj be a "System Settings"-be a konzolodon
-1. Válaszd az "Other Settings"-t
-1. Navigálj ide: "Date & Time" -> "Today's date"
-1. A fel/le nyilakkal állítsd be a helyes napot, hónapot és évet
-1. Nyomj OK-t a jóváhagyáshoz
-{% endcapture %}
-<details>{{ set_date | markdownify }}</details>
-{: .notice--info}
+Ha még nem történt meg, biztosítsd, hogy legyen működő Internet kapcsolata a konzolodnak.
+
+:::
 
 1. A HOME menüben nyomd meg a bal és jobb váll gombokat egyszerre, hogy megnyisd a kamerát
-    + Ha nem tudod megnyitni a kamerát, nyisd meg az Internet Browser-t kézzel, és írd be az URL-t e helyett. (`https://zoogie.github.io/web/super/` az EUR/USA/JPN régiókhoz, `https://zoogie.github.io/web/korea` a KOR régióhoz)
-1. Nyomd meg a QR kód gombot és olvasd be a következő QR kódok egyikét, ami megfelel a konzol régiódnak, [itt](https://user-images.githubusercontent.com/28328903/226086338-585bfdac-0aac-44c0-b413-89206d2815d8.png)
-    + Ha tanúsítvány figyelmeztetést kapsz, nyomd meg az (A) gombot a kapcsolat engedélyezéséhez
-1. Nyomd meg a (Select) gombot a könyvjelző fül megnyitásához
-    + Ha a (Select) gombod nem reagál, akkor érintsd meg a csillag ikont a bal alsó sarkában a képernyőnek
-1. Éríntsd meg a "Bookmark this page" feliratot
-1. Nyomd meg a (B) gombot egyszer, hogy visszatérj a böngészőhöz
-1. Nyomd meg a (START) gombot, hogy megnyisd a helyérzékeny menüt
-    + Ha a (Start) gombod nem reagál, akkor érintsd meg 3-vonal menüt a jobb alsó sarkában a képernyőnek
-1. Érintsd meg a "Settings"-et
-1. Érintsd meg a "Delete Cookies"-t
-1. Nyomd meg az (A) gombot a folytatáshoz
-1. Nyomj (Home) gombot a HOME Menübe visszatéréshez, majd nyomj azonnal egy (A)-t a böngésző ismételt elindításához
-1. Válaszd a "GO GO!" gombot a felső képernyőn
-    + Ha bármilyen kérdés előjön, fogadd el mind
-    + Ha a konzolod lefagy egy sárga képernyőn, tartsd nyomva a POWER gombot, amíg ki nem kapcsol, és próbáld újra ezt a részt
-    + Ha a konzolod lefagy egy piros képernyőn, tartsd nyomva a POWER gombot, amíg ki nem kapcsol, csináld újra a 3. lépést a II. részben, majd próbáld újra ezt a részt
-    + Ha a konzolod "Text"-et jelenít meg az alsó képernyőn, akkor Old 3DS-ed van és ez az exploit **nem fog működni az eszközödön**. Ha ez az eset, használd az [MSET9](installing-boot9strap-(mset9))-et helyette
-    + Ha más hibát kapsz, próbáld meg 5x, és ha még minden nem megy [kövesd ezt a hibaelhárítási útmutatót](troubleshooting#installing-boot9strap-super-skaterhax)
-1. Ekkor a konzolodnak be kell bootolni a Homebrew Launcher-be
-1. Indítsd el a nimdsphax-et a homebrew listájáról
-1. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
-    + Ha a konzolod lefagy egy vörös vagy zöld képernyőn, tartsd nyomva a POWER gombot, amíg ki nem kapcsol, és próbáld újra ezt a részt
-    + Ez lehet 5 próbálkozást is igényel
+   - If you are unable to open the camera, open the Internet Browser and manually type the URL instead (`https://zoogie.github.io/web/super/` for EUR/USA/JPN, `https://zoogie.github.io/web/korea` for KOR)
+2. Nyomd meg a QR kód gombot és olvasd be a következő QR kódok egyikét, ami megfelel a konzol régiódnak, [itt](https://user-images.githubusercontent.com/28328903/226086338-585bfdac-0aac-44c0-b413-89206d2815d8.png)
+   - If you get a security certificate warning, please ensure that the system date is today's
+3. Nyomj (Select) gombot a könyvjelző fül megnyitásához
+   - If your (Select) button does not respond, tap the star icon on the bottom-left corner of the screen
+4. Éríntsd meg a "Bookmark this page" feliratot
+5. Nyomd meg a (B) gombot egyszer, hogy visszatérj a böngészőhöz
+6. Nyomj (ZR) gombot a fülek listájának megnyitásához
+   - If your (ZR) button does not respond, tap the two overlapped squares near the bottom-right corner of the screen
+7. Legyél biztos abban, hogy az egyetlen nyitott fül az a super-skaterhax weboldala
+   - This tab should be highlighted in blue on the tab list
+   - If other tabs are open, close them
+8. Nyomd meg a (B) gombot egyszer, hogy visszatérj a böngészőhöz
+9. Nyomd meg a (START) gombot, hogy megnyisd a helyérzékeny menüt
+   - If your (Start) button does not respond, tap the 3-line menu on the bottom-right corner of the screen
+10. Érintsd meg a "Settings"-et
+11. Érintsd meg a "Delete Cookies"-t
+12. Nyomd meg az (A) gombot a folytatáshoz
+13. Nyomj (Home) gombot a HOME Menübe visszatéréshez, majd nyomj azonnal egy (A)-t a böngésző ismételt elindításához
+14. Válaszd a "GO GO!" gombot az alsó képernyőn
+15. Nyomj (A) gombot a felugró [popup](/images/screenshots/skaterhax/skater-popup.png) figyelmen kívül hagyásához
+    - If your console freezes on a yellow screen, hold the POWER button until it turns off, then retry this section
+    - If your console freezes on a red screen, hold the POWER button until it turns off, redo step 3 of Section II, then retry this section
+    - If your console [shows the word Text on the top-left corner of the bottom screen](/images/screenshots/skaterhax/skater-old3ds.png), you have an Old 3DS and this exploit **will not work on your device**. Ha ez az eset, használd az [MSET9](installing-boot9strap-\(mset9\))-et helyette
+    - If you get another error, try again up to 5 times, and if it still doesn't work, [follow this troubleshooting guide](troubleshooting#installing-boot9strap-super-skaterhax)
+16. Ekkor a konzolodnak be kell bootolni a Homebrew Launcher-be
+17. Indítsd el a nimdsphax-et a homebrew listájáról
+18. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
+    - If your console freezes on a red or green screen, hold the POWER button until it turns off, then retry this section
+    - This may take up to five attempts
 
-#### III. rész - boot9strap telepítése
+#### Section III - Installing boot9strap
 
-{% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
-{%- include_relative include/configure-luma3ds.txt %}
+Ebben a fejezetben egyedi firmware-t fogsz telepíteni a konzolodra.
 
-{% include_relative include/luma3ds-installed-note.txt %}
+1. Ha kéri, akkor nyomd meg a gombokat egyszerre, amiket kijelez a felső képernyőn, hogy telepíthesd a boot9strap-et
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+2. Ha ez elkészült, nyomd meg az (A) gombot a konzolod újraindításához
+
+<!--@include: ./_include/configure-luma3ds.md -->
+
+<!--@include: ./_include/luma3ds-installed-note.md -->
 
 ___
 
-### Tovább a [telepítés véglegesítésére](finalizing-setup)
-{: .notice--primary}
+::: info
+
+Most már visszaállíthatod a régiós beállításaidat a normálisra.
+
+:::
+
+::: tip
+
+Continue to [Finalizing Setup](finalizing-setup)
+
+:::
