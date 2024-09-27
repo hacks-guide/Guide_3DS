@@ -1,49 +1,62 @@
----
-title: "Estensioni dei file (Windows)"
----
+# File Extensions (Windows)
 
-{% include toc title="Indice" %}
-
-### Lettura necessaria
+## Required Reading
 
 In questa sezione aggiuntiva verrà spiegato come modificare l'impostazione di default di Windows relativa alla visualizzazione delle estensioni dei file.
 
 Ciò renderà più facile cercare i file citati nel resto della guida.
 
-### Istruzioni
+## Instructions
 
-#### Windows 11
-
-1. Avvia Esplora Risorse aprendo una qualsiasi cartella, come ad esempio la tua stessa scheda SD
-1. Clicca sul menu "Visualizza" nella barra superiore
-1. Vai su "Mostra"
-1. Clicca su "Estensioni nomi file" per abilitarla
-
-    ![]({{ "/images/screenshots/windows-11-file-extensions.png" | absolute_url }})
-    {: .notice--info}
-
-#### Windows 10 / 8.1 / 8
+### Windows 11
 
 1. Avvia Esplora Risorse aprendo una qualsiasi cartella, come ad esempio la tua stessa scheda SD
-1. Clicca sul menu "Visualizza" nella barra superiore
-1. Spunta la casella denominata "Estensioni nomi file"
+2. Clicca sul menu "Visualizza" nella barra superiore
+3. Vai su "Mostra"
+4. Clicca su "Estensioni nomi file" per abilitarla
 
-    ![]({{ "/images/screenshots/windows-10-file-extensions.png" | absolute_url }})
-    {: .notice--info}
+   ::: info
 
-#### Windows 7
+   ![](/images/screenshots/windows-11-file-extensions.png)
+
+   :::
+
+### Windows 10 / 8.1 / 8
+
+1. Avvia Esplora Risorse aprendo una qualsiasi cartella, come ad esempio la tua stessa scheda SD
+2. Clicca sul menu "Visualizza" nella barra superiore
+3. Spunta la casella denominata "Estensioni nomi file"
+
+   ::: info
+
+   ![](/images/screenshots/windows-10-file-extensions.png)
+
+   :::
+
+### Windows 7
 
 1. Apri il menu start cliccandoci sopra o premendo il tasto Windows
-1. Cerca "Opzioni cartella" e seleziona il risultato corrispondente
 
-    ![]({{ "/images/screenshots/windows-7-folder-options-start-menu.png" | absolute_url }})
-    {: .notice--info}
+2. Cerca "Opzioni cartella" e seleziona il risultato corrispondente
 
-1. Clicca sulla scheda "Visualizzazione" nella parte superiore della finestra Opzioni cartella
-1. Deseleziona la casella denominata "Nascondi le estensioni per i tipi di file conosciuti"
+   ::: info
 
-    ![]({{ "/images/screenshots/windows-7-folder-options.png" | absolute_url }})
-    {: .notice--info}
+   ![](/images/screenshots/windows-7-folder-options-start-menu.png)
 
-### Prosegui con [Cominciamo!](get-started)
-{: .notice--primary}
+   :::
+
+3. Clicca sulla scheda "Visualizzazione" nella parte superiore della finestra Opzioni cartella
+
+4. Deseleziona la casella denominata "Nascondi le estensioni per i tipi di file conosciuti"
+
+   ::: info
+
+   ![](/images/screenshots/windows-7-folder-options.png)
+
+   :::
+
+::: tip
+
+Prosegui con [Cominciamo!](get-started)
+
+:::
