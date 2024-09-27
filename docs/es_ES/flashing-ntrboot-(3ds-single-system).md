@@ -1,53 +1,55 @@
----
-title: "Flashear ntrboot (Una consola 3DS)"
----
+# Flashing ntrboot (3DS Single System)
 
-{% include toc title="Tabla de contenidos" %}
+## Required Reading
 
-### Lectura requerida
+Before proceeding, ensure you have read all of the information on [ntrboot](ntrboot)
 
-Antes de continuar, asegúrate de haber leído toda la información en [ntrboot](ntrboot)
+This method requires nothing more than your stock unhacked 3DS and a compatible flashcart. This method uses the flashcart to run the ntrboot flasher `.nds` file on your 3DS. This means that your flashcart must support launching `.nds` files on your 3DS's version. See the flashcart table on [ntrboot](ntrboot) for more information.
 
-Este método tan sólo requiere de tu consola 3DS sin modificar y un flashcart compatible. Este método utiliza la flashcart para ejecutar el archivo `.nds` del flasher de ntrboot en tu 3DS. Esto significa que tu flashcart debe ser capaz de ejecutar archivos `.nds` en la versión de tu 3DS. Consulta la tabla de flashcarts en [ntrboot](ntrboot) para más información.
+::: danger
 
-Ten en cuenta que en raras ocasiones, es posible que realizar el proceso de flasheo en un clon de flashcart podría dejarla **permanentemente inutilizable**. This is unlikely, but nevertheless, only original listed flashcarts are supported. To reduce the chance of receiving a counterfeit card, it is recommended that you use a reputable site to buy your flashcart (such as [NDS Card](https://www.nds-card.com/)).
-{: .notice--danger}
+Note that in some rare circumstances, it may be possible for the flashing process to **brick** a counterfeit flashcart and render it permanently unusable. This is unlikely, but nevertheless, only original listed flashcarts are supported. To reduce the chance of receiving a counterfeit card, it is recommended that you use a reputable site to buy your flashcart (such as [NDS Card](https://www.nds-card.com/)).
 
-### Qué necesitas
+:::
 
-* Tu flashcart compatible con ntrboot
-* The v1.3 release of [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (direct download)
-* The latest release of [ntrboot_flasher_nds](https://github.com/jason0597/ntrboot_flasher_nds/releases/latest) (`ntrboot_flasher_nds.nds`)
+## What You Need
 
-### Instrucciones
+- Your ntrboot compatible flashcart
+- The v1.3 release of [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (direct download)
+- The latest release of [ntrboot_flasher_nds](https://github.com/jason0597/ntrboot_flasher_nds/releases/latest) (`ntrboot_flasher_nds.nds`)
 
-#### Sección I - Preparativos
+## Instructions
 
-1. Apaga tu consola
-1. Inserta la tarjeta SD de tu flashcart en tu computadora
-1. Crea una carpeta llamada`ntrboot` en la raíz de la tarjeta SD de tu flashcart
-1. Copia el archivo `boot9strap_ntr.firm` desde el `.zip` de boot9strap ntr a la carpeta `/ntrboot/` en la tarjeta SD de tu flashcart
-1. Copia `ntrboot_flasher_nds.nds` a la tarjeta SD de tu flashcart
-1. Reinserta la tarjeta SD de tu flashcart de regreso a ella
-1. Insert your ntrboot compatible DS / DSi flashcart into your console
+### Section I - Prep Work
 
-#### Sección II - Flashear ntrboot
+1. Power off your console
+2. Insert your flashcart's SD card into your computer
+3. Create a folder named `ntrboot` on the root of your flashcart's SD card
+4. Copy `boot9strap_ntr.firm` from the boot9strap ntr `.zip` to the `/ntrboot/` folder on your flashcart's SD card
+5. Copy `ntrboot_flasher_nds.nds` to your flashcart's SD card
+6. Reinsert your flashcart's SD card back into your flashcart
+7. Insert your ntrboot compatible DS / DSi flashcart into your console
+
+### Section II - Flashing ntrboot
 
 1. Launch `ntrboot_flasher_nds.nds` on your console using your flashcart
-1. Presiona (A) para continuar
-1. Usa (Arriba) y (Abajo) en el D-Pad para seleccionar tu flashcart
-1. Presiona (A) para continuar
-1. Selecciona "Dump flash" para hacer un respaldo de la memoria de tu flashcart
-1. Ingresa la combinación de botones que se muestra para confirmar
-1. Presiona (A) para continuar
-1. Usa (Arriba) y (Abajo) en el D-Pad para seleccionar tu flashcart
-1. Presiona (A) para continuar
-1. Selecciona "Inject FIRM" para instalar boot9strap en tu flashcart
-1. Ingresa la combinación de botones que se muestra para confirmar
-1. Presiona (A) para continuar
-1. Apaga tu consola
+2. Press (A) to continue
+3. Use (Up) and (Down) to select your flashcart
+4. Press (A) to continue
+5. Select "Dump flash" to make a backup of your flashcart's memory
+6. Input the key combo given to confirm
+7. Press (A) to continue
+8. Use (Up) and (Down) to select your flashcart
+9. Press (A) to continue
+10. Select "Inject FIRM" to install boot9strap to your flashcart
+11. Input the key combo given to confirm
+12. Press (A) to continue
+13. Power off your console
 
 ___
 
-### Continúa a [Instalar boot9strap (ntrboot)](installing-boot9strap-(ntrboot))
-{: .notice--primary}
+::: tip
+
+Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
+
+:::
