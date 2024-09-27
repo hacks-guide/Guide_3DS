@@ -1,47 +1,52 @@
 ---
-layout: splash
-title: "Οδηγός τροποποίησης 3DS" #
-header:
-  overlay_color: "#5e616c" #
-  overlay_image: /images/home-page-feature.jpg
-  overlay_filter: 0.5
-  cta_label: "Ας ξεκινήσουμε"
-  cta_url: "key-information"
-  caption:
-excerpt: "Ένας πλήρης οδηγός σχετικά με το custom firmware <br /> για 3DS (και 2DS), από την αρχή έως το boot9strap.<br />"
+layout: home
+title: 3DS Hacks Guide
+hero:
+  text: 3DS Hacks Guide
+  tagline: A complete guide to 3DS (and 2DS) custom firmware, from stock to boot9strap.
+  image:
+    src: /images/home-page-feature.jpg
 ---
 
-Διαβάστε προσεκτικά όλες τις εισαγωγικές σελίδες (συμπεριλαμβανομένης και αυτής!) πριν προχωρήσετε.
-{: .notice--info}
+::: info
 
-{% capture update-notice %}
-{% include_relative include/3ds-online.txt %}
-{% endcapture %}
-<div class="notice--danger">{{ update-notice | markdownify }}</div>
+Thoroughly read all of the introductory pages (including this one!) before proceeding.
 
-## Τι είναι το custom firmware;
+:::
+
+::: danger
+
+<!--@include: ./_include/3ds-online.md -->
+
+:::
+
+## What is custom firmware?
 
 Το **custom firmware** («CFW») αποτελεί μια πλήρη τροποποίηση του λογισμικού του 3DS σας, συγκρίσιμη με την «πρόσβαση διαχειριστή» σε έναν υπολογιστή. Σας επιτρέπει να κάνετε οτιδήποτε είναι φυσικά ικανό να κάνει το 3DS, αντί να περιορίζεστε σε αυτά που επιτρέπει η Nintendo.
 
 Οι δημοφιλείς χρήσεις του custom firmware περιλαμβάνουν:
 
-* Εκτέλεση λογισμικού homebrew και παιχνιδιών που έχουν δημιουργηθεί ή μεταφερθεί στο Nintendo 3DS
-* Παράκαμψη του κλειδώματος περιοχής, επιτρέποντάς σας να παίζετε παιχνίδια από άλλες περιοχές
-* Προσαρμογή του μενού «HOME» με [θέματα και εμβλήματα](https://themeplaza.art) της κοινότητας
-* Τροποποίηση παιχνιδιών («ROM hacks») μέσω του [LayeredFS](https://github.com/knight-ryu12/godmode9-layeredfs-usage/wiki/Using-Luma3DS'-layeredfs-(Only-version-8.0-and-higher))
-* Επεξεργασία, αντιγραφή και επαναφορά αποθηκευμένων δεδομένων
-* Εξομοίωση παλαιότερων κονσολών, καθώς και εγγενή εκτέλεση παιχνιδιών DS και GBA
-* Εγκατάσταση φυσικών κασετών για ψηφιακή χρήση
+- Running homebrew software and games made for or ported to the Nintendo 3DS
+- Bypassing the region lock, allowing you to play games from other regions
+- HOME Menu customization, using community-created [themes and badges](https://themeplaza.art)
+- Modification of games ("ROM hacks") through [LayeredFS](https://github.com/knight-ryu12/godmode9-layeredfs-usage/wiki/Using-Luma3DS'-layeredfs-\(Only-version-8.0-and-higher\))
+- Save data editing, backup, and restore
+- Emulation of older consoles, as well as native playback of DS and GBA games
+- Installing your physical cartridges for digital use
 
-## Τι εγκαθιστά αυτός ο οδηγός;
+## What does this guide install?
 
 Αυτός ο οδηγός θα:
-+ Εγκαταστήσει το **boot9strap** και το **custom firmware «Luma3DS»** σε μη τροποποιημένες κονσόλες 3DS/2DS
-    + Το Luma3DS θα αφαιρέσει αυτόματα το κλείδωμα βάσει περιοχής και θα σας επιτρέψει να εκτελείτε μη υπογεγραμμένο λογισμικό
-+ Εγκαταστήσει διάφορα είδη λογισμικού homebrew, όπως μια εφαρμογή εγκατάστασης πακέτων, μια εφαρμογή διαχείρισης αποθηκευμένων δεδομένων και ένα κατάστημα εφαρμογών homebrew
-+ Δημιουργήσει αντίγραφα ασφαλείας για σημαντικά αρχεία συστήματος, ώστε να αποφύγετε το ενδεχόμενο να καταστήσετε μη λειτουργική την κονσόλα σας (και να ανακτήσετε τα δεδομένα σε περίπτωση που συμβεί κάτι τέτοιο)
+
+- Install **boot9strap** and **Luma3DS custom firmware** on unmodified retail 3DS/2DS consoles
+  - Luma3DS will automatically remove the region lock and allow you to run unsigned software
+- Install various pieces of homebrew software, such as a package installer, save file manager, and a homebrew app store
+- Make critical system file backups that can help avoid bricks (and recover data in the event of one)
 
 ___
 
-### Συνέχεια στις [Βασικές πληροφορίες](key-information)
-{: .notice--primary}
+::: tip
+
+Continue to [Key Information](key-information)
+
+:::
