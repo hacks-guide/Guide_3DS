@@ -1,106 +1,125 @@
----
-title: "Εγκατάσταση του boot9strap (super-skaterhax)"
----
+# Εγκατάσταση του boot9strap (super-skaterhax)
 
-{% include toc title="Πίνακας περιεχομένων" %}
+:::details Technical Details (optional)
 
-{% capture technical_info %}
-<summary><em>Τεχνικές λεπτομέρειες (προαιρετικό)</em></summary>
 Για τεχνικές λεπτομέρειες σχετικά με τα exploit που θα χρησιμοποιήσετε σε αυτήν τη σελίδα, δείτε [εδώ](https://github.com/zoogie/super-skaterhax).
 
-{% endcapture %}
-<details>{{ technical_info | markdownify }}</details>
-{: .notice--info}
+:::
 
-### Σημειώσεις συμβατότητας
+### Compatibility Notes
 
 Το super-skaterhax (όταν χρησιμοποιείται για την εκκίνηση του Homebrew Launcher) είναι συμβατό με τα μοντέλα New στην έκδοση 11.15.0 και νεότερες, σε όλες τις περιοχές.
 
+::: warning
+
 Οι παρεχόμενες οδηγίες αφορούν μόνο τα New 3DS, New 3DS XL και New 2DS XL. Βεβαιωθείτε ότι η κονσόλα που τροποποιείτε είναι ένα New 3DS, New 3DS XL ή New 2DS XL πριν συνεχίσετε.
-{: .notice--warning}
 
-### Τι χρειάζεστε
+:::
 
-* Την πιο πρόσφατη έκδοση του [super-skaterhax](https://github.com/zoogie/super-skaterhax/releases) (το αρχείο `.zip` του release)
-* Την πιο πρόσφατη έκδοση του [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (απευθείας λήψη)
-* Την πιο πρόσφατη έκδοση του [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (απευθείας λήψη)
-* Την πιο πρόσφατη έκδοση του [nimdsphax](https://github.com/luigoalma/nimdsphax/releases/download/v1.0/nimdsphax_v1.0.zip) (απευθείας λήψη)
-* Την πιο πρόσφατη έκδοση του [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (το αρχείο `.zip` του Luma3DS)
+### What You Need
 
-#### Ενότητα I - Προετοιμασία
+- The [super-skaterhax](https://toxicaven.dev/skater) zip for your console's region and system version
+
+#### Section I - Prep Work
 
 Σε αυτήν την ενότητα, θα αντιγράψετε τα αρχεία που απαιτούνται για την ενεργοποίηση τόσο του super-skaterhax όσο και του Homebrew Launcher.
 
 1. Απενεργοποιήστε την κονσόλα σας
-1. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
-1. Αντιγράψτε τα `boot.firm` και `boot.3dsx` από το αρχείο `.zip` του Luma3DS στη ρίζα της κάρτας SD σας
-    + Η ρίζα της κάρτας SD είναι ο αρχικός κατάλογος της κάρτας SD σας, όπου μπορείτε να δείτε τον φάκελο «Nintendo 3DS», αλλά χωρίς να βρίσκεστε μέσα σε αυτόν
-1. Αντιγράψτε όλα όσα περιέχονται στον φάκελο για την περιοχή και την έκδοση της κονσόλας σας (`arm11code.bin` και `browserhax_hblauncher_ropbin_payload.bin`), από το αρχείο `.zip` του release_new3ds στη ρίζα της κάρτας SD σας
-1. Δημιουργήστε έναν φάκελο με το όνομα `boot9strap` στη ρίζα της κάρτας SD σας
-1. Αντιγράψτε τα `boot9strap.firm` και `boot9strap.firm.sha` από το αρχείο `.zip` του boot9strap στον φάκελο `/boot9strap/` της κάρτας SD σας
-1. Αντιγράψτε το `SafeB9SInstaller.bin` από το αρχείο `.zip` του SafeB9SInstaller στη ρίζα της κάρτας SD σας
-1. Δημιουργήστε έναν φάκελο με το όνομα `3ds` στη ρίζα της κάρτας SD σας αν δεν υπάρχει ήδη
-    + Αυτός ο φάκελος αποθηκεύει τις εφαρμογές homebrew και τα δεδομένα· είναι διαφορετικός από τον φάκελο `Nintendo 3DS` που δημιουργεί αυτόματα η κονσόλα
-1. Αντιγράψτε τον φάκελο `nimdsphax` από το αρχείο `.zip` του nimdsphax στον φάκελο `/3ds/` της κάρτας SD σας
-1. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
-1. Ενεργοποιήστε την κονσόλα σας
 
-![]({{ "/images/screenshots/skater-root-layout.png" | absolute_url }})
-{: .notice--info}
+2. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
 
+3. Αντιγράψτε τα πάντα από το αρχείο `.zip` του sk8rhax στη ρίζα της κάρτας SD σας, αντικαθιστώντας τυχόν υπάρχοντα αρχεία
 
-#### Ενότητα II - super-skaterhax
+   ::: info
+
+   ![](/images/screenshots/skater-root-layout.png)
+
+   :::
+
+4. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
+
+5. Ενεργοποιήστε την κονσόλα σας
+
+6. Εκκινήστε την εφαρμογή «System Settings»
+
+7. Επιλέξτε «Other Settings»
+
+8. Μεταβείτε στο «Profile» -> «Region Settings»
+   - If you get a [warning](/images/screenshots/skaterhax/country-change-notice.png) that tells you that you will lose access to Nintendo Network ID features, you can safely select OK to continue
+   - After completing this page, you can restore the region settings back to normal
+
+9. Χρησιμοποιήστε τις εξής επιλογές σύμφωνα με την περιοχή της κονσόλας σας ([εικόνα](/images/screenshots/skaterhax/skater-lang.png))
+   - USA: United States, Do Not Set
+   - EUR: United Kingdom, Do Not Set
+   - JPN: 日本, 設定しない
+   - KOR: 대한민국, 설정하지 않음
+
+10. Κλείστε την εφαρμογή «System Settings»
+
+#### Section II - super-skaterhax
 
 Σε αυτήν την ενότητα, θα επισκεφτείτε την ιστοσελίδα του exploit, η οποία θα εκκινήσει το Homebrew Launcher.
 
-Εάν δεν το έχετε κάνει ήδη, βεβαιωθείτε ότι έχετε ρυθμίσει μια λειτουργική σύνδεση στο διαδίκτυο στην κονσόλα σας.
-{: .notice--info}
+::: info
 
-{% capture set_date %}
-<summary>Εάν η ημερομηνία του συστήματός σας δεν είναι σωστή, το exploit αυτό δεν θα λειτουργήσει.<br>Ακολουθήστε τα παρακάτω βήματα για να ορίσετε τη σωστή ημερομηνία συστήματος.</summary>
-1. Εκκινήστε την εφαρμογή «System Settings» στην κονσόλα σας
-1. Επιλέξτε «Other Settings»
-1. Μεταβείτε στο «Date & Time» -> «Today's date»
-1. Πατήστε τα πάνω/κάτω βέλη για να ορίσετε τη σωστή ημέρα, μήνα και έτος
-1. Επιλέξτε «OK» για επιβεβαίωση
-{% endcapture %}
-<details>{{ set_date | markdownify }}</details>
-{: .notice--info}
+Εάν δεν το έχετε κάνει ήδη, βεβαιωθείτε ότι έχετε ρυθμίσει μια λειτουργική σύνδεση στο διαδίκτυο στην κονσόλα σας.
+
+:::
 
 1. Στο μενού «HOME», πατήστε ταυτόχρονα τα κουμπιά (L) και (R) για να ανοίξετε την κάμερα
-    + Εάν δεν μπορείτε να ανοίξετε την κάμερα, ανοίξετε την εφαρμογή «Internet Browser» και πληκτρολογήστε το URL (`https://zoogie.github.io/web/super/` για EUR/USA/JPN, `https://zoogie.github.io/web/korea` για KOR)
-1. Πατήστε το κουμπί του κωδικού QR και σαρώστε έναν από τους παρακάτω κωδικούς QR για την περιοχή της κονσόλας σας [εδώ](https://user-images.githubusercontent.com/28328903/226086338-585bfdac-0aac-44c0-b413-89206d2815d8.png)
-    + Εάν λάβετε μια προειδοποίηση για το πιστοποιητικό ασφαλείας, πατήστε το (A) για να επιτρέψετε τη σύνδεση
-1. Πατήστε το (Select) για να ανοίξετε τη σελίδα σελιδοδεικτών
-    + Εάν δεν ανταποκρίνεται το κουμπί (Select), πατήστε το εικονίδιο «αστέρι» στην κάτω αριστερή γωνία της οθόνης
-1. Πατήστε «Bookmark this page»
-1. Πατήστε το (B) μία φορά για να επιστρέψετε στο πρόγραμμα περιήγησης
-1. Πατήστε το (Start) για να ανοίξετε το μενού επιλογών
-    + Εάν δεν ανταποκρίνεται το κουμπί (Start), πατήστε το μενού 3 γραμμών στην κάτω δεξιά γωνία της οθόνης
-1. Πατήστε «Settings»
-1. Επιλέξτε «Delete Cookies»
-1. Πατήστε το (A) για να συνεχίσετε
-1. Πατήστε το (Home) για να επιστρέψετε στο μενού «HOME» και έπειτα, πατήστε αμέσως το (A) για να εκκινήσετε ξανά το πρόγραμμα περιήγησης
-1. Επιλέξτε το κουμπί «GO GO!» στην επάνω οθόνη
-    + Εάν εμφανιστούν τυχόν μηνύματα προτροπής, εγκρίνετέ τα όλα
-    + Εάν η κονσόλα σας «παγώσει» σε μια κίτρινη οθόνη, κρατήστε πατημένο το κουμπί POWER μέχρι να απενεργοποιηθεί και έπειτα, επαναλάβετε τα βήματα αυτής της ενότητας
-    + Εάν η κονσόλα σας «παγώσει» σε μια κόκκινη οθόνη, κρατήστε πατημένο το κουμπί POWER μέχρι να απενεργοποιηθεί, επαναλάβετε το Βήμα 3 της Ενότητας ΙΙ και έπειτα, επαναλάβετε τα βήματα αυτής της ενότητας
-    + Εάν η κονσόλα σας εμφανίζει «Text» στην κάτω οθόνη, έχετε ένα Old 3DS και αυτό το exploit **δεν λειτουργεί για τη συσκευή σας**. Σε αυτήν την περίπτωση, θα πρέπει να ακολουθήσετε τις οδηγίες στο [MSET9](installing-boot9strap-(mset9))
-    + Εάν λάβετε κάποιο άλλο σφάλμα, δοκιμάστε ξανά έως και 5 φορές και αν εξακολουθεί να μη λειτουργεί, [ακολουθήστε αυτόν τον οδηγό επίλυσης προβλημάτων](troubleshooting#installing-boot9strap-super-skaterhax)
-1. Η κονσόλα σας θα έχει εκκινηθεί στο Homebrew Launcher
-1. Εκκινήστε το nimdsphax από τη λίστα των εφαρμογών homebrew
-1. Εάν το exploit ήταν επιτυχές, θα έχει γίνει εκκίνηση στο SafeB9SInstaller
-    + Εάν η κονσόλα σας «παγώσει» σε μια κόκκινη ή πράσινη οθόνη, κρατήστε πατημένο το κουμπί POWER μέχρι να απενεργοποιηθεί και έπειτα, επαναλάβετε τα βήματα αυτής της ενότητας
-    + Ενδέχεται να χρειαστούν έως και πέντε απόπειρες
+   - If you are unable to open the camera, open the Internet Browser and manually type the URL instead (`https://zoogie.github.io/web/super/` for EUR/USA/JPN, `https://zoogie.github.io/web/korea` for KOR)
+2. Πατήστε το κουμπί του κωδικού QR και σαρώστε έναν από τους παρακάτω κωδικούς QR για την περιοχή της κονσόλας σας [εδώ](https://user-images.githubusercontent.com/28328903/226086338-585bfdac-0aac-44c0-b413-89206d2815d8.png)
+   - If you get a security certificate warning, please ensure that the system date is today's
+3. Πατήστε το (Select) για να ανοίξετε την καρτέλα σελιδοδεικτών
+   - If your (Select) button does not respond, tap the star icon on the bottom-left corner of the screen
+4. Πατήστε «Bookmark this page»
+5. Πατήστε το (B) μία φορά για να επιστρέψετε στο πρόγραμμα περιήγησης
+6. Πατήστε το (ZR) για να ανοίξετε τη λίστα καρτελών
+   - If your (ZR) button does not respond, tap the two overlapped squares near the bottom-right corner of the screen
+7. Βεβαιωθείτε ότι η μόνη ανοικτή καρτέλα είναι ο ιστότοπος του super-skaterhax
+   - This tab should be highlighted in blue on the tab list
+   - If other tabs are open, close them
+8. Πατήστε το (B) μία φορά για να επιστρέψετε στο πρόγραμμα περιήγησης
+9. Πατήστε το (Start) για να ανοίξετε το μενού επιλογών
+   - If your (Start) button does not respond, tap the 3-line menu on the bottom-right corner of the screen
+10. Πατήστε «Settings»
+11. Επιλέξτε «Delete Cookies»
+12. Πατήστε το (A) για να συνεχίσετε
+13. Πατήστε το (Home) για να επιστρέψετε στο μενού «HOME» και έπειτα, πατήστε αμέσως το (A) για να εκκινήσετε ξανά το πρόγραμμα περιήγησης
+14. Επιλέξτε το κουμπί «GO GO!» στο πάνω μέρος της κάτω οθόνης
+15. Πατήστε το (A) για να κλείσετε το [αναδυόμενο παράθυρο](/images/screenshots/skaterhax/skater-popup.png)
+    - If your console freezes on a yellow screen, hold the POWER button until it turns off, then retry this section
+    - If your console freezes on a red screen, hold the POWER button until it turns off, redo step 3 of Section II, then retry this section
+    - If your console [shows the word Text on the top-left corner of the bottom screen](/images/screenshots/skaterhax/skater-old3ds.png), you have an Old 3DS and this exploit **will not work on your device**. Σε αυτήν την περίπτωση, θα πρέπει να ακολουθήσετε τις οδηγίες στο [MSET9](installing-boot9strap-\(mset9\))
+    - If you get another error, try again up to 5 times, and if it still doesn't work, [follow this troubleshooting guide](troubleshooting#installing-boot9strap-super-skaterhax)
+16. Η κονσόλα σας θα έχει εκκινηθεί στο Homebrew Launcher
+17. Εκκινήστε το nimdsphax από τη λίστα των εφαρμογών homebrew
+18. Εάν το exploit ήταν επιτυχές, θα έχει γίνει εκκίνηση στο SafeB9SInstaller
+    - If your console freezes on a red or green screen, hold the POWER button until it turns off, then retry this section
+    - This may take up to five attempts
 
-#### Ενότητα IIΙ - Εγκατάσταση του boot9strap
+#### Section III - Installing boot9strap
 
-{% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
-{%- include_relative include/configure-luma3ds.txt %}
+Σε αυτήν την ενότητα, θα εγκαταστήσετε custom firmware στην κονσόλα σας.
 
-{% include_relative include/luma3ds-installed-note.txt %}
+1. Όταν ζητηθεί, εισαγάγετε τον συνδυασμό πλήκτρων που θα εμφανιστεί στην πάνω οθόνη, ώστε να εγκαταστήσετε το boot9strap
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+2. Μόλις ολοκληρωθεί, πατήστε το (Α) για να επανεκκινήσετε την κονσόλα σας
+
+<!--@include: ./_include/configure-luma3ds.md -->
+
+<!--@include: ./_include/luma3ds-installed-note.md -->
 
 ___
 
-### Συνέχεια στην [Ολοκλήρωση εγκατάστασης](finalizing-setup)
-{: .notice--primary}
+::: info
+
+Μπορείτε τώρα να επαναφέρετε τις ρυθμίσεις περιοχής στις κανονικές επιλογές.
+
+:::
+
+::: tip
+
+Continue to [Finalizing Setup](finalizing-setup)
+
+:::
