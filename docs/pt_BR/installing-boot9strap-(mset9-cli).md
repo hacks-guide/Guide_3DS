@@ -1,148 +1,183 @@
----
-title: "Instalando boot9strap (MSET9 CLI)"
----
+# Instalando boot9strap (MSET9 CLI)
 
-{% include toc title="Tabela de Conteúdo" %}
+:::details Technical Details (optional)
 
-{% capture technical_info %}
-<summary><em>Detalhes técnicos (opcional)</em></summary>
-[MSET9](https://github.com/zoogie/MSET9) é um exploit para o aplicativo de Configurações do Sistema desenvolvido por [zoogie](https://github.com/zoogie). Ele faz uso de um erro onde a ID1 (a pasta de 32 caractéres dentro da pasta Nintendo 3DS, dentro de ID0) pode ter *qualquer* nome desde que seja composto por 32 caractéres. Fazer uma sequência de ações específicas resultará no console executando instruções que estão codificadas no nome da pasta da ID1, que pode ser utilizada para garantir controle total sobre o 3DS.
+[MSET9](https://github.com/zoogie/MSET9) é um exploit para o aplicativo de Configurações do Sistema desenvolvido por [zoogie](https://github.com/zoogie). Ele faz uso de um erro onde a ID1 (a pasta de 32 caractéres dentro da pasta Nintendo 3DS, dentro de ID0) pode ter _qualquer_ nome desde que seja composto por 32 caractéres. Fazer uma sequência de ações específicas resultará no console executando instruções que estão codificadas no nome da pasta da ID1, que pode ser utilizada para garantir controle total sobre o 3DS.
 
-{% endcapture %}
-<details>{{ technical_info | markdownify }}</details>
-{: .notice--info}
+:::
 
-### Notas de Compatibilidade
+## Compatibility Notes
 
-Esta página requer um computador rodando Windows, Linux ou macOS. Se você tem um celular/tablet Android ou um Chromebook, siga [Instalando boot9strap (MSET9 Play Store)](installing-boot9strap-(mset9-play-store)) em vez disso. Se você não tiver acesso a nenhum desses dispositivos, será necessário usar um [método alternativo](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits).
-{: .notice--warning}
+::: warning
 
-### O que é necessário
+Esta página requer um computador rodando Windows, Linux ou macOS. Se você tem um celular/tablet Android ou um Chromebook, siga [Instalando boot9strap (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\)) em vez disso. Se você não tiver acesso a nenhum desses dispositivos, será necessário usar um [método alternativo](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits).
 
-* A versão mais recente do [MSET9](https://github.com/hacks-guide/MSET9/releases/latest)
-* Qualquer versão 3.x de [Python](https://www.python.org/downloads/) **instalada no seu computador**
-    + Se você estiver no Linux ou macOS, você já pode ter Python 3. Verifique abrindo uma janela terminal e digitando `python3 -V`. Se este retornar um número de versão, ele funcionará para este guia.
+:::
 
-### Instruções
+## What You Need
+
+- The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest)
+- Any 3.x version of [Python](https://www.python.org/downloads/) **installed on your computer**
+  - If you are on Linux or macOS, you may already have Python 3. Verifique abrindo uma janela terminal e digitando `python3 -V`. Se este retornar um número de versão, ele funcionará para este guia.
+
+## Instructions
+
+::: info
 
 Nesta página, você usará o script MSET9, que é usado para acionar o MSET9. Enquanto o script estiver em progresso, os dados do usuário desaparecerão temporariamente, mas retornarão após a conclusão desta página. Se você receber um erro ao executar o script, a solução para esse erro provavelmente pode ser encontrada na página de [troubleshooting](troubleshooting#installing-boot9strap-mset9).
-{: .notice--info}
 
-#### Seção I - Preparação
+:::
+
+### Section I - Prep Work
 
 Nesta seção, você vai preparar o exploit MSET9 através de **temporariamente** criar um novo perfil do Menu HOME sem dados de usuário, e, em seguida, configurar esse perfil com apenas os dados mínimos necessários para que o MSET9 acione. Seus dados de usuário existentes desaparecerão, mas voltarão quando você terminar esta página.
 
 1. Insira o cartão SD no seu computador
-1. Copie tudo do `.zip` MSET9 para a raiz do seu cartão SD, substituindo quaisquer arquivos existentes
 
-    ![MSET9 root layout](/images/screenshots/mset9/mset9-root-layout.png)
-    {: .notice--info}
+2. Copie tudo do `.zip` MSET9 para a raiz do seu cartão SD, substituindo quaisquer arquivos existentes
 
-1. Execute o script MSET9:
-{% capture mset9-chorus %}
-    + **Windows**: Clique duas vezes em `MSET9-Windows.bat`
-    + **macOS**: clique duas vezes em `MSET9-macOS.command` e digite sua senha, se solicitado
-    + **Linux**: Abra uma janela do Terminal, use `cd` até o root do seu cartão SD, então digite `python3 mset9.py` e pressione Enter
-{% endcapture %}
-    {{ mset9-chorus }}
+   ::: info
 
-    ![Image: MSET9 setup](/images/screenshots/mset9/mset9-select.png)
-    {: .notice--info}
+   ![MSET9 root layout](/images/screenshots/mset9/mset9-root-layout.png)
 
-1. Digite o número correspondente ao modelo do seu console e a versão, então pressione Enter
-    + A janela deve mudar para isto:
+   :::
 
-    ![Imagem: preparação do MSET9](/images/screenshots/mset9/mset9-setup-notcreated.png)
-    {: .notice--info}
+3. Execute o script MSET9:
 
-    + Certifique-se de que o modelo e a versão do console estão sendo mostrados
-1. Digite `1`, depois pressione Enter para começar o processo de criação de ID1 do MSET9
-1. Após ler o aviso, digite `1` novamente e pressione Enter para aceitá-lo
-    + Se você receber um erro, verifique o [troubleshooting](troubleshooting#installing-boot9strap-mset9), e tente novamente
-1. Se você ver a mensagem "Created hacked ID1.", pressione Enter para fechar o script MSET9
-    + Seu 3DS irá parecer não ter dados / nenhum aplicativo instalado pelo usuário no Menu HOME. **Isto é esperado.** Seus dados voltarão mais tarde
-1. Reinsira o cartão SD no seu console
-1. Ligue o seu console
-1. Abra o Mii Maker
-1. Espere o seu console chegar a tela de [Bem-vindo do Mii Maker](/images/screenshots/mset9/mii-welcome.png), depois saia do Mii Maker e retorne ao Menu HOME
-    + Talvez você veja [esta tela](/images/screenshots/mset9/mii-extdata.png),o que indica que os dados necessários já foram criados
-    + Se você apenas chegar a tela [normal](/images/screenshots/mset9/mii-existing.png) do Mii Maker, então os dados já existem. Saia do Mi Maker e volte para o Menu HOME
-1. Inicie as Configurações do Sistema e navegue para `Gerenciador de Dados` -> `Nintendo 3DS` -> `Software` -> Apagar ([imagem](/images/screenshots/database-reset.jpg))
-    + Isso não irá apagar nenhum dos seus dados
-1. Desligue seu console apertando o botão POWER e depois toque em Desligar na tela inferior
-1. Insira o cartão SD no seu computador
-1. Execute o script MSET9:
+<!--@include: ./_include/mset9-chorus.md -->
 
-    {{ mset9-chorus }}
+```
+::: info
+
+![Image: MSET9 setup](/images/screenshots/mset9/mset9-select.png)
+
+:::
+```
 
 1. Digite o número correspondente ao modelo do seu console e a versão, então pressione Enter
-    + A janela deve mudar para isso e exibir `Ready`:
 
-    ![Imagem: preparação do MSET9](/images/screenshots/mset9/mset9-ready.png)
-    {: .notice--info}
+   - The window should change to this:
 
-    + Se a janela diz [Not ready - check MSET9 status for more details](/images/screenshots/mset9/mset9-not-ready.png):
-        + Digite `2`, depois pressione Enter para verificar o status do MSET9 e siga as instruções indicadas
-        + Assim que você resolver o problema, volte à Seção I Passo 14
-        + Para mais informações, verifique a página de [troubleshooting](troubleshooting#installing-boot9strap-mset9)
-1. Digite `0` e pressione Enter para fechar o script
-1. Reinsira o cartão SD no seu console
+   ::: info
 
-#### Seção II - MSET9
+   ![Imagem: preparação do MSET9](/images/screenshots/mset9/mset9-setup-notcreated.png)
+
+   :::
+
+   - Ensure that the correct console model and version is displayed
+2. Digite `1`, depois pressione Enter para começar o processo de criação de ID1 do MSET9
+3. Após ler o aviso, digite `1` novamente e pressione Enter para aceitá-lo
+   - If you get an error, check the [troubleshooting](troubleshooting#installing-boot9strap-mset9), then try again
+4. Se você ver a mensagem "Created hacked ID1.", pressione Enter para fechar o script MSET9
+   - Your 3DS will appear to have no data / no user-installed apps on HOME Menu. **Isto é esperado.** Seus dados voltarão mais tarde
+5. Reinsira o cartão SD no seu console
+6. Ligue o seu console
+7. Abra o Mii Maker
+8. Espere o seu console chegar a tela de [Bem-vindo do Mii Maker](/images/screenshots/mset9/mii-welcome.png), depois saia do Mii Maker e retorne ao Menu HOME
+   - You may see [this screen](/images/screenshots/mset9/mii-extdata.png), which indicates the necessary data has been created
+   - If you just reach the [normal](/images/screenshots/mset9/mii-existing.png) Mii Maker screen, then the data already exists. Saia do Mi Maker e volte para o Menu HOME
+9. Inicie as Configurações do Sistema e navegue para `Gerenciador de Dados` -> `Nintendo 3DS` -> `Software` -> Apagar ([imagem](/images/screenshots/database-reset.jpg))
+   - This will not wipe any of your data
+10. Desligue seu console apertando o botão POWER e depois toque em Desligar na tela inferior
+11. Insira o cartão SD no seu computador
+12. Execute o script MSET9:
+
+<!--@include: ./_include/mset9-chorus.md -->
+
+1. Digite o número correspondente ao modelo do seu console e a versão, então pressione Enter
+
+   - The window should change to this and display `Ready`:
+
+   ::: info
+
+   ![Imagem: preparação do MSET9](/images/screenshots/mset9/mset9-ready.png)
+
+   :::
+
+   - If the window says [Not ready - check MSET9 status for more details](/images/screenshots/mset9/mset9-not-ready.png):
+     - Type `2`, then press Enter to check the MSET9 status and follow the directions indicated
+     - Once you have resolved the issue, return to Section I Step 14
+     - For more information, check the [troubleshooting](troubleshooting#installing-boot9strap-mset9) page
+2. Digite `0` e pressione Enter para fechar o script
+3. Reinsira o cartão SD no seu console
+
+### Section II - MSET9
 
 Nestã seção, você vai attivar o MSET9 para iniciar o SafeB9SInstaller (o instalador de custom firmware).
 
+::: danger
+
 Estas instruções devem ser seguidas **EXATAMENTE** como estão, então confira TUDO que você está fazendo para evitar erros!
-{: .notice--danger}
+
+:::
 
 1. Ligue seu console, garantindo que as Configurações do Sistema estejam selecionadas
-    + Se as Configurações do Sistema não estiverem selecionadas, **[passe o cursor](/images/screenshots/mset9/hover-settings.png)** sobre o ícone de Configurações do sistema usando o D-Pad, desligue seu console, e ligue-o novamente
-1. Pressione (A) para iniciar as Configurações do Sistema
-1. Navegue para `Gerenciamento de Dados` -> `Nintendo 3DS` -> `Extra Data` ([imagem](/images/screenshots/mset9/settings-extdata.png))
-1. **Não pressione nenhum botão ou toque na tela**
-1. **Com o console AINDA LIGADO, e sem pressionar nenhum dos botões ou a tela de toque**, remova seu cartão SD do seu console
-    + O menu atualizará e dirá que nenhum cartão SD foi inserido
-1. Insira o cartão SD no seu computador
-1. Execute o script MSET9:
-    {{ mset9-chorus }}
+   - If System Settings is not selected, **[hover over](/images/screenshots/mset9/hover-settings.png)** the System Settings icon using the D-Pad, power your console off, then back on
+2. Pressione (A) para iniciar as Configurações do Sistema
+3. Navegue para `Gerenciamento de Dados` -> `Nintendo 3DS` -> `Extra Data` ([imagem](/images/screenshots/mset9/settings-extdata.png))
+4. **Não pressione nenhum botão ou toque na tela**
+5. **Com o console AINDA LIGADO, e sem pressionar nenhum dos botões ou a tela de toque**, remova seu cartão SD do seu console
+   - The menu will refresh and say that no SD card is inserted
+6. Insira o cartão SD no seu computador
+7. Execute o script MSET9:
+
+<!--@include: ./_include/mset9-chorus.md -->
+
 1. Digite o número correspondente ao modelo do seu console e a versão, então pressione Enter
-1. Na janela do MSET9, digite `3` e pressione Enter para injetar o MSET9
-    + Você deve ver "MSET9 successfully injected!"
-1. Pressione Enter para fechar o script MSET9
-1. Reinsira o cartão SD no seu console **sem pressionar nenhum botão ou tocar a tela de toque**
-1. Se o exploit for bem-sucedido, você terá entrado no SafeB9SInstaller 
-    + Se aparecer uma tela vermelha ou o console ficar preso em uma tela de carregamento, siga o [guia de troubleshooting](troubleshooting#installing-boot9strap-mset9)
+2. Na janela do MSET9, digite `3` e pressione Enter para injetar o MSET9
+   - You should see "MSET9 successfully injected!"
+3. Pressione Enter para fechar o script MSET9
+4. Reinsira o cartão SD no seu console **sem pressionar nenhum botão ou tocar a tela de toque**
+5. Se o exploit for bem-sucedido, você terá entrado no SafeB9SInstaller
+   - If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting#installing-boot9strap-mset9)
 
-#### Seção III - Instalando o boot9strap
+### Section III - Installing boot9strap
 
-{% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
-{%- include_relative include/configure-luma3ds.txt %}
+Nesta seção, você instalará custom firmware no seu console.
 
-#### Seção IV - Removendo o MSET9
+1. Quando solicitado, aperte a sequência de botões fornecida na tela superior para instalar o boot9strap
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+2. Quando concluído, aperte (A) para reiniciar o seu console
+
+<!--@include: ./_include/configure-luma3ds.md -->
+
+### Section IV - Removing MSET9
 
 Nesta seção, você removerá o MSET9 para evitar problemas adicionais e restaurar seus dados do usuário (jogos, temas, etc). (Isso não irá remover o custom firmware que você acabou de instalar.)
 
+::: danger
+
 NÃO pule esta seção! Se você pular isso, os aplicativos podem ter um crash inesperado e você encontrará erros na próxima página!
-{: .notice--danger}
+
+:::
 
 1. Desligue seu console
-1. Insira o cartão SD no seu computador
-1. Execute o script MSET9:
-    {{ mset9-chorus }}
-1. Digite o número correspondente ao modelo do seu console e a versão, então pressione Enter
-    + O estado atual deve exibir [Injected](/images/screenshots/mset9/mset9-injected.png)
-    + Se você já removeu o arquivo de ativação (ou nunca foi o injetou), o estado atual irá mostrar [Ready](/images/screenshots/mset9/mset9-ready. ng), pule para a Etapa 6
-1. Digite `4`, então pressione Enter para remover o arquivo de ativação
-    + Você deve ver "Removed trigger file."
-1. Digite `5` e pressione Enter para remover o MSET9
-    + Você deve ver "Successfully removed MSET9!"
-1. Pressione Enter para fechar o script MSET9
+2. Insira o cartão SD no seu computador
+3. Execute o script MSET9:
 
-{% include_relative include/luma3ds-installed-note.txt %}
+<!--@include: ./_include/mset9-chorus.md -->
+
+1. Digite o número correspondente ao modelo do seu console e a versão, então pressione Enter
+   - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
+   - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), skip to Step 6
+2. Digite `4`, então pressione Enter para remover o arquivo de ativação
+   - You should see "Removed trigger file."
+3. Digite `5` e pressione Enter para remover o MSET9
+   - You should see "Successfully removed MSET9!"
+4. Pressione Enter para fechar o script MSET9
+
+<!--@include: ./_include/luma3ds-installed-note.md -->
+
 ___
 
-Você seguiu a Seção IV (Removendo o MSET9)? Essa seção é MANDATÓRIA!
-{: .notice--danger}
+::: danger
 
-### Continue para [Finalizando a instalação](finalizing-setup)
-{: .notice--primary}
+Você seguiu a Seção IV (Removendo o MSET9)? Essa seção é MANDATÓRIA!
+
+:::
+
+::: tip
+
+Continue to [Finalizing Setup](finalizing-setup)
+
+:::
