@@ -1,32 +1,28 @@
----
-title: "F3 (Linux)"
----
+# F3 (Linux)
 
-{% include toc title="條目內容" %}
-
-### 必讀事項
+## Required Reading
 
 本篇為透過 F3 來檢查您 SD 卡是否有任何問題的附加章節。
 
 根據您的 SD 卡的大小和電腦的速度，本過程可能將花費數小時才能完成 ！
 
-本教學僅適用於 Linux 使用者。 如果您不在 Linux 平台上，請參閱 [H2testw (Windows)](h2testw-(windows)) 或 [F3XSwift (Mac)](f3xswift-(mac))。
+本教學僅適用於 Linux 使用者。 如果您不在 Linux 平台上，請參閱 [H2testw (Windows)](h2testw-\(windows\)) 或 [F3XSwift (Mac)](f3xswift-\(mac\))。
 
-### 必備項目
+## What You Need
 
-* 最新版的 [F3](https://github.com/AltraMayor/f3/releases/tag/v8.0)
+- The latest version of [F3](https://github.com/AltraMayor/f3/releases/tag/v8.0)
 
-### 操作說明
+## Instructions
 
 1. 解壓 f3 `.zip`
-1. `cd` 至 f3 目錄中
-1. 運行 `make` 以編譯 F3
-1. 將 SD 卡插入至電腦中
-1. 掛載 SD 卡
-1. 輸入 `./f3write <您 SD 卡的掛載點>`
-1. 等到檢查完畢為止。 可以參考底下的範例。
+2. `cd` 至 f3 目錄中
+3. 運行 `make` 以編譯 F3
+4. 將 SD 卡插入至電腦中
+5. 掛載 SD 卡
+6. 輸入 `./f3write <您 SD 卡的掛載點>`
+7. 等到檢查完畢為止。 可以參考底下的範例。
 
-~~~ bash
+```bash
 $ ./f3write /media/michel/6135-3363/
 Free space: 29.71 GB
 Creating file 1.h2w ... OK!
@@ -34,12 +30,12 @@ Creating file 1.h2w ... OK!
 Creating file 30.h2w ... OK!
 Free space: 0.00 Byte
 Average Writing speed: 4.90 MB/s
-~~~
+```
 
 1. 輸入 `./f3read <您 SD 卡的掛載點>`
-1. 等到檢查完畢為止。 可以參考底下的範例。
+2. 等到檢查完畢為止。 可以參考底下的範例。
 
-~~~ bash
+```bash
 $ ./f3read /media/michel/6135-3363/
 									SECTORS      ok/corrupted/changed/overwritten
 Validating file 1.h2w ... 2097152/        0/      0/      0
@@ -52,15 +48,24 @@ Data LOST: 0.00 Byte (0 sectors)
 	Slightly changed: 0.00 Byte (0 sectors)
 				Overwritten: 0.00 Byte (0 sectors)
 Average Reading speed: 9.42 MB/s
-~~~
+```
 
 ___
 
+::: tip
+
 If the test shows the result `Data LOST: 0.00 Byte (0 sectors)`, your SD card is good and you can delete all `.h2w` files on your SD card.
-{: .notice--success}
+
+:::
+
+::: danger
 
 如果出現任何其他結果，您的 SD 卡可能是有問題且需要更換的！
-{: .notice--danger}
 
-### 回到[新手入門](get-started)
-{: .notice--primary}
+:::
+
+::: tip
+
+Return to [Get Started](get-started)
+
+:::
