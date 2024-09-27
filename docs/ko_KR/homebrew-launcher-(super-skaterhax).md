@@ -1,6 +1,8 @@
 ---
-title: 리다이렉트 중... #
-sitemap: false
+head:
+  - - meta
+    - http-equiv: refresh
+      content: 0; URL=installing-boot9strap-(super-skaterhax).html
 ---
 
-{% include redirect.html redirect_to="installing-boot9strap-(super-skaterhax).html" %}
+# 리다이렉트중...
