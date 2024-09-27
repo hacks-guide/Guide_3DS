@@ -1,16 +1,18 @@
----
-title: "Folosind GodMode9"
----
+# GodMode9 Usage
 
-{% include toc title="Cuprins" %}
+::: info
 
 For information on dumping cartridge or SD card content, see [Dumping Titles and Game Cartridges](dumping-titles-and-game-cartridges).
-{: .notice--info}
+
+:::
+
+::: info
 
 For support (in English) with GodMode9, as well as help with scripting and to get updates and info, join [GodMode9 on Discord](https://discord.gg/BRcbvtFxX4).
-{: .notice--primary}
 
-### Lectură obligatorie
+:::
+
+## Required Reading
 
 GodMode9 este un navigator de fișiere cu acces complet pentru dispozitivul Nintendo 3DS, oferindu-vă acces la cardul SD, partiţii FAT din SysNAND, EmuNAND şi practic orice altceva. Printre alte funcţionalităţi, puteţi copia, şterge, redenumi fişiere şi crea foldere.
 
@@ -18,124 +20,162 @@ GodMode9 este un navigator de fișiere cu acces complet pentru dispozitivul Nint
 
 GodMode9 este un software puternic care are capacitatea de a modifica, în esenţă, orice pe consolă. Deși majoritatea dintre aceste modificări sunt blocate de un sistem de permisiuni și este imposibil să faceți acțiuni periculoase din greșeală fără să activați permisiunile în mod deliberat, tot ar trebui să urmăriți instrucțiunile cu grijă și să țineți copii de rezervă în caz.
 
-## Actualizând GodMode9
+## Updating GodMode9
+
+::: info
 
 Unele dintre instrucțiunile de mai jos se aplică doar la ultima versiune de GodMode9, și astfel ar trebui să urmați această secțiune pentru a vă actualiza copia înainte să continuați. Rescrieți orice fișier existent.
-{: .notice--info}
 
-### Ce aveți nevoie
+:::
 
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
+### What You Need
 
-### Instrucțiuni
+- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
+
+### Instructions
 
 1. Power off your console
-1. Introduceți cardul SD în calculator
-1. Copiați `GodMode9.firm` de pe fișierul `.zip` GodMode9 către folderul `/luma/payloads/` de pe cardul SD
-1. Copiați folderul `gm9` din fișierul `.zip` GodMode9 în rădăcina cardului SD
-1. Reinsert your SD card into your console
+2. Introduceți cardul SD în calculator
+3. Copiați `GodMode9.firm` de pe fișierul `.zip` GodMode9 către folderul `/luma/payloads/` de pe cardul SD
+4. Copiați folderul `gm9` din fișierul `.zip` GodMode9 în rădăcina cardului SD
+5. Reinsert your SD card into your console
+
+::: tip
 
 GodMode9 is now up to date.
-{: .notice--success}
 
-## Creând o copie de rezervă NAND
+:::
+
+## Creating a NAND Backup
 
 1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-{% include_relative include/nand-backup.txt %}
+
+<!--@include: ./_include/nand-backup.md -->
+
+::: tip
 
 Your NAND backup has been successfully created.
-{: .notice--success}
 
-## Restaurând o copie de rezervă NAND
+:::
+
+## Restoring a NAND Backup
 
 1. Power off your console
-1. Introduceți cardul SD în calculator
-1. Copy `<date>_<serialnumber>_sysnand_##.bin` from your computer to the `/gm9/out/` folder on your SD card
-1. Reinsert your SD card into your console
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-1. Apăsați (Home) pentru a arăta meniul de acțiuni
-1. Selectați "Scripts..."
-1. Selectaţi "GM9Megascript"
-1. Selectați "Restore Options"
-1. Selectați "SysNAND Restore (safe)"
-1. Selectați copia de rezervă NAND
-1. Apăsați (A) ca să deblocați scrierea în SysNAND (lvl3), apoi introduceți combinația de butoane care vi se cere
-    + This will **not** overwrite your boot9strap installation
-    + Acest proces va lua ceva timp
-1. Apăsați (A) pentru a continua
-1. Apăsați (B) ca să vă întoarceți în meniul principal
-1. Select "Exit"
-1. Apăsați (A) ca să reblocați permisiunile de scriere dacă vi se cere
+2. Introduceți cardul SD în calculator
+3. Copy `<date>_<serialnumber>_sysnand_##.bin` from your computer to the `/gm9/out/` folder on your SD card
+4. Reinsert your SD card into your console
+5. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+6. Apăsați (Home) pentru a arăta meniul de acțiuni
+7. Selectați "Scripts..."
+8. Selectaţi "GM9Megascript"
+9. Selectați "Restore Options"
+10. Selectați "SysNAND Restore (safe)"
+11. Selectați copia de rezervă NAND
+12. Apăsați (A) ca să deblocați scrierea în SysNAND (lvl3), apoi introduceți combinația de butoane care vi se cere
+    - This will **not** overwrite your boot9strap installation
+    - This process will take some time
+13. Apăsați (A) pentru a continua
+14. Apăsați (B) ca să vă întoarceți în meniul principal
+15. Select "Exit"
+16. Apăsați (A) ca să reblocați permisiunile de scriere dacă vi se cere
+
+::: tip
 
 Your NAND backup has been successfully restored. You can now delete `<date>_<serialnumber>_sysnand_###.bin` from your SD card.
-{: .notice--success}
 
-## Injectând orice aplicație .CIA în Health & Safety
+:::
+
+## Injecting any .CIA app into Health & Safety
+
+::: info
 
 Țineți cont că nu se poate injecta fişiere în Health & Safety mai mari decât aplicația (inclusiv jocuri şi alte aplicaţii mari)
-{: .notice--info}
+
+:::
 
 1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-1. Navigați spre `[0:] SDCARD` -> `cias`
-1. Press (A) on your `.cia` to select it
-1. Select "CIA image options..."
-1. Select "Mount image to drive"
-1. Press (A) on the `.app` file
-1. Select "NCCH image options"
-1. Select "Inject to H&S"
-1. Apăsați (A) ca să deblocați scrierea în SysNAND (lvl1), apoi introduceți combinația de butoane care vi se cere
-1. Apăsați (A) pentru a continua
-1. Apăsați (A) ca să reblocați permisiunile de scriere dacă vi se cere
+2. Navigați spre `[0:] SDCARD` -> `cias`
+3. Press (A) on your `.cia` to select it
+4. Select "CIA image options..."
+5. Select "Mount image to drive"
+6. Press (A) on the `.app` file
+7. Select "NCCH image options"
+8. Select "Inject to H&S"
+9. Apăsați (A) ca să deblocați scrierea în SysNAND (lvl1), apoi introduceți combinația de butoane care vi se cere
+10. Apăsați (A) pentru a continua
+11. Apăsați (A) ca să reblocați permisiunile de scriere dacă vi se cere
+
+::: tip
 
 Your desired application has now been injected into Health & Safety.
-{: .notice--success}
 
-## Restaurând Healt & Safety după injectarea unei aplicații .CIA
+:::
+
+## Restoring Health & Safety after injecting a .CIA app
+
+::: info
 
 Aceasta va funcţiona doar dacă injectarea Health & Safety a fost efectuată de GodMode9 (nu Decrypt9 sau Hourglass9).
-{: .notice--info}
+
+:::
 
 1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-1. Apăsați (Home) pentru a arăta meniul de acțiuni
-1. Selectați "More..."
-1. Selectați "Restore H&S"
-1. Apăsați (A) ca să deblocați scrierea în SysNAND (lvl1), apoi introduceți combinația de butoane care vi se cere
-1. Apăsați (A) ca să reblocați permisiunile de scriere dacă vi se cere
+2. Apăsați (Home) pentru a arăta meniul de acțiuni
+3. Selectați "More..."
+4. Selectați "Restore H&S"
+5. Apăsați (A) ca să deblocați scrierea în SysNAND (lvl1), apoi introduceți combinația de butoane care vi se cere
+6. Apăsați (A) ca să reblocați permisiunile de scriere dacă vi se cere
+
+::: tip
 
 Health & Safety has been reverted to normal.
-{: .notice--success}
 
-## Formatarea unui card SD
+:::
+
+## Format an SD card
+
+::: danger
 
 **Țineți cont că asta va elimina complet conținutul cardului SD!**
-{: .notice--danger}
+
+:::
 
 1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-1. Press (Right Shoulder) + (B) to unmount the current SD card and insert the one you want to format
-    + If GodMode9 shows an initialization error when inserting the SD Card to be formatted, it can safely be dismissed
-{% include_relative include/format-sd-gm9.txt %}
+2. Press (Right Shoulder) + (B) to unmount the current SD card and insert the one you want to format
+   - If GodMode9 shows an initialization error when inserting the SD Card to be formatted, it can safely be dismissed
+
+<!--@include: ./_include/format-sd-gm9.md -->
+
+::: tip
 
 Your SD card has successfully been formatted for use with the console.
-{: .notice--success}
+
+:::
 
 ## Removing an NNID without formatting your console
 
+::: info
+
 This process will only log you out of your NNID. You will still not be able to use the NNID on another console, as the NNID remains linked to the console.
-{: .notice--info}
+
+:::
 
 1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-1. Apăsați (Home) pentru a arăta meniul de acțiuni
-1. Selectați "Scripts..."
-1. Selectaţi "GM9Megascript"
-1. Selectaţi "Scripts from Plailect's Guide"
-1. Selectaţi "Remove NNID"
-1. Apăsați (A) pentru a continua
-1. Apăsați (A) ca să deblocați scrierea în SysNAND (lvl1), apoi introduceți combinația de butoane care vi se cere
-1. Apăsați (A) pentru a continua
-1. Apăsați (B) ca să vă întoarceți în meniul principal
-1. Select "Exit"
-1. Apăsați (A) ca să reblocați permisiunile de scriere dacă vi se cere
-1. Press (Start) to reboot your console
+2. Apăsați (Home) pentru a arăta meniul de acțiuni
+3. Selectați "Scripts..."
+4. Selectaţi "GM9Megascript"
+5. Selectaţi "Scripts from Plailect's Guide"
+6. Selectaţi "Remove NNID"
+7. Apăsați (A) pentru a continua
+8. Apăsați (A) ca să deblocați scrierea în SysNAND (lvl1), apoi introduceți combinația de butoane care vi se cere
+9. Apăsați (A) pentru a continua
+10. Apăsați (B) ca să vă întoarceți în meniul principal
+11. Select "Exit"
+12. Apăsați (A) ca să reblocați permisiunile de scriere dacă vi se cere
+13. Press (Start) to reboot your console
+
+::: tip
 
 You have now been logged out of your NNID.
-{: .notice--success}
+
+:::
