@@ -1,201 +1,229 @@
----
-title: "卸载自制固件"
----
+# 卸载自制固件
 
-{% include toc title="目录内容" %}
-
-### 重要事项
+## Required Reading
 
 This will completely remove CFW from your console, including boot9strap and Luma3DS, for the purpose of restoring the console to stock.
 
 任何未签名（盗版）游戏都将被标记为不可用，并将在此过程中被删除。 你可以使用一个[存档管理器](https://github.com/FlagBrew/Checkpoint/releases/latest)来备份你想要保留的游戏存档。
 
-{% capture notice-6 %}
+::: danger
+
 如果你想卸载自制固件的目的是：
 
-* 重新安装它
-* You want to change SD cards
-* Your SD card was lost or corrupted
-* 游戏无法正常运行
-* 某个应用无法打开
-* 主机进入不了主菜单，保持黑屏
+- You want to re-install it
+- You want to change SD cards
+- Your SD card was lost or corrupted
+- One of your games is broken
+- One of your system applications is broken
+- Your console is unable to boot to HOME Menu
 
-<u><strong>停下！！！！！！！！！！！！！！！！！！！！！！！！！！</strong></u>卸载自制固件只会浪费时间把这几件事搞的更糟，且有概率导致主机直接<u><strong>变砖</strong></u>。 更好的点子是在[ Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp)上使用英文寻求帮助。（请注意，如果你身处中国大陆，则你可能需要通过科学上网访问 Discord），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497。
-{% endcapture %}
-<div class="notice--danger">{{ notice-6 | markdownify }}</div>
+<u>**STOP!!!**</u> Uninstalling custom firmware is an unnecessary risk that will at best waste your time and at worst <u>**BRICK**</u> your console. 更好的点子是在[ Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp)上使用英文寻求帮助。（请注意，如果你身处中国大陆，则你可能需要通过科学上网访问 Discord），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497。
 
-{% capture notice-6 %}
+:::
+
+::: danger
+
 你是否做过以下的任何一件事：
-* 更改过主机的[区域](region-changing)
-* 安装过自制输入法
-* 安装过自制的主菜单（例如：汉化系统，**不是**自制主题）
-* 手动修改过主机的加密密钥（`movable.sed`）
-* 给主机解 ban 过
 
-如果你干过以上的任何一件事，卸载自制固件将<u><strong>直接导致主机砖机</strong></u>。 如果你确实做了，但是你仍然想要卸载自制固件，请[还原一份干净的 NAND 备份](godmode9-usage#restoring-a-nand-backup)，然后再继续。
-{% endcapture %}
-<div class="notice--danger">{{ notice-6 | markdownify }}</div>
+- [Changed the region](region-changing) of the console
+- Installed a custom keyboard
+- Installed a custom HOME Menu (_not_ a custom theme)
+- Manually changed the encryption key (`movable.sed`) of the console
+- Unbanned the console
+
+then uninstalling CFW <u>**WILL BRICK YOUR CONSOLE**</u>. 如果你确实做了，但是你仍然想要卸载自制固件，请[还原一份干净的 NAND 备份](godmode9-usage#restoring-a-nand-backup)，然后再继续。
+
+:::
+
+::: warning
 
 These instructions will only work on consoles with a Luma3DS version of 8.0 or higher. 如果你的主机 Luma 版本比要求的旧，则你必须先升级版本再做这些操作。 请参考[这个页面](checking-for-cfw)来找到适合你主机的升级操作。
-{: .notice--warning}
 
-### 你需要准备点啥？
+:::
 
-* 最新版本的 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)（下载 Luma3DS `.zip` 文件）
-* 最新版本的 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)（下载 GodMode9 `.zip` 文件）
-* 最新版本的 [DSiWare Uninstaller](https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest)
-* [safety_test.gm9]({{ base_path }}/gm9_scripts/safety_test.gm9)
+## What You Need
 
-### 操作步骤
+- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
+- The latest release of [DSiWare Uninstaller](https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest)
+- [safety_test.gm9](/gm9_scripts/safety_test.gm9)
 
-#### 第一步 – 准备工作
+## Instructions
+
+### Section I - Prep Work
+
 1. 将主机关机
-1. 将你的 SD 卡插入到电脑
-1. 解压 Luma3DS `.zip` 里的 `boot.firm` 和 `boot.3dsx` 到你 SD 卡的根目录
-1. 将 GodMode9 `.zip` 中的 `GodMode9.firm` 复制到你 SD 卡的 `/luma/payloads/` 文件夹中
-1. 将 GodMode9 `.zip` 中的整个 `gm9` 文件夹复制到 SD 卡的根目录下
-1. 复制 `DSiWareUninstaller.3dsx`  到你 SD 卡的 `/3ds/` 文件夹
-1. 复制 `safety_test.gm9` 到 SD 卡的`/gm9/scripts/`目录下
-1. Reinsert your SD card into your console
+2. 将你的 SD 卡插入到电脑
+3. 解压 Luma3DS `.zip` 里的 `boot.firm` 和 `boot.3dsx` 到你 SD 卡的根目录
+4. 将 GodMode9 `.zip` 中的 `GodMode9.firm` 复制到你 SD 卡的 `/luma/payloads/` 文件夹中
+5. 将 GodMode9 `.zip` 中的整个 `gm9` 文件夹复制到 SD 卡的根目录下
+6. 复制 `DSiWareUninstaller.3dsx`  到你 SD 卡的 `/3ds/` 文件夹
+7. 复制 `safety_test.gm9` 到 SD 卡的`/gm9/scripts/`目录下
+8. Reinsert your SD card into your console
 
-#### 第二步 – DS 模式测试
+### Section II - DS Mode Tests
+
 本步骤的目的是检查内建的 DS 模式应用是否能够在卸载自制固件后继续正常运作。 如果你跳过此章节，DS 模式或它的功能可能会无法正常使用，除非你重新安装自制固件。
 
-##### DS 连接设置测试
-1. Power on your console
-1. Launch System Settings on your console
-1. 移动到 `网络设置（Internet Settings）` -> `任天堂 DS 连接（Nintendo DS Connections）`，然后选择 “OK”
-1. 你的主机应该会正常启动到任天堂 DS 连接设置菜单
-    + 如果你的主机显示了日版的 Flipnote Studio 或黑屏亦或出现报错，则代表测试失败。
-1. 将主机关机
+#### DS Connection Settings Test
 
-##### DS 下载通信测试
 1. Power on your console
-1. 启动“下载通信(Download Play)”程序 (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
-1. 选择 “Nintendo DS”
-1. If your console loads into a "Download software via DS Download Play" menu, the test was successful
-    + 如果你的主机显示了日版的 Flipnote Studio 或黑屏亦或出现报错，则代表测试失败。
-1. 将主机关机
+2. Launch System Settings on your console
+3. 移动到 `网络设置（Internet Settings）` -> `任天堂 DS 连接（Nintendo DS Connections）`，然后选择 “OK”
+4. 你的主机应该会正常启动到任天堂 DS 连接设置菜单
+   - If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed
+5. 将主机关机
+
+#### DS Download Play Test
+
+1. Power on your console
+2. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
+3. 选择 “Nintendo DS”
+4. If your console loads into a "Download software via DS Download Play" menu, the test was successful
+   - If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed
+5. 将主机关机
+
+::: warning
 
 如果以上其一测试失败了，则 DS 模式、DS 下载通信和/或 DS 连接设定可能会在卸载自制固件后无法正常使用！ You should [fix DS mode](troubleshooting#software-issues-on-consoles-with-custom-firmware) before continuing.
-{: .notice--warning}
 
-#### 第三步 – 安全性测试
+:::
+
+### Section III - Safety Test
+
 本步骤的目的是为了检查主机是否能在卸载自制固件后正常开机，以及核心系统组件（如系统设置和键盘）是否能够正常运作。 **If you skip this section, you may BRICK your console!**
 
 1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-1. 如果工具提示是否需要创建重要文件备份，请按下 “A” 键确认。完成后再次按下 “A” 键来继续。
-1. 如果出现修复 RTC 日期与时间的提示，按 “A” 键执行修复，然后设置好日期和时间，并按 “A” 继续
-    + 请注意，如果出现了该提示，则执行完本手册后你还需要在系统设置中重新设置时间
-1. 按下 “Home” 键来打开功能菜单
-1. 选择 “Scripts...”
-1. 选择 “safety_test”
-1. 阅读屏幕上的文本，然后按下 “A” 键继续
-1. 主机应该会自动进入到正常的 3DS 主菜单（有没有自制主题无关）。 如果是这样，那么继续下面的操作
-    + If you do not boot into the regular 3DS HOME Menu (black screen, error screen, etc.), uninstalling CFW **WILL BRICK YOUR CONSOLE!**
-1. Launch System Settings on your console
-    + 如果主机此时崩溃，则测试失败
-1. 选择 “其他设置（Other Settings）”
-1. 选择 “档案（Profile）”
-1. 选择 “用户名（User Name）”
-1. 如果你能够输入新的用户名，则测试成功
-    + 如果键盘没有出现且主机死机或崩溃了，则测试失败
-1. 将主机关机
+2. 如果工具提示是否需要创建重要文件备份，请按下 “A” 键确认。完成后再次按下 “A” 键来继续。
+3. 如果出现修复 RTC 日期与时间的提示，按 “A” 键执行修复，然后设置好日期和时间，并按 “A” 继续
+   - Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after following this guide
+4. 按下 “Home” 键来打开功能菜单
+5. 选择 “Scripts...”
+6. 选择 “safety_test”
+7. 阅读屏幕上的文本，然后按下 “A” 键继续
+8. 主机应该会自动进入到正常的 3DS 主菜单（有没有自制主题无关）。 如果是这样，那么继续下面的操作
+   - If you do not boot into the regular 3DS HOME Menu (black screen, error screen, etc.), uninstalling CFW **WILL BRICK YOUR CONSOLE!**
+9. Launch System Settings on your console
+   - If the console crashes at this point, the test has failed
+10. 选择 “其他设置（Other Settings）”
+11. 选择 “档案（Profile）”
+12. 选择 “用户名（User Name）”
+13. 如果你能够输入新的用户名，则测试成功
+    - If the keyboard does not appear, the screen freezes, or the console crashes, the test has failed
+14. 将主机关机
+
+::: danger
 
 如果没有进入到正常的 3DS 主菜单或系统设置/键盘不可用，则**请不要再继续做下面的步骤了！** 请加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp) 并说英文来请求支持。
-{: .notice--danger}
 
-#### 第四步 – 备份 NAND
+:::
+
+### Section IV - NAND Backup
 
 1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-1. 按下 “Home” 键来打开功能菜单
-1. 选择 “Scripts...”
-1. 选择 “GM9Megascript”
-1. 选择 “Backup Options”
-1. 选择 “SysNAND Backup”
-1. 按下 “A” 键确认
-    + 此过程将花费一些时间
-    + 如果你遇到了错误，请确保你的 SD 卡上至少有 1.3GB 的可用空间
-1. 按下 “B” 键返回到主菜单
-1. 选择 “退出（Exit）”
-1. 按下 “Home” 键来打开功能菜单
-1. Select "Poweroff system" to power off your console
+2. 按下 “Home” 键来打开功能菜单
+3. 选择 “Scripts...”
+4. 选择 “GM9Megascript”
+5. 选择 “Backup Options”
+6. 选择 “SysNAND Backup”
+7. 按下 “A” 键确认
+   - This process will take some time
+   - If you get an error, ensure you have at least 1.3GB of free space on your SD card
+8. 按下 “B” 键返回到主菜单
+9. 选择 “退出（Exit）”
+10. 按下 “Home” 键来打开功能菜单
+11. Select "Poweroff system" to power off your console
 
-####  第五步 – 移除非法内容
+### Section V - Removing illegitimate content
+
+::: warning
+
 本步骤将会删除非法内容，例如自制程序、导出的程序（安装 CIA 格式的应用得来的）。 如果你有还想要的存档，请在继续前使用一个存档工具将它导出来后再继续！
-{: .notice--warning}
+
+:::
 
 1. Power on your console
-1. Launch System Settings on your console
-1. 进入到 “数据管理（Data Management）” > “Nintendo 3DS” > “软件（Software）”
-1. 在此列表中，删除你在使用自制系统时安装的任何非来自任天堂的自制程序。
-    + 这其中包括常见的自制程序如 FBI、Anemone3DS、Luma Updater、Homebrew Launcher、Checkpoint 等等…和任何非通过 eShop 安装的游戏
-1. 进入到 `資料管理` -> `DSiWare`
-1. 在此列表中，删除你在使用自制系统时安装的任何非来自任天堂的自制程序。
-    + 这包括诸如 TWiLightMenu++ 之类的软件，和你**非**从 eShop 安装的任何游戏程序
-    + 如果无法卸载这些 3DS 和 DSiWare 软件，卸载自制固件可能会导致数据管理无法进入或数据损坏。如果将来想要重新安装自制固件时，操作步骤可能会变得更加困难。
-1. 退出系统设置
-1. 启动“下载通信(Download Play)”程序 (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
-1. 等到你看到两个按钮
-1. 同时按下 “L” + “↓” + “Select” 键来打开 Rosalina 菜单
-1. 选择 “Miscellaneous options”
-1. 选择 “Switch the hb. title to the current app.”
-1. 按 “B” 键继续
-1. 按 “B” 键返回 Rosalina 主菜单
-1. 按 “B” 键退出 Rosalina 菜单
-1. 按下 “Home” 键，然后关闭“下载通信(Download Play)”
-1. 运行“下载通信（Download Play）”程序
-1. Your console should load the Homebrew Launcher
-1. 从自制程序列表中运行 DSiWare Uninstaller
-1. 阅读提示并允许程序卸载
-1. Once the process has succeeded, exit the Homebrew Launcher and power off your console
+2. Launch System Settings on your console
+3. 进入到 “数据管理（Data Management）” > “Nintendo 3DS” > “软件（Software）”
+4. 在此列表中，删除你在使用自制系统时安装的任何非来自任天堂的自制程序。
+   - This includes common system software such as FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint, and others, along with any games and titles that you did _not_ install from the eShop
+5. 进入到 `資料管理` -> `DSiWare`
+6. 在此列表中，删除你在使用自制系统时安装的任何非来自任天堂的自制程序。
+   - This includes software such as TWiLightMenu++, along with any games and titles that you did _not_ install from the eShop
+   - Failure to remove all CFW software from both the 3DS and DSiWare sections before uninstalling CFW may prevent or disable access to the Data Management menu after uninstalling CFW, which will make it difficult to re-install CFW in the future
+7. 退出系统设置
+8. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
+9. 等到你看到两个按钮
+10. 同时按下 “L” + “↓” + “Select” 键来打开 Rosalina 菜单
+11. 选择 “Miscellaneous options”
+12. Select "Switch the hb. title to the current app."
+13. 按 “B” 键继续
+14. 按 “B” 键返回 Rosalina 主菜单
+15. 按 “B” 键退出 Rosalina 菜单
+16. 按下 “Home” 键，然后关闭“下载通信(Download Play)”
+17. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
+18. Your console should load the Homebrew Launcher
+19. 从自制程序列表中运行 DSiWare Uninstaller
+20. 阅读提示并允许程序卸载
+21. Once the process has succeeded, exit the Homebrew Launcher and power off your console
 
-#### 第六步 – 初始化主机
+### Section VI - System Format
+
 本步骤将会把所有的非法 ticket 从主机中移除，使 eShop 能够正常工作。 这会移除 3DS 中的所有内容，并登出 NNID。 这会重新生成你的主机解密密钥，意味着你先前的所有数据将会全部不可用，即使你把它们从 SD 卡中备份出来也是如此。
 
 1. Power on your console
-1. Launch System Settings on your console
-1. 进入“其他设置（Other Settings）” -> 右箭头（直到最后一页）-> “初始化系统（Format System Memory）”
-1. 按照提示步骤重置你的 3DS
+2. Launch System Settings on your console
+3. 进入“其他设置（Other Settings）” -> 右箭头（直到最后一页）-> “初始化系统（Format System Memory）”
+4. 按照提示步骤重置你的 3DS
 
+### Section VII - Running Uninstall Script
 
-#### 第七步 – 运行卸载脚本
+::: warning
+
 这是你核验所有安全检查步骤是否已正确遵循的最后一次机会！ 请确保你已经做完了本页面先前的所有步骤，**特别是** `第三步`。
-{: .notice--warning}
 
-{% capture notice-6 %}
+:::
+
+::: danger
+
 如果你想卸载自制固件的目的是：
 
-* 重新安装它
-* You want to change SD cards
-* Your SD card was lost or corrupted
-* 游戏无法正常运行
-* 某个应用无法打开
-* 主机进入不了主菜单，保持黑屏
+- You want to re-install it
+- You want to change SD cards
+- Your SD card was lost or corrupted
+- One of your games is broken
+- One of your system applications is broken
+- Your console is unable to boot to HOME Menu
 
-<u><strong>停下！！！！！！！！！！！！！！！！！！！！！！！！！！</strong></u>卸载自制固件只会浪费时间把这几件事搞的更糟，且有概率导致主机直接<u><strong>变砖</strong></u>。 更好的点子是在[ Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp)上使用英文寻求帮助。（请注意，如果你身处中国大陆，则你可能需要通过科学上网访问 Discord），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497。
-{% endcapture %}
-<div class="notice--danger">{{ notice-6 | markdownify }}</div>
+<u>**STOP!!!**</u> Uninstalling custom firmware is an unnecessary risk that will at best waste your time and at worst <u>**BRICK**</u> your console. 更好的点子是在[ Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp)上使用英文寻求帮助。（请注意，如果你身处中国大陆，则你可能需要通过科学上网访问 Discord），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup)寻求帮助，群号为 942052497。
+
+:::
 
 1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-    + 如果你看到了 Luma3DS chainloader 菜单，则请使用十字键移动到 Godmode9 然后按 A 进入
-1. 按下 “Home” 键来打开功能菜单
-1. 选择 “Scripts...”
-1. 选择 “GM9Megascript”
-1. 选择 “Hax Options”
-1. 选择 “Un-install Hax”
-1. 出现提示时，按 “A” 键继续
-1. 按 “A” 键解锁SysNAND (lvl3) 写入权限，并根据屏幕上的提示依次按下按键
-1. 按 “A” 键继续
-1. 按下 “B” 键返回到主菜单
-1. 选择 “Exit”
-1. 如果提示重新锁定写入权限，按下 “A” 键来确认
-1. Press (Start) to reboot your console
+   - If you instead see the Luma3DS chainloader, use the D-Pad and the (A) button to select GodMode9
+2. 按下 “Home” 键来打开功能菜单
+3. 选择 “Scripts...”
+4. 选择 “GM9Megascript”
+5. 选择 “Hax Options”
+6. 选择 “Un-install Hax”
+7. 出现提示时，按 “A” 键继续
+8. 按 “A” 键解锁SysNAND (lvl3) 写入权限，并根据屏幕上的提示依次按下按键
+9. 按 “A” 键继续
+10. 按下 “B” 键返回到主菜单
+11. 选择 “Exit”
+12. 如果提示重新锁定写入权限，按下 “A” 键来确认
+13. Press (Start) to reboot your console
 
 ___
 
+::: tip
+
 All custom firmware has been removed from your console.
-{: .notice--success}
+
+:::
+
+::: info
 
 你可以将**除了** “Nintendo 3DS” 和 “DCIM” 还有 “private” 以外的文件、文件夹从 SD 卡根目录删除。
-{: .notice--info}
+
+:::
