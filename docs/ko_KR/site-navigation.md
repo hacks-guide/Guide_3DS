@@ -1,60 +1,58 @@
----
-title: "사이트 탐색" #
-sitemap: false
----
+# 사이트 탐색
 
-{% capture notice-1 %}
+::: tip
+
 **자주 방문하는 페이지**
 
-+ [마무리 단계](finalizing-setup)
-+ [boot9strap 설치 (Soundhax)](installing-boot9strap-(soundhax))
-+ [boot9strap 설치 (MSET9)](installing-boot9strap-(mset9))
+- [Finalizing Setup](finalizing-setup)
+- [Installing boot9strap (Soundhax)](installing-boot9strap-\(soundhax\))
+- [Installing boot9strap (MSET9)](installing-boot9strap-\(mset9\))
 
-{% endcapture %}
-<div class="notice--info">{{ notice-1 | markdownify }}</div>
+:::
 
-{% capture notice-2 %}
+::: info
+
 **모든 페이지**
 
-+ [A9LH를 B9S로 업데이트](a9lh-to-b9s)
-+ [기여자](credits)
-+ [CFW 확인](checking-for-cfw)
-+ [기여하기](contribute)
-+ [CTRTransfer](ctrtransfer)
-+ [타이틀과 게임 카드 추출](dumping-titles-and-game-cartridges)
-+ [F3 (Linux)](f3-(linux))
-+ [F3X (Mac)](f3x-(mac))
-+ [F3XSwift (Mac)](f3xswift-(mac))
-+ [자주 묻는 질문](faq)
-+ [파일 확장자명 보이기 (Windows)](file-extensions-(windows))
-+ [마무리 단계](finalizing-setup)
-+ [ntrboot 플래싱 (단일 3DS)](flashing-ntrboot-(3ds-single-system))
-+ [ntrboot 플래싱 (3DS 두 대)](flashing-ntrboot-(3ds-multi-system))
-+ [ntrboot 플래싱 (DSi)](flashing-ntrboot-(dsi))
-+ [ntrboot 플래싱 (NDS)](flashing-ntrboot-(nds))
-+ [SD 포맷하기 (Linux)](formatting-sd-(linux))
-+ [SD 포맷하기 (Mac)](formatting-sd-(mac))
-+ [SD 포맷하기 (Windows)](formatting-sd-(windows))
-+ [시작하기](get-started)
-+ [GodMode9 사용법](godmode9-usage)
-+ [H2testw (Windows)](h2testw-(windows))
-+ [홈](/)
-+ [boot9strap 설치 (하드모드)](installing-boot9strap-(hardmod))
-+ [boot9strap 설치 (MSET9)](installing-boot9strap-(mset9))
-+ [boot9strap 설치 (MSET9 CLI)](installing-boot9strap-(mset9-cli))
-+ [boot9strap 설치 (MSET9 Play 스토어)](installing-boot9strap-(mset9-play-store))
-+ [boot9strap 설치 (ntrboot)](installing-boot9strap-(ntrboot))
-+ [boot9strap 설치 (safecerthax)](installing-boot9strap-(safecerthax))
-+ [boot9strap 설치 (Soundhax)](installing-boot9strap-(soundhax))
-+ [boot9strap 설치 (SSLoth-Browser)](installing-boot9strap-(ssloth-browser))
-+ [boot9strap 설치 (super-skaterhax)](installing-boot9strap-(super-skaterhax))
-+ [주요 내용](key-information)
-+ [EmuNAND기반 데이터 이동](move-emunand)
-+ [ntrboot](ntrboot)
-+ [지역 변경](region-changing)
-+ [CFW 복구 / 업데이트](restoring-updating-cfw)
-+ [문제 해결](troubleshooting)
-+ [CFW 제거](uninstall-cfw)
-+ [B9S 업데이트](updating-b9s)
-{% endcapture %}
-<div class="notice--primary">{{ notice-2 | markdownify }}</div>
+- [A9LH to B9S](a9lh-to-b9s)
+- [Credits](credits)
+- [Checking for CFW](checking-for-cfw)
+- [Contribute](contribute)
+- [CTRTransfer](ctrtransfer)
+- [Dumping Titles and Game Cartridges](dumping-titles-and-game-cartridges)
+- [F3 (Linux)](f3-\(linux\))
+- [F3X (Mac)](f3x-\(mac\))
+- [F3XSwift (Mac)](f3xswift-\(mac\))
+- [FAQ](faq)
+- [File Extensions (Windows)](file-extensions-\(windows\))
+- [Finalizing Setup](finalizing-setup)
+- [Flashing ntrboot (3DS Single System)](flashing-ntrboot-\(3ds-single-system\))
+- [Flashing ntrboot (3DS Multi System)](flashing-ntrboot-\(3ds-multi-system\))
+- [Flashing ntrboot (DSi)](flashing-ntrboot-\(dsi\))
+- [Flashing ntrboot (NDS)](flashing-ntrboot-\(nds\))
+- [Formatting SD (Linux)](formatting-sd-\(linux\))
+- [Formatting SD (Mac)](formatting-sd-\(mac\))
+- [Formatting SD (Windows)](formatting-sd-\(windows\))
+- [Get Started](get-started)
+- [GodMode9 Usage](godmode9-usage)
+- [H2testw (Windows)](h2testw-\(windows\))
+- [Home](/)
+- [Installing boot9strap (Hardmod)](installing-boot9strap-\(hardmod\))
+- [Installing boot9strap (MSET9)](installing-boot9strap-\(mset9\))
+- [Installing boot9strap (MSET9 CLI)](installing-boot9strap-\(mset9-cli\))
+- [Installing boot9strap (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\))
+- [Installing boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
+- [Installing boot9strap (safecerthax)](installing-boot9strap-\(safecerthax\))
+- [Installing boot9strap (Soundhax)](installing-boot9strap-\(soundhax\))
+- [Installing boot9strap (SSLoth-Browser)](installing-boot9strap-\(ssloth-browser\))
+- [Installing boot9strap (super-skaterhax)](installing-boot9strap-\(super-skaterhax\))
+- [Key Information](key-information)
+- [Move EmuNAND](move-emunand)
+- [ntrboot](ntrboot)
+- [Region Changing](region-changing)
+- [Restoring / Updating CFW](restoring-updating-cfw)
+- [Troubleshooting](troubleshooting)
+- [Uninstall CFW](uninstall-cfw)
+- [Updating B9S](updating-b9s)
+
+:::
