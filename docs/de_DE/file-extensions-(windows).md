@@ -1,49 +1,62 @@
----
-title: "Dateierweiterungen (Windows)"
----
+# File Extensions (Windows)
 
-{% include toc title="Inhalt" %}
-
-### Lesen erforderlich
+## Required Reading
 
 Dies ist ein Add-on-Abschnitt für das Deaktivieren des Windows Standart-Verhalten, Dateierweiterungen zu verstecken.
 
 Dies wird es einfach machen die benötigten Dateien in diesem Guide zu finden.
 
-### Anleitung
+## Instructions
 
-#### Windows 11
-
-1. Starten sie den Datei-Explorer, indem sie irgendein Verzeichnis öffnen, wie zum Beispiel ihr SD-Karte-Verzeichnis
-1. Click the "View" option in the toolbar
-1. Go to "Show"
-1. Click "File name extensions" to enable it
-
-    ![]({{ "/images/screenshots/windows-11-file-extensions.png" | absolute_url }})
-    {: .notice--info}
-
-#### Windows 10 / 8.1 / 8
+### Windows 11
 
 1. Starten sie den Datei-Explorer, indem sie irgendein Verzeichnis öffnen, wie zum Beispiel ihr SD-Karte-Verzeichnis
-1. Klicken Sie auf das Ribbon-Menü die Option "Ansicht"
-1. Checken sie das Kontrollkästchen mit der Bezeichnung "Datei Dateinamenerweiterungen"
+2. Click the "View" option in the toolbar
+3. Go to "Show"
+4. Click "File name extensions" to enable it
 
-    ![]({{ "/images/screenshots/windows-10-file-extensions.png" | absolute_url }})
-    {: .notice--info}
+   ::: info
 
-#### Windows 7
+   ![](/images/screenshots/windows-11-file-extensions.png)
+
+   :::
+
+### Windows 10 / 8.1 / 8
+
+1. Starten sie den Datei-Explorer, indem sie irgendein Verzeichnis öffnen, wie zum Beispiel ihr SD-Karte-Verzeichnis
+2. Klicken Sie auf das Ribbon-Menü die Option "Ansicht"
+3. Checken sie das Kontrollkästchen mit der Bezeichnung "Datei Dateinamenerweiterungen"
+
+   ::: info
+
+   ![](/images/screenshots/windows-10-file-extensions.png)
+
+   :::
+
+### Windows 7
 
 1. Öffnen Sie das Startmenü, indem Sie darauf klicken oder die Windows-Taste betätigen
-1. Suchen Sie nach "Ordneroptionen" und wählen Sie das entsprechende Ergebnis aus
 
-    ![]({{ "/images/screenshots/windows-7-folder-options-start-menu.png" | absolute_url }})
-    {: .notice--info}
+2. Suchen Sie nach "Ordneroptionen" und wählen Sie das entsprechende Ergebnis aus
 
-1. Klicken Sie oben im Menü "Ordner-Optionen" die Option "Ansicht"
-1. Deaktivieren Sie das Kontrollkästchen "Erweiterungen bei bekannten Dateitypen ausblenden"
+   ::: info
 
-    ![]({{ "/images/screenshots/windows-7-folder-options.png" | absolute_url }})
-    {: .notice--info}
+   ![](/images/screenshots/windows-7-folder-options-start-menu.png)
 
-### Weiter zu [Erste Schritte](get-started)
-{: .notice--primary}
+   :::
+
+3. Klicken Sie oben im Menü "Ordner-Optionen" die Option "Ansicht"
+
+4. Deaktivieren Sie das Kontrollkästchen "Erweiterungen bei bekannten Dateitypen ausblenden"
+
+   ::: info
+
+   ![](/images/screenshots/windows-7-folder-options.png)
+
+   :::
+
+::: tip
+
+Continue to [Get Started](get-started)
+
+:::
