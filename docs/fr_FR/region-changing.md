@@ -1,74 +1,80 @@
----
-title: "Changement de Région"
----
+# Region Changing
 
-{% include toc title="Table of Contents" %}
+## Required Reading
 
-### Lecture requise
+This is an add-on section for region changing your console. This is done by installing the 11.15.0 CTRTransfer image for the region you want to switch to. After installing the image, you can update your console normally to the latest firmware (11.17.0).
 
-This is an add-on section for region changing your console. Cette opération peut être effectuée en installant l'image CTRTransfer 11.15.0 de la région à laquelle vous souhaitez passer. After installing the image, you can update your console normally to the latest firmware (11.17.0).
+Note that region changing is almost completely unnecessary since Luma3DS supports out-of-region games and individual title [Locale Emulation](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features). Additionally, running NDS games with alternative out-of-region languages is supported by [TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu/releases). You should only perform a region change if you wish to have your system UI is in a language that is not available on your console's current region.
 
-Notez que le changement de région est presque totalement inutile puisque Luma3DS prend en charge les jeux hors région et la prise en charge des langues de ces jeux via l'option [Locale Emulation](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features). De plus, l'exécution de jeux NDS avec d'autres langues hors région est prise en charge par [TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu/releases). Vous ne devriez effectuer un changement de région que si vous souhaitez que l'interface utilisateur de votre console soit dans une langue qui n'est pas disponible dans la région actuelle de votre console.
+::: info
 
-Cette page suppose que vous avez déjà installé Luma3DS et boot9strap. Si vous avez suivi le guide de ce site web jusqu'à la fin (Finalisation de l'installation), vous avez Luma3DS et boot9strap.
-{: .notice--info}
+This page assumes that you have already installed Luma3DS and boot9strap. If you followed this website to the end (Finalizing Setup), you have Luma3DS and boot9strap.
 
-As a part of this process, your system settings will be reset to its defaults. Cela inclut des éléments tels que votre nom d'utilisateur, votre pays et votre langue. **Installed games and their save data will not be affected.**
-{: .notice--warning}
+:::
 
-{% capture notice-6 %}
+::: warning
+
+As a part of this process, your system settings will be reset to its defaults. This includes things such as your username, country, and language. **Installed games and their save data will not be affected.**
+
+:::
+
+::: danger
+
 If you change the region of your console:
 
-+ Vous ne pourrez plus utiliser votre Identifiant Nintendo Network (NNID) (si vous en possédez un). Les Identifiants Nintendo Network (NNID) sont verrouillés sur la région dans laquelle ils ont été créés.
-+ Vous ne pourrez peut-être pas accéder à l'eShop, même si vous [supprimez votre compte eShop](https://en-americas-support.nintendo.com/app/answers/detail/a_id/74/~/how-to-delete-a-nintendo-eshop-account) au préalable. En effet, certains titres ont tendance à rester liés à la 3DS, même après la suppression du compte (surtout sur New 3DS).
-    + This is still relevant because, while purchases can no longer be made on eShop, game updates are still being provided. Updates may provide extra content or fix bugs.
-    + Cette logique s'étend aux Transferts de données, ce qui signifie que vous ne serez pas en mesure d'effectuer un Transfert de données d'une 3DS USA vers une 3DS avec région modifiée de JPN vers USA.
-    + Pokémon Bank also requires working eShop access.
-    + Cela étant dit, le Transfert de données et les mises à jour de jeu sont de toute façon verrouillées (par exemple, l'eShop japonais ne possède que des mises à jour de jeux japonais).
-+ **You will not be able to uninstall custom firmware without bricking the console!** If you intend to uninstall custom firmware in the future, you **MUST** restore your NAND backup that was created before the region change.
-{% endcapture %}
+- You will not be able to use your NNID (if you have one). NNIDs are locked to the region that they were created in.
+- You may not be able to access the eShop, even if you [delete your eShop account](https://en-americas-support.nintendo.com/app/answers/detail/a_id/74/~/how-to-delete-a-nintendo-eshop-account) beforehand. This is because certain titles tend to remain linked to the 3DS, even after account deletion (especially on New 3DS).
+  - This is still relevant because, while purchases can no longer be made on eShop, game updates are still being provided. Updates may provide extra content or fix bugs.
+  - This logic extends to system transfers, meaning you would not be able to perform a system transfer from a USA 3DS to a region-changed JPN-to-USA 3DS.
+  - Pokémon Bank also requires working eShop access.
+  - That being said, system transfer and game updates are region locked anyway (e.g. Japanese eShop only has Japanese game updates).
+- **You will not be able to uninstall custom firmware without bricking the console!** If you intend to uninstall custom firmware in the future, you **MUST** restore your NAND backup that was created before the region change.
 
-<div class="notice--danger">{{ notice-6 | markdownify }}</div>
+:::
 
-## Ce dont vous avez besoin
+## What You Need
 
-* La dernière version de [GodMode9]
-(https://github.com/d0k3/GodMode9/releases/latest) (le fichier GodMode9 `.zip`)
-* The latest release of [FBI](https://github.com/lifehackerhansol/FBI/releases/download/2.6.1/FBI.3dsx) (direct download)
-* The latest release of [faketik](https://github.com/ihaveamac/faketik/releases/latest) *(the `.3dsx` file)*
-* A torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download)
-    * If you already have a torrent client, you do not need to download a new one
-* The 11.15.0 CTRTransfer image for your console type of the region that you want to change to (e.g. Download "New 3DS or 2DS - USA" if you have a New 3DS and want to change your region to USA)
-{% include_relative include/ctrtransfer-images.txt %}
+- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
+- The latest release of [FBI](https://github.com/lifehackerhansol/FBI/releases/download/2.6.1/FBI.3dsx) (direct download)
+- The latest release of [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(the `.3dsx` file)_
+- A torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+  - If you already have a torrent client, you do not need to download a new one
+- The 11.15.0 CTRTransfer image for your console type of the region that you want to change to (e.g. Download "New 3DS or 2DS - USA" if you have a New 3DS and want to change your region to USA)
 
-### Instructions
+<!--@include: ./_include/ctrtransfer-images.md -->
 
-#### Section I - Préparatifs
+## Instructions
 
-{% include_relative include/ctrtransfer-prep.txt %}
+### Section I - Prep Work
 
-#### Section II - Sauvegarde de la NAND
+<!--@include: ./_include/ctrtransfer-prep.md -->
+
+### Section II - NAND Backup
 
 1. Press and hold (Start), and while holding (Start), power on your console. Ceci lancera GodMode9
-{% include_relative include/nand-backup.txt %}
 
-#### Section III - CTRTransfer
+<!--@include: ./_include/nand-backup.md -->
 
-{% include_relative include/ctrtransfer-main.txt %}
+### Section III - CTRTransfer
 
-#### Section IV - Lancement de FBI
+<!--@include: ./_include/ctrtransfer-main.md -->
 
-{% include_relative include/launch-hbl-dlp.txt %}
+### Section IV - Launching FBI
 
-#### Section V - Réinstallation des Tickets
+<!--@include: ./_include/launch-hbl-dlp.md -->
 
-{% include_relative include/ctrtransfer-ticket-copy.txt %}
+### Section V - Reinstalling Tickets
 
-#### Section VI - Fixing locale-related issues
+<!--@include: ./_include/ctrtransfer-ticket-copy.md -->
 
-{% include_relative include/ctrnand-datayeet.txt %}
+### Section VI - Fixing locale-related issues
+
+<!--@include: ./_include/ctrnand-datayeet.md -->
 
 ___
 
-La région de votre 3DS a été modifiée avec succès !
-{: .notice--success}
+::: tip
+
+Your 3DS has successfully been region changed!
+
+:::
