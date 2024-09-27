@@ -1,29 +1,27 @@
----
-title: "Politique de confidentialité" #
----
+# Privacy Policy
 
-### Cookies
+## Cookies
 
-Ce site web utilise des cookies pour faciliter la navigation des utilisateurs dans les instructions du guide. Les cookies permettent à la barre latérale de la page d'afficher la progression actuelle à travers le site pour aider les utilisateurs à naviguer plus facilement.
+This site utilizes cookies in order to facilitate routing users through the guide instructions. Cookies allow for the sidebar of the page to display current progress through the site to help users navigate the instructions more easily.
 
-### Contenu intégré à partir d'autres sites Web
+## Embedded Content From Other Websites
 
-Ce site peut inclure du contenu intégré (par ex. vidéos, images, articles, etc.). Le contenu intégré d'autres sites web se comporte comme si l'utilisateur avait visité l'autre site web.
+This site may include embedded content (e.g. videos, images, articles, etc.). Embedded content from other websites behaves as if the user has visited the other website.
 
-Ces sites web peuvent recueillir des données à votre sujet, utiliser des cookies, intégrer un suivi tiers supplémentaire et surveiller votre interaction avec ce contenu intégré, y compris le suivi de votre interaction avec le contenu intégré si vous avez un compte et que vous êtes connecté à ce site web.
+These websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including tracking your interaction with the embedded content if you have an account and are logged in to that website.
 
-### Statistiques
+## Analytics
 
-Ce site utilise Google Analytics pour surveiller et analyser le trafic. Ce site web est hébergé par GitHub Pages, qui peut recueillir des données à votre sujet, utiliser des cookies, intégrer un suivi tiers supplémentaire et surveiller votre interaction avec ce site. Pour plus d'informations sur GitHub Pages et son rapport à la vie privée des utilisateurs, consultez la [Déclaration de confidentialité de GitHub](https://help.github.com/fr/articles/github-privacy-statement).
+This site uses Google Analytics to monitor and analyze traffic. This site is hosted by Github Pages, which may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with this site. For more information about Github Pages as it relates to user privacy, see the [GitHub Privacy Statement](https://help.github.com/en/articles/github-privacy-statement).
 
-### Informations collectées
+## Information Collected
 
-Ce site web ne recueille pas d'informations personnelles. Ce site peut collecter des informations d'utilisation afin d'analyser l'intérêt pour le contenu et de fournir aux annonceurs des informations sur une base agrégée. Aucune information personnelle n'est partagée avec des sociétés de publicité tierces.
+This site does not collect personal information. This site may collect usage information in order to analyze interest in the content and to provide advertisers with information on an aggregate basis. No personally identifiable information is shared with third-party advertising companies.
 
-### Sites web tiers
+## Third-Party Websites
 
-Ce site web peut rediriger les utilisateurs vers d'autres sites pour utilisation ou référence. Ce site web n'est pas responsable des politiques de confidentialité des autres sites. Les utilisateurs doivent savoir que les politiques de confidentialité des autres sites web peuvent différer de la présente.
+This site may link to other sites for users to use or reference. This site is not responsible for the privacy policies of other sites. Users should be aware that the privacy policies of other websites may differ from this one.
 
-### Modifications de la politique de confidentialité
+## Changes to Privacy Policy
 
-Le contenu de cette politique de confidentialité peut être modifié à tout moment et pour n'importe quelle raison.
+The contents of this Privacy Policy may be altered at any time and for any reason.
