@@ -1,43 +1,58 @@
----
-title: "Checking for CFW"
----
+# Checking for CFW
 
-{% include toc title="תוכן העניינים" %}
-
-### קריאה דרושה
+## Required Reading
 
 This is an add-on section to check if your console already has a modern custom firmware.
 
 If your console already has an arm9loaderhax or boot9strap based custom firmware, you will need to follow the instructions indicated to upgrade your setup to a modern one.
 
-If your console has a menuhax-based CFW setup, you should [clear HOME Menu's extdata](troubleshooting#other-troubleshooting), then follow all instructions on your SysNAND. You probably have a menuhax-based setup if your system version when booting without an SD card is 9.2.0-20.
-{: .notice--info}
+::: info
 
-### הנחיות
+If your console has a menuhax-based CFW setup, you should [clear HOME Menu's extdata](troubleshooting#other-troubleshooting), then follow all instructions on your SysNAND. You probably have a menuhax-based setup if your system version when booting without an SD card is 9.2.0-20.
+
+:::
+
+## Instructions
 
 1. Power off your console
-1. Hold the (Select) button
-1. Power on your console while still holding the (Select) button
-1. You should now see a configuration menu of some sort
+2. Hold the (Select) button
+3. Power on your console while still holding the (Select) button
+4. You should now see a configuration menu of some sort
 
-___
+## What to do next
 
-### What to do next
+::: tip
 
 If your console boots to the normal HOME Menu, return to [Get Started](get-started)
-{: .notice--success}
+
+:::
+
+::: tip
 
 If you see a Luma3DS version of 7.0.5 or lower, continue to [A9LH to B9S](a9lh-to-b9s)
-{: .notice--primary}
+
+:::
+
+::: tip
 
 If you see a Luma3DS version of 7.1, continue to [Updating B9S](updating-b9s)
-{: .notice--primary}
+
+:::
+
+::: tip
 
 If you see a Luma3DS version of 8.0 or greater, continue to [Restoring / Updating CFW](restoring-updating-cfw)
-{: .notice--primary}
+
+:::
+
+::: warning
 
 If you see GodMode9, Decrypt9WIP, Hourglass9, or Luma3DS chainloader, you held (Start) by accident and should try these instructions again with (Select)
-{: .notice--warning}
+
+:::
+
+::: danger
 
 If you see something not described by the above options, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
-{: .notice--danger}
+
+:::
