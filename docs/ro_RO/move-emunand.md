@@ -1,149 +1,179 @@
----
-title: "Mutare EmuNAND"
----
+# Move EmuNAND
 
-{% include toc title="Cuprins" %}
-
-### Lectură obligatorie
+## Required Reading
 
 Aceasta este o secțiune suplimentară pentru a muta conținutul unui EmuNAND precedent către noul CFW SysNAND, după care se va elimina partiția veche EmuNAND. Țineți cont că termenii EmuNAND și RedNAND se referă la implementări puțin diferite ale [aceluiași concept](http://3dbrew.org/wiki/NAND_Redirection).
 
 Țineți cont că dacă aveți alte payload-uri în afară de `GodMode9.firm` în folderul '/luma/payloads/' de pe cardul SD, apăsând (Start) va lansa un "meniu chainloader" în care va trebui să folosiți D-Pad-ul și butonul (A) ca să selectați "GodMode9" pentru aceste instrucțiuni.
 
+::: danger
+
 TREBUIE să aveți deja instalat Luma3DS şi boot9strap pentru a-l folosi.
-{: .notice--danger}
 
-### Ce aveți nevoie
+:::
 
-* Un EmuNAND existent
-* The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
+## What You Need
 
-### Instrucțiuni
+- An existing EmuNAND
+- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
 
-#### Secțiunea I - Preparații
+## Instructions
+
+### Section I - Prep Work
 
 1. Power off your console
-1. Introduceți cardul SD în calculator
-1. Copiați `GodMode9.firm` de pe fișierul `.zip` GodMode9 către folderul `/luma/payloads/` de pe cardul SD
-1. Copiați folderul `gm9` din arhiva `.zip` GodMode9 în rădăcina cardului SD
-1. Reinsert your SD card into your console
+2. Introduceți cardul SD în calculator
+3. Copiați `GodMode9.firm` de pe fișierul `.zip` GodMode9 către folderul `/luma/payloads/` de pe cardul SD
+4. Copiați folderul `gm9` din fișierul `.zip` GodMode9 în rădăcina cardului SD
+5. Reinsert your SD card into your console
 
-#### Secțiunea II - Copie de rezervă la salvările DSiWare de pe SysNAND
+### Section II - Backup SysNAND DSiWare Saves
+
+::: info
 
 Dacă nu aveți niciun joc DSiWare sau date de salvare de care vă interesează, săriți peste această secțiune.
-{: .notice--info}
+
+:::
 
 1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it is completed
-1. Dacă vi se cere să reparați dara și ora RTC, apăsați (A) pentru a efectua, apoi setați data și ora, apoi apăsați (A) pentru a continua
-    + Țineți cont că, dacă trebuiați să reparați data și ora, va trebui să reparați ora în System Settings de asemenea după completarea acestui ghid
-1. Navigați spre `[2:] SYSNAND TWLN` -> `title`
-1. Țineți apăsat (R) și apăsați (A) în același timp pe `00030004` pentru a selecta folderul, apoi selectați "Copy to 0:/gm9/out"
-    + Acest proces poate lua ceva timp dacă aveți multe jocuri DSiWare
-1. Apăsați (B) de două ori ca să vă întoarceți la meniul principal
+2. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it is completed
+3. Dacă vi se cere să reparați dara și ora RTC, apăsați (A) pentru a efectua, apoi setați data și ora, apoi apăsați (A) pentru a continua
+   - Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
+4. Navigați spre `[2:] SYSNAND TWLN` -> `title`
+5. Țineți apăsat (R) și apăsați (A) în același timp pe `00030004` pentru a selecta folderul, apoi selectați "Copy to 0:/gm9/out"
+   - This process may take some time if you have many DSiWare games
+6. Apăsați (B) de două ori ca să vă întoarceți la meniul principal
 
-#### Secțiunea III - Copie de rezervă a salvărilor VC GBA
+### Section III - Backup GBA VC Saves
+
+::: info
 
 Dacă nu aveți niciun joc VC GBA sau date de salvare de care vă interesează, săriți peste această secțiune.
-{: .notice--info}
+
+:::
+
+::: info
 
 Țineți cont că acest lucru nu este necesar pentru orice alt fel de joc Virtual Console (GBC, NES, etc)
-{: .notice--info}
+
+:::
+
+::: info
 
 Jocul va fi depozitat în folderul `/gm9/out/` de pe cardul SD cu numele `<TitleID>.gbavc.sav`.
-{: .notice--info}
+
+:::
+
+::: info
 
 To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by pressing (Home) to bring up the action menu, selecting `Title manager`, and selecting `[A:] SD CARD`.
-{: .notice--info}
+
+:::
 
 1. Do the following process for each GBA VC game that you want to back up the save for:
-    + Lansați jocul VC GBA
-    + Ieșiți din jocul VC GBA
-    + Boot your console while holding (Start) to launch the Luma3DS chainloader menu
-    + Lansați GodMode9 apăsând (A)
-    + Navigați spre `[S:] SYSNAND VIRTUAL`
-    + Apăsați (A) pe `agbsave.bin` pentru a-l selecta
-    + Selectați "AGBSAVE options..."
-    + Selectaţi "Dump GBA VC save"
-    + Apăsați (A) pentru a continua
-    + Press (Start) to reboot your console
+   - Launch the GBA VC game
+   - Exit the GBA VC game
+   - Boot your console while holding (Start) to launch the Luma3DS chainloader menu
+   - Launch GodMode9 by pressing (A)
+   - Navigate to `[S:] SYSNAND VIRTUAL`
+   - Press (A) on `agbsave.bin` to select it
+   - Select "AGBSAVE options..."
+   - Select "Dump GBA VC save"
+   - Apăsați (A) pentru a continua
+   - Press (Start) to reboot your console
 
-#### Secțiunea IV - Copiind EmuNAND pe SysNAND
+### Section IV - Copy EmuNAND to SysNAND
 
 1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-1. Navigați spre `[E:] EMUNAND VIRTUAL`
-1. Apăsați (A) pe `nand.bin` pentru a-l selecta, apoi selectați "NAND image options...", apoi selectați "Restore SysNAND (safe)"
-1. Apăsați (A) pentru a debloca rescrierea în SysNAND, apoi introduceți combinația de butoane care vi se cere
-    + Aceasta nu va suprascrie instalarea boot9strap
-1. Introduceți combinația de butoane care vi se cere pentru a debloca scrierea în SysNAND (lvl1)
-    + Acest proces va lua ceva timp
-1. Once it is completed, press (A) to continue
-1. Apăsați (B) ca să refuzați reblocarea permisiunilor de scriere dacă vi se cere
-1. Apăsați (B) ca să vă întoarceți în meniul principal
+2. Navigați spre `[E:] EMUNAND VIRTUAL`
+3. Apăsați (A) pe `nand.bin` pentru a-l selecta, apoi selectați "NAND image options...", apoi selectați "Restore SysNAND (safe)"
+4. Apăsați (A) pentru a debloca rescrierea în SysNAND, apoi introduceți combinația de butoane care vi se cere
+   - This will not overwrite your boot9strap installation
+5. Introduceți combinația de butoane care vi se cere pentru a debloca scrierea în SysNAND (lvl1)
+   - This process will take some time
+6. Once it is completed, press (A) to continue
+7. Apăsați (B) ca să refuzați reblocarea permisiunilor de scriere dacă vi se cere
+8. Apăsați (B) ca să vă întoarceți în meniul principal
 
-#### Secțiunea V - Restaurând salvările DSiWare
+### Section V - Restore DSiWare Saves
+
+::: info
 
 Dacă nu ați făcut o copie de rezervă la datele de salvare DSiWare, săriți peste această secțiune.
-{: .notice--info}
+
+:::
 
 1. Navigați spre `[0:] SDCARD` -> `gm9` -> `out`
-1. Apăsați (Y) pe folderul `00030004` pentru a-l copia
-1. Apăsați (B) de două ori ca să vă întoarceți la meniul principal
-1. Navigați spre `[2:] SYSNAND TWLN` -> `title`
-1. Apăsați (Y) ca să lipiți folderul `00030004`
-1. Selectați "Copy path(s)"
-1. Apăsați (A) ca să deblocați scrierea în SysNAND (lvl1), apoi introduceți combinația de butoane care vi se cere
-1. Selectați "Overwrite file(s)"
-    + Acest proces poate lua ceva timp dacă aveți multe jocuri DSiWare
-1. Apăsați (B) ca să refuzați reblocarea permisiunilor de scriere dacă vi se cere
-1. Apăsați (B) de două ori ca să vă întoarceți la meniul principal
+2. Apăsați (Y) pe folderul `00030004` pentru a-l copia
+3. Apăsați (B) de două ori ca să vă întoarceți la meniul principal
+4. Navigați spre `[2:] SYSNAND TWLN` -> `title`
+5. Apăsați (Y) ca să lipiți folderul `00030004`
+6. Selectați "Copy path(s)"
+7. Apăsați (A) ca să deblocați scrierea în SysNAND (lvl1), apoi introduceți combinația de butoane care vi se cere
+8. Selectați "Overwrite file(s)"
+   - This process may take some time if you have many DSiWare games
+9. Apăsați (B) ca să refuzați reblocarea permisiunilor de scriere dacă vi se cere
+10. Apăsați (B) de două ori ca să vă întoarceți la meniul principal
 
-#### Secțiunea VI - Restaurând salvările VC GBA
+### Section VI - Restore GBA VC Saves
+
+::: info
 
 Dacă nu ați făcut o copie de rezervă la datele de salvare VC GBA, săriți peste această secțiune.
-{: .notice--info}
+
+:::
+
+::: info
 
 To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by pressing (Home) to bring up the action menu, selecting `Title manager`, and selecting `[A:] SD CARD`.
-{: .notice--info}
+
+:::
 
 1. Hold (R) and press (Start) at the same time to power off your console
-1. Power on your console into SysNAND
-1. Faceți următoarea procedură pentru fiecare joc VC GBA la care vreți să restaurați datele de salvare:
-    + Lansați jocul VC GBA
-    + Ieșiți din jocul VC GBA
-    + Boot your console while holding (Start) to launch the Luma3DS chainloader menu
-    + Lansați GodMode9 apăsând (A)
-    + Navigați spre `[0:] SDCARD` -> `gm9`
-    + Apăsați (Y) pe fişierul `<TitleID>.gbavc.sav` pe care doriţi să-l restauraţi pentru a-l copia
-    + Apăsați (B) ca să vă întoarceți în meniul principal
-    + Navigați spre `[S:] SYSNAND VIRTUAL`
-    + Apăsați (A) pe `agbsave.bin` pentru a-l selecta
-    + Selectați "AGBSAVE options..."
-    + Selectaţi "Inject GBA VC save"
-    + Apăsați (A) pentru a continua
-    + Press (Start) to reboot your console
-    + Lansați jocul VC GBA
-    + Ieșiți din jocul VC GBA
+2. Power on your console into SysNAND
+3. Faceți următoarea procedură pentru fiecare joc VC GBA la care vreți să restaurați datele de salvare:
+   - Launch the GBA VC game
+   - Exit the GBA VC game
+   - Boot your console while holding (Start) to launch the Luma3DS chainloader menu
+   - Launch GodMode9 by pressing (A)
+   - Navigați spre `[0:] SDCARD` -> `gm9`
+   - Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
+   - Apăsați (B) ca să vă întoarceți în meniul principal
+   - Navigate to `[S:] SYSNAND VIRTUAL`
+   - Press (A) on `agbsave.bin` to select it
+   - Select "AGBSAVE options..."
+   - Select "Inject GBA VC save"
+   - Apăsați (A) pentru a continua
+   - Press (Start) to reboot your console
+   - Launch the GBA VC game
+   - Exit the GBA VC game
 
-#### Secțiunea VII - Copie de rezervă SysNAND
+### Section VII - Backup SysNAND
 
 1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-{% include_relative include/nand-backup.txt -%}
+
+<!--@include: ./_include/nand-backup.md -->
+
 1. **Faceți copii de rezervă la fiecare fișier de pe cardul SD într-un folder din calculator; toate fișierele vor fi șterse în pașii următori**
 
-#### Secțiunea VIII - Formatarea cardului SD
+### Section VIII - Format SD card
 
 1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-{% include_relative include/format-sd-gm9.txt -%}
+
+<!--@include: ./_include/format-sd-gm9.md -->
+
 1. Țineți apăsat (R) și apăsați (B) în același timp pentru a scoate cardul SD
-1. Introduceți cardul SD în calculator
-1. Copiați toate fișierele înapoi pe cardul SD
-    + Asigurați-vă că înlocuiți fișierul `boot.firm` de pe cardul SD cu cel din copia de rezervă
-1. Reinsert your SD card into your console
-1. Apăsați (A) pentru a remonta cardul SD
-1. Apăsați (Start) pentru a reporni
+2. Introduceți cardul SD în calculator
+3. Copiați toate fișierele înapoi pe cardul SD
+   - Ensure you replace the `boot.firm` file on your SD card with the one from your backup
+4. Reinsert your SD card into your console
+5. Apăsați (A) pentru a remonta cardul SD
+6. Apăsați (Start) pentru a reporni
 
 ___
 
-### Întoarceți-vă la [Finalizând instalarea](finalizing-setup).
-{: .notice--primary}
+::: tip
+
+Return to [Finalizing Setup](finalizing-setup)
+
+:::
