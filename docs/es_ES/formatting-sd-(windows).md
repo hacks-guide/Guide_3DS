@@ -1,71 +1,94 @@
----
-title: "Formatear una tarjeta SD (Windows)"
----
+# Formatting SD (Windows)
 
-{% include toc title="Tabla de contenidos" %}
+## Required Reading
 
-### Lectura requerida
+This is an add-on section for formatting an SD card to work with the 3DS.
 
-Esta es una sección adicional para formatear una tarjeta SD para trabajar con la 3DS.
+If the 3DS already recognizes the SD card, this guide is not required.
 
-Si la 3ds ya reconoce la tarjeta SD, esta guía no es necesaria.
+This page is for Windows users only. If you are not on Windows, check out the [Formatting SD (Linux)](formatting-sd-\(linux\)) or [Formatting SD (Mac)](formatting-sd-\(mac\)) pages.
 
-Esta página es sólo para usuarios de Windows. Si no eres un usuario de Windows, revisa las páginas [Formatear una tarjeta SD (Linux)](formatting-sd-(linux)), o [Formatear una tarjeta SD (Mac)](formatting-sd-(mac)).
+## What You Need
 
-### Qué necesitas
+- **For SD cards 32GB or smaller:** the latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
+- **For SD cards 64GB or larger:** The latest version of [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
 
-* **For SD cards 32GB or smaller:** the latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
-* **For SD cards 64GB or larger:** The latest version of [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
+## Instructions (32GB or smaller)
 
-### Instructions (32GB or smaller)
+1. Insert your SD card into your computer
 
-1. Inserta tu tarjeta SD en tu computadora
-1. Si la tarjeta SD tiene archivos o carpetas en ella, copia todo a una carpeta de respaldo en tu computadora
-1. Run `SD Card Formatter Setup` (the `.exe` file) in the downloaded `.zip` file with Administrator privileges, then install the program
-1. Run `SD Card Formatter` from the Start Menu
-1. Select your SD card's drive letter for "Select card"
+2. If the SD card has any files and folders on it, copy everything to a folder on your computer
 
-    ¡Asegúrate de elegir la unidad correcta, de lo contrario podrías borrar el contenido de otra unidad por error!
-    {: .notice--danger}
+3. Run `SD Card Formatter Setup` (the `.exe` file) in the downloaded `.zip` file with Administrator privileges, then install the program
 
-1. Elige el nombre que quieras en "Volume label"
-1. Asegúrate de que la opción "Quick Format" está seleccionada
-1. Click "Format"
-1. Haz clic en "OK"
-1. Espera a que termine el formateo
-1. Haz clic en "OK"
-1. Close SD Card Formatter
-1. Si la tarjeta SD tenía archivos o carpetas en ella antes del formateo, copia todo de regreso
+4. Run `SD Card Formatter` from the Start Menu
 
-### Instructions (64GB or larger)
+5. Select your SD card's drive letter for "Select card"
 
-1. Inserta tu tarjeta SD en tu computadora
-1. Si la tarjeta SD tiene archivos o carpetas en ella, copia todo a una carpeta de respaldo en tu computadora
-1. Ejecuta `guiformat.exe`
-1. Selecciona la letra de la unidad de tu tarjeta SD en el campo "Drive"
+   ::: danger
 
-    ¡Asegúrate de elegir la unidad correcta, de lo contrario podrías borrar el contenido de otra unidad por error!
-    {: .notice--danger}
+   Make sure you choose the correct drive letter, otherwise you might accidentally erase the wrong drive!
 
-1. Selecciona un tamaño apropiado en el campo "Allocation unit size"
-    + If the SD card is 64GB, choose 32768
-    + If the SD card is larger than 64GB, choose 65536
-1. Elige el nombre que quieras en "Volume label"
-1. Asegúrate de que la opción "Quick Format" está seleccionada
-1. Haz clic en "Start"
-1. Haz clic en "OK"
-1. Espera a que termine el formateo
-1. Haz clic en "Close"
-1. Si la tarjeta SD tenía archivos o carpetas en ella antes del formateo, copia todo de regreso
+   :::
 
-### Troubleshooting
+6. Enter anything for "Volume label"
 
-* guiformat shows the error "Failed to open device: GetLastError()=32"
-    + Cierra todos los programas que puedan estar usando la tarjeta SD, tales como ventanas del Explorador de Windows.
-    + If this issue persists, try reformatting the card to NTFS in File Explorer, close that window when it's done, and re-attempt the guiformat process.
+7. Ensure that "Quick Format" is selected
 
-* guiformat shows the error "GetLastError()=1117"
-    + Your SD card write-protection switch may be [enabled](/images/sdlock.png). The lock must be flipped upwards to allow writing to the SD card (including formatting).
+8. Click "Format"
 
-* SD card remains undetected by console or continues to display the wrong capacity after formatting
-    + Your SD card may be partitioned or have unallocated space. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Windows) to reformat your SD card.
+9. Click "OK"
+
+10. Wait for the format to finish
+
+11. Click "OK"
+
+12. Close SD Card Formatter
+
+13. If the SD card had any files and folders on it before the format, copy everything back from your computer
+
+## Instructions (64GB or larger)
+
+1. Insert your SD card into your computer
+
+2. If the SD card has any files and folders on it, copy everything to a folder on your computer
+
+3. Run `guiformat.exe`
+
+4. Select your SD card's drive letter for "Drive"
+
+   ::: danger
+
+   Make sure you choose the correct drive letter, otherwise you might accidentally erase the wrong drive!
+
+   :::
+
+5. Select a size for "Allocation unit size"
+   - If the SD card is 64GB, choose 32768
+   - If the SD card is larger than 64GB, choose 65536
+
+6. Enter anything for "Volume label"
+
+7. Ensure that "Quick Format" is selected
+
+8. Click "Start"
+
+9. Click "OK"
+
+10. Wait for the format to finish
+
+11. Click "Close"
+
+12. If the SD card had any files and folders on it before the format, copy everything back from your computer
+
+## Resolución de Problemas
+
+- guiformat shows the error "Failed to open device: GetLastError()=32"
+  - Close everything that may be using the SD card, such as any File Explorer windows.
+  - If this issue persists, try reformatting the card to NTFS in File Explorer, close that window when it's done, and re-attempt the guiformat process.
+
+- guiformat shows the error "GetLastError()=1117"
+  - Your SD card write-protection switch may be [enabled](/images/sdlock.png). The lock must be flipped upwards to allow writing to the SD card (including formatting).
+
+- SD card remains undetected by console or continues to display the wrong capacity after formatting
+  - Your SD card may be partitioned or have unallocated space. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Windows) to reformat your SD card.
