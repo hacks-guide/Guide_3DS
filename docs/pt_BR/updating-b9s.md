@@ -1,53 +1,60 @@
----
-title: "Atualizando B9S" #
----
+# Updating B9S
 
-{% include toc title="Tabela de Conteúdo" %}
-
-### Leitura Obrigatória
+## Required Reading
 
 Esta página é para usuários do boot9strap atualizarem a instalação do boot9strap para a versão mais recente.
 
-### O que é necessário
+## What You Need
 
-* A versão mais recente do [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (download direto)
-* A versão mais recente do [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (download direto)
-* A versão mais recente do [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (o arquivo `.zip` do Luma3DS)
+- The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
+- The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
+- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
 
-### Instruções
+## Instructions
 
-#### Seção I - Preparação
+### Section I - Prep Work
+
+::: info
 
 Para todas as etapas nesta seção, substitua quaisquer arquivos existentes no seu cartão SD.
-{: .notice--info}
+
+:::
 
 1. Insira o cartão SD no seu computador
-1. Crie uma pasta chamada `boot9strap` na raiz do seu cartão SD
-1. Copie o `boot9strap.firm` e o `boot9strap.firm.sha` do `.zip` do boot9strap para a pasta `/boot9strap/` no seu cartão SD
-1. Copie `SafeB9SInstaller.firm` do `.zip` do SafeB9SInstaller para a raiz do seu cartão SD e renomeie-o para `boot.firm`
-1. Reinsira o cartão SD no seu console
+2. Crie uma pasta chamada `boot9strap` na raiz do seu cartão SD
+3. Copie o `boot9strap.firm` e o `boot9strap.firm.sha` do `.zip` do boot9strap para a pasta `/boot9strap/` no seu cartão SD
+4. Copie `SafeB9SInstaller.firm` do `.zip` do SafeB9SInstaller para a raiz do seu cartão SD e renomeie-o para `boot.firm`
+5. Reinsira o cartão SD no seu console
 
-    ![]({{ "/images/screenshots/updateb9s-root-layout.png" | absolute_url }})
-    {: .notice--info}
+   ::: info
 
+   ![](/images/screenshots/updateb9s-root-layout.png)
 
-#### Seção II - Instalando o boot9strap
+   :::
+
+### Section II - Installing boot9strap
 
 1. Ligue o seu console
-    + Isso deve iniciar o SafeB9SInstaller automaticamente
-{%- include_relative include/install-boot9strap-safeb9sinstaller.txt isbootfirm="true" inline="true" %}
+   - This should automatically launch SafeB9SInstaller
+2. Quando solicitado, aperte a sequência de botões fornecida na tela superior para instalar o boot9strap
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+3. Assim que for completo, force o seu console a desligar segurando o botão POWER
+   - Your console will only boot to the SafeB9SInstaller screen until the next section is completed
 
-#### Seção III - Atualizar Luma3DS
+### Section III - Update Luma3DS
 
 1. Insira o cartão SD no seu computador
-1. Copie `boot.firm` e `boot.3dsx` do `.zip` do Luma3DS para a raiz do seu cartão SD, substituindo o arquivo existente
-1. Reinsira o cartão SD no seu console
-1. Ligue o seu console
-1. Se o seu console foi inicializado no menu de configuração do Luma3DS, pressione (Start) para salvar e reiniciar
-    + O menu de configuração do Luma3DS são configurações para o custom firmware do Luma3DS. Muitas dessas configurações podem ser úteis para personalização ou depuração
-    + Para a finalidade deste guia, estas configurações serão deixadas nas configurações padrão
+2. Copie `boot.firm` e `boot.3dsx` do `.zip` do Luma3DS para a raiz do seu cartão SD, substituindo o arquivo existente
+3. Reinsira o cartão SD no seu console
+4. Ligue o seu console
+5. Se o seu console foi inicializado no menu de configuração do Luma3DS, pressione (Start) para salvar e reiniciar
+   - Luma3DS configuration menu are settings for the Luma3DS custom firmware. Muitas dessas configurações podem ser úteis para personalização ou depuração
+   - For the purpose of this guide, these settings will be left on default settings
 
 ___
 
-### Continue para [Finalizando a instalação](finalizing-setup)
-{: .notice--primary}
+::: tip
+
+Continue to [Finalizing Setup](finalizing-setup)
+
+:::
