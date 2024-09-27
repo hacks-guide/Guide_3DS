@@ -1,40 +1,43 @@
----
-title: "H2testw (Windows)"
----
+# H2testw (Windows)
 
-{% include toc title="Indice" %}
-
-### Lettura necessaria
+## Required Reading
 
 In questa sezione aggiuntiva verrà spiegato come verificare la presenza di errori nella tua scheda SD utilizzando h2testw.
 
 A seconda delle dimensioni della tua scheda SD e della velocità del tuo computer, questo procedimento può durare diverse ore!
 
-Questa pagina è solo per utenti Windows. Se non sei su Windows, usa [F3 (Linux)](f3-(linux)) o [F3XSwift (Mac)](f3xswift-(mac)).
+Questa pagina è solo per utenti Windows. Se non sei su Windows, usa [F3 (Linux)](f3-\(linux\)) o [F3XSwift (Mac)](f3xswift-\(mac\)).
 
-### Cosa serve
+## What You Need
 
-* L'ultima versione di [h2testw](https://www.heise.de/ct/Redaktion/bo/downloads/h2testw_1.4.zip)
+- The latest version of [h2testw](https://www.heise.de/ct/Redaktion/bo/downloads/h2testw_1.4.zip)
 
-### Istruzioni
+## Instructions
 
 1. Copia il file `h2testw.exe` dall'archivio `.zip` di h2testw sul tuo desktop
-1. Inserisci la scheda SD nel tuo computer
-1. Avvia `h2testw.exe`
-1. Seleziona "English"
-1. Clicca su "Select target"
-1. Seleziona la lettera del drive della tua scheda SD
-1. Assicurati che "all available space" sia selezionato
-1. Clicca su "Write + Verify"
-1. Attendi il termine del processo
+2. Inserisci la scheda SD nel tuo computer
+3. Avvia `h2testw.exe`
+4. Seleziona "English"
+5. Clicca su "Select target"
+6. Seleziona la lettera del drive della tua scheda SD
+7. Assicurati che "all available space" sia selezionato
+8. Clicca su "Write + Verify"
+9. Attendi il termine del processo
 
-___
+::: tip
 
 Se il test mostra come risultato "Test finished without errors", la tua scheda SD funziona correttamente e puoi cancellare tutti i file `.h2w` dalla scheda.
-{: .notice--success}
+
+:::
+
+::: danger
 
 Se il test mostra qualunque altro risultato, la tua scheda SD potrebbe essere corrotta o danneggiata e potresti doverla sostituire!
-{: .notice--danger}
 
-### Ritorna a [Cominciamo!](get-started)
-{: .notice--primary}
+:::
+
+::: tip
+
+Return to [Get Started](get-started)
+
+:::
