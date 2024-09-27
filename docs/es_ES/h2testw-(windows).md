@@ -1,40 +1,43 @@
----
-title: "H2testw (Windows)"
----
+# H2testw (Windows)
 
-{% include toc title="Tabla de contenidos" %}
+## Required Reading
 
-### Lectura requerida
+This is an add-on section for checking your SD card for errors using h2testw.
 
-Esta es una sección adicional para revisar tu tarjeta SD en busca de errores usando h2testw.
+Depending on the size of your SD card and the speed of your computer, this process can take up to several hours!
 
-Dependiendo del tamaño tu tarjeta SD y la velocidad de tu computadora, ¡este proceso podría tardar varias horas!
+This page is for Windows users only. If you are not on windows, check out the [F3 (Linux)](f3-\(linux\)) or [F3XSwift (Mac)](f3xswift-\(mac\)) pages.
 
-Esta página es sólo para usuarios de Windows. If you are not on windows, check out the [F3 (Linux)](f3-(linux)) or [F3XSwift (Mac)](f3xswift-(mac)) pages.
+## What You Need
 
-### Qué necesitas
+- The latest version of [h2testw](https://www.heise.de/ct/Redaktion/bo/downloads/h2testw_1.4.zip)
 
-* La última versión de [h2testw](https://www.heise.de/ct/Redaktion/bo/downloads/h2testw_1.4.zip)
+## Instructions
 
-### Instrucciones
+1. Copy `h2testw.exe` from the h2testw `.zip` to your desktop
+2. Insert your SD card into your computer
+3. Run `h2testw.exe`
+4. Select "English"
+5. Click "Select target"
+6. Select your SD card's drive letter
+7. Ensure "all available space" is selected
+8. Click "Write + Verify"
+9. Wait until the process is completed
 
-1. Copiar `h2testw.exe` contenido en el `.zip` de h2testw al escritorio
-1. Inserta tu tarjeta SD en tu computadora
-1. Ejecuta `h2testw.exe`
-1. Selecciona "English"
-1. Selecciona "Select target"
-1. Selecciona la letra de la unidad de tu tarjeta SD
-1. Asegúrate de que "all available space" esté seleccionado
-1. Haz clic en "Write + Verify"
-1. Espera hasta que se complete el proceso
-
-___
+::: tip
 
 If the test shows the result `Test finished without errors`, your SD card is good and you can delete all `.h2w` files on your SD card.
-{: .notice--success}
 
-Si la comprobación muestra otro tipo de resultado, ¡tu tarjeta SD puede estar corrupta o dañada y tendrás que reemplazarla!
-{: .notice--danger}
+:::
 
-### Regresa a [Comencemos](get-started)
-{: .notice--primary}
+::: danger
+
+If the test shows any other results, your SD card may be corrupted or damaged and you may have to replace it!
+
+:::
+
+::: tip
+
+Return to [Get Started](get-started)
+
+:::
