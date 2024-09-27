@@ -1,29 +1,27 @@
----
-title: "Política de privacidad" #
----
+# Privacy Policy
 
-### Cookies
+## Cookies
 
-Este sitio utiliza cookies para facilitar el seguimiento de las instrucciones de la guía por parte de los usuarios. Las cookies permiten que el recuadro lateral de la página muestre el progreso de la lectura de la misma para ayudar a los usuarios a navegar por las instrucciones con mayor facilidad.
+This site utilizes cookies in order to facilitate routing users through the guide instructions. Cookies allow for the sidebar of the page to display current progress through the site to help users navigate the instructions more easily.
 
-### Contenido incluido de otros sitios web
+## Embedded Content From Other Websites
 
-Este sitio puede incluir contenido externo (por ej.: videos, imágenes, artículos, etc.). Éste tipo de contenidos se comporta como si el usuario visitase el otro sitio web.
+This site may include embedded content (e.g. videos, images, articles, etc.). Embedded content from other websites behaves as if the user has visited the other website.
 
-Estos sitios pueden recolectar datos acerca de ti, usar cookies, incurrir en seguimiento adicional por parte de terceros y monitorear tu interacción con el contenido externo, incluyendo seguimiento de tu interacción con dicho contenido si posees una cuenta en ese sitio web y has iniciado sesión en la misma.
+These websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including tracking your interaction with the embedded content if you have an account and are logged in to that website.
 
-### Analítica
+## Analytics
 
-Este sitio utiliza Google Analytics para monitorear y analizar el tráfico. Este sitio web está alojado en Github Pages, quienes pueden recolectar datos sobre ti, utilizar cookies, incurrir en seguimiento por parte de terceros y monitorear tu interacción con el sitio. Para más información sobre Github Pages en relación a la privacidad del usuario, puedes revisar la [Declaración de privacidad de Github](https://help.github.com/en/articles/github-privacy-statement) (en inglés).
+This site uses Google Analytics to monitor and analyze traffic. This site is hosted by Github Pages, which may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with this site. For more information about Github Pages as it relates to user privacy, see the [GitHub Privacy Statement](https://help.github.com/en/articles/github-privacy-statement).
 
-### Información recolectada
+## Information Collected
 
-Este sitio no recolecta información personal. Este sitio puede recopilar información de uso con el fin de analizar el interés en el contenido y proporcionar a los anunciantes información más completa. Ningún tipo de información de identificación personal es compartida con empresas de publicidad de terceros.
+This site does not collect personal information. This site may collect usage information in order to analyze interest in the content and to provide advertisers with information on an aggregate basis. No personally identifiable information is shared with third-party advertising companies.
 
-### Sitios web externos
+## Third-Party Websites
 
-Este sitio web puede enlazar a otros sitios para uso o referencia por parte de los usuarios. Este sitio no se hace responsable de las políticas de privacidad de otros sitios web. Los usuarios deben ser conscientes de que las políticas de privacidad de otros sitios pueden diferir de ésta.
+This site may link to other sites for users to use or reference. This site is not responsible for the privacy policies of other sites. Users should be aware that the privacy policies of other websites may differ from this one.
 
-### Cambios a la política de privacidad
+## Changes to Privacy Policy
 
-El contenido de esta Política de privacidad puede ser modificado en cualquier momento y por cualquier motivo.
+The contents of this Privacy Policy may be altered at any time and for any reason.
