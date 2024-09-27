@@ -1,43 +1,58 @@
----
-title: "Checando por CFW"
----
+# Checando por CFW
 
-{% include toc title="Tabela de Conteúdo" %}
-
-### Leitura Obrigatória
+## Required Reading
 
 Esta é uma seção adicional para checar se o seu console já possui custom firmware moderno.
 
 Se o seu console já tem um custom firmware baseado em arm9loaderhax ou boot9strap, você vai precisar seguir as instruções indicadas para atualizar sua instalação para uma moderna.
 
-Se o seu console tem uma configuração de CFW baseada em menuhax, você deve [limpar a extdata do Menu HOME](troubleshooting#other-troubleshooting), e em seguida, seguir todas as instruções na sua SysNAND. Você provavelmente tem uma configuração baseada em menuhax se a versão do seu sistema ao inicializar sem um cartão SD é 9.2.0-20.
-{: .notice--info}
+::: info
 
-### Instruções
+Se o seu console tem uma configuração de CFW baseada em menuhax, você deve [limpar a extdata do Menu HOME](troubleshooting#other-troubleshooting), e em seguida, seguir todas as instruções na sua SysNAND. Você provavelmente tem uma configuração baseada em menuhax se a versão do seu sistema ao inicializar sem um cartão SD é 9.2.0-20.
+
+:::
+
+## Instructions
 
 1. Desligue seu console
-1. Segure o botão (Select)
-1. Ligue o seu console enquanto ainda segura o botão (Select)
-1. Agora você deve ver algo parecido com um menu de configuração
+2. Segure o botão (Select)
+3. Ligue o seu console enquanto ainda segura o botão (Select)
+4. Agora você deve ver algo parecido com um menu de configuração
 
-___
+## What to do next
 
-### O que fazer em seguida
+::: tip
 
 Se o seu console inicializar o Menu HOME normal, retorne para [Começando](get-started)
-{: .notice--success}
+
+:::
+
+::: tip
 
 Se você ver a versão 7.0.5 do Luma3DS ou inferior, continue em [A9LH para B9S](a9lh-to-b9s)
-{: .notice--primary}
+
+:::
+
+::: tip
 
 Se você ver a versão 7.1 do Luma3DS, continue em [Atualizando B9S](updating-b9s)
-{: .notice--primary}
+
+:::
+
+::: tip
 
 Se você ver a versão 8.0 do Luma3DS ou superior, continue em [Restaurando / Atualizando CFW](restoring-updating-cfw)
-{: .notice--primary}
+
+:::
+
+::: warning
 
 Se você ver GodMode9, Decrypt9WIP, Hourglass9 ou um chainloader do Luma3DS, você pressionou (Start) acidentalmente e deve tentar estas instruções novamente com (Select)
-{: .notice--warning}
+
+:::
+
+::: danger
 
 Se você ver algo não descrito nas opções acima, entre no [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) e peça ajuda, em inglês.
-{: .notice--danger}
+
+:::
