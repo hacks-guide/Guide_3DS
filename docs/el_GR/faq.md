@@ -1,193 +1,169 @@
----
-title: "Συχνές ερωτήσεις"
----
-{% include toc title="Πίνακας περιεχομένων"%}
+# Συχνές ερωτήσεις
 
-{% capture update-notice %}
-{% include_relative include/3ds-online.txt %}
-{% endcapture %}
-<div class="notice--danger">{{ update-notice | markdownify }}</div>
+::: danger
+
+<!--@include: ./_include/3ds-online.md -->
+
+:::
+
+::: info
 
 **Ναι**, μπορείτε να εγκαταστήσετε custom firmware στο 3DS σας, ακόμα και μετά το κλείσιμο του eShop.
-{: .notice--info}
 
-## Συχνές ερωτήσεις πριν από την εγκατάσταση
+:::
 
-{% capture compat %}
-<summary><u>Χρησιμοποιώ την πιο πρόσφατη έκδοση συστήματος. Είναι δυνατή η τροποποίηση της κονσόλας μου χωρίς εξωτερικές συσκευές/προαπαιτούμενα;</u></summary>
+## Pre-Installation FAQ
 
-**Ναι!** Τα New 3DS, New 3DS XL και New 2DS XL μπορούν να χρησιμοποιήσουν το [super-skaterhax](installing-boot9strap-(super-skaterhax)), ενώ τα 3DS, 3DS XL και 2DS μπορούν να χρησιμοποιήσουν το [MSET9](installing-boot9strap-(mset9)).
+:::details I am on the latest system version. Is my console hackable without any external hardware/prerequisites?
 
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
+**Ναι!** Τα New 3DS, New 3DS XL και New 2DS XL μπορούν να χρησιμοποιήσουν το [super-skaterhax](installing-boot9strap-\(super-skaterhax\)), ενώ τα 3DS, 3DS XL και 2DS μπορούν να χρησιμοποιήσουν το [MSET9](installing-boot9strap-\(mset9\)).
 
-{% capture compat %}
-<summary><u>Με ποιες κονσόλες είναι συμβατός αυτός ο οδηγός;</u></summary>
+:::
+
+:::details What consoles is this guide compatible with?
 
 Αυτός ο οδηγός είναι συμβατός με όλες τις συσκευές της οικογένειας 3DS (3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, New 2DS XL). Εάν η έκδοση του συστήματός σας εμφανίζεται ως «0.0.0-0», τότε μάλλον διαθέτετε συσκευή για προγραμματιστές.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
 
-{% capture compat %}
-<summary><u>Πόσο επικίνδυνη είναι η τροποποίηση της κονσόλας μου;</u></summary>
+:::
+
+:::details How risky is hacking my console?
 
 Εάν δεν προσπαθείτε σκόπιμα να καταστήσετε μη λειτουργική την κονσόλα σας, κάτι τέτοιο είναι ουσιαστικά αδύνατο να συμβεί.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
 
-{% capture compat %}
-<summary><u>Μπορώ να εκτελέσω φοβερό λογισμικό homebrew και εξομοιωτές με το CFW;</u></summary>
+:::
+
+:::details Can I run awesome homebrew and emulators with this?
 
 Ναι! Αυτός ο οδηγός θα εγκαταστήσει μερικές χρήσιμες εφαρμογές homebrew, όπως το [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest), το οποίο λειτουργεί ως κατάστημα εφαρμογών homebrew.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
 
-{% capture compat %}
-<summary><u>Μπορώ να παίξω παιχνίδια από άλλες περιοχές με αυτήν τη διαδικασία;</u></summary>
+:::
+
+:::details Can I use this to play games from other regions?
 
 Ναι, το Luma3DS παρακάμπτει αυτόματα τον έλεγχο περιοχής για κασέτες και εγκατεστημένους τίτλους. Ορισμένα παιχνίδια ίσως χρειαστεί να χρησιμοποιήσουν τη [δυνατότητα εξομοίωσης περιοχής](https://wiki.hacks.guide/wiki/3DS:Setting_game_locales) του Luma, ώστε να λειτουργήσουν σωστά σε κονσόλες άλλων περιοχών.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
 
-{% capture compat %}
-<summary><u>Θα χάσω δυνατότητες με την εγκατάσταση του CFW;</u></summary>
+:::
+
+:::details Will I lose any features if I install CFW?
 
 Όχι. Οι κονσόλες με custom firmware μπορούν να κάνουν λήψη ενημερώσεων για παιχνίδια και να εκτελέσουν φυσικές κασέτες, όπως κάθε άλλο 3DS.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
 
-{% capture compat %}
-<summary><u>Μπορώ να διατηρήσω το NNID, τα αποθηκευμένα δεδομένα, τα ψηφιακά παιχνίδια μου (κ.λπ.);</u></summary>
+:::
+
+:::details Can I keep my NNID, saves, digital games (etc.)?
 
 Το NNID σας (εάν διαθέτετε) δεν θα επηρεαστεί από αυτόν τον οδηγό. Οι κονσόλες των περιοχών KOR, CHN και TWN δεν διαθέτουν τη λειτουργικότητα του NNID ούτως ή άλλως και επομένως, δεν επηρεάζονται.
 
 Από μόνα τους, τα βήματα αυτού του οδηγού δεν θα πρέπει να έχουν ως αποτέλεσμα την απώλεια δεδομένων (αποθηκευμένα δεδομένα, ψηφιακά παιχνίδια κ.λπ.), αλλά είναι πάντα πιθανή η καταστροφή της κάρτας SD. Θα πρέπει να δημιουργήσετε ένα αντίγραφο ασφαλείας του περιεχομένου της κάρτας SD εάν έχετε σημαντικά δεδομένα.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
 
-{% capture compat %}
-<summary><u>Θα αποκλειστεί το 3DS μου λόγω του CFW;</u></summary>
+:::
+
+:::details Will my 3DS be banned for having CFW?
 
 Οι αποκλεισμοί (ban) δεν είναι πλέον δυνατοί καθώς έχει παύσει η λειτουργία των υπηρεσιών του Nintendo Network (για όλους).
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
 
-{% capture compat %}
-<summary><u>Μπορεί η διαδικασία να γίνει χωρίς υπολογιστή (π.χ. με ένα τηλέφωνο Android);</u></summary>
+:::
+
+:::details Can I do this without a computer (e.g. an Android phone)?
 
 Ναι! Το μόνο που χρειάζεστε είναι η δυνατότητα τοποθέτησης αρχείων σε μια συμβατή κάρτα SD.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
 
-{% capture compat %}
-<summary><u>Τι μέγεθος κάρτας SD μπορώ να χρησιμοποιήσω;</u></summary>
+:::
+
+:::details What size SD card can I use?<
 
 Θα χρειαστείτε τουλάχιστον 1,5GB ελεύθερου χώρου στην κάρτα SD για να ακολουθήσετε αυτόν τον οδηγό στο σύνολό του. Ενώ το 3DS είναι επίσημα συμβατό με κάρτες SD έως και 32GB, μπορείτε να χρησιμοποιήσετε μεγαλύτερες κάρτες SD εάν τις διαμορφώσετε ξανά ως FAT32. Δεν προτείνεται η χρήση καρτών SD που είναι μεγαλύτερες από 128GB λόγω γνωστών ζητημάτων με τα γραφικά GBA και τα προσαρμοσμένα θέματα.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
 
-{% capture compat %}
-<summary><u>Άκουσα ότι πρέπει να αγοράσω κάτι (Gateway, Sky3DS, ntrboot, R4 κ.λπ.). Χρειάζομαι κάτι τέτοιο;</u></summary>
+:::
+
+:::details I heard about this thing I have to pay for (Gateway, Sky3DS, ntrboot, R4, etc). Is that something I need?
 
 Όχι. Αν και μια flashcart DS μπορεί να χρησιμοποιηθεί για την τροποποίηση ενός 3DS μέσω του [ntrboot](ntrboot), υπάρχει πλέον μια δωρεάν μέθοδος μέσω λογισμικού για τις περισσότερες κονσόλες.
 
 Δεν προτείνονται οι flashcart λειτουργίας 3DS, όπως η Gateway και η Sky3DS, καθώς είναι παρωχημένες και ενδέχεται να καταστήσουν την κονσόλα σας μη λειτουργική.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
 
-{% capture compat %}
-<summary><u>Ποια είναι η διαφορά μεταξύ του custom firmware και του homebrew;</u></summary>
+:::
 
-Όσον αφορά τον ορισμό, το «custom firmware» αναφέρεται σε μια τροποποίηση του λογισμικού του συστήματος του 3DS, ώστε να μπορέσει να κάνει πράγματα που υπό κανονικές συνθήκες δεν μπορεί. Ο όρος «homebrew» αναφέρεται συνήθως σε λογισμικό που δημιουργήθηκε εκτός επίσημων πηγών (δηλαδή δεν διανέμεται από το eShop ή σε κασέτες).
+:::details What's the difference between custom firmware and homebrew?
+
+Όσον αφορά τον ορισμό, το «custom firmware» αναφέρεται σε μια τροποποίηση του λογισμικού του συστήματος του 3DS, ώστε να μπορέσει να κάνει πράγματα που υπό κανονικές συνθήκες δεν μπορεί. Homebrew generally refers to software created outside of official sources (i.e. not distributed by eShop or cartridges).
 
 Παλαιότερα, το 3DS είχε πρόσβαση στο userland homebrew μέσω παλαιότερων exploit, όπως το ninjhax, το οποίο οι χρήστες μερικές φορές αποκαλούσαν απλώς «homebrew». Το επίπεδο πρόσβασης συστήματος που παρείχε το userland επέτρεπε την εκτέλεση βασικών εφαρμογών homebrew και εξομοιωτών, αλλά δεν επέτρεπε την (εύκολη) τροποποίηση παιχνιδιών ή την αποτύπωση κασετών. Ήταν επίσης πολύ λιγότερο σταθερό, με τη λειτουργία του homebrew συχνά να διακόπτεται απροσδόκητα και να απαιτεί πλήρη επανεκκίνηση. Το custom firmware παρέχει ένα πολύ υψηλότερο επίπεδο πρόσβασης στο σύστημα, ενώ παράλληλα είναι και πιο σταθερό από τα σημεία πρόσβασης που αφορούσαν μόνο το homebrew.
 
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
+:::
 
-## Συχνές ερωτήσεις μετά την εγκατάσταση
+## Post-Installation FAQ
 
-{% capture compat %}
-<summary><u>Είναι ασφαλές να ενημερώσω ένα 3DS με CFW στην πιο πρόσφατη έκδοση;</u></summary>
+:::details Is it safe to update my 3DS to the latest version with CFW?
 
-Εάν χρησιμοποιείτε το Luma3DS, το λογισμικό φόρτωσης (boot9strap) του custom firmware σας δεν θα αφαιρεθεί *ποτέ* κατά την ενημέρωση του συστήματος. Στο παρελθόν, υπήρξαν ενημερώσεις που είχαν ως αποτέλεσμα την απροσδόκητη διακοπή λειτουργίας του Luma3DS κατά την εκκίνηση, γι' αυτό θα ήταν καλό να περιμένετε μερικές ώρες για να βεβαιωθείτε ότι η πιο πρόσφατη ενημέρωση δεν θα καταστήσει την κονσόλα σας προσωρινά μη λειτουργική, μέχρι να ενημερωθεί το Luma3DS. Οι ενημερώσεις συστήματος μπορούν να πραγματοποιηθούν με τον ίδιο τρόπο, όπως σε ένα μη τροποποιημένο 3DS: μέσω της εφαρμογής «System Settings», μέσω της λειτουργίας «Safe Mode» ή μέσω του μηνύματος ενημέρωσης όταν έχει γίνει αυτόματη λήψη της ενημέρωσης.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
+Εάν χρησιμοποιείτε το Luma3DS, το λογισμικό φόρτωσης (boot9strap) του custom firmware σας δεν θα αφαιρεθεί _ποτέ_ κατά την ενημέρωση του συστήματος. Στο παρελθόν, υπήρξαν ενημερώσεις που είχαν ως αποτέλεσμα την απροσδόκητη διακοπή λειτουργίας του Luma3DS κατά την εκκίνηση, γι' αυτό θα ήταν καλό να περιμένετε μερικές ώρες για να βεβαιωθείτε ότι η πιο πρόσφατη ενημέρωση δεν θα καταστήσει την κονσόλα σας προσωρινά μη λειτουργική, μέχρι να ενημερωθεί το Luma3DS. Οι ενημερώσεις συστήματος μπορούν να πραγματοποιηθούν με τον ίδιο τρόπο, όπως σε ένα μη τροποποιημένο 3DS: μέσω της εφαρμογής «System Settings», μέσω της λειτουργίας «Safe Mode» ή μέσω του μηνύματος ενημέρωσης όταν έχει γίνει αυτόματη λήψη της ενημέρωσης.
 
-{% capture compat %}
-<summary><u>Πώς αναβαθμίζω την κάρτα SD μου;</u></summary>
+:::
+
+:::details How do I upgrade my SD card?
 
 Αντιγράψτε και επικολλήστε τα περιεχόμενα της κάρτας SD σας σε μια νέα κάρτα SD, διαμορφωμένη ως FAT32. Για τις κάρτες των 128GB, συνιστάται η τιμή 65536 για το μέγεθος κατανομής. Δεν προτείνονται κάρτες SD χωρητικότητας άνω των 128GB λόγω γνωστών ζητημάτων με τα γραφικά GBA και τα προσαρμοσμένα θέματα.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
 
-{% capture compat %}
-<summary><u>Μπορώ να κάνω μεταφορά ενός συστήματος με CFW;</u></summary>
+:::
+
+:::details Can I system transfer with CFW?
 
 Ναι, μπορείτε να εκτελέσετε μεταφορές συστημάτων μέσω της επίσημης λειτουργίας «System Transfer» σε άλλες κονσόλες με CFW (ενδέχεται να προκύψουν ασυνέπειες εάν η κονσόλα προορισμού δεν είναι τροποποιημένη). Τα ticket για παράνομους τίτλους (homebrew) δεν θα μεταφερθούν, αλλά μπορείτε να εμφανίσετε ξανά τους τίτλους με το [faketik](https://github.com/ihaveamac/faketik/releases/latest). Βεβαιωθείτε ότι δεν πραγματοποιείτε ασύρματη μεταφορά, καθώς αυτό θα διαγράψει τυχόν παράνομους τίτλους. Το CFW θα παραμείνει και στις δύο κονσόλες.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
 
-{% capture compat %}
-<summary><u>Πώς αλλάζω τη γλώσσα συστήματος ενός ιαπωνικού 3DS;</u></summary>
+:::
+
+:::details How do I change the system language of a Japanese 3DS?
 
 Ο μόνος τρόπος να αλλάξετε τη γλώσσα συστήματος ενός ιαπωνικού 3DS σε μια άλλη γλώσσα εκτός των ιαπωνικών, είναι να εκτελέσετε τη διαδικασία [αλλαγής περιοχής](region-changing). Σημειώστε ότι αυτό πιθανότατα θα χαλάσει το Nintendo eShop στην κονσόλα σας, οπότε δεν θα μπορείτε να ενημερώνετε τα παιχνίδια σας είτε ανήκουν στην περιοχή σας είτε όχι.
- {% endcapture %}
-<details>{{ compat | markdownify }}</details>
 
-{% capture compat %}
-<summary><u>Πώς ενημερώνω τις εφαρμογές homebrew;</u></summary>
+:::
+
+:::details How do I update homebrew applications?
 
 Εξαρτάται από τη μορφή της εφαρμογής homebrew. Σε γενικές γραμμές:
 
-* Το λογισμικό homebrew της **μορφής CIA** μπορεί να ενημερωθεί εγκαθιστώντας το νέο CIA, το οποίο αντικαθιστά συνήθως το παλιό. Εάν το παλιό CIA δεν αντικατασταθεί, μπορείτε να το διαγράψετε από την ενότητα «Data Management», όπως θα κάνατε με οποιονδήποτε άλλο τίτλο 3DS.
-* Το λογισμικό homebrew της **μορφής 3DSX** μπορεί να ενημερωθεί αντικαθιστώντας το αρχείο 3DSX στον φάκελο `/3ds/` με ένα νέο αντίγραφο. Αν η εφαρμογή homebrew περιλαμβάνει πρόσθετα στοιχεία (assets), ίσως χρειαστεί να τοποθετήσετε αυτόν τον φάκελο κάπου αλλού. Ανατρέξτε στην τεκμηρίωση της εκάστοτε εφαρμογής homebrew.
-* Για ενημέρωση του Luma3DS, δείτε [αυτήν τη σελίδα](restoring-updating-cfw). Για ενημέρωση του GodMode9, δείτε [αυτήν τη σελίδα](godmode9-usage#updating-godmode9).
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
+- Homebrew in **CIA format** can be updated by installing the new CIA, which will usually overwrite the old one. Εάν το παλιό CIA δεν αντικατασταθεί, μπορείτε να το διαγράψετε από την ενότητα «Data Management», όπως θα κάνατε με οποιονδήποτε άλλο τίτλο 3DS.
+- Homebrew in **3DSX format** can be updated by replacing the 3DSX file in `/3ds/` with a fresh copy. Αν η εφαρμογή homebrew περιλαμβάνει πρόσθετα στοιχεία (assets), ίσως χρειαστεί να τοποθετήσετε αυτόν τον φάκελο κάπου αλλού. Ανατρέξτε στην τεκμηρίωση της εκάστοτε εφαρμογής homebrew.
+- For updating Luma3DS, see [this page](restoring-updating-cfw). Για ενημέρωση του GodMode9, δείτε [αυτήν τη σελίδα](godmode9-usage#updating-godmode9).
 
-{% capture compat %}
-<summary><u>Πώς ενημερώνω τα παιχνίδια μου;</u></summary>
+:::
+
+:::details How do I update my games?
 
 Μπορείτε να συνεχίσετε τη λήψη ενημερώσεων παιχνιδιών από το Nintendo eShop, παρ' όλο που έχει πλέον κλείσει.
 
 Εάν το παιχνίδι δεν είναι από την ίδια περιοχή με την κονσόλα, θα χρειαστεί να [αποτυπώσετε τις ενημερώσεις](dumping-titles-and-game-cartridges) από ένα 3DS που έχει εγκατεστημένες τις ενημερώσεις. Το Nintendo eShop παρέχει ενημερώσεις μόνο την περιοχή της κονσόλας (για παράδειγμα, ένα ιαπωνικό 3DS θα λαμβάνει ενημερώσεις μόνο για ιαπωνικά παιχνίδια).
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
 
-{% capture compat %}
-<summary><u>Βοήθεια! Κάτι κακό συνέβη και το 3DS μου δεν εκκινείται στο μενού «HOME»...</u></summary>
+:::
+
+:::details Help! Something bad happened and my 3DS won't boot to HOME Menu...
 
 Ανατρέξτε στον [οδηγό επίλυσης προβλημάτων](troubleshooting#boot-issues-on-devices-with-custom-firmware). **Δεν προτείνεται η αφαίρεση του CFW όταν η κονσόλα σας βρίσκεται σε κατάσταση αδυναμίας εκκίνησης, καθώς είναι πολύ πιθανό να καταστεί μη λειτουργική**.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
 
-## Συχνές ερωτήσεις για menuhax/A9LH/Gateway
+:::
 
-{% capture compat %}
-<summary><u>Τροποποίησα την κονσόλα μου πριν από (x) χρόνια, άρα διαθέτει ήδη κάποιο είδος homebrew. Τι πρέπει να κάνω;</u></summary>
+## menuhax / A9LH / Gateway FAQ
+
+:::details I modded my console (x) years ago, so it already has some sort of homebrew. What should I do?
 
 Προτείνεται η αναβάθμιση της εγκατάστασής σας σε μια πιο σύγχρονη, που να βασίζεται στο boot9strap. Ακολουθήστε τον οδηγό [Έλεγχος για CFW](checking-for-cfw) για να δείτε πώς να αναβαθμίσετε την εγκατάστασή σας.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
 
-{% capture compat %}
-<summary><u>Η εγκατάστασή μου με καλύπτει. Γιατί να την αναβαθμίσω;</u></summary>
+:::
+
+:::details My setup works for me. Why should I upgrade it?
 
 Η συντριπτική πλειοψηφία των σύγχρονων εφαρμογών homebrew (όπως το Checkpoint και το BootNTR Selector) έχει δοκιμαστεί μόνο σε σύγχρονες εγκαταστάσεις που βασίζονται στο boot9strap και ενδέχεται να μη λειτουργεί καλά (ή καθόλου) σε παλαιότερες εγκαταστάσεις που βασίζονται στο menuhax, το A9LH ή το Gateway. Επιπλέον, ανάλογα με την εγκατάστασή σας, ενδέχεται να μην μπορείτε να κάνετε με ασφάλεια ενημέρωση στο πιο πρόσφατο firmware. Οι σύγχρονες εγκαταστάσεις που βασίζονται στο boot9strap επιτρέπουν ένα υψηλότερο επίπεδο πρόσβασης στο σύστημα σε σχέση με τις παλαιότερες, παρέχοντας μεταξύ άλλων τη δυνατότητα να αποτυπώσετε την bootrom της κονσόλας σας.
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
 
-{% capture compat %}
-<summary><u>Θα χάσω κάτι αν αναβαθμίσω την εγκατάστασή μου;</u></summary>
+:::
+
+:::details Will I lose anything if I upgrade my setup?
 
 Η παλιά σας εγκατάσταση (συμπεριλαμβανομένης της EmuNAND σας, αν έχετε) μπορεί συνήθως να μεταφερθεί απευθείας στο boot9strap χωρίς απώλεια δεδομένων. Εάν έχετε δεδομένα που είναι ιδιαίτερα σημαντικά για εσάς, μια καλή ιδέα θα ήταν να δημιουργήσετε ένα αποκρυπτογραφημένο αντίγραφο ασφαλείας των αποθηκευμένων δεδομένων σας, πριν από την αναβάθμιση της εγκατάστασής σας, με ένα εργαλείο, όπως το [JKSM](https://github. om/J-D-K/JKSM/releases/tag/12%2F20%2F2018).
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
 
-{% capture compat %}
-<summary><u>Πώς μεταφέρω αποθηκευμένα δεδομένα από μια υπάρχουσα εγκατάσταση Gateway σε μια πιο σύγχρονη;</u></summary>
+:::
+
+:::details How do I move saves from an existing Gateway setup to a more modern setup?
 
 Δείτε [αυτό το νήμα](https://gbatemp.net/threads/425743/).
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
+
+:::
