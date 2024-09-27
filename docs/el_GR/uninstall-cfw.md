@@ -1,201 +1,229 @@
----
-title: "Αφαίρεση του CFW"
----
+# Αφαίρεση του CFW
 
-{% include toc title="Πίνακας περιεχομένων" %}
-
-### Απαραίτητη ανάγνωση
+## Required Reading
 
 Αυτή η διαδικασία θα αφαιρέσει εντελώς το CFW, συμπεριλαμβανομένου του boot9strap και του Luma3DS, από την κονσόλα σας, ώστε να την επαναφέρετε στην αρχική της κατάσταση.
 
 Όλα τα μη υπογεγραμμένα (παράνομα) παιχνίδια θα καταστούν μη λειτουργικά και θα αφαιρεθούν κατά τη διάρκεια αυτής της διαδικασίας. Χρησιμοποιήστε μια [εφαρμογή διαχείρισης αποθηκευμένων δεδομένων](https://github.com/FlagBrew/Checkpoint/releases/latest) για να δημιουργήσετε αντίγραφα ασφαλείας των αποθηκευμένων δεδομένων που σας ενδιαφέρουν.
 
-{% capture notice-6 %}
+::: danger
+
 Εάν αφαιρείτε το CFW επειδή:
 
-* Θέλετε να το εγκαταστήσετε εκ νέου
-* Θέλετε να αλλάξετε κάρτες SD
-* Η κάρτα SD σας χάθηκε ή καταστράφηκε
-* Κάποιο από τα παιχνίδια σας δυσλειτουργεί
-* Κάποια από τις εφαρμογές του συστήματός σας δυσλειτουργεί
-* Η κονσόλα σας δεν μπορεί να εκκινηθεί στο μενού «HOME»
+- You want to re-install it
+- You want to change SD cards
+- Your SD card was lost or corrupted
+- One of your games is broken
+- One of your system applications is broken
+- Your console is unable to boot to HOME Menu
 
-<u><strong>ΣΤΑΜΑΤΗΣΤΕ!!!</strong></u> Η αφαίρεση του custom firmware είναι ένα περιττό ρίσκο που, στην καλύτερη περίπτωση, θα σπαταλήσει τον χρόνο σας και, στη χειρότερη περίπτωση, θα καταστήσει την κονσόλα σας <u><strong>ΜΗ ΛΕΙΤΟΥΡΓΙΚΗ</strong></u>. Μια καλύτερη ιδέα θα ήταν να ζητήσετε βοήθεια στο [Nintendo Homebrew στο Discord](https://discord.gg/MWxPgEp).
-{% endcapture %}
-<div class="notice--danger">{{ notice-6 | markdownify }}</div>
+<u>**STOP!!!**</u> Uninstalling custom firmware is an unnecessary risk that will at best waste your time and at worst <u>**BRICK**</u> your console. Μια καλύτερη ιδέα θα ήταν να ζητήσετε βοήθεια στο [Nintendo Homebrew στο Discord](https://discord.gg/MWxPgEp).
 
-{% capture notice-6 %}
+:::
+
+::: danger
+
 Εάν έχετε κάνει ΟΠΟΙΟΔΗΠΟΤΕ από τα ακόλουθα:
-* [Αλλαγή περιοχής](region-changing) της κονσόλας
-* Εγκατάσταση προσαρμοσμένου πληκτρολογίου
-* Εγκατάσταση προσαρμοσμένου μενού «HOME» (*όχι* προσαρμοσμένου θέματος)
-* Χειροκίνητη αλλαγή του κλειδιού κρυπτογράφησης (`movable.sed`) της κονσόλας
-* Άρση αποκλεισμού της κονσόλας
 
-τότε η αφαίρεση του CFW <u><strong>ΘΑ ΚΑΤΑΣΤΗΣΕΙ ΤΗΝ ΚΟΝΣΟΛΑ ΣΑΣ ΜΗ ΛΕΙΤΟΥΡΓΙΚΗ</strong></u>. Εάν αυτό ισχύει για εσάς, [επαναφέρετε ένα αντίγραφο ασφαλείας μιας «καθαρής» NAND](godmode9-usage#restoring-a-nand-backup) πριν συνεχίσετε.
-{% endcapture %}
-<div class="notice--danger">{{ notice-6 | markdownify }}</div>
+- [Changed the region](region-changing) of the console
+- Installed a custom keyboard
+- Installed a custom HOME Menu (_not_ a custom theme)
+- Manually changed the encryption key (`movable.sed`) of the console
+- Unbanned the console
+
+then uninstalling CFW <u>**WILL BRICK YOUR CONSOLE**</u>. Εάν αυτό ισχύει για εσάς, [επαναφέρετε ένα αντίγραφο ασφαλείας μιας «καθαρής» NAND](godmode9-usage#restoring-a-nand-backup) πριν συνεχίσετε.
+
+:::
+
+::: warning
 
 Αυτές οι οδηγίες θα λειτουργήσουν μόνο σε κονσόλες που διαθέτουν την έκδοση 8.0 ή νεότερη του Luma3DS. Αν έχετε μια παλαιότερη έκδοση του Luma, πρέπει να αναβαθμίσετε την εγκατάστασή σας πριν ακολουθήσετε αυτές τις οδηγίες. Ακολουθήστε [αυτήν τη σελίδα](checking-for-cfw) για να βρείτε τις οδηγίες αναβάθμισης.
-{: .notice--warning}
 
-### Τι χρειάζεστε
+:::
 
-* Την πιο πρόσφατη έκδοση του [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (το αρχείο `.zip` του Luma3DS)
-* Την πιο πρόσφατη έκδοση του [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (το αρχείο `.zip` του GodMode9)
-* Την πιο πρόσφατη έκδοση του [DSiWare Uninstaller](https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest)
-* [safety_test.gm9]({{ base_path }}/gm9_scripts/safety_test.gm9)
+## What You Need
 
-### Οδηγίες
+- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
+- The latest release of [DSiWare Uninstaller](https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest)
+- [safety_test.gm9](/gm9_scripts/safety_test.gm9)
 
-#### Ενότητα I - Προετοιμασία
+## Instructions
+
+### Section I - Prep Work
+
 1. Απενεργοποιήστε την κονσόλα σας
-1. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
-1. Αντιγράψτε τα `boot.firm` και `boot.3dsx` από το αρχείο `.zip` του Luma3DS στη ρίζα της κάρτας SD σας
-1. Αντιγράψτε το `GodMode9.firm` από το αρχείο `.zip` του GodMode9 στον φάκελο `/luma/payloads/` της κάρτας SD σας
-1. Αντιγράψτε τον φάκελο `gm9` από το αρχείο `.zip` του GodMode9 στη ρίζα της κάρτας SD σας
-1. Αντιγράψτε το `DSiWareUninstaller.3dsx` στον φάκελο `/3ds/` της κάρτας SD σας
-1. Αντιγράψτε το `safety_test.gm9` στον φάκελο `/gm9/scripts/` της κάρτας SD σας
-1. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
+2. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
+3. Αντιγράψτε τα `boot.firm` και `boot.3dsx` από το αρχείο `.zip` του Luma3DS στη ρίζα της κάρτας SD σας
+4. Αντιγράψτε το `GodMode9.firm` από το αρχείο `.zip` του GodMode9 στον φάκελο `/luma/payloads/` της κάρτας SD σας
+5. Αντιγράψτε τον φάκελο `gm9` από το αρχείο `.zip` του GodMode9 στη ρίζα της κάρτας SD σας
+6. Αντιγράψτε το `DSiWareUninstaller.3dsx` στον φάκελο `/3ds/` της κάρτας SD σας
+7. Αντιγράψτε το `safety_test.gm9` στον φάκελο `/gm9/scripts/` της κάρτας SD σας
+8. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 
-#### Ενότητα II - Δοκιμές λειτουργίας DS
+### Section II - DS Mode Tests
+
 Σκοπός αυτής της ενότητας είναι να ελέγξετε αν οι ενσωματωμένες εφαρμογές της λειτουργίας DS θα συνεχίσουν να λειτουργούν μετά την αφαίρεση του CFW. Εάν παραλείψετε αυτήν την ενότητα, η λειτουργία DS ή οι δυνατότητές της ενδέχεται να μην είναι προσβάσιμες μέχρι να εγκαταστήσετε εκ νέου κάποιο CFW.
 
-##### Δοκιμή ρυθμίσεων σύνδεσης DS
-1. Ενεργοποιήστε την κονσόλα σας
-1. Εκκινήστε την εφαρμογή «System Settings» στην κονσόλα σας
-1. Μεταβείτε στο `Internet Settings` -> `Nintendo DS Connection Settings` και πατήστε «OK»
-1. Θα πρέπει να γίνει εκκίνηση στο μενού «Nintendo DS Connection Setup»
-    + Εάν η κονσόλα σας εμφανίζει την ιαπωνική έκδοση του Flipnote Studio, μια μαύρη οθόνη ή ένα μήνυμα σφάλματος, η δοκιμή απέτυχε
-1. Απενεργοποιήστε την κονσόλα σας
+#### DS Connection Settings Test
 
-##### Δοκιμή με το DS Download Play
 1. Ενεργοποιήστε την κονσόλα σας
-1. Εκκινήστε την εφαρμογή «Download Play» (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
-1. Επιλέξτε «Nintendo DS»
-1. Εάν η κονσόλα σας φορτώσει το μενού «Download software via DS Download Play», η δοκιμή ήταν επιτυχής
-    + Εάν η κονσόλα σας εμφανίζει την ιαπωνική έκδοση του Flipnote Studio, μια μαύρη οθόνη ή ένα μήνυμα σφάλματος, η δοκιμή απέτυχε
-1. Απενεργοποιήστε την κονσόλα σας
+2. Εκκινήστε την εφαρμογή «System Settings» στην κονσόλα σας
+3. Μεταβείτε στο `Internet Settings` -> `Nintendo DS Connection Settings` και πατήστε «OK»
+4. Θα πρέπει να γίνει εκκίνηση στο μενού «Nintendo DS Connection Setup»
+   - If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed
+5. Απενεργοποιήστε την κονσόλα σας
+
+#### DS Download Play Test
+
+1. Ενεργοποιήστε την κονσόλα σας
+2. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
+3. Επιλέξτε «Nintendo DS»
+4. Εάν η κονσόλα σας φορτώσει το μενού «Download software via DS Download Play», η δοκιμή ήταν επιτυχής
+   - If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed
+5. Απενεργοποιήστε την κονσόλα σας
+
+::: warning
 
 Εάν απέτυχε οποιαδήποτε από αυτές τις δοκιμές, η λειτουργία DS, το DS Download Play ή/και οι ρυθμίσεις σύνδεσης DS ενδέχεται να καταστούν μη προσβάσιμες μόλις αφαιρεθεί το CFW! Θα πρέπει να [διορθώσετε τη λειτουργία DS](troubleshooting#software-issues-on-consoles-with-custom-firmware) πριν συνεχίσετε.
-{: .notice--warning}
 
-#### Ενότητα III - Δοκιμή ασφαλείας
+:::
+
+### Section III - Safety Test
+
 Σκοπός αυτής της ενότητας είναι να σας βοηθήσει να εξασφαλίσετε ότι η κονσόλα θα εκκινηθεί και ότι οι σημαντικές λειτουργίες του συστήματος, όπως η εφαρμογή «System Settings» και το πληκτρολόγιο, θα λειτουργούν μόλις αφαιρεθεί το CFW. **Εάν παραλείψετε αυτήν την ενότητα, ενδέχεται να καταστήσετε ΜΗ ΛΕΙΤΟΥΡΓΙΚΗ την κονσόλα σας!**
 
 1. Κρατήστε πατημένο το (Start) και ταυτόχρονα, ενεργοποιήστε την κονσόλα σας. Αυτή η ενέργεια θα εκκινήσει το GodMode9
-1. Εάν σας ζητηθεί να δημιουργήσετε ένα απαραίτητο αντίγραφο ασφαλείας, πατήστε το (A) ώστε να πραγματοποιηθεί και έπειτα, πατήστε το (A) για να συνεχίσετε μόλις ολοκληρωθεί η διαδικασία
-1. Εάν σας ζητηθεί να διορθώσετε την ημερομηνία και την ώρα RTC, πατήστε το (A) για να το κάνετε και έπειτα, ορίστε την ημερομηνία και την ώρα. Τέλος, πατήστε το (A) για να συνεχίσετε
-    + Σημειώστε ότι, αν έπρεπε να διορθώσετε την ημερομηνία και την ώρα RTC, θα χρειαστεί να διορθώσετε την ώρα και στην εφαρμογή «System Settings», αφού ακολουθήσετε αυτόν τον οδηγό
-1. Πατήστε το (Home) για να εμφανιστεί το μενού ενεργειών
-1. Επιλέξτε «Scripts...»
-1. Επιλέξτε «safety_test»
-1. Διαβάστε το κείμενο στην οθόνη και πατήστε το (A) για να συνεχίσετε
-1. Θα πρέπει να γίνει εκκίνηση στο κανονικό μενού «HOME» του 3DS (η παρουσία κάποιου προσαρμοσμένου θέματος είναι άνευ σημασίας). Αν γίνει, συνεχίστε με αυτές τις οδηγίες
-    + Εάν δεν γίνει εκκίνηση στο κανονικό μενού «HOME» του 3DS (μαύρη οθόνη, οθόνη σφάλματος κ.λπ.), η αφαίρεση του CFW **ΘΑ ΚΑΤΑΣΤΗΣΕΙ ΤΗΝ ΚΟΝΣΟΛΑ ΣΑΣ ΜΗ ΛΕΙΤΟΥΡΓΙΚΗ!**
-1. Εκκινήστε την εφαρμογή «System Settings» στην κονσόλα σας
-    + Εάν η λειτουργία της κονσόλας διακοπεί απροσδόκητα σε αυτό το σημείο, η δοκιμή απέτυχε
-1. Επιλέξτε «Other Settings»
-1. Επιλέξτε «Profile»
-1. Επιλέξτε «User Name»
-1. Εάν μπορείτε να εισαγάγετε ένα νέο όνομα χρήστη, η δοκιμή ήταν επιτυχής
-    + Εάν το πληκτρολόγιο δεν εμφανιστεί, η οθόνη «παγώσει» ή η λειτουργία της κονσόλας διακοπεί απροσδόκητα, η δοκιμή απέτυχε
-1. Απενεργοποιήστε την κονσόλα σας
+2. Εάν σας ζητηθεί να δημιουργήσετε ένα απαραίτητο αντίγραφο ασφαλείας, πατήστε το (A) ώστε να πραγματοποιηθεί και έπειτα, πατήστε το (A) για να συνεχίσετε μόλις ολοκληρωθεί η διαδικασία
+3. Εάν σας ζητηθεί να διορθώσετε την ημερομηνία και την ώρα RTC, πατήστε το (A) για να το κάνετε και έπειτα, ορίστε την ημερομηνία και την ώρα. Τέλος, πατήστε το (A) για να συνεχίσετε
+   - Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after following this guide
+4. Πατήστε το (Home) για να εμφανιστεί το μενού ενεργειών
+5. Επιλέξτε «Scripts...»
+6. Επιλέξτε «safety_test»
+7. Διαβάστε το κείμενο στην οθόνη και πατήστε το (A) για να συνεχίσετε
+8. Θα πρέπει να γίνει εκκίνηση στο κανονικό μενού «HOME» του 3DS (η παρουσία κάποιου προσαρμοσμένου θέματος είναι άνευ σημασίας). Αν γίνει, συνεχίστε με αυτές τις οδηγίες
+   - If you do not boot into the regular 3DS HOME Menu (black screen, error screen, etc.), uninstalling CFW **WILL BRICK YOUR CONSOLE!**
+9. Εκκινήστε την εφαρμογή «System Settings» στην κονσόλα σας
+   - If the console crashes at this point, the test has failed
+10. Επιλέξτε «Other Settings»
+11. Επιλέξτε «Profile»
+12. Επιλέξτε «User Name»
+13. Εάν μπορείτε να εισαγάγετε ένα νέο όνομα χρήστη, η δοκιμή ήταν επιτυχής
+    - If the keyboard does not appear, the screen freezes, or the console crashes, the test has failed
+14. Απενεργοποιήστε την κονσόλα σας
+
+::: danger
 
 Εάν ΔΕΝ γίνει εκκίνηση στο κανονικό μενού «ΗΟΜΕ» του 3DS ή εάν δεν είναι προσβάσιμη η εφαρμογή «System Settings» ή το πληκτρολόγιο, **ΜΗ συνεχίσετε με αυτές τις οδηγίες**! Γίνετε μέλος του [Nintendo Homebrew στο Discord](https://discord.gg/MWxPgEp) και ζητήστε (στα αγγλικά) από κάποιον εκεί να σας βοηθήσει.
-{: .notice--danger}
 
-#### Ενότητα IV - Αντίγραφο ασφαλείας NAND
+:::
+
+### Section IV - NAND Backup
 
 1. Κρατήστε πατημένο το (Start) και ταυτόχρονα, ενεργοποιήστε την κονσόλα σας. Αυτή η ενέργεια θα εκκινήσει το GodMode9
-1. Πατήστε το (Home) για να εμφανιστεί το μενού ενεργειών
-1. Επιλέξτε «Scripts...»
-1. Επιλέξτε «GM9Megascript»
-1. Επιλέξτε «Backup Options»
-1. Επιλέξτε «SysNAND Backup»
-1. Πατήστε το (A) για επιβεβαίωση
-    + Η διαδικασία αυτή θα διαρκέσει αρκετή ώρα
-    + Εάν λάβετε σφάλμα, βεβαιωθείτε ότι έχετε τουλάχιστον 1,3GB ελεύθερου χώρου στην κάρτα SD σας
-1. Πατήστε το (B) για να επιστρέψετε στο κύριο μενού
-1. Επιλέξτε «Exit»
-1. Πατήστε το (Home) για να εμφανιστεί το μενού ενεργειών
-1. Επιλέξτε «Poweroff system» για να απενεργοποιήσετε την κονσόλα σας
+2. Πατήστε το (Home) για να εμφανιστεί το μενού ενεργειών
+3. Επιλέξτε «Scripts...»
+4. Επιλέξτε «GM9Megascript»
+5. Επιλέξτε «Backup Options»
+6. Επιλέξτε «SysNAND Backup»
+7. Πατήστε το (A) για επιβεβαίωση
+   - This process will take some time
+   - If you get an error, ensure you have at least 1.3GB of free space on your SD card
+8. Πατήστε το (B) για να επιστρέψετε στο κύριο μενού
+9. Επιλέξτε «Exit»
+10. Πατήστε το (Home) για να εμφανιστεί το μενού ενεργειών
+11. Επιλέξτε «Poweroff system» για να απενεργοποιήσετε την κονσόλα σας
 
-#### Ενότητα V - Αφαίρεση παράνομου περιεχομένου
+### Section V - Removing illegitimate content
+
+::: warning
+
 Αυτή η ενότητα θα αφαιρέσει το παράνομο περιεχόμενο, όπως λογισμικό homebrew και αποτυπωμένες κασέτες. Εάν διαθέτετε αποθηκευμένα δεδομένα που σας ενδιαφέρουν, δημιουργήστε αντίγραφα ασφαλείας με κάποια εφαρμογή διαχείρισης αποθηκευμένων δεδομένων πριν συνεχίσετε!
-{: .notice--warning}
+
+:::
 
 1. Ενεργοποιήστε την κονσόλα σας
-1. Εκκινήστε την εφαρμογή «System Settings» στην κονσόλα σας
-1. Μεταβείτε στο «Data Management» > «Nintendo 3DS» > «Software»
-1. Σε αυτήν τη λίστα λογισμικού, διαγράψτε οποιοδήποτε περιεχόμενο που δεν ανήκει στη Nintendo και που εγκαταστήσατε κατά τη χρήση του CFW
-    + Αυτό περιλαμβάνει κοινό λογισμικό συστήματος, όπως το FBI, το Anemone3DS, το Luma Updater, το Homebrew Launcher, το Checkpoint και άλλα, καθώς και όλα τα παιχνίδια και τους τίτλους που *δεν* εγκαταστήσατε από το eShop
-1. Μεταβείτε στο `Data Management` -> `DSiWare`
-1. Σε αυτήν τη λίστα λογισμικού, διαγράψτε οποιοδήποτε περιεχόμενο που δεν ανήκει στη Nintendo και που εγκαταστήσατε κατά τη χρήση του CFW
-    + Αυτό περιλαμβάνει λογισμικό, όπως το TWiLightMenu++, καθώς και όλα τα παιχνίδια και τους τίτλους που *δεν* εγκαταστήσατε από το eShop
-    + Η αποτυχία αφαίρεσης όλων των λογισμικών CFW, τόσο από το τμήμα 3DS όσο και από το τμήμα DSiWare, πριν από την κατάργηση του CFW, ενδέχεται να εμποδίσει ή να απενεργοποιήσει την πρόσβαση στο μενού «Data Management» μετά την κατάργηση του CFW, πράγμα που θα καταστήσει δύσκολη την εκ νέου εγκατάσταση του CFW στο μέλλον
-1. Κλείστε την εφαρμογή «System Settings»
-1. Εκκινήστε την εφαρμογή «Download Play» (![]({{ "/images/download-play-icon.png" | absolute_url }}){: height="24px" width="24px"})
-1. Περιμένετε μέχρι να δείτε τα δύο κουμπιά
-1. Πατήστε τα (L) + (Κάτω) + (Select) ταυτόχρονα ώστε να εκκινήσετε το μενού Rosalina
-1. Επιλέξτε «Miscellaneous options»
-1. Επιλέξτε «Switch the hb. title to the current app.»
-1. Πατήστε το (Β) για να συνεχίσετε
-1. Πατήστε το (B) για να επιστρέψετε στο κύριο μενού Rosalina
-1. Πατήστε το (B) για να κλείσετε το μενού Rosalina
-1. Πατήστε το (Home) και έπειτα, κλείστε το Download Play
-1. Εκκινήστε την εφαρμογή «Download Play»
-1. Η κονσόλα σας θα φορτώσει το Homebrew Launcher
-1. Εκκινήστε το DSiWare Uninstaller από τη λίστα των εφαρμογών homebrew
-1. Ακολουθήστε τις οδηγίες και επιτρέψτε στο πρόγραμμα να πραγματοποιήσει την κατάργηση της εγκατάστασης
-1. Μόλις ολοκληρωθεί η διαδικασία, κλείστε το Homebrew Launcher και απενεργοποιήστε την κονσόλα σας
+2. Εκκινήστε την εφαρμογή «System Settings» στην κονσόλα σας
+3. Μεταβείτε στο «Data Management» > «Nintendo 3DS» > «Software»
+4. Σε αυτήν τη λίστα λογισμικού, διαγράψτε οποιοδήποτε περιεχόμενο που δεν ανήκει στη Nintendo και που εγκαταστήσατε κατά τη χρήση του CFW
+   - This includes common system software such as FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint, and others, along with any games and titles that you did _not_ install from the eShop
+5. Μεταβείτε στο `Data Management` -> `DSiWare`
+6. Σε αυτήν τη λίστα λογισμικού, διαγράψτε οποιοδήποτε περιεχόμενο που δεν ανήκει στη Nintendo και που εγκαταστήσατε κατά τη χρήση του CFW
+   - This includes software such as TWiLightMenu++, along with any games and titles that you did _not_ install from the eShop
+   - Failure to remove all CFW software from both the 3DS and DSiWare sections before uninstalling CFW may prevent or disable access to the Data Management menu after uninstalling CFW, which will make it difficult to re-install CFW in the future
+7. Κλείστε την εφαρμογή «System Settings»
+8. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
+9. Περιμένετε μέχρι να δείτε τα δύο κουμπιά
+10. Πατήστε τα (L) + (Κάτω) + (Select) ταυτόχρονα ώστε να εκκινήσετε το μενού Rosalina
+11. Επιλέξτε «Miscellaneous options»
+12. Select "Switch the hb. title to the current app."
+13. Πατήστε το (Β) για να συνεχίσετε
+14. Πατήστε το (B) για να επιστρέψετε στο κύριο μενού Rosalina
+15. Πατήστε το (B) για να κλείσετε το μενού Rosalina
+16. Πατήστε το (Home) και έπειτα, κλείστε το Download Play
+17. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
+18. Η κονσόλα σας θα φορτώσει το Homebrew Launcher
+19. Εκκινήστε το DSiWare Uninstaller από τη λίστα των εφαρμογών homebrew
+20. Ακολουθήστε τις οδηγίες και επιτρέψτε στο πρόγραμμα να πραγματοποιήσει την κατάργηση της εγκατάστασης
+21. Μόλις ολοκληρωθεί η διαδικασία, κλείστε το Homebrew Launcher και απενεργοποιήστε την κονσόλα σας
 
-#### Ενότητα VI - Διαμόρφωση συστήματος
+### Section VI - System Format
+
 Αυτή η ενότητα θα διασφαλίσει ότι θα αφαιρεθούν όλα τα παράνομα ticket, επιτρέποντας στο eShop να λειτουργεί κανονικά. Αυτή η ενέργεια θα αφαιρέσει όλο το περιεχόμενο από το 3DS και θα σας αποσυνδέσει από το NNID σας. Λάβετε υπόψη ότι θα δημιουργηθεί ένα νέο, τυχαίο κλειδί κρυπτογράφησης για την κονσόλα σας, καθιστώντας οποιαδήποτε παλιά δεδομένα μη προσβάσιμα, ακόμα κι αν διαθέτετε αντίγραφο ασφαλείας των περιεχομένων της SD σας.
 
 1. Ενεργοποιήστε την κονσόλα σας
-1. Εκκινήστε την εφαρμογή «System Settings» στην κονσόλα σας
-1. Μεταβείτε στο «Other Settings» -> Επόμενη σελίδα (μέχρι την τελευταία) -> «Format System Memory»
-1. Ακολουθήστε τις οδηγίες για να διαμορφώσετε το 3DS σας
+2. Εκκινήστε την εφαρμογή «System Settings» στην κονσόλα σας
+3. Μεταβείτε στο «Other Settings» -> Επόμενη σελίδα (μέχρι την τελευταία) -> «Format System Memory»
+4. Ακολουθήστε τις οδηγίες για να διαμορφώσετε το 3DS σας
 
+### Section VII - Running Uninstall Script
 
-#### Ενότητα VII - Εκτέλεση script κατάργησης εγκατάστασης
+::: warning
+
 Αυτή είναι η τελευταία σας ευκαιρία να επιβεβαιώσετε ότι έχετε ακολουθήσει όλα τα παραπάνω βήματα ασφαλείας! Βεβαιωθείτε ότι έχετε ακολουθήσει όλες τις ενότητες σε αυτήν τη σελίδα, **ειδικά** την `Ενότητα III - Δοκιμή ασφαλείας`, προτού να συνεχίσετε.
-{: .notice--warning}
 
-{% capture notice-6 %}
+:::
+
+::: danger
+
 Εάν αφαιρείτε το CFW επειδή:
 
-* Θέλετε να το εγκαταστήσετε εκ νέου
-* Θέλετε να αλλάξετε κάρτες SD
-* Η κάρτα SD σας χάθηκε ή καταστράφηκε
-* Κάποιο από τα παιχνίδια σας δυσλειτουργεί
-* Κάποια από τις εφαρμογές του συστήματός σας δυσλειτουργεί
-* Η κονσόλα σας δεν μπορεί να εκκινηθεί στο μενού «HOME»
+- You want to re-install it
+- You want to change SD cards
+- Your SD card was lost or corrupted
+- One of your games is broken
+- One of your system applications is broken
+- Your console is unable to boot to HOME Menu
 
-<u><strong>ΣΤΑΜΑΤΗΣΤΕ!!!</strong></u> Η αφαίρεση του custom firmware είναι ένα περιττό ρίσκο που, στην καλύτερη περίπτωση, θα σπαταλήσει τον χρόνο σας και, στη χειρότερη περίπτωση, θα καταστήσει την κονσόλα σας <u><strong>ΜΗ ΛΕΙΤΟΥΡΓΙΚΗ</strong></u>. Μια καλύτερη ιδέα θα ήταν να ζητήσετε βοήθεια στο [Nintendo Homebrew στο Discord](https://discord.gg/MWxPgEp).
-{% endcapture %}
-<div class="notice--danger">{{ notice-6 | markdownify }}</div>
+<u>**STOP!!!**</u> Uninstalling custom firmware is an unnecessary risk that will at best waste your time and at worst <u>**BRICK**</u> your console. Μια καλύτερη ιδέα θα ήταν να ζητήσετε βοήθεια στο [Nintendo Homebrew στο Discord](https://discord.gg/MWxPgEp).
+
+:::
 
 1. Κρατήστε πατημένο το (Start) και ταυτόχρονα, ενεργοποιήστε την κονσόλα σας. Αυτή η ενέργεια θα εκκινήσει το GodMode9
-    + Εάν αντιθέτως βλέπετε το chainloader του Luma3DS, χρησιμοποιήστε το D-Pad και το (A) για να επιλέξετε το GodMode9
-1. Πατήστε το (Home) για να εμφανιστεί το μενού ενεργειών
-1. Επιλέξτε «Scripts...»
-1. Επιλέξτε «GM9Megascript»
-1. Επιλέξτε «Hax Options»
-1. Επιλέξτε «Un-install Hax»
-1. Πατήστε το (A) για να συνεχίσετε όταν σας ζητηθεί
-1. Πατήστε το (A) για να ξεκλειδώσετε την εγγραφή στη SysNAND (lvl3) και έπειτα, εισαγάγετε τον συνδυασμό πλήκτρων που θα σας δοθεί
-1. Πατήστε το (A) για να συνεχίσετε
-1. Πατήστε το (B) για να επιστρέψετε στο κύριο μενού
-1. Επιλέξτε «Exit»
-1. Πατήστε το (Α) για να κλειδώσετε ξανά τα δικαιώματα εγγραφής εάν σας ζητηθεί
-1. Πατήστε το (Start) για να επανεκκινήσετε την κονσόλα σας
+   - If you instead see the Luma3DS chainloader, use the D-Pad and the (A) button to select GodMode9
+2. Πατήστε το (Home) για να εμφανιστεί το μενού ενεργειών
+3. Επιλέξτε «Scripts...»
+4. Επιλέξτε «GM9Megascript»
+5. Επιλέξτε «Hax Options»
+6. Επιλέξτε «Un-install Hax»
+7. Πατήστε το (A) για να συνεχίσετε όταν σας ζητηθεί
+8. Πατήστε το (A) για να ξεκλειδώσετε την εγγραφή στη SysNAND (lvl3) και έπειτα, εισαγάγετε τον συνδυασμό πλήκτρων που θα σας δοθεί
+9. Πατήστε το (A) για να συνεχίσετε
+10. Πατήστε το (B) για να επιστρέψετε στο κύριο μενού
+11. Επιλέξτε «Exit»
+12. Πατήστε το (Α) για να κλειδώσετε ξανά τα δικαιώματα εγγραφής εάν σας ζητηθεί
+13. Πατήστε το (Start) για να επανεκκινήσετε την κονσόλα σας
 
 ___
 
-Όλο το custom firmware έχει αφαιρεθεί από την κονσόλα σας.
-{: .notice--success}
+::: tip
 
-Μπορείτε τώρα να διαγράψετε τυχόν επιπρόσθετα αρχεία και φακέλους από τη ρίζα της κάρτας SD σας, *εκτός* από τους φακέλους `Nintendo 3DS`, `DCIM` και `private`.
-{: .notice--info}
+Όλο το custom firmware έχει αφαιρεθεί από την κονσόλα σας.
+
+:::
+
+::: info
+
+Μπορείτε τώρα να διαγράψετε τυχόν επιπρόσθετα αρχεία και φακέλους από τη ρίζα της κάρτας SD σας, _εκτός_ από τους φακέλους `Nintendo 3DS`, `DCIM` και `private`.
+
+:::
