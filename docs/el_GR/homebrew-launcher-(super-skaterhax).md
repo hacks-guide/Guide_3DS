@@ -1,6 +1,8 @@
 ---
-title: Ανακατεύθυνση... #
-sitemap: false
+head:
+  - - meta
+    - http-equiv: refresh
+      content: 0; URL=installing-boot9strap-(super-skaterhax).html
 ---
 
-{% include redirect.html redirect_to="installing-boot9strap-(super-skaterhax).html" %}
+# Redirecting...
