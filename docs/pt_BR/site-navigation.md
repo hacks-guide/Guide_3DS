@@ -1,60 +1,58 @@
----
-title: "Navegação do Site" #
-sitemap: false
----
+# Navegação do Site
 
-{% capture notice-1 %}
+::: tip
+
 **Popular**
 
-+ [Finalizando a instalação](finalizing-setup)
-+ [Instalando boot9strap (Soundhax)](installing-boot9strap-(soundhax))
-+ [Instalando boot9strap (MSET9)](installing-boot9strap-(mset9))
+- [Finalizing Setup](finalizing-setup)
+- [Installing boot9strap (Soundhax)](installing-boot9strap-\(soundhax\))
+- [Installing boot9strap (MSET9)](installing-boot9strap-\(mset9\))
 
-{% endcapture %}
-<div class="notice--info">{{ notice-1 | markdownify }}</div>
+:::
 
-{% capture notice-2 %}
+::: info
+
 **Todos**
 
-+ [Atualizando para o B9S](a9lh-to-b9s)
-+ [Créditos](credits)
-+ [Checando por CFW](checking-for-cfw)
-+ [Contribuir](contribuir)
-+ [CTRTransfer](ctrtransfer)
-+ [Fazendo Dump de Aplicativos e Jogos de Cartucho](dumping-titles-and-game-cartridges)
-+ [F3 (Linux)](f3-(linux))
-+ [F3X (Mac)](f3x-(mac))
-+ [F3XSwift (Mac)](f3xswift-(mac))
-+ [Perguntas Frequentes](faq)
-+ [Extensões de arquivo (Windows)](file-extensions-(windows))
-+ [Finalizando a instalação](finalizing-setup)
-+ [Flashing ntrboot (Único 3DS)](flashing-ntrboot-(3ds-single-system))
-+ [Flashing ntrboot (Múltiplos 3DS)](flashing-ntrboot-(3ds-single-system))
-+ [Flashing ntrboot (DSi)](flashing-ntrboot-(powersaves))
-+ [Flashing ntrboot(NDS)](flashing-ntrboot-(powersaves))
-+ [Formatando o SD (Linux)](formatting-sd-(linux))
-+ [Formatando o SD (Mac)](formatting-sd-(mac))
-+ [Formatando o SD (Windows)](formatting-sd-(windows))
-+ [Começando](get-started)
-+ [Uso do GodMode9](godmode9-usage)
-+ [H2testw (Windows)](h2testw-(windows))
-+ [Home](/pt_BR/)
-+ [Instalando boot9strap (Hardmod)](installing-boot9strap-(hardmod))
-+ [Instalando boot9strap (MSET9)](installing-boot9strap-(mset9))
-+ [Instalando boot9strap (MSET9 CLI)](installing-boot9strap-(mset9-cli))
-+ [Instalando boot9strap (MSET9 Play Store)](installing-boot9strap-(mset9-play-store))
-+ [Instalando boot9strap (ntrboothax)](installing-boot9strap-(ntrboothax))
-+ [Instalando boot9strap (safecerthax)](installing-boot9strap-(safecerthax))
-+ [Instalando boot9strap (Soundhax)](installing-boot9strap-(soundhax))
-+ [Instalando boot9strap (SSLoth-Browser)](installing-boot9strap-(ssloth-browser))
-+ [Instalando boot9strap (super-skaterhax)](installing-boot9strap-(super-skaterhax))
-+ [Informações Importantes](key-information)
-+ [Mover EmuNAND](move-emunand)
-+ [ntrboot](ntrboot)
-+ [Mudança de Região](region-changing)
-+ [Restaurando / Atualizando CFW](restoring-updating-cfw)
-+ [Troubleshooting](troubleshooting)
-+ [Desinstalar o CFW](uninstall-cfw)
-+ [Atualizando B9S](updating-b9s)
-{% endcapture %}
-<div class="notice--primary">{{ notice-2 | markdownify }}</div>
+- [A9LH to B9S](a9lh-to-b9s)
+- [Credits](credits)
+- [Checking for CFW](checking-for-cfw)
+- [Contribute](contribute)
+- [CTRTransfer](ctrtransfer)
+- [Dumping Titles and Game Cartridges](dumping-titles-and-game-cartridges)
+- [F3 (Linux)](f3-\(linux\))
+- [F3X (Mac)](f3x-\(mac\))
+- [F3XSwift (Mac)](f3xswift-\(mac\))
+- [FAQ](faq)
+- [File Extensions (Windows)](file-extensions-\(windows\))
+- [Finalizing Setup](finalizing-setup)
+- [Flashing ntrboot (3DS Single System)](flashing-ntrboot-\(3ds-single-system\))
+- [Flashing ntrboot (3DS Multi System)](flashing-ntrboot-\(3ds-multi-system\))
+- [Flashing ntrboot (DSi)](flashing-ntrboot-\(dsi\))
+- [Flashing ntrboot (NDS)](flashing-ntrboot-\(nds\))
+- [Formatting SD (Linux)](formatting-sd-\(linux\))
+- [Formatting SD (Mac)](formatting-sd-\(mac\))
+- [Formatting SD (Windows)](formatting-sd-\(windows\))
+- [Get Started](get-started)
+- [GodMode9 Usage](godmode9-usage)
+- [H2testw (Windows)](h2testw-\(windows\))
+- [Home](/)
+- [Installing boot9strap (Hardmod)](installing-boot9strap-\(hardmod\))
+- [Installing boot9strap (MSET9)](installing-boot9strap-\(mset9\))
+- [Installing boot9strap (MSET9 CLI)](installing-boot9strap-\(mset9-cli\))
+- [Installing boot9strap (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\))
+- [Installing boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
+- [Installing boot9strap (safecerthax)](installing-boot9strap-\(safecerthax\))
+- [Installing boot9strap (Soundhax)](installing-boot9strap-\(soundhax\))
+- [Installing boot9strap (SSLoth-Browser)](installing-boot9strap-\(ssloth-browser\))
+- [Installing boot9strap (super-skaterhax)](installing-boot9strap-\(super-skaterhax\))
+- [Key Information](key-information)
+- [Move EmuNAND](move-emunand)
+- [ntrboot](ntrboot)
+- [Region Changing](region-changing)
+- [Restoring / Updating CFW](restoring-updating-cfw)
+- [Troubleshooting](troubleshooting)
+- [Uninstall CFW](uninstall-cfw)
+- [Updating B9S](updating-b9s)
+
+:::
