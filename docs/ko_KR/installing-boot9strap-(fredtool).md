@@ -1,6 +1,8 @@
 ---
-title: 리다이렉트 중... #
-sitemap: false
+head:
+  - - meta
+    - http-equiv: refresh
+      content: 0; URL=410.html
 ---
 
-{% include redirect.html redirect_to="410.html" %}
+# 리다이렉트중...
