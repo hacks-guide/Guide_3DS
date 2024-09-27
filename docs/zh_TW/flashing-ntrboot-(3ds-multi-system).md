@@ -1,58 +1,60 @@
----
-title: "寫入 ntrboot 漏洞 (透過多台 3DS 系統)"
----
+# Flashing ntrboot (3DS Multi System)
 
-{% include toc title="條目內容" %}
-
-### 必讀事項
+## Required Reading
 
 Before proceeding, ensure you have read all of the information on [ntrboot](ntrboot).
 
 This method requires temporary access to a second 3DS family console that is already running boot9strap. 您的燒錄卡在本方法中不必支援任兩台的 3DS 系統版本。
 
+::: danger
+
 請注意，在某些特殊情況下，某些冒牌的燒錄卡很有可能會在過程中變磚，使得燒錄卡變得無法使用。 這是不大可能的，但不論如何，我們只支援在相容清單中的燒錄卡。 To reduce the chance of receiving a counterfeit card, it is recommended that you use a reputable site to buy your flashcart (such as [NDS Card](https://www.nds-card.com/)).
-{: .notice--danger}
 
-### 必備項目
+:::
 
-* 一張相容於 ntrboot 的燒錄卡
-* Two 3DS family consoles
-    * **The source 3DS**: the 3DS family console that is already running boot9strap
-    * **The target 3DS**: the 3DS family console on stock firmware
-* v1.3 的 [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (直接下載連結)
-* The latest release of [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest) (`ntrboot_flasher.firm`)
+## What You Need
 
-### 操作說明
+- Your ntrboot compatible flashcart
+- Two 3DS family consoles
+  - **The source 3DS**: the 3DS family console that is already running boot9strap
+  - **The target 3DS**: the 3DS family console on stock firmware
+- The v1.3 release of [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (direct download)
+- The latest release of [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest) (`ntrboot_flasher.firm`)
 
-#### 第一節 — 準備工作
+## Instructions
+
+### Section I - Prep Work
 
 1. 將 **3DS 始源機** 關機
-1. 將 **3DS 始源機** 的 SD 卡插入至電腦中
-1. 在 SD 卡的根目錄底下建立一個新的資料夾 `ntrboot`
-1. 解壓 boot9strap ntr `.zip` 的 `boot9strap_ntr.firm` 及 `boot9strap_ntr.firm.sha` 檔案至 SD 卡的 `/ntrboot/` 資料夾中
-1. 複製 `ntrboot_flasher.firm` 至 **3DS 始源機** SD 卡中的 `/luma/payloads/` 資料夾中
-1. 重新插入 **3DS 始源機**的 SD 卡至 **3DS 始源機**中
-1. 將相容於 ntrboot 的 DS / DSi 燒錄卡插入於 **3DS 始源機** 中
+2. 將 **3DS 始源機** 的 SD 卡插入至電腦中
+3. 在 SD 卡的根目錄底下建立一個新的資料夾 `ntrboot`
+4. 解壓 boot9strap ntr `.zip` 的 `boot9strap_ntr.firm` 及 `boot9strap_ntr.firm.sha` 檔案至 SD 卡的 `/ntrboot/` 資料夾中
+5. 複製 `ntrboot_flasher.firm` 至 **3DS 始源機** SD 卡中的 `/luma/payloads/` 資料夾中
+6. 重新插入 **3DS 始源機**的 SD 卡至 **3DS 始源機**中
+7. 將相容於 ntrboot 的 DS / DSi 燒錄卡插入於 **3DS 始源機** 中
 
-#### 第二節 — 寫入 ntrboot
+### Section II - Flashing ntrboot
 
 1. 於 **3DS 始源機**開機時按住『Start』鍵以啟動 Luma3DS 加載選單
-1. 選擇『ntrboot_flasher』
-1. 請仔細閱讀警告
-1. 按『A』 繼續
-1. 選擇您的燒錄卡
-    + 如果您沒有看到您的燒錄卡在上列清單中，請仔細閱讀各選項於下螢幕中所顯示的資訊
-1. 選擇『Dump Flash』
-1. 等到檢查完畢為止。
-1. 按『A』 繼續
-1. 按『A』回到主選單
-1. 選擇『Inject Ntrboot』
-1. 按『A』鍵選擇『retail unit ntrboot』
-1. 等到檢查完畢為止。
-1. 按『A』回到主選單
-1. 按『B』將 **3DS 始源機**關機
+2. 選擇『ntrboot_flasher』
+3. 請仔細閱讀警告
+4. 按『A』 繼續
+5. 選擇您的燒錄卡
+   - If you do not see your flashcart in the list at the top, read the bottom screen for more info on each option
+6. 選擇『Dump Flash』
+7. 等到檢查完畢為止。
+8. 按『A』 繼續
+9. 按『A』回到主選單
+10. 選擇『Inject Ntrboot』
+11. 按『A』鍵選擇『retail unit ntrboot』
+12. 等到檢查完畢為止。
+13. 按『A』回到主選單
+14. 按『B』將 **3DS 始源機**關機
 
 ___
 
-### 繼續至[安裝 boot9strap (透過 ntrboot)](installing-boot9strap-(ntrboot))
-{: .notice--primary}
+::: tip
+
+Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
+
+:::
