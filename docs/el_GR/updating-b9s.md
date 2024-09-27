@@ -1,53 +1,60 @@
----
-title: "Ενημέρωση του B9S"
----
+# Updating B9S
 
-{% include toc title="Πίνακας περιεχομένων" %}
-
-### Απαραίτητη ανάγνωση
+## Required Reading
 
 Αυτή η σελίδα αφορά τους υπάρχοντες χρήστες του boot9strap που θέλουν να ενημερώσουν την εγκατάσταση του boot9strap στην πιο πρόσφατη έκδοση.
 
-### Τι χρειάζεστε
+## What You Need
 
-* Την πιο πρόσφατη έκδοση του [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (απευθείας λήψη)
-* Την πιο πρόσφατη έκδοση του [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (απευθείας λήψη)
-* Την πιο πρόσφατη έκδοση του [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (το αρχείο `.zip` του Luma3DS)
+- The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
+- The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
+- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
 
-### Οδηγίες
+## Instructions
 
-#### Ενότητα I - Προετοιμασία
+### Section I - Prep Work
+
+::: info
 
 Για όλα τα βήματα αυτής της ενότητας, αντικαταστήστε όλα τα τυχόν υπάρχοντα αρχεία στην κάρτα SD σας.
-{: .notice--info}
+
+:::
 
 1. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
-1. Δημιουργήστε έναν φάκελο με το όνομα `boot9strap` στη ρίζα της κάρτας SD σας
-1. Αντιγράψτε τα `boot9strap.firm` και `boot9strap.firm.sha` από το αρχείο `.zip` του boot9strap στον φάκελο `/boot9strap/` της κάρτας SD σας
-1. Αντιγράψτε το `SafeB9SInstaller.firm` από το αρχείο `.zip` του SafeB9SInstaller στη ρίζα της κάρτας SD σας και μετονομάστε το σε `boot.firm`
-1. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
+2. Δημιουργήστε έναν φάκελο με το όνομα `boot9strap` στη ρίζα της κάρτας SD σας
+3. Αντιγράψτε τα `boot9strap.firm` και `boot9strap.firm.sha` από το αρχείο `.zip` του boot9strap στον φάκελο `/boot9strap/` της κάρτας SD σας
+4. Αντιγράψτε το `SafeB9SInstaller.firm` από το αρχείο `.zip` του SafeB9SInstaller στη ρίζα της κάρτας SD σας και μετονομάστε το σε `boot.firm`
+5. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 
-    ![]({{ "/images/screenshots/updateb9s-root-layout.png" | absolute_url }})
-    {: .notice--info}
+   ::: info
 
+   ![](/images/screenshots/updateb9s-root-layout.png)
 
-#### Ενότητα II - Εγκατάσταση του boot9strap
+   :::
+
+### Section II - Installing boot9strap
 
 1. Ενεργοποιήστε την κονσόλα σας
-    + Θα πρέπει να εκκινηθεί αυτόματα το SafeB9SInstaller
-{%- include_relative include/install-boot9strap-safeb9sinstaller.txt isbootfirm="true" inline="true" %}
+   - This should automatically launch SafeB9SInstaller
+2. Όταν ζητηθεί, εισαγάγετε τον συνδυασμό πλήκτρων που θα εμφανιστεί στην πάνω οθόνη, ώστε να εγκαταστήσετε το boot9strap
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+3. Μόλις ολοκληρωθεί, πατήστε παρατεταμένα το κουμπί ισχύος της κονσόλας σας για εξαναγκαστική απενεργοποίηση
+   - Your console will only boot to the SafeB9SInstaller screen until the next section is completed
 
-#### Ενότητα III - Ενημέρωση του Luma3DS
+### Section III - Update Luma3DS
 
 1. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
-1. Αντιγράψτε τα αρχεία `boot.firm` και `boot.3dsx` από το αρχείο `.zip` του Luma3DS στη ρίζα της κάρτας SD σας, αντικαθιστώντας το υπάρχον αρχείο
-1. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
-1. Ενεργοποιήστε την κονσόλα σας
-1. Εάν η κονσόλα σας έχει εκκινηθεί στο μενού ρυθμίσεων του Luma3DS, πατήστε το (Start) για αποθήκευση και επανεκκίνηση
-    + Το μενού ρυθμίσεων του Luma3DS περιέχει επιλογές για το custom firmware «Luma3DS». Πολλές από αυτές τις ρυθμίσεις χρησιμεύουν στην προσαρμογή ή τον έλεγχο για σφάλματα
-    + Στα πλαίσια αυτού του οδηγού, αυτές οι ρυθμίσεις θα παραμείνουν στις προεπιλογές τους
+2. Αντιγράψτε τα αρχεία `boot.firm` και `boot.3dsx` από το αρχείο `.zip` του Luma3DS στη ρίζα της κάρτας SD σας, αντικαθιστώντας το υπάρχον αρχείο
+3. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
+4. Ενεργοποιήστε την κονσόλα σας
+5. Εάν η κονσόλα σας έχει εκκινηθεί στο μενού ρυθμίσεων του Luma3DS, πατήστε το (Start) για αποθήκευση και επανεκκίνηση
+   - Luma3DS configuration menu are settings for the Luma3DS custom firmware. Πολλές από αυτές τις ρυθμίσεις χρησιμεύουν στην προσαρμογή ή τον έλεγχο για σφάλματα
+   - For the purpose of this guide, these settings will be left on default settings
 
 ___
 
-### Συνέχεια στην [Ολοκλήρωση εγκατάστασης](finalizing-setup)
-{: .notice--primary}
+::: tip
+
+Continue to [Finalizing Setup](finalizing-setup)
+
+:::
