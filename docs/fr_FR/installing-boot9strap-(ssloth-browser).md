@@ -1,83 +1,87 @@
----
-title: "Installation de boot9strap (SSLoth-Browser)"
----
+# Installing boot9strap (SSLoth-Browser)
 
-{% include toc title="Table des matières" %}
+:::details Technical Details (optional)
 
-{% capture technical_info %}
-<summary><em>Détails techniques (facultatif)</em></summary>
+In order to exploit the Browser application, we need to bypass the browser version check, which is designed to disallow the use of the browser without updating to the latest system version.
 
-Afin d'exploiter l'application du Navigateur Internet, nous devons contourner la vérification de sa version, qui est conçue pour interdire son utilisation sans mettre à jour la console sur 
-la dernière version du système.
+A public proxy server is available, which, with the help of the SSLoth exploit, can bypass this check.
 
-Un serveur proxy public est disponible, qui, à l'aide de l'exploit SSLoth, permet de contourner cette vérification.
+Once the bypass is active, an exploit webpage will be accessible which will do the rest of the job.
 
-Une fois que le contournement est actif, une page web d'exploit sera accessible et fera le reste du travail.
+For technical details on the exploits that you will be using on this page, see [here](https://github.com/MrNbaYoh/3ds-ssloth) (SSLoth) and [here](https://github.com/TuxSH/universal-otherapp) (universal-otherapp).
 
-Pour des détails techniques sur les exploits que vous utiliserez sur cette page, voir [ici](https://github.com/MrNbaYoh/3ds-ssloth) (SSLoth) et [ici](https://github.com/TuxSH/universal-otherapp) (universal-otherapp).
+:::
 
-{% endcapture %}
-<details>{{ technical_info | markdownify }}</details>
-{: .notice--info}
+## Compatibility Notes
 
-### Notes de compatibilité
+SSLoth allows users on version 11.13.0 and below to bypass the browser version check, allowing the use of new-browserhax or old-browserhax (compatible with versions 11.4.0 through 11.13.0 in all regions), which can then be used in conjunction with universal-otherapp.
 
-SSLoth permet aux utilisateurs de consoles en version 11.13.0 et versions antérieures de contourner la vérification de la version du Navigateur Internet, permettant l'utilisation de new-browserhax ou old-browserhax (compatible avec les versions 11.4.0 à 11.13.0 dans toutes les régions), qui peuvent ensuite être utilisés conjointement avec universal-otherapp.
+## What You Need
 
-## Ce dont vous avez besoin
+- The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
+- The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
+- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- The latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) (`otherapp.bin`)
 
-* La dernière version de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (téléchargement direct)
-* La dernière version de [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (téléchargement direct)
-* La dernière version de [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (le fichier `.zip' de Luma3DS)
-* La dernière version de [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) (`otherapp.bin`)
+## Instructions
 
-#### Section I - Préparatifs
+### Section I - Prep Work
 
-Dans cette section, vous copierez les fichiers nécessaires pour déclencher Browserhax et universal-otherapp.
+In this section, you will copy the files needed to trigger both browserhax and universal-otherapp.
 
-1. Éteignez votre console
-1. Insérez votre carte SD dans votre ordinateur
-1. Copiez `otherapp.bin` vers la racine de votre carte SD et renommez-le en `arm11code.bin`
-    + La racine de la carte SD représente le répertoire initial de la carte SD où vous pouvez voir le dossier Nintendo 3DS, mais ce n'est pas à l'intérieur de ce dernier
-    + Si vous ne voyez pas l'extension `.bin`, ne l'ajoutez pas à la fin du nom de fichier
-1. Copiez `boot.firm` et `boot.3dsx` depuis Luma3DS `.zip`vers la racine de votre carte SD
-1. Créez un dossier nommé `boot9strap` à la racine de votre carte SD
-1. Copiez `boot9strap.firm` et `boot9strap.firm.sha` depuis le fichier ".zip" de boot9strap vers le dossier `/boot9strap/` sur votre carte SD
-1. Copiez `SafeB9SInstaller.bin` depuis le fichier `.zip` de SafeB9SInstaller à la racine de votre carte SD
-1. Réinsérez votre carte SD dans votre console
-1. Power on your console
+1. Power off your console
+2. Insert your SD card into your computer
+3. Copy `otherapp.bin` to the root of your SD card and rename it to `arm11code.bin`
+   - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
+   - If you do not see the `.bin` extension, do not add it to the end of the filename
+4. Copy `boot.firm` and `boot.3dsx` from the Luma3DS `.zip` to the root of your SD card
+5. Create a folder named `boot9strap` on the root of your SD card
+6. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
+7. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
+8. Reinsert your SD card into your console
+9. Power on your console
 
-#### Section II - SSLoth
+### Section II - SSLoth
 
-Dans cette section, vous allez modifier vos paramètres de connexion Internet pour utiliser un réseau proxy conçu pour contourner la vérification de la version du Navigateur Internet, lui permettant de fonctionner sans mettre à jour la console. Cela vous permettra d'accéder à la page Web d'exploit du Navigateur Internet dans la section suivante.
+In this section, you will change your Internet connection settings to use a proxy network designed to bypass the browser version check, allowing the browser to function without a system update. This will allow you to access the browser exploit webpage in the next section.
 
-{% include_relative include/addproxy.txt %}
-1. Appuyez deux fois sur « Retour », puis « Fermer » pour revenir au Menu HOME
+<!--@include: ./_include/addproxy.md -->
 
-#### Section III - Lancer SafeB9SInstaller
+1. Press "Back" twice, then "Close" to go back to the HOME Menu
 
-Dans cette section, vous allez visiter la page Web d'exploit du Navigateur Internet, qui utilisera universal-otherapp pour lancer l'installateur de boot9strap (custom firmware).
+### Section III - Launching SafeB9SInstaller
 
-1. Sur le Menu HOME, appuyez simultanément sur les boutons (L) et (R) pour ouvrir l'appareil photo
-    + Si vous ne parvenez pas à ouvrir l'appareil photo, ouvrez le Navigateur Internet et saisissez manuellement l'URL (`https://zoogie.github.io/web/nbhax/`)
-1. Touchez le bouton QR code et scannez [ce QR code](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax&qzone=1&margin=0&size=400x400&ecc=L)
-    + If you get a crash or an error code, [follow this troubleshooting guide](troubleshooting#installing-boot9strap-ssloth-browser)
-    + Si vous recevez un avertissement de certificat de sécurité, appuyez sur (A) pour autoriser la connexion
-1. Appuyez sur le bouton "PROCEED TO HAXX"
-1. Si l'exploit a réussit, vous devriez avoir démarré dans SafeB9SInstaller
-    + En cas d'erreur, [suivez ce guide de dépannage](troubleshooting#installing-boot9strap-ssloth-browser)
+In this section, you will visit the browser exploit webpage, which will use universal-otherapp to launch the boot9strap (custom firmware) installer.
 
-#### Section IV - Installation de boot9strap
+1. On the HOME Menu, press the Left and Right shoulder buttons at the same time to open the camera
+   - If you are unable to open the camera, open the Internet Browser and manually type the URL instead (`https://zoogie.github.io/web/nbhax/`)
+2. Tap the QR code button and scan [this QR code](http://api.qrserver.com/v1/create-qr-code/?color=000000\&bgcolor=FFFFFF\&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax\&qzone=1\&margin=0\&size=400x400\&ecc=L)
+   - If you get a crash or an error code, [follow this troubleshooting guide](troubleshooting#installing-boot9strap-ssloth-browser)
+   - If you get a security certificate warning, press (A) to allow the connection
+3. Tap the "PROCEED TO HAXX" button
+4. If the exploit was successful, you will have booted into SafeB9SInstaller
+   - If you get an error, [follow this troubleshooting guide](troubleshooting#installing-boot9strap-ssloth-browser)
 
-{% include_relative include/install-boot9strap-safeb9sinstaller.txt %}
-{%- include_relative include/configure-luma3ds.txt %}
+### Section IV - Installing boot9strap
 
-#### Section V - Restauration du proxy par défaut
+In this section, you will install custom firmware onto your console.
 
-{% include_relative include/rmproxy.txt %}
+1. Lorsque vous y êtes invité, entrez la combinaison de touches indiquée sur l'écran supérieur pour installer boot9strap
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+2. Once it is complete, press (A) to reboot your console
 
-{% include_relative include/luma3ds-installed-note.txt %}
+<!--@include: ./_include/configure-luma3ds.md -->
+
+### Section V - Restoring default proxy
+
+<!--@include: ./_include/rmproxy.md -->
+
+<!--@include: ./_include/luma3ds-installed-note.md -->
+
 ___
 
-### Continuer vers [Finalisation de l'installation](finalizing-setup)
-{: .notice--primary}
+::: tip
+
+Continue to [Finalizing Setup](finalizing-setup)
+
+:::
