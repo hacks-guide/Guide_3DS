@@ -1,14 +1,12 @@
----
-title: "Συνεισφορά"
----
+# Συνεισφορά
 
 Χαιρόμαστε που θέλετε να συνεισφέρετε στο 3ds.hacks.guide! Ακολουθούν μερικοί τρόποι με τους οποίους μπορείτε να βοηθήσετε:
 
-## Συντήρηση
+## Maintenance
 
 Αυτός ο οδηγός είναι ανοικτού κώδικα· το αποθετήριό μας βρίσκεται [εδώ](https://github.com/hacks-guide/Guide_3DS). Αν έχετε παρατηρήσει κάποιο πρόβλημα σε αυτόν τον οδηγό, μπορείτε να υποβάλετε μια αναφορά για να μας ενημερώσετε ή ένα αίτημα συγχώνευσης για να κάνετε εσείς τις απαραίτητες αλλαγές. Μπορείτε επίσης να μιλήσετε μαζί μας στο κανάλι #guide-meta στο [Nintendo Homebrew στο Discord](https://discord.gg/MWxPgEp).
 
-## Μεταφράσεις
+## Translations
 
 Εάν επιθυμείτε να μεταφράσετε αυτόν τον οδηγό σε άλλες γλώσσες (ή να συμβάλετε στη συντήρηση των υφιστάμενων μεταφράσεων), δείτε τη σελίδα μας στο [Crowdin](https://crowdin.com/project/3ds-guide).
 
@@ -16,13 +14,16 @@ title: "Συνεισφορά"
 
 Ορισμένα αρχεία σε αυτόν τον οδηγό διατίθενται μόνο ως torrent. Εάν επιθυμείτε να συνεισφέρετε στο seeding αυτών των torrent, ώστε να διασφαλιστεί η διαθεσιμότητά τους στο μέλλον, μπορείτε να κάνετε λήψη του αρχείου `.zip` που περιέχει όλα τα αρχεία `.torrent` μας: [torrents.zip](/assets/torrents.zip) (τελευταία ενημέρωση: 16/03/2023)
 
-Μπορείτε επίσης να κάνετε εγγραφή σε μια [ροή RSS]({{ "rss.xml" | absolute_url }}) που ενδέχεται να ενημερωθεί για μελλοντικά torrent.
+There is also an [RSS feed](/rss.xml) that may be updated for future torrents, which you can subscribe to.
 
-## Δωρεές
+## Donations
 
 Η συντήρηση αυτού του οδηγού (καθώς και των καναλιών υποστήριξης) βασίζεται κυρίως σε εθελοντική προσπάθεια. Επομένως, εάν αυτός ο οδηγός σάς έχει βοηθήσει με κάποιο τρόπο, θα εκτιμούσαμε ιδιαίτερα μια δωρεά!
 
-[![Paypal]({{ "/images/paypal_white.png" | absolute_url }}){:height="72px" width="256px"}{: style="padding-bottom: .35em"}](https://paypal.me/NintendoHomebrew){: .align-center}
-[https://paypal.me/NintendoHomebrew](https://paypal.me/NintendoHomebrew)
-{: .text-center}
-{: .notice--info}
+::: tip
+
+[![Paypal](/images/paypal_white.png)](https://paypal.me/NintendoHomebrew){style="display: block;text-align: center"}
+
+[https://paypal.me/NintendoHomebrew](https://paypal.me/NintendoHomebrew){style="display: block;text-align: center"}
+
+:::
