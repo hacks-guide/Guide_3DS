@@ -1,43 +1,58 @@
----
-title: "檢查是否已安裝自製韌體"
----
+# 檢查自製韌體
 
-{% include toc title="條目內容" %}
-
-### 必讀事項
+## Required Reading
 
 本文章是用來確認您的主機是否已安裝自製韌體用的附加章節。
 
 如果您的主機已安裝 arm9loaderhax 或 boot9strap 的自製韌體的話，您將需要透過下列指示來更新您的韌體。
 
-If your console has a menuhax-based CFW setup, you should [clear HOME Menu's extdata](troubleshooting#other-troubleshooting), then follow all instructions on your SysNAND. You probably have a menuhax-based setup if your system version when booting without an SD card is 9.2.0-20.
-{: .notice--info}
+::: info
 
-### 操作說明
+If your console has a menuhax-based CFW setup, you should [clear HOME Menu's extdata](troubleshooting#other-troubleshooting), then follow all instructions on your SysNAND. You probably have a menuhax-based setup if your system version when booting without an SD card is 9.2.0-20.
+
+:::
+
+## Instructions
 
 1. Power off your console
-1. 按住「Select」鍵
-1. Power on your console while still holding the (Select) button
-1. 您應該會看到類似於設定選單的畫面
+2. 按住「Select」鍵
+3. Power on your console while still holding the (Select) button
+4. 您應該會看到類似於設定選單的畫面
 
-___
+## What to do next
 
-### 接下來呢？
+::: tip
 
 如果您的主機開機後直接跳到正常的 HOME 主選單，請前往至[新手入門](get-started)
-{: .notice--success}
+
+:::
+
+::: tip
 
 如果您的主機顯示低於 (含) Luma3DS 7.0.5 的版本的話，請前往至 [升級 A9LH 至 B9S](a9lh-to-b9s)
-{: .notice--primary}
+
+:::
+
+::: tip
 
 如果您的主機顯示 Luma3DS 7.1 的版本的話，請前往至 [更新 B9S](a9lh-to-b9s)
-{: .notice--primary}
+
+:::
+
+::: tip
 
 如果您的主機顯示高於 (含) Luma3DS 8.0 的版本的話，請前往至 [還原 / 更新 CFW](restoring-cfw)
-{: .notice--primary}
+
+:::
+
+::: warning
 
 If you see GodMode9, Decrypt9WIP, Hourglass9, or Luma3DS chainloader, you held (Start) by accident and should try these instructions again with (Select)
-{: .notice--warning}
+
+:::
+
+::: danger
 
 如果您的主機顯示了以上皆非的畫面的話，請至 [Discord 上的 Nintendo Homebrew 伺服器](https://discord.gg/MWxPgEp) 並使用英文求助。
-{: .notice--danger}
+
+:::
