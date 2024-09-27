@@ -1,48 +1,50 @@
----
-title: "צריבת ntrboot (DSi)"
----
+# Flashing ntrboot (DSi)
 
-{% include toc title="תוכן העניינים" %}
-
-### קריאה דרושה
+## Required Reading
 
 לפני שאתם ממשיכים, שימו לב שקראתם את כל המידע ב [ntrboot](ntrboot)
 
 דרך זו דורשת גישה זמנית לNintendo DSi שתומך בכרטיס פריצה שלכם. This method uses the flashcart to run the ntrboot flasher `.nds` file on your DSi. This means that your flashcart must support launching `.nds` files on your DSi's version. תסתכלו על הטבלה ב[ntrboot](ntrboot) למידע נוסף.
 
+::: danger
+
 שימו לב שבמקרים נדירים, יתכן שתהליך הצריבה **ישבור** כרטיס פריצה מזוייף ויגרום לו לא לעבוד. This is unlikely, but nevertheless, only original listed flashcarts are supported. To reduce the chance of receiving a counterfeit card, it is recommended that you use a reputable site to buy your flashcart (such as [NDS Card](https://www.nds-card.com/)).
-{: .notice--danger}
 
-### What You Need
+:::
 
-* כרטיס הפריצה שתומך בntrboot שלכם
-* Two consoles
-    * **The source DSi**: the Nintendo DSi which is compatible with your flashcart
-    * **The target 3DS**: the 3DS family console on stock firmware
-* The latest release of [ds_ntrboot_flasher](https://github.com/ntrteam/ds_ntrboot_flasher/releases/latest) (`ds_ntrboot_flasher_dsi.nds`)
+## What You Need
 
-### הנחיות
+- Your ntrboot compatible flashcart
+- Two consoles
+  - **The source DSi**: the Nintendo DSi which is compatible with your flashcart
+  - **The target 3DS**: the 3DS family console on stock firmware
+- The latest release of [ds_ntrboot_flasher](https://github.com/ntrteam/ds_ntrboot_flasher/releases/latest) (`ds_ntrboot_flasher_dsi.nds`)
 
-#### חלק I - הכנות
+## Instructions
+
+### Section I - Prep Work
 
 1. תכבו את **DSi המקור**
-1. תכניסו את כרטיס ה- SD של כרטיס הפריצה שלכם אל המחשב
-1. תעתיקו את `ds_ntrboot_flasher_dsi.nds` אל כרטיס הSD של כרטיס הפריצה שלכם
-1. תכניסו בחזרה את כרטיס ה- SD של כרטיס הפריצה שלכם אל כרטיס הפריצה
-1. תכניסו את כרטיס הפריצה של DS \ DSi שתואם ntrboot אל **DSi המקור**
+2. תכניסו את כרטיס ה- SD של כרטיס הפריצה שלכם אל המחשב
+3. תעתיקו את `ds_ntrboot_flasher_dsi.nds` אל כרטיס הSD של כרטיס הפריצה שלכם
+4. תכניסו בחזרה את כרטיס ה- SD של כרטיס הפריצה שלכם אל כרטיס הפריצה
+5. תכניסו את כרטיס הפריצה של DS \ DSi שתואם ntrboot אל **DSi המקור**
 
-#### חלק II - צריבת ntrboot
+### Section II - Flashing ntrboot
 
 1. תפעילו את `ds_ntrboot_flasher_dsi.nds` על **DSi המקור** בעזרת כרטיס הפריצה שלכם
-1. תלחצו (A) כדי להמשיך
-1. תשתמשו ב (Up) וב(Down) כדי לבחור את הכרטיס פריצה שלכם
-1. תלחצו (A) כדי להמשיך
-1. תלחצו (A) בשביל "inject ntrboothax"
-1. תלחצו (A) כדי לבחור ב"RETAIL"
-1. תלחצו (A) כדי להמשיך
-1. תבחרו ב"EXIT"
+2. תלחצו (A) כדי להמשיך
+3. תשתמשו ב (Up) וב(Down) כדי לבחור את הכרטיס פריצה שלכם
+4. תלחצו (A) כדי להמשיך
+5. תלחצו (A) בשביל "inject ntrboothax"
+6. תלחצו (A) כדי לבחור ב"RETAIL"
+7. תלחצו (A) כדי להמשיך
+8. תבחרו ב"EXIT"
 
 ___
 
-### Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-(ntrboot))
-{: .notice--primary}
+::: tip
+
+Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
+
+:::
