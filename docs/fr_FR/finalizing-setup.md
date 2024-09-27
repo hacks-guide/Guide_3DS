@@ -1,131 +1,149 @@
----
-title: "Finalisation de l'installation"
----
+# Finalizing Setup
 
-{% include toc title="Table of Contents" %}
+## Required Reading
 
-### Lecture requise
-
-Le fichier `boot.firm` est exécuté par boot9strap lui-même, après avoir terminé le chargement de la NAND. In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) to patch the console, allowing it to run homebrew software.
+The file `boot.firm` is what is launched by boot9strap itself after it finishes loading off of NAND. In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) to patch the console, allowing it to run homebrew software.
 
 On this page, we will make critical system file backups and install some homebrew programs. Most of these steps will be automated using a script that you will run on your console.
 
-{% capture notice-6 %}
+::: info
+
 The script will install the following applications:
 
-+  **[FBI](https://github.com/lifehackerhansol/FBI)** *(installs CIA formatted applications)*
-+  **[Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)** *(launches the Homebrew Launcher)*
-+  **[Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)** *(installs custom themes)*
-+  **[Checkpoint](https://github.com/FlagBrew/Checkpoint)** *(backs up and restores save files for 3DS and DS games)*
-+  **[ftpd](https://github.com/mtheall/ftpd)** *(access your 3DS SD card wirelessly)*
-+  **[Universal-Updater](https://github.com/Universal-Team/Universal-Updater/)** *(a homebrew app store for downloading homebrew from the 3DS over Wi-Fi)*
-+  **[GodMode9](https://github.com/d0k3/GodMode9)** *(multipurpose tool which can do NAND and cartridge functions)*
+- **[FBI](https://github.com/lifehackerhansol/FBI)** _(installs CIA formatted applications)_
+- **[Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)** _(launches the Homebrew Launcher)_
+- **[Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)** _(installs custom themes)_
+- **[Checkpoint](https://github.com/FlagBrew/Checkpoint)** _(backs up and restores save files for 3DS and DS games)_
+- **[ftpd](https://github.com/mtheall/ftpd)** _(access your 3DS SD card wirelessly)_
+- **[Universal-Updater](https://github.com/Universal-Team/Universal-Updater/)** _(a homebrew app store for downloading homebrew from the 3DS over Wi-Fi)_
+- **[GodMode9](https://github.com/d0k3/GodMode9)** _(multipurpose tool which can do NAND and cartridge functions)_
 
 If you don't want one of these applications, you can remove them after you have finished this page by navigating to System Settings -> Data Management -> Nintendo 3DS -> Software. (GodMode9 cannot be removed in this way and is generally required for other functions.)
-{% endcapture %}
-<div class="notice--info">{{ notice-6 | markdownify }}</div>
 
-### Notes de compatibilité
+:::
 
-Si votre **New 3DS** était en version 2.1.0 avant de suivre les instructions ce guide, vous devriez [restaurer votre sauvegarde NAND](godmode9-usage#restoring-a-nand-backup) avant de continuer. Cela ne s'applique probablement pas à vous à moins que vous ne suiviez ce guide en 2017.
-{: .notice--warning}
+## Compatibility Notes
 
-Si votre configuration CFW précédente était basée sur EmuNAND et que vous souhaitez déplacer le contenu de votre EmuNAND/RedNAND vers SysNAND, suivez [Transférer votre EmuNAND](move-emunand) avant de suivre cette page. Si vous ne savez pas ce qu'est une EmuNAND, cela ne s'applique pas à vous.
-{: .notice--info}
+::: warning
 
-## Ce dont vous avez besoin
+If your **New 3DS** was on version 2.1.0 before following this guide, you should [restore your NAND backup](godmode9-usage#restoring-a-nand-backup) before continuing. This likely doesn't apply to you unless you were following this guide in 2017.
 
-* [x_finalize_helper.firm](https://github.com/hacks-guide/finalize/releases/latest/download/x_finalize_helper.firm) (direct download)
-* [finalize.romfs](https://github.com/hacks-guide/finalize/releases/latest/download/finalize.romfs) (direct download)
+:::
 
-### Instructions
+::: info
 
-#### Section I - Préparatifs
+If your previous CFW setup was EmuNAND-based and you wish to move the contents of your EmuNAND/RedNAND to SysNAND, follow [Move EmuNAND](move-emunand) before following this page. If you don't know what an EmuNAND is, this doesn't apply to you.
 
-Dans cette section, vous copierez les fichiers nécessaires pour suivre le reste des instructions de cette page.
+:::
 
-1. Éteignez votre console
-1. Insérez votre carte SD dans votre ordinateur
-1. Copy `finalize.romfs` to the root of your SD card
-1. Open the `luma` folder on your SD card and create a folder named `payloads` inside, if it does not already exist
-1. Copy `x_finalize_helper.firm` to the `payloads` folder
-1. Réinsérez votre carte SD dans votre console
+## What You Need
 
-The screenshot below indicates the minimum SD card layout that is required to follow this page. Il est possible que vous ayez des fichiers ou des dossiers supplémentaires sur votre carte SD, selon votre configuration précédente ou la méthode que vous avez suivie.
+- [x_finalize_helper.firm](https://github.com/hacks-guide/finalize/releases/latest/download/x_finalize_helper.firm) (direct download)
+- [finalize.romfs](https://github.com/hacks-guide/finalize/releases/latest/download/finalize.romfs) (direct download)
 
-![]({{ "/images/screenshots/finalizing-root-layout.png" | absolute_url }})
-{: .notice--info}
+## Instructions
 
-![]({{ "/images/screenshots/finalizing-luma-payloads.png" | absolute_url }})
-{: .notice--info}
+### Section I - Prep Work
 
-#### Section II - Updating the System
+In this section, you will copy the files necessary to follow the rest of the instructions on this page.
 
-Dans cette section, vous allez mettre à jour votre console vers la dernière version, ce qui est sans danger avec le custom firmware.
+1. Power off your console
+2. Insert your SD card into your computer
+3. Copy `finalize.romfs` to the root of your SD card
+4. Open the `luma` folder on your SD card and create a folder named `payloads` inside, if it does not already exist
+5. Copy `x_finalize_helper.firm` to the `payloads` folder
+6. Reinsert your SD card into your console
 
-{% include_relative include/sysupdate.txt cfw="true" %}
+The screenshot below indicates the minimum SD card layout that is required to follow this page. You may have extra files or folders on your SD card, depending on your previous setup or the method that you followed.
 
-#### Section III - RTC and DSP setup
+::: info
 
-Dans cette section, vous synchroniserez l'horloge interne de votre 3DS avec l'heure réelle et allez dumper le firmware du son (ce qui est nécessaire pour que certains logiciels homebrew utilisent correctement le son).
+![](/images/screenshots/finalizing-root-layout.png)
 
-1. Appuyez simultanément sur (L) + (Bas sur la croix directionnelle) + (Select) pour ouvrir le menu Rosalina
-    + If one of these buttons is broken, download [config.ini]({{ base_path }}/assets/config.ini){:download="config.ini"} and put it in your `luma` folder, replacing the existing one. This will change the Rosalina menu key combination to (X) + (Y)
-1. Sélectionnez "Miscellaneous options"
-1. Sélectionnez "Dump DSP firmware"
-1. Appuyez sur (B) pour continuer
-1. Sélectionnez "Nullify user time offset"
-1. Appuyez sur (B) pour continuer
-1. Appuyez sur (B) pour revenir au menu principal de Rosalina
-1. Appuyez sur (B) pour quitter le menu Rosalina
+:::
 
-#### Section IV - Setup Script
+::: info
+
+![](/images/screenshots/finalizing-luma-payloads.png)
+
+:::
+
+### Section II - Updating the System
+
+In this section, you will update your system to the latest version, which is safe to do with custom firmware.
+
+<!--@include: ./_include/sysupdate.md -->
+
+### Section III - RTC and DSP setup
+
+In this section, you will sync your 3DS internal clock with the actual time and dump the sound firmware (which is necesssary for some homebrew software to use sound properly).
+
+1. Press (Left Shoulder) + (D-Pad Down) + (Select) at the same time to open the Rosalina menu
+   - If one of these buttons is broken, download [config.ini](/assets/config.ini) and put it in your `luma` folder, replacing the existing one. This will change the Rosalina menu key combination to (X) + (Y)
+2. Select "Miscellaneous options"
+3. Select "Dump DSP firmware"
+4. Press (B) to continue
+5. Select "Nullify user time offset"
+6. Press (B) to continue
+7. Press (B) to return to the Rosalina main menu
+8. Press (B) to exit the Rosalina menu
+
+### Section IV - Setup Script
 
 In this section, you will use a series of scripts to automate homebrew installation, SD card cleanup, and system file backup.
 
-1. Éteignez votre console
-1. Press and hold (X), and while holding (X), power on your console. This will launch the Finalizing Setup Helper
-    + If you boot to the HOME Menu, your `payloads` folder may be incorrectly spelled or in the wrong location
-    + If you encounter an error, consult the [troubleshooting](troubleshooting#finalizing-setup) page
-1. If the Helper was successful, your console will boot into GodMode9
-    + From this point forward, you can access GodMode9 by holding START while powering on your console
-1. Si vous êtes invité à créer une sauvegarde de fichiers essentiels, appuyez sur (A) pour le faire, puis appuyez sur (A) pour continuer une fois terminé
-1. Si vous êtes invité à régler la date et l'heure du RTC, appuyez sur (A) pour le faire, puis réglez la date et l'heure, puis appuyez sur (A) pour continuer
-1. Appuyez sur (HOME) pour faire apparaître le menu d’actions
-1. Sélectionnez "Scripts"
-1. Select "finalize"
-1. Follow the prompts in the script, answering any questions that you are asked
-    + If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting#finalizing-setup) page
-1. Once the script says "Setup complete!", press (A) to power off the device
-    + If you do NOT see the message "Setup complete!", the script was not successful and you will need to redo this section from Step 3
-1. Insérez votre carte SD dans votre ordinateur
-1. Copy the `/gm9/backups/` folder to a safe location on your computer
-    + This folder contains critical file backups and should be backed up to multiple locations (i.e. cloud storage) if possible
-    + The two SysNAND files are your NAND backup and can be used to revert your console to a working state if it is bricked by a software issue
-    + The `essential.exefs` file contains your console's system-unique files and can be used to recover your data in the event of a hardware failure
-1. If you still have them, delete the two `SysNAND` files from the `/gm9/backups/` folder from your SD card
-    + The `essential.exefs` file is small and may be kept on your SD card for ease of access
+1. Power off your console
+2. Press and hold (X), and while holding (X), power on your console. This will launch the Finalizing Setup Helper
+   - If you boot to the HOME Menu, your `payloads` folder may be incorrectly spelled or in the wrong location
+   - If you encounter an error, consult the [troubleshooting](troubleshooting#finalizing-setup) page
+3. If the Helper was successful, your console will boot into GodMode9
+   - From this point forward, you can access GodMode9 by holding START while powering on your console
+4. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
+5. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
+6. Press (Home) to bring up the action menu
+7. Select "Scripts..."
+8. Select "finalize"
+9. Follow the prompts in the script, answering any questions that you are asked
+   - If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting#finalizing-setup) page
+10. Once the script says "Setup complete!", press (A) to power off the device
+    - If you do NOT see the message "Setup complete!", the script was not successful and you will need to redo this section from Step 3
+11. Insert your SD card into your computer
+12. Copy the `/gm9/backups/` folder to a safe location on your computer
+    - This folder contains critical file backups and should be backed up to multiple locations (i.e. cloud storage) if possible
+    - The two SysNAND files are your NAND backup and can be used to revert your console to a working state if it is bricked by a software issue
+    - The `essential.exefs` file contains your console's system-unique files and can be used to recover your data in the event of a hardware failure
+13. If you still have them, delete the two `SysNAND` files from the `/gm9/backups/` folder from your SD card
+    - The `essential.exefs` file is small and may be kept on your SD card for ease of access
 
 ___
 
-Vous avez terminé! Custom firmware is now fully configured on your console.
-{: .notice--success}
+::: tip
+
+You're done! Custom firmware is now fully configured on your console.
+
+:::
+
+::: info
 
 Trying to figure out what to do with your newly modded device? Visit [our wiki](https://wiki.hacks.guide/wiki/3DS:Things_to_do)!
-{: .notice--info}
 
-### Informations et notes
+:::
 
-{% capture notice-6 %}
-Voici quelques combinaisons de touches que vous devriez connaître :
+### Information and Notes
 
-+ Holding (Select) on boot will launch the Luma3DS configuration menu.
-+ Holding (Start) on boot will launch GodMode9, or if you have multiple payloads in `/luma/payloads/`, the Luma3DS chainloader.
-+ By default, pressing (Left Shoulder) + (Down D-Pad) + (Select) while in 3DS mode will open the Rosalina menu, where you can check system information, take screenshots, enable cheats, and more. Cela peut être modifié à partir du menu Rosalina.
-+ Holding (Start) + (Select) + (X) on boot will make the notification LED show a color for debug purposes. Pour une liste de ces combinaisons, lisez le [changelog](https://github.com/SciresM/boot9strap/releases/tag/1.4).
-{% endcapture %}
+::: info
 
-<div class="notice--info">{{ notice-6 | markdownify }}</div>
+Here are some key combos that you should know:
 
-Pour plus d'informations sur l'utilisation des différentes fonctionnalités de GodMode9, consultez les pages [Utilisation de GodMode9](godmode9-usage) et [Dumper des titres et des cartes de jeu](dumping-titles-and-game-cartridges).
-{: .notice--info}
+- Holding (Select) on boot will launch the Luma3DS configuration menu.
+- Holding (Start) on boot will launch GodMode9, or if you have multiple payloads in `/luma/payloads/`, the Luma3DS chainloader.
+- By default, pressing (Left Shoulder) + (Down D-Pad) + (Select) while in 3DS mode will open the Rosalina menu, where you can check system information, take screenshots, enable cheats, and more. This can be changed from the Rosalina menu.
+- Holding (Start) + (Select) + (X) on boot will make the notification LED show a color for debug purposes. See the [changelog](https://github.com/SciresM/boot9strap/releases/tag/1.4) for a list.
+
+:::
+
+::: info
+
+For information on using GodMode9's various features, check out the [GodMode9 Usage](godmode9-usage) and [Dumping Titles and Game Cartridges](dumping-titles-and-game-cartridges) pages.
+
+:::
