@@ -1,57 +1,64 @@
----
-title: "CTRTransfer"
----
+# CTRTransfer
 
-{% include toc title="Πίνακας περιεχομένων" %}
-
-### Απαραίτητη ανάγνωση
+## Required Reading
 
 Αυτή είναι μια πρόσθετη ενότητα για την εγκατάσταση ενός ειδώλου του CTRTransfer 11.15.0 στην κονσόλα σας.
 
+::: info
+
 Αυτή η σελίδα υποθέτει ότι έχετε ήδη εγκαταστήσει το Luma3DS και το boot9strap. Εάν ακολουθήσατε αυτόν τον ιστότοπο μέχρι το τέλος (Ολοκλήρωση εγκατάστασης), διαθέτετε το Luma3DS και το boot9strap.
-{: .notice--info}
+
+:::
+
+::: warning
 
 Στα πλαίσια αυτής της διαδικασίας, θα γίνει επαναφορά των ρυθμίσεων του συστήματός σας στις προεπιλογές. Αυτές περιλαμβάνουν στοιχεία, όπως το όνομα χρήστη, τη χώρα και τη γλώσσα σας. **Τα εγκατεστημένα παιχνίδια και τα αποθηκευμένα δεδομένα τους δεν θα επηρεαστούν.**
-{: .notice--warning}
 
-### Τι χρειάζεστε
+:::
 
-* Την πιο πρόσφατη έκδοση του [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (το αρχείο `.zip` του GodMode9)
-* Την πιο πρόσφατη έκδοση του [FBI](https://github.com/lifehackerhansol/FBI/releases/download/2.6.1/FBI.3dsx) (απευθείας λήψη)
-* Την πιο πρόσφατη έκδοση του [faketik](https://github.com/ihaveamac/faketik/releases/latest) *(το αρχείο `.3dsx`)*
-* Ένα πρόγραμμα torrent, όπως το [qBittorrent](https://www.qbittorrent.org/download.php) ή το [Deluge](http://dev.deluge-torrent.org/wiki/Download)
-    * Εάν διαθέτετε ήδη κάποιο πρόγραμμα torrent, δεν χρειάζεται να κάνετε λήψη ενός νέου
-* Το είδωλο του CTRTransfer 11.15.0 για την κονσόλα και την περιοχή σας:
-{% include_relative include/ctrtransfer-images.txt %}
+## What You Need
 
-### Οδηγίες
+- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
+- The latest release of [FBI](https://github.com/lifehackerhansol/FBI/releases/download/2.6.1/FBI.3dsx) (direct download)
+- The latest release of [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(the `.3dsx` file)_
+- A torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+  - If you already have a torrent client, you do not need to download a new one
+- The 11.15.0 CTRTransfer image for your console and region:
 
-#### Ενότητα I - Προετοιμασία
+<!--@include: ./_include/ctrtransfer-images.md -->
 
-{% include_relative include/ctrtransfer-prep.txt %}
+## Instructions
 
-#### Ενότητα II - Αντίγραφο ασφαλείας NAND
+### Section I - Prep Work
+
+<!--@include: ./_include/ctrtransfer-prep.md -->
+
+### Section II - NAND Backup
 
 1. Κρατήστε πατημένο το (Start) και ταυτόχρονα, ενεργοποιήστε την κονσόλα σας. Αυτή η ενέργεια θα εκκινήσει το GodMode9
-{% include_relative include/nand-backup.txt %}
 
-#### Ενότητα III - CTRTransfer
+<!--@include: ./_include/nand-backup.md -->
 
-{% include_relative include/ctrtransfer-main.txt %}
+### Section III - CTRTransfer
 
-#### Ενότητα IV - Εκκίνηση του FBI
+<!--@include: ./_include/ctrtransfer-main.md -->
 
-{% include_relative include/launch-hbl-dlp.txt %}
+### Section IV - Launching FBI
 
-#### Ενότητα V - Εκ νέου εγκατάσταση των ticket
+<!--@include: ./_include/launch-hbl-dlp.md -->
 
-{% include_relative include/ctrtransfer-ticket-copy.txt %}
+### Section V - Reinstalling Tickets
 
-#### Ενότητα VI - Διόρθωση ζητημάτων περιοχής
+<!--@include: ./_include/ctrtransfer-ticket-copy.md -->
 
-{% include_relative include/ctrnand-datayeet.txt %}
+### Section VI - Fixing locale-related issues
+
+<!--@include: ./_include/ctrnand-datayeet.md -->
 
 ___
 
-### Συνέχεια στην [Ολοκλήρωση εγκατάστασης](finalizing-setup)
-{: .notice--primary}
+::: tip
+
+Continue to [Finalizing Setup](finalizing-setup)
+
+:::
