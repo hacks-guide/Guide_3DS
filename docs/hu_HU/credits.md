@@ -1,6 +1,4 @@
----
-title: "Közreműködők"
----
+# Készítők
 
 Ezt az útmutatót jelenleg karbantartja: **lifehackerhansol, lilyuwuu, eip618, ihaveamac, és adrot**, további szignifikáns hozzájárulással **Gruetzig, danny8376, MechanicalDragon0687 részéről valamint a különböző #community-resources members** tagoktól, akik értékes információval járultak hozzá.
 
@@ -8,85 +6,88 @@ Ez az útmutató homebrew szoftvereket használ amelyeket **SciresM, TuxSH, Auro
 
 Ha elfelejtettünk hozzáadni téged a közreműködők közé, [tudasd velünk](https://github.com/hacks-guide/Guide_3DS/issues)!
 
-{% capture notice-6 %}
-**Külön köszönet:**
-+ **Plailect-nek, a guide eredeti készítőjének és karbantartójának
-+ [Az útmutató fordítóinak](https://crowdin.com/project/3ds-guide), akik jobban elérhetővé teszik ezt az útmutatót a világ számára
-+ Bárkinek, aki valaha beküldött egy hibajelzést, egy hibajavítást vagy egyéb módon informált minket az úmtutatóval kapcsolatos problémákról
-+ Az útmutató történelmi hozzájárulóinak, akik nélkül ez az útmutató nem létezne
-{% endcapture %}
-<div class="notice--primary">{{ notice-6 | markdownify }}</div>
+::: info
 
-{% capture old_credits %}
-<summary><em>Történelmi hozzájárulók</em></summary>
-    + #Cakey a freenode-on
-    + Al3x_10m
-    + aliaspider
-    + AngelSL
-    + ashinnblunts
-    + AuroraWright
-    + b1l1s
-    + BernardoGiordano
-    + Cartman123
-    + Cell9
-    + coder65535
-    + Cruel
-    + d0k3
-    + dank101
-    + Dazzozo
-    + DeadPhoenix
-    + Delebile
-    + DinohScene
-    + dukesrg
-    + elementalcode
-    + elSeledonio
-    + erman1337
-    + felipejfc
-    + figgyc
-    + fox8091
-    + Frozen_Chen
-    + Gelex
-    + Hamcha
-    + icecream
-    + ihaveamac
-    + IngeniousDefault
-    + J-D-K
-    + Jisagi
-    + jkcgs
-    + kartik
-    + LordBass
-    + mid-kid
-    + MrNbaYoh
-    + Mrrraou
-    + Night_Fallen_Wolf
-    + Normmatt
-    + Plailect
-    + plutooo
-    + Psi-Hate
-    + RandallHoffman
-    + Raugo
-    + Reboot.ms
-    + s_99
-    + SciresM
-    + Shadowtrance
-    + shinyquagsire23
-    + skiptirengu
-    + smealum
-    + Steveice10
-    + stuckpixel
-    + Syphurith
-    + Tech0verlord
-    + TiniVi
-    + TuxSH
-    + Urbanshadow
-    + Vappy
-    + vegaroxas
-    + Wolfvak
-    + WulfyStylez
-    + xy2_
-    + yellows8
-    + yifan_lu
-    + zoogie
-{% endcapture %}
-<details>{{ old_credits | markdownify }}</details>
-{: .notice--info}
+**Külön köszönet:**
+
+- **Plailect**, the original creator and maintainer of this guide
+- [The guide translators](https://crowdin.com/project/3ds-guide), who make this guide more accessible around the world
+- Anyone who has ever submitted an issue, pull request, or otherwise informed us about problems on this guide
+- The historical contributors to this guide, without whom this guide would not exist today
+
+:::
+
+:::details Historical contributors
+
+```
++ #Cakey on freenode
++ Al3x_10m
++ aliaspider
++ AngelSL
++ ashinnblunts
++ AuroraWright
++ b1l1s
++ BernardoGiordano
++ Cartman123
++ Cell9
++ coder65535
++ Cruel
++ d0k3
++ dank101
++ Dazzozo
++ DeadPhoenix
++ Delebile
++ DinohScene
++ dukesrg
++ elementalcode
++ elSeledonio
++ erman1337
++ felipejfc
++ figgyc
++ fox8091
++ Frozen_Chen
++ Gelex
++ Hamcha
++ icecream
++ ihaveamac
++ IngeniousDefault
++ J-D-K
++ Jisagi
++ jkcgs
++ kartik
++ LordBass
++ mid-kid
++ MrNbaYoh
++ Mrrraou
++ Night_Fallen_Wolf
++ Normmatt
++ Plailect
++ plutooo
++ Psi-Hate
++ RandallHoffman
++ Raugo
++ Reboot.ms
++ s_99
++ SciresM
++ Shadowtrance
++ shinyquagsire23
++ skiptirengu
++ smealum
++ Steveice10
++ stuckpixel
++ Syphurith
++ Tech0verlord
++ TiniVi
++ TuxSH
++ Urbanshadow
++ Vappy
++ vegaroxas
++ Wolfvak
++ WulfyStylez
++ xy2_
++ yellows8
++ yifan_lu
++ zoogie
+```
+
+:::
