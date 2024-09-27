@@ -1,31 +1,34 @@
----
-title: "Ripristinare / Aggiornare il CFW"
----
+# Restoring / Updating CFW
 
-{% include toc title="Indice" %}
-
-### Lettura necessaria
+## Required Reading
 
 Questa pagina prepara una console con un'installazione moderna preesistente di boot9strap alla reinstallazione e/o aggiornamento delle applicazioni del custom firmware. Può anche essere utilizzata in caso di perdita o corruzione della scheda SD.
 
-La scheda SD deve essere formattata come FAT32 per seguire questa guida, altrimenti il 3DS non sarà in grado di riconoscerla. Se la scheda SD non è ancora formattata correttamente, utilizzare una di queste pagine per formattarla, a seconda del sistema operativo: [Windows](formatting-sd-(windows)), [Mac](formatting-sd-(mac)), [Linux](formatting-sd-(linux)).
+La scheda SD deve essere formattata come FAT32 per seguire questa guida, altrimenti il 3DS non sarà in grado di riconoscerla. Se la scheda SD non è ancora formattata correttamente, utilizzare una di queste pagine per formattarla, a seconda del sistema operativo: [Windows](formatting-sd-\(windows\)), [Mac](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)).
 
-### Cosa serve
+## What You Need
 
-* L'ultima versione di [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (il file `.zip` di Luma3DS)
+- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
 
-### Istruzioni
+## Instructions
 
 1. Inserisci la scheda SD nel tuo computer
-1. Copia i file `boot.3dsx` e `boot.firm` dall'archivio `.zip` di Luma3DS nella directory principale della tua scheda SD, sovrascrivendo eventuali file già preesistenti
-    + La directory principale della scheda SD è la cartella della tua scheda SD in cui è possibile visualizzare la cartella Nintendo 3DS, ma non il suo interno
-1. Reinserisci la scheda SD nella tua console
-1. Accendi la tua console
-    + Se vedi il menu di configurazione di Luma3DS, premi (Start) per salvare e riavviare
+2. Copia i file `boot.3dsx` e `boot.firm` dall'archivio `.zip` di Luma3DS nella directory principale della tua scheda SD, sovrascrivendo eventuali file già preesistenti
+   - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
+3. Reinserisci la scheda SD nella tua console
+4. Accendi la tua console
+   - If you see the Luma3DS configuration menu, press (Start) to save and reboot
+
+::: tip
 
 La versione più recente di Luma3DS è ora installata sulla scheda SD e nella memoria interna.
-{: .notice--success}
+
+:::
+
 ___
 
+::: info
+
 Se vuoi re-installare o aggiornare altre applicazioni homebrew, prosegui con [Completamento dell'installazione](finalizing-setup)
-{: .notice--primary}
+
+:::
