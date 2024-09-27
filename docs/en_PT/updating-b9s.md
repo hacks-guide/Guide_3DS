@@ -1,53 +1,60 @@
----
-title: "Updatin' B9S"
----
+# Updating B9S
 
-{% include toc title="Table of Contents" %}
-
-### Required Reading
+## Required Reading
 
 'Tis page be fer existin' boot9strap users to be updatin' their installation 'o boot9strap to th' latest version.
 
-### What You Need
+## What You Need
 
-* The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
-* The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
-* The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
+- The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
+- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
 
-### Instructions
+## Instructions
 
-#### Section I - Prep Work
+### Section I - Prep Work
+
+::: info
 
 Fer all steps in 'tis section, overwrite any existin' files on ye SD card.
-{: .notice--info}
+
+:::
 
 1. Insert ye SD card into ye computer
-1. Create a folder named `boot9strap` on th' root 'o ye SD card
-1. Copy `boot9strap.firm` 'n `boot9strap.firm.sha` from th' boot9strap `.zip` to th' `/boot9strap/` folder on ye SD card
-1. Copy `SafeB9SInstaller.firm` from the SafeB9SInstaller `.zip` to the root of your SD card and rename it to `boot.firm`
-1. Reinsert your SD card into your console
+2. Create a folder named `boot9strap` on th' root 'o ye SD card
+3. Copy `boot9strap.firm` 'n `boot9strap.firm.sha` from th' boot9strap `.zip` to th' `/boot9strap/` folder on ye SD card
+4. Copy `SafeB9SInstaller.firm` from the SafeB9SInstaller `.zip` to the root of your SD card and rename it to `boot.firm`
+5. Reinsert your SD card into your console
 
-    ![]({{ "/images/screenshots/updateb9s-root-layout.png" | absolute_url }})
-    {: .notice--info}
+   ::: info
 
+   ![](/images/screenshots/updateb9s-root-layout.png)
 
-#### Section II - Installing boot9strap
+   :::
+
+### Section II - Installing boot9strap
 
 1. Power on your console
-    + This should automatically launch SafeB9SInstaller
-{%- include_relative include/install-boot9strap-safeb9sinstaller.txt isbootfirm="true" inline="true" %}
+   - This should automatically launch SafeB9SInstaller
+2. When prompted, input the key combo given on the top screen to install boot9strap
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+3. Once it is completed, force your console to power off by holding down the power button
+   - Your console will only boot to the SafeB9SInstaller screen until the next section is completed
 
-#### Section III - Update Luma3DS
+### Section III - Update Luma3DS
 
 1. Insert ye SD card into ye computer
-1. Copy `boot.firm` and `boot.3dsx` from the Luma3DS `.zip` to the root of your SD card, replacing the existing file
-1. Reinsert your SD card into your console
-1. Power on your console
-1. If your console has booted into the Luma3DS configuration menu, press (Start) to save and reboot
-    + Luma3DS configuration menu are settings for the Luma3DS custom firmware. Many of these settings may be useful for customization or debugging
-    + For the purpose of this guide, these settings will be left on default settings
+2. Copy `boot.firm` and `boot.3dsx` from the Luma3DS `.zip` to the root of your SD card, replacing the existing file
+3. Reinsert your SD card into your console
+4. Power on your console
+5. If your console has booted into the Luma3DS configuration menu, press (Start) to save and reboot
+   - Luma3DS configuration menu are settings for the Luma3DS custom firmware. Many of these settings may be useful for customization or debugging
+   - For the purpose of this guide, these settings will be left on default settings
 
 ___
 
-### Continue to [Finalizing Setup](finalizing-setup)
-{: .notice--primary}
+::: tip
+
+Continue to [Finalizing Setup](finalizing-setup)
+
+:::
