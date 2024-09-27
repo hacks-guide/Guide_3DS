@@ -1,47 +1,46 @@
 ---
-title: "Bien Démarrer"
+noneSelected: Le modèle de la console doit être sélectionné.
+invalidVersion: Il semblerait que ce numéro de version soit invalide.
+head:
+  - - script
+    - src: /assets/js/selecting.js
 ---
 
-{% include toc title="Table of Contents" %}
+# Get Started
 
 Before starting this guide, we will see if custom firmware is already installed and check the current system version of your console.
 
-#### Section I - Vérification de la présence d’un CFW
+### Section I - CFW Check
 
-1. Éteignez votre console
-1. Maintenez le bouton (Select) enfoncé
-1. Power on your console while still holding the (Select) button
-1. If you do not see a custom menu (your console just boots to the HOME Menu), you may proceed to the next section
+1. Power off your console
+2. Hold the (Select) button
+3. Power on your console while still holding the (Select) button
+4. If you do not see a custom menu (your console just boots to the HOME Menu), you may proceed to the next section
 
-If you see the Luma3DS configuration screen or any other custom menu (e.g. GodMode9, Decrypt9WIP), STOP - you already have custom firmware! Continuez [ici](checking-for-cfw#what-to-do-next).
-{: .notice--warning}
+::: warning
 
-#### Section II - Vérification de la version du logiciel système
+If you see the Luma3DS configuration screen or any other custom menu (e.g. GodMode9, Decrypt9WIP), STOP - you already have custom firmware! Continue from [here](checking-for-cfw#what-to-do-next).
+
+:::
+
+### Section II - System Version Check
 
 1. Launch System Settings on your console
-1. La version de votre logiciel système sera affichée en bas à droite de l'écran supérieur (par ex. "Ver. 11.17.0-50U")
+2. Your system version will be displayed on the bottom right of the top screen (e.g. "Ver. 11.17.0-50U")
 
-#### Section III – Sélectionner une méthode
+### Section III - Select a Method
 
 To find the correct method for your console, please select the model of your console and the system version you found in Section II.
 
-{% capture noneSelected %}
-Le modèle de la console doit être sélectionné.
-{% endcapture %}
-
-{% capture invalidVersion %}
-Il semblerait que ce numéro de version soit invalide.
-{% endcapture %}
-
-{% include consoleVersionSelect.html noneSelected=noneSelected invalidVersion=invalidVersion methodUnavailable=methodUnavailable %}
+<!--@include: @/_internal/consoleVersionSelect.html -->
 
 ---
 
-#### Méthodes alternatives
+#### Alternate Methods
 
-Si possible, vous devriez suivre la méthode indiquée dans le formulaire ci-dessus.
+If possible, you should follow the method given by the prompt above.
 
-Sinon, des méthodes qui fonctionnent sur toutes les versions sont disponibles, mais nécessitent du matériel supplémentaire :
+Otherwise, methods that work on all versions are available, but require additional hardware:
 
-1. [ntrboot](ntrboot) - nécessite un linker DS compatible
-1. [Installation de boot9strap (Hardmod)](installing-boot9strap-(hardmod)) - nécessite de faire de la soudure
+1. [ntrboot](ntrboot) - requires compatible DS flashcart
+2. [Installing boot9strap (Hardmod)](installing-boot9strap-\(hardmod\)) - requires soldering
