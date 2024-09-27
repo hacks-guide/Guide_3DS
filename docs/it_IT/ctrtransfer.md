@@ -1,57 +1,64 @@
----
-title: "CTRTransfer"
----
+# CTRTransfer
 
-{% include toc title="Indice" %}
-
-### Lettura necessaria
+## Required Reading
 
 In questa sezione aggiuntiva verrà spiegato come installare un'immagine CTRTransfer 11.15.0 sulla tua console.
 
+::: info
+
 Questa pagina presuppone che tu abbia già installato Luma3DS e boot9strap. Se hai seguito questo sito web fino alla fine (Completamento dell'installazione), hai Luma3DS e boot9strap.
-{: .notice--info}
+
+:::
+
+::: warning
 
 Come parte di questo processo, la configurazione di sistema verrà ripristinata ai valori predefiniti. Questo include dati come il tuo nome utente, il paese e la lingua. **I giochi installati e i loro dati di salvataggio non verranno toccati.**
-{: .notice--warning}
 
-### Cosa serve
+:::
 
-* L'ultima versione di [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (il file `.zip` di GodMode9)
-* L'ultima versione di [FBI](https://github.com/lifehackerhansol/FBI/releases/download/2.6.1/FBI.3dsx) (direct download)
-* L'ultima versione di [faketik](https://github.com/ihaveamac/faketik/releases/latest) *(il file `.3dsx`)*
-* Un client torrent come [qBittorrent](https://www.qbittorrent.org/download.php) o [Deluge](http://dev.deluge-torrent.org/wiki/Download)
-    * Se hai già un client torrent, non occorre scaricarne uno nuovo
-* L'immagine CTRTransfer 11.15.0 relativa alla tua console e alla sua regione:
-{% include_relative include/ctrtransfer-images.txt %}
+## What You Need
 
-### Istruzioni
+- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
+- The latest release of [FBI](https://github.com/lifehackerhansol/FBI/releases/download/2.6.1/FBI.3dsx) (direct download)
+- The latest release of [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(the `.3dsx` file)_
+- A torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+  - If you already have a torrent client, you do not need to download a new one
+- The 11.15.0 CTRTransfer image for your console and region:
 
-#### Sezione I - Preparazione
+<!--@include: ./_include/ctrtransfer-images.md -->
 
-{% include_relative include/ctrtransfer-prep.txt %}
+## Instructions
 
-#### Sezione II - Backup della NAND
+### Section I - Prep Work
+
+<!--@include: ./_include/ctrtransfer-prep.md -->
+
+### Section II - NAND Backup
 
 1. Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9
-{% include_relative include/nand-backup.txt %}
 
-#### Sezione III - CTRTransfer
+<!--@include: ./_include/nand-backup.md -->
 
-{% include_relative include/ctrtransfer-main.txt %}
+### Section III - CTRTransfer
 
-#### Sezione IV - Avviare FBI
+<!--@include: ./_include/ctrtransfer-main.md -->
 
-{% include_relative include/launch-hbl-dlp.txt %}
+### Section IV - Launching FBI
 
-#### Sezione V - Ripristino dei Ticket
+<!--@include: ./_include/launch-hbl-dlp.md -->
 
-{% include_relative include/ctrtransfer-ticket-copy.txt %}
+### Section V - Reinstalling Tickets
 
-#### Sezione VI - Risoluzione dei problemi di regionalità
+<!--@include: ./_include/ctrtransfer-ticket-copy.md -->
 
-{% include_relative include/ctrnand-datayeet.txt %}
+### Section VI - Fixing locale-related issues
+
+<!--@include: ./_include/ctrnand-datayeet.md -->
 
 ___
 
-### Prosegui con il [Completamento dell'installazione](finalizing-setup)
-{: .notice--primary}
+::: tip
+
+Continue to [Finalizing Setup](finalizing-setup)
+
+:::
