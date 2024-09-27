@@ -1,135 +1,169 @@
----
-title: "Βασικές πληροφορίες"
----
+# Βασικές πληροφορίες
 
-{% include toc title="Πίνακας περιεχομένων" %}
+::: danger
 
-{% capture update-notice %}
-{% include_relative include/3ds-online.txt %}
-{% endcapture %}
-<div class="notice--danger">{{ update-notice | markdownify }}</div>
+<!--@include: ./_include/3ds-online.md -->
+
+:::
+
+::: info
 
 Εάν αυτή είναι η πρώτη φορά που τροποποιείτε ένα 3DS (ή δεν γνωρίζετε πολλά από τεχνολογία), συνεχίστε την ανάγνωση! Διαφορετικά, εάν έχετε προηγούμενη εμπειρία και ξέρετε τι κάνετε, συνεχίστε στην [Έναρξη](get-started).
-{: .notice--info}
+
+:::
 
 Αυτή η σελίδα καλύπτει μερικούς βασικούς όρους τεχνολογίας και περιέχει πληροφορίες σχετικά με το 3DS που θα πρέπει να γνωρίζετε πριν ακολουθήσετε αυτόν τον οδηγό.
 
 Κάθε ενότητα έχει συμπτυχθεί από προεπιλογή. Κάντε κλικ (ή πατήστε) στο όνομα της ενότητας για να την ανοίξετε.
 
-## Πράγματα που πρέπει να γνωρίζετε για το 3DS
+## Things you should know about the 3DS
 
-{% capture compat %}
-<summary><strong>Συμβατότητα 3DS/2DS</strong></summary>
-![]({{ "/images/screenshots/onboarding/compatible.png" | absolute_url }})
-{: .notice--info}
+:::: details 3DS/2DS compatibility
+
+::: info
+
+![](/images/screenshots/onboarding/compatible.png)
+
+:::
 
 Αυτός ο οδηγός λειτουργεί με κάθε κονσόλα της οικογένειας Nintendo 3DS (συμπεριλαμβανομένων των 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL και New 2DS XL/LL), ανεξάρτητα από την περιοχή ή το firmware.
-{% endcapture %}
 
-<details>{{ compat | markdownify }}</details>
+::::
 
-{% capture compat %}
-<summary><strong>Συμβατότητα υπολογιστή</strong></summary>
-![]({{ "/images/screenshots/onboarding/os.jpg" | absolute_url }})
-{: .notice--info}
+:::: details Computer compatibility
+
+::: info
+
+![](/images/screenshots/onboarding/os.jpg)
+
+:::
+
 Στις περισσότερες περιπτώσεις, μπορείτε να ακολουθήσετε αυτόν τον οδηγό εφόσον μπορείτε να κάνετε λήψη αρχείων από το διαδίκτυο και να τα αντιγράψετε στην κάρτα SD σας. Ανάλογα με τον υπολογιστή, το τηλέφωνό ή την ηλεκτρονική συσκευή σας, ίσως χρειαστεί να προμηθευτείτε έναν προσαρμογέα USB σε κάρτα SD, ώστε να μπορέσει ο υπολογιστής σας να διαβάσει την κάρτα SD σας.
-{% endcapture %}
 
-<details>{{ compat | markdownify }}</details>
+::::
 
-{% capture compat %}
-<summary><strong>Θέση, τύπος και χωρητικότητα κάρτας SD</strong></summary>
-![]({{ "/images/screenshots/onboarding/sdcard.jpg" | absolute_url }})
-{: .notice--info}
+:::: details SD card location, type, and capacity
+
+::: info
+
+![](/images/screenshots/onboarding/sdcard.jpg)
+
+:::
 
 Η θέση της υποδοχής για κάρτες SD και ο αποδεκτός τύπος της κάρτας SD εξαρτώνται από το μοντέλο του 3DS σας. Μπορείτε να βρείτε περισσότερες πληροφορίες στην [επίσημη σελίδα υποστήριξης της Nintendo](https://en-americas-support.nintendo.com/app/answers/detail/a_id/271/~/how-to-insert-an-sd-card-or-microsd-card).
 
-Το 3DS μπορεί να διαβάσει κάρτες SD οποιασδήποτε χωρητικότητας (ακόμα κι αν είναι μεγαλύτερες των 32GB), αλλά η κάρτα πρέπει να έχει διαμορφωθεί ως FAT32 (**όχι** exFAT ή NTFS). Μπορείτε να χρησιμοποιήσετε κάποιο από τα εξής εργαλεία για να διαμορφώσετε την κάρτα SD σας, ανάλογα με το λειτουργικό σας σύστημα: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)). Δεν προτείνονται κάρτες SD μεγαλύτερες των **128GB** λόγω γνωστών θεμάτων με τα προσαρμοσμένα θέματα και τα γραφικά GBA/DS.
+Το 3DS μπορεί να διαβάσει κάρτες SD οποιασδήποτε χωρητικότητας (ακόμα κι αν είναι μεγαλύτερες των 32GB), αλλά η κάρτα πρέπει να έχει διαμορφωθεί ως FAT32 (**όχι** exFAT ή NTFS). Μπορείτε να χρησιμοποιήσετε κάποιο από τα εξής εργαλεία για να διαμορφώσετε την κάρτα SD σας, ανάλογα με το λειτουργικό σας σύστημα: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)). Δεν προτείνονται κάρτες SD μεγαλύτερες των **128GB** λόγω γνωστών θεμάτων με τα προσαρμοσμένα θέματα και τα γραφικά GBA/DS.
+
+::: warning
 
 Για να ακολουθήσετε αυτόν τον οδηγό, θα χρειαστείτε μια κάρτα SD με χωρητικότητα τουλάχιστον **2GB**.
-{: .notice--warning}
 
-Εάν θέλετε, μπορείτε να ελέγξετε την κάρτα SD σας για σφάλματα πριν ακολουθήσετε αυτόν τον οδηγό με το [H2testw (Windows)](h2testw-(windows)), το [F3 (Linux)](f3-(linux)) ή το [F3XSwift (Mac)](f3xswift-(mac))
-{: .notice--info}
+:::
 
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
+::: info
 
-{% capture compat %}
-<summary><strong>Πιθανοί κίνδυνοι (Αποποίηση ευθυνών)</strong></summary>
+Εάν θέλετε, μπορείτε να ελέγξετε την κάρτα SD σας για σφάλματα πριν ακολουθήσετε αυτόν τον οδηγό με το [H2testw (Windows)](h2testw-\(windows\)), το [F3 (Linux)](f3-\(linux\)) ή το [F3XSwift (Mac)](f3xswift-\(mac\))
 
-Τροποποιώντας την κονσόλα σας, την υποβάλλετε σε μια αμυδρή (αλλά όχι μηδενική) πιθανότητα να καταστεί μη λειτουργική («bricked»). ___Η εσφαλμένη τοποθέτηση αρχείων ΔΕΝ θα καταστήσει μη λειτουργική την κονσόλα σας___, αλλά η σκόπιμη παράλειψη οδηγιών ενδέχεται να οδηγήσει σε αυτό το αποτέλεσμα.
+:::
 
-Εν συντομία: Η τροποποίηση της κονσόλας σας είναι μια ασφαλής διαδικασία, αλλά είναι ___δική σας η ευθύνη___ εάν κάτι πάει στραβά.
+::::
 
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
-{: .notice--warning}
+:::: warning
+::: details Potential risks (Disclaimer)
 
-## Πράγματα που πρέπει να κάνετε στον υπολογιστή σας
+Τροποποιώντας την κονσόλα σας, την υποβάλλετε σε μια αμυδρή (αλλά όχι μηδενική) πιθανότητα να καταστεί μη λειτουργική («bricked»). _**Η εσφαλμένη τοποθέτηση αρχείων ΔΕΝ θα καταστήσει μη λειτουργική την κονσόλα σας**_, αλλά η σκόπιμη παράλειψη οδηγιών ενδέχεται να οδηγήσει σε αυτό το αποτέλεσμα.
+
+Εν συντομία: Η τροποποίηση της κονσόλας σας είναι μια ασφαλής διαδικασία, αλλά είναι _**δική σας η ευθύνη**_ εάν κάτι πάει στραβά.
+
+:::
+::::
+
+## Things you need to do on your computer
+
+::: warning
 
 Ακολουθώντας αυτόν τον οδηγό, δεν θα πρέπει να προκληθεί απώλεια δεδομένων, αλλά είναι πάντα πιθανή η φθορά της κάρτας SD. Εάν έχετε σημαντικά δεδομένα, θα πρέπει να δημιουργήσετε ένα αντίγραφο ασφαλείας των περιεχομένων της κάρτας SD σας (ειδικά του φακέλου `Nintendo 3DS`).
-{: .notice--warning}
 
-{% capture compat %}
-<summary><strong>Ορολογία τοποθέτησης αρχείων (π.χ. «ρίζα της SD», «/luma/»)</strong></summary>
-![]({{ "/images/screenshots/onboarding/sdroot.png" | absolute_url }})
-{: .notice--info}
+:::
+
+:::: details File placement terminology (e.g. "root of SD", "/luma/")
+
+::: info
+
+![](/images/screenshots/onboarding/sdroot.png)
+
+:::
 
 Κατά την αντιγραφή αρχείων στην κάρτα SD, είναι σημαντικό να τα αντιγράψετε στη σωστή θέση. Διαφορετικά, η κονσόλα δεν θα εντοπίσει το αρχείο και το exploit ή το λογισμικό που προσπαθείτε να χρησιμοποιήσετε δεν θα λειτουργήσει. Ένας όρος που θα βλέπετε συχνά σε αυτόν τον οδηγό είναι η **ρίζα της κάρτας SD**, που σημαίνει ότι δεν βρίσκεστε μέσα σε κανένα φάκελο της κάρτας SD. Ο κατάλογος που εμφανίζεται όταν ανοίγετε την κάρτα SD στον υπολογιστή σας ονομάζεται «ρίζα».
 
 Ενδέχεται επίσης να δείτε ονόματα φακέλων που υποδεικνύονται ως εξής: `/φάκελος/`. Οι κάθετοι χρησιμοποιούνται για να υποδείξουν καταλόγους και δεν αποτελούν μέρος του ονόματος του φακέλου. Για παράδειγμα, το `/φάκελος1/φάκελος2/` αναφέρεται στον φάκελο `φάκελος2` που βρίσκεται εντός του φακέλου `φάκελος1`:
 
-![]({{ "/images/screenshots/onboarding/folders.png" | absolute_url }})
-{: .notice--info}
+::: info
+
+![](/images/screenshots/onboarding/folders.png)
+
+:::
 
 Οι **γωνιώδεις αγκύλες** (\< και \>) χρησιμοποιούνται επίσης περιστασιακά για να αναφερθούν σε μοναδικά αναγνωριστικά συστήματος. Για παράδειγμα, εάν ο οδηγός αναγράφει `<ID0>`, αναφέρεται στο μοναδικό αναγνωριστικό συστήματος εντός του φακέλου `Nintendo 3DS`, αντί για έναν φάκελο που κυριολεκτικά ονομάζεται «ID0»:
 
-![]({{ "/images/screenshots/onboarding/anglebrackets.png" | absolute_url }})
-{: .notice--info}
+::: info
 
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
+![](/images/screenshots/onboarding/anglebrackets.png)
 
-{% capture compat %}
-<summary><strong>Λήψη αρχείων από το GitHub</strong></summary>
-![]({{ "/images/screenshots/onboarding/github.png" | absolute_url }})
-{: .notice--info}
+:::
 
-Σε αυτόν τον οδηγό, θα αντιγράψετε στην κάρτα SD της κονσόλας σας τα αρχεία που αποθηκεύσατε στον υπολογιστή ή το τηλέφωνό σας. Πολλά από αυτά τα αρχεία προέρχονται από το GitHub, το οποίο είναι ένας ιστότοπος που χρησιμοποιούν οι προγραμματιστές για να δημοσιεύουν τις κυκλοφορίες ανοικτού κώδικά τους. Κατά τη λήψη αρχείων από το GitHub, θα πρέπει να κάνετε λήψη του αρχείου που *δεν είναι* ο πηγαίος κώδικας.
+::::
 
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
+:::: details Downloading files from GitHub
 
-{% capture compat %}
-<summary><strong>Άνοιγμα/εξαγωγή αρχείων</strong></summary>
-![]({{ "/images/screenshots/onboarding/zipfiles.png" | absolute_url }})
-{: .notice--info}
+::: info
+
+![](/images/screenshots/onboarding/github.png)
+
+:::
+
+Σε αυτόν τον οδηγό, θα αντιγράψετε στην κάρτα SD της κονσόλας σας τα αρχεία που αποθηκεύσατε στον υπολογιστή ή το τηλέφωνό σας. Πολλά από αυτά τα αρχεία προέρχονται από το GitHub, το οποίο είναι ένας ιστότοπος που χρησιμοποιούν οι προγραμματιστές για να δημοσιεύουν τις κυκλοφορίες ανοικτού κώδικά τους. Κατά τη λήψη αρχείων από το GitHub, θα πρέπει να κάνετε λήψη του αρχείου που _δεν είναι_ ο πηγαίος κώδικας.
+
+::::
+
+:::: details Opening/extracting files
+
+::: info
+
+![](/images/screenshots/onboarding/zipfiles.png)
+
+:::
 
 Κάποια από τα αρχεία που θα χρειαστείτε διατίθενται σε μορφή `.zip`, η οποία χρησιμοποιείται για τη «συσκευασία» πολλαπλών αρχείων σε ένα.
 
 Όταν σας ζητηθεί να «αντιγράψετε το (αρχείο) από το (αρχείο).zip», αυτό σημαίνει ότι θα χρειαστεί να ανοίξετε (ή να «αποσυμπιέσετε») το αρχείο ZIP. Μέσα στο αρχείο ZIP θα βρίσκεται το αρχείο που ψάχνετε, το οποίο μπορείτε να αντιγράψετε στην καθορισμένη τοποθεσία της κάρτας SD σας.
 
 Στα περισσότερα λειτουργικά συστήματα, μπορείτε να αποσυμπιέσετε τα αρχεία με διπλό κλικ. Εάν δεν λειτουργεί αυτό, μπορείτε να εγκαταστήσετε ένα αξιόπιστο εργαλείο αποσυμπίεσης, όπως το [7-zip](https://7-zip.org/).
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
 
-{% capture compat %}
-<summary><strong>Επεκτάσεις αρχείων (μόνο για Windows)</strong></summary>
-![]({{ "/images/screenshots/onboarding/fileext.png" | absolute_url }})
-{: .notice--info}
+::::
 
-Εάν χρησιμοποιείτε υπολογιστή με Windows, οι επεκτάσεις αρχείων ενδέχεται να αποκρύπτονται από προεπιλογή, καθιστώντας πιο δύσκολη την εύρεση των αρχείων που ψάχνετε. Για να ενεργοποιήσετε τις επεκτάσεις αρχείων, ακολουθήστε [αυτές τις οδηγίες](file-extensions-(windows)).
-{% endcapture %}
-<details>{{ compat | markdownify }}</details>
+:::: details (Windows only) File extensions
 
-## Λήψη βοήθειας
+::: info
+
+![](/images/screenshots/onboarding/fileext.png)
+
+:::
+
+Εάν χρησιμοποιείτε υπολογιστή με Windows, οι επεκτάσεις αρχείων ενδέχεται να αποκρύπτονται από προεπιλογή, καθιστώντας πιο δύσκολη την εύρεση των αρχείων που ψάχνετε. Για να ενεργοποιήσετε τις επεκτάσεις αρχείων, ακολουθήστε [αυτές τις οδηγίες](file-extensions-\(windows\)).
+
+::::
+
+## Getting help
 
 Εάν αντιμετωπίσετε κάποιο πρόβλημα ενώ ακολουθείτε αυτόν τον οδηγό, υπάρχουν πολλοί τρόποι με τους οποίους μπορείτε να λάβετε βοήθεια!
 
-+ Εάν έχετε ερωτήσεις που δεν έχουν απαντηθεί σε αυτήν τη σελίδα, ίσως βρείτε τις απαντήσεις στις [συχνές ερωτήσεις πριν από την εγκατάσταση](faq#pre-installation-faq).
-+ Εάν αντιμετωπίσετε κάποιο πρόβλημα ενώ ακολουθείτε αυτόν τον οδηγό, μπορείτε να ελέγξετε τη σελίδα [Επίλυση προβλημάτων](troubleshooting) για κάποια λύση.
-+ Εάν οι πόροι που παρέχουμε εδώ δεν σας βοηθούν, μπορείτε να λάβετε προσωπική υποστήριξη στο [Nintendo Homebrew στο Discord](https://discord.gg/MWxPgEp).
+- If you have any questions that haven't been answered on this page, their answers might be in the [Pre-Installation FAQ](faq#pre-installation-faq).
+- If you experience an issue while following this guide, you can check the [Troubleshooting](troubleshooting) page for a solution.
+- If the resources we've provided here aren't helping, you can get one-on-one support over at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+
+::: tip
 
 Συνέχεια στην [Έναρξη](get-started)
-{: .notice--primary}
+
+:::
