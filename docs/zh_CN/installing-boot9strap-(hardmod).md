@@ -69,7 +69,7 @@
 
 1. 将主机关机
 2. 将你的 SD 卡插入到电脑
-3. 解压 Luma3DS `.zip` 里的 `boot.firm` 和 `boot.3dsx` 到你 SD 卡的根目录
+3. Copy everything from the Luma3DS `.zip` to the root of your SD card
 4. 从 hardmod-b9s-installer `.zip` 中复制 hardmod-b9s-installer 文件夹至电脑中
 5. 复制你所下载的`.firm` 档案至电脑的 hardmod-b9s-installer 文件夹中
 6. 在 hardmod-b9s-installer 文件夹中，将你所下载的`.firm` 文件重命名为 `current.firm`
