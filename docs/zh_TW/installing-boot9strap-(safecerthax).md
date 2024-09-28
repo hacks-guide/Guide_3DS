@@ -42,7 +42,7 @@ If the camera did NOT appear, you cannot follow this method. If this is the case
 In this section, you will copy the files needed to trigger the safecerthax exploit.
 
 1. 將 SD 卡插入至電腦中
-2. 解壓 Luma3DS `.zip` 內的 `boot.firm` 及 `boot.3dsx` 到 SD 卡的根目錄底下
+2. Copy everything from the Luma3DS `.zip` to the root of your SD card
    - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
 3. 在 SD 卡的根目錄底下建立一個新的資料夾 `boot9strap`
 4. 解壓 boot9strap `.zip` 的 `boot9strap.firm` 及 `boot9strap.firm.sha` 檔案至 SD 卡的 `/boot9strap/` 資料夾中
