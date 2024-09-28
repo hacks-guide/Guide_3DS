@@ -1,15 +1,21 @@
+::: info
+
 Εάν δεν το έχετε κάνει ήδη, βεβαιωθείτε ότι έχετε ρυθμίσει μια λειτουργική σύνδεση στο διαδίκτυο στην κονσόλα σας.
-{: .notice--info}
+
+:::
+
+::: tip
 
 Μπορείτε να βρείτε έναν οπτικό οδηγό για αυτήν την ενότητα [εδώ](/images/screenshots/set-proxy.png).
-{: .notice--success}
+
+:::
 
 1. Εκκινήστε την εφαρμογή «System Settings»
-1. Μεταβείτε στο `Internet Settings` -> `Connection Settings`
-1. Επιλέξτε τη θέση σύνδεσης δικτύου σας και μεταβείτε στο `Change Settings` -> `Επόμενη σελίδα (δεξί βέλος)` -> `Proxy Settings`
-1. Ορίστε την επιλογή «Proxy Settings» σε «Yes» και επιλέξτε `Detailed Setup`
-1. Ορίστε την επιλογή «Proxy Server» σε `ssloth.nintendohomebrew.com` και την επιλογή «Port» σε `8080`
-1. Επιλέξτε «OK» και έπειτα, «Save»
-1. Όταν σας ζητηθεί, πατήστε «Test» για να εκτελέσετε τη δοκιμή σύνδεσης
-    + Η δοκιμή θα πρέπει να πετύχει
-1. Πατήστε «OK» για να συνεχίσετε
+2. Μεταβείτε στο `Internet Settings` -> `Connection Settings`
+3. Επιλέξτε τη θέση σύνδεσης δικτύου σας και μεταβείτε στο `Change Settings` -> `Επόμενη σελίδα (δεξί βέλος)` -> `Proxy Settings`
+4. Ορίστε την επιλογή «Proxy Settings» σε «Yes» και επιλέξτε `Detailed Setup`
+5. Ορίστε την επιλογή «Proxy Server» σε `ssloth.nintendohomebrew.com` και την επιλογή «Port» σε `8080`
+6. Επιλέξτε «OK» και έπειτα, «Save»
+7. Όταν σας ζητηθεί, επιλέξτε «Test» για να πραγματοποιήσετε τη δοκιμή σύνδεσης
+   - The test should succeed
+8. Πατήστε «OK» για να συνεχίσετε
