@@ -24,7 +24,7 @@
 - [F3X (Mac)](f3x-\(mac\))
 - [F3XSwift (Mac)](f3xswift-\(mac\))
 - [FAQ](faq)
-- [File Extensions (Windows)](file-extensions-\(windows\))
+- [Estensioni dei file (Windows)](file-extensions-\(windows\))
 - [Finalizing Setup](finalizing-setup)
 - [Flashing ntrboot (3DS Single System)](flashing-ntrboot-\(3ds-single-system\))
 - [Flashing ntrboot (3DS Multi System)](flashing-ntrboot-\(3ds-multi-system\))
@@ -51,7 +51,7 @@
 - [ntrboot](ntrboot)
 - [Region Changing](region-changing)
 - [Restoring / Updating CFW](restoring-updating-cfw)
-- [Troubleshooting](troubleshooting)
+- [Risoluzione dei problemi](troubleshooting)
 - [Uninstall CFW](uninstall-cfw)
 - [Updating B9S](updating-b9s)
 
