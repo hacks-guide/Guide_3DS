@@ -1,20 +1,20 @@
 # Installazione di boot9strap (ntrboot)
 
-## Required Reading
+## Lettura necessaria
 
 Per usare i link [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) di questa guida avrai bisogno di un client torrent come [qBittorrent](https://www.qbittorrent.org/download.php) o [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
-## What You Need
+## Cosa serve
 
 - A magnet that triggers the sleep mode of your console (if using a folding style console)
 - Your ntrboot flashed flashcart
-- The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
-- The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- L'ultima versione di [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (download diretto)
+- L'ultima versione di [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (download diretto)
+- L'ultima versione di [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (il file `.zip` di Luma3DS)
 
-## Instructions
+## Istruzioni
 
-### Section I - Prep Work
+### Sezione I - Preparazione
 
 1. Spegni la tua console
 
@@ -22,7 +22,7 @@ Per usare i link [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) di quest
    - This is the SD card from your 3DS, _not_ the SD card from your flashcart
 
 3. Copia il file `SafeB9SInstaller.firm` dall'archivio `.zip` di SafeB9SInstaller nella directory principale della tua scheda SD e rinominalo in `boot.firm`
-   - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
+   - La directory principale della scheda SD è la cartella della tua scheda SD in cui è possibile visualizzare la cartella Nintendo 3DS, ma non il suo interno
 
 4. Crea una cartella chiamata `boot9strap` nella directory principale della scheda SD della tua console
 
@@ -57,7 +57,7 @@ Per usare i link [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) di quest
 In questa sezione installerai il custom firmware sulla tua console.
 
 1. Quando richiesto, inserisci la combinazione di tasti richiesta sullo schermo superiore per installare boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+   - Se una sezione nella schermata inferiore ha un testo di colore rosso, e non ti viene richiesto di inserire una combinazione di tasti, [segui questa guida per risolvere i problemi](troubleshooting#issues-with-safeb9sinstaller)
 2. Una volta completato, forza lo spegnimento della console tenendo premuto il tasto POWER
    - Your console will only boot to the SafeB9SInstaller screen until the next section is completed
 
@@ -77,7 +77,7 @@ ___
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Prosegui con il [Completamento dell'installazione](finalizing-setup)
 
 :::
 
@@ -91,7 +91,7 @@ Non seguire questa parte finché non avrai completato tutte le altre istruzioni 
 
 ### Section V - Removing ntrboot
 
-#### What You Need
+#### Cosa serve
 
 - The latest release of [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest) (`ntrboot_flasher.firm`)
 - The flashrom backup corresponding to your flashcart
@@ -125,7 +125,7 @@ Non seguire questa parte finché non avrai completato tutte le altre istruzioni 
 | **R4iSDHC RTS LITE 20XX** from r4isdhc **.com**  |                   |                                                                                                                                                                                                                                                                                  <font-awesome-icon icon="fa-solid fa-magnet"/> - [R4iSDHC.com_20XX-Flashrom.zip](magnet:?xt=urn:btih:d16817f7fdd0eac18d71d2ebd73d51315389d90e\&dn=R4iSDHC.com_20XX-Flashrom.zip\&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce\&tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce\&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce\&tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce\&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce\&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce\&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce\&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce\&tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce)                                                                                                                                                                                                                                                                                  |
 | **R4iSDHC Dual-Core 20XX** from r4isdhc **.com** |                   |                                                                                                                                                                                                                                                                                  <font-awesome-icon icon="fa-solid fa-magnet"/> - [R4iSDHC.com_20XX-Flashrom.zip](magnet:?xt=urn:btih:d16817f7fdd0eac18d71d2ebd73d51315389d90e\&dn=R4iSDHC.com_20XX-Flashrom.zip\&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce\&tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce\&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce\&tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce\&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce\&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce\&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce\&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce\&tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce)                                                                                                                                                                                                                                                                                  |
 
-#### Instructions
+#### Istruzioni
 
 1. Spegni la tua console
 2. Inserisci la scheda SD nel tuo computer
