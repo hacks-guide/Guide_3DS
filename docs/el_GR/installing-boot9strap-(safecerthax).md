@@ -1,10 +1,10 @@
 # Εγκατάσταση του boot9strap (safecerthax)
 
-:::details Technical Details (optional)
+:::details Τεχνικές λεπτομέρειες (προαιρετικό)
 
 :::
 
-## Compatibility Notes
+## Σημειώσεις συμβατότητας
 
 Το safecerthax είναι συμβατό με όλες τις κονσόλες Old 3DS και Old 2DS, σε όλες τις περιοχές, εφόσον διαθέτουν τις εκδόσεις συστήματος 1.0.0 έως 11.14.0.
 
@@ -14,21 +14,21 @@
 
 :::
 
-## What You Need
+## Τι χρειάζεστε
 
-- The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
-- The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- Την πιο πρόσφατη έκδοση του [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (απευθείας λήψη)
+- Την πιο πρόσφατη έκδοση του [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (απευθείας λήψη)
+- Την πιο πρόσφατη έκδοση του [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (το αρχείο `.zip` του Luma3DS)
 
-## Instructions
+## Οδηγίες
 
-### Section I - Hardware Button Check
+### Ενότητα I - Έλεγχος φυσικών κουμπιών
 
 Σε αυτήν την ενότητα, θα ελέγξετε εάν λειτουργούν τα κουμπιά (L) και (R) της κονσόλας σας. Αυτό θα καθορίσει αν η κονσόλα σας είναι συμβατή με αυτήν τη μέθοδο.
 
 1. Ενεργοποιήστε την κονσόλα σας
 2. Μόλις δείτε το μενού «HOME», πατήστε τα κουμπιά (L) και (R) ταυτόχρονα
-   - The camera applet should appear
+   - Θα πρέπει να εμφανιστεί η εφαρμογή κάμερας
 3. Απενεργοποιήστε την κονσόλα σας
 
 ::: warning
@@ -37,20 +37,20 @@
 
 :::
 
-### Section II - Prep Work
+### Ενότητα II - Προετοιμασία
 
 Σε αυτήν την ενότητα, θα αντιγράψετε τα αρχεία που απαιτούνται για την ενεργοποίηση του exploit «safecerthax».
 
 1. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
-2. Copy everything from the Luma3DS `.zip` to the root of your SD card
-   - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
+2. Αντιγράψτε τα πάντα από το αρχείο `.zip` του Luma3DS στη ρίζα της κάρτας SD σας
+   - Η ρίζα της κάρτας SD είναι ο αρχικός κατάλογος της κάρτας SD σας, όπου μπορείτε να δείτε τον φάκελο «Nintendo 3DS», χωρίς να βρίσκεστε μέσα σε αυτόν
 3. Δημιουργήστε έναν φάκελο με το όνομα `boot9strap` στη ρίζα της κάρτας SD σας
 4. Αντιγράψτε τα `boot9strap.firm` και `boot9strap.firm.sha` από το αρχείο `.zip` του boot9strap στον φάκελο `/boot9strap/` της κάρτας SD σας
 5. Αντιγράψτε το `SafeB9SInstaller.bin` από το αρχείο `.zip` του SafeB9SInstaller στη ρίζα της κάρτας SD σας
 6. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 7. Ενεργοποιήστε την κονσόλα σας
 
-### Section III - safecerthax proxy
+### Ενότητα III - Διακομιστής μεσολάβησης του safecerthax
 
 Σε αυτήν την ενότητα, θα αλλάξετε τις ρυθμίσεις σύνδεσης στο διαδίκτυο για να χρησιμοποιήσετε ένα δίκτυο διαμεσολάβησης, το οποίο έχει σχεδιαστεί για την εκμετάλλευση της λειτουργίας «System Update» της κονσόλας σας.
 
@@ -58,33 +58,33 @@
 
 1. Απενεργοποιήστε την κονσόλα σας
 
-### Section IV - safecerthax
+### Ενότητα IV - safecerthax
 
 Σε αυτήν την ενότητα, θα εισέλθετε στη λειτουργία «Safe Mode» (μια λειτουργία που είναι διαθέσιμη σε όλες τις κονσόλες της οικογένειας 3DS), όπου θα ενεργοποιηθεί το safecerthax, το οποίο θα εκκινήσει το πρόγραμμα εγκατάστασης του boot9strap (custom firmware).
 
 1. Όσο η κονσόλα σας είναι ακόμα απενεργοποιημένη, κρατήστε πατημένα τα ακόλουθα κουμπιά: (L) + (R) + (Πάνω) + (A). Ενώ κρατάτε πατημένα αυτά τα κουμπιά, ενεργοποιήστε την κονσόλα σας
-   - Keep holding the buttons until the console boots into Safe Mode (a "system update" menu)
+   - Συνεχίστε να κρατάτε πατημένα τα κουμπιά μέχρι να εκκινηθεί η συσκευή στη λειτουργία «Safe Mode» (το μενού «system update»)
 2. Πατήστε «OK» για να αποδεχτείτε την ενημέρωση
-   - There is no update. Αυτό είναι μέρος του exploit
+   - Δεν υπάρχει κάποια ενημέρωση. Αυτό είναι μέρος του exploit
 3. Πατήστε «I accept» για να αποδεχτείτε τους όρους και τις προϋποθέσεις
 4. Η ενημέρωση θα αποτύχει τελικά, με τον κωδικό σφάλματος `003-1099`. Αυτή είναι η επιδιωκόμενη συμπεριφορά
 5. Πατήστε «OK» για να κλείσετε το μήνυμα σφάλματος
 6. Εάν το exploit ήταν επιτυχές, θα έχει γίνει εκκίνηση στο SafeB9SInstaller
-   - If the console freezes or crashes, force power off the console, then retry this section
+   - Εάν η κονσόλα «παγώσει» ή διακοπεί η λειτουργία της, εξαναγκάστε την απενεργοποίησή της και δοκιμάστε ξανά αυτήν την ενότητα
 
-### Section V - Installing boot9strap
+### Ενότητα V - Εγκατάσταση του boot9strap
 
 Σε αυτήν την ενότητα, θα εγκαταστήσετε custom firmware στην κονσόλα σας.
 
 1. Όταν ζητηθεί, εισαγάγετε τον συνδυασμό πλήκτρων που θα εμφανιστεί στην πάνω οθόνη, ώστε να εγκαταστήσετε το boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+   - Εάν το κείμενο ενός βήματος στην κάτω οθόνη έχει κόκκινο χρώμα και δεν σας ζητείται να εισαγάγετε κάποιον συνδυασμό πλήκτρων [ακολουθήστε αυτόν τον οδηγό επίλυσης προβλημάτων](troubleshooting#issues-with-safeb9sinstaller)
 2. Μόλις ολοκληρωθεί, πατήστε το (Α) για να επανεκκινήσετε την κονσόλα σας
 
 <!--@include: ./_include/configure-luma3ds.md -->
 
 <!--@include: ./_include/luma3ds-installed-note.md -->
 
-### Section VI - Restoring default proxy
+### Ενότητα VI - Επαναφορά προεπιλεγμένου διακομιστή μεσολάβησης
 
 <!--@include: ./_include/rmproxy.md -->
 
@@ -92,6 +92,6 @@ ___
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Συνέχεια στην [Ολοκλήρωση εγκατάστασης](finalizing-setup)
 
 :::
