@@ -129,18 +129,18 @@ If your console is on system version 9.4.0, 9.5.0, or 9.6.0, you may be encounte
 
 :::details Title database: Not initialized!
 
-Βεβαιωθείτε ότι έχετε επαναφέρει τη βάση δεδομένων τίτλων.
-\+ Please power on your console with your SD inserted
-\+ Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
-\+ This will not wipe any of your data
-\+ If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
+Ensure that you have reset the title database.
+
+- Please power on your console with your SD inserted
+- Εκκινήστε την εφαρμογή «System Settings» και μεταβείτε στο `Data Management` -> `Nintendo 3DS` -> `Software` -> «Reset» ([εικόνα](/images/screenshots/database-reset.jpg))
+  - This will not wipe any of your data
+- If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
 
 Εάν _δεν_ λάβετε κάποιο μήνυμα προτροπής για επαναφορά, η κάρτα SD πρέπει να διαμορφωθεί:
 
 1. Αντιγράψτε τα πάντα από την κάρτα SD στον υπολογιστή σας
 2. Διαμορφώστε την κάρτα SD ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
 3. Αντιγράψτε τα πάντα πίσω στην κάρτα SD
-4. Εκτελέστε το script «MSET9»:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -233,7 +233,6 @@ If your console is on system version 9.4.0, 9.5.0, or 9.6.0, you may be encounte
 
 1. Εξαναγκάστε την απενεργοποίηση της κονσόλας σας κρατώντας πατημένο το κουμπί ισχύος για 20 δευτερόλεπτα
 2. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
-3. Εκτελέστε το script «MSET9»:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -263,7 +262,6 @@ If your console is on system version 9.4.0, 9.5.0, or 9.6.0, you may be encounte
 
 1. Εξαναγκάστε την απενεργοποίηση της κονσόλας σας κρατώντας πατημένο το κουμπί ισχύος για 20 δευτερόλεπτα
 2. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
-3. 1. Εκτελέστε το script «MSET9»:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -276,7 +274,7 @@ If your console is on system version 9.4.0, 9.5.0, or 9.6.0, you may be encounte
 5. Ενεργοποιήστε την κονσόλα σας
 6. Επιστρέψτε στο [Βήμα 1 της Ενότητας II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
 
-Αν εξακολουθείτε να αντιμετωπίζετε αυτό το ζήτημα και έχετε βεβαιωθεί ότι κάνατε τα πάντα σωστά, επιβεβαιώστε ότι το αρχείο ενεργοποίησης έχει αφαιρεθεί και διαμορφώστε την κάρτα SD σας:
+If you continue to have this issue and are sure that you did everything correctly, ensure the trigger file is removed and format your SD card:
 
 1. Αντιγράψτε τα πάντα από την κάρτα SD στον υπολογιστή σας
 2. Διαμορφώστε την κάρτα SD ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
@@ -287,7 +285,7 @@ If your console is on system version 9.4.0, 9.5.0, or 9.6.0, you may be encounte
 
 :::details An exception occurred after triggering MSET9
 
-Αυτό δείχνει ότι πιθανότατα διαθέτετε ήδη custom firmware. Θα πρέπει να [κάνετε έλεγχο για CFW](checking-for-cfw).
+This likely indicates that you already have custom firmware. Θα πρέπει να [κάνετε έλεγχο για CFW](checking-for-cfw).
 
 :::
 
@@ -295,25 +293,25 @@ If your console is on system version 9.4.0, 9.5.0, or 9.6.0, you may be encounte
 
 :::details "An error has occurred. Please save your data in any software currently in use, then restart the system."
 
-Εάν δεν αναβοσβήσει κάποιο χρώμα μετά το πάτημα του «GO GO!»:
+If no colors flash after pressing "GO GO!":
 
 - Ensure that you have set your system date and [region](/images/screenshots/skater/skater-lang.png) correctly
 - Ensure that no other browser tabs are open, then restart the browser and try the exploit again
 
-Εάν η οθόνη αναβοσβήσει με χρώματα και έπειτα, «παγώσει» ή διακοπεί απρόσμενα η λειτουργία:
+If the screen flashes colors then freezes/crashes:
 
 - Ensure that you have the correct copy of `arm11code.bin` and `browserhax_hblauncher_ropbin_payload.bin` for your console's version and region
 - Try resetting your browser data:
-  1. Ανοίξτε την εφαρμογή «Internet Browser» και έπειτα, μεταβείτε στις ρυθμίσεις της
-  2. Μεταβείτε στο κάτω μέρος και επιλέξτε «Reset Save Data» (ή «Initialize Save Data» ή «Clear All Save Data»)
-  3. Δοκιμάστε ξανά το exploit
+  1. Launch the browser, then launch the browser settings
+  2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
+  3. Try the exploit again
 - Try changing the system language to something other than the current language
 
 :::
 
 :::: details "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
 
-Το αρχείο `arm11code.bin` απουσιάζει ή βρίσκεται σε λάθος τοποθεσία. Βεβαιωθείτε ότι έχετε αντιγράψει τα αρχεία της [πιο πρόσφατης έκδοσης του super-skaterhax](https://github. om/zoogie/super-skaterhax/releases/latest) για την περιοχή και την έκδοσή σας στη ρίζα της κάρτας SD σας (όχι μέσα σε κάποιο φάκελο).
+The file `arm11code.bin` is missing or misplaced. Make sure to copy the files of the [latest version of super-skaterhax](https://github.com/zoogie/super-skaterhax/releases/latest) for your region and version to the root of your SD card (not inside of a folder).
 
 ::: info
 
@@ -325,7 +323,7 @@ If your console is on system version 9.4.0, 9.5.0, or 9.6.0, you may be encounte
 
 :::details An exception occured or "DLL_HEAP_INFORMATION" when pressing GO! GO!
 
-Αυτό δείχνει ότι πιθανότατα διαθέτετε ήδη custom firmware. Θα πρέπει να [κάνετε έλεγχο για CFW](checking-for-cfw).
+This likely indicates that you already have custom firmware. Θα πρέπει να [κάνετε έλεγχο για CFW](checking-for-cfw).
 
 :::
 
@@ -333,65 +331,67 @@ If your console is on system version 9.4.0, 9.5.0, or 9.6.0, you may be encounte
 
 :::details Red/purple/pink and white screen after running Browserhax
 
-Αυτό δείχνει ότι πιθανότατα διαθέτετε ήδη custom firmware. Θα πρέπει να [κάνετε έλεγχο για CFW](checking-for-cfw).
+This likely indicates that you already have custom firmware. Θα πρέπει να [κάνετε έλεγχο για CFW](checking-for-cfw).
 
 :::
 
 :::details "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
 
-Το αρχείο `arm11code.bin` απουσιάζει ή βρίσκεται σε λάθος τοποθεσία. Κάντε λήψη της πιο πρόσφατης έκδοσης του [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), τοποθετήστε το `otherapp.bin` στη ρίζα της κάρτας SD σας και μετονομάστε το σε `arm11code.bin`. Μην προσθέσετε την επέκταση `.bin` αν δεν τη βλέπετε ήδη.
+The file `arm11code.bin` is missing or misplaced. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Μην προσθέσετε την επέκταση `.bin` αν δεν τη βλέπετε ήδη.
 
 :::
 
 :::details "An error has occurred, forcing the software to close..." (white message box)
 
-Ενδέχεται να υπάρχει πρόβλημα με το αρχείο `arm11code.bin` σας. Κάντε λήψη της πιο πρόσφατης έκδοσης του [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), τοποθετήστε το `otherapp.bin` στη ρίζα της κάρτας SD σας και μετονομάστε το σε `arm11code.bin`. Μην προσθέσετε την επέκταση `.bin` αν δεν τη βλέπετε ήδη.
+There may be an issue with your `arm11code.bin` file. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Μην προσθέσετε την επέκταση `.bin` αν δεν τη βλέπετε ήδη.
 
-Μπορείτε επίσης να δοκιμάσετε την επαναφορά των αποθηκευμένων δεδομένων του προγράμματος περιήγησης:
+You can also try resetting your browser save data:
 
-1. Ανοίξτε την εφαρμογή «Internet Browser» και έπειτα, μεταβείτε στις ρυθμίσεις της
-2. Μεταβείτε στο κάτω μέρος και επιλέξτε «Reset Save Data» (ή «Initialize Save Data» ή «Clear All Save Data»)
-3. Δοκιμάστε ξανά το exploit
+1. Launch the browser, then launch the browser settings
+2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
+3. Try the exploit again
 
 :::
 
 :::details Opening the browserhax QR code or URL crashes
 
-Τα exploit που βασίζονται στην εφαρμογή «Internet Browser» (όπως το browserhax ή το 2xrsa) είναι συχνά ασταθή και προκαλούν διακοπή λειτουργίας, αλλά μπορούν κάποιες φορές να διορθωθούν ακολουθώντας τα παρακάτω βήματα.
+Browser based exploits (such as this one) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
 
-1. Ανοίξτε την εφαρμογή «Internet Browser» και έπειτα, μεταβείτε στις ρυθμίσεις της
-2. Μεταβείτε στο κάτω μέρος και επιλέξτε «Reset Save Data» (ή «Initialize Save Data» ή «Clear All Save Data»)
-3. Δοκιμάστε ξανά το exploit
+1. Launch the browser, then launch the browser settings
+2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
+3. Try the exploit again
 
 :::
 
 :::details System Update prompt when opening browser
 
-Ο διακομιστής μεσολάβησης του SSLoth δεν ρυθμίστηκε σωστά. Επαναλάβετε την ενότητα του SSLoth στη σελίδα.
+The SSLoth proxy was incorrectly configured. Re-do the SSLoth section on the page.
 
 :::
 
 :::details Error 032-0420 when opening browser
 
-Ακολουθήστε αυτά τα βήματα με τη σειρά:
+Follow these steps in order:
 
 1. Εκκινήστε την εφαρμογή «System Settings» στην κονσόλα σας
-2. Μεταβείτε στο `Internet Settings` -> `Connection Settings`
-3. Επιλέξτε τη θέση σύνδεσης δικτύου σας και μεταβείτε στο `Change Settings` -> `Επόμενη σελίδα (δεξί βέλος)` -> `Proxy Settings`
-4. Ορίστε την επιλογή «Proxy Settings» σε «No»
-5. Επιλέξτε «OK» και έπειτα, «Save»
-6. Όταν σας ζητηθεί, επιλέξτε «Test» για να πραγματοποιήσετε τη δοκιμή σύνδεσης
+2. Navigate to `Internet Settings` -> `Connection Settings`
+3. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
+4. Set "Proxy Settings" to "No"
+5. Click OK, then click Save
+6. When prompted, click "Test" to perform the connection test
    - The test should succeed
-7. Πατήστε «OK» για να συνεχίσετε
+7. Click "OK" to continue
 8. Πατήστε «Back» δύο φορές και έπειτα, «Close» για να επιστρέψετε στο μενού «HOME»
-9. Ανοίξτε μία φορά την εφαρμογή «Internet Browser»
-10. Εάν σας ζητηθεί ενημέρωση του συστήματος, πατήστε «OK»
+9. Open the Internet Browser once
+10. If prompted about a system update, press OK
     - This won't actually update the system
-11. Ξεκινήστε ξανά από την [Ενότητα II](installing-boot9strap-\(ssloth-browser\).html#section-ii---ssloth)
+11. Start again from [Section II](installing-boot9strap-\(ssloth-browser\).html#section-ii---ssloth)
 
 :::
 
 :::details Frozen on "Doing agbhax..."
+
+There may be an issue with your `arm11code.bin` file. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place it on the root of your SD card, and rename it to `arm11code.bin`. Μην προσθέσετε την επέκταση `.bin` αν δεν τη βλέπετε ήδη.
 
 :::
 
@@ -606,15 +606,18 @@ If your console is on system version 9.4.0, 9.5.0, or 9.6.0, you may be encounte
 
 :::details "Unable to mount CTRNAND or load the CTRNAND FIRM. Please use an external one."
 
+There are a number of reasons as to why this could be happening. In any case, this error can usually be fixed by following the [CTRTransfer](ctrtransfer) guide.
+
 :::
 
 :::details "An error has occurred. Hold down the POWER button to turn off the power..."
 
 Έχουν απενεργοποιηθεί οι χειριστές εξαιρέσεων ARM11 (ARM11 exception handlers) ή δεν έχει εγκατασταθεί custom firmware. Try enabling ARM11 exception handlers:
-\+ Power off your console
-\+ Hold (Select)
-\+ Power on your console, while still holding (Select)
-\+ If the "Disable ARM11 exception handlers" box is checked, uncheck it
+
+- Απενεργοποιήστε την κονσόλα σας
+- Hold (Select)
+- Power on your console, while still holding (Select)
+- If the "Disable ARM11 exception handlers" box is checked, uncheck it
 
 :::
 
@@ -718,6 +721,7 @@ If your console is on system version 9.4.0, 9.5.0, or 9.6.0, you may be encounte
    - **EUR Region**: `000002ce`
    - **JPN Region**: `000002cc`
    - **USA Region**: `000002cd`
+   - **KOR Region**: `000002cf`
 5. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 
 :::
