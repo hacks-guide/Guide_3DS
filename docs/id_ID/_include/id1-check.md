@@ -4,7 +4,7 @@ You will need to determine which one contains your data. First of all, back up a
 
 ::: info
 
-![Backup ID1](/images/screenshots/troubleshooting/backup-id1.png)
+![](/images/screenshots/troubleshooting/backup-id1.png)
 
 :::
 
@@ -12,13 +12,13 @@ Now, delete all but one of the folders from your SD card. Generally, you will wa
 
 ::: info
 
-![Properties prompt](/images/screenshots/troubleshooting/rightclick-properties.png)
+![](/images/screenshots/troubleshooting/rightclick-properties.png)
 
 :::
 
 ::: info
 
-![Which to delete](/images/screenshots/troubleshooting/compare-id1.png)
+![](/images/screenshots/troubleshooting/compare-id1.png)
 
 :::
 
@@ -26,7 +26,7 @@ Your SD card should now look something like this:
 
 ::: info
 
-![Just enough ID1s](/images/screenshots/troubleshooting/correct-id1.png)
+![](/images/screenshots/troubleshooting/correct-id1.png)
 
 :::
 
