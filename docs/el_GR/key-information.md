@@ -16,7 +16,7 @@
 
 Κάθε ενότητα έχει συμπτυχθεί από προεπιλογή. Κάντε κλικ (ή πατήστε) στο όνομα της ενότητας για να την ανοίξετε.
 
-## Things you should know about the 3DS
+## Πράγματα που πρέπει να γνωρίζετε για το 3DS
 
 :::: details Συμβατότητα 3DS/2DS
 
@@ -78,7 +78,7 @@
 :::
 ::::
 
-## Things you need to do on your computer
+## Πράγματα που πρέπει να κάνετε στον υπολογιστή σας
 
 ::: warning
 
@@ -86,7 +86,7 @@
 
 :::
 
-:::: details File placement terminology (e.g. "root of SD", "/luma/")
+:::: details Ορολογία τοποθέτησης αρχείων (π.χ. «ρίζα της SD», «/luma/»)
 
 ::: info
 
@@ -158,9 +158,9 @@
 
 Εάν αντιμετωπίσετε κάποιο πρόβλημα ενώ ακολουθείτε αυτόν τον οδηγό, υπάρχουν πολλοί τρόποι με τους οποίους μπορείτε να λάβετε βοήθεια!
 
-- If you have any questions that haven't been answered on this page, their answers might be in the [Pre-Installation FAQ](faq#pre-installation-faq).
-- If you experience an issue while following this guide, you can check the [Troubleshooting](troubleshooting) page for a solution.
-- If the resources we've provided here aren't helping, you can get one-on-one support over at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+- Εάν έχετε ερωτήσεις που δεν έχουν απαντηθεί σε αυτήν τη σελίδα, ίσως βρείτε τις απαντήσεις στις [συχνές ερωτήσεις πριν από την εγκατάσταση](faq#pre-installation-faq).
+- Εάν αντιμετωπίσετε κάποιο πρόβλημα ενώ ακολουθείτε αυτόν τον οδηγό, μπορείτε να ελέγξετε τη σελίδα [Επίλυση προβλημάτων](troubleshooting) για κάποια λύση.
+- Εάν οι πόροι που παρέχουμε εδώ δεν σας βοηθούν, μπορείτε να λάβετε προσωπική υποστήριξη στο [Nintendo Homebrew στο Discord](https://discord.gg/MWxPgEp).
 
 ::: tip
 
