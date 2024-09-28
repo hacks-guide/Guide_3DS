@@ -70,7 +70,7 @@
 
 :::
 
-:::details What size SD card can I use?<
+:::details What size SD card can I use?
 
 Θα χρειαστείτε τουλάχιστον 1,5GB ελεύθερου χώρου στην κάρτα SD για να ακολουθήσετε αυτόν τον οδηγό στο σύνολό του. Ενώ το 3DS είναι επίσημα συμβατό με κάρτες SD έως και 32GB, μπορείτε να χρησιμοποιήσετε μεγαλύτερες κάρτες SD εάν τις διαμορφώσετε ξανά ως FAT32. Δεν προτείνεται η χρήση καρτών SD που είναι μεγαλύτερες από 128GB λόγω γνωστών ζητημάτων με τα γραφικά GBA και τα προσαρμοσμένα θέματα.
 
@@ -164,6 +164,6 @@
 
 :::details How do I move saves from an existing Gateway setup to a more modern setup?
 
-Δείτε [αυτό το νήμα](https://gbatemp.net/threads/425743/).
+See [this thread](https://gbatemp.net/threads/425743/).
 
 :::
