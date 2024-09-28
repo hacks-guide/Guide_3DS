@@ -60,7 +60,7 @@ Questo funzionerà solo per i giochi 3DS; non è possibile installare una scheda
 
 1. Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9
 2. Entra in `[C:] GAMECART`
-3. Premi (A) su `[TitleID].trim.3ds` per selezionarlo, quindi seleziona "NCSD image options...", ed infine seleziona "Install game image"
+3. Premi (A) su `[ID titolo].trim.3ds` per selezionarlo, quindi seleziona "NCSD image options...", ed infine seleziona "Install game image"
 4. Premi il pulsante (A) per sbloccare i permessi di scrittura di primo livello su SysNAND, quindi inserisci la combinazione di tasti richiesta a schermo
 5. Al termine del processo, il gioco verrà visualizzato nel menu HOME come se fosse un titolo installato.
 
@@ -74,7 +74,7 @@ Dovrebbe essere eseguito solo se [Installare una cartuccia di gioco direttamente
 
 1. Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9
 2. Entra in `[C:] GAMECART`
-3. Premi (A) su `[TitleID].trim.3ds` per selezionarlo, quindi seleziona "NCSD image options...", ed infine seleziona "Build CIA from file"
+3. Premi (A) su `[ID titolo].trim.3ds` per selezionarlo, quindi seleziona "NCSD image options...", ed infine seleziona "Build CIA from file"
 4. Il file installabile `.cia` verrà salvato nella cartella `/gm9/out/` della tua scheda SD
 
 ## Backup di un titolo installato
@@ -100,13 +100,13 @@ Permette il backup di titoli digitali installati sia dal sistema sia dall'utente
 
 ::: info
 
-Il salvataggio verrà creato nella cartella `/gm9/out/` della tua scheda SD, con nome `<TitleID>.gbavc.sav`.
+Il salvataggio verrà creato nella cartella `/gm9/out/` della tua scheda SD, con nome `<ID titolo>.gbavc.sav`.
 
 :::
 
 ::: info
 
-Per identificare il Title ID di un file `<TitleID>.gbavc.sav`, puoi controllare la lista di tutti i giochi presenti sulla tua console e i rispettivi Title ID premendo il pulsante (Home) per far apparire il menu delle azioni, dopodiché seleziona `Title manager`, quindi`[A:] SD CARD`.
+Per identificare il Title ID di un file `<ID titolo>.gbavc.sav`, puoi controllare la lista di tutti i giochi presenti sulla tua console e i rispettivi Title ID premendo il pulsante (Home) per far apparire il menu delle azioni, dopodiché seleziona `Title manager`, quindi`[A:] SD CARD`.
 
 :::
 
@@ -118,15 +118,15 @@ Per identificare il Title ID di un file `<TitleID>.gbavc.sav`, puoi controllare 
    - Entra nella cartella `[S:] SYSNAND VIRTUAL`
    - Premi (A) su `agbsave.bin` per selezionarlo
    - Seleziona "AGBSAVE options..."
-   - Select "Dump GBA VC save"
+   - Seleziona "Dump GBA VC save"
    - Premi il pulsante (A) per continuare
    - Premi (Start) per riavviare la tua console
 
-## Restore GBA VC Saves
+## Ripristinare i salvataggi dei giochi GBA della Virtual Console
 
 ::: info
 
-Per identificare il Title ID di un file `<TitleID>.gbavc.sav`, puoi controllare la lista di tutti i giochi presenti sulla tua console e i rispettivi Title ID premendo il pulsante (Home) per far apparire il menu delle azioni, dopodiché seleziona `Title manager`, quindi`[A:] SD CARD`.
+Per identificare il Title ID di un file `<ID titolo>.gbavc.sav`, puoi controllare la lista di tutti i giochi presenti sulla tua console e i rispettivi Title ID premendo il pulsante (Home) per far apparire il menu delle azioni, dopodiché seleziona `Title manager`, quindi`[A:] SD CARD`.
 
 :::
 
@@ -136,18 +136,18 @@ Per identificare il Title ID di un file `<TitleID>.gbavc.sav`, puoi controllare 
    - Spegni la tua console
    - Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9
    - Entra nella cartella `[0:] SDCARD` -> `gm9` -> `out`
-   - Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
+   - Premi (Y) sul file `<ID titolo>.gbavc.sav` che vuoi ripristinare per copiarlo
    - Premi (B) per ritornare al menu principale
    - Entra nella cartella `[S:] SYSNAND VIRTUAL`
    - Premi (A) su `agbsave.bin` per selezionarlo
    - Seleziona "AGBSAVE options..."
-   - Select "Inject GBA VC save"
+   - Seleziona "Inject GBA VC save"
    - Premi il pulsante (A) per continuare
    - Premi (Start) per riavviare la tua console
    - Avvia il gioco GBA
    - Esci dal gioco GBA
 
-## Encrypting / Decrypting a .CIA file
+## Criptare / Decriptare un file .CIA
 
 ::: info
 
@@ -159,8 +159,8 @@ Per motivi pratici, copia i file `.cia` che desideri criptare/decriptare dentro 
 2. Entra nella cartella `[0:] SDCARD` -> `cias`
 3. Premi (A) sul file `.cia` per selezionarlo, quindi seleziona "CIA image options..."
 4. Seleziona l'opzione appropriata per la funzione desiderata:
-   - **Encrypt to 0:/gm9/out:** Create an encrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card
-   - **Decrypt to 0:/gm9/out:** Create a decrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card
-   - **Encrypt inplace:** Replace the selected `.cia` file with an encrypted version
-   - **Decrypt inplace:** Replace the selected `.cia` file with a decrypted version
+   - **Encrypt to 0:/gm9/out:** Crea una copia criptata del file `.cia` selezionato nella cartella `/gm9/out/` della tua scheda SD
+   - **Decrypt to 0:/gm9/out:** Crea una copia decriptata del file `.cia` selezionato nella cartella `/gm9/out/` della tua scheda SD
+   - **Encrypt inplace:** Sostituisce il file `.cia` con una versione criptata dello stesso
+   - **Decrypt inplace:** Sostituisce il file `.cia` con una versione decriptata dello stesso
 5. Il tuo file criptato/decriptato in formato `.cia` verrà salvato nella posizione desiderata
