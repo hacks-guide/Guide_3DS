@@ -33,7 +33,6 @@ In questa pagina eseguirai lo script di MSET9, che viene utilizzato per attivare
 In questa sezione preparerai l'exploit MSET9 creando **temporaneamente** un nuovo profilo per il menu HOME senza dati utente, configurandolo con i dati minimi necessari per l'esecuzione di MSET9. I tuoi dati dati utente attuali scompariranno, ma torneranno al termine di questa pagina.
 
 1. Inserisci la scheda SD nel tuo computer
-
 2. Copia tutto il contenuto dell'archivio `.zip` di MSET9 nella directory principale della tua scheda SD, sovrascrivendo tutti i file esistenti
 
    ::: info
@@ -41,8 +40,6 @@ In questa sezione preparerai l'exploit MSET9 creando **temporaneamente** un nuov
    ![](/images/screenshots/mset9/mset9-root-layout.png)
 
    :::
-
-3. Esegui lo script di MSET9:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -80,7 +77,6 @@ In questa sezione preparerai l'exploit MSET9 creando **temporaneamente** un nuov
    - This will not wipe any of your data
 10. Spegni la console premendo il pulsante di accensione, quindi tocca "Spegni" sullo schermo inferiore
 11. Inserisci la scheda SD nel tuo computer
-12. Esegui lo script di MSET9:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -119,7 +115,6 @@ Queste istruzioni vanno eseguite **ALLA LETTERA**, quindi ricontrolla TUTTO quel
 5. **Con la console ANCORA ACCESA e senza premere alcun pulsante o toccare lo schermo**, rimuovi la tua scheda SD dalla console
    - The menu will refresh and say that no SD card is inserted
 6. Inserisci la scheda SD nel tuo computer
-7. Esegui lo script di MSET9:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -153,7 +148,6 @@ NON saltare questa sezione! Se lo salti, le applicazioni potrebbero inaspettatam
 
 1. Spegni la tua console
 2. Inserisci la scheda SD nel tuo computer
-3. Esegui lo script di MSET9:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
