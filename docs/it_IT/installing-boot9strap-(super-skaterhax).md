@@ -1,12 +1,12 @@
 # Installazione di boot9strap (super-skaterhax)
 
-:::details Technical Details (optional)
+:::details Dettagli tecnici (opzionale)
 
 Per i dettagli tecnici sugli exploit che utilizzerai in questa pagina, vedi [qui](https://github.com/zoogie/super-skaterhax).
 
 :::
 
-### Compatibility Notes
+### Note di compatibilità
 
 Super-skaterhax (quando utilizzato per avviare l'Homebrew Launcher) è compatibile con i modelli New dalla versione 11.15.0 in poi di tutte le regioni.
 
@@ -91,14 +91,14 @@ Se non l'hai già fatto, assicurati di avere una connessione Internet funzionant
     - If your console freezes on a yellow screen, hold the POWER button until it turns off, then retry this section
     - If your console freezes on a red screen, hold the POWER button until it turns off, redo step 3 of Section II, then retry this section
     - If your console [shows the word Text on the top-left corner of the bottom screen](/images/screenshots/skaterhax/skater-old3ds.png), you have an Old 3DS and this exploit **will not work on your device**. In questo caso, dovresti usare invece [MSET9](installing-boot9strap-\(mset9\))
-    - If you get another error, try again up to 5 times, and if it still doesn't work, [follow this troubleshooting guide](troubleshooting#installing-boot9strap-super-skaterhax)
+    - Se ottieni un altro errore riprova altre 5 volte, e se continua a non funzionare [segui questa guida per risolvere il problema](troubleshooting#installing-boot9strap-super-skaterhax)
 16. La tua console avvierà l'Homebrew Launcher
 17. Avvia nimdsphax dalla lista degli homebrew
 18. Se l'exploit è andato a buon fine, si avvierà SafeB9SInstaller
     - If your console freezes on a red or green screen, hold the POWER button until it turns off, then retry this section
     - This may take up to five attempts
 
-#### Section III - Installing boot9strap
+#### Sezione III - Installazione di boot9strap
 
 In questa sezione installerai il custom firmware sulla tua console.
 
