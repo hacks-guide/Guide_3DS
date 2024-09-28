@@ -6,7 +6,7 @@
 
 :::
 
-## Required Reading
+## 중요
 
 ntrboot로 boot9strap을 설치하기 위해서는 호환되는 DS/ DSi 가 필요합니다. 이러한 플래시 카드 중 몇몇은 이미 ntrboot이 플래싱 되어 있습니다.
 
