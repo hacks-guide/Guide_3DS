@@ -79,7 +79,7 @@
 이 섹션에서는 3DS 내부 시계를 실제 시각과 맞추고, 홈브류 소프트웨어에서 음성을 적절하게 이용하기 위해 사운드 펌웨어를 백업합니다.
 
 1. (L 어깨) + (십자 Down) + (Select) 을 동시에 눌러서 Rosalina 메뉴를 실행해 주세요
-   - If one of these buttons is broken, download [config.ini](/assets/config.ini) and put it in your `luma` folder, replacing the existing one. 이 파일은 Rosalina 키 조합을 (X) + (Y)로 바꿉니다
+   - 만일 이들 중 하나의 버튼이 고장났을 경우, [config.ini](/assets/config.ini) 파일을 받아 `luma` 폴더에 덮어쓰기 해주세요. 이 파일은 Rosalina 키 조합을 (X) + (Y)로 바꿉니다
 2. "Miscellaneous options"을 선택해 주세요
 3. "Dump DSP firmware"를 선택해 주세요
 4. (B)를 눌러 진행해 주세요
@@ -109,11 +109,11 @@ In this section, you will use a series of scripts to automate homebrew installat
     - 만일 "Setup Complete!"(설정 완료!) 가 뜨지 않은 경우, 스크립트가 정상 실행되지 않은 것이며 해당 섹션의 작업을 3단계부터 다시 해야 합니다
 11. SD 카드를 컴퓨터에 삽입해 주세요
 12. SD 카드의 `/gm9/backups/` 폴더 내 파일을 컴퓨터의 안전한 위치에 복사해 주세요
-    - This folder contains critical file backups and should be backed up to multiple locations (i.e. cloud storage) if possible
-    - The two SysNAND files are your NAND backup and can be used to revert your console to a working state if it is bricked by a software issue
-    - The `essential.exefs` file contains your console's system-unique files and can be used to recover your data in the event of a hardware failure
+    - 본 폴더에는 중요 파일의 백업이 들어 있으며 가능한 여러 곳에 백업되어야 합니다. (예시: 온라인 파일 저장소)
+    - 두 개의 SysNAND 파일은 해당 콘솔의 NAND 백업이며 소프트웨어적 문제로 벽돌 현상이 일어났을 경우 원상복구하는데 반드시 필요합니다
+    - `essential.exefs` 파일은 해당 콘솔의 시스템 고유 파일을 가지고 있으며 하드웨어 문제로 없어진 고유 데이터를 복구하는 데 사용할 수 있습니다
 13. If you still have them, delete the two `SysNAND` files from the `/gm9/backups/` folder from your SD card
-    - The `essential.exefs` file is small and may be kept on your SD card for ease of access
+    - `essential.exefs` 파일의 크기는 작으며 접근성을 위해 SD 카드에 남겨둬도 됩니다
 
 ___
 
