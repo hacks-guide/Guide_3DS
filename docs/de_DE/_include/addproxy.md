@@ -11,7 +11,7 @@ Eine visuelle Anleitung für diesen Abschnitt findest du [hier](/images/screensh
 :::
 
 1. Starte die Systemeinstellungen
-2. Navigiere zu `Interneteinstellungen` → `Verbindungseinstellungen`
+2. Navigate to `Internet Settings` -> `Connection Settings`
 3. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
 4. Setze die "Proxy-Einstellungen" auf "Ja", und klicke dann auf `Detailliertes Setup`
 5. Setze den Proxy-Server auf `ssloth.nintendohomebrew.com` und den Port auf `8080`
