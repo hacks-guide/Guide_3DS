@@ -1,6 +1,6 @@
 **I servizi online Nintendo 3DS sono stati recentemente terminati.** Ecco cosa dovresti sapere:
 
-- Current 3DS modding methods are not affected.
-- The Internet access of homebrew applications (i.e. Universal-Updater) is not affected.
-- Official online servers are going down for everyone, but alternate online servers (i.e. Pretendo Network) are currently a work-in-progress.
-- Online shutdown does not affect access to the browser or to the Internet. L'unica cosa cessata sono i servizi online di Nintendo Network, come i server di gioco.
+- Gli attuali metodi di modding per 3DS non sono influenzati.
+- L'accesso a Internet da parte delle applicazioni homebrew (es. Universal-Updater) non è influenzato.
+- I server ufficiali online stanno andando offline per tutti, ma server online alternativi (es. Pretendo Network) sono attualmente work-in-progress.
+- Il termine delle funzionalità online non influisce sull'accesso al browser o a Internet. L'unica cosa cessata sono i servizi online di Nintendo Network, come i server di gioco.
