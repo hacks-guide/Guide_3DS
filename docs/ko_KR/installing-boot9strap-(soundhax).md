@@ -30,7 +30,7 @@ Soundhax는 (universal-otherapp과 사용할 때) 모든 지역의 1.0.0 이상 
 3. Soundhax `.m4a`를 SD 카드의 루트에 복사해 주세요
    - SD 카드의 루트는 SD 카드를 열 때 보이는 디렉토리이고, Nintendo 3DS 폴더가 보이지만 그 안에 들어가 있지 않은 상태의 폴더입니다
 4. 'otherapp.bin' 파일을 SD 카드의 루트에 복사해 주세요
-5. Luma3DS `.zip`안에 있는 `boot.firm`과 `boot.3dsx`를 SD 카드의 루트에 복사해 주세요
+5. Copy everything from the Luma3DS `.zip` to the root of your SD card
 6. SD 카드이 루트에 `boot9strap` 라는 이름으로 새 폴더를 생성해 주세요
 7. SD 카드에 있는 `/boot9strap/` 폴더에 boot9strap `.zip` 파일 안에 압축되있는 `boot9strap.firm`과 `boot9strap.firm.sha`을 복사해 주세요
 8. SafeB9SInstaller `.zip`의 `SafeB9SInstaller.bin`을 SD 카드의 루트로 복사해 주세요
