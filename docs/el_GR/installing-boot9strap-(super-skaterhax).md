@@ -1,12 +1,12 @@
 # Εγκατάσταση του boot9strap (super-skaterhax)
 
-:::details Technical Details (optional)
+:::details Τεχνικές λεπτομέρειες (προαιρετικό)
 
 Για τεχνικές λεπτομέρειες σχετικά με τα exploit που θα χρησιμοποιήσετε σε αυτήν τη σελίδα, δείτε [εδώ](https://github.com/zoogie/super-skaterhax).
 
 :::
 
-### Compatibility Notes
+### Σημειώσεις συμβατότητας
 
 Το super-skaterhax (όταν χρησιμοποιείται για την εκκίνηση του Homebrew Launcher) είναι συμβατό με τα μοντέλα New στην έκδοση 11.15.0 και νεότερες, σε όλες τις περιοχές.
 
@@ -16,11 +16,11 @@
 
 :::
 
-### What You Need
+### Τι χρειάζεστε
 
-- The [super-skaterhax](https://toxicaven.dev/skater) zip for your console's region and system version
+- The [Super-skaterhax](https://skater.nintendohomebrew.com) zip for your console's region and system version
 
-#### Section I - Prep Work
+#### Ενότητα I - Προετοιμασία
 
 Σε αυτήν την ενότητα, θα αντιγράψετε τα αρχεία που απαιτούνται για την ενεργοποίηση τόσο του super-skaterhax όσο και του Homebrew Launcher.
 
@@ -28,7 +28,7 @@
 
 2. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
 
-3. Αντιγράψτε τα πάντα από το αρχείο `.zip` του sk8rhax στη ρίζα της κάρτας SD σας, αντικαθιστώντας τυχόν υπάρχοντα αρχεία
+3. Copy everything from the Super-skaterhax `.zip` to the root of your SD card, overwriting any existing files
 
    ::: info
 
@@ -56,7 +56,7 @@
 
 10. Κλείστε την εφαρμογή «System Settings»
 
-#### Section II - super-skaterhax
+#### Ενότητα II - super-skaterhax
 
 Σε αυτήν την ενότητα, θα επισκεφτείτε την ιστοσελίδα του exploit, η οποία θα εκκινήσει το Homebrew Launcher.
 
@@ -98,12 +98,12 @@
     - If your console freezes on a red or green screen, hold the POWER button until it turns off, then retry this section
     - This may take up to five attempts
 
-#### Section III - Installing boot9strap
+#### Ενότητα IIΙ - Εγκατάσταση του boot9strap
 
 Σε αυτήν την ενότητα, θα εγκαταστήσετε custom firmware στην κονσόλα σας.
 
 1. Όταν ζητηθεί, εισαγάγετε τον συνδυασμό πλήκτρων που θα εμφανιστεί στην πάνω οθόνη, ώστε να εγκαταστήσετε το boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+   - Εάν το κείμενο ενός βήματος στην κάτω οθόνη έχει κόκκινο χρώμα και δεν σας ζητείται να εισαγάγετε κάποιον συνδυασμό πλήκτρων [ακολουθήστε αυτόν τον οδηγό επίλυσης προβλημάτων](troubleshooting#issues-with-safeb9sinstaller)
 2. Μόλις ολοκληρωθεί, πατήστε το (Α) για να επανεκκινήσετε την κονσόλα σας
 
 <!--@include: ./_include/configure-luma3ds.md -->
@@ -120,6 +120,6 @@ ___
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Συνέχεια στην [Ολοκλήρωση εγκατάστασης](finalizing-setup)
 
 :::
