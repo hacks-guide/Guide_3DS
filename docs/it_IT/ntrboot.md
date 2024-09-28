@@ -6,7 +6,7 @@ Se la tua flashcart ha installato nativamente ntrboot (o se hai già installato 
 
 :::
 
-## Required Reading
+## Lettura necessaria
 
 L'installazione di boot9strap tramite ntrboot richiede una flashcart NDS / DSi compatibile. Alcune di queste flashcart sono vendute con ntrboot già preinstallato.
 
