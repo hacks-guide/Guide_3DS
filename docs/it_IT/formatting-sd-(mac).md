@@ -1,4 +1,4 @@
-# Formatting SD (Mac)
+# Formattazione SD (Mac)
 
 ## Lettura necessaria
 
@@ -10,7 +10,7 @@ Questa pagina è solo per utenti Mac. Se non stai utilizzando un Mac, puoi segui
 
 ## Istruzioni
 
-### OS X El Capitan (10.11) and later
+### OS X El Capitan (10.11) e successivi
 
 1. Inserisci la scheda SD nel tuo computer
 
@@ -35,7 +35,7 @@ Questa pagina è solo per utenti Mac. Se non stai utilizzando un Mac, puoi segui
 8. Assicurati che "Formato" sia impostato su "MS-DOS (FAT)"
 
 9. Assicurati che "Schema" sia impostato su "Master Boot Record"
-   - If "Scheme" does not appear, click "Cancel" and make sure to choose the device instead of a volume
+   - Se "Schema" non appare, clicca su "Annulla" e assicurati di scegliere il dispositivo invece di un volume
 
 10. Clicca su "Cancella"
 
@@ -45,7 +45,7 @@ Questa pagina è solo per utenti Mac. Se non stai utilizzando un Mac, puoi segui
 
 13. Se la scheda SD aveva precedentemente file o cartelle al suo interno, ricopia il contenuto dal tuo computer
 
-### OS X Yosemite (10.10) and earlier
+### OS X Yosemite (10.10) e precedenti
 
 1. Inserisci la scheda SD nel tuo computer
 
@@ -62,7 +62,7 @@ Questa pagina è solo per utenti Mac. Se non stai utilizzando un Mac, puoi segui
    :::
 
 5. Clicca su "Partizione" in cima
-   - If "Partition" does not appear, make sure to choose the device instead of a volume
+   - Se "Partitione" non appare, assicurati di scegliere il dispositivo invece di un volume
 
 6. Assicurati che "Layout Partizione" sia impostato su "1 Partizione"
 
@@ -88,5 +88,5 @@ Questa pagina è solo per utenti Mac. Se non stai utilizzando un Mac, puoi segui
 
 ## Risoluzione dei problemi
 
-- SD card remains undetected by console or continues to display the wrong capacity after formatting
-  - Your SD card may be partitioned or have unallocated space. Segui le istruzioni [qui](https://wiki.hacks.guide/wiki/SD_Clean/Mac) per riformattare la tua scheda SD.
+- La scheda SD continua a non venire rilevata dalla console o continua a mostrare una capacità errata dopo la formattazione
+  - La tua scheda SD potrebbe essere partizionata o avere spazio non allocato. Segui le istruzioni [qui](https://wiki.hacks.guide/wiki/SD_Clean/Mac) per riformattare la tua scheda SD.
