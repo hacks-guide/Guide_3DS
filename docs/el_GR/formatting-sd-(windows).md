@@ -1,6 +1,6 @@
 # Formatting SD (Windows)
 
-## Required Reading
+## Απαραίτητη ανάγνωση
 
 Αυτή είναι μια πρόσθετη ενότητα για τη διαμόρφωση μιας κάρτας SD έτσι, ώστε να λειτουργεί με το 3DS.
 
@@ -8,7 +8,7 @@
 
 Αυτή η σελίδα αφορά μόνο χρήστες Windows. Εάν δεν χρησιμοποιείτε Windows, δείτε τις σελίδες [Διαμόρφωση της SD (Linux)](formatting-sd-\(linux\)) ή [Διαμόρφωση της SD (Mac)](formatting-sd-\(mac\)).
 
-## What You Need
+## Τι χρειάζεστε
 
 - **For SD cards 32GB or smaller:** the latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
 - **For SD cards 64GB or larger:** The latest version of [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
