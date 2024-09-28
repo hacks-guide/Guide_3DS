@@ -60,13 +60,13 @@ Questo processo non è necessario per giochi delle altre Virtual Console (quali 
 
 ::: info
 
-Il salvataggio verrà creato nella cartella `/gm9/out/` della tua scheda SD, con nome `<TitleID>.gbavc.sav`.
+Il salvataggio verrà creato nella cartella `/gm9/out/` della tua scheda SD, con nome `<ID titolo>.gbavc.sav`.
 
 :::
 
 ::: info
 
-Per identificare il Title ID di un file `<TitleID>.gbavc.sav`, puoi controllare la lista di tutti i giochi presenti sulla tua console e i rispettivi Title ID premendo il pulsante (Home) per far apparire il menu delle azioni, dopodiché seleziona `Title manager`, quindi`[A:] SD CARD`.
+Per identificare il Title ID di un file `<ID titolo>.gbavc.sav`, puoi controllare la lista di tutti i giochi presenti sulla tua console e i rispettivi Title ID premendo il pulsante (Home) per far apparire il menu delle azioni, dopodiché seleziona `Title manager`, quindi`[A:] SD CARD`.
 
 :::
 
@@ -78,7 +78,7 @@ Per identificare il Title ID di un file `<TitleID>.gbavc.sav`, puoi controllare 
    - Entra nella cartella `[S:] SYSNAND VIRTUAL`
    - Premi (A) su `agbsave.bin` per selezionarlo
    - Seleziona "AGBSAVE options..."
-   - Select "Dump GBA VC save"
+   - Seleziona "Dump GBA VC save"
    - Premi il pulsante (A) per continuare
    - Premi (Start) per riavviare la tua console
 
@@ -90,7 +90,7 @@ Per identificare il Title ID di un file `<TitleID>.gbavc.sav`, puoi controllare 
 4. Premi il pulsante (A) per sbloccare la sovrascrittura su SysNAND, quindi inserisci la combinazione di tasti richiesta a schermo
    - This will not overwrite your boot9strap installation
 5. Inserisci la combinazione di tasti richiesta a schermo per sbloccare i permessi di scrittura di primo livello su SysNAND
-   - This process will take some time
+   - Questo passaggio richiederà un po' di tempo
 6. Una volta completato, premi (A) per proseguire
 7. Se richiesto, premi (B) per rifiutare il ritiro delle autorizzazioni di scrittura
 8. Premi (B) per ritornare al menu principale
@@ -125,7 +125,7 @@ Se non hai mantenuto alcun salvataggio GBA della Virtual Console, salta questa s
 
 ::: info
 
-Per identificare il Title ID di un file `<TitleID>.gbavc.sav`, puoi controllare la lista di tutti i giochi presenti sulla tua console e i rispettivi Title ID premendo il pulsante (Home) per far apparire il menu delle azioni, dopodiché seleziona `Title manager`, quindi`[A:] SD CARD`.
+Per identificare il Title ID di un file `<ID titolo>.gbavc.sav`, puoi controllare la lista di tutti i giochi presenti sulla tua console e i rispettivi Title ID premendo il pulsante (Home) per far apparire il menu delle azioni, dopodiché seleziona `Title manager`, quindi`[A:] SD CARD`.
 
 :::
 
@@ -137,12 +137,12 @@ Per identificare il Title ID di un file `<TitleID>.gbavc.sav`, puoi controllare 
    - Boot your console while holding (Start) to launch the Luma3DS chainloader menu
    - Launch GodMode9 by pressing (A)
    - Entra nella cartella `[0:] SDCARD` -> `gm9`
-   - Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
+   - Premi (Y) sul file `<ID titolo>.gbavc.sav` che vuoi ripristinare per copiarlo
    - Premi (B) per ritornare al menu principale
    - Entra nella cartella `[S:] SYSNAND VIRTUAL`
    - Premi (A) su `agbsave.bin` per selezionarlo
    - Seleziona "AGBSAVE options..."
-   - Select "Inject GBA VC save"
+   - Seleziona "Inject GBA VC save"
    - Premi il pulsante (A) per continuare
    - Premi (Start) per riavviare la tua console
    - Avvia il gioco GBA
