@@ -6,8 +6,6 @@ This page is for existing arm9loaderhax users to update their consoles to boot9s
 
 未来，Luma3DS 将只以 `.firm` 格式制作，这种格式只与 boot9strap 和 sighax 兼容。 也就是说，如果你想要使用最新版本的 Luma3DS 自制固件，就得通过此页面将 A9LH 转为 B9S。
 
-请使用 [7-Zip](http://www.7-zip.org/) 或 [The Unarchiver](https://theunarchiver.com/) 之类的压缩软件来解压本页面上的 `.7z` 文件。
-
 ## What You Need
 
 ::: warning
@@ -42,10 +40,10 @@ This page is for existing arm9loaderhax users to update their consoles to boot9s
 
 2. 将你的 SD 卡插入到电脑
 
-3. Copy `boot.firm` and `boot.3dsx` from the latest version Luma3DS `.zip` to the root of your SD card
+3. Copy everything from Luma3DS `.zip` to the root of your SD card
    - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
 
-4. 从 Luma3DS `.7z` 压缩包中复制 `arm9loaderhax.bin` 文件到你 SD 卡的根目录
+4. Copy `arm9loaderhax.bin` from the v7.0.5 Luma3DS `.zip` to the root of your SD card
 
 5. 从 SafeB9SInstaller `.zip` 压缩包中复制 `SafeB9SInstaller.bin` 到SD卡 `/luma/payloads/` 目录中
    - If the `luma` or `payloads` folder doesn't exist, create them
