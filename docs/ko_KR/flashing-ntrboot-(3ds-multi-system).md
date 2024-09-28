@@ -1,6 +1,6 @@
 # ntrboot 플래싱 (3DS 두 대)
 
-## Required Reading
+## 중요
 
 진행하기 앞서서, [ntrboot](ntrboot) 에 대한 모든 정보를 숙지해주세요.
 
@@ -12,18 +12,18 @@
 
 :::
 
-## What You Need
+## 준비물
 
 - Your ntrboot compatible flashcart
 - Two 3DS family consoles
   - **The source 3DS**: the 3DS family console that is already running boot9strap
   - **The target 3DS**: the 3DS family console on stock firmware
 - The v1.3 release of [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (direct download)
-- The latest release of [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest) (`ntrboot_flasher.firm`)
+- 최신 버전의 [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest) (`ntrboot_flasher.firm`)
 
-## Instructions
+## 진행 방법
 
-### Section I - Prep Work
+### 섹션 I - 준비 작업
 
 1. **소스 3DS**를 종료해 주세요
 2. **소스 3DS**의 SD 카드를 컴퓨터에 삽입해 주세요
@@ -40,7 +40,7 @@
 3. 붉은 화면에 뜬 경고를 읽어 주세요
 4. (A)를 눌러 진행해 주세요
 5. 소유하고 있는 플래시카드를 선택해 주세요
-   - If you do not see your flashcart in the list at the top, read the bottom screen for more info on each option
+   - 만약 윗화면에 리스트에 플래시카드가 없다면 각각의 옵션의 정보를 보기 위해 아랫화면을 보아 주세요
 6. "Dump Flash"을 선택해 주세요
 7. 완료될 때까지 기다려 주세요
 8. (A)를 눌러 진행해 주세요
