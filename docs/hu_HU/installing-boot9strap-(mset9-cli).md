@@ -38,7 +38,7 @@ Ebben a lépésben előkészülsz az MSET9 exploitra azzal, hogy **átmenetileg*
 
    ::: info
 
-   ![MSET9 root layout](/images/screenshots/mset9/mset9-root-layout.png)
+   ![](/images/screenshots/mset9/mset9-root-layout.png)
 
    :::
 
@@ -49,7 +49,7 @@ Ebben a lépésben előkészülsz az MSET9 exploitra azzal, hogy **átmenetileg*
 ```
 ::: info
 
-![Image: MSET9 setup](/images/screenshots/mset9/mset9-select.png)
+![](/images/screenshots/mset9/mset9-select.png)
 
 :::
 ```
@@ -60,7 +60,7 @@ Ebben a lépésben előkészülsz az MSET9 exploitra azzal, hogy **átmenetileg*
 
    ::: info
 
-   ![Kép: MSET9 telepítés](/images/screenshots/mset9/mset9-setup-notcreated.png)
+   ![](/images/screenshots/mset9/mset9-setup-notcreated.png)
 
    :::
 
@@ -90,7 +90,7 @@ Ebben a lépésben előkészülsz az MSET9 exploitra azzal, hogy **átmenetileg*
 
    ::: info
 
-   ![Kép: MSET9 telepítés](/images/screenshots/mset9/mset9-ready.png)
+   ![](/images/screenshots/mset9/mset9-ready.png)
 
    :::
 
