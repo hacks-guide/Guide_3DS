@@ -509,7 +509,7 @@ Certifique-se de que você tem pelo menos 1.3GB disponíveis no seu cartão SD. 
 10. Copie a pasta `Nintendo 3DS` do seu computador para a raiz do seu cartão SD
 11. Exclua a pasta `Nintendo 3DS` do seu computador
 
-Se você tiver espaço suficiente no seu cartão SD, seu SD pode estar corrompido ou com defeito. Verifique se há erros no seu cartão SD de acordo com o sistema operacional do seu computador: [Windows](h2testw-\(windows\)), [Linux](f3-\(linux\)), [macOS](f3xquickt-\(mac\)).
+Se você tiver espaço suficiente no seu cartão SD, seu SD pode estar corrompido ou com defeito. Verifique se há erros no seu cartão SD de acordo com o sistema operacional do seu computador: [Windows](h2testw-\(windows\)), [Linux](f3-\(linux\)), [macOS](f3xswift-\(mac\)).
 
 :::
 
@@ -565,7 +565,7 @@ Se o LED de notificação acender:
 - **Magenta**: Your 3DS was not able to find `boot.firm` on your SD card. Ele foi capaz de encontrar `boot.firm` na memória interna, mas o arquivo está corrompido.
 - **Red**: Your 3DS was able to find `boot.firm` on both your SD card and on internal memory, but both files are corrupted.
 
-Você pode obter um novo arquivo `boot.firm` baixando a [versão mais recente do Luma3DS](https://github. om/LumaTeam/Luma3DS/releases/latest), extraindo e colocando `boot.firm` na raiz do seu cartão SD. Se o seu arquivo `boot.firm` está sendo constantemente detectado como corrompido, você pode querer verificar se há erros no seu cartão SD ([Windows](h2testw-\(windows\)), [Linux](f3-\(linux\)), ou [macOS](f3xquickt-\(mac\))). Além disso, note que o 3DS tende a ter problemas com arquivos extraídos usando WinRAR.
+Você pode obter um novo arquivo `boot.firm` baixando a [versão mais recente do Luma3DS](https://github. om/LumaTeam/Luma3DS/releases/latest), extraindo e colocando `boot.firm` na raiz do seu cartão SD. Se o seu arquivo `boot.firm` está sendo constantemente detectado como corrompido, você pode querer verificar se há erros no seu cartão SD ([Windows](h2testw-\(windows\)), [Linux](f3-\(linux\)), ou [macOS](f3xswift-\(mac\))). Além disso, note que o 3DS tende a ter problemas com arquivos extraídos usando WinRAR.
 
 Se você ouvir um "som de pop", potencialmente acompanhado com a luz de fundo ativando por um segundo, há um problema de hardware no seu console (como um cabo de luz de fundo desconectado). Você pode ser capaz de fazer com que o seu console inicialize segurando-o em certos ângulos.
 
@@ -627,7 +627,7 @@ Se este for o caso, tente os passos abaixo, os quais são listados de mais fáci
 1. Desligue o console, remova o cartão SD, insira-o e, em seguida, ligue seu console
 2. Desligue o console, remova o cartão SD, insira-o no seu computador, baixe a versão mais recente do [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), extraia `boot.firm` do `Luma3DS.zip` e coloque-o na raiz do seu cartão SD (substituindo qualquer arquivo existente)
 3. Desligue o console, remova o cartão SD, insira-o no seu computador e reformate o cartão SD de acordo com o sistema operacional do seu computador: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)) _(isso irá apagar os dados do seu cartão SD)_
-4. Teste por erros no seu cartão SD seguindo o guia de acordo com o sistema operacional do seu computador: [Windows](h2testw-\(windows\)), [Linux](f3-\(linux\)), [macOS](f3xquickt-\(mac\)). Se o seu cartão SD estiver marcado como defeituoso, então você terá que substituir o cartão SD
+4. Teste por erros no seu cartão SD seguindo o guia de acordo com o sistema operacional do seu computador: [Windows](h2testw-\(windows\)), [Linux](f3-\(linux\)), [macOS](f3xswift-\(mac\)). Se o seu cartão SD estiver marcado como defeituoso, então você terá que substituir o cartão SD
 5. Sua entrada de cartão SD pode estar com problemas. Entre no [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) para obter mais ajuda
 
 :::
@@ -672,7 +672,7 @@ O seu console está executando o Luma3DS 6.6 ou mais antigo, provavelmente via a
 
 :::details Extended memory mode games (Pokemon Sun/Moon, Smash, etc.) don't work
 
-Isso pode ocorrer após uma CTRTransfer ou mudança de região no Old 3DS / 2DS. Siga as instruções [aqui](https://3ds.hacks.guide/region-changing#section-vi---fixing-locale-related-issues) para corrigir esse problema (ignorando os passos 3, 4, 5 e 6).
+Isso pode ocorrer após uma CTRTransfer ou mudança de região no Old 3DS / 2DS. Follow the instructions [here](region-changing#section-vi---fixing-locale-related-issues) to fix this issue (skipping steps 3, 4, 5, and 6).
 
 :::
 
