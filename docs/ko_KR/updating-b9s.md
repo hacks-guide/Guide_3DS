@@ -44,7 +44,7 @@
 ### 섹션 III - Luma3DS 업데이트
 
 1. SD 카드를 컴퓨터에 삽입해 주세요
-2. Copy everything from the Luma3DS `.zip` to the root of your SD card, replacing any existing files
+2. Luma3DS `.zip`안에 있는 모든 파일들을 SD 카드의 루트에 복사해 주세요. 이미 존재하는 파일을 덮어쓰기 해 주세요
 3. SD 카드를 콘솔에 다시 삽입해 주세요
 4. 콘솔의 전원을 켜 주세요
 5. 만약 Luma3DS 설정 메뉴로 부팅되었다면, (Start)를 눌러서 저장/리부트해 주세요
