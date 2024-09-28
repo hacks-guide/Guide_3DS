@@ -4,8 +4,8 @@
 4. Επιλέξτε «Backup Options»
 5. Επιλέξτε «SysNAND Backup»
 6. Πατήστε το (A) για επιβεβαίωση
-   - This process will take some time
-   - If you get an error, look for your issue in the [troubleshooting guide](troubleshooting#finalizing-setup)
+   - Η διαδικασία αυτή θα διαρκέσει αρκετή ώρα
+   - Εάν λάβετε σφάλμα, αναζητήστε το πρόβλημά σας στον [οδηγό επίλυσης προβλημάτων](troubleshooting#finalizing-setup)
 7. Πατήστε το (A) για να συνεχίσετε
 8. Πατήστε το (B) για να επιστρέψετε στο κύριο μενού
 9. Επιλέξτε «Exit»
@@ -13,13 +13,13 @@
 11. Μεταβείτε στο `[S:] SYSNAND VIRTUAL`
 12. Πατήστε το (A) στο 'essential.exefs\` για να το επιλέξετε
 13. Επιλέξτε «Copy to 0:/gm9/out»
-    - If you see "Destination already exists", press (A) on "Overwrite file(s)"
+    - Εάν δείτε το μήνυμα «Destination already exists», πατήστε το (A) στο «Overwrite file(s)»
 14. Πατήστε το (A) για να συνεχίσετε
 15. Κρατήστε πατημένο το (R) και πατήστε ταυτόχρονα το (Start) για να απενεργοποιήσετε την κονσόλα σας
 16. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
 17. Αντιγράψτε τα `<date>_<serialnumber>_sysnand_##.bin`, `<date>_<serialnumber>_sysnand_##.bin.sha` και `essential.exefs` από τον φάκελο `/gm9/out/` της κάρτας SD σε μια ασφαλή τοποθεσία του υπολογιστή σας
-    - Copy these backups to multiple locations (such as online file storage, an external hard drive, etc.)
-    - These backups will save you from a brick and/or help you recover files from the NAND image if anything goes wrong in the future
+    - Αντιγράψτε αυτά τα αντίγραφα ασφαλείας σε πολλαπλές τοποθεσίες (όπως σε αποθηκευτικό χώρο στο διαδίκτυο, σε εξωτερικό σκληρό δίσκο κ.λπ.)
+    - Αυτά τα αντίγραφα ασφαλείας θα σας βοηθήσουν να μην καταστήσετε την κονσόλα σας μη λειτουργική ή/και να ανακτήσετε τα αρχεία σας από το είδωλο της NAND αν κάτι πάει στραβά στο μέλλον
 18. Μετά την αντιγραφή, διαγράψτε τα αρχεία `<date>_<serialnumber>_sysnand_##.bin` και `<date>_<serialnumber>_sysnand_##.bin.sha` από τον φάκελο `/gm9/out/` της κάρτας SD
-    - The other backup files are negligible in size and may be kept on your SD card for ease of access
+    - Τα άλλα αρχεία αντιγράφων ασφαλείας είναι αμελητέα σε μέγεθος και μπορείτε να τα αποθηκεύσετε στην κάρτα SD σας για ευκολία πρόσβασης
 19. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
