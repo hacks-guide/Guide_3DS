@@ -160,7 +160,7 @@ Remember, your SD card should look like this:
 
 ::: info
 
-![MSET9 root layout](/images/screenshots/mset9/mset9-root-layout.png)
+![](/images/screenshots/mset9/mset9-root-layout.png)
 
 :::
 
