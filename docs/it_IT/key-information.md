@@ -142,7 +142,7 @@ Nella maggior parte dei sistemi operativi, per estrarre i file basta farci un do
 
 ::::
 
-:::: details (Windows only) File extensions
+:::: details (solo Windows) Estensioni dei file
 
 ::: info
 
@@ -159,7 +159,7 @@ Se hai un computer con Windows, le estensioni dopo il nome del file potrebbero e
 Se riscontri dei problemi seguendo questa guida, ci sono tanti modi per ricevere aiuto!
 
 - If you have any questions that haven't been answered on this page, their answers might be in the [Pre-Installation FAQ](faq#pre-installation-faq).
-- If you experience an issue while following this guide, you can check the [Troubleshooting](troubleshooting) page for a solution.
+- Se si verifica un problema mentre stai seguendo questa guida, puoi consultare la pagina [Risoluzione dei problemi](troubleshooting) per trovare una soluzione.
 - If the resources we've provided here aren't helping, you can get one-on-one support over at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
 
 ::: tip
