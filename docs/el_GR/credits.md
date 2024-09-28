@@ -10,14 +10,14 @@
 
 **Ειδικές ευχαριστίες:**
 
-- **Plailect**, the original creator and maintainer of this guide
-- [The guide translators](https://crowdin.com/project/3ds-guide), who make this guide more accessible around the world
-- Anyone who has ever submitted an issue, pull request, or otherwise informed us about problems on this guide
-- The historical contributors to this guide, without whom this guide would not exist today
+- Στον **Plailect**, τον αρχικό δημιουργό και συντηρητή αυτού του οδηγού
+- Στους [μεταφραστές του οδηγού](https://crowdin.com/project/3ds-guide), οι οποίοι καθιστούν αυτόν τον οδηγό πιο προσβάσιμο σε όλο τον κόσμο
+- Σε όσους έχουν υποβάλει κάποια αναφορά ζητήματος, αίτημα συγχώνευσης ή μας έχουν ενημερώσει με οποιονδήποτε άλλο τρόπο σχετικά με προβλήματα σε αυτόν τον οδηγό
+- Στους ιστορικούς συντελεστές αυτού του οδηγού, χωρίς τους οποίους αυτός ο οδηγός δεν θα υπήρχε σήμερα
 
 :::
 
-:::details Historical contributors
+:::details Ιστορικοί συντελεστές
 
 ```
 + #Cakey on freenode
