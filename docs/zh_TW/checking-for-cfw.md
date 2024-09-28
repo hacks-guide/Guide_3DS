@@ -41,7 +41,7 @@ If your console has a menuhax-based CFW setup, you should [clear HOME Menu's ext
 
 ::: tip
 
-如果您的主機顯示高於 (含) Luma3DS 8.0 的版本的話，請前往至 [還原 / 更新 CFW](restoring-cfw)
+如果您的主機顯示高於 (含) Luma3DS 8.0 的版本的話，請前往至 [還原 / 更新 CFW](restoring-updating-cfw)
 
 :::
 
