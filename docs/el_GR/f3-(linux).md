@@ -1,6 +1,6 @@
 # F3 (Linux)
 
-## Required Reading
+## Απαραίτητη ανάγνωση
 
 Αυτή είναι μια πρόσθετη ενότητα για τον έλεγχο την κάρτας SD για σφάλματα χρησιμοποιώντας το F3.
 
@@ -8,11 +8,11 @@
 
 Αυτή η σελίδα αφορά μόνο χρήστες Linux. Εάν δεν χρησιμοποιείτε Linux, δείτε τις σελίδες [H2testw (Windows)](h2testw-\(windows\)) ή [F3XSwift (Mac)](f3xswift-\(mac\)).
 
-## What You Need
+## Τι χρειάζεστε
 
-- The latest version of [F3](https://github.com/AltraMayor/f3/releases/tag/v8.0)
+- Την πιο πρόσφατη έκδοση του [F3](https://github.com/AltraMayor/f3/releases/tag/v8.0)
 
-## Instructions
+## Οδηγίες
 
 1. Αποσυμπιέστε το αρχείο `.zip` του f3
 2. Μεταφερθείτε στον κατάλογο του f3 χρησιμοποιώντας την εντολή `cd`
@@ -66,6 +66,6 @@ ___
 
 ::: tip
 
-Return to [Get Started](get-started)
+Επιστροφή στην [Έναρξη](get-started)
 
 :::
