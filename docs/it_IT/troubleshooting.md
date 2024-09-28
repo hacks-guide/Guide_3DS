@@ -672,7 +672,7 @@ La tua console sta eseguendo Luma3DS 6.6 o precedente, probabilmente tramite arm
 
 :::details Extended memory mode games (Pokemon Sun/Moon, Smash, etc.) don't work
 
-Questo può verificarsi dopo un CTRTransfer o dopo un cambio di regione su Old 3DS / 2DS. Segui le istruzioni indicate [qui](https://3ds.hacks.guide/region-changing#section-vi---fixing-locale-related-issues) per rimediare al problema (saltando i passaggi 3, 4, 5 e 6).
+Questo può verificarsi dopo un CTRTransfer o dopo un cambio di regione su Old 3DS / 2DS. Follow the instructions [here](region-changing#section-vi---fixing-locale-related-issues) to fix this issue (skipping steps 3, 4, 5, and 6).
 
 :::
 
