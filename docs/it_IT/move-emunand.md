@@ -1,6 +1,6 @@
 # Move EmuNAND
 
-## Required Reading
+## Lettura necessaria
 
 In questa sezione aggiuntiva verrà spiegato come spostare il contenuto di una EmuNAND preesistente nel nuovo CFW SysNAND, per poi rimuovere la vecchia partizione EmuNAND. Tieni presente che i termini EmuNAND e RedNAND si riferiscono a due implementazioni leggermente diverse [dello stesso concetto](http://3dbrew.org/wiki/NAND_Redirection).
 
@@ -12,14 +12,14 @@ DEVI aver già installato Luma3DS e boot9strap per poter proseguire.
 
 :::
 
-## What You Need
+## Cosa serve
 
 - An existing EmuNAND
-- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
+- L'ultima versione di [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (il file `.zip` di GodMode9)
 
-## Instructions
+## Istruzioni
 
-### Section I - Prep Work
+### Sezione I - Preparazione
 
 1. Spegni la tua console
 2. Inserisci la scheda SD nel tuo computer
@@ -71,13 +71,13 @@ Per identificare il Title ID di un file `<TitleID>.gbavc.sav`, puoi controllare 
 :::
 
 1. Esegui i seguenti passaggi per ogni gioco GBA della Virtual Console del quale vuoi mantenere i salvataggi:
-   - Launch the GBA VC game
-   - Exit the GBA VC game
+   - Avvia il gioco GBA
+   - Esci dal gioco GBA
    - Boot your console while holding (Start) to launch the Luma3DS chainloader menu
    - Launch GodMode9 by pressing (A)
    - Entra nella cartella `[S:] SYSNAND VIRTUAL`
-   - Press (A) on `agbsave.bin` to select it
-   - Select "AGBSAVE options..."
+   - Premi (A) su `agbsave.bin` per selezionarlo
+   - Seleziona "AGBSAVE options..."
    - Select "Dump GBA VC save"
    - Premi il pulsante (A) per continuare
    - Premi (Start) per riavviare la tua console
@@ -132,21 +132,21 @@ Per identificare il Title ID di un file `<TitleID>.gbavc.sav`, puoi controllare 
 1. Tenendo premuto (R), premi (Start) per spegnere la console
 2. Avvia la tua console nella SysNAND
 3. Esegui i seguenti passaggi per ogni gioco GBA della Virtual Console del quale vuoi ripristinare i salvataggi:
-   - Launch the GBA VC game
-   - Exit the GBA VC game
+   - Avvia il gioco GBA
+   - Esci dal gioco GBA
    - Boot your console while holding (Start) to launch the Luma3DS chainloader menu
    - Launch GodMode9 by pressing (A)
    - Entra nella cartella `[0:] SDCARD` -> `gm9`
    - Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
    - Premi (B) per ritornare al menu principale
    - Entra nella cartella `[S:] SYSNAND VIRTUAL`
-   - Press (A) on `agbsave.bin` to select it
-   - Select "AGBSAVE options..."
+   - Premi (A) su `agbsave.bin` per selezionarlo
+   - Seleziona "AGBSAVE options..."
    - Select "Inject GBA VC save"
    - Premi il pulsante (A) per continuare
    - Premi (Start) per riavviare la tua console
-   - Launch the GBA VC game
-   - Exit the GBA VC game
+   - Avvia il gioco GBA
+   - Esci dal gioco GBA
 
 ### Section VII - Backup SysNAND
 
