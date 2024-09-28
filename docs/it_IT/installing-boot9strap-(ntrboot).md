@@ -45,7 +45,7 @@ Per usare i link [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) di quest
 2. Spegni la tua console
 3. Inserisci la flashcart nella tua console
 4. Posiziona il magnete sulla console per attivare il sensore della modalità riposo
-   - On old 2DS, you should instead enable the sleep mode switch
+   - Su Old 2DS, devi invece attivare la levetta della modalità riposo
 5. Tieni premuto i pulsanti (Start) + (Select) + (X) + (Accensione) per alcuni secondi, quindi rilascia i pulsanti
    - Data la complessita dell'operazione, potrebbero volerci più tentativi
 6. Se l'exploit è andato a buon fine, si avvierà SafeB9SInstaller
