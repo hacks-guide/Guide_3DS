@@ -34,7 +34,7 @@ Ebben a fejezetben fel fogod másolni a fájlokat, amik a browserhax és az univ
 3. Másold az `otherapp.bin`-t az SD kártyád gyökerébe, majd nevezd át `arm11code.bin` névre
    - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
    - If you do not see the `.bin` extension, do not add it to the end of the filename
-4. Másold át a `boot.firm` és `boot.3dsx` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
+4. Copy everything from the Luma3DS `.zip` to the root of your SD card
 5. Hozz létre egy mappát `boot9strap` néven az SD kártya gyökerében
 6. Másold át a `boot9strap.firm` fájlt és a `boot9strap.firm.sha` fájlt a boot9strap `.zip` fájlból az SD kártyád `/boot9strap/` mappájába
 7. Másold át a `SafeB9SInstaller.bin` fájlt a SafeB9SInstaller `.zip`-ből az SD kártyád gyökerébe
