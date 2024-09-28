@@ -1,25 +1,25 @@
 1. Πατήστε το (Home) για να εμφανιστεί το μενού ενεργειών
-1. Επιλέξτε «Scripts...»
-1. Επιλέξτε «GM9Megascript»
-1. Επιλέξτε «Backup Options»
-1. Επιλέξτε «SysNAND Backup»
-1. Πατήστε το (A) για επιβεβαίωση
-    + Η διαδικασία αυτή θα διαρκέσει αρκετή ώρα
-    + Εάν λάβετε σφάλμα, αναζητήστε το πρόβλημά σας στον [οδηγό επίλυσης προβλημάτων](troubleshooting#finalizing-setup)
-1. Πατήστε το (A) για να συνεχίσετε
-1. Πατήστε το (B) για να επιστρέψετε στο κύριο μενού
-1. Επιλέξτε «Exit»
-1. Πατήστε το (Α) για να κλειδώσετε ξανά τα δικαιώματα εγγραφής εάν σας ζητηθεί
-1. Μεταβείτε στο `[S:] SYSNAND VIRTUAL`
-1. Πατήστε το (A) στο 'essential.exefs` για να το επιλέξετε
-1. Επιλέξτε «Copy to 0:/gm9/out»
-    + Εάν δείτε το μήνυμα «Destination already exists», πατήστε το (A) στο «Overwrite file(s)»
-1. Πατήστε το (A) για να συνεχίσετε
-1. Κρατήστε πατημένο το (R) και πατήστε ταυτόχρονα το (Start) για να απενεργοποιήσετε την κονσόλα σας
-1. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
-1. Αντιγράψτε τα `<date>_<serialnumber>_sysnand_##.bin`, `<date>_<serialnumber>_sysnand_##.bin.sha` και `essential.exefs` από τον φάκελο `/gm9/out/` της κάρτας SD σε μια ασφαλή τοποθεσία του υπολογιστή σας
-    + Αντιγράψτε αυτά τα αντίγραφα ασφαλείας σε πολλαπλές τοποθεσίες (όπως σε αποθηκευτικό χώρο στο διαδίκτυο, σε εξωτερικό σκληρό δίσκο κ.λπ.)
-    + Αυτά τα αντίγραφα ασφαλείας θα σας βοηθήσουν να μην καταστήσετε την κονσόλα σας μη λειτουργική ή/και να ανακτήσετε τα αρχεία σας από το είδωλο της NAND αν κάτι πάει στραβά στο μέλλον
-1. Μετά την αντιγραφή, διαγράψτε τα αρχεία `<date>_<serialnumber>_sysnand_##.bin` και `<date>_<serialnumber>_sysnand_##.bin.sha` από τον φάκελο `/gm9/out/` της κάρτας SD
-    + Τα άλλα αρχεία αντιγράφων ασφαλείας είναι αμελητέα σε μέγεθος και μπορείτε να τα αποθηκεύσετε στην κάρτα SD σας για ευκολία πρόσβασης
-1. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
+2. Επιλέξτε «Scripts...»
+3. Επιλέξτε «GM9Megascript»
+4. Επιλέξτε «Backup Options»
+5. Επιλέξτε «SysNAND Backup»
+6. Πατήστε το (A) για επιβεβαίωση
+   - This process will take some time
+   - If you get an error, look for your issue in the [troubleshooting guide](troubleshooting#finalizing-setup)
+7. Πατήστε το (A) για να συνεχίσετε
+8. Πατήστε το (B) για να επιστρέψετε στο κύριο μενού
+9. Επιλέξτε «Exit»
+10. Πατήστε το (Α) για να κλειδώσετε ξανά τα δικαιώματα εγγραφής εάν σας ζητηθεί
+11. Μεταβείτε στο `[S:] SYSNAND VIRTUAL`
+12. Πατήστε το (A) στο 'essential.exefs\` για να το επιλέξετε
+13. Επιλέξτε «Copy to 0:/gm9/out»
+    - If you see "Destination already exists", press (A) on "Overwrite file(s)"
+14. Πατήστε το (A) για να συνεχίσετε
+15. Κρατήστε πατημένο το (R) και πατήστε ταυτόχρονα το (Start) για να απενεργοποιήσετε την κονσόλα σας
+16. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
+17. Αντιγράψτε τα `<date>_<serialnumber>_sysnand_##.bin`, `<date>_<serialnumber>_sysnand_##.bin.sha` και `essential.exefs` από τον φάκελο `/gm9/out/` της κάρτας SD σε μια ασφαλή τοποθεσία του υπολογιστή σας
+    - Copy these backups to multiple locations (such as online file storage, an external hard drive, etc.)
+    - These backups will save you from a brick and/or help you recover files from the NAND image if anything goes wrong in the future
+18. Μετά την αντιγραφή, διαγράψτε τα αρχεία `<date>_<serialnumber>_sysnand_##.bin` και `<date>_<serialnumber>_sysnand_##.bin.sha` από τον φάκελο `/gm9/out/` της κάρτας SD
+    - The other backup files are negligible in size and may be kept on your SD card for ease of access
+19. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
