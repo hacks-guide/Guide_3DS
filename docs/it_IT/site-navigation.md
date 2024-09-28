@@ -19,7 +19,7 @@
 - [Verifica del CFW](checking-for-cfw)
 - [Contribuisci](contribute)
 - [CTRTransfer](ctrtransfer)
-- [Dump di titoli e schede di gioco](dumping-titles-and-game-cartuccie)
+- [Dump di titoli e schede di gioco](dumping-titles-and-game-cartridges)
 - [F3 (Linux)](f3-\(linux\))
 - [F3X (Mac)](f3x-\(mac\))
 - [F3XSwift (Mac)](f3xswift-\(mac\))
@@ -53,6 +53,6 @@
 - [Ripristinare / Aggiornare il CFW](restoring-updating-cfw)
 - [Risoluzione dei problemi](troubleshooting)
 - [Disinstallare il CFW](uninstall-cfw)
-- [Aggiornare B9S](updating-a9lh)
+- [Aggiornare B9S](updating-b9s)
 
 :::
