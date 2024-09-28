@@ -1,6 +1,6 @@
 # Ολοκλήρωση εγκατάστασης
 
-## Required Reading
+## Απαραίτητη ανάγνωση
 
 Το αρχείο `boot.firm` είναι αυτό που εκκινείται από το ίδιο το boot9strap, αφού ολοκληρωθεί η φόρτωσή του από τη NAND. Σε αυτήν την περίπτωση, χρησιμοποιούμε το Luma3DS της [LumaTeam](https://github.com/LumaTeam/) για να τροποποιήσουμε την κονσόλα, επιτρέποντάς της να εκτελεί λογισμικό homebrew.
 
@@ -22,7 +22,7 @@
 
 :::
 
-## Compatibility Notes
+## Σημειώσεις συμβατότητας
 
 ::: warning
 
@@ -36,14 +36,14 @@
 
 :::
 
-## What You Need
+## Τι χρειάζεστε
 
 - [x_finalize_helper.firm](https://github.com/hacks-guide/finalize/releases/latest/download/x_finalize_helper.firm) (direct download)
 - [finalize.romfs](https://github.com/hacks-guide/finalize/releases/latest/download/finalize.romfs) (direct download)
 
-## Instructions
+## Οδηγίες
 
-### Section I - Prep Work
+### Ενότητα I - Προετοιμασία
 
 Σε αυτήν την ενότητα, θα αντιγράψετε τα αρχεία που απαιτούνται για τις υπόλοιπες οδηγίες αυτής της σελίδας.
 
