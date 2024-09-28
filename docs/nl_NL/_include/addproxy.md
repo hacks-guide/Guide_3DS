@@ -1,15 +1,21 @@
+::: info
+
 Als je dat nog niet gedaan hebt, zorg ervoor dat je een werkende internetverbinding hebt ingesteld op je console.
-{: .notice--info}
+
+:::
+
+::: tip
 
 A visual guide is available for this section [here](/images/screenshots/set-proxy.png).
-{: .notice--success}
+
+:::
 
 1. Open de System Settings app
-1. Navigeer naar `Internet Settings` -> `Connection Settings`
-1. Klik op je netwerk connectie slot en navigeer naar `Change Settings` -> `Next Page (rechter pijl)` -> `Proxy Settings`
-1. Zet "Proxy Settings" op "Yes" en klik vervolgens op "Detailed Setup"
-1. Set the Proxy Server to `ssloth.nintendohomebrew.com`, and the Port to `8080`
-1. Klik op OK en klik vervolgens op Save
-1. Wanneer gevraagd, klik op "Test" om de verbindingstest uit te voeren
-    + De test zou moeten lukken
-1. Klik op "OK" om verder te gaan
+2. Navigate to `Internet Settings` -> `Connection Settings`
+3. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
+4. Zet "Proxy Settings" op "Yes" en klik vervolgens op "Detailed Setup"
+5. Set the Proxy Server to `ssloth.nintendohomebrew.com`, and the Port to `8080`
+6. Click OK, then click Save
+7. When prompted, click "Test" to perform the connection test
+   - The test should succeed
+8. Click "OK" to continue
