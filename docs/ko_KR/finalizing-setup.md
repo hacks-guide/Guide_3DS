@@ -1,6 +1,6 @@
 # 마무리 단계
 
-## Required Reading
+## 중요
 
 `boot.firm` 파일은 boot9strap이 NAND에서 로딩을 완료한 후 실행하는 것입니다. 이번 경우에서는, [LumaTeam](https://github.com/LumaTeam/)의 Luma3DS를 사용해서 콘솔을 패치하고, 홈브류 소프트웨어를 실행할 수 있도록 합니다.
 
@@ -22,7 +22,7 @@
 
 :::
 
-## Compatibility Notes
+## 호환성 안내
 
 ::: warning
 
@@ -36,14 +36,14 @@
 
 :::
 
-## What You Need
+## 준비물
 
 - [x_finalize_helper.firm](https://github.com/hacks-guide/finalize/releases/latest/download/x_finalize_helper.firm) (direct download)
 - [finalize.romfs](https://github.com/hacks-guide/finalize/releases/latest/download/finalize.romfs) (direct download)
 
-## Instructions
+## 진행 방법
 
-### Section I - Prep Work
+### 섹션 I - 준비 작업
 
 이 섹션에서는 이 페이지의 남은 과정을 따라가기 위한 나머지 필수 파일을 복사하게 됩니다.
 
