@@ -70,7 +70,7 @@ Bans are no longer possible because Nintendo Network services have been shut dow
 
 :::
 
-:::details What size SD card can I use?<
+:::details What size SD card can I use?
 
 您將需要至少 1.5GB 的可用 SD 卡空間才能完全遵循本手冊。 雖然任天堂官方只有列出 3DS 可用的 SD 卡最大容量為 32GB，但是實際上只要能格式化成 FAT32 的記憶卡都可以使用。 目前已知較大的 SD 卡可能會造成 GBA 和自定義主題的相關問題，因此不建議使用大於128GB的SD卡。
 
@@ -164,6 +164,6 @@ Your old setup (including your EmuNAND, if you have one) can usually be directly
 
 :::details How do I move saves from an existing Gateway setup to a more modern setup?
 
-**A:** 請見[此帖子](https://gbatemp.net/threads/425743/)。
+See [this thread](https://gbatemp.net/threads/425743/).
 
 :::
