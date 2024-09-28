@@ -60,7 +60,7 @@ Note que isto não é necessário para nenhum outro tipo de jogo de Virtual Cons
 
 ::: info
 
-O jogo vai ser criado na pasta '/gm9/out/' do cartão SD com o nome '<TitleID>.gbavc.sav'.
+O jogo vai ser criado na pasta '/gm9/out/' do cartão SD com o nome `<TitleID>.gbavc.sav`.
 
 :::
 
