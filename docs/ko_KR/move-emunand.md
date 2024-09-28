@@ -1,6 +1,6 @@
-# Move EmuNAND
+# EmuNAND기반 데이터 이동
 
-## Required Reading
+## 중요
 
 이 페이지는 이전 EmuNAND의 데이터를 새로운 CFW SysNAND로 옮기고 이전 EmuNAND 파티션을 제거하는 방법을 안내하는 부가 섹션입니다. EmuNAND와 RedNAND는 [동일한 개념](http://3dbrew.org/wiki/NAND_Redirection)을 다른 방식으로 구현한 것입니다.
 
@@ -12,14 +12,14 @@
 
 :::
 
-## What You Need
+## 준비물
 
-- An existing EmuNAND
-- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
+- 설치된 EmuNAND
+- 최신 버전의 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (GodMode9 `.zip` 파일)
 
-## Instructions
+## 진행 방법
 
-### Section I - Prep Work
+### 섹션 I - 준비 작업
 
 1. 콘솔의 전원을 꺼 주세요
 2. SD 카드를 컴퓨터에 삽입해 주세요
@@ -27,7 +27,7 @@
 4. SD 카드의 루트로 GodMode9 `.zip`안에 압축이 되있는 `gm9` 폴더를 복사해 주세요
 5. SD 카드를 콘솔에 다시 삽입해 주세요
 
-### Section II - Backup SysNAND DSiWare Saves
+### 섹션 II - SysNAND DSiWare 저장 데이터 백업
 
 ::: info
 
@@ -41,10 +41,10 @@ DSiWare 게임이나 저장 데이터에 대해 신경 쓰지 않는다연 이 �
    - 만약 RTC 날짜와 시간을 수정해야 했다면, 이 가이드 끝나고 본체 설정에서도 시간을 수정해야 합니다
 4. `[2:] SYSNAND TWLN` -> `title`로 이동해 주세요
 5. `00030004` 폴더에 (R) 을 누른 채 (A) 를 눌러 선택하고 "Copy to 0:/gm9/out"을 선택해 주세요
-   - This process may take some time if you have many DSiWare games
+   - 이 과정은 콘솔에 DSiWare 게임이 많다면 시간이 좀 걸릴 수 있습니다
 6. (B)를 두 번 눌러 메인 메뉴로 돌아가 주세요
 
-### Section III - Backup GBA VC Saves
+### 섹션 III - GBA VC 저장 데이터 백업
 
 ::: info
 
@@ -71,31 +71,31 @@ GBA VC 게임이나 저장 데이터에 대해 신경 쓰지 않는다면 이 �
 :::
 
 1. 과정대로 진행해 백업하고자 하는 GBA VC 게임 저장 데이터를 저장해 주세요:
-   - Launch the GBA VC game
-   - Exit the GBA VC game
-   - Boot your console while holding (Start) to launch the Luma3DS chainloader menu
-   - Launch GodMode9 by pressing (A)
+   - GBA VC 게임을 실행해 주세요
+   - GBA VC 게임을 종료해 주세요
+   - (Start)를 누른 채 콘솔의 전원을 켜 Luma3DS chainloader 메뉴를 실행해 주세요
+   - (A)를 눌러 GodMode9을 실행해 주세요
    - `[S:] SYSNAND VIRTUAL` 폴더로 이동해 주세요
-   - Press (A) on `agbsave.bin` to select it
-   - Select "AGBSAVE options..."
-   - Select "Dump GBA VC save"
+   - `agbsave.bin`에서 (A)를 눌러 선택해 주세요
+   - "AGBSAVE options..."를 선택해 주세요
+   - "Dump GBA VC save"를 선택해 주세요
    - (A)를 눌러 진행해 주세요
    - (Start)를 눌러 콘솔을 다시 시작해 주세요
 
-### Section IV - Copy EmuNAND to SysNAND
+### 섹션 IV - EmuNAND를 SysNAND로 복사
 
 1. (Start) 를 길게 누르고, 이 상태에서 콘솔의 전원을 켜 주세요. GodMode9이 실행될 겁니다
 2. `[E:] EMUNAND VIRTUAL` 로 이동해 주세요
 3. `nand.bin`에 (A)를 눌러 선택하고 "NAND image options..."를 선택하고 "Restore SysNAND (safe)"를 선택해 주세요
 4. (A)를 눌려 SysNAND 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요
-   - This will not overwrite your boot9strap installation
+   - 이 과정은 boot9strap를 덮어쓰지 않습니다
 5. SysNAND (lvl1) 쓰기 잠금을 풀기 위해 주어진 키 조합을 입력해 주세요
    - 이 과정은 시간이 좀 걸릴 것입니다
 6. 작업이 완료되면 (A)를 눌러서 계속해 주세요
 7. 만약 메세지가 표시되면, (B) 를 눌러서 쓰기잠금을 거부해 주세요
 8. (B)를 눌러 메인 메뉴로 돌아가 주세요
 
-### Section V - Restore DSiWare Saves
+### 섹션 V - DSiWare 저장 데이터 파일 복원
 
 ::: info
 
@@ -111,11 +111,11 @@ GBA VC 게임이나 저장 데이터에 대해 신경 쓰지 않는다면 이 �
 6. "Copy path(s)"를 선택해 주세요
 7. (A)를 눌려 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요
 8. "Overwrite file(s)"를 선택해 주세요
-   - This process may take some time if you have many DSiWare games
+   - 이 과정은 콘솔에 DSiWare 게임이 많다면 시간이 좀 걸릴 수 있습니다
 9. 만약 메세지가 표시되면, (B) 를 눌러서 쓰기잠금을 거부해 주세요
 10. (B)를 두 번 눌러 메인 메뉴로 돌아가 주세요
 
-### Section VI - Restore GBA VC Saves
+### 섹션 VI - GBA VC 저장 데이터 파일 복원
 
 ::: info
 
@@ -132,23 +132,23 @@ GBA VC 게임이나 저장 데이터에 대해 신경 쓰지 않는다면 이 �
 1. (R)을 누른 채 (Start)를 눌러 콘솔의 전원을 꺼 주세요
 2. 콘솔을 SysNAND 상태로 시작해 주세요
 3. 과정대로 진행해 모든 GBA VC 게임 저장 데이터를 백업해 주세요
-   - Launch the GBA VC game
-   - Exit the GBA VC game
-   - Boot your console while holding (Start) to launch the Luma3DS chainloader menu
-   - Launch GodMode9 by pressing (A)
+   - GBA VC 게임을 실행해 주세요
+   - GBA VC 게임을 종료해 주세요
+   - (Start)를 누른 채 콘솔의 전원을 켜 Luma3DS chainloader 메뉴를 실행해 주세요
+   - (A)를 눌러 GodMode9을 실행해 주세요
    - `[0:] SDCARD` -> `gm9`으로 이동해 주세요
-   - Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
+   - 복구하길 희망하는 `<TitleID>.gbavc.sav`에서 (Y)를 눌러 복사해 주세요
    - (B)를 눌러 메인 메뉴로 돌아가 주세요
    - `[S:] SYSNAND VIRTUAL` 폴더로 이동해 주세요
-   - Press (A) on `agbsave.bin` to select it
-   - Select "AGBSAVE options..."
-   - Select "Inject GBA VC save"
+   - `agbsave.bin`에서 (A)를 눌러 선택해 주세요
+   - "AGBSAVE options..."를 선택해 주세요
+   - "Inject GBA VC save"를 선택해 주세요
    - (A)를 눌러 진행해 주세요
    - (Start)를 눌러 콘솔을 다시 시작해 주세요
-   - Launch the GBA VC game
-   - Exit the GBA VC game
+   - GBA VC 게임을 실행해 주세요
+   - GBA VC 게임을 종료해 주세요
 
-### Section VII - Backup SysNAND
+### 섹션 VII - SysNAND 백업
 
 1. (Start) 를 길게 누르고, 이 상태에서 콘솔의 전원을 켜 주세요. GodMode9이 실행될 겁니다
 
@@ -156,7 +156,7 @@ GBA VC 게임이나 저장 데이터에 대해 신경 쓰지 않는다면 이 �
 
 1. **SD 카드의 모든 파일을 컴퓨터에 백업해두세요. 다음 단계에서 SD 카드의 모든 파일이 삭제됩니다.**
 
-### Section VIII - Format SD card
+### 섹션 VIII - SD 카드 포맷
 
 1. (Start) 를 길게 누르고, 이 상태에서 콘솔의 전원을 켜 주세요. GodMode9이 실행될 겁니다
 
@@ -165,7 +165,7 @@ GBA VC 게임이나 저장 데이터에 대해 신경 쓰지 않는다면 이 �
 1. (R) 버튼과 (B)를 동시에 눌러 SD 카드를 뺄 준비를 해 주세요
 2. SD 카드를 컴퓨터에 삽입해 주세요
 3. SD 카드의 모든 파일을 도로 복사해 주세요
-   - Ensure you replace the `boot.firm` file on your SD card with the one from your backup
+   - SD 카드에 있는 `boot.firm`을 백업한 파일로 교체했는지 확인해 주세요
 4. SD 카드를 콘솔에 다시 삽입해 주세요
 5. (A)를 눌러 SD 카드를 다시 마운트해 주세요
 6. (Start)를 눌러 콘솔을 다시 시작해 주세요
@@ -174,6 +174,6 @@ ___
 
 ::: tip
 
-Return to [Finalizing Setup](finalizing-setup)
+[마무리 단계](finalizing-setup) 로 돌아갑니다
 
 :::
