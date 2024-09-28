@@ -44,7 +44,7 @@ Se durante questa sezione ti verrà chiesto di sovrascrivere dei file sulla tua 
 ### Section III - Update Luma3DS
 
 1. Inserisci la scheda SD nel tuo computer
-2. Copy everything from the Luma3DS `.zip` to the root of your SD card, replacing any existing files
+2. Copia tutto dall'archivio `.zip` di Luma3DS nella directory principale della tua scheda SD, sovrascrivendo i file già esistenti
 3. Reinserisci la scheda SD nella tua console
 4. Accendi la tua console
 5. Se la tua console si è avviata nel menu di configurazione di Luma3DS, premi (Start) per salvare e riavviare
