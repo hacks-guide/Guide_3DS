@@ -2,7 +2,7 @@
 
 Questa pagina offre consigli per la risoluzione di problemi comuni. Se non riesci a risolvere il tuo problema con i consigli su questa pagina, entra nel [canale Discord di Nintendo Homebrew](https://discord. g/MWxPgEp) e descrivi il tuo problema, indicando quello che hai già provato.
 
-:::details Table of Contents
+:::details Indice
 
 Utilizzato su più pagine:
 
@@ -10,24 +10,24 @@ Utilizzato su più pagine:
 
 Pagine guida:
 
-- [Installing boot9strap (Soundhax)](#installing-boot9strap-soundhax)
-- [Installing boot9strap (MSET9)](#installing-boot9strap-mset9)
-- [Installing boot9strap (SSLoth-Browser)](#installing-boot9strap-ssloth-browser)
-- [Installing boot9strap (super-skaterhax)](#installing-boot9strap-super-skaterhax)
-- [Finalizing Setup](#finalizing-setup)
+- [Installazione di boot9strap (Soundhax)](#installing-boot9strap-soundhax)
+- [Installazione di boot9strap (MSET9)](#installing-boot9strap-mset9)
+- [Installazione di boot9strap (SSLoth-Browser)](#installing-boot9strap-ssloth-browser)
+- [Installazione di boot9strap (super-skaterhax)](#installing-boot9strap-super-skaterhax)
+- [Completamento dell'installazione](#finalizing-setup)
 
 Problemi dopo l’installazione:
 
-- [Boot issues](#boot-issues-on-consoles-with-custom-firmware)
+- [Problemi di avvio](#boot-issues-on-consoles-with-custom-firmware)
 - [Software issues](#software-issues-on-consoles-with-custom-firmware)
 
 :::
 
-## Issues with SafeB9SInstaller
+## Problemi con SafeB9SInstaller
 
-### Before opening SafeB9SInstaller
+### Prima di avviare SafeB9SInstaller
 
-:::details Failed to open SafeB9SInstaller.bin
+:::details Impossibile aprire SafeB9SInstaller.bin
 
 Il file `SafeB9SInstaller.bin` è mancante o mal posizionato. Scarica l'ultima versione di [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip), estraila e posiziona il file 'SafeB9SInstaller.bin' della directory principale della tua scheda SD. Non aggiungere l'estensione `.bin` se non la vedi presente.
 
@@ -59,7 +59,7 @@ Ti manca il file `secret_sector.bin` dalla cartella `boot9strap`, o la cartella 
 
 :::
 
-:::details Something else
+:::details Qualcos'altro
 
 Entra nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) per ricevere assistenza, e indica il messaggio che ricevi.
 
@@ -67,27 +67,27 @@ Entra nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) per 
 
 ## Installazione di boot9strap (Soundhax)
 
-:::details Red/purple/pink and white screen after running Soundhax
+:::details Schermata rossa/viola/rosa e bianca dopo aver eseguito Soundhax
 
-If your console is on system version 9.4.0, 9.5.0, or 9.6.0, you may be encountering a bug with an old version of universal-otherapp. Download the latest version from [here](https://github.com/TuxSH/universal-otherapp/releases/latest).
+Se la tua console è alla versione di sistema 9.4.0, 9.5.0 o 9.6.0, potresti riscontrare problemi usando una vecchia versione di universal-otherapp. Scarica l'ultima versione da [qui. Scarica l'ultima versione da [qui](https://github.com/TuxSH/universal-otherapp/releases/latest).
 
 Se la tua console non ha queste versioni di sistema, probabilmente hai già un custom firmware. Dovresti [verificare la presenza di un CFW](checking-for-cfw).
 
 :::
 
-:::details "An error has occurred, forcing the software to close..." (white message box)
+:::details "Si è verificato un errore che ha provocato la chiusura del software..." (messaggio d'errore su schermata bianca)
 
 C'è un problema con il tuo file `otherapp.bin` (è mancante, mal posizionato o corrotto). Scarica l'ultima versione di [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) e inseriscila nella directory principale della tua scheda SD.
 
 :::
 
-:::details "Could not play"
+:::details "Impossibile riprodurre"
 
 Hai il file Soundhax sbagliato per la tua console e regione, o la tua console è incompatibile con Soundhax. In quest'ultimo caso, dovrai scoprire la versione presente sul tuo 3DS. Entra nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) per chiedere assistenza.
 
 :::
 
-:::details Failed to mount the SD card!
+:::details Impossibile leggere la scheda SD!
 
 Se il problema non si risolve, prova ad usare un'altra scheda SD.
 
@@ -129,12 +129,12 @@ Se non funziona, la scheda SD deve essere formattata:
 
 :::details Title database: Not initialized!
 
-Ensure that you have reset the title database.
+Assicurati di aver resettato il database dei titoli.
 
-- Please power on your console with your SD inserted
+- Accendi la console con la scheda SD inserita
 - Avvia le Impostazioni della console e vai su `Gestione dati` -> `Nintendo 3DS` -> `Software` -> Reset ([immagine](/images/screenshots/database-reset.jpg))
   - Non verranno cancellati i tuoi dati
-- If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
+- Se ricevi una conferma di ripristino, al termine spegni e riaccendi la console e ricomincia dalla [Sezione I Passo 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
 
 Se _non_ ricevi una conferma di ripristino, la tua scheda SD deve essere formattata:
 
@@ -146,7 +146,7 @@ Se _non_ ricevi una conferma di ripristino, la tua scheda SD deve essere formatt
 
 1. Digita il numero corrispondente al modello di console e alla versione, quindi premi Invio
 2. Digita `2` quindi premi Invio per controllare lo stato di MSET9
-   - This will create the dummy databases again
+   - Verranno ricreati nuovamente i database fittizi
 3. Chiudi la finestra dello script MSET9
 4. Ricomincia dalla [Sezione I Passo 12](installing-boot9strap-\(mset9-cli\)#section-i---prep-work).
 
@@ -187,12 +187,12 @@ Hai più cartelle ID0. Per determinare la cartella corretta, segui queste istruz
 2. Reinserisci la scheda SD nella tua console
 3. Accendi la tua console
 4. Attendi che la console generi i dati nella scheda SD
-   - Your applications will have disappeared. È normale e verrà risolto a breve
+   - Le tue applicazioni saranno scomparse. È normale e verrà risolto a breve
 5. Spegni la tua console
 6. Inserisci la scheda SD nel tuo computer
 7. Entra nella cartella `Nintendo 3DS` della tua scheda SD
 8. Trascrivi i primi caratteri della cartella che vedi
-   - This is your true ID0, which we will keep in the real Nintendo 3DS folder
+   - Questo è il tuo vero ID0, che manterremo nella cartella Nintendo 3DS reale
 9. Elimina la cartella ID0 dalla cartella `Nintendo 3DS` corrente
 10. Sposta la vera cartella ID0 dalla cartella `BACKUP_Nintendo 3DS` nella cartella `Nintendo 3DS`
 11. Se esiste, sposta la cartella `Private` dalla cartella `BACKUP_Nintendo 3DS` nella cartella `Nintendo 3DS`
@@ -227,7 +227,7 @@ Uno o più file necessari all'esecuzione di MSET9 mancano o sono corrotti. Ri-sc
 
 :::
 
-:::details Red screen after reinserting SD card (Section II Step 11)
+:::details Schermata rossa dopo il reinserimento della scheda SD (Sezione II Passo 11)
 
 Potrebbe mancarti il file `SafeB9S.bin` dalla directory principale della tua scheda SD, o il file potrebbe essere danneggiato. Copialo dal'archivio `.zip` di MSET9, sostituendo qualsiasi file esistente, quindi segui queste istruzioni per rimuovere il file scatenante:
 
@@ -238,7 +238,7 @@ Potrebbe mancarti il file `SafeB9S.bin` dalla directory principale della tua sch
 
 1. Digita il numero corrispondente al modello di console e alla versione, quindi premi Invio
    - Lo stato attuale dovrebbe visualizzare [Injected](/images/screenshots/mset9/mset9-injected.png)
-   - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you may [retry Section II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
+   - Se hai già rimosso il file scatenante (o non l'hai mai iniettato), lo stato attuale mostrerà [Ready](/images/screenshots/mset9/mset9-ready.png), e puoi [riprovare la Sezione II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
 2. Digita `4`, quindi premi Invio
 3. Una volta che la finestra dice "Removed trigger file", digita `0` quindi premi Invio
 4. Reinserisci la scheda SD nella console
@@ -341,7 +341,7 @@ The file `arm11code.bin` is missing or misplaced. Download the latest release of
 
 :::
 
-:::details "An error has occurred, forcing the software to close..." (white message box)
+:::details "Si è verificato un errore che ha provocato la chiusura del software..." (messaggio d'errore su schermata bianca)
 
 There may be an issue with your `arm11code.bin` file. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Non aggiungere l'estensione `.bin` se non la vedi presente.
 
@@ -401,7 +401,7 @@ Entra nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) per 
 
 :::
 
-:::details Failed to mount the SD card!
+:::details Impossibile leggere la scheda SD!
 
 Effettua il backup dei tuoi dati e riformatta la tua scheda SD come FAT32 con lo strumento consigliato a seconda del sistema operativo ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))). MiniTool Partition Wizard e lo strumento di formattazione HP (HPUSBDisk) sono noti per causare problemi con schede SD 3DS.
 
