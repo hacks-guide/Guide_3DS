@@ -34,7 +34,7 @@ SSLoth는 시스템 버전 11.13.0 및 이전 버전에 있는 사용자가 브�
 3. `otherapp.bin`을 SD 카드의 루트에 복사하고 이름을 `arm11code.bin`으로 바꿔 주세요
    - SD 카드의 루트는 SD 카드를 열 때 보이는 디렉토리이고, Nintendo 3DS 폴더가 보이지만 그 안에 들어가 있지 않은 상태의 폴더입니다
    - `.bin` 확장명이 안 보인다면 파일 끝에 추가하지 마세요
-4. Copy everything from the Luma3DS `.zip` to the root of your SD card
+4. Luma3DS `.zip`안에 있는 모든 파일들을 SD 카드의 루트에 복사해 주세요
 5. SD 카드이 루트에 `boot9strap` 라는 이름으로 새 폴더를 생성해 주세요
 6. SD 카드에 있는 `/boot9strap/` 폴더에 boot9strap `.zip` 파일 안에 압축되있는 `boot9strap.firm`과 `boot9strap.firm.sha`을 복사해 주세요
 7. SafeB9SInstaller `.zip`의 `SafeB9SInstaller.bin`을 SD 카드의 루트로 복사해 주세요
