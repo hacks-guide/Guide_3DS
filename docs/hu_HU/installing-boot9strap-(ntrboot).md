@@ -65,7 +65,7 @@ Ebben a fejezetben egyedi firmware-t fogsz telepíteni a konzolodra.
 
 1. Helyezd a konzolod SD kártyáját a számítógépedbe
 2. Töröld a `boot.firm` fájlt az SD kártyád gyökeréből
-3. Másold át a `boot.firm` és `boot.3dsx` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
+3. Copy everything from the Luma3DS `.zip` to the root of your SD card
 4. Tedd vissza az SD kártyád a konzoldba
 5. Kapcsold be a konzolod
 
