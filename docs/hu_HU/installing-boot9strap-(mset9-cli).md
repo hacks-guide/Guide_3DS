@@ -33,7 +33,6 @@ Ezen az oldalon a MSET9 szkriptet fogod használni, ami kiváltja az MSET9-et. A
 Ebben a lépésben előkészülsz az MSET9 exploitra azzal, hogy **átmenetileg**\* létrehozol egy új HOME menüt felhasználói adat nélkül, majd úgy beállítod a azt a profilt, hogy a minimum adatot tartalmazza ahhoz, hogy kiváltsa az MSET9-et. Felhasználói adataid átmenetileg eltűnnek, de vissza fognak térni az oldal befejezésekor.
 
 1. Helyezd az SD kártyád a számítógépbe
-
 2. Másolj át a mindent a MSET9 `.zip`-ből az SD kártyád gyökerébe, felülírva minden már ott lévő fájlt
 
    ::: info
@@ -41,8 +40,6 @@ Ebben a lépésben előkészülsz az MSET9 exploitra azzal, hogy **átmenetileg*
    ![](/images/screenshots/mset9/mset9-root-layout.png)
 
    :::
-
-3. Futtasd az MSET9 szkriptet:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -80,7 +77,6 @@ Ebben a lépésben előkészülsz az MSET9 exploitra azzal, hogy **átmenetileg*
    - This will not wipe any of your data
 10. Kapcsold ki a konzolod a power gomb megnyomásával, majd a Power Off felirat megérintésével az alsó képernyőn
 11. Helyezd az SD kártyád a számítógépbe
-12. Futtasd az MSET9 szkriptet:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -119,7 +115,6 @@ Ezeket a lépéseket **PONTOSAN** kell követni, így ellenőrizz MINDENT kétsz
 5. \*\* A konzolod BEKAPCSOLT állapotában, bármilyen gomb vagy a képernyő érintése nélkül\*\* vedd ki az SD kártyádat a konzolból
    - The menu will refresh and say that no SD card is inserted
 6. Helyezd az SD kártyád a számítógépbe
-7. Futtasd az MSET9 szkriptet:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -153,7 +148,6 @@ NE ugord át ezt a részt! Ha kihagyod, akkor az alkalmazások váratlanul össz
 
 1. Kapcsold ki a konzolod
 2. Helyezd az SD kártyád a számítógépbe
-3. Futtasd az MSET9 szkriptet:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
