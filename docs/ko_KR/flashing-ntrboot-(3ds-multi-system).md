@@ -14,11 +14,11 @@
 
 ## 준비물
 
-- Your ntrboot compatible flashcart
-- Two 3DS family consoles
-  - **The source 3DS**: the 3DS family console that is already running boot9strap
-  - **The target 3DS**: the 3DS family console on stock firmware
-- The v1.3 release of [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (direct download)
+- ntrboot를 설치할 수 있는 플래시카트
+- 두 개의 3DS 콘솔
+  - **소스 3DS**: 이미 boot9strap을 구동하고 있는 3DS
+  - **타겟 3DS** CFW를 설치할 3DS
+- v1.3 버전의 [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (직접 다운로드)
 - 최신 버전의 [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest) (`ntrboot_flasher.firm`)
 
 ## 진행 방법
@@ -33,7 +33,7 @@
 6. **소스 3DS**의 SD 카드를 다시 **소스 3DS**에 삽입해 주세요
 7. **소스 3DS**에 ntrboot와 호환되는 DS / DSi 플래시카트를 삽입해 주세요
 
-### Section II - Flashing ntrboot
+### 섹션 II - ntrboot 플래싱
 
 1. **소스 3DS**의 (Start) 버튼을 길게 누르며 전원을 켜주며, Luma3DS chainloader를 실행해 주세요
 2. "ntrboot_flasher"를 선택해 주세요
@@ -55,6 +55,6 @@ ___
 
 ::: tip
 
-Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
+[boot9strap 설치 (ntrboot)](installing-boot9strap-\(ntrboot\))로 계속합니다
 
 :::
