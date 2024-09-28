@@ -1,4 +1,4 @@
 Σε αυτό το σημείο, η κονσόλα σας θα εκκινηθεί στο Luma3DS από προεπιλογή.
 
-- Luma3DS does not look any different from the normal HOME Menu. Εάν η κονσόλα σας έχει εκκινηθεί στο μενού «HOME», διαθέτει custom firmware.
-- On the next page, you will install useful homebrew applications to complete your setup.
+- Το Luma3DS δεν διαφέρει καθόλου από το κανονικό μενού «HOME». Εάν η κονσόλα σας έχει εκκινηθεί στο μενού «HOME», διαθέτει custom firmware.
+- Στην επόμενη σελίδα, θα εγκαταστήσετε χρήσιμες εφαρμογές homebrew για να ολοκληρώσετε την εγκατάσταση.
