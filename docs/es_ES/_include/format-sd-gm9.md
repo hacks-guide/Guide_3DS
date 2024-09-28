@@ -1,8 +1,8 @@
-1. Presiona el botón (Home) para abrir el menú de acción
-1. Selecciona "Mas..."
-1. Selecciona "SD format menu"
-1. Selecciona "No EmuNAND"
-1. Selecciona "Auto"
-1. Presiona (A) para aceptar la etiqueta `GM9SD`
-    + Opcionalmente, puedes ingresar un nombre personalizado para la tarjeta SD
-1. Cuando se te pida, introduce la combinación de teclas mostrada para confirmar
+1. Press (Home) to bring up the action menu
+2. Select "More..."
+3. Selecciona "SD format menu"
+4. Selecciona "No EmuNAND"
+5. Selecciona "Auto"
+6. Presiona (A) para aceptar la etiqueta `GM9SD`
+   - Optionally, you may input a custom name for the SD card
+7. Cuando se te pida, introduce la combinación de teclas mostrada para confirmar
