@@ -1,12 +1,12 @@
 # Installazione di boot9strap (Soundhax)
 
-:::details Technical Details (optional)
+:::details Dettagli tecnici (opzionale)
 
 Per dettagli tecnici sugli exploit che utilizzerai in questa pagina, leggi [qui](https://github.com/nedwill/soundhax) (Soundhax) e [qui](https://github.com/TuxSH/universal-otherapp) (universal-otherapp).
 
 :::
 
-## Compatibility Notes
+## Note di compatibilità
 
 Soundhax (combinato a universal-otherapp) è compatibile con le versioni del software comprese tra 1.0.0 e 11.3.0 per tutte le regioni.
 
@@ -30,7 +30,7 @@ In questa sezione copierai i file necessari per attivare sia Soundhax che univer
 3. Copia il file `.m4a`di Soundhax nella directory principale della tua scheda SD
    - La directory principale della scheda SD è la cartella della tua scheda SD in cui è possibile visualizzare la cartella Nintendo 3DS, ma non il suo interno
 4. Copia il file `otherapp.bin` nella directory principale della tua scheda SD
-5. Copy everything from the Luma3DS `.zip` to the root of your SD card
+5. Copia tutto dall'archivio `.zip` di Luma3DS nella directory principale della tua scheda SD
 6. Crea una cartella chiamata `boot9strap` nella directory principale della tua scheda SD
 7. Copia i file `boot9strap.firm` e `boot9strap.firm.sha` dall'archivio `.zip` di boot9strap nella cartella `/boot9strap/` della tua scheda SD
 8. Copia il file `SafeB9SInstaller.bin` dall'archivio `.zip` di SafeB9SInstaller nella directory principale della tua scheda SD
@@ -69,7 +69,7 @@ In questa sezione avvierai Soundhax attraverso l'app Sound Nintendo 3DS, che uti
    - This may take many (up to 10) tries
    - If you see the message "Could not play", you are either on a system version incompatible with Soundhax or downloaded the wrong Soundhax release
    - If it freezes, force the console to power off by holding the power button, then try again
-   - If you get a different error, [follow this troubleshooting guide](troubleshooting#installing-boot9strap-soundhax)
+   - Se ottieni un errore diverso, [segui questa guida per risolvere il problema](troubleshooting#installing-boot9strap-soundhax)
 
    ::: info
 
@@ -79,7 +79,7 @@ In questa sezione avvierai Soundhax attraverso l'app Sound Nintendo 3DS, che uti
 
 4. Se l'exploit è andato a buon fine, si avvierà SafeB9SInstaller
 
-### Section III - Installing boot9strap
+### Sezione III - Installazione di boot9strap
 
 In questa sezione installerai il custom firmware sulla tua console.
 
