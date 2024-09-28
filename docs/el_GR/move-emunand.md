@@ -1,6 +1,6 @@
-# Move EmuNAND
+# Μετακίνηση της EmuNAND
 
-## Required Reading
+## Απαραίτητη ανάγνωση
 
 Αυτή είναι μια πρόσθετη ενότητα για τη μετακίνηση των περιεχομένων μιας προηγούμενης EmuNAND στο νέο CFW της SysNAND και για τη μετέπειτα αφαίρεση του παλαιού διαμερίσματος της EmuNAND. Σημειώστε ότι οι όροι «EmuNAND» και «RedNAND» αναφέρονται σε ελαφρώς διαφορετικές υλοποιήσεις [της ίδιας έννοιας](http://3dbrew.org/wiki/NAND_Redirection).
 
@@ -12,14 +12,14 @@
 
 :::
 
-## What You Need
+## Τι χρειάζεστε
 
-- An existing EmuNAND
+- Μια υπάρχουσα EmuNAND
 - The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
 
-## Instructions
+## Οδηγίες
 
-### Section I - Prep Work
+### Ενότητα I - Προετοιμασία
 
 1. Απενεργοποιήστε την κονσόλα σας
 2. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
@@ -71,14 +71,14 @@
 :::
 
 1. Ακολουθήστε την παρακάτω διαδικασία για να δημιουργήσετε αντίγραφο ασφαλείας των αποθηκευμένων δεδομένων για όποιο παιχνίδι GBA της VC επιθυμείτε:
-   - Launch the GBA VC game
-   - Exit the GBA VC game
+   - Εκκινήστε το παιχνίδι GBA στη VC
+   - Τερματίστε το παιχνίδι GBA
    - Boot your console while holding (Start) to launch the Luma3DS chainloader menu
    - Launch GodMode9 by pressing (A)
    - Μεταβείτε στο `[S:] SYSNAND VIRTUAL`
-   - Press (A) on `agbsave.bin` to select it
-   - Select "AGBSAVE options..."
-   - Select "Dump GBA VC save"
+   - Πατήστε το (A) στο 'agbsave.bin\` για να το επιλέξετε
+   - Επιλέξτε «AGBSAVE options...»
+   - Επιλέξτε «Dump GBA VC save»
    - Πατήστε το (A) για να συνεχίσετε
    - Πατήστε το (Start) για να επανεκκινήσετε την κονσόλα σας
 
@@ -90,7 +90,7 @@
 4. Πατήστε το (A) για να ξεκλειδώσετε την αντικατάσταση της SysNAND και έπειτα, εισαγάγετε τον συνδυασμό πλήκτρων που θα σας δοθεί
    - This will not overwrite your boot9strap installation
 5. Εισαγάγετε τον συνδυασμό πλήκτρων που θα σας δοθεί για να ξεκλειδώσετε την εγγραφή στη SysNAND (lvl1)
-   - This process will take some time
+   - Η διαδικασία αυτή θα διαρκέσει αρκετή ώρα
 6. Μόλις ολοκληρωθεί, πατήστε το (Α) για να συνεχίσετε
 7. Πατήστε το (B) για να αρνηθείτε το κλείδωμα των δικαιωμάτων εγγραφής εάν σας ζητηθεί
 8. Πατήστε το (B) για να επιστρέψετε στο κύριο μενού
@@ -132,21 +132,21 @@
 1. Κρατήστε πατημένο το (R) και πατήστε ταυτόχρονα το (Start) για να απενεργοποιήσετε την κονσόλα σας
 2. Ενεργοποιήστε την κονσόλα σας στη SysNAND
 3. Ακολουθήστε την παρακάτω διαδικασία για να επαναφέρετε τα αποθηκευμένα δεδομένα για όποιο παιχνίδι GBA της VC επιθυμείτε:
-   - Launch the GBA VC game
-   - Exit the GBA VC game
+   - Εκκινήστε το παιχνίδι GBA στη VC
+   - Τερματίστε το παιχνίδι GBA
    - Boot your console while holding (Start) to launch the Luma3DS chainloader menu
    - Launch GodMode9 by pressing (A)
    - Μεταβείτε στο `[0:] SDCARD` -> `gm9`
    - Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
    - Πατήστε το (B) για να επιστρέψετε στο κύριο μενού
    - Μεταβείτε στο `[S:] SYSNAND VIRTUAL`
-   - Press (A) on `agbsave.bin` to select it
-   - Select "AGBSAVE options..."
-   - Select "Inject GBA VC save"
+   - Πατήστε το (A) στο 'agbsave.bin\` για να το επιλέξετε
+   - Επιλέξτε «AGBSAVE options...»
+   - Επιλέξτε «Inject GBA VC save»
    - Πατήστε το (A) για να συνεχίσετε
    - Πατήστε το (Start) για να επανεκκινήσετε την κονσόλα σας
-   - Launch the GBA VC game
-   - Exit the GBA VC game
+   - Εκκινήστε το παιχνίδι GBA στη VC
+   - Τερματίστε το παιχνίδι GBA
 
 ### Section VII - Backup SysNAND
 
