@@ -14,13 +14,13 @@ Questa pagina richiede un computer che esegue Windows, Linux o macOS. Se hai un 
 
 :::
 
-## What You Need
+## Cosa serve
 
 - The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest)
 - Any 3.x version of [Python](https://www.python.org/downloads/) **installed on your computer**
   - If you are on Linux or macOS, you may already have Python 3. Controlla aprendo una finestra del terminale e inserendo `python3 -V`. Se il comando restituisce un numero di versione, funzionerà per questa guida.
 
-## Instructions
+## Istruzioni
 
 ::: info
 
@@ -28,7 +28,7 @@ In questa pagina eseguirai lo script di MSET9, che viene utilizzato per attivare
 
 :::
 
-### Section I - Prep Work
+### Sezione I - Preparazione
 
 In questa sezione preparerai l'exploit MSET9 creando **temporaneamente** un nuovo profilo per il menu HOME senza dati utente, configurandolo con i dati minimi necessari per l'esecuzione di MSET9. I tuoi dati dati utente attuali scompariranno, ma torneranno al termine di questa pagina.
 
@@ -131,7 +131,7 @@ Queste istruzioni vanno eseguite **ALLA LETTERA**, quindi ricontrolla TUTTO quel
 In questa sezione installerai il custom firmware sulla tua console.
 
 1. Quando richiesto, inserisci la combinazione di tasti richiesta sullo schermo superiore per installare boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+   - Se una sezione nella schermata inferiore ha un testo di colore rosso, e non ti viene richiesto di inserire una combinazione di tasti, [segui questa guida per risolvere i problemi](troubleshooting#issues-with-safeb9sinstaller)
 2. Una volta completato tutto, premi (A) per riavviare la console
 
 <!--@include: ./_include/configure-luma3ds.md -->
@@ -172,6 +172,6 @@ Hai seguito la Sezione IV (Disinstallare MSET9)? Quella sezione è OBBLIGATORIA!
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Prosegui con il [Completamento dell'installazione](finalizing-setup)
 
 :::
