@@ -672,7 +672,7 @@ SD 카드가 읽혔는지 확인하려면 SELECT를 누른 채 부팅해 아래 
 
 :::details Extended memory mode games (Pokemon Sun/Moon, Smash, etc.) don't work
 
-이 문제는 구 3DS / 2DS 콘솔의 지역을 변경하거자 CTRTransfer를 한 이후 나타날 수 있는 상황입니다. Follow the instructions [here](https://3ds.hacks.guide/region-changing#section-vi---fixing-locale-related-issues) to fix this issue (skipping steps 3, 4, 5, and 6).
+이 문제는 구 3DS / 2DS 콘솔의 지역을 변경하거자 CTRTransfer를 한 이후 나타날 수 있는 상황입니다. Follow the instructions [here](region-changing#section-vi---fixing-locale-related-issues) to fix this issue (skipping steps 3, 4, 5, and 6).
 
 :::
 
