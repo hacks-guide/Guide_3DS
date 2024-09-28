@@ -4,7 +4,7 @@ Necesitarás determinar cuál contiene tus datos. Primero que nada, haz una copi
 
 ::: info
 
-![Backup ID1](/images/screenshots/troubleshooting/backup-id1.png)
+![](/images/screenshots/troubleshooting/backup-id1.png)
 
 :::
 
@@ -12,13 +12,13 @@ Ahora, borra todas las carpetas excepto una. Generalmente, preferirás borrar la
 
 ::: info
 
-![Properties prompt](/images/screenshots/troubleshooting/rightclick-properties.png)
+![](/images/screenshots/troubleshooting/rightclick-properties.png)
 
 :::
 
 ::: info
 
-![Which to delete](/images/screenshots/troubleshooting/compare-id1.png)
+![](/images/screenshots/troubleshooting/compare-id1.png)
 
 :::
 
@@ -26,7 +26,7 @@ El contenido de tu tarjeta SD ahora debiera de verse similar a esto:
 
 ::: info
 
-![Just enough ID1s](/images/screenshots/troubleshooting/correct-id1.png)
+![](/images/screenshots/troubleshooting/correct-id1.png)
 
 :::
 
