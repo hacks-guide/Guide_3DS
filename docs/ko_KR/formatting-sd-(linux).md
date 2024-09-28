@@ -1,6 +1,6 @@
 # Formatting SD (Linux)
 
-## Required Reading
+## 중요
 
 이곳은 3DS와 쓰기 위한 SD 카드를 포맷하는 부가 섹션입니다.
 
@@ -8,7 +8,7 @@
 
 이 페이지는 Linux 사용자를 위한 페이지입니다. 만약 Linux에서 하는 것이 아니라면, [SD 포맷하기 (Windows)](formatting-sd-\(windows\))나 [SD 포맷하기 (Mac)](formatting-sd-\(mac\)) 페이지들을 찾아봐 주세요.
 
-## Instructions
+## 진행 방법
 
 1. SD 카드가 삽입되어 있지 **않아야** 합니다
 2. Linux 터미널을 시작해 주세요
