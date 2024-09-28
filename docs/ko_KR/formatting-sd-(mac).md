@@ -1,6 +1,6 @@
 # Formatting SD (Mac)
 
-## Required Reading
+## 중요
 
 이곳은 3DS와 쓰기 위한 SD 카드를 포맷하는 부가 섹션입니다.
 
@@ -8,7 +8,7 @@
 
 이 페이지는 Mac 사용자를 위한 페이지입니다. 만약 Mac에서 하는 것이 아니라면, [SD 포맷하기 (Windows)](formatting-sd-\(windows\))나 [SD 포맷하기 (Linux)](formatting-sd-\(linux\)) 페이지들을 찾아봐 주세요.
 
-## Instructions
+## 진행 방법
 
 ### OS X El Capitan (10.11) and later
 
