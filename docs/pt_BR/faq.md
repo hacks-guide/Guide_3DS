@@ -70,7 +70,7 @@ Sim! Tudo que você precisa é a capacidade de colocar arquivos em um cartão SD
 
 :::
 
-:::details What size SD card can I use?<
+:::details What size SD card can I use?
 
 Você precisará de pelo menos 1.5GB de espaço livre no cartão SD para seguir este guia em sua totalidade. Enquanto o 3DS é oficialmente compatível com cartões SD de até 32GB, cartões SD maiores podem ser usados caso sejam formatados manualmente como FAT32. Não é recomendado usar cartões SD maiores que 128GB devido a problemas conhecidos com gráficos de GBA e temas personalizados.
 
@@ -164,6 +164,6 @@ A sua configuração antiga (incluindo sua EmuNAND, se você tiver uma) geralmen
 
 :::details How do I move saves from an existing Gateway setup to a more modern setup?
 
-**R:** Veja [isto](https://gbatemp.net/threads/425743/).
+See [this thread](https://gbatemp.net/threads/425743/).
 
 :::
