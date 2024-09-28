@@ -2,7 +2,7 @@
 
 이 페이지는 흔히 일어나는 문제에 관한 해결책을 기재합니다. 만약 이 페이지의 해결책만으로 문제를 해결할 수 없다면, [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp)에 들어가서 당신의 문제와 시도한 해결책을 설명해 주세요.
 
-:::details Table of Contents
+:::details 목차
 
 여러 페이지에서 사용:
 
@@ -10,22 +10,22 @@
 
 가이드 페이지:
 
-- [Installing boot9strap (Soundhax)](#installing-boot9strap-soundhax)
-- [Installing boot9strap (MSET9)](#installing-boot9strap-mset9)
-- [Installing boot9strap (SSLoth-Browser)](#installing-boot9strap-ssloth-browser)
-- [Installing boot9strap (super-skaterhax)](#installing-boot9strap-super-skaterhax)
-- [Finalizing Setup](#finalizing-setup)
+- [boot9strap 설치 (Soundhax)](#installing-boot9strap-soundhax)
+- [boot9strap 설치 (MSET9)](#installing-boot9strap-mset9)
+- [boot9strap 설치 (SSLoth-Browser)](#installing-boot9strap-ssloth-browser)
+- [boot9strap 설치 (super-skaterhax)](#installing-boot9strap-super-skaterhax)
+- [마무리 단계](#finalizing-setup)
 
 설치 이후 문제:
 
-- [Boot issues](#boot-issues-on-consoles-with-custom-firmware)
-- [Software issues](#software-issues-on-consoles-with-custom-firmware)
+- [부팅 문제](#boot-issues-on-consoles-with-custom-firmware)
+- [소프트웨어 문제](#software-issues-on-consoles-with-custom-firmware)
 
 :::
 
-## Issues with SafeB9SInstaller
+## SafeB9SInstaller와의 문제
 
-### Before opening SafeB9SInstaller
+### SafeB9SInstaller 실행 전
 
 :::details Failed to open SafeB9SInstaller.bin
 
@@ -59,7 +59,7 @@ SD 카드에 이상이 있을 가능성이 높습니다. 다시 포맷해 보세
 
 :::
 
-:::details Something else
+:::details 기타
 
 [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp)에서 도움을 요청하여, 자신이 본 메시지를 같이 보내 주세요.
 
@@ -67,21 +67,21 @@ SD 카드에 이상이 있을 가능성이 높습니다. 다시 포맷해 보세
 
 ## boot9strap 설치 (Soundhax)
 
-:::details Red/purple/pink and white screen after running Soundhax
+:::details Soundhax를 실행하면 빨간색/보라색/분홍색 혹은 하얀색 화면이 표시됩니다
 
-If your console is on system version 9.4.0, 9.5.0, or 9.6.0, you may be encountering a bug with an old version of universal-otherapp. Download the latest version from [here](https://github.com/TuxSH/universal-otherapp/releases/latest).
+콘솔이 시스템 버전 9.4.0 ~ 9.6.0이라면, universal-otherapp의 구 버전에서 발생하는 오류가 발생했을 가능성이 큽니다. 여기에서 최신 버전으로 다운로드해주세요. [여기](https://github.com/TuxSH/universal-otherapp/releases/latest)에서 최신 버전으로 다운로드해주세요.
 
 펌웨어 버전이 이게 아니라면, 이미 커펌이 설치되었을 수 있습니다. [CFW 확인](checking-for-cfw) 을 하는 것을 권장합니다.
 
 :::
 
-:::details "An error has occurred, forcing the software to close..." (white message box)
+:::details "에러가 발생하여 소프트웨어를 종료합니다..." (하얀 메시지 창)
 
 `otherapp.bin` 파일에 문제가 있습니다. (없거나, 잘못 들어갔거나, 혹은 잘못된 파일) 최신 버전의 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)을 다시 내려받아 SD 카드의 최상위 디렉토리에 복사해주세요.
 
 :::
 
-:::details "Could not play"
+:::details "재생할 수 없습니다"
 
 콘솔과 지역 조합과 다른 Soundhax 파일을 이용하고 있거나, 콘솔이 Soundhax와 호환되지 않습니다. In the latter case, your course of action will determine on what version your 3DS is currently on. [Nintendo Homebrew Discord 서버](https://discord.gg.MWxPgEp)에 오셔서 도움을 요청하세요.
 
@@ -130,17 +130,17 @@ Mii Maker data was not found on the SD card. Please power on your console with y
 :::details Title database: Not initialized!
 
 Ensure that you have reset the title database.
-\+ Please power on your console with your SD inserted
-\+ Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
-\+ This will not wipe any of your data
-\+ If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
+
+- Please power on your console with your SD inserted
+- Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
+  - This will not wipe any of your data
+- If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
 
 If you do _not_ getting a reset prompt, your SD card needs to be formatted:
 
 1. SD 카드의 전체 데이터를 PC에 복사해두세요
 2. SD 카드를 포맷해 주세요 ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
 3. PC에 복사해둔 데이터를 다시 SD 카드에 복사해 주세요
-4. MSET9 스크립트를 실행해 주세요:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -233,7 +233,6 @@ You may be missing `SafeB9S.bin` from the root of your SD card, or the file may 
 
 1. Force power off your console by holding the Power button for 20 seconds
 2. SD 카드를 컴퓨터에 삽입해 주세요
-3. MSET9 스크립트를 실행해 주세요:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -263,7 +262,6 @@ Follow these instructions to remove the trigger file and to retry Section II:
 
 1. Force power off your console by holding the Power button for 20 seconds
 2. SD 카드를 컴퓨터에 삽입해 주세요
-3. 1. MSET9 스크립트를 실행해 주세요:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -287,7 +285,7 @@ If you continue to have this issue and are sure that you did everything correctl
 
 :::details An exception occurred after triggering MSET9
 
-이미 커스텀 펌웨어가 설치되어 있을 수 있습니다. [CFW 확인](checking-for-cfw) 을 하는 것을 권장합니다.
+This likely indicates that you already have custom firmware. [CFW 확인](checking-for-cfw) 을 하는 것을 권장합니다.
 
 :::
 
@@ -304,16 +302,16 @@ If the screen flashes colors then freezes/crashes:
 
 - Ensure that you have the correct copy of `arm11code.bin` and `browserhax_hblauncher_ropbin_payload.bin` for your console's version and region
 - Try resetting your browser data:
-  1. 브라우저를 실행하고 브라우저 설정을 실행해 주세요
+  1. Launch the browser, then launch the browser settings
   2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-  3. 익스플로잇을 다시 시도해 주세요
+  3. Try the exploit again
 - Try changing the system language to something other than the current language
 
 :::
 
 :::: details "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
 
-`arm11code.bin` 파일이 없거나 잘못 들어갔습니다. Make sure to copy the files of the [latest version of super-skaterhax](https://github.com/zoogie/super-skaterhax/releases/latest) for your region and version to the root of your SD card (not inside of a folder).
+The file `arm11code.bin` is missing or misplaced. Make sure to copy the files of the [latest version of super-skaterhax](https://github.com/zoogie/super-skaterhax/releases/latest) for your region and version to the root of your SD card (not inside of a folder).
 
 ::: info
 
@@ -325,7 +323,7 @@ If the screen flashes colors then freezes/crashes:
 
 :::details An exception occured or "DLL_HEAP_INFORMATION" when pressing GO! GO!
 
-이미 커스텀 펌웨어가 설치되어 있을 수 있습니다. [CFW 확인](checking-for-cfw) 을 하는 것을 권장합니다.
+This likely indicates that you already have custom firmware. [CFW 확인](checking-for-cfw) 을 하는 것을 권장합니다.
 
 :::
 
@@ -333,65 +331,67 @@ If the screen flashes colors then freezes/crashes:
 
 :::details Red/purple/pink and white screen after running Browserhax
 
-이미 커스텀 펌웨어가 설치되어 있을 수 있습니다. [CFW 확인](checking-for-cfw) 을 하는 것을 권장합니다.
+This likely indicates that you already have custom firmware. [CFW 확인](checking-for-cfw) 을 하는 것을 권장합니다.
 
 :::
 
 :::details "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
 
-`arm11code.bin` 파일이 없거나 잘못 들어갔습니다. 최신 버전의 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)을 내려받아 `otherapp.bin` 파일을 SD 카드의 최상위 디렉토리에 복사하고, 이름을 `arm11code.bin`으로 변경해 주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
+The file `arm11code.bin` is missing or misplaced. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
 
 :::
 
-:::details "An error has occurred, forcing the software to close..." (white message box)
+:::details "에러가 발생하여 소프트웨어를 종료합니다..." (하얀 메시지 창)
 
-`arm11code.bin`에 문제가 있을 수 있습니다. 최신 버전의 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)을 내려받아 `otherapp.bin` 파일을 SD 카드의 최상위 디렉토리에 복사하고, 이름을 `arm11code.bin`으로 변경해 주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
+There may be an issue with your `arm11code.bin` file. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
 
 You can also try resetting your browser save data:
 
-1. 브라우저를 실행하고 브라우저 설정을 실행해 주세요
+1. Launch the browser, then launch the browser settings
 2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-3. 익스플로잇을 다시 시도해 주세요
+3. Try the exploit again
 
 :::
 
 :::details Opening the browserhax QR code or URL crashes
 
-이러한 브라우저 기반의 취약점은 불안정하고 자주 종료됩니다. 그러나 종종 다음 단계를 수행하면 고쳐질 수 있습니다.
+Browser based exploits (such as this one) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
 
-1. 브라우저를 실행하고 브라우저 설정을 실행해 주세요
+1. Launch the browser, then launch the browser settings
 2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-3. 익스플로잇을 다시 시도해 주세요
+3. Try the exploit again
 
 :::
 
 :::details System Update prompt when opening browser
 
-SSLoth 프록시 설정이 잘못 설정되었습니다. 페이지의 SSLoth 섹션을 다시 진행해주세요.
+The SSLoth proxy was incorrectly configured. Re-do the SSLoth section on the page.
 
 :::
 
 :::details Error 032-0420 when opening browser
 
-다음 과정을 순서대로 진행해주세요:
+Follow these steps in order:
 
 1. 콘솔에서 본체 설정을 열어 주세요
-2. `인터넷 설정` -> `인터넷 접속 설정`으로 이동해 주세요
-3. 네트워크 접속 경로을 클릭해, `설정 변경` -> `다음 페이지 (오른쪽 화살표)` -> `Proxy 설정`으로 이동해 주세요
-4. "Proxy 설정"을 "아니요"로 설정해 주세요
-5. OK하고 저장을 차례로 눌러주세요
-6. 접속 테스트 안내문이 표시되면, `예`를 눌러 인터넷 접속 테스트를 진행해 주세요
-   - 이 테스트가 성공적일 겁니다
-7. "OK"을 눌러 진행해 주세요
+2. Navigate to `Internet Settings` -> `Connection Settings`
+3. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
+4. Set "Proxy Settings" to "No"
+5. Click OK, then click Save
+6. When prompted, click "Test" to perform the connection test
+   - The test should succeed
+7. Click "OK" to continue
 8. "뒤로"을 두 번 누르고 "종료"를 눌러 HOME 메뉴로 돌아가 주세요
-9. 인터넷 브라우저를 한 번 열어주세요
-10. 시스템 업데이트에 관한 창이 표시되면, 'OK'을 눌러주세요
+9. Open the Internet Browser once
+10. If prompted about a system update, press OK
     - This won't actually update the system
-11. [섹션 II](installing-boot9strap-\(ssloth-browser\).html#section-ii---ssloth)로 돌아가 다시 진행해주세요
+11. Start again from [Section II](installing-boot9strap-\(ssloth-browser\).html#section-ii---ssloth)
 
 :::
 
 :::details Frozen on "Doing agbhax..."
+
+There may be an issue with your `arm11code.bin` file. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place it on the root of your SD card, and rename it to `arm11code.bin`. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
 
 :::
 
@@ -411,7 +411,7 @@ SSLoth 프록시 설정이 잘못 설정되었습니다. 페이지의 SSLoth 섹
 
 ## 마무리 단계
 
-:::details Unable to update console
+:::details 본체 업데이트를 할 수 없습니다
 
 다음 단계는 순서 없이 진행 가능하나, 하기 쉬운 것부터 어려운 순서로 정렬되어 있습니다.
 
@@ -466,9 +466,9 @@ You need at least 1.3GB of free space to perform the NAND backup, which is a par
 8. "Scripts..."를 선택해 주세요
 9. "finalize"를 선택해 주세요
 10. Press (A) to create a NAND backup
-    - This may take around fifteen minutes
+    - 예상 소요 시간은 약 15 분입니다
 11. Press (A) again
-    - The console should automatically power off
+    - 콘솔의 전윈이 자동으로 꺼질 겁니다
 12. SD 카드를 컴퓨터에 삽입해 주세요
 13. Copy the files in `/gm9/backups/` on your SD to a safe location on your computer
 14. Delete the `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` files from the SD card
@@ -545,7 +545,7 @@ The script has detected that the Nintendo 3DS folder is missing AND that you hav
 
 ---
 
-## Boot issues on consoles with custom firmware
+## 커펌이 설치된 콘솔에서 부팅 문제가 발생합니다
 
 ::: info
 
@@ -553,17 +553,17 @@ The script has detected that the Nintendo 3DS folder is missing AND that you hav
 
 :::
 
-### Power/notification light indicators
+### 전원/알림 LED
 
-:::details My console powers off when I try to turn it on, and/or the notification LED shows a color on boot
+:::details 콘솔을 켜도 켜지지 않거나, 혹은 부팅 시 알림 LED가 색상을 표시합니다
 
 `boot.firm` 파일에 문제가 있습니다. [boot9strap 1.4](https://github.com/SciresM/boot9strap/releases/tag/1.4)를 실행하고 있다면, 3DS 알림 LED가 특정 색상으로 깜빡일 겁니다. 이 색상은 SD 카드 혹은 내부 메모리에 있는 `boot.firm`의 오류를 분석하기 위해 이용됩니다. 구 버전의 boot9strap에서는 콘솔을 켜려 할 때 파란 LED가 켜졌다가 즉시 꺼질 것입니다.
 
 알림 LED가 깜빡인다면:
 
-- **White**: Your 3DS was not able to find `boot.firm` on your SD card or on internal memory.
-- **Magenta**: Your 3DS was not able to find `boot.firm` on your SD card. 내부 메모리에 있는 `boot.firm`을 확인했으나, 파일이 손상되었습니다.
-- **Red**: Your 3DS was able to find `boot.firm` on both your SD card and on internal memory, but both files are corrupted.
+- **하얀색**: SD 카드 혹은 내부 메모리에서 `boot.firm`을 찾지 못했습니다.
+- **다홍색**: SD 카드에서 `boot.firm`을 찾지 못했습니다. 내부 메모리에 있는 `boot.firm`을 확인했으나, 파일이 손상되었습니다.
+- **빨간색**: `boot.firm` 파일을 찾았지만, SD 카드와 내부 메모리에 있는 파일 모두가 손상되었습니다.
 
 [Luma3DS의 최신 버전](https://github.com/LumaTeam/Luma3DS/releases/latest)을 다운받아 압축을 해제해, 새 `boot.firm` 파일을 SD 카드의 루트 디렉토리에 넣어주세요. (파일이 이미 있다면 덮어씌워주세요.) `boot.firm` 파일이 계속 문제가 있는 것으로 인식된다면, SD 카드에 문제가 있는지 확인해야 할 수 있습니다: ([Windows](h2testw-\(windows\)), [Linux](f3-\(linux\)), or [macOS](f3xswift-\(mac\))) 또, WinRAR로 압축 해제한 파일은 3DS에서 문제를 자주 일으키는 것으로 알려져 있습니다.
 
@@ -571,34 +571,34 @@ The script has detected that the Nintendo 3DS folder is missing AND that you hav
 
 :::
 
-:::details My console gets stuck on a black screen with blue power light staying on
+:::details 파란 전원 LED가 켜진 상태로 콘솔이 검은 화면에서 작동하지 않습니다
 
 다음 단계는 순서 없이 진행 가능하나, 시간 소모가 적은 것부터 긴 순서로 정렬되어 있습니다.
 
 1. 콘솔의 전원을 종료하고, SD 카드를 분리한 뒤, 다시 장착하고 전원을 켜 보세요.
 2. 전원을 끄고 게임 카트리지가 장착되어 있다면 분리한 다음, 10분 정도 기다려 주세요. 10분 후에 정상적으로 부팅된다면, 문제는 해결된 것이며 재발 가능성이 낮습니다
 3. SD 카드의 `Nintendo 3DS` 폴더를 다른 이름(예: `NIntendo 3DS_BACKUP`)으로 변경 후 부팅해보세요. 콘솔이 정상적으로 부팅된다면, `Nintendo 3DS` 폴더 내부에 문제가 있는 것입니다. 홈 메뉴의 추가 데이터를 정리해주세요:
-   - Navigate to `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
+   - SD 카드에 있는 `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` 폴더로 이동해 주세요
    - 콘솔 지역에 해당되는 폴더를 삭제해 주세요:
-     - **EUR Region**: `00000098`
-     - **JPN Region**: `00000082`
-     - **USA Region**: `0000008f`
-     - **CHN Region**: `000000A1`
-     - **KOR Region**: `000000A9`
-     - **TWN Region**: `000000B1`
+     - **EUR 지역**: `00000098`
+     - **JPN 지역**: `00000082`
+     - **USA 지역**: `0000008f`
+     - **CHN 지역**: `000000A1`
+     - **KOR 지역**: `000000A9`
+     - **TWN 지역**: `000000B1`
 4. 복구 모드로 부팅하여 본체를 업데이트해 보세요:
    - 콘솔의 전원을 꺼 주세요
-   - Hold (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A)
+   - (L 버튼) + (R 버튼) + (D패드 상) + (A) 버튼을 길게 눌러주세요
    - 콘솔의 전원을 켜 주세요
-   - If you were successful, the console will boot to an "update your system" screen
+   - 성공적일 경우엔 콘솔이 "본체 업데이트"로 부팅됩니다
 5. [CTRTransfer](ctrtransfer) 설명서를 따라 주세요
 6. 지원이 필요하면 [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp)에 (영어로) 지원을 요청해 주세요
 
 :::
 
-### Error message on boot
+### 부팅 중에 에러 메시지가 표시됩니다
 
-:::details "An error has occurred: Failed to apply 1 FIRM patch(es)" or "An exception has occurred -- Current process: pm"
+:::details "An error has occurred: Failed to apply 1 FIRM patch(es)" 또는 "An exception has occurred -- Current process: pm"
 
 Luma3DS 구 버전이 설치되있습니다. 최신 버전의 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)을 다시 내려받고 `boot.firm` 파일을 SD 카드의 최상위 디렉토리에 복사해주세요. 이미 파일이 있으면 덮어씌워 주세요. ZIP 파일을 압축 해제할 때, 3DS 관련 파일에서 문제가 있다고 알려져 있은 WinRAR를 제외한 프로그램으로 압축 해제해 주세요.
 
@@ -606,15 +606,18 @@ Luma3DS 구 버전이 설치되있습니다. 최신 버전의 [Luma3DS](https://
 
 :::details "Unable to mount CTRNAND or load the CTRNAND FIRM. Please use an external one."
 
+There are a number of reasons as to why this could be happening. In any case, this error can usually be fixed by following the [CTRTransfer](ctrtransfer) guide.
+
 :::
 
 :::details "An error has occurred. Hold down the POWER button to turn off the power..."
 
 ARM11 오류 핸들러가 꺼져있거나, 커스텀 펌웨어가 정상적으로 설치되지 않았습니다. Try enabling ARM11 exception handlers:
-\+ Power off your console
-\+ Hold (Select)
-\+ Power on your console, while still holding (Select)
-\+ If the "Disable ARM11 exception handlers" box is checked, uncheck it
+
+- 콘솔의 전원을 꺼 주세요
+- Hold (Select)
+- Power on your console, while still holding (Select)
+- If the "Disable ARM11 exception handlers" box is checked, uncheck it
 
 :::
 
@@ -639,15 +642,15 @@ SD 카드가 읽혔는지 확인하려면 SELECT를 누른 채 부팅해 아래 
 
 :::
 
-:::details Some other error
+:::details 다른 에러
 
 에러 사진을 찍고 [Nintendo Homebrew Discord 서버](https://discord.gg.MWxPgEp)에 오셔서 도움을 요청하세요.
 
 :::
 
-## Software issues on consoles with custom firmware
+## 커펌이 설치된 콘솔에서 소프트웨어 문제가 발생합니다
 
-:::details DSi / DS functionality is broken or has been replaced with Flipnote Studio
+:::details DSi / DS 기능이 오작동 하거나 Flipnote Studio가 대신 표시됩니다
 
 1. 최신 버전의 [TWLFix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest) (`.3dsx` 파일)을 다운로드해 주세요
 2. 콘솔의 전원을 꺼 주세요
@@ -659,12 +662,12 @@ SD 카드가 읽혔는지 확인하려면 SELECT를 누른 채 부팅해 아래 
 8. (A)를 눌러 문제의 TWL 타이틀을 제거해 주세요
 9. (Start)를 눌러 콘솔을 다시 시작해 주세요
 10. 본체 설정의 "기타 설정"에서 가장 오른쪽에 있는 "본체 업데이트"를 선택해 콘솔을 업데이트해 주세요
-    - The update will see that the essential TWL titles have been uninstalled, and will redownload and reinstall them
+    - 이 업데이트는 필수 TWL 타이틀이 제거된 것을 확인 했을 시 다시 다운로드하고 재설치 할 겁니다
 11. 업데이트 완료 시 "OK"를 눌러 콘솔을 다시 시작해 주세요
 
 :::
 
-:::details GBA Virtual Console and/or Safe Mode functionality is broken
+:::details GBA 버추얼 콘솔 혹은 안전 모드 기능이 고장났습니다
 
 콘솔에 (아마 arm9loaderhax를 통해) Luma3DS 6.6 이하의 버전이 설치되어 있습니다. [A9LH를 B9S로 업데이트](a9lh-to-b9s)를 따라서 콘솔을 현재의 커스텀 펌웨어 환경으로 업데이트해 주세요.
 
@@ -676,14 +679,14 @@ SD 카드가 읽혔는지 확인하려면 SELECT를 누른 채 부팅해 아래 
 
 :::
 
-:::details Exception screen when booting/loading an application
+:::details 앱을 실행할 때 오류 화면이 표시됩니다
 
 [여기 (영어)](https://wiki.hacks.guide/wiki/3DS:Error_screens/Luma3DS_exception_screen)에서 오류 화면을 찾아보세요.
 해당 오류를 찾지 못했거나 설명으로 해결되지 않은 경우, [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp)에서 도움을 요청하세요.
 
 :::
 
-:::details Opening the HOME Menu settings crashes the console or loads the Homebrew Launcher
+:::details HOME 메뉴 실행시 크래시가 발생하거나 Homebrew Launcher가 실행될 경우
 
 menuhax67가 여전히 설치되어 있는 듯합니다. To uninstall menuhax67, download the latest release of [menuhax67](https://github.com/zoogie/menuhax67/releases/latest) (the menuhax `.zip`), then follow the ["Uninstall menuhax67" section](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits/menuhax67#Uninstall_menuhax67) here.
 
@@ -691,38 +694,39 @@ menuhax67가 여전히 설치되어 있는 듯합니다. To uninstall menuhax67,
 
 ---
 
-## Other troubleshooting
+## 기타 문제 해결
 
-:::details Clear HOME Menu extdata
-
-1. 콘솔의 전원을 꺼 주세요
-2. SD 카드를 컴퓨터에 삽입해 주세요
-3. SD 카드에 있는 `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` 폴더로 이동해 주세요
-4. 콘솔 지역에 해당되는 폴더를 삭제해 주세요:
-   - **EUR Region**: `00000098`
-   - **JPN Region**: `00000082`
-   - **USA Region**: `0000008f`
-   - **CHN Region**: `000000A1`
-   - **KOR Region**: `000000A9`
-   - **TWN Region**: `000000B1`
-5. SD 카드를 콘솔에 다시 삽입해 주세요
-
-:::
-
-:::details Clear HOME Menu theme data
+:::details HOME 메뉴 추가 데이터 정리
 
 1. 콘솔의 전원을 꺼 주세요
 2. SD 카드를 컴퓨터에 삽입해 주세요
 3. SD 카드에 있는 `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` 폴더로 이동해 주세요
 4. 콘솔 지역에 해당되는 폴더를 삭제해 주세요:
-   - **EUR Region**: `000002ce`
-   - **JPN Region**: `000002cc`
-   - **USA Region**: `000002cd`
+   - **EUR 지역**: `00000098`
+   - **JPN 지역**: `00000082`
+   - **USA 지역**: `0000008f`
+   - **CHN 지역**: `000000A1`
+   - **KOR 지역**: `000000A9`
+   - **TWN 지역**: `000000B1`
 5. SD 카드를 콘솔에 다시 삽입해 주세요
 
 :::
 
-:::details Manually entering Homebrew Launcher
+:::details HOME 메뉴 테마 데이터 정리
+
+1. 콘솔의 전원을 꺼 주세요
+2. SD 카드를 컴퓨터에 삽입해 주세요
+3. SD 카드에 있는 `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` 폴더로 이동해 주세요
+4. 콘솔 지역에 해당되는 폴더를 삭제해 주세요:
+   - **EUR 지역**: `000002ce`
+   - **JPN 지역**: `000002cc`
+   - **USA 지역**: `000002cd`
+   - **KOR Region**: `000002cf`
+5. SD 카드를 콘솔에 다시 삽입해 주세요
+
+:::
+
+:::details Homebrew Launcher 수동 접근
 
 HOME 메뉴를 통해 Homebrew Launcher 애플리케이션에 접근이 불가능할 경우, 다음 방법을 통해 수동으로 Homebrew Launcher에 접근할 수 있습니다. (You will need [boot.3dsx and boot.firm](https://github.com/LumaTeam/Luma3DS/releases/latest) on the root of your SD card.)
 
@@ -737,9 +741,9 @@ However, if you do not know the PIN and therefore cannot access the console's se
 
 1. Go to [this website](https://mkey.eiphax.tech/)
 2. Fill the following boxes with the information:
-   - Device Type: Select "3DS" (the same applies if you are using a 2DS, New 3DS (XL/LL) or New 2DS (XL/LL))
-   - System Date: The day and month your console's clock is set to
-   - Inquiry Number: Can be obtained by pressing "Forgot PIN" then "I Forgot" in the Parental Controls screen
+   - Device Type(장치 종류): "3DS"(종류불문)
+   - System Date(본체 날짜): 본체에 설정된 날짜
+   - Inquiry Number(인증 번호): 청소년 보호 기능에서 "비밀번호를 잊어버렸다면"과 "기억나지 않음"을 선택하면 뜨는 숫
 3. After you have obtained your mkey, press OK on the screen you have obtained your Inquiry Number, then input the master key
 4. Press "Clear Settings", then "Delete" to remove all Parental Controls data
 
