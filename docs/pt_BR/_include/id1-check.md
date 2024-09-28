@@ -4,7 +4,7 @@ Você precisará determinar qual contém seus dados. Em primeiro lugar, faça o 
 
 ::: info
 
-![Backup ID1](/images/screenshots/troubleshooting/backup-id1.png)
+![](/images/screenshots/troubleshooting/backup-id1.png)
 
 :::
 
@@ -12,13 +12,13 @@ Agora, exclua todas as pastas, exceto uma do seu cartão SD. Geralmente, você v
 
 ::: info
 
-![Properties prompt](/images/screenshots/troubleshooting/rightclick-properties.png)
+![](/images/screenshots/troubleshooting/rightclick-properties.png)
 
 :::
 
 ::: info
 
-![Which to delete](/images/screenshots/troubleshooting/compare-id1.png)
+![](/images/screenshots/troubleshooting/compare-id1.png)
 
 :::
 
@@ -26,7 +26,7 @@ Seu cartão SD agora deve se parecer com isto:
 
 ::: info
 
-![Just enough ID1s](/images/screenshots/troubleshooting/correct-id1.png)
+![](/images/screenshots/troubleshooting/correct-id1.png)
 
 :::
 
