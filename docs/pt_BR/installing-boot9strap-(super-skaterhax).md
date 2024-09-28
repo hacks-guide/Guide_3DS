@@ -18,7 +18,7 @@ As instruções fornecidas só se aplicam ao New 3DS, New 3DS XL e ao New 2DS XL
 
 ### What You Need
 
-- The [super-skaterhax](https://toxicaven.dev/skater) zip for your console's region and system version
+- The [Super-skaterhax](https://skater.nintendohomebrew.com) zip for your console's region and system version
 
 #### Section I - Prep Work
 
@@ -28,7 +28,7 @@ Nesta seção, você irá copiar os arquivos necessários para acionar tanto sup
 
 2. Insira o cartão SD no seu computador
 
-3. Copy everything from the sk8rhax `.zip` to the root of your SD card, overwriting any existing files
+3. Copy everything from the Super-skaterhax `.zip` to the root of your SD card, overwriting any existing files
 
    ::: info
 
