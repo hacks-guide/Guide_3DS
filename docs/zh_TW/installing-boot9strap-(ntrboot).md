@@ -65,7 +65,7 @@ In this section, you will install custom firmware onto your console.
 
 1. 將您主機的 SD 卡插入至電腦中
 2. 將 SD 卡根目錄中的 `boot.firm` 檔案刪除
-3. 解壓 Luma3DS `.zip` 內的 `boot.firm` 及 `boot.3dsx` 到 SD 卡的根目錄底下
+3. Copy everything from the Luma3DS `.zip` to the root of your SD card
 4. Reinsert your SD card into your console
 5. Power on your console
 
