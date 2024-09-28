@@ -1,6 +1,6 @@
 # Completamento dell'installazione
 
-## Required Reading
+## Lettura necessaria
 
 Il file `boot.firm` è il file avviato da boot9strap stesso al termine del caricamento dalla NAND. In questo caso, stiamo usando Luma3DS di [LumaTeam](https://github.com/LumaTeam/) per modificare la console, consentendogli di eseguire software homebrew.
 
@@ -36,14 +36,14 @@ Se la tua precedente installazione CFW era basata su EmuNAND e desideri spostare
 
 :::
 
-## What You Need
+## Cosa serve
 
 - [x_finalize_helper.firm](https://github.com/hacks-guide/finalize/releases/latest/download/x_finalize_helper.firm) (direct download)
 - [finalize.romfs](https://github.com/hacks-guide/finalize/releases/latest/download/finalize.romfs) (direct download)
 
-## Instructions
+## Istruzioni
 
-### Section I - Prep Work
+### Sezione I - Preparazione
 
 In questa sezione, copierai i file necessari per seguire le rimanenti istruzioni in questa pagina.
 
