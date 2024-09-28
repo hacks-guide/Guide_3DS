@@ -37,7 +37,7 @@ Luma3DS가 지역 외 게임들과 [타이틀별 지역 에뮬레이션](https:/
 - 최신 버전의 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (GodMode9 `.zip` 파일)
 - 최신 버전의 [FBI](https://github.com/lifehackerhansol/FBI/releases/download/2.6.1/FBI.3dsx) (직접 다운로드)
 - 최신 버전의 [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(`.3dsx` 파일)_
-- A torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+- [qBittorrent](https://www.qbittorrent.org/download.php) 또는 [Deluge](http://dev.deluge-torrent.org/wiki/Download) 등의 토렌트 클라이언트
   - If you already have a torrent client, you do not need to download a new one
 - 변경하고 싶은 지역의 종류에 맞는 11.15.0 CTRTransfer 이미지 (예: New 3DS를 가지고 있고 지역을 미국으로 변경하려면 "New 3DS or 3DS - USA"를 다운로드)
 
