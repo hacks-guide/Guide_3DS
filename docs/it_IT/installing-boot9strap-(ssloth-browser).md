@@ -1,6 +1,6 @@
 # Installazione di boot9strap (SSLoth-Browser)
 
-:::details Technical Details (optional)
+:::details Dettagli tecnici (opzionale)
 
 Per sfruttare l'applicazione Browser Internet dobbiamo bypassare il controllo della versione di sistema che questo effettua, controllo progettato per non consentire l'uso del browser senza aver prima aggiornato all'ultima versione di sistema.
 
@@ -12,7 +12,7 @@ Per dettagli tecnici sugli exploit che utilizzerai in questa pagina, leggi [qui]
 
 :::
 
-## Compatibility Notes
+## Note di compatibilità
 
 SSLoth consente agli utenti alla versione di sistema 11.13.0 e precedenti di bypassare il controllo sulla versione del browser, permettendo l'uso di new-browserhax o old-browserhax (compatibile con tutte le versioni da 11.4.0 a 11.13.0 di ogni regionalità), che può quindi essere utilizzato in combinazione con universal-otherapp.
 
@@ -34,7 +34,7 @@ In questa sezione copierai i file necessari per attivare sia browserhax che univ
 3. Copia il file `otherapp.bin` nella directory principale della tua scheda SD e rinominalo in `arm11code.bin`
    - La directory principale della scheda SD è la cartella della tua scheda SD in cui è possibile visualizzare la cartella Nintendo 3DS, ma non il suo interno
    - If you do not see the `.bin` extension, do not add it to the end of the filename
-4. Copy everything from the Luma3DS `.zip` to the root of your SD card
+4. Copia tutto dall'archivio `.zip` di Luma3DS nella directory principale della tua scheda SD
 5. Crea una cartella chiamata `boot9strap` nella directory principale della tua scheda SD
 6. Copia i file `boot9strap.firm` e `boot9strap.firm.sha` dall'archivio `.zip` di boot9strap nella cartella `/boot9strap/` della tua scheda SD
 7. Copia il file `SafeB9SInstaller.bin` dall'archivio `.zip` di SafeB9SInstaller nella directory principale della tua scheda SD
@@ -56,11 +56,11 @@ In questa sezione visiterai la pagina web dell'exploit del browser, che userà u
 1. Nel menu HOME, premi contemporaneamente i pulsanti dorsali L e R per avviare la fotocamera
    - If you are unable to open the camera, open the Internet Browser and manually type the URL instead (`https://zoogie.github.io/web/nbhax/`)
 2. Tocca il pulsante Codice QR e scansiona [questo codice QR](http://api.qrserver.com/v1/create-qr-code/?color=000000\&bgcolor=FFFFFF\&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax\&qzone=1\&margin=0\&size=400x400\&ecc=L)
-   - If you get a crash or an error code, [follow this troubleshooting guide](troubleshooting#installing-boot9strap-ssloth-browser)
+   - Se crasha o se ottieni un codice di errore, [segui questa guida per risolvere il problema](troubleshooting#installing-boot9strap-ssloth-browser)
    - If you get a security certificate warning, press (A) to allow the connection
 3. Tocca il pulsante "PROCEED TO HAXX"
 4. Se l'exploit è andato a buon fine, si avvierà SafeB9SInstaller
-   - If you get an error, [follow this troubleshooting guide](troubleshooting#installing-boot9strap-ssloth-browser)
+   - Se ottieni un errore, [segui questa guida per risolvere il problema](troubleshooting#installing-boot9strap-ssloth-browser)
 
 ### Section IV - Installing boot9strap
 
