@@ -13,7 +13,7 @@
 ## Instructions
 
 1. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
-2. Αντιγράψτε τα `boot.3dsx` και `boot.firm` από το αρχείο `.zip` του Luma3DS στη ρίζα της κάρτας SD, αντικαθιστώντας τυχόν υπάρχοντα αρχεία
+2. Copy everything from the Luma3DS `.zip` to the root of your SD card, replacing any existing files
    - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
 3. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 4. Ενεργοποιήστε την κονσόλα σας
