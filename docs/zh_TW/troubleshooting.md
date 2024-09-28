@@ -672,7 +672,7 @@ Your console is running Luma3DS 6.6 or older, likely via arm9loaderhax. You shou
 
 :::details Extended memory mode games (Pokemon Sun/Moon, Smash, etc.) don't work
 
-舊版 3DS / 2DS 在做完 CTRTransfer 或區碼變更之後可能會出現這個問題。 Follow the instructions [here](https://3ds.hacks.guide/region-changing#section-vi---fixing-locale-related-issues) to fix this issue (skipping steps 3, 4, 5, and 6).
+舊版 3DS / 2DS 在做完 CTRTransfer 或區碼變更之後可能會出現這個問題。 Follow the instructions [here](region-changing#section-vi---fixing-locale-related-issues) to fix this issue (skipping steps 3, 4, 5, and 6).
 
 :::
 
