@@ -1,12 +1,12 @@
 # Εγκατάσταση του boot9strap (MSET9 CLI)
 
-:::details Technical Details (optional)
+:::details Τεχνικές λεπτομέρειες (προαιρετικό)
 
 Το [MSET9](https://github.com/zoogie/MSET9) είναι ένα exploit για την εφαρμογή «System Settings», το οποίο αναπτύσσεται από τον [zoogie](https://github.com/zoogie). Εκμεταλλεύεται ένα ελάττωμα όπου το ID1 (το όνομα του δεύτερου φακέλου, που αποτελείται από 32 χαρακτήρες, μέσα στον φάκελο «Nintendo 3DS», εντός του ID0) μπορεί να είναι _οποιοδήποτε_ όνομα εφόσον είναι 32 χαρακτήρες. Η εκτέλεση μιας συγκεκριμένης ακολουθίας ενεργειών έχει ως αποτέλεσμα την εκτέλεση των οδηγιών από την κονσόλα, οι οποίες κωδικοποιούνται στο όνομα του φακέλου ID1, πράγμα που μπορεί να χρησιμοποιηθεί για την παροχή πλήρους ελέγχου επί του 3DS.
 
 :::
 
-## Compatibility Notes
+## Σημειώσεις συμβατότητας
 
 ::: warning
 
@@ -14,13 +14,13 @@
 
 :::
 
-## What You Need
+## Τι χρειάζεστε
 
 - The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest)
 - Any 3.x version of [Python](https://www.python.org/downloads/) **installed on your computer**
   - If you are on Linux or macOS, you may already have Python 3. Για να το διαπιστώσετε, ανοίξτε ένα παράθυρο τερματικού και πληκτρολογήστε `python3 -V`. Εάν η εντολή επιστρέψει έναν αριθμό έκδοσης, τότε μπορείτε να ακολουθήσετε αυτόν τον οδηγό.
 
-## Instructions
+## Οδηγίες
 
 ::: info
 
@@ -28,7 +28,7 @@
 
 :::
 
-### Section I - Prep Work
+### Ενότητα I - Προετοιμασία
 
 Σε αυτήν την ενότητα, θα προετοιμάσετε το exploit «MSET9» δημιουργώντας **προσωρινά** ένα νέο προφίλ για το μενού «HOME» χωρίς δεδομένα χρήστη. Στη συνέχεια, θα διαμορφώσετε αυτό το προφίλ μόνο με τα ελάχιστα δεδομένα που απαιτούνται για την ενεργοποίηση του MSET9. Τα υπάρχοντα δεδομένα χρήστη θα εξαφανιστούν, αλλά θα επανέλθουν όταν τελειώσετε με τις οδηγίες αυτής της σελίδας.
 
@@ -97,7 +97,7 @@
 2. Πληκτρολογήστε `0` και πατήστε το Enter για να κλείσετε το script
 3. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 
-### Section II - MSET9
+### Ενότητα II - MSET9
 
 Σε αυτήν την ενότητα, θα ενεργοποιήσετε το MSET9 για να εκκινηθεί το SafeB9SInstaller (το πρόγραμμα εγκατάστασης του custom firmware).
 
@@ -126,17 +126,17 @@
 5. Εάν το exploit ήταν επιτυχές, θα έχει γίνει εκκίνηση στο SafeB9SInstaller
    - If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting#installing-boot9strap-mset9)
 
-### Section III - Installing boot9strap
+### Ενότητα IIΙ - Εγκατάσταση του boot9strap
 
 Σε αυτήν την ενότητα, θα εγκαταστήσετε custom firmware στην κονσόλα σας.
 
 1. Όταν ζητηθεί, εισαγάγετε τον συνδυασμό πλήκτρων που θα εμφανιστεί στην πάνω οθόνη, ώστε να εγκαταστήσετε το boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+   - Εάν το κείμενο ενός βήματος στην κάτω οθόνη έχει κόκκινο χρώμα και δεν σας ζητείται να εισαγάγετε κάποιον συνδυασμό πλήκτρων [ακολουθήστε αυτόν τον οδηγό επίλυσης προβλημάτων](troubleshooting#issues-with-safeb9sinstaller)
 2. Μόλις ολοκληρωθεί, πατήστε το (Α) για να επανεκκινήσετε την κονσόλα σας
 
 <!--@include: ./_include/configure-luma3ds.md -->
 
-### Section IV - Removing MSET9
+### Ενότητα IV - Αφαίρεση του MSET9
 
 Σε αυτήν την ενότητα, θα αφαιρέσετε το MSET9 για να αποτρέψετε περαιτέρω προβλήματα και να επαναφέρετε τα δεδομένα χρήστη σας (παιχνίδια, θέματα, κ.λπ.). (Αυτή η ενέργεια δεν θα αφαιρέσει το custom firmware που μόλις εγκαταστήσατε.)
 
@@ -172,6 +172,6 @@ ___
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Συνέχεια στην [Ολοκλήρωση εγκατάστασης](finalizing-setup)
 
 :::
