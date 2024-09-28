@@ -18,12 +18,12 @@
 
 ## Τι χρειάζεστε
 
-- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
-- The latest release of [FBI](https://github.com/lifehackerhansol/FBI/releases/download/2.6.1/FBI.3dsx) (direct download)
-- The latest release of [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(the `.3dsx` file)_
-- A torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download)
-  - If you already have a torrent client, you do not need to download a new one
-- The 11.15.0 CTRTransfer image for your console and region:
+- Την πιο πρόσφατη έκδοση του [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (το αρχείο `.zip` του GodMode9)
+- Την πιο πρόσφατη έκδοση του [FBI](https://github.com/lifehackerhansol/FBI/releases/download/2.6.1/FBI.3dsx) (απευθείας λήψη)
+- Την πιο πρόσφατη έκδοση του [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(το αρχείο `.3dsx`)_
+- Ένα πρόγραμμα torrent, όπως το [qBittorrent](https://www.qbittorrent.org/download.php) ή το [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+  - Εάν διαθέτετε ήδη κάποιο πρόγραμμα torrent, δεν χρειάζεται να κάνετε λήψη ενός νέου
+- Το είδωλο του CTRTransfer 11.15.0 για την κονσόλα και την περιοχή σας:
 
 <!--@include: ./_include/ctrtransfer-images.md -->
 
