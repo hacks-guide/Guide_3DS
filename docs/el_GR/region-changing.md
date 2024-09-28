@@ -39,7 +39,7 @@
 - Την πιο πρόσφατη έκδοση του [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(το αρχείο `.3dsx`)_
 - Ένα πρόγραμμα torrent, όπως το [qBittorrent](https://www.qbittorrent.org/download.php) ή το [Deluge](http://dev.deluge-torrent.org/wiki/Download)
   - Εάν διαθέτετε ήδη κάποιο πρόγραμμα torrent, δεν χρειάζεται να κάνετε λήψη ενός νέου
-- Το είδωλο του CTRTransfer 11.15.0 για τον τύπο της κονσόλας σας και την επιθυμητή περιοχή (π.χ. Κάντε λήψη του «New 3DS ή 2DS - USA» αν έχετε ένα New 3DS και θέλετε να αλλάξετε την περιοχή σας σε USA)
+- Το είδωλο του CTRTransfer 11.15.0 για τον τύπο της κονσόλας σας και την επιθυμητή περιοχή (π.χ. κάντε λήψη του «New 3DS ή 2DS - USA» αν έχετε ένα New 3DS και θέλετε να αλλάξετε την περιοχή σας σε USA)
 
 <!--@include: ./_include/ctrtransfer-images.md -->
 
