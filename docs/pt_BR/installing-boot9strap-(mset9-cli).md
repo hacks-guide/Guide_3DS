@@ -38,7 +38,7 @@ Nesta seção, você vai preparar o exploit MSET9 através de **temporariamente*
 
    ::: info
 
-   ![MSET9 root layout](/images/screenshots/mset9/mset9-root-layout.png)
+   ![](/images/screenshots/mset9/mset9-root-layout.png)
 
    :::
 
@@ -49,7 +49,7 @@ Nesta seção, você vai preparar o exploit MSET9 através de **temporariamente*
 ```
 ::: info
 
-![Image: MSET9 setup](/images/screenshots/mset9/mset9-select.png)
+![](/images/screenshots/mset9/mset9-select.png)
 
 :::
 ```
@@ -60,7 +60,7 @@ Nesta seção, você vai preparar o exploit MSET9 através de **temporariamente*
 
    ::: info
 
-   ![Imagem: preparação do MSET9](/images/screenshots/mset9/mset9-setup-notcreated.png)
+   ![](/images/screenshots/mset9/mset9-setup-notcreated.png)
 
    :::
 
@@ -90,7 +90,7 @@ Nesta seção, você vai preparar o exploit MSET9 através de **temporariamente*
 
    ::: info
 
-   ![Imagem: preparação do MSET9](/images/screenshots/mset9/mset9-ready.png)
+   ![](/images/screenshots/mset9/mset9-ready.png)
 
    :::
 
