@@ -11,11 +11,11 @@
 :::
 
 1. 打开系统设置（本体設定 / System Settings）
-2. 进入到 `互联网设置（インターネット設定 / Internet Settings）` -> `连接设置（インターネット接続設定 / Connection Settings）`
-3. 点击你目前在用的连接点槽位，然后进入到 `设置变更（設定変更 / Change Settings）` -> `下一页（右箭头）` -> `代理设置（Proxy）`
+2. Navigate to `Internet Settings` -> `Connection Settings`
+3. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
 4. 设置“代理服务器 （Proxy）”为“是（する / Yes）”，然后点击`详细设置（詳細設定 / Detailed Setup）`
 5. 将代理服务器设置为 `ssloth.nintendohomebrew.com`，端口设置为 `8080`
-6. 点击 OK，然后点击保存（保存する / Save）
-7. 当提示时，点击“测试（テスト / Test）”进行连接测试
+6. Click OK, then click Save
+7. When prompted, click "Test" to perform the connection test
    - The test should succeed
-8. 点击 “OK” 继续
+8. Click "OK" to continue
