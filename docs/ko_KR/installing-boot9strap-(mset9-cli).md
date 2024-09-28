@@ -1,12 +1,12 @@
 # boot9strap 설치 (MSET9 CLI)
 
-:::details Technical Details (optional)
+:::details 기술적 상세 정보 (선택 사항)
 
 [MSET9](https://github.com/zoogie/MSET9) 은 [zoogie](https://github.com/zoogie) 에 의해 개발된 본체 설정 앱의 취약점을 공략하는 방법입니다. 이 취약점은 ID1의 이름이 _어떤 이름이든 간에_ 32글자면 된다는 것을 이용합니다. (ID1 폴더는 Nintendo 3DS 폴더 속, 32글자짜리 ID0 폴더 안에 있는 또다른 32글자 폴더입니다.) 특정한 작업들을 수행하면 콘솔에서 ID1 폴더 이름으로 인코딩된 명령어가 실행되며, 이를 통해 3DS에 대한 전체 제어 권한을 획득할 수 있습니다.
 
 :::
 
-## Compatibility Notes
+## 호환성 안내
 
 ::: warning
 
@@ -14,13 +14,13 @@
 
 :::
 
-## What You Need
+## 준비물
 
-- The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest)
-- Any 3.x version of [Python](https://www.python.org/downloads/) **installed on your computer**
-  - If you are on Linux or macOS, you may already have Python 3. 터미널을 열고 'python3 -V'를 입력해 주세요. 버전 번호가 나올 경우, 본 가이드에 따라 잘 작동할 것입니다.
+- 최신 버전의 [MSET9](https://github.com/hacks-guide/MSET9/releases/latest)
+- **컴퓨터에 설치된** 3.x 버전의 [Python](https://www.python.org/downloads/) (파이썬)
+  - 리눅스나 macOS를 사용 중인 경우 Python 3(파이썬 3)이 이미 설치되어 있을 것입니다. 터미널을 열고 'python3 -V'를 입력해 주세요. 버전 번호가 나올 경우, 본 가이드에 따라 잘 작동할 것입니다.
 
-## Instructions
+## 진행 방법
 
 ::: info
 
@@ -28,7 +28,7 @@
 
 :::
 
-### Section I - Prep Work
+### 섹션 I - 준비 작업
 
 In this section, you will prepare the MSET9 exploit by **temporarily** creating a new HOME Menu profile with no user data, and then setting up that profile with only the minimum data required for MSET9 to trigger. Your existing user data will disappear, but will come back when you are finished with this page.
 
@@ -38,7 +38,7 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 
    ::: info
 
-   ![MSET9 root layout](/images/screenshots/mset9/mset9-root-layout.png)
+   ![](/images/screenshots/mset9/mset9-root-layout.png)
 
    :::
 
@@ -49,7 +49,7 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 ```
 ::: info
 
-![Image: MSET9 setup](/images/screenshots/mset9/mset9-select.png)
+![](/images/screenshots/mset9/mset9-select.png)
 
 :::
 ```
@@ -60,7 +60,7 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 
    ::: info
 
-   ![Image: MSET9 setup](/images/screenshots/mset9/mset9-setup-notcreated.png)
+   ![](/images/screenshots/mset9/mset9-setup-notcreated.png)
 
    :::
 
@@ -90,7 +90,7 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 
    ::: info
 
-   ![Image: MSET9 setup](/images/screenshots/mset9/mset9-ready.png)
+   ![](/images/screenshots/mset9/mset9-ready.png)
 
    :::
 
@@ -131,12 +131,12 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 5. 익스플로잇이 성공적이었다면 SafeB9SInstaller로 부팅되었을 것입니다
    - If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting#installing-boot9strap-mset9)
 
-### Section III - Installing boot9strap
+### 섹션 III - boot9strap 설치하기
 
 이 섹션에서는, 커스텀 펌웨어를 설치할 것입니다.
 
 1. 메시지가 나타나면, boot9strap을 설치하기 위하여 화면에 주어진 키 조합을 입력해 주세요
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+   - 아래 화면의 단계가 붉은 텍스트로 표시되고 키 콤보 입력을 요구하지 않는다면, [이 문제 해결 가이드](troubleshooting#issues-with-safeb9sinstaller)를 참고해 주세요
 2. 작업이 완료되면, (A) 를 눌려 콘솔을 재부팅해 주세요
 
 <!--@include: ./_include/configure-luma3ds.md -->
@@ -178,6 +178,6 @@ ___
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+[마무리 단계](finalizing-setup) 로 계속합니다
 
 :::
