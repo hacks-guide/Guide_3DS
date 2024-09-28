@@ -65,7 +65,7 @@ In this section, you will install custom firmware onto your console.
 
 1. Insert your console's SD card into your computer
 2. Ștergeți `boot.firm` de pe rădăcina cardului SD
-3. Copiați `boot.firm` și `boot.3dsx` de la Luma3DS `.zip` pe rădăcina cardului SD
+3. Copy everything from the Luma3DS `.zip` to the root of your SD card
 4. Reinsert your SD card into your console
 5. Power on your console
 
