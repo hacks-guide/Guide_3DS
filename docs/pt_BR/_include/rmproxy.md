@@ -1,10 +1,10 @@
 Nesta seção, você irá restaurar as configurações de internet ao normal.
 
 1. Saia do aplicativo Configuração do Console
-2. Navegue para `Configurações da Internet` -> `Configurações de Conexão`
-3. Clique no seu slot de conexão da rede e navegue para `Alterar configurações` -> `Próxima página (seta direita)` -> `Configurações de proxy`
-4. Defina "Configurações de proxy" para "Não"
-5. Clique em OK, e depois clique em Salvar
-6. Quando solicitado, clique em "Testar" para executar o teste de conexão
+2. Navigate to `Internet Settings` -> `Connection Settings`
+3. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
+4. Set "Proxy Settings" to "No"
+5. Click OK, then click Save
+6. When prompted, click "Test" to perform the connection test
    - The test should succeed
 7. Desligue seu console
