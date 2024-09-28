@@ -1,25 +1,25 @@
 1. Drücke (Home), um das Aktionsmenü aufzurufen
-1. Wähle "Scripts"
-1. Select "GM9Megascript"
-1. Wähle "Backup Options" aus
-1. Wähle "SysNAND Backup" aus
-1. Drücke (A), um zu bestätigen
-    + Dieser Vorgang nimmt einige Zeit in Anspruch
-    + If you get an error, look for your issue in the [troubleshooting guide](troubleshooting#finalizing-setup)
-1. Drücke (A), um fortzufahren
-1. Drücke (B), um zum Hauptmenü zurückzukehren
-1. Wähle "Exit" aus
-1. Drücke (A), um die Schreibrechte zu deaktivieren, wenn du dazu aufgefordert wirst
-1. Navigate to `[S:] SYSNAND VIRTUAL`
-1. Press (A) on `essential.exefs` to select it
-1. Wähle "Copy to 0:/gm9/out" aus
-    + If you see "Destination already exists", press (A) on "Overwrite file(s)"
-1. Drücke (A), um fortzufahren
-1. Hold (R) and press (Start) at the same time to power off your console
-1. Stecke deine SD-Karte in deinen Computer
-1. Copy `<date>_<serialnumber>_sysnand_##.bin`, `<date>_<serialnumber>_sysnand_##.bin.sha`, and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
-    + Copy these backups to multiple locations (such as online file storage, an external hard drive, etc.)
-    + Diese Backups werden im Falle eines Bricks benötigt, um Daten aus dem NAND-Image wieder herzustellen, wenn etwas schief gehen sollte
-1. Delete `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
-    + The other backup files are negligible in size and may be kept on your SD card for ease of access
-1. Reinsert your SD card into your console
+2. Wähle "Scripts"
+3. Select "GM9Megascript"
+4. Wähle "Backup Options" aus
+5. Wähle "SysNAND Backup" aus
+6. Drücke (A), um zu bestätigen
+   - This process will take some time
+   - If you get an error, look for your issue in the [troubleshooting guide](troubleshooting#finalizing-setup)
+7. Drücke (A), um fortzufahren
+8. Drücke (B), um zum Hauptmenü zurückzukehren
+9. Wähle "Exit" aus
+10. Drücke (A), um die Schreibrechte zu deaktivieren, wenn du dazu aufgefordert wirst
+11. Navigate to `[S:] SYSNAND VIRTUAL`
+12. Press (A) on `essential.exefs` to select it
+13. Wähle "Copy to 0:/gm9/out" aus
+    - If you see "Destination already exists", press (A) on "Overwrite file(s)"
+14. Drücke (A), um fortzufahren
+15. Hold (R) and press (Start) at the same time to power off your console
+16. Insert your SD card into your computer
+17. Copy `<date>_<serialnumber>_sysnand_##.bin`, `<date>_<serialnumber>_sysnand_##.bin.sha`, and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
+    - Copy these backups to multiple locations (such as online file storage, an external hard drive, etc.)
+    - These backups will save you from a brick and/or help you recover files from the NAND image if anything goes wrong in the future
+18. Delete `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
+    - The other backup files are negligible in size and may be kept on your SD card for ease of access
+19. Reinsert your SD card into your console
