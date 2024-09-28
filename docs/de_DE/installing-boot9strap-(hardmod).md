@@ -69,7 +69,7 @@ In this section, you will download the necessary files for the hardmod and dump 
 
 1. Power off your console
 2. Insert your SD card into your computer
-3. Copy `boot.firm` and `boot.3dsx` from the Luma3DS `.zip` to the root of your SD card
+3. Copy everything from the Luma3DS `.zip` to the root of your SD card
 4. Kopiere den hardmod-b9s-installer-Ordner von der hardmod-b9s-installer `.zip` auf deinen Computer
 5. Kopiere deine heruntergeladene `.firm` in den hardmod-b9s-installer-Ordner auf deinem PC
 6. Benenne die heruntergeladene `.firm` in dem hardmod-b9s-installer-Ordner auf deinem PC zu `current.firm` um
