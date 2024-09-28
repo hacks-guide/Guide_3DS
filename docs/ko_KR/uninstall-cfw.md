@@ -1,6 +1,6 @@
 # CFW 제거하기
 
-## Required Reading
+## 중요
 
 이것은 콘솔을 순정 상태 로 되돌리기 위하여 boot9strap 이나 Luma3DS을 포함한 커펌을 완벽히 제거합니다.
 
@@ -41,16 +41,16 @@ then uninstalling CFW <u>**WILL BRICK YOUR CONSOLE**</u>. 만약 이것에 해�
 
 :::
 
-## What You Need
+## 준비물
 
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
-- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
+- 최신 버전의 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (Luma3DS `.zip` 파일)
+- 최신 버전의 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (GodMode9 `.zip` 파일)
 - The latest release of [DSiWare Uninstaller](https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest)
 - [safety_test.gm9](/gm9_scripts/safety_test.gm9)
 
-## Instructions
+## 진행 방법
 
-### Section I - Prep Work
+### 섹션 I - 준비 작업
 
 1. 콘솔의 전원을 꺼 주세요
 2. SD 카드를 컴퓨터에 삽입해 주세요
