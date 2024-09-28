@@ -1,6 +1,6 @@
 # F3X (Mac)
 
-## Required Reading
+## Απαραίτητη ανάγνωση
 
 Αυτή είναι μια πρόσθετη ενότητα για τον έλεγχο την κάρτας SD για σφάλματα χρησιμοποιώντας το F3X.
 
@@ -14,11 +14,11 @@
 
 :::
 
-## What You Need
+## Τι χρειάζεστε
 
-- The latest release of [F3X](https://github.com/insidegui/F3X/releases/latest)
+- Την πιο πρόσφατη έκδοση του [F3X](https://github.com/insidegui/F3X/releases/latest)
 
-## Instructions
+## Οδηγίες
 
 1. Αποσυμπιέστε το αρχείο `.zip` του F3X
 2. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
@@ -43,6 +43,6 @@ ___
 
 ::: tip
 
-Return to [Get Started](get-started)
+Επιστροφή στην [Έναρξη](get-started)
 
 :::
