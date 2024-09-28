@@ -72,7 +72,7 @@ In questa sezione entrerai nella Modalità Provvisoria (disponibile su tutte le 
 6. Se l'exploit è andato a buon fine, si avvierà SafeB9SInstaller
    - Se la console si blocca o crasha, forza lo spegnimento della console, quindi ritenta questa sezione
 
-### Section V - Installing boot9strap
+### Sezione V - Installazione di boot9strap
 
 In questa sezione installerai il custom firmware sulla tua console.
 
@@ -84,7 +84,7 @@ In questa sezione installerai il custom firmware sulla tua console.
 
 <!--@include: ./_include/luma3ds-installed-note.md -->
 
-### Section VI - Restoring default proxy
+### Sezione VI - Ripristino del proxy di default
 
 <!--@include: ./_include/rmproxy.md -->
 
