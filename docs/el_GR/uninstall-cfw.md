@@ -41,16 +41,16 @@ then uninstalling CFW <u>**WILL BRICK YOUR CONSOLE**</u>. Εάν αυτό ισχ
 
 :::
 
-## What You Need
+## Τι χρειάζεστε
 
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- Την πιο πρόσφατη έκδοση του [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (το αρχείο `.zip` του Luma3DS)
 - The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
 - The latest release of [DSiWare Uninstaller](https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest)
 - [safety_test.gm9](/gm9_scripts/safety_test.gm9)
 
-## Instructions
+## Οδηγίες
 
-### Section I - Prep Work
+### Ενότητα I - Προετοιμασία
 
 1. Απενεργοποιήστε την κονσόλα σας
 2. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
@@ -89,7 +89,7 @@ then uninstalling CFW <u>**WILL BRICK YOUR CONSOLE**</u>. Εάν αυτό ισχ
 
 :::
 
-### Section III - Safety Test
+### Ενότητα III - Δοκιμή ασφαλείας
 
 Σκοπός αυτής της ενότητας είναι να σας βοηθήσει να εξασφαλίσετε ότι η κονσόλα θα εκκινηθεί και ότι οι σημαντικές λειτουργίες του συστήματος, όπως η εφαρμογή «System Settings» και το πληκτρολόγιο, θα λειτουργούν μόλις αφαιρεθεί το CFW. **Εάν παραλείψετε αυτήν την ενότητα, ενδέχεται να καταστήσετε ΜΗ ΛΕΙΤΟΥΡΓΙΚΗ την κονσόλα σας!**
 
@@ -118,7 +118,7 @@ then uninstalling CFW <u>**WILL BRICK YOUR CONSOLE**</u>. Εάν αυτό ισχ
 
 :::
 
-### Section IV - NAND Backup
+### Ενότητα IV - Αντίγραφο ασφαλείας της NAND
 
 1. Κρατήστε πατημένο το (Start) και ταυτόχρονα, ενεργοποιήστε την κονσόλα σας. Αυτή η ενέργεια θα εκκινήσει το GodMode9
 2. Πατήστε το (Home) για να εμφανιστεί το μενού ενεργειών
@@ -127,7 +127,7 @@ then uninstalling CFW <u>**WILL BRICK YOUR CONSOLE**</u>. Εάν αυτό ισχ
 5. Επιλέξτε «Backup Options»
 6. Επιλέξτε «SysNAND Backup»
 7. Πατήστε το (A) για επιβεβαίωση
-   - This process will take some time
+   - Η διαδικασία αυτή θα διαρκέσει αρκετή ώρα
    - If you get an error, ensure you have at least 1.3GB of free space on your SD card
 8. Πατήστε το (B) για να επιστρέψετε στο κύριο μενού
 9. Επιλέξτε «Exit»
@@ -167,7 +167,7 @@ then uninstalling CFW <u>**WILL BRICK YOUR CONSOLE**</u>. Εάν αυτό ισχ
 20. Ακολουθήστε τις οδηγίες και επιτρέψτε στο πρόγραμμα να πραγματοποιήσει την κατάργηση της εγκατάστασης
 21. Μόλις ολοκληρωθεί η διαδικασία, κλείστε το Homebrew Launcher και απενεργοποιήστε την κονσόλα σας
 
-### Section VI - System Format
+### Ενότητα VI - Διαμόρφωση συστήματος
 
 Αυτή η ενότητα θα διασφαλίσει ότι θα αφαιρεθούν όλα τα παράνομα ticket, επιτρέποντας στο eShop να λειτουργεί κανονικά. Αυτή η ενέργεια θα αφαιρέσει όλο το περιεχόμενο από το 3DS και θα σας αποσυνδέσει από το NNID σας. Λάβετε υπόψη ότι θα δημιουργηθεί ένα νέο, τυχαίο κλειδί κρυπτογράφησης για την κονσόλα σας, καθιστώντας οποιαδήποτε παλιά δεδομένα μη προσβάσιμα, ακόμα κι αν διαθέτετε αντίγραφο ασφαλείας των περιεχομένων της SD σας.
 
