@@ -70,7 +70,7 @@ Igen! Egyedül arra van szükséged, hogy fájlokat tudj másolni egy kompatibil
 
 :::
 
-:::details What size SD card can I use?<
+:::details What size SD card can I use?
 
 Legalább 1.5GB szabad hely kell az SD kártyán az útmutató teljes végrehajtásához. Habár a 3DS hivatalosan 32GB SD kártya méretig kompatibilis, nagyobb SD kártyák is használhatók, miután kézzel újra formázásra kerültek FAT32 fájlrendszerre. Nem javasoltak 128GB-nál nagyobb SD kártyák, az ismert problémák miatt a GBA grafikával és az egyedi témákkal.
 
@@ -165,6 +165,6 @@ A régi konfigurációd (beleértve az EmuNAND-od, ha van ilyened) általában k
 
 :::details How do I move saves from an existing Gateway setup to a more modern setup?
 
-Nézd meg [ezt az üzenetszálat](https://gbatemp.net/threads/425743/).
+See [this thread](https://gbatemp.net/threads/425743/).
 
 :::
