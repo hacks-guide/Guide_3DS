@@ -70,7 +70,7 @@ NNID는 닌텐도 네트워크 ID의 약칭이며, 본 가이드에서 NNID 걱�
 
 :::
 
-:::details What size SD card can I use?
+:::details 어떤 용량의 SD 카드를 사용하면 될까요?
 
 최소한 1.5GB의 용량이 있는 SD 카드를 사용해야 이 가이드를 따를 수 있습니다. 3DS는 공식적으로 32GB까지 호환되지만, FAT32로 포맷하시면 그 이상도 가능합니다. GBA 그래픽과 커스텀 테마 문제 때문에 128GB를 넘기는 SD 카드를 사용하는 것은 권장하지 않습니다.
 
@@ -164,6 +164,6 @@ boot9strap을 기반으로 한 최신의 커펌 방식으로 업그레이드하�
 
 :::details 기존 Gateway 셋업의 게임 세이브들을 최신 셋업으로 옮기려면 어떻게 하나요?
 
-See [this thread](https://gbatemp.net/threads/425743/).
+[이 링크 (영어)](https://gbatemp.net/threads/425743/)를 참고해 주세요.
 
 :::
