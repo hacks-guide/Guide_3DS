@@ -379,7 +379,7 @@ Follow these steps in order:
 4. Set "Proxy Settings" to "No"
 5. Click OK, then click Save
 6. When prompted, click "Test" to perform the connection test
-   - The test should succeed
+   - 이 테스트가 성공적일 겁니다
 7. Click "OK" to continue
 8. "뒤로"을 두 번 누르고 "종료"를 눌러 HOME 메뉴로 돌아가 주세요
 9. Open the Internet Browser once
@@ -673,7 +673,7 @@ SD 카드가 읽혔는지 확인하려면 SELECT를 누른 채 부팅해 아래 
 
 :::
 
-:::details Extended memory mode games (Pokemon Sun/Moon, Smash, etc.) don't work
+:::details 확장 메모리 모드 게임 (포켓몬 썬/문, 스매시 브라더스 등)이 정상 작동하지 않습니다 don't work
 
 이 문제는 구 3DS / 2DS 콘솔의 지역을 변경하거자 CTRTransfer를 한 이후 나타날 수 있는 상황입니다. Follow the instructions [here](region-changing#section-vi---fixing-locale-related-issues) to fix this issue (skipping steps 3, 4, 5, and 6).
 
