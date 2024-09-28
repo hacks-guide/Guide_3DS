@@ -69,7 +69,7 @@
 
 1. Απενεργοποιήστε την κονσόλα σας
 2. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
-3. Αντιγράψτε τα `boot.firm` και `boot.3dsx` από το αρχείο `.zip` του Luma3DS στη ρίζα της κάρτας SD σας
+3. Copy everything from the Luma3DS `.zip` to the root of your SD card
 4. Αντιγράψτε τον φάκελο «hardmod-b9s-installer» από το αρχείο `.zip` του hardmod-b9s-installer στον υπολογιστή σας
 5. Αντιγράψτε το ληφθέν αρχείο `.firm` στον φάκελο «hardmod-b9s-installer» του υπολογιστή σας
 6. Μετονομάστε το ληφθέν αρχείο `.firm` στον φάκελο «hardmod-b9s-installer» του υπολογιστή σας σε `current.firm`
