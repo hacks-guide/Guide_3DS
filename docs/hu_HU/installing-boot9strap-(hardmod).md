@@ -69,7 +69,7 @@ Ebben a fejezetben le fogod tölteni a szükséges fájlokat a hardmod-hoz és d
 
 1. Kapcsold ki a konzolod
 2. Helyezd az SD kártyád a számítógépbe
-3. Másold át a `boot.firm` és `boot.3dsx` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
+3. Copy everything from the Luma3DS `.zip` to the root of your SD card
 4. Csomagold ki a hardmod-b9s-installer mappát a hardmod-b9s-installer `.zip`-ből
 5. Másold az előbbiekben letöltött `.firm` fájlt a kicsomagolt hardmod-b9s-installer mappába
 6. Nevezd át a hardmod-b9s-installer mappában található `.firm` fájlt `current.firm` névre
