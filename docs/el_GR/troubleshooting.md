@@ -2,7 +2,7 @@
 
 Αυτή η σελίδα παρέχει συμβουλές για την επίλυση κοινών προβλημάτων. Εάν δεν μπορείτε να διορθώσετε το ζήτημά σας με τις συμβουλές αυτής της σελίδας, γίνετε μέλος του [Nintendo Homebrew στο Discord](https://discord. g/MWxPgEp) και περιγράψτε το πρόβλημά σας, καθώς και όλες τις λύσεις που έχετε ήδη δοκιμάσει.
 
-:::details Table of Contents
+:::details Πίνακας περιεχομένων
 
 Χρησιμοποιείται σε πολλαπλές σελίδες:
 
@@ -18,14 +18,14 @@
 
 Ζητήματα μετά την εγκατάσταση:
 
-- [Boot issues](#boot-issues-on-consoles-with-custom-firmware)
-- [Software issues](#software-issues-on-consoles-with-custom-firmware)
+- [Ζητήματα εκκίνησης](#boot-issues-on-consoles-with-custom-firmware)
+- [Ζητήματα λογισμικού](#software-issues-on-consoles-with-custom-firmware)
 
 :::
 
-## Issues with SafeB9SInstaller
+## Ζητήματα με το SafeB9SInstaller
 
-### Before opening SafeB9SInstaller
+### Πριν από το άνοιγμα του SafeB9SInstaller
 
 :::details Failed to open SafeB9SInstaller.bin
 
@@ -59,7 +59,7 @@
 
 :::
 
-:::details Something else
+:::details Κάτι άλλο
 
 Για να λάβετε βοήθεια, γίνετε μέλος του [Nintendo Homebrew στο Discord](https://discord.gg/MWxPgEp) και περιγράψτε το μήνυμα που βλέπετε.
 
@@ -81,7 +81,7 @@ If your console is on system version 9.4.0, 9.5.0, or 9.6.0, you may be encounte
 
 :::
 
-:::details "Could not play"
+:::details «Could not play»
 
 Δεν διαθέτετε το σωστό αρχείο του Soundhax για την κονσόλα και την περιοχή σας ή η κονσόλα σας δεν είναι συμβατή με το Soundhax. Στην τελευταία περίπτωση, οι ενέργειές σας θα καθορίσουν την έκδοση που διαθέτει το 3DS σας. Γίνετε μέλος του [Nintendo Homebrew στο Discord](https://discord.gg/MWxPgEp) για βοήθεια.
 
@@ -291,25 +291,25 @@ This likely indicates that you already have custom firmware. Θα πρέπει �
 
 ## Εγκατάσταση του boot9strap (super-skaterhax)
 
-:::details "An error has occurred. Please save your data in any software currently in use, then restart the system."
+:::details «An error has occurred. Please save your data in any software currently in use, then restart the system.»
 
-If no colors flash after pressing "GO GO!":
+Εάν δεν αναβοσβήσει κάποιο χρώμα μετά το πάτημα του «GO GO!»:
 
-- Ensure that you have set your system date and [region](/images/screenshots/skater/skater-lang.png) correctly
-- Ensure that no other browser tabs are open, then restart the browser and try the exploit again
+- Βεβαιωθείτε ότι έχετε ορίσει σωστά την ημερομηνία και την [περιοχή](/images/screenshots/skater/skater-lang.png) του συστήματός σας
+- Βεβαιωθείτε ότι δεν υπάρχουν άλλες ανοικτές καρτέλες στο πρόγραμμα περιήγησης, κάντε επανεκκίνηση του προγράμματος περιήγησης και δοκιμάστε ξανά το exploit
 
-If the screen flashes colors then freezes/crashes:
+Εάν η οθόνη αναβοσβήσει με χρώματα και έπειτα, «παγώσει» ή διακοπεί απρόσμενα η λειτουργία:
 
-- Ensure that you have the correct copy of `arm11code.bin` and `browserhax_hblauncher_ropbin_payload.bin` for your console's version and region
-- Try resetting your browser data:
+- Βεβαιωθείτε ότι διαθέτετε το σωστό αντίγραφο των `arm11code.bin` και `browserhax_hblauncher_ropbin_payload.bin` για την έκδοση και την περιοχή της κονσόλας σας
+- Δοκιμάστε να επαναφέρετε τα δεδομένα του προγράμματος περιήγησης:
   1. Launch the browser, then launch the browser settings
   2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-  3. Try the exploit again
-- Try changing the system language to something other than the current language
+  3. Δοκιμάστε ξανά το exploit
+- Δοκιμάστε να αλλάξετε τη γλώσσα συστήματος σε κάποια άλλη εκτός της τρέχουσας
 
 :::
 
-:::: details "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
+:::: details «An error has occurred. Hold down the POWER button to turn off the power...» (μαύρη οθόνη με κείμενο)
 
 The file `arm11code.bin` is missing or misplaced. Make sure to copy the files of the [latest version of super-skaterhax](https://github.com/zoogie/super-skaterhax/releases/latest) for your region and version to the root of your SD card (not inside of a folder).
 
@@ -335,7 +335,7 @@ This likely indicates that you already have custom firmware. Θα πρέπει �
 
 :::
 
-:::details "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
+:::details «An error has occurred. Hold down the POWER button to turn off the power...» (μαύρη οθόνη με κείμενο)
 
 The file `arm11code.bin` is missing or misplaced. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Μην προσθέσετε την επέκταση `.bin` αν δεν τη βλέπετε ήδη.
 
@@ -349,7 +349,7 @@ You can also try resetting your browser save data:
 
 1. Launch the browser, then launch the browser settings
 2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-3. Try the exploit again
+3. Δοκιμάστε ξανά το exploit
 
 :::
 
@@ -359,7 +359,7 @@ Browser based exploits (such as this one) are often unstable and crash frequentl
 
 1. Launch the browser, then launch the browser settings
 2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-3. Try the exploit again
+3. Δοκιμάστε ξανά το exploit
 
 :::
 
@@ -578,14 +578,14 @@ There may be an issue with your `arm11code.bin` file. Re-download the latest rel
 1. Απενεργοποιήστε την κονσόλα σας, αφαιρέστε την κάρτα SD, εισαγάγετέ την ξανά και έπειτα, ενεργοποιήστε την κονσόλα σας.
 2. Απενεργοποιήστε την κονσόλα σας, αφαιρέστε την κασέτα παιχνιδιού (αν υπάρχει), ενεργοποιήστε την κονσόλα σας και έπειτα, περιμένετε έως και δέκα λεπτά. Εάν η κονσόλα σας εκκινηθεί μέσα σε δέκα λεπτά, το ζήτημα έχει διορθωθεί και είναι απίθανο να επαναληφθεί
 3. Μετονομάστε τον φάκελο `Nintendo 3DS` της κάρτας SD σας σε `Nintendo 3DS_BACKUP` και έπειτα, προσπαθήστε να κάνετε εκκίνηση. Εάν η κονσόλα σας εκκινηθεί επιτυχώς, υπάρχει κάποιο πρόβλημα εντός του φακέλου `Nintendo 3DS` σας. Δοκιμάστε να εκκαθαρίσετε τα extdata του μενού «HOME»:
-   - Navigate to `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
+   - Μεταβείτε στο `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
    - Διαγράψτε τον φάκελο που αντιστοιχεί στην περιοχή του 3DS σας:
-     - **EUR Region**: `00000098`
-     - **JPN Region**: `00000082`
-     - **USA Region**: `0000008f`
-     - **CHN Region**: `000000A1`
-     - **KOR Region**: `000000A9`
-     - **TWN Region**: `000000B1`
+     - **Περιοχή EUR**: `00000098`
+     - **Περιοχή JPN**: `00000082`
+     - **Περιοχή USA**: `0000008f`
+     - **Περιοχή CHN**: `000000A1`
+     - **Περιοχή KOR**: `000000A9`
+     - **Περιοχή TWN**: `000000B1`
 4. Δοκιμάστε να κάνετε εκκίνηση στη λειτουργία αποκατάστασης και να ενημερώσετε το σύστημά σας:
    - Απενεργοποιήστε την κονσόλα σας
    - Hold (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A)
@@ -610,14 +610,14 @@ There are a number of reasons as to why this could be happening. In any case, th
 
 :::
 
-:::details "An error has occurred. Hold down the POWER button to turn off the power..."
+:::details «An error has occurred. Hold down the POWER button to turn off the power...»
 
 Έχουν απενεργοποιηθεί οι χειριστές εξαιρέσεων ARM11 (ARM11 exception handlers) ή δεν έχει εγκατασταθεί custom firmware. Try enabling ARM11 exception handlers:
 
 - Απενεργοποιήστε την κονσόλα σας
-- Hold (Select)
-- Power on your console, while still holding (Select)
-- If the "Disable ARM11 exception handlers" box is checked, uncheck it
+- Κρατήστε πατημένο το (Select)
+- Ενεργοποιήστε την κονσόλα σας, κρατώντας παράλληλα πατημένο το (Select)
+- Εάν είναι ενεργή η επιλογή «Disable ARM11 exception handlers», απενεργοποιήστε την
 
 :::
 
@@ -635,14 +635,14 @@ There are a number of reasons as to why this could be happening. In any case, th
 
 :::
 
-:::details Blue "BOOTROM ERROR" screen
+:::details Μπλε οθόνη «BOOTROM ERROR»
 
 Η κονσόλα σας έχει πιθανώς καταστεί μη λειτουργική. Θα χρειαστεί να αγοράσετε μια flashcart με ntrboot για να εγκαταστήσετε εκ νέου το boot9strap, προκειμένου να προσπαθήσετε να διορθώσετε την κονσόλα σας. Αυτό μπορεί επίσης να υποδεικνύει ένα ζήτημα υλικού που δεν μπορεί να διορθωθεί. Σε κάθε περίπτωση, γίνετε μέλος του [Nintendo Homebrew στο Discord](https://discord.gg/MWxPgEp) για βοήθεια.
 \+ Είναι επίσης πιθανό να έχει οριστεί από κάποιον μια οθόνη εκκίνησης που να θυμίζει την κατάσταση αδυναμίας λειτουργίας. Δοκιμάστε να αφήσετε την κονσόλα σας ενεργοποιημένη, περιμένοντας στην μπλε οθόνη, για πέντε λεπτά.
 
 :::
 
-:::details Some other error
+:::details Κάποιο άλλο σφάλμα
 
 Τραβήξτε μια φωτογραφία του σφάλματος και γίνετε μέλος του [Nintendo Homebrew στο Discord](https://discord.gg/MWxPgEp) για βοήθεια.
 
@@ -694,7 +694,7 @@ There are a number of reasons as to why this could be happening. In any case, th
 
 ---
 
-## Other troubleshooting
+## Επίλυση άλλων προβλημάτων
 
 :::details Clear HOME Menu extdata
 
@@ -702,12 +702,12 @@ There are a number of reasons as to why this could be happening. In any case, th
 2. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
 3. Μεταβείτε στον φάκελο `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` της κάρτας SD σας
 4. Διαγράψτε τον φάκελο που αντιστοιχεί στην περιοχή του 3DS σας:
-   - **EUR Region**: `00000098`
-   - **JPN Region**: `00000082`
-   - **USA Region**: `0000008f`
-   - **CHN Region**: `000000A1`
-   - **KOR Region**: `000000A9`
-   - **TWN Region**: `000000B1`
+   - **Περιοχή EUR**: `00000098`
+   - **Περιοχή JPN**: `00000082`
+   - **Περιοχή USA**: `0000008f`
+   - **Περιοχή CHN**: `000000A1`
+   - **Περιοχή KOR**: `000000A9`
+   - **Περιοχή TWN**: `000000B1`
 5. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 
 :::
@@ -718,10 +718,10 @@ There are a number of reasons as to why this could be happening. In any case, th
 2. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
 3. Μεταβείτε στον φάκελο `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` της κάρτας SD σας
 4. Διαγράψτε τον φάκελο που αντιστοιχεί στην περιοχή του 3DS σας:
-   - **EUR Region**: `000002ce`
-   - **JPN Region**: `000002cc`
-   - **USA Region**: `000002cd`
-   - **KOR Region**: `000002cf`
+   - **Περιοχή EUR**: `000002ce`
+   - **Περιοχή JPN**: `000002cc`
+   - **Περιοχή USA**: `000002cd`
+   - **Περιοχή KOR**: `000002cf`
 5. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 
 :::
