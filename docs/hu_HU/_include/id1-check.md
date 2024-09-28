@@ -4,7 +4,7 @@ Meg kell határozd, hogy melyik mappa tartalmazza az adataid. Először mentsd e
 
 ::: info
 
-![Backup ID1](/images/screenshots/troubleshooting/backup-id1.png)
+![](/images/screenshots/troubleshooting/backup-id1.png)
 
 :::
 
@@ -12,13 +12,13 @@ Most töröld egy kivételével az összes mappát az SD kártyáról. Általáb
 
 ::: info
 
-![Properties prompt](/images/screenshots/troubleshooting/rightclick-properties.png)
+![](/images/screenshots/troubleshooting/rightclick-properties.png)
 
 :::
 
 ::: info
 
-![Which to delete](/images/screenshots/troubleshooting/compare-id1.png)
+![](/images/screenshots/troubleshooting/compare-id1.png)
 
 :::
 
@@ -26,7 +26,7 @@ Az SD kártyádnak hasonlóan kell kinéznie:
 
 ::: info
 
-![Just enough ID1s](/images/screenshots/troubleshooting/correct-id1.png)
+![](/images/screenshots/troubleshooting/correct-id1.png)
 
 :::
 
