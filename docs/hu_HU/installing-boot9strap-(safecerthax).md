@@ -42,7 +42,7 @@ Ez a módszer nem használható, ha a kamera NEM jelenik meg. Ha ez az eset, has
 Ebben a fejezetben fel fogod másolni a fájlokat, amik a safecerthax exploit kiváltásához szükségesek.
 
 1. Helyezd az SD kártyád a számítógépbe
-2. Másold át a `boot.firm` és `boot.3dsx` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
+2. Copy everything from the Luma3DS `.zip` to the root of your SD card
    - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
 3. Hozz létre egy mappát `boot9strap` néven az SD kártya gyökerében
 4. Másold át a `boot9strap.firm` fájlt és a `boot9strap.firm.sha` fájlt a boot9strap `.zip` fájlból az SD kártyád `/boot9strap/` mappájába
