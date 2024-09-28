@@ -1,6 +1,6 @@
 # Αφαίρεση του CFW
 
-## Required Reading
+## Απαραίτητη ανάγνωση
 
 Αυτή η διαδικασία θα αφαιρέσει εντελώς το CFW, συμπεριλαμβανομένου του boot9strap και του Luma3DS, από την κονσόλα σας, ώστε να την επαναφέρετε στην αρχική της κατάσταση.
 
@@ -10,12 +10,12 @@
 
 Εάν αφαιρείτε το CFW επειδή:
 
-- You want to re-install it
-- You want to change SD cards
-- Your SD card was lost or corrupted
-- One of your games is broken
-- One of your system applications is broken
-- Your console is unable to boot to HOME Menu
+- Θέλετε να το εγκαταστήσετε εκ νέου
+- Θέλετε να αλλάξετε κάρτες SD
+- Η κάρτα SD σας χάθηκε ή καταστράφηκε
+- Κάποιο από τα παιχνίδια σας δυσλειτουργεί
+- Κάποια από τις εφαρμογές του συστήματός σας δυσλειτουργεί
+- Η κονσόλα σας δεν μπορεί να εκκινηθεί στο μενού «HOME»
 
 <u>**STOP!!!**</u> Uninstalling custom firmware is an unnecessary risk that will at best waste your time and at worst <u>**BRICK**</u> your console. Μια καλύτερη ιδέα θα ήταν να ζητήσετε βοήθεια στο [Nintendo Homebrew στο Discord](https://discord.gg/MWxPgEp).
 
@@ -54,7 +54,7 @@ then uninstalling CFW <u>**WILL BRICK YOUR CONSOLE**</u>. Εάν αυτό ισχ
 
 1. Απενεργοποιήστε την κονσόλα σας
 2. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
-3. Αντιγράψτε τα `boot.firm` και `boot.3dsx` από το αρχείο `.zip` του Luma3DS στη ρίζα της κάρτας SD σας
+3. Copy everything from the Luma3DS `.zip` to the root of your SD card
 4. Αντιγράψτε το `GodMode9.firm` από το αρχείο `.zip` του GodMode9 στον φάκελο `/luma/payloads/` της κάρτας SD σας
 5. Αντιγράψτε τον φάκελο `gm9` από το αρχείο `.zip` του GodMode9 στη ρίζα της κάρτας SD σας
 6. Αντιγράψτε το `DSiWareUninstaller.3dsx` στον φάκελο `/3ds/` της κάρτας SD σας
@@ -188,12 +188,12 @@ then uninstalling CFW <u>**WILL BRICK YOUR CONSOLE**</u>. Εάν αυτό ισχ
 
 Εάν αφαιρείτε το CFW επειδή:
 
-- You want to re-install it
-- You want to change SD cards
-- Your SD card was lost or corrupted
-- One of your games is broken
-- One of your system applications is broken
-- Your console is unable to boot to HOME Menu
+- Θέλετε να το εγκαταστήσετε εκ νέου
+- Θέλετε να αλλάξετε κάρτες SD
+- Η κάρτα SD σας χάθηκε ή καταστράφηκε
+- Κάποιο από τα παιχνίδια σας δυσλειτουργεί
+- Κάποια από τις εφαρμογές του συστήματός σας δυσλειτουργεί
+- Η κονσόλα σας δεν μπορεί να εκκινηθεί στο μενού «HOME»
 
 <u>**STOP!!!**</u> Uninstalling custom firmware is an unnecessary risk that will at best waste your time and at worst <u>**BRICK**</u> your console. Μια καλύτερη ιδέα θα ήταν να ζητήσετε βοήθεια στο [Nintendo Homebrew στο Discord](https://discord.gg/MWxPgEp).
 
