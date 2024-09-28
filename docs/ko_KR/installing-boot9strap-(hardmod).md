@@ -1,6 +1,6 @@
 # boot9strap 설치 (하드모드)
 
-:::details Technical Details (optional)
+:::details 기술적 상세 정보 (선택 사항)
 
 좋은 하드모드 가이드는 [여기 (영문)](https://gbatemp.net/threads/414498/)에서 볼 수 있습니다.
 
@@ -10,7 +10,7 @@
 
 :::
 
-## Compatibility Notes
+## 호환성 안내
 
 이 페이지의 [마그넷](https://wikipedia.org/wiki/Magnet_URI_scheme)링크를 사용하려면
 [qBittorrent](https://www.qbittorrent.org/download.php) 또는 [Deluge](http://dev.deluge-torrent.org/wiki/Download)와 같은 토렌트 클라이언트가 필요합니다.
@@ -19,13 +19,13 @@
 
 이것은 이 페이지에 있는 '.firm'파일에 호환되는 _모든_ 버전의 New 3DS, New 2DS, Old 3DS, 그리고 Old 2DS 에 작동할 것입니다.
 
-## What You Need
+## 준비물
 
 - Your NAND image extracted using your [hardmod](https://gbatemp.net/threads/414498/)
-- The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
+- 최신 버전의 [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (직접 다운로드)
 - The latest version of [hardmod-b9s-installer](https://github.com/ihaveamac/hardmod-b9s-installer/releases/latest)
   - Windows users can use the compiled `.exe`, while Mac and Linux users will need to have [Python 3](https://www.python.org/downloads/) installed to run the `.py`
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- 최신 버전의 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (Luma3DS `.zip` 파일)
 - The `.firm` corresponding to your console and version:
 
 | Version(s)                                                     | Kernel                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Old 3DS or Old 2DS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               New 3DS or New 2DS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
@@ -62,9 +62,9 @@
 | 11.14.0 - 11.15.0 | 2.57-0                          | [2.57-0_11.14_OLD.firm](magnet:?xt=urn:btih:bb03c194c6b3fe0753dfec0c52ef7e25936d669b\&xt=urn:btmh:1220b1258c6fd0244e2af5c46933dcd59c1ff1213b0a2dc36ac1b14a5d649df1b54e\&dn=2.57-0_11.14_OLD.firm\&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce\&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce\&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce\&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce\&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce\&tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce\&tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce\&tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce\&tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce\&tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce\&tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce\&tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce) | [2.57-0_11.14_NEW.firm](magnet:?xt=urn:btih:90d4bf26fd878bae127e006db90a6cb8a3a91176\&xt=urn:btmh:1220b10acb4ff6e4748f5e1abad27e1fbd99bf52bd7fea99e40b4a014cbae69351a4\&dn=2.57-0_11.14_NEW.firm\&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce\&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce\&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce\&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce\&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce\&tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce\&tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce\&tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce\&tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce\&tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce\&tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce\&tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce) |
 | 11.16.0 - 11.17.0 | 2.58-0                          |                                                                                                                                              [2.58-0_11.16_OLD.firm](magnet:?xt=urn:btih:1e3227ea262dd978c4aa61fc1530a055a4a06098\&dn=2.58-0_11.16_OLD.firm\&tr=udp://open.tracker.cl:1337/announce\&tr=udp://tracker.opentrackr.org:1337/announce\&tr=udp://9.rarbg.com:2810/announce\&tr=udp://exodus.desync.com:6969/announce\&tr=udp://www.torrent.eu.org:451/announce\&tr=udp://tracker.torrent.eu.org:451/announce\&tr=udp://tracker.tiny-vps.com:6969/announce\&tr=udp://tracker.pomf.se:80/announce\&tr=udp://tracker.openbittorrent.com:6969/announce\&tr=udp://tracker.moeking.me:6969/announce\&tr=udp://tracker.dler.org:6969/announce\&tr=udp://tracker.bitsearch.to:1337/announce\&tr=udp://tracker-udp.gbitt.info:80/announce\&tr=udp://retracker.netbynet.ru:2710/announce\&tr=udp://retracker.lanta-net.ru:2710/announce\&tr=udp://opentor.org:2710/announce\&tr=udp://open.stealth.si:80/announce\&tr=udp://mts.tvbit.co:6969/announce\&tr=udp://explodie.org:6969/announce\&tr=udp://bt2.archive.org:6969/announce)                                                                                                                                              |                                                                                                                                              [2.58-0_11.16_NEW.firm](magnet:?xt=urn:btih:173dc3ea3ccdf8f34e7d4a9aa612d6171230e52a\&dn=2.58-0_11.16_NEW.firm\&tr=udp://open.tracker.cl:1337/announce\&tr=udp://tracker.opentrackr.org:1337/announce\&tr=udp://9.rarbg.com:2810/announce\&tr=udp://exodus.desync.com:6969/announce\&tr=udp://www.torrent.eu.org:451/announce\&tr=udp://tracker.torrent.eu.org:451/announce\&tr=udp://tracker.tiny-vps.com:6969/announce\&tr=udp://tracker.pomf.se:80/announce\&tr=udp://tracker.openbittorrent.com:6969/announce\&tr=udp://tracker.moeking.me:6969/announce\&tr=udp://tracker.dler.org:6969/announce\&tr=udp://tracker.bitsearch.to:1337/announce\&tr=udp://tracker-udp.gbitt.info:80/announce\&tr=udp://retracker.netbynet.ru:2710/announce\&tr=udp://retracker.lanta-net.ru:2710/announce\&tr=udp://opentor.org:2710/announce\&tr=udp://open.stealth.si:80/announce\&tr=udp://mts.tvbit.co:6969/announce\&tr=udp://explodie.org:6969/announce\&tr=udp://bt2.archive.org:6969/announce)                                                                                                                                              |
 
-## Instructions
+## 진행 방법
 
-### Section I - Prep Work
+### 섹션 I - 준비 작업
 
 이 섹션에서는, 커스텀 펌웨어를 설치하기 위해 하드모드에 필요한 파일들을 다운로드하고, 이것을 이용해 NAND 이미지를 덤프합니다.
 
@@ -79,7 +79,7 @@
 9. 하드모드를 사용하여 NAND 백업을 만들어 주세요
 10. NAND 백업을 컴퓨터에 있는 hardmod-b9s-installer 폴더에 옮기고 'NAND.bin'로 이름을 변경해 주세요
 
-### Section II - Installing boot9strap
+### 섹션 II - boot9strap 설치하기
 
 이 섹션에서는, 커스텀 펌웨어를 새로 생성한 NAND 이미지에 설치하고, 이 이미지를 콘솔에 다시 설치하여 커스텀 펌웨어를 설치합니다.
 
@@ -99,6 +99,6 @@ ___
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+[마무리 단계](finalizing-setup) 로 계속합니다
 
 :::
