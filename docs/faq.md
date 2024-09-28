@@ -70,7 +70,7 @@ Yes! All you need is the ability to put files on a compatible SD card.
 
 :::
 
-::: details What size SD card can I use?<
+::: details What size SD card can I use?
 
 You will need at least 1.5GB of free SD card space to follow this guide in its entirety. While the 3DS is officially compatible with SD cards up to 32GB, larger SD cards can be used if they are manually re-formatted as FAT32. It is not recommended to use SD cards greater than 128GB due to known issues with GBA graphics and custom themes.
 
