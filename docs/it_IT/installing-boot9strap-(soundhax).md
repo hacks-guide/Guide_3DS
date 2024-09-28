@@ -30,7 +30,7 @@ In questa sezione copierai i file necessari per attivare sia Soundhax che univer
 3. Copia il file `.m4a`di Soundhax nella directory principale della tua scheda SD
    - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
 4. Copia il file `otherapp.bin` nella directory principale della tua scheda SD
-5. Copia i file `boot.firm` e `boot.3dsx` dall'archivio `.zip` di Luma3DS nella directory principale della tua scheda SD
+5. Copy everything from the Luma3DS `.zip` to the root of your SD card
 6. Crea una cartella chiamata `boot9strap` nella directory principale della tua scheda SD
 7. Copia i file `boot9strap.firm` e `boot9strap.firm.sha` dall'archivio `.zip` di boot9strap nella cartella `/boot9strap/` della tua scheda SD
 8. Copia il file `SafeB9SInstaller.bin` dall'archivio `.zip` di SafeB9SInstaller nella directory principale della tua scheda SD
