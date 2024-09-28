@@ -9,7 +9,7 @@
 8. Se richiesto, seleziona "Transfer to SysNAND"
    - This prompt will only appear if you have an EmuNAND
 9. Premi il pulsante (A) per sbloccare i permessi di scrittura di primo livello su SysNAND, quindi inserisci la combinazione di tasti richiesta a schermo
-   - This process will take some time
+   - Questo passaggio richiederà un po' di tempo
 10. Una volta completato il trasferimento, premi (A) per proseguire
 11. Se richiesto, premi (B) per rifiutare il ritiro delle autorizzazioni di scrittura
 12. Premi (B) due volte per ritornare al menu principale
