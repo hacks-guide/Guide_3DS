@@ -12,12 +12,12 @@ Soundhax (combinato a universal-otherapp) è compatibile con le versioni del sof
 
 ## Cosa serve
 
-- The latest release of [Soundhax](http://soundhax.com) _(for your region, console, and version)_
-  - If Soundhax appears in your browser as an unplayable video, press Ctrl+S or Cmd+S to save it to your computer
+- L'ultima versione di [Soundhax](http://soundhax.com) _(adatta alla regione, tipo e versione della console)_
+  - Se Soundhax appare nel tuo browser come un video non riproducibile, premi Ctrl+S o Cmd+S per salvarlo sul tuo computer
 - L'ultima versione di [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (download diretto)
 - L'ultima versione di [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (download diretto)
 - L'ultima versione di [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (il file `.zip` di Luma3DS)
-- The latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) (`otherapp.bin`)
+- L'ultima versione di [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) (`otherapp.bin`)
 
 ## Istruzioni
 
@@ -49,7 +49,7 @@ In questa sezione copierai i file necessari per attivare sia Soundhax che univer
 
 :::
 
-### Section II - Launching SafeB9SInstaller
+### Sezione II - Avvio di SafeB9SInstaller
 
 In questa sezione avvierai Soundhax attraverso l'app Sound Nintendo 3DS, che utilizzerà l'app universal-otherapp per avviare l'installazione di boot9strap (custom firmware).
 
@@ -62,13 +62,13 @@ In questa sezione avvierai Soundhax attraverso l'app Sound Nintendo 3DS, che uti
    :::
 
 2. Se non hai mai aperto Sound Nintendo 3DS, riceverai suggerimenti sul suo utilizzo dalla mascotte dell'applicazione. Scorrili tutti, quindi chiudi e riapri l'applicazione
-   - In this situation, launching Soundhax immediately would cause these tips to appear on every launch of the Nintendo 3DS Sound until this is done
+   - Se non chiudi Sound Nintendo 3DS, l'esecuzione di Soundhax farebbe riapparire i consigli ad ogni successivo avvio dell'applicazione finché non viene seguita questa procedura
 
 3. Seleziona `/Scheda SD`, quindi avvia "<3 nedwill 2016"
 
-   - This may take many (up to 10) tries
-   - If you see the message "Could not play", you are either on a system version incompatible with Soundhax or downloaded the wrong Soundhax release
-   - If it freezes, force the console to power off by holding the power button, then try again
+   - Potrebbero essere necessari molti tentativi (anche 10)
+   - Se vedi il messaggio "Impossibile riprodurre", hai una versione di sistema incompatibile con Soundhax oppure hai scaricato una versione sbagliata di Soundhax
+   - Se la console dovesse bloccarsi, forzane lo spegnimento tenendo premuto il pulsante di accensione, quindi riprova
    - Se ottieni un errore diverso, [segui questa guida per risolvere il problema](troubleshooting#installing-boot9strap-soundhax)
 
    ::: info
