@@ -6,8 +6,6 @@ Questa sezione serve agli utenti di arm9loaderhax che vogliono aggiornare le pro
 
 Tutte le future versioni di Luma3DS verranno rilasciate in formato `.firm`, compatibile soltanto con boot9strap e sighax. Quindi, per poter ricevere gli aggiornamenti di Luma3DS dovresti seguire le istruzioni indicate in questa sezione per aggiornare la tua installazione.
 
-Per estrarre i file `.7z` presenti in questa pagina, avrai bisogno di un gestore di file compressi come [7-Zip](http://www.7-zip.org/) o [The Unarchiver](https://theunarchiver.com/).
-
 ## What You Need
 
 ::: warning
@@ -42,10 +40,10 @@ Se durante questa sezione ti verrà chiesto di sovrascrivere dei file sulla tua 
 
 2. Inserisci la scheda SD nel tuo computer
 
-3. Copia i file `boot.firm` e `boot.3dsx` dall'archivio `.zip` dell'ultima versione di Luma3DS nella directory principale della tua scheda SD
+3. Copy everything from Luma3DS `.zip` to the root of your SD card
    - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
 
-4. Copia il file `arm9loaderhax.bin` dall'archivio`.7z` della versione 7.0.5 di Luma3DS nella directory principale della tua scheda SD
+4. Copy `arm9loaderhax.bin` from the v7.0.5 Luma3DS `.zip` to the root of your SD card
 
 5. Copia il file `SafeB9SInstaller.bin` dall'archivio `.zip` di SafeB9SInstaller nella cartella `/luma/payloads/` della tua scheda SD
    - If the `luma` or `payloads` folder doesn't exist, create them
