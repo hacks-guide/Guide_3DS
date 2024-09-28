@@ -10,12 +10,12 @@
 4. Επιλέξτε «out»
 5. Επιλέξτε «ctrtransfer_tickets»
 6. Κάντε την ακόλουθη διαδικασία είτε για τον φάκελο `eshop` είτε για τον φάκελο `unknown`, ή και για τους δύο
-   - Navigate to the folder
-   - Select "\<current directory>"
-   - Select "Install and delete all tickets"
-   - Wait. Μπορεί να φαίνεται σαν να «πάγωσε» το σύστημα, απλά δώστε του χρόνο.
+   - Μεταβείτε στον φάκελο
+   - Επιλέξτε «\<current directory>»
+   - Επιλέξτε «Install and delete all tickets»
+   - Περιμένετε. Μπορεί να φαίνεται σαν να «πάγωσε» το σύστημα, απλά δώστε του χρόνο.
    - Πατήστε το (A) για επιβεβαίωση
-   - Press (B) to decline installing tickets from CDN.
+   - Πατήστε το (B) για να αρνηθείτε την εγκατάσταση των ticket από το CDN.
 7. Πατήστε το (Home) για έξοδο από το FBI
 8. Ανοίξτε ξανά το Homebrew Launcher, είτε μέσω του εικονιδίου του Homebrew Launcher στο μενού «HOME» είτε ακολουθώντας ξανά τα βήματα της Ενότητας IV αυτής της σελίδας
 9. Εκκινήστε το faketik από τη λίστα των εφαρμογών homebrew
