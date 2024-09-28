@@ -100,7 +100,7 @@ Isso permite o dump de aplicativos digitais instalados tanto do Sistema como apl
 
 ::: info
 
-O jogo vai ser criado na pasta '/gm9/out/' do cartão SD com o nome '<TitleID>.gbavc.sav'.
+O jogo vai ser criado na pasta '/gm9/out/' do cartão SD com o nome `<TitleID>.gbavc.sav`.
 
 :::
 
