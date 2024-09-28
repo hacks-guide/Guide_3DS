@@ -14,7 +14,7 @@
 
 Ορισμένα αρχεία σε αυτόν τον οδηγό διατίθενται μόνο ως torrent. Εάν επιθυμείτε να συνεισφέρετε στο seeding αυτών των torrent, ώστε να διασφαλιστεί η διαθεσιμότητά τους στο μέλλον, μπορείτε να κάνετε λήψη του αρχείου `.zip` που περιέχει όλα τα αρχεία `.torrent` μας: [torrents.zip](/assets/torrents.zip) (τελευταία ενημέρωση: 16/03/2023)
 
-There is also an [RSS feed](/rss.xml) that may be updated for future torrents, which you can subscribe to.
+Υπάρχει επίσης μια [ροή RSS](/rss.xml) που ενδέχεται να ενημερωθεί για μελλοντικά torrent, στην οποία μπορείτε να εγγραφείτε.
 
 ## Δωρεές
 
