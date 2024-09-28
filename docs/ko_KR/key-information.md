@@ -16,7 +16,7 @@
 
 각 섹션은 기본으로 축소되어 있습니다. 섹션 이름을 탭하거나 클릭해서 여십시오.
 
-## Things you should know about the 3DS
+## 3DS에 대해 알고 있어야 할 것들
 
 :::: details 3DS/2DS compatibility
 
@@ -78,7 +78,7 @@ By modding your console, you subject it to the remote (but non-zero) possibility
 :::
 ::::
 
-## Things you need to do on your computer
+## 컴퓨터에서 해야 할 일
 
 ::: warning
 
@@ -154,13 +154,13 @@ SD 카드에 파일을 복사할 때 올바른 위치에 넣는 것이 중요합
 
 ::::
 
-## Getting help
+## 도움 받기
 
 만약 이 가이드를 따라가다 문제가 발생했다면, 도움을 받을 수 있는 경로도 여러 가지입니다!
 
-- If you have any questions that haven't been answered on this page, their answers might be in the [Pre-Installation FAQ](faq#pre-installation-faq).
-- If you experience an issue while following this guide, you can check the [Troubleshooting](troubleshooting) page for a solution.
-- If the resources we've provided here aren't helping, you can get one-on-one support over at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+- 만약 이 페이지에 없는 것에 대한 질문이 있다면, [설치 전 자주 묻는 질문](faq#설치-전-자주-묻는-질문)에서 찾을 수 있습니다.
+- 만약 이 가이드를 따라가다 문제를 겪게 되었다면, [문제 해결](troubleshooting) 페이지에서 해결 방법을 찾아볼 수 있습니다.
+- 제공해드리는 정보들이 딱히 도움이 되지 않는다면, [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp)에서 (영어로) 1:1 지원을 요청할 수 있습니다.
 
 ::: tip
 
