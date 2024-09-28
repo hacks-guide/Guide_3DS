@@ -1,6 +1,6 @@
 # CTRTransfer
 
-## Required Reading
+## Lettura necessaria
 
 In questa sezione aggiuntiva verrà spiegato come installare un'immagine CTRTransfer 11.15.0 sulla tua console.
 
@@ -16,42 +16,42 @@ Come parte di questo processo, la configurazione di sistema verrà ripristinata 
 
 :::
 
-## What You Need
+## Cosa serve
 
-- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
-- The latest release of [FBI](https://github.com/lifehackerhansol/FBI/releases/download/2.6.1/FBI.3dsx) (direct download)
-- The latest release of [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(the `.3dsx` file)_
-- A torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download)
-  - If you already have a torrent client, you do not need to download a new one
-- The 11.15.0 CTRTransfer image for your console and region:
+- L'ultima versione di [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (il file `.zip` di GodMode9)
+- L'ultima versione di [FBI](https://github.com/lifehackerhansol/FBI/releases/download/2.6.1/FBI.3dsx) (direct download)
+- L'ultima versione di [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(il file `.3dsx`)_
+- Un client torrent come [qBittorrent](https://www.qbittorrent.org/download.php) o [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+  - Se hai già un client torrent, non occorre scaricarne uno nuovo
+- L'immagine CTRTransfer 11.15.0 relativa alla tua console e alla sua regione:
 
 <!--@include: ./_include/ctrtransfer-images.md -->
 
-## Instructions
+## Istruzioni
 
-### Section I - Prep Work
+### Sezione I - Preparazione
 
 <!--@include: ./_include/ctrtransfer-prep.md -->
 
-### Section II - NAND Backup
+### Sezione II - Backup della NAND
 
 1. Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9
 
 <!--@include: ./_include/nand-backup.md -->
 
-### Section III - CTRTransfer
+### Sezione III - CTRTransfer
 
 <!--@include: ./_include/ctrtransfer-main.md -->
 
-### Section IV - Launching FBI
+### Sezione IV - Avviare FBI
 
 <!--@include: ./_include/launch-hbl-dlp.md -->
 
-### Section V - Reinstalling Tickets
+### Sezione V - Ripristino dei ticket
 
 <!--@include: ./_include/ctrtransfer-ticket-copy.md -->
 
-### Section VI - Fixing locale-related issues
+### Sezione VI - Risoluzione dei problemi di regionalità
 
 <!--@include: ./_include/ctrnand-datayeet.md -->
 
@@ -59,6 +59,6 @@ ___
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Prosegui con il [Completamento dell'installazione](finalizing-setup)
 
 :::
