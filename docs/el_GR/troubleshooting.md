@@ -10,11 +10,11 @@
 
 Σελίδες οδηγού:
 
-- [Installing boot9strap (Soundhax)](#installing-boot9strap-soundhax)
-- [Installing boot9strap (MSET9)](#installing-boot9strap-mset9)
-- [Installing boot9strap (SSLoth-Browser)](#installing-boot9strap-ssloth-browser)
-- [Installing boot9strap (super-skaterhax)](#installing-boot9strap-super-skaterhax)
-- [Finalizing Setup](#finalizing-setup)
+- [Εγκατάσταση του boot9strap (Soundhax)](#installing-boot9strap-soundhax)
+- [Εγκατάσταση του boot9strap (MSET9)](#installing-boot9strap-mset9)
+- [Εγκατάσταση του boot9strap (SSLoth-Browser)](#installing-boot9strap-ssloth-browser)
+- [Εγκατάσταση του boot9strap (super-skaterhax)](#installing-boot9strap-super-skaterhax)
+- [Ολοκλήρωση εγκατάστασης](#finalizing-setup)
 
 Ζητήματα μετά την εγκατάσταση:
 
@@ -67,15 +67,15 @@
 
 ## Εγκατάσταση του boot9strap (Soundhax)
 
-:::details Red/purple/pink and white screen after running Soundhax
+:::details Κόκκινη/μοβ/ροζ και λευκή οθόνη μετά την εκτέλεση του Soundhax
 
-If your console is on system version 9.4.0, 9.5.0, or 9.6.0, you may be encountering a bug with an old version of universal-otherapp. Download the latest version from [here](https://github.com/TuxSH/universal-otherapp/releases/latest).
+Εάν η κονσόλα σας διαθέτει την έκδοση συστήματος 9.4.0, 9.5.0 ή 9.6.0, ενδέχεται να αντιμετωπίσετε ένα σφάλμα με μια παλιά έκδοση του universal-otherapp. Κάντε λήψη της πιο πρόσφατης έκδοσης από [εδώ](https://github.com/TuxSH/universal-otherapp/releases/latest).
 
 Αν η κονσόλα σας δεν διαθέτει κάποιο από αυτά τα firmware, αυτό υποδεικνύει ότι πιθανότατα διαθέτετε ήδη custom firmware. Θα πρέπει να [κάνετε έλεγχο για CFW](checking-for-cfw).
 
 :::
 
-:::details "An error has occurred, forcing the software to close..." (white message box)
+:::details «An error has occurred, forcing the software to close...» (λευκό πλαίσιο μηνύματος)
 
 Υπάρχει ένα πρόβλημα με το αρχείο `otherapp.bin` (απουσιάζει, δεν βρίσκεται στη σωστή τοποθεσία ή έχει καταστραφεί). Κάντε λήψη της πιο πρόσφατης έκδοσης του [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) και τοποθετήστε το στη ρίζα της κάρτας SD σας.
 
@@ -129,12 +129,12 @@ If your console is on system version 9.4.0, 9.5.0, or 9.6.0, you may be encounte
 
 :::details Title database: Not initialized!
 
-Ensure that you have reset the title database.
+Βεβαιωθείτε ότι έχετε επαναφέρει τη βάση δεδομένων τίτλων.
 
-- Please power on your console with your SD inserted
+- Ενεργοποιήστε την κονσόλα σας, έχοντας εισαγάγει την SD σας
 - Εκκινήστε την εφαρμογή «System Settings» και μεταβείτε στο `Data Management` -> `Nintendo 3DS` -> `Software` -> «Reset» ([εικόνα](/images/screenshots/database-reset.jpg))
-  - This will not wipe any of your data
-- If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
+  - Αυτή η ενέργεια δεν θα διαγράψει τα δεδομένα σας
+- Εάν λάβετε ένα μήνυμα προτροπής για επαναφορά, μετά την επαναφορά, απενεργοποιήστε την κονσόλα σας και ξεκινήστε ξανά από το [Βήμα 14 της Ενότητας Ι](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
 
 Εάν _δεν_ λάβετε κάποιο μήνυμα προτροπής για επαναφορά, η κάρτα SD πρέπει να διαμορφωθεί:
 
@@ -146,7 +146,7 @@ Ensure that you have reset the title database.
 
 1. Πληκτρολογήστε τον αριθμό που αντιστοιχεί στο μοντέλο και την έκδοση της κονσόλας σας και πατήστε το Enter
 2. Πληκτρολογήστε `2` και πατήστε το Enter για να ελέγξετε την κατάσταση του MSET9
-   - This will create the dummy databases again
+   - Αυτή η ενέργεια θα δημιουργήσει ξανά τις εικονικές βάσεις δεδομένων
 3. Κλείστε το παράθυρο του script «MSET9»
 4. Ξεκινήστε ξανά από το [Bήμα 12 της Eνότητας I](installing-boot9strap-\(mset9-cli\)#section-i---prep-work).
 
@@ -187,12 +187,12 @@ Ensure that you have reset the title database.
 2. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 3. Ενεργοποιήστε την κονσόλα σας
 4. Περιμένετε μέχρι η κονσόλα να δημιουργήσει τα δεδομένα της κάρτας SD
-   - Your applications will have disappeared. Αυτό είναι φυσιολογικό και θα επιλυθεί σύντομα
+   - Οι εφαρμογές σας θα έχουν εξαφανιστεί. Αυτό είναι φυσιολογικό και θα επιλυθεί σύντομα
 5. Απενεργοποιήστε την κονσόλα σας
 6. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
 7. Μεταβείτε στον φάκελο `Nintendo 3DS` της κάρτας SD σας
 8. Σημειώστε τους πρώτους χαρακτήρες του φακέλου που βλέπετε
-   - This is your true ID0, which we will keep in the real Nintendo 3DS folder
+   - Αυτό είναι το πραγματικό σας ID0, το οποίο θα διατηρήσουμε στον πραγματικό φάκελο «Nintendo 3DS»
 9. Διαγράψτε το ID0 από τον τρέχοντα φάκελο `Nintendo 3DS`
 10. Μετακινήστε τον πραγματικό φάκελο ID0 από τον φάκελο `BACKUP_Nintendo 3DS` στον φάκελο `Nintendo 3DS`
 11. Εάν υπάρχει, μετακινήστε τον φάκελο `Private` από τον φάκελο `BACKUP_Nintendo 3DS` στον φάκελο `Nintendo 3DS`
@@ -227,7 +227,7 @@ Ensure that you have reset the title database.
 
 :::
 
-:::details Red screen after reinserting SD card (Section II Step 11)
+:::details Κόκκινη οθόνη μετά την επανεισαγωγή της κάρτας SD (Βήμα 11 της Ενότητας II)
 
 Ενδέχεται να λείπει το `SafeB9S.bin` από τη ρίζα της κάρτας SD σας ή το αρχείο μπορεί να είναι κατεστραμμένο. Αντιγράψτε το από το αρχείο `.zip` του MSET9, αντικαθιστώντας τυχόν υπάρχοντα αρχεία και ακολουθήστε αυτές τις οδηγίες για να αφαιρέσετε το αρχείο ενεργοποίησης:
 
@@ -237,8 +237,8 @@ Ensure that you have reset the title database.
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Πληκτρολογήστε τον αριθμό που αντιστοιχεί στο μοντέλο και την έκδοση της κονσόλας σας και πατήστε το Enter
-   - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
-   - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you may [retry Section II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
+   - Η τρέχουσα κατάσταση θα πρέπει να εμφανίζει [Injected](/images/screenshots/mset9/mset9-injected.png)
+   - Εάν έχετε ήδη αφαιρέσει το αρχείο ενεργοποίησης (ή δεν κάνατε ποτέ εισαγωγή του), η τρέχουσα κατάσταση θα εμφανίζει [Ready](/images/screenshots/mset9/mset9-ready.png) και μπορείτε να [επαναλάβετε τις οδηγίες της Ενότητας II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
 2. Πληκτρολογήστε `4` και πατήστε το Enter
 3. Μόλις το παράθυρο εμφανίσει το μήνυμα «Removed trigger file», πληκτρολογήστε `0` και πατήστε το Enter
 4. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
@@ -254,7 +254,7 @@ Ensure that you have reset the title database.
 
 :::
 
-:::details System Settings loading infinitely after reinserting the SD card
+:::details Η εφαρμογή «System Settings» φορτώνεται επ' αόριστον μετά την επανεισαγωγή της κάρτας SD
 
 Πιθανότατα κάνατε κάτι διαφορετικό από τις οδηγίες του MSET9, επιλέξατε εσφαλμένο μοντέλο/έκδοση ή η κάρτα SD πρέπει να διαμορφωθεί. Βεβαιωθείτε ότι έχετε επιλέξει το σωστό [μοντέλο](/images/3dsmodels.png) και την έκδοση firmware κατά το άνοιγμα του script.
 
@@ -266,15 +266,15 @@ Ensure that you have reset the title database.
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Πληκτρολογήστε τον αριθμό που αντιστοιχεί στο μοντέλο και την έκδοση της κονσόλας σας και πατήστε το Enter
-   - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
-   - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you are ready to retry Section II
+   - Η τρέχουσα κατάσταση θα πρέπει να εμφανίζει [Injected](/images/screenshots/mset9/mset9-injected.png)
+   - Εάν έχετε ήδη αφαιρέσει το αρχείο ενεργοποίησης (ή δεν είχατε κάνει ποτέ εισαγωγή του), η τρέχουσα κατάσταση θα εμφανίζει [Ready](/images/screenshots/mset9/mset9-ready.png) και μπορείτε να επαναλάβετε τα βήματα της Ενότητας II
 2. Πληκτρολογήστε `4` και πατήστε το Enter
 3. Μόλις το παράθυρο εμφανίσει το μήνυμα «Removed trigger file», πληκτρολογήστε `0` και πατήστε το Enter
 4. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 5. Ενεργοποιήστε την κονσόλα σας
 6. Επιστρέψτε στο [Βήμα 1 της Ενότητας II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
 
-If you continue to have this issue and are sure that you did everything correctly, ensure the trigger file is removed and format your SD card:
+Αν εξακολουθείτε να αντιμετωπίζετε αυτό το ζήτημα και έχετε βεβαιωθεί ότι κάνατε τα πάντα σωστά, επιβεβαιώστε ότι το αρχείο ενεργοποίησης έχει αφαιρεθεί και διαμορφώστε την κάρτα SD σας:
 
 1. Αντιγράψτε τα πάντα από την κάρτα SD στον υπολογιστή σας
 2. Διαμορφώστε την κάρτα SD ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
@@ -283,9 +283,9 @@ If you continue to have this issue and are sure that you did everything correctl
 
 :::
 
-:::details An exception occurred after triggering MSET9
+:::details Σφάλμα «An exception occurred» μετά την ενεργοποίηση του MSET9
 
-This likely indicates that you already have custom firmware. Θα πρέπει να [κάνετε έλεγχο για CFW](checking-for-cfw).
+Αυτό δείχνει ότι πιθανότατα διαθέτετε ήδη custom firmware. Θα πρέπει να [κάνετε έλεγχο για CFW](checking-for-cfw).
 
 :::
 
@@ -302,8 +302,8 @@ This likely indicates that you already have custom firmware. Θα πρέπει �
 
 - Βεβαιωθείτε ότι διαθέτετε το σωστό αντίγραφο των `arm11code.bin` και `browserhax_hblauncher_ropbin_payload.bin` για την έκδοση και την περιοχή της κονσόλας σας
 - Δοκιμάστε να επαναφέρετε τα δεδομένα του προγράμματος περιήγησης:
-  1. Launch the browser, then launch the browser settings
-  2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
+  1. Ανοίξτε την εφαρμογή «Internet Browser» και έπειτα, μεταβείτε στις ρυθμίσεις της
+  2. Μεταβείτε στο κάτω μέρος και επιλέξτε «Reset Save Data» (ή «Initialize Save Data» ή «Clear All Save Data»)
   3. Δοκιμάστε ξανά το exploit
 - Δοκιμάστε να αλλάξετε τη γλώσσα συστήματος σε κάποια άλλη εκτός της τρέχουσας
 
@@ -311,7 +311,7 @@ This likely indicates that you already have custom firmware. Θα πρέπει �
 
 :::: details «An error has occurred. Hold down the POWER button to turn off the power...» (μαύρη οθόνη με κείμενο)
 
-The file `arm11code.bin` is missing or misplaced. Make sure to copy the files of the [latest version of super-skaterhax](https://github.com/zoogie/super-skaterhax/releases/latest) for your region and version to the root of your SD card (not inside of a folder).
+Το αρχείο `arm11code.bin` απουσιάζει ή βρίσκεται σε λάθος τοποθεσία. Βεβαιωθείτε ότι έχετε αντιγράψει τα αρχεία της [πιο πρόσφατης έκδοσης του super-skaterhax](https://github. om/zoogie/super-skaterhax/releases/latest) για την περιοχή και την έκδοσή σας στη ρίζα της κάρτας SD σας (όχι μέσα σε κάποιο φάκελο).
 
 ::: info
 
@@ -321,81 +321,81 @@ The file `arm11code.bin` is missing or misplaced. Make sure to copy the files of
 
 ::::
 
-:::details An exception occured or "DLL_HEAP_INFORMATION" when pressing GO! GO!
+:::details Σφάλμα «An exception occured» ή εμφανίζεται το μήνυμα «DLL_HEAP_INFORMATION» όταν πατάω το «GO! GO!»
 
-This likely indicates that you already have custom firmware. Θα πρέπει να [κάνετε έλεγχο για CFW](checking-for-cfw).
+Αυτό δείχνει ότι πιθανότατα διαθέτετε ήδη custom firmware. Θα πρέπει να [κάνετε έλεγχο για CFW](checking-for-cfw).
 
 :::
 
 ## Εγκατάσταση του boot9strap (SSLoth-Browser)
 
-:::details Red/purple/pink and white screen after running Browserhax
+:::details Κόκκινη/μωβ/ροζ και λευκή οθόνη μετά την εκτέλεση του Browserhax
 
-This likely indicates that you already have custom firmware. Θα πρέπει να [κάνετε έλεγχο για CFW](checking-for-cfw).
+Αυτό δείχνει ότι πιθανότατα διαθέτετε ήδη custom firmware. Θα πρέπει να [κάνετε έλεγχο για CFW](checking-for-cfw).
 
 :::
 
 :::details «An error has occurred. Hold down the POWER button to turn off the power...» (μαύρη οθόνη με κείμενο)
 
-The file `arm11code.bin` is missing or misplaced. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Μην προσθέσετε την επέκταση `.bin` αν δεν τη βλέπετε ήδη.
+Το αρχείο `arm11code.bin` απουσιάζει ή βρίσκεται σε λάθος τοποθεσία. Κάντε λήψη της πιο πρόσφατης έκδοσης του [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), τοποθετήστε το `otherapp.bin` στη ρίζα της κάρτας SD σας και μετονομάστε το σε `arm11code.bin`. Μην προσθέσετε την επέκταση `.bin` αν δεν τη βλέπετε ήδη.
 
 :::
 
-:::details "An error has occurred, forcing the software to close..." (white message box)
+:::details «An error has occurred, forcing the software to close...» (λευκό πλαίσιο μηνύματος)
 
-There may be an issue with your `arm11code.bin` file. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Μην προσθέσετε την επέκταση `.bin` αν δεν τη βλέπετε ήδη.
+Ενδέχεται να υπάρχει πρόβλημα με το αρχείο `arm11code.bin` σας. Κάντε λήψη της πιο πρόσφατης έκδοσης του [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), τοποθετήστε το `otherapp.bin` στη ρίζα της κάρτας SD σας και μετονομάστε το σε `arm11code.bin`. Μην προσθέσετε την επέκταση `.bin` αν δεν τη βλέπετε ήδη.
 
-You can also try resetting your browser save data:
+Μπορείτε επίσης να δοκιμάσετε την επαναφορά των αποθηκευμένων δεδομένων του προγράμματος περιήγησης:
 
-1. Launch the browser, then launch the browser settings
-2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
+1. Ανοίξτε την εφαρμογή «Internet Browser» και έπειτα, μεταβείτε στις ρυθμίσεις της
+2. Μεταβείτε στο κάτω μέρος και επιλέξτε «Reset Save Data» (ή «Initialize Save Data» ή «Clear All Save Data»)
 3. Δοκιμάστε ξανά το exploit
 
 :::
 
 :::details Opening the browserhax QR code or URL crashes
 
-Browser based exploits (such as this one) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
+Τα exploit που βασίζονται στην εφαρμογή «Internet Browser» (όπως το browserhax ή το 2xrsa) είναι συχνά ασταθή και προκαλούν διακοπή λειτουργίας, αλλά μπορούν κάποιες φορές να διορθωθούν ακολουθώντας τα παρακάτω βήματα.
 
-1. Launch the browser, then launch the browser settings
-2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
+1. Ανοίξτε την εφαρμογή «Internet Browser» και έπειτα, μεταβείτε στις ρυθμίσεις της
+2. Μεταβείτε στο κάτω μέρος και επιλέξτε «Reset Save Data» (ή «Initialize Save Data» ή «Clear All Save Data»)
 3. Δοκιμάστε ξανά το exploit
 
 :::
 
 :::details System Update prompt when opening browser
 
-The SSLoth proxy was incorrectly configured. Re-do the SSLoth section on the page.
+Ο διακομιστής μεσολάβησης του SSLoth δεν ρυθμίστηκε σωστά. Επαναλάβετε την ενότητα του SSLoth στη σελίδα.
 
 :::
 
 :::details Error 032-0420 when opening browser
 
-Follow these steps in order:
+Ακολουθήστε αυτά τα βήματα με τη σειρά:
 
 1. Εκκινήστε την εφαρμογή «System Settings» στην κονσόλα σας
-2. Navigate to `Internet Settings` -> `Connection Settings`
-3. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
-4. Set "Proxy Settings" to "No"
-5. Click OK, then click Save
-6. When prompted, click "Test" to perform the connection test
-   - The test should succeed
-7. Click "OK" to continue
+2. Μεταβείτε στο `Internet Settings` -> `Connection Settings`
+3. Επιλέξτε τη θέση σύνδεσης δικτύου σας και μεταβείτε στο `Change Settings` -> `Επόμενη σελίδα (δεξί βέλος)` -> `Proxy Settings`
+4. Ορίστε την επιλογή «Proxy Settings» σε «No»
+5. Επιλέξτε «OK» και έπειτα, «Save»
+6. Όταν σας ζητηθεί, επιλέξτε «Test» για να πραγματοποιήσετε τη δοκιμή σύνδεσης
+   - Η δοκιμή θα πρέπει να πετύχει
+7. Πατήστε «OK» για να συνεχίσετε
 8. Πατήστε «Back» δύο φορές και έπειτα, «Close» για να επιστρέψετε στο μενού «HOME»
-9. Open the Internet Browser once
-10. If prompted about a system update, press OK
-    - This won't actually update the system
-11. Start again from [Section II](installing-boot9strap-\(ssloth-browser\).html#section-ii---ssloth)
+9. Ανοίξτε μία φορά την εφαρμογή «Internet Browser»
+10. Εάν σας ζητηθεί ενημέρωση του συστήματος, πατήστε «OK»
+    - Αυτή η ενέργεια δεν θα ενημερώσει το σύστημα
+11. Ξεκινήστε ξανά από την [Ενότητα II](installing-boot9strap-\(ssloth-browser\).html#section-ii---ssloth)
 
 :::
 
-:::details Frozen on "Doing agbhax..."
+:::details «Πάγωμα» στην οθόνη «Doing agbhax...»
 
-There may be an issue with your `arm11code.bin` file. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place it on the root of your SD card, and rename it to `arm11code.bin`. Μην προσθέσετε την επέκταση `.bin` αν δεν τη βλέπετε ήδη.
+Ενδέχεται να υπάρχει πρόβλημα με το αρχείο `arm11code.bin` σας. Κάντε ξανά λήψη της πιο πρόσφατης έκδοσης του [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), τοποθετήστε το στη ρίζα της κάρτας SD σας και μετονομάστε το σε `arm11code.bin`. Μην προσθέσετε την επέκταση `.bin` αν δεν τη βλέπετε ήδη.
 
 :::
 
-:::details "PrepareArm9ForTwl returned error c8804631!"
+:::details «PrepareArm9ForTwl returned error c8804631!»
 
 Γίνετε μέλος του [Nintendo Homebrew στο Discord](https://discord.gg/MWxPgEp) για βοήθεια.
 
@@ -411,7 +411,7 @@ There may be an issue with your `arm11code.bin` file. Re-download the latest rel
 
 ## Ολοκλήρωση εγκατάστασης
 
-:::details Unable to update console
+:::details Δεν είναι δυνατή η ενημέρωση της κονσόλας
 
 Μπορείτε να δοκιμάσετε τα παρακάτω βήματα με οποιαδήποτε σειρά, αλλά αναγράφονται από το πιο εύκολο έως το πιο δύσκολο.
 
@@ -466,9 +466,9 @@ There may be an issue with your `arm11code.bin` file. Re-download the latest rel
 8. Επιλέξτε «Scripts...»
 9. Επιλέξτε «finalize»
 10. Πατήστε το (A) για να δημιουργήσετε ένα αντίγραφο ασφαλείας της NAND
-    - This may take around fifteen minutes
+    - Αυτή η διαδικασία ενδέχεται να διαρκέσει περίπου δεκαπέντε λεπτά
 11. Πατήστε το (A) ξανά
-    - The console should automatically power off
+    - Η κονσόλα θα πρέπει να απενεργοποιηθεί αυτόματα
 12. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
 13. Αντιγράψτε τα αρχεία που βρίσκονται στον φάκελο `/gm9/backups/` της SD σας σε μια ασφαλή τοποθεσία του υπολογιστή σας
 14. Διαγράψτε τα `<ημερομηνία>_<σειριακός_αριθμός>_sysnand_##.bin` και `<ημερομηνία>_<σειριακός_αριθμός>_sysnand_##.bin.sha` από την κάρτα SD σας
@@ -483,7 +483,7 @@ There may be an issue with your `arm11code.bin` file. Re-download the latest rel
 4. Επιλέξτε «Scripts...»
 5. Επιλέξτε «finalize»
 6. Συνεχίστε κανονικά με το script
-   - The NAND backup will be automatically skipped
+   - Το αντίγραφο ασφαλείας της NAND θα παραλειφθεί αυτόματα
 
 :::
 
@@ -493,7 +493,7 @@ There may be an issue with your `arm11code.bin` file. Re-download the latest rel
 
 :::
 
-:::details Error #06 or "Error: Could not open directory" when attempting a NAND backup
+:::details Error #06 ή «Error: Could not open directory» κατά τη δημιουργία αντιγράφου ασφαλείας της NAND
 
 Βεβαιωθείτε ότι διαθέτετε τουλάχιστον 1,3GB στην κάρτα SD. Αν δεν έχετε επαρκή χώρο, ακολουθήστε αυτά τα βήματα:
 
@@ -528,7 +528,7 @@ There may be an issue with your `arm11code.bin` file. Re-download the latest rel
 3. Αντιγράψτε τα περιεχόμενα του φακέλου `/gm9/backups/` σε μια ασφαλή τοποθεσία του υπολογιστή σας
 4. Διαγράψτε τον φάκελο `/gm9/backups/` από την κάρτα SD σας
 5. Εάν μετακινήσατε τον φάκελο «Nintendo 3DS» από την κάρτα SD για να φτάσετε σε αυτό το σημείο, αντιγράψτε τον ξανά στην κάρτα SD σας
-   - If you do not have a Nintendo 3DS folder, boot into the HOME Menu at least once with the SD card inserted to automatically generate it
+   - Εάν δεν διαθέτετε έναν φάκελο «Nintendo 3DS», κάντε εκκίνηση στο μενού «HOME» τουλάχιστον μία φορά, έχοντας εισαγάγει την κάρτα SD, για να δημιουργηθεί αυτόματα
 6. Κρατήστε πατημένο το (Start) και ταυτόχρονα, ενεργοποιήστε την κονσόλα σας. Αυτή η ενέργεια θα εκκινήσει το GodMode9
 7. Πατήστε το (Home) για να εμφανιστεί το μενού ενεργειών
 8. Επιλέξτε «Scripts...»
@@ -545,7 +545,7 @@ There may be an issue with your `arm11code.bin` file. Re-download the latest rel
 
 ---
 
-## Boot issues on consoles with custom firmware
+## Ζητήματα εκκίνησης σε κονσόλες με custom firmware
 
 ::: info
 
@@ -553,17 +553,17 @@ There may be an issue with your `arm11code.bin` file. Re-download the latest rel
 
 :::
 
-### Power/notification light indicators
+### Φωτεινές ενδείξεις τροφοδοσίας/ειδοποιήσεων
 
-:::details My console powers off when I try to turn it on, and/or the notification LED shows a color on boot
+:::details Η κονσόλα μου απενεργοποιείται όταν προσπαθώ να την ενεργοποιήσω ή/και το LED ειδοποιήσεων εμφανίζει ένα χρώμα κατά την εκκίνηση
 
 Υπάρχει κάποιο πρόβλημα με το αρχείο `boot.firm` σας. Εάν χρησιμοποιείτε το [boot9strap 1.4](https://github.com/SciresM/boot9strap/releases/tag/1.4), το LED ειδοποιήσεων του 3DS σας ενδέχεται να αναβοσβήνει με ένα συγκεκριμένο χρώμα. Αυτό το χρώμα χρησιμοποιείται για τη διάγνωση προβλημάτων που αφορούν το αρχείο `boot.firm`, που βρίσκεται στην κάρτα SD ή την εσωτερική μνήμη. Σε παλαιότερες εκδόσεις του boot9strap, το μπλε φως απενεργοποιείται σχεδόν αμέσως όταν προσπαθείτε να ενεργοποιήσετε την κονσόλα.
 
 Εάν το LED ειδοποιήσεων αναβοσβήνει και είναι:
 
-- **White**: Your 3DS was not able to find `boot.firm` on your SD card or on internal memory.
-- **Magenta**: Your 3DS was not able to find `boot.firm` on your SD card. Μπόρεσε να εντοπίσει το `boot.firm` στην εσωτερική μνήμη, αλλά το αρχείο έχει καταστραφεί.
-- **Red**: Your 3DS was able to find `boot.firm` on both your SD card and on internal memory, but both files are corrupted.
+- **Λευκό**: Το 3DS δεν μπόρεσε να εντοπίσει το `boot.firm` στην κάρτα SD ή στην εσωτερική μνήμη.
+- **Ματζέντα**: Το 3DS δεν μπόρεσε να εντοπίσει το `boot.firm` στην κάρτα SD. Μπόρεσε να εντοπίσει το `boot.firm` στην εσωτερική μνήμη, αλλά το αρχείο έχει καταστραφεί.
+- **Κόκκινο**: Το 3DS μπόρεσε να εντοπίσει το `boot.firm` τόσο στην κάρτα SD όσο και στην εσωτερική μνήμη, όμως και τα δύο αρχεία έχουν καταστραφεί.
 
 Μπορείτε να λάβετε ένα νέο αρχείο `boot.firm` κάνοντας λήψη της [πιο πρόσφατης έκδοσης του Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), αποσυμπιέζοντας και τοποθετώντας το `boot.firm` στη ρίζα της κάρτας SD σας. Εάν το αρχείο `boot.firm` ανιχνεύεται συνεχώς ως κατεστραμμένο, καλό θα ήταν να ελέγξετε την κάρτα SD σας για σφάλματα ([Windows](h2testw-\(windows\)), [Linux](f3-\(linux\)) ή [macOS](f3xswift-\(mac\))). Επιπλέον, σημειώστε ότι το 3DS τείνει να έχει προβλήματα με τα αρχεία που έχουν αποσυμπιεστεί με το WinRAR.
 
@@ -571,7 +571,7 @@ There may be an issue with your `arm11code.bin` file. Re-download the latest rel
 
 :::
 
-:::details My console gets stuck on a black screen with blue power light staying on
+:::details Η κονσόλα μου «κολλάει» σε μια μαύρη οθόνη, ενώ το φως ισχύος παραμένει ενεργό και έχει μπλε χρώμα
 
 Μπορείτε να δοκιμάσετε τα παρακάτω βήματα με οποιαδήποτε σειρά, αλλά αναγράφονται από το λιγότερο έως το πιο χρονοβόρο.
 
@@ -588,31 +588,31 @@ There may be an issue with your `arm11code.bin` file. Re-download the latest rel
      - **Περιοχή TWN**: `000000B1`
 4. Δοκιμάστε να κάνετε εκκίνηση στη λειτουργία αποκατάστασης και να ενημερώσετε το σύστημά σας:
    - Απενεργοποιήστε την κονσόλα σας
-   - Hold (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A)
+   - Κρατήστε πατημένα τα (L) + (R) + (Πάνω) + (A)
    - Ενεργοποιήστε την κονσόλα σας
-   - If you were successful, the console will boot to an "update your system" screen
+   - Εάν η διαδικασία ήταν επιτυχής, η κονσόλα θα εκκινηθεί στην οθόνη «update your system»
 5. Ακολουθήστε τον οδηγό [CTRTransfer](ctrtransfer)
 6. Για περαιτέρω υποστήριξη, ζητήστε βοήθεια στο [Nintendo Homebrew στο Discord](https://discord.gg/MWxPgEp)
 
 :::
 
-### Error message on boot
+### Μήνυμα σφάλματος κατά την εκκίνηση
 
-:::details "An error has occurred: Failed to apply 1 FIRM patch(es)" or "An exception has occurred -- Current process: pm"
+:::details «An error has occurred: Failed to apply 1 FIRM patch(es)» ή «An exception has occurred -- Current process: pm»
 
 Η έκδοση του Luma3DS σας είναι παρωχημένη. Κάντε λήψη της πιο πρόσφατης έκδοσης του [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) και τοποθετήστε το `boot.firm` στη ρίζα της κάρτας SD σας, αντικαθιστώντας οποιοδήποτε υπάρχον αρχείο. Βεβαιωθείτε ότι κάνετε αποσυμπίεση του αρχείου ZIP με οποιοδήποτε εργαλείο εκτός του WinRAR, καθώς είναι γνωστό ότι προκαλεί προβλήματα με τα αρχεία που σχετίζονται με το 3DS.
 
 :::
 
-:::details "Unable to mount CTRNAND or load the CTRNAND FIRM. Please use an external one."
+:::details «Unable to mount CTRNAND or load the CTRNAND FIRM. Please use an external one.»
 
-There are a number of reasons as to why this could be happening. In any case, this error can usually be fixed by following the [CTRTransfer](ctrtransfer) guide.
+Υπάρχουν διάφοροι λόγοι για τους οποίους θα μπορούσε να συμβεί κάτι τέτοιο. Σε κάθε περίπτωση, αυτό το σφάλμα μπορεί συνήθως να διορθωθεί ακολουθώντας τον οδηγό σχετικά με το [CTRTransfer](ctrtransfer).
 
 :::
 
 :::details «An error has occurred. Hold down the POWER button to turn off the power...»
 
-Έχουν απενεργοποιηθεί οι χειριστές εξαιρέσεων ARM11 (ARM11 exception handlers) ή δεν έχει εγκατασταθεί custom firmware. Try enabling ARM11 exception handlers:
+Έχουν απενεργοποιηθεί οι χειριστές εξαιρέσεων ARM11 (ARM11 exception handlers) ή δεν έχει εγκατασταθεί custom firmware. Δοκιμάστε να ενεργοποιήσετε τους χειριστές εξαιρέσεων ARM11:
 
 - Απενεργοποιήστε την κονσόλα σας
 - Κρατήστε πατημένο το (Select)
@@ -648,9 +648,9 @@ There are a number of reasons as to why this could be happening. In any case, th
 
 :::
 
-## Software issues on consoles with custom firmware
+## Ζητήματα λογισμικού σε κονσόλες με custom firmware
 
-:::details DSi / DS functionality is broken or has been replaced with Flipnote Studio
+:::details Οι λειτουργίες DSi/DS έχουν χαλάσει ή αντικατασταθεί με το Flipnote Studio
 
 1. Κάντε λήψη της πιο πρόσφατης έκδοσης του [TWLFix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest) (το αρχείο `.3dsx`)
 2. Απενεργοποιήστε την κονσόλα σας
@@ -662,12 +662,12 @@ There are a number of reasons as to why this could be happening. In any case, th
 8. Πατήστε το (A) για να αφαιρέσετε τους μη λειτουργικούς τίτλους TWL
 9. Πατήστε το (Start) για να επανεκκινήσετε την κονσόλα σας
 10. Ενημερώστε την κονσόλα σας ανοίγοντας την εφαρμογή «System Settings», επιλέγοντας «Other Settings» και τέλος, «System Update» στην τελευταία σελίδα προς τα δεξιά
-    - The update will see that the essential TWL titles have been uninstalled, and will redownload and reinstall them
+    - Η ενημέρωση θα διαπιστώσει ότι έχουν αφαιρεθεί βασικοί τίτλοι TWL και θα κάνει ξανά λήψη και εγκατάστασή τους
 11. Μόλις ολοκληρωθεί η ενημέρωση, πατήστε «OK» για επανεκκίνηση της κονσόλας
 
 :::
 
-:::details GBA Virtual Console and/or Safe Mode functionality is broken
+:::details Δεν λειτουργεί η Virtual Console για GBA ή/και η Safe Mode
 
 Η κονσόλα σας διαθέτει το Luma3DS 6.6 ή παλαιότερο, πιθανότατα μέσω arm9loaderhax. Πρέπει να ακολουθήσετε τις οδηγίες του [Από το A9LH στο B9S](a9lh-to-b9s) για να ενημερώσετε την κονσόλα σας σε ένα σύγχρονο περιβάλλον custom firmware.
 
@@ -675,7 +675,7 @@ There are a number of reasons as to why this could be happening. In any case, th
 
 :::details Extended memory mode games (Pokemon Sun/Moon, Smash, etc.) don't work
 
-Αυτό μπορεί να συμβεί μετά από μια αλλαγή του CTRTransfer ή της περιοχής στα Old 3DS/2DS. Follow the instructions [here](region-changing#section-vi---fixing-locale-related-issues) to fix this issue (skipping steps 3, 4, 5, and 6).
+Αυτό μπορεί να συμβεί μετά από μια αλλαγή του CTRTransfer ή της περιοχής στα Old 3DS/2DS. Ακολουθήστε τις οδηγίες [εδώ](region-changing#section-vi---fixing-locale-related-issues) για να διορθώσετε αυτό το ζήτημα (παραλείποντας τα βήματα 3, 4, 5 και 6).
 
 :::
 
@@ -686,7 +686,7 @@ There are a number of reasons as to why this could be happening. In any case, th
 
 :::
 
-:::details Opening the HOME Menu settings crashes the console or loads the Homebrew Launcher
+:::details Το άνοιγμα των ρυθμίσεων του μενού «HOME» διακόπτει απροσδόκητα τη λειτουργία της κονσόλας ή φορτώνει το Homebrew Launcher
 
 Το menuhax67 εξακολουθεί πιθανότατα να είναι εγκατεστημένο στην κονσόλα σας. Για να καταργήσετε την εγκατάσταση του menuhax67, κάντε λήψη της πιο πρόσφατης έκδοσης του [menuhax67](https://github.com/zoogie/menuhax67/releases/latest) (το αρχείο `.zip` του menuhax) και ακολουθήστε τις οδηγίες της [ενότητας «Uninstall menuhax67»](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits/menuhax67#Uninstall_menuhax67).
 
@@ -696,7 +696,7 @@ There are a number of reasons as to why this could be happening. In any case, th
 
 ## Επίλυση άλλων προβλημάτων
 
-:::details Clear HOME Menu extdata
+:::details Εκκαθάριση των extdata του μενού «HOME»
 
 1. Απενεργοποιήστε την κονσόλα σας
 2. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
@@ -712,7 +712,7 @@ There are a number of reasons as to why this could be happening. In any case, th
 
 :::
 
-:::details Clear HOME Menu theme data
+:::details Εκκαθάριση των δεδομένων θεμάτων του μενού «HOME»
 
 1. Απενεργοποιήστε την κονσόλα σας
 2. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
@@ -726,7 +726,7 @@ There are a number of reasons as to why this could be happening. In any case, th
 
 :::
 
-:::details Manually entering Homebrew Launcher
+:::details Χειροκίνητη είσοδος στο Homebrew Launcher
 
 Αν λείπει η εφαρμογή «Homebrew Launcher» από το μενού «HOME», μπορείτε να ακολουθήσετε αυτές τις οδηγίες για να εισέλθετε χειροκίνητα στο Homebrew Launcher. (Θα χρειαστείτε τα [boot.3dsx και boot.firm](https://github.com/LumaTeam/Luma3DS/releases/latest) στη ρίζα της κάρτας SD σας.)
 
@@ -734,16 +734,16 @@ There are a number of reasons as to why this could be happening. In any case, th
 
 :::
 
-:::details Turning off Parental Controls
+:::details Απενεργοποίηση του γονικού ελέγχου (Parental Controls)
 
 Για να απενεργοποιήσετε τη λειτουργία «Parental Controls», μεταβείτε στο «System Settings» -> «Parental Controls» και εισαγάγετε το PIN. Έπειτα, πατήστε «Clear Settings» και τέλος, επιλέξτε «Delete» για αφαίρεση.
 Ωστόσο, αν δεν γνωρίζετε το PIN και επομένως, δεν μπορείτε να αποκτήστε πρόσβαση στις ρυθμίσεις της κονσόλας, θα πρέπει να το απενεργοποιήσετε. Για να το κάνετε αυτό, θα πρέπει να αποκτήσετε το κύριο κλειδί (mkey) της κονσόλας σας:
 
 1. Μεταβείτε σε [αυτόν τον ιστότοπο](https://mkey.eiphax.tech/)
 2. Συμπληρώστε τα ακόλουθα πεδία:
-   - Device Type: Select "3DS" (the same applies if you are using a 2DS, New 3DS (XL/LL) or New 2DS (XL/LL))
-   - System Date: The day and month your console's clock is set to
-   - Inquiry Number: Can be obtained by pressing "Forgot PIN" then "I Forgot" in the Parental Controls screen
+   - Device Type: Επιλέξτε «3DS» (ισχύει το ίδιο εάν χρησιμοποιείτε 2DS, New 3DS (XL/LL) ή New 2DS (XL/LL))
+   - System Date: Η ημέρα και ο μήνας στα οποία έχει οριστεί το ρολόι της κονσόλας σας
+   - Inquiry Number: Μπορείτε να το λάβετε πατώντας «Forgot PIN» και έπειτα, «I Forgot» στην οθόνη της λειτουργίας «Parental Controls»
 3. Αφού λάβετε το mkey σας, πατήστε το «OK» στην οθόνη που λάβατε το Inquiry Number σας. Έπειτα, εισαγάγετε το κύριο κλειδί
 4. Πατήστε «Clear Settings» και έπειτα, «Delete» για να καταργήσετε όλα τα δεδομένα της λειτουργίας «Parental Controls»
 
