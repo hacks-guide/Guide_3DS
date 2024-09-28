@@ -10,14 +10,14 @@
 
 **특별히 감사한 분들**
 
-- **Plailect**, the original creator and maintainer of this guide
-- [The guide translators](https://crowdin.com/project/3ds-guide), who make this guide more accessible around the world
-- Anyone who has ever submitted an issue, pull request, or otherwise informed us about problems on this guide
-- The historical contributors to this guide, without whom this guide would not exist today
+- **Plailect**, 만든이 및 초창기 관리자
+- [가이드 번역자](https://crowdin.com/project/3ds-guide), 이 가이드를 전 세계에서 더 쉽게 이용할 수 있도록 만든 사람들
+- GitHub 이슈 트래커에 글을 남기거나, PR을 제출하거나, 이 가이드에 문제가 있음을 알려준 모든 사람
+- 이 사람들이 없었다면 이 가이드가 존재하지 않았을, 이 가이드의 역사적 기여자
 
 :::
 
-:::details Historical contributors
+:::details 역사적 기여자들
 
 ```
 + #Cakey on freenode
