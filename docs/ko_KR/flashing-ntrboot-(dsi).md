@@ -1,6 +1,6 @@
 # ntrboot 플래싱 (DSi)
 
-## Required Reading
+## 중요
 
 진행하기 앞서서, [ntrboot](ntrboot) 에 대한 모든 정보를 숙지해주세요.
 
@@ -12,7 +12,7 @@
 
 :::
 
-## What You Need
+## 준비물
 
 - Your ntrboot compatible flashcart
 - Two consoles
@@ -20,9 +20,9 @@
   - **The target 3DS**: the 3DS family console on stock firmware
 - The latest release of [ds_ntrboot_flasher](https://github.com/ntrteam/ds_ntrboot_flasher/releases/latest) (`ds_ntrboot_flasher_dsi.nds`)
 
-## Instructions
+## 진행 방법
 
-### Section I - Prep Work
+### 섹션 I - 준비 작업
 
 1. **소스 DSi**를 종료해 주세요
 2. DS 플래시카트의 SD 카드를 컴퓨터에 삽입해 주세요
