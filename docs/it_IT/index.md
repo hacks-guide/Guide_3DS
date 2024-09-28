@@ -1,8 +1,8 @@
 ---
 layout: home
-title: 3DS Hacks Guide
+title: Guida agli hack per 3DS
 hero:
-  text: 3DS Hacks Guide
+  text: Guida agli hack per 3DS
   tagline: A complete guide to 3DS (and 2DS) custom firmware, from stock to boot9strap.
   image:
     src: /images/home-page-feature.jpg
