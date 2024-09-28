@@ -6,8 +6,6 @@
 
 이제부터 모든 Luma3DS의 릴리스는 boot9strap과 sighax에만 대응하는 `.firm`형식으로 업데이트 됩니다. 그것은 곧 Luma3DS를 업데이트 하려면, 이 페이지를 통해 업데이트를 해야 한다는 것과 같습니다,
 
-이 페이지에 있는 `.7z` 파일을 압축 해제하기 위해서는, [7-Zip](http://www.7-zip.org/) 또는 [The Unarchiver](https://theunarchiver.com/) 같은 압축 해제 프로그램이 필요합니다.
-
 ## 준비물
 
 ::: warning
@@ -43,10 +41,10 @@
 
 2. SD 카드를 컴퓨터에 삽입해 주세요
 
-3. Luma3DS `.zip`안에 있는 `boot.firm`과 `boot.3dsx`를 SD 카드의 루트에 복사해 주세요
+3. Copy everything from Luma3DS `.zip` to the root of your SD card
    - SD 카드의 루트는 SD 카드를 열 때 보이는 디렉토리이고, Nintendo 3DS 폴더가 보이지만 그 안에 들어가 있지 않은 상태의 폴더입니다
 
-4. v7.0.5 버전의 Luma3DS `.7z` 파일에서 `arm9loaderhax.bin`을 SD 카드의 루트에 복사해 주세요
+4. Copy `arm9loaderhax.bin` from the v7.0.5 Luma3DS `.zip` to the root of your SD card
 
 5. SafeB9SInstaller `.zip` 파일에서 `SafeB9SInstaller.bin`을 SD 카드에 있는`/luma/payloads/` 폴더에 복사해 주세요
    - `luma` 또는 `payloads` 폴더가 없다면, 만들어 주세요
