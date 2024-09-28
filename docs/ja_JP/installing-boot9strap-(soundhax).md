@@ -30,7 +30,7 @@ In this section, you will copy the files needed to trigger both Soundhax and uni
 3. SoundHaxの `.m4a` ファイルをSDカード直下にコピーします
    - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
 4. SDカードのルートに`otherapp.bin`をコピーします
-5. `boot.firm` と `boot.3dsx` をLuma3DSの `.zip` からSDカードのルートにコピーします
+5. Copy everything from the Luma3DS `.zip` to the root of your SD card
 6. `boot9strap`という名前のフォルダをSDカードのルート上に作成します。
 7. `boot9strap.firm`と`boot9strap.firm.sha`を boot9strap `.zip` ファイルから解凍し、SD カードのboot9strapフォルダにコピーします。
 8. SafeB9SInstaller `.zip` から`SafeB9SInstaller.bin`をSDカードのルートへコピーします
