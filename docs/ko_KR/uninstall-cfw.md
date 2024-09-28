@@ -54,7 +54,7 @@
 
 1. 콘솔의 전원을 꺼 주세요
 2. SD 카드를 컴퓨터에 삽입해 주세요
-3. Luma3DS `.zip`안에 있는 `boot.firm`과 `boot.3dsx`를 SD 카드의 루트에 복사해 주세요
+3. Copy everything from the Luma3DS `.zip` to the root of your SD card
 4. SD 카드의 `/luma/payloads/`폴더에 GodMode9 `.zip`안에 압축되있는 `GodMode9.firm`을 복사해 주세요
 5. SD 카드의 루트로 GodMode9 `.zip`안에 압축이 되있는 `gm9` 폴더를 복사해 주세요
 6. `DSiWareUninstaller.3dsx` 파일을 SD 카드의 `/3ds/` 폴더에 복사해 주세요
