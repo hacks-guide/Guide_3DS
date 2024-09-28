@@ -160,7 +160,7 @@ If your console is on system version 9.4.0, 9.5.0, or 9.6.0, you may be encounte
 
 ::: info
 
-![MSET9 root layout](/images/screenshots/mset9/mset9-root-layout.png)
+![](/images/screenshots/mset9/mset9-root-layout.png)
 
 :::
 
