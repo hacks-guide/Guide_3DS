@@ -1,6 +1,6 @@
 # Flash di ntrboot (Con più 3DS)
 
-## Required Reading
+## Lettura necessaria
 
 Prima di procedere, assicurati di aver letto tutte le informazioni su [ntrboot](ntrboot).
 
@@ -12,7 +12,7 @@ Tieni presente che in rare circostanze è possibile **brickare** una flashcart c
 
 :::
 
-## What You Need
+## Cosa serve
 
 - Your ntrboot compatible flashcart
 - Two 3DS family consoles
@@ -21,9 +21,9 @@ Tieni presente che in rare circostanze è possibile **brickare** una flashcart c
 - The v1.3 release of [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (direct download)
 - The latest release of [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest) (`ntrboot_flasher.firm`)
 
-## Instructions
+## Istruzioni
 
-### Section I - Prep Work
+### Sezione I - Preparazione
 
 1. Spegni il **3DS di partenza**
 2. Inserisci la scheda SD del **3DS di partenza** nel tuo computer
