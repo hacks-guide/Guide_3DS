@@ -133,7 +133,7 @@ Ensure that you have reset the title database.
 
 - Please power on your console with your SD inserted
 - Avvia le Impostazioni della console e vai su `Gestione dati` -> `Nintendo 3DS` -> `Software` -> Reset ([immagine](/images/screenshots/database-reset.jpg))
-  - This will not wipe any of your data
+  - Non verranno cancellati i tuoi dati
 - If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
 
 Se _non_ ricevi una conferma di ripristino, la tua scheda SD deve essere formattata:
@@ -237,7 +237,7 @@ Potrebbe mancarti il file `SafeB9S.bin` dalla directory principale della tua sch
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Digita il numero corrispondente al modello di console e alla versione, quindi premi Invio
-   - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
+   - Lo stato attuale dovrebbe visualizzare [Injected](/images/screenshots/mset9/mset9-injected.png)
    - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you may [retry Section II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
 2. Digita `4`, quindi premi Invio
 3. Una volta che la finestra dice "Removed trigger file", digita `0` quindi premi Invio
@@ -266,7 +266,7 @@ Segui queste istruzioni per rimuovere il file scatenante e riprova la Sezione II
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Digita il numero corrispondente al modello di console e alla versione, quindi premi Invio
-   - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
+   - Lo stato attuale dovrebbe visualizzare [Injected](/images/screenshots/mset9/mset9-injected.png)
    - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you are ready to retry Section II
 2. Digita `4`, quindi premi Invio
 3. Una volta che la finestra dice "Removed trigger file", digita `0` quindi premi Invio
@@ -694,7 +694,7 @@ Probabilmente la tua console ha ancora menuhax67 installato. Per disinstallare m
 
 ---
 
-## Other troubleshooting
+## Risoluzione di ulteriori problemi
 
 :::details Clear HOME Menu extdata
 
