@@ -4,7 +4,7 @@ Dovrai determinare quale cartella contiene i tuoi dati. Prima di tutto, esegui i
 
 ::: info
 
-![Backup ID1](/images/screenshots/troubleshooting/backup-id1.png)
+![](/images/screenshots/troubleshooting/backup-id1.png)
 
 :::
 
@@ -12,13 +12,13 @@ Ora, elimina tutte le cartelle tranne una dalla tua scheda SD. Generalmente, dov
 
 ::: info
 
-![Properties prompt](/images/screenshots/troubleshooting/rightclick-properties.png)
+![](/images/screenshots/troubleshooting/rightclick-properties.png)
 
 :::
 
 ::: info
 
-![Which to delete](/images/screenshots/troubleshooting/compare-id1.png)
+![](/images/screenshots/troubleshooting/compare-id1.png)
 
 :::
 
@@ -26,7 +26,7 @@ Ora la tua scheda SD dovrebbe assomigliare a questa:
 
 ::: info
 
-![Just enough ID1s](/images/screenshots/troubleshooting/correct-id1.png)
+![](/images/screenshots/troubleshooting/correct-id1.png)
 
 :::
 
