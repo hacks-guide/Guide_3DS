@@ -1,6 +1,6 @@
 # ntrboot 플래싱 (NDS)
 
-## Required Reading
+## 중요
 
 진행하기 앞서서, [ntrboot](ntrboot) 에 대한 모든 정보를 숙지해주세요.
 
@@ -12,7 +12,7 @@
 
 :::
 
-## What You Need
+## 준비물
 
 - Your ntrboot compatible flashcart
 - Two consoles
@@ -21,9 +21,9 @@
 - The v1.3 release of [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (direct download)
 - The latest release of [ntrboot_flasher_nds](https://github.com/jason0597/ntrboot_flasher_nds/releases/latest) (`ntrboot_flasher_nds.nds`)
 
-## Instructions
+## 진행 방법
 
-### Section I - Prep Work
+### 섹션 I - 준비 작업
 
 1. **소스 NDS / NDSL**를 종료해 주세요
 2. DS 플래시카트의 SD 카드를 컴퓨터에 삽입해 주세요
