@@ -16,7 +16,7 @@ Se stai usando un Mac su macOS 10.13 (High Sierra) o successivo, segui invece [F
 
 ## Cosa serve
 
-- The latest release of [F3X](https://github.com/insidegui/F3X/releases/latest)
+- L'ultima versione di [F3X](https://github.com/insidegui/F3X/releases/latest)
 
 ## Istruzioni
 
@@ -43,6 +43,6 @@ Se il test mostra qualunque altro risultato, la tua scheda SD potrebbe essere co
 
 ::: tip
 
-Return to [Get Started](get-started)
+Ritorna a [Cominciamo!](get-started)
 
 :::
