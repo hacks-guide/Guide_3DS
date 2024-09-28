@@ -1,6 +1,6 @@
 # Formatting SD (Windows)
 
-## Required Reading
+## 중요
 
 이곳은 3DS와 쓰기 위한 SD 카드를 포맷하는 부가 섹션입니다.
 
@@ -8,7 +8,7 @@
 
 이 페이지는 Windows 사용자만 이용할 수 있습니다. 만약 Windows에서 하는 것이 아니라면, [SD 포맷하기 (Linux)](formatting-sd-\(linux\))나 [SD 포맷하기 (Mac)](formatting-sd-\(mac\)) 페이지들을 찾아봐 주세요.
 
-## What You Need
+## 준비물
 
 - **For SD cards 32GB or smaller:** the latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
 - **For SD cards 64GB or larger:** The latest version of [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
