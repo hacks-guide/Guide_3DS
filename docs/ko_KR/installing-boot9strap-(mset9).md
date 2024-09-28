@@ -1,6 +1,6 @@
 # boot9strap 설치 (MSET9)
 
-## Choose your operating system
+## 운영체제 선택
 
 MSET9는 **콘솔 해킹에 사용하는** 컴퓨터, 스마트폰 또는 태블릿에 따라 절차가 다릅니다.
 
