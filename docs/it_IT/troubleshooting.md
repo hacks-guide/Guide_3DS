@@ -160,7 +160,7 @@ Ricorda, la tua scheda SD dovrebbe assomigliare a questo:
 
 ::: info
 
-![MSET9 root layout](/images/screenshots/mset9/mset9-root-layout.png)
+![](/images/screenshots/mset9/mset9-root-layout.png)
 
 :::
 
