@@ -11,11 +11,11 @@
 :::
 
 1. Εκκινήστε την εφαρμογή «System Settings»
-2. Navigate to `Internet Settings` -> `Connection Settings`
-3. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
+2. Μεταβείτε στο `Internet Settings` -> `Connection Settings`
+3. Επιλέξτε τη θέση σύνδεσης δικτύου σας και μεταβείτε στο `Change Settings` -> `Επόμενη σελίδα (δεξί βέλος)` -> `Proxy Settings`
 4. Ορίστε την επιλογή «Proxy Settings» σε «Yes» και επιλέξτε `Detailed Setup`
 5. Ορίστε την επιλογή «Proxy Server» σε `ssloth.nintendohomebrew.com` και την επιλογή «Port» σε `8080`
-6. Click OK, then click Save
-7. When prompted, click "Test" to perform the connection test
-   - The test should succeed
-8. Click "OK" to continue
+6. Επιλέξτε «OK» και έπειτα, «Save»
+7. Όταν σας ζητηθεί, επιλέξτε «Test» για να πραγματοποιήσετε τη δοκιμή σύνδεσης
+   - Η δοκιμή θα πρέπει να πετύχει
+8. Πατήστε «OK» για να συνεχίσετε
