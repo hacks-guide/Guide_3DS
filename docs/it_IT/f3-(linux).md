@@ -10,7 +10,7 @@ Questa pagina è solo per utenti Linux. Se non sei su Linux, usa [H2testw (Windo
 
 ## Cosa serve
 
-- The latest version of [F3](https://github.com/AltraMayor/f3/releases/tag/v8.0)
+- L'ultima versione di [F3](https://github.com/AltraMayor/f3/releases/tag/v8.0)
 
 ## Istruzioni
 
@@ -66,6 +66,6 @@ Se il test mostra qualunque altro risultato, la tua scheda SD potrebbe essere co
 
 ::: tip
 
-Return to [Get Started](get-started)
+Ritorna a [Cominciamo!](get-started)
 
 :::
