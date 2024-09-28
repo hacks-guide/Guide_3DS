@@ -353,7 +353,7 @@
 
 :::
 
-:::details Opening the browserhax QR code or URL crashes
+:::details Απρόσμενη διακοπή λειτουργίας κατά το άνοιγμα του κωδικού QR ή του URL του browserhax
 
 Τα exploit που βασίζονται στην εφαρμογή «Internet Browser» (όπως το browserhax ή το 2xrsa) είναι συχνά ασταθή και προκαλούν διακοπή λειτουργίας, αλλά μπορούν κάποιες φορές να διορθωθούν ακολουθώντας τα παρακάτω βήματα.
 
@@ -363,13 +363,13 @@
 
 :::
 
-:::details System Update prompt when opening browser
+:::details Μήνυμα για ενημέρωση συστήματος κατά το άνοιγμα του προγράμματος περιήγησης
 
 Ο διακομιστής μεσολάβησης του SSLoth δεν ρυθμίστηκε σωστά. Επαναλάβετε την ενότητα του SSLoth στη σελίδα.
 
 :::
 
-:::details Error 032-0420 when opening browser
+:::details Σφάλμα 032-0420 κατά το άνοιγμα του προγράμματος περιήγησης
 
 Ακολουθήστε αυτά τα βήματα με τη σειρά:
 
@@ -621,7 +621,7 @@
 
 :::
 
-:::details HOME Menu is missing installed applications
+:::details Απουσία εγκατεστημένων εφαρμογών από το μενού «HOME»
 
 Αυτό θα μπορούσε να προκληθεί από διάφορους λόγους, αλλά πιθανότατα επειδή το σύστημα δεν διαβάζει την κάρτα SD σας.
 Μπορείτε να ελέγξετε εάν γίνεται ανάγνωση της SD σας κρατώντας πατημένο το SELECT κατά την εκκίνηση και ελέγχοντας το κίτρινο κείμενο στην κάτω οθόνη. Εάν βλέπετε το «Booted from CTRNAND via B9S», τότε η κονσόλα σας εκκινείται από την εσωτερική μνήμη και όχι από την κάρτα SD.
@@ -673,13 +673,13 @@
 
 :::
 
-:::details Extended memory mode games (Pokemon Sun/Moon, Smash, etc.) don't work
+:::details Τα παιχνίδια λειτουργίας εκτεταμένης μνήμης (Pokemon Sun/Moon, Smash κ.λπ.) δεν λειτουργούν
 
 Αυτό μπορεί να συμβεί μετά από μια αλλαγή του CTRTransfer ή της περιοχής στα Old 3DS/2DS. Ακολουθήστε τις οδηγίες [εδώ](region-changing#section-vi---fixing-locale-related-issues) για να διορθώσετε αυτό το ζήτημα (παραλείποντας τα βήματα 3, 4, 5 και 6).
 
 :::
 
-:::details Exception screen when booting/loading an application
+:::details Οθόνη εξαίρεσης κατά την εκκίνηση/φόρτωση μιας εφαρμογής
 
 Αναζητήστε την οθόνη εξαίρεσης σε [αυτήν τη σελίδα](https://wiki.hacks.guide/wiki/3DS:Error_screens/Luma3DS_exception_screen).
 Εάν δεν μπορείτε να βρείτε το σφάλμα σας ή αν δεν λειτούργησαν οι οδηγίες, γίνετε μέλος του [Nintendo Homebrew στο Discord](https://discord.gg/MWxPgEp) για περαιτέρω βοήθεια.
