@@ -1,20 +1,20 @@
 # Εγκατάσταση του boot9strap (ntrboot)
 
-## Required Reading
+## Απαραίτητη ανάγνωση
 
 Για να χρησιμοποιήσετε τους συνδέσμους [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) αυτής της σελίδας, θα χρειαστείτε ένα πρόγραμμα torrent, όπως το [qBittorrent](https://www.qbittorrent.org/download.php) ή το [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
-## What You Need
+## Τι χρειάζεστε
 
 - A magnet that triggers the sleep mode of your console (if using a folding style console)
 - Your ntrboot flashed flashcart
-- The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
-- The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- Την πιο πρόσφατη έκδοση του [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (απευθείας λήψη)
+- Την πιο πρόσφατη έκδοση του [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (απευθείας λήψη)
+- Την πιο πρόσφατη έκδοση του [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (το αρχείο `.zip` του Luma3DS)
 
-## Instructions
+## Οδηγίες
 
-### Section I - Prep Work
+### Ενότητα I - Προετοιμασία
 
 1. Απενεργοποιήστε την κονσόλα σας
 
@@ -22,7 +22,7 @@
    - This is the SD card from your 3DS, _not_ the SD card from your flashcart
 
 3. Αντιγράψτε το `SafeB9SInstaller.firm` από το αρχείο `.zip` του SafeB9SInstaller στη ρίζα της κάρτας SD σας και μετονομάστε το σε `boot.firm`
-   - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
+   - Η ρίζα της κάρτας SD είναι ο αρχικός κατάλογος της κάρτας SD σας, όπου μπορείτε να δείτε τον φάκελο «Nintendo 3DS», χωρίς να βρίσκεστε μέσα σε αυτόν
 
 4. Δημιουργήστε έναν φάκελο με το όνομα `boot9strap` στη ρίζα της κάρτας SD της κονσόλας σας
 
@@ -38,7 +38,7 @@
 
 7. Ενεργοποιήστε την κονσόλα σας
 
-### Section II - ntrboot
+### Ενότητα II - ntrboot
 
 1. Χρησιμοποιήστε τον μαγνήτη για να βρείτε το σημείο της κονσόλας σας όπου ενεργοποιείται ο αισθητήρας ύπνου
    - This step is not needed on the old 2DS (which has a sleep mode switch)
@@ -52,16 +52,16 @@
 7. Αφαιρέστε τον μαγνήτη από την κονσόλα σας
    - On old 2DS, you should instead disable the sleep mode switch
 
-### Section III - Installing boot9strap
+### Ενότητα IIΙ - Εγκατάσταση του boot9strap
 
 Σε αυτήν την ενότητα, θα εγκαταστήσετε custom firmware στην κονσόλα σας.
 
 1. Όταν ζητηθεί, εισαγάγετε τον συνδυασμό πλήκτρων που θα εμφανιστεί στην πάνω οθόνη, ώστε να εγκαταστήσετε το boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+   - Εάν το κείμενο ενός βήματος στην κάτω οθόνη έχει κόκκινο χρώμα και δεν σας ζητείται να εισαγάγετε κάποιον συνδυασμό πλήκτρων [ακολουθήστε αυτόν τον οδηγό επίλυσης προβλημάτων](troubleshooting#issues-with-safeb9sinstaller)
 2. Μόλις ολοκληρωθεί, πατήστε παρατεταμένα το κουμπί ισχύος της κονσόλας σας για εξαναγκαστική απενεργοποίηση
    - Your console will only boot to the SafeB9SInstaller screen until the next section is completed
 
-### Section IV - Configuring Luma3DS
+### Ενότητα IV - Ρύθμιση του Luma3DS
 
 1. Εισαγάγετε την κάρτα SD της κονσόλας σας στον υπολογιστή σας
 2. Διαγράψτε το `boot.firm` από τη ρίζα της κάρτας SD σας
@@ -77,7 +77,7 @@ ___
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Συνέχεια στην [Ολοκλήρωση εγκατάστασης](finalizing-setup)
 
 :::
 
@@ -89,9 +89,9 @@ ___
 
 Μην ακολουθήσετε αυτήν την ενότητα μέχρι να ολοκληρώσετε τις υπόλοιπες οδηγίες αυτής της σελίδας.
 
-### Section V - Removing ntrboot
+### Ενότητα V - Αφαίρεση του ntrboot
 
-#### What You Need
+#### Τι χρειάζεστε
 
 - The latest release of [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest) (`ntrboot_flasher.firm`)
 - The flashrom backup corresponding to your flashcart
@@ -99,7 +99,7 @@ ___
   - Note that if you followed [Flashing ntrboot (3DS Single System)](flashing-ntrboot-\(3ds-single-system\)) or [Flashing ntrboot (NDS)](flashing-ntrboot-\(nds\)), the flashrom backup already exists on your flashcart's SD card and should be copied to the location specified below
   - If you do not know which HW revision you have, just try each for your cart of them. Μόνο η σωστή έκδοση θα επιτρέψει στη flashcart σας να εκκινηθεί σωστά από το μενού «HOME», αλλά η εγκατάσταση της λάθος έκδοσης δεν θα καταστήσει τη flashcart σας μη λειτουργική
 
-| Flashcart                                                        | Hardware Revision |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Flashrom                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Flashcart                                                        | Αναθεώρηση υλικού |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Flashrom                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | ---------------------------------------------------------------- | :---------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | **Ace3DS X**                                                     |                   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            _N/A_                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | **Acekard 2i**                                                   |       HW 81       |                                                                                                                                                                                                                                                         <font-awesome-icon icon="fa-solid fa-magnet"/> - [Acekard_2i_(HW_81)-Flashrom.zip](magnet:?xt=urn:btih:71ce385a1d65e28719c419fe58d171a4873501ff\&dn=Acekard_2i_\(HW_81\)-Flashrom.zip\&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce\&tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce\&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce\&tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce\&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce\&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce\&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce\&tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce\&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce)                                                                                                                                                                                                                                                        |
@@ -125,7 +125,7 @@ ___
 | **R4iSDHC RTS LITE 20XX** from r4isdhc **.com**  |                   |                                                                                                                                                                                                                                                                                  <font-awesome-icon icon="fa-solid fa-magnet"/> - [R4iSDHC.com_20XX-Flashrom.zip](magnet:?xt=urn:btih:d16817f7fdd0eac18d71d2ebd73d51315389d90e\&dn=R4iSDHC.com_20XX-Flashrom.zip\&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce\&tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce\&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce\&tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce\&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce\&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce\&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce\&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce\&tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce)                                                                                                                                                                                                                                                                                  |
 | **R4iSDHC Dual-Core 20XX** from r4isdhc **.com** |                   |                                                                                                                                                                                                                                                                                  <font-awesome-icon icon="fa-solid fa-magnet"/> - [R4iSDHC.com_20XX-Flashrom.zip](magnet:?xt=urn:btih:d16817f7fdd0eac18d71d2ebd73d51315389d90e\&dn=R4iSDHC.com_20XX-Flashrom.zip\&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce\&tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce\&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce\&tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce\&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce\&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce\&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce\&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce\&tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce)                                                                                                                                                                                                                                                                                  |
 
-#### Instructions
+#### Οδηγίες
 
 1. Απενεργοποιήστε την κονσόλα σας
 2. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
