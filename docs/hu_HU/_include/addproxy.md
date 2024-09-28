@@ -11,11 +11,11 @@ Egy vizuális útmutató elérhető ehhez a fejezethez [itt](/images/screenshots
 :::
 
 1. Indítsd el a System Settings alkalmazást
-2. Navigálj az `Internet Settings` -> `Connection Settings` opciókhoz
-3. Kattints a saját hálózati kapcsolatodra és navigálj a `Change Settings` -> `Next Page (jobb nyíl)` -> `Proxy Settings` opcióhoz
+2. Navigate to `Internet Settings` -> `Connection Settings`
+3. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
 4. Állítsd az "Proxy Settings"-t "Yes"-re majd kattints a `Detailed Setup`-ra
 5. Állítsd be a Proxy Server-t `ssloth.nintendohomebrew.com`-ra, és a Port-ot `8080`-ra
-6. Kattints az OK-ra, majd kattints a Save-re
-7. Amikor kérdezi, kattints a "Test"-re a kapcsolat ellenőrzéséhez
+6. Click OK, then click Save
+7. When prompted, click "Test" to perform the connection test
    - The test should succeed
-8. Kattintson az OK gombra a folytatáshoz
+8. Click "OK" to continue
