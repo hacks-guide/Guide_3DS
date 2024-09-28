@@ -1,6 +1,6 @@
 # CTRTransfer
 
-## Required Reading
+## Απαραίτητη ανάγνωση
 
 Αυτή είναι μια πρόσθετη ενότητα για την εγκατάσταση ενός ειδώλου του CTRTransfer 11.15.0 στην κονσόλα σας.
 
@@ -16,7 +16,7 @@
 
 :::
 
-## What You Need
+## Τι χρειάζεστε
 
 - The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
 - The latest release of [FBI](https://github.com/lifehackerhansol/FBI/releases/download/2.6.1/FBI.3dsx) (direct download)
@@ -27,31 +27,31 @@
 
 <!--@include: ./_include/ctrtransfer-images.md -->
 
-## Instructions
+## Οδηγίες
 
-### Section I - Prep Work
+### Ενότητα I - Προετοιμασία
 
 <!--@include: ./_include/ctrtransfer-prep.md -->
 
-### Section II - NAND Backup
+### Ενότητα II - Αντίγραφο ασφαλείας της NAND
 
 1. Κρατήστε πατημένο το (Start) και ταυτόχρονα, ενεργοποιήστε την κονσόλα σας. Αυτή η ενέργεια θα εκκινήσει το GodMode9
 
 <!--@include: ./_include/nand-backup.md -->
 
-### Section III - CTRTransfer
+### Ενότητα III - CTRTransfer
 
 <!--@include: ./_include/ctrtransfer-main.md -->
 
-### Section IV - Launching FBI
+### Ενότητα IV - Εκκίνηση του FBI
 
 <!--@include: ./_include/launch-hbl-dlp.md -->
 
-### Section V - Reinstalling Tickets
+### Ενότητα V - Εκ νέου εγκατάσταση των ticket
 
 <!--@include: ./_include/ctrtransfer-ticket-copy.md -->
 
-### Section VI - Fixing locale-related issues
+### Ενότητα VI - Διόρθωση ζητημάτων περιοχής
 
 <!--@include: ./_include/ctrnand-datayeet.md -->
 
@@ -59,6 +59,6 @@ ___
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Συνέχεια στην [Ολοκλήρωση εγκατάστασης](finalizing-setup)
 
 :::
