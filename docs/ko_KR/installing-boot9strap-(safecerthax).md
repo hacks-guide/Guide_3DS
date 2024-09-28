@@ -42,7 +42,7 @@ safecerthax는 시스템 버전 1.0.0 - 11.14.0가 설치되어 있는 모든 �
 이 섹션에서 safecerthax를 실행할 파일을 복사합니다.
 
 1. SD 카드를 컴퓨터에 삽입해 주세요
-2. Luma3DS `.zip`안에 있는 `boot.firm`과 `boot.3dsx`를 SD 카드의 루트에 복사해 주세요
+2. Copy everything from the Luma3DS `.zip` to the root of your SD card
    - SD 카드의 루트는 SD 카드를 열 때 보이는 디렉토리이고, Nintendo 3DS 폴더가 보이지만 그 안에 들어가 있지 않은 상태의 폴더입니다
 3. SD 카드이 루트에 `boot9strap` 라는 이름으로 새 폴더를 생성해 주세요
 4. SD 카드에 있는 `/boot9strap/` 폴더에 boot9strap `.zip` 파일 안에 압축되있는 `boot9strap.firm`과 `boot9strap.firm.sha`을 복사해 주세요
