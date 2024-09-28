@@ -18,7 +18,7 @@
 
 ### 준비물
 
-- The [super-skaterhax](https://toxicaven.dev/skater) zip for your console's region and system version
+- The [Super-skaterhax](https://skater.nintendohomebrew.com) zip for your console's region and system version
 
 #### 섹션 I - 준비 작업
 
@@ -28,7 +28,7 @@
 
 2. SD 카드를 컴퓨터에 삽입해 주세요
 
-3. Copy everything from the sk8rhax `.zip` to the root of your SD card, overwriting any existing files
+3. Copy everything from the Super-skaterhax `.zip` to the root of your SD card, overwriting any existing files
 
    ::: info
 
