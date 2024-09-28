@@ -12,7 +12,7 @@
 
 :::
 
-## Pre-Installation FAQ
+## Συχνές ερωτήσεις πριν από την εγκατάσταση
 
 :::details I am on the latest system version. Is my console hackable without any external hardware/prerequisites?
 
@@ -136,7 +136,7 @@
 
 :::
 
-:::details Help! Something bad happened and my 3DS won't boot to HOME Menu...
+:::details Βοήθεια! Something bad happened and my 3DS won't boot to HOME Menu...
 
 Ανατρέξτε στον [οδηγό επίλυσης προβλημάτων](troubleshooting#boot-issues-on-devices-with-custom-firmware). **Δεν προτείνεται η αφαίρεση του CFW όταν η κονσόλα σας βρίσκεται σε κατάσταση αδυναμίας εκκίνησης, καθώς είναι πολύ πιθανό να καταστεί μη λειτουργική**.
 
@@ -144,7 +144,7 @@
 
 ## menuhax / A9LH / Gateway FAQ
 
-:::details I modded my console (x) years ago, so it already has some sort of homebrew. What should I do?
+:::details I modded my console (x) years ago, so it already has some sort of homebrew. Τι πρέπει να κάνω;
 
 Προτείνεται η αναβάθμιση της εγκατάστασής σας σε μια πιο σύγχρονη, που να βασίζεται στο boot9strap. Ακολουθήστε τον οδηγό [Έλεγχος για CFW](checking-for-cfw) για να δείτε πώς να αναβαθμίσετε την εγκατάστασή σας.
 
