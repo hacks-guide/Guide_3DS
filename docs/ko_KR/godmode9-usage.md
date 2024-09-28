@@ -142,21 +142,21 @@ NAND 백업이 성공적으로 복구되었습니다. 이제 SD 카드에서 `<d
 
 1. (Start) 를 길게 누르고, 이 상태에서 콘솔의 전원을 켜 주세요. GodMode9이 실행될 겁니다
 2. Press (Right Shoulder) + (B) to unmount the current SD card and insert the one you want to format
-   - If GodMode9 shows an initialization error when inserting the SD Card to be formatted, it can safely be dismissed
+   - 만약 GodMode9이 포맷할 SD 카드를 삽입하는 도중 초기화 오류를 일으켰을 경우, 무시해도 됩니다
 
 <!--@include: ./_include/format-sd-gm9.md -->
 
 ::: tip
 
-Your SD card has successfully been formatted for use with the console.
+SD 카드가 콘솔에서 사용 가능한 상태로 포맷되었습니다.
 
 :::
 
-## Removing an NNID without formatting your console
+## 콘솔을 포맷하지 않고 NNID 제거하기
 
 ::: info
 
-This process will only log you out of your NNID. You will still not be able to use the NNID on another console, as the NNID remains linked to the console.
+이 과정은 NNID 로그아웃만을 진행합니다. NNID 자체는 콘솔에 연동되어있기 때문에, 다른 콘솔에서 해당 NNID를 사용할 수는 없습니다.
 
 :::
 
@@ -176,6 +176,6 @@ This process will only log you out of your NNID. You will still not be able to u
 
 ::: tip
 
-You have now been logged out of your NNID.
+이제 NNID가 로그아웃되었습니다.
 
 :::
