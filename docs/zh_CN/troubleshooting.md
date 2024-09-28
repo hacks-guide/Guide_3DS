@@ -130,17 +130,17 @@ If this does not work, your SD card needs to be formatted:
 :::details Title database: Not initialized!
 
 Ensure that you have reset the title database.
-\+ Please power on your console with your SD inserted
-\+ Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
-\+ This will not wipe any of your data
-\+ If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
+
+- Please power on your console with your SD inserted
+- Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
+  - This will not wipe any of your data
+- If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
 
 If you do _not_ getting a reset prompt, your SD card needs to be formatted:
 
 1. Copy everything off the SD Card to your PC
 2. Format the SD Card ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
 3. Copy everything back
-4. Run the MSET9 script:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -233,7 +233,6 @@ You may be missing `SafeB9S.bin` from the root of your SD card, or the file may 
 
 1. Force power off your console by holding the Power button for 20 seconds
 2. 将你的 SD 卡插入到电脑
-3. Run the MSET9 script:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -263,7 +262,6 @@ Follow these instructions to remove the trigger file and to retry Section II:
 
 1. Force power off your console by holding the Power button for 20 seconds
 2. 将你的 SD 卡插入到电脑
-3. 1. Run the MSET9 script:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -287,7 +285,7 @@ If you continue to have this issue and are sure that you did everything correctl
 
 :::details An exception occurred after triggering MSET9
 
-这可能代表着你的主机已经安装过了自制固件。 你应该[检查一下](checking-for-cfw)。
+This likely indicates that you already have custom firmware. 你应该[检查一下](checking-for-cfw)。
 
 :::
 
@@ -304,16 +302,16 @@ If the screen flashes colors then freezes/crashes:
 
 - Ensure that you have the correct copy of `arm11code.bin` and `browserhax_hblauncher_ropbin_payload.bin` for your console's version and region
 - Try resetting your browser data:
-  1. 打开浏览器，进入浏览器设置页面
+  1. Launch the browser, then launch the browser settings
   2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-  3. 再次尝试触发漏洞
+  3. Try the exploit again
 - Try changing the system language to something other than the current language
 
 :::
 
 :::: details "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
 
-`arm11code.bin` 文件丢失或位置错误。 Make sure to copy the files of the [latest version of super-skaterhax](https://github.com/zoogie/super-skaterhax/releases/latest) for your region and version to the root of your SD card (not inside of a folder).
+The file `arm11code.bin` is missing or misplaced. Make sure to copy the files of the [latest version of super-skaterhax](https://github.com/zoogie/super-skaterhax/releases/latest) for your region and version to the root of your SD card (not inside of a folder).
 
 ::: info
 
@@ -325,7 +323,7 @@ If the screen flashes colors then freezes/crashes:
 
 :::details An exception occured or "DLL_HEAP_INFORMATION" when pressing GO! GO!
 
-这可能代表着你的主机已经安装过了自制固件。 你应该[检查一下](checking-for-cfw)。
+This likely indicates that you already have custom firmware. 你应该[检查一下](checking-for-cfw)。
 
 :::
 
@@ -333,65 +331,67 @@ If the screen flashes colors then freezes/crashes:
 
 :::details Red/purple/pink and white screen after running Browserhax
 
-这可能代表着你的主机已经安装过了自制固件。 你应该[检查一下](checking-for-cfw)。
+This likely indicates that you already have custom firmware. 你应该[检查一下](checking-for-cfw)。
 
 :::
 
 :::details "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
 
-`arm11code.bin` 文件丢失或位置错误。 下载最新版本的 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) 并将其放在你 SD 卡的根目录中，然后重命名为 `arm11code.bin`。 如果你下到的东西看不到 `.bin` 后缀，请不要重命名它。
+The file `arm11code.bin` is missing or misplaced. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. 如果你下到的东西看不到 `.bin` 后缀，请不要重命名它。
 
 :::
 
 :::details "An error has occurred, forcing the software to close..." (white message box)
 
-这可能说明你放的 `arm11code.bin` 文件有问题。 下载最新版本的 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) 并将其放在你 SD 卡的根目录中，然后重命名为 `arm11code.bin`。 如果你下到的东西看不到 `.bin` 后缀，请不要重命名它。
+There may be an issue with your `arm11code.bin` file. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. 如果你下到的东西看不到 `.bin` 后缀，请不要重命名它。
 
 You can also try resetting your browser save data:
 
-1. 打开浏览器，进入浏览器设置页面
+1. Launch the browser, then launch the browser settings
 2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-3. 再次尝试触发漏洞
+3. Try the exploit again
 
 :::
 
 :::details Opening the browserhax QR code or URL crashes
 
-基于浏览器的破解漏洞（例如你正在使用的这个）不稳定并经常崩溃，你可以尝试按照下面的步骤修复：
+Browser based exploits (such as this one) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
 
-1. 打开浏览器，进入浏览器设置页面
+1. Launch the browser, then launch the browser settings
 2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-3. 再次尝试触发漏洞
+3. Try the exploit again
 
 :::
 
 :::details System Update prompt when opening browser
 
-你可能没有正确配置 SSLoth 代理服务器。 尝试重做页面上的 SSLoth 部分内容。
+The SSLoth proxy was incorrectly configured. Re-do the SSLoth section on the page.
 
 :::
 
 :::details Error 032-0420 when opening browser
 
-按照以下步骤操作：
+Follow these steps in order:
 
 1. Launch System Settings on your console
-2. 进入到 `互联网设置（インターネット設定 / Internet Settings）` -> `连接设置（インターネット接続設定 / Connection Settings）`
-3. 点击你目前在用的连接点槽位，然后进入到 `设置变更（設定変更 / Change Settings）` -> `下一页（右箭头）` -> `代理设置（Proxy）`
-4. 将 “代理设置（Proxy）”设置为 “否（No/しない）”
-5. 点击 OK，然后点击保存（保存する / Save）
-6. 当提示时，点击“测试（テスト / Test）”进行连接测试
+2. Navigate to `Internet Settings` -> `Connection Settings`
+3. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
+4. Set "Proxy Settings" to "No"
+5. Click OK, then click Save
+6. When prompted, click "Test" to perform the connection test
    - The test should succeed
-7. 点击 “OK” 继续
+7. Click "OK" to continue
 8. 点两次 “返回”，然后点“关闭”来返回主菜单。
-9. 打开浏览器
-10. 如果它提示需要系统更新，点击 OK
+9. Open the Internet Browser once
+10. If prompted about a system update, press OK
     - This won't actually update the system
-11. 重新从[第二步](installing-boot9strap-\(ssloth-browser\).html#section-ii---ssloth)开始
+11. Start again from [Section II](installing-boot9strap-\(ssloth-browser\).html#section-ii---ssloth)
 
 :::
 
 :::details Frozen on "Doing agbhax..."
+
+There may be an issue with your `arm11code.bin` file. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place it on the root of your SD card, and rename it to `arm11code.bin`. 如果你下到的东西看不到 `.bin` 后缀，请不要重命名它。
 
 :::
 
@@ -606,15 +606,18 @@ If you hear a "popping sound", potentially accompanied with the backlight turnin
 
 :::details "Unable to mount CTRNAND or load the CTRNAND FIRM. Please use an external one."
 
+There are a number of reasons as to why this could be happening. In any case, this error can usually be fixed by following the [CTRTransfer](ctrtransfer) guide.
+
 :::
 
 :::details "An error has occurred. Hold down the POWER button to turn off the power..."
 
 ARM11 异常处理器已被禁用，或主机未安装自制固件。 Try enabling ARM11 exception handlers:
-\+ Power off your console
-\+ Hold (Select)
-\+ Power on your console, while still holding (Select)
-\+ If the "Disable ARM11 exception handlers" box is checked, uncheck it
+
+- 将主机关机
+- Hold (Select)
+- Power on your console, while still holding (Select)
+- If the "Disable ARM11 exception handlers" box is checked, uncheck it
 
 :::
 
@@ -718,6 +721,7 @@ Your console likely still has menuhax67 installed. To uninstall menuhax67, downl
    - **EUR Region**: `000002ce`
    - **JPN Region**: `000002cc`
    - **USA Region**: `000002cd`
+   - **KOR Region**: `000002cf`
 5. Reinsert your SD card into your console
 
 :::
