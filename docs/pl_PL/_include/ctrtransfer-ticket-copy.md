@@ -1,19 +1,22 @@
+::: info
+
 If the script found no user tickets, continue to the next section.
-{: .notice--info}
+
+:::
 
 1. Uruchom FBI z listy Homebrew
-1. Select "SD"
-1. Wybierz "gm9"
-1. Wybierz "out"
-1. Wybierz "ctrtransfer_tickets"
-1. Wykonaj następujący proces dla folderu `eshop` lub `unknown`, albo obu
-    + Przejdź do folderu
-    + Wybierz "\<current directory>"
-    + Wybierz "Install and delete all tickets"
-    + Czekaj. Przez chwilę system może wydawać się zawieszony.
-    + Wciśnij (A), aby potwierdzić
-    + Wciśnij (B), aby odrzucić instalacje ticketów z CDN.
-1. Wciśnij (Home), aby wyjść z FBI
-1. Re-open the Homebrew Launcher, either through the Homebrew Launcher icon on the HOME Menu or by re-following Section IV of this page
-1. Launch faketik from the list of homebrew
-1. Once faketik has finished processing, press (Start) to exit faketik
+2. Select "SD"
+3. Wybierz "gm9"
+4. Wybierz "out"
+5. Wybierz "ctrtransfer_tickets"
+6. Wykonaj następujący proces dla folderu `eshop` lub `unknown`, albo obu
+   - Navigate to the folder
+   - Select "\<current directory>"
+   - Select "Install and delete all tickets"
+   - Wait. Przez chwilę system może wydawać się zawieszony.
+   - Naciśnij (A) by potwierdzić
+   - Press (B) to decline installing tickets from CDN.
+7. Wciśnij (Home), aby wyjść z FBI
+8. Re-open the Homebrew Launcher, either through the Homebrew Launcher icon on the HOME Menu or by re-following Section IV of this page
+9. Launch faketik from the list of homebrew
+10. Once faketik has finished processing, press (Start) to exit faketik
