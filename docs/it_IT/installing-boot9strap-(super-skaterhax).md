@@ -16,11 +16,11 @@ Le istruzioni indicate si applicano solo a New 3DS, New 3DS XL e New 2DS XL. Ass
 
 :::
 
-### What You Need
+### Cosa serve
 
-- The [super-skaterhax](https://toxicaven.dev/skater) zip for your console's region and system version
+- Il file `.zip` di [Super-skaterhax](https://skater.nintendohomebrew.com) per la regione e la versione di sistema della tua console
 
-#### Section I - Prep Work
+#### Sezione I - Preparazione
 
 In questa sezione copierai i file necessari per attivare sia super-skaterhax che l'Homebrew Launcher.
 
@@ -28,7 +28,7 @@ In questa sezione copierai i file necessari per attivare sia super-skaterhax che
 
 2. Inserisci la scheda SD nel tuo computer
 
-3. Copy everything from the sk8rhax `.zip` to the root of your SD card, overwriting any existing files
+3. Copia tutto il contenuto dell'archivio `.zip` di Super-skaterhax nella directory principale della tua scheda SD, sovrascrivendo eventuali file esistenti
 
    ::: info
 
@@ -40,7 +40,7 @@ In questa sezione copierai i file necessari per attivare sia super-skaterhax che
 
 5. Accendi la tua console
 
-6. Launch System Settings
+6. Avvia le Impostazioni della console
 
 7. Seleziona "Impostazioni generali"
 
@@ -48,13 +48,13 @@ In questa sezione copierai i file necessari per attivare sia super-skaterhax che
    - If you get a [warning](/images/screenshots/skaterhax/country-change-notice.png) that tells you that you will lose access to Nintendo Network ID features, you can safely select OK to continue
    - After completing this page, you can restore the region settings back to normal
 
-9. Select the following options according to your console's region ([image](/images/screenshots/skaterhax/skater-lang.png))
+9. Seleziona le seguenti opzioni in base alla regione della tua console ([immagine](/images/screenshots/skaterhax/skater-lang.png))
    - USA: United States, Do Not Set
    - EUR: United Kingdom, Do Not Set
    - JPN: 日本, 設定しない
    - KOR: 대한민국, 설정하지 않음
 
-10. Exit System Settings
+10. Esci dalle Impostazioni della console
 
 #### Section II - super-skaterhax
 
@@ -70,7 +70,7 @@ Se non l'hai già fatto, assicurati di avere una connessione Internet funzionant
    - If you are unable to open the camera, open the Internet Browser and manually type the URL instead (`https://zoogie.github.io/web/super/` for EUR/USA/JPN, `https://zoogie.github.io/web/korea` for KOR)
 2. Tocca il pulsante "codice QR" e scansiona uno dei seguenti codici QR per la regione della tua console [qui](https://user-images.githubusercontent.com/28328903/226086338-585bfdac-0aac-44c0-b413-89206d2815d8.png)
    - If you get a security certificate warning, please ensure that the system date is today's
-3. Press (Select) to open the bookmark tab
+3. Premi il pulsante (Select) per aprire la pagina dei preferiti
    - If your (Select) button does not respond, tap the star icon on the bottom-left corner of the screen
 4. Tocca "Aggiungi ai preferiti"
 5. Premi (B) una volta per ritornare al browser
@@ -103,7 +103,7 @@ Se non l'hai già fatto, assicurati di avere una connessione Internet funzionant
 In questa sezione installerai il custom firmware sulla tua console.
 
 1. Quando richiesto, inserisci la combinazione di tasti richiesta sullo schermo superiore per installare boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+   - Se una sezione nella schermata inferiore ha un testo di colore rosso, e non ti viene richiesto di inserire una combinazione di tasti, [segui questa guida per risolvere i problemi](troubleshooting#issues-with-safeb9sinstaller)
 2. Una volta completato tutto, premi (A) per riavviare la console
 
 <!--@include: ./_include/configure-luma3ds.md -->
@@ -120,6 +120,6 @@ You may now restore your region settings back to normal.
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Prosegui con il [Completamento dell'installazione](finalizing-setup)
 
 :::
