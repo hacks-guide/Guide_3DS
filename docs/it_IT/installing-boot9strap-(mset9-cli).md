@@ -1,12 +1,12 @@
 # Installazione di boot9strap (MSET9 CLI)
 
-:::details Technical Details (optional)
+:::details Dettagli tecnici (opzionale)
 
 [MSET9](https://github.com/zoogie/MSET9) è un exploit per l'applicazione "Impostazioni della console" sviluppata da [zoogie](https://github.com/zoogie). Sfrutta una falla per cui l'ID1 (la seconda cartella a 32 caratteri all'interno di Nintendo 3DS, all'interno di ID0) può essere _qualsiasi_ nome a condizione che sia lungo 32 caratteri. L'esecuzione di una sequenza specifica di azioni determina nella console l'esecuzione delle istruzioni codificate nel nome della cartella ID1, che può essere utilizzato per garantire pieno controllo del 3DS.
 
 :::
 
-## Compatibility Notes
+## Note di compatibilità
 
 ::: warning
 
@@ -17,8 +17,8 @@ Questa pagina richiede un computer che esegue Windows, Linux o macOS. Se hai un 
 ## Cosa serve
 
 - The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest)
-- Any 3.x version of [Python](https://www.python.org/downloads/) **installed on your computer**
-  - If you are on Linux or macOS, you may already have Python 3. Controlla aprendo una finestra del terminale e inserendo `python3 -V`. Se il comando restituisce un numero di versione, funzionerà per questa guida.
+- Qualsiasi versione 3.x di [Python](https://www.python.org/downloads/) **installata sul tuo computer**
+  - Se sei su Linux o su macOS, probabilmente hai già Python 3. Controlla aprendo una finestra del terminale e inserendo `python3 -V`. Se il comando restituisce un numero di versione, funzionerà per questa guida.
 
 ## Istruzioni
 
@@ -53,7 +53,7 @@ In questa sezione preparerai l'exploit MSET9 creando **temporaneamente** un nuov
 
 1. Digita il numero corrispondente al modello di console e alla versione, quindi premi Invio
 
-   - The window should change to this:
+   - La finestra dovrebbe cambiare in questo:
 
    ::: info
 
@@ -61,20 +61,20 @@ In questa sezione preparerai l'exploit MSET9 creando **temporaneamente** un nuov
 
    :::
 
-   - Ensure that the correct console model and version is displayed
+   - Assicurarsi che siano visualizzati il modello di console e la versione corretti
 2. Digita `1`, quindi premi Invio per iniziare il processo di creazione dell'ID1 di MSET9
 3. Dopo aver letto il disclaimer, digita di nuovo `1` e premi Invio per accettarlo
-   - If you get an error, check the [troubleshooting](troubleshooting#installing-boot9strap-mset9), then try again
+   - Se ottieni un errore, controlla la pagina [Risoluzione dei problemi](troubleshooting#installing-boot9strap-mset9), quindi riprova
 4. Se vedi il messaggio "Created hacked ID1.", premi Invio per chiudere lo script di MSET9
-   - Your 3DS will appear to have no data / no user-installed apps on HOME Menu. **È normale.** I tuoi dati saranno ripristinati in un secondo momento
+   - Il tuo 3DS sembrerà non avere dati / nessuna applicazione installata dall'utente nel menu HOME. **È normale.** I tuoi dati saranno ripristinati in un secondo momento
 5. Reinserisci la scheda SD nella tua console
 6. Accendi la tua console
 7. Avvia il Centro di creazione Mii
 8. Attendi che la console raggiunga la schermata [Benvenuto al Centro di creazione Mii](/images/screenshots/mset9/mii-welcome.png), quindi esci per tornare al menu HOME
-   - You may see [this screen](/images/screenshots/mset9/mii-extdata.png), which indicates the necessary data has been created
-   - If you just reach the [normal](/images/screenshots/mset9/mii-existing.png) Mii Maker screen, then the data already exists. Esci dal Centro di creazione Mii e torna al menu HOME
+   - Potresti vedere [questa schermata](/images/screenshots/mset9/mii-extdata.png), che indica che i dati necessari sono stati creati
+   - Se raggiungi la [normale](/images/screenshots/mset9/mii-existing.png) schermata del Centro di creazione Mii vuol dire che i dati esistono già. Esci dal Centro di creazione Mii e torna al menu HOME
 9. Avvia le Impostazioni della console e vai su `Gestione dati` -> `Nintendo 3DS` -> `Software` -> Reset ([immagine](/images/screenshots/database-reset.jpg))
-   - This will not wipe any of your data
+   - Non verranno cancellati i tuoi dati
 10. Spegni la console premendo il pulsante di accensione, quindi tocca "Spegni" sullo schermo inferiore
 11. Inserisci la scheda SD nel tuo computer
 
@@ -82,7 +82,7 @@ In questa sezione preparerai l'exploit MSET9 creando **temporaneamente** un nuov
 
 1. Digita il numero corrispondente al modello di console e alla versione, quindi premi Invio
 
-   - The window should change to this and display `Ready`:
+   - La finestra dovrebbe mostrare questo e visualizzare `Ready`:
 
    ::: info
 
@@ -90,14 +90,14 @@ In questa sezione preparerai l'exploit MSET9 creando **temporaneamente** un nuov
 
    :::
 
-   - If the window says [Not ready - check MSET9 status for more details](/images/screenshots/mset9/mset9-not-ready.png):
-     - Type `2`, then press Enter to check the MSET9 status and follow the directions indicated
-     - Once you have resolved the issue, return to Section I Step 14
-     - For more information, check the [troubleshooting](troubleshooting#installing-boot9strap-mset9) page
+   - Se la finestra dice [Not ready - check MSET9 status for more details](/images/screenshots/mset9/mset9-not-ready.png):
+     - Digita `2`, quindi premi Invio per controllare lo stato di MSET9 e seguire le indicazioni
+     - Una volta risolto il problema, torna alla Sezione I Passo 14
+     - Per ulteriori informazioni, consulta la pagina [Risoluzione dei problemi](troubleshooting#installing-boot9strap-mset9)
 2. Digita `0`, quindi premi Invio per chiudere lo script
 3. Reinserisci la scheda SD nella tua console
 
-### Section II - MSET9
+### Sezione II - MSET9
 
 In questa sezione attiverai MSET9 per avviare SafeB9SInstaller (l'installer del custom firmware).
 
@@ -108,25 +108,25 @@ Queste istruzioni vanno eseguite **ALLA LETTERA**, quindi ricontrolla TUTTO quel
 :::
 
 1. Accendi la tua console, assicurandoti che le Impostazioni della console siano selezionate
-   - If System Settings is not selected, **[hover over](/images/screenshots/mset9/hover-settings.png)** the System Settings icon using the D-Pad, power your console off, then back on
+   - Se le Impostazioni della console non sono selezionate, **[seleziona](/images/screenshots/mset9/hover-settings.png)** l'icona Impostazioni della console usando il D-Pad, spegni la tua console, quindi riaccendila
 2. Premi (A) per avviare le Impostazioni della console
 3. Entra in `Gestione dati` -> `Nintendo 3DS` -> `Dati aggiuntivi` ([immagine](/images/screenshots/bb3/settings-extdata.png))
 4. **Non premere alcun pulsante e non toccare lo schermo**
 5. **Con la console ANCORA ACCESA e senza premere alcun pulsante o toccare lo schermo**, rimuovi la tua scheda SD dalla console
-   - The menu will refresh and say that no SD card is inserted
+   - Il menu si aggiornerà e dirà che non è presente alcuna scheda SD
 6. Inserisci la scheda SD nel tuo computer
 
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Digita il numero corrispondente al modello di console e alla versione, quindi premi Invio
 2. Nella finestra di MSET9, premi `3`, quindi premi Invio per iniettare MSET9
-   - You should see "MSET9 successfully injected!"
+   - Dovresti vedere "MSET9 successfully injected!"
 3. Premi Invio per chiudere lo script di MSET9
 4. Reinserisci la scheda SD nella console **senza premere alcun pulsante o toccare lo schermo**
 5. Se l'exploit è andato a buon fine, si avvierà SafeB9SInstaller
-   - If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting#installing-boot9strap-mset9)
+   - Se vedi una schermata rossa o se la console si blocca ad una schermata di caricamento, [segui questa guida per risolvere il problema](troubleshooting#installing-boot9strap-mset9)
 
-### Section III - Installing boot9strap
+### Sezione III - Installazione di boot9strap
 
 In questa sezione installerai il custom firmware sulla tua console.
 
@@ -136,7 +136,7 @@ In questa sezione installerai il custom firmware sulla tua console.
 
 <!--@include: ./_include/configure-luma3ds.md -->
 
-### Section IV - Removing MSET9
+### Sezione IV - Disinstallare MSET9
 
 In questa sezione rimuoverai MSET9 per evitare ulteriori problemi e per ripristinare i tuoi dati utente (giochi, temi, ecc.). (Questo non rimuoverà il custom firmware che hai appena installato.)
 
@@ -152,12 +152,12 @@ NON saltare questa sezione! Se lo salti, le applicazioni potrebbero inaspettatam
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Digita il numero corrispondente al modello di console e alla versione, quindi premi Invio
-   - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
-   - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), skip to Step 6
+   - Lo stato attuale dovrebbe visualizzare [Injected](/images/screenshots/mset9/mset9-injected.png)
+   - Se hai già rimosso il file scatenante (o non l'hai mai iniettato), lo stato attuale mostrerà [Ready](/images/screenshots/mset9/mset9-ready.png), vai al Passo 6
 2. Digita `4`, quindi premi Invio per rimuovere il file
-   - You should see "Removed trigger file."
+   - Dovresti vedere "Removed trigger file."
 3. Digita `5`, quindi premi Invio per rimuovere MSET9
-   - You should see "Successfully removed MSET9!"
+   - Dovresti vedere "Successfully removed MSET9!"
 4. Premi Invio per chiudere lo script di MSET9
 
 <!--@include: ./_include/luma3ds-installed-note.md -->
