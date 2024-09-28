@@ -1,6 +1,6 @@
 # Φόρτωση του ntrboot (DSi)
 
-## Required Reading
+## Απαραίτητη ανάγνωση
 
 Πριν συνεχίσετε, βεβαιωθείτε ότι έχετε διαβάσει όλες τις πληροφορίες σχετικά με το [ntrboot](ntrboot)
 
@@ -12,7 +12,7 @@
 
 :::
 
-## What You Need
+## Τι χρειάζεστε
 
 - Your ntrboot compatible flashcart
 - Two consoles
@@ -20,9 +20,9 @@
   - **The target 3DS**: the 3DS family console on stock firmware
 - The latest release of [ds_ntrboot_flasher](https://github.com/ntrteam/ds_ntrboot_flasher/releases/latest) (`ds_ntrboot_flasher_dsi.nds`)
 
-## Instructions
+## Οδηγίες
 
-### Section I - Prep Work
+### Ενότητα I - Προετοιμασία
 
 1. Απενεργοποιήστε το **DSi προέλευσης**
 2. Εισαγάγετε την κάρτα SD της flashcart στον υπολογιστή σας
