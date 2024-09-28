@@ -672,7 +672,7 @@ If your console is on system version 9.4.0, 9.5.0, or 9.6.0, you may be encounte
 
 :::details Extended memory mode games (Pokemon Sun/Moon, Smash, etc.) don't work
 
-Αυτό μπορεί να συμβεί μετά από μια αλλαγή του CTRTransfer ή της περιοχής στα Old 3DS/2DS. Ακολουθήστε τις οδηγίες [εδώ](https://3ds.hacks.guide/region-changing#section-vi---fixing-locale-related-issues) για να διορθώσετε αυτό το ζήτημα (παραλείποντας τα βήματα 3, 4, 5 και 6).
+Αυτό μπορεί να συμβεί μετά από μια αλλαγή του CTRTransfer ή της περιοχής στα Old 3DS/2DS. Follow the instructions [here](region-changing#section-vi---fixing-locale-related-issues) to fix this issue (skipping steps 3, 4, 5, and 6).
 
 :::
 
