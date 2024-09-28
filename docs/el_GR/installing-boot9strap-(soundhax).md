@@ -30,7 +30,7 @@
 3. Αντιγράψτε το αρχείο `.m4a` του Soundhax στη ρίζα της κάρτας SD σας
    - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
 4. Αντιγράψτε το `otherapp.bin` στη ρίζα της κάρτας SD σας
-5. Αντιγράψτε τα `boot.firm` και `boot.3dsx` από το αρχείο `.zip` του Luma3DS στη ρίζα της κάρτας SD σας
+5. Copy everything from the Luma3DS `.zip` to the root of your SD card
 6. Δημιουργήστε έναν φάκελο με το όνομα `boot9strap` στη ρίζα της κάρτας SD σας
 7. Αντιγράψτε τα `boot9strap.firm` και `boot9strap.firm.sha` από το αρχείο `.zip` του boot9strap στον φάκελο `/boot9strap/` της κάρτας SD σας
 8. Αντιγράψτε το `SafeB9SInstaller.bin` από το αρχείο `.zip` του SafeB9SInstaller στη ρίζα της κάρτας SD σας
