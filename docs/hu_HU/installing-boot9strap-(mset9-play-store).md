@@ -56,7 +56,7 @@ Ebben a részben előkészítjük az SD kártyád a szükséges adatokkal amik k
 
    ::: info
 
-   ![MSET9 root layout](/images/screenshots/mset9/mset9-root-layout-android.png)
+   ![](/images/screenshots/mset9/mset9-root-layout-android.png)
 
    :::
 
