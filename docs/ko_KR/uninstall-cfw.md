@@ -127,7 +127,7 @@ then uninstalling CFW <u>**WILL BRICK YOUR CONSOLE**</u>. 만약 이것에 해�
 5. "Backup Options"를 선택해 주세요
 6. "SysNAND Backup"을 선택해 주세요
 7. (A)를 눌러 확인해 주세요
-   - This process will take some time
+   - 이 과정은 시간이 좀 걸릴 것입니다
    - If you get an error, ensure you have at least 1.3GB of free space on your SD card
 8. (B)를 눌러 메인 메뉴로 돌아가 주세요
 9. "Exit"를 선택해 주세요
