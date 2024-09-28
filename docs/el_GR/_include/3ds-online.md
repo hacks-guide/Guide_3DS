@@ -1,6 +1,6 @@
 **Η λειτουργία των online υπηρεσιών του Nintendo 3DS σταμάτησε πρόσφατα.** Θα πρέπει να γνωρίζετε τα εξής:
 
-- Current 3DS modding methods are not affected.
-- The Internet access of homebrew applications (i.e. Universal-Updater) is not affected.
-- Official online servers are going down for everyone, but alternate online servers (i.e. Pretendo Network) are currently a work-in-progress.
-- Online shutdown does not affect access to the browser or to the Internet. Το μόνο πράγμα που έχει διακοπεί είναι οι online υπηρεσίες του Nintendo Network, όπως διακομιστές παιχνιδιών.
+- Δεν επηρεάζονται οι τρέχουσες μέθοδοι τροποποίησης του 3DS.
+- Δεν επηρεάζεται η πρόσβαση των εφαρμογών homebrew (π.χ. το Universal-Updater) στο διαδίκτυο.
+- Η λειτουργία των επίσημων online διακομιστών σταμάτησε για όλους, αλλά βρίσκεται υπό εξέλιξη η ανάπτυξη εναλλακτικών online διακομιστών (π.χ. το Pretendo Network).
+- Ο τερματισμός λειτουργίας των online υπηρεσιών δεν επηρεάζει την πρόσβαση στο πρόγραμμα περιήγησης ή στο διαδίκτυο. Το μόνο πράγμα που έχει διακοπεί είναι οι online υπηρεσίες του Nintendo Network, όπως διακομιστές παιχνιδιών.
