@@ -1,6 +1,6 @@
 # H2testw (Windows)
 
-## Required Reading
+## 중요
 
 이 섹션은 h2testw를 사용해 SD 카드의 오류를 확인하는 추가 섹션입니다.
 
@@ -8,11 +8,11 @@ SD 카드의 용량과 컴퓨터의 속도에 따라 최대 몇 시간이 걸릴
 
 이 페이지는 Windows 사용자만 이용할 수 있습니다. Windows 사용자가 아니라면 [F3 (Linux)](f3-\(linux\)) 또는 [F3XSwift (Mac)](f3xswift-\(mac\)) 페이지를 참고해 주세요.
 
-## What You Need
+## 준비물
 
-- The latest version of [h2testw](https://www.heise.de/ct/Redaktion/bo/downloads/h2testw_1.4.zip)
+- 최신 버전의 [h2testw](https://www.heise.de/ct/Redaktion/bo/downloads/h2testw_1.4.zip)
 
-## Instructions
+## 진행 방법
 
 1. h2testw `.zip`에서 `h2testw.exe`를 바탕 화면에 복사해 주세요
 2. SD 카드를 컴퓨터에 삽입해 주세요
@@ -38,6 +38,6 @@ SD 카드의 용량과 컴퓨터의 속도에 따라 최대 몇 시간이 걸릴
 
 ::: tip
 
-Return to [Get Started](get-started)
+[시작하기](get-started) 로 돌아갑니다
 
 :::
