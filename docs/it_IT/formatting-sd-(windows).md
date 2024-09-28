@@ -87,7 +87,7 @@ Questa pagina è solo per utenti Windows. Se non stai utilizzando Windows, puoi 
   - Chiudi tutto ciò che potrebbe stare utilizzando la scheda SD, come ad esempio qualunque schermata Esplora Risorse.
   - Se questo problema persiste, prova a riformattare la scheda in formato NTFS tramite File Explorer, chiudi la finestra al termine e ritenta l'utilizzo di guiformat.
 
-- guiformat shows the error "GetLastError()=1117"
+- guiformat mostra l'errore "GetLastError()=1117"
   - La protezione da scrittura della scheda SD potrebbe essere [abilitata](/images/sdlock.png). Lo slider deve essere spostato verso l'alto per consentire la scrittura sulla scheda SD (anche per la sola formattazione).
 
 - La scheda SD continua a non venire rilevata dalla console o continua a mostrare una capacità errata dopo la formattazione
