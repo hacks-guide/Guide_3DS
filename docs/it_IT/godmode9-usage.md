@@ -12,7 +12,7 @@ Per ricevere supporto su GodMode9, aiuto per gli script e informazioni sugli ult
 
 :::
 
-## Required Reading
+## Lettura necessaria
 
 GodMode9 è un file browser per il Nintendo 3DS che dà pieno accesso ai file sulla tua scheda SD, ai file delle partizioni FAT della SysNAND e della EmuNAND, e a molto altro ancora. Tra le varie funzioni, puoi anche copiare, cancellare, rinominare file e creare cartelle.
 
@@ -20,7 +20,7 @@ Tieni presente che se hai altri file payload oltre a `GodMode9.firm` nella carte
 
 GodMode9 è un software potente che rende possibile la modifica di qualunque aspetto riguardante la tua console. Anche se la maggior parte delle modifiche sono bloccate da un sistema di permessi, ed è impossibile eseguire accidentalmente azioni pericolose senza sbloccare volutamente i permessi di scrittura, faresti meglio a seguire queste istruzioni con cautela e ad avere dei backup utilizzabili.
 
-## Updating GodMode9
+## Aggiornare GodMode9
 
 ::: info
 
@@ -28,11 +28,11 @@ Alcune delle istruzioni qui sotto riportate sono valide solo sull'ultima version
 
 :::
 
-### What You Need
+### Cosa serve
 
-- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
+- L'ultima versione di [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (il file `.zip` di GodMode9)
 
-### Instructions
+### Istruzioni
 
 1. Spegni la tua console
 2. Inserisci la scheda SD nel tuo computer
