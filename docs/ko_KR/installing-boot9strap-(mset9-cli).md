@@ -33,7 +33,6 @@
 In this section, you will prepare the MSET9 exploit by **temporarily** creating a new HOME Menu profile with no user data, and then setting up that profile with only the minimum data required for MSET9 to trigger. Your existing user data will disappear, but will come back when you are finished with this page.
 
 1. SD 카드를 컴퓨터에 삽입해 주세요
-
 2. Copy everything from the MSET9 `.zip` to the root of your SD card, overwriting any existing files
 
    ::: info
@@ -41,8 +40,6 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
    ![](/images/screenshots/mset9/mset9-root-layout.png)
 
    :::
-
-3. MSET9 스크립트를 실행해 주세요:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -80,7 +77,6 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
    - This will not wipe any of your data
 10. Power off your console by pressing the power button then tapping Power Off on the lower screen
 11. SD 카드를 컴퓨터에 삽입해 주세요
-12. MSET9 스크립트를 실행해 주세요:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -119,7 +115,6 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 5. **어떠한 버튼도 하단 화면도 건드리지 않은 상태에서, 기기의 전원이 여전히 켜진 상태에서** SD 카드를 기기에서 제거해 주세요
    - The menu will refresh and say that no SD card is inserted
 6. SD 카드를 컴퓨터에 삽입해 주세요
-7. MSET9 스크립트를 실행해 주세요:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -153,7 +148,6 @@ In this section, you will remove MSET9 to prevent further issues and to restore 
 
 1. 콘솔의 전원을 꺼 주세요
 2. SD 카드를 컴퓨터에 삽입해 주세요
-3. MSET9 스크립트를 실행해 주세요:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
