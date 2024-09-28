@@ -70,7 +70,7 @@
 
 1. 콘솔의 전원을 꺼 주세요
 2. SD 카드를 컴퓨터에 삽입해 주세요
-3. Copy everything from the Luma3DS `.zip` to the root of your SD card
+3. Luma3DS `.zip`안에 있는 모든 파일들을 SD 카드의 루트에 복사해 주세요
 4. hardmod-b9s-installer `.zip`에 있는 hardmod-b9s-installer폴더를 컴퓨터에 복사해 주세요
 5. 다운로드한 '.firm'파일을 컴퓨터에 있는 hardmod-b9s-installer폴더에 복사해 주세요
 6. 컴퓨터에 있는 hardmod-b9s-installer 폴더에 다운로드한 '.firm' 파일을 'current.firm'로 이름을 변경해 주세요
