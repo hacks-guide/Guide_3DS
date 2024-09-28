@@ -1,13 +1,13 @@
 Az MSET9 ID1 létrehozásakor Windows 10-en vagy későbbin a szkript hibára futhat a következővel:
 
-![Error 18](/images/screenshots/troubleshooting/234.png)
+![](/images/screenshots/troubleshooting/234.png)
 
 Ez a béta UTF-8 támogatás miatt van Windows-on. Le kell tiltanod az MSET9 futtatásához:
 
 1. Hit **Windows Key + R** to open up the Run dialogue, type `intl.cpl` then click "OK"
    ::: info
 
-   ![Futtatás](/images/screenshots/troubleshooting/234run.png)
+   ![](/images/screenshots/troubleshooting/234run.png)
 
    :::
 
@@ -15,13 +15,13 @@ Ez a béta UTF-8 támogatás miatt van Windows-on. Le kell tiltanod az MSET9 fut
 
    ::: info
 
-   ![Régió](/images/screenshots/troubleshooting/234region.png)
+   ![](/images/screenshots/troubleshooting/234region.png)
 
    :::
 
    ::: info
 
-   ![Felügyelet](/images/screenshots/troubleshooting/234administrative.png)
+   ![](/images/screenshots/troubleshooting/234administrative.png)
 
    :::
 
@@ -29,7 +29,7 @@ Ez a béta UTF-8 támogatás miatt van Windows-on. Le kell tiltanod az MSET9 fut
 
    ::: info
 
-   ![Nyelv](/images/screenshots/troubleshooting/234locale.png)
+   ![](/images/screenshots/troubleshooting/234locale.png)
 
    :::
 
@@ -37,7 +37,7 @@ Ez a béta UTF-8 támogatás miatt van Windows-on. Le kell tiltanod az MSET9 fut
 
    ::: info
 
-   ![Újraindítás](/images/screenshots/troubleshooting/234restart.png)
+   ![](/images/screenshots/troubleshooting/234restart.png)
 
    :::
 
