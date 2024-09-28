@@ -39,7 +39,7 @@ Se durante questa sezione ti verrà chiesto di sovrascrivere dei file sulla tua 
 2. Quando richiesto, inserisci la combinazione di tasti richiesta sullo schermo superiore per installare boot9strap
    - Se una sezione nella schermata inferiore ha un testo di colore rosso, e non ti viene richiesto di inserire una combinazione di tasti, [segui questa guida per risolvere i problemi](troubleshooting#issues-with-safeb9sinstaller)
 3. Una volta completato, forza lo spegnimento della console tenendo premuto il tasto POWER
-   - Your console will only boot to the SafeB9SInstaller screen until the next section is completed
+   - Finché non verrà completata la successiva sezione, la console visualizzerà soltanto la schermata di SafeB9SInstaller all'accensione
 
 ### Section III - Update Luma3DS
 
