@@ -1,6 +1,6 @@
 # Φόρτωση του ntrboot (NDS)
 
-## Required Reading
+## Απαραίτητη ανάγνωση
 
 Πριν συνεχίσετε, βεβαιωθείτε ότι έχετε διαβάσει όλες τις πληροφορίες σχετικά με το [ntrboot](ntrboot)
 
@@ -12,18 +12,18 @@
 
 :::
 
-## What You Need
+## Τι χρειάζεστε
 
 - Your ntrboot compatible flashcart
 - Two consoles
   - **The source NDS / NDSL**: the Nintendo DS or Nintendo DS Lite which is compatible with your flashcart
   - **The target 3DS**: the 3DS family console on stock firmware
 - The v1.3 release of [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (direct download)
-- The latest release of [ntrboot_flasher_nds](https://github.com/jason0597/ntrboot_flasher_nds/releases/latest) (`ntrboot_flasher_nds.nds`)
+- Την πιο πρόσφατη έκδοση του [ntrboot_flasher_nds](https://github.com/jason0597/ntrboot_flasher_nds/releases/latest) (`ntrboot_flasher_nds.nds`)
 
-## Instructions
+## Οδηγίες
 
-### Section I - Prep Work
+### Ενότητα I - Προετοιμασία
 
 1. Απενεργοποιήστε **το NDS/NDSL προέλευσης**
 2. Εισαγάγετε την κάρτα SD της flashcart στον υπολογιστή σας
