@@ -30,7 +30,7 @@ In this section, you will copy the files needed to trigger both Soundhax and uni
 3. 複製 Soundhax `.m4a` 至 SD 卡的根目錄底下
    - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
 4. 複製 `otherapp.bin` 至 SD 卡根目錄底下
-5. 解壓 Luma3DS `.zip` 內的 `boot.firm` 及 `boot.3dsx` 到 SD 卡的根目錄底下
+5. Copy everything from the Luma3DS `.zip` to the root of your SD card
 6. 在 SD 卡的根目錄底下建立一個新的資料夾 `boot9strap`
 7. 解壓 boot9strap `.zip` 的 `boot9strap.firm` 及 `boot9strap.firm.sha` 檔案至 SD 卡的 `/boot9strap/` 資料夾中
 8. 將 SafeB9SInstaller `.zip` 中的 `SafeB9SInstaller.bin` 複製到 SD 卡的根目錄
