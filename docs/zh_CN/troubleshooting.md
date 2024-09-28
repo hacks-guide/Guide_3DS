@@ -591,7 +591,7 @@ If you hear a "popping sound", potentially accompanied with the backlight turnin
    - Hold (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A)
    - Power on your console
    - If you were successful, the console will boot to an "update your system" screen
-5. 尝试做 [CTRTransfer](trtransfer)
+5. 尝试做 [CTRTransfer](ctrtransfer)
 6. 如需援助，请加入 [Nintendo Homebrew Discord 服务器](https://discord.gg/MWxPgEp)并使用英文求助。（请注意，如果你身处中国大陆，访问 Discord 可能需要科学上网），你也可以到译者的 [QQ 群](https://stray-soul.site/index.php/qqgroup) 寻求帮助，群号为 942052497。
 
 :::
@@ -672,7 +672,7 @@ Your console is running Luma3DS 6.6 or older, likely via arm9loaderhax. You shou
 
 :::details Extended memory mode games (Pokemon Sun/Moon, Smash, etc.) don't work
 
-旧版 3DS / 2DS 在做完 CTRTransfer 或区域变更之后可能会出现这个问题。 Follow the instructions [here](https://3ds.hacks.guide/region-changing#section-vi---fixing-locale-related-issues) to fix this issue (skipping steps 3, 4, 5, and 6).
+旧版 3DS / 2DS 在做完 CTRTransfer 或区域变更之后可能会出现这个问题。 Follow the instructions [here](region-changing#section-vi---fixing-locale-related-issues) to fix this issue (skipping steps 3, 4, 5, and 6).
 
 :::
 
