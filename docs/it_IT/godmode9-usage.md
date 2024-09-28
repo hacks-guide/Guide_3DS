@@ -46,7 +46,7 @@ GodMode9 è ora aggiornato.
 
 :::
 
-## Creating a NAND Backup
+## Creare un backup della NAND
 
 1. Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9
 
@@ -58,7 +58,7 @@ Il tuo backup NAND è stato creato con successo.
 
 :::
 
-## Restoring a NAND Backup
+## Ripristinare un backup della NAND
 
 1. Spegni la tua console
 2. Inserisci la scheda SD nel tuo computer
@@ -72,8 +72,8 @@ Il tuo backup NAND è stato creato con successo.
 10. Seleziona "SysNAND Restore (safe)"
 11. Seleziona il tuo backup della NAND
 12. Premi il pulsante (A) per sbloccare i permessi di scrittura di terzo livello su SysNAND, quindi inserisci la combinazione di tasti richiesta a schermo
-    - This will **not** overwrite your boot9strap installation
-    - This process will take some time
+    - Questo processo **non** eliminerà la tua installazione di boot9strap
+    - Questo passaggio richiederà un po' di tempo
 13. Premi il pulsante (A) per continuare
 14. Premi (B) per ritornare al menu principale
 15. Seleziona "Exit"
@@ -85,7 +85,7 @@ Il tuo backup NAND è stato ripristinato con successo. Ora puoi eliminare `<data
 
 :::
 
-## Injecting any .CIA app into Health & Safety
+## Iniettare un'app .CIA dentro "Informazioni per la salute e la sicurezza"
 
 ::: info
 
@@ -111,7 +111,7 @@ L'applicazione desiderata è stata ora iniettata in Informazioni per la salute e
 
 :::
 
-## Restoring Health & Safety after injecting a .CIA app
+## Ripristinare "Informazioni per la salute e la sicurezza" dopo aver iniettato un'app .CIA
 
 ::: info
 
@@ -132,7 +132,7 @@ Informazioni per la salute e la sicurezza è stato ripristinata alla normalità.
 
 :::
 
-## Format an SD card
+## Formattare una scheda SD
 
 ::: danger
 
@@ -142,7 +142,7 @@ Informazioni per la salute e la sicurezza è stato ripristinata alla normalità.
 
 1. Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9
 2. Premi (R) + (B) per poter rimuovere la scheda SD e inserire quella che si desidera formattare
-   - If GodMode9 shows an initialization error when inserting the SD Card to be formatted, it can safely be dismissed
+   - Se GodMode9 mostra un errore di inizializzazione all'inserimento della scheda SD da formattare, si può ignorare tranquillamente
 
 <!--@include: ./_include/format-sd-gm9.md -->
 
@@ -152,7 +152,7 @@ La scheda SD è stata formattata con successo per essere utilizzata con la conso
 
 :::
 
-## Removing an NNID without formatting your console
+## Rimuovere un NNID senza formattare la console
 
 ::: info
 
