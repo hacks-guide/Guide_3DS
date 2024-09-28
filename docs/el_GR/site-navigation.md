@@ -6,7 +6,7 @@
 
 - [Ολοκλήρωση εγκατάστασης](finalizing-setup)
 - [Εγκατάσταση του boot9strap (Soundhax)](installing-boot9strap-\(soundhax\))
-- [Εγκατάσταση του boot9strap (MSET)](installing-boot9strap-\(mset\))
+- [Εγκατάσταση του boot9strap (MSET9)](installing-boot9strap-\(mset9\))
 
 :::
 
@@ -38,8 +38,8 @@
 - [H2testw (Windows)](h2testw-\(windows\))
 - [Αρχική](/)
 - [Εγκατάσταση του boot9strap (Hardmod)](installing-boot9strap-\(hardmod\))
-- [Εγκατάσταση του boot9strap (MSET)](installing-boot9strap-\(mset\))
-- [Εγκατάσταση του boot9strap (MSET CLI)](installing-boot9strap-\(mset9-cli\))
+- [Εγκατάσταση του boot9strap (MSET9)](installing-boot9strap-\(mset9\))
+- [Εγκατάσταση του boot9strap (MSET9 CLI)](installing-boot9strap-\(mset9-cli\))
 - [Εγκατάσταση του boot9strap (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\))
 - [Εγκατάσταση του boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
 - [Εγκατάσταση του boot9strap (safecerthax)](installing-boot9strap-\(safecerthax\))
