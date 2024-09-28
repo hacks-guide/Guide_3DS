@@ -16,9 +16,9 @@
 
 ## Τι χρειάζεστε
 
-- The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest)
-- Any 3.x version of [Python](https://www.python.org/downloads/) **installed on your computer**
-  - If you are on Linux or macOS, you may already have Python 3. Για να το διαπιστώσετε, ανοίξτε ένα παράθυρο τερματικού και πληκτρολογήστε `python3 -V`. Εάν η εντολή επιστρέψει έναν αριθμό έκδοσης, τότε μπορείτε να ακολουθήσετε αυτόν τον οδηγό.
+- Την πιο πρόσφατη έκδοση του [MSET9](https://github.com/hacks-guide/MSET9/releases/latest)
+- Οποιαδήποτε έκδοση 3.x της [Python](https://www.python.org/downloads/), **εγκατεστημένη στον υπολογιστή σας**
+  - Εάν χρησιμοποιείτε Linux ή macOS, ενδέχεται να διαθέτετε ήδη την Python 3. Για να το διαπιστώσετε, ανοίξτε ένα παράθυρο τερματικού και πληκτρολογήστε `python3 -V`. Εάν η εντολή επιστρέψει έναν αριθμό έκδοσης, τότε μπορείτε να ακολουθήσετε αυτόν τον οδηγό.
 
 ## Οδηγίες
 
@@ -53,7 +53,7 @@
 
 1. Πληκτρολογήστε τον αριθμό που αντιστοιχεί στο μοντέλο και την έκδοση της κονσόλας σας και πατήστε το Enter
 
-   - The window should change to this:
+   - Το παράθυρο θα πρέπει να αλλάξει σε αυτό:
 
    ::: info
 
@@ -61,20 +61,20 @@
 
    :::
 
-   - Ensure that the correct console model and version is displayed
+   - Βεβαιωθείτε ότι εμφανίζεται το σωστό μοντέλο κονσόλας και η σωστή έκδοση
 2. Πληκτρολογήστε `1` και πατήστε το Enter για να ξεκινήσει η διαδικασία δημιουργίας του ID1 του MSET9
 3. Αφού διαβάσετε το μήνυμα αποποίησης ευθυνών, πληκτρολογήστε ξανά `1` και πατήστε το Enter για να το αποδεχτείτε
-   - If you get an error, check the [troubleshooting](troubleshooting#installing-boot9strap-mset9), then try again
+   - Εάν λάβετε κάποιο σφάλμα, ελέγξτε τη σελίδα [επίλυσης προβλημάτων](troubleshooting#installing-boot9strap-mset9) και δοκιμάστε ξανά
 4. Εάν δείτε το μήνυμα «Created hacked ID1.», πατήστε το Enter για να κλείσετε το script «MSET9»
-   - Your 3DS will appear to have no data / no user-installed apps on HOME Menu. **Αυτό είναι αναμενόμενο.** Τα δεδομένα σας θα επιστρέψουν σε ένα μεταγενέστερο βήμα
+   - Το 3DS σας θα φαίνεται σαν να μη διαθέτει καμία εγκατεστημένη εφαρμογή από τον χρήστη στο μενού «HOME». **Αυτό είναι αναμενόμενο.** Τα δεδομένα σας θα επιστρέψουν σε ένα μεταγενέστερο βήμα
 5. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 6. Ενεργοποιήστε την κονσόλα σας
 7. Ανοίξτε το Mii Maker
 8. Περιμένετε μέχρι η κονσόλα σας να φτάσει στην οθόνη [Welcome to Mii Maker](/images/screenshots/mset9/mii-welcome.png) και έπειτα, κλείστε το Mii Maker και επιστρέψτε στο μενού «HOME»
-   - You may see [this screen](/images/screenshots/mset9/mii-extdata.png), which indicates the necessary data has been created
-   - If you just reach the [normal](/images/screenshots/mset9/mii-existing.png) Mii Maker screen, then the data already exists. Κλείστε το Mii Maker και επιστρέψτε στο μενού «HOME»
+   - Ενδέχεται να δείτε [αυτήν την οθόνη](/images/screenshots/mset9/mii-extdata.png), η οποία υποδεικνύει ότι έχουν δημιουργηθεί τα απαραίτητα δεδομένα
+   - Εάν οδηγηθείτε απλώς στην [κανονική](/images/screenshots/mset9/mii-existing.png) οθόνη του Mii Maker, τότε τα δεδομένα υπάρχουν ήδη. Κλείστε το Mii Maker και επιστρέψτε στο μενού «HOME»
 9. Εκκινήστε την εφαρμογή «System Settings» και μεταβείτε στο `Data Management` -> `Nintendo 3DS` -> `Software` -> «Reset» ([εικόνα](/images/screenshots/database-reset.jpg))
-   - This will not wipe any of your data
+   - Αυτή η ενέργεια δεν θα διαγράψει τα δεδομένα σας
 10. Απενεργοποιήστε την κονσόλα σας πατώντας το κουμπί ισχύος και επιλέγοντας «Power Off» στην κάτω οθόνη
 11. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
 
@@ -82,7 +82,7 @@
 
 1. Πληκτρολογήστε τον αριθμό που αντιστοιχεί στο μοντέλο και την έκδοση της κονσόλας σας και πατήστε το Enter
 
-   - The window should change to this and display `Ready`:
+   - Το παράθυρο θα πρέπει να αλλάξει στο εξής και να εμφανίσει την ένδειξη `Ready`:
 
    ::: info
 
@@ -90,10 +90,10 @@
 
    :::
 
-   - If the window says [Not ready - check MSET9 status for more details](/images/screenshots/mset9/mset9-not-ready.png):
-     - Type `2`, then press Enter to check the MSET9 status and follow the directions indicated
-     - Once you have resolved the issue, return to Section I Step 14
-     - For more information, check the [troubleshooting](troubleshooting#installing-boot9strap-mset9) page
+   - Εάν το παράθυρο δηλώνει [Not ready - check MSET9 status for more details](/images/screenshots/mset9/mset9-not-ready.png):
+     - Πληκτρολογήστε `2` και πατήστε το Enter για να ελέγξετε την κατάσταση του MSET9 και ακολουθήστε τις οδηγίες
+     - Μόλις επιλύσετε το ζήτημα, επιστρέψτε στο Βήμα 14 της Ενότητας Ι
+     - Για περισσότερες πληροφορίες, ελέγξτε τη σελίδα [επίλυσης προβλημάτων](troubleshooting#installing-boot9strap-mset9)
 2. Πληκτρολογήστε `0` και πατήστε το Enter για να κλείσετε το script
 3. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 
@@ -108,23 +108,23 @@
 :::
 
 1. Ενεργοποιήστε την κονσόλα σας, εξασφαλίζοντας ότι έχει επιλεχθεί η εφαρμογή «System Settings»
-   - If System Settings is not selected, **[hover over](/images/screenshots/mset9/hover-settings.png)** the System Settings icon using the D-Pad, power your console off, then back on
+   - Εάν δεν έχει επιλεχθεί η εφαρμογή «System Settings», **[επισημάνετε](/images/screenshots/mset9/hover-settings.png)** το εικονίδιο «System Settings» με το D-Pad, απενεργοποιήστε την κονσόλα σας και έπειτα, ενεργοποιήστε την ξανά
 2. Πατήστε το (A) για να εκκινήσετε την εφαρμογή «System Settings»
 3. Μεταβείτε στο `Data Management` -> `Nintendo 3DS` -> `Extra Data` ([εικόνα](/images/screenshots/mset9/settings-extdata.png))
 4. **Μην πατήσετε κανένα κουμπί και μην αγγίξτε την οθόνη**
 5. **Ενώ η κονσόλα είναι ΑΚΟΜΑ ΕΝΕΡΓΗ και χωρίς να πατήσετε κανένα κουμπί ή να αγγίξετε την οθόνη**, αφαιρέστε την κάρτα SD από την κονσόλα σας
-   - The menu will refresh and say that no SD card is inserted
+   - Το μενού θα ανανεωθεί και θα δηλώσει ότι δεν έχει εισαχθεί κάρτα SD
 6. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
 
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Πληκτρολογήστε τον αριθμό που αντιστοιχεί στο μοντέλο και την έκδοση της κονσόλας σας και πατήστε το Enter
 2. Στο παράθυρο του MSET9, πληκτρολογήστε `3` και πατήστε το Enter για να εισαγάγετε το MSET9
-   - You should see "MSET9 successfully injected!"
+   - Θα πρέπει να δείτε το μήνυμα «MSET9 successfully injected!»
 3. Πατήστε το Enter για να κλείσετε το script «MSET9»
 4. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας **χωρίς να πατήσετε οποιοδήποτε πλήκτρο ή να αγγίξετε την οθόνη**
 5. Εάν το exploit ήταν επιτυχές, θα έχει γίνει εκκίνηση στο SafeB9SInstaller
-   - If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting#installing-boot9strap-mset9)
+   - Εάν λάβετε μια κόκκινη οθόνη ή αν «κολλήσει» η κονσόλα σε κάποια οθόνη φόρτωσης, ακολουθήστε τον [οδηγό επίλυσης προβλημάτων](troubleshooting#installing-boot9strap-mset9)
 
 ### Ενότητα IIΙ - Εγκατάσταση του boot9strap
 
@@ -152,12 +152,12 @@
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Πληκτρολογήστε τον αριθμό που αντιστοιχεί στο μοντέλο και την έκδοση της κονσόλας σας και πατήστε το Enter
-   - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
-   - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), skip to Step 6
+   - Η τρέχουσα κατάσταση θα πρέπει να εμφανίζει [Injected](/images/screenshots/mset9/mset9-injected.png)
+   - Εάν έχετε ήδη αφαιρέσει το αρχείο ενεργοποίησης (ή δεν είχατε κάνει ποτέ εισαγωγή του), η τρέχουσα κατάσταση θα εμφανίζει [Ready](/images/screenshots/mset9/mset9-ready.png). Μεταβείτε στο Βήμα 6
 2. Πληκτρολογήστε `4` και πατήστε το Enter για να αφαιρεθεί το αρχείο ενεργοποίησης
-   - You should see "Removed trigger file."
+   - Θα πρέπει να δείτε το μήνυμα «Removed trigger file.»
 3. Πληκτρολογήστε `5` και πατήστε το Enter για να αφαιρέσετε το MSET9
-   - You should see "Successfully removed MSET9!"
+   - Θα πρέπει να δείτε το μήνυμα «Successfully removed MSET9!»
 4. Πατήστε το Enter για να κλείσετε το script «MSET9»
 
 <!--@include: ./_include/luma3ds-installed-note.md -->
