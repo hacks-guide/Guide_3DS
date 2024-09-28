@@ -18,7 +18,7 @@
 
 ## Things you should know about the 3DS
 
-:::: details 3DS/2DS compatibility
+:::: details Συμβατότητα 3DS/2DS
 
 ::: info
 
@@ -30,7 +30,7 @@
 
 ::::
 
-:::: details Computer compatibility
+:::: details Συμβατότητα υπολογιστή
 
 ::: info
 
@@ -42,7 +42,7 @@
 
 ::::
 
-:::: details SD card location, type, and capacity
+:::: details Θέση, τύπος και χωρητικότητα κάρτας SD
 
 ::: info
 
@@ -69,7 +69,7 @@
 ::::
 
 :::: warning
-::: details Potential risks (Disclaimer)
+::: details Πιθανοί κίνδυνοι (Αποποίηση ευθυνών)
 
 Τροποποιώντας την κονσόλα σας, την υποβάλλετε σε μια αμυδρή (αλλά όχι μηδενική) πιθανότητα να καταστεί μη λειτουργική («bricked»). _**Η εσφαλμένη τοποθέτηση αρχείων ΔΕΝ θα καταστήσει μη λειτουργική την κονσόλα σας**_, αλλά η σκόπιμη παράλειψη οδηγιών ενδέχεται να οδηγήσει σε αυτό το αποτέλεσμα.
 
@@ -114,7 +114,7 @@
 
 ::::
 
-:::: details Downloading files from GitHub
+:::: details Λήψη αρχείων από το GitHub
 
 ::: info
 
@@ -126,7 +126,7 @@
 
 ::::
 
-:::: details Opening/extracting files
+:::: details Άνοιγμα/αποσυμπίεση αρχείων
 
 ::: info
 
@@ -142,7 +142,7 @@
 
 ::::
 
-:::: details (Windows only) File extensions
+:::: details Επεκτάσεις αρχείων (μόνο για Windows)
 
 ::: info
 
@@ -154,7 +154,7 @@
 
 ::::
 
-## Getting help
+## Λήψη βοήθειας
 
 Εάν αντιμετωπίσετε κάποιο πρόβλημα ενώ ακολουθείτε αυτόν τον οδηγό, υπάρχουν πολλοί τρόποι με τους οποίους μπορείτε να λάβετε βοήθεια!
 
