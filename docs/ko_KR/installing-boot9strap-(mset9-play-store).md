@@ -109,7 +109,7 @@ Android 휴대폰/태블릿에서 요구되는 최소 Android 버전은 6.0 (마
 
 <!--@include: ./_include/configure-luma3ds.md -->
 
-### Section IV - Removing MSET9
+### 섹션 IV - MSET9 제거
 
 이 섹션에서, 이후에 생길 문제를 방지하기 위해 MSET9를 제거할 것입니다. (MSET9이 지워진다고 방금 설치한 커스텀 펌웨어가 지워지진 않습니다.)
 
