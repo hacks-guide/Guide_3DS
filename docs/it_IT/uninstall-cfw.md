@@ -54,7 +54,7 @@ Queste istruzioni funzioneranno solo su console con una versione di Luma3DS ugua
 
 1. Spegni la tua console
 2. Inserisci la scheda SD nel tuo computer
-3. Copy everything from the Luma3DS `.zip` to the root of your SD card
+3. Copia tutto dall'archivio `.zip` di Luma3DS nella directory principale della tua scheda SD
 4. Copia il file `GodMode9.firm` dall'archivio `.zip` di GodMode9 dentro la cartella `/luma/payloads/` della tua scheda SD
 5. Copia la cartella `gm9` presente nell'archivio `.zip` di GodMode9 nella directory principale della tua scheda SD
 6. Copia il file `DSiWareUninstaller.3dsx` nella cartella `/3ds/` della tua scheda SD
@@ -127,7 +127,7 @@ Se NON si avvia il normale menu HOME 3DS, le Impostazioni della console e/o la t
 5. Seleziona "Backup Options"
 6. Seleziona "SysNAND Backup"
 7. Premi (A) per confermare
-   - This process will take some time
+   - Questo passaggio richiederà un po' di tempo
    - If you get an error, ensure you have at least 1.3GB of free space on your SD card
 8. Premi (B) per ritornare al menu principale
 9. Seleziona “Exit”
