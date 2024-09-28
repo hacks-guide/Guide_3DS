@@ -20,7 +20,7 @@ Su telefoni/tablet Android, la versione minima di Android richiesta è 6.0 (Mars
 
 :::
 
-## What You Need
+## Cosa serve
 
 - The following applications installed from the Google Play Store:
   - [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)
@@ -28,9 +28,9 @@ Su telefoni/tablet Android, la versione minima di Android richiesta è 6.0 (Mars
   - If you wish, you can sideload these applications instead
 - The latest release of [MSET9](https://github.com/zoogie/MSET9/releases/latest) (the Release `.zip` file)
 
-## Instructions
+## Istruzioni
 
-### Section I - Prep Work
+### Sezione I - Preparazione
 
 In questa sezione preparerai i dati della scheda SD necessari per attivare l'exploit MSET9.
 
@@ -51,8 +51,8 @@ In questa sezione preparerai i dati della scheda SD necessari per attivare l'exp
    - Open ZArchiver
    - If prompted, [allow ZArchiver to access files on your SD card](/images/screenshots/mset9/zarchiver-allow.png)
    - Navigate to where the downloaded MSET9 Release `.zip` is located ([likely in the Downloads folder](/images/screenshots/mset9/zarchiver-zip-location.png))
-   - Select the Release `.zip`, then select "Extract..." ([image](/images/screenshots/mset9/zarchiver-extract-1.png))
-   - Navigate to your SD card, then tap the blue 'down arrow' icon to extract the files to the root of your SD card ([image](/images/screenshots/mset9/zarchiver-extract-2.png))
+   - Select the Release `.zip`, then select "Extract..." ([immagine](/images/screenshots/mset9/zarchiver-extract-1.png))
+   - Vai nella tua scheda SD, quindi tocca l'icona blu della freccia verso il basso per estrarre i file nella directory principale della tua scheda SD ([immagine](/images/screenshots/mset9/zarchiver-extract-2. ng))
 
    ::: info
 
@@ -104,7 +104,7 @@ Queste istruzioni vanno eseguite **ALLA LETTERA**, quindi ricontrolla TUTTO quel
 In questa sezione installerai il custom firmware sulla tua console.
 
 1. Quando richiesto, inserisci la combinazione di tasti richiesta sullo schermo superiore per installare boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+   - Se una sezione nella schermata inferiore ha un testo di colore rosso, e non ti viene richiesto di inserire una combinazione di tasti, [segui questa guida per risolvere i problemi](troubleshooting#issues-with-safeb9sinstaller)
 2. Una volta completato tutto, premi (A) per riavviare la console
 
 <!--@include: ./_include/configure-luma3ds.md -->
@@ -137,6 +137,6 @@ Hai seguito la Sezione IV (Disinstallare MSET9)? Quella sezione è OBBLIGATORIA!
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Prosegui con il [Completamento dell'installazione](finalizing-setup)
 
 :::
