@@ -1,6 +1,6 @@
 # Cambiare regione
 
-## Required Reading
+## Lettura necessaria
 
 In questa sezione aggiuntiva verrà spiegato come cambiare regionalità sulla tua console. Per questo scopo, verrà eseguito un CTRTransfer alla versione 11.15.0 della regione alla quale si desidera passare. Dopo aver installato l'immagine, potrai aggiornare normalmente la console al firmware più recente (11.17.0).
 
@@ -32,42 +32,42 @@ Se cambi la regione della tua console:
 
 :::
 
-## What You Need
+## Cosa serve
 
-- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
-- The latest release of [FBI](https://github.com/lifehackerhansol/FBI/releases/download/2.6.1/FBI.3dsx) (direct download)
-- The latest release of [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(the `.3dsx` file)_
-- A torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download)
-  - If you already have a torrent client, you do not need to download a new one
+- L'ultima versione di [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (il file `.zip` di GodMode9)
+- L'ultima versione di [FBI](https://github.com/lifehackerhansol/FBI/releases/download/2.6.1/FBI.3dsx) (direct download)
+- L'ultima versione di [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(il file `.3dsx`)_
+- Un client torrent come [qBittorrent](https://www.qbittorrent.org/download.php) o [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+  - Se hai già un client torrent, non occorre scaricarne uno nuovo
 - The 11.15.0 CTRTransfer image for your console type of the region that you want to change to (e.g. Download "New 3DS or 2DS - USA" if you have a New 3DS and want to change your region to USA)
 
 <!--@include: ./_include/ctrtransfer-images.md -->
 
-## Instructions
+## Istruzioni
 
-### Section I - Prep Work
+### Sezione I - Preparazione
 
 <!--@include: ./_include/ctrtransfer-prep.md -->
 
-### Section II - NAND Backup
+### Sezione II - Backup della NAND
 
 1. Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9
 
 <!--@include: ./_include/nand-backup.md -->
 
-### Section III - CTRTransfer
+### Sezione III - CTRTransfer
 
 <!--@include: ./_include/ctrtransfer-main.md -->
 
-### Section IV - Launching FBI
+### Sezione IV - Avviare FBI
 
 <!--@include: ./_include/launch-hbl-dlp.md -->
 
-### Section V - Reinstalling Tickets
+### Sezione V - Ripristino dei ticket
 
 <!--@include: ./_include/ctrtransfer-ticket-copy.md -->
 
-### Section VI - Fixing locale-related issues
+### Sezione VI - Risoluzione dei problemi di regionalità
 
 <!--@include: ./_include/ctrnand-datayeet.md -->
 
