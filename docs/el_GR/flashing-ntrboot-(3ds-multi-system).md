@@ -1,6 +1,6 @@
 # Φόρτωση του ntrboot (πολλαπλά συστήματα 3DS)
 
-## Required Reading
+## Απαραίτητη ανάγνωση
 
 Πριν συνεχίσετε, βεβαιωθείτε ότι έχετε διαβάσει όλες τις πληροφορίες σχετικά με το [ntrboot](ntrboot).
 
@@ -12,7 +12,7 @@
 
 :::
 
-## What You Need
+## Τι χρειάζεστε
 
 - Your ntrboot compatible flashcart
 - Two 3DS family consoles
@@ -21,9 +21,9 @@
 - The v1.3 release of [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (direct download)
 - The latest release of [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest) (`ntrboot_flasher.firm`)
 
-## Instructions
+## Οδηγίες
 
-### Section I - Prep Work
+### Ενότητα I - Προετοιμασία
 
 1. Απενεργοποιήστε **το 3DS προέλευσης**
 2. Εισαγάγετε την κάρτα SD **του 3DS προέλευσης** στον υπολογιστή σας
