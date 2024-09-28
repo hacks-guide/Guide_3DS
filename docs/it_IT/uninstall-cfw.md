@@ -54,7 +54,7 @@ Queste istruzioni funzioneranno solo su console con una versione di Luma3DS ugua
 
 1. Spegni la tua console
 2. Inserisci la scheda SD nel tuo computer
-3. Copia i file `boot.firm` e `boot.3dsx` dall'archivio `.zip` di Luma3DS nella directory principale della tua scheda SD
+3. Copy everything from the Luma3DS `.zip` to the root of your SD card
 4. Copia il file `GodMode9.firm` dall'archivio `.zip` di GodMode9 dentro la cartella `/luma/payloads/` della tua scheda SD
 5. Copia la cartella `gm9` presente nell'archivio `.zip` di GodMode9 nella directory principale della tua scheda SD
 6. Copia il file `DSiWareUninstaller.3dsx` nella cartella `/3ds/` della tua scheda SD
