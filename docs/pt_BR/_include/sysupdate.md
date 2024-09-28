@@ -1,5 +1,5 @@
 1. Atualize seu console indo em Configurações do Sistema, depois em "Outras Configurações", depois indo até a direita e usando "Atualização do Sistema"
-    + Atualizações feitas enquanto usa B9S + Luma (o que você tem) são seguras
-    + O atualizador pode exibir uma mensagem dizendo "Seu sistema está atualizado" ao invés de atualizar. Isso é normal se você já está atualizado; continue para a próxima seção
-    + Se isso lhe der um erro, defina suas configurações de DNS e configurações de Proxy para "Automático"
-    + Se isso ainda lhe der um erro, [siga este guia de troubleshooting](troubleshooting#finalizing-setup)
+   - Updates while using B9S + Luma (what you have) are safe
+   - The updater may display a message saying "Your system is up to date" instead of updating. Isso é normal se você já está atualizado; continue para a próxima seção
+   - If this gives you an error, set both your DNS settings and Proxy settings to "Auto"
+   - If this still gives you an error, [follow this troubleshooting guide](troubleshooting#finalizing-setup)
