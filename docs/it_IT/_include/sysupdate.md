@@ -2,4 +2,4 @@
    - Updates while using B9S + Luma (what you have) are safe
    - The updater may display a message saying "Your system is up to date" instead of updating. È normale se hai già installato l'ultima versione; prosegui con la sezione successiva
    - If this gives you an error, set both your DNS settings and Proxy settings to "Auto"
-   - If this still gives you an error, [follow this troubleshooting guide](troubleshooting#finalizing-setup)
+   - Se l'errore continua a presentarsi, [segui questa guida per risolvere il problema](troubleshooting#finalizing-setup)
