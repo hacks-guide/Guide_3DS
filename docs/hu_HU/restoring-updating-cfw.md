@@ -13,7 +13,7 @@ Az SD kártyád FAT32-re kell legyen formázva, hogy követhesd ezt az útmutat�
 ## Instructions
 
 1. Helyezd az SD kártyád a számítógépbe
-2. Másold át a `boot.3dsx` és `boot.firm` fájlt a Luma3DS `.zip`-ből az SD kártyád gyökerébe, lecserélve a már meglévő fájlokat
+2. Copy everything from the Luma3DS `.zip` to the root of your SD card, replacing any existing files
    - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
 3. Tedd vissza az SD kártyád a konzoldba
 4. Kapcsold be a konzolod
