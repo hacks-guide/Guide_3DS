@@ -129,18 +129,18 @@ Se non funziona, la scheda SD deve essere formattata:
 
 :::details Title database: Not initialized!
 
-Assicurati di aver resettato il database dei titoli.
-\+ Please power on your console with your SD inserted
-\+ Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
-\+ This will not wipe any of your data
-\+ If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
+Ensure that you have reset the title database.
+
+- Please power on your console with your SD inserted
+- Avvia le Impostazioni della console e vai su `Gestione dati` -> `Nintendo 3DS` -> `Software` -> Reset ([immagine](/images/screenshots/database-reset.jpg))
+  - This will not wipe any of your data
+- If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
 
 Se _non_ ricevi una conferma di ripristino, la tua scheda SD deve essere formattata:
 
 1. Copia tutto dalla scheda SD sul tuo PC
 2. Formatta la scheda SD ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
 3. Ricopia tutto nella scheda SD
-4. Esegui lo script di MSET9:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -233,7 +233,6 @@ Potrebbe mancarti il file `SafeB9S.bin` dalla directory principale della tua sch
 
 1. Forza lo spegnimento della console tenendo premuto il pulsante d'accensione per 20 secondi
 2. Inserisci la scheda SD nel tuo computer
-3. Esegui lo script di MSET9:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -263,7 +262,6 @@ Segui queste istruzioni per rimuovere il file scatenante e riprova la Sezione II
 
 1. Forza lo spegnimento della console tenendo premuto il pulsante d'accensione per 20 secondi
 2. Inserisci la scheda SD nel tuo computer
-3. 1. Esegui lo script di MSET9:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -276,7 +274,7 @@ Segui queste istruzioni per rimuovere il file scatenante e riprova la Sezione II
 5. Accendi la tua console
 6. Ritorna alla [Sezione II Passo 1](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
 
-Se continui ad avere questo problema e sei sicuro di avere fatto tutto correttamente, assicurati che il file scatenante sia stato rimosso e formatta la tua scheda SD:
+If you continue to have this issue and are sure that you did everything correctly, ensure the trigger file is removed and format your SD card:
 
 1. Copia tutto dalla scheda SD sul tuo PC
 2. Formatta la scheda SD ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
@@ -287,7 +285,7 @@ Se continui ad avere questo problema e sei sicuro di avere fatto tutto correttam
 
 :::details An exception occurred after triggering MSET9
 
-Probabilmente significa che hai già un custom firmware. Dovresti [verificare la presenza di un CFW](checking-for-cfw).
+This likely indicates that you already have custom firmware. Dovresti [verificare la presenza di un CFW](checking-for-cfw).
 
 :::
 
@@ -304,16 +302,16 @@ If the screen flashes colors then freezes/crashes:
 
 - Ensure that you have the correct copy of `arm11code.bin` and `browserhax_hblauncher_ropbin_payload.bin` for your console's version and region
 - Try resetting your browser data:
-  1. Avvia il browser internet, quindi apri le sue impostazioni
-  2. Scorri verso il basso e seleziona "Reimposta tutti i dati salvati" (può avere nomi simili come "Inizializza i dati di salvataggio" o "Elimina tutti i dati salvati")
-  3. Riprova ad eseguire l'exploit
+  1. Launch the browser, then launch the browser settings
+  2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
+  3. Try the exploit again
 - Try changing the system language to something other than the current language
 
 :::
 
 :::: details "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
 
-Il file `arm11code.bin` è mancante o mal posizionato. Assicurati di copiare i file [dell'ultima versione di super-skaterhax](https://github.com/zoogie/super-skaterhax/releases/latest) per la tua regione e versione della console nella directory principale della tua scheda SD (non all'interno di una cartella).
+The file `arm11code.bin` is missing or misplaced. Make sure to copy the files of the [latest version of super-skaterhax](https://github.com/zoogie/super-skaterhax/releases/latest) for your region and version to the root of your SD card (not inside of a folder).
 
 ::: info
 
@@ -325,7 +323,7 @@ Il file `arm11code.bin` è mancante o mal posizionato. Assicurati di copiare i f
 
 :::details An exception occured or "DLL_HEAP_INFORMATION" when pressing GO! GO!
 
-Probabilmente significa che hai già un custom firmware. Dovresti [verificare la presenza di un CFW](checking-for-cfw).
+This likely indicates that you already have custom firmware. Dovresti [verificare la presenza di un CFW](checking-for-cfw).
 
 :::
 
@@ -333,65 +331,67 @@ Probabilmente significa che hai già un custom firmware. Dovresti [verificare la
 
 :::details Red/purple/pink and white screen after running Browserhax
 
-Probabilmente significa che hai già un custom firmware. Dovresti [verificare la presenza di un CFW](checking-for-cfw).
+This likely indicates that you already have custom firmware. Dovresti [verificare la presenza di un CFW](checking-for-cfw).
 
 :::
 
 :::details "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
 
-Il file `arm11code.bin` è mancante o mal posizionato. Scarica l'ultima versione di [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), posiziona il file `otherapp.bin` nella directory principale della tua scheda SD`e rinominalo in`arm11code.bin`. Non aggiungere l'estensione `.bin\` se non la vedi presente.
+The file `arm11code.bin` is missing or misplaced. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Non aggiungere l'estensione `.bin` se non la vedi presente.
 
 :::
 
 :::details "An error has occurred, forcing the software to close..." (white message box)
 
-Potrebbe esserci un problema con il tuo file `arm11code.bin`. Scarica l'ultima versione di [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), posiziona il file `otherapp.bin` nella directory principale della tua scheda SD`e rinominalo in`arm11code.bin`. Non aggiungere l'estensione `.bin\` se non la vedi presente.
+There may be an issue with your `arm11code.bin` file. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Non aggiungere l'estensione `.bin` se non la vedi presente.
 
-Puoi anche provare a resettare i dati del tuo browser:
+You can also try resetting your browser save data:
 
-1. Avvia il browser internet, quindi apri le sue impostazioni
-2. Scorri verso il basso e seleziona "Reimposta tutti i dati salvati" (può avere nomi simili come "Inizializza i dati di salvataggio" o "Elimina tutti i dati salvati")
-3. Riprova ad eseguire l'exploit
+1. Launch the browser, then launch the browser settings
+2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
+3. Try the exploit again
 
 :::
 
 :::details Opening the browserhax QR code or URL crashes
 
-Gli exploit basati sul browser (come questo) sono instabili e crashano spesso, ma seguendo i seguenti passaggi, i problemi potrebbero venire risolti.
+Browser based exploits (such as this one) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
 
-1. Avvia il browser internet, quindi apri le sue impostazioni
-2. Scorri verso il basso e seleziona "Reimposta tutti i dati salvati" (può avere nomi simili come "Inizializza i dati di salvataggio" o "Elimina tutti i dati salvati")
-3. Riprova ad eseguire l'exploit
+1. Launch the browser, then launch the browser settings
+2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
+3. Try the exploit again
 
 :::
 
 :::details System Update prompt when opening browser
 
-Il proxy SSLoth è stato configurato in modo errato. Ripeti la sezione SSLoth della pagina.
+The SSLoth proxy was incorrectly configured. Re-do the SSLoth section on the page.
 
 :::
 
 :::details Error 032-0420 when opening browser
 
-Segui in ordine questi passaggi:
+Follow these steps in order:
 
 1. Avvia le Impostazioni di sistema sulla tua console
-2. Entra in `Impostazioni Internet` -> `Impostazioni di collegamento`
-3. Clicca sulla tua connessione wifi e naviga su `Modifica` -> `Pagina Successiva (la freccia a destra)` -> `Impostazioni proxy`
-4. Imposta "Impostazioni proxy" su "No"
-5. Fai clic su OK, quindi su Salva
-6. Quando richiesto, clicca su "Test" per eseguire il test di connessione
+2. Navigate to `Internet Settings` -> `Connection Settings`
+3. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
+4. Set "Proxy Settings" to "No"
+5. Click OK, then click Save
+6. When prompted, click "Test" to perform the connection test
    - The test should succeed
-7. Clicca "OK" per continuare
+7. Click "OK" to continue
 8. Premi "Indietro" due volte, poi "Chiudi" per tornare al menu HOME
-9. Apri il Browser Internet una volta sola
-10. Se ti viene richiesto di fare un aggiornamento di sistema, premi OK
+9. Open the Internet Browser once
+10. If prompted about a system update, press OK
     - This won't actually update the system
-11. Ricomincia dalla [Sezione II](installing-boot9strap-\(ssloth-browser\).html#section-ii---ssloth)
+11. Start again from [Section II](installing-boot9strap-\(ssloth-browser\).html#section-ii---ssloth)
 
 :::
 
 :::details Frozen on "Doing agbhax..."
+
+There may be an issue with your `arm11code.bin` file. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place it on the root of your SD card, and rename it to `arm11code.bin`. Non aggiungere l'estensione `.bin` se non la vedi presente.
 
 :::
 
@@ -606,15 +606,18 @@ La tua versione di Luma3DS è obsoleta. Scarica l'ultima versione di [Luma3DS](h
 
 :::details "Unable to mount CTRNAND or load the CTRNAND FIRM. Please use an external one."
 
+There are a number of reasons as to why this could be happening. In any case, this error can usually be fixed by following the [CTRTransfer](ctrtransfer) guide.
+
 :::
 
 :::details "An error has occurred. Hold down the POWER button to turn off the power..."
 
 I gestori di eccezione ARM11 sono disabilitati, o un custom firware non è installato. Try enabling ARM11 exception handlers:
-\+ Power off your console
-\+ Hold (Select)
-\+ Power on your console, while still holding (Select)
-\+ If the "Disable ARM11 exception handlers" box is checked, uncheck it
+
+- Spegni la tua console
+- Hold (Select)
+- Power on your console, while still holding (Select)
+- If the "Disable ARM11 exception handlers" box is checked, uncheck it
 
 :::
 
@@ -718,6 +721,7 @@ Probabilmente la tua console ha ancora menuhax67 installato. Per disinstallare m
    - **EUR Region**: `000002ce`
    - **JPN Region**: `000002cc`
    - **USA Region**: `000002cd`
+   - **KOR Region**: `000002cf`
 5. Reinserisci la scheda SD nella tua console
 
 :::
