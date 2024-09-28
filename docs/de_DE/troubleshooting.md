@@ -403,7 +403,7 @@ Trete [Nintendo Homebrew auf Discord](https://discord.gg/MWxPgEp) für mehr Hilf
 
 :::details Failed to mount the SD card!
 
-Sichere deine Daten und formatiere deine SD-Karte als FAT32 mit dem empfohlenen Werkzeug je nach Betriebssystem ([Windows](formatting-sd-\(windows\)), [macOS](formating-sd-\(mac\)), [Linux](formating-sd-\(linux\))). MiniTool Partition Wizard und das HP Formatierungswerkzeug (HPUSBDisk) sind bekannt für Probleme mit 3DS SD-Karten.
+Sichere deine Daten und formatiere deine SD-Karte als FAT32 mit dem empfohlenen Werkzeug je nach Betriebssystem ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))). MiniTool Partition Wizard und das HP Formatierungswerkzeug (HPUSBDisk) sind bekannt für Probleme mit 3DS SD-Karten.
 
 Wenn dies nicht gelingt, benutze eine andere SD-Karte.
 
@@ -672,7 +672,7 @@ Your console is running Luma3DS 6.6 or older, likely via arm9loaderhax. You shou
 
 :::details Extended memory mode games (Pokemon Sun/Moon, Smash, etc.) don't work
 
-This can occur after a CTRTransfer or region change on Old 3DS / 2DS. Follow the instructions [here](https://3ds.hacks.guide/region-changing#section-vi---fixing-locale-related-issues) to fix this issue (skipping steps 3, 4, 5, and 6).
+This can occur after a CTRTransfer or region change on Old 3DS / 2DS. Follow the instructions [here](region-changing#section-vi---fixing-locale-related-issues) to fix this issue (skipping steps 3, 4, 5, and 6).
 
 :::
 
