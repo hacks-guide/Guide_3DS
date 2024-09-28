@@ -1,12 +1,12 @@
-# File Extensions (Windows)
+# 파일 확장자 (Windows)
 
-## Required Reading
+## 중요
 
 이 섹션은 Windows에서 파일 확장자명을 숨기는 기본 설정을 변경하는 추가 섹션입니다.
 
 이 작업은 가이드에 명시된 파일을 찾기 쉽게 해 줍니다.
 
-## Instructions
+## 진행 방법
 
 ### Windows 11
 
