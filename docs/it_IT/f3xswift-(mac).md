@@ -16,7 +16,7 @@ F3XSwift è compatibile solo con macOS 10.13 (High Sierra) o superiore. Se hai u
 
 ## Cosa serve
 
-- The latest release of [F3XSwift](https://github.com/vrunkel/F3XSwift/releases/latest)
+- L'ultima versione di [F3XSwift](https://github.com/vrunkel/F3XSwift/releases/latest)
 
 ## Istruzioni
 
@@ -43,6 +43,6 @@ Se il test mostra qualunque altro risultato, la tua scheda SD potrebbe essere co
 
 ::: tip
 
-Return to [Get Started](get-started)
+Ritorna a [Cominciamo!](get-started)
 
 :::
