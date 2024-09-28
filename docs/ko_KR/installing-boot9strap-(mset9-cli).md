@@ -24,7 +24,7 @@
 
 ::: info
 
-이 페이지에서, MSET9 스크립트를 사용하여, MSET9을 작동시킬 것입니다. While the script is in progress, user data will temporarily disappear but will return upon the completion of this page. If you get an error when running the script, the solution to that error can most likely be found on the [troubleshooting](troubleshooting#installing-boot9strap-mset9) page.
+이 페이지에서, MSET9 스크립트를 사용하여, MSET9을 작동시킬 것입니다. While the script is in progress, user data will temporarily disappear but will return upon the completion of this page. 만약 스크립트를 실행하는 과정에서 에러가 발생할 경우, 에러 메세지에 대한 해결법은 보통 [troubleshooting](troubleshooting#installing-boot9strap-mset9) 페이지에서 확인할 수 있습니다.
 
 :::
 
@@ -53,7 +53,7 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 
 1. 콘솔의 모델과 버전을 입력한 다음 엔터키를 눌러주세요
 
-   - The window should change to this:
+   - 창에는 다음과 같이 표시될 것입니다:
 
    ::: info
 
@@ -61,7 +61,7 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 
    :::
 
-   - Ensure that the correct console model and version is displayed
+   - 화면에 표시된 모델과 버전이 정확한지 확인해 주세요
 2. Type `1`, then press Enter to begin the process of creating the MSET9 ID1
 3. After reviewing the disclaimer, type `1` again and press Enter to accept it
    - If you get an error, check the [troubleshooting](troubleshooting#installing-boot9strap-mset9), then try again
@@ -136,7 +136,7 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 
 <!--@include: ./_include/configure-luma3ds.md -->
 
-### Section IV - Removing MSET9
+### 섹션 IV - MSET9 제거
 
 In this section, you will remove MSET9 to prevent further issues and to restore your user data (games, themes, etc). (This will not remove the custom firmware that you have just installed.)
 
