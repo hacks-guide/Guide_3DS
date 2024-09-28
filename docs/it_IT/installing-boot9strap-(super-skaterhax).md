@@ -44,9 +44,9 @@ In questa sezione copierai i file necessari per attivare sia super-skaterhax che
 
 7. Seleziona "Impostazioni generali"
 
-8. Navigate to "Profile" -> "Region Settings"
-   - If you get a [warning](/images/screenshots/skaterhax/country-change-notice.png) that tells you that you will lose access to Nintendo Network ID features, you can safely select OK to continue
-   - After completing this page, you can restore the region settings back to normal
+8. Vai su "Profilo" -> "Area di residenza"
+   - Se ottieni un [avviso](/images/screenshots/skaterhax/country-change-notice. ng) che ti dice che perderai l'accesso alle funzionalità di Nintendo Network ID, puoi tranquillamente selezionare OK per continuare
+   - Dopo aver completato questa pagina, è possibile ripristinare l'area di residenza alla impostazione normale
 
 9. Seleziona le seguenti opzioni in base alla regione della tua console ([immagine](/images/screenshots/skaterhax/skater-lang.png))
    - USA: United States, Do Not Set
@@ -56,7 +56,7 @@ In questa sezione copierai i file necessari per attivare sia super-skaterhax che
 
 10. Esci dalle Impostazioni della console
 
-#### Section II - super-skaterhax
+#### Sezione II - super-skaterhax
 
 In questa sezione visiterai la pagina web dell'exploit del browser, che avvierà l'Homebrew Launcher.
 
@@ -67,36 +67,36 @@ Se non l'hai già fatto, assicurati di avere una connessione Internet funzionant
 :::
 
 1. Nel menu HOME, premi contemporaneamente i pulsanti dorsali L e R per avviare la fotocamera
-   - If you are unable to open the camera, open the Internet Browser and manually type the URL instead (`https://zoogie.github.io/web/super/` for EUR/USA/JPN, `https://zoogie.github.io/web/korea` for KOR)
+   - Se non riesci ad aprire la fotocamera, apri il Browser Internet e digita manualmente l'URL (`https://zoogie.github.io/web/super/` per EUR/USA/JPN, `https://zoogie.github.io/web/korea` per KOR)
 2. Tocca il pulsante "codice QR" e scansiona uno dei seguenti codici QR per la regione della tua console [qui](https://user-images.githubusercontent.com/28328903/226086338-585bfdac-0aac-44c0-b413-89206d2815d8.png)
-   - If you get a security certificate warning, please ensure that the system date is today's
+   - Se ricevi un avviso sul certificato di sicurezza, assicurati che la data del sistema sia corretta
 3. Premi il pulsante (Select) per aprire la pagina dei preferiti
-   - If your (Select) button does not respond, tap the star icon on the bottom-left corner of the screen
+   - Se il pulsante (Select) non funziona, tocca l'icona della stella nell'angolo in basso a sinistra dello schermo
 4. Tocca "Aggiungi ai preferiti"
 5. Premi (B) una volta per ritornare al browser
-6. Press (ZR) to open the tab list
-   - If your (ZR) button does not respond, tap the two overlapped squares near the bottom-right corner of the screen
-7. Make sure that the only tab open is the super-skaterhax website
-   - This tab should be highlighted in blue on the tab list
-   - If other tabs are open, close them
+6. Premi (ZR) per aprire l'elenco delle schede
+   - Se il pulsante (ZR) non funziona, tocca il pulsante con 2 quadrati sovrapposti nell'angolo in basso a destra dello schermo
+7. Assicurati che l'unica scheda aperta sia il sito di super-skaterhax
+   - Questa scheda deve essere evidenziata in blu nella lista delle schede
+   - Se ci sono altre schede aperte, chiudile
 8. Premi (B) una volta per ritornare al browser
 9. Premi (Start) per aprire il menu contestuale
-   - If your (Start) button does not respond, tap the 3-line menu on the bottom-right corner of the screen
+   - Se il pulsante (Start) non funziona, tocca il pulsante con 3 linee nell'angolo in basso a destra dello schermo
 10. Tocca su "Impostazioni"
 11. Tocca su "Elimina cookie"
 12. Premi il pulsante (A) per continuare
 13. Premi (Home) per tornare al menu HOME e premi subito (A) per avviare nuovamente il browser
-14. Select the "GO GO!" button on the top of the bottom screen
-15. Press (A) to dismiss the [popup](/images/screenshots/skaterhax/skater-popup.png)
-    - If your console freezes on a yellow screen, hold the POWER button until it turns off, then retry this section
-    - If your console freezes on a red screen, hold the POWER button until it turns off, redo step 3 of Section II, then retry this section
-    - If your console [shows the word Text on the top-left corner of the bottom screen](/images/screenshots/skaterhax/skater-old3ds.png), you have an Old 3DS and this exploit **will not work on your device**. In questo caso, dovresti usare invece [MSET9](installing-boot9strap-\(mset9\))
+14. Seleziona il pulsante "GO GO!" in cima allo schermo inferiore
+15. Premi (A) per chiudere il [popup](/images/screenshots/skaterhax/skater-popup.png)
+    - Se la tua console si blocca con una schermata gialla, tieni premuto il pulsante POWER finché non si spegne, quindi riprova questa sezione
+    - Se la tua console si blocca con una schermata rossa, tieni premuto il pulsante POWER finché non si spegne, riprova il passo 3 della Sezione II, quindi riprova questa sezione
+    - Se la console [mostra la parola Text nell'angolo in alto a sinistra dello schermo inferiore](/images/screenshots/skaterhax/skater-old3ds.png), hai un Old 3DS e questo exploit **non funzionerà sulla tua console**. In questo caso, dovresti usare invece [MSET9](installing-boot9strap-\(mset9\))
     - Se ottieni un altro errore riprova altre 5 volte, e se continua a non funzionare [segui questa guida per risolvere il problema](troubleshooting#installing-boot9strap-super-skaterhax)
 16. La tua console avvierà l'Homebrew Launcher
 17. Avvia nimdsphax dalla lista degli homebrew
 18. Se l'exploit è andato a buon fine, si avvierà SafeB9SInstaller
-    - If your console freezes on a red or green screen, hold the POWER button until it turns off, then retry this section
-    - This may take up to five attempts
+    - Se la tua console si blocca con una schermata rossa o verde, tieni premuto il pulsante POWER finché non si spegne, quindi riprova questa sezione
+    - Potrebbero volerci fino a cinque tentativi
 
 #### Sezione III - Installazione di boot9strap
 
@@ -114,7 +114,7 @@ ___
 
 ::: info
 
-You may now restore your region settings back to normal.
+Ora puoi ripristinare le impostazioni della tua regione alla normalità.
 
 :::
 
