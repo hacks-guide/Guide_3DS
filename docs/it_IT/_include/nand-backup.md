@@ -13,13 +13,13 @@
 11. Entra nella cartella `[S:] SYSNAND VIRTUAL`
 12. Premi (A) su `essential.exefs` per selezionarlo
 13. Seleziona "Copy to 0:/gm9/out"
-    - If you see "Destination already exists", press (A) on "Overwrite file(s)"
+    - Se appare "Destination already exists", premi (A) su "Overwrite file(s)"
 14. Premi il pulsante (A) per continuare
 15. Tenendo premuto (R), premi (Start) per spegnere la console
 16. Inserisci la scheda SD nel tuo computer
 17. Copia i file `<data>_<codiceseriale>_sysnand_##.bin`, `<data>_<codiceseriale>_sysnand_##.bin.sha` ed `essential.exefs` dalla cartella `/gm9/out/` della tua scheda SD in una posizione sicura sul tuo computer
-    - Copy these backups to multiple locations (such as online file storage, an external hard drive, etc.)
-    - These backups will save you from a brick and/or help you recover files from the NAND image if anything goes wrong in the future
+    - Copia questi backup in più posti (ad esempio un archivio online, un disco rigido esterno, ecc.)
+    - Questi backup ti salveranno da un brick e/o ti aiuteranno a recuperare i file dalla NAND nel caso dovesse accadere qualcosa in futuro
 18. Dopo la copia, elimina i file `<data>_<codiceseriale>_sysnand_##.bin` e `<data>_<codiceseriale>_sysnand_##.bin.sha` dalla cartella `/gm9/out/` della tua scheda SD
-    - The other backup files are negligible in size and may be kept on your SD card for ease of access
+    - Gli altri file di backup sono di dimensioni trascurabili e possono essere conservati sulla tua scheda SD per comodità di accesso
 19. Reinserisci la scheda SD nella tua console
