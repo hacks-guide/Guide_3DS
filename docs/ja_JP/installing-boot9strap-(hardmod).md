@@ -14,8 +14,6 @@ Using a hardmod, we can dump the NAND image, install custom firmware to the NAND
 
 To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
-このページにリンクされた `.7z`ファイルを展開するには、[7-Zip](http://www.7-zip.org/) もしくは、 [The Unarchiver](https://theunarchiver.com/) のような解凍ソフトが必要です。
-
 これは New 3DS、New 2DS、Old 3DS、およびOld 2DS に対応する `.firm` を持つすべてのバージョン\* で動作します。
 
 ## What You Need
