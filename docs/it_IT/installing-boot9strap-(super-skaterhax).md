@@ -45,7 +45,7 @@ In questa sezione copierai i file necessari per attivare sia super-skaterhax che
 7. Seleziona "Impostazioni generali"
 
 8. Vai su "Profilo" -> "Area di residenza"
-   - Se ottieni un [avviso](/images/screenshots/skaterhax/country-change-notice. ng) che ti dice che perderai l'accesso alle funzionalità di Nintendo Network ID, puoi tranquillamente selezionare OK per continuare
+   - Se ottieni un [avviso](/images/screenshots/skaterhax/country-change-notice.png) che ti dice che perderai l'accesso alle funzionalità di Nintendo Network ID, puoi tranquillamente selezionare OK per continuare
    - Dopo aver completato questa pagina, è possibile ripristinare l'area di residenza alla impostazione normale
 
 9. Seleziona le seguenti opzioni in base alla regione della tua console ([immagine](/images/screenshots/skaterhax/skater-lang.png))
