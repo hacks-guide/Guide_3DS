@@ -15,8 +15,6 @@
 이 페이지의 [마그넷](https://wikipedia.org/wiki/Magnet_URI_scheme)링크를 사용하려면
 [qBittorrent](https://www.qbittorrent.org/download.php) 또는 [Deluge](http://dev.deluge-torrent.org/wiki/Download)와 같은 토렌트 클라이언트가 필요합니다.
 
-이 페이지에 있는 `.7z` 파일을 압축 해제하기 위해서는, [7-Zip](http://www.7-zip.org/) 또는 [The Unarchiver](https://theunarchiver.com/) 같은 압축 해제 프로그램이 필요합니다.
-
 이것은 이 페이지에 있는 '.firm'파일에 호환되는 _모든_ 버전의 New 3DS, New 2DS, Old 3DS, 그리고 Old 2DS 에 작동할 것입니다.
 
 ## 준비물
