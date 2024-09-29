@@ -14,8 +14,6 @@ A hardmod használatával dumpolni tudunk egy NAND képfájlt, telepíteni egyed
 
 Ahhoz, hogy használhasd a [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) linkeket ezen az oldalon, szükséged lesz egy torrent kliensre, mint például a [qBittorrent](https://www.qbittorrent.org/download.php) vagy a [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
-Ahhoz, hogy kicsomagold az oldalon található `.7z` fájlokat, egy fájl archiváló programra lesz szükséged, mint amilyen a [7-Zip](http://www.7-zip.org/) vagy a [The Unarchiver](https://theunarchiver.com/).
-
 Ez működni fog a New 3DS, a New 2DS, az Old 3DS, és az Old 2DS konzolok _összes_ olyan verzióján, amihez rendelkezel a megfelelő `.firm` fájllal.
 
 ## What You Need
