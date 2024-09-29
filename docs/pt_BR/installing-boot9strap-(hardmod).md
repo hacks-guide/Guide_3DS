@@ -14,8 +14,6 @@ Usando um hardmod, podemos fazer um dump da imagem da NAND, instalar custom firm
 
 Para usar os links do [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) nesta página, você precisará de um cliente de torrent como [qBittorrent](https://www.qbittorrent.org/download.php) ou [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
-Para extrair os arquivos '7z' vinculados nesta página, você vai precisar de um compactador de arquivos como [7-Zip](http://www.7-zip.org/) ou [The Unarchiver] (https://theunarchiver.com/).
-
 Isto funcionará no New 3DS, New 2DS, Old 3DS e Old 2DS em _todas_ as versões em que você tenha um `.firm` correspondente.
 
 ## What You Need
