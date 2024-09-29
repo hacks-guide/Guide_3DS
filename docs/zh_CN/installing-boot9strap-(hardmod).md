@@ -14,8 +14,6 @@
 
 你需要一个支持 BT 协议的下载程序，如 [qBittorrent](https://www.qbittorrent.org/download.php) 或 [Deluge](http://dev.deluge-torrent.org/wiki/Download) 来下载本教程中的[磁力链接](https://zh.wikipedia.org/wiki/%E7%A3%81%E5%8A%9B%E9%93%BE%E6%8E%A5) 。
 
-请使用 [7-Zip](http://www.7-zip.org/) 或 [The Unarchiver](https://theunarchiver.com/) 之类的压缩软件来解压本页面上的 `.7z` 文件。
-
 这个教程适合有对应的 `.firm` 文件的 New 3DS、New 2DS 和老型号 3DS、老型号 2DS。
 
 ## What You Need
