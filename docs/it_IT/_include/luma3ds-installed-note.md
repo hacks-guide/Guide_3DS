@@ -1,4 +1,4 @@
 A questo punto, la console avvierà sempre Luma3DS.
 
-- Luma3DS does not look any different from the normal HOME Menu. Se la console avvia il menu HOME, vuol dire che sta eseguendo il custom firmware.
-- On the next page, you will install useful homebrew applications to complete your setup.
+- Luma3DS non ha differenze rispetto al Menu HOME. Se la console avvia il menu HOME, vuol dire che sta eseguendo il custom firmware.
+- Nella prossima pagina, installerai applicazioni homebrew per finire la tua configurazione.
