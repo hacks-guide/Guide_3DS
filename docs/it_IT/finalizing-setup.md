@@ -10,7 +10,7 @@ In questa pagina realizzeremo backup di file di sistema critici e installeremo i
 
 Lo script installerà le seguenti applicazioni:
 
-- **[FBI](https://github.com/lifehackerhansol/FBI)** \*_(installa applicazioni in formato CIA)_
+- **[FBI](https://github.com/lifehackerhansol/FBI)** _(installa applicazioni in formato CIA)_
 - **[Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)** _(avvia l'Homebrew Launcher)_
 - **[Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)** _(installa temi personalizzati)_
 - **[Checkpoint](https://github.com/FlagBrew/Checkpoint)** _(salva e ripristina file di salvataggio per giochi 3DS e DS)_
