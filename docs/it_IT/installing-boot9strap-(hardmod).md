@@ -14,8 +14,6 @@ Utilizzando un'hardmod possiamo eseguire un dump della NAND, installare un custo
 
 Per usare i link [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) di questa guida avrai bisogno di un client torrent come [qBittorrent](https://www.qbittorrent.org/download.php) o [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
-Per estrarre i file `.7z` presenti in questa pagina, avrai bisogno di un gestore di file compressi come [7-Zip](http://www.7-zip.org/) o [The Unarchiver](https://theunarchiver.com/).
-
 Questo processo funziona su New 3DS, New 2DS, Old 3DS e Old 2DS su _tutte_ le versioni per le quali è presente un apposito file `.firm`.
 
 ## Cosa serve
