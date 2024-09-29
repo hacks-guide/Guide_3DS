@@ -19,7 +19,7 @@ Pagine guida:
 Problemi dopo l’installazione:
 
 - [Problemi di avvio](#boot-issues-on-consoles-with-custom-firmware)
-- [Software issues](#software-issues-on-consoles-with-custom-firmware)
+- [Problemi software](#software-issues-on-consoles-with-custom-firmware)
 
 :::
 
@@ -254,7 +254,7 @@ Altrimenti, la scheda SD potrebbe essere formattata o partizionata in modo errat
 
 :::
 
-:::details System Settings loading infinitely after reinserting the SD card
+:::details Caricamento infinito delle Impostazioni della console dopo il reinserimento della scheda SD
 
 Molto probabilmente hai fatto qualcosa di diverso dalle istruzioni di MSET9, selezionato il modello/versione sbagliata, o la scheda SD deve essere formattata. Assicurati di aver scelto il [modello](/images/3dsmodels.png) e versione del sistema corretti all'apertura dello script.
 
@@ -267,14 +267,14 @@ Segui queste istruzioni per rimuovere il file scatenante e riprova la Sezione II
 
 1. Digita il numero corrispondente al modello di console e alla versione, quindi premi Invio
    - Lo stato attuale dovrebbe visualizzare [Injected](/images/screenshots/mset9/mset9-injected.png)
-   - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you are ready to retry Section II
+   - Se hai già rimosso il file scatenante (o non l'hai mai iniettato), lo stato attuale mostrerà [Ready](/images/screenshots/mset9/mset9-ready.png), e puoi riprovare la Sezione II
 2. Digita `4`, quindi premi Invio
 3. Una volta che la finestra dice "Removed trigger file", digita `0` quindi premi Invio
 4. Reinserisci la scheda SD nella console
 5. Accendi la tua console
 6. Ritorna alla [Sezione II Passo 1](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
 
-If you continue to have this issue and are sure that you did everything correctly, ensure the trigger file is removed and format your SD card:
+Se continui ad avere questo problema e sei sicuro di avere fatto tutto correttamente, assicurati che il file scatenante sia stato rimosso e formatta la tua scheda SD:
 
 1. Copia tutto dalla scheda SD sul tuo PC
 2. Formatta la scheda SD ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
@@ -285,13 +285,13 @@ If you continue to have this issue and are sure that you did everything correctl
 
 :::details An exception occurred after triggering MSET9
 
-This likely indicates that you already have custom firmware. Dovresti [verificare la presenza di un CFW](checking-for-cfw).
+Probabilmente significa che hai già un custom firmware. Dovresti [verificare la presenza di un CFW](checking-for-cfw).
 
 :::
 
 ## Installazione di boot9strap (super-skaterhax)
 
-:::details "An error has occurred. Please save your data in any software currently in use, then restart the system."
+:::details "Si è verificato un errore. Salva i dati di qualunque applicazione attualmente in uso, quindi riavvia la console."
 
 If no colors flash after pressing "GO GO!":
 
@@ -323,7 +323,7 @@ The file `arm11code.bin` is missing or misplaced. Make sure to copy the files of
 
 :::details An exception occured or "DLL_HEAP_INFORMATION" when pressing GO! GO!
 
-This likely indicates that you already have custom firmware. Dovresti [verificare la presenza di un CFW](checking-for-cfw).
+Probabilmente significa che hai già un custom firmware. Dovresti [verificare la presenza di un CFW](checking-for-cfw).
 
 :::
 
@@ -331,11 +331,11 @@ This likely indicates that you already have custom firmware. Dovresti [verificar
 
 :::details Red/purple/pink and white screen after running Browserhax
 
-This likely indicates that you already have custom firmware. Dovresti [verificare la presenza di un CFW](checking-for-cfw).
+Probabilmente significa che hai già un custom firmware. Dovresti [verificare la presenza di un CFW](checking-for-cfw).
 
 :::
 
-:::details "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
+:::details "Si è verificato un errore. Hold down the POWER button to turn off the power..." (black screen with text)
 
 The file `arm11code.bin` is missing or misplaced. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Non aggiungere l'estensione `.bin` se non la vedi presente.
 
@@ -610,7 +610,7 @@ There are a number of reasons as to why this could be happening. In any case, th
 
 :::
 
-:::details "An error has occurred. Hold down the POWER button to turn off the power..."
+:::details "Si è verificato un errore. Hold down the POWER button to turn off the power..."
 
 I gestori di eccezione ARM11 sono disabilitati, o un custom firware non è installato. Try enabling ARM11 exception handlers:
 
