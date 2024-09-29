@@ -7,7 +7,7 @@
 6. Seleziona "CTRNAND options..."
 7. Seleziona "Transfer image to CTRNAND"
 8. Se richiesto, seleziona "Transfer to SysNAND"
-   - This prompt will only appear if you have an EmuNAND
+   - La richiesta apparirà solo se hai una EmuNAND
 9. Premi il pulsante (A) per sbloccare i permessi di scrittura di primo livello su SysNAND, quindi inserisci la combinazione di tasti richiesta a schermo
    - Questo passaggio richiederà un po' di tempo
 10. Una volta completato il trasferimento, premi (A) per proseguire
@@ -25,5 +25,5 @@
 22. Se richiesto, premi (A) per ritirare le autorizzazioni di scrittura
 23. Premi (Start) per riavviare la tua console
 24. Aggiorna la console andando su Impostazioni della console, poi "Impostazioni generali", infine scorri a destra e seleziona "Aggiornamento"
-    - Updates while using B9S + Luma (what you have) are safe
-    - If this gives you an error, set your DNS settings to "auto"
+    - Gli aggiornamenti effettuati usando B9S + Luma (ora installato) sono sicuri
+    - Se ottieni un errore, imposta i DNS della connessione di rete in modo che vengano ottenuti automaticamente
