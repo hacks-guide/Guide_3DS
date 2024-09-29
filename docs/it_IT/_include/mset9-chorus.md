@@ -1,4 +1,4 @@
 1. Esegui lo script di MSET9:
-   - **Windows**: Double-click `MSET9-Windows.bat`
-   - **macOS**: Double-click `MSET9-macOS.command` and enter your password if prompted
-   - **Linux**: open a Terminal window, `cd` to the root of your SD card, then type `python3 mset9.py` and press Enter
+   - **Windows**: Fai doppio click su `MSET9-Windows.bat`
+   - **macOS**: Fai doppio-click su `MSET9-macOS.command` e inserisci la tua password se richiesto
+   - **Linux**: apri una finestra del terminale, `cd` nella directory principale della tua scheda SD, quindi digita `python3 mset9.py` e premi Invio
