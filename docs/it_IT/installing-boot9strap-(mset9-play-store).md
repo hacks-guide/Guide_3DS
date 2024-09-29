@@ -52,7 +52,7 @@ In questa sezione preparerai i dati della scheda SD necessari per attivare l'exp
    - Se richiesto, [consenti a ZArchiver di accedere ai file sulla tua scheda SD](/images/screenshots/mset9/zarchiver-allow.png)
    - Naviga dove si trova il file `.zip` di MSET9 Release ([probabilmente nella cartella Download](/images/screenshots/mset9/zarchiver-zip-location.png))
    - Selezionare il file Release `.zip`, quindi seleziona "Extract..." ([immagine](/images/screenshots/mset9/zarchiver-extract-1.png))
-   - Vai nella tua scheda SD, quindi tocca l'icona blu della freccia verso il basso per estrarre i file nella directory principale della tua scheda SD ([immagine](/images/screenshots/mset9/zarchiver-extract-2. ng))
+   - Vai nella tua scheda SD, quindi tocca l'icona blu della freccia verso il basso per estrarre i file nella directory principale della tua scheda SD ([immagine](/images/screenshots/mset9/zarchiver-extract-2.png))
 
    ::: info
 
