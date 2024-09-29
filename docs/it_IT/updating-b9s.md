@@ -1,4 +1,4 @@
-# Updating B9S
+# Aggiornare B9S
 
 ## Lettura necessaria
 
@@ -35,13 +35,13 @@ Se durante questa sezione ti verrà chiesto di sovrascrivere dei file sulla tua 
 ### Sezione II - Installazione di boot9strap
 
 1. Accendi la tua console
-   - This should automatically launch SafeB9SInstaller
+   - SafeB9SInstaller dovrebbe avviarsi automaticamente
 2. Quando richiesto, inserisci la combinazione di tasti richiesta sullo schermo superiore per installare boot9strap
    - Se una sezione nella schermata inferiore ha un testo di colore rosso, e non ti viene richiesto di inserire una combinazione di tasti, [segui questa guida per risolvere i problemi](troubleshooting#issues-with-safeb9sinstaller)
 3. Una volta completato, forza lo spegnimento della console tenendo premuto il tasto POWER
    - Finché non verrà completata la successiva sezione, la console visualizzerà soltanto la schermata di SafeB9SInstaller all'accensione
 
-### Section III - Update Luma3DS
+### Sezione III - Aggiornare Luma3DS
 
 1. Inserisci la scheda SD nel tuo computer
 2. Copia tutto dall'archivio `.zip` di Luma3DS nella directory principale della tua scheda SD, sovrascrivendo i file già esistenti
