@@ -14,8 +14,6 @@
 
 Για να χρησιμοποιήσετε τους συνδέσμους [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) αυτής της σελίδας, θα χρειαστείτε ένα πρόγραμμα torrent, όπως το [qBittorrent](https://www.qbittorrent.org/download.php) ή το [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
-Για να αποσυμπιέσετε τα αρχεία `.7z` που παρέχουν οι σύνδεσμοι αυτής της σελίδας, θα χρειαστείτε ένα πρόγραμμα αρχειοθέτησης, όπως το [7-Zip](http://www.7-zip.org/) ή το [The Unarchiver](https://theunarchiver.com/).
-
 Αυτή η μέθοδος θα λειτουργήσει στα New 3DS, New 2DS, Old 3DS και Old 2DS σε _όλες_ εκδόσεις για τις οποίες έχετε το αντίστοιχο αρχείο `.firm`.
 
 ## Τι χρειάζεστε
