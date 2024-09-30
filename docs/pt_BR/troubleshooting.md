@@ -375,10 +375,10 @@ Follow these steps in order:
 
 1. Abra as Configurações do Sistema no seu console
 2. Navigate to `Internet Settings` -> `Connection Settings`
-3. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
+3. Clique no seu slot de conexão da rede e navegue para `Mudar configurações` -> `Próxima página (seta para a direita)` -> `Servidor proxy`
 4. Set "Proxy Settings" to "No"
-5. Click OK, then click Save
-6. When prompted, click "Test" to perform the connection test
+5. Clique OK, depois clique em Salvar
+6. Quando solicitado, clique em "Testar" para realizar o teste de conexão
    - The test should succeed
 7. Click "OK" to continue
 8. Pressione "Voltar" duas vezes e, em seguida, "Fechar" para voltar ao Menu HOME
