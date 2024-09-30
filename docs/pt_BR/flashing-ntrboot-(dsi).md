@@ -1,6 +1,6 @@
 # Flashing ntrboot (DSi)
 
-## Required Reading
+## Leitura Obrigatória
 
 Antes de prosseguir, certifique-se de que você tenha lido todas as informações em [ntrboot](ntrboot)
 
@@ -12,7 +12,7 @@ Note que em algumas raras circunstâncias, pode ser possível que o processo de 
 
 :::
 
-## What You Need
+## O que é necessário
 
 - Your ntrboot compatible flashcart
 - Two consoles
@@ -20,9 +20,9 @@ Note que em algumas raras circunstâncias, pode ser possível que o processo de 
   - **The target 3DS**: the 3DS family console on stock firmware
 - The latest release of [ds_ntrboot_flasher](https://github.com/ntrteam/ds_ntrboot_flasher/releases/latest) (`ds_ntrboot_flasher_dsi.nds`)
 
-## Instructions
+## Instruções
 
-### Section I - Prep Work
+### Seção I - Preparação
 
 1. Desligue o **DSi de origem**
 2. Insira o cartão SD do seu flashcart no seu computador
