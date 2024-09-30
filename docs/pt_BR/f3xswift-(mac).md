@@ -1,6 +1,6 @@
 # F3XSwift (Mac)
 
-## Required Reading
+## Leitura Obrigatória
 
 Esta é uma seção adicional para verificar erros no seu cartão SD usando F3XSwift.
 
@@ -14,11 +14,11 @@ O F3XSwift só é compatível com o macOS 10.13 (High Sierra) e adiante. Se voc�
 
 :::
 
-## What You Need
+## O que é necessário
 
 - The latest release of [F3XSwift](https://github.com/vrunkel/F3XSwift/releases/latest)
 
-## Instructions
+## Instruções
 
 1. Insira o cartão SD no seu computador
 2. Execute o aplicativo F3XSwift
