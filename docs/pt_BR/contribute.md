@@ -2,21 +2,21 @@
 
 Estamos felizes que você gostaria de contribuir para 3ds.hacks.guide! Aqui estão algumas maneiras que você pode contribuir:
 
-## Maintenance
+## Manutenção
 
 Este guia é de código aberto - seu repositório está disponível [aqui](https://github.com/hacks-guide/Guide_3DS). Se você notou algum problema neste guia, você pode arquivar um issue para nos alertar ou arquivar uma pull request para fazer as alterações necessárias você mesmo. Você também pode conversar conosco no canal #guide-meta em [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp).
 
-## Translations
+## Traduções
 
 Se você gostaria de traduzir este guia para outros idiomas (ou ajudar a manter as traduções atualizadas), confira o nosso [Crowdin](https://crowdin.com/project/3ds-guide).
 
-## Seeding
+## Semeando
 
 Vários arquivos neste guia só estão disponíveis como torrents. Se você quiser ajudar a semear esses torrents para garantir a disponibilidade deles no futuro, você pode baixar o arquivo `.zip` contendo todos os nossos arquivos `.torrent`: [torrents.zip](/assets/torrents.zip) (última atualização 2023-03-16)
 
-There is also an [RSS feed](/rss.xml) that may be updated for future torrents, which you can subscribe to.
+Há também um [feed RSS](/rss.xml) que pode ser atualizado para torrents futuros, no qual você pode se inscrever.
 
-## Donations
+## Doações
 
 Manter este guia (bem como nossos canais de suporte) é principalmente um esforço voluntário, mas se este guia o tiver ajudado de alguma forma, doações são apreciadas!
 
