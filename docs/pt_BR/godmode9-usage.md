@@ -12,7 +12,7 @@ Para suporte (em inglês) com o GodMode9, bem como ajuda com scripting e obter a
 
 :::
 
-## Required Reading
+## Leitura Obrigatória
 
 GodMode9 é um gerenciador de arquivos completo para o console Nintendo 3DS, lhe dando acesso ao seu cartão SD, às partições FAT dentro da sua SysNAND e EmuNAND, e a basicamente todo o resto. Dentre outras funcionalidades, você pode copiar, excluir, renomear e criar pastas.
 
@@ -20,7 +20,7 @@ Note que se você tem outros arquivos de payload diferentes do `GodMode9.firm` n
 
 GodMode9 é um poderoso software que tem a capacidade de modificar essencialmente qualquer coisa em seu console. Embora muitas destas modificações sejam bloqueadas por trás de um sistema de permissões, e é impossível acidentalmente executar ações perigosas sem deliberadamente desbloquear permissões, você deve ainda seguir as instruções cuidadosamente e manter backups por precaução.
 
-## Updating GodMode9
+## Atualizando o GodMode9
 
 ::: info
 
@@ -28,11 +28,11 @@ Algumas das instruções abaixo só são aplicáveis para a versão mais recente
 
 :::
 
-### What You Need
+### O que é necessário
 
-- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
+- A versão mais recente do [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (o arquivo `.zip` do GodMode9)
 
-### Instructions
+### Instruções
 
 1. Desligue seu console
 2. Insira o cartão SD no seu computador
