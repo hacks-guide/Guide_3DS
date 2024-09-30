@@ -1,6 +1,6 @@
 # Formatting SD (Mac)
 
-## Required Reading
+## Leitura Obrigatória
 
 Essa é uma seção adicional para a formatação de um cartão SD para fazê-lo funcional com o 3DS.
 
@@ -8,7 +8,7 @@ Se o 3DS já reconhece o cartão SD, este guia não é necessário.
 
 Esta página é destinada apenas a usuários do Mac. Caso você não esteja usando Mac, acesse a página [Formatando SD (Windows)](formatting-sd-\(windows\)) ou [Formatting SD (Linux)](formatting-sd-\(linux\)).
 
-## Instructions
+## Instruções
 
 ### OS X El Capitan (10.11) and later
 
