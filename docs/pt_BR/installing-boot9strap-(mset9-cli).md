@@ -14,13 +14,13 @@ Esta página requer um computador rodando Windows, Linux ou macOS. Se você tem 
 
 :::
 
-## What You Need
+## O que é necessário
 
 - The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest)
 - Any 3.x version of [Python](https://www.python.org/downloads/) **installed on your computer**
   - If you are on Linux or macOS, you may already have Python 3. Verifique abrindo uma janela terminal e digitando `python3 -V`. Se este retornar um número de versão, ele funcionará para este guia.
 
-## Instructions
+## Instruções
 
 ::: info
 
@@ -28,7 +28,7 @@ Nesta página, você usará o script MSET9, que é usado para acionar o MSET9. E
 
 :::
 
-### Section I - Prep Work
+### Seção I - Preparação
 
 Nesta seção, você vai preparar o exploit MSET9 através de **temporariamente** criar um novo perfil do Menu HOME sem dados de usuário, e, em seguida, configurar esse perfil com apenas os dados mínimos necessários para que o MSET9 acione. Seus dados de usuário existentes desaparecerão, mas voltarão quando você terminar esta página.
 
@@ -131,7 +131,7 @@ Estas instruções devem ser seguidas **EXATAMENTE** como estão, então confira
 Nesta seção, você instalará custom firmware no seu console.
 
 1. Quando solicitado, aperte a sequência de botões fornecida na tela superior para instalar o boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+   - Se um passo na tela inferior tiver texto em cor vermelha, e você não for solicitado a introduzir um combo de botões, siga o guia de [troubleshooting](troubleshooting#issues-with-safeb9sinstaller)
 2. Quando concluído, aperte (A) para reiniciar o seu console
 
 <!--@include: ./_include/configure-luma3ds.md -->
@@ -172,6 +172,6 @@ Você seguiu a Seção IV (Removendo o MSET9)? Essa seção é MANDATÓRIA!
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Continue para [Finalizando a Instalação](finalizing-setup)
 
 :::
