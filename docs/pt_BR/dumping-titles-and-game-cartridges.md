@@ -1,4 +1,4 @@
-# Dumping Titles and Game Cartridges
+# Descarregando Títulos e Cartuchos de Jogo
 
 ::: info
 
@@ -6,11 +6,11 @@ Para suporte (em inglês) com o GodMode9, bem como ajuda com scripting e obter a
 
 :::
 
-## Required Reading
+## Leitura Obrigatória
 
 Além de criar e restaurar backups da NAND, o GodMode9 tem a funcionalidade de fazer dump de aplicativos instalados para um arquivo `.cia` instalável, dump de dados de jogos de cartucho para um arquivo ROM `.3ds` e instalar diretamente um jogo de um cartucho para o sistema.
 
-## Updating GodMode9
+## Atualizando o GodMode9
 
 ::: info
 
@@ -18,11 +18,11 @@ Estas instruções estão escritas para serem usadas com o GodMode9 v2.0.0 ou ad
 
 :::
 
-### What You Need
+### O que é necessário
 
-- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
+- A versão mais recente do [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (o arquivo `.zip` do GodMode9)
 
-### Instructions
+### Instruções
 
 1. Desligue seu console
 2. Insira o cartão SD no seu computador
@@ -30,22 +30,22 @@ Estas instruções estão escritas para serem usadas com o GodMode9 v2.0.0 ou ad
 4. Copie a pasta `gm9` do `.zip` do GodMode9 para a raiz do seu cartão SD
 5. Reinsira o cartão SD no seu console
 
-## Dumping a Game Cartridge
+## Descarregando um Cartucho de Jogo
 
 ::: info
 
 Insira o cartucho do jogo que você pretende fazer dump no seu console
 
-- 3DS game cartridges will be dumped to a `.3ds` format
-- NDS game cartridges will be dumped to a `.nds` format
+- Cartuchos de jogos de 3DS serão descarregados no formato `.3ds`
+- Cartuchos de jogos de DS serão descarregados no formato `.nds`
 
 :::
 
 1. Aperte e segure (Start), e enquanto segura (Start), ligue seu console. Isso vai inicializar o GodMode9
 2. Navegue para `[C:] GAMECART`
 3. Siga os passos aplicáveis ao seu jogo de cartucho:
-   - **3DS Game Cartridge:** Press (A) on `[TitleID].trim.3ds` to select it
-   - **NDS Game Cartridge:** Press (A) on `[TitleID].nds` to select it
+   - **Cartucho de Jogo de 3DS:** Aperte (A) em `[TitleID].trim.3ds` para selecioná-lo
+   - **Cartucho de jogo de NDS:** Aperte (A) em `[TitleID].nds` para selecioná-lo
      - Trimmed dumps are not recommended for NDS games in general, as they can cause various playback issues
 4. Selecione "Copy to 0:/gm9/out''
 5. Seu arquivo formatado `.3ds` não-instalável ou `.nds` será gravado na pasta `/gm9/out/` no seu cartão SD
