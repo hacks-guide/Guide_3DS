@@ -1,6 +1,6 @@
 # Checando por CFW
 
-## Required Reading
+## Leitura Obrigatória
 
 Esta é uma seção adicional para checar se o seu console já possui custom firmware moderno.
 
@@ -12,14 +12,14 @@ Se o seu console tem uma configuração de CFW baseada em menuhax, você deve [l
 
 :::
 
-## Instructions
+## Instruções
 
 1. Desligue seu console
 2. Segure o botão (Select)
 3. Ligue o seu console enquanto ainda segura o botão (Select)
 4. Agora você deve ver algo parecido com um menu de configuração
 
-## What to do next
+## O que fazer em seguida
 
 ::: tip
 
