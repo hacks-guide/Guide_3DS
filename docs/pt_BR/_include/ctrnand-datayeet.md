@@ -7,7 +7,7 @@ Esta seção redefinirá a configuração do console para os valores padrão. \*
 5. Aperte (A) para confirmar
 6. Aperte (B) algumas vezes para voltar ao menu principal
 7. Navegue para `[1:] SYSNAND CTRNAND` -> `data` -> `<ID0>` -> `sysdata`
-   - The `<ID0>` will be a folder with a 32-character long name
+   - O `<ID0>` é uma pasta com um nome de 32 caracteres
 8. Use os botões direcionais para destacar `00010017`
 9. Aperte (Gatilho Direito) + (A) para abrir as opções de pasta
 10. Selecione "Copy to 0:/gm9/out''
@@ -19,5 +19,5 @@ Esta seção redefinirá a configuração do console para os valores padrão. \*
 16. Se solicitado, aperte (A) para bloquear as permissões de escrita
 17. Aperte (Start) para reiniciar seu console
 18. Seu console irá carregar no menu de configuração inicial
-    - This is expected behaviour. Você não perdeu nenhum dos seus dados do jogo
+    - Isso é um comportamento esperado. Você não perdeu nenhum dos seus dados do jogo
 19. Complete o menu inicial de configuração seguindo os avisos na tela do seu console
