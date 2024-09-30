@@ -1,6 +1,6 @@
 # Desinstalar CFW
 
-## Required Reading
+## Leitura Obrigatória
 
 Isso irá remover completamente CFW do seu console, incluindo boot9strap e Luma3DS, com o propósito de restaurar o console ao padrão.
 
@@ -41,16 +41,16 @@ Estas instruções só funcionarão em consoles com uma versão 8.0 ou superior 
 
 :::
 
-## What You Need
+## O que é necessário
 
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
-- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
+- A versão mais recente do [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (o arquivo `.zip` do Luma3DS)
+- A versão mais recente do [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (o arquivo `.zip` do GodMode9)
 - The latest release of [DSiWare Uninstaller](https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest)
 - [safety_test.gm9](/gm9_scripts/safety_test.gm9)
 
-## Instructions
+## Instruções
 
-### Section I - Prep Work
+### Seção I - Preparação
 
 1. Desligue seu console
 2. Insira o cartão SD no seu computador
