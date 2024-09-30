@@ -1,12 +1,12 @@
 # File Extensions (Windows)
 
-## Required Reading
+## Leitura Obrigatória
 
 Esta é uma seção adicional para desabilitar o comportamento padrão do Windows de esconder as extensões dos arquivos.
 
 Isto facilitará para você encontrar os arquivos referenciados no restante deste guia.
 
-## Instructions
+## Instruções
 
 ### Windows 11
 
