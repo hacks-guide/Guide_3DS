@@ -20,7 +20,7 @@ Em telefones/tablets Android, a versão mínima do Android é 6.0 (Marshmallow).
 
 :::
 
-## What You Need
+## O que é necessário
 
 - The following applications installed from the Google Play Store:
   - [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)
@@ -28,9 +28,9 @@ Em telefones/tablets Android, a versão mínima do Android é 6.0 (Marshmallow).
   - If you wish, you can sideload these applications instead
 - The latest release of [MSET9](https://github.com/zoogie/MSET9/releases/latest) (the Release `.zip` file)
 
-## Instructions
+## Instruções
 
-### Section I - Prep Work
+### Seção I - Preparação
 
 Nesta seção, você irá preparar os dados no seu cartão SD necessários para que o exploit MSET9 possa ser ativado.
 
@@ -104,7 +104,7 @@ Estas instruções devem ser seguidas **EXATAMENTE** como estão, então confira
 Nesta seção, você instalará custom firmware no seu console.
 
 1. Quando solicitado, aperte a sequência de botões fornecida na tela superior para instalar o boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+   - Se um passo na tela inferior tiver texto em cor vermelha, e você não for solicitado a introduzir um combo de botões, siga o guia de [troubleshooting](troubleshooting#issues-with-safeb9sinstaller)
 2. Quando concluído, aperte (A) para reiniciar o seu console
 
 <!--@include: ./_include/configure-luma3ds.md -->
@@ -137,6 +137,6 @@ Você seguiu a Seção IV (Removendo o MSET9)? Essa seção é MANDATÓRIA!
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Continue para [Finalizando a Instalação](finalizing-setup)
 
 :::
