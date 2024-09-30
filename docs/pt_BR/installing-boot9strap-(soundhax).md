@@ -10,25 +10,25 @@ Para detalhes técnicos sobre os exploits que você usará nesta página, veja [
 
 Soundhax (quando combinado com universal-otherapp) é compatível com as versões 1.0.0 a 11.3.0 em todas as regiões.
 
-## What You Need
+## O que é necessário
 
 - The latest release of [Soundhax](http://soundhax.com) _(for your region, console, and version)_
   - If Soundhax appears in your browser as an unplayable video, press Ctrl+S or Cmd+S to save it to your computer
-- The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
-- The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- A versão mais recente do [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (download direto)
+- A versão mais recente do [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (download direto)
+- A versão mais recente do [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (o arquivo `.zip` do Luma3DS)
 - The latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) (`otherapp.bin`)
 
-## Instructions
+## Instruções
 
-### Section I - Prep Work
+### Seção I - Preparação
 
 Nesta seção, você irá copiar os arquivos necessários para acionar o Soundhax e o universal-otherapp.
 
 1. Desligue seu console
 2. Insira o cartão SD no seu computador
 3. Copie o Soundhax `.m4a` para a raiz do seu cartão SD
-   - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
+   - A raiz do cartão SD refere-se ao diretório inicial do seu cartão SD, onde você pode ver a pasta Nintendo 3DS, mas não está dentro dela
 4. Copie `otherapp.bin` para a raiz do seu cartão SD
 5. Copy everything from the Luma3DS `.zip` to the root of your SD card
 6. Crie uma pasta chamada `boot9strap` na raiz do seu cartão SD
@@ -84,7 +84,7 @@ Nesta seção, você irá iniciar o Soundhax através do aplicativo Som Nintendo
 Nesta seção, você instalará custom firmware no seu console.
 
 1. Quando solicitado, aperte a sequência de botões fornecida na tela superior para instalar o boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+   - Se um passo na tela inferior tiver texto em cor vermelha, e você não for solicitado a introduzir um combo de botões, siga o guia de [troubleshooting](troubleshooting#issues-with-safeb9sinstaller)
 2. Quando concluído, aperte (A) para reiniciar o seu console
 
 <!--@include: ./_include/configure-luma3ds.md -->
@@ -95,6 +95,6 @@ ___
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Continue para [Finalizando a Instalação](finalizing-setup)
 
 :::
