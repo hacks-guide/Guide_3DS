@@ -1,14 +1,12 @@
-# A9LH to B9S
+# A9LH를 B9S로 업데이트
 
-## Required Reading
+## 중요
 
 이 섹션은 arm9loaderhax 사용자들이 boot9strap으로 업데이트하는 것을 돕기 위한 가이드입니다.
 
 이제부터 모든 Luma3DS의 릴리스는 boot9strap과 sighax에만 대응하는 `.firm`형식으로 업데이트 됩니다. 그것은 곧 Luma3DS를 업데이트 하려면, 이 페이지를 통해 업데이트를 해야 한다는 것과 같습니다,
 
-이 페이지에 있는 `.7z` 파일을 압축 해제하기 위해서는, [7-Zip](http://www.7-zip.org/) 또는 [The Unarchiver](https://theunarchiver.com/) 같은 압축 해제 프로그램이 필요합니다.
-
-## What You Need
+## 준비물
 
 ::: warning
 
@@ -23,15 +21,15 @@
 
 :::
 
-- <font-awesome-icon icon="fa-solid fa-magnet" title="This is a magnet link. Use a torrent client to download the file."/> - **New 3DS Users Only:** [secret_sector.bin](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655\&dn=secret_sector.bin\&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce\&tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce\&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce\&tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce\&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce\&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce\&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce\&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce\&tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce) (magnet link)
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
-- The v7.0.5 release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/download/v7.0.5/Luma3DSv7.0.5.zip) (direct download)
-- The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
-- The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
+- <font-awesome-icon icon="fa-solid fa-magnet"/> - **New 3DS 사용자 전용:** [secret_sector.bin](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655\&dn=secret_sector.bin\&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce\&tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce\&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce\&tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce\&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce\&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce\&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce\&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce\&tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce) (마그넷 링크)
+- 최신 버전의 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (Luma3DS `.zip` 파일)
+- v7.0.5 버전의 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/download/v7.0.5/Luma3DSv7.0.5.zip) (직접 다운로드)
+- 최신 버전의 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (직접 다운로드)
+- 최신 버전의 [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (직접 다운로드)
 
-## Instructions
+## 진행 방법
 
-### Section I - Prep Work
+### 섹션 I - 준비 작업
 
 ::: info
 
@@ -43,14 +41,14 @@
 
 2. SD 카드를 컴퓨터에 삽입해 주세요
 
-3. Luma3DS `.zip`안에 있는 `boot.firm`과 `boot.3dsx`를 SD 카드의 루트에 복사해 주세요
-   - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
+3. Luma3DS `.zip`안에 있는 모든 파일들을 SD 카드의 루트에 복사해 주세요
+   - SD 카드의 루트는 SD 카드를 열 때 보이는 디렉토리이고, Nintendo 3DS 폴더가 보이지만 그 안에 들어가 있지 않은 상태의 폴더입니다
 
-4. v7.0.5 버전의 Luma3DS `.7z` 파일에서 `arm9loaderhax.bin`을 SD 카드의 루트에 복사해 주세요
+4. v7.0.5 버전의 Luma3DS `.zip` 파일에서 `arm9loaderhax.bin`을 SD 카드의 루트에 복사해 주세요
 
 5. SafeB9SInstaller `.zip` 파일에서 `SafeB9SInstaller.bin`을 SD 카드에 있는`/luma/payloads/` 폴더에 복사해 주세요
-   - If the `luma` or `payloads` folder doesn't exist, create them
-   - Delete any other existing `.bin` payloads (`GodMode9.bin`, `Decrypt9WIP.bin`, `Hourglass9.bin`, etc.) in the `/luma/payloads/` folder on your SD card as they will not be compatible with boot9strap compatible Luma3DS versions
+   - `luma` 또는 `payloads` 폴더가 없다면, 만들어 주세요
+   - SD 카드의 `/luma/payloads/` 폴더 속에 있는 모든 `.bin` 페이로드 (`GodMode9.bin`, `Decrypt9WIP.bin`, `Hourglass9.bin`, etc.)는 boot9strap과 호환되는 Luma3DS와 호환되지 않기에, 폴더 속에 있는 모든 `.bin` 페이로드는 지워 주세요
 
 6. SD 카드이 루트에 `boot9strap` 라는 이름으로 새 폴더를 생성해 주세요
 
@@ -66,26 +64,26 @@
 
 9. SD 카드를 콘솔에 다시 삽입해 주세요
 
-### Section II - Installing boot9strap
+### 섹션 II - boot9strap 설치하기
 
 1. SafeB9SInstaller를 실행하도록 (Start) 버튼을 누른 상태로 부팅해 주세요
-   - If you see the luma configuration screen instead of SafeB9SInstaller, simply press (Start), then shut down your 3DS and try again
-   - If this gives you an error, try either using a new SD card or formatting your current SD card (backup existing files first)
+   - 만약 SafeB9SInstaller 대신 Luma 구성 화면이 나타난다면, (Start)를 누르고, 3DS를 끈 다음 다시 시도해 주세요
+   - 만약 에러가 발생하면, 새로운 SD 카드로 시도하거나,  (기존 파일들은 먼저 백업한 후) 기존 SD 카드를 포멧해 보세요
 2. 모든 안전 검사가 끝날 때까지 기다려 주세요
-   - If you get an "OTP Crypto Fail" error, download <font-awesome-icon icon="fa-solid fa-magnet" title="This is a magnet link. Use a torrent client to download the file."/> - [aeskeydb.bin](magnet:?xt=urn:btih:d25dab06a7e127922d70ddaa4fe896709dc99a1e\&dn=aeskeydb.bin\&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce\&tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce\&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce\&tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce\&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce\&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce\&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce\&tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce\&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce), then put it in the `/boot9strap/` folder on your SD card and try again
+   - 만약 "OTP Crypto Fail" 에러를 보시면, <font-awesome-icon icon="fa-solid fa-magnet"/> - [aeskeydb.bin](magnet:?xt=urn:btih:d25dab06a7e127922d70ddaa4fe896709dc99a1e\&dn=aeskeydb.bin\&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce\&tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce\&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce\&tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce\&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce\&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce\&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce\&tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce\&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce) 파일을 다운로드 한 후, 이 파일을 `/boot9strap` 폴더에 복사하고 다시 시도해 주세요
 3. 메시지가 나타나면, boot9strap을 설치하기 위하여 화면에 주어진 키 조합을 입력해 주세요
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+   - 아래 화면의 단계가 붉은 텍스트로 표시되고 키 콤보 입력을 요구하지 않는다면, [이 문제 해결 가이드](troubleshooting#issues-with-safeb9sinstaller)를 참고해 주세요
 4. 작업이 완료되면, (A) 를 눌려 콘솔을 재부팅해 주세요
 5. 콘솔은 Luma3DS 구성 메뉴로 부팅되었을 겁니다
-   - Luma3DS configuration menu are settings for the Luma3DS custom firmware. 이 설정들은 디버깅 또는 맞춤화의 유용합니다
-   - For the purpose of this guide, these settings will be left on default settings
-   - If you get a black screen, [follow this troubleshooting guide](troubleshooting#boot-issues-on-consoles-with-custom-firmware)
+   - Luma3DS 구성 메뉴는 Luma3DS 커스텀 펌웨어의 설정들 입니다. 이 설정들은 디버깅 또는 맞춤화의 유용합니다
+   - 이 가이드에서는 기본 설정으로 남길 겁니다
+   - 검은 화면이 보인다면 이 [문제 해결 가이드](troubleshooting#boot-issues-on-consoles-with-custom-firmware)를 참고해 주세요
 6. (Start)를 눌러 저장하고 콘솔을 다시 시작해 주세요
 
 ___
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+[마무리 단계](finalizing-setup) 로 계속합니다
 
 :::

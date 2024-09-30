@@ -1,6 +1,6 @@
 # F3X (Mac)
 
-## Required Reading
+## Lettura necessaria
 
 In questa sezione aggiuntiva verrà spiegato come verificare la presenza di errori nella tua scheda SD utilizzando F3X.
 
@@ -14,11 +14,11 @@ Se stai usando un Mac su macOS 10.13 (High Sierra) o successivo, segui invece [F
 
 :::
 
-## What You Need
+## Cosa serve
 
-- The latest release of [F3X](https://github.com/insidegui/F3X/releases/latest)
+- L'ultima versione di [F3X](https://github.com/insidegui/F3X/releases/latest)
 
-## Instructions
+## Istruzioni
 
 1. Estrai l'archivio `.zip` di F3X
 2. Inserisci la scheda SD nel tuo computer
@@ -43,6 +43,6 @@ Se il test mostra qualunque altro risultato, la tua scheda SD potrebbe essere co
 
 ::: tip
 
-Return to [Get Started](get-started)
+Ritorna a [Cominciamo!](get-started)
 
 :::

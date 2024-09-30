@@ -129,18 +129,18 @@ Ha ez nem működik, az SD kártyád formázni kell:
 
 :::details Title database: Not initialized!
 
-Biztosítsd, hogy a cím adatbázisod resetelve legyen:
-\+ Please power on your console with your SD inserted
-\+ Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
-\+ This will not wipe any of your data
-\+ If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
+Ensure that you have reset the title database.
+
+- Please power on your console with your SD inserted
+- Indítsd el a System Settings-et és navigálj ide: `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
+  - This will not wipe any of your data
+- If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
 
 Ha nem kapsz reset promptot, az SD kártyádat formázni kell:
 
 1. Másolj mindent az SD kártyádról a PC-dre
 2. Formázd az SD kártyád ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)))
 3. Másolj mindent vissza
-4. Futtasd az MSET9 szkriptet:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -160,7 +160,7 @@ Emlékezz, az SD kártyádnak hasonlóan kell kinéznie:
 
 ::: info
 
-![MSET9 root layout](/images/screenshots/mset9/mset9-root-layout.png)
+![](/images/screenshots/mset9/mset9-root-layout.png)
 
 :::
 
@@ -233,7 +233,6 @@ Valószínüleg hiányzik a `SafeB9S.bin` az SD kártyád gyökeréből vagy sé
 
 1. Kapcsold ki erőltetve a konzold a Power gomb 20 másodpercig nyomva tartásával
 2. Helyezd az SD kártyád a számítógépbe
-3. Futtasd az MSET9 szkriptet:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -263,7 +262,6 @@ Kövesd a következő lépéseket a trigger fájl ettávolításához, majd pró
 
 1. Kapcsold ki erőltetve a konzold a Power gomb 20 másodpercig nyomva tartásával
 2. Helyezd az SD kártyád a számítógépbe
-3. 1. Futtasd az MSET9 szkriptet:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -276,7 +274,7 @@ Kövesd a következő lépéseket a trigger fájl ettávolításához, majd pró
 5. Kapcsold be a konzolod
 6. Térj vissza az [II. rész 1. lépéséhez](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
 
-Ha továbbra is megmarad ez a hiba és biztos vagy benne, hogy mindent jól csináltál, akkor biztosítsd, hogy a trigger fájl eltávolításra kerüljön és formázd az SD kártyád:
+If you continue to have this issue and are sure that you did everything correctly, ensure the trigger file is removed and format your SD card:
 
 1. Másolj mindent az SD kártyádról a PC-dre
 2. Formázd az SD kártyád ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)))
@@ -287,7 +285,7 @@ Ha továbbra is megmarad ez a hiba és biztos vagy benne, hogy mindent jól csin
 
 :::details An exception occurred after triggering MSET9
 
-Ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvégezned a [CFW ellenőrzését](checking-for-cfw).
+This likely indicates that you already have custom firmware. Érdemes elvégezned a [CFW ellenőrzését](checking-for-cfw).
 
 :::
 
@@ -295,29 +293,29 @@ Ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvége
 
 :::details "An error has occurred. Please save your data in any software currently in use, then restart the system."
 
-Ha nincs szín villogás a "GO GO!" megnyomása után:
+If no colors flash after pressing "GO GO!":
 
 - Ensure that you have set your system date and [region](/images/screenshots/skater/skater-lang.png) correctly
 - Ensure that no other browser tabs are open, then restart the browser and try the exploit again
 
-Ha a képernyő színeket villogtat, akkor lefagy/összeomlik:
+If the screen flashes colors then freezes/crashes:
 
 - Ensure that you have the correct copy of `arm11code.bin` and `browserhax_hblauncher_ropbin_payload.bin` for your console's version and region
 - Try resetting your browser data:
-  1. Indítsd el a böngészőt, majd lépj be a beállításokba (browser settings)
-  2. Görgess a legaljára, majd válaszd a "Reset Save Data" opciót (ami lehet, hogy "Initialize Savedata" vagy "Clear All Save Data" néven fut")
-  3. Próbáld meg újra végrehajtani az exploitot
+  1. Launch the browser, then launch the browser settings
+  2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
+  3. Try the exploit again
 - Try changing the system language to something other than the current language
 
 :::
 
 :::: details "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
 
-A `arm11code.bin` fájl hiányzik, vagy rossz helyen van. Biztosítsd, hogy [super-skaterhax legfrissebb verziójából](https://github.com/zoogie/super-skaterhax/releases/latest) régiódhoz és verziódhoz tartozó fájlokat az SD kártya gyökerébe másold (nem egy mappán belülre).
+The file `arm11code.bin` is missing or misplaced. Make sure to copy the files of the [latest version of super-skaterhax](https://github.com/zoogie/super-skaterhax/releases/latest) for your region and version to the root of your SD card (not inside of a folder).
 
 ::: info
 
-![](/images/screenshots/skater-root-layout.png)
+![](/images/screenshots/skaterhax/skater-root-layout.png)
 
 :::
 
@@ -325,7 +323,7 @@ A `arm11code.bin` fájl hiányzik, vagy rossz helyen van. Biztosítsd, hogy [sup
 
 :::details An exception occured or "DLL_HEAP_INFORMATION" when pressing GO! GO!
 
-Ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvégezned a [CFW ellenőrzését](checking-for-cfw).
+This likely indicates that you already have custom firmware. Érdemes elvégezned a [CFW ellenőrzését](checking-for-cfw).
 
 :::
 
@@ -333,65 +331,67 @@ Ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvége
 
 :::details Red/purple/pink and white screen after running Browserhax
 
-Ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvégezned a [CFW ellenőrzését](checking-for-cfw).
+This likely indicates that you already have custom firmware. Érdemes elvégezned a [CFW ellenőrzését](checking-for-cfw).
 
 :::
 
 :::details "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
 
-A `arm11code.bin` fájl hiányzik, vagy rossz helyen van. Töltsd le a legutolsó kiadását az [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)-nak és rakd az `otherapp.bin` fájlt az SD kártyád gyökerébe, majd nevezd át `arm11code.bin`-re. Ne add hozzá a `.bin` kiterjesztést, ha nem látod.
+The file `arm11code.bin` is missing or misplaced. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Ne add hozzá a `.bin` kiterjesztést, ha nem látod.
 
 :::
 
 :::details "An error has occurred, forcing the software to close..." (white message box)
 
-Probléma lehet az arm11code.bin`fájloddal. Töltsd le a legutolsó kiadását az [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)-nak és rakd az`otherapp.bin`fájlt az SD kártyád gyökerébe, majd nevezd át`arm11code.bin`-re. Ne add hozzá a `.bin\` kiterjesztést, ha nem látod.
+There may be an issue with your `arm11code.bin` file. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Ne add hozzá a `.bin` kiterjesztést, ha nem látod.
 
-Megpróbálhatod még alaphelyzetbe állítani a böngésző mentés adatot:
+You can also try resetting your browser save data:
 
-1. Indítsd el a böngészőt, majd lépj be a beállításokba (browser settings)
-2. Görgess a legaljára, majd válaszd a "Reset Save Data" opciót (ami lehet, hogy "Initialize Savedata" vagy "Clear All Save Data" néven fut")
-3. Próbáld meg újra végrehajtani az exploitot
+1. Launch the browser, then launch the browser settings
+2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
+3. Try the exploit again
 
 :::
 
 :::details Opening the browserhax QR code or URL crashes
 
-A böngésző alapú exploitok (mint például ez) gyakran instabilak és sokszor lefagynak, de néha megjavíthatók az alábbi lépések végrehajtásával.
+Browser based exploits (such as this one) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
 
-1. Indítsd el a böngészőt, majd lépj be a beállításokba (browser settings)
-2. Görgess a legaljára, majd válaszd a "Reset Save Data" opciót (ami lehet, hogy "Initialize Savedata" vagy "Clear All Save Data" néven fut")
-3. Próbáld meg újra végrehajtani az exploitot
+1. Launch the browser, then launch the browser settings
+2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
+3. Try the exploit again
 
 :::
 
 :::details System Update prompt when opening browser
 
-Az SSLoth proxy nem lett megfelelően konfigurálva. Csináld újra az SSLoth fejezetet erről az oldalról.
+The SSLoth proxy was incorrectly configured. Re-do the SSLoth section on the page.
 
 :::
 
 :::details Error 032-0420 when opening browser
 
-Kövesd az alábbi lépéseket:
+Follow these steps in order:
 
 1. Lépj be a "System Settings"-be a konzolodon
-2. Navigálj az `Internet Settings` -> `Connection Settings` opciókhoz
-3. Kattints a saját hálózati kapcsolatodra és navigálj a `Change Settings` -> `Next Page (jobb nyíl)` -> `Proxy Settings` opcióhoz
-4. Állítsd a "Proxy Settings"-t "No"-ra
-5. Kattints az OK-ra, majd kattints a Save-re
-6. Amikor kérdezi, kattints a "Test"-re a kapcsolat ellenőrzéséhez
+2. Navigate to `Internet Settings` -> `Connection Settings`
+3. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
+4. Set "Proxy Settings" to "No"
+5. Click OK, then click Save
+6. When prompted, click "Test" to perform the connection test
    - The test should succeed
-7. Kattintson az OK gombra a folytatáshoz
+7. Click "OK" to continue
 8. Nyomj a "Back"-re kétszer, majd a "Close"-ra, hogy visszajuszz a HOME Menübe
-9. Nyisd meg az Internet Browser-t egyszer
-10. Ha kérdezi a rendszer frissítést, nyomj OK-t
+9. Open the Internet Browser once
+10. If prompted about a system update, press OK
     - This won't actually update the system
-11. Kezd előlről a [II. résszel](installing-boot9strap-\(ssloth-browser\).html#section-ii---ssloth)
+11. Start again from [Section II](installing-boot9strap-\(ssloth-browser\).html#section-ii---ssloth)
 
 :::
 
 :::details Frozen on "Doing agbhax..."
+
+There may be an issue with your `arm11code.bin` file. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place it on the root of your SD card, and rename it to `arm11code.bin`. Ne add hozzá a `.bin` kiterjesztést, ha nem látod.
 
 :::
 
@@ -606,15 +606,18 @@ A Luma3DS verziód régi. Töltsd le a legutolsó kiadását az [Luma3DS](https:
 
 :::details "Unable to mount CTRNAND or load the CTRNAND FIRM. Please use an external one."
 
+There are a number of reasons as to why this could be happening. In any case, this error can usually be fixed by following the [CTRTransfer](ctrtransfer) guide.
+
 :::
 
 :::details "An error has occurred. Hold down the POWER button to turn off the power..."
 
 Az ARM11 kivételkezelők tiltva, vagy az egyedi firmware nincs telepítve. Try enabling ARM11 exception handlers:
-\+ Power off your console
-\+ Hold (Select)
-\+ Power on your console, while still holding (Select)
-\+ If the "Disable ARM11 exception handlers" box is checked, uncheck it
+
+- Kapcsold ki a konzolod
+- Hold (Select)
+- Power on your console, while still holding (Select)
+- If the "Disable ARM11 exception handlers" box is checked, uncheck it
 
 :::
 
@@ -672,7 +675,7 @@ A konzolod Luma3DS 6.6 vagy régebbi verziót futtat, valószínűleg arm9loader
 
 :::details Extended memory mode games (Pokemon Sun/Moon, Smash, etc.) don't work
 
-Ez egy CTRTransfer vagy régió csere után fordulhat elő Old 3DS / 2DS eszközökön. Kövesd a lépéseket [itt](hacks.guide/region-changing#section-vi---fixing-locale-related-issues) hogy kijavíthasd ezt a hibát. (átlépni a 3, 4, 5 és 6 lépéseket).
+Ez egy CTRTransfer vagy régió csere után fordulhat elő Old 3DS / 2DS eszközökön. Follow the instructions [here](region-changing#section-vi---fixing-locale-related-issues) to fix this issue (skipping steps 3, 4, 5, and 6).
 
 :::
 
@@ -718,6 +721,7 @@ A konzolodon még mindig van menuhax67 telepítve. A menuhax67 eltávolításáh
    - **EUR Region**: `000002ce`
    - **JPN Region**: `000002cc`
    - **USA Region**: `000002cd`
+   - **KOR Region**: `000002cf`
 5. Tedd vissza az SD kártyád a konzoldba
 
 :::

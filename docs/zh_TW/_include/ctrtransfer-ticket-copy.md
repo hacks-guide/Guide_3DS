@@ -1,19 +1,22 @@
+::: info
+
 If the script found no user tickets, continue to the next section.
-{: .notice--info}
+
+:::
 
 1. 於 Homebrew 清單內啟動 FBI 管理器
-1. 選擇「SD」
-1. 選擇『gm9』
-1. 選擇『out』
-1. 選擇『ctrtransfer_tickets』
-1. 對 `eshop` 或 `unknown` 資料夾或兩者都執行以下過程
-    + 移動至資料夾
-    + 選擇『\<current directory>』
-    + 選擇『Install and delete all tickets』(安裝並刪除所有 tickets 檔案)
-    + 稍等一下。 系統可能會卡住一段時間，等就對了。
-    + 按『A』確認
-    + 按『B』以取消 CDN tickets 的安裝
-1. 按下『Home』鍵退出 FBI 管理器
-1. Re-open the Homebrew Launcher, either through the Homebrew Launcher icon on the HOME Menu or by re-following Section IV of this page
-1. Launch faketik from the list of homebrew
-1. Once faketik has finished processing, press (Start) to exit faketik
+2. 選擇「SD」
+3. 選擇『gm9』
+4. 選擇『out』
+5. 選擇『ctrtransfer_tickets』
+6. 對 `eshop` 或 `unknown` 資料夾或兩者都執行以下過程
+   - Navigate to the folder
+   - Select "\<current directory>"
+   - Select "Install and delete all tickets"
+   - Wait. 系統可能會卡住一段時間，等就對了。
+   - 按 『A』 確認
+   - Press (B) to decline installing tickets from CDN.
+7. 按下『Home』鍵退出 FBI 管理器
+8. Re-open the Homebrew Launcher, either through the Homebrew Launcher icon on the HOME Menu or by re-following Section IV of this page
+9. Launch faketik from the list of homebrew
+10. Once faketik has finished processing, press (Start) to exit faketik

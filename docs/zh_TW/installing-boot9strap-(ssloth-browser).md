@@ -34,7 +34,7 @@ In this section, you will copy the files needed to trigger both browserhax and u
 3. Copy `otherapp.bin` to the root of your SD card and rename it to `arm11code.bin`
    - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
    - If you do not see the `.bin` extension, do not add it to the end of the filename
-4. 解壓 Luma3DS `.zip` 內的 `boot.firm` 及 `boot.3dsx` 到 SD 卡的根目錄底下
+4. Copy everything from the Luma3DS `.zip` to the root of your SD card
 5. 在 SD 卡的根目錄底下建立一個新的資料夾 `boot9strap`
 6. 解壓 boot9strap `.zip` 的 `boot9strap.firm` 及 `boot9strap.firm.sha` 檔案至 SD 卡的 `/boot9strap/` 資料夾中
 7. 將 SafeB9SInstaller `.zip` 中的 `SafeB9SInstaller.bin` 複製到 SD 卡的根目錄

@@ -1,6 +1,6 @@
 # ntrboot 플래싱 (DSi)
 
-## Required Reading
+## 중요
 
 진행하기 앞서서, [ntrboot](ntrboot) 에 대한 모든 정보를 숙지해주세요.
 
@@ -12,17 +12,17 @@
 
 :::
 
-## What You Need
+## 준비물
 
-- Your ntrboot compatible flashcart
-- Two consoles
-  - **The source DSi**: the Nintendo DSi which is compatible with your flashcart
-  - **The target 3DS**: the 3DS family console on stock firmware
-- The latest release of [ds_ntrboot_flasher](https://github.com/ntrteam/ds_ntrboot_flasher/releases/latest) (`ds_ntrboot_flasher_dsi.nds`)
+- ntrboot를 설치할 수 있는 플래시카트
+- 두 개의 콘솔들
+  - **소스 DSi**: 플래시카트와 호환되는 닌텐도 DSi.
+  - **타겟 3DS** CFW를 설치할 3DS
+- 최신 버전의 [ds_ntrboot_flasher](https://github.com/ntrteam/ds_ntrboot_flasher/releases/latest) (`ds_ntrboot_flasher_dsi.nds`)
 
-## Instructions
+## 진행 방법
 
-### Section I - Prep Work
+### 섹션 I - 준비 작업
 
 1. **소스 DSi**를 종료해 주세요
 2. DS 플래시카트의 SD 카드를 컴퓨터에 삽입해 주세요
@@ -30,7 +30,7 @@
 4. 플래시카트의 SD 카드를 다시 플래시카트에 삽입해 주세요
 5. **소스 DSi**에 ntrboot와 호환되는 DS / DSi 플래시카트를 삽입해 주세요
 
-### Section II - Flashing ntrboot
+### 섹션 II - ntrboot 플래싱
 
 1. **소스 DSi**에서 플래시카트를 이용해 `ds_ntrboot_flasher_dsi.nds`를 실행해 주세요
 2. (A)를 눌러 진행해 주세요
@@ -45,6 +45,6 @@ ___
 
 ::: tip
 
-Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
+[boot9strap 설치 (ntrboot)](installing-boot9strap-\(ntrboot\))로 계속합니다
 
 :::

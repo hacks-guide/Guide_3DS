@@ -70,7 +70,7 @@ Yes! All you need is the ability to put files on a compatible SD card.
 
 :::
 
-:::details What size SD card can I use?<
+:::details What size SD card can I use?
 
 You will need at least 1.5GB of free SD card space to follow this guide in its entirety. 虽然官方已经说明了 3DS 可以用的 SD 卡最大容量为 32GB，但是实际上只要能格式化成 FAT32 的内存卡都可以用。 但是由于已知的 GBA 图像和自制主题问题，建议不要使用超过 128GB 的内存卡。
 
@@ -164,6 +164,6 @@ Your old setup (including your EmuNAND, if you have one) can usually be directly
 
 :::details How do I move saves from an existing Gateway setup to a more modern setup?
 
-\*\*答：\*\*看[这个帖子](https://gbatemp.net/threads/425743/)。
+See [this thread](https://gbatemp.net/threads/425743/).
 
 :::

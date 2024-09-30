@@ -1,16 +1,16 @@
 ---
 layout: home
-title: 3DS Hacks Guide
+title: Guida agli hack per 3DS
 hero:
-  text: 3DS Hacks Guide
-  tagline: A complete guide to 3DS (and 2DS) custom firmware, from stock to boot9strap.
+  text: Guida agli hack per 3DS
+  tagline: La guida omnicomprensiva per installare un custom firmware su 3DS (e 2DS), da zero a boot9strap.
   image:
     src: /images/home-page-feature.jpg
 ---
 
 ::: info
 
-Thoroughly read all of the introductory pages (including this one!) before proceeding.
+Leggi attentamente tutte le pagine introduttive (compresa questa!) prima di proseguire.
 
 :::
 
@@ -20,33 +20,33 @@ Thoroughly read all of the introductory pages (including this one!) before proce
 
 :::
 
-## What is custom firmware?
+## Cosa vuol dire custom firmware?
 
 Un **custom firmware** ("CFW") è una modifica software per il 3DS, paragonabile ad un "amministratore di sistema" su un computer. Ti permette di fare tutto quello che un 3DS può fisicamente fare, invece di essere limitati da quello che permette Nintendo.
 
 Tra i possibili utilizzi del custom firmware, è possibile:
 
-- Running homebrew software and games made for or ported to the Nintendo 3DS
-- Bypassing the region lock, allowing you to play games from other regions
-- HOME Menu customization, using community-created [themes and badges](https://themeplaza.art)
-- Modification of games ("ROM hacks") through [LayeredFS](https://github.com/knight-ryu12/godmode9-layeredfs-usage/wiki/Using-Luma3DS'-layeredfs-\(Only-version-8.0-and-higher\))
-- Save data editing, backup, and restore
-- Emulation of older consoles, as well as native playback of DS and GBA games
-- Installing your physical cartridges for digital use
+- Eseguire software homebrew e giochi fatti per o portati su Nintendo 3DS
+- Bypassare il blocco regionale, per giocare a giochi provenienti da altri paesi
+- Personalizzare il menu HOME con [temi e badge](https://themeplaza.art) creati dalla community
+- Modificare i giochi ("ROM hacks") tramite [LayeredFS](https://github.com/knight-ryu12/godmode9-layeredfs-usage/wiki/Using-Luma3DS'-layeredfs-\(Only-version-8.0-and-higher\))
+- Editare i salvataggi, farne un backup e ripristinarli
+- Emulare console più vecchie e utilizzare nativamente giochi DS e GBA
+- Installare le schede di gioco per utilizzarle senza il supporto fisico
 
-## What does this guide install?
+## Cosa viene installato con questa guida?
 
 Con questa guida:
 
-- Install **boot9strap** and **Luma3DS custom firmware** on unmodified retail 3DS/2DS consoles
-  - Luma3DS will automatically remove the region lock and allow you to run unsigned software
-- Install various pieces of homebrew software, such as a package installer, save file manager, and a homebrew app store
-- Make critical system file backups that can help avoid bricks (and recover data in the event of one)
+- Installerai **boot9strap** e il **custom firmware Luma3DS** su console 3DS/2DS non modificate
+  - Luma3DS rimuoverà automaticamente il blocco regionale e ti permetterà di eseguire software non firmato
+- Installerai vari software homebrew, quali un installer di pacchetti, un manager di file di salvataggio, e un homebrew app store
+- Creerai backup di file di sistema critici per evitare di rendere la console inutilizzabile (e recuperare i dati in caso dovesse accadere)
 
 ___
 
 ::: tip
 
-Continue to [Key Information](key-information)
+Prosegui con [Informazioni importanti](key-information)
 
 :::

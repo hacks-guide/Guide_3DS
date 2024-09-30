@@ -1,6 +1,6 @@
 # ntrboot 플래싱 (단일 3DS)
 
-## Required Reading
+## 중요
 
 진행하기 앞서서, [ntrboot](ntrboot) 에 대한 모든 정보를 숙지해주세요.
 
@@ -12,15 +12,15 @@
 
 :::
 
-## What You Need
+## 준비물
 
-- Your ntrboot compatible flashcart
-- The v1.3 release of [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (direct download)
-- The latest release of [ntrboot_flasher_nds](https://github.com/jason0597/ntrboot_flasher_nds/releases/latest) (`ntrboot_flasher_nds.nds`)
+- ntrboot를 설치할 수 있는 플래시카트
+- v1.3 버전의 [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (직접 다운로드)
+- 최신 버전의 [ntrboot_flasher_nds](https://github.com/jason0597/ntrboot_flasher_nds/releases/latest) (`ntrboot_flasher_nds.nds`)
 
-## Instructions
+## 진행 방법
 
-### Section I - Prep Work
+### 섹션 I - 준비 작업
 
 1. 콘솔의 전원을 꺼 주세요
 2. DS 플래시카트의 SD 카드를 컴퓨터에 삽입해 주세요
@@ -30,7 +30,7 @@
 6. 플래시카트의 SD 카드를 다시 플래시카트에 삽입해 주세요
 7. ntrboot와 호환되는 DS / DSi 플래시카트를 콘솔에 삽입해 주세요
 
-### Section II - Flashing ntrboot
+### 섹션 II - ntrboot 플래싱
 
 1. 플래시카트를 이용하여 콘솔에서 `ntrboot_flasher_nds.nds`를 실행해 주세요
 2. (A)를 눌러 진행해 주세요
@@ -50,6 +50,6 @@ ___
 
 ::: tip
 
-Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
+[boot9strap 설치 (ntrboot)](installing-boot9strap-\(ntrboot\))로 계속합니다
 
 :::

@@ -164,6 +164,6 @@ Your old setup (including your EmuNAND, if you have one) can usually be directly
 
 ::: details How do I move saves from an existing Gateway setup to a more modern setup?
 
-**A:** See [this thread](https://gbatemp.net/threads/425743/).
+See [this thread](https://gbatemp.net/threads/425743/).
 
 :::

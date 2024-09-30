@@ -1,14 +1,12 @@
-# A9LH to B9S
+# Από το A9LH στο B9S
 
-## Required Reading
+## Απαραίτητη ανάγνωση
 
 Αυτή η σελίδα αφορά τους υφιστάμενους χρήστες του arm9loaderhax που επιθυμούν να αναβαθμίσουν τις κονσόλες τους στο boot9strap.
 
 Όλες οι μελλοντικές εκδόσεις του Luma3DS θα διατίθενται μόνο σε μορφή `.firm`, η οποία θα είναι συμβατή μόνο το boot9strap και το sighax. Αυτό σημαίνει ότι για να συνεχίσετε να λαμβάνετε τις πιο πρόσφατες ενημερώσεις του Luma3DS, θα πρέπει να χρησιμοποιήσετε αυτήν τη σελίδα για να ενημερώσετε την εγκατάσταση σας.
 
-Για να αποσυμπιέσετε τα αρχεία `.7z` που παρέχουν οι σύνδεσμοι αυτής της σελίδας, θα χρειαστείτε ένα πρόγραμμα αρχειοθέτησης, όπως το [7-Zip](http://www.7-zip.org/) ή το [The Unarchiver](https://theunarchiver.com/).
-
-## What You Need
+## Τι χρειάζεστε
 
 ::: warning
 
@@ -22,15 +20,15 @@
 
 :::
 
-- <font-awesome-icon icon="fa-solid fa-magnet" title="This is a magnet link. Use a torrent client to download the file."/> - **New 3DS Users Only:** [secret_sector.bin](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655\&dn=secret_sector.bin\&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce\&tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce\&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce\&tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce\&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce\&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce\&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce\&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce\&tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce) (magnet link)
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
-- The v7.0.5 release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/download/v7.0.5/Luma3DSv7.0.5.zip) (direct download)
-- The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
-- The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
+- <font-awesome-icon icon="fa-solid fa-magnet"/> - **Μόνο για χρήστες του New 3DS:** [secret_sector.bin](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655\&dn=secret_sector.bin\&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce\&tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce\&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce\&tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce\&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce\&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce\&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce\&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce\&tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce) (σύνδεσμος magnet)
+- Την πιο πρόσφατη έκδοση του [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (το αρχείο `.zip` του Luma3DS)
+- Την έκδοση 7.0.5 του [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/download/v7.0.5/Luma3DSv7.0.5.zip) (απευθείας λήψη)
+- Την πιο πρόσφατη έκδοση του [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (απευθείας λήψη)
+- Την πιο πρόσφατη έκδοση του [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (απευθείας λήψη)
 
-## Instructions
+## Οδηγίες
 
-### Section I - Prep Work
+### Ενότητα I - Προετοιμασία
 
 ::: info
 
@@ -42,14 +40,14 @@
 
 2. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
 
-3. Αντιγράψτε τα αρχεία `boot.firm` και `boot.3dsx` από το αρχείο `.zip` της πιο πρόσφατης έκδοσης του Luma3DS στη ρίζα της κάρτας SD σας
-   - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
+3. Αντιγράψτε τα πάντα από το αρχείο `.zip` του Luma3DS στη ρίζα της κάρτας SD σας
+   - Η ρίζα της κάρτας SD είναι ο αρχικός κατάλογος της κάρτας SD σας, όπου μπορείτε να δείτε τον φάκελο «Nintendo 3DS», χωρίς να βρίσκεστε μέσα σε αυτόν
 
-4. Αντιγράψτε το `arm9loaderhax.bin` από το αρχείο `.7z` της έκδοσης 7.0.5 του Luma3DS στη ρίζα της κάρτας SD σας
+4. Αντιγράψτε το `arm9loaderhax.bin` από το αρχείο `.zip` της έκδοσης 7.0.5 του Luma3DS στη ρίζα της κάρτας SD σας
 
 5. Αντιγράψτε το `SafeB9SInstaller.bin` από το αρχείο `.zip` του SafeB9SInstaller στον φάκελο `/luma/payloads/` της κάρτας SD σας
-   - If the `luma` or `payloads` folder doesn't exist, create them
-   - Delete any other existing `.bin` payloads (`GodMode9.bin`, `Decrypt9WIP.bin`, `Hourglass9.bin`, etc.) in the `/luma/payloads/` folder on your SD card as they will not be compatible with boot9strap compatible Luma3DS versions
+   - Εάν δεν υπάρχουν οι φάκελοι `luma` ή `payloads`, δημιουργήστε τους
+   - Διαγράψτε οποιαδήποτε άλλα υπάρχοντα payload τύπου `.bin` (`GodMode9.bin`, `Decrypt9WIP.bin`, `Hourglass9.bin` κ.λπ.) στον φάκελο `/luma/payloads/` της κάρτας SD σας, καθώς δεν θα είναι συμβατά με τις εκδόσεις του Luma3DS που είναι συμβατές με το boot9strap
 
 6. Δημιουργήστε έναν φάκελο με το όνομα `boot9strap` στη ρίζα της κάρτας SD σας
 
@@ -65,26 +63,26 @@
 
 9. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 
-### Section II - Installing boot9strap
+### Ενότητα II - Εγκατάσταση του boot9strap
 
 1. Ενεργοποιήστε την κονσόλα σας κρατώντας παράλληλα πατημένο το (Start) για να κάνετε εκκίνηση του SafeB9SInstaller
-   - If you see the luma configuration screen instead of SafeB9SInstaller, simply press (Start), then shut down your 3DS and try again
-   - If this gives you an error, try either using a new SD card or formatting your current SD card (backup existing files first)
+   - Εάν δείτε την οθόνη ρυθμίσεων του Luma αντί του SafeB9SInstaller, πατήστε απλώς το (Start), απενεργοποιήστε το 3DS σας και δοκιμάστε ξανά
+   - Εάν λάβετε σφάλμα, δοκιμάστε να χρησιμοποιήσετε μια νέα κάρτα SD ή να διαμορφώσετε την τρέχουσα κάρτα SD σας (δημιουργήστε πρώτα αντίγραφα ασφαλείας για τα υπάρχοντα αρχεία σας)
 2. Περιμένετε μέχρι να ολοκληρωθούν όλοι οι έλεγχοι ασφαλείας
-   - If you get an "OTP Crypto Fail" error, download <font-awesome-icon icon="fa-solid fa-magnet" title="This is a magnet link. Use a torrent client to download the file."/> - [aeskeydb.bin](magnet:?xt=urn:btih:d25dab06a7e127922d70ddaa4fe896709dc99a1e\&dn=aeskeydb.bin\&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce\&tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce\&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce\&tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce\&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce\&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce\&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce\&tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce\&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce), then put it in the `/boot9strap/` folder on your SD card and try again
+   - Εάν λάβετε το σφάλμα «OTP Crypto Fail», κάντε λήψη του <font-awesome-icon icon="fa-solid fa-magnet"/> - [aeskeydb.bin](magnet:?xt=urn:btih:d25dab06a7e127922d70ddaa4fe896709dc99a1e\&dn=aeskeydb.bin\&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce\&tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce\&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce\&tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce\&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce\&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce\&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce\&tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce\&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce), τοποθετήστε το στον φάκελο `/boot9strap/` της κάρτας SD σας και δοκιμάστε ξανά
 3. Όταν ζητηθεί, εισαγάγετε τον συνδυασμό πλήκτρων που θα εμφανιστεί στην πάνω οθόνη, ώστε να εγκαταστήσετε το boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+   - Εάν το κείμενο κάποιου βήματος στην κάτω οθόνη έχει κόκκινο χρώμα και δεν σας ζητείται να εισαγάγετε κάποιον συνδυασμό πλήκτρων [ακολουθήστε αυτόν τον οδηγό επίλυσης προβλημάτων](troubleshooting#issues-with-safeb9sinstaller)
 4. Μόλις ολοκληρωθεί, πατήστε το (Α) για να επανεκκινήσετε την κονσόλα σας
 5. Η κονσόλα σας θα πρέπει να έχει κάνει επανεκκίνηση στο μενού ρυθμίσεων του Luma3DS
-   - Luma3DS configuration menu are settings for the Luma3DS custom firmware. Πολλές από αυτές τις ρυθμίσεις χρησιμεύουν στην προσαρμογή ή τον έλεγχο για σφάλματα
-   - For the purpose of this guide, these settings will be left on default settings
-   - If you get a black screen, [follow this troubleshooting guide](troubleshooting#boot-issues-on-consoles-with-custom-firmware)
+   - Το μενού ρυθμίσεων του Luma3DS περιέχει επιλογές για το custom firmware «Luma3DS». Πολλές από αυτές τις ρυθμίσεις χρησιμεύουν στην προσαρμογή ή τον έλεγχο για σφάλματα
+   - Στα πλαίσια αυτού του οδηγού, αυτές οι ρυθμίσεις θα παραμείνουν στις προεπιλογές τους
+   - Εάν δείτε μια μαύρη οθόνη, [ακολουθήστε αυτόν τον οδηγό επίλυσης προβλημάτων](troubleshooting#boot-issues-on-consoles-with-custom-firmware)
 6. Πατήστε το (Start) για αποθήκευση και επανεκκίνηση
 
 ___
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Συνέχεια στην [Ολοκλήρωση εγκατάστασης](finalizing-setup)
 
 :::

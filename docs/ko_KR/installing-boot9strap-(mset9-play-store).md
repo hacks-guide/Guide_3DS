@@ -1,12 +1,12 @@
 # boot9strap 설치 (MSET9 Play Store)
 
-:::details Technical Details (optional)
+:::details 기술적 상세 정보 (선택 사항)
 
 [MSET9](https://github.com/zoogie/MSET9) 은 [zoogie](https://github.com/zoogie) 에 의해 개발된 본체 설정 앱의 취약점을 공략하는 방법입니다. 이 취약점은 ID1의 이름이 _어떤 이름이든 간에_ 32글자면 된다는 것을 이용합니다. (ID1 폴더는 Nintendo 3DS 폴더 속, 32글자짜리 ID0 폴더 안에 있는 또다른 32글자 폴더입니다.) 특정한 작업들을 수행하면 콘솔에서 ID1 폴더 이름으로 인코딩된 명령어가 실행되며, 이를 통해 3DS에 대한 전체 제어 권한을 획득할 수 있습니다.
 
 :::
 
-## Compatibility Notes
+## 호환성 안내
 
 ::: warning
 
@@ -20,7 +20,7 @@ Android 휴대폰/태블릿에서 요구되는 최소 Android 버전은 6.0 (마
 
 :::
 
-## What You Need
+## 준비물
 
 - The following applications installed from the Google Play Store:
   - [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)
@@ -28,9 +28,9 @@ Android 휴대폰/태블릿에서 요구되는 최소 Android 버전은 6.0 (마
   - If you wish, you can sideload these applications instead
 - The latest release of [MSET9](https://github.com/zoogie/MSET9/releases/latest) (the Release `.zip` file)
 
-## Instructions
+## 진행 방법
 
-### Section I - Prep Work
+### 섹션 I - 준비 작업
 
 이 섹션에서, MSET9 취약점 발동을 위해 SD 카드에 필요한 데이터를 작성할 것입니다.
 
@@ -56,7 +56,7 @@ Android 휴대폰/태블릿에서 요구되는 최소 Android 버전은 6.0 (마
 
    ::: info
 
-   ![MSET9 root layout](/images/screenshots/mset9/mset9-root-layout-android.png)
+   ![](/images/screenshots/mset9/mset9-root-layout-android.png)
 
    :::
 
@@ -99,17 +99,17 @@ Android 휴대폰/태블릿에서 요구되는 최소 Android 버전은 6.0 (마
 12. 익스플로잇이 성공적이었다면 SafeB9SInstaller로 부팅되었을 것입니다
     - If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting#installing-boot9strap-mset9)
 
-### Section III - Installing boot9strap
+### 섹션 III - boot9strap 설치하기
 
 이 섹션에서는, 커스텀 펌웨어를 설치할 것입니다.
 
 1. 메시지가 나타나면, boot9strap을 설치하기 위하여 화면에 주어진 키 조합을 입력해 주세요
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+   - 아래 화면의 단계가 붉은 텍스트로 표시되고 키 콤보 입력을 요구하지 않는다면, [이 문제 해결 가이드](troubleshooting#issues-with-safeb9sinstaller)를 참고해 주세요
 2. 작업이 완료되면, (A) 를 눌려 콘솔을 재부팅해 주세요
 
 <!--@include: ./_include/configure-luma3ds.md -->
 
-### Section IV - Removing MSET9
+### 섹션 IV - MSET9 제거
 
 이 섹션에서, 이후에 생길 문제를 방지하기 위해 MSET9를 제거할 것입니다. (MSET9이 지워진다고 방금 설치한 커스텀 펌웨어가 지워지진 않습니다.)
 
@@ -137,6 +137,6 @@ ___
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+[마무리 단계](finalizing-setup) 로 계속합니다
 
 :::

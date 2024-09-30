@@ -1,15 +1,21 @@
+::: info
+
 아직 안하셨다면, 콘솔을 인터넷에 연결해 주세요.
-{: .notice--info}
+
+:::
+
+::: tip
 
 이 섹션에서는 시각적 가이드를 사용할 수 있습니다. [here](/images/screenshots/set-proxy.png).
-{: .notice--success}
+
+:::
 
 1. 본체 설정 에플리케이션을 실행해 주세요
-1. `인터넷 설정` -> `인터넷 접속 설정`으로 이동해 주세요
-1. 네트워크 접속 경로을 클릭해, `설정 변경` -> `다음 페이지 (오른쪽 화살표)` -> `Proxy 설정`으로 이동해 주세요
-1. "Proxy 설정"을 "예"로 설정하고, `세부 설정`을 눌러 주세요
-1. Proxy 서버를 `ssloth.nintendohomebrew.com`로 설정하고, 포트를 `8080`으로 설정해 주세요
-1. OK하고 저장을 차례로 눌러주세요
-1. 접속 테스트 안내문이 표시되면, `예`를 눌러 인터넷 접속 테스트를 진행해 주세요
-    + 이 테스트가 성공적일 겁니다
-1. "OK"을 눌러 진행해 주세요
+2. Navigate to `Internet Settings` -> `Connection Settings`
+3. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
+4. "Proxy 설정"을 "예"로 설정하고, `세부 설정`을 눌러 주세요
+5. Proxy 서버를 `ssloth.nintendohomebrew.com`로 설정하고, 포트를 `8080`으로 설정해 주세요
+6. Click OK, then click Save
+7. When prompted, click "Test" to perform the connection test
+   - 이 테스트가 성공적일 겁니다
+8. Click "OK" to continue

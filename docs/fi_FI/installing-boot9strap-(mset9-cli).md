@@ -33,23 +33,20 @@ On this page, you will use the MSET9 script, which is used to trigger MSET9. Whi
 In this section, you will prepare the MSET9 exploit by **temporarily** creating a new HOME Menu profile with no user data, and then setting up that profile with only the minimum data required for MSET9 to trigger. Your existing user data will disappear, but will come back when you are finished with this page.
 
 1. Aseta SD-korttisi tietokoneeseesi
-
 2. Copy everything from the MSET9 `.zip` to the root of your SD card, overwriting any existing files
 
    ::: info
 
-   ![MSET9 root layout](/images/screenshots/mset9/mset9-root-layout.png)
+   ![](/images/screenshots/mset9/mset9-root-layout.png)
 
    :::
-
-3. Run the MSET9 script:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
 ```
 ::: info
 
-![Image: MSET9 setup](/images/screenshots/mset9/mset9-select.png)
+![](/images/screenshots/mset9/mset9-select.png)
 
 :::
 ```
@@ -60,7 +57,7 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 
    ::: info
 
-   ![Image: MSET9 setup](/images/screenshots/mset9/mset9-setup-notcreated.png)
+   ![](/images/screenshots/mset9/mset9-setup-notcreated.png)
 
    :::
 
@@ -80,7 +77,6 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
    - This will not wipe any of your data
 10. Power off your console by pressing the power button then tapping Power Off on the lower screen
 11. Aseta SD-korttisi tietokoneeseesi
-12. Run the MSET9 script:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -90,7 +86,7 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 
    ::: info
 
-   ![Image: MSET9 setup](/images/screenshots/mset9/mset9-ready.png)
+   ![](/images/screenshots/mset9/mset9-ready.png)
 
    :::
 
@@ -119,7 +115,6 @@ These instructions must be followed **EXACTLY**, so double-check EVERYTHING you 
 5. **With the console STILL ON, and without pressing any buttons or touching the screen**, remove your SD card from your console
    - The menu will refresh and say that no SD card is inserted
 6. Aseta SD-korttisi tietokoneeseesi
-7. Run the MSET9 script:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -153,7 +148,6 @@ Do NOT skip this section! If you skip it, applications may crash unexpectedly an
 
 1. Power off your console
 2. Aseta SD-korttisi tietokoneeseesi
-3. Run the MSET9 script:
 
 <!--@include: ./_include/mset9-chorus.md -->
 

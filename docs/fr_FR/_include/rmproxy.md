@@ -1,10 +1,10 @@
 Dans cette section, vous restaurerez les paramètres Internet à la normale.
 
 1. Lancez l'application Paramètres de la console
-1. Naviguez vers `Paramètres Internet` -> `Paramètres de connexion`
-1. Cliquez sur votre emplacement de connexion réseau et allez dans `Modifier` -> `Page suivante (flèche à droite)` -> `Serveur proxy"
-1. Réglez "Serveur proxy" sur "Non"
-1. Cliquez sur OK, puis sur Sauvegarder
-1. Lorsque vous y êtes invité, cliquez sur "Tester" pour effectuer le test de connexion
-    + Le test devrait réussir
-1. Éteignez votre console
+2. Navigate to `Internet Settings` -> `Connection Settings`
+3. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
+4. Set "Proxy Settings" to "No"
+5. Click OK, then click Save
+6. When prompted, click "Test" to perform the connection test
+   - The test should succeed
+7. Power off your console

@@ -1,6 +1,6 @@
 # CTRTransfer
 
-## Required Reading
+## 중요
 
 이것은 콘솔에 11.15.0 CTRTransfer 이미지를 설치하는 부가 섹션입니다.
 
@@ -16,42 +16,42 @@
 
 :::
 
-## What You Need
+## 준비물
 
-- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
-- The latest release of [FBI](https://github.com/lifehackerhansol/FBI/releases/download/2.6.1/FBI.3dsx) (direct download)
-- The latest release of [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(the `.3dsx` file)_
-- A torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+- 최신 버전의 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (GodMode9 `.zip` 파일)
+- 최신 버전의 [FBI](https://github.com/lifehackerhansol/FBI/releases/download/2.6.1/FBI.3dsx) (직접 다운로드)
+- 최신 버전의 [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(`.3dsx` 파일)_
+- [qBittorrent](https://www.qbittorrent.org/download.php) 또는 [Deluge](http://dev.deluge-torrent.org/wiki/Download) 등의 토렌트 클라이언트
   - If you already have a torrent client, you do not need to download a new one
-- The 11.15.0 CTRTransfer image for your console and region:
+- 콘솔과 지역에 맞는 11.15.0 CTRTransfer 이미지:
 
 <!--@include: ./_include/ctrtransfer-images.md -->
 
-## Instructions
+## 진행 방법
 
-### Section I - Prep Work
+### 섹션 I - 준비 작업
 
 <!--@include: ./_include/ctrtransfer-prep.md -->
 
-### Section II - NAND Backup
+### 섹션 II - NAND 백업
 
 1. (Start) 를 길게 누르고, 이 상태에서 콘솔의 전원을 켜 주세요. GodMode9이 실행될 겁니다
 
 <!--@include: ./_include/nand-backup.md -->
 
-### Section III - CTRTransfer
+### 섹션 III - CTRTransfer
 
 <!--@include: ./_include/ctrtransfer-main.md -->
 
-### Section IV - Launching FBI
+### 섹션 IV - FBI 실행
 
 <!--@include: ./_include/launch-hbl-dlp.md -->
 
-### Section V - Reinstalling Tickets
+### 섹션 V - 티켓 재설치
 
 <!--@include: ./_include/ctrtransfer-ticket-copy.md -->
 
-### Section VI - Fixing locale-related issues
+### 섹션 VI - 로케일 관련 문제 해결
 
 <!--@include: ./_include/ctrnand-datayeet.md -->
 
@@ -59,6 +59,6 @@ ___
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+[마무리 단계](finalizing-setup) 로 계속합니다
 
 :::

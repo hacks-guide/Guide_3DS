@@ -33,23 +33,20 @@ Nesta página, você usará o script MSET9, que é usado para acionar o MSET9. E
 Nesta seção, você vai preparar o exploit MSET9 através de **temporariamente** criar um novo perfil do Menu HOME sem dados de usuário, e, em seguida, configurar esse perfil com apenas os dados mínimos necessários para que o MSET9 acione. Seus dados de usuário existentes desaparecerão, mas voltarão quando você terminar esta página.
 
 1. Insira o cartão SD no seu computador
-
 2. Copie tudo do `.zip` MSET9 para a raiz do seu cartão SD, substituindo quaisquer arquivos existentes
 
    ::: info
 
-   ![MSET9 root layout](/images/screenshots/mset9/mset9-root-layout.png)
+   ![](/images/screenshots/mset9/mset9-root-layout.png)
 
    :::
-
-3. Execute o script MSET9:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
 ```
 ::: info
 
-![Image: MSET9 setup](/images/screenshots/mset9/mset9-select.png)
+![](/images/screenshots/mset9/mset9-select.png)
 
 :::
 ```
@@ -60,7 +57,7 @@ Nesta seção, você vai preparar o exploit MSET9 através de **temporariamente*
 
    ::: info
 
-   ![Imagem: preparação do MSET9](/images/screenshots/mset9/mset9-setup-notcreated.png)
+   ![](/images/screenshots/mset9/mset9-setup-notcreated.png)
 
    :::
 
@@ -80,7 +77,6 @@ Nesta seção, você vai preparar o exploit MSET9 através de **temporariamente*
    - This will not wipe any of your data
 10. Desligue seu console apertando o botão POWER e depois toque em Desligar na tela inferior
 11. Insira o cartão SD no seu computador
-12. Execute o script MSET9:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -90,7 +86,7 @@ Nesta seção, você vai preparar o exploit MSET9 através de **temporariamente*
 
    ::: info
 
-   ![Imagem: preparação do MSET9](/images/screenshots/mset9/mset9-ready.png)
+   ![](/images/screenshots/mset9/mset9-ready.png)
 
    :::
 
@@ -119,7 +115,6 @@ Estas instruções devem ser seguidas **EXATAMENTE** como estão, então confira
 5. **Com o console AINDA LIGADO, e sem pressionar nenhum dos botões ou a tela de toque**, remova seu cartão SD do seu console
    - The menu will refresh and say that no SD card is inserted
 6. Insira o cartão SD no seu computador
-7. Execute o script MSET9:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -153,7 +148,6 @@ NÃO pule esta seção! Se você pular isso, os aplicativos podem ter um crash i
 
 1. Desligue seu console
 2. Insira o cartão SD no seu computador
-3. Execute o script MSET9:
 
 <!--@include: ./_include/mset9-chorus.md -->
 

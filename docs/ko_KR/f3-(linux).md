@@ -1,6 +1,6 @@
 # F3 (Linux)
 
-## Required Reading
+## 중요
 
 이 섹션은 F3를 사용해 SD 카드의 오류를 확인하는 추가 섹션입니다.
 
@@ -8,11 +8,11 @@ SD 카드의 용량과 컴퓨터의 속도에 따라 최대 몇 시간이 걸릴
 
 이 페이지는 Linux 사용자를 위한 페이지입니다. Linux 사용자가 아니라면 [H2testw (windows)](h2testw-\(windows\)) 또는 [F3XSwift (Mac)](f3xswift-\(mac\)) 페이지를 참고해 주세요.
 
-## What You Need
+## 준비물
 
-- The latest version of [F3](https://github.com/AltraMayor/f3/releases/tag/v8.0)
+- 최신 버전의 [F3](https://github.com/AltraMayor/f3/releases/tag/v8.0)
 
-## Instructions
+## 진행 방법
 
 1. f3 `.zip`의 압축을 풀어 주세요
 2. `cd`를 입력해 f3 디렉터리로 이동해 주세요
@@ -66,6 +66,6 @@ ___
 
 ::: tip
 
-Return to [Get Started](get-started)
+[시작하기](get-started) 로 돌아갑니다
 
 :::

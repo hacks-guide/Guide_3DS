@@ -1,6 +1,6 @@
 # Flash di ntrboot (NDS)
 
-## Required Reading
+## Lettura necessaria
 
 Prima di procedere, assicurati di aver letto tutte le informazioni presenti alla pagina [ntrboot](ntrboot)
 
@@ -12,18 +12,18 @@ Tieni presente che in rare circostanze è possibile **brickare** una flashcart c
 
 :::
 
-## What You Need
+## Cosa serve
 
-- Your ntrboot compatible flashcart
-- Two consoles
-  - **The source NDS / NDSL**: the Nintendo DS or Nintendo DS Lite which is compatible with your flashcart
-  - **The target 3DS**: the 3DS family console on stock firmware
-- The v1.3 release of [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (direct download)
-- The latest release of [ntrboot_flasher_nds](https://github.com/jason0597/ntrboot_flasher_nds/releases/latest) (`ntrboot_flasher_nds.nds`)
+- La tua flashcart compatibile con ntrboot
+- Due console
+  - **Il NDS / NDSL di partenza**: il Nintendo DS o Nintendo DS Lite compatibile con la tua flashcart
+  - **Il 3DS di destinazione**: la console della famiglia 3DS con versione del software originale
+- La versione v1.3 di [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (download diretto)
+- L'ultima versione di [ntrboot_flasher_nds](https://github.com/jason0597/ntrboot_flasher_nds/releases/latest) (`ntrboot_flasher_nds.nds`)
 
-## Instructions
+## Istruzioni
 
-### Section I - Prep Work
+### Sezione I - Preparazione
 
 1. Spegni il **NDS / NDSL di partenza**
 2. Inserisci la scheda SD della flashcart nel tuo computer
@@ -33,7 +33,7 @@ Tieni presente che in rare circostanze è possibile **brickare** una flashcart c
 6. Reinserisci la scheda SD nella flashcart
 7. Inserisci la flashcart DS / DSi compatibile con ntrboot nel **NDS / NDSL di partenza**
 
-### Section II - Flashing ntrboot
+### Sezione II - Installare ntrboot
 
 1. Avvia il file `ntrboot_flasher_nds.nds` sul **NDS / NDSL di partenza** tramite la flashcart
 2. Premi il pulsante (A) per continuare
@@ -54,6 +54,6 @@ ___
 
 ::: tip
 
-Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
+Prosegui con l'[Installazione di boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
 
 :::

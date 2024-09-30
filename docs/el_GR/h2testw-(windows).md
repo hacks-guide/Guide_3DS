@@ -1,6 +1,6 @@
 # H2testw (Windows)
 
-## Required Reading
+## Απαραίτητη ανάγνωση
 
 Αυτή είναι μια πρόσθετη ενότητα σχετικά με τον έλεγχο την κάρτας SD για σφάλματα χρησιμοποιώντας το h2testw.
 
@@ -8,11 +8,11 @@
 
 Αυτή η σελίδα αφορά μόνο χρήστες Windows. Εάν δεν χρησιμοποιείτε Windows, δείτε τις σελίδες [F3 (linux)](f3-\(linux\)) ή [F3XSwift (Mac)](f3xswift-\(mac\)).
 
-## What You Need
+## Τι χρειάζεστε
 
-- The latest version of [h2testw](https://www.heise.de/ct/Redaktion/bo/downloads/h2testw_1.4.zip)
+- Την πιο πρόσφατη έκδοση του [h2testw](https://www.heise.de/ct/Redaktion/bo/downloads/h2testw_1.4.zip)
 
-## Instructions
+## Οδηγίες
 
 1. Αντιγράψτε το αρχείο `h2testw.exe` από το h2testw `.zip` στην επιφάνεια εργασίας
 2. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
@@ -38,6 +38,6 @@
 
 ::: tip
 
-Return to [Get Started](get-started)
+Επιστροφή στην [Έναρξη](get-started)
 
 :::

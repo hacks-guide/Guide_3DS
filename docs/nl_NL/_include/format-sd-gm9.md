@@ -1,8 +1,8 @@
 1. Druk op de (Home) knop om het actiemenu te openen
-1. Selecteer "More..."
-1. Selecteer "SD format menu"
-1. Selecteer "NO EmuNAND"
-1. Selecteer "Auto"
-1. Druk op (A) om het label `GM9SD` te accepteren
-    + Optioneel kan je een aangepaste naam voor de SD kaart invoeren
-1. Wanneer er om gevraagd wordt, voer de gegeven combinatie van knoppen in om te bevestigen
+2. Selecteer "More..."
+3. Selecteer "SD format menu"
+4. Selecteer "NO EmuNAND"
+5. Selecteer "Auto"
+6. Druk op (A) om het label `GM9SD` te accepteren
+   - Optionally, you may input a custom name for the SD card
+7. Wanneer er om gevraagd wordt, voer de gegeven combinatie van knoppen in om te bevestigen

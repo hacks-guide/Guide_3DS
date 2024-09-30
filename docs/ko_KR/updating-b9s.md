@@ -1,18 +1,18 @@
-# Updating B9S
+# B9S 업데이트
 
-## Required Reading
+## 중요
 
 이 페이지는 기존 boot9strap 사용자중 최신 버전의 boot9strap 으로 업데이트 과정을 설명한 페이지 입니다.
 
-## What You Need
+## 준비물
 
-- The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
-- The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- 최신 버전의 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (직접 다운로드)
+- 최신 버전의 [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (직접 다운로드)
+- 최신 버전의 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (Luma3DS `.zip` 파일)
 
-## Instructions
+## 진행 방법
 
-### Section I - Prep Work
+### 섹션 I - 준비 작업
 
 ::: info
 
@@ -32,29 +32,29 @@
 
    :::
 
-### Section II - Installing boot9strap
+### 섹션 II - boot9strap 설치하기
 
 1. 콘솔의 전원을 켜 주세요
-   - This should automatically launch SafeB9SInstaller
+   - SafeB9SInstaller가 자동으로 시작할 겁니다
 2. 메시지가 나타나면, boot9strap을 설치하기 위하여 화면에 주어진 키 조합을 입력해 주세요
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+   - 아래 화면의 단계가 붉은 텍스트로 표시되고 키 콤보 입력을 요구하지 않는다면, [이 문제 해결 가이드](troubleshooting#issues-with-safeb9sinstaller)를 참고해 주세요
 3. 이 작업이 끝나면, 전원 버튼을 길게 눌러 콘솔의 전원을 꺼 주세요
-   - Your console will only boot to the SafeB9SInstaller screen until the next section is completed
+   - 다음 작업이 완료되기 전까지는 콘솔은 SafeB9SInstaller로만 부팅 됩니다
 
-### Section III - Update Luma3DS
+### 섹션 III - Luma3DS 업데이트
 
 1. SD 카드를 컴퓨터에 삽입해 주세요
-2. Luma3DS `.zip`안에 있는 `boot.firm`과 `boot.3dsx`를 SD 카드의 루트에 복사해 주세요. 이미 존재하는 파일을 덮어쓰기 해 주세요
+2. Luma3DS `.zip`안에 있는 모든 파일들을 SD 카드의 루트에 복사해 주세요. 이미 존재하는 파일을 덮어쓰기 해 주세요
 3. SD 카드를 콘솔에 다시 삽입해 주세요
 4. 콘솔의 전원을 켜 주세요
 5. 만약 Luma3DS 설정 메뉴로 부팅되었다면, (Start)를 눌러서 저장/리부트해 주세요
-   - Luma3DS configuration menu are settings for the Luma3DS custom firmware. 이 설정들은 디버깅 또는 맞춤화의 유용합니다
-   - For the purpose of this guide, these settings will be left on default settings
+   - Luma3DS 구성 메뉴는 Luma3DS 커스텀 펌웨어의 설정들 입니다. 이 설정들은 디버깅 또는 맞춤화의 유용합니다
+   - 이 가이드에서는 기본 설정으로 남길 겁니다
 
 ___
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+[마무리 단계](finalizing-setup) 로 계속합니다
 
 :::

@@ -37,15 +37,14 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 
     ::: info
 
-    ![MSET9 root layout](/images/screenshots/mset9/mset9-root-layout.png)
+    ![](/images/screenshots/mset9/mset9-root-layout.png)
 
     :::
 
-1. Run the MSET9 script:
 <!--@include: ./_include/mset9-chorus.md -->
     ::: info
 
-    ![Image: MSET9 setup](/images/screenshots/mset9/mset9-select.png)
+    ![](/images/screenshots/mset9/mset9-select.png)
 
     :::
 
@@ -54,7 +53,7 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 
     ::: info
 
-    ![Image: MSET9 setup](/images/screenshots/mset9/mset9-setup-notcreated.png)
+    ![](/images/screenshots/mset9/mset9-setup-notcreated.png)
 
     :::
 
@@ -74,14 +73,13 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
     + This will not wipe any of your data
 1. Power off your console by pressing the power button then tapping Power Off on the lower screen
 1. Insert your SD card into your computer
-1. Run the MSET9 script:
 <!--@include: ./_include/mset9-chorus.md -->
 1. Type the number corresponding to your console model and version, then press Enter
     + The window should change to this and display `Ready`:
 
     ::: info
 
-    ![Image: MSET9 setup](/images/screenshots/mset9/mset9-ready.png)
+    ![](/images/screenshots/mset9/mset9-ready.png)
 
     :::
 
@@ -110,7 +108,6 @@ These instructions must be followed **EXACTLY**, so double-check EVERYTHING you 
 1. **With the console STILL ON, and without pressing any buttons or touching the screen**, remove your SD card from your console
     + The menu will refresh and say that no SD card is inserted
 1. Insert your SD card into your computer
-1. Run the MSET9 script:
 <!--@include: ./_include/mset9-chorus.md -->
 1. Type the number corresponding to your console model and version, then press Enter
 1. In the MSET9 window, type `3`, then press Enter to inject MSET9
@@ -141,7 +138,6 @@ Do NOT skip this section! If you skip it, applications may crash unexpectedly an
 
 1. Power off your console
 1. Insert your SD card into your computer
-1. Run the MSET9 script:
 <!--@include: ./_include/mset9-chorus.md -->
 1. Type the number corresponding to your console model and version, then press Enter
     + The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)

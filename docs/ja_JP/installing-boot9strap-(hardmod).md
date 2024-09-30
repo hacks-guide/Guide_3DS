@@ -14,8 +14,6 @@ Using a hardmod, we can dump the NAND image, install custom firmware to the NAND
 
 To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
-このページにリンクされた `.7z`ファイルを展開するには、[7-Zip](http://www.7-zip.org/) もしくは、 [The Unarchiver](https://theunarchiver.com/) のような解凍ソフトが必要です。
-
 これは New 3DS、New 2DS、Old 3DS、およびOld 2DS に対応する `.firm` を持つすべてのバージョン\* で動作します。
 
 ## What You Need
@@ -69,7 +67,7 @@ In this section, you will download the necessary files for the hardmod and dump 
 
 1. Power off your console
 2. パソコンにSDカードを入れます
-3. `boot.firm` と `boot.3dsx` をLuma3DSの `.zip` からSDカードのルートにコピーします
+3. Copy everything from the Luma3DS `.zip` to the root of your SD card
 4. hardmod-b9s-installer `.zip`からhardmod-b9s-installerフォルダをコンピュータにコピーします
 5. ダウンロードした`.firm`を、コンピュータのhardmod-b9s-installerフォルダにコピーします
 6. コンピュータのhardmod-b9s-installerフォルダにあるダウンロードした`.firm`の名前を`current.firm`に変更します

@@ -30,7 +30,7 @@ Ebben a fejezetben fel fogod másolni a fájlokat, amik a Soundhax és az univer
 3. Másold a Soundhax `.m4a` fájlját az SD kártyád gyökerébe
    - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
 4. Másold az `otherapp.bin` fájlt az SD kártyád gyökerébe
-5. Másold át a `boot.firm` és `boot.3dsx` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
+5. Copy everything from the Luma3DS `.zip` to the root of your SD card
 6. Hozz létre egy mappát `boot9strap` néven az SD kártya gyökerében
 7. Másold át a `boot9strap.firm` fájlt és a `boot9strap.firm.sha` fájlt a boot9strap `.zip` fájlból az SD kártyád `/boot9strap/` mappájába
 8. Másold át a `SafeB9SInstaller.bin` fájlt a SafeB9SInstaller `.zip`-ből az SD kártyád gyökerébe
@@ -39,7 +39,7 @@ Ebben a fejezetben fel fogod másolni a fájlokat, amik a Soundhax és az univer
 
 ::: info
 
-![](/images/screenshots/uosoundhax-root-layout.png)
+![](/images/screenshots/soundhax/soundhax-root-layout.png)
 
 :::
 
@@ -57,7 +57,7 @@ Ebben a fejezetben el fogod indítani a Soundhax-ot a Nintendo 3DS Sound app-on 
 
    ::: info
 
-   ![](/images/screenshots/soundhax-welcome.png)
+   ![](/images/screenshots/soundhax/soundhax-welcome.png)
 
    :::
 
@@ -73,7 +73,7 @@ Ebben a fejezetben el fogod indítani a Soundhax-ot a Nintendo 3DS Sound app-on 
 
    ::: info
 
-   ![](/images/screenshots/soundhax-launch.png)
+   ![](/images/screenshots/soundhax/soundhax-launch.png)
 
    :::
 

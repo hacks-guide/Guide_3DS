@@ -1,6 +1,6 @@
 # Verifica del CFW
 
-## Required Reading
+## Lettura necessaria
 
 Questa è una sezione aggiuntiva per controllare se la tua console possiede già un custom firmware moderno.
 
@@ -12,14 +12,14 @@ Se la tua console ha un CFW basato su menuhax, dovresti [cancellare gli extdata 
 
 :::
 
-## Instructions
+## Istruzioni
 
 1. Spegni la tua console
 2. Premi il pulsante (Select)
 3. Accendi la tua console continuando a tenere premuto il pulsante (Select)
 4. Ora dovresti visualizzare un menu di configurazione di qualche tipo
 
-## What to do next
+## Come proseguire
 
 ::: tip
 

@@ -50,7 +50,7 @@ In this section, you will prepare the SD card data necessary for the MSET9 explo
 
     ::: info
 
-    ![MSET9 root layout](/images/screenshots/mset9/mset9-root-layout-android.png)
+    ![](/images/screenshots/mset9/mset9-root-layout-android.png)
 
     :::
 

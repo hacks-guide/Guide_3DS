@@ -1,12 +1,12 @@
-# File Extensions (Windows)
+# Estensioni dei file (Windows)
 
-## Required Reading
+## Lettura necessaria
 
 In questa sezione aggiuntiva verrà spiegato come modificare l'impostazione di default di Windows relativa alla visualizzazione delle estensioni dei file.
 
 Ciò renderà più facile cercare i file citati nel resto della guida.
 
-## Instructions
+## Istruzioni
 
 ### Windows 11
 

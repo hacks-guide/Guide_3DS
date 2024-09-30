@@ -1,6 +1,6 @@
-# Formatting SD (Windows)
+# Formattazione SD (Windows)
 
-## Required Reading
+## Lettura necessaria
 
 Questa è una sezione aggiuntiva per la formattazione di una scheda SD per il 3DS.
 
@@ -8,12 +8,12 @@ Se il 3DS riconosce già la scheda SD, questa parte non è necessaria.
 
 Questa pagina è solo per utenti Windows. Se non stai utilizzando Windows, puoi seguire la guida alle pagine [Formattazione SD (Linux)](formatting-sd-\(linux\)) o [Formattazione SD (Mac)](formatting-sd-\(mac\)).
 
-## What You Need
+## Cosa serve
 
-- **For SD cards 32GB or smaller:** the latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
-- **For SD cards 64GB or larger:** The latest version of [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
+- **Per schede SD da 32GB o più piccole:** l'ultima versione di [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
+- **Per schede SD da 64GB o più grandi:** l'ultima versione di [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
 
-## Instructions (32GB or smaller)
+## Istruzioni (32GB o inferiore)
 
 1. Inserisci la scheda SD nel tuo computer
 
@@ -47,7 +47,7 @@ Questa pagina è solo per utenti Windows. Se non stai utilizzando Windows, puoi 
 
 13. Se la scheda SD aveva precedentemente file o cartelle al suo interno, ricopia il contenuto dal tuo computer
 
-## Instructions (64GB or larger)
+## Istruzioni (64GB o superiore)
 
 1. Inserisci la scheda SD nel tuo computer
 
@@ -64,8 +64,8 @@ Questa pagina è solo per utenti Windows. Se non stai utilizzando Windows, puoi 
    :::
 
 5. Seleziona la dimensione corretta su "Allocation unit size"
-   - If the SD card is 64GB, choose 32768
-   - If the SD card is larger than 64GB, choose 65536
+   - Se la scheda SD è da 64GB, scegli 32768
+   - Se la scheda SD è più grande di 64GB, scegli 65536
 
 6. Inserisci qualunque cosa su "Volume label"
 
@@ -83,12 +83,12 @@ Questa pagina è solo per utenti Windows. Se non stai utilizzando Windows, puoi 
 
 ## Risoluzione dei problemi
 
-- guiformat shows the error "Failed to open device: GetLastError()=32"
-  - Close everything that may be using the SD card, such as any File Explorer windows.
-  - If this issue persists, try reformatting the card to NTFS in File Explorer, close that window when it's done, and re-attempt the guiformat process.
+- guiformat mostra l'errore "Failed to open device: GetLastError()=32"
+  - Chiudi tutto ciò che potrebbe stare utilizzando la scheda SD, come ad esempio qualunque schermata Esplora Risorse.
+  - Se questo problema persiste, prova a riformattare la scheda in formato NTFS tramite File Explorer, chiudi la finestra al termine e ritenta l'utilizzo di guiformat.
 
-- guiformat shows the error "GetLastError()=1117"
-  - Your SD card write-protection switch may be [enabled](/images/sdlock.png). Lo slider deve essere spostato verso l'alto per consentire la scrittura sulla scheda SD (anche per la sola formattazione).
+- guiformat mostra l'errore "GetLastError()=1117"
+  - La protezione da scrittura della scheda SD potrebbe essere [abilitata](/images/sdlock.png). Lo slider deve essere spostato verso l'alto per consentire la scrittura sulla scheda SD (anche per la sola formattazione).
 
-- SD card remains undetected by console or continues to display the wrong capacity after formatting
-  - Your SD card may be partitioned or have unallocated space. Segui le istruzioni [qui](https://wiki.hacks.guide/wiki/SD_Clean/Windows) per riformattare la tua scheda SD.
+- La scheda SD continua a non venire rilevata dalla console o continua a mostrare una capacità errata dopo la formattazione
+  - La tua scheda SD potrebbe essere partizionata o avere spazio non allocato. Segui le istruzioni [qui](https://wiki.hacks.guide/wiki/SD_Clean/Windows) per riformattare la tua scheda SD.

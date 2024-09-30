@@ -1,6 +1,6 @@
 # H2testw (Windows)
 
-## Required Reading
+## Lettura necessaria
 
 In questa sezione aggiuntiva verrà spiegato come verificare la presenza di errori nella tua scheda SD utilizzando h2testw.
 
@@ -8,11 +8,11 @@ A seconda delle dimensioni della tua scheda SD e della velocità del tuo compute
 
 Questa pagina è solo per utenti Windows. Se non sei su Windows, usa [F3 (Linux)](f3-\(linux\)) o [F3XSwift (Mac)](f3xswift-\(mac\)).
 
-## What You Need
+## Cosa serve
 
-- The latest version of [h2testw](https://www.heise.de/ct/Redaktion/bo/downloads/h2testw_1.4.zip)
+- L'ultima versione di [h2testw](https://www.heise.de/ct/Redaktion/bo/downloads/h2testw_1.4.zip)
 
-## Instructions
+## Istruzioni
 
 1. Copia il file `h2testw.exe` dall'archivio `.zip` di h2testw sul tuo desktop
 2. Inserisci la scheda SD nel tuo computer
@@ -38,6 +38,6 @@ Se il test mostra qualunque altro risultato, la tua scheda SD potrebbe essere co
 
 ::: tip
 
-Return to [Get Started](get-started)
+Ritorna a [Cominciamo!](get-started)
 
 :::

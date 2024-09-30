@@ -1,14 +1,14 @@
 
 When creating the MSET9 ID1 on Windows 10 and above, the script may fail with this error:
 
-![Error 18](/images/screenshots/troubleshooting/234.png)
+![](/images/screenshots/troubleshooting/234.png)
 
 This occurs because of the beta UTF-8 support in Windows. You must disable it to run MSET9:
 
 1. Hit **Windows Key + R** to open up the Run dialogue, type `intl.cpl` then click "OK"
     ::: info
 
-    ![Run](/images/screenshots/troubleshooting/234run.png)
+    ![](/images/screenshots/troubleshooting/234run.png)
 
     :::
 
@@ -16,13 +16,13 @@ This occurs because of the beta UTF-8 support in Windows. You must disable it to
 
     ::: info
 
-    ![Region](/images/screenshots/troubleshooting/234region.png)
+    ![](/images/screenshots/troubleshooting/234region.png)
 
     :::
 
     ::: info
 
-    ![Administrative](/images/screenshots/troubleshooting/234administrative.png)
+    ![](/images/screenshots/troubleshooting/234administrative.png)
 
     :::
 
@@ -30,7 +30,7 @@ This occurs because of the beta UTF-8 support in Windows. You must disable it to
 
     ::: info
 
-    ![Locale](/images/screenshots/troubleshooting/234locale.png)
+    ![](/images/screenshots/troubleshooting/234locale.png)
 
     :::
 
@@ -38,7 +38,7 @@ This occurs because of the beta UTF-8 support in Windows. You must disable it to
 
     ::: info
 
-    ![Restart](/images/screenshots/troubleshooting/234restart.png)
+    ![](/images/screenshots/troubleshooting/234restart.png)
 
     :::
 

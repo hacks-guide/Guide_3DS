@@ -14,8 +14,6 @@ A hardmod használatával dumpolni tudunk egy NAND képfájlt, telepíteni egyed
 
 Ahhoz, hogy használhasd a [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) linkeket ezen az oldalon, szükséged lesz egy torrent kliensre, mint például a [qBittorrent](https://www.qbittorrent.org/download.php) vagy a [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
-Ahhoz, hogy kicsomagold az oldalon található `.7z` fájlokat, egy fájl archiváló programra lesz szükséged, mint amilyen a [7-Zip](http://www.7-zip.org/) vagy a [The Unarchiver](https://theunarchiver.com/).
-
 Ez működni fog a New 3DS, a New 2DS, az Old 3DS, és az Old 2DS konzolok _összes_ olyan verzióján, amihez rendelkezel a megfelelő `.firm` fájllal.
 
 ## What You Need
@@ -69,7 +67,7 @@ Ebben a fejezetben le fogod tölteni a szükséges fájlokat a hardmod-hoz és d
 
 1. Kapcsold ki a konzolod
 2. Helyezd az SD kártyád a számítógépbe
-3. Másold át a `boot.firm` és `boot.3dsx` fájlt a Luma3DS `.zip`-ből az SD kártya gyökerébe
+3. Copy everything from the Luma3DS `.zip` to the root of your SD card
 4. Csomagold ki a hardmod-b9s-installer mappát a hardmod-b9s-installer `.zip`-ből
 5. Másold az előbbiekben letöltött `.firm` fájlt a kicsomagolt hardmod-b9s-installer mappába
 6. Nevezd át a hardmod-b9s-installer mappában található `.firm` fájlt `current.firm` névre

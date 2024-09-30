@@ -62,7 +62,7 @@ Para seguir este guia, você precisará de um cartão SD com capacidade de pelo 
 
 ::: info
 
-Se você quiser, você pode verificar se há erros no seu cartão SD antes de seguir este guia usando [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), ou [F3XSwift (Mac)](f3xquickt-\(mac\))
+Se você quiser, você pode verificar se há erros no seu cartão SD antes de seguir este guia usando [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), ou [F3XSwift (Mac)](f3xswift-\(mac\))
 
 :::
 

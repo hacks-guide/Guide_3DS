@@ -130,17 +130,17 @@ If this does not work, your SD card needs to be formatted:
 :::details Title database: Not initialized!
 
 Ensure that you have reset the title database.
-\+ Please power on your console with your SD inserted
-\+ Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
-\+ This will not wipe any of your data
-\+ If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
+
+- Please power on your console with your SD inserted
+- Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
+  - This will not wipe any of your data
+- If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
 
 If you do _not_ getting a reset prompt, your SD card needs to be formatted:
 
 1. Copy everything off the SD Card to your PC
 2. Format the SD Card ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
 3. Copy everything back
-4. Run the MSET9 script:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -160,7 +160,7 @@ Remember, your SD card should look like this:
 
 ::: info
 
-![MSET9 root layout](/images/screenshots/mset9/mset9-root-layout.png)
+![](/images/screenshots/mset9/mset9-root-layout.png)
 
 :::
 
@@ -233,7 +233,6 @@ You may be missing `SafeB9S.bin` from the root of your SD card, or the file may 
 
 1. Force power off your console by holding the Power button for 20 seconds
 2. Plaats je SD kaart in je computer
-3. Run the MSET9 script:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -263,7 +262,6 @@ Follow these instructions to remove the trigger file and to retry Section II:
 
 1. Force power off your console by holding the Power button for 20 seconds
 2. Plaats je SD kaart in je computer
-3. 1. Run the MSET9 script:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -287,7 +285,7 @@ If you continue to have this issue and are sure that you did everything correctl
 
 :::details An exception occurred after triggering MSET9
 
-Dit geeft waarschijnlijk aan dat je al custom firmware hebt. Je zou best [controleren op CFW](checking-for-cfw).
+This likely indicates that you already have custom firmware. Je zou best [controleren op CFW](checking-for-cfw).
 
 :::
 
@@ -317,7 +315,7 @@ The file `arm11code.bin` is missing or misplaced. Make sure to copy the files of
 
 ::: info
 
-![](/images/screenshots/skater-root-layout.png)
+![](/images/screenshots/skaterhax/skater-root-layout.png)
 
 :::
 
@@ -325,7 +323,7 @@ The file `arm11code.bin` is missing or misplaced. Make sure to copy the files of
 
 :::details An exception occured or "DLL_HEAP_INFORMATION" when pressing GO! GO!
 
-Dit geeft waarschijnlijk aan dat je al custom firmware hebt. Je zou best [controleren op CFW](checking-for-cfw).
+This likely indicates that you already have custom firmware. Je zou best [controleren op CFW](checking-for-cfw).
 
 :::
 
@@ -333,19 +331,19 @@ Dit geeft waarschijnlijk aan dat je al custom firmware hebt. Je zou best [contro
 
 :::details Red/purple/pink and white screen after running Browserhax
 
-Dit geeft waarschijnlijk aan dat je al custom firmware hebt. Je zou best [controleren op CFW](checking-for-cfw).
+This likely indicates that you already have custom firmware. Je zou best [controleren op CFW](checking-for-cfw).
 
 :::
 
 :::details "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
 
-The file `arm11code.bin` is missing or misplaced. Download de nieuwste versie van [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), plaats `otherapp.bin` op de hoofdmap van je SD-kaart en hernoem het naar `arm11code.bin`. Voeg de `.bin` extensie niet toe als je het nog niet ziet.
+The file `arm11code.bin` is missing or misplaced. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Voeg de `.bin` extensie niet toe als je het nog niet ziet.
 
 :::
 
 :::details "An error has occurred, forcing the software to close..." (white message box)
 
-There may be an issue with your `arm11code.bin` file. Download de nieuwste versie van [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), plaats `otherapp.bin` op de hoofdmap van je SD-kaart en hernoem het naar `arm11code.bin`. Voeg de `.bin` extensie niet toe als je het nog niet ziet.
+There may be an issue with your `arm11code.bin` file. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Voeg de `.bin` extensie niet toe als je het nog niet ziet.
 
 You can also try resetting your browser save data:
 
@@ -392,6 +390,8 @@ Follow these steps in order:
 :::
 
 :::details Frozen on "Doing agbhax..."
+
+There may be an issue with your `arm11code.bin` file. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place it on the root of your SD card, and rename it to `arm11code.bin`. Voeg de `.bin` extensie niet toe als je het nog niet ziet.
 
 :::
 
@@ -606,15 +606,18 @@ Je Luma3DS versie is verouderd. Download de nieuwste versie van [Luma3DS](https:
 
 :::details "Unable to mount CTRNAND or load the CTRNAND FIRM. Please use an external one."
 
+There are a number of reasons as to why this could be happening. In any case, this error can usually be fixed by following the [CTRTransfer](ctrtransfer) guide.
+
 :::
 
 :::details "An error has occurred. Hold down the POWER button to turn off the power..."
 
 ARM11 exception handlers zijn uitgeschakeld of custom firmware is niet geïnstalleerd. Try enabling ARM11 exception handlers:
-\+ Power off your console
-\+ Hold (Select)
-\+ Power on your console, while still holding (Select)
-\+ If the "Disable ARM11 exception handlers" box is checked, uncheck it
+
+- Zet je console uit
+- Hold (Select)
+- Power on your console, while still holding (Select)
+- If the "Disable ARM11 exception handlers" box is checked, uncheck it
 
 :::
 
@@ -672,7 +675,7 @@ Your console is running Luma3DS 6.6 or older, likely via arm9loaderhax. You shou
 
 :::details Extended memory mode games (Pokemon Sun/Moon, Smash, etc.) don't work
 
-Dit kan gebeuren na een CTRTransfer of regio verandering op Old 3DS / 2DS. Follow the instructions [here](https://3ds.hacks.guide/region-changing#section-vi---fixing-locale-related-issues) to fix this issue (skipping steps 3, 4, 5, and 6).
+Dit kan gebeuren na een CTRTransfer of regio verandering op Old 3DS / 2DS. Follow the instructions [here](region-changing#section-vi---fixing-locale-related-issues) to fix this issue (skipping steps 3, 4, 5, and 6).
 
 :::
 
@@ -718,6 +721,7 @@ Your console likely still has menuhax67 installed. To uninstall menuhax67, downl
    - **EUR Region**: `000002ce`
    - **JPN Region**: `000002cc`
    - **USA Region**: `000002cd`
+   - **KOR Region**: `000002cf`
 5. Stop je SD-kaart terug in je console
 
 :::

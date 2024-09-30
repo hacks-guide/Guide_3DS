@@ -44,7 +44,7 @@
 ### Section III - Update Luma3DS
 
 1. 将你的 SD 卡插入到电脑
-2. 解压 Luma3DS `.zip` 内的 `boot.firm` 和 `boot.3dsx` 到你 SD 卡的根目录，覆盖已有文件
+2. Copy everything from the Luma3DS `.zip` to the root of your SD card, replacing any existing files
 3. Reinsert your SD card into your console
 4. Power on your console
 5. If your console has booted into the Luma3DS configuration menu, press (Start) to save and reboot

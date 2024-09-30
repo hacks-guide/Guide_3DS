@@ -1,5 +1,5 @@
 1. 你的主机应该会在开机后进入 Luma3DS 配置菜单
-    + Luma3DS 配置菜单用于设置 Luma3DS 自制固件的可选功能 其中有许多功能可用于个性化或调试
-    + 对于本手册的目的而言，**请不要修改默认设置**（不要选中或者取消选中任何东西）
-    + 如果你的主机在你尝试开机后直接自动关机了，请确认你已经从 Luma3DS `.zip` 中复制了 `boot.firm` 文件到你的 SD 卡根目录中
-1. 按下 “Start” 键保存设置并重启
+   - Luma3DS configuration menu are settings for the Luma3DS custom firmware. 其中有许多功能可用于个性化或调试
+   - For the purpose of this guide, **leave these options on the default settings** (do not check or uncheck anything)
+   - If your console shuts down when you try to power it on, ensure that you have copied `boot.firm` from the Luma3DS `.zip` to the root of your SD card
+2. 按下 “Start” 键保存设置并重启

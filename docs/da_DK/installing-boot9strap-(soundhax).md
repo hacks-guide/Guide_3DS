@@ -48,7 +48,7 @@ This means that using a cartridge update from a version containing an older Nint
 1. Power on your device
 1. Launch Nintendo 3DS Sound
 
-    ![]({{ "/images/screenshots/soundhax-welcome.png" | absolute_url }})
+    ![]({{ "/images/screenshots/soundhax/soundhax-welcome.png" | absolute_url }})
     {: .notice--info}
 
 1. If you've never opened Nintendo 3DS Sound before and get tips on how to use it from a bird icon, go through all of the bird tips, then close the app normally and relaunch it
@@ -57,7 +57,7 @@ This means that using a cartridge update from a version containing an older Nint
   + This may take many tries
   + If it freezes, just force the console to power off by holding the power button, then try again
 
-    ![]({{ "/images/screenshots/soundhax-launch.png" | absolute_url }})
+    ![]({{ "/images/screenshots/soundhax/soundhax-launch.png" | absolute_url }})
     {: .notice--info}
 
 1. If the exploit was successful, you will have booted into SafeB9SInstaller

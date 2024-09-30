@@ -1,6 +1,6 @@
 # F3XSwift (Mac)
 
-## Required Reading
+## 중요
 
 이 섹션은 F3XSwift를 사용해 SD 카드의 오류를 확인하는 추가 섹션입니다.
 
@@ -14,11 +14,11 @@ F3XSwift는 macOS 10.13 (High Sierra)와 이상만 호환됩니다. 이하의 ma
 
 :::
 
-## What You Need
+## 준비물
 
-- The latest release of [F3XSwift](https://github.com/vrunkel/F3XSwift/releases/latest)
+- 최신 버전의 [F3XSwift](https://github.com/vrunkel/F3XSwift/releases/latest)
 
-## Instructions
+## 진행 방법
 
 1. SD 카드를 컴퓨터에 삽입해 주세요
 2. F3XSwift 앱을 실행해 주세요
@@ -43,6 +43,6 @@ ___
 
 ::: tip
 
-Return to [Get Started](get-started)
+[시작하기](get-started) 로 돌아갑니다
 
 :::

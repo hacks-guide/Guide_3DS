@@ -10,7 +10,7 @@ head:
 
 이 가이드를 본격적으로 시작하기 전에, 현재 콘솔에 커스텀 펌웨어가 이미 설치되어 있는지, 시스템 버전이 무엇인지를 확인할 것 입니다.
 
-### Section I - CFW Check
+### 섹션 I - CFW 확인
 
 1. 콘솔의 전원을 꺼 주세요
 2. (Select) 버튼을 길게 눌러 주세요
@@ -23,12 +23,12 @@ head:
 
 :::
 
-### Section II - System Version Check
+### 섹션 II - 시스템 버전 확인
 
 1. 콘솔에서 본체 설정을 열어 주세요
-2. Your system version will be displayed on the bottom right of the top screen (e.g. "Ver. 11.17.0-50U")
+2. 시스템 버전은 위 화면의 오른쪽 하단에 표시됩니다 (예: "Ver. 11.17.0-50U")
 
-### Section III - Select a Method
+### 섹션 III - 방법 선택
 
 올바른 방법을 사용하기 위해, 섹션 II에서 확인한 시스템 버전을 입력해 주세요.
 
@@ -36,7 +36,7 @@ head:
 
 ---
 
-#### Alternate Methods
+#### 다른 방법
 
 가능하면, 위 박스에 표시되는 방법을 따르는 것을 추천합니다.
 

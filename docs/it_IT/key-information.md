@@ -16,9 +16,9 @@ Questa pagina contiene alcune terminologie informatiche di base e informazioni s
 
 Ogni sezione è collassata. Fai clic o tocca il nome della sezione per aprirla.
 
-## Things you should know about the 3DS
+## Cose che dovresti sapere sul 3DS
 
-:::: details 3DS/2DS compatibility
+:::: details Compatibilità 3DS/2DS
 
 ::: info
 
@@ -30,7 +30,7 @@ Questa guida funziona su tutte le versioni retail della famiglia di console Nint
 
 ::::
 
-:::: details Computer compatibility
+:::: details Compatibilità del computer
 
 ::: info
 
@@ -42,7 +42,7 @@ Nella maggior parte dei casi, puoi seguire questa guida a patto che tu possa sca
 
 ::::
 
-:::: details SD card location, type, and capacity
+:::: details Posizione, tipo e capienza della scheda SD
 
 ::: info
 
@@ -69,7 +69,7 @@ Per seguire questa guida, ti servirà una scheda SD di almeno **2GB**.
 ::::
 
 :::: warning
-::: details Potential risks (Disclaimer)
+::: details Potenziali rischi (disclaimer)
 
 Effettuando la modifica alla tua console, la sottoponi ad un remoto (ma possibile) rischio di brick (che la renderebbe inutilizzabile). _**Se sbagli a posizionare dei file NON brickerai la console**_, potresti invece brickarla saltando alcuni passaggi.
 
@@ -78,7 +78,7 @@ Riassumendo: Modificare la tua console è sicuro, ma _**è una tua responsabilit
 :::
 ::::
 
-## Things you need to do on your computer
+## Cose che devi fare sul tuo computer
 
 ::: warning
 
@@ -86,7 +86,7 @@ Seguendo questa guida non dovrebbero verificarsi perdite di dati, ma è sempre p
 
 :::
 
-:::: details File placement terminology (e.g. "root of SD", "/luma/")
+:::: details Terminologia del posizionamento dei file (es. "directory principale della scheda SD", "/luma/")
 
 ::: info
 
@@ -114,7 +114,7 @@ Potresti anche vedere i nomi delle cartelle indicati in questa maniera: `/cartel
 
 ::::
 
-:::: details Downloading files from GitHub
+:::: details Scaricare file da GitHub
 
 ::: info
 
@@ -126,7 +126,7 @@ In questa guida copierai i file scaricati dal tuo computer o cellulare nella sch
 
 ::::
 
-:::: details Opening/extracting files
+:::: details Aprire/estrarre i file
 
 ::: info
 
@@ -142,7 +142,7 @@ Nella maggior parte dei sistemi operativi, per estrarre i file basta farci un do
 
 ::::
 
-:::: details (Windows only) File extensions
+:::: details (solo Windows) Estensioni dei file
 
 ::: info
 
@@ -154,13 +154,13 @@ Se hai un computer con Windows, le estensioni dopo il nome del file potrebbero e
 
 ::::
 
-## Getting help
+## Supporto
 
 Se riscontri dei problemi seguendo questa guida, ci sono tanti modi per ricevere aiuto!
 
-- If you have any questions that haven't been answered on this page, their answers might be in the [Pre-Installation FAQ](faq#pre-installation-faq).
-- If you experience an issue while following this guide, you can check the [Troubleshooting](troubleshooting) page for a solution.
-- If the resources we've provided here aren't helping, you can get one-on-one support over at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+- Se hai delle domande a cui non hai ricevuto risposta in questa pagina, le loro risposte potrebbero essere nelle [FAQ Pre-Installazione](faq#pre-installation-faq).
+- Se si verifica un problema mentre stai seguendo questa guida, puoi consultare la pagina [Risoluzione dei problemi](troubleshooting) per trovare una soluzione.
+- Se ciò di cui abbiamo parlato qui non fosse di aiuto, puoi ricevere supporto diretto sul [canale Discord Nintendo Homebrew (solo in inglese)](https://discord.gg/MWxPgEp).
 
 ::: tip
 

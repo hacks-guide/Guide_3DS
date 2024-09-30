@@ -1,6 +1,6 @@
-# Formatting SD (Windows)
+# Διαμόρφωση της SD (Windows)
 
-## Required Reading
+## Απαραίτητη ανάγνωση
 
 Αυτή είναι μια πρόσθετη ενότητα για τη διαμόρφωση μιας κάρτας SD έτσι, ώστε να λειτουργεί με το 3DS.
 
@@ -8,12 +8,12 @@
 
 Αυτή η σελίδα αφορά μόνο χρήστες Windows. Εάν δεν χρησιμοποιείτε Windows, δείτε τις σελίδες [Διαμόρφωση της SD (Linux)](formatting-sd-\(linux\)) ή [Διαμόρφωση της SD (Mac)](formatting-sd-\(mac\)).
 
-## What You Need
+## Τι χρειάζεστε
 
-- **For SD cards 32GB or smaller:** the latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
-- **For SD cards 64GB or larger:** The latest version of [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
+- **Για κάρτες SD των 32GB ή λιγότερων:** Την πιο πρόσφατη έκδοση του [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
+- **Για κάρτες SD των 64GB ή περισσότερων:** Την πιο πρόσφατη έκδοση του [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
 
-## Instructions (32GB or smaller)
+## Οδηγίες (32GB ή λιγότερα)
 
 1. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
 
@@ -47,7 +47,7 @@
 
 13. Εάν η κάρτα SD περιείχε οποιαδήποτε αρχεία και φακέλους πριν από τη διαμόρφωση, αντιγράψτε τα πάντα από τον υπολογιστή στην κάρτα SD σας
 
-## Instructions (64GB or larger)
+## Οδηγίες (64GB ή περισσότερα)
 
 1. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
 
@@ -64,8 +64,8 @@
    :::
 
 5. Επιλέξτε ένα μέγεθος για το «Allocation unit size»
-   - If the SD card is 64GB, choose 32768
-   - If the SD card is larger than 64GB, choose 65536
+   - Εάν η κάρτα SD είναι 64GB, επιλέξτε 32768
+   - Εάν η κάρτα SD είναι μεγαλύτερη από 64GB, επιλέξτε 65536
 
 6. Εισαγάγετε οτιδήποτε για το «Volume label»
 
@@ -83,12 +83,12 @@
 
 ## Επίλυση προβλημάτων
 
-- guiformat shows the error "Failed to open device: GetLastError()=32"
-  - Close everything that may be using the SD card, such as any File Explorer windows.
-  - If this issue persists, try reformatting the card to NTFS in File Explorer, close that window when it's done, and re-attempt the guiformat process.
+- Το guiformat εμφανίζει το σφάλμα «Failed to open device: GetLastError()=32»
+  - Κλείστε οτιδήποτε μπορεί να χρησιμοποιεί την κάρτα SD, όπως κάποιο παράθυρο της Εξερεύνησης αρχείων.
+  - Εάν αυτό το ζήτημα επιμένει, δοκιμάστε να διαμορφώσετε εκ νέου την κάρτα σε NTFS στην Εξερεύνηση αρχείων, κλείστε το παράθυρο όταν ολοκληρωθεί η διαμόρφωση και δοκιμάστε ξανά τη διαδικασία με το guiformat.
 
-- guiformat shows the error "GetLastError()=1117"
-  - Your SD card write-protection switch may be [enabled](/images/sdlock.png). Ο διακόπτης πρέπει να αναστραφεί προς τα πάνω για να επιτραπεί η εγγραφή στην κάρτα SD (συμπεριλαμβανομένης της διαμόρφωσης).
+- Το guiformat εμφανίζει το σφάλμα «GetLastError()=1117»
+  - Ο διακόπτης προστασίας από εγγραφή της κάρτας SD ενδέχεται να είναι [ενεργοποιημένος](/images/sdlock.png). Ο διακόπτης πρέπει να αναστραφεί προς τα πάνω για να επιτραπεί η εγγραφή στην κάρτα SD (συμπεριλαμβανομένης της διαμόρφωσης).
 
-- SD card remains undetected by console or continues to display the wrong capacity after formatting
-  - Your SD card may be partitioned or have unallocated space. Ακολουθήστε τις οδηγίες [εδώ](https://wiki.hacks.guide/wiki/SD_Clean/Windows) για την εκ νέου διαμόρφωση της κάρτας SD σας.
+- Η κάρτα SD παραμένει μη ανιχνεύσιμη από την κονσόλα ή συνεχίζει να εμφανίζει εσφαλμένη χωρητικότητα μετά τη διαμόρφωση
+  - Η κάρτα SD ενδέχεται να έχει διαμεριστεί ή να περιέχει μη εκχωρημένο χώρο. Ακολουθήστε τις οδηγίες [εδώ](https://wiki.hacks.guide/wiki/SD_Clean/Windows) για την εκ νέου διαμόρφωση της κάρτας SD σας.

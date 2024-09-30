@@ -1,19 +1,22 @@
+::: info
+
 If the script found no user tickets, continue to the next section.
-{: .notice--info}
+
+:::
 
 1. תפעילו את FBI מרשימת הhomebrew שלכם
-1. Select "SD"
-1. תבחרו ב "gm9"
-1. תבחרו ב "out"
-1. תבחרו ב "ctrtransfer_tickets"
-1. תעשו את התהליך הבא בשביל או תיקיית `eshop` או תיקיית, `unknown`, או שניהן
-    + תנווטו אל התיקייה
-    + לחצו על "\<current directory>"
-    + לחצו על "Install and delete all tickets"
-    + חכו. הקונוסלה יכולה להיראות תקועה, תנו לה זמן.
-    + תלחצו (A) כדי לאשר
-    + תלחצו (B) כדי לדחות התקנת TICKETים מהCDN.
-1. תלחצו על (Home) כדי לצאת מFBI
-1. Re-open the Homebrew Launcher, either through the Homebrew Launcher icon on the HOME Menu or by re-following Section IV of this page
-1. Launch faketik from the list of homebrew
-1. Once faketik has finished processing, press (Start) to exit faketik
+2. Select "SD"
+3. תבחרו ב "gm9"
+4. תבחרו ב "out"
+5. תבחרו ב "ctrtransfer_tickets"
+6. תעשו את התהליך הבא בשביל או תיקיית `eshop` או תיקיית, `unknown`, או שניהן
+   - Navigate to the folder
+   - Select "\<current directory>"
+   - Select "Install and delete all tickets"
+   - Wait. הקונוסלה יכולה להיראות תקועה, תנו לה זמן.
+   - תלחצו (A) כדי לאשר
+   - Press (B) to decline installing tickets from CDN.
+7. תלחצו על (Home) כדי לצאת מFBI
+8. Re-open the Homebrew Launcher, either through the Homebrew Launcher icon on the HOME Menu or by re-following Section IV of this page
+9. Launch faketik from the list of homebrew
+10. Once faketik has finished processing, press (Start) to exit faketik

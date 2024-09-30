@@ -14,8 +14,6 @@
 
 你需要一个支持 BT 协议的下载程序，如 [qBittorrent](https://www.qbittorrent.org/download.php) 或 [Deluge](http://dev.deluge-torrent.org/wiki/Download) 来下载本教程中的[磁力链接](https://zh.wikipedia.org/wiki/%E7%A3%81%E5%8A%9B%E9%93%BE%E6%8E%A5) 。
 
-请使用 [7-Zip](http://www.7-zip.org/) 或 [The Unarchiver](https://theunarchiver.com/) 之类的压缩软件来解压本页面上的 `.7z` 文件。
-
 这个教程适合有对应的 `.firm` 文件的 New 3DS、New 2DS 和老型号 3DS、老型号 2DS。
 
 ## What You Need
@@ -69,7 +67,7 @@
 
 1. 将主机关机
 2. 将你的 SD 卡插入到电脑
-3. 解压 Luma3DS `.zip` 里的 `boot.firm` 和 `boot.3dsx` 到你 SD 卡的根目录
+3. Copy everything from the Luma3DS `.zip` to the root of your SD card
 4. 从 hardmod-b9s-installer `.zip` 中复制 hardmod-b9s-installer 文件夹至电脑中
 5. 复制你所下载的`.firm` 档案至电脑的 hardmod-b9s-installer 文件夹中
 6. 在 hardmod-b9s-installer 文件夹中，将你所下载的`.firm` 文件重命名为 `current.firm`

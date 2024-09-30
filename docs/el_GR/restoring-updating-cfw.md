@@ -1,23 +1,23 @@
-# Restoring / Updating CFW
+# Επαναφορά/ενημέρωση του CFW
 
-## Required Reading
+## Απαραίτητη ανάγνωση
 
 Αυτή η σελίδα προετοιμάζει τις κονσόλες, που διαθέτουν ήδη μια σύγχρονη εγκατάσταση του boot9strap, για εκ νέου εγκατάσταση ή/και ενημέρωση των εφαρμογών του custom firmware. Μπορεί επίσης να χρησιμοποιηθεί σε περίπτωση απώλειας ή βλάβης της κάρτας SD.
 
 Η κάρτα SD σας πρέπει να διαμορφωθεί ως FAT32 για να ακολουθήσετε αυτόν τον οδηγό, αλλιώς το 3DS δεν θα μπορέσει να την αναγνωρίσει. Εάν δεν έχετε διαμορφώσει ακόμα κατάλληλα την κάρτα SD σας, χρησιμοποιήστε κάποια από αυτές τις σελίδες για το κάνετε, ανάλογα με το λειτουργικό σας σύστημα: [Windows](formatting-sd-\(windows\)), [Mac](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)).
 
-## What You Need
+## Τι χρειάζεστε
 
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- Την πιο πρόσφατη έκδοση του [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (το αρχείο `.zip` του Luma3DS)
 
-## Instructions
+## Οδηγίες
 
 1. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
-2. Αντιγράψτε τα `boot.3dsx` και `boot.firm` από το αρχείο `.zip` του Luma3DS στη ρίζα της κάρτας SD, αντικαθιστώντας τυχόν υπάρχοντα αρχεία
-   - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
+2. Αντιγράψτε τα πάντα από το αρχείο `.zip` του Luma3DS στη ρίζα της κάρτας SD σας, αντικαθιστώντας τα τυχόν υπάρχοντα αρχεία
+   - Η ρίζα της κάρτας SD είναι ο αρχικός κατάλογος της κάρτας SD σας, όπου μπορείτε να δείτε τον φάκελο «Nintendo 3DS», χωρίς να βρίσκεστε μέσα σε αυτόν
 3. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 4. Ενεργοποιήστε την κονσόλα σας
-   - If you see the Luma3DS configuration menu, press (Start) to save and reboot
+   - Εάν δείτε το μενού ρυθμίσεων του Luma3DS, πατήστε το (Start) για αποθήκευση και επανεκκίνηση
 
 ::: tip
 

@@ -1,15 +1,21 @@
+::: info
+
 まだ設定していない場合は、本体にインターネット接続を設定してください。
-{: .notice--info}
+
+:::
+
+::: tip
 
 図解のあるガイドは[こちら](/images/screenshots/set-proxy.png)にご覧ください。
-{: .notice--success}
+
+:::
 
 1. 本体設定を開きます。
-1. `インターネット設定` → `インターネット接続設定` に移動します。
-1. 使用している接続先を選んで `設定変更` → `次ページ(右矢印)` → `Proxyの設定` と進みます。
-1. `する` を選んで `詳細設定` をタッチします。
-1. Proxyサーバーをssloth.nintendohomebrew.comに設定し、ポート番号を8080に設定します。
-1. 「OK」を押して、「保存する」を押します。
-1. 「接続テストを行いますか？」と尋ねられたら「テストする」をタッチして実行します。
-    + テストは成功するはずです。
-1. 「OK」を押して続行します。
+2. Navigate to `Internet Settings` -> `Connection Settings`
+3. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
+4. `する` を選んで `詳細設定` をタッチします。
+5. Proxyサーバーをssloth.nintendohomebrew.comに設定し、ポート番号を8080に設定します。
+6. Click OK, then click Save
+7. When prompted, click "Test" to perform the connection test
+   - The test should succeed
+8. Click "OK" to continue

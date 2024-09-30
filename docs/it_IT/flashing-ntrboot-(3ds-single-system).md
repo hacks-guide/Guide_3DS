@@ -1,6 +1,6 @@
 # Flash di ntrboot (Singolo 3DS)
 
-## Required Reading
+## Lettura necessaria
 
 Prima di procedere, assicurati di aver letto tutte le informazioni presenti alla pagina [ntrboot](ntrboot)
 
@@ -12,15 +12,15 @@ Tieni presente che in rare circostanze è possibile **brickare** una flashcart c
 
 :::
 
-## What You Need
+## Cosa serve
 
-- Your ntrboot compatible flashcart
-- The v1.3 release of [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (direct download)
-- The latest release of [ntrboot_flasher_nds](https://github.com/jason0597/ntrboot_flasher_nds/releases/latest) (`ntrboot_flasher_nds.nds`)
+- La tua flashcart compatibile con ntrboot
+- La versione v1.3 di [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (download diretto)
+- L'ultima versione di [ntrboot_flasher_nds](https://github.com/jason0597/ntrboot_flasher_nds/releases/latest) (`ntrboot_flasher_nds.nds`)
 
-## Instructions
+## Istruzioni
 
-### Section I - Prep Work
+### Sezione I - Preparazione
 
 1. Spegni la tua console
 2. Inserisci la scheda SD della flashcart nel tuo computer
@@ -30,7 +30,7 @@ Tieni presente che in rare circostanze è possibile **brickare** una flashcart c
 6. Reinserisci la scheda SD nella flashcart
 7. Inserisci la flashcart DS / DSi compatibile con ntrboot nella tua console
 
-### Section II - Flashing ntrboot
+### Sezione II - Installare ntrboot
 
 1. Avvia il file `ntrboot_flasher_nds.nds` sulla tua console tramite la flashcart
 2. Premi il pulsante (A) per continuare
@@ -50,6 +50,6 @@ ___
 
 ::: tip
 
-Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
+Prosegui con l'[Installazione di boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
 
 :::

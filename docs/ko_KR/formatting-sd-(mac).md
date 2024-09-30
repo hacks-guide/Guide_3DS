@@ -1,16 +1,16 @@
-# Formatting SD (Mac)
+# SD 포맷하기 (Mac)
 
-## Required Reading
+## 중요
 
 이곳은 3DS와 쓰기 위한 SD 카드를 포맷하는 부가 섹션입니다.
 
 만약 3DS가 이미 SD 카드를 인식한다면, 이 가이드는 따를 필요가 없습니다.
 
-이 페이지는 Mac 사용자를 위한 페이지입니다. 만약 Mac에서 하는 것이 아니라면, [SD 포맷하기 (Windows)](formatting-sd-\(Windows\))나 [SD 포맷하기 (Linux)](formatting-sd-\(linux\)) 페이지들을 찾아봐 주세요.
+이 페이지는 Mac 사용자를 위한 페이지입니다. 만약 Mac에서 하는 것이 아니라면, [SD 포맷하기 (Windows)](formatting-sd-\(windows\))나 [SD 포맷하기 (Linux)](formatting-sd-\(linux\)) 페이지들을 찾아봐 주세요.
 
-## Instructions
+## 진행 방법
 
-### OS X El Capitan (10.11) and later
+### OS X El Capitan (10.11) 및 이후 버전
 
 1. SD 카드를 컴퓨터에 삽입해 주세요
 
@@ -35,7 +35,7 @@
 8. "포맷" 창이 "MS-DOS ( FAT )"으로 설정되있는 것을 확인해 주세요
 
 9. "설계" 창이 "마스터 부트 레코드"로 설정되있는 것을 확인해 주세요
-   - If "Scheme" does not appear, click "Cancel" and make sure to choose the device instead of a volume
+   - 만약 "설계" 가 표시되지 않으면, "취소"를 선택하고 디바이스가 아닌 볼륨을 선택해 주세요
 
 10. "지우기"를 선택해 주세요
 
@@ -45,7 +45,7 @@
 
 13. 만약 SD 카드에 파일이나 폴더가 있었다면, 백업한 폴더에서 파일들을 다시 넣으세요
 
-### OS X Yosemite (10.10) and earlier
+### OS X Yosemite (10.10) 및 이전 버전
 
 1. SD 카드를 컴퓨터에 삽입해 주세요
 
@@ -62,7 +62,7 @@
    :::
 
 5. 위쪽에 "파티션"을 선택해 주세요
-   - If "Partition" does not appear, make sure to choose the device instead of a volume
+   - 만약 "파티션" 이 표시되지 않으면, 볼륨이 아닌 디바이스를 선택해 주세요
 
 6. "볼륨 설게" 창이 "1개외 파티션"으로 설정되있는 것을 확인해 주세요
 
@@ -88,5 +88,5 @@
 
 ## 문제 해결
 
-- SD card remains undetected by console or continues to display the wrong capacity after formatting
-  - Your SD card may be partitioned or have unallocated space. [해당 링크](https://wiki.hacks.guide/wiki/SD_Clean/Mac)의 가이드를 따라 SD 카드를 다시 포맷해 주세요
+- SD 카드를 콘솔에서 여전히 감지되지 않거나 포맷 이후로도 엉뚱한 용량을 표시할 경우
+  - SD 카드가 나뉘었거나 미할당 공간이 있을 가능성이 있습니다. [해당 링크](https://wiki.hacks.guide/wiki/SD_Clean/Mac)의 가이드를 따라 SD 카드를 다시 포맷해 주세요

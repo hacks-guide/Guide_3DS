@@ -19,7 +19,7 @@ Antes de iniciar este guia, veremos se o custom firmware já está instalado e v
 
 ::: warning
 
-Se você ver a tela de configuração do Luma3DS ou qualquer outro menu personalizado (por exemplo, GodMode9, Decrypt9WIP), PARE - você já tem custom firmware! Continue [daqui](verifique-por-cfw#what-to-do-next).
+Se você ver a tela de configuração do Luma3DS ou qualquer outro menu personalizado (por exemplo, GodMode9, Decrypt9WIP), PARE - você já tem custom firmware! Continue [daqui](checking-for-cfw#what-to-do-next).
 
 :::
 

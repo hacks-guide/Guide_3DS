@@ -44,7 +44,7 @@ Para todas as etapas nesta seção, substitua quaisquer arquivos existentes no s
 ### Section III - Update Luma3DS
 
 1. Insira o cartão SD no seu computador
-2. Copie `boot.firm` e `boot.3dsx` do `.zip` do Luma3DS para a raiz do seu cartão SD, substituindo o arquivo existente
+2. Copy everything from the Luma3DS `.zip` to the root of your SD card, replacing any existing files
 3. Reinsira o cartão SD no seu console
 4. Ligue o seu console
 5. Se o seu console foi inicializado no menu de configuração do Luma3DS, pressione (Start) para salvar e reiniciar

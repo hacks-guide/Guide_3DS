@@ -19,7 +19,12 @@ export default defineConfig({
     ['script', {}, `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-760Y60FQ3T');`]
   ],
   locales: {
-    root: i18n.en_US
+    root: i18n.en_US,
+    el_GR: i18n.el_GR,
+    hu_HU: i18n.hu_HU,
+    it_IT: i18n.it_IT,
+    ko_KR: i18n.ko_KR,
+    pt_BR: i18n.pt_BR
   },
   themeConfig: {
     outline: {
@@ -68,7 +73,6 @@ export default defineConfig({
     'cs_CZ/**',
     'da_DK/**',
     'de_DE/**',
-    'el_GR/**',
     'en_PT/**',
     'es_ES/**',
     'et_EE/**',
@@ -76,16 +80,12 @@ export default defineConfig({
     'fr_FR/**',
     'he_IL/**',
     'hr_HR/**',
-    'hu_HU/**',
     'id_ID/**',
-    'it_IT/**',
     'ja_JP/**',
-    'ko_KR/**',
     'ms_MY/**',
     'nl_NL/**',
     'no_NO/**',
     'pl_PL/**',
-    'pt_BR/**',
     'pt_PT/**',
     'ro_RO/**',
     'ru_RU/**',
