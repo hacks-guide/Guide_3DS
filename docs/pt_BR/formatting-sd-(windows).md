@@ -1,6 +1,6 @@
 # Formatting SD (Windows)
 
-## Required Reading
+## Leitura Obrigatória
 
 Essa é uma seção adicional para a formatação de um cartão SD para fazê-lo funcional com o 3DS.
 
@@ -8,7 +8,7 @@ Se o 3DS já reconhece o cartão SD, este guia não é necessário.
 
 Esta página é destinada apenas a usuários do Windows. Caso você não esteja usando Windows, acesse a página [Formatando SD (Linux)](formatting-sd-\(linux\)) ou [Formatando SD (Mac)](formatting-sd-\(mac\))
 
-## What You Need
+## O que é necessário
 
 - **For SD cards 32GB or smaller:** the latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
 - **For SD cards 64GB or larger:** The latest version of [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
