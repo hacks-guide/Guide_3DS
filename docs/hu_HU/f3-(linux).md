@@ -66,6 +66,6 @@ Ha a teszt eredménye bármi más, elképzelhető, hogy az SD kártyád sérült
 
 ::: tip
 
-Return to [Get Started](get-started)
+Vissza a [kezdeti lépésekhez](get-started)
 
 :::
