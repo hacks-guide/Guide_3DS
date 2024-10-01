@@ -1,6 +1,6 @@
 # Move EmuNAND
 
-## Required Reading
+## Kötelező olvasmány
 
 Ez egy kiegészítő rész, amelyben egy korábbi EmuNAND tartalmát fogjuk átvinni az új SysNAND CFW-re, majd töröljük a régi EmuNAND partíciót. Jó, ha tudod, hogy az EmuNAND és a RedNAND fogalmak [ugyanazon koncepció](http://3dbrew.org/wiki/NAND_Redirection) két, kicsiben különböző megvalósítását jelentik.
 
@@ -12,14 +12,14 @@ Az alábbiak használatához már telepítened kellett a következőket: Luma3DS
 
 :::
 
-## What You Need
+## Amire szükséged lesz
 
 - An existing EmuNAND
-- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
+- A [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) legújabb kiadása (a GodMode9 `.zip` fájl)
 
-## Instructions
+## Lépések
 
-### Section I - Prep Work
+### I. rész - Előkészületek
 
 1. Kapcsold ki a konzolod
 2. Helyezd az SD kártyád a számítógépbe
@@ -27,7 +27,7 @@ Az alábbiak használatához már telepítened kellett a következőket: Luma3DS
 4. Másold át a `gm9` mappát a GodMode9 `.zip`-ből az SD kártyád gyökerébe
 5. Tedd vissza az SD kártyád a konzoldba
 
-### Section II - Backup SysNAND DSiWare Saves
+### II. rész - DSiWare mentések kimásolása a SysNAND-ról
 
 ::: info
 
@@ -44,7 +44,7 @@ Ha nincs egy DSiWare játékod vagy mentésed sem, ami fontos lenne számodra, a
    - This process may take some time if you have many DSiWare games
 6. Nyomd meg a (B) gombot kétszer, hogy visszamenj a főmenübe
 
-### Section III - Backup GBA VC Saves
+### III. rész - GBA VC mentések kimásolása
 
 ::: info
 
@@ -82,7 +82,7 @@ Egy `<TitleID>.gbavc.sav` fájl Title ID-jének azonosításához használhatod 
    - Nyomd meg az (A) gombot a folytatáshoz
    - Nyomd meg a (Start) gombot a konzolod újraindításához
 
-### Section IV - Copy EmuNAND to SysNAND
+### IV. rész - EmuNAND másolása a SysNAND-ba
 
 1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et
 2. Menj ide: `[E:] EMUNAND VIRTUAL`
@@ -95,7 +95,7 @@ Egy `<TitleID>.gbavc.sav` fájl Title ID-jének azonosításához használhatod 
 7. Nyomd meg a (B) gombot, hogy elutasítsd az írási engedélyek visszavonását, ha kérdezi
 8. Nyomd meg a (B) gombot, hogy visszamenj a főmenübe
 
-### Section V - Restore DSiWare Saves
+### V. rész - DSiWare mentések visszaállítása
 
 ::: info
 
@@ -115,7 +115,7 @@ Ha korábban nem másoltál ki egy DSiWare mentést sem, hagyd ki ezt a részt.
 9. Nyomd meg a (B) gombot, hogy elutasítsd az írási engedélyek visszavonását, ha kérdezi
 10. Nyomd meg a (B) gombot kétszer, hogy visszamenj a főmenübe
 
-### Section VI - Restore GBA VC Saves
+### VI. rész - GBA VC mentések visszaállítása
 
 ::: info
 
@@ -148,7 +148,7 @@ Egy `<TitleID>.gbavc.sav` fájl Title ID-jének azonosításához használhatod 
    - Launch the GBA VC game
    - Exit the GBA VC game
 
-### Section VII - Backup SysNAND
+### VII. rész - SysNAND biztonsági mentése
 
 1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et
 
@@ -156,7 +156,7 @@ Egy `<TitleID>.gbavc.sav` fájl Title ID-jének azonosításához használhatod 
 
 1. **Készíts az SD kártyádon található fájlokról biztonsági másolatot a számítógépedre; a következő lépésekben minden fájl törlődni fog róla**
 
-### Section VIII - Format SD card
+### VIII. rész - SD kártya formázása
 
 1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et
 
