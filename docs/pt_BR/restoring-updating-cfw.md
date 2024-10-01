@@ -1,4 +1,4 @@
-# Restoring / Updating CFW
+# Restaurando / Atualizando CFW
 
 ## Leitura Obrigatória
 
@@ -13,11 +13,11 @@ Seu cartão SD precisa estar formatado como FAT32 para seguir este guia, caso co
 ## Instruções
 
 1. Insira o cartão SD no seu computador
-2. Copy everything from the Luma3DS `.zip` to the root of your SD card, replacing any existing files
+2. Copie tudo do arquivo `.zip` do Luma3DS para a raiz do seu cartão SD, substituindo quaisquer arquivos existentes
    - A raiz do cartão SD refere-se ao diretório inicial do seu cartão SD, onde você pode ver a pasta Nintendo 3DS, mas não está dentro dela
 3. Reinsira o cartão SD no seu console
 4. Ligue o seu console
-   - If you see the Luma3DS configuration menu, press (Start) to save and reboot
+   - Se você ver o menu de configuração do Luma3DS, pressione (Start) para salvar e reiniciar
 
 ::: tip
 
