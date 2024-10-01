@@ -1,5 +1,5 @@
 1. A konzolodnak a Luma3DS konfigurációs menübe kellett bootolnia
-   - Luma3DS configuration menu are settings for the Luma3DS custom firmware. Sok ezek közül a beállítások közül hasznos az egyedivé tételhez vagy a debuggoláshoz
-   - For the purpose of this guide, **leave these options on the default settings** (do not check or uncheck anything)
-   - If your console shuts down when you try to power it on, ensure that you have copied `boot.firm` from the Luma3DS `.zip` to the root of your SD card
+   - A Luma3DS konfigurációs menü a beállítások a Luma3DS egyedi firmware-hez. Sok ezek közül a beállítások közül hasznos az egyedivé tételhez vagy a debuggoláshoz
+   - Az útmutató céljainak megfelelően **hagyd ezeket a beállításokat alapértelmezetten** (ne vegyél ki vagy rakj be pipát)
+   - Ha a konzolod kikapcsol amikor bekapcsolod, bizonyosodj meg róla, hogy átmásoltad-e a `boot.firm` fájlt a Luma3DS `.zip` fájlból az SD kártya gyökerébe
 2. Mentéshez és újraindításhoz nyomd meg a (Start) gombot
