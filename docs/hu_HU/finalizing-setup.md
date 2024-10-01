@@ -1,6 +1,6 @@
 # Telepítés véglegesítése
 
-## Required Reading
+## Kötelező olvasmány
 
 A `boot.firm` nevezetű fájl az, amit maga a boot9strap elindít, amint betöltődik a NAND-ból. Ebben az esetben a [LumaTeam](https://github.com/LumaTeam/) által készített Luma3DS-t használjuk a konzol patcheléséhez, hogy tudjon homebrew programokat futtatni.
 
@@ -22,7 +22,7 @@ Ha nem szeretnéd ezeket az alkalmazásokat, eltávolíthatod őket, miután bef
 
 :::
 
-## Compatibility Notes
+## Kompatibilitási megjegyzések
 
 ::: warning
 
@@ -36,14 +36,14 @@ Ha az előző egyedi firmware rendszered EmuNAND alapú volt és szeretnéd az E
 
 :::
 
-## What You Need
+## Amire szükséged lesz
 
-- [x_finalize_helper.firm](https://github.com/hacks-guide/finalize/releases/latest/download/x_finalize_helper.firm) (direct download)
-- [finalize.romfs](https://github.com/hacks-guide/finalize/releases/latest/download/finalize.romfs) (direct download)
+- [x_finalize_helper.firm](https://github.com/hacks-guide/finalize/releases/latest/download/x_finalize_helper.firm) (közvetlen letöltés)
+- [finalize.romfs](https://github.com/hacks-guide/finalize/releases/latest/download/finalize.romfs) (közvetlen letöltés)
 
-## Instructions
+## Lépések
 
-### Section I - Prep Work
+### I. rész - Előkészületek
 
 Ebben a fejezetben fel fogod másolni az ahhoz szükséges fájlokat, hogy kövesd a lépéseket ezen az oldalon.
 
@@ -68,13 +68,13 @@ Az alábbi képernyőképek mutatják az SD kártya minimális elrendezését ah
 
 :::
 
-### Section II - Updating the System
+### II. rész - A rendszer frissítése
 
 Ebben a fejezetben frissíteni fogod a rendszered a legutolsó verzióra, ami biztonságos az egyedi firmware-rel.
 
 <!--@include: ./_include/sysupdate.md -->
 
-### Section III - RTC and DSP setup
+### III. rész - RTC és DSP telepítése
 
 Ebben a fejezetben szinkronizálni fogod a 3DS belső óráját az aktuális időhöz és dumpolni a hang firmware-t (ami szükséges néhány homebrew alkalmazáshoz, hogy a hangot megfelelően használja).
 
@@ -88,7 +88,7 @@ Ebben a fejezetben szinkronizálni fogod a 3DS belső óráját az aktuális id�
 7. Nyomd meg a (B) gombot, hogy visszakerülj a Rosalina főmenüjébe
 8. Nyomd meg a (B) gombot, hogy kilépj a Rosalina menüből
 
-### Section IV - Setup Script
+### IV. rész - Telepítő szkript
 
 Ebben a fejezetben szkripteket fogsz használni arra, hogy automatizáld a homebrew telepítést, az SD kártya takarítást és a rendszer mentést.
 
@@ -106,7 +106,7 @@ Ebben a fejezetben szkripteket fogsz használni arra, hogy automatizáld a homeb
 9. Kövesd a script utasításait és válaszolj meg minden kérdést
    - If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting#finalizing-setup) page
 10. Ha a szkript a "Setup complete!" üzenetet írja, nyomj (A) gombot az eszköz kikapcsolásához
-    - If you do NOT see the message "Setup complete!", the script was not successful and you will need to redo this section from Step 3
+    - Ha NEM láttad a "Setup complete!" üzenetet, akkor a szkript nem volt sikeres és újra kell csinálnod ezt a részt a 3. lépéstől
 11. Helyezd az SD kártyád a számítógépbe
 12. Másold a `/gm9/backups/` mappát az SD kártyádról egy biztonságos helyre a számítógépeden
     - This folder contains critical file backups and should be backed up to multiple locations (i.e. cloud storage) if possible
