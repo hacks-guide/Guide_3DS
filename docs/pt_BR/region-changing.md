@@ -23,13 +23,13 @@ Como parte deste processo, a configuração do console será redefinida para os 
 
 Se você mudar a região do seu console:
 
-- You will not be able to use your NNID (if you have one). Os NNIDs são fixados para a região na qual foram criados.
-- You may not be able to access the eShop, even if you [delete your eShop account](https://en-americas-support.nintendo.com/app/answers/detail/a_id/74/~/how-to-delete-a-nintendo-eshop-account) beforehand. Isso é porque certos aplicativos tendem a permanecer ligados ao 3DS, mesmo após a exclusão da conta (especialmente no New 3DS).
-  - This is still relevant because, while purchases can no longer be made on eShop, game updates are still being provided. Atualizações podem fornecer conteúdo extra ou corrigir erros.
-  - This logic extends to system transfers, meaning you would not be able to perform a system transfer from a USA 3DS to a region-changed JPN-to-USA 3DS.
-  - Pokémon Bank also requires working eShop access.
-  - That being said, system transfer and game updates are region locked anyway (e.g. Japanese eShop only has Japanese game updates).
-- **You will not be able to uninstall custom firmware without bricking the console!** If you intend to uninstall custom firmware in the future, you **MUST** restore your NAND backup that was created before the region change.
+- Você não será capaz de usar a sua NNID (se tiver uma). Os NNIDs são fixados para a região na qual foram criados.
+- Você não poderá acessar a eShop, mesmo se você [deletar sua conta da eShop](https://en-americas-support.nintendo.com/app/answers/detail/a_id/74/~/how-to-delete-a-nintendo-eshop-account) previamente. Isso é porque certos aplicativos tendem a permanecer ligados ao 3DS, mesmo após a exclusão da conta (especialmente no New 3DS).
+  - Isso ainda é relevante porque, enquanto novas compras não podem mais ser feitas na eShop, atualizações para jogos ainda são fornecidas. Atualizações podem fornecer conteúdo extra ou corrigir erros.
+  - Esta lógica se estende para transferências de sistema, o que significa que você não poderá realizar uma Transferência de Dados de um 3DS americano para um 3DS japonês cuja região foi alterada.
+  - Pokémon Bank também requer acesso à eShop.
+  - Dito isso, transferências de sistema e atualizações de jogos são bloqueadas de qualquer forma (por exemplo, a eShop japonesa tem apenas atualizações para jogos japoneses).
+- **Você não poderá desinstalar o custom firmware sem causar um brick no console!** Se você desejar desinstalar o custom firmware no futuro, você DEVE restaurar o seu backup da NAND que foi criado antes da mudança de região.
 
 :::
 
@@ -40,7 +40,7 @@ Se você mudar a região do seu console:
 - A versão mais recente do [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(o arquivo `.3dsx`)_
 - Um cliente de torrent como [qBittorrent](https://www.qbittorrent.org/download.php) ou [Deluge](http://dev.deluge-torrent.org/wiki/Download)
   - Se você já tem um cliente de torrent, não é necessário baixar um novo
-- The 11.15.0 CTRTransfer image for your console type of the region that you want to change to (e.g. Download "New 3DS or 2DS - USA" if you have a New 3DS and want to change your region to USA)
+- A imagem 11.15.0 da CTRTransfer para o seu modelo de console, da região para a qual você deseja mudar (por exemplo, "New 3DS ou 2DS - USA" se você tem um New 3DS e deseja mudar a região para USA)
 
 <!--@include: ./_include/ctrtransfer-images.md -->
 
