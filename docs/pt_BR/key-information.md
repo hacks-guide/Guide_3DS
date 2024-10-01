@@ -1,24 +1,18 @@
 # Informação Importante
 
-::: danger
-
-<!--@include: ./_include/3ds-online.md -->
-
-:::
-
 ::: info
 
-Se esta for sua primeira vez modificando um 3DS (ou você não é familiarizado com tecnologia), continue lendo! Caso contrário, se você tiver experiência prévia e souber o que está fazendo, volte para [Começando](get-started).
+If this is your first time modding a 3DS (or you're unfamiliar with technology), keep reading! Otherwise, if you have prior experience and know what you're doing, continue to [Get Started](get-started).
 
 :::
 
-Esta página cobre algumas das terminologias de computador e informações específicas do 3DS que você deve saber antes de seguir este guia.
+This page covers some of the base computer terminology and 3DS-specific information that you should know before following this guide.
 
-Cada seção é recolhida por padrão. Clique ou toque no nome da seção para abri-lo.
+Each section is collapsed by default. Click or tap on the name of the section to open it.
 
-## Coisas que você deve saber sobre o 3DS
+## Things you should know about the 3DS
 
-:::: details Compatibilidade de 3DS/2DS
+:::: details 3DS/2DS compatibility
 
 ::: info
 
@@ -26,11 +20,11 @@ Cada seção é recolhida por padrão. Clique ou toque no nome da seção para a
 
 :::
 
-Este guia funciona com todos os consoles de varejo da família de consoles do Nintendo 3DS (incluindo o 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL e New 2DS XL/LL), independentemente da região ou firmware.
+This guide works with every retail console in the Nintendo 3DS family of consoles (including the 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, and New 2DS XL/LL), regardless of region or firmware.
 
 ::::
 
-:::: details Compatibilidade de computador
+:::: details Computer compatibility
 
 ::: info
 
@@ -38,11 +32,11 @@ Este guia funciona com todos os consoles de varejo da família de consoles do Ni
 
 :::
 
-Na maioria dos casos você pode seguir este guia, contanto que possa baixar arquivos da Internet e copiá-los para o seu cartão SD. Dependendo de seu dispositivo computador/celular/eletrônico, talvez seja necessário comprar um adaptador USB para cartão SD para permitir que o computador leia seu cartão SD.
+In most cases, you can follow this guide as long as you are able to download files from the Internet and copy them to your SD card. Depending on your computer/phone/electronic device, you may need to purchase a USB to SD card adapter to allow your computer to read your SD card.
 
 ::::
 
-:::: details Localização do cartão SD, tipo e capacidade
+:::: details SD card location, type, and capacity
 
 ::: info
 
@@ -50,43 +44,43 @@ Na maioria dos casos você pode seguir este guia, contanto que possa baixar arqu
 
 :::
 
-O local do cartão SD e o tipo de cartão SD que é aceito dependem do modelo do seu 3DS. Mais informações podem ser encontradas na [página de suporte oficial da Nintendo](https://en-americas-support.nintendo.com/app/answers/detail/a_id/271/~/how-to-insert-an-sd-card-or-microsd-card) (disponível apenas em Inglês).
+The location of the SD card slot and the type of SD card that is accepted depends on the model of your 3DS. More information can be found on [Nintendo's official support page](https://en-americas-support.nintendo.com/app/answers/detail/a_id/271/~/how-to-insert-an-sd-card-or-microsd-card).
 
-O 3DS pode ler cartões SD de qualquer capacidade (mesmo aqueles maiores que 32GB), mas o cartão deve ser formatado como FAT32 (**não** exFAT ou NTFS). Se o seu cartão SD ainda não estiver formatado corretamente, use uma dessas páginas para formatá-lo, dependendo do seu sistema operacional: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)). Cartões SD maiores que **128GB** não são recomendados devido a problemas conhecidos com temas personalizados e gráficos do GBA/DS.
+The 3DS can read SD cards of any capacity (even those larger than 32GB), but the card must be formatted as FAT32 (**not** exFAT or NTFS). You can use one of the following tools to format your SD card, depending on your operating system: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)). SD cards larger than **128GB** are not recommended due to known issues with custom themes and GBA/DS graphics.
 
 ::: warning
 
-Para seguir este guia, você precisará de um cartão SD com capacidade de pelo menos **2GB**.
+To follow this guide, you'll need an SD card with a capacity of at least **2GB**.
 
 :::
 
 ::: info
 
-Se você quiser, você pode verificar se há erros no seu cartão SD antes de seguir este guia usando [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), ou [F3XSwift (Mac)](f3xswift-\(mac\))
+If you want, you can check your SD card for errors before following this guide using [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), or [F3XSwift (Mac)](f3xswift-\(mac\))
 
 :::
 
 ::::
 
 :::: warning
-::: details Riscos em potencial (Aviso)
+::: details Potential risks (Disclaimer)
 
-Ao aplicar modding em seu console, você o sujeita a possibilidade remota (mas não impossível) de o console ter um brick (renderizado sem funcionamento). _**O posicionamento de arquivos incorreto NÃO irá causar um brick em seu console**_, mas pular as instruções propositalmente talvez o cause.
+By modding your console, you subject it to the remote (but non-zero) possibility of the console being bricked (rendered non-functional). _**Incorrect file placement will NOT brick your console**_, but purposely skipping instructions might.
 
-Resumindo: Modificar o seu console é seguro, mas é _**sua responsabilidade**_ se algo der errado.
+In short: Modding your console is safe, but it's _**your responsibility**_ if something goes wrong.
 
 :::
 ::::
 
-## Coisas que você precisa fazer no seu computador
+## Things you need to do on your computer
 
 ::: warning
 
-Seguir sozinho este guia não deve resultar em perda de dados, mas a corrupção do cartão SD é sempre uma possibilidade. Você deve fazer um backup do conteúdo do seu cartão SD (especialmente a pasta `Nintendo 3DS`) se você tiver dados importantes.
+Following this guide alone should not result in data loss, but SD card corruption is always a possibility. You should make a backup of your SD card contents (especially the `Nintendo 3DS` folder) if you have important data.
 
 :::
 
-:::: details Terminologia de localização de arquivos (por exemplo, "raiz do cartão SD", "/luma/")
+:::: details File placement terminology (e.g. "root of SD", "/luma/")
 
 ::: info
 
@@ -94,9 +88,9 @@ Seguir sozinho este guia não deve resultar em perda de dados, mas a corrupção
 
 :::
 
-Ao copiar arquivos para o cartão SD, é importante copiá-los para o local certo - caso contrário, o console não detecta o arquivo e o exploit ou o software que você está tentando usar não funcionará. Um termo que você verá com frequência neste guia é **raiz do cartão SD**, o que significa que você não está dentro de nenhuma pasta no seu cartão SD. O diretório que aparece quando você abre o cartão SD pela primeira vez em seu computador é chamado de 'raíz'.
+When copying files to the SD card, it is important to copy them to the right location - otherwise, the console will not detect the file and the exploit or software you are trying to use will not work. A term you will see frequently on this guide is **root of the SD card**, which means you are not inside any folder on your SD card. The directory that appears when you first open your SD card on your computer is called the 'root'.
 
-Você também pode ver os nomes das pastas indicados assim: `/pasta/`. As barras são usadas para indicar diretórios e não fazem parte do nome da pasta. Por exemplo, `/pasta1/pasta2/` iria se referir a `pasta2` dentro da `pasta1`:
+You may also see folder names indicated like this: `/folder/`. The slashes are used to indicate directories and are not part of the name of the folder. For example, `/folder1/folder2/` would refer to `folder2` inside of `folder1`:
 
 ::: info
 
@@ -104,7 +98,7 @@ Você também pode ver os nomes das pastas indicados assim: `/pasta/`. As barras
 
 :::
 
-**Sinais de Maior que e Menor que** (\< and \>) também são ocasionalmente usados para se referir a identificadores específicos do sistema. Por exemplo, se o guia diz `<ID0>`, ele está se referindo ao identificador específico do sistema dentro da pasta `Nintendo 3DS`, em vez de uma pasta literalmente chamada "ID0":
+**Angle brackets** (\< and \>) are also occasionally used to refer to system-specific identifiers. For example, if the guide says `<ID0>`, it is referring to the system-specific identifier inside of the `Nintendo 3DS` folder, rather than a folder literally named "ID0":
 
 ::: info
 
@@ -114,7 +108,7 @@ Você também pode ver os nomes das pastas indicados assim: `/pasta/`. As barras
 
 ::::
 
-:::: details Baixando arquivos do GitHub
+:::: details Downloading files from GitHub
 
 ::: info
 
@@ -122,11 +116,11 @@ Você também pode ver os nomes das pastas indicados assim: `/pasta/`. As barras
 
 :::
 
-Neste guia, você irá copiar arquivos que são baixados em seu computador/celular para o cartão SD do seu console. Muitos desses arquivos vêm do GitHub, que é um site usado pelos desenvolvedores para publicar seus aplicativos de código aberto. Ao baixar arquivos do GitHub, você deve baixar o arquivo que _não é_ o source code.
+In this guide, you will copy files that are downloaded on your computer/phone to your console's SD card. Many of these files come from GitHub, which is a website used by developers to publish their open-source releases. When downloading files from GitHub, you should download the file that _isn't_ source code.
 
 ::::
 
-:::: details Abrindo/extraindo arquivos
+:::: details Opening/extracting files
 
 ::: info
 
@@ -134,15 +128,15 @@ Neste guia, você irá copiar arquivos que são baixados em seu computador/celul
 
 :::
 
-Alguns dos arquivos que você será solicitado a baixar vêm no formato de arquivo `.zip`, que é usado para empacotar vários arquivos em um só arquivo.
+Some of the files that you will be asked to download come in the `.zip` file format, which is used to package multiple files into one file.
 
-Quando lhe dizem para "copiar (arquivo) de (arquivo).zip", isso significa que você precisa abrir (ou "extrair") o arquivo ZIP. Dentro do arquivo ZIP terá o arquivo que você está procurando, no qual você poderá copiar para o local especificado no seu cartão SD.
+When you are told to "copy (file) from (file).zip", that means that you need to open (or "extract") the ZIP file. Inside the ZIP file will be the file you're looking for, after which you can copy it to the specified location on your SD card.
 
-Na maioria dos sistemas operacionais, você pode extrair arquivos clicando duas vezes no arquivo. Se isso não funcionar, você pode instalar uma ferramenta de extração de terceiros de boa reputação como [7-zip](https://7-zip.org/).
+On most operating systems, you can extract files by double-clicking the file. If this doesn't work, you can install a reputable third-party extraction tool like [7-zip](https://7-zip.org/) instead.
 
 ::::
 
-:::: details (Apenas Windows) Extensões de arquivos
+:::: details (Windows only) File extensions
 
 ::: info
 
@@ -150,17 +144,17 @@ Na maioria dos sistemas operacionais, você pode extrair arquivos clicando duas 
 
 :::
 
-Se o seu computador estiver executando o Windows, extensões de arquivos podem estar ocultadas por padrão, o que pode dificultar a busca de arquivos. Para habilitar extensões de arquivo, siga [estas instruções](file-extensions-\(windows\)).
+If your computer is running Windows, file extensions may be hidden by default, which may make it harder to find the files you're looking for. To enable file extensions, follow [these instructions](file-extensions-\(windows\)).
 
 ::::
 
-## Obtendo ajuda
+## Getting help
 
-Se você tiver um problema ao seguir este guia, há muitas maneiras de obter ajuda!
+If you experience an issue while following this guide, there are many ways that you can get help!
 
-- Se você tiver alguma pergunta que não foi respondida nesta página, a resposta pode estar no [FAQ de Pré-Instalação](faq#pre-installation-faq).
-- Se você encontrar um problema enquanto segue este guia, você pode conferir o guia de [troubleshooting](troubleshooting) para possíveis soluções.
-- Se os recursos fornecidos aqui não estiverem ajudando, você pode obter suporte passo-a-passo no [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp).
+- If you have any questions that haven't been answered on this page, their answers might be in the [Pre-Installation FAQ](faq#pre-installation-faq).
+- If you experience an issue while following this guide, you can check the [Troubleshooting](troubleshooting) page for a solution.
+- If the resources we've provided here aren't helping, you can get one-on-one support over at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
 
 ::: tip
 
