@@ -1,10 +1,10 @@
 # Instalando boot9strap (safecerthax)
 
-:::details Technical Details (optional)
+:::details Detalhes Técnicos (opcional)
 
 :::
 
-## Compatibility Notes
+## Notas de Compatibilidade
 
 safecerthax é compatível com todos os consoles Old 3DS e Old 2DS de todas as regiões nas versões do sistema 1.0.0 a 11.14.0.
 
@@ -22,13 +22,13 @@ Este exploit não funcionará no New 3DS, New 3DS XL ou no New 2DS XL. Por favor
 
 ## Instruções
 
-### Section I - Hardware Button Check
+### Seção I - Verificação de Botões
 
 Nesta seção, você verá se seus botões de gatilho estão funcionando no console. Isso determinará se o seu console é compatível com este método.
 
 1. Ligue o seu console
 2. Quando você ver o Menu HOME, pressione os botões do (Gatilho Esquerdo) e do (Gatilho Direito) ao mesmo tempo
-   - The camera applet should appear
+   - O applet da câmera deve aparecer
 3. Desligue seu console
 
 ::: warning
@@ -37,12 +37,12 @@ Se a câmera NÃO aparecer, você não pode seguir este método. Se este for o c
 
 :::
 
-### Section II - Prep Work
+### Seção II - Preparação
 
 Nesta seção, você irá copiar os arquivos necessários para acionar o exploit safecerthax.
 
 1. Insira o cartão SD no seu computador
-2. Copy everything from the Luma3DS `.zip` to the root of your SD card
+2. Copie tudo do arquivo `.zip` do Luma3DS para a raiz do seu cartão SD
    - A raiz do cartão SD refere-se ao diretório inicial do seu cartão SD, onde você pode ver a pasta Nintendo 3DS, mas não está dentro dela
 3. Crie uma pasta chamada `boot9strap` na raiz do seu cartão SD
 4. Copie o `boot9strap.firm` e o `boot9strap.firm.sha` do `.zip` do boot9strap para a pasta `/boot9strap/` no seu cartão SD
@@ -50,7 +50,7 @@ Nesta seção, você irá copiar os arquivos necessários para acionar o exploit
 6. Reinsira o cartão SD no seu console
 7. Ligue o seu console
 
-### Section III - safecerthax proxy
+### Seção III - Proxy do safecerthax
 
 Nesta seção, você vai alterar suas configurações de conexão com a Internet para usar uma rede de proxy projetada para fazer exploit do recurso de Atualização do Sistema do seu console.
 
@@ -58,21 +58,21 @@ Nesta seção, você vai alterar suas configurações de conexão com a Internet
 
 1. Desligue seu console
 
-### Section IV - safecerthax
+### Seção IV - safecerthax
 
 Nesta seção, você entrará no Modo de Segurança (um recurso disponível em todos os consoles da família 3DS) onde safecerthax será acionado, que irá iniciar você no instalador do boot9strap (custom firmware).
 
 1. Com o seu console ainda desligado, segure os seguintes botões: (Gatilho Esquerdo) + (Gatilho Direito) + (D-Pad para Cima) + (A), e enquanto segura esses botões juntos, ligue seu console
-   - Keep holding the buttons until the console boots into Safe Mode (a "system update" menu)
+   - Continue segurando os botões até que o console inicialize o Modo de Segurança (um menu de "atualização do console")
 2. Pressione "OK" para aceitar a atualização
-   - There is no update. Isto faz parte do exploit
+   - Não há atualização. Isto faz parte do exploit
 3. Pressione "Eu aceito" para aceitar os termos e condições
 4. A atualização eventualmente falhará, com o código de erro `003-1099`. Isto é intencional
 5. Pressione "OK" para fechar a mensagem de erro
 6. Se o exploit for bem-sucedido, você terá entrado no SafeB9SInstaller
-   - If the console freezes or crashes, force power off the console, then retry this section
+   - Se o console congelar ou ter um crash, desligue o console forçadamente, então tente novamente esta seção
 
-### Section V - Installing boot9strap
+### Seção V - Instalando boot9strap
 
 Nesta seção, você instalará custom firmware no seu console.
 
@@ -84,7 +84,7 @@ Nesta seção, você instalará custom firmware no seu console.
 
 <!--@include: ./_include/luma3ds-installed-note.md -->
 
-### Section VI - Restoring default proxy
+### Seção VI - Restaurando o proxy padrão
 
 <!--@include: ./_include/rmproxy.md -->
 
