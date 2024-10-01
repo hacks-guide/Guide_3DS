@@ -1,10 +1,10 @@
 # Boot9strap telepítése (safecerthax)
 
-:::details Technical Details (optional)
+:::details Technikai részletek (opcionális)
 
 :::
 
-## Compatibility Notes
+## Kompatibilitási megjegyzések
 
 A safecerthax kompatibilis minden Old 3DS and Old 2DS konzollal minden régióban az 1.0.0 verziótól a 11.14.0-ig.
 
@@ -14,15 +14,15 @@ Ez az exploit nem működik az New 3DS, New 3DS XL, vagy New 2DS XL készüléke
 
 :::
 
-## What You Need
+## Amire szükséged lesz
 
-- The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
-- The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- A [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) legfrissebb verziója (közvetlen letöltés)
+- A [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) legfrissebb verziója (közvetlen letöltés)
+- A [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) legújabb kiadása (a Luma3DS `.zip` fájl)
 
-## Instructions
+## Lépések
 
-### Section I - Hardware Button Check
+### I. rész - Fizikai gombok ellenőrzése
 
 Ebben a fejezetben tesztelni fogod azt, hogy működnek-e a váll gombok a konzolodon. Ez meghatározza, hogy a konzolod melyik metódussal kompatibilis.
 
@@ -37,7 +37,7 @@ Ez a módszer nem használható, ha a kamera NEM jelenik meg. Ha ez az eset, has
 
 :::
 
-### Section II - Prep Work
+### II. rész - Előkészületek
 
 Ebben a fejezetben fel fogod másolni a fájlokat, amik a safecerthax exploit kiváltásához szükségesek.
 
@@ -50,7 +50,7 @@ Ebben a fejezetben fel fogod másolni a fájlokat, amik a safecerthax exploit ki
 6. Tedd vissza az SD kártyád a konzoldba
 7. Kapcsold be a konzolod
 
-### Section III - safecerthax proxy
+### III. rész - safecerthax proxy
 
 Ebben a fejezetben módosítani fogod az Internet kapcsolat beállításokat hogy egy proxy hálózatot használj, ami úgy lett megtervezve, hogy exploitolja a System update szolgáltatását a konzolodnak.
 
@@ -58,7 +58,7 @@ Ebben a fejezetben módosítani fogod az Internet kapcsolat beállításokat hog
 
 1. Kapcsold ki a konzolod
 
-### Section IV - safecerthax
+### IV. rész - safecerthax
 
 Ebben a fejezetben be fogsz lépni a Safe Mode-ba (egy funkció, ami elérhető minden 3DS családba tartozó konzolon) ahol a safecerthax kiváltásra kerül, ami a boot9strap (egyedi firmware) telepítőt indítja.
 
@@ -72,7 +72,7 @@ Ebben a fejezetben be fogsz lépni a Safe Mode-ba (egy funkció, ami elérhető 
 6. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
    - If the console freezes or crashes, force power off the console, then retry this section
 
-### Section V - Installing boot9strap
+### V. rész - boot9strap telepítése
 
 Ebben a fejezetben egyedi firmware-t fogsz telepíteni a konzolodra.
 
@@ -84,7 +84,7 @@ Ebben a fejezetben egyedi firmware-t fogsz telepíteni a konzolodra.
 
 <!--@include: ./_include/luma3ds-installed-note.md -->
 
-### Section VI - Restoring default proxy
+### VI. rész - A Proxy beállítás alaphelyzetbe állítása
 
 <!--@include: ./_include/rmproxy.md -->
 
