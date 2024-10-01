@@ -1,6 +1,6 @@
 # Instalando boot9strap (MSET9)
 
-## Choose your operating system
+## Escolha seu sistema operacional
 
 As instruções para o MSET9 diferem dependendo do computador, telefone ou tablet **que você está usando para fazer modificações em seu console**.
 
