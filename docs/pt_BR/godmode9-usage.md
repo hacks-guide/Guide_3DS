@@ -46,7 +46,7 @@ O GodMode9 agora está atualizado.
 
 :::
 
-## Creating a NAND Backup
+## Criando um Backup da NAND
 
 1. Aperte e segure (Start), e enquanto segura (Start), ligue seu console. Isso vai inicializar o GodMode9
 
@@ -58,7 +58,7 @@ Seu backup da NAND foi criado com sucesso.
 
 :::
 
-## Restoring a NAND Backup
+## Restaurando um Backup da NAND
 
 1. Desligue seu console
 2. Insira o cartão SD no seu computador
@@ -72,8 +72,8 @@ Seu backup da NAND foi criado com sucesso.
 10. Selecione "SysNAND Restore (safe)"
 11. Selecione o backup da NAND
 12. Aperte (A) para destravar "SysNAND (lvl3) writing", então aperte a sequência de botões solicitada
-    - This will **not** overwrite your boot9strap installation
-    - This process will take some time
+    - Isso **não** vai sobrescrever sua instalação do boot9strap
+    - Esse processo levará algum tempo
 13. Aperte (A) para continuar
 14. Aperte (B) para retornar para o menu principal
 15. Selecione "Exit"
@@ -85,7 +85,7 @@ Seu backup da NAND foi restaurado com sucesso. Agora você pode apagar `<date>_<
 
 :::
 
-## Injecting any .CIA app into Health & Safety
+## Injetando qualquer aplicativo .CIA no Informações sobre Saúde e Segurança
 
 ::: info
 
@@ -111,7 +111,7 @@ Seu aplicativo desejado foi agora injetado no aplicativo Saúde e Segurança.
 
 :::
 
-## Restoring Health & Safety after injecting a .CIA app
+## Restaurando o Informações sobre Saúde e Segurança após injetar um aplicativo .CIA
 
 ::: info
 
@@ -132,7 +132,7 @@ Saúde e Segurança foi revertido para o normal.
 
 :::
 
-## Format an SD card
+## Formatar um cartão SD
 
 ::: danger
 
@@ -142,7 +142,7 @@ Saúde e Segurança foi revertido para o normal.
 
 1. Aperte e segure (Start), e enquanto segura (Start), ligue seu console. Isso vai inicializar o GodMode9
 2. Aperte (Gatilho Direito) + (B) para desmontar o cartão SD atual e inserir o que você deseja formatar
-   - If GodMode9 shows an initialization error when inserting the SD Card to be formatted, it can safely be dismissed
+   - Se o GodMode9 mostrar um erro de inicialização ao inserir o cartão SD a ser formatado, o erro pode ser dispensado
 
 <!--@include: ./_include/format-sd-gm9.md -->
 
@@ -152,7 +152,7 @@ Seu cartão SD foi formatado com sucesso para ser utilizado com o console.
 
 :::
 
-## Removing an NNID without formatting your console
+## Removendo uma NNID sem formatar seu console
 
 ::: info
 
