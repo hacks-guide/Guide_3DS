@@ -1,4 +1,4 @@
-**닌텐도 3DS 온라인 서비스가 최근 종료되었습니다.** 알아두셔야 할 사항은 다음과 같습니다:
+**Nintendo 3DS online services have shut down.** Here's what you should know:
 
 - 현재 사용되는 3DS 모딩 방법은 영향을 받지 않습니다.
 - The Internet access of homebrew applications (i.e. Universal-Updater) is not affected.
