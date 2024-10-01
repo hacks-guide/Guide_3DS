@@ -1,4 +1,4 @@
-# Formatting SD (Mac)
+# SD formázás (Mac)
 
 ## Kötelező olvasmány
 
@@ -10,7 +10,7 @@ Ez az oldal Mac felhasználókra vonatkozik. Ha nem Mac rendszeren vagy, kövesd
 
 ## Lépések
 
-### OS X El Capitan (10.11) and later
+### OS X El Capitan (10.11) és későbbi
 
 1. Helyezd az SD kártyád a számítógépbe
 
@@ -45,7 +45,7 @@ Ez az oldal Mac felhasználókra vonatkozik. Ha nem Mac rendszeren vagy, kövesd
 
 13. Ha az SD kártya tartalmazott adatot a formázás előtt, akkor azokat most másold vissza a számítógépről
 
-### OS X Yosemite (10.10) and earlier
+### OS X Yosemite (10.10) és korábbi
 
 1. Helyezd az SD kártyád a számítógépbe
 
