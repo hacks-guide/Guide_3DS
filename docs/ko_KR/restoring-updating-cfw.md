@@ -19,16 +19,14 @@
 4. 콘솔의 전원을 켜 주세요
    - 만약 Luma3DS 설정 메뉴로 부팅되었다면, (Start)를 눌러서 저장/리부트해 주세요
 
-::: tip
+::: info
 
 최신 버전의 Luma3DS가 SD 카드의 내장 메모리로 설치되었습니다.
 
 :::
 
-___
+::: tip
 
-::: info
-
-만약 다른 홈브류를 재설치 또는 업데이트 하고 싶다면, [마무리 단계](finalizing-setup)로 계속합니다
+If you wish to re-install or update other homebrew applications (e.g. FBI, Homebrew Launcher), continue to [Finalizing Setup](finalizing-setup)
 
 :::
