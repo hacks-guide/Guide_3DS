@@ -2,7 +2,7 @@
 
 Esta página oferece troubleshooting para problemas comuns. Se você não consegue resolver seu problema com o conselho nesta página, por favor entre no [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp) e descreva o seu problema, incluindo o que você já tentou.
 
-:::details Table of Contents
+:::details Índice
 
 Usado em múltiplas páginas:
 
@@ -10,22 +10,22 @@ Usado em múltiplas páginas:
 
 Páginas do guia:
 
-- [Installing boot9strap (Soundhax)](#installing-boot9strap-soundhax)
-- [Installing boot9strap (MSET9)](#installing-boot9strap-mset9)
-- [Installing boot9strap (SSLoth-Browser)](#installing-boot9strap-ssloth-browser)
-- [Installing boot9strap (super-skaterhax)](#installing-boot9strap-super-skaterhax)
-- [Finalizing Setup](#finalizing-setup)
+- [Instalando boot9strap (Soundhax)](#installing-boot9strap-soundhax)
+- [Instalando boot9strap (MSET9)](#installing-boot9strap-mset9)
+- [Instalando boot9strap (SSLoth-Browser)](#installing-boot9strap-ssloth-browser)
+- [Instalando boot9strap (super-skaterhax)](#installing-boot9strap-super-skaterhax)
+- [Finalizando a Instalação](#finalizing-setup)
 
 Erros após a instalação:
 
-- [Boot issues](#boot-issues-on-consoles-with-custom-firmware)
-- [Software issues](#software-issues-on-consoles-with-custom-firmware)
+- [Problemas de inicialização](#boot-issues-on-consoles-with-custom-firmware)
+- [Problemas de software](#software-issues-on-consoles-with-custom-firmware)
 
 :::
 
-## Issues with SafeB9SInstaller
+## Problemas com o SafeB9SInstaller
 
-### Before opening SafeB9SInstaller
+### Antes de abrir o SafeB9SInstaller
 
 :::details Failed to open SafeB9SInstaller.bin
 
@@ -59,7 +59,7 @@ Você não tem o `secret_sector.bin` da pasta `boot9strap`, ou a pasta `boot9str
 
 :::
 
-:::details Something else
+:::details Outra coisa
 
 Entre no [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) para obter ajuda, e descreva a mensagem que você vê.
 
@@ -67,21 +67,21 @@ Entre no [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) para obter a
 
 ## Instalando boot9strap (Soundhax)
 
-:::details Red/purple/pink and white screen after running Soundhax
+:::details Tela vermelha/roxa/rosa e branca após executar o Soundhax
 
-If your console is on system version 9.4.0, 9.5.0, or 9.6.0, you may be encountering a bug with an old version of universal-otherapp. Download the latest version from [here](https://github.com/TuxSH/universal-otherapp/releases/latest).
+Se o seu console está na versão de sistema 9.4.0, 9.5.0, ou 9.6.0, você pode estar encontrando um bug com uma versão antiga do universal-otherapp. Baixe a última versão [aqui](https://github.com/TuxSH/universal-otherapp/releases/latest).
 
 Se seu console não está nesses firmware, isso provavelmente indica que você já tem custom firmware. Você deve [checar por CFW](checking-for-cfw).
 
 :::
 
-:::details "An error has occurred, forcing the software to close..." (white message box)
+:::details "Ocorreu um erro, forçando o software a fechar..." (caixa de mensagem branca)
 
 Há um problema com seu arquivo `otherapp.bin` (ele está faltando, colocado no lugar errado ou corrompido). Baixe a última versão do [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) e coloque-a na raiz do seu cartão SD.
 
 :::
 
-:::details "Could not play"
+:::details "Não é possível tocar"
 
 Você tem o arquivo Soundhax errado para o seu console e região, ou seu console é incompatível com o Soundhax. No último caso, seu curso de ação irá determinar em qual versão o seu 3DS está no momento. Entre no [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) para obter ajuda.
 
@@ -95,7 +95,7 @@ Se isso falhar, tente usar outro cartão SD.
 
 ## Instalando boot9strap (MSET9)
 
-:::details Python 3 is not installed
+:::details Python 3 não está instalado
 
 O Python não está instalado no computador que você está usando. Baixe-o do [site do Python](https://www.python.org/downloads/), clique duas vezes no instalador e siga as instruções para instalar o Python. Quando o Python estiver instalado, tente novamente.
 
@@ -129,12 +129,12 @@ Se isso não funcionar, seu cartão SD precisa ser formatado:
 
 :::details Title database: Not initialized!
 
-Ensure that you have reset the title database.
+Certifique-se que você reiniciou o banco de dados.
 
-- Please power on your console with your SD inserted
+- Desligue seu console com o cartão SD inserido
 - Inicie as Configurações do Sistema e navegue para `Gerenciador de Dados` -> `Nintendo 3DS` -> `Software` -> Apagar ([imagem](/images/screenshots/database-reset.jpg))
   - Isso não irá apagar nenhum dos seus dados
-- If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
+- Se você receber uma mensagem para reiniciar, após reiniciar, desligue seu console e comece novamente a partir de [Seção I Etapa 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
 
 Se você _não_ receber uma mensagem de redefinição, seu cartão SD precisa ser formatado:
 
@@ -146,7 +146,7 @@ Se você _não_ receber uma mensagem de redefinição, seu cartão SD precisa se
 
 1. Digite o número correspondente ao modelo do seu console e a versão, então pressione Enter
 2. Digite `2` e pressione enter para verificar o status do MSET9
-   - This will create the dummy databases again
+   - Isso irá criar as databases fictícias novamente
 3. Feche a janela de script do MSET9
 4. Comece novamente da [Seção I Etapa 12](installing-boot9strap-\(mset9-cli\)#section-i---prep-work).
 
@@ -187,12 +187,12 @@ Você tem múltiplas pastas ID0. Para determinar a pasta correta, siga estas ins
 2. Reinsira o cartão SD no seu console
 3. Ligue o seu console
 4. Espere o console gerar os dados do cartão SD
-   - Your applications will have disappeared. Isto é normal e será resolvido em breve
+   - Seus aplicativos terão desaparecido. Isto é normal e será resolvido em breve
 5. Desligue seu console
 6. Insira o cartão SD no seu computador
 7. Vá até a pasta `Nintendo 3DS` no seu cartão SD
 8. Anote os primeiros caractéres da pasta que você ver
-   - This is your true ID0, which we will keep in the real Nintendo 3DS folder
+   - Este é seu verdadeiro ID0, o qual manteremos na pasta Nintendo 3DS verdadeira
 9. Remova o ID0 da pasta `Nintendo 3DS` atual
 10. Mova a pasta do verdadeiro ID0 da pasta `BACKUP_Nintendo 3DS` para a pasta `Nintendo 3DS`
 11. Se existir, mova a pasta `Private` da pasta `BACKUP_Nintendo 3DS` para a pasta `Nintendo 3DS`
@@ -227,7 +227,7 @@ Um ou mais arquivos que o MSET9 precisa executar estão ausentes ou corrompidos.
 
 :::
 
-:::details Red screen after reinserting SD card (Section II Step 11)
+:::details Tela vermelha após reinserir o cartão SD (Seção II Passo 11)
 
 Talvez você esteja sem o `SafeB9S.bin` na raiz do seu cartão SD, ou o arquivo pode estar corrompido. Copie-o do `.zip` do MSET9, substituindo quaisquer arquivos existentes, depois siga essas instruções para remover o arquivo de ativação:
 
@@ -238,7 +238,7 @@ Talvez você esteja sem o `SafeB9S.bin` na raiz do seu cartão SD, ou o arquivo 
 
 1. Digite o número correspondente ao modelo do seu console e a versão, então pressione Enter
    - O estado atual deve exibir [Injected](/images/screenshots/mset9/mset9-injected.png)
-   - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you may [retry Section II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
+   - Se você já removeu o arquivo de ativação (ou nunca o injetou), o estado atual irá mostrar [Ready](/images/screenshots/mset9/mset9-ready.png), e você pode [tentar a Seção II novamente](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
 2. Digite `4` e pressione Enter
 3. Assim que a janela disser "Removed trigger file", digite `0` e depois pressione Enter
 4. Reinsira o cartão SD no seu console
@@ -254,7 +254,7 @@ Alternativamente, seu cartão SD pode estar sem a formatação apropriada ou mal
 
 :::
 
-:::details System Settings loading infinitely after reinserting the SD card
+:::details Configuração do Console carregando infinitamente após reinserir o cartão SD
 
 Você provavelmente fez algo diferente das instruções do MSET9, selecionou o modelo/versão errado, ou seu cartão SD precisa ser formatado. Certifique-se de estar escolhendo o [modelo](/images/3dsmodels.png) e a versão de firmware corretos ao abrir o script.
 
@@ -267,14 +267,14 @@ Siga estas instruções para remover o arquivo de ativação e tentar novamente 
 
 1. Digite o número correspondente ao modelo do seu console e a versão, então pressione Enter
    - O estado atual deve exibir [Injected](/images/screenshots/mset9/mset9-injected.png)
-   - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you are ready to retry Section II
+   - Se você já removeu o arquivo de ativação (ou não o injetou), o estado atual irá mostrar [Ready](/images/screenshots/mset9/mset9-ready.png), e você está pronto para tentar a Seção II novamente
 2. Digite `4` e pressione Enter
 3. Assim que a janela disser "Removed trigger file", digite `0` e depois pressione Enter
 4. Reinsira o cartão SD no seu console
 5. Ligue o seu console
 6. Retorne à [Seção II Passo 1](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
 
-If you continue to have this issue and are sure that you did everything correctly, ensure the trigger file is removed and format your SD card:
+Se você continuar tendo este problema e tem certeza que fez tudo corretamente, certifique-se de que o arquivo de ativação foi removido e formate seu cartão SD:
 
 1. Copie tudo do cartão SD para seu PC
 2. Formate o cartão SD ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
@@ -283,9 +283,9 @@ If you continue to have this issue and are sure that you did everything correctl
 
 :::
 
-:::details An exception occurred after triggering MSET9
+:::details Erro "An exception ocurred" após acionar MSET9
 
-This likely indicates that you already have custom firmware. Você deve [checar por CFW](checking-for-cfw).
+Isso provavelmente indica que você já possui custom firmware. Você deve [checar por CFW](checking-for-cfw).
 
 :::
 
@@ -323,7 +323,7 @@ The file `arm11code.bin` is missing or misplaced. Make sure to copy the files of
 
 :::details An exception occured or "DLL_HEAP_INFORMATION" when pressing GO! GO!
 
-This likely indicates that you already have custom firmware. Você deve [checar por CFW](checking-for-cfw).
+Isso provavelmente indica que você já possui custom firmware. Você deve [checar por CFW](checking-for-cfw).
 
 :::
 
@@ -331,7 +331,7 @@ This likely indicates that you already have custom firmware. Você deve [checar 
 
 :::details Red/purple/pink and white screen after running Browserhax
 
-This likely indicates that you already have custom firmware. Você deve [checar por CFW](checking-for-cfw).
+Isso provavelmente indica que você já possui custom firmware. Você deve [checar por CFW](checking-for-cfw).
 
 :::
 
@@ -341,7 +341,7 @@ The file `arm11code.bin` is missing or misplaced. Download the latest release of
 
 :::
 
-:::details "An error has occurred, forcing the software to close..." (white message box)
+:::details "Ocorreu um erro, forçando o software a fechar..." (caixa de mensagem branca)
 
 There may be an issue with your `arm11code.bin` file. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Não adicione a extensão `.bin` se você não a vê.
 
