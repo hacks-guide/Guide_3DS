@@ -18,7 +18,7 @@ Minden szekció összezárt alapértelmezésként. Kattints rá vagy érintsd me
 
 ## Things you should know about the 3DS
 
-:::: details 3DS/2DS compatibility
+:::: 3DS/2DS kompatibilitás részletek
 
 ::: info
 
@@ -30,7 +30,7 @@ Ez az útmutató minden kereskedelmi konzollal működik a Nintendo 3DS konzol c
 
 ::::
 
-:::: details Computer compatibility
+:::: Számítógép kompatibilitás részletek
 
 ::: info
 
