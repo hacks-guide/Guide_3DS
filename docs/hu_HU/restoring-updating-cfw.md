@@ -19,16 +19,14 @@ Az SD kártyád FAT32-re kell legyen formázva, hogy követhesd ezt az útmutat�
 4. Kapcsold be a konzolod
    - If you see the Luma3DS configuration menu, press (Start) to save and reboot
 
-::: tip
+::: info
 
 A Luma3DS legfrissebb verziója most már telepítésre került az SD kártyára és a belső memóriába.
 
 :::
 
-___
+::: tip
 
-::: info
-
-Ha szeretnél újratelepíteni, vagy frissíteni más homebrew alkalmazásokat, folytasd a [Telepítés véglegesítése](finalizing-setup) oldallal
+If you wish to re-install or update other homebrew applications (e.g. FBI, Homebrew Launcher), continue to [Finalizing Setup](finalizing-setup)
 
 :::
