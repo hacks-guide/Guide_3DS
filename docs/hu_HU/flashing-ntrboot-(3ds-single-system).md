@@ -14,7 +14,7 @@ Vedd figyelembe, hogy néhány ritka esetben lehetséges, hogy a flashelési fol
 
 ## Amire szükséged lesz
 
-- Your ntrboot compatible flashcart
+- Az ntrboor kompatibilis flashkártyád
 - A [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) v1.3 verziója (közvetlen letöltés)
 - A [ntrboot_flasher_nds] legújabb kiadása (https://github.com/jason0597/ntrboot_flasher_nds/releases/latest) (`ntrboot_flasher_nds.nds`)
 
@@ -50,6 +50,6 @@ ___
 
 ::: tip
 
-Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
+Továbblépés a [boot9strap telepítésére (ntrboot)](installing-boot9strap-\(ntrboot\))
 
 :::
