@@ -1,6 +1,6 @@
 # H2testw (Windows)
 
-## Required Reading
+## Kötelező olvasmány
 
 Ez egy kiegészítő rész, amelyben h2testw segítségével keresünk hibákat az SD kártyádon.
 
@@ -8,11 +8,11 @@ Az SD kártyád méretétől és a számítógéped sebességétől függően ez
 
 Ez az oldal Windows felhasználókra vonatkozik. Ha nem Windowsod van, nézd meg az [F3 (Linux)](f3-\(linux\)) vagy az [F3X (Mac)](f3x-\(mac\)) oldalt.
 
-## What You Need
+## Amire szükséged lesz
 
 - The latest version of [h2testw](https://www.heise.de/ct/Redaktion/bo/downloads/h2testw_1.4.zip)
 
-## Instructions
+## Lépések
 
 1. Másold a `h2testw.exe`-t a h2testw `.zip`-ből az asztalra
 2. Helyezd az SD kártyád a számítógépbe
