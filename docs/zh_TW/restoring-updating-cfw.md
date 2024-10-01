@@ -19,16 +19,14 @@ Your SD card must be formatted as FAT32 to follow this guide, or else the 3DS wi
 4. Power on your console
    - If you see the Luma3DS configuration menu, press (Start) to save and reboot
 
-::: tip
+::: info
 
 The latest version of Luma3DS has now been installed on your SD card and on internal memory.
 
 :::
 
-___
+::: tip
 
-::: info
-
-如果您想要重新安裝或更新其他現有的自製程式，請遵循 [完成安裝](finalizing-setup) 中的步驟。
+If you wish to re-install or update other homebrew applications (e.g. FBI, Homebrew Launcher), continue to [Finalizing Setup](finalizing-setup)
 
 :::
