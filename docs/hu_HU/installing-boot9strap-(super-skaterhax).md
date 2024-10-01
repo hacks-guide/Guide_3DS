@@ -1,12 +1,12 @@
 # Boot9strap telepítése (super-skaterhax)
 
-:::details Technical Details (optional)
+:::details Technikai részletek (opcionális)
 
 A technikai részletei az ezen az oldalon használt exploit-oknak [itt](https://github.com/zoogie/super-skaterhax) találhatók.
 
 :::
 
-### Compatibility Notes
+### Kompatibilitási megjegyzések
 
 A super-skaterhax (ami a Homebrew Launcher indítására használt) kompatibilis a 11.15.0 és a feletti verziós New modellekkel minden régióban.
 
@@ -16,11 +16,11 @@ A megadott lépések csak a New 3DS, New 3DS XL és New 2DS XL típusokra vonatk
 
 :::
 
-### What You Need
+### Amire szükséged lesz
 
 - The [Super-skaterhax](https://skater.nintendohomebrew.com) zip for your console's region and system version
 
-#### Section I - Prep Work
+#### I. rész - Előkészületek
 
 Ebben a fejezetben fel fogod másolni a fájlokat, amik a super-skaterhax és a Homebrew Launcher triggereléshez szükségesek.
 
@@ -56,7 +56,7 @@ Ebben a fejezetben fel fogod másolni a fájlokat, amik a super-skaterhax és a 
 
 10. Lépj ki a System Settings-ből
 
-#### Section II - super-skaterhax
+#### II. rész - super-skaterhax
 
 Ebben a fejezetben meg fogod látogatni a browser exploit weboldalt, ami elindítja a Homebrew Launcher-t.
 
@@ -98,7 +98,7 @@ Ha még nem történt meg, biztosítsd, hogy legyen működő Internet kapcsolat
     - If your console freezes on a red or green screen, hold the POWER button until it turns off, then retry this section
     - This may take up to five attempts
 
-#### Section III - Installing boot9strap
+#### III. rész - boot9strap telepítése
 
 Ebben a fejezetben egyedi firmware-t fogsz telepíteni a konzolodra.
 
