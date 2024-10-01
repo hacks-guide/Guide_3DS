@@ -92,7 +92,7 @@ Történetileg a 3DS felhasználói szintű homebrew hozzáférése régi exploi
 
 :::
 
-## Post-Installation FAQ
+## Telepítés utáni GYIK
 
 :::details Is it safe to update my 3DS to the latest version with CFW?
 
@@ -143,9 +143,9 @@ valószínű, hogy brickeli az eszközödet**.
 
 :::
 
-## menuhax / A9LH / Gateway FAQ
+## menuhax / A9LH / Gateway GYIK
 
-:::details I modded my console (x) years ago, so it already has some sort of homebrew. What should I do?
+:::details I modded my console (x) years ago, so it already has some sort of homebrew. Mit kell tennem?
 
 Ajánlott, hogy frissítsd egy modern, boot9strap alapúra. Kövesd a [CFW ellenőrzését](checking-for-cfw), hogy megtudd, hogyan frissítheted.
 
