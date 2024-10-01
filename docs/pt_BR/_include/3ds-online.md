@@ -1,4 +1,4 @@
-**Os serviços online do Nintendo 3DS foram desligados recentemente.** Aqui está o que você deve saber:
+**Nintendo 3DS online services have shut down.** Here's what you should know:
 
 - Métodos atuais de modding para 3DS não foram afetados.
 - O acesso à internet de aplicativos homebrew (por exemplo, Universal-Updater) não foi afetado.
