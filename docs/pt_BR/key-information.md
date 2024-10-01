@@ -16,9 +16,9 @@ Esta página cobre algumas das terminologias de computador e informações espec
 
 Cada seção é recolhida por padrão. Clique ou toque no nome da seção para abri-lo.
 
-## Things you should know about the 3DS
+## Coisas que você deve saber sobre o 3DS
 
-:::: details 3DS/2DS compatibility
+:::: details Compatibilidade de 3DS/2DS
 
 ::: info
 
@@ -30,7 +30,7 @@ Este guia funciona com todos os consoles de varejo da família de consoles do Ni
 
 ::::
 
-:::: details Computer compatibility
+:::: details Compatibilidade de computador
 
 ::: info
 
@@ -42,7 +42,7 @@ Na maioria dos casos você pode seguir este guia, contanto que possa baixar arqu
 
 ::::
 
-:::: details SD card location, type, and capacity
+:::: details Localização do cartão SD, tipo e capacidade
 
 ::: info
 
@@ -69,7 +69,7 @@ Se você quiser, você pode verificar se há erros no seu cartão SD antes de se
 ::::
 
 :::: warning
-::: details Potential risks (Disclaimer)
+::: details Riscos em potencial (Aviso)
 
 Ao aplicar modding em seu console, você o sujeita a possibilidade remota (mas não impossível) de o console ter um brick (renderizado sem funcionamento). _**O posicionamento de arquivos incorreto NÃO irá causar um brick em seu console**_, mas pular as instruções propositalmente talvez o cause.
 
@@ -78,7 +78,7 @@ Resumindo: Modificar o seu console é seguro, mas é _**sua responsabilidade**_ 
 :::
 ::::
 
-## Things you need to do on your computer
+## Coisas que você precisa fazer no seu computador
 
 ::: warning
 
@@ -86,7 +86,7 @@ Seguir sozinho este guia não deve resultar em perda de dados, mas a corrupção
 
 :::
 
-:::: details File placement terminology (e.g. "root of SD", "/luma/")
+:::: details Terminologia de localização de arquivos (por exemplo, "raiz do cartão SD", "/luma/")
 
 ::: info
 
@@ -114,7 +114,7 @@ Você também pode ver os nomes das pastas indicados assim: `/pasta/`. As barras
 
 ::::
 
-:::: details Downloading files from GitHub
+:::: details Baixando arquivos do GitHub
 
 ::: info
 
@@ -126,7 +126,7 @@ Neste guia, você irá copiar arquivos que são baixados em seu computador/celul
 
 ::::
 
-:::: details Opening/extracting files
+:::: details Abrindo/extraindo arquivos
 
 ::: info
 
@@ -142,7 +142,7 @@ Na maioria dos sistemas operacionais, você pode extrair arquivos clicando duas 
 
 ::::
 
-:::: details (Windows only) File extensions
+:::: details (Apenas Windows) Extensões de arquivos
 
 ::: info
 
@@ -154,13 +154,13 @@ Se o seu computador estiver executando o Windows, extensões de arquivos podem e
 
 ::::
 
-## Getting help
+## Obtendo ajuda
 
 Se você tiver um problema ao seguir este guia, há muitas maneiras de obter ajuda!
 
-- If you have any questions that haven't been answered on this page, their answers might be in the [Pre-Installation FAQ](faq#pre-installation-faq).
-- If you experience an issue while following this guide, you can check the [Troubleshooting](troubleshooting) page for a solution.
-- If the resources we've provided here aren't helping, you can get one-on-one support over at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+- Se você tiver alguma pergunta que não foi respondida nesta página, a resposta pode estar no [FAQ de Pré-Instalação](faq#pre-installation-faq).
+- Se você encontrar um problema enquanto segue este guia, você pode conferir o guia de [troubleshooting](troubleshooting) para possíveis soluções.
+- Se os recursos fornecidos aqui não estiverem ajudando, você pode obter suporte passo-a-passo no [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp).
 
 ::: tip
 
