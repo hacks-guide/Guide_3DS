@@ -1,6 +1,6 @@
 # Formatting SD (Windows)
 
-## Required Reading
+## Kötelező olvasmány
 
 Ez egy kiegészítő rész az SD kártya formázásához, hogy az működjön a 3DS-el.
 
@@ -8,12 +8,12 @@ Ha a 3DS már felismeri az SD kártyát, ez az útmutató nem szükséges.
 
 Ez az oldal Windows felhasználókra vonatkozik. Ha nem Windows rendszeren vagy, kövesd az [SD formázás (Linux)](formatting-sd-\(linux\)) vagy [SD formázás (Mac)](formatting-sd-\(mac\)) útmutatókat.
 
-## What You Need
+## Amire szükséged lesz
 
 - **For SD cards 32GB or smaller:** the latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
 - **For SD cards 64GB or larger:** The latest version of [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
 
-## Instructions (32GB or smaller)
+## Lépések (32GB vagy kisebb)
 
 1. Helyezd az SD kártyád a számítógépbe
 
@@ -47,7 +47,7 @@ Ez az oldal Windows felhasználókra vonatkozik. Ha nem Windows rendszeren vagy,
 
 13. Ha az SD kártya tartalmazott adatot a formázás előtt, akkor azokat most másold vissza a számítógépről
 
-## Instructions (64GB or larger)
+## Lépések (64GB vagy nagyobb)
 
 1. Helyezd az SD kártyád a számítógépbe
 
