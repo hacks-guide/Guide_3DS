@@ -1,27 +1,27 @@
 # Boot9strap telepítése (Soundhax)
 
-:::details Technical Details (optional)
+:::details Technikai részletek (opcionális)
 
 A technikai részleteit az ezen az oldalon használt exploit-oknak tekintsd meg [itt](https://github.com/nedwill/soundhax) (Soundhax) és [itt](https://github.com/TuxSH/universal-otherapp) (universal-otherapp).
 
 :::
 
-## Compatibility Notes
+## Kompatibilitási megjegyzések
 
 A Soundhax (amikor universal-otherapp-pal használjuk) kompatibilis az 1.0.0-s verziótól egészen a 11.3.0-ig minden régió esetén.
 
-## What You Need
+## Amire szükséged lesz
 
-- The latest release of [Soundhax](http://soundhax.com) _(for your region, console, and version)_
+- A [Soundhax](http://soundhax.com) legújabb kiadása _(a régiódnak, a konzolodnak és rendszer verziódnak megfelelő változat)_
   - If Soundhax appears in your browser as an unplayable video, press Ctrl+S or Cmd+S to save it to your computer
-- The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
-- The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
-- The latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) (`otherapp.bin`)
+- A [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) legfrissebb verziója (közvetlen letöltés)
+- A [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) legfrissebb verziója (közvetlen letöltés)
+- A [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) legújabb kiadása (a Luma3DS `.zip` fájl)
+- A [universal-otherapp] legújabb kiadása (https://github.com/TuxSH/universal-otherapp/releases/latest) (`otherapp.bin`)
 
-## Instructions
+## Lépések
 
-### Section I - Prep Work
+### I. rész - Előkészületek
 
 Ebben a fejezetben fel fogod másolni a fájlokat, amik a Soundhax és az universal-otherapp kiváltásához szükségesek.
 
@@ -49,7 +49,7 @@ Ebben a fejezetben fel fogod másolni a fájlokat, amik a Soundhax és az univer
 
 :::
 
-### Section II - Launching SafeB9SInstaller
+### II. rész - A SafeB9SInstaller indítása
 
 Ebben a fejezetben el fogod indítani a Soundhax-ot a Nintendo 3DS Sound app-on keresztül, ami az universal-otherapp-ot fogja használni arra, hogy elindítsa a a boot9strap (egyedi firmware) telepítőt.
 
@@ -67,7 +67,7 @@ Ebben a fejezetben el fogod indítani a Soundhax-ot a Nintendo 3DS Sound app-on 
 3. Válaszd a `/SDCARD` mappát, majd játszd le a "<3 nedwill 2016" nevű hangfájlt
 
    - This may take many (up to 10) tries
-   - If you see the message "Could not play", you are either on a system version incompatible with Soundhax or downloaded the wrong Soundhax release
+   - Ha azt az üzenetet látod, hogy "Could not play", akkor vagy olyan rendszer verzión vagy, ami inkompatiblis a soundhax-szal, vagy rossz Soundhax kiadást töltöttél le
    - If it freezes, force the console to power off by holding the power button, then try again
    - If you get a different error, [follow this troubleshooting guide](troubleshooting#installing-boot9strap-soundhax)
 
@@ -79,7 +79,7 @@ Ebben a fejezetben el fogod indítani a Soundhax-ot a Nintendo 3DS Sound app-on 
 
 4. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
 
-### Section III - Installing boot9strap
+### III. rész - boot9strap telepítése
 
 Ebben a fejezetben egyedi firmware-t fogsz telepíteni a konzolodra.
 
