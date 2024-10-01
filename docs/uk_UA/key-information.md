@@ -1,11 +1,5 @@
 # Key Information
 
-::: danger
-
-<!--@include: ./_include/3ds-online.md -->
-
-:::
-
 ::: info
 
 If this is your first time modding a 3DS (or you're unfamiliar with technology), keep reading! Otherwise, if you have prior experience and know what you're doing, continue to [Get Started](get-started).
