@@ -14,7 +14,7 @@ Vedd figyelembe, hogy néhány ritka esetben lehetséges, hogy a flashelési fol
 
 ## Amire szükséged lesz
 
-- Your ntrboot compatible flashcart
+- Az ntrboor kompatibilis flashkártyád
 - Two consoles
   - **The source NDS / NDSL**: the Nintendo DS or Nintendo DS Lite which is compatible with your flashcart
   - **The target 3DS**: the 3DS family console on stock firmware
@@ -54,6 +54,6 @@ ___
 
 ::: tip
 
-Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
+Továbblépés a [boot9strap telepítésére (ntrboot)](installing-boot9strap-\(ntrboot\))
 
 :::
