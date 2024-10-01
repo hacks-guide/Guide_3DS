@@ -10,7 +10,7 @@ Esta página é destinada apenas a usuários do Windows. Se você não estiver n
 
 ## O que é necessário
 
-- The latest version of [h2testw](https://www.heise.de/ct/Redaktion/bo/downloads/h2testw_1.4.zip)
+- A versão mais recente do [h2testw](https://www.heise.de/ct/Redaktion/bo/downloads/h2testw_1.4.zip)
 
 ## Instruções
 
@@ -38,6 +38,6 @@ Se o teste mostrar outros resultados, o cartão SD pode estar corrompido ou dani
 
 ::: tip
 
-Return to [Get Started](get-started)
+Voltar para [Começando](get-started)
 
 :::
