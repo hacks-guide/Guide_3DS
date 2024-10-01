@@ -14,12 +14,12 @@ Note que em algumas raras circunstâncias, pode ser possível que o processo de 
 
 ## O que é necessário
 
-- Your ntrboot compatible flashcart
-- Two consoles
-  - **The source NDS / NDSL**: the Nintendo DS or Nintendo DS Lite which is compatible with your flashcart
-  - **The target 3DS**: the 3DS family console on stock firmware
-- The v1.3 release of [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (direct download)
-- The latest release of [ntrboot_flasher_nds](https://github.com/jason0597/ntrboot_flasher_nds/releases/latest) (`ntrboot_flasher_nds.nds`)
+- Seu flashcart compatível com ntrboot
+- Dois consoles
+  - **NDS / NDSL de origem**: o Nintendo DS ou Nintendo DS Lite que é compatível com o seu flashcart
+  - **3DS de destino**: o console da família 3DS com firmware padrão
+- A versão v1.3 do [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (download direto)
+- A versão mais recente do [ntrboot_flasher_nds](https://github.com/jason0597/ntrboot_flasher_nds/releases/latest) (`ntrboot_flasher_nds.nds`)
 
 ## Instruções
 
@@ -33,7 +33,7 @@ Note que em algumas raras circunstâncias, pode ser possível que o processo de 
 6. Reinsira o cartão SD do seu flashcart no seu flashcart
 7. Insira o seu flashcart do DS / DSi compatível com o ntrboot no seu **NDS / NDSL de origem**
 
-### Section II - Flashing ntrboot
+### Seção II - Preparando ntrboot
 
 1. Abra o `ntrboot_flasher_nds.nds` no **NDS / NDSL de origem** usando seu flashcart
 2. Aperte (A) para continuar
@@ -54,6 +54,6 @@ ___
 
 ::: tip
 
-Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
+Continue para [Instalando boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
 
 :::
