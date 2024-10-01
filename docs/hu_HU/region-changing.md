@@ -22,13 +22,13 @@ A folyamat részeként a rendszer beállításaid visszaállításra kerülnek a
 
 Ha módosítod a régióját a konzolodnak:
 
-- You will not be able to use your NNID (if you have one). Az NNID-k ahhoz a régióhoz kötöttek, ahol létre lettek hozva.
-- You may not be able to access the eShop, even if you [delete your eShop account](https://en-americas-support.nintendo.com/app/answers/detail/a_id/74/~/how-to-delete-a-nintendo-eshop-account) beforehand. Ez azért van, mert néhány cím linkelt marad a 3DS-hez, még akkor is ha a fiók törlésre kerül (különösen New 3DS-en).
-  - This is still relevant because, while purchases can no longer be made on eShop, game updates are still being provided. A frissítések tartalmazhatnak extra tartalmat vagy hibajavításokat.
-  - This logic extends to system transfers, meaning you would not be able to perform a system transfer from a USA 3DS to a region-changed JPN-to-USA 3DS.
-  - Pokémon Bank also requires working eShop access.
-  - That being said, system transfer and game updates are region locked anyway (e.g. Japanese eShop only has Japanese game updates).
-- **You will not be able to uninstall custom firmware without bricking the console!** If you intend to uninstall custom firmware in the future, you **MUST** restore your NAND backup that was created before the region change.
+- Nem fogod tudni használni az NNID azonosítód (ha van ilyened). Az NNID-k ahhoz a régióhoz kötöttek, ahol létre lettek hozva.
+- Elképzelhető, hogy nem fogod elérni az eShop-ot, még akkor sem ha [törlöd az eShop fiókod](https://en-americas-support.nintendo.com/app/answers/detail/a_id/74/~/how-to-delete-a-nintendo-eshop-account) előtte. Ez azért van, mert néhány cím linkelt marad a 3DS-hez, még akkor is ha a fiók törlésre kerül (különösen New 3DS-en).
+  - Ez továbbra is releváns; bár az eShop-ban már nem lehet vásárolni, a játék frissítések továbbra is letölthetők. A frissítések tartalmazhatnak extra tartalmat vagy hibajavításokat.
+  - Ez a logika kiterjed a rendszer átvitelekre, azaz nem fogsz tudni rendszer átvitelt végre hajtani egy USA 3DS-ről egy régió-cserélt JPN-2-USA 3DS-re.
+  - A Pokémon Bank-nak szintén működő eShop hozzáférésre van szüksége.
+  - Ahogy korábban elmondásra került, a rendszerátvitel és játék frissítése régió zároltak (pl. a japán eShop csak japán játék frissítéseket tartalmaz).
+- **Nem fogod tudni eltávolítani az egyedi firmware-t a konzolod brickelése nélkül!** Ha szeretnéd eltávolítani az egyedi firmware-t a jövőben, vissza **KELL** állítanod a NAND mentésed, amit a régió módosítás előtt készítettél.
 
 :::
 
@@ -37,9 +37,9 @@ Ha módosítod a régióját a konzolodnak:
 - A [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) legújabb kiadása (a GodMode9 `.zip` fájl)
 - Az [FBI](https://github.com/lifehackerhansol/FBI/releases/download/2.6.1/FBI.3dsx) legfrissebb kiadása (közvetlen letöltés)
 - A [faketik](https://github.com/ihaveamac/faketik/releases/latest) legújabb kiadása _(a`.3dsx` fájl)_
-- A torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download)
-  - If you already have a torrent client, you do not need to download a new one
-- The 11.15.0 CTRTransfer image for your console type of the region that you want to change to (e.g. Download "New 3DS or 2DS - USA" if you have a New 3DS and want to change your region to USA)
+- Egy torrent kliens, mint például a [qBittorrent](https://www.qbittorrent.org/download.php) vagy a [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+  - Ha már van torrent kliensed, nem szükséges letöltened egy újat
+- - A 11.15.0 CTRTransfer képfájlok közül a konzolod típusának és a régiónak, amire módosítani szeretnél megfelelő verziója (pl. Töltsd le a "New 3DS or 2DS - USA" fájlt, ha vagy egy New 3DS-ed és szeretnéd a régiódat USA-ra módosítani.)
 
 <!--@include: ./_include/ctrtransfer-images.md -->
 
