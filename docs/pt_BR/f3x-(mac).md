@@ -16,7 +16,7 @@ Se você está usando um Mac com a macOS 10.13 (High Sierra) e adiante, siga [F3
 
 ## O que é necessário
 
-- The latest release of [F3X](https://github.com/insidegui/F3X/releases/latest)
+- A versão mais recente do [F3X](https://github.com/insidegui/F3X/releases/latest)
 
 ## Instruções
 
@@ -43,6 +43,6 @@ Se o teste mostrar outros resultados, o cartão SD pode estar corrompido ou dani
 
 ::: tip
 
-Return to [Get Started](get-started)
+Voltar para [Começando](get-started)
 
 :::
