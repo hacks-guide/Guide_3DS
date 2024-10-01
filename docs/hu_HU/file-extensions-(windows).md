@@ -1,12 +1,12 @@
 # File Extensions (Windows)
 
-## Required Reading
+## Kötelező olvasmány
 
 Ez egy kiegészítő rész, amelyben kikapcsoljuk a Windows azon alap viselkedését, hogy elrejti a fájlkiterjesztéseket.
 
 Ez megkönnyíti majd számodra, hogy megtaláld az útmutatóban említett fájlokat.
 
-## Instructions
+## Lépések
 
 ### Windows 11
 
