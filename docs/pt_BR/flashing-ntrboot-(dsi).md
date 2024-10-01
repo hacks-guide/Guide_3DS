@@ -14,11 +14,11 @@ Note que em algumas raras circunstâncias, pode ser possível que o processo de 
 
 ## O que é necessário
 
-- Your ntrboot compatible flashcart
-- Two consoles
-  - **The source DSi**: the Nintendo DSi which is compatible with your flashcart
-  - **The target 3DS**: the 3DS family console on stock firmware
-- The latest release of [ds_ntrboot_flasher](https://github.com/ntrteam/ds_ntrboot_flasher/releases/latest) (`ds_ntrboot_flasher_dsi.nds`)
+- Seu flashcart compatível com ntrboot
+- Dois consoles
+  - **DSi de origem**: o Nintendo DSi que é compatível com o seu flashcart
+  - **3DS de destino**: o console da família 3DS com firmware padrão
+- A versão mais recente do [ds_ntrboot_flasher](https://github.com/ntrteam/ds_ntrboot_flasher/releases/latest) (`ds_ntrboot_flasher_dsi.nds`)
 
 ## Instruções
 
@@ -30,7 +30,7 @@ Note que em algumas raras circunstâncias, pode ser possível que o processo de 
 4. Reinsira o cartão SD do seu flashcart no seu flashcart
 5. Insira o seu flashcart do DS / DSi compatível com o ntrboot no seu **DSi de origem**
 
-### Section II - Flashing ntrboot
+### Seção II - Preparando ntrboot
 
 1. Execute 'ds_ntrboot_flasher_dsi.nds' no **DSi de origem** usando seu flashcart
 2. Aperte (A) para continuar
@@ -45,6 +45,6 @@ ___
 
 ::: tip
 
-Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
+Continue para [Instalando boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
 
 :::
