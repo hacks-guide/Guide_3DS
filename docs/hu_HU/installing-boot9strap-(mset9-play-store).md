@@ -1,12 +1,12 @@
 # Boot9strap telepítése (MSET9 Play Store)
 
-:::details Technical Details (optional)
+:::details Technikai részletek (opcionális)
 
 Az [MSET9](https://github.com/zoogie/MSET9) egy exploit a System Setting alkalmazáshoz, amit [zoogie](https://github.com/zoogie) készített. Kihasznál egy hibát, ahol az ID1 (a második 32 karakteres mappanév a Nintendo 3DS mappán belül, az ID0-n belül) lehet _minden_ név, amíg 32 karakteres. Egy adott műveletsor végrehajtása azt eredményezi, hogy a konzol végrehajtja az ID1 mappanévbe kódolt utasításokat, amelyek segítségével teljes körű irányítást szerez a 3DS felett.
 
 :::
 
-## Compatibility Notes
+## Kompatibilitási megjegyzések
 
 ::: warning
 
@@ -20,7 +20,7 @@ Android telefonokon/tableteken a szükséges minimum Android verzió: 6.0 (Marsh
 
 :::
 
-## What You Need
+## Amire szükséged lesz
 
 - The following applications installed from the Google Play Store:
   - [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)
@@ -28,9 +28,9 @@ Android telefonokon/tableteken a szükséges minimum Android verzió: 6.0 (Marsh
   - If you wish, you can sideload these applications instead
 - The latest release of [MSET9](https://github.com/zoogie/MSET9/releases/latest) (the Release `.zip` file)
 
-## Instructions
+## Lépések
 
-### Section I - Prep Work
+### I. rész - Előkészületek
 
 Ebben a részben előkészítjük az SD kártyád a szükséges adatokkal amik kiváltják az MSET9 exploitot.
 
@@ -51,7 +51,7 @@ Ebben a részben előkészítjük az SD kártyád a szükséges adatokkal amik k
    - Open ZArchiver
    - If prompted, [allow ZArchiver to access files on your SD card](/images/screenshots/mset9/zarchiver-allow.png)
    - Navigate to where the downloaded MSET9 Release `.zip` is located ([likely in the Downloads folder](/images/screenshots/mset9/zarchiver-zip-location.png))
-   - Select the Release `.zip`, then select "Extract..." ([image](/images/screenshots/mset9/zarchiver-extract-1.png))
+   - Válaszd a Release `.zip`-et majd az "Extract..." opciót ([image](/images/screenshots/mset9/zarchiver-extract-1.png))
    - Navigate to your SD card, then tap the blue 'down arrow' icon to extract the files to the root of your SD card ([image](/images/screenshots/mset9/zarchiver-extract-2.png))
 
    ::: info
@@ -73,7 +73,7 @@ Ebben a részben előkészítjük az SD kártyád a szükséges adatokkal amik k
 
 12. Kapcsold be a konzolod
 
-### Section II - MSET9
+### II. rész - MSET9
 
 Ebben a fejezetben az MSET9 fogod triggerelni, hogy elindítsa a SafeB9SInstaller-t (az egyedi firmware telepítőt).
 
@@ -100,7 +100,7 @@ Ezeket a lépéseket **PONTOSAN** kell követni, így ellenőrizz MINDENT kétsz
 12. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
     - If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting#installing-boot9strap-mset9)
 
-### Section III - Installing boot9strap
+### III. rész - boot9strap telepítése
 
 Ebben a fejezetben egyedi firmware-t fogsz telepíteni a konzolodra.
 
@@ -110,7 +110,7 @@ Ebben a fejezetben egyedi firmware-t fogsz telepíteni a konzolodra.
 
 <!--@include: ./_include/configure-luma3ds.md -->
 
-### Section IV - Removing MSET9
+### IV. rész - Az MSET9 eltávolítása
 
 Ebben a fejezetben el fogod távolítani a z MSET9-et, hogy megelőzz további problémákat. (Ez nem fogja eltávolítani az egyéni firmware-t amit éppen telepítettél.)
 
