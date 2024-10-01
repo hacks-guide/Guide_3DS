@@ -4,9 +4,9 @@
 
 **Kiemelt**
 
-- [Finalizing Setup](finalizing-setup)
-- [Installing boot9strap (Soundhax)](installing-boot9strap-\(soundhax\))
-- [Installing boot9strap (MSET9)](installing-boot9strap-\(mset9\))
+- [Telepítés véglegesítése](finalizing-setup)
+- [Boot9strap telepítése (Soundhax)](installing-boot9strap-\(soundhax\))
+- [Boot9strap telepítése (MSET9)](installing-boot9strap-\(mset9\))
 
 :::
 
@@ -14,10 +14,10 @@
 
 **Összes**
 
-- [A9LH to B9S](a9lh-to-b9s)
-- [Credits](credits)
+- [A9LH-ről B9S-re](a9lh-to-b9s)
+- [Közreműködők](credits)
 - [Checking for CFW](checking-for-cfw)
-- [Contribute](contribute)
+- [Közreműködés](contribute)
 - [CTRTransfer](ctrtransfer)
 - [Dumping Titles and Game Cartridges](dumping-titles-and-game-cartridges)
 - [F3 (Linux)](f3-\(linux\))
@@ -25,7 +25,7 @@
 - [F3XSwift (Mac)](f3xswift-\(mac\))
 - [FAQ](faq)
 - [File Extensions (Windows)](file-extensions-\(windows\))
-- [Finalizing Setup](finalizing-setup)
+- [Telepítés véglegesítése](finalizing-setup)
 - [Flashing ntrboot (3DS Single System)](flashing-ntrboot-\(3ds-single-system\))
 - [Flashing ntrboot (3DS Multi System)](flashing-ntrboot-\(3ds-multi-system\))
 - [Flashing ntrboot (DSi)](flashing-ntrboot-\(dsi\))
@@ -38,12 +38,12 @@
 - [H2testw (Windows)](h2testw-\(windows\))
 - [Home](/)
 - [Installing boot9strap (Hardmod)](installing-boot9strap-\(hardmod\))
-- [Installing boot9strap (MSET9)](installing-boot9strap-\(mset9\))
+- [Boot9strap telepítése (MSET9)](installing-boot9strap-\(mset9\))
 - [Installing boot9strap (MSET9 CLI)](installing-boot9strap-\(mset9-cli\))
 - [Installing boot9strap (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\))
 - [Installing boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
 - [Installing boot9strap (safecerthax)](installing-boot9strap-\(safecerthax\))
-- [Installing boot9strap (Soundhax)](installing-boot9strap-\(soundhax\))
+- [Boot9strap telepítése (Soundhax)](installing-boot9strap-\(soundhax\))
 - [Installing boot9strap (SSLoth-Browser)](installing-boot9strap-\(ssloth-browser\))
 - [Installing boot9strap (super-skaterhax)](installing-boot9strap-\(super-skaterhax\))
 - [Key Information](key-information)
