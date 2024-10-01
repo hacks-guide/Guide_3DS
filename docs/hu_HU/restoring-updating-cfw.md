@@ -1,16 +1,16 @@
 # Restoring / Updating CFW
 
-## Required Reading
+## Kötelező olvasmány
 
 Ez az oldal egy létező modern boot9strap telepítésre mutatja be a custom firmware appok újra telepítését és/vagy frissítését. Továbbá használható abban az esetben is helyreállításra, ha elveszett vagy megsérült az SD kártya.
 
 Az SD kártyád FAT32-re kell legyen formázva, hogy követhesd ezt az útmutatót, vagy a 3DS nem fogja felismerni. Ha az SD kártyád nem megfelelően formázott, használd ezen oldalak valamelyikét a formázáshoz, az operációs rendszeredtől függően: [Windows](formatting-sd-\(windows\)), [Mac](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)).
 
-## What You Need
+## Amire szükséged lesz
 
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- A [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) legújabb kiadása (a Luma3DS `.zip` fájl)
 
-## Instructions
+## Lépések
 
 1. Helyezd az SD kártyád a számítógépbe
 2. Copy everything from the Luma3DS `.zip` to the root of your SD card, replacing any existing files
