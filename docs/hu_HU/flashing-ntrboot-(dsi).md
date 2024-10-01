@@ -1,6 +1,6 @@
 # Ntrboot flashelése (DSi)
 
-## Required Reading
+## Kötelező olvasmány
 
 Mielőtt elkezdenénk, bizonyosodj meg róla, hogy mindent elolvastál az [ntrboot](ntrboot)-tal kapcsolatban
 
@@ -12,17 +12,17 @@ Vedd figyelembe, hogy néhány ritka esetben lehetséges, hogy a flashelési fol
 
 :::
 
-## What You Need
+## Amire szükséged lesz
 
 - Your ntrboot compatible flashcart
 - Two consoles
   - **The source DSi**: the Nintendo DSi which is compatible with your flashcart
   - **The target 3DS**: the 3DS family console on stock firmware
-- The latest release of [ds_ntrboot_flasher](https://github.com/ntrteam/ds_ntrboot_flasher/releases/latest) (`ds_ntrboot_flasher_dsi.nds`)
+- A [ds_ntrboot_flasher] legújabb kiadása (https://github.com/ntrteam/ds_ntrboot_flasher/releases/latest) (`ds_ntrboot_flasher_dsi.nds`)
 
-## Instructions
+## Lépések
 
-### Section I - Prep Work
+### I. rész - Előkészületek
 
 1. Kapcsold ki a **forrás DSi**-t
 2. Helyezd a flashkártyád SD kártyáját a számítógépbe
@@ -30,7 +30,7 @@ Vedd figyelembe, hogy néhány ritka esetben lehetséges, hogy a flashelési fol
 4. Helyezd vissza a flashkártyád SD kártyáját a flashkártyádba
 5. Helyezd be az ntrboot kompatibilis DS / DSi flashkártyádat a **forrás DSi**-be
 
-### Section II - Flashing ntrboot
+### II. rész - ntrboot flashelése
 
 1. Indítsd el a `ds_ntrboot_flasher_dsi.nds` fájlt **a forrás DSi-n** a flashkártyád segítségével
 2. Nyomd meg az (A) gombot a folytatáshoz
