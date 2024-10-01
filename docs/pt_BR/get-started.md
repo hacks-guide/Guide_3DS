@@ -10,7 +10,7 @@ head:
 
 Antes de iniciar este guia, veremos se o custom firmware já está instalado e verificaremos a versão atual do sistema do seu console.
 
-### Section I - CFW Check
+### Seção I - Checando por CFW
 
 1. Desligue seu console
 2. Segure o botão (Select)
@@ -23,12 +23,12 @@ Se você ver a tela de configuração do Luma3DS ou qualquer outro menu personal
 
 :::
 
-### Section II - System Version Check
+### Seção II - Verificando a Versão do Sistema
 
 1. Abra as Configurações do Sistema no seu console
-2. Your system version will be displayed on the bottom right of the top screen (e.g. "Ver. 11.17.0-50U")
+2. A versão do seu sistema será exibida no canto inferior direito da tela superior (por exemplo, "Ver. 11.17.0-50U")
 
-### Section III - Select a Method
+### Seção II - Selecione um Método
 
 Para encontrar o método correto para o seu console, selecione o modelo do seu console e a versão do sistema que encontrou na Seção II.
 
@@ -36,7 +36,7 @@ Para encontrar o método correto para o seu console, selecione o modelo do seu c
 
 ---
 
-#### Alternate Methods
+#### Métodos Alternativos
 
 Se possível, você deve seguir o método fornecido pelo prompt acima.
 
