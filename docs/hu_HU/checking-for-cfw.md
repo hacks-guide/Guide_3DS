@@ -1,6 +1,6 @@
 # CFW ellenőrzése
 
-## Required Reading
+## Kötelező olvasmány
 
 Ez egy kiegészítő fejezet ahhoz, hogy ellenőrizhesd, a konzolod rendelkezik-e valamelyik modern custom firmware-rel.
 
@@ -12,7 +12,7 @@ Ha a konzolod menuhax alapú CFW konfiguráció, akkor [töröld a Home menü ex
 
 :::
 
-## Instructions
+## Lépések
 
 1. Kapcsold ki a konzolod
 2. Nyomd le és tartsd nyomva (Select) gombot
