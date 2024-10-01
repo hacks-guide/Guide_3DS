@@ -10,14 +10,14 @@ Quaisquer jogos não assinados (ilegítimos) serão dados como inutilizáveis e 
 
 Se você está removendo o CFW porque:
 
-- You want to re-install it
-- You want to change SD cards
-- Your SD card was lost or corrupted
-- One of your games is broken
-- One of your system applications is broken
-- Your console is unable to boot to HOME Menu
+- Você deseja reinstalá-lo
+- Você deseja mudar de cartão SD
+- Seu cartão SD foi perdido ou corrompido
+- Um de seus jogos não funciona
+- Um dos seus aplicativos do sistema não funciona
+- Seu console não consegue iniciar o Menu HOME
 
-<u>**STOP!!!**</u> Uninstalling custom firmware is an unnecessary risk that will at best waste your time and at worst <u>**BRICK**</u> your console. Uma ideia melhor seria pedir ajuda a [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp).
+<u>**PARE!!!**</u> Desinstalar o custom firmware é um risco desnecessário que na melhor das hipóteses fará você perder tempo, e na pior das hipoteses causará um <u>**BRICK**</u> no seu console. Uma ideia melhor seria pedir ajuda a [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp).
 
 :::
 
@@ -25,13 +25,13 @@ Se você está removendo o CFW porque:
 
 Se você já fez QUALQUER das seguintes coisas:
 
-- [Changed the region](region-changing) of the console
-- Installed a custom keyboard
-- Installed a custom HOME Menu (_not_ a custom theme)
-- Manually changed the encryption key (`movable.sed`) of the console
-- Unbanned the console
+- [Mudou a região](region-changing) do console
+- Instalou um teclado personalizado
+- Instalou um Menu HOME personalizado (_não_ um tema personalizado)
+- Mudou manualmente a chave de criptografia (`movable.sed`) do console
+- Desbaniu o console
 
-then uninstalling CFW <u>**WILL BRICK YOUR CONSOLE**</u>. Se isso se aplicar a você, [restaure um backup da NAND limpo](godmode9-usage#restoring-a-nand-backup) antes de continuar.
+então desinstalar o custom firmware <u>**VAI CAUSAR UM BRICK NO SEU CONSOLE**</u>. Se isso se aplicar a você, [restaure um backup da NAND limpo](godmode9-usage#restoring-a-nand-backup) antes de continuar.
 
 :::
 
@@ -45,7 +45,7 @@ Estas instruções só funcionarão em consoles com uma versão 8.0 ou superior 
 
 - A versão mais recente do [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (o arquivo `.zip` do Luma3DS)
 - A versão mais recente do [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (o arquivo `.zip` do GodMode9)
-- The latest release of [DSiWare Uninstaller](https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest)
+- A versão mais recente do [DSiWare Uninstaller](https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest)
 - [safety_test.gm9](/gm9_scripts/safety_test.gm9)
 
 ## Instruções
@@ -54,24 +54,24 @@ Estas instruções só funcionarão em consoles com uma versão 8.0 ou superior 
 
 1. Desligue seu console
 2. Insira o cartão SD no seu computador
-3. Copy everything from the Luma3DS `.zip` to the root of your SD card
+3. Copie tudo do arquivo `.zip` do Luma3DS para a raiz do seu cartão SD
 4. Copie `GodMode9.firm` do `.zip` do GodMode9 para a pasta `/luma/payloads/` no seu cartão SD
 5. Copie a pasta `gm9` do `.zip` do GodMode9 para a raiz do seu cartão SD
 6. Copie `DSiWareUninstaller.3dsx` para a pasta `/3ds/` no seu cartão SD
 7. Copie `safety_test.gm9` para a pasta `/gm9/scripts/` no seu cartão SD
 8. Reinsira o cartão SD no seu console
 
-### Section II - DS Mode Tests
+### Seção II - Testes do Modo DS
 
 O objetivo desta seção é verificar se os aplicativos do modo DS embutidos continuarão a funcionar assim que o CFW for desinstalado. Se você pular esta seção, o modo DS ou suas funções poderão ficar inacessíveis até que o CFW seja reinstalado.
 
-#### DS Connection Settings Test
+#### Teste de Configurações de Conexão DS
 
 1. Ligue o seu console
 2. Abra as Configurações do Sistema no seu console
 3. Navegue para `Configuração de Internet` -> `Conexões Nintendo DS`, depois clique em OK
 4. Você deve iniciar no menu de Conexões Nintendo DS
-   - If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed
+   - Se o seu console exibir a versão japonesa do Flipnote Studio, uma tela preta, ou uma mensagem de erro, o teste falhou
 5. Desligue seu console
 
 #### DS Download Play Test
@@ -80,7 +80,7 @@ O objetivo desta seção é verificar se os aplicativos do modo DS embutidos con
 2. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
 3. Selecione "Nintendo DS"
 4. Se o seu console carregar em um menu "Download de software via DS Download Play", o teste foi bem sucedido
-   - If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed
+   - Se o seu console exibir a versão japonesa do Flipnote Studio, uma tela preta, ou uma mensagem de erro, o teste falhou
 5. Desligue seu console
 
 ::: warning
@@ -127,7 +127,7 @@ Se você NÃO inicializar no Menu HOME padrão do 3DS, ou a configuração do si
 5. Selecione "Backup Options"
 6. Selecione "SysNAND Backup"
 7. Aperte (A) para confirmar
-   - This process will take some time
+   - Esse processo levará algum tempo
    - If you get an error, ensure you have at least 1.3GB of free space on your SD card
 8. Aperte (B) para retornar para o menu principal
 9. Selecione "Exit"
@@ -188,14 +188,14 @@ Esta é a sua oportunidade final de verificar se todas as etapas de segurança a
 
 Se você está removendo o CFW porque:
 
-- You want to re-install it
-- You want to change SD cards
-- Your SD card was lost or corrupted
-- One of your games is broken
-- One of your system applications is broken
-- Your console is unable to boot to HOME Menu
+- Você deseja reinstalá-lo
+- Você deseja mudar de cartão SD
+- Seu cartão SD foi perdido ou corrompido
+- Um de seus jogos não funciona
+- Um dos seus aplicativos do sistema não funciona
+- Seu console não consegue iniciar o Menu HOME
 
-<u>**STOP!!!**</u> Uninstalling custom firmware is an unnecessary risk that will at best waste your time and at worst <u>**BRICK**</u> your console. Uma ideia melhor seria pedir ajuda a [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp).
+<u>**PARE!!!**</u> Desinstalar o custom firmware é um risco desnecessário que na melhor das hipóteses fará você perder tempo, e na pior das hipoteses causará um <u>**BRICK**</u> no seu console. Uma ideia melhor seria pedir ajuda a [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp).
 
 :::
 
