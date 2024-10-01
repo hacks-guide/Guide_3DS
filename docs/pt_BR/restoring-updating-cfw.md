@@ -19,16 +19,14 @@ Seu cartão SD precisa estar formatado como FAT32 para seguir este guia, caso co
 4. Ligue o seu console
    - Se você ver o menu de configuração do Luma3DS, pressione (Start) para salvar e reiniciar
 
-::: tip
+::: info
 
 A última versão do Luma3DS foi instalada no seu cartão SD e na memória interna.
 
 :::
 
-___
+::: tip
 
-::: info
-
-Se você deseja reinstalar ou atualizar outros aplicativos de homebrew, continue em [Finalizando a instalação](finalizing-setup)
+If you wish to re-install or update other homebrew applications (e.g. FBI, Homebrew Launcher), continue to [Finalizing Setup](finalizing-setup)
 
 :::
