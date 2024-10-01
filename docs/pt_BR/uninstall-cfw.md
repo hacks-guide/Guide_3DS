@@ -74,10 +74,10 @@ O objetivo desta seção é verificar se os aplicativos do modo DS embutidos con
    - Se o seu console exibir a versão japonesa do Flipnote Studio, uma tela preta, ou uma mensagem de erro, o teste falhou
 5. Desligue seu console
 
-#### DS Download Play Test
+#### Teste do Download Play de DS
 
 1. Ligue o seu console
-2. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
+2. Abra o aplicativo Download Play (![](/images/download-play-icon.png){height="24px" width="24px"})
 3. Selecione "Nintendo DS"
 4. Se o seu console carregar em um menu "Download de software via DS Download Play", o teste foi bem sucedido
    - Se o seu console exibir a versão japonesa do Flipnote Studio, uma tela preta, ou uma mensagem de erro, o teste falhou
@@ -89,27 +89,27 @@ Se qualquer um desses testes falhar, o Modo DS, DS Download Play, e/ou Conexões
 
 :::
 
-### Section III - Safety Test
+### Seção III - Teste de Segurança
 
 O objetivo desta seção é verificar se o console irá ligar e que as funções críticas do sistema, como as configurações do sistema e o teclado, funcionarão quando o CFW for desinstalado. **Se você pular esta seção, você pode CAUSAR UM BRICK no seu console!**
 
 1. Aperte e segure (Start), e enquanto segura (Start), ligue seu console. Isso vai inicializar o GodMode9
 2. Se você for solicitado para criar um backup de arquivos essenciais, aperte (A) para fazê-lo, e então aperte (A) para continuar assim que estiver concluído
 3. Se você for solicitado para consertar o RTC date&time, pressione (A) para consertar, então insira a data e a hora, depois pressione (A) para continuar
-   - Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after following this guide
+   - Note que, se você teve que consertar a data e hora do RTC, você também terá que corrigir a hora na Configuração do Console após acabar o guia
 4. Aperte (Home) para abrir o menu de ações
 5. Selecione "Scripts..."
 6. Selecione "safety_test"
 7. Leia o texto na tela e aperte (A) para continuar
 8. Você deve iniciar no Menu HOME padrão do 3DS (qualquer tema personalizado é irrelevante). Se sim, continue estas instruções
-   - If you do not boot into the regular 3DS HOME Menu (black screen, error screen, etc.), uninstalling CFW **WILL BRICK YOUR CONSOLE!**
+   - Se o Menu HOME padrão do 3DS não aparecer (tela preta, tela de erro, etc.), desinstalar CFW **VAI CAUSAR UM BRICK NO SEU CONSOLE!**
 9. Abra as Configurações do Sistema no seu console
-   - If the console crashes at this point, the test has failed
+   - Se o console travar ou exibir um erro neste ponto, o teste falhou
 10. Selecione "Outras Configurações"
 11. Selecione "Perfil"
 12. Selecione "Nome de Usuário"
 13. Se você puder digitar um novo nome de usuário, o teste foi bem sucedido
-    - If the keyboard does not appear, the screen freezes, or the console crashes, the test has failed
+    - Se o teclado não aparecer, a tela congelar, ou o console exibir um erro, o teste falhou
 14. Desligue seu console
 
 ::: danger
@@ -118,7 +118,7 @@ Se você NÃO inicializar no Menu HOME padrão do 3DS, ou a configuração do si
 
 :::
 
-### Section IV - NAND Backup
+### Seção IV - Backup da NAND
 
 1. Aperte e segure (Start), e enquanto segura (Start), ligue seu console. Isso vai inicializar o GodMode9
 2. Aperte (Home) para abrir o menu de ações
@@ -128,13 +128,13 @@ Se você NÃO inicializar no Menu HOME padrão do 3DS, ou a configuração do si
 6. Selecione "SysNAND Backup"
 7. Aperte (A) para confirmar
    - Esse processo levará algum tempo
-   - If you get an error, ensure you have at least 1.3GB of free space on your SD card
+   - Se você receber um erro, certifique-se de ter pelo menos 1.3GB de espaço livre no seu cartão SD
 8. Aperte (B) para retornar para o menu principal
 9. Selecione "Exit"
 10. Aperte (Home) para abrir o menu de ações
 11. Selecione "Poweroff system" para desligar seu console
 
-### Section V - Removing illegitimate content
+### Seção V - Removendo conteúdo ilegítimo
 
 ::: warning
 
@@ -146,28 +146,28 @@ Esta seção removerá conteúdo ilegítimo, como homebrew e cartuchos dumped. S
 2. Abra as Configurações do Sistema no seu console
 3. Navegue até Gerenciador de Dados > Nintendo 3DS > Software
 4. Nessa lista de software, delete qualquer conteúdo que não seja relativo a Nintendo instalado enquanto estiver usando o CFW
-   - This includes common system software such as FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint, and others, along with any games and titles that you did _not_ install from the eShop
+   - Isso inclui softwares de sistema comuns como FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint e outros, assim como quaisquer jogos e títulos que você _não_ instalou da eShop
 5. Navegue para `Gerenciador de Dados` -> `DSiWare`
 6. Nessa lista de software, delete qualquer conteúdo que não seja relativo a Nintendo instalado enquanto estiver usando o CFW
-   - This includes software such as TWiLightMenu++, along with any games and titles that you did _not_ install from the eShop
-   - Failure to remove all CFW software from both the 3DS and DSiWare sections before uninstalling CFW may prevent or disable access to the Data Management menu after uninstalling CFW, which will make it difficult to re-install CFW in the future
+   - Isso inclui software como TWiLightMenu++, assim como quaisquer jogos e aplicativos que você _não_ instalou da eShop
+   - Falhar ao remover todos os softwares CFW das seções de 3DS e DSiWare antes de desinstalar o CFW pode impedir ou desabilitar o acesso ao menu de Gerenciamento de Dados após desinstalar o CFW, o que pode dificultar a reinstalação de CFW no futuro
 7. Saia do aplicativo Configuração do Console
-8. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
+8. Abra o aplicativo Download Play (![](/images/download-play-icon.png){height="24px" width="24px"})
 9. Aguarde até que você veja os dois botões
 10. Aperte (Gatilho Esquerdo) + (D-pad pra baixo) + (Select) ao mesmo tempo para abrir o menu Rosalina
 11. Selecione "Miscellaneous options"
-12. Select "Switch the hb. title to the current app."
+12. Selecione "Switch the hb. title to the current app."
 13. Aperte (B) para continuar
 14. Aperte (B) para retornar para o menu principal do Rosalina
 15. Aperte (B) para sair do menu do Rosalina
 16. Aperte (Home), depois feche o Download Play
-17. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
+17. Abra o aplicativo Download Play (![](/images/download-play-icon.png){height="24px" width="24px"})
 18. Seu console deve inicializar o Homebrew Launcher
 19. Inicie o DSiWare Uninstaller da lista de homebrew
 20. Siga as instruções e permita que o programa desinstale
 21. Assim que o processo tiver sido bem-sucedido, saia do Homebrew Launcher e desligue seu console
 
-### Section VI - System Format
+### Seção VI - Formatando o sistema
 
 Essa seção irá garantir que todos os tickets ilegítimos sejam removidos, permitindo que a eShop funcione normalmente. Isso removerá todo o conteúdo do 3DS e desconectará você do seu NNID. Tenha em mente que a chave de criptografia do seu console será embaralhada, o que significa que quaisquer dados antigos ficarão inacessíveis, mesmo que você tenha um backup do conteúdo do seu SD.
 
@@ -176,7 +176,7 @@ Essa seção irá garantir que todos os tickets ilegítimos sejam removidos, per
 3. Navegue para Outras Configurações -> Próxima Página (até a página final) -> Formatar console
 4. Siga as instruções para formatar seu 3DS
 
-### Section VII - Running Uninstall Script
+### Seção VII - Executando o Script de Desinstalação
 
 ::: warning
 
@@ -200,7 +200,7 @@ Se você está removendo o CFW porque:
 :::
 
 1. Aperte e segure (Start), e enquanto segura (Start), ligue seu console. Isso vai inicializar o GodMode9
-   - If you instead see the Luma3DS chainloader, use the D-Pad and the (A) button to select GodMode9
+   - Se ao invés disso você ver o chainloader do Luma3DS, use o D-Pad e o botão (A) para selecionar o GodMode9
 2. Aperte (Home) para abrir o menu de ações
 3. Selecione "Scripts..."
 4. Selecione "GM9Megascript"
