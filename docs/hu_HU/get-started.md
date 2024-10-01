@@ -36,7 +36,7 @@ A korrrekt metódushoz a konzolodhoz, kérjük add meg azt a rendszer verziót, 
 
 ---
 
-#### Alternate Methods
+#### Alternatív metódusok
 
 Ha lehetséges, azt a metódust kell követned, ami feljebb látszik.
 
