@@ -19,16 +19,14 @@
 4. Power on your console
    - If you see the Luma3DS configuration menu, press (Start) to save and reboot
 
-::: tip
+::: info
 
 此时 Luma3DS 已经复制到主机的内部存储中。现在你的主机能够在不插 SD 卡的情况下开机了。
 
 :::
 
-___
+::: tip
 
-::: info
-
-如果你想要重新安装或升级 homebrew 程序，请至[完成安装](finalizing-setup)部分
+If you wish to re-install or update other homebrew applications (e.g. FBI, Homebrew Launcher), continue to [Finalizing Setup](finalizing-setup)
 
 :::
