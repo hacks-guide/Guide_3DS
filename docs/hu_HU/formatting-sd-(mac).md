@@ -1,6 +1,6 @@
 # Formatting SD (Mac)
 
-## Required Reading
+## Kötelező olvasmány
 
 Ez egy kiegészítő rész az SD kártya formázásához, hogy az működjön a 3DS-el.
 
@@ -8,7 +8,7 @@ Ha a 3DS már felismeri az SD kártyát, ez az útmutató nem szükséges.
 
 Ez az oldal Mac felhasználókra vonatkozik. Ha nem Mac rendszeren vagy, kövesd az [SD formázás (Windows)](formatting-sd-\(windows\)) vagy [SD formázás (Linux)](formatting-sd-\(linux\)) útmutatókat.
 
-## Instructions
+## Lépések
 
 ### OS X El Capitan (10.11) and later
 
