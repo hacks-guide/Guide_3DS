@@ -1,6 +1,6 @@
 # Boot9strap telepítése (SSLoth-Browser)
 
-:::details Technical Details (optional)
+:::details Technikai részletek (opcionális)
 
 A Browser alkalmazás exploit-olásához ki kell kapcsolni a verzió ellenőrzést, ami úgy lett megtervezve, hogy ne engedje a böngésző használatát a nélkül, hogy előtte frissítenénk a rendszert a legfrissebb verzióra.
 
@@ -12,20 +12,20 @@ A technikai részleteit az ezen az oldalon használt exploit-oknak tekintsd meg 
 
 :::
 
-## Compatibility Notes
+## Kompatibilitási megjegyzések
 
 Az SSLoth lehetővé teszi a 11.13.0 és alatti verziók számára, hogy megkerüld a böngésző verzió ellenőrzést, ezáltal lehetővé tegye a new-browserhax vagy az old-browserhax (kompatibilis a 11.4.0 verziótól 11.13.0-ig minden régió esetén) használatát, amik az universal-otherapp-pal együtt használhatók.
 
-## What You Need
+## Amire szükséged lesz
 
-- The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
-- The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
-- The latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) (`otherapp.bin`)
+- A [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) legfrissebb verziója (közvetlen letöltés)
+- A [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) legfrissebb verziója (közvetlen letöltés)
+- A [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) legújabb kiadása (a Luma3DS `.zip` fájl)
+- A [universal-otherapp] legújabb kiadása (https://github.com/TuxSH/universal-otherapp/releases/latest) (`otherapp.bin`)
 
-## Instructions
+## Lépések
 
-### Section I - Prep Work
+### I. rész - Előkészületek
 
 Ebben a fejezetben fel fogod másolni a fájlokat, amik a browserhax és az universal-otherapp kiváltásához szükségesek.
 
@@ -41,7 +41,7 @@ Ebben a fejezetben fel fogod másolni a fájlokat, amik a browserhax és az univ
 8. Tedd vissza az SD kártyád a konzoldba
 9. Kapcsold be a konzolod
 
-### Section II - SSLoth
+### II. rész - SSLoth
 
 Ebben a fejezetben módosítani fogod az Internet kapcsolat beállításokat hogy egy proxy hálózatot használj, ami úgy lett megtervezve, hogy kikerülje a browser verzió ellenőrzést, lehetővé téve a browser műlödését rendszer frissítés nélkül. Ez lehetővé teszi, hogy hozzáférj a browser exploit weboldalhoz a következő fejezetben.
 
@@ -49,7 +49,7 @@ Ebben a fejezetben módosítani fogod az Internet kapcsolat beállításokat hog
 
 1. Nyomj a "Back"-re kétszer, majd a "Close"-ra, hogy visszajuszz a HOME Menübe
 
-### Section III - Launching SafeB9SInstaller
+### III. rész - A SafeB9SInstaller indítása
 
 Ebben a fejezetben meg fogod látogatni a browser exploit weboldalt, ami az universal-otherapp-ot fogja használni a boot9strap (egyedi firmware) telepítő indításához.
 
@@ -62,7 +62,7 @@ Ebben a fejezetben meg fogod látogatni a browser exploit weboldalt, ami az univ
 4. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
    - If you get an error, [follow this troubleshooting guide](troubleshooting#installing-boot9strap-ssloth-browser)
 
-### Section IV - Installing boot9strap
+### IV. rész - Boot9strap telepítése
 
 Ebben a fejezetben egyedi firmware-t fogsz telepíteni a konzolodra.
 
@@ -72,7 +72,7 @@ Ebben a fejezetben egyedi firmware-t fogsz telepíteni a konzolodra.
 
 <!--@include: ./_include/configure-luma3ds.md -->
 
-### Section V - Restoring default proxy
+### V. rész - A Proxy beállítás alaphelyzetbe állítása
 
 <!--@include: ./_include/rmproxy.md -->
 
