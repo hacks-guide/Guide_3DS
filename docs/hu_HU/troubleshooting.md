@@ -2,7 +2,7 @@
 
 Ez az oldal hibaelhárítási tanácsokat ad sűrűn előforduló problémákhoz. Ha nem tudod megoldani a problémád az oldal tanácsai alapján, csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és írd le a problémádat és azt is hogy mi az amit már próbáltál.
 
-:::details Table of Contents
+:::details Tartalomjegyzék
 
 Több oldalon használt:
 
@@ -10,15 +10,15 @@ Több oldalon használt:
 
 Útmutató oldalak:
 
-- [Installing boot9strap (Soundhax)](#installing-boot9strap-soundhax)
-- [Installing boot9strap (MSET9)](#installing-boot9strap-mset9)
-- [Installing boot9strap (SSLoth-Browser)](#installing-boot9strap-ssloth-browser)
-- [Installing boot9strap (super-skaterhax)](#installing-boot9strap-super-skaterhax)
-- [Finalizing Setup](#finalizing-setup)
+- [Boot9strap telepítése (Soundhax)](#installing-boot9strap-soundhax)
+- [Boot9strap telepítése (MSET9)](#installing-boot9strap-mset9)
+- [Boot9strap telepítése (SSLoth-Browser)](#installing-boot9strap-ssloth-browser)
+- [Boot9strap telepítése (super-skaterhax)](#installing-boot9strap-super-skaterhax)
+- [Telepítés véglegesítése](#finalizing-setup)
 
 Problémák telepítést követően:
 
-- [Boot issues](#boot-issues-on-consoles-with-custom-firmware)
+- [Boot problémák](#boot-issues-on-consoles-with-custom-firmware)
 - [Software issues](#software-issues-on-consoles-with-custom-firmware)
 
 :::
@@ -377,10 +377,10 @@ Follow these steps in order:
 2. Navigate to `Internet Settings` -> `Connection Settings`
 3. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
 4. Set "Proxy Settings" to "No"
-5. Click OK, then click Save
+5. Kattints az OK-ra, majd kattints a Save-re
 6. When prompted, click "Test" to perform the connection test
    - The test should succeed
-7. Click "OK" to continue
+7. Kattints az OK gombra a folytatáshoz
 8. Nyomj a "Back"-re kétszer, majd a "Close"-ra, hogy visszajuszz a HOME Menübe
 9. Open the Internet Browser once
 10. If prompted about a system update, press OK
