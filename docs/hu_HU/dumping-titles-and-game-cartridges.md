@@ -111,7 +111,7 @@ Egy `<TitleID>.gbavc.sav` fájl Title ID-jének azonosításához használhatod 
 :::
 
 1. Csináld végig az alábbi lépéseket minden egyes GBA VC játékhoz, aminek a mentését vissza akarod állítani:
-   - Launch the GBA VC game
+   - Indítsd el a GBA VC játékot
    - Exit the GBA VC game
    - Kapcsold ki a konzolod
    - Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et
@@ -131,7 +131,7 @@ Egy `<TitleID>.gbavc.sav` fájl Title ID-jének azonosításához használhatod 
 :::
 
 1. Csináld végig az alábbi lépéseket minden egyes GBA VC játékhoz, aminek a mentését vissza akarod állítani:
-   - Launch the GBA VC game
+   - Indítsd el a GBA VC játékot
    - Exit the GBA VC game
    - Kapcsold ki a konzolod
    - Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et
@@ -144,7 +144,7 @@ Egy `<TitleID>.gbavc.sav` fájl Title ID-jének azonosításához használhatod 
    - Select "Inject GBA VC save"
    - Nyomd meg az (A) gombot a folytatáshoz
    - Nyomd meg a (Start) gombot a konzolod újraindításához
-   - Launch the GBA VC game
+   - Indítsd el a GBA VC játékot
    - Exit the GBA VC game
 
 ## Encrypting / Decrypting a .CIA file
