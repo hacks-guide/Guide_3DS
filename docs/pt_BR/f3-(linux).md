@@ -10,7 +10,7 @@ Esta página é destinada apenas a usuários do Linux. Se você não está no Li
 
 ## O que é necessário
 
-- The latest version of [F3](https://github.com/AltraMayor/f3/releases/tag/v8.0)
+- A versão mais recente do [F3](https://github.com/AltraMayor/f3/releases/tag/v8.0)
 
 ## Instruções
 
@@ -66,6 +66,6 @@ Se o teste mostrar outros resultados, o cartão SD pode estar corrompido ou dani
 
 ::: tip
 
-Return to [Get Started](get-started)
+Voltar para [Começando](get-started)
 
 :::
