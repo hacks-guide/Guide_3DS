@@ -133,7 +133,7 @@ Ensure that you have reset the title database.
 
 - Please power on your console with your SD inserted
 - Inicie as Configurações do Sistema e navegue para `Gerenciador de Dados` -> `Nintendo 3DS` -> `Software` -> Apagar ([imagem](/images/screenshots/database-reset.jpg))
-  - This will not wipe any of your data
+  - Isso não irá apagar nenhum dos seus dados
 - If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
 
 Se você _não_ receber uma mensagem de redefinição, seu cartão SD precisa ser formatado:
@@ -237,7 +237,7 @@ Talvez você esteja sem o `SafeB9S.bin` na raiz do seu cartão SD, ou o arquivo 
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Digite o número correspondente ao modelo do seu console e a versão, então pressione Enter
-   - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
+   - O estado atual deve exibir [Injected](/images/screenshots/mset9/mset9-injected.png)
    - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you may [retry Section II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
 2. Digite `4` e pressione Enter
 3. Assim que a janela disser "Removed trigger file", digite `0` e depois pressione Enter
@@ -266,7 +266,7 @@ Siga estas instruções para remover o arquivo de ativação e tentar novamente 
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Digite o número correspondente ao modelo do seu console e a versão, então pressione Enter
-   - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
+   - O estado atual deve exibir [Injected](/images/screenshots/mset9/mset9-injected.png)
    - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you are ready to retry Section II
 2. Digite `4` e pressione Enter
 3. Assim que a janela disser "Removed trigger file", digite `0` e depois pressione Enter
