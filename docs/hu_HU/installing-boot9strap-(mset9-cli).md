@@ -1,12 +1,12 @@
 # Boot9strap telepítése (MSET9 CLI)
 
-:::details Technical Details (optional)
+:::details Technikai részletek (opcionális)
 
 Az [MSET9](https://github.com/zoogie/MSET9) egy exploit a System Setting alkalmazáshoz, amit [zoogie](https://github.com/zoogie) készített. Kihasznál egy hibát, ahol az ID1 (a második 32 karakteres mappanév a Nintendo 3DS mappán belül, az ID0-n belül) lehet _minden_ név, amíg 32 karakteres. Egy adott műveletsor végrehajtása azt eredményezi, hogy a konzol végrehajtja az ID1 mappanévbe kódolt utasításokat, amelyek segítségével teljes körű irányítást szerez a 3DS felett.
 
 :::
 
-## Compatibility Notes
+## Kompatibilitási megjegyzések
 
 ::: warning
 
@@ -14,13 +14,13 @@ Ez a metódus Windows, Linux vagy MacOS számítógépet igényel. Ha Android te
 
 :::
 
-## What You Need
+## Amire szükséged lesz
 
 - The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest)
 - Any 3.x version of [Python](https://www.python.org/downloads/) **installed on your computer**
   - If you are on Linux or macOS, you may already have Python 3. Ellenőrizd egy Terminal ablak megnyitásával, majd a `python3 -V` parancs megadásával. Ha ez egy verziószámot ad vissza, működni fog ezzel az útmutatóval.
 
-## Instructions
+## Lépések
 
 ::: info
 
@@ -28,7 +28,7 @@ Ezen az oldalon a MSET9 szkriptet fogod használni, ami kiváltja az MSET9-et. A
 
 :::
 
-### Section I - Prep Work
+### I. rész - Előkészületek
 
 Ebben a lépésben előkészülsz az MSET9 exploitra azzal, hogy **átmenetileg**\* létrehozol egy új HOME menüt felhasználói adat nélkül, majd úgy beállítod a azt a profilt, hogy a minimum adatot tartalmazza ahhoz, hogy kiváltsa az MSET9-et. Felhasználói adataid átmenetileg eltűnnek, de vissza fognak térni az oldal befejezésekor.
 
@@ -97,7 +97,7 @@ Ebben a lépésben előkészülsz az MSET9 exploitra azzal, hogy **átmenetileg*
 2. Írj `0`-át és nyomj Enter-t a szkript bezárásához
 3. Tedd vissza az SD kártyád a konzoldba
 
-### Section II - MSET9
+### II. rész - MSET9
 
 Ebben a fejezetben az MSET9 fogod triggerelni, hogy elindítsa a SafeB9SInstaller-t (az egyedi firmware telepítőt).
 
@@ -126,7 +126,7 @@ Ezeket a lépéseket **PONTOSAN** kell követni, így ellenőrizz MINDENT kétsz
 5. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
    - If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting#installing-boot9strap-mset9)
 
-### Section III - Installing boot9strap
+### III. rész - boot9strap telepítése
 
 Ebben a fejezetben egyedi firmware-t fogsz telepíteni a konzolodra.
 
@@ -136,7 +136,7 @@ Ebben a fejezetben egyedi firmware-t fogsz telepíteni a konzolodra.
 
 <!--@include: ./_include/configure-luma3ds.md -->
 
-### Section IV - Removing MSET9
+### IV. rész - Az MSET9 eltávolítása
 
 Ebben a fejezetben el fogod távolítani az MSET9-et, hogy megelőzz további problémákat és hogy helyreállítsd a felhasználói adataidat (játékok, témák, stb). (Ez nem fogja eltávolítani az egyéni firmware-t amit épp csak telepítettél.)
 
