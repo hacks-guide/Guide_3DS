@@ -46,7 +46,7 @@ GodMode9 most már a legfrissebb.
 
 :::
 
-## Creating a NAND Backup
+## Biztonsági másolat készítése a NAND-ról
 
 1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et
 
@@ -58,7 +58,7 @@ A NAND mentésed sikeresen létrehozásra került.
 
 :::
 
-## Restoring a NAND Backup
+## NAND-ról készült bizonsági másolat visszaállítása
 
 1. Kapcsold ki a konzolod
 2. Helyezd az SD kártyád a számítógépbe
@@ -72,8 +72,8 @@ A NAND mentésed sikeresen létrehozásra került.
 10. Válaszd a "SysNAND Restore (safe)" opciót
 11. Válaszd ki a NAND-odról készült biztonsági másolatot
 12. Nyomd meg az (A) gombot, hogy feloldd a SysNAND (lvl3) írást, majd sorban nyomd meg a kijelzett gombokat
-    - This will **not** overwrite your boot9strap installation
-    - This process will take some time
+    - Ez **nem** fogja felülírni a boot9strap installációdat
+    - Ez a folyamat igénybe vesz majd némi időt
 13. Nyomd meg az (A) gombot a folytatáshoz
 14. Nyomd meg a (B) gombot, hogy visszamenj a főmenübe
 15. Válaszd az "Exit" opciót
@@ -85,7 +85,7 @@ A NAND mentésed sikeresen helyreállításra került. Most már törölheted a 
 
 :::
 
-## Injecting any .CIA app into Health & Safety
+## Bármely .CIA alkalmazás "Health & Safety"-be injektálása
 
 ::: info
 
@@ -111,7 +111,7 @@ A kívánt alkalmazásod most már beinjektálásra került a Health & Safety-be
 
 :::
 
-## Restoring Health & Safety after injecting a .CIA app
+## "Health & Safety" visszaállítása .CIA app injektálása után
 
 ::: info
 
@@ -132,7 +132,7 @@ A Health & Safety visszaállításra került normálra.
 
 :::
 
-## Format an SD card
+## SD kártya formázása
 
 ::: danger
 
@@ -142,7 +142,7 @@ A Health & Safety visszaállításra került normálra.
 
 1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et
 2. Nyomd meg a (Jobb váll) + (B) gombokat az aktuális SD kártya lecsatolásához és csatlakoztasd a másikat, amit formázni szeretnél
-   - If GodMode9 shows an initialization error when inserting the SD Card to be formatted, it can safely be dismissed
+   - Ha GodMode9 inicializációs hibákat mutat a formázandó SD kártya csatlakoztatásakor, akkor az nyugodtan figyelmen kívül hagyhatod
 
 <!--@include: ./_include/format-sd-gm9.md -->
 
@@ -152,7 +152,7 @@ Az SD kártyád formázva lett az ezen konzollal történő használatához.
 
 :::
 
-## Removing an NNID without formatting your console
+## NNID eltávolítása a konzolodról annak formázása nélkül
 
 ::: info
 
