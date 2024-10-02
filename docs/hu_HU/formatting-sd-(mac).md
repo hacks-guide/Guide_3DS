@@ -35,7 +35,7 @@ Ez az oldal Mac felhasználókra vonatkozik. Ha nem Mac rendszeren vagy, kövesd
 8. Ellenőrizd, hogy a "Format" beállítása "MS-DOS (FAT)"
 
 9. Ellenőrizd, hogy a "Scheme" beállítása "Master Boot Record"
-   - If "Scheme" does not appear, click "Cancel" and make sure to choose the device instead of a volume
+   - Ha a "Scheme" nem jelenik meg, nyomj "Cancel"-t és ellenőrizd, hogy az eszközt válaszottad-e ki egy kötet helyett
 
 10. Kattints az "Erase"-re
 
@@ -62,7 +62,7 @@ Ez az oldal Mac felhasználókra vonatkozik. Ha nem Mac rendszeren vagy, kövesd
    :::
 
 5. Kattints az "Partition"-re felül
-   - If "Partition" does not appear, make sure to choose the device instead of a volume
+   - Ha a "Partition" nem jelenik meg, és ellenőrizd, hogy az eszközt válaszottad-e ki egy kötet helyett
 
 6. Ellenőrizd, hogy a "Partition Layout" beállított "1 Partition"-re
 
@@ -88,5 +88,5 @@ Ez az oldal Mac felhasználókra vonatkozik. Ha nem Mac rendszeren vagy, kövesd
 
 ## Hibaelhárítás
 
-- SD card remains undetected by console or continues to display the wrong capacity after formatting
-  - Your SD card may be partitioned or have unallocated space. Kövesd a lépéseket [itt](https://wiki.hacks.guide/wiki/SD_Clean/Mac) az SD kártyád újraformázásához.
+- SD kártya továbbra sem detektálható a konzol által, vagy a formázás után továbbra is a rossz kapacitást mutatja
+  - Az SD kártyád lehet, hogy partícionált vagy van nem lefoglalt területe. Kövesd a lépéseket [itt](https://wiki.hacks.guide/wiki/SD_Clean/Mac) az SD kártyád újraformázásához.
