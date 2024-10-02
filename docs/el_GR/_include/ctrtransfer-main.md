@@ -4,11 +4,11 @@
    - Σημειώστε ότι, αν έπρεπε να διορθώσετε την ημερομηνία και την ώρα RTC, θα χρειαστεί να διορθώσετε την ώρα και στην εφαρμογή «System Settings», αφού ακολουθήσετε αυτόν τον οδηγό
 4. Πατήστε το (Home) για να εμφανιστεί το μενού ενεργειών
 5. Επιλέξτε «Scripts...»
-6. Select "ctrtransfer"
-7. Select your downloaded CTRTransfer image
-   - The script will calculate the hash of your image to make sure it's valid
-8. Once the checks are completed, press (A) to continue
-9. Press (A) to unlock SysNAND (lvl2) writing, then input the key combo given
+6. Επιλέξτε «ctrtransfer»
+7. Επιλέξτε το ληφθέν είδωλο CTRTransfer
+   - Το script θα υπολογίσει το hash του ειδώλου σας για να εξασφαλίσει την εγκυρότητά του
+8. Μόλις ολοκληρωθούν οι έλεγχοι, πατήστε το (A) για να συνεχίσετε
+9. Πατήστε το (A) για να ξεκλειδώσετε την εγγραφή στη SysNAND (lvl2) και έπειτα, εισαγάγετε τον συνδυασμό πλήκτρων που θα σας δοθεί
 10. Μόλις ολοκληρωθεί η μεταφορά, πατήστε το (Α) για να συνεχίσετε
 11. Πατήστε το (Α) για να κλειδώσετε ξανά τα δικαιώματα εγγραφής εάν σας ζητηθεί
 12. Πατήστε το (Start) για να επανεκκινήσετε την κονσόλα σας
