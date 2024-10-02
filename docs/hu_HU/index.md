@@ -3,14 +3,14 @@ layout: home
 title: 3DS Hackelés útmutató
 hero:
   text: 3DS Hackelés útmutató
-  tagline: A complete guide to 3DS (and 2DS) custom firmware, from stock to boot9strap.
+  tagline: Teljes útmutató 3DS (és 2DS) egyedi firmware-hez, a gyári állapottól boot9strap-ig.
   image:
     src: /images/home-page-feature.jpg
 ---
 
 ::: info
 
-Thoroughly read all of the introductory pages (including this one!) before proceeding.
+Alaposan olvasd végig az összes bevezető oldalt (beleértve ezt is!) mielőtt folytatnád.
 
 :::
 
@@ -20,18 +20,18 @@ Thoroughly read all of the introductory pages (including this one!) before proce
 
 :::
 
-## What is custom firmware?
+## Mi az a Custom Firmware?
 
 A **Custom firmware** ("CFW") egy teljes szoftver módosítása a 3DS-ednek, ami a számítógéped "rendszergazdai hozzáféréséhez" hasonlítható. Lehetővé teszi, hog bármit csinál amire a 3DS fizikailag képes, a helyett, hogy korlátozva lennél arra amit a Nintendo enged meg számodra.
 
 A custom firmware gyakori felhasználásai a következők:
 
-- Running homebrew software and games made for or ported to the Nintendo 3DS
-- Bypassing the region lock, allowing you to play games from other regions
-- HOME Menu customization, using community-created [themes and badges](https://themeplaza.art)
-- Modification of games ("ROM hacks") through [LayeredFS](https://github.com/knight-ryu12/godmode9-layeredfs-usage/wiki/Using-Luma3DS'-layeredfs-\(Only-version-8.0-and-higher\))
-- Save data editing, backup, and restore
-- Emulation of older consoles, as well as native playback of DS and GBA games
+- Homebrew szoftver és játékok futtatásához, amik a Nintendo 3DS-re készültek vagy portoltak
+- A régió korlátozás megkerülése, lehetővé téve más régiós játékok futtatását
+- HOME Menü egyedivé tétel, a közösség által készített [témákkal és jelvényekkel](https://themeplaza.art)
+- Játékok módosítása ("ROM hackek") a [LayeredFS](https://github.com/knight-ryu12/godmode9-layeredfs-usage/wiki/Using-Luma3DS'-layeredfs-\(Only-version-8.0-and-higher\))-en keresztül
+- Játékmentések szerkesztése, biztonsági mentése és visszaállítása
+- Régebbi konzolok emulációja, valamint natív DS és GBA játék futtatás
 - Installing your physical cartridges for digital use
 
 ## What does this guide install?
