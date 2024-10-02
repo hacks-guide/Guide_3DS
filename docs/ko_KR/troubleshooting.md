@@ -343,7 +343,7 @@ The file `arm11code.bin` is missing or misplaced. Download the latest release of
 
 :::details "에러가 발생하여 소프트웨어를 종료합니다..." (하얀 메시지 창)
 
-There may be an issue with your `arm11code.bin` file. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
+`arm11code.bin`에 문제가 있을 수 있습니다. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
 
 You can also try resetting your browser save data:
 
@@ -369,29 +369,29 @@ The SSLoth proxy was incorrectly configured. Re-do the SSLoth section on the pag
 
 :::
 
-:::details Error 032-0420 when opening browser
+:::details 브라우저를 열면 오류 032-0420이 표시됩니다
 
-Follow these steps in order:
+다음 과정을 순서대로 진행해주세요:
 
 1. 콘솔에서 본체 설정을 열어 주세요
-2. Navigate to `Internet Settings` -> `Connection Settings`
-3. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
-4. Set "Proxy Settings" to "No"
-5. Click OK, then click Save
-6. When prompted, click "Test" to perform the connection test
+2. `인터넷 설정` -> `인터넷 접속 설정`으로 이동해 주세요
+3. 네트워크 접속 경로을 클릭해, `설정 변경` -> `다음 페이지 (오른쪽 화살표)` -> `Proxy 설정`으로 이동해 주세요
+4. "Proxy 설정"을 "아니요"로 설정해 주세요
+5. OK하고 저장을 차례로 눌러주세요
+6. 접속 테스트 안내문이 표시되면, `예`를 눌러 인터넷 접속 테스트를 진행해 주세요
    - 이 테스트가 성공적일 겁니다
-7. Click "OK" to continue
+7. "OK"을 눌러 진행해 주세요
 8. "뒤로"을 두 번 누르고 "종료"를 눌러 HOME 메뉴로 돌아가 주세요
-9. Open the Internet Browser once
-10. If prompted about a system update, press OK
-    - This won't actually update the system
-11. Start again from [Section II](installing-boot9strap-\(ssloth-browser\).html#section-ii---ssloth)
+9. 인터넷 브라우저를 한 번 열어주세요
+10. 시스템 업데이트에 관한 창이 표시되면, 'OK'을 눌러주세요
+    - 실제로 시스템이 업데이트되지는 않습니다
+11. [섹션 II](installing-boot9strap-\(ssloth-browser\).html#section-ii---ssloth)로 돌아가 다시 진행해주세요
 
 :::
 
-:::details Frozen on "Doing agbhax..."
+:::details "Doing agbhax..."에서 화면이 멎습니다
 
-There may be an issue with your `arm11code.bin` file. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place it on the root of your SD card, and rename it to `arm11code.bin`. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
+`arm11code.bin`에 문제가 있을 수 있습니다. 최신 버전의 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)을 다시 내려받아 SD 카드의 최상위 디렉토리에 복사하고, 이름을 `arm11code.bin`으로 변경해주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
 
 :::
 
@@ -442,7 +442,7 @@ The file `finalize.romfs` was placed in the wrong location instead of root of SD
 
 :::details Error #24: SD is write-protected
 
-Ensure that your SD card is not [locked](/images/sdlock.png). 이 상태가 아님에도 문제가 지속될 경우, [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp) 에 연락해 도움을 청하세요.
+SD 카드가 [쓰기 금지](/images/sdlock.png) 상태가 아닌지 확인해 주세요. 이 상태가 아님에도 문제가 지속될 경우, [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp) 에 연락해 도움을 청하세요.
 
 :::
 
@@ -454,7 +454,7 @@ You said 'No' to the "Make essential files backup?" prompt in GodMode9. Power of
 
 :::details Error #04: No space
 
-You need at least 1.3GB of free space to perform the NAND backup, which is a part of the script. 빈 공간이 부족하다면 다음 단계를 따르세요.
+스크립트의 일부인 NAND 백업을 수행하려면 메모리 카드에 최소 1.3GB 여유 공간이 필요합니다. 빈 공간이 부족하다면 다음 단계를 따르세요.
 
 1. 콘솔의 전원을 꺼 주세요
 2. SD 카드를 컴퓨터에 삽입해 주세요
@@ -467,10 +467,10 @@ You need at least 1.3GB of free space to perform the NAND backup, which is a par
 9. "finalize"를 선택해 주세요
 10. Press (A) to create a NAND backup
     - 예상 소요 시간은 약 15 분입니다
-11. Press (A) again
+11. (A) 를 한 번 더 누르세요
     - 콘솔의 전윈이 자동으로 꺼질 겁니다
 12. SD 카드를 컴퓨터에 삽입해 주세요
-13. Copy the files in `/gm9/backups/` on your SD to a safe location on your computer
+13. SD 카드의 `/gm9/backups/` 폴더 내 파일들을 컴퓨터의 안전한 위치에 복사해 주세요
 14. Delete the `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` files from the SD card
 15. 컴퓨터에서 SD 카드의 루트로 복사해 두었던 `Nintendo 3DS` 폴더를 다시 복사해 주세요
 16. 컴퓨터에서 `Nintendo 3DS` 폴더를 지워주세요
@@ -515,7 +515,7 @@ SD 카드의 용량이 충분하다면, SD 카드가 손상되었거나 불량�
 
 :::details Error #12: Copy (file).db fail
 
-Ensure that your SD card is not [locked](/images/sdlock.png). 이 상태가 아님에도 문제가 지속될 경우, [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp) 에 연락해 도움을 청하세요.
+SD 카드가 [쓰기 금지](/images/sdlock.png) 상태가 아닌지 확인해 주세요. 이 상태가 아님에도 문제가 지속될 경우, [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp) 에 연락해 도움을 청하세요.
 
 :::
 
@@ -621,7 +621,7 @@ ARM11 오류 핸들러가 꺼져있거나, 커스텀 펌웨어가 정상적으�
 
 :::
 
-:::details HOME Menu is missing installed applications
+:::details HOME 메뉴에 설치한 앱이 없어졌습니다
 
 여러 이유가 있을 수 있지만, 대부분 시스템이 SD 카드를 읽지 못해 발생합니다.
 SD 카드가 읽혔는지 확인하려면 SELECT를 누른 채 부팅해 아래 화면의 노란색 문구를 확인하세요: "Booted from CTRNAND via B9S"가 표시된다면 SD 카드가 읽히지 않아 내부 메모리에서 부팅되었음을 의미합니다.
@@ -673,7 +673,7 @@ SD 카드가 읽혔는지 확인하려면 SELECT를 누른 채 부팅해 아래 
 
 :::
 
-:::details 확장 메모리 모드 게임 (포켓몬 썬/문, 스매시 브라더스 등)이 정상 작동하지 않습니다 don't work
+:::details 확장 메모리 모드 게임 (포켓몬 썬/문, 스매시 브라더스 등)이 정상 작동하지 않습니다
 
 이 문제는 구 3DS / 2DS 콘솔의 지역을 변경하거자 CTRTransfer를 한 이후 나타날 수 있는 상황입니다. Follow the instructions [here](region-changing#section-vi---fixing-locale-related-issues) to fix this issue (skipping steps 3, 4, 5, and 6).
 
