@@ -2,7 +2,7 @@
 
 1. 将主机关机
 2. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-3. 进入到 `[0:] SDCARD` -> `gm9`
+3. Navigate to `[0:] SDCARD` -> `gm9` -> `in`
 4. 在 CTRTransfer `.bin` 上按 “X” 来删除它
 5. 按下 “A” 键确认
 6. 按若干次 “B” 键回到主菜单
