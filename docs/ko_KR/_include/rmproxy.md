@@ -1,10 +1,10 @@
 이 섹션에서는, 인터넷 설정을 복원할 것입니다.
 
 1. 본체 설정 에플리케이션을 실행해 주세요
-2. Navigate to `Internet Settings` -> `Connection Settings`
-3. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
-4. Set "Proxy Settings" to "No"
-5. Click OK, then click Save
-6. When prompted, click "Test" to perform the connection test
+2. `인터넷 설정` -> `인터넷 접속 설정`으로 이동해 주세요
+3. 네트워크 접속 경로을 클릭해, `설정 변경` -> `다음 페이지 (오른쪽 화살표)` -> `Proxy 설정`으로 이동해 주세요
+4. "Proxy 설정"을 "아니요"로 설정해 주세요
+5. OK하고 저장을 차례로 눌러주세요
+6. 접속 테스트 안내문이 표시되면, `예`를 눌러 인터넷 접속 테스트를 진행해 주세요
    - 이 테스트가 성공적일 겁니다
 7. 콘솔의 전원을 꺼 주세요
