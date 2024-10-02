@@ -1,4 +1,4 @@
-# Restoring / Updating CFW
+# CFW visszaállítása / frissítése
 
 ## Kötelező olvasmány
 
