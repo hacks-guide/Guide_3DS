@@ -14,7 +14,7 @@ Vedd figyelembe, hogy néhány ritka esetben lehetséges, hogy a flashelési fol
 
 ## Amire szükséged lesz
 
-- Your ntrboot compatible flashcart
+- Az ntrboor kompatibilis flashkártyád
 - Two 3DS family consoles
   - **The source 3DS**: the 3DS family console that is already running boot9strap
   - **The target 3DS**: the 3DS family console on stock firmware
@@ -40,7 +40,7 @@ Vedd figyelembe, hogy néhány ritka esetben lehetséges, hogy a flashelési fol
 3. Olvasd el a figyelmeztetést a piros képernyőn
 4. Nyomd meg az (A) gombot a folytatáshoz
 5. Válaszd ki a flashkártyádat
-   - If you do not see your flashcart in the list at the top, read the bottom screen for more info on each option
+   - Ha nem találod a flashkártyádat a listában felül, olvasd el az alsó képernyőn megjelenő információkat minden opcióra
 6. Válaszd a "Dump Flash" opciót
 7. Várj, amíg a folyamat befejeződik
 8. Nyomd meg az (A) gombot a folytatáshoz
