@@ -72,7 +72,7 @@ Egy `<TitleID>.gbavc.sav` fájl Title ID-jének azonosításához használhatod 
 
 1. Csináld végig az alábbi lépéseket minden egyes GBA VC játékhoz, aminek a mentését vissza akarod állítani:
    - Indítsd el a GBA VC játékot
-   - Exit the GBA VC game
+   - Lépj ki a GBA VC játékból
    - Boot your console while holding (Start) to launch the Luma3DS chainloader menu
    - Launch GodMode9 by pressing (A)
    - Menj ide: `[S:] SYSNAND VIRTUAL`
@@ -133,7 +133,7 @@ Egy `<TitleID>.gbavc.sav` fájl Title ID-jének azonosításához használhatod 
 2. Kapcsold be a konzolod, úgy, hogy a SysNAND induljon el
 3. Csináld végig az alábbi lépéseket minden egyes GBA VC játékhoz, aminek a mentését vissza akarod állítani:
    - Indítsd el a GBA VC játékot
-   - Exit the GBA VC game
+   - Lépj ki a GBA VC játékból
    - Boot your console while holding (Start) to launch the Luma3DS chainloader menu
    - Launch GodMode9 by pressing (A)
    - Menj ide: `[0:] SDCARD` -> `gm9`
@@ -146,7 +146,7 @@ Egy `<TitleID>.gbavc.sav` fájl Title ID-jének azonosításához használhatod 
    - Nyomd meg az (A) gombot a folytatáshoz
    - Nyomd meg a (Start) gombot a konzolod újraindításához
    - Indítsd el a GBA VC játékot
-   - Exit the GBA VC game
+   - Lépj ki a GBA VC játékból
 
 ### VII. rész - SysNAND biztonsági mentése
 
