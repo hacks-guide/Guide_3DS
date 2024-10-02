@@ -4,9 +4,9 @@
 
 Ez a webhely cookie-kat használ annak érdekében, hogy irányíthassa a felhasználókat az útmutatóban haladás során. A sütik lehetővé teszik, hogy az oldal oldalsávja megjelenítse az aktuális haladást a webhelyen, ezáltal a felhasználók könnyebben eligazodhassanak az utasításokban.
 
-## Embedded Content From Other Websites
+## Beágyazott tartalom más oldalakról
 
-This site may include embedded content (e.g. videos, images, articles, etc.). A más weboldalakról beágyazott tartalom úgy viselkedik, mintha a felhasználó meglátogatta volna az oldalt.
+Ez az oldal beágyazhat tartalmat más oldalakról (például videókat, képeket, cikkeket, stb.). A más weboldalakról beágyazott tartalom úgy viselkedik, mintha a felhasználó meglátogatta volna az oldalt.
 
 Ezek a webhelyek adatokat gyűjthetnek rólad, használhatnak cookie-kat, beágyazhatnak további harmadik felek általi nyomon követést és nyomon követhetik ezzel a beágyazott tartalommal való interakciót, beleértve a beágyazott tartalommal való interakció nyomon követését akkor is, ha van fiókja és be van jelentkezve az adott webhelyre.
 
