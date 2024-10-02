@@ -19,13 +19,13 @@ Több oldalon használt:
 Problémák telepítést követően:
 
 - [Boot problémák](#boot-issues-on-consoles-with-custom-firmware)
-- [Software issues](#software-issues-on-consoles-with-custom-firmware)
+- [Szoftver problémák](#software-issues-on-consoles-with-custom-firmware)
 
 :::
 
-## Issues with SafeB9SInstaller
+## Problémák a SafeB9SInstaller-rel
 
-### Before opening SafeB9SInstaller
+### A SafeB9SInstaller megnyitása előtt
 
 :::details Failed to open SafeB9SInstaller.bin
 
@@ -69,13 +69,13 @@ Csatlakozz a [Nintendo Homebrew Discord-on](https://discord.gg/MWxPgEp) csatorn�
 
 :::details Red/purple/pink and white screen after running Soundhax
 
-If your console is on system version 9.4.0, 9.5.0, or 9.6.0, you may be encountering a bug with an old version of universal-otherapp. Download the latest version from [here](https://github.com/TuxSH/universal-otherapp/releases/latest).
+Ha a konzol rendszer verziód 9.4.0, 9.5.0, vagy 9.6.0, hibát tapasztalhatsz az universal-otherapp egy régebbi verziójával. Töltsd le a legfrissebb verziót [innen](https://github.com/TuxSH/universal-otherapp/releases/latest).
 
 Ha nem ezeken a firmware verziókon van a konzolod, akkor ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvégezned a [CFW ellenőrzését](checking-for-cfw).
 
 :::
 
-:::details "An error has occurred, forcing the software to close..." (white message box)
+:::details "An error has occurred, forcing the software to close..." (fehér üzenet ablak)
 
 Probléma van a `otherapp.bin` fájloddal (nem jó, hiányzik, rossz helyen van vagy sérült). Töltsd le a legutolsó kiadását az [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)-nak és rakd az SD kártyád gyökerébe.
 
@@ -129,12 +129,12 @@ Ha ez nem működik, az SD kártyád formázni kell:
 
 :::details Title database: Not initialized!
 
-Ensure that you have reset the title database.
+Biztosítsd, hogy a cím adatbázisod resetelve legyen.
 
-- Please power on your console with your SD inserted
+- Kérjük kapcsold be a konzolod, miközben az SD kártya be van helyezve
 - Indítsd el a System Settings-et és navigálj ide: `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
-  - This will not wipe any of your data
-- If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
+  - Ez nem fogja törölni az adataidat
+- Ha reset prompt-ot kapsz reset után, kapcsold ki a konzolod, majd kezd újra az [I. rész 14. lépésétől](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
 
 Ha nem kapsz reset promptot, az SD kártyádat formázni kell:
 
@@ -146,7 +146,7 @@ Ha nem kapsz reset promptot, az SD kártyádat formázni kell:
 
 1. Írd be a konzolod modelljéhez és verziójához tartozó számot, és nyomj Enter-t
 2. Írj `2`-öt és nyomj Enter-t az MSET9 állapotának ellenőrzéséhez
-   - This will create the dummy databases again
+   - Ez létre fogja hozni a dummy adatbázisokat újra
 3. Zárd be az MSET9 szkript ablakát
 4. Kezd újra az [I. rész 12. lépésével](installing-boot9strap-\(mset9-cli\)#section-i---prep-work).
 
@@ -187,12 +187,12 @@ Több ID0 mappád van. Ahhoz, hogy meghatározd melyik a helyes mappa, a követk
 2. Tedd vissza az SD kártyád a konzoldba
 3. Kapcsold be a konzolod
 4. Várd meg, amíg a konzolod legenerálja az SD kártyára az adatokat
-   - Your applications will have disappeared. Ez normális, hamarosan megoldjuk
+   - Az alkalmazásaidnak el kell tűnniük. Ez normális, hamarosan megoldjuk
 5. Kapcsold ki a konzolod
 6. Helyezd az SD kártyád a számítógépbe
 7. Lépj be az SD kártyád `Nintendo 3DS` könyvtárába
 8. Írd le az első pár karakterét a mappának amit látsz
-   - This is your true ID0, which we will keep in the real Nintendo 3DS folder
+   - Ez a te valódi ID0-d, amit a valódi Nintendo 3DS mappában fogunk tartani
 9. Töröld az ID0-t az aktuális `Nintendo 3DS` mappából
 10. Mozgasd a valódi ID0 mappát a `BACKUP_Nintendo 3DS` mappából a `Nintendo 3DS` mappába
 11. Ha létezik, mozgasd a `Private` mappát a `BACKUP_Nintendo 3DS` mappából a `Nintendo 3DS` mappába
@@ -227,7 +227,7 @@ Egy vagy több fájl, amire az MSET9-nek szüksége van a futáshoz, hiányzik v
 
 :::
 
-:::details Red screen after reinserting SD card (Section II Step 11)
+:::details Piros képernyő az SD kártya visszaillesztése után (II. rész 11. lépés)
 
 Valószínüleg hiányzik a `SafeB9S.bin` az SD kártyád gyökeréből vagy sérült. Másold ki az MSET9 `.zip` fájlból felülírva a létező fájlokat, majd kövesd ezeket a lépésket a trigger fájl eltávolításához:
 
@@ -237,8 +237,8 @@ Valószínüleg hiányzik a `SafeB9S.bin` az SD kártyád gyökeréből vagy sé
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Írd be a konzolod modelljéhez és verziójához tartozó számot, és nyomj Enter-t
-   - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
-   - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you may [retry Section II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
+   - Az aktuális állapot [Injected](/images/screenshots/mset9/mset9-injected.png)-et kell mutasson
+   - Ha már eltávolítottad a trigger fájlt (vagy soha nem injektáltad), az aktuális állapot [Ready](/images/screenshots/mset9/mset9-ready.png)-t fog mutatni és megpróbálhatod [újracsinálni a II. részt](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
 2. Írj `4`-et és nyomj Enter-t
 3. Amikor az ablak azt mondja, hogy Removed trigger file", írj `0`-t majd nyomj Entert
 4. Tedd vissza az SD kártyát a konzoldba
@@ -254,7 +254,7 @@ Alternatíva, az SD kártyád nem megfelelően formázott vagy partícionált. A
 
 :::
 
-:::details System Settings loading infinitely after reinserting the SD card
+:::details A System Settings a végtelenségig tölt az SD kártya visszahelyezését követően
 
 Vagy eltértél az MSET9 lépésektől, vagy rossz modelt/verziót választottál vagy az SD kártyád formázni kell. Biztosítsd, hogy jó [modellt](/images/3dsmodels.png) és firmware verziót válassz a szkript megnyitásakor.
 
@@ -266,15 +266,15 @@ Kövesd a következő lépéseket a trigger fájl ettávolításához, majd pró
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Írd be a konzolod modelljéhez és verziójához tartozó számot, és nyomj Enter-t
-   - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
-   - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you are ready to retry Section II
+   - Az aktuális állapot [Injected](/images/screenshots/mset9/mset9-injected.png)-et kell mutasson
+   - Ha már eltávolítottad a trigger fájlt (vagy soha nem injektáltad), az aktuális állapot [Ready](/images/screenshots/mset9/mset9-ready.png)-t fog mutatni és megpróbálhatod újracsinálni a II. részt
 2. Írj `4`-et és nyomj Enter-t
 3. Amikor az ablak azt mondja, hogy Removed trigger file", írj `0`-t majd nyomj Entert
 4. Tedd vissza az SD kártyát a konzoldba
 5. Kapcsold be a konzolod
 6. Térj vissza az [II. rész 1. lépéséhez](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
 
-If you continue to have this issue and are sure that you did everything correctly, ensure the trigger file is removed and format your SD card:
+Ha továbbra is megmarad ez a hiba és biztos vagy benne, hogy mindent jól csináltál, akkor biztosítsd, hogy a trigger fájl eltávolításra kerüljön és formázd az SD kártyád:
 
 1. Másolj mindent az SD kártyádról a PC-dre
 2. Formázd az SD kártyád ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)))
@@ -283,9 +283,9 @@ If you continue to have this issue and are sure that you did everything correctl
 
 :::
 
-:::details An exception occurred after triggering MSET9
+:::details Kivétel történt (exception occured) az MSET9 kiváltását követően
 
-This likely indicates that you already have custom firmware. Érdemes elvégezned a [CFW ellenőrzését](checking-for-cfw).
+Ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvégezned a [CFW ellenőrzését](checking-for-cfw).
 
 :::
 
@@ -293,25 +293,25 @@ This likely indicates that you already have custom firmware. Érdemes elvégezne
 
 :::details "An error has occurred. Please save your data in any software currently in use, then restart the system."
 
-If no colors flash after pressing "GO GO!":
+Ha nincs szín villogás a "GO GO!" megnyomása után:
 
-- Ensure that you have set your system date and [region](/images/screenshots/skater/skater-lang.png) correctly
-- Ensure that no other browser tabs are open, then restart the browser and try the exploit again
+- Legyél biztos abban, hogy a rendszer idő és [régiós beállításaid](/images/screenshots/skater_lang.png) megfelelőek
+- Biztosítsd, hogy ne legyen másik böngésző fül megnyitva, majd indítsd újra a böngészőt és próbáld újra az exploit-ot
 
-If the screen flashes colors then freezes/crashes:
+Ha a képernyő színeket villogtat, akkor lefagy/összeomlik:
 
-- Ensure that you have the correct copy of `arm11code.bin` and `browserhax_hblauncher_ropbin_payload.bin` for your console's version and region
-- Try resetting your browser data:
-  1. Launch the browser, then launch the browser settings
-  2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-  3. Try the exploit again
-- Try changing the system language to something other than the current language
+- Biztosítsd, hogy a konzolod verziójának és régiójának megfelelő másolata van meg neked az `arm11code.bin` és `browserhax_hblauncher_ropbin_payload.bin` fájlokból
+- Próbáld meg törölni a böngésző adatot:
+  1. Indítsd el a böngészőt, majd lépj be a beállításokba (browser settings)
+  2. Görgess a legaljára, majd válaszd a "Reset Save Data" opciót (ami lehet, hogy "Initialize Savedata" vagy "Clear All Save Data" néven fut")
+  3. Próbáld meg újra végrehajtani az exploitot
+- Próbáld meg módosítani a rendszer nyelvét valami másra mint az aktuális nyelv
 
 :::
 
 :::: details "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
 
-The file `arm11code.bin` is missing or misplaced. Make sure to copy the files of the [latest version of super-skaterhax](https://github.com/zoogie/super-skaterhax/releases/latest) for your region and version to the root of your SD card (not inside of a folder).
+A `arm11code.bin` fájl hiányzik, vagy rossz helyen van. Biztosítsd, hogy [super-skaterhax legfrissebb verziójából](https://github.com/zoogie/super-skaterhax/releases/latest) régiódhoz és verziódhoz tartozó fájlokat az SD kártya gyökerébe másold (nem egy mappán belülre).
 
 ::: info
 
@@ -321,9 +321,9 @@ The file `arm11code.bin` is missing or misplaced. Make sure to copy the files of
 
 ::::
 
-:::details An exception occured or "DLL_HEAP_INFORMATION" when pressing GO! GO!
+:::details Egy exception történik vagy "DLL_HEAP_INFORMATION" a GO! megnyomásakor! GO!
 
-This likely indicates that you already have custom firmware. Érdemes elvégezned a [CFW ellenőrzését](checking-for-cfw).
+Ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvégezned a [CFW ellenőrzését](checking-for-cfw).
 
 :::
 
@@ -331,25 +331,25 @@ This likely indicates that you already have custom firmware. Érdemes elvégezne
 
 :::details Red/purple/pink and white screen after running Browserhax
 
-This likely indicates that you already have custom firmware. Érdemes elvégezned a [CFW ellenőrzését](checking-for-cfw).
+Ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvégezned a [CFW ellenőrzését](checking-for-cfw).
 
 :::
 
 :::details "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
 
-The file `arm11code.bin` is missing or misplaced. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Ne add hozzá a `.bin` kiterjesztést, ha nem látod.
+A `arm11code.bin` fájl hiányzik, vagy rossz helyen van. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Ne add hozzá a `.bin` kiterjesztést, ha nem látod.
 
 :::
 
-:::details "An error has occurred, forcing the software to close..." (white message box)
+:::details "An error has occurred, forcing the software to close..." (fehér üzenet ablak)
 
 There may be an issue with your `arm11code.bin` file. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Ne add hozzá a `.bin` kiterjesztést, ha nem látod.
 
 You can also try resetting your browser save data:
 
-1. Launch the browser, then launch the browser settings
-2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-3. Try the exploit again
+1. Indítsd el a böngészőt, majd lépj be a beállításokba (browser settings)
+2. Görgess a legaljára, majd válaszd a "Reset Save Data" opciót (ami lehet, hogy "Initialize Savedata" vagy "Clear All Save Data" néven fut")
+3. Próbáld meg újra végrehajtani az exploitot
 
 :::
 
@@ -357,9 +357,9 @@ You can also try resetting your browser save data:
 
 Browser based exploits (such as this one) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
 
-1. Launch the browser, then launch the browser settings
-2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-3. Try the exploit again
+1. Indítsd el a böngészőt, majd lépj be a beállításokba (browser settings)
+2. Görgess a legaljára, majd válaszd a "Reset Save Data" opciót (ami lehet, hogy "Initialize Savedata" vagy "Clear All Save Data" néven fut")
+3. Próbáld meg újra végrehajtani az exploitot
 
 :::
 
@@ -389,9 +389,9 @@ Follow these steps in order:
 
 :::
 
-:::details Frozen on "Doing agbhax..."
+:::details Lefagyás a "Doing agbhax..." üzenetnél
 
-There may be an issue with your `arm11code.bin` file. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place it on the root of your SD card, and rename it to `arm11code.bin`. Ne add hozzá a `.bin` kiterjesztést, ha nem látod.
+Probléma lehet az arm11code.bin`fájloddal. Töltsd le újra a legutolsó kiadását az [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)-nak és rakd a fájlt az SD kártyád gyökerébe, majd nevezd át`arm11code.bin`-re. Ne add hozzá a `.bin\` kiterjesztést, ha nem látod.
 
 :::
 
@@ -411,7 +411,7 @@ Ha ez sikertelen, próbálkozz egy másik SD kártyával.
 
 ## Telepítés véglegesítése
 
-:::details Unable to update console
+:::details Sikertelen a konzol frissítése
 
 Az alábbi lépések tetszőleges sorrendben hajthatók végre, azonban a lista a legkönnyebbtől a legnehezebben végrehajthatóig van összeállítva.
 
@@ -466,9 +466,9 @@ Legalább 1,33 GB szabad hely kell a NAND mentés végrehajtásához, ami a szkr
 8. Válaszd a "Scripts..." opciót
 9. Válaszd az "finalize" opciót
 10. Nyomj (A)-t egy NAND mentés létrehozásához
-    - This may take around fifteen minutes
+    - Ez kb. 15 percet fog igénybe venni
 11. Nyomd meg az (A) gombot újra
-    - The console should automatically power off
+    - A konzolod automatikusan ki fog kapcsolni
 12. Helyezd az SD kártyád a számítógépbe
 13. Másold a `/gm9/backups` mappából a fájlokat az SD kártyádról egy biztonságos helyre a számítógépeden
 14. Töröld a `<date>_<serialnumber>_sysnand_##.bin` és a `<date>_<serialnumber>_sysnand_##.bin.sha` fájlokat az SD kártyádról
@@ -483,7 +483,7 @@ Most, hogy már a NAND mentésed biztos helyen van:
 4. Válaszd a "Scripts..." opciót
 5. Válaszd az "finalize" opciót
 6. Folytasd a szkriptet normálisan
-   - The NAND backup will be automatically skipped
+   - A NAND mentés automatikusan átugrásra kerül
 
 :::
 
@@ -493,7 +493,7 @@ Nyomj (A)-t a cím adatbázis importálásához, old fel a SysNAND írást a ké
 
 :::
 
-:::details Error #06 or "Error: Could not open directory" when attempting a NAND backup
+:::details Error #06 "Backup failed" vagy "Error: Could not open directory" a NAND mentés készítésének megpróbálásakor
 
 Győződj meg róla, hogy legalább 1.3 GB szabad hely van az SD kártyádon. Ha nincs elég szabad helyed, kövesd ezeket a lépéseket:
 
@@ -528,7 +528,7 @@ A szkript úgy érzékelte, hogy a Nintendo 3DS mappa hiányzik ÉS már csinál
 3. Másold a `/gm9/backups` mappa tartalmát egy biztonságos helyre a számítógépeden
 4. Töröld a `/gm9/backups/` mappát az SD kártyádról
 5. Ha lemozgattad a Nintendo 3DS mappád az SD kártyádról, hogy eljuss ide, akkor másold vissza az SD kártyádra
-   - If you do not have a Nintendo 3DS folder, boot into the HOME Menu at least once with the SD card inserted to automatically generate it
+   - Ha nincs Nintendo 3DS mappád, akkor bootolj be a HOME menübe legalább egyszer behelyezett SD kártyával, hogy automatikusan létre jöjjön
 6. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et
 7. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
 8. Válaszd a "Scripts..." opciót
@@ -545,7 +545,7 @@ Nem távolítottad el az MSET9-et az előző oldalon. A szkript megpróbálja ne
 
 ---
 
-## Boot issues on consoles with custom firmware
+## Boot problémák egyedi firmware-rel rendelkező konzolokon
 
 ::: info
 
@@ -553,17 +553,17 @@ Az itt leírt lépések általában feltételezik, hogy a konzolod modern egyedi
 
 :::
 
-### Power/notification light indicators
+### Táp/értesítő LED fény indikátorok
 
-:::details My console powers off when I try to turn it on, and/or the notification LED shows a color on boot
+:::details A konzolom kikapcsol, ha megpróbálom bekapcsolni és/vagy az értesítő LED egy színt mutat bootoláskor
 
 Probléma van az `boot.firm` fájloddal. Ha [boot9strap 1.4](https://github.com/SciresM/boot9strap/releases/tag/1.4)-et futtatsz, akkor a 3DS-ed értestő LED-je egy adott sznt villogtat. Ez a szín a `boot.firm` problémák diagnosztizálását segíti az SD kártyán vagy a belső memóriában. Régebbi boot9strap verziókon a kék fény azonnal kikapcsol, ha megpróbálod bekapcsolni a konzolt.
 
 Ha az értesítő LED villog:
 
-- **White**: Your 3DS was not able to find `boot.firm` on your SD card or on internal memory.
-- **Magenta**: Your 3DS was not able to find `boot.firm` on your SD card. Megtalálta a `boot.firm`-et a belső memóriában, de az a fájl sérült.
-- **Red**: Your 3DS was able to find `boot.firm` on both your SD card and on internal memory, but both files are corrupted.
+- **Fehér**: A 3DS-ed nem találta a `boot.firm`-et sem az SD kártyádon, sem a belső memóriában.
+- **Magenta**: A 3DS-ed nem találta a `boot.firm`-et az SD kártyádon. Megtalálta a `boot.firm`-et a belső memóriában, de az a fájl sérült.
+- **Piros**: A 3DS-ed megtalálta a `boot.firm`-et az SD kártyádon és a belső memóriában, de mindkét fájl sérült.
 
 Beszerezhetsz `boot.firm` fájlt a [Luma3DS legfrissebb kiadásának letöltésével](https://github.com/LumaTeam/Luma3DS/releases/latest) és annak kicsomagolásával, majd a `boot.firm` fájlnak az SD kártyád gyökerébe helyezésével. Ha a `boot.firm` fájlod folyamatosan sérültnek érzékelt, szükség lehet az SD kártyád hibákra ellenőrzésére ([Windows](h2testw-\(windows\)), [Linux](f3-\(linux\)), vagy [macOS](f3xswift-\(mac\))). Azt is vedd figyelembe, hogy a 3DS-nek problémái lehetnek olyan fájlokkal, amit WinRAR-ral csomagoltak ki.
 
@@ -571,20 +571,20 @@ Ha hallod a "pattanó hangot", ami potenciálisan a háttérvilágítás bekapcs
 
 :::
 
-:::details My console gets stuck on a black screen with blue power light staying on
+:::details A konzolom fekete képernyőn ragad, a kék power led bekapcsolva marad
 
 Az alábbi lépések tetszőleges sorrendben hajthatók végre, azonban a lista a legrövidebbtől a legtöbb időt igénylőig van összeállítva.
 
 1. Kapcsold ki a konzolod, vedd ki majd tedd vissz az SD kártyát, majd kapcsold be újra a konzolod.
 2. Kapcsold ki a konzolod, vedd ki a játék cartridge-t ha van benne, majd kapcsold be a konzolod és várj tíz percet. Ha a konzolod bebootol tíz percen belül, a probléma elhárult és nem fog valószínűleg újra előfordulni
 3. - Nevezd át a `Nintendo 3DS` mappát az SD kártyádon `Nintendo 3DS_BACKUP` névre és próbálj meg bootolni. Ha a konzolod sikeresen bootol, problémák vannak a `Nintendo 3DS` könyvtáraddal. Próbáld meg kitakarítani a HOME menu extdata-t:
-   - Navigate to `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
+   - Navigálj a `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` mappába
    - Töröld a 3DS régiódhoz tartozó mappát:
-     - **EUR Region**: `00000098`
-     - **JPN Region**: `00000082`
-     - **USA Region**: `0000008f`
-     - **CHN Region**: `000000A1`
-     - **KOR Region**: `000000A9`
+     - **EUR régió**: `00000098`
+     - **JPN régió**: `00000082`
+     - **USA régió**: `0000008f`
+     - **CHN régió**: `000000A1`
+     - **KOR régió**: `000000A9`
      - **TWN Region**: `000000B1`
 4. Próbálj meg recovery mode-ba bootolni, majd onnét frissíteni a rendszeredet:
    - Kapcsold ki a konzolod
@@ -696,32 +696,32 @@ A konzolodon még mindig van menuhax67 telepítve. A menuhax67 eltávolításáh
 
 ## Other troubleshooting
 
-:::details Clear HOME Menu extdata
+:::details A HOME Menu extdata takarítása
 
 1. Kapcsold ki a konzolod
 2. Helyezd az SD kártyád a számítógépbe
 3. Navigálj a `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` könyvtárba az SD kártyádon
 4. Töröld a 3DS régiódhoz tartozó mappát:
-   - **EUR Region**: `00000098`
-   - **JPN Region**: `00000082`
-   - **USA Region**: `0000008f`
-   - **CHN Region**: `000000A1`
-   - **KOR Region**: `000000A9`
-   - **TWN Region**: `000000B1`
+   - **EUR régió**: `00000098`
+   - **JPN régió**: `00000082`
+   - **USA régió**: `0000008f`
+   - **CHN régió**: `000000A1`
+   - **KOR régió**: `000000A9`
+   - **TWN régió**: `000000B1`
 5. Tedd vissza az SD kártyád a konzoldba
 
 :::
 
-:::details Clear HOME Menu theme data
+:::details A HOME Menu téma adat takarítása
 
 1. Kapcsold ki a konzolod
 2. Helyezd az SD kártyád a számítógépbe
 3. Navigálj a `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` könyvtárba az SD kártyádon
 4. Töröld a 3DS régiódhoz tartozó mappát:
-   - **EUR Region**: `000002ce`
-   - **JPN Region**: `000002cc`
-   - **USA Region**: `000002cd`
-   - **KOR Region**: `000002cf`
+   - **EUR régió**: `000002ce`
+   - **JPN régió**: `000002cc`
+   - **USA régió**: `000002cd`
+   - **KOR régió**: `000002cf`
 5. Tedd vissza az SD kártyád a konzoldba
 
 :::
@@ -741,9 +741,9 @@ Azonban, ha nem tudod a PIN-t így nem tudsz hozzáférni az konzol beállítás
 
 1. Menj [erre a weboldalra](https://mkey.eiphax.tech/)
 2. Töltsd ki a következő dobozokat az információval:
-   - Device Type: Select "3DS" (the same applies if you are using a 2DS, New 3DS (XL/LL) or New 2DS (XL/LL))
-   - System Date: The day and month your console's clock is set to
-   - Inquiry Number: Can be obtained by pressing "Forgot PIN" then "I Forgot" in the Parental Controls screen
+   - Device Type: Válaszd a "3DS"-t (ugyanez vonatkozik, ha 2DS, New 3DS (XL/LL) vagy New 2DS (XL/LL) típusod van)
+   - System Date: A nap és a hónap a konzolod óráján beállított
+   - Inquiry Number: Beszerezhető a "Forgot PIN" majd az "I Forgot" gombbal a Parental Controls képernyőn
 3. Ha megszerezted az mkey-edet, nyomj OK gombot azon a képernyőn, ahol megkaptad az Inquiry Number számod, és add meg a mester kulcsot
 4. Nyomj "Clear Settings"-et, majd "Delete"-et a minden Parental Controls adat eltávolításához
 
