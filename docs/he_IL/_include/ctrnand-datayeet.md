@@ -2,7 +2,7 @@ This section will reset your system settings to its defaults. **Installed games 
 
 1. Power off your console
 2. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-3. נווטו אל `[0:] SDCARD` ושם אל `gm9`
+3. Navigate to `[0:] SDCARD` -> `gm9` -> `in`
 4. תלחצו (X) על קובץ ה`.bin` של הCTRTransfer כדי למחוק אותו
 5. תלחצו (A) כדי לאשר
 6. Press (B) a few times to go back to the main menu
