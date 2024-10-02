@@ -10,7 +10,7 @@ Ez az oldal Windows felhasználókra vonatkozik. Ha nem Windowsod van, nézd meg
 
 ## Amire szükséged lesz
 
-- The latest version of [h2testw](https://www.heise.de/ct/Redaktion/bo/downloads/h2testw_1.4.zip)
+- A [h2testw](https://www.heise.de/ct/Redaktion/bo/downloads/h2testw_1.4.zip) legújabb kiadása
 
 ## Lépések
 
