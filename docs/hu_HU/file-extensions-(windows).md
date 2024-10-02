@@ -1,4 +1,4 @@
-# File Extensions (Windows)
+# Fájlkiterjesztések (Windows)
 
 ## Kötelező olvasmány
 
