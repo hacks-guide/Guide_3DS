@@ -53,6 +53,6 @@
 - [CFW visszaállítása / frissítése](restoring-updating-cfw)
 - [Hibaelhárítás](troubleshooting)
 - [CFW eltávolítása](uninstall-cfw)
-- [Updating B9S](updating-b9s)
+- [B9S frissítése](updating-b9s)
 
 :::
