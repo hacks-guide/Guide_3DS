@@ -1,4 +1,4 @@
-# A9LH to B9S
+# A9LH-ről B9S-re
 
 ## Kötelező olvasmány
 
