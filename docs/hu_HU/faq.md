@@ -76,7 +76,7 @@ Legalább 1.5GB szabad hely kell az SD kártyán az útmutató teljes végrehajt
 
 :::
 
-:::details I heard about this thing I have to pay for (Gateway, Sky3DS, ntrboot, R4, etc). Is that something I need?
+:::details Hallottam erről a dologról (Gateway, Sky3DS, ntrboot, R4, stb), amiért fizetnem kell. Is that something I need?
 
 Nem. Habár DS flashcart használható a 3DS moddolására az [ntrboot](ntrboot) használatával, már van ingyenes szoftveres metódus a legtöbb konzolra.
 
@@ -136,7 +136,7 @@ Ha a játék nem ugyanabból a régióból származik, mint a konzolod, akkor [d
 
 :::
 
-:::details Help! Something bad happened and my 3DS won't boot to HOME Menu...
+:::details Segítség! Valami rossz dolog történt és a 3DS-em nem bootol a HOME menübe...
 
 Kérjük, nézd meg a [hibaelhárítási útmutatót](troubleshooting#boot-issues-on-consoles-with-custom-firmware). **A CFW eltávolítása, amikor a konzolod nem bootolható nem ajánlott, mert nagyon
 valószínű, hogy brickeli az eszközödet**.
@@ -145,26 +145,26 @@ valószínű, hogy brickeli az eszközödet**.
 
 ## menuhax / A9LH / Gateway GYIK
 
-:::details I modded my console (x) years ago, so it already has some sort of homebrew. Mit kell tennem?
+:::details Moddoltam a konzolomat (x) évvel ezelőtt, így már van valamilyen homebrew hozzáférésem. Mit kell tennem?
 
 Ajánlott, hogy frissítsd egy modern, boot9strap alapúra. Kövesd a [CFW ellenőrzését](checking-for-cfw), hogy megtudd, hogyan frissítheted.
 
 :::
 
-:::details My setup works for me. Why should I upgrade it?
+:::details A konfigurációm működik nekem. Miért kellene frissítenem?
 
 A modern homebrew jelentős része (mint pédául a Checkpoint és a BootNTR Selector) csak modern, boot9strap alapú rendszeren tesztelt, és lehet nem fog teljesen (vagy egyáltalán nem) működni régebbi menuhax, A9LH, vagy Gateway alapú konfigurációkon. Továbbá, a konfigurációdtól függően, lehet, hogy nem tudsz biztonságosan frissítani a legutolsó firmware-re. A modern, boot9strap alapú rendszerek magasabb szintű rendszer hozzáféréssel rendelkeznek, mint a a korábbiak, beleértve a konzol bootrom-jának dumpolásának képességét.
 
 :::
 
-:::details Will I lose anything if I upgrade my setup?
+:::details El fogok veszteni bármit, ha frissítem a CFW-met?
 
 A régi konfigurációd (beleértve az EmuNAND-od, ha van ilyened) általában közvetlenül migrálható boot9strap-re adatvesztés nélkül. Ha van számodra különösen fontos adat, jó ötlet lehet frissítés előtt egy decryptált mentés készítése a mentés adatodról, olyan eszközzel, mint például a [JKSM](https://github.com/J-D-K/JKSM/releases/tag/12%2F20%2F2018).
 
 :::
 
-:::details How do I move saves from an existing Gateway setup to a more modern setup?
+:::details Hogyan mozgathatom át a mentéseimet egy létező Gateway konfigurációról egy modern konfigurációra?
 
-See [this thread](https://gbatemp.net/threads/425743/).
+Nézd meg [ezt az üzenetszálat](https://gbatemp.net/threads/425743/).
 
 :::
