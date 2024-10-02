@@ -26,7 +26,7 @@ Ha a Luma3DS konfigurációs képernyőt vagy egyéb egyedi menüt (pl. GodMode9
 ### II. rész - Rendszer verzió ellenőrzés
 
 1. Lépj be a "System Settings"-be a konzolodon
-2. Your system version will be displayed on the bottom right of the top screen (e.g. "Ver. 11.17.0-50U")
+2. A rendszer verziód ki lesz írva a felső képernyő jobb alsó sarkában (pl. "Ver. 11.17.0-50U")
 
 ### III. rész - Metódus választása
 
