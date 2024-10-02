@@ -1,7 +1,7 @@
 1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et
 2. Ha rákérdez arra, hogy csináljon-e egy biztonsági másolatot (essential files backup), akkor nyomd meg az (A) gombot, hogy csináljon, majd amikor végzett, nyomd meg ismét az (A) gombot a folytatáshoz
 3. Ha rákérdez arra, hogy szeretnéd-e a valós dátumot és időt javítani (fix the RTC date&time), nyomd meg az (A) gombot, állítsd be a helyes dátumot és időt, majd nyomd meg az (A) gombot a folytatáshoz
-   - Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
+   - Ne feledd, hogy amennyiben ezen a ponton szükséges volt a helyes dátum és idő beállítása, a System Settingsben is be kell majd állítanod a helyes időt az útmutató végén
 4. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
 5. Válaszd a "Scripts..." opciót
 6. Select "ctrtransfer"
