@@ -1,4 +1,4 @@
-1. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
+1. Indítsd el a Download Play alkalmazást (![](/images/download-play-icon.png){height="24px" width="24px"})
 2. Várj, amíg `Nintendo 3DS` és `Nintendo DS` gombokat nem látsz
 3. Nyomd le az (Bal Váll) + (D-Pad le) + (Select) gombokat egyszerre a Rosalina menü megnyitásához
 4. Válaszd ki a "Miscellaneous options"-t
