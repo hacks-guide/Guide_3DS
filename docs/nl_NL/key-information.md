@@ -63,13 +63,15 @@ If you want, you can check your SD card for errors before following this guide u
 ::::
 
 :::: warning
-::: details Potential risks (Disclaimer)
+
+:::details Potential risks (Disclaimer)
 
 By modding your console, you subject it to the remote (but non-zero) possibility of the console being bricked (rendered non-functional). _**Incorrect file placement will NOT brick your console**_, but purposely skipping instructions might.
 
 In short: Modding your console is safe, but it's _**your responsibility**_ if something goes wrong.
 
 :::
+
 ::::
 
 ## Things you need to do on your computer
