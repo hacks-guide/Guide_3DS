@@ -19,8 +19,9 @@ A folyamat részeként a rendszer beállításaid visszaállításra kerülnek a
 ## Amire szükséged lesz
 
 - A [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) legújabb kiadása (a GodMode9 `.zip` fájl)
-- Az [FBI](https://github.com/lifehackerhansol/FBI/releases/download/2.6.1/FBI.3dsx) legfrissebb kiadása (közvetlen letöltés)
+- The latest release of [FBI](https://github.com/nh-server/FBI-NH/releases/download/2.6.1/FBI.3dsx) (direct download)
 - A [faketik](https://github.com/ihaveamac/faketik/releases/latest) legújabb kiadása _(a`.3dsx` fájl)_
+- The latest release of [ctrtransfer.gm9](https://raw.githubusercontent.com/nh-server/scripts/refs/heads/main/3DS/ctrtransfer.gm9) (right click, save link as)
 - A torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download)
   - If you already have a torrent client, you do not need to download a new one
 - The 11.15.0 CTRTransfer image for your console and region:
