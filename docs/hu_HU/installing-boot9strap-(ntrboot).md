@@ -6,7 +6,7 @@ Ahhoz, hogy használhasd a [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme
 
 ## Amire szükséged lesz
 
-- A magnet that triggers the sleep mode of your console (if using a folding style console)
+- Egy mágnes, ami alvó üzemmódot idéz elő a konzolodban (ha összecsukható modellel rendelkezel)
 - Az ntrboor kompatibilis flashkártyád
 - A [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) legfrissebb verziója (közvetlen letöltés)
 - A [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) legfrissebb verziója (közvetlen letöltés)
@@ -22,7 +22,7 @@ Ahhoz, hogy használhasd a [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme
    - Ez a 3DS-ed SD kártyája, _nem_ a flashkártyádé
 
 3. Másold a `SafeB9SInstaller.bin` fájlt a SafeB9SInstaller `.zip`-ből az SD kártyád gyökerébe, majd nevezd át `boot.firm`-re
-   - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
+   - Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne
 
 4. Hozz létre egy mappát `boot9strap` néven a konzolod SD kártyájának a gyökerében
 
@@ -41,7 +41,7 @@ Ahhoz, hogy használhasd a [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme
 ### II. rész - ntrboot
 
 1. Használd a mágnest, hogy megtaláld azt a pontot a konzolodon, ahol az alvó módot kiváltó érzékelő található
-   - This step is not needed on the old 2DS (which has a sleep mode switch)
+   - Erre a lépésre nincsen szükség az Old 2DS esetében (amin van alvó üzemmód kapcsoló)
 2. Kapcsold ki a konzolod
 3. Helyezd a flashkártyádat a konzolodba
 4. Helyezd a mágnest a konzolodra, hogy előidézd az alvó állapotot
