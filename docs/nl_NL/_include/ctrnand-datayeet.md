@@ -2,7 +2,7 @@ This section will reset your system settings to its defaults. **Installed games 
 
 1. Zet je console uit
 2. Houd (Start) ingedrukt en terwijl je (Start) ingedrukt houdt, zet je je console aan. Dit zal GodMode9 starten
-3. Navigeer naar `[0:] SDCARD`-> `gm9`
+3. Navigate to `[0:] SDCARD` -> `gm9` -> `in`
 4. Druk op (X) om de CTRTransfer image `.bin` te verwijderen
 5. Druk op (A) om het te bevestigen
 6. Press (B) a few times to go back to the main menu
