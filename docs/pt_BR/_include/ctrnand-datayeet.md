@@ -2,7 +2,7 @@ Esta seção redefinirá a configuração do console para os valores padrão. \*
 
 1. Desligue seu console
 2. Aperte e segure (Start), e enquanto segura (Start), ligue seu console. Isso vai inicializar o GodMode9
-3. Navegue para `[0:] SDCARD` -> `gm9`
+3. Navigate to `[0:] SDCARD` -> `gm9` -> `in`
 4. Aperte (X) na imagem `.bin` da CTRTransfer para apagá-la
 5. Aperte (A) para confirmar
 6. Aperte (B) algumas vezes para voltar ao menu principal
