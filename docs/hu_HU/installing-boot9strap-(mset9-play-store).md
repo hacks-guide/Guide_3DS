@@ -95,17 +95,17 @@ Ezeket a lépéseket **PONTOSAN** kell követni, így ellenőrizz MINDENT kétsz
 8. Nyisd meg az MSET9 Installer alkalmazást
 9. Éríntsd meg a "Setup MSET9" opciót
 10. Érintsd meg a modellednek megfelelő fényképet, majd a firmware verziódnak megfelelő gombot
-    - If the injection was successful, all buttons should become grayed out except for "Remove MSET9"
+    - Ha az injektálás sikeres volt, minden gomb kiszürkül kivéve a "Remove MSET9" gombot
 11. Helyezd vissza az SD kártyád a konzolodba, **bármilyen gomb vagy a képernyő érintése nélkül**
 12. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
-    - If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting#installing-boot9strap-mset9)
+    - Ha piros képernyőt kapsz vagy a konzol beragad a betöltő képernyőn, kövesd a [hibaelhárítási útmutatót](troubleshooting#installing-boot9strap-mset9)
 
 ### III. rész - boot9strap telepítése
 
 Ebben a fejezetben egyedi firmware-t fogsz telepíteni a konzolodra.
 
 1. Ha kéri, akkor nyomd meg a gombokat egyszerre, amiket kijelez a felső képernyőn, hogy telepíthesd a boot9strap-et
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+   - Ha egy lépés az alsó képernyőn piros színű szöveget eredményez, és nem kér a rendszer tőled egy gomb-kombinációt, akkor [kövesd ezt a hibaelhárítási útmutatót](troubleshooting#issues-with-safeb9sinstaller)
 2. Ha ez elkészült, nyomd meg az (A) gombot a konzolod újraindításához
 
 <!--@include: ./_include/configure-luma3ds.md -->
@@ -138,6 +138,6 @@ Követted a IV. részt (Az MSET9 eltávolítása)? Az a rész KÖTELEZŐ!
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Tovább a [telepítés véglegesítésére](finalizing-setup)
 
 :::
