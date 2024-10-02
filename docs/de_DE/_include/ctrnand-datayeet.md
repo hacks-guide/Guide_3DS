@@ -2,7 +2,7 @@ Dieser Abschnitt wird deine Systemkonfiguration auf die Standardwerte zurückset
 
 1. Power off your console
 2. Press and hold (Start), and while holding (Start), power on your console. Dies wird GodMode9 starten
-3. Navigiere zu `[0:] SDCARD` -> `gm9`
+3. Navigate to `[0:] SDCARD` -> `gm9` -> `in`
 4. Drücke (X) auf die CTRTransfer-Abbild `.bin` um es zu löschen
 5. Drücke (A), um zu bestätigen
 6. Drücke ein paar Mal (B), um zum Hauptmenü zurückzukehren
