@@ -4,7 +4,7 @@
 4. Válaszd ezt: "Backup Options"
 5. Válaszd ezt: "SysNAND Backup"
 6. Nyomd meg az (A) gombot a megerősítéshez
-   - This process will take some time
+   - Ez a folyamat igénybe vesz majd némi időt
    - If you get an error, look for your issue in the [troubleshooting guide](troubleshooting#finalizing-setup)
 7. Nyomd meg az (A) gombot a folytatáshoz
 8. Nyomd meg a (B) gombot, hogy visszamenj a főmenübe
