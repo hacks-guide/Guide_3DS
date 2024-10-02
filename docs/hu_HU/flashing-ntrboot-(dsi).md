@@ -15,9 +15,9 @@ Vedd figyelembe, hogy néhány ritka esetben lehetséges, hogy a flashelési fol
 ## Amire szükséged lesz
 
 - Az ntrboor kompatibilis flashkártyád
-- Two consoles
-  - **The source DSi**: the Nintendo DSi which is compatible with your flashcart
-  - **The target 3DS**: the 3DS family console on stock firmware
+- Két konzol
+  - **A forrás DSi**: egy Nintendo DSi, ami támogatja a flashkártyádat
+  - **A cél 3DS**: egy konzol a 3DS családból, ami gyári firmware-en van
 - A [ds_ntrboot_flasher] legújabb kiadása (https://github.com/ntrteam/ds_ntrboot_flasher/releases/latest) (`ds_ntrboot_flasher_dsi.nds`)
 
 ## Lépések
