@@ -10,8 +10,8 @@ Ez az oldal Windows felhasználókra vonatkozik. Ha nem Windows rendszeren vagy,
 
 ## Amire szükséged lesz
 
-- **For SD cards 32GB or smaller:** the latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
-- **For SD cards 64GB or larger:** The latest version of [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
+- **32GB vagy kisebb SD kártya esetén:** Az [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/) legfrissebb verziója
+- **64GB vagy nagyobb SD kártya esetén:** A [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm) legfrissebb verziója
 
 ## Lépések (32GB vagy kisebb)
 
@@ -64,8 +64,8 @@ Ez az oldal Windows felhasználókra vonatkozik. Ha nem Windows rendszeren vagy,
    :::
 
 5. Válassz méretet az "Allocation unit size" alatt
-   - If the SD card is 64GB, choose 32768
-   - If the SD card is larger than 64GB, choose 65536
+   - Ha az SD kártya 64GB, válaszd a 32768-ot
+   - Ha az SD kártya nagyobb, mint 64GB, válaszd a 65536-ot
 
 6. Írj be valamit "Volume label"-nek
 
@@ -83,12 +83,12 @@ Ez az oldal Windows felhasználókra vonatkozik. Ha nem Windows rendszeren vagy,
 
 ## Hibaelhárítás
 
-- guiformat shows the error "Failed to open device: GetLastError()=32"
-  - Close everything that may be using the SD card, such as any File Explorer windows.
-  - If this issue persists, try reformatting the card to NTFS in File Explorer, close that window when it's done, and re-attempt the guiformat process.
+- a guiformat a "Failed to open device: GetLastError()=32" hibaüzenetet mutatja
+  - Csukj le mindent, ami esetleg használhatja az SD kártyát, mint például bármelyik Fájlkezelő ablak.
+  - Ha a probléma fennáll, próbáld meg leformázni a kártyát NTFS-re az Fájlkezelővel, zárd be azt az ablakot ha kész, és próbáld meg újra a guiformat folyamatot.
 
-- guiformat shows the error "GetLastError()=1117"
-  - Your SD card write-protection switch may be [enabled](/images/sdlock.png). A zárat felfelé kell tolni, hogy engedélyezd az írást az SD kártyára (beleértve a formázást is).
+- a guiformat a "GetLastError()=1117" hibaüzenetet mutatja
+  - Az SD kártyád írás védelmi kapcsolója lehet, hogy [be van állítva](/images/sdlock.png). A zárat felfelé kell tolni, hogy engedélyezd az írást az SD kártyára (beleértve a formázást is).
 
 - SD kártya továbbra sem detektálható a konzol által, vagy a formázás után továbbra is a rossz kapacitást mutatja
   - Az SD kártyád lehet, hogy partícionált vagy van nem lefoglalt területe. Kövesd a lépéseket [itt](https://wiki.hacks.guide/wiki/SD_Clean/Windows) az SD kártyád újraformázásához.
