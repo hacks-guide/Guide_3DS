@@ -95,12 +95,12 @@ NAND 백업이 성공적으로 복구되었습니다. 이제 SD 카드에서 `<d
 
 1. (Start) 를 길게 누르고, 이 상태에서 콘솔의 전원을 켜 주세요. GodMode9이 실행될 겁니다
 2. `[0:] SDCARD` -> `cias`로 이동해 주세요
-3. `.cia` 파일을 선택하기 위해 (A) 버튼을 누르세요.
-4. Select "CIA image options..."
-5. Select "Mount image to drive"
-6. Press (A) on the `.app` file
-7. Select "NCCH image options"
-8. Select "Inject to H&S"
+3. `.cia` 파일을 선택하기 위해 (A) 버튼을 눌러 주세요
+4. "CIA image options..."를 선택해 주세요
+5. "Mount image to drive"를 선택해 주세요
+6. '.app' 파일을 선택하고 (A) 버튼을 눌러 주세요
+7. "NCCH image options"를 선택해 주세요
+8. "Inject to H&S"를 선택해 주세요
 9. (A)를 눌려 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요
 10. (A)를 눌러 진행해 주세요
 11. 메세지가 표시되면, (A)를 눌러서 쓰기잠금을 확인해 주세요
@@ -141,7 +141,7 @@ NAND 백업이 성공적으로 복구되었습니다. 이제 SD 카드에서 `<d
 :::
 
 1. (Start) 를 길게 누르고, 이 상태에서 콘솔의 전원을 켜 주세요. GodMode9이 실행될 겁니다
-2. Press (Right Shoulder) + (B) to unmount the current SD card and insert the one you want to format
+2. (R) 버튼과 (B) 버튼을 함께 눌러 현재 SD 카드를 언마운트하고 포맷하려는 SD 카드를 삽입하세요
    - 만약 GodMode9이 포맷할 SD 카드를 삽입하는 도중 초기화 오류를 일으켰을 경우, 무시해도 됩니다
 
 <!--@include: ./_include/format-sd-gm9.md -->
