@@ -17,7 +17,7 @@ Az SD kártyád FAT32-re kell legyen formázva, hogy követhesd ezt az útmutat�
    - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
 3. Tedd vissza az SD kártyád a konzoldba
 4. Kapcsold be a konzolod
-   - If you see the Luma3DS configuration menu, press (Start) to save and reboot
+   - Ha a Luma3DS konfigurációs menüt látod, nyomj (Start) gombot a mentéshez és az újraindításhoz
 
 ::: info
 
