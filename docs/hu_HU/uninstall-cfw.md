@@ -11,7 +11,7 @@ Minden aláíratlan (nem eredeti) játék használhatatlanná fog válni és elt
 Ha azért távolítod el a CFW-t, mert:
 
 - Szeretnéd újratelepíteni
-- You want to change SD cards
+- Mert szeretnél SD kártyát cserélni
 - Your SD card was lost or corrupted
 - One of your games is broken
 - One of your system applications is broken
@@ -189,7 +189,7 @@ Ez az utolsó lehetőséged, hogy ellenőrizd, hogy minden fenti biztonsági lé
 Ha azért távolítod el a CFW-t, mert:
 
 - Szeretnéd újratelepíteni
-- You want to change SD cards
+- Mert szeretnél SD kártyát cserélni
 - Your SD card was lost or corrupted
 - One of your games is broken
 - One of your system applications is broken
