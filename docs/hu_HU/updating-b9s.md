@@ -48,13 +48,13 @@ A most következő lépésekben mindig írd felül az SD kártyán található f
 3. Tedd vissza az SD kártyád a konzoldba
 4. Kapcsold be a konzolod
 5. Ha a konzolod a Luma3DS konfigurációs menübe bootolt, nyomj (Start) gombot a mentéshez és az újraindításhoz
-   - Luma3DS configuration menu are settings for the Luma3DS custom firmware. Sok ezek közül a beállítások közül hasznos az egyedivé tételhez vagy a debuggoláshoz
-   - For the purpose of this guide, these settings will be left on default settings
+   - A Luma3DS konfigurációs menü a beállítások a Luma3DS egyedi firmware-hez. Sok ezek közül a beállítások közül hasznos az egyedivé tételhez vagy a debuggoláshoz
+   - Az útmutató céljának megfeleléshez ezen beállítások alapértelmezett állapoton lesznek hagyva
 
 ___
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Tovább a [telepítés véglegesítésére](finalizing-setup)
 
 :::
