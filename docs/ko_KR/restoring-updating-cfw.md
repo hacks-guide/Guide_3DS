@@ -27,6 +27,6 @@
 
 ::: tip
 
-If you wish to re-install or update other homebrew applications (e.g. FBI, Homebrew Launcher), continue to [Finalizing Setup](finalizing-setup)
+만약 다른 홈브류 (예: FBI, Homebrew 런쳐)를 재설치 또는 업데이트 하고 싶다면, [마무리 단계](finalizing-setup)로 계속합니다
 
 :::
