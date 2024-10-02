@@ -2,7 +2,7 @@ Questa sezione ripristinerà la configurazione di sistema ai valori predefiniti.
 
 1. Spegni la tua console
 2. Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9
-3. Entra nella cartella `[0:] SDCARD` -> `gm9`
+3. Navigate to `[0:] SDCARD` -> `gm9` -> `in`
 4. Premi (X) sul file immagine `.bin` del CTRTransfer per cancellarlo
 5. Premi (A) per confermare
 6. Premi (B) alcune volte per tornare al menu principale
