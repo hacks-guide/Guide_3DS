@@ -41,7 +41,7 @@
 - [Instalando boot9strap (MSET9)](installing-boot9strap-\(mset9\))
 - [Instalando boot9strap (MSET9 CLI)](installing-boot9strap-\(mset9-cli\))
 - [Instalando boot9strap (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\))
-- [Instalando boot9strap (ntrboothax)](installing-boot9strap-\(ntrboothax\))
+- [Instalando boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
 - [Instalando boot9strap (safecerthax)](installing-boot9strap-\(safecerthax\))
 - [Instalando boot9strap (Soundhax)](installing-boot9strap-\(soundhax\))
 - [Instalando boot9strap (SSLoth-Browser)](installing-boot9strap-\(ssloth-browser\))
