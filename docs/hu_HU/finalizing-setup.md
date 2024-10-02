@@ -11,9 +11,9 @@ Ezen az oldalon kritikus rendszer mentéseket fogunk csinálni és néhány home
 A szkript a következő alkalmazásokat fogja telepíteni:
 
 - **[FBI](https://github.com/lifehackerhansol/FBI)** _(CIA formátumú alkalmazások telepítésére)_
-- **[Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)** _(launches the Homebrew Launcher)_
+- **[Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)** _(elindítja a Homebrew Launchert)_
 - **[Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)** _(egyedi témák telepítése)_
-- **[Checkpoint](https://github.com/FlagBrew/Checkpoint)** _(backs up and restores save files for 3DS and DS games)_
+- **[Checkpoint](https://github.com/FlagBrew/Checkpoint)** _(3DS és DS játékok mentéseiről lehet biztonsági mentést készíteni és visszaállítani)_
 - **[ftpd](https://github.com/mtheall/ftpd)** _(access your 3DS SD card wirelessly)_
 - **[Universal-Updater](https://github.com/Universal-Team/Universal-Updater/)** _(a homebrew app store for downloading homebrew from the 3DS over Wi-Fi)_
 - **[GodMode9](https://github.com/d0k3/GodMode9)** _(multipurpose tool which can do NAND and cartridge functions)_
