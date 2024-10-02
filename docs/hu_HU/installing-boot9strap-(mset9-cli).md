@@ -90,7 +90,7 @@ Ebben a lépésben előkészülsz az MSET9 exploitra azzal, hogy **átmenetileg*
 
    :::
 
-   - If the window says [Not ready - check MSET9 status for more details](/images/screenshots/mset9/mset9-not-ready.png):
+   - Ha az ablak azt mondja, hogy [Not ready - check MSET9 status for more details](/images/screenshots/mset9/mset9-not-ready.png):
      - Type `2`, then press Enter to check the MSET9 status and follow the directions indicated
      - Once you have resolved the issue, return to Section I Step 14
      - For more information, check the [troubleshooting](troubleshooting#installing-boot9strap-mset9) page
