@@ -77,7 +77,7 @@ Ennek a fejezetnek a célja, hogy ellenőrizzük, a beépített DS mód alkalmaz
 #### DS Download Play Test
 
 1. Kapcsold be a konzolod
-2. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
+2. Indítsd el a Download Play alkalmazást (![](/images/download-play-icon.png){height="24px" width="24px"})
 3. Válaszd "Nintendo DS"-t
 4. Ha a konzolod a “Download software via DS Download Play” menübe tölt be, a teszt sikeres volt
    - If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed
@@ -127,7 +127,7 @@ Ha NEM sikerül a hagyományos 3DS HOME Menübe bootolni, vagy a System Settings
 5. Válaszd ezt: "Backup Options"
 6. Válaszd ezt: "SysNAND Backup"
 7. Nyomd meg az (A) gombot a megerősítéshez
-   - This process will take some time
+   - Ez a folyamat igénybe vesz majd némi időt
    - If you get an error, ensure you have at least 1.3GB of free space on your SD card
 8. Nyomd meg a (B) gombot, hogy visszamenj a főmenübe
 9. Válaszd az "Exit" opciót
@@ -152,7 +152,7 @@ Ez a rész az illegitim tartalom eltávolításáról szól, mint a homebrew vag
    - This includes software such as TWiLightMenu++, along with any games and titles that you did _not_ install from the eShop
    - Failure to remove all CFW software from both the 3DS and DSiWare sections before uninstalling CFW may prevent or disable access to the Data Management menu after uninstalling CFW, which will make it difficult to re-install CFW in the future
 7. Lépj ki a System Settings alkalmazásból
-8. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
+8. Indítsd el a Download Play alkalmazást (![](/images/download-play-icon.png){height="24px" width="24px"})
 9. Várj, amíg két gombot nem látsz
 10. Nyomd le az (Bal Váll) + (D-Pad le) + (Select) gombokat egyszerre a Rosalina menü megnyitásához
 11. Válaszd ki a "Miscellaneous options"-t
@@ -161,7 +161,7 @@ Ez a rész az illegitim tartalom eltávolításáról szól, mint a homebrew vag
 14. Nyomd meg a (B) gombot, hogy visszakerülj a Rosalina főmenüjébe
 15. Nyomd meg a (B) gombot, hogy kilépj a Rosalina menüből
 16. Nyomd meg a (Home) gombot és zárd be a Download Play-t
-17. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
+17. Indítsd el a Download Play alkalmazást (![](/images/download-play-icon.png){height="24px" width="24px"})
 18. Ekkor a konzolodnak be kell töltenie a Homebrew Launcher-t
 19. Indítsd el a DSiWare Uninstaller-t a homebrew listából
 20. Kövesd at utasításokat és engedélyezd a programnak az eltávolítást
