@@ -2,7 +2,7 @@
 
 1. Power off your console
 2. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-3. `[0:] SDCARD` -> `gm9`へ移動します。
+3. Navigate to `[0:] SDCARD` -> `gm9` -> `in`
 4. 拡張子.binのCTR Transferイメージの上でXキーを押して削除します
 5. (A) を押して確認します
 6. Press (B) a few times to go back to the main menu
