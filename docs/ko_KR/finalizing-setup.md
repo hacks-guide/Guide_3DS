@@ -49,8 +49,8 @@
 
 1. 콘솔의 전원을 꺼 주세요
 2. SD 카드를 컴퓨터에 삽입해 주세요
-3. 'finalize.romfs' 파일을 SD 카드의 루트에 복사해 주세요
-4. Open the `luma` folder on your SD card and create a folder named `payloads` inside, if it does not already exist
+3. `finalize.romfs` 파일을 SD 카드의 루트에 복사해 주세요
+4. SD 카드의 `luma` 폴더를 열고, 그 안에 `payloads` 폴더가 존재하지 않는 경우 폴더를 생성해주세요
 5. `x_finalize_helper.firm` 파일을 `payloads` 폴더에 복사해 주세요
 6. SD 카드를 콘솔에 다시 삽입해 주세요
 
@@ -90,7 +90,7 @@
 
 ### 섹션 IV - 설치 스크립트
 
-In this section, you will use a series of scripts to automate homebrew installation, SD card cleanup, and system file backup.
+이 섹션에서는 몇 개의 스크립트를 사용해 홈브류 자동 설치, SD 카드 정리, 시스템 파일 백업을 자동으로 진행합니다.
 
 1. 콘솔의 전원을 꺼 주세요
 2. (X) 를 길게 누르고, 이 상태에서 콘솔의 전원을 켜 주세요. 최종 설치 도우미가 실행됩니다
@@ -112,7 +112,7 @@ In this section, you will use a series of scripts to automate homebrew installat
     - 본 폴더에는 중요 파일의 백업이 들어 있으며 가능한 여러 곳에 백업되어야 합니다. (예시: 온라인 파일 저장소)
     - 두 개의 SysNAND 파일은 해당 콘솔의 NAND 백업이며 소프트웨어적 문제로 벽돌 현상이 일어났을 경우 원상복구하는데 반드시 필요합니다
     - `essential.exefs` 파일은 해당 콘솔의 시스템 고유 파일을 가지고 있으며 하드웨어 문제로 없어진 고유 데이터를 복구하는 데 사용할 수 있습니다
-13. If you still have them, delete the two `SysNAND` files from the `/gm9/backups/` folder from your SD card
+13. 백업하고 남은 두 개의 SysNAND 파일은 SD카드에서 지우면 됩니다
     - `essential.exefs` 파일의 크기는 작으며 접근성을 위해 SD 카드에 남겨둬도 됩니다
 
 ___
