@@ -38,7 +38,7 @@ Ha nincs egy DSiWare játékod vagy mentésed sem, ami fontos lenne számodra, a
 1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et
 2. Ha rákérdez arra, hogy csináljon-e egy biztonsági másolatot (essential files backup), akkor nyomd meg az (A) gombot, hogy csináljon, majd amikor végzett, nyomd meg ismét az (A) gombot a folytatáshoz
 3. Ha rákérdez arra, hogy szeretnéd-e a valós dátumot és időt javítani (fix the RTC date&time), nyomd meg az (A) gombot, állítsd be a helyes dátumot és időt, majd nyomd meg az (A) gombot a folytatáshoz
-   - Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
+   - Ne feledd, hogy amennyiben ezen a ponton szükséges volt a helyes dátum és idő beállítása, a System Settingsben is be kell majd állítanod a helyes időt az útmutató végén
 4. Menj ide: `[2:] SYSNAND TWLN` -> `title`
 5. Tartsd lenyomva az (R) gombot, és közben nyomd le az (A)-t a `00030004` mappán, hogy kijelöld, majd válaszd a "Copy to 0:/gm9/out" opciót
    - This process may take some time if you have many DSiWare games
@@ -74,11 +74,11 @@ Egy `<TitleID>.gbavc.sav` fájl Title ID-jének azonosításához használhatod 
    - Indítsd el a GBA VC játékot
    - Lépj ki a GBA VC játékból
    - Boot your console while holding (Start) to launch the Luma3DS chainloader menu
-   - Launch GodMode9 by pressing (A)
+   - Indítsd el a GodMode9-et az a (A) gomb megnyomásával
    - Menj ide: `[S:] SYSNAND VIRTUAL`
-   - Press (A) on `agbsave.bin` to select it
-   - Select "AGBSAVE options..."
-   - Select "Dump GBA VC save"
+   - Nyomd meg az (A) gombot a `agbsave.bin` fájlon, hogy kijelöld
+   - Válaszd az "AGBSAVE options..." opciót
+   - Válaszd a "Dump GBA VC save" opciót
    - Nyomd meg az (A) gombot a folytatáshoz
    - Nyomd meg a (Start) gombot a konzolod újraindításához
 
@@ -88,9 +88,9 @@ Egy `<TitleID>.gbavc.sav` fájl Title ID-jének azonosításához használhatod 
 2. Menj ide: `[E:] EMUNAND VIRTUAL`
 3. Nyomd meg az (A) gombot, amikor a `nand.bin` van kijelölve, hogy kiválaszd, majd válaszd a "NAND image options..." opciót, utána pedig a "Restore SysNAND (safe)" lehetőséget
 4. Nyomd meg az (A) gombot, hogy feloldd a SysNAND felülírást, majd sorban nyomd meg a kijelzett gombokat
-   - This will not overwrite your boot9strap installation
+   - Ez nem fogja felülírni a boot9strap installációdat
 5. Nyomd meg a kijelzett gombokat sorban, hogy feloldd a SysNAND (lvl1) írást
-   - This process will take some time
+   - Ez a folyamat igénybe vesz majd némi időt
 6. Amint ez elkészült, nyomd meg az (A) gombot a folytatáshoz
 7. Nyomd meg a (B) gombot, hogy elutasítsd az írási engedélyek visszavonását, ha kérdezi
 8. Nyomd meg a (B) gombot, hogy visszamenj a főmenübe
@@ -111,7 +111,7 @@ Ha korábban nem másoltál ki egy DSiWare mentést sem, hagyd ki ezt a részt.
 6. Válaszd a "Copy path(s)" opciót
 7. Nyomd meg az (A) gombot, hogy feloldd a SysNAND (lvl1) írást, majd sorban nyomd meg a kijelzett gombokat
 8. Válaszd az "Overwrite file(s)" opciót
-   - This process may take some time if you have many DSiWare games
+   - Ez a folyamat eltarthat egy kis ideig, ha sok DSiWare játékod van
 9. Nyomd meg a (B) gombot, hogy elutasítsd az írási engedélyek visszavonását, ha kérdezi
 10. Nyomd meg a (B) gombot kétszer, hogy visszamenj a főmenübe
 
@@ -134,15 +134,15 @@ Egy `<TitleID>.gbavc.sav` fájl Title ID-jének azonosításához használhatod 
 3. Csináld végig az alábbi lépéseket minden egyes GBA VC játékhoz, aminek a mentését vissza akarod állítani:
    - Indítsd el a GBA VC játékot
    - Lépj ki a GBA VC játékból
-   - Boot your console while holding (Start) to launch the Luma3DS chainloader menu
-   - Launch GodMode9 by pressing (A)
+   - Indítsd el a konzolod a (Start) lenyomva tartásával, hogy megjelenjen a Luma3DS chainloader menü
+   - Indítsd el a GodMode9-et az a (A) gomb megnyomásával
    - Menj ide: `[0:] SDCARD` -> `gm9`
-   - Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
+   - Nyomd meg az (Y) gombot a visszaállítani kívánt `<TitleID>.gbavc.sav` fájlon, hogy kimásold
    - Nyomd meg a (B) gombot, hogy visszamenj a főmenübe
    - Menj ide: `[S:] SYSNAND VIRTUAL`
-   - Press (A) on `agbsave.bin` to select it
-   - Select "AGBSAVE options..."
-   - Select "Inject GBA VC save"
+   - Nyomd meg az (A) gombot a `agbsave.bin` fájlon, hogy kijelöld
+   - Válaszd az "AGBSAVE options..." opciót
+   - Válaszd az "Inject GBA VC save" opciót
    - Nyomd meg az (A) gombot a folytatáshoz
    - Nyomd meg a (Start) gombot a konzolod újraindításához
    - Indítsd el a GBA VC játékot
@@ -165,7 +165,7 @@ Egy `<TitleID>.gbavc.sav` fájl Title ID-jének azonosításához használhatod 
 1. Az SD kártya leválasztásához az (R) gomb lenyomva tartása mellett nyomd meg a (B) gombot
 2. Helyezd az SD kártyád a számítógépbe
 3. Másolj vissza minden fájlt az SD kártyádra
-   - Ensure you replace the `boot.firm` file on your SD card with the one from your backup
+   - Bizonyosodj meg róla, hogy felülírd az SD kártyán található `boot.firm` fájlt azzal, ami a biztonsági mentésedben van
 4. Tedd vissza az SD kártyád a konzoldba
 5. Nyomd meg az (A) gombot, hogy visszacsatold az SD kártyát
 6. Nyomd meg a (Start) gombot az újraindításhoz
@@ -174,6 +174,6 @@ ___
 
 ::: tip
 
-Return to [Finalizing Setup](finalizing-setup)
+Vissza a [telepítés véglegesítéséhez](finalizing-setup)
 
 :::
