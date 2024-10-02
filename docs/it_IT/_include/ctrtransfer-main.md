@@ -2,28 +2,16 @@
 2. Se ti viene richiesto di creare un backup dei file essenziali, premi (A) per accettare, e al termine di nuovo (A) per proseguire
 3. Se ti viene chiesto di reimpostare la data e l'ora dell'RTC, premi (A) per farlo, poi imposta la data e l'ora, infine premi (A) per continuare
    - Tieni presente che in tal caso dovrai anche reimpostare data ed ora anche nelle Impostazioni della Console al termine della guida
-4. Entra nella cartella `[0:] SDCARD` -> `gm9`
-5. Premi (A) sul file `.bin` del CTRTransfer per selezionarlo
-6. Seleziona "CTRNAND options..."
-7. Seleziona "Transfer image to CTRNAND"
-8. Se richiesto, seleziona "Transfer to SysNAND"
-   - La richiesta apparirà solo se hai una EmuNAND
-9. Premi il pulsante (A) per sbloccare i permessi di scrittura di primo livello su SysNAND, quindi inserisci la combinazione di tasti richiesta a schermo
-   - Questo passaggio richiederà un po' di tempo
+4. Premi il pulsante HOME per far apparire il menu delle azioni
+5. Seleziona "Scripts..."
+6. Select "ctrtransfer"
+7. Select your downloaded CTRTransfer image
+   - The script will calculate the hash of your image to make sure it's valid
+8. Once the checks are completed, press (A) to continue
+9. Press (A) to unlock SysNAND (lvl2) writing, then input the key combo given
 10. Una volta completato il trasferimento, premi (A) per proseguire
-11. Se richiesto, premi (B) per rifiutare il ritiro delle autorizzazioni di scrittura
-12. Premi (B) due volte per ritornare al menu principale
-13. Premi il pulsante HOME per far apparire il menu delle azioni
-14. Seleziona "Scripts..."
-15. Seleziona "GM9Megascript"
-16. Seleziona "Scripts from Plailect's Guide"
-17. Seleziona "CTRTransfer Ticket Copy"
-18. Quando richiesto, premi (A) per procedere
-19. Premi il pulsante (A) per continuare
-20. Premi (B) per ritornare al menu principale
-21. Seleziona "Exit"
-22. Se richiesto, premi (A) per ritirare le autorizzazioni di scrittura
-23. Premi (Start) per riavviare la tua console
-24. Aggiorna la console andando su Impostazioni della console, poi "Impostazioni generali", infine scorri a destra e seleziona "Aggiornamento"
+11. Se richiesto, premi (A) per ritirare le autorizzazioni di scrittura
+12. Premi (Start) per riavviare la tua console
+13. Aggiorna la console andando su Impostazioni della console, poi "Impostazioni generali", infine scorri a destra e seleziona "Aggiornamento"
     - Gli aggiornamenti effettuati usando B9S + Luma (ora installato) sono sicuri
     - Se ottieni un errore, imposta i DNS della connessione di rete in modo che vengano ottenuti automaticamente
