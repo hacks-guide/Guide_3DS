@@ -1,4 +1,4 @@
-# Formatting SD (Linux)
+# SD formázás (Linux)
 
 ## Kötelező olvasmány
 
@@ -21,17 +21,17 @@ Ez az oldal Linux felhasználókra vonatkozik. Ha nem Linux rendszeren vagy, kö
    └─mmcblk0p1 179:1    0   3,7G  0 part /run/media/user/FFFF-FFFF
    ```
 6. Jegyezd fel az eszköz nevét. A fenti példánkban ez `mmcblk0p1` volt
-   - If `RO` is set to 1, make sure the lock switch is not slid down
+   - Ha az `RO` 1-re állított, ellenőrizd, hogy a zároló csúszka nincs-e lehúzva
 7. Nyomj CTRL + C-t a menüből kilépéshez
 8. Írd be a következőt az SD kártyádhoz:
-   - 2GB or lower: `sudo mkfs.fat /dev/(device name from above) -s 64 -F 16`
-     - This creates a single FAT16 partition with 32 KB cluster size on the SD card
-   - 4GB - 128GB: `sudo mkfs.fat /dev/(device name from above) -s 64 -F 32`
-     - This creates a single FAT32 partition with 32 KB cluster size on the SD card
-   - 128GB or higher: `sudo mkfs.fat /dev/(device name from above) -s 128 -F 32`
-     - This creates a single FAT32 partition with 64 KB cluster size on the SD card
+   - 2GB vagy kisebb: `sudo mkfs.fat /dev/(az eszköz neve fentről) -s 64 -F 16`
+     - Ez létrehoz egy FAT16 partíciót 32 KB cluster mérettel az SD kártyán
+   - 4GB - 128GB: `sudo mkfs.fat /dev/(az eszköz neve fentről) -s 64 -F 32`
+     - Ez létrehoz egy FAT32 partíciót 32 KB cluster mérettel az SD kártyán
+   - 128GB vagy nagyobb: `sudo mkfs.fat /dev/(az eszköz neve fentről) -s 128 -F 32`
+     - Ez létrehoz egy FAT32 partíciót 64 KB cluster mérettel az SD kártyán
 
 ## Hibaelhárítás
 
-- SD card remains undetected by console or continues to display the wrong capacity after formatting
-  - Your SD card may be partitioned or have unallocated space. Kövesd a lépéseket [itt](https://wiki.hacks.guide/wiki/SD_Clean/Linux) az SD kártyád újraformázásához.
+- SD kártya továbbra sem detektálható a konzol által, vagy a formázás után továbbra is a rossz kapacitást mutatja
+  - Az SD kártyád lehet, hogy partícionált vagy van nem lefoglalt területe. Kövesd a lépéseket [itt](https://wiki.hacks.guide/wiki/SD_Clean/Linux) az SD kártyád újraformázásához.
