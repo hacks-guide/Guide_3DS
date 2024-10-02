@@ -2,7 +2,7 @@
 
 ::: info
 
-If this is your first time modding a 3DS (or you're unfamiliar with technology), keep reading! Otherwise, if you have prior experience and know what you're doing, continue to [Get Started](get-started).
+Ha ez az első alkalom, hogy moddolsz egy 3DS-t (vagy nem vagy ismerős a technológiával) akkor folytasd az olvasást! Egyébként, ha rendelkezel tapasztalattal és tudod, hogy mit csinálsz, folytasd a [Kezdeti lépésekkel](get-started).
 
 :::
 
@@ -63,13 +63,15 @@ If you want, you can check your SD card for errors before following this guide u
 ::::
 
 :::: warning
-::: details Potential risks (Disclaimer)
+
+:::details Potential risks (Disclaimer)
 
 By modding your console, you subject it to the remote (but non-zero) possibility of the console being bricked (rendered non-functional). _**Incorrect file placement will NOT brick your console**_, but purposely skipping instructions might.
 
 In short: Modding your console is safe, but it's _**your responsibility**_ if something goes wrong.
 
 :::
+
 ::::
 
 ## Things you need to do on your computer
