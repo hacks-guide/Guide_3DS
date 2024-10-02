@@ -3,7 +3,9 @@
 3. Skapa en mapp som heter '3ds' i roten på SD-kortet om det inte redan finns
 4. Kopiera 'GodMode9.firm' från GodMode9 `.zip` till `/luma/payloads/` mappen på ditt SD-kort
 5. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
-6. Copy the 11.15.0 CTRTransfer image `.bin` from the CTRTransfer `.zip` to the `/gm9/` folder on your SD card
-7. Kopiera `FBI.3dsx` till mappen `/3ds/` på ditt SD-kort
-8. Copy `faketik.3dsx` to the `/3ds/` folder on your SD card
-9. Reinsert your SD card into your console
+6. Create a folder named `in` in the `/gm9/` folder if it does not already exist
+7. Copy the 11.15.0 CTRTransfer image `.bin` and `.bin.sha` files from the CTRTransfer `.zip` to the `/gm9/in/` folder on your SD card
+8. Copy `ctrtransfer.gm9` to the `/gm9/scripts/` folder on your SD card
+9. Kopiera `FBI.3dsx` till mappen `/3ds/` på ditt SD-kort
+10. Copy `faketik.3dsx` to the `/3ds/` folder on your SD card
+11. Reinsert your SD card into your console
