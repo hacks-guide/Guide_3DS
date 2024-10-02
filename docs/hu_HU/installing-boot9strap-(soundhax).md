@@ -13,7 +13,7 @@ A Soundhax (amikor universal-otherapp-pal használjuk) kompatibilis az 1.0.0-s v
 ## Amire szükséged lesz
 
 - A [Soundhax](http://soundhax.com) legújabb kiadása _(a régiódnak, a konzolodnak és rendszer verziódnak megfelelő változat)_
-  - If Soundhax appears in your browser as an unplayable video, press Ctrl+S or Cmd+S to save it to your computer
+  - Ha a Soundhax a böngésződben nem lejátszható videónak tűnik, nyomj Ctrl+S vagy Cmd+S gombokat a gépedre mentéséhez
 - A [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) legfrissebb verziója (közvetlen letöltés)
 - A [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) legfrissebb verziója (közvetlen letöltés)
 - A [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) legújabb kiadása (a Luma3DS `.zip` fájl)
@@ -28,9 +28,9 @@ Ebben a fejezetben fel fogod másolni a fájlokat, amik a Soundhax és az univer
 1. Kapcsold ki a konzolod
 2. Helyezd az SD kártyád a számítógépbe
 3. Másold a Soundhax `.m4a` fájlját az SD kártyád gyökerébe
-   - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
+   - Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne
 4. Másold az `otherapp.bin` fájlt az SD kártyád gyökerébe
-5. Copy everything from the Luma3DS `.zip` to the root of your SD card
+5. Másolj mindent a Luma3DS `.zip`-ből az SD kártya gyökerébe
 6. Hozz létre egy mappát `boot9strap` néven az SD kártya gyökerében
 7. Másold át a `boot9strap.firm` fájlt és a `boot9strap.firm.sha` fájlt a boot9strap `.zip` fájlból az SD kártyád `/boot9strap/` mappájába
 8. Másold át a `SafeB9SInstaller.bin` fájlt a SafeB9SInstaller `.zip`-ből az SD kártyád gyökerébe
@@ -62,14 +62,14 @@ Ebben a fejezetben el fogod indítani a Soundhax-ot a Nintendo 3DS Sound app-on 
    :::
 
 2. Ha ezelőtt még sohasem indítottad el a Nintendo 3DS Sound-ot, és a madár ikon elkezd tippeket adni, lépkedj végig a tippeken, zárd be a szokásos módon az alkalmazást, majd nyisd meg újra
-   - In this situation, launching Soundhax immediately would cause these tips to appear on every launch of the Nintendo 3DS Sound until this is done
+   - Ebben az esetben, ha azonnal indítanánk a Soundhax-et, minden egyes alkalommal megjelennének ezek a tippek a Nintendo 3DS Sound indításánál mindaddig, amíg nem végeznénk
 
 3. Válaszd a `/SDCARD` mappát, majd játszd le a "<3 nedwill 2016" nevű hangfájlt
 
-   - This may take many (up to 10) tries
+   - Ez lehet, hogy csak sok (akár 10) próba után fog működni
    - Ha azt az üzenetet látod, hogy "Could not play", akkor vagy olyan rendszer verzión vagy, ami inkompatiblis a soundhax-szal, vagy rossz Soundhax kiadást töltöttél le
-   - If it freezes, force the console to power off by holding the power button, then try again
-   - If you get a different error, [follow this troubleshooting guide](troubleshooting#installing-boot9strap-soundhax)
+   - Ha lefagyna, kényszerítsd leállásra a konzolt a bekapcsológomb lenyomva tartásával, majd próbálkozz újra
+   - Ha másik hibát kapsz, [kövesd ezt a hibaelhárítási útmutatót](troubleshooting#installing-boot9strap-soundhax)
 
    ::: info
 
@@ -84,7 +84,7 @@ Ebben a fejezetben el fogod indítani a Soundhax-ot a Nintendo 3DS Sound app-on 
 Ebben a fejezetben egyedi firmware-t fogsz telepíteni a konzolodra.
 
 1. Ha kéri, akkor nyomd meg a gombokat egyszerre, amiket kijelez a felső képernyőn, hogy telepíthesd a boot9strap-et
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+   - Ha egy lépés az alsó képernyőn piros színű szöveget eredményez, és nem kér a rendszer tőled egy gomb-kombinációt, akkor [kövesd ezt a hibaelhárítási útmutatót](troubleshooting#issues-with-safeb9sinstaller)
 2. Ha ez elkészült, nyomd meg az (A) gombot a konzolod újraindításához
 
 <!--@include: ./_include/configure-luma3ds.md -->
@@ -95,6 +95,6 @@ ___
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Tovább a [telepítés véglegesítésére](finalizing-setup)
 
 :::
