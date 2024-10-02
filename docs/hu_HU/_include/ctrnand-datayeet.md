@@ -2,7 +2,7 @@ Ez a rész a rendszer beállítások alaphelyzetbe állítását szolgálja. **A
 
 1. Kapcsold ki a konzolod
 2. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et
-3. Menj ide: `[0:] SDCARD` -> `gm9`
+3. Navigate to `[0:] SDCARD` -> `gm9` -> `in`
 4. Nyomd meg az (X) gombot, miközben a CTRTransfer `.bin` van kijelölve, hogy kitöröld
 5. Nyomd meg az (A) gombot a megerősítéshez
 6. Nyomd meg a (B) gombot néhányszor, hogy visszamenj a főmenübe
