@@ -4,11 +4,11 @@
    - 만약 RTC 날짜와 시간을 수정해야 했다면, 이 가이드 끝나고 본체 설정에서도 시간을 수정해야 합니다
 4. (Home)을 눌러 작업 메뉴를 열어 주세요
 5. "Scripts..."를 선택해 주세요
-6. Select "ctrtransfer"
+6. "ctrtransfer"를 선택해 주세요
 7. Select your downloaded CTRTransfer image
    - The script will calculate the hash of your image to make sure it's valid
 8. Once the checks are completed, press (A) to continue
-9. Press (A) to unlock SysNAND (lvl2) writing, then input the key combo given
+9. (A) 를 눌러 SysNAND (lvl2) 쓰기 잠금을 풀고 화면에 표시된 키 조합을 입력해 주세요
 10. 작업이 완료되면 (A)를 눌려 계속해 주세요
 11. 메세지가 표시되면, (A)를 눌러서 쓰기잠금을 확인해 주세요
 12. (Start)를 눌러 콘솔을 다시 시작해 주세요
