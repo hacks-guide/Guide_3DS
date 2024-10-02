@@ -81,7 +81,7 @@
    - If other tabs are open, close them
 8. (B)를 눌러 브라우저로 돌아가 주세요
 9. (Start) 를 눌러 브라우저 메뉴를 열어 주세요
-   - If your (Start) button does not respond, tap the 3-line menu on the bottom-right corner of the screen
+   - (Start) 버튼이 동작하지 않을 경우, 하단 화면 오른쪽의 3줄 메뉴 버튼을 눌러 주세요
 10. "설정"을 선택해 주세요
 11. "쿠키 삭제"를 선택해 주세요
 12. (A)를 눌러 진행해 주세요
