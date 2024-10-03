@@ -15,9 +15,9 @@ Vedd figyelembe, hogy néhány ritka esetben lehetséges, hogy a flashelési fol
 ## Amire szükséged lesz
 
 - Az ntrboor kompatibilis flashkártyád
-- Two 3DS family consoles
-  - **The source 3DS**: the 3DS family console that is already running boot9strap
-  - **The target 3DS**: the 3DS family console on stock firmware
+- Két konzol a 3DS családból
+  - **A forrás 3DS**: egy konzol a 3DS családból, amin már boot9strap fut
+  - **A cél 3DS**: egy konzol a 3DS családból, ami gyári firmware-en van
 - A [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) v1.3 verziója (közvetlen letöltés)
 - A [ntrboot_flasher] legújabb kiadása (https://github.com/ntrteam/ntrboot_flasher/releases/latest) (`ntrboot_flasher.firm`)
 
