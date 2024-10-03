@@ -4,7 +4,7 @@ Az MSET9 ID1 létrehozásakor Windows 10-en vagy későbbin a szkript hibára fu
 
 Ez a béta UTF-8 támogatás miatt van Windows-on. Le kell tiltanod az MSET9 futtatásához:
 
-1. Hit **Windows Key + R** to open up the Run dialogue, type `intl.cpl` then click "OK"
+1. Nyomd meg a **Windows + R** gombot a Futtatás párbeszédablakhoz és írd be, hogy `intl.cpl`, majd kattints az "OK"-ra
    ::: info
 
    ![](/images/screenshots/troubleshooting/234run.png)
