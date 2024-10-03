@@ -13,7 +13,7 @@ Az SD kártyád FAT32-re kell legyen formázva, hogy követhesd ezt az útmutat�
 ## Lépések
 
 1. Helyezd az SD kártyád a számítógépbe
-2. Copy everything from the Luma3DS `.zip` to the root of your SD card, replacing any existing files
+2. Másolj mindent a Luma3DS `.zip`-ből az SD kártyád gyökerébe, és cseréld le a már meglévő fájlt
    - Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne
 3. Tedd vissza az SD kártyád a konzoldba
 4. Kapcsold be a konzolod
@@ -27,6 +27,6 @@ A Luma3DS legfrissebb verziója most már telepítésre került az SD kártyára
 
 ::: tip
 
-If you wish to re-install or update other homebrew applications (e.g. FBI, Homebrew Launcher), continue to [Finalizing Setup](finalizing-setup)
+Ha szeretnél újratelepíteni, vagy frissíteni más homebrew alkalmazásokat (pl. FBI, Homebrew Launcher), folytasd a [Telepítés véglegesítése](finalizing-setup) oldallal
 
 :::
