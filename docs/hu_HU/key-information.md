@@ -64,7 +64,7 @@ Ha szeretnéd, leellenőrizheted az SD kártyádat valamelyik programmal az alá
 
 :::: warning
 
-:::details Potential risks (Disclaimer)
+:::details Potencionális kockázatok (Nyilatkozat)
 
 A konzolod moddolásával, van egy nagyon kicsi (de nem nulla) esélye, hogy a konzol brickelődik (nem működővé válik). _**A rossz helyre rakott fájlok NEM brickelik a konzolodat**_, de szándékosan kihagyott lépések elképzelhető, hogy igen.
 
@@ -78,7 +78,7 @@ Röviden: A konzolod moddolása biztonságos, de a _**te felelősséged**_ ha va
 
 ::: warning
 
-Following this guide alone should not result in data loss, but SD card corruption is always a possibility. You should make a backup of your SD card contents (especially the `Nintendo 3DS` folder) if you have important data.
+Az útmutató követése nem kell, hogy adatvesztéshez vezessen, de SD kártya hiba bármikor előfordulhat. Készíts biztonsági mentést az SD kártyádról (különösen a `Nintendo 3DS` mappáról), ha tartalmaz fontos adatot.
 
 :::
 
@@ -90,9 +90,9 @@ Following this guide alone should not result in data loss, but SD card corruptio
 
 :::
 
-When copying files to the SD card, it is important to copy them to the right location - otherwise, the console will not detect the file and the exploit or software you are trying to use will not work. A term you will see frequently on this guide is **root of the SD card**, which means you are not inside any folder on your SD card. The directory that appears when you first open your SD card on your computer is called the 'root'.
+Amikor fájlokat másolunk az SD kártyára, fontos, hogy jó helyre másoljuk, - egyébként a konzol nem fogja észrevenni a fájl és az exploit vagy a szoftver amit használni szeretnél nem fog működni. A fogalom, amit sűrűn fogsz látni ebben az útmutatóban az **SD kártya gyökere**, ami azt jelenti, amikor nem vagy benne semmilyen mappában az SD kártyán. A könyvtárat ami megjelenik először, amikor megnyitod az SD kártyád a számítógépeden, hívják 'gyökér'-nek.
 
-You may also see folder names indicated like this: `/folder/`. The slashes are used to indicate directories and are not part of the name of the folder. For example, `/folder1/folder2/` would refer to `folder2` inside of `folder1`:
+Láthatsz még mappa neveket így jelölve: `/mappa/`. A használt perjelek könyvtárakat jelentenek, amik nem a részei a mappa nevének. Például, `/folder1/folder2/` a `folder2` mappára hivatkozik a `folder1` mappában:
 
 ::: info
 
@@ -100,7 +100,7 @@ You may also see folder names indicated like this: `/folder/`. The slashes are u
 
 :::
 
-**Angle brackets** (\< and \>) are also occasionally used to refer to system-specific identifiers. For example, if the guide says `<ID0>`, it is referring to the system-specific identifier inside of the `Nintendo 3DS` folder, rather than a folder literally named "ID0":
+**Kacsacsőrök** (\< és \>) általában arra használtak, hogy rendszer-specifikus azonosítót tartalmazzanak. Például, ha az útmutató `<ID0>`-t tartalmaz, akkor a rendszer-specifikus azonosítóra hivatozik a `Nintendo 3DS` mappában, nem pedig egy mappára, amit "ID0"-nak hívnak:
 
 ::: info
 
@@ -118,7 +118,7 @@ You may also see folder names indicated like this: `/folder/`. The slashes are u
 
 :::
 
-In this guide, you will copy files that are downloaded on your computer/phone to your console's SD card. Many of these files come from GitHub, which is a website used by developers to publish their open-source releases. When downloading files from GitHub, you should download the file that _isn't_ source code.
+Ebben az útmutatóban másolni fogsz a 3DS-ed SD kártyájára olyan fájlokat, amik letöltésre kerültek a számítógépedre/telefonodra. Ezen fájlok többsége a GitHub-ról jön, ami egy weboldal fejlesztők számára, ahol közzé teszik nyílt forrású fejlesztéseiket. Ha a GitHub-ról töltesz le fájlokat, az a fájlt kell letöltened, ami _nem_ forráskód.
 
 ::::
 
@@ -130,11 +130,11 @@ In this guide, you will copy files that are downloaded on your computer/phone to
 
 :::
 
-Some of the files that you will be asked to download come in the `.zip` file format, which is used to package multiple files into one file.
+Néhány fájl, amit le kell töltened `.zip` formátumú fájlként érkezik, ami arra használt, hogy több fájlt rakjunk egybe.
 
-When you are told to "copy (file) from (file).zip", that means that you need to open (or "extract") the ZIP file. Inside the ZIP file will be the file you're looking for, after which you can copy it to the specified location on your SD card.
+Ha azt az utasítás kapod, hogy "másolj (egy adott fájlt) a (fájl).zip-ből", az azt jelenti, hogy meg kell nyitnod (vagy "kicsomagolnod") a ZIP fájlt. A ZIP fájlon belül lesz a fájl, amit keresel, amit utána másolni tudsz a megadott útvonalra az SD kártyádra.
 
-On most operating systems, you can extract files by double-clicking the file. If this doesn't work, you can install a reputable third-party extraction tool like [7-zip](https://7-zip.org/) instead.
+A legtöbb operációs rendszeren dupla kattintással ki tudod csomagolni a fájlt. Ha ez nem működik, telepíthetsz egy megbízható kicsomagoló eszközt helyette, mint például a [7-zip](https://7-zip.org/).
 
 ::::
 
@@ -146,7 +146,7 @@ On most operating systems, you can extract files by double-clicking the file. If
 
 :::
 
-If your computer is running Windows, file extensions may be hidden by default, which may make it harder to find the files you're looking for. To enable file extensions, follow [these instructions](file-extensions-\(windows\)).
+Ha a számítógéped Windows-t futtat, a fájl kiterjesztések előfordulhat, hogy alapértelmezetten elrejtettek, ami nehezebbé teheti azon fájlok megtalálását, amiket keresel. A fájlkiterjesztések megjelenítéséhez kövesd [ezeket a lépéseket](file-extensions-\(windows\)).
 
 ::::
 
