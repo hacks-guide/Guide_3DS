@@ -13,7 +13,7 @@ Ha a szkript nem talál felhasználói ticket-et, folytasd a következő részn�
    - Navigate to the folder
    - Select "\<current directory>"
    - Select "Install and delete all tickets"
-   - Wait. Itt úgy tűnhet, hogy a rendszer lefagyott, de csak időre van szüksége.
+   - Várj. Itt úgy tűnhet, hogy a rendszer lefagyott, de csak időre van szüksége.
    - Nyomd meg az (A) gombot a megerősítéshez
    - Press (B) to decline installing tickets from CDN.
 7. Nyomd meg a (Home) gombot az FBI-ból való kilépéshez
