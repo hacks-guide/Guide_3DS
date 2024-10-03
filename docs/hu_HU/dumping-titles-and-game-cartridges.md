@@ -1,4 +1,4 @@
-# Dumping Titles and Game Cartridges
+# Címek és Játékkártyák tartalmának dumpolása
 
 ::: info
 
@@ -10,7 +10,7 @@ Ha segítségre van szükséged GodMode9-nal kapcsolatban (angol nyelven), legye
 
 Amellett, hogy létrehozni és helyreállítani képes NAND mentéseket, a GodMode9-nek van olyan funkciója, hogy dumpoljon telepített címeket egy telepíthető `.cia` fájlba, és hogy játék cartridge adatot egy `.3ds` ROM fájlba, és hogy direkt módon telepítsen játék cardridge-eket a rendszerre.
 
-## Updating GodMode9
+## GodMode9 frissítése
 
 ::: info
 
