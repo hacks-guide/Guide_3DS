@@ -64,7 +64,7 @@ Bannolás már nem lehetséges, mert a Nintendo Network szolgáltatások le lett
 
 :::
 
-:::details Can I do this without a computer (e.g. an Android phone)?
+:::details Meg tudom ezt csinálni számítógép nélkül (pl. Android telefonnal)?
 
 Igen! Egyedül arra van szükséged, hogy fájlokat tudj másolni egy kompatibilis SD kártyára.
 
@@ -86,7 +86,7 @@ A 3DS-mód flashcart-ok, mint a Gateway és a Sky3DS nem ajánlottak, mert elavu
 
 :::details Mi a különbség az egyedi firmware és a homebrew hozzáférés között?
 
-Definició szerint az egyedi firmware a 3DS rendszer szoftverének módosítását jelenti, azért, hogy olyan dolgok is megtehetők legyenek, amik normál esetben nem. Homebrew generally refers to software created outside of official sources (i.e. not distributed by eShop or cartridges).
+Definició szerint az egyedi firmware a 3DS rendszer szoftverének módosítását jelenti, azért, hogy olyan dolgok is megtehetők legyenek, amik normál esetben nem. Homebrew általában olyan szoftvert jelent, ami nem hivatalos forrásból származik (pl.: nem az eShop-on keresztül vagy cartridge-en terjesztett).
 
 Történetileg a 3DS felhasználói szintű homebrew hozzáférése régi exploitokon keresztül történt, mint a ninjahax", amit néha az emberek csak "homebrew"-nak hívtak. A rendszer hozzáférés szintje felhasználói, ami lehetővé tette hogy futtass alap homebrew alkalmazásokat és emulátorokat, de nem tette lehetővé (könnyedén) a játékok módosítását vagy cartridge-ek dumpolását. Továbbá kevésbé volt stabil, a homebrew alkalmazások sűrűn összeomlottak, teljes újra indítást igényelve. Az egyedi firmware nagyobb szintű hozzáférést engedélye a rendszerhez, miközben stabilabb, mint a csak-homebrew belépési pontok.
 
@@ -94,7 +94,7 @@ Történetileg a 3DS felhasználói szintű homebrew hozzáférése régi exploi
 
 ## Telepítés utáni GYIK
 
-:::details Is it safe to update my 3DS to the latest version with CFW?
+:::details Biztonságos frissíteni a legutolsó verzióra a CFW-vel ellátott 3DS-em?
 
 Ha Luma3DS-t használsz, az egyedi firmware loader (boot9strap) _soha_ nem kerül eltávolításra egy rendszer frissítés során. Korábban voltak olyan frissítések, amik a Luma3DS összeomlását eredményezték bootoláskor, így jó ötlet várni egy pár órát, hogy biztos legyél, hogy a legutolsó frissítés átmenetileg nem teszi-e használhatatlanná a konzolod, mielőtt a Luma3DS frissítésre kerül. A rendszer frissítések úgy történnek, mint egy alap 3DS-en: a System Settings-en, Safe Mode-on vagy a felugró frissítési üzeneten keresztül, amikor a frissítések automatikusan letöltődtek.
 
@@ -112,23 +112,23 @@ Igen, a rendszer átvitel végrehajtható a hivatalos System Transfer funkcióva
 
 :::
 
-:::details How do I change the system language of a Japanese 3DS?
+:::details Hogyan módosíthatom a rendszer nyelvét egy japán 3DS-nek?
 
 Az egyetlen módja a rendszer nyelv módosításának egy japán 3DS esetében más nyelvre a [régió csere](region-changing). Fontos megjegyezni, hogy ez erősen valószínű, hogy elrontja a Nintendo eShop-ot a konzolodon, így nem fogsz tudni frissíteni játékokat, függetlenül attól, hogy régión belüli vagy kívüli.
 
 :::
 
-:::details How do I update homebrew applications?
+:::details Hogyan frissíthetem a homebrew alkalmazásokat?
 
 Ez elsősorban a formátumától függ a homebrew alkalmazásnak. Általánosságban beszélve:
 
-- Homebrew in **CIA format** can be updated by installing the new CIA, which will usually overwrite the old one. Ha a régi CIA nem kerül felülírásra, törölheted a régit a Data Management-ből, mint más 3DS címnél tennéd.
-- Homebrew in **3DSX format** can be updated by replacing the 3DSX file in `/3ds/` with a fresh copy. Ha a homebrew app további fájlokat tartalmaz, azokat valahova máshova kell raknod. Tekintsd meg a homebrew alkalmazás dokumentációját.
-- For updating Luma3DS, see [this page](restoring-updating-cfw). A GodMode9 frissítéséhez tekintsd meg [ezt az oldalt](godmode9-usage#updating-godmode9).
+- Homebrew **CIA formátumban** frissíthető egy új CIA telepítésével, ami felül írja a régebbi verziót. Ha a régi CIA nem kerül felülírásra, törölheted a régit a Data Management-ből, mint más 3DS címnél tennéd.
+- Homebrew **3DSX formátumban** frissíthető a 3DSX fájl újra cseréjével a `/3ds/` mappában. Ha a homebrew app további fájlokat tartalmaz, azokat valahova máshova kell raknod. Tekintsd meg a homebrew alkalmazás dokumentációját.
+- A Luma3DS frissítéséhez tekintsd meg [ezt az oldalt](restoring-updating-cfw). A GodMode9 frissítéséhez tekintsd meg [ezt az oldalt](godmode9-usage#updating-godmode9).
 
 :::
 
-:::details How do I update my games?
+:::details Hogyan frissíthetem a játékaim?
 
 A játék frissítések továbbra is letölthetők a Nintendo eShop-ból, annak leállításától függetlenül.
 
