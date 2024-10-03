@@ -1,4 +1,4 @@
-# Move EmuNAND
+# EmuNAND költöztetése
 
 ## Kötelező olvasmány
 
@@ -14,7 +14,7 @@ Az alábbiak használatához már telepítened kellett a következőket: Luma3DS
 
 ## Amire szükséged lesz
 
-- An existing EmuNAND
+- Egy létező EmuNAND
 - A [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) legújabb kiadása (a GodMode9 `.zip` fájl)
 
 ## Lépések
@@ -41,7 +41,7 @@ Ha nincs egy DSiWare játékod vagy mentésed sem, ami fontos lenne számodra, a
    - Ne feledd, hogy amennyiben ezen a ponton szükséges volt a helyes dátum és idő beállítása, a System Settingsben is be kell majd állítanod a helyes időt az útmutató végén
 4. Menj ide: `[2:] SYSNAND TWLN` -> `title`
 5. Tartsd lenyomva az (R) gombot, és közben nyomd le az (A)-t a `00030004` mappán, hogy kijelöld, majd válaszd a "Copy to 0:/gm9/out" opciót
-   - This process may take some time if you have many DSiWare games
+   - Ez a folyamat eltarthat egy kis ideig, ha sok DSiWare játékod van
 6. Nyomd meg a (B) gombot kétszer, hogy visszamenj a főmenübe
 
 ### III. rész - GBA VC mentések kimásolása
@@ -73,7 +73,7 @@ Egy `<TitleID>.gbavc.sav` fájl Title ID-jének azonosításához használhatod 
 1. Csináld végig az alábbi lépéseket minden egyes GBA VC játékhoz, aminek a mentését vissza akarod állítani:
    - Indítsd el a GBA VC játékot
    - Lépj ki a GBA VC játékból
-   - Boot your console while holding (Start) to launch the Luma3DS chainloader menu
+   - Indítsd el a konzolod a (Start) lenyomva tartásával, hogy megjelenjen a Luma3DS chainloader menü
    - Indítsd el a GodMode9-et az a (A) gomb megnyomásával
    - Menj ide: `[S:] SYSNAND VIRTUAL`
    - Nyomd meg az (A) gombot a `agbsave.bin` fájlon, hogy kijelöld
