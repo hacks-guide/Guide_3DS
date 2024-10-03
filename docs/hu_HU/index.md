@@ -32,21 +32,21 @@ A custom firmware gyakori felhasználásai a következők:
 - Játékok módosítása ("ROM hackek") a [LayeredFS](https://github.com/knight-ryu12/godmode9-layeredfs-usage/wiki/Using-Luma3DS'-layeredfs-\(Only-version-8.0-and-higher\))-en keresztül
 - Játékmentések szerkesztése, biztonsági mentése és visszaállítása
 - Régebbi konzolok emulációja, valamint natív DS és GBA játék futtatás
-- Installing your physical cartridges for digital use
+- Fizikai cartridge-ek telepítése digitális használatra
 
-## What does this guide install?
+## Mit fogsz telepíteni ezzel az útmutatóval?
 
 Az útmutató:
 
-- Install **boot9strap** and **Luma3DS custom firmware** on unmodified retail 3DS/2DS consoles
-  - Luma3DS will automatically remove the region lock and allow you to run unsigned software
-- Install various pieces of homebrew software, such as a package installer, save file manager, and a homebrew app store
-- Make critical system file backups that can help avoid bricks (and recover data in the event of one)
+- Telepíti a **boot9strap**-et és **Luma3DS egyedi firmware**-t módosítatlan kereskedelmi 3DS/2DS konzolokra
+  - A Luma3DS automatikusan eltávolítja a régió zárat, és lehetővé teszi aláíratlan szoftver futtatását
+- Telepít különböző homebrew szoftvereket, mint például a csomag telepítő, mentés fájl kezelő és egy homebrew app store alkalmazást
+- Kritikus rendszer mentéseket készít, ami segít elkerülni a brickelést (és helyreállítási adatot ment, arra az esetre, ha mégis bekövetkezne egy)
 
 ___
 
 ::: tip
 
-Continue to [Key Information](key-information)
+Folytatás az [Alapvető információkkal](key-information)
 
 :::
