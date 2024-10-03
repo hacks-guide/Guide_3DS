@@ -14,9 +14,9 @@ A szkript a következő alkalmazásokat fogja telepíteni:
 - **[Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)** _(elindítja a Homebrew Launchert)_
 - **[Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)** _(egyedi témák telepítése)_
 - **[Checkpoint](https://github.com/FlagBrew/Checkpoint)** _(3DS és DS játékok mentéseiről lehet biztonsági mentést készíteni és visszaállítani)_
-- **[ftpd](https://github.com/mtheall/ftpd)** _(access your 3DS SD card wirelessly)_
-- **[Universal-Updater](https://github.com/Universal-Team/Universal-Updater/)** _(a homebrew app store for downloading homebrew from the 3DS over Wi-Fi)_
-- **[GodMode9](https://github.com/d0k3/GodMode9)** _(multipurpose tool which can do NAND and cartridge functions)_
+- **[ftpd](https://github.com/mtheall/ftpd)** _(a 3DS-ed SD kártyájának vezeték nélküli elérése)_
+- **[Universal-Updater](https://github.com/Universal-Team/Universal-Updater/)** _(egy homebrew app store homebrew letöltéséhez a 3DS-re WiFi-n keresztül)_
+- **[GodMode9](https://github.com/d0k3/GodMode9)** _(sokféle dologra használható eszköz, például NAND és kártya műveletekre)_
 
 Ha nem szeretnéd ezeket az alkalmazásokat, eltávolíthatod őket, miután befejezted ezt az oldalt a System Settings -> Data Management -> Nintendo 3DS -> szoftver-hez navigálva. (A GodMode9 nem távolítható el így, és általában szükséges más funkciókhoz.)
 
@@ -79,7 +79,7 @@ Ebben a fejezetben frissíteni fogod a rendszered a legutolsó verzióra, ami bi
 Ebben a fejezetben szinkronizálni fogod a 3DS belső óráját az aktuális időhöz és dumpolni a hang firmware-t (ami szükséges néhány homebrew alkalmazáshoz, hogy a hangot megfelelően használja).
 
 1. Nyomd le az (Bal Váll) + (D-Pad le) + (Select) gombokat egyszerre a Rosalina menü megnyitásához
-   - If one of these buttons is broken, download [config.ini](/assets/config.ini) and put it in your `luma` folder, replacing the existing one. Ez átállítja a Rosalina menu billentyű kombinációt (X) + (Y)
+   - Ha valamelyik gombod törött, töltsd le a [config.ini](/assets/config.ini) fájlt és rakd a `luma` mappádba, felülírva az ott lévőt. Ez átállítja a Rosalina menu billentyű kombinációt (X) + (Y)
 2. Válaszd ki a "Miscellaneous options"-t
 3. Válaszd a "Dump DSP firmware" opciót
 4. Nyomd meg a (B) gombot a folytatáshoz
@@ -94,26 +94,26 @@ Ebben a fejezetben szkripteket fogsz használni arra, hogy automatizáld a homeb
 
 1. Kapcsold ki a konzolod
 2. Nyomd le és tartsd nyomva az (X) gombot, és az (X) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a Finalizing Setup Helper-t
-   - If you boot to the HOME Menu, your `payloads` folder may be incorrectly spelled or in the wrong location
-   - If you encounter an error, consult the [troubleshooting](troubleshooting#finalizing-setup) page
+   - Ha a HOME menübe bootoltál, akkor lehet hogy a `payloads` mappád neve elírt, vagy rossz helyen van
+   - Ha hibát kapsz, tekintsd meg a [hibaelhárítás](troubleshooting#finalizing-setup) oldalt
 3. Ha a Helper sikeres volt, a konzolodnak ezt követően be kell bootolni a GodMode9-be
-   - From this point forward, you can access GodMode9 by holding START while powering on your console
+   - Ettől a ponttól kezdve a GodMode9-et a START gomb bekapcsolás melletti nyomva tartásával éred el
 4. Ha rákérdez arra, hogy csináljon-e egy biztonsági másolatot (essential files backup), akkor nyomd meg az (A) gombot, hogy csináljon, majd amikor végzett, nyomd meg ismét az (A) gombot a folytatáshoz
 5. Ha rákérdez arra, hogy szeretnéd-e a valós dátumot és időt javítani (fix the RTC date&time), nyomd meg az (A) gombot, állítsd be a helyes dátumot és időt, majd nyomd meg az (A) gombot a folytatáshoz
 6. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
 7. Válaszd a "Scripts..." opciót
 8. Válaszd az "finalize" opciót
 9. Kövesd a script utasításait és válaszolj meg minden kérdést
-   - If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting#finalizing-setup) page
+   - Ha hibát kapsz, kövesd a hibaüzenet lépéseti vagy tekintsd meg a [hibaelhárítás](troubleshooting#finalizing-setup) oldalt
 10. Ha a szkript a "Setup complete!" üzenetet írja, nyomj (A) gombot az eszköz kikapcsolásához
     - Ha NEM láttad a "Setup complete!" üzenetet, akkor a szkript nem volt sikeres és újra kell csinálnod ezt a részt a 3. lépéstől
 11. Helyezd az SD kártyád a számítógépbe
 12. Másold a `/gm9/backups/` mappát az SD kártyádról egy biztonságos helyre a számítógépeden
-    - This folder contains critical file backups and should be backed up to multiple locations (i.e. cloud storage) if possible
-    - The two SysNAND files are your NAND backup and can be used to revert your console to a working state if it is bricked by a software issue
-    - The `essential.exefs` file contains your console's system-unique files and can be used to recover your data in the event of a hardware failure
+    - - Ez a mappa tartalmazza a kritkus mentés fájlokat és célszerű több helyre menteni (pl. felhőszolgáltatásba) ha lehetséges
+    - A 2 SysNAND fájl a te NAND mentésed, és arra használható, hogy visszaállítsd a konzolod működő állapotba, ha egy szoftver probléma brickelné
+    - Az `essential.exefs` fájl tartalmazza a konzolod rendszerre-egyedi fájljait és arra használhatod, hogy helyreállítsd az adataid egy hardver probléma esetén
 13. Ha még mindig megvannak, töröld a két `SysNAND` fájlt a `/gm9/backups/` mappából az SD kártyádon
-    - The `essential.exefs` file is small and may be kept on your SD card for ease of access
+    - Az`essential.exefs` fájl kis méretű és rajta tarthatod az SD kártyádon a könnyű eléréshez
 
 ___
 
@@ -129,16 +129,16 @@ Próbálod kitalálni, mit tegyél a frissen módosított eszközöddel? Látoga
 
 :::
 
-### Information and Notes
+### Információk és megjegyzések
 
 ::: info
 
 Néhány billentyű kombináció amit ismerned kell:
 
-- Holding (Select) on boot will launch the Luma3DS configuration menu.
-- Holding (Start) on boot will launch GodMode9, or if you have multiple payloads in `/luma/payloads/`, the Luma3DS chainloader.
-- By default, pressing (Left Shoulder) + (Down D-Pad) + (Select) while in 3DS mode will open the Rosalina menu, where you can check system information, take screenshots, enable cheats, and more. Ezt lehet módosítani a Rosalina menüben.
-- Holding (Start) + (Select) + (X) on boot will make the notification LED show a color for debug purposes. Tekintsd meg [változási naplót](https://github.com/SciresM/boot9strap/releases/tag/1.4) egy listáért.
+- Indításkor előhozhatod a Luma3DS konfigurációs menüjét a (Select) gomb lenyomva tartásával.
+- Indításkor előhozhatod a GodMode9-et, vagy ha több payload van a `/luma/payloads/` mappában a Luma3DS chainloader-t a (Select) gomb lenyomva tartásával.
+- Alapból a (Bal váll) + (D-pad le) + (Select) gombok megnyomásával 3DS módban a Rosalina menü megnyílik, ahol többek közt megnézhetsz rendszer információkat, csinálhatsz képernyő képeket, és engedélyezhetsz csalásokat és még több. Ezt lehet módosítani a Rosalina menüben.
+- A (Start) + (Select) + (X) lenyomva tartása indítás közben a figyelmeztető LED-en színt mutat debug célokból. Tekintsd meg [változási naplót](https://github.com/SciresM/boot9strap/releases/tag/1.4) egy listáért.
 
 :::
 
