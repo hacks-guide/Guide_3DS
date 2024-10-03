@@ -37,14 +37,14 @@ A most következő lépésekben mindig írd felül az SD kártyán található f
 1. Kapcsold be a konzolod
    - Ennek automatikusan indítania kell a SafeB9SInstaller-t
 2. Ha kéri, akkor nyomd meg a gombokat egyszerre, amiket kijelez a felső képernyőn, hogy telepíthesd a boot9strap-et
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+   - Ha egy lépés az alsó képernyőn piros színű szöveget eredményez, és nem kér a rendszer tőled egy gomb-kombinációt, akkor [kövesd ezt a hibaelhárítási útmutatót](troubleshooting#issues-with-safeb9sinstaller)
 3. Ha ez elkészült, kényszerítsd a konzolod leállásra a bekapcsológomb lenyomva tartásával
    - A konzolod csak addig fog a SafeB9SInstaller képernyőre bootolni, amíg a következő részt be nem fejezed
 
 ### III. rész - Luma3DS frissítése
 
 1. Helyezd az SD kártyád a számítógépbe
-2. Copy everything from the Luma3DS `.zip` to the root of your SD card, replacing any existing files
+2. Másolj mindent a Luma3DS `.zip`-ből az SD kártyád gyökerébe, és cseréld le a már meglévő fájlt
 3. Tedd vissza az SD kártyád a konzoldba
 4. Kapcsold be a konzolod
 5. Ha a konzolod a Luma3DS konfigurációs menübe bootolt, nyomj (Start) gombot a mentéshez és az újraindításhoz
