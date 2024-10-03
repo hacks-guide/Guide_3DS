@@ -45,8 +45,9 @@ Nesta seção, você irá copiar os arquivos necessários para acionar tanto sup
 7. Selecione "Outras Configurações"
 
 8. Navegue para "Perfil" -> "Configurações de Região"
-   - Se você receber um [aviso](/images/screenshots/skaterhax/country-change-notice.png) que diz que você vai perder acesso aos recursos da sua Nintendo Network ID, você pode com segurança selecionar OK para continuar
-   - Após completar esta página, você pode restaurar as configurações de região de volta ao normal
+   - These settings will be temporarily changed to increase the success rate of the exploit
+   - You can restore your region settings back to normal once you have finished this page
+   - If you get a [warning](/images/screenshots/skaterhax/country-change-notice.png) that says you will lose access to Nintendo Network ID features, you can safely select OK to continue
 
 9. Selecione as seguintes opções de acordo com a região de seu console ([imagem](/images/screenshots/skaterhax/skater-lang.png))
    - USA: United States, Do Not Set
