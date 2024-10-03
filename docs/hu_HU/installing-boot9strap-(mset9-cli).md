@@ -72,9 +72,9 @@ Ebben a lépésben előkészülsz az MSET9 exploitra azzal, hogy **átmenetileg*
 7. Nyisd meg a Mii Maker alkalmazást
 8. Várj amíg a konzolod elérí a [Welcome to Mii Maker](/images/screenshots/mset9/mii-welcome.png) képernyőt, majd lépj ki a Mii Maker-ből és térj vissza a HOME képernyőre
    - [Ezt a képernyőt láthatod](/images/screenshots/mset9/mii-extdata.png), ami azt mutatja, hogy a szükséges adatok létrejöttek
-   - If you just reach the [normal](/images/screenshots/mset9/mii-existing.png) Mii Maker screen, then the data already exists. Lépj ki a Mii Maker-ből, és térj vissza a HOME menübe
+   - Ha a [normál](/images/screenshots/mset9/mii-existing.png) Mii Maker képernyőre jutottál, akkor az adat már létezik. Lépj ki a Mii Maker-ből, és térj vissza a HOME menübe
 9. Indítsd el a System Settings-et és navigálj ide: `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
-   - This will not wipe any of your data
+   - Ez nem fogja törölni az adataidat
 10. Kapcsold ki a konzolod a power gomb megnyomásával, majd a Power Off felirat megérintésével az alsó képernyőn
 11. Helyezd az SD kártyád a számítógépbe
 
@@ -82,7 +82,7 @@ Ebben a lépésben előkészülsz az MSET9 exploitra azzal, hogy **átmenetileg*
 
 1. Írd be a konzolod modelljéhez és verziójához tartozó számot, és nyomj Enter-t
 
-   - The window should change to this and display `Ready`:
+   - Az ablak erre kell módosuljon és `Ready`-t kell mutasson:
 
    ::: info
 
@@ -91,9 +91,9 @@ Ebben a lépésben előkészülsz az MSET9 exploitra azzal, hogy **átmenetileg*
    :::
 
    - Ha az ablak azt mondja, hogy [Not ready - check MSET9 status for more details](/images/screenshots/mset9/mset9-not-ready.png):
-     - Type `2`, then press Enter to check the MSET9 status and follow the directions indicated
-     - Once you have resolved the issue, return to Section I Step 14
-     - For more information, check the [troubleshooting](troubleshooting#installing-boot9strap-mset9) page
+     - Írj `2`-öt és nyomj Enter-t az MSET9 állapotának ellenőrzéséhez és kövesd az iránymutatásokat
+     - Ha egyszer megoldottad a problémát térj vissza az I. rész 14. lépéséhez
+     - További információkért tekintsd meg a [hibaelhárítási](troubleshooting#installing-boot9strap-mset9) oldalt
 2. Írj `0`-át és nyomj Enter-t a szkript bezárásához
 3. Tedd vissza az SD kártyád a konzoldba
 
@@ -108,30 +108,30 @@ Ezeket a lépéseket **PONTOSAN** kell követni, így ellenőrizz MINDENT kétsz
 :::
 
 1. - Kapcsold be a konzolod, biztosítva azt, hogy a System Settings kiválasztott
-   - If System Settings is not selected, **[hover over](/images/screenshots/mset9/hover-settings.png)** the System Settings icon using the D-Pad, power your console off, then back on
+   - Ha a System Settings nem kiválaszott, akkor _[állj rá](/images/screenshots/mset9/hover-settings.png)_\* a System Settings ikonra a D-Pad használatával, majd kapcsold ki konzolod és vissza
 2. Nyomj (A) gombot a System Settings indításához
 3. Navigálj ide: `Data Management` -> `Nintendo 3DS` -> `Extra Data` ([image](/images/screenshots/mset9/settings-extdata.png))
 4. **Ne nyomj meg semmi gombot vagy éríntsd meg a képernyőt**
 5. \*\* A konzolod BEKAPCSOLT állapotában, bármilyen gomb vagy a képernyő érintése nélkül\*\* vedd ki az SD kártyádat a konzolból
-   - The menu will refresh and say that no SD card is inserted
+   - A menü frissülni fog, és ki fogja írni, hogy nincs SD kártya behelyezve
 6. Helyezd az SD kártyád a számítógépbe
 
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Írd be a konzolod modelljéhez és verziójához tartozó számot, és nyomj Enter-t
 2. Az MSET9 ablakba írj `3`-t és nyomj Enter-t az MSET9 injektálásához
-   - You should see "MSET9 successfully injected!"
+   - Az "MSET9 successfully injected!" üzenetet kell látnod
 3. Nyomj Enter-t az MSET9 szkript bezárásához
 4. Helyezd vissza az SD kártyád a konzolodba, **bármilyen gomb vagy a képernyő érintése nélkül**
 5. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
-   - If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting#installing-boot9strap-mset9)
+   - Ha piros képernyőt kapsz vagy a konzol beragad a betöltő képernyőn, kövesd a [hibaelhárítási útmutatót](troubleshooting#installing-boot9strap-mset9)
 
 ### III. rész - boot9strap telepítése
 
 Ebben a fejezetben egyedi firmware-t fogsz telepíteni a konzolodra.
 
 1. Ha kéri, akkor nyomd meg a gombokat egyszerre, amiket kijelez a felső képernyőn, hogy telepíthesd a boot9strap-et
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+   - Ha egy lépés az alsó képernyőn piros színű szöveget eredményez, és nem kér a rendszer tőled egy gomb-kombinációt, akkor [kövesd ezt a hibaelhárítási útmutatót](troubleshooting#issues-with-safeb9sinstaller)
 2. Ha ez elkészült, nyomd meg az (A) gombot a konzolod újraindításához
 
 <!--@include: ./_include/configure-luma3ds.md -->
@@ -152,12 +152,12 @@ NE ugord át ezt a részt! Ha kihagyod, akkor az alkalmazások váratlanul össz
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Írd be a konzolod modelljéhez és verziójához tartozó számot, és nyomj Enter-t
-   - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
-   - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), skip to Step 6
+   - Az aktuális állapot [Injected](/images/screenshots/mset9/mset9-injected.png)-et kell mutasson
+   - Ha már eltávolítottad a trigger fájlt (vagy soha nem injektáltad), az aktuális állapot [Ready](/images/screenshots/mset9/mset9-ready.png)-t fog mutatni, ezért ugord át a 6. lépést
 2. Írj `4`-et és nyomj Enter-t a trigger fájl eltávolításához
-   - You should see "Removed trigger file."
+   - Azt kell látnod, hogy "Removed trigger file."
 3. Írj `5`-öt és nyomj Enter-t az MSET9 eltávolításához
-   - You should see "Successfully removed MSET9!"
+   - A "Successfully removed MSET9!" üzenetet kell látnod
 4. Nyomj Enter-t az MSET9 szkript bezárásához
 
 <!--@include: ./_include/luma3ds-installed-note.md -->
@@ -172,6 +172,6 @@ Követted a IV. részt (Az MSET9 eltávolítása)? Az a rész KÖTELEZŐ!
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Tovább a [telepítés véglegesítésére](finalizing-setup)
 
 :::
