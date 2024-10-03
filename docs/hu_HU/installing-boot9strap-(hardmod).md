@@ -81,8 +81,8 @@ Ebben a fejezetben le fogod tölteni a szükséges fájlokat a hardmod-hoz és d
 Ebben a fejezetben telepíteni fogod az egyedi firmware-t a mentett NAND képfájlba, és vissza fogod telepíteni a NAND képet a konzolodra, hogy egyedi firmware-t telepíts rá.
 
 1. Futtasd a hardmod-b9s-installer-t
-   - Windows Users: Run `install-b9s.exe`
-   - Mac and Linux Users: Run `install-b9s.py`
+   - Windows felhasználóknak: Futtasd az `install-b9s.exe` fájlt
+   - Mac és Linux felhasználóknak: Futtasd az `install-b9s.py` fájlt
 2. Flasheld rá az így elkészített `NAND-patched.bin` fájlt a konzolodra a hardmod-od segítségével
 3. Kapcsold ki a konzolod
 4. Válaszd le a hardmododat
