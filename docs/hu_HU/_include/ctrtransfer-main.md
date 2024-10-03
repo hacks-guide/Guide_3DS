@@ -4,14 +4,14 @@
    - Ne feledd, hogy amennyiben ezen a ponton szükséges volt a helyes dátum és idő beállítása, a System Settingsben is be kell majd állítanod a helyes időt az útmutató végén
 4. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
 5. Válaszd a "Scripts..." opciót
-6. Select "ctrtransfer"
-7. Select your downloaded CTRTransfer image
-   - The script will calculate the hash of your image to make sure it's valid
-8. Once the checks are completed, press (A) to continue
-9. Press (A) to unlock SysNAND (lvl2) writing, then input the key combo given
+6. Válaszd a "ctrtransfer"-t
+7. Válaszd ki a letöltött CTRTransfer képfájlodat
+   - A szkript kikalkulálja a hash-ét a képfájlnak, hogy ellenőrizze, hogy jó-e
+8. Miután az ellenőrzések befejeződtek, nyomd meg az (A) gombot a folytatáshoz
+9. Nyomd meg az (A) gombot, hogy feloldd a SysNAND (lvl2) írást, majd sorban nyomd meg a kijelzett gombokat
 10. Miután az átvitel befejeződött, nyomd meg az (A) gombot a folytatáshoz
 11. Nyomd meg az (A) gombot az írási engedélyek visszavonásához
 12. Nyomd meg a (Start) gombot a konzolod újraindításához
 13. Frissítsd a konzolod következőképp: Lépj be a System Settings-be, majd az "Other settings"-be, ahol addig lépkedj jobbra, amíg a végére nem érsz. Itt válaszd a "System Update" opciót
-    - Updates while using B9S + Luma (what you have) are safe
-    - If this gives you an error, set your DNS settings to "auto"
+    - B9S és Luma használatakor (mint esetedben) biztonságosak a rendszerfrissítések
+    - Ha ez hibát ad, akkor állítsd a DNS beállításodat "auto"-ra
