@@ -382,10 +382,10 @@ Kövesd az alábbi lépéseket:
    - A tesztnek sikeresnek kell lennie
 7. Kattints az OK gombra a folytatáshoz
 8. Nyomj a "Back"-re kétszer, majd a "Close"-ra, hogy visszajuszz a HOME Menübe
-9. Open the Internet Browser once
-10. If prompted about a system update, press OK
-    - This won't actually update the system
-11. Start again from [Section II](installing-boot9strap-\(ssloth-browser\).html#section-ii---ssloth)
+9. Nyisd meg az Internet Browser-t egyszer
+10. Ha kérdezi a rendszer frissítést, nyomj OK-t
+    - Ez nem fogja frissíteni a rendszert
+11. Kezd előlről a [II. résszel](installing-boot9strap-\(ssloth-browser\).html#section-ii---ssloth)
 
 :::
 
@@ -585,20 +585,20 @@ Az alábbi lépések tetszőleges sorrendben hajthatók végre, azonban a lista 
      - **USA régió**: `0000008f`
      - **CHN régió**: `000000A1`
      - **KOR régió**: `000000A9`
-     - **TWN Region**: `000000B1`
+     - **TWN régió**: `000000B1`
 4. Próbálj meg recovery mode-ba bootolni, majd onnét frissíteni a rendszeredet:
    - Kapcsold ki a konzolod
-   - Hold (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A)
+   - Tartsd nyomva a (Bal Váll) + (Jobb Váll) + (D-Pad Fel) + (A) gombokat
    - Kapcsold be a konzolod
-   - If you were successful, the console will boot to an "update your system" screen
+   - Ha sikeres voltál, a konzolod egy "update your system" képernyőre bootol
 5. Kövesd a [CTRTransfer](ctrtransfer) útmutatót
 6. További támogatásért kérj segítséget a [Nintendo Homebrew-tól a Discord-on](https://discord.gg/MWxPgEp)
 
 :::
 
-### Error message on boot
+### Hibaüzenet bootoláskor
 
-:::details "An error has occurred: Failed to apply 1 FIRM patch(es)" or "An exception has occurred -- Current process: pm"
+:::details "An error has occurred: Failed to apply 1 FIRM patch(es)" vagy "An exception has occurred -- Current process: pm"
 
 A Luma3DS verziód régi. Töltsd le a legutolsó kiadását az [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)-nak és rakd a `boot.firm` fájlt az SD kártyád gyökerébe, felülírva bármilyen létező fájlt. Legyél biztos abban, hogy a ZIP fájlt más eszközzel csomagolod ki, mint a WinRAR, mert ismert, hogy problémái vannak a 3DS-sel kapcsolatos fájlokkal.
 
@@ -606,18 +606,18 @@ A Luma3DS verziód régi. Töltsd le a legutolsó kiadását az [Luma3DS](https:
 
 :::details "Unable to mount CTRNAND or load the CTRNAND FIRM. Please use an external one."
 
-There are a number of reasons as to why this could be happening. In any case, this error can usually be fixed by following the [CTRTransfer](ctrtransfer) guide.
+Számos oka lehet, hogy miért történik így. Bármelyik esetben, ez a hiba általában javítható a [CTRTransfer](ctrtransfer) útmutató követésével.
 
 :::
 
 :::details "An error has occurred. Hold down the POWER button to turn off the power..."
 
-Az ARM11 kivételkezelők tiltva, vagy az egyedi firmware nincs telepítve. Try enabling ARM11 exception handlers:
+Az ARM11 kivételkezelők tiltva, vagy az egyedi firmware nincs telepítve. Próbáld meg engedélyezni az ARM11 kivétel kezelőket:
 
 - Kapcsold ki a konzolod
 - Hold (Select)
-- Power on your console, while still holding (Select)
-- If the "Disable ARM11 exception handlers" box is checked, uncheck it
+- Kapcsold be a konzolod, miközben nyomva tartod a (Select) gombot
+- Ha a "Disable ARM11 exception handlers" jelölőnégyzet bejelölt, vedd ki a jelölést
 
 :::
 
