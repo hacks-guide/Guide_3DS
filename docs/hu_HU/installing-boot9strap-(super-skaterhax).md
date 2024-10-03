@@ -28,7 +28,7 @@ Ebben a fejezetben fel fogod másolni a fájlokat, amik a super-skaterhax és a 
 
 2. Helyezd az SD kártyád a számítógépbe
 
-3. Copy everything from the Super-skaterhax `.zip` to the root of your SD card, overwriting any existing files
+3. Másolj át a mindent a uper-skaterhax `.zip`-ből az SD kártyád gyökerébe, felülírva minden már ott lévő fájlt
 
    ::: info
 
