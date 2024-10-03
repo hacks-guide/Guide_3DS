@@ -1,4 +1,4 @@
-# Updating B9S
+# B9S frissítése
 
 ## Kötelező olvasmány
 
@@ -35,7 +35,7 @@ A most következő lépésekben mindig írd felül az SD kártyán található f
 ### II. rész - boot9strap telepítése
 
 1. Kapcsold be a konzolod
-   - This should automatically launch SafeB9SInstaller
+   - Ennek automatikusan indítania kell a SafeB9SInstaller-t
 2. Ha kéri, akkor nyomd meg a gombokat egyszerre, amiket kijelez a felső képernyőn, hogy telepíthesd a boot9strap-et
    - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
 3. Ha ez elkészült, kényszerítsd a konzolod leállásra a bekapcsológomb lenyomva tartásával
