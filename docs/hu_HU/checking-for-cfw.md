@@ -19,7 +19,7 @@ Ha a konzolod menuhax alapú CFW konfiguráció, akkor [töröld a Home menü ex
 3. Kapcsold be a konzolod, miközben nyomva tartod a (Select) gombot
 4. Ezt követően egy konfigurációs menüt fogsz látni
 
-## What to do next
+## Mi következik most
 
 ::: tip
 
