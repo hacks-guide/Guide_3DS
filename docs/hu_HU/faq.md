@@ -12,45 +12,45 @@
 
 :::
 
-## Pre-Installation FAQ
+## Telepítés előtti GYIK
 
-:::details I am on the latest system version. Is my console hackable without any external hardware/prerequisites?
+:::details A legújabb verziójú rendszeren vagyok. Hackelhető a konzolom külső hardver vagy előfeltételek használata nélkül?
 
 **Igen!** ANew 3DS / New 3DS XL / New 2DS XL használhatja a [super-skaterhax](installing-boot9strap-\(super-skaterhax\)), míg a 3DS / 3DS XL / 2DS használhatja az [MSET9](installing-boot9strap-\(mset9\)) exploitot.
 
 :::
 
-:::details What consoles is this guide compatible with?
+:::details Milyen konzolokkal kompatibilis ez az útmutató?
 
 Ez az útmutató kompaitiblis minden kereskedelmi 3DS-család eszközzel (3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, New 2DS XL). Ha a megjelenített rendszer verziód "0.0.0-0", akkor fejlesztői egységed van.
 
 :::
 
-:::details How risky is hacking my console?
+:::details Mennyire kockázatos a konzolom meghackelése?
 
 A brickelés ma már alapvetően lehetetlen, kivéve, ha szándékosan szeretnéd brickelni a konzolodat.
 
 :::
 
-:::details Can I run awesome homebrew and emulators with this?
+:::details Ezzel lehet futtatni azokat a király homebrew alkalmazásokat és emulátorokat?
 
 Igen! Ez az útmutató telepít néhány hasznos homebrew alkalmazást, beleértve az [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest)-t, ami homebrew alkalmazás boltként működik.
 
 :::
 
-:::details Can I use this to play games from other regions?
+:::details Használhatom ezt arra, hogy más régióból származó játékokkal tudjak játszani?
 
 Igen; a Luma3DS automatikusan figyelmen kívül hagyja a régió ellenőrzést a cartridge-ek és a telepített címek esetében. Néhány játék igényli a Luma's [nyelvi emulációs funkcióját](https://wiki.hacks.guide/wiki/3DS:Setting_game_locales) a működéshez, ha régión kívüli konzolokon fut.
 
 :::
 
-:::details Will I lose any features if I install CFW?
+:::details El fogok veszteni bármilyen szolgáltatást, ha CFW-t telepítek?
 
 Nem. Egyedi firmware-rel ellátott konzolok le tudnak tölteni játék frissítéseket és futtatni fizikai cartridge-eket, mint bármilyen más 3DS.
 
 :::
 
-:::details Can I keep my NNID, saves, digital games (etc.)?
+:::details Megtarthatom az NNID-met, mentéseimet, digitális játékaimat (stb.)?
 
 Az NNID-et (ha van) nem befolyásolja az útmutató végrehajtása. A KOR, CHN vagy TWN régiós eszközök nem rendelkeznek alaphelyzetben NNID funkcionalitással, így ezek a konzolok nem érintettek.
 
@@ -58,7 +58,7 @@ Az útmutató követése nem kell, hogy adatvesztéshez vezessen (mentések, dig
 
 :::
 
-:::details Will my 3DS be banned for having CFW?
+:::details Bannolva lesz a 3DS-em, ha CFW-m van telepítve?
 
 Bannolás már nem lehetséges, mert a Nintendo Network szolgáltatások le lettek állítva (mindenkinek).
 
@@ -70,13 +70,13 @@ Igen! Egyedül arra van szükséged, hogy fájlokat tudj másolni egy kompatibil
 
 :::
 
-:::details What size SD card can I use?
+:::details Milyen méretű SD kártyát használhatok?
 
 Legalább 1.5GB szabad hely kell az SD kártyán az útmutató teljes végrehajtásához. Habár a 3DS hivatalosan 32GB SD kártya méretig kompatibilis, nagyobb SD kártyák is használhatók, miután kézzel újra formázásra kerültek FAT32 fájlrendszerre. Nem javasoltak 128GB-nál nagyobb SD kártyák, az ismert problémák miatt a GBA grafikával és az egyedi témákkal.
 
 :::
 
-:::details Hallottam erről a dologról (Gateway, Sky3DS, ntrboot, R4, stb), amiért fizetnem kell. Is that something I need?
+:::details Hallottam erről a dologról (Gateway, Sky3DS, ntrboot, R4, stb), amiért fizetnem kell. Szükségem lesz ilyesmire?
 
 Nem. Habár DS flashcart használható a 3DS moddolására az [ntrboot](ntrboot) használatával, már van ingyenes szoftveres metódus a legtöbb konzolra.
 
@@ -84,7 +84,7 @@ A 3DS-mód flashcart-ok, mint a Gateway és a Sky3DS nem ajánlottak, mert elavu
 
 :::
 
-:::details What's the difference between custom firmware and homebrew?
+:::details Mi a különbség az egyedi firmware és a homebrew hozzáférés között?
 
 Definició szerint az egyedi firmware a 3DS rendszer szoftverének módosítását jelenti, azért, hogy olyan dolgok is megtehetők legyenek, amik normál esetben nem. Homebrew generally refers to software created outside of official sources (i.e. not distributed by eShop or cartridges).
 
@@ -100,13 +100,13 @@ Ha Luma3DS-t használsz, az egyedi firmware loader (boot9strap) _soha_ nem kerü
 
 :::
 
-:::details How do I upgrade my SD card?
+:::details Hogyan bővíthetem nagyobbra az SD kártyám?
 
 Másold át az SD kártyád tartalmát egy új FAT32-re formázott SD kártyára. A 128GB-os kártyák esetén a 65536 allokációs méret javasolt. 128GB-nál nagyobb SD kártyák nem javasoltak az ismert problémák miatt a GBA grafikával és az egyedi témákkal.
 
 :::
 
-:::details Can I system transfer with CFW?
+:::details Tudok rendszer átvitelt (System Transfer) végezni CFW-vel?
 
 Igen, a rendszer átvitel végrehajtható a hivatalos System Transfer funkcióval más CFW-vel rendelkező konzolokra (inkonzisztenciák előfordulhatnak, ha a cél egy alap konzol). Az illegitim címek (homebrew) jegyei (ticket) nem kerülnek átvitelre, de a [faketik](https://github.com/ihaveamac/faketik/releases/latest)-kel újra megjeleníthetők. Ügyelj arra, hogy ne használj vezeték nélküli átvitelt, mert az törli az illegitim címeket. A CFW megmarad minkét konzolon.
 
