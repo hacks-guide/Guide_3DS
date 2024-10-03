@@ -10,14 +10,14 @@ Ha elfelejtettünk hozzáadni téged a közreműködők közé, [tudasd velünk]
 
 **Külön köszönet:**
 
-- **Plailect**, the original creator and maintainer of this guide
-- [The guide translators](https://crowdin.com/project/3ds-guide), who make this guide more accessible around the world
-- Anyone who has ever submitted an issue, pull request, or otherwise informed us about problems on this guide
-- The historical contributors to this guide, without whom this guide would not exist today
+- \*\*Plailect-nek, a guide eredeti készítőjének és karbantartójának
+- [Az útmutató fordítóinak](https://crowdin.com/project/3ds-guide), akik jobban elérhetővé teszik ezt az útmutatót a világ számára
+- Bárkinek, aki valaha beküldött egy hibajelzést, egy hibajavítást vagy egyéb módon informált minket az úmtutatóval kapcsolatos problémákról
+- Az útmutató történelmi hozzájárulóinak, akik nélkül ez az útmutató nem létezne
 
 :::
 
-:::details Historical contributors
+:::details Történelmi hozzájárulók
 
 ```
 + #Cakey on freenode
