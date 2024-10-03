@@ -45,8 +45,9 @@
 7. Επιλέξτε «Other Settings»
 
 8. Μεταβείτε στο «Profile» -> «Region Settings»
-   - Εάν λάβετε μια [προειδοποίηση](/images/screenshots/skaterhax/country-change-notice.png) που δηλώνει ότι θα χάσετε την πρόσβαση στις λειτουργίες του Nintendo Network ID, μπορείτε να επιλέξετε με ασφάλεια το «OK» για να συνεχίσετε
-   - Αφού ολοκληρώσετε τα βήματα αυτής της σελίδας, μπορείτε να επαναφέρετε τις ρυθμίσεις περιοχής στις κανονικές επιλογές
+   - These settings will be temporarily changed to increase the success rate of the exploit
+   - You can restore your region settings back to normal once you have finished this page
+   - If you get a [warning](/images/screenshots/skaterhax/country-change-notice.png) that says you will lose access to Nintendo Network ID features, you can safely select OK to continue
 
 9. Χρησιμοποιήστε τις εξής επιλογές σύμφωνα με την περιοχή της κονσόλας σας ([εικόνα](/images/screenshots/skaterhax/skater-lang.png))
    - USA: United States, Do Not Set
