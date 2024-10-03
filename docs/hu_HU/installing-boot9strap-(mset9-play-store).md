@@ -39,7 +39,7 @@ Ebben a részben előkészítjük az SD kártyád a szükséges adatokkal amik k
 2. Nyisd meg a Mii Maker alkalmazást
 
 3. Várj amíg a konzolod elérí a "Welcome to Mii Maker" képernyőt, majd lépj ki a Mii Maker-ből
-   - You may see [this screen](/images/screenshots/mset9/mii-extdata.png), which indicates the necessary data has been created
+   - [Ezt a képernyőt láthatod](/images/screenshots/mset9/mii-extdata.png), ami azt mutatja, hogy a szükséges adatok létrejöttek
    - If you just reach the normal Mii Maker screen, exit Mii Maker and continue to the next step
 
 4. Kapcsold ki a konzolod
