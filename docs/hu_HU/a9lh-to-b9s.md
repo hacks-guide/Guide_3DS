@@ -40,13 +40,13 @@ A most következő lépésekben mindig írd felül az SD kártyán található f
 
 2. Helyezd az SD kártyád a számítógépbe
 
-3. Copy everything from Luma3DS `.zip` to the root of your SD card
-   - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
+3. Másolj mindent a Luma3DS `.zip`-ből az SD kártya gyökerébe
+   - Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne
 
-4. Copy `arm9loaderhax.bin` from the v7.0.5 Luma3DS `.zip` to the root of your SD card
+4. Másold át az `arm9loaderhax.bin` fájlt a v7.0.5-ös Luma3DS `.zip`-ből az SD kártya gyökerébe
 
 5. Másold át a `SafeB9SInstaller.bin` fájlt a SafeB9SInstaller `.zip`-ből az SD kártyád `/luma/payloads/` mappájába
-   - If the `luma` or `payloads` folder doesn't exist, create them
+   - Ha a `luma` vagy `payloads` mappa nem létezik, hozd létre őket
    - Delete any other existing `.bin` payloads (`GodMode9.bin`, `Decrypt9WIP.bin`, `Hourglass9.bin`, etc.) in the `/luma/payloads/` folder on your SD card as they will not be compatible with boot9strap compatible Luma3DS versions
 
 6. Hozz létre egy mappát `boot9strap` néven az SD kártya gyökerében
