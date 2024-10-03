@@ -6,13 +6,13 @@ Ha ez az első alkalom, hogy moddolsz egy 3DS-t (vagy nem vagy ismerős a techno
 
 :::
 
-This page covers some of the base computer terminology and 3DS-specific information that you should know before following this guide.
+Ez az oldal néhány alap számitástechnikai információt és 3DS specifikus információkat tartalmaz, amiket ismerned kell, mielőtt követnéd ezt az útmutatót.
 
-Each section is collapsed by default. Click or tap on the name of the section to open it.
+Minden szekció összezárt alapértelmezésként. Kattints rá vagy érintsd meg a nevét a szekciónak, hogy kinyisd.
 
-## Things you should know about the 3DS
+## Dolgok amit érdemes tudnod a 3DS-ről
 
-:::: details 3DS/2DS compatibility
+:::: details 3DS/2DS kompatibilitás részletek
 
 ::: info
 
@@ -20,11 +20,11 @@ Each section is collapsed by default. Click or tap on the name of the section to
 
 :::
 
-This guide works with every retail console in the Nintendo 3DS family of consoles (including the 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, and New 2DS XL/LL), regardless of region or firmware.
+Ez az útmutató minden kereskedelmi konzollal működik a Nintendo 3DS konzol családból (beleértve a 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, és a New 2DS XL/LL-t), függetlenül a régiótól és a firmware-től.
 
 ::::
 
-:::: details Computer compatibility
+:::: details Számítógép kompatibilitás részletek
 
 ::: info
 
@@ -32,11 +32,11 @@ This guide works with every retail console in the Nintendo 3DS family of console
 
 :::
 
-In most cases, you can follow this guide as long as you are able to download files from the Internet and copy them to your SD card. Depending on your computer/phone/electronic device, you may need to purchase a USB to SD card adapter to allow your computer to read your SD card.
+A legtöbb esetben követheted ezt az útmutatót egészen addig, amíg képes vagy letölteni fájlokat az internetről és SD kártyára másolni. A számitógépedtől/telefonodtól/elektronikus eszközödtől függően szükséged lehet egy USB-SD kárya adapterre, ami lehetővé teszi a számítógéped számára, hogy olvassa az SD kártyádat.
 
 ::::
 
-:::: details SD card location, type, and capacity
+:::: details SD kártya helye, típusa és kapacitása részletek
 
 ::: info
 
@@ -44,19 +44,19 @@ In most cases, you can follow this guide as long as you are able to download fil
 
 :::
 
-The location of the SD card slot and the type of SD card that is accepted depends on the model of your 3DS. More information can be found on [Nintendo's official support page](https://en-americas-support.nintendo.com/app/answers/detail/a_id/271/~/how-to-insert-an-sd-card-or-microsd-card).
+Az SD kártyá slot helye és az SD kártya típusa amit elfogad a 3DS modelledtől függ. További infromációk találhatók erről a [Nintendo hivatalos támogatási oldalán](https://en-americas-support.nintendo.com/app/answers/detail/a_id/271/~/how-to-insert-an-sd-card-or-microsd-card).
 
-The 3DS can read SD cards of any capacity (even those larger than 32GB), but the card must be formatted as FAT32 (**not** exFAT or NTFS). You can use one of the following tools to format your SD card, depending on your operating system: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)). SD cards larger than **128GB** are not recommended due to known issues with custom themes and GBA/DS graphics.
+A 3DS bármilyen kapacitású SD kártyát tud olvasni (még akkor is, ha nagyobb, mint 32GB), de a kártyának FAT32-re kell formatálva lennie (**nem** exFAT vagy NTFS). A következő eszközöket használhatod az SD kártyád formázására, az operációs rendszeredtől függően: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)). **128GB**-nál nagyobb SD kártyák nem javasoltak az ismert problémák miatt az egyedi témákkal és a GBA grafikával.
 
 ::: warning
 
-To follow this guide, you'll need an SD card with a capacity of at least **2GB**.
+Ahhoz, hogy követhesd ezt az útmutatót szükséged van egy legalább **2GB** kapacitású SD kártyára.
 
 :::
 
 ::: info
 
-If you want, you can check your SD card for errors before following this guide using [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), or [F3XSwift (Mac)](f3xswift-\(mac\))
+Ha szeretnéd, leellenőrizheted az SD kártyádat valamelyik programmal az alábbiak közül: [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), vagy [F3XSwift (Mac)](f3xswift-\(mac\))
 
 :::
 
@@ -66,15 +66,15 @@ If you want, you can check your SD card for errors before following this guide u
 
 :::details Potential risks (Disclaimer)
 
-By modding your console, you subject it to the remote (but non-zero) possibility of the console being bricked (rendered non-functional). _**Incorrect file placement will NOT brick your console**_, but purposely skipping instructions might.
+A konzolod moddolásával, van egy nagyon kicsi (de nem nulla) esélye, hogy a konzol brickelődik (nem működővé válik). _**A rossz helyre rakott fájlok NEM brickelik a konzolodat**_, de szándékosan kihagyott lépések elképzelhető, hogy igen.
 
-In short: Modding your console is safe, but it's _**your responsibility**_ if something goes wrong.
+Röviden: A konzolod moddolása biztonságos, de a _**te felelősséged**_ ha valami elromlik.
 
 :::
 
 ::::
 
-## Things you need to do on your computer
+## Dolgok, amiket a számítógépeden kell csinálnod
 
 ::: warning
 
@@ -82,7 +82,7 @@ Following this guide alone should not result in data loss, but SD card corruptio
 
 :::
 
-:::: details File placement terminology (e.g. "root of SD", "/luma/")
+:::: details Fájl elhelyezés terminológia (pl. "az SD gyökere", "/luma/")
 
 ::: info
 
@@ -110,7 +110,7 @@ You may also see folder names indicated like this: `/folder/`. The slashes are u
 
 ::::
 
-:::: details Downloading files from GitHub
+:::: details Fájlok letöltése a GitHub-ról
 
 ::: info
 
@@ -122,7 +122,7 @@ In this guide, you will copy files that are downloaded on your computer/phone to
 
 ::::
 
-:::: details Opening/extracting files
+:::: details Fájlok megnyitása/kicsomagolása
 
 ::: info
 
@@ -138,7 +138,7 @@ On most operating systems, you can extract files by double-clicking the file. If
 
 ::::
 
-:::: details (Windows only) File extensions
+:::: details (csak Windows) Fájl kiterjesztések
 
 ::: info
 
@@ -150,13 +150,13 @@ If your computer is running Windows, file extensions may be hidden by default, w
 
 ::::
 
-## Getting help
+## Segítség kérése
 
-If you experience an issue while following this guide, there are many ways that you can get help!
+Ha problémád van ezen útmutató követésével, többféle módja van, hogy segítséget kapj!
 
-- If you have any questions that haven't been answered on this page, their answers might be in the [Pre-Installation FAQ](faq#pre-installation-faq).
-- If you experience an issue while following this guide, you can check the [Troubleshooting](troubleshooting) page for a solution.
-- If the resources we've provided here aren't helping, you can get one-on-one support over at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+- Ha olyan kérdésed van, amit nem válaszolt meg az az oldal, akkor a válaszaid lehet, hogy a [Telepítés előtti gyakran ismételt kérdések](faq#pre-installation-faq) oldalon találhatók.
+- Ha hibát kaptál a útmutató követése közben, ránézhetsz a [Hibaelhárítás](troubleshooting) oldalra a megoldásért.
+- Ha az itt található információk nem segítenek egy-egy támogatást kaphatsz a [Nintendo Homebrew Discord csatornán](https://discord.gg/MWxPgEp).
 
 ::: tip
 
