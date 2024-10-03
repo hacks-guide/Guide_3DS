@@ -16,9 +16,9 @@ Ez a metódus Windows, Linux vagy MacOS számítógépet igényel. Ha Android te
 
 ## Amire szükséged lesz
 
-- The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest)
-- Any 3.x version of [Python](https://www.python.org/downloads/) **installed on your computer**
-  - If you are on Linux or macOS, you may already have Python 3. Ellenőrizd egy Terminal ablak megnyitásával, majd a `python3 -V` parancs megadásával. Ha ez egy verziószámot ad vissza, működni fog ezzel az útmutatóval.
+- Az [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) legújabb kiadása
+- Bármelyik a **számítógépedre telepített 3.x verziója** a [Python](https://www.python.org/downloads/)-nak
+  - Ha Linux-ot vagy macOS-t használsz valószínűleg már van Python 3-ad. Ellenőrizd egy Terminal ablak megnyitásával, majd a `python3 -V` parancs megadásával. Ha ez egy verziószámot ad vissza, működni fog ezzel az útmutatóval.
 
 ## Lépések
 
@@ -53,7 +53,7 @@ Ebben a lépésben előkészülsz az MSET9 exploitra azzal, hogy **átmenetileg*
 
 1. Írd be a konzolod modelljéhez és verziójához tartozó számot, és nyomj Enter-t
 
-   - The window should change to this:
+   - Az ablak a következőre kell módosuljon:
 
    ::: info
 
@@ -61,17 +61,17 @@ Ebben a lépésben előkészülsz az MSET9 exploitra azzal, hogy **átmenetileg*
 
    :::
 
-   - Ensure that the correct console model and version is displayed
+   - Legyél biztos abban, hogy a helyes model és verzió megjelenített
 2. Írj `1`-et és nyomj Enter-t, hogy elkezd az MSET9 ID1 létrehozásának folyamatát
 3. A nyilatkozatot elolvasását követően írj `1`-est és nyomj Enter-t annak elfogadásához
-   - If you get an error, check the [troubleshooting](troubleshooting#installing-boot9strap-mset9), then try again
+   - Ha hibát kapsz, nézd meg a [hibaelhárítási útmutatót](troubleshooting#installing-boot9strap-mset9), majd próbáld újra
 4. Ha a "Created hacked ID1." üzenetet látod, nyomj Enter-t az MSET9 szkript bezárásához
-   - Your 3DS will appear to have no data / no user-installed apps on HOME Menu. **Ez elvárt működés** Az adataid visszatérnek egy későbbi lépésben
+   - A 3DS-ed úgy fog tűnni, hogy nem tartalmaz adatot / felhasználó által telepített alkalmazást a HOME menüben. **Ez elvárt működés** Az adataid visszatérnek egy későbbi lépésben
 5. Tedd vissza az SD kártyád a konzoldba
 6. Kapcsold be a konzolod
 7. Nyisd meg a Mii Maker alkalmazást
 8. Várj amíg a konzolod elérí a [Welcome to Mii Maker](/images/screenshots/mset9/mii-welcome.png) képernyőt, majd lépj ki a Mii Maker-ből és térj vissza a HOME képernyőre
-   - You may see [this screen](/images/screenshots/mset9/mii-extdata.png), which indicates the necessary data has been created
+   - [Ezt a képernyőt láthatod](/images/screenshots/mset9/mii-extdata.png), ami azt mutatja, hogy a szükséges adatok létrejöttek
    - If you just reach the [normal](/images/screenshots/mset9/mii-existing.png) Mii Maker screen, then the data already exists. Lépj ki a Mii Maker-ből, és térj vissza a HOME menübe
 9. Indítsd el a System Settings-et és navigálj ide: `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
    - This will not wipe any of your data
