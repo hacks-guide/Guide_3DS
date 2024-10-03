@@ -12,10 +12,10 @@ Ha azért távolítod el a CFW-t, mert:
 
 - Szeretnéd újratelepíteni
 - Mert szeretnél SD kártyát cserélni
-- Your SD card was lost or corrupted
-- One of your games is broken
-- One of your system applications is broken
-- Your console is unable to boot to HOME Menu
+- Az SD kártyád elveszett vagy megsérült
+- Valamelyik játékod hibás
+- Valamelyik rendszer alkalmazásod hibás
+- A konzolod nem tud bebootolni a HOME Menübe
 
 <u>**STOP!!!**</u> Uninstalling custom firmware is an unnecessary risk that will at best waste your time and at worst <u>**BRICK**</u> your console. Jobb ötlet az, hogy segítséget kérsz (angolul) a [Nintendo Homebrew Discord szerveren](https://discord.gg/MWxPgEp).
 
@@ -104,12 +104,12 @@ Ennek a résznek az a célja, hogy ellenőrizd, hogy a konzolod be fog-e bootoln
 8. Be kell bootolnod a normál 3DS HOME Menübe (bármilyen egyéni téma irreleváns). Ha sikerült, folytasd ezeket a lépéseket
    - If you do not boot into the regular 3DS HOME Menu (black screen, error screen, etc.), uninstalling CFW **WILL BRICK YOUR CONSOLE!**
 9. Lépj be a "System Settings"-be a konzolodon
-   - If the console crashes at this point, the test has failed
+   - Ha a konzol összeomlik ezen a ponton, a teszt sikertelen
 10. Válaszd az "Other Settings"-t
 11. Válaszd ki a "Profile"-t
 12. Válaszd ki a "User Name"-t
 13. Ha képes vagy beírni egy új felhasználó nevet, a teszt sikeres
-    - If the keyboard does not appear, the screen freezes, or the console crashes, the test has failed
+    - Ha a billentyűzet nem jelenik meg, a képernyő lefagy, vagy a konzol összeomlik, a teszt sikertelen
 14. Kapcsold ki a konzolod
 
 ::: danger
@@ -128,7 +128,7 @@ Ha NEM sikerül a hagyományos 3DS HOME Menübe bootolni, vagy a System Settings
 6. Válaszd ezt: "SysNAND Backup"
 7. Nyomd meg az (A) gombot a megerősítéshez
    - Ez a folyamat igénybe vesz majd némi időt
-   - If you get an error, ensure you have at least 1.3GB of free space on your SD card
+   - Ha hibát kapsz, győződj meg róla, hogy legalább 1.3 GB szabad hely van az SD kártyádon
 8. Nyomd meg a (B) gombot, hogy visszamenj a főmenübe
 9. Válaszd az "Exit" opciót
 10. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
@@ -146,11 +146,11 @@ Ez a rész az illegitim tartalom eltávolításáról szól, mint a homebrew vag
 2. Lépj be a "System Settings"-be a konzolodon
 3. Navigálj a következőhöz: Data Management -> Nintendo 3DS -> Software
 4. Ebben a szoftver listában törölj minden nem-Nintendo tartalmat, amit telepítettél a CFW használatával
-   - This includes common system software such as FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint, and others, along with any games and titles that you did _not_ install from the eShop
+   - Ebbe bele tartoznak az általános rendszer szoftverek, mint az FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint és minden játék és cím, amit _nem_ az eShop-ból telepítettél
 5. Navigálj ide: `Data Management` -> `DSiWare`
 6. Ebben a szoftver listában törölj minden nem-Nintendo tartalmat, amit telepítettél a CFW használatával
-   - This includes software such as TWiLightMenu++, along with any games and titles that you did _not_ install from the eShop
-   - Failure to remove all CFW software from both the 3DS and DSiWare sections before uninstalling CFW may prevent or disable access to the Data Management menu after uninstalling CFW, which will make it difficult to re-install CFW in the future
+   - Ebbe bele tartoznak olyan szoftverek, mint az TWiLightMenu++ beleértve minden játékot és címet, amit _nem_ az eShop-ból telepítettél
+   - A sikertelen eltávolítása minden CFW szoftvernek a 3DS és a DSiWare szekciókban a CFW eltávolítása előtt megakadályozhatja vagy letilthatja a hozzáférést a Data Management menühöz a CFW eltávolítása után, ami megnehezíti a CFW újratelepítését a jövőben
 7. Lépj ki a System Settings alkalmazásból
 8. Indítsd el a Download Play alkalmazást (![](/images/download-play-icon.png){height="24px" width="24px"})
 9. Várj, amíg két gombot nem látsz
@@ -190,17 +190,17 @@ Ha azért távolítod el a CFW-t, mert:
 
 - Szeretnéd újratelepíteni
 - Mert szeretnél SD kártyát cserélni
-- Your SD card was lost or corrupted
-- One of your games is broken
-- One of your system applications is broken
-- Your console is unable to boot to HOME Menu
+- Az SD kártyád elveszett vagy megsérült
+- Valamelyik játékod hibás
+- Valamelyik rendszer alkalmazásod hibás
+- A konzolod nem tud bebootolni a HOME Menübe
 
-<u>**STOP!!!**</u> Uninstalling custom firmware is an unnecessary risk that will at best waste your time and at worst <u>**BRICK**</u> your console. Jobb ötlet az, hogy segítséget kérsz (angolul) a [Nintendo Homebrew Discord szerveren](https://discord.gg/MWxPgEp).
+<u>**ÁLLJ!!!**</u> Az egyedi firmware eltávolítása egy felesleges kockázat, ami legjobb esetben az időd pocsékolása, a legrosszabb esetben pedig <u>**BRICKELI**</u> a konzolodat. Jobb ötlet az, hogy segítséget kérsz (angolul) a [Nintendo Homebrew Discord szerveren](https://discord.gg/MWxPgEp).
 
 :::
 
 1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et
-   - If you instead see the Luma3DS chainloader, use the D-Pad and the (A) button to select GodMode9
+   - Ha helyette a Luma3DS chainloader-t látod, használd a D-Pad-et és az (A) gombot a GodMode9 kiválasztásához
 2. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
 3. Válaszd a "Scripts..." opciót
 4. Válaszd ezt: "GM9Megascript"
