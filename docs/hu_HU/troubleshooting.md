@@ -309,7 +309,7 @@ Ha a képernyő színeket villogtat, akkor lefagy/összeomlik:
 
 :::
 
-:::: details "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
+:::: details "An error has occurred. Hold down the POWER button to turn off the power..." (fekete képernyő szöveggel)
 
 A `arm11code.bin` fájl hiányzik, vagy rossz helyen van. Biztosítsd, hogy [super-skaterhax legfrissebb verziójából](https://github.com/zoogie/super-skaterhax/releases/latest) régiódhoz és verziódhoz tartozó fájlokat az SD kártya gyökerébe másold (nem egy mappán belülre).
 
@@ -615,13 +615,13 @@ Számos oka lehet, hogy miért történik így. Bármelyik esetben, ez a hiba á
 Az ARM11 kivételkezelők tiltva, vagy az egyedi firmware nincs telepítve. Próbáld meg engedélyezni az ARM11 kivétel kezelőket:
 
 - Kapcsold ki a konzolod
-- Hold (Select)
+- Tartsd nyomva a (Select) gombot
 - Kapcsold be a konzolod, miközben nyomva tartod a (Select) gombot
 - Ha a "Disable ARM11 exception handlers" jelölőnégyzet bejelölt, vedd ki a jelölést
 
 :::
 
-:::details HOME Menu is missing installed applications
+:::details A HOME Menüből hiányoznak telepített alkalmazások
 
 Ez különböző okokból is előfordulhat, de leginkább azért, mert az SD kártyád nem került beolvasásra a rendszer által.
 Ellenőrizheted, hogy az SD kártyád olvasásra kerül-e a SELECT gomb nyomva tartásával bootoláskor, és az alsó képernyőn megjelenő sárga szöveg ellenőrzésével; ha azt mondja, hogy "Booted from CTRNAND via B9S", akkor a konzolod a belső memóriáról bootolt, nem az SD kártyáról.
@@ -635,22 +635,22 @@ Ha ez a helyzet, próbáld meg a lépéseket alább, ami a legkönnyebbtől a le
 
 :::
 
-:::details Blue "BOOTROM ERROR" screen
+:::details Kék "BOOTROM ERROR" képernyő
 
 A konzolod valószínüleg hard-brickelve lett. Szükséged van egy ntrboot flashcart vásárlására, hogy újra telepítsd a boot9strap-et, hogy megpróbálhasd megjavítani a konzolod. Ez hardver hibát is jelezhet, ami nem javítható. Bármelyik esetben csatlakozz a [Nintendo Homebrew-hoz a Discord-on](https://discord.gg/MWxPgEp) segítségért.
 \+ Az is lehetséges még, hogy valaki beállított egy bootoláskori kezdő képernyőt, ami úgy néz ki mint egy brick. Próbáld meg a konzolod bekapcsolva hagyni, várva a kék képernyőre, 5 percig.
 
 :::
 
-:::details Some other error
+:::details Egyéb más hibák
 
 Készítsd egy képet a hibáról és csatlakozz a [Nintendo Homebrew-hoz a Discord-on](https://discord.gg/MWxPgEp) segítségért.
 
 :::
 
-## Software issues on consoles with custom firmware
+## Szoftver problémák egyedi firmware-rel rendelkező konzolokon
 
-:::details DSi / DS functionality is broken or has been replaced with Flipnote Studio
+:::details DSi / DS funkcionalitás hibás vagy felcserélt a Flipnote Studio-val
 
 1. Töltsd le a [TWLFix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest) legutolsó kiadását (a `.3dsx` fájlt)
 2. Kapcsold ki a konzolod
@@ -662,31 +662,32 @@ Készítsd egy képet a hibáról és csatlakozz a [Nintendo Homebrew-hoz a Disc
 8. Nyomj (A)-t a törött TWL címek eltávolításához
 9. Nyomd meg a (Start) gombot a konzol újraindításához
 10. Frissítsd a konzolod következőképp: Lépj be a System Settings-be, majd az "Other settings"-be, ahol addig lépkedj jobbra, amíg a végére nem érsz. Itt válaszd a "System Update" opciót
-    - The update will see that the essential TWL titles have been uninstalled, and will redownload and reinstall them
+    - A frissítés észreveszi, hogy lényeges TWL címek kerültek eltávolításra és le fogja tölteni és újratelepíteni azokat
 11. Ha a frissítés kész, érintsd meg az "OK"-ot a konzol újraindításához
 
 :::
 
-:::details GBA Virtual Console and/or Safe Mode functionality is broken
+:::details GBA Virtual Console és/vagy Safe Mode funkcionalitás hibás
 
 A konzolod Luma3DS 6.6 vagy régebbi verziót futtat, valószínűleg arm9loaderhax-szal. Kövesd az [A9LH-ről B9S-re](a9lh-to-b9s) lépéseit a konzolod frissítéséhez modern egyedi firmware környezetre.
 
 :::
 
-:::details Extended memory mode games (Pokemon Sun/Moon, Smash, etc.) don't work
+:::details Bővített memória módú játékok (Pokemon Sun/Moon, Smash, stb.) nem működnek
 
-Ez egy CTRTransfer vagy régió csere után fordulhat elő Old 3DS / 2DS eszközökön. Follow the instructions [here](region-changing#section-vi---fixing-locale-related-issues) to fix this issue (skipping steps 3, 4, 5, and 6).
+Ez egy CTRTransfer vagy régió csere után fordulhat elő Old 3DS / 2DS eszközökön. Kövesd a lépéseket [itt](region-changing#section-vi---fixing-locale-related-issues) hogy kijavíthasd ezt a hibát. (átlépve a 3, 4, 5 és 6. lépéseket).
 
 :::
 
-:::details Exception screen when booting/loading an application
+:::details Kivétel képernyő egy alkalmazás bootolásakor/betöltésekor
 
 Tekintsd meg a kivétel képernyőt [ezen az oldalon](https://wiki.hacks.guide/wiki/3DS:Error_screens/Luma3DS_exception_screen).
 Ha nem sikerült megtalálni a hibádat, vagy a lépések nem működnek, csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) további támogatásért.
 
 :::
 
-:::details Opening the HOME Menu settings crashes the console or loads the Homebrew Launcher
+:::details A HOME Menu beállítások megnyitása összeomlasztja a konzolt
+vagy betölti a Homebrew Launcher-t
 
 A konzolodon még mindig van menuhax67 telepítve. A menuhax67 eltávolításához, tölsd le a [menuhax67](https://github.com/zoogie/menuhax67/releases/latest) legfrissebb kiadását (a menuhax `.zip`), majd kövesd a ["Menuhax67 eltávolítása" részt](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits/menuhax67#Uninstall_menuhax67) here.
 
@@ -694,7 +695,7 @@ A konzolodon még mindig van menuhax67 telepítve. A menuhax67 eltávolításáh
 
 ---
 
-## Other troubleshooting
+## Egyéb hibaelhárítás
 
 :::details A HOME Menu extdata takarítása
 
@@ -726,7 +727,7 @@ A konzolodon még mindig van menuhax67 telepítve. A menuhax67 eltávolításáh
 
 :::
 
-:::details Manually entering Homebrew Launcher
+:::details Homebrew Launcher kézi hozzáadása
 
 Ha hiányzik a Homebrew Launcher alkalmazás a HOME Menüből, akkor a következő lépésekkel megadhatod a Homebrew Launcher-t kézzel. (A [boot.3dsx és a boot.firm](https://github.com/LumaTeam/Luma3DS/releases/latest) kell legyen az SD kártyád gyökerében.)
 
@@ -734,7 +735,7 @@ Ha hiányzik a Homebrew Launcher alkalmazás a HOME Menüből, akkor a következ
 
 :::
 
-:::details Turning off Parental Controls
+:::details A szülői felügyelet kikapcsolása
 
 Letilthatod a szülői felügyeletet (Parental Controls) a System Settings -> Parental Controls-hoz navigálással és a PIN megadásával, majd a "Clear Settings" megnyomásával. Ezt követően a "Delete"-tel törölheted azt.
 Azonban, ha nem tudod a PIN-t így nem tudsz hozzáférni az konzol beállításokhoz, akkor le kell tiltanod. Ahhoz hogy megtehesd ezt, meg kell szerezned a konzolod mester kulcsát (mkey):
