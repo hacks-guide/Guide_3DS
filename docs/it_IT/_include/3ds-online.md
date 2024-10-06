@@ -1,4 +1,4 @@
-**Nintendo 3DS online services have shut down.** Here's what you should know:
+**I servizi online Nintendo 3DS sono stati terminati.** Ecco cosa dovresti sapere:
 
 - Gli attuali metodi di modding per 3DS non sono influenzati.
 - L'accesso a Internet da parte delle applicazioni homebrew (es. Universal-Updater) non è influenzato.
