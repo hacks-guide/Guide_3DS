@@ -45,9 +45,9 @@ In questa sezione copierai i file necessari per attivare sia super-skaterhax che
 7. Seleziona "Impostazioni generali"
 
 8. Vai su "Profilo" -> "Area di residenza"
-   - These settings will be temporarily changed to increase the success rate of the exploit
-   - You can restore your region settings back to normal once you have finished this page
-   - If you get a [warning](/images/screenshots/skaterhax/country-change-notice.png) that says you will lose access to Nintendo Network ID features, you can safely select OK to continue
+   - Queste impostazioni verranno temporaneamente modificate per aumentare la probabilità di successo dell'exploit
+   - È possibile ripristinare le impostazioni della regione al termine della pagina
+   - Se ottieni un [avviso](/images/screenshots/skaterhax/country-change-notice.png) che dice che perderai l'accesso alle funzionalità di Nintendo Network ID, puoi tranquillamente selezionare OK per continuare
 
 9. Seleziona le seguenti opzioni in base alla regione della tua console ([immagine](/images/screenshots/skaterhax/skater-lang.png))
    - USA: United States, Do Not Set
