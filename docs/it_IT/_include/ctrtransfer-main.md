@@ -4,11 +4,11 @@
    - Tieni presente che in tal caso dovrai anche reimpostare data ed ora anche nelle Impostazioni della Console al termine della guida
 4. Premi il pulsante HOME per far apparire il menu delle azioni
 5. Seleziona "Scripts..."
-6. Select "ctrtransfer"
-7. Select your downloaded CTRTransfer image
-   - The script will calculate the hash of your image to make sure it's valid
-8. Once the checks are completed, press (A) to continue
-9. Press (A) to unlock SysNAND (lvl2) writing, then input the key combo given
+6. Seleziona "ctrtransfer"
+7. Seleziona l'immagine CTRTransfer scaricata
+   - Lo script calcolerà l'hash dell'immagine per assicurarsi che sia valido
+8. Una volta completati i controlli, premi (A) per proseguire
+9. Premi il pulsante (A) per sbloccare i permessi di scrittura di secondo livello su SysNAND, quindi inserisci la combinazione di tasti richiesta a schermo
 10. Una volta completato il trasferimento, premi (A) per proseguire
 11. Se richiesto, premi (A) per ritirare le autorizzazioni di scrittura
 12. Premi (Start) per riavviare la tua console
