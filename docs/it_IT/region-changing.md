@@ -35,9 +35,9 @@ Se cambi la regione della tua console:
 ## Cosa serve
 
 - L'ultima versione di [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (il file `.zip` di GodMode9)
-- The latest release of [FBI](https://github.com/nh-server/FBI-NH/releases/download/2.6.1/FBI.3dsx) (direct download)
+- L'ultima versione di [FBI](https://github.com/nh-server/FBI-NH/releases/download/2.6.1/FBI.3dsx) (download diretto)
 - L'ultima versione di [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(il file `.3dsx`)_
-- The latest release of [ctrtransfer.gm9](https://raw.githubusercontent.com/nh-server/scripts/refs/heads/main/3DS/ctrtransfer.gm9) (right click, save link as)
+- L'ultima versione di [ctrtransfer.gm9](https://raw.githubusercontent.com/nh-server/scripts/refs/heads/main/3DS/ctrtransfer.gm9) (clicca con il tasto destro del mouse, salva il link come)
 - Un client torrent come [qBittorrent](https://www.qbittorrent.org/download.php) o [Deluge](http://dev.deluge-torrent.org/wiki/Download)
   - Se hai già un client torrent, non occorre scaricarne uno nuovo
 - L'immagine CTRTransfer 11.15.0 per il tipo di console della regione a cui si desidera cambiare (ad esempio scarica "New 3DS or 2DS - USA" se hai un New 3DS e vuoi cambiare la tua regione in USA)
