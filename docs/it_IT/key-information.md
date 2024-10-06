@@ -132,13 +132,13 @@ In questa guida copierai i file scaricati dal tuo computer o cellulare nella sch
 
 Alcuni dei file che ti verrà richiesto di scaricare saranno in formato `.zip`, utilizzato per comprimere più file in uno unico.
 
-Quando ti verrà chiesto di "copiare il file (tizio) dall'archivio (caio).zip", significa che dovrai aprire (o meglio, "estrarre") il file ZIP. Inside the ZIP file will be the file you're looking for, after which you can copy it to the specified location on your SD card.
+Quando ti verrà chiesto di "copiare il file (tizio) dall'archivio (caio).zip", significa che dovrai aprire (o meglio, "estrarre") il file ZIP. Dentro il file ZIP ci saranno i file che cerchi, che potrai copiare nella posizione richiesta sulla tua scheda SD.
 
-On most operating systems, you can extract files by double-clicking the file. If this doesn't work, you can install a reputable third-party extraction tool like [7-zip](https://7-zip.org/) instead.
+Nella maggior parte dei sistemi operativi, per estrarre i file basta farci un doppio clic sopra. Se non ci riesci o non funziona, puoi installare invece un tool di terze parti affidabile come [7-Zip](https://7-zip.org/).
 
 ::::
 
-:::: details (Windows only) File extensions
+:::: details (solo Windows) Estensioni dei file
 
 ::: info
 
@@ -146,17 +146,17 @@ On most operating systems, you can extract files by double-clicking the file. If
 
 :::
 
-If your computer is running Windows, file extensions may be hidden by default, which may make it harder to find the files you're looking for. To enable file extensions, follow [these instructions](file-extensions-\(windows\)).
+Se hai un computer con Windows, le estensioni dopo il nome del file potrebbero essere nascoste per impostazione predefinita, rendendo più complicato trovare il file che stai cercando. Per abilitare le estensioni dopo il nome del file, segui [queste istruzioni](file-extensions-\(windows\)).
 
 ::::
 
-## Getting help
+## Supporto
 
-If you experience an issue while following this guide, there are many ways that you can get help!
+Se riscontri dei problemi seguendo questa guida, ci sono tanti modi per ricevere aiuto!
 
-- If you have any questions that haven't been answered on this page, their answers might be in the [Pre-Installation FAQ](faq#pre-installation-faq).
-- If you experience an issue while following this guide, you can check the [Troubleshooting](troubleshooting) page for a solution.
-- If the resources we've provided here aren't helping, you can get one-on-one support over at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+- Se hai delle domande a cui non hai ricevuto risposta in questa pagina, le loro risposte potrebbero essere nelle [FAQ Pre-Installazione](faq#pre-installation-faq).
+- Se si verifica un problema mentre stai seguendo questa guida, puoi consultare la pagina [Risoluzione dei problemi](troubleshooting) per trovare una soluzione.
+- Se ciò di cui abbiamo parlato qui non fosse di aiuto, puoi ricevere supporto diretto sul [canale Discord Nintendo Homebrew (solo in inglese)](https://discord.gg/MWxPgEp).
 
 ::: tip
 
