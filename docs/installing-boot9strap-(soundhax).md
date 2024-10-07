@@ -1,3 +1,11 @@
+---
+head: [
+    ['script', {src: '/assets/js/common.js'}],
+    ['script', {src: '/assets/js/soundhax-link.js'}],
+    ['script', {src: '/assets/js/link-common.js'}],
+]
+---
+
 # Installing boot9strap (Soundhax)
 
 ::: details Technical Details (optional)
