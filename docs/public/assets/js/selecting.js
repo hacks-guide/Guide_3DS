@@ -5,44 +5,11 @@
     SPDX-License-Identifier: MIT
 */
 
-const DEVICE_N3DS = 1;
-const DEVICE_O3DS = 0;
+// required as vitepress don't always fully reload page
+// without putting script in its own scope will have const redefine issue
+(() => {
 
-// Possible max minor for each major, major as key
-const major_minor_map = {
-    0: -1, // invalidate all 0.x
-    1: 1,
-    2: 2,
-    3: 1,
-    4: 5,
-    5: 1,
-    6: 4,
-    7: 2,
-    8: 1,
-    9: 9,
-    10: 7,
-    11: 17
-}
-
-// Validate version
-// CHN/TWN doesn't have new model
-// KOR/CHN/TWN doesn't have 11.17 currently
-function validate_version(major, minor, native, region, model) {
-    if (model == DEVICE_N3DS && ["C", "T"].includes(region)) {
-        return false;
-    }
-
-    if (major == 11 && minor == 17 && ["K", "C", "T"].includes(region)) {
-        return false;
-    }
-
-    const minor_max = major_minor_map[major];
-    if (!isNaN(minor_max) && minor > minor_max) {
-        return false;
-    }
-
-    return true;
-}
+// validate_version moved to common.js
 
 // Soundhax
 // 1.0-11.3
@@ -208,6 +175,9 @@ function redirect() {
         return;
     }
 
+    // Store selected version for some later pages
+    sessionStorage.setItem("selected_version", JSON.stringify({major, minor, nver, region, model}));
+
     const redirected = [
       can_soundhax,
       can_ssloth,
@@ -221,3 +191,7 @@ function redirect() {
     document.getElementById("result_methodUnavailable").style.display = "block";
     return false;
 }
+
+window.redirect = redirect;
+
+})();
