@@ -8,7 +8,7 @@ If your console already has an arm9loaderhax or boot9strap based custom firmware
 
 ::: info
 
-If your console has a menuhax-based CFW setup, you should [clear HOME Menu's extdata](troubleshooting#other-troubleshooting), then follow all instructions on your SysNAND. You probably have a menuhax-based setup if your system version when booting without an SD card is 9.2.0-20.
+If your console has a menuhax-based CFW setup, you should [clear HOME Menu's extdata](troubleshooting-post-install), then follow all instructions on your SysNAND. You probably have a menuhax-based setup if your system version when booting without an SD card is 9.2.0-20.
 
 :::
 
