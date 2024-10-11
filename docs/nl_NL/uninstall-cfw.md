@@ -85,7 +85,7 @@ Het doel van dit deel is om te controleren of ingebouwde DS mode applicaties zul
 
 ::: warning
 
-Als een van deze tests is mislukt, is de DS mode, DS Download Play, en/of DS Connection Settings mogelijks niet toegankelijk zodra CFW is verwijderd! You should [fix DS mode](troubleshooting#software-issues-on-consoles-with-custom-firmware) before continuing.
+Als een van deze tests is mislukt, is de DS mode, DS Download Play, en/of DS Connection Settings mogelijks niet toegankelijk zodra CFW is verwijderd! You should [fix DS mode](troubleshooting-post-install) before continuing.
 
 :::
 
