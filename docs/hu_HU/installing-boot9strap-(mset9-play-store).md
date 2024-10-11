@@ -67,7 +67,7 @@ Ebben a részben előkészítjük az SD kártyád a szükséges adatokkal amik k
 9. Ha a `Nintendo 3DS` mappában vagy, érintsd meg a "Use this folder" opciót, majd az "Allow"-ot, ha kérdezi ([kép](/images/screenshots/mset9/select-mset9-folder-2.png))
 
 10. Ha a "Setup MSET9" opció [kiemelt](/images/screenshots/mset9/setup-mset9-highlighted.png), akkor haladj tovább a következő lépésre. \*\* Még ne telepítsd az MSET9-et.\*\* Zárd be az MSET9 telepítőt most
-    - Ha a "Check Again" a kiemelt, akkor problémába ütközték, amit fel kellene oldani, mielőtt használatod az MSET9-et. Használd a [hibaelhárítást](troubleshooting#installing-boot9strap-mset9)
+    - Ha a "Check Again" a kiemelt, akkor problémába ütközték, amit fel kellene oldani, mielőtt használatod az MSET9-et. Refer to the [troubleshooting](troubleshooting-mset9)
 
 11. Tedd vissza az SD kártyád a konzoldba
 
@@ -98,14 +98,14 @@ Ezeket a lépéseket **PONTOSAN** kell követni, így ellenőrizz MINDENT kétsz
     - Ha az injektálás sikeres volt, minden gomb kiszürkül kivéve a "Remove MSET9" gombot
 11. Helyezd vissza az SD kártyád a konzolodba, **bármilyen gomb vagy a képernyő érintése nélkül**
 12. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
-    - Ha piros képernyőt kapsz vagy a konzol beragad a betöltő képernyőn, kövesd a [hibaelhárítási útmutatót](troubleshooting#installing-boot9strap-mset9)
+    - If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting-mset9)
 
 ### III. rész - boot9strap telepítése
 
 Ebben a fejezetben egyedi firmware-t fogsz telepíteni a konzolodra.
 
 1. Ha kéri, akkor nyomd meg a gombokat egyszerre, amiket kijelez a felső képernyőn, hogy telepíthesd a boot9strap-et
-   - Ha egy lépés az alsó képernyőn piros színű szöveget eredményez, és nem kér a rendszer tőled egy gomb-kombinációt, akkor [kövesd ezt a hibaelhárítási útmutatót](troubleshooting#issues-with-safeb9sinstaller)
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-mset9)
 2. Ha ez elkészült, nyomd meg az (A) gombot a konzolod újraindításához
 
 <!--@include: ./_include/configure-luma3ds.md -->
