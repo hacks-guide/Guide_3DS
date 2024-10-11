@@ -37,7 +37,7 @@ For all steps in this section, overwrite any existing files on your SD card.
 1. Power on your console
    - This should automatically launch SafeB9SInstaller
 2. Wenn du gebeten wirst, eine Tastenkombination einzugeben, gib die Tastenkombination auf dem oberen Bildschirm ein, um boot9strap zu installieren
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-updating-b9s)
 3. Once it is completed, force your console to power off by holding down the power button
    - Your console will only boot to the SafeB9SInstaller screen until the next section is completed
 
