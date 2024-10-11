@@ -85,7 +85,7 @@
 
 ::: warning
 
-Εάν απέτυχε οποιαδήποτε από αυτές τις δοκιμές, η λειτουργία DS, το DS Download Play ή/και οι ρυθμίσεις σύνδεσης DS ενδέχεται να καταστούν μη προσβάσιμες μόλις αφαιρεθεί το CFW! Θα πρέπει να [διορθώσετε τη λειτουργία DS](troubleshooting#software-issues-on-consoles-with-custom-firmware) πριν συνεχίσετε.
+Εάν απέτυχε οποιαδήποτε από αυτές τις δοκιμές, η λειτουργία DS, το DS Download Play ή/και οι ρυθμίσεις σύνδεσης DS ενδέχεται να καταστούν μη προσβάσιμες μόλις αφαιρεθεί το CFW! You should [fix DS mode](troubleshooting-post-install) before continuing.
 
 :::
 
