@@ -67,7 +67,7 @@
 9. Μόλις βρεθείτε εντός του φακέλου `Nintendo 3DS`, πατήστε το «Use this folder» και έπειτα, το «Allow» αν σας ζητηθεί ([εικόνα](/images/screenshots/mset9/select-mset9-folder-2.png))
 
 10. Εάν έχει [επισημανθεί](/images/screenshots/mset9/setup-mset9-highlighted.png) το «Setup MSET9», συνεχίστε στο επόμενο βήμα. **Μην κάνετε ρύθμιση του MSET9 ακόμα.** Κλείστε προς το παρόν το MSET9 Installer
-    - Εάν έχει επισημανθεί το «Check Again», υπάρχει κάποιο πρόβλημα που πρέπει να επιλύσετε πριν μπορέσετε να χρησιμοποιήσετε το MSET9. Ανατρέξτε στη σελίδα [επίλυσης προβλημάτων](troubleshooting#installing-boot9strap-mset9)
+    - Εάν έχει επισημανθεί το «Check Again», υπάρχει κάποιο πρόβλημα που πρέπει να επιλύσετε πριν μπορέσετε να χρησιμοποιήσετε το MSET9. Refer to the [troubleshooting](troubleshooting-mset9)
 
 11. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 
@@ -97,14 +97,14 @@
     - Εάν η εισαγωγή ήταν επιτυχής, όλα τα κουμπιά θα πρέπει να γίνουν γκρι εκτός από το «Remove MSET9»
 11. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας **χωρίς να πατήσετε οποιοδήποτε πλήκτρο ή να αγγίξετε την οθόνη**
 12. Εάν το exploit ήταν επιτυχές, θα έχει γίνει εκκίνηση στο SafeB9SInstaller
-    - Εάν λάβετε μια κόκκινη οθόνη ή αν «κολλήσει» η κονσόλα σε κάποια οθόνη φόρτωσης, ακολουθήστε τον [οδηγό επίλυσης προβλημάτων](troubleshooting#installing-boot9strap-mset9)
+    - If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting-mset9)
 
 ### Ενότητα III - Εγκατάσταση του boot9strap
 
 Σε αυτήν την ενότητα, θα εγκαταστήσετε custom firmware στην κονσόλα σας.
 
 1. Όταν ζητηθεί, εισαγάγετε τον συνδυασμό πλήκτρων που θα εμφανιστεί στην πάνω οθόνη, ώστε να εγκαταστήσετε το boot9strap
-   - Εάν το κείμενο κάποιου βήματος στην κάτω οθόνη έχει κόκκινο χρώμα και δεν σας ζητείται να εισαγάγετε κάποιον συνδυασμό πλήκτρων [ακολουθήστε αυτόν τον οδηγό επίλυσης προβλημάτων](troubleshooting#issues-with-safeb9sinstaller)
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-mset9)
 2. Μόλις ολοκληρωθεί, πατήστε το (Α) για να επανεκκινήσετε την κονσόλα σας
 
 <!--@include: ./_include/configure-luma3ds.md -->
