@@ -85,7 +85,7 @@ The purpose of this section is to check whether built-in DS mode applications wi
 
 ::: warning
 
-If either of these tests has failed, DS mode, DS Download Play, and/or DS Connection Settings may be inaccessible once CFW is uninstalled! You should [fix DS mode](troubleshooting#software-issues-on-consoles-with-custom-firmware) before continuing.
+If either of these tests has failed, DS mode, DS Download Play, and/or DS Connection Settings may be inaccessible once CFW is uninstalled! You should [fix DS mode](troubleshooting-post-install) before continuing.
 
 :::
 
