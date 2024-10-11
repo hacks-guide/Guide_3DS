@@ -57,7 +57,7 @@ Para usar os links do [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) nes
 Nesta seção, você instalará custom firmware no seu console.
 
 1. Quando solicitado, aperte a sequência de botões fornecida na tela superior para instalar o boot9strap
-   - Se um passo na tela inferior tiver texto em cor vermelha, e você não for solicitado a introduzir um combo de botões, siga o guia de [troubleshooting](troubleshooting#issues-with-safeb9sinstaller)
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-ntrboot)
 2. Assim que for completo, force o seu console a desligar segurando o botão POWER
    - Seu console sempre iniciará na tela do SafeB9SInstaller até que a próxima seção seja concluída
 
