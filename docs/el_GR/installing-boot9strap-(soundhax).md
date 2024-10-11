@@ -69,7 +69,7 @@
    - Ενδέχεται να χρειαστούν πολλές (έως και 10) προσπάθειες
    - Εάν δείτε το μήνυμα «Could not play, είτε διαθέτετε μια έκδοση συστήματος που δεν είναι συμβατή με το Soundhax είτε έχετε κάνει λήψη της λάθος έκδοσης του Soundhax
    - Εάν «παγώσει», εξαναγκάστε την απενεργοποίηση της κονσόλας κρατώντας πατημένο το κουμπί ισχύος και έπειτα, δοκιμάστε ξανά
-   - Εάν λάβετε κάποιο άλλο σφάλμα, [ακολουθήστε αυτόν τον οδηγό επίλυσης προβλημάτων](troubleshooting#installing-boot9strap-soundhax)
+   - If you get a different error, [follow this troubleshooting guide](troubleshooting-soundhax)
 
    ::: info
 
@@ -84,7 +84,7 @@
 Σε αυτήν την ενότητα, θα εγκαταστήσετε custom firmware στην κονσόλα σας.
 
 1. Όταν ζητηθεί, εισαγάγετε τον συνδυασμό πλήκτρων που θα εμφανιστεί στην πάνω οθόνη, ώστε να εγκαταστήσετε το boot9strap
-   - Εάν το κείμενο κάποιου βήματος στην κάτω οθόνη έχει κόκκινο χρώμα και δεν σας ζητείται να εισαγάγετε κάποιον συνδυασμό πλήκτρων [ακολουθήστε αυτόν τον οδηγό επίλυσης προβλημάτων](troubleshooting#issues-with-safeb9sinstaller)
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-soundhax)
 2. Μόλις ολοκληρωθεί, πατήστε το (Α) για να επανεκκινήσετε την κονσόλα σας
 
 <!--@include: ./_include/configure-luma3ds.md -->
