@@ -95,7 +95,7 @@ In questa sezione, userai una serie di script per automatizzare l'installazione 
 1. Spegni la tua console
 2. Premi (X) e accendi la console continuando a tenerlo premuto. Questo avvierà il supporto al Completamento dell'installazione
    - Se si avvia nel menu HOME, la cartella `payloads` potrebbe essere scritta in modo errato o trovarsi nella posizione sbagliata
-   - Se riscontri un errore, consulta la pagina [Risoluzione dei problemi](troubleshooting#finalizing-setup)
+   - If you encounter an error, consult the [troubleshooting](troubleshooting-finalizing-setup) page
 3. Se il supporto ha avuto successo, la console si avvierà in GodMode9
    - Da qui in avanti sarà possibile accedere a GodMode9 tenendo premuto START all'accensione della console
 4. Se ti viene richiesto di creare un backup dei file essenziali, premi (A) per accettare, e al termine di nuovo (A) per proseguire
@@ -104,7 +104,7 @@ In questa sezione, userai una serie di script per automatizzare l'installazione 
 7. Seleziona "Scripts..."
 8. Seleziona "finalize"
 9. Segui le istruzioni dello script, rispondendo alle domande che ti vengono poste
-   - - Se riscontri un errore, segui le istruzioni riportate nel messaggio di errore o consulta la pagina [Risoluzione dei problemi](troubleshooting#finalizing-setup)
+   - If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting-finalizing-setup) page
 10. Quando lo script mostrerà "Setup complete!", premi (A) per spegnere la console
     - Se NON vedi il messaggio "Setup complete!", lo script non ha avuto successo e dovrai ripetere questa sezione dal Punto 3
 11. Inserisci la scheda SD nel tuo computer
