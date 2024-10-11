@@ -95,7 +95,7 @@ In this section, you will use a series of scripts to automate homebrew installat
 1. Power off your console
 2. Press and hold (X), and while holding (X), power on your console. This will launch the Finalizing Setup Helper
    - If you boot to the HOME Menu, your `payloads` folder may be incorrectly spelled or in the wrong location
-   - If you encounter an error, consult the [troubleshooting](troubleshooting#finalizing-setup) page
+   - If you encounter an error, consult the [troubleshooting](troubleshooting-finalizing-setup) page
 3. If the Helper was successful, your console will boot into GodMode9
    - From this point forward, you can access GodMode9 by holding START while powering on your console
 4. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
@@ -104,7 +104,7 @@ In this section, you will use a series of scripts to automate homebrew installat
 7. Select "Scripts..."
 8. Select "finalize"
 9. Follow the prompts in the script, answering any questions that you are asked
-   - If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting#finalizing-setup) page
+   - If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting-finalizing-setup) page
 10. Once the script says "Setup complete!", press (A) to power off the device
     - If you do NOT see the message "Setup complete!", the script was not successful and you will need to redo this section from Step 3
 11. Sett inn SD-kortet i datamaskinen din
