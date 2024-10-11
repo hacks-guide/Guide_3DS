@@ -24,7 +24,7 @@ Ez a metódus Windows, Linux vagy MacOS számítógépet igényel. Ha Android te
 
 ::: info
 
-Ezen az oldalon a MSET9 szkriptet fogod használni, ami kiváltja az MSET9-et. Amíg a szkript fut, a felhasználói adat átmenetileg eltűnik, de vissza fog térni az oldal befejezésekor. Ha hibát kapsz a szkript futtatásakor, akkor a megoldás a hibára valószínüleg megtalálható a [hibaelhárítás](troubleshooting#installing-boot9strap-mset9) oldalon.
+Ezen az oldalon a MSET9 szkriptet fogod használni, ami kiváltja az MSET9-et. Amíg a szkript fut, a felhasználói adat átmenetileg eltűnik, de vissza fog térni az oldal befejezésekor. If you get an error when running the script, the solution to that error can most likely be found on the [troubleshooting](troubleshooting-mset9) page.
 
 :::
 
@@ -64,7 +64,7 @@ Ebben a lépésben előkészülsz az MSET9 exploitra azzal, hogy **átmenetileg*
    - Legyél biztos abban, hogy a helyes model és verzió megjelenített
 2. Írj `1`-et és nyomj Enter-t, hogy elkezd az MSET9 ID1 létrehozásának folyamatát
 3. A nyilatkozatot elolvasását követően írj `1`-est és nyomj Enter-t annak elfogadásához
-   - Ha hibát kapsz, nézd meg a [hibaelhárítási útmutatót](troubleshooting#installing-boot9strap-mset9), majd próbáld újra
+   - If you get an error, check the [troubleshooting](troubleshooting-mset9), then try again
 4. Ha a "Created hacked ID1." üzenetet látod, nyomj Enter-t az MSET9 szkript bezárásához
    - A 3DS-ed úgy fog tűnni, hogy nem tartalmaz adatot / felhasználó által telepített alkalmazást a HOME menüben. **Ez elvárt működés** Az adataid visszatérnek egy későbbi lépésben
 5. Tedd vissza az SD kártyád a konzoldba
@@ -93,7 +93,7 @@ Ebben a lépésben előkészülsz az MSET9 exploitra azzal, hogy **átmenetileg*
    - Ha az ablak azt mondja, hogy [Not ready - check MSET9 status for more details](/images/screenshots/mset9/mset9-not-ready.png):
      - Írj `2`-öt és nyomj Enter-t az MSET9 állapotának ellenőrzéséhez és kövesd az iránymutatásokat
      - Ha egyszer megoldottad a problémát térj vissza az I. rész 14. lépéséhez
-     - További információkért tekintsd meg a [hibaelhárítási](troubleshooting#installing-boot9strap-mset9) oldalt
+     - For more information, check the [troubleshooting](troubleshooting-mset9) page
 2. Írj `0`-át és nyomj Enter-t a szkript bezárásához
 3. Tedd vissza az SD kártyád a konzoldba
 
@@ -124,14 +124,14 @@ Ezeket a lépéseket **PONTOSAN** kell követni, így ellenőrizz MINDENT kétsz
 3. Nyomj Enter-t az MSET9 szkript bezárásához
 4. Helyezd vissza az SD kártyád a konzolodba, **bármilyen gomb vagy a képernyő érintése nélkül**
 5. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
-   - Ha piros képernyőt kapsz vagy a konzol beragad a betöltő képernyőn, kövesd a [hibaelhárítási útmutatót](troubleshooting#installing-boot9strap-mset9)
+   - If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting-mset9)
 
 ### III. rész - boot9strap telepítése
 
 Ebben a fejezetben egyedi firmware-t fogsz telepíteni a konzolodra.
 
 1. Ha kéri, akkor nyomd meg a gombokat egyszerre, amiket kijelez a felső képernyőn, hogy telepíthesd a boot9strap-et
-   - Ha egy lépés az alsó képernyőn piros színű szöveget eredményez, és nem kér a rendszer tőled egy gomb-kombinációt, akkor [kövesd ezt a hibaelhárítási útmutatót](troubleshooting#issues-with-safeb9sinstaller)
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-mset9)
 2. Ha ez elkészült, nyomd meg az (A) gombot a konzolod újraindításához
 
 <!--@include: ./_include/configure-luma3ds.md -->
