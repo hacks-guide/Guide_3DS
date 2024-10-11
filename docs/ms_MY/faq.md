@@ -138,7 +138,7 @@ If the game is not from the same region as the console, you will need to [dump t
 
 :::details Help! Something bad happened and my 3DS won't boot to HOME Menu...
 
-Please look at the [troubleshooting guide](troubleshooting#boot-issues-on-consoles-with-custom-firmware). **Uninstalling CFW when your console is in an unbootable state is not recommended, as it is very likely to lead to a brick**.
+Please look at the [troubleshooting guide](troubleshooting-post-install). **Uninstalling CFW when your console is in an unbootable state is not recommended, as it is very likely to lead to a brick**.
 
 :::
 
