@@ -138,7 +138,7 @@ Se o jogo não for da mesma região do console, você precisará [fazer um dump 
 
 :::details Socorro! Algo ruim aconteceu e meu 3DS não inicializa mais o Menu HOME...
 
-Por favor, veja o [guia de troubleshooting](troubleshooting#boot-issues-on-consoles-with-custom-firmware). **Desinstalar CFW quando seu console está em um estado não-inicializável não é recomendado, já que é muito provável que isso leve a um brick**.
+Please look at the [troubleshooting guide](troubleshooting-post-install). **Desinstalar CFW quando seu console está em um estado não-inicializável não é recomendado, já que é muito provável que isso leve a um brick**.
 
 :::
 
