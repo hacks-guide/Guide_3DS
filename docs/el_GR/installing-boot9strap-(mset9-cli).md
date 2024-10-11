@@ -24,7 +24,7 @@
 
 ::: info
 
-Σε αυτήν τη σελίδα, θα χρησιμοποιήσετε το script «MSET9», το οποίο χρησιμοποιείται για την ενεργοποίηση του MSET9. Όσο η εκτέλεση του script είναι σε εξέλιξη, τα δεδομένα του χρήστη θα εξαφανιστούν προσωρινά, αλλά θα επιστρέψουν μετά την ολοκλήρωση των βημάτων αυτής της σελίδας. Εάν λάβετε κάποιο σφάλμα κατά την εκτέλεση του script, η λύση σε αυτό θα βρίσκεται πιθανότατα στη σελίδα [Επίλυση προβλημάτων](troubleshooting#installing-boot9strap-mset9).
+Σε αυτήν τη σελίδα, θα χρησιμοποιήσετε το script «MSET9», το οποίο χρησιμοποιείται για την ενεργοποίηση του MSET9. Όσο η εκτέλεση του script είναι σε εξέλιξη, τα δεδομένα του χρήστη θα εξαφανιστούν προσωρινά, αλλά θα επιστρέψουν μετά την ολοκλήρωση των βημάτων αυτής της σελίδας. If you get an error when running the script, the solution to that error can most likely be found on the [troubleshooting](troubleshooting-mset9) page.
 
 :::
 
@@ -64,7 +64,7 @@
    - Βεβαιωθείτε ότι εμφανίζεται το σωστό μοντέλο κονσόλας και η σωστή έκδοση
 2. Πληκτρολογήστε `1` και πατήστε το Enter για να ξεκινήσει η διαδικασία δημιουργίας του ID1 του MSET9
 3. Αφού διαβάσετε το μήνυμα αποποίησης ευθυνών, πληκτρολογήστε ξανά `1` και πατήστε το Enter για να το αποδεχτείτε
-   - Εάν λάβετε κάποιο σφάλμα, ελέγξτε τη σελίδα [επίλυσης προβλημάτων](troubleshooting#installing-boot9strap-mset9) και δοκιμάστε ξανά
+   - If you get an error, check the [troubleshooting](troubleshooting-mset9), then try again
 4. Εάν δείτε το μήνυμα «Created hacked ID1.», πατήστε το Enter για να κλείσετε το script «MSET9»
    - Το 3DS σας θα φαίνεται σαν να μη διαθέτει καμία εγκατεστημένη εφαρμογή από τον χρήστη στο μενού «HOME». **Αυτό είναι αναμενόμενο.** Τα δεδομένα σας θα επιστρέψουν σε ένα μεταγενέστερο βήμα
 5. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
@@ -93,7 +93,7 @@
    - Εάν το παράθυρο δηλώνει [Not ready - check MSET9 status for more details](/images/screenshots/mset9/mset9-not-ready.png):
      - Πληκτρολογήστε `2` και πατήστε το Enter για να ελέγξετε την κατάσταση του MSET9 και ακολουθήστε τις οδηγίες
      - Μόλις επιλύσετε το ζήτημα, επιστρέψτε στο Βήμα 14 της Ενότητας I
-     - Για περισσότερες πληροφορίες, ελέγξτε τη σελίδα [Επίλυση προβλημάτων](troubleshooting#installing-boot9strap-mset9)
+     - For more information, check the [troubleshooting](troubleshooting-mset9) page
 2. Πληκτρολογήστε `0` και πατήστε το Enter για να κλείσετε το script
 3. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 
@@ -124,14 +124,14 @@
 3. Πατήστε το Enter για να κλείσετε το script «MSET9»
 4. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας **χωρίς να πατήσετε οποιοδήποτε πλήκτρο ή να αγγίξετε την οθόνη**
 5. Εάν το exploit ήταν επιτυχές, θα έχει γίνει εκκίνηση στο SafeB9SInstaller
-   - Εάν λάβετε μια κόκκινη οθόνη ή αν «κολλήσει» η κονσόλα σε κάποια οθόνη φόρτωσης, ακολουθήστε τον [οδηγό επίλυσης προβλημάτων](troubleshooting#installing-boot9strap-mset9)
+   - If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting-mset9)
 
 ### Ενότητα III - Εγκατάσταση του boot9strap
 
 Σε αυτήν την ενότητα, θα εγκαταστήσετε custom firmware στην κονσόλα σας.
 
 1. Όταν ζητηθεί, εισαγάγετε τον συνδυασμό πλήκτρων που θα εμφανιστεί στην πάνω οθόνη, ώστε να εγκαταστήσετε το boot9strap
-   - Εάν το κείμενο κάποιου βήματος στην κάτω οθόνη έχει κόκκινο χρώμα και δεν σας ζητείται να εισαγάγετε κάποιον συνδυασμό πλήκτρων [ακολουθήστε αυτόν τον οδηγό επίλυσης προβλημάτων](troubleshooting#issues-with-safeb9sinstaller)
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-mset9)
 2. Μόλις ολοκληρωθεί, πατήστε το (Α) για να επανεκκινήσετε την κονσόλα σας
 
 <!--@include: ./_include/configure-luma3ds.md -->
