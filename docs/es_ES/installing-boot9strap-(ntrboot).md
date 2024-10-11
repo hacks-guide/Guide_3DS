@@ -57,7 +57,7 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 En esta sección, instalarás custom firmware en tu consola.
 
 1. Cuando se te pida, introduce la combinación de botones mostrada para instalar boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-ntrboot)
 2. Una vez terminado, mantén pulsado el botón de apagado para apagar la consola
    - Your console will only boot to the SafeB9SInstaller screen until the next section is completed
 
