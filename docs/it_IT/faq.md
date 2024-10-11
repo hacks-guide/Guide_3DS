@@ -138,7 +138,7 @@ Se il gioco non è della stessa regione della console, dovrai [scaricare gli agg
 
 :::details Aiuto! È successo qualcosa di brutto e il mio 3DS non avvia il menu HOME...
 
-Consulta la [guida per risolvere i problemi](troubleshooting#boot-issues-on-consoles-with-custom-firmware). **Non è consigliato disinstallare il CFW se la console non è in grado di avviarsi normalmente, poiché è molto probabile che questo causerà un brick**.
+Please look at the [troubleshooting guide](troubleshooting-post-install). **Non è consigliato disinstallare il CFW se la console non è in grado di avviarsi normalmente, poiché è molto probabile che questo causerà un brick**.
 
 :::
 
