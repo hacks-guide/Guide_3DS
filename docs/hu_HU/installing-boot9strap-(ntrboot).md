@@ -57,7 +57,7 @@ Ahhoz, hogy használhasd a [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme
 Ebben a fejezetben egyedi firmware-t fogsz telepíteni a konzolodra.
 
 1. Ha kéri, akkor nyomd meg a gombokat egyszerre, amiket kijelez a felső képernyőn, hogy telepíthesd a boot9strap-et
-   - Ha egy lépés az alsó képernyőn piros színű szöveget eredményez, és nem kér a rendszer tőled egy gomb-kombinációt, akkor [kövesd ezt a hibaelhárítási útmutatót](troubleshooting#issues-with-safeb9sinstaller)
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-ntrboot)
 2. Ha ez elkészült, kényszerítsd a konzolod leállásra a bekapcsológomb lenyomva tartásával
    - A konzolod csak addig fog a SafeB9SInstaller képernyőre bootolni, amíg a következő részt be nem fejezed
 
