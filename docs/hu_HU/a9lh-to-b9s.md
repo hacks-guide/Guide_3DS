@@ -71,13 +71,9 @@ A most következő lépésekben mindig írd felül az SD kártyán található f
 2. Várj, amíg az összes biztonsági ellenőrzés be nem fejeződik
    - Ha "OTP Crypto Fail" hibát kaptál, töltsd le a <font-awesome-icon icon="fa-solid fa-magnet"/>[aeskeydb.bin](magnet:?xt=urn:btih:d25dab06a7e127922d70ddaa4fe896709dc99a1e\&dn=aeskeydb.bin\&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce\&tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce\&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce\&tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce\&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce\&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce\&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce\&tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce\&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce), fájlt, majd rakd a `/boot9strap/` mappába az SD kártyádon és próbáld újra
 3. Ha kéri, akkor nyomd meg a gombokat egyszerre, amiket kijelez a felső képernyőn, hogy telepíthesd a boot9strap-et
-   - Ha egy lépés az alsó képernyőn piros színű szöveget eredményez, és nem kér a rendszer tőled egy gomb-kombinációt, akkor [kövesd ezt a hibaelhárítási útmutatót](troubleshooting#issues-with-safeb9sinstaller)
-4. Ha ez elkészült, nyomd meg az (A) gombot a konzolod újraindításához
-5. A konzolodnak a Luma3DS konfigurációs menübe kellett újra-bootolnia
-   - A Luma3DS konfigurációs menü a beállítások a Luma3DS egyedi firmware-hez. Sok ezek közül a beállítások közül hasznos az egyedivé tételhez vagy a debuggoláshoz
-   - Az útmutató céljának megfeleléshez ezen beállítások alapértelmezett állapoton lesznek hagyva
-   - Ha fekete képernyőt kapsz, [nézd át ezt a hibaelhárítási útmutatót](troubleshooting#boot-issues-on-consoles-with-custom-firmware)
-6. Mentéshez és újraindításhoz nyomd meg a (Start) gombot
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-a9lh-to-b9s)
+
+<!--@include: ./_include/configure-luma3ds.md -->
 
 ___
 
