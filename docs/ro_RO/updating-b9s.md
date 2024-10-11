@@ -37,7 +37,7 @@ Pentru toți pașii din această secțiune, suprascrieți fișierele existente d
 1. Power on your console
    - This should automatically launch SafeB9SInstaller
 2. When prompted, input the key combo given on the top screen to install boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-updating-b9s)
 3. Once it is completed, force your console to power off by holding down the power button
    - Your console will only boot to the SafeB9SInstaller screen until the next section is completed
 
