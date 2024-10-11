@@ -56,18 +56,18 @@
 1. Στο μενού «HOME», πατήστε ταυτόχρονα τα κουμπιά (L) και (R) για να ανοίξετε την κάμερα
    - Εάν δεν μπορείτε να ανοίξετε την κάμερα, ανοίξτε την εφαρμογή «Internet Browser» και πληκτρολογήστε το URL (`https://zoogie.github.io/web/nbhax/`)
 2. Πατήστε το κουμπί κωδικού QR και σαρώστε [αυτόν τον κωδικό QR](http://api.qrserver.com/v1/create-qr-code/?color=000000\&bgcolor=FFFFF\&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax\&qzone=1\&margin=0\&size=400x400\&ecc=L)
-   - Εάν αντιμετωπίσετε απροσδόκητη διακοπή λειτουργίας ή κάποιο κωδικό σφάλματος, [ακολουθήστε αυτόν τον οδηγό επίλυσης προβλημάτων](troubleshooting#installing-boot9strap-ssloth-browser)
+   - If you get a crash or an error code, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
    - Εάν λάβετε μια προειδοποίηση για το πιστοποιητικό ασφαλείας, πατήστε το (A) για να επιτρέψετε τη σύνδεση
 3. Πατήστε το κουμπί «PROCEED TO HAXX»
 4. Εάν το exploit ήταν επιτυχές, θα έχει γίνει εκκίνηση στο SafeB9SInstaller
-   - Εάν λάβετε κάποιο σφάλμα, [ακολουθήστε αυτόν τον οδηγό επίλυσης προβλημάτων](troubleshooting#installing-boot9strap-ssloth-browser)
+   - If you get an error, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
 
 ### Ενότητα IV - Εγκατάσταση του boot9strap
 
 Σε αυτήν την ενότητα, θα εγκαταστήσετε custom firmware στην κονσόλα σας.
 
 1. Όταν ζητηθεί, εισαγάγετε τον συνδυασμό πλήκτρων που θα εμφανιστεί στην πάνω οθόνη, ώστε να εγκαταστήσετε το boot9strap
-   - Εάν το κείμενο κάποιου βήματος στην κάτω οθόνη έχει κόκκινο χρώμα και δεν σας ζητείται να εισαγάγετε κάποιον συνδυασμό πλήκτρων [ακολουθήστε αυτόν τον οδηγό επίλυσης προβλημάτων](troubleshooting#issues-with-safeb9sinstaller)
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
 2. Μόλις ολοκληρωθεί, πατήστε το (Α) για να επανεκκινήσετε την κονσόλα σας
 
 <!--@include: ./_include/configure-luma3ds.md -->
