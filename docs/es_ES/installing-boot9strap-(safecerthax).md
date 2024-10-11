@@ -77,7 +77,7 @@ In this section, you will enter Safe Mode (a feature available on all 3DS family
 En esta sección, instalarás custom firmware en tu consola.
 
 1. Cuando se te pida, introduce la combinación de botones mostrada para instalar boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-safecerthax)
 2. Una vez completado, pulsa (A) para reiniciar tu consola
 
 <!--@include: ./_include/configure-luma3ds.md -->
