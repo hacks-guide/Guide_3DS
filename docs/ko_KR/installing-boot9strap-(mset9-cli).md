@@ -24,7 +24,7 @@
 
 ::: info
 
-이 페이지에서, MSET9 스크립트를 사용하여, MSET9을 작동시킬 것입니다. While the script is in progress, user data will temporarily disappear but will return upon the completion of this page. 만약 스크립트를 실행하는 과정에서 에러가 발생할 경우, 에러 메세지에 대한 해결법은 보통 [troubleshooting](troubleshooting#installing-boot9strap-mset9) 페이지에서 확인할 수 있습니다.
+이 페이지에서, MSET9 스크립트를 사용하여, MSET9을 작동시킬 것입니다. While the script is in progress, user data will temporarily disappear but will return upon the completion of this page. If you get an error when running the script, the solution to that error can most likely be found on the [troubleshooting](troubleshooting-mset9) page.
 
 :::
 
@@ -64,7 +64,7 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
    - 화면에 표시된 모델과 버전이 정확한지 확인해 주세요
 2. Type `1`, then press Enter to begin the process of creating the MSET9 ID1
 3. After reviewing the disclaimer, type `1` again and press Enter to accept it
-   - If you get an error, check the [troubleshooting](troubleshooting#installing-boot9strap-mset9), then try again
+   - If you get an error, check the [troubleshooting](troubleshooting-mset9), then try again
 4. If you see the message "Created hacked ID1.", press Enter to close the MSET9 script
    - Your 3DS will appear to have no data / no user-installed apps on HOME Menu. **This is expected.** Your data will come back at a later step
 5. SD 카드를 콘솔에 다시 삽입해 주세요
@@ -93,7 +93,7 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
    - If the window says [Not ready - check MSET9 status for more details](/images/screenshots/mset9/mset9-not-ready.png):
      - Type `2`, then press Enter to check the MSET9 status and follow the directions indicated
      - Once you have resolved the issue, return to Section I Step 14
-     - For more information, check the [troubleshooting](troubleshooting#installing-boot9strap-mset9) page
+     - For more information, check the [troubleshooting](troubleshooting-mset9) page
 2. Type `0`, then press Enter to close the script
 3. SD 카드를 콘솔에 다시 삽입해 주세요
 
@@ -124,14 +124,14 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 3. 엔터키를 눌러 MSET9 스크립트를 종료해 주세요
 4. **어떠한 버튼도 하단 화면도 건드리지 않은 상태에서** SD 카드를 콘솔에 삽입해 주세요
 5. 익스플로잇이 성공적이었다면 SafeB9SInstaller로 부팅되었을 것입니다
-   - If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting#installing-boot9strap-mset9)
+   - If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting-mset9)
 
 ### 섹션 III - boot9strap 설치하기
 
 이 섹션에서는, 커스텀 펌웨어를 설치할 것입니다.
 
 1. 메시지가 나타나면, boot9strap을 설치하기 위하여 화면에 주어진 키 조합을 입력해 주세요
-   - 아래 화면의 단계가 붉은 텍스트로 표시되고 키 콤보 입력을 요구하지 않는다면, [이 문제 해결 가이드](troubleshooting#issues-with-safeb9sinstaller)를 참고해 주세요
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-mset9)
 2. 작업이 완료되면, (A) 를 눌려 콘솔을 재부팅해 주세요
 
 <!--@include: ./_include/configure-luma3ds.md -->
