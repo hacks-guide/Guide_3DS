@@ -8,7 +8,7 @@ Ha a konzolod már rendelkezik arm9loaderhax vagy boot9strap alapú custom firmw
 
 ::: info
 
-Ha a konzolod menuhax alapú CFW konfiguráció, akkor [töröld a Home menü extdata-ját](troubleshooting#other-troubleshooting), majd kövesd a SysNAND összes lépését. Valószínűleg menuhax alapú konfigurációval rendelkezel, ha a rendszered verziója SD kártya nélkül bootolva 9.2.0-20.
+If your console has a menuhax-based CFW setup, you should [clear HOME Menu's extdata](troubleshooting-post-install), then follow all instructions on your SysNAND. Valószínűleg menuhax alapú konfigurációval rendelkezel, ha a rendszered verziója SD kártya nélkül bootolva 9.2.0-20.
 
 :::
 
