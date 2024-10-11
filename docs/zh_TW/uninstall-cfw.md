@@ -85,7 +85,7 @@ These instructions will only work on consoles with a Luma3DS version of 8.0 or h
 
 ::: warning
 
-如果任何一個測試失敗了，那麼移除自製韌體後，您可能將會無法正常使用 DS 模式、DS『下載通信 (Download Play)』程式、或者 DS 連線設定 (Connection Settings)！ You should [fix DS mode](troubleshooting#software-issues-on-consoles-with-custom-firmware) before continuing.
+如果任何一個測試失敗了，那麼移除自製韌體後，您可能將會無法正常使用 DS 模式、DS『下載通信 (Download Play)』程式、或者 DS 連線設定 (Connection Settings)！ You should [fix DS mode](troubleshooting-post-install) before continuing.
 
 :::
 
