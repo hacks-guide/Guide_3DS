@@ -67,7 +67,7 @@ Nesta seção, você irá preparar os dados no seu cartão SD necessários para 
 9. Uma vez dentro da pasta `Nintendo 3DS`, toque em "Use this folder", depois "Allow" se perguntado ([imagem](/images/screenshots/mset9/select-mset9-folder-2.png))
 
 10. Se "Setup MSET9" estiver [destacado](/images/screenshots/mset9/setup-mset9-highlighted.png), prossiga para o próximo passo. **Não configure o MSET9 ainda.** Feche o MSET9 Installer por enquanto
-    - Se o botão "Check Again" estiver destacado, há um problema que você precisa resolver antes de usar o MSET9. Consulte o [troubleshooting](solução de problemas#installing-boot9strap-mset9)
+    - Se o botão "Check Again" estiver destacado, há um problema que você precisa resolver antes de usar o MSET9. Refer to the [troubleshooting](troubleshooting-mset9)
 
 11. Reinsira o cartão SD no seu console
 
@@ -97,14 +97,14 @@ Estas instruções devem ser seguidas **EXATAMENTE** como estão, então confira
     - Se a injeção for bem-sucedida, todos os botões devem ficar acinzentados, exceto "Remove MSET9"
 11. Reinsira o cartão SD no seu console **sem pressionar nenhum botão ou tocar na tela**
 12. Se o exploit for bem-sucedido, você terá entrado no SafeB9SInstaller
-    - Se você ver uma tela vermelha ou o console ficar preso em uma tela de carregamento, siga o [guia de troubleshooting](troubleshooting#installing-boot9strap-mset9)
+    - If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting-mset9)
 
 ### Seção III - Instalando boot9strap
 
 Nesta seção, você instalará custom firmware no seu console.
 
 1. Quando solicitado, aperte a sequência de botões fornecida na tela superior para instalar o boot9strap
-   - Se um passo na tela inferior tiver texto em cor vermelha, e você não for solicitado a introduzir um combo de botões, siga o guia de [troubleshooting](troubleshooting#issues-with-safeb9sinstaller)
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-mset9)
 2. Quando concluído, aperte (A) para reiniciar o seu console
 
 <!--@include: ./_include/configure-luma3ds.md -->
