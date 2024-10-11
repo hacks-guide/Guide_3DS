@@ -56,18 +56,18 @@ Ebben a fejezetben meg fogod látogatni a browser exploit weboldalt, ami az univ
 1. A HOME menüben nyomd meg a bal és jobb váll gombokat egyszerre, hogy megnyisd a kamerát
    - Ha nem tudod megnyitni a kamerát, nyisd meg az Internet Browser-t kézzel, és írd be az URL-t e helyett. (`https://zoogie.github.io/web/nbhax/`)
 2. Érintsd meg a QR Code gombot és olvasd le [ezt a QR kódot](http://api.qrserver.com/v1/create-qr-code/?color=000000\&bgcolor=FFFFFF\&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax\&qzone=1\&margin=0\&size=400x400\&ecc=L)
-   - Ha összeomlik vagy hibakódot kapsz, [kövesd ezt a hibaelhárítási útmutatót](troubleshooting#installing-boot9strap-ssloth-browser)
+   - If you get a crash or an error code, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
    - Ha tanúsítvány figyelmeztetést kapsz, nyomd meg az (A) gombot a kapcsolat engedélyezéséhez
 3. Nyomj a "PROCEED TO HAXX" gombra
 4. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
-   - Ha hibát kapsz, [nézd át ezt a hibaelhárítási útmutatót](troubleshooting#installing-boot9strap-ssloth-browser)
+   - If you get an error, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
 
 ### IV. rész - Boot9strap telepítése
 
 Ebben a fejezetben egyedi firmware-t fogsz telepíteni a konzolodra.
 
 1. Ha kéri, akkor nyomd meg a gombokat egyszerre, amiket kijelez a felső képernyőn, hogy telepíthesd a boot9strap-et
-   - Ha egy lépés az alsó képernyőn piros színű szöveget eredményez, és nem kér a rendszer tőled egy gomb-kombinációt, akkor [kövesd ezt a hibaelhárítási útmutatót](troubleshooting#issues-with-safeb9sinstaller)
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
 2. Ha ez elkészült, nyomd meg az (A) gombot a konzolod újraindításához
 
 <!--@include: ./_include/configure-luma3ds.md -->
