@@ -77,7 +77,7 @@ In questa sezione entrerai nella Modalità Provvisoria (disponibile su tutte le 
 In questa sezione installerai il custom firmware sulla tua console.
 
 1. Quando richiesto, inserisci la combinazione di tasti richiesta sullo schermo superiore per installare boot9strap
-   - Se una sezione nella schermata inferiore ha un testo di colore rosso, e non ti viene richiesto di inserire una combinazione di tasti, [segui questa guida per risolvere i problemi](troubleshooting#issues-with-safeb9sinstaller)
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-safecerthax)
 2. Una volta completato tutto, premi (A) per riavviare la console
 
 <!--@include: ./_include/configure-luma3ds.md -->
