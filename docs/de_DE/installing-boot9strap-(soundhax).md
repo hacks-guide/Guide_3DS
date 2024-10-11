@@ -69,7 +69,7 @@ In this section, you will launch Soundhax through the Nintendo 3DS Sound app, wh
    - This may take many (up to 10) tries
    - If you see the message "Could not play", you are either on a system version incompatible with Soundhax or downloaded the wrong Soundhax release
    - If it freezes, force the console to power off by holding the power button, then try again
-   - If you get a different error, [follow this troubleshooting guide](troubleshooting#installing-boot9strap-soundhax)
+   - If you get a different error, [follow this troubleshooting guide](troubleshooting-soundhax)
 
    ::: info
 
@@ -84,7 +84,7 @@ In this section, you will launch Soundhax through the Nintendo 3DS Sound app, wh
 In this section, you will install custom firmware onto your console.
 
 1. Wenn du gebeten wirst, eine Tastenkombination einzugeben, gib die Tastenkombination auf dem oberen Bildschirm ein, um boot9strap zu installieren
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-soundhax)
 2. Once it is complete, press (A) to reboot your console
 
 <!--@include: ./_include/configure-luma3ds.md -->
