@@ -12,6 +12,24 @@
 
 ::: info
 
+**Troubleshooting**
+
+- [Troubleshooting](troubleshooting)
+- [Troubleshooting (Soundhax)](troubleshooting-soundhax)
+- [Troubleshooting (MSET9)](troubleshooting-mset9)
+- [Troubleshooting (super-skaterhax)](troubleshooting-super-skaterhax)
+- [Troubleshooting (ntrboot)](troubleshooting-ntrboot)
+- [Troubleshooting (safecerthax)](troubleshooting-safecerthax)
+- [Troubleshooting (SSLoth-Browser)](troubleshooting-ssloth-browser)
+- [Troubleshooting (Finalizing Setup)](troubleshooting-finalizing-setup)
+- [Troubleshooting (A9LH to B9S)](troubleshooting-a9lh-to-b9s)
+- [Troubleshooting (Updating B9S)](troubleshooting-updating-b9s)
+- [Troubleshooting (Post-Install)](troubleshooting-post-install)
+
+:::
+
+::: info
+
 **Todos**
 
 - [AL9H para B9S](a9lh-to-b9s)
@@ -52,6 +70,16 @@
 - [Mudança de Região](region-changing)
 - [Restaurando / Atualizando CFW](restoring-updating-cfw)
 - [Troubleshooting](troubleshooting)
+- [Troubleshooting (A9LH to B9S)](troubleshooting-a9lh-to-b9s)
+- [Troubleshooting (Finalizing Setup)](troubleshooting-finalizing-setup)
+- [Troubleshooting (MSET9)](troubleshooting-mset9)
+- [Troubleshooting (ntrboot)](troubleshooting-ntrboot)
+- [Troubleshooting (Post-Install)](troubleshooting-post-install)
+- [Troubleshooting (Soundhax)](troubleshooting-soundhax)
+- [Troubleshooting (safecerthax)](troubleshooting-safecerthax)
+- [Troubleshooting (SSLoth-Browser)](troubleshooting-ssloth-browser)
+- [Troubleshooting (super-skaterhax)](troubleshooting-super-skaterhax)
+- [Troubleshooting (Updating B9S)](troubleshooting-updating-b9s)
 - [Desinstalar o CFW](uninstall-cfw)
 - [Atualizando o B9S](updating-b9s)
 
