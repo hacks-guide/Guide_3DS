@@ -12,6 +12,24 @@
 
 ::: info
 
+**Troubleshooting**
+
+- [문제 해결](troubleshooting)
+- [Troubleshooting (Soundhax)](troubleshooting-soundhax)
+- [Troubleshooting (MSET9)](troubleshooting-mset9)
+- [Troubleshooting (super-skaterhax)](troubleshooting-super-skaterhax)
+- [Troubleshooting (ntrboot)](troubleshooting-ntrboot)
+- [Troubleshooting (safecerthax)](troubleshooting-safecerthax)
+- [Troubleshooting (SSLoth-Browser)](troubleshooting-ssloth-browser)
+- [Troubleshooting (Finalizing Setup)](troubleshooting-finalizing-setup)
+- [Troubleshooting (A9LH to B9S)](troubleshooting-a9lh-to-b9s)
+- [Troubleshooting (Updating B9S)](troubleshooting-updating-b9s)
+- [Troubleshooting (Post-Install)](troubleshooting-post-install)
+
+:::
+
+::: info
+
 **모든 페이지**
 
 - [A9LH를 B9S로 업데이트](a9lh-to-b9s)
@@ -52,6 +70,16 @@
 - [지역 변경](region-changing)
 - [CFW 복구 / 업데이트](restoring-updating-cfw)
 - [문제 해결](troubleshooting)
+- [Troubleshooting (A9LH to B9S)](troubleshooting-a9lh-to-b9s)
+- [Troubleshooting (Finalizing Setup)](troubleshooting-finalizing-setup)
+- [Troubleshooting (MSET9)](troubleshooting-mset9)
+- [Troubleshooting (ntrboot)](troubleshooting-ntrboot)
+- [Troubleshooting (Post-Install)](troubleshooting-post-install)
+- [Troubleshooting (Soundhax)](troubleshooting-soundhax)
+- [Troubleshooting (safecerthax)](troubleshooting-safecerthax)
+- [Troubleshooting (SSLoth-Browser)](troubleshooting-ssloth-browser)
+- [Troubleshooting (super-skaterhax)](troubleshooting-super-skaterhax)
+- [Troubleshooting (Updating B9S)](troubleshooting-updating-b9s)
 - [CFW 제거](uninstall-cfw)
 - [B9S 업데이트](updating-b9s)
 
