@@ -85,7 +85,7 @@
 
 ::: warning
 
-만약 이 테스트 중 하나라도 실패했다면, 커펌 삭제 이후 DS 모드, DS 다운로드 플레이, 혹은 DS 연결 설정이 작동하지 않을 수 있습니다. [DS 모드를 고치고](troubleshooting#software-issues-on-devices-with-custom-firmware) 계속해야 합니다.
+만약 이 테스트 중 하나라도 실패했다면, 커펌 삭제 이후 DS 모드, DS 다운로드 플레이, 혹은 DS 연결 설정이 작동하지 않을 수 있습니다. You should [fix DS mode](troubleshooting-post-install) before continuing.
 
 :::
 
