@@ -24,7 +24,7 @@ Esta página requer um computador rodando Windows, Linux ou macOS. Se você tem 
 
 ::: info
 
-Nesta página, você usará o script MSET9, que é usado para acionar o MSET9. Enquanto o script estiver em progresso, os dados do usuário desaparecerão temporariamente, mas retornarão após a conclusão desta página. Se você receber um erro ao executar o script, a solução para esse erro provavelmente pode ser encontrada na página de [troubleshooting](troubleshooting#installing-boot9strap-mset9).
+Nesta página, você usará o script MSET9, que é usado para acionar o MSET9. Enquanto o script estiver em progresso, os dados do usuário desaparecerão temporariamente, mas retornarão após a conclusão desta página. If you get an error when running the script, the solution to that error can most likely be found on the [troubleshooting](troubleshooting-mset9) page.
 
 :::
 
@@ -64,7 +64,7 @@ Nesta seção, você vai preparar o exploit MSET9 através de **temporariamente*
    - Certifique-se de que o modelo e a versão mostrados estão corretos
 2. Digite `1`, depois pressione Enter para começar o processo de criação de ID1 do MSET9
 3. Após ler o aviso, digite `1` novamente e pressione Enter para aceitá-lo
-   - Se você receber um erro, verifique o guia de [troubleshooting](troubleshooting#installing-boot9strap-mset9), então tente novamente
+   - If you get an error, check the [troubleshooting](troubleshooting-mset9), then try again
 4. Se você ver a mensagem "Created hacked ID1.", pressione Enter para fechar o script MSET9
    - Seu 3DS vai parecer não ter dados/nenhum aplicativo instalado no Menu HOME. **Isto é esperado.** Seus dados voltarão mais tarde
 5. Reinsira o cartão SD no seu console
@@ -93,7 +93,7 @@ Nesta seção, você vai preparar o exploit MSET9 através de **temporariamente*
    - Se a janela exibir [Not ready - check MSET9 status for more details](/images/screenshots/mset9/mset9-not-ready.png):
      - Digite `2`, depois pressione Enter para verificar o status do MSET9, e siga as instruções indicadas
      - Assim que você resolver o problema, volte à Seção I Passo 14
-     - Para mais informações, verifique a página de [troubleshooting](troubleshooting#installing-boot9strap-mset9)
+     - For more information, check the [troubleshooting](troubleshooting-mset9) page
 2. Digite `0` e pressione Enter para fechar o script
 3. Reinsira o cartão SD no seu console
 
@@ -124,14 +124,14 @@ Estas instruções devem ser seguidas **EXATAMENTE** como estão, então confira
 3. Pressione Enter para fechar o script MSET9
 4. Reinsira o cartão SD no seu console **sem pressionar nenhum botão ou tocar a tela de toque**
 5. Se o exploit for bem-sucedido, você terá entrado no SafeB9SInstaller
-   - Se você ver uma tela vermelha ou o console ficar preso em uma tela de carregamento, siga o [guia de troubleshooting](troubleshooting#installing-boot9strap-mset9)
+   - If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting-mset9)
 
 ### Seção III - Instalando boot9strap
 
 Nesta seção, você instalará custom firmware no seu console.
 
 1. Quando solicitado, aperte a sequência de botões fornecida na tela superior para instalar o boot9strap
-   - Se um passo na tela inferior tiver texto em cor vermelha, e você não for solicitado a introduzir um combo de botões, siga o guia de [troubleshooting](troubleshooting#issues-with-safeb9sinstaller)
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-mset9)
 2. Quando concluído, aperte (A) para reiniciar o seu console
 
 <!--@include: ./_include/configure-luma3ds.md -->
