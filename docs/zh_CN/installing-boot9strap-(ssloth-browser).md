@@ -56,18 +56,18 @@ SSLoth 允许目前系统版本在 11.13.0 及其以下的主机绕过浏览器�
 1. On the HOME Menu, press the Left and Right shoulder buttons at the same time to open the camera
    - If you are unable to open the camera, open the Internet Browser and manually type the URL instead (`https://zoogie.github.io/web/nbhax/`)
 2. 扫描[这个二维码（点击这里查看）](http://api.qrserver.com/v1/create-qr-code/?color=000000\&bgcolor=FFFFFF\&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax\&qzone=1\&margin=0\&size=400x400\&ecc=L)
-   - If you get a crash or an error code, [follow this troubleshooting guide](troubleshooting#installing-boot9strap-ssloth-browser)
+   - If you get a crash or an error code, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
    - If you get a security certificate warning, press (A) to allow the connection
 3. 点击“PROCEED TO HAXX”
 4. 如果一切成功的话，你将自动进入 SafeB9SInstaller
-   - If you get an error, [follow this troubleshooting guide](troubleshooting#installing-boot9strap-ssloth-browser)
+   - If you get an error, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
 
 ### Section IV - Installing boot9strap
 
 In this section, you will install custom firmware onto your console.
 
 1. When prompted, input the key combo given on the top screen to install boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
 2. Once it is complete, press (A) to reboot your console
 
 <!--@include: ./_include/configure-luma3ds.md -->
