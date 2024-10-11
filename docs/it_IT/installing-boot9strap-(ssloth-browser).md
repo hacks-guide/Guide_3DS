@@ -56,18 +56,18 @@ In questa sezione visiterai la pagina web dell'exploit del browser, che userà u
 1. Nel menu HOME, premi contemporaneamente i pulsanti dorsali L e R per avviare la fotocamera
    - Se non riesci ad avviare la fotocamera, avvia il Browser Internet e raggiungi manualmente l'URL (`https://zoogie.github.io/web/nbhax/`)
 2. Tocca il pulsante Codice QR e scansiona [questo codice QR](http://api.qrserver.com/v1/create-qr-code/?color=000000\&bgcolor=FFFFFF\&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax\&qzone=1\&margin=0\&size=400x400\&ecc=L)
-   - Se crasha o se ottieni un codice di errore, [segui questa guida per risolvere il problema](troubleshooting#installing-boot9strap-ssloth-browser)
+   - If you get a crash or an error code, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
    - Se visualizzi un avviso riguardo un certificato di sicurezza, premi (A) per consentire la connessione
 3. Tocca il pulsante "PROCEED TO HAXX"
 4. Se l'exploit è andato a buon fine, si avvierà SafeB9SInstaller
-   - Se ottieni un errore, [segui questa guida per risolvere il problema](troubleshooting#installing-boot9strap-ssloth-browser)
+   - If you get an error, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
 
 ### Sezione IV - Installazione di boot9strap
 
 In questa sezione installerai il custom firmware sulla tua console.
 
 1. Quando richiesto, inserisci la combinazione di tasti richiesta sullo schermo superiore per installare boot9strap
-   - Se una sezione nella schermata inferiore ha un testo di colore rosso, e non ti viene richiesto di inserire una combinazione di tasti, [segui questa guida per risolvere i problemi](troubleshooting#issues-with-safeb9sinstaller)
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
 2. Una volta completato tutto, premi (A) per riavviare la console
 
 <!--@include: ./_include/configure-luma3ds.md -->
