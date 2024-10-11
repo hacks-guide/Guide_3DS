@@ -67,7 +67,7 @@ In questa sezione preparerai i dati della scheda SD necessari per attivare l'exp
 9. Una volta all'interno della cartella `Nintendo 3DS`, tocca "Use this folder", quindi "Allow" se richiesto ([immagine](/images/screenshots/mset9/select-mset9-folder-2.png))
 
 10. Se "Setup MSET9" è [evidenziato](/images/screenshots/mset9/setup-mset9-highlighted.png), procedi al passaggio successivo. **Non configurare MSET9.** Per ora chiudi l'Installer di MSET9
-    - Se "Check Again" è evidenziato, c'è un problema che devi risolvere prima di poter usare MSET9. Fai riferimento alla pagina [Risoluzione dei problemi](troubleshooting#installing-boot9strap-mset9)
+    - Se "Check Again" è evidenziato, c'è un problema che devi risolvere prima di poter usare MSET9. Refer to the [troubleshooting](troubleshooting-mset9)
 
 11. Reinserisci la scheda SD nella tua console
 
@@ -97,14 +97,14 @@ Queste istruzioni vanno eseguite **ALLA LETTERA**, quindi ricontrolla TUTTO quel
     - Se l'exploit ha avuto successo, tutti i pulsanti dovrebbero disabilitarsi tranne che "Remove MSET9"
 11. Reinserisci la scheda SD nella console **senza premere alcun pulsante o toccare lo schermo**
 12. Se l'exploit è andato a buon fine, si avvierà SafeB9SInstaller
-    - Se vedi una schermata rossa o se la console si blocca ad una schermata di caricamento, [segui questa guida per risolvere il problema](troubleshooting#installing-boot9strap-mset9)
+    - If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting-mset9)
 
 ### Sezione III - Installazione di boot9strap
 
 In questa sezione installerai il custom firmware sulla tua console.
 
 1. Quando richiesto, inserisci la combinazione di tasti richiesta sullo schermo superiore per installare boot9strap
-   - Se una sezione nella schermata inferiore ha un testo di colore rosso, e non ti viene richiesto di inserire una combinazione di tasti, [segui questa guida per risolvere i problemi](troubleshooting#issues-with-safeb9sinstaller)
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-mset9)
 2. Una volta completato tutto, premi (A) per riavviare la console
 
 <!--@include: ./_include/configure-luma3ds.md -->
