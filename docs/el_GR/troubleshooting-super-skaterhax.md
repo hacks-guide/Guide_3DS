@@ -1,14 +1,14 @@
-# Troubleshooting (super-skaterhax)
+# Επίλυση προβλημάτων (super-skaterhax)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (super-skaterhax)" page. Εάν δεν μπορείτε να διορθώσετε το ζήτημά σας με τις συμβουλές αυτής της σελίδας, γίνετε μέλος του [Nintendo Homebrew στο Discord](https://discord.gg/MWxPgEp) και περιγράψτε το πρόβλημά σας, καθώς και όλες τις λύσεις που έχετε ήδη δοκιμάσει.
+Αυτή η σελίδα παρέχει συμβουλές για την επίλυση κοινών προβλημάτων που ενδέχεται να αντιμετωπίσετε με τα βήματα της σελίδας «Εγκατάσταση του boot9strap (super-skaterhax)». Εάν δεν μπορείτε να διορθώσετε το ζήτημά σας με τις συμβουλές αυτής της σελίδας, γίνετε μέλος του [Nintendo Homebrew στο Discord](https://discord.gg/MWxPgEp) και περιγράψτε το πρόβλημά σας, καθώς και όλες τις λύσεις που έχετε ήδη δοκιμάσει.
 
 ::: warning
 
-These instructions are only valid for the "Installing boot9strap (super-skaterhax)" page. If you are using **anything other than** a **New 3DS** on version **11.15.0 through 11.17.0**, you should follow [troubleshooting instructions for Installing boot9strap (SSLoth-Browser)](troubleshooting-ssloth-browser) instead.
+Αυτές οι οδηγίες ισχύουν μόνο για τη σελίδα «Εγκατάσταση του boot9strap (super-skaterhax)». Εάν χρησιμοποιείτε **οτιδήποτε άλλο εκτός από** ένα **New 3DS** με την έκδοση **11.15.0 έως 11.17.0**, θα πρέπει να ακολουθήσετε τις [οδηγίες επίλυσης προβλημάτων για την Εγκατάσταση του boot9strap (SSLoth-Browser)](troubleshooting-ssloth-browser).
 
 :::
 
-## Issues with super-skaterhax
+## Ζητήματα με το super-skaterhax
 
 :::details «An error has occurred. Please save your data in any software currently in use, then restart the system.»
 
@@ -54,7 +54,7 @@ These instructions are only valid for the "Installing boot9strap (super-skaterha
 
 ::: tip
 
-Go back to [Installing boot9strap (super-skaterhax)](installing-boot9strap-\(super-skaterhax\))
+Επιστροφή στην [Εγκατάσταση του boot9strap (super-skaterhax)](installing-boot9strap-\(super-skaterhax\))
 
 :::
 
