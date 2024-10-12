@@ -1,8 +1,8 @@
-# Troubleshooting (Soundhax)
+# Επίλυση προβλημάτων (Soundhax)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (Soundhax)" page, which is used on system versions between 1.0.0 and 11.3.0. Εάν δεν μπορείτε να διορθώσετε το ζήτημά σας με τις συμβουλές αυτής της σελίδας, γίνετε μέλος του [Nintendo Homebrew στο Discord](https://discord.gg/MWxPgEp) και περιγράψτε το πρόβλημά σας, καθώς και όλες τις λύσεις που έχετε ήδη δοκιμάσει.
+Αυτή η σελίδα παρέχει συμβουλές για την επίλυση κοινών προβλημάτων που ενδέχεται να αντιμετωπίσετε με τα βήματα της σελίδας «Εγκατάσταση του boot9strap (Soundhax)», η οποία ισχύει για τις εκδόσεις συστήματος μεταξύ 1.0.0 και 11.3.0. Εάν δεν μπορείτε να διορθώσετε το ζήτημά σας με τις συμβουλές αυτής της σελίδας, γίνετε μέλος του [Nintendo Homebrew στο Discord](https://discord.gg/MWxPgEp) και περιγράψτε το πρόβλημά σας, καθώς και όλες τις λύσεις που έχετε ήδη δοκιμάσει.
 
-## Issues with Soundhax
+## Ζητήματα με το Soundhax
 
 :::details Κόκκινη/μοβ/ροζ και λευκή οθόνη μετά την εκτέλεση του Soundhax
 
@@ -38,7 +38,7 @@ This page offers troubleshooting advice for commonly encountered issues with the
 
 ::: tip
 
-Go back to [Installing boot9strap (Soundhax)](installing-boot9strap-\(soundhax\))
+Επιστροφή στην [Εγκατάσταση του boot9strap (Soundhax)](installing-boot9strap-\(soundhax\))
 
 :::
 
