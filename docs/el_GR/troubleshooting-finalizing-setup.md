@@ -1,8 +1,8 @@
-# Troubleshooting (Finalizing Setup)
+# Επίλυση προβλημάτων (Ολοκλήρωση εγκατάστασης)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Finalizing Setup" page. Εάν δεν μπορείτε να διορθώσετε το ζήτημά σας με τις συμβουλές αυτής της σελίδας, γίνετε μέλος του [Nintendo Homebrew στο Discord](https://discord.gg/MWxPgEp) και περιγράψτε το πρόβλημά σας, καθώς και όλες τις λύσεις που έχετε ήδη δοκιμάσει.
+Αυτή η σελίδα παρέχει συμβουλές για την επίλυση κοινών προβλημάτων που ενδέχεται να αντιμετωπίσετε με τα βήματα της σελίδας «Ολοκλήρωση εγκατάστασης». Εάν δεν μπορείτε να διορθώσετε το ζήτημά σας με τις συμβουλές αυτής της σελίδας, γίνετε μέλος του [Nintendo Homebrew στο Discord](https://discord.gg/MWxPgEp) και περιγράψτε το πρόβλημά σας, καθώς και όλες τις λύσεις που έχετε ήδη δοκιμάσει.
 
-## Issues with Finalizing Setup
+## Ζητήματα με την ολοκλήρωση της εγκατάστασης
 
 :::details Δεν είναι δυνατή η ενημέρωση της κονσόλας
 
@@ -142,7 +142,7 @@ This page offers troubleshooting advice for commonly encountered issues with the
 
 ::: tip
 
-Go back to [Finalizing Setup](finalizing-setup)
+Επιστροφή στην [Ολοκλήρωση εγκατάστασης](finalizing-setup)
 
 :::
 
