@@ -8,7 +8,7 @@
 
 ::: info
 
-If your console has a menuhax-based CFW setup, you should [clear HOME Menu's extdata](troubleshooting-post-install), then follow all instructions on your SysNAND. Η εγκατάστασή σας βασίζεται πιθανότατα στο menuhax εάν η έκδοση του συστήματός σας, κατά την εκκίνηση χωρίς κάρτα SD, είναι η 9.2.0-20.
+Εάν η κονσόλα σας διαθέτει CFW που βασίζεται στο menuhax, θα πρέπει να [εκκαθαρίσετε τα extdata του μενού «HOME»](troubleshooting-post-install) και έπειτα, να ακολουθήσετε όλες τις οδηγίες σχετικά με τη SysNAND σας. Η εγκατάστασή σας βασίζεται πιθανότατα στο menuhax εάν η έκδοση του συστήματός σας, κατά την εκκίνηση χωρίς κάρτα SD, είναι η 9.2.0-20.
 
 :::
 
