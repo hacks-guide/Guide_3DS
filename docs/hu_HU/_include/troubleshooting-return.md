@@ -1,5 +1,5 @@
 ::: tip
 
-Go back to [Troubleshooting](troubleshooting)
+Menj vissza a [Hibaelhárításhoz](troubleshooting)
 
 :::
