@@ -1,8 +1,8 @@
-# Troubleshooting (MSET9)
+# Επίλυση προβλημάτων (MSET9)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (MSET9)", "Installing boot9strap (MSET9 CLI)" and "Installing boot9strap (MSET9 Play Store)" pages. Εάν δεν μπορείτε να διορθώσετε το ζήτημά σας με τις συμβουλές αυτής της σελίδας, γίνετε μέλος του [Nintendo Homebrew στο Discord](https://discord.gg/MWxPgEp) και περιγράψτε το πρόβλημά σας, καθώς και όλες τις λύσεις που έχετε ήδη δοκιμάσει.
+Αυτή η σελίδα παρέχει συμβουλές για την επίλυση κοινών προβλημάτων που ενδέχεται να αντιμετωπίσετε με τα βήματα των σελίδων «Εγκατάσταση του boot9strap (MSET9)», «Εγκατάσταση του boot9strap (MSET9 CLI)» και «Εγκατάσταση του boot9strap (MSET9 Play Store)». Εάν δεν μπορείτε να διορθώσετε το ζήτημά σας με τις συμβουλές αυτής της σελίδας, γίνετε μέλος του [Nintendo Homebrew στο Discord](https://discord.gg/MWxPgEp) και περιγράψτε το πρόβλημά σας, καθώς και όλες τις λύσεις που έχετε ήδη δοκιμάσει.
 
-## MSET9 (application / script)
+## MSET9 (εφαρμογή/script)
 
 :::details Python 3 is not installed
 
@@ -208,13 +208,13 @@ This page offers troubleshooting advice for commonly encountered issues with the
 
 ::: tip
 
-Go back to [Installing boot9strap (MSET9-CLI)](installing-boot9strap-\(mset9-cli\))
+Επιστροφή στην [Εγκατάσταση του boot9strap (MSET-CLI)](installing-boot9strap-\(mset9-cli\))
 
 :::
 
 ::: tip
 
-Go back to [Installing boot9strap (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\))
+Επιστροφή στην [Εγκατάσταση του boot9strap (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\))
 
 :::
 
