@@ -1,6 +1,6 @@
-# Troubleshooting (MSET9)
+# 문제 해결 (MSET9)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (MSET9)", "Installing boot9strap (MSET9 CLI)" and "Installing boot9strap (MSET9 Play Store)" pages. 만약 이 페이지의 해결책만으로 문제를 해결할 수 없다면, [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp)에 들어가서 당신의 문제와 시도한 해결책을 설명해 주세요.
+이 페이지는 "boot9strap 설치 (MSET9)", "boot9strap 설치 (MSET9 CLI)", 또는 "boot9strap 설치 (MSET9 Play 스토어)" 페이지에서 흔히 일어나는 문제에 관한 해결책을 기재합니다. 만약 이 페이지의 해결책만으로 문제를 해결할 수 없다면, [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp)에 들어가서 당신의 문제와 시도한 해결책을 설명해 주세요.
 
 ## MSET9 (application / script)
 
@@ -196,7 +196,7 @@ If you continue to have this issue and are sure that you did everything correctl
 
 :::details An exception occurred after triggering MSET9
 
-This likely indicates that you already have custom firmware. [CFW 확인](checking-for-cfw) 을 하는 것을 권장합니다.
+이미 커스텀 펌웨어가 설치되어 있을 수 있습니다. [CFW 확인](checking-for-cfw) 을 하는 것을 권장합니다.
 
 :::
 
@@ -208,13 +208,13 @@ This likely indicates that you already have custom firmware. [CFW 확인](checki
 
 ::: tip
 
-Go back to [Installing boot9strap (MSET9-CLI)](installing-boot9strap-\(mset9-cli\))
+[boot9strap 설치 (MSET9 CLI)](installing-boot9strap-\(mset9-cli\))로 돌아갑니다
 
 :::
 
 ::: tip
 
-Go back to [Installing boot9strap (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\))
+[boot9strap 설치 (MSET9 Play 스토어)](installing-boot9strap-\(mset9-play-store\))로 돌아갑니다
 
 :::
 
