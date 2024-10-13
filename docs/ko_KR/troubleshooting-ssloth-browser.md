@@ -1,4 +1,4 @@
-# Troubleshooting (SSLoth-Browser)
+# 문제 해결 (SSLoth-Browser)
 
 This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (SSLoth-Browser)" page, which is used on system versions between 11.4.0 and 11.13.0. 만약 이 페이지의 해결책만으로 문제를 해결할 수 없다면, [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp)에 들어가서 당신의 문제와 시도한 해결책을 설명해 주세요.
 
@@ -10,43 +10,43 @@ These instructions are only valid for the "Installing boot9strap (SSLoth-Browser
 
 ## SSLoth-Browser
 
-:::details Red/purple/pink and white screen after running Browserhax
+:::details Browserhax를 실행하면 빨간색/보라색/분홍색 혹은 하얀색 화면이 표시됩니다
 
-This likely indicates that you already have custom firmware. [CFW 확인](checking-for-cfw) 을 하는 것을 권장합니다.
+이미 커스텀 펌웨어가 설치되어 있을 수 있습니다. [CFW 확인](checking-for-cfw) 을 하는 것을 권장합니다.
 
 :::
 
-:::details "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
+:::details "에러가 발생했습니다. 본체의 전원 버튼을 길게 눌러 전원을 끈 후..." (black screen with text)
 
-The file `arm11code.bin` is missing or misplaced. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
+`arm11code.bin` 파일이 없거나 잘못 들어갔습니다. 최신 버전의 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)을 내려받아 `otherapp.bin` 파일을 SD 카드의 최상위 디렉토리에 복사하고, 이름을 `arm11code.bin`으로 변경해 주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
 
 :::
 
 :::details "에러가 발생하여 소프트웨어를 종료합니다..." (하얀 메시지 창)
 
-`arm11code.bin`에 문제가 있을 수 있습니다. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
+`arm11code.bin`에 문제가 있을 수 있습니다. 최신 버전의 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)을 내려받아 `otherapp.bin` 파일을 SD 카드의 최상위 디렉토리에 복사하고, 이름을 `arm11code.bin`으로 변경해 주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
 
-You can also try resetting your browser save data:
+또한 브라우저 세이브 데이터 재설정이 필요할 수도 있습니다.
 
-1. Launch the browser, then launch the browser settings
-2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-3. Try the exploit again
-
-:::
-
-:::details Opening the browserhax QR code or URL crashes
-
-Browser based exploits (such as this one) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
-
-1. Launch the browser, then launch the browser settings
-2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-3. Try the exploit again
+1. 브라우저를 실행하고 브라우저 설정을 실행해 주세요
+2. 아래쪽으로 스크롤하여 "세이브 데이터 리셋"을 선택합니다("데이터 초기화" 또는 "모든 저장 데이터 지우기" 라고도 함).
+3. 익스플로잇을 다시 시도해 주세요
 
 :::
 
-:::details System Update prompt when opening browser
+:::details Browserhax QR 코드나 URL을 열면 브라우저가 꺼집니다
 
-The SSLoth proxy was incorrectly configured. Re-do the SSLoth section on the page.
+이러한 브라우저 기반의 취약점은 불안정하고 자주 종료됩니다. 그러나 종종 다음 단계를 수행하면 고쳐질 수 있습니다.
+
+1. 브라우저를 실행하고 브라우저 설정을 실행해 주세요
+2. 아래쪽으로 스크롤하여 "세이브 데이터 리셋"을 선택합니다("데이터 초기화" 또는 "모든 저장 데이터 지우기" 라고도 함).
+3. 익스플로잇을 다시 시도해 주세요
+
+:::
+
+:::details 브라우저를 열면 시스템 업데이트 창이 표시됩니다
+
+SSLoth 프록시 설정이 잘못 설정되었습니다. 페이지의 SSLoth 섹션을 다시 진행해주세요.
 
 :::
 
@@ -98,7 +98,7 @@ The SSLoth proxy was incorrectly configured. Re-do the SSLoth section on the pag
 
 ::: tip
 
-Go back to [Installing boot9strap (SSLoth-Browser)](installing-boot9strap-\(ssloth-browser\))
+[boot9strap 설치 (SSLoth-Browser)](installing-boot9strap-\(ssloth-browser\))로 돌아갑니다
 
 :::
 
