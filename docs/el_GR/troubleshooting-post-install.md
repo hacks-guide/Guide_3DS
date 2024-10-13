@@ -1,8 +1,8 @@
-# Troubleshooting (Post-Install)
+# Επίλυση προβλημάτων (Μετά την εγκατάσταση)
 
 This page offers troubleshooting advice for commonly encountered issues after custom firmware is installed. Εάν δεν μπορείτε να διορθώσετε το ζήτημά σας με τις συμβουλές αυτής της σελίδας, γίνετε μέλος του [Nintendo Homebrew στο Discord](https://discord.gg/MWxPgEp) και περιγράψτε το πρόβλημά σας, καθώς και όλες τις λύσεις που έχετε ήδη δοκιμάσει.
 
-## Boot issues
+## Ζητήματα εκκίνησης
 
 ::: info
 
@@ -10,11 +10,11 @@ The steps detailed here generally assume that your console has a modern custom f
 
 :::
 
-### Power/notification light indicators
+### Φωτεινές ενδείξεις τροφοδοσίας/ειδοποιήσεων
 
-:::details My console powers off when I try to turn it on, and/or the notification LED shows a color on boot
+:::details Η κονσόλα μου απενεργοποιείται όταν προσπαθώ να την ενεργοποιήσω ή/και το LED ειδοποιήσεων εμφανίζει ένα χρώμα κατά την εκκίνηση
 
-There is an issue with your `boot.firm` file. If you're running [boot9strap 1.4](https://github.com/SciresM/boot9strap/releases/tag/1.4), your 3DS notification LED may flash a certain color. This color is used to diagnose issues involving your `boot.firm` file on SD card or internal memory. On older versions of boot9strap, the blue light will power off almost immediately when trying to turn on the console.
+Υπάρχει κάποιο πρόβλημα με το αρχείο `boot.firm` σας. If you're running [boot9strap 1.4](https://github.com/SciresM/boot9strap/releases/tag/1.4), your 3DS notification LED may flash a certain color. This color is used to diagnose issues involving your `boot.firm` file on SD card or internal memory. On older versions of boot9strap, the blue light will power off almost immediately when trying to turn on the console.
 
 If the notification LED flashes:
 
@@ -95,7 +95,8 @@ If this is the case, attempt the steps below, which are listed from easiest to h
 :::details Blue "BOOTROM ERROR" screen
 
 Your console is likely hard-bricked. You will need to buy an ntrboot flashcart to reinstall boot9strap in order to attempt to fix your console. This may also indicate a hardware issue that cannot be fixed. In any case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
-\+ It is also possible that someone has set a boot-time splash screen that just looks like a brick. Try leaving your console powered on, waiting on the blue screen, for five minutes.
+
+- It is also possible that someone has set a boot-time splash screen that just looks like a brick. Try leaving your console powered on, waiting on the blue screen, for five minutes.
 
 :::
 
@@ -179,10 +180,10 @@ Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance, 
 2. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
 3. Navigate to the `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` folder on your SD card
 4. Delete the corresponding folder for your 3DS region:
-   - **EUR Region**: `000002ce`
-   - **JPN Region**: `000002cc`
-   - **USA Region**: `000002cd`
-   - **KOR Region**: `000002cf`
+   - **Περιοχή EUR**: `000002ce`
+   - **Περιοχή JPN**: `000002cc`
+   - **Περιοχή USA**: `000002cd`
+   - **Περιοχή KOR**: `000002cf`
 5. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 
 :::
@@ -195,13 +196,13 @@ If you are missing the Homebrew Launcher application from your HOME Menu, you ca
 
 :::
 
-:::details Turning off Parental Controls
+:::details Απενεργοποίηση του γονικού ελέγχου (Parental Controls)
 
 You can disable the Parental Controls feature by going to System Settings -> Parental Controls and inserting the PIN, then pressing "Clear Settings", then "Delete" to remove it.
 However, if you do not know the PIN and therefore cannot access the console's settings, you will need to disable it. In order to do this, you need to obtain your console's master key (mkey):
 
-1. Go to [this website](https://mkey.eiphax.tech/)
-2. Fill the following boxes with the information:
+1. Μεταβείτε σε [αυτόν τον ιστότοπο](https://mkey.eiphax.tech/)
+2. Συμπληρώστε τα ακόλουθα πεδία:
    - Device Type: Select "3DS" (the same applies if you are using a 2DS, New 3DS (XL/LL) or New 2DS (XL/LL))
    - System Date: The day and month your console's clock is set to
    - Inquiry Number: Can be obtained by pressing "Forgot PIN" then "I Forgot" in the Parental Controls screen
