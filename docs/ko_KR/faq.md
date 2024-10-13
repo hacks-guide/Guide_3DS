@@ -138,7 +138,7 @@ FAT32로 포맷된 새 SD 카드에 기존 SD 카드의 파일들을 복사하�
 
 :::details 도와주세요! 뭔가 잘못됐는지 3DS가 HOME 메뉴로 부팅되지 않아요...
 
-Please look at the [troubleshooting guide](troubleshooting-post-install). **콘솔이 부팅할 수 없는 상태일 때 커스텀 펌웨어를 제거하는 것은 벽돌로 이어질 수 있기 때문에 추천되지 않습니다.**
+[문제 해결 가이드](troubleshooting-post-install) 를 참고해 주세요. **콘솔이 부팅할 수 없는 상태일 때 커스텀 펌웨어를 제거하는 것은 벽돌로 이어질 수 있기 때문에 추천되지 않습니다.**
 
 :::
 
