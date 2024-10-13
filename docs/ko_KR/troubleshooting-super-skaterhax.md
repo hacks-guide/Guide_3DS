@@ -30,7 +30,7 @@ If the screen flashes colors then freezes/crashes:
 
 :::: details "An error has occurred. 본체의 전원 버튼을 길게 눌러 전원을 끈 후..." (black screen with text)
 
-`arm11code.bin` 파일이 없거나 잘못 들어갔습니다. Make sure to copy the files of the [latest version of super-skaterhax](https://github.com/zoogie/super-skaterhax/releases/latest) for your region and version to the root of your SD card (not inside of a folder).
+`arm11code.bin` 파일이 없거나 잘못 들어갔습니다. [최신 버전의 super-skaterhax](https://github.com/zoogie/super-skaterhax/releases/latest) 를 지역과 버전에 맞춰 복사해 SD카드 안의 그 어느 폴더도 아닌 가장 최상단에 넣었는지를 확인해 주세요.
 
 ::: info
 
@@ -40,7 +40,7 @@ If the screen flashes colors then freezes/crashes:
 
 ::::
 
-:::details An exception occured or "DLL_HEAP_INFORMATION" when pressing GO! GO!
+:::details "GO! GO!" 선택 시 "An exception occurred" 또는 "DLL_HEAP_INFORMATION" 오류 화면이 표시됩니다
 
 이미 커스텀 펌웨어가 설치되어 있을 수 있습니다. [CFW 확인](checking-for-cfw) 을 하는 것을 권장합니다.
 
