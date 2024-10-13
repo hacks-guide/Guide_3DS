@@ -37,12 +37,12 @@ The steps below can be attempted in any order, but are listed from least to most
 3. Rename the `Nintendo 3DS` folder on your SD card to `Nintendo 3DS_BACKUP`, then attempt to boot. If your console successfully boots, there is some issue within your `Nintendo 3DS` folder. Try clearing HOME Menu extdata:
    - Navigate to `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
    - Delete the corresponding folder for your 3DS region:
-     - **EUR Region**: `00000098`
-     - **JPN Region**: `00000082`
-     - **USA Region**: `0000008f`
-     - **CHN Region**: `000000A1`
-     - **KOR Region**: `000000A9`
-     - **TWN Region**: `000000B1`
+     - **Περιοχή EUR**: `00000098`
+     - **Περιοχή JPN**: `00000082`
+     - **Περιοχή USA**: `0000008f`
+     - **Περιοχή CHN**: `000000A1`
+     - **Περιοχή KOR**: `000000A9`
+     - **Περιοχή TWN**: `000000B1`
 4. Try booting into recovery mode and updating your system:
    - Απενεργοποιήστε την κονσόλα σας
    - Hold (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A)
@@ -53,7 +53,7 @@ The steps below can be attempted in any order, but are listed from least to most
 
 :::
 
-### Error message on boot
+### Μήνυμα σφάλματος κατά την εκκίνηση
 
 :::details "An error has occurred: Failed to apply 1 FIRM patch(es)" or "An exception has occurred -- Current process: pm"
 
@@ -92,7 +92,7 @@ If this is the case, attempt the steps below, which are listed from easiest to h
 
 :::
 
-:::details Blue "BOOTROM ERROR" screen
+:::details Μπλε οθόνη «BOOTROM ERROR»
 
 Your console is likely hard-bricked. You will need to buy an ntrboot flashcart to reinstall boot9strap in order to attempt to fix your console. This may also indicate a hardware issue that cannot be fixed. In any case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
 
@@ -100,13 +100,13 @@ Your console is likely hard-bricked. You will need to buy an ntrboot flashcart t
 
 :::
 
-:::details Some other error
+:::details Κάποιο άλλο σφάλμα
 
 Please take a photo of the error and join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
 
 :::
 
-## Software issues on consoles with custom firmware
+## Ζητήματα λογισμικού σε κονσόλες με custom firmware
 
 :::details DSi / DS functionality is broken or has been replaced with Flipnote Studio
 
@@ -150,26 +150,26 @@ Your console likely still has menuhax67 installed. To uninstall menuhax67, downl
 
 :::
 
-:::details Something else
+:::details Κάτι άλλο
 
 Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance, and describe the issue that you see.
 
 :::
 
-## Other troubleshooting
+## Επίλυση άλλων προβλημάτων
 
-:::details Clear HOME Menu extdata
+:::details Εκκαθάριση των extdata του μενού «HOME»
 
 1. Απενεργοποιήστε την κονσόλα σας
 2. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
 3. Navigate to the `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` folder on your SD card
 4. Delete the corresponding folder for your 3DS region:
-   - **EUR Region**: `00000098`
-   - **JPN Region**: `00000082`
-   - **USA Region**: `0000008f`
-   - **CHN Region**: `000000A1`
-   - **KOR Region**: `000000A9`
-   - **TWN Region**: `000000B1`
+   - **Περιοχή EUR**: `00000098`
+   - **Περιοχή JPN**: `00000082`
+   - **Περιοχή USA**: `0000008f`
+   - **Περιοχή CHN**: `000000A1`
+   - **Περιοχή KOR**: `000000A9`
+   - **Περιοχή TWN**: `000000B1`
 5. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 
 :::
