@@ -1,5 +1,5 @@
 ::: tip
 
-Go back to [Troubleshooting](troubleshooting)
+[문제 해결](troubleshooting)로 돌아갑니다
 
 :::
