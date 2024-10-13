@@ -56,18 +56,18 @@ SSLoth는 시스템 버전 11.13.0 및 이전 버전에 있는 사용자가 브�
 1. HOME 메뉴에서 L, R 버튼을 동시에 눌러 카메라를 열어 주세요
    - 카메가 사용이 불가는하다면, 인터넷 브라우저를 열어 URL을 직접 입력하세요: (`https://zoogie.github.io/web/nbhax/`)
 2. QR 코드 버튼을 눌러 [이 QR 코드](http://api.qrserver.com/v1/create-qr-code/?color=000000\&bgcolor=FFFFFF\&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax\&qzone=1\&margin=0\&size=400x400\&ecc=L) 를 스캔해 주세요
-   - If you get a crash or an error code, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
+   - 오류가 발생하면 이 [문제 해결 가이드](troubleshooting-ssloth-browser) 를 참고해 주세요
    - 보안 인증서 경고가 표시되면, (A)를 눌러 연결을 허용하세요
 3. "PROCEED TO HAXX" 버튼을 눌러주세요
 4. 익스플로잇이 성공적이었다면 SafeB9SInstaller로 부팅되었을 것입니다
-   - If you get an error, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
+   - 오류가 발생하면 이 [문제 해결 가이드](troubleshooting-ssloth-browser) 를 참고해 주세요
 
 ### 섹션 IV - boot9strap 설치
 
 이 섹션에서는, 커스텀 펌웨어를 설치할 것입니다.
 
 1. 메시지가 나타나면, boot9strap을 설치하기 위하여 화면에 주어진 키 조합을 입력해 주세요
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
+   - 아래 화면의 단계가 붉은 텍스트로 표시되고 키 콤보 입력을 요구하지 않는다면, [이 문제 해결 가이드](troubleshooting-ssloth-browser)를 참고해 주세요
 2. 작업이 완료되면, (A) 를 눌려 콘솔을 재부팅해 주세요
 
 <!--@include: ./_include/configure-luma3ds.md -->
