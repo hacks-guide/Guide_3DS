@@ -92,7 +92,7 @@
     - 만약 콘솔에 노란 화면이 표시되면, 전원 버튼을 길게 눌러 콘솔의 전원을 끄고, 이 섹션을 다시 시도해 주세요
     - 만약 콘솔이 적색 화면에서 멈추는 경우, 전원 버튼을 길게 눌러 콘솔의 전원을 끄고, 섹션 II의 3단계를 다시 실행한 다음, 이 섹션을 다시 시도해 주세요
     - If your console [shows the word Text on the top-left corner of the bottom screen](/images/screenshots/skaterhax/skater-old3ds.png), you have an Old 3DS and this exploit **will not work on your device**. 이 경우, [MSET9](installing-boot9strap-\(mset9\)) 취약점을 진행해야 합니다
-    - If you get another error, try again up to 5 times, and if it still doesn't work, [follow this troubleshooting guide](troubleshooting-super-skaterhax)
+    - 또 다른 오류가 발생하면 최대 5회까지 다시 시도하고, 여전히 작동하지 않으면 [이 문제 해결 가이드를 따라 주세요](troubleshooting-super-skaterhax)
 16. 콘솔은 Homebrew Launcher로 부팅되었을 겁니다
 17. 홈브류 목록에서 nimdsphax를 실행해 주세요
 18. 익스플로잇이 성공적이었다면 SafeB9SInstaller로 부팅되었을 것입니다
@@ -104,7 +104,7 @@
 이 섹션에서는, 커스텀 펌웨어를 설치할 것입니다.
 
 1. 메시지가 나타나면, boot9strap을 설치하기 위하여 화면에 주어진 키 조합을 입력해 주세요
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-super-skaterhax)
+   - 아래 화면의 단계가 붉은 텍스트로 표시되고 키 콤보 입력을 요구하지 않는다면, [이 문제 해결 가이드](troubleshooting-super-skaterhax)를 참고해 주세요
 2. 작업이 완료되면, (A) 를 눌려 콘솔을 재부팅해 주세요
 
 <!--@include: ./_include/configure-luma3ds.md -->
