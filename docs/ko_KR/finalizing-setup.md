@@ -95,7 +95,7 @@
 1. 콘솔의 전원을 꺼 주세요
 2. (X) 를 길게 누르고, 이 상태에서 콘솔의 전원을 켜 주세요. 최종 설치 도우미가 실행됩니다
    - HOME 메뉴가 실행된 경우, `payloads` 폴더의 이름이나 위치가 잘못되었을 수 있습니다
-   - If you encounter an error, consult the [troubleshooting](troubleshooting-finalizing-setup) page
+   - 오류가 발생했을 경우, [문제 해결](troubleshooting-finalizing-setup) 페이지를 참고해 주세요
 3. 도우미가 정상적으로 작동했을 경우, GodMode9으로 부팅될 것입니다.
    - 이 지점 이후부터는 START 버튼을 누르면서 콘솔을 켜는 것으로 GodMode9에 접근할 수 있습니다.
 4. 만약 "Essential files backup not found" 메세지가 표시되면, (A) 룰 눌러서 하세요. 백업이 끝나면 (A) 를 눌러서 진행해 주세요
@@ -104,7 +104,7 @@
 7. "Scripts..."를 선택해 주세요
 8. "finalize"를 선택해 주세요
 9. 스크립트 표시에 따라 필요한 행동을 취해주세요
-   - If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting-finalizing-setup) page
+   - 만일 오류가 발생할 경우, 오류 메세지에 나온 안내를 따르거나 [문제 해경](troubleshooting-finalizing-setup) 페이지를 참고해 주세요
 10. "Setup Complete!" 가 떴을 경우, (A) 버튼을 눌러 전원을 꺼 주세요
     - 만일 "Setup Complete!"(설정 완료!) 가 뜨지 않은 경우, 스크립트가 정상 실행되지 않은 것이며 해당 섹션의 작업을 3단계부터 다시 해야 합니다
 11. SD 카드를 컴퓨터에 삽입해 주세요
