@@ -46,6 +46,6 @@ ___
 
 ::: tip
 
-Continue to [Key Information](key-information)
+Continue to [Checking for CFW](checking-for-cfw)
 
 :::
