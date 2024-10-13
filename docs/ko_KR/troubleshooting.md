@@ -6,25 +6,25 @@ If you're unable to fix your issue, ask for help at [Nintendo Homebrew on Discor
 
 ::: tip
 
-**Table of Contents**
+**목차**
 
-- [Installing boot9strap (Soundhax)](troubleshooting-soundhax)
+- [boot9strap 설치 (Soundhax)](troubleshooting-soundhax)
 
-- [Installing boot9strap (MSET9)](troubleshooting-mset9)
+- [boot9strap 설치 (MSET9)](troubleshooting-mset9)
 
-- [Installing boot9strap (super-skaterhax)](troubleshooting-super-skaterhax)
+- [boot9strap 설치 (super-skaterhax)](troubleshooting-super-skaterhax)
 
-- [Installing boot9strap (ntrboot)](troubleshooting-ntrboot)
+- [boot9strap 설치 (ntrboot)](troubleshooting-ntrboot)
 
-- [Installing boot9strap (safecerthax)](troubleshooting-safecerthax)
+- [boot9strap 설치 (safecerthax)](troubleshooting-safecerthax)
 
-- [Installing boot9strap (SSLoth-Browser)](troubleshooting-ssloth-browser)
+- [boot9strap 설치 (SSLoth-Browser)](troubleshooting-ssloth-browser)
 
-- [Finalizing Setup](troubleshooting-finalizing-setup)
+- [마무리 단계](troubleshooting-finalizing-setup)
 
-- [A9LH to B9S](troubleshooting-a9lh-to-b9s)
+- [A9LH를 B9S로 업데이트](troubleshooting-a9lh-to-b9s)
 
-- [Updating B9S](troubleshooting-updating-b9s)
+- [B9S 업데이트](troubleshooting-updating-b9s)
 
 ---
 
