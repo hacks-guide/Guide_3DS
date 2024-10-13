@@ -1,4 +1,4 @@
-# Troubleshooting (Soundhax)
+# 문제 해결 (Soundhax)
 
 This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (Soundhax)" page, which is used on system versions between 1.0.0 and 11.3.0. 만약 이 페이지의 해결책만으로 문제를 해결할 수 없다면, [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp)에 들어가서 당신의 문제와 시도한 해결책을 설명해 주세요.
 
@@ -38,7 +38,7 @@ This page offers troubleshooting advice for commonly encountered issues with the
 
 ::: tip
 
-Go back to [Installing boot9strap (Soundhax)](installing-boot9strap-\(soundhax\))
+[boot9strap 설치 (Soundhax)](installing-boot9strap-\(soundhax\))로 돌아갑니다
 
 :::
 
