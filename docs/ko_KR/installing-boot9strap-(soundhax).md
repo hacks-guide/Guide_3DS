@@ -69,7 +69,7 @@ Soundhax는 (universal-otherapp과 사용할 때) 모든 지역의 1.0.0 이상 
    - 여러 번의 시도가 필요할 수 있습니다 (약 10번)
    - 만약 "Could not play" 메세지가 표시되면, 펌웨어 버전이 Soundhax하고 호환되지 않거나 Soundhax 파일을 잘못 다운로드했다는 뜻 입니다
    - 재생 중 화면이 멈출 경우 전원 버튼을 길게 눌러서 콘솔의 전원을 강제로 끈 후 다시 시도해 주세요
-   - If you get a different error, [follow this troubleshooting guide](troubleshooting-soundhax)
+   - 다른 오류가 발생하면 이 [문제 해결 가이드](troubleshooting-soundhax) 를 참고해 주세요
 
    ::: info
 
@@ -84,7 +84,7 @@ Soundhax는 (universal-otherapp과 사용할 때) 모든 지역의 1.0.0 이상 
 이 섹션에서는, 커스텀 펌웨어를 설치할 것입니다.
 
 1. 메시지가 나타나면, boot9strap을 설치하기 위하여 화면에 주어진 키 조합을 입력해 주세요
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-soundhax)
+   - 아래 화면의 단계가 붉은 텍스트로 표시되고 키 콤보 입력을 요구하지 않는다면, [이 문제 해결 가이드](troubleshooting-soundhax)를 참고해 주세요
 2. 작업이 완료되면, (A) 를 눌려 콘솔을 재부팅해 주세요
 
 <!--@include: ./_include/configure-luma3ds.md -->
