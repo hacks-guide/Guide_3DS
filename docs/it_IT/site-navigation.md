@@ -12,19 +12,19 @@
 
 ::: info
 
-**Troubleshooting**
+**Risoluzione dei problemi**
 
 - [Risoluzione dei problemi](troubleshooting)
-- [Troubleshooting (Soundhax)](troubleshooting-soundhax)
-- [Troubleshooting (MSET9)](troubleshooting-mset9)
-- [Troubleshooting (super-skaterhax)](troubleshooting-super-skaterhax)
-- [Troubleshooting (ntrboot)](troubleshooting-ntrboot)
-- [Troubleshooting (safecerthax)](troubleshooting-safecerthax)
-- [Troubleshooting (SSLoth-Browser)](troubleshooting-ssloth-browser)
-- [Troubleshooting (Finalizing Setup)](troubleshooting-finalizing-setup)
-- [Troubleshooting (A9LH to B9S)](troubleshooting-a9lh-to-b9s)
-- [Troubleshooting (Updating B9S)](troubleshooting-updating-b9s)
-- [Troubleshooting (Post-Install)](troubleshooting-post-install)
+- [Risoluzione dei problemi (Soundhax)](troubleshooting-soundhax)
+- [Risoluzione dei problemi (MSET9)](troubleshooting-mset9)
+- [Risoluzione dei problemi (super-skaterhax)](troubleshooting-super-skaterhax)
+- [Risoluzione dei problemi (ntrboot)](troubleshooting-ntrboot)
+- [Risoluzione dei problemi (safecerthax)](troubleshooting-safecerthax)
+- [Risoluzione dei problemi (SSLoth-Browser)](troubleshooting-ssloth-browser)
+- [Risoluzione dei problemi (completamento dell'installazione)](troubleshooting-finalizing-setup)
+- [Risoluzione dei problemi (da A9LH a B9S)](troubleshooting-a9lh-to-b9s)
+- [Risoluzione dei problemi (aggiornamento di B9S)](troubleshooting-updating-b9s)
+- [Risoluzione dei problemi (post-installazione)](troubleshooting-post-install)
 
 :::
 
@@ -70,16 +70,16 @@
 - [Cambiare regione](region-changing)
 - [Ripristinare / Aggiornare il CFW](restoring-updating-cfw)
 - [Risoluzione dei problemi](troubleshooting)
-- [Troubleshooting (A9LH to B9S)](troubleshooting-a9lh-to-b9s)
-- [Troubleshooting (Finalizing Setup)](troubleshooting-finalizing-setup)
-- [Troubleshooting (MSET9)](troubleshooting-mset9)
-- [Troubleshooting (ntrboot)](troubleshooting-ntrboot)
-- [Troubleshooting (Post-Install)](troubleshooting-post-install)
-- [Troubleshooting (Soundhax)](troubleshooting-soundhax)
-- [Troubleshooting (safecerthax)](troubleshooting-safecerthax)
-- [Troubleshooting (SSLoth-Browser)](troubleshooting-ssloth-browser)
-- [Troubleshooting (super-skaterhax)](troubleshooting-super-skaterhax)
-- [Troubleshooting (Updating B9S)](troubleshooting-updating-b9s)
+- [Risoluzione dei problemi (da A9LH a B9S)](troubleshooting-a9lh-to-b9s)
+- [Risoluzione dei problemi (completamento dell'installazione)](troubleshooting-finalizing-setup)
+- [Risoluzione dei problemi (MSET9)](troubleshooting-mset9)
+- [Risoluzione dei problemi (ntrboot)](troubleshooting-ntrboot)
+- [Risoluzione dei problemi (post-installazione)](troubleshooting-post-install)
+- [Risoluzione dei problemi (Soundhax)](troubleshooting-soundhax)
+- [Risoluzione dei problemi (safecerthax)](troubleshooting-safecerthax)
+- [Risoluzione dei problemi (SSLoth-Browser)](troubleshooting-ssloth-browser)
+- [Risoluzione dei problemi (super-skaterhax)](troubleshooting-super-skaterhax)
+- [Risoluzione dei problemi (aggiornamento di B9S)](troubleshooting-updating-b9s)
 - [Disinstallare il CFW](uninstall-cfw)
 - [Aggiornare B9S](updating-b9s)
 
