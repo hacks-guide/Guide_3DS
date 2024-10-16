@@ -1,10 +1,10 @@
-# Troubleshooting (super-skaterhax)
+# Risoluzione dei problemi (super-skaterhax)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (super-skaterhax)" page. Se non riesci a risolvere il tuo problema con i consigli su questa pagina, entra nel [canale Discord di Nintendo Homebrew](https://discord. g/MWxPgEp) e descrivi il tuo problema, indicando quello che hai già provato.
+Questa pagina offre consigli per la risoluzione dei problemi comunemente riscontrati nella pagina "Installazione di boot9strap (super-skaterhax)". Se non riesci a risolvere il tuo problema con i consigli su questa pagina, entra nel [canale Discord di Nintendo Homebrew](https://discord. g/MWxPgEp) e descrivi il tuo problema, indicando quello che hai già provato.
 
 ::: warning
 
-These instructions are only valid for the "Installing boot9strap (super-skaterhax)" page. If you are using **anything other than** a **New 3DS** on version **11.15.0 through 11.17.0**, you should follow [troubleshooting instructions for Installing boot9strap (SSLoth-Browser)](troubleshooting-ssloth-browser) instead.
+Queste istruzioni sono valide solo per la pagina "Installazione di boot9strap (super-skaterhax)". If you are using **anything other than** a **New 3DS** on version **11.15.0 through 11.17.0**, you should follow [troubleshooting instructions for Installing boot9strap (SSLoth-Browser)](troubleshooting-ssloth-browser) instead.
 
 :::
 
