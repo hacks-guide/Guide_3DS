@@ -4,11 +4,11 @@ Questa pagina offre consigli per la risoluzione dei problemi comunemente riscont
 
 ::: warning
 
-Queste istruzioni sono valide solo per la pagina "Installazione di boot9strap (super-skaterhax)". If you are using **anything other than** a **New 3DS** on version **11.15.0 through 11.17.0**, you should follow [troubleshooting instructions for Installing boot9strap (SSLoth-Browser)](troubleshooting-ssloth-browser) instead.
+Queste istruzioni sono valide solo per la pagina "Installazione di boot9strap (super-skaterhax)". Se stai usando **qualcosa di diverso** di un **New 3DS** con versioni **tra 11.15.0 e 11.17.0**, dovresti invece seguire le [istruzioni per la risoluzione dei problemi con l'installazione di boot9strap (SSLoth-Browser)](troubleshooting-ssloth-browser).
 
 :::
 
-## Issues with super-skaterhax
+## Problemi con super-skaterhax
 
 :::details "Si è verificato un errore. Salva i dati di qualunque applicazione attualmente in uso, quindi riavvia la console."
 
@@ -54,7 +54,7 @@ Probabilmente significa che hai già un custom firmware. Dovresti [verificare la
 
 ::: tip
 
-Go back to [Installing boot9strap (super-skaterhax)](installing-boot9strap-\(super-skaterhax\))
+Torna a [Installazione di boot9strap (super-skaterhax)](installing-boot9strap-\(super-skaterhax\))
 
 :::
 
