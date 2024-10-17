@@ -92,7 +92,7 @@ Se non l'hai già fatto, assicurati di avere una connessione Internet funzionant
     - Se la tua console si blocca con una schermata gialla, tieni premuto il pulsante POWER finché non si spegne, quindi riprova questa sezione
     - Se la tua console si blocca con una schermata rossa, tieni premuto il pulsante POWER finché non si spegne, riprova il passo 3 della Sezione II, quindi riprova questa sezione
     - Se la console [mostra la parola Text nell'angolo in alto a sinistra dello schermo inferiore](/images/screenshots/skaterhax/skater-old3ds.png), hai un Old 3DS e questo exploit **non funzionerà sulla tua console**. In questo caso, dovresti usare invece [MSET9](installing-boot9strap-\(mset9\))
-    - If you get another error, try again up to 5 times, and if it still doesn't work, [follow this troubleshooting guide](troubleshooting-super-skaterhax)
+    - Se ottieni un altro errore riprova altre 5 volte, e se continua a non funzionare [segui questa guida per risolvere il problema](troubleshooting-super-skaterhax)
 16. La tua console avvierà l'Homebrew Launcher
 17. Avvia nimdsphax dalla lista degli homebrew
 18. Se l'exploit è andato a buon fine, si avvierà SafeB9SInstaller
@@ -104,7 +104,7 @@ Se non l'hai già fatto, assicurati di avere una connessione Internet funzionant
 In questa sezione installerai il custom firmware sulla tua console.
 
 1. Quando richiesto, inserisci la combinazione di tasti richiesta sullo schermo superiore per installare boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-super-skaterhax)
+   - Se una sezione nella schermata inferiore ha un testo di colore rosso, e non ti viene richiesto di inserire una combinazione di tasti, [segui questa guida per risolvere i problemi](troubleshooting-super-skaterhax)
 2. Una volta completato tutto, premi (A) per riavviare la console
 
 <!--@include: ./_include/configure-luma3ds.md -->
