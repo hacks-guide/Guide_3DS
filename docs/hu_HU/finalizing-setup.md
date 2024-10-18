@@ -95,7 +95,7 @@ Ebben a fejezetben szkripteket fogsz használni arra, hogy automatizáld a homeb
 1. Kapcsold ki a konzolod
 2. Nyomd le és tartsd nyomva az (X) gombot, és az (X) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a Finalizing Setup Helper-t
    - Ha a HOME menübe bootoltál, akkor lehet hogy a `payloads` mappád neve elírt, vagy rossz helyen van
-   - If you encounter an error, consult the [troubleshooting](troubleshooting-finalizing-setup) page
+   - Ha hibát kapsz, tekintsd meg a [hibaelhárítás](troubleshooting-finalizing-setup) oldalt
 3. Ha a Helper sikeres volt, a konzolodnak ezt követően be kell bootolni a GodMode9-be
    - Ettől a ponttól kezdve a GodMode9-et a START gomb bekapcsolás melletti nyomva tartásával éred el
 4. Ha rákérdez arra, hogy csináljon-e egy biztonsági másolatot (essential files backup), akkor nyomd meg az (A) gombot, hogy csináljon, majd amikor végzett, nyomd meg ismét az (A) gombot a folytatáshoz
@@ -104,7 +104,7 @@ Ebben a fejezetben szkripteket fogsz használni arra, hogy automatizáld a homeb
 7. Válaszd a "Scripts..." opciót
 8. Válaszd az "finalize" opciót
 9. Kövesd a script utasításait és válaszolj meg minden kérdést
-   - If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting-finalizing-setup) page
+   - Ha hibát kapsz, kövesd a hibaüzenet lépéseit vagy tekintsd meg a [hibaelhárítás](troubleshooting-finalizing-setup) oldalt
 10. Ha a szkript a "Setup complete!" üzenetet írja, nyomj (A) gombot az eszköz kikapcsolásához
     - Ha NEM láttad a "Setup complete!" üzenetet, akkor a szkript nem volt sikeres és újra kell csinálnod ezt a részt a 3. lépéstől
 11. Helyezd az SD kártyád a számítógépbe

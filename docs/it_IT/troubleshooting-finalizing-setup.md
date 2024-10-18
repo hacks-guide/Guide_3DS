@@ -1,8 +1,8 @@
-# Troubleshooting (Finalizing Setup)
+# Risoluzione dei problemi (completamento dell'installazione)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Finalizing Setup" page. Se non riesci a risolvere il tuo problema con i consigli su questa pagina, entra nel [canale Discord di Nintendo Homebrew](https://discord. g/MWxPgEp) e descrivi il tuo problema, indicando quello che hai già provato.
+Questa pagina offre consigli per la risoluzione dei problemi comunemente riscontrati nella pagina "Completamento dell'installazione". Se non riesci a risolvere il tuo problema con i consigli su questa pagina, entra nel [canale Discord di Nintendo Homebrew](https://discord. g/MWxPgEp) e descrivi il tuo problema, indicando quello che hai già provato.
 
-## Issues with Finalizing Setup
+## Problemi con il completamento dell'installazione
 
 :::details Impossibile aggiornare la console
 
@@ -142,7 +142,7 @@ Non hai rimosso MSET9 nella pagina precedente. Lo script tenterà di rimuovere M
 
 ::: tip
 
-Go back to [Finalizing Setup](finalizing-setup)
+Torna al [Completamento dell'installazione](finalizing-setup)
 
 :::
 
