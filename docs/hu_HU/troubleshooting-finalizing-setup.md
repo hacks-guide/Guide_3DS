@@ -142,7 +142,7 @@ Nem távolítottad el az MSET9-et az előző oldalon. A szkript megpróbálja ne
 
 ::: tip
 
-Go back to [Finalizing Setup](finalizing-setup)
+Vissza a [telepítés véglegesítésére](finalizing-setup)
 
 :::
 
