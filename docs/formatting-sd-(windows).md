@@ -10,10 +10,12 @@ This page is for Windows users only. If you are not on Windows, check out the [F
 
 ## What You Need
 
-* **For SD cards 32GB or smaller:** the latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
-* **For SD cards 64GB or larger:** The latest version of [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
+* the latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
+* **For SD cards 64GB or larger only:** The latest version of [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
 
-## Instructions (32GB or smaller)
+## Instructions
+
+### Section I - SD Card Formatter
 
 1. Insert your SD card into your computer
 1. If the SD card has any files and folders on it, copy everything to a folder on your computer
@@ -34,12 +36,16 @@ This page is for Windows users only. If you are not on Windows, check out the [F
 1. Wait for the format to finish
 1. Click "OK"
 1. Close SD Card Formatter
-1. If the SD card had any files and folders on it before the format, copy everything back from your computer
+1. If the SD card is 32GB or smaller and had any files and folders on it before the format, copy everything back from your computer
 
-## Instructions (64GB or larger)
+::: info
 
-1. Insert your SD card into your computer
-1. If the SD card has any files and folders on it, copy everything to a folder on your computer
+You're done formatting your sd card if it's **32GB or smaller.**
+
+:::
+
+### Section II - guiformat (ONLY for 64GB or larger)
+
 1. Run `guiformat.exe`
 1. Select your SD card's drive letter for "Drive"
 
