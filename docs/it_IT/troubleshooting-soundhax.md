@@ -30,6 +30,10 @@ Se il problema non si risolve, prova ad usare un'altra scheda SD.
 
 :::
 
+## Issues with SafeB9SInstaller
+
+<!--@include: ./_include/troubleshooting-sb9si-bin.md -->
+
 <!--@include: ./_include/troubleshooting-sb9si-common.md -->
 
 <!--@include: ./_include/troubleshooting-get-help-common.md -->
