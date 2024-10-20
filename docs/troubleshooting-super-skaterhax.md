@@ -46,6 +46,8 @@ This likely indicates that you already have custom firmware. You should [check f
 
 :::
 
+## Issues with SafeB9SInstaller
+<!--@include: ./_include/troubleshooting-sb9si-bin.md -->
 <!--@include: ./_include/troubleshooting-sb9si-common.md -->
 
 <!--@include: ./_include/troubleshooting-get-help-common.md -->
