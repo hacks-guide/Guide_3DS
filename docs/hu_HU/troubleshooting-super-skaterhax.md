@@ -8,7 +8,7 @@ These instructions are only valid for the "Installing boot9strap (super-skaterha
 
 :::
 
-## Issues with super-skaterhax
+## Problémák a super-skaterhax-szal
 
 :::details "An error has occurred. Please save your data in any software currently in use, then restart the system."
 
@@ -54,7 +54,7 @@ Ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvége
 
 ::: tip
 
-Go back to [Installing boot9strap (super-skaterhax)](installing-boot9strap-\(super-skaterhax\))
+Vissza a [Boot9strap telepítése (super-skaterhax)](installing-boot9strap-\(super-skaterhax\))-hez
 
 :::
 
