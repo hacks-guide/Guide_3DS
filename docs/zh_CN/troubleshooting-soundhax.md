@@ -30,6 +30,10 @@ You have the wrong Soundhax file for your console and region, or your console is
 
 :::
 
+## Issues with SafeB9SInstaller
+
+<!--@include: ./_include/troubleshooting-sb9si-bin.md -->
+
 <!--@include: ./_include/troubleshooting-sb9si-common.md -->
 
 <!--@include: ./_include/troubleshooting-get-help-common.md -->
