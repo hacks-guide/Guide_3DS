@@ -7,4 +7,3 @@ The file `SafeB9SInstaller.firm` is missing or misplaced. Download the latest re
 
 :::
 
-<!--@include: ./_include/troubleshooting-sb9si-common.md -->
