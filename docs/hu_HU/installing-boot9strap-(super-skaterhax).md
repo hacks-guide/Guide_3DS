@@ -92,7 +92,7 @@ Ha még nem történt meg, biztosítsd, hogy legyen működő Internet kapcsolat
     - Ha a konzolod lefagy egy sárga képernyőn, tartsd nyomva a POWER gombot, amíg ki nem kapcsol, és próbáld újra ezt a részt
     - Ha a konzolod lefagy egy piros képernyőn, tartsd nyomva a POWER gombot, amíg ki nem kapcsol, csináld újra a 3. lépést a II. részben, majd próbáld újra ezt a részt
     - Ha a konzolod a [Text szót jeleníti meg az alsó képernyő bal felső sarkában](/images/screenshots/skaterhax/skater-old3ds.png), akkor Old 3DS-ed van és ez az exploit **nem fog működni az eszközödön**. Ha ez az eset, használd az [MSET9](installing-boot9strap-\(mset9\))-et helyette
-    - If you get another error, try again up to 5 times, and if it still doesn't work, [follow this troubleshooting guide](troubleshooting-super-skaterhax)
+    - Ha más hibát kapsz, próbáld meg 5x, és ha még minden nem megy [kövesd ezt a hibaelhárítási útmutatót](troubleshooting-super-skaterhax)
 16. Ekkor a konzolodnak be kell bootolni a Homebrew Launcher-be
 17. Indítsd el a nimdsphax-et a homebrew listájáról
 18. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
@@ -104,7 +104,7 @@ Ha még nem történt meg, biztosítsd, hogy legyen működő Internet kapcsolat
 Ebben a fejezetben egyedi firmware-t fogsz telepíteni a konzolodra.
 
 1. Ha kéri, akkor nyomd meg a gombokat egyszerre, amiket kijelez a felső képernyőn, hogy telepíthesd a boot9strap-et
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-super-skaterhax)
+   - Ha egy lépés az alsó képernyőn piros színű szöveget eredményez, és nem kér a rendszer tőled egy gomb-kombinációt, akkor [kövesd ezt a hibaelhárítási útmutatót](troubleshooting-super-skaterhax)
 2. Ha ez elkészült, nyomd meg az (A) gombot a konzolod újraindításához
 
 <!--@include: ./_include/configure-luma3ds.md -->
