@@ -30,7 +30,7 @@
 
 :::
 
-## Issues with SafeB9SInstaller
+## Ζητήματα με το SafeB9SInstaller
 
 <!--@include: ./_include/troubleshooting-sb9si-bin.md -->
 
