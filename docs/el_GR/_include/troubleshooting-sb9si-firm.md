@@ -2,6 +2,6 @@
 
 :::details Failed to open SafeB9SInstaller.firm
 
-The file `SafeB9SInstaller.firm` is missing or misplaced. Download the latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip), extract it, and place `SafeB9SInstaller.firm` on the root of your SD card. Do not add the `.firm` extension if you do not already see it.
+Το αρχείο `SafeB9SInstaller.firm` απουσιάζει ή βρίσκεται σε λάθος σημείο. Κάντε λήψη της πιο πρόσφατης έκδοσης του [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip), αποσυμπιέστε το αρχείο και τοποθετήστε το `SafeB9SInstaller.firm` στη ρίζα της κάρτας SD σας. Μην προσθέσετε την επέκταση `.firm` αν δεν τη βλέπετε ήδη.
 
 :::
