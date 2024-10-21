@@ -12,19 +12,19 @@
 
 ::: info
 
-**Troubleshooting**
+**Hibaelhárítás**
 
 - [Hibaelhárítás](troubleshooting)
-- [Troubleshooting (Soundhax)](troubleshooting-soundhax)
-- [Troubleshooting (MSET9)](troubleshooting-mset9)
-- [Troubleshooting (super-skaterhax)](troubleshooting-super-skaterhax)
-- [Troubleshooting (ntrboot)](troubleshooting-ntrboot)
-- [Troubleshooting (safecerthax)](troubleshooting-safecerthax)
-- [Troubleshooting (SSLoth-Browser)](troubleshooting-ssloth-browser)
-- [Troubleshooting (Finalizing Setup)](troubleshooting-finalizing-setup)
-- [Troubleshooting (A9LH to B9S)](troubleshooting-a9lh-to-b9s)
-- [Troubleshooting (Updating B9S)](troubleshooting-updating-b9s)
-- [Troubleshooting (Post-Install)](troubleshooting-post-install)
+- [Hibaelhárítás (Soundhax)](troubleshooting-soundhax)
+- [Hibaelhárítás (MSET9)](troubleshooting-mset9)
+- [Hibaelhárítás (super-skaterhax)](troubleshooting-super-skaterhax)
+- [Hibaelhárítás (ntrboot)](troubleshooting-ntrboot)
+- [Hibaelhárítás (safecerthax)](troubleshooting-safecerthax)
+- [Hibaelhárítás (SSLoth-Browser)](troubleshooting-ssloth-browser)
+- [Hibaelhárítás (Telepítés véglegesítése)](troubleshooting-finalizing-setup)
+- [Hibaelhárítás (A9LH-ról B9S-re)](troubleshooting-a9lh-to-b9s)
+- [Hibaelhárítás (B9S frissítése)](troubleshooting-updating-b9s)
+- [Hibaelhárítás (Telepítés után)](troubleshooting-post-install)
 
 :::
 
@@ -70,16 +70,16 @@
 - [Régióváltás](region-changing)
 - [CFW visszaállítása / frissítése](restoring-updating-cfw)
 - [Hibaelhárítás](troubleshooting)
-- [Troubleshooting (A9LH to B9S)](troubleshooting-a9lh-to-b9s)
-- [Troubleshooting (Finalizing Setup)](troubleshooting-finalizing-setup)
-- [Troubleshooting (MSET9)](troubleshooting-mset9)
-- [Troubleshooting (ntrboot)](troubleshooting-ntrboot)
-- [Troubleshooting (Post-Install)](troubleshooting-post-install)
-- [Troubleshooting (Soundhax)](troubleshooting-soundhax)
-- [Troubleshooting (safecerthax)](troubleshooting-safecerthax)
-- [Troubleshooting (SSLoth-Browser)](troubleshooting-ssloth-browser)
-- [Troubleshooting (super-skaterhax)](troubleshooting-super-skaterhax)
-- [Troubleshooting (Updating B9S)](troubleshooting-updating-b9s)
+- [Hibaelhárítás (A9LH-ról B9S-re)](troubleshooting-a9lh-to-b9s)
+- [Hibaelhárítás (Telepítés véglegesítése)](troubleshooting-finalizing-setup)
+- [Hibaelhárítás (MSET9)](troubleshooting-mset9)
+- [Hibaelhárítás (ntrboot)](troubleshooting-ntrboot)
+- [Hibaelhárítás (Telepítés után)](troubleshooting-post-install)
+- [Hibaelhárítás (Soundhax)](troubleshooting-soundhax)
+- [Hibaelhárítás (safecerthax)](troubleshooting-safecerthax)
+- [Hibaelhárítás (SSLoth-Browser)](troubleshooting-ssloth-browser)
+- [Hibaelhárítás (super-skaterhax)](troubleshooting-super-skaterhax)
+- [Hibaelhárítás (B9S frissítése)](troubleshooting-updating-b9s)
 - [CFW eltávolítása](uninstall-cfw)
 - [B9S frissítése](updating-b9s)
 

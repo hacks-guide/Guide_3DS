@@ -1,33 +1,33 @@
 # Hibaelhárítás
 
-This page serves a landing page for troubleshooting resources that we offer for commonly encountered issues. Click on the link corresponding to the page you are following to explore it.
+Ez az oldal landolási oldal a hibaelhárítási anyagokhoz amit adunk, sűrűn előforduló problémákhoz. Kattints az éppen követett oldalnak megfelelő linkre a megtekintéséhez.
 
-If you're unable to fix your issue, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp). If your issue is missing and you know the solution, [let us know!](https://github.com/hacks-guide/Guide_3DS/issues)
+Ha nem tudod javítani a problémád, segítségért fordulj a [Nintendo Homebrew csatornához a Discord-on](https://discord.gg/MWxPgEp). Ha egy probléma hiányzik és tudod a megoldást, [tudasd velünk!](https://github.com/hacks-guide/Guide_3DS/issues)
 
 ::: tip
 
-**Table of Contents**
+**Tartalomjegyzék**
 
-- [Installing boot9strap (Soundhax)](troubleshooting-soundhax)
+- [Boot9strap telepítése (Soundhax)](troubleshooting-soundhax)
 
-- [Installing boot9strap (MSET9)](troubleshooting-mset9)
+- [Boot9strap telepítése (MSET9)](troubleshooting-mset9)
 
-- [Installing boot9strap (super-skaterhax)](troubleshooting-super-skaterhax)
+- [Boot9strap telepítése (super-skaterhax)](troubleshooting-super-skaterhax)
 
-- [Installing boot9strap (ntrboot)](troubleshooting-ntrboot)
+- [Boot9strap telepítése (ntrboot)](troubleshooting-ntrboot)
 
-- [Installing boot9strap (safecerthax)](troubleshooting-safecerthax)
+- [Boot9strap telepítése (safecerthax)](troubleshooting-safecerthax)
 
-- [Installing boot9strap (SSLoth-Browser)](troubleshooting-ssloth-browser)
+- [Boot9strap telepítése (SSLoth-Browser)](troubleshooting-ssloth-browser)
 
-- [Finalizing Setup](troubleshooting-finalizing-setup)
+- [Telepítés véglegesítése](troubleshooting-finalizing-setup)
 
-- [A9LH to B9S](troubleshooting-a9lh-to-b9s)
+- [A9LH-ről B9S-re(troubleshooting-a9lh-to-b9s)
 
-- [Updating B9S](troubleshooting-updating-b9s)
+- [B9S frissítése](troubleshooting-updating-b9s)
 
 ---
 
-- [Post-Install](troubleshooting-post-install)
+- [Telepítés után](troubleshooting-post-install)
 
 :::

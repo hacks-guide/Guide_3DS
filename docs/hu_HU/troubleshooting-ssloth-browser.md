@@ -1,10 +1,10 @@
-# Troubleshooting (SSLoth-Browser)
+# Hibaelhárítás (SSLoth-Browser)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (SSLoth-Browser)" page, which is used on system versions between 11.4.0 and 11.13.0. Ha nem tudod megoldani a problémád az oldal tanácsai alapján, csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és írd le a problémádat és azt is hogy mi az amit már próbáltál.
+Ez az oldal hibaelhárítási tanácsokat ad sűrűn előforduló problémákhoz a "Boot9strap telepítése (SSLoth-Browser)" oldalhoz, ami az 11.4.0 és 11.13.0 rendszer verziókon használt. Ha nem tudod megoldani a problémád az oldal tanácsai alapján, csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és írd le a problémádat és azt is hogy mi az amit már próbáltál.
 
 ::: warning
 
-These instructions are only valid for the "Installing boot9strap (SSLoth-Browser)" page. If you are using a **New 3DS** on version **11.15.0 through 11.17.0**, you should follow [troubleshooting instructions for Installing boot9strap (super-skaterhax)](troubleshooting-super-skaterhax) instead.
+Ezak a lépések csak a "Boot9strap telepítése (SSLoth-Browser)" oldalhoz érvényesek. Ha egy **New 3DS**-t \*\*11.15.0-11.17.0 \*\* verzióval használsz, követned kell a [hibaelhárítási lépéseket a Boot9strap telepítése (super-skaterhax)](troubleshooting-super-skaterhax) oldalhoz helyette.
 
 :::
 
@@ -90,6 +90,10 @@ Ha ez sikertelen, próbálkozz egy másik SD kártyával.
 
 :::
 
+## Issues with SafeB9SInstaller
+
+<!--@include: ./_include/troubleshooting-sb9si-bin.md -->
+
 <!--@include: ./_include/troubleshooting-sb9si-common.md -->
 
 <!--@include: ./_include/troubleshooting-get-help-common.md -->
@@ -98,7 +102,7 @@ Ha ez sikertelen, próbálkozz egy másik SD kártyával.
 
 ::: tip
 
-Go back to [Installing boot9strap (SSLoth-Browser)](installing-boot9strap-\(ssloth-browser\))
+Vissza a [Boot9strap telepítése (SSLoth-Browser)](installing-boot9strap-\(ssloth-browser\)) oldalhoz
 
 :::
 

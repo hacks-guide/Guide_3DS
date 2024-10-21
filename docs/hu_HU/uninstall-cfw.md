@@ -85,7 +85,7 @@ Ennek a fejezetnek a célja, hogy ellenőrizzük, a beépített DS mód alkalmaz
 
 ::: warning
 
-Ha ezen tesztek valamelyike sikertelen, a DS mód, a DS Download Play és/vagy DS Connection Settings előfordulhat, hogy nem lesz elérhető a CFW eltávolítását követően! You should [fix DS mode](troubleshooting-post-install) before continuing.
+Ha ezen tesztek valamelyike sikertelen, a DS mód, a DS Download Play és/vagy DS Connection Settings előfordulhat, hogy nem lesz elérhető a CFW eltávolítását követően! Ki kell [javítanod a DS módot](troubleshooting-post-install) mielőtt folytatnád.
 
 :::
 

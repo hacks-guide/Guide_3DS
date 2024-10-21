@@ -90,6 +90,10 @@ There may be an issue with your `arm11code.bin` file. Re-download the latest rel
 
 :::
 
+## Issues with SafeB9SInstaller
+
+<!--@include: ./_include/troubleshooting-sb9si-bin.md -->
+
 <!--@include: ./_include/troubleshooting-sb9si-common.md -->
 
 <!--@include: ./_include/troubleshooting-get-help-common.md -->
