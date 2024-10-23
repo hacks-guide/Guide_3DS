@@ -46,7 +46,7 @@ Probabilmente significa che hai già un custom firmware. Dovresti [verificare la
 
 :::
 
-## Issues with SafeB9SInstaller
+## Problemi con SafeB9SInstaller
 
 <!--@include: ./_include/troubleshooting-sb9si-bin.md -->
 
