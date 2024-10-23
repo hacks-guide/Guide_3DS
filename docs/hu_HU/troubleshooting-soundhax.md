@@ -1,8 +1,8 @@
-# Troubleshooting (Soundhax)
+# Hibaelhárítás (Soundhax)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (Soundhax)" page, which is used on system versions between 1.0.0 and 11.3.0. Ha nem tudod megoldani a problémád az oldal tanácsai alapján, csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és írd le a problémádat és azt is hogy mi az amit már próbáltál.
+Ez az oldal hibaelhárítási tanácsokat ad sűrűn előforduló problémákhoz a "Boot9strap telepítése (Soundhax)" oldalhoz, ami az 1.0.0 és 11.3.0 rendszer verziókon használt. Ha nem tudod megoldani a problémád az oldal tanácsai alapján, csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és írd le a problémádat és azt is hogy mi az amit már próbáltál.
 
-## Issues with Soundhax
+## Problémák a Soundhax-szal
 
 :::details Piros/lila/rózsaszín és fehér képernyő a Soundhax futtatása után
 
@@ -30,6 +30,10 @@ Ha ez sikertelen, próbálkozz egy másik SD kártyával.
 
 :::
 
+## Issues with SafeB9SInstaller
+
+<!--@include: ./_include/troubleshooting-sb9si-bin.md -->
+
 <!--@include: ./_include/troubleshooting-sb9si-common.md -->
 
 <!--@include: ./_include/troubleshooting-get-help-common.md -->
@@ -38,7 +42,7 @@ Ha ez sikertelen, próbálkozz egy másik SD kártyával.
 
 ::: tip
 
-Go back to [Installing boot9strap (Soundhax)](installing-boot9strap-\(soundhax\))
+Vissza [Boot9strap telepítése (Soundhax)](installing-boot9strap-\(soundhax\))-hoz
 
 :::
 

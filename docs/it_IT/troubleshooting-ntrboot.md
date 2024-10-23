@@ -1,6 +1,10 @@
-# Troubleshooting (ntrboot)
+# Risoluzione dei problemi (ntrboot)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (ntrboot)" page. Se non riesci a risolvere il tuo problema con i consigli su questa pagina, entra nel [canale Discord di Nintendo Homebrew](https://discord. g/MWxPgEp) e descrivi il tuo problema, indicando quello che hai già provato.
+Questa pagina offre consigli per la risoluzione dei problemi comunemente riscontrati nella pagina "Installazione di boot9strap (ntrboot)". Se non riesci a risolvere il tuo problema con i consigli su questa pagina, entra nel [canale Discord di Nintendo Homebrew](https://discord. g/MWxPgEp) e descrivi il tuo problema, indicando quello che hai già provato.
+
+## Problemi con SafeB9SInstaller
+
+<!--@include: ./_include/troubleshooting-sb9si-firm.md -->
 
 <!--@include: ./_include/troubleshooting-sb9si-common.md -->
 
@@ -10,7 +14,7 @@ This page offers troubleshooting advice for commonly encountered issues with the
 
 ::: tip
 
-Go back to [Installing boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
+Torna a [Installazione di boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
 
 :::
 

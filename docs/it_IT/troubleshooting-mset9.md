@@ -1,8 +1,8 @@
-# Troubleshooting (MSET9)
+# Risoluzione dei problemi (MSET9)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (MSET9)", "Installing boot9strap (MSET9 CLI)" and "Installing boot9strap (MSET9 Play Store)" pages. Se non riesci a risolvere il tuo problema con i consigli su questa pagina, entra nel [canale Discord di Nintendo Homebrew](https://discord. g/MWxPgEp) e descrivi il tuo problema, indicando quello che hai già provato.
+Questa pagina offre consigli per la risoluzione dei problemi comunemente riscontrati con le pagine "Installazione di boot9strap (MSET9)", "Installazione di boot9strap (MSET9 CLI)" e "Installazione di boot9strap (MSET9 Play Store)". Se non riesci a risolvere il tuo problema con i consigli su questa pagina, entra nel [canale Discord di Nintendo Homebrew](https://discord. g/MWxPgEp) e descrivi il tuo problema, indicando quello che hai già provato.
 
-## MSET9 (application / script)
+## MSET9 (applicazione / script)
 
 :::details Python 3 is not installed
 
@@ -200,6 +200,10 @@ Probabilmente significa che hai già un custom firmware. Dovresti [verificare la
 
 :::
 
+## Problemi con SafeB9SInstaller
+
+<!--@include: ./_include/troubleshooting-sb9si-bin.md -->
+
 <!--@include: ./_include/troubleshooting-sb9si-common.md -->
 
 <!--@include: ./_include/troubleshooting-get-help-common.md -->
@@ -208,13 +212,13 @@ Probabilmente significa che hai già un custom firmware. Dovresti [verificare la
 
 ::: tip
 
-Go back to [Installing boot9strap (MSET9-CLI)](installing-boot9strap-\(mset9-cli\))
+Ritorna a [Installazione di boot9strap (MSET9-CLI)](installing-boot9strap-\(mset9-cli\))
 
 :::
 
 ::: tip
 
-Go back to [Installing boot9strap (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\))
+Ritorna a [Installazione di boot9strap (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\))
 
 :::
 

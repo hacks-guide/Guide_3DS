@@ -1,10 +1,10 @@
-# Troubleshooting (SSLoth-Browser)
+# Risoluzione dei problemi (SSLoth-Browser)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (SSLoth-Browser)" page, which is used on system versions between 11.4.0 and 11.13.0. Se non riesci a risolvere il tuo problema con i consigli su questa pagina, entra nel [canale Discord di Nintendo Homebrew](https://discord. g/MWxPgEp) e descrivi il tuo problema, indicando quello che hai già provato.
+Questa pagina offre consigli per la risoluzione dei problemi comunemente riscontrati con la pagina "Installazione di boot9strap (SSLoth-Browser)", usata per le versioni di sistema comprese tra 11.4.0 e 11.13.0. Se non riesci a risolvere il tuo problema con i consigli su questa pagina, entra nel [canale Discord di Nintendo Homebrew](https://discord. g/MWxPgEp) e descrivi il tuo problema, indicando quello che hai già provato.
 
 ::: warning
 
-These instructions are only valid for the "Installing boot9strap (SSLoth-Browser)" page. If you are using a **New 3DS** on version **11.15.0 through 11.17.0**, you should follow [troubleshooting instructions for Installing boot9strap (super-skaterhax)](troubleshooting-super-skaterhax) instead.
+Queste istruzioni sono valide solo per la pagina "Installazione di boot9strap (SSLoth-Browser)". Se stai usando un **New 3DS** con versioni **tra 11.15.0 e 11.17.0**, dovresti invece seguire le [istruzioni per la risoluzione dei problemi con l'installazione di boot9strap (super-skaterhax)](troubleshooting-super-skaterhax).
 
 :::
 
@@ -90,6 +90,10 @@ Se il problema non si risolve, prova ad usare un'altra scheda SD.
 
 :::
 
+## Problemi con SafeB9SInstaller
+
+<!--@include: ./_include/troubleshooting-sb9si-bin.md -->
+
 <!--@include: ./_include/troubleshooting-sb9si-common.md -->
 
 <!--@include: ./_include/troubleshooting-get-help-common.md -->
@@ -98,7 +102,7 @@ Se il problema non si risolve, prova ad usare un'altra scheda SD.
 
 ::: tip
 
-Go back to [Installing boot9strap (SSLoth-Browser)](installing-boot9strap-\(ssloth-browser\))
+Ritorna all'[Installazione di boot9strap (SSLoth-Browser)](installing-boot9strap-\(ssloth-browser\))
 
 :::
 

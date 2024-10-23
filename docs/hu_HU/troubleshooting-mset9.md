@@ -1,8 +1,8 @@
-# Troubleshooting (MSET9)
+# Hibaelhárítás (MSET9)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (MSET9)", "Installing boot9strap (MSET9 CLI)" and "Installing boot9strap (MSET9 Play Store)" pages. Ha nem tudod megoldani a problémád az oldal tanácsai alapján, csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és írd le a problémádat és azt is hogy mi az amit már próbáltál.
+Ez az oldal hibaelhárítási tanácsokat ad sűrűn előforduló problémákhoz a "Boot9strap telepítése (MSET9)", a "Boot9strap telepítése (MSET9 CLI)" és a "Boot9strap telepítése (MSET9 Play Store)" oldalhoz. Ha nem tudod megoldani a problémád az oldal tanácsai alapján, csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és írd le a problémádat és azt is hogy mi az amit már próbáltál.
 
-## MSET9 (application / script)
+## MSET9 (alkalmzás / szkript)
 
 :::details Python 3 is not installed
 
@@ -200,6 +200,10 @@ Ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvége
 
 :::
 
+## Issues with SafeB9SInstaller
+
+<!--@include: ./_include/troubleshooting-sb9si-bin.md -->
+
 <!--@include: ./_include/troubleshooting-sb9si-common.md -->
 
 <!--@include: ./_include/troubleshooting-get-help-common.md -->
@@ -208,13 +212,13 @@ Ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvége
 
 ::: tip
 
-Go back to [Installing boot9strap (MSET9-CLI)](installing-boot9strap-\(mset9-cli\))
+Vissza a [Boot9strap telepítése (MSET9-CLI)](installing-boot9strap-\(mset9-cli\))-hez
 
 :::
 
 ::: tip
 
-Go back to [Installing boot9strap (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\))
+Vissza a [Boot9strap telepítése (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\))-hoz
 
 :::
 

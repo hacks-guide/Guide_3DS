@@ -1,8 +1,8 @@
-# Troubleshooting (Soundhax)
+# Risoluzione dei problemi (Soundhax)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (Soundhax)" page, which is used on system versions between 1.0.0 and 11.3.0. Se non riesci a risolvere il tuo problema con i consigli su questa pagina, entra nel [canale Discord di Nintendo Homebrew](https://discord. g/MWxPgEp) e descrivi il tuo problema, indicando quello che hai già provato.
+Questa pagina offre consigli per la risoluzione dei problemi comunemente riscontrati con la pagina "Installazione di boot9strap (Soundhax)", usata per le versioni di sistema comprese tra 1.0.0 e 11.3.0. Se non riesci a risolvere il tuo problema con i consigli su questa pagina, entra nel [canale Discord di Nintendo Homebrew](https://discord. g/MWxPgEp) e descrivi il tuo problema, indicando quello che hai già provato.
 
-## Issues with Soundhax
+## Problemi con Soundhax
 
 :::details Schermata rossa/viola/rosa e bianca dopo aver eseguito Soundhax
 
@@ -30,6 +30,10 @@ Se il problema non si risolve, prova ad usare un'altra scheda SD.
 
 :::
 
+## Problemi con SafeB9SInstaller
+
+<!--@include: ./_include/troubleshooting-sb9si-bin.md -->
+
 <!--@include: ./_include/troubleshooting-sb9si-common.md -->
 
 <!--@include: ./_include/troubleshooting-get-help-common.md -->
@@ -38,7 +42,7 @@ Se il problema non si risolve, prova ad usare un'altra scheda SD.
 
 ::: tip
 
-Go back to [Installing boot9strap (Soundhax)](installing-boot9strap-\(soundhax\))
+Ritorna a [Installazione di boot9strap (Soundhax)](installing-boot9strap-\(soundhax\))
 
 :::
 
