@@ -180,34 +180,34 @@ Entra nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) per 
 2. Inserisci la scheda SD nel tuo computer
 3. Entra nella cartella `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` presente all'interno della tua scheda SD
 4. Elimina la cartella corrispondente per la tua regione 3DS:
-   - **EUR Region**: `000002ce`
-   - **JPN Region**: `000002cc`
-   - **USA Region**: `000002cd`
-   - **KOR Region**: `000002cf`
+   - **Regione EUR**: `000002ce`
+   - **Regione JPN**: `000002cc`
+   - **Regione USA**: `000002cd`
+   - **Regione KOR**: `000002cf`
 5. Reinserisci la scheda SD nella tua console
 
 :::
 
-:::details Manually entering Homebrew Launcher
+:::details Avvio manuale dell'Homebrew Launcher
 
-If you are missing the Homebrew Launcher application from your HOME Menu, you can follow these instructions to manually enter the Homebrew Launcher. (You will need [boot.3dsx and boot.firm](https://github.com/LumaTeam/Luma3DS/releases/latest) on the root of your SD card.)
+Se ti manca l'applicazione Homebrew Launcher dal menu HOME, puoi seguire queste istruzioni per avviarlo manualmente. (Avrai bisogno dei file [boot.3dsx e boot.firm](https://github.com/LumaTeam/Luma3DS/releases/latest) nella directory principale della tua scheda SD.)
 
 <!--@include: ./_include/launch-hbl-dlp.md -->
 
 :::
 
-:::details Turning off Parental Controls
+:::details Disattivare il Filtro famiglia
 
-You can disable the Parental Controls feature by going to System Settings -> Parental Controls and inserting the PIN, then pressing "Clear Settings", then "Delete" to remove it.
-However, if you do not know the PIN and therefore cannot access the console's settings, you will need to disable it. In order to do this, you need to obtain your console's master key (mkey):
+È possibile disattivare la funzione Filtro famiglia entrando in Impostazioni della console -> Filtro famiglia e inserendo il PIN, quindi premendo "Cancella impostazioni", e infine "Cancella" per rimuoverlo.
+Tuttavia, se non conosci il PIN e quindi non puoi accedere alle impostazioni della console, dovrai disabilitarlo. A tal scopo, dovrai ottenere la master key della tua console (mkey):
 
-1. Go to [this website](https://mkey.eiphax.tech/)
-2. Fill the following boxes with the information:
-   - Device Type: Select "3DS" (the same applies if you are using a 2DS, New 3DS (XL/LL) or New 2DS (XL/LL))
-   - System Date: The day and month your console's clock is set to
-   - Inquiry Number: Can be obtained by pressing "Forgot PIN" then "I Forgot" in the Parental Controls screen
-3. After you have obtained your mkey, press OK on the screen you have obtained your Inquiry Number, then input the master key
-4. Press "Clear Settings", then "Delete" to remove all Parental Controls data
+1. Vai su [questo sito](https://mkey.eiphax.tech/)
+2. Riempi le caselle con le seguenti informazioni:
+   - Device Type: Seleziona "3DS" (vale anche se stai usando un 2DS, New 3DS (XL/LL) o New 2DS (XL/LL))
+   - System Date: Il giorno e il mese impostati nella tua console
+   - Inquiry Number: Si può ottenere premendo "Ho dimenticato il PIN" e poi "L'ho dimenticato" nella schermata Filtro famiglia
+3. Dopo aver ottenuto il tuo mkey, premi OK sulla schermata in cui hai ottenuto il tuo Inquiry Number, quindi inserisci la master key
+4. Premi "Cancella le impostazioni", quindi "Cancella" per rimuovere tutti i dati del Filtro famiglia
 
 :::
 
