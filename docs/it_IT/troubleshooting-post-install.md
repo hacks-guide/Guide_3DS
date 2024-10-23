@@ -43,126 +43,126 @@ I passaggi qui sotto possono essere seguiti in qualsiasi ordine, ma sono elencat
      - **Regione CHN**: `000000A1`
      - **Regione KOR**: `000000A9`
      - **Regione TWN**: `000000B1`
-4. Try booting into recovery mode and updating your system:
+4. Prova ad avviare la modalità di ripristino e ad aggiornare la console:
    - Spegni la tua console
-   - Hold (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A)
+   - Tieni premuti i pulsanti (L) + (R) + (Su) + (A)
    - Accendi la tua console
-   - If you were successful, the console will boot to an "update your system" screen
-5. Follow the [CTRTransfer](ctrtransfer) guide
-6. For further support, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
+   - Se hai avuto successo, la console si avvierà mostrando la schermata "Aggiornamento"
+5. Segui la guida [CTRTransfer](ctrtransfer)
+6. Se hai bisogno di aiuto, chiedi pure nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp)
 
 :::
 
-### Error message on boot
+### Messaggio di errore all'avvio
 
-:::details "An error has occurred: Failed to apply 1 FIRM patch(es)" or "An exception has occurred -- Current process: pm"
+:::details "An error has occurred: Failed to apply 1 FIRM patch(es)" o "An exception has occurred -- Current process: pm"
 
-Your Luma3DS version is outdated. Download the latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) and place `boot.firm` on the root of your SD card, replacing any existing file. Make sure you are extracting the ZIP file with any tool other than WinRAR, as it is known to cause issues with 3DS-related files.
+La tua versione di Luma3DS è obsoleta. Scarica l'ultima versione di [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) e posiziona il file `boot.firm` nella directory principale della tua scheda SD, sostituendo qualunque file preesistente. Assicurati di non stare estraendo il file ZIP con WinRAR, in quanto è noto per causare problemi con file relativi al 3DS.
 
 :::
 
 :::details "Unable to mount CTRNAND or load the CTRNAND FIRM. Please use an external one."
 
-There are a number of reasons as to why this could be happening. In any case, this error can usually be fixed by following the [CTRTransfer](ctrtransfer) guide.
+Ci sono diverse ragioni per cui questo potrebbe accadere. In ogni caso, questo errore di solito si può risolvere seguendo la guida [CTRTransfer](ctrtransfer).
 
 :::
 
 :::details "Si è verificato un errore. Tieni premuto il pulsante POWER per spegnere la console..."
 
-ARM11 exception handlers are disabled, or custom firmware is not installed. Try enabling ARM11 exception handlers:
+I gestori di eccezione ARM11 sono disabilitati, o un custom firware non è installato. Prova ad abilitare i gestori delle eccezioni ARM11:
 
 - Spegni la tua console
-- Hold (Select)
-- Power on your console, while still holding (Select)
-- If the "Disable ARM11 exception handlers" box is checked, uncheck it
+- Tieni premuto (Select)
+- Accendi la tua console, continuando a tenere premuto il pulsante (Select)
+- Se la casella "Disable ARM11 exception handlers" è selezionata, deselezionala
 
 :::
 
-:::details HOME Menu is missing installed applications
+:::details Al menu HOME mancano delle applicazioni installate
 
-This could be caused by various reasons, but most likely because your SD card is not being read by the system.
-You can check if your SD is being read by holding SELECT on boot and checking the yellow text on the bottom screen; if it says "Booted from CTRNAND via B9S", then your console is booting from the internal memory and not from the SD card.
-If this is the case, attempt the steps below, which are listed from easiest to hardest:
+Questo potrebbe essere causato da vari motivi, ma principalmente perché la scheda SD non viene letta dal sistema.
+Puoi controllare se la tua SD non viene letta tenendo premuto SELECT all'avvio e controllando il testo giallo nella schermata inferiore; se dice "Booted from CTRNAND via B9S", la console si sta avviando dalla memoria interna e non dalla scheda SD.
+Se è questo il caso, prova a seguire i seguenti passaggi, indicati dal più semplice al più complesso:
 
-1. Power off your console, remove the SD card, re-insert it, then power on your console
-2. Power off your console, remove the SD card, insert it on your computer, download the latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), extract `boot.firm` from the `Luma3DS.zip` and place it on the root of your SD card (replacing any existing file)
-3. Power off your console, remove the SD card, insert it on your computer and reformat your SD card according to your computer's operating system: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)) _(this will wipe your SD card data)_
-4. Test your SD card for errors by following the guide according to your computer's operating system: [Windows](h2testw-\(windows\)), [Linux](f3-\(linux\)), [macOS](f3xswift-\(mac\)). If your SD card is marked as faulty, then you will have to replace your SD card
-5. Your SD card slot may be broken. Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for further assistance
-
-:::
-
-:::details Blue "BOOTROM ERROR" screen
-
-Your console is likely hard-bricked. You will need to buy an ntrboot flashcart to reinstall boot9strap in order to attempt to fix your console. This may also indicate a hardware issue that cannot be fixed. In any case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
-
-- It is also possible that someone has set a boot-time splash screen that just looks like a brick. Try leaving your console powered on, waiting on the blue screen, for five minutes.
+1. Spegni la tua console, rimuovi la scheda SD, reinseriscila, quindi accendi la tua console
+2. Spegni la console, rimuovi la scheda SD, inseriscila sul tuo computer, scarica l'ultima versione di [Luma3DS](https://github. om/LumaTeam/Luma3DS/releases/latest), estrai il file `boot.firm` dall'archivio `Luma3DS.zip` e posizionalo nella directory principale della tua scheda SD (sostituendo qualunque file preesistente)
+3. Spegni la console, rimuovi la scheda SD, inseriscila sul tuo computer e formatta la scheda SD secondo il sistema operativo del computer: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)) _(questo cancellerà i dati della tua scheda SD)_
+4. Verifica la presenza di eventuali errori nella tua scheda SD seguendo la guida corretta per il sistema operativo del tuo computer: [Windows](h2testw-\(windows\)), [Linux](f3-\(linux\)), [macOS](f3xswift-\(mac\)). Se la tua scheda SD è contrassegnata come difettosa, allora dovrai sostituirla
+5. Lo slot della tua scheda SD potrebbe essere rotto. Entra nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) per chiedere assistenza
 
 :::
 
-:::details Some other error
+:::details Schermata blu con la scritta "BOOTROM ERROR"
 
-Please take a photo of the error and join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+La tua console è probabilmente brickata. Dovrai acquistare una flashcart ntrboot per reinstallare boot9strap e tentare riparare la tua console. Potrebbe anche indicare un problema hardware non risolvibile. In ogni caso, entra nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) per chiedere assistenza.
+
+- È anche possibile che qualcuno abbia impostato una schermata di avvio a tempo che assomigli al messaggio di errore. Prova a lasciare la tua console accesa sulla schermata blu per cinque minuti.
 
 :::
 
-## Software issues on consoles with custom firmware
+:::details Qualche altro errore
 
-:::details DSi / DS functionality is broken or has been replaced with Flipnote Studio
+Scatta una foto dell'errore ed entra nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) per ricevere assistenza.
 
-1. Download the latest release of [TWLFix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest) (the `.3dsx` file)
+:::
+
+## Problemi software su console con custom firmware
+
+:::details La funzionalità DSi / DS è corrotta o è stata sostituita con Flipnote Studio
+
+1. Scarica l'ultima versione di [TWLFix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest) (il file `.3dsx`)
 2. Spegni la tua console
 3. Se assente, crea una cartella chiamata `3ds` nella directory principale della tua scheda SD
-4. Copy `TWLFix-CFW.3dsx` to the `/3ds/` folder on your SD card
+4. Copia il file `TWLFix-CFW.3dsx` nella cartella `/3ds/` nella tua scheda SD
 5. Reinserisci la scheda SD nella tua console
-6. Open the Homebrew Launcher
-7. Launch TWLFix-CFW from the list of homebrew
-8. Press (A) to uninstall the broken TWL titles
-9. Press (Start) to reboot the console
+6. Avvia l'Homebrew Launcher
+7. Avvia TWLFix-CFW dalla lista degli homebrew disponibili
+8. Premi il pulsante (A) per disinstallare i titoli TWL corrotti
+9. Premi (Start) per riavviare la console
 10. Aggiorna la console andando su Impostazioni della console, poi "Impostazioni generali", infine scorri a destra e seleziona "Aggiornamento"
-    - The update will see that the essential TWL titles have been uninstalled, and will redownload and reinstall them
-11. Once the update is complete, tap "OK" to reboot the console
+    - L'aggiornamento si occuperà di disinstallare i principali titoli TWL, per riscaricarli e reinstallarli
+11. Al termine dell'aggiornamento, premi "OK" per riavviare la console
 
 :::
 
-:::details GBA Virtual Console and/or Safe Mode functionality is broken
+:::details La funzionalità GBA Virtual Console e/o Modalità Provvisoria è corrotta
 
-Your console is running Luma3DS 6.6 or older, likely via arm9loaderhax. You should follow [A9LH to B9S](a9lh-to-b9s) to update your console to a modern custom firmware environment.
-
-:::
-
-:::details Extended memory mode games (Pokemon Sun/Moon, Smash, etc.) don't work
-
-This can occur after a CTRTransfer or region change on Old 3DS / 2DS. Follow the instructions [here](region-changing#section-vi---fixing-locale-related-issues) to fix this issue (skipping steps 3, 4, 5, and 6).
+La tua console sta eseguendo Luma3DS 6.6 o precedente, probabilmente tramite arm9loaderhax. Dovresti seguire [Da A9LH a B9S](a9lh-to-b9s) per aggiornare la tua console con un custom firmware moderno.
 
 :::
 
-:::details Exception screen when booting/loading an application
+:::details I giochi in modalità memoria estesa (Pokemon Sole/Luna, Smash, ecc.) non funzionano
 
-Look for your exception screen in [this page](https://wiki.hacks.guide/wiki/3DS:Error_screens/Luma3DS_exception_screen).
-If you weren't able to find your error or the instructions didn't work, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for further assistance.
-
-:::
-
-:::details Opening the HOME Menu settings crashes the console or loads the Homebrew Launcher
-
-Your console likely still has menuhax67 installed. To uninstall menuhax67, download the latest release of [menuhax67](https://github.com/zoogie/menuhax67/releases/latest) (the menuhax `.zip`), then follow the ["Uninstall menuhax67" section](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits/menuhax67#Uninstall_menuhax67) here.
+Questo può verificarsi dopo un CTRTransfer o dopo un cambio di regione su Old 3DS / 2DS. Segui le istruzioni indicate [qui](region-changing#section-vi---fixing-locale-related-issues) per risolvere il problema (saltando i passaggi 3, 4, 5 e 6).
 
 :::
 
-:::details Something else
+:::details Schermata di errore all'avvio/caricamento di un'applicazione
 
-Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance, and describe the issue that you see.
+Cerca la tua schermata di errore in [questa pagina](https://wiki.hacks.guide/wiki/3DS:Error_screens/Luma3DS_exception_screen).
+Se non sei stato in grado di trovare il tuo errore o le istruzioni non funzionano, unisciti a [Nintendo Homebrew su Discord](https://discord.gg/MWxPgEp) per ulteriore assistenza.
 
 :::
 
-## Other troubleshooting
+:::details Avviare le impostazioni del menu HOME crasha la console o carica l'Homebrew Launcher
 
-:::details Clear HOME Menu extdata
+Probabilmente la tua console ha ancora menuhax67 installato. Per disinstallare menuhax67, scarica l'ultima versione di [menuhax67](https://github.com/zoogie/menuhax67/releases/latest) (il file `.zip` di menuhax), quindi segui la [sezione "Uninstall menuhax67"](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits/menuhax67#Uninstall_menuhax67).
+
+:::
+
+:::details Qualcos'altro
+
+Entra nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) per ricevere assistenza, e descrivi il problema che riscontri.
+
+:::
+
+## Risoluzione di ulteriori problemi
+
+:::details Cancellare gli extdata del menu Home
 
 1. Spegni la tua console
 2. Inserisci la scheda SD nel tuo computer
-3. Navigate to the `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` folder on your SD card
+3. Entra nella cartella `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` presente all'interno della tua scheda SD
 4. Elimina la cartella corrispondente per la tua regione 3DS:
    - **Regione EUR**: `00000098`
    - **Regione JPN**: `00000082`
@@ -174,11 +174,11 @@ Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance, 
 
 :::
 
-:::details Clear HOME Menu theme data
+:::details Pulizia dei dati dei temi del menu HOME
 
 1. Spegni la tua console
 2. Inserisci la scheda SD nel tuo computer
-3. Navigate to the `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` folder on your SD card
+3. Entra nella cartella `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` presente all'interno della tua scheda SD
 4. Elimina la cartella corrispondente per la tua regione 3DS:
    - **EUR Region**: `000002ce`
    - **JPN Region**: `000002cc`
