@@ -40,7 +40,7 @@ This page is for Windows users only. If you are not on Windows, check out the [F
 
 ::: info
 
-You're done formatting your sd card if it's **32GB or smaller.**
+You're done formatting your SD card if it's **32GB or smaller.**
 
 :::
 
