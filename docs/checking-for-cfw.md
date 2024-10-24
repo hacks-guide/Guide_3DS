@@ -2,7 +2,7 @@
 
 ## Required Reading
 
-This is an add-on section to check if your console already has a modern custom firmware.
+This will check if your console already has a modern custom firmware.
 
 If your console already has an arm9loaderhax or boot9strap based custom firmware, you will need to follow the instructions indicated to upgrade your setup to a modern one.
 
@@ -23,7 +23,7 @@ If your console has a menuhax-based CFW setup, you should [clear HOME Menu's ext
 
 ::: tip
 
-If your console boots to the normal HOME Menu, return to [Get Started](get-started)
+If your console boots to the normal HOME Menu, continue to [Get Started](get-started)
 
 :::
 
