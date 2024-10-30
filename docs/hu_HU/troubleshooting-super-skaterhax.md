@@ -14,7 +14,7 @@ Ezak a lépések csak a "Boot9strap telepítése (super-skaterhax)" oldalhoz ér
 
 Ha nincs szín villogás a "GO GO!" megnyomása után:
 
-- Legyél biztos abban, hogy a rendszer idő és [régiós beállításaid](/images/screenshots/skater_lang.png) megfelelőek
+- Ensure that you have set your system date and [region](/images/screenshots/skaterhax/skater-lang.png) correctly
 - Biztosítsd, hogy ne legyen másik böngésző fül megnyitva, majd indítsd újra a böngészőt és próbáld újra az exploit-ot
 
 Ha a képernyő színeket villogtat, akkor lefagy/összeomlik:
@@ -30,7 +30,7 @@ Ha a képernyő színeket villogtat, akkor lefagy/összeomlik:
 
 :::: details "An error has occurred. Hold down the POWER button to turn off the power..." (fekete képernyő szöveggel)
 
-A `arm11code.bin` fájl hiányzik, vagy rossz helyen van. Biztosítsd, hogy [super-skaterhax legfrissebb verziójából](https://github.com/zoogie/super-skaterhax/releases/latest) régiódhoz és verziódhoz tartozó fájlokat az SD kártya gyökerébe másold (nem egy mappán belülre).
+A `arm11code.bin` fájl hiányzik, vagy rossz helyen van. Make sure to copy the files of the [latest version of super-skaterhax](https://skater.nintendohomebrew.com/) for your region and version to the root of your SD card (not inside of a folder).
 
 ::: info
 
