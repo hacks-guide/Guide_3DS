@@ -14,7 +14,7 @@ Queste istruzioni sono valide solo per la pagina "Installazione di boot9strap (s
 
 Se nessun colore lampeggia dopo aver premuto "GO GO!":
 
-- Assicurati di aver impostato correttamente la data di sistema e [regione](/images/screenshots/skater/skater-lang.png)
+- Ensure that you have set your system date and [region](/images/screenshots/skaterhax/skater-lang.png) correctly
 - Assicurarsi che non siano aperte altre schede del browser, quindi riavvia il browser e ritenta l'exploit
 
 Se lo schermo lampeggia con i colori, poi si blocca o crasha:
@@ -30,7 +30,7 @@ Se lo schermo lampeggia con i colori, poi si blocca o crasha:
 
 :::: details "Si è verificato un errore. Tieni premuto il pulsante POWER per spegnere la console..." (schermata nera con testo)
 
-Il file `arm11code.bin` è mancante o mal posizionato. Assicurati di copiare i file [dell'ultima versione di super-skaterhax](https://github.com/zoogie/super-skaterhax/releases/latest) per la tua regione e versione della console nella directory principale della tua scheda SD (non all'interno di una cartella).
+Il file `arm11code.bin` è mancante o mal posizionato. Make sure to copy the files of the [latest version of super-skaterhax](https://skater.nintendohomebrew.com/) for your region and version to the root of your SD card (not inside of a folder).
 
 ::: info
 
