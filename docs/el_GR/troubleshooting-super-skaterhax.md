@@ -14,7 +14,7 @@
 
 Εάν δεν αναβοσβήσει κάποιο χρώμα μετά το πάτημα του «GO GO!»:
 
-- Βεβαιωθείτε ότι έχετε ορίσει σωστά την ημερομηνία και την [περιοχή](/images/screenshots/skater/skater-lang.png) του συστήματός σας
+- Ensure that you have set your system date and [region](/images/screenshots/skaterhax/skater-lang.png) correctly
 - Βεβαιωθείτε ότι δεν υπάρχουν άλλες ανοικτές καρτέλες στο πρόγραμμα περιήγησης, κάντε επανεκκίνηση του προγράμματος περιήγησης και δοκιμάστε ξανά το exploit
 
 Εάν η οθόνη αναβοσβήσει με χρώματα και έπειτα, «παγώσει» ή διακοπεί απρόσμενα η λειτουργία:
@@ -30,7 +30,7 @@
 
 :::: details «An error has occurred. Hold down the POWER button to turn off the power...» (μαύρη οθόνη με κείμενο)
 
-Το αρχείο `arm11code.bin` απουσιάζει ή βρίσκεται σε λάθος τοποθεσία. Βεβαιωθείτε ότι έχετε αντιγράψει τα αρχεία της [πιο πρόσφατης έκδοσης του super-skaterhax](https://github.com/zoogie/super-skaterhax/releases/latest) για την περιοχή και την έκδοσή σας στη ρίζα της κάρτας SD σας (όχι μέσα σε κάποιο φάκελο).
+Το αρχείο `arm11code.bin` απουσιάζει ή βρίσκεται σε λάθος τοποθεσία. Make sure to copy the files of the [latest version of super-skaterhax](https://skater.nintendohomebrew.com/) for your region and version to the root of your SD card (not inside of a folder).
 
 ::: info
 
