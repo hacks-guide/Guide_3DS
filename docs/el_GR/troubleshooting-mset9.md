@@ -212,7 +212,7 @@
 
 ::: tip
 
-Go back to [Installing boot9strap (MSET9 CLI)](installing-boot9strap-\(mset9-cli\))
+Επιστροφή στην [Εγκατάσταση του boot9strap (MSET9 CLI)](installing-boot9strap-\(mset9-cli\))
 
 :::
 
