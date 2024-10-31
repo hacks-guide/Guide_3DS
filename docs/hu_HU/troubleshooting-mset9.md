@@ -212,7 +212,7 @@ Ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvége
 
 ::: tip
 
-Vissza a [Boot9strap telepítése (MSET9-CLI)](installing-boot9strap-\(mset9-cli\))-hez
+Go back to [Installing boot9strap (MSET9 CLI)](installing-boot9strap-\(mset9-cli\))
 
 :::
 
