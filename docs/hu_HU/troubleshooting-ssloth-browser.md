@@ -90,7 +90,7 @@ Ha ez sikertelen, próbálkozz egy másik SD kártyával.
 
 :::
 
-## Issues with SafeB9SInstaller
+## Problémák a SafeB9SInstaller-rel
 
 <!--@include: ./_include/troubleshooting-sb9si-bin.md -->
 
