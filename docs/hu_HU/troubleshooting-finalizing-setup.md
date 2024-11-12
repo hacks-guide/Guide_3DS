@@ -1,8 +1,8 @@
-# Troubleshooting (Finalizing Setup)
+# Hibaelhárítás (Telepítés véglegesítése)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Finalizing Setup" page. Ha nem tudod megoldani a problémád az oldal tanácsai alapján, csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és írd le a problémádat és azt is hogy mi az amit már próbáltál.
+Ez az oldal hibaelhárítási tanácsokat ad sűrűn előforduló problémákhoz a "Telepítés véglegesítése" oldalhoz. Ha nem tudod megoldani a problémád az oldal tanácsai alapján, csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és írd le a problémádat és azt is hogy mi az amit már próbáltál.
 
-## Issues with Finalizing Setup
+## Problémák a telepítés véglegesítésével
 
 :::details Sikertelen a konzol frissítése
 
@@ -142,7 +142,7 @@ Nem távolítottad el az MSET9-et az előző oldalon. A szkript megpróbálja ne
 
 ::: tip
 
-Go back to [Finalizing Setup](finalizing-setup)
+Vissza a [telepítés véglegesítésére](finalizing-setup)
 
 :::
 

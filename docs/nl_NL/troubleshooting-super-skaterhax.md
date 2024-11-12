@@ -14,7 +14,7 @@ These instructions are only valid for the "Installing boot9strap (super-skaterha
 
 If no colors flash after pressing "GO GO!":
 
-- Ensure that you have set your system date and [region](/images/screenshots/skater/skater-lang.png) correctly
+- Ensure that you have set your system date and [region](/images/screenshots/skaterhax/skater-lang.png) correctly
 - Ensure that no other browser tabs are open, then restart the browser and try the exploit again
 
 If the screen flashes colors then freezes/crashes:
@@ -30,7 +30,7 @@ If the screen flashes colors then freezes/crashes:
 
 :::: details "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
 
-The file `arm11code.bin` is missing or misplaced. Make sure to copy the files of the [latest version of super-skaterhax](https://github.com/zoogie/super-skaterhax/releases/latest) for your region and version to the root of your SD card (not inside of a folder).
+The file `arm11code.bin` is missing or misplaced. Make sure to copy the files of the [latest version of super-skaterhax](https://skater.nintendohomebrew.com/) for your region and version to the root of your SD card (not inside of a folder).
 
 ::: info
 
@@ -45,6 +45,10 @@ The file `arm11code.bin` is missing or misplaced. Make sure to copy the files of
 This likely indicates that you already have custom firmware. Je zou best [controleren op CFW](checking-for-cfw).
 
 :::
+
+## Issues with SafeB9SInstaller
+
+<!--@include: ./_include/troubleshooting-sb9si-bin.md -->
 
 <!--@include: ./_include/troubleshooting-sb9si-common.md -->
 

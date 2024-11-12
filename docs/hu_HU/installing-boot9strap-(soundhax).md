@@ -69,7 +69,7 @@ Ebben a fejezetben el fogod indítani a Soundhax-ot a Nintendo 3DS Sound app-on 
    - Ez lehet, hogy csak sok (akár 10) próba után fog működni
    - Ha azt az üzenetet látod, hogy "Could not play", akkor vagy olyan rendszer verzión vagy, ami inkompatiblis a soundhax-szal, vagy rossz Soundhax kiadást töltöttél le
    - Ha lefagyna, kényszerítsd leállásra a konzolt a bekapcsológomb lenyomva tartásával, majd próbálkozz újra
-   - If you get a different error, [follow this troubleshooting guide](troubleshooting-soundhax)
+   - Ha másik hibát kapsz, [kövesd ezt a hibaelhárítási útmutatót](troubleshooting-soundhax)
 
    ::: info
 
@@ -84,7 +84,7 @@ Ebben a fejezetben el fogod indítani a Soundhax-ot a Nintendo 3DS Sound app-on 
 Ebben a fejezetben egyedi firmware-t fogsz telepíteni a konzolodra.
 
 1. Ha kéri, akkor nyomd meg a gombokat egyszerre, amiket kijelez a felső képernyőn, hogy telepíthesd a boot9strap-et
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-soundhax)
+   - Ha egy lépés az alsó képernyőn piros színű szöveget eredményez, és nem kér a rendszer tőled egy gomb-kombinációt, akkor [kövesd ezt a hibaelhárítási útmutatót](troubleshooting-soundhax)
 2. Ha ez elkészült, nyomd meg az (A) gombot a konzolod újraindításához
 
 <!--@include: ./_include/configure-luma3ds.md -->

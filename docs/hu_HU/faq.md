@@ -138,7 +138,7 @@ Ha a játék nem ugyanabból a régióból származik, mint a konzolod, akkor [d
 
 :::details Segítség! Valami rossz dolog történt és a 3DS-em nem bootol a HOME menübe...
 
-Please look at the [troubleshooting guide](troubleshooting-post-install). **A CFW eltávolítása, amikor a konzolod nem bootolható nem ajánlott, mert nagyon
+Kérjük, nézd meg a [hibaelhárítási útmutatót](troubleshooting-post-install). **A CFW eltávolítása, amikor a konzolod nem bootolható nem ajánlott, mert nagyon
 valószínű, hogy brickeli az eszközödet**.
 
 :::

@@ -30,6 +30,10 @@ Mocht dit niet lukken, gebruik dan een andere SD-kaart.
 
 :::
 
+## Issues with SafeB9SInstaller
+
+<!--@include: ./_include/troubleshooting-sb9si-bin.md -->
+
 <!--@include: ./_include/troubleshooting-sb9si-common.md -->
 
 <!--@include: ./_include/troubleshooting-get-help-common.md -->

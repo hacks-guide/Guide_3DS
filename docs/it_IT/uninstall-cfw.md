@@ -85,7 +85,7 @@ Lo scopo di questa sezione è verificare se le applicazioni integrate in modalit
 
 ::: warning
 
-Se uno di questi test non è riuscito, la modalità DS, la Modalità download DS e/o le impostazioni di collegamento DS potrebbero essere inaccessibili al termine della rimozione del CFW! You should [fix DS mode](troubleshooting-post-install) before continuing.
+Se uno di questi test non è riuscito, la modalità DS, la Modalità download DS e/o le impostazioni di collegamento DS potrebbero essere inaccessibili al termine della rimozione del CFW! Dovresti [ripristinare la modalità DS](troubleshooting-post-install) prima di continuare.
 
 :::
 

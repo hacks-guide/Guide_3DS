@@ -1,20 +1,20 @@
-# Troubleshooting (super-skaterhax)
+# Hibaelhárítás (super-skaterhax)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (super-skaterhax)" page. Ha nem tudod megoldani a problémád az oldal tanácsai alapján, csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és írd le a problémádat és azt is hogy mi az amit már próbáltál.
+Ez az oldal hibaelhárítási tanácsokat ad sűrűn előforduló problémákhoz a "Boot9strap telepítése (super-skaterhax)" oldalhoz. Ha nem tudod megoldani a problémád az oldal tanácsai alapján, csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és írd le a problémádat és azt is hogy mi az amit már próbáltál.
 
 ::: warning
 
-These instructions are only valid for the "Installing boot9strap (super-skaterhax)" page. If you are using **anything other than** a **New 3DS** on version **11.15.0 through 11.17.0**, you should follow [troubleshooting instructions for Installing boot9strap (SSLoth-Browser)](troubleshooting-ssloth-browser) instead.
+Ezak a lépések csak a "Boot9strap telepítése (super-skaterhax)" oldalhoz érvényesek. Ha **mást használsz, mint** egy **New 3DS** \*\*11.15.0-11.17.0 \*\* verzióval, követned kell a [hibaelhárítási lépéseket a Boot9strap telepítése (SSLoth-Browser)](troubleshooting-ssloth-browser) oldalhoz helyette.
 
 :::
 
-## Issues with super-skaterhax
+## Problémák a super-skaterhax-szal
 
 :::details "An error has occurred. Please save your data in any software currently in use, then restart the system."
 
 Ha nincs szín villogás a "GO GO!" megnyomása után:
 
-- Legyél biztos abban, hogy a rendszer idő és [régiós beállításaid](/images/screenshots/skater_lang.png) megfelelőek
+- Ensure that you have set your system date and [region](/images/screenshots/skaterhax/skater-lang.png) correctly
 - Biztosítsd, hogy ne legyen másik böngésző fül megnyitva, majd indítsd újra a böngészőt és próbáld újra az exploit-ot
 
 Ha a képernyő színeket villogtat, akkor lefagy/összeomlik:
@@ -30,7 +30,7 @@ Ha a képernyő színeket villogtat, akkor lefagy/összeomlik:
 
 :::: details "An error has occurred. Hold down the POWER button to turn off the power..." (fekete képernyő szöveggel)
 
-A `arm11code.bin` fájl hiányzik, vagy rossz helyen van. Biztosítsd, hogy [super-skaterhax legfrissebb verziójából](https://github.com/zoogie/super-skaterhax/releases/latest) régiódhoz és verziódhoz tartozó fájlokat az SD kártya gyökerébe másold (nem egy mappán belülre).
+A `arm11code.bin` fájl hiányzik, vagy rossz helyen van. Make sure to copy the files of the [latest version of super-skaterhax](https://skater.nintendohomebrew.com/) for your region and version to the root of your SD card (not inside of a folder).
 
 ::: info
 
@@ -46,6 +46,10 @@ Ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvége
 
 :::
 
+## Issues with SafeB9SInstaller
+
+<!--@include: ./_include/troubleshooting-sb9si-bin.md -->
+
 <!--@include: ./_include/troubleshooting-sb9si-common.md -->
 
 <!--@include: ./_include/troubleshooting-get-help-common.md -->
@@ -54,7 +58,7 @@ Ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvége
 
 ::: tip
 
-Go back to [Installing boot9strap (super-skaterhax)](installing-boot9strap-\(super-skaterhax\))
+Vissza a [Boot9strap telepítése (super-skaterhax)](installing-boot9strap-\(super-skaterhax\))-hez
 
 :::
 

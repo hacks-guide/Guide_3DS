@@ -193,6 +193,8 @@ This likely indicates that you already have custom firmware. You should [check f
 
 :::
 
+## Issues with SafeB9SInstaller
+<!--@include: ./_include/troubleshooting-sb9si-bin.md -->
 <!--@include: ./_include/troubleshooting-sb9si-common.md -->
 
 <!--@include: ./_include/troubleshooting-get-help-common.md -->
@@ -200,7 +202,7 @@ This likely indicates that you already have custom firmware. You should [check f
 
 ::: tip
 
-Go back to [Installing boot9strap (MSET9-CLI)](installing-boot9strap-(mset9-cli))
+Go back to [Installing boot9strap (MSET9 CLI)](installing-boot9strap-(mset9-cli))
 
 :::
 

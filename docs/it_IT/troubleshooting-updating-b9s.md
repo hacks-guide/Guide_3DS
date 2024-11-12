@@ -1,6 +1,10 @@
-# Troubleshooting (Updating B9S)
+# Risoluzione dei problemi (Aggiornare B9S)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Updating B9S" page. Se non riesci a risolvere il tuo problema con i consigli su questa pagina, entra nel [canale Discord di Nintendo Homebrew](https://discord. g/MWxPgEp) e descrivi il tuo problema, indicando quello che hai già provato.
+Questa pagina offre consigli per la risoluzione dei problemi comunemente riscontrati nella pagina "Aggiornare B9S. Se non riesci a risolvere il tuo problema con i consigli su questa pagina, entra nel [canale Discord di Nintendo Homebrew](https://discord. g/MWxPgEp) e descrivi il tuo problema, indicando quello che hai già provato.
+
+## Problemi con SafeB9SInstaller
+
+<!--@include: ./_include/troubleshooting-sb9si-firm.md -->
 
 <!--@include: ./_include/troubleshooting-sb9si-common.md -->
 
@@ -10,7 +14,7 @@ This page offers troubleshooting advice for commonly encountered issues with the
 
 ::: tip
 
-Go back to [Updating B9S](updating-b9s)
+Torna a [Aggiornare B9S](updating-b9s)
 
 :::
 

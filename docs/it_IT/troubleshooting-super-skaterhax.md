@@ -1,20 +1,20 @@
-# Troubleshooting (super-skaterhax)
+# Risoluzione dei problemi (super-skaterhax)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (super-skaterhax)" page. Se non riesci a risolvere il tuo problema con i consigli su questa pagina, entra nel [canale Discord di Nintendo Homebrew](https://discord. g/MWxPgEp) e descrivi il tuo problema, indicando quello che hai già provato.
+Questa pagina offre consigli per la risoluzione dei problemi comunemente riscontrati nella pagina "Installazione di boot9strap (super-skaterhax)". Se non riesci a risolvere il tuo problema con i consigli su questa pagina, entra nel [canale Discord di Nintendo Homebrew](https://discord. g/MWxPgEp) e descrivi il tuo problema, indicando quello che hai già provato.
 
 ::: warning
 
-These instructions are only valid for the "Installing boot9strap (super-skaterhax)" page. If you are using **anything other than** a **New 3DS** on version **11.15.0 through 11.17.0**, you should follow [troubleshooting instructions for Installing boot9strap (SSLoth-Browser)](troubleshooting-ssloth-browser) instead.
+Queste istruzioni sono valide solo per la pagina "Installazione di boot9strap (super-skaterhax)". Se stai usando **qualcosa di diverso** di un **New 3DS** con versioni **tra 11.15.0 e 11.17.0**, dovresti invece seguire le [istruzioni per la risoluzione dei problemi con l'installazione di boot9strap (SSLoth-Browser)](troubleshooting-ssloth-browser).
 
 :::
 
-## Issues with super-skaterhax
+## Problemi con super-skaterhax
 
 :::details "Si è verificato un errore. Salva i dati di qualunque applicazione attualmente in uso, quindi riavvia la console."
 
 Se nessun colore lampeggia dopo aver premuto "GO GO!":
 
-- Assicurati di aver impostato correttamente la data di sistema e [regione](/images/screenshots/skater/skater-lang.png)
+- Assicurati di aver impostato correttamente la data di sistema e [la regione](/images/screenshots/skaterhax/skater-lang.png)
 - Assicurarsi che non siano aperte altre schede del browser, quindi riavvia il browser e ritenta l'exploit
 
 Se lo schermo lampeggia con i colori, poi si blocca o crasha:
@@ -30,7 +30,7 @@ Se lo schermo lampeggia con i colori, poi si blocca o crasha:
 
 :::: details "Si è verificato un errore. Tieni premuto il pulsante POWER per spegnere la console..." (schermata nera con testo)
 
-Il file `arm11code.bin` è mancante o mal posizionato. Assicurati di copiare i file [dell'ultima versione di super-skaterhax](https://github.com/zoogie/super-skaterhax/releases/latest) per la tua regione e versione della console nella directory principale della tua scheda SD (non all'interno di una cartella).
+Il file `arm11code.bin` è mancante o mal posizionato. Assicurati di copiare i file [dell'ultima versione di super-skaterhax](https://skater.nintendohomebrew.com/) per la tua regione e versione della console nella directory principale della tua scheda SD (non all'interno di una cartella).
 
 ::: info
 
@@ -46,6 +46,10 @@ Probabilmente significa che hai già un custom firmware. Dovresti [verificare la
 
 :::
 
+## Problemi con SafeB9SInstaller
+
+<!--@include: ./_include/troubleshooting-sb9si-bin.md -->
+
 <!--@include: ./_include/troubleshooting-sb9si-common.md -->
 
 <!--@include: ./_include/troubleshooting-get-help-common.md -->
@@ -54,7 +58,7 @@ Probabilmente significa che hai già un custom firmware. Dovresti [verificare la
 
 ::: tip
 
-Go back to [Installing boot9strap (super-skaterhax)](installing-boot9strap-\(super-skaterhax\))
+Torna a [Installazione di boot9strap (super-skaterhax)](installing-boot9strap-\(super-skaterhax\))
 
 :::
 

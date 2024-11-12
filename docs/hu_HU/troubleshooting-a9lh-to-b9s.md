@@ -1,6 +1,10 @@
-# Troubleshooting (A9LH to B9S)
+# Hibaelhárítás (A9LH-ról B9S-re)
 
-This page offers troubleshooting advice for commonly encountered issues with the "A9LH to B9S" page. Ha nem tudod megoldani a problémád az oldal tanácsai alapján, csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és írd le a problémádat és azt is hogy mi az amit már próbáltál.
+Ez az oldal hibaelhárítási tanácsokat ad sűrűn előforduló problémákhoz a "AL9LH-ról B9S-re" oldalhoz. Ha nem tudod megoldani a problémád az oldal tanácsai alapján, csatlakozz a [Nintendo Homebrew-hoz Discord-on](https://discord.gg/MWxPgEp) és írd le a problémádat és azt is hogy mi az amit már próbáltál.
+
+## Issues with SafeB9SInstaller
+
+<!--@include: ./_include/troubleshooting-sb9si-bin.md -->
 
 <!--@include: ./_include/troubleshooting-sb9si-common.md -->
 
@@ -10,7 +14,7 @@ This page offers troubleshooting advice for commonly encountered issues with the
 
 ::: tip
 
-Go back to [A9LH to B9S](a9lh-to-b9s)
+Vissza az [A9LH-ről B9S-re](a9lh-to-b9s)
 
 :::
 

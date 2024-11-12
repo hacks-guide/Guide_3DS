@@ -37,7 +37,7 @@ Se durante questa sezione ti verrà chiesto di sovrascrivere dei file sulla tua 
 1. Accendi la tua console
    - SafeB9SInstaller dovrebbe avviarsi automaticamente
 2. Quando richiesto, inserisci la combinazione di tasti richiesta sullo schermo superiore per installare boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-updating-b9s)
+   - Se una sezione nella schermata inferiore ha un testo di colore rosso, e non ti viene richiesto di inserire una combinazione di tasti, [segui questa guida per risolvere i problemi](troubleshooting-updating-b9s)
 3. Una volta completato, forza lo spegnimento della console tenendo premuto il tasto POWER
    - Finché non verrà completata la successiva sezione, la console visualizzerà soltanto la schermata di SafeB9SInstaller all'accensione
 
