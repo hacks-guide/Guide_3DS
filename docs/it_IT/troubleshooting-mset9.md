@@ -212,7 +212,7 @@ Probabilmente significa che hai già un custom firmware. Dovresti [verificare la
 
 ::: tip
 
-Ritorna a [Installazione di boot9strap (MSET9-CLI)](installing-boot9strap-\(mset9-cli\))
+Ritorna a [Installazione di boot9strap (MSET9 CLI)](installing-boot9strap-\(mset9-cli\))
 
 :::
 

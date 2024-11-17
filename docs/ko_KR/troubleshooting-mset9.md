@@ -212,7 +212,7 @@ If you continue to have this issue and are sure that you did everything correctl
 
 ::: tip
 
-[boot9strap 설치 (MSET9 CLI)](installing-boot9strap-\(mset9-cli\))로 돌아갑니다
+Go back to [Installing boot9strap (MSET9 CLI)](installing-boot9strap-\(mset9-cli\))
 
 :::
 

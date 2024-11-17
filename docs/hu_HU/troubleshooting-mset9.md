@@ -200,7 +200,7 @@ Ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvége
 
 :::
 
-## Issues with SafeB9SInstaller
+## Problémák a SafeB9SInstaller-rel
 
 <!--@include: ./_include/troubleshooting-sb9si-bin.md -->
 
@@ -212,7 +212,7 @@ Ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvége
 
 ::: tip
 
-Vissza a [Boot9strap telepítése (MSET9-CLI)](installing-boot9strap-\(mset9-cli\))-hez
+Vissza a [Boot9strap telepítése (MSET9 CLI)](installing-boot9strap-\(mset9-cli\))-hez
 
 :::
 
