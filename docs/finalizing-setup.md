@@ -9,7 +9,7 @@ On this page, we will make critical system file backups and install some homebre
 ::: info
 
 The script will install the following applications:
-(Note: You do not need to install any of these apps - the finalizing script will do this for you.)
+(Note: You do not need to install any of these apps yourself - the finalizing script below will do this for you.)
 
 +  **[FBI](https://github.com/lifehackerhansol/FBI)** *(installs CIA formatted applications)*
 +  **[Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)** *(launches the Homebrew Launcher)*
