@@ -3,6 +3,8 @@ noneSelected: System model is required.
 invalidVersion: This doesn't seem to be a valid system version.
 head:
   - - script
+    - src: /assets/js/common.js
+  - - script
     - src: /assets/js/selecting.js
 ---
 

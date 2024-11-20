@@ -10,10 +10,12 @@ Ez az oldal Windows felhasználókra vonatkozik. Ha nem Windows rendszeren vagy,
 
 ## Amire szükséged lesz
 
-- **32GB vagy kisebb SD kártya esetén:** Az [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/) legfrissebb verziója
-- **64GB vagy nagyobb SD kártya esetén:** A [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm) legfrissebb verziója
+- the latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
+- **csak 64GB vagy nagyobb SD kártya esetén:** A [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm) legfrissebb verziója
 
-## Lépések (32GB vagy kisebb)
+## Lépések
+
+### I. rész - SD Card Formatter
 
 1. Helyezd az SD kártyád a számítógépbe
 
@@ -45,17 +47,19 @@ Ez az oldal Windows felhasználókra vonatkozik. Ha nem Windows rendszeren vagy,
 
 12. Zárd be az SD Card Formatter-t
 
-13. Ha az SD kártya tartalmazott adatot a formázás előtt, akkor azokat most másold vissza a számítógépről
+13. If the SD card is 32GB or smaller and had any files and folders on it before the format, copy everything back from your computer
 
-## Lépések (64GB vagy nagyobb)
+::: info
 
-1. Helyezd az SD kártyád a számítógépbe
+You're done formatting your SD card if it's **32GB or smaller.**
 
-2. Ha az SD kártya tartalmaz adatot, akkor azokat másold át a számítógépre
+:::
 
-3. Futtasd a `guiformat.exe` alkalmazást
+### II. rész - guiformat (CSAK 64GB vagy nagyobbhoz)
 
-4. Válaszd ki az SD kártyád betűjelét a "Drive" alatt
+1. Futtasd a `guiformat.exe` alkalmazást
+
+2. Válaszd ki az SD kártyád betűjelét a "Drive" alatt
 
    ::: danger
 
@@ -63,23 +67,23 @@ Ez az oldal Windows felhasználókra vonatkozik. Ha nem Windows rendszeren vagy,
 
    :::
 
-5. Válassz méretet az "Allocation unit size" alatt
+3. Válassz méretet az "Allocation unit size" alatt
    - Ha az SD kártya 64GB, válaszd a 32768-ot
    - Ha az SD kártya nagyobb, mint 64GB, válaszd a 65536-ot
 
-6. Írj be valamit "Volume label"-nek
+4. Írj be valamit "Volume label"-nek
 
-7. Ügyelj rá, hogy a "Quick Format" ki legyen választva
+5. Ügyelj rá, hogy a "Quick Format" ki legyen választva
 
-8. Kattints a "Start"-ra
+6. Kattints a "Start"-ra
 
-9. Kattints az "OK"-ra
+7. Kattints az "OK"-ra
 
-10. Várd meg amíg a formázás befejeződik
+8. Várd meg amíg a formázás befejeződik
 
-11. Kattints a "Close"-ra
+9. Kattints a "Close"-ra
 
-12. Ha az SD kártya tartalmazott adatot a formázás előtt, akkor azokat most másold vissza a számítógépről
+10. Ha az SD kártya tartalmazott adatot a formázás előtt, akkor azokat most másold vissza a számítógépről
 
 ## Hibaelhárítás
 

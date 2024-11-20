@@ -1,3 +1,13 @@
+---
+head:
+  - - script
+    - src: /assets/js/common.js
+  - - script
+    - src: /assets/js/skater-link.js
+  - - script
+    - src: /assets/js/link-common.js
+---
+
 # boot9strap 설치 (super-skaterhax)
 
 :::details 기술적 상세 정보 (선택 사항)

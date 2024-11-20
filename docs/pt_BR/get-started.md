@@ -1,10 +1,11 @@
 ---
 noneSelected: Modelo do sistema é necessário.
 invalidVersion: Esta não parece ser uma versão válida de sistema.
-head: [
-    ['script', {src: '/assets/js/common.js'}],
-    ['script', {src: '/assets/js/selecting.js'}]
-]
+head:
+  - - script
+    - src: /assets/js/common.js
+  - - script
+    - src: /assets/js/selecting.js
 ---
 
 # Começando

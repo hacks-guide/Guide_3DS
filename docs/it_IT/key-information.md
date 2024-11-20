@@ -10,9 +10,9 @@ Questa pagina contiene alcune terminologie informatiche di base e informazioni s
 
 Ogni sezione è inizialmente collassata. Fai clic o tocca il nome della sezione per aprirla.
 
-## Cose che dovresti sapere sul 3DS
+## Compatibility
 
-:::: details Compatibilità 3DS/2DS
+:::: details What consoles is this guide compatible with?
 
 ::: info
 
@@ -20,11 +20,11 @@ Ogni sezione è inizialmente collassata. Fai clic o tocca il nome della sezione 
 
 :::
 
-Questa guida funziona su tutte le versioni retail della famiglia di console Nintendo 3DS (compresi 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, e New 2DS XL/LL), indipendentemente dalla regione o dal firmware.
+This guide works with every retail console in the Nintendo 3DS family of consoles (including the 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, and New 2DS XL/LL), regardless of region or firmware. It is NOT compatible with the DSi family of consoles (DSi, DSi XL/LL). For DSi-family consoles, consult [this guide](https://dsi.cfw.guide) instead.
 
 ::::
 
-:::: details Compatibilità del computer
+:::: details What kind of computer / hardware do I need to follow this guide?
 
 ::: info
 
@@ -36,7 +36,7 @@ Nella maggior parte dei casi, puoi seguire questa guida a patto che tu possa sca
 
 ::::
 
-:::: details Posizione, tipo e capienza della scheda SD
+:::: details What kind of SD card does my console use/need?
 
 ::: info
 
@@ -74,7 +74,7 @@ Riassumendo: Modificare la tua console è sicuro, ma _**è una tua responsabilit
 
 ::::
 
-## Cose che devi fare sul tuo computer
+## Important terminology
 
 ::: warning
 
@@ -82,7 +82,7 @@ Seguendo questa guida non dovrebbero verificarsi perdite di dati, ma è sempre p
 
 :::
 
-:::: details Terminologia del posizionamento dei file (es. "directory principale della scheda SD", "/luma/")
+:::: details What does "root of SD" or "/luma/" mean?
 
 ::: info
 
@@ -110,7 +110,7 @@ Potresti anche vedere i nomi delle cartelle indicati in questa maniera: `/cartel
 
 ::::
 
-:::: details Scaricare file da GitHub
+:::: details How do I download files from GitHub?
 
 ::: info
 
@@ -122,7 +122,7 @@ In questa guida copierai i file scaricati dal tuo computer o cellulare nella sch
 
 ::::
 
-:::: details Aprire/estrarre i file
+:::: details How do I extract/open a ZIP file?
 
 ::: info
 
@@ -138,7 +138,7 @@ Nella maggior parte dei sistemi operativi, per estrarre i file basta farci un do
 
 ::::
 
-:::: details (solo Windows) Estensioni dei file
+:::: details What are file extensions?
 
 ::: info
 

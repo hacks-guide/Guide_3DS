@@ -10,9 +10,9 @@ This page covers some of the base computer terminology and 3DS-specific informat
 
 Each section is collapsed by default. Click or tap on the name of the section to open it.
 
-## Things you should know about the 3DS
+## Compatibility
 
-:::: details 3DS/2DS compatibility
+:::: details What consoles is this guide compatible with?
 
 ::: info
 
@@ -20,11 +20,11 @@ Each section is collapsed by default. Click or tap on the name of the section to
 
 :::
 
-This guide works with every retail console in the Nintendo 3DS family of consoles (including the 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, and New 2DS XL/LL), regardless of region or firmware.
+This guide works with every retail console in the Nintendo 3DS family of consoles (including the 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, and New 2DS XL/LL), regardless of region or firmware. It is NOT compatible with the DSi family of consoles (DSi, DSi XL/LL). For DSi-family consoles, consult [this guide](https://dsi.cfw.guide) instead.
 
 ::::
 
-:::: details Computer compatibility
+:::: details What kind of computer / hardware do I need to follow this guide?
 
 ::: info
 
@@ -36,7 +36,7 @@ In most cases, you can follow this guide as long as you are able to download fil
 
 ::::
 
-:::: details SD card location, type, and capacity
+:::: details What kind of SD card does my console use/need?
 
 ::: info
 
@@ -74,7 +74,7 @@ In short: Modding your console is safe, but it's _**your responsibility**_ if so
 
 ::::
 
-## Things you need to do on your computer
+## Important terminology
 
 ::: warning
 
@@ -82,7 +82,7 @@ Following this guide alone should not result in data loss, but SD card corruptio
 
 :::
 
-:::: details File placement terminology (e.g. "root of SD", "/luma/")
+:::: details What does "root of SD" or "/luma/" mean?
 
 ::: info
 
@@ -110,7 +110,7 @@ You may also see folder names indicated like this: `/folder/`. The slashes are u
 
 ::::
 
-:::: details Downloading files from GitHub
+:::: details How do I download files from GitHub?
 
 ::: info
 
@@ -122,7 +122,7 @@ In this guide, you will copy files that are downloaded on your computer/phone to
 
 ::::
 
-:::: details Opening/extracting files
+:::: details How do I extract/open a ZIP file?
 
 ::: info
 
@@ -138,7 +138,7 @@ On most operating systems, you can extract files by double-clicking the file. If
 
 ::::
 
-:::: details (Windows only) File extensions
+:::: details What are file extensions?
 
 ::: info
 

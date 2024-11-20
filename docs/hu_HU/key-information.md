@@ -10,9 +10,9 @@ Ez az oldal néhány alap számitástechnikai információt és 3DS specifikus i
 
 Minden szekció összezárt alapértelmezésként. Kattints rá vagy érintsd meg a nevét a szekciónak, hogy kinyisd.
 
-## Dolgok amit érdemes tudnod a 3DS-ről
+## Kompatibilitás
 
-:::: details 3DS/2DS kompatibilitás részletek
+:::: details Milyen konzolokkal kompatibilis ez az útmutató?
 
 ::: info
 
@@ -20,11 +20,11 @@ Minden szekció összezárt alapértelmezésként. Kattints rá vagy érintsd me
 
 :::
 
-Ez az útmutató minden kereskedelmi konzollal működik a Nintendo 3DS konzol családból (beleértve a 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, és a New 2DS XL/LL-t), függetlenül a régiótól és a firmware-től.
+Ez az útmutató minden kereskedelmi konzollal működik a Nintendo 3DS konzol családból (beleértve a 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, és a New 2DS XL/LL-t), függetlenül a régiótól és a firmware-től. NEM kompatibilis a DSi család konzoljaival(DSi, DSi XL/LL). A DSi-család konzoljaihoz, tekintsd meg [ezt az útmutatót](https://dsi.cfw.guide) helyette.
 
 ::::
 
-:::: details Számítógép kompatibilitás részletek
+:::: details Milyen számítógépre / hardware-re van szükségem ahhoz, hogy végigcsináljam ezt az útmutatót?
 
 ::: info
 
@@ -36,7 +36,7 @@ A legtöbb esetben követheted ezt az útmutatót egészen addig, amíg képes v
 
 ::::
 
-:::: details SD kártya helye, típusa és kapacitása részletek
+:::: details Milyen SD kártyát tud a konzolom használni?
 
 ::: info
 
@@ -44,7 +44,7 @@ A legtöbb esetben követheted ezt az útmutatót egészen addig, amíg képes v
 
 :::
 
-Az SD kártyá slot helye és az SD kártya típusa amit elfogad a 3DS modelledtől függ. További infromációk találhatók erről a [Nintendo hivatalos támogatási oldalán](https://en-americas-support.nintendo.com/app/answers/detail/a_id/271/~/how-to-insert-an-sd-card-or-microsd-card).
+Az SD kártya slot helye és az SD kártya típusa amit elfogad a 3DS modelledtől függ. További infromációk találhatók erről a [Nintendo hivatalos támogatási oldalán](https://en-americas-support.nintendo.com/app/answers/detail/a_id/271/~/how-to-insert-an-sd-card-or-microsd-card).
 
 A 3DS bármilyen kapacitású SD kártyát tud olvasni (még akkor is, ha nagyobb, mint 32GB), de a kártyának FAT32-re kell formatálva lennie (**nem** exFAT vagy NTFS). A következő eszközöket használhatod az SD kártyád formázására, az operációs rendszeredtől függően: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)). **128GB**-nál nagyobb SD kártyák nem javasoltak az ismert problémák miatt az egyedi témákkal és a GBA grafikával.
 
@@ -74,7 +74,7 @@ Röviden: A konzolod moddolása biztonságos, de a _**te felelősséged**_ ha va
 
 ::::
 
-## Dolgok, amiket a számítógépeden kell csinálnod
+## Fontos terminológia
 
 ::: warning
 
@@ -82,7 +82,7 @@ Az útmutató követése nem kell, hogy adatvesztéshez vezessen, de SD kártya 
 
 :::
 
-:::: details Fájl elhelyezés terminológia (pl. "az SD gyökere", "/luma/")
+:::: details Mit jelent az "SG kártya gyökere" vagy "/luma/"?
 
 ::: info
 
@@ -110,7 +110,7 @@ Láthatsz még mappa neveket így jelölve: `/mappa/`. A használt perjelek kön
 
 ::::
 
-:::: details Fájlok letöltése a GitHub-ról
+:::: details Hogyan töltök le fájlokat a GitHub-ról?
 
 ::: info
 
@@ -122,7 +122,7 @@ Ebben az útmutatóban másolni fogsz a 3DS-ed SD kártyájára olyan fájlokat,
 
 ::::
 
-:::: details Fájlok megnyitása/kicsomagolása
+:::: details Hogyan csomagolok ki egy ZIP fált?
 
 ::: info
 
@@ -138,7 +138,7 @@ A legtöbb operációs rendszeren dupla kattintással ki tudod csomagolni a fáj
 
 ::::
 
-:::: details (csak Windows) Fájl kiterjesztések
+:::: details Mik azok a fájl kiterjesztések?
 
 ::: info
 

@@ -1,10 +1,11 @@
 ---
 noneSelected: A rendszer modell szükséges.
 invalidVersion: Ez nem tűnik egy érvényes rendszer verziónak.
-head: [
-    ['script', {src: '/assets/js/common.js'}],
-    ['script', {src: '/assets/js/selecting.js'}]
-]
+head:
+  - - script
+    - src: /assets/js/common.js
+  - - script
+    - src: /assets/js/selecting.js
 ---
 
 # Kezdeti lépések

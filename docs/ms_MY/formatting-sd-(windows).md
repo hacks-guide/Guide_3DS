@@ -10,10 +10,12 @@ Laman ini hanya untuk pengguna Windows sahaja. If you are not on Windows, check 
 
 ## What You Need
 
-- **For SD cards 32GB or smaller:** the latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
-- **For SD cards 64GB or larger:** The latest version of [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
+- the latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
+- **For SD cards 64GB or larger only:** The latest version of [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
 
-## Instructions (32GB or smaller)
+## Instructions
+
+### Section I - SD Card Formatter
 
 1. Pasang kad SD anda ke dalam komputer
 
@@ -45,17 +47,19 @@ Laman ini hanya untuk pengguna Windows sahaja. If you are not on Windows, check 
 
 12. Close SD Card Formatter
 
-13. If the SD card had any files and folders on it before the format, copy everything back from your computer
+13. If the SD card is 32GB or smaller and had any files and folders on it before the format, copy everything back from your computer
 
-## Instructions (64GB or larger)
+::: info
 
-1. Pasang kad SD anda ke dalam komputer
+You're done formatting your SD card if it's **32GB or smaller.**
 
-2. If the SD card has any files and folders on it, copy everything to a folder on your computer
+:::
 
-3. Run `guiformat.exe`
+### Section II - guiformat (ONLY for 64GB or larger)
 
-4. Select your SD card's drive letter for "Drive"
+1. Run `guiformat.exe`
+
+2. Select your SD card's drive letter for "Drive"
 
    ::: danger
 
@@ -63,23 +67,23 @@ Laman ini hanya untuk pengguna Windows sahaja. If you are not on Windows, check 
 
    :::
 
-5. Select a size for "Allocation unit size"
+3. Select a size for "Allocation unit size"
    - If the SD card is 64GB, choose 32768
    - If the SD card is larger than 64GB, choose 65536
 
-6. Enter anything for "Volume label"
+4. Enter anything for "Volume label"
 
-7. Ensure that "Quick Format" is selected
+5. Ensure that "Quick Format" is selected
 
-8. Click "Start"
+6. Click "Start"
 
-9. Click "OK"
+7. Click "OK"
 
-10. Wait for the format to finish
+8. Wait for the format to finish
 
-11. Click "Close"
+9. Click "Close"
 
-12. If the SD card had any files and folders on it before the format, copy everything back from your computer
+10. If the SD card had any files and folders on it before the format, copy everything back from your computer
 
 ## Troubleshooting
 

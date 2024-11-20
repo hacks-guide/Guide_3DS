@@ -10,9 +10,9 @@
 
 각 섹션은 기본으로 축소되어 있습니다. 섹션 이름을 탭하거나 클릭해서 여십시오.
 
-## 3DS에 대해 알고 있어야 할 것들
+## Compatibility
 
-:::: details 3DS/2DS compatibility
+:::: details What consoles is this guide compatible with?
 
 ::: info
 
@@ -20,11 +20,11 @@
 
 :::
 
-이 가이드는 국가나 펌웨어 상관없이, 모든 닌텐도 3DS 시리즈의 콘솔(3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, New 2DS XL/LL에 모두 해당)와 호환됩니다.
+This guide works with every retail console in the Nintendo 3DS family of consoles (including the 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, and New 2DS XL/LL), regardless of region or firmware. It is NOT compatible with the DSi family of consoles (DSi, DSi XL/LL). For DSi-family consoles, consult [this guide](https://dsi.cfw.guide) instead.
 
 ::::
 
-:::: details Computer compatibility
+:::: details What kind of computer / hardware do I need to follow this guide?
 
 ::: info
 
@@ -36,7 +36,7 @@
 
 ::::
 
-:::: details SD card location, type, and capacity
+:::: details What kind of SD card does my console use/need?
 
 ::: info
 
@@ -74,7 +74,7 @@
 
 ::::
 
-## 컴퓨터에서 해야 할 일
+## Important terminology
 
 ::: warning
 
@@ -82,7 +82,7 @@
 
 :::
 
-:::: details File placement terminology (e.g. "root of SD", "/luma/")
+:::: details What does "root of SD" or "/luma/" mean?
 
 ::: info
 
@@ -110,7 +110,7 @@ SD 카드에 파일을 복사할 때 올바른 위치에 넣는 것이 중요합
 
 ::::
 
-:::: details Downloading files from GitHub
+:::: details How do I download files from GitHub?
 
 ::: info
 
@@ -122,7 +122,7 @@ SD 카드에 파일을 복사할 때 올바른 위치에 넣는 것이 중요합
 
 ::::
 
-:::: details Opening/extracting files
+:::: details How do I extract/open a ZIP file?
 
 ::: info
 
@@ -138,7 +138,7 @@ SD 카드에 파일을 복사할 때 올바른 위치에 넣는 것이 중요합
 
 ::::
 
-:::: details (Windows only) File extensions
+:::: details What are file extensions?
 
 ::: info
 

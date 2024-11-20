@@ -10,10 +10,12 @@
 
 ## 준비물
 
-- **32GB 이하의 SD 카드:** 최신 버전의 [SD Formatter] (https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
-- **64GB 이상의 SD 카드:** 최신 버전의 [guiformat] (http://ridgecrop.co.uk/index.htm?guiformat.htm)
+- the latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
+- **For SD cards 64GB or larger only:** The latest version of [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
 
-## 절차 (32GB 이하)
+## 진행 방법
+
+### Section I - SD Card Formatter
 
 1. SD 카드를 컴퓨터에 삽입해 주세요
 
@@ -45,17 +47,19 @@
 
 12. SD Card Formatter를 닫으세요
 
-13. 만약 SD 카드에 파일이나 폴더가 있었다면, 백업한 폴더에서 파일들을 다시 넣으세요
+13. If the SD card is 32GB or smaller and had any files and folders on it before the format, copy everything back from your computer
 
-## 절차 (64GB 이상)
+::: info
 
-1. SD 카드를 컴퓨터에 삽입해 주세요
+You're done formatting your SD card if it's **32GB or smaller.**
 
-2. 만약 SD 카드에 파일이나 폴더가 있다면, 모든 것을 컴퓨터 내 한 폴더에 복사하세요
+:::
 
-3. `guiformat.exe`를 실행하세요
+### Section II - guiformat (ONLY for 64GB or larger)
 
-4. "Drive"에서 SD 카드의 드라이브를 선택하세요
+1. Run `guiformat.exe`
+
+2. Select your SD card's drive letter for "Drive"
 
    ::: danger
 
@@ -63,32 +67,32 @@
 
    :::
 
-5. "Allocation unit size"에서 크기를 선택하세요
-   - 만약 SD 카드가 64GB라면, 32768을 선택하세요
-   - 만약 SD 카드가 64GB보다 크다면, 65536을 선택하세요
+3. Select a size for "Allocation unit size"
+   - If the SD card is 64GB, choose 32768
+   - If the SD card is larger than 64GB, choose 65536
 
-6. "Volume label"에는 아무거나 입력하세요
+4. "Volume label"에는 아무거나 입력하세요
 
-7. "Quick Format"이 선택된 것을 확인하세요.
+5. "Quick Format"이 선택된 것을 확인하세요.
 
-8. "Start"를 클릭하세요
+6. Click "Start"
 
-9. "OK"를 클릭하세요
+7. "OK"를 클릭하세요
 
-10. 포맷이 완료되는 것을 기다리세요
+8. 포맷이 완료되는 것을 기다리세요
 
-11. "Close"를 클릭하세요
+9. "Close"를 클릭하세요
 
-12. 만약 SD 카드에 파일이나 폴더가 있었다면, 백업한 폴더에서 파일들을 다시 넣으세요
+10. 만약 SD 카드에 파일이나 폴더가 있었다면, 백업한 폴더에서 파일들을 다시 넣으세요
 
 ## 문제 해결
 
-- guiformat이 "Failed to open device: GetLastError()=32"를 표시할 때
-  - 파일 탐색기 등, SD 카드를 이용하고 있을 수 있는 모든 걸 닫으세요.
-  - 문제가 지속되면, 파일 탐색기에서 SD 카드를 NTFS 형식으로 포맷해보세요. 포맷이 완료되면 창을 닫고, guiformat 과정을 다시 시도해보세요.
+- guiformat shows the error "Failed to open device: GetLastError()=32"
+  - Close everything that may be using the SD card, such as any File Explorer windows.
+  - If this issue persists, try reformatting the card to NTFS in File Explorer, close that window when it's done, and re-attempt the guiformat process.
 
-- guiformat이 "GetLastError()=1117"를 표시할 때
-  - SD 카드 쓰기 보호가 [활성화](/images/sdlock.png)되어 있을 가능성이 높습니다. SD 카드에 쓰기(포맷 포함)를 하려면 잠금 막대가 위로 올라가 있어야 합니다.
+- guiformat shows the error "GetLastError()=1117"
+  - Your SD card write-protection switch may be [enabled](/images/sdlock.png). The lock must be flipped upwards to allow writing to the SD card (including formatting).
 
 - SD 카드를 콘솔에서 여전히 감지되지 않거나 포맷 이후로도 엉뚱한 용량을 표시할 경우
-  - SD 카드가 나뉘었거나 미할당 공간이 있을 가능성이 있습니다. [이 가이드](https://wiki.hacks.guide/wiki/SD_Clean/Windows)를 따라 SD 카드를 다시 포맷해 주세요
+  - SD 카드가 나뉘었거나 미할당 공간이 있을 가능성이 있습니다. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Windows) to reformat your SD card.

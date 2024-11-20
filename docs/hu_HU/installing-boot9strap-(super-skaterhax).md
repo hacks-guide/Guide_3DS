@@ -1,3 +1,13 @@
+---
+head:
+  - - script
+    - src: /assets/js/common.js
+  - - script
+    - src: /assets/js/skater-link.js
+  - - script
+    - src: /assets/js/link-common.js
+---
+
 # Boot9strap telepítése (super-skaterhax)
 
 :::details Technikai részletek (opcionális)

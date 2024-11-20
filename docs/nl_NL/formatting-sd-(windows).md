@@ -10,10 +10,12 @@ Deze pagina is alleen voor windows-gebruikers. Als je geen Windows gebruikt, bek
 
 ## What You Need
 
-- **For SD cards 32GB or smaller:** the latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
-- **For SD cards 64GB or larger:** The latest version of [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
+- the latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
+- **For SD cards 64GB or larger only:** The latest version of [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
 
-## Instructions (32GB or smaller)
+## Instructions
+
+### Section I - SD Card Formatter
 
 1. Plaats je SD kaart in je computer
 
@@ -45,17 +47,19 @@ Deze pagina is alleen voor windows-gebruikers. Als je geen Windows gebruikt, bek
 
 12. Sluit SD Card Formatter
 
-13. Als de SD-kaart al bestanden en mappen voor het formatteren bevatte, kopieer dan alles terug van uw computer
+13. If the SD card is 32GB or smaller and had any files and folders on it before the format, copy everything back from your computer
 
-## Instructions (64GB or larger)
+::: info
 
-1. Plaats je SD kaart in je computer
+You're done formatting your SD card if it's **32GB or smaller.**
 
-2. Als de SD kaart bestanden en mappen erop heeft, kopieer dan alles naar een map op uw computer
+:::
 
-3. Voer `guiformat.exe` uit
+### Section II - guiformat (ONLY for 64GB or larger)
 
-4. Selecteer uw SD kaart stationsletter voor "Drive"
+1. Run `guiformat.exe`
+
+2. Select your SD card's drive letter for "Drive"
 
    ::: danger
 
@@ -63,23 +67,23 @@ Deze pagina is alleen voor windows-gebruikers. Als je geen Windows gebruikt, bek
 
    :::
 
-5. Selecteer een grootte voor "Allocation unit size"
+3. Select a size for "Allocation unit size"
    - If the SD card is 64GB, choose 32768
    - If the SD card is larger than 64GB, choose 65536
 
-6. Voer iets in voor "Volume label"
+4. Voer iets in voor "Volume label"
 
-7. Zorg ervoor dat "Quick Format" is geselecteerd
+5. Zorg ervoor dat "Quick Format" is geselecteerd
 
-8. Klik op "Start"
+6. Click "Start"
 
-9. Klik op "OK"
+7. Klik op "OK"
 
-10. Wacht tot het formatteren is voltooid
+8. Wacht tot het formatteren is voltooid
 
-11. Klik op "Close"
+9. Klik op "Close"
 
-12. Als de SD-kaart al bestanden en mappen voor het formatteren bevatte, kopieer dan alles terug van uw computer
+10. Als de SD-kaart al bestanden en mappen voor het formatteren bevatte, kopieer dan alles terug van uw computer
 
 ## Probleemoplossing
 

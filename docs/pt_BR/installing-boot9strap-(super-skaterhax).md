@@ -1,3 +1,13 @@
+---
+head:
+  - - script
+    - src: /assets/js/common.js
+  - - script
+    - src: /assets/js/skater-link.js
+  - - script
+    - src: /assets/js/link-common.js
+---
+
 # Instalando boot9strap (superskaterhax)
 
 :::details Detalhes técnicos (opcional)

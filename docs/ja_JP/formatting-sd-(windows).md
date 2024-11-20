@@ -10,10 +10,12 @@
 
 ## What You Need
 
-- **For SD cards 32GB or smaller:** the latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
-- **For SD cards 64GB or larger:** The latest version of [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
+- the latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
+- **For SD cards 64GB or larger only:** The latest version of [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
 
-## Instructions (32GB or smaller)
+## Instructions
+
+### Section I - SD Card Formatter
 
 1. パソコンにSDカードを入れます
 
@@ -45,17 +47,19 @@
 
 12. Close SD Card Formatter
 
-13. フォーマット前に、SDカードにファイルとフォルダがあった場合は、コンピュータからすべてをコピーして戻して下さい。
+13. If the SD card is 32GB or smaller and had any files and folders on it before the format, copy everything back from your computer
 
-## Instructions (64GB or larger)
+::: info
 
-1. パソコンにSDカードを入れます
+You're done formatting your SD card if it's **32GB or smaller.**
 
-2. SDカードにファイルとフォルダがある場合は、コンピュータ上のフォルダにすべてをコピーしてください
+:::
 
-3. `guiformat.exe`を実行します
+### Section II - guiformat (ONLY for 64GB or larger)
 
-4. SDカードのドライブレターは「ドライブ」で選択して下さい。
+1. Run `guiformat.exe`
+
+2. Select your SD card's drive letter for "Drive"
 
    ::: danger
 
@@ -63,23 +67,23 @@
 
    :::
 
-5. サイズは「アロケーションユニットサイズ」で選択して下さい。
+3. Select a size for "Allocation unit size"
    - If the SD card is 64GB, choose 32768
    - If the SD card is larger than 64GB, choose 65536
 
-6. 「ボリュームラベル」は何でも構いません。
+4. 「ボリュームラベル」は何でも構いません。
 
-7. 「クイックフォーマット」が選択されていることを確認して下さい。
+5. 「クイックフォーマット」が選択されていることを確認して下さい。
 
-8. 「開始」をクリックします
+6. Click "Start"
 
-9. OK をクリックします
+7. OK をクリックします
 
-10. フォーマットが完了するのを待ちます
+8. フォーマットが完了するのを待ちます
 
-11. 「閉じる」をクリックします
+9. 「閉じる」をクリックします
 
-12. フォーマット前に、SDカードにファイルとフォルダがあった場合は、コンピュータからすべてをコピーして戻して下さい。
+10. フォーマット前に、SDカードにファイルとフォルダがあった場合は、コンピュータからすべてをコピーして戻して下さい。
 
 ## トラブルシューティング
 
