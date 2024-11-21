@@ -1,0 +1,42 @@
+name: Upload source files to Crowdin
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - 'docs/**.md'
+      - 'docs/_include/**.md'
+      - 'docs/.vitepress/i18n/strings/en_US.json'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # This makes sure that the site actually builds before pushing to Crowdin
+      - name: Build site
+        run: npm run docs:build
+
+      - name: Push to Crowdin
+        uses: crowdin/github-action@v2
+        with:
+          upload_sources: true
+          upload_translations: false
+          download_translations: false
+          crowdin_branch_name: ${{ env.BRANCH_NAME }}
+        env:
+          CROWDIN_TOKEN: ${{ secrets.CROWDIN_TOKEN }}
