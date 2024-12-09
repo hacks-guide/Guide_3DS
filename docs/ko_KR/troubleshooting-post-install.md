@@ -108,61 +108,61 @@ Please take a photo of the error and join [Nintendo Homebrew on Discord](https:/
 
 ## Software issues on consoles with custom firmware
 
-:::details DSi / DS functionality is broken or has been replaced with Flipnote Studio
+:::details DSi / DS 기능이 오작동 하거나 Flipnote Studio가 대신 표시됩니다
 
-1. Download the latest release of [TWLFix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest) (the `.3dsx` file)
+1. 최신 버전의 [TWLFix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest) (`.3dsx` 파일)을 다운로드해 주세요
 2. 콘솔의 전원을 꺼 주세요
 3. SD 카드의 루트에 `3ds` 폴더가 없을 경우 폴더를 만들어 주세요
-4. Copy `TWLFix-CFW.3dsx` to the `/3ds/` folder on your SD card
+4. `TWLFix-CFW.3dsx` 파일을 SD 카드의 `/3ds/` 폴더에 복사해 주세요
 5. SD 카드를 콘솔에 다시 삽입해 주세요
-6. Open the Homebrew Launcher
-7. Launch TWLFix-CFW from the list of homebrew
-8. Press (A) to uninstall the broken TWL titles
-9. Press (Start) to reboot the console
+6. Homebrew Launcher를 실행해 주세요
+7. 홈브류 목록에서 TWLFix-CFW를 실행해 주세요
+8. (A)를 눌러 문제의 TWL 타이틀을 제거해 주세요
+9. (Start)를 눌러 콘솔을 다시 시작해 주세요
 10. 본체 설정의 "기타 설정"에서 가장 오른쪽에 있는 "본체 업데이트"를 선택해 콘솔을 업데이트해 주세요
-    - The update will see that the essential TWL titles have been uninstalled, and will redownload and reinstall them
-11. Once the update is complete, tap "OK" to reboot the console
+    - 이 업데이트는 필수 TWL 타이틀이 제거된 것을 확인 했을 시 다시 다운로드하고 재설치 할 겁니다
+11. 업데이트 완료 시 "OK"를 눌러 콘솔을 다시 시작해 주세요
 
 :::
 
-:::details GBA Virtual Console and/or Safe Mode functionality is broken
+:::details GBA 버추얼 콘솔 혹은 안전 모드 기능이 고장났습니다
 
-Your console is running Luma3DS 6.6 or older, likely via arm9loaderhax. You should follow [A9LH to B9S](a9lh-to-b9s) to update your console to a modern custom firmware environment.
-
-:::
-
-:::details Extended memory mode games (Pokemon Sun/Moon, Smash, etc.) don't work
-
-This can occur after a CTRTransfer or region change on Old 3DS / 2DS. Follow the instructions [here](region-changing#section-vi---fixing-locale-related-issues) to fix this issue (skipping steps 3, 4, 5, and 6).
+콘솔에 (아마 arm9loaderhax를 통해) Luma3DS 6.6 이하의 버전이 설치되어 있습니다. [A9LH를 B9S로 업데이트](a9lh-to-b9s)를 따라서 콘솔을 현재의 커스텀 펌웨어 환경으로 업데이트해 주세요.
 
 :::
 
-:::details Exception screen when booting/loading an application
+:::details 확장 메모리 모드 게임 (포켓몬 썬/문, 스매시 브라더스 등)이 정상 작동하지 않습니다
 
-Look for your exception screen in [this page](https://wiki.hacks.guide/wiki/3DS:Error_screens/Luma3DS_exception_screen).
-If you weren't able to find your error or the instructions didn't work, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for further assistance.
-
-:::
-
-:::details Opening the HOME Menu settings crashes the console or loads the Homebrew Launcher
-
-Your console likely still has menuhax67 installed. To uninstall menuhax67, download the latest release of [menuhax67](https://github.com/zoogie/menuhax67/releases/latest) (the menuhax `.zip`), then follow the ["Uninstall menuhax67" section](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits/menuhax67#Uninstall_menuhax67) here.
+이 문제는 구 3DS / 2DS 콘솔의 지역을 변경하거자 CTRTransfer를 한 이후 나타날 수 있는 상황입니다. Follow the instructions [here](region-changing#section-vi---fixing-locale-related-issues) to fix this issue (skipping steps 3, 4, 5, and 6).
 
 :::
 
-:::details Something else
+:::details 앱을 실행할 때 오류 화면이 표시됩니다
 
-Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance, and describe the issue that you see.
+[여기 (영어)](https://wiki.hacks.guide/wiki/3DS:Error_screens/Luma3DS_exception_screen)에서 오류 화면을 찾아보세요.
+해당 오류를 찾지 못했거나 설명으로 해결되지 않은 경우, [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp)에서 도움을 요청하세요.
+
+:::
+
+:::details HOME 메뉴 실행시 크래시가 발생하거나 Homebrew Launcher가 실행될 경우
+
+menuhax67가 여전히 설치되어 있는 듯합니다. menuhax67 제거를 위해, [menuhax67](https://github.com/zoogie/menuhax67/releases/latest) 최신 버전을 다운로드한 다음(menuhax `.zip`), ["Uninstall menuhax67" 섹션](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits/menuhax67#Uninstall_menuhax67) 을 참고해주시기 바랍니다(영어).
+
+:::
+
+:::details 기타
+
+[Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp)에서 도움을 요청하여, 자신이 본 문제를 같이 보내 주세요.
 
 :::
 
 ## Other troubleshooting
 
-:::details Clear HOME Menu extdata
+:::details HOME 메뉴 추가 데이터 정리
 
 1. 콘솔의 전원을 꺼 주세요
 2. SD 카드를 컴퓨터에 삽입해 주세요
-3. Navigate to the `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` folder on your SD card
+3. SD 카드에 있는 `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` 폴더로 이동해 주세요
 4. 콘솔 지역에 해당되는 폴더를 삭제해 주세요:
    - **EUR 지역**: `00000098`
    - **JPN 지역**: `00000082`
@@ -174,23 +174,23 @@ Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance, 
 
 :::
 
-:::details Clear HOME Menu theme data
+:::details HOME 메뉴 테마 데이터 정리
 
 1. 콘솔의 전원을 꺼 주세요
 2. SD 카드를 컴퓨터에 삽입해 주세요
-3. Navigate to the `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` folder on your SD card
+3. SD 카드에 있는 `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` 폴더로 이동해 주세요
 4. 콘솔 지역에 해당되는 폴더를 삭제해 주세요:
-   - **EUR Region**: `000002ce`
-   - **JPN Region**: `000002cc`
-   - **USA Region**: `000002cd`
-   - **KOR Region**: `000002cf`
+   - **EUR 지역**: `000002ce`
+   - **JPN 지역**: `000002cc`
+   - **USA 지역**: `000002cd`
+   - **KOR 지역**: `000002cf`
 5. SD 카드를 콘솔에 다시 삽입해 주세요
 
 :::
 
-:::details Manually entering Homebrew Launcher
+:::details Homebrew Launcher 수동 접근
 
-If you are missing the Homebrew Launcher application from your HOME Menu, you can follow these instructions to manually enter the Homebrew Launcher. (You will need [boot.3dsx and boot.firm](https://github.com/LumaTeam/Luma3DS/releases/latest) on the root of your SD card.)
+HOME 메뉴를 통해 Homebrew Launcher 애플리케이션에 접근이 불가능할 경우, 다음 방법을 통해 수동으로 Homebrew Launcher에 접근할 수 있습니다. ([boot.3dsx and boot.firm](https://github.com/LumaTeam/Luma3DS/releases/latest) 파일이 SD 카드 최상단에 있어야 합니다.)
 
 <!--@include: ./_include/launch-hbl-dlp.md -->
 
@@ -198,11 +198,11 @@ If you are missing the Homebrew Launcher application from your HOME Menu, you ca
 
 :::details Turning off Parental Controls
 
-You can disable the Parental Controls feature by going to System Settings -> Parental Controls and inserting the PIN, then pressing "Clear Settings", then "Delete" to remove it.
-However, if you do not know the PIN and therefore cannot access the console's settings, you will need to disable it. In order to do this, you need to obtain your console's master key (mkey):
+본체 설정 -> 청소년 보호 기능으로 들어간 다음, PIN을 입력하고 설정 삭제를 선택한 다음 삭제를 눌러 제거할 수 있습니다.
+그러나, PIN을 몰라 본체 설정에 접근할 수 없는 경우, 이를 비활성화해야 합니다. In order to do this, you need to obtain your console's master key (mkey):
 
-1. Go to [this website](https://mkey.eiphax.tech/)
-2. Fill the following boxes with the information:
+1. [이 사이트](https://mkey.eiphax.tech/) 에 들어가 주세요
+2. 다음 빈칸에 관련 정보를 넣어 주세요:
    - Device Type: Select "3DS" (the same applies if you are using a 2DS, New 3DS (XL/LL) or New 2DS (XL/LL))
    - System Date: The day and month your console's clock is set to
    - Inquiry Number: Can be obtained by pressing "Forgot PIN" then "I Forgot" in the Parental Controls screen

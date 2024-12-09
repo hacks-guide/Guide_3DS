@@ -34,19 +34,9 @@
 
 Σε αυτήν την ενότητα, θα προετοιμάσετε τα δεδομένα της κάρτας SD που είναι απαραίτητα για την ενεργοποίηση του exploit «MSET9».
 
-1. Ενεργοποιήστε την κονσόλα σας **έχοντας εισαγάγει την κάρτα SD**
+1. Εισαγάγετε την κάρτα SD στο τηλέφωνο, το tablet ή τον υπολογιστή σας
 
-2. Ανοίξτε το Mii Maker
-
-3. Περιμένετε μέχρι η κονσόλα σας να φτάσει στην οθόνη «Welcome to Mii Maker» και έπειτα, κλείστε τό Mii Maker
-   - Ενδέχεται να δείτε [αυτήν την οθόνη](/images/screenshots/mset9/mii-extdata.png), η οποία υποδεικνύει ότι έχουν δημιουργηθεί τα απαραίτητα δεδομένα
-   - Εάν απλώς οδηγηθείτε στην κανονική οθόνη του Mii Maker, κλείστε το Mii Maker και συνεχίστε στο επόμενο βήμα
-
-4. Απενεργοποιήστε την κονσόλα σας
-
-5. Εισαγάγετε την κάρτα SD στο τηλέφωνο, το tablet ή τον υπολογιστή σας
-
-6. Αντιγράψτε τα πάντα από το αρχείο `.zip` του Release στη ρίζα της κάρτας SD σας, αντικαθιστώντας τυχόν υπάρχοντα αρχεία:
+2. Αντιγράψτε τα πάντα από το αρχείο `.zip` του Release στη ρίζα της κάρτας SD σας, αντικαθιστώντας τυχόν υπάρχοντα αρχεία:
 
    - Ανοίξτε το ZArchiver
    - Εάν σας ζητηθεί, [επιτρέψτε στο ZArchiver να έχει πρόσβαση στα αρχεία της κάρτας SD σας](/images/screenshots/mset9/zarchiver-allow.png)
@@ -60,18 +50,50 @@
 
    :::
 
-7. Εκτελέστε την [εφαρμογή «MSET9 Installer»](/images/screenshots/mset9/mset9-setup-android.png)
+3. Εκτελέστε την [εφαρμογή «MSET9 Installer»](/images/screenshots/mset9/mset9-setup-android.png)
 
-8. Πατήστε το `Select "Nintendo 3DS" Folder` και μεταβείτε στον φάκελο `Nintendo 3DS` της κάρτας SD σας ([εικόνα](/images/screenshots/mset9/select-mset9-folder-1.png))
+4. Πατήστε το `Select "Nintendo 3DS" Folder` και μεταβείτε στον φάκελο `Nintendo 3DS` της κάρτας SD σας ([εικόνα](/images/screenshots/mset9/select-mset9-folder-1.png))
 
-9. Μόλις βρεθείτε εντός του φακέλου `Nintendo 3DS`, πατήστε το «Use this folder» και έπειτα, το «Allow» αν σας ζητηθεί ([εικόνα](/images/screenshots/mset9/select-mset9-folder-2.png))
+5. Μόλις βρεθείτε εντός του φακέλου `Nintendo 3DS`, πατήστε το «Use this folder» και έπειτα, το «Allow» αν σας ζητηθεί ([εικόνα](/images/screenshots/mset9/select-mset9-folder-2.png))
 
-10. Εάν έχει [επισημανθεί](/images/screenshots/mset9/setup-mset9-highlighted.png) το «Setup MSET9», συνεχίστε στο επόμενο βήμα. **Μην κάνετε ρύθμιση του MSET9 ακόμα.** Κλείστε προς το παρόν το MSET9 Installer
-    - Εάν έχει επισημανθεί το «Check Again», υπάρχει κάποιο πρόβλημα που πρέπει να επιλύσετε πριν μπορέσετε να χρησιμοποιήσετε το MSET9. Ανατρέξτε στη σελίδα [Επίλυση προβλημάτων](troubleshooting-mset9)
+6. If `Setup MSET9` is [highlighted](/images/screenshots/mset9/setup-mset9-highlighted.png), proceed to the next step
+   - If you get an error, you need to resolve before you can use MSET9. Ανατρέξτε στη σελίδα [Επίλυση προβλημάτων](troubleshooting-mset9)
+
+7. Tap on `Setup MSET9` to begin the process of setting up MSET9
+
+8. After reviewing the disclaimer, tap on `Confirm` to accept it
+
+9. Tap on the photo corresponding to your console model, then at the bottom, pick your current firmware version
+
+10. If you see the prompt of `Hax ID1 Created`, tap OK to continue
+    - Εάν λάβετε κάποιο σφάλμα, δείτε τη σελίδα [Επίλυση προβλημάτων](troubleshooting-mset9) και δοκιμάστε ξανά
+    - Your 3DS will appear to lose most data / no user-installed apps on HOME Menu. This is expected. Your data will come back at a later step
 
 11. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 
 12. Ενεργοποιήστε την κονσόλα σας
+
+13. Ανοίξτε το Mii Maker
+
+14. Περιμένετε μέχρι η κονσόλα σας να φτάσει στην οθόνη «Welcome to Mii Maker» και έπειτα, κλείστε τό Mii Maker
+    - Ενδέχεται να δείτε [αυτήν την οθόνη](/images/screenshots/mset9/mii-extdata.png), η οποία υποδεικνύει ότι έχουν δημιουργηθεί τα απαραίτητα δεδομένα
+    - If you just reach the normal Mii Maker screen, exit Mii Maker and return to the HOME Menu
+
+15. Εκκινήστε την εφαρμογή «System Settings» και μεταβείτε στο `Data Management` -> `Nintendo 3DS` -> `Software` -> «Reset» ([εικόνα](/images/screenshots/database-reset.jpg))
+    - Αυτή η ενέργεια δεν θα διαγράψει τα δεδομένα σας
+
+16. Απενεργοποιήστε την κονσόλα σας πατώντας το κουμπί ισχύος και επιλέγοντας «Power Off» στην κάτω οθόνη
+
+17. Εισαγάγετε την κάρτα SD στο τηλέφωνο, το tablet ή τον υπολογιστή σας
+
+18. The MSET9 Installer application should automatically check if you have done previous steps properly
+    - It may take a few seconds for the app to detect the SD card and react
+    - If it doesn't check automatically, tap `Check MSET9 status` to check manually
+    - Εάν λάβετε κάποιο σφάλμα, δείτε τη σελίδα [Επίλυση προβλημάτων](troubleshooting-mset9) και δοκιμάστε ξανά
+
+19. If the check passed, you'll see `Inject trigger file` become [highlighted](/images/screenshots/mset9/inject-trigger-highlighted.png) and you can continue to the next step. **Do not inject trigger yet.** Put your phone/tablet/computer aside for now
+
+20. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 
 ### Ενότητα II - MSET9
 
@@ -83,20 +105,19 @@
 
 :::
 
-1. **[Επισημάνετε](/images/screenshots/mset9/hover-settings.png)** το εικονίδιο «System Settings» με το D-Pad (μην το επιλέξετε ακόμα)
-2. Απενεργοποιήστε και έπειτα, ενεργοποιήστε την κονσόλα σας
-3. Πατήστε το (A) για να εκκινήσετε την εφαρμογή «System Settings»
-4. Μεταβείτε στο `Data Management` -> `Nintendo 3DS` -> `Extra Data` ([εικόνα](/images/screenshots/mset9/settings-extdata.png))
-5. **Μην πατήσετε κανένα κουμπί και μην αγγίξτε την οθόνη**
-6. **Ενώ η κονσόλα είναι ΑΚΟΜΑ ΕΝΕΡΓΗ και χωρίς να πατήσετε κανένα κουμπί ή να αγγίξετε την οθόνη**, αφαιρέστε την κάρτα SD από την κονσόλα σας
+1. Ενεργοποιήστε την κονσόλα σας, εξασφαλίζοντας ότι έχει επιλεχθεί η εφαρμογή «System Settings»
+   - Εάν δεν έχει επιλεχθεί η εφαρμογή «System Settings», **[επισημάνετε](/images/screenshots/mset9/hover-settings.png)** το εικονίδιο «System Settings» με το D-Pad, απενεργοποιήστε την κονσόλα σας και έπειτα, ενεργοποιήστε την ξανά
+2. Πατήστε το (A) για να εκκινήσετε την εφαρμογή «System Settings»
+3. Μεταβείτε στο `Data Management` -> `Nintendo 3DS` -> `Extra Data` ([εικόνα](/images/screenshots/mset9/settings-extdata.png))
+4. **Μην πατήσετε κανένα κουμπί και μην αγγίξτε την οθόνη**
+5. **Ενώ η κονσόλα είναι ΑΚΟΜΑ ΕΝΕΡΓΗ και χωρίς να πατήσετε κανένα κουμπί ή να αγγίξετε την οθόνη**, αφαιρέστε την κάρτα SD από την κονσόλα σας
    - Το μενού θα ανανεωθεί και θα δείτε ένα μήνυμα περί απουσίας της κάρτας SD, το οποίο είναι αναμενόμενο
-7. Εισαγάγετε την κάρτα SD στο τηλέφωνο, το tablet ή τον υπολογιστή σας
-8. Ανοίξτε την εφαρμογή «MSET9 Installer»
-9. Πατήστε «Setup MSET9»
-10. Πατήστε τη φωτογραφία που αντιστοιχεί στο μοντέλο της κονσόλας σας και έπειτα, το κουμπί που αντιστοιχεί στην τρέχουσα έκδοση του firmware σας
-    - Εάν η εισαγωγή ήταν επιτυχής, όλα τα κουμπιά θα πρέπει να γίνουν γκρι εκτός από το «Remove MSET9»
-11. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας **χωρίς να πατήσετε οποιοδήποτε πλήκτρο ή να αγγίξετε την οθόνη**
-12. Εάν το exploit ήταν επιτυχές, θα έχει γίνει εκκίνηση στο SafeB9SInstaller
+6. Εισαγάγετε την κάρτα SD στο τηλέφωνο, το tablet ή τον υπολογιστή σας
+7. Ανοίξτε την εφαρμογή «MSET9 Installer»
+8. Tap `Inject trigger file`
+   - The button should become greyed out and `Remove trigger file` become [highlighted](/images/screenshots/mset9/remove-trigger-highlighted.png)
+9. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας **χωρίς να πατήσετε οποιοδήποτε πλήκτρο ή να αγγίξετε την οθόνη**
+10. Εάν το exploit ήταν επιτυχές, θα έχει γίνει εκκίνηση στο SafeB9SInstaller
     - Εάν λάβετε μια κόκκινη οθόνη ή αν «κολλήσει» η κονσόλα σε κάποια οθόνη φόρτωσης, ακολουθήστε τον [οδηγό επίλυσης προβλημάτων](troubleshooting-mset9)
 
 ### Ενότητα III - Εγκατάσταση του boot9strap
@@ -122,7 +143,7 @@
 1. Απενεργοποιήστε την κονσόλα σας
 2. Εισαγάγετε την κάρτα SD στο τηλέφωνο, το tablet ή τον υπολογιστή σας
 3. Ανοίξτε την εφαρμογή «MSET9 Installer»
-4. Επιλέξτε «Remove MSET9»
+4. Tap `Remove MSET9`
 5. Κλείστε την εφαρμογή «MSET9 Installer»
 
 <!--@include: ./_include/luma3ds-installed-note.md -->

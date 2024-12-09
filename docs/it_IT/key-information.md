@@ -10,9 +10,9 @@ Questa pagina contiene alcune terminologie informatiche di base e informazioni s
 
 Ogni sezione è inizialmente collassata. Fai clic o tocca il nome della sezione per aprirla.
 
-## Compatibility
+## Compatibilità
 
-:::: details What consoles is this guide compatible with?
+:::: details Con quali console è compatibile questa guida?
 
 ::: info
 
@@ -20,11 +20,11 @@ Ogni sezione è inizialmente collassata. Fai clic o tocca il nome della sezione 
 
 :::
 
-This guide works with every retail console in the Nintendo 3DS family of consoles (including the 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, and New 2DS XL/LL), regardless of region or firmware. It is NOT compatible with the DSi family of consoles (DSi, DSi XL/LL). For DSi-family consoles, consult [this guide](https://dsi.cfw.guide) instead.
+Questa guida funziona su tutte le versioni retail della famiglia di console Nintendo 3DS (compresi 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, e New 2DS XL/LL), indipendentemente dalla regione o dal firmware. NON è compatibile con la famiglia di console DSi (DSi, DSi XL/LL). Per queste, consulta invece [questa guida](https://dsi.cfw.guide).
 
 ::::
 
-:::: details What kind of computer / hardware do I need to follow this guide?
+:::: details Di che tipo di computer / hardware ho bisogno per seguire questa guida?
 
 ::: info
 
@@ -36,7 +36,7 @@ Nella maggior parte dei casi, puoi seguire questa guida a patto che tu possa sca
 
 ::::
 
-:::: details What kind of SD card does my console use/need?
+:::: details Di che tipo di scheda SD ha bisogno/usa la mia console?
 
 ::: info
 
@@ -74,7 +74,7 @@ Riassumendo: Modificare la tua console è sicuro, ma _**è una tua responsabilit
 
 ::::
 
-## Important terminology
+## Terminologia importante
 
 ::: warning
 
@@ -82,7 +82,7 @@ Seguendo questa guida non dovrebbero verificarsi perdite di dati, ma è sempre p
 
 :::
 
-:::: details What does "root of SD" or "/luma/" mean?
+:::: details Cosa significano "directory principale della scheda SD" o "/luma/"?
 
 ::: info
 
@@ -110,7 +110,7 @@ Potresti anche vedere i nomi delle cartelle indicati in questa maniera: `/cartel
 
 ::::
 
-:::: details How do I download files from GitHub?
+:::: details Come scarico file da GitHub?
 
 ::: info
 
@@ -122,7 +122,7 @@ In questa guida copierai i file scaricati dal tuo computer o cellulare nella sch
 
 ::::
 
-:::: details How do I extract/open a ZIP file?
+:::: details Come estraggo/apro un file ZIP?
 
 ::: info
 
@@ -138,7 +138,7 @@ Nella maggior parte dei sistemi operativi, per estrarre i file basta farci un do
 
 ::::
 
-:::: details What are file extensions?
+:::: details Cosa sono le estensioni dei file?
 
 ::: info
 
