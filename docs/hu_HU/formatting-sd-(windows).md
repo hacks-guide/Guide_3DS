@@ -10,7 +10,7 @@ Ez az oldal Windows felhasználókra vonatkozik. Ha nem Windows rendszeren vagy,
 
 ## Amire szükséged lesz
 
-- the latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
+- az [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/) legutolsó verziója
 - **csak 64GB vagy nagyobb SD kártya esetén:** A [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm) legfrissebb verziója
 
 ## Lépések
@@ -47,11 +47,11 @@ Ez az oldal Windows felhasználókra vonatkozik. Ha nem Windows rendszeren vagy,
 
 12. Zárd be az SD Card Formatter-t
 
-13. If the SD card is 32GB or smaller and had any files and folders on it before the format, copy everything back from your computer
+13. Ha az SD kártya 32GB vagy kisebb és tartalmazott adatot a formázás előtt, akkor azokat most másold vissza a számítógépről
 
 ::: info
 
-You're done formatting your SD card if it's **32GB or smaller.**
+Végeztél az SD kártyád formázásával ha az **32GB vagy kisebb.**
 
 :::
 
