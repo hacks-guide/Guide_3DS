@@ -1,3 +1,13 @@
+---
+head:
+  - - script
+    - src: /assets/js/common.js
+  - - script
+    - src: /assets/js/soundhax-frankenfirm-link.js
+  - - script
+    - src: /assets/js/link-common.js
+---
+
 # Risoluzione dei problemi (Soundhax)
 
 Questa pagina offre consigli per la risoluzione dei problemi comunemente riscontrati con la pagina "Installazione di boot9strap (Soundhax)", usata per le versioni di sistema comprese tra 1.0.0 e 11.3.0. Se non riesci a risolvere il tuo problema con i consigli su questa pagina, entra nel [canale Discord di Nintendo Homebrew](https://discord. g/MWxPgEp) e descrivi il tuo problema, indicando quello che hai già provato.
@@ -16,11 +26,19 @@ Se la tua console non ha queste versioni di sistema, probabilmente hai già un c
 
 C'è un problema con il tuo file `otherapp.bin` (è mancante, mal posizionato o corrotto). Scarica l'ultima versione di [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) e inseriscila nella directory principale della tua scheda SD.
 
+Se quanto sopra non risolve il problema e stai usando un Old 3DS / Old 3DS XL / Old 2DS, potresti stare incontrando un problema riguardante l'aggiornamento via scheda di gioco. Ricontrolla la versione del software. Se l'ultimo numero è pari o inferiore a 4 (ad esempio 11.3.0-**4**U), sostituisci il file Soundhax nella directory principale della tua scheda SD con [questo](http://soundhax.686178.xyz/frankenfirm.html?crash).
+
+Se non hai ancora risolto il problema, entra nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) per chiedere assistenza.
+
 :::
 
 :::details "Impossibile riprodurre"
 
-Hai il file Soundhax sbagliato per la tua console e regione, o la tua console è incompatibile con Soundhax. In quest'ultimo caso, dovrai scoprire la versione presente sul tuo 3DS. Entra nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) per chiedere assistenza.
+Hai il file Soundhax sbagliato per la tua console, regione e versione. Verifica che tu abbia inserito correttamente tutte le informazioni nel [sito web di Soundhax](https://soundhax.com/), riscarica il tuo file Soundhax e sostituiscilo con quello nella directory principale della tua scheda SD.
+
+Se quanto sopra non risolve il problema e stai usando un Old 3DS / Old 3DS XL / Old 2DS, potresti stare incontrando un problema riguardante l'aggiornamento via scheda di gioco. Ricontrolla la versione del software. Se l'ultimo numero è pari o inferiore a 3 (e.g. 11.3.0-**0**U), sostituisci il file Soundhax nella directory principale della tua scheda SD con [questo](http://soundhax.686178.xyz/frankenfirm.html?unplayable).
+
+Se non hai ancora risolto il problema, entra nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) per chiedere assistenza.
 
 :::
 

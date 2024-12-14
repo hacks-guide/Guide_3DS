@@ -34,19 +34,9 @@ On Android phones/tablets, the minimum Android version required is 6.0 (Marshmal
 
 In this section, you will prepare the SD card data necessary for the MSET9 exploit to trigger.
 
-1. Power on your console **with your SD card inserted**
+1. Insert your SD card into your phone/tablet/computer
 
-2. Open Mii Maker
-
-3. Wait for your console to reach the "Welcome to Mii Maker" screen, then exit Mii Maker
-   - You may see [this screen](/images/screenshots/mset9/mii-extdata.png), which indicates the necessary data has been created
-   - If you just reach the normal Mii Maker screen, exit Mii Maker and continue to the next step
-
-4. Zet je console uit
-
-5. Insert your SD card into your phone/tablet/computer
-
-6. Copy everything from the Release `.zip` to the root of your SD card, overwriting any existing files:
+2. Copy everything from the Release `.zip` to the root of your SD card, overwriting any existing files:
 
    - Open ZArchiver
    - If prompted, [allow ZArchiver to access files on your SD card](/images/screenshots/mset9/zarchiver-allow.png)
@@ -60,18 +50,50 @@ In this section, you will prepare the SD card data necessary for the MSET9 explo
 
    :::
 
-7. Run the [MSET9 Installer application](/images/screenshots/mset9/mset9-setup-android.png)
+3. Run the [MSET9 Installer application](/images/screenshots/mset9/mset9-setup-android.png)
 
-8. Tap on `Select "Nintendo 3DS" Folder`, then navigate to your `Nintendo 3DS` folder on your SD card ([image](/images/screenshots/mset9/select-mset9-folder-1.png))
+4. Tap on `Select "Nintendo 3DS" Folder`, then navigate to your `Nintendo 3DS` folder on your SD card ([image](/images/screenshots/mset9/select-mset9-folder-1.png))
 
-9. Once inside the `Nintendo 3DS` folder, tap on "Use this folder", then "Allow" if asked ([image](/images/screenshots/mset9/select-mset9-folder-2.png))
+5. Once inside the `Nintendo 3DS` folder, tap on "Use this folder", then "Allow" if asked ([image](/images/screenshots/mset9/select-mset9-folder-2.png))
 
-10. If "Setup MSET9" is [highlighted](/images/screenshots/mset9/setup-mset9-highlighted.png), proceed to the next step. **Do not setup MSET9 yet.** Close the MSET9 Installer for now
-    - If "Check Again" is highlighted, there is a problem that you need to resolve before you can use MSET9. Refer to the [troubleshooting](troubleshooting-mset9)
+6. If `Setup MSET9` is [highlighted](/images/screenshots/mset9/setup-mset9-highlighted.png), proceed to the next step
+   - If you get an error, you need to resolve before you can use MSET9. Refer to the [troubleshooting](troubleshooting-mset9)
+
+7. Tap on `Setup MSET9` to begin the process of setting up MSET9
+
+8. After reviewing the disclaimer, tap on `Confirm` to accept it
+
+9. Tap on the photo corresponding to your console model, then at the bottom, pick your current firmware version
+
+10. If you see the prompt of `Hax ID1 Created`, tap OK to continue
+    - If you get an error, check the [troubleshooting](troubleshooting-mset9), then try again
+    - Your 3DS will appear to lose most data / no user-installed apps on HOME Menu. This is expected. Your data will come back at a later step
 
 11. Stop je SD-kaart terug in je console
 
 12. Zet je console aan
+
+13. Open Mii Maker
+
+14. Wait for your console to reach the "Welcome to Mii Maker" screen, then exit Mii Maker
+    - You may see [this screen](/images/screenshots/mset9/mii-extdata.png), which indicates the necessary data has been created
+    - If you just reach the normal Mii Maker screen, exit Mii Maker and return to the HOME Menu
+
+15. Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
+    - This will not wipe any of your data
+
+16. Power off your console by pressing the power button then tapping Power Off on the lower screen
+
+17. Insert your SD card into your phone/tablet/computer
+
+18. The MSET9 Installer application should automatically check if you have done previous steps properly
+    - It may take a few seconds for the app to detect the SD card and react
+    - If it doesn't check automatically, tap `Check MSET9 status` to check manually
+    - If you get an error, check the [troubleshooting](troubleshooting-mset9), then try again
+
+19. If the check passed, you'll see `Inject trigger file` become [highlighted](/images/screenshots/mset9/inject-trigger-highlighted.png) and you can continue to the next step. **Do not inject trigger yet.** Put your phone/tablet/computer aside for now
+
+20. Stop je SD-kaart terug in je console
 
 ### Section II - MSET9
 
@@ -83,20 +105,19 @@ These instructions must be followed **EXACTLY**, so double-check EVERYTHING you 
 
 :::
 
-1. **[Hover over](/images/screenshots/mset9/hover-settings.png)** the System Settings icon using the D-Pad (do not select it yet)
-2. Power off, then power on your console
-3. Press (A) to launch System Settings
-4. Navigate to `Data Management` -> `Nintendo 3DS` -> `Extra Data` ([image](/images/screenshots/mset9/settings-extdata.png))
-5. **Do not press any buttons or touch the screen**
-6. **With the console STILL ON, and without pressing any buttons or touching the screen**, remove your SD card from your console
+1. Power on your console, ensuring System Settings is selected
+   - If System Settings is not selected, **[hover over](/images/screenshots/mset9/hover-settings.png)** the System Settings icon using the D-Pad, power your console off, then back on
+2. Press (A) to launch System Settings
+3. Navigate to `Data Management` -> `Nintendo 3DS` -> `Extra Data` ([image](/images/screenshots/mset9/settings-extdata.png))
+4. **Do not press any buttons or touch the screen**
+5. **With the console STILL ON, and without pressing any buttons or touching the screen**, remove your SD card from your console
    - The menu will refresh and say that no SD card is inserted, which is expected
-7. Insert your SD card into your phone/tablet/computer
-8. Open the MSET9 Installer application
-9. Tap "Setup MSET9"
-10. Tap on the photo corresponding to your console model, then on the button corresponding to your current firmware version
-    - If the injection was successful, all buttons should become grayed out except for "Remove MSET9"
-11. Reinsert your SD card into your console **without pressing any buttons or touching the screen**
-12. Als de exploit succesvol was, zal je SafeB9SInstaller hebben opgestart
+6. Insert your SD card into your phone/tablet/computer
+7. Open the MSET9 Installer application
+8. Tap `Inject trigger file`
+   - The button should become greyed out and `Remove trigger file` become [highlighted](/images/screenshots/mset9/remove-trigger-highlighted.png)
+9. Reinsert your SD card into your console **without pressing any buttons or touching the screen**
+10. Als de exploit succesvol was, zal je SafeB9SInstaller hebben opgestart
     - If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting-mset9)
 
 ### Section III - Installing boot9strap
@@ -122,7 +143,7 @@ Do NOT skip this section! If you skip it, applications may crash unexpectedly an
 1. Zet je console uit
 2. Insert your SD card into your phone/tablet/computer
 3. Open the MSET9 Installer application
-4. Tap "Remove MSET9"
+4. Tap `Remove MSET9`
 5. Close the MSET9 Installer application
 
 <!--@include: ./_include/luma3ds-installed-note.md -->

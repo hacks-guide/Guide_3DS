@@ -34,19 +34,9 @@ Android telefonokon/tableteken a szükséges minimum Android verzió: 6.0 (Marsh
 
 Ebben a részben előkészítjük az SD kártyád a szükséges adatokkal amik kiváltják az MSET9 exploitot.
 
-1. Kapcsold be a konzolod, miközben **az SD kártya be van helyezve**
+1. Helyezd az SD kártyád a telefonodba/tabletedbe/számítógépedbe
 
-2. Nyisd meg a Mii Maker alkalmazást
-
-3. Várj amíg a konzolod elérí a "Welcome to Mii Maker" képernyőt, majd lépj ki a Mii Maker-ből
-   - [Ezt a képernyőt láthatod](/images/screenshots/mset9/mii-extdata.png), ami azt mutatja, hogy a szükséges adatok létrejöttek
-   - Ha normál Mii Maker képernyőre jutottál, lépj ki a Mii Maker-ből és folytasd a következő lépéssel
-
-4. Kapcsold ki a konzolod
-
-5. Helyezd az SD kártyád a telefonodba/tabletedbe/számítógépedbe
-
-6. Másolj át a mindent a Release `.zip`-ből az SD kártyád gyökerébe, felülírva minden már ott lévő fájlt:
+2. Másolj át a mindent a Release `.zip`-ből az SD kártyád gyökerébe, felülírva minden már ott lévő fájlt:
 
    - Nyisd meg a ZArchiver-t
    - Ha kérdezi, [engedd a ZArchiver-t, hogy hozzá férjen z SD kártya fájljaihoz](/images/screenshots/mset9/zarchiver-allow.png)
@@ -60,18 +50,50 @@ Ebben a részben előkészítjük az SD kártyád a szükséges adatokkal amik k
 
    :::
 
-7. Futtasd az [MSET9 Installer alkalmazást](/images/screenshots/mset9/mset9-setup-android.png)
+3. Futtasd az [MSET9 Installer alkalmazást](/images/screenshots/mset9/mset9-setup-android.png)
 
-8. Válaszd a `Select "Nintendo 3DS" Folder` opciót, majd navigálj a `Nintendo 3DS` mappához az SD kártyádon([kép](/images/screenshots/mset9/select-mset9-folder-1.png))
+4. Válaszd a `Select "Nintendo 3DS" Folder` opciót, majd navigálj a `Nintendo 3DS` mappához az SD kártyádon([kép](/images/screenshots/mset9/select-mset9-folder-1.png))
 
-9. Ha a `Nintendo 3DS` mappában vagy, érintsd meg a "Use this folder" opciót, majd az "Allow"-ot, ha kérdezi ([kép](/images/screenshots/mset9/select-mset9-folder-2.png))
+5. Ha a `Nintendo 3DS` mappában vagy, érintsd meg a "Use this folder" opciót, majd az "Allow"-ot, ha kérdezi ([kép](/images/screenshots/mset9/select-mset9-folder-2.png))
 
-10. Ha a "Setup MSET9" opció [kiemelt](/images/screenshots/mset9/setup-mset9-highlighted.png), akkor haladj tovább a következő lépésre. \*\* Még ne telepítsd az MSET9-et.\*\* Zárd be az MSET9 telepítőt most
-    - Ha a "Check Again" a kiemelt, akkor problémába ütközték, amit fel kellene oldani, mielőtt használatod az MSET9-et. Használd a [hibaelhárítást](troubleshooting-mset9)
+6. Ha a `Setup MSET9` opció [kiemelt](/images/screenshots/mset9/setup-mset9-highlighted.png), akkor haladj tovább a következő lépésre
+   - Ha hibába ütköztél, azt fel kellene oldani, mielőtt használhatod az MSET9-et. Használd a [hibaelhárítást](troubleshooting-mset9)
+
+7. Érintsd meg a `Setup MSET9` az MSET9 telepítésének elindításához
+
+8. A nyilatkozatot elolvasását követően nyomj `Confirm`-ot annak elfogadásához
+
+9. Érintsd meg a modellednek megfelelő fényképet, majd alul válaszd ki a firmware verziódat
+
+10. Ha a `Hax ID1 Created` promptot látod, nyomj az OK-ra a folytatáshoz
+    - Ha hibát kapsz, nézd meg a [hibaelhárítási útmutatót](troubleshooting-mset9), majd próbáld újra
+    - A 3DS-ed úgy fog tűnni, hogy elvesztette a legtöbb adatot / nincs felhasználó által telepített alkalmazást a HOME menüben. Ez az elvárt. Az adataid visszatérnek egy későbbi lépésben
 
 11. Tedd vissza az SD kártyád a konzoldba
 
 12. Kapcsold be a konzolod
+
+13. Nyisd meg a Mii Maker alkalmazást
+
+14. Várj amíg a konzolod elérí a "Welcome to Mii Maker" képernyőt, majd lépj ki a Mii Maker-ből
+    - [Ezt a képernyőt láthatod](/images/screenshots/mset9/mii-extdata.png), ami azt mutatja, hogy a szükséges adatok létrejöttek
+    - Ha normál Mii Maker képernyőre jutottál, lépj ki a Mii Maker-ből és térj vissza a HOME képernyőre
+
+15. Indítsd el a System Settings-et és navigálj ide: `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
+    - Ez nem fogja törölni az adataidat
+
+16. Kapcsold ki a konzolod a power gomb megnyomásával, majd a Power Off felirat megérintésével az alsó képernyőn
+
+17. Helyezd az SD kártyád a telefonodba/tabletedbe/számítógépedbe
+
+18. Az MSET9 Installer alkalmazás automatikusan ellenőrzi, hogy a korábbi lépéyeket sikerült-e helyesen végrehajtani
+    - Néhány másodpercet igénybe vesz az appnak az, hogy detektálja az SD kártyát majd reagáljon
+    - Ha nem ellenőrzi automatikusan, érintsd meg a `Check MSET9 status` opciót a manuális ellenőrzéshez
+    - Ha hibát kapsz, nézd meg a [hibaelhárítási útmutatót](troubleshooting-mset9), majd próbáld újra
+
+19. Ha az ellenőrzés sikeres az `Inject trigger file` [kiemelődik](/images/screenshots/mset9/inject-trigger-highlighted.png) és folytathatod a következő lépéssel. **Do not inject trigger yet.** Put your phone/tablet/computer aside for now
+
+20. Tedd vissza az SD kártyád a konzoldba
 
 ### II. rész - MSET9
 
@@ -83,21 +105,19 @@ Ezeket a lépéseket **PONTOSAN** kell követni, így ellenőrizz MINDENT kétsz
 
 :::
 
-1. **[Állj rá](/images/screenshots/mset9/hover-settings.png)** a System Settings ikonra a D-Pad
-   használatával (de még ne válaszd ki)
-2. Kapcsold ki, majd vissza a konzolod
-3. Nyomj (A) gombot a System Settings indításához
-4. Navigálj ide: `Data Management` -> `Nintendo 3DS` -> `Extra Data` ([image](/images/screenshots/mset9/settings-extdata.png))
-5. **Ne nyomj meg semmi gombot vagy éríntsd meg a képernyőt**
-6. \*\* A konzolod BEKAPCSOLT állapotában, bármilyen gomb vagy a képernyő érintése nélkül\*\* vedd ki az SD kártyádat a konzolból
+1. - Kapcsold be a konzolod, biztosítva azt, hogy a System Settings kiválasztott
+   - Ha a System Settings nem kiválaszott, akkor _[állj rá](/images/screenshots/mset9/hover-settings.png)_\* a System Settings ikonra a D-Pad használatával, majd kapcsold ki konzolod és vissza
+2. Nyomj (A) gombot a System Settings indításához
+3. Navigálj ide: `Data Management` -> `Nintendo 3DS` -> `Extra Data` ([image](/images/screenshots/mset9/settings-extdata.png))
+4. **Ne nyomj meg semmi gombot vagy éríntsd meg a képernyőt**
+5. \*\* A konzolod BEKAPCSOLT állapotában, bármilyen gomb vagy a képernyő érintése nélkül\*\* vedd ki az SD kártyádat a konzolból
    - A menü frissülni fog, és ki fogja írni, hogy nincs SD kártya behelyezve, ami elvárt működés
-7. Helyezd az SD kártyád a telefonodba/tabletedbe/számítógépedbe
-8. Nyisd meg az MSET9 Installer alkalmazást
-9. Éríntsd meg a "Setup MSET9" opciót
-10. Érintsd meg a modellednek megfelelő fényképet, majd a firmware verziódnak megfelelő gombot
-    - Ha az injektálás sikeres volt, minden gomb kiszürkül kivéve a "Remove MSET9" gombot
-11. Helyezd vissza az SD kártyád a konzolodba, **bármilyen gomb vagy a képernyő érintése nélkül**
-12. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
+6. Helyezd az SD kártyád a telefonodba/tabletedbe/számítógépedbe
+7. Nyisd meg az MSET9 Installer alkalmazást
+8. Érintsd meg az `Inject trigger file` opciót
+   - A gombnak be kell szürkülödnie és a `Remove trigger file` pedig [kiemelődik](/images/screenshots/mset9/remove-trigger-highlighted.png)
+9. Helyezd vissza az SD kártyád a konzolodba, **bármilyen gomb vagy a képernyő érintése nélkül**
+10. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
     - Ha piros képernyőt kapsz vagy a konzol beragad a betöltő képernyőn, kövesd a [hibaelhárítási útmutatót](troubleshooting-mset9)
 
 ### III. rész - boot9strap telepítése
@@ -123,7 +143,7 @@ NE ugord át ezt a részt! Ha kihagyod, akkor az alkalmazások váratlanul össz
 1. Kapcsold ki a konzolod
 2. Helyezd az SD kártyád a telefonodba/tabletedbe/számítógépedbe
 3. Nyisd meg az MSET9 Installer alkalmazást
-4. Éríntsd meg a "Remove MSET9" opciót
+4. Éríntsd meg a `Remove MSET9` opciót
 5. Zárd be az MSET9 Installer alkalmazást
 
 <!--@include: ./_include/luma3ds-installed-note.md -->
