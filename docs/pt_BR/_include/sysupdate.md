@@ -2,4 +2,4 @@
    - Atualizações feitas enquanto usa B9S + Luma (o que você tem) são seguras
    - O atualizador pode exibir uma mensagem dizendo "O console já está atualizado" ao invés de atualizar. Isso é normal se você já está atualizado; continue para a próxima seção
    - If this gives you an error, set your DNS settings to "Auto" and your Proxy settings to "No"
-   - Se ainda assim você receber um erro, [siga o guia de troubleshooting](troubleshooting#finalizing-setup)
+   - If this still gives you an error, [follow this troubleshooting guide](troubleshooting-finalizing-setup.html)
