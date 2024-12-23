@@ -5,7 +5,7 @@
 5. Select "SysNAND Backup"
 6. Paina (A)-painiketta vahvistaaksesi
    - This process will take some time
-   - If you get an error, look for your issue in the [troubleshooting guide](troubleshooting#finalizing-setup)
+   - If you get an error, look for your issue in the [troubleshooting guide](troubleshooting-finalizing-setup.html)
 7. Paina (A):ta jatkaaksesi
 8. Paina (B):tä palataksesi päävalikkoon
 9. Select "Exit"
