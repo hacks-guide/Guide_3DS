@@ -1,28 +1,28 @@
 # Installing boot9strap (ntrboot)
 
-## Required Reading
+## Bacaan Penting
 
-To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download).
+Untuk menggunakan tautan [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) di laman ini, diperlukan klien torrent seperti [qBittorrent](https://www.qbittorrent.org/download.php) atau [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
-## What You Need
+## Apa yang Perlu
 
 - A magnet that triggers the sleep mode of your console (if using a folding style console)
 - Your ntrboot flashed flashcart
-- The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
-- The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- Versi terkini dari [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (unduhan langsung)
+- Versi terkini dari [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (unduhan langsung)
+- Versi terkini dari [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (yang `.zip` Luma3DS)
 
-## Instructions
+## Instruksi
 
-### Section I - Prep Work
+### Bagian I - Persiapan
 
-1. Power off your console
+1. Matikan daya konsol
 
 2. Insert your console's SD card into your computer
    - This is the SD card from your 3DS, _not_ the SD card from your flashcart
 
 3. Copy `SafeB9SInstaller.firm` from the SafeB9SInstaller `.zip` to the root of your SD card and rename it to `boot.firm`
-   - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
+   - Akar (_root_) kartu SD merujuk ke direktori awal kartu SD yang ada folder Nintendo 3DS, berarti **tidak di dalam folder apa pun**
 
 4. Create a folder named `boot9strap` on the root of your console's SD card
 
@@ -34,7 +34,7 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 
    :::
 
-6. Reinsert your SD card into your console
+6. Sisip kembali kartu SD ke konsol
 
 7. Power on your console
 
@@ -42,7 +42,7 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 
 1. Use the magnet to find the spot on your console where the sleep sensor is triggered
    - This step is not needed on the old 2DS (which has a sleep mode switch)
-2. Power off your console
+2. Matikan daya konsol
 3. Insert your flashcart into your console
 4. Place the magnet on your console to trigger the sleep sensor
    - On old 2DS, you should instead enable the sleep mode switch
@@ -56,7 +56,7 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 
 In this section, you will install custom firmware onto your console.
 
-1. When prompted, input the key combo given on the top screen to install boot9strap
+1. Saat diminta, tekan kombo tombol mengikuti layar atas untuk memasang boot9strap
    - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-ntrboot)
 2. Once it is completed, force your console to power off by holding down the power button
    - Your console will only boot to the SafeB9SInstaller screen until the next section is completed
@@ -66,7 +66,7 @@ In this section, you will install custom firmware onto your console.
 1. Insert your console's SD card into your computer
 2. Delete `boot.firm` from the root of your SD card
 3. Copy everything from the Luma3DS `.zip` to the root of your SD card
-4. Reinsert your SD card into your console
+4. Sisip kembali kartu SD ke konsol
 5. Power on your console
 
 <!--@include: ./_include/configure-luma3ds.md -->
@@ -77,7 +77,7 @@ ___
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Lanjut ke [Penyiapan Akhir](finalizing-setup)
 
 :::
 
@@ -91,7 +91,7 @@ Do not follow this section until you have completed the rest of the instructions
 
 ### Section V - Removing ntrboot
 
-#### What You Need
+#### Apa yang Perlu
 
 - The latest release of [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest) (`ntrboot_flasher.firm`)
 - The flashrom backup corresponding to your flashcart
@@ -125,16 +125,16 @@ Do not follow this section until you have completed the rest of the instructions
 | **R4iSDHC RTS LITE 20XX** from r4isdhc **.com**  |                   |                                                                                                                                                                                                                                                                                  <font-awesome-icon icon="fa-solid fa-magnet"/> - [R4iSDHC.com_20XX-Flashrom.zip](magnet:?xt=urn:btih:d16817f7fdd0eac18d71d2ebd73d51315389d90e\&dn=R4iSDHC.com_20XX-Flashrom.zip\&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce\&tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce\&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce\&tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce\&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce\&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce\&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce\&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce\&tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce)                                                                                                                                                                                                                                                                                  |
 | **R4iSDHC Dual-Core 20XX** from r4isdhc **.com** |                   |                                                                                                                                                                                                                                                                                  <font-awesome-icon icon="fa-solid fa-magnet"/> - [R4iSDHC.com_20XX-Flashrom.zip](magnet:?xt=urn:btih:d16817f7fdd0eac18d71d2ebd73d51315389d90e\&dn=R4iSDHC.com_20XX-Flashrom.zip\&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce\&tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce\&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce\&tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce\&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce\&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce\&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce\&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce\&tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce)                                                                                                                                                                                                                                                                                  |
 
-#### Instructions
+#### Instruksi
 
-1. Power off your console
-2. Insert your SD card into your computer
+1. Matikan daya konsol
+2. Sisipkan kartu SD ke komputer Anda
    - This is the SD card from your 3DS, _not_ the SD card from your flashcart
 3. Create a folder named `ntrboot` on the root of your SD card
 4. Copy the `.bin` file from your flashrom backup `.zip` to the `/ntrboot/` folder on the root of your SD card
 5. Create a folder named `payloads` in the `luma` folder on your SD card
 6. Copy `ntrboot_flasher.firm` to the `/luma/payloads/` folder on your SD card
-7. Reinsert your SD card into your console
+7. Sisip kembali kartu SD ke konsol
 8. Insert your ntrboot compatible DS / DSi flashcart into your console
 9. Launch ntrboot_flasher by holding (Start) during boot
 10. Read the red screen warning
