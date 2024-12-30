@@ -20,7 +20,7 @@ On Android phones/tablets, the minimum Android version required is 6.0 (Marshmal
 
 :::
 
-## What You Need
+## Apa yang Perlu
 
 - The following applications installed from the Google Play Store:
   - [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)
@@ -28,9 +28,9 @@ On Android phones/tablets, the minimum Android version required is 6.0 (Marshmal
   - If you wish, you can sideload these applications instead
 - The latest release of [MSET9](https://github.com/zoogie/MSET9/releases/latest) (the Release `.zip` file)
 
-## Instructions
+## Instruksi
 
-### Section I - Prep Work
+### Bagian I - Persiapan
 
 In this section, you will prepare the SD card data necessary for the MSET9 exploit to trigger.
 
@@ -69,7 +69,7 @@ In this section, you will prepare the SD card data necessary for the MSET9 explo
     - If you get an error, check the [troubleshooting](troubleshooting-mset9), then try again
     - Your 3DS will appear to lose most data / no user-installed apps on HOME Menu. This is expected. Your data will come back at a later step
 
-11. Reinsert your SD card into your console
+11. Sisip kembali kartu SD ke konsol
 
 12. Power on your console
 
@@ -93,7 +93,7 @@ In this section, you will prepare the SD card data necessary for the MSET9 explo
 
 19. If the check passed, you'll see `Inject trigger file` become [highlighted](/images/screenshots/mset9/inject-trigger-highlighted.png) and you can continue to the next step. **Do not inject trigger yet.** Put your phone/tablet/computer aside for now
 
-20. Reinsert your SD card into your console
+20. Sisip kembali kartu SD ke konsol
 
 ### Section II - MSET9
 
@@ -124,7 +124,7 @@ These instructions must be followed **EXACTLY**, so double-check EVERYTHING you 
 
 In this section, you will install custom firmware onto your console.
 
-1. When prompted, input the key combo given on the top screen to install boot9strap
+1. Saat diminta, tekan kombo tombol mengikuti layar atas untuk memasang boot9strap
    - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-mset9)
 2. Once it is complete, press (A) to reboot your console
 
@@ -140,7 +140,7 @@ Do NOT skip this section! If you skip it, applications may crash unexpectedly an
 
 :::
 
-1. Power off your console
+1. Matikan daya konsol
 2. Insert your SD card into your phone/tablet/computer
 3. Open the MSET9 Installer application
 4. Tap `Remove MSET9`
@@ -158,6 +158,6 @@ Did you follow Section IV (Removing MSET9)? That section is MANDATORY!
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Lanjut ke [Penyiapan Akhir](finalizing-setup)
 
 :::
