@@ -6,7 +6,7 @@ For support (in English) with GodMode9, as well as help with scripting and to ge
 
 :::
 
-## Required Reading
+## Bacaan Penting
 
 Aside from creating and restoring NAND backups, GodMode9 has the functionality to dump installed titles to an installable `.cia` file, to dump game cartridge data to a `.3ds` ROM file, and to directly install a game cartridge to the system.
 
@@ -18,17 +18,17 @@ These instructions are written for use with GodMode9 v2.0.0 or later. If you hav
 
 :::
 
-### What You Need
+### Apa yang Perlu
 
 - The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
 
-### Instructions
+### Instruksi
 
-1. Power off your console
-2. Insert your SD card into your computer
+1. Matikan daya konsol
+2. Sisipkan kartu SD ke komputer Anda
 3. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 4. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
-5. Reinsert your SD card into your console
+5. Sisip kembali kartu SD ke konsol
 
 ## Dumping a Game Cartridge
 
@@ -113,7 +113,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Do the following process for each GBA VC game that you want to back up the save for:
    - Launch the GBA VC game
    - Exit the GBA VC game
-   - Power off your console
+   - Matikan daya konsol
    - Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
    - Navigate to `[S:] SYSNAND VIRTUAL`
    - Press (A) on `agbsave.bin` to select it
@@ -133,7 +133,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Do the following process for each GBA VC game that you want to restore the save for:
    - Launch the GBA VC game
    - Exit the GBA VC game
-   - Power off your console
+   - Matikan daya konsol
    - Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
    - Navigate to `[0:] SDCARD` -> `gm9` -> `out`
    - Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
