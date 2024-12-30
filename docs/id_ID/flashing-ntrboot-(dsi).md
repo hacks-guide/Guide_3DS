@@ -1,6 +1,6 @@
 # Flashing ntrboot (DSi)
 
-## Required Reading
+## Bacaan Penting
 
 Before proceeding, ensure you have read all of the information on [ntrboot](ntrboot)
 
@@ -12,7 +12,7 @@ Note that in some rare circumstances, it may be possible for the flashing proces
 
 :::
 
-## What You Need
+## Apa yang Perlu
 
 - Your ntrboot compatible flashcart
 - Two consoles
@@ -20,9 +20,9 @@ Note that in some rare circumstances, it may be possible for the flashing proces
   - **The target 3DS**: the 3DS family console on stock firmware
 - The latest release of [ds_ntrboot_flasher](https://github.com/ntrteam/ds_ntrboot_flasher/releases/latest) (`ds_ntrboot_flasher_dsi.nds`)
 
-## Instructions
+## Instruksi
 
-### Section I - Prep Work
+### Bagian I - Persiapan
 
 1. Power off **the source DSi**
 2. Insert your flashcart's SD card into your computer
