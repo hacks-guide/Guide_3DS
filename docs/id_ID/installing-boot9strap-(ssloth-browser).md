@@ -16,29 +16,29 @@ For technical details on the exploits that you will be using on this page, see [
 
 SSLoth allows users on version 11.13.0 and below to bypass the browser version check, allowing the use of new-browserhax or old-browserhax (compatible with versions 11.4.0 through 11.13.0 in all regions), which can then be used in conjunction with universal-otherapp.
 
-## What You Need
+## Apa yang Perlu
 
-- The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
-- The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- Versi terkini dari [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (unduhan langsung)
+- Versi terkini dari [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (unduhan langsung)
+- Versi terkini dari [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (yang `.zip` Luma3DS)
 - The latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) (`otherapp.bin`)
 
-## Instructions
+## Instruksi
 
-### Section I - Prep Work
+### Bagian I - Persiapan
 
 In this section, you will copy the files needed to trigger both browserhax and universal-otherapp.
 
-1. Power off your console
-2. Insert your SD card into your computer
+1. Matikan daya konsol
+2. Sisipkan kartu SD ke komputer Anda
 3. Copy `otherapp.bin` to the root of your SD card and rename it to `arm11code.bin`
-   - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
+   - Akar (_root_) kartu SD merujuk ke direktori awal kartu SD yang ada folder Nintendo 3DS, berarti **tidak di dalam folder apa pun**
    - If you do not see the `.bin` extension, do not add it to the end of the filename
 4. Copy everything from the Luma3DS `.zip` to the root of your SD card
-5. Create a folder named `boot9strap` on the root of your SD card
-6. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
+5. Buat folder dengan nama `boot9strap` di akar kartu SD
+6. Salin `boot9strap.firm` dan `boot9strap.firm.sha` dari berkas `.zip` boot9strap ke folder `/boot9strap/` di kartu SD
 7. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
-8. Reinsert your SD card into your console
+8. Sisip kembali kartu SD ke konsol
 9. Power on your console
 
 ### Section II - SSLoth
@@ -66,7 +66,7 @@ In this section, you will visit the browser exploit webpage, which will use univ
 
 In this section, you will install custom firmware onto your console.
 
-1. When prompted, input the key combo given on the top screen to install boot9strap
+1. Saat diminta, tekan kombo tombol mengikuti layar atas untuk memasang boot9strap
    - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
 2. Once it is complete, press (A) to reboot your console
 
@@ -82,6 +82,6 @@ ___
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Lanjut ke [Penyiapan Akhir](finalizing-setup)
 
 :::
