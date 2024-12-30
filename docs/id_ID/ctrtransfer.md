@@ -1,6 +1,6 @@
 # CTRTransfer
 
-## Required Reading
+## Bacaan Penting
 
 This is an add-on section for installing an 11.15.0 CTRTransfer image to your console.
 
@@ -16,7 +16,7 @@ As a part of this process, your system settings will be reset to its defaults. T
 
 :::
 
-## What You Need
+## Apa yang Perlu
 
 - The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
 - The latest release of [FBI](https://github.com/nh-server/FBI-NH/releases/download/2.6.1/FBI.3dsx) (direct download)
@@ -28,9 +28,9 @@ As a part of this process, your system settings will be reset to its defaults. T
 
 <!--@include: ./_include/ctrtransfer-images.md -->
 
-## Instructions
+## Instruksi
 
-### Section I - Prep Work
+### Bagian I - Persiapan
 
 <!--@include: ./_include/ctrtransfer-prep.md -->
 
@@ -60,6 +60,6 @@ ___
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Lanjut ke [Penyiapan Akhir](finalizing-setup)
 
 :::
