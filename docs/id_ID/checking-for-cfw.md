@@ -1,8 +1,8 @@
-# Checking for CFW
+# Memeriksa CFW
 
-## Required Reading
+## Bacaan Penting
 
-This is an add-on section to check if your console already has a modern custom firmware.
+Ini adalah laman lebihan untuk memeriksa apakah CFW konsol sudah modern.
 
 If your console already has an arm9loaderhax or boot9strap based custom firmware, you will need to follow the instructions indicated to upgrade your setup to a modern one.
 
@@ -12,9 +12,9 @@ If your console has a menuhax-based CFW setup, you should [clear HOME Menu's ext
 
 :::
 
-## Instructions
+## Instruksi
 
-1. Power off your console
+1. Matikan daya konsol
 2. Hold the (Select) button
 3. Power on your console while still holding the (Select) button
 4. You should now see a configuration menu of some sort
