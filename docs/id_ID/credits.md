@@ -1,6 +1,6 @@
-# Credits
+# Daftar Nama
 
-This guide is currently maintained by: **lifehackerhansol, lilyuwuu, eip618, ihaveamac, and adrot**, with additional significant contributions from **Gruetzig, danny8376, MechanicalDragon0687, and the various #community-resources members** who provide valuable input.
+Panduan ini saat ini diurus oleh: **lifehackerhansol, lilyuwuu, eip618, ihaveamac, dan adrot**, dengan sumbangsih bernas tambahan dari **Gruetzig, danny8376, MechanicalDragon0687, dan berbagai anggota #community-resources** yang memberi masukan berharga.
 
 This guide uses homebrew software developed by **SciresM, TuxSH, AuroraWright, devkitPro, d0k3, PabloMK7, astronautlevel2, BernardoGiordano, mtheall, Universal-Team, ntrteam, jason0597, Steveice10 and MechanicalDragon0687**, as well as exploits authored/discovered by **SciresM, zoogie, luigoalma, PabloMK7, TuxSH, MrNbaYoh, nedwill, and plutooo**.
 
