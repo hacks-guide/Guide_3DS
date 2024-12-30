@@ -26,17 +26,17 @@ The instructions provided only apply to the New 3DS, New 3DS XL, and New 2DS XL.
 
 :::
 
-### What You Need
+### Apa yang Perlu
 
 - The [Super-skaterhax](https://skater.nintendohomebrew.com) zip for your console's region and system version
 
-#### Section I - Prep Work
+#### Bagian I - Persiapan
 
 In this section, you will copy the files needed to trigger both super-skaterhax and the Homebrew Launcher.
 
-1. Power off your console
+1. Matikan daya konsol
 
-2. Insert your SD card into your computer
+2. Sisipkan kartu SD ke komputer Anda
 
 3. Copy everything from the Super-skaterhax `.zip` to the root of your SD card, overwriting any existing files
 
@@ -46,7 +46,7 @@ In this section, you will copy the files needed to trigger both super-skaterhax 
 
    :::
 
-4. Reinsert your SD card into your console
+4. Sisip kembali kartu SD ke konsol
 
 5. Power on your console
 
@@ -113,7 +113,7 @@ If you haven't already, make sure you have a working Internet connection set up 
 
 In this section, you will install custom firmware onto your console.
 
-1. When prompted, input the key combo given on the top screen to install boot9strap
+1. Saat diminta, tekan kombo tombol mengikuti layar atas untuk memasang boot9strap
    - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-super-skaterhax)
 2. Once it is complete, press (A) to reboot your console
 
@@ -131,6 +131,6 @@ You may now restore your region settings back to normal.
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Lanjut ke [Penyiapan Akhir](finalizing-setup)
 
 :::
