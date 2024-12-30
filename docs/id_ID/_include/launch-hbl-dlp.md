@@ -9,5 +9,5 @@
 9. Press (Home) to suspend Download Play
 10. Press the "Close" button on the bottom screen to close Download Play
 11. Re-launch the Download Play application
-12. Your console should load the Homebrew Launcher
+12. Konsol seharusnya memuat Homebrew Launcher
     - If your console is stuck on the loading splash screen, you are missing `boot.3dsx` from the root of your SD card
