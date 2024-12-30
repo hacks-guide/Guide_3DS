@@ -1,6 +1,6 @@
 # Uninstall CFW
 
-## Required Reading
+## Bacaan Penting
 
 This will completely remove CFW from your console, including boot9strap and Luma3DS, for the purpose of restoring the console to stock.
 
@@ -41,25 +41,25 @@ These instructions will only work on consoles with a Luma3DS version of 8.0 or h
 
 :::
 
-## What You Need
+## Apa yang Perlu
 
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- Versi terkini dari [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (yang `.zip` Luma3DS)
 - The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
 - The latest release of [DSiWare Uninstaller](https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest)
 - [safety_test.gm9](/gm9_scripts/safety_test.gm9)
 
-## Instructions
+## Instruksi
 
-### Section I - Prep Work
+### Bagian I - Persiapan
 
-1. Power off your console
-2. Insert your SD card into your computer
+1. Matikan daya konsol
+2. Sisipkan kartu SD ke komputer Anda
 3. Copy everything from the Luma3DS `.zip` to the root of your SD card
 4. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 5. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
 6. Copy `DSiWareUninstaller.3dsx` to the `/3ds/` folder on your SD card
 7. Copy `safety_test.gm9` to the `/gm9/scripts/` folder on your SD card
-8. Reinsert your SD card into your console
+8. Sisip kembali kartu SD ke konsol
 
 ### Section II - DS Mode Tests
 
@@ -72,7 +72,7 @@ The purpose of this section is to check whether built-in DS mode applications wi
 3. Navigate to `Internet Settings` -> `Nintendo DS Connection Settings`, then click OK
 4. You should boot into the Nintendo DS Connection Setup menu
    - If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed
-5. Power off your console
+5. Matikan daya konsol
 
 #### DS Download Play Test
 
@@ -81,7 +81,7 @@ The purpose of this section is to check whether built-in DS mode applications wi
 3. Select "Nintendo DS"
 4. If your console loads into a "Download software via DS Download Play" menu, the test was successful
    - If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed
-5. Power off your console
+5. Matikan daya konsol
 
 ::: warning
 
@@ -110,7 +110,7 @@ The purpose of this section is to verify that the console will boot and that cri
 12. Select "User Name"
 13. If you are able to enter a new user name, the test was successful
     - If the keyboard does not appear, the screen freezes, or the console crashes, the test has failed
-14. Power off your console
+14. Matikan daya konsol
 
 ::: danger
 
@@ -126,7 +126,7 @@ If you do NOT boot into the regular 3DS HOME Menu, or System Settings / your key
 4. Select "GM9Megascript"
 5. Select "Backup Options"
 6. Select "SysNAND Backup"
-7. Press (A) to confirm
+7. Tekan (A) untuk konfirmasi
    - This process will take some time
    - If you get an error, ensure you have at least 1.3GB of free space on your SD card
 8. Press (B) to return to the main menu
@@ -162,7 +162,7 @@ This section will remove illegitimate content, like homebrew and dumped cartridg
 15. Press (B) to exit the Rosalina menu
 16. Press (Home), then close Download Play
 17. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
-18. Your console should load the Homebrew Launcher
+18. Konsol seharusnya memuat Homebrew Launcher
 19. Launch DSiWare Uninstaller from the list of homebrew
 20. Follow the prompts and allow the program to uninstall
 21. Once the process has succeeded, exit the Homebrew Launcher and power off your console
