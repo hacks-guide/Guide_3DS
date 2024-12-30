@@ -1,5 +1,5 @@
-1. Power off your console
-2. Insert your SD card into your computer
+1. Matikan daya konsol
+2. Sisipkan kartu SD ke komputer Anda
 3. Create a folder named `3ds` on the root of your SD card if it does not already exist
 4. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 5. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
@@ -8,4 +8,4 @@
 8. Copy `ctrtransfer.gm9` to the `/gm9/scripts/` folder on your SD card
 9. Copy `FBI.3dsx` to the `/3ds/` folder on your SD card
 10. Copy `faketik.3dsx` to the `/3ds/` folder on your SD card
-11. Reinsert your SD card into your console
+11. Sisip kembali kartu SD ke konsol
