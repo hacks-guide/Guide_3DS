@@ -1,6 +1,6 @@
 # Formatting SD (Linux)
 
-## Required Reading
+## Bacaan Penting
 
 This is an add-on section for formatting an SD card to work with the 3DS.
 
@@ -8,12 +8,12 @@ If the 3DS already recognizes the SD card, this guide is not required.
 
 This page is for Linux users only. If you are not on Linux, check out the [Formatting SD (Windows)](formatting-sd-\(windows\)) or [Formatting SD (Mac)](formatting-sd-\(mac\)) pages.
 
-## Instructions
+## Instruksi
 
 1. Make sure your SD card is **not** inserted
 2. Launch the Linux Terminal
 3. Type `watch "lsblk"`
-4. Insert your SD card into your computer
+4. Sisipkan kartu SD ke komputer Anda
 5. Observe the output. It should match something like this:
    ```
    NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
