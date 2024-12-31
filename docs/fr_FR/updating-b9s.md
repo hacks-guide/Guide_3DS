@@ -1,10 +1,10 @@
 # Updating B9S
 
-## Required Reading
+## Lecture Requise
 
 This page is for existing boot9strap users to update their installation of boot9strap to the latest version.
 
-## What You Need
+## Ce dont vous avez besoin
 
 - The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
 - The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
@@ -20,7 +20,7 @@ For all steps in this section, overwrite any existing files on your SD card.
 
 :::
 
-1. Insert your SD card into your computer
+1. Insérez votre carte SD dans votre ordinateur
 2. Create a folder named `boot9strap` on the root of your SD card
 3. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
 4. Copy `SafeB9SInstaller.firm` from the SafeB9SInstaller `.zip` to the root of your SD card and rename it to `boot.firm`
@@ -43,7 +43,7 @@ For all steps in this section, overwrite any existing files on your SD card.
 
 ### Section III - Update Luma3DS
 
-1. Insert your SD card into your computer
+1. Insérez votre carte SD dans votre ordinateur
 2. Copy everything from the Luma3DS `.zip` to the root of your SD card, replacing any existing files
 3. Reinsert your SD card into your console
 4. Power on your console
