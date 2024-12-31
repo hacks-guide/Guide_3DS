@@ -60,27 +60,27 @@ Note that this is not necessary for any other kind of Virtual Console games (GBC
 
 ::: info
 
-The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
+Simpanan akan diekstrak ke folder `/gm9/out/` di kartu SD dengan nama `<TitleID>.gbavc.sav`.
 
 :::
 
 ::: info
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by pressing (Home) to bring up the action menu, selecting `Title manager`, and selecting `[A:] SD CARD`.
+Untuk mencari tahu Title ID berkas `<TitleID>.gbavc.sav`, lihat daftar Title ID permainan di konsol dengan menekan (Home) untuk membuka menu tindakan, pilih `Title manager`, lalu pilih `[A:] SD CARD`.
 
 :::
 
-1. Do the following process for each GBA VC game that you want to back up the save for:
-   - Launch the GBA VC game
-   - Exit the GBA VC game
+1. Lakukan cara berikut untuk mencadang simpanan tiap permainan GBA VC yang diinginkan:
+   - Buka permainan GBA VC
+   - Keluar dari GBA VC
    - Boot your console while holding (Start) to launch the Luma3DS chainloader menu
    - Launch GodMode9 by pressing (A)
-   - Navigate to `[S:] SYSNAND VIRTUAL`
-   - Press (A) on `agbsave.bin` to select it
-   - Select "AGBSAVE options..."
-   - Select "Dump GBA VC save"
-   - Press (A) to continue
-   - Press (Start) to reboot your console
+   - Navigasi ke `[S:] SYSNAND VIRTUAL`
+   - Tekan (A) pada `agbsave.bin` untuk pilih
+   - Pilih "AGBSAVE options..."
+   - Pilih "Dump GBA VC save"
+   - Tekan (A) untuk lanjut
+   - Tekan (Start) untuk nyalakan ulang konsol
 
 ### Section IV - Copy EmuNAND to SysNAND
 
@@ -93,7 +93,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
    - This process will take some time
 6. Once it is completed, press (A) to continue
 7. Press (B) to decline relocking write permissions if prompted
-8. Press (B) to return to the main menu
+8. Tekan (B) untuk kembali ke menu utama
 
 ### Section V - Restore DSiWare Saves
 
@@ -103,7 +103,7 @@ If you did not backup DSiWare Saves earlier, skip this section.
 
 :::
 
-1. Navigate to `[0:] SDCARD` -> `gm9` -> `out`
+1. Navigasi ke `[0:] SDCARD` -> `gm9` -> `out`
 2. Press (Y) on the `00030004` folder to copy it
 3. Press (B) twice to return to the main menu
 4. Navigate to `[2:] SYSNAND TWLN` -> `title`
@@ -125,28 +125,28 @@ If you did not backup GBA VC Saves earlier, skip this section.
 
 ::: info
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by pressing (Home) to bring up the action menu, selecting `Title manager`, and selecting `[A:] SD CARD`.
+Untuk mencari tahu Title ID berkas `<TitleID>.gbavc.sav`, lihat daftar Title ID permainan di konsol dengan menekan (Home) untuk membuka menu tindakan, pilih `Title manager`, lalu pilih `[A:] SD CARD`.
 
 :::
 
 1. Hold (R) and press (Start) at the same time to power off your console
 2. Power on your console into SysNAND
-3. Do the following process for each GBA VC game that you want to restore the save for:
-   - Launch the GBA VC game
-   - Exit the GBA VC game
+3. Lakukan cara berikut untuk memulihkan simpanan tiap permainan GBA VC yang diinginkan:
+   - Buka permainan GBA VC
+   - Keluar dari GBA VC
    - Boot your console while holding (Start) to launch the Luma3DS chainloader menu
    - Launch GodMode9 by pressing (A)
    - Navigate to `[0:] SDCARD` -> `gm9`
-   - Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
-   - Press (B) to return to the main menu
-   - Navigate to `[S:] SYSNAND VIRTUAL`
-   - Press (A) on `agbsave.bin` to select it
-   - Select "AGBSAVE options..."
-   - Select "Inject GBA VC save"
-   - Press (A) to continue
-   - Press (Start) to reboot your console
-   - Launch the GBA VC game
-   - Exit the GBA VC game
+   - Tekan (Y) pada `<TitleID>.gbavc.sav` yang ingin dipulihkan untuk disalin
+   - Tekan (B) untuk kembali ke menu utama
+   - Navigasi ke `[S:] SYSNAND VIRTUAL`
+   - Tekan (A) pada `agbsave.bin` untuk pilih
+   - Pilih "AGBSAVE options..."
+   - Pilih "Inject GBA VC save"
+   - Tekan (A) untuk lanjut
+   - Tekan (Start) untuk nyalakan ulang konsol
+   - Buka permainan GBA VC
+   - Keluar dari GBA VC
 
 ### Section VII - Backup SysNAND
 
