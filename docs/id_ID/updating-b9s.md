@@ -2,7 +2,7 @@
 
 ## Bacaan Penting
 
-This page is for existing boot9strap users to update their installation of boot9strap to the latest version.
+Laman ini untuk memperbarui konsol yang sudah boot9strap ke versi terkini.
 
 ## Apa yang Perlu
 
