@@ -60,41 +60,41 @@ Ini hanya berfungsi untuk permainan 3DS; kartrid NDS tidak bisa langsung dipasan
 
 1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
 2. Navigasi ke `[C:] GAMECART`
-3. Press (A) on `[TitleID].trim.3ds` to select it, then select "NCSD image options...", then select "Install game image"
-4. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
-5. Once the process is complete, your game will show up in the HOME Menu as an installed title.
+3. Tekan (A) pada `[TitleID].trim.3ds` untuk pilih, lalu pilih "NCSD image options...", dan pilih "Install game image"
+4. Tekan (A) untuk membuka izin tulis SysNAND (lvl1), lalu tekan kombo yang diberikan
+5. Sesudah proses selesai, permainan akan muncul di HOME Menu sebagai aplikasi terpasang.
 
-## Dumping a 3DS Game Cartridge to .CIA
+## Membuat Dump Kartrid 3DS ke .CIA
 
 ::: info
 
-This should only be used if [Installing a Game Cartridge Directly to the System](#installing-a-game-cartridge-directly-to-the-system) does not work.
+Ini hanya boleh digunakan jika [Memasang Data Kartrid Langsung ke Konsol](#installing-a-game-cartridge-directly-to-the-system) tidak berfungsi.
 
 :::
 
 1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
 2. Navigasi ke `[C:] GAMECART`
-3. Press (A) on `[TitleID].trim.3ds` to select it, then select "NCSD image options...", then select "Build CIA from file"
-4. Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
+3. Tekan (A) pada `[TitleID].trim.3ds` untuk pilih, lalu pilih "NCSD image options...", dan pilih "Build CIA from file"
+4. Keluaran berformat `.cia` yang bisa dipasang akan ada di folder `/gm9/out/` di kartu SD
 
-## Dumping an Installed Title
+## Membuat Dump Aplikasi Terpasang
 
 ::: info
 
-This allows dumping of both System- and User-installed digital titles, such as ones downloaded from the eShop.
+Berikut cara men-_dump_ aplikasi yang dipasang sistem atau pengguna, contohnya unduhan eShop.
 
 :::
 
 1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
-2. Press (Home) to bring up the action menu
-3. Select "Title manager"
-4. Select one of the following depending on the type of title you wish to dump
-   - **User Installed Title**: `[A:] SD CARD`
-   - **System Title / DSiWare**: `[1:] NAND / TWL`
-5. Select the title you wish to dump
-6. Select "Manage Title..."
-7. Select "Build CIA (standard)"
-8. Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
+2. Tekan (Home) untuk membuka menu tindakan
+3. Pilih "Title manager"
+4. Pilih salah satu berikut ini tergantung jenis aplikasi yang ingin di-_dump_
+   - **Apli Dipasang Pengguna**: `[A:] SD CARD`
+   - **Apli Sistem / DSiWare**: `[1:] NAND / TWL`
+5. Pilih aplikasi yang ingin di-_dump_
+6. Pilih "Manage Title..."
+7. Pilih "Build CIA (standard)"
+8. Keluaran berformat `.cia` yang bisa dipasang akan ada di folder `/gm9/out/` di kartu SD
 
 ## Backup GBA VC Saves
 
