@@ -15,7 +15,7 @@ You MUST have already installed Luma3DS and boot9strap to use this.
 ## Apa yang Perlu
 
 - An existing EmuNAND
-- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
+- Versi terkini dari [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (yang `.zip` GodMode9)
 
 ## Instruksi
 
@@ -23,8 +23,8 @@ You MUST have already installed Luma3DS and boot9strap to use this.
 
 1. Matikan daya konsol
 2. Sisipkan kartu SD ke komputer Anda
-3. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
-4. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+3. Salin `GodMode9.firm` dari `.zip` GodMode9 ke folder `/luma/payloads/` di kartu SD
+4. Salin folder `gm9` dari `.zip` GodMode9 ke akar kartu SD
 5. Sisip kembali kartu SD ke konsol
 
 ### Section II - Backup SysNAND DSiWare Saves
@@ -35,7 +35,7 @@ If you do not have any DSiWare games or saves that you care about, skip this sec
 
 :::
 
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
 2. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it is completed
 3. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
    - Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
@@ -84,7 +84,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 
 ### Section IV - Copy EmuNAND to SysNAND
 
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
 2. Navigate to `[E:] EMUNAND VIRTUAL`
 3. Press (A) on `nand.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
 4. Press (A) to unlock SysNAND overwriting, then input the key combo given
@@ -150,7 +150,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 
 ### Section VII - Backup SysNAND
 
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
 
 <!--@include: ./_include/nand-backup.md -->
 
@@ -158,7 +158,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 
 ### Section VIII - Format SD card
 
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
 
 <!--@include: ./_include/format-sd-gm9.md -->
 
