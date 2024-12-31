@@ -1,6 +1,6 @@
 # File Extensions (Windows)
 
-## Required Reading
+## Lecture Requise
 
 This is an add-on section for disabling Windows's default behavior of hiding file extensions.
 
