@@ -4,7 +4,7 @@
 
 This is an add-on section for checking your SD card for errors using h2testw.
 
-Depending on the size of your SD card and the speed of your computer, this process can take up to several hours!
+Tergantung ukuran kartu SD dan kecepatan komputer, proses ini bisa lama beberapa jam!
 
 This page is for Windows users only. If you are not on windows, check out the [F3 (Linux)](f3-\(linux\)) or [F3XSwift (Mac)](f3xswift-\(mac\)) pages.
 
@@ -32,12 +32,12 @@ If the test shows the result `Test finished without errors`, your SD card is goo
 
 ::: danger
 
-If the test shows any other results, your SD card may be corrupted or damaged and you may have to replace it!
+Jika hasil ujinya lain lagi, berarti kartu SD mungkin rusak atau bermasalah dan harus diganti!
 
 :::
 
 ::: tip
 
-Return to [Get Started](get-started)
+Kembali ke [Memulai](get-started)
 
 :::
