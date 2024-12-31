@@ -1,10 +1,10 @@
-# File Extensions (Windows)
+# Ekstens Berkas (Windows)
 
 ## Bacaan Penting
 
-This is an add-on section for disabling Windows's default behavior of hiding file extensions.
+Ini adalah laman lebihan untuk memunculkan ekstensi tersembunyi di Windows.
 
-This will make it easier for you to find the referenced files in the rest of this guide.
+Ini akan mempermudah mencari berkas yang dirujuk pada seluruh panduan ini.
 
 ## Instruksi
 
