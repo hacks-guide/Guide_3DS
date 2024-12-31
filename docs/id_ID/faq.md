@@ -96,25 +96,25 @@ Dari sejarahnya, dulu 3DS punya akses _homebrew_ jenis _userland_ melalui eksplo
 
 :::details Apakah aman memperbarui 3DS dengan CFW ke versi terkini?
 
-Jika menggunakan Luma3DS, pemuat _custom firmware_ (boot9strap) **tidak akan** dihapus saat memperbarui sistem. There have been updates in the past that have resulted in Luma3DS crashing on boot, so it is a good idea to wait a couple of hours to ensure that the latest update will not temporarily render the console unusable until Luma3DS is updated. System updates can be performed the same way as they are on an unmodified 3DS: through System Settings, Safe Mode, or the update prompt when the update is automatically downloaded.
+Jika menggunakan Luma3DS, pemuat _custom firmware_ (boot9strap) **tidak akan** dihapus saat memperbarui sistem. Dulu sempat ada pembaruan yang membuat Luma3DS mogok (_crash_) di awal nyala, jadi lebih baik menunggu beberapa jam untuk memastikan pembaruan terbaru tidak membuat konsol sementara tidak bisa digunakan sampai Luma3DS diperbarui. Pembaruan sistem bisa dilakukan sama seperti di 3DS belum dimodif: melalui System Settings, Safe Mode, atau sembulan pembaruan jika pembaruan diunduh otomatis.
 
 :::
 
-:::details How do I upgrade my SD card?
+:::details Bagaimana memperbarui kartu SD?
 
-Copy and paste your SD card contents to a new SD card formatted as FAT32. For 128GB cards, an allocation size of 65536 is recommended. SD cards larger than 128GB are not recommended due to known issues with GBA graphics and custom themes.
-
-:::
-
-:::details Can I system transfer with CFW?
-
-Yes, system transfers can be performed through the official System Transfer function to other consoles with CFW (inconsistencies may occur if the target console is unmodified). Tickets for illegitimate titles (homebrew) will not transfer, but the titles can be made to reappear with [faketik](https://github.com/ihaveamac/faketik/releases/latest). Make sure that you do not perform a wireless transfer, as this will delete illegitimate titles. CFW will remain on both consoles.
+Salin dan tempel isi kartu SD Anda ke kartu SD baru berformat FAT32. Untuk kartu 128GB, ukuran alokasi yang dianjurkan 65536 (64KB). Kartu SD ukuran lebih dari 128GB tidak dianjurkan karena ada isu dengan grafik GBA dan tema kustom.
 
 :::
 
-:::details How do I change the system language of a Japanese 3DS?
+:::details Apakah konsol CFW bisa system transfer?
 
-The only way to change the system language of a Japanese 3DS to a language other than Japanese is to perform a [region change](region-changing). Note that this is very likely to break the Nintendo eShop on your console, which means you will be unable to update your games whether they are in-region or out-of-region.
+Iya, transfer sistem bisa dilakukan melalui cara System Transfer resmi ke konsol lain yang ada CFW (mungkin akan ada ketakteraturan jika konsol sasaran belum dimodif). Ticket untuk aplikasi tidak sah (_homebrew_) tidak akan ditransfer, tapi bisa dimunculkan lagi dengan [faketik](https://github.com/ihaveamac/faketik/releases/latest). Pastikan tidak melakukan transfer nirkabel, ini akan menghapus aplikasi tidak sah. CFW akan tetap ada di kedua konsol.
+
+:::
+
+:::details Bagaimana mengubah bahasa sistem di 3DS Jepang?
+
+Satu-satunya cara mengubah bahasa sistem 3DS Jepang ke bahasa lain yaitu dengan [mengganti daerah](region-changing). Perlu diingat ini sangat mungkin mengacau Nintendo eShop di konsol, sehingga tidak bisa memperbarui permainan dalam-daerah ataupun luar-daerah.
 
 :::
 
