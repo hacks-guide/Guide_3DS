@@ -151,16 +151,16 @@ Untuk mencari tahu Title ID berkas `<TitleID>.gbavc.sav`, lihat daftar Title ID 
 
 ::: info
 
-For organizational purposes, copy each `.cia` file you wish to encrypt / decrypt to the `/cias/` folder on your SD card
+Agar lebih rapih, salin tiap berkas '.3ds' yang ingin dienkripsi / dekripsi **ke** folder '/ cias /' di kartu SD
 
 :::
 
 1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
 2. Navigasi ke `[0:] SDCARD` -> `cias`
-3. Press (A) on the `.cia` file to select it, then select "CIA image options..."
-4. Select the option to perform the desired function:
-   - **Encrypt to 0:/gm9/out:** Create an encrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card
-   - **Decrypt to 0:/gm9/out:** Create a decrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card
-   - **Encrypt inplace:** Replace the selected `.cia` file with an encrypted version
-   - **Decrypt inplace:** Replace the selected `.cia` file with a decrypted version
-5. Your encrypted / decrypted `.cia` will be outputted to the desired location
+3. Tekan (A) pada berkas `.cia` untuk pilih, lalu pilih "CIA image options..."
+4. Pilih opsi dengan fungsi yang ingin dilakukan:
+   - **Encrypt to 0:/gm9/out:** Menyalin dan mengenkripsi `.cia` terpilih ke folder `/gm9/out/` di kartu SD
+   - **Decrypt to 0:/gm9/out:** Menyalin dan mendekripsi `.cia` terpilih ke folder `/gm9/out/` di kartu SD
+   - **Encrypt inplace:** Menimpa berkas `.cia` terpilih dengan versi enkripsi
+   - **Decrypt inplace:** Menimpa berkas `.cia` terpilih dengan versi dekripsi
+5. Keluaran `.cia` terenkripsi / dekripsi akan ada di letak yang diinginkan
