@@ -26,7 +26,7 @@ The instructions provided only apply to the New 3DS, New 3DS XL, and New 2DS XL.
 
 :::
 
-### What You Need
+### Ce dont vous avez besoin
 
 - The [Super-skaterhax](https://skater.nintendohomebrew.com) zip for your console's region and system version
 
@@ -36,7 +36,7 @@ In this section, you will copy the files needed to trigger both super-skaterhax 
 
 1. Power off your console
 
-2. Insert your SD card into your computer
+2. Insérez votre carte SD dans votre ordinateur
 
 3. Copy everything from the Super-skaterhax `.zip` to the root of your SD card, overwriting any existing files
 
