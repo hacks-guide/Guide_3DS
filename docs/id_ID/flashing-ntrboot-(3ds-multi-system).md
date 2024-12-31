@@ -38,12 +38,12 @@ Note that in some rare circumstances, it may be possible for the flashing proces
 1. Launch the Luma3DS chainloader by holding (Start) during boot on **the source 3DS**
 2. Select "ntrboot_flasher"
 3. Read the red screen warning
-4. Press (A) to continue
+4. Tekan (A) untuk lanjut
 5. Select your flashcart
    - If you do not see your flashcart in the list at the top, read the bottom screen for more info on each option
 6. Select "Dump Flash"
 7. Wait until the process is completed
-8. Press (A) to continue
+8. Tekan (A) untuk lanjut
 9. Press (A) to return to the main menu
 10. Select "Inject Ntrboot"
 11. Press (A) for retail unit ntrboot
