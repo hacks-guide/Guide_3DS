@@ -74,8 +74,8 @@ Your NAND backup has been successfully created.
 12. Press (A) to unlock SysNAND (lvl3) writing, then input the key combo given
     - This will **not** overwrite your boot9strap installation
     - This process will take some time
-13. Press (A) to continue
-14. Press (B) to return to the main menu
+13. Tekan (A) untuk lanjut
+14. Tekan (B) untuk kembali ke menu utama
 15. Select "Exit"
 16. Press (A) to relock write permissions if prompted
 
@@ -94,7 +94,7 @@ Note that it is not possible to inject files into Health & Safety that are large
 :::
 
 1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
-2. Navigate to `[0:] SDCARD` -> `cias`
+2. Navigasi ke `[0:] SDCARD` -> `cias`
 3. Press (A) on your `.cia` to select it
 4. Select "CIA image options..."
 5. Select "Mount image to drive"
@@ -102,7 +102,7 @@ Note that it is not possible to inject files into Health & Safety that are large
 7. Select "NCCH image options"
 8. Select "Inject to H&S"
 9. Tekan (A) untuk membuka izin tulis SysNAND (lvl1), lalu tekan kombo yang diberikan
-10. Press (A) to continue
+10. Tekan (A) untuk lanjut
 11. Press (A) to relock write permissions if prompted
 
 ::: tip
@@ -166,13 +166,13 @@ This process will only log you out of your NNID. You will still not be able to u
 4. Select "GM9Megascript"
 5. Select "Scripts from Plailect's Guide"
 6. Select "Remove NNID"
-7. Press (A) to continue
+7. Tekan (A) untuk lanjut
 8. Tekan (A) untuk membuka izin tulis SysNAND (lvl1), lalu tekan kombo yang diberikan
-9. Press (A) to continue
-10. Press (B) to return to the main menu
+9. Tekan (A) untuk lanjut
+10. Tekan (B) untuk kembali ke menu utama
 11. Select "Exit"
 12. Press (A) to relock write permissions if prompted
-13. Press (Start) to reboot your console
+13. Tekan (Start) untuk nyalakan ulang konsol
 
 ::: tip
 
