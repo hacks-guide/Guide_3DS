@@ -6,7 +6,7 @@ For support (in English) with GodMode9, as well as help with scripting and to ge
 
 :::
 
-## Required Reading
+## Lecture Requise
 
 Aside from creating and restoring NAND backups, GodMode9 has the functionality to dump installed titles to an installable `.cia` file, to dump game cartridge data to a `.3ds` ROM file, and to directly install a game cartridge to the system.
 
@@ -18,14 +18,14 @@ These instructions are written for use with GodMode9 v2.0.0 or later. If you hav
 
 :::
 
-### What You Need
+### Ce dont vous avez besoin
 
 - The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
 
 ### Instructions
 
 1. Power off your console
-2. Insert your SD card into your computer
+2. Insérez votre carte SD dans votre ordinateur
 3. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 4. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
 5. Reinsert your SD card into your console
