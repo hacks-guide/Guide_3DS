@@ -28,7 +28,7 @@ Panduan ini kompatibel dengan semua jenis ecer konsol 3DS (3DS, 3DS XL, 2DS, New
 
 :::details Seberisiko apa meretas konsol?
 
-Konsol kena matot sekarang hampir mustahil, kecuali jika _sengaja_ dibuat matot.
+Risiko kena matot sekarang hampir mustahil, kecuali jika _sengaja_ dibuat matot.
 
 :::
 
@@ -118,21 +118,21 @@ Satu-satunya cara mengubah bahasa sistem 3DS Jepang ke bahasa lain yaitu dengan 
 
 :::
 
-:::details How do I update homebrew applications?
+:::details Bagaimana memperbarui homebrew?
 
-It depends on the format of the homebrew application. Generally speaking:
+Ini tergantung jenis format aplikasi _homebrew_. Secara umum:
 
-- Homebrew in **CIA format** can be updated by installing the new CIA, which will usually overwrite the old one. If the old CIA is not overwritten, you can delete the old one from Data Management as you would any other 3DS title.
-- Homebrew in **3DSX format** can be updated by replacing the 3DSX file in `/3ds/` with a fresh copy. If the homebrew application includes additional assets, you may need to place that folder somewhere else. Refer to the documentation of the homebrew application.
-- For updating Luma3DS, see [this page](restoring-updating-cfw). For updating GodMode9, see [this page](godmode9-usage#updating-godmode9).
+- _Homebrew_ **format CIA** bisa diperbarui dengan memasang CIA baru, ini akan menimpa versi lama. Jika CIA lama tidak tertimpa, hapus dulu di Data Management seperti apli 3DS biasa.
+- _Homebrew_ **format 3DSX** bisa diperbarui dengan mengganti baru berkas 3DSX di `/3ds/`. Jika _homebrew_ terdapat aset tambahan, mungkin harus taruh aset tersebut di folder lain. Coba lihat dokumentasi untuk _homebrew_ tersebut.
+- Untuk memperbarui Luma3DS, lihat [laman ini](restoring-updating-cfw). Untuk memperbarui GodMode9, lihat [laman ini](godmode9-usage#updating-godmode9).
 
 :::
 
-:::details How do I update my games?
+:::details Bagaimana memperbarui permainan?
 
-You can continue to download game updates from the Nintendo eShop, even though it has now shut down.
+Pembaruan permainan masih bisa diunduh dari Nintendo eShop, walaupun kini sudah ditutup.
 
-If the game is not from the same region as the console, you will need to [dump the updates](dumping-titles-and-game-cartridges) from a 3DS that has the updates installed. The Nintendo eShop only contains updates for the console's region (for example, a Japanese 3DS will only have updates for Japanese games).
+Jika daerah permainan tidak sama dengan konsol, maka perlu [men-_dump_ pembaruan](dumping-titles-and-game-cartridges) dari 3DS yang punya pembaruan tersebut. The Nintendo eShop only contains updates for the console's region (for example, a Japanese 3DS will only have updates for Japanese games).
 
 :::
 
