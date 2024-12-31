@@ -50,7 +50,7 @@ Tidak. Konsol dengan _custom firmware_ masih bisa bermain daring dan memainkan k
 
 :::
 
-:::details Apakah NNID, simpanan, permainan (dll.) tetap ada?
+:::details Apakah NNID, simpanan, permainan (dll.) akan hilang?
 
 Panduan ini tidak akan memengaruhi NNID Anda (jika ada). Untuk konsol berdaerah KOR, CHN, atau TWN malah tidak punya NNID sehingga tidak terpengaruh.
 
@@ -72,31 +72,31 @@ Iya! Pokoknya harus bisa menaruh berkas di kartu SD kompatibel.
 
 :::details Sebaiknya kartu SD ukuran berapa?
 
-Setidaknya kartu SD masih tersisa 1.5GB untuk mengikuti keseluruhan panduan ini. Walaupun 3DS secara resmi membaca kartu SD hingga 32GB, tapi ukuran yang lebih besar juga bisa digunakan jika diformat ke FAT32. It is not recommended to use SD cards greater than 128GB due to known issues with GBA graphics and custom themes.
+Setidaknya kartu SD masih tersisa 1.5GB untuk mengikuti keseluruhan panduan ini. Walaupun 3DS secara resmi membaca kartu SD hingga 32GB, tapi ukuran yang lebih besar juga bisa digunakan jika diformat ke FAT32. Tidak dianjurkan menggunakan kartu SD di atas 128GB karena ada isu dengan grafik GBA dan tema kustom.
 
 :::
 
-:::details I heard about this thing I have to pay for (Gateway, Sky3DS, ntrboot, R4, etc). Is that something I need?
+:::details Dengar-dengar ada cara yang perlu beli (Gateway, Sky3DS, ntrboot, R4, dll). Kira-kira itu perlu, tidak?
 
-Tidak. While a DS flashcart can be used to mod a 3DS using [ntrboot](ntrboot), there is now a free software method available for most consoles.
+Tidak. Walau _flashcart_ DS memang bisa untuk memodif 3DS dengan [ntrboot](ntrboot), sekarang hampir semua konsol punya cara cuma-cuma.
 
-3DS-mode flashcarts like Gateway and Sky3DS are not recommended because they are obsolete and may carry brick risk.
-
-:::
-
-:::details What's the difference between custom firmware and homebrew?
-
-Definitionally speaking, custom firmware refers to a modification of the 3DS system software to do things that it normally isn't able to. Homebrew generally refers to software created outside of official sources (i.e. not distributed by eShop or cartridges).
-
-Historically, the 3DS used to have userland homebrew access through older exploits like ninjhax, which people sometimes called just "homebrew". The level of system access granted with userland allowed you to run basic homebrew and emulators but did not allow you to (easily) modify games or dump cartridges. It was also a lot less stable, with homebrew often ungracefully crashing and requiring a full reboot. Custom firmware grants a far greater level of system access while also being more stable than homebrew-only entrypoints.
+_Flashcart_ mode 3DS seperti Gateway dan Sky3DS sudah tidak dianjurkan karena usang dan berisiko kena matot (_brick_).
 
 :::
 
-## Post-Installation FAQ
+:::details Apa perbedaan custom firmware dan homebrew?
 
-:::details Is it safe to update my 3DS to the latest version with CFW?
+Secara takrif, _custom firmware_ merujuk pada oprekan peranti lunak sistem 3DS agar bisa melakukan hal yang secara bawaan tidak boleh. _Homebrew_ umumnya merujuk pada peranti lunak bersumber tidak resmi (yaitu: tidak diagihkan lewat eShop atau kartrid).
 
-If you are using Luma3DS, your custom firmware loader (boot9strap) will _never_ be removed when performing a system update. There have been updates in the past that have resulted in Luma3DS crashing on boot, so it is a good idea to wait a couple of hours to ensure that the latest update will not temporarily render the console unusable until Luma3DS is updated. System updates can be performed the same way as they are on an unmodified 3DS: through System Settings, Safe Mode, or the update prompt when the update is automatically downloaded.
+Dari sejarahnya, dulu 3DS punya akses _homebrew_ jenis _userland_ melalui eksploit seperti ninjhax, terkadang hanya disebut "homebrew". Tingkat akses sistem dari _userland_ mengizinkan membaca _homebrew_ dan emulator dasar tapi belum bisa (dengan mudah) memodif permainan atau men-_dump_ kartrid. Itu pun lebih tidak stabil, _homebrew_ sering mogok tidak jelas dan perlu dinyalakan ulang penuh. _Custom firmware_ mengizinkan tingkat akses sistem lebih luas dan stabil daripada titik masuk hanya-_homebrew_.
+
+:::
+
+## Perihal Setelah Pasang
+
+:::details Apakah aman memperbarui 3DS dengan CFW ke versi terkini?
+
+Jika menggunakan Luma3DS, pemuat _custom firmware_ (boot9strap) **tidak akan** dihapus saat memperbarui sistem. There have been updates in the past that have resulted in Luma3DS crashing on boot, so it is a good idea to wait a couple of hours to ensure that the latest update will not temporarily render the console unusable until Luma3DS is updated. System updates can be performed the same way as they are on an unmodified 3DS: through System Settings, Safe Mode, or the update prompt when the update is automatically downloaded.
 
 :::
 
