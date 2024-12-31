@@ -16,7 +16,7 @@
     - If you see "Destination already exists", press (A) on "Overwrite file(s)"
 14. Press (A) to continue
 15. Hold (R) and press (Start) at the same time to power off your console
-16. Insert your SD card into your computer
+16. Insérez votre carte SD dans votre ordinateur
 17. Copy `<date>_<serialnumber>_sysnand_##.bin`, `<date>_<serialnumber>_sysnand_##.bin.sha`, and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
     - Copy these backups to multiple locations (such as online file storage, an external hard drive, etc.)
     - These backups will save you from a brick and/or help you recover files from the NAND image if anything goes wrong in the future
