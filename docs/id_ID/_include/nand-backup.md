@@ -1,4 +1,4 @@
-1. Press (Home) to bring up the action menu
+1. Tekan (Home) untuk membuka menu tindakan
 2. Select "Scripts..."
 3. Select "GM9Megascript"
 4. Select "Backup Options"
