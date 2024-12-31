@@ -54,7 +54,7 @@ You need at least 1.3GB of free space to perform the NAND backup, which is a par
 3. Copy the `Nintendo 3DS` folder from the root of your SD card to your computer
 4. Delete the Nintendo 3DS folder from the SD card
 5. Sisip kembali kartu SD ke konsol
-6. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+6. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
 7. Press the (Home) button
 8. Select "Scripts..."
 9. Select "finalize"
@@ -71,7 +71,7 @@ You need at least 1.3GB of free space to perform the NAND backup, which is a par
 Now that you have your NAND backup in a safe place:
 
 1. Sisip kembali kartu SD ke konsol
-2. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+2. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
 3. Press the (Home) button
 4. Select "Scripts..."
 5. Select "finalize"
@@ -95,7 +95,7 @@ Make sure you have at least 1.3GB available in your SD card. If you don't have e
 3. Copy the `Nintendo 3DS` folder from the root of your SD card to your computer
 4. Delete the Nintendo 3DS folder from the SD card
 5. Sisip kembali kartu SD ke konsol
-6. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+6. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
 7. Perform a [NAND Backup](godmode9-usage#creating-a-nand-backup)
 8. Copy the files in `gm9/out` on your SD to a safe location on your computer
 9. Delete the `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` files from the SD card, keeping essential.exefs in `/gm9/out/`
@@ -122,7 +122,7 @@ The script has detected that the Nintendo 3DS folder is missing AND that you hav
 4. Delete `/gm9/backups/` from your SD card
 5. If you moved your Nintendo 3DS folder off of your SD card to get to this point, copy it back to your SD card
    - If you do not have a Nintendo 3DS folder, boot into the HOME Menu at least once with the SD card inserted to automatically generate it
-6. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+6. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
 7. Press (Home) to bring up the action menu
 8. Select "Scripts..."
 9. Select "finalize"
