@@ -1,4 +1,4 @@
-# FAQ
+# Pertanyaan Umum
 
 ::: danger
 
@@ -8,77 +8,77 @@
 
 ::: info
 
-**Yes**, you can still install custom firmware on your 3DS, even after the closure of eShop.
+**Iya**, _custom firmware_ masih bisa dipasang di 3DS, bahkan setelah eShop ditutup.
 
 :::
 
-## Pre-Installation FAQ
+## Perihal Sebelum Pasang
 
-:::details I am on the latest system version. Is my console hackable without any external hardware/prerequisites?
+:::details Konsol saya sudah di versi terkini. Apakah konsol bisa diretas tanpa perkakas/prasyarat?
 
-**Yes!** New 3DS / New 3DS XL / New 2DS XL can use [super-skaterhax](installing-boot9strap-\(super-skaterhax\)), while 3DS / 3DS XL / 2DS can use [MSET9](installing-boot9strap-\(mset9\)).
-
-:::
-
-:::details What consoles is this guide compatible with?
-
-This guide is compatible with all retail 3DS-family devices (3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, New 2DS XL). If your system version string is displayed as "0.0.0-0", then you may have a developer unit.
+**Iya!** New 3DS / New 3DS XL / New 2DS XL bisa dengan [super-skaterhax](installing-boot9strap-\(super-skaterhax\)), sedangkan 3DS / 3DS XL / 2DS dengan [MSET9](installing-boot9strap-\(mset9\)).
 
 :::
 
-:::details How risky is hacking my console?
+:::details Panduan ini kompatibel dengan konsol apa?
 
-Bricks are now effectively impossible unless you are purposely trying to brick your console.
-
-:::
-
-:::details Can I run awesome homebrew and emulators with this?
-
-Yes! This guide will install a few useful homebrew applications, including [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest), which acts as a homebrew app store.
+Panduan ini kompatibel dengan semua jenis ecer konsol 3DS (3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, New 2DS XL). Jika versi pada sistem bertuliskan "0.0.0-0", bisa jadi konsol Anda unit pengembang.
 
 :::
 
-:::details Can I use this to play games from other regions?
+:::details Seberisiko apa meretas konsol?
 
-Yes; Luma3DS will automatically ignore the region check for cartridges and installed titles. Some games may need to make use of Luma's [locale emulation feature](https://wiki.hacks.guide/wiki/3DS:Setting_game_locales) in order to work properly on out-of-region consoles.
-
-:::
-
-:::details Will I lose any features if I install CFW?
-
-No. Consoles with custom firmware can download game updates and run physical cartridges as any other 3DS can.
+Konsol kena matot sekarang hampir mustahil, kecuali jika _sengaja_ dibuat matot.
 
 :::
 
-:::details Can I keep my NNID, saves, digital games (etc.)?
+:::details Apakah bisa menjalankan homebrew dan emulator keren?
 
-Your NNID (if you have one) will not be affected by this guide. Consoles with a region of KOR, CHN, or TWN do not have NNID functionality to begin with and are thus unaffected.
-
-Following this guide alone should not result in data loss (saves, digital games, etc), but SD card corruption is always a possibility. You should make a backup of your SD card contents if you have important data.
+Iya! Panduan ini akan memasang beberapa aplikasi _homebrew_ berguna, termasuk [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest), sebagai toko apli _homebrew_.
 
 :::
 
-:::details Will my 3DS be banned for having CFW?
+:::details Apakah bisa memainkan permainan luar-daerah?
 
-Bans are no longer possible because Nintendo Network services have been shut down (for everyone).
-
-:::
-
-:::details Can I do this without a computer (e.g. an Android phone)?
-
-Yes! All you need is the ability to put files on a compatible SD card.
+Iya; karena Luma3DS mengabaikan periksa daerah pada kartrid dan aplikasi terpasang. Beberapa permainan mungkin perlu fitur [Locale Emulation](https://wiki.hacks.guide/wiki/3DS:Setting_game_locales) dari Luma agar lancar di konsol luar-daerah.
 
 :::
 
-:::details What size SD card can I use?
+:::details Apakah fungsi tertentu hilang jika ada CFW?
 
-You will need at least 1.5GB of free SD card space to follow this guide in its entirety. While the 3DS is officially compatible with SD cards up to 32GB, larger SD cards can be used if they are manually re-formatted as FAT32. It is not recommended to use SD cards greater than 128GB due to known issues with GBA graphics and custom themes.
+Tidak. Konsol dengan _custom firmware_ masih bisa bermain daring dan memainkan kartrid fisik layaknya 3DS biasa.
+
+:::
+
+:::details Apakah NNID, simpanan, permainan (dll.) tetap ada?
+
+Panduan ini tidak akan memengaruhi NNID Anda (jika ada). Untuk konsol berdaerah KOR, CHN, atau TWN malah tidak punya NNID sehingga tidak terpengaruh.
+
+Mengikuti panduan ini saja seharusnya tidak kehilangan data (simpanan, permainan, dll), tapi kartu SD rusak mungkin terjadi. Jangan lupa cadangkan isi kartu SD jika terdapat data penting.
+
+:::
+
+:::details Apakah 3DS saya akan dicekal jika ada CFW?
+
+Pencekalan sudah tidak ada karena ditutupnya Nintendo Network (untuk semua orang).
+
+:::
+
+:::details Apakah bisa selain di komputer (misal: ponsel Android)?
+
+Iya! Pokoknya harus bisa menaruh berkas di kartu SD kompatibel.
+
+:::
+
+:::details Sebaiknya kartu SD ukuran berapa?
+
+Setidaknya kartu SD masih tersisa 1.5GB untuk mengikuti keseluruhan panduan ini. Walaupun 3DS secara resmi membaca kartu SD hingga 32GB, tapi ukuran yang lebih besar juga bisa digunakan jika diformat ke FAT32. It is not recommended to use SD cards greater than 128GB due to known issues with GBA graphics and custom themes.
 
 :::
 
 :::details I heard about this thing I have to pay for (Gateway, Sky3DS, ntrboot, R4, etc). Is that something I need?
 
-No. While a DS flashcart can be used to mod a 3DS using [ntrboot](ntrboot), there is now a free software method available for most consoles.
+Tidak. While a DS flashcart can be used to mod a 3DS using [ntrboot](ntrboot), there is now a free software method available for most consoles.
 
 3DS-mode flashcarts like Gateway and Sky3DS are not recommended because they are obsolete and may carry brick risk.
 
