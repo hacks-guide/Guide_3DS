@@ -1,65 +1,65 @@
-# Dumping Titles and Game Cartridges
+# Membuat Dump Permainan dan Kartrid
 
 ::: info
 
-For support (in English) with GodMode9, as well as help with scripting and to get updates and info, join [GodMode9 on Discord](https://discord.gg/BRcbvtFxX4).
+Untuk bantuan berbahasa Inggris terkait GodMode9 dan tentang membuat naskah, pembaruan, dan info; gabung ke [Discord GodMode9](https://discord.gg/BRcbvtFxX4).
 
 :::
 
 ## Bacaan Penting
 
-Aside from creating and restoring NAND backups, GodMode9 has the functionality to dump installed titles to an installable `.cia` file, to dump game cartridge data to a `.3ds` ROM file, and to directly install a game cartridge to the system.
+Selain membuat dan memulihkan cadangan NAND; GodMode9 juga bisa membuat _dump_ dari aplikasi terpasang menjadi `.cia`, membuat _dump_ kartrid menjadi ROM `.3ds`, dan langsung memasang data kartrid ke konsol.
 
-## Updating GodMode9
+## Memperbarui GodMode9
 
 ::: info
 
-These instructions are written for use with GodMode9 v2.0.0 or later. If you have an older version of GodMode9, follow these instructions to update it.
+Instruksi ini ditulis untuk digunakan di GodMode9 v2.0.0 ke atas. Jika punya GodMode9 versi lawas, ikuti instruksi memperbarui di bawah.
 
 :::
 
 ### Apa yang Perlu
 
-- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
+- Versi terkini dari [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (yang `.zip` GodMode9)
 
 ### Instruksi
 
 1. Matikan daya konsol
 2. Sisipkan kartu SD ke komputer Anda
-3. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
-4. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+3. Salin `GodMode9.firm` dari `.zip` GodMode9 ke folder `/luma/payloads/` di kartu SD
+4. Salin folder `gm9` dari `.zip` GodMode9 ke akar kartu SD
 5. Sisip kembali kartu SD ke konsol
 
-## Dumping a Game Cartridge
+## Membuat Dump Kartrid
 
 ::: info
 
-Insert the game cartridge you intend to dump into your console
+Sisipkan kartrid yang ingin di-_dump_ ke konsol
 
-- 3DS game cartridges will be dumped to a `.3ds` format
-- NDS game cartridges will be dumped to a `.nds` format
+- Kartrid 3DS akan di-_dump_ ke format `.3ds`
+- Kartrid NDS akan di-_dump_ ke format `.nds`
 
 :::
 
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-2. Navigate to `[C:] GAMECART`
-3. Follow the steps applicable to your game cartridge:
-   - **3DS Game Cartridge:** Press (A) on `[TitleID].trim.3ds` to select it
-   - **NDS Game Cartridge:** Press (A) on `[TitleID].nds` to select it
-     - Trimmed dumps are not recommended for NDS games in general, as they can cause various playback issues
-4. Select "Copy to 0:/gm9/out"
-5. Your non-installable `.3ds` or `.nds` formatted file will be outputted to the `/gm9/out/` folder on your SD card
+1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
+2. Navigasi ke `[C:] GAMECART`
+3. Ikuti langkah berikut sesuai jenis kartrid:
+   - **Kartrid 3DS:** Tekan (A) pada `[TitleID].trim.3ds` untuk pilih
+   - **Kartrid NDS:** Tekan (A) pada `[TitleID].nds` untuk pilih
+     - _Dump_ terpangkas umumnya tidak dianjurkan untuk permainan NDS, karena banyak isu saat dijalankan
+4. Pilih "Copy to 0:/gm9/out"
+5. Keluaran berformat `.3ds` atau `.nds` yang tak bisa dipasang akan ada di folder `/gm9/out/` di kartu SD
 
-## Installing a Game Cartridge Directly to the System
+## Memasang Data Kartrid Langsung ke Konsol
 
 ::: info
 
-This will only work for 3DS games; it is not possible to install an NDS game cartridge to the system as a title.
+Ini hanya berfungsi untuk permainan 3DS; kartrid NDS tidak bisa langsung dipasang ke sistem konsol.
 
 :::
 
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-2. Navigate to `[C:] GAMECART`
+1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
+2. Navigasi ke `[C:] GAMECART`
 3. Press (A) on `[TitleID].trim.3ds` to select it, then select "NCSD image options...", then select "Install game image"
 4. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
 5. Once the process is complete, your game will show up in the HOME Menu as an installed title.
@@ -72,8 +72,8 @@ This should only be used if [Installing a Game Cartridge Directly to the System]
 
 :::
 
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-2. Navigate to `[C:] GAMECART`
+1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
+2. Navigasi ke `[C:] GAMECART`
 3. Press (A) on `[TitleID].trim.3ds` to select it, then select "NCSD image options...", then select "Build CIA from file"
 4. Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
@@ -85,7 +85,7 @@ This allows dumping of both System- and User-installed digital titles, such as o
 
 :::
 
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
 2. Press (Home) to bring up the action menu
 3. Select "Title manager"
 4. Select one of the following depending on the type of title you wish to dump
@@ -114,7 +114,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
    - Launch the GBA VC game
    - Exit the GBA VC game
    - Matikan daya konsol
-   - Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+   - Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
    - Navigate to `[S:] SYSNAND VIRTUAL`
    - Press (A) on `agbsave.bin` to select it
    - Select "AGBSAVE options..."
@@ -134,7 +134,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
    - Launch the GBA VC game
    - Exit the GBA VC game
    - Matikan daya konsol
-   - Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+   - Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
    - Navigate to `[0:] SDCARD` -> `gm9` -> `out`
    - Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
    - Press (B) to return to the main menu
@@ -155,7 +155,7 @@ For organizational purposes, copy each `.cia` file you wish to encrypt / decrypt
 
 :::
 
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
 2. Navigate to `[0:] SDCARD` -> `cias`
 3. Press (A) on the `.cia` file to select it, then select "CIA image options..."
 4. Select the option to perform the desired function:
