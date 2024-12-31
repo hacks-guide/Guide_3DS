@@ -65,7 +65,7 @@ Your NAND backup has been successfully created.
 3. Copy `<date>_<serialnumber>_sysnand_##.bin` from your computer to the `/gm9/out/` folder on your SD card
 4. Sisip kembali kartu SD ke konsol
 5. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
-6. Press (Home) to bring up the action menu
+6. Tekan (Home) untuk membuka menu tindakan
 7. Select "Scripts..."
 8. Select "GM9Megascript"
 9. Select "Restore Options"
@@ -101,7 +101,7 @@ Note that it is not possible to inject files into Health & Safety that are large
 6. Press (A) on the `.app` file
 7. Select "NCCH image options"
 8. Select "Inject to H&S"
-9. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+9. Tekan (A) untuk membuka izin tulis SysNAND (lvl1), lalu tekan kombo yang diberikan
 10. Press (A) to continue
 11. Press (A) to relock write permissions if prompted
 
@@ -120,10 +120,10 @@ This will only work if the Health & Safety injection was performed by GodMode9 (
 :::
 
 1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
-2. Press (Home) to bring up the action menu
+2. Tekan (Home) untuk membuka menu tindakan
 3. Select "More..."
 4. Select "Restore H&S"
-5. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+5. Tekan (A) untuk membuka izin tulis SysNAND (lvl1), lalu tekan kombo yang diberikan
 6. Press (A) to relock write permissions if prompted
 
 ::: tip
@@ -161,13 +161,13 @@ This process will only log you out of your NNID. You will still not be able to u
 :::
 
 1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
-2. Press (Home) to bring up the action menu
+2. Tekan (Home) untuk membuka menu tindakan
 3. Select "Scripts..."
 4. Select "GM9Megascript"
 5. Select "Scripts from Plailect's Guide"
 6. Select "Remove NNID"
 7. Press (A) to continue
-8. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+8. Tekan (A) untuk membuka izin tulis SysNAND (lvl1), lalu tekan kombo yang diberikan
 9. Press (A) to continue
 10. Press (B) to return to the main menu
 11. Select "Exit"
