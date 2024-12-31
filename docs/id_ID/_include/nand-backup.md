@@ -6,15 +6,15 @@
 6. Tekan (A) untuk konfirmasi
    - This process will take some time
    - If you get an error, look for your issue in the [troubleshooting guide](troubleshooting-finalizing-setup.html)
-7. Press (A) to continue
-8. Press (B) to return to the main menu
+7. Tekan (A) untuk lanjut
+8. Tekan (B) untuk kembali ke menu utama
 9. Select "Exit"
 10. Press (A) to relock write permissions if prompted
-11. Navigate to `[S:] SYSNAND VIRTUAL`
+11. Navigasi ke `[S:] SYSNAND VIRTUAL`
 12. Press (A) on `essential.exefs` to select it
 13. Pilih "Copy to 0:/gm9/out"
     - If you see "Destination already exists", press (A) on "Overwrite file(s)"
-14. Press (A) to continue
+14. Tekan (A) untuk lanjut
 15. Hold (R) and press (Start) at the same time to power off your console
 16. Sisipkan kartu SD ke komputer Anda
 17. Copy `<date>_<serialnumber>_sysnand_##.bin`, `<date>_<serialnumber>_sysnand_##.bin.sha`, and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
