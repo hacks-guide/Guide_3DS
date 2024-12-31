@@ -109,7 +109,7 @@ If you did not backup DSiWare Saves earlier, skip this section.
 4. Navigate to `[2:] SYSNAND TWLN` -> `title`
 5. Press (Y) to paste the `00030004` folder
 6. Select "Copy path(s)"
-7. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+7. Tekan (A) untuk membuka izin tulis SysNAND (lvl1), lalu tekan kombo yang diberikan
 8. Select "Overwrite file(s)"
    - This process may take some time if you have many DSiWare games
 9. Press (B) to decline relocking write permissions if prompted
