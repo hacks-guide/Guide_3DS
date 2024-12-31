@@ -16,7 +16,7 @@ For technical details on the exploits that you will be using on this page, see [
 
 SSLoth allows users on version 11.13.0 and below to bypass the browser version check, allowing the use of new-browserhax or old-browserhax (compatible with versions 11.4.0 through 11.13.0 in all regions), which can then be used in conjunction with universal-otherapp.
 
-## What You Need
+## Ce dont vous avez besoin
 
 - The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
 - The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
@@ -30,7 +30,7 @@ SSLoth allows users on version 11.13.0 and below to bypass the browser version c
 In this section, you will copy the files needed to trigger both browserhax and universal-otherapp.
 
 1. Power off your console
-2. Insert your SD card into your computer
+2. Insérez votre carte SD dans votre ordinateur
 3. Copy `otherapp.bin` to the root of your SD card and rename it to `arm11code.bin`
    - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
    - If you do not see the `.bin` extension, do not add it to the end of the filename
