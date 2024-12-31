@@ -97,7 +97,7 @@ The purpose of this section is to verify that the console will boot and that cri
 2. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it is complete
 3. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
    - Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after following this guide
-4. Press (Home) to bring up the action menu
+4. Tekan (Home) untuk membuka menu tindakan
 5. Select "Scripts..."
 6. Select "safety_test"
 7. Read the text on-screen and press (A) to continue
@@ -121,7 +121,7 @@ If you do NOT boot into the regular 3DS HOME Menu, or System Settings / your key
 ### Section IV - NAND Backup
 
 1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
-2. Press (Home) to bring up the action menu
+2. Tekan (Home) untuk membuka menu tindakan
 3. Select "Scripts..."
 4. Select "GM9Megascript"
 5. Select "Backup Options"
@@ -131,7 +131,7 @@ If you do NOT boot into the regular 3DS HOME Menu, or System Settings / your key
    - If you get an error, ensure you have at least 1.3GB of free space on your SD card
 8. Press (B) to return to the main menu
 9. Select “Exit”
-10. Press (Home) to bring up the action menu
+10. Tekan (Home) untuk membuka menu tindakan
 11. Select "Poweroff system" to power off your console
 
 ### Section V - Removing illegitimate content
@@ -201,7 +201,7 @@ If you're removing CFW because:
 
 1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
    - If you instead see the Luma3DS chainloader, use the D-Pad and the (A) button to select GodMode9
-2. Press (Home) to bring up the action menu
+2. Tekan (Home) untuk membuka menu tindakan
 3. Select "Scripts..."
 4. Select "GM9Megascript"
 5. Select "Hax Options"
