@@ -132,38 +132,38 @@ Ini tergantung jenis format aplikasi _homebrew_. Secara umum:
 
 Pembaruan permainan masih bisa diunduh dari Nintendo eShop, walaupun kini sudah ditutup.
 
-Jika daerah permainan tidak sama dengan konsol, maka perlu [men-_dump_ pembaruan](dumping-titles-and-game-cartridges) dari 3DS yang punya pembaruan tersebut. The Nintendo eShop only contains updates for the console's region (for example, a Japanese 3DS will only have updates for Japanese games).
+Jika daerah permainan tidak sama dengan konsol, maka perlu [men-_dump_ pembaruan](dumping-titles-and-game-cartridges) dari 3DS yang punya pembaruan tersebut. Nintendo eShop hanya sedia pembaruan sesuai daerah konsol (contoh: 3DS Jepang hanya ada pembaruan permainan Jepang).
 
 :::
 
-:::details Help! Something bad happened and my 3DS won't boot to HOME Menu...
+:::details Tolong! Ada yang salah dan 3DS saya tidak mau ke HOME Menu...
 
-Please look at the [troubleshooting guide](troubleshooting-post-install). **Uninstalling CFW when your console is in an unbootable state is not recommended, as it is very likely to lead to a brick**.
-
-:::
-
-## menuhax / A9LH / Gateway FAQ
-
-:::details I modded my console (x) years ago, so it already has some sort of homebrew. What should I do?
-
-It is recommended that you upgrade your setup to a modern, boot9strap-based one. Follow the [Checking for CFW](checking-for-cfw) guide to see how to upgrade your setup.
+Mohon rujuk ke [panduan sidik gangguan](troubleshooting-post-install). **Mencopot CFW saat konsol tidak bisa dinyalakan sangat TIDAK dianjurkan, karena akan matot (_brick_)**.
 
 :::
 
-:::details My setup works for me. Why should I upgrade it?
+## Perihal menuhax / A9LH / Gateway
 
-The vast majority of modern homebrew (such as Checkpoint and BootNTR Selector) have only been tested on modern, boot9strap-based setups and may not work entirely (or at all) on older setups based on menuhax, A9LH, or Gateway. In addition, depending on your setup, you may be unable to safely update to the latest firmware. Modern, boot9strap-based setups allow for a greater level of system access than previous hacks, including the ability to dump your console's bootrom.
+:::details Konsol saya sudah dimodif (x) tahun lalu, jadi sudah ada homebrew. Bagaimana ini?
 
-:::
-
-:::details Will I lose anything if I upgrade my setup?
-
-Your old setup (including your EmuNAND, if you have one) can usually be directly migrated to boot9strap with no data loss. If you have data that is particularly important to you, it would be a good idea to make a decrypted backup of your save data before upgrading your setup with a tool like [JKSM](https://github.com/J-D-K/JKSM/releases/tag/12%2F20%2F2018).
+Dianjurkan memperbarui penyiapan konsol ke CFW modern berdasar-boot9strap. Ikuti [Memeriksa CFW](checking-for-cfw) untuk cara memperbarui penyiapan CFW.
 
 :::
 
-:::details How do I move saves from an existing Gateway setup to a more modern setup?
+:::details Penyiapan CFW saya lancar saja. Untuk apa diperbarui?
 
-See [this thread](https://gbatemp.net/threads/425743/).
+Sebagian besar _homebrew_ modern (seperti Checkpoint dan BootNTR Selector) hanya diuji di CFW terkini berdasar-boot9strap, dan takutnya tidak berfungsi (sama sekali) di penyiapan lawas berdasar menuhax, A9LH, atau Gateway. Ditambah lagi, tergantung penyiapan CFW, bisa bahaya jika diperbarui ke _firmware_ terbaru. Penyiapan modern berdasar-boot9strap mengizinkan tingkat akses sistem lebih luas daripada retasan sebelumnya, termasuk men-_dump bootrom_ konsol.
+
+:::
+
+:::details Apakah ada yang hilang jika memperbarui CFW?
+
+Penyiapan lama Anda (termasuk EmuNAND, jika ada) bisa langsung diungsikan ke boot9strap tanpa kehilangan data. Jika terdapat data yang menurut Anda penting, sebelum memperbarui penyiapan CFW lebih baik membuat cadangan terdekripsi untuk data simpanan dengan alat seperti [JKSM](https://github.com/J-D-K/JKSM/releases/tag/12%2F20%2F2018).
+
+:::
+
+:::details Bagaimana memindahkan simpanan (save) dari CFW Gateway ke CFW modern?
+
+Lihat [utas ini](https://gbatemp.net/threads/425743/).
 
 :::
