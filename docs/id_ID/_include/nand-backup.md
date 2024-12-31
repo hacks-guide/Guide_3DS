@@ -12,7 +12,7 @@
 10. Press (A) to relock write permissions if prompted
 11. Navigate to `[S:] SYSNAND VIRTUAL`
 12. Press (A) on `essential.exefs` to select it
-13. Select "Copy to 0:/gm9/out"
+13. Pilih "Copy to 0:/gm9/out"
     - If you see "Destination already exists", press (A) on "Overwrite file(s)"
 14. Press (A) to continue
 15. Hold (R) and press (Start) at the same time to power off your console
