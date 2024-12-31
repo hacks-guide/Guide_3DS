@@ -129,7 +129,7 @@ If you do NOT boot into the regular 3DS HOME Menu, or System Settings / your key
 7. Tekan (A) untuk konfirmasi
    - This process will take some time
    - If you get an error, ensure you have at least 1.3GB of free space on your SD card
-8. Press (B) to return to the main menu
+8. Tekan (B) untuk kembali ke menu utama
 9. Select “Exit”
 10. Tekan (Home) untuk membuka menu tindakan
 11. Select "Poweroff system" to power off your console
@@ -208,11 +208,11 @@ If you're removing CFW because:
 6. Select "Un-install Hax"
 7. When prompted, press (A) to proceed
 8. Press (A) to unlock SysNAND (lvl3) writing, then input the key combo given
-9. Press (A) to continue
-10. Press (B) to return to the main menu
+9. Tekan (A) untuk lanjut
+10. Tekan (B) untuk kembali ke menu utama
 11. Select "Exit"
 12. Press (A) to relock write permissions if prompted
-13. Press (Start) to reboot your console
+13. Tekan (Start) untuk nyalakan ulang konsol
 
 ___
 
