@@ -14,7 +14,7 @@ This section will reset your system settings to its defaults. **Installed games 
 11. Press (A) to continue
 12. While still highlighting `00010017`, press (X) to delete it
 13. Tekan (A) untuk konfirmasi
-14. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+14. Tekan (A) untuk membuka izin tulis SysNAND (lvl1), lalu tekan kombo yang diberikan
 15. Once the file has been deleted, press (A) to continue
 16. Press (A) to relock write permissions if prompted
 17. Press (Start) to reboot your console
