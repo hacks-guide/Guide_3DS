@@ -2,9 +2,9 @@
 
 ## Bacaan Penting
 
-This is an add-on section for formatting an SD card to work with the 3DS.
+Ini adalah laman lebihan untuk memformat kartu SD agar terbaca di 3DS.
 
-If the 3DS already recognizes the SD card, this guide is not required.
+Jika 3DS sudah bisa membaca kartu SD, panduan ini tidak perlu.
 
 This page is for Windows users only. If you are not on Windows, check out the [Formatting SD (Linux)](formatting-sd-\(linux\)) or [Formatting SD (Mac)](formatting-sd-\(mac\)) pages.
 
@@ -85,7 +85,7 @@ You're done formatting your SD card if it's **32GB or smaller.**
 
 10. If the SD card had any files and folders on it before the format, copy everything back from your computer
 
-## Troubleshooting
+## Sidik Gangguan
 
 - guiformat shows the error "Failed to open device: GetLastError()=32"
   - Close everything that may be using the SD card, such as any File Explorer windows.
@@ -94,5 +94,5 @@ You're done formatting your SD card if it's **32GB or smaller.**
 - guiformat shows the error "GetLastError()=1117"
   - Your SD card write-protection switch may be [enabled](/images/sdlock.png). The lock must be flipped upwards to allow writing to the SD card (including formatting).
 
-- SD card remains undetected by console or continues to display the wrong capacity after formatting
-  - Your SD card may be partitioned or have unallocated space. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Windows) to reformat your SD card.
+- Kartu SD tetap tidak terbaca konsol atau daya tampungnya salah setelah diformat
+  - Kartu SD mungkin dipartisi atau ada ruang tak dialokasikan. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Windows) to reformat your SD card.
