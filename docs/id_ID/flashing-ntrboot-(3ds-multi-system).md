@@ -8,7 +8,7 @@ Metode ini perlu akses sementara ke jenis konsol 3DS lain yang sudah ada boot9st
 
 ::: danger
 
-Perlu diingat pada kejadian langka tertentu, _flashcart_ kawe bisa matot (_**brick**_) saat mem-_flash_ sehingga tidak terbaca lagi. Kemungkinan tidak, tapi yang pasti, panduan ini hanya mendukung _flashcart_ ori. Untuk mengurangi kemungkinan mendapat _flashcart_ kawe, dianjurkan membeli di situs bereputasi baik (seperti [NDS Card](https://www.nds-card.com/)).
+Perlu diingat pada kejadian langka tertentu, _flashcart_ kawe bisa **matot (_brick_)** saat mem-_flash_ sehingga tidak terbaca lagi. Kemungkinan tidak, tapi yang pasti, panduan ini hanya mendukung _flashcart_ ori. Untuk mengurangi kemungkinan mendapat _flashcart_ kawe, dianjurkan membeli di situs bereputasi baik (seperti [NDS Card](https://www.nds-card.com/)).
 
 :::
 
@@ -31,30 +31,30 @@ Perlu diingat pada kejadian langka tertentu, _flashcart_ kawe bisa matot (_**bri
 4. Salin `boot9strap_ntr.firm` dan `boot9strap_ntr.firm.sha` dari `.zip` boot9strap ntr ke folder `/ntrboot/` di kartu SD
 5. Salin `ntrboot_flasher.firm` ke folder `/luma/payloads/` di kartu SD **3DS sumber**
 6. Sisip kembali kartu SD **3DS sumber** ke **3DS sumber** lagi
-7. Sisipkan flashcart DS / DSi yang kompatibel ntrboot ke **3DS sumber**
+7. Sisipkan _flashcart_ DS / DSi yang kompatibel ntrboot ke **3DS sumber**
 
-### Section II - Flashing ntrboot
+### Bagian II - Mem-flash ntrboot
 
-1. Launch the Luma3DS chainloader by holding (Start) during boot on **the source 3DS**
-2. Select "ntrboot_flasher"
-3. Read the red screen warning
+1. Masuk ke Luma3DS chainloader dengan menahan (Start) saat awal nyala di **3DS sumber**
+2. Pilih "ntrboot_flasher"
+3. Baca peringatan layar merah
 4. Tekan (A) untuk lanjut
-5. Select your flashcart
-   - If you do not see your flashcart in the list at the top, read the bottom screen for more info on each option
-6. Select "Dump Flash"
-7. Wait until the process is completed
+5. Pilih jenis _flashcart_
+   - Jika tidak ada _flashcart_ Anda pada daftar di layar atas, baca keterangan di layar bawah pada tiap opsi
+6. Pilih "Dump Flash"
+7. Tunggu sampai proses ini selesai
 8. Tekan (A) untuk lanjut
-9. Press (A) to return to the main menu
-10. Select "Inject Ntrboot"
-11. Press (A) for retail unit ntrboot
-12. Wait until the process is completed
-13. Press (A) to return to the main menu
-14. Press (B) to power off **the source 3DS**
+9. Tekan (A) untuk kembali ke menu utama
+10. Pilih "Inject Ntrboot"
+11. Tekan (A) untuk "retail unit ntrboot"
+12. Tunggu sampai proses ini selesai
+13. Tekan (A) untuk kembali ke menu utama
+14. Tekan (B) untuk matikan daya **3DS sumber**
 
 ___
 
 ::: tip
 
-Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
+Lanjut ke [Memasang boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
 
 :::
