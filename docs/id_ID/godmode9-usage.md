@@ -48,7 +48,7 @@ GodMode9 is now up to date.
 
 ## Creating a NAND Backup
 
-1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
+1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 
 <!--@include: ./_include/nand-backup.md -->
 
@@ -64,9 +64,9 @@ Your NAND backup has been successfully created.
 2. Sisipkan kartu SD ke komputer Anda
 3. Copy `<date>_<serialnumber>_sysnand_##.bin` from your computer to the `/gm9/out/` folder on your SD card
 4. Sisip kembali kartu SD ke konsol
-5. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
+5. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 6. Tekan (Home) untuk membuka menu tindakan
-7. Select "Scripts..."
+7. Pilih "Scripts..."
 8. Select "GM9Megascript"
 9. Select "Restore Options"
 10. Select "SysNAND Restore (safe)"
@@ -93,7 +93,7 @@ Note that it is not possible to inject files into Health & Safety that are large
 
 :::
 
-1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
+1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 2. Navigasi ke `[0:] SDCARD` -> `cias`
 3. Press (A) on your `.cia` to select it
 4. Select "CIA image options..."
@@ -119,7 +119,7 @@ This will only work if the Health & Safety injection was performed by GodMode9 (
 
 :::
 
-1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
+1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 2. Tekan (Home) untuk membuka menu tindakan
 3. Select "More..."
 4. Select "Restore H&S"
@@ -140,7 +140,7 @@ Health & Safety has been reverted to normal.
 
 :::
 
-1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
+1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 2. Press (Right Shoulder) + (B) to unmount the current SD card and insert the one you want to format
    - If GodMode9 shows an initialization error when inserting the SD Card to be formatted, it can safely be dismissed
 
@@ -160,9 +160,9 @@ This process will only log you out of your NNID. You will still not be able to u
 
 :::
 
-1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
+1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 2. Tekan (Home) untuk membuka menu tindakan
-3. Select "Scripts..."
+3. Pilih "Scripts..."
 4. Select "GM9Megascript"
 5. Select "Scripts from Plailect's Guide"
 6. Select "Remove NNID"
