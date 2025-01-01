@@ -1,7 +1,7 @@
 This section will reset your system settings to its defaults. **Installed games and their save data will not be affected.** This is **required** to prevent known issues relating to extended memory mode and applets on some consoles.
 
 1. Matikan daya konsol
-2. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
+2. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 3. Navigate to `[0:] SDCARD` -> `gm9` -> `in`
 4. Press (X) on the CTRTransfer image `.bin` to delete it
 5. Tekan (A) untuk konfirmasi
