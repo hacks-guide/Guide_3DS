@@ -16,7 +16,7 @@ Perlu diingat pada kejadian langka tertentu, _flashcart_ kawe bisa **matot (_bri
 
 - _Flashcart_ yang kompatibel ntrboot
 - Dua konsol
-  - **The source NDS / NDSL**: the Nintendo DS or Nintendo DS Lite which is compatible with your flashcart
+  - **NDS / NDSL sumber**: Nintendo DS atau Nintendo DS Lite yang bisa membaca _flashcart_ Anda
   - **3DS sasaran**: Konsol 3DS yang masih _firmware_ bawaan
 - Versi v1.3 dari [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (unduhan langsung)
 - Versi terkini dari [ntrboot_flasher_nds](https://github.com/jason0597/ntrboot_flasher_nds/releases/latest) (`ntrboot_flasher_nds.nds`)
@@ -25,17 +25,17 @@ Perlu diingat pada kejadian langka tertentu, _flashcart_ kawe bisa **matot (_bri
 
 ### Bagian I - Persiapan
 
-1. Power off **the source NDS / NDSL**
+1. Matikan daya **NDS / NDSL sumber**
 2. Sisipkan kartu SD _flashcart_ ke komputer Anda
 3. Buat folder dengan nama `ntrboot` di akar kartu SD _flashcart_
 4. Salin `boot9strap_ntr.firm` dari `.zip` boot9strap-ntr ke folder `/ntrboot/` di kartu SD _flashcart_
 5. Salin `ntrboot_flasher_nds.nds` ke kartu SD _flashcart_
-6. Sisip kembali kartu SD-nya ke _flashcart_
-7. Insert your ntrboot compatible DS / DSi flashcart into **the source NDS / NDSL**
+6. Sisip kembali kartu SD ke _flashcart_
+7. Sisipkan _flashcart_ DS / DSi yang bisa ntrboot ke **NDS / NDSL sumber**
 
 ### Bagian II - Mem-flash ntrboot
 
-1. Launch `ntrboot_flasher_nds.nds` on **the source NDS / NDSL** using your flashcart
+1. Buka `ntrboot_flasher_nds.nds` di **NDS / NDSL sumber** lewat _flashcart_
 2. Tekan (A) untuk lanjut
 3. Cari _flashcart_ Anda dengan tombol (Atas) (Bawah)
 4. Tekan (A) untuk lanjut
@@ -47,8 +47,8 @@ Perlu diingat pada kejadian langka tertentu, _flashcart_ kawe bisa **matot (_bri
 10. Pilih "Inject FIRM" untuk memasang boot9strap ke _flashcart_
 11. Tekan kombo yang diberikan untuk konfirmasi
 12. Tekan (A) untuk lanjut
-13. Power off **the source NDS / NDSL**
-14. Eject your flashcart from **the source NDS / NDSL**
+13. Matikan daya **NDS / NDSL sumber**
+14. Keluarkan _flashcart_ dari **NDS / NDSL sumber**
 
 ___
 
