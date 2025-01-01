@@ -34,12 +34,12 @@ Perlu diingat pada kejadian langka tertentu, _flashcart_ kawe bisa **matot (_bri
 
 1. Buka `ntrboot_flasher_nds.nds` di konsol menggunakan _flashcart_
 2. Tekan (A) untuk lanjut
-3. Pilih _flashcart_ Anda dengan tombol (Atas) dan (Bawah)
+3. Cari _flashcart_ Anda dengan tombol (Atas) (Bawah)
 4. Tekan (A) untuk lanjut
 5. Pilih "Dump flash" untuk mencadang data memori _flashcart_
 6. Tekan kombo yang diberikan untuk konfirmasi
 7. Tekan (A) untuk lanjut
-8. Pilih _flashcart_ Anda dengan tombol (Atas) dan (Bawah)
+8. Cari _flashcart_ Anda dengan tombol (Atas) (Bawah)
 9. Tekan (A) untuk lanjut
 10. Pilih "Inject FIRM" untuk memasang boot9strap ke _flashcart_
 11. Tekan kombo yang diberikan untuk konfirmasi
