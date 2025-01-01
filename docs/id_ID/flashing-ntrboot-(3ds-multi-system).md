@@ -8,7 +8,7 @@ Metode ini perlu akses sementara ke jenis konsol 3DS lain yang sudah ada boot9st
 
 ::: danger
 
-Perlu diingat pada kejadian langka tertentu, _flashcart_ kawe bisa **matot (_brick_)** saat mem-_flash_ sehingga tidak terbaca lagi. Kemungkinan tidak, tapi yang pasti, panduan ini hanya mendukung _flashcart_ ori. Untuk mengurangi kemungkinan mendapat _flashcart_ kawe, dianjurkan membeli di situs bereputasi baik (seperti [NDS Card](https://www.nds-card.com/)).
+Perlu diingat pada kejadian langka tertentu, _flashcart_ kawe bisa **matot (_brick_)** saat mem-_flash_ sehingga tidak terbaca lagi. Kemungkinan tidak, tapi yang pasti, panduan ini hanya mendukung _flashcart_ ori. Untuk mengurangi kemungkinan mendapat _flashcart_ kawe, sebaiknya beli dari situs bereputasi baik (seperti [NDS Card](https://www.nds-card.com/)).
 
 :::
 
@@ -39,7 +39,7 @@ Perlu diingat pada kejadian langka tertentu, _flashcart_ kawe bisa **matot (_bri
 2. Pilih "ntrboot_flasher"
 3. Baca peringatan layar merah
 4. Tekan (A) untuk lanjut
-5. Pilih jenis _flashcart_
+5. Pilih _flashcart_ Anda
    - Jika tidak ada _flashcart_ Anda pada daftar di layar atas, baca keterangan di layar bawah pada tiap opsi
 6. Pilih "Dump Flash"
 7. Tunggu sampai proses ini selesai
