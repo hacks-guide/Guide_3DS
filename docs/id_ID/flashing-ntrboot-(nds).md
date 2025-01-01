@@ -1,10 +1,10 @@
-# Flashing ntrboot (NDS)
+# Mem-flash ntrboot (NDS)
 
 ## Bacaan Penting
 
 Sebelum melanjutkan, pastikan sudah baca semua informasi di [ntrboot](ntrboot)
 
-This method requires temporary access to a Nintendo DS or Nintendo DS Lite that is compatible with your flashcart. Metode ini perlu _flashcart_ untuk menjalankan `.nds` ntrboot flasher di NDS.
+Metode ini perlu akses sementara ke Nintendo DS atau Nintendo DS Lite yang bisa membaca _flashcart_ Anda. Metode ini perlu _flashcart_ untuk menjalankan `.nds` ntrboot flasher di NDS.
 
 ::: danger
 
@@ -37,12 +37,12 @@ Perlu diingat pada kejadian langka tertentu, _flashcart_ kawe bisa **matot (_bri
 
 1. Launch `ntrboot_flasher_nds.nds` on **the source NDS / NDSL** using your flashcart
 2. Tekan (A) untuk lanjut
-3. Pilih _flashcart_ Anda dengan tombol (Atas) dan (Bawah)
+3. Cari _flashcart_ Anda dengan tombol (Atas) (Bawah)
 4. Tekan (A) untuk lanjut
 5. Pilih "Dump flash" untuk mencadang data memori _flashcart_
 6. Tekan kombo yang diberikan untuk konfirmasi
 7. Tekan (A) untuk lanjut
-8. Pilih _flashcart_ Anda dengan tombol (Atas) dan (Bawah)
+8. Cari _flashcart_ Anda dengan tombol (Atas) (Bawah)
 9. Tekan (A) untuk lanjut
 10. Pilih "Inject FIRM" untuk memasang boot9strap ke _flashcart_
 11. Tekan kombo yang diberikan untuk konfirmasi
