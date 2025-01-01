@@ -85,7 +85,7 @@ ___
 
 The following is an optional section that will allow you to restore your flashcart to its original state (to allow it to be used for its standard functions).
 
-Note that the Acekard 2i retains its ability to launch `.nds` files while having the ntrboot exploit installed. This only applies when the Acekard 2i is in an NDS or custom firmware 3DS! While the ntrboot exploit is installed to the Acekard 2i, it will be unable to launch `.nds` files on DSi or stock 3DS systems.
+Perlu diingat, Acekard 2i tetap mampu menjalankan `.nds` walau terpasang ntrboot. This only applies when the Acekard 2i is in an NDS or custom firmware 3DS! While the ntrboot exploit is installed to the Acekard 2i, it will be unable to launch `.nds` files on DSi or stock 3DS systems.
 
 Do not follow this section until you have completed the rest of the instructions on this page.
 
@@ -94,7 +94,7 @@ Do not follow this section until you have completed the rest of the instructions
 #### Apa yang Perlu
 
 - Versi terkini dari [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest) (`ntrboot_flasher.firm`)
-- The flashrom backup corresponding to your flashcart
+- Cadangan _flashrom_ sesuai jenis _flashcart_
   - Note that if you followed [Flashing ntrboot (3DS Multi System)](flashing-ntrboot-\(3ds-multi-system\)), the flashrom backup already exists in the correct location and does not need to be downloaded
   - Note that if you followed [Flashing ntrboot (3DS Single System)](flashing-ntrboot-\(3ds-single-system\)) or [Flashing ntrboot (NDS)](flashing-ntrboot-\(nds\)), the flashrom backup already exists on your flashcart's SD card and should be copied to the location specified below
   - If you do not know which HW revision you have, just try each for your cart of them. Only the correct one will allow your flashcart to launch properly from the HOME Menu, but flashing the wrong one will not brick the cart
@@ -135,11 +135,11 @@ Do not follow this section until you have completed the rest of the instructions
 5. Create a folder named `payloads` in the `luma` folder on your SD card
 6. Copy `ntrboot_flasher.firm` to the `/luma/payloads/` folder on your SD card
 7. Sisip kembali kartu SD ke konsol
-8. Insert your ntrboot compatible DS / DSi flashcart into your console
+8. Sisipkan _flashcart_ DS / DSi yang kompatibel ntrboot ke konsol
 9. Launch ntrboot_flasher by holding (Start) during boot
 10. Baca peringatan layar merah
 11. Tekan (A) untuk lanjut
-12. Pilih jenis _flashcart_
+12. Pilih _flashcart_ Anda
     - Jika tidak ada _flashcart_ Anda pada daftar di layar atas, baca keterangan di layar bawah pada tiap opsi
 13. Select "Restore Flash"
 14. Press (A) to proceed
