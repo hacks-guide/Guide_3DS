@@ -1,10 +1,10 @@
-# Flashing ntrboot (3DS Multi System)
+# Mem-flash ntrboot (Beberapa Sistem 3DS)
 
 ## Bacaan Penting
 
-Before proceeding, ensure you have read all of the information on [ntrboot](ntrboot).
+Sebelum melanjutkan, pastikan sudah baca semua informasi di [ntrboot](ntrboot).
 
-This method requires temporary access to a second 3DS family console that is already running boot9strap. This does not require your flashcart to support either 3DS's version.
+Metode ini perlu akses sementara ke jenis konsol 3DS lain yang sudah ada boot9strap. This does not require your flashcart to support either 3DS's version.
 
 ::: danger
 
