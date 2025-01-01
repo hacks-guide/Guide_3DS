@@ -1,9 +1,9 @@
-1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
+1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 2. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it is completed
-3. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
+3. Jika diminta membetulkan waktu & tanggal RTC, lakukan dengan menekan (A), lalu tekan (A) lagi untuk lanjut
    - Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
 4. Tekan (Home) untuk membuka menu tindakan
-5. Select "Scripts..."
+5. Pilih "Scripts..."
 6. Select "ctrtransfer"
 7. Select your downloaded CTRTransfer image
    - The script will calculate the hash of your image to make sure it's valid
