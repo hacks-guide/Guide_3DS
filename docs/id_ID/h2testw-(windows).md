@@ -6,7 +6,7 @@ This is an add-on section for checking your SD card for errors using h2testw.
 
 Tergantung ukuran kartu SD dan kecepatan komputer, proses ini bisa lama beberapa jam!
 
-This page is for Windows users only. If you are not on windows, check out the [F3 (Linux)](f3-\(linux\)) or [F3XSwift (Mac)](f3xswift-\(mac\)) pages.
+Laman ini hanya untuk pengguna Windows. If you are not on windows, check out the [F3 (Linux)](f3-\(linux\)) or [F3XSwift (Mac)](f3xswift-\(mac\)) pages.
 
 ## Apa yang Perlu
 
