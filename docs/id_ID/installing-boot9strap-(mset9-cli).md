@@ -6,7 +6,7 @@
 
 :::
 
-## Compatibility Notes
+## Catatan Kompatibilitas
 
 ::: warning
 
