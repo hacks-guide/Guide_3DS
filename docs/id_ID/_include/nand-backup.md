@@ -1,5 +1,5 @@
 1. Tekan (Home) untuk membuka menu tindakan
-2. Select "Scripts..."
+2. Pilih "Scripts..."
 3. Select "GM9Megascript"
 4. Select "Backup Options"
 5. Select "SysNAND Backup"
