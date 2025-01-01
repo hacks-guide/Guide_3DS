@@ -36,7 +36,7 @@ Untuk proses bagian ini, pengaturan sistem akan dikembalikan ke bawaan. Ini menc
 
 ### Bagian II - Mencadang NAND
 
-1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
+1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 
 <!--@include: ./_include/nand-backup.md -->
 
