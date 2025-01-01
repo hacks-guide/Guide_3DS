@@ -2,50 +2,50 @@
 
 ## Bacaan Penting
 
-Before proceeding, ensure you have read all of the information on [ntrboot](ntrboot)
+Sebelum melanjutkan, pastikan sudah baca semua informasi di [ntrboot](ntrboot)
 
-This method requires temporary access to a Nintendo DS or Nintendo DS Lite that is compatible with your flashcart. This method uses the flashcart to run the ntrboot flasher `.nds` file on your NDS.
+This method requires temporary access to a Nintendo DS or Nintendo DS Lite that is compatible with your flashcart. Metode ini perlu _flashcart_ untuk menjalankan `.nds` ntrboot flasher di NDS.
 
 ::: danger
 
-Perlu diingat pada kejadian langka tertentu, _flashcart_ kawe bisa **matot (_brick_)** saat mem-_flash_ sehingga tidak terbaca lagi. Kemungkinan tidak, tapi yang pasti, panduan ini hanya mendukung _flashcart_ ori. Untuk mengurangi kemungkinan mendapat _flashcart_ kawe, dianjurkan membeli di situs bereputasi baik (seperti [NDS Card](https://www.nds-card.com/)).
+Perlu diingat pada kejadian langka tertentu, _flashcart_ kawe bisa **matot (_brick_)** saat mem-_flash_ sehingga tidak terbaca lagi. Kemungkinan tidak, tapi yang pasti, panduan ini hanya mendukung _flashcart_ ori. Untuk mengurangi kemungkinan mendapat _flashcart_ kawe, sebaiknya beli dari situs bereputasi baik (seperti [NDS Card](https://www.nds-card.com/)).
 
 :::
 
 ## Apa yang Perlu
 
 - _Flashcart_ yang kompatibel ntrboot
-- Two consoles
+- Dua konsol
   - **The source NDS / NDSL**: the Nintendo DS or Nintendo DS Lite which is compatible with your flashcart
   - **3DS sasaran**: Konsol 3DS yang masih _firmware_ bawaan
 - Versi v1.3 dari [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (unduhan langsung)
-- The latest release of [ntrboot_flasher_nds](https://github.com/jason0597/ntrboot_flasher_nds/releases/latest) (`ntrboot_flasher_nds.nds`)
+- Versi terkini dari [ntrboot_flasher_nds](https://github.com/jason0597/ntrboot_flasher_nds/releases/latest) (`ntrboot_flasher_nds.nds`)
 
 ## Instruksi
 
 ### Bagian I - Persiapan
 
 1. Power off **the source NDS / NDSL**
-2. Insert your flashcart's SD card into your computer
-3. Create a folder named `ntrboot` on the root of your flashcart's SD card
-4. Copy `boot9strap_ntr.firm` from the boot9strap ntr `.zip` to the `/ntrboot/` folder on your flashcart's SD card
-5. Copy `ntrboot_flasher_nds.nds` to your flashcart's SD card
-6. Reinsert your flashcart's SD card back into your flashcart
+2. Sisipkan kartu SD _flashcart_ ke komputer Anda
+3. Buat folder dengan nama `ntrboot` di akar kartu SD _flashcart_
+4. Salin `boot9strap_ntr.firm` dari `.zip` boot9strap-ntr ke folder `/ntrboot/` di kartu SD _flashcart_
+5. Salin `ntrboot_flasher_nds.nds` ke kartu SD _flashcart_
+6. Sisip kembali kartu SD-nya ke _flashcart_
 7. Insert your ntrboot compatible DS / DSi flashcart into **the source NDS / NDSL**
 
 ### Bagian II - Mem-flash ntrboot
 
 1. Launch `ntrboot_flasher_nds.nds` on **the source NDS / NDSL** using your flashcart
 2. Tekan (A) untuk lanjut
-3. Use (Up) and (Down) to select your flashcart
+3. Pilih _flashcart_ Anda dengan tombol (Atas) dan (Bawah)
 4. Tekan (A) untuk lanjut
-5. Select "Dump flash" to make a backup of your flashcart's memory
-6. Input the key combo given to confirm
+5. Pilih "Dump flash" untuk mencadang data memori _flashcart_
+6. Tekan kombo yang diberikan untuk konfirmasi
 7. Tekan (A) untuk lanjut
-8. Use (Up) and (Down) to select your flashcart
+8. Pilih _flashcart_ Anda dengan tombol (Atas) dan (Bawah)
 9. Tekan (A) untuk lanjut
-10. Select "Inject FIRM" to install boot9strap to your flashcart
-11. Input the key combo given to confirm
+10. Pilih "Inject FIRM" untuk memasang boot9strap ke _flashcart_
+11. Tekan kombo yang diberikan untuk konfirmasi
 12. Tekan (A) untuk lanjut
 13. Power off **the source NDS / NDSL**
 14. Eject your flashcart from **the source NDS / NDSL**
