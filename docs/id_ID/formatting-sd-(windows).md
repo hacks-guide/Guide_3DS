@@ -19,7 +19,7 @@ This page is for Windows users only. If you are not on Windows, check out the [F
 
 1. Sisipkan kartu SD ke komputer Anda
 
-2. If the SD card has any files and folders on it, copy everything to a folder on your computer
+2. Jika kartu SD ada berkas dan folder, salin dulu semuanya ke folder di komputer
 
 3. Run `SD Card Formatter Setup` (the `.exe` file) in the downloaded `.zip` file with Administrator privileges, then install the program
 
@@ -41,7 +41,7 @@ This page is for Windows users only. If you are not on Windows, check out the [F
 
 9. Click "OK"
 
-10. Wait for the format to finish
+10. Tunggu selesai memformat
 
 11. Click "OK"
 
@@ -79,11 +79,11 @@ You're done formatting your SD card if it's **32GB or smaller.**
 
 7. Click "OK"
 
-8. Wait for the format to finish
+8. Tunggu selesai memformat
 
-9. Click "Close"
+9. Pencet "Close" (Tutup)
 
-10. If the SD card had any files and folders on it before the format, copy everything back from your computer
+10. Jika tadi kartu SD ada berkas dan folder sebelum memformat, **salin balik semuanya dari komputer**
 
 ## Sidik Gangguan
 
