@@ -89,9 +89,9 @@ Continue to [Flashing ntrboot (3DS Multi System)](flashing-ntrboot-\(3ds-multi-s
 
 ___
 
-### Flashing ntrboot (NDS)
+### Mem-flash ntrboot (NDS)
 
-This method requires temporary access to a Nintendo DS or Nintendo DS Lite that is compatible with your flashcart. Metode ini perlu _flashcart_ untuk menjalankan `.nds` ntrboot flasher di NDS.
+Metode ini perlu akses sementara ke Nintendo DS atau Nintendo DS Lite yang bisa membaca _flashcart_ Anda. Metode ini perlu _flashcart_ untuk menjalankan `.nds` ntrboot flasher di NDS.
 
 ::: tip
 
