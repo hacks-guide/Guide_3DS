@@ -137,12 +137,12 @@ Do not follow this section until you have completed the rest of the instructions
 7. Sisip kembali kartu SD ke konsol
 8. Insert your ntrboot compatible DS / DSi flashcart into your console
 9. Launch ntrboot_flasher by holding (Start) during boot
-10. Read the red screen warning
+10. Baca peringatan layar merah
 11. Tekan (A) untuk lanjut
-12. Select your flashcart
-    - If you do not see your flashcart in the list at the top, read the bottom screen for more info on each option
+12. Pilih jenis _flashcart_
+    - Jika tidak ada _flashcart_ Anda pada daftar di layar atas, baca keterangan di layar bawah pada tiap opsi
 13. Select "Restore Flash"
 14. Press (A) to proceed
-15. Wait until the process is completed
-16. Press (A) to return to the main menu
+15. Tunggu sampai proses ini selesai
+16. Tekan (A) untuk kembali ke menu utama
 17. Press (B) to power off your console
