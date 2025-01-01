@@ -16,7 +16,7 @@ For technical details on the exploits that you will be using on this page, see [
 
 :::
 
-## Compatibility Notes
+## Catatan Kompatibilitas
 
 Soundhax (when combined with universal-otherapp) is compatible with versions 1.0.0 through 11.3.0 in all regions.
 
