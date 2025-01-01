@@ -8,7 +8,7 @@ This method requires temporary access to a Nintendo DSi that is compatible with 
 
 ::: danger
 
-Perlu diingat pada kejadian langka tertentu, _flashcart_ kawe bisa matot (_**brick**_) saat mem-_flash_ sehingga tidak terbaca lagi. Kemungkinan tidak, tapi yang pasti, panduan ini hanya mendukung _flashcart_ ori. Untuk mengurangi kemungkinan mendapat _flashcart_ kawe, dianjurkan membeli di situs bereputasi baik (seperti [NDS Card](https://www.nds-card.com/)).
+Perlu diingat pada kejadian langka tertentu, _flashcart_ kawe bisa **matot (_brick_)** saat mem-_flash_ sehingga tidak terbaca lagi. Kemungkinan tidak, tapi yang pasti, panduan ini hanya mendukung _flashcart_ ori. Untuk mengurangi kemungkinan mendapat _flashcart_ kawe, dianjurkan membeli di situs bereputasi baik (seperti [NDS Card](https://www.nds-card.com/)).
 
 :::
 
@@ -30,7 +30,7 @@ Perlu diingat pada kejadian langka tertentu, _flashcart_ kawe bisa matot (_**bri
 4. Reinsert your flashcart's SD card back into your flashcart
 5. Insert your ntrboot compatible DS / DSi flashcart into **the source DSi**
 
-### Section II - Flashing ntrboot
+### Bagian II - Mem-flash ntrboot
 
 1. Launch `ds_ntrboot_flasher_dsi.nds` on **the source DSi** using your flashcart
 2. Tekan (A) untuk lanjut
@@ -45,6 +45,6 @@ ___
 
 ::: tip
 
-Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
+Lanjut ke [Memasang boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
 
 :::
