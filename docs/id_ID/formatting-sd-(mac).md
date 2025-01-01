@@ -24,7 +24,7 @@ Laman ini hanya untuk pengguna Mac. Jika tidak menggunakan Mac, lihat laman [Mem
 
    ::: danger
 
-   Pastikan pilih perangkat yang benar, jika tidak nanti **malah menghapus _drive_ yang salah**!
+   Pastikan pilih perangkat yang benar, **jangan memformat _drive_ yang salah**!
 
    :::
 
@@ -45,7 +45,7 @@ Laman ini hanya untuk pengguna Mac. Jika tidak menggunakan Mac, lihat laman [Mem
 
 13. Jika tadi kartu SD ada berkas dan folder sebelum memformat, **salin balik semuanya dari komputer**
 
-### OS X Yosemite (10.10) and earlier
+### OS X Yosemite (versi 10.10) ke bawah
 
 1. Sisipkan kartu SD ke komputer Anda
 
@@ -57,32 +57,32 @@ Laman ini hanya untuk pengguna Mac. Jika tidak menggunakan Mac, lihat laman [Mem
 
    ::: danger
 
-   Pastikan pilih perangkat yang benar, jika tidak nanti **malah menghapus _drive_ yang salah**!
+   Pastikan pilih perangkat yang benar, **jangan memformat _drive_ yang salah**!
 
    :::
 
-5. Click "Partition" at the top
-   - If "Partition" does not appear, make sure to choose the device instead of a volume
+5. Pencet "Partition" di atas
+   - Jika "Partition" tidak muncul, pastikan pilih yang perangkat dan bukan _volume_
 
-6. Ensure that "Partition Layout" is set to "1 Partition"
+6. Pastikan "Partition Layout" diatur ke "1 Partition"
 
 7. Ketik apa saja di "Name"
 
 8. Pastikan kolom "Format" diatur ke "MS-DOS (FAT)"
 
-9. Click "Options" below the partition table
+9. Pencet "Options" di bawah partisi tabel
 
-10. Choose "Master Boot Record"
+10. Pilih "Master Boot Record"
 
-11. Click "OK"
+11. Pencet "OK"
 
-12. Click "Apply"
+12. Pencet "Apply" (Terapkan)
 
-13. Click "Partition"
+13. Pencet "Partition"
 
 14. Tunggu selesai memformat
 
-15. Close Disk Utility
+15. Tutup Disk Utility
 
 16. Jika tadi kartu SD ada berkas dan folder sebelum memformat, **salin balik semuanya dari komputer**
 
