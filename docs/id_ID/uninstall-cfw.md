@@ -154,12 +154,12 @@ This section will remove illegitimate content, like homebrew and dumped cartridg
 7. Exit the System Settings application
 8. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
 9. Wait until you see the two buttons
-10. Press (Left Shoulder) + (D-Pad Down) + (Select) at the same time to open the Rosalina menu
-11. Select "Miscellaneous options"
+10. Tekan (L) + (Tombol Bawah) + (Select) bersamaan untuk membuka menu Rosalina
+11. Pilih "Miscellaneous options"
 12. Select "Switch the hb. title to the current app."
-13. Press (B) to continue
-14. Press (B) to return to the Rosalina main menu
-15. Press (B) to exit the Rosalina menu
+13. Tekan (B) untuk lanjut
+14. Tekan (B) untuk kembali ke menu utama Rosalina
+15. Tekan (B) untuk keluar dari menu Rosalina
 16. Press (Home), then close Download Play
 17. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
 18. Konsol seharusnya memuat Homebrew Launcher
