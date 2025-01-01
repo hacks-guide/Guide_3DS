@@ -1,4 +1,4 @@
-# Key Information
+# Informations importantes
 
 ::: info
 
@@ -32,7 +32,7 @@ This guide works with every retail console in the Nintendo 3DS family of console
 
 :::
 
-In most cases, you can follow this guide as long as you are able to download files from the Internet and copy them to your SD card. Depending on your computer/phone/electronic device, you may need to purchase a USB to SD card adapter to allow your computer to read your SD card.
+In most cases, you can follow this guide as long as you are able to download files from the Internet and copy them to your SD card. Selon votre ordinateur/téléphone/appareil électronique, vous devrez peut-être acheter un adaptateur de carte SD vers USB pour permettre à votre ordinateur de lire votre carte SD.
 
 ::::
 
@@ -44,7 +44,7 @@ In most cases, you can follow this guide as long as you are able to download fil
 
 :::
 
-The location of the SD card slot and the type of SD card that is accepted depends on the model of your 3DS. More information can be found on [Nintendo's official support page](https://en-americas-support.nintendo.com/app/answers/detail/a_id/271/~/how-to-insert-an-sd-card-or-microsd-card).
+L'emplacement du port carte SD et le type de carte SD accepté dépendent du modèle de votre 3DS. More information can be found on [Nintendo's official support page](https://en-americas-support.nintendo.com/app/answers/detail/a_id/271/~/how-to-insert-an-sd-card-or-microsd-card).
 
 The 3DS can read SD cards of any capacity (even those larger than 32GB), but the card must be formatted as FAT32 (**not** exFAT or NTFS). You can use one of the following tools to format your SD card, depending on your operating system: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)). SD cards larger than **128GB** are not recommended due to known issues with custom themes and GBA/DS graphics.
 
