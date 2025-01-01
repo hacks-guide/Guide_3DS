@@ -24,22 +24,22 @@ Perlu diingat pada kejadian langka tertentu, _flashcart_ kawe bisa **matot (_bri
 
 ### Bagian I - Persiapan
 
-1. Power off **the source DSi**
+1. Matikan daya **DSi sumber**
 2. Sisipkan kartu SD _flashcart_ ke komputer Anda
-3. Copy `ds_ntrboot_flasher_dsi.nds` to your flashcart's SD card
+3. Salin `ds_ntrboot_flasher_dsi.nds` ke kartu SD _flashcart_
 4. Sisip kembali kartu SD-nya ke _flashcart_
-5. Insert your ntrboot compatible DS / DSi flashcart into **the source DSi**
+5. Sisipkan _flashcart_ DS / DSi yang kompatibel ntrboot ke **DSi sumber**
 
 ### Bagian II - Mem-flash ntrboot
 
-1. Launch `ds_ntrboot_flasher_dsi.nds` on **the source DSi** using your flashcart
+1. Buka `ds_ntrboot_flasher_dsi.nds` di **DSi sumber** menggunakan _flashcart_
 2. Tekan (A) untuk lanjut
-3. Pilih _flashcart_ Anda dengan tombol (Atas) dan (Bawah)
+3. Cari _flashcart_ Anda dengan tombol (Atas) (Bawah)
 4. Tekan (A) untuk lanjut
-5. Press (A) to "inject ntrboothax"
-6. Press (A) to select "RETAIL"
+5. Tekan (A) untuk "inject ntrboothax"
+6. Tekan (A) untuk memilih "RETAIL"
 7. Tekan (A) untuk lanjut
-8. Select "EXIT"
+8. Lalu pilih "EXIT"
 
 ___
 
