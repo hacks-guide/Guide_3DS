@@ -39,11 +39,11 @@ This page is for Windows users only. If you are not on Windows, check out the [F
 
 8. Click "Format"
 
-9. Click "OK"
+9. Pencet "OK"
 
 10. Tunggu selesai memformat
 
-11. Click "OK"
+11. Pencet "OK"
 
 12. Close SD Card Formatter
 
@@ -77,7 +77,7 @@ You're done formatting your SD card if it's **32GB or smaller.**
 
 6. Click "Start"
 
-7. Click "OK"
+7. Pencet "OK"
 
 8. Tunggu selesai memformat
 
