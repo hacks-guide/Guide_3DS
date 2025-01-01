@@ -93,7 +93,7 @@ Do not follow this section until you have completed the rest of the instructions
 
 #### Apa yang Perlu
 
-- The latest release of [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest) (`ntrboot_flasher.firm`)
+- Versi terkini dari [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest) (`ntrboot_flasher.firm`)
 - The flashrom backup corresponding to your flashcart
   - Note that if you followed [Flashing ntrboot (3DS Multi System)](flashing-ntrboot-\(3ds-multi-system\)), the flashrom backup already exists in the correct location and does not need to be downloaded
   - Note that if you followed [Flashing ntrboot (3DS Single System)](flashing-ntrboot-\(3ds-single-system\)) or [Flashing ntrboot (NDS)](flashing-ntrboot-\(nds\)), the flashrom backup already exists on your flashcart's SD card and should be copied to the location specified below
@@ -130,7 +130,7 @@ Do not follow this section until you have completed the rest of the instructions
 1. Matikan daya konsol
 2. Sisipkan kartu SD ke komputer Anda
    - This is the SD card from your 3DS, _not_ the SD card from your flashcart
-3. Create a folder named `ntrboot` on the root of your SD card
+3. Buat folder dengan nama `ntrboot` di akar kartu SD
 4. Copy the `.bin` file from your flashrom backup `.zip` to the `/ntrboot/` folder on the root of your SD card
 5. Create a folder named `payloads` in the `luma` folder on your SD card
 6. Copy `ntrboot_flasher.firm` to the `/luma/payloads/` folder on your SD card
