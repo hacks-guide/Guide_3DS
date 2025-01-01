@@ -55,7 +55,7 @@ Note that the flashcart will not be able to be used for its standard functions w
 
 ::: danger
 
-Note that in some rare circumstances, it may be possible for the flashing process to **brick** a counterfeit flashcart and render it permanently unusable. This is unlikely, but nevertheless, only original listed flashcarts are supported. To reduce the chance of receiving a counterfeit card, it is recommended that you use a reputable site to buy your flashcart (such as [NDS Card](https://www.nds-card.com/)).
+Perlu diingat pada kejadian langka tertentu, _flashcart_ kawe bisa matot (_**brick**_) saat mem-_flash_ sehingga tidak terbaca lagi. Kemungkinan tidak, tapi yang pasti, panduan ini hanya mendukung _flashcart_ ori. Untuk mengurangi kemungkinan mendapat _flashcart_ kawe, dianjurkan membeli di situs bereputasi baik (seperti [NDS Card](https://www.nds-card.com/)).
 
 :::
 
@@ -79,7 +79,7 @@ ___
 
 ### Mem-flash ntrboot (Beberapa Sistem 3DS)
 
-Metode ini perlu akses sementara ke jenis konsol 3DS lain yang sudah ada boot9strap. This does not require your flashcart to support either 3DS's version.
+Metode ini perlu akses sementara ke jenis konsol 3DS lain yang sudah ada boot9strap. _Flashcart_ tidak harus untuk 3DS, yang penting bisa di-_flash_ ntrboot.
 
 ::: tip
 
