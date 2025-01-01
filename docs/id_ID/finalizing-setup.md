@@ -1,8 +1,8 @@
-# Finalizing Setup
+# Penyiapan Akhir
 
 ## Bacaan Penting
 
-The file `boot.firm` is what is launched by boot9strap itself after it finishes loading off of NAND. In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) to patch the console, allowing it to run homebrew software.
+Berkas `boot.firm` adalah apa yang dibaca boot9strap selesai memuat NAND. In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) to patch the console, allowing it to run homebrew software.
 
 On this page, we will make critical system file backups and install some homebrew programs. Most of these steps will be automated using a script that you will run on your console.
 
