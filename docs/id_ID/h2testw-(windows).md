@@ -22,7 +22,7 @@ This page is for Windows users only. If you are not on windows, check out the [F
 6. Select your SD card's drive letter
 7. Ensure "all available space" is selected
 8. Click "Write + Verify"
-9. Wait until the process is completed
+9. Tunggu sampai proses ini selesai
 
 ::: tip
 
