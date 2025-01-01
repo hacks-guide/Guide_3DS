@@ -93,12 +93,12 @@ If either of these tests has failed, DS mode, DS Download Play, and/or DS Connec
 
 The purpose of this section is to verify that the console will boot and that critical system functions, like System Settings and the keyboard, will work once CFW is uninstalled. **If you skip this section, you may BRICK your console!**
 
-1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
+1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 2. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it is complete
-3. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
+3. Jika diminta membetulkan waktu & tanggal RTC, lakukan dengan menekan (A), lalu tekan (A) lagi untuk lanjut
    - Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after following this guide
 4. Tekan (Home) untuk membuka menu tindakan
-5. Select "Scripts..."
+5. Pilih "Scripts..."
 6. Select "safety_test"
 7. Read the text on-screen and press (A) to continue
 8. You should boot into the regular 3DS HOME Menu (any custom theme is irrelevant). If you do, continue these instructions
@@ -120,9 +120,9 @@ If you do NOT boot into the regular 3DS HOME Menu, or System Settings / your key
 
 ### Section IV - NAND Backup
 
-1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
+1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 2. Tekan (Home) untuk membuka menu tindakan
-3. Select "Scripts..."
+3. Pilih "Scripts..."
 4. Select "GM9Megascript"
 5. Select "Backup Options"
 6. Select "SysNAND Backup"
@@ -199,10 +199,10 @@ If you're removing CFW because:
 
 :::
 
-1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
+1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
    - If you instead see the Luma3DS chainloader, use the D-Pad and the (A) button to select GodMode9
 2. Tekan (Home) untuk membuka menu tindakan
-3. Select "Scripts..."
+3. Pilih "Scripts..."
 4. Select "GM9Megascript"
 5. Select "Hax Options"
 6. Select "Un-install Hax"
