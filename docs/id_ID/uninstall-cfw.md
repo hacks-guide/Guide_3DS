@@ -68,7 +68,7 @@ The purpose of this section is to check whether built-in DS mode applications wi
 #### DS Connection Settings Test
 
 1. Power on your console
-2. Launch System Settings on your console
+2. Buka System Settings di konsol
 3. Navigate to `Internet Settings` -> `Nintendo DS Connection Settings`, then click OK
 4. You should boot into the Nintendo DS Connection Setup menu
    - If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed
@@ -103,7 +103,7 @@ The purpose of this section is to verify that the console will boot and that cri
 7. Read the text on-screen and press (A) to continue
 8. You should boot into the regular 3DS HOME Menu (any custom theme is irrelevant). If you do, continue these instructions
    - If you do not boot into the regular 3DS HOME Menu (black screen, error screen, etc.), uninstalling CFW **WILL BRICK YOUR CONSOLE!**
-9. Launch System Settings on your console
+9. Buka System Settings di konsol
    - If the console crashes at this point, the test has failed
 10. Select "Other Settings"
 11. Select "Profile"
@@ -143,7 +143,7 @@ This section will remove illegitimate content, like homebrew and dumped cartridg
 :::
 
 1. Power on your console
-2. Launch System Settings on your console
+2. Buka System Settings di konsol
 3. Navigate to Data Management > Nintendo 3DS > Software
 4. In this list of software, delete any non-Nintendo content you installed while using CFW
    - This includes common system software such as FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint, and others, along with any games and titles that you did _not_ install from the eShop
@@ -172,7 +172,7 @@ This section will remove illegitimate content, like homebrew and dumped cartridg
 This section will ensure that all illegitimate tickets are removed, allowing eShop to work normally. This will remove all content from the 3DS and log you out of your NNID. Keep in mind that your console's encryption key will be shuffled, meaning that any old data will be rendered inaccessible, even if you have a backup of your SD contents.
 
 1. Power on your console
-2. Launch System Settings on your console
+2. Buka System Settings di konsol
 3. Navigate to Other Settings -> Next Page (until the final page) -> Format System Memory
 4. Follow the prompts to format your 3DS
 
