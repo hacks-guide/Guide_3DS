@@ -2,31 +2,31 @@
 
 ## Bacaan Penting
 
-Berkas `boot.firm` adalah apa yang dibaca boot9strap selesai memuat NAND. In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) to patch the console, allowing it to run homebrew software.
+Berkas `boot.firm` adalah apa yang dibaca boot9strap selesai memuat NAND. Untuk ini, kita gunakan Luma3DS oleh [LumaTeam](https://github.com/LumaTeam/) untuk menambal konsol agar bisa menjalankan _homebrew_.
 
-On this page, we will make critical system file backups and install some homebrew programs. Most of these steps will be automated using a script that you will run on your console.
+Di laman ini juga akan mencadang berkas sistem kritis dan memasang beberapa _homebrew_. Hampir semua langkah ini menggunakan naskah otomatis yang dijalankan di konsol.
 
 ::: info
 
-The script will install the following applications:
+Naskahnya akan memasang aplikasi berikut:
 
-- **[FBI](https://github.com/lifehackerhansol/FBI)** _(installs CIA formatted applications)_
-- **[Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)** _(launches the Homebrew Launcher)_
-- **[Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)** _(installs custom themes)_
-- **[Checkpoint](https://github.com/FlagBrew/Checkpoint)** _(backs up and restores save files for 3DS and DS games)_
-- **[ftpd](https://github.com/mtheall/ftpd)** _(access your 3DS SD card wirelessly)_
-- **[Universal-Updater](https://github.com/Universal-Team/Universal-Updater/)** _(a homebrew app store for downloading homebrew from the 3DS over Wi-Fi)_
-- **[GodMode9](https://github.com/d0k3/GodMode9)** _(multipurpose tool which can do NAND and cartridge functions)_
+- **[FBI](https://github.com/lifehackerhansol/FBI)** _(memasang aplikasi berformat CIA)_
+- **[Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)** _(membuka Homebrew Launcher)_
+- **[Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)** _(memasang tema kustom)_
+- **[Checkpoint](https://github.com/FlagBrew/Checkpoint)** _(mencadang dan memulih simpanan permainan 3DS dan DS)_
+- **[ftpd](https://github.com/mtheall/ftpd)** _(akses nirkabel ke kartu SD 3DS)_
+- **[Universal-Updater](https://github.com/Universal-Team/Universal-Updater/)** _(toko apli homebrew untuk mengunduh homebrew di 3DS lewat Wi-Fi)_
+- **[GodMode9](https://github.com/d0k3/GodMode9)** _(alat serbaguna untuk mengurus NAND dan kartrid)_
 
-If you don't want one of these applications, you can remove them after you have finished this page by navigating to System Settings -> Data Management -> Nintendo 3DS -> Software. (GodMode9 cannot be removed in this way and is generally required for other functions.)
+Jika ada aplikasi yang tidak diinginkan, nanti bisa dihapus setelah selesai panduan ini di System Settings -> Data Management -> Nintendo 3DS -> Software. (GodMode9 tidak bisa dihapus dengan cara ini karena wajib untuk fungsi lain.)
 
 :::
 
-## Compatibility Notes
+## Catatan Kompatibilitas
 
 ::: warning
 
-If your **New 3DS** was on version 2.1.0 before following this guide, you should [restore your NAND backup](godmode9-usage#restoring-a-nand-backup) before continuing. This likely doesn't apply to you unless you were following this guide in 2017.
+Jika **New 3DS** ada di versi 2.1.0 sebelum mengikuti panduan ini, maka [pulihkan dulu cadangan NAND](godmode9-usage#restoring-a-nand-backup) sebelum lanjut. This likely doesn't apply to you unless you were following this guide in 2017.
 
 :::
 
