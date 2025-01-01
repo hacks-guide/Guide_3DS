@@ -16,7 +16,7 @@ For technical details on the exploits that you will be using on this page, see [
 
 :::
 
-### Compatibility Notes
+### Catatan Kompatibilitas
 
 Super-skaterhax (when used to launch the Homebrew Launcher) is compatible with New models on version 11.15.0 and above in all regions.
 
