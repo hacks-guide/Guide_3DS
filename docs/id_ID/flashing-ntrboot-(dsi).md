@@ -27,7 +27,7 @@ Perlu diingat pada kejadian langka tertentu, _flashcart_ kawe bisa **matot (_bri
 1. Matikan daya **DSi sumber**
 2. Sisipkan kartu SD _flashcart_ ke komputer Anda
 3. Salin `ds_ntrboot_flasher_dsi.nds` ke kartu SD _flashcart_
-4. Sisip kembali kartu SD-nya ke _flashcart_
+4. Sisip kembali kartu SD ke _flashcart_
 5. Sisipkan _flashcart_ DS / DSi yang kompatibel ntrboot ke **DSi sumber**
 
 ### Bagian II - Mem-flash ntrboot
