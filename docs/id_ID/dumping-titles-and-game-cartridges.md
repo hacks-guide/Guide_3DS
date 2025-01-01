@@ -41,7 +41,7 @@ Sisipkan kartrid yang ingin di-_dump_ ke konsol
 
 :::
 
-1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
+1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 2. Navigasi ke `[C:] GAMECART`
 3. Ikuti langkah berikut sesuai jenis kartrid:
    - **Kartrid 3DS:** Tekan (A) pada `[TitleID].trim.3ds` untuk pilih
@@ -58,7 +58,7 @@ Ini hanya berfungsi untuk permainan 3DS; kartrid NDS tidak bisa langsung dipasan
 
 :::
 
-1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
+1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 2. Navigasi ke `[C:] GAMECART`
 3. Tekan (A) pada `[TitleID].trim.3ds` untuk pilih, lalu pilih "NCSD image options...", dan pilih "Install game image"
 4. Tekan (A) untuk membuka izin tulis SysNAND (lvl1), lalu tekan kombo yang diberikan
@@ -72,7 +72,7 @@ Ini hanya boleh digunakan jika [Memasang Data Kartrid Langsung ke Konsol](#insta
 
 :::
 
-1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
+1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 2. Navigasi ke `[C:] GAMECART`
 3. Tekan (A) pada `[TitleID].trim.3ds` untuk pilih, lalu pilih "NCSD image options...", dan pilih "Build CIA from file"
 4. Keluaran berformat `.cia` yang bisa dipasang akan ada di folder `/gm9/out/` di kartu SD
@@ -85,7 +85,7 @@ Berikut cara men-_dump_ aplikasi yang dipasang sistem atau pengguna, contohnya u
 
 :::
 
-1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
+1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 2. Tekan (Home) untuk membuka menu tindakan
 3. Pilih "Title manager"
 4. Pilih salah satu berikut ini tergantung jenis aplikasi yang ingin di-_dump_
@@ -114,7 +114,7 @@ Untuk mencari tahu Title ID berkas `<TitleID>.gbavc.sav`, lihat daftar Title ID 
    - Buka permainan GBA VC
    - Keluar dari GBA VC
    - Matikan daya konsol
-   - Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
+   - Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
    - Navigasi ke `[S:] SYSNAND VIRTUAL`
    - Tekan (A) pada `agbsave.bin` untuk pilih
    - Pilih "AGBSAVE options..."
@@ -134,7 +134,7 @@ Untuk mencari tahu Title ID berkas `<TitleID>.gbavc.sav`, lihat daftar Title ID 
    - Buka permainan GBA VC
    - Keluar dari GBA VC
    - Matikan daya konsol
-   - Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
+   - Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
    - Navigasi ke `[0:] SDCARD` -> `gm9` -> `out`
    - Tekan (Y) pada `<TitleID>.gbavc.sav` yang ingin dipulihkan untuk disalin
    - Tekan (B) untuk kembali ke menu utama
@@ -155,7 +155,7 @@ Agar lebih rapih, salin tiap berkas '.3ds' yang ingin dienkripsi / dekripsi **ke
 
 :::
 
-1. Tekan dan tahan terus (Start) saat menyalakan konsol. Ini akan masuk ke GodMode9
+1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 2. Navigasi ke `[0:] SDCARD` -> `cias`
 3. Tekan (A) pada berkas `.cia` untuk pilih, lalu pilih "CIA image options..."
 4. Pilih opsi dengan fungsi yang ingin dilakukan:
