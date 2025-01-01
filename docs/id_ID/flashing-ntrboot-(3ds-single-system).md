@@ -27,7 +27,7 @@ Perlu diingat pada kejadian langka tertentu, _flashcart_ kawe bisa **matot (_bri
 3. Buat folder dengan nama `ntrboot` di akar kartu SD _flashcart_
 4. Salin `boot9strap_ntr.firm` dari `.zip` boot9strap-ntr ke folder `/ntrboot/` di kartu SD _flashcart_
 5. Salin `ntrboot_flasher_nds.nds` ke kartu SD _flashcart_
-6. Sisip kembali kartu SD-nya ke _flashcart_
+6. Sisip kembali kartu SD ke _flashcart_
 7. Sisipkan _flashcart_ DS / DSi yang kompatibel ntrboot ke konsol
 
 ### Bagian II - Mem-flash ntrboot
