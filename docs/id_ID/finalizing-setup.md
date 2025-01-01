@@ -26,35 +26,35 @@ Jika ada aplikasi yang tidak diinginkan, nanti bisa dihapus setelah selesai pand
 
 ::: warning
 
-Jika **New 3DS** ada di versi 2.1.0 sebelum mengikuti panduan ini, maka [pulihkan dulu cadangan NAND](godmode9-usage#restoring-a-nand-backup) sebelum lanjut. This likely doesn't apply to you unless you were following this guide in 2017.
+Jika **New 3DS** ada di versi 2.1.0 sebelum mengikuti panduan ini, maka [pulihkan dulu cadangan NAND](godmode9-usage#restoring-a-nand-backup) sebelum lanjut. Ini abaikan saja jika tidak pernah mengikuti panduan ini di tahun 2017.
 
 :::
 
 ::: info
 
-If your previous CFW setup was EmuNAND-based and you wish to move the contents of your EmuNAND/RedNAND to SysNAND, follow [Move EmuNAND](move-emunand) before following this page. If you don't know what an EmuNAND is, this doesn't apply to you.
+Jika penyiapan CFW sebelumnya EmuNAND dan ingin memindahkan isi dari EmuNAND/RedNAND ke SysNAND, ikuti [Memindahkan EmuNAND](move-emunand) sebelum mengikuti laman ini. Jika tidak tahu apa itu EmuNAND, ini abaikan saja.
 
 :::
 
 ## Apa yang Perlu
 
-- [x_finalize_helper.firm](https://github.com/hacks-guide/finalize/releases/latest/download/x_finalize_helper.firm) (direct download)
-- [finalize.romfs](https://github.com/hacks-guide/finalize/releases/latest/download/finalize.romfs) (direct download)
+- [x_finalize_helper.firm](https://github.com/hacks-guide/finalize/releases/latest/download/x_finalize_helper.firm) (unduhan langsung)
+- [finalize.romfs](https://github.com/hacks-guide/finalize/releases/latest/download/finalize.romfs) (unduhan langsung)
 
 ## Instruksi
 
 ### Bagian I - Persiapan
 
-In this section, you will copy the files necessary to follow the rest of the instructions on this page.
+Di bagian ini akan menyalin berkas yang perlu untuk mengikuti instruksi berikutnya di laman ini.
 
 1. Matikan daya konsol
 2. Sisipkan kartu SD ke komputer Anda
-3. Copy `finalize.romfs` to the root of your SD card
-4. Open the `luma` folder on your SD card and create a folder named `payloads` inside, if it does not already exist
-5. Copy `x_finalize_helper.firm` to the `payloads` folder
+3. Salin `finalize.romfs` ke akar kartu SD
+4. Buka folder `luma` di kartu SD dan di dalamnya buat folder bernama `payloads`, jika belum ada
+5. Salin `x_finalize_helper.firm` ke folder `payloads`
 6. Sisip kembali kartu SD ke konsol
 
-The screenshot below indicates the minimum SD card layout that is required to follow this page. You may have extra files or folders on your SD card, depending on your previous setup or the method that you followed.
+Tangkapan layar di bawah ini menunjukkan isi minimal kartu SD untuk mengikuti laman ini. Mungkin akan ada berkas atau folder lebih di kartu SD, tergantung sebelumnya pernah ikut metode apa.
 
 ::: info
 
@@ -68,27 +68,27 @@ The screenshot below indicates the minimum SD card layout that is required to fo
 
 :::
 
-### Section II - Updating the System
+### Bagian II - Memperbarui Sistem
 
-In this section, you will update your system to the latest version, which is safe to do with custom firmware.
+Di bagian ini akan memperbarui sistem ke versi terbaru, ini aman dilakukan dengan _custom firmware_.
 
 <!--@include: ./_include/sysupdate.md -->
 
-### Section III - RTC and DSP setup
+### Bagian III - Penyiapan RTC dan DSP
 
-In this section, you will sync your 3DS internal clock with the actual time and dump the sound firmware (which is necesssary for some homebrew software to use sound properly).
+Di bagian ini akan menyelaraskan jam internal 3DS dengan jam sebenarnya, dan men-_dump firmware_ suara (beberapa _homebrew_ perlu ini untuk menghasilkan suara dengan benar).
 
-1. Press (Left Shoulder) + (D-Pad Down) + (Select) at the same time to open the Rosalina menu
-   - If one of these buttons is broken, download [config.ini](/assets/config.ini) and put it in your `luma` folder, replacing the existing one. This will change the Rosalina menu key combination to (X) + (Y)
-2. Select "Miscellaneous options"
-3. Select "Dump DSP firmware"
-4. Press (B) to continue
-5. Select "Nullify user time offset"
-6. Press (B) to continue
-7. Press (B) to return to the Rosalina main menu
-8. Press (B) to exit the Rosalina menu
+1. Tekan (L) + (Tombol Bawah) + (Select) bersamaan untuk membuka menu Rosalina
+   - Jika tombol tersebut ada yang rusak, unduh [config.ini](/assets/config.ini) dan taruh di folder `luma`, timpa berkas yang ada. Ini akan mengubah kombo tombol menu Rosalina ke (X) + (Y)
+2. Pilih "Miscellaneous options"
+3. Pilih "Dump DSP firmware"
+4. Tekan (B) untuk lanjut
+5. Pilih "Nullify user time offset"
+6. Tekan (B) untuk lanjut
+7. Tekan (B) untuk kembali ke menu utama Rosalina
+8. Tekan (B) untuk keluar dari menu Rosalina
 
-### Section IV - Setup Script
+### Bagian IV - Penyiapan Naskah
 
 In this section, you will use a series of scripts to automate homebrew installation, SD card cleanup, and system file backup.
 
