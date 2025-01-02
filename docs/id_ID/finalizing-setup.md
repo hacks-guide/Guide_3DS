@@ -111,7 +111,7 @@ Di bagian ini akan menggunakan naskah agar otomatis memasang _homebrew_, members
 12. Salin folder `/gm9/backups/` ke letak yang aman di komputer
     - Folder ini berisi cadangan berkas kritis dan _harus_ disalin ke berbagai tempat (yaitu: penyimpanan awan) jika bisa
     - Kedua berkas SysNAND ini cadangan NAND Anda dan **penting** untuk pemulihan konsol jika matot (_brick_) karena isu peranti lunak
-    - Berkas `essential.exefs` berisi berkas unik sistem konsol dan bisa untuk memulihkan data jika terjadi kerusakan peranti keras
+    - Berkas `essential.exefs` berisi berkas unik sistem konsol dan bisa untuk memulihkan data jika terjadi kerusakan fisik
 13. Jika sudah disalin, boleh hapus dua berkas `SysNAND` dari folder `/gm9/backups/` di kartu SD
     - Ukuran `essential.exefs` itu kecil, jadi boleh dibiarkan di kartu SD agar mudah diakses
 
