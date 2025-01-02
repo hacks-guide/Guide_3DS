@@ -86,7 +86,7 @@ _Flashcart_ mode 3DS seperti Gateway dan Sky3DS sudah tidak dianjurkan karena us
 
 :::details Apa perbedaan custom firmware dan homebrew?
 
-Secara takrif, _custom firmware_ merujuk pada oprekan peranti lunak sistem 3DS agar bisa melakukan hal yang secara bawaan tidak boleh. _Homebrew_ umumnya merujuk pada peranti lunak bersumber tidak resmi (yaitu: tidak diagihkan lewat eShop atau kartrid).
+Secara takrif, _custom firmware_ merujuk pada oprek peranti lunak sistem 3DS agar bisa melakukan hal yang tidak boleh di bawaan. _Homebrew_ umumnya merujuk pada peranti lunak bersumber tidak resmi (yaitu: tidak diagihkan lewat eShop atau kartrid).
 
 Dari sejarahnya, dulu 3DS punya akses _homebrew_ jenis _userland_ melalui eksploit seperti ninjhax, terkadang hanya disebut "homebrew". Tingkat akses sistem dari _userland_ mengizinkan membaca _homebrew_ dan emulator dasar tapi belum bisa (dengan mudah) memodif permainan atau men-_dump_ kartrid. Itu pun lebih tidak stabil, _homebrew_ sering mogok tidak jelas dan perlu dinyalakan ulang penuh. _Custom firmware_ mengizinkan tingkat akses sistem lebih luas dan stabil daripada titik masuk hanya-_homebrew_.
 
