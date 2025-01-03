@@ -29,30 +29,30 @@ Pode haver um erro com seu arquivo `arm11code.bin`. Baixe a última versão do [
 Você também pode tentar redefinir os dados salvos do seu navegador:
 
 1. Inicie o navegador, então abra as configurações do navegador
-2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-3. Try the exploit again
+2. Role até o final e selecione "Reinicializar Dados Salvos" (também pode ser chamado de "Inicializar Dados Salvos" ou "Limpar Todos os Dados Salvos")
+3. Tente o exploit novamente
 
 :::
 
-:::details Opening the browserhax QR code or URL crashes
+:::details Abrir o QR Code ou URL do browserhax causa um crash
 
-Browser based exploits (such as this one) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
+Exploits do navegador (como este) geralmente são instáveis e causam crashes com frequência, mas em alguns casos podem ser corrigidos seguindo as etapas a seguir.
 
 1. Inicie o navegador, então abra as configurações do navegador
-2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-3. Try the exploit again
+2. Role até o final e selecione "Reinicializar Dados Salvos" (também pode ser chamado de "Inicializar Dados Salvos" ou "Limpar Todos os Dados Salvos")
+3. Tente o exploit novamente
 
 :::
 
-:::details System Update prompt when opening browser
+:::details Solicitação de atualização do sistema ao abrir o navegador
 
-The SSLoth proxy was incorrectly configured. Re-do the SSLoth section on the page.
+O proxy SSLoth foi configurado incorretamente. Refaça a seção do SSLoth na página.
 
 :::
 
-:::details Error 032-0420 when opening browser
+:::details Erro 032-0420 ao abrir o navegador
 
-Follow these steps in order:
+Siga estas etapas em ordem:
 
 1. Abra as Configurações do Sistema no seu console
 2. Navegue para `Configuração de internet` -> `Configurações de conexão`
@@ -63,16 +63,16 @@ Follow these steps in order:
    - O teste deve ser bem-sucedido
 7. Clique "OK" para continuar
 8. Pressione "Voltar" duas vezes e, em seguida, "Fechar" para voltar ao Menu HOME
-9. Open the Internet Browser once
-10. If prompted about a system update, press OK
-    - This won't actually update the system
-11. Start again from [Section II](installing-boot9strap-\(ssloth-browser\).html#section-ii---ssloth)
+9. Abra o navegador de internet uma vez
+10. Se aparecer uma solicitação de atualização do sistema, pressione OK
+    - Isso não vai atualizar o sistema
+11. Inicie novamente pela [Seção II](installing-boot9strap-\(ssloth-browser\).html#section-ii---ssloth)
 
 :::
 
-:::details Frozen on "Doing agbhax..."
+:::details Parado em "Doing agbhax..."
 
-Pode haver um erro com seu arquivo `arm11code.bin`. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place it on the root of your SD card, and rename it to `arm11code.bin`. Não adicione a extensão `.bin` se você não a vê.
+Pode haver um erro com seu arquivo `arm11code.bin`. Baixe novamente a última versão do [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), coloque-o na raiz de seu cartão SD e renomeie-o para `arm11code.bin`. Não adicione a extensão `.bin` se você não a vê.
 
 :::
 
@@ -102,7 +102,7 @@ Se isso falhar, tente usar outro cartão SD.
 
 ::: tip
 
-Go back to [Installing boot9strap (SSLoth-Browser)](installing-boot9strap-\(ssloth-browser\))
+Voltar para [Instalando boot9strap (SSLoth-Browser)](installing-boot9strap-\(ssloth-browser\))
 
 :::
 
