@@ -10,7 +10,7 @@ These instructions are only valid for the "Installing boot9strap (super-skaterha
 
 ## Issues with super-skaterhax
 
-:::details "An error has occurred. Please save your data in any software currently in use, then restart the system."
+:::details "An error has occured. Please save your data in any software currently in use, then restart the system."
 
 If no colors flash after pressing "GO GO!":
 
@@ -21,16 +21,16 @@ If the screen flashes colors then freezes/crashes:
 
 - Ensure that you have the correct copy of `arm11code.bin` and `browserhax_hblauncher_ropbin_payload.bin` for your console's version and region
 - Try resetting your browser data:
-  1. Launch the browser, then launch the browser settings
+  1. Inicie o navegador, então abra as configurações do navegador
   2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
   3. Try the exploit again
 - Try changing the system language to something other than the current language
 
 :::
 
-:::: details "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
+:::: details "An error has occurred. Hold down the POWER button to turn off the power..." (tela preta com texto)
 
-The file `arm11code.bin` is missing or misplaced. Make sure to copy the files of the [latest version of super-skaterhax](https://skater.nintendohomebrew.com/) for your region and version to the root of your SD card (not inside of a folder).
+O arquivo `arm11code.bin` está faltando ou fora do lugar apropriado. Make sure to copy the files of the [latest version of super-skaterhax](https://skater.nintendohomebrew.com/) for your region and version to the root of your SD card (not inside of a folder).
 
 ::: info
 
@@ -46,7 +46,7 @@ Isso provavelmente indica que você já possui custom firmware. Você deve [chec
 
 :::
 
-## Issues with SafeB9SInstaller
+## Problemas com o SafeB9SInstaller
 
 <!--@include: ./_include/troubleshooting-sb9si-bin.md -->
 
