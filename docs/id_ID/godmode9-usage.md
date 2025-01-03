@@ -1,8 +1,8 @@
-# GodMode9 Usage
+# Penggunaan GodMode9
 
 ::: info
 
-For information on dumping cartridge or SD card content, see [Dumping Titles and Game Cartridges](dumping-titles-and-game-cartridges).
+Untuk informasi men-_dump_ data kartrid atau kartu SD, lihat [Membuat Dump Permainan dan Kartrid](dumping-titles-and-game-cartridges).
 
 :::
 
