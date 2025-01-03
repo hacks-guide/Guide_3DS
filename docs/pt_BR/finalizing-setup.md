@@ -95,7 +95,7 @@ Nesta seção, você usará uma série de scripts para automatizar a instalaçã
 1. Desligue seu console
 2. Aperte e segure (X), e enquanto segura (X), ligue o console. Isto irá iniciar o Finalizing Setup Helper
    - Se você inicializar no Menu HOME, sua pasta `payloads` pode estar nomeada incorretamente ou no local errado
-   - If you encounter an error, consult the [troubleshooting](troubleshooting-finalizing-setup) page
+   - Se você encontrar um erro, consulte a página de [troubleshooting](troubleshooting-finalizing-setup)
 3. Se o Helper for bem-sucedido, o seu console iniciará no GodMode9
    - A partir deste ponto, você pode acessar o GodMode9 segurando START enquanto liga o console
 4. Se você for solicitado para criar um backup de arquivos essenciais, aperte (A) pra fazê-lo, e depois aperte (A) para continuar quando ele for concluído
@@ -104,7 +104,7 @@ Nesta seção, você usará uma série de scripts para automatizar a instalaçã
 7. Selecione "Scripts..."
 8. Selecione "finalize"
 9. Siga as instruções no script, respondendo a quaisquer perguntas que lhe sejam feitas
-   - If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting-finalizing-setup) page
+   - Se você encontrar um erro, siga as instruções na mensagem de erro ou consulte a página de [troubleshooting](troubleshooting-finalizing-setup)
 10. Uma vez que o script disser "Setup complete!", aperte (A) para desligar o dispositivo
     - Se você NÃO ver a mensagem "Setup complete!", o script não foi bem-sucedido e você terá que refazer esta seção a partir do Passo 3
 11. Insira o cartão SD no seu computador
