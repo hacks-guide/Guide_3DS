@@ -1,58 +1,58 @@
 # Troubleshooting (SSLoth-Browser)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (SSLoth-Browser)" page, which is used on system versions between 11.4.0 and 11.13.0. Se você não consegue resolver seu problema com o conselho nesta página, por favor entre no [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp) e descreva o seu problema, incluindo o que você já tentou.
+Esta página oferece recursos de solução de problemas para problemas com a página "Instalando boot9strap (SSLoth-Browser)", que é usada nas versões do sistema entre 11.4.0 e 11.13.0. Se você não consegue resolver seu problema com o conselho nesta página, por favor entre no [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp) e descreva o seu problema, incluindo o que você já tentou.
 
 ::: warning
 
-These instructions are only valid for the "Installing boot9strap (SSLoth-Browser)" page. If you are using a **New 3DS** on version **11.15.0 through 11.17.0**, you should follow [troubleshooting instructions for Installing boot9strap (super-skaterhax)](troubleshooting-super-skaterhax) instead.
+Essas instruções são válidas somente para a página "Instalando boot9strap (SSLoth-Browser)". Se você estiver usando um **New 3DS** na versão **11.15.0 a 11.17.0**, você deve seguir as [instruções de troubleshooting para Instalando boot9strap (super-skaterhax)](troubleshooting-super-skaterhax).
 
 :::
 
 ## SSLoth-Browser
 
-:::details Red/purple/pink and white screen after running Browserhax
+:::details Tela vermelha/roxa/rosa e branca após executar o Browserhax
 
 Isso provavelmente indica que você já possui custom firmware. Você deve [checar por CFW](checking-for-cfw).
 
 :::
 
-:::details "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
+:::details "An error has occured. Hold down the POWER button to turn off the power..." (tela preta com texto)
 
-The file `arm11code.bin` is missing or misplaced. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Não adicione a extensão `.bin` se você não a vê.
+O arquivo `arm11code.bin` está faltando ou fora do lugar apropriado. Baixe a última versão do [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), coloque `otherapp.bin` na raíz do cartão SD e renomeie-o para `arm11code.bin`. Não adicione a extensão `.bin` se você não a vê.
 
 :::
 
 :::details "Ocorreu um erro, forçando o software a fechar..." (caixa de mensagem branca)
 
-There may be an issue with your `arm11code.bin` file. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Não adicione a extensão `.bin` se você não a vê.
+Pode haver um erro com seu arquivo `arm11code.bin`. Baixe a última versão do [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), coloque `otherapp.bin` na raíz do cartão SD e renomeie-o para `arm11code.bin`. Não adicione a extensão `.bin` se você não a vê.
 
-You can also try resetting your browser save data:
+Você também pode tentar redefinir os dados salvos do seu navegador:
 
-1. Launch the browser, then launch the browser settings
-2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-3. Try the exploit again
-
-:::
-
-:::details Opening the browserhax QR code or URL crashes
-
-Browser based exploits (such as this one) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
-
-1. Launch the browser, then launch the browser settings
-2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-3. Try the exploit again
+1. Inicie o navegador, então abra as configurações do navegador
+2. Role até o final e selecione "Reinicializar Dados Salvos" (também pode ser chamado de "Inicializar Dados Salvos" ou "Limpar Todos os Dados Salvos")
+3. Tente o exploit novamente
 
 :::
 
-:::details System Update prompt when opening browser
+:::details Abrir o QR Code ou URL do browserhax causa um crash
 
-The SSLoth proxy was incorrectly configured. Re-do the SSLoth section on the page.
+Exploits do navegador (como este) geralmente são instáveis e causam crashes com frequência, mas em alguns casos podem ser corrigidos seguindo as etapas a seguir.
+
+1. Inicie o navegador, então abra as configurações do navegador
+2. Role até o final e selecione "Reinicializar Dados Salvos" (também pode ser chamado de "Inicializar Dados Salvos" ou "Limpar Todos os Dados Salvos")
+3. Tente o exploit novamente
 
 :::
 
-:::details Error 032-0420 when opening browser
+:::details Solicitação de atualização do sistema ao abrir o navegador
 
-Follow these steps in order:
+O proxy SSLoth foi configurado incorretamente. Refaça a seção do SSLoth na página.
+
+:::
+
+:::details Erro 032-0420 ao abrir o navegador
+
+Siga estas etapas em ordem:
 
 1. Abra as Configurações do Sistema no seu console
 2. Navegue para `Configuração de internet` -> `Configurações de conexão`
@@ -63,16 +63,16 @@ Follow these steps in order:
    - O teste deve ser bem-sucedido
 7. Clique "OK" para continuar
 8. Pressione "Voltar" duas vezes e, em seguida, "Fechar" para voltar ao Menu HOME
-9. Open the Internet Browser once
-10. If prompted about a system update, press OK
-    - This won't actually update the system
-11. Start again from [Section II](installing-boot9strap-\(ssloth-browser\).html#section-ii---ssloth)
+9. Abra o navegador de internet uma vez
+10. Se aparecer uma solicitação de atualização do sistema, pressione OK
+    - Isso não vai atualizar o sistema
+11. Inicie novamente pela [Seção II](installing-boot9strap-\(ssloth-browser\).html#section-ii---ssloth)
 
 :::
 
-:::details Frozen on "Doing agbhax..."
+:::details Parado em "Doing agbhax..."
 
-There may be an issue with your `arm11code.bin` file. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place it on the root of your SD card, and rename it to `arm11code.bin`. Não adicione a extensão `.bin` se você não a vê.
+Pode haver um erro com seu arquivo `arm11code.bin`. Baixe novamente a última versão do [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), coloque-o na raiz de seu cartão SD e renomeie-o para `arm11code.bin`. Não adicione a extensão `.bin` se você não a vê.
 
 :::
 
@@ -90,7 +90,7 @@ Se isso falhar, tente usar outro cartão SD.
 
 :::
 
-## Issues with SafeB9SInstaller
+## Problemas com o SafeB9SInstaller
 
 <!--@include: ./_include/troubleshooting-sb9si-bin.md -->
 
@@ -102,7 +102,7 @@ Se isso falhar, tente usar outro cartão SD.
 
 ::: tip
 
-Go back to [Installing boot9strap (SSLoth-Browser)](installing-boot9strap-\(ssloth-browser\))
+Voltar para [Instalando boot9strap (SSLoth-Browser)](installing-boot9strap-\(ssloth-browser\))
 
 :::
 

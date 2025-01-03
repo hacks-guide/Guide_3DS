@@ -1,12 +1,12 @@
 # A9LH to B9S
 
-## Required Reading
+## Lecture Requise
 
 This page is for existing arm9loaderhax users to update their consoles to boot9strap.
 
 All future releases of Luma3DS will only be made in the `.firm` format, which will only be compatible with boot9strap and sighax. This means that to continue receiving the latest updates of Luma3DS, you should use this page to update your installation.
 
-## What You Need
+## Ce dont vous avez besoin
 
 ::: warning
 
@@ -38,7 +38,7 @@ For all steps in this section, overwrite any existing files on your SD card.
 
 1. Power off your console
 
-2. Insert your SD card into your computer
+2. Insérez votre carte SD dans votre ordinateur
 
 3. Copy everything from Luma3DS `.zip` to the root of your SD card
    - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it

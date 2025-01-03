@@ -16,7 +16,7 @@ For technical details on the exploits that you will be using on this page, see [
 
 :::
 
-### Compatibility Notes
+### Catatan Kompatibilitas
 
 Super-skaterhax (when used to launch the Homebrew Launcher) is compatible with New models on version 11.15.0 and above in all regions.
 
@@ -26,17 +26,17 @@ The instructions provided only apply to the New 3DS, New 3DS XL, and New 2DS XL.
 
 :::
 
-### What You Need
+### Apa yang Perlu
 
 - The [Super-skaterhax](https://skater.nintendohomebrew.com) zip for your console's region and system version
 
-#### Section I - Prep Work
+#### Bagian I - Persiapan
 
 In this section, you will copy the files needed to trigger both super-skaterhax and the Homebrew Launcher.
 
-1. Power off your console
+1. Matikan daya konsol
 
-2. Insert your SD card into your computer
+2. Sisipkan kartu SD ke komputer Anda
 
 3. Copy everything from the Super-skaterhax `.zip` to the root of your SD card, overwriting any existing files
 
@@ -46,7 +46,7 @@ In this section, you will copy the files needed to trigger both super-skaterhax 
 
    :::
 
-4. Reinsert your SD card into your console
+4. Sisip kembali kartu SD ke konsol
 
 5. Power on your console
 
@@ -95,7 +95,7 @@ If you haven't already, make sure you have a working Internet connection set up 
    - If your (Start) button does not respond, tap the 3-line menu on the bottom-right corner of the screen
 10. Tap on "Settings"
 11. Tap on "Delete Cookies"
-12. Press (A) to continue
+12. Tekan (A) untuk lanjut
 13. Press (Home) to return to the HOME Menu, then immediately press (A) to launch the browser again
 14. Select the "GO GO!" button on the top of the bottom screen
 15. Press (A) to dismiss the [popup](/images/screenshots/skaterhax/skater-popup.png)
@@ -113,7 +113,7 @@ If you haven't already, make sure you have a working Internet connection set up 
 
 In this section, you will install custom firmware onto your console.
 
-1. When prompted, input the key combo given on the top screen to install boot9strap
+1. Saat diminta, tekan kombo tombol mengikuti layar atas untuk memasang boot9strap
    - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-super-skaterhax)
 2. Once it is complete, press (A) to reboot your console
 
@@ -131,6 +131,6 @@ You may now restore your region settings back to normal.
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Lanjut ke [Penyiapan Akhir](finalizing-setup)
 
 :::

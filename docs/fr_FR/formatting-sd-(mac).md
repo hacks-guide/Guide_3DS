@@ -1,6 +1,6 @@
 # Formatting SD (Mac)
 
-## Required Reading
+## Lecture Requise
 
 This is an add-on section for formatting an SD card to work with the 3DS.
 
@@ -12,7 +12,7 @@ This page is for Mac users only. If you are not on Mac, check out the [Formattin
 
 ### OS X El Capitan (10.11) and later
 
-1. Insert your SD card into your computer
+1. Insérez votre carte SD dans votre ordinateur
 
 2. If the SD card has any files and folders on it, copy everything to a folder on your computer
 
@@ -47,7 +47,7 @@ This page is for Mac users only. If you are not on Mac, check out the [Formattin
 
 ### OS X Yosemite (10.10) and earlier
 
-1. Insert your SD card into your computer
+1. Insérez votre carte SD dans votre ordinateur
 
 2. If the SD card has any files and folders on it, copy everything to a folder on your computer
 

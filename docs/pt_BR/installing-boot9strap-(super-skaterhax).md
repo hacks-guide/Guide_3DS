@@ -55,9 +55,9 @@ Nesta seção, você irá copiar os arquivos necessários para acionar tanto sup
 7. Selecione "Outras Configurações"
 
 8. Navegue para "Perfil" -> "Configurações de Região"
-   - These settings will be temporarily changed to increase the success rate of the exploit
-   - You can restore your region settings back to normal once you have finished this page
-   - If you get a [warning](/images/screenshots/skaterhax/country-change-notice.png) that says you will lose access to Nintendo Network ID features, you can safely select OK to continue
+   - Estas configurações serão alteradas temporariamente para aumentar as chances de sucesso do exploit
+   - Você pode restaurar suas configurações de região de volta ao normal assim que finalizar esta página
+   - Se você receber um [aviso](/images/screenshots/skaterhax/country-change-notice.png) dizendo que você perderá o acesso aos recursos de sua Nintendo Network ID, é seguro selecionar OK para continuar
 
 9. Selecione as seguintes opções de acordo com a região de seu console ([imagem](/images/screenshots/skaterhax/skater-lang.png))
    - USA: United States, Do Not Set
@@ -102,7 +102,7 @@ Se você ainda não tem, certifique-se de que você tem uma conexão de Internet
     - Se o seu console congela em uma tela amarela, segure o botão POWER até que ele desligue e tente esta seção novamente
     - Se o seu console congela numa tela vermelha, segure o botão POWER até que ele desligue, refaça o passo 3 da Seção II e tente esta seção novamente
     - Se seu console [mostrar a palavra Text no canto superior esquerdo da tela inferior](/images/screenshots/skaterhax/skater-old3ds.png), você tem um Old 3DS e este exploit **não irá funcionar no seu dispositivo**. Se este for o caso, siga [Instalando boot9strap (MSET9)](installing-boot9strap-\(mset9\)) ao invés disso
-    - If you get another error, try again up to 5 times, and if it still doesn't work, [follow this troubleshooting guide](troubleshooting-super-skaterhax)
+    - Se você receber outro erro, tente novamente até 5 vezes e, se ainda não funcionar, [siga este guia de troubleshooting](troubleshooting-super-skaterhax)
 16. Seu console terá inicializado o Homebrew Launcher
 17. Abra o nimdsphax da lista de homebrews
 18. Se o exploit for bem-sucedido, você terá entrado no SafeB9SInstaller
@@ -114,7 +114,7 @@ Se você ainda não tem, certifique-se de que você tem uma conexão de Internet
 Nesta seção, você instalará custom firmware no seu console.
 
 1. Quando solicitado, aperte a sequência de botões fornecida na tela superior para instalar o boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-super-skaterhax)
+   - Se um passo na tela inferior possuir texto em cor vermelha, e você não for solicitado a introduzir um combo de botões, siga o [guia de troubleshooting](troubleshooting-super-skaterhax)
 2. Quando concluído, aperte (A) para reiniciar o seu console
 
 <!--@include: ./_include/configure-luma3ds.md -->

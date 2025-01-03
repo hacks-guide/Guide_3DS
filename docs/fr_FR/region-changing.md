@@ -1,6 +1,6 @@
 # Region Changing
 
-## Required Reading
+## Lecture Requise
 
 This is an add-on section for region changing your console. This is done by installing the 11.15.0 CTRTransfer image for the region you want to switch to. After installing the image, you can update your console normally to the latest firmware (11.17.0).
 
@@ -32,7 +32,7 @@ If you change the region of your console:
 
 :::
 
-## What You Need
+## Ce dont vous avez besoin
 
 - The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
 - The latest release of [FBI](https://github.com/nh-server/FBI-NH/releases/download/2.6.1/FBI.3dsx) (direct download)

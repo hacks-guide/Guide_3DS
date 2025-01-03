@@ -160,6 +160,6 @@ If you experience an issue while following this guide, there are many ways that 
 
 ::: tip
 
-Continue to [Get Started](get-started)
+Lanjut ke [Memulai](get-started)
 
 :::

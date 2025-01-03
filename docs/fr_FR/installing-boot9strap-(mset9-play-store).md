@@ -20,7 +20,7 @@ On Android phones/tablets, the minimum Android version required is 6.0 (Marshmal
 
 :::
 
-## What You Need
+## Ce dont vous avez besoin
 
 - The following applications installed from the Google Play Store:
   - [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)

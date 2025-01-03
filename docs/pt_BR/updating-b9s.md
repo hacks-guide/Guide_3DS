@@ -37,7 +37,7 @@ Para todas as etapas nesta seção, substitua quaisquer arquivos existentes no s
 1. Ligue o seu console
    - Isso deverá iniciar automaticamente o SafeB9SInstaller
 2. Quando solicitado, aperte a sequência de botões fornecida na tela superior para instalar o boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-updating-b9s)
+   - Se um passo na tela inferior possuir texto em cor vermelha, e você não for solicitado a introduzir um combo de botões, siga o guia de [troubleshooting](troubleshooting-updating-b9s)
 3. Assim que for completo, force o seu console a desligar segurando o botão POWER
    - Seu console sempre iniciará na tela do SafeB9SInstaller até que a próxima seção seja concluída
 

@@ -1,23 +1,23 @@
-# Credits
+# Daftar Nama
 
-This guide is currently maintained by: **lifehackerhansol, lilyuwuu, eip618, ihaveamac, and adrot**, with additional significant contributions from **Gruetzig, danny8376, MechanicalDragon0687, and the various #community-resources members** who provide valuable input.
+Panduan ini saat ini diurus oleh: **lifehackerhansol, lilyuwuu, eip618, ihaveamac, dan adrot**, dengan sumbangsih bernas tambahan dari **Gruetzig, danny8376, MechanicalDragon0687, dan berbagai anggota #community-resources** yang memberi masukan berharga.
 
-This guide uses homebrew software developed by **SciresM, TuxSH, AuroraWright, devkitPro, d0k3, PabloMK7, astronautlevel2, BernardoGiordano, mtheall, Universal-Team, ntrteam, jason0597, Steveice10 and MechanicalDragon0687**, as well as exploits authored/discovered by **SciresM, zoogie, luigoalma, PabloMK7, TuxSH, MrNbaYoh, nedwill, and plutooo**.
+Panduan ini menggunakan _homebrew_ yang dikembangkan oleh **SciresM, TuxSH, AuroraWright, devkitPro, d0k3, PabloMK7, astronautlevel2, BernardoGiordano, mtheall, Universal-Team, ntrteam, jason0597, Steveice10, dan MechanicalDragon0687**, serta eksploit yang dikarang/ditemukan oleh **SciresM, zoogie, luigoalma, PabloMK7, TuxSH, MrNbaYoh, nedwill, dan plutooo**.
 
-If we forgot to add you to this list of credits, [let us know](https://github.com/hacks-guide/Guide_3DS/issues)!
+Jika ada yang lupa kami taruh di daftar nama ini, [beri tahu kami](https://github.com/hacks-guide/Guide_3DS/issues)!
 
 ::: info
 
-**Special thanks to:**
+**Terima kasih khusus:**
 
-- **Plailect**, the original creator and maintainer of this guide
-- [The guide translators](https://crowdin.com/project/3ds-guide), who make this guide more accessible around the world
-- Anyone who has ever submitted an issue, pull request, or otherwise informed us about problems on this guide
-- The historical contributors to this guide, without whom this guide would not exist today
+- **Plailect**, sebagai pembuat awal dan pengurus panduan ini
+- [Penerjemah panduan](https://crowdin.com/project/3ds-guide), yang membuat panduan ini mudah diakses banyak orang
+- Siapa pun yang pernah mengirim _issue_, _pull request_, atau memberi tahu kami masalah di panduan
+- Penyumbangsih terdahulu panduan ini, yang tanpanya panduan ini tidak akan ada saat ini
 
 :::
 
-:::details Historical contributors
+:::details Penyumbangsih terdahulu
 
 ```
 + #Cakey on freenode

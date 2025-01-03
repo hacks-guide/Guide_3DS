@@ -20,7 +20,7 @@ For technical details on the exploits that you will be using on this page, see [
 
 Soundhax (when combined with universal-otherapp) is compatible with versions 1.0.0 through 11.3.0 in all regions.
 
-## What You Need
+## Ce dont vous avez besoin
 
 - The latest release of [Soundhax](http://soundhax.com) _(for your region, console, and version)_
   - If Soundhax appears in your browser as an unplayable video, press Ctrl+S or Cmd+S to save it to your computer
@@ -36,7 +36,7 @@ Soundhax (when combined with universal-otherapp) is compatible with versions 1.0
 In this section, you will copy the files needed to trigger both Soundhax and universal-otherapp.
 
 1. Power off your console
-2. Insert your SD card into your computer
+2. Insérez votre carte SD dans votre ordinateur
 3. Copy the Soundhax `.m4a` to the root of your SD card
    - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
 4. Copy `otherapp.bin` to the root of your SD card

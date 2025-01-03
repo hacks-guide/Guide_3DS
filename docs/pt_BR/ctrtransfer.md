@@ -19,9 +19,9 @@ Como parte deste processo, a configuração do console será redefinida para os 
 ## O que é necessário
 
 - A versão mais recente do [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (o arquivo `.zip` do GodMode9)
-- The latest release of [FBI](https://github.com/nh-server/FBI-NH/releases/download/2.6.1/FBI.3dsx) (direct download)
+- A versão mais recente do [FBI](https://github.com/nh-server/FBI-NH/releases/download/2.6.1/FBI.3dsx) (download direto)
 - A versão mais recente do [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(o arquivo `.3dsx`)_
-- The latest release of [ctrtransfer.gm9](https://raw.githubusercontent.com/nh-server/scripts/refs/heads/main/3DS/ctrtransfer.gm9) (right click, save link as)
+- A versão mais recente do [ctrtransfer.gm9](https://raw.githubusercontent.com/nh-server/scripts/refs/heads/main/3DS/ctrtransfer.gm9) (botão direito do mouse, "Salvar link como...")
 - Um cliente de torrent como [qBittorrent](https://www.qbittorrent.org/download.php) ou [Deluge](http://dev.deluge-torrent.org/wiki/Download)
   - Se você já tem um cliente de torrent, não é necessário baixar um novo
 - A imagem 11.15.0 da CTRTransfer para o seu console e região:

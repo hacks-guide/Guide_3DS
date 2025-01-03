@@ -1,4 +1,4 @@
-# Troubleshooting
+# Sidik Gangguan
 
 This page serves a landing page for troubleshooting resources that we offer for commonly encountered issues. Click on the link corresponding to the page you are following to explore it.
 

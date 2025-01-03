@@ -85,7 +85,7 @@ O objetivo desta seção é verificar se os aplicativos do modo DS embutidos con
 
 ::: warning
 
-Se qualquer um desses testes falhar, o Modo DS, DS Download Play, e/ou Conexões Nintendo DS podem estar inacessíveis quando o CFW for desinstalado! You should [fix DS mode](troubleshooting-post-install) before continuing.
+Se qualquer um desses testes falhar, o Modo DS, DS Download Play, e/ou Conexões Nintendo DS podem estar inacessíveis quando o CFW for desinstalado! Você deve [corrigir o modo DS](troubleshooting-post-install) antes de continuar.
 
 :::
 

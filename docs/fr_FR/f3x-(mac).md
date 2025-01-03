@@ -1,6 +1,6 @@
 # F3X (Mac)
 
-## Required Reading
+## Lecture Requise
 
 This is an add-on section for checking your SD card for errors using F3X.
 
@@ -14,14 +14,14 @@ If you're using a Mac on macOS 10.13 (High Sierra) and above, follow [F3XSwift (
 
 :::
 
-## What You Need
+## Ce dont vous avez besoin
 
 - The latest release of [F3X](https://github.com/insidegui/F3X/releases/latest)
 
 ## Instructions
 
 1. Unzip the F3X `.zip` file
-2. Insert your SD card into your computer
+2. Insérez votre carte SD dans votre ordinateur
 3. Run the F3X app
 4. Select your SD card
 5. Press "Start Test"

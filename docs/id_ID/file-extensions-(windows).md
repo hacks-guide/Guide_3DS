@@ -1,19 +1,19 @@
-# File Extensions (Windows)
+# Ekstens Berkas (Windows)
 
-## Required Reading
+## Bacaan Penting
 
-This is an add-on section for disabling Windows's default behavior of hiding file extensions.
+Ini adalah laman lebihan untuk memunculkan ekstensi tersembunyi di Windows.
 
-This will make it easier for you to find the referenced files in the rest of this guide.
+Ini akan mempermudah mencari berkas yang dirujuk pada seluruh panduan ini.
 
-## Instructions
+## Instruksi
 
 ### Windows 11
 
-1. Launch File Explorer by opening any directory, such as your SD card directory
-2. Click the "View" option in the toolbar
-3. Go to "Show"
-4. Click "File name extensions" to enable it
+1. Buka File Explorer dengan membuka folder apa saja, seperti folder kartu SD
+2. Pencet opsi "View" (Tampilkan) di bilah alat
+3. Lalu ke "Show" (Perlihatkan)
+4. Pencet "File name extensions" (Ekstensi nama berkas) untuk mengaktifkan
 
    ::: info
 
@@ -23,9 +23,9 @@ This will make it easier for you to find the referenced files in the rest of thi
 
 ### Windows 10 / 8.1 / 8
 
-1. Launch File Explorer by opening any directory, such as your SD card directory
-2. Click the "View" option on the ribbon menu
-3. Check the box labeled "File name extensions"
+1. Buka File Explorer dengan membuka folder apa saja, seperti folder kartu SD
+2. Pencet opsi "View" di menu pita (_ribbon_)
+3. Centang kotak "File name extensions"
 
    ::: info
 
@@ -35,9 +35,9 @@ This will make it easier for you to find the referenced files in the rest of thi
 
 ### Windows 7
 
-1. Open the start menu by clicking on it or using the Windows key
+1. Pencet dan buka Menu Mulai di kiri bawah atau tekan tombol Windows
 
-2. Search for "Folder Options" and select the corresponding result
+2. Lalu ketik "Folder Options" pada Menu Mulai dan pilih hasil terkait
 
    ::: info
 
@@ -45,9 +45,9 @@ This will make it easier for you to find the referenced files in the rest of thi
 
    :::
 
-3. Click the "View" option at the top of the Folder Options menu
+3. Pencet opsi "View" di bagian atas menu Folder Options
 
-4. Uncheck the box labeled "Hide extensions for known file types"
+4. Lepas centang kotak "Hide extensions for known file types"
 
    ::: info
 
@@ -57,6 +57,6 @@ This will make it easier for you to find the referenced files in the rest of thi
 
 ::: tip
 
-Continue to [Get Started](get-started)
+Lanjut ke [Memulai](get-started)
 
 :::

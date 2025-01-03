@@ -1,6 +1,6 @@
 # Flashing ntrboot (DSi)
 
-## Required Reading
+## Lecture Requise
 
 Before proceeding, ensure you have read all of the information on [ntrboot](ntrboot)
 
@@ -12,7 +12,7 @@ Notez que dans de rares circonstances, il est possible que le processus de flash
 
 :::
 
-## What You Need
+## Ce dont vous avez besoin
 
 - Your ntrboot compatible flashcart
 - Two consoles

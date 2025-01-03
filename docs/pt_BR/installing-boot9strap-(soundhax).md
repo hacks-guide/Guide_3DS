@@ -79,7 +79,7 @@ Nesta seção, você irá iniciar o Soundhax através do aplicativo Som Nintendo
    - Isso pode levar várias tentativas (até 10)
    - Se você ver a mensagem "Não foi possível reproduzir", você está em uma versão do sistema incompatível com o Soundhax, ou baixou o arquivo errado do Soundhax
    - Se o console congelar, desligue-o forçadamente segurando o botão de liga/desliga, e então tente novamente
-   - If you get a different error, [follow this troubleshooting guide](troubleshooting-soundhax)
+   - Caso receba um erro diferente, [siga este guia de troubleshooting](troubleshooting-soundhax)
 
    ::: info
 
@@ -94,7 +94,7 @@ Nesta seção, você irá iniciar o Soundhax através do aplicativo Som Nintendo
 Nesta seção, você instalará custom firmware no seu console.
 
 1. Quando solicitado, aperte a sequência de botões fornecida na tela superior para instalar o boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-soundhax)
+   - Se um passo na tela inferior possuir texto em cor vermelha, e você não for solicitado a introduzir um combo de botões, siga o [guia de troubleshooting](troubleshooting-soundhax)
 2. Quando concluído, aperte (A) para reiniciar o seu console
 
 <!--@include: ./_include/configure-luma3ds.md -->

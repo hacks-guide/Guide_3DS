@@ -5,7 +5,7 @@
 5. Select "SysNAND Backup"
 6. Onaylamak için (A) basın
    - This process will take some time
-   - If you get an error, look for your issue in the [troubleshooting guide](troubleshooting#finalizing-setup)
+   - If you get an error, look for your issue in the [troubleshooting guide](troubleshooting-finalizing-setup.html)
 7. Devam etmek için (A) basın
 8. Press (B) to return to the main menu
 9. Select "Exit"

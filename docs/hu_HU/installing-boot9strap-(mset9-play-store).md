@@ -91,7 +91,7 @@ Ebben a részben előkészítjük az SD kártyád a szükséges adatokkal amik k
     - Ha nem ellenőrzi automatikusan, érintsd meg a `Check MSET9 status` opciót a manuális ellenőrzéshez
     - Ha hibát kapsz, nézd meg a [hibaelhárítási útmutatót](troubleshooting-mset9), majd próbáld újra
 
-19. Ha az ellenőrzés sikeres az `Inject trigger file` [kiemelődik](/images/screenshots/mset9/inject-trigger-highlighted.png) és folytathatod a következő lépéssel. **Do not inject trigger yet.** Put your phone/tablet/computer aside for now
+19. Ha az ellenőrzés sikeres az `Inject trigger file` [kiemelődik](/images/screenshots/mset9/inject-trigger-highlighted.png) és folytathatod a következő lépéssel. _Ne injektáld a triggert még._\* Tedd most félre telefonod/tableded/számítógéped
 
 20. Tedd vissza az SD kártyád a konzoldba
 

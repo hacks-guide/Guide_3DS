@@ -5,7 +5,7 @@
 5. Selecteer "SysNAND Backup"
 6. Druk op (A) om het te bevestigen
    - This process will take some time
-   - If you get an error, look for your issue in the [troubleshooting guide](troubleshooting#finalizing-setup)
+   - If you get an error, look for your issue in the [troubleshooting guide](troubleshooting-finalizing-setup.html)
 7. Druk op (A) om door te gaan
 8. Druk op (B) om terug te gaan naar het hoofdmenu
 9. Selecteer "Exit"

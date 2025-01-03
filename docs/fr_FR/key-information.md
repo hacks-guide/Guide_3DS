@@ -1,18 +1,18 @@
-# Key Information
+# Informations importantes
 
 ::: info
 
-If this is your first time modding a 3DS (or you're unfamiliar with technology), keep reading! Otherwise, if you have prior experience and know what you're doing, continue to [Get Started](get-started).
+Lisez attentivement cette page s'il s'agit de la première fois que vous hacker une 3DS (ou si vous n'êtes pas familier avec la technologie en général) ! Si vous savez ce que vous faites et que vous avez une expérience antérieure, continuez vers [Pour commencer](get-started).
 
 :::
 
-This page covers some of the base computer terminology and 3DS-specific information that you should know before following this guide.
+Cette page couvre une partie de la terminologie informatique de base et des informations spécifiques à la 3DS que vous devriez connaître avant de suivre ce guide.
 
-Each section is collapsed by default. Click or tap on the name of the section to open it.
+Chaque section est réduite par défaut. Cliquez ou appuyez sur le nom de la section pour l'ouvrir.
 
-## Compatibility
+## Compatibilité
 
-:::: details What consoles is this guide compatible with?
+:::: details Avec quelles consoles ce guide est-il compatible ?
 
 ::: info
 
@@ -20,11 +20,11 @@ Each section is collapsed by default. Click or tap on the name of the section to
 
 :::
 
-This guide works with every retail console in the Nintendo 3DS family of consoles (including the 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, and New 2DS XL/LL), regardless of region or firmware. It is NOT compatible with the DSi family of consoles (DSi, DSi XL/LL). For DSi-family consoles, consult [this guide](https://dsi.cfw.guide) instead.
+Ce guide fonctionne avec toutes les consoles commerciales de la famille Nintendo 3DS (y compris la 3DS, les 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL et New 2DS XL/LL), indépendamment de la région ou du firmware. Il n'est PAS compatible avec la famille de consoles DSi (DSi, DSi XL/LL). Pour les consoles de la famille DSi, veuillez consulter [ce guide](https://dsi.cfw.guide).
 
 ::::
 
-:::: details What kind of computer / hardware do I need to follow this guide?
+:::: details De quel type d'ordinateur / matériel ai-je besoin pour suivre ce guide ?
 
 ::: info
 
@@ -32,11 +32,11 @@ This guide works with every retail console in the Nintendo 3DS family of console
 
 :::
 
-In most cases, you can follow this guide as long as you are able to download files from the Internet and copy them to your SD card. Depending on your computer/phone/electronic device, you may need to purchase a USB to SD card adapter to allow your computer to read your SD card.
+Dans la plupart des cas, vous pouvez suivre ce guide tant que vous avez la possibilité de télécharger des fichiers depuis Internet et de les copier sur votre carte SD. Selon votre ordinateur/téléphone/appareil électronique, vous devrez peut-être acheter un adaptateur de carte SD vers USB pour permettre à votre ordinateur de lire votre carte SD.
 
 ::::
 
-:::: details What kind of SD card does my console use/need?
+:::: details Quel type de carte SD ma console utilise-t-elle/a-t-elle besoin ?
 
 ::: info
 
@@ -44,19 +44,19 @@ In most cases, you can follow this guide as long as you are able to download fil
 
 :::
 
-The location of the SD card slot and the type of SD card that is accepted depends on the model of your 3DS. More information can be found on [Nintendo's official support page](https://en-americas-support.nintendo.com/app/answers/detail/a_id/271/~/how-to-insert-an-sd-card-or-microsd-card).
+L'emplacement du port carte SD et le type de carte SD accepté dépendent du modèle de votre 3DS. Plus d'informations peuvent être trouvées sur la [page officielle de l'assistance de Nintendo](https://fr-americas-support.nintendo.com/app/answers/detail/a_id/271/~/how-to-insert-an-sd-card-or-microsd-card).
 
-The 3DS can read SD cards of any capacity (even those larger than 32GB), but the card must be formatted as FAT32 (**not** exFAT or NTFS). You can use one of the following tools to format your SD card, depending on your operating system: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)). SD cards larger than **128GB** are not recommended due to known issues with custom themes and GBA/DS graphics.
+La 3DS peut lire des cartes SD de n'importe quelle capacité (même celles supérieures à 32 Go), mais la carte doit être formatée en FAT32 (**pas** exFAT ou NTFS). Vous pouvez utiliser l'un des outils suivants pour formater votre carte SD, selon votre système d'exploitation : [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)). Les cartes SD de plus de **128 Go** ne sont pas recommandées en raison de problèmes connus avec des thèmes personnalisés et des graphiques GBA/DS.
 
 ::: warning
 
-To follow this guide, you'll need an SD card with a capacity of at least **2GB**.
+Pour suivre ce guide, vous aurez besoin d'une carte SD d'une capacité d'au moins **2 Go**.
 
 :::
 
 ::: info
 
-If you want, you can check your SD card for errors before following this guide using [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), or [F3XSwift (Mac)](f3xswift-\(mac\))
+Si vous le souhaitez, vous pouvez vérifier si votre carte SD contient des erreurs avant de suivre ce guide en utilisant [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), ou [F3XSwift (Mac)](f3xswift-\(mac\))
 
 :::
 
@@ -64,25 +64,25 @@ If you want, you can check your SD card for errors before following this guide u
 
 :::: warning
 
-:::details Potential risks (Disclaimer)
+:::details Risques potentiels (Décharge de responsabilité)
 
-By modding your console, you subject it to the remote (but non-zero) possibility of the console being bricked (rendered non-functional). _**Incorrect file placement will NOT brick your console**_, but purposely skipping instructions might.
+En hackant votre console, vous la soumettez à un risque (très faible, mais pas inexistant) de brick (console inutilisable). _**Un placement de fichier incorrect ne brickera PAS votre console**_, mais délibérément ignorer des instructions le peut.
 
-In short: Modding your console is safe, but it's _**your responsibility**_ if something goes wrong.
+En bref, le hack de votre console est sûr, mais _**vous seul êtes responsable**_ en cas de problème.
 
 :::
 
 ::::
 
-## Important terminology
+## Terminologie importante
 
 ::: warning
 
-Following this guide alone should not result in data loss, but SD card corruption is always a possibility. You should make a backup of your SD card contents (especially the `Nintendo 3DS` folder) if you have important data.
+Suivre ce guide à lui seul ne devrait pas entraîner de perte de données, mais la corruption de la carte SD est toujours une possibilité. Vous devriez faire une sauvegarde de votre carte SD (en particulier le dossier `Nintendo 3DS`) si vous avez des données importantes.
 
 :::
 
-:::: details What does "root of SD" or "/luma/" mean?
+:::: details Que signifie "racine de la carte SD" ou "/luma/" ?
 
 ::: info
 
@@ -90,9 +90,9 @@ Following this guide alone should not result in data loss, but SD card corruptio
 
 :::
 
-When copying files to the SD card, it is important to copy them to the right location - otherwise, the console will not detect the file and the exploit or software you are trying to use will not work. A term you will see frequently on this guide is **root of the SD card**, which means you are not inside any folder on your SD card. The directory that appears when you first open your SD card on your computer is called the 'root'.
+Quand vous copiez des fichiers sur la carte SD, il est important de les copier au bon endroit - sinon, la console ne détectera pas le fichier et l'exploit ou le logiciel que vous essayez d'utiliser ne fonctionnera pas. Un terme que vous verrez fréquemment sur ce guide est **racine de la carte SD**, ce qui signifie que vous n'êtes à l'intérieur d'aucun dossier sur votre carte SD. Le répertoire qui apparaît lorsque vous ouvrez votre carte SD pour la première fois sur votre ordinateur est appelé la « racine ».
 
-You may also see folder names indicated like this: `/folder/`. The slashes are used to indicate directories and are not part of the name of the folder. For example, `/folder1/folder2/` would refer to `folder2` inside of `folder1`:
+Vous pouvez également voir les noms de dossiers indiqués comme ceci : `/dossier/`. Les slashs sont utilisés pour indiquer des répertoires et ne font pas partie du nom du dossier. Par exemple, `/dossier1/dossier2/` ferait référence au `dossier2` à l'intérieur du `dossier1` :
 
 ::: info
 
@@ -100,7 +100,7 @@ You may also see folder names indicated like this: `/folder/`. The slashes are u
 
 :::
 
-**Angle brackets** (\< and \>) are also occasionally used to refer to system-specific identifiers. For example, if the guide says `<ID0>`, it is referring to the system-specific identifier inside of the `Nintendo 3DS` folder, rather than a folder literally named "ID0":
+Les signes **"plus grand que" et "plus petit que"** (\< et \>) sont également parfois utilisés pour faire référence à des identifiants spécifiques au système. Par exemple, si le guide dit `<ID0>`, il fait référence à l'identifiant spécifique à la console dans le dossier `Nintendo 3DS`, plutôt qu'à un dossier littéralement nommé "ID0" :
 
 ::: info
 
@@ -110,7 +110,7 @@ You may also see folder names indicated like this: `/folder/`. The slashes are u
 
 ::::
 
-:::: details How do I download files from GitHub?
+:::: details Comment télécharger des fichiers depuis GitHub ?
 
 ::: info
 
@@ -118,11 +118,11 @@ You may also see folder names indicated like this: `/folder/`. The slashes are u
 
 :::
 
-In this guide, you will copy files that are downloaded on your computer/phone to your console's SD card. Many of these files come from GitHub, which is a website used by developers to publish their open-source releases. When downloading files from GitHub, you should download the file that _isn't_ source code.
+Dans ce guide, vous copierez les fichiers qui sont téléchargés sur votre ordinateur ou votre téléphone, sur la carte SD de votre console. Beaucoup de ces fichiers proviennent de GitHub, qui est un site utilisé par les développeurs pour publier leurs logiciels open-source. Lorsque vous téléchargez des fichiers depuis GitHub, vous devriez télécharger le fichier qui _n'est pas_ le code source.
 
 ::::
 
-:::: details How do I extract/open a ZIP file?
+:::: details Comment puis-je extraire/ouvrir un fichier ZIP ?
 
 ::: info
 
@@ -130,15 +130,15 @@ In this guide, you will copy files that are downloaded on your computer/phone to
 
 :::
 
-Some of the files that you will be asked to download come in the `.zip` file format, which is used to package multiple files into one file.
+Certains des fichiers que l'on vous demandera de télécharger arrivent dans le format `.zip`, qui est utilisé pour empaqueter plusieurs fichiers en un.
 
-When you are told to "copy (file) from (file).zip", that means that you need to open (or "extract") the ZIP file. Inside the ZIP file will be the file you're looking for, after which you can copy it to the specified location on your SD card.
+Quand on vous demande de "copier un (fichier) à partir de (fichier).zip", cela signifie que vous devez ouvrir (ou "extraire") le fichier ZIP. À l'intérieur du fichier ZIP se trouve le fichier que vous cherchez, après quoi vous pouvez le copier à l'emplacement spécifié sur votre carte SD.
 
-On most operating systems, you can extract files by double-clicking the file. If this doesn't work, you can install a reputable third-party extraction tool like [7-zip](https://7-zip.org/) instead.
+Sur la plupart des systèmes d'exploitation, vous pouvez extraire des fichiers en double-cliquant sur le fichier. Si cela ne fonctionne pas, vous pouvez installer un outil d'extraction tiers réputé comme [7-zip](https://7-zip.org/) à la place.
 
 ::::
 
-:::: details What are file extensions?
+:::: details Que sont les extensions de fichier ?
 
 ::: info
 
@@ -146,20 +146,20 @@ On most operating systems, you can extract files by double-clicking the file. If
 
 :::
 
-If your computer is running Windows, file extensions may be hidden by default, which may make it harder to find the files you're looking for. To enable file extensions, follow [these instructions](file-extensions-\(windows\)).
+Si votre ordinateur exécute Windows, les extensions de fichiers peuvent être masquées par défaut, ce qui peut rendre plus difficile la recherche des fichiers que vous cherchez. Pour activer l'affichage des extensions de fichiers, suivez [ces instructions](file-extensions-\(windows\)).
 
 ::::
 
-## Getting help
+## Obtenir de l'aide
 
-If you experience an issue while following this guide, there are many ways that you can get help!
+Si vous rencontrez un problème en suivant ce guide, vous pouvez obtenir de l'aide de plusieurs façons !
 
-- If you have any questions that haven't been answered on this page, their answers might be in the [Pre-Installation FAQ](faq#pre-installation-faq).
-- If you experience an issue while following this guide, you can check the [Troubleshooting](troubleshooting) page for a solution.
-- If the resources we've provided here aren't helping, you can get one-on-one support over at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+- Si vous avez des questions qui n'ont pas reçu de réponse sur cette page, leurs réponses peuvent être dans la [FAQ Pré-installation](faq#pre-installation-faq).
+- Si vous rencontrez un problème en suivant ce guide, vous pouvez consulter la page de [Dépannage](troubleshooting) pour trouver une solution.
+- Si les ressources que nous vous avons fournies ici ne vous ont pas aidées, vous pouvez obtenir une assistance individuelle sur [Nintendo Homebrew sur Discord](https://discord.gg/MWxPgEp).
 
 ::: tip
 
-Continue to [Get Started](get-started)
+Continuer vers [Pour commencer](get-started)
 
 :::

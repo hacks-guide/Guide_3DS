@@ -1,98 +1,98 @@
-# Formatting SD (Windows)
+# Formatage de la carte SD (Windows)
 
-## Required Reading
+## Lecture Requise
 
-This is an add-on section for formatting an SD card to work with the 3DS.
+Ceci est une section supplémentaire pour formater la carte SD afin qu'elle fonctionne sur 3DS.
 
-If the 3DS already recognizes the SD card, this guide is not required.
+Si votre carte SD est déjà reconnue par la 3DS, cette section est facultative.
 
-This page is for Windows users only. If you are not on Windows, check out the [Formatting SD (Linux)](formatting-sd-\(linux\)) or [Formatting SD (Mac)](formatting-sd-\(mac\)) pages.
+Cette section est dédiée aux utilisateurs de Windows uniquement. Si vous n'êtes pas sur Windows, consultez les pages [Formater la carte SD (Linux)](formatting-sd-\(linux\)) ou [Formater la carte SD (Mac)](formatting-sd-\(mac\)).
 
-## What You Need
+## Ce dont vous avez besoin
 
-- the latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
-- **For SD cards 64GB or larger only:** The latest version of [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
+- La dernière version de [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/).
+- **Pour les cartes SD de 64 Go ou plus :** la dernière version de [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
 
 ## Instructions
 
-### Section I - SD Card Formatter
+### Section I - SD Formatter
 
-1. Insert your SD card into your computer
+1. Insérez votre carte SD dans votre ordinateur
 
-2. If the SD card has any files and folders on it, copy everything to a folder on your computer
+2. Si la carte SD contient des fichiers ou des dossiers, copiez tout le contenu dans un dossier de votre ordinateur
 
-3. Run `SD Card Formatter Setup` (the `.exe` file) in the downloaded `.zip` file with Administrator privileges, then install the program
+3. Lancez `SD Card Formatter Setup` (le fichier `.exe`), qui se trouve dans le fichier `.zip` téléchargé, en tant qu'administrateur, puis installez le programme
 
-4. Run `SD Card Formatter` from the Start Menu
+4. Lancez `SD Card Formatter` depuis le Menu Démarrer
 
-5. Select your SD card's drive letter for "Select card"
+5. Sélectionnez la lettre de lecteur correspondant à votre carte SD dans le champ "Select card"
 
    ::: danger
 
-   Make sure you choose the correct drive letter, otherwise you might accidentally erase the wrong drive!
+   Assurez-vous de choisir la bonne lettre de lecteur, sinon vous risqueriez d'effacer accidentellement le mauvais lecteur !
 
    :::
 
-6. Enter anything for "Volume label"
+6. Mettez ce que vous voulez dans "Volume label"
 
-7. Ensure that "Quick Format" is selected
+7. Assurez-vous que l'option "Quick Format" est cochée
 
-8. Click "Format"
+8. Cliquez sur "Format"
 
-9. Click "OK"
+9. Cliquez sur "OK"
 
-10. Wait for the format to finish
+10. Attendez que le formatage se termine
 
-11. Click "OK"
+11. Cliquez sur "OK"
 
-12. Close SD Card Formatter
+12. Fermez SD Card Formatter
 
-13. If the SD card is 32GB or smaller and had any files and folders on it before the format, copy everything back from your computer
+13. Si la carte SD est de 32 Go ou moins et qu'elle contenait des fichiers et des dossiers avant le formatage, recopiez les dessus depuis votre ordinateur
 
 ::: info
 
-You're done formatting your SD card if it's **32GB or smaller.**
+Vous avez fini de formater votre carte SD si elle est de **32 Go ou moins.**
 
 :::
 
-### Section II - guiformat (ONLY for 64GB or larger)
+### Section II - guiformat (UNIQUEMENT pour 64 Go ou plus)
 
-1. Run `guiformat.exe`
+1. Lancez `guiformat.exe`
 
-2. Select your SD card's drive letter for "Drive"
+2. Sélectionnez la lettre de lecteur correspondant à votre carte SD dans le champ "Drive"
 
    ::: danger
 
-   Make sure you choose the correct drive letter, otherwise you might accidentally erase the wrong drive!
+   Assurez-vous de choisir la bonne lettre de lecteur, sinon vous risqueriez d'effacer accidentellement le mauvais lecteur !
 
    :::
 
-3. Select a size for "Allocation unit size"
-   - If the SD card is 64GB, choose 32768
-   - If the SD card is larger than 64GB, choose 65536
+3. Sélectionnez une taille pour la taille d'unité d'allocation ("Allocation unit size")
+   - Si votre carte SD est de 64 Go, choisissez 32768
+   - Si votre carte SD est d'une taille supérieure à 64 Go, choisissez 65536
 
-4. Enter anything for "Volume label"
+4. Mettez ce que vous voulez dans "Volume label"
 
-5. Ensure that "Quick Format" is selected
+5. Assurez-vous que l'option "Quick Format" est cochée
 
-6. Click "Start"
+6. Cliquez sur "Start"
 
-7. Click "OK"
+7. Cliquez sur "OK"
 
-8. Wait for the format to finish
+8. Attendez que le formatage se termine
 
-9. Click "Close"
+9. Cliquez sur "Close"
 
-10. If the SD card had any files and folders on it before the format, copy everything back from your computer
+10. Si la carte SD contenait des fichiers et des dossiers avant le formatage, recopiez les dessus depuis votre ordinateur
 
 ## Dépannage
 
-- guiformat shows the error "Failed to open device: GetLastError()=32"
-  - Close everything that may be using the SD card, such as any File Explorer windows.
-  - If this issue persists, try reformatting the card to NTFS in File Explorer, close that window when it's done, and re-attempt the guiformat process.
+- guiformat affiche l'erreur "Failed to open device: GetLastError()=32"
+  - Fermez tout ce qui peut être utilisé par la carte SD, par exemple, n'importe quelle fenêtre ouverte de l'Explorateur de fichiers.
+  - Si le problème persiste, essayez de formater la carte SD en NTFS dans l'Explorateur de fichiers, fermez cette fenêtre une fois l'opération effectuée puis réessayez le formatage avec guiformat.
 
-- guiformat shows the error "GetLastError()=1117"
-  - Your SD card write-protection switch may be [enabled](/images/sdlock.png). The lock must be flipped upwards to allow writing to the SD card (including formatting).
+- guiformat affiche l'erreur "GetLastError()=1117"
+  - L'interrupteur de protection contre l'écriture de votre carte SD est peut-être [activé](/images/sdlock.png). L'interrupteur doit être mis en position haute pour autoriser l'écriture sur la carte SD (dont le formatage).
 
-- SD card remains undetected by console or continues to display the wrong capacity after formatting
-  - Your SD card may be partitioned or have unallocated space. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Windows) to reformat your SD card.
+- La carte SD reste non détectée par la console ou affiche toujours la mauvaise capacité après le formatage
+  - Votre carte SD est peut-être partitionnée ou possède de l'espace non alloué. Suivez les instructions [ici](https://wiki.hacks.guide/wiki/SD_Clean/Windows) pour reformater votre carte SD.

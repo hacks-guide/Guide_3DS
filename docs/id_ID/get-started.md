@@ -1,6 +1,6 @@
 ---
-noneSelected: System model is required.
-invalidVersion: This doesn't seem to be a valid system version.
+noneSelected: Perlu tahu model konsol.
+invalidVersion: Versi sistem ini sepertinya tidak absah.
 head:
   - - script
     - src: /assets/js/common.js
@@ -8,41 +8,41 @@ head:
     - src: /assets/js/selecting.js
 ---
 
-# Get Started
+# Memulai
 
-Before starting this guide, we will see if custom firmware is already installed and check the current system version of your console.
+Sebelum memulai panduan ini, kita periksa dulu berapa versi sistem konsol dan apakah sudah ada CFW.
 
-### Section I - CFW Check
+### Bagian I - Periksa CFW
 
-1. Power off your console
-2. Hold the (Select) button
-3. Power on your console while still holding the (Select) button
-4. If you do not see a custom menu (your console just boots to the HOME Menu), you may proceed to the next section
+1. Matikan daya konsol
+2. Tahan tombol (Select)
+3. Nyalakan daya konsol selagi tetap menahan tombol (Select)
+4. Jika tidak muncul menu kustom (konsol hanya menyala ke HOME Menu), boleh lanjut ke bagian berikutnya
 
 ::: warning
 
-If you see the Luma3DS configuration screen or any other custom menu (e.g. GodMode9, Decrypt9WIP), STOP - you already have custom firmware! Continue from [here](checking-for-cfw#what-to-do-next).
+Jika muncul konfigurasi Luma3DS atau menu kustom lainnya (misal: GodMode9, Decrypt9WIP), BERHENTI - konsol sudah _custom firmware_! Lanjut saja dari [sini](checking-for-cfw#what-to-do-next).
 
 :::
 
-### Section II - System Version Check
+### Bagian II - Periksa Versi Sistem
 
-1. Launch System Settings on your console
-2. Your system version will be displayed on the bottom right of the top screen (e.g. "Ver. 11.17.0-50U")
+1. Buka System Settings di konsol
+2. Versi konsol akan ditampilkan di kanan bawah layar atas (misal: "Ver. 11.17.0-50U")
 
-### Section III - Select a Method
+### Bagian III - Pilih Metode
 
-To find the correct method for your console, please select the model of your console and the system version you found in Section II.
+Untuk mencari metode sesuai konsol, pilih model konsol dan versi sistem dari Bagian II tadi.
 
 <!--@include: @/_internal/consoleVersionSelect.html -->
 
 ---
 
-#### Alternate Methods
+#### Metode yang Lain
 
-If possible, you should follow the method given by the prompt above.
+Jika bisa, ikuti saja metode yang ditunjukkan di atas.
 
-Otherwise, methods that work on all versions are available, but require additional hardware:
+Jika tidak, ada metode lain yang bisa di semua versi, tapi perlu peranti keras tambahan:
 
-1. [ntrboot](ntrboot) - requires compatible DS flashcart
-2. [Installing boot9strap (Hardmod)](installing-boot9strap-\(hardmod\)) - requires soldering
+1. [ntrboot](ntrboot) - perlu _flashcart_ DS yang kompatibel
+2. [Memasang boot9strap (Oprek Fisik)](installing-boot9strap-\(hardmod\)) - harus menyolder

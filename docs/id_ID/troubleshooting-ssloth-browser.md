@@ -54,7 +54,7 @@ The SSLoth proxy was incorrectly configured. Re-do the SSLoth section on the pag
 
 Follow these steps in order:
 
-1. Launch System Settings on your console
+1. Buka System Settings di konsol
 2. Navigate to `Internet Settings` -> `Connection Settings`
 3. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
 4. Set "Proxy Settings" to "No"

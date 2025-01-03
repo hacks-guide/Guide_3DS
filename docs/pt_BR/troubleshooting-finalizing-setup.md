@@ -1,14 +1,14 @@
-# Troubleshooting (Finalizing Setup)
+# Troubleshooting (Finalizando a Instalação)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Finalizing Setup" page. Se você não consegue resolver seu problema com o conselho nesta página, por favor entre no [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp) e descreva o seu problema, incluindo o que você já tentou.
+Esta página oferece recursos de solução de problemas para problemas com a página "Finalizando a Instalação". Se você não consegue resolver seu problema com o conselho nesta página, por favor entre no [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp) e descreva o seu problema, incluindo o que você já tentou.
 
-## Issues with Finalizing Setup
+## Problemas com a Finalização da Instalação
 
-:::details Unable to update console
+:::details Não foi possível atualizar o console
 
 As etapas abaixo podem ser tentadas em qualquer ordem, mas são listadas de maneira mais fácil para maneira mais difícil de realizar.
 
-1. If you are using Pretendo, switch back to Nintendo with Nimbus and try again
+1. Se você estiver usando Pretendo, volte para a Nintendo com o Nimbus e tente novamente
 2. Defina suas configurações de DNS para "Automático"
 3. Aproxime-se do seu roteador Wi-Fi
 4. Atualize a partir do Safe Mode desligando o console, segurando (Gatilho Esquerdo) + (Gatilho Direito) + (Botão direcional para cima) + (A) na inicialização, seguindo as instruções na tela
@@ -23,7 +23,7 @@ As etapas abaixo podem ser tentadas em qualquer ordem, mas são listadas de mane
 
 :::details Error #22: finalize.romfs is invalid
 
-O arquivo `finalize.romfs` está corrompido ou é ilegível. [Re-download it](https://github.com/hacks-guide/finalize/releases/latest/download/finalize.romfs) and copy it to the root of the SD card, replacing any existing copy, then try again.
+O arquivo `finalize.romfs` está corrompido ou é ilegível. [Baixe novamente](https://github.com/hacks-guide/finalize/releases/latest/download/finalize.romfs) e copie-o para a raíz do cartão SD, substituindo qualquer cópia existente, depois tente novamente.
 
 :::
 
@@ -45,7 +45,7 @@ Você disse 'No' para a mensagem "Make essential files backup?" no GodMode9. Des
 
 :::
 
-:::details Error #04: No space
+:::details Erro #04: No space
 
 Você precisa de pelo menos 1.3GB de espaço livre para executar o backup da NAND, que é parte do script. Se você não tem espaço suficiente, siga estes passos:
 
@@ -59,9 +59,9 @@ Você precisa de pelo menos 1.3GB de espaço livre para executar o backup da NAN
 8. Selecione "Scripts..."
 9. Selecione "finalize"
 10. Aperte (A) para criar um backup da NAND
-    - This may take around fifteen minutes
+    - Isso pode demorar cerca de quinze minutos
 11. Aperte (A) novamente
-    - The console should automatically power off
+    - O console deve desligar automaticamente
 12. Insira o cartão SD no seu computador
 13. Copie os arquivos em `gm9/backups/` do seu SD para um local seguro no seu computador
 14. Apague os arquivos `<date>_<serialnumber>_sysnand_##.bin` e `<date>_<serialnumber>_sysnand_##.bin.sha` do cartão SD
@@ -76,7 +76,7 @@ Agora que você tem seu backup da NAND em um lugar seguro:
 4. Selecione "Scripts..."
 5. Selecione "finalize"
 6. Continue o script normalmente
-   - The NAND backup will be automatically skipped
+   - O backup da NAND será ignorado automaticamente
 
 :::
 
@@ -86,7 +86,7 @@ Aperte (A) para importar um title database, desbloqueie SysNAND apertando os bot
 
 :::
 
-:::details Error #06 or "Error: Could not open directory" when attempting a NAND backup
+:::details Error #06 ou "Error: Could not open directory" ao tentar fazer um backup da NAND
 
 Certifique-se de que você tem pelo menos 1.3GB disponíveis no seu cartão SD. Se você não tem espaço suficiente, siga estes passos:
 
@@ -121,7 +121,7 @@ O script detectou que a pasta Nintendo 3DS está faltando e que você já fez um
 3. Copie os arquivos em `/gm9/backups/` do seu SD para um local seguro no seu computador
 4. Apague `/gm9/backups/` do seu cartão SD
 5. Se você moveu sua pasta Nintendo 3DS para fora do seu cartão SD para chegar a este ponto, copie-a de volta para o seu cartão SD
-   - If you do not have a Nintendo 3DS folder, boot into the HOME Menu at least once with the SD card inserted to automatically generate it
+   - Se você não possuir uma pasta Nintendo 3DS, abra o Menu HOME pelo menos uma vez com o cartão SD inserido para criá-la automaticamente
 6. Aperte e segure (Start), e enquanto segura (Start), ligue seu console. Isso vai inicializar o GodMode9
 7. Aperte (Home) para abrir o menu de ações
 8. Selecione "Scripts..."
@@ -142,7 +142,7 @@ Você não removeu o MSET9 na página anterior. O script tentará remover o MSET
 
 ::: tip
 
-Go back to [Finalizing Setup](finalizing-setup)
+Voltar para [Finalizando a instalação](finalizing-setup)
 
 :::
 
