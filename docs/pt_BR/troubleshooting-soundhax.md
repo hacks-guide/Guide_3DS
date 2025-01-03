@@ -10,9 +10,9 @@ head:
 
 # Troubleshooting (Soundhax)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (Soundhax)" page, which is used on system versions between 1.0.0 and 11.3.0. Se você não consegue resolver seu problema com o conselho nesta página, por favor entre no [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp) e descreva o seu problema, incluindo o que você já tentou.
+Esta página oferece recursos de solução de problemas para problemas com a página "Instalando boot9strap (Soundhax)", que é usada nas versões do sistema entre 1.0.0 e 11.3.0. Se você não consegue resolver seu problema com o conselho nesta página, por favor entre no [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp) e descreva o seu problema, incluindo o que você já tentou.
 
-## Issues with Soundhax
+## Problemas com o Soundhax
 
 :::details Tela vermelha/roxa/rosa e branca após executar o Soundhax
 
@@ -26,19 +26,19 @@ Se seu console não está nesses firmware, isso provavelmente indica que você j
 
 Há um problema com seu arquivo `otherapp.bin` (ele está faltando, colocado no lugar errado ou corrompido). Baixe a última versão do [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) e coloque-a na raiz do seu cartão SD.
 
-If the above doesn't fix your issue, and you are using an Old 3DS / Old 3DS XL / Old 2DS, you may be encountering an issue involving cartridge updates. Take another look at the system version. If the last number is 4 or lower (e.g. 11.3.0-**4**U), replace the Soundhax file on the root of your SD card with the one from [here](http://soundhax.686178.xyz/frankenfirm.html?crash).
+Se as instruções acima não corrigirem o seu problema, e você está usando um Old 3DS / Old 3DS XL / Old 2DS, você pode estar encontrando um problema envolvendo atualizações de cartucho. Dê uma outra olhada na versão do sistema. Se o último número é 4 ou inferior (por exemplo, 11.3.0-**4**U), substitua o arquivo Soundhax na raiz do seu cartão SD por outro encontrado [aqui](http://soundhax.686178.xyz/francenfirm.html?crash).
 
-If none of these fix your issue, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+Se nenhuma delas corrigirem seu problema, junte-se ao [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) para assistência.
 
 :::
 
 :::details "Não é possível tocar"
 
-You have the wrong Soundhax file for your console, region and version. Double-check that you entered all the info correctly into the [Soundhax website](https://soundhax.com/), redownload your Soundhax file, and replace it with the one on the root of your SD card.
+Você tem o arquivo Soundhax errado para seu console, região e versão. Verifique se você inseriu todas as informações corretamente no [site do Soundhax](https://soundhax.com/), baixe novamente o arquivo Soundhax e substitua-o pelo arquivo que está na raiz do seu cartão SD.
 
-If the above doesn't fix your issue, and you are using an Old 3DS / Old 3DS XL / Old 2DS, you may be encountering an issue involving cartridge updates. Take another look at the system version. If the last number is 3 or lower (e.g. 11.3.0-**0**U), replace the Soundhax file on the root of your SD card with the one from [here](http://soundhax.686178.xyz/frankenfirm.html?unplayable).
+Se as instruções acima não corrigirem o seu problema, e você está usando um Old 3DS / Old 3DS XL / Old 2DS, você pode estar encontrando um problema envolvendo atualizações de cartucho. Dê uma outra olhada na versão do sistema. Se o último número é 3 ou inferior (por exemplo, 11.3.0-**0**U), substitua o arquivo Soundhax na raiz do seu cartão SD por outro encontrado [aqui](http://soundhax.686178.xyz/francenfirm.html?crash).
 
-If none of these fix your issue, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+Se nenhuma delas corrigirem seu problema, junte-se ao [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) para assistência.
 
 :::
 
@@ -48,7 +48,7 @@ Se isso falhar, tente usar outro cartão SD.
 
 :::
 
-## Issues with SafeB9SInstaller
+## Problemas com o SafeB9SInstaller
 
 <!--@include: ./_include/troubleshooting-sb9si-bin.md -->
 
@@ -60,7 +60,7 @@ Se isso falhar, tente usar outro cartão SD.
 
 ::: tip
 
-Go back to [Installing boot9strap (Soundhax)](installing-boot9strap-\(soundhax\))
+Voltar para [Instalando boot9strap (Soundhax)](installing-boot9strap-\(soundhax\))
 
 :::
 
