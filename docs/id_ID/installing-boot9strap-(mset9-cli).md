@@ -66,23 +66,23 @@ Di bagian ini akan menyiapkan eksploit MSET9 dengan membuat profil HOME Menu bar
 3. Setelah membaca sangkalan yang ada, ketik `1` dan tekan Enter untuk iya
    - Jika muncul galat, lihat laman [sidik gangguan](troubleshooting-mset9), lalu coba lagi
 4. Jika muncul pesan "Created hacked ID1.", tekan Enter untuk menutup naskah MSET9
-   - Konsol 3DS akan seperti tidak ada aplikasi terpasang / data di HOME Menu. **This is expected.** Your data will come back at a later step
+   - Konsol 3DS akan seperti tidak ada aplikasi terpasang / data di HOME Menu. **Memang seperti ini.** Data akan kembali di langkah berikutnya
 5. Sisip kembali kartu SD ke konsol
-6. Power on your console
-7. Open Mii Maker
-8. Wait for your console to reach the [Welcome to Mii Maker](/images/screenshots/mset9/mii-welcome.png) screen, then exit Mii Maker and return to the HOME Menu
-   - You may see [this screen](/images/screenshots/mset9/mii-extdata.png), which indicates the necessary data has been created
-   - If you just reach the [normal](/images/screenshots/mset9/mii-existing.png) Mii Maker screen, then the data already exists. Exit Mii Maker and return to the HOME Menu
-9. Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
-   - This will not wipe any of your data
-10. Power off your console by pressing the power button then tapping Power Off on the lower screen
+6. Nyalakan daya konsol
+7. Buka Mii Maker
+8. Tunggu konsol sampai layar [Welcome to Mii Maker](/images/screenshots/mset9/mii-welcome.png), lalu keluar dari Mii Maker dan balik ke HOME Menu
+   - Mungkin muncul [layar ini](/images/screenshots/mset9/mii-extdata.png), ini menandakan data yang perlu sudah dibuat
+   - Jika hanya sampai layar Mii Maker [biasa](/images/screenshots/mset9/mii-existing.png), berarti sudah ada data. Keluar dari Mii Maker dan balik ke HOME Menu
+9. Buka System Settings dan navigasi ke `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([gambar](/images/screenshots/database-reset.jpg))
+   - Ini tidak akan menghapus data
+10. Matikan daya konsol dengan menekan tombol daya lalu sentuh Power Off di layar bawah
 11. Sisipkan kartu SD ke komputer Anda
 
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Ketik nomornya sesuai dengan model dan versi konsol, lalu tekan Enter
 
-   - The window should change to this and display `Ready`:
+   - Jendela perintah akan seperti ini dan muncul `Ready`:
 
    ::: info
 
@@ -90,16 +90,16 @@ Di bagian ini akan menyiapkan eksploit MSET9 dengan membuat profil HOME Menu bar
 
    :::
 
-   - If the window says [Not ready - check MSET9 status for more details](/images/screenshots/mset9/mset9-not-ready.png):
-     - Type `2`, then press Enter to check the MSET9 status and follow the directions indicated
-     - Once you have resolved the issue, return to Section I Step 14
-     - For more information, check the [troubleshooting](troubleshooting-mset9) page
-2. Type `0`, then press Enter to close the script
+   - Jika muncul [Not ready - check MSET9 status for more details](/images/screenshots/mset9/mset9-not-ready.png):
+     - Ketik `2`, lalu tekan Enter untuk periksa status MSET9 dan ikuti arahan yang ditentukan
+     - Sesudah isunya selesai, kembali ke Bagian I Langkah 14
+     - Untuk informasi lanjut, lihat laman [sidik gangguan](troubleshooting-mset9)
+2. Ketik `0`, lalu tekan Enter untuk menutup naskah
 3. Sisip kembali kartu SD ke konsol
 
-### Section II - MSET9
+### Bagian II - MSET9
 
-In this section, you will trigger MSET9 to launch SafeB9SInstaller (the custom firmware installer).
+Di bagian ini akan mengaktifkan MSET9 untuk membuka SafeB9SInstaller (pemasang CFW).
 
 ::: danger
 
