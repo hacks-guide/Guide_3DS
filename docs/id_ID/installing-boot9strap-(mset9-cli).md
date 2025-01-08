@@ -10,30 +10,30 @@
 
 ::: warning
 
-Laman ini perlu komputer bersistem Windows, Linux, atau macOS. Atau jika punya ponsel/tablet Android atau Chromebook, ikuti saja [Memasang boot9strap (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\)). If you do not have access to any of these devices, you will need to use an [alternate exploit](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits).
+Laman ini perlu komputer bersistem Windows, Linux, atau macOS. Atau jika punya ponsel/tablet Android atau Chromebook, ikuti saja [Memasang boot9strap (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\)). Jika tidak punya perangkat tersebut, berarti perlu [eksploit yang lain](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits) (gunakan penerjemah).
 
 :::
 
 ## Apa yang Perlu
 
-- The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest)
-- Any 3.x version of [Python](https://www.python.org/downloads/) **installed on your computer**
-  - If you are on Linux or macOS, you may already have Python 3. Check by opening a Terminal window and entering `python3 -V`. If this returns a version number, it will work for this guide.
+- Versi terkini dari [MSET9](https://github.com/hacks-guide/MSET9/releases/latest)
+- Versi 3.x berapa pun dari [Python](https://www.python.org/downloads/) **terpasang di komputer**
+  - Jika menggunakan Linux atau macOS, mungkin sudah ada Python 3. Periksa dengan membuka Terminal dan ketik `python3 -V`. Jika muncul nomor versi, berarti bisa untuk panduan ini.
 
 ## Instruksi
 
 ::: info
 
-On this page, you will use the MSET9 script, which is used to trigger MSET9. While the script is in progress, user data will temporarily disappear but will return upon the completion of this page. If you get an error when running the script, the solution to that error can most likely be found on the [troubleshooting](troubleshooting-mset9) page.
+Di laman ini akan menggunakan naskah MSET9 untuk mengaktifkan MSET9. Saat naskah berjalan, data pengguna akan hilang sementara tapi akan kembali sesudah dari laman ini. Jika muncul galat saat menjalankan naskah, solusi untuk galat tersebut mungkin ada di laman [sidik gangguan](troubleshooting-mset9).
 
 :::
 
 ### Bagian I - Persiapan
 
-In this section, you will prepare the MSET9 exploit by **temporarily** creating a new HOME Menu profile with no user data, and then setting up that profile with only the minimum data required for MSET9 to trigger. Your existing user data will disappear, but will come back when you are finished with this page.
+Di bagian ini akan menyiapkan eksploit MSET9 dengan membuat profil HOME Menu baru **sementara** tanpa data, lalu sedikit mengatur data profil itu untuk mengaktifkan MSET9. Data pengguna yang ada akan hilang, tapi akan kembali setelah selesai dengan laman ini.
 
 1. Sisipkan kartu SD ke komputer Anda
-2. Copy everything from the MSET9 `.zip` to the root of your SD card, overwriting any existing files
+2. Salin semuanya dari berkas `.zip` MSET9 ke akar kartu SD, timpa berkas yang ada
 
    ::: info
 
@@ -51,9 +51,9 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 :::
 ```
 
-1. Type the number corresponding to your console model and version, then press Enter
+1. Ketik nomornya sesuai dengan model dan versi konsol, lalu tekan Enter
 
-   - The window should change to this:
+   - Jendela perintah akan seperti ini:
 
    ::: info
 
@@ -61,12 +61,12 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 
    :::
 
-   - Ensure that the correct console model and version is displayed
-2. Type `1`, then press Enter to begin the process of creating the MSET9 ID1
-3. After reviewing the disclaimer, type `1` again and press Enter to accept it
-   - If you get an error, check the [troubleshooting](troubleshooting-mset9), then try again
-4. If you see the message "Created hacked ID1.", press Enter to close the MSET9 script
-   - Your 3DS will appear to have no data / no user-installed apps on HOME Menu. **This is expected.** Your data will come back at a later step
+   - Pastikan versi dan model yang tampil itu sesuai konsol
+2. Ketik `1`, lalu tekan Enter untuk memulai proses membuat ID1 MSET9
+3. Setelah membaca sangkalan yang ada, ketik `1` dan tekan Enter untuk iya
+   - Jika muncul galat, lihat laman [sidik gangguan](troubleshooting-mset9), lalu coba lagi
+4. Jika muncul pesan "Created hacked ID1.", tekan Enter untuk menutup naskah MSET9
+   - Konsol 3DS akan seperti tidak ada aplikasi terpasang / data di HOME Menu. **This is expected.** Your data will come back at a later step
 5. Sisip kembali kartu SD ke konsol
 6. Power on your console
 7. Open Mii Maker
@@ -80,7 +80,7 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 
 <!--@include: ./_include/mset9-chorus.md -->
 
-1. Type the number corresponding to your console model and version, then press Enter
+1. Ketik nomornya sesuai dengan model dan versi konsol, lalu tekan Enter
 
    - The window should change to this and display `Ready`:
 
@@ -118,7 +118,7 @@ These instructions must be followed **EXACTLY**, so double-check EVERYTHING you 
 
 <!--@include: ./_include/mset9-chorus.md -->
 
-1. Type the number corresponding to your console model and version, then press Enter
+1. Ketik nomornya sesuai dengan model dan versi konsol, lalu tekan Enter
 2. In the MSET9 window, type `3`, then press Enter to inject MSET9
    - You should see "MSET9 successfully injected!"
 3. Press Enter to close the MSET9 script
@@ -151,7 +151,7 @@ Do NOT skip this section! If you skip it, applications may crash unexpectedly an
 
 <!--@include: ./_include/mset9-chorus.md -->
 
-1. Type the number corresponding to your console model and version, then press Enter
+1. Ketik nomornya sesuai dengan model dan versi konsol, lalu tekan Enter
    - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
    - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), skip to Step 6
 2. Type `4`, then press Enter to remove the trigger file
