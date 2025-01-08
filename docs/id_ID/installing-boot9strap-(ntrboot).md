@@ -36,7 +36,7 @@ Untuk menggunakan tautan [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) 
 
 6. Sisip kembali kartu SD ke konsol
 
-7. Power on your console
+7. Nyalakan daya konsol
 
 ### Section II - ntrboot
 
@@ -67,7 +67,7 @@ In this section, you will install custom firmware onto your console.
 2. Delete `boot.firm` from the root of your SD card
 3. Salin semua berkas dari `.zip` Luma3DS ke akar kartu SD
 4. Sisip kembali kartu SD ke konsol
-5. Power on your console
+5. Nyalakan daya konsol
 
 <!--@include: ./_include/configure-luma3ds.md -->
 
