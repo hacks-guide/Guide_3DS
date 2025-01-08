@@ -45,7 +45,7 @@ In this section, you will copy the files needed to trigger both Soundhax and uni
 7. Salin `boot9strap.firm` dan `boot9strap.firm.sha` dari berkas `.zip` boot9strap ke folder `/boot9strap/` di kartu SD
 8. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
 9. Sisip kembali kartu SD ke konsol
-10. Power on your console
+10. Nyalakan daya konsol
 
 ::: info
 
