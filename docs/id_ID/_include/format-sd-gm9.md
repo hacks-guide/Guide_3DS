@@ -1,5 +1,5 @@
 1. Tekan (Home) untuk membuka menu tindakan
-2. Select "More..."
+2. Pilih "More..."
 3. Select "SD format menu"
 4. Select "No EmuNAND"
 5. Select "Auto"
