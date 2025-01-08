@@ -1,6 +1,6 @@
 # Installing boot9strap (MSET9 CLI)
 
-:::details Technical Details (optional)
+:::details Perincian Teknis (opsional)
 
 [MSET9](https://github.com/zoogie/MSET9) is an exploit for the System Settings application developed by [zoogie](https://github.com/zoogie). It exploits a flaw where the ID1 (the second 32-character folder name inside of the Nintendo 3DS folder, inside of the ID0) can be _any_ name as long as it is 32 characters. Performing a specific sequence of actions results in the console executing the instructions that are encoded into the ID1 folder name, which can be used to grant full control over the 3DS.
 
