@@ -97,46 +97,46 @@ Perlu diingat, berkas yang disuntikkan tidak bisa lebih dari ukuran Health & Saf
 2. Navigasi ke `[0:] SDCARD` -> `cias`
 3. Tekan (A) pada `.cia` pilihan untuk memilih
 4. Pilih "CIA image options..."
-5. Select "Mount image to drive"
-6. Press (A) on the `.app` file
-7. Select "NCCH image options"
-8. Select "Inject to H&S"
+5. Pilih "Mount image to drive"
+6. Tekan (A) pada berkas `.app`
+7. Pilih "NCCH image options"
+8. Pilih "Inject to H&S"
 9. Tekan (A) untuk membuka izin tulis SysNAND (lvl1), lalu tekan kombo yang diberikan
 10. Tekan (A) untuk lanjut
 11. Tekan (A) untuk menutup ulang izin tulis jika diminta
 
 ::: tip
 
-Your desired application has now been injected into Health & Safety.
+Aplikasi pilihan Anda sekarang sudah disuntik ke Health & Safety.
 
 :::
 
-## Restoring Health & Safety after injecting a .CIA app
+## Memulihkan Health & Safety setelah disuntikkan .CIA
 
 ::: info
 
-This will only work if the Health & Safety injection was performed by GodMode9 (not Decrypt9 or Hourglass9).
+Ini hanya akan berfungsi jika Health & Safety disuntik dengan GodMode9 (bukan Decrypt9 atau Hourglass9).
 
 :::
 
 1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 2. Tekan (Home) untuk membuka menu tindakan
-3. Select "More..."
-4. Select "Restore H&S"
+3. Pilih "More..."
+4. Pilih "Restore H&S"
 5. Tekan (A) untuk membuka izin tulis SysNAND (lvl1), lalu tekan kombo yang diberikan
 6. Tekan (A) untuk menutup ulang izin tulis jika diminta
 
 ::: tip
 
-Health & Safety has been reverted to normal.
+Health & Safety sudah kembali ke biasa lagi.
 
 :::
 
-## Format an SD card
+## Memformat kartu SD
 
 ::: danger
 
-**Note that this will erase the contents of your SD card!**
+**Perhatian! ini akan menghapus semua isi kartu SD Anda!!**
 
 :::
 
