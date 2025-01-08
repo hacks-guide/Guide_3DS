@@ -10,7 +10,7 @@
 
 ::: warning
 
-This page requires an Android phone/tablet or a Chromebook. If you have a computer running Windows, macOS, or Linux, follow [Installing boot9strap (MSET9 CLI)](installing-boot9strap-\(mset9-cli\)) instead. If you do not have access to any of these devices, you will need to use an [alternate exploit](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits).
+This page requires an Android phone/tablet or a Chromebook. If you have a computer running Windows, macOS, or Linux, follow [Installing boot9strap (MSET9 CLI)](installing-boot9strap-\(mset9-cli\)) instead. Jika tidak punya perangkat tersebut, berarti perlu [eksploit yang lain](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits) (gunakan penerjemah).
 
 :::
 
@@ -61,12 +61,12 @@ In this section, you will prepare the SD card data necessary for the MSET9 explo
 
 7. Tap on `Setup MSET9` to begin the process of setting up MSET9
 
-8. After reviewing the disclaimer, tap on `Confirm` to accept it
+8. Setelah membaca sangkalan yang ada, sentuh `Confirm` untuk iya
 
 9. Tap on the photo corresponding to your console model, then at the bottom, pick your current firmware version
 
 10. If you see the prompt of `Hax ID1 Created`, tap OK to continue
-    - If you get an error, check the [troubleshooting](troubleshooting-mset9), then try again
+    - Jika muncul galat, lihat laman [sidik gangguan](troubleshooting-mset9), lalu coba lagi
     - Your 3DS will appear to lose most data / no user-installed apps on HOME Menu. This is expected. Your data will come back at a later step
 
 11. Sisip kembali kartu SD ke konsol
@@ -89,7 +89,7 @@ In this section, you will prepare the SD card data necessary for the MSET9 explo
 18. The MSET9 Installer application should automatically check if you have done previous steps properly
     - It may take a few seconds for the app to detect the SD card and react
     - If it doesn't check automatically, tap `Check MSET9 status` to check manually
-    - If you get an error, check the [troubleshooting](troubleshooting-mset9), then try again
+    - Jika muncul galat, lihat laman [sidik gangguan](troubleshooting-mset9), lalu coba lagi
 
 19. If the check passed, you'll see `Inject trigger file` become [highlighted](/images/screenshots/mset9/inject-trigger-highlighted.png) and you can continue to the next step. **Do not inject trigger yet.** Put your phone/tablet/computer aside for now
 
