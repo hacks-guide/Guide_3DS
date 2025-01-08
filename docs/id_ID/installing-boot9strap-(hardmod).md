@@ -71,22 +71,22 @@ Di bagian ini akan mengunduh berkas yang perlu untuk oprek fisik lalu membuat _d
 4. Salin folder hardmod-b9s-installer dari `.zip` hardmod-b9s-installer ke komputer
 5. Salin `.firm` unduhan tadi ke folder hardmod-b9s-installer di komputer
 6. Ubah nama `.firm` unduhan tadi menjadi `current.firm`
-7. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the hardmod-b9s-installer folder on your computer
+7. Salin `boot9strap.firm` dan `boot9strap.firm.sha` dari `.zip` boot9strap ke folder hardmod-b9s-installer di komputer Anda
 8. Sisip kembali kartu SD ke konsol
-9. Use your hardmod to create a NAND backup
-10. Move your NAND backup to the hardmod-b9s-installer folder on your computer and rename it to `NAND.bin`
+9. Gunakan konsol oprek fisik untuk mencadang NAND
+10. Ubah nama cadangan NAND Anda menjadi `NAND.bin` dan salin ke folder hardmod-b9s-installer di komputer
 
 ### Bagian II - Memasang boot9strap
 
-In this section, you will install custom firmware to the dumped NAND image, and then install this NAND image back onto the console to install custom firmware on it.
+Di bagian ini akan memasang _custom firmware_ ke hasil _dump_ NAND tadi, lalu memasang NAND tersebut balik ke konsol untuk memasang _custom firmware_.
 
-1. Run hardmod-b9s-installer
-   - Windows Users: Run `install-b9s.exe`
-   - Mac and Linux Users: Run `install-b9s.py`
-2. Flash your outputted `NAND-patched.bin` to your console with your hardmod
+1. Jalankan hardmod-b9s-installer
+   - Pengguna Windows: Jalankan `install-b9s.exe`
+   - Pengguna Mac dan Linux: Jalankan`install-b9s.py`
+2. _Flash_-kan hasil `NAND-patched.bin` ke konsol dengan oprek keras
 3. Matikan daya konsol
-4. Disconnect your hardmod
-5. Press and hold (Select), and while holding (Select), power on your console
+4. Cabut kabel konsol oprek fisik
+5. Tahan tombol (Select) selagi menyalakan konsol
 
 <!--@include: ./_include/configure-luma3ds.md -->
 
