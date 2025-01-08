@@ -10,7 +10,7 @@
 8. Once the checks are completed, press (A) to continue
 9. Press (A) to unlock SysNAND (lvl2) writing, then input the key combo given
 10. Once the transfer is completed, press (A) to continue
-11. Press (A) to relock write permissions if prompted
+11. Tekan (A) untuk menutup ulang izin tulis jika diminta
 12. Tekan (Start) untuk nyalakan ulang konsol
 13. Update your console by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
     - Updates while using B9S + Luma (what you have) are safe
