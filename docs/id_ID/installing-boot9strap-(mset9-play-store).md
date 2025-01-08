@@ -71,18 +71,18 @@ In this section, you will prepare the SD card data necessary for the MSET9 explo
 
 11. Sisip kembali kartu SD ke konsol
 
-12. Power on your console
+12. Nyalakan daya konsol
 
-13. Open Mii Maker
+13. Buka Mii Maker
 
 14. Wait for your console to reach the "Welcome to Mii Maker" screen, then exit Mii Maker
-    - You may see [this screen](/images/screenshots/mset9/mii-extdata.png), which indicates the necessary data has been created
+    - Mungkin muncul [layar ini](/images/screenshots/mset9/mii-extdata.png), ini menandakan data yang perlu sudah dibuat
     - If you just reach the normal Mii Maker screen, exit Mii Maker and return to the HOME Menu
 
-15. Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
-    - This will not wipe any of your data
+15. Buka System Settings dan navigasi ke `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([gambar](/images/screenshots/database-reset.jpg))
+    - Ini tidak akan menghapus data
 
-16. Power off your console by pressing the power button then tapping Power Off on the lower screen
+16. Matikan daya konsol dengan menekan tombol daya lalu sentuh Power Off di layar bawah
 
 17. Insert your SD card into your phone/tablet/computer
 
@@ -95,9 +95,9 @@ In this section, you will prepare the SD card data necessary for the MSET9 explo
 
 20. Sisip kembali kartu SD ke konsol
 
-### Section II - MSET9
+### Bagian II - MSET9
 
-In this section, you will trigger MSET9 to launch SafeB9SInstaller (the custom firmware installer).
+Di bagian ini akan mengaktifkan MSET9 untuk membuka SafeB9SInstaller (pemasang CFW).
 
 ::: danger
 
