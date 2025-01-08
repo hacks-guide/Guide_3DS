@@ -39,7 +39,7 @@ In this section, you will copy the files needed to trigger both browserhax and u
 6. Salin `boot9strap.firm` dan `boot9strap.firm.sha` dari berkas `.zip` boot9strap ke folder `/boot9strap/` di kartu SD
 7. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
 8. Sisip kembali kartu SD ke konsol
-9. Power on your console
+9. Nyalakan daya konsol
 
 ### Section II - SSLoth
 
