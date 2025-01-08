@@ -10,7 +10,7 @@ head:
 
 # Installing boot9strap (Soundhax)
 
-:::details Technical Details (optional)
+:::details Perincian Teknis (opsional)
 
 For technical details on the exploits that you will be using on this page, see [here](https://github.com/nedwill/soundhax) (Soundhax) and [here](https://github.com/TuxSH/universal-otherapp) (universal-otherapp).
 
@@ -40,7 +40,7 @@ In this section, you will copy the files needed to trigger both Soundhax and uni
 3. Copy the Soundhax `.m4a` to the root of your SD card
    - Akar (_root_) kartu SD merujuk ke direktori awal kartu SD yang ada folder Nintendo 3DS, berarti **tidak di dalam folder apa pun**
 4. Copy `otherapp.bin` to the root of your SD card
-5. Copy everything from the Luma3DS `.zip` to the root of your SD card
+5. Salin semua berkas dari `.zip` Luma3DS ke akar kartu SD
 6. Buat folder dengan nama `boot9strap` di akar kartu SD
 7. Salin `boot9strap.firm` dan `boot9strap.firm.sha` dari berkas `.zip` boot9strap ke folder `/boot9strap/` di kartu SD
 8. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
