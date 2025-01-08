@@ -123,11 +123,11 @@ If you do NOT boot into the regular 3DS HOME Menu, or System Settings / your key
 1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 2. Tekan (Home) untuk membuka menu tindakan
 3. Pilih "Scripts..."
-4. Select "GM9Megascript"
+4. Pilih "GM9Megascript"
 5. Select "Backup Options"
 6. Select "SysNAND Backup"
 7. Tekan (A) untuk konfirmasi
-   - This process will take some time
+   - Proses ini akan lumayan lama
    - If you get an error, ensure you have at least 1.3GB of free space on your SD card
 8. Tekan (B) untuk kembali ke menu utama
 9. Select “Exit”
@@ -203,14 +203,14 @@ If you're removing CFW because:
    - If you instead see the Luma3DS chainloader, use the D-Pad and the (A) button to select GodMode9
 2. Tekan (Home) untuk membuka menu tindakan
 3. Pilih "Scripts..."
-4. Select "GM9Megascript"
+4. Pilih "GM9Megascript"
 5. Select "Hax Options"
 6. Select "Un-install Hax"
 7. When prompted, press (A) to proceed
-8. Press (A) to unlock SysNAND (lvl3) writing, then input the key combo given
+8. Tekan (A) untuk membuka izin tulis SysNAND (lvl3), lalu tekan kombo yang diberikan
 9. Tekan (A) untuk lanjut
 10. Tekan (B) untuk kembali ke menu utama
-11. Select "Exit"
+11. Pilih "Exit"
 12. Press (A) to relock write permissions if prompted
 13. Tekan (Start) untuk nyalakan ulang konsol
 
