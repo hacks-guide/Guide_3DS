@@ -1,14 +1,14 @@
 1. Tekan (Home) untuk membuka menu tindakan
 2. Pilih "Scripts..."
-3. Select "GM9Megascript"
+3. Pilih "GM9Megascript"
 4. Select "Backup Options"
 5. Select "SysNAND Backup"
 6. Tekan (A) untuk konfirmasi
-   - This process will take some time
+   - Proses ini akan lumayan lama
    - If you get an error, look for your issue in the [troubleshooting guide](troubleshooting-finalizing-setup.html)
 7. Tekan (A) untuk lanjut
 8. Tekan (B) untuk kembali ke menu utama
-9. Select "Exit"
+9. Pilih "Exit"
 10. Press (A) to relock write permissions if prompted
 11. Navigasi ke `[S:] SYSNAND VIRTUAL`
 12. Press (A) on `essential.exefs` to select it
