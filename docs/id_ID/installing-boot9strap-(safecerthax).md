@@ -26,7 +26,7 @@ This exploit will not work on the New 3DS, New 3DS XL, or New 2DS XL. Please ens
 
 In this section, you will see whether your shoulder buttons are working on your console. This will determine whether your console is compatible with this method.
 
-1. Power on your console
+1. Nyalakan daya konsol
 2. Once you see the HOME Menu, press the (Left Shoulder) and (Right Shoulder) buttons at the same time
    - The camera applet should appear
 3. Matikan daya konsol
@@ -48,7 +48,7 @@ In this section, you will copy the files needed to trigger the safecerthax explo
 4. Salin `boot9strap.firm` dan `boot9strap.firm.sha` dari berkas `.zip` boot9strap ke folder `/boot9strap/` di kartu SD
 5. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
 6. Sisip kembali kartu SD ke konsol
-7. Power on your console
+7. Nyalakan daya konsol
 
 ### Section III - safecerthax proxy
 
