@@ -16,7 +16,7 @@ This section will reset your system settings to its defaults. **Installed games 
 13. Tekan (A) untuk konfirmasi
 14. Tekan (A) untuk membuka izin tulis SysNAND (lvl1), lalu tekan kombo yang diberikan
 15. Once the file has been deleted, press (A) to continue
-16. Press (A) to relock write permissions if prompted
+16. Tekan (A) untuk menutup ulang izin tulis jika diminta
 17. Tekan (Start) untuk nyalakan ulang konsol
 18. Your console will load into the initial setup menu
     - This is expected behaviour. You have not lost any of your game data
