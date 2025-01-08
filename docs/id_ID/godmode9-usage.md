@@ -14,9 +14,9 @@ Untuk bantuan berbahasa Inggris terkait GodMode9 dan tentang membuat naskah, pem
 
 ## Bacaan Penting
 
-GodMode9 is a full access file browser for the Nintendo 3DS console, giving you access to your SD card, the FAT partitions inside your SysNAND and EmuNAND, and basically anything else. Among other functionality, you can copy, delete, rename files, and create folders.
+GodMode9 adalah penelusur berkas berakses penuh untuk Nintendo 3DS, mampu mengakses kartu SD, partisi FAT di dalam SysNAND dan EmuNAND, dan segala lainnya. Selain itu bisa juga menyalin, menghapus, ubah nama berkas, dan membuat folder.
 
-Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions.
+Perlu diingat jika ada _payload_ selain `GodMode9.firm` dalam folder `/luma/payloads/` di kartu SD, menahan (Start) saat awal nyala akan ke "chainloader menu" dan hanya bisa Tombol Arah dan (A) untuk memilih "GodMode9" pada instruksi ini.
 
 GodMode9 is powerful software that has the capability to modify essentially anything on your console. Though many of these modifications are locked behind a permissions system, and it is impossible to accidentally perform dangerous actions without deliberately unlocking permissions, you should still follow instructions carefully and keep backups just in case.
 
