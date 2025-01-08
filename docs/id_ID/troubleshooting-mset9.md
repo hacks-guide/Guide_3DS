@@ -41,8 +41,8 @@ If this does not work, your SD card needs to be formatted:
 Ensure that you have reset the title database.
 
 - Please power on your console with your SD inserted
-- Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
-  - This will not wipe any of your data
+- Buka System Settings dan navigasi ke `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([gambar](/images/screenshots/database-reset.jpg))
+  - Ini tidak akan menghapus data
 - If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
 
 If you do _not_ getting a reset prompt, your SD card needs to be formatted:
@@ -94,7 +94,7 @@ You have multiple ID0 folders. To determine the correct folder, follow these ins
 
 1. Rename the `Nintendo 3DS` folder to `BACKUP_Nintendo 3DS`
 2. Sisip kembali kartu SD ke konsol
-3. Power on your console
+3. Nyalakan daya konsol
 4. Wait for the console to generate the SD card data
    - Your applications will have disappeared. This is normal and will be resolved shortly
 5. Matikan daya konsol
@@ -153,7 +153,7 @@ You may be missing `SafeB9S.bin` from the root of your SD card, or the file may 
 2. Type `4`, then press Enter
 3. Once the window says "Removed trigger file", type `0` and then press Enter
 4. Reinsert the SD card into your console
-5. Power on your console
+5. Nyalakan daya konsol
 6. Return to [Section II Step 1](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
 
 Alternatively, your SD card may be improperly formatted or partitioned. After removing the trigger file, format it:
@@ -182,7 +182,7 @@ Follow these instructions to remove the trigger file and to retry Section II:
 2. Type `4`, then press Enter
 3. Once the window says "Removed trigger file", type `0` and then press Enter
 4. Reinsert the SD card into your console
-5. Power on your console
+5. Nyalakan daya konsol
 6. Return to [Section II Step 1](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
 
 If you continue to have this issue and are sure that you did everything correctly, ensure the trigger file is removed and format your SD card:
