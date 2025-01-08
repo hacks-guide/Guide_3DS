@@ -9,7 +9,7 @@
 7. Tekan (A) untuk lanjut
 8. Tekan (B) untuk kembali ke menu utama
 9. Pilih "Exit"
-10. Press (A) to relock write permissions if prompted
+10. Tekan (A) untuk menutup ulang izin tulis jika diminta
 11. Navigasi ke `[S:] SYSNAND VIRTUAL`
 12. Press (A) on `essential.exefs` to select it
 13. Pilih "Copy to 0:/gm9/out"
