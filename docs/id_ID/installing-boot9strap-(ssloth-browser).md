@@ -1,6 +1,6 @@
 # Installing boot9strap (SSLoth-Browser)
 
-:::details Technical Details (optional)
+:::details Perincian Teknis (opsional)
 
 In order to exploit the Browser application, we need to bypass the browser version check, which is designed to disallow the use of the browser without updating to the latest system version.
 
@@ -34,7 +34,7 @@ In this section, you will copy the files needed to trigger both browserhax and u
 3. Copy `otherapp.bin` to the root of your SD card and rename it to `arm11code.bin`
    - Akar (_root_) kartu SD merujuk ke direktori awal kartu SD yang ada folder Nintendo 3DS, berarti **tidak di dalam folder apa pun**
    - If you do not see the `.bin` extension, do not add it to the end of the filename
-4. Copy everything from the Luma3DS `.zip` to the root of your SD card
+4. Salin semua berkas dari `.zip` Luma3DS ke akar kartu SD
 5. Buat folder dengan nama `boot9strap` di akar kartu SD
 6. Salin `boot9strap.firm` dan `boot9strap.firm.sha` dari berkas `.zip` boot9strap ke folder `/boot9strap/` di kartu SD
 7. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
