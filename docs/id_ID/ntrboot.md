@@ -43,7 +43,7 @@ Sebelum mulai, pastikan _flashcart_ bisa menjalankan berkas `.nds` di konsol. So
 
 Note that specific methods may have additional compatibility information.
 
-The usage of this exploit, regardless of the flashing method, requires access to a small magnet if the target console is of a folding style (any 3DS family system that is not the old 2DS with a sleep switch). This is because the exploit requires your console to enter sleep mode while still having access to the buttons.
+Untuk eksploit ini, dengan metode _flashing_ apa pun, akan perlu besi berani kecil jika konsol sasaran Anda model lipat (jenis sistem 3DS yang bukan model lipat hanya old 2DS karena ada cetekan tidur). This is because the exploit requires your console to enter sleep mode while still having access to the buttons.
 
 ::: info
 
