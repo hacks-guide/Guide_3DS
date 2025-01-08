@@ -48,7 +48,7 @@ In this section, you will copy the files needed to trigger both super-skaterhax 
 
 4. Sisip kembali kartu SD ke konsol
 
-5. Power on your console
+5. Nyalakan daya konsol
 
 6. Launch System Settings
 
