@@ -10,7 +10,7 @@ head:
 
 # Installing boot9strap (super-skaterhax)
 
-:::details Technical Details (optional)
+:::details Perincian Teknis (opsional)
 
 For technical details on the exploits that you will be using on this page, see [here](https://github.com/zoogie/super-skaterhax).
 
