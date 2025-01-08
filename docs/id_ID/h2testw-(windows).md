@@ -2,31 +2,31 @@
 
 ## Bacaan Penting
 
-This is an add-on section for checking your SD card for errors using h2testw.
+Ini adalah laman lebihan untuk memeriksa galat di kartu SD dengan h2testw.
 
 Tergantung ukuran kartu SD dan kecepatan komputer, proses ini bisa lama beberapa jam!
 
-Laman ini hanya untuk pengguna Windows. If you are not on windows, check out the [F3 (Linux)](f3-\(linux\)) or [F3XSwift (Mac)](f3xswift-\(mac\)) pages.
+Laman ini hanya untuk pengguna Windows. Jika tidak menggunakan Windows, lihat laman [F3 (Linux)](f3-\(linux\)) atau [F3XSwift (Mac)](f3xswift-\(mac\)).
 
 ## Apa yang Perlu
 
-- The latest version of [h2testw](https://www.heise.de/ct/Redaktion/bo/downloads/h2testw_1.4.zip)
+- Versi terkini dari [h2testw](https://www.heise.de/ct/Redaktion/bo/downloads/h2testw_1.4.zip)
 
 ## Instruksi
 
-1. Copy `h2testw.exe` from the h2testw `.zip` to your desktop
+1. Salin `h2testw.exe` dari `.zip` h2testw ke layar desktop
 2. Sisipkan kartu SD ke komputer Anda
-3. Run `h2testw.exe`
-4. Select "English"
-5. Click "Select target"
-6. Select your SD card's drive letter
-7. Ensure "all available space" is selected
-8. Click "Write + Verify"
+3. Jalankan `h2testw.exe`
+4. Pilih "English"
+5. Pencet "Select target"
+6. Pilih huruf kandar kartu SD Anda
+7. Pastikan "all available space" sudah dipilih
+8. Pencet "Write + Verify"
 9. Tunggu sampai proses ini selesai
 
 ::: tip
 
-If the test shows the result `Test finished without errors`, your SD card is good and you can delete all `.h2w` files on your SD card.
+Jika hasil ujinya `Test finished without errors`, berarti kartu SD masih bagus dan '.h2w' boleh dihapus semua di kartu SD.
 
 :::
 
