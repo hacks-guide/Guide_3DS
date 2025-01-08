@@ -34,7 +34,7 @@ Untuk semua langkah di bagian ini, timpa saja berkas terkait di kartu SD.
 
 ### Bagian II - Memasang boot9strap
 
-1. Power on your console
+1. Nyalakan daya konsol
    - This should automatically launch SafeB9SInstaller
 2. Saat diminta, tekan kombo tombol mengikuti layar atas untuk memasang boot9strap
    - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-updating-b9s)
@@ -46,7 +46,7 @@ Untuk semua langkah di bagian ini, timpa saja berkas terkait di kartu SD.
 1. Sisipkan kartu SD ke komputer Anda
 2. Copy everything from the Luma3DS `.zip` to the root of your SD card, replacing any existing files
 3. Sisip kembali kartu SD ke konsol
-4. Power on your console
+4. Nyalakan daya konsol
 5. If your console has booted into the Luma3DS configuration menu, press (Start) to save and reboot
    - Luma3DS configuration menu are settings for the Luma3DS custom firmware. Many of these settings may be useful for customization or debugging
    - For the purpose of this guide, these settings will be left on default settings
