@@ -77,33 +77,33 @@ Cadangan NAND sudah berhasil dibuat.
 13. Tekan (A) untuk lanjut
 14. Tekan (B) untuk kembali ke menu utama
 15. Pilih "Exit"
-16. Press (A) to relock write permissions if prompted
+16. Tekan (A) untuk menutup ulang izin tulis jika diminta
 
 ::: tip
 
-Your NAND backup has been successfully restored. You can now delete `<date>_<serialnumber>_sysnand_###.bin` from your SD card.
+Cadangan NAND sudah berhasil dipulihkan. Berkas `<date>_<serialnumber>_sysnand_###.bin` boleh dihapus dari kartu SD.
 
 :::
 
-## Injecting any .CIA app into Health & Safety
+## Menyuntik .CIA apa pun ke Health & Safety
 
 ::: info
 
-Note that it is not possible to inject files into Health & Safety that are larger than it (including games and other large applications)
+Perlu diingat, berkas yang disuntikkan tidak bisa lebih dari ukuran Health & Safety (baik itu permainan atau aplikasi)
 
 :::
 
 1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 2. Navigasi ke `[0:] SDCARD` -> `cias`
-3. Press (A) on your `.cia` to select it
-4. Select "CIA image options..."
+3. Tekan (A) pada `.cia` pilihan untuk memilih
+4. Pilih "CIA image options..."
 5. Select "Mount image to drive"
 6. Press (A) on the `.app` file
 7. Select "NCCH image options"
 8. Select "Inject to H&S"
 9. Tekan (A) untuk membuka izin tulis SysNAND (lvl1), lalu tekan kombo yang diberikan
 10. Tekan (A) untuk lanjut
-11. Press (A) to relock write permissions if prompted
+11. Tekan (A) untuk menutup ulang izin tulis jika diminta
 
 ::: tip
 
@@ -124,7 +124,7 @@ This will only work if the Health & Safety injection was performed by GodMode9 (
 3. Select "More..."
 4. Select "Restore H&S"
 5. Tekan (A) untuk membuka izin tulis SysNAND (lvl1), lalu tekan kombo yang diberikan
-6. Press (A) to relock write permissions if prompted
+6. Tekan (A) untuk menutup ulang izin tulis jika diminta
 
 ::: tip
 
@@ -171,7 +171,7 @@ This process will only log you out of your NNID. You will still not be able to u
 9. Tekan (A) untuk lanjut
 10. Tekan (B) untuk kembali ke menu utama
 11. Pilih "Exit"
-12. Press (A) to relock write permissions if prompted
+12. Tekan (A) untuk menutup ulang izin tulis jika diminta
 13. Tekan (Start) untuk nyalakan ulang konsol
 
 ::: tip
