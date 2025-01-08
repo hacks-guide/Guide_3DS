@@ -141,22 +141,22 @@ Health & Safety sudah kembali ke biasa lagi.
 :::
 
 1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
-2. Press (Right Shoulder) + (B) to unmount the current SD card and insert the one you want to format
-   - If GodMode9 shows an initialization error when inserting the SD Card to be formatted, it can safely be dismissed
+2. Tekan (R) + (B) untuk lepas _mount_ kartu SD dan sisipkan kartu SD yang ingin diformat
+   - Jika GodMode9 muncul galat inisialisasi saat menyisip kartu SD yang akan diformat, ini aman diabaikan
 
 <!--@include: ./_include/format-sd-gm9.md -->
 
 ::: tip
 
-Your SD card has successfully been formatted for use with the console.
+Kartu SD sudah berhasil diformat untuk digunakan di konsol.
 
 :::
 
-## Removing an NNID without formatting your console
+## Menghapus NNID tanpa perlu memformat konsol
 
 ::: info
 
-This process will only log you out of your NNID. You will still not be able to use the NNID on another console, as the NNID remains linked to the console.
+Proses ini hanya akan mengeluarkan akun NNID. NNID Anda tidak bisa digunakan di konsol lain, karena NNID tetap tertaut ke konsol tersebut.
 
 :::
 
@@ -164,8 +164,8 @@ This process will only log you out of your NNID. You will still not be able to u
 2. Tekan (Home) untuk membuka menu tindakan
 3. Pilih "Scripts..."
 4. Pilih "GM9Megascript"
-5. Select "Scripts from Plailect's Guide"
-6. Select "Remove NNID"
+5. Pilih "Scripts from Plailect's Guide"
+6. Pilih "Remove NNID"
 7. Tekan (A) untuk lanjut
 8. Tekan (A) untuk membuka izin tulis SysNAND (lvl1), lalu tekan kombo yang diberikan
 9. Tekan (A) untuk lanjut
@@ -176,6 +176,6 @@ This process will only log you out of your NNID. You will still not be able to u
 
 ::: tip
 
-You have now been logged out of your NNID.
+NNID sekarang sudah dikeluarkan.
 
 :::
