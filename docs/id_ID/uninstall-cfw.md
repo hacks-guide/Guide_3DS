@@ -211,7 +211,7 @@ If you're removing CFW because:
 9. Tekan (A) untuk lanjut
 10. Tekan (B) untuk kembali ke menu utama
 11. Pilih "Exit"
-12. Press (A) to relock write permissions if prompted
+12. Tekan (A) untuk menutup ulang izin tulis jika diminta
 13. Tekan (Start) untuk nyalakan ulang konsol
 
 ___
