@@ -87,11 +87,11 @@ In this section, you will launch Soundhax through the Nintendo 3DS Sound app, wh
 
    :::
 
-4. If the exploit was successful, you will have booted into SafeB9SInstaller
+4. Jika eksploit berhasil akan muncul SafeB9SInstaller
 
-### Section III - Installing boot9strap
+### Bagian III - Memasang boot9strap
 
-In this section, you will install custom firmware onto your console.
+Di bagian ini akan mulai memasang _custom firmware_ ke konsol.
 
 1. Saat diminta, tekan kombo tombol mengikuti layar atas untuk memasang boot9strap
    - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-soundhax)
