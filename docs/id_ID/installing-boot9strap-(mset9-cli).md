@@ -103,32 +103,32 @@ Di bagian ini akan mengaktifkan MSET9 untuk membuka SafeB9SInstaller (pemasang C
 
 ::: danger
 
-Instruksi ini harus diikuti **PERSIS**, periksa lagi SEMUA yang dilakukan agar tidak keliru!
+Instruksi ini harus diikuti **PERSIS**, periksa lagi SEMUA yang tadi sudah agar tidak keliru!
 
 :::
 
-1. Power on your console, ensuring System Settings is selected
-   - If System Settings is not selected, **[hover over](/images/screenshots/mset9/hover-settings.png)** the System Settings icon using the D-Pad, power your console off, then back on
-2. Press (A) to launch System Settings
-3. Navigate to `Data Management` -> `Nintendo 3DS` -> `Extra Data` ([image](/images/screenshots/mset9/settings-extdata.png))
-4. **Do not press any buttons or touch the screen**
-5. **With the console STILL ON, and without pressing any buttons or touching the screen**, remove your SD card from your console
-   - The menu will refresh and say that no SD card is inserted
+1. Nyalakan daya konsol, pastikan sudah sorot System Settings
+   - Jika belum sorot System Settings, **[arahkan](/images/screenshots/mset9/hover-settings.png)** ke ikon System Settings dengan tombol arah, matikan daya konsol, dan nyalakan lagi
+2. Tekan (A) untuk membuka System Settings
+3. Navigasi ke `Data Management` -> `Nintendo 3DS` -> `Extra Data` ([gambar](/images/screenshots/mset9/settings-extdata.png))
+4. **Jangan tekan tombol apa pun atau sentuh layar**
+5. **Selagi konsol MASIH NYALA, dan tidak menyentuh layar atau menekan tombol apa pun**, lepas kartu SD dari konsol
+   - Menu akan menyegar dan muncul pesan tidak ada kartu SD
 6. Sisipkan kartu SD ke komputer Anda
 
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Ketik nomornya sesuai dengan model dan versi konsol, lalu tekan Enter
-2. In the MSET9 window, type `3`, then press Enter to inject MSET9
-   - You should see "MSET9 successfully injected!"
-3. Press Enter to close the MSET9 script
-4. Reinsert your SD card into your console **without pressing any buttons or touching the screen**
-5. If the exploit was successful, you will have booted into SafeB9SInstaller
-   - If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting-mset9)
+2. Di jendela MSET9, ketik `3`, lalu tekan Enter untuk menyuntik MSET9
+   - Seharusnya muncul "MSET9 successfully injected!"
+3. Tekan Enter untuk menutup naskah MSET9
+4. Sisip kembali kartu SD ke konsol **tanpa menekan tombol atau menyentuh layar**
+5. Jika eksploit berhasil akan muncul SafeB9SInstaller
+   - Jika muncul layar merah atau konsol tersangkut di layar memuat, ikuti [panduan sidik gangguan](troubleshooting-mset9)
 
-### Section III - Installing boot9strap
+### Bagian III - Memasang boot9strap
 
-In this section, you will install custom firmware onto your console.
+Di bagian ini akan mulai memasang _custom firmware_ ke konsol.
 
 1. Saat diminta, tekan kombo tombol mengikuti layar atas untuk memasang boot9strap
    - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-mset9)
@@ -158,7 +158,7 @@ Do NOT skip this section! If you skip it, applications may crash unexpectedly an
    - You should see "Removed trigger file."
 3. Type `5`, then press Enter to remove MSET9
    - You should see "Successfully removed MSET9!"
-4. Press Enter to close the MSET9 script
+4. Tekan Enter untuk menutup naskah MSET9
 
 <!--@include: ./_include/luma3ds-installed-note.md -->
 
