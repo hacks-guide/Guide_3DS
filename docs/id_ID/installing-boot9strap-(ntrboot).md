@@ -48,13 +48,13 @@ Untuk menggunakan tautan [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) 
    - On old 2DS, you should instead enable the sleep mode switch
 5. Hold (Start) + (Select) + (X) + (Power) for several seconds, then release the buttons
    - It may take a few attempts to get this to work because the positioning is awkward
-6. If the exploit was successful, you will have booted into SafeB9SInstaller
+6. Jika eksploit berhasil akan muncul SafeB9SInstaller
 7. Remove the magnet from your console
    - On old 2DS, you should instead disable the sleep mode switch
 
-### Section III - Installing boot9strap
+### Bagian III - Memasang boot9strap
 
-In this section, you will install custom firmware onto your console.
+Di bagian ini akan mulai memasang _custom firmware_ ke konsol.
 
 1. Saat diminta, tekan kombo tombol mengikuti layar atas untuk memasang boot9strap
    - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-ntrboot)
