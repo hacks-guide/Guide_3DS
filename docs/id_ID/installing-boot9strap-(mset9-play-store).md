@@ -101,7 +101,7 @@ Di bagian ini akan mengaktifkan MSET9 untuk membuka SafeB9SInstaller (pemasang C
 
 ::: danger
 
-These instructions must be followed **EXACTLY**, so double-check EVERYTHING you are doing to avoid errors!
+Instruksi ini harus diikuti **PERSIS**, periksa lagi SEMUA yang dilakukan agar tidak keliru!
 
 :::
 
