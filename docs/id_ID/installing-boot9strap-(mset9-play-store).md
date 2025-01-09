@@ -1,4 +1,4 @@
-# Installing boot9strap (MSET9 Play Store)
+# Memasang boot9strap (MSET9 Play Store)
 
 :::details Perincian Teknis (opsional)
 
@@ -10,23 +10,23 @@
 
 ::: warning
 
-This page requires an Android phone/tablet or a Chromebook. If you have a computer running Windows, macOS, or Linux, follow [Installing boot9strap (MSET9 CLI)](installing-boot9strap-\(mset9-cli\)) instead. Jika tidak punya perangkat tersebut, berarti perlu [eksploit yang lain](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits) (gunakan penerjemah).
+Laman ini perlu ponsel/tablet Android atau Chromebook. Jika punya komputer bersistem Windows, macOS, atau Linux, ikuti saja [Memasang boot9strap (MSET9 CLI)](installing-boot9strap-\(mset9-cli\)). Jika tidak punya perangkat tersebut, berarti perlu [eksploit yang lain](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits) (gunakan penerjemah).
 
 :::
 
 ::: warning
 
-On Android phones/tablets, the minimum Android version required is 6.0 (Marshmallow).
+Di ponsel/tablet Android, versi Android yang diperlukan minimal 6.0 (Marshmallow).
 
 :::
 
 ## Apa yang Perlu
 
-- The following applications installed from the Google Play Store:
+- Memasang aplikasi berikut dari Google Play Store:
   - [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)
   - [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)
-  - If you wish, you can sideload these applications instead
-- The latest release of [MSET9](https://github.com/zoogie/MSET9/releases/latest) (the Release `.zip` file)
+  - Atau, pasang .apk aplikasi ini dari sumber lain (_sideload_)
+- Versi terkini dari [MSET9](https://github.com/zoogie/MSET9/releases/latest) (yang `.zip` Release)
 
 ## Instruksi
 
@@ -125,18 +125,18 @@ Instruksi ini harus diikuti **PERSIS**, periksa lagi SEMUA yang tadi sudah agar 
 Di bagian ini akan mulai memasang _custom firmware_ ke konsol.
 
 1. Saat diminta, tekan kombo tombol mengikuti layar atas untuk memasang boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-mset9)
-2. Once it is complete, press (A) to reboot your console
+   - Jika langkah di layar bawah ada teks warna merah, dan tidak diminta kombo tombol, [ikuti panduan sidik gangguan ini](troubleshooting-mset9)
+2. Saat selesai, tekan (A) untuk nyalakan ulang konsol
 
 <!--@include: ./_include/configure-luma3ds.md -->
 
-### Section IV - Removing MSET9
+### Bagian IV - Menghapus MSET9
 
 In this section, you will remove MSET9 to prevent further issues. (This will not remove the custom firmware that you just installed.)
 
 ::: danger
 
-Do NOT skip this section! If you skip it, applications may crash unexpectedly and you will encounter errors on the next page!
+JANGAN lewati bagian ini! Jika dilewati, aplikasi bisa tiba-tiba mogok dan akan ada galat di laman berikutnya!
 
 :::
 
@@ -152,7 +152,7 @@ ___
 
 ::: danger
 
-Did you follow Section IV (Removing MSET9)? That section is MANDATORY!
+Apakah tadi sudah Bagian IV (Menghapus MSET9)? Bagian itu **WAJIB**!
 
 :::
 
