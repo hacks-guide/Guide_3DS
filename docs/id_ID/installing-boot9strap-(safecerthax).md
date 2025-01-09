@@ -69,12 +69,12 @@ In this section, you will enter Safe Mode (a feature available on all 3DS family
 3. Press "I accept" to accept the terms and conditions
 4. The update will eventually fail, with the error code `003-1099`. This is intended behaviour
 5. Press "OK" to close the error message
-6. If the exploit was successful, you will have booted into SafeB9SInstaller
+6. Jika eksploit berhasil akan muncul SafeB9SInstaller
    - If the console freezes or crashes, force power off the console, then retry this section
 
 ### Section V - Installing boot9strap
 
-In this section, you will install custom firmware onto your console.
+Di bagian ini akan mulai memasang _custom firmware_ ke konsol.
 
 1. Saat diminta, tekan kombo tombol mengikuti layar atas untuk memasang boot9strap
    - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-safecerthax)
