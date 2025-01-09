@@ -105,13 +105,13 @@ If you haven't already, make sure you have a working Internet connection set up 
     - If you get another error, try again up to 5 times, and if it still doesn't work, [follow this troubleshooting guide](troubleshooting-super-skaterhax)
 16. Your console will have booted into the Homebrew Launcher
 17. Launch nimdsphax from the list of homebrew
-18. If the exploit was successful, you will have booted into SafeB9SInstaller
+18. Jika eksploit berhasil akan muncul SafeB9SInstaller
     - If your console freezes on a red or green screen, hold the POWER button until it turns off, then retry this section
     - This may take up to five attempts
 
-#### Section III - Installing boot9strap
+#### Bagian III - Memasang boot9strap
 
-In this section, you will install custom firmware onto your console.
+Di bagian ini akan mulai memasang _custom firmware_ ke konsol.
 
 1. Saat diminta, tekan kombo tombol mengikuti layar atas untuk memasang boot9strap
    - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-super-skaterhax)
