@@ -59,12 +59,12 @@ In this section, you will visit the browser exploit webpage, which will use univ
    - If you get a crash or an error code, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
    - If you get a security certificate warning, press (A) to allow the connection
 3. Tap the "PROCEED TO HAXX" button
-4. If the exploit was successful, you will have booted into SafeB9SInstaller
+4. Jika eksploit berhasil akan muncul SafeB9SInstaller
    - If you get an error, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
 
 ### Section IV - Installing boot9strap
 
-In this section, you will install custom firmware onto your console.
+Di bagian ini akan mulai memasang _custom firmware_ ke konsol.
 
 1. Saat diminta, tekan kombo tombol mengikuti layar atas untuk memasang boot9strap
    - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
