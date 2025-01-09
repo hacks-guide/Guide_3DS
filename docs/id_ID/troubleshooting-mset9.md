@@ -148,7 +148,7 @@ You may be missing `SafeB9S.bin` from the root of your SD card, or the file may 
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Ketik nomornya sesuai dengan model dan versi konsol, lalu tekan Enter
-   - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
+   - Keadaan saat ini seharusnya [Injected](/images/screenshots/mset9/mset9-injected.png)
    - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you may [retry Section II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
 2. Type `4`, then press Enter
 3. Once the window says "Removed trigger file", type `0` and then press Enter
@@ -177,7 +177,7 @@ Follow these instructions to remove the trigger file and to retry Section II:
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Ketik nomornya sesuai dengan model dan versi konsol, lalu tekan Enter
-   - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
+   - Keadaan saat ini seharusnya [Injected](/images/screenshots/mset9/mset9-injected.png)
    - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you are ready to retry Section II
 2. Type `4`, then press Enter
 3. Once the window says "Removed trigger file", type `0` and then press Enter
