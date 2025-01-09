@@ -131,18 +131,18 @@ Instruksi ini harus diikuti **PERSIS**, periksa lagi SEMUA yang tadi sudah agar 
 Di bagian ini akan mulai memasang _custom firmware_ ke konsol.
 
 1. Saat diminta, tekan kombo tombol mengikuti layar atas untuk memasang boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-mset9)
-2. Once it is complete, press (A) to reboot your console
+   - Jika langkah di layar bawah ada teks warna merah, dan tidak diminta kombo tombol, [ikuti panduan sidik gangguan ini](troubleshooting-mset9)
+2. Saat selesai, tekan (A) untuk nyalakan ulang konsol
 
 <!--@include: ./_include/configure-luma3ds.md -->
 
-### Section IV - Removing MSET9
+### Bagian IV - Menghapus MSET9
 
-In this section, you will remove MSET9 to prevent further issues and to restore your user data (games, themes, etc). (This will not remove the custom firmware that you have just installed.)
+Di bagian ini akan menghapus MSET9 untuk mencegah isu dan memulihkan data (permainan, tema, dll.). (Ini tidak akan menghapus _custom firmware_ yang tadi dipasang).
 
 ::: danger
 
-Do NOT skip this section! If you skip it, applications may crash unexpectedly and you will encounter errors on the next page!
+JANGAN lewati bagian ini! Jika dilewati, aplikasi bisa tiba-tiba mogok dan akan ada galat di laman berikutnya!
 
 :::
 
@@ -152,12 +152,12 @@ Do NOT skip this section! If you skip it, applications may crash unexpectedly an
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Ketik nomornya sesuai dengan model dan versi konsol, lalu tekan Enter
-   - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
-   - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), skip to Step 6
-2. Type `4`, then press Enter to remove the trigger file
-   - You should see "Removed trigger file."
-3. Type `5`, then press Enter to remove MSET9
-   - You should see "Successfully removed MSET9!"
+   - Keadaan saat ini seharusnya [Injected](/images/screenshots/mset9/mset9-injected.png)
+   - Jika _trigger file_ sudah dihapus (atau memang belum disuntikkan) dan keadaan bertulis [Ready](/images/screenshots/mset9/mset9-ready.png), langsung saja ke Bagian 6
+2. Ketik `4`, lalu tekan Enter untuk menghapus _trigger file_
+   - Seharusnya muncul "Removed trigger file."
+3. Ketik `5`, lalu tekan Enter untuk menghapus MSET9
+   - Seharusnya muncul "Successfully removed MSET9!"
 4. Tekan Enter untuk menutup naskah MSET9
 
 <!--@include: ./_include/luma3ds-installed-note.md -->
@@ -166,7 +166,7 @@ ___
 
 ::: danger
 
-Did you follow Section IV (Removing MSET9)? That section is MANDATORY!
+Apakah tadi sudah Bagian IV (Menghapus MSET9)? Bagian itu **WAJIB**!
 
 :::
 
