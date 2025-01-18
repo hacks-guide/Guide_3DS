@@ -26,7 +26,7 @@ The instructions provided only apply to the New 3DS, New 3DS XL, and New 2DS XL.
 
 :::
 
-### What You Need
+### Lo que necesitas
 
 - The [Super-skaterhax](https://skater.nintendohomebrew.com) zip for your console's region and system version
 
