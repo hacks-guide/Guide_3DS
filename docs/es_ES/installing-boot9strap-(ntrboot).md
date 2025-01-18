@@ -1,10 +1,10 @@
 # Installing boot9strap (ntrboot)
 
-## Required Reading
+## Lectura requerida
 
-To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download).
+Para utilizar los enlaces [magnéticos](https://es.wikipedia.org/wiki/Magnet) de esta página, tienes que utilizar un cliente torrent como [qBittorrent](https://www.qbittorrent.org/download.php) o [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
-## What You Need
+## Lo que necesitas
 
 - A magnet that triggers the sleep mode of your console (if using a folding style console)
 - Your ntrboot flashed flashcart
@@ -91,7 +91,7 @@ Do not follow this section until you have completed the rest of the instructions
 
 ### Section V - Removing ntrboot
 
-#### What You Need
+#### Lo que necesitas
 
 - The latest release of [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest) (`ntrboot_flasher.firm`)
 - The flashrom backup corresponding to your flashcart
