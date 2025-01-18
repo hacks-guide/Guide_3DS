@@ -6,7 +6,7 @@ For support (in English) with GodMode9, as well as help with scripting and to ge
 
 :::
 
-## Required Reading
+## Lectura requerida
 
 Aside from creating and restoring NAND backups, GodMode9 has the functionality to dump installed titles to an installable `.cia` file, to dump game cartridge data to a `.3ds` ROM file, and to directly install a game cartridge to the system.
 
@@ -18,7 +18,7 @@ These instructions are written for use with GodMode9 v2.0.0 or later. If you hav
 
 :::
 
-### What You Need
+### Lo que necesitas
 
 - The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
 
