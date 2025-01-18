@@ -20,7 +20,7 @@ These instructions are written for use with GodMode9 v2.0.0 or later. If you hav
 
 ### Lo que necesitas
 
-- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
+- - La última versión de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (el archivo GodMode `.zip`)
 
 ### Instrucciones
 
@@ -58,21 +58,21 @@ Esto sólo funciona para juegos de 3DS; no es posible instalar un cartucho de DS
 
 :::
 
-1. Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
+1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
 2. Ve a `[C:] GAMECART`
-3. Press (A) on `[TitleID].trim.3ds` to select it, then select "NCSD image options...", then select "Install game image"
-4. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
-5. Once the process is complete, your game will show up in the HOME Menu as an installed title.
+3. Presiona el botón (A) sobre `[TitleID].trim.3ds` para seleccionarlo, luego selecciona `NCSD image options...` y luego `Install game image`
+4. Presiona (A) para desbloquear la escritura de SysNAND (lvl1) y luego introduce la combinación de botones mostrada
+5. Una vez que el proceso haya sido completado, el juego aparecerá en el Menú HOME como un ícono.
 
-## Dumping a 3DS Game Cartridge to .CIA
+## Volcar un Cartucho de 3DS a .CIA
 
 ::: info
 
-This should only be used if [Installing a Game Cartridge Directly to the System](#installing-a-game-cartridge-directly-to-the-system) does not work.
+Esto sólo debiera seguirse si [Instalar un Cartucho a la Consola Directamente](#installing-a-game-cartridge-directly-to-the-system) no funciona.
 
 :::
 
-1. Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
+1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
 2. Ve a `[C:] GAMECART`
 3. Press (A) on `[TitleID].trim.3ds` to select it, then select "NCSD image options...", then select "Build CIA from file"
 4. Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
