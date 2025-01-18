@@ -21,9 +21,9 @@ Note that in some rare circumstances, it may be possible for the flashing proces
 - The v1.3 release of [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (direct download)
 - The latest release of [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest) (`ntrboot_flasher.firm`)
 
-## Instructions
+## Instrucciones
 
-### Section I - Prep Work
+### Sección I - Preparativos
 
 1. Power off **the source 3DS**
 2. Insert **the source 3DS**'s SD card into your computer
