@@ -50,25 +50,25 @@ If you change the region of your console:
 
 <!--@include: ./_include/ctrtransfer-prep.md -->
 
-### Section II - NAND Backup
+### Sección II - Copia de seguridad de la NAND
 
-1. Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
+1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
 
 <!--@include: ./_include/nand-backup.md -->
 
-### Section III - CTRTransfer
+### Sección III - CTRTransfer
 
 <!--@include: ./_include/ctrtransfer-main.md -->
 
-### Section IV - Launching FBI
+### Sección IV - Iniciar FBI
 
 <!--@include: ./_include/launch-hbl-dlp.md -->
 
-### Section V - Reinstalling Tickets
+### Sección V - Reinstalación de tickets
 
 <!--@include: ./_include/ctrtransfer-ticket-copy.md -->
 
-### Section VI - Fixing locale-related issues
+### Sección VI - Arreglar problemas relacionados con la configuración regional
 
 <!--@include: ./_include/ctrnand-datayeet.md -->
 
