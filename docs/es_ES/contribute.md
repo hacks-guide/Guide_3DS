@@ -1,6 +1,6 @@
 # Contribuir
 
-We're glad to hear that you'd like to contribute to 3ds.hacks.guide! Here are a few ways that you can do so:
+¡Nos alegra mucho que quieras contribuir a 3ds.hacks.guide! Estas son algunas maneras en las que puedes hacerlo:
 
 ## Maintenance
 
