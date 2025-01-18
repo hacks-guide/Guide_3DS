@@ -24,7 +24,7 @@ Como parte de este proceso, los ajustes de Configración de la consola se restab
 - La última versión de [ctrtransfer.gm9](https://raw.githubusercontent.com/nh-server/scripts/refs/heads/main/3DS/ctrtransfer.gm9) (haz clic derecho y elige "guardar enlace como...")
 - Un cliente torrent como [qBittorrent](https://www.qbittorrent.org/download.php) o [Deluge](http://dev.deluge-torrent.org/wiki/Download)
   - Si ya tienes un cliente torrent, no necesitas descargar uno nuevo
-- The 11.15.0 CTRTransfer image for your console and region:
+- La imagen CTRTransfer 11.15.0 correspondiente a tu consola y región:
 
 <!--@include: ./_include/ctrtransfer-images.md -->
 
@@ -34,25 +34,25 @@ Como parte de este proceso, los ajustes de Configración de la consola se restab
 
 <!--@include: ./_include/ctrtransfer-prep.md -->
 
-### Section II - NAND Backup
+### Sección II - Copia de seguridad de la NAND
 
-1. Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
+1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
 
 <!--@include: ./_include/nand-backup.md -->
 
-### Section III - CTRTransfer
+### Sección III - CTRTransfer
 
 <!--@include: ./_include/ctrtransfer-main.md -->
 
-### Section IV - Launching FBI
+### Sección IV - Iniciar FBI
 
 <!--@include: ./_include/launch-hbl-dlp.md -->
 
-### Section V - Reinstalling Tickets
+### Sección V - Reinstalación de tickets
 
 <!--@include: ./_include/ctrtransfer-ticket-copy.md -->
 
-### Section VI - Fixing locale-related issues
+### Sección VI - Arreglar problemas relacionados con la configuración regional
 
 <!--@include: ./_include/ctrnand-datayeet.md -->
 
