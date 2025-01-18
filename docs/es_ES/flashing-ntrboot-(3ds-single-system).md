@@ -18,11 +18,11 @@ Note that in some rare circumstances, it may be possible for the flashing proces
 - The v1.3 release of [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (direct download)
 - The latest release of [ntrboot_flasher_nds](https://github.com/jason0597/ntrboot_flasher_nds/releases/latest) (`ntrboot_flasher_nds.nds`)
 
-## Instructions
+## Instrucciones
 
-### Section I - Prep Work
+### Sección I - Preparativos
 
-1. Power off your console
+1. Apaga la consola
 2. Insert your flashcart's SD card into your computer
 3. Create a folder named `ntrboot` on the root of your flashcart's SD card
 4. Copy `boot9strap_ntr.firm` from the boot9strap ntr `.zip` to the `/ntrboot/` folder on your flashcart's SD card
@@ -44,7 +44,7 @@ Note that in some rare circumstances, it may be possible for the flashing proces
 10. Select "Inject FIRM" to install boot9strap to your flashcart
 11. Input the key combo given to confirm
 12. Press (A) to continue
-13. Power off your console
+13. Apaga la consola
 
 ___
 
