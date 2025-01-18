@@ -1,6 +1,6 @@
 # H2testw (Windows)
 
-## Required Reading
+## Lectura requerida
 
 This is an add-on section for checking your SD card for errors using h2testw.
 
@@ -8,7 +8,7 @@ Depending on the size of your SD card and the speed of your computer, this proce
 
 This page is for Windows users only. If you are not on windows, check out the [F3 (Linux)](f3-\(linux\)) or [F3XSwift (Mac)](f3xswift-\(mac\)) pages.
 
-## What You Need
+## Lo que necesitas
 
 - The latest version of [h2testw](https://www.heise.de/ct/Redaktion/bo/downloads/h2testw_1.4.zip)
 
