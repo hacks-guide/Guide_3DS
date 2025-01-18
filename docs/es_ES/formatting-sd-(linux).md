@@ -1,6 +1,6 @@
 # Formatting SD (Linux)
 
-## Required Reading
+## Lectura requerida
 
 This is an add-on section for formatting an SD card to work with the 3DS.
 
