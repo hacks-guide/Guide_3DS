@@ -44,7 +44,7 @@ These instructions will only work on consoles with a Luma3DS version of 8.0 or h
 ## Lo que necesitas
 
 - La última versión de [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (el archivo `.zip` de Luma3DS)
-- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
+- - La última versión de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (el archivo GodMode `.zip`)
 - The latest release of [DSiWare Uninstaller](https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest)
 - [safety_test.gm9](/gm9_scripts/safety_test.gm9)
 
