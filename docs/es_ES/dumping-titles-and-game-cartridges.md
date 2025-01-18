@@ -22,44 +22,44 @@ These instructions are written for use with GodMode9 v2.0.0 or later. If you hav
 
 - The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
 
-### Instructions
+### Instrucciones
 
-1. Power off your console
-2. Insert your SD card into your computer
+1. Apaga la consola
+2. Inserta la tarjeta SD en tu computadora
 3. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 4. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
-5. Reinsert your SD card into your console
+5. Reinserta la tarjeta SD en la consola
 
-## Dumping a Game Cartridge
+## Volcar un Cartucho de Juego
 
 ::: info
 
-Insert the game cartridge you intend to dump into your console
+Inserta en la consola el cartucho de juego que deseas volcar
 
-- 3DS game cartridges will be dumped to a `.3ds` format
-- NDS game cartridges will be dumped to a `.nds` format
+- Los cartuchos de 3DS se volcarán en formato `.3ds`
+- Los cartuchos de Nintendo DS se volcarán en formato `.nds`
+
+:::
+
+1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
+2. Ve a `[C:] GAMECART`
+3. Sigue los pasos correspondientes a tu tipo de cartucho:
+   - **Cartucho de 3DS:** Presiona (A) sobre `[TitleID].trim.3ds` para seleccionarlo
+   - **Cartucho de DS:** Presiona (A) sobre `[TitleID].nds` para seleccionarlo
+     - Las copias recortadas ("trimmed" en inglés) no son recomendadas para los juegos de DS ya que pueden causar problemas al usarlas
+4. Seleciona "Copy to 0:/gm9/out"
+5. Tu archivo `.3ds` o `.nds` _no instalable_ será guardado en la carpeta `/gm9/out/` de la tarjeta SD
+
+## Instalar un Cartucho a la Consola Directamente
+
+::: info
+
+Esto sólo funciona para juegos de 3DS; no es posible instalar un cartucho de DS como software de 3DS.
 
 :::
 
 1. Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
-2. Navigate to `[C:] GAMECART`
-3. Follow the steps applicable to your game cartridge:
-   - **3DS Game Cartridge:** Press (A) on `[TitleID].trim.3ds` to select it
-   - **NDS Game Cartridge:** Press (A) on `[TitleID].nds` to select it
-     - Trimmed dumps are not recommended for NDS games in general, as they can cause various playback issues
-4. Select "Copy to 0:/gm9/out"
-5. Your non-installable `.3ds` or `.nds` formatted file will be outputted to the `/gm9/out/` folder on your SD card
-
-## Installing a Game Cartridge Directly to the System
-
-::: info
-
-This will only work for 3DS games; it is not possible to install an NDS game cartridge to the system as a title.
-
-:::
-
-1. Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
-2. Navigate to `[C:] GAMECART`
+2. Ve a `[C:] GAMECART`
 3. Press (A) on `[TitleID].trim.3ds` to select it, then select "NCSD image options...", then select "Install game image"
 4. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
 5. Once the process is complete, your game will show up in the HOME Menu as an installed title.
@@ -73,7 +73,7 @@ This should only be used if [Installing a Game Cartridge Directly to the System]
 :::
 
 1. Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
-2. Navigate to `[C:] GAMECART`
+2. Ve a `[C:] GAMECART`
 3. Press (A) on `[TitleID].trim.3ds` to select it, then select "NCSD image options...", then select "Build CIA from file"
 4. Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
@@ -113,7 +113,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Do the following process for each GBA VC game that you want to back up the save for:
    - Launch the GBA VC game
    - Exit the GBA VC game
-   - Power off your console
+   - Apaga la consola
    - Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
    - Navigate to `[S:] SYSNAND VIRTUAL`
    - Press (A) on `agbsave.bin` to select it
@@ -133,7 +133,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Do the following process for each GBA VC game that you want to restore the save for:
    - Launch the GBA VC game
    - Exit the GBA VC game
-   - Power off your console
+   - Apaga la consola
    - Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
    - Ve a `[0:] SDCARD` -> `gm9` -> `out`
    - Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
