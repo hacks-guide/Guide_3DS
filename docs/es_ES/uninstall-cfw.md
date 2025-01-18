@@ -1,6 +1,6 @@
 # Uninstall CFW
 
-## Required Reading
+## Lectura requerida
 
 This will completely remove CFW from your console, including boot9strap and Luma3DS, for the purpose of restoring the console to stock.
 
@@ -41,7 +41,7 @@ These instructions will only work on consoles with a Luma3DS version of 8.0 or h
 
 :::
 
-## What You Need
+## Lo que necesitas
 
 - The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
 - The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
