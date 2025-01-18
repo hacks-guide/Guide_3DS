@@ -15,7 +15,7 @@ You MUST have already installed Luma3DS and boot9strap to use this.
 ## Lo que necesitas
 
 - An existing EmuNAND
-- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
+- - La última versión de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (el archivo GodMode `.zip`)
 
 ## Instrucciones
 
@@ -109,7 +109,7 @@ If you did not backup DSiWare Saves earlier, skip this section.
 4. Navigate to `[2:] SYSNAND TWLN` -> `title`
 5. Press (Y) to paste the `00030004` folder
 6. Select "Copy path(s)"
-7. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+7. Presiona (A) para desbloquear la escritura de SysNAND (lvl1) y luego introduce la combinación de botones mostrada
 8. Select "Overwrite file(s)"
    - This process may take some time if you have many DSiWare games
 9. Press (B) to decline relocking write permissions if prompted
