@@ -43,23 +43,23 @@ These instructions will only work on consoles with a Luma3DS version of 8.0 or h
 
 ## Lo que necesitas
 
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- La última versión de [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (el archivo `.zip` de Luma3DS)
 - The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
 - The latest release of [DSiWare Uninstaller](https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest)
 - [safety_test.gm9](/gm9_scripts/safety_test.gm9)
 
-## Instructions
+## Instrucciones
 
-### Section I - Prep Work
+### Sección I - Preparativos
 
-1. Power off your console
-2. Insert your SD card into your computer
+1. Apaga la consola
+2. Inserta la tarjeta SD en tu computadora
 3. Copy everything from the Luma3DS `.zip` to the root of your SD card
 4. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 5. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
 6. Copy `DSiWareUninstaller.3dsx` to the `/3ds/` folder on your SD card
 7. Copy `safety_test.gm9` to the `/gm9/scripts/` folder on your SD card
-8. Reinsert your SD card into your console
+8. Reinserta la tarjeta SD en la consola
 
 ### Section II - DS Mode Tests
 
@@ -72,7 +72,7 @@ The purpose of this section is to check whether built-in DS mode applications wi
 3. Navigate to `Internet Settings` -> `Nintendo DS Connection Settings`, then click OK
 4. You should boot into the Nintendo DS Connection Setup menu
    - If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed
-5. Power off your console
+5. Apaga la consola
 
 #### DS Download Play Test
 
@@ -81,7 +81,7 @@ The purpose of this section is to check whether built-in DS mode applications wi
 3. Select "Nintendo DS"
 4. If your console loads into a "Download software via DS Download Play" menu, the test was successful
    - If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed
-5. Power off your console
+5. Apaga la consola
 
 ::: warning
 
@@ -110,7 +110,7 @@ The purpose of this section is to verify that the console will boot and that cri
 12. Select "User Name"
 13. If you are able to enter a new user name, the test was successful
     - If the keyboard does not appear, the screen freezes, or the console crashes, the test has failed
-14. Power off your console
+14. Apaga la consola
 
 ::: danger
 
