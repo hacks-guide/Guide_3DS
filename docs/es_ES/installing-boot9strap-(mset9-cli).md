@@ -14,7 +14,7 @@ This page requires a computer running Windows, Linux, or macOS. If you have an A
 
 :::
 
-## What You Need
+## Lo que necesitas
 
 - The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest)
 - Any 3.x version of [Python](https://www.python.org/downloads/) **installed on your computer**
