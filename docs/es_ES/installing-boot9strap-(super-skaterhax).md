@@ -30,13 +30,13 @@ The instructions provided only apply to the New 3DS, New 3DS XL, and New 2DS XL.
 
 - The [Super-skaterhax](https://skater.nintendohomebrew.com) zip for your console's region and system version
 
-#### Section I - Prep Work
+#### Sección I - Preparativos
 
 In this section, you will copy the files needed to trigger both super-skaterhax and the Homebrew Launcher.
 
-1. Power off your console
+1. Apaga la consola
 
-2. Insert your SD card into your computer
+2. Inserta la tarjeta SD en tu computadora
 
 3. Copy everything from the Super-skaterhax `.zip` to the root of your SD card, overwriting any existing files
 
@@ -46,7 +46,7 @@ In this section, you will copy the files needed to trigger both super-skaterhax 
 
    :::
 
-4. Reinsert your SD card into your console
+4. Reinserta la tarjeta SD en la consola
 
 5. Power on your console
 
@@ -131,6 +131,6 @@ You may now restore your region settings back to normal.
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Continúa a [Finalizar instalación](finalizing-setup)
 
 :::
