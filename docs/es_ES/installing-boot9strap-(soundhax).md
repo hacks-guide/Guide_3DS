@@ -20,7 +20,7 @@ For technical details on the exploits that you will be using on this page, see [
 
 Soundhax (when combined with universal-otherapp) is compatible with versions 1.0.0 through 11.3.0 in all regions.
 
-## What You Need
+## Lo que necesitas
 
 - The latest release of [Soundhax](http://soundhax.com) _(for your region, console, and version)_
   - If Soundhax appears in your browser as an unplayable video, press Ctrl+S or Cmd+S to save it to your computer
