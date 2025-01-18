@@ -1,6 +1,6 @@
 # F3 (Linux)
 
-## Required Reading
+## Lectura requerida
 
 This is an add-on section for checking your SD card for errors using F3.
 
@@ -8,7 +8,7 @@ Depending on the size of your SD card and the speed of your computer, this proce
 
 This page is for Linux users only. If you are not on Linux, check out the [H2testw (Windows)](h2testw-\(windows\)) or [F3XSwift (Mac)](f3xswift-\(mac\)) pages.
 
-## What You Need
+## Lo que necesitas
 
 - The latest version of [F3](https://github.com/AltraMayor/f3/releases/tag/v8.0)
 
