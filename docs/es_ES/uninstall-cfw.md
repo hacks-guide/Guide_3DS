@@ -55,8 +55,8 @@ These instructions will only work on consoles with a Luma3DS version of 8.0 or h
 1. Apaga la consola
 2. Inserta la tarjeta SD en tu computadora
 3. Copy everything from the Luma3DS `.zip` to the root of your SD card
-4. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
-5. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+4. Copia `Godmode9.firm` desde Godmode9 `.zip` a la carpeta `/luma/payloads/` en la tarjeta SD
+5. Copia la carpeta `gm9` de GodMode9 `.zip` a la raíz de la tarjeta SD
 6. Copy `DSiWareUninstaller.3dsx` to the `/3ds/` folder on your SD card
 7. Copy `safety_test.gm9` to the `/gm9/scripts/` folder on your SD card
 8. Reinserta la tarjeta SD en la consola
@@ -93,7 +93,7 @@ If either of these tests has failed, DS mode, DS Download Play, and/or DS Connec
 
 The purpose of this section is to verify that the console will boot and that critical system functions, like System Settings and the keyboard, will work once CFW is uninstalled. **If you skip this section, you may BRICK your console!**
 
-1. Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
+1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
 2. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it is complete
 3. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
    - Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after following this guide
@@ -120,7 +120,7 @@ If you do NOT boot into the regular 3DS HOME Menu, or System Settings / your key
 
 ### Section IV - NAND Backup
 
-1. Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
+1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
 2. Press (Home) to bring up the action menu
 3. Select "Scripts..."
 4. Select "GM9Megascript"
@@ -199,7 +199,7 @@ If you're removing CFW because:
 
 :::
 
-1. Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
+1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
    - If you instead see the Luma3DS chainloader, use the D-Pad and the (A) button to select GodMode9
 2. Press (Home) to bring up the action menu
 3. Select "Scripts..."
