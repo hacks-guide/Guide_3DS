@@ -8,7 +8,7 @@ For information on dumping cartridge or SD card content, see [Dumping Titles and
 
 ::: info
 
-For support (in English) with GodMode9, as well as help with scripting and to get updates and info, join [GodMode9 on Discord](https://discord.gg/BRcbvtFxX4).
+Para ayuda (en inglés) con GodMode9, así como ayuda con la creación de scripts y obtener actualizaciones e información, únete al [Discord de GodMode9](https://discord.gg/BRcbvtFxX4).
 
 :::
 
@@ -20,7 +20,7 @@ Note that if you have any payload files other than `GodMode9.firm` in the `/luma
 
 GodMode9 is powerful software that has the capability to modify essentially anything on your console. Though many of these modifications are locked behind a permissions system, and it is impossible to accidentally perform dangerous actions without deliberately unlocking permissions, you should still follow instructions carefully and keep backups just in case.
 
-## Updating GodMode9
+## Actualizar GodMode9
 
 ::: info
 
@@ -30,14 +30,14 @@ Some of the instructions below are only applicable to the latest version of GodM
 
 ### Lo que necesitas
 
-- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
+- - La última versión de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (el archivo GodMode `.zip`)
 
 ### Instrucciones
 
 1. Apaga la consola
 2. Inserta la tarjeta SD en tu computadora
-3. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
-4. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+3. Copia `Godmode9.firm` desde Godmode9 `.zip` a la carpeta `/luma/payloads/` en la tarjeta SD
+4. Copia la carpeta `gm9` de GodMode9 `.zip` a la raíz de la tarjeta SD
 5. Reinserta la tarjeta SD en la consola
 
 ::: tip
@@ -48,7 +48,7 @@ GodMode9 is now up to date.
 
 ## Creating a NAND Backup
 
-1. Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
+1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
 
 <!--@include: ./_include/nand-backup.md -->
 
@@ -64,7 +64,7 @@ Your NAND backup has been successfully created.
 2. Inserta la tarjeta SD en tu computadora
 3. Copy `<date>_<serialnumber>_sysnand_##.bin` from your computer to the `/gm9/out/` folder on your SD card
 4. Reinserta la tarjeta SD en la consola
-5. Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
+5. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
 6. Press (Home) to bring up the action menu
 7. Select "Scripts..."
 8. Select "GM9Megascript"
@@ -93,7 +93,7 @@ Note that it is not possible to inject files into Health & Safety that are large
 
 :::
 
-1. Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
+1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
 2. Navigate to `[0:] SDCARD` -> `cias`
 3. Press (A) on your `.cia` to select it
 4. Select "CIA image options..."
@@ -101,7 +101,7 @@ Note that it is not possible to inject files into Health & Safety that are large
 6. Press (A) on the `.app` file
 7. Select "NCCH image options"
 8. Select "Inject to H&S"
-9. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+9. Presiona (A) para desbloquear la escritura de SysNAND (lvl1) y luego introduce la combinación de botones mostrada
 10. Press (A) to continue
 11. Press (A) to relock write permissions if prompted
 
@@ -119,11 +119,11 @@ This will only work if the Health & Safety injection was performed by GodMode9 (
 
 :::
 
-1. Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
+1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
 2. Press (Home) to bring up the action menu
 3. Select "More..."
 4. Select "Restore H&S"
-5. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+5. Presiona (A) para desbloquear la escritura de SysNAND (lvl1) y luego introduce la combinación de botones mostrada
 6. Press (A) to relock write permissions if prompted
 
 ::: tip
@@ -140,7 +140,7 @@ Health & Safety has been reverted to normal.
 
 :::
 
-1. Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
+1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
 2. Press (Right Shoulder) + (B) to unmount the current SD card and insert the one you want to format
    - If GodMode9 shows an initialization error when inserting the SD Card to be formatted, it can safely be dismissed
 
@@ -160,14 +160,14 @@ This process will only log you out of your NNID. You will still not be able to u
 
 :::
 
-1. Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
+1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
 2. Press (Home) to bring up the action menu
 3. Select "Scripts..."
 4. Select "GM9Megascript"
 5. Select "Scripts from Plailect's Guide"
 6. Select "Remove NNID"
 7. Press (A) to continue
-8. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+8. Presiona (A) para desbloquear la escritura de SysNAND (lvl1) y luego introduce la combinación de botones mostrada
 9. Press (A) to continue
 10. Press (B) to return to the main menu
 11. Select "Exit"
