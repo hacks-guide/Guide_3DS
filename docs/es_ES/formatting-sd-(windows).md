@@ -13,11 +13,11 @@ This page is for Windows users only. If you are not on Windows, check out the [F
 - the latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
 - **For SD cards 64GB or larger only:** The latest version of [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
 
-## Instructions
+## Instrucciones
 
 ### Section I - SD Card Formatter
 
-1. Insert your SD card into your computer
+1. Inserta la tarjeta SD en tu computadora
 
 2. If the SD card has any files and folders on it, copy everything to a folder on your computer
 
