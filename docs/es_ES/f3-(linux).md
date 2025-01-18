@@ -12,12 +12,12 @@ This page is for Linux users only. If you are not on Linux, check out the [H2tes
 
 - The latest version of [F3](https://github.com/AltraMayor/f3/releases/tag/v8.0)
 
-## Instructions
+## Instrucciones
 
 1. Unzip the f3 `.zip` file
 2. `cd` into the f3 directory
 3. Run `make` to compile F3
-4. Insert your SD card into your computer
+4. Inserta la tarjeta SD en tu computadora
 5. Mount your SD card
 6. Run `./f3write <your sd card mount point>`
 7. Wait until the process is complete. See below for an example output.
