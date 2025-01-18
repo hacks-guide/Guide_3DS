@@ -12,11 +12,11 @@ Using a hardmod, we can dump the NAND image, install custom firmware to the NAND
 
 ## Compatibility Notes
 
-To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download).
+Para utilizar los enlaces [magnéticos](https://es.wikipedia.org/wiki/Magnet) de esta página, tienes que utilizar un cliente torrent como [qBittorrent](https://www.qbittorrent.org/download.php) o [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
 This will work on New 3DS, New 2DS, Old 3DS, and Old 2DS on _all_ versions that you have a corresponding `.firm` for.
 
-## What You Need
+## Lo que necesitas
 
 - Your NAND image extracted using your [hardmod](https://gbatemp.net/threads/414498/)
 - The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
