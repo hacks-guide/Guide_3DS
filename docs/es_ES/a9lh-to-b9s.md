@@ -1,16 +1,16 @@
-# A9LH to B9S
+# A9LH a B9S
 
-## Required Reading
+## Lectura requerida
 
-This page is for existing arm9loaderhax users to update their consoles to boot9strap.
+Esta página es para los usuarios actuales de arm9loaderhax que deseen actualizar sus consolas a boot9strap.
 
-All future releases of Luma3DS will only be made in the `.firm` format, which will only be compatible with boot9strap and sighax. This means that to continue receiving the latest updates of Luma3DS, you should use this page to update your installation.
+Todas las versiones futuras de Luma3DS serán sólo en formato `.firm`, el cual será únicamente compatible con boot9strap y sighax. Esto significa que, para continuar recibiendo las últimas actualizaciones de Luma3DS, deberás utilizar esta página para continuar con tu instalación.
 
-## What You Need
+## Lo que necesitas
 
 ::: warning
 
-To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download).
+Para utilizar los enlaces [magnéticos](https://es.wikipedia.org/wiki/Magnet) de esta página, tienes que utilizar un cliente torrent como [qBittorrent](https://www.qbittorrent.org/download.php) o [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
 :::
 
