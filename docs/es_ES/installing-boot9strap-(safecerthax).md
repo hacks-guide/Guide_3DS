@@ -14,7 +14,7 @@ This exploit will not work on the New 3DS, New 3DS XL, or New 2DS XL. Please ens
 
 :::
 
-## What You Need
+## Lo que necesitas
 
 - The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
 - The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
