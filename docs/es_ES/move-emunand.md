@@ -23,8 +23,8 @@ You MUST have already installed Luma3DS and boot9strap to use this.
 
 1. Apaga la consola
 2. Inserta la tarjeta SD en tu computadora
-3. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
-4. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+3. Copia `Godmode9.firm` desde Godmode9 `.zip` a la carpeta `/luma/payloads/` en la tarjeta SD
+4. Copia la carpeta `gm9` de GodMode9 `.zip` a la raíz de la tarjeta SD
 5. Reinserta la tarjeta SD en la consola
 
 ### Section II - Backup SysNAND DSiWare Saves
@@ -35,7 +35,7 @@ If you do not have any DSiWare games or saves that you care about, skip this sec
 
 :::
 
-1. Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
+1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
 2. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it is completed
 3. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
    - Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
@@ -84,7 +84,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 
 ### Section IV - Copy EmuNAND to SysNAND
 
-1. Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
+1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
 2. Navigate to `[E:] EMUNAND VIRTUAL`
 3. Press (A) on `nand.bin` to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"
 4. Press (A) to unlock SysNAND overwriting, then input the key combo given
@@ -150,7 +150,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 
 ### Section VII - Backup SysNAND
 
-1. Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
+1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
 
 <!--@include: ./_include/nand-backup.md -->
 
@@ -158,7 +158,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 
 ### Section VIII - Format SD card
 
-1. Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
+1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
 
 <!--@include: ./_include/format-sd-gm9.md -->
 
