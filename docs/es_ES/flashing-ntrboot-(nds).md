@@ -1,6 +1,6 @@
 # Flashing ntrboot (NDS)
 
-## Required Reading
+## Lectura requerida
 
 Before proceeding, ensure you have read all of the information on [ntrboot](ntrboot)
 
@@ -12,7 +12,7 @@ Note that in some rare circumstances, it may be possible for the flashing proces
 
 :::
 
-## What You Need
+## Lo que necesitas
 
 - Your ntrboot compatible flashcart
 - Two consoles
