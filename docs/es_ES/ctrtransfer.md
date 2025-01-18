@@ -28,9 +28,9 @@ As a part of this process, your system settings will be reset to its defaults. T
 
 <!--@include: ./_include/ctrtransfer-images.md -->
 
-## Instructions
+## Instrucciones
 
-### Section I - Prep Work
+### Sección I - Preparativos
 
 <!--@include: ./_include/ctrtransfer-prep.md -->
 
@@ -60,6 +60,6 @@ ___
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Continúa a [Finalizar instalación](finalizing-setup)
 
 :::
