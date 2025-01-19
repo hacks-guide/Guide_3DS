@@ -23,7 +23,7 @@ Untuk semua langkah di bagian ini, timpa saja berkas terkait di kartu SD.
 1. Sisipkan kartu SD ke komputer Anda
 2. Buat folder dengan nama `boot9strap` di akar kartu SD
 3. Salin `boot9strap.firm` dan `boot9strap.firm.sha` dari berkas `.zip` boot9strap ke folder `/boot9strap/` di kartu SD
-4. Copy `SafeB9SInstaller.firm` from the SafeB9SInstaller `.zip` to the root of your SD card and rename it to `boot.firm`
+4. Salin `SafeB9SInstaller.firm` dari berkas `.zip` SafeB9SInstaller ke akar kartu SD dan ubah nama menjadi `boot.firm`
 5. Sisip kembali kartu SD ke konsol
 
    ::: info
