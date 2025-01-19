@@ -25,23 +25,23 @@ Di ponsel/tablet Android, versi Android yang diperlukan minimal 6.0 (Marshmallow
 - Memasang aplikasi berikut dari Google Play Store:
   - [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)
   - [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)
-  - Atau, pasang .apk aplikasi ini dari sumber lain (_sideload_)
+  - Atau, pasang .apk tersebut dari sumber lain (_sideload_)
 - Versi terkini dari [MSET9](https://github.com/zoogie/MSET9/releases/latest) (yang `.zip` Release)
 
 ## Instruksi
 
 ### Bagian I - Persiapan
 
-In this section, you will prepare the SD card data necessary for the MSET9 exploit to trigger.
+Di bagian ini akan menyiapkan data ke kartu SD untuk mengaktifkan eksploit MSET9.
 
-1. Insert your SD card into your phone/tablet/computer
+1. Sisipkan kartu SD ke ponsel/tablet/komputer
 
-2. Copy everything from the Release `.zip` to the root of your SD card, overwriting any existing files:
+2. Salin semuanya dari `.zip` Release_v2.0 ke akar kartu SD, timpa berkas yang ada:
 
-   - Open ZArchiver
-   - If prompted, [allow ZArchiver to access files on your SD card](/images/screenshots/mset9/zarchiver-allow.png)
-   - Navigate to where the downloaded MSET9 Release `.zip` is located ([likely in the Downloads folder](/images/screenshots/mset9/zarchiver-zip-location.png))
-   - Select the Release `.zip`, then select "Extract..." ([image](/images/screenshots/mset9/zarchiver-extract-1.png))
+   - Buka ZArchiver
+   - Jika diminta, [izinkan ZArchiver mengakses ke kartu SD](/images/screenshots/mset9/zarchiver-allow.png)
+   - Navigasi ke letak `.zip` Release_v2.0 MSET9 diunduh ([mungkin di folder Downloads](/images/screenshots/mset9/zarchiver-zip-location.png))
+   - Pilih `.zip` Release_v2.0, lalu pilih "Extract..." ([gambar](/images/screenshots/mset9/zarchiver-extract-1.png))
    - Navigate to your SD card, then tap the blue 'down arrow' icon to extract the files to the root of your SD card ([image](/images/screenshots/mset9/zarchiver-extract-2.png))
 
    ::: info
@@ -84,7 +84,7 @@ In this section, you will prepare the SD card data necessary for the MSET9 explo
 
 16. Matikan daya konsol dengan menekan tombol daya lalu sentuh Power Off di layar bawah
 
-17. Insert your SD card into your phone/tablet/computer
+17. Sisipkan kartu SD ke ponsel/tablet/komputer
 
 18. The MSET9 Installer application should automatically check if you have done previous steps properly
     - It may take a few seconds for the app to detect the SD card and react
@@ -112,7 +112,7 @@ Instruksi ini harus diikuti **PERSIS**, periksa lagi SEMUA yang tadi sudah agar 
 4. **Jangan tekan tombol apa pun atau sentuh layar**
 5. **Selagi konsol MASIH NYALA, dan tidak menyentuh layar atau menekan tombol apa pun**, lepas kartu SD dari konsol
    - The menu will refresh and say that no SD card is inserted, which is expected
-6. Insert your SD card into your phone/tablet/computer
+6. Sisipkan kartu SD ke ponsel/tablet/komputer
 7. Open the MSET9 Installer application
 8. Tap `Inject trigger file`
    - The button should become greyed out and `Remove trigger file` become [highlighted](/images/screenshots/mset9/remove-trigger-highlighted.png)
@@ -141,7 +141,7 @@ JANGAN lewati bagian ini! Jika dilewati, aplikasi bisa tiba-tiba mogok dan akan 
 :::
 
 1. Matikan daya konsol
-2. Insert your SD card into your phone/tablet/computer
+2. Sisipkan kartu SD ke ponsel/tablet/komputer
 3. Open the MSET9 Installer application
 4. Tap `Remove MSET9`
 5. Close the MSET9 Installer application
