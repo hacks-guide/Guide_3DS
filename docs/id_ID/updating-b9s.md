@@ -38,8 +38,8 @@ Untuk semua langkah di bagian ini, timpa saja berkas terkait di kartu SD.
    - This should automatically launch SafeB9SInstaller
 2. Saat diminta, tekan kombo tombol mengikuti layar atas untuk memasang boot9strap
    - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-updating-b9s)
-3. Once it is completed, force your console to power off by holding down the power button
-   - Your console will only boot to the SafeB9SInstaller screen until the next section is completed
+3. Sesudah selesai, matikan paksa daya konsol dengan menekan lama tombol Power
+   - Konsol hanya akan menyala ke SafeB9SInstaller jika langkah setelah ini belum dilakukan
 
 ### Section III - Update Luma3DS
 
