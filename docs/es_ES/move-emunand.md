@@ -93,7 +93,7 @@ Para identificar el "ID de Título" de un archivo `<TitleID>.gbavc.sav`, puedes 
    - This process will take some time
 6. Once it is completed, press (A) to continue
 7. Press (B) to decline relocking write permissions if prompted
-8. Press (B) to return to the main menu
+8. Presiona (B) para regresar al menú principal
 
 ### Section V - Restore DSiWare Saves
 
@@ -131,18 +131,18 @@ Para identificar el "ID de Título" de un archivo `<TitleID>.gbavc.sav`, puedes 
 
 1. Hold (R) and press (Start) at the same time to power off your console
 2. Power on your console into SysNAND
-3. Do the following process for each GBA VC game that you want to restore the save for:
+3. Haz lo siguiente por cada juego de Consola Virtual de GBA del cual quieras restaurar sus datos de guardado:
    - Inicia el juego de Consola Virtual de GBA
    - Sal del juego de Consola Virtual de GBA
    - Boot your console while holding (Start) to launch the Luma3DS chainloader menu
    - Launch GodMode9 by pressing (A)
    - Navigate to `[0:] SDCARD` -> `gm9`
-   - Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
-   - Press (B) to return to the main menu
+   - Presiona (Y) sobre el archivo `<TitleID>.gbavc.sav` que deseas restaurar para copiarlo
+   - Presiona (B) para regresar al menú principal
    - Ve a `[S:] SYSNAND VIRTUAL`
    - Presiona (A) sobre `agbsave.bin` para seleccionarlo
    - Selecciona "AGBSAVE options..."
-   - Select "Inject GBA VC save"
+   - Selecciona "Inject GBA VC save"
    - Presiona (A) para continuar
    - Presiona (Start) para reiniciar tu consola
    - Inicia el juego de Consola Virtual de GBA
