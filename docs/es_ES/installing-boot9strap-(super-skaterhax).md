@@ -95,7 +95,7 @@ If you haven't already, make sure you have a working Internet connection set up 
    - If your (Start) button does not respond, tap the 3-line menu on the bottom-right corner of the screen
 10. Tap on "Settings"
 11. Tap on "Delete Cookies"
-12. Press (A) to continue
+12. Presiona (A) para continuar
 13. Press (Home) to return to the HOME Menu, then immediately press (A) to launch the browser again
 14. Select the "GO GO!" button on the top of the bottom screen
 15. Press (A) to dismiss the [popup](/images/screenshots/skaterhax/skater-popup.png)
