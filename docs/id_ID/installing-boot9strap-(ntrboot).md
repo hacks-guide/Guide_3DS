@@ -89,7 +89,7 @@ Perlu diingat, Acekard 2i tetap mampu menjalankan `.nds` walau terpasang ntrboot
 
 Jangan ikuti bagian ini jika belum menyelesaikan instruksi di atas.
 
-### Section V - Removing ntrboot
+### Bagian V - Menghapus ntrboot
 
 #### Apa yang Perlu
 
