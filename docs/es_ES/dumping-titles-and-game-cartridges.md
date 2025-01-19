@@ -81,71 +81,71 @@ Esto sólo debiera seguirse si [Instalar un Cartucho a la Consola Directamente](
 
 ::: info
 
-This allows dumping of both System- and User-installed digital titles, such as ones downloaded from the eShop.
+Esto permite volcar tanto software del sistema como juegos/software digitales instalados desde la eShop.
 
 :::
 
 1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
-2. Press (Home) to bring up the action menu
-3. Select "Title manager"
-4. Select one of the following depending on the type of title you wish to dump
-   - **User Installed Title**: `[A:] SD CARD`
-   - **System Title / DSiWare**: `[1:] NAND / TWL`
-5. Select the title you wish to dump
-6. Select "Manage Title..."
-7. Select "Build CIA (standard)"
+2. Presiona el botón (HOME) para abrir el menú de acciones
+3. Selecciona "Title manager"
+4. Selecciona una de las siguientes opciones, dependiendo del tipo de software que desees volcar
+   - **Título instalado por el usuario**: `[A:] SD CARD`
+   - **Software del Sistema / DSiWare**: `[1:] NAND / TWL`
+5. Selecciona el título que quieras volcar
+6. Selecciona "Manage Title..."
+7. Selecciona "Build CIA (standard)"
 8. Tu archivo instalable en formato `.cia` será guardado en la carpeta `/gm9/out/` de la tarjeta SD
 
-## Backup GBA VC Saves
+## Respaldar datos de guardado de la Consola Virtual de GBA
 
 ::: info
 
-The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
+El juego será almacenado en la carpeta `/gm9/out/` de la tarjeta SD con el nombre `<TitleID>.gbavc.sav`.
 
 :::
 
 ::: info
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by pressing (Home) to bring up the action menu, selecting `Title manager`, and selecting `[A:] SD CARD`.
+Para identificar el "ID de Título" de un archivo `<TitleID>.gbavc.sav`, puedes revisar una lista de todos los juegos en la consola y sus IDs correspondientes presionando (HOME) para mostrar el menú de acciones, seleccionando `Title manager` y luego `[A:] SD CARD`.
 
 :::
 
-1. Do the following process for each GBA VC game that you want to back up the save for:
-   - Launch the GBA VC game
-   - Exit the GBA VC game
+1. Haz lo siguiente por cada juego de Consola Virtual de GBA del cual quieras respaldar sus datos de guardado:
+   - Inicia el juego de Consola Virtual de GBA
+   - Sal del juego de Consola Virtual de GBA
    - Apaga la consola
    - Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
-   - Navigate to `[S:] SYSNAND VIRTUAL`
-   - Press (A) on `agbsave.bin` to select it
-   - Select "AGBSAVE options..."
-   - Select "Dump GBA VC save"
-   - Press (A) to continue
+   - Ve a `[S:] SYSNAND VIRTUAL`
+   - Presiona (A) sobre `agbsave.bin` para seleccionarlo
+   - Selecciona "AGBSAVE options..."
+   - Selecciona "Dump GBA VC save"
+   - Presiona (A) para continuar
    - Presiona (Start) para reiniciar tu consola
 
 ## Restore GBA VC Saves
 
 ::: info
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by pressing (Home) to bring up the action menu, selecting `Title manager`, and selecting `[A:] SD CARD`.
+Para identificar el "ID de Título" de un archivo `<TitleID>.gbavc.sav`, puedes revisar una lista de todos los juegos en la consola y sus IDs correspondientes presionando (HOME) para mostrar el menú de acciones, seleccionando `Title manager` y luego `[A:] SD CARD`.
 
 :::
 
 1. Do the following process for each GBA VC game that you want to restore the save for:
-   - Launch the GBA VC game
-   - Exit the GBA VC game
+   - Inicia el juego de Consola Virtual de GBA
+   - Sal del juego de Consola Virtual de GBA
    - Apaga la consola
    - Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
    - Ve a `[0:] SDCARD` -> `gm9` -> `out`
    - Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
    - Press (B) to return to the main menu
-   - Navigate to `[S:] SYSNAND VIRTUAL`
-   - Press (A) on `agbsave.bin` to select it
-   - Select "AGBSAVE options..."
+   - Ve a `[S:] SYSNAND VIRTUAL`
+   - Presiona (A) sobre `agbsave.bin` para seleccionarlo
+   - Selecciona "AGBSAVE options..."
    - Select "Inject GBA VC save"
-   - Press (A) to continue
+   - Presiona (A) para continuar
    - Presiona (Start) para reiniciar tu consola
-   - Launch the GBA VC game
-   - Exit the GBA VC game
+   - Inicia el juego de Consola Virtual de GBA
+   - Sal del juego de Consola Virtual de GBA
 
 ## Encrypting / Decrypting a .CIA file
 
