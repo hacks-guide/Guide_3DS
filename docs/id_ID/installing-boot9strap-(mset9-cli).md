@@ -166,7 +166,7 @@ ___
 
 ::: danger
 
-Apakah tadi sudah Bagian IV (Menghapus MSET9)? Bagian itu **WAJIB**!
+Sudah belum ikuti Bagian IV (Menghapus MSET9)? Bagian itu **WAJIB**!
 
 :::
 
