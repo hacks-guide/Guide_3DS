@@ -122,7 +122,7 @@ Para identificar el "ID de Título" de un archivo `<TitleID>.gbavc.sav`, puedes 
    - Presiona (A) para continuar
    - Presiona (Start) para reiniciar tu consola
 
-## Restore GBA VC Saves
+## Restaurar datos de guardado de la Consola Virtual de GBA
 
 ::: info
 
@@ -130,37 +130,37 @@ Para identificar el "ID de Título" de un archivo `<TitleID>.gbavc.sav`, puedes 
 
 :::
 
-1. Do the following process for each GBA VC game that you want to restore the save for:
+1. Haz lo siguiente por cada juego de Consola Virtual de GBA del cual quieras restaurar sus datos de guardado:
    - Inicia el juego de Consola Virtual de GBA
    - Sal del juego de Consola Virtual de GBA
    - Apaga la consola
    - Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
    - Ve a `[0:] SDCARD` -> `gm9` -> `out`
-   - Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
-   - Press (B) to return to the main menu
+   - Presiona (Y) sobre el archivo `<TitleID>.gbavc.sav` que deseas restaurar para copiarlo
+   - Presiona (B) para regresar al menú principal
    - Ve a `[S:] SYSNAND VIRTUAL`
    - Presiona (A) sobre `agbsave.bin` para seleccionarlo
    - Selecciona "AGBSAVE options..."
-   - Select "Inject GBA VC save"
+   - Selecciona "Inject GBA VC save"
    - Presiona (A) para continuar
    - Presiona (Start) para reiniciar tu consola
    - Inicia el juego de Consola Virtual de GBA
    - Sal del juego de Consola Virtual de GBA
 
-## Encrypting / Decrypting a .CIA file
+## Encriptar/desencriptar un archivo .CIA
 
 ::: info
 
-For organizational purposes, copy each `.cia` file you wish to encrypt / decrypt to the `/cias/` folder on your SD card
+Para mantener orden, copia cada archivo `.cia` que quieras encriptar/desencriptar a la carpeta `/cias/` en la tarjeta SD
 
 :::
 
 1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
-2. Navigate to `[0:] SDCARD` -> `cias`
-3. Press (A) on the `.cia` file to select it, then select "CIA image options..."
-4. Select the option to perform the desired function:
-   - **Encrypt to 0:/gm9/out:** Create an encrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card
-   - **Decrypt to 0:/gm9/out:** Create a decrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card
-   - **Encrypt inplace:** Replace the selected `.cia` file with an encrypted version
-   - **Decrypt inplace:** Replace the selected `.cia` file with a decrypted version
-5. Your encrypted / decrypted `.cia` will be outputted to the desired location
+2. Ve a `[0:] SDCARD` -> `cias`
+3. Presiona (A) sobre el archivo `.cia` para seleccionarlo, luego selecciona "CIA image options..."
+4. Selecciona la opción para realizar la función deseada:
+   - **Encrypt to 0:/gm9/out:** Crea una copia encriptada del archivo `.cia` seleccionado en la carpeta `/gm9/out/` de la tarjeta SD
+   - **Decrypt to 0:/gm9/out:** Crea una copia desencriptada del archivo `.cia` seleccionado en la carpeta `/gm9/out/` de la tarjeta SD
+   - **Encrypt inplace:** Reemplaza el archivo `.cia` seleccionado con uno encriptado
+   - **Decrypt inplace:** Reemplaza el archivo `.cia` seleccionado con uno desencriptado
+5. Tu `.cia` encriptado/desencriptado será guardado en la ubicación seleccionada
