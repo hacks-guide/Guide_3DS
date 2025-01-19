@@ -1,4 +1,4 @@
-# Installing boot9strap (ntrboot)
+# Memasang boot9strap (ntrboot)
 
 ## Bacaan Penting
 
@@ -40,31 +40,31 @@ Untuk menggunakan tautan [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) 
 
 ### Bagian II - ntrboot
 
-1. Use the magnet to find the spot on your console where the sleep sensor is triggered
-   - This step is not needed on the old 2DS (which has a sleep mode switch)
+1. Gunakan besi berani untuk mencari titik pemicu mode tidur pada konsol
+   - Langkah ini tidak perlu di Old 2DS (karena ada cetekan mode tidur)
 2. Matikan daya konsol
-3. Insert your flashcart into your console
-4. Place the magnet on your console to trigger the sleep sensor
-   - On old 2DS, you should instead enable the sleep mode switch
-5. Hold (Start) + (Select) + (X) + (Power) for several seconds, then release the buttons
-   - It may take a few attempts to get this to work because the positioning is awkward
+3. Sisipkan _flashcart_ ke konsol Anda
+4. Taruh besi berani pada konsol untuk memicu mode tidur
+   - Di Old 2DS, geser saja cetekan mode tidur ke kanan
+5. Tahan (Start) + (Select) + (X) + (Power) selama beberapa detik, lalu lepas tombolnya
+   - Mungkin perlu dicoba berkali-kali agar berhasil karena posisinya agak canggung
 6. Jika eksploit berhasil akan muncul SafeB9SInstaller
-7. Remove the magnet from your console
-   - On old 2DS, you should instead disable the sleep mode switch
+7. Lepaskan besi berani dari konsol
+   - Di Old 2DS, geser saja cetekan mode tidur ke kiri
 
 ### Bagian III - Memasang boot9strap
 
 Di bagian ini akan mulai memasang _custom firmware_ ke konsol.
 
 1. Saat diminta, tekan kombo tombol mengikuti layar atas untuk memasang boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-ntrboot)
-2. Once it is completed, force your console to power off by holding down the power button
-   - Your console will only boot to the SafeB9SInstaller screen until the next section is completed
+   - Jika langkah di layar bawah ada teks warna merah, dan tidak diminta kombo tombol, [ikuti panduan sidik gangguan ini](troubleshooting-ntrboot)
+2. Sesudah selesai, matikan paksa daya konsol dengan menekan lama tombol Power
+   - Konsol hanya akan menyala ke SafeB9SInstaller jika langkah setelah ini belum dilakukan
 
-### Section IV - Configuring Luma3DS
+### Bagian IV - Menyetel Luma3DS
 
 1. Sisipkan kartu SD konsol ke komputer
-2. Delete `boot.firm` from the root of your SD card
+2. Hapus `boot.firm` dari akar kartu SD
 3. Salin semua berkas dari `.zip` Luma3DS ke akar kartu SD
 4. Sisip kembali kartu SD ke konsol
 5. Nyalakan daya konsol
@@ -83,11 +83,11 @@ Lanjut ke [Penyiapan Akhir](finalizing-setup)
 
 ___
 
-The following is an optional section that will allow you to restore your flashcart to its original state (to allow it to be used for its standard functions).
+Berikut ini bagian opsional untuk memulihkan _flashcart_ tadi ke fungsi semula (agar bisa digunakan seperti bawaannya lagi).
 
-Perlu diingat, Acekard 2i tetap mampu menjalankan `.nds` walau terpasang ntrboot. This only applies when the Acekard 2i is in an NDS or custom firmware 3DS! While the ntrboot exploit is installed to the Acekard 2i, it will be unable to launch `.nds` files on DSi or stock 3DS systems.
+Perlu diingat, Acekard 2i tetap mampu menjalankan `.nds` walau terpasang ntrboot. Ini **hanya** bisa jika Acekard 2i di DS (Lite) atau 3DS dengan CFW! Selagi Acekard 2i terpasang ntrboot, berkas `.nds` tidak akan bisa dibuka pada sistem DSi atau 3DS bawaan.
 
-Do not follow this section until you have completed the rest of the instructions on this page.
+Jangan ikuti bagian ini jika belum menyelesaikan instruksi di atas.
 
 ### Section V - Removing ntrboot
 
