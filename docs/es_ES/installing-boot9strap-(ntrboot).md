@@ -138,7 +138,7 @@ Do not follow this section until you have completed the rest of the instructions
 8. Insert your ntrboot compatible DS / DSi flashcart into your console
 9. Launch ntrboot_flasher by holding (Start) during boot
 10. Read the red screen warning
-11. Press (A) to continue
+11. Presiona (A) para continuar
 12. Select your flashcart
     - If you do not see your flashcart in the list at the top, read the bottom screen for more info on each option
 13. Select "Restore Flash"
