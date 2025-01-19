@@ -6,7 +6,7 @@ This is an add-on section for formatting an SD card to work with the 3DS.
 
 If the 3DS already recognizes the SD card, this guide is not required.
 
-This page is for Mac users only. If you are not on Mac, check out the [Formatting SD (Windows)](formatting-sd-\(windows\)) or [Formatting SD (Linux)](formatting-sd-\(linux\)) pages.
+Esta página es sólo para usuarios de Mac. If you are not on Mac, check out the [Formatting SD (Windows)](formatting-sd-\(windows\)) or [Formatting SD (Linux)](formatting-sd-\(linux\)) pages.
 
 ## Instrucciones
 
