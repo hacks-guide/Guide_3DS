@@ -60,26 +60,26 @@ Note that this is not necessary for any other kind of Virtual Console games (GBC
 
 ::: info
 
-The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
+El juego será almacenado en la carpeta `/gm9/out/` de la tarjeta SD con el nombre `<TitleID>.gbavc.sav`.
 
 :::
 
 ::: info
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by pressing (Home) to bring up the action menu, selecting `Title manager`, and selecting `[A:] SD CARD`.
+Para identificar el "ID de Título" de un archivo `<TitleID>.gbavc.sav`, puedes revisar una lista de todos los juegos en la consola y sus IDs correspondientes presionando (HOME) para mostrar el menú de acciones, seleccionando `Title manager` y luego `[A:] SD CARD`.
 
 :::
 
-1. Do the following process for each GBA VC game that you want to back up the save for:
-   - Launch the GBA VC game
-   - Exit the GBA VC game
+1. Haz lo siguiente por cada juego de Consola Virtual de GBA del cual quieras respaldar sus datos de guardado:
+   - Inicia el juego de Consola Virtual de GBA
+   - Sal del juego de Consola Virtual de GBA
    - Boot your console while holding (Start) to launch the Luma3DS chainloader menu
    - Launch GodMode9 by pressing (A)
-   - Navigate to `[S:] SYSNAND VIRTUAL`
-   - Press (A) on `agbsave.bin` to select it
-   - Select "AGBSAVE options..."
-   - Select "Dump GBA VC save"
-   - Press (A) to continue
+   - Ve a `[S:] SYSNAND VIRTUAL`
+   - Presiona (A) sobre `agbsave.bin` para seleccionarlo
+   - Selecciona "AGBSAVE options..."
+   - Selecciona "Dump GBA VC save"
+   - Presiona (A) para continuar
    - Presiona (Start) para reiniciar tu consola
 
 ### Section IV - Copy EmuNAND to SysNAND
@@ -125,28 +125,28 @@ If you did not backup GBA VC Saves earlier, skip this section.
 
 ::: info
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by pressing (Home) to bring up the action menu, selecting `Title manager`, and selecting `[A:] SD CARD`.
+Para identificar el "ID de Título" de un archivo `<TitleID>.gbavc.sav`, puedes revisar una lista de todos los juegos en la consola y sus IDs correspondientes presionando (HOME) para mostrar el menú de acciones, seleccionando `Title manager` y luego `[A:] SD CARD`.
 
 :::
 
 1. Hold (R) and press (Start) at the same time to power off your console
 2. Power on your console into SysNAND
 3. Do the following process for each GBA VC game that you want to restore the save for:
-   - Launch the GBA VC game
-   - Exit the GBA VC game
+   - Inicia el juego de Consola Virtual de GBA
+   - Sal del juego de Consola Virtual de GBA
    - Boot your console while holding (Start) to launch the Luma3DS chainloader menu
    - Launch GodMode9 by pressing (A)
    - Navigate to `[0:] SDCARD` -> `gm9`
    - Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
    - Press (B) to return to the main menu
-   - Navigate to `[S:] SYSNAND VIRTUAL`
-   - Press (A) on `agbsave.bin` to select it
-   - Select "AGBSAVE options..."
+   - Ve a `[S:] SYSNAND VIRTUAL`
+   - Presiona (A) sobre `agbsave.bin` para seleccionarlo
+   - Selecciona "AGBSAVE options..."
    - Select "Inject GBA VC save"
-   - Press (A) to continue
+   - Presiona (A) para continuar
    - Presiona (Start) para reiniciar tu consola
-   - Launch the GBA VC game
-   - Exit the GBA VC game
+   - Inicia el juego de Consola Virtual de GBA
+   - Sal del juego de Consola Virtual de GBA
 
 ### Section VII - Backup SysNAND
 
