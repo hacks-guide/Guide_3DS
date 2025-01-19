@@ -6,8 +6,8 @@ Untuk menggunakan tautan [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) 
 
 ## Apa yang Perlu
 
-- A magnet that triggers the sleep mode of your console (if using a folding style console)
-- Your ntrboot flashed flashcart
+- Besi berani untuk memicu mode tidur (jika konsol model lipat)
+- _Flashcart_ yang di-_flash_ ntrboot
 - Versi terkini dari [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (unduhan langsung)
 - Versi terkini dari [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (unduhan langsung)
 - Versi terkini dari [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (yang `.zip` Luma3DS)
@@ -18,15 +18,15 @@ Untuk menggunakan tautan [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) 
 
 1. Matikan daya konsol
 
-2. Insert your console's SD card into your computer
-   - This is the SD card from your 3DS, _not_ the SD card from your flashcart
+2. Sisipkan kartu SD konsol ke komputer
+   - Ini kartu SD yang dari 3DS, **bukan** yang dari _flashcart_
 
-3. Copy `SafeB9SInstaller.firm` from the SafeB9SInstaller `.zip` to the root of your SD card and rename it to `boot.firm`
+3. Salin `SafeB9SInstaller.firm` dari berkas `.zip` SafeB9SInstaller ke akar kartu SD dan ubah nama menjadi `boot.firm`
    - Akar (_root_) kartu SD merujuk ke direktori awal kartu SD yang ada folder Nintendo 3DS, berarti **tidak di dalam folder apa pun**
 
-4. Create a folder named `boot9strap` on the root of your console's SD card
+4. Buat folder dengan nama `boot9strap` di akar kartu SD konsol
 
-5. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your console's SD card
+5. Salin `boot9strap.firm` dan `boot9strap.firm.sha` dari `.zip` boot9strap ke folder `/boot9strap/` di kartu SD konsol
 
    ::: info
 
@@ -38,7 +38,7 @@ Untuk menggunakan tautan [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) 
 
 7. Nyalakan daya konsol
 
-### Section II - ntrboot
+### Bagian II - ntrboot
 
 1. Use the magnet to find the spot on your console where the sleep sensor is triggered
    - This step is not needed on the old 2DS (which has a sleep mode switch)
@@ -63,7 +63,7 @@ Di bagian ini akan mulai memasang _custom firmware_ ke konsol.
 
 ### Section IV - Configuring Luma3DS
 
-1. Insert your console's SD card into your computer
+1. Sisipkan kartu SD konsol ke komputer
 2. Delete `boot.firm` from the root of your SD card
 3. Salin semua berkas dari `.zip` Luma3DS ke akar kartu SD
 4. Sisip kembali kartu SD ke konsol
@@ -129,7 +129,7 @@ Do not follow this section until you have completed the rest of the instructions
 
 1. Matikan daya konsol
 2. Sisipkan kartu SD ke komputer Anda
-   - This is the SD card from your 3DS, _not_ the SD card from your flashcart
+   - Ini kartu SD yang dari 3DS, **bukan** yang dari _flashcart_
 3. Buat folder dengan nama `ntrboot` di akar kartu SD
 4. Copy the `.bin` file from your flashrom backup `.zip` to the `/ntrboot/` folder on the root of your SD card
 5. Create a folder named `payloads` in the `luma` folder on your SD card
