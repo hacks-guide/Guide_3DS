@@ -58,7 +58,7 @@ In this section, you will visit the browser exploit webpage, which will use univ
 2. Tap the QR code button and scan [this QR code](http://api.qrserver.com/v1/create-qr-code/?color=000000\&bgcolor=FFFFFF\&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax\&qzone=1\&margin=0\&size=400x400\&ecc=L)
    - If you get a crash or an error code, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
    - If you get a security certificate warning, press (A) to allow the connection
-3. Tap the "PROCEED TO HAXX" button
+3. Sentuh tombol "PROCEED TO HAXX"
 4. Jika eksploit berhasil akan muncul SafeB9SInstaller
    - If you get an error, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
 
