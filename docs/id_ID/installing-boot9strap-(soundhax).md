@@ -77,9 +77,9 @@ Di bagian ini akan menjalankan Soundhax dengan universal-otherapp di aplikasi Ni
 3. Masuk ke `/SDCARD`, lalu putar "<3 nedwill 2016"
 
    - Ini harus coba terus (hingga 10 kali)
-   - If you see the message "Could not play", you are either on a system version incompatible with Soundhax or downloaded the wrong Soundhax release
-   - If it freezes, force the console to power off by holding the power button, then try again
-   - If you get a different error, [follow this troubleshooting guide](troubleshooting-soundhax)
+   - Jika muncul pesan "Could not play", bisa jadi versi sistem tidak kompatibel dengan Soundhax; atau _release_ Soundhax yang diunduh salah
+   - Jika macet, matikan paksa daya konsol dengan menahan tombol Power, lalu coba lagi
+   - Jika muncul galat berbeda, [ikuti panduan sidik gangguan ini](troubleshooting-soundhax)
 
    ::: info
 
