@@ -8,42 +8,42 @@ head:
     - src: /assets/js/link-common.js
 ---
 
-# Installing boot9strap (Soundhax)
+# Memasang boot9strap (Soundhax)
 
 :::details Perincian Teknis (opsional)
 
-For technical details on the exploits that you will be using on this page, see [here](https://github.com/nedwill/soundhax) (Soundhax) and [here](https://github.com/TuxSH/universal-otherapp) (universal-otherapp).
+Untuk perincian teknis perihal eksploit pada laman ini, lihat di [sini (Soundhax)](https://github.com/nedwill/soundhax) dan [sini (universal-otherapp)](https://github.com/TuxSH/universal-otherapp).
 
 :::
 
 ## Catatan Kompatibilitas
 
-Soundhax (when combined with universal-otherapp) is compatible with versions 1.0.0 through 11.3.0 in all regions.
+Soundhax ini (jika dengan universal-otherapp) kompatibel di semua daerah dari _firmware_ 1.0.0 hingga 11.3.0.
 
 ## Apa yang Perlu
 
-- The latest release of [Soundhax](http://soundhax.com) _(for your region, console, and version)_
-  - If Soundhax appears in your browser as an unplayable video, press Ctrl+S or Cmd+S to save it to your computer
+- Versi terkini dari [Soundhax](http://soundhax.com) _(sesuaikan daerah, versi, dan jenis konsol)_
+  - Jika Soundhax muncul sebagai video rusak di peramban web, tekan Ctrl+S atau Cmd+S untuk simpan di komputer
 - Versi terkini dari [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (unduhan langsung)
 - Versi terkini dari [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (unduhan langsung)
 - Versi terkini dari [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (yang `.zip` Luma3DS)
-- The latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) (`otherapp.bin`)
+- Versi terkini dari [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) (`otherapp.bin`)
 
 ## Instruksi
 
 ### Bagian I - Persiapan
 
-In this section, you will copy the files needed to trigger both Soundhax and universal-otherapp.
+Di bagian ini akan menyiapkan berkas untuk masuk ke Soundhax dan universal-otherapp.
 
 1. Matikan daya konsol
 2. Sisipkan kartu SD ke komputer Anda
-3. Copy the Soundhax `.m4a` to the root of your SD card
+3. Salin `.m4a` Soundhax ke akar dari kartu SD
    - Akar (_root_) kartu SD merujuk ke direktori awal kartu SD yang ada folder Nintendo 3DS, berarti **tidak di dalam folder apa pun**
-4. Copy `otherapp.bin` to the root of your SD card
+4. Salin `otherapp.bin` ke akar kartu SD
 5. Salin semua berkas dari `.zip` Luma3DS ke akar kartu SD
 6. Buat folder dengan nama `boot9strap` di akar kartu SD
 7. Salin `boot9strap.firm` dan `boot9strap.firm.sha` dari berkas `.zip` boot9strap ke folder `/boot9strap/` di kartu SD
-8. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
+8. Salin `SafeB9SInstaller.bin` dari `.zip` SafeB9SInstaller ke akar kartu SD
 9. Sisip kembali kartu SD ke konsol
 10. Nyalakan daya konsol
 
@@ -94,7 +94,7 @@ In this section, you will launch Soundhax through the Nintendo 3DS Sound app, wh
 Di bagian ini akan mulai memasang _custom firmware_ ke konsol.
 
 1. Saat diminta, tekan kombo tombol mengikuti layar atas untuk memasang boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-soundhax)
+   - Jika langkah di layar bawah ada teks warna merah, dan tidak diminta kombo tombol, [ikuti panduan sidik gangguan ini](troubleshooting-soundhax)
 2. Saat selesai, tekan (A) untuk nyalakan ulang konsol
 
 <!--@include: ./_include/configure-luma3ds.md -->
