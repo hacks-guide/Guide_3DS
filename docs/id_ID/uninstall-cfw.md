@@ -206,7 +206,7 @@ If you're removing CFW because:
 4. Pilih "GM9Megascript"
 5. Select "Hax Options"
 6. Select "Un-install Hax"
-7. When prompted, press (A) to proceed
+7. Saat diminta, tekan (A) untuk melanjutkan
 8. Tekan (A) untuk membuka izin tulis SysNAND (lvl3), lalu tekan kombo yang diberikan
 9. Tekan (A) untuk lanjut
 10. Tekan (B) untuk kembali ke menu utama
