@@ -99,14 +99,14 @@ If you haven't already, make sure you have a working Internet connection set up 
 13. Press (Home) to return to the HOME Menu, then immediately press (A) to launch the browser again
 14. Select the "GO GO!" button on the top of the bottom screen
 15. Press (A) to dismiss the [popup](/images/screenshots/skaterhax/skater-popup.png)
-    - If your console freezes on a yellow screen, hold the POWER button until it turns off, then retry this section
-    - If your console freezes on a red screen, hold the POWER button until it turns off, redo step 3 of Section II, then retry this section
+    - Jika konsolnya macet di layar kuning, tahan tombol POWER sampai daya mati, lalu coba lagi bagian ini
+    - Jika konsolnya macet di layar merah, tahan tombol POWER sampai daya mati, ulangi Langkah 3 Bagian II, lalu coba lagi bagian ini
     - If your console [shows the word Text on the top-left corner of the bottom screen](/images/screenshots/skaterhax/skater-old3ds.png), you have an Old 3DS and this exploit **will not work on your device**. If this is the case, you should follow [MSET9](installing-boot9strap-\(mset9\)) instead
     - If you get another error, try again up to 5 times, and if it still doesn't work, [follow this troubleshooting guide](troubleshooting-super-skaterhax)
 16. Your console will have booted into the Homebrew Launcher
 17. Launch nimdsphax from the list of homebrew
 18. Jika eksploit berhasil akan muncul SafeB9SInstaller
-    - If your console freezes on a red or green screen, hold the POWER button until it turns off, then retry this section
+    - Jika konsolnya macet di layar merah atau hijau, tahan tombol POWER sampai daya mati, lalu coba lagi bagian ini
     - This may take up to five attempts
 
 #### Bagian III - Memasang boot9strap
