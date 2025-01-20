@@ -1,4 +1,4 @@
-# Installing boot9strap (SSLoth-Browser)
+# Memasang boot9strap (SSLoth-Browser)
 
 :::details Perincian Teknis (opsional)
 
