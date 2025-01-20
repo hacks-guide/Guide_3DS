@@ -21,7 +21,7 @@ SSLoth allows users on version 11.13.0 and below to bypass the browser version c
 - Versi terkini dari [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (unduhan langsung)
 - Versi terkini dari [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (unduhan langsung)
 - Versi terkini dari [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (yang `.zip` Luma3DS)
-- The latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) (`otherapp.bin`)
+- Versi terkini dari [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) (`otherapp.bin`)
 
 ## Instruksi
 
@@ -37,7 +37,7 @@ In this section, you will copy the files needed to trigger both browserhax and u
 4. Salin semua berkas dari `.zip` Luma3DS ke akar kartu SD
 5. Buat folder dengan nama `boot9strap` di akar kartu SD
 6. Salin `boot9strap.firm` dan `boot9strap.firm.sha` dari berkas `.zip` boot9strap ke folder `/boot9strap/` di kartu SD
-7. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
+7. Salin `SafeB9SInstaller.bin` dari `.zip` SafeB9SInstaller ke akar kartu SD
 8. Sisip kembali kartu SD ke konsol
 9. Nyalakan daya konsol
 
