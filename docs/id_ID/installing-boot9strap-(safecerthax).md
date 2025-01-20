@@ -1,4 +1,4 @@
-# Installing boot9strap (safecerthax)
+# Memasang boot9strap (safecerthax)
 
 :::details Perincian Teknis (opsional)
 
