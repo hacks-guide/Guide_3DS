@@ -142,7 +142,7 @@ One or more files that MSET9 needs to run is missing or corrupted. Re-download t
 
 You may be missing `SafeB9S.bin` from the root of your SD card, or the file may be corrupted. Copy it from the MSET9 `.zip`, replacing any existing files then follow these instructions to remove the trigger file:
 
-1. Force power off your console by holding the Power button for 20 seconds
+1. Matikan paksa daya konsol dengan menahan tombol Power selama 20 detik
 2. Sisipkan kartu SD ke komputer Anda
 
 <!--@include: ./_include/mset9-chorus.md -->
@@ -171,7 +171,7 @@ You most likely did something different from the MSET9 instructions, selected th
 
 Follow these instructions to remove the trigger file and to retry Section II:
 
-1. Force power off your console by holding the Power button for 20 seconds
+1. Matikan paksa daya konsol dengan menahan tombol Power selama 20 detik
 2. Sisipkan kartu SD ke komputer Anda
 
 <!--@include: ./_include/mset9-chorus.md -->
