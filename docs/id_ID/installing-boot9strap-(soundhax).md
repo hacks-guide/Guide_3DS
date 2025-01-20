@@ -59,11 +59,11 @@ Di bagian ini akan menyiapkan berkas untuk masuk ke Soundhax dan universal-other
 
 :::
 
-### Section II - Launching SafeB9SInstaller
+### Bagian II - Menjalankan SafeB9SInstaller
 
-In this section, you will launch Soundhax through the Nintendo 3DS Sound app, which will use universal-otherapp to launch the boot9strap (custom firmware) installer.
+Di bagian ini akan menjalankan Soundhax dengan universal-otherapp di aplikasi Nintendo 3DS Sound agar bisa ke pemasang boot9strap (_custom firmware_).
 
-1. Launch Nintendo 3DS Sound
+1. Buka Nintendo 3DS Sound
 
    ::: info
 
@@ -71,12 +71,12 @@ In this section, you will launch Soundhax through the Nintendo 3DS Sound app, wh
 
    :::
 
-2. If you've never opened Nintendo 3DS Sound before and get tips on how to use it from a bird icon, go through all of the bird tips, then close the app normally and relaunch it
-   - In this situation, launching Soundhax immediately would cause these tips to appear on every launch of the Nintendo 3DS Sound until this is done
+2. Jika belum pernah membuka Nintendo 3DS Sound dan muncul tips penggunaannya dari ikon burung; lalui dulu semua tips burung, tutup aplikasi seperti biasa, dan buka lagi
+   - Karena belum pernah, membuka langsung Soundhax menyebabkan tips terus muncul setiap kali membuka Nintendo 3DS Sound sampai ini dilakukan
 
-3. Go to `/SDCARD`, then play "<3 nedwill 2016"
+3. Masuk ke `/SDCARD`, lalu putar "<3 nedwill 2016"
 
-   - This may take many (up to 10) tries
+   - Ini harus coba terus (hingga 10 kali)
    - If you see the message "Could not play", you are either on a system version incompatible with Soundhax or downloaded the wrong Soundhax release
    - If it freezes, force the console to power off by holding the power button, then try again
    - If you get a different error, [follow this troubleshooting guide](troubleshooting-soundhax)
