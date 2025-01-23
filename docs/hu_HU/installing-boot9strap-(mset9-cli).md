@@ -18,6 +18,7 @@ Ez a metódus Windows, Linux vagy MacOS számítógépet igényel. Ha Android te
 
 - Az [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) legújabb kiadása
 - Bármelyik a **számítógépedre telepített 3.x verziója** a [Python](https://www.python.org/downloads/)-nak
+  - If you are on Windows, Python from the Microsoft Store cannot be used. Please install a version from python.org.
   - Ha Linux-ot vagy macOS-t használsz valószínűleg már van Python 3-ad. Ellenőrizd egy Terminal ablak megnyitásával, majd a `python3 -V` parancs megadásával. Ha ez egy verziószámot ad vissza, működni fog ezzel az útmutatóval.
 
 ## Lépések
