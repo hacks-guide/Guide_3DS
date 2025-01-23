@@ -18,6 +18,7 @@
 
 - Την πιο πρόσφατη έκδοση του [MSET9](https://github.com/hacks-guide/MSET9/releases/latest)
 - Οποιαδήποτε έκδοση 3.x της [Python](https://www.python.org/downloads/), **εγκατεστημένη στον υπολογιστή σας**
+  - If you are on Windows, Python from the Microsoft Store cannot be used. Please install a version from python.org.
   - Εάν χρησιμοποιείτε Linux ή macOS, ενδέχεται να διαθέτετε ήδη την Python 3. Για να το διαπιστώσετε, ανοίξτε ένα παράθυρο τερματικού και πληκτρολογήστε `python3 -V`. Εάν η εντολή επιστρέψει έναν αριθμό έκδοσης, τότε μπορείτε να ακολουθήσετε αυτόν τον οδηγό.
 
 ## Οδηγίες
