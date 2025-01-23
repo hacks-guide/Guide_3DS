@@ -18,6 +18,7 @@ This page requires a computer running Windows, Linux, or macOS. If you have an A
 
 * The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest)
 * Any 3.x version of [Python](https://www.python.org/downloads/) **installed on your computer**
+    + If you are on Windows, Python from the Microsoft Store cannot be used. Please install a version from python.org.
     + If you are on Linux or macOS, you may already have Python 3. Check by opening a Terminal window and entering `python3 -V`. If this returns a version number, it will work for this guide.
 
 ## Instructions
