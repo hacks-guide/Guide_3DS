@@ -18,6 +18,7 @@
 
 - 최신 버전의 [MSET9](https://github.com/hacks-guide/MSET9/releases/latest)
 - **컴퓨터에 설치된** 3.x 버전의 [Python](https://www.python.org/downloads/) (파이썬)
+  - If you are on Windows, Python from the Microsoft Store cannot be used. Please install a version from python.org.
   - 리눅스나 macOS를 사용 중인 경우 Python 3(파이썬 3)이 이미 설치되어 있을 것입니다. 터미널을 열고 'python3 -V'를 입력해 주세요. 버전 번호가 나올 경우, 본 가이드에 따라 잘 작동할 것입니다.
 
 ## 진행 방법
