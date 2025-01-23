@@ -18,6 +18,7 @@ Laman ini perlu komputer bersistem Windows, Linux, atau macOS. Atau jika punya p
 
 - Versi terkini dari [MSET9](https://github.com/hacks-guide/MSET9/releases/latest)
 - Versi 3.x berapa pun dari [Python](https://www.python.org/downloads/) **terpasang di komputer**
+  - If you are on Windows, Python from the Microsoft Store cannot be used. Please install a version from python.org.
   - Jika menggunakan Linux atau macOS, mungkin sudah ada Python 3. Periksa dengan membuka Terminal dan ketik `python3 -V`. Jika muncul nomor versi, berarti bisa untuk panduan ini.
 
 ## Instruksi
