@@ -22,11 +22,11 @@
 
 :::details ¿Con cuáles consolas es compatible esta guía?
 
-This guide is compatible with all retail 3DS-family devices (3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, New 2DS XL). If your system version string is displayed as "0.0.0-0", then you may have a developer unit.
+Esta guía es compatible con todas las consolas de la familia Nintendo 3DS (3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, New 2DS XL). Si la versión del sistema se muestra como "0.0.0-0", entonces podrías tener una unidad de desarrollador.
 
 :::
 
-:::details How risky is hacking my console?
+:::details ¿Qué tan arriesgado es modificar mi consola?
 
 Bricks are now effectively impossible unless you are purposely trying to brick your console.
 
