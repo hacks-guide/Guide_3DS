@@ -10,6 +10,16 @@ A Python nincs telepítve arra a számítógépre, amit használsz. Töltsd le a
 
 :::
 
+:::details ModuleNotFoundError: No module named 'pyfatfs'
+
+The pyfatfs module, which is needed to use the MSET9 installer on macOS, isn't installed on your computer.
+
+1. Open a separate Terminal window
+2. Type `python3 -m pip install pyfatfs`, then press Enter
+3. Start again from [Section I Step 3](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
+
+:::
+
 :::details HOME Menu extdata: Missing!
 
 Kérjük kapcsold be a konzolod, miközben az SD kártya be van helyezve, majd ellenőrizd az MSET9 státuszt újra.
