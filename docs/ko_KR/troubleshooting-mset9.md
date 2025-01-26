@@ -10,6 +10,16 @@ Python이 사용중인 컴퓨터에 설치되지 않았습니다. [Python 웹사
 
 :::
 
+:::details ModuleNotFoundError: No module named 'pyfatfs'
+
+The pyfatfs module, which is needed to use the MSET9 installer on macOS, isn't installed on your computer.
+
+1. Open a separate Terminal window
+2. Type `python3 -m pip install pyfatfs`, then press Enter
+3. Start again from [Section I Step 3](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
+
+:::
+
 :::details HOME Menu extdata: Missing!
 
 SD 카드를 삽입한 채로 콘솔의 전원을 켜고, MSET9의 상태를 다시 확인하세요.
