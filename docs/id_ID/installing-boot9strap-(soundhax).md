@@ -33,7 +33,7 @@ Soundhax ini (jika dengan universal-otherapp) kompatibel di semua daerah dari _f
 
 ### Bagian I - Persiapan
 
-Di bagian ini akan menyiapkan berkas untuk masuk ke Soundhax dan universal-otherapp.
+Di bagian ini akan menaruh berkas untuk mengaktifkan Soundhax dan universal-otherapp.
 
 1. Matikan daya konsol
 2. Sisipkan kartu SD ke komputer Anda
